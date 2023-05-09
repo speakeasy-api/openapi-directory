@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeactivateDeviceIdentifierResponse {
     
     public String contentType;
+
     public DeactivateDeviceIdentifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeactivateDeviceIdentifierResponse {
      */
     
     public org.openapis.openapi.models.shared.DeactivateDeviceIdentifierResponse deactivateDeviceIdentifierResponse;
+
     public DeactivateDeviceIdentifierResponse withDeactivateDeviceIdentifierResponse(org.openapis.openapi.models.shared.DeactivateDeviceIdentifierResponse deactivateDeviceIdentifierResponse) {
         this.deactivateDeviceIdentifierResponse = deactivateDeviceIdentifierResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeactivateDeviceIdentifierResponse {
      */
     
     public Object internalServerException;
+
     public DeactivateDeviceIdentifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeactivateDeviceIdentifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeactivateDeviceIdentifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeactivateDeviceIdentifierResponse {
     
     
     public Integer statusCode;
+
     public DeactivateDeviceIdentifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeactivateDeviceIdentifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeactivateDeviceIdentifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeactivateDeviceIdentifierResponse {
      */
     
     public Object validationException;
+
     public DeactivateDeviceIdentifierResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeactivateDeviceIdentifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

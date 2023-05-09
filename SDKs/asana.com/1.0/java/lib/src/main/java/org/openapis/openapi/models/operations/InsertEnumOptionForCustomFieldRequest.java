@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertEnumOptionForCustomFieldRequest {
@@ -12,6 +13,7 @@ public class InsertEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public InsertEnumOptionForCustomFieldRequestBody requestBody;
+
     public InsertEnumOptionForCustomFieldRequest withRequestBody(InsertEnumOptionForCustomFieldRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class InsertEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_gid")
     public String customFieldGid;
+
     public InsertEnumOptionForCustomFieldRequest withCustomFieldGid(String customFieldGid) {
         this.customFieldGid = customFieldGid;
         return this;
@@ -34,6 +37,7 @@ public class InsertEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public InsertEnumOptionForCustomFieldRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,13 @@ public class InsertEnumOptionForCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public InsertEnumOptionForCustomFieldRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public InsertEnumOptionForCustomFieldRequest(@JsonProperty("custom_field_gid") String customFieldGid) {
+        this.customFieldGid = customFieldGid;
+  }
 }

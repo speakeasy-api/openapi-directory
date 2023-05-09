@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateAttributeGroupResponse {
@@ -12,6 +13,7 @@ public class AssociateAttributeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateAttributeGroupResponse associateAttributeGroupResponse;
+
     public AssociateAttributeGroupResponse withAssociateAttributeGroupResponse(org.openapis.openapi.models.shared.AssociateAttributeGroupResponse associateAttributeGroupResponse) {
         this.associateAttributeGroupResponse = associateAttributeGroupResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateAttributeGroupResponse {
      */
     
     public Object conflictException;
+
     public AssociateAttributeGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateAttributeGroupResponse {
     
     
     public String contentType;
+
     public AssociateAttributeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateAttributeGroupResponse {
      */
     
     public Object internalServerException;
+
     public AssociateAttributeGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateAttributeGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateAttributeGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateAttributeGroupResponse {
     
     
     public Integer statusCode;
+
     public AssociateAttributeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateAttributeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateAttributeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateAttributeGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AssociateAttributeGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateAttributeGroupResponse {
      */
     
     public Object validationException;
+
     public AssociateAttributeGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateAttributeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

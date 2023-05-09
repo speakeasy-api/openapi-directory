@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConfigurationSetEventDestinationResponse {
@@ -12,6 +13,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
      */
     
     public Object badRequestException;
+
     public DeleteConfigurationSetEventDestinationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
     
     
     public String contentType;
+
     public DeleteConfigurationSetEventDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
      */
     
     public java.util.Map<String, Object> deleteConfigurationSetEventDestinationResponse;
+
     public DeleteConfigurationSetEventDestinationResponse withDeleteConfigurationSetEventDestinationResponse(java.util.Map<String, Object> deleteConfigurationSetEventDestinationResponse) {
         this.deleteConfigurationSetEventDestinationResponse = deleteConfigurationSetEventDestinationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteConfigurationSetEventDestinationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
     
     
     public Integer statusCode;
+
     public DeleteConfigurationSetEventDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteConfigurationSetEventDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConfigurationSetEventDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteConfigurationSetEventDestinationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteConfigurationSetEventDestinationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteConfigurationSetEventDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetSchemaCreationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public GetSchemaCreationStatusResponse withDetails(String details) {
         this.details = details;
         return this;
@@ -23,9 +24,11 @@ public class GetSchemaCreationStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SchemaStatusEnum status;
+
     public GetSchemaCreationStatusResponse withStatus(SchemaStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetSchemaCreationStatusResponse(){}
 }

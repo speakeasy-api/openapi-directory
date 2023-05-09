@@ -18,6 +18,7 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Segment withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Segment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public java.util.Map<String, String> names;
+
     public Segment withNames(java.util.Map<String, String> names) {
         this.names = names;
         return this;
     }
     
+    public Segment(){}
 }

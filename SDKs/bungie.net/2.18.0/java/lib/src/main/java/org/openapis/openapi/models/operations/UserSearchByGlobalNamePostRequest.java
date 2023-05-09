@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserSearchByGlobalNamePostRequest {
@@ -12,9 +13,13 @@ public class UserSearchByGlobalNamePostRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public UserSearchByGlobalNamePostRequest withPage(Integer page) {
         this.page = page;
         return this;
     }
     
+    public UserSearchByGlobalNamePostRequest(@JsonProperty("page") Integer page) {
+        this.page = page;
+  }
 }

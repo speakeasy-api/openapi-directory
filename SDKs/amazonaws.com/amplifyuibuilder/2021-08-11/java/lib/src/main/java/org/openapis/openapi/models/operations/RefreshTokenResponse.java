@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RefreshTokenResponse {
     
     public String contentType;
+
     public RefreshTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RefreshTokenResponse {
      */
     
     public Object invalidParameterException;
+
     public RefreshTokenResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class RefreshTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.RefreshTokenResponse refreshTokenResponse;
+
     public RefreshTokenResponse withRefreshTokenResponse(org.openapis.openapi.models.shared.RefreshTokenResponse refreshTokenResponse) {
         this.refreshTokenResponse = refreshTokenResponse;
         return this;
@@ -36,6 +40,7 @@ public class RefreshTokenResponse {
     
     
     public Integer statusCode;
+
     public RefreshTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RefreshTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RefreshTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RefreshTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

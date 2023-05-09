@@ -18,9 +18,11 @@ public class DuplicateFilterViewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public FilterView filter;
+
     public DuplicateFilterViewResponse withFilter(FilterView filter) {
         this.filter = filter;
         return this;
     }
     
+    public DuplicateFilterViewResponse(){}
 }

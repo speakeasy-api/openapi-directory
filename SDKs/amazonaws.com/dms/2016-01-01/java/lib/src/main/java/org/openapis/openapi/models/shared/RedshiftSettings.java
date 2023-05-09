@@ -15,6 +15,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptAnyDate")
     public Boolean acceptAnyDate;
+
     public RedshiftSettings withAcceptAnyDate(Boolean acceptAnyDate) {
         this.acceptAnyDate = acceptAnyDate;
         return this;
@@ -23,6 +24,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AfterConnectScript")
     public String afterConnectScript;
+
     public RedshiftSettings withAfterConnectScript(String afterConnectScript) {
         this.afterConnectScript = afterConnectScript;
         return this;
@@ -31,6 +33,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketFolder")
     public String bucketFolder;
+
     public RedshiftSettings withBucketFolder(String bucketFolder) {
         this.bucketFolder = bucketFolder;
         return this;
@@ -39,6 +42,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public RedshiftSettings withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -47,6 +51,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaseSensitiveNames")
     public Boolean caseSensitiveNames;
+
     public RedshiftSettings withCaseSensitiveNames(Boolean caseSensitiveNames) {
         this.caseSensitiveNames = caseSensitiveNames;
         return this;
@@ -55,6 +60,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompUpdate")
     public Boolean compUpdate;
+
     public RedshiftSettings withCompUpdate(Boolean compUpdate) {
         this.compUpdate = compUpdate;
         return this;
@@ -63,6 +69,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionTimeout")
     public Long connectionTimeout;
+
     public RedshiftSettings withConnectionTimeout(Long connectionTimeout) {
         this.connectionTimeout = connectionTimeout;
         return this;
@@ -71,6 +78,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public RedshiftSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -79,6 +87,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateFormat")
     public String dateFormat;
+
     public RedshiftSettings withDateFormat(String dateFormat) {
         this.dateFormat = dateFormat;
         return this;
@@ -87,6 +96,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmptyAsNull")
     public Boolean emptyAsNull;
+
     public RedshiftSettings withEmptyAsNull(Boolean emptyAsNull) {
         this.emptyAsNull = emptyAsNull;
         return this;
@@ -95,6 +105,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionMode")
     public EncryptionModeValueEnum encryptionMode;
+
     public RedshiftSettings withEncryptionMode(EncryptionModeValueEnum encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
@@ -103,6 +114,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplicitIds")
     public Boolean explicitIds;
+
     public RedshiftSettings withExplicitIds(Boolean explicitIds) {
         this.explicitIds = explicitIds;
         return this;
@@ -111,6 +123,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileTransferUploadStreams")
     public Long fileTransferUploadStreams;
+
     public RedshiftSettings withFileTransferUploadStreams(Long fileTransferUploadStreams) {
         this.fileTransferUploadStreams = fileTransferUploadStreams;
         return this;
@@ -119,6 +132,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadTimeout")
     public Long loadTimeout;
+
     public RedshiftSettings withLoadTimeout(Long loadTimeout) {
         this.loadTimeout = loadTimeout;
         return this;
@@ -127,6 +141,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapBooleanAsBoolean")
     public Boolean mapBooleanAsBoolean;
+
     public RedshiftSettings withMapBooleanAsBoolean(Boolean mapBooleanAsBoolean) {
         this.mapBooleanAsBoolean = mapBooleanAsBoolean;
         return this;
@@ -135,6 +150,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFileSize")
     public Long maxFileSize;
+
     public RedshiftSettings withMaxFileSize(Long maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -143,6 +159,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public RedshiftSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -151,6 +168,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public RedshiftSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -159,6 +177,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveQuotes")
     public Boolean removeQuotes;
+
     public RedshiftSettings withRemoveQuotes(Boolean removeQuotes) {
         this.removeQuotes = removeQuotes;
         return this;
@@ -167,6 +186,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplaceChars")
     public String replaceChars;
+
     public RedshiftSettings withReplaceChars(String replaceChars) {
         this.replaceChars = replaceChars;
         return this;
@@ -175,6 +195,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplaceInvalidChars")
     public String replaceInvalidChars;
+
     public RedshiftSettings withReplaceInvalidChars(String replaceInvalidChars) {
         this.replaceInvalidChars = replaceInvalidChars;
         return this;
@@ -183,6 +204,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public RedshiftSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -191,6 +213,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public RedshiftSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -199,6 +222,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public RedshiftSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -207,6 +231,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryptionKmsKeyId")
     public String serverSideEncryptionKmsKeyId;
+
     public RedshiftSettings withServerSideEncryptionKmsKeyId(String serverSideEncryptionKmsKeyId) {
         this.serverSideEncryptionKmsKeyId = serverSideEncryptionKmsKeyId;
         return this;
@@ -215,6 +240,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public RedshiftSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
@@ -223,6 +249,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeFormat")
     public String timeFormat;
+
     public RedshiftSettings withTimeFormat(String timeFormat) {
         this.timeFormat = timeFormat;
         return this;
@@ -231,6 +258,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrimBlanks")
     public Boolean trimBlanks;
+
     public RedshiftSettings withTrimBlanks(Boolean trimBlanks) {
         this.trimBlanks = trimBlanks;
         return this;
@@ -239,6 +267,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TruncateColumns")
     public Boolean truncateColumns;
+
     public RedshiftSettings withTruncateColumns(Boolean truncateColumns) {
         this.truncateColumns = truncateColumns;
         return this;
@@ -247,6 +276,7 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public RedshiftSettings withUsername(String username) {
         this.username = username;
         return this;
@@ -255,9 +285,11 @@ public class RedshiftSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteBufferSize")
     public Long writeBufferSize;
+
     public RedshiftSettings withWriteBufferSize(Long writeBufferSize) {
         this.writeBufferSize = writeBufferSize;
         return this;
     }
     
+    public RedshiftSettings(){}
 }

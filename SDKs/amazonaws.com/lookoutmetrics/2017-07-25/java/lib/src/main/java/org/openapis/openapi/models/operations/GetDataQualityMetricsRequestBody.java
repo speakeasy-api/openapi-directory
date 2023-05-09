@@ -14,6 +14,7 @@ public class GetDataQualityMetricsRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public GetDataQualityMetricsRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -25,9 +26,13 @@ public class GetDataQualityMetricsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricSetArn")
     public String metricSetArn;
+
     public GetDataQualityMetricsRequestBody withMetricSetArn(String metricSetArn) {
         this.metricSetArn = metricSetArn;
         return this;
     }
     
+    public GetDataQualityMetricsRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+  }
 }

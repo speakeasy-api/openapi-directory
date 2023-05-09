@@ -15,9 +15,11 @@ public class PromoteReadReplicaResult {
      */
     
     public DBInstance dbInstance;
+
     public PromoteReadReplicaResult withDBInstance(DBInstance dbInstance) {
         this.dbInstance = dbInstance;
         return this;
     }
     
+    public PromoteReadReplicaResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTextBroadcastTextsRequest {
@@ -12,6 +13,7 @@ public class GetTextBroadcastTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchId")
     public Long batchId;
+
     public GetTextBroadcastTextsRequest withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -22,6 +24,7 @@ public class GetTextBroadcastTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetTextBroadcastTextsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class GetTextBroadcastTextsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetTextBroadcastTextsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class GetTextBroadcastTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetTextBroadcastTextsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,9 +57,13 @@ public class GetTextBroadcastTextsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetTextBroadcastTextsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetTextBroadcastTextsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

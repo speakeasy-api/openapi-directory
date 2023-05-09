@@ -56,11 +56,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolyUsersAssetsListResponse res = new org.openapis.openapi.models.operations.PolyUsersAssetsListResponse() {{
+        org.openapis.openapi.models.operations.PolyUsersAssetsListResponse res = new org.openapis.openapi.models.operations.PolyUsersAssetsListResponse(contentType, httpRes.statusCode()) {{
             listUserAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PolyUsersLikedassetsListResponse res = new org.openapis.openapi.models.operations.PolyUsersLikedassetsListResponse() {{
+        org.openapis.openapi.models.operations.PolyUsersLikedassetsListResponse res = new org.openapis.openapi.models.operations.PolyUsersLikedassetsListResponse(contentType, httpRes.statusCode()) {{
             listLikedAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

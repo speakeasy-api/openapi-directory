@@ -15,9 +15,11 @@ public class GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateVpcCidrBlockRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateVpcCidrBlockActionEnum action;
+
     public GETAssociateVpcCidrBlockRequest withAction(GETAssociateVpcCidrBlockActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AmazonProvidedIpv6CidrBlock")
     public Boolean amazonProvidedIpv6CidrBlock;
+
     public GETAssociateVpcCidrBlockRequest withAmazonProvidedIpv6CidrBlock(Boolean amazonProvidedIpv6CidrBlock) {
         this.amazonProvidedIpv6CidrBlock = amazonProvidedIpv6CidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CidrBlock")
     public String cidrBlock;
+
     public GETAssociateVpcCidrBlockRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -39,6 +43,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4IpamPoolId")
     public String ipv4IpamPoolId;
+
     public GETAssociateVpcCidrBlockRequest withIpv4IpamPoolId(String ipv4IpamPoolId) {
         this.ipv4IpamPoolId = ipv4IpamPoolId;
         return this;
@@ -49,6 +54,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv4NetmaskLength")
     public Long ipv4NetmaskLength;
+
     public GETAssociateVpcCidrBlockRequest withIpv4NetmaskLength(Long ipv4NetmaskLength) {
         this.ipv4NetmaskLength = ipv4NetmaskLength;
         return this;
@@ -59,6 +65,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlock")
     public String ipv6CidrBlock;
+
     public GETAssociateVpcCidrBlockRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -69,6 +76,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlockNetworkBorderGroup")
     public String ipv6CidrBlockNetworkBorderGroup;
+
     public GETAssociateVpcCidrBlockRequest withIpv6CidrBlockNetworkBorderGroup(String ipv6CidrBlockNetworkBorderGroup) {
         this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
         return this;
@@ -79,6 +87,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6IpamPoolId")
     public String ipv6IpamPoolId;
+
     public GETAssociateVpcCidrBlockRequest withIpv6IpamPoolId(String ipv6IpamPoolId) {
         this.ipv6IpamPoolId = ipv6IpamPoolId;
         return this;
@@ -89,6 +98,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6NetmaskLength")
     public Long ipv6NetmaskLength;
+
     public GETAssociateVpcCidrBlockRequest withIpv6NetmaskLength(Long ipv6NetmaskLength) {
         this.ipv6NetmaskLength = ipv6NetmaskLength;
         return this;
@@ -99,6 +109,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6Pool")
     public String ipv6Pool;
+
     public GETAssociateVpcCidrBlockRequest withIpv6Pool(String ipv6Pool) {
         this.ipv6Pool = ipv6Pool;
         return this;
@@ -106,6 +117,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateVpcCidrBlockVersionEnum version;
+
     public GETAssociateVpcCidrBlockRequest withVersion(GETAssociateVpcCidrBlockVersionEnum version) {
         this.version = version;
         return this;
@@ -116,6 +128,7 @@ public class GETAssociateVpcCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETAssociateVpcCidrBlockRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -123,6 +136,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateVpcCidrBlockRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -130,6 +144,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateVpcCidrBlockRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -137,6 +152,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateVpcCidrBlockRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -144,6 +160,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateVpcCidrBlockRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -151,6 +168,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateVpcCidrBlockRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -158,6 +176,7 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateVpcCidrBlockRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -165,9 +184,15 @@ public class GETAssociateVpcCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateVpcCidrBlockRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateVpcCidrBlockRequest(@JsonProperty("Action") GETAssociateVpcCidrBlockActionEnum action, @JsonProperty("Version") GETAssociateVpcCidrBlockVersionEnum version, @JsonProperty("VpcId") String vpcId) {
+        this.action = action;
+        this.version = version;
+        this.vpcId = vpcId;
+  }
 }

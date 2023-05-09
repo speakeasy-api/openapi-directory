@@ -15,6 +15,7 @@ public class RecordColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mapping")
     public String mapping;
+
     public RecordColumn withMapping(String mapping) {
         this.mapping = mapping;
         return this;
@@ -22,6 +23,7 @@ public class RecordColumn {
     
     @JsonProperty("Name")
     public String name;
+
     public RecordColumn withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class RecordColumn {
     
     @JsonProperty("SqlType")
     public String sqlType;
+
     public RecordColumn withSqlType(String sqlType) {
         this.sqlType = sqlType;
         return this;
     }
     
+    public RecordColumn(@JsonProperty("Name") String name, @JsonProperty("SqlType") String sqlType) {
+        this.name = name;
+        this.sqlType = sqlType;
+  }
 }

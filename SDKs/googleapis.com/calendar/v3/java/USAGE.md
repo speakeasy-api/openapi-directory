@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CalendarAclDeleteSecurity;
 import org.openapis.openapi.models.operations.CalendarAclDeleteRequest;
 import org.openapis.openapi.models.operations.CalendarAclDeleteResponse;
+import org.openapis.openapi.models.operations.CalendarAclDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -15,19 +14,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CalendarAclDeleteRequest req = new CalendarAclDeleteRequest() {{
-                alt = "json";
-                calendarId = "corrupti";
-                fields = "provident";
-                key = "distinctio";
-                oauthToken = "quibusdam";
+            CalendarAclDeleteRequest req = new CalendarAclDeleteRequest("corrupti", "provident") {{
+                alt = AltEnum.JSON;
+                fields = "distinctio";
+                key = "quibusdam";
+                oauthToken = "unde";
                 prettyPrint = false;
-                quotaUser = "unde";
-                ruleId = "nulla";
+                quotaUser = "nulla";
                 userIp = "corrupti";
-            }}            
+            }};            
 
-            CalendarAclDeleteResponse res = sdk.acl.calendarAclDelete(req, new CalendarAclDeleteSecurity() {{
+            CalendarAclDeleteResponse res = sdk.acl.calendarAclDelete(req, new CalendarAclDeleteSecurity("illum", "vel") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -38,5 +35,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

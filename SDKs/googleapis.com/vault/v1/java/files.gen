@@ -170,6 +170,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/TeamDriveInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/SitesUrlInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/SharedDriveInfo.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrgUnitInfo.java
+lib/src/main/java/org/openapis/openapi/models/shared/MailOptionsClientSideEncryptedOptionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MailOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/HangoutsChatOptions.java
 lib/src/main/java/org/openapis/openapi/models/shared/HangoutsChatInfo.java
@@ -218,4 +219,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReopenMatterResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SavedQuery.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListSavedQueriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/matters/README.md
+docs/operations/README.md
 USAGE.md

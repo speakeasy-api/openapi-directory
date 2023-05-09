@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBelegeRequest {
@@ -12,6 +13,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetBelegeRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public GetBelegeRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -32,6 +35,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetBelegeFormatEnum format;
+
     public GetBelegeRequest withFormat(GetBelegeFormatEnum format) {
         this.format = format;
         return this;
@@ -42,6 +46,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gte")
     public Long gte;
+
     public GetBelegeRequest withGte(Long gte) {
         this.gte = gte;
         return this;
@@ -52,6 +57,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetBelegeRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -62,6 +68,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lte")
     public Long lte;
+
     public GetBelegeRequest withLte(Long lte) {
         this.lte = lte;
         return this;
@@ -72,6 +79,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetBelegeRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -82,6 +90,7 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetBelegeOrderEnum order;
+
     public GetBelegeRequest withOrder(GetBelegeOrderEnum order) {
         this.order = order;
         return this;
@@ -92,9 +101,14 @@ public class GetBelegeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public GetBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public GetBelegeRequest(@JsonProperty("format") GetBelegeFormatEnum format, @JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.format = format;
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProvisioningClaimResponse {
     
     public String contentType;
+
     public CreateProvisioningClaimResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProvisioningClaimResponse createProvisioningClaimResponse;
+
     public CreateProvisioningClaimResponse withCreateProvisioningClaimResponse(org.openapis.openapi.models.shared.CreateProvisioningClaimResponse createProvisioningClaimResponse) {
         this.createProvisioningClaimResponse = createProvisioningClaimResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object internalFailureException;
+
     public CreateProvisioningClaimResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateProvisioningClaimResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateProvisioningClaimResponse {
     
     
     public Integer statusCode;
+
     public CreateProvisioningClaimResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateProvisioningClaimResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProvisioningClaimResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProvisioningClaimResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateProvisioningClaimResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object throttlingException;
+
     public CreateProvisioningClaimResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateProvisioningClaimResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateProvisioningClaimResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateProvisioningClaimResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAlgorithmOutput {
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public CreateAlgorithmOutput withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
     }
     
+    public CreateAlgorithmOutput(@JsonProperty("AlgorithmArn") String algorithmArn) {
+        this.algorithmArn = algorithmArn;
+  }
 }

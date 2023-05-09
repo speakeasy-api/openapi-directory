@@ -15,6 +15,7 @@ public class ManagedInstanceInstanceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailedHealthState")
     public ManagedInstanceInstanceHealthDetailedHealthStateEnum detailedHealthState;
+
     public ManagedInstanceInstanceHealth withDetailedHealthState(ManagedInstanceInstanceHealthDetailedHealthStateEnum detailedHealthState) {
         this.detailedHealthState = detailedHealthState;
         return this;
@@ -26,9 +27,11 @@ public class ManagedInstanceInstanceHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public String healthCheck;
+
     public ManagedInstanceInstanceHealth withHealthCheck(String healthCheck) {
         this.healthCheck = healthCheck;
         return this;
     }
     
+    public ManagedInstanceInstanceHealth(){}
 }

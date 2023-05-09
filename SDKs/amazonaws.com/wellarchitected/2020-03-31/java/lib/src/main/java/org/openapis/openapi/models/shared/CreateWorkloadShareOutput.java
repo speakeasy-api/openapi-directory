@@ -18,6 +18,7 @@ public class CreateWorkloadShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareId")
     public String shareId;
+
     public CreateWorkloadShareOutput withShareId(String shareId) {
         this.shareId = shareId;
         return this;
@@ -29,9 +30,11 @@ public class CreateWorkloadShareOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public CreateWorkloadShareOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public CreateWorkloadShareOutput(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeMovingAddressesRequest {
     
     public Boolean dryRun;
+
     public DescribeMovingAddressesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeMovingAddressesRequest {
     
     
     public DescribeMovingAddressesRequestFilters[] filters;
+
     public DescribeMovingAddressesRequest withFilters(DescribeMovingAddressesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeMovingAddressesRequest {
     
     
     public Long maxResults;
+
     public DescribeMovingAddressesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeMovingAddressesRequest {
     
     
     public String nextToken;
+
     public DescribeMovingAddressesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeMovingAddressesRequest {
     
     
     public String[] publicIps;
+
     public DescribeMovingAddressesRequest withPublicIps(String[] publicIps) {
         this.publicIps = publicIps;
         return this;
     }
     
+    public DescribeMovingAddressesRequest(){}
 }

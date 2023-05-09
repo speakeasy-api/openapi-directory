@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBetHistoryRequest {
@@ -12,6 +13,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public GetBetHistoryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiSecret")
     public String apiSecret;
+
     public GetBetHistoryRequest withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -32,6 +35,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiTicket")
     public String apiTicket;
+
     public GetBetHistoryRequest withApiTicket(String apiTicket) {
         this.apiTicket = apiTicket;
         return this;
@@ -42,6 +46,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
     public String dateFrom;
+
     public GetBetHistoryRequest withDateFrom(String dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -52,6 +57,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
     public String dateTo;
+
     public GetBetHistoryRequest withDateTo(String dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -62,6 +68,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=exclude")
     public String[] exclude;
+
     public GetBetHistoryRequest withExclude(String[] exclude) {
         this.exclude = exclude;
         return this;
@@ -72,6 +79,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=fields")
     public String[] fields;
+
     public GetBetHistoryRequest withFields(String[] fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=include")
     public String[] include;
+
     public GetBetHistoryRequest withInclude(String[] include) {
         this.include = include;
         return this;
@@ -92,6 +101,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Double page;
+
     public GetBetHistoryRequest withPage(Double page) {
         this.page = page;
         return this;
@@ -102,6 +112,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Double pageSize;
+
     public GetBetHistoryRequest withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=settled")
     public Boolean settled;
+
     public GetBetHistoryRequest withSettled(Boolean settled) {
         this.settled = settled;
         return this;
@@ -122,9 +134,17 @@ public class GetBetHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetBetHistoryRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetBetHistoryRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("apiSecret") String apiSecret, @JsonProperty("apiTicket") String apiTicket, @JsonProperty("dateFrom") String dateFrom, @JsonProperty("dateTo") String dateTo) {
+        this.apiKey = apiKey;
+        this.apiSecret = apiSecret;
+        this.apiTicket = apiTicket;
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+  }
 }

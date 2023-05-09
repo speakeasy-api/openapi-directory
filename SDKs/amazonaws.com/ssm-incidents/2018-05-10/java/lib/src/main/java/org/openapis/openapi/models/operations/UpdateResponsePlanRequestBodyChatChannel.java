@@ -15,6 +15,7 @@ public class UpdateResponsePlanRequestBodyChatChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatbotSns")
     public String[] chatbotSns;
+
     public UpdateResponsePlanRequestBodyChatChannel withChatbotSns(String[] chatbotSns) {
         this.chatbotSns = chatbotSns;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResponsePlanRequestBodyChatChannel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("empty")
     public java.util.Map<String, Object> empty;
+
     public UpdateResponsePlanRequestBodyChatChannel withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
     }
     
+    public UpdateResponsePlanRequestBodyChatChannel(){}
 }

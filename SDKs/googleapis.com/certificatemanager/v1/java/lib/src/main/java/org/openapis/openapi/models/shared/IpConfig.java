@@ -18,6 +18,7 @@ public class IpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public IpConfig withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -29,9 +30,11 @@ public class IpConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ports")
     public Long[] ports;
+
     public IpConfig withPorts(Long[] ports) {
         this.ports = ports;
         return this;
     }
     
+    public IpConfig(){}
 }

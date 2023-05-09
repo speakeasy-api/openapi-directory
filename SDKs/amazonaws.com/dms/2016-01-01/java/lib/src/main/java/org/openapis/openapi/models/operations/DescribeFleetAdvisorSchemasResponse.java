@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetAdvisorSchemasResponse {
     
     public String contentType;
+
     public DescribeFleetAdvisorSchemasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetAdvisorSchemasResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemasResponse describeFleetAdvisorSchemasResponse;
+
     public DescribeFleetAdvisorSchemasResponse withDescribeFleetAdvisorSchemasResponse(org.openapis.openapi.models.shared.DescribeFleetAdvisorSchemasResponse describeFleetAdvisorSchemasResponse) {
         this.describeFleetAdvisorSchemasResponse = describeFleetAdvisorSchemasResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetAdvisorSchemasResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeFleetAdvisorSchemasResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFleetAdvisorSchemasResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetAdvisorSchemasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeFleetAdvisorSchemasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetAdvisorSchemasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFleetAdvisorSchemasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

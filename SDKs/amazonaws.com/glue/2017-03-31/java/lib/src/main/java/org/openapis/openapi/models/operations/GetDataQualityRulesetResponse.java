@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataQualityRulesetResponse {
     
     public String contentType;
+
     public GetDataQualityRulesetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataQualityRulesetResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDataQualityRulesetResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDataQualityRulesetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataQualityRulesetResponse getDataQualityRulesetResponse;
+
     public GetDataQualityRulesetResponse withGetDataQualityRulesetResponse(org.openapis.openapi.models.shared.GetDataQualityRulesetResponse getDataQualityRulesetResponse) {
         this.getDataQualityRulesetResponse = getDataQualityRulesetResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataQualityRulesetResponse {
      */
     
     public Object internalServiceException;
+
     public GetDataQualityRulesetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataQualityRulesetResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataQualityRulesetResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetDataQualityRulesetResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetDataQualityRulesetResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetDataQualityRulesetResponse {
     
     
     public Integer statusCode;
+
     public GetDataQualityRulesetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetDataQualityRulesetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataQualityRulesetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDataQualityRulesetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

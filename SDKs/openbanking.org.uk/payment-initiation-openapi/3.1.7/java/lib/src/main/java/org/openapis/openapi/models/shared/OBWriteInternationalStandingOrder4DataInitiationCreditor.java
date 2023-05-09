@@ -18,6 +18,7 @@ public class OBWriteInternationalStandingOrder4DataInitiationCreditor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalStandingOrder4DataInitiationCreditor withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class OBWriteInternationalStandingOrder4DataInitiationCreditor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalAddress")
     public OBPostalAddress6 postalAddress;
+
     public OBWriteInternationalStandingOrder4DataInitiationCreditor withPostalAddress(OBPostalAddress6 postalAddress) {
         this.postalAddress = postalAddress;
         return this;
     }
     
+    public OBWriteInternationalStandingOrder4DataInitiationCreditor(){}
 }

@@ -17,6 +17,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingLimit")
     public Integer bookingLimit;
+
     public ServiceAllocationUpdateModel withBookingLimit(Integer bookingLimit) {
         this.bookingLimit = bookingLimit;
         return this;
@@ -26,6 +27,7 @@ public class ServiceAllocationUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("endDate")
     public LocalDate endDate;
+
     public ServiceAllocationUpdateModel withEndDate(LocalDate endDate) {
         this.endDate = endDate;
         return this;
@@ -34,6 +36,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public Integer endTime;
+
     public ServiceAllocationUpdateModel withEndTime(Integer endTime) {
         this.endTime = endTime;
         return this;
@@ -42,6 +45,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public ServiceAllocationUpdateModel withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -50,6 +54,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ServiceAllocationUpdateModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -58,6 +63,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeat")
     public RepeatInputModel repeat;
+
     public ServiceAllocationUpdateModel withRepeat(RepeatInputModel repeat) {
         this.repeat = repeat;
         return this;
@@ -66,6 +72,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repeats")
     public Boolean repeats;
+
     public ServiceAllocationUpdateModel withRepeats(Boolean repeats) {
         this.repeats = repeats;
         return this;
@@ -74,6 +81,7 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public ServiceAllocationUpdateModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -83,6 +91,7 @@ public class ServiceAllocationUpdateModel {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("startDate")
     public LocalDate startDate;
+
     public ServiceAllocationUpdateModel withStartDate(LocalDate startDate) {
         this.startDate = startDate;
         return this;
@@ -91,9 +100,11 @@ public class ServiceAllocationUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public Integer startTime;
+
     public ServiceAllocationUpdateModel withStartTime(Integer startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ServiceAllocationUpdateModel(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAttachVerifiedAccessTrustProviderRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAttachVerifiedAccessTrustProviderActionEnum action;
+
     public GETAttachVerifiedAccessTrustProviderRequest withAction(GETAttachVerifiedAccessTrustProviderActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientToken")
     public String clientToken;
+
     public GETAttachVerifiedAccessTrustProviderRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,26 +32,29 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAttachVerifiedAccessTrustProviderRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access instance.
+     * The ID of the Verified Access instance.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessInstanceId")
     public String verifiedAccessInstanceId;
+
     public GETAttachVerifiedAccessTrustProviderRequest withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access trust provider.
+     * The ID of the Verified Access trust provider.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessTrustProviderId")
     public String verifiedAccessTrustProviderId;
+
     public GETAttachVerifiedAccessTrustProviderRequest withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
@@ -56,6 +62,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAttachVerifiedAccessTrustProviderVersionEnum version;
+
     public GETAttachVerifiedAccessTrustProviderRequest withVersion(GETAttachVerifiedAccessTrustProviderVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETAttachVerifiedAccessTrustProviderRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAttachVerifiedAccessTrustProviderRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAttachVerifiedAccessTrustProviderRequest(@JsonProperty("Action") GETAttachVerifiedAccessTrustProviderActionEnum action, @JsonProperty("VerifiedAccessInstanceId") String verifiedAccessInstanceId, @JsonProperty("VerifiedAccessTrustProviderId") String verifiedAccessTrustProviderId, @JsonProperty("Version") GETAttachVerifiedAccessTrustProviderVersionEnum version) {
+        this.action = action;
+        this.verifiedAccessInstanceId = verifiedAccessInstanceId;
+        this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
+        this.version = version;
+  }
 }

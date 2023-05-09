@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteClusterRequest {
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public DeleteClusterRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -19,9 +20,13 @@ public class DeleteClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalSnapshotName")
     public String finalSnapshotName;
+
     public DeleteClusterRequest withFinalSnapshotName(String finalSnapshotName) {
         this.finalSnapshotName = finalSnapshotName;
         return this;
     }
     
+    public DeleteClusterRequest(@JsonProperty("ClusterName") String clusterName) {
+        this.clusterName = clusterName;
+  }
 }

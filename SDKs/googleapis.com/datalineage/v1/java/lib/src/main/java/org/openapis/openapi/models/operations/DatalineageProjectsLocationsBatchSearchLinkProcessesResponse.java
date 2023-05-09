@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalineageProjectsLocationsBatchSearchLinkProcessesResponse {
     
     public String contentType;
+
     public DatalineageProjectsLocationsBatchSearchLinkProcessesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalineageProjectsLocationsBatchSearchLinkProcessesResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse;
+
     public DatalineageProjectsLocationsBatchSearchLinkProcessesResponse withGoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse(org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse) {
         this.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse = googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatalineageProjectsLocationsBatchSearchLinkProcessesResponse {
     
     
     public Integer statusCode;
+
     public DatalineageProjectsLocationsBatchSearchLinkProcessesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalineageProjectsLocationsBatchSearchLinkProcessesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalineageProjectsLocationsBatchSearchLinkProcessesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalineageProjectsLocationsBatchSearchLinkProcessesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

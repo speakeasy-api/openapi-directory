@@ -18,6 +18,7 @@ public class OSPolicyResourceRepositoryResourceAptRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveType")
     public OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum archiveType;
+
     public OSPolicyResourceRepositoryResourceAptRepository withArchiveType(OSPolicyResourceRepositoryResourceAptRepositoryArchiveTypeEnum archiveType) {
         this.archiveType = archiveType;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceRepositoryResourceAptRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public String[] components;
+
     public OSPolicyResourceRepositoryResourceAptRepository withComponents(String[] components) {
         this.components = components;
         return this;
@@ -40,6 +42,7 @@ public class OSPolicyResourceRepositoryResourceAptRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distribution")
     public String distribution;
+
     public OSPolicyResourceRepositoryResourceAptRepository withDistribution(String distribution) {
         this.distribution = distribution;
         return this;
@@ -51,6 +54,7 @@ public class OSPolicyResourceRepositoryResourceAptRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpgKey")
     public String gpgKey;
+
     public OSPolicyResourceRepositoryResourceAptRepository withGpgKey(String gpgKey) {
         this.gpgKey = gpgKey;
         return this;
@@ -62,9 +66,11 @@ public class OSPolicyResourceRepositoryResourceAptRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public OSPolicyResourceRepositoryResourceAptRepository withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public OSPolicyResourceRepositoryResourceAptRepository(){}
 }

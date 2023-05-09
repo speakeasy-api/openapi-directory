@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentInput
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public String audio;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentInput withAudio(String audio) {
         this.audio = audio;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentInput
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentInput withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentInput(){}
 }

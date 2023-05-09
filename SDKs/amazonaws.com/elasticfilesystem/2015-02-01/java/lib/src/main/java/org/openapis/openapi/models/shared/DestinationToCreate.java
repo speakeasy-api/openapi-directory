@@ -15,6 +15,7 @@ public class DestinationToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneName")
     public String availabilityZoneName;
+
     public DestinationToCreate withAvailabilityZoneName(String availabilityZoneName) {
         this.availabilityZoneName = availabilityZoneName;
         return this;
@@ -23,6 +24,7 @@ public class DestinationToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DestinationToCreate withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -31,9 +33,11 @@ public class DestinationToCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public DestinationToCreate withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public DestinationToCreate(){}
 }

@@ -15,6 +15,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public Reference cluster;
+
     public Host withCluster(Reference cluster) {
         this.cluster = cluster;
         return this;
@@ -23,6 +24,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connection_state")
     public String connectionState;
+
     public Host withConnectionState(String connectionState) {
         this.connectionState = connectionState;
         return this;
@@ -31,6 +33,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastores")
     public Reference[] datastores;
+
     public Host withDatastores(Reference[] datastores) {
         this.datastores = datastores;
         return this;
@@ -39,6 +42,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_id")
     public String entityId;
+
     public Host withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -47,6 +51,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity_type")
     public EntityTypeEnum entityType;
+
     public Host withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -55,6 +60,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenance_mode")
     public String maintenanceMode;
+
     public Host withMaintenanceMode(String maintenanceMode) {
         this.maintenanceMode = maintenanceMode;
         return this;
@@ -63,6 +69,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Host withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nsx_manager")
     public Reference nsxManager;
+
     public Host withNsxManager(Reference nsxManager) {
         this.nsxManager = nsxManager;
         return this;
@@ -79,6 +87,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_tag")
     public String serviceTag;
+
     public Host withServiceTag(String serviceTag) {
         this.serviceTag = serviceTag;
         return this;
@@ -87,6 +96,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vcenter_manager")
     public Reference vcenterManager;
+
     public Host withVcenterManager(Reference vcenterManager) {
         this.vcenterManager = vcenterManager;
         return this;
@@ -95,6 +105,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_id")
     public String vendorId;
+
     public Host withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
@@ -103,6 +114,7 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vm_count")
     public Integer vmCount;
+
     public Host withVmCount(Integer vmCount) {
         this.vmCount = vmCount;
         return this;
@@ -111,9 +123,11 @@ public class Host {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmknics")
     public Reference[] vmknics;
+
     public Host withVmknics(Reference[] vmknics) {
         this.vmknics = vmknics;
         return this;
     }
     
+    public Host(){}
 }

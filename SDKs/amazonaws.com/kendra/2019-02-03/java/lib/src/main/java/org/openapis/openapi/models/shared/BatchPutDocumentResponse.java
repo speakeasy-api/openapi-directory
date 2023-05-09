@@ -15,9 +15,11 @@ public class BatchPutDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedDocuments")
     public BatchPutDocumentResponseFailedDocument[] failedDocuments;
+
     public BatchPutDocumentResponse withFailedDocuments(BatchPutDocumentResponseFailedDocument[] failedDocuments) {
         this.failedDocuments = failedDocuments;
         return this;
     }
     
+    public BatchPutDocumentResponse(){}
 }

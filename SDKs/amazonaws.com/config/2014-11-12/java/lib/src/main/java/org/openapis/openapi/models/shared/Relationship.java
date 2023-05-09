@@ -15,6 +15,7 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationshipName")
     public String relationshipName;
+
     public Relationship withRelationshipName(String relationshipName) {
         this.relationshipName = relationshipName;
         return this;
@@ -23,6 +24,7 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public Relationship withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -31,6 +33,7 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public Relationship withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -39,9 +42,11 @@ public class Relationship {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public Relationship withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public Relationship(){}
 }

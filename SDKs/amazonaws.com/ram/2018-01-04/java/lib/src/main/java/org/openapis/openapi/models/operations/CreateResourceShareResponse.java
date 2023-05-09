@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceShareResponse {
     
     public String contentType;
+
     public CreateResourceShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceShareResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourceShareResponse createResourceShareResponse;
+
     public CreateResourceShareResponse withCreateResourceShareResponse(org.openapis.openapi.models.shared.CreateResourceShareResponse createResourceShareResponse) {
         this.createResourceShareResponse = createResourceShareResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateResourceShareResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object invalidClientTokenException;
+
     public CreateResourceShareResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateResourceShareResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public CreateResourceShareResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -69,6 +76,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object malformedArnException;
+
     public CreateResourceShareResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -79,6 +87,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateResourceShareResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -89,6 +98,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object resourceShareLimitExceededException;
+
     public CreateResourceShareResponse withResourceShareLimitExceededException(Object resourceShareLimitExceededException) {
         this.resourceShareLimitExceededException = resourceShareLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateResourceShareResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateResourceShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object serverInternalException;
+
     public CreateResourceShareResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -123,6 +136,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateResourceShareResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -133,6 +147,7 @@ public class CreateResourceShareResponse {
      */
     
     public Object tagPolicyViolationException;
+
     public CreateResourceShareResponse withTagPolicyViolationException(Object tagPolicyViolationException) {
         this.tagPolicyViolationException = tagPolicyViolationException;
         return this;
@@ -143,9 +158,14 @@ public class CreateResourceShareResponse {
      */
     
     public Object unknownResourceException;
+
     public CreateResourceShareResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public CreateResourceShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

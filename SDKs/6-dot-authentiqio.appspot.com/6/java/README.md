@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.KeyRevokeRequest;
 import org.openapis.openapi.models.operations.KeyRevokeResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            KeyRevokeRequest req = new KeyRevokeRequest() {{
-                pk = "corrupti";
-                secret = "provident";
-            }}            
+            KeyRevokeRequest req = new KeyRevokeRequest("corrupti", "provident");            
 
             KeyRevokeResponse res = sdk.delete.keyRevoke(req);
 
-            if (res.keyRevoke200ApplicationJSONObject.isPresent()) {
+            if (res.keyRevoke200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,34 +44,34 @@ public class Application {
 ## Available Resources and Operations
 
 
-### delete
+### [delete](docs/delete/README.md)
 
-* `keyRevoke` - Revoke an Identity (Key) with a revocation secret
-* `keyRevokeNosecret` - Revoke an Authentiq ID using email & phone.
+* [keyRevoke](docs/delete/README.md#keyrevoke) - Revoke an Identity (Key) with a revocation secret
+* [keyRevokeNosecret](docs/delete/README.md#keyrevokenosecret) - Revoke an Authentiq ID using email & phone.
 
 If called with `email` and `phone` only, a verification code 
 will be sent by email. Do a second call adding `code` to 
 complete the revocation.
 
-* `signDelete` - delete a verification job
+* [signDelete](docs/delete/README.md#signdelete) - delete a verification job
 
-### get
+### [get](docs/get/README.md)
 
-* `keyRetrieve` - Get public details of an Authentiq ID.
+* [keyRetrieve](docs/get/README.md#keyretrieve) - Get public details of an Authentiq ID.
 
-* `signRetrieve` - get the status / current content of a verification job
+* [signRetrieve](docs/get/README.md#signretrieve) - get the status / current content of a verification job
 
-### head
+### [head](docs/head/README.md)
 
-* `headKeyPK` - HEAD info on Authentiq ID
+* [headKeyPK](docs/head/README.md#headkeypk) - HEAD info on Authentiq ID
 
-* `signRetrieveHead` - HEAD to get the status of a verification job
+* [signRetrieveHead](docs/head/README.md#signretrievehead) - HEAD to get the status of a verification job
 
-### key
+### [key](docs/key/README.md)
 
-* `headKeyPK` - HEAD info on Authentiq ID
+* [headKeyPK](docs/key/README.md#headkeypk) - HEAD info on Authentiq ID
 
-* `keyBind` - Update Authentiq ID by replacing the object.
+* [keyBind](docs/key/README.md#keybind) - Update Authentiq ID by replacing the object.
 
 v4: `JWT(sub,email,phone)` to bind email/phone hash; 
 
@@ -82,22 +80,22 @@ and PUT to update registration `JWT(sub, pk, devtoken, ...)`
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `keyRegister` - Register a new ID `JWT(sub, devtoken)`
+* [keyRegister](docs/key/README.md#keyregister) - Register a new ID `JWT(sub, devtoken)`
 
 v5: `JWT(sub, pk, devtoken, ...)`
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `keyRetrieve` - Get public details of an Authentiq ID.
+* [keyRetrieve](docs/key/README.md#keyretrieve) - Get public details of an Authentiq ID.
 
-* `keyRevoke` - Revoke an Identity (Key) with a revocation secret
-* `keyRevokeNosecret` - Revoke an Authentiq ID using email & phone.
+* [keyRevoke](docs/key/README.md#keyrevoke) - Revoke an Identity (Key) with a revocation secret
+* [keyRevokeNosecret](docs/key/README.md#keyrevokenosecret) - Revoke an Authentiq ID using email & phone.
 
 If called with `email` and `phone` only, a verification code 
 will be sent by email. Do a second call adding `code` to 
 complete the revocation.
 
-* `keyUpdate` - update properties of an Authentiq ID.
+* [keyUpdate](docs/key/README.md#keyupdate) - update properties of an Authentiq ID.
 (not operational in v4; use PUT for now)
 
 v5: POST issuer-signed email & phone scopes in
@@ -106,21 +104,21 @@ a self-signed JWT
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### login
+### [login](docs/login/README.md)
 
-* `pushLoginRequest` - push sign-in request
+* [pushLoginRequest](docs/login/README.md#pushloginrequest) - push sign-in request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### post
+### [post](docs/post/README.md)
 
-* `keyRegister` - Register a new ID `JWT(sub, devtoken)`
+* [keyRegister](docs/post/README.md#keyregister) - Register a new ID `JWT(sub, devtoken)`
 
 v5: `JWT(sub, pk, devtoken, ...)`
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `keyUpdate` - update properties of an Authentiq ID.
+* [keyUpdate](docs/post/README.md#keyupdate) - update properties of an Authentiq ID.
 (not operational in v4; use PUT for now)
 
 v5: POST issuer-signed email & phone scopes in
@@ -128,17 +126,17 @@ a self-signed JWT
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `pushLoginRequest` - push sign-in request
+* [pushLoginRequest](docs/post/README.md#pushloginrequest) - push sign-in request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `signConfirm` - this is a scope confirmation
-* `signRequest` - scope verification request
+* [signConfirm](docs/post/README.md#signconfirm) - this is a scope confirmation
+* [signRequest](docs/post/README.md#signrequest) - scope verification request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### put
+### [put](docs/put/README.md)
 
-* `keyBind` - Update Authentiq ID by replacing the object.
+* [keyBind](docs/put/README.md#keybind) - Update Authentiq ID by replacing the object.
 
 v4: `JWT(sub,email,phone)` to bind email/phone hash; 
 
@@ -147,20 +145,20 @@ and PUT to update registration `JWT(sub, pk, devtoken, ...)`
 
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `signUpdate` - authority updates a JWT with its signature
+* [signUpdate](docs/put/README.md#signupdate) - authority updates a JWT with its signature
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 
-### scope
+### [scope](docs/scope/README.md)
 
-* `signConfirm` - this is a scope confirmation
-* `signDelete` - delete a verification job
-* `signRequest` - scope verification request
+* [signConfirm](docs/scope/README.md#signconfirm) - this is a scope confirmation
+* [signDelete](docs/scope/README.md#signdelete) - delete a verification job
+* [signRequest](docs/scope/README.md#signrequest) - scope verification request
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
-* `signRetrieve` - get the status / current content of a verification job
-* `signRetrieveHead` - HEAD to get the status of a verification job
-* `signUpdate` - authority updates a JWT with its signature
+* [signRetrieve](docs/scope/README.md#signretrieve) - get the status / current content of a verification job
+* [signRetrieveHead](docs/scope/README.md#signretrievehead) - HEAD to get the status of a verification job
+* [signUpdate](docs/scope/README.md#signupdate) - authority updates a JWT with its signature
 See: https://github.com/skion/authentiq/wiki/JWT-Examples
 
 <!-- End SDK Available Operations -->

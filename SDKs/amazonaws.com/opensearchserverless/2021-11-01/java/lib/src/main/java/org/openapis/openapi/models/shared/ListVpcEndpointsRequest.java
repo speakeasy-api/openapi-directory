@@ -12,6 +12,7 @@ public class ListVpcEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListVpcEndpointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListVpcEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVpcEndpointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListVpcEndpointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpointFilters")
     public VpcEndpointFilters vpcEndpointFilters;
+
     public ListVpcEndpointsRequest withVpcEndpointFilters(VpcEndpointFilters vpcEndpointFilters) {
         this.vpcEndpointFilters = vpcEndpointFilters;
         return this;
     }
     
+    public ListVpcEndpointsRequest(){}
 }

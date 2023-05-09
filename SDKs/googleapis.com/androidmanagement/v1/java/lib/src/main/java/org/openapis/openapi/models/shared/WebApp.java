@@ -18,6 +18,7 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayMode")
     public WebAppDisplayModeEnum displayMode;
+
     public WebApp withDisplayMode(WebAppDisplayModeEnum displayMode) {
         this.displayMode = displayMode;
         return this;
@@ -29,6 +30,7 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icons")
     public WebAppIcon[] icons;
+
     public WebApp withIcons(WebAppIcon[] icons) {
         this.icons = icons;
         return this;
@@ -40,6 +42,7 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public WebApp withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startUrl")
     public String startUrl;
+
     public WebApp withStartUrl(String startUrl) {
         this.startUrl = startUrl;
         return this;
@@ -62,6 +66,7 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public WebApp withTitle(String title) {
         this.title = title;
         return this;
@@ -73,9 +78,11 @@ public class WebApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public String versionCode;
+
     public WebApp withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public WebApp(){}
 }

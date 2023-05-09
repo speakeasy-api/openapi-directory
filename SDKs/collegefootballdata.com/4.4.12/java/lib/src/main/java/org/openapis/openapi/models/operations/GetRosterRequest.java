@@ -12,6 +12,7 @@ public class GetRosterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetRosterRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -22,9 +23,11 @@ public class GetRosterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetRosterRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetRosterRequest(){}
 }

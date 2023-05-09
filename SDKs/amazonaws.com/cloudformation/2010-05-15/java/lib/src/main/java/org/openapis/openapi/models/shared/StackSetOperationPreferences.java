@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StackSetOperationPreferences {
     
     public Long failureToleranceCount;
+
     public StackSetOperationPreferences withFailureToleranceCount(Long failureToleranceCount) {
         this.failureToleranceCount = failureToleranceCount;
         return this;
@@ -19,6 +20,7 @@ public class StackSetOperationPreferences {
     
     
     public Long failureTolerancePercentage;
+
     public StackSetOperationPreferences withFailureTolerancePercentage(Long failureTolerancePercentage) {
         this.failureTolerancePercentage = failureTolerancePercentage;
         return this;
@@ -26,6 +28,7 @@ public class StackSetOperationPreferences {
     
     
     public Long maxConcurrentCount;
+
     public StackSetOperationPreferences withMaxConcurrentCount(Long maxConcurrentCount) {
         this.maxConcurrentCount = maxConcurrentCount;
         return this;
@@ -33,6 +36,7 @@ public class StackSetOperationPreferences {
     
     
     public Long maxConcurrentPercentage;
+
     public StackSetOperationPreferences withMaxConcurrentPercentage(Long maxConcurrentPercentage) {
         this.maxConcurrentPercentage = maxConcurrentPercentage;
         return this;
@@ -40,6 +44,7 @@ public class StackSetOperationPreferences {
     
     
     public RegionConcurrencyTypeEnum regionConcurrencyType;
+
     public StackSetOperationPreferences withRegionConcurrencyType(RegionConcurrencyTypeEnum regionConcurrencyType) {
         this.regionConcurrencyType = regionConcurrencyType;
         return this;
@@ -47,9 +52,11 @@ public class StackSetOperationPreferences {
     
     
     public String[] regionOrder;
+
     public StackSetOperationPreferences withRegionOrder(String[] regionOrder) {
         this.regionOrder = regionOrder;
         return this;
     }
     
+    public StackSetOperationPreferences(){}
 }

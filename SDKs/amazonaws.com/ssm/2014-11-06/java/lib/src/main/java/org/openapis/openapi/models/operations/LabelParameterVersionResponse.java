@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LabelParameterVersionResponse {
     
     public String contentType;
+
     public LabelParameterVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class LabelParameterVersionResponse {
      */
     
     public Object internalServerError;
+
     public LabelParameterVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class LabelParameterVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.LabelParameterVersionResult labelParameterVersionResult;
+
     public LabelParameterVersionResponse withLabelParameterVersionResult(org.openapis.openapi.models.shared.LabelParameterVersionResult labelParameterVersionResult) {
         this.labelParameterVersionResult = labelParameterVersionResult;
         return this;
@@ -39,6 +43,7 @@ public class LabelParameterVersionResponse {
      */
     
     public Object parameterNotFound;
+
     public LabelParameterVersionResponse withParameterNotFound(Object parameterNotFound) {
         this.parameterNotFound = parameterNotFound;
         return this;
@@ -49,6 +54,7 @@ public class LabelParameterVersionResponse {
      */
     
     public Object parameterVersionLabelLimitExceeded;
+
     public LabelParameterVersionResponse withParameterVersionLabelLimitExceeded(Object parameterVersionLabelLimitExceeded) {
         this.parameterVersionLabelLimitExceeded = parameterVersionLabelLimitExceeded;
         return this;
@@ -59,6 +65,7 @@ public class LabelParameterVersionResponse {
      */
     
     public Object parameterVersionNotFound;
+
     public LabelParameterVersionResponse withParameterVersionNotFound(Object parameterVersionNotFound) {
         this.parameterVersionNotFound = parameterVersionNotFound;
         return this;
@@ -66,6 +73,7 @@ public class LabelParameterVersionResponse {
     
     
     public Integer statusCode;
+
     public LabelParameterVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class LabelParameterVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LabelParameterVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class LabelParameterVersionResponse {
      */
     
     public Object tooManyUpdates;
+
     public LabelParameterVersionResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
     }
     
+    public LabelParameterVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

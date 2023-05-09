@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTemplateResponse {
     @JsonProperty("templateArn")
     public String templateArn;
+
     public CreateTemplateResponse withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateTemplateResponse {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public CreateTemplateResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CreateTemplateResponse(@JsonProperty("templateArn") String templateArn, @JsonProperty("templateId") String templateId) {
+        this.templateArn = templateArn;
+        this.templateId = templateId;
+  }
 }

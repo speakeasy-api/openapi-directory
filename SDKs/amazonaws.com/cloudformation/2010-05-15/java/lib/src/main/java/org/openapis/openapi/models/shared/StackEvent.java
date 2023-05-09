@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class StackEvent {
     
     public String clientRequestToken;
+
     public StackEvent withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +21,7 @@ public class StackEvent {
     
     
     public String eventId;
+
     public StackEvent withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -26,6 +29,7 @@ public class StackEvent {
     
     
     public HookFailureModeEnum hookFailureMode;
+
     public StackEvent withHookFailureMode(HookFailureModeEnum hookFailureMode) {
         this.hookFailureMode = hookFailureMode;
         return this;
@@ -33,6 +37,7 @@ public class StackEvent {
     
     
     public HookInvocationPointEnum hookInvocationPoint;
+
     public StackEvent withHookInvocationPoint(HookInvocationPointEnum hookInvocationPoint) {
         this.hookInvocationPoint = hookInvocationPoint;
         return this;
@@ -40,6 +45,7 @@ public class StackEvent {
     
     
     public HookStatusEnum hookStatus;
+
     public StackEvent withHookStatus(HookStatusEnum hookStatus) {
         this.hookStatus = hookStatus;
         return this;
@@ -47,6 +53,7 @@ public class StackEvent {
     
     
     public String hookStatusReason;
+
     public StackEvent withHookStatusReason(String hookStatusReason) {
         this.hookStatusReason = hookStatusReason;
         return this;
@@ -54,6 +61,7 @@ public class StackEvent {
     
     
     public String hookType;
+
     public StackEvent withHookType(String hookType) {
         this.hookType = hookType;
         return this;
@@ -61,6 +69,7 @@ public class StackEvent {
     
     
     public String logicalResourceId;
+
     public StackEvent withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -68,6 +77,7 @@ public class StackEvent {
     
     
     public String physicalResourceId;
+
     public StackEvent withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -75,6 +85,7 @@ public class StackEvent {
     
     
     public String resourceProperties;
+
     public StackEvent withResourceProperties(String resourceProperties) {
         this.resourceProperties = resourceProperties;
         return this;
@@ -82,6 +93,7 @@ public class StackEvent {
     
     
     public ResourceStatusEnum resourceStatus;
+
     public StackEvent withResourceStatus(ResourceStatusEnum resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -89,6 +101,7 @@ public class StackEvent {
     
     
     public String resourceStatusReason;
+
     public StackEvent withResourceStatusReason(String resourceStatusReason) {
         this.resourceStatusReason = resourceStatusReason;
         return this;
@@ -96,6 +109,7 @@ public class StackEvent {
     
     
     public String resourceType;
+
     public StackEvent withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -103,6 +117,7 @@ public class StackEvent {
     
     
     public String stackId;
+
     public StackEvent withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -110,6 +125,7 @@ public class StackEvent {
     
     
     public String stackName;
+
     public StackEvent withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -117,9 +133,16 @@ public class StackEvent {
     
     
     public OffsetDateTime timestamp;
+
     public StackEvent withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public StackEvent(@JsonProperty("EventId") String eventId, @JsonProperty("StackId") String stackId, @JsonProperty("StackName") String stackName, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.eventId = eventId;
+        this.stackId = stackId;
+        this.stackName = stackName;
+        this.timestamp = timestamp;
+  }
 }

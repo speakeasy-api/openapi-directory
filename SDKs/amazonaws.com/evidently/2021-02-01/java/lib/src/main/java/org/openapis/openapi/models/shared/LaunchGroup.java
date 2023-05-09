@@ -15,6 +15,7 @@ public class LaunchGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LaunchGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class LaunchGroup {
     
     @JsonProperty("featureVariations")
     public java.util.Map<String, String> featureVariations;
+
     public LaunchGroup withFeatureVariations(java.util.Map<String, String> featureVariations) {
         this.featureVariations = featureVariations;
         return this;
@@ -29,9 +31,14 @@ public class LaunchGroup {
     
     @JsonProperty("name")
     public String name;
+
     public LaunchGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LaunchGroup(@JsonProperty("featureVariations") java.util.Map<String, String> featureVariations, @JsonProperty("name") String name) {
+        this.featureVariations = featureVariations;
+        this.name = name;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateLocationNfsRequest {
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public UpdateLocationNfsRequest withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -22,6 +23,7 @@ public class UpdateLocationNfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public NfsMountOptions mountOptions;
+
     public UpdateLocationNfsRequest withMountOptions(NfsMountOptions mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -33,6 +35,7 @@ public class UpdateLocationNfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnPremConfig")
     public OnPremConfig onPremConfig;
+
     public UpdateLocationNfsRequest withOnPremConfig(OnPremConfig onPremConfig) {
         this.onPremConfig = onPremConfig;
         return this;
@@ -41,9 +44,13 @@ public class UpdateLocationNfsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subdirectory")
     public String subdirectory;
+
     public UpdateLocationNfsRequest withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
     }
     
+    public UpdateLocationNfsRequest(@JsonProperty("LocationArn") String locationArn) {
+        this.locationArn = locationArn;
+  }
 }

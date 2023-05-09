@@ -15,6 +15,7 @@ public class ZoneInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String[] description;
+
     public ZoneInfo withDescription(String[] description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ZoneInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_bundles")
     public String[] inBundles;
+
     public ZoneInfo withInBundles(String[] inBundles) {
         this.inBundles = inBundles;
         return this;
@@ -31,6 +33,7 @@ public class ZoneInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includes")
     public String[] includes;
+
     public ZoneInfo withIncludes(String[] includes) {
         this.includes = includes;
         return this;
@@ -41,6 +44,7 @@ public class ZoneInfo {
      */
     @JsonProperty("type")
     public String type;
+
     public ZoneInfo withType(String type) {
         this.type = type;
         return this;
@@ -51,9 +55,14 @@ public class ZoneInfo {
      */
     @JsonProperty("zone")
     public String zone;
+
     public ZoneInfo withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ZoneInfo(@JsonProperty("type") String type, @JsonProperty("zone") String zone) {
+        this.type = type;
+        this.zone = zone;
+  }
 }

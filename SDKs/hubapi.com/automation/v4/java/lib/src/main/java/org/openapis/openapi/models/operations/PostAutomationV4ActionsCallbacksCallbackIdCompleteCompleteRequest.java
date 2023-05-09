@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest {
@@ -12,6 +13,7 @@ public class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CallbackCompletionRequest callbackCompletionRequest;
+
     public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withCallbackCompletionRequest(org.openapis.openapi.models.shared.CallbackCompletionRequest callbackCompletionRequest) {
         this.callbackCompletionRequest = callbackCompletionRequest;
         return this;
@@ -22,9 +24,14 @@ public class PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callbackId")
     public String callbackId;
+
     public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest withCallbackId(String callbackId) {
         this.callbackId = callbackId;
         return this;
     }
     
+    public PostAutomationV4ActionsCallbacksCallbackIdCompleteCompleteRequest(@JsonProperty("CallbackCompletionRequest") org.openapis.openapi.models.shared.CallbackCompletionRequest callbackCompletionRequest, @JsonProperty("callbackId") String callbackId) {
+        this.callbackCompletionRequest = callbackCompletionRequest;
+        this.callbackId = callbackId;
+  }
 }

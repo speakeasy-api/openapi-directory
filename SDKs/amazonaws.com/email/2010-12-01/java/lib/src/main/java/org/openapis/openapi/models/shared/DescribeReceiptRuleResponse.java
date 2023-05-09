@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeReceiptRuleResponse {
     
     public ReceiptRule rule;
+
     public DescribeReceiptRuleResponse withRule(ReceiptRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public DescribeReceiptRuleResponse(){}
 }

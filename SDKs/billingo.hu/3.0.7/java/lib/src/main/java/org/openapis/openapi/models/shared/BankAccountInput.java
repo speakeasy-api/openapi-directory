@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BankAccountInput {
     @JsonProperty("account_number")
     public String accountNumber;
+
     public BankAccountInput withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -22,6 +23,7 @@ public class BankAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_number_iban")
     public String accountNumberIban;
+
     public BankAccountInput withAccountNumberIban(String accountNumberIban) {
         this.accountNumberIban = accountNumberIban;
         return this;
@@ -29,6 +31,7 @@ public class BankAccountInput {
     
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public BankAccountInput withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -36,6 +39,7 @@ public class BankAccountInput {
     
     @JsonProperty("name")
     public String name;
+
     public BankAccountInput withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class BankAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("need_qr")
     public Boolean needQr;
+
     public BankAccountInput withNeedQr(Boolean needQr) {
         this.needQr = needQr;
         return this;
@@ -52,9 +57,15 @@ public class BankAccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swift")
     public String swift;
+
     public BankAccountInput withSwift(String swift) {
         this.swift = swift;
         return this;
     }
     
+    public BankAccountInput(@JsonProperty("account_number") String accountNumber, @JsonProperty("currency") CurrencyEnum currency, @JsonProperty("name") String name) {
+        this.accountNumber = accountNumber;
+        this.currency = currency;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public UserScheduleResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedType")
     public String feedType;
+
     public UserScheduleResponse withFeedType(String feedType) {
         this.feedType = feedType;
         return this;
@@ -40,6 +42,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDate")
     public String lastModifiedDate;
+
     public UserScheduleResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -51,6 +54,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerDayOfMonth")
     public Integer preferredTriggerDayOfMonth;
+
     public UserScheduleResponse withPreferredTriggerDayOfMonth(Integer preferredTriggerDayOfMonth) {
         this.preferredTriggerDayOfMonth = preferredTriggerDayOfMonth;
         return this;
@@ -62,6 +66,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerDayOfWeek")
     public String preferredTriggerDayOfWeek;
+
     public UserScheduleResponse withPreferredTriggerDayOfWeek(String preferredTriggerDayOfWeek) {
         this.preferredTriggerDayOfWeek = preferredTriggerDayOfWeek;
         return this;
@@ -73,6 +78,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferredTriggerHour")
     public String preferredTriggerHour;
+
     public UserScheduleResponse withPreferredTriggerHour(String preferredTriggerHour) {
         this.preferredTriggerHour = preferredTriggerHour;
         return this;
@@ -84,6 +90,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleEndDate")
     public String scheduleEndDate;
+
     public UserScheduleResponse withScheduleEndDate(String scheduleEndDate) {
         this.scheduleEndDate = scheduleEndDate;
         return this;
@@ -95,6 +102,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleId")
     public String scheduleId;
+
     public UserScheduleResponse withScheduleId(String scheduleId) {
         this.scheduleId = scheduleId;
         return this;
@@ -106,6 +114,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleName")
     public String scheduleName;
+
     public UserScheduleResponse withScheduleName(String scheduleName) {
         this.scheduleName = scheduleName;
         return this;
@@ -117,6 +126,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleStartDate")
     public String scheduleStartDate;
+
     public UserScheduleResponse withScheduleStartDate(String scheduleStartDate) {
         this.scheduleStartDate = scheduleStartDate;
         return this;
@@ -128,6 +138,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTemplateId")
     public String scheduleTemplateId;
+
     public UserScheduleResponse withScheduleTemplateId(String scheduleTemplateId) {
         this.scheduleTemplateId = scheduleTemplateId;
         return this;
@@ -139,6 +150,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public UserScheduleResponse withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -150,6 +162,7 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UserScheduleResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -161,9 +174,11 @@ public class UserScheduleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public UserScheduleResponse withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public UserScheduleResponse(){}
 }

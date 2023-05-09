@@ -12,9 +12,13 @@ public class BatchDeleteGeofenceRequestBody {
      */
     @JsonProperty("GeofenceIds")
     public String[] geofenceIds;
+
     public BatchDeleteGeofenceRequestBody withGeofenceIds(String[] geofenceIds) {
         this.geofenceIds = geofenceIds;
         return this;
     }
     
+    public BatchDeleteGeofenceRequestBody(@JsonProperty("GeofenceIds") String[] geofenceIds) {
+        this.geofenceIds = geofenceIds;
+  }
 }

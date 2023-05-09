@@ -18,9 +18,11 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletStyle")
     public TextStyle bulletStyle;
+
     public NestingLevel withBulletStyle(TextStyle bulletStyle) {
         this.bulletStyle = bulletStyle;
         return this;
     }
     
+    public NestingLevel(){}
 }

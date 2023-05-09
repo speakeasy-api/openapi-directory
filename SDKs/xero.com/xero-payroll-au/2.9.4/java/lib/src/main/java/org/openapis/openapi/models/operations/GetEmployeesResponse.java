@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEmployeesResponse {
@@ -12,6 +13,7 @@ public class GetEmployeesResponse {
      */
     
     public org.openapis.openapi.models.shared.APIException apiException;
+
     public GetEmployeesResponse withAPIException(org.openapis.openapi.models.shared.APIException apiException) {
         this.apiException = apiException;
         return this;
@@ -19,6 +21,7 @@ public class GetEmployeesResponse {
     
     
     public String contentType;
+
     public GetEmployeesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEmployeesResponse {
      */
     
     public org.openapis.openapi.models.shared.Employees employees;
+
     public GetEmployeesResponse withEmployees(org.openapis.openapi.models.shared.Employees employees) {
         this.employees = employees;
         return this;
@@ -36,6 +40,7 @@ public class GetEmployeesResponse {
     
     
     public Integer statusCode;
+
     public GetEmployeesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetEmployeesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEmployeesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEmployeesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

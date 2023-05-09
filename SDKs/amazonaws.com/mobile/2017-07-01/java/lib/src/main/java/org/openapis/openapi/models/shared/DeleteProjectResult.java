@@ -15,6 +15,7 @@ public class DeleteProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedResources")
     public Resource[] deletedResources;
+
     public DeleteProjectResult withDeletedResources(Resource[] deletedResources) {
         this.deletedResources = deletedResources;
         return this;
@@ -23,9 +24,11 @@ public class DeleteProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orphanedResources")
     public Resource[] orphanedResources;
+
     public DeleteProjectResult withOrphanedResources(Resource[] orphanedResources) {
         this.orphanedResources = orphanedResources;
         return this;
     }
     
+    public DeleteProjectResult(){}
 }

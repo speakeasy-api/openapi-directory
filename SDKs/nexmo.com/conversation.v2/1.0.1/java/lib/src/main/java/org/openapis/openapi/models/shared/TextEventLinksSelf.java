@@ -12,9 +12,11 @@ public class TextEventLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public TextEventLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public TextEventLinksSelf(){}
 }

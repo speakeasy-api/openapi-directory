@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PlaceOrder200ApplicationJSONOrdersShippingDataAddress address;
+
     public PlaceOrder200ApplicationJSONOrdersShippingData withAddress(PlaceOrder200ApplicationJSONOrdersShippingDataAddress address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableAddresses")
     public PlaceOrder200ApplicationJSONOrdersShippingDataAvailableAddresses[] availableAddresses;
+
     public PlaceOrder200ApplicationJSONOrdersShippingData withAvailableAddresses(PlaceOrder200ApplicationJSONOrdersShippingDataAvailableAddresses[] availableAddresses) {
         this.availableAddresses = availableAddresses;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrder200ApplicationJSONOrdersShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logisticsInfo")
     public PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo[] logisticsInfo;
+
     public PlaceOrder200ApplicationJSONOrdersShippingData withLogisticsInfo(PlaceOrder200ApplicationJSONOrdersShippingDataLogisticsInfo[] logisticsInfo) {
         this.logisticsInfo = logisticsInfo;
         return this;
@@ -51,9 +54,11 @@ public class PlaceOrder200ApplicationJSONOrdersShippingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedAddresses")
     public PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses[] selectedAddresses;
+
     public PlaceOrder200ApplicationJSONOrdersShippingData withSelectedAddresses(PlaceOrder200ApplicationJSONOrdersShippingDataSelectedAddresses[] selectedAddresses) {
         this.selectedAddresses = selectedAddresses;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersShippingData(){}
 }

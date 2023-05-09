@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity;
-import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequestBody;
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequest;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchRequestBody;
 import org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse;
+import org.openapis.openapi.models.operations.CompanyAlternativeSearchSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,27 +14,28 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CompanyAlternativeSearchRequest req = new CompanyAlternativeSearchRequest() {{
+            CompanyAlternativeSearchRequest req = new CompanyAlternativeSearchRequest("corrupti") {{
                 requestBody = new CompanyAlternativeSearchRequestBody() {{
-                    address = "5786 Little Streets";
-                    name = "vel";
-                    number = "error";
-                    phone = "1-542-909-2347 x8545";
-                    url = "nisi";
-                    vat = "recusandae";
-                }};
-                country = "temporibus";
-            }}            
+                    address = "7868 Stamm Junctions";
+                    name = "Doug Hoppe";
+                    number = "debitis";
+                    phone = "923-578-5453";
+                    url = "recusandae";
+                    vat = "temporibus";
+                }};;
+            }};            
 
-            CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req, new CompanyAlternativeSearchSecurity() {{
+            CompanyAlternativeSearchResponse res = sdk.v1Company.companyAlternativeSearch(req, new CompanyAlternativeSearchSecurity("ab") {{
                 userKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.companyAlternativeSearch200ApplicationJSONObjects.isPresent()) {
+            if (res.companyAlternativeSearch200ApplicationJSONObjects != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

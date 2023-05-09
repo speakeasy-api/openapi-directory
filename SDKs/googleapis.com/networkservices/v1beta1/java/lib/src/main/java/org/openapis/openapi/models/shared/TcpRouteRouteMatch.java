@@ -18,6 +18,7 @@ public class TcpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public TcpRouteRouteMatch withAddress(String address) {
         this.address = address;
         return this;
@@ -29,9 +30,11 @@ public class TcpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public TcpRouteRouteMatch withPort(String port) {
         this.port = port;
         return this;
     }
     
+    public TcpRouteRouteMatch(){}
 }

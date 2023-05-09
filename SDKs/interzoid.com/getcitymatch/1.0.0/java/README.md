@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetcitymatchRequest;
 import org.openapis.openapi.models.operations.GetcitymatchResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetcitymatchRequest req = new GetcitymatchRequest() {{
-                city = "Laruecester";
-                license = "quibusdam";
-            }}            
+            GetcitymatchRequest req = new GetcitymatchRequest("corrupti", "provident");            
 
             GetcitymatchResponse res = sdk.cityNameSimilarityKey.getcitymatch(req);
 
-            if (res.getcitymatch200ApplicationJSONObject.isPresent()) {
+            if (res.getcitymatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### cityNameSimilarityKey
+### [cityNameSimilarityKey](docs/citynamesimilaritykey/README.md)
 
-* `getcitymatch` - Gets a similarity key for matching purposes for city name data
+* [getcitymatch](docs/citynamesimilaritykey/README.md#getcitymatch) - Gets a similarity key for matching purposes for city name data
 <!-- End SDK Available Operations -->
 
 ### Maturity

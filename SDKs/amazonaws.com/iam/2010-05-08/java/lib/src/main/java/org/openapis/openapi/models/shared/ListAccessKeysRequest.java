@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListAccessKeysRequest {
     
     public String marker;
+
     public ListAccessKeysRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListAccessKeysRequest {
     
     
     public Long maxItems;
+
     public ListAccessKeysRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListAccessKeysRequest {
     
     
     public String userName;
+
     public ListAccessKeysRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ListAccessKeysRequest(){}
 }

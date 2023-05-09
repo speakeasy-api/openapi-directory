@@ -18,9 +18,11 @@ public class UpdateAddonResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public UpdateAddonResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public UpdateAddonResponse(){}
 }

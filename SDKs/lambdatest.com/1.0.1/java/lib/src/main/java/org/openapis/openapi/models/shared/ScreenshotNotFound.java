@@ -15,6 +15,7 @@ public class ScreenshotNotFound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ScreenshotNotFound withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class ScreenshotNotFound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ScreenshotNotFound withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ScreenshotNotFound(){}
 }

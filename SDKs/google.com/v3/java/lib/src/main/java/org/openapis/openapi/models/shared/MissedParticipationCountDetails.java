@@ -18,6 +18,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotelSuspendedCount")
     public String hotelSuspendedCount;
+
     public MissedParticipationCountDetails withHotelSuspendedCount(String hotelSuspendedCount) {
         this.hotelSuspendedCount = hotelSuspendedCount;
         return this;
@@ -29,6 +30,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noAvailabilityCount")
     public String noAvailabilityCount;
+
     public MissedParticipationCountDetails withNoAvailabilityCount(String noAvailabilityCount) {
         this.noAvailabilityCount = noAvailabilityCount;
         return this;
@@ -40,6 +42,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noLandingPageCount")
     public String noLandingPageCount;
+
     public MissedParticipationCountDetails withNoLandingPageCount(String noLandingPageCount) {
         this.noLandingPageCount = noLandingPageCount;
         return this;
@@ -51,6 +54,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPriceCount")
     public String noPriceCount;
+
     public MissedParticipationCountDetails withNoPriceCount(String noPriceCount) {
         this.noPriceCount = noPriceCount;
         return this;
@@ -62,6 +66,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPriceCountDetails")
     public NoPriceCountDetails noPriceCountDetails;
+
     public MissedParticipationCountDetails withNoPriceCountDetails(NoPriceCountDetails noPriceCountDetails) {
         this.noPriceCountDetails = noPriceCountDetails;
         return this;
@@ -73,6 +78,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noTaxBreakdownCount")
     public String noTaxBreakdownCount;
+
     public MissedParticipationCountDetails withNoTaxBreakdownCount(String noTaxBreakdownCount) {
         this.noTaxBreakdownCount = noTaxBreakdownCount;
         return this;
@@ -84,6 +90,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherReasonCount")
     public String otherReasonCount;
+
     public MissedParticipationCountDetails withOtherReasonCount(String otherReasonCount) {
         this.otherReasonCount = otherReasonCount;
         return this;
@@ -95,6 +102,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceMissingCount")
     public String priceMissingCount;
+
     public MissedParticipationCountDetails withPriceMissingCount(String priceMissingCount) {
         this.priceMissingCount = priceMissingCount;
         return this;
@@ -106,6 +114,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceMissingCountDetails")
     public PriceMissingCountDetails priceMissingCountDetails;
+
     public MissedParticipationCountDetails withPriceMissingCountDetails(PriceMissingCountDetails priceMissingCountDetails) {
         this.priceMissingCountDetails = priceMissingCountDetails;
         return this;
@@ -117,6 +126,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceProblemCount")
     public String priceProblemCount;
+
     public MissedParticipationCountDetails withPriceProblemCount(String priceProblemCount) {
         this.priceProblemCount = priceProblemCount;
         return this;
@@ -128,6 +138,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceProblemCountDetails")
     public PriceProblemCountDetails priceProblemCountDetails;
+
     public MissedParticipationCountDetails withPriceProblemCountDetails(PriceProblemCountDetails priceProblemCountDetails) {
         this.priceProblemCountDetails = priceProblemCountDetails;
         return this;
@@ -139,6 +150,7 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUnavailableCount")
     public String priceUnavailableCount;
+
     public MissedParticipationCountDetails withPriceUnavailableCount(String priceUnavailableCount) {
         this.priceUnavailableCount = priceUnavailableCount;
         return this;
@@ -150,9 +162,11 @@ public class MissedParticipationCountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceUnavailableCountDetails")
     public PriceUnavailableCountDetails priceUnavailableCountDetails;
+
     public MissedParticipationCountDetails withPriceUnavailableCountDetails(PriceUnavailableCountDetails priceUnavailableCountDetails) {
         this.priceUnavailableCountDetails = priceUnavailableCountDetails;
         return this;
     }
     
+    public MissedParticipationCountDetails(){}
 }

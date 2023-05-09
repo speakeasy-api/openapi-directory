@@ -12,6 +12,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BankAccounts")
     public BankAccount[] bankAccounts;
+
     public Employee withBankAccounts(BankAccount[] bankAccounts) {
         this.bankAccounts = bankAccounts;
         return this;
@@ -23,6 +24,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classification")
     public String classification;
+
     public Employee withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -33,6 +35,7 @@ public class Employee {
      */
     @JsonProperty("DateOfBirth")
     public String dateOfBirth;
+
     public Employee withDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -44,6 +47,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Employee withEmail(String email) {
         this.email = email;
         return this;
@@ -55,6 +59,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmployeeGroupName")
     public String employeeGroupName;
+
     public Employee withEmployeeGroupName(String employeeGroupName) {
         this.employeeGroupName = employeeGroupName;
         return this;
@@ -66,6 +71,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmployeeID")
     public String employeeID;
+
     public Employee withEmployeeID(String employeeID) {
         this.employeeID = employeeID;
         return this;
@@ -76,17 +82,19 @@ public class Employee {
      */
     @JsonProperty("FirstName")
     public String firstName;
+
     public Employee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
     }
     
     /**
-     * The employee\u2019s gender. See\u00a0Employee Gender
+     * The employee’s gender. See Employee Gender
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public EmployeeGenderEnum gender;
+
     public Employee withGender(EmployeeGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -95,6 +103,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeAddress")
     public HomeAddress homeAddress;
+
     public Employee withHomeAddress(HomeAddress homeAddress) {
         this.homeAddress = homeAddress;
         return this;
@@ -106,6 +115,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAuthorisedToApproveLeave")
     public Boolean isAuthorisedToApproveLeave;
+
     public Employee withIsAuthorisedToApproveLeave(Boolean isAuthorisedToApproveLeave) {
         this.isAuthorisedToApproveLeave = isAuthorisedToApproveLeave;
         return this;
@@ -117,6 +127,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAuthorisedToApproveTimesheets")
     public Boolean isAuthorisedToApproveTimesheets;
+
     public Employee withIsAuthorisedToApproveTimesheets(Boolean isAuthorisedToApproveTimesheets) {
         this.isAuthorisedToApproveTimesheets = isAuthorisedToApproveTimesheets;
         return this;
@@ -128,6 +139,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTitle")
     public String jobTitle;
+
     public Employee withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
@@ -138,6 +150,7 @@ public class Employee {
      */
     @JsonProperty("LastName")
     public String lastName;
+
     public Employee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -146,6 +159,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveBalances")
     public LeaveBalance[] leaveBalances;
+
     public Employee withLeaveBalances(LeaveBalance[] leaveBalances) {
         this.leaveBalances = leaveBalances;
         return this;
@@ -154,6 +168,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveLines")
     public LeaveLine[] leaveLines;
+
     public Employee withLeaveLines(LeaveLine[] leaveLines) {
         this.leaveLines = leaveLines;
         return this;
@@ -165,6 +180,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MiddleNames")
     public String middleNames;
+
     public Employee withMiddleNames(String middleNames) {
         this.middleNames = middleNames;
         return this;
@@ -176,6 +192,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mobile")
     public String mobile;
+
     public Employee withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -184,6 +201,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpeningBalances")
     public OpeningBalances openingBalances;
+
     public Employee withOpeningBalances(OpeningBalances openingBalances) {
         this.openingBalances = openingBalances;
         return this;
@@ -195,6 +213,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrdinaryEarningsRateID")
     public String ordinaryEarningsRateID;
+
     public Employee withOrdinaryEarningsRateID(String ordinaryEarningsRateID) {
         this.ordinaryEarningsRateID = ordinaryEarningsRateID;
         return this;
@@ -203,6 +222,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayTemplate")
     public PayTemplate payTemplate;
+
     public Employee withPayTemplate(PayTemplate payTemplate) {
         this.payTemplate = payTemplate;
         return this;
@@ -214,6 +234,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayrollCalendarID")
     public String payrollCalendarID;
+
     public Employee withPayrollCalendarID(String payrollCalendarID) {
         this.payrollCalendarID = payrollCalendarID;
         return this;
@@ -225,6 +246,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phone")
     public String phone;
+
     public Employee withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -236,6 +258,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Employee withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -247,6 +270,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EmployeeStatusEnum status;
+
     public Employee withStatus(EmployeeStatusEnum status) {
         this.status = status;
         return this;
@@ -255,6 +279,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuperMemberships")
     public SuperMembership[] superMemberships;
+
     public Employee withSuperMemberships(SuperMembership[] superMemberships) {
         this.superMemberships = superMemberships;
         return this;
@@ -263,6 +288,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxDeclaration")
     public TaxDeclaration taxDeclaration;
+
     public Employee withTaxDeclaration(TaxDeclaration taxDeclaration) {
         this.taxDeclaration = taxDeclaration;
         return this;
@@ -274,6 +300,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminationDate")
     public String terminationDate;
+
     public Employee withTerminationDate(String terminationDate) {
         this.terminationDate = terminationDate;
         return this;
@@ -285,17 +312,19 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public Employee withTitle(String title) {
         this.title = title;
         return this;
     }
     
     /**
-     * Employee\u2019s twitter name
+     * Employee’s twitter name
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwitterUserName")
     public String twitterUserName;
+
     public Employee withTwitterUserName(String twitterUserName) {
         this.twitterUserName = twitterUserName;
         return this;
@@ -307,6 +336,7 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedDateUTC")
     public String updatedDateUTC;
+
     public Employee withUpdatedDateUTC(String updatedDateUTC) {
         this.updatedDateUTC = updatedDateUTC;
         return this;
@@ -318,9 +348,15 @@ public class Employee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationErrors")
     public ValidationError[] validationErrors;
+
     public Employee withValidationErrors(ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public Employee(@JsonProperty("DateOfBirth") String dateOfBirth, @JsonProperty("FirstName") String firstName, @JsonProperty("LastName") String lastName) {
+        this.dateOfBirth = dateOfBirth;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withActionsSetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions) {
         this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
         return this;
@@ -19,9 +21,13 @@ public class ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsOrganizationRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

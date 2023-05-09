@@ -18,6 +18,7 @@ public class MetadataIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCatalogConfig")
     public DataCatalogConfig dataCatalogConfig;
+
     public MetadataIntegration withDataCatalogConfig(DataCatalogConfig dataCatalogConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         return this;
@@ -29,9 +30,11 @@ public class MetadataIntegration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataplexConfig")
     public DataplexConfig dataplexConfig;
+
     public MetadataIntegration withDataplexConfig(DataplexConfig dataplexConfig) {
         this.dataplexConfig = dataplexConfig;
         return this;
     }
     
+    public MetadataIntegration(){}
 }

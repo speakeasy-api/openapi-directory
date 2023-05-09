@@ -18,6 +18,7 @@ public class AccessLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalOfficeCountry")
     public String principalOfficeCountry;
+
     public AccessLocations withPrincipalOfficeCountry(String principalOfficeCountry) {
         this.principalOfficeCountry = principalOfficeCountry;
         return this;
@@ -29,9 +30,11 @@ public class AccessLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalPhysicalLocationCountry")
     public String principalPhysicalLocationCountry;
+
     public AccessLocations withPrincipalPhysicalLocationCountry(String principalPhysicalLocationCountry) {
         this.principalPhysicalLocationCountry = principalPhysicalLocationCountry;
         return this;
     }
     
+    public AccessLocations(){}
 }

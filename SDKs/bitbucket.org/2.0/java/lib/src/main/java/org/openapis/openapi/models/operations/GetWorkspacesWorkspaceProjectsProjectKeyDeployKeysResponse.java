@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse {
     
     public String contentType;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedProjectDeployKeys paginatedProjectDeployKeys;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse withPaginatedProjectDeployKeys(org.openapis.openapi.models.shared.PaginatedProjectDeployKeys paginatedProjectDeployKeys) {
         this.paginatedProjectDeployKeys = paginatedProjectDeployKeys;
         return this;
     }
     
+    public GetWorkspacesWorkspaceProjectsProjectKeyDeployKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

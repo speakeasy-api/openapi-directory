@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Keyword {
     @JsonProperty("id")
     public Long id;
+
     public Keyword withId(Long id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class Keyword {
     
     @JsonProperty("id_category")
     public Long idCategory;
+
     public Keyword withIdCategory(Long idCategory) {
         this.idCategory = idCategory;
         return this;
@@ -26,6 +28,7 @@ public class Keyword {
     
     @JsonProperty("income")
     public Boolean income;
+
     public Keyword withIncome(Boolean income) {
         this.income = income;
         return this;
@@ -33,6 +36,7 @@ public class Keyword {
     
     @JsonProperty("keyword")
     public String keyword;
+
     public Keyword withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -40,9 +44,17 @@ public class Keyword {
     
     @JsonProperty("priority")
     public Long priority;
+
     public Keyword withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public Keyword(@JsonProperty("id") Long id, @JsonProperty("id_category") Long idCategory, @JsonProperty("income") Boolean income, @JsonProperty("keyword") String keyword, @JsonProperty("priority") Long priority) {
+        this.id = id;
+        this.idCategory = idCategory;
+        this.income = income;
+        this.keyword = keyword;
+        this.priority = priority;
+  }
 }

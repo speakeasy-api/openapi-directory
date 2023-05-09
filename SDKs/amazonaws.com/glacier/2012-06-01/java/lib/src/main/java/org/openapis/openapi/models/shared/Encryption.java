@@ -15,6 +15,7 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public Encryption withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -23,6 +24,7 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSContext")
     public String kmsContext;
+
     public Encryption withKMSContext(String kmsContext) {
         this.kmsContext = kmsContext;
         return this;
@@ -31,9 +33,11 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyId")
     public String kmsKeyId;
+
     public Encryption withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public Encryption(){}
 }

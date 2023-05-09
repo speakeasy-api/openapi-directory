@@ -18,9 +18,11 @@ public class LocationPolicyLocationConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCount")
     public Integer maxCount;
+
     public LocationPolicyLocationConstraints withMaxCount(Integer maxCount) {
         this.maxCount = maxCount;
         return this;
     }
     
+    public LocationPolicyLocationConstraints(){}
 }

@@ -12,9 +12,11 @@ public class MessageStatusLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflow")
     public MessageStatusLinksWorkflow workflow;
+
     public MessageStatusLinks withWorkflow(MessageStatusLinksWorkflow workflow) {
         this.workflow = workflow;
         return this;
     }
     
+    public MessageStatusLinks(){}
 }

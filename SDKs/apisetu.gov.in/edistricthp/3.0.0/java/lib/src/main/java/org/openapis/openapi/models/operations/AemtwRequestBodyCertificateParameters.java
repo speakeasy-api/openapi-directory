@@ -12,9 +12,13 @@ public class AemtwRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public AemtwRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
     }
     
+    public AemtwRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1) {
+        this.udf1 = udf1;
+  }
 }

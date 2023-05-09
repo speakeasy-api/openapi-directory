@@ -18,6 +18,7 @@ public class FailoverProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition_status")
     public FailoverPropertyConditionStatusEnum conditionStatus;
+
     public FailoverProperty withConditionStatus(FailoverPropertyConditionStatusEnum conditionStatus) {
         this.conditionStatus = conditionStatus;
         return this;
@@ -29,9 +30,11 @@ public class FailoverProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiry_time")
     public Long expiryTime;
+
     public FailoverProperty withExpiryTime(Long expiryTime) {
         this.expiryTime = expiryTime;
         return this;
     }
     
+    public FailoverProperty(){}
 }

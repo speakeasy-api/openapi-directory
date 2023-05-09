@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCustomMetricResponse {
     
     public String contentType;
+
     public DescribeCustomMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCustomMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCustomMetricResponse describeCustomMetricResponse;
+
     public DescribeCustomMetricResponse withDescribeCustomMetricResponse(org.openapis.openapi.models.shared.DescribeCustomMetricResponse describeCustomMetricResponse) {
         this.describeCustomMetricResponse = describeCustomMetricResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCustomMetricResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeCustomMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCustomMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeCustomMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeCustomMetricResponse {
     
     
     public Integer statusCode;
+
     public DescribeCustomMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeCustomMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCustomMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeCustomMetricResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCustomMetricResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeCustomMetricResponse {
      */
     
     public Object throttlingException;
+
     public DescribeCustomMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeCustomMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

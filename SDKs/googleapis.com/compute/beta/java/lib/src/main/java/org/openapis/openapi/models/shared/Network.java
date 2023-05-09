@@ -18,6 +18,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPv4Range")
     public String iPv4Range;
+
     public Network withIPv4Range(String iPv4Range) {
         this.iPv4Range = iPv4Range;
         return this;
@@ -29,6 +30,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCreateSubnetworks")
     public Boolean autoCreateSubnetworks;
+
     public Network withAutoCreateSubnetworks(Boolean autoCreateSubnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         return this;
@@ -40,6 +42,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Network withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Network withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableUlaInternalIpv6")
     public Boolean enableUlaInternalIpv6;
+
     public Network withEnableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
         this.enableUlaInternalIpv6 = enableUlaInternalIpv6;
         return this;
@@ -73,6 +78,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewallPolicy")
     public String firewallPolicy;
+
     public Network withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -84,6 +90,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayIPv4")
     public String gatewayIPv4;
+
     public Network withGatewayIPv4(String gatewayIPv4) {
         this.gatewayIPv4 = gatewayIPv4;
         return this;
@@ -95,6 +102,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Network withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIpv6Range")
     public String internalIpv6Range;
+
     public Network withInternalIpv6Range(String internalIpv6Range) {
         this.internalIpv6Range = internalIpv6Range;
         return this;
@@ -117,6 +126,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Network withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Integer mtu;
+
     public Network withMtu(Integer mtu) {
         this.mtu = mtu;
         return this;
@@ -139,6 +150,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Network withName(String name) {
         this.name = name;
         return this;
@@ -150,6 +162,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkFirewallPolicyEnforcementOrder")
     public NetworkNetworkFirewallPolicyEnforcementOrderEnum networkFirewallPolicyEnforcementOrder;
+
     public Network withNetworkFirewallPolicyEnforcementOrder(NetworkNetworkFirewallPolicyEnforcementOrderEnum networkFirewallPolicyEnforcementOrder) {
         this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
         return this;
@@ -161,6 +174,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerings")
     public NetworkPeering[] peerings;
+
     public Network withPeerings(NetworkPeering[] peerings) {
         this.peerings = peerings;
         return this;
@@ -172,6 +186,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routingConfig")
     public NetworkRoutingConfig routingConfig;
+
     public Network withRoutingConfig(NetworkRoutingConfig routingConfig) {
         this.routingConfig = routingConfig;
         return this;
@@ -183,6 +198,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Network withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -194,6 +210,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Network withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -205,9 +222,11 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworks")
     public String[] subnetworks;
+
     public Network withSubnetworks(String[] subnetworks) {
         this.subnetworks = subnetworks;
         return this;
     }
     
+    public Network(){}
 }

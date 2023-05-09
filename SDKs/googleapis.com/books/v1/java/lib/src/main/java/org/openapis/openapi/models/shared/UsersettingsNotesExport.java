@@ -15,6 +15,7 @@ public class UsersettingsNotesExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderName")
     public String folderName;
+
     public UsersettingsNotesExport withFolderName(String folderName) {
         this.folderName = folderName;
         return this;
@@ -23,9 +24,11 @@ public class UsersettingsNotesExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEnabled")
     public Boolean isEnabled;
+
     public UsersettingsNotesExport withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
     }
     
+    public UsersettingsNotesExport(){}
 }

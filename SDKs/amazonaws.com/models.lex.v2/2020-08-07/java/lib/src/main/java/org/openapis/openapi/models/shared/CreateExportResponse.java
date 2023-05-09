@@ -22,6 +22,7 @@ public class CreateExportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateExportResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class CreateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportId")
     public String exportId;
+
     public CreateExportResponse withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -38,6 +40,7 @@ public class CreateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportStatus")
     public ExportStatusEnum exportStatus;
+
     public CreateExportResponse withExportStatus(ExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -46,6 +49,7 @@ public class CreateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public ImportExportFileFormatEnum fileFormat;
+
     public CreateExportResponse withFileFormat(ImportExportFileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -54,9 +58,11 @@ public class CreateExportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSpecification")
     public ExportResourceSpecification resourceSpecification;
+
     public CreateExportResponse withResourceSpecification(ExportResourceSpecification resourceSpecification) {
         this.resourceSpecification = resourceSpecification;
         return this;
     }
     
+    public CreateExportResponse(){}
 }

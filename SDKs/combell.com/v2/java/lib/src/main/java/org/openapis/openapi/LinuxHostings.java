@@ -64,10 +64,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddScheduledTasksResponse res = new org.openapis.openapi.models.operations.AddScheduledTasksResponse() {{
+        org.openapis.openapi.models.operations.AddScheduledTasksResponse res = new org.openapis.openapi.models.operations.AddScheduledTasksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -106,10 +104,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddSshKeyResponse res = new org.openapis.openapi.models.operations.AddSshKeyResponse() {{
+        org.openapis.openapi.models.operations.AddSshKeyResponse res = new org.openapis.openapi.models.operations.AddSshKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -148,10 +144,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeApcuResponse res = new org.openapis.openapi.models.operations.ChangeApcuResponse() {{
+        org.openapis.openapi.models.operations.ChangeApcuResponse res = new org.openapis.openapi.models.operations.ChangeApcuResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -188,10 +182,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeAutoRedirectResponse res = new org.openapis.openapi.models.operations.ChangeAutoRedirectResponse() {{
+        org.openapis.openapi.models.operations.ChangeAutoRedirectResponse res = new org.openapis.openapi.models.operations.ChangeAutoRedirectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -228,10 +220,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeGzipCompressionResponse res = new org.openapis.openapi.models.operations.ChangeGzipCompressionResponse() {{
+        org.openapis.openapi.models.operations.ChangeGzipCompressionResponse res = new org.openapis.openapi.models.operations.ChangeGzipCompressionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -268,10 +258,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeLetsEncryptResponse res = new org.openapis.openapi.models.operations.ChangeLetsEncryptResponse() {{
+        org.openapis.openapi.models.operations.ChangeLetsEncryptResponse res = new org.openapis.openapi.models.operations.ChangeLetsEncryptResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -308,10 +296,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePhpMemoryLimitResponse res = new org.openapis.openapi.models.operations.ChangePhpMemoryLimitResponse() {{
+        org.openapis.openapi.models.operations.ChangePhpMemoryLimitResponse res = new org.openapis.openapi.models.operations.ChangePhpMemoryLimitResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -348,10 +334,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePhpVersionResponse res = new org.openapis.openapi.models.operations.ChangePhpVersionResponse() {{
+        org.openapis.openapi.models.operations.ChangePhpVersionResponse res = new org.openapis.openapi.models.operations.ChangePhpVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -388,10 +372,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureFtpResponse res = new org.openapis.openapi.models.operations.ConfigureFtpResponse() {{
+        org.openapis.openapi.models.operations.ConfigureFtpResponse res = new org.openapis.openapi.models.operations.ConfigureFtpResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -428,10 +410,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureHttp2Response res = new org.openapis.openapi.models.operations.ConfigureHttp2Response() {{
+        org.openapis.openapi.models.operations.ConfigureHttp2Response res = new org.openapis.openapi.models.operations.ConfigureHttp2Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -468,10 +448,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureScheduledTaskResponse res = new org.openapis.openapi.models.operations.ConfigureScheduledTaskResponse() {{
+        org.openapis.openapi.models.operations.ConfigureScheduledTaskResponse res = new org.openapis.openapi.models.operations.ConfigureScheduledTaskResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -508,10 +486,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfigureSshResponse res = new org.openapis.openapi.models.operations.ConfigureSshResponse() {{
+        org.openapis.openapi.models.operations.ConfigureSshResponse res = new org.openapis.openapi.models.operations.ConfigureSshResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -548,10 +524,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHostHeaderResponse res = new org.openapis.openapi.models.operations.CreateHostHeaderResponse() {{
+        org.openapis.openapi.models.operations.CreateHostHeaderResponse res = new org.openapis.openapi.models.operations.CreateHostHeaderResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -590,10 +564,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubsiteResponse res = new org.openapis.openapi.models.operations.CreateSubsiteResponse() {{
+        org.openapis.openapi.models.operations.CreateSubsiteResponse res = new org.openapis.openapi.models.operations.CreateSubsiteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -630,10 +602,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScheduledTaskResponse res = new org.openapis.openapi.models.operations.DeleteScheduledTaskResponse() {{
+        org.openapis.openapi.models.operations.DeleteScheduledTaskResponse res = new org.openapis.openapi.models.operations.DeleteScheduledTaskResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -668,10 +638,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSshKeyResponse res = new org.openapis.openapi.models.operations.DeleteSshKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteSshKeyResponse res = new org.openapis.openapi.models.operations.DeleteSshKeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -706,10 +674,8 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubsiteResponse res = new org.openapis.openapi.models.operations.DeleteSubsiteResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubsiteResponse res = new org.openapis.openapi.models.operations.DeleteSubsiteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400) {
@@ -744,11 +710,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAvailablePhpVersionsResponse res = new org.openapis.openapi.models.operations.GetAvailablePhpVersionsResponse() {{
+        org.openapis.openapi.models.operations.GetAvailablePhpVersionsResponse res = new org.openapis.openapi.models.operations.GetAvailablePhpVersionsResponse(contentType, httpRes.statusCode()) {{
             phpVersions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -788,11 +752,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinuxHostingResponse res = new org.openapis.openapi.models.operations.GetLinuxHostingResponse() {{
+        org.openapis.openapi.models.operations.GetLinuxHostingResponse res = new org.openapis.openapi.models.operations.GetLinuxHostingResponse(contentType, httpRes.statusCode()) {{
             linuxHostingDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -832,11 +794,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinuxHostingsResponse res = new org.openapis.openapi.models.operations.GetLinuxHostingsResponse() {{
+        org.openapis.openapi.models.operations.GetLinuxHostingsResponse res = new org.openapis.openapi.models.operations.GetLinuxHostingsResponse(contentType, httpRes.statusCode()) {{
             linuxHostings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -878,11 +838,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduledTaskResponse res = new org.openapis.openapi.models.operations.GetScheduledTaskResponse() {{
+        org.openapis.openapi.models.operations.GetScheduledTaskResponse res = new org.openapis.openapi.models.operations.GetScheduledTaskResponse(contentType, httpRes.statusCode()) {{
             scheduledTask = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -923,11 +881,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScheduledTasksResponse res = new org.openapis.openapi.models.operations.GetScheduledTasksResponse() {{
+        org.openapis.openapi.models.operations.GetScheduledTasksResponse res = new org.openapis.openapi.models.operations.GetScheduledTasksResponse(contentType, httpRes.statusCode()) {{
             scheduledTasks = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -967,11 +923,9 @@ public class LinuxHostings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSshKeysResponse res = new org.openapis.openapi.models.operations.GetSshKeysResponse() {{
+        org.openapis.openapi.models.operations.GetSshKeysResponse res = new org.openapis.openapi.models.operations.GetSshKeysResponse(contentType, httpRes.statusCode()) {{
             sshKeys = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

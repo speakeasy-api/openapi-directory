@@ -15,6 +15,7 @@ public class VirtualNodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendDefaults")
     public BackendDefaults backendDefaults;
+
     public VirtualNodeSpec withBackendDefaults(BackendDefaults backendDefaults) {
         this.backendDefaults = backendDefaults;
         return this;
@@ -23,6 +24,7 @@ public class VirtualNodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public Backend[] backends;
+
     public VirtualNodeSpec withBackends(Backend[] backends) {
         this.backends = backends;
         return this;
@@ -31,6 +33,7 @@ public class VirtualNodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public Listener[] listeners;
+
     public VirtualNodeSpec withListeners(Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -39,6 +42,7 @@ public class VirtualNodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public Logging logging;
+
     public VirtualNodeSpec withLogging(Logging logging) {
         this.logging = logging;
         return this;
@@ -47,9 +51,11 @@ public class VirtualNodeSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDiscovery")
     public ServiceDiscovery serviceDiscovery;
+
     public VirtualNodeSpec withServiceDiscovery(ServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
         return this;
     }
     
+    public VirtualNodeSpec(){}
 }

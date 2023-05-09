@@ -15,6 +15,7 @@ public class ListVirtualInterfaceTestHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualInterfaceTestHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVirtualInterfaceTestHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterfaceTestHistory")
     public VirtualInterfaceTestHistory[] virtualInterfaceTestHistory;
+
     public ListVirtualInterfaceTestHistoryResponse withVirtualInterfaceTestHistory(VirtualInterfaceTestHistory[] virtualInterfaceTestHistory) {
         this.virtualInterfaceTestHistory = virtualInterfaceTestHistory;
         return this;
     }
     
+    public ListVirtualInterfaceTestHistoryResponse(){}
 }

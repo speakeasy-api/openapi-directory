@@ -59,11 +59,9 @@ public class PayoutSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.DeleteMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse(contentType, httpRes.statusCode()) {{
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -107,12 +105,10 @@ public class PayoutSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsResponse(contentType, httpRes.statusCode()) {{
             payoutSettingsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class PayoutSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse(contentType, httpRes.statusCode()) {{
             payoutSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,12 +216,10 @@ public class PayoutSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdPayoutSettingsPayoutSettingsIdResponse(contentType, httpRes.statusCode()) {{
             payoutSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,12 +275,10 @@ public class PayoutSettingsMerchantLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse() {{
+        org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse res = new org.openapis.openapi.models.operations.PostMerchantsMerchantIdPayoutSettingsResponse(contentType, httpRes.statusCode()) {{
             payoutSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -20,6 +20,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoRenew")
     public AutoRenewEnum autoRenew;
+
     public Subscription withAutoRenew(AutoRenewEnum autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -30,6 +31,7 @@ public class Subscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public Subscription withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public Limit[] limits;
+
     public Subscription withLimits(Limit[] limits) {
         this.limits = limits;
         return this;
@@ -46,6 +49,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProactiveEngagementStatus")
     public ProactiveEngagementStatusEnum proactiveEngagementStatus;
+
     public Subscription withProactiveEngagementStatus(ProactiveEngagementStatusEnum proactiveEngagementStatus) {
         this.proactiveEngagementStatus = proactiveEngagementStatus;
         return this;
@@ -56,6 +60,7 @@ public class Subscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Subscription withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -64,6 +69,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscriptionArn")
     public String subscriptionArn;
+
     public Subscription withSubscriptionArn(String subscriptionArn) {
         this.subscriptionArn = subscriptionArn;
         return this;
@@ -71,6 +77,7 @@ public class Subscription {
     
     @JsonProperty("SubscriptionLimits")
     public SubscriptionLimits subscriptionLimits;
+
     public Subscription withSubscriptionLimits(SubscriptionLimits subscriptionLimits) {
         this.subscriptionLimits = subscriptionLimits;
         return this;
@@ -79,9 +86,13 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeCommitmentInSeconds")
     public Long timeCommitmentInSeconds;
+
     public Subscription withTimeCommitmentInSeconds(Long timeCommitmentInSeconds) {
         this.timeCommitmentInSeconds = timeCommitmentInSeconds;
         return this;
     }
     
+    public Subscription(@JsonProperty("SubscriptionLimits") SubscriptionLimits subscriptionLimits) {
+        this.subscriptionLimits = subscriptionLimits;
+  }
 }

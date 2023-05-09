@@ -15,9 +15,11 @@ public class AssociateFileSystemAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public Alias[] aliases;
+
     public AssociateFileSystemAliasesResponse withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
     }
     
+    public AssociateFileSystemAliasesResponse(){}
 }

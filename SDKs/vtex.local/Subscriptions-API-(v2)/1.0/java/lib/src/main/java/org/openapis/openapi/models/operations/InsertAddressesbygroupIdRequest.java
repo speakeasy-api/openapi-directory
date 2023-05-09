@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsertAddressesbygroupIdRequest {
@@ -12,6 +13,7 @@ public class InsertAddressesbygroupIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public InsertAddressesbygroupIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class InsertAddressesbygroupIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public InsertAddressesbygroupIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class InsertAddressesbygroupIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest insertAddressesbygroupIdRequest;
+
     public InsertAddressesbygroupIdRequest withInsertAddressesbygroupIdRequest(org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest insertAddressesbygroupIdRequest) {
         this.insertAddressesbygroupIdRequest = insertAddressesbygroupIdRequest;
         return this;
@@ -39,9 +43,16 @@ public class InsertAddressesbygroupIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public InsertAddressesbygroupIdRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public InsertAddressesbygroupIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("InsertAddressesbygroupIdRequest") org.openapis.openapi.models.shared.InsertAddressesbygroupIdRequest insertAddressesbygroupIdRequest, @JsonProperty("groupId") String groupId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.insertAddressesbygroupIdRequest = insertAddressesbygroupIdRequest;
+        this.groupId = groupId;
+  }
 }

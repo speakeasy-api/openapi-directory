@@ -21,6 +21,7 @@ public class DescribeFeatureGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeFeatureGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeFeatureGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("EventTimeFeatureName")
     public String eventTimeFeatureName;
+
     public DescribeFeatureGroupResponse withEventTimeFeatureName(String eventTimeFeatureName) {
         this.eventTimeFeatureName = eventTimeFeatureName;
         return this;
@@ -44,6 +47,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeFeatureGroupResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -51,6 +55,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("FeatureDefinitions")
     public FeatureDefinition[] featureDefinitions;
+
     public DescribeFeatureGroupResponse withFeatureDefinitions(FeatureDefinition[] featureDefinitions) {
         this.featureDefinitions = featureDefinitions;
         return this;
@@ -58,6 +63,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("FeatureGroupArn")
     public String featureGroupArn;
+
     public DescribeFeatureGroupResponse withFeatureGroupArn(String featureGroupArn) {
         this.featureGroupArn = featureGroupArn;
         return this;
@@ -65,6 +71,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public DescribeFeatureGroupResponse withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -73,6 +80,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupStatus")
     public FeatureGroupStatusEnum featureGroupStatus;
+
     public DescribeFeatureGroupResponse withFeatureGroupStatus(FeatureGroupStatusEnum featureGroupStatus) {
         this.featureGroupStatus = featureGroupStatus;
         return this;
@@ -83,6 +91,7 @@ public class DescribeFeatureGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeFeatureGroupResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -91,6 +100,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatus")
     public LastUpdateStatus lastUpdateStatus;
+
     public DescribeFeatureGroupResponse withLastUpdateStatus(LastUpdateStatus lastUpdateStatus) {
         this.lastUpdateStatus = lastUpdateStatus;
         return this;
@@ -98,6 +108,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFeatureGroupResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -106,6 +117,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreConfig")
     public OfflineStoreConfig offlineStoreConfig;
+
     public DescribeFeatureGroupResponse withOfflineStoreConfig(OfflineStoreConfig offlineStoreConfig) {
         this.offlineStoreConfig = offlineStoreConfig;
         return this;
@@ -114,6 +126,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreStatus")
     public OfflineStoreStatus offlineStoreStatus;
+
     public DescribeFeatureGroupResponse withOfflineStoreStatus(OfflineStoreStatus offlineStoreStatus) {
         this.offlineStoreStatus = offlineStoreStatus;
         return this;
@@ -122,6 +135,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnlineStoreConfig")
     public OnlineStoreConfig onlineStoreConfig;
+
     public DescribeFeatureGroupResponse withOnlineStoreConfig(OnlineStoreConfig onlineStoreConfig) {
         this.onlineStoreConfig = onlineStoreConfig;
         return this;
@@ -130,6 +144,7 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnlineStoreTotalSizeBytes")
     public Long onlineStoreTotalSizeBytes;
+
     public DescribeFeatureGroupResponse withOnlineStoreTotalSizeBytes(Long onlineStoreTotalSizeBytes) {
         this.onlineStoreTotalSizeBytes = onlineStoreTotalSizeBytes;
         return this;
@@ -137,6 +152,7 @@ public class DescribeFeatureGroupResponse {
     
     @JsonProperty("RecordIdentifierFeatureName")
     public String recordIdentifierFeatureName;
+
     public DescribeFeatureGroupResponse withRecordIdentifierFeatureName(String recordIdentifierFeatureName) {
         this.recordIdentifierFeatureName = recordIdentifierFeatureName;
         return this;
@@ -145,9 +161,19 @@ public class DescribeFeatureGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeFeatureGroupResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeFeatureGroupResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EventTimeFeatureName") String eventTimeFeatureName, @JsonProperty("FeatureDefinitions") FeatureDefinition[] featureDefinitions, @JsonProperty("FeatureGroupArn") String featureGroupArn, @JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("NextToken") String nextToken, @JsonProperty("RecordIdentifierFeatureName") String recordIdentifierFeatureName) {
+        this.creationTime = creationTime;
+        this.eventTimeFeatureName = eventTimeFeatureName;
+        this.featureDefinitions = featureDefinitions;
+        this.featureGroupArn = featureGroupArn;
+        this.featureGroupName = featureGroupName;
+        this.nextToken = nextToken;
+        this.recordIdentifierFeatureName = recordIdentifierFeatureName;
+  }
 }

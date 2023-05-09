@@ -12,6 +12,7 @@ public class GetChatHeadUsingPOST200ApplicationJSONDataChatHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GetChatHeadUsingPOST200ApplicationJSONDataChatHead withText(String text) {
         this.text = text;
         return this;
@@ -20,6 +21,7 @@ public class GetChatHeadUsingPOST200ApplicationJSONDataChatHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public GetChatHeadUsingPOST200ApplicationJSONDataChatHead withTime(Long time) {
         this.time = time;
         return this;
@@ -28,6 +30,7 @@ public class GetChatHeadUsingPOST200ApplicationJSONDataChatHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GetChatHeadUsingPOST200ApplicationJSONDataChatHead withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -36,9 +39,11 @@ public class GetChatHeadUsingPOST200ApplicationJSONDataChatHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public GetChatHeadUsingPOST200ApplicationJSONDataChatHead withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetChatHeadUsingPOST200ApplicationJSONDataChatHead(){}
 }

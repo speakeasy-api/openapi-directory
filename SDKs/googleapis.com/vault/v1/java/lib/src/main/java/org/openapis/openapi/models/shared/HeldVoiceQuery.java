@@ -18,9 +18,11 @@ public class HeldVoiceQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coveredData")
     public HeldVoiceQueryCoveredDataEnum[] coveredData;
+
     public HeldVoiceQuery withCoveredData(HeldVoiceQueryCoveredDataEnum[] coveredData) {
         this.coveredData = coveredData;
         return this;
     }
     
+    public HeldVoiceQuery(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartBlueprintRunRequest {
     @JsonProperty("BlueprintName")
     public String blueprintName;
+
     public StartBlueprintRunRequest withBlueprintName(String blueprintName) {
         this.blueprintName = blueprintName;
         return this;
@@ -19,6 +20,7 @@ public class StartBlueprintRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public String parameters;
+
     public StartBlueprintRunRequest withParameters(String parameters) {
         this.parameters = parameters;
         return this;
@@ -26,9 +28,14 @@ public class StartBlueprintRunRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public StartBlueprintRunRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public StartBlueprintRunRequest(@JsonProperty("BlueprintName") String blueprintName, @JsonProperty("RoleArn") String roleArn) {
+        this.blueprintName = blueprintName;
+        this.roleArn = roleArn;
+  }
 }

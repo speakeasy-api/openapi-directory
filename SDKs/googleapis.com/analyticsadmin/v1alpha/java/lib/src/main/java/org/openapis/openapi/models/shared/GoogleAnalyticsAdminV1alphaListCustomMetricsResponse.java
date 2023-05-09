@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListCustomMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMetrics")
     public GoogleAnalyticsAdminV1alphaCustomMetric[] customMetrics;
+
     public GoogleAnalyticsAdminV1alphaListCustomMetricsResponse withCustomMetrics(GoogleAnalyticsAdminV1alphaCustomMetric[] customMetrics) {
         this.customMetrics = customMetrics;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListCustomMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListCustomMetricsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListCustomMetricsResponse(){}
 }

@@ -18,6 +18,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilterClauses")
     public DimensionFilterClause[] dimensionFilterClauses;
+
     public Pivot withDimensionFilterClauses(DimensionFilterClause[] dimensionFilterClauses) {
         this.dimensionFilterClauses = dimensionFilterClauses;
         return this;
@@ -29,6 +30,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public Pivot withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -40,6 +42,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxGroupCount")
     public Integer maxGroupCount;
+
     public Pivot withMaxGroupCount(Integer maxGroupCount) {
         this.maxGroupCount = maxGroupCount;
         return this;
@@ -51,6 +54,7 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public Pivot withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -62,9 +66,11 @@ public class Pivot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startGroup")
     public Integer startGroup;
+
     public Pivot withStartGroup(Integer startGroup) {
         this.startGroup = startGroup;
         return this;
     }
     
+    public Pivot(){}
 }

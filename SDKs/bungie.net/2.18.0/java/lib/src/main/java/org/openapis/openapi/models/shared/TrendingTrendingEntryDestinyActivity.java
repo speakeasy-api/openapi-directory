@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingEntryDestinyActivity {
     
     public Long activityHash;
+
     public TrendingTrendingEntryDestinyActivity withActivityHash(Long activityHash) {
         this.activityHash = activityHash;
         return this;
@@ -19,9 +20,11 @@ public class TrendingTrendingEntryDestinyActivity {
      */
     
     public DestinyActivitiesDestinyPublicActivityStatus status;
+
     public TrendingTrendingEntryDestinyActivity withStatus(DestinyActivitiesDestinyPublicActivityStatus status) {
         this.status = status;
         return this;
     }
     
+    public TrendingTrendingEntryDestinyActivity(){}
 }

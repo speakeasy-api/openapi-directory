@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class SourceDefinitionRead {
     @JsonProperty("dockerImageTag")
     public String dockerImageTag;
+
     public SourceDefinitionRead withDockerImageTag(String dockerImageTag) {
         this.dockerImageTag = dockerImageTag;
         return this;
@@ -23,6 +24,7 @@ public class SourceDefinitionRead {
     
     @JsonProperty("dockerRepository")
     public String dockerRepository;
+
     public SourceDefinitionRead withDockerRepository(String dockerRepository) {
         this.dockerRepository = dockerRepository;
         return this;
@@ -31,6 +33,7 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public SourceDefinitionRead withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -39,6 +42,7 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public SourceDefinitionRead withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -46,6 +50,7 @@ public class SourceDefinitionRead {
     
     @JsonProperty("name")
     public String name;
+
     public SourceDefinitionRead withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +62,7 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocolVersion")
     public String protocolVersion;
+
     public SourceDefinitionRead withProtocolVersion(String protocolVersion) {
         this.protocolVersion = protocolVersion;
         return this;
@@ -69,6 +75,7 @@ public class SourceDefinitionRead {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("releaseDate")
     public LocalDate releaseDate;
+
     public SourceDefinitionRead withReleaseDate(LocalDate releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -77,6 +84,7 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseStage")
     public ReleaseStageEnum releaseStage;
+
     public SourceDefinitionRead withReleaseStage(ReleaseStageEnum releaseStage) {
         this.releaseStage = releaseStage;
         return this;
@@ -88,6 +96,7 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ActorDefinitionResourceRequirements resourceRequirements;
+
     public SourceDefinitionRead withResourceRequirements(ActorDefinitionResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -95,6 +104,7 @@ public class SourceDefinitionRead {
     
     @JsonProperty("sourceDefinitionId")
     public String sourceDefinitionId;
+
     public SourceDefinitionRead withSourceDefinitionId(String sourceDefinitionId) {
         this.sourceDefinitionId = sourceDefinitionId;
         return this;
@@ -103,9 +113,16 @@ public class SourceDefinitionRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public SourceDefinitionReadSourceTypeEnum sourceType;
+
     public SourceDefinitionRead withSourceType(SourceDefinitionReadSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public SourceDefinitionRead(@JsonProperty("dockerImageTag") String dockerImageTag, @JsonProperty("dockerRepository") String dockerRepository, @JsonProperty("name") String name, @JsonProperty("sourceDefinitionId") String sourceDefinitionId) {
+        this.dockerImageTag = dockerImageTag;
+        this.dockerRepository = dockerRepository;
+        this.name = name;
+        this.sourceDefinitionId = sourceDefinitionId;
+  }
 }

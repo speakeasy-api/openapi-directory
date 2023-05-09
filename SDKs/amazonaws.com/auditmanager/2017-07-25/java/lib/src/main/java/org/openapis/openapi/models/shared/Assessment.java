@@ -15,6 +15,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Assessment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccount")
     public AWSAccount awsAccount;
+
     public Assessment withAwsAccount(AWSAccount awsAccount) {
         this.awsAccount = awsAccount;
         return this;
@@ -31,6 +33,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("framework")
     public AssessmentFramework framework;
+
     public Assessment withFramework(AssessmentFramework framework) {
         this.framework = framework;
         return this;
@@ -39,6 +42,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public AssessmentMetadata metadata;
+
     public Assessment withMetadata(AssessmentMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -47,9 +51,11 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Assessment withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Assessment(){}
 }

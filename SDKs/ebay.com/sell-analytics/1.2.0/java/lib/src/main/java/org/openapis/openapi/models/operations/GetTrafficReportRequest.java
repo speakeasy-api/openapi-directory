@@ -12,6 +12,7 @@ public class GetTrafficReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dimension")
     public String dimension;
+
     public GetTrafficReportRequest withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -22,6 +23,7 @@ public class GetTrafficReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetTrafficReportRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class GetTrafficReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metric")
     public String metric;
+
     public GetTrafficReportRequest withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -42,9 +45,11 @@ public class GetTrafficReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetTrafficReportRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetTrafficReportRequest(){}
 }

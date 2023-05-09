@@ -146,4 +146,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartExpenseAnalysisRequest
 lib/src/main/java/org/openapis/openapi/models/shared/StartLendingAnalysisResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartLendingAnalysisRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

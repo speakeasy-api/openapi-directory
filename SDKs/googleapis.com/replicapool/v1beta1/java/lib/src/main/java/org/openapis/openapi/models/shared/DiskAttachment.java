@@ -18,6 +18,7 @@ public class DiskAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public DiskAttachment withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -29,9 +30,11 @@ public class DiskAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public DiskAttachment withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public DiskAttachment(){}
 }

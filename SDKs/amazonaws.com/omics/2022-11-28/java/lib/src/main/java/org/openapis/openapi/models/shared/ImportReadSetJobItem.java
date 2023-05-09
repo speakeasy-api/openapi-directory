@@ -22,6 +22,7 @@ public class ImportReadSetJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public ImportReadSetJobItem withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class ImportReadSetJobItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ImportReadSetJobItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class ImportReadSetJobItem {
     
     @JsonProperty("id")
     public String id;
+
     public ImportReadSetJobItem withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ImportReadSetJobItem {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public ImportReadSetJobItem withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -52,6 +56,7 @@ public class ImportReadSetJobItem {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public ImportReadSetJobItem withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -59,9 +64,17 @@ public class ImportReadSetJobItem {
     
     @JsonProperty("status")
     public ReadSetImportJobStatusEnum status;
+
     public ImportReadSetJobItem withStatus(ReadSetImportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImportReadSetJobItem(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("roleArn") String roleArn, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.roleArn = roleArn;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

@@ -18,6 +18,7 @@ public class ChoosePrivateKeyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageNames")
     public String[] packageNames;
+
     public ChoosePrivateKeyRule withPackageNames(String[] packageNames) {
         this.packageNames = packageNames;
         return this;
@@ -29,6 +30,7 @@ public class ChoosePrivateKeyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKeyAlias")
     public String privateKeyAlias;
+
     public ChoosePrivateKeyRule withPrivateKeyAlias(String privateKeyAlias) {
         this.privateKeyAlias = privateKeyAlias;
         return this;
@@ -40,9 +42,11 @@ public class ChoosePrivateKeyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlPattern")
     public String urlPattern;
+
     public ChoosePrivateKeyRule withUrlPattern(String urlPattern) {
         this.urlPattern = urlPattern;
         return this;
     }
     
+    public ChoosePrivateKeyRule(){}
 }

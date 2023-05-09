@@ -15,6 +15,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public org.openapis.openapi.models.shared.Capabilities capabilities;
+
     public CreateApplicationRequestBody withCapabilities(org.openapis.openapi.models.shared.Capabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -23,6 +24,7 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public CreateApplicationRequestBodyKeys keys;
+
     public CreateApplicationRequestBody withKeys(CreateApplicationRequestBodyKeys keys) {
         this.keys = keys;
         return this;
@@ -33,6 +35,7 @@ public class CreateApplicationRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateApplicationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -44,9 +47,13 @@ public class CreateApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public CreateApplicationRequestBodyPrivacy privacy;
+
     public CreateApplicationRequestBody withPrivacy(CreateApplicationRequestBodyPrivacy privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public CreateApplicationRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

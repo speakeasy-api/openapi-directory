@@ -15,9 +15,11 @@ public class GetGeoMatchSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoMatchSet")
     public GeoMatchSet geoMatchSet;
+
     public GetGeoMatchSetResponse withGeoMatchSet(GeoMatchSet geoMatchSet) {
         this.geoMatchSet = geoMatchSet;
         return this;
     }
     
+    public GetGeoMatchSetResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InstallmentsoptionsResponse {
     
     public String contentType;
+
     public InstallmentsoptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class InstallmentsoptionsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public InstallmentsoptionsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class InstallmentsoptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidRequestValue invalidRequestValue;
+
     public InstallmentsoptionsResponse withInvalidRequestValue(org.openapis.openapi.models.shared.InvalidRequestValue invalidRequestValue) {
         this.invalidRequestValue = invalidRequestValue;
         return this;
@@ -33,6 +37,7 @@ public class InstallmentsoptionsResponse {
     
     
     public Integer statusCode;
+
     public InstallmentsoptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class InstallmentsoptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InstallmentsoptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -47,9 +53,14 @@ public class InstallmentsoptionsResponse {
     
     
     public org.openapis.openapi.models.shared.ValidRequest validRequest;
+
     public InstallmentsoptionsResponse withValidRequest(org.openapis.openapi.models.shared.ValidRequest validRequest) {
         this.validRequest = validRequest;
         return this;
     }
     
+    public InstallmentsoptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

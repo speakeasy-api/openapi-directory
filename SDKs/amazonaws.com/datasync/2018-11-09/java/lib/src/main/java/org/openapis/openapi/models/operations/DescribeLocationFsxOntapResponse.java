@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLocationFsxOntapResponse {
     
     public String contentType;
+
     public DescribeLocationFsxOntapResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLocationFsxOntapResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLocationFsxOntapResponse describeLocationFsxOntapResponse;
+
     public DescribeLocationFsxOntapResponse withDescribeLocationFsxOntapResponse(org.openapis.openapi.models.shared.DescribeLocationFsxOntapResponse describeLocationFsxOntapResponse) {
         this.describeLocationFsxOntapResponse = describeLocationFsxOntapResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLocationFsxOntapResponse {
      */
     
     public Object internalException;
+
     public DescribeLocationFsxOntapResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLocationFsxOntapResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLocationFsxOntapResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLocationFsxOntapResponse {
     
     
     public Integer statusCode;
+
     public DescribeLocationFsxOntapResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLocationFsxOntapResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLocationFsxOntapResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLocationFsxOntapResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

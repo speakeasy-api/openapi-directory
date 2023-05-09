@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImagePolicyResponse {
@@ -12,6 +13,7 @@ public class GetImagePolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetImagePolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetImagePolicyResponse {
     
     
     public String contentType;
+
     public GetImagePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImagePolicyResponse {
      */
     
     public Object forbiddenException;
+
     public GetImagePolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetImagePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImagePolicyResponse getImagePolicyResponse;
+
     public GetImagePolicyResponse withGetImagePolicyResponse(org.openapis.openapi.models.shared.GetImagePolicyResponse getImagePolicyResponse) {
         this.getImagePolicyResponse = getImagePolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetImagePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public GetImagePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class GetImagePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImagePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetImagePolicyResponse {
      */
     
     public Object serviceException;
+
     public GetImagePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetImagePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetImagePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetImagePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImagePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetImagePolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetImagePolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetImagePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

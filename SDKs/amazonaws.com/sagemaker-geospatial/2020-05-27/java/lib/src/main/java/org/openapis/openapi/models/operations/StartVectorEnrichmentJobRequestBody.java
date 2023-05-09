@@ -15,6 +15,7 @@ public class StartVectorEnrichmentJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartVectorEnrichmentJobRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class StartVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public StartVectorEnrichmentJobRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -35,6 +37,7 @@ public class StartVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("InputConfig")
     public StartVectorEnrichmentJobRequestBodyInputConfig inputConfig;
+
     public StartVectorEnrichmentJobRequestBody withInputConfig(StartVectorEnrichmentJobRequestBodyInputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -45,17 +48,19 @@ public class StartVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("JobConfig")
     public StartVectorEnrichmentJobRequestBodyJobConfig jobConfig;
+
     public StartVectorEnrichmentJobRequestBody withJobConfig(StartVectorEnrichmentJobRequestBodyJobConfig jobConfig) {
         this.jobConfig = jobConfig;
         return this;
     }
     
     /**
-     * The Amazon Key Management Service (KMS) key ID for server-side encryption.
+     * The Key Management Service key ID for server-side encryption.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public StartVectorEnrichmentJobRequestBody withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -66,6 +71,7 @@ public class StartVectorEnrichmentJobRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public StartVectorEnrichmentJobRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -77,9 +83,16 @@ public class StartVectorEnrichmentJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public StartVectorEnrichmentJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartVectorEnrichmentJobRequestBody(@JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("InputConfig") StartVectorEnrichmentJobRequestBodyInputConfig inputConfig, @JsonProperty("JobConfig") StartVectorEnrichmentJobRequestBodyJobConfig jobConfig, @JsonProperty("Name") String name) {
+        this.executionRoleArn = executionRoleArn;
+        this.inputConfig = inputConfig;
+        this.jobConfig = jobConfig;
+        this.name = name;
+  }
 }

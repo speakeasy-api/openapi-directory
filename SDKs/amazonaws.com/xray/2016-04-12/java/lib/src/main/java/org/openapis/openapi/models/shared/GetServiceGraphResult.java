@@ -20,6 +20,7 @@ public class GetServiceGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsOldGroupVersions")
     public Boolean containsOldGroupVersions;
+
     public GetServiceGraphResult withContainsOldGroupVersions(Boolean containsOldGroupVersions) {
         this.containsOldGroupVersions = containsOldGroupVersions;
         return this;
@@ -30,6 +31,7 @@ public class GetServiceGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetServiceGraphResult withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class GetServiceGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetServiceGraphResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,6 +49,7 @@ public class GetServiceGraphResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public Service[] services;
+
     public GetServiceGraphResult withServices(Service[] services) {
         this.services = services;
         return this;
@@ -56,9 +60,11 @@ public class GetServiceGraphResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetServiceGraphResult withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetServiceGraphResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAdminsForDistrictResponse {
     
     public String contentType;
+
     public GetAdminsForDistrictResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAdminsForDistrictResponse {
      */
     
     public org.openapis.openapi.models.shared.DistrictAdminsResponse districtAdminsResponse;
+
     public GetAdminsForDistrictResponse withDistrictAdminsResponse(org.openapis.openapi.models.shared.DistrictAdminsResponse districtAdminsResponse) {
         this.districtAdminsResponse = districtAdminsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAdminsForDistrictResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetAdminsForDistrictResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetAdminsForDistrictResponse {
     
     
     public Integer statusCode;
+
     public GetAdminsForDistrictResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAdminsForDistrictResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAdminsForDistrictResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAdminsForDistrictResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

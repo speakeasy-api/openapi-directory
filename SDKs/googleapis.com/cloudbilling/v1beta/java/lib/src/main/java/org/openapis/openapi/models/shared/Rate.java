@@ -18,6 +18,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tiers")
     public RateTier[] tiers;
+
     public Rate withTiers(RateTier[] tiers) {
         this.tiers = tiers;
         return this;
@@ -29,6 +30,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public Rate withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -40,9 +42,11 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitCount")
     public Double unitCount;
+
     public Rate withUnitCount(Double unitCount) {
         this.unitCount = unitCount;
         return this;
     }
     
+    public Rate(){}
 }

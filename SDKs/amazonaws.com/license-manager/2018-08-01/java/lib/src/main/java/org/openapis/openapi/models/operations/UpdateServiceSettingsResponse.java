@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateServiceSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateServiceSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object authorizationException;
+
     public UpdateServiceSettingsResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateServiceSettingsResponse {
     
     
     public String contentType;
+
     public UpdateServiceSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateServiceSettingsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object rateLimitExceededException;
+
     public UpdateServiceSettingsResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateServiceSettingsResponse {
      */
     
     public Object serverInternalException;
+
     public UpdateServiceSettingsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateServiceSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateServiceSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateServiceSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateServiceSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateServiceSettingsResponse {
      */
     
     public java.util.Map<String, Object> updateServiceSettingsResponse;
+
     public UpdateServiceSettingsResponse withUpdateServiceSettingsResponse(java.util.Map<String, Object> updateServiceSettingsResponse) {
         this.updateServiceSettingsResponse = updateServiceSettingsResponse;
         return this;
     }
     
+    public UpdateServiceSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

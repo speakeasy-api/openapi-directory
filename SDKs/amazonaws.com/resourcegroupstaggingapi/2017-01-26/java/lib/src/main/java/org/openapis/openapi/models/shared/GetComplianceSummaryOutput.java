@@ -15,6 +15,7 @@ public class GetComplianceSummaryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetComplianceSummaryOutput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -23,9 +24,11 @@ public class GetComplianceSummaryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryList")
     public Summary[] summaryList;
+
     public GetComplianceSummaryOutput withSummaryList(Summary[] summaryList) {
         this.summaryList = summaryList;
         return this;
     }
     
+    public GetComplianceSummaryOutput(){}
 }

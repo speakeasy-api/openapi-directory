@@ -15,9 +15,11 @@ public class InputFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deserializer")
     public Deserializer deserializer;
+
     public InputFormatConfiguration withDeserializer(Deserializer deserializer) {
         this.deserializer = deserializer;
         return this;
     }
     
+    public InputFormatConfiguration(){}
 }

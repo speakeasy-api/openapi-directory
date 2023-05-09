@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TemplateVersionsResponse {
     @JsonProperty("Item")
     public TemplateVersionResponse[] item;
+
     public TemplateVersionsResponse withItem(TemplateVersionResponse[] item) {
         this.item = item;
         return this;
@@ -22,6 +23,7 @@ public class TemplateVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public TemplateVersionsResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -30,6 +32,7 @@ public class TemplateVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public TemplateVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,9 +41,13 @@ public class TemplateVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestID")
     public String requestID;
+
     public TemplateVersionsResponse withRequestID(String requestID) {
         this.requestID = requestID;
         return this;
     }
     
+    public TemplateVersionsResponse(@JsonProperty("Item") TemplateVersionResponse[] item) {
+        this.item = item;
+  }
 }

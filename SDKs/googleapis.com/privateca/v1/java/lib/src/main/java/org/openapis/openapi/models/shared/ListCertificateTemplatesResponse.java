@@ -18,6 +18,7 @@ public class ListCertificateTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateTemplates")
     public CertificateTemplate[] certificateTemplates;
+
     public ListCertificateTemplatesResponse withCertificateTemplates(CertificateTemplate[] certificateTemplates) {
         this.certificateTemplates = certificateTemplates;
         return this;
@@ -29,6 +30,7 @@ public class ListCertificateTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCertificateTemplatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListCertificateTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListCertificateTemplatesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListCertificateTemplatesResponse(){}
 }

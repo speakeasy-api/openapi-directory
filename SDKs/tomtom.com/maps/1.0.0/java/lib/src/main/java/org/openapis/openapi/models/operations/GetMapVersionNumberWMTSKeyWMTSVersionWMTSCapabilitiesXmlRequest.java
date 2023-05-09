@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest {
@@ -12,6 +13,7 @@ public class GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withKey(String key) {
         this.key = key;
         return this;
@@ -22,6 +24,7 @@ public class GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlVersionNumberEnum versionNumber;
+
     public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withVersionNumber(GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlVersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -29,9 +32,15 @@ public class GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=wmtsVersion")
     public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWMTSVersionEnum wmtsVersion;
+
     public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest withWmtsVersion(GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWMTSVersionEnum wmtsVersion) {
         this.wmtsVersion = wmtsVersion;
         return this;
     }
     
+    public GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest(@JsonProperty("key") String key, @JsonProperty("versionNumber") GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlVersionNumberEnum versionNumber, @JsonProperty("wmtsVersion") GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlWMTSVersionEnum wmtsVersion) {
+        this.key = key;
+        this.versionNumber = versionNumber;
+        this.wmtsVersion = wmtsVersion;
+  }
 }

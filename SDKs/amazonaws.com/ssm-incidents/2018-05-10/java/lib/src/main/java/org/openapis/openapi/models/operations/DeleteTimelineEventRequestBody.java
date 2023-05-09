@@ -12,6 +12,7 @@ public class DeleteTimelineEventRequestBody {
      */
     @JsonProperty("eventId")
     public String eventId;
+
     public DeleteTimelineEventRequestBody withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -22,9 +23,14 @@ public class DeleteTimelineEventRequestBody {
      */
     @JsonProperty("incidentRecordArn")
     public String incidentRecordArn;
+
     public DeleteTimelineEventRequestBody withIncidentRecordArn(String incidentRecordArn) {
         this.incidentRecordArn = incidentRecordArn;
         return this;
     }
     
+    public DeleteTimelineEventRequestBody(@JsonProperty("eventId") String eventId, @JsonProperty("incidentRecordArn") String incidentRecordArn) {
+        this.eventId = eventId;
+        this.incidentRecordArn = incidentRecordArn;
+  }
 }

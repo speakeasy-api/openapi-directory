@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateVpnGatewayRequest - Contains the parameters for CreateVpnGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnGatewayRequest {
     
     public Long amazonSideAsn;
+
     public CreateVpnGatewayRequest withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpnGatewayRequest {
     
     
     public String availabilityZone;
+
     public CreateVpnGatewayRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpnGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateVpnGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpnGatewayRequest {
     
     
     public CreateVpnGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpnGatewayRequest withTagSpecifications(CreateVpnGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -40,9 +44,13 @@ public class CreateVpnGatewayRequest {
     
     
     public GatewayTypeEnum type;
+
     public CreateVpnGatewayRequest withType(GatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateVpnGatewayRequest(@JsonProperty("Type") GatewayTypeEnum type) {
+        this.type = type;
+  }
 }

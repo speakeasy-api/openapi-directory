@@ -15,6 +15,7 @@ public class GetContainerServiceMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetContainerServiceMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetContainerServiceMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public ContainerServiceMetricNameEnum metricName;
+
     public GetContainerServiceMetricDataResult withMetricName(ContainerServiceMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetContainerServiceMetricDataResult(){}
 }

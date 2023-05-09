@@ -18,9 +18,11 @@ public class BillingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAccount")
     public String billingAccount;
+
     public BillingConfig withBillingAccount(String billingAccount) {
         this.billingAccount = billingAccount;
         return this;
     }
     
+    public BillingConfig(){}
 }

@@ -15,6 +15,7 @@ public class ExecuteQueryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ExecuteQueryRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ExecuteQueryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ExecuteQueryRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +38,7 @@ public class ExecuteQueryRequestBody {
      */
     @JsonProperty("queryStatement")
     public String queryStatement;
+
     public ExecuteQueryRequestBody withQueryStatement(String queryStatement) {
         this.queryStatement = queryStatement;
         return this;
@@ -46,9 +49,14 @@ public class ExecuteQueryRequestBody {
      */
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public ExecuteQueryRequestBody withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public ExecuteQueryRequestBody(@JsonProperty("queryStatement") String queryStatement, @JsonProperty("workspaceId") String workspaceId) {
+        this.queryStatement = queryStatement;
+        this.workspaceId = workspaceId;
+  }
 }

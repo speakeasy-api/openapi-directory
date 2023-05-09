@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -28,6 +30,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
     public String extendedPostalCodesFor;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
         this.extendedPostalCodesFor = extendedPostalCodesFor;
         return this;
@@ -38,6 +41,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=heading")
     public Float heading;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withHeading(Float heading) {
         this.heading = heading;
         return this;
@@ -54,6 +58,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idxSet")
     public String idxSet;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withIdxSet(String idxSet) {
         this.idxSet = idxSet;
         return this;
@@ -64,6 +69,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -74,6 +80,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -84,6 +91,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=multiplier")
     public Long multiplier;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withMultiplier(Long multiplier) {
         this.multiplier = multiplier;
         return this;
@@ -94,6 +102,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public String position;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -104,6 +113,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -114,6 +124,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routingTimeout")
     public Long routingTimeout;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withRoutingTimeout(Long routingTimeout) {
         this.routingTimeout = routingTimeout;
         return this;
@@ -124,6 +135,7 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeahead")
     public Boolean typeahead;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withTypeahead(Boolean typeahead) {
         this.typeahead = typeahead;
         return this;
@@ -134,9 +146,17 @@ public class GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("heading") Float heading, @JsonProperty("position") String position, @JsonProperty("query") String query, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.heading = heading;
+        this.position = position;
+        this.query = query;
+        this.versionNumber = versionNumber;
+  }
 }

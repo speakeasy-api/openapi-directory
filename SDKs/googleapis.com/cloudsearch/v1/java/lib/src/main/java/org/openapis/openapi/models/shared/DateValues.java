@@ -15,9 +15,11 @@ public class DateValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Date[] values;
+
     public DateValues withValues(Date[] values) {
         this.values = values;
         return this;
     }
     
+    public DateValues(){}
 }

@@ -15,6 +15,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("added")
     public String added;
+
     public AddUserResponse withAdded(String added) {
         this.added = added;
         return this;
@@ -23,6 +24,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aff_added")
     public String affAdded;
+
     public AddUserResponse withAffAdded(String affAdded) {
         this.affAdded = affAdded;
         return this;
@@ -31,6 +33,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aff_id")
     public String affId;
+
     public AddUserResponse withAffId(String affId) {
         this.affId = affId;
         return this;
@@ -39,6 +42,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aff_payout_type")
     public String affPayoutType;
+
     public AddUserResponse withAffPayoutType(String affPayoutType) {
         this.affPayoutType = affPayoutType;
         return this;
@@ -47,6 +51,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public String avatar;
+
     public AddUserResponse withAvatar(String avatar) {
         this.avatar = avatar;
         return this;
@@ -55,6 +60,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public AddUserResponse withCity(String city) {
         this.city = city;
         return this;
@@ -63,6 +69,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AddUserResponse withComment(String comment) {
         this.comment = comment;
         return this;
@@ -71,6 +78,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public AddUserResponse withCountry(String country) {
         this.country = country;
         return this;
@@ -79,6 +87,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable_lock_until")
     public String disableLockUntil;
+
     public AddUserResponse withDisableLockUntil(String disableLockUntil) {
         this.disableLockUntil = disableLockUntil;
         return this;
@@ -87,6 +96,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AddUserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -95,6 +105,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("i_agree")
     public String iAgree;
+
     public AddUserResponse withIAgree(String iAgree) {
         this.iAgree = iAgree;
         return this;
@@ -103,6 +114,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_affiliate")
     public String isAffiliate;
+
     public AddUserResponse withIsAffiliate(String isAffiliate) {
         this.isAffiliate = isAffiliate;
         return this;
@@ -111,6 +123,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_locked")
     public String isLocked;
+
     public AddUserResponse withIsLocked(String isLocked) {
         this.isLocked = isLocked;
         return this;
@@ -119,6 +132,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public AddUserResponse withLang(String lang) {
         this.lang = lang;
         return this;
@@ -127,6 +141,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_login")
     public String lastLogin;
+
     public AddUserResponse withLastLogin(String lastLogin) {
         this.lastLogin = lastLogin;
         return this;
@@ -135,6 +150,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public AddUserResponse withLogin(String login) {
         this.login = login;
         return this;
@@ -143,6 +159,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_f")
     public String nameF;
+
     public AddUserResponse withNameF(String nameF) {
         this.nameF = nameF;
         return this;
@@ -151,6 +168,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_l")
     public String nameL;
+
     public AddUserResponse withNameL(String nameL) {
         this.nameL = nameL;
         return this;
@@ -159,6 +177,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pass")
     public String pass;
+
     public AddUserResponse withPass(String pass) {
         this.pass = pass;
         return this;
@@ -167,6 +186,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pass_dattm")
     public String passDattm;
+
     public AddUserResponse withPassDattm(String passDattm) {
         this.passDattm = passDattm;
         return this;
@@ -175,6 +195,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public AddUserResponse withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -183,6 +204,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public String pin;
+
     public AddUserResponse withPin(String pin) {
         this.pin = pin;
         return this;
@@ -191,6 +213,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plain_password")
     public String plainPassword;
+
     public AddUserResponse withPlainPassword(String plainPassword) {
         this.plainPassword = plainPassword;
         return this;
@@ -199,6 +222,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remember_key")
     public String rememberKey;
+
     public AddUserResponse withRememberKey(String rememberKey) {
         this.rememberKey = rememberKey;
         return this;
@@ -207,6 +231,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remote_addr")
     public String remoteAddr;
+
     public AddUserResponse withRemoteAddr(String remoteAddr) {
         this.remoteAddr = remoteAddr;
         return this;
@@ -215,6 +240,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_consent")
     public String requireConsent;
+
     public AddUserResponse withRequireConsent(String requireConsent) {
         this.requireConsent = requireConsent;
         return this;
@@ -223,6 +249,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reseller_id")
     public String resellerId;
+
     public AddUserResponse withResellerId(String resellerId) {
         this.resellerId = resellerId;
         return this;
@@ -231,6 +258,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saved_form_id")
     public String savedFormId;
+
     public AddUserResponse withSavedFormId(String savedFormId) {
         this.savedFormId = savedFormId;
         return this;
@@ -239,6 +267,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public AddUserResponse withState(String state) {
         this.state = state;
         return this;
@@ -247,6 +276,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AddUserResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -255,6 +285,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public AddUserResponse withStreet(String street) {
         this.street = street;
         return this;
@@ -263,6 +294,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street2")
     public String street2;
+
     public AddUserResponse withStreet2(String street2) {
         this.street2 = street2;
         return this;
@@ -271,6 +303,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subusers_parent_id")
     public String subusersParentId;
+
     public AddUserResponse withSubusersParentId(String subusersParentId) {
         this.subusersParentId = subusersParentId;
         return this;
@@ -279,6 +312,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_id")
     public String taxId;
+
     public AddUserResponse withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -287,6 +321,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsubscribed")
     public String unsubscribed;
+
     public AddUserResponse withUnsubscribed(String unsubscribed) {
         this.unsubscribed = unsubscribed;
         return this;
@@ -295,6 +330,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_agent")
     public String userAgent;
+
     public AddUserResponse withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -303,6 +339,7 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public AddUserResponse withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -311,9 +348,11 @@ public class AddUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public AddUserResponse withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public AddUserResponse(){}
 }

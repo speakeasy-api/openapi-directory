@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudKmsConfig")
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
+
     public GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest withCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
         this.cloudKmsConfig = cloudKmsConfig;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest(){}
 }

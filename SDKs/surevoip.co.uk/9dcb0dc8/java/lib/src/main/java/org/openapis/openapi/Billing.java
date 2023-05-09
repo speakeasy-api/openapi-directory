@@ -49,10 +49,8 @@ public class Billing {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingResponse res = new org.openapis.openapi.models.operations.GetBillingResponse() {{
+        org.openapis.openapi.models.operations.GetBillingResponse res = new org.openapis.openapi.models.operations.GetBillingResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

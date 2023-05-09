@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponseOkPreviewResponse {
     @JsonProperty("results")
     public PreviewResponse results;
+
     public ResponseOkPreviewResponse withResults(PreviewResponse results) {
         this.results = results;
         return this;
     }
     
+    public ResponseOkPreviewResponse(@JsonProperty("results") PreviewResponse results) {
+        this.results = results;
+  }
 }

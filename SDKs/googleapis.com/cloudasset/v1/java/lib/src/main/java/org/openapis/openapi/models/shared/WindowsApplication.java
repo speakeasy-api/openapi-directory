@@ -18,6 +18,7 @@ public class WindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public WindowsApplication withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class WindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVersion")
     public String displayVersion;
+
     public WindowsApplication withDisplayVersion(String displayVersion) {
         this.displayVersion = displayVersion;
         return this;
@@ -40,6 +42,7 @@ public class WindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("helpLink")
     public String helpLink;
+
     public WindowsApplication withHelpLink(String helpLink) {
         this.helpLink = helpLink;
         return this;
@@ -51,6 +54,7 @@ public class WindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installDate")
     public Date installDate;
+
     public WindowsApplication withInstallDate(Date installDate) {
         this.installDate = installDate;
         return this;
@@ -62,9 +66,11 @@ public class WindowsApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public String publisher;
+
     public WindowsApplication withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
     }
     
+    public WindowsApplication(){}
 }

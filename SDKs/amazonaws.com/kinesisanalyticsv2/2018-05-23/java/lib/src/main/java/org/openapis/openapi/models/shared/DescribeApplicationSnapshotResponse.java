@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeApplicationSnapshotResponse {
     @JsonProperty("SnapshotDetails")
     public SnapshotDetails snapshotDetails;
+
     public DescribeApplicationSnapshotResponse withSnapshotDetails(SnapshotDetails snapshotDetails) {
         this.snapshotDetails = snapshotDetails;
         return this;
     }
     
+    public DescribeApplicationSnapshotResponse(@JsonProperty("SnapshotDetails") SnapshotDetails snapshotDetails) {
+        this.snapshotDetails = snapshotDetails;
+  }
 }

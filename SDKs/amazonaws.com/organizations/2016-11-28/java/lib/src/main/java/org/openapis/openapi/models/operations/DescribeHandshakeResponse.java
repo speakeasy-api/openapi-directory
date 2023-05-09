@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHandshakeResponse {
@@ -12,6 +13,7 @@ public class DescribeHandshakeResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeHandshakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeHandshakeResponse {
      */
     
     public Object concurrentModificationException;
+
     public DescribeHandshakeResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHandshakeResponse {
     
     
     public String contentType;
+
     public DescribeHandshakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHandshakeResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHandshakeResponse describeHandshakeResponse;
+
     public DescribeHandshakeResponse withDescribeHandshakeResponse(org.openapis.openapi.models.shared.DescribeHandshakeResponse describeHandshakeResponse) {
         this.describeHandshakeResponse = describeHandshakeResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHandshakeResponse {
      */
     
     public Object handshakeNotFoundException;
+
     public DescribeHandshakeResponse withHandshakeNotFoundException(Object handshakeNotFoundException) {
         this.handshakeNotFoundException = handshakeNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeHandshakeResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeHandshakeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeHandshakeResponse {
      */
     
     public Object serviceException;
+
     public DescribeHandshakeResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeHandshakeResponse {
     
     
     public Integer statusCode;
+
     public DescribeHandshakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeHandshakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHandshakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeHandshakeResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeHandshakeResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeHandshakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

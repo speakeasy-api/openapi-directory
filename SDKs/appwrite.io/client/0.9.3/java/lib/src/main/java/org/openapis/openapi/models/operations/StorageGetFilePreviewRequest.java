@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageGetFilePreviewRequest {
@@ -12,6 +13,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public String background;
+
     public StorageGetFilePreviewRequest withBackground(String background) {
         this.background = background;
         return this;
@@ -22,6 +24,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderColor")
     public String borderColor;
+
     public StorageGetFilePreviewRequest withBorderColor(String borderColor) {
         this.borderColor = borderColor;
         return this;
@@ -32,6 +35,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderRadius")
     public Integer borderRadius;
+
     public StorageGetFilePreviewRequest withBorderRadius(Integer borderRadius) {
         this.borderRadius = borderRadius;
         return this;
@@ -42,6 +46,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=borderWidth")
     public Integer borderWidth;
+
     public StorageGetFilePreviewRequest withBorderWidth(Integer borderWidth) {
         this.borderWidth = borderWidth;
         return this;
@@ -52,6 +57,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public StorageGetFilePreviewRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -62,6 +68,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gravity")
     public String gravity;
+
     public StorageGetFilePreviewRequest withGravity(String gravity) {
         this.gravity = gravity;
         return this;
@@ -72,6 +79,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Integer height;
+
     public StorageGetFilePreviewRequest withHeight(Integer height) {
         this.height = height;
         return this;
@@ -82,6 +90,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opacity")
     public Float opacity;
+
     public StorageGetFilePreviewRequest withOpacity(Float opacity) {
         this.opacity = opacity;
         return this;
@@ -92,6 +101,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=output")
     public String output;
+
     public StorageGetFilePreviewRequest withOutput(String output) {
         this.output = output;
         return this;
@@ -102,6 +112,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quality")
     public Integer quality;
+
     public StorageGetFilePreviewRequest withQuality(Integer quality) {
         this.quality = quality;
         return this;
@@ -112,6 +123,7 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rotation")
     public Integer rotation;
+
     public StorageGetFilePreviewRequest withRotation(Integer rotation) {
         this.rotation = rotation;
         return this;
@@ -122,9 +134,13 @@ public class StorageGetFilePreviewRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Integer width;
+
     public StorageGetFilePreviewRequest withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public StorageGetFilePreviewRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

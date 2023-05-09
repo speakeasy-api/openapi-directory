@@ -15,9 +15,11 @@ public class FileLinkCategorizationsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileLinks")
     public FileLinkCategorizationDto[] fileLinks;
+
     public FileLinkCategorizationsDto withFileLinks(FileLinkCategorizationDto[] fileLinks) {
         this.fileLinks = fileLinks;
         return this;
     }
     
+    public FileLinkCategorizationsDto(){}
 }

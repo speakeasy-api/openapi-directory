@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetChargerSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken;
+
     public GetChargerSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
@@ -16,6 +17,7 @@ public class GetChargerSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken1;
+
     public GetChargerSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
@@ -23,9 +25,11 @@ public class GetChargerSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken2;
+
     public GetChargerSecurity withUserAccessToken2(String userAccessToken2) {
         this.userAccessToken2 = userAccessToken2;
         return this;
     }
     
+    public GetChargerSecurity(){}
 }

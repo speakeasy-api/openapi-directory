@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet {
     
     public String cidrBlock;
+
     public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
     }
     
+    public AcceptVpcPeeringConnectionResultVpcPeeringConnectionRequesterVpcInfoCidrBlockSet(){}
 }

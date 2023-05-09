@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BinLookupResponse {
     
     public String contentType;
+
     public BinLookupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BinLookupResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseItem[] responseItems;
+
     public BinLookupResponse withResponseItems(org.openapis.openapi.models.shared.ResponseItem[] responseItems) {
         this.responseItems = responseItems;
         return this;
@@ -26,6 +29,7 @@ public class BinLookupResponse {
     
     
     public Integer statusCode;
+
     public BinLookupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BinLookupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BinLookupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BinLookupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

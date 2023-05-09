@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppInvitationsListDefaultApplicationJSON {
     @JsonProperty("error")
     public AppInvitationsListDefaultApplicationJSONError error;
+
     public AppInvitationsListDefaultApplicationJSON withError(AppInvitationsListDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public AppInvitationsListDefaultApplicationJSON(@JsonProperty("error") AppInvitationsListDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

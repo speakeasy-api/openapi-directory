@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyCertificatesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyCertificatesActionEnum action;
+
     public GETModifyCertificatesRequest withAction(GETModifyCertificatesActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CertificateIdentifier")
     public String certificateIdentifier;
+
     public GETModifyCertificatesRequest withCertificateIdentifier(String certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RemoveCustomerOverride")
     public Boolean removeCustomerOverride;
+
     public GETModifyCertificatesRequest withRemoveCustomerOverride(Boolean removeCustomerOverride) {
         this.removeCustomerOverride = removeCustomerOverride;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyCertificatesVersionEnum version;
+
     public GETModifyCertificatesRequest withVersion(GETModifyCertificatesVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyCertificatesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyCertificatesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyCertificatesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyCertificatesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyCertificatesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyCertificatesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETModifyCertificatesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyCertificatesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyCertificatesRequest(@JsonProperty("Action") GETModifyCertificatesActionEnum action, @JsonProperty("Version") GETModifyCertificatesVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

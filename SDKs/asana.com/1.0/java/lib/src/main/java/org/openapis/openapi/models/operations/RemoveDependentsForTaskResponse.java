@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveDependentsForTaskResponse {
     
     public String contentType;
+
     public RemoveDependentsForTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveDependentsForTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public RemoveDependentsForTaskResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class RemoveDependentsForTaskResponse {
     
     
     public Integer statusCode;
+
     public RemoveDependentsForTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RemoveDependentsForTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveDependentsForTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RemoveDependentsForTaskResponse {
      */
     
     public RemoveDependentsForTask200ApplicationJSON removeDependentsForTask200ApplicationJSONObject;
+
     public RemoveDependentsForTaskResponse withRemoveDependentsForTask200ApplicationJSONObject(RemoveDependentsForTask200ApplicationJSON removeDependentsForTask200ApplicationJSONObject) {
         this.removeDependentsForTask200ApplicationJSONObject = removeDependentsForTask200ApplicationJSONObject;
         return this;
     }
     
+    public RemoveDependentsForTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

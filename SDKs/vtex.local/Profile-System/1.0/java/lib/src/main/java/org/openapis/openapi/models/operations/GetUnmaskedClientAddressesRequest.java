@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUnmaskedClientAddressesRequest {
@@ -12,6 +13,7 @@ public class GetUnmaskedClientAddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetUnmaskedClientAddressesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetUnmaskedClientAddressesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetUnmaskedClientAddressesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -34,6 +37,7 @@ public class GetUnmaskedClientAddressesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public GetUnmaskedClientAddressesRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -44,9 +48,15 @@ public class GetUnmaskedClientAddressesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetUnmaskedClientAddressesRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public GetUnmaskedClientAddressesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+  }
 }

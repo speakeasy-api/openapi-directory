@@ -15,6 +15,7 @@ public class CreateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanInstructions")
     public String actionPlanInstructions;
+
     public CreateControlRequestBody withActionPlanInstructions(String actionPlanInstructions) {
         this.actionPlanInstructions = actionPlanInstructions;
         return this;
@@ -26,6 +27,7 @@ public class CreateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionPlanTitle")
     public String actionPlanTitle;
+
     public CreateControlRequestBody withActionPlanTitle(String actionPlanTitle) {
         this.actionPlanTitle = actionPlanTitle;
         return this;
@@ -36,6 +38,7 @@ public class CreateControlRequestBody {
      */
     @JsonProperty("controlMappingSources")
     public org.openapis.openapi.models.shared.CreateControlMappingSource[] controlMappingSources;
+
     public CreateControlRequestBody withControlMappingSources(org.openapis.openapi.models.shared.CreateControlMappingSource[] controlMappingSources) {
         this.controlMappingSources = controlMappingSources;
         return this;
@@ -47,6 +50,7 @@ public class CreateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateControlRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class CreateControlRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateControlRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +73,7 @@ public class CreateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateControlRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -79,9 +85,14 @@ public class CreateControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testingInformation")
     public String testingInformation;
+
     public CreateControlRequestBody withTestingInformation(String testingInformation) {
         this.testingInformation = testingInformation;
         return this;
     }
     
+    public CreateControlRequestBody(@JsonProperty("controlMappingSources") org.openapis.openapi.models.shared.CreateControlMappingSource[] controlMappingSources, @JsonProperty("name") String name) {
+        this.controlMappingSources = controlMappingSources;
+        this.name = name;
+  }
 }

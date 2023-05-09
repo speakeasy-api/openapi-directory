@@ -12,6 +12,7 @@ public class BundleResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public BundleResourceAttributes attributes;
+
     public BundleResource withAttributes(BundleResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class BundleResource {
     
     @JsonProperty("id")
     public String id;
+
     public BundleResource withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class BundleResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public BundleResourceRelationships relationships;
+
     public BundleResource withRelationships(BundleResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class BundleResource {
     
     @JsonProperty("type")
     public String type;
+
     public BundleResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public BundleResource(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

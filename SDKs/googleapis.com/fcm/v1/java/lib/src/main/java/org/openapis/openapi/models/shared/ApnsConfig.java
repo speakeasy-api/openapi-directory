@@ -18,6 +18,7 @@ public class ApnsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fcmOptions")
     public ApnsFcmOptions fcmOptions;
+
     public ApnsConfig withFcmOptions(ApnsFcmOptions fcmOptions) {
         this.fcmOptions = fcmOptions;
         return this;
@@ -29,6 +30,7 @@ public class ApnsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public ApnsConfig withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -40,9 +42,11 @@ public class ApnsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public ApnsConfig withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
     }
     
+    public ApnsConfig(){}
 }

@@ -15,9 +15,11 @@ public class TracingConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public TracingModeEnum mode;
+
     public TracingConfigResponse withMode(TracingModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public TracingConfigResponse(){}
 }

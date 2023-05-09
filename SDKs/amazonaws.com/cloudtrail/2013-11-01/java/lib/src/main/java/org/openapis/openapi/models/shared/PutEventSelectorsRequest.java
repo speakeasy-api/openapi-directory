@@ -12,6 +12,7 @@ public class PutEventSelectorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdvancedEventSelectors")
     public AdvancedEventSelector[] advancedEventSelectors;
+
     public PutEventSelectorsRequest withAdvancedEventSelectors(AdvancedEventSelector[] advancedEventSelectors) {
         this.advancedEventSelectors = advancedEventSelectors;
         return this;
@@ -20,6 +21,7 @@ public class PutEventSelectorsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSelectors")
     public EventSelector[] eventSelectors;
+
     public PutEventSelectorsRequest withEventSelectors(EventSelector[] eventSelectors) {
         this.eventSelectors = eventSelectors;
         return this;
@@ -27,9 +29,13 @@ public class PutEventSelectorsRequest {
     
     @JsonProperty("TrailName")
     public String trailName;
+
     public PutEventSelectorsRequest withTrailName(String trailName) {
         this.trailName = trailName;
         return this;
     }
     
+    public PutEventSelectorsRequest(@JsonProperty("TrailName") String trailName) {
+        this.trailName = trailName;
+  }
 }

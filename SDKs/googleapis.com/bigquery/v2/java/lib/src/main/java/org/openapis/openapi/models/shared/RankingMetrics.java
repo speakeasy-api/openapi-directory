@@ -18,6 +18,7 @@ public class RankingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageRank")
     public Double averageRank;
+
     public RankingMetrics withAverageRank(Double averageRank) {
         this.averageRank = averageRank;
         return this;
@@ -29,6 +30,7 @@ public class RankingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAveragePrecision")
     public Double meanAveragePrecision;
+
     public RankingMetrics withMeanAveragePrecision(Double meanAveragePrecision) {
         this.meanAveragePrecision = meanAveragePrecision;
         return this;
@@ -40,6 +42,7 @@ public class RankingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanSquaredError")
     public Double meanSquaredError;
+
     public RankingMetrics withMeanSquaredError(Double meanSquaredError) {
         this.meanSquaredError = meanSquaredError;
         return this;
@@ -51,9 +54,11 @@ public class RankingMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedDiscountedCumulativeGain")
     public Double normalizedDiscountedCumulativeGain;
+
     public RankingMetrics withNormalizedDiscountedCumulativeGain(Double normalizedDiscountedCumulativeGain) {
         this.normalizedDiscountedCumulativeGain = normalizedDiscountedCumulativeGain;
         return this;
     }
     
+    public RankingMetrics(){}
 }

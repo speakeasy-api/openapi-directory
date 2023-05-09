@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListLegs200ApplicationJSONEmbedded {
     @JsonProperty("legs")
     public ListLegs200ApplicationJSONEmbeddedLegs[] legs;
+
     public ListLegs200ApplicationJSONEmbedded withLegs(ListLegs200ApplicationJSONEmbeddedLegs[] legs) {
         this.legs = legs;
         return this;
     }
     
+    public ListLegs200ApplicationJSONEmbedded(@JsonProperty("legs") ListLegs200ApplicationJSONEmbeddedLegs[] legs) {
+        this.legs = legs;
+  }
 }

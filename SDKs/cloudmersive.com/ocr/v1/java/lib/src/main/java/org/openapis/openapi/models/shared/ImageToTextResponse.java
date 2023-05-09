@@ -18,6 +18,7 @@ public class ImageToTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeanConfidenceLevel")
     public Float meanConfidenceLevel;
+
     public ImageToTextResponse withMeanConfidenceLevel(Float meanConfidenceLevel) {
         this.meanConfidenceLevel = meanConfidenceLevel;
         return this;
@@ -29,9 +30,11 @@ public class ImageToTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextResult")
     public String textResult;
+
     public ImageToTextResponse withTextResult(String textResult) {
         this.textResult = textResult;
         return this;
     }
     
+    public ImageToTextResponse(){}
 }

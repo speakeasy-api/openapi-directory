@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionApiKeyAuthRequestParameters {
     @JsonProperty("ApiKeyName")
     public String apiKeyName;
+
     public CreateConnectionApiKeyAuthRequestParameters withApiKeyName(String apiKeyName) {
         this.apiKeyName = apiKeyName;
         return this;
@@ -19,9 +20,14 @@ public class CreateConnectionApiKeyAuthRequestParameters {
     
     @JsonProperty("ApiKeyValue")
     public String apiKeyValue;
+
     public CreateConnectionApiKeyAuthRequestParameters withApiKeyValue(String apiKeyValue) {
         this.apiKeyValue = apiKeyValue;
         return this;
     }
     
+    public CreateConnectionApiKeyAuthRequestParameters(@JsonProperty("ApiKeyName") String apiKeyName, @JsonProperty("ApiKeyValue") String apiKeyValue) {
+        this.apiKeyName = apiKeyName;
+        this.apiKeyValue = apiKeyValue;
+  }
 }

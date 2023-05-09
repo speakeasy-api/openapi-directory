@@ -15,9 +15,11 @@ public class GetFirewallDomainListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallDomainList")
     public FirewallDomainList firewallDomainList;
+
     public GetFirewallDomainListResponse withFirewallDomainList(FirewallDomainList firewallDomainList) {
         this.firewallDomainList = firewallDomainList;
         return this;
     }
     
+    public GetFirewallDomainListResponse(){}
 }

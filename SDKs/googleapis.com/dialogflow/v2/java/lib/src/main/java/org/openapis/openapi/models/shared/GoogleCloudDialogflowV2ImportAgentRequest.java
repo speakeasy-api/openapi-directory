@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ImportAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentContent")
     public String agentContent;
+
     public GoogleCloudDialogflowV2ImportAgentRequest withAgentContent(String agentContent) {
         this.agentContent = agentContent;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ImportAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentUri")
     public String agentUri;
+
     public GoogleCloudDialogflowV2ImportAgentRequest withAgentUri(String agentUri) {
         this.agentUri = agentUri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ImportAgentRequest(){}
 }

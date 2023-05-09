@@ -12,6 +12,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("comments")
     public Link comments;
+
     public PullRequestSimpleLinks withComments(Link comments) {
         this.comments = comments;
         return this;
@@ -22,6 +23,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("commits")
     public Link commits;
+
     public PullRequestSimpleLinks withCommits(Link commits) {
         this.commits = commits;
         return this;
@@ -32,6 +34,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("html")
     public Link html;
+
     public PullRequestSimpleLinks withHtml(Link html) {
         this.html = html;
         return this;
@@ -42,6 +45,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("issue")
     public Link issue;
+
     public PullRequestSimpleLinks withIssue(Link issue) {
         this.issue = issue;
         return this;
@@ -52,6 +56,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("review_comment")
     public Link reviewComment;
+
     public PullRequestSimpleLinks withReviewComment(Link reviewComment) {
         this.reviewComment = reviewComment;
         return this;
@@ -62,6 +67,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("review_comments")
     public Link reviewComments;
+
     public PullRequestSimpleLinks withReviewComments(Link reviewComments) {
         this.reviewComments = reviewComments;
         return this;
@@ -72,6 +78,7 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("self")
     public Link self;
+
     public PullRequestSimpleLinks withSelf(Link self) {
         this.self = self;
         return this;
@@ -82,9 +89,20 @@ public class PullRequestSimpleLinks {
      */
     @JsonProperty("statuses")
     public Link statuses;
+
     public PullRequestSimpleLinks withStatuses(Link statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public PullRequestSimpleLinks(@JsonProperty("comments") Link comments, @JsonProperty("commits") Link commits, @JsonProperty("html") Link html, @JsonProperty("issue") Link issue, @JsonProperty("review_comment") Link reviewComment, @JsonProperty("review_comments") Link reviewComments, @JsonProperty("self") Link self, @JsonProperty("statuses") Link statuses) {
+        this.comments = comments;
+        this.commits = commits;
+        this.html = html;
+        this.issue = issue;
+        this.reviewComment = reviewComment;
+        this.reviewComments = reviewComments;
+        this.self = self;
+        this.statuses = statuses;
+  }
 }

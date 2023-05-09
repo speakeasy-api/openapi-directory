@@ -18,9 +18,11 @@ public class DeleteAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DeleteAccountResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public DeleteAccountResponse(){}
 }

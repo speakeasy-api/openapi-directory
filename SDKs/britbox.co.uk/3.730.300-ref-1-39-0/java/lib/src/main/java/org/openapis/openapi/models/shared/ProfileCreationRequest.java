@@ -22,6 +22,7 @@ public class ProfileCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public ProfileCreationRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -32,6 +33,7 @@ public class ProfileCreationRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public ProfileCreationRequest withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +48,7 @@ public class ProfileCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinEnabled")
     public Boolean pinEnabled;
+
     public ProfileCreationRequest withPinEnabled(Boolean pinEnabled) {
         this.pinEnabled = pinEnabled;
         return this;
@@ -57,6 +60,7 @@ public class ProfileCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseEnabled")
     public Boolean purchaseEnabled;
+
     public ProfileCreationRequest withPurchaseEnabled(Boolean purchaseEnabled) {
         this.purchaseEnabled = purchaseEnabled;
         return this;
@@ -68,9 +72,13 @@ public class ProfileCreationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public ProfileCreationRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public ProfileCreationRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

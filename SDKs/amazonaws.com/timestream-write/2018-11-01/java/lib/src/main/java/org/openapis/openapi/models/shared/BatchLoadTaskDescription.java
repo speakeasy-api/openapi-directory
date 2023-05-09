@@ -22,6 +22,7 @@ public class BatchLoadTaskDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public BatchLoadTaskDescription withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataModelConfiguration")
     public DataModelConfiguration dataModelConfiguration;
+
     public BatchLoadTaskDescription withDataModelConfiguration(DataModelConfiguration dataModelConfiguration) {
         this.dataModelConfiguration = dataModelConfiguration;
         return this;
@@ -38,6 +40,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceConfiguration")
     public DataSourceConfiguration dataSourceConfiguration;
+
     public BatchLoadTaskDescription withDataSourceConfiguration(DataSourceConfiguration dataSourceConfiguration) {
         this.dataSourceConfiguration = dataSourceConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchLoadTaskDescription withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -56,6 +60,7 @@ public class BatchLoadTaskDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public BatchLoadTaskDescription withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,6 +69,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressReport")
     public BatchLoadProgressReport progressReport;
+
     public BatchLoadTaskDescription withProgressReport(BatchLoadProgressReport progressReport) {
         this.progressReport = progressReport;
         return this;
@@ -72,6 +78,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordVersion")
     public Long recordVersion;
+
     public BatchLoadTaskDescription withRecordVersion(Long recordVersion) {
         this.recordVersion = recordVersion;
         return this;
@@ -80,6 +87,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportConfiguration")
     public ReportConfiguration reportConfiguration;
+
     public BatchLoadTaskDescription withReportConfiguration(ReportConfiguration reportConfiguration) {
         this.reportConfiguration = reportConfiguration;
         return this;
@@ -90,6 +98,7 @@ public class BatchLoadTaskDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ResumableUntil")
     public OffsetDateTime resumableUntil;
+
     public BatchLoadTaskDescription withResumableUntil(OffsetDateTime resumableUntil) {
         this.resumableUntil = resumableUntil;
         return this;
@@ -98,6 +107,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetDatabaseName")
     public String targetDatabaseName;
+
     public BatchLoadTaskDescription withTargetDatabaseName(String targetDatabaseName) {
         this.targetDatabaseName = targetDatabaseName;
         return this;
@@ -106,6 +116,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTableName")
     public String targetTableName;
+
     public BatchLoadTaskDescription withTargetTableName(String targetTableName) {
         this.targetTableName = targetTableName;
         return this;
@@ -114,6 +125,7 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskId")
     public String taskId;
+
     public BatchLoadTaskDescription withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -122,9 +134,11 @@ public class BatchLoadTaskDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskStatus")
     public BatchLoadStatusEnum taskStatus;
+
     public BatchLoadTaskDescription withTaskStatus(BatchLoadStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
     }
     
+    public BatchLoadTaskDescription(){}
 }

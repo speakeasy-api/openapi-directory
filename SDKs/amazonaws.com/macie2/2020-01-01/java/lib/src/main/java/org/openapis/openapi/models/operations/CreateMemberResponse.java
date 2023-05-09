@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMemberResponse {
@@ -12,6 +13,7 @@ public class CreateMemberResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateMemberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMemberResponse {
      */
     
     public Object conflictException;
+
     public CreateMemberResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMemberResponse {
     
     
     public String contentType;
+
     public CreateMemberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMemberResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMemberResponse createMemberResponse;
+
     public CreateMemberResponse withCreateMemberResponse(org.openapis.openapi.models.shared.CreateMemberResponse createMemberResponse) {
         this.createMemberResponse = createMemberResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateMemberResponse {
      */
     
     public Object internalServerException;
+
     public CreateMemberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMemberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateMemberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateMemberResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateMemberResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateMemberResponse {
     
     
     public Integer statusCode;
+
     public CreateMemberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateMemberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMemberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateMemberResponse {
      */
     
     public Object throttlingException;
+
     public CreateMemberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateMemberResponse {
      */
     
     public Object validationException;
+
     public CreateMemberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateMemberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

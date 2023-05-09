@@ -15,6 +15,7 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public TemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class TemplateResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public TemplateResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +32,7 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public TemplateResponse withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -37,6 +40,7 @@ public class TemplateResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public TemplateResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -45,6 +49,7 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public TemplateResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -52,6 +57,7 @@ public class TemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public TemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -59,6 +65,7 @@ public class TemplateResponse {
     
     @JsonProperty("TemplateType")
     public TemplateTypeEnum templateType;
+
     public TemplateResponse withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -67,6 +74,7 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public TemplateResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -75,9 +83,16 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public TemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TemplateResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") TemplateTypeEnum templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

@@ -15,6 +15,7 @@ public class CustomPluginDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public CustomPluginDescription withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -23,9 +24,11 @@ public class CustomPluginDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Long revision;
+
     public CustomPluginDescription withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public CustomPluginDescription(){}
 }

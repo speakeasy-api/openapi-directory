@@ -15,6 +15,7 @@ public class ListCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalog_version")
     public Long catalogVersion;
+
     public ListCatalogRequest withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -27,6 +28,7 @@ public class ListCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCatalogRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,9 +45,11 @@ public class ListCatalogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=types")
     public String types;
+
     public ListCatalogRequest withTypes(String types) {
         this.types = types;
         return this;
     }
     
+    public ListCatalogRequest(){}
 }

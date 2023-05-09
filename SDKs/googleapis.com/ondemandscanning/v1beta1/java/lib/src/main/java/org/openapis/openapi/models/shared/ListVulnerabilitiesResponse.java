@@ -18,6 +18,7 @@ public class ListVulnerabilitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVulnerabilitiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListVulnerabilitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrences")
     public Occurrence[] occurrences;
+
     public ListVulnerabilitiesResponse withOccurrences(Occurrence[] occurrences) {
         this.occurrences = occurrences;
         return this;
     }
     
+    public ListVulnerabilitiesResponse(){}
 }

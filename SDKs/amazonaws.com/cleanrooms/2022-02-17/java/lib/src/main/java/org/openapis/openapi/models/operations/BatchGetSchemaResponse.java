@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetSchemaResponse {
@@ -12,6 +13,7 @@ public class BatchGetSchemaResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetSchemaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetSchemaOutput batchGetSchemaOutput;
+
     public BatchGetSchemaResponse withBatchGetSchemaOutput(org.openapis.openapi.models.shared.BatchGetSchemaOutput batchGetSchemaOutput) {
         this.batchGetSchemaOutput = batchGetSchemaOutput;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetSchemaResponse {
     
     
     public String contentType;
+
     public BatchGetSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetSchemaResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetSchemaResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetSchemaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetSchemaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetSchemaResponse {
     
     
     public Integer statusCode;
+
     public BatchGetSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchGetSchemaResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetSchemaResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchGetSchemaResponse {
      */
     
     public Object validationException;
+
     public BatchGetSchemaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

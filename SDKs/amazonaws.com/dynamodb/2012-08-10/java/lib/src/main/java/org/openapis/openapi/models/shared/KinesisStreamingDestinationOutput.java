@@ -15,6 +15,7 @@ public class KinesisStreamingDestinationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationStatus")
     public DestinationStatusEnum destinationStatus;
+
     public KinesisStreamingDestinationOutput withDestinationStatus(DestinationStatusEnum destinationStatus) {
         this.destinationStatus = destinationStatus;
         return this;
@@ -23,6 +24,7 @@ public class KinesisStreamingDestinationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public KinesisStreamingDestinationOutput withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -31,9 +33,11 @@ public class KinesisStreamingDestinationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public KinesisStreamingDestinationOutput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public KinesisStreamingDestinationOutput(){}
 }

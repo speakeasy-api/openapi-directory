@@ -15,6 +15,7 @@ public class JobLogEventData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionServerID")
     public String conversionServerID;
+
     public JobLogEventData withConversionServerID(String conversionServerID) {
         this.conversionServerID = conversionServerID;
         return this;
@@ -23,6 +24,7 @@ public class JobLogEventData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawError")
     public String rawError;
+
     public JobLogEventData withRawError(String rawError) {
         this.rawError = rawError;
         return this;
@@ -31,6 +33,7 @@ public class JobLogEventData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public JobLogEventData withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -39,9 +42,11 @@ public class JobLogEventData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceID")
     public String targetInstanceID;
+
     public JobLogEventData withTargetInstanceID(String targetInstanceID) {
         this.targetInstanceID = targetInstanceID;
         return this;
     }
     
+    public JobLogEventData(){}
 }

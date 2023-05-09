@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetRepositoriesResponse {
@@ -12,6 +13,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetRepositoriesOutput batchGetRepositoriesOutput;
+
     public BatchGetRepositoriesResponse withBatchGetRepositoriesOutput(org.openapis.openapi.models.shared.BatchGetRepositoriesOutput batchGetRepositoriesOutput) {
         this.batchGetRepositoriesOutput = batchGetRepositoriesOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetRepositoriesResponse {
     
     
     public String contentType;
+
     public BatchGetRepositoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public BatchGetRepositoriesResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public BatchGetRepositoriesResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public BatchGetRepositoriesResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public BatchGetRepositoriesResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public BatchGetRepositoriesResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public BatchGetRepositoriesResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -89,6 +98,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object maximumRepositoryNamesExceededException;
+
     public BatchGetRepositoriesResponse withMaximumRepositoryNamesExceededException(Object maximumRepositoryNamesExceededException) {
         this.maximumRepositoryNamesExceededException = maximumRepositoryNamesExceededException;
         return this;
@@ -99,6 +109,7 @@ public class BatchGetRepositoriesResponse {
      */
     
     public Object repositoryNamesRequiredException;
+
     public BatchGetRepositoriesResponse withRepositoryNamesRequiredException(Object repositoryNamesRequiredException) {
         this.repositoryNamesRequiredException = repositoryNamesRequiredException;
         return this;
@@ -106,6 +117,7 @@ public class BatchGetRepositoriesResponse {
     
     
     public Integer statusCode;
+
     public BatchGetRepositoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class BatchGetRepositoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetRepositoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetRepositoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

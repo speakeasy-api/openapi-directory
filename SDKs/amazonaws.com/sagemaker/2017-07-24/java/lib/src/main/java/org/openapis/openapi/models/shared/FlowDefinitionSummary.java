@@ -21,6 +21,7 @@ public class FlowDefinitionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FlowDefinitionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class FlowDefinitionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public FlowDefinitionSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -36,6 +38,7 @@ public class FlowDefinitionSummary {
     
     @JsonProperty("FlowDefinitionArn")
     public String flowDefinitionArn;
+
     public FlowDefinitionSummary withFlowDefinitionArn(String flowDefinitionArn) {
         this.flowDefinitionArn = flowDefinitionArn;
         return this;
@@ -43,6 +46,7 @@ public class FlowDefinitionSummary {
     
     @JsonProperty("FlowDefinitionName")
     public String flowDefinitionName;
+
     public FlowDefinitionSummary withFlowDefinitionName(String flowDefinitionName) {
         this.flowDefinitionName = flowDefinitionName;
         return this;
@@ -50,9 +54,16 @@ public class FlowDefinitionSummary {
     
     @JsonProperty("FlowDefinitionStatus")
     public FlowDefinitionStatusEnum flowDefinitionStatus;
+
     public FlowDefinitionSummary withFlowDefinitionStatus(FlowDefinitionStatusEnum flowDefinitionStatus) {
         this.flowDefinitionStatus = flowDefinitionStatus;
         return this;
     }
     
+    public FlowDefinitionSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("FlowDefinitionArn") String flowDefinitionArn, @JsonProperty("FlowDefinitionName") String flowDefinitionName, @JsonProperty("FlowDefinitionStatus") FlowDefinitionStatusEnum flowDefinitionStatus) {
+        this.creationTime = creationTime;
+        this.flowDefinitionArn = flowDefinitionArn;
+        this.flowDefinitionName = flowDefinitionName;
+        this.flowDefinitionStatus = flowDefinitionStatus;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCertificateAuthorityCsrResponse {
     
     public String contentType;
+
     public GetCertificateAuthorityCsrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCertificateAuthorityCsrResponse getCertificateAuthorityCsrResponse;
+
     public GetCertificateAuthorityCsrResponse withGetCertificateAuthorityCsrResponse(org.openapis.openapi.models.shared.GetCertificateAuthorityCsrResponse getCertificateAuthorityCsrResponse) {
         this.getCertificateAuthorityCsrResponse = getCertificateAuthorityCsrResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public Object invalidArnException;
+
     public GetCertificateAuthorityCsrResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public Object invalidStateException;
+
     public GetCertificateAuthorityCsrResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public Object requestFailedException;
+
     public GetCertificateAuthorityCsrResponse withRequestFailedException(Object requestFailedException) {
         this.requestFailedException = requestFailedException;
         return this;
@@ -59,6 +65,7 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public Object requestInProgressException;
+
     public GetCertificateAuthorityCsrResponse withRequestInProgressException(Object requestInProgressException) {
         this.requestInProgressException = requestInProgressException;
         return this;
@@ -66,6 +73,7 @@ public class GetCertificateAuthorityCsrResponse {
     
     
     public Integer statusCode;
+
     public GetCertificateAuthorityCsrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetCertificateAuthorityCsrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCertificateAuthorityCsrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetCertificateAuthorityCsrResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCertificateAuthorityCsrResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetCertificateAuthorityCsrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

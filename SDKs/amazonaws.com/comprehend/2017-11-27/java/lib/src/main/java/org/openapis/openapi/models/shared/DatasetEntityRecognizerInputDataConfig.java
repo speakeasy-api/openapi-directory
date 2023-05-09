@@ -15,6 +15,7 @@ public class DatasetEntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Annotations")
     public DatasetEntityRecognizerAnnotations annotations;
+
     public DatasetEntityRecognizerInputDataConfig withAnnotations(DatasetEntityRecognizerAnnotations annotations) {
         this.annotations = annotations;
         return this;
@@ -22,6 +23,7 @@ public class DatasetEntityRecognizerInputDataConfig {
     
     @JsonProperty("Documents")
     public DatasetEntityRecognizerDocuments documents;
+
     public DatasetEntityRecognizerInputDataConfig withDocuments(DatasetEntityRecognizerDocuments documents) {
         this.documents = documents;
         return this;
@@ -30,9 +32,13 @@ public class DatasetEntityRecognizerInputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityList")
     public DatasetEntityRecognizerEntityList entityList;
+
     public DatasetEntityRecognizerInputDataConfig withEntityList(DatasetEntityRecognizerEntityList entityList) {
         this.entityList = entityList;
         return this;
     }
     
+    public DatasetEntityRecognizerInputDataConfig(@JsonProperty("Documents") DatasetEntityRecognizerDocuments documents) {
+        this.documents = documents;
+  }
 }

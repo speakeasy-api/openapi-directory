@@ -23,6 +23,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataExchangeRateInform
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContractIdentification")
     public String contractIdentification;
+
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation withContractIdentification(String contractIdentification) {
         this.contractIdentification = contractIdentification;
         return this;
@@ -33,6 +34,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataExchangeRateInform
      */
     @JsonProperty("ExchangeRate")
     public Double exchangeRate;
+
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation withExchangeRate(Double exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -48,6 +50,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataExchangeRateInform
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDateTime")
     public OffsetDateTime expirationDateTime;
+
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation withExpirationDateTime(OffsetDateTime expirationDateTime) {
         this.expirationDateTime = expirationDateTime;
         return this;
@@ -58,6 +61,7 @@ public class OBWriteInternationalScheduledConsentResponse6DataExchangeRateInform
      */
     @JsonProperty("RateType")
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum rateType;
+
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation withRateType(OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum rateType) {
         this.rateType = rateType;
         return this;
@@ -68,9 +72,15 @@ public class OBWriteInternationalScheduledConsentResponse6DataExchangeRateInform
      */
     @JsonProperty("UnitCurrency")
     public String unitCurrency;
+
     public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation withUnitCurrency(String unitCurrency) {
         this.unitCurrency = unitCurrency;
         return this;
     }
     
+    public OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformation(@JsonProperty("ExchangeRate") Double exchangeRate, @JsonProperty("RateType") OBWriteInternationalScheduledConsentResponse6DataExchangeRateInformationRateTypeEnum rateType, @JsonProperty("UnitCurrency") String unitCurrency) {
+        this.exchangeRate = exchangeRate;
+        this.rateType = rateType;
+        this.unitCurrency = unitCurrency;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON {
     @JsonProperty("repositories")
     public org.openapis.openapi.models.shared.Repository[] repositories;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON withRepositories(org.openapis.openapi.models.shared.Repository[] repositories) {
         this.repositories = repositories;
         return this;
@@ -19,9 +20,14 @@ public class ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200A
     
     @JsonProperty("total_count")
     public Double totalCount;
+
     public ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ActionsListSelectedRepositoriesEnabledGithubActionsOrganization200ApplicationJSON(@JsonProperty("repositories") org.openapis.openapi.models.shared.Repository[] repositories, @JsonProperty("total_count") Double totalCount) {
+        this.repositories = repositories;
+        this.totalCount = totalCount;
+  }
 }

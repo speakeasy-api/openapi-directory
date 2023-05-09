@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserPoolResponse {
     
     public String contentType;
+
     public CreateUserPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserPoolResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserPoolResponse createUserPoolResponse;
+
     public CreateUserPoolResponse withCreateUserPoolResponse(org.openapis.openapi.models.shared.CreateUserPoolResponse createUserPoolResponse) {
         this.createUserPoolResponse = createUserPoolResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object internalErrorException;
+
     public CreateUserPoolResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object invalidEmailRoleAccessPolicyException;
+
     public CreateUserPoolResponse withInvalidEmailRoleAccessPolicyException(Object invalidEmailRoleAccessPolicyException) {
         this.invalidEmailRoleAccessPolicyException = invalidEmailRoleAccessPolicyException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateUserPoolResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object invalidSmsRoleAccessPolicyException;
+
     public CreateUserPoolResponse withInvalidSmsRoleAccessPolicyException(Object invalidSmsRoleAccessPolicyException) {
         this.invalidSmsRoleAccessPolicyException = invalidSmsRoleAccessPolicyException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object invalidSmsRoleTrustRelationshipException;
+
     public CreateUserPoolResponse withInvalidSmsRoleTrustRelationshipException(Object invalidSmsRoleTrustRelationshipException) {
         this.invalidSmsRoleTrustRelationshipException = invalidSmsRoleTrustRelationshipException;
         return this;
@@ -79,6 +87,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUserPoolResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateUserPoolResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -96,6 +106,7 @@ public class CreateUserPoolResponse {
     
     
     public Integer statusCode;
+
     public CreateUserPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateUserPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateUserPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateUserPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class CreateUserPoolResponse {
      */
     
     public Object userPoolTaggingException;
+
     public CreateUserPoolResponse withUserPoolTaggingException(Object userPoolTaggingException) {
         this.userPoolTaggingException = userPoolTaggingException;
         return this;
     }
     
+    public CreateUserPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

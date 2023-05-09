@@ -17,6 +17,7 @@ public class VeteranStatusRequest {
      */
     @JsonProperty("birth_date")
     public String birthDate;
+
     public VeteranStatusRequest withBirthDate(String birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -27,6 +28,7 @@ public class VeteranStatusRequest {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public VeteranStatusRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -38,6 +40,7 @@ public class VeteranStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public VeteranStatusRequestGenderEnum gender;
+
     public VeteranStatusRequest withGender(VeteranStatusRequestGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -48,6 +51,7 @@ public class VeteranStatusRequest {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public VeteranStatusRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -59,6 +63,7 @@ public class VeteranStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public VeteranStatusRequest withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -69,9 +74,16 @@ public class VeteranStatusRequest {
      */
     @JsonProperty("ssn")
     public String ssn;
+
     public VeteranStatusRequest withSsn(String ssn) {
         this.ssn = ssn;
         return this;
     }
     
+    public VeteranStatusRequest(@JsonProperty("birth_date") String birthDate, @JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName, @JsonProperty("ssn") String ssn) {
+        this.birthDate = birthDate;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
+  }
 }

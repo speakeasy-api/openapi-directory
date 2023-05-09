@@ -15,6 +15,7 @@ public class InstitutionsNodeListNodeLinks {
      */
     
     public String html;
+
     public InstitutionsNodeListNodeLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class InstitutionsNodeListNodeLinks {
      */
     
     public String self;
+
     public InstitutionsNodeListNodeLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public InstitutionsNodeListNodeLinks(){}
 }

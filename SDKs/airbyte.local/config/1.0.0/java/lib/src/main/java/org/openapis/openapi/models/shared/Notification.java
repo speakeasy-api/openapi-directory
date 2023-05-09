@@ -12,6 +12,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerioConfiguration")
     public java.util.Map<String, Object> customerioConfiguration;
+
     public Notification withCustomerioConfiguration(java.util.Map<String, Object> customerioConfiguration) {
         this.customerioConfiguration = customerioConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class Notification {
     
     @JsonProperty("notificationType")
     public NotificationTypeEnum notificationType;
+
     public Notification withNotificationType(NotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -26,6 +28,7 @@ public class Notification {
     
     @JsonProperty("sendOnFailure")
     public Boolean sendOnFailure;
+
     public Notification withSendOnFailure(Boolean sendOnFailure) {
         this.sendOnFailure = sendOnFailure;
         return this;
@@ -33,6 +36,7 @@ public class Notification {
     
     @JsonProperty("sendOnSuccess")
     public Boolean sendOnSuccess;
+
     public Notification withSendOnSuccess(Boolean sendOnSuccess) {
         this.sendOnSuccess = sendOnSuccess;
         return this;
@@ -41,9 +45,15 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackConfiguration")
     public SlackNotificationConfiguration slackConfiguration;
+
     public Notification withSlackConfiguration(SlackNotificationConfiguration slackConfiguration) {
         this.slackConfiguration = slackConfiguration;
         return this;
     }
     
+    public Notification(@JsonProperty("notificationType") NotificationTypeEnum notificationType, @JsonProperty("sendOnFailure") Boolean sendOnFailure, @JsonProperty("sendOnSuccess") Boolean sendOnSuccess) {
+        this.notificationType = notificationType;
+        this.sendOnFailure = sendOnFailure;
+        this.sendOnSuccess = sendOnSuccess;
+  }
 }

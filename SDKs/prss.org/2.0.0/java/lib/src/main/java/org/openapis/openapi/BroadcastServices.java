@@ -62,12 +62,10 @@ public class BroadcastServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse res = new org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse res = new org.openapis.openapi.models.operations.GetApiV2BroadcastservicesResponse(contentType, httpRes.statusCode()) {{
             episodes = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class BroadcastServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse res = new org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse res = new org.openapis.openapi.models.operations.GetApiV2BroadcastservicesIdResponse(contentType, httpRes.statusCode()) {{
             broadcastService = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

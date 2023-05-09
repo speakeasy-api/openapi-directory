@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableControlResponse {
@@ -12,6 +13,7 @@ public class EnableControlResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class EnableControlResponse {
      */
     
     public Object conflictException;
+
     public EnableControlResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class EnableControlResponse {
     
     
     public String contentType;
+
     public EnableControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class EnableControlResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableControlOutput enableControlOutput;
+
     public EnableControlResponse withEnableControlOutput(org.openapis.openapi.models.shared.EnableControlOutput enableControlOutput) {
         this.enableControlOutput = enableControlOutput;
         return this;
@@ -49,6 +54,7 @@ public class EnableControlResponse {
      */
     
     public Object internalServerException;
+
     public EnableControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class EnableControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class EnableControlResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public EnableControlResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class EnableControlResponse {
     
     
     public Integer statusCode;
+
     public EnableControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class EnableControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class EnableControlResponse {
      */
     
     public Object throttlingException;
+
     public EnableControlResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class EnableControlResponse {
      */
     
     public Object validationException;
+
     public EnableControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public EnableControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

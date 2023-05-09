@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
@@ -16,9 +18,14 @@ public class DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=subscriptionId")
     public Integer subscriptionId;
+
     public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest withSubscriptionId(Integer subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public DeleteWebhooksV3AppIdSubscriptionsSubscriptionIdArchiveRequest(@JsonProperty("appId") Integer appId, @JsonProperty("subscriptionId") Integer subscriptionId) {
+        this.appId = appId;
+        this.subscriptionId = subscriptionId;
+  }
 }

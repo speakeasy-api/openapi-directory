@@ -15,6 +15,7 @@ public class GetContainerLogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logEvents")
     public ContainerServiceLogEvent[] logEvents;
+
     public GetContainerLogResult withLogEvents(ContainerServiceLogEvent[] logEvents) {
         this.logEvents = logEvents;
         return this;
@@ -23,9 +24,11 @@ public class GetContainerLogResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetContainerLogResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetContainerLogResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingOperatingSystemVersionsListResponse {
     
     public String contentType;
+
     public DfareportingOperatingSystemVersionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingOperatingSystemVersionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.OperatingSystemVersionsListResponse operatingSystemVersionsListResponse;
+
     public DfareportingOperatingSystemVersionsListResponse withOperatingSystemVersionsListResponse(org.openapis.openapi.models.shared.OperatingSystemVersionsListResponse operatingSystemVersionsListResponse) {
         this.operatingSystemVersionsListResponse = operatingSystemVersionsListResponse;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingOperatingSystemVersionsListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingOperatingSystemVersionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingOperatingSystemVersionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingOperatingSystemVersionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingOperatingSystemVersionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

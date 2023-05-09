@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportTasksResult {
     
     public DescribeExportTasksResultExportTasks[] exportTasks;
+
     public DescribeExportTasksResult withExportTasks(DescribeExportTasksResultExportTasks[] exportTasks) {
         this.exportTasks = exportTasks;
         return this;
     }
     
+    public DescribeExportTasksResult(){}
 }

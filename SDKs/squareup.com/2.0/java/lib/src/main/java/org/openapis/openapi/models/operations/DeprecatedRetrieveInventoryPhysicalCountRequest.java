@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeprecatedRetrieveInventoryPhysicalCountRequest {
@@ -13,9 +14,13 @@ public class DeprecatedRetrieveInventoryPhysicalCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=physical_count_id")
     public String physicalCountId;
+
     public DeprecatedRetrieveInventoryPhysicalCountRequest withPhysicalCountId(String physicalCountId) {
         this.physicalCountId = physicalCountId;
         return this;
     }
     
+    public DeprecatedRetrieveInventoryPhysicalCountRequest(@JsonProperty("physical_count_id") String physicalCountId) {
+        this.physicalCountId = physicalCountId;
+  }
 }

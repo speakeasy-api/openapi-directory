@@ -12,6 +12,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device")
     public String device;
+
     public GetRecommendedListRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -42,6 +43,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetRecommendedListRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,6 +54,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=item_types")
     public String[] itemTypes;
+
     public GetRecommendedListRequest withItemTypes(String[] itemTypes) {
         this.itemTypes = itemTypes;
         return this;
@@ -72,6 +75,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetRecommendedListRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -82,6 +86,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetRecommendedListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -92,6 +97,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Integer pageSize;
+
     public GetRecommendedListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -102,6 +108,7 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=segments")
     public String[] segments;
+
     public GetRecommendedListRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
@@ -112,9 +119,11 @@ public class GetRecommendedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sub")
     public String sub;
+
     public GetRecommendedListRequest withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public GetRecommendedListRequest(){}
 }

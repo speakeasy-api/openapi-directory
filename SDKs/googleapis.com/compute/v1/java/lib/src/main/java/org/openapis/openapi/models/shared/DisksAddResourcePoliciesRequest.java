@@ -15,9 +15,11 @@ public class DisksAddResourcePoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public DisksAddResourcePoliciesRequest withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
     }
     
+    public DisksAddResourcePoliciesRequest(){}
 }

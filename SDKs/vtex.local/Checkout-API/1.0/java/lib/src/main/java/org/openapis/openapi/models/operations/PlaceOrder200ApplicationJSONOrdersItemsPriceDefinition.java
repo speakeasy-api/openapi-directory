@@ -18,6 +18,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrices")
     public PlaceOrder200ApplicationJSONOrdersItemsPriceDefinitionSellingPrices[] sellingPrices;
+
     public PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition withSellingPrices(PlaceOrder200ApplicationJSONOrdersItemsPriceDefinitionSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -40,9 +42,11 @@ public class PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersItemsPriceDefinition(){}
 }

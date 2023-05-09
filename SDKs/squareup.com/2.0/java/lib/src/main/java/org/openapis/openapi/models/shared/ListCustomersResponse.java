@@ -25,6 +25,7 @@ public class ListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListCustomersResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -36,6 +37,7 @@ public class ListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public Customer[] customers;
+
     public ListCustomersResponse withCustomers(Customer[] customers) {
         this.customers = customers;
         return this;
@@ -47,9 +49,11 @@ public class ListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListCustomersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public ListCustomersResponse(){}
 }

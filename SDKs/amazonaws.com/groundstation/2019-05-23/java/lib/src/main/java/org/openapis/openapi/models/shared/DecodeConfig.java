@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DecodeConfig {
     @JsonProperty("unvalidatedJSON")
     public String unvalidatedJSON;
+
     public DecodeConfig withUnvalidatedJSON(String unvalidatedJSON) {
         this.unvalidatedJSON = unvalidatedJSON;
         return this;
     }
     
+    public DecodeConfig(@JsonProperty("unvalidatedJSON") String unvalidatedJSON) {
+        this.unvalidatedJSON = unvalidatedJSON;
+  }
 }

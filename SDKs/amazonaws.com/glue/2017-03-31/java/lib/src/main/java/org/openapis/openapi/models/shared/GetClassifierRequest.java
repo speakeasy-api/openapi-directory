@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetClassifierRequest {
     @JsonProperty("Name")
     public String name;
+
     public GetClassifierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetClassifierRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

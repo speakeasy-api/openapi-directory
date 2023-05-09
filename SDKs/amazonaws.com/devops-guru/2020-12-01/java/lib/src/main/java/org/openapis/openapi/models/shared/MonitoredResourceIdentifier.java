@@ -22,6 +22,7 @@ public class MonitoredResourceIdentifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public MonitoredResourceIdentifier withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -30,6 +31,7 @@ public class MonitoredResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoredResourceName")
     public String monitoredResourceName;
+
     public MonitoredResourceIdentifier withMonitoredResourceName(String monitoredResourceName) {
         this.monitoredResourceName = monitoredResourceName;
         return this;
@@ -41,6 +43,7 @@ public class MonitoredResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public MonitoredResourceIdentifier withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -49,6 +52,7 @@ public class MonitoredResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePermission")
     public ResourcePermissionEnum resourcePermission;
+
     public MonitoredResourceIdentifier withResourcePermission(ResourcePermissionEnum resourcePermission) {
         this.resourcePermission = resourcePermission;
         return this;
@@ -57,9 +61,11 @@ public class MonitoredResourceIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public MonitoredResourceIdentifier withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MonitoredResourceIdentifier(){}
 }

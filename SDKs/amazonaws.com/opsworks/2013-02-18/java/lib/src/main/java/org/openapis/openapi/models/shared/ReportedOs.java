@@ -15,6 +15,7 @@ public class ReportedOs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public ReportedOs withFamily(String family) {
         this.family = family;
         return this;
@@ -23,6 +24,7 @@ public class ReportedOs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ReportedOs withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ReportedOs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public ReportedOs withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ReportedOs(){}
 }

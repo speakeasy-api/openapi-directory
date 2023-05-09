@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecurringTokenServiceEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/Recurring.java
 lib/src/main/java/org/openapis/openapi/models/shared/MerchantDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/CostEstimateAssumptions.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

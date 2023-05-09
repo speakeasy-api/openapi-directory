@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class QualityGetDailyDataQualityForSiteResponse {
     
     public String contentType;
+
     public QualityGetDailyDataQualityForSiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class QualityGetDailyDataQualityForSiteResponse {
     
     
     public org.openapis.openapi.models.shared.DailyQualityResponse dailyQualityResponse;
+
     public QualityGetDailyDataQualityForSiteResponse withDailyQualityResponse(org.openapis.openapi.models.shared.DailyQualityResponse dailyQualityResponse) {
         this.dailyQualityResponse = dailyQualityResponse;
         return this;
@@ -23,6 +26,7 @@ public class QualityGetDailyDataQualityForSiteResponse {
     
     
     public Integer statusCode;
+
     public QualityGetDailyDataQualityForSiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class QualityGetDailyDataQualityForSiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public QualityGetDailyDataQualityForSiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public QualityGetDailyDataQualityForSiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

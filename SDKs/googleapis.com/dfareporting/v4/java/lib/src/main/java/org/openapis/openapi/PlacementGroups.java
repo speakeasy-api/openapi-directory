@@ -59,11 +59,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementGroupsGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsGetResponse(contentType, httpRes.statusCode()) {{
             placementGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementGroupsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementGroupsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsInsertResponse(contentType, httpRes.statusCode()) {{
             placementGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementGroupsListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsListResponse(contentType, httpRes.statusCode()) {{
             placementGroupsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementGroupsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementGroupsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsPatchResponse(contentType, httpRes.statusCode()) {{
             placementGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementGroupsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementGroupsUpdateResponse(contentType, httpRes.statusCode()) {{
             placementGroup = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

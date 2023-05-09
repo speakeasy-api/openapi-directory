@@ -42,6 +42,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsRelatio
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsSearchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsSearchResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsVerifyCredentialsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsVerifyCredentialsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AccountsIdRequest.java
@@ -98,6 +99,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1AccountsIdUnmu
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1AccountsIdUnpinSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1AccountsIdUnpinRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1AccountsIdUnpinResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AppsVerifyCredentialsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1AppsVerifyCredentialsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1AppsRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1Apps200ApplicationJSON.java
@@ -124,10 +126,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1FeaturedTags
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1FiltersIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1FiltersIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1FiltersIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ListsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ListsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ListsIdAccountsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ListsIdAccountsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ListsIdAccountsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1PushSubscriptionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1PushSubscriptionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ScheduledStatusesIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteApiV1ScheduledStatusesIdRequest.java
@@ -179,8 +183,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1EndorsementsRes
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FavouritesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FavouritesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FavouritesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FeaturedTagsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FeaturedTagsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FeaturedTagsSuggestionsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FeaturedTagsSuggestionsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FiltersSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FiltersResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FiltersIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FiltersIdRequest.java
@@ -191,6 +198,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1FollowRequestsR
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1InstanceResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1InstanceActivityResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1InstancePeersResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ListsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ListsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ListsIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ListsIdRequest.java
@@ -212,7 +220,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1NotificationsId
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1NotificationsIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PollsIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PollsIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PreferencesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PreferencesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PushSubscriptionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1PushSubscriptionResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScheduledStatusesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetApiV1ScheduledStatusesRequest.java
@@ -321,6 +331,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1MediaIdSecurit
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1MediaIdRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1MediaIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1MediaIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1NotificationsClearSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1NotificationsClearResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1NotificationsIdDismissSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostApiV1NotificationsIdDismissRequest.java
@@ -431,4 +442,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/StatusParams.java
 lib/src/main/java/org/openapis/openapi/models/shared/Context.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportCategoryEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Report.java
+docs/sdk/README.md
+docs/todosecurity/README.md
+docs/accounts/README.md
+docs/apps/README.md
+docs/oauth/README.md
 USAGE.md

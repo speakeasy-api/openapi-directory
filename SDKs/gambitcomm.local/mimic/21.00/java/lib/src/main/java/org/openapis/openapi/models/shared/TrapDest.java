@@ -12,6 +12,7 @@ public class TrapDest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IP")
     public String ip;
+
     public TrapDest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -20,9 +21,11 @@ public class TrapDest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public TrapDest withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public TrapDest(){}
 }

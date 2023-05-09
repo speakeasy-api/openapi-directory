@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVpcConnectorResponse {
     
     public String contentType;
+
     public DescribeVpcConnectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVpcConnectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVpcConnectorResponse describeVpcConnectorResponse;
+
     public DescribeVpcConnectorResponse withDescribeVpcConnectorResponse(org.openapis.openapi.models.shared.DescribeVpcConnectorResponse describeVpcConnectorResponse) {
         this.describeVpcConnectorResponse = describeVpcConnectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVpcConnectorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DescribeVpcConnectorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVpcConnectorResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeVpcConnectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeVpcConnectorResponse {
     
     
     public Integer statusCode;
+
     public DescribeVpcConnectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeVpcConnectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVpcConnectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeVpcConnectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeVpcConnectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeVpcConnectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

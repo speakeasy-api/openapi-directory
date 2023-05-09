@@ -12,6 +12,7 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
     public Boolean excludeGarbageTime;
+
     public GetAdvancedTeamGameStatsRequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
         this.excludeGarbageTime = excludeGarbageTime;
         return this;
@@ -22,6 +23,7 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opponent")
     public String opponent;
+
     public GetAdvancedTeamGameStatsRequest withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -32,6 +34,7 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetAdvancedTeamGameStatsRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -42,6 +45,7 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetAdvancedTeamGameStatsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -52,6 +56,7 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetAdvancedTeamGameStatsRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -62,9 +67,11 @@ public class GetAdvancedTeamGameStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetAdvancedTeamGameStatsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetAdvancedTeamGameStatsRequest(){}
 }

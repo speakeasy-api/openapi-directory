@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateResolverQueryLogConfigRequest {
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public CreateResolverQueryLogConfigRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -18,6 +19,7 @@ public class CreateResolverQueryLogConfigRequest {
     
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public CreateResolverQueryLogConfigRequest withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -25,6 +27,7 @@ public class CreateResolverQueryLogConfigRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateResolverQueryLogConfigRequest withName(String name) {
         this.name = name;
         return this;
@@ -33,9 +36,15 @@ public class CreateResolverQueryLogConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateResolverQueryLogConfigRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateResolverQueryLogConfigRequest(@JsonProperty("CreatorRequestId") String creatorRequestId, @JsonProperty("DestinationArn") String destinationArn, @JsonProperty("Name") String name) {
+        this.creatorRequestId = creatorRequestId;
+        this.destinationArn = destinationArn;
+        this.name = name;
+  }
 }

@@ -15,9 +15,11 @@ public class CampaignState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CampaignStatus")
     public CampaignStatusEnum campaignStatus;
+
     public CampaignState withCampaignStatus(CampaignStatusEnum campaignStatus) {
         this.campaignStatus = campaignStatus;
         return this;
     }
     
+    public CampaignState(){}
 }

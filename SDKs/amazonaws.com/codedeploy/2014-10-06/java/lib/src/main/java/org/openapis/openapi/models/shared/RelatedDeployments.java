@@ -15,6 +15,7 @@ public class RelatedDeployments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateOutdatedInstancesDeploymentIds")
     public String[] autoUpdateOutdatedInstancesDeploymentIds;
+
     public RelatedDeployments withAutoUpdateOutdatedInstancesDeploymentIds(String[] autoUpdateOutdatedInstancesDeploymentIds) {
         this.autoUpdateOutdatedInstancesDeploymentIds = autoUpdateOutdatedInstancesDeploymentIds;
         return this;
@@ -23,9 +24,11 @@ public class RelatedDeployments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateOutdatedInstancesRootDeploymentId")
     public String autoUpdateOutdatedInstancesRootDeploymentId;
+
     public RelatedDeployments withAutoUpdateOutdatedInstancesRootDeploymentId(String autoUpdateOutdatedInstancesRootDeploymentId) {
         this.autoUpdateOutdatedInstancesRootDeploymentId = autoUpdateOutdatedInstancesRootDeploymentId;
         return this;
     }
     
+    public RelatedDeployments(){}
 }

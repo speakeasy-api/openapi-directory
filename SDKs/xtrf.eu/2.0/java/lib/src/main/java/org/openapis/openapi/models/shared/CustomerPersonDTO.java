@@ -20,6 +20,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CustomerPersonDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -28,6 +29,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public PersonContactDTO contact;
+
     public CustomerPersonDTO withContact(PersonContactDTO contact) {
         this.contact = contact;
         return this;
@@ -36,6 +38,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public CustomerPersonDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -44,6 +47,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public CustomerPersonDTO withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -54,6 +58,7 @@ public class CustomerPersonDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstProjectDate")
     public OffsetDateTime firstProjectDate;
+
     public CustomerPersonDTO withFirstProjectDate(OffsetDateTime firstProjectDate) {
         this.firstProjectDate = firstProjectDate;
         return this;
@@ -64,6 +69,7 @@ public class CustomerPersonDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("firstQuoteDate")
     public OffsetDateTime firstQuoteDate;
+
     public CustomerPersonDTO withFirstQuoteDate(OffsetDateTime firstQuoteDate) {
         this.firstQuoteDate = firstQuoteDate;
         return this;
@@ -72,6 +78,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public CustomerPersonDTOGenderEnum gender;
+
     public CustomerPersonDTO withGender(CustomerPersonDTOGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -80,6 +87,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomerPersonDTO withId(Long id) {
         this.id = id;
         return this;
@@ -88,6 +96,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public CustomerPersonDTO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -98,6 +107,7 @@ public class CustomerPersonDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastProjectDate")
     public OffsetDateTime lastProjectDate;
+
     public CustomerPersonDTO withLastProjectDate(OffsetDateTime lastProjectDate) {
         this.lastProjectDate = lastProjectDate;
         return this;
@@ -108,6 +118,7 @@ public class CustomerPersonDTO {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastQuoteDate")
     public OffsetDateTime lastQuoteDate;
+
     public CustomerPersonDTO withLastQuoteDate(OffsetDateTime lastQuoteDate) {
         this.lastQuoteDate = lastQuoteDate;
         return this;
@@ -116,6 +127,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motherTonguesIds")
     public Long[] motherTonguesIds;
+
     public CustomerPersonDTO withMotherTonguesIds(Long[] motherTonguesIds) {
         this.motherTonguesIds = motherTonguesIds;
         return this;
@@ -124,6 +136,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerPersonDTO withName(String name) {
         this.name = name;
         return this;
@@ -132,6 +145,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfProjects")
     public Integer numberOfProjects;
+
     public CustomerPersonDTO withNumberOfProjects(Integer numberOfProjects) {
         this.numberOfProjects = numberOfProjects;
         return this;
@@ -140,6 +154,7 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfQuotes")
     public Integer numberOfQuotes;
+
     public CustomerPersonDTO withNumberOfQuotes(Integer numberOfQuotes) {
         this.numberOfQuotes = numberOfQuotes;
         return this;
@@ -148,9 +163,11 @@ public class CustomerPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionId")
     public Long positionId;
+
     public CustomerPersonDTO withPositionId(Long positionId) {
         this.positionId = positionId;
         return this;
     }
     
+    public CustomerPersonDTO(){}
 }

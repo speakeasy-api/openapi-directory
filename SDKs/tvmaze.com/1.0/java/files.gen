@@ -151,4 +151,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/EpisodeVote.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShowVoteInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShowVote.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/auth/README.md
+docs/followednetworks/README.md
+docs/followedpeople/README.md
+docs/followedshows/README.md
+docs/followedwebchannels/README.md
+docs/markedepisodes/README.md
+docs/scrobbling/README.md
+docs/taggedshows/README.md
+docs/votedepisodes/README.md
+docs/votedshows/README.md
 USAGE.md

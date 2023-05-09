@@ -18,6 +18,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public String author;
+
     public Review withAuthor(String author) {
         this.author = author;
         return this;
@@ -29,6 +30,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public Review withBody(String body) {
         this.body = body;
         return this;
@@ -40,6 +42,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public Review withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,6 +54,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Review withLink(String link) {
         this.link = link;
         return this;
@@ -62,6 +66,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rating")
     public Rating[] rating;
+
     public Review withRating(Rating[] rating) {
         this.rating = rating;
         return this;
@@ -73,6 +78,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewTime")
     public String reviewTime;
+
     public Review withReviewTime(String reviewTime) {
         this.reviewTime = reviewTime;
         return this;
@@ -84,6 +90,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Review withTitle(String title) {
         this.title = title;
         return this;
@@ -95,6 +102,7 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReviewTypeEnum type;
+
     public Review withType(ReviewTypeEnum type) {
         this.type = type;
         return this;
@@ -106,9 +114,11 @@ public class Review {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitTime")
     public String visitTime;
+
     public Review withVisitTime(String visitTime) {
         this.visitTime = visitTime;
         return this;
     }
     
+    public Review(){}
 }

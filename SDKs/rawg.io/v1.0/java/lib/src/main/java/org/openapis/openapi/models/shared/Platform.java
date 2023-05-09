@@ -12,6 +12,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Platform withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -20,6 +21,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Platform withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Platform withImage(String image) {
         this.image = image;
         return this;
@@ -36,6 +39,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Platform withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -43,6 +47,7 @@ public class Platform {
     
     @JsonProperty("name")
     public String name;
+
     public Platform withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +56,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Platform withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -59,6 +65,7 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_end")
     public Long yearEnd;
+
     public Platform withYearEnd(Long yearEnd) {
         this.yearEnd = yearEnd;
         return this;
@@ -67,9 +74,13 @@ public class Platform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_start")
     public Long yearStart;
+
     public Platform withYearStart(Long yearStart) {
         this.yearStart = yearStart;
         return this;
     }
     
+    public Platform(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

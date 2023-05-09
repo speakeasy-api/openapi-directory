@@ -64,4 +64,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Betslipbet.java
 lib/src/main/java/org/openapis/openapi/models/shared/Betslipleg.java
 lib/src/main/java/org/openapis/openapi/models/shared/Betslippart.java
 lib/src/main/java/org/openapis/openapi/models/shared/BetSlipRequest.java
+docs/sdk/README.md
+docs/bets/README.md
 USAGE.md

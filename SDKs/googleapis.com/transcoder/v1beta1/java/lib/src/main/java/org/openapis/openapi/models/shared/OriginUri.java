@@ -18,6 +18,7 @@ public class OriginUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dash")
     public String dash;
+
     public OriginUri withDash(String dash) {
         this.dash = dash;
         return this;
@@ -29,9 +30,11 @@ public class OriginUri {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hls")
     public String hls;
+
     public OriginUri withHls(String hls) {
         this.hls = hls;
         return this;
     }
     
+    public OriginUri(){}
 }

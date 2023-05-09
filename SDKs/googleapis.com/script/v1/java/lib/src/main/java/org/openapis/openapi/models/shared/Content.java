@@ -18,6 +18,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public File[] files;
+
     public Content withFiles(File[] files) {
         this.files = files;
         return this;
@@ -29,9 +30,11 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptId")
     public String scriptId;
+
     public Content withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
     }
     
+    public Content(){}
 }

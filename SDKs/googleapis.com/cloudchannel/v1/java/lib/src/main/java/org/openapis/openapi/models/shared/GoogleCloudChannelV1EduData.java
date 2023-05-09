@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1EduData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instituteSize")
     public GoogleCloudChannelV1EduDataInstituteSizeEnum instituteSize;
+
     public GoogleCloudChannelV1EduData withInstituteSize(GoogleCloudChannelV1EduDataInstituteSizeEnum instituteSize) {
         this.instituteSize = instituteSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1EduData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instituteType")
     public GoogleCloudChannelV1EduDataInstituteTypeEnum instituteType;
+
     public GoogleCloudChannelV1EduData withInstituteType(GoogleCloudChannelV1EduDataInstituteTypeEnum instituteType) {
         this.instituteType = instituteType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1EduData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public GoogleCloudChannelV1EduData withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public GoogleCloudChannelV1EduData(){}
 }

@@ -15,9 +15,11 @@ public class GetJobUnlockCodeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnlockCode")
     public String unlockCode;
+
     public GetJobUnlockCodeResult withUnlockCode(String unlockCode) {
         this.unlockCode = unlockCode;
         return this;
     }
     
+    public GetJobUnlockCodeResult(){}
 }

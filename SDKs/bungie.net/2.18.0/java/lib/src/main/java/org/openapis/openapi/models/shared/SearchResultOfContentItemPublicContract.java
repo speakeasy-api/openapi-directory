@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SearchResultOfContentItemPublicContract {
     
     public Boolean hasMore;
+
     public SearchResultOfContentItemPublicContract withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -16,6 +17,7 @@ public class SearchResultOfContentItemPublicContract {
     
     
     public QueriesPagedQuery query;
+
     public SearchResultOfContentItemPublicContract withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -23,6 +25,7 @@ public class SearchResultOfContentItemPublicContract {
     
     
     public String replacementContinuationToken;
+
     public SearchResultOfContentItemPublicContract withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -30,6 +33,7 @@ public class SearchResultOfContentItemPublicContract {
     
     
     public ContentContentItemPublicContract[] results;
+
     public SearchResultOfContentItemPublicContract withResults(ContentContentItemPublicContract[] results) {
         this.results = results;
         return this;
@@ -37,6 +41,7 @@ public class SearchResultOfContentItemPublicContract {
     
     
     public Integer totalResults;
+
     public SearchResultOfContentItemPublicContract withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -50,9 +55,11 @@ public class SearchResultOfContentItemPublicContract {
      */
     
     public Boolean useTotalResults;
+
     public SearchResultOfContentItemPublicContract withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public SearchResultOfContentItemPublicContract(){}
 }

@@ -18,6 +18,7 @@ public class SpreadsheetTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryFontFamily")
     public String primaryFontFamily;
+
     public SpreadsheetTheme withPrimaryFontFamily(String primaryFontFamily) {
         this.primaryFontFamily = primaryFontFamily;
         return this;
@@ -29,9 +30,11 @@ public class SpreadsheetTheme {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themeColors")
     public ThemeColorPair[] themeColors;
+
     public SpreadsheetTheme withThemeColors(ThemeColorPair[] themeColors) {
         this.themeColors = themeColors;
         return this;
     }
     
+    public SpreadsheetTheme(){}
 }

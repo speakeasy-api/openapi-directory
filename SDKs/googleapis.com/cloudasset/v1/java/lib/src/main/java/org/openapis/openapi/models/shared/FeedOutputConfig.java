@@ -18,9 +18,11 @@ public class FeedOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubDestination")
     public PubsubDestination pubsubDestination;
+
     public FeedOutputConfig withPubsubDestination(PubsubDestination pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
         return this;
     }
     
+    public FeedOutputConfig(){}
 }

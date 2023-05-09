@@ -15,9 +15,13 @@ public class Contributor {
      */
     @JsonProperty("id")
     public String id;
+
     public Contributor withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Contributor(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

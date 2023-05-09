@@ -15,6 +15,7 @@ public class FlowDefinitionOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public FlowDefinitionOutputConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,9 +23,13 @@ public class FlowDefinitionOutputConfig {
     
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public FlowDefinitionOutputConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public FlowDefinitionOutputConfig(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

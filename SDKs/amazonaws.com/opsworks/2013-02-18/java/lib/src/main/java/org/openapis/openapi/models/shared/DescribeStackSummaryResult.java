@@ -15,9 +15,11 @@ public class DescribeStackSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackSummary")
     public StackSummary stackSummary;
+
     public DescribeStackSummaryResult withStackSummary(StackSummary stackSummary) {
         this.stackSummary = stackSummary;
         return this;
     }
     
+    public DescribeStackSummaryResult(){}
 }

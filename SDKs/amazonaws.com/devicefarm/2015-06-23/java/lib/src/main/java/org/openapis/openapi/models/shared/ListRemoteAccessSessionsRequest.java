@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListRemoteAccessSessionsRequest {
     @JsonProperty("arn")
     public String arn;
+
     public ListRemoteAccessSessionsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,13 @@ public class ListRemoteAccessSessionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRemoteAccessSessionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListRemoteAccessSessionsRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

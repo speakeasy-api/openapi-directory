@@ -15,6 +15,7 @@ public class WorkflowDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnPartialUpload")
     public WorkflowDetail[] onPartialUpload;
+
     public WorkflowDetails withOnPartialUpload(WorkflowDetail[] onPartialUpload) {
         this.onPartialUpload = onPartialUpload;
         return this;
@@ -23,9 +24,11 @@ public class WorkflowDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnUpload")
     public WorkflowDetail[] onUpload;
+
     public WorkflowDetails withOnUpload(WorkflowDetail[] onUpload) {
         this.onUpload = onUpload;
         return this;
     }
     
+    public WorkflowDetails(){}
 }

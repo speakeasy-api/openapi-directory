@@ -15,6 +15,7 @@ public class AudioRenderTimelineSpanRegionEndType {
      */
     @JsonProperty("beat")
     public Double beat;
+
     public AudioRenderTimelineSpanRegionEndType withBeat(Double beat) {
         this.beat = beat;
         return this;
@@ -25,6 +26,7 @@ public class AudioRenderTimelineSpanRegionEndType {
      */
     @JsonProperty("event")
     public AudioRenderTimelineSpanRegionEndTypeEventEnum event;
+
     public AudioRenderTimelineSpanRegionEndType withEvent(AudioRenderTimelineSpanRegionEndTypeEventEnum event) {
         this.event = event;
         return this;
@@ -35,9 +37,15 @@ public class AudioRenderTimelineSpanRegionEndType {
      */
     @JsonProperty("type")
     public AudioRenderTimelineSpanRegionEndTypeTypeEnum type;
+
     public AudioRenderTimelineSpanRegionEndType withType(AudioRenderTimelineSpanRegionEndTypeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AudioRenderTimelineSpanRegionEndType(@JsonProperty("beat") Double beat, @JsonProperty("event") AudioRenderTimelineSpanRegionEndTypeEventEnum event, @JsonProperty("type") AudioRenderTimelineSpanRegionEndTypeTypeEnum type) {
+        this.beat = beat;
+        this.event = event;
+        this.type = type;
+  }
 }

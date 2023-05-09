@@ -18,6 +18,7 @@ public class AdultInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adultScore")
     public Double adultScore;
+
     public AdultInfo withAdultScore(Double adultScore) {
         this.adultScore = adultScore;
         return this;
@@ -29,6 +30,7 @@ public class AdultInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAdultContent")
     public Boolean isAdultContent;
+
     public AdultInfo withIsAdultContent(Boolean isAdultContent) {
         this.isAdultContent = isAdultContent;
         return this;
@@ -40,6 +42,7 @@ public class AdultInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRacyContent")
     public Boolean isRacyContent;
+
     public AdultInfo withIsRacyContent(Boolean isRacyContent) {
         this.isRacyContent = isRacyContent;
         return this;
@@ -51,9 +54,11 @@ public class AdultInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("racyScore")
     public Double racyScore;
+
     public AdultInfo withRacyScore(Double racyScore) {
         this.racyScore = racyScore;
         return this;
     }
     
+    public AdultInfo(){}
 }

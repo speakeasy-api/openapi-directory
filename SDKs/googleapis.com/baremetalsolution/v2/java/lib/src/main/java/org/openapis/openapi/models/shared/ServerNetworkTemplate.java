@@ -18,6 +18,7 @@ public class ServerNetworkTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicableInstanceTypes")
     public String[] applicableInstanceTypes;
+
     public ServerNetworkTemplate withApplicableInstanceTypes(String[] applicableInstanceTypes) {
         this.applicableInstanceTypes = applicableInstanceTypes;
         return this;
@@ -29,6 +30,7 @@ public class ServerNetworkTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalInterfaces")
     public GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface[] logicalInterfaces;
+
     public ServerNetworkTemplate withLogicalInterfaces(GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface[] logicalInterfaces) {
         this.logicalInterfaces = logicalInterfaces;
         return this;
@@ -40,9 +42,11 @@ public class ServerNetworkTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServerNetworkTemplate withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServerNetworkTemplate(){}
 }

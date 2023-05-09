@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBundleInfoResponse {
@@ -12,6 +13,7 @@ public class GetBundleInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.BundleInfo bundleInfo;
+
     public GetBundleInfoResponse withBundleInfo(org.openapis.openapi.models.shared.BundleInfo bundleInfo) {
         this.bundleInfo = bundleInfo;
         return this;
@@ -19,6 +21,7 @@ public class GetBundleInfoResponse {
     
     
     public String contentType;
+
     public GetBundleInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBundleInfoResponse {
     
     
     public Integer statusCode;
+
     public GetBundleInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetBundleInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBundleInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetBundleInfoResponse {
      */
     
     public String getBundleInfoDefaultApplicationJSONString;
+
     public GetBundleInfoResponse withGetBundleInfoDefaultApplicationJSONString(String getBundleInfoDefaultApplicationJSONString) {
         this.getBundleInfoDefaultApplicationJSONString = getBundleInfoDefaultApplicationJSONString;
         return this;
     }
     
+    public GetBundleInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class GetIceServerConfigRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public GetIceServerConfigRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -25,6 +26,7 @@ public class GetIceServerConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public GetIceServerConfigRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -36,6 +38,7 @@ public class GetIceServerConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public GetIceServerConfigRequestBodyServiceEnum service;
+
     public GetIceServerConfigRequestBody withService(GetIceServerConfigRequestBodyServiceEnum service) {
         this.service = service;
         return this;
@@ -47,9 +50,13 @@ public class GetIceServerConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public GetIceServerConfigRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetIceServerConfigRequestBody(@JsonProperty("ChannelARN") String channelARN) {
+        this.channelARN = channelARN;
+  }
 }

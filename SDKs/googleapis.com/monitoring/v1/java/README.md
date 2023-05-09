@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
+import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest;
+import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectResponse;
+import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity;
 import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1;
 import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption2;
 import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption3;
-import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity;
-import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest;
-import org.openapis.openapi.models.operations.MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -33,9 +32,9 @@ public class Application {
                 .build();
 
             MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest req = new MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -45,21 +44,23 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectResponse res = sdk.locations.monitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject(req, new MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurity() {{
-                option1 = new MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1() {{
+                option1 = new MonitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProjectSecurityOption1("suscipit", "iure") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.listMetricsScopesByMonitoredProjectResponse.isPresent()) {
+            if (res.listMetricsScopesByMonitoredProjectResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,26 +68,26 @@ public class Application {
 ## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `monitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject` - Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The metrics scope representing the specified monitored project will always be the first entry in the response.
-* `monitoringLocationsGlobalMetricsScopesProjectsCreate` - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
+* [monitoringLocationsGlobalMetricsScopesListMetricsScopesByMonitoredProject](docs/locations/README.md#monitoringlocationsglobalmetricsscopeslistmetricsscopesbymonitoredproject) - Returns a list of every Metrics Scope that a specific MonitoredProject has been added to. The metrics scope representing the specified monitored project will always be the first entry in the response.
+* [monitoringLocationsGlobalMetricsScopesProjectsCreate](docs/locations/README.md#monitoringlocationsglobalmetricsscopesprojectscreate) - Adds a MonitoredProject with the given project ID to the specified Metrics Scope.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `monitoringProjectsDashboardsCreate` - Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `monitoringProjectsDashboardsDelete` - Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `monitoringProjectsDashboardsGet` - Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `monitoringProjectsDashboardsList` - Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `monitoringProjectsDashboardsPatch` - Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
-* `monitoringProjectsLocationPrometheusApiV1LabelValues` - Lists possible values for a given label name.
-* `monitoringProjectsLocationPrometheusApiV1Labels` - Lists labels for metrics.
-* `monitoringProjectsLocationPrometheusApiV1LabelsList` - Lists labels for metrics.
-* `monitoringProjectsLocationPrometheusApiV1MetadataList` - Lists metadata for metrics.
-* `monitoringProjectsLocationPrometheusApiV1Query` - Evaluate a PromQL query at a single point in time.
-* `monitoringProjectsLocationPrometheusApiV1QueryExemplars` - Lists exemplars relevant to a given PromQL query,
-* `monitoringProjectsLocationPrometheusApiV1QueryRange` - Evaluate a PromQL query with start, end time range.
-* `monitoringProjectsLocationPrometheusApiV1Series` - Lists metadata for metrics.
+* [monitoringProjectsDashboardsCreate](docs/projects/README.md#monitoringprojectsdashboardscreate) - Creates a new custom dashboard. For examples on how you can use this API to create dashboards, see Managing dashboards by API (https://cloud.google.com/monitoring/dashboards/api-dashboard). This method requires the monitoring.dashboards.create permission on the specified project. For more information about permissions, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [monitoringProjectsDashboardsDelete](docs/projects/README.md#monitoringprojectsdashboardsdelete) - Deletes an existing custom dashboard.This method requires the monitoring.dashboards.delete permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [monitoringProjectsDashboardsGet](docs/projects/README.md#monitoringprojectsdashboardsget) - Fetches a specific dashboard.This method requires the monitoring.dashboards.get permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [monitoringProjectsDashboardsList](docs/projects/README.md#monitoringprojectsdashboardslist) - Lists the existing dashboards.This method requires the monitoring.dashboards.list permission on the specified project. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [monitoringProjectsDashboardsPatch](docs/projects/README.md#monitoringprojectsdashboardspatch) - Replaces an existing custom dashboard with a new definition.This method requires the monitoring.dashboards.update permission on the specified dashboard. For more information, see Cloud Identity and Access Management (https://cloud.google.com/iam).
+* [monitoringProjectsLocationPrometheusApiV1LabelValues](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labelvalues) - Lists possible values for a given label name.
+* [monitoringProjectsLocationPrometheusApiV1Labels](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labels) - Lists labels for metrics.
+* [monitoringProjectsLocationPrometheusApiV1LabelsList](docs/projects/README.md#monitoringprojectslocationprometheusapiv1labelslist) - Lists labels for metrics.
+* [monitoringProjectsLocationPrometheusApiV1MetadataList](docs/projects/README.md#monitoringprojectslocationprometheusapiv1metadatalist) - Lists metadata for metrics.
+* [monitoringProjectsLocationPrometheusApiV1Query](docs/projects/README.md#monitoringprojectslocationprometheusapiv1query) - Evaluate a PromQL query at a single point in time.
+* [monitoringProjectsLocationPrometheusApiV1QueryExemplars](docs/projects/README.md#monitoringprojectslocationprometheusapiv1queryexemplars) - Lists exemplars relevant to a given PromQL query,
+* [monitoringProjectsLocationPrometheusApiV1QueryRange](docs/projects/README.md#monitoringprojectslocationprometheusapiv1queryrange) - Evaluate a PromQL query with start, end time range.
+* [monitoringProjectsLocationPrometheusApiV1Series](docs/projects/README.md#monitoringprojectslocationprometheusapiv1series) - Lists metadata for metrics.
 <!-- End SDK Available Operations -->
 
 ### Maturity

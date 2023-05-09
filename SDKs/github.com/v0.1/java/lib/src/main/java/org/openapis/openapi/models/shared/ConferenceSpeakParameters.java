@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class ConferenceSpeakParameters {
      */
     @SpeakeasyMetadata("form:name=ConferenceName")
     public String conferenceName;
+
     public ConferenceSpeakParameters withConferenceName(String conferenceName) {
         this.conferenceName = conferenceName;
         return this;
@@ -25,6 +27,7 @@ public class ConferenceSpeakParameters {
      */
     @SpeakeasyMetadata("form:name=MemberID")
     public String memberID;
+
     public ConferenceSpeakParameters withMemberID(String memberID) {
         this.memberID = memberID;
         return this;
@@ -35,9 +38,15 @@ public class ConferenceSpeakParameters {
      */
     @SpeakeasyMetadata("form:name=Text")
     public String text;
+
     public ConferenceSpeakParameters withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ConferenceSpeakParameters(@JsonProperty("ConferenceName") String conferenceName, @JsonProperty("MemberID") String memberID, @JsonProperty("Text") String text) {
+        this.conferenceName = conferenceName;
+        this.memberID = memberID;
+        this.text = text;
+  }
 }

@@ -18,9 +18,11 @@ public class TextExtractionModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelHint")
     public String modelHint;
+
     public TextExtractionModelMetadata withModelHint(String modelHint) {
         this.modelHint = modelHint;
         return this;
     }
     
+    public TextExtractionModelMetadata(){}
 }

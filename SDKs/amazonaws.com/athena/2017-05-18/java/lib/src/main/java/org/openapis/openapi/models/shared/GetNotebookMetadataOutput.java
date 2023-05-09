@@ -15,9 +15,11 @@ public class GetNotebookMetadataOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotebookMetadata")
     public NotebookMetadata notebookMetadata;
+
     public GetNotebookMetadataOutput withNotebookMetadata(NotebookMetadata notebookMetadata) {
         this.notebookMetadata = notebookMetadata;
         return this;
     }
     
+    public GetNotebookMetadataOutput(){}
 }

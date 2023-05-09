@@ -15,9 +15,11 @@ public class SchemaDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public Column[] columns;
+
     public SchemaDefinition withColumns(Column[] columns) {
         this.columns = columns;
         return this;
     }
     
+    public SchemaDefinition(){}
 }

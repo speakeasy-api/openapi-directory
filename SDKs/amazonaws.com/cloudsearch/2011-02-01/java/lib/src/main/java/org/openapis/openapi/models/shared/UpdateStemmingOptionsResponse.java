@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateStemmingOptionsResponse - A response message that contains the status of updated stemming options.
@@ -15,9 +15,13 @@ public class UpdateStemmingOptionsResponse {
      */
     
     public StemmingOptionsStatus stems;
+
     public UpdateStemmingOptionsResponse withStems(StemmingOptionsStatus stems) {
         this.stems = stems;
         return this;
     }
     
+    public UpdateStemmingOptionsResponse(@JsonProperty("Stems") StemmingOptionsStatus stems) {
+        this.stems = stems;
+  }
 }

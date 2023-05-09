@@ -15,6 +15,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetLinkOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public GetLinkOutput withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public GetLinkOutput withLabel(String label) {
         this.label = label;
         return this;
@@ -39,6 +42,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelTemplate")
     public String labelTemplate;
+
     public GetLinkOutput withLabelTemplate(String labelTemplate) {
         this.labelTemplate = labelTemplate;
         return this;
@@ -47,6 +51,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypes")
     public String[] resourceTypes;
+
     public GetLinkOutput withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -55,6 +60,7 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SinkArn")
     public String sinkArn;
+
     public GetLinkOutput withSinkArn(String sinkArn) {
         this.sinkArn = sinkArn;
         return this;
@@ -63,9 +69,11 @@ public class GetLinkOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetLinkOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetLinkOutput(){}
 }

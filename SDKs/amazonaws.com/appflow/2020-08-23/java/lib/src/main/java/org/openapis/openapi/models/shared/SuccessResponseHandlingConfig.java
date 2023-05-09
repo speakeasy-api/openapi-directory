@@ -15,6 +15,7 @@ public class SuccessResponseHandlingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public SuccessResponseHandlingConfig withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +24,11 @@ public class SuccessResponseHandlingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public SuccessResponseHandlingConfig withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
     }
     
+    public SuccessResponseHandlingConfig(){}
 }

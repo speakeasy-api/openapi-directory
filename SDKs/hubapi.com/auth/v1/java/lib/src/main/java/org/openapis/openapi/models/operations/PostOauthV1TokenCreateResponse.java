@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOauthV1TokenCreateResponse {
     
     public byte[] body;
+
     public PostOauthV1TokenCreateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostOauthV1TokenCreateResponse {
     
     
     public String contentType;
+
     public PostOauthV1TokenCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostOauthV1TokenCreateResponse {
     
     
     public Integer statusCode;
+
     public PostOauthV1TokenCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostOauthV1TokenCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOauthV1TokenCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PostOauthV1TokenCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.TokenResponseIF tokenResponseIF;
+
     public PostOauthV1TokenCreateResponse withTokenResponseIF(org.openapis.openapi.models.shared.TokenResponseIF tokenResponseIF) {
         this.tokenResponseIF = tokenResponseIF;
         return this;
     }
     
+    public PostOauthV1TokenCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

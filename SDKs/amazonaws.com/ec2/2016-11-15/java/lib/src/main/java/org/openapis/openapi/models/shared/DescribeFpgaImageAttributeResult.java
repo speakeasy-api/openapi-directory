@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImageAttributeResult {
     
     public DescribeFpgaImageAttributeResultFpgaImageAttribute fpgaImageAttribute;
+
     public DescribeFpgaImageAttributeResult withFpgaImageAttribute(DescribeFpgaImageAttributeResultFpgaImageAttribute fpgaImageAttribute) {
         this.fpgaImageAttribute = fpgaImageAttribute;
         return this;
     }
     
+    public DescribeFpgaImageAttributeResult(){}
 }

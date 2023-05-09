@@ -18,6 +18,7 @@ public class CommitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitTime")
     public String commitTime;
+
     public CommitResponse withCommitTime(String commitTime) {
         this.commitTime = commitTime;
         return this;
@@ -29,9 +30,11 @@ public class CommitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeResults")
     public WriteResult[] writeResults;
+
     public CommitResponse withWriteResults(WriteResult[] writeResults) {
         this.writeResults = writeResults;
         return this;
     }
     
+    public CommitResponse(){}
 }

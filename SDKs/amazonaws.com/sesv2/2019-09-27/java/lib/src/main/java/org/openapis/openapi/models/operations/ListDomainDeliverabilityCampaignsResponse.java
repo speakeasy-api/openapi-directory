@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDomainDeliverabilityCampaignsResponse {
@@ -12,6 +13,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
      */
     
     public Object badRequestException;
+
     public ListDomainDeliverabilityCampaignsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
     
     
     public String contentType;
+
     public ListDomainDeliverabilityCampaignsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDomainDeliverabilityCampaignsResponse listDomainDeliverabilityCampaignsResponse;
+
     public ListDomainDeliverabilityCampaignsResponse withListDomainDeliverabilityCampaignsResponse(org.openapis.openapi.models.shared.ListDomainDeliverabilityCampaignsResponse listDomainDeliverabilityCampaignsResponse) {
         this.listDomainDeliverabilityCampaignsResponse = listDomainDeliverabilityCampaignsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
      */
     
     public Object notFoundException;
+
     public ListDomainDeliverabilityCampaignsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
     
     
     public Integer statusCode;
+
     public ListDomainDeliverabilityCampaignsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDomainDeliverabilityCampaignsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDomainDeliverabilityCampaignsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListDomainDeliverabilityCampaignsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDomainDeliverabilityCampaignsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListDomainDeliverabilityCampaignsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

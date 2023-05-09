@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiDeleteJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderDeleteApiModel orderDeleteApiModel;
+
     public OrderApiDeleteJsonRequest withOrderDeleteApiModel(org.openapis.openapi.models.shared.OrderDeleteApiModel orderDeleteApiModel) {
         this.orderDeleteApiModel = orderDeleteApiModel;
         return this;
@@ -16,6 +18,7 @@ public class OrderApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public OrderApiDeleteJsonRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class OrderApiDeleteJsonRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public OrderApiDeleteJsonRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public OrderApiDeleteJsonRequest(@JsonProperty("OrderDeleteApiModel") org.openapis.openapi.models.shared.OrderDeleteApiModel orderDeleteApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.orderDeleteApiModel = orderDeleteApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

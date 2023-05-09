@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetaddressmatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getaddressmatch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetaddressmatchResponse.java
+docs/sdk/README.md
+docs/streetaddresssimilaritykey/README.md
 USAGE.md

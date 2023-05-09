@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEnvironmentMembershipsResponse {
@@ -12,6 +13,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object badRequestException;
+
     public DescribeEnvironmentMembershipsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object conflictException;
+
     public DescribeEnvironmentMembershipsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEnvironmentMembershipsResponse {
     
     
     public String contentType;
+
     public DescribeEnvironmentMembershipsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEnvironmentMembershipsResult describeEnvironmentMembershipsResult;
+
     public DescribeEnvironmentMembershipsResponse withDescribeEnvironmentMembershipsResult(org.openapis.openapi.models.shared.DescribeEnvironmentMembershipsResult describeEnvironmentMembershipsResult) {
         this.describeEnvironmentMembershipsResult = describeEnvironmentMembershipsResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeEnvironmentMembershipsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeEnvironmentMembershipsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object limitExceededException;
+
     public DescribeEnvironmentMembershipsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object notFoundException;
+
     public DescribeEnvironmentMembershipsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeEnvironmentMembershipsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEnvironmentMembershipsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeEnvironmentMembershipsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEnvironmentMembershipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeEnvironmentMembershipsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEnvironmentMembershipsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeEnvironmentMembershipsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

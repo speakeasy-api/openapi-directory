@@ -95,4 +95,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetMapVersionNumberWMTS
 lib/src/main/java/org/openapis/openapi/models/operations/GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetMapVersionNumberWMTSKeyWMTSVersionWMTSCapabilitiesXmlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/copyrights/README.md
+docs/raster/README.md
+docs/vector/README.md
+docs/wmswmts/README.md
 USAGE.md

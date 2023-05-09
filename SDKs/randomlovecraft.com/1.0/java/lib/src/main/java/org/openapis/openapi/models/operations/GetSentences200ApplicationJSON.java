@@ -12,9 +12,11 @@ public class GetSentences200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Sentence[] data;
+
     public GetSentences200ApplicationJSON withData(org.openapis.openapi.models.shared.Sentence[] data) {
         this.data = data;
         return this;
     }
     
+    public GetSentences200ApplicationJSON(){}
 }

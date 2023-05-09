@@ -22,6 +22,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationFsxOntapResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FsxFilesystemArn")
     public String fsxFilesystemArn;
+
     public DescribeLocationFsxOntapResponse withFsxFilesystemArn(String fsxFilesystemArn) {
         this.fsxFilesystemArn = fsxFilesystemArn;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationFsxOntapResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationFsxOntapResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -57,6 +61,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Protocol")
     public FsxProtocol protocol;
+
     public DescribeLocationFsxOntapResponse withProtocol(FsxProtocol protocol) {
         this.protocol = protocol;
         return this;
@@ -65,6 +70,7 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupArns")
     public String[] securityGroupArns;
+
     public DescribeLocationFsxOntapResponse withSecurityGroupArns(String[] securityGroupArns) {
         this.securityGroupArns = securityGroupArns;
         return this;
@@ -73,9 +79,11 @@ public class DescribeLocationFsxOntapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachineArn")
     public String storageVirtualMachineArn;
+
     public DescribeLocationFsxOntapResponse withStorageVirtualMachineArn(String storageVirtualMachineArn) {
         this.storageVirtualMachineArn = storageVirtualMachineArn;
         return this;
     }
     
+    public DescribeLocationFsxOntapResponse(){}
 }

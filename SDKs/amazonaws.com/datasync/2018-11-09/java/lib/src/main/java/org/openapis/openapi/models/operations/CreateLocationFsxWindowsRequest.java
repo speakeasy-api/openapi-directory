@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLocationFsxWindowsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateLocationFsxWindowsRequest createLocationFsxWindowsRequest;
+
     public CreateLocationFsxWindowsRequest withCreateLocationFsxWindowsRequest(org.openapis.openapi.models.shared.CreateLocationFsxWindowsRequest createLocationFsxWindowsRequest) {
         this.createLocationFsxWindowsRequest = createLocationFsxWindowsRequest;
         return this;
@@ -16,6 +18,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public CreateLocationFsxWindowsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public CreateLocationFsxWindowsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public CreateLocationFsxWindowsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public CreateLocationFsxWindowsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public CreateLocationFsxWindowsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public CreateLocationFsxWindowsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public CreateLocationFsxWindowsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class CreateLocationFsxWindowsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public CreateLocationFsxWindowsXAmzTargetEnum xAmzTarget;
+
     public CreateLocationFsxWindowsRequest withXAmzTarget(CreateLocationFsxWindowsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public CreateLocationFsxWindowsRequest(@JsonProperty("CreateLocationFsxWindowsRequest") org.openapis.openapi.models.shared.CreateLocationFsxWindowsRequest createLocationFsxWindowsRequest, @JsonProperty("X-Amz-Target") CreateLocationFsxWindowsXAmzTargetEnum xAmzTarget) {
+        this.createLocationFsxWindowsRequest = createLocationFsxWindowsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

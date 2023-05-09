@@ -15,6 +15,7 @@ public class VectorEnrichmentJobExportErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public VectorEnrichmentJobExportErrorDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class VectorEnrichmentJobExportErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public VectorEnrichmentJobExportErrorTypeEnum type;
+
     public VectorEnrichmentJobExportErrorDetails withType(VectorEnrichmentJobExportErrorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public VectorEnrichmentJobExportErrorDetails(){}
 }

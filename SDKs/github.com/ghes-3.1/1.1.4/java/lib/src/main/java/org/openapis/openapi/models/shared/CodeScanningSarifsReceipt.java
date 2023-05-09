@@ -18,6 +18,7 @@ public class CodeScanningSarifsReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CodeScanningSarifsReceipt withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class CodeScanningSarifsReceipt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CodeScanningSarifsReceipt withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CodeScanningSarifsReceipt(){}
 }

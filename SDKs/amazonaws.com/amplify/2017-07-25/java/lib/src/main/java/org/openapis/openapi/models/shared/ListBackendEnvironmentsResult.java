@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListBackendEnvironmentsResult {
     @JsonProperty("backendEnvironments")
     public BackendEnvironment[] backendEnvironments;
+
     public ListBackendEnvironmentsResult withBackendEnvironments(BackendEnvironment[] backendEnvironments) {
         this.backendEnvironments = backendEnvironments;
         return this;
@@ -22,9 +23,13 @@ public class ListBackendEnvironmentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBackendEnvironmentsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBackendEnvironmentsResult(@JsonProperty("backendEnvironments") BackendEnvironment[] backendEnvironments) {
+        this.backendEnvironments = backendEnvironments;
+  }
 }

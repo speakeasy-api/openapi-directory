@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostTracksTrackIdCommentsResponse {
@@ -12,6 +13,7 @@ public class PostTracksTrackIdCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Comment comment;
+
     public PostTracksTrackIdCommentsResponse withComment(org.openapis.openapi.models.shared.Comment comment) {
         this.comment = comment;
         return this;
@@ -19,6 +21,7 @@ public class PostTracksTrackIdCommentsResponse {
     
     
     public String contentType;
+
     public PostTracksTrackIdCommentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostTracksTrackIdCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostTracksTrackIdCommentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class PostTracksTrackIdCommentsResponse {
     
     
     public Integer statusCode;
+
     public PostTracksTrackIdCommentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PostTracksTrackIdCommentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostTracksTrackIdCommentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PostTracksTrackIdCommentsResponse {
      */
     
     public org.openapis.openapi.models.shared.TooManyRequests tooManyRequests;
+
     public PostTracksTrackIdCommentsResponse withTooManyRequests(org.openapis.openapi.models.shared.TooManyRequests tooManyRequests) {
         this.tooManyRequests = tooManyRequests;
         return this;
     }
     
+    public PostTracksTrackIdCommentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

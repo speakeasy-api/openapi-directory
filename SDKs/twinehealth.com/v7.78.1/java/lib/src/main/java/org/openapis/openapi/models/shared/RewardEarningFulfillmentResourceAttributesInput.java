@@ -12,6 +12,7 @@ public class RewardEarningFulfillmentResourceAttributesInput {
      */
     @JsonProperty("fulfilled_at")
     public String fulfilledAt;
+
     public RewardEarningFulfillmentResourceAttributesInput withFulfilledAt(String fulfilledAt) {
         this.fulfilledAt = fulfilledAt;
         return this;
@@ -22,9 +23,14 @@ public class RewardEarningFulfillmentResourceAttributesInput {
      */
     @JsonProperty("fulfilled_value")
     public Double fulfilledValue;
+
     public RewardEarningFulfillmentResourceAttributesInput withFulfilledValue(Double fulfilledValue) {
         this.fulfilledValue = fulfilledValue;
         return this;
     }
     
+    public RewardEarningFulfillmentResourceAttributesInput(@JsonProperty("fulfilled_at") String fulfilledAt, @JsonProperty("fulfilled_value") Double fulfilledValue) {
+        this.fulfilledAt = fulfilledAt;
+        this.fulfilledValue = fulfilledValue;
+  }
 }

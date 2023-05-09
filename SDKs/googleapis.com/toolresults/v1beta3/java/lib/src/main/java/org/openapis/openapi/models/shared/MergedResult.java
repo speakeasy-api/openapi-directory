@@ -18,6 +18,7 @@ public class MergedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outcome")
     public Outcome outcome;
+
     public MergedResult withOutcome(Outcome outcome) {
         this.outcome = outcome;
         return this;
@@ -29,6 +30,7 @@ public class MergedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MergedResultStateEnum state;
+
     public MergedResult withState(MergedResultStateEnum state) {
         this.state = state;
         return this;
@@ -40,9 +42,11 @@ public class MergedResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testSuiteOverviews")
     public TestSuiteOverview[] testSuiteOverviews;
+
     public MergedResult withTestSuiteOverviews(TestSuiteOverview[] testSuiteOverviews) {
         this.testSuiteOverviews = testSuiteOverviews;
         return this;
     }
     
+    public MergedResult(){}
 }

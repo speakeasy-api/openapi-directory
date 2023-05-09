@@ -18,9 +18,11 @@ public class AccountsUpdateLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsUpdateLabelsResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsUpdateLabelsResponse(){}
 }

@@ -18,6 +18,7 @@ public class TargetPoolListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetPoolListWarningCodeEnum code;
+
     public TargetPoolListWarning withCode(TargetPoolListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetPoolListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetPoolListWarningData[] data;
+
     public TargetPoolListWarning withData(TargetPoolListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetPoolListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetPoolListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetPoolListWarning(){}
 }

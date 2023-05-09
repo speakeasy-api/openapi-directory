@@ -15,9 +15,11 @@ public class GetPortalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal")
     public Portal portal;
+
     public GetPortalResponse withPortal(Portal portal) {
         this.portal = portal;
         return this;
     }
     
+    public GetPortalResponse(){}
 }

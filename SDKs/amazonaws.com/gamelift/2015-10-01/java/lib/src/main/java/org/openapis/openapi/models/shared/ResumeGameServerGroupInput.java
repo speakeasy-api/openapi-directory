@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResumeGameServerGroupInput {
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public ResumeGameServerGroupInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -16,9 +17,14 @@ public class ResumeGameServerGroupInput {
     
     @JsonProperty("ResumeActions")
     public GameServerGroupActionEnum[] resumeActions;
+
     public ResumeGameServerGroupInput withResumeActions(GameServerGroupActionEnum[] resumeActions) {
         this.resumeActions = resumeActions;
         return this;
     }
     
+    public ResumeGameServerGroupInput(@JsonProperty("GameServerGroupName") String gameServerGroupName, @JsonProperty("ResumeActions") GameServerGroupActionEnum[] resumeActions) {
+        this.gameServerGroupName = gameServerGroupName;
+        this.resumeActions = resumeActions;
+  }
 }

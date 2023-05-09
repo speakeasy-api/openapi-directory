@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BuildsGetRequest {
@@ -12,6 +13,7 @@ public class BuildsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public BuildsGetRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class BuildsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_id")
     public Long buildId;
+
     public BuildsGetRequest withBuildId(Long buildId) {
         this.buildId = buildId;
         return this;
@@ -32,9 +35,15 @@ public class BuildsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public BuildsGetRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BuildsGetRequest(@JsonProperty("app_name") String appName, @JsonProperty("build_id") Long buildId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.buildId = buildId;
+        this.ownerName = ownerName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaVersionResponse {
@@ -12,6 +13,7 @@ public class GetSchemaVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSchemaVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaVersionResponse {
     
     
     public String contentType;
+
     public GetSchemaVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaVersionResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetSchemaVersionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaVersionResponse getSchemaVersionResponse;
+
     public GetSchemaVersionResponse withGetSchemaVersionResponse(org.openapis.openapi.models.shared.GetSchemaVersionResponse getSchemaVersionResponse) {
         this.getSchemaVersionResponse = getSchemaVersionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaVersionResponse {
      */
     
     public Object internalServiceException;
+
     public GetSchemaVersionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetSchemaVersionResponse {
      */
     
     public Object invalidInputException;
+
     public GetSchemaVersionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetSchemaVersionResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSchemaVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchemaVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

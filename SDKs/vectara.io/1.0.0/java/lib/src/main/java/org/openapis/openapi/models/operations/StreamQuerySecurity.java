@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class StreamQuerySecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String apiKeyAuth;
+
     public StreamQuerySecurity withApiKeyAuth(String apiKeyAuth) {
         this.apiKeyAuth = apiKeyAuth;
         return this;
@@ -16,9 +17,11 @@ public class StreamQuerySecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oAuth;
+
     public StreamQuerySecurity withOAuth(String oAuth) {
         this.oAuth = oAuth;
         return this;
     }
     
+    public StreamQuerySecurity(){}
 }

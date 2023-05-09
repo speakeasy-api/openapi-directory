@@ -18,6 +18,7 @@ public class NodeTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public NodeTemplateListWarningCodeEnum code;
+
     public NodeTemplateListWarning withCode(NodeTemplateListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class NodeTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public NodeTemplateListWarningData[] data;
+
     public NodeTemplateListWarning withData(NodeTemplateListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class NodeTemplateListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NodeTemplateListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NodeTemplateListWarning(){}
 }

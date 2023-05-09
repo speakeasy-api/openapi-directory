@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteApplicationVersionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteApplicationVersionActionEnum action;
+
     public GETDeleteApplicationVersionRequest withAction(GETDeleteApplicationVersionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteApplicationVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ApplicationName")
     public String applicationName;
+
     public GETDeleteApplicationVersionRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -29,6 +32,7 @@ public class GETDeleteApplicationVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DeleteSourceBundle")
     public Boolean deleteSourceBundle;
+
     public GETDeleteApplicationVersionRequest withDeleteSourceBundle(Boolean deleteSourceBundle) {
         this.deleteSourceBundle = deleteSourceBundle;
         return this;
@@ -36,6 +40,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteApplicationVersionVersionEnum version;
+
     public GETDeleteApplicationVersionRequest withVersion(GETDeleteApplicationVersionVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETDeleteApplicationVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionLabel")
     public String versionLabel;
+
     public GETDeleteApplicationVersionRequest withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
@@ -53,6 +59,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteApplicationVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteApplicationVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteApplicationVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteApplicationVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteApplicationVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteApplicationVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETDeleteApplicationVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteApplicationVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteApplicationVersionRequest(@JsonProperty("Action") GETDeleteApplicationVersionActionEnum action, @JsonProperty("ApplicationName") String applicationName, @JsonProperty("Version") GETDeleteApplicationVersionVersionEnum version, @JsonProperty("VersionLabel") String versionLabel) {
+        this.action = action;
+        this.applicationName = applicationName;
+        this.version = version;
+        this.versionLabel = versionLabel;
+  }
 }

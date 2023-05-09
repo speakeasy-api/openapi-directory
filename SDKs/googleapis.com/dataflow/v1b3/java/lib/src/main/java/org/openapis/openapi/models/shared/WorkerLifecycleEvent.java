@@ -18,6 +18,7 @@ public class WorkerLifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerStartTime")
     public String containerStartTime;
+
     public WorkerLifecycleEvent withContainerStartTime(String containerStartTime) {
         this.containerStartTime = containerStartTime;
         return this;
@@ -29,6 +30,7 @@ public class WorkerLifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public WorkerLifecycleEventEventEnum event;
+
     public WorkerLifecycleEvent withEvent(WorkerLifecycleEventEventEnum event) {
         this.event = event;
         return this;
@@ -40,9 +42,11 @@ public class WorkerLifecycleEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public WorkerLifecycleEvent withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public WorkerLifecycleEvent(){}
 }

@@ -18,6 +18,7 @@ public class ChromeOsDeviceCpuInfoLogicalCpusCStates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ChromeOsDeviceCpuInfoLogicalCpusCStates withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class ChromeOsDeviceCpuInfoLogicalCpusCStates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionDuration")
     public String sessionDuration;
+
     public ChromeOsDeviceCpuInfoLogicalCpusCStates withSessionDuration(String sessionDuration) {
         this.sessionDuration = sessionDuration;
         return this;
     }
     
+    public ChromeOsDeviceCpuInfoLogicalCpusCStates(){}
 }

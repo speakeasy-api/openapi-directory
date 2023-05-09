@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCommunicationPreferencesV3SubscribeSubscribeResponse {
     
     public byte[] body;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeResponse {
     
     
     public String contentType;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicSubscriptionStatus publicSubscriptionStatus;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeResponse withPublicSubscriptionStatus(org.openapis.openapi.models.shared.PublicSubscriptionStatus publicSubscriptionStatus) {
         this.publicSubscriptionStatus = publicSubscriptionStatus;
         return this;
@@ -33,6 +37,7 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeResponse {
     
     
     public Integer statusCode;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostCommunicationPreferencesV3SubscribeSubscribeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCommunicationPreferencesV3SubscribeSubscribeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCommunicationPreferencesV3SubscribeSubscribeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

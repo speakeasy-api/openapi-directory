@@ -18,9 +18,11 @@ public class IsInvitableUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInvitableUser")
     public Boolean isInvitableUser;
+
     public IsInvitableUserResponse withIsInvitableUser(Boolean isInvitableUser) {
         this.isInvitableUser = isInvitableUser;
         return this;
     }
     
+    public IsInvitableUserResponse(){}
 }

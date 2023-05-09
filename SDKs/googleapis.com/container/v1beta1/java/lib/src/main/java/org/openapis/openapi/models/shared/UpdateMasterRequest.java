@@ -18,6 +18,7 @@ public class UpdateMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterId")
     public String clusterId;
+
     public UpdateMasterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -29,6 +30,7 @@ public class UpdateMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("masterVersion")
     public String masterVersion;
+
     public UpdateMasterRequest withMasterVersion(String masterVersion) {
         this.masterVersion = masterVersion;
         return this;
@@ -40,6 +42,7 @@ public class UpdateMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateMasterRequest withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class UpdateMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public UpdateMasterRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -62,9 +66,11 @@ public class UpdateMasterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public UpdateMasterRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public UpdateMasterRequest(){}
 }

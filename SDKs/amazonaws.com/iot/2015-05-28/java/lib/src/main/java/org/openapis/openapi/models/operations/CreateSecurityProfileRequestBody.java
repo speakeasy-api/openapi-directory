@@ -15,6 +15,7 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetain")
     public String[] additionalMetricsToRetain;
+
     public CreateSecurityProfileRequestBody withAdditionalMetricsToRetain(String[] additionalMetricsToRetain) {
         this.additionalMetricsToRetain = additionalMetricsToRetain;
         return this;
@@ -26,6 +27,7 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMetricsToRetainV2")
     public org.openapis.openapi.models.shared.MetricToRetain[] additionalMetricsToRetainV2;
+
     public CreateSecurityProfileRequestBody withAdditionalMetricsToRetainV2(org.openapis.openapi.models.shared.MetricToRetain[] additionalMetricsToRetainV2) {
         this.additionalMetricsToRetainV2 = additionalMetricsToRetainV2;
         return this;
@@ -37,6 +39,7 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertTargets")
     public java.util.Map<String, org.openapis.openapi.models.shared.AlertTarget> alertTargets;
+
     public CreateSecurityProfileRequestBody withAlertTargets(java.util.Map<String, org.openapis.openapi.models.shared.AlertTarget> alertTargets) {
         this.alertTargets = alertTargets;
         return this;
@@ -48,6 +51,7 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviors")
     public org.openapis.openapi.models.shared.Behavior[] behaviors;
+
     public CreateSecurityProfileRequestBody withBehaviors(org.openapis.openapi.models.shared.Behavior[] behaviors) {
         this.behaviors = behaviors;
         return this;
@@ -59,6 +63,7 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileDescription")
     public String securityProfileDescription;
+
     public CreateSecurityProfileRequestBody withSecurityProfileDescription(String securityProfileDescription) {
         this.securityProfileDescription = securityProfileDescription;
         return this;
@@ -70,9 +75,11 @@ public class CreateSecurityProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateSecurityProfileRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSecurityProfileRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteParallelDataResponse {
@@ -12,6 +13,7 @@ public class DeleteParallelDataResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteParallelDataResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteParallelDataResponse {
     
     
     public String contentType;
+
     public DeleteParallelDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteParallelDataResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteParallelDataResponse deleteParallelDataResponse;
+
     public DeleteParallelDataResponse withDeleteParallelDataResponse(org.openapis.openapi.models.shared.DeleteParallelDataResponse deleteParallelDataResponse) {
         this.deleteParallelDataResponse = deleteParallelDataResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteParallelDataResponse {
      */
     
     public Object internalServerException;
+
     public DeleteParallelDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteParallelDataResponse {
     
     
     public Integer statusCode;
+
     public DeleteParallelDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteParallelDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteParallelDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteParallelDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteParallelDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteParallelDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteParallelDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteParallelDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

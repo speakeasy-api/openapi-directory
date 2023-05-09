@@ -15,9 +15,11 @@ public class DescribeConditionalForwardersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalForwarders")
     public ConditionalForwarder[] conditionalForwarders;
+
     public DescribeConditionalForwardersResult withConditionalForwarders(ConditionalForwarder[] conditionalForwarders) {
         this.conditionalForwarders = conditionalForwarders;
         return this;
     }
     
+    public DescribeConditionalForwardersResult(){}
 }

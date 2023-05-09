@@ -15,9 +15,11 @@ public class GetRiskParameters200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_parameters")
     public org.openapis.openapi.models.shared.RiskParameterV1[] riskParameters;
+
     public GetRiskParameters200ApplicationJSON withRiskParameters(org.openapis.openapi.models.shared.RiskParameterV1[] riskParameters) {
         this.riskParameters = riskParameters;
         return this;
     }
     
+    public GetRiskParameters200ApplicationJSON(){}
 }

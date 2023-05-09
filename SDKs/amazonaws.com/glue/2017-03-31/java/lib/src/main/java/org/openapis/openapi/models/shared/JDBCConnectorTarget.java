@@ -15,6 +15,7 @@ public class JDBCConnectorTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public JDBCConnectorTarget withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public JDBCConnectorTarget withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -29,6 +31,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("ConnectionTable")
     public String connectionTable;
+
     public JDBCConnectorTarget withConnectionTable(String connectionTable) {
         this.connectionTable = connectionTable;
         return this;
@@ -36,6 +39,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("ConnectionType")
     public String connectionType;
+
     public JDBCConnectorTarget withConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -43,6 +47,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("ConnectorName")
     public String connectorName;
+
     public JDBCConnectorTarget withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -50,6 +55,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public JDBCConnectorTarget withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -57,6 +63,7 @@ public class JDBCConnectorTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public JDBCConnectorTarget withName(String name) {
         this.name = name;
         return this;
@@ -65,9 +72,18 @@ public class JDBCConnectorTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public JDBCConnectorTarget withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
     }
     
+    public JDBCConnectorTarget(@JsonProperty("ConnectionName") String connectionName, @JsonProperty("ConnectionTable") String connectionTable, @JsonProperty("ConnectionType") String connectionType, @JsonProperty("ConnectorName") String connectorName, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.connectionName = connectionName;
+        this.connectionTable = connectionTable;
+        this.connectionType = connectionType;
+        this.connectorName = connectorName;
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

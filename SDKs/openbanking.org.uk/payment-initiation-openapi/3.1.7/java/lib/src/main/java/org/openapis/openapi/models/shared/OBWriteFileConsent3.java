@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OBWriteFileConsent3 {
     @JsonProperty("Data")
     public OBWriteFileConsent3Data data;
+
     public OBWriteFileConsent3 withData(OBWriteFileConsent3Data data) {
         this.data = data;
         return this;
     }
     
+    public OBWriteFileConsent3(@JsonProperty("Data") OBWriteFileConsent3Data data) {
+        this.data = data;
+  }
 }

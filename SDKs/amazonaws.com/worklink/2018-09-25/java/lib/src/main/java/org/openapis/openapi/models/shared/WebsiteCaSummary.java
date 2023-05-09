@@ -22,6 +22,7 @@ public class WebsiteCaSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public WebsiteCaSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class WebsiteCaSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public WebsiteCaSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,9 +40,11 @@ public class WebsiteCaSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebsiteCaId")
     public String websiteCaId;
+
     public WebsiteCaSummary withWebsiteCaId(String websiteCaId) {
         this.websiteCaId = websiteCaId;
         return this;
     }
     
+    public WebsiteCaSummary(){}
 }

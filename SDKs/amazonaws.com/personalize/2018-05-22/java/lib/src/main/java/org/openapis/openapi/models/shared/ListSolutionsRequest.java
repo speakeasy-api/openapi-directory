@@ -12,6 +12,7 @@ public class ListSolutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public ListSolutionsRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
@@ -20,6 +21,7 @@ public class ListSolutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSolutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListSolutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSolutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListSolutionsRequest(){}
 }

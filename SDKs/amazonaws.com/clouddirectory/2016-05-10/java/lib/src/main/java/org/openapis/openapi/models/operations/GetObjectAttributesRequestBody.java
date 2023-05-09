@@ -12,6 +12,7 @@ public class GetObjectAttributesRequestBody {
      */
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public GetObjectAttributesRequestBody withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -22,6 +23,7 @@ public class GetObjectAttributesRequestBody {
      */
     @JsonProperty("ObjectReference")
     public GetObjectAttributesRequestBodyObjectReference objectReference;
+
     public GetObjectAttributesRequestBody withObjectReference(GetObjectAttributesRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
@@ -32,9 +34,15 @@ public class GetObjectAttributesRequestBody {
      */
     @JsonProperty("SchemaFacet")
     public GetObjectAttributesRequestBodySchemaFacet schemaFacet;
+
     public GetObjectAttributesRequestBody withSchemaFacet(GetObjectAttributesRequestBodySchemaFacet schemaFacet) {
         this.schemaFacet = schemaFacet;
         return this;
     }
     
+    public GetObjectAttributesRequestBody(@JsonProperty("AttributeNames") String[] attributeNames, @JsonProperty("ObjectReference") GetObjectAttributesRequestBodyObjectReference objectReference, @JsonProperty("SchemaFacet") GetObjectAttributesRequestBodySchemaFacet schemaFacet) {
+        this.attributeNames = attributeNames;
+        this.objectReference = objectReference;
+        this.schemaFacet = schemaFacet;
+  }
 }

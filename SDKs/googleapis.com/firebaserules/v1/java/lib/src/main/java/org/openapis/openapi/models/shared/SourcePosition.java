@@ -18,6 +18,7 @@ public class SourcePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public Integer column;
+
     public SourcePosition withColumn(Integer column) {
         this.column = column;
         return this;
@@ -29,6 +30,7 @@ public class SourcePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentOffset")
     public Integer currentOffset;
+
     public SourcePosition withCurrentOffset(Integer currentOffset) {
         this.currentOffset = currentOffset;
         return this;
@@ -40,6 +42,7 @@ public class SourcePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffset")
     public Integer endOffset;
+
     public SourcePosition withEndOffset(Integer endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -51,6 +54,7 @@ public class SourcePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public SourcePosition withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -62,9 +66,11 @@ public class SourcePosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line")
     public Integer line;
+
     public SourcePosition withLine(Integer line) {
         this.line = line;
         return this;
     }
     
+    public SourcePosition(){}
 }

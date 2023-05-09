@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApnsChannelResponse {
@@ -12,6 +13,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object badRequestException;
+
     public DeleteApnsChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApnsChannelResponse {
     
     
     public String contentType;
+
     public DeleteApnsChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApnsChannelResponse deleteApnsChannelResponse;
+
     public DeleteApnsChannelResponse withDeleteApnsChannelResponse(org.openapis.openapi.models.shared.DeleteApnsChannelResponse deleteApnsChannelResponse) {
         this.deleteApnsChannelResponse = deleteApnsChannelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteApnsChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteApnsChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public DeleteApnsChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object notFoundException;
+
     public DeleteApnsChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public DeleteApnsChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteApnsChannelResponse {
     
     
     public Integer statusCode;
+
     public DeleteApnsChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteApnsChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApnsChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteApnsChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteApnsChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteApnsChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("ArticleId")
     @SpeakeasyMetadata("form:name=ArticleId")
     public Long articleId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -26,6 +27,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("IsDefault")
     @SpeakeasyMetadata("form:name=IsDefault")
     public Boolean isDefault;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -44,6 +47,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("Position")
     @SpeakeasyMetadata("form:name=Position")
     public Integer position;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withPosition(Integer position) {
         this.position = position;
         return this;
@@ -53,6 +57,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("ThumbPathExt")
     @SpeakeasyMetadata("form:name=ThumbPathExt")
     public String thumbPathExt;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withThumbPathExt(String thumbPathExt) {
         this.thumbPathExt = thumbPathExt;
         return this;
@@ -62,6 +67,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("ThumbUrl")
     @SpeakeasyMetadata("form:name=ThumbUrl")
     public String thumbUrl;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withThumbUrl(String thumbUrl) {
         this.thumbUrl = thumbUrl;
         return this;
@@ -71,9 +77,11 @@ public class BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel {
     @JsonProperty("Url")
     @SpeakeasyMetadata("form:name=Url")
     public String url;
+
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel(){}
 }

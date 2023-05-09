@@ -12,9 +12,13 @@ public class UsersCreateGpgKeyForAuthenticatedUserRequestBody {
      */
     @JsonProperty("armored_public_key")
     public String armoredPublicKey;
+
     public UsersCreateGpgKeyForAuthenticatedUserRequestBody withArmoredPublicKey(String armoredPublicKey) {
         this.armoredPublicKey = armoredPublicKey;
         return this;
     }
     
+    public UsersCreateGpgKeyForAuthenticatedUserRequestBody(@JsonProperty("armored_public_key") String armoredPublicKey) {
+        this.armoredPublicKey = armoredPublicKey;
+  }
 }

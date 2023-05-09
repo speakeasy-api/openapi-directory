@@ -18,6 +18,7 @@ public class WatchCreativesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public String subscription;
+
     public WatchCreativesResponse withSubscription(String subscription) {
         this.subscription = subscription;
         return this;
@@ -29,9 +30,11 @@ public class WatchCreativesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public WatchCreativesResponse withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public WatchCreativesResponse(){}
 }

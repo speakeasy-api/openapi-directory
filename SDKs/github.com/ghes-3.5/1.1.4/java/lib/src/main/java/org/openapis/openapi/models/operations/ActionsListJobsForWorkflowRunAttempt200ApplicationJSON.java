@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionsListJobsForWorkflowRunAttempt200ApplicationJSON {
     @JsonProperty("jobs")
     public org.openapis.openapi.models.shared.Job[] jobs;
+
     public ActionsListJobsForWorkflowRunAttempt200ApplicationJSON withJobs(org.openapis.openapi.models.shared.Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -19,9 +20,14 @@ public class ActionsListJobsForWorkflowRunAttempt200ApplicationJSON {
     
     @JsonProperty("total_count")
     public Long totalCount;
+
     public ActionsListJobsForWorkflowRunAttempt200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ActionsListJobsForWorkflowRunAttempt200ApplicationJSON(@JsonProperty("jobs") org.openapis.openapi.models.shared.Job[] jobs, @JsonProperty("total_count") Long totalCount) {
+        this.jobs = jobs;
+        this.totalCount = totalCount;
+  }
 }

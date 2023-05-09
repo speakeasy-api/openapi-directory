@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MonitoringServicesServiceLevelObjectivesPatchResponse {
     
     public String contentType;
+
     public MonitoringServicesServiceLevelObjectivesPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MonitoringServicesServiceLevelObjectivesPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceLevelObjective serviceLevelObjective;
+
     public MonitoringServicesServiceLevelObjectivesPatchResponse withServiceLevelObjective(org.openapis.openapi.models.shared.ServiceLevelObjective serviceLevelObjective) {
         this.serviceLevelObjective = serviceLevelObjective;
         return this;
@@ -26,6 +29,7 @@ public class MonitoringServicesServiceLevelObjectivesPatchResponse {
     
     
     public Integer statusCode;
+
     public MonitoringServicesServiceLevelObjectivesPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MonitoringServicesServiceLevelObjectivesPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MonitoringServicesServiceLevelObjectivesPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MonitoringServicesServiceLevelObjectivesPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

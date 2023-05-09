@@ -15,6 +15,7 @@ public class CreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public CreateUserResponse withLinks(Links links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class CreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountGroups")
     public String[] accountGroups;
+
     public CreateUserResponse withAccountGroups(String[] accountGroups) {
         this.accountGroups = accountGroups;
         return this;
@@ -37,8 +39,21 @@ public class CreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CreateUserResponse withActive(Boolean active) {
         this.active = active;
+        return this;
+    }
+    
+    /**
+     * Set of authn apps available to this user
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("authnApps")
+    public String[] authnApps;
+
+    public CreateUserResponse withAuthnApps(String[] authnApps) {
+        this.authnApps = authnApps;
         return this;
     }
     
@@ -47,6 +62,7 @@ public class CreateUserResponse {
      */
     @JsonProperty("email")
     public String email;
+
     public CreateUserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -57,6 +73,7 @@ public class CreateUserResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateUserResponse withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +82,7 @@ public class CreateUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public Name name;
+
     public CreateUserResponse withName(Name name) {
         this.name = name;
         return this;
@@ -75,6 +93,7 @@ public class CreateUserResponse {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateUserResponse withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -85,6 +104,7 @@ public class CreateUserResponse {
      */
     @JsonProperty("timeZoneCode")
     public String timeZoneCode;
+
     public CreateUserResponse withTimeZoneCode(String timeZoneCode) {
         this.timeZoneCode = timeZoneCode;
         return this;
@@ -95,9 +115,17 @@ public class CreateUserResponse {
      */
     @JsonProperty("username")
     public String username;
+
     public CreateUserResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateUserResponse(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("timeZoneCode") String timeZoneCode, @JsonProperty("username") String username) {
+        this.email = email;
+        this.id = id;
+        this.roles = roles;
+        this.timeZoneCode = timeZoneCode;
+        this.username = username;
+  }
 }

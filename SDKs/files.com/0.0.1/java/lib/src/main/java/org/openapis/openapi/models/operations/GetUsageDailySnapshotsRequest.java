@@ -12,6 +12,7 @@ public class GetUsageDailySnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsageDailySnapshotsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,56 +23,51 @@ public class GetUsageDailySnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetUsageDailySnapshotsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `date`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
     public java.util.Map<String, Object> filterGt;
+
     public GetUsageDailySnapshotsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
         this.filterGt = filterGt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `date`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
     public java.util.Map<String, Object> filterGteq;
+
     public GetUsageDailySnapshotsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
         this.filterGteq = filterGteq;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetUsageDailySnapshotsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `date`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
     public java.util.Map<String, Object> filterLt;
+
     public GetUsageDailySnapshotsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
         this.filterLt = filterLt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `date` and `usage_snapshot_id`. Valid field combinations are `[ usage_snapshot_id, date ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `date`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
     public java.util.Map<String, Object> filterLteq;
+
     public GetUsageDailySnapshotsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
         this.filterLteq = filterLteq;
         return this;
@@ -82,6 +78,7 @@ public class GetUsageDailySnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetUsageDailySnapshotsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -92,9 +89,11 @@ public class GetUsageDailySnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetUsageDailySnapshotsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public GetUsageDailySnapshotsRequest(){}
 }

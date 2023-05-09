@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     public String country;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -16,6 +17,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String district;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withDistrict(String district) {
         this.district = district;
         return this;
@@ -23,6 +25,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String house;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withHouse(String house) {
         this.house = house;
         return this;
@@ -30,6 +33,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String landmark;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withLandmark(String landmark) {
         this.landmark = landmark;
         return this;
@@ -37,6 +41,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String line1;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -44,6 +49,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String line2;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -51,6 +57,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String locality;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -58,6 +65,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String pin;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withPin(String pin) {
         this.pin = pin;
         return this;
@@ -65,6 +73,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String state;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withState(String state) {
         this.state = state;
         return this;
@@ -72,6 +81,7 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String type;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withType(String type) {
         this.type = type;
         return this;
@@ -79,9 +89,23 @@ public class DrivingLicenseSchemaIssuedToPersonAddress {
     
     
     public String vtc;
+
     public DrivingLicenseSchemaIssuedToPersonAddress withVtc(String vtc) {
         this.vtc = vtc;
         return this;
     }
     
+    public DrivingLicenseSchemaIssuedToPersonAddress(@JsonProperty("country") String country, @JsonProperty("district") String district, @JsonProperty("house") String house, @JsonProperty("landmark") String landmark, @JsonProperty("line1") String line1, @JsonProperty("line2") String line2, @JsonProperty("locality") String locality, @JsonProperty("pin") String pin, @JsonProperty("state") String state, @JsonProperty("type") String type, @JsonProperty("vtc") String vtc) {
+        this.country = country;
+        this.district = district;
+        this.house = house;
+        this.landmark = landmark;
+        this.line1 = line1;
+        this.line2 = line2;
+        this.locality = locality;
+        this.pin = pin;
+        this.state = state;
+        this.type = type;
+        this.vtc = vtc;
+  }
 }

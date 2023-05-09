@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateSubnetCidrBlockResult {
     
     public DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation ipv6CidrBlockAssociation;
+
     public DisassociateSubnetCidrBlockResult withIpv6CidrBlockAssociation(DisassociateSubnetCidrBlockResultIpv6CidrBlockAssociation ipv6CidrBlockAssociation) {
         this.ipv6CidrBlockAssociation = ipv6CidrBlockAssociation;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateSubnetCidrBlockResult {
     
     
     public String subnetId;
+
     public DisassociateSubnetCidrBlockResult withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public DisassociateSubnetCidrBlockResult(){}
 }

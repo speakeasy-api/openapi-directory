@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDelegatedAdminAccountsResponse {
@@ -12,6 +13,7 @@ public class ListDelegatedAdminAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDelegatedAdminAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDelegatedAdminAccountsResponse {
     
     
     public String contentType;
+
     public ListDelegatedAdminAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDelegatedAdminAccountsResponse {
      */
     
     public Object internalServerException;
+
     public ListDelegatedAdminAccountsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListDelegatedAdminAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDelegatedAdminAccountsResponse listDelegatedAdminAccountsResponse;
+
     public ListDelegatedAdminAccountsResponse withListDelegatedAdminAccountsResponse(org.openapis.openapi.models.shared.ListDelegatedAdminAccountsResponse listDelegatedAdminAccountsResponse) {
         this.listDelegatedAdminAccountsResponse = listDelegatedAdminAccountsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListDelegatedAdminAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListDelegatedAdminAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListDelegatedAdminAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDelegatedAdminAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListDelegatedAdminAccountsResponse {
      */
     
     public Object throttlingException;
+
     public ListDelegatedAdminAccountsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListDelegatedAdminAccountsResponse {
      */
     
     public Object validationException;
+
     public ListDelegatedAdminAccountsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListDelegatedAdminAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

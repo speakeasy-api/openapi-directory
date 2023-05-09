@@ -15,9 +15,13 @@ public class GetPricing200ApplicationJSONPricingServerBackup {
      */
     @JsonProperty("percentage")
     public String percentage;
+
     public GetPricing200ApplicationJSONPricingServerBackup withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingServerBackup(@JsonProperty("percentage") String percentage) {
+        this.percentage = percentage;
+  }
 }

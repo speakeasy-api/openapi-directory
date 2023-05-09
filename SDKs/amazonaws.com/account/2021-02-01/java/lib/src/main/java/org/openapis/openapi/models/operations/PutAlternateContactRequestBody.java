@@ -15,6 +15,7 @@ public class PutAlternateContactRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public PutAlternateContactRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class PutAlternateContactRequestBody {
      */
     @JsonProperty("AlternateContactType")
     public PutAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType;
+
     public PutAlternateContactRequestBody withAlternateContactType(PutAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType) {
         this.alternateContactType = alternateContactType;
         return this;
@@ -35,6 +37,7 @@ public class PutAlternateContactRequestBody {
      */
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public PutAlternateContactRequestBody withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -45,6 +48,7 @@ public class PutAlternateContactRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public PutAlternateContactRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class PutAlternateContactRequestBody {
      */
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public PutAlternateContactRequestBody withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -65,9 +70,17 @@ public class PutAlternateContactRequestBody {
      */
     @JsonProperty("Title")
     public String title;
+
     public PutAlternateContactRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PutAlternateContactRequestBody(@JsonProperty("AlternateContactType") PutAlternateContactRequestBodyAlternateContactTypeEnum alternateContactType, @JsonProperty("EmailAddress") String emailAddress, @JsonProperty("Name") String name, @JsonProperty("PhoneNumber") String phoneNumber, @JsonProperty("Title") String title) {
+        this.alternateContactType = alternateContactType;
+        this.emailAddress = emailAddress;
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+        this.title = title;
+  }
 }

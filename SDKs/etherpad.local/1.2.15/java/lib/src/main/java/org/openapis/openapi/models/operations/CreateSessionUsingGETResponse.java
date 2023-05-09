@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSessionUsingGETResponse {
     
     public String contentType;
+
     public CreateSessionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateSessionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateSessionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateSessionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSessionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateSessionUsingGETResponse {
      */
     
     public CreateSessionUsingGET200ApplicationJSON createSessionUsingGET200ApplicationJSONObject;
+
     public CreateSessionUsingGETResponse withCreateSessionUsingGET200ApplicationJSONObject(CreateSessionUsingGET200ApplicationJSON createSessionUsingGET200ApplicationJSONObject) {
         this.createSessionUsingGET200ApplicationJSONObject = createSessionUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateSessionUsingGETResponse {
      */
     
     public CreateSessionUsingGET400ApplicationJSON createSessionUsingGET400ApplicationJSONObject;
+
     public CreateSessionUsingGETResponse withCreateSessionUsingGET400ApplicationJSONObject(CreateSessionUsingGET400ApplicationJSON createSessionUsingGET400ApplicationJSONObject) {
         this.createSessionUsingGET400ApplicationJSONObject = createSessionUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateSessionUsingGETResponse {
      */
     
     public CreateSessionUsingGET401ApplicationJSON createSessionUsingGET401ApplicationJSONObject;
+
     public CreateSessionUsingGETResponse withCreateSessionUsingGET401ApplicationJSONObject(CreateSessionUsingGET401ApplicationJSON createSessionUsingGET401ApplicationJSONObject) {
         this.createSessionUsingGET401ApplicationJSONObject = createSessionUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateSessionUsingGETResponse {
      */
     
     public CreateSessionUsingGET500ApplicationJSON createSessionUsingGET500ApplicationJSONObject;
+
     public CreateSessionUsingGETResponse withCreateSessionUsingGET500ApplicationJSONObject(CreateSessionUsingGET500ApplicationJSON createSessionUsingGET500ApplicationJSONObject) {
         this.createSessionUsingGET500ApplicationJSONObject = createSessionUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateSessionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

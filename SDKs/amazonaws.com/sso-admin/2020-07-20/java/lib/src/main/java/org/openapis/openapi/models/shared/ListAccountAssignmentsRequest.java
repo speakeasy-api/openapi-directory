@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAccountAssignmentsRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListAccountAssignmentsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -18,6 +19,7 @@ public class ListAccountAssignmentsRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListAccountAssignmentsRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -26,6 +28,7 @@ public class ListAccountAssignmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAccountAssignmentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +37,7 @@ public class ListAccountAssignmentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAccountAssignmentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -41,9 +45,15 @@ public class ListAccountAssignmentsRequest {
     
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public ListAccountAssignmentsRequest withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
     }
     
+    public ListAccountAssignmentsRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("InstanceArn") String instanceArn, @JsonProperty("PermissionSetArn") String permissionSetArn) {
+        this.accountId = accountId;
+        this.instanceArn = instanceArn;
+        this.permissionSetArn = permissionSetArn;
+  }
 }

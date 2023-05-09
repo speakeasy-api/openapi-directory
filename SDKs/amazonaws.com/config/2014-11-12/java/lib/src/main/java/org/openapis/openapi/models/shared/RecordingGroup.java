@@ -15,6 +15,7 @@ public class RecordingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allSupported")
     public Boolean allSupported;
+
     public RecordingGroup withAllSupported(Boolean allSupported) {
         this.allSupported = allSupported;
         return this;
@@ -23,6 +24,7 @@ public class RecordingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeGlobalResourceTypes")
     public Boolean includeGlobalResourceTypes;
+
     public RecordingGroup withIncludeGlobalResourceTypes(Boolean includeGlobalResourceTypes) {
         this.includeGlobalResourceTypes = includeGlobalResourceTypes;
         return this;
@@ -31,9 +33,11 @@ public class RecordingGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public ResourceTypeEnum[] resourceTypes;
+
     public RecordingGroup withResourceTypes(ResourceTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
     }
     
+    public RecordingGroup(){}
 }

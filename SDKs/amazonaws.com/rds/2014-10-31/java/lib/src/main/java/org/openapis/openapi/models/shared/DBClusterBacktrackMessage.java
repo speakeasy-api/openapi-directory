@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterBacktrackMessage {
     
     public DBClusterBacktrackList[] dbClusterBacktracks;
+
     public DBClusterBacktrackMessage withDBClusterBacktracks(DBClusterBacktrackList[] dbClusterBacktracks) {
         this.dbClusterBacktracks = dbClusterBacktracks;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterBacktrackMessage {
     
     
     public String marker;
+
     public DBClusterBacktrackMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DBClusterBacktrackMessage(){}
 }

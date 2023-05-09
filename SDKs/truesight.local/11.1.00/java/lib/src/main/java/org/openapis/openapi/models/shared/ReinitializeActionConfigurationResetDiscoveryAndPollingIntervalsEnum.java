@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum - When set to &lt;em&gt;1&lt;/em&gt;, removes all user-defined frequencies for discovery and polling processes to their default values (respectively 1 hour and 2 minutes).
  */
 public enum ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0),
+    ONE(1);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum(String value) {
+    private ReinitializeActionConfigurationResetDiscoveryAndPollingIntervalsEnum(Integer value) {
         this.value = value;
     }
 }

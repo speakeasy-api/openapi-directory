@@ -18,6 +18,7 @@ public class YoutubeVideoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public YoutubeVideoDetails withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class YoutubeVideoDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unavailableReason")
     public YoutubeVideoDetailsUnavailableReasonEnum unavailableReason;
+
     public YoutubeVideoDetails withUnavailableReason(YoutubeVideoDetailsUnavailableReasonEnum unavailableReason) {
         this.unavailableReason = unavailableReason;
         return this;
     }
     
+    public YoutubeVideoDetails(){}
 }

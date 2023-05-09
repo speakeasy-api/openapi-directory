@@ -15,6 +15,7 @@ public class ListAlarmModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelSummaries")
     public AlarmModelSummary[] alarmModelSummaries;
+
     public ListAlarmModelsResponse withAlarmModelSummaries(AlarmModelSummary[] alarmModelSummaries) {
         this.alarmModelSummaries = alarmModelSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListAlarmModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAlarmModelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAlarmModelsResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public String[] entries;
+
     public GoogleCloudDialogflowV2ValidationError withEntries(String[] entries) {
         this.entries = entries;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public GoogleCloudDialogflowV2ValidationError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public GoogleCloudDialogflowV2ValidationErrorSeverityEnum severity;
+
     public GoogleCloudDialogflowV2ValidationError withSeverity(GoogleCloudDialogflowV2ValidationErrorSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ValidationError(){}
 }

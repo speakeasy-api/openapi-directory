@@ -15,6 +15,7 @@ public class Cocer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Cocer401ApplicationJSONErrorEnum error;
+
     public Cocer401ApplicationJSON withError(Cocer401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Cocer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Cocer401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Cocer401ApplicationJSON withErrorDescription(Cocer401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Cocer401ApplicationJSON(){}
 }

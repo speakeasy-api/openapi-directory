@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportsDatesResponse {
@@ -12,6 +13,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredError fourHundredError;
+
     public GetReportsDatesResponse withFourHundredError(org.openapis.openapi.models.shared.FourHundredError fourHundredError) {
         this.fourHundredError = fourHundredError;
         return this;
@@ -22,6 +24,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError;
+
     public GetReportsDatesResponse withFourHundredAndOneError(org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError) {
         this.fourHundredAndOneError = fourHundredAndOneError;
         return this;
@@ -32,6 +35,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError;
+
     public GetReportsDatesResponse withFourHundredAndThreeError(org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError) {
         this.fourHundredAndThreeError = fourHundredAndThreeError;
         return this;
@@ -42,6 +46,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFourError fourHundredAndFourError;
+
     public GetReportsDatesResponse withFourHundredAndFourError(org.openapis.openapi.models.shared.FourHundredAndFourError fourHundredAndFourError) {
         this.fourHundredAndFourError = fourHundredAndFourError;
         return this;
@@ -52,6 +57,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredError fiveHundredError;
+
     public GetReportsDatesResponse withFiveHundredError(org.openapis.openapi.models.shared.FiveHundredError fiveHundredError) {
         this.fiveHundredError = fiveHundredError;
         return this;
@@ -59,6 +65,7 @@ public class GetReportsDatesResponse {
     
     
     public String contentType;
+
     public GetReportsDatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetReportsDatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportDates reportDates;
+
     public GetReportsDatesResponse withReportDates(org.openapis.openapi.models.shared.ReportDates reportDates) {
         this.reportDates = reportDates;
         return this;
@@ -76,6 +84,7 @@ public class GetReportsDatesResponse {
     
     
     public Integer statusCode;
+
     public GetReportsDatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetReportsDatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportsDatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReportsDatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

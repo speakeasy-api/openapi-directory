@@ -18,9 +18,11 @@ public class WebAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("site")
     public String site;
+
     public WebAsset withSite(String site) {
         this.site = site;
         return this;
     }
     
+    public WebAsset(){}
 }

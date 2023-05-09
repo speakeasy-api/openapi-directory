@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDistributionConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public UpdateDistributionConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object clientException;
+
     public UpdateDistributionConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDistributionConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateDistributionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateDistributionConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public UpdateDistributionConfigurationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateDistributionConfigurationResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDistributionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateDistributionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateDistributionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDistributionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDistributionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDistributionConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object serviceException;
+
     public UpdateDistributionConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateDistributionConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateDistributionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDistributionConfigurationResponse updateDistributionConfigurationResponse;
+
     public UpdateDistributionConfigurationResponse withUpdateDistributionConfigurationResponse(org.openapis.openapi.models.shared.UpdateDistributionConfigurationResponse updateDistributionConfigurationResponse) {
         this.updateDistributionConfigurationResponse = updateDistributionConfigurationResponse;
         return this;
     }
     
+    public UpdateDistributionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

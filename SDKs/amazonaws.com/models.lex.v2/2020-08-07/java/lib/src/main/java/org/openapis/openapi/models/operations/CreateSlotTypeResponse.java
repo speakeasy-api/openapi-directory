@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSlotTypeResponse {
@@ -12,6 +13,7 @@ public class CreateSlotTypeResponse {
      */
     
     public Object conflictException;
+
     public CreateSlotTypeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSlotTypeResponse {
     
     
     public String contentType;
+
     public CreateSlotTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSlotTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSlotTypeResponse createSlotTypeResponse;
+
     public CreateSlotTypeResponse withCreateSlotTypeResponse(org.openapis.openapi.models.shared.CreateSlotTypeResponse createSlotTypeResponse) {
         this.createSlotTypeResponse = createSlotTypeResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSlotTypeResponse {
      */
     
     public Object internalServerException;
+
     public CreateSlotTypeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSlotTypeResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateSlotTypeResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSlotTypeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSlotTypeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSlotTypeResponse {
     
     
     public Integer statusCode;
+
     public CreateSlotTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSlotTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSlotTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateSlotTypeResponse {
      */
     
     public Object throttlingException;
+
     public CreateSlotTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSlotTypeResponse {
      */
     
     public Object validationException;
+
     public CreateSlotTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSlotTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

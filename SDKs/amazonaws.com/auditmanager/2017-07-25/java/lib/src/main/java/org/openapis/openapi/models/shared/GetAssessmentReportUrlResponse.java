@@ -18,9 +18,11 @@ public class GetAssessmentReportUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preSignedUrl")
     public Url preSignedUrl;
+
     public GetAssessmentReportUrlResponse withPreSignedUrl(Url preSignedUrl) {
         this.preSignedUrl = preSignedUrl;
         return this;
     }
     
+    public GetAssessmentReportUrlResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDimensionResponse {
     
     public String contentType;
+
     public CreateDimensionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDimensionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDimensionResponse createDimensionResponse;
+
     public CreateDimensionResponse withCreateDimensionResponse(org.openapis.openapi.models.shared.CreateDimensionResponse createDimensionResponse) {
         this.createDimensionResponse = createDimensionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDimensionResponse {
      */
     
     public Object internalFailureException;
+
     public CreateDimensionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDimensionResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateDimensionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDimensionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDimensionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDimensionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDimensionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDimensionResponse {
     
     
     public Integer statusCode;
+
     public CreateDimensionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDimensionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDimensionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateDimensionResponse {
      */
     
     public Object throttlingException;
+
     public CreateDimensionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateDimensionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

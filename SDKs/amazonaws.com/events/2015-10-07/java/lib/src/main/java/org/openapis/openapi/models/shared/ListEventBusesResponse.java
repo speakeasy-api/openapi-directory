@@ -15,6 +15,7 @@ public class ListEventBusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBuses")
     public EventBus[] eventBuses;
+
     public ListEventBusesResponse withEventBuses(EventBus[] eventBuses) {
         this.eventBuses = eventBuses;
         return this;
@@ -23,9 +24,11 @@ public class ListEventBusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventBusesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventBusesResponse(){}
 }

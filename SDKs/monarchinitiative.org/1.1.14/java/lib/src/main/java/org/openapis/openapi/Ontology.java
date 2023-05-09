@@ -50,10 +50,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologySubsetResponse res = new org.openapis.openapi.models.operations.GetOntologySubsetResponse() {{
+        org.openapis.openapi.models.operations.GetOntologySubsetResponse res = new org.openapis.openapi.models.operations.GetOntologySubsetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -82,10 +80,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologyTermResponse res = new org.openapis.openapi.models.operations.GetOntologyTermResponse() {{
+        org.openapis.openapi.models.operations.GetOntologyTermResponse res = new org.openapis.openapi.models.operations.GetOntologyTermResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +116,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologyTermGraphResponse res = new org.openapis.openapi.models.operations.GetOntologyTermGraphResponse() {{
+        org.openapis.openapi.models.operations.GetOntologyTermGraphResponse res = new org.openapis.openapi.models.operations.GetOntologyTermGraphResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,10 +152,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologyTermSubgraphResponse res = new org.openapis.openapi.models.operations.GetOntologyTermSubgraphResponse() {{
+        org.openapis.openapi.models.operations.GetOntologyTermSubgraphResponse res = new org.openapis.openapi.models.operations.GetOntologyTermSubgraphResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,10 +182,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologyTermSubsetsResponse res = new org.openapis.openapi.models.operations.GetOntologyTermSubsetsResponse() {{
+        org.openapis.openapi.models.operations.GetOntologyTermSubsetsResponse res = new org.openapis.openapi.models.operations.GetOntologyTermSubsetsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -222,10 +212,8 @@ public class Ontology {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorResponse res = new org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorResponse() {{
+        org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorResponse res = new org.openapis.openapi.models.operations.GetOntologyTermsSharedAncestorResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

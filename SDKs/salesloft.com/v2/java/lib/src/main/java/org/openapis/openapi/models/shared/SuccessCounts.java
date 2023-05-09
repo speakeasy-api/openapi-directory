@@ -12,6 +12,7 @@ public class SuccessCounts {
      */
     
     public Long totalCalls;
+
     public SuccessCounts withTotalCalls(Long totalCalls) {
         this.totalCalls = totalCalls;
         return this;
@@ -22,6 +23,7 @@ public class SuccessCounts {
      */
     
     public Long totalEmails;
+
     public SuccessCounts withTotalEmails(Long totalEmails) {
         this.totalEmails = totalEmails;
         return this;
@@ -32,9 +34,11 @@ public class SuccessCounts {
      */
     
     public Long totalOtherTouches;
+
     public SuccessCounts withTotalOtherTouches(Long totalOtherTouches) {
         this.totalOtherTouches = totalOtherTouches;
         return this;
     }
     
+    public SuccessCounts(){}
 }

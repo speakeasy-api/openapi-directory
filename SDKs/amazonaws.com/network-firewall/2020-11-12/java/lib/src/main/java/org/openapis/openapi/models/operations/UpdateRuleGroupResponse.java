@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRuleGroupResponse {
     
     public String contentType;
+
     public UpdateRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object internalServerError;
+
     public UpdateRuleGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateRuleGroupResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object invalidTokenException;
+
     public UpdateRuleGroupResponse withInvalidTokenException(Object invalidTokenException) {
         this.invalidTokenException = invalidTokenException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRuleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRuleGroupResponse updateRuleGroupResponse;
+
     public UpdateRuleGroupResponse withUpdateRuleGroupResponse(org.openapis.openapi.models.shared.UpdateRuleGroupResponse updateRuleGroupResponse) {
         this.updateRuleGroupResponse = updateRuleGroupResponse;
         return this;
     }
     
+    public UpdateRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

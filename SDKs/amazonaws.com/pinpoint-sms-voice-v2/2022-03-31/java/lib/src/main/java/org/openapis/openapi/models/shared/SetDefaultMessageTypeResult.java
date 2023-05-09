@@ -15,6 +15,7 @@ public class SetDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public SetDefaultMessageTypeResult withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -23,6 +24,7 @@ public class SetDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public SetDefaultMessageTypeResult withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -31,9 +33,11 @@ public class SetDefaultMessageTypeResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public SetDefaultMessageTypeResult withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
     }
     
+    public SetDefaultMessageTypeResult(){}
 }

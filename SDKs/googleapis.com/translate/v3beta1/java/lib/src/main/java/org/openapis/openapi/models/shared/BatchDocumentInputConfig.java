@@ -18,9 +18,11 @@ public class BatchDocumentInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public BatchDocumentInputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public BatchDocumentInputConfig(){}
 }

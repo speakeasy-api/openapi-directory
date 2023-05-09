@@ -15,9 +15,11 @@ public class GetDiskResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public Disk disk;
+
     public GetDiskResult withDisk(Disk disk) {
         this.disk = disk;
         return this;
     }
     
+    public GetDiskResult(){}
 }

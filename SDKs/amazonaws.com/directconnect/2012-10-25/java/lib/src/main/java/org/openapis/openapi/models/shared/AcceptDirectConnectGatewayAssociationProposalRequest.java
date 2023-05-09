@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcceptDirectConnectGatewayAssociationProposalRequest {
     @JsonProperty("associatedGatewayOwnerAccount")
     public String associatedGatewayOwnerAccount;
+
     public AcceptDirectConnectGatewayAssociationProposalRequest withAssociatedGatewayOwnerAccount(String associatedGatewayOwnerAccount) {
         this.associatedGatewayOwnerAccount = associatedGatewayOwnerAccount;
         return this;
@@ -18,6 +19,7 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest {
     
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public AcceptDirectConnectGatewayAssociationProposalRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -26,6 +28,7 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrideAllowedPrefixesToDirectConnectGateway")
     public RouteFilterPrefix[] overrideAllowedPrefixesToDirectConnectGateway;
+
     public AcceptDirectConnectGatewayAssociationProposalRequest withOverrideAllowedPrefixesToDirectConnectGateway(RouteFilterPrefix[] overrideAllowedPrefixesToDirectConnectGateway) {
         this.overrideAllowedPrefixesToDirectConnectGateway = overrideAllowedPrefixesToDirectConnectGateway;
         return this;
@@ -33,9 +36,15 @@ public class AcceptDirectConnectGatewayAssociationProposalRequest {
     
     @JsonProperty("proposalId")
     public String proposalId;
+
     public AcceptDirectConnectGatewayAssociationProposalRequest withProposalId(String proposalId) {
         this.proposalId = proposalId;
         return this;
     }
     
+    public AcceptDirectConnectGatewayAssociationProposalRequest(@JsonProperty("associatedGatewayOwnerAccount") String associatedGatewayOwnerAccount, @JsonProperty("directConnectGatewayId") String directConnectGatewayId, @JsonProperty("proposalId") String proposalId) {
+        this.associatedGatewayOwnerAccount = associatedGatewayOwnerAccount;
+        this.directConnectGatewayId = directConnectGatewayId;
+        this.proposalId = proposalId;
+  }
 }

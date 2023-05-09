@@ -18,6 +18,7 @@ public class SalesTaxBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesTaxPercentage")
     public String salesTaxPercentage;
+
     public SalesTaxBase withSalesTaxPercentage(String salesTaxPercentage) {
         this.salesTaxPercentage = salesTaxPercentage;
         return this;
@@ -29,9 +30,11 @@ public class SalesTaxBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingAndHandlingTaxed")
     public Boolean shippingAndHandlingTaxed;
+
     public SalesTaxBase withShippingAndHandlingTaxed(Boolean shippingAndHandlingTaxed) {
         this.shippingAndHandlingTaxed = shippingAndHandlingTaxed;
         return this;
     }
     
+    public SalesTaxBase(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PermissionEntry {
     @JsonProperty("role")
     public RoleEnum role;
+
     public PermissionEntry withRole(RoleEnum role) {
         this.role = role;
         return this;
@@ -19,9 +20,14 @@ public class PermissionEntry {
     
     @JsonProperty("user")
     public User user;
+
     public PermissionEntry withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public PermissionEntry(@JsonProperty("role") RoleEnum role, @JsonProperty("user") User user) {
+        this.role = role;
+        this.user = user;
+  }
 }

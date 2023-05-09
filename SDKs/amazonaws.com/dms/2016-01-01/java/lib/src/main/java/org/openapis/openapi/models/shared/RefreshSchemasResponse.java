@@ -15,9 +15,11 @@ public class RefreshSchemasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshSchemasStatus")
     public RefreshSchemasStatus refreshSchemasStatus;
+
     public RefreshSchemasResponse withRefreshSchemasStatus(RefreshSchemasStatus refreshSchemasStatus) {
         this.refreshSchemasStatus = refreshSchemasStatus;
         return this;
     }
     
+    public RefreshSchemasResponse(){}
 }

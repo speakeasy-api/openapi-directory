@@ -59,11 +59,9 @@ public class WebhookTests {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhookTestsResponse res = new org.openapis.openapi.models.operations.PostWebhookTestsResponse() {{
+        org.openapis.openapi.models.operations.PostWebhookTestsResponse res = new org.openapis.openapi.models.operations.PostWebhookTestsResponse(contentType, httpRes.statusCode()) {{
             webhookTestEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

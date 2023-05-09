@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PolicyGroup {
     
     public String groupId;
+
     public PolicyGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class PolicyGroup {
     
     
     public String groupName;
+
     public PolicyGroup withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public PolicyGroup(){}
 }

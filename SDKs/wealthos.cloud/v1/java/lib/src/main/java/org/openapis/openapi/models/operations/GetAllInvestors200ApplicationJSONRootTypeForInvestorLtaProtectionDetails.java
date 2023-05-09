@@ -15,6 +15,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_individual_protection_amount")
     public String ltaIndividualProtectionAmount;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails withLtaIndividualProtectionAmount(String ltaIndividualProtectionAmount) {
         this.ltaIndividualProtectionAmount = ltaIndividualProtectionAmount;
         return this;
@@ -26,6 +27,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_primary_protection_factor")
     public String ltaPrimaryProtectionFactor;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails withLtaPrimaryProtectionFactor(String ltaPrimaryProtectionFactor) {
         this.ltaPrimaryProtectionFactor = ltaPrimaryProtectionFactor;
         return this;
@@ -37,6 +39,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_notification_number")
     public String ltaProtectionNotificationNumber;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails withLtaProtectionNotificationNumber(String ltaProtectionNotificationNumber) {
         this.ltaProtectionNotificationNumber = ltaProtectionNotificationNumber;
         return this;
@@ -48,6 +51,7 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_scheme_administrator_reference")
     public String ltaProtectionSchemeAdministratorReference;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails withLtaProtectionSchemeAdministratorReference(String ltaProtectionSchemeAdministratorReference) {
         this.ltaProtectionSchemeAdministratorReference = ltaProtectionSchemeAdministratorReference;
         return this;
@@ -55,9 +59,13 @@ public class GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDe
     
     @JsonProperty("lta_protection_type")
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType;
+
     public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails withLtaProtectionType(GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
         this.ltaProtectionType = ltaProtectionType;
         return this;
     }
     
+    public GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetails(@JsonProperty("lta_protection_type") GetAllInvestors200ApplicationJSONRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
+        this.ltaProtectionType = ltaProtectionType;
+  }
 }

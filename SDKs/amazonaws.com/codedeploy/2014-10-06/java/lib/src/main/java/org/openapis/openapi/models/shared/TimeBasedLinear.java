@@ -15,6 +15,7 @@ public class TimeBasedLinear {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linearInterval")
     public Long linearInterval;
+
     public TimeBasedLinear withLinearInterval(Long linearInterval) {
         this.linearInterval = linearInterval;
         return this;
@@ -23,9 +24,11 @@ public class TimeBasedLinear {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linearPercentage")
     public Long linearPercentage;
+
     public TimeBasedLinear withLinearPercentage(Long linearPercentage) {
         this.linearPercentage = linearPercentage;
         return this;
     }
     
+    public TimeBasedLinear(){}
 }

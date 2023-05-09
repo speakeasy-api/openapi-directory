@@ -15,6 +15,7 @@ public class EventItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EventItemResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class EventItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public Long statusCode;
+
     public EventItemResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public EventItemResponse(){}
 }

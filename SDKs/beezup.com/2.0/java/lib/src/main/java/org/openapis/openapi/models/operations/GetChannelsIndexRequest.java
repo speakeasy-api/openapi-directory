@@ -16,9 +16,11 @@ public class GetChannelsIndexRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetChannelsIndexRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
     }
     
+    public GetChannelsIndexRequest(){}
 }

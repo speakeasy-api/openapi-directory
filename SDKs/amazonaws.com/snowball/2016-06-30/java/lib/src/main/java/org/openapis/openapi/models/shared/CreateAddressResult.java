@@ -15,9 +15,11 @@ public class CreateAddressResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public CreateAddressResult withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
     }
     
+    public CreateAddressResult(){}
 }

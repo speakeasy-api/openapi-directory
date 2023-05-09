@@ -19,6 +19,7 @@ public class UpdatePayoutScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public UpdatePayoutScheduleRequestActionEnum action;
+
     public UpdatePayoutScheduleRequest withAction(UpdatePayoutScheduleRequestActionEnum action) {
         this.action = action;
         return this;
@@ -31,6 +32,7 @@ public class UpdatePayoutScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public UpdatePayoutScheduleRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -43,9 +45,13 @@ public class UpdatePayoutScheduleRequest {
      */
     @JsonProperty("schedule")
     public UpdatePayoutScheduleRequestScheduleEnum schedule;
+
     public UpdatePayoutScheduleRequest withSchedule(UpdatePayoutScheduleRequestScheduleEnum schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public UpdatePayoutScheduleRequest(@JsonProperty("schedule") UpdatePayoutScheduleRequestScheduleEnum schedule) {
+        this.schedule = schedule;
+  }
 }

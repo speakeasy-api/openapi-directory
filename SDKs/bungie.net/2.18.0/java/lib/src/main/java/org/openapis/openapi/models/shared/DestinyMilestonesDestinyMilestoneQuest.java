@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneQuest {
      */
     
     public DestinyMilestonesDestinyMilestoneQuestActivity activity;
+
     public DestinyMilestonesDestinyMilestoneQuest withActivity(DestinyMilestonesDestinyMilestoneQuestActivity activity) {
         this.activity = activity;
         return this;
@@ -25,6 +26,7 @@ public class DestinyMilestonesDestinyMilestoneQuest {
      */
     
     public DestinyChallengesDestinyChallengeStatus[] challenges;
+
     public DestinyMilestonesDestinyMilestoneQuest withChallenges(DestinyChallengesDestinyChallengeStatus[] challenges) {
         this.challenges = challenges;
         return this;
@@ -35,6 +37,7 @@ public class DestinyMilestonesDestinyMilestoneQuest {
      */
     
     public Long questItemHash;
+
     public DestinyMilestonesDestinyMilestoneQuest withQuestItemHash(Long questItemHash) {
         this.questItemHash = questItemHash;
         return this;
@@ -45,9 +48,11 @@ public class DestinyMilestonesDestinyMilestoneQuest {
      */
     
     public DestinyMilestonesDestinyMilestoneQuestStatus status;
+
     public DestinyMilestonesDestinyMilestoneQuest withStatus(DestinyMilestonesDestinyMilestoneQuestStatus status) {
         this.status = status;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneQuest(){}
 }

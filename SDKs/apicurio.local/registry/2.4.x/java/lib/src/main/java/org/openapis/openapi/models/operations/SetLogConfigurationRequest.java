@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetLogConfigurationRequest {
@@ -12,6 +13,7 @@ public class SetLogConfigurationRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LogConfiguration logConfiguration;
+
     public SetLogConfigurationRequest withLogConfiguration(org.openapis.openapi.models.shared.LogConfiguration logConfiguration) {
         this.logConfiguration = logConfiguration;
         return this;
@@ -22,9 +24,14 @@ public class SetLogConfigurationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=logger")
     public String logger;
+
     public SetLogConfigurationRequest withLogger(String logger) {
         this.logger = logger;
         return this;
     }
     
+    public SetLogConfigurationRequest(@JsonProperty("LogConfiguration") org.openapis.openapi.models.shared.LogConfiguration logConfiguration, @JsonProperty("logger") String logger) {
+        this.logConfiguration = logConfiguration;
+        this.logger = logger;
+  }
 }

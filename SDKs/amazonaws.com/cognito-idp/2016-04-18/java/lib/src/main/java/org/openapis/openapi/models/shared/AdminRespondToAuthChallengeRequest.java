@@ -15,6 +15,7 @@ public class AdminRespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public AdminRespondToAuthChallengeRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class AdminRespondToAuthChallengeRequest {
     
     @JsonProperty("ChallengeName")
     public ChallengeNameTypeEnum challengeName;
+
     public AdminRespondToAuthChallengeRequest withChallengeName(ChallengeNameTypeEnum challengeName) {
         this.challengeName = challengeName;
         return this;
@@ -30,6 +32,7 @@ public class AdminRespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChallengeResponses")
     public java.util.Map<String, String> challengeResponses;
+
     public AdminRespondToAuthChallengeRequest withChallengeResponses(java.util.Map<String, String> challengeResponses) {
         this.challengeResponses = challengeResponses;
         return this;
@@ -37,6 +40,7 @@ public class AdminRespondToAuthChallengeRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public AdminRespondToAuthChallengeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -45,6 +49,7 @@ public class AdminRespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public AdminRespondToAuthChallengeRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -53,6 +58,7 @@ public class AdminRespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextData")
     public ContextDataType contextData;
+
     public AdminRespondToAuthChallengeRequest withContextData(ContextDataType contextData) {
         this.contextData = contextData;
         return this;
@@ -61,6 +67,7 @@ public class AdminRespondToAuthChallengeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public AdminRespondToAuthChallengeRequest withSession(String session) {
         this.session = session;
         return this;
@@ -68,9 +75,15 @@ public class AdminRespondToAuthChallengeRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminRespondToAuthChallengeRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public AdminRespondToAuthChallengeRequest(@JsonProperty("ChallengeName") ChallengeNameTypeEnum challengeName, @JsonProperty("ClientId") String clientId, @JsonProperty("UserPoolId") String userPoolId) {
+        this.challengeName = challengeName;
+        this.clientId = clientId;
+        this.userPoolId = userPoolId;
+  }
 }

@@ -12,6 +12,7 @@ public class Address {
      */
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -22,6 +23,7 @@ public class Address {
      */
     @JsonProperty("complement")
     public String complement;
+
     public Address withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -32,6 +34,7 @@ public class Address {
      */
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public Address withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -42,6 +45,7 @@ public class Address {
      */
     @JsonProperty("number")
     public String number;
+
     public Address withNumber(String number) {
         this.number = number;
         return this;
@@ -52,6 +56,7 @@ public class Address {
      */
     @JsonProperty("postalcode")
     public String postalcode;
+
     public Address withPostalcode(String postalcode) {
         this.postalcode = postalcode;
         return this;
@@ -62,6 +67,7 @@ public class Address {
      */
     @JsonProperty("state")
     public String state;
+
     public Address withState(String state) {
         this.state = state;
         return this;
@@ -72,9 +78,19 @@ public class Address {
      */
     @JsonProperty("street")
     public String street;
+
     public Address withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public Address(@JsonProperty("city") String city, @JsonProperty("complement") String complement, @JsonProperty("neighborhood") String neighborhood, @JsonProperty("number") String number, @JsonProperty("postalcode") String postalcode, @JsonProperty("state") String state, @JsonProperty("street") String street) {
+        this.city = city;
+        this.complement = complement;
+        this.neighborhood = neighborhood;
+        this.number = number;
+        this.postalcode = postalcode;
+        this.state = state;
+        this.street = street;
+  }
 }

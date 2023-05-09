@@ -18,6 +18,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public FieldReference field;
+
     public FieldFilter withField(FieldReference field) {
         this.field = field;
         return this;
@@ -29,6 +30,7 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public FieldFilterOpEnum op;
+
     public FieldFilter withOp(FieldFilterOpEnum op) {
         this.op = op;
         return this;
@@ -40,9 +42,11 @@ public class FieldFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Value value;
+
     public FieldFilter withValue(Value value) {
         this.value = value;
         return this;
     }
     
+    public FieldFilter(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordIntervalObjective {
     
     public Long intervalObjectiveHash;
+
     public DestinyDefinitionsRecordsDestinyRecordIntervalObjective withIntervalObjectiveHash(Long intervalObjectiveHash) {
         this.intervalObjectiveHash = intervalObjectiveHash;
         return this;
@@ -16,9 +17,11 @@ public class DestinyDefinitionsRecordsDestinyRecordIntervalObjective {
     
     
     public Integer intervalScoreValue;
+
     public DestinyDefinitionsRecordsDestinyRecordIntervalObjective withIntervalScoreValue(Integer intervalScoreValue) {
         this.intervalScoreValue = intervalScoreValue;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordIntervalObjective(){}
 }

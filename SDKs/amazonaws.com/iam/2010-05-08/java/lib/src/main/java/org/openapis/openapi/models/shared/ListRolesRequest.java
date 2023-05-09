@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListRolesRequest {
     
     public String marker;
+
     public ListRolesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListRolesRequest {
     
     
     public Long maxItems;
+
     public ListRolesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,11 @@ public class ListRolesRequest {
     
     
     public String pathPrefix;
+
     public ListRolesRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
     }
     
+    public ListRolesRequest(){}
 }

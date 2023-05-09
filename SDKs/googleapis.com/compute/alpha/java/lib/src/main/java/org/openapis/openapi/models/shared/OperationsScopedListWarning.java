@@ -18,6 +18,7 @@ public class OperationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public OperationsScopedListWarningCodeEnum code;
+
     public OperationsScopedListWarning withCode(OperationsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class OperationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public OperationsScopedListWarningData[] data;
+
     public OperationsScopedListWarning withData(OperationsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class OperationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public OperationsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public OperationsScopedListWarning(){}
 }

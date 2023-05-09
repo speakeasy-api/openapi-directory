@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PadUsersCountUsingPOSTResponse {
     
     public String contentType;
+
     public PadUsersCountUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PadUsersCountUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public PadUsersCountUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PadUsersCountUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PadUsersCountUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PadUsersCountUsingPOSTResponse {
      */
     
     public PadUsersCountUsingPOST200ApplicationJSON padUsersCountUsingPOST200ApplicationJSONObject;
+
     public PadUsersCountUsingPOSTResponse withPadUsersCountUsingPOST200ApplicationJSONObject(PadUsersCountUsingPOST200ApplicationJSON padUsersCountUsingPOST200ApplicationJSONObject) {
         this.padUsersCountUsingPOST200ApplicationJSONObject = padUsersCountUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PadUsersCountUsingPOSTResponse {
      */
     
     public PadUsersCountUsingPOST400ApplicationJSON padUsersCountUsingPOST400ApplicationJSONObject;
+
     public PadUsersCountUsingPOSTResponse withPadUsersCountUsingPOST400ApplicationJSONObject(PadUsersCountUsingPOST400ApplicationJSON padUsersCountUsingPOST400ApplicationJSONObject) {
         this.padUsersCountUsingPOST400ApplicationJSONObject = padUsersCountUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PadUsersCountUsingPOSTResponse {
      */
     
     public PadUsersCountUsingPOST401ApplicationJSON padUsersCountUsingPOST401ApplicationJSONObject;
+
     public PadUsersCountUsingPOSTResponse withPadUsersCountUsingPOST401ApplicationJSONObject(PadUsersCountUsingPOST401ApplicationJSON padUsersCountUsingPOST401ApplicationJSONObject) {
         this.padUsersCountUsingPOST401ApplicationJSONObject = padUsersCountUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class PadUsersCountUsingPOSTResponse {
      */
     
     public PadUsersCountUsingPOST500ApplicationJSON padUsersCountUsingPOST500ApplicationJSONObject;
+
     public PadUsersCountUsingPOSTResponse withPadUsersCountUsingPOST500ApplicationJSONObject(PadUsersCountUsingPOST500ApplicationJSON padUsersCountUsingPOST500ApplicationJSONObject) {
         this.padUsersCountUsingPOST500ApplicationJSONObject = padUsersCountUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public PadUsersCountUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

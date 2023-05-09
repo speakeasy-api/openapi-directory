@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableAddOnResponse {
@@ -12,6 +13,7 @@ public class EnableAddOnResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableAddOnResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class EnableAddOnResponse {
     
     
     public String contentType;
+
     public EnableAddOnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EnableAddOnResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableAddOnResult enableAddOnResult;
+
     public EnableAddOnResponse withEnableAddOnResult(org.openapis.openapi.models.shared.EnableAddOnResult enableAddOnResult) {
         this.enableAddOnResult = enableAddOnResult;
         return this;
@@ -39,6 +43,7 @@ public class EnableAddOnResponse {
      */
     
     public Object invalidInputException;
+
     public EnableAddOnResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class EnableAddOnResponse {
      */
     
     public Object notFoundException;
+
     public EnableAddOnResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class EnableAddOnResponse {
      */
     
     public Object operationFailureException;
+
     public EnableAddOnResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class EnableAddOnResponse {
      */
     
     public Object serviceException;
+
     public EnableAddOnResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class EnableAddOnResponse {
     
     
     public Integer statusCode;
+
     public EnableAddOnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class EnableAddOnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableAddOnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class EnableAddOnResponse {
      */
     
     public Object unauthenticatedException;
+
     public EnableAddOnResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public EnableAddOnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

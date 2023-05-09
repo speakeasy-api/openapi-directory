@@ -15,6 +15,7 @@ public class EcrRepositoryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EcrRepositoryMetadata withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EcrRepositoryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanFrequency")
     public EcrScanFrequencyEnum scanFrequency;
+
     public EcrRepositoryMetadata withScanFrequency(EcrScanFrequencyEnum scanFrequency) {
         this.scanFrequency = scanFrequency;
         return this;
     }
     
+    public EcrRepositoryMetadata(){}
 }

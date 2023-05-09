@@ -15,9 +15,13 @@ public class CallCreate {
      */
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public CallCreate withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public CallCreate(@JsonProperty("phoneNumber") String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+  }
 }

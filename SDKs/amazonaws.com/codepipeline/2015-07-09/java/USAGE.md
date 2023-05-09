@@ -3,43 +3,40 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AcknowledgeJobXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AcknowledgeJobRequest;
 import org.openapis.openapi.models.operations.AcknowledgeJobResponse;
+import org.openapis.openapi.models.operations.AcknowledgeJobXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AcknowledgeJobInput;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AcknowledgeJobRequest req = new AcknowledgeJobRequest() {{
-                acknowledgeJobInput = new AcknowledgeJobInput() {{
-                    jobId = "corrupti";
-                    nonce = "provident";
-                }};
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-                xAmzTarget = "CodePipeline_20150709.AcknowledgeJob";
-            }}            
+            AcknowledgeJobRequest req = new AcknowledgeJobRequest(                new AcknowledgeJobInput("provident", "distinctio");, AcknowledgeJobXAmzTargetEnum.CODE_PIPELINE20150709_ACKNOWLEDGE_JOB) {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             AcknowledgeJobResponse res = sdk.acknowledgeJob(req);
 
-            if (res.acknowledgeJobOutput.isPresent()) {
+            if (res.acknowledgeJobOutput != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,9 +15,11 @@ public class RegisterCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public RegisterCertificateResult withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public RegisterCertificateResult(){}
 }

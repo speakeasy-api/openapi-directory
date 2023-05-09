@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkInitJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05LinksLinkInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05LinksLinkInitJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05LinksLinkInitJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientLinkReferenceRequest patientLinkReferenceRequest;
+
     public PostV05LinksLinkInitJsonRequest withPatientLinkReferenceRequest(org.openapis.openapi.models.shared.PatientLinkReferenceRequest patientLinkReferenceRequest) {
         this.patientLinkReferenceRequest = patientLinkReferenceRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05LinksLinkInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05LinksLinkInitJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05LinksLinkInitJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientLinkReferenceRequest") org.openapis.openapi.models.shared.PatientLinkReferenceRequest patientLinkReferenceRequest, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.patientLinkReferenceRequest = patientLinkReferenceRequest;
+        this.xHipId = xHipId;
+  }
 }

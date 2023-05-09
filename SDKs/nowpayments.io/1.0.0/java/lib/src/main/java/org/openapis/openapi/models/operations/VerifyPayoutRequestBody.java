@@ -12,9 +12,11 @@ public class VerifyPayoutRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_code")
     public String verificationCode;
+
     public VerifyPayoutRequestBody withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
     }
     
+    public VerifyPayoutRequestBody(){}
 }

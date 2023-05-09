@@ -12,6 +12,7 @@ public class TaxRatesByIpAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public TaxRatesByIpAddressRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -22,6 +23,7 @@ public class TaxRatesByIpAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public TaxRatesByIpAddressRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class TaxRatesByIpAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ip")
     public String ip;
+
     public TaxRatesByIpAddressRequest withIp(String ip) {
         this.ip = ip;
         return this;
@@ -42,6 +45,7 @@ public class TaxRatesByIpAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=product_code")
     public String productCode;
+
     public TaxRatesByIpAddressRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -52,9 +56,11 @@ public class TaxRatesByIpAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public TaxRatesByIpAddressRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public TaxRatesByIpAddressRequest(){}
 }

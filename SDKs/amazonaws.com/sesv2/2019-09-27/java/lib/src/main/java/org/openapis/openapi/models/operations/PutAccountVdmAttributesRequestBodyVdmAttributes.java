@@ -15,6 +15,7 @@ public class PutAccountVdmAttributesRequestBodyVdmAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DashboardAttributes")
     public org.openapis.openapi.models.shared.DashboardAttributes dashboardAttributes;
+
     public PutAccountVdmAttributesRequestBodyVdmAttributes withDashboardAttributes(org.openapis.openapi.models.shared.DashboardAttributes dashboardAttributes) {
         this.dashboardAttributes = dashboardAttributes;
         return this;
@@ -23,6 +24,7 @@ public class PutAccountVdmAttributesRequestBodyVdmAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GuardianAttributes")
     public org.openapis.openapi.models.shared.GuardianAttributes guardianAttributes;
+
     public PutAccountVdmAttributesRequestBodyVdmAttributes withGuardianAttributes(org.openapis.openapi.models.shared.GuardianAttributes guardianAttributes) {
         this.guardianAttributes = guardianAttributes;
         return this;
@@ -31,9 +33,11 @@ public class PutAccountVdmAttributesRequestBodyVdmAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VdmEnabled")
     public org.openapis.openapi.models.shared.FeatureStatusEnum vdmEnabled;
+
     public PutAccountVdmAttributesRequestBodyVdmAttributes withVdmEnabled(org.openapis.openapi.models.shared.FeatureStatusEnum vdmEnabled) {
         this.vdmEnabled = vdmEnabled;
         return this;
     }
     
+    public PutAccountVdmAttributesRequestBodyVdmAttributes(){}
 }

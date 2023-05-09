@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListRoleTagsRequest {
     
     public String marker;
+
     public ListRoleTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListRoleTagsRequest {
     
     
     public Long maxItems;
+
     public ListRoleTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListRoleTagsRequest {
     
     
     public String roleName;
+
     public ListRoleTagsRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public ListRoleTagsRequest(@JsonProperty("RoleName") String roleName) {
+        this.roleName = roleName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AutomaticProvisioningTermsInfoResponse {
@@ -12,6 +13,7 @@ public class AutomaticProvisioningTermsInfoResponse {
      */
     
     public java.util.Map<String, Object> automaticProvisioningTermsInfo200ApplicationJSONObject;
+
     public AutomaticProvisioningTermsInfoResponse withAutomaticProvisioningTermsInfo200ApplicationJSONObject(java.util.Map<String, Object> automaticProvisioningTermsInfo200ApplicationJSONObject) {
         this.automaticProvisioningTermsInfo200ApplicationJSONObject = automaticProvisioningTermsInfo200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AutomaticProvisioningTermsInfoResponse {
      */
     
     public java.util.Map<String, Object> automaticProvisioningTermsInfo200TextJSONObject;
+
     public AutomaticProvisioningTermsInfoResponse withAutomaticProvisioningTermsInfo200TextJSONObject(java.util.Map<String, Object> automaticProvisioningTermsInfo200TextJSONObject) {
         this.automaticProvisioningTermsInfo200TextJSONObject = automaticProvisioningTermsInfo200TextJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AutomaticProvisioningTermsInfoResponse {
     
     
     public String contentType;
+
     public AutomaticProvisioningTermsInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AutomaticProvisioningTermsInfoResponse {
     
     
     public Integer statusCode;
+
     public AutomaticProvisioningTermsInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AutomaticProvisioningTermsInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AutomaticProvisioningTermsInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AutomaticProvisioningTermsInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

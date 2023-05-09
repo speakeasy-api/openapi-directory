@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableChannelCatalogResponse {
@@ -12,6 +13,7 @@ public class EnableChannelCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public EnableChannelCatalogResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class EnableChannelCatalogResponse {
     
     
     public String contentType;
+
     public EnableChannelCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EnableChannelCatalogResponse {
     
     
     public Integer statusCode;
+
     public EnableChannelCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class EnableChannelCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableChannelCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class EnableChannelCatalogResponse {
      */
     
     public org.openapis.openapi.models.shared.UpgradeOfferRequired upgradeOfferRequired;
+
     public EnableChannelCatalogResponse withUpgradeOfferRequired(org.openapis.openapi.models.shared.UpgradeOfferRequired upgradeOfferRequired) {
         this.upgradeOfferRequired = upgradeOfferRequired;
         return this;
     }
     
+    public EnableChannelCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

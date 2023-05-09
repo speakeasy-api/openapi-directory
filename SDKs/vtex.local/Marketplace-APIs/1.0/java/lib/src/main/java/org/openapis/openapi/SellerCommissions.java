@@ -72,10 +72,8 @@ public class SellerCommissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BulkUpsertSellerCommissionsResponse res = new org.openapis.openapi.models.operations.BulkUpsertSellerCommissionsResponse() {{
+        org.openapis.openapi.models.operations.BulkUpsertSellerCommissionsResponse res = new org.openapis.openapi.models.operations.BulkUpsertSellerCommissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,10 +118,8 @@ public class SellerCommissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSellerCommissionsResponse res = new org.openapis.openapi.models.operations.ListSellerCommissionsResponse() {{
+        org.openapis.openapi.models.operations.ListSellerCommissionsResponse res = new org.openapis.openapi.models.operations.ListSellerCommissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,10 +164,8 @@ public class SellerCommissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveSellerCommissionsResponse res = new org.openapis.openapi.models.operations.RemoveSellerCommissionsResponse() {{
+        org.openapis.openapi.models.operations.RemoveSellerCommissionsResponse res = new org.openapis.openapi.models.operations.RemoveSellerCommissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -216,10 +210,8 @@ public class SellerCommissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSellerCommissionsResponse res = new org.openapis.openapi.models.operations.RetrieveSellerCommissionsResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSellerCommissionsResponse res = new org.openapis.openapi.models.operations.RetrieveSellerCommissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -269,10 +261,8 @@ public class SellerCommissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpsertSellerCommissionsResponse res = new org.openapis.openapi.models.operations.UpsertSellerCommissionsResponse() {{
+        org.openapis.openapi.models.operations.UpsertSellerCommissionsResponse res = new org.openapis.openapi.models.operations.UpsertSellerCommissionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

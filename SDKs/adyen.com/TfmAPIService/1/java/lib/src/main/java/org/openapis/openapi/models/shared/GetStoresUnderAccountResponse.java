@@ -18,9 +18,11 @@ public class GetStoresUnderAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stores")
     public Store[] stores;
+
     public GetStoresUnderAccountResponse withStores(Store[] stores) {
         this.stores = stores;
         return this;
     }
     
+    public GetStoresUnderAccountResponse(){}
 }

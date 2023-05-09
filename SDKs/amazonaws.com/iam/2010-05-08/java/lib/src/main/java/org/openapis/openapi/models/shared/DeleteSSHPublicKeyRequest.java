@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteSSHPublicKeyRequest {
     
     public String sshPublicKeyId;
+
     public DeleteSSHPublicKeyRequest withSSHPublicKeyId(String sshPublicKeyId) {
         this.sshPublicKeyId = sshPublicKeyId;
         return this;
@@ -16,9 +17,14 @@ public class DeleteSSHPublicKeyRequest {
     
     
     public String userName;
+
     public DeleteSSHPublicKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteSSHPublicKeyRequest(@JsonProperty("SSHPublicKeyId") String sshPublicKeyId, @JsonProperty("UserName") String userName) {
+        this.sshPublicKeyId = sshPublicKeyId;
+        this.userName = userName;
+  }
 }

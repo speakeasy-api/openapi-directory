@@ -12,6 +12,7 @@ public class DescribeRepositoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeRepositoriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeRepositoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRepositoriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeRepositoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribeRepositoriesRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -36,9 +39,11 @@ public class DescribeRepositoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryNames")
     public String[] repositoryNames;
+
     public DescribeRepositoriesRequest withRepositoryNames(String[] repositoryNames) {
         this.repositoryNames = repositoryNames;
         return this;
     }
     
+    public DescribeRepositoriesRequest(){}
 }

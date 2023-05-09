@@ -15,6 +15,7 @@ public class RegionsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalRegions")
     public String[] additionalRegions;
+
     public RegionsInfo withAdditionalRegions(String[] additionalRegions) {
         this.additionalRegions = additionalRegions;
         return this;
@@ -23,9 +24,11 @@ public class RegionsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryRegion")
     public String primaryRegion;
+
     public RegionsInfo withPrimaryRegion(String primaryRegion) {
         this.primaryRegion = primaryRegion;
         return this;
     }
     
+    public RegionsInfo(){}
 }

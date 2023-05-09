@@ -12,6 +12,7 @@ public class CreateRelatedItemRequestBody {
      */
     @JsonProperty("content")
     public CreateRelatedItemRequestBodyContent content;
+
     public CreateRelatedItemRequestBody withContent(CreateRelatedItemRequestBodyContent content) {
         this.content = content;
         return this;
@@ -22,9 +23,14 @@ public class CreateRelatedItemRequestBody {
      */
     @JsonProperty("type")
     public CreateRelatedItemRequestBodyTypeEnum type;
+
     public CreateRelatedItemRequestBody withType(CreateRelatedItemRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateRelatedItemRequestBody(@JsonProperty("content") CreateRelatedItemRequestBodyContent content, @JsonProperty("type") CreateRelatedItemRequestBodyTypeEnum type) {
+        this.content = content;
+        this.type = type;
+  }
 }

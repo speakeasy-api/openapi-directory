@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloseAnAccountRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account_id")
     public String accountId;
+
     public CloseAnAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public CloseAnAccountRequest(@JsonProperty("account_id") String accountId) {
+        this.accountId = accountId;
+  }
 }

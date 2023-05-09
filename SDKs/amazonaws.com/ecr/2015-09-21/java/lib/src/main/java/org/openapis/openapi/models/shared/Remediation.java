@@ -15,9 +15,11 @@ public class Remediation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public Recommendation recommendation;
+
     public Remediation withRecommendation(Recommendation recommendation) {
         this.recommendation = recommendation;
         return this;
     }
     
+    public Remediation(){}
 }

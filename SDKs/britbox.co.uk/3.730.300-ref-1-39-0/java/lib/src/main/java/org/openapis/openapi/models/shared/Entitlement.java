@@ -25,6 +25,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("activationDate")
     public OffsetDateTime activationDate;
+
     public Entitlement withActivationDate(OffsetDateTime activationDate) {
         this.activationDate = activationDate;
         return this;
@@ -33,6 +34,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public ClassificationSummary classification;
+
     public Entitlement withClassification(ClassificationSummary classification) {
         this.classification = classification;
         return this;
@@ -46,6 +48,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Entitlement withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -53,6 +56,7 @@ public class Entitlement {
     
     @JsonProperty("deliveryType")
     public EntitlementDeliveryTypeEnum deliveryType;
+
     public Entitlement withDeliveryType(EntitlementDeliveryTypeEnum deliveryType) {
         this.deliveryType = deliveryType;
         return this;
@@ -64,6 +68,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionRules")
     public ExclusionRule[] exclusionRules;
+
     public Entitlement withExclusionRules(ExclusionRule[] exclusionRules) {
         this.exclusionRules = exclusionRules;
         return this;
@@ -77,6 +82,7 @@ public class Entitlement {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public Entitlement withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -88,6 +94,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public Entitlement withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -99,6 +106,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemType")
     public EntitlementItemTypeEnum itemType;
+
     public Entitlement withItemType(EntitlementItemTypeEnum itemType) {
         this.itemType = itemType;
         return this;
@@ -110,6 +118,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDownloads")
     public Integer maxDownloads;
+
     public Entitlement withMaxDownloads(Integer maxDownloads) {
         this.maxDownloads = maxDownloads;
         return this;
@@ -121,6 +130,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPlays")
     public Integer maxPlays;
+
     public Entitlement withMaxPlays(Integer maxPlays) {
         this.maxPlays = maxPlays;
         return this;
@@ -132,6 +142,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mediaDuration")
     public Integer mediaDuration;
+
     public Entitlement withMediaDuration(Integer mediaDuration) {
         this.mediaDuration = mediaDuration;
         return this;
@@ -139,6 +150,7 @@ public class Entitlement {
     
     @JsonProperty("ownership")
     public EntitlementOwnershipEnum ownership;
+
     public Entitlement withOwnership(EntitlementOwnershipEnum ownership) {
         this.ownership = ownership;
         return this;
@@ -150,6 +162,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planId")
     public String planId;
+
     public Entitlement withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -161,6 +174,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playCount")
     public Integer playCount;
+
     public Entitlement withPlayCount(Integer playCount) {
         this.playCount = playCount;
         return this;
@@ -172,6 +186,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playPeriod")
     public Integer playPeriod;
+
     public Entitlement withPlayPeriod(Integer playPeriod) {
         this.playPeriod = playPeriod;
         return this;
@@ -183,6 +198,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingDownloads")
     public Integer remainingDownloads;
+
     public Entitlement withRemainingDownloads(Integer remainingDownloads) {
         this.remainingDownloads = remainingDownloads;
         return this;
@@ -194,6 +210,7 @@ public class Entitlement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rentalPeriod")
     public Integer rentalPeriod;
+
     public Entitlement withRentalPeriod(Integer rentalPeriod) {
         this.rentalPeriod = rentalPeriod;
         return this;
@@ -201,6 +218,7 @@ public class Entitlement {
     
     @JsonProperty("resolution")
     public EntitlementResolutionEnum resolution;
+
     public Entitlement withResolution(EntitlementResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -208,9 +226,16 @@ public class Entitlement {
     
     @JsonProperty("scopes")
     public String[] scopes;
+
     public Entitlement withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public Entitlement(@JsonProperty("deliveryType") EntitlementDeliveryTypeEnum deliveryType, @JsonProperty("ownership") EntitlementOwnershipEnum ownership, @JsonProperty("resolution") EntitlementResolutionEnum resolution, @JsonProperty("scopes") String[] scopes) {
+        this.deliveryType = deliveryType;
+        this.ownership = ownership;
+        this.resolution = resolution;
+        this.scopes = scopes;
+  }
 }

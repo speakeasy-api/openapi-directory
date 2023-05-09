@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAliasResponse {
@@ -12,6 +13,7 @@ public class CreateAliasResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateAliasResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAliasResponse {
     
     
     public String contentType;
+
     public CreateAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAliasResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public CreateAliasResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAliasResponse {
      */
     
     public Object invalidAliasNameException;
+
     public CreateAliasResponse withInvalidAliasNameException(Object invalidAliasNameException) {
         this.invalidAliasNameException = invalidAliasNameException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAliasResponse {
      */
     
     public Object kmsInternalException;
+
     public CreateAliasResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAliasResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public CreateAliasResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAliasResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAliasResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateAliasResponse {
      */
     
     public Object notFoundException;
+
     public CreateAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateAliasResponse {
     
     
     public Integer statusCode;
+
     public CreateAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

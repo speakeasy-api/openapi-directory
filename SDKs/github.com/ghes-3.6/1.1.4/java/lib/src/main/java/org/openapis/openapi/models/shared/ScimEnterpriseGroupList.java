@@ -15,6 +15,7 @@ public class ScimEnterpriseGroupList {
      */
     @JsonProperty("Resources")
     public ScimEnterpriseGroupResponse[] resources;
+
     public ScimEnterpriseGroupList withResources(ScimEnterpriseGroupResponse[] resources) {
         this.resources = resources;
         return this;
@@ -25,6 +26,7 @@ public class ScimEnterpriseGroupList {
      */
     @JsonProperty("itemsPerPage")
     public Long itemsPerPage;
+
     public ScimEnterpriseGroupList withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -35,6 +37,7 @@ public class ScimEnterpriseGroupList {
      */
     @JsonProperty("schemas")
     public ScimEnterpriseGroupListSchemasEnum[] schemas;
+
     public ScimEnterpriseGroupList withSchemas(ScimEnterpriseGroupListSchemasEnum[] schemas) {
         this.schemas = schemas;
         return this;
@@ -45,6 +48,7 @@ public class ScimEnterpriseGroupList {
      */
     @JsonProperty("startIndex")
     public Long startIndex;
+
     public ScimEnterpriseGroupList withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -55,9 +59,17 @@ public class ScimEnterpriseGroupList {
      */
     @JsonProperty("totalResults")
     public Long totalResults;
+
     public ScimEnterpriseGroupList withTotalResults(Long totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public ScimEnterpriseGroupList(@JsonProperty("Resources") ScimEnterpriseGroupResponse[] resources, @JsonProperty("itemsPerPage") Long itemsPerPage, @JsonProperty("schemas") ScimEnterpriseGroupListSchemasEnum[] schemas, @JsonProperty("startIndex") Long startIndex, @JsonProperty("totalResults") Long totalResults) {
+        this.resources = resources;
+        this.itemsPerPage = itemsPerPage;
+        this.schemas = schemas;
+        this.startIndex = startIndex;
+        this.totalResults = totalResults;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserSegmentsResponse {
     
     public String contentType;
+
     public GetUserSegmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUserSegmentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUserSegmentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetUserSegmentsResponse {
     
     
     public Integer statusCode;
+
     public GetUserSegmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetUserSegmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserSegmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments200ApplicationJSON getUserSegments200ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments200ApplicationJSONObject(GetUserSegments200ApplicationJSON getUserSegments200ApplicationJSONObject) {
         this.getUserSegments200ApplicationJSONObject = getUserSegments200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments400ApplicationJSON getUserSegments400ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments400ApplicationJSONObject(GetUserSegments400ApplicationJSON getUserSegments400ApplicationJSONObject) {
         this.getUserSegments400ApplicationJSONObject = getUserSegments400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments401ApplicationJSON getUserSegments401ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments401ApplicationJSONObject(GetUserSegments401ApplicationJSON getUserSegments401ApplicationJSONObject) {
         this.getUserSegments401ApplicationJSONObject = getUserSegments401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments403ApplicationJSON getUserSegments403ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments403ApplicationJSONObject(GetUserSegments403ApplicationJSON getUserSegments403ApplicationJSONObject) {
         this.getUserSegments403ApplicationJSONObject = getUserSegments403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments429ApplicationJSON getUserSegments429ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments429ApplicationJSONObject(GetUserSegments429ApplicationJSON getUserSegments429ApplicationJSONObject) {
         this.getUserSegments429ApplicationJSONObject = getUserSegments429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class GetUserSegmentsResponse {
      */
     
     public GetUserSegments500ApplicationJSON getUserSegments500ApplicationJSONObject;
+
     public GetUserSegmentsResponse withGetUserSegments500ApplicationJSONObject(GetUserSegments500ApplicationJSON getUserSegments500ApplicationJSONObject) {
         this.getUserSegments500ApplicationJSONObject = getUserSegments500ApplicationJSONObject;
         return this;
     }
     
+    public GetUserSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

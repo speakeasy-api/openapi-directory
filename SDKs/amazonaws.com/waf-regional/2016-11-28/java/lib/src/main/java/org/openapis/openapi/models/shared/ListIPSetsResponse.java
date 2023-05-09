@@ -15,6 +15,7 @@ public class ListIPSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSets")
     public IPSetSummary[] ipSets;
+
     public ListIPSetsResponse withIPSets(IPSetSummary[] ipSets) {
         this.ipSets = ipSets;
         return this;
@@ -23,9 +24,11 @@ public class ListIPSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListIPSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListIPSetsResponse(){}
 }

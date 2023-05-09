@@ -12,6 +12,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public String amount;
+
     public GetTransfer200ApplicationJSONResult withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -20,6 +21,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public GetTransfer200ApplicationJSONResult withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +30,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public GetTransfer200ApplicationJSONResult withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -36,6 +39,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_sub_id")
     public String fromSubId;
+
     public GetTransfer200ApplicationJSONResult withFromSubId(String fromSubId) {
         this.fromSubId = fromSubId;
         return this;
@@ -44,6 +48,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetTransfer200ApplicationJSONResult withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +57,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetTransfer200ApplicationJSONResult withStatus(String status) {
         this.status = status;
         return this;
@@ -60,6 +66,7 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to_sub_id")
     public String toSubId;
+
     public GetTransfer200ApplicationJSONResult withToSubId(String toSubId) {
         this.toSubId = toSubId;
         return this;
@@ -68,9 +75,11 @@ public class GetTransfer200ApplicationJSONResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public GetTransfer200ApplicationJSONResult withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetTransfer200ApplicationJSONResult(){}
 }

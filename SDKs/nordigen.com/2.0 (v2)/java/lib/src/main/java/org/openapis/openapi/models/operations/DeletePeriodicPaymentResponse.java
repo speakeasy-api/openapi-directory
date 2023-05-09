@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePeriodicPaymentResponse {
     
     public String contentType;
+
     public DeletePeriodicPaymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeletePeriodicPaymentResponse {
     
     
     public Integer statusCode;
+
     public DeletePeriodicPaymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeletePeriodicPaymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePeriodicPaymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment200ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment200ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment200ApplicationJSONObject) {
         this.deletePeriodicPayment200ApplicationJSONObject = deletePeriodicPayment200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment400ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment400ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment400ApplicationJSONObject) {
         this.deletePeriodicPayment400ApplicationJSONObject = deletePeriodicPayment400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment401ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment401ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment401ApplicationJSONObject) {
         this.deletePeriodicPayment401ApplicationJSONObject = deletePeriodicPayment401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment403ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment403ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment403ApplicationJSONObject) {
         this.deletePeriodicPayment403ApplicationJSONObject = deletePeriodicPayment403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment404ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment404ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment404ApplicationJSONObject) {
         this.deletePeriodicPayment404ApplicationJSONObject = deletePeriodicPayment404ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class DeletePeriodicPaymentResponse {
      */
     
     public java.util.Map<String, Object> deletePeriodicPayment409ApplicationJSONObject;
+
     public DeletePeriodicPaymentResponse withDeletePeriodicPayment409ApplicationJSONObject(java.util.Map<String, Object> deletePeriodicPayment409ApplicationJSONObject) {
         this.deletePeriodicPayment409ApplicationJSONObject = deletePeriodicPayment409ApplicationJSONObject;
         return this;
     }
     
+    public DeletePeriodicPaymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

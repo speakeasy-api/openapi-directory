@@ -59,11 +59,9 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelsListResponse res = new org.openapis.openapi.models.operations.YoutubeChannelsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelsListResponse res = new org.openapis.openapi.models.operations.YoutubeChannelsListResponse(contentType, httpRes.statusCode()) {{
             channelListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeChannelsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeChannelsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeChannelsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeChannelsUpdateResponse(contentType, httpRes.statusCode()) {{
             channel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,13 @@ public class AppInvitationsUpdatePermissionsRequestBody {
      */
     @JsonProperty("permissions")
     public AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum[] permissions;
+
     public AppInvitationsUpdatePermissionsRequestBody withPermissions(AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AppInvitationsUpdatePermissionsRequestBody(@JsonProperty("permissions") AppInvitationsUpdatePermissionsRequestBodyPermissionsEnum[] permissions) {
+        this.permissions = permissions;
+  }
 }

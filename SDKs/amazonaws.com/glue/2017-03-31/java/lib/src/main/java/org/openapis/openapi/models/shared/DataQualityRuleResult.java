@@ -15,6 +15,7 @@ public class DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DataQualityRuleResult withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMessage")
     public String evaluationMessage;
+
     public DataQualityRuleResult withEvaluationMessage(String evaluationMessage) {
         this.evaluationMessage = evaluationMessage;
         return this;
@@ -31,6 +33,7 @@ public class DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DataQualityRuleResult withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public DataQualityRuleResultStatusEnum result;
+
     public DataQualityRuleResult withResult(DataQualityRuleResultStatusEnum result) {
         this.result = result;
         return this;
     }
     
+    public DataQualityRuleResult(){}
 }

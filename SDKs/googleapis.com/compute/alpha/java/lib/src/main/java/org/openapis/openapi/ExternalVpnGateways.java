@@ -59,11 +59,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysGetResponse(contentType, httpRes.statusCode()) {{
             externalVpnGateway = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysListResponse(contentType, httpRes.statusCode()) {{
             externalVpnGatewayList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class ExternalVpnGateways {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeExternalVpnGatewaysTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

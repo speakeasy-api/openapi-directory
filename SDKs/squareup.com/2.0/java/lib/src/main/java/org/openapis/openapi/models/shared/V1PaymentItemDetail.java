@@ -18,6 +18,7 @@ public class V1PaymentItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_name")
     public String categoryName;
+
     public V1PaymentItemDetail withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -29,6 +30,7 @@ public class V1PaymentItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     public String itemId;
+
     public V1PaymentItemDetail withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -40,6 +42,7 @@ public class V1PaymentItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variation_id")
     public String itemVariationId;
+
     public V1PaymentItemDetail withItemVariationId(String itemVariationId) {
         this.itemVariationId = itemVariationId;
         return this;
@@ -51,9 +54,11 @@ public class V1PaymentItemDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public V1PaymentItemDetail withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public V1PaymentItemDetail(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchCreateCustomVocabularyItemResponse {
@@ -12,6 +13,7 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchCreateCustomVocabularyItemResponse batchCreateCustomVocabularyItemResponse;
+
     public BatchCreateCustomVocabularyItemResponse withBatchCreateCustomVocabularyItemResponse(org.openapis.openapi.models.shared.BatchCreateCustomVocabularyItemResponse batchCreateCustomVocabularyItemResponse) {
         this.batchCreateCustomVocabularyItemResponse = batchCreateCustomVocabularyItemResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchCreateCustomVocabularyItemResponse {
     
     
     public String contentType;
+
     public BatchCreateCustomVocabularyItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public Object internalServerException;
+
     public BatchCreateCustomVocabularyItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchCreateCustomVocabularyItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public BatchCreateCustomVocabularyItemResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class BatchCreateCustomVocabularyItemResponse {
     
     
     public Integer statusCode;
+
     public BatchCreateCustomVocabularyItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchCreateCustomVocabularyItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchCreateCustomVocabularyItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public Object throttlingException;
+
     public BatchCreateCustomVocabularyItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchCreateCustomVocabularyItemResponse {
      */
     
     public Object validationException;
+
     public BatchCreateCustomVocabularyItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchCreateCustomVocabularyItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class UpdateBillingGroupRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateBillingGroupRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class UpdateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputationPreference")
     public UpdateBillingGroupRequestBodyComputationPreference computationPreference;
+
     public UpdateBillingGroupRequestBody withComputationPreference(UpdateBillingGroupRequestBodyComputationPreference computationPreference) {
         this.computationPreference = computationPreference;
         return this;
@@ -36,6 +38,7 @@ public class UpdateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateBillingGroupRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class UpdateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateBillingGroupRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,9 +62,13 @@ public class UpdateBillingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public UpdateBillingGroupRequestBodyStatusEnum status;
+
     public UpdateBillingGroupRequestBody withStatus(UpdateBillingGroupRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateBillingGroupRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

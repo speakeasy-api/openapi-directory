@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacesResultNetworkInterfacesTagSet {
     
     public String key;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesTagSet withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacesResultNetworkInterfacesTagSet {
     
     
     public String value;
+
     public DescribeNetworkInterfacesResultNetworkInterfacesTagSet withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeNetworkInterfacesResultNetworkInterfacesTagSet(){}
 }

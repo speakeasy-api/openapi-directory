@@ -25,6 +25,7 @@ public class ActionNotificationExportEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end_at")
     public OffsetDateTime endAt;
+
     public ActionNotificationExportEntity withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -36,6 +37,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_version")
     public String exportVersion;
+
     public ActionNotificationExportEntity withExportVersion(String exportVersion) {
         this.exportVersion = exportVersion;
         return this;
@@ -47,6 +49,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ActionNotificationExportEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -58,6 +61,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_folder")
     public String queryFolder;
+
     public ActionNotificationExportEntity withQueryFolder(String queryFolder) {
         this.queryFolder = queryFolder;
         return this;
@@ -69,6 +73,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_message")
     public String queryMessage;
+
     public ActionNotificationExportEntity withQueryMessage(String queryMessage) {
         this.queryMessage = queryMessage;
         return this;
@@ -80,6 +85,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_path")
     public String queryPath;
+
     public ActionNotificationExportEntity withQueryPath(String queryPath) {
         this.queryPath = queryPath;
         return this;
@@ -91,6 +97,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_request_method")
     public String queryRequestMethod;
+
     public ActionNotificationExportEntity withQueryRequestMethod(String queryRequestMethod) {
         this.queryRequestMethod = queryRequestMethod;
         return this;
@@ -102,6 +109,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_request_url")
     public String queryRequestUrl;
+
     public ActionNotificationExportEntity withQueryRequestUrl(String queryRequestUrl) {
         this.queryRequestUrl = queryRequestUrl;
         return this;
@@ -113,6 +121,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_status")
     public String queryStatus;
+
     public ActionNotificationExportEntity withQueryStatus(String queryStatus) {
         this.queryStatus = queryStatus;
         return this;
@@ -124,6 +133,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_success")
     public Boolean querySuccess;
+
     public ActionNotificationExportEntity withQuerySuccess(Boolean querySuccess) {
         this.querySuccess = querySuccess;
         return this;
@@ -135,6 +145,7 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results_url")
     public String resultsUrl;
+
     public ActionNotificationExportEntity withResultsUrl(String resultsUrl) {
         this.resultsUrl = resultsUrl;
         return this;
@@ -148,6 +159,7 @@ public class ActionNotificationExportEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start_at")
     public OffsetDateTime startAt;
+
     public ActionNotificationExportEntity withStartAt(OffsetDateTime startAt) {
         this.startAt = startAt;
         return this;
@@ -159,9 +171,11 @@ public class ActionNotificationExportEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ActionNotificationExportEntity withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ActionNotificationExportEntity(){}
 }

@@ -23,6 +23,7 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     public String endAt;
+
     public TimeRange withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -35,9 +36,11 @@ public class TimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     public String startAt;
+
     public TimeRange withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
     }
     
+    public TimeRange(){}
 }

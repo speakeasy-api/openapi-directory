@@ -12,9 +12,13 @@ public class DeleteRecoveryInstanceRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public DeleteRecoveryInstanceRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
     }
     
+    public DeleteRecoveryInstanceRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListChangelogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changelogs")
     public GoogleCloudDialogflowCxV3Changelog[] changelogs;
+
     public GoogleCloudDialogflowCxV3ListChangelogsResponse withChangelogs(GoogleCloudDialogflowCxV3Changelog[] changelogs) {
         this.changelogs = changelogs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListChangelogsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListChangelogsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListChangelogsResponse(){}
 }

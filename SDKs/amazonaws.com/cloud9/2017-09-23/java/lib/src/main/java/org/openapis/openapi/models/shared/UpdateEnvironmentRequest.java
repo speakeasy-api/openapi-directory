@@ -12,6 +12,7 @@ public class UpdateEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateEnvironmentRequest {
     
     @JsonProperty("environmentId")
     public String environmentId;
+
     public UpdateEnvironmentRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedCredentialsAction")
     public ManagedCredentialsActionEnum managedCredentialsAction;
+
     public UpdateEnvironmentRequest withManagedCredentialsAction(ManagedCredentialsActionEnum managedCredentialsAction) {
         this.managedCredentialsAction = managedCredentialsAction;
         return this;
@@ -35,9 +38,13 @@ public class UpdateEnvironmentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateEnvironmentRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateEnvironmentRequest(@JsonProperty("environmentId") String environmentId) {
+        this.environmentId = environmentId;
+  }
 }

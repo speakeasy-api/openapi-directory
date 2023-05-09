@@ -18,6 +18,7 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CertificateRenew withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -29,6 +30,7 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public CertificateRenew withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -40,6 +42,7 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csr")
     public String csr;
+
     public CertificateRenew withCsr(String csr) {
         this.csr = csr;
         return this;
@@ -51,6 +54,7 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("period")
     public Long period;
+
     public CertificateRenew withPeriod(Long period) {
         this.period = period;
         return this;
@@ -62,6 +66,7 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootType")
     public CertificateRenewRootTypeEnum rootType;
+
     public CertificateRenew withRootType(CertificateRenewRootTypeEnum rootType) {
         this.rootType = rootType;
         return this;
@@ -73,9 +78,11 @@ public class CertificateRenew {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public CertificateRenew withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
     }
     
+    public CertificateRenew(){}
 }

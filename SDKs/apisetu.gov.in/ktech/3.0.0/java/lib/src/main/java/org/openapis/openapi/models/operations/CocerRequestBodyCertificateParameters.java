@@ -12,6 +12,7 @@ public class CocerRequestBodyCertificateParameters {
      */
     @JsonProperty("cert_type")
     public String certType;
+
     public CocerRequestBodyCertificateParameters withCertType(String certType) {
         this.certType = certType;
         return this;
@@ -22,6 +23,7 @@ public class CocerRequestBodyCertificateParameters {
      */
     @JsonProperty("company_name")
     public String companyName;
+
     public CocerRequestBodyCertificateParameters withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -32,6 +34,7 @@ public class CocerRequestBodyCertificateParameters {
      */
     @JsonProperty("reg_no")
     public String regNo;
+
     public CocerRequestBodyCertificateParameters withRegNo(String regNo) {
         this.regNo = regNo;
         return this;
@@ -42,9 +45,16 @@ public class CocerRequestBodyCertificateParameters {
      */
     @JsonProperty("sector")
     public String sector;
+
     public CocerRequestBodyCertificateParameters withSector(String sector) {
         this.sector = sector;
         return this;
     }
     
+    public CocerRequestBodyCertificateParameters(@JsonProperty("cert_type") String certType, @JsonProperty("company_name") String companyName, @JsonProperty("reg_no") String regNo, @JsonProperty("sector") String sector) {
+        this.certType = certType;
+        this.companyName = companyName;
+        this.regNo = regNo;
+        this.sector = sector;
+  }
 }

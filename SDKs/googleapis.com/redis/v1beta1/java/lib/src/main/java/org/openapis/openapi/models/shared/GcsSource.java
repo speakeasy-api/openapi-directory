@@ -18,9 +18,11 @@ public class GcsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GcsSource withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GcsSource(){}
 }

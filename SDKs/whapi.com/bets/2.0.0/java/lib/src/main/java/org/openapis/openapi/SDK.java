@@ -8,7 +8,7 @@ import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * The Bets API methods are used to place single, multiple and complex bets and to retrieve a customer\u2019s bet history. When retrieving a customer\u2019s bet history you can organize the bets from the betting history in terms of date, bet type and whether the bet is settled or not. You can also specify what fields to be included/excluded or return a list of all default fields the method returns. &lt;br /&gt;&lt;br /&gt; The Bets API will also generate a bet delay if you\u2019re placing a single/multiple bet in-Play by creating a time margin to negate the effects of major changes to the market (for example, goals during a football match). Note that in version 2 of our APIs, Bets API contains the functionality of both Bets API v1 and the Betslips API v1.
+ * The Bets API methods are used to place single, multiple and complex bets and to retrieve a customer’s bet history. When retrieving a customer’s bet history you can organize the bets from the betting history in terms of date, bet type and whether the bet is settled or not. You can also specify what fields to be included/excluded or return a list of all default fields the method returns. &lt;br /&gt;&lt;br /&gt; The Bets API will also generate a bet delay if you’re placing a single/multiple bet in-Play by creating a time margin to negate the effects of major changes to the market (for example, goals during a football match). Note that in version 2 of our APIs, Bets API contains the functionality of both Bets API v1 and the Betslips API v1.
  */
 public class SDK {
 	/**
@@ -107,6 +107,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.bets = new Bets(

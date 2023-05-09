@@ -12,9 +12,11 @@ public class GetGroupObjectSchemaData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public GetGroupObjectSchemaData withMembers(String[] members) {
         this.members = members;
         return this;
     }
     
+    public GetGroupObjectSchemaData(){}
 }

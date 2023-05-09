@@ -18,6 +18,7 @@ public class MetricShortId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricIndex")
     public Integer metricIndex;
+
     public MetricShortId withMetricIndex(Integer metricIndex) {
         this.metricIndex = metricIndex;
         return this;
@@ -29,9 +30,11 @@ public class MetricShortId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortId")
     public String shortId;
+
     public MetricShortId withShortId(String shortId) {
         this.shortId = shortId;
         return this;
     }
     
+    public MetricShortId(){}
 }

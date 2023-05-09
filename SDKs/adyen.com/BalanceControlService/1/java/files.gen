@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Amount.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferRequestTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BalanceTransferRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateExperimentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricGoals")
     public org.openapis.openapi.models.shared.MetricGoalConfig[] metricGoals;
+
     public UpdateExperimentRequestBody withMetricGoals(org.openapis.openapi.models.shared.MetricGoalConfig[] metricGoals) {
         this.metricGoals = metricGoals;
         return this;
@@ -37,6 +39,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlineAbConfig")
     public UpdateExperimentRequestBodyOnlineAbConfig onlineAbConfig;
+
     public UpdateExperimentRequestBody withOnlineAbConfig(UpdateExperimentRequestBodyOnlineAbConfig onlineAbConfig) {
         this.onlineAbConfig = onlineAbConfig;
         return this;
@@ -48,6 +51,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomizationSalt")
     public String randomizationSalt;
+
     public UpdateExperimentRequestBody withRandomizationSalt(String randomizationSalt) {
         this.randomizationSalt = randomizationSalt;
         return this;
@@ -59,6 +63,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeSegment")
     public Boolean removeSegment;
+
     public UpdateExperimentRequestBody withRemoveSegment(Boolean removeSegment) {
         this.removeSegment = removeSegment;
         return this;
@@ -70,6 +75,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingRate")
     public Long samplingRate;
+
     public UpdateExperimentRequestBody withSamplingRate(Long samplingRate) {
         this.samplingRate = samplingRate;
         return this;
@@ -81,6 +87,7 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segment")
     public String segment;
+
     public UpdateExperimentRequestBody withSegment(String segment) {
         this.segment = segment;
         return this;
@@ -92,9 +99,11 @@ public class UpdateExperimentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatments")
     public org.openapis.openapi.models.shared.TreatmentConfig[] treatments;
+
     public UpdateExperimentRequestBody withTreatments(org.openapis.openapi.models.shared.TreatmentConfig[] treatments) {
         this.treatments = treatments;
         return this;
     }
     
+    public UpdateExperimentRequestBody(){}
 }

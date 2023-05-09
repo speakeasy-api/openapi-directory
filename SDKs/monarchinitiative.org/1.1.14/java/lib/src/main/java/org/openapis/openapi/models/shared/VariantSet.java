@@ -22,6 +22,7 @@ public class VariantSet {
      */
     @JsonProperty("body")
     public String body;
+
     public VariantSet withBody(String body) {
         this.body = body;
         return this;
@@ -30,6 +31,7 @@ public class VariantSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public VariantSet withCategory(String category) {
         this.category = category;
         return this;
@@ -38,6 +40,7 @@ public class VariantSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public Long categoryId;
+
     public VariantSet withCategoryId(Long categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -49,6 +52,7 @@ public class VariantSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public VariantSet withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class VariantSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("pub_date")
     public OffsetDateTime pubDate;
+
     public VariantSet withPubDate(OffsetDateTime pubDate) {
         this.pubDate = pubDate;
         return this;
@@ -69,9 +74,14 @@ public class VariantSet {
      */
     @JsonProperty("title")
     public String title;
+
     public VariantSet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public VariantSet(@JsonProperty("body") String body, @JsonProperty("title") String title) {
+        this.body = body;
+        this.title = title;
+  }
 }

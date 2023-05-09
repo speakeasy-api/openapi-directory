@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterToWorkMailResponse {
     
     public String contentType;
+
     public RegisterToWorkMailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public RegisterToWorkMailResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object directoryUnavailableException;
+
     public RegisterToWorkMailResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object emailAddressInUseException;
+
     public RegisterToWorkMailResponse withEmailAddressInUseException(Object emailAddressInUseException) {
         this.emailAddressInUseException = emailAddressInUseException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object entityAlreadyRegisteredException;
+
     public RegisterToWorkMailResponse withEntityAlreadyRegisteredException(Object entityAlreadyRegisteredException) {
         this.entityAlreadyRegisteredException = entityAlreadyRegisteredException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object entityNotFoundException;
+
     public RegisterToWorkMailResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object entityStateException;
+
     public RegisterToWorkMailResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterToWorkMailResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object mailDomainNotFoundException;
+
     public RegisterToWorkMailResponse withMailDomainNotFoundException(Object mailDomainNotFoundException) {
         this.mailDomainNotFoundException = mailDomainNotFoundException;
         return this;
@@ -99,6 +109,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object mailDomainStateException;
+
     public RegisterToWorkMailResponse withMailDomainStateException(Object mailDomainStateException) {
         this.mailDomainStateException = mailDomainStateException;
         return this;
@@ -109,6 +120,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object organizationNotFoundException;
+
     public RegisterToWorkMailResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -119,6 +131,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public Object organizationStateException;
+
     public RegisterToWorkMailResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -129,6 +142,7 @@ public class RegisterToWorkMailResponse {
      */
     
     public java.util.Map<String, Object> registerToWorkMailResponse;
+
     public RegisterToWorkMailResponse withRegisterToWorkMailResponse(java.util.Map<String, Object> registerToWorkMailResponse) {
         this.registerToWorkMailResponse = registerToWorkMailResponse;
         return this;
@@ -136,6 +150,7 @@ public class RegisterToWorkMailResponse {
     
     
     public Integer statusCode;
+
     public RegisterToWorkMailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,9 +158,14 @@ public class RegisterToWorkMailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterToWorkMailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterToWorkMailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

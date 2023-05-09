@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeLtiCredentialsRequest {
@@ -13,9 +14,13 @@ public class RevokeLtiCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=credentials")
     public String credentials;
+
     public RevokeLtiCredentialsRequest withCredentials(String credentials) {
         this.credentials = credentials;
         return this;
     }
     
+    public RevokeLtiCredentialsRequest(@JsonProperty("credentials") String credentials) {
+        this.credentials = credentials;
+  }
 }

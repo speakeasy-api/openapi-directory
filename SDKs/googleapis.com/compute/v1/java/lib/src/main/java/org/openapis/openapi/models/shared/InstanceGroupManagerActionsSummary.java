@@ -15,6 +15,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abandoning")
     public Integer abandoning;
+
     public InstanceGroupManagerActionsSummary withAbandoning(Integer abandoning) {
         this.abandoning = abandoning;
         return this;
@@ -26,6 +27,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creating")
     public Integer creating;
+
     public InstanceGroupManagerActionsSummary withCreating(Integer creating) {
         this.creating = creating;
         return this;
@@ -37,6 +39,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatingWithoutRetries")
     public Integer creatingWithoutRetries;
+
     public InstanceGroupManagerActionsSummary withCreatingWithoutRetries(Integer creatingWithoutRetries) {
         this.creatingWithoutRetries = creatingWithoutRetries;
         return this;
@@ -48,6 +51,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleting")
     public Integer deleting;
+
     public InstanceGroupManagerActionsSummary withDeleting(Integer deleting) {
         this.deleting = deleting;
         return this;
@@ -59,6 +63,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("none")
     public Integer none;
+
     public InstanceGroupManagerActionsSummary withNone(Integer none) {
         this.none = none;
         return this;
@@ -70,6 +75,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recreating")
     public Integer recreating;
+
     public InstanceGroupManagerActionsSummary withRecreating(Integer recreating) {
         this.recreating = recreating;
         return this;
@@ -81,6 +87,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshing")
     public Integer refreshing;
+
     public InstanceGroupManagerActionsSummary withRefreshing(Integer refreshing) {
         this.refreshing = refreshing;
         return this;
@@ -92,6 +99,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restarting")
     public Integer restarting;
+
     public InstanceGroupManagerActionsSummary withRestarting(Integer restarting) {
         this.restarting = restarting;
         return this;
@@ -103,6 +111,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resuming")
     public Integer resuming;
+
     public InstanceGroupManagerActionsSummary withResuming(Integer resuming) {
         this.resuming = resuming;
         return this;
@@ -114,6 +123,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("starting")
     public Integer starting;
+
     public InstanceGroupManagerActionsSummary withStarting(Integer starting) {
         this.starting = starting;
         return this;
@@ -125,6 +135,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopping")
     public Integer stopping;
+
     public InstanceGroupManagerActionsSummary withStopping(Integer stopping) {
         this.stopping = stopping;
         return this;
@@ -136,6 +147,7 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspending")
     public Integer suspending;
+
     public InstanceGroupManagerActionsSummary withSuspending(Integer suspending) {
         this.suspending = suspending;
         return this;
@@ -147,9 +159,11 @@ public class InstanceGroupManagerActionsSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifying")
     public Integer verifying;
+
     public InstanceGroupManagerActionsSummary withVerifying(Integer verifying) {
         this.verifying = verifying;
         return this;
     }
     
+    public InstanceGroupManagerActionsSummary(){}
 }

@@ -15,6 +15,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowUnassociatedTargets")
     public Boolean allowUnassociatedTargets;
+
     public UpdateMaintenanceWindowResult withAllowUnassociatedTargets(Boolean allowUnassociatedTargets) {
         this.allowUnassociatedTargets = allowUnassociatedTargets;
         return this;
@@ -23,6 +24,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cutoff")
     public Long cutoff;
+
     public UpdateMaintenanceWindowResult withCutoff(Long cutoff) {
         this.cutoff = cutoff;
         return this;
@@ -31,6 +33,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateMaintenanceWindowResult withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public UpdateMaintenanceWindowResult withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -47,6 +51,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateMaintenanceWindowResult withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -55,6 +60,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public UpdateMaintenanceWindowResult withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -63,6 +69,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateMaintenanceWindowResult withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public UpdateMaintenanceWindowResult withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -79,6 +87,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public UpdateMaintenanceWindowResult withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -87,6 +96,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleTimezone")
     public String scheduleTimezone;
+
     public UpdateMaintenanceWindowResult withScheduleTimezone(String scheduleTimezone) {
         this.scheduleTimezone = scheduleTimezone;
         return this;
@@ -95,6 +105,7 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public UpdateMaintenanceWindowResult withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -103,9 +114,11 @@ public class UpdateMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public UpdateMaintenanceWindowResult withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public UpdateMaintenanceWindowResult(){}
 }

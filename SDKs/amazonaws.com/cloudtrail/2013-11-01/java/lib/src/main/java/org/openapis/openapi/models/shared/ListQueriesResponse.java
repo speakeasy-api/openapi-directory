@@ -15,6 +15,7 @@ public class ListQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQueriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListQueriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Queries")
     public Query[] queries;
+
     public ListQueriesResponse withQueries(Query[] queries) {
         this.queries = queries;
         return this;
     }
     
+    public ListQueriesResponse(){}
 }

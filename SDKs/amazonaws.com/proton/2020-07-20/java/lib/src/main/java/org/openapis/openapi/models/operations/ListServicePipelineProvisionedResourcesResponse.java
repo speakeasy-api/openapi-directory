@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServicePipelineProvisionedResourcesResponse {
@@ -12,6 +13,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListServicePipelineProvisionedResourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
     
     
     public String contentType;
+
     public ListServicePipelineProvisionedResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListServicePipelineProvisionedResourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListServicePipelineProvisionedResourcesOutput listServicePipelineProvisionedResourcesOutput;
+
     public ListServicePipelineProvisionedResourcesResponse withListServicePipelineProvisionedResourcesOutput(org.openapis.openapi.models.shared.ListServicePipelineProvisionedResourcesOutput listServicePipelineProvisionedResourcesOutput) {
         this.listServicePipelineProvisionedResourcesOutput = listServicePipelineProvisionedResourcesOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListServicePipelineProvisionedResourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListServicePipelineProvisionedResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServicePipelineProvisionedResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListServicePipelineProvisionedResourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListServicePipelineProvisionedResourcesResponse {
      */
     
     public Object validationException;
+
     public ListServicePipelineProvisionedResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListServicePipelineProvisionedResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class Profiles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profiles")
     public ProfilesProfiles[] profiles;
+
     public Profiles withProfiles(ProfilesProfiles[] profiles) {
         this.profiles = profiles;
         return this;
     }
     
+    public Profiles(){}
 }

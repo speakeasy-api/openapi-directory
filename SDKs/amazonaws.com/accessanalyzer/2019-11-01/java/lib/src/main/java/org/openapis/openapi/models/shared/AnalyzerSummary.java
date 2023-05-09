@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AnalyzerSummary {
     @JsonProperty("arn")
     public String arn;
+
     public AnalyzerSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class AnalyzerSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AnalyzerSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class AnalyzerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastResourceAnalyzed")
     public String lastResourceAnalyzed;
+
     public AnalyzerSummary withLastResourceAnalyzed(String lastResourceAnalyzed) {
         this.lastResourceAnalyzed = lastResourceAnalyzed;
         return this;
@@ -46,6 +49,7 @@ public class AnalyzerSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastResourceAnalyzedAt")
     public OffsetDateTime lastResourceAnalyzedAt;
+
     public AnalyzerSummary withLastResourceAnalyzedAt(OffsetDateTime lastResourceAnalyzedAt) {
         this.lastResourceAnalyzedAt = lastResourceAnalyzedAt;
         return this;
@@ -53,6 +57,7 @@ public class AnalyzerSummary {
     
     @JsonProperty("name")
     public String name;
+
     public AnalyzerSummary withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +65,7 @@ public class AnalyzerSummary {
     
     @JsonProperty("status")
     public AnalyzerStatusEnum status;
+
     public AnalyzerSummary withStatus(AnalyzerStatusEnum status) {
         this.status = status;
         return this;
@@ -68,6 +74,7 @@ public class AnalyzerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public StatusReason statusReason;
+
     public AnalyzerSummary withStatusReason(StatusReason statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -76,6 +83,7 @@ public class AnalyzerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public AnalyzerSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -83,9 +91,17 @@ public class AnalyzerSummary {
     
     @JsonProperty("type")
     public TypeEnum type;
+
     public AnalyzerSummary withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AnalyzerSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("name") String name, @JsonProperty("status") AnalyzerStatusEnum status, @JsonProperty("type") TypeEnum type) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.name = name;
+        this.status = status;
+        this.type = type;
+  }
 }

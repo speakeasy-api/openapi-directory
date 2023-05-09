@@ -18,6 +18,7 @@ public class ServiceAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ServiceAttachmentAggregatedListWarningCodeEnum code;
+
     public ServiceAttachmentAggregatedListWarning withCode(ServiceAttachmentAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ServiceAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServiceAttachmentAggregatedListWarningData[] data;
+
     public ServiceAttachmentAggregatedListWarning withData(ServiceAttachmentAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class ServiceAttachmentAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ServiceAttachmentAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ServiceAttachmentAggregatedListWarning(){}
 }

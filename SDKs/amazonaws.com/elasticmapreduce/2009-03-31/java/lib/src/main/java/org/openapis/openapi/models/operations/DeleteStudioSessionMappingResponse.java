@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStudioSessionMappingResponse {
     
     public String contentType;
+
     public DeleteStudioSessionMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteStudioSessionMappingResponse {
      */
     
     public Object internalServerError;
+
     public DeleteStudioSessionMappingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStudioSessionMappingResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteStudioSessionMappingResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteStudioSessionMappingResponse {
     
     
     public Integer statusCode;
+
     public DeleteStudioSessionMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DeleteStudioSessionMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStudioSessionMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteStudioSessionMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

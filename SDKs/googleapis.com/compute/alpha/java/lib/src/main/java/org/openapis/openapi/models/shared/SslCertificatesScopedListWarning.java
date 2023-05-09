@@ -18,6 +18,7 @@ public class SslCertificatesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public SslCertificatesScopedListWarningCodeEnum code;
+
     public SslCertificatesScopedListWarning withCode(SslCertificatesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SslCertificatesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SslCertificatesScopedListWarningData[] data;
+
     public SslCertificatesScopedListWarning withData(SslCertificatesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class SslCertificatesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SslCertificatesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SslCertificatesScopedListWarning(){}
 }

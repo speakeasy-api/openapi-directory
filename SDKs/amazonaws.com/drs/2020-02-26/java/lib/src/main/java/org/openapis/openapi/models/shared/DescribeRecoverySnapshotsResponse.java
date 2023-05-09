@@ -15,6 +15,7 @@ public class DescribeRecoverySnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RecoverySnapshot[] items;
+
     public DescribeRecoverySnapshotsResponse withItems(RecoverySnapshot[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecoverySnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecoverySnapshotsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeRecoverySnapshotsResponse(){}
 }

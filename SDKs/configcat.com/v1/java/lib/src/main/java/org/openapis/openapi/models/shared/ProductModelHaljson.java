@@ -15,6 +15,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ProductModelHaljsonEmbedded embedded;
+
     public ProductModelHaljson withEmbedded(ProductModelHaljsonEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -23,6 +24,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ProductModelHaljsonLinks links;
+
     public ProductModelHaljson withLinks(ProductModelHaljsonLinks links) {
         this.links = links;
         return this;
@@ -31,6 +33,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductModelHaljson withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductModelHaljson withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public ProductModelHaljson withOrder(Integer order) {
         this.order = order;
         return this;
@@ -55,6 +60,7 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductModelHaljson withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -63,9 +69,11 @@ public class ProductModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public ProductModelHaljson withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public ProductModelHaljson(){}
 }

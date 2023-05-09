@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDKIMRequest {
@@ -12,9 +13,13 @@ public class CreateDKIMRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EmailProvider")
     public String emailProvider;
+
     public CreateDKIMRequest withEmailProvider(String emailProvider) {
         this.emailProvider = emailProvider;
         return this;
     }
     
+    public CreateDKIMRequest(@JsonProperty("EmailProvider") String emailProvider) {
+        this.emailProvider = emailProvider;
+  }
 }

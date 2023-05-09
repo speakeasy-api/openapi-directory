@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBrowserSettingsResponse {
     @JsonProperty("browserSettingsArn")
     public String browserSettingsArn;
+
     public CreateBrowserSettingsResponse withBrowserSettingsArn(String browserSettingsArn) {
         this.browserSettingsArn = browserSettingsArn;
         return this;
     }
     
+    public CreateBrowserSettingsResponse(@JsonProperty("browserSettingsArn") String browserSettingsArn) {
+        this.browserSettingsArn = browserSettingsArn;
+  }
 }

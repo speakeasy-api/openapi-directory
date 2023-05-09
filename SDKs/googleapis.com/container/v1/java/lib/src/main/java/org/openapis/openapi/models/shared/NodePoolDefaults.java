@@ -18,9 +18,11 @@ public class NodePoolDefaults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeConfigDefaults")
     public NodeConfigDefaults nodeConfigDefaults;
+
     public NodePoolDefaults withNodeConfigDefaults(NodeConfigDefaults nodeConfigDefaults) {
         this.nodeConfigDefaults = nodeConfigDefaults;
         return this;
     }
     
+    public NodePoolDefaults(){}
 }

@@ -15,6 +15,7 @@ public class S3InputFileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bucket")
     public String bucket;
+
     public S3InputFileLocation withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,9 +24,11 @@ public class S3InputFileLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public S3InputFileLocation withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public S3InputFileLocation(){}
 }

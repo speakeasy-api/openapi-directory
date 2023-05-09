@@ -15,6 +15,7 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absoluteUrl")
     public String absoluteUrl;
+
     public PostAdminNearMissesRequestRequestBody withAbsoluteUrl(String absoluteUrl) {
         this.absoluteUrl = absoluteUrl;
         return this;
@@ -26,6 +27,7 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public PostAdminNearMissesRequestRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -37,6 +39,7 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookies")
     public java.util.Map<String, Object> cookies;
+
     public PostAdminNearMissesRequestRequestBody withCookies(java.util.Map<String, Object> cookies) {
         this.cookies = cookies;
         return this;
@@ -48,6 +51,7 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public PostAdminNearMissesRequestRequestBody withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -59,6 +63,7 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public PostAdminNearMissesRequestRequestBody withMethod(String method) {
         this.method = method;
         return this;
@@ -70,9 +75,11 @@ public class PostAdminNearMissesRequestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public PostAdminNearMissesRequestRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostAdminNearMissesRequestRequestBody(){}
 }

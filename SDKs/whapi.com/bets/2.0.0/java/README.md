@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CashinRequest;
 import org.openapis.openapi.models.operations.CashinResponse;
 
@@ -26,23 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CashinRequest req = new CashinRequest() {{
-                apiKey = "corrupti";
-                apiSecret = "provident";
-                apiTicket = "distinctio";
-                betId = "quibusdam";
-                cashInValue = 6027.63;
-                cashinBetDelayId = "nulla";
-            }}            
+            CashinRequest req = new CashinRequest("corrupti", "provident", "distinctio", "quibusdam", 6027.63, "nulla");            
 
             CashinResponse res = sdk.bets.cashin(req);
 
-            if (res.cashInResponse.isPresent()) {
+            if (res.cashInResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -50,14 +44,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### bets
+### [bets](docs/bets/README.md)
 
-* `cashin` - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
-* `getBetHistory` - Retrieves the customer’s bet history.
-* `getFreeBets` - Returns available free bets
-* `placeComplexBet` - Places a multiple or a complex bet.
-* `placeSingleBet` - Places a single bet
-* `validateBetslip` - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
+* [cashin](docs/bets/README.md#cashin) - Allows a trusted application to cash in a bet (take a return on a bet) on behalf of the customer
+* [getBetHistory](docs/bets/README.md#getbethistory) - Retrieves the customer’s bet history.
+* [getFreeBets](docs/bets/README.md#getfreebets) - Returns available free bets
+* [placeComplexBet](docs/bets/README.md#placecomplexbet) - Places a multiple or a complex bet.
+* [placeSingleBet](docs/bets/README.md#placesinglebet) - Places a single bet
+* [validateBetslip](docs/bets/README.md#validatebetslip) - Organises the betslip when one or more selections are made. It returns a bet slip structure organised by betting opportunities.
 <!-- End SDK Available Operations -->
 
 ### Maturity

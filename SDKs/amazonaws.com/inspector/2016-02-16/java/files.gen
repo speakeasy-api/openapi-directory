@@ -252,4 +252,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/SubscribeToEventRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UnsubscribeFromEventRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAssessmentTargetRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

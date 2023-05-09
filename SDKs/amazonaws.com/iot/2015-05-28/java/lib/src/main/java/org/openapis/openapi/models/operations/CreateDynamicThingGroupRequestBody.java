@@ -15,6 +15,7 @@ public class CreateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexName")
     public String indexName;
+
     public CreateDynamicThingGroupRequestBody withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -25,6 +26,7 @@ public class CreateDynamicThingGroupRequestBody {
      */
     @JsonProperty("queryString")
     public String queryString;
+
     public CreateDynamicThingGroupRequestBody withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
@@ -36,6 +38,7 @@ public class CreateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryVersion")
     public String queryVersion;
+
     public CreateDynamicThingGroupRequestBody withQueryVersion(String queryVersion) {
         this.queryVersion = queryVersion;
         return this;
@@ -47,6 +50,7 @@ public class CreateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDynamicThingGroupRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
@@ -58,9 +62,13 @@ public class CreateDynamicThingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroupProperties")
     public CreateDynamicThingGroupRequestBodyThingGroupProperties thingGroupProperties;
+
     public CreateDynamicThingGroupRequestBody withThingGroupProperties(CreateDynamicThingGroupRequestBodyThingGroupProperties thingGroupProperties) {
         this.thingGroupProperties = thingGroupProperties;
         return this;
     }
     
+    public CreateDynamicThingGroupRequestBody(@JsonProperty("queryString") String queryString) {
+        this.queryString = queryString;
+  }
 }

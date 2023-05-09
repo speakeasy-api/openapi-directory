@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MembershipsActiveRequest {
@@ -12,9 +13,13 @@ public class MembershipsActiveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public MembershipsActiveFormatEnum format;
+
     public MembershipsActiveRequest withFormat(MembershipsActiveFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public MembershipsActiveRequest(@JsonProperty("format") MembershipsActiveFormatEnum format) {
+        this.format = format;
+  }
 }

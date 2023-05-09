@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPrici
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("introductoryPricingSpecs")
     public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec[] introductoryPricingSpecs;
+
     public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails withIntroductoryPricingSpecs(GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec[] introductoryPricingSpecs) {
         this.introductoryPricingSpecs = introductoryPricingSpecs;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAvailableObservationHeadingsResponse {
     
     public String contentType;
+
     public GetAvailableObservationHeadingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAvailableObservationHeadingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ObservationHeading[] observationHeadings;
+
     public GetAvailableObservationHeadingsResponse withObservationHeadings(org.openapis.openapi.models.shared.ObservationHeading[] observationHeadings) {
         this.observationHeadings = observationHeadings;
         return this;
@@ -26,6 +29,7 @@ public class GetAvailableObservationHeadingsResponse {
     
     
     public Integer statusCode;
+
     public GetAvailableObservationHeadingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAvailableObservationHeadingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAvailableObservationHeadingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAvailableObservationHeadingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

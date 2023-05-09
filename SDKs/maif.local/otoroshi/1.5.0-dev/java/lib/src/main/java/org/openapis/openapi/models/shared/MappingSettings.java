@@ -15,6 +15,7 @@ public class MappingSettings {
      */
     @JsonProperty("map")
     public java.util.Map<String, String> map;
+
     public MappingSettings withMap(java.util.Map<String, String> map) {
         this.map = map;
         return this;
@@ -25,6 +26,7 @@ public class MappingSettings {
      */
     @JsonProperty("remove")
     public String[] remove;
+
     public MappingSettings withRemove(String[] remove) {
         this.remove = remove;
         return this;
@@ -35,9 +37,15 @@ public class MappingSettings {
      */
     @JsonProperty("values")
     public java.util.Map<String, String> values;
+
     public MappingSettings withValues(java.util.Map<String, String> values) {
         this.values = values;
         return this;
     }
     
+    public MappingSettings(@JsonProperty("map") java.util.Map<String, String> map, @JsonProperty("remove") String[] remove, @JsonProperty("values") java.util.Map<String, String> values) {
+        this.map = map;
+        this.remove = remove;
+        this.values = values;
+  }
 }

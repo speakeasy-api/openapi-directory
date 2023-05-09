@@ -15,6 +15,7 @@ public class TaskFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public java.util.Map<String, FileDTO[]> bundles;
+
     public TaskFilesDTO withBundles(java.util.Map<String, FileDTO[]> bundles) {
         this.bundles = bundles;
         return this;
@@ -23,6 +24,7 @@ public class TaskFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputFiles")
     public InputFilesDTO inputFiles;
+
     public TaskFilesDTO withInputFiles(InputFilesDTO inputFiles) {
         this.inputFiles = inputFiles;
         return this;
@@ -31,6 +33,7 @@ public class TaskFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public JobDto1[] jobs;
+
     public TaskFilesDTO withJobs(JobDto1[] jobs) {
         this.jobs = jobs;
         return this;
@@ -39,9 +42,11 @@ public class TaskFilesDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputFiles")
     public FileDTO[] outputFiles;
+
     public TaskFilesDTO withOutputFiles(FileDTO[] outputFiles) {
         this.outputFiles = outputFiles;
         return this;
     }
     
+    public TaskFilesDTO(){}
 }

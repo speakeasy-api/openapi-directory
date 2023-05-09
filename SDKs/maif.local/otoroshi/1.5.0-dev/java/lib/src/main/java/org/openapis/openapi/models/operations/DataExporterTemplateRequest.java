@@ -12,9 +12,11 @@ public class DataExporterTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public DataExporterTemplateRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DataExporterTemplateRequest(){}
 }

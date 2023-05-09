@@ -18,6 +18,7 @@ public class ScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cronSchedule")
     public String cronSchedule;
+
     public ScheduleInput withCronSchedule(String cronSchedule) {
         this.cronSchedule = cronSchedule;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ScheduleInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTemplate")
     public ExecutionTemplate executionTemplate;
+
     public ScheduleInput withExecutionTemplate(ExecutionTemplate executionTemplate) {
         this.executionTemplate = executionTemplate;
         return this;
@@ -48,6 +51,7 @@ public class ScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScheduleStateEnum state;
+
     public ScheduleInput withState(ScheduleStateEnum state) {
         this.state = state;
         return this;
@@ -59,9 +63,11 @@ public class ScheduleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public ScheduleInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public ScheduleInput(){}
 }

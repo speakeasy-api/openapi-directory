@@ -15,9 +15,11 @@ public class DeleteSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DeleteSessionResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteSessionResponse(){}
 }

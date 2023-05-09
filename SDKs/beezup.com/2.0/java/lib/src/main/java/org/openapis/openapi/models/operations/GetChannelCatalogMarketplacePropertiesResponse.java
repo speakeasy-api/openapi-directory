@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelCatalogMarketplacePropertiesResponse {
@@ -12,6 +13,7 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelCatalogMarketplacePropertiesResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
     
     
     public String contentType;
+
     public GetChannelCatalogMarketplacePropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetChannelCatalogMarketplacePropertiesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
     
     
     public Integer statusCode;
+
     public GetChannelCatalogMarketplacePropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelCatalogMarketplacePropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetChannelCatalogMarketplacePropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelCatalogMarketplaceProperties channelCatalogMarketplaceProperties;
+
     public GetChannelCatalogMarketplacePropertiesResponse withChannelCatalogMarketplaceProperties(org.openapis.openapi.models.shared.ChannelCatalogMarketplaceProperties channelCatalogMarketplaceProperties) {
         this.channelCatalogMarketplaceProperties = channelCatalogMarketplaceProperties;
         return this;
     }
     
+    public GetChannelCatalogMarketplacePropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

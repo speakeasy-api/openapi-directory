@@ -15,6 +15,7 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockSizeBytes")
     public Long blockSizeBytes;
+
     public ParquetSerDe withBlockSizeBytes(Long blockSizeBytes) {
         this.blockSizeBytes = blockSizeBytes;
         return this;
@@ -23,6 +24,7 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compression")
     public ParquetCompressionEnum compression;
+
     public ParquetSerDe withCompression(ParquetCompressionEnum compression) {
         this.compression = compression;
         return this;
@@ -31,6 +33,7 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableDictionaryCompression")
     public Boolean enableDictionaryCompression;
+
     public ParquetSerDe withEnableDictionaryCompression(Boolean enableDictionaryCompression) {
         this.enableDictionaryCompression = enableDictionaryCompression;
         return this;
@@ -39,6 +42,7 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxPaddingBytes")
     public Long maxPaddingBytes;
+
     public ParquetSerDe withMaxPaddingBytes(Long maxPaddingBytes) {
         this.maxPaddingBytes = maxPaddingBytes;
         return this;
@@ -47,6 +51,7 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSizeBytes")
     public Long pageSizeBytes;
+
     public ParquetSerDe withPageSizeBytes(Long pageSizeBytes) {
         this.pageSizeBytes = pageSizeBytes;
         return this;
@@ -55,9 +60,11 @@ public class ParquetSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriterVersion")
     public ParquetWriterVersionEnum writerVersion;
+
     public ParquetSerDe withWriterVersion(ParquetWriterVersionEnum writerVersion) {
         this.writerVersion = writerVersion;
         return this;
     }
     
+    public ParquetSerDe(){}
 }

@@ -18,9 +18,11 @@ public class ObjectReferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectIds")
     public String[] objectIds;
+
     public ObjectReferences withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
     }
     
+    public ObjectReferences(){}
 }

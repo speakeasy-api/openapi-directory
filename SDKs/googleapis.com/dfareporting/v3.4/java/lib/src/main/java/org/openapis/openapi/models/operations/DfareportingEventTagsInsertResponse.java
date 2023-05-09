@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingEventTagsInsertResponse {
     
     public String contentType;
+
     public DfareportingEventTagsInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingEventTagsInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.EventTag eventTag;
+
     public DfareportingEventTagsInsertResponse withEventTag(org.openapis.openapi.models.shared.EventTag eventTag) {
         this.eventTag = eventTag;
         return this;
@@ -26,6 +29,7 @@ public class DfareportingEventTagsInsertResponse {
     
     
     public Integer statusCode;
+
     public DfareportingEventTagsInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingEventTagsInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingEventTagsInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DfareportingEventTagsInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

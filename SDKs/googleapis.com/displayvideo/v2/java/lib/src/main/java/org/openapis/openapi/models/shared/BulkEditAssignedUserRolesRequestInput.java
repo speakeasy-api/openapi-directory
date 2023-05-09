@@ -18,6 +18,7 @@ public class BulkEditAssignedUserRolesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAssignedUserRoles")
     public AssignedUserRoleInput[] createdAssignedUserRoles;
+
     public BulkEditAssignedUserRolesRequestInput withCreatedAssignedUserRoles(AssignedUserRoleInput[] createdAssignedUserRoles) {
         this.createdAssignedUserRoles = createdAssignedUserRoles;
         return this;
@@ -29,9 +30,11 @@ public class BulkEditAssignedUserRolesRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletedAssignedUserRoles")
     public String[] deletedAssignedUserRoles;
+
     public BulkEditAssignedUserRolesRequestInput withDeletedAssignedUserRoles(String[] deletedAssignedUserRoles) {
         this.deletedAssignedUserRoles = deletedAssignedUserRoles;
         return this;
     }
     
+    public BulkEditAssignedUserRolesRequestInput(){}
 }

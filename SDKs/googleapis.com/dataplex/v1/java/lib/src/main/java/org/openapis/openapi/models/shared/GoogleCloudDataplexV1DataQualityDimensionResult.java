@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1DataQualityDimensionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Boolean passed;
+
     public GoogleCloudDataplexV1DataQualityDimensionResult withPassed(Boolean passed) {
         this.passed = passed;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityDimensionResult(){}
 }

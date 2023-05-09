@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetResponse {
     
     public String contentType;
+
     public CreateFleetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetResponse createFleetResponse;
+
     public CreateFleetResponse withCreateFleetResponse(org.openapis.openapi.models.shared.CreateFleetResponse createFleetResponse) {
         this.createFleetResponse = createFleetResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetResponse {
      */
     
     public Object internalServerErrorException;
+
     public CreateFleetResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateFleetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateFleetResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateFleetResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFleetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFleetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFleetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateFleetResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateFleetResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateFleetResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateFleetResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateFleetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

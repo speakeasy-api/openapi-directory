@@ -99,4 +99,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/TotalItems.java
 lib/src/main/java/org/openapis/openapi/models/shared/Paging.java
 lib/src/main/java/org/openapis/openapi/models/shared/List.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/invoice/README.md
+docs/orders/README.md
+docs/payment/README.md
 USAGE.md

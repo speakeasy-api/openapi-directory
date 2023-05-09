@@ -98,6 +98,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNumeralEgypti
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNumeralRomanSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNumeralRomanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNumeralRomanResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNodSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersNodResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersPiSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersPiRequest.java
@@ -114,4 +115,14 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersCurrencyRespo
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersOrdinalSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersOrdinalRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetNumbersOrdinalResponse.java
+docs/sdk/README.md
+docs/baseconversion/README.md
+docs/numberchecks/README.md
+docs/numberfacts/README.md
+docs/numbergeneration/README.md
+docs/numbersystemsconversion/README.md
+docs/numberoftheday/README.md
+docs/pi/README.md
+docs/prime/README.md
+docs/spell/README.md
 USAGE.md

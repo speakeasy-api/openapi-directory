@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlobalJwtVerifier {
     @JsonProperty("algoSettings")
     public Object algoSettings;
+
     public GlobalJwtVerifier withAlgoSettings(Object algoSettings) {
         this.algoSettings = algoSettings;
         return this;
@@ -22,6 +23,7 @@ public class GlobalJwtVerifier {
      */
     @JsonProperty("desc")
     public String desc;
+
     public GlobalJwtVerifier withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -32,6 +34,7 @@ public class GlobalJwtVerifier {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GlobalJwtVerifier withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -42,6 +45,7 @@ public class GlobalJwtVerifier {
      */
     @JsonProperty("id")
     public String id;
+
     public GlobalJwtVerifier withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class GlobalJwtVerifier {
      */
     @JsonProperty("name")
     public String name;
+
     public GlobalJwtVerifier withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +64,7 @@ public class GlobalJwtVerifier {
     
     @JsonProperty("source")
     public Object source;
+
     public GlobalJwtVerifier withSource(Object source) {
         this.source = source;
         return this;
@@ -66,6 +72,7 @@ public class GlobalJwtVerifier {
     
     @JsonProperty("strategy")
     public Object strategy;
+
     public GlobalJwtVerifier withStrategy(Object strategy) {
         this.strategy = strategy;
         return this;
@@ -76,9 +83,20 @@ public class GlobalJwtVerifier {
      */
     @JsonProperty("strict")
     public Boolean strict;
+
     public GlobalJwtVerifier withStrict(Boolean strict) {
         this.strict = strict;
         return this;
     }
     
+    public GlobalJwtVerifier(@JsonProperty("algoSettings") Object algoSettings, @JsonProperty("desc") String desc, @JsonProperty("enabled") Boolean enabled, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("source") Object source, @JsonProperty("strategy") Object strategy, @JsonProperty("strict") Boolean strict) {
+        this.algoSettings = algoSettings;
+        this.desc = desc;
+        this.enabled = enabled;
+        this.id = id;
+        this.name = name;
+        this.source = source;
+        this.strategy = strategy;
+        this.strict = strict;
+  }
 }

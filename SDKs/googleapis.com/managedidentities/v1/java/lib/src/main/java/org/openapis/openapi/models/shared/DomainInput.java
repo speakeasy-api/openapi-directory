@@ -18,6 +18,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public String admin;
+
     public DomainInput withAdmin(String admin) {
         this.admin = admin;
         return this;
@@ -29,6 +30,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditLogsEnabled")
     public Boolean auditLogsEnabled;
+
     public DomainInput withAuditLogsEnabled(Boolean auditLogsEnabled) {
         this.auditLogsEnabled = auditLogsEnabled;
         return this;
@@ -40,6 +42,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedNetworks")
     public String[] authorizedNetworks;
+
     public DomainInput withAuthorizedNetworks(String[] authorizedNetworks) {
         this.authorizedNetworks = authorizedNetworks;
         return this;
@@ -51,6 +54,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public DomainInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public DomainInput withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -73,6 +78,7 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DomainInput withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class DomainInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRange")
     public String reservedIpRange;
+
     public DomainInput withReservedIpRange(String reservedIpRange) {
         this.reservedIpRange = reservedIpRange;
         return this;
     }
     
+    public DomainInput(){}
 }

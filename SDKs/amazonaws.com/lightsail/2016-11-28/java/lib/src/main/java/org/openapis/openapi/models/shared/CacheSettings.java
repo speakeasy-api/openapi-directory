@@ -15,6 +15,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedHTTPMethods")
     public String allowedHTTPMethods;
+
     public CacheSettings withAllowedHTTPMethods(String allowedHTTPMethods) {
         this.allowedHTTPMethods = allowedHTTPMethods;
         return this;
@@ -23,6 +24,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachedHTTPMethods")
     public String cachedHTTPMethods;
+
     public CacheSettings withCachedHTTPMethods(String cachedHTTPMethods) {
         this.cachedHTTPMethods = cachedHTTPMethods;
         return this;
@@ -31,6 +33,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTTL")
     public Long defaultTTL;
+
     public CacheSettings withDefaultTTL(Long defaultTTL) {
         this.defaultTTL = defaultTTL;
         return this;
@@ -39,6 +42,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardedCookies")
     public CookieObject forwardedCookies;
+
     public CacheSettings withForwardedCookies(CookieObject forwardedCookies) {
         this.forwardedCookies = forwardedCookies;
         return this;
@@ -47,6 +51,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardedHeaders")
     public HeaderObject forwardedHeaders;
+
     public CacheSettings withForwardedHeaders(HeaderObject forwardedHeaders) {
         this.forwardedHeaders = forwardedHeaders;
         return this;
@@ -55,6 +60,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardedQueryStrings")
     public QueryStringObject forwardedQueryStrings;
+
     public CacheSettings withForwardedQueryStrings(QueryStringObject forwardedQueryStrings) {
         this.forwardedQueryStrings = forwardedQueryStrings;
         return this;
@@ -63,6 +69,7 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumTTL")
     public Long maximumTTL;
+
     public CacheSettings withMaximumTTL(Long maximumTTL) {
         this.maximumTTL = maximumTTL;
         return this;
@@ -71,9 +78,11 @@ public class CacheSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumTTL")
     public Long minimumTTL;
+
     public CacheSettings withMinimumTTL(Long minimumTTL) {
         this.minimumTTL = minimumTTL;
         return this;
     }
     
+    public CacheSettings(){}
 }

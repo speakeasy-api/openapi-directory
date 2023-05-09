@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteComponentResponse {
@@ -12,6 +13,7 @@ public class DeleteComponentResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteComponentResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteComponentResponse {
      */
     
     public Object clientException;
+
     public DeleteComponentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteComponentResponse {
     
     
     public String contentType;
+
     public DeleteComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteComponentResponse deleteComponentResponse;
+
     public DeleteComponentResponse withDeleteComponentResponse(org.openapis.openapi.models.shared.DeleteComponentResponse deleteComponentResponse) {
         this.deleteComponentResponse = deleteComponentResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteComponentResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteComponentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteComponentResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteComponentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteComponentResponse {
      */
     
     public Object serviceException;
+
     public DeleteComponentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteComponentResponse {
     
     
     public Integer statusCode;
+
     public DeleteComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteComponentResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteComponentResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteComponentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteComponentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

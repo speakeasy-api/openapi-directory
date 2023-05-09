@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1WebDetectionWebEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudVisionV1p2beta1WebDetectionWebEntity withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1WebDetectionWebEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public GoogleCloudVisionV1p2beta1WebDetectionWebEntity withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1WebDetectionWebEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p2beta1WebDetectionWebEntity withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1WebDetectionWebEntity(){}
 }

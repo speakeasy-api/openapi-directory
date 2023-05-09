@@ -44,7 +44,6 @@ public class WeatherMaps {
      * * As Meteosource only covers areas between latitudes 80\u00b0 and -80\u00b0, you can only request maps within these bounds, when specifying the latitude and longitude boundaries. When specifying the area using Google Maps Tile notation, the regions outside our supported latitudes will be fully transparent.
      * * The finest resolution is not available for maps covering very large regions. The resulting map will be automatically downscaled in this case, to guarantee high-speed responses.
      * * Weather maps are only supported for forecasts, not for archive data.
-     * 
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -71,13 +70,11 @@ public class WeatherMaps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MapMapGetResponse res = new org.openapis.openapi.models.operations.MapMapGetResponse() {{
+        org.openapis.openapi.models.operations.MapMapGetResponse res = new org.openapis.openapi.models.operations.MapMapGetResponse(contentType, httpRes.statusCode()) {{
             mapMapGet200ImagePngString = null;
             body = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

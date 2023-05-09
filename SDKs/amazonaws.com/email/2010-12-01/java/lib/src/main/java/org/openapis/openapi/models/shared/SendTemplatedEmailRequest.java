@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendTemplatedEmailRequest - Represents a request to send a templated email using Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-personalized-email-api.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendTemplatedEmailRequest {
     
     public String configurationSetName;
+
     public SendTemplatedEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +20,7 @@ public class SendTemplatedEmailRequest {
     
     
     public Destination destination;
+
     public SendTemplatedEmailRequest withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -26,6 +28,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String[] replyToAddresses;
+
     public SendTemplatedEmailRequest withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
@@ -33,6 +36,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String returnPath;
+
     public SendTemplatedEmailRequest withReturnPath(String returnPath) {
         this.returnPath = returnPath;
         return this;
@@ -40,6 +44,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String returnPathArn;
+
     public SendTemplatedEmailRequest withReturnPathArn(String returnPathArn) {
         this.returnPathArn = returnPathArn;
         return this;
@@ -47,6 +52,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String source;
+
     public SendTemplatedEmailRequest withSource(String source) {
         this.source = source;
         return this;
@@ -54,6 +60,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String sourceArn;
+
     public SendTemplatedEmailRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -61,6 +68,7 @@ public class SendTemplatedEmailRequest {
     
     
     public MessageTag[] tags;
+
     public SendTemplatedEmailRequest withTags(MessageTag[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +76,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String template;
+
     public SendTemplatedEmailRequest withTemplate(String template) {
         this.template = template;
         return this;
@@ -75,6 +84,7 @@ public class SendTemplatedEmailRequest {
     
     
     public String templateArn;
+
     public SendTemplatedEmailRequest withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -82,9 +92,16 @@ public class SendTemplatedEmailRequest {
     
     
     public String templateData;
+
     public SendTemplatedEmailRequest withTemplateData(String templateData) {
         this.templateData = templateData;
         return this;
     }
     
+    public SendTemplatedEmailRequest(@JsonProperty("Destination") Destination destination, @JsonProperty("Source") String source, @JsonProperty("Template") String template, @JsonProperty("TemplateData") String templateData) {
+        this.destination = destination;
+        this.source = source;
+        this.template = template;
+        this.templateData = templateData;
+  }
 }

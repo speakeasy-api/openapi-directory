@@ -15,6 +15,7 @@ public class Matcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Matcher withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class Matcher {
      */
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public Matcher withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -35,6 +37,7 @@ public class Matcher {
      */
     @JsonProperty("MatcherId")
     public String matcherId;
+
     public Matcher withMatcherId(String matcherId) {
         this.matcherId = matcherId;
         return this;
@@ -45,6 +48,7 @@ public class Matcher {
      */
     @JsonProperty("UpdatesNotificationEndpoint")
     public String updatesNotificationEndpoint;
+
     public Matcher withUpdatesNotificationEndpoint(String updatesNotificationEndpoint) {
         this.updatesNotificationEndpoint = updatesNotificationEndpoint;
         return this;
@@ -55,9 +59,16 @@ public class Matcher {
      */
     @JsonProperty("hook-base-address")
     public String hookBaseAddress;
+
     public Matcher withHookBaseAddress(String hookBaseAddress) {
         this.hookBaseAddress = hookBaseAddress;
         return this;
     }
     
+    public Matcher(@JsonProperty("IsActive") Boolean isActive, @JsonProperty("MatcherId") String matcherId, @JsonProperty("UpdatesNotificationEndpoint") String updatesNotificationEndpoint, @JsonProperty("hook-base-address") String hookBaseAddress) {
+        this.isActive = isActive;
+        this.matcherId = matcherId;
+        this.updatesNotificationEndpoint = updatesNotificationEndpoint;
+        this.hookBaseAddress = hookBaseAddress;
+  }
 }

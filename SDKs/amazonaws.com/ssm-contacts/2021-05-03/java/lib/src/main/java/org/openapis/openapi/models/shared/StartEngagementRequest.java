@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartEngagementRequest {
     @JsonProperty("ContactId")
     public String contactId;
+
     public StartEngagementRequest withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -18,6 +19,7 @@ public class StartEngagementRequest {
     
     @JsonProperty("Content")
     public String content;
+
     public StartEngagementRequest withContent(String content) {
         this.content = content;
         return this;
@@ -26,6 +28,7 @@ public class StartEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public StartEngagementRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -34,6 +37,7 @@ public class StartEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncidentId")
     public String incidentId;
+
     public StartEngagementRequest withIncidentId(String incidentId) {
         this.incidentId = incidentId;
         return this;
@@ -42,6 +46,7 @@ public class StartEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicContent")
     public String publicContent;
+
     public StartEngagementRequest withPublicContent(String publicContent) {
         this.publicContent = publicContent;
         return this;
@@ -50,6 +55,7 @@ public class StartEngagementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicSubject")
     public String publicSubject;
+
     public StartEngagementRequest withPublicSubject(String publicSubject) {
         this.publicSubject = publicSubject;
         return this;
@@ -57,6 +63,7 @@ public class StartEngagementRequest {
     
     @JsonProperty("Sender")
     public String sender;
+
     public StartEngagementRequest withSender(String sender) {
         this.sender = sender;
         return this;
@@ -64,9 +71,16 @@ public class StartEngagementRequest {
     
     @JsonProperty("Subject")
     public String subject;
+
     public StartEngagementRequest withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public StartEngagementRequest(@JsonProperty("ContactId") String contactId, @JsonProperty("Content") String content, @JsonProperty("Sender") String sender, @JsonProperty("Subject") String subject) {
+        this.contactId = contactId;
+        this.content = content;
+        this.sender = sender;
+        this.subject = subject;
+  }
 }

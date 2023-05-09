@@ -15,6 +15,7 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceContributorCount")
     public ComplianceContributorCount complianceContributorCount;
+
     public Compliance withComplianceContributorCount(ComplianceContributorCount complianceContributorCount) {
         this.complianceContributorCount = complianceContributorCount;
         return this;
@@ -23,9 +24,11 @@ public class Compliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public ComplianceTypeEnum complianceType;
+
     public Compliance withComplianceType(ComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
     }
     
+    public Compliance(){}
 }

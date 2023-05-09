@@ -15,9 +15,13 @@ public class OBWriteDomesticResponse5DataRefund {
      */
     @JsonProperty("Account")
     public OBWriteDomesticResponse5DataRefundAccount account;
+
     public OBWriteDomesticResponse5DataRefund withAccount(OBWriteDomesticResponse5DataRefundAccount account) {
         this.account = account;
         return this;
     }
     
+    public OBWriteDomesticResponse5DataRefund(@JsonProperty("Account") OBWriteDomesticResponse5DataRefundAccount account) {
+        this.account = account;
+  }
 }

@@ -15,6 +15,7 @@ public class ListNotificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNotificationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListNotificationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public Notification[] notifications;
+
     public ListNotificationsResponse withNotifications(Notification[] notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public ListNotificationsResponse(){}
 }

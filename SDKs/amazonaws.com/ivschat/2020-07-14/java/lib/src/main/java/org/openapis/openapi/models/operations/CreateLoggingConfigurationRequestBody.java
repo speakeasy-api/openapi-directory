@@ -14,6 +14,7 @@ public class CreateLoggingConfigurationRequestBody {
      */
     @JsonProperty("destinationConfiguration")
     public CreateLoggingConfigurationRequestBodyDestinationConfiguration destinationConfiguration;
+
     public CreateLoggingConfigurationRequestBody withDestinationConfiguration(CreateLoggingConfigurationRequestBodyDestinationConfiguration destinationConfiguration) {
         this.destinationConfiguration = destinationConfiguration;
         return this;
@@ -25,6 +26,7 @@ public class CreateLoggingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateLoggingConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +38,13 @@ public class CreateLoggingConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateLoggingConfigurationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLoggingConfigurationRequestBody(@JsonProperty("destinationConfiguration") CreateLoggingConfigurationRequestBodyDestinationConfiguration destinationConfiguration) {
+        this.destinationConfiguration = destinationConfiguration;
+  }
 }

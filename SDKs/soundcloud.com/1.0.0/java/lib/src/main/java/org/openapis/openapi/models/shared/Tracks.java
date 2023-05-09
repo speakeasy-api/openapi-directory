@@ -12,6 +12,7 @@ public class Tracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public Track[] collection;
+
     public Tracks withCollection(Track[] collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class Tracks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public Tracks withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public Tracks(){}
 }

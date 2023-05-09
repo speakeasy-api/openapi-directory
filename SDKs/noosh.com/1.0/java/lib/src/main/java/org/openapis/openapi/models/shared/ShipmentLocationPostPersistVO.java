@@ -17,6 +17,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line1")
     public String addressLine1;
+
     public ShipmentLocationPostPersistVO withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -25,6 +26,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line2")
     public String addressLine2;
+
     public ShipmentLocationPostPersistVO withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -33,6 +35,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_line3")
     public String addressLine3;
+
     public ShipmentLocationPostPersistVO withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -41,6 +44,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch_label")
     public String batchLabel;
+
     public ShipmentLocationPostPersistVO withBatchLabel(String batchLabel) {
         this.batchLabel = batchLabel;
         return this;
@@ -49,6 +53,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ShipmentLocationPostPersistVO withCity(String city) {
         this.city = city;
         return this;
@@ -57,6 +62,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public ShipmentLocationPostPersistVO withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -65,6 +71,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_iso_code")
     public String countryIsoCode;
+
     public ShipmentLocationPostPersistVO withCountryIsoCode(String countryIsoCode) {
         this.countryIsoCode = countryIsoCode;
         return this;
@@ -74,6 +81,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("delivery_date")
     public LocalDate deliveryDate;
+
     public ShipmentLocationPostPersistVO withDeliveryDate(LocalDate deliveryDate) {
         this.deliveryDate = deliveryDate;
         return this;
@@ -82,6 +90,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_or_title")
     public String descriptionOrTitle;
+
     public ShipmentLocationPostPersistVO withDescriptionOrTitle(String descriptionOrTitle) {
         this.descriptionOrTitle = descriptionOrTitle;
         return this;
@@ -90,6 +99,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ShipmentLocationPostPersistVO withEmail(String email) {
         this.email = email;
         return this;
@@ -98,6 +108,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public ShipmentLocationPostPersistVO withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -106,6 +117,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inner_carton_label")
     public String innerCartonLabel;
+
     public ShipmentLocationPostPersistVO withInnerCartonLabel(String innerCartonLabel) {
         this.innerCartonLabel = innerCartonLabel;
         return this;
@@ -114,6 +126,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public ShipmentLocationPostPersistVO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -122,6 +135,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle_name")
     public String middleName;
+
     public ShipmentLocationPostPersistVO withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -130,6 +144,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outer_carton_label")
     public String outerCartonLabel;
+
     public ShipmentLocationPostPersistVO withOuterCartonLabel(String outerCartonLabel) {
         this.outerCartonLabel = outerCartonLabel;
         return this;
@@ -138,6 +153,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pallet_lablel")
     public String palletLablel;
+
     public ShipmentLocationPostPersistVO withPalletLablel(String palletLablel) {
         this.palletLablel = palletLablel;
         return this;
@@ -146,6 +162,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poof_type")
     public String poofType;
+
     public ShipmentLocationPostPersistVO withPoofType(String poofType) {
         this.poofType = poofType;
         return this;
@@ -154,6 +171,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public ShipmentLocationPostPersistVO withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -162,6 +180,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_type")
     public String requestType;
+
     public ShipmentLocationPostPersistVO withRequestType(String requestType) {
         this.requestType = requestType;
         return this;
@@ -170,6 +189,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requested_quantity")
     public Long requestedQuantity;
+
     public ShipmentLocationPostPersistVO withRequestedQuantity(Long requestedQuantity) {
         this.requestedQuantity = requestedQuantity;
         return this;
@@ -178,6 +198,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_custom_fields")
     public CustomFieldPersistVO[] shipmentCustomFields;
+
     public ShipmentLocationPostPersistVO withShipmentCustomFields(CustomFieldPersistVO[] shipmentCustomFields) {
         this.shipmentCustomFields = shipmentCustomFields;
         return this;
@@ -186,6 +207,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_request_custom_fields")
     public CustomFieldPersistVO[] shipmentRequestCustomFields;
+
     public ShipmentLocationPostPersistVO withShipmentRequestCustomFields(CustomFieldPersistVO[] shipmentRequestCustomFields) {
         this.shipmentRequestCustomFields = shipmentRequestCustomFields;
         return this;
@@ -194,6 +216,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_carrier")
     public String shippingCarrier;
+
     public ShipmentLocationPostPersistVO withShippingCarrier(String shippingCarrier) {
         this.shippingCarrier = shippingCarrier;
         return this;
@@ -202,6 +225,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_instruction")
     public String shippingInstruction;
+
     public ShipmentLocationPostPersistVO withShippingInstruction(String shippingInstruction) {
         this.shippingInstruction = shippingInstruction;
         return this;
@@ -210,6 +234,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shpping_method")
     public String shppingMethod;
+
     public ShipmentLocationPostPersistVO withShppingMethod(String shppingMethod) {
         this.shppingMethod = shppingMethod;
         return this;
@@ -218,6 +243,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_ids")
     public String specIds;
+
     public ShipmentLocationPostPersistVO withSpecIds(String specIds) {
         this.specIds = specIds;
         return this;
@@ -226,6 +252,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ShipmentLocationPostPersistVO withState(String state) {
         this.state = state;
         return this;
@@ -234,6 +261,7 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("work_phone_number")
     public String workPhoneNumber;
+
     public ShipmentLocationPostPersistVO withWorkPhoneNumber(String workPhoneNumber) {
         this.workPhoneNumber = workPhoneNumber;
         return this;
@@ -242,9 +270,11 @@ public class ShipmentLocationPostPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public ShipmentLocationPostPersistVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ShipmentLocationPostPersistVO(){}
 }

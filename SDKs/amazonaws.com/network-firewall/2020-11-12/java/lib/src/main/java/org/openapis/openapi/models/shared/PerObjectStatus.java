@@ -15,6 +15,7 @@ public class PerObjectStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncStatus")
     public PerObjectSyncStatusEnum syncStatus;
+
     public PerObjectStatus withSyncStatus(PerObjectSyncStatusEnum syncStatus) {
         this.syncStatus = syncStatus;
         return this;
@@ -23,9 +24,11 @@ public class PerObjectStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public PerObjectStatus withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public PerObjectStatus(){}
 }

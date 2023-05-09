@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OidcMemberDefinition {
     @JsonProperty("Groups")
     public String[] groups;
+
     public OidcMemberDefinition withGroups(String[] groups) {
         this.groups = groups;
         return this;
     }
     
+    public OidcMemberDefinition(@JsonProperty("Groups") String[] groups) {
+        this.groups = groups;
+  }
 }

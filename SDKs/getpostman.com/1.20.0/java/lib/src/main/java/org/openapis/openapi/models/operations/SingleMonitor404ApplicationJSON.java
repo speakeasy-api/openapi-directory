@@ -15,9 +15,11 @@ public class SingleMonitor404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public SingleMonitor404ApplicationJSONError error;
+
     public SingleMonitor404ApplicationJSON withError(SingleMonitor404ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public SingleMonitor404ApplicationJSON(){}
 }

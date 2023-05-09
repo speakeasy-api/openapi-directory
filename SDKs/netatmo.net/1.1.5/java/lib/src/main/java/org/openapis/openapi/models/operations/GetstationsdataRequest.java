@@ -12,6 +12,7 @@ public class GetstationsdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public GetstationsdataRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,9 +23,11 @@ public class GetstationsdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=get_favorites")
     public Boolean getFavorites;
+
     public GetstationsdataRequest withGetFavorites(Boolean getFavorites) {
         this.getFavorites = getFavorites;
         return this;
     }
     
+    public GetstationsdataRequest(){}
 }

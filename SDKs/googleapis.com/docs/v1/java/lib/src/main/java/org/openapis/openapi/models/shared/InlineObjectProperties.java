@@ -18,9 +18,11 @@ public class InlineObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObject")
     public EmbeddedObject embeddedObject;
+
     public InlineObjectProperties withEmbeddedObject(EmbeddedObject embeddedObject) {
         this.embeddedObject = embeddedObject;
         return this;
     }
     
+    public InlineObjectProperties(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListUserImportJobsRequest {
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListUserImportJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -22,6 +23,7 @@ public class ListUserImportJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public ListUserImportJobsRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -29,9 +31,14 @@ public class ListUserImportJobsRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public ListUserImportJobsRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public ListUserImportJobsRequest(@JsonProperty("MaxResults") Long maxResults, @JsonProperty("UserPoolId") String userPoolId) {
+        this.maxResults = maxResults;
+        this.userPoolId = userPoolId;
+  }
 }

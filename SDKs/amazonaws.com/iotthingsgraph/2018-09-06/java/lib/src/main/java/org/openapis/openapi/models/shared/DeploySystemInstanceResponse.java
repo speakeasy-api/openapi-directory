@@ -15,6 +15,7 @@ public class DeploySystemInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greengrassDeploymentId")
     public String greengrassDeploymentId;
+
     public DeploySystemInstanceResponse withGreengrassDeploymentId(String greengrassDeploymentId) {
         this.greengrassDeploymentId = greengrassDeploymentId;
         return this;
@@ -22,9 +23,13 @@ public class DeploySystemInstanceResponse {
     
     @JsonProperty("summary")
     public SystemInstanceSummary summary;
+
     public DeploySystemInstanceResponse withSummary(SystemInstanceSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public DeploySystemInstanceResponse(@JsonProperty("summary") SystemInstanceSummary summary) {
+        this.summary = summary;
+  }
 }

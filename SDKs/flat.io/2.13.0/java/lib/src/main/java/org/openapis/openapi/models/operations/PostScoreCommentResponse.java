@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostScoreCommentResponse {
     
     public String contentType;
+
     public PostScoreCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostScoreCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse;
+
     public PostScoreCommentResponse withFlatErrorResponse(org.openapis.openapi.models.shared.FlatErrorResponse flatErrorResponse) {
         this.flatErrorResponse = flatErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostScoreCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.ScoreComment scoreComment;
+
     public PostScoreCommentResponse withScoreComment(org.openapis.openapi.models.shared.ScoreComment scoreComment) {
         this.scoreComment = scoreComment;
         return this;
@@ -36,6 +40,7 @@ public class PostScoreCommentResponse {
     
     
     public Integer statusCode;
+
     public PostScoreCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostScoreCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostScoreCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostScoreCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

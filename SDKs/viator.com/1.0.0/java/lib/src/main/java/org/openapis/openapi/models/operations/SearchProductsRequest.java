@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchProductsRequest {
@@ -13,6 +14,7 @@ public class SearchProductsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public SearchProductsRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,9 +22,13 @@ public class SearchProductsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public SearchProductsRequestBody requestBody;
+
     public SearchProductsRequest withRequestBody(SearchProductsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public SearchProductsRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

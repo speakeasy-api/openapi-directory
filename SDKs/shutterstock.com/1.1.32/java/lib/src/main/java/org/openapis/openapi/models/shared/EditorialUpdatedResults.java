@@ -17,6 +17,7 @@ public class EditorialUpdatedResults {
      */
     @JsonProperty("data")
     public EditorialUpdatedContent[] data;
+
     public EditorialUpdatedResults withData(EditorialUpdatedContent[] data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class EditorialUpdatedResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EditorialUpdatedResults withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +41,7 @@ public class EditorialUpdatedResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public EditorialUpdatedResults withNext(String next) {
         this.next = next;
         return this;
@@ -50,6 +53,7 @@ public class EditorialUpdatedResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public EditorialUpdatedResults withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -61,9 +65,13 @@ public class EditorialUpdatedResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public EditorialUpdatedResults withPrev(String prev) {
         this.prev = prev;
         return this;
     }
     
+    public EditorialUpdatedResults(@JsonProperty("data") EditorialUpdatedContent[] data) {
+        this.data = data;
+  }
 }

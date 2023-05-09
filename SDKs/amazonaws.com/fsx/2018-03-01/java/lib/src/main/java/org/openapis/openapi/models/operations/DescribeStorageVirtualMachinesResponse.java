@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStorageVirtualMachinesResponse {
@@ -12,6 +13,7 @@ public class DescribeStorageVirtualMachinesResponse {
      */
     
     public Object badRequest;
+
     public DescribeStorageVirtualMachinesResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStorageVirtualMachinesResponse {
     
     
     public String contentType;
+
     public DescribeStorageVirtualMachinesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStorageVirtualMachinesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStorageVirtualMachinesResponse describeStorageVirtualMachinesResponse;
+
     public DescribeStorageVirtualMachinesResponse withDescribeStorageVirtualMachinesResponse(org.openapis.openapi.models.shared.DescribeStorageVirtualMachinesResponse describeStorageVirtualMachinesResponse) {
         this.describeStorageVirtualMachinesResponse = describeStorageVirtualMachinesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStorageVirtualMachinesResponse {
      */
     
     public Object internalServerError;
+
     public DescribeStorageVirtualMachinesResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DescribeStorageVirtualMachinesResponse {
     
     
     public Integer statusCode;
+
     public DescribeStorageVirtualMachinesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeStorageVirtualMachinesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStorageVirtualMachinesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeStorageVirtualMachinesResponse {
      */
     
     public Object storageVirtualMachineNotFound;
+
     public DescribeStorageVirtualMachinesResponse withStorageVirtualMachineNotFound(Object storageVirtualMachineNotFound) {
         this.storageVirtualMachineNotFound = storageVirtualMachineNotFound;
         return this;
     }
     
+    public DescribeStorageVirtualMachinesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

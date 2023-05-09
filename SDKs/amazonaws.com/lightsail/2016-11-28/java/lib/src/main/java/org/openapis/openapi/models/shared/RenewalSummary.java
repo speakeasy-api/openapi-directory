@@ -20,6 +20,7 @@ public class RenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainValidationRecords")
     public DomainValidationRecord[] domainValidationRecords;
+
     public RenewalSummary withDomainValidationRecords(DomainValidationRecord[] domainValidationRecords) {
         this.domainValidationRecords = domainValidationRecords;
         return this;
@@ -28,6 +29,7 @@ public class RenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalStatus")
     public RenewalStatusEnum renewalStatus;
+
     public RenewalSummary withRenewalStatus(RenewalStatusEnum renewalStatus) {
         this.renewalStatus = renewalStatus;
         return this;
@@ -36,6 +38,7 @@ public class RenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalStatusReason")
     public String renewalStatusReason;
+
     public RenewalSummary withRenewalStatusReason(String renewalStatusReason) {
         this.renewalStatusReason = renewalStatusReason;
         return this;
@@ -46,9 +49,11 @@ public class RenewalSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public RenewalSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public RenewalSummary(){}
 }

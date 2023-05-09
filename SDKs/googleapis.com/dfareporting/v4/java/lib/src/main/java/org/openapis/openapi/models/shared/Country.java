@@ -18,6 +18,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Country withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -29,6 +30,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dartId")
     public String dartId;
+
     public Country withDartId(String dartId) {
         this.dartId = dartId;
         return this;
@@ -40,6 +42,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Country withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Country withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslEnabled")
     public Boolean sslEnabled;
+
     public Country withSslEnabled(Boolean sslEnabled) {
         this.sslEnabled = sslEnabled;
         return this;
     }
     
+    public Country(){}
 }

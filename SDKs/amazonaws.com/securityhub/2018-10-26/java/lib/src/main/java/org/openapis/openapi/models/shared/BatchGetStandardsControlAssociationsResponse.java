@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetStandardsControlAssociationsResponse {
     @JsonProperty("StandardsControlAssociationDetails")
     public StandardsControlAssociationDetail[] standardsControlAssociationDetails;
+
     public BatchGetStandardsControlAssociationsResponse withStandardsControlAssociationDetails(StandardsControlAssociationDetail[] standardsControlAssociationDetails) {
         this.standardsControlAssociationDetails = standardsControlAssociationDetails;
         return this;
@@ -22,9 +23,13 @@ public class BatchGetStandardsControlAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedAssociations")
     public UnprocessedStandardsControlAssociation[] unprocessedAssociations;
+
     public BatchGetStandardsControlAssociationsResponse withUnprocessedAssociations(UnprocessedStandardsControlAssociation[] unprocessedAssociations) {
         this.unprocessedAssociations = unprocessedAssociations;
         return this;
     }
     
+    public BatchGetStandardsControlAssociationsResponse(@JsonProperty("StandardsControlAssociationDetails") StandardsControlAssociationDetail[] standardsControlAssociationDetails) {
+        this.standardsControlAssociationDetails = standardsControlAssociationDetails;
+  }
 }

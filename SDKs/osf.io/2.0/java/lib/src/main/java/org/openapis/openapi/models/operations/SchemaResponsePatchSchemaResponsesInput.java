@@ -14,6 +14,7 @@ public class SchemaResponsePatchSchemaResponsesInput {
      */
     @JsonProperty("attributes")
     public SchemaResponsePatchSchemaResponsesAttributesInput attributes;
+
     public SchemaResponsePatchSchemaResponsesInput withAttributes(SchemaResponsePatchSchemaResponsesAttributesInput attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class SchemaResponsePatchSchemaResponsesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public SchemaResponsePatchSchemaResponsesLinks links;
+
     public SchemaResponsePatchSchemaResponsesInput withLinks(SchemaResponsePatchSchemaResponsesLinks links) {
         this.links = links;
         return this;
@@ -36,6 +38,7 @@ public class SchemaResponsePatchSchemaResponsesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public SchemaResponsePatchSchemaResponsesRelationships relationships;
+
     public SchemaResponsePatchSchemaResponsesInput withRelationships(SchemaResponsePatchSchemaResponsesRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -46,9 +49,14 @@ public class SchemaResponsePatchSchemaResponsesInput {
      */
     @JsonProperty("type")
     public String type;
+
     public SchemaResponsePatchSchemaResponsesInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SchemaResponsePatchSchemaResponsesInput(@JsonProperty("attributes") SchemaResponsePatchSchemaResponsesAttributesInput attributes, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.type = type;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelProductsSkusListResponse {
     
     public String contentType;
+
     public CloudchannelProductsSkusListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelProductsSkusListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1ListSkusResponse googleCloudChannelV1ListSkusResponse;
+
     public CloudchannelProductsSkusListResponse withGoogleCloudChannelV1ListSkusResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1ListSkusResponse googleCloudChannelV1ListSkusResponse) {
         this.googleCloudChannelV1ListSkusResponse = googleCloudChannelV1ListSkusResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelProductsSkusListResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelProductsSkusListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelProductsSkusListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelProductsSkusListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelProductsSkusListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -53,11 +53,9 @@ public class MRL3Firewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSsidL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidL3FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSsidL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.GetNetworkSsidL3FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             getNetworkSsidL3FirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MRL3Firewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSsidL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidL3FirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSsidL3FirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSsidL3FirewallRulesResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSsidL3FirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

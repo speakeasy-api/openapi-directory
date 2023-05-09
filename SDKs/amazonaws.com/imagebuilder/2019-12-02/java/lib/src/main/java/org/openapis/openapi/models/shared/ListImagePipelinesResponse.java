@@ -15,6 +15,7 @@ public class ListImagePipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imagePipelineList")
     public ImagePipeline[] imagePipelineList;
+
     public ListImagePipelinesResponse withImagePipelineList(ImagePipeline[] imagePipelineList) {
         this.imagePipelineList = imagePipelineList;
         return this;
@@ -23,6 +24,7 @@ public class ListImagePipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagePipelinesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListImagePipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ListImagePipelinesResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ListImagePipelinesResponse(){}
 }

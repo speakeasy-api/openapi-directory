@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCourseMappingsOfferingIdResponse {
     
     public String contentType;
+
     public GetCourseMappingsOfferingIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCourseMappingsOfferingIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCourseMappingsOfferingIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetCourseMappingsOfferingIdResponse {
     
     
     public Integer statusCode;
+
     public GetCourseMappingsOfferingIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetCourseMappingsOfferingIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCourseMappingsOfferingIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetCourseMappingsOfferingIdResponse {
      */
     
     public String[] getCourseMappingsOfferingId200ApplicationJSONStrings;
+
     public GetCourseMappingsOfferingIdResponse withGetCourseMappingsOfferingId200ApplicationJSONStrings(String[] getCourseMappingsOfferingId200ApplicationJSONStrings) {
         this.getCourseMappingsOfferingId200ApplicationJSONStrings = getCourseMappingsOfferingId200ApplicationJSONStrings;
         return this;
     }
     
+    public GetCourseMappingsOfferingIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

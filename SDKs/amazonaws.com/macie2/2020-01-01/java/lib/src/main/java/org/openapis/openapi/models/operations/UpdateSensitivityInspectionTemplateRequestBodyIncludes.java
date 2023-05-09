@@ -15,6 +15,7 @@ public class UpdateSensitivityInspectionTemplateRequestBodyIncludes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowListIds")
     public String[] allowListIds;
+
     public UpdateSensitivityInspectionTemplateRequestBodyIncludes withAllowListIds(String[] allowListIds) {
         this.allowListIds = allowListIds;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSensitivityInspectionTemplateRequestBodyIncludes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDataIdentifierIds")
     public String[] customDataIdentifierIds;
+
     public UpdateSensitivityInspectionTemplateRequestBodyIncludes withCustomDataIdentifierIds(String[] customDataIdentifierIds) {
         this.customDataIdentifierIds = customDataIdentifierIds;
         return this;
@@ -31,9 +33,11 @@ public class UpdateSensitivityInspectionTemplateRequestBodyIncludes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDataIdentifierIds")
     public String[] managedDataIdentifierIds;
+
     public UpdateSensitivityInspectionTemplateRequestBodyIncludes withManagedDataIdentifierIds(String[] managedDataIdentifierIds) {
         this.managedDataIdentifierIds = managedDataIdentifierIds;
         return this;
     }
     
+    public UpdateSensitivityInspectionTemplateRequestBodyIncludes(){}
 }

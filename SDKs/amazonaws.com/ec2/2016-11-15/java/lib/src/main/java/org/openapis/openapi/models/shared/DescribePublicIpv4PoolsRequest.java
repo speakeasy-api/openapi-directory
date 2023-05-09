@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePublicIpv4PoolsRequest {
     
     public DescribePublicIpv4PoolsRequestFilters[] filters;
+
     public DescribePublicIpv4PoolsRequest withFilters(DescribePublicIpv4PoolsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -16,6 +17,7 @@ public class DescribePublicIpv4PoolsRequest {
     
     
     public Long maxResults;
+
     public DescribePublicIpv4PoolsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,6 +25,7 @@ public class DescribePublicIpv4PoolsRequest {
     
     
     public String nextToken;
+
     public DescribePublicIpv4PoolsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +33,11 @@ public class DescribePublicIpv4PoolsRequest {
     
     
     public String[] poolIds;
+
     public DescribePublicIpv4PoolsRequest withPoolIds(String[] poolIds) {
         this.poolIds = poolIds;
         return this;
     }
     
+    public DescribePublicIpv4PoolsRequest(){}
 }

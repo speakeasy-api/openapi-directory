@@ -18,6 +18,7 @@ public class SectionBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionStyle")
     public SectionStyle sectionStyle;
+
     public SectionBreak withSectionStyle(SectionStyle sectionStyle) {
         this.sectionStyle = sectionStyle;
         return this;
@@ -29,6 +30,7 @@ public class SectionBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public SectionBreak withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -40,9 +42,11 @@ public class SectionBreak {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public SectionBreak withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
     }
     
+    public SectionBreak(){}
 }

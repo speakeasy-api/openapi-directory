@@ -15,6 +15,7 @@ public class ListStudioSessionMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStudioSessionMappingsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListStudioSessionMappingsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionMappings")
     public SessionMappingSummary[] sessionMappings;
+
     public ListStudioSessionMappingsOutput withSessionMappings(SessionMappingSummary[] sessionMappings) {
         this.sessionMappings = sessionMappings;
         return this;
     }
     
+    public ListStudioSessionMappingsOutput(){}
 }

@@ -17,6 +17,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ErrorsListForGroup200ApplicationJSONErrors withCountry(String country) {
         this.country = country;
         return this;
@@ -25,6 +26,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public ErrorsListForGroup200ApplicationJSONErrors withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -33,6 +35,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorId")
     public String errorId;
+
     public ErrorsListForGroup200ApplicationJSONErrors withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -41,6 +44,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasAttachments")
     public Boolean hasAttachments;
+
     public ErrorsListForGroup200ApplicationJSONErrors withHasAttachments(Boolean hasAttachments) {
         this.hasAttachments = hasAttachments;
         return this;
@@ -49,6 +53,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasBreadcrumbs")
     public Boolean hasBreadcrumbs;
+
     public ErrorsListForGroup200ApplicationJSONErrors withHasBreadcrumbs(Boolean hasBreadcrumbs) {
         this.hasBreadcrumbs = hasBreadcrumbs;
         return this;
@@ -57,6 +62,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ErrorsListForGroup200ApplicationJSONErrors withLanguage(String language) {
         this.language = language;
         return this;
@@ -65,6 +71,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public String osType;
+
     public ErrorsListForGroup200ApplicationJSONErrors withOsType(String osType) {
         this.osType = osType;
         return this;
@@ -73,6 +80,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ErrorsListForGroup200ApplicationJSONErrors withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -83,6 +91,7 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ErrorsListForGroup200ApplicationJSONErrors withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -91,9 +100,11 @@ public class ErrorsListForGroup200ApplicationJSONErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ErrorsListForGroup200ApplicationJSONErrors withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ErrorsListForGroup200ApplicationJSONErrors(){}
 }

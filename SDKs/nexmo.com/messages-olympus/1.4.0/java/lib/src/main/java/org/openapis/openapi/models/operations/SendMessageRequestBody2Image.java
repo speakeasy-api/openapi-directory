@@ -14,6 +14,7 @@ public class SendMessageRequestBody2Image {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody2ImageChannelEnum channel;
+
     public SendMessageRequestBody2Image withChannel(SendMessageRequestBody2ImageChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody2Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody2Image withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -36,6 +38,7 @@ public class SendMessageRequestBody2Image {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody2Image withFrom(String from) {
         this.from = from;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody2Image {
     
     @JsonProperty("image")
     public SendMessageRequestBody2ImageImage image;
+
     public SendMessageRequestBody2Image withImage(SendMessageRequestBody2ImageImage image) {
         this.image = image;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody2Image {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody2ImageMessageTypeEnum messageType;
+
     public SendMessageRequestBody2Image withMessageType(SendMessageRequestBody2ImageMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -64,9 +69,17 @@ public class SendMessageRequestBody2Image {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody2Image withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody2Image(@JsonProperty("channel") SendMessageRequestBody2ImageChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("image") SendMessageRequestBody2ImageImage image, @JsonProperty("message_type") SendMessageRequestBody2ImageMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.image = image;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

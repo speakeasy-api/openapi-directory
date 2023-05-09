@@ -15,6 +15,7 @@ public class ListEntitiesRequestBodySort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public String sortBy;
+
     public ListEntitiesRequestBodySort withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitiesRequestBodySort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public org.openapis.openapi.models.shared.SortOrderEnum sortOrder;
+
     public ListEntitiesRequestBodySort withSortOrder(org.openapis.openapi.models.shared.SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListEntitiesRequestBodySort(){}
 }

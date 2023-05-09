@@ -18,6 +18,7 @@ public class StartManualImportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateProductSkuConfiguration")
     public DuplicateProductValueConfiguration duplicateProductSkuConfiguration;
+
     public StartManualImportRequest withDuplicateProductSkuConfiguration(DuplicateProductValueConfiguration duplicateProductSkuConfiguration) {
         this.duplicateProductSkuConfiguration = duplicateProductSkuConfiguration;
         return this;
@@ -28,9 +29,13 @@ public class StartManualImportRequest {
      */
     @JsonProperty("input")
     public InputConfiguration input;
+
     public StartManualImportRequest withInput(InputConfiguration input) {
         this.input = input;
         return this;
     }
     
+    public StartManualImportRequest(@JsonProperty("input") InputConfiguration input) {
+        this.input = input;
+  }
 }

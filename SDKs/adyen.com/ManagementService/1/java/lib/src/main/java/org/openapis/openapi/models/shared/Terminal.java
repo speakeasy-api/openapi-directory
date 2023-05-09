@@ -20,6 +20,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigned")
     public Boolean assigned;
+
     public Terminal withAssigned(Boolean assigned) {
         this.assigned = assigned;
         return this;
@@ -31,6 +32,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothIp")
     public String bluetoothIp;
+
     public Terminal withBluetoothIp(String bluetoothIp) {
         this.bluetoothIp = bluetoothIp;
         return this;
@@ -42,6 +44,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bluetoothMac")
     public String bluetoothMac;
+
     public Terminal withBluetoothMac(String bluetoothMac) {
         this.bluetoothMac = bluetoothMac;
         return this;
@@ -53,6 +56,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Terminal withCity(String city) {
         this.city = city;
         return this;
@@ -64,6 +68,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public Terminal withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -75,6 +80,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Terminal withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -86,6 +92,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceModel")
     public String deviceModel;
+
     public Terminal withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -97,6 +104,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetIp")
     public String ethernetIp;
+
     public Terminal withEthernetIp(String ethernetIp) {
         this.ethernetIp = ethernetIp;
         return this;
@@ -108,6 +116,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetMac")
     public String ethernetMac;
+
     public Terminal withEthernetMac(String ethernetMac) {
         this.ethernetMac = ethernetMac;
         return this;
@@ -119,6 +128,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public Terminal withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -130,6 +140,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iccid")
     public String iccid;
+
     public Terminal withIccid(String iccid) {
         this.iccid = iccid;
         return this;
@@ -141,6 +152,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Terminal withId(String id) {
         this.id = id;
         return this;
@@ -154,6 +166,7 @@ public class Terminal {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastActivityDateTime")
     public OffsetDateTime lastActivityDateTime;
+
     public Terminal withLastActivityDateTime(OffsetDateTime lastActivityDateTime) {
         this.lastActivityDateTime = lastActivityDateTime;
         return this;
@@ -167,6 +180,7 @@ public class Terminal {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastTransactionDateTime")
     public OffsetDateTime lastTransactionDateTime;
+
     public Terminal withLastTransactionDateTime(OffsetDateTime lastTransactionDateTime) {
         this.lastTransactionDateTime = lastTransactionDateTime;
         return this;
@@ -182,6 +196,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkNegotiation")
     public String linkNegotiation;
+
     public Terminal withLinkNegotiation(String linkNegotiation) {
         this.linkNegotiation = linkNegotiation;
         return this;
@@ -193,6 +208,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public Terminal withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -204,6 +220,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simStatus")
     public String simStatus;
+
     public Terminal withSimStatus(String simStatus) {
         this.simStatus = simStatus;
         return this;
@@ -215,6 +232,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Terminal withStatus(String status) {
         this.status = status;
         return this;
@@ -226,6 +244,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeStatus")
     public String storeStatus;
+
     public Terminal withStoreStatus(String storeStatus) {
         this.storeStatus = storeStatus;
         return this;
@@ -237,6 +256,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiIp")
     public String wifiIp;
+
     public Terminal withWifiIp(String wifiIp) {
         this.wifiIp = wifiIp;
         return this;
@@ -248,6 +268,7 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMac")
     public String wifiMac;
+
     public Terminal withWifiMac(String wifiMac) {
         this.wifiMac = wifiMac;
         return this;
@@ -259,9 +280,11 @@ public class Terminal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiSsid")
     public String wifiSsid;
+
     public Terminal withWifiSsid(String wifiSsid) {
         this.wifiSsid = wifiSsid;
         return this;
     }
     
+    public Terminal(){}
 }

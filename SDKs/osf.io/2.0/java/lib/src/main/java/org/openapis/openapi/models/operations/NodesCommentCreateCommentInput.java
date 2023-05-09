@@ -15,9 +15,11 @@ public class NodesCommentCreateCommentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public NodesCommentCreateCommentAttributesInput attributes;
+
     public NodesCommentCreateCommentInput withAttributes(NodesCommentCreateCommentAttributesInput attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public NodesCommentCreateCommentInput(){}
 }

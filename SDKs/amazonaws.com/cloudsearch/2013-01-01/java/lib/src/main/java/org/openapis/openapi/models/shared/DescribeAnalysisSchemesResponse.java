@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeAnalysisSchemesResponse - The result of a &lt;code&gt;DescribeAnalysisSchemes&lt;/code&gt; request. Contains the analysis schemes configured for the domain specified in the request.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeAnalysisSchemesResponse {
     
     public AnalysisSchemeStatus[] analysisSchemes;
+
     public DescribeAnalysisSchemesResponse withAnalysisSchemes(AnalysisSchemeStatus[] analysisSchemes) {
         this.analysisSchemes = analysisSchemes;
         return this;
     }
     
+    public DescribeAnalysisSchemesResponse(@JsonProperty("AnalysisSchemes") AnalysisSchemeStatus[] analysisSchemes) {
+        this.analysisSchemes = analysisSchemes;
+  }
 }

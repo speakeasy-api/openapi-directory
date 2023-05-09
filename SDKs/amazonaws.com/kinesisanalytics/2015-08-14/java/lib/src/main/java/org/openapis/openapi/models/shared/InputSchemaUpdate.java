@@ -15,6 +15,7 @@ public class InputSchemaUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordColumnUpdates")
     public RecordColumn[] recordColumnUpdates;
+
     public InputSchemaUpdate withRecordColumnUpdates(RecordColumn[] recordColumnUpdates) {
         this.recordColumnUpdates = recordColumnUpdates;
         return this;
@@ -23,6 +24,7 @@ public class InputSchemaUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordEncodingUpdate")
     public String recordEncodingUpdate;
+
     public InputSchemaUpdate withRecordEncodingUpdate(String recordEncodingUpdate) {
         this.recordEncodingUpdate = recordEncodingUpdate;
         return this;
@@ -31,9 +33,11 @@ public class InputSchemaUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordFormatUpdate")
     public RecordFormat recordFormatUpdate;
+
     public InputSchemaUpdate withRecordFormatUpdate(RecordFormat recordFormatUpdate) {
         this.recordFormatUpdate = recordFormatUpdate;
         return this;
     }
     
+    public InputSchemaUpdate(){}
 }

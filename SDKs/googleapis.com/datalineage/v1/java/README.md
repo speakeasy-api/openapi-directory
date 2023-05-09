@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesResponse;
+import org.openapis.openapi.models.operations.DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,41 +29,42 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatalineageProjectsLocationsBatchSearchLinkProcessesRequest req = new DatalineageProjectsLocationsBatchSearchLinkProcessesRequest() {{
-                dollarXgafv = "2";
+            DatalineageProjectsLocationsBatchSearchLinkProcessesRequest req = new DatalineageProjectsLocationsBatchSearchLinkProcessesRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest = new GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest() {{
                     links = new String[]{{
-                        add("distinctio"),
                         add("quibusdam"),
                         add("unde"),
+                        add("nulla"),
                     }};
-                    pageSize = 857946;
-                    pageToken = "corrupti";
-                }};
-                accessToken = "illum";
-                alt = "media";
-                callback = "error";
-                fields = "deserunt";
-                key = "suscipit";
-                oauthToken = "iure";
-                parent = "magnam";
+                    pageSize = 544883;
+                    pageToken = "illum";
+                }};;
+                accessToken = "vel";
+                alt = AltEnum.MEDIA;
+                callback = "deserunt";
+                fields = "suscipit";
+                key = "iure";
+                oauthToken = "magnam";
                 prettyPrint = false;
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
-            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req, new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity() {{
+            DatalineageProjectsLocationsBatchSearchLinkProcessesResponse res = sdk.projects.datalineageProjectsLocationsBatchSearchLinkProcesses(req, new DatalineageProjectsLocationsBatchSearchLinkProcessesSecurity("tempora", "suscipit") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse.isPresent()) {
+            if (res.googleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -72,21 +72,21 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `datalineageProjectsLocationsBatchSearchLinkProcesses` - Retrieve information about LineageProcesses associated with specific links. LineageProcesses are transformation pipelines that result in data flowing from **source** to **target** assets. Links between assets represent this operation. If you have specific link names, you can use this method to verify which LineageProcesses contribute to creating those links. See the SearchLinks method for more information on how to retrieve link name. You can retrieve the LineageProcess information in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
-* `datalineageProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `datalineageProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `datalineageProjectsLocationsProcessesCreate` - Creates a new process.
-* `datalineageProjectsLocationsProcessesList` - List processes in the given project and location. List order is descending by insertion time.
-* `datalineageProjectsLocationsProcessesRunsCreate` - Creates a new run.
-* `datalineageProjectsLocationsProcessesRunsLineageEventsCreate` - Creates a new lineage event.
-* `datalineageProjectsLocationsProcessesRunsLineageEventsDelete` - Deletes the lineage event with the specified name.
-* `datalineageProjectsLocationsProcessesRunsLineageEventsGet` - Gets details of a specified lineage event.
-* `datalineageProjectsLocationsProcessesRunsLineageEventsList` - Lists lineage events in the given project and location. The list order is not defined.
-* `datalineageProjectsLocationsProcessesRunsList` - Lists runs in the given project and location. List order is descending by `start_time`.
-* `datalineageProjectsLocationsProcessesRunsPatch` - Updates a run.
-* `datalineageProjectsLocationsSearchLinks` - Retrieve a list of links connected to a specific asset. Links represent the data flow between **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in the same project as the Lineage Events that create them. You can retrieve links in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
+* [datalineageProjectsLocationsBatchSearchLinkProcesses](docs/projects/README.md#datalineageprojectslocationsbatchsearchlinkprocesses) - Retrieve information about LineageProcesses associated with specific links. LineageProcesses are transformation pipelines that result in data flowing from **source** to **target** assets. Links between assets represent this operation. If you have specific link names, you can use this method to verify which LineageProcesses contribute to creating those links. See the SearchLinks method for more information on how to retrieve link name. You can retrieve the LineageProcess information in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
+* [datalineageProjectsLocationsOperationsCancel](docs/projects/README.md#datalineageprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [datalineageProjectsLocationsOperationsList](docs/projects/README.md#datalineageprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [datalineageProjectsLocationsProcessesCreate](docs/projects/README.md#datalineageprojectslocationsprocessescreate) - Creates a new process.
+* [datalineageProjectsLocationsProcessesList](docs/projects/README.md#datalineageprojectslocationsprocesseslist) - List processes in the given project and location. List order is descending by insertion time.
+* [datalineageProjectsLocationsProcessesRunsCreate](docs/projects/README.md#datalineageprojectslocationsprocessesrunscreate) - Creates a new run.
+* [datalineageProjectsLocationsProcessesRunsLineageEventsCreate](docs/projects/README.md#datalineageprojectslocationsprocessesrunslineageeventscreate) - Creates a new lineage event.
+* [datalineageProjectsLocationsProcessesRunsLineageEventsDelete](docs/projects/README.md#datalineageprojectslocationsprocessesrunslineageeventsdelete) - Deletes the lineage event with the specified name.
+* [datalineageProjectsLocationsProcessesRunsLineageEventsGet](docs/projects/README.md#datalineageprojectslocationsprocessesrunslineageeventsget) - Gets details of a specified lineage event.
+* [datalineageProjectsLocationsProcessesRunsLineageEventsList](docs/projects/README.md#datalineageprojectslocationsprocessesrunslineageeventslist) - Lists lineage events in the given project and location. The list order is not defined.
+* [datalineageProjectsLocationsProcessesRunsList](docs/projects/README.md#datalineageprojectslocationsprocessesrunslist) - Lists runs in the given project and location. List order is descending by `start_time`.
+* [datalineageProjectsLocationsProcessesRunsPatch](docs/projects/README.md#datalineageprojectslocationsprocessesrunspatch) - Updates a run.
+* [datalineageProjectsLocationsSearchLinks](docs/projects/README.md#datalineageprojectslocationssearchlinks) - Retrieve a list of links connected to a specific asset. Links represent the data flow between **source** (upstream) and **target** (downstream) assets in transformation pipelines. Links are stored in the same project as the Lineage Events that create them. You can retrieve links in every project where you have the `datalineage.events.get` permission. The project provided in the URL is used for Billing and Quota.
 <!-- End SDK Available Operations -->
 
 ### Maturity

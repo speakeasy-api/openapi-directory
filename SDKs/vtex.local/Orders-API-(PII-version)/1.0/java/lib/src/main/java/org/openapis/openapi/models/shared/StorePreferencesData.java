@@ -12,6 +12,7 @@ public class StorePreferencesData {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public StorePreferencesData withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -22,6 +23,7 @@ public class StorePreferencesData {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public StorePreferencesData withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +31,7 @@ public class StorePreferencesData {
     
     @JsonProperty("currencyFormatInfo")
     public CurrencyFormatInfo currencyFormatInfo;
+
     public StorePreferencesData withCurrencyFormatInfo(CurrencyFormatInfo currencyFormatInfo) {
         this.currencyFormatInfo = currencyFormatInfo;
         return this;
@@ -39,6 +42,7 @@ public class StorePreferencesData {
      */
     @JsonProperty("currencyLocale")
     public Integer currencyLocale;
+
     public StorePreferencesData withCurrencyLocale(Integer currencyLocale) {
         this.currencyLocale = currencyLocale;
         return this;
@@ -49,6 +53,7 @@ public class StorePreferencesData {
      */
     @JsonProperty("currencySymbol")
     public String currencySymbol;
+
     public StorePreferencesData withCurrencySymbol(String currencySymbol) {
         this.currencySymbol = currencySymbol;
         return this;
@@ -59,9 +64,18 @@ public class StorePreferencesData {
      */
     @JsonProperty("timeZone")
     public String timeZone;
+
     public StorePreferencesData withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public StorePreferencesData(@JsonProperty("countryCode") String countryCode, @JsonProperty("currencyCode") String currencyCode, @JsonProperty("currencyFormatInfo") CurrencyFormatInfo currencyFormatInfo, @JsonProperty("currencyLocale") Integer currencyLocale, @JsonProperty("currencySymbol") String currencySymbol, @JsonProperty("timeZone") String timeZone) {
+        this.countryCode = countryCode;
+        this.currencyCode = currencyCode;
+        this.currencyFormatInfo = currencyFormatInfo;
+        this.currencyLocale = currencyLocale;
+        this.currencySymbol = currencySymbol;
+        this.timeZone = timeZone;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsKinesisStreamStreamEncryptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionType")
     public String encryptionType;
+
     public AwsKinesisStreamStreamEncryptionDetails withEncryptionType(String encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -23,9 +24,11 @@ public class AwsKinesisStreamStreamEncryptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public AwsKinesisStreamStreamEncryptionDetails withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public AwsKinesisStreamStreamEncryptionDetails(){}
 }

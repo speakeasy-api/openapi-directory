@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSessionUsingPOSTResponse {
     
     public String contentType;
+
     public CreateSessionUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateSessionUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateSessionUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateSessionUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSessionUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateSessionUsingPOSTResponse {
      */
     
     public CreateSessionUsingPOST200ApplicationJSON createSessionUsingPOST200ApplicationJSONObject;
+
     public CreateSessionUsingPOSTResponse withCreateSessionUsingPOST200ApplicationJSONObject(CreateSessionUsingPOST200ApplicationJSON createSessionUsingPOST200ApplicationJSONObject) {
         this.createSessionUsingPOST200ApplicationJSONObject = createSessionUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateSessionUsingPOSTResponse {
      */
     
     public CreateSessionUsingPOST400ApplicationJSON createSessionUsingPOST400ApplicationJSONObject;
+
     public CreateSessionUsingPOSTResponse withCreateSessionUsingPOST400ApplicationJSONObject(CreateSessionUsingPOST400ApplicationJSON createSessionUsingPOST400ApplicationJSONObject) {
         this.createSessionUsingPOST400ApplicationJSONObject = createSessionUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateSessionUsingPOSTResponse {
      */
     
     public CreateSessionUsingPOST401ApplicationJSON createSessionUsingPOST401ApplicationJSONObject;
+
     public CreateSessionUsingPOSTResponse withCreateSessionUsingPOST401ApplicationJSONObject(CreateSessionUsingPOST401ApplicationJSON createSessionUsingPOST401ApplicationJSONObject) {
         this.createSessionUsingPOST401ApplicationJSONObject = createSessionUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateSessionUsingPOSTResponse {
      */
     
     public CreateSessionUsingPOST500ApplicationJSON createSessionUsingPOST500ApplicationJSONObject;
+
     public CreateSessionUsingPOSTResponse withCreateSessionUsingPOST500ApplicationJSONObject(CreateSessionUsingPOST500ApplicationJSON createSessionUsingPOST500ApplicationJSONObject) {
         this.createSessionUsingPOST500ApplicationJSONObject = createSessionUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateSessionUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

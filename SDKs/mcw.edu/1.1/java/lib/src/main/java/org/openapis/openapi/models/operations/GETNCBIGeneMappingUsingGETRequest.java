@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETNCBIGeneMappingUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETNCBIGeneMappingUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
     public Integer rgdId;
+
     public GETNCBIGeneMappingUsingGETRequest withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
     }
     
+    public GETNCBIGeneMappingUsingGETRequest(@JsonProperty("rgdId") Integer rgdId) {
+        this.rgdId = rgdId;
+  }
 }

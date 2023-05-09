@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableAddressTransferRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableAddressTransferActionEnum action;
+
     public GETEnableAddressTransferRequest withAction(GETEnableAddressTransferActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableAddressTransferRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AllocationId")
     public String allocationId;
+
     public GETEnableAddressTransferRequest withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableAddressTransferRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETEnableAddressTransferRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableAddressTransferRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransferAccountId")
     public String transferAccountId;
+
     public GETEnableAddressTransferRequest withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
@@ -46,6 +51,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableAddressTransferVersionEnum version;
+
     public GETEnableAddressTransferRequest withVersion(GETEnableAddressTransferVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableAddressTransferRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableAddressTransferRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableAddressTransferRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableAddressTransferRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableAddressTransferRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableAddressTransferRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETEnableAddressTransferRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableAddressTransferRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableAddressTransferRequest(@JsonProperty("Action") GETEnableAddressTransferActionEnum action, @JsonProperty("AllocationId") String allocationId, @JsonProperty("TransferAccountId") String transferAccountId, @JsonProperty("Version") GETEnableAddressTransferVersionEnum version) {
+        this.action = action;
+        this.allocationId = allocationId;
+        this.transferAccountId = transferAccountId;
+        this.version = version;
+  }
 }

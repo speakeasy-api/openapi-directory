@@ -12,6 +12,7 @@ public class TierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_membership_criteria")
     public GroupMembershipCriteria[] groupMembershipCriteria;
+
     public TierRequest withGroupMembershipCriteria(GroupMembershipCriteria[] groupMembershipCriteria) {
         this.groupMembershipCriteria = groupMembershipCriteria;
         return this;
@@ -20,9 +21,11 @@ public class TierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TierRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TierRequest(){}
 }

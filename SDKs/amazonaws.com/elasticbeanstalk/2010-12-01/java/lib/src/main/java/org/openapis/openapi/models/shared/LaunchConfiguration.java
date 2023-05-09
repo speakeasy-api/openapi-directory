@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class LaunchConfiguration {
     
     public String name;
+
     public LaunchConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LaunchConfiguration(){}
 }

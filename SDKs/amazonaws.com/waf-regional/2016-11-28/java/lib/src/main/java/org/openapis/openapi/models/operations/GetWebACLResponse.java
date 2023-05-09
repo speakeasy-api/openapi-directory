@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWebACLResponse {
     
     public String contentType;
+
     public GetWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWebACLResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWebACLResponse getWebACLResponse;
+
     public GetWebACLResponse withGetWebACLResponse(org.openapis.openapi.models.shared.GetWebACLResponse getWebACLResponse) {
         this.getWebACLResponse = getWebACLResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetWebACLResponse {
     
     
     public Integer statusCode;
+
     public GetWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

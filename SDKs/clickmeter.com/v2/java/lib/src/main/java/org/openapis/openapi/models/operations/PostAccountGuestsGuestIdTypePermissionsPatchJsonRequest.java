@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest {
@@ -12,6 +13,7 @@ public class PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest;
+
     public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withApiCoreRequestsPermissionPatchRequest(org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest) {
         this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
         return this;
@@ -22,6 +24,7 @@ public class PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=guestId")
     public Long guestId;
+
     public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withGuestId(Long guestId) {
         this.guestId = guestId;
         return this;
@@ -32,9 +35,15 @@ public class PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public PostAccountGuestsGuestIdTypePermissionsPatchJsonTypeEnum type;
+
     public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest withType(PostAccountGuestsGuestIdTypePermissionsPatchJsonTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostAccountGuestsGuestIdTypePermissionsPatchJsonRequest(@JsonProperty("Api.Core.Requests.PermissionPatchRequest") org.openapis.openapi.models.shared.ApiCoreRequestsPermissionPatchRequest apiCoreRequestsPermissionPatchRequest, @JsonProperty("guestId") Long guestId, @JsonProperty("type") PostAccountGuestsGuestIdTypePermissionsPatchJsonTypeEnum type) {
+        this.apiCoreRequestsPermissionPatchRequest = apiCoreRequestsPermissionPatchRequest;
+        this.guestId = guestId;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAnomalyDetectorsOutput {
     
     public AnomalyDetector[] anomalyDetectors;
+
     public DescribeAnomalyDetectorsOutput withAnomalyDetectors(AnomalyDetector[] anomalyDetectors) {
         this.anomalyDetectors = anomalyDetectors;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAnomalyDetectorsOutput {
     
     
     public String nextToken;
+
     public DescribeAnomalyDetectorsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAnomalyDetectorsOutput(){}
 }

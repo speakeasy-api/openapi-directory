@@ -51,10 +51,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiDocsResponse res = new org.openapis.openapi.models.operations.GetApiDocsResponse() {{
+        org.openapis.openapi.models.operations.GetApiDocsResponse res = new org.openapis.openapi.models.operations.GetApiDocsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,10 +81,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiSwaggerUIResponse res = new org.openapis.openapi.models.operations.GetApiSwaggerUIResponse() {{
+        org.openapis.openapi.models.operations.GetApiSwaggerUIResponse res = new org.openapis.openapi.models.operations.GetApiSwaggerUIResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,10 +119,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutocompleteResponse res = new org.openapis.openapi.models.operations.GetAutocompleteResponse() {{
+        org.openapis.openapi.models.operations.GetAutocompleteResponse res = new org.openapis.openapi.models.operations.GetAutocompleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,10 +151,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseByIdResponse res = new org.openapis.openapi.models.operations.GetDiseaseByIdResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseByIdResponse res = new org.openapis.openapi.models.operations.GetDiseaseByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,10 +189,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDrugByIDResponse res = new org.openapis.openapi.models.operations.GetDrugByIDResponse() {{
+        org.openapis.openapi.models.operations.GetDrugByIDResponse res = new org.openapis.openapi.models.operations.GetDrugByIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,10 +221,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetECObyIDResponse res = new org.openapis.openapi.models.operations.GetECObyIDResponse() {{
+        org.openapis.openapi.models.operations.GetECObyIDResponse res = new org.openapis.openapi.models.operations.GetECObyIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,10 +259,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetQuickSearchResponse res = new org.openapis.openapi.models.operations.GetQuickSearchResponse() {{
+        org.openapis.openapi.models.operations.GetQuickSearchResponse res = new org.openapis.openapi.models.operations.GetQuickSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,10 +291,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationByEFOIDResponse res = new org.openapis.openapi.models.operations.GetRelationByEFOIDResponse() {{
+        org.openapis.openapi.models.operations.GetRelationByEFOIDResponse res = new org.openapis.openapi.models.operations.GetRelationByEFOIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,10 +323,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRelationByENSGIDResponse res = new org.openapis.openapi.models.operations.GetRelationByENSGIDResponse() {{
+        org.openapis.openapi.models.operations.GetRelationByENSGIDResponse res = new org.openapis.openapi.models.operations.GetRelationByENSGIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,10 +353,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSwaggerResponse res = new org.openapis.openapi.models.operations.GetSwaggerResponse() {{
+        org.openapis.openapi.models.operations.GetSwaggerResponse res = new org.openapis.openapi.models.operations.GetSwaggerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -405,10 +385,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTargetByENSGIDResponse res = new org.openapis.openapi.models.operations.GetTargetByENSGIDResponse() {{
+        org.openapis.openapi.models.operations.GetTargetByENSGIDResponse res = new org.openapis.openapi.models.operations.GetTargetByENSGIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -445,10 +423,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDResponse res = new org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDResponse() {{
+        org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDResponse res = new org.openapis.openapi.models.operations.GetTargetExpressionByENSGIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,10 +460,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBestHitSearchResponse res = new org.openapis.openapi.models.operations.PostBestHitSearchResponse() {{
+        org.openapis.openapi.models.operations.PostBestHitSearchResponse res = new org.openapis.openapi.models.operations.PostBestHitSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,10 +497,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDiseaseByIdResponse res = new org.openapis.openapi.models.operations.PostDiseaseByIdResponse() {{
+        org.openapis.openapi.models.operations.PostDiseaseByIdResponse res = new org.openapis.openapi.models.operations.PostDiseaseByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -562,10 +534,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEnrichmentTargetResponse res = new org.openapis.openapi.models.operations.PostEnrichmentTargetResponse() {{
+        org.openapis.openapi.models.operations.PostEnrichmentTargetResponse res = new org.openapis.openapi.models.operations.PostEnrichmentTargetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,10 +571,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRelationResponse res = new org.openapis.openapi.models.operations.PostRelationResponse() {{
+        org.openapis.openapi.models.operations.PostRelationResponse res = new org.openapis.openapi.models.operations.PostRelationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -640,10 +608,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTargetByENSGIDResponse res = new org.openapis.openapi.models.operations.PostTargetByENSGIDResponse() {{
+        org.openapis.openapi.models.operations.PostTargetByENSGIDResponse res = new org.openapis.openapi.models.operations.PostTargetByENSGIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,10 +645,8 @@ public class Private {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse res = new org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse() {{
+        org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse res = new org.openapis.openapi.models.operations.PostTargetExpressionByENSGIDResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

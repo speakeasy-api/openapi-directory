@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DocumentRequires {
     @JsonProperty("Name")
     public String name;
+
     public DocumentRequires withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class DocumentRequires {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequireType")
     public String requireType;
+
     public DocumentRequires withRequireType(String requireType) {
         this.requireType = requireType;
         return this;
@@ -30,6 +32,7 @@ public class DocumentRequires {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public DocumentRequires withVersion(String version) {
         this.version = version;
         return this;
@@ -38,9 +41,13 @@ public class DocumentRequires {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public DocumentRequires withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
     }
     
+    public DocumentRequires(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

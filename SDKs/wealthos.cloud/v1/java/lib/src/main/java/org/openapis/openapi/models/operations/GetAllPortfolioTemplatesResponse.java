@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllPortfolioTemplatesResponse {
     
     public String contentType;
+
     public GetAllPortfolioTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllPortfolioTemplatesResponse {
     
     
     public Integer statusCode;
+
     public GetAllPortfolioTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllPortfolioTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllPortfolioTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates200ApplicationJSON getAllPortfolioTemplates200ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates200ApplicationJSONObject(GetAllPortfolioTemplates200ApplicationJSON getAllPortfolioTemplates200ApplicationJSONObject) {
         this.getAllPortfolioTemplates200ApplicationJSONObject = getAllPortfolioTemplates200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates401ApplicationJSON getAllPortfolioTemplates401ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates401ApplicationJSONObject(GetAllPortfolioTemplates401ApplicationJSON getAllPortfolioTemplates401ApplicationJSONObject) {
         this.getAllPortfolioTemplates401ApplicationJSONObject = getAllPortfolioTemplates401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates403ApplicationJSON getAllPortfolioTemplates403ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates403ApplicationJSONObject(GetAllPortfolioTemplates403ApplicationJSON getAllPortfolioTemplates403ApplicationJSONObject) {
         this.getAllPortfolioTemplates403ApplicationJSONObject = getAllPortfolioTemplates403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates404ApplicationJSON getAllPortfolioTemplates404ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates404ApplicationJSONObject(GetAllPortfolioTemplates404ApplicationJSON getAllPortfolioTemplates404ApplicationJSONObject) {
         this.getAllPortfolioTemplates404ApplicationJSONObject = getAllPortfolioTemplates404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates429ApplicationJSON getAllPortfolioTemplates429ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates429ApplicationJSONObject(GetAllPortfolioTemplates429ApplicationJSON getAllPortfolioTemplates429ApplicationJSONObject) {
         this.getAllPortfolioTemplates429ApplicationJSONObject = getAllPortfolioTemplates429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetAllPortfolioTemplatesResponse {
      */
     
     public GetAllPortfolioTemplates500ApplicationJSON getAllPortfolioTemplates500ApplicationJSONObject;
+
     public GetAllPortfolioTemplatesResponse withGetAllPortfolioTemplates500ApplicationJSONObject(GetAllPortfolioTemplates500ApplicationJSON getAllPortfolioTemplates500ApplicationJSONObject) {
         this.getAllPortfolioTemplates500ApplicationJSONObject = getAllPortfolioTemplates500ApplicationJSONObject;
         return this;
     }
     
+    public GetAllPortfolioTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

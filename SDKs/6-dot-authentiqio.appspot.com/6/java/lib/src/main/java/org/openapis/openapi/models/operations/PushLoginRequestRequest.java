@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PushLoginRequestRequest {
@@ -12,6 +13,7 @@ public class PushLoginRequestRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
     public byte[] requestBody;
+
     public PushLoginRequestRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PushLoginRequestRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public PushLoginRequestRequest withCallback(String callback) {
         this.callback = callback;
         return this;
     }
     
+    public PushLoginRequestRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("callback") String callback) {
+        this.requestBody = requestBody;
+        this.callback = callback;
+  }
 }

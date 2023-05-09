@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetVolumesIdActionsActionIdRequest {
@@ -12,6 +13,7 @@ public class GetVolumesIdActionsActionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=action_id")
     public Long actionId;
+
     public GetVolumesIdActionsActionIdRequest withActionId(Long actionId) {
         this.actionId = actionId;
         return this;
@@ -22,9 +24,14 @@ public class GetVolumesIdActionsActionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetVolumesIdActionsActionIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetVolumesIdActionsActionIdRequest(@JsonProperty("action_id") Long actionId, @JsonProperty("id") Long id) {
+        this.actionId = actionId;
+        this.id = id;
+  }
 }

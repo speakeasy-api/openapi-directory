@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus {
     
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum code;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus withCode(CreateVpcPeeringConnectionResultVpcPeeringConnectionStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus {
     
     
     public String message;
+
     public CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateVpcPeeringConnectionResultVpcPeeringConnectionStatus(){}
 }

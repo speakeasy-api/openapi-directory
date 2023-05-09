@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAristaSwitchResponse {
@@ -12,6 +13,7 @@ public class UpdateAristaSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public UpdateAristaSwitchResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAristaSwitchResponse {
     
     
     public String contentType;
+
     public UpdateAristaSwitchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateAristaSwitchResponse {
     
     
     public Integer statusCode;
+
     public UpdateAristaSwitchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateAristaSwitchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAristaSwitchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class UpdateAristaSwitchResponse {
      */
     
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public UpdateAristaSwitchResponse withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
     }
     
+    public UpdateAristaSwitchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

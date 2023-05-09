@@ -18,9 +18,11 @@ public class WebAppIcon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageData")
     public String imageData;
+
     public WebAppIcon withImageData(String imageData) {
         this.imageData = imageData;
         return this;
     }
     
+    public WebAppIcon(){}
 }

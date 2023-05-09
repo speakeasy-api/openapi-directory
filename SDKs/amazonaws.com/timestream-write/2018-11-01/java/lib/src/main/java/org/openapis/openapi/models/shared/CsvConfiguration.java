@@ -15,6 +15,7 @@ public class CsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnSeparator")
     public String columnSeparator;
+
     public CsvConfiguration withColumnSeparator(String columnSeparator) {
         this.columnSeparator = columnSeparator;
         return this;
@@ -23,6 +24,7 @@ public class CsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EscapeChar")
     public String escapeChar;
+
     public CsvConfiguration withEscapeChar(String escapeChar) {
         this.escapeChar = escapeChar;
         return this;
@@ -31,6 +33,7 @@ public class CsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NullValue")
     public String nullValue;
+
     public CsvConfiguration withNullValue(String nullValue) {
         this.nullValue = nullValue;
         return this;
@@ -39,6 +42,7 @@ public class CsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteChar")
     public String quoteChar;
+
     public CsvConfiguration withQuoteChar(String quoteChar) {
         this.quoteChar = quoteChar;
         return this;
@@ -47,9 +51,11 @@ public class CsvConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrimWhiteSpace")
     public Boolean trimWhiteSpace;
+
     public CsvConfiguration withTrimWhiteSpace(Boolean trimWhiteSpace) {
         this.trimWhiteSpace = trimWhiteSpace;
         return this;
     }
     
+    public CsvConfiguration(){}
 }

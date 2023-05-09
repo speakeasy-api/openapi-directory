@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsOnDemandOptions {
     
     public DescribeFleetsResultFleetsOnDemandOptionsAllocationStrategyEnum allocationStrategy;
+
     public DescribeFleetsResultFleetsOnDemandOptions withAllocationStrategy(DescribeFleetsResultFleetsOnDemandOptionsAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsOnDemandOptions {
     
     
     public DescribeFleetsResultFleetsOnDemandOptionsCapacityReservationOptions capacityReservationOptions;
+
     public DescribeFleetsResultFleetsOnDemandOptions withCapacityReservationOptions(DescribeFleetsResultFleetsOnDemandOptionsCapacityReservationOptions capacityReservationOptions) {
         this.capacityReservationOptions = capacityReservationOptions;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsOnDemandOptions {
     
     
     public String maxTotalPrice;
+
     public DescribeFleetsResultFleetsOnDemandOptions withMaxTotalPrice(String maxTotalPrice) {
         this.maxTotalPrice = maxTotalPrice;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsOnDemandOptions {
     
     
     public Long minTargetCapacity;
+
     public DescribeFleetsResultFleetsOnDemandOptions withMinTargetCapacity(Long minTargetCapacity) {
         this.minTargetCapacity = minTargetCapacity;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleetsOnDemandOptions {
     
     
     public Boolean singleAvailabilityZone;
+
     public DescribeFleetsResultFleetsOnDemandOptions withSingleAvailabilityZone(Boolean singleAvailabilityZone) {
         this.singleAvailabilityZone = singleAvailabilityZone;
         return this;
@@ -47,9 +52,11 @@ public class DescribeFleetsResultFleetsOnDemandOptions {
     
     
     public Boolean singleInstanceType;
+
     public DescribeFleetsResultFleetsOnDemandOptions withSingleInstanceType(Boolean singleInstanceType) {
         this.singleInstanceType = singleInstanceType;
         return this;
     }
     
+    public DescribeFleetsResultFleetsOnDemandOptions(){}
 }

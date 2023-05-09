@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserPoolClientResponse {
@@ -12,6 +13,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateUserPoolClientResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserPoolClientResponse {
     
     
     public String contentType;
+
     public UpdateUserPoolClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object internalErrorException;
+
     public UpdateUserPoolClientResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object invalidOAuthFlowException;
+
     public UpdateUserPoolClientResponse withInvalidOAuthFlowException(Object invalidOAuthFlowException) {
         this.invalidOAuthFlowException = invalidOAuthFlowException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateUserPoolClientResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object notAuthorizedException;
+
     public UpdateUserPoolClientResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object scopeDoesNotExistException;
+
     public UpdateUserPoolClientResponse withScopeDoesNotExistException(Object scopeDoesNotExistException) {
         this.scopeDoesNotExistException = scopeDoesNotExistException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateUserPoolClientResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserPoolClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateUserPoolClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserPoolClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserPoolClientResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateUserPoolClientResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateUserPoolClientResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateUserPoolClientResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserPoolClientResponse updateUserPoolClientResponse;
+
     public UpdateUserPoolClientResponse withUpdateUserPoolClientResponse(org.openapis.openapi.models.shared.UpdateUserPoolClientResponse updateUserPoolClientResponse) {
         this.updateUserPoolClientResponse = updateUserPoolClientResponse;
         return this;
     }
     
+    public UpdateUserPoolClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

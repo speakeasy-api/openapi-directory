@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamScopeResult {
     
     public DeleteIpamScopeResultIpamScope ipamScope;
+
     public DeleteIpamScopeResult withIpamScope(DeleteIpamScopeResultIpamScope ipamScope) {
         this.ipamScope = ipamScope;
         return this;
     }
     
+    public DeleteIpamScopeResult(){}
 }

@@ -56,11 +56,9 @@ public class Email {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EmailSendEmailStatementResponse res = new org.openapis.openapi.models.operations.EmailSendEmailStatementResponse() {{
+        org.openapis.openapi.models.operations.EmailSendEmailStatementResponse res = new org.openapis.openapi.models.operations.EmailSendEmailStatementResponse(contentType, httpRes.statusCode()) {{
             emailSendEmailStatement200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Email {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EmailSendQuoteResponse res = new org.openapis.openapi.models.operations.EmailSendQuoteResponse() {{
+        org.openapis.openapi.models.operations.EmailSendQuoteResponse res = new org.openapis.openapi.models.operations.EmailSendQuoteResponse(contentType, httpRes.statusCode()) {{
             emailSendQuote200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +138,9 @@ public class Email {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse res = new org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse() {{
+        org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse res = new org.openapis.openapi.models.operations.EmailSendSalesInvoiceResponse(contentType, httpRes.statusCode()) {{
             emailSendSalesInvoice200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

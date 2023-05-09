@@ -15,6 +15,7 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public ApiDimensionFilterDimensionEnum dimension;
+
     public ApiDimensionFilter withDimension(ApiDimensionFilterDimensionEnum dimension) {
         this.dimension = dimension;
         return this;
@@ -23,6 +24,7 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public ApiDimensionFilter withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -31,9 +33,11 @@ public class ApiDimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public ApiDimensionFilterOperatorEnum operator;
+
     public ApiDimensionFilter withOperator(ApiDimensionFilterOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public ApiDimensionFilter(){}
 }

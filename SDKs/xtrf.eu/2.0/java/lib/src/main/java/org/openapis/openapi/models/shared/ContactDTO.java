@@ -18,6 +18,7 @@ public class ContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public CustomerContactEmailsDTO emails;
+
     public ContactDTO withEmails(CustomerContactEmailsDTO emails) {
         this.emails = emails;
         return this;
@@ -29,6 +30,7 @@ public class ContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fax")
     public String fax;
+
     public ContactDTO withFax(String fax) {
         this.fax = fax;
         return this;
@@ -40,6 +42,7 @@ public class ContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public String[] phones;
+
     public ContactDTO withPhones(String[] phones) {
         this.phones = phones;
         return this;
@@ -51,6 +54,7 @@ public class ContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sms")
     public String sms;
+
     public ContactDTO withSms(String sms) {
         this.sms = sms;
         return this;
@@ -62,9 +66,11 @@ public class ContactDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("websites")
     public String[] websites;
+
     public ContactDTO withWebsites(String[] websites) {
         this.websites = websites;
         return this;
     }
     
+    public ContactDTO(){}
 }

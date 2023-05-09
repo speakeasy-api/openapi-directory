@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClinicalNoteFieldTypesReadResponse {
     
     public String contentType;
+
     public ClinicalNoteFieldTypesReadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ClinicalNoteFieldTypesReadResponse {
      */
     
     public org.openapis.openapi.models.shared.SoapNoteLineItemFieldType soapNoteLineItemFieldType;
+
     public ClinicalNoteFieldTypesReadResponse withSoapNoteLineItemFieldType(org.openapis.openapi.models.shared.SoapNoteLineItemFieldType soapNoteLineItemFieldType) {
         this.soapNoteLineItemFieldType = soapNoteLineItemFieldType;
         return this;
@@ -26,6 +29,7 @@ public class ClinicalNoteFieldTypesReadResponse {
     
     
     public Integer statusCode;
+
     public ClinicalNoteFieldTypesReadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ClinicalNoteFieldTypesReadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClinicalNoteFieldTypesReadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClinicalNoteFieldTypesReadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

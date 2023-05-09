@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAliasResponse {
     
     public String contentType;
+
     public DeleteAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAliasResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public DeleteAliasResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAliasResponse {
      */
     
     public Object kmsInternalException;
+
     public DeleteAliasResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAliasResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public DeleteAliasResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAliasResponse {
      */
     
     public Object notFoundException;
+
     public DeleteAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteAliasResponse {
     
     
     public Integer statusCode;
+
     public DeleteAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

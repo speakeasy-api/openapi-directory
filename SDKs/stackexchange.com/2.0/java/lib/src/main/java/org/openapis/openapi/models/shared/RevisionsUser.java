@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class RevisionsUser {
     
     public Long acceptRate;
+
     public RevisionsUser withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class RevisionsUser {
     
     
     public RevisionsUserBadgeCounts badgeCounts;
+
     public RevisionsUser withBadgeCounts(RevisionsUserBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class RevisionsUser {
     
     
     public String displayName;
+
     public RevisionsUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class RevisionsUser {
     
     
     public String link;
+
     public RevisionsUser withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class RevisionsUser {
     
     
     public String profileImage;
+
     public RevisionsUser withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class RevisionsUser {
     
     
     public Long reputation;
+
     public RevisionsUser withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class RevisionsUser {
     
     
     public Long userId;
+
     public RevisionsUser withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class RevisionsUser {
     
     
     public String userType;
+
     public RevisionsUser withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public RevisionsUser(){}
 }

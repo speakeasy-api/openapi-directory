@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class LocalObjectReference {
     /**
-     * Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * Name of the referent.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LocalObjectReference withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LocalObjectReference(){}
 }

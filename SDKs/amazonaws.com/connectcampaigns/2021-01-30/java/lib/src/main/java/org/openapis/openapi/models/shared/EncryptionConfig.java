@@ -17,6 +17,7 @@ public class EncryptionConfig {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EncryptionConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +29,7 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionType")
     public EncryptionTypeEnum encryptionType;
+
     public EncryptionConfig withEncryptionType(EncryptionTypeEnum encryptionType) {
         this.encryptionType = encryptionType;
         return this;
@@ -39,9 +41,13 @@ public class EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyArn")
     public String keyArn;
+
     public EncryptionConfig withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
     }
     
+    public EncryptionConfig(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

@@ -15,6 +15,7 @@ public class TimelineLineCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public PullRequestReviewComment[] comments;
+
     public TimelineLineCommentedEvent withComments(PullRequestReviewComment[] comments) {
         this.comments = comments;
         return this;
@@ -23,6 +24,7 @@ public class TimelineLineCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public TimelineLineCommentedEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -31,9 +33,11 @@ public class TimelineLineCommentedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineLineCommentedEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public TimelineLineCommentedEvent(){}
 }

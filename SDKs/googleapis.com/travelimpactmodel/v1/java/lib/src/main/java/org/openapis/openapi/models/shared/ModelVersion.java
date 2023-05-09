@@ -18,6 +18,7 @@ public class ModelVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dated")
     public String dated;
+
     public ModelVersion withDated(String dated) {
         this.dated = dated;
         return this;
@@ -29,6 +30,7 @@ public class ModelVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("major")
     public Integer major;
+
     public ModelVersion withMajor(Integer major) {
         this.major = major;
         return this;
@@ -40,6 +42,7 @@ public class ModelVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minor")
     public Integer minor;
+
     public ModelVersion withMinor(Integer minor) {
         this.minor = minor;
         return this;
@@ -51,9 +54,11 @@ public class ModelVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patch")
     public Integer patch;
+
     public ModelVersion withPatch(Integer patch) {
         this.patch = patch;
         return this;
     }
     
+    public ModelVersion(){}
 }

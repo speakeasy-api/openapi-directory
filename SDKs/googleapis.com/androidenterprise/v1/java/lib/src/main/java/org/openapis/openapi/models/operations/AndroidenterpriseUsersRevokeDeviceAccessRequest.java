@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
@@ -12,6 +13,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterpriseId")
     public String enterpriseId;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -122,6 +134,7 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -132,9 +145,14 @@ public class AndroidenterpriseUsersRevokeDeviceAccessRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public AndroidenterpriseUsersRevokeDeviceAccessRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AndroidenterpriseUsersRevokeDeviceAccessRequest(@JsonProperty("enterpriseId") String enterpriseId, @JsonProperty("userId") String userId) {
+        this.enterpriseId = enterpriseId;
+        this.userId = userId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEndpointGroupResponse {
@@ -12,6 +13,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public CreateEndpointGroupResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEndpointGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEndpointGroupResponse {
     
     
     public String contentType;
+
     public CreateEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEndpointGroupResponse createEndpointGroupResponse;
+
     public CreateEndpointGroupResponse withCreateEndpointGroupResponse(org.openapis.openapi.models.shared.CreateEndpointGroupResponse createEndpointGroupResponse) {
         this.createEndpointGroupResponse = createEndpointGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object endpointGroupAlreadyExistsException;
+
     public CreateEndpointGroupResponse withEndpointGroupAlreadyExistsException(Object endpointGroupAlreadyExistsException) {
         this.endpointGroupAlreadyExistsException = endpointGroupAlreadyExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -79,6 +87,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object limitExceededException;
+
     public CreateEndpointGroupResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateEndpointGroupResponse {
      */
     
     public Object listenerNotFoundException;
+
     public CreateEndpointGroupResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class CreateEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

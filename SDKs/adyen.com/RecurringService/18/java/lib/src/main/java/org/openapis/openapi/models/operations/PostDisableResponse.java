@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDisableResponse {
     
     public String contentType;
+
     public PostDisableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDisableResponse {
      */
     
     public org.openapis.openapi.models.shared.DisableResult disableResult;
+
     public PostDisableResponse withDisableResult(org.openapis.openapi.models.shared.DisableResult disableResult) {
         this.disableResult = disableResult;
         return this;
@@ -26,6 +29,7 @@ public class PostDisableResponse {
     
     
     public Integer statusCode;
+
     public PostDisableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostDisableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDisableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDisableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

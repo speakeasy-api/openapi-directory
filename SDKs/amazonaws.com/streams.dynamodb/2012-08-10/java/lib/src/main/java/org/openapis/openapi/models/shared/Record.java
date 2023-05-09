@@ -15,6 +15,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public Record withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -23,6 +24,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamodb")
     public StreamRecord dynamodb;
+
     public Record withDynamodb(StreamRecord dynamodb) {
         this.dynamodb = dynamodb;
         return this;
@@ -31,6 +33,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventID")
     public String eventID;
+
     public Record withEventID(String eventID) {
         this.eventID = eventID;
         return this;
@@ -39,6 +42,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public OperationTypeEnum eventName;
+
     public Record withEventName(OperationTypeEnum eventName) {
         this.eventName = eventName;
         return this;
@@ -47,6 +51,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventSource")
     public String eventSource;
+
     public Record withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -55,6 +60,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventVersion")
     public String eventVersion;
+
     public Record withEventVersion(String eventVersion) {
         this.eventVersion = eventVersion;
         return this;
@@ -63,9 +69,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userIdentity")
     public Identity userIdentity;
+
     public Record withUserIdentity(Identity userIdentity) {
         this.userIdentity = userIdentity;
         return this;
     }
     
+    public Record(){}
 }

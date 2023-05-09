@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded {
     @SpeakeasyMetadata("form:name=push,json")
     public org.openapis.openapi.models.shared.Push push;
+
     public PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded withPush(org.openapis.openapi.models.shared.Push push) {
         this.push = push;
         return this;
@@ -19,9 +21,13 @@ public class PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded {
      */
     @SpeakeasyMetadata("form:name=recipient,json")
     public org.openapis.openapi.models.shared.Recipient recipient;
+
     public PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded withRecipient(org.openapis.openapi.models.shared.Recipient recipient) {
         this.recipient = recipient;
         return this;
     }
     
+    public PublishPushNotificationToDevicesApplicationXWwwFormUrlencoded(@JsonProperty("recipient") org.openapis.openapi.models.shared.Recipient recipient) {
+        this.recipient = recipient;
+  }
 }

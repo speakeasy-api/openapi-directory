@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,9 +16,13 @@ public class BatchUploadInput {
      */
     @SpeakeasyMetadata("multipartForm:name=file,json")
     public byte[][] file;
+
     public BatchUploadInput withFile(byte[][] file) {
         this.file = file;
         return this;
     }
     
+    public BatchUploadInput(@JsonProperty("file") byte[][] file) {
+        this.file = file;
+  }
 }

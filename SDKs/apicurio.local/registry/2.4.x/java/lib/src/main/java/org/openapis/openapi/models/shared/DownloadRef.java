@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DownloadRef {
     @JsonProperty("downloadId")
     public String downloadId;
+
     public DownloadRef withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
@@ -22,9 +23,13 @@ public class DownloadRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public DownloadRef withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public DownloadRef(@JsonProperty("downloadId") String downloadId) {
+        this.downloadId = downloadId;
+  }
 }

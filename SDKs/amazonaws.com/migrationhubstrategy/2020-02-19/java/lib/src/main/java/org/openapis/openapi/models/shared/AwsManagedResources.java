@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AwsManagedResources {
     @JsonProperty("targetDestination")
     public AwsManagedTargetDestinationEnum[] targetDestination;
+
     public AwsManagedResources withTargetDestination(AwsManagedTargetDestinationEnum[] targetDestination) {
         this.targetDestination = targetDestination;
         return this;
     }
     
+    public AwsManagedResources(@JsonProperty("targetDestination") AwsManagedTargetDestinationEnum[] targetDestination) {
+        this.targetDestination = targetDestination;
+  }
 }

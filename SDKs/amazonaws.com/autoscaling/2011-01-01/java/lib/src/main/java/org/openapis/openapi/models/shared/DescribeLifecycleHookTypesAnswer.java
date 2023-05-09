@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeLifecycleHookTypesAnswer {
     
     public String[] lifecycleHookTypes;
+
     public DescribeLifecycleHookTypesAnswer withLifecycleHookTypes(String[] lifecycleHookTypes) {
         this.lifecycleHookTypes = lifecycleHookTypes;
         return this;
     }
     
+    public DescribeLifecycleHookTypesAnswer(){}
 }

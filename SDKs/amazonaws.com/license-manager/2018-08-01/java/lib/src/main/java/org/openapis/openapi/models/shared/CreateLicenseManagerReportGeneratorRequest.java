@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLicenseManagerReportGeneratorRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateLicenseManagerReportGeneratorRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateLicenseManagerReportGeneratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateLicenseManagerReportGeneratorRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportContext")
     public ReportContext reportContext;
+
     public CreateLicenseManagerReportGeneratorRequest withReportContext(ReportContext reportContext) {
         this.reportContext = reportContext;
         return this;
@@ -33,6 +36,7 @@ public class CreateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportFrequency")
     public ReportFrequency reportFrequency;
+
     public CreateLicenseManagerReportGeneratorRequest withReportFrequency(ReportFrequency reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -40,6 +44,7 @@ public class CreateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("ReportGeneratorName")
     public String reportGeneratorName;
+
     public CreateLicenseManagerReportGeneratorRequest withReportGeneratorName(String reportGeneratorName) {
         this.reportGeneratorName = reportGeneratorName;
         return this;
@@ -48,6 +53,7 @@ public class CreateLicenseManagerReportGeneratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateLicenseManagerReportGeneratorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -55,9 +61,17 @@ public class CreateLicenseManagerReportGeneratorRequest {
     
     @JsonProperty("Type")
     public ReportTypeEnum[] type;
+
     public CreateLicenseManagerReportGeneratorRequest withType(ReportTypeEnum[] type) {
         this.type = type;
         return this;
     }
     
+    public CreateLicenseManagerReportGeneratorRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("ReportContext") ReportContext reportContext, @JsonProperty("ReportFrequency") ReportFrequency reportFrequency, @JsonProperty("ReportGeneratorName") String reportGeneratorName, @JsonProperty("Type") ReportTypeEnum[] type) {
+        this.clientToken = clientToken;
+        this.reportContext = reportContext;
+        this.reportFrequency = reportFrequency;
+        this.reportGeneratorName = reportGeneratorName;
+        this.type = type;
+  }
 }

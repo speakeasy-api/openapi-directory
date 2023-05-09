@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsProductsCertificatesCreateResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsProductsCertificatesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsProductsCertificatesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaCertificate googleCloudIntegrationsV1alphaCertificate;
+
     public IntegrationsProjectsLocationsProductsCertificatesCreateResponse withGoogleCloudIntegrationsV1alphaCertificate(org.openapis.openapi.models.shared.GoogleCloudIntegrationsV1alphaCertificate googleCloudIntegrationsV1alphaCertificate) {
         this.googleCloudIntegrationsV1alphaCertificate = googleCloudIntegrationsV1alphaCertificate;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsProductsCertificatesCreateResponse {
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsProductsCertificatesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsProductsCertificatesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsProductsCertificatesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsProductsCertificatesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

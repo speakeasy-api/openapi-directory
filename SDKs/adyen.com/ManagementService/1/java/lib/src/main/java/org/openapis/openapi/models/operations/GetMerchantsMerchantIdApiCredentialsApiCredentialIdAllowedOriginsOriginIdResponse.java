@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse {
@@ -12,6 +13,7 @@ public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOr
      */
     
     public org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin;
+
     public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withAllowedOrigin(org.openapis.openapi.models.shared.AllowedOrigin allowedOrigin) {
         this.allowedOrigin = allowedOrigin;
         return this;
@@ -19,6 +21,7 @@ public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOr
     
     
     public String contentType;
+
     public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOr
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOr
     
     
     public Integer statusCode;
+
     public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOr
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMerchantsMerchantIdApiCredentialsApiCredentialIdAllowedOriginsOriginIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class SubmitJobRequestBodyArrayProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public SubmitJobRequestBodyArrayProperties withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public SubmitJobRequestBodyArrayProperties(){}
 }

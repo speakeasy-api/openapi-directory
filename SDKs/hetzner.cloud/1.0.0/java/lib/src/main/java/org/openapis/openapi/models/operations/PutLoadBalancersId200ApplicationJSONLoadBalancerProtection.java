@@ -15,9 +15,13 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PutLoadBalancersId200ApplicationJSONLoadBalancerProtection(@JsonProperty("delete") Boolean delete) {
+        this.delete = delete;
+  }
 }

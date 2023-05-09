@@ -14,6 +14,7 @@ public class PostAssetsCorrelationMatrixNearestRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixNearestRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostAssetsCorrelationMatrixNearestRequestBody {
      */
     @JsonProperty("assetsApproximateCorrelationMatrix")
     public Double[][] assetsApproximateCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixNearestRequestBody withAssetsApproximateCorrelationMatrix(Double[][] assetsApproximateCorrelationMatrix) {
         this.assetsApproximateCorrelationMatrix = assetsApproximateCorrelationMatrix;
         return this;
@@ -35,9 +37,14 @@ public class PostAssetsCorrelationMatrixNearestRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsFixedCorrelations")
     public Long[][] assetsFixedCorrelations;
+
     public PostAssetsCorrelationMatrixNearestRequestBody withAssetsFixedCorrelations(Long[][] assetsFixedCorrelations) {
         this.assetsFixedCorrelations = assetsFixedCorrelations;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixNearestRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsApproximateCorrelationMatrix") Double[][] assetsApproximateCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsApproximateCorrelationMatrix = assetsApproximateCorrelationMatrix;
+  }
 }

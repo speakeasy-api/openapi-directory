@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ModeArrivalsRequest {
@@ -12,6 +13,7 @@ public class ModeArrivalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public ModeArrivalsRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -22,9 +24,13 @@ public class ModeArrivalsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mode")
     public String mode;
+
     public ModeArrivalsRequest withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public ModeArrivalsRequest(@JsonProperty("mode") String mode) {
+        this.mode = mode;
+  }
 }

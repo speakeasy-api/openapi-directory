@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateConfigurationSetTrackingOptionsRequest - Represents a request to update the tracking options for a configuration set. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateConfigurationSetTrackingOptionsRequest {
     
     public String configurationSetName;
+
     public UpdateConfigurationSetTrackingOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -22,9 +23,14 @@ public class UpdateConfigurationSetTrackingOptionsRequest {
      */
     
     public TrackingOptions trackingOptions;
+
     public UpdateConfigurationSetTrackingOptionsRequest withTrackingOptions(TrackingOptions trackingOptions) {
         this.trackingOptions = trackingOptions;
         return this;
     }
     
+    public UpdateConfigurationSetTrackingOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("TrackingOptions") TrackingOptions trackingOptions) {
+        this.configurationSetName = configurationSetName;
+        this.trackingOptions = trackingOptions;
+  }
 }

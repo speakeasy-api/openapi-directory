@@ -15,6 +15,7 @@ public class EnrollmentJobFraudDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudDetectionAction")
     public FraudDetectionActionEnum fraudDetectionAction;
+
     public EnrollmentJobFraudDetectionConfig withFraudDetectionAction(FraudDetectionActionEnum fraudDetectionAction) {
         this.fraudDetectionAction = fraudDetectionAction;
         return this;
@@ -23,6 +24,7 @@ public class EnrollmentJobFraudDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskThreshold")
     public Long riskThreshold;
+
     public EnrollmentJobFraudDetectionConfig withRiskThreshold(Long riskThreshold) {
         this.riskThreshold = riskThreshold;
         return this;
@@ -31,9 +33,11 @@ public class EnrollmentJobFraudDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistIds")
     public String[] watchlistIds;
+
     public EnrollmentJobFraudDetectionConfig withWatchlistIds(String[] watchlistIds) {
         this.watchlistIds = watchlistIds;
         return this;
     }
     
+    public EnrollmentJobFraudDetectionConfig(){}
 }

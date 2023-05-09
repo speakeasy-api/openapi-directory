@@ -63,10 +63,8 @@ public class FeedV2Deprecated {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetfeedorderstatusResponse res = new org.openapis.openapi.models.operations.GetfeedorderstatusResponse() {{
+        org.openapis.openapi.models.operations.GetfeedorderstatusResponse res = new org.openapis.openapi.models.operations.GetfeedorderstatusResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

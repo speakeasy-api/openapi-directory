@@ -12,6 +12,7 @@ public class CreateSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateSecurityPolicyRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateSecurityPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateSecurityPolicyRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateSecurityPolicyRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateSecurityPolicyRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateSecurityPolicyRequest {
     
     @JsonProperty("policy")
     public String policy;
+
     public CreateSecurityPolicyRequest withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -41,9 +45,15 @@ public class CreateSecurityPolicyRequest {
     
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public CreateSecurityPolicyRequest withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateSecurityPolicyRequest(@JsonProperty("name") String name, @JsonProperty("policy") String policy, @JsonProperty("type") SecurityPolicyTypeEnum type) {
+        this.name = name;
+        this.policy = policy;
+        this.type = type;
+  }
 }

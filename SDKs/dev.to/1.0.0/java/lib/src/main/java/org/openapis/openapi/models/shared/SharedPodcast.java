@@ -18,6 +18,7 @@ public class SharedPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_url")
     public String imageUrl;
+
     public SharedPodcast withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -26,6 +27,7 @@ public class SharedPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public SharedPodcast withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -34,9 +36,11 @@ public class SharedPodcast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SharedPodcast withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SharedPodcast(){}
 }

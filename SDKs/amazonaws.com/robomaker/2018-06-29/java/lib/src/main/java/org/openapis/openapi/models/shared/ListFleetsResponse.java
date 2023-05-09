@@ -15,6 +15,7 @@ public class ListFleetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetDetails")
     public Fleet[] fleetDetails;
+
     public ListFleetsResponse withFleetDetails(Fleet[] fleetDetails) {
         this.fleetDetails = fleetDetails;
         return this;
@@ -23,9 +24,11 @@ public class ListFleetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFleetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFleetsResponse(){}
 }

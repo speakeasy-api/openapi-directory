@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacePermissionsRequestFilters {
     
     public String name;
+
     public DescribeNetworkInterfacePermissionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkInterfacePermissionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeNetworkInterfacePermissionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeNetworkInterfacePermissionsRequestFilters(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAuthorizationTokenResponse {
     
     public String contentType;
+
     public GetAuthorizationTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAuthorizationTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAuthorizationTokenResponse getAuthorizationTokenResponse;
+
     public GetAuthorizationTokenResponse withGetAuthorizationTokenResponse(org.openapis.openapi.models.shared.GetAuthorizationTokenResponse getAuthorizationTokenResponse) {
         this.getAuthorizationTokenResponse = getAuthorizationTokenResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAuthorizationTokenResponse {
      */
     
     public Object invalidParameterException;
+
     public GetAuthorizationTokenResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetAuthorizationTokenResponse {
      */
     
     public Object serverException;
+
     public GetAuthorizationTokenResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class GetAuthorizationTokenResponse {
     
     
     public Integer statusCode;
+
     public GetAuthorizationTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAuthorizationTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAuthorizationTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAuthorizationTokenResponse {
      */
     
     public Object unsupportedCommandException;
+
     public GetAuthorizationTokenResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public GetAuthorizationTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

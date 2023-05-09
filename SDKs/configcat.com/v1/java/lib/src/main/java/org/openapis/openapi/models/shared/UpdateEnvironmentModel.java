@@ -12,6 +12,7 @@ public class UpdateEnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public UpdateEnvironmentModel withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -28,9 +30,11 @@ public class UpdateEnvironmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateEnvironmentModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateEnvironmentModel(){}
 }

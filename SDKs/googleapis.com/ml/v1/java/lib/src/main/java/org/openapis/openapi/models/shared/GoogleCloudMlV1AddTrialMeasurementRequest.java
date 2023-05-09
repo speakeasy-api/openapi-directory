@@ -18,9 +18,11 @@ public class GoogleCloudMlV1AddTrialMeasurementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement")
     public GoogleCloudMlV1Measurement measurement;
+
     public GoogleCloudMlV1AddTrialMeasurementRequest withMeasurement(GoogleCloudMlV1Measurement measurement) {
         this.measurement = measurement;
         return this;
     }
     
+    public GoogleCloudMlV1AddTrialMeasurementRequest(){}
 }

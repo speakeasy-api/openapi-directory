@@ -15,6 +15,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balancePlatform")
     public String balancePlatform;
+
     public AccountHolderInput withBalancePlatform(String balancePlatform) {
         this.balancePlatform = balancePlatform;
         return this;
@@ -26,6 +27,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public java.util.Map<String, AccountHolderCapabilityInput> capabilities;
+
     public AccountHolderInput withCapabilities(java.util.Map<String, AccountHolderCapabilityInput> capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -34,6 +36,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactDetails")
     public ContactDetails contactDetails;
+
     public AccountHolderInput withContactDetails(ContactDetails contactDetails) {
         this.contactDetails = contactDetails;
         return this;
@@ -45,16 +48,18 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AccountHolderInput withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     * The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/#/legalentity/latest/post/legalEntities__resParam_id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
+     * The unique identifier of the [legal entity](https://docs.adyen.com/api-explorer/legalentity/latest/post/legalEntities#responses-200-id) associated with the account holder. Adyen performs a verification process against the legal entity of the account holder.
      */
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public AccountHolderInput withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -66,6 +71,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryBalanceAccount")
     public String primaryBalanceAccount;
+
     public AccountHolderInput withPrimaryBalanceAccount(String primaryBalanceAccount) {
         this.primaryBalanceAccount = primaryBalanceAccount;
         return this;
@@ -77,6 +83,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public AccountHolderInput withReference(String reference) {
         this.reference = reference;
         return this;
@@ -98,6 +105,7 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountHolderStatusEnum status;
+
     public AccountHolderInput withStatus(AccountHolderStatusEnum status) {
         this.status = status;
         return this;
@@ -110,9 +118,13 @@ public class AccountHolderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public AccountHolderInput withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public AccountHolderInput(@JsonProperty("legalEntityId") String legalEntityId) {
+        this.legalEntityId = legalEntityId;
+  }
 }

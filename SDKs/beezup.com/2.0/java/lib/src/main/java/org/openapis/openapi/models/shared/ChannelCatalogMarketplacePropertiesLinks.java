@@ -12,6 +12,7 @@ public class ChannelCatalogMarketplacePropertiesLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalConfigurationPage")
     public BeezUPCommonLink3 externalConfigurationPage;
+
     public ChannelCatalogMarketplacePropertiesLinks withExternalConfigurationPage(BeezUPCommonLink3 externalConfigurationPage) {
         this.externalConfigurationPage = externalConfigurationPage;
         return this;
@@ -19,6 +20,7 @@ public class ChannelCatalogMarketplacePropertiesLinks {
     
     @JsonProperty("self")
     public LinksGetChannelCatalogMarketplacePropertiesLink self;
+
     public ChannelCatalogMarketplacePropertiesLinks withSelf(LinksGetChannelCatalogMarketplacePropertiesLink self) {
         this.self = self;
         return this;
@@ -27,9 +29,13 @@ public class ChannelCatalogMarketplacePropertiesLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public LinksGetChannelCatalogMarketplaceSettingsLink settings;
+
     public ChannelCatalogMarketplacePropertiesLinks withSettings(LinksGetChannelCatalogMarketplaceSettingsLink settings) {
         this.settings = settings;
         return this;
     }
     
+    public ChannelCatalogMarketplacePropertiesLinks(@JsonProperty("self") LinksGetChannelCatalogMarketplacePropertiesLink self) {
+        this.self = self;
+  }
 }

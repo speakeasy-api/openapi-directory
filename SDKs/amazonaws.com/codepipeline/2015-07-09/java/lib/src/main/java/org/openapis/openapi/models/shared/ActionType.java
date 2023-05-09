@@ -15,6 +15,7 @@ public class ActionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionConfigurationProperties")
     public ActionConfigurationProperty[] actionConfigurationProperties;
+
     public ActionType withActionConfigurationProperties(ActionConfigurationProperty[] actionConfigurationProperties) {
         this.actionConfigurationProperties = actionConfigurationProperties;
         return this;
@@ -22,6 +23,7 @@ public class ActionType {
     
     @JsonProperty("id")
     public ActionTypeId id;
+
     public ActionType withId(ActionTypeId id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class ActionType {
     
     @JsonProperty("inputArtifactDetails")
     public ArtifactDetails inputArtifactDetails;
+
     public ActionType withInputArtifactDetails(ArtifactDetails inputArtifactDetails) {
         this.inputArtifactDetails = inputArtifactDetails;
         return this;
@@ -36,6 +39,7 @@ public class ActionType {
     
     @JsonProperty("outputArtifactDetails")
     public ArtifactDetails outputArtifactDetails;
+
     public ActionType withOutputArtifactDetails(ArtifactDetails outputArtifactDetails) {
         this.outputArtifactDetails = outputArtifactDetails;
         return this;
@@ -44,9 +48,15 @@ public class ActionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public ActionTypeSettings settings;
+
     public ActionType withSettings(ActionTypeSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public ActionType(@JsonProperty("id") ActionTypeId id, @JsonProperty("inputArtifactDetails") ArtifactDetails inputArtifactDetails, @JsonProperty("outputArtifactDetails") ArtifactDetails outputArtifactDetails) {
+        this.id = id;
+        this.inputArtifactDetails = inputArtifactDetails;
+        this.outputArtifactDetails = outputArtifactDetails;
+  }
 }

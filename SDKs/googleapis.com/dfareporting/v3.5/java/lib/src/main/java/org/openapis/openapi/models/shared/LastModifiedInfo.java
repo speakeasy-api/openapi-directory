@@ -18,9 +18,11 @@ public class LastModifiedInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public LastModifiedInfo withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public LastModifiedInfo(){}
 }

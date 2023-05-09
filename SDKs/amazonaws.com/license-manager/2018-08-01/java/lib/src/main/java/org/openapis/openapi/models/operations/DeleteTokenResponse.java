@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTokenResponse {
@@ -12,6 +13,7 @@ public class DeleteTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteTokenResponse {
      */
     
     public Object authorizationException;
+
     public DeleteTokenResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteTokenResponse {
     
     
     public String contentType;
+
     public DeleteTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteTokenResponse {
      */
     
     public java.util.Map<String, Object> deleteTokenResponse;
+
     public DeleteTokenResponse withDeleteTokenResponse(java.util.Map<String, Object> deleteTokenResponse) {
         this.deleteTokenResponse = deleteTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteTokenResponse {
      */
     
     public Object rateLimitExceededException;
+
     public DeleteTokenResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteTokenResponse {
      */
     
     public Object redirectException;
+
     public DeleteTokenResponse withRedirectException(Object redirectException) {
         this.redirectException = redirectException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteTokenResponse {
     
     
     public Integer statusCode;
+
     public DeleteTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteTokenResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteTokenResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteTokenResponse {
      */
     
     public Object serverInternalException;
+
     public DeleteTokenResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteTokenResponse {
      */
     
     public Object validationException;
+
     public DeleteTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

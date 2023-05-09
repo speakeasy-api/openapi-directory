@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscordGetDiscordGetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public DiscordGetDiscordGetRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -16,6 +18,7 @@ public class DiscordGetDiscordGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
     public String base64Message;
+
     public DiscordGetDiscordGetRequest withBase64Message(String base64Message) {
         this.base64Message = base64Message;
         return this;
@@ -23,6 +26,7 @@ public class DiscordGetDiscordGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channel")
     public String channel;
+
     public DiscordGetDiscordGetRequest withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -30,9 +34,13 @@ public class DiscordGetDiscordGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public DiscordGetDiscordGetRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DiscordGetDiscordGetRequest(@JsonProperty("channel") String channel) {
+        this.channel = channel;
+  }
 }

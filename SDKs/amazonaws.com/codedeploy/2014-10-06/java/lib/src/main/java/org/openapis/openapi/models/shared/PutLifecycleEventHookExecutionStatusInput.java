@@ -12,6 +12,7 @@ public class PutLifecycleEventHookExecutionStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public PutLifecycleEventHookExecutionStatusInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -20,6 +21,7 @@ public class PutLifecycleEventHookExecutionStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycleEventHookExecutionId")
     public String lifecycleEventHookExecutionId;
+
     public PutLifecycleEventHookExecutionStatusInput withLifecycleEventHookExecutionId(String lifecycleEventHookExecutionId) {
         this.lifecycleEventHookExecutionId = lifecycleEventHookExecutionId;
         return this;
@@ -28,9 +30,11 @@ public class PutLifecycleEventHookExecutionStatusInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public LifecycleEventStatusEnum status;
+
     public PutLifecycleEventHookExecutionStatusInput withStatus(LifecycleEventStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PutLifecycleEventHookExecutionStatusInput(){}
 }

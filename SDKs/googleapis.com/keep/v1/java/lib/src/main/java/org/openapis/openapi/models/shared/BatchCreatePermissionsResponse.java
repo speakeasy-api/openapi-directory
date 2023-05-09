@@ -18,9 +18,11 @@ public class BatchCreatePermissionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public Permission[] permissions;
+
     public BatchCreatePermissionsResponse withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public BatchCreatePermissionsResponse(){}
 }

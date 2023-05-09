@@ -18,9 +18,11 @@ public class GoogleSecuritySafebrowsingV4ThreatEntryMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry[] entries;
+
     public GoogleSecuritySafebrowsingV4ThreatEntryMetadata withEntries(GoogleSecuritySafebrowsingV4ThreatEntryMetadataMetadataEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ThreatEntryMetadata(){}
 }

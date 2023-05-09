@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateChatCompletionResponseUsage {
     @JsonProperty("completion_tokens")
     public Long completionTokens;
+
     public CreateChatCompletionResponseUsage withCompletionTokens(Long completionTokens) {
         this.completionTokens = completionTokens;
         return this;
@@ -16,6 +17,7 @@ public class CreateChatCompletionResponseUsage {
     
     @JsonProperty("prompt_tokens")
     public Long promptTokens;
+
     public CreateChatCompletionResponseUsage withPromptTokens(Long promptTokens) {
         this.promptTokens = promptTokens;
         return this;
@@ -23,9 +25,15 @@ public class CreateChatCompletionResponseUsage {
     
     @JsonProperty("total_tokens")
     public Long totalTokens;
+
     public CreateChatCompletionResponseUsage withTotalTokens(Long totalTokens) {
         this.totalTokens = totalTokens;
         return this;
     }
     
+    public CreateChatCompletionResponseUsage(@JsonProperty("completion_tokens") Long completionTokens, @JsonProperty("prompt_tokens") Long promptTokens, @JsonProperty("total_tokens") Long totalTokens) {
+        this.completionTokens = completionTokens;
+        this.promptTokens = promptTokens;
+        this.totalTokens = totalTokens;
+  }
 }

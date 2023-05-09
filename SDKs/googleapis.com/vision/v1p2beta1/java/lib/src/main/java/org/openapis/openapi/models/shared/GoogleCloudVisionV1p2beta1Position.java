@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Float x;
+
     public GoogleCloudVisionV1p2beta1Position withX(Float x) {
         this.x = x;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Float y;
+
     public GoogleCloudVisionV1p2beta1Position withY(Float y) {
         this.y = y;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("z")
     public Float z;
+
     public GoogleCloudVisionV1p2beta1Position withZ(Float z) {
         this.z = z;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1Position(){}
 }

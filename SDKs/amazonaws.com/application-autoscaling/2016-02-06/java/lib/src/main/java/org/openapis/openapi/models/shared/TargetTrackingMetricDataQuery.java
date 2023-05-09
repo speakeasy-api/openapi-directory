@@ -15,6 +15,7 @@ public class TargetTrackingMetricDataQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public TargetTrackingMetricDataQuery withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -22,6 +23,7 @@ public class TargetTrackingMetricDataQuery {
     
     @JsonProperty("Id")
     public String id;
+
     public TargetTrackingMetricDataQuery withId(String id) {
         this.id = id;
         return this;
@@ -30,6 +32,7 @@ public class TargetTrackingMetricDataQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public TargetTrackingMetricDataQuery withLabel(String label) {
         this.label = label;
         return this;
@@ -38,6 +41,7 @@ public class TargetTrackingMetricDataQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricStat")
     public TargetTrackingMetricStat metricStat;
+
     public TargetTrackingMetricDataQuery withMetricStat(TargetTrackingMetricStat metricStat) {
         this.metricStat = metricStat;
         return this;
@@ -46,9 +50,13 @@ public class TargetTrackingMetricDataQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnData")
     public Boolean returnData;
+
     public TargetTrackingMetricDataQuery withReturnData(Boolean returnData) {
         this.returnData = returnData;
         return this;
     }
     
+    public TargetTrackingMetricDataQuery(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

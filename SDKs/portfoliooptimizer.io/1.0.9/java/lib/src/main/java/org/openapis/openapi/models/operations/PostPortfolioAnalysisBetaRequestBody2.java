@@ -14,6 +14,7 @@ public class PostPortfolioAnalysisBetaRequestBody2 {
      */
     @JsonProperty("benchmarkReturns")
     public Double[] benchmarkReturns;
+
     public PostPortfolioAnalysisBetaRequestBody2 withBenchmarkReturns(Double[] benchmarkReturns) {
         this.benchmarkReturns = benchmarkReturns;
         return this;
@@ -21,6 +22,7 @@ public class PostPortfolioAnalysisBetaRequestBody2 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisBetaRequestBody2Portfolios[] portfolios;
+
     public PostPortfolioAnalysisBetaRequestBody2 withPortfolios(PostPortfolioAnalysisBetaRequestBody2Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -32,9 +34,14 @@ public class PostPortfolioAnalysisBetaRequestBody2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("riskFreeReturns")
     public Double[] riskFreeReturns;
+
     public PostPortfolioAnalysisBetaRequestBody2 withRiskFreeReturns(Double[] riskFreeReturns) {
         this.riskFreeReturns = riskFreeReturns;
         return this;
     }
     
+    public PostPortfolioAnalysisBetaRequestBody2(@JsonProperty("benchmarkReturns") Double[] benchmarkReturns, @JsonProperty("portfolios") PostPortfolioAnalysisBetaRequestBody2Portfolios[] portfolios) {
+        this.benchmarkReturns = benchmarkReturns;
+        this.portfolios = portfolios;
+  }
 }

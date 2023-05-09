@@ -18,6 +18,7 @@ public class TypeMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public TypeMeta withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,9 +30,11 @@ public class TypeMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TypeMeta withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public TypeMeta(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportNsxRecommendedRulesResponse {
     
     public byte[] body;
+
     public ExportNsxRecommendedRulesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ExportNsxRecommendedRulesResponse {
     
     
     public String contentType;
+
     public ExportNsxRecommendedRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ExportNsxRecommendedRulesResponse {
     
     
     public Integer statusCode;
+
     public ExportNsxRecommendedRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ExportNsxRecommendedRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportNsxRecommendedRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ExportNsxRecommendedRulesResponse {
      */
     
     public byte[] exportNsxRecommendedRules200ApplicationOctetStreamBinaryString;
+
     public ExportNsxRecommendedRulesResponse withExportNsxRecommendedRules200ApplicationOctetStreamBinaryString(byte[] exportNsxRecommendedRules200ApplicationOctetStreamBinaryString) {
         this.exportNsxRecommendedRules200ApplicationOctetStreamBinaryString = exportNsxRecommendedRules200ApplicationOctetStreamBinaryString;
         return this;
     }
     
+    public ExportNsxRecommendedRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class AllWorkspaces200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspaces")
     public AllWorkspaces200ApplicationJSONWorkspaces[] workspaces;
+
     public AllWorkspaces200ApplicationJSON withWorkspaces(AllWorkspaces200ApplicationJSONWorkspaces[] workspaces) {
         this.workspaces = workspaces;
         return this;
     }
     
+    public AllWorkspaces200ApplicationJSON(){}
 }

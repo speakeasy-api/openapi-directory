@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkgroupResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkgroupResponse {
      */
     
     public Object conflictException;
+
     public DeleteWorkgroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkgroupResponse {
     
     
     public String contentType;
+
     public DeleteWorkgroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkgroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteWorkgroupResponse deleteWorkgroupResponse;
+
     public DeleteWorkgroupResponse withDeleteWorkgroupResponse(org.openapis.openapi.models.shared.DeleteWorkgroupResponse deleteWorkgroupResponse) {
         this.deleteWorkgroupResponse = deleteWorkgroupResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkgroupResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWorkgroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteWorkgroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkgroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteWorkgroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkgroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWorkgroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWorkgroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteWorkgroupResponse {
      */
     
     public Object validationException;
+
     public DeleteWorkgroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWorkgroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

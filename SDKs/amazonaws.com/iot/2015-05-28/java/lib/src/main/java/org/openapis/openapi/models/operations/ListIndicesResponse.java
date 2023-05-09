@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIndicesResponse {
     
     public String contentType;
+
     public ListIndicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListIndicesResponse {
      */
     
     public Object internalFailureException;
+
     public ListIndicesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListIndicesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListIndicesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListIndicesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIndicesResponse listIndicesResponse;
+
     public ListIndicesResponse withListIndicesResponse(org.openapis.openapi.models.shared.ListIndicesResponse listIndicesResponse) {
         this.listIndicesResponse = listIndicesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListIndicesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListIndicesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListIndicesResponse {
     
     
     public Integer statusCode;
+
     public ListIndicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListIndicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIndicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListIndicesResponse {
      */
     
     public Object throttlingException;
+
     public ListIndicesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListIndicesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListIndicesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListIndicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -54,11 +54,9 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPatientManagementResponse res = new org.openapis.openapi.models.operations.GetPatientManagementResponse() {{
+        org.openapis.openapi.models.operations.GetPatientManagementResponse res = new org.openapis.openapi.models.operations.GetPatientManagementResponse(contentType, httpRes.statusCode()) {{
             patientManagement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPatientManagementDiagnosesResponse res = new org.openapis.openapi.models.operations.GetPatientManagementDiagnosesResponse() {{
+        org.openapis.openapi.models.operations.GetPatientManagementDiagnosesResponse res = new org.openapis.openapi.models.operations.GetPatientManagementDiagnosesResponse(contentType, httpRes.statusCode()) {{
             codes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPatientManagementLookupTypesResponse res = new org.openapis.openapi.models.operations.GetPatientManagementLookupTypesResponse() {{
+        org.openapis.openapi.models.operations.GetPatientManagementLookupTypesResponse res = new org.openapis.openapi.models.operations.GetPatientManagementLookupTypesResponse(contentType, httpRes.statusCode()) {{
             lookupTypes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,10 +171,8 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SavePatientManagementResponse res = new org.openapis.openapi.models.operations.SavePatientManagementResponse() {{
+        org.openapis.openapi.models.operations.SavePatientManagementResponse res = new org.openapis.openapi.models.operations.SavePatientManagementResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -212,10 +204,8 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SavePatientManagementSurgeriesResponse res = new org.openapis.openapi.models.operations.SavePatientManagementSurgeriesResponse() {{
+        org.openapis.openapi.models.operations.SavePatientManagementSurgeriesResponse res = new org.openapis.openapi.models.operations.SavePatientManagementSurgeriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -247,10 +237,8 @@ public class PatientManagementController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidatePatientManagementResponse res = new org.openapis.openapi.models.operations.ValidatePatientManagementResponse() {{
+        org.openapis.openapi.models.operations.ValidatePatientManagementResponse res = new org.openapis.openapi.models.operations.ValidatePatientManagementResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {

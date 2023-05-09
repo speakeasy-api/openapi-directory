@@ -15,6 +15,7 @@ public class AwsBackupRecoveryPointCreatedByDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanArn")
     public String backupPlanArn;
+
     public AwsBackupRecoveryPointCreatedByDetails withBackupPlanArn(String backupPlanArn) {
         this.backupPlanArn = backupPlanArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsBackupRecoveryPointCreatedByDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanId")
     public String backupPlanId;
+
     public AwsBackupRecoveryPointCreatedByDetails withBackupPlanId(String backupPlanId) {
         this.backupPlanId = backupPlanId;
         return this;
@@ -31,6 +33,7 @@ public class AwsBackupRecoveryPointCreatedByDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupPlanVersion")
     public String backupPlanVersion;
+
     public AwsBackupRecoveryPointCreatedByDetails withBackupPlanVersion(String backupPlanVersion) {
         this.backupPlanVersion = backupPlanVersion;
         return this;
@@ -39,9 +42,11 @@ public class AwsBackupRecoveryPointCreatedByDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupRuleId")
     public String backupRuleId;
+
     public AwsBackupRecoveryPointCreatedByDetails withBackupRuleId(String backupRuleId) {
         this.backupRuleId = backupRuleId;
         return this;
     }
     
+    public AwsBackupRecoveryPointCreatedByDetails(){}
 }

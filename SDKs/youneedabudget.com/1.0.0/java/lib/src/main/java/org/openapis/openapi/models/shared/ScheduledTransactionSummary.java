@@ -13,6 +13,7 @@ import java.time.LocalDate;
 public class ScheduledTransactionSummary {
     @JsonProperty("account_id")
     public String accountId;
+
     public ScheduledTransactionSummary withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ScheduledTransactionSummary {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public ScheduledTransactionSummary withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -31,6 +33,7 @@ public class ScheduledTransactionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public ScheduledTransactionSummary withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -42,6 +45,7 @@ public class ScheduledTransactionSummary {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_first")
     public LocalDate dateFirst;
+
     public ScheduledTransactionSummary withDateFirst(LocalDate dateFirst) {
         this.dateFirst = dateFirst;
         return this;
@@ -53,6 +57,7 @@ public class ScheduledTransactionSummary {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_next")
     public LocalDate dateNext;
+
     public ScheduledTransactionSummary withDateNext(LocalDate dateNext) {
         this.dateNext = dateNext;
         return this;
@@ -63,6 +68,7 @@ public class ScheduledTransactionSummary {
      */
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ScheduledTransactionSummary withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -74,6 +80,7 @@ public class ScheduledTransactionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag_color")
     public ScheduledTransactionSummaryFlagColorEnum flagColor;
+
     public ScheduledTransactionSummary withFlagColor(ScheduledTransactionSummaryFlagColorEnum flagColor) {
         this.flagColor = flagColor;
         return this;
@@ -81,6 +88,7 @@ public class ScheduledTransactionSummary {
     
     @JsonProperty("frequency")
     public ScheduledTransactionSummaryFrequencyEnum frequency;
+
     public ScheduledTransactionSummary withFrequency(ScheduledTransactionSummaryFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -88,6 +96,7 @@ public class ScheduledTransactionSummary {
     
     @JsonProperty("id")
     public String id;
+
     public ScheduledTransactionSummary withId(String id) {
         this.id = id;
         return this;
@@ -96,6 +105,7 @@ public class ScheduledTransactionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public ScheduledTransactionSummary withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -104,6 +114,7 @@ public class ScheduledTransactionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public ScheduledTransactionSummary withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -115,9 +126,19 @@ public class ScheduledTransactionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfer_account_id")
     public String transferAccountId;
+
     public ScheduledTransactionSummary withTransferAccountId(String transferAccountId) {
         this.transferAccountId = transferAccountId;
         return this;
     }
     
+    public ScheduledTransactionSummary(@JsonProperty("account_id") String accountId, @JsonProperty("amount") Long amount, @JsonProperty("date_first") LocalDate dateFirst, @JsonProperty("date_next") LocalDate dateNext, @JsonProperty("deleted") Boolean deleted, @JsonProperty("frequency") ScheduledTransactionSummaryFrequencyEnum frequency, @JsonProperty("id") String id) {
+        this.accountId = accountId;
+        this.amount = amount;
+        this.dateFirst = dateFirst;
+        this.dateNext = dateNext;
+        this.deleted = deleted;
+        this.frequency = frequency;
+        this.id = id;
+  }
 }

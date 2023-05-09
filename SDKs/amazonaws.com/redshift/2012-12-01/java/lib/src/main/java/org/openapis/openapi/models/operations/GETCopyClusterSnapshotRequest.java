@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCopyClusterSnapshotRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCopyClusterSnapshotActionEnum action;
+
     public GETCopyClusterSnapshotRequest withAction(GETCopyClusterSnapshotActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCopyClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ManualSnapshotRetentionPeriod")
     public Long manualSnapshotRetentionPeriod;
+
     public GETCopyClusterSnapshotRequest withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -29,6 +32,7 @@ public class GETCopyClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSnapshotClusterIdentifier")
     public String sourceSnapshotClusterIdentifier;
+
     public GETCopyClusterSnapshotRequest withSourceSnapshotClusterIdentifier(String sourceSnapshotClusterIdentifier) {
         this.sourceSnapshotClusterIdentifier = sourceSnapshotClusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETCopyClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSnapshotIdentifier")
     public String sourceSnapshotIdentifier;
+
     public GETCopyClusterSnapshotRequest withSourceSnapshotIdentifier(String sourceSnapshotIdentifier) {
         this.sourceSnapshotIdentifier = sourceSnapshotIdentifier;
         return this;
@@ -49,6 +54,7 @@ public class GETCopyClusterSnapshotRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetSnapshotIdentifier")
     public String targetSnapshotIdentifier;
+
     public GETCopyClusterSnapshotRequest withTargetSnapshotIdentifier(String targetSnapshotIdentifier) {
         this.targetSnapshotIdentifier = targetSnapshotIdentifier;
         return this;
@@ -56,6 +62,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCopyClusterSnapshotVersionEnum version;
+
     public GETCopyClusterSnapshotRequest withVersion(GETCopyClusterSnapshotVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCopyClusterSnapshotRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCopyClusterSnapshotRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCopyClusterSnapshotRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCopyClusterSnapshotRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCopyClusterSnapshotRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCopyClusterSnapshotRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETCopyClusterSnapshotRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCopyClusterSnapshotRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCopyClusterSnapshotRequest(@JsonProperty("Action") GETCopyClusterSnapshotActionEnum action, @JsonProperty("SourceSnapshotIdentifier") String sourceSnapshotIdentifier, @JsonProperty("TargetSnapshotIdentifier") String targetSnapshotIdentifier, @JsonProperty("Version") GETCopyClusterSnapshotVersionEnum version) {
+        this.action = action;
+        this.sourceSnapshotIdentifier = sourceSnapshotIdentifier;
+        this.targetSnapshotIdentifier = targetSnapshotIdentifier;
+        this.version = version;
+  }
 }

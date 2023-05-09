@@ -18,9 +18,11 @@ public class GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleChromePolicyVersionsV1ModifyGroupPolicyRequest[] requests;
+
     public GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest withRequests(GoogleChromePolicyVersionsV1ModifyGroupPolicyRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest(){}
 }

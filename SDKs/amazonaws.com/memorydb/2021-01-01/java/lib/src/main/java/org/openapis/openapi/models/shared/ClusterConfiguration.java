@@ -15,6 +15,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ClusterConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public String engineVersion;
+
     public ClusterConfiguration withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -31,6 +33,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaintenanceWindow")
     public String maintenanceWindow;
+
     public ClusterConfiguration withMaintenanceWindow(String maintenanceWindow) {
         this.maintenanceWindow = maintenanceWindow;
         return this;
@@ -39,6 +42,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ClusterConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public ClusterConfiguration withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -55,6 +60,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumShards")
     public Long numShards;
+
     public ClusterConfiguration withNumShards(Long numShards) {
         this.numShards = numShards;
         return this;
@@ -63,6 +69,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public ClusterConfiguration withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
@@ -71,6 +78,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public ClusterConfiguration withPort(Long port) {
         this.port = port;
         return this;
@@ -79,6 +87,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shards")
     public ShardDetail[] shards;
+
     public ClusterConfiguration withShards(ShardDetail[] shards) {
         this.shards = shards;
         return this;
@@ -87,6 +96,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotRetentionLimit")
     public Long snapshotRetentionLimit;
+
     public ClusterConfiguration withSnapshotRetentionLimit(Long snapshotRetentionLimit) {
         this.snapshotRetentionLimit = snapshotRetentionLimit;
         return this;
@@ -95,6 +105,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotWindow")
     public String snapshotWindow;
+
     public ClusterConfiguration withSnapshotWindow(String snapshotWindow) {
         this.snapshotWindow = snapshotWindow;
         return this;
@@ -103,6 +114,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public ClusterConfiguration withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -111,6 +123,7 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicArn")
     public String topicArn;
+
     public ClusterConfiguration withTopicArn(String topicArn) {
         this.topicArn = topicArn;
         return this;
@@ -119,9 +132,11 @@ public class ClusterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public ClusterConfiguration withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ClusterConfiguration(){}
 }

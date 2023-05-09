@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TexttospeechOperationsCancelSecurity;
 import org.openapis.openapi.models.operations.TexttospeechOperationsCancelRequest;
 import org.openapis.openapi.models.operations.TexttospeechOperationsCancelResponse;
+import org.openapis.openapi.models.operations.TexttospeechOperationsCancelSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,37 +28,38 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TexttospeechOperationsCancelRequest req = new TexttospeechOperationsCancelRequest() {{
-                dollarXgafv = "2";
+            TexttospeechOperationsCancelRequest req = new TexttospeechOperationsCancelRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
                 }};
-                accessToken = "vel";
-                alt = "media";
-                callback = "deserunt";
-                fields = "suscipit";
-                key = "iure";
-                name = "magnam";
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
                 oauthToken = "debitis";
                 prettyPrint = false;
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
-            TexttospeechOperationsCancelResponse res = sdk.operations.texttospeechOperationsCancel(req, new TexttospeechOperationsCancelSecurity() {{
+            TexttospeechOperationsCancelResponse res = sdk.operations.texttospeechOperationsCancel(req, new TexttospeechOperationsCancelSecurity("suscipit", "molestiae") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,24 +67,24 @@ public class Application {
 ## Available Resources and Operations
 
 
-### operations
+### [operations](docs/operations/README.md)
 
-* `texttospeechOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `texttospeechOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [texttospeechOperationsCancel](docs/operations/README.md#texttospeechoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [texttospeechOperationsDelete](docs/operations/README.md#texttospeechoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `texttospeechProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `texttospeechProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `texttospeechProjectsLocationsSynthesizeLongAudio` - Synthesizes long form text asynchronously.
+* [texttospeechProjectsLocationsOperationsGet](docs/projects/README.md#texttospeechprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [texttospeechProjectsLocationsOperationsList](docs/projects/README.md#texttospeechprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [texttospeechProjectsLocationsSynthesizeLongAudio](docs/projects/README.md#texttospeechprojectslocationssynthesizelongaudio) - Synthesizes long form text asynchronously.
 
-### text
+### [text](docs/text/README.md)
 
-* `texttospeechTextSynthesize` - Synthesizes speech synchronously: receive results after all text input has been processed.
+* [texttospeechTextSynthesize](docs/text/README.md#texttospeechtextsynthesize) - Synthesizes speech synchronously: receive results after all text input has been processed.
 
-### voices
+### [voices](docs/voices/README.md)
 
-* `texttospeechVoicesList` - Returns a list of Voice supported for synthesis.
+* [texttospeechVoicesList](docs/voices/README.md#texttospeechvoiceslist) - Returns a list of Voice supported for synthesis.
 <!-- End SDK Available Operations -->
 
 ### Maturity

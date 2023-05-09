@@ -69,12 +69,10 @@ public class GoalRelationships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddSupportingRelationshipResponse res = new org.openapis.openapi.models.operations.AddSupportingRelationshipResponse() {{
+        org.openapis.openapi.models.operations.AddSupportingRelationshipResponse res = new org.openapis.openapi.models.operations.AddSupportingRelationshipResponse(contentType, httpRes.statusCode()) {{
             addSupportingRelationship200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -123,12 +121,10 @@ public class GoalRelationships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGoalRelationshipResponse res = new org.openapis.openapi.models.operations.GetGoalRelationshipResponse() {{
+        org.openapis.openapi.models.operations.GetGoalRelationshipResponse res = new org.openapis.openapi.models.operations.GetGoalRelationshipResponse(contentType, httpRes.statusCode()) {{
             getGoalRelationship200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,12 +173,10 @@ public class GoalRelationships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGoalRelationshipsResponse res = new org.openapis.openapi.models.operations.GetGoalRelationshipsResponse() {{
+        org.openapis.openapi.models.operations.GetGoalRelationshipsResponse res = new org.openapis.openapi.models.operations.GetGoalRelationshipsResponse(contentType, httpRes.statusCode()) {{
             getGoalRelationships200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,12 +230,10 @@ public class GoalRelationships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveSupportingRelationshipResponse res = new org.openapis.openapi.models.operations.RemoveSupportingRelationshipResponse() {{
+        org.openapis.openapi.models.operations.RemoveSupportingRelationshipResponse res = new org.openapis.openapi.models.operations.RemoveSupportingRelationshipResponse(contentType, httpRes.statusCode()) {{
             removeSupportingRelationship200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -299,12 +291,10 @@ public class GoalRelationships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGoalRelationshipResponse res = new org.openapis.openapi.models.operations.UpdateGoalRelationshipResponse() {{
+        org.openapis.openapi.models.operations.UpdateGoalRelationshipResponse res = new org.openapis.openapi.models.operations.UpdateGoalRelationshipResponse(contentType, httpRes.statusCode()) {{
             updateGoalRelationship200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

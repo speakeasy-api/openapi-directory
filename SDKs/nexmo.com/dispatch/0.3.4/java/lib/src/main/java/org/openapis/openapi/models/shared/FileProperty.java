@@ -15,6 +15,7 @@ public class FileProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public FileProperty withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -26,9 +27,11 @@ public class FileProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileProperty withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileProperty(){}
 }

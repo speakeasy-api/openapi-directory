@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DataplexSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public String asset;
+
     public GoogleCloudDatacatalogV1DataplexSpec withAsset(String asset) {
         this.asset = asset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DataplexSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compressionFormat")
     public String compressionFormat;
+
     public GoogleCloudDatacatalogV1DataplexSpec withCompressionFormat(String compressionFormat) {
         this.compressionFormat = compressionFormat;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1DataplexSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFormat")
     public GoogleCloudDatacatalogV1PhysicalSchema dataFormat;
+
     public GoogleCloudDatacatalogV1DataplexSpec withDataFormat(GoogleCloudDatacatalogV1PhysicalSchema dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1DataplexSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudDatacatalogV1DataplexSpec withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DataplexSpec(){}
 }

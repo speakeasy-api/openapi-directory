@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVirtualRouterResponse {
@@ -12,6 +13,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object badRequestException;
+
     public DescribeVirtualRouterResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVirtualRouterResponse {
     
     
     public String contentType;
+
     public DescribeVirtualRouterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVirtualRouterOutput describeVirtualRouterOutput;
+
     public DescribeVirtualRouterResponse withDescribeVirtualRouterOutput(org.openapis.openapi.models.shared.DescribeVirtualRouterOutput describeVirtualRouterOutput) {
         this.describeVirtualRouterOutput = describeVirtualRouterOutput;
         return this;
@@ -39,6 +43,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object forbiddenException;
+
     public DescribeVirtualRouterResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeVirtualRouterResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object notFoundException;
+
     public DescribeVirtualRouterResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeVirtualRouterResponse {
     
     
     public Integer statusCode;
+
     public DescribeVirtualRouterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeVirtualRouterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVirtualRouterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeVirtualRouterResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeVirtualRouterResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeVirtualRouterResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeVirtualRouterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ResourceMetadata {
     @JsonProperty("arn")
     public String arn;
+
     public ResourceMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ResourceMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ResourceMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class ResourceMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ResourceMetadata withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -42,6 +45,7 @@ public class ResourceMetadata {
     
     @JsonProperty("meshOwner")
     public String meshOwner;
+
     public ResourceMetadata withMeshOwner(String meshOwner) {
         this.meshOwner = meshOwner;
         return this;
@@ -49,6 +53,7 @@ public class ResourceMetadata {
     
     @JsonProperty("resourceOwner")
     public String resourceOwner;
+
     public ResourceMetadata withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -56,6 +61,7 @@ public class ResourceMetadata {
     
     @JsonProperty("uid")
     public String uid;
+
     public ResourceMetadata withUid(String uid) {
         this.uid = uid;
         return this;
@@ -63,9 +69,19 @@ public class ResourceMetadata {
     
     @JsonProperty("version")
     public Long version;
+
     public ResourceMetadata withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public ResourceMetadata(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("meshOwner") String meshOwner, @JsonProperty("resourceOwner") String resourceOwner, @JsonProperty("uid") String uid, @JsonProperty("version") Long version) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.meshOwner = meshOwner;
+        this.resourceOwner = resourceOwner;
+        this.uid = uid;
+        this.version = version;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListServiceInstanceProvisionedResourcesRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListServiceInstanceProvisionedResourcesInput listServiceInstanceProvisionedResourcesInput;
+
     public ListServiceInstanceProvisionedResourcesRequest withListServiceInstanceProvisionedResourcesInput(org.openapis.openapi.models.shared.ListServiceInstanceProvisionedResourcesInput listServiceInstanceProvisionedResourcesInput) {
         this.listServiceInstanceProvisionedResourcesInput = listServiceInstanceProvisionedResourcesInput;
         return this;
@@ -16,6 +18,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class ListServiceInstanceProvisionedResourcesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListServiceInstanceProvisionedResourcesXAmzTargetEnum xAmzTarget;
+
     public ListServiceInstanceProvisionedResourcesRequest withXAmzTarget(ListServiceInstanceProvisionedResourcesXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,9 +85,14 @@ public class ListServiceInstanceProvisionedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListServiceInstanceProvisionedResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListServiceInstanceProvisionedResourcesRequest(@JsonProperty("ListServiceInstanceProvisionedResourcesInput") org.openapis.openapi.models.shared.ListServiceInstanceProvisionedResourcesInput listServiceInstanceProvisionedResourcesInput, @JsonProperty("X-Amz-Target") ListServiceInstanceProvisionedResourcesXAmzTargetEnum xAmzTarget) {
+        this.listServiceInstanceProvisionedResourcesInput = listServiceInstanceProvisionedResourcesInput;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

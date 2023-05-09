@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomField2Request {
@@ -12,6 +13,7 @@ public class UpdateCustomField2Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SmartCustomFieldDTO smartCustomFieldDTO;
+
     public UpdateCustomField2Request withSmartCustomFieldDTO(org.openapis.openapi.models.shared.SmartCustomFieldDTO smartCustomFieldDTO) {
         this.smartCustomFieldDTO = smartCustomFieldDTO;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomField2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public UpdateCustomField2Request withKey(String key) {
         this.key = key;
         return this;
@@ -32,9 +35,15 @@ public class UpdateCustomField2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public UpdateCustomField2Request withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public UpdateCustomField2Request(@JsonProperty("SmartCustomFieldDTO") org.openapis.openapi.models.shared.SmartCustomFieldDTO smartCustomFieldDTO, @JsonProperty("key") String key, @JsonProperty("projectId") String projectId) {
+        this.smartCustomFieldDTO = smartCustomFieldDTO;
+        this.key = key;
+        this.projectId = projectId;
+  }
 }

@@ -18,6 +18,7 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automation_id")
     public String automationId;
+
     public RequestEntity withAutomationId(String automationId) {
         this.automationId = automationId;
         return this;
@@ -29,6 +30,7 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public RequestEntity withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -40,6 +42,7 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public RequestEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public RequestEntity withPath(String path) {
         this.path = path;
         return this;
@@ -62,6 +66,7 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public RequestEntity withSource(String source) {
         this.source = source;
         return this;
@@ -73,9 +78,11 @@ public class RequestEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_display_name")
     public String userDisplayName;
+
     public RequestEntity withUserDisplayName(String userDisplayName) {
         this.userDisplayName = userDisplayName;
         return this;
     }
     
+    public RequestEntity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsReportJobsFetchReportResultsResponse {
     
     public String contentType;
+
     public CloudchannelAccountsReportJobsFetchReportResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsReportJobsFetchReportResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1FetchReportResultsResponse googleCloudChannelV1FetchReportResultsResponse;
+
     public CloudchannelAccountsReportJobsFetchReportResultsResponse withGoogleCloudChannelV1FetchReportResultsResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1FetchReportResultsResponse googleCloudChannelV1FetchReportResultsResponse) {
         this.googleCloudChannelV1FetchReportResultsResponse = googleCloudChannelV1FetchReportResultsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsReportJobsFetchReportResultsResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsReportJobsFetchReportResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsReportJobsFetchReportResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsReportJobsFetchReportResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsReportJobsFetchReportResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

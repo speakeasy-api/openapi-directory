@@ -15,6 +15,7 @@ public class Bknoc500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Bknoc500ApplicationJSONErrorEnum error;
+
     public Bknoc500ApplicationJSON withError(Bknoc500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Bknoc500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Bknoc500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Bknoc500ApplicationJSON withErrorDescription(Bknoc500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Bknoc500ApplicationJSON(){}
 }

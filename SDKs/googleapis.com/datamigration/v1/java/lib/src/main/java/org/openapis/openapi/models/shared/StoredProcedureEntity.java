@@ -18,6 +18,7 @@ public class StoredProcedureEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public StoredProcedureEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,9 +30,11 @@ public class StoredProcedureEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlCode")
     public String sqlCode;
+
     public StoredProcedureEntity withSqlCode(String sqlCode) {
         this.sqlCode = sqlCode;
         return this;
     }
     
+    public StoredProcedureEntity(){}
 }

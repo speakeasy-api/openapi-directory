@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RangeList {
     
     public Long from;
+
     public RangeList withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,6 +20,7 @@ public class RangeList {
     
     
     public Long step;
+
     public RangeList withStep(Long step) {
         this.step = step;
         return this;
@@ -26,9 +28,11 @@ public class RangeList {
     
     
     public Long to;
+
     public RangeList withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public RangeList(){}
 }

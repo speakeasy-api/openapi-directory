@@ -15,9 +15,11 @@ public class CreateTaskRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TaskRequestInput data;
+
     public CreateTaskRequestBodyInput withData(org.openapis.openapi.models.shared.TaskRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateTaskRequestBodyInput(){}
 }

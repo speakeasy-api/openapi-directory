@@ -18,6 +18,7 @@ public class PolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PolicyComplianceStatusEnum status;
+
     public PolicyCompliance withStatus(PolicyComplianceStatusEnum status) {
         this.status = status;
         return this;
@@ -29,9 +30,11 @@ public class PolicyCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topics")
     public PolicyTopicEntry[] topics;
+
     public PolicyCompliance withTopics(PolicyTopicEntry[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public PolicyCompliance(){}
 }

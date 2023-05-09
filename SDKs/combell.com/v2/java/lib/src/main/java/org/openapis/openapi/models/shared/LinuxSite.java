@@ -15,6 +15,7 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host_headers")
     public HostHeader[] hostHeaders;
+
     public LinuxSite withHostHeaders(HostHeader[] hostHeaders) {
         this.hostHeaders = hostHeaders;
         return this;
@@ -26,6 +27,7 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http2_enabled")
     public Boolean http2Enabled;
+
     public LinuxSite withHttp2Enabled(Boolean http2Enabled) {
         this.http2Enabled = http2Enabled;
         return this;
@@ -37,6 +39,7 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("https_redirect_enabled")
     public Boolean httpsRedirectEnabled;
+
     public LinuxSite withHttpsRedirectEnabled(Boolean httpsRedirectEnabled) {
         this.httpsRedirectEnabled = httpsRedirectEnabled;
         return this;
@@ -48,6 +51,7 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LinuxSite withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public LinuxSite withPath(String path) {
         this.path = path;
         return this;
@@ -70,9 +75,11 @@ public class LinuxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssl_enabled")
     public Boolean sslEnabled;
+
     public LinuxSite withSslEnabled(Boolean sslEnabled) {
         this.sslEnabled = sslEnabled;
         return this;
     }
     
+    public LinuxSite(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsScriptTypeFunction withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsScriptTypeFunction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public String[] parameters;
+
     public GoogleAppsScriptTypeFunction withParameters(String[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleAppsScriptTypeFunction(){}
 }

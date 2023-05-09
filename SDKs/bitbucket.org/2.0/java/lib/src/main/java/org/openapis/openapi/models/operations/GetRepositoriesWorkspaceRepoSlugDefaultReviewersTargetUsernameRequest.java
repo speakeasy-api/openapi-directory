@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest {
@@ -14,6 +15,7 @@ public class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -26,6 +28,7 @@ public class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_username")
     public String targetUsername;
+
     public GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withTargetUsername(String targetUsername) {
         this.targetUsername = targetUsername;
         return this;
@@ -38,9 +41,15 @@ public class GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameReque
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugDefaultReviewersTargetUsernameRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("target_username") String targetUsername, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.targetUsername = targetUsername;
+        this.workspace = workspace;
+  }
 }

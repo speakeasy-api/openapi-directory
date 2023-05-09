@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogGetCategoriesRequest {
@@ -12,6 +13,7 @@ public class CatalogGetCategoriesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Encoding")
     public String[] acceptEncoding;
+
     public CatalogGetCategoriesRequest withAcceptEncoding(String[] acceptEncoding) {
         this.acceptEncoding = acceptEncoding;
         return this;
@@ -22,9 +24,14 @@ public class CatalogGetCategoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogGetCategoriesRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogGetCategoriesRequest(@JsonProperty("Accept-Encoding") String[] acceptEncoding, @JsonProperty("storeId") String storeId) {
+        this.acceptEncoding = acceptEncoding;
+        this.storeId = storeId;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateStudioInput {
     @JsonProperty("AuthMode")
     public AuthModeEnum authMode;
+
     public CreateStudioInput withAuthMode(AuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -18,6 +19,7 @@ public class CreateStudioInput {
     
     @JsonProperty("DefaultS3Location")
     public String defaultS3Location;
+
     public CreateStudioInput withDefaultS3Location(String defaultS3Location) {
         this.defaultS3Location = defaultS3Location;
         return this;
@@ -26,6 +28,7 @@ public class CreateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateStudioInput withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class CreateStudioInput {
     
     @JsonProperty("EngineSecurityGroupId")
     public String engineSecurityGroupId;
+
     public CreateStudioInput withEngineSecurityGroupId(String engineSecurityGroupId) {
         this.engineSecurityGroupId = engineSecurityGroupId;
         return this;
@@ -41,6 +45,7 @@ public class CreateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpAuthUrl")
     public String idpAuthUrl;
+
     public CreateStudioInput withIdpAuthUrl(String idpAuthUrl) {
         this.idpAuthUrl = idpAuthUrl;
         return this;
@@ -49,6 +54,7 @@ public class CreateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdpRelayStateParameterName")
     public String idpRelayStateParameterName;
+
     public CreateStudioInput withIdpRelayStateParameterName(String idpRelayStateParameterName) {
         this.idpRelayStateParameterName = idpRelayStateParameterName;
         return this;
@@ -56,6 +62,7 @@ public class CreateStudioInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateStudioInput withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +70,7 @@ public class CreateStudioInput {
     
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public CreateStudioInput withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -70,6 +78,7 @@ public class CreateStudioInput {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateStudioInput withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -78,6 +87,7 @@ public class CreateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateStudioInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -86,6 +96,7 @@ public class CreateStudioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserRole")
     public String userRole;
+
     public CreateStudioInput withUserRole(String userRole) {
         this.userRole = userRole;
         return this;
@@ -93,6 +104,7 @@ public class CreateStudioInput {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public CreateStudioInput withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -100,9 +112,20 @@ public class CreateStudioInput {
     
     @JsonProperty("WorkspaceSecurityGroupId")
     public String workspaceSecurityGroupId;
+
     public CreateStudioInput withWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
         this.workspaceSecurityGroupId = workspaceSecurityGroupId;
         return this;
     }
     
+    public CreateStudioInput(@JsonProperty("AuthMode") AuthModeEnum authMode, @JsonProperty("DefaultS3Location") String defaultS3Location, @JsonProperty("EngineSecurityGroupId") String engineSecurityGroupId, @JsonProperty("Name") String name, @JsonProperty("ServiceRole") String serviceRole, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId, @JsonProperty("WorkspaceSecurityGroupId") String workspaceSecurityGroupId) {
+        this.authMode = authMode;
+        this.defaultS3Location = defaultS3Location;
+        this.engineSecurityGroupId = engineSecurityGroupId;
+        this.name = name;
+        this.serviceRole = serviceRole;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+        this.workspaceSecurityGroupId = workspaceSecurityGroupId;
+  }
 }

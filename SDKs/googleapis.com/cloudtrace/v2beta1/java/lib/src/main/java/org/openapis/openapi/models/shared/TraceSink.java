@@ -18,6 +18,7 @@ public class TraceSink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TraceSink withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class TraceSink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public OutputConfig outputConfig;
+
     public TraceSink withOutputConfig(OutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
@@ -40,9 +42,11 @@ public class TraceSink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writerIdentity")
     public String writerIdentity;
+
     public TraceSink withWriterIdentity(String writerIdentity) {
         this.writerIdentity = writerIdentity;
         return this;
     }
     
+    public TraceSink(){}
 }

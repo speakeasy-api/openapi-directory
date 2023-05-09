@@ -18,6 +18,7 @@ public class ListContainerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersion")
     public ContainerVersion[] containerVersion;
+
     public ListContainerVersionsResponse withContainerVersion(ContainerVersion[] containerVersion) {
         this.containerVersion = containerVersion;
         return this;
@@ -29,9 +30,11 @@ public class ListContainerVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionHeader")
     public ContainerVersionHeader[] containerVersionHeader;
+
     public ListContainerVersionsResponse withContainerVersionHeader(ContainerVersionHeader[] containerVersionHeader) {
         this.containerVersionHeader = containerVersionHeader;
         return this;
     }
     
+    public ListContainerVersionsResponse(){}
 }

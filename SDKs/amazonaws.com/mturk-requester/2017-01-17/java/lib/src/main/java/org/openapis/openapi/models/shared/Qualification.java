@@ -22,6 +22,7 @@ public class Qualification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("GrantTime")
     public OffsetDateTime grantTime;
+
     public Qualification withGrantTime(OffsetDateTime grantTime) {
         this.grantTime = grantTime;
         return this;
@@ -30,6 +31,7 @@ public class Qualification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegerValue")
     public Long integerValue;
+
     public Qualification withIntegerValue(Long integerValue) {
         this.integerValue = integerValue;
         return this;
@@ -41,6 +43,7 @@ public class Qualification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocaleValue")
     public Locale localeValue;
+
     public Qualification withLocaleValue(Locale localeValue) {
         this.localeValue = localeValue;
         return this;
@@ -49,6 +52,7 @@ public class Qualification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public Qualification withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -57,6 +61,7 @@ public class Qualification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QualificationStatusEnum status;
+
     public Qualification withStatus(QualificationStatusEnum status) {
         this.status = status;
         return this;
@@ -65,9 +70,11 @@ public class Qualification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public Qualification withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public Qualification(){}
 }

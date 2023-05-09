@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreReleasesDeleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public StoreReleasesDeleteRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class StoreReleasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public StoreReleasesDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class StoreReleasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public StoreReleasesDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -39,6 +43,7 @@ public class StoreReleasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public String releaseId;
+
     public StoreReleasesDeleteRequest withReleaseId(String releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -49,9 +54,16 @@ public class StoreReleasesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
     public String storeName;
+
     public StoreReleasesDeleteRequest withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public StoreReleasesDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("release_id") String releaseId, @JsonProperty("store_name") String storeName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.releaseId = releaseId;
+        this.storeName = storeName;
+  }
 }

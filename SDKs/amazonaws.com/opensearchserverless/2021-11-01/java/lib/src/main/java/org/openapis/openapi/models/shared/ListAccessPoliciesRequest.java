@@ -12,6 +12,7 @@ public class ListAccessPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAccessPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAccessPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccessPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListAccessPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String[] resource;
+
     public ListAccessPoliciesRequest withResource(String[] resource) {
         this.resource = resource;
         return this;
@@ -35,9 +38,13 @@ public class ListAccessPoliciesRequest {
     
     @JsonProperty("type")
     public AccessPolicyTypeEnum type;
+
     public ListAccessPoliciesRequest withType(AccessPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListAccessPoliciesRequest(@JsonProperty("type") AccessPolicyTypeEnum type) {
+        this.type = type;
+  }
 }

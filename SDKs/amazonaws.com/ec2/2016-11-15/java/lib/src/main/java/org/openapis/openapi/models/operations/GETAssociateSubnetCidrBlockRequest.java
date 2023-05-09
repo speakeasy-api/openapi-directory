@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateSubnetCidrBlockRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateSubnetCidrBlockActionEnum action;
+
     public GETAssociateSubnetCidrBlockRequest withAction(GETAssociateSubnetCidrBlockActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateSubnetCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ipv6CidrBlock")
     public String ipv6CidrBlock;
+
     public GETAssociateSubnetCidrBlockRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateSubnetCidrBlockRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SubnetId")
     public String subnetId;
+
     public GETAssociateSubnetCidrBlockRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -36,6 +40,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateSubnetCidrBlockVersionEnum version;
+
     public GETAssociateSubnetCidrBlockRequest withVersion(GETAssociateSubnetCidrBlockVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETAssociateSubnetCidrBlockRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateSubnetCidrBlockRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateSubnetCidrBlockRequest(@JsonProperty("Action") GETAssociateSubnetCidrBlockActionEnum action, @JsonProperty("Ipv6CidrBlock") String ipv6CidrBlock, @JsonProperty("SubnetId") String subnetId, @JsonProperty("Version") GETAssociateSubnetCidrBlockVersionEnum version) {
+        this.action = action;
+        this.ipv6CidrBlock = ipv6CidrBlock;
+        this.subnetId = subnetId;
+        this.version = version;
+  }
 }

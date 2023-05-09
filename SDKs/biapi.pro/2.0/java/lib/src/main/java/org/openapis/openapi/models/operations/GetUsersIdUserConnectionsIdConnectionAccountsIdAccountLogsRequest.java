@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -17,6 +19,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -24,6 +27,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -34,6 +38,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
@@ -44,6 +49,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -54,6 +60,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -64,6 +71,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -74,9 +82,15 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountLogsRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

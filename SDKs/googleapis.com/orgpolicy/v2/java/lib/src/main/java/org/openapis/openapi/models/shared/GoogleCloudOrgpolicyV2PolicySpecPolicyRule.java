@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAll")
     public Boolean allowAll;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule withAllowAll(Boolean allowAll) {
         this.allowAll = allowAll;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public GoogleTypeExpr condition;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule withCondition(GoogleTypeExpr condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denyAll")
     public Boolean denyAll;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule withDenyAll(Boolean denyAll) {
         this.denyAll = denyAll;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforce")
     public Boolean enforce;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule withEnforce(Boolean enforce) {
         this.enforce = enforce;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudOrgpolicyV2PolicySpecPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues values;
+
     public GoogleCloudOrgpolicyV2PolicySpecPolicyRule withValues(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues values) {
         this.values = values;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2PolicySpecPolicyRule(){}
 }

@@ -12,6 +12,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
     public String library;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withLibrary(String library) {
         this.library = library;
         return this;
@@ -22,6 +23,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=op")
     public String op;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withOp(String op) {
         this.op = op;
         return this;
@@ -32,6 +34,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partner")
     public String partner;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withPartner(String partner) {
         this.partner = partner;
         return this;
@@ -42,6 +45,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printed")
     public String printed;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withPrinted(String printed) {
         this.printed = printed;
         return this;
@@ -52,6 +56,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reported")
     public String reported;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withReported(String reported) {
         this.reported = reported;
         return this;
@@ -62,6 +67,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requested_format")
     public String requestedFormat;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withRequestedFormat(String requestedFormat) {
         this.requestedFormat = requestedFormat;
         return this;
@@ -72,6 +78,7 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -82,9 +89,11 @@ public class PostAlmawsV1TaskListsRsLendingRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supplied_format")
     public String suppliedFormat;
+
     public PostAlmawsV1TaskListsRsLendingRequestsRequest withSuppliedFormat(String suppliedFormat) {
         this.suppliedFormat = suppliedFormat;
         return this;
     }
     
+    public PostAlmawsV1TaskListsRsLendingRequestsRequest(){}
 }

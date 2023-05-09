@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TextLogDestination {
     @JsonProperty("cloudWatch")
     public CloudWatchLogGroupLogDestination cloudWatch;
+
     public TextLogDestination withCloudWatch(CloudWatchLogGroupLogDestination cloudWatch) {
         this.cloudWatch = cloudWatch;
         return this;
     }
     
+    public TextLogDestination(@JsonProperty("cloudWatch") CloudWatchLogGroupLogDestination cloudWatch) {
+        this.cloudWatch = cloudWatch;
+  }
 }

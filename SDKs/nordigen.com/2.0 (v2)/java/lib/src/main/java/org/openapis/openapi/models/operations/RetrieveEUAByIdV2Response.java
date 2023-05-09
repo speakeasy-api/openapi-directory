@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveEUAByIdV2Response {
     
     public String contentType;
+
     public RetrieveEUAByIdV2Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveEUAByIdV2Response {
      */
     
     public org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement;
+
     public RetrieveEUAByIdV2Response withEndUserAgreement(org.openapis.openapi.models.shared.EndUserAgreement endUserAgreement) {
         this.endUserAgreement = endUserAgreement;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveEUAByIdV2Response {
     
     
     public Integer statusCode;
+
     public RetrieveEUAByIdV2Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveEUAByIdV2Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveEUAByIdV2Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> retrieveEUAByIdV2400ApplicationJSONObject;
+
     public RetrieveEUAByIdV2Response withRetrieveEUAByIdV2400ApplicationJSONObject(java.util.Map<String, Object> retrieveEUAByIdV2400ApplicationJSONObject) {
         this.retrieveEUAByIdV2400ApplicationJSONObject = retrieveEUAByIdV2400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> retrieveEUAByIdV2401ApplicationJSONObject;
+
     public RetrieveEUAByIdV2Response withRetrieveEUAByIdV2401ApplicationJSONObject(java.util.Map<String, Object> retrieveEUAByIdV2401ApplicationJSONObject) {
         this.retrieveEUAByIdV2401ApplicationJSONObject = retrieveEUAByIdV2401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RetrieveEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> retrieveEUAByIdV2403ApplicationJSONObject;
+
     public RetrieveEUAByIdV2Response withRetrieveEUAByIdV2403ApplicationJSONObject(java.util.Map<String, Object> retrieveEUAByIdV2403ApplicationJSONObject) {
         this.retrieveEUAByIdV2403ApplicationJSONObject = retrieveEUAByIdV2403ApplicationJSONObject;
         return this;
@@ -73,9 +81,25 @@ public class RetrieveEUAByIdV2Response {
      */
     
     public java.util.Map<String, Object> retrieveEUAByIdV2404ApplicationJSONObject;
+
     public RetrieveEUAByIdV2Response withRetrieveEUAByIdV2404ApplicationJSONObject(java.util.Map<String, Object> retrieveEUAByIdV2404ApplicationJSONObject) {
         this.retrieveEUAByIdV2404ApplicationJSONObject = retrieveEUAByIdV2404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> retrieveEUAByIdV2429ApplicationJSONObject;
+
+    public RetrieveEUAByIdV2Response withRetrieveEUAByIdV2429ApplicationJSONObject(java.util.Map<String, Object> retrieveEUAByIdV2429ApplicationJSONObject) {
+        this.retrieveEUAByIdV2429ApplicationJSONObject = retrieveEUAByIdV2429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RetrieveEUAByIdV2Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

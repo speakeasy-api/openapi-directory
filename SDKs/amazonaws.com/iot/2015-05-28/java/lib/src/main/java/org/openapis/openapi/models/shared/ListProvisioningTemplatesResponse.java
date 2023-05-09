@@ -15,6 +15,7 @@ public class ListProvisioningTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProvisioningTemplatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProvisioningTemplatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templates")
     public ProvisioningTemplateSummary[] templates;
+
     public ListProvisioningTemplatesResponse withTemplates(ProvisioningTemplateSummary[] templates) {
         this.templates = templates;
         return this;
     }
     
+    public ListProvisioningTemplatesResponse(){}
 }

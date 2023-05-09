@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopWorkflowRunRequest {
     @JsonProperty("Name")
     public String name;
+
     public StopWorkflowRunRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class StopWorkflowRunRequest {
     
     @JsonProperty("RunId")
     public String runId;
+
     public StopWorkflowRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public StopWorkflowRunRequest(@JsonProperty("Name") String name, @JsonProperty("RunId") String runId) {
+        this.name = name;
+        this.runId = runId;
+  }
 }

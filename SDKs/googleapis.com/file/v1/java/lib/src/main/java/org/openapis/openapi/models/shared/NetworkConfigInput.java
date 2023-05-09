@@ -18,6 +18,7 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectMode")
     public NetworkConfigConnectModeEnum connectMode;
+
     public NetworkConfigInput withConnectMode(NetworkConfigConnectModeEnum connectMode) {
         this.connectMode = connectMode;
         return this;
@@ -29,6 +30,7 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modes")
     public NetworkConfigModesEnum[] modes;
+
     public NetworkConfigInput withModes(NetworkConfigModesEnum[] modes) {
         this.modes = modes;
         return this;
@@ -40,6 +42,7 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkConfigInput withNetwork(String network) {
         this.network = network;
         return this;
@@ -51,9 +54,11 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRange")
     public String reservedIpRange;
+
     public NetworkConfigInput withReservedIpRange(String reservedIpRange) {
         this.reservedIpRange = reservedIpRange;
         return this;
     }
     
+    public NetworkConfigInput(){}
 }

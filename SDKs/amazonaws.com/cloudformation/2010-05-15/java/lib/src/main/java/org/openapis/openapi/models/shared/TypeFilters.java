@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TypeFilters {
     
     public CategoryEnum category;
+
     public TypeFilters withCategory(CategoryEnum category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class TypeFilters {
     
     
     public String publisherId;
+
     public TypeFilters withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -26,9 +28,11 @@ public class TypeFilters {
     
     
     public String typeNamePrefix;
+
     public TypeFilters withTypeNamePrefix(String typeNamePrefix) {
         this.typeNamePrefix = typeNamePrefix;
         return this;
     }
     
+    public TypeFilters(){}
 }

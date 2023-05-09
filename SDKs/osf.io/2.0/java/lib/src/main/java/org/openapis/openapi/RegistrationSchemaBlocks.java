@@ -54,11 +54,9 @@ public class RegistrationSchemaBlocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdResponse res = new org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdResponse res = new org.openapis.openapi.models.operations.GetSchemaResponsesSchemaResponseIdSchemaBlocksSchemaResponseBlockIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class RegistrationSchemaBlocks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SchemaResponseBlocksReadResponse res = new org.openapis.openapi.models.operations.SchemaResponseBlocksReadResponse() {{
+        org.openapis.openapi.models.operations.SchemaResponseBlocksReadResponse res = new org.openapis.openapi.models.operations.SchemaResponseBlocksReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

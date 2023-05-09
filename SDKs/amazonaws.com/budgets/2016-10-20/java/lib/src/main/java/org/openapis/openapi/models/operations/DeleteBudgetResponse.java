@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBudgetResponse {
@@ -12,6 +13,7 @@ public class DeleteBudgetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteBudgetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBudgetResponse {
     
     
     public String contentType;
+
     public DeleteBudgetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBudgetResponse {
      */
     
     public java.util.Map<String, Object> deleteBudgetResponse;
+
     public DeleteBudgetResponse withDeleteBudgetResponse(java.util.Map<String, Object> deleteBudgetResponse) {
         this.deleteBudgetResponse = deleteBudgetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBudgetResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteBudgetResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBudgetResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteBudgetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBudgetResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBudgetResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBudgetResponse {
     
     
     public Integer statusCode;
+
     public DeleteBudgetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBudgetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBudgetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeleteBudgetResponse {
      */
     
     public Object throttlingException;
+
     public DeleteBudgetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteBudgetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

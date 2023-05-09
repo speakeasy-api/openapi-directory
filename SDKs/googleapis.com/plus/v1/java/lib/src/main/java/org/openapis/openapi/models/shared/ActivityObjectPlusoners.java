@@ -18,6 +18,7 @@ public class ActivityObjectPlusoners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ActivityObjectPlusoners withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -29,9 +30,11 @@ public class ActivityObjectPlusoners {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItems")
     public Long totalItems;
+
     public ActivityObjectPlusoners withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public ActivityObjectPlusoners(){}
 }

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class FhirAllergy {
     
     public String confidenceLevel;
+
     public FhirAllergy withConfidenceLevel(String confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -16,6 +17,7 @@ public class FhirAllergy {
     
     
     public Group group;
+
     public FhirAllergy withGroup(Group group) {
         this.group = group;
         return this;
@@ -23,6 +25,7 @@ public class FhirAllergy {
     
     
     public Long id;
+
     public FhirAllergy withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +33,7 @@ public class FhirAllergy {
     
     
     public String identifier;
+
     public FhirAllergy withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -37,6 +41,7 @@ public class FhirAllergy {
     
     
     public String infoSource;
+
     public FhirAllergy withInfoSource(String infoSource) {
         this.infoSource = infoSource;
         return this;
@@ -44,6 +49,7 @@ public class FhirAllergy {
     
     
     public String reaction;
+
     public FhirAllergy withReaction(String reaction) {
         this.reaction = reaction;
         return this;
@@ -51,6 +57,7 @@ public class FhirAllergy {
     
     
     public OffsetDateTime recordedDate;
+
     public FhirAllergy withRecordedDate(OffsetDateTime recordedDate) {
         this.recordedDate = recordedDate;
         return this;
@@ -58,6 +65,7 @@ public class FhirAllergy {
     
     
     public String status;
+
     public FhirAllergy withStatus(String status) {
         this.status = status;
         return this;
@@ -65,6 +73,7 @@ public class FhirAllergy {
     
     
     public String substance;
+
     public FhirAllergy withSubstance(String substance) {
         this.substance = substance;
         return this;
@@ -72,9 +81,11 @@ public class FhirAllergy {
     
     
     public String type;
+
     public FhirAllergy withType(String type) {
         this.type = type;
         return this;
     }
     
+    public FhirAllergy(){}
 }

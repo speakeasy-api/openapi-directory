@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilterOperationEnum operation;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter withOperation(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilterOperationEnum operation) {
         this.operation = operation;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue value;
+
     public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter withValue(GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericValue value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceDimensionOrMetricFilterNumericFilter(){}
 }

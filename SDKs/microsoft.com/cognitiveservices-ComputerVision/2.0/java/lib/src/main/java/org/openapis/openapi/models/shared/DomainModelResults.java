@@ -18,6 +18,7 @@ public class DomainModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public DomainModelResults withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class DomainModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public DomainModelResults withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class DomainModelResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public DomainModelResults withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public DomainModelResults(){}
 }

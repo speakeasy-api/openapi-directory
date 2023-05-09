@@ -16,6 +16,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustment_group")
     public InventoryAdjustmentGroup adjustmentGroup;
+
     public InventoryAdjustment withAdjustmentGroup(InventoryAdjustmentGroup adjustmentGroup) {
         this.adjustmentGroup = adjustmentGroup;
         return this;
@@ -28,6 +29,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public InventoryAdjustment withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -41,6 +43,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_type")
     public String catalogObjectType;
+
     public InventoryAdjustment withCatalogObjectType(String catalogObjectType) {
         this.catalogObjectType = catalogObjectType;
         return this;
@@ -52,6 +55,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public InventoryAdjustment withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -64,6 +68,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public InventoryAdjustment withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -76,6 +81,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from_state")
     public String fromState;
+
     public InventoryAdjustment withFromState(String fromState) {
         this.fromState = fromState;
         return this;
@@ -89,6 +95,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goods_receipt_id")
     public String goodsReceiptId;
+
     public InventoryAdjustment withGoodsReceiptId(String goodsReceiptId) {
         this.goodsReceiptId = goodsReceiptId;
         return this;
@@ -101,6 +108,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InventoryAdjustment withId(String id) {
         this.id = id;
         return this;
@@ -113,6 +121,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public InventoryAdjustment withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -127,6 +136,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public InventoryAdjustment withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -140,6 +150,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_order_id")
     public String purchaseOrderId;
+
     public InventoryAdjustment withPurchaseOrderId(String purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
         return this;
@@ -152,6 +163,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public InventoryAdjustment withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -165,6 +177,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public InventoryAdjustment withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -178,6 +191,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_id")
     public String refundId;
+
     public InventoryAdjustment withRefundId(String refundId) {
         this.refundId = refundId;
         return this;
@@ -189,6 +203,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceApplication source;
+
     public InventoryAdjustment withSource(SourceApplication source) {
         this.source = source;
         return this;
@@ -201,6 +216,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to_state")
     public String toState;
+
     public InventoryAdjustment withToState(String toState) {
         this.toState = toState;
         return this;
@@ -217,6 +233,7 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_price_money")
     public Money totalPriceMoney;
+
     public InventoryAdjustment withTotalPriceMoney(Money totalPriceMoney) {
         this.totalPriceMoney = totalPriceMoney;
         return this;
@@ -230,9 +247,11 @@ public class InventoryAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_id")
     public String transactionId;
+
     public InventoryAdjustment withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public InventoryAdjustment(){}
 }

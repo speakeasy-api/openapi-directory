@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetClusterSessionCredentialsInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public GetClusterSessionCredentialsInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -16,9 +17,14 @@ public class GetClusterSessionCredentialsInput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public GetClusterSessionCredentialsInput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
     }
     
+    public GetClusterSessionCredentialsInput(@JsonProperty("ClusterId") String clusterId, @JsonProperty("ExecutionRoleArn") String executionRoleArn) {
+        this.clusterId = clusterId;
+        this.executionRoleArn = executionRoleArn;
+  }
 }

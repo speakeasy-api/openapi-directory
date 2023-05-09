@@ -23,6 +23,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppSpecification")
     public AppSpecification appSpecification;
+
     public ProcessingJob withAppSpecification(AppSpecification appSpecification) {
         this.appSpecification = appSpecification;
         return this;
@@ -31,6 +32,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public ProcessingJob withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -41,6 +43,7 @@ public class ProcessingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ProcessingJob withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -49,6 +52,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public ProcessingJob withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -57,17 +61,19 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExitMessage")
     public String exitMessage;
+
     public ProcessingJob withExitMessage(String exitMessage) {
         this.exitMessage = exitMessage;
         return this;
     }
     
     /**
-     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Associates a SageMaker job as a trial component with an experiment and trial. Specified when you call the following APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateProcessingJob.html"&gt;CreateProcessingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingJob.html"&gt;CreateTrainingJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a href="https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTransformJob.html"&gt;CreateTransformJob&lt;/a&gt; &lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentConfig")
     public ExperimentConfig experimentConfig;
+
     public ProcessingJob withExperimentConfig(ExperimentConfig experimentConfig) {
         this.experimentConfig = experimentConfig;
         return this;
@@ -76,6 +82,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public ProcessingJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -86,6 +93,7 @@ public class ProcessingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ProcessingJob withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -94,6 +102,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public ProcessingJob withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
@@ -105,6 +114,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public NetworkConfig networkConfig;
+
     public ProcessingJob withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -115,6 +125,7 @@ public class ProcessingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ProcessingEndTime")
     public OffsetDateTime processingEndTime;
+
     public ProcessingJob withProcessingEndTime(OffsetDateTime processingEndTime) {
         this.processingEndTime = processingEndTime;
         return this;
@@ -123,6 +134,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingInputs")
     public ProcessingInput[] processingInputs;
+
     public ProcessingJob withProcessingInputs(ProcessingInput[] processingInputs) {
         this.processingInputs = processingInputs;
         return this;
@@ -131,6 +143,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJobArn")
     public String processingJobArn;
+
     public ProcessingJob withProcessingJobArn(String processingJobArn) {
         this.processingJobArn = processingJobArn;
         return this;
@@ -139,6 +152,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJobName")
     public String processingJobName;
+
     public ProcessingJob withProcessingJobName(String processingJobName) {
         this.processingJobName = processingJobName;
         return this;
@@ -147,6 +161,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJobStatus")
     public ProcessingJobStatusEnum processingJobStatus;
+
     public ProcessingJob withProcessingJobStatus(ProcessingJobStatusEnum processingJobStatus) {
         this.processingJobStatus = processingJobStatus;
         return this;
@@ -158,6 +173,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingOutputConfig")
     public ProcessingOutputConfig processingOutputConfig;
+
     public ProcessingJob withProcessingOutputConfig(ProcessingOutputConfig processingOutputConfig) {
         this.processingOutputConfig = processingOutputConfig;
         return this;
@@ -169,6 +185,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingResources")
     public ProcessingResources processingResources;
+
     public ProcessingJob withProcessingResources(ProcessingResources processingResources) {
         this.processingResources = processingResources;
         return this;
@@ -179,6 +196,7 @@ public class ProcessingJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ProcessingStartTime")
     public OffsetDateTime processingStartTime;
+
     public ProcessingJob withProcessingStartTime(OffsetDateTime processingStartTime) {
         this.processingStartTime = processingStartTime;
         return this;
@@ -187,6 +205,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public ProcessingJob withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -198,6 +217,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public ProcessingStoppingCondition stoppingCondition;
+
     public ProcessingJob withStoppingCondition(ProcessingStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -206,6 +226,7 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ProcessingJob withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -214,9 +235,11 @@ public class ProcessingJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobArn")
     public String trainingJobArn;
+
     public ProcessingJob withTrainingJobArn(String trainingJobArn) {
         this.trainingJobArn = trainingJobArn;
         return this;
     }
     
+    public ProcessingJob(){}
 }

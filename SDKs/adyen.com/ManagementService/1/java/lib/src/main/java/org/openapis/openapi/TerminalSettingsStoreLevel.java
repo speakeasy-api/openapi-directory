@@ -66,12 +66,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,6 +99,9 @@ public class TerminalSettingsStoreLevel {
      * To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -121,12 +122,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetMerchantsMerchantIdStoresReferenceTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -184,12 +183,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoresStoreIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.GetStoresStoreIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -217,6 +214,9 @@ public class TerminalSettingsStoreLevel {
      * To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -237,12 +237,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoresStoreIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetStoresStoreIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetStoresStoreIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -301,12 +299,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,6 +335,9 @@ public class TerminalSettingsStoreLevel {
      * 
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -361,12 +360,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchMerchantsMerchantIdStoresReferenceTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -427,12 +424,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,6 +458,9 @@ public class TerminalSettingsStoreLevel {
      * 
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -485,12 +483,10 @@ public class TerminalSettingsStoreLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchStoresStoreIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

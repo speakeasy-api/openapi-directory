@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RequestedDeidentifyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotDeidentifyTemplate")
     public GooglePrivacyDlpV2DeidentifyTemplate snapshotDeidentifyTemplate;
+
     public GooglePrivacyDlpV2RequestedDeidentifyOptions withSnapshotDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotDeidentifyTemplate) {
         this.snapshotDeidentifyTemplate = snapshotDeidentifyTemplate;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2RequestedDeidentifyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotImageRedactTemplate")
     public GooglePrivacyDlpV2DeidentifyTemplate snapshotImageRedactTemplate;
+
     public GooglePrivacyDlpV2RequestedDeidentifyOptions withSnapshotImageRedactTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotImageRedactTemplate) {
         this.snapshotImageRedactTemplate = snapshotImageRedactTemplate;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2RequestedDeidentifyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotStructuredDeidentifyTemplate")
     public GooglePrivacyDlpV2DeidentifyTemplate snapshotStructuredDeidentifyTemplate;
+
     public GooglePrivacyDlpV2RequestedDeidentifyOptions withSnapshotStructuredDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate snapshotStructuredDeidentifyTemplate) {
         this.snapshotStructuredDeidentifyTemplate = snapshotStructuredDeidentifyTemplate;
         return this;
     }
     
+    public GooglePrivacyDlpV2RequestedDeidentifyOptions(){}
 }

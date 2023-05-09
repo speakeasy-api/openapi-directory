@@ -12,6 +12,7 @@ public class DeleteColumnStatisticsForTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public DeleteColumnStatisticsForTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteColumnStatisticsForTableRequest {
     
     @JsonProperty("ColumnName")
     public String columnName;
+
     public DeleteColumnStatisticsForTableRequest withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -26,6 +28,7 @@ public class DeleteColumnStatisticsForTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteColumnStatisticsForTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,9 +36,15 @@ public class DeleteColumnStatisticsForTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteColumnStatisticsForTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteColumnStatisticsForTableRequest(@JsonProperty("ColumnName") String columnName, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.columnName = columnName;
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

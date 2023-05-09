@@ -15,6 +15,7 @@ public class BatchUpdateFindingsRequestBodySeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public org.openapis.openapi.models.shared.SeverityLabelEnum label;
+
     public BatchUpdateFindingsRequestBodySeverity withLabel(org.openapis.openapi.models.shared.SeverityLabelEnum label) {
         this.label = label;
         return this;
@@ -23,6 +24,7 @@ public class BatchUpdateFindingsRequestBodySeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Normalized")
     public Long normalized;
+
     public BatchUpdateFindingsRequestBodySeverity withNormalized(Long normalized) {
         this.normalized = normalized;
         return this;
@@ -31,9 +33,11 @@ public class BatchUpdateFindingsRequestBodySeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Product")
     public Double product;
+
     public BatchUpdateFindingsRequestBodySeverity withProduct(Double product) {
         this.product = product;
         return this;
     }
     
+    public BatchUpdateFindingsRequestBodySeverity(){}
 }

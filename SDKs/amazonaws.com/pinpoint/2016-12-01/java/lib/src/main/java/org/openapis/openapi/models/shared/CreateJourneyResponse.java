@@ -15,9 +15,13 @@ public class CreateJourneyResponse {
      */
     @JsonProperty("JourneyResponse")
     public JourneyResponse journeyResponse;
+
     public CreateJourneyResponse withJourneyResponse(JourneyResponse journeyResponse) {
         this.journeyResponse = journeyResponse;
         return this;
     }
     
+    public CreateJourneyResponse(@JsonProperty("JourneyResponse") JourneyResponse journeyResponse) {
+        this.journeyResponse = journeyResponse;
+  }
 }

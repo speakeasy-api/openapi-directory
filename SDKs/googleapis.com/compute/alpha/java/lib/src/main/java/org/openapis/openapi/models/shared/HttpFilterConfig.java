@@ -18,6 +18,7 @@ public class HttpFilterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public HttpFilterConfig withConfig(String config) {
         this.config = config;
         return this;
@@ -29,6 +30,7 @@ public class HttpFilterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configTypeUrl")
     public String configTypeUrl;
+
     public HttpFilterConfig withConfigTypeUrl(String configTypeUrl) {
         this.configTypeUrl = configTypeUrl;
         return this;
@@ -40,9 +42,11 @@ public class HttpFilterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterName")
     public String filterName;
+
     public HttpFilterConfig withFilterName(String filterName) {
         this.filterName = filterName;
         return this;
     }
     
+    public HttpFilterConfig(){}
 }

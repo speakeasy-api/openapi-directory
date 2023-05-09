@@ -15,6 +15,7 @@ public class Execution {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Execution withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Execution {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public Execution withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -35,6 +37,7 @@ public class Execution {
      */
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public Execution withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -45,6 +48,7 @@ public class Execution {
      */
     @JsonProperty("functionId")
     public String functionId;
+
     public Execution withFunctionId(String functionId) {
         this.functionId = functionId;
         return this;
@@ -55,6 +59,7 @@ public class Execution {
      */
     @JsonProperty("status")
     public String status;
+
     public Execution withStatus(String status) {
         this.status = status;
         return this;
@@ -65,6 +70,7 @@ public class Execution {
      */
     @JsonProperty("stderr")
     public String stderr;
+
     public Execution withStderr(String stderr) {
         this.stderr = stderr;
         return this;
@@ -75,6 +81,7 @@ public class Execution {
      */
     @JsonProperty("stdout")
     public String stdout;
+
     public Execution withStdout(String stdout) {
         this.stdout = stdout;
         return this;
@@ -85,6 +92,7 @@ public class Execution {
      */
     @JsonProperty("time")
     public Float time;
+
     public Execution withTime(Float time) {
         this.time = time;
         return this;
@@ -95,9 +103,21 @@ public class Execution {
      */
     @JsonProperty("trigger")
     public String trigger;
+
     public Execution withTrigger(String trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public Execution(@JsonProperty("$id") String dollarId, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("exitCode") Integer exitCode, @JsonProperty("functionId") String functionId, @JsonProperty("status") String status, @JsonProperty("stderr") String stderr, @JsonProperty("stdout") String stdout, @JsonProperty("time") Float time, @JsonProperty("trigger") String trigger) {
+        this.dollarId = dollarId;
+        this.dateCreated = dateCreated;
+        this.exitCode = exitCode;
+        this.functionId = functionId;
+        this.status = status;
+        this.stderr = stderr;
+        this.stdout = stdout;
+        this.time = time;
+        this.trigger = trigger;
+  }
 }

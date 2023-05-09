@@ -15,9 +15,11 @@ public class UpdateSettingsRequestBodyDeregistrationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteResources")
     public org.openapis.openapi.models.shared.DeleteResourcesEnum deleteResources;
+
     public UpdateSettingsRequestBodyDeregistrationPolicy withDeleteResources(org.openapis.openapi.models.shared.DeleteResourcesEnum deleteResources) {
         this.deleteResources = deleteResources;
         return this;
     }
     
+    public UpdateSettingsRequestBodyDeregistrationPolicy(){}
 }

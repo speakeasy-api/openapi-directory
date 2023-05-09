@@ -15,6 +15,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteUnusedFMManagedResources")
     public Boolean deleteUnusedFMManagedResources;
+
     public PolicySummary withDeleteUnusedFMManagedResources(Boolean deleteUnusedFMManagedResources) {
         this.deleteUnusedFMManagedResources = deleteUnusedFMManagedResources;
         return this;
@@ -23,6 +24,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyArn")
     public String policyArn;
+
     public PolicySummary withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -31,6 +33,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public PolicySummary withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -39,14 +42,25 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyName")
     public String policyName;
+
     public PolicySummary withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("PolicyStatus")
+    public CustomerPolicyStatusEnum policyStatus;
+
+    public PolicySummary withPolicyStatus(CustomerPolicyStatusEnum policyStatus) {
+        this.policyStatus = policyStatus;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemediationEnabled")
     public Boolean remediationEnabled;
+
     public PolicySummary withRemediationEnabled(Boolean remediationEnabled) {
         this.remediationEnabled = remediationEnabled;
         return this;
@@ -55,6 +69,7 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public PolicySummary withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -63,9 +78,11 @@ public class PolicySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityServiceType")
     public SecurityServiceTypeEnum securityServiceType;
+
     public PolicySummary withSecurityServiceType(SecurityServiceTypeEnum securityServiceType) {
         this.securityServiceType = securityServiceType;
         return this;
     }
     
+    public PolicySummary(){}
 }

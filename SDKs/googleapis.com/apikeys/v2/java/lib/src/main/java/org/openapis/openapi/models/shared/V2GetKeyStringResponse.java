@@ -18,9 +18,11 @@ public class V2GetKeyStringResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyString")
     public String keyString;
+
     public V2GetKeyStringResponse withKeyString(String keyString) {
         this.keyString = keyString;
         return this;
     }
     
+    public V2GetKeyStringResponse(){}
 }

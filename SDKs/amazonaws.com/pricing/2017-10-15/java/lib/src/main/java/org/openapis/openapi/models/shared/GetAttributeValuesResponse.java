@@ -15,6 +15,7 @@ public class GetAttributeValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeValues")
     public AttributeValue[] attributeValues;
+
     public GetAttributeValuesResponse withAttributeValues(AttributeValue[] attributeValues) {
         this.attributeValues = attributeValues;
         return this;
@@ -23,9 +24,11 @@ public class GetAttributeValuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetAttributeValuesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetAttributeValuesResponse(){}
 }

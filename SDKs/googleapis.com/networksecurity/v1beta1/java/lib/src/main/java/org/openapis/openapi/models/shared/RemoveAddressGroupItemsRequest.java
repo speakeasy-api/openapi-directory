@@ -18,6 +18,7 @@ public class RemoveAddressGroupItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public String[] items;
+
     public RemoveAddressGroupItemsRequest withItems(String[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class RemoveAddressGroupItemsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public RemoveAddressGroupItemsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public RemoveAddressGroupItemsRequest(){}
 }

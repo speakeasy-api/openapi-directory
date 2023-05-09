@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1CatalogItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1ListCatalogItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsCatalogItemsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1CatalogItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPlacementsPredictResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1PredictResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1PredictionApiKeyRegistration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsCollectResponse(contentType, httpRes.statusCode()) {{
             googleApiHttpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1ListUserEventsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsPurgeResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsRejoinResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsWriteResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1UserEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRecommendationengineV1beta1ListCatalogsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +738,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +782,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse res = new org.openapis.openapi.models.operations.RecommendationengineProjectsLocationsCatalogsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

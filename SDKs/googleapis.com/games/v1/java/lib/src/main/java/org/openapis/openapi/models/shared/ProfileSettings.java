@@ -15,6 +15,7 @@ public class ProfileSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendsListVisibility")
     public ProfileSettingsFriendsListVisibilityEnum friendsListVisibility;
+
     public ProfileSettings withFriendsListVisibility(ProfileSettingsFriendsListVisibilityEnum friendsListVisibility) {
         this.friendsListVisibility = friendsListVisibility;
         return this;
@@ -26,6 +27,7 @@ public class ProfileSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ProfileSettings withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,9 +39,11 @@ public class ProfileSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileVisible")
     public Boolean profileVisible;
+
     public ProfileSettings withProfileVisible(Boolean profileVisible) {
         this.profileVisible = profileVisible;
         return this;
     }
     
+    public ProfileSettings(){}
 }

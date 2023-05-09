@@ -22,6 +22,7 @@ public class CreateWorkspaceImageResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public CreateWorkspaceImageResult withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateWorkspaceImageResult withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public CreateWorkspaceImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateWorkspaceImageResult withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperatingSystem")
     public OperatingSystem operatingSystem;
+
     public CreateWorkspaceImageResult withOperatingSystem(OperatingSystem operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
@@ -62,6 +67,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerAccountId")
     public String ownerAccountId;
+
     public CreateWorkspaceImageResult withOwnerAccountId(String ownerAccountId) {
         this.ownerAccountId = ownerAccountId;
         return this;
@@ -70,6 +76,7 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiredTenancy")
     public WorkspaceImageRequiredTenancyEnum requiredTenancy;
+
     public CreateWorkspaceImageResult withRequiredTenancy(WorkspaceImageRequiredTenancyEnum requiredTenancy) {
         this.requiredTenancy = requiredTenancy;
         return this;
@@ -78,9 +85,11 @@ public class CreateWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceImageStateEnum state;
+
     public CreateWorkspaceImageResult withState(WorkspaceImageStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CreateWorkspaceImageResult(){}
 }

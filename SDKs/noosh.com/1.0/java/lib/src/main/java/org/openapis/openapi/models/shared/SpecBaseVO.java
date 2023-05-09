@@ -15,6 +15,7 @@ public class SpecBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job_id")
     public Long jobId;
+
     public SpecBaseVO withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -23,6 +24,7 @@ public class SpecBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_number")
     public String referenceNumber;
+
     public SpecBaseVO withReferenceNumber(String referenceNumber) {
         this.referenceNumber = referenceNumber;
         return this;
@@ -31,6 +33,7 @@ public class SpecBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public SpecBaseVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -39,9 +42,11 @@ public class SpecBaseVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public SpecBaseVO withSpecName(String specName) {
         this.specName = specName;
         return this;
     }
     
+    public SpecBaseVO(){}
 }

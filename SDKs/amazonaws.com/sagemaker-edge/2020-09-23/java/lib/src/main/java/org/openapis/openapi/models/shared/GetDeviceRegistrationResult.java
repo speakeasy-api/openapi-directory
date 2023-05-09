@@ -15,6 +15,7 @@ public class GetDeviceRegistrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CacheTTL")
     public String cacheTTL;
+
     public GetDeviceRegistrationResult withCacheTTL(String cacheTTL) {
         this.cacheTTL = cacheTTL;
         return this;
@@ -23,9 +24,11 @@ public class GetDeviceRegistrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceRegistration")
     public String deviceRegistration;
+
     public GetDeviceRegistrationResult withDeviceRegistration(String deviceRegistration) {
         this.deviceRegistration = deviceRegistration;
         return this;
     }
     
+    public GetDeviceRegistrationResult(){}
 }

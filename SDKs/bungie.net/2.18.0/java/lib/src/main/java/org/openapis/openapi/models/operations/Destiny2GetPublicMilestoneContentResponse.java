@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Destiny2GetPublicMilestoneContentResponse {
     
     public byte[] body;
+
     public Destiny2GetPublicMilestoneContentResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class Destiny2GetPublicMilestoneContentResponse {
     
     
     public String contentType;
+
     public Destiny2GetPublicMilestoneContentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class Destiny2GetPublicMilestoneContentResponse {
     
     
     public Integer statusCode;
+
     public Destiny2GetPublicMilestoneContentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class Destiny2GetPublicMilestoneContentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Destiny2GetPublicMilestoneContentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Destiny2GetPublicMilestoneContentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

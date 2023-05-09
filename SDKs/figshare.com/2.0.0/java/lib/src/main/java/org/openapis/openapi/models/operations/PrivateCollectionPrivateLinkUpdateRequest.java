@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PrivateCollectionPrivateLinkUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CollectionPrivateLinkCreator collectionPrivateLinkCreator;
+
     public PrivateCollectionPrivateLinkUpdateRequest withCollectionPrivateLinkCreator(org.openapis.openapi.models.shared.CollectionPrivateLinkCreator collectionPrivateLinkCreator) {
         this.collectionPrivateLinkCreator = collectionPrivateLinkCreator;
         return this;
@@ -19,6 +21,7 @@ public class PrivateCollectionPrivateLinkUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public Long collectionId;
+
     public PrivateCollectionPrivateLinkUpdateRequest withCollectionId(Long collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -29,9 +32,14 @@ public class PrivateCollectionPrivateLinkUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=link_id")
     public String linkId;
+
     public PrivateCollectionPrivateLinkUpdateRequest withLinkId(String linkId) {
         this.linkId = linkId;
         return this;
     }
     
+    public PrivateCollectionPrivateLinkUpdateRequest(@JsonProperty("collection_id") Long collectionId, @JsonProperty("link_id") String linkId) {
+        this.collectionId = collectionId;
+        this.linkId = linkId;
+  }
 }

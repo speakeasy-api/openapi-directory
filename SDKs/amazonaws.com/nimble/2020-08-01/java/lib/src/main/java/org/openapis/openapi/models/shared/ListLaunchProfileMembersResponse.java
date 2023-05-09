@@ -15,6 +15,7 @@ public class ListLaunchProfileMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public LaunchProfileMembership[] members;
+
     public ListLaunchProfileMembersResponse withMembers(LaunchProfileMembership[] members) {
         this.members = members;
         return this;
@@ -23,9 +24,11 @@ public class ListLaunchProfileMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLaunchProfileMembersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLaunchProfileMembersResponse(){}
 }

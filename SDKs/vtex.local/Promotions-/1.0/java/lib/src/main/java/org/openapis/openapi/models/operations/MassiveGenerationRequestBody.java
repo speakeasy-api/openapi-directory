@@ -12,6 +12,7 @@ public class MassiveGenerationRequestBody {
      */
     @JsonProperty("couponCode")
     public String couponCode;
+
     public MassiveGenerationRequestBody withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -22,6 +23,7 @@ public class MassiveGenerationRequestBody {
      */
     @JsonProperty("expirationIntervalPerUse")
     public String expirationIntervalPerUse;
+
     public MassiveGenerationRequestBody withExpirationIntervalPerUse(String expirationIntervalPerUse) {
         this.expirationIntervalPerUse = expirationIntervalPerUse;
         return this;
@@ -32,6 +34,7 @@ public class MassiveGenerationRequestBody {
      */
     @JsonProperty("maxItemsPerClient")
     public Long maxItemsPerClient;
+
     public MassiveGenerationRequestBody withMaxItemsPerClient(Long maxItemsPerClient) {
         this.maxItemsPerClient = maxItemsPerClient;
         return this;
@@ -42,6 +45,7 @@ public class MassiveGenerationRequestBody {
      */
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public MassiveGenerationRequestBody withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -52,9 +56,17 @@ public class MassiveGenerationRequestBody {
      */
     @JsonProperty("utmSource")
     public String utmSource;
+
     public MassiveGenerationRequestBody withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public MassiveGenerationRequestBody(@JsonProperty("couponCode") String couponCode, @JsonProperty("expirationIntervalPerUse") String expirationIntervalPerUse, @JsonProperty("maxItemsPerClient") Long maxItemsPerClient, @JsonProperty("utmCampaign") String utmCampaign, @JsonProperty("utmSource") String utmSource) {
+        this.couponCode = couponCode;
+        this.expirationIntervalPerUse = expirationIntervalPerUse;
+        this.maxItemsPerClient = maxItemsPerClient;
+        this.utmCampaign = utmCampaign;
+        this.utmSource = utmSource;
+  }
 }

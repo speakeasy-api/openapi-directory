@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeEnclaveOptions {
     
     public Boolean enabled;
+
     public InstanceAttributeEnclaveOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public InstanceAttributeEnclaveOptions(){}
 }

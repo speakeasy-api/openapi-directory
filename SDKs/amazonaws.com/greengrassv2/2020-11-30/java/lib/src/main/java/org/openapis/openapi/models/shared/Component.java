@@ -15,6 +15,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Component withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public Component withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -31,9 +33,11 @@ public class Component {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestVersion")
     public ComponentLatestVersion latestVersion;
+
     public Component withLatestVersion(ComponentLatestVersion latestVersion) {
         this.latestVersion = latestVersion;
         return this;
     }
     
+    public Component(){}
 }

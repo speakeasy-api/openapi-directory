@@ -248,4 +248,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateUsageLimitRequest.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkgroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateWorkgroupRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -22,6 +22,7 @@ public class StageDeploymentDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public StageDeploymentDetails withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class StageDeploymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentAction")
     public DeploymentActionEnum deploymentAction;
+
     public StageDeploymentDetails withDeploymentAction(DeploymentActionEnum deploymentAction) {
         this.deploymentAction = deploymentAction;
         return this;
@@ -38,6 +40,7 @@ public class StageDeploymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public StageDeploymentDetails withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -46,6 +49,7 @@ public class StageDeploymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentResult")
     public DeploymentResult deploymentResult;
+
     public StageDeploymentDetails withDeploymentResult(DeploymentResult deploymentResult) {
         this.deploymentResult = deploymentResult;
         return this;
@@ -54,6 +58,7 @@ public class StageDeploymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentState")
     public DeploymentStateEnum deploymentState;
+
     public StageDeploymentDetails withDeploymentState(DeploymentStateEnum deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -64,6 +69,7 @@ public class StageDeploymentDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public StageDeploymentDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -72,9 +78,11 @@ public class StageDeploymentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public StageDeploymentDetails withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public StageDeploymentDetails(){}
 }

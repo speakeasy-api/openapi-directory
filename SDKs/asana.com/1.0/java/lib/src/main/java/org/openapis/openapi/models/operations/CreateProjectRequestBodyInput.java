@@ -15,9 +15,11 @@ public class CreateProjectRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectRequestInput data;
+
     public CreateProjectRequestBodyInput withData(org.openapis.openapi.models.shared.ProjectRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public CreateProjectRequestBodyInput(){}
 }

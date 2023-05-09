@@ -15,6 +15,7 @@ public class EgipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public EgipcRequestBodyCertificateParameters certificateParameters;
+
     public EgipcRequestBody withCertificateParameters(EgipcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class EgipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public EgipcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class EgipcRequestBody {
      */
     @JsonProperty("format")
     public EgipcRequestBodyFormatEnum format;
+
     public EgipcRequestBody withFormat(EgipcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class EgipcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public EgipcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public EgipcRequestBody(@JsonProperty("format") EgipcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreativeServingRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contexts")
     public CreativeServingRestrictionsContexts[] contexts;
+
     public CreativeServingRestrictions withContexts(CreativeServingRestrictionsContexts[] contexts) {
         this.contexts = contexts;
         return this;
@@ -26,6 +27,7 @@ public class CreativeServingRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalReasons")
     public CreativeServingRestrictionsDisapprovalReasons[] disapprovalReasons;
+
     public CreativeServingRestrictions withDisapprovalReasons(CreativeServingRestrictionsDisapprovalReasons[] disapprovalReasons) {
         this.disapprovalReasons = disapprovalReasons;
         return this;
@@ -37,9 +39,11 @@ public class CreativeServingRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreativeServingRestrictions withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CreativeServingRestrictions(){}
 }

@@ -20,6 +20,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SegmentModelHaljsonEmbedded embedded;
+
     public SegmentModelHaljson withEmbedded(SegmentModelHaljsonEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -28,6 +29,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SegmentModelHaljsonLinks links;
+
     public SegmentModelHaljson withLinks(SegmentModelHaljsonLinks links) {
         this.links = links;
         return this;
@@ -36,6 +38,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public RolloutRuleComparatorEnum comparator;
+
     public SegmentModelHaljson withComparator(RolloutRuleComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -44,6 +47,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonAttribute")
     public String comparisonAttribute;
+
     public SegmentModelHaljson withComparisonAttribute(String comparisonAttribute) {
         this.comparisonAttribute = comparisonAttribute;
         return this;
@@ -52,6 +56,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public SegmentModelHaljson withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -62,6 +67,7 @@ public class SegmentModelHaljson {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SegmentModelHaljson withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -70,6 +76,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public SegmentModelHaljson withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -78,6 +85,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorFullName")
     public String creatorFullName;
+
     public SegmentModelHaljson withCreatorFullName(String creatorFullName) {
         this.creatorFullName = creatorFullName;
         return this;
@@ -86,6 +94,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SegmentModelHaljson withDescription(String description) {
         this.description = description;
         return this;
@@ -94,6 +103,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterEmail")
     public String lastUpdaterEmail;
+
     public SegmentModelHaljson withLastUpdaterEmail(String lastUpdaterEmail) {
         this.lastUpdaterEmail = lastUpdaterEmail;
         return this;
@@ -102,6 +112,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterFullName")
     public String lastUpdaterFullName;
+
     public SegmentModelHaljson withLastUpdaterFullName(String lastUpdaterFullName) {
         this.lastUpdaterFullName = lastUpdaterFullName;
         return this;
@@ -110,6 +121,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentModelHaljson withName(String name) {
         this.name = name;
         return this;
@@ -118,6 +130,7 @@ public class SegmentModelHaljson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public SegmentModelHaljson withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -128,9 +141,11 @@ public class SegmentModelHaljson {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SegmentModelHaljson withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SegmentModelHaljson(){}
 }

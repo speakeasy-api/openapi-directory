@@ -18,9 +18,11 @@ public class MessageStatusWhatsAppWhatsappConversationOrigin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MessageStatusWhatsAppWhatsappConversationOrigin withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MessageStatusWhatsAppWhatsappConversationOrigin(){}
 }

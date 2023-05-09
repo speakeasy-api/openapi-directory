@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransferSupplyLotRequest {
@@ -12,6 +13,7 @@ public class TransferSupplyLotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public TransferSupplyLotRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class TransferSupplyLotRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public TransferSupplyLotRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class TransferSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=skuId")
     public String skuId;
+
     public TransferSupplyLotRequest withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -42,6 +46,7 @@ public class TransferSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=supplyLotId")
     public String supplyLotId;
+
     public TransferSupplyLotRequest withSupplyLotId(String supplyLotId) {
         this.supplyLotId = supplyLotId;
         return this;
@@ -52,9 +57,17 @@ public class TransferSupplyLotRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public TransferSupplyLotRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public TransferSupplyLotRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("skuId") String skuId, @JsonProperty("supplyLotId") String supplyLotId, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.skuId = skuId;
+        this.supplyLotId = supplyLotId;
+        this.warehouseId = warehouseId;
+  }
 }

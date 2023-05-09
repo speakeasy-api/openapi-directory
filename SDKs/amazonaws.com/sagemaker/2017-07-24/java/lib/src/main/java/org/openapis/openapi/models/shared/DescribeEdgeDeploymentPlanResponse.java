@@ -22,6 +22,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeEdgeDeploymentPlanResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     
     @JsonProperty("DeviceFleetName")
     public String deviceFleetName;
+
     public DescribeEdgeDeploymentPlanResponse withDeviceFleetName(String deviceFleetName) {
         this.deviceFleetName = deviceFleetName;
         return this;
@@ -37,6 +39,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeDeploymentFailed")
     public Long edgeDeploymentFailed;
+
     public DescribeEdgeDeploymentPlanResponse withEdgeDeploymentFailed(Long edgeDeploymentFailed) {
         this.edgeDeploymentFailed = edgeDeploymentFailed;
         return this;
@@ -45,6 +48,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeDeploymentPending")
     public Long edgeDeploymentPending;
+
     public DescribeEdgeDeploymentPlanResponse withEdgeDeploymentPending(Long edgeDeploymentPending) {
         this.edgeDeploymentPending = edgeDeploymentPending;
         return this;
@@ -52,6 +56,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     
     @JsonProperty("EdgeDeploymentPlanArn")
     public String edgeDeploymentPlanArn;
+
     public DescribeEdgeDeploymentPlanResponse withEdgeDeploymentPlanArn(String edgeDeploymentPlanArn) {
         this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
         return this;
@@ -59,6 +64,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public DescribeEdgeDeploymentPlanResponse withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -67,6 +73,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeDeploymentSuccess")
     public Long edgeDeploymentSuccess;
+
     public DescribeEdgeDeploymentPlanResponse withEdgeDeploymentSuccess(Long edgeDeploymentSuccess) {
         this.edgeDeploymentSuccess = edgeDeploymentSuccess;
         return this;
@@ -77,6 +84,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeEdgeDeploymentPlanResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -84,6 +92,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     
     @JsonProperty("ModelConfigs")
     public EdgeDeploymentModelConfig[] modelConfigs;
+
     public DescribeEdgeDeploymentPlanResponse withModelConfigs(EdgeDeploymentModelConfig[] modelConfigs) {
         this.modelConfigs = modelConfigs;
         return this;
@@ -92,6 +101,7 @@ public class DescribeEdgeDeploymentPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEdgeDeploymentPlanResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -99,9 +109,17 @@ public class DescribeEdgeDeploymentPlanResponse {
     
     @JsonProperty("Stages")
     public DeploymentStageStatusSummary[] stages;
+
     public DescribeEdgeDeploymentPlanResponse withStages(DeploymentStageStatusSummary[] stages) {
         this.stages = stages;
         return this;
     }
     
+    public DescribeEdgeDeploymentPlanResponse(@JsonProperty("DeviceFleetName") String deviceFleetName, @JsonProperty("EdgeDeploymentPlanArn") String edgeDeploymentPlanArn, @JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("ModelConfigs") EdgeDeploymentModelConfig[] modelConfigs, @JsonProperty("Stages") DeploymentStageStatusSummary[] stages) {
+        this.deviceFleetName = deviceFleetName;
+        this.edgeDeploymentPlanArn = edgeDeploymentPlanArn;
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.modelConfigs = modelConfigs;
+        this.stages = stages;
+  }
 }

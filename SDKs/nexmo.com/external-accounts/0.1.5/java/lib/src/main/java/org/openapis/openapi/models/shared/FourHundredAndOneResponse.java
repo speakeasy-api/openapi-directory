@@ -15,6 +15,7 @@ public class FourHundredAndOneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public FourHundredAndOneResponse withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -23,9 +24,11 @@ public class FourHundredAndOneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public FourHundredAndOneResponse withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public FourHundredAndOneResponse(){}
 }

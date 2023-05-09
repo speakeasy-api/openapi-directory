@@ -15,6 +15,7 @@ public class MatchSimpleAlliances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blue")
     public MatchAlliance blue;
+
     public MatchSimpleAlliances withBlue(MatchAlliance blue) {
         this.blue = blue;
         return this;
@@ -23,9 +24,11 @@ public class MatchSimpleAlliances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red")
     public MatchAlliance red;
+
     public MatchSimpleAlliances withRed(MatchAlliance red) {
         this.red = red;
         return this;
     }
     
+    public MatchSimpleAlliances(){}
 }

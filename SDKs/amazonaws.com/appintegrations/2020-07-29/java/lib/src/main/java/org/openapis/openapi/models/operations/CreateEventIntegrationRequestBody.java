@@ -15,6 +15,7 @@ public class CreateEventIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateEventIntegrationRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateEventIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateEventIntegrationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class CreateEventIntegrationRequestBody {
      */
     @JsonProperty("EventBridgeBus")
     public String eventBridgeBus;
+
     public CreateEventIntegrationRequestBody withEventBridgeBus(String eventBridgeBus) {
         this.eventBridgeBus = eventBridgeBus;
         return this;
@@ -46,6 +49,7 @@ public class CreateEventIntegrationRequestBody {
      */
     @JsonProperty("EventFilter")
     public CreateEventIntegrationRequestBodyEventFilter eventFilter;
+
     public CreateEventIntegrationRequestBody withEventFilter(CreateEventIntegrationRequestBodyEventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -56,6 +60,7 @@ public class CreateEventIntegrationRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateEventIntegrationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -67,9 +72,15 @@ public class CreateEventIntegrationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateEventIntegrationRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateEventIntegrationRequestBody(@JsonProperty("EventBridgeBus") String eventBridgeBus, @JsonProperty("EventFilter") CreateEventIntegrationRequestBodyEventFilter eventFilter, @JsonProperty("Name") String name) {
+        this.eventBridgeBus = eventBridgeBus;
+        this.eventFilter = eventFilter;
+        this.name = name;
+  }
 }

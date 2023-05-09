@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCopyProductStatusResponse {
     
     public String contentType;
+
     public DescribeCopyProductStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCopyProductStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCopyProductStatusOutput describeCopyProductStatusOutput;
+
     public DescribeCopyProductStatusResponse withDescribeCopyProductStatusOutput(org.openapis.openapi.models.shared.DescribeCopyProductStatusOutput describeCopyProductStatusOutput) {
         this.describeCopyProductStatusOutput = describeCopyProductStatusOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCopyProductStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCopyProductStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeCopyProductStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeCopyProductStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeCopyProductStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCopyProductStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeCopyProductStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

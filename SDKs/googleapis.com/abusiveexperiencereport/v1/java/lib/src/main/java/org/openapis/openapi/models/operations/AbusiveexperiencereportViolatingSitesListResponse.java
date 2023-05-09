@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AbusiveexperiencereportViolatingSitesListResponse {
     
     public String contentType;
+
     public AbusiveexperiencereportViolatingSitesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AbusiveexperiencereportViolatingSitesListResponse {
     
     
     public Integer statusCode;
+
     public AbusiveexperiencereportViolatingSitesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AbusiveexperiencereportViolatingSitesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AbusiveexperiencereportViolatingSitesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AbusiveexperiencereportViolatingSitesListResponse {
      */
     
     public org.openapis.openapi.models.shared.ViolatingSitesResponse violatingSitesResponse;
+
     public AbusiveexperiencereportViolatingSitesListResponse withViolatingSitesResponse(org.openapis.openapi.models.shared.ViolatingSitesResponse violatingSitesResponse) {
         this.violatingSitesResponse = violatingSitesResponse;
         return this;
     }
     
+    public AbusiveexperiencereportViolatingSitesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

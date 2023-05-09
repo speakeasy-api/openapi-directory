@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonKeywordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public GoogleAdsSearchads360V0CommonKeywordInfoMatchTypeEnum matchType;
+
     public GoogleAdsSearchads360V0CommonKeywordInfo withMatchType(GoogleAdsSearchads360V0CommonKeywordInfoMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAdsSearchads360V0CommonKeywordInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleAdsSearchads360V0CommonKeywordInfo withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonKeywordInfo(){}
 }

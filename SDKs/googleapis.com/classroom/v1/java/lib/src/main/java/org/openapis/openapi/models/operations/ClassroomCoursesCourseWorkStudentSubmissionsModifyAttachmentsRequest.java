@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest {
@@ -12,6 +13,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ModifyAttachmentsRequest modifyAttachmentsRequest;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withModifyAttachmentsRequest(org.openapis.openapi.models.shared.ModifyAttachmentsRequest modifyAttachmentsRequest) {
         this.modifyAttachmentsRequest = modifyAttachmentsRequest;
         return this;
@@ -29,6 +32,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseId")
     public String courseId;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -69,6 +76,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseWorkId")
     public String courseWorkId;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withCourseWorkId(String courseWorkId) {
         this.courseWorkId = courseWorkId;
         return this;
@@ -79,6 +87,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withId(String id) {
         this.id = id;
         return this;
@@ -99,6 +109,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,15 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsReques
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ClassroomCoursesCourseWorkStudentSubmissionsModifyAttachmentsRequest(@JsonProperty("courseId") String courseId, @JsonProperty("courseWorkId") String courseWorkId, @JsonProperty("id") String id) {
+        this.courseId = courseId;
+        this.courseWorkId = courseWorkId;
+        this.id = id;
+  }
 }

@@ -18,9 +18,11 @@ public class Projection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public FieldReference[] fields;
+
     public Projection withFields(FieldReference[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public Projection(){}
 }

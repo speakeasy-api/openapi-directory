@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetClientsIdClientRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public GetClientsIdClientRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -16,9 +18,13 @@ public class GetClientsIdClientRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_client")
     public Long idClient;
+
     public GetClientsIdClientRequest withIdClient(Long idClient) {
         this.idClient = idClient;
         return this;
     }
     
+    public GetClientsIdClientRequest(@JsonProperty("id_client") Long idClient) {
+        this.idClient = idClient;
+  }
 }

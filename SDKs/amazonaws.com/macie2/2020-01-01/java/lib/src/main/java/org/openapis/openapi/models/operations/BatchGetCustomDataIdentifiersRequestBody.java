@@ -15,9 +15,11 @@ public class BatchGetCustomDataIdentifiersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public BatchGetCustomDataIdentifiersRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public BatchGetCustomDataIdentifiersRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public TransferRun withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -29,6 +30,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationDatasetId")
     public String destinationDatasetId;
+
     public TransferRun withDestinationDatasetId(String destinationDatasetId) {
         this.destinationDatasetId = destinationDatasetId;
         return this;
@@ -40,6 +42,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailPreferences")
     public EmailPreferences emailPreferences;
+
     public TransferRun withEmailPreferences(EmailPreferences emailPreferences) {
         this.emailPreferences = emailPreferences;
         return this;
@@ -51,6 +54,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TransferRun withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -62,6 +66,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorStatus")
     public Status errorStatus;
+
     public TransferRun withErrorStatus(Status errorStatus) {
         this.errorStatus = errorStatus;
         return this;
@@ -73,6 +78,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TransferRun withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationPubsubTopic")
     public String notificationPubsubTopic;
+
     public TransferRun withNotificationPubsubTopic(String notificationPubsubTopic) {
         this.notificationPubsubTopic = notificationPubsubTopic;
         return this;
@@ -95,6 +102,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, Object> params;
+
     public TransferRun withParams(java.util.Map<String, Object> params) {
         this.params = params;
         return this;
@@ -106,6 +114,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runTime")
     public String runTime;
+
     public TransferRun withRunTime(String runTime) {
         this.runTime = runTime;
         return this;
@@ -117,6 +126,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public TransferRun withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -128,6 +138,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public TransferRun withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
@@ -139,6 +150,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TransferRun withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -150,6 +162,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TransferRunStateEnum state;
+
     public TransferRun withState(TransferRunStateEnum state) {
         this.state = state;
         return this;
@@ -161,6 +174,7 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public TransferRun withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -172,9 +186,11 @@ public class TransferRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public TransferRun withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public TransferRun(){}
 }

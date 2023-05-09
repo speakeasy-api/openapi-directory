@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientLabResultsPartialUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientLabResultsPartialUpdateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class PatientLabResultsPartialUpdateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatientLabResultsPartialUpdateRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class PatientLabResultsPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ordering_doctor")
     public Long orderingDoctor;
+
     public PatientLabResultsPartialUpdateRequest withOrderingDoctor(Long orderingDoctor) {
         this.orderingDoctor = orderingDoctor;
         return this;
@@ -30,6 +34,7 @@ public class PatientLabResultsPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public PatientLabResultsPartialUpdateRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -37,9 +42,13 @@ public class PatientLabResultsPartialUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientLabResultsPartialUpdateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientLabResultsPartialUpdateRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

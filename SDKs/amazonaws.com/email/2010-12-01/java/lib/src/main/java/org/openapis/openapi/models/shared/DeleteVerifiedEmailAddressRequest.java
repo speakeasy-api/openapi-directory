@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteVerifiedEmailAddressRequest - Represents a request to delete an email address from the list of email addresses you have attempted to verify under your AWS account.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteVerifiedEmailAddressRequest {
     
     public String emailAddress;
+
     public DeleteVerifiedEmailAddressRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public DeleteVerifiedEmailAddressRequest(@JsonProperty("EmailAddress") String emailAddress) {
+        this.emailAddress = emailAddress;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstanceGroupManagerResizeRequestsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagerResizeRequestsListSecurityOption1 option1;
+
     public ComputeInstanceGroupManagerResizeRequestsListSecurity withOption1(ComputeInstanceGroupManagerResizeRequestsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInstanceGroupManagerResizeRequestsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagerResizeRequestsListSecurityOption2 option2;
+
     public ComputeInstanceGroupManagerResizeRequestsListSecurity withOption2(ComputeInstanceGroupManagerResizeRequestsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInstanceGroupManagerResizeRequestsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstanceGroupManagerResizeRequestsListSecurityOption3 option3;
+
     public ComputeInstanceGroupManagerResizeRequestsListSecurity withOption3(ComputeInstanceGroupManagerResizeRequestsListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInstanceGroupManagerResizeRequestsListSecurity(){}
 }

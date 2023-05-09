@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NotificationSpecification {
     @JsonProperty("Destination")
     public String destination;
+
     public NotificationSpecification withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -19,6 +20,7 @@ public class NotificationSpecification {
     
     @JsonProperty("EventTypes")
     public EventTypeEnum[] eventTypes;
+
     public NotificationSpecification withEventTypes(EventTypeEnum[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -26,6 +28,7 @@ public class NotificationSpecification {
     
     @JsonProperty("Transport")
     public NotificationTransportEnum transport;
+
     public NotificationSpecification withTransport(NotificationTransportEnum transport) {
         this.transport = transport;
         return this;
@@ -33,9 +36,16 @@ public class NotificationSpecification {
     
     @JsonProperty("Version")
     public String version;
+
     public NotificationSpecification withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public NotificationSpecification(@JsonProperty("Destination") String destination, @JsonProperty("EventTypes") EventTypeEnum[] eventTypes, @JsonProperty("Transport") NotificationTransportEnum transport, @JsonProperty("Version") String version) {
+        this.destination = destination;
+        this.eventTypes = eventTypes;
+        this.transport = transport;
+        this.version = version;
+  }
 }

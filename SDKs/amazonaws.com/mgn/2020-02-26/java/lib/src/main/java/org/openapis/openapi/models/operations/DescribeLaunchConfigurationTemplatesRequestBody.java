@@ -15,6 +15,7 @@ public class DescribeLaunchConfigurationTemplatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchConfigurationTemplateIDs")
     public String[] launchConfigurationTemplateIDs;
+
     public DescribeLaunchConfigurationTemplatesRequestBody withLaunchConfigurationTemplateIDs(String[] launchConfigurationTemplateIDs) {
         this.launchConfigurationTemplateIDs = launchConfigurationTemplateIDs;
         return this;
@@ -26,6 +27,7 @@ public class DescribeLaunchConfigurationTemplatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeLaunchConfigurationTemplatesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class DescribeLaunchConfigurationTemplatesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeLaunchConfigurationTemplatesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLaunchConfigurationTemplatesRequestBody(){}
 }

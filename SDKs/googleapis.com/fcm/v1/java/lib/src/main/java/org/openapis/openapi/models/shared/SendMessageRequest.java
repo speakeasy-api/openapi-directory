@@ -18,6 +18,7 @@ public class SendMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public Message message;
+
     public SendMessageRequest withMessage(Message message) {
         this.message = message;
         return this;
@@ -29,9 +30,11 @@ public class SendMessageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateOnly")
     public Boolean validateOnly;
+
     public SendMessageRequest withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public SendMessageRequest(){}
 }

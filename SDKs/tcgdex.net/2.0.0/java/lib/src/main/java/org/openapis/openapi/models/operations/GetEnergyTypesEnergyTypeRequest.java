@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEnergyTypesEnergyTypeRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=energy-type")
     public String energyType;
+
     public GetEnergyTypesEnergyTypeRequest withEnergyType(String energyType) {
         this.energyType = energyType;
         return this;
     }
     
+    public GetEnergyTypesEnergyTypeRequest(@JsonProperty("energy-type") String energyType) {
+        this.energyType = energyType;
+  }
 }

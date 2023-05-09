@@ -18,9 +18,11 @@ public class UpdateApplicationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Application")
     public Application application;
+
     public UpdateApplicationResult withApplication(Application application) {
         this.application = application;
         return this;
     }
     
+    public UpdateApplicationResult(){}
 }

@@ -15,9 +15,11 @@ public class CreateLaunchConfigurationTemplateRequestBodyLicensing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osByol")
     public Boolean osByol;
+
     public CreateLaunchConfigurationTemplateRequestBodyLicensing withOsByol(Boolean osByol) {
         this.osByol = osByol;
         return this;
     }
     
+    public CreateLaunchConfigurationTemplateRequestBodyLicensing(){}
 }

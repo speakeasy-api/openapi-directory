@@ -18,6 +18,7 @@ public class AccountItemUpdatesSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAvailabilityUpdates")
     public Boolean allowAvailabilityUpdates;
+
     public AccountItemUpdatesSettings withAllowAvailabilityUpdates(Boolean allowAvailabilityUpdates) {
         this.allowAvailabilityUpdates = allowAvailabilityUpdates;
         return this;
@@ -29,6 +30,7 @@ public class AccountItemUpdatesSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowConditionUpdates")
     public Boolean allowConditionUpdates;
+
     public AccountItemUpdatesSettings withAllowConditionUpdates(Boolean allowConditionUpdates) {
         this.allowConditionUpdates = allowConditionUpdates;
         return this;
@@ -40,6 +42,7 @@ public class AccountItemUpdatesSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPriceUpdates")
     public Boolean allowPriceUpdates;
+
     public AccountItemUpdatesSettings withAllowPriceUpdates(Boolean allowPriceUpdates) {
         this.allowPriceUpdates = allowPriceUpdates;
         return this;
@@ -51,9 +54,11 @@ public class AccountItemUpdatesSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowStrictAvailabilityUpdates")
     public Boolean allowStrictAvailabilityUpdates;
+
     public AccountItemUpdatesSettings withAllowStrictAvailabilityUpdates(Boolean allowStrictAvailabilityUpdates) {
         this.allowStrictAvailabilityUpdates = allowStrictAvailabilityUpdates;
         return this;
     }
     
+    public AccountItemUpdatesSettings(){}
 }

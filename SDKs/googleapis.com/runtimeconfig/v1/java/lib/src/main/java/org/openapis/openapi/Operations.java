@@ -62,11 +62,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigOperationsDeleteResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigOperationsDeleteResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RuntimeconfigOperationsListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsListResponse() {{
+        org.openapis.openapi.models.operations.RuntimeconfigOperationsListResponse res = new org.openapis.openapi.models.operations.RuntimeconfigOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiCredentialId")
     public String apiCredentialId;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withApiCredentialId(String apiCredentialId) {
         this.apiCredentialId = apiCredentialId;
         return this;
@@ -22,9 +24,14 @@ public class GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public GetCompaniesCompanyIdApiCredentialsApiCredentialIdRequest(@JsonProperty("apiCredentialId") String apiCredentialId, @JsonProperty("companyId") String companyId) {
+        this.apiCredentialId = apiCredentialId;
+        this.companyId = companyId;
+  }
 }

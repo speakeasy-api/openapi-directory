@@ -15,9 +15,11 @@ public class CreateDomainResponse {
      */
     
     public DomainStatus domainStatus;
+
     public CreateDomainResponse withDomainStatus(DomainStatus domainStatus) {
         this.domainStatus = domainStatus;
         return this;
     }
     
+    public CreateDomainResponse(){}
 }

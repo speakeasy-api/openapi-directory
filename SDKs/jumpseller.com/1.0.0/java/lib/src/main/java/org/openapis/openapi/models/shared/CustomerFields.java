@@ -12,6 +12,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public BillingAddress billingAddress;
+
     public CustomerFields withBillingAddress(BillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -20,6 +21,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_additional_fields")
     public CustomerAdditionalField[] customerAdditionalFields;
+
     public CustomerFields withCustomerAdditionalFields(CustomerAdditionalField[] customerAdditionalFields) {
         this.customerAdditionalFields = customerAdditionalFields;
         return this;
@@ -28,6 +30,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_categories")
     public CustomerCategory[] customerCategories;
+
     public CustomerFields withCustomerCategories(CustomerCategory[] customerCategories) {
         this.customerCategories = customerCategories;
         return this;
@@ -39,6 +42,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CustomerFields withEmail(String email) {
         this.email = email;
         return this;
@@ -50,6 +54,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomerFields withId(Integer id) {
         this.id = id;
         return this;
@@ -61,6 +66,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerFields withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public CustomerFields withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -80,6 +87,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public ShippingAddress shippingAddress;
+
     public CustomerFields withShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
@@ -91,6 +99,7 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CustomerFieldsStatusEnum status;
+
     public CustomerFields withStatus(CustomerFieldsStatusEnum status) {
         this.status = status;
         return this;
@@ -102,9 +111,11 @@ public class CustomerFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surname")
     public String surname;
+
     public CustomerFields withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public CustomerFields(){}
 }

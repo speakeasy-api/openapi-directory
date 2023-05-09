@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SingleMonitorRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=monitor_uid")
     public String monitorUid;
+
     public SingleMonitorRequest withMonitorUid(String monitorUid) {
         this.monitorUid = monitorUid;
         return this;
     }
     
+    public SingleMonitorRequest(@JsonProperty("monitor_uid") String monitorUid) {
+        this.monitorUid = monitorUid;
+  }
 }

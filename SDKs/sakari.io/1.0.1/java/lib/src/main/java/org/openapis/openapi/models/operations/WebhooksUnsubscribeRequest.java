@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WebhooksUnsubscribeRequest {
@@ -12,6 +13,7 @@ public class WebhooksUnsubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public WebhooksUnsubscribeRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,9 +24,14 @@ public class WebhooksUnsubscribeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=url")
     public String url;
+
     public WebhooksUnsubscribeRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public WebhooksUnsubscribeRequest(@JsonProperty("accountId") String accountId, @JsonProperty("url") String url) {
+        this.accountId = accountId;
+        this.url = url;
+  }
 }

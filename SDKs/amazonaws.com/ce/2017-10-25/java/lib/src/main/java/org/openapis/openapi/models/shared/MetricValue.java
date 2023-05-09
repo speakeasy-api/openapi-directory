@@ -15,6 +15,7 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amount")
     public String amount;
+
     public MetricValue withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -23,9 +24,11 @@ public class MetricValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public MetricValue withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public MetricValue(){}
 }

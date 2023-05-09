@@ -15,6 +15,7 @@ public class GroupMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberGroups")
     public MemberGroup[] memberGroups;
+
     public GroupMembers withMemberGroups(MemberGroup[] memberGroups) {
         this.memberGroups = memberGroups;
         return this;
@@ -23,6 +24,7 @@ public class GroupMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemberUsers")
     public MemberUser[] memberUsers;
+
     public GroupMembers withMemberUsers(MemberUser[] memberUsers) {
         this.memberUsers = memberUsers;
         return this;
@@ -31,9 +33,11 @@ public class GroupMembers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3PathforGroupMembers")
     public S3Path s3PathforGroupMembers;
+
     public GroupMembers withS3PathforGroupMembers(S3Path s3PathforGroupMembers) {
         this.s3PathforGroupMembers = s3PathforGroupMembers;
         return this;
     }
     
+    public GroupMembers(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PullsListFilesResponse {
     
     public String contentType;
+
     public PullsListFilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PullsListFilesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PullsListFilesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PullsListFilesResponse {
     
     
     public Integer statusCode;
+
     public PullsListFilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PullsListFilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PullsListFilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PullsListFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public PullsListFilesResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class PullsListFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.DiffEntry[] diffEntries;
+
     public PullsListFilesResponse withDiffEntries(org.openapis.openapi.models.shared.DiffEntry[] diffEntries) {
         this.diffEntries = diffEntries;
         return this;
@@ -60,9 +67,14 @@ public class PullsListFilesResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public PullsListFilesResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public PullsListFilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

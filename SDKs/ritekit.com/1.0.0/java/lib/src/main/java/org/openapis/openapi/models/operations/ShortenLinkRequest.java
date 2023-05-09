@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShortenLinkRequest {
@@ -12,6 +13,7 @@ public class ShortenLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cta")
     public Long cta;
+
     public ShortenLinkRequest withCta(Long cta) {
         this.cta = cta;
         return this;
@@ -22,9 +24,14 @@ public class ShortenLinkRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public ShortenLinkRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ShortenLinkRequest(@JsonProperty("cta") Long cta, @JsonProperty("url") String url) {
+        this.cta = cta;
+        this.url = url;
+  }
 }

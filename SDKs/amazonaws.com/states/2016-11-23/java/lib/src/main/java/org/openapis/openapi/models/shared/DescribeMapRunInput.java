@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMapRunInput {
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public DescribeMapRunInput withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
     }
     
+    public DescribeMapRunInput(@JsonProperty("mapRunArn") String mapRunArn) {
+        this.mapRunArn = mapRunArn;
+  }
 }

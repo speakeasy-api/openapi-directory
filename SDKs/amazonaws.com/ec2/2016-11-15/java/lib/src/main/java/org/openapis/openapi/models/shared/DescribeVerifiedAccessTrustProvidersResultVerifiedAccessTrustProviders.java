@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders {
     
     public String creationTime;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String description;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceOptions deviceOptions;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withDeviceOptions(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceOptions deviceOptions) {
         this.deviceOptions = deviceOptions;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum deviceTrustProviderType;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withDeviceTrustProviderType(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersDeviceTrustProviderTypeEnum deviceTrustProviderType) {
         this.deviceTrustProviderType = deviceTrustProviderType;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String lastUpdatedTime;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions oidcOptions;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withOidcOptions(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersOidcOptions oidcOptions) {
         this.oidcOptions = oidcOptions;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String policyReferenceName;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withPolicyReferenceName(String policyReferenceName) {
         this.policyReferenceName = policyReferenceName;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersTags[] tags;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withTags(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersTrustProviderTypeEnum trustProviderType;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withTrustProviderType(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersTrustProviderTypeEnum trustProviderType) {
         this.trustProviderType = trustProviderType;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersUserTrustProviderTypeEnum userTrustProviderType;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withUserTrustProviderType(DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvidersUserTrustProviderTypeEnum userTrustProviderType) {
         this.userTrustProviderType = userTrustProviderType;
         return this;
@@ -82,9 +92,11 @@ public class DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProvid
     
     
     public String verifiedAccessTrustProviderId;
+
     public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders withVerifiedAccessTrustProviderId(String verifiedAccessTrustProviderId) {
         this.verifiedAccessTrustProviderId = verifiedAccessTrustProviderId;
         return this;
     }
     
+    public DescribeVerifiedAccessTrustProvidersResultVerifiedAccessTrustProviders(){}
 }

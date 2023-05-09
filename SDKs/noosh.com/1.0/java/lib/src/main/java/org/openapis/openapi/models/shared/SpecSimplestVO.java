@@ -15,6 +15,7 @@ public class SpecSimplestVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public SpecSimplestVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -23,9 +24,11 @@ public class SpecSimplestVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public SpecSimplestVO withSpecName(String specName) {
         this.specName = specName;
         return this;
     }
     
+    public SpecSimplestVO(){}
 }

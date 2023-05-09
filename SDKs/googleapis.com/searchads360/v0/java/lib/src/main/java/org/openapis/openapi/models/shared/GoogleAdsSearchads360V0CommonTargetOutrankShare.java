@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0CommonTargetOutrankShare {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpcBidCeilingMicros")
     public String cpcBidCeilingMicros;
+
     public GoogleAdsSearchads360V0CommonTargetOutrankShare withCpcBidCeilingMicros(String cpcBidCeilingMicros) {
         this.cpcBidCeilingMicros = cpcBidCeilingMicros;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonTargetOutrankShare(){}
 }

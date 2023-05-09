@@ -18,6 +18,7 @@ public class SubnetworkSecondaryRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipCidrRange")
     public String ipCidrRange;
+
     public SubnetworkSecondaryRange withIpCidrRange(String ipCidrRange) {
         this.ipCidrRange = ipCidrRange;
         return this;
@@ -29,6 +30,7 @@ public class SubnetworkSecondaryRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeName")
     public String rangeName;
+
     public SubnetworkSecondaryRange withRangeName(String rangeName) {
         this.rangeName = rangeName;
         return this;
@@ -40,9 +42,11 @@ public class SubnetworkSecondaryRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedInternalRange")
     public String reservedInternalRange;
+
     public SubnetworkSecondaryRange withReservedInternalRange(String reservedInternalRange) {
         this.reservedInternalRange = reservedInternalRange;
         return this;
     }
     
+    public SubnetworkSecondaryRange(){}
 }

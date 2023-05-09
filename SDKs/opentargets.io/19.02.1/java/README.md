@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAssociationFilterRequest;
 import org.openapis.openapi.models.operations.GetAssociationFilterResponse;
 
@@ -47,7 +46,7 @@ public class Application {
                 targetClass = "ipsa";
                 therapeuticArea = "delectus";
                 uniprotkw = "tempora";
-            }}            
+            }};            
 
             GetAssociationFilterResponse res = sdk.filter.getAssociationFilter(req);
 
@@ -57,6 +56,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,67 +65,67 @@ public class Application {
 ## Available Resources and Operations
 
 
-### filter
+### [filter](docs/filter/README.md)
 
-* `getAssociationFilter` - Filter available associations
-* `getEvidenceFilter` - Filter available evidence
-* `postAssociationFilter` - Batch query available associations
-* `postEvidenceFilter` - Batch filter available evidence
+* [getAssociationFilter](docs/filter/README.md#getassociationfilter) - Filter available associations
+* [getEvidenceFilter](docs/filter/README.md#getevidencefilter) - Filter available evidence
+* [postAssociationFilter](docs/filter/README.md#postassociationfilter) - Batch query available associations
+* [postEvidenceFilter](docs/filter/README.md#postevidencefilter) - Batch filter available evidence
 
-### private_
+### [private_](docs/private/README.md)
 
-* `getApiDocs` - Browse API documentation
-* `getApiSwaggerUI` - Browse interactive API documentation
-* `getAutocomplete` - Get `autocomplete` objects.
-* `getDiseaseById` - Find information about a disease
-* `getDrugByID` - Get drug by ID
-* `getECObyID` - Get evidence code by ID
-* `getQuickSearch` - Search most relevant results
-* `getRelationByEFOID` - Find related entities by disease
-* `getRelationByENSGID` - Find related entities by target
-* `getSwagger` - Get OpenAPI schema
-* `getTargetByENSGID` - Find information about a target
-* `getTargetExpressionByENSGID` - Query expression levels
-* `postBestHitSearch` - Find the best hit
-* `postDiseaseById` - Find information about a list of diseases
-* `postEnrichmentTarget` - Enrichment analysis
-* `postRelation` - Find related entities
-* `postTargetByENSGID` - Find information about a list of targets
-* `postTargetExpressionByENSGID` - Batch query expression levels
+* [getApiDocs](docs/private/README.md#getapidocs) - Browse API documentation
+* [getApiSwaggerUI](docs/private/README.md#getapiswaggerui) - Browse interactive API documentation
+* [getAutocomplete](docs/private/README.md#getautocomplete) - Get `autocomplete` objects.
+* [getDiseaseById](docs/private/README.md#getdiseasebyid) - Find information about a disease
+* [getDrugByID](docs/private/README.md#getdrugbyid) - Get drug by ID
+* [getECObyID](docs/private/README.md#getecobyid) - Get evidence code by ID
+* [getQuickSearch](docs/private/README.md#getquicksearch) - Search most relevant results
+* [getRelationByEFOID](docs/private/README.md#getrelationbyefoid) - Find related entities by disease
+* [getRelationByENSGID](docs/private/README.md#getrelationbyensgid) - Find related entities by target
+* [getSwagger](docs/private/README.md#getswagger) - Get OpenAPI schema
+* [getTargetByENSGID](docs/private/README.md#gettargetbyensgid) - Find information about a target
+* [getTargetExpressionByENSGID](docs/private/README.md#gettargetexpressionbyensgid) - Query expression levels
+* [postBestHitSearch](docs/private/README.md#postbesthitsearch) - Find the best hit
+* [postDiseaseById](docs/private/README.md#postdiseasebyid) - Find information about a list of diseases
+* [postEnrichmentTarget](docs/private/README.md#postenrichmenttarget) - Enrichment analysis
+* [postRelation](docs/private/README.md#postrelation) - Find related entities
+* [postTargetByENSGID](docs/private/README.md#posttargetbyensgid) - Find information about a list of targets
+* [postTargetExpressionByENSGID](docs/private/README.md#posttargetexpressionbyensgid) - Batch query expression levels
 
-### public_
+### [public_](docs/public/README.md)
 
-* `getAssociationById` - Get association by id
-* `getAssociationFilter` - Filter available associations
-* `getDataMetrics` - Get metrics about the current data release
-* `getDataStats` - Get statistics about the current data release
-* `getEvidenceById` - Get evidence by ID
-* `getEvidenceFilter` - Filter available evidence
-* `getPing` - Ping service
-* `getSearch` - Search for a disease or a target
-* `getTherapeuticAreas` - Get the list of therapeutic areas about the current data release
-* `getVersion` - Get API version
-* `postAssociationFilter` - Batch query available associations
-* `postEvidenceById` - Get evidence for a list of IDs
-* `postEvidenceFilter` - Batch filter available evidence
+* [getAssociationById](docs/public/README.md#getassociationbyid) - Get association by id
+* [getAssociationFilter](docs/public/README.md#getassociationfilter) - Filter available associations
+* [getDataMetrics](docs/public/README.md#getdatametrics) - Get metrics about the current data release
+* [getDataStats](docs/public/README.md#getdatastats) - Get statistics about the current data release
+* [getEvidenceById](docs/public/README.md#getevidencebyid) - Get evidence by ID
+* [getEvidenceFilter](docs/public/README.md#getevidencefilter) - Filter available evidence
+* [getPing](docs/public/README.md#getping) - Ping service
+* [getSearch](docs/public/README.md#getsearch) - Search for a disease or a target
+* [getTherapeuticAreas](docs/public/README.md#gettherapeuticareas) - Get the list of therapeutic areas about the current data release
+* [getVersion](docs/public/README.md#getversion) - Get API version
+* [postAssociationFilter](docs/public/README.md#postassociationfilter) - Batch query available associations
+* [postEvidenceById](docs/public/README.md#postevidencebyid) - Get evidence for a list of IDs
+* [postEvidenceFilter](docs/public/README.md#postevidencefilter) - Batch filter available evidence
 
-### retrieve
+### [retrieve](docs/retrieve/README.md)
 
-* `getAssociationById` - Get association by id
-* `getEvidenceById` - Get evidence by ID
-* `postEvidenceById` - Get evidence for a list of IDs
+* [getAssociationById](docs/retrieve/README.md#getassociationbyid) - Get association by id
+* [getEvidenceById](docs/retrieve/README.md#getevidencebyid) - Get evidence by ID
+* [postEvidenceById](docs/retrieve/README.md#postevidencebyid) - Get evidence for a list of IDs
 
-### search
+### [search](docs/search/README.md)
 
-* `getSearch` - Search for a disease or a target
+* [getSearch](docs/search/README.md#getsearch) - Search for a disease or a target
 
-### utils
+### [utils](docs/utils/README.md)
 
-* `getDataMetrics` - Get metrics about the current data release
-* `getDataStats` - Get statistics about the current data release
-* `getPing` - Ping service
-* `getTherapeuticAreas` - Get the list of therapeutic areas about the current data release
-* `getVersion` - Get API version
+* [getDataMetrics](docs/utils/README.md#getdatametrics) - Get metrics about the current data release
+* [getDataStats](docs/utils/README.md#getdatastats) - Get statistics about the current data release
+* [getPing](docs/utils/README.md#getping) - Ping service
+* [getTherapeuticAreas](docs/utils/README.md#gettherapeuticareas) - Get the list of therapeutic areas about the current data release
+* [getVersion](docs/utils/README.md#getversion) - Get API version
 <!-- End SDK Available Operations -->
 
 ### Maturity

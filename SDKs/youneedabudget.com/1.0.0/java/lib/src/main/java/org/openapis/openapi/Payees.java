@@ -55,12 +55,10 @@ public class Payees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayeeByIdResponse res = new org.openapis.openapi.models.operations.GetPayeeByIdResponse() {{
+        org.openapis.openapi.models.operations.GetPayeeByIdResponse res = new org.openapis.openapi.models.operations.GetPayeeByIdResponse(contentType, httpRes.statusCode()) {{
             payeeResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,12 +107,10 @@ public class Payees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayeesResponse res = new org.openapis.openapi.models.operations.GetPayeesResponse() {{
+        org.openapis.openapi.models.operations.GetPayeesResponse res = new org.openapis.openapi.models.operations.GetPayeesResponse(contentType, httpRes.statusCode()) {{
             payeesResponse = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

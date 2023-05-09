@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCrmV3ExtensionsCardsAppIdCreateResponse {
     
     public byte[] body;
+
     public PostCrmV3ExtensionsCardsAppIdCreateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class PostCrmV3ExtensionsCardsAppIdCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.CardResponse cardResponse;
+
     public PostCrmV3ExtensionsCardsAppIdCreateResponse withCardResponse(org.openapis.openapi.models.shared.CardResponse cardResponse) {
         this.cardResponse = cardResponse;
         return this;
@@ -26,6 +29,7 @@ public class PostCrmV3ExtensionsCardsAppIdCreateResponse {
     
     
     public String contentType;
+
     public PostCrmV3ExtensionsCardsAppIdCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class PostCrmV3ExtensionsCardsAppIdCreateResponse {
     
     
     public Integer statusCode;
+
     public PostCrmV3ExtensionsCardsAppIdCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostCrmV3ExtensionsCardsAppIdCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCrmV3ExtensionsCardsAppIdCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCrmV3ExtensionsCardsAppIdCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

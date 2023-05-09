@@ -14,6 +14,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("amount")
     public Float amount;
+
     public ItvPlanListItem withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -24,6 +25,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("currency")
     public String currency;
+
     public ItvPlanListItem withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -34,6 +36,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("description")
     public String description;
+
     public ItvPlanListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("id")
     public String id;
+
     public ItvPlanListItem withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("interval")
     public ItvPlanListItemIntervalEnum interval;
+
     public ItvPlanListItem withInterval(ItvPlanListItemIntervalEnum interval) {
         this.interval = interval;
         return this;
@@ -64,6 +69,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("intervalCount")
     public Integer intervalCount;
+
     public ItvPlanListItem withIntervalCount(Integer intervalCount) {
         this.intervalCount = intervalCount;
         return this;
@@ -74,6 +80,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("nickname")
     public String nickname;
+
     public ItvPlanListItem withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -84,6 +91,7 @@ public class ItvPlanListItem {
      */
     @JsonProperty("product")
     public String product;
+
     public ItvPlanListItem withProduct(String product) {
         this.product = product;
         return this;
@@ -95,6 +103,7 @@ public class ItvPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingLabel")
     public String savingLabel;
+
     public ItvPlanListItem withSavingLabel(String savingLabel) {
         this.savingLabel = savingLabel;
         return this;
@@ -106,6 +115,7 @@ public class ItvPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchingText")
     public String switchingText;
+
     public ItvPlanListItem withSwitchingText(String switchingText) {
         this.switchingText = switchingText;
         return this;
@@ -117,9 +127,20 @@ public class ItvPlanListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trialPeriodDays")
     public Integer trialPeriodDays;
+
     public ItvPlanListItem withTrialPeriodDays(Integer trialPeriodDays) {
         this.trialPeriodDays = trialPeriodDays;
         return this;
     }
     
+    public ItvPlanListItem(@JsonProperty("amount") Float amount, @JsonProperty("currency") String currency, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("interval") ItvPlanListItemIntervalEnum interval, @JsonProperty("intervalCount") Integer intervalCount, @JsonProperty("nickname") String nickname, @JsonProperty("product") String product) {
+        this.amount = amount;
+        this.currency = currency;
+        this.description = description;
+        this.id = id;
+        this.interval = interval;
+        this.intervalCount = intervalCount;
+        this.nickname = nickname;
+        this.product = product;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
@@ -12,6 +13,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +37,7 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -46,9 +50,16 @@ public class PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugBranchRestrictionsIdRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("id") String id, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.id = id;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

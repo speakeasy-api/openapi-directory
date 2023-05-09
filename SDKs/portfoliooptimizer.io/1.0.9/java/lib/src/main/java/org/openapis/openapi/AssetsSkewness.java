@@ -61,11 +61,9 @@ public class AssetsSkewness {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAssetsSkewnessResponse res = new org.openapis.openapi.models.operations.PostAssetsSkewnessResponse() {{
+        org.openapis.openapi.models.operations.PostAssetsSkewnessResponse res = new org.openapis.openapi.models.operations.PostAssetsSkewnessResponse(contentType, httpRes.statusCode()) {{
             postAssetsSkewness200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

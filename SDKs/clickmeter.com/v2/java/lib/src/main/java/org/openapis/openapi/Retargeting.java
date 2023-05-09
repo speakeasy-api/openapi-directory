@@ -51,14 +51,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingCountResponse res = new org.openapis.openapi.models.operations.RetargetingCountResponse() {{
+        org.openapis.openapi.models.operations.RetargetingCountResponse res = new org.openapis.openapi.models.operations.RetargetingCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,14 +106,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingDeleteResponse res = new org.openapis.openapi.models.operations.RetargetingDeleteResponse() {{
+        org.openapis.openapi.models.operations.RetargetingDeleteResponse res = new org.openapis.openapi.models.operations.RetargetingDeleteResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,12 +167,10 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingGetResponse res = new org.openapis.openapi.models.operations.RetargetingGetResponse() {{
+        org.openapis.openapi.models.operations.RetargetingGetResponse res = new org.openapis.openapi.models.operations.RetargetingGetResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -224,12 +218,10 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingGetDatapointsResponse res = new org.openapis.openapi.models.operations.RetargetingGetDatapointsResponse() {{
+        org.openapis.openapi.models.operations.RetargetingGetDatapointsResponse res = new org.openapis.openapi.models.operations.RetargetingGetDatapointsResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntitiesResponseApiCoreResponsesEntityUriSystemInt64 = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,14 +269,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingGetDatapointsCountResponse res = new org.openapis.openapi.models.operations.RetargetingGetDatapointsCountResponse() {{
+        org.openapis.openapi.models.operations.RetargetingGetDatapointsCountResponse res = new org.openapis.openapi.models.operations.RetargetingGetDatapointsCountResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesCountResponce = null;
             apiCoreResponsesCountResponce = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,14 +329,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPostFormResponse res = new org.openapis.openapi.models.operations.RetargetingPostFormResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPostFormResponse res = new org.openapis.openapi.models.operations.RetargetingPostFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,14 +389,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPostJsonResponse res = new org.openapis.openapi.models.operations.RetargetingPostJsonResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPostJsonResponse res = new org.openapis.openapi.models.operations.RetargetingPostJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,14 +449,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPostRawResponse res = new org.openapis.openapi.models.operations.RetargetingPostRawResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPostRawResponse res = new org.openapis.openapi.models.operations.RetargetingPostRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -525,14 +509,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPutFormResponse res = new org.openapis.openapi.models.operations.RetargetingPutFormResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPutFormResponse res = new org.openapis.openapi.models.operations.RetargetingPutFormResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -587,14 +569,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPutJsonResponse res = new org.openapis.openapi.models.operations.RetargetingPutJsonResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPutJsonResponse res = new org.openapis.openapi.models.operations.RetargetingPutJsonResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -649,14 +629,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetargetingPutRawResponse res = new org.openapis.openapi.models.operations.RetargetingPutRawResponse() {{
+        org.openapis.openapi.models.operations.RetargetingPutRawResponse res = new org.openapis.openapi.models.operations.RetargetingPutRawResponse(contentType, httpRes.statusCode()) {{
             apiCoreResponsesEntityUriSystemInt64 = null;
             apiCoreResponsesEntityUriSystemInt64 = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -706,14 +684,12 @@ public class Retargeting {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRetargetingIdResponse res = new org.openapis.openapi.models.operations.GetRetargetingIdResponse() {{
+        org.openapis.openapi.models.operations.GetRetargetingIdResponse res = new org.openapis.openapi.models.operations.GetRetargetingIdResponse(contentType, httpRes.statusCode()) {{
             apiCoreDtoRetargetingRetargetingScript = null;
             apiCoreDtoRetargetingRetargetingScript = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

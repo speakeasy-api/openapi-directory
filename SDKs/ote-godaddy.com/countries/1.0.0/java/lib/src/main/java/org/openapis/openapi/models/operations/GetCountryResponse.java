@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCountryResponse {
@@ -12,6 +13,7 @@ public class GetCountryResponse {
      */
     
     public org.openapis.openapi.models.shared.Country[] arrayOfCountry;
+
     public GetCountryResponse withArrayOfCountry(org.openapis.openapi.models.shared.Country[] arrayOfCountry) {
         this.arrayOfCountry = arrayOfCountry;
         return this;
@@ -19,6 +21,7 @@ public class GetCountryResponse {
     
     
     public String contentType;
+
     public GetCountryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCountryResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCountryResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -39,6 +43,7 @@ public class GetCountryResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorLimit errorLimit;
+
     public GetCountryResponse withErrorLimit(org.openapis.openapi.models.shared.ErrorLimit errorLimit) {
         this.errorLimit = errorLimit;
         return this;
@@ -46,6 +51,7 @@ public class GetCountryResponse {
     
     
     public Integer statusCode;
+
     public GetCountryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetCountryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCountryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCountryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

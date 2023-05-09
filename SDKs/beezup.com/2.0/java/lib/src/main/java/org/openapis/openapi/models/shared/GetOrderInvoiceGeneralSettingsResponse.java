@@ -17,6 +17,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     @JsonProperty("cultureName")
     public String cultureName;
+
     public GetOrderInvoiceGeneralSettingsResponse withCultureName(String cultureName) {
         this.cultureName = cultureName;
         return this;
@@ -27,6 +28,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     @JsonProperty("invoicePrefix")
     public String invoicePrefix;
+
     public GetOrderInvoiceGeneralSettingsResponse withInvoicePrefix(String invoicePrefix) {
         this.invoicePrefix = invoicePrefix;
         return this;
@@ -37,6 +39,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     @JsonProperty("invoiceStartingSequenceNumber")
     public Long invoiceStartingSequenceNumber;
+
     public GetOrderInvoiceGeneralSettingsResponse withInvoiceStartingSequenceNumber(Long invoiceStartingSequenceNumber) {
         this.invoiceStartingSequenceNumber = invoiceStartingSequenceNumber;
         return this;
@@ -48,6 +51,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastInvoiceSequenceNumber")
     public Long lastInvoiceSequenceNumber;
+
     public GetOrderInvoiceGeneralSettingsResponse withLastInvoiceSequenceNumber(Long lastInvoiceSequenceNumber) {
         this.lastInvoiceSequenceNumber = lastInvoiceSequenceNumber;
         return this;
@@ -58,6 +62,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     @JsonProperty("productVATPercent")
     public Double productVATPercent;
+
     public GetOrderInvoiceGeneralSettingsResponse withProductVATPercent(Double productVATPercent) {
         this.productVATPercent = productVATPercent;
         return this;
@@ -68,9 +73,17 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     @JsonProperty("shippingVATPercent")
     public Double shippingVATPercent;
+
     public GetOrderInvoiceGeneralSettingsResponse withShippingVATPercent(Double shippingVATPercent) {
         this.shippingVATPercent = shippingVATPercent;
         return this;
     }
     
+    public GetOrderInvoiceGeneralSettingsResponse(@JsonProperty("cultureName") String cultureName, @JsonProperty("invoicePrefix") String invoicePrefix, @JsonProperty("invoiceStartingSequenceNumber") Long invoiceStartingSequenceNumber, @JsonProperty("productVATPercent") Double productVATPercent, @JsonProperty("shippingVATPercent") Double shippingVATPercent) {
+        this.cultureName = cultureName;
+        this.invoicePrefix = invoicePrefix;
+        this.invoiceStartingSequenceNumber = invoiceStartingSequenceNumber;
+        this.productVATPercent = productVATPercent;
+        this.shippingVATPercent = shippingVATPercent;
+  }
 }

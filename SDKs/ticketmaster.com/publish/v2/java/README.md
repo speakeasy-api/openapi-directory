@@ -16,13 +16,12 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PatchAttractionRequest;
 import org.openapis.openapi.models.operations.PatchAttractionResponse;
-import org.openapis.openapi.models.shared.AugmentationDataRelatedEntityTypeEnum;
 import org.openapis.openapi.models.shared.AugmentationData;
-import org.openapis.openapi.models.shared.ChangeOpEnum;
+import org.openapis.openapi.models.shared.AugmentationDataRelatedEntityTypeEnum;
 import org.openapis.openapi.models.shared.Change;
+import org.openapis.openapi.models.shared.ChangeOpEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,78 +29,68 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PatchAttractionRequest req = new PatchAttractionRequest() {{
-                augmentationData = new AugmentationData() {{
-                    changes = new org.openapis.openapi.models.shared.Change[]{{
-                        add(new Change() {{
-                            from = "provident";
-                            op = "copy";
-                            path = "quibusdam";
-                            value = new java.util.HashMap<String, Object>() {{
-                                put("nulla", "corrupti");
-                                put("illum", "vel");
-                                put("error", "deserunt");
-                            }};
-                        }}),
-                        add(new Change() {{
-                            from = "suscipit";
-                            op = "replace";
-                            path = "magnam";
-                            value = new java.util.HashMap<String, Object>() {{
-                                put("ipsa", "delectus");
-                                put("tempora", "suscipit");
-                                put("molestiae", "minus");
-                                put("placeat", "voluptatum");
-                            }};
-                        }}),
-                        add(new Change() {{
-                            from = "iusto";
-                            op = "move";
-                            path = "nisi";
-                            value = new java.util.HashMap<String, Object>() {{
-                                put("temporibus", "ab");
-                                put("quis", "veritatis");
-                                put("deserunt", "perferendis");
-                                put("ipsam", "repellendus");
-                            }};
-                        }}),
-                    }};
-                    relatedEntityId = "sapiente";
-                    relatedEntityType = "venue";
-                    score = 1403.5;
-                    source = "at";
-                    versionNumber = 870088;
-                }};
-                tmpsCorrelationId = "maiores";
-                id = "molestiae";
-            }}            
+            PatchAttractionRequest req = new PatchAttractionRequest(                new AugmentationData(                new org.openapis.openapi.models.shared.Change[]{{
+                                                add(new Change(ChangeOpEnum.REPLACE, "iure") {{
+                                                    from = "provident";
+                                                    op = ChangeOpEnum.COPY;
+                                                    path = "quibusdam";
+                                                    value = new java.util.HashMap<String, Object>() {{
+                                                        put("nulla", "corrupti");
+                                                        put("illum", "vel");
+                                                        put("error", "deserunt");
+                                                    }};
+                                                }}),
+                                                add(new Change(ChangeOpEnum.REPLACE, "recusandae") {{
+                                                    from = "magnam";
+                                                    op = ChangeOpEnum.TEST;
+                                                    path = "ipsa";
+                                                    value = new java.util.HashMap<String, Object>() {{
+                                                        put("tempora", "suscipit");
+                                                        put("molestiae", "minus");
+                                                        put("placeat", "voluptatum");
+                                                        put("iusto", "excepturi");
+                                                    }};
+                                                }}),
+                                                add(new Change(ChangeOpEnum.REPLACE, "repellendus") {{
+                                                    from = "temporibus";
+                                                    op = ChangeOpEnum.ADD;
+                                                    path = "quis";
+                                                    value = new java.util.HashMap<String, Object>() {{
+                                                        put("deserunt", "perferendis");
+                                                    }};
+                                                }}),
+                                            }}, "sapiente", AugmentationDataRelatedEntityTypeEnum.VENUE, "odit", 870013L) {{
+                                score = 8700.88;
+                            }};, "maiores", "molestiae");            
 
             PatchAttractionResponse res = sdk.patchAttraction(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `patchAttraction` - Publish a patch on an attraction
-* `patchEvent` - Publish a patch on an event
-* `patchVenue` - Publish a patch on a venue
-* `publishAttraction` - Publish an attractions
-* `publishAttractionVideos` - Publish a video on an attraction
-* `publishEntitlements` - Publish entitlements on an entity
-* `publishEvent` - Publish an event
-* `publishEventVideos` - Publish a video on an event
-* `publishExtension` - Publish extension on an entity
-* `publishVenue` - Publish a venue
+* [patchAttraction](docs/sdk/README.md#patchattraction) - Publish a patch on an attraction
+* [patchEvent](docs/sdk/README.md#patchevent) - Publish a patch on an event
+* [patchVenue](docs/sdk/README.md#patchvenue) - Publish a patch on a venue
+* [publishAttraction](docs/sdk/README.md#publishattraction) - Publish an attractions
+* [publishAttractionVideos](docs/sdk/README.md#publishattractionvideos) - Publish a video on an attraction
+* [publishEntitlements](docs/sdk/README.md#publishentitlements) - Publish entitlements on an entity
+* [publishEvent](docs/sdk/README.md#publishevent) - Publish an event
+* [publishEventVideos](docs/sdk/README.md#publisheventvideos) - Publish a video on an event
+* [publishExtension](docs/sdk/README.md#publishextension) - Publish extension on an entity
+* [publishVenue](docs/sdk/README.md#publishvenue) - Publish a venue
 <!-- End SDK Available Operations -->
 
 ### Maturity

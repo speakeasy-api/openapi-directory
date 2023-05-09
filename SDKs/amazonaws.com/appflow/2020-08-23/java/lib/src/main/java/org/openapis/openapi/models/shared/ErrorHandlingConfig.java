@@ -15,6 +15,7 @@ public class ErrorHandlingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public ErrorHandlingConfig withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class ErrorHandlingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPrefix")
     public String bucketPrefix;
+
     public ErrorHandlingConfig withBucketPrefix(String bucketPrefix) {
         this.bucketPrefix = bucketPrefix;
         return this;
@@ -31,9 +33,11 @@ public class ErrorHandlingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failOnFirstDestinationError")
     public Boolean failOnFirstDestinationError;
+
     public ErrorHandlingConfig withFailOnFirstDestinationError(Boolean failOnFirstDestinationError) {
         this.failOnFirstDestinationError = failOnFirstDestinationError;
         return this;
     }
     
+    public ErrorHandlingConfig(){}
 }

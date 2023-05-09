@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCustomRoutingListenerRequest {
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public DeleteCustomRoutingListenerRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
     }
     
+    public DeleteCustomRoutingListenerRequest(@JsonProperty("ListenerArn") String listenerArn) {
+        this.listenerArn = listenerArn;
+  }
 }

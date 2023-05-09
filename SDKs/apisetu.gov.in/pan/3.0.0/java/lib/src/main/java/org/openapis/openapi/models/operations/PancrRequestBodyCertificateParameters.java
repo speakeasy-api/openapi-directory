@@ -12,6 +12,7 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public PancrRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public PancrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public PancrRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("PANFullName")
     public String panFullName;
+
     public PancrRequestBodyCertificateParameters withPANFullName(String panFullName) {
         this.panFullName = panFullName;
         return this;
@@ -52,6 +56,7 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public PancrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -62,9 +67,18 @@ public class PancrRequestBodyCertificateParameters {
      */
     @JsonProperty("panno")
     public String panno;
+
     public PancrRequestBodyCertificateParameters withPanno(String panno) {
         this.panno = panno;
         return this;
     }
     
+    public PancrRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PANFullName") String panFullName, @JsonProperty("UID") String uid, @JsonProperty("panno") String panno) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.panFullName = panFullName;
+        this.uid = uid;
+        this.panno = panno;
+  }
 }

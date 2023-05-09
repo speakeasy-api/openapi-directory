@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -25,6 +26,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -35,6 +37,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -43,6 +46,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withConstraints(PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -54,6 +58,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfolios")
     public Long subsetPortfolios;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withSubsetPortfolios(Long subsetPortfolios) {
         this.subsetPortfolios = subsetPortfolios;
         return this;
@@ -65,6 +70,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosAggregationMethod")
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withSubsetPortfoliosAggregationMethod(PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod) {
         this.subsetPortfoliosAggregationMethod = subsetPortfoliosAggregationMethod;
         return this;
@@ -76,6 +82,7 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosEnumerationMethod")
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withSubsetPortfoliosEnumerationMethod(PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod) {
         this.subsetPortfoliosEnumerationMethod = subsetPortfoliosEnumerationMethod;
         return this;
@@ -87,9 +94,14 @@ public class PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetSize")
     public Long subsetSize;
+
     public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody withSubsetSize(Long subsetSize) {
         this.subsetSize = subsetSize;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumReturnSubsetResamplingBasedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsReturns") Double[] assetsReturns) {
+        this.assets = assets;
+        this.assetsReturns = assetsReturns;
+  }
 }

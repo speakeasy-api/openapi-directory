@@ -15,9 +15,11 @@ public class DisassociatePersonasFromEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntityList")
     public FailedEntity[] failedEntityList;
+
     public DisassociatePersonasFromEntitiesResponse withFailedEntityList(FailedEntity[] failedEntityList) {
         this.failedEntityList = failedEntityList;
         return this;
     }
     
+    public DisassociatePersonasFromEntitiesResponse(){}
 }

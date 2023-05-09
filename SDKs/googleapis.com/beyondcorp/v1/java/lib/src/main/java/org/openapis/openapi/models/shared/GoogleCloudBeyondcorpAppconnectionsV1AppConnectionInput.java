@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationEndpoint")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint applicationEndpoint;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withApplicationEndpoint(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint applicationEndpoint) {
         this.applicationEndpoint = applicationEndpoint;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectors")
     public String[] connectors;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withConnectors(String[] connectors) {
         this.connectors = connectors;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateway")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput gateway;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withGateway(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGatewayInput gateway) {
         this.gateway = gateway;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum type;
+
     public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput withType(GoogleCloudBeyondcorpAppconnectionsV1AppConnectionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectionsV1AppConnectionInput(){}
 }

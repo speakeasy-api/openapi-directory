@@ -18,9 +18,11 @@ public class EncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpKmsEncryptionKey")
     public String gcpKmsEncryptionKey;
+
     public EncryptionKey withGcpKmsEncryptionKey(String gcpKmsEncryptionKey) {
         this.gcpKmsEncryptionKey = gcpKmsEncryptionKey;
         return this;
     }
     
+    public EncryptionKey(){}
 }

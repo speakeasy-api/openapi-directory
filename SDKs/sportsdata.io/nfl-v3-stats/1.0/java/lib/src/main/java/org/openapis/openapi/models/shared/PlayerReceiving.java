@@ -12,6 +12,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerReceiving withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerReceiving withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -28,6 +30,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FumblesLost")
     public Long fumblesLost;
+
     public PlayerReceiving withFumblesLost(Long fumblesLost) {
         this.fumblesLost = fumblesLost;
         return this;
@@ -36,6 +39,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerReceiving withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerReceiving withNumber(Long number) {
         this.number = number;
         return this;
@@ -52,6 +57,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerReceiving withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -60,6 +66,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerReceiving withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -68,6 +75,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerReceiving withPosition(String position) {
         this.position = position;
         return this;
@@ -76,6 +84,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerReceiving withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -84,6 +93,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingLong")
     public Long receivingLong;
+
     public PlayerReceiving withReceivingLong(Long receivingLong) {
         this.receivingLong = receivingLong;
         return this;
@@ -92,6 +102,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTargets")
     public Long receivingTargets;
+
     public PlayerReceiving withReceivingTargets(Long receivingTargets) {
         this.receivingTargets = receivingTargets;
         return this;
@@ -100,6 +111,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingTouchdowns")
     public Long receivingTouchdowns;
+
     public PlayerReceiving withReceivingTouchdowns(Long receivingTouchdowns) {
         this.receivingTouchdowns = receivingTouchdowns;
         return this;
@@ -108,6 +120,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYards")
     public Long receivingYards;
+
     public PlayerReceiving withReceivingYards(Long receivingYards) {
         this.receivingYards = receivingYards;
         return this;
@@ -116,6 +129,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYardsPerReception")
     public Double receivingYardsPerReception;
+
     public PlayerReceiving withReceivingYardsPerReception(Double receivingYardsPerReception) {
         this.receivingYardsPerReception = receivingYardsPerReception;
         return this;
@@ -124,6 +138,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivingYardsPerTarget")
     public Double receivingYardsPerTarget;
+
     public PlayerReceiving withReceivingYardsPerTarget(Double receivingYardsPerTarget) {
         this.receivingYardsPerTarget = receivingYardsPerTarget;
         return this;
@@ -132,6 +147,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceptionPercentage")
     public Double receptionPercentage;
+
     public PlayerReceiving withReceptionPercentage(Double receptionPercentage) {
         this.receptionPercentage = receptionPercentage;
         return this;
@@ -140,6 +156,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Receptions")
     public Long receptions;
+
     public PlayerReceiving withReceptions(Long receptions) {
         this.receptions = receptions;
         return this;
@@ -148,6 +165,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerReceiving withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -156,6 +174,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerReceiving withTeam(String team) {
         this.team = team;
         return this;
@@ -164,6 +183,7 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoPointConversionReceptions")
     public Long twoPointConversionReceptions;
+
     public PlayerReceiving withTwoPointConversionReceptions(Long twoPointConversionReceptions) {
         this.twoPointConversionReceptions = twoPointConversionReceptions;
         return this;
@@ -172,9 +192,11 @@ public class PlayerReceiving {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerReceiving withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerReceiving(){}
 }

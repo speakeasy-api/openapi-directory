@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PrivateIpAddressSpecificationList {
     
     public Boolean primary;
+
     public PrivateIpAddressSpecificationList withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -19,9 +20,11 @@ public class PrivateIpAddressSpecificationList {
     
     
     public String privateIpAddress;
+
     public PrivateIpAddressSpecificationList withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
     }
     
+    public PrivateIpAddressSpecificationList(){}
 }

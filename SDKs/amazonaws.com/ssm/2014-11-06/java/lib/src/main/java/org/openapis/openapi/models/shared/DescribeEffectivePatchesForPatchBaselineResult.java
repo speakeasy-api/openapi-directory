@@ -15,6 +15,7 @@ public class DescribeEffectivePatchesForPatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectivePatches")
     public EffectivePatch[] effectivePatches;
+
     public DescribeEffectivePatchesForPatchBaselineResult withEffectivePatches(EffectivePatch[] effectivePatches) {
         this.effectivePatches = effectivePatches;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEffectivePatchesForPatchBaselineResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEffectivePatchesForPatchBaselineResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEffectivePatchesForPatchBaselineResult(){}
 }

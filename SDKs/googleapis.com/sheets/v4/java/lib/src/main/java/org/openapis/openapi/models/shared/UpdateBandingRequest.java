@@ -18,6 +18,7 @@ public class UpdateBandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandedRange")
     public BandedRange bandedRange;
+
     public UpdateBandingRequest withBandedRange(BandedRange bandedRange) {
         this.bandedRange = bandedRange;
         return this;
@@ -29,9 +30,11 @@ public class UpdateBandingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateBandingRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateBandingRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWebsiteCertificateAuthorityResponse {
     
     public String contentType;
+
     public DescribeWebsiteCertificateAuthorityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWebsiteCertificateAuthorityResponse describeWebsiteCertificateAuthorityResponse;
+
     public DescribeWebsiteCertificateAuthorityResponse withDescribeWebsiteCertificateAuthorityResponse(org.openapis.openapi.models.shared.DescribeWebsiteCertificateAuthorityResponse describeWebsiteCertificateAuthorityResponse) {
         this.describeWebsiteCertificateAuthorityResponse = describeWebsiteCertificateAuthorityResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public Object internalServerErrorException;
+
     public DescribeWebsiteCertificateAuthorityResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeWebsiteCertificateAuthorityResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
     
     
     public Integer statusCode;
+
     public DescribeWebsiteCertificateAuthorityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWebsiteCertificateAuthorityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWebsiteCertificateAuthorityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeWebsiteCertificateAuthorityResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeWebsiteCertificateAuthorityResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeWebsiteCertificateAuthorityResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeWebsiteCertificateAuthorityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

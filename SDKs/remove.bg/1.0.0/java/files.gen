@@ -71,4 +71,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramJson.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramMultipartImageFile.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImprovementProgramMultipart.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/backgroundremoval/README.md
+docs/fetchaccountinfo/README.md
+docs/improvementprogram/README.md
 USAGE.md

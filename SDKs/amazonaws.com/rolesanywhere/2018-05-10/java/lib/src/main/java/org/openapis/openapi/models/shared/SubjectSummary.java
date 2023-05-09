@@ -22,6 +22,7 @@ public class SubjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SubjectSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class SubjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public SubjectSummary withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class SubjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSeenAt")
     public OffsetDateTime lastSeenAt;
+
     public SubjectSummary withLastSeenAt(OffsetDateTime lastSeenAt) {
         this.lastSeenAt = lastSeenAt;
         return this;
@@ -48,6 +51,7 @@ public class SubjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectArn")
     public String subjectArn;
+
     public SubjectSummary withSubjectArn(String subjectArn) {
         this.subjectArn = subjectArn;
         return this;
@@ -56,6 +60,7 @@ public class SubjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectId")
     public String subjectId;
+
     public SubjectSummary withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -66,6 +71,7 @@ public class SubjectSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SubjectSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -74,9 +80,11 @@ public class SubjectSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Subject")
     public String x509Subject;
+
     public SubjectSummary withX509Subject(String x509Subject) {
         this.x509Subject = x509Subject;
         return this;
     }
     
+    public SubjectSummary(){}
 }

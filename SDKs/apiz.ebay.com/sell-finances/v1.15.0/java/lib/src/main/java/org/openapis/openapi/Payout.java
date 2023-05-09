@@ -60,11 +60,9 @@ public class Payout {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayoutResponse res = new org.openapis.openapi.models.operations.GetPayoutResponse() {{
+        org.openapis.openapi.models.operations.GetPayoutResponse res = new org.openapis.openapi.models.operations.GetPayoutResponse(contentType, httpRes.statusCode()) {{
             payout = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class Payout {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayoutSummaryResponse res = new org.openapis.openapi.models.operations.GetPayoutSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetPayoutSummaryResponse res = new org.openapis.openapi.models.operations.GetPayoutSummaryResponse(contentType, httpRes.statusCode()) {{
             payoutSummaryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +168,9 @@ public class Payout {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPayoutsResponse res = new org.openapis.openapi.models.operations.GetPayoutsResponse() {{
+        org.openapis.openapi.models.operations.GetPayoutsResponse res = new org.openapis.openapi.models.operations.GetPayoutsResponse(contentType, httpRes.statusCode()) {{
             payouts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class GenerateVerificationTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public GenerateVerificationTokenRequest withLocation(Location location) {
         this.location = location;
         return this;
     }
     
+    public GenerateVerificationTokenRequest(){}
 }

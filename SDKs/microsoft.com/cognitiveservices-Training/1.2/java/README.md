@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAccountInfoRequest;
 import org.openapis.openapi.models.operations.GetAccountInfoResponse;
 
@@ -26,18 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetAccountInfoRequest req = new GetAccountInfoRequest() {{
-                trainingKey = "corrupti";
-            }}            
+            GetAccountInfoRequest req = new GetAccountInfoRequest("corrupti");            
 
             GetAccountInfoResponse res = sdk.accountApi.getAccountInfo(req);
 
-            if (res.account.isPresent()) {
+            if (res.account != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,75 +44,75 @@ public class Application {
 ## Available Resources and Operations
 
 
-### accountApi
+### [accountApi](docs/accountapi/README.md)
 
-* `getAccountInfo` - Get basic information about your account
+* [getAccountInfo](docs/accountapi/README.md#getaccountinfo) - Get basic information about your account
 
-### domainsApi
+### [domainsApi](docs/domainsapi/README.md)
 
-* `getDomain` - Get information about a specific domain
-* `getDomains` - Get a list of the available domains
+* [getDomain](docs/domainsapi/README.md#getdomain) - Get information about a specific domain
+* [getDomains](docs/domainsapi/README.md#getdomains) - Get a list of the available domains
 
-### imageApi
+### [imageApi](docs/imageapi/README.md)
 
-* `createImagesFromData` - Add the provided images to the set of training images
-* `createImagesFromFilesForm` - Add the provided batch of images to the set of training images
-* `createImagesFromFilesJson` - Add the provided batch of images to the set of training images
-* `createImagesFromFilesRaw` - Add the provided batch of images to the set of training images
-* `createImagesFromPredictionsForm` - Add the specified predicted images to the set of training images
-* `createImagesFromPredictionsJson` - Add the specified predicted images to the set of training images
-* `createImagesFromPredictionsRaw` - Add the specified predicted images to the set of training images
-* `createImagesFromUrlsForm` - Add the provided images urls to the set of training images
-* `createImagesFromUrlsJson` - Add the provided images urls to the set of training images
-* `createImagesFromUrlsRaw` - Add the provided images urls to the set of training images
-* `deleteImageTags` - Remove a set of tags from a set of images
-* `deleteImages` - Delete images from the set of training images
-* `getTaggedImages` - Get tagged images for a given project iteration
-* `getUntaggedImages` - Get untagged images for a given project iteration
-* `postImageTagsForm` - Associate a set of images with a set of tags
-* `postImageTagsJson` - Associate a set of images with a set of tags
-* `postImageTagsRaw` - Associate a set of images with a set of tags
+* [createImagesFromData](docs/imageapi/README.md#createimagesfromdata) - Add the provided images to the set of training images
+* [createImagesFromFilesForm](docs/imageapi/README.md#createimagesfromfilesform) - Add the provided batch of images to the set of training images
+* [createImagesFromFilesJson](docs/imageapi/README.md#createimagesfromfilesjson) - Add the provided batch of images to the set of training images
+* [createImagesFromFilesRaw](docs/imageapi/README.md#createimagesfromfilesraw) - Add the provided batch of images to the set of training images
+* [createImagesFromPredictionsForm](docs/imageapi/README.md#createimagesfrompredictionsform) - Add the specified predicted images to the set of training images
+* [createImagesFromPredictionsJson](docs/imageapi/README.md#createimagesfrompredictionsjson) - Add the specified predicted images to the set of training images
+* [createImagesFromPredictionsRaw](docs/imageapi/README.md#createimagesfrompredictionsraw) - Add the specified predicted images to the set of training images
+* [createImagesFromUrlsForm](docs/imageapi/README.md#createimagesfromurlsform) - Add the provided images urls to the set of training images
+* [createImagesFromUrlsJson](docs/imageapi/README.md#createimagesfromurlsjson) - Add the provided images urls to the set of training images
+* [createImagesFromUrlsRaw](docs/imageapi/README.md#createimagesfromurlsraw) - Add the provided images urls to the set of training images
+* [deleteImageTags](docs/imageapi/README.md#deleteimagetags) - Remove a set of tags from a set of images
+* [deleteImages](docs/imageapi/README.md#deleteimages) - Delete images from the set of training images
+* [getTaggedImages](docs/imageapi/README.md#gettaggedimages) - Get tagged images for a given project iteration
+* [getUntaggedImages](docs/imageapi/README.md#getuntaggedimages) - Get untagged images for a given project iteration
+* [postImageTagsForm](docs/imageapi/README.md#postimagetagsform) - Associate a set of images with a set of tags
+* [postImageTagsJson](docs/imageapi/README.md#postimagetagsjson) - Associate a set of images with a set of tags
+* [postImageTagsRaw](docs/imageapi/README.md#postimagetagsraw) - Associate a set of images with a set of tags
 
-### predictionsApi
+### [predictionsApi](docs/predictionsapi/README.md)
 
-* `deletePrediction` - Delete a set of predicted images and their associated prediction results
-* `queryPredictionResultsForm` - Get images that were sent to your prediction endpoint
-* `queryPredictionResultsJson` - Get images that were sent to your prediction endpoint
-* `queryPredictionResultsRaw` - Get images that were sent to your prediction endpoint
-* `quickTestImage` - Quick test an image
-* `quickTestImageUrlForm` - Quick test an image url
-* `quickTestImageUrlJson` - Quick test an image url
-* `quickTestImageUrlRaw` - Quick test an image url
+* [deletePrediction](docs/predictionsapi/README.md#deleteprediction) - Delete a set of predicted images and their associated prediction results
+* [queryPredictionResultsForm](docs/predictionsapi/README.md#querypredictionresultsform) - Get images that were sent to your prediction endpoint
+* [queryPredictionResultsJson](docs/predictionsapi/README.md#querypredictionresultsjson) - Get images that were sent to your prediction endpoint
+* [queryPredictionResultsRaw](docs/predictionsapi/README.md#querypredictionresultsraw) - Get images that were sent to your prediction endpoint
+* [quickTestImage](docs/predictionsapi/README.md#quicktestimage) - Quick test an image
+* [quickTestImageUrlForm](docs/predictionsapi/README.md#quicktestimageurlform) - Quick test an image url
+* [quickTestImageUrlJson](docs/predictionsapi/README.md#quicktestimageurljson) - Quick test an image url
+* [quickTestImageUrlRaw](docs/predictionsapi/README.md#quicktestimageurlraw) - Quick test an image url
 
-### projectApi
+### [projectApi](docs/projectapi/README.md)
 
-* `createProject` - Create a project
-* `deleteIteration` - Delete a specific iteration of a project
-* `deleteProject` - Delete a specific project
-* `exportIteration` - Export a trained iteration
-* `getExports` - Get the list of exports for a specific iteration
-* `getIteration` - Get a specific iteration
-* `getIterationPerformance` - Get detailed performance information about a trained iteration
-* `getIterations` - Get iterations for the project
-* `getProject` - Get a specific project
-* `getProjects` - Get your projects
-* `trainProject` - Queues project for training
-* `updateIterationForm` - Update a specific iteration
-* `updateIterationJson` - Update a specific iteration
-* `updateIterationRaw` - Update a specific iteration
-* `updateProjectForm` - Update a specific project
-* `updateProjectJson` - Update a specific project
-* `updateProjectRaw` - Update a specific project
+* [createProject](docs/projectapi/README.md#createproject) - Create a project
+* [deleteIteration](docs/projectapi/README.md#deleteiteration) - Delete a specific iteration of a project
+* [deleteProject](docs/projectapi/README.md#deleteproject) - Delete a specific project
+* [exportIteration](docs/projectapi/README.md#exportiteration) - Export a trained iteration
+* [getExports](docs/projectapi/README.md#getexports) - Get the list of exports for a specific iteration
+* [getIteration](docs/projectapi/README.md#getiteration) - Get a specific iteration
+* [getIterationPerformance](docs/projectapi/README.md#getiterationperformance) - Get detailed performance information about a trained iteration
+* [getIterations](docs/projectapi/README.md#getiterations) - Get iterations for the project
+* [getProject](docs/projectapi/README.md#getproject) - Get a specific project
+* [getProjects](docs/projectapi/README.md#getprojects) - Get your projects
+* [trainProject](docs/projectapi/README.md#trainproject) - Queues project for training
+* [updateIterationForm](docs/projectapi/README.md#updateiterationform) - Update a specific iteration
+* [updateIterationJson](docs/projectapi/README.md#updateiterationjson) - Update a specific iteration
+* [updateIterationRaw](docs/projectapi/README.md#updateiterationraw) - Update a specific iteration
+* [updateProjectForm](docs/projectapi/README.md#updateprojectform) - Update a specific project
+* [updateProjectJson](docs/projectapi/README.md#updateprojectjson) - Update a specific project
+* [updateProjectRaw](docs/projectapi/README.md#updateprojectraw) - Update a specific project
 
-### tagsApi
+### [tagsApi](docs/tagsapi/README.md)
 
-* `createTag` - Create a tag for the project
-* `deleteTag` - Delete a tag from the project
-* `getTag` - Get information about a specific tag
-* `getTags` - Get the tags for a given project and iteration
-* `updateTagForm` - Update a tag
-* `updateTagJson` - Update a tag
-* `updateTagRaw` - Update a tag
+* [createTag](docs/tagsapi/README.md#createtag) - Create a tag for the project
+* [deleteTag](docs/tagsapi/README.md#deletetag) - Delete a tag from the project
+* [getTag](docs/tagsapi/README.md#gettag) - Get information about a specific tag
+* [getTags](docs/tagsapi/README.md#gettags) - Get the tags for a given project and iteration
+* [updateTagForm](docs/tagsapi/README.md#updatetagform) - Update a tag
+* [updateTagJson](docs/tagsapi/README.md#updatetagjson) - Update a tag
+* [updateTagRaw](docs/tagsapi/README.md#updatetagraw) - Update a tag
 <!-- End SDK Available Operations -->
 
 ### Maturity

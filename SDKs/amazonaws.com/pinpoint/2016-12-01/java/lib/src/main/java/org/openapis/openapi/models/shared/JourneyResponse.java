@@ -15,6 +15,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Activities")
     public java.util.Map<String, Activity> activities;
+
     public JourneyResponse withActivities(java.util.Map<String, Activity> activities) {
         this.activities = activities;
         return this;
@@ -22,6 +23,7 @@ public class JourneyResponse {
     
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public JourneyResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -30,6 +32,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClosedDays")
     public ClosedDays closedDays;
+
     public JourneyResponse withClosedDays(ClosedDays closedDays) {
         this.closedDays = closedDays;
         return this;
@@ -38,6 +41,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public JourneyResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -45,6 +49,7 @@ public class JourneyResponse {
     
     @JsonProperty("Id")
     public String id;
+
     public JourneyResponse withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +58,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JourneyChannelSettings")
     public JourneyChannelSettings journeyChannelSettings;
+
     public JourneyResponse withJourneyChannelSettings(JourneyChannelSettings journeyChannelSettings) {
         this.journeyChannelSettings = journeyChannelSettings;
         return this;
@@ -61,6 +67,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public JourneyResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -69,6 +76,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public JourneyLimits limits;
+
     public JourneyResponse withLimits(JourneyLimits limits) {
         this.limits = limits;
         return this;
@@ -77,6 +85,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalTime")
     public Boolean localTime;
+
     public JourneyResponse withLocalTime(Boolean localTime) {
         this.localTime = localTime;
         return this;
@@ -84,6 +93,7 @@ public class JourneyResponse {
     
     @JsonProperty("Name")
     public String name;
+
     public JourneyResponse withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +102,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenHours")
     public OpenHours openHours;
+
     public JourneyResponse withOpenHours(OpenHours openHours) {
         this.openHours = openHours;
         return this;
@@ -100,6 +111,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuietTime")
     public QuietTime quietTime;
+
     public JourneyResponse withQuietTime(QuietTime quietTime) {
         this.quietTime = quietTime;
         return this;
@@ -108,6 +120,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshFrequency")
     public String refreshFrequency;
+
     public JourneyResponse withRefreshFrequency(String refreshFrequency) {
         this.refreshFrequency = refreshFrequency;
         return this;
@@ -116,6 +129,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshOnSegmentUpdate")
     public Boolean refreshOnSegmentUpdate;
+
     public JourneyResponse withRefreshOnSegmentUpdate(Boolean refreshOnSegmentUpdate) {
         this.refreshOnSegmentUpdate = refreshOnSegmentUpdate;
         return this;
@@ -124,6 +138,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public JourneySchedule schedule;
+
     public JourneyResponse withSchedule(JourneySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -132,6 +147,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingSchedule")
     public Boolean sendingSchedule;
+
     public JourneyResponse withSendingSchedule(Boolean sendingSchedule) {
         this.sendingSchedule = sendingSchedule;
         return this;
@@ -140,6 +156,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartActivity")
     public String startActivity;
+
     public JourneyResponse withStartActivity(String startActivity) {
         this.startActivity = startActivity;
         return this;
@@ -148,6 +165,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartCondition")
     public StartCondition startCondition;
+
     public JourneyResponse withStartCondition(StartCondition startCondition) {
         this.startCondition = startCondition;
         return this;
@@ -156,6 +174,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public StateEnum state;
+
     public JourneyResponse withState(StateEnum state) {
         this.state = state;
         return this;
@@ -164,6 +183,7 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitForQuietTime")
     public Boolean waitForQuietTime;
+
     public JourneyResponse withWaitForQuietTime(Boolean waitForQuietTime) {
         this.waitForQuietTime = waitForQuietTime;
         return this;
@@ -172,9 +192,15 @@ public class JourneyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public JourneyResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public JourneyResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("Id") String id, @JsonProperty("Name") String name) {
+        this.applicationId = applicationId;
+        this.id = id;
+        this.name = name;
+  }
 }

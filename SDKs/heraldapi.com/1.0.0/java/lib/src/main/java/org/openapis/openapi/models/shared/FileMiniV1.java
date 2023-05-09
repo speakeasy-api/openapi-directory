@@ -18,6 +18,7 @@ public class FileMiniV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FileMiniV1 withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class FileMiniV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FileMiniV1StatusEnum status;
+
     public FileMiniV1 withStatus(FileMiniV1StatusEnum status) {
         this.status = status;
         return this;
@@ -40,6 +42,7 @@ public class FileMiniV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public FileMiniV1 withText(String text) {
         this.text = text;
         return this;
@@ -51,9 +54,11 @@ public class FileMiniV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public FileMiniV1TypeEnum type;
+
     public FileMiniV1 withType(FileMiniV1TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FileMiniV1(){}
 }

@@ -18,6 +18,7 @@ public class ApigatewayPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auditConfigs")
     public ApigatewayAuditConfig[] auditConfigs;
+
     public ApigatewayPolicy withAuditConfigs(ApigatewayAuditConfig[] auditConfigs) {
         this.auditConfigs = auditConfigs;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public ApigatewayBinding[] bindings;
+
     public ApigatewayPolicy withBindings(ApigatewayBinding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -40,6 +42,7 @@ public class ApigatewayPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ApigatewayPolicy withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,9 +54,11 @@ public class ApigatewayPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public ApigatewayPolicy withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public ApigatewayPolicy(){}
 }

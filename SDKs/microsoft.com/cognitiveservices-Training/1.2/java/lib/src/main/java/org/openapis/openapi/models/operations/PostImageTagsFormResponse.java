@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostImageTagsFormResponse {
     
     public byte[] body;
+
     public PostImageTagsFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostImageTagsFormResponse {
     
     
     public String contentType;
+
     public PostImageTagsFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostImageTagsFormResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageTagCreateSummary imageTagCreateSummary;
+
     public PostImageTagsFormResponse withImageTagCreateSummary(org.openapis.openapi.models.shared.ImageTagCreateSummary imageTagCreateSummary) {
         this.imageTagCreateSummary = imageTagCreateSummary;
         return this;
@@ -33,6 +37,7 @@ public class PostImageTagsFormResponse {
     
     
     public Integer statusCode;
+
     public PostImageTagsFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostImageTagsFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostImageTagsFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostImageTagsFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

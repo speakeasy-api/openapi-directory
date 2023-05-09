@@ -3,24 +3,23 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateSecurity;
 import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateRequest;
 import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse;
+import org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.BatchInput;
-import org.openapis.openapi.models.shared.SparkSqlBatch;
-import org.openapis.openapi.models.shared.SparkRBatch;
-import org.openapis.openapi.models.shared.SparkBatch;
-import org.openapis.openapi.models.shared.RuntimeInfoInput;
-import org.openapis.openapi.models.shared.UsageSnapshot;
-import org.openapis.openapi.models.shared.UsageMetrics;
-import org.openapis.openapi.models.shared.RuntimeConfig;
-import org.openapis.openapi.models.shared.PySparkBatch;
 import org.openapis.openapi.models.shared.EnvironmentConfig;
-import org.openapis.openapi.models.shared.PeripheralsConfig;
-import org.openapis.openapi.models.shared.SparkHistoryServerConfig;
 import org.openapis.openapi.models.shared.ExecutionConfig;
+import org.openapis.openapi.models.shared.PeripheralsConfig;
+import org.openapis.openapi.models.shared.PySparkBatch;
+import org.openapis.openapi.models.shared.RuntimeConfig;
+import org.openapis.openapi.models.shared.RuntimeInfoInput;
+import org.openapis.openapi.models.shared.SparkBatch;
+import org.openapis.openapi.models.shared.SparkHistoryServerConfig;
+import org.openapis.openapi.models.shared.SparkRBatch;
+import org.openapis.openapi.models.shared.SparkSqlBatch;
+import org.openapis.openapi.models.shared.UsageMetrics;
+import org.openapis.openapi.models.shared.UsageSnapshot;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -29,15 +28,14 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DataprocProjectsLocationsBatchesCreateRequest req = new DataprocProjectsLocationsBatchesCreateRequest() {{
-                dollarXgafv = "2";
+            DataprocProjectsLocationsBatchesCreateRequest req = new DataprocProjectsLocationsBatchesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 batchInput = new BatchInput() {{
                     environmentConfig = new EnvironmentConfig() {{
                         executionConfig = new ExecutionConfig() {{
-                            idleTtl = "provident";
-                            kmsKey = "distinctio";
+                            idleTtl = "distinctio";
+                            kmsKey = "quibusdam";
                             networkTags = new String[]{{
-                                add("unde"),
                                 add("nulla"),
                                 add("corrupti"),
                                 add("illum"),
@@ -47,14 +45,14 @@ public class Application {
                             stagingBucket = "deserunt";
                             subnetworkUri = "suscipit";
                             ttl = "iure";
-                        }};
+                        }};;
                         peripheralsConfig = new PeripheralsConfig() {{
                             metastoreService = "magnam";
                             sparkHistoryServerConfig = new SparkHistoryServerConfig() {{
                                 dataprocCluster = "debitis";
-                            }};
-                        }};
-                    }};
+                            }};;
+                        }};;
+                    }};;
                     labels = new java.util.HashMap<String, String>() {{
                         put("delectus", "tempora");
                     }};
@@ -87,7 +85,7 @@ public class Application {
                             add("at"),
                             add("maiores"),
                         }};
-                    }};
+                    }};;
                     runtimeConfig = new RuntimeConfig() {{
                         containerImage = "molestiae";
                         properties = new java.util.HashMap<String, String>() {{
@@ -97,18 +95,18 @@ public class Application {
                             put("nam", "officia");
                         }};
                         version = "occaecati";
-                    }};
+                    }};;
                     runtimeInfo = new RuntimeInfoInput() {{
                         approximateUsage = new UsageMetrics() {{
                             milliDcuSeconds = "fugit";
                             shuffleStorageGbSeconds = "deleniti";
-                        }};
+                        }};;
                         currentUsage = new UsageSnapshot() {{
                             milliDcu = "hic";
                             shuffleStorageGb = "optio";
                             snapshotTime = "totam";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     sparkBatch = new SparkBatch() {{
                         archiveUris = new String[]{{
                             add("commodi"),
@@ -128,7 +126,7 @@ public class Application {
                         }};
                         mainClass = "ad";
                         mainJarFileUri = "natus";
-                    }};
+                    }};;
                     sparkRBatch = new SparkRBatch() {{
                         archiveUris = new String[]{{
                             add("iste"),
@@ -141,7 +139,7 @@ public class Application {
                             add("saepe"),
                         }};
                         mainRFileUri = "fuga";
-                    }};
+                    }};;
                     sparkSqlBatch = new SparkSqlBatch() {{
                         jarFileUris = new String[]{{
                             add("corporis"),
@@ -154,33 +152,34 @@ public class Application {
                             put("est", "mollitia");
                             put("laborum", "dolores");
                         }};
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "dolorem";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 batchId = "explicabo";
                 callback = "nobis";
                 fields = "enim";
                 key = "omnis";
                 oauthToken = "nemo";
-                parent = "minima";
                 prettyPrint = false;
-                quotaUser = "excepturi";
-                requestId = "accusantium";
-                uploadType = "iure";
-                uploadProtocol = "culpa";
-            }}            
+                quotaUser = "minima";
+                requestId = "excepturi";
+                uploadType = "accusantium";
+                uploadProtocol = "iure";
+            }};            
 
-            DataprocProjectsLocationsBatchesCreateResponse res = sdk.projects.dataprocProjectsLocationsBatchesCreate(req, new DataprocProjectsLocationsBatchesCreateSecurity() {{
+            DataprocProjectsLocationsBatchesCreateResponse res = sdk.projects.dataprocProjectsLocationsBatchesCreate(req, new DataprocProjectsLocationsBatchesCreateSecurity("culpa", "doloribus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

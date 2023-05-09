@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PointPointHourly {
     @JsonProperty("data")
     public PointPointHourlyData[] data;
+
     public PointPointHourly withData(PointPointHourlyData[] data) {
         this.data = data;
         return this;
     }
     
+    public PointPointHourly(@JsonProperty("data") PointPointHourlyData[] data) {
+        this.data = data;
+  }
 }

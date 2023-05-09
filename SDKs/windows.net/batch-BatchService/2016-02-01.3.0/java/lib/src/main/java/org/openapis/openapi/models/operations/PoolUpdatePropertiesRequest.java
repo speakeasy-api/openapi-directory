@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PoolUpdatePropertiesRequest {
@@ -12,6 +13,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PoolUpdatePropertiesParameter poolUpdatePropertiesParameter;
+
     public PoolUpdatePropertiesRequest withPoolUpdatePropertiesParameter(org.openapis.openapi.models.shared.PoolUpdatePropertiesParameter poolUpdatePropertiesParameter) {
         this.poolUpdatePropertiesParameter = poolUpdatePropertiesParameter;
         return this;
@@ -22,6 +24,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public PoolUpdatePropertiesRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public PoolUpdatePropertiesRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public PoolUpdatePropertiesRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=poolId")
     public String poolId;
+
     public PoolUpdatePropertiesRequest withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -62,6 +68,7 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public PoolUpdatePropertiesRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,15 @@ public class PoolUpdatePropertiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public PoolUpdatePropertiesRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public PoolUpdatePropertiesRequest(@JsonProperty("PoolUpdatePropertiesParameter") org.openapis.openapi.models.shared.PoolUpdatePropertiesParameter poolUpdatePropertiesParameter, @JsonProperty("api-version") String apiVersion, @JsonProperty("poolId") String poolId) {
+        this.poolUpdatePropertiesParameter = poolUpdatePropertiesParameter;
+        this.apiVersion = apiVersion;
+        this.poolId = poolId;
+  }
 }

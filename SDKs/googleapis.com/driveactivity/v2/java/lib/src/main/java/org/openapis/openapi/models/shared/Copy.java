@@ -18,9 +18,11 @@ public class Copy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalObject")
     public TargetReference originalObject;
+
     public Copy withOriginalObject(TargetReference originalObject) {
         this.originalObject = originalObject;
         return this;
     }
     
+    public Copy(){}
 }

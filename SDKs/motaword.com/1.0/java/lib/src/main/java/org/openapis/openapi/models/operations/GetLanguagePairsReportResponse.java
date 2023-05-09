@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLanguagePairsReportResponse {
     
     public String contentType;
+
     public GetLanguagePairsReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetLanguagePairsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetLanguagePairsReportResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetLanguagePairsReportResponse {
      */
     
     public org.openapis.openapi.models.shared.LanguagePairsReport languagePairsReport;
+
     public GetLanguagePairsReportResponse withLanguagePairsReport(org.openapis.openapi.models.shared.LanguagePairsReport languagePairsReport) {
         this.languagePairsReport = languagePairsReport;
         return this;
@@ -36,6 +40,7 @@ public class GetLanguagePairsReportResponse {
     
     
     public Integer statusCode;
+
     public GetLanguagePairsReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetLanguagePairsReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLanguagePairsReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetLanguagePairsReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

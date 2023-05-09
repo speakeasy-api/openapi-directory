@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEndpointResponse {
@@ -12,6 +13,7 @@ public class GetEndpointResponse {
      */
     
     public Object badRequestException;
+
     public GetEndpointResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetEndpointResponse {
     
     
     public String contentType;
+
     public GetEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEndpointResponse {
      */
     
     public Object forbiddenException;
+
     public GetEndpointResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEndpointResponse getEndpointResponse;
+
     public GetEndpointResponse withGetEndpointResponse(org.openapis.openapi.models.shared.GetEndpointResponse getEndpointResponse) {
         this.getEndpointResponse = getEndpointResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetEndpointResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetEndpointResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetEndpointResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetEndpointResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetEndpointResponse {
      */
     
     public Object notFoundException;
+
     public GetEndpointResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetEndpointResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetEndpointResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetEndpointResponse {
     
     
     public Integer statusCode;
+
     public GetEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetEndpointResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetEndpointResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

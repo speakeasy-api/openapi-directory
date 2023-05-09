@@ -15,6 +15,7 @@ public class DeviceRegistrationRequest {
      */
     @JsonProperty("id")
     public String id;
+
     public DeviceRegistrationRequest withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class DeviceRegistrationRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public DeviceRegistrationRequest withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,15 @@ public class DeviceRegistrationRequest {
      */
     @JsonProperty("type")
     public String type;
+
     public DeviceRegistrationRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeviceRegistrationRequest(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

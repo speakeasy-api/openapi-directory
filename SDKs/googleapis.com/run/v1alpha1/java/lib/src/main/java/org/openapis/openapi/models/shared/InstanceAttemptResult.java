@@ -18,6 +18,7 @@ public class InstanceAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public InstanceAttemptResult withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -29,9 +30,11 @@ public class InstanceAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public InstanceAttemptResult withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
     }
     
+    public InstanceAttemptResult(){}
 }

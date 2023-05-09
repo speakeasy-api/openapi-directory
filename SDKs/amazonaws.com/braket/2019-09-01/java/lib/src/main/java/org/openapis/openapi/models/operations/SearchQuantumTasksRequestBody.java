@@ -14,6 +14,7 @@ public class SearchQuantumTasksRequestBody {
      */
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SearchQuantumTasksFilter[] filters;
+
     public SearchQuantumTasksRequestBody withFilters(org.openapis.openapi.models.shared.SearchQuantumTasksFilter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class SearchQuantumTasksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchQuantumTasksRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class SearchQuantumTasksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchQuantumTasksRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchQuantumTasksRequestBody(@JsonProperty("filters") org.openapis.openapi.models.shared.SearchQuantumTasksFilter[] filters) {
+        this.filters = filters;
+  }
 }

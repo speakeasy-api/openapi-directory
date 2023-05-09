@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrmV3ExtensionsCardsAppIdGetAllResponse {
     
     public byte[] body;
+
     public GetCrmV3ExtensionsCardsAppIdGetAllResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class GetCrmV3ExtensionsCardsAppIdGetAllResponse {
      */
     
     public org.openapis.openapi.models.shared.CardListResponse cardListResponse;
+
     public GetCrmV3ExtensionsCardsAppIdGetAllResponse withCardListResponse(org.openapis.openapi.models.shared.CardListResponse cardListResponse) {
         this.cardListResponse = cardListResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetCrmV3ExtensionsCardsAppIdGetAllResponse {
     
     
     public String contentType;
+
     public GetCrmV3ExtensionsCardsAppIdGetAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class GetCrmV3ExtensionsCardsAppIdGetAllResponse {
     
     
     public Integer statusCode;
+
     public GetCrmV3ExtensionsCardsAppIdGetAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCrmV3ExtensionsCardsAppIdGetAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrmV3ExtensionsCardsAppIdGetAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrmV3ExtensionsCardsAppIdGetAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

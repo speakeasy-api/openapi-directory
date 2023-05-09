@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListStageDevicesResponse {
     @JsonProperty("DeviceDeploymentSummaries")
     public DeviceDeploymentSummary[] deviceDeploymentSummaries;
+
     public ListStageDevicesResponse withDeviceDeploymentSummaries(DeviceDeploymentSummary[] deviceDeploymentSummaries) {
         this.deviceDeploymentSummaries = deviceDeploymentSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListStageDevicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStageDevicesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListStageDevicesResponse(@JsonProperty("DeviceDeploymentSummaries") DeviceDeploymentSummary[] deviceDeploymentSummaries) {
+        this.deviceDeploymentSummaries = deviceDeploymentSummaries;
+  }
 }

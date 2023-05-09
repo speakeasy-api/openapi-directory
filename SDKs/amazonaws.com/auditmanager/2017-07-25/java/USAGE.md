@@ -3,41 +3,39 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequestBody;
 import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequest;
+import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderRequestBody;
 import org.openapis.openapi.models.operations.AssociateAssessmentReportEvidenceFolderResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AssociateAssessmentReportEvidenceFolderRequest req = new AssociateAssessmentReportEvidenceFolderRequest() {{
-                requestBody = new AssociateAssessmentReportEvidenceFolderRequestBody() {{
-                    evidenceFolderId = "corrupti";
-                }};
-                xAmzAlgorithm = "provident";
-                xAmzContentSha256 = "distinctio";
-                xAmzCredential = "quibusdam";
-                xAmzDate = "unde";
-                xAmzSecurityToken = "nulla";
-                xAmzSignature = "corrupti";
-                xAmzSignedHeaders = "illum";
-                assessmentId = "vel";
-            }}            
+            AssociateAssessmentReportEvidenceFolderRequest req = new AssociateAssessmentReportEvidenceFolderRequest(                new AssociateAssessmentReportEvidenceFolderRequestBody("provident");, "distinctio") {{
+                xAmzAlgorithm = "quibusdam";
+                xAmzContentSha256 = "unde";
+                xAmzCredential = "nulla";
+                xAmzDate = "corrupti";
+                xAmzSecurityToken = "illum";
+                xAmzSignature = "vel";
+                xAmzSignedHeaders = "error";
+            }};            
 
             AssociateAssessmentReportEvidenceFolderResponse res = sdk.associateAssessmentReportEvidenceFolder(req);
 
-            if (res.associateAssessmentReportEvidenceFolderResponse.isPresent()) {
+            if (res.associateAssessmentReportEvidenceFolderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

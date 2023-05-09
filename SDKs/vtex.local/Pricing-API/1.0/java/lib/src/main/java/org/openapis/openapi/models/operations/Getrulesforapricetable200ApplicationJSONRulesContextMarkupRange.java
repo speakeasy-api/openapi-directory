@@ -18,6 +18,7 @@ public class Getrulesforapricetable200ApplicationJSONRulesContextMarkupRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public Long from;
+
     public Getrulesforapricetable200ApplicationJSONRulesContextMarkupRange withFrom(Long from) {
         this.from = from;
         return this;
@@ -29,9 +30,11 @@ public class Getrulesforapricetable200ApplicationJSONRulesContextMarkupRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public Long to;
+
     public Getrulesforapricetable200ApplicationJSONRulesContextMarkupRange withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public Getrulesforapricetable200ApplicationJSONRulesContextMarkupRange(){}
 }

@@ -15,6 +15,7 @@ public class IssueTokenRequestMetadataRulesFees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public IssueTokenRequestMetadataRulesFeesItems[] items;
+
     public IssueTokenRequestMetadataRulesFees withItems(IssueTokenRequestMetadataRulesFeesItems[] items) {
         this.items = items;
         return this;
@@ -26,9 +27,11 @@ public class IssueTokenRequestMetadataRulesFees {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public IssueTokenRequestMetadataRulesFees withLocked(Boolean locked) {
         this.locked = locked;
         return this;
     }
     
+    public IssueTokenRequestMetadataRulesFees(){}
 }

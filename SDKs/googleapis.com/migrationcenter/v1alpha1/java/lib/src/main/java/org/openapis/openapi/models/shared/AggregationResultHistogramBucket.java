@@ -18,6 +18,7 @@ public class AggregationResultHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public AggregationResultHistogramBucket withCount(String count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class AggregationResultHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowerBound")
     public Double lowerBound;
+
     public AggregationResultHistogramBucket withLowerBound(Double lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -40,9 +42,11 @@ public class AggregationResultHistogramBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upperBound")
     public Double upperBound;
+
     public AggregationResultHistogramBucket withUpperBound(Double upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public AggregationResultHistogramBucket(){}
 }

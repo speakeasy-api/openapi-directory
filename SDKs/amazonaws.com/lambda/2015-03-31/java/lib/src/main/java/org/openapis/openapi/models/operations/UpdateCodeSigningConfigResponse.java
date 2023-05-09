@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCodeSigningConfigResponse {
     
     public String contentType;
+
     public UpdateCodeSigningConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCodeSigningConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateCodeSigningConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateCodeSigningConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateCodeSigningConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateCodeSigningConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCodeSigningConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCodeSigningConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCodeSigningConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCodeSigningConfigResponse {
      */
     
     public Object serviceException;
+
     public UpdateCodeSigningConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCodeSigningConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCodeSigningConfigResponse updateCodeSigningConfigResponse;
+
     public UpdateCodeSigningConfigResponse withUpdateCodeSigningConfigResponse(org.openapis.openapi.models.shared.UpdateCodeSigningConfigResponse updateCodeSigningConfigResponse) {
         this.updateCodeSigningConfigResponse = updateCodeSigningConfigResponse;
         return this;
     }
     
+    public UpdateCodeSigningConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

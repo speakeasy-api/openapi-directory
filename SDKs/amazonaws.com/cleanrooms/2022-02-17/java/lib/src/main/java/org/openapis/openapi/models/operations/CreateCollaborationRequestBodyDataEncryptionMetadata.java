@@ -15,6 +15,7 @@ public class CreateCollaborationRequestBodyDataEncryptionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCleartext")
     public Boolean allowCleartext;
+
     public CreateCollaborationRequestBodyDataEncryptionMetadata withAllowCleartext(Boolean allowCleartext) {
         this.allowCleartext = allowCleartext;
         return this;
@@ -23,6 +24,7 @@ public class CreateCollaborationRequestBodyDataEncryptionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowDuplicates")
     public Boolean allowDuplicates;
+
     public CreateCollaborationRequestBodyDataEncryptionMetadata withAllowDuplicates(Boolean allowDuplicates) {
         this.allowDuplicates = allowDuplicates;
         return this;
@@ -31,6 +33,7 @@ public class CreateCollaborationRequestBodyDataEncryptionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowJoinsOnColumnsWithDifferentNames")
     public Boolean allowJoinsOnColumnsWithDifferentNames;
+
     public CreateCollaborationRequestBodyDataEncryptionMetadata withAllowJoinsOnColumnsWithDifferentNames(Boolean allowJoinsOnColumnsWithDifferentNames) {
         this.allowJoinsOnColumnsWithDifferentNames = allowJoinsOnColumnsWithDifferentNames;
         return this;
@@ -39,9 +42,11 @@ public class CreateCollaborationRequestBodyDataEncryptionMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveNulls")
     public Boolean preserveNulls;
+
     public CreateCollaborationRequestBodyDataEncryptionMetadata withPreserveNulls(Boolean preserveNulls) {
         this.preserveNulls = preserveNulls;
         return this;
     }
     
+    public CreateCollaborationRequestBodyDataEncryptionMetadata(){}
 }

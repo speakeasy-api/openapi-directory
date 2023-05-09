@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSegmentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSegmentModel updateSegmentModel;
+
     public UpdateSegmentRequest withUpdateSegmentModel(org.openapis.openapi.models.shared.UpdateSegmentModel updateSegmentModel) {
         this.updateSegmentModel = updateSegmentModel;
         return this;
@@ -19,9 +21,14 @@ public class UpdateSegmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=segmentId")
     public String segmentId;
+
     public UpdateSegmentRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public UpdateSegmentRequest(@JsonProperty("UpdateSegmentModel") org.openapis.openapi.models.shared.UpdateSegmentModel updateSegmentModel, @JsonProperty("segmentId") String segmentId) {
+        this.updateSegmentModel = updateSegmentModel;
+        this.segmentId = segmentId;
+  }
 }

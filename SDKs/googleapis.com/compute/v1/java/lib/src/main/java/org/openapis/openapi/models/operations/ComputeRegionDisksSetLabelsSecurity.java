@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionDisksSetLabelsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksSetLabelsSecurityOption1 option1;
+
     public ComputeRegionDisksSetLabelsSecurity withOption1(ComputeRegionDisksSetLabelsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionDisksSetLabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksSetLabelsSecurityOption2 option2;
+
     public ComputeRegionDisksSetLabelsSecurity withOption2(ComputeRegionDisksSetLabelsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionDisksSetLabelsSecurity(){}
 }

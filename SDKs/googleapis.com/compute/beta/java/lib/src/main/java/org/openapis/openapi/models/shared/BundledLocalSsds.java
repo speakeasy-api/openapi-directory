@@ -15,6 +15,7 @@ public class BundledLocalSsds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultInterface")
     public String defaultInterface;
+
     public BundledLocalSsds withDefaultInterface(String defaultInterface) {
         this.defaultInterface = defaultInterface;
         return this;
@@ -26,9 +27,11 @@ public class BundledLocalSsds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionCount")
     public Integer partitionCount;
+
     public BundledLocalSsds withPartitionCount(Integer partitionCount) {
         this.partitionCount = partitionCount;
         return this;
     }
     
+    public BundledLocalSsds(){}
 }

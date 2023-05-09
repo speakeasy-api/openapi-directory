@@ -18,6 +18,7 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscale")
     public AutoscaleInput autoscale;
+
     public ReservationInput withAutoscale(AutoscaleInput autoscale) {
         this.autoscale = autoscale;
         return this;
@@ -29,6 +30,7 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrency")
     public String concurrency;
+
     public ReservationInput withConcurrency(String concurrency) {
         this.concurrency = concurrency;
         return this;
@@ -40,6 +42,7 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edition")
     public ReservationEditionEnum edition;
+
     public ReservationInput withEdition(ReservationEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -51,6 +54,7 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreIdleSlots")
     public Boolean ignoreIdleSlots;
+
     public ReservationInput withIgnoreIdleSlots(Boolean ignoreIdleSlots) {
         this.ignoreIdleSlots = ignoreIdleSlots;
         return this;
@@ -62,6 +66,7 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiRegionAuxiliary")
     public Boolean multiRegionAuxiliary;
+
     public ReservationInput withMultiRegionAuxiliary(Boolean multiRegionAuxiliary) {
         this.multiRegionAuxiliary = multiRegionAuxiliary;
         return this;
@@ -73,20 +78,23 @@ public class ReservationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReservationInput withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If total slot_capacity of the reservation and its siblings exceeds the total slot_count of all capacity commitments, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
+     * Minimum slots available to this reservation. A slot is a unit of computational power in BigQuery, and serves as the unit of parallelism. Queries using this reservation might use more slots during runtime if ignore_idle_slots is set to false. If edition is EDITION_UNSPECIFIED and total slot_capacity of the reservation and its siblings exceeds the total slot_count of all capacity commitments, the request will fail with `google.rpc.Code.RESOURCE_EXHAUSTED`. If edition is any value but EDITION_UNSPECIFIED, then the above requirement is not needed. The total slot_capacity of the reservation and its siblings may exceed the total slot_count of capacity commitments. In that case, the exceeding slots will be charged with the autoscale SKU. You can increase the number of baseline slots in a reservation every few minutes. If you want to decrease your baseline slots, you are limited to once an hour if you have recently changed your baseline slot capacity and your baseline slots exceed your committed slots. Otherwise, you can decrease your baseline slots every few minutes. NOTE: for reservations in US or EU multi-regions, slot capacity constraints are checked separately for default and auxiliary regions. See multi_region_auxiliary flag for more details.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotCapacity")
     public String slotCapacity;
+
     public ReservationInput withSlotCapacity(String slotCapacity) {
         this.slotCapacity = slotCapacity;
         return this;
     }
     
+    public ReservationInput(){}
 }

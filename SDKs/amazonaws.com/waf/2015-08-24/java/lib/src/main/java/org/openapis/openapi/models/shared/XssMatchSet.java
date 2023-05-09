@@ -15,6 +15,7 @@ public class XssMatchSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public XssMatchSet withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class XssMatchSet {
     
     @JsonProperty("XssMatchSetId")
     public String xssMatchSetId;
+
     public XssMatchSet withXssMatchSetId(String xssMatchSetId) {
         this.xssMatchSetId = xssMatchSetId;
         return this;
@@ -29,9 +31,14 @@ public class XssMatchSet {
     
     @JsonProperty("XssMatchTuples")
     public XssMatchTuple[] xssMatchTuples;
+
     public XssMatchSet withXssMatchTuples(XssMatchTuple[] xssMatchTuples) {
         this.xssMatchTuples = xssMatchTuples;
         return this;
     }
     
+    public XssMatchSet(@JsonProperty("XssMatchSetId") String xssMatchSetId, @JsonProperty("XssMatchTuples") XssMatchTuple[] xssMatchTuples) {
+        this.xssMatchSetId = xssMatchSetId;
+        this.xssMatchTuples = xssMatchTuples;
+  }
 }

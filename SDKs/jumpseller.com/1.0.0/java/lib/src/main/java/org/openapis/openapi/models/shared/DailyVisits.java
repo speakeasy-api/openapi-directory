@@ -12,6 +12,7 @@ public class DailyVisits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public DailyVisits withDate(String date) {
         this.date = date;
         return this;
@@ -20,9 +21,11 @@ public class DailyVisits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visits")
     public Long visits;
+
     public DailyVisits withVisits(Long visits) {
         this.visits = visits;
         return this;
     }
     
+    public DailyVisits(){}
 }

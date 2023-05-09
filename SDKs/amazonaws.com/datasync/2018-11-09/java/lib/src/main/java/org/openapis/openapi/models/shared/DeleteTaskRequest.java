@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTaskRequest {
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public DeleteTaskRequest withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public DeleteTaskRequest(@JsonProperty("TaskArn") String taskArn) {
+        this.taskArn = taskArn;
+  }
 }

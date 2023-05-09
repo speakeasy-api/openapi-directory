@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ChangeMessageVisibilityRequest {
     
     public String queueUrl;
+
     public ChangeMessageVisibilityRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
@@ -16,6 +17,7 @@ public class ChangeMessageVisibilityRequest {
     
     
     public String receiptHandle;
+
     public ChangeMessageVisibilityRequest withReceiptHandle(String receiptHandle) {
         this.receiptHandle = receiptHandle;
         return this;
@@ -23,9 +25,15 @@ public class ChangeMessageVisibilityRequest {
     
     
     public Long visibilityTimeout;
+
     public ChangeMessageVisibilityRequest withVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
     }
     
+    public ChangeMessageVisibilityRequest(@JsonProperty("QueueUrl") String queueUrl, @JsonProperty("ReceiptHandle") String receiptHandle, @JsonProperty("VisibilityTimeout") Long visibilityTimeout) {
+        this.queueUrl = queueUrl;
+        this.receiptHandle = receiptHandle;
+        this.visibilityTimeout = visibilityTimeout;
+  }
 }

@@ -25,6 +25,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public Account account;
+
     public AdminReport withAccount(Account account) {
         this.account = account;
         return this;
@@ -36,6 +37,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action_taken")
     public String actionTaken;
+
     public AdminReport withActionTaken(String actionTaken) {
         this.actionTaken = actionTaken;
         return this;
@@ -48,6 +50,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigned_account")
     public Account assignedAccount;
+
     public AdminReport withAssignedAccount(Account assignedAccount) {
         this.assignedAccount = assignedAccount;
         return this;
@@ -59,6 +62,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public AdminReport withComment(String comment) {
         this.comment = comment;
         return this;
@@ -72,6 +76,7 @@ public class AdminReport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public AdminReport withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -83,6 +88,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AdminReport withId(String id) {
         this.id = id;
         return this;
@@ -94,6 +100,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public Status[] statuses;
+
     public AdminReport withStatuses(Status[] statuses) {
         this.statuses = statuses;
         return this;
@@ -106,6 +113,7 @@ public class AdminReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_account")
     public Account targetAccount;
+
     public AdminReport withTargetAccount(Account targetAccount) {
         this.targetAccount = targetAccount;
         return this;
@@ -119,9 +127,11 @@ public class AdminReport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public AdminReport withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AdminReport(){}
 }

@@ -18,6 +18,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UserPhoto withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public UserPhoto withHeight(Integer height) {
         this.height = height;
         return this;
@@ -40,6 +42,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UserPhoto withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UserPhoto withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public UserPhoto withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -73,6 +78,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoData")
     public String photoData;
+
     public UserPhoto withPhotoData(String photoData) {
         this.photoData = photoData;
         return this;
@@ -84,6 +90,7 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryEmail")
     public String primaryEmail;
+
     public UserPhoto withPrimaryEmail(String primaryEmail) {
         this.primaryEmail = primaryEmail;
         return this;
@@ -95,9 +102,11 @@ public class UserPhoto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public UserPhoto withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public UserPhoto(){}
 }

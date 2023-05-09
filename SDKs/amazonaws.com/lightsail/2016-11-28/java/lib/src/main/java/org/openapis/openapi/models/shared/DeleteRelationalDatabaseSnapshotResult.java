@@ -15,9 +15,11 @@ public class DeleteRelationalDatabaseSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteRelationalDatabaseSnapshotResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteRelationalDatabaseSnapshotResult(){}
 }

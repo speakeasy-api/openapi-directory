@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAdminAccess")
     public Boolean useAdminAccess;
+
     public GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest withUseAdminAccess(Boolean useAdminAccess) {
         this.useAdminAccess = useAdminAccess;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeleteLabelPermissionRequest(){}
 }

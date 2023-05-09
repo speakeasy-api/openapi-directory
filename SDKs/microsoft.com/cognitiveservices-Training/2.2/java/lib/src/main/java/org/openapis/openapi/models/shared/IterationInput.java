@@ -20,6 +20,7 @@ public class IterationInput {
     @JsonProperty("isDefault")
     @SpeakeasyMetadata("form:name=isDefault")
     public Boolean isDefault;
+
     public IterationInput withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -32,9 +33,11 @@ public class IterationInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public IterationInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IterationInput(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customColumns")
     public GoogleAdsSearchads360V0ResourcesCustomColumn[] customColumns;
+
     public GoogleAdsSearchads360V0ServicesListCustomColumnsResponse withCustomColumns(GoogleAdsSearchads360V0ResourcesCustomColumn[] customColumns) {
         this.customColumns = customColumns;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesListCustomColumnsResponse(){}
 }

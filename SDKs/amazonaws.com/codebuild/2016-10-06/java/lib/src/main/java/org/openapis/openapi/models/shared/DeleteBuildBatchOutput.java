@@ -15,6 +15,7 @@ public class DeleteBuildBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildsDeleted")
     public String[] buildsDeleted;
+
     public DeleteBuildBatchOutput withBuildsDeleted(String[] buildsDeleted) {
         this.buildsDeleted = buildsDeleted;
         return this;
@@ -23,6 +24,7 @@ public class DeleteBuildBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildsNotDeleted")
     public BuildNotDeleted[] buildsNotDeleted;
+
     public DeleteBuildBatchOutput withBuildsNotDeleted(BuildNotDeleted[] buildsNotDeleted) {
         this.buildsNotDeleted = buildsNotDeleted;
         return this;
@@ -31,9 +33,11 @@ public class DeleteBuildBatchOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public DeleteBuildBatchOutput withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public DeleteBuildBatchOutput(){}
 }

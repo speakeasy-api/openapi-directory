@@ -15,6 +15,7 @@ public class LanguageIdSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageModelName")
     public String languageModelName;
+
     public LanguageIdSettings withLanguageModelName(String languageModelName) {
         this.languageModelName = languageModelName;
         return this;
@@ -23,6 +24,7 @@ public class LanguageIdSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFilterName")
     public String vocabularyFilterName;
+
     public LanguageIdSettings withVocabularyFilterName(String vocabularyFilterName) {
         this.vocabularyFilterName = vocabularyFilterName;
         return this;
@@ -31,9 +33,11 @@ public class LanguageIdSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public LanguageIdSettings withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public LanguageIdSettings(){}
 }

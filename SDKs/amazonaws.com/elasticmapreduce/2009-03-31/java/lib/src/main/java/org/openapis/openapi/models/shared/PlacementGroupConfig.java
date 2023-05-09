@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlacementGroupConfig {
     @JsonProperty("InstanceRole")
     public InstanceRoleTypeEnum instanceRole;
+
     public PlacementGroupConfig withInstanceRole(InstanceRoleTypeEnum instanceRole) {
         this.instanceRole = instanceRole;
         return this;
@@ -22,9 +23,13 @@ public class PlacementGroupConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementStrategy")
     public PlacementGroupStrategyEnum placementStrategy;
+
     public PlacementGroupConfig withPlacementStrategy(PlacementGroupStrategyEnum placementStrategy) {
         this.placementStrategy = placementStrategy;
         return this;
     }
     
+    public PlacementGroupConfig(@JsonProperty("InstanceRole") InstanceRoleTypeEnum instanceRole) {
+        this.instanceRole = instanceRole;
+  }
 }

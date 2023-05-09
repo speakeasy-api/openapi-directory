@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest {
     
     public Boolean dryRun;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public String localGatewayRouteTableVirtualInterfaceGroupAssociationId;
+
     public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest withLocalGatewayRouteTableVirtualInterfaceGroupAssociationId(String localGatewayRouteTableVirtualInterfaceGroupAssociationId) {
         this.localGatewayRouteTableVirtualInterfaceGroupAssociationId = localGatewayRouteTableVirtualInterfaceGroupAssociationId;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest(@JsonProperty("LocalGatewayRouteTableVirtualInterfaceGroupAssociationId") String localGatewayRouteTableVirtualInterfaceGroupAssociationId) {
+        this.localGatewayRouteTableVirtualInterfaceGroupAssociationId = localGatewayRouteTableVirtualInterfaceGroupAssociationId;
+  }
 }

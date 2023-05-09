@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListArchiveRulesResponse {
@@ -12,6 +13,7 @@ public class ListArchiveRulesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListArchiveRulesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListArchiveRulesResponse {
     
     
     public String contentType;
+
     public ListArchiveRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListArchiveRulesResponse {
      */
     
     public Object internalServerException;
+
     public ListArchiveRulesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListArchiveRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListArchiveRulesResponse listArchiveRulesResponse;
+
     public ListArchiveRulesResponse withListArchiveRulesResponse(org.openapis.openapi.models.shared.ListArchiveRulesResponse listArchiveRulesResponse) {
         this.listArchiveRulesResponse = listArchiveRulesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListArchiveRulesResponse {
     
     
     public Integer statusCode;
+
     public ListArchiveRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListArchiveRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListArchiveRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListArchiveRulesResponse {
      */
     
     public Object throttlingException;
+
     public ListArchiveRulesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListArchiveRulesResponse {
      */
     
     public Object validationException;
+
     public ListArchiveRulesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListArchiveRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

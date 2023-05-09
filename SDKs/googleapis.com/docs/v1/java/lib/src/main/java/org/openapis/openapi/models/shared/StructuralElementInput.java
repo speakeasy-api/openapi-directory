@@ -18,6 +18,7 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public StructuralElementInput withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -29,6 +30,7 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paragraph")
     public ParagraphInput paragraph;
+
     public StructuralElementInput withParagraph(ParagraphInput paragraph) {
         this.paragraph = paragraph;
         return this;
@@ -40,6 +42,7 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionBreak")
     public SectionBreak sectionBreak;
+
     public StructuralElementInput withSectionBreak(SectionBreak sectionBreak) {
         this.sectionBreak = sectionBreak;
         return this;
@@ -51,6 +54,7 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public StructuralElementInput withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -62,6 +66,7 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public Table table;
+
     public StructuralElementInput withTable(Table table) {
         this.table = table;
         return this;
@@ -73,9 +78,11 @@ public class StructuralElementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableOfContents")
     public TableOfContents tableOfContents;
+
     public StructuralElementInput withTableOfContents(TableOfContents tableOfContents) {
         this.tableOfContents = tableOfContents;
         return this;
     }
     
+    public StructuralElementInput(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VpcConfiguration {
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcConfiguration withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcConfiguration(@JsonProperty("vpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

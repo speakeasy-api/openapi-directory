@@ -15,9 +15,11 @@ public class DescribeBuildOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Build")
     public Build build;
+
     public DescribeBuildOutput withBuild(Build build) {
         this.build = build;
         return this;
     }
     
+    public DescribeBuildOutput(){}
 }

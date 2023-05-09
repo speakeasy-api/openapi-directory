@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostAssignTerminalsSecurity;
 import org.openapis.openapi.models.operations.PostAssignTerminalsResponse;
+import org.openapis.openapi.models.operations.PostAssignTerminalsSecurity;
 import org.openapis.openapi.models.shared.AssignTerminalsRequest;
 
 public class Application {
@@ -27,29 +26,28 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.AssignTerminalsRequest req = new AssignTerminalsRequest() {{
-                companyAccount = "corrupti";
-                merchantAccount = "provident";
+            org.openapis.openapi.models.shared.AssignTerminalsRequest req = new AssignTerminalsRequest("corrupti",                 new String[]{{
+                                add("distinctio"),
+                                add("quibusdam"),
+                                add("unde"),
+                            }}) {{
+                merchantAccount = "nulla";
                 merchantInventory = false;
-                store = "distinctio";
-                terminals = new String[]{{
-                    add("unde"),
-                    add("nulla"),
-                    add("corrupti"),
-                    add("illum"),
-                }};
-            }}            
+                store = "corrupti";
+            }};            
 
-            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req, new PostAssignTerminalsSecurity() {{
+            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req, new PostAssignTerminalsSecurity("illum") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.assignTerminalsResponse.isPresent()) {
+            if (res.assignTerminalsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -57,13 +55,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postAssignTerminals` - Assign terminals
-* `postFindTerminal` - Get the account or store of a terminal
-* `postGetStoresUnderAccount` - Get the stores of an account
-* `postGetTerminalDetails` - Get the details of a terminal
-* `postGetTerminalsUnderAccount` - Get the list of terminals
+* [postAssignTerminals](docs/general/README.md#postassignterminals) - Assign terminals
+* [postFindTerminal](docs/general/README.md#postfindterminal) - Get the account or store of a terminal
+* [postGetStoresUnderAccount](docs/general/README.md#postgetstoresunderaccount) - Get the stores of an account
+* [postGetTerminalDetails](docs/general/README.md#postgetterminaldetails) - Get the details of a terminal
+* [postGetTerminalsUnderAccount](docs/general/README.md#postgetterminalsunderaccount) - Get the list of terminals
 <!-- End SDK Available Operations -->
 
 ### Maturity

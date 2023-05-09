@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ZendeskSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public ZendeskSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ZendeskSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

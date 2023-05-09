@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse {
     
     public String contentType;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionA
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration googleCloudRecommendationengineV1beta1PredictionApiKeyRegistration;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse withGoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration(org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration googleCloudRecommendationengineV1beta1PredictionApiKeyRegistration) {
         this.googleCloudRecommendationengineV1beta1PredictionApiKeyRegistration = googleCloudRecommendationengineV1beta1PredictionApiKeyRegistration;
         return this;
@@ -26,6 +29,7 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionA
     
     
     public Integer statusCode;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresPredictionA
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecommendationengineProjectsLocationsCatalogsEventStoresPredictionApiKeyRegistrationsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

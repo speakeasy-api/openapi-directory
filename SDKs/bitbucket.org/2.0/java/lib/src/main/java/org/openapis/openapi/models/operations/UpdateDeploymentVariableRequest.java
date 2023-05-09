@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeploymentVariableRequest {
@@ -12,6 +13,7 @@ public class UpdateDeploymentVariableRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public UpdateDeploymentVariableRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDeploymentVariableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_uuid")
     public String environmentUuid;
+
     public UpdateDeploymentVariableRequest withEnvironmentUuid(String environmentUuid) {
         this.environmentUuid = environmentUuid;
         return this;
@@ -32,6 +35,7 @@ public class UpdateDeploymentVariableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public UpdateDeploymentVariableRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -42,6 +46,7 @@ public class UpdateDeploymentVariableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable_uuid")
     public String variableUuid;
+
     public UpdateDeploymentVariableRequest withVariableUuid(String variableUuid) {
         this.variableUuid = variableUuid;
         return this;
@@ -52,9 +57,17 @@ public class UpdateDeploymentVariableRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public UpdateDeploymentVariableRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public UpdateDeploymentVariableRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("environment_uuid") String environmentUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("variable_uuid") String variableUuid, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.environmentUuid = environmentUuid;
+        this.repoSlug = repoSlug;
+        this.variableUuid = variableUuid;
+        this.workspace = workspace;
+  }
 }

@@ -15,9 +15,13 @@ public class PostAssetsAnalysisTurbulenceIndex200ApplicationJSON {
      */
     @JsonProperty("assetsTurbulenceIndex")
     public Double assetsTurbulenceIndex;
+
     public PostAssetsAnalysisTurbulenceIndex200ApplicationJSON withAssetsTurbulenceIndex(Double assetsTurbulenceIndex) {
         this.assetsTurbulenceIndex = assetsTurbulenceIndex;
         return this;
     }
     
+    public PostAssetsAnalysisTurbulenceIndex200ApplicationJSON(@JsonProperty("assetsTurbulenceIndex") Double assetsTurbulenceIndex) {
+        this.assetsTurbulenceIndex = assetsTurbulenceIndex;
+  }
 }

@@ -18,6 +18,7 @@ public class PricingCountriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public PricingCountriesResponse withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class PricingCountriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public CountryObject[] countries;
+
     public PricingCountriesResponse withCountries(CountryObject[] countries) {
         this.countries = countries;
         return this;
     }
     
+    public PricingCountriesResponse(){}
 }

@@ -63,11 +63,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataExporterTemplateResponse res = new org.openapis.openapi.models.operations.DataExporterTemplateResponse() {{
+        org.openapis.openapi.models.operations.DataExporterTemplateResponse res = new org.openapis.openapi.models.operations.DataExporterTemplateResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse res = new org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse() {{
+        org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse res = new org.openapis.openapi.models.operations.CreateBulkDataExporterConfigsResponse(contentType, httpRes.statusCode()) {{
             createBulkDataExporterConfigs200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDataExporterConfigResponse res = new org.openapis.openapi.models.operations.CreateDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.CreateDataExporterConfigResponse res = new org.openapis.openapi.models.operations.CreateDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse res = new org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse res = new org.openapis.openapi.models.operations.DeleteDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             deleted = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.DeletebulkDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             deletebulkDataExporterConfig200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,10 +254,11 @@ public class DataExporterConfigs {
     /**
      * Get all data exporter configs
      * Get all data exporter configs
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.FindAllDataExportersResponse findAllDataExporters() throws Exception {
+    public org.openapis.openapi.models.operations.FindAllDataExportersResponse findAllDataExporters(org.openapis.openapi.models.operations.FindAllDataExportersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/data-exporter-configs");
         
@@ -276,16 +267,15 @@ public class DataExporterConfigs {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindAllDataExportersResponse res = new org.openapis.openapi.models.operations.FindAllDataExportersResponse() {{
+        org.openapis.openapi.models.operations.FindAllDataExportersResponse res = new org.openapis.openapi.models.operations.FindAllDataExportersResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfigs = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -324,11 +314,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse res = new org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse() {{
+        org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse res = new org.openapis.openapi.models.operations.FindDataExporterConfigByIdResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -369,11 +357,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.PatchBulkDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             patchBulkDataExporterConfig200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +400,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchDataExporterConfigResponse res = new org.openapis.openapi.models.operations.PatchDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.PatchDataExporterConfigResponse res = new org.openapis.openapi.models.operations.PatchDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -459,11 +443,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse res = new org.openapis.openapi.models.operations.UpdateBulkDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             updateBulkDataExporterConfig200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,11 +486,9 @@ public class DataExporterConfigs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse res = new org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse res = new org.openapis.openapi.models.operations.UpdateDataExporterConfigResponse(contentType, httpRes.statusCode()) {{
             dataExporterConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrainProjectRawResponse {
     
     public byte[] body;
+
     public TrainProjectRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TrainProjectRawResponse {
     
     
     public String contentType;
+
     public TrainProjectRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TrainProjectRawResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public TrainProjectRawResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class TrainProjectRawResponse {
      */
     
     public org.openapis.openapi.models.shared.Iteration iteration;
+
     public TrainProjectRawResponse withIteration(org.openapis.openapi.models.shared.Iteration iteration) {
         this.iteration = iteration;
         return this;
@@ -43,6 +48,7 @@ public class TrainProjectRawResponse {
     
     
     public Integer statusCode;
+
     public TrainProjectRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class TrainProjectRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrainProjectRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TrainProjectRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

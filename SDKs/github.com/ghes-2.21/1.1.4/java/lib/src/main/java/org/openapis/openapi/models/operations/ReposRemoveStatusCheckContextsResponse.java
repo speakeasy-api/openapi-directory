@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposRemoveStatusCheckContextsResponse {
     
     public String contentType;
+
     public ReposRemoveStatusCheckContextsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposRemoveStatusCheckContextsResponse {
     
     
     public Integer statusCode;
+
     public ReposRemoveStatusCheckContextsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposRemoveStatusCheckContextsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposRemoveStatusCheckContextsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposRemoveStatusCheckContextsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposRemoveStatusCheckContextsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposRemoveStatusCheckContextsResponse {
      */
     
     public String[] reposRemoveStatusCheckContexts200ApplicationJSONStrings;
+
     public ReposRemoveStatusCheckContextsResponse withReposRemoveStatusCheckContexts200ApplicationJSONStrings(String[] reposRemoveStatusCheckContexts200ApplicationJSONStrings) {
         this.reposRemoveStatusCheckContexts200ApplicationJSONStrings = reposRemoveStatusCheckContexts200ApplicationJSONStrings;
         return this;
@@ -53,9 +59,14 @@ public class ReposRemoveStatusCheckContextsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposRemoveStatusCheckContextsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposRemoveStatusCheckContextsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

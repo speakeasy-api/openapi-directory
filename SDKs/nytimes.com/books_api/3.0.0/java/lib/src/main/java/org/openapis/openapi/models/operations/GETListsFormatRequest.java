@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -15,6 +16,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bestsellers-date")
     public OffsetDateTime bestsellersDate;
+
     public GETListsFormatRequest withBestsellersDate(OffsetDateTime bestsellersDate) {
         this.bestsellersDate = bestsellersDate;
         return this;
@@ -25,6 +27,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GETListsFormatRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +35,7 @@ public class GETListsFormatRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public GETListsFormatFormatEnum format;
+
     public GETListsFormatRequest withFormat(GETListsFormatFormatEnum format) {
         this.format = format;
         return this;
@@ -42,6 +46,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isbn")
     public String isbn;
+
     public GETListsFormatRequest withIsbn(String isbn) {
         this.isbn = isbn;
         return this;
@@ -54,6 +59,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=list")
     public String list;
+
     public GETListsFormatRequest withList(String list) {
         this.list = list;
         return this;
@@ -64,6 +70,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GETListsFormatRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -76,6 +83,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published-date")
     public String publishedDate;
+
     public GETListsFormatRequest withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -86,6 +94,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rank")
     public Long rank;
+
     public GETListsFormatRequest withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -96,6 +105,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rank-last-week")
     public Long rankLastWeek;
+
     public GETListsFormatRequest withRankLastWeek(Long rankLastWeek) {
         this.rankLastWeek = rankLastWeek;
         return this;
@@ -106,6 +116,7 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort-order")
     public GETListsFormatSortOrderEnum sortOrder;
+
     public GETListsFormatRequest withSortOrder(GETListsFormatSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -116,9 +127,13 @@ public class GETListsFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weeks-on-list")
     public Long weeksOnList;
+
     public GETListsFormatRequest withWeeksOnList(Long weeksOnList) {
         this.weeksOnList = weeksOnList;
         return this;
     }
     
+    public GETListsFormatRequest(@JsonProperty("format") GETListsFormatFormatEnum format) {
+        this.format = format;
+  }
 }

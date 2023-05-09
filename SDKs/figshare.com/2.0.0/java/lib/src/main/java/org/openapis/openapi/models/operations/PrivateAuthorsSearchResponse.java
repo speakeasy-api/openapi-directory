@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateAuthorsSearchResponse {
@@ -12,6 +13,7 @@ public class PrivateAuthorsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.Author[] authors;
+
     public PrivateAuthorsSearchResponse withAuthors(org.openapis.openapi.models.shared.Author[] authors) {
         this.authors = authors;
         return this;
@@ -19,6 +21,7 @@ public class PrivateAuthorsSearchResponse {
     
     
     public String contentType;
+
     public PrivateAuthorsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PrivateAuthorsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateAuthorsSearchResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +40,7 @@ public class PrivateAuthorsSearchResponse {
     
     
     public Integer statusCode;
+
     public PrivateAuthorsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PrivateAuthorsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateAuthorsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateAuthorsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

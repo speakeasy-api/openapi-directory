@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationDefinitionIdWithWorkspaceId {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public DestinationDefinitionIdWithWorkspaceId withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -16,9 +17,14 @@ public class DestinationDefinitionIdWithWorkspaceId {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public DestinationDefinitionIdWithWorkspaceId withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public DestinationDefinitionIdWithWorkspaceId(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

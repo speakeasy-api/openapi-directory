@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchAdvancedRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accepted")
     public GetSearchAdvancedAcceptedEnum accepted;
+
     public GetSearchAdvancedRequest withAccepted(GetSearchAdvancedAcceptedEnum accepted) {
         this.accepted = accepted;
         return this;
@@ -16,6 +18,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=answers")
     public Long answers;
+
     public GetSearchAdvancedRequest withAnswers(Long answers) {
         this.answers = answers;
         return this;
@@ -23,6 +26,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=body")
     public String body;
+
     public GetSearchAdvancedRequest withBody(String body) {
         this.body = body;
         return this;
@@ -34,6 +38,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetSearchAdvancedRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -41,6 +46,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closed")
     public GetSearchAdvancedClosedEnum closed;
+
     public GetSearchAdvancedRequest withClosed(GetSearchAdvancedClosedEnum closed) {
         this.closed = closed;
         return this;
@@ -81,6 +87,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetSearchAdvancedRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -91,6 +98,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetSearchAdvancedRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -105,6 +113,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetSearchAdvancedRequest withMax(String max) {
         this.max = max;
         return this;
@@ -112,6 +121,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=migrated")
     public GetSearchAdvancedMigratedEnum migrated;
+
     public GetSearchAdvancedRequest withMigrated(GetSearchAdvancedMigratedEnum migrated) {
         this.migrated = migrated;
         return this;
@@ -126,6 +136,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetSearchAdvancedRequest withMin(String min) {
         this.min = min;
         return this;
@@ -133,6 +144,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=notice")
     public GetSearchAdvancedNoticeEnum notice;
+
     public GetSearchAdvancedRequest withNotice(GetSearchAdvancedNoticeEnum notice) {
         this.notice = notice;
         return this;
@@ -143,6 +155,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nottagged")
     public String nottagged;
+
     public GetSearchAdvancedRequest withNottagged(String nottagged) {
         this.nottagged = nottagged;
         return this;
@@ -150,6 +163,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetSearchAdvancedOrderEnum order;
+
     public GetSearchAdvancedRequest withOrder(GetSearchAdvancedOrderEnum order) {
         this.order = order;
         return this;
@@ -157,6 +171,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSearchAdvancedRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -164,6 +179,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetSearchAdvancedRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -171,6 +187,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetSearchAdvancedRequest withQ(String q) {
         this.q = q;
         return this;
@@ -182,6 +199,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetSearchAdvancedRequest withSite(String site) {
         this.site = site;
         return this;
@@ -189,6 +207,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetSearchAdvancedSortEnum sort;
+
     public GetSearchAdvancedRequest withSort(GetSearchAdvancedSortEnum sort) {
         this.sort = sort;
         return this;
@@ -199,6 +218,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tagged")
     public String tagged;
+
     public GetSearchAdvancedRequest withTagged(String tagged) {
         this.tagged = tagged;
         return this;
@@ -206,6 +226,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GetSearchAdvancedRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -216,6 +237,7 @@ public class GetSearchAdvancedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetSearchAdvancedRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
@@ -223,6 +245,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GetSearchAdvancedRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -230,6 +253,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
     public Long user;
+
     public GetSearchAdvancedRequest withUser(Long user) {
         this.user = user;
         return this;
@@ -237,6 +261,7 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=views")
     public Long views;
+
     public GetSearchAdvancedRequest withViews(Long views) {
         this.views = views;
         return this;
@@ -244,9 +269,13 @@ public class GetSearchAdvancedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=wiki")
     public GetSearchAdvancedWikiEnum wiki;
+
     public GetSearchAdvancedRequest withWiki(GetSearchAdvancedWikiEnum wiki) {
         this.wiki = wiki;
         return this;
     }
     
+    public GetSearchAdvancedRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

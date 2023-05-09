@@ -17,6 +17,7 @@ public class MessengerAccountResponse {
      */
     @JsonProperty("access_token")
     public String accessToken;
+
     public MessengerAccountResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -27,6 +28,7 @@ public class MessengerAccountResponse {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public MessengerAccountResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -38,6 +40,7 @@ public class MessengerAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applications")
     public String[] applications;
+
     public MessengerAccountResponse withApplications(String[] applications) {
         this.applications = applications;
         return this;
@@ -48,6 +51,7 @@ public class MessengerAccountResponse {
      */
     @JsonProperty("external_id")
     public String externalId;
+
     public MessengerAccountResponse withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -59,6 +63,7 @@ public class MessengerAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MessengerAccountResponse withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class MessengerAccountResponse {
      */
     @JsonProperty("provider")
     public String provider;
+
     public MessengerAccountResponse withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public MessengerAccountResponse(@JsonProperty("access_token") String accessToken, @JsonProperty("api_key") String apiKey, @JsonProperty("external_id") String externalId, @JsonProperty("provider") String provider) {
+        this.accessToken = accessToken;
+        this.apiKey = apiKey;
+        this.externalId = externalId;
+        this.provider = provider;
+  }
 }

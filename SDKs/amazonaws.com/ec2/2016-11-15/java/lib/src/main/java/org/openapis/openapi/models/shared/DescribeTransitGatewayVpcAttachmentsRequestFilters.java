@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayVpcAttachmentsRequestFilters {
     
     public String name;
+
     public DescribeTransitGatewayVpcAttachmentsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayVpcAttachmentsRequestFilters {
     
     
     public String[] values;
+
     public DescribeTransitGatewayVpcAttachmentsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeTransitGatewayVpcAttachmentsRequestFilters(){}
 }

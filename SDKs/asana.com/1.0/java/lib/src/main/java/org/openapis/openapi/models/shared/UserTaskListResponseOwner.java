@@ -18,6 +18,7 @@ public class UserTaskListResponseOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public UserTaskListResponseOwner withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class UserTaskListResponseOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserTaskListResponseOwner withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class UserTaskListResponseOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public UserTaskListResponseOwner withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public UserTaskListResponseOwner(){}
 }

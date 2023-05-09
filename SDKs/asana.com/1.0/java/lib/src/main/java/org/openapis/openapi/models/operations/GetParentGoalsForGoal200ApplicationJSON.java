@@ -15,9 +15,11 @@ public class GetParentGoalsForGoal200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalCompact[] data;
+
     public GetParentGoalsForGoal200ApplicationJSON withData(org.openapis.openapi.models.shared.GoalCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetParentGoalsForGoal200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class FileActionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_migration_id")
     public Integer fileMigrationId;
+
     public FileActionEntity withFileMigrationId(Integer fileMigrationId) {
         this.fileMigrationId = fileMigrationId;
         return this;
@@ -29,9 +30,11 @@ public class FileActionEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public FileActionEntity withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public FileActionEntity(){}
 }

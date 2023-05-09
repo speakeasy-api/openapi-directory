@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Environment {
     @JsonProperty("arn")
     public String arn;
+
     public Environment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codebuildRoleArn")
     public String codebuildRoleArn;
+
     public Environment withCodebuildRoleArn(String codebuildRoleArn) {
         this.codebuildRoleArn = codebuildRoleArn;
         return this;
@@ -35,6 +37,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public Environment withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -44,6 +47,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Environment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +55,7 @@ public class Environment {
     
     @JsonProperty("deploymentStatus")
     public DeploymentStatusEnum deploymentStatus;
+
     public Environment withDeploymentStatus(DeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -59,6 +64,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public Environment withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -67,6 +73,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Environment withDescription(String description) {
         this.description = description;
         return this;
@@ -75,6 +82,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountConnectionId")
     public String environmentAccountConnectionId;
+
     public Environment withEnvironmentAccountConnectionId(String environmentAccountConnectionId) {
         this.environmentAccountConnectionId = environmentAccountConnectionId;
         return this;
@@ -83,6 +91,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountId")
     public String environmentAccountId;
+
     public Environment withEnvironmentAccountId(String environmentAccountId) {
         this.environmentAccountId = environmentAccountId;
         return this;
@@ -92,6 +101,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentAttemptedAt")
     public OffsetDateTime lastDeploymentAttemptedAt;
+
     public Environment withLastDeploymentAttemptedAt(OffsetDateTime lastDeploymentAttemptedAt) {
         this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
         return this;
@@ -101,6 +111,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastDeploymentSucceededAt")
     public OffsetDateTime lastDeploymentSucceededAt;
+
     public Environment withLastDeploymentSucceededAt(OffsetDateTime lastDeploymentSucceededAt) {
         this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
         return this;
@@ -108,6 +119,7 @@ public class Environment {
     
     @JsonProperty("name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -116,6 +128,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protonServiceRoleArn")
     public String protonServiceRoleArn;
+
     public Environment withProtonServiceRoleArn(String protonServiceRoleArn) {
         this.protonServiceRoleArn = protonServiceRoleArn;
         return this;
@@ -124,6 +137,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning")
     public ProvisioningEnum provisioning;
+
     public Environment withProvisioning(ProvisioningEnum provisioning) {
         this.provisioning = provisioning;
         return this;
@@ -132,6 +146,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningRepository")
     public RepositoryBranch provisioningRepository;
+
     public Environment withProvisioningRepository(RepositoryBranch provisioningRepository) {
         this.provisioningRepository = provisioningRepository;
         return this;
@@ -140,6 +155,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public Environment withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -147,6 +163,7 @@ public class Environment {
     
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public Environment withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -154,6 +171,7 @@ public class Environment {
     
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public Environment withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
@@ -161,9 +179,21 @@ public class Environment {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public Environment withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public Environment(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("deploymentStatus") DeploymentStatusEnum deploymentStatus, @JsonProperty("lastDeploymentAttemptedAt") OffsetDateTime lastDeploymentAttemptedAt, @JsonProperty("lastDeploymentSucceededAt") OffsetDateTime lastDeploymentSucceededAt, @JsonProperty("name") String name, @JsonProperty("templateMajorVersion") String templateMajorVersion, @JsonProperty("templateMinorVersion") String templateMinorVersion, @JsonProperty("templateName") String templateName) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.deploymentStatus = deploymentStatus;
+        this.lastDeploymentAttemptedAt = lastDeploymentAttemptedAt;
+        this.lastDeploymentSucceededAt = lastDeploymentSucceededAt;
+        this.name = name;
+        this.templateMajorVersion = templateMajorVersion;
+        this.templateMinorVersion = templateMinorVersion;
+        this.templateName = templateName;
+  }
 }

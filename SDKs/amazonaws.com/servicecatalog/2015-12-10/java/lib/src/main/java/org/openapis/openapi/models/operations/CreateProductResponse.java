@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProductResponse {
     
     public String contentType;
+
     public CreateProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProductResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProductOutput createProductOutput;
+
     public CreateProductResponse withCreateProductOutput(org.openapis.openapi.models.shared.CreateProductOutput createProductOutput) {
         this.createProductOutput = createProductOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateProductResponse {
      */
     
     public Object invalidParametersException;
+
     public CreateProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProductResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProductResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class CreateProductResponse {
     
     
     public Integer statusCode;
+
     public CreateProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateProductResponse {
      */
     
     public Object tagOptionNotMigratedException;
+
     public CreateProductResponse withTagOptionNotMigratedException(Object tagOptionNotMigratedException) {
         this.tagOptionNotMigratedException = tagOptionNotMigratedException;
         return this;
     }
     
+    public CreateProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

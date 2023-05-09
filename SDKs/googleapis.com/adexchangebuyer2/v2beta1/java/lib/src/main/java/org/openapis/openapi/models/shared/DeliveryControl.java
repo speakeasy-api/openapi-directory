@@ -18,6 +18,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeBlockingLevel")
     public DeliveryControlCreativeBlockingLevelEnum creativeBlockingLevel;
+
     public DeliveryControl withCreativeBlockingLevel(DeliveryControlCreativeBlockingLevelEnum creativeBlockingLevel) {
         this.creativeBlockingLevel = creativeBlockingLevel;
         return this;
@@ -29,6 +30,7 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryRateType")
     public DeliveryControlDeliveryRateTypeEnum deliveryRateType;
+
     public DeliveryControl withDeliveryRateType(DeliveryControlDeliveryRateTypeEnum deliveryRateType) {
         this.deliveryRateType = deliveryRateType;
         return this;
@@ -40,9 +42,11 @@ public class DeliveryControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequencyCaps")
     public FrequencyCap[] frequencyCaps;
+
     public DeliveryControl withFrequencyCaps(FrequencyCap[] frequencyCaps) {
         this.frequencyCaps = frequencyCaps;
         return this;
     }
     
+    public DeliveryControl(){}
 }

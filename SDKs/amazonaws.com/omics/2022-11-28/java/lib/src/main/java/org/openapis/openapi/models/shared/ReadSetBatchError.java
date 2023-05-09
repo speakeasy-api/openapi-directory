@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReadSetBatchError {
     @JsonProperty("code")
     public String code;
+
     public ReadSetBatchError withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class ReadSetBatchError {
     
     @JsonProperty("id")
     public String id;
+
     public ReadSetBatchError withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class ReadSetBatchError {
     
     @JsonProperty("message")
     public String message;
+
     public ReadSetBatchError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ReadSetBatchError(@JsonProperty("code") String code, @JsonProperty("id") String id, @JsonProperty("message") String message) {
+        this.code = code;
+        this.id = id;
+        this.message = message;
+  }
 }

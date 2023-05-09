@@ -15,7 +15,7 @@ import org.openapis.openapi.utils.JSON;
 import org.openapis.openapi.utils.SerializedBody;
 
 /**
- * M\u00e9todos utilizados para recuperar informaci\u00f3n de las entidades
+ * Métodos utilizados para recuperar información de las entidades
  */
 public class EntityData {
 	
@@ -37,7 +37,7 @@ public class EntityData {
 
     /**
      * Obtiene el listado de entidades soportadas
-     * Obtiene el listado de entidades soportadas y la informaci\u00f3n necesaria para dibujar el formulario de login de la entidad.
+     * Obtiene el listado de entidades soportadas y la información necesaria para dibujar el formulario de login de la entidad.
      * 
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -56,12 +56,10 @@ public class EntityData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse(contentType, httpRes.statusCode()) {{
             entities = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,8 +81,8 @@ public class EntityData {
     }
 
     /**
-     * Listado de c\u00f3digos de error
-     * Listado de c\u00f3digos de error. Presta especial atenci\u00f3n a que no todos los c\u00f3digos de error deben recibir el mismo tratamiento por parte de tu aplicaci\u00f3n. Ante un error de password incorrecto no debes reintentar la llamada con los mismos par\u00e1metros, pero ante un error que te indique que la entidad est\u00e1 en mantenimiento s\u00ed puedes reintentarlo. Pide una sesi\u00f3n t\u00e9cnica con nuestro equipo para resolver cualquier duda sobre la gesti\u00f3n de errores.
+     * Listado de códigos de error
+     * Listado de códigos de error. Presta especial atención a que no todos los códigos de error deben recibir el mismo tratamiento por parte de tu aplicación. Ante un error de password incorrecto no debes reintentar la llamada con los mismos parámetros, pero ante un error que te indique que la entidad está en mantenimiento sí puedes reintentarlo. Pide una sesión técnica con nuestro equipo para resolver cualquier duda sobre la gestión de errores.
      * 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -110,12 +108,10 @@ public class EntityData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetErrorCodesResponse res = new org.openapis.openapi.models.operations.GetErrorCodesResponse() {{
+        org.openapis.openapi.models.operations.GetErrorCodesResponse res = new org.openapis.openapi.models.operations.GetErrorCodesResponse(contentType, httpRes.statusCode()) {{
             errorCodes = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,8 +133,8 @@ public class EntityData {
     }
 
     /**
-     * Obtiene los activos financieros y el detalle de su composici\u00f3n
-     * Obtiene los activos financieros y el detalle de su composici\u00f3n de carteras de inversi\u00f3n compuestas por acciones o fondos, tarjetas de cr\u00e9dito, seguros y pr\u00e9stamos. Incluye informaci\u00f3n de titularidad de cada uno de los activos as\u00ed como identificadores \u00fanicos que facilitan el tratamiento del dato. Es posible obtener datos Mock. Consulte con el equipo t\u00e9cnico c\u00f3mo hacerlo.
+     * Obtiene los activos financieros y el detalle de su composición
+     * Obtiene los activos financieros y el detalle de su composición de carteras de inversión compuestas por acciones o fondos, tarjetas de crédito, seguros y préstamos. Incluye información de titularidad de cada uno de los activos así como identificadores únicos que facilitan el tratamiento del dato. Es posible obtener datos Mock. Consulte con el equipo técnico cómo hacerlo.
      * 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -160,12 +156,10 @@ public class EntityData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostEntitiesResponse res = new org.openapis.openapi.models.operations.PostEntitiesResponse() {{
+        org.openapis.openapi.models.operations.PostEntitiesResponse res = new org.openapis.openapi.models.operations.PostEntitiesResponse(contentType, httpRes.statusCode()) {{
             entityData = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

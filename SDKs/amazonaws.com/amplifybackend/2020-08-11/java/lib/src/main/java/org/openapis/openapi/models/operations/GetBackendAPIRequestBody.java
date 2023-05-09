@@ -15,6 +15,7 @@ public class GetBackendAPIRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceConfig")
     public GetBackendAPIRequestBodyResourceConfig resourceConfig;
+
     public GetBackendAPIRequestBody withResourceConfig(GetBackendAPIRequestBodyResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -25,9 +26,13 @@ public class GetBackendAPIRequestBody {
      */
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetBackendAPIRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetBackendAPIRequestBody(@JsonProperty("resourceName") String resourceName) {
+        this.resourceName = resourceName;
+  }
 }

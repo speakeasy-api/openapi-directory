@@ -15,6 +15,7 @@ public class StartCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StartCondition withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class StartCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventStartCondition")
     public EventStartCondition eventStartCondition;
+
     public StartCondition withEventStartCondition(EventStartCondition eventStartCondition) {
         this.eventStartCondition = eventStartCondition;
         return this;
@@ -34,9 +36,11 @@ public class StartCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentStartCondition")
     public SegmentCondition segmentStartCondition;
+
     public StartCondition withSegmentStartCondition(SegmentCondition segmentStartCondition) {
         this.segmentStartCondition = segmentStartCondition;
         return this;
     }
     
+    public StartCondition(){}
 }

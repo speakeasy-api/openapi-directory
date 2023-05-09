@@ -15,6 +15,7 @@ public class CreateJobRequestBodyOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public CreateJobRequestBodyOutputDataConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,9 +24,11 @@ public class CreateJobRequestBodyOutputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Path")
     public String s3Path;
+
     public CreateJobRequestBodyOutputDataConfig withS3Path(String s3Path) {
         this.s3Path = s3Path;
         return this;
     }
     
+    public CreateJobRequestBodyOutputDataConfig(){}
 }

@@ -15,6 +15,7 @@ public class VolumeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public VolumeFilterNameEnum name;
+
     public VolumeFilter withName(VolumeFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class VolumeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public VolumeFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public VolumeFilter(){}
 }

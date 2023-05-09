@@ -18,9 +18,11 @@ public class VerificationErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("problems")
     public CapabilityProblem[] problems;
+
     public VerificationErrors withProblems(CapabilityProblem[] problems) {
         this.problems = problems;
         return this;
     }
     
+    public VerificationErrors(){}
 }

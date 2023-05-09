@@ -15,6 +15,7 @@ public class Membership {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Membership withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Membership {
      */
     @JsonProperty("confirm")
     public Boolean confirm;
+
     public Membership withConfirm(Boolean confirm) {
         this.confirm = confirm;
         return this;
@@ -35,6 +37,7 @@ public class Membership {
      */
     @JsonProperty("email")
     public String email;
+
     public Membership withEmail(String email) {
         this.email = email;
         return this;
@@ -45,6 +48,7 @@ public class Membership {
      */
     @JsonProperty("invited")
     public Integer invited;
+
     public Membership withInvited(Integer invited) {
         this.invited = invited;
         return this;
@@ -55,6 +59,7 @@ public class Membership {
      */
     @JsonProperty("joined")
     public Integer joined;
+
     public Membership withJoined(Integer joined) {
         this.joined = joined;
         return this;
@@ -65,6 +70,7 @@ public class Membership {
      */
     @JsonProperty("name")
     public String name;
+
     public Membership withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class Membership {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public Membership withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -85,6 +92,7 @@ public class Membership {
      */
     @JsonProperty("teamId")
     public String teamId;
+
     public Membership withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -95,9 +103,21 @@ public class Membership {
      */
     @JsonProperty("userId")
     public String userId;
+
     public Membership withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Membership(@JsonProperty("$id") String dollarId, @JsonProperty("confirm") Boolean confirm, @JsonProperty("email") String email, @JsonProperty("invited") Integer invited, @JsonProperty("joined") Integer joined, @JsonProperty("name") String name, @JsonProperty("roles") String[] roles, @JsonProperty("teamId") String teamId, @JsonProperty("userId") String userId) {
+        this.dollarId = dollarId;
+        this.confirm = confirm;
+        this.email = email;
+        this.invited = invited;
+        this.joined = joined;
+        this.name = name;
+        this.roles = roles;
+        this.teamId = teamId;
+        this.userId = userId;
+  }
 }

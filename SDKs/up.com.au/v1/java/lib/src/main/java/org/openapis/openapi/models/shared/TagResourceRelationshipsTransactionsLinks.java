@@ -13,9 +13,13 @@ public class TagResourceRelationshipsTransactionsLinks {
      */
     @JsonProperty("related")
     public String related;
+
     public TagResourceRelationshipsTransactionsLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public TagResourceRelationshipsTransactionsLinks(@JsonProperty("related") String related) {
+        this.related = related;
+  }
 }

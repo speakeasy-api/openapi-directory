@@ -15,9 +15,11 @@ public class CreateSignalingChannelRequestBodySingleMasterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageTtlSeconds")
     public Long messageTtlSeconds;
+
     public CreateSignalingChannelRequestBodySingleMasterConfiguration withMessageTtlSeconds(Long messageTtlSeconds) {
         this.messageTtlSeconds = messageTtlSeconds;
         return this;
     }
     
+    public CreateSignalingChannelRequestBodySingleMasterConfiguration(){}
 }

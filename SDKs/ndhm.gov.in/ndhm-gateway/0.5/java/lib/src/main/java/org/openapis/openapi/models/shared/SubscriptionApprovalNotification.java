@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class SubscriptionApprovalNotification {
     @JsonProperty("notification")
     public SubscriptionApprovalNotificationNotification notification;
+
     public SubscriptionApprovalNotification withNotification(SubscriptionApprovalNotificationNotification notification) {
         this.notification = notification;
         return this;
@@ -24,6 +25,7 @@ public class SubscriptionApprovalNotification {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public SubscriptionApprovalNotification withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -36,9 +38,15 @@ public class SubscriptionApprovalNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public SubscriptionApprovalNotification withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SubscriptionApprovalNotification(@JsonProperty("notification") SubscriptionApprovalNotificationNotification notification, @JsonProperty("requestId") String requestId, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.notification = notification;
+        this.requestId = requestId;
+        this.timestamp = timestamp;
+  }
 }

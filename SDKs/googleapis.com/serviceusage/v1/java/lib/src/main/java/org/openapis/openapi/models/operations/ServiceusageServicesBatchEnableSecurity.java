@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServiceusageServicesBatchEnableSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesBatchEnableSecurityOption1 option1;
+
     public ServiceusageServicesBatchEnableSecurity withOption1(ServiceusageServicesBatchEnableSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServiceusageServicesBatchEnableSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServiceusageServicesBatchEnableSecurityOption2 option2;
+
     public ServiceusageServicesBatchEnableSecurity withOption2(ServiceusageServicesBatchEnableSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServiceusageServicesBatchEnableSecurity(){}
 }

@@ -12,6 +12,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abstract")
     public String abstract_;
+
     public Article withAbstract(String abstract_) {
         this.abstract_ = abstract_;
         return this;
@@ -20,6 +21,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public String byline;
+
     public Article withByline(String byline) {
         this.byline = byline;
         return this;
@@ -28,6 +30,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("column")
     public String column;
+
     public Article withColumn(String column) {
         this.column = column;
         return this;
@@ -36,6 +39,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("des_facet")
     public Object desFacet;
+
     public Article withDesFacet(Object desFacet) {
         this.desFacet = desFacet;
         return this;
@@ -44,6 +48,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geo_facet")
     public Object geoFacet;
+
     public Article withGeoFacet(Object geoFacet) {
         this.geoFacet = geoFacet;
         return this;
@@ -52,6 +57,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public Object media;
+
     public Article withMedia(Object media) {
         this.media = media;
         return this;
@@ -60,6 +66,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_facet")
     public Object[] orgFacet;
+
     public Article withOrgFacet(Object[] orgFacet) {
         this.orgFacet = orgFacet;
         return this;
@@ -68,6 +75,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_facet")
     public Object[] perFacet;
+
     public Article withPerFacet(Object[] perFacet) {
         this.perFacet = perFacet;
         return this;
@@ -76,6 +84,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public Article withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -84,6 +93,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public String section;
+
     public Article withSection(String section) {
         this.section = section;
         return this;
@@ -92,6 +102,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public Article withSource(String source) {
         this.source = source;
         return this;
@@ -100,6 +111,7 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Article withTitle(String title) {
         this.title = title;
         return this;
@@ -108,9 +120,11 @@ public class Article {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Article withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Article(){}
 }

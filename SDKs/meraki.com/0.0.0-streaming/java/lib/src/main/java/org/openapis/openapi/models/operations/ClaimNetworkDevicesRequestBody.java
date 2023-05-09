@@ -15,6 +15,7 @@ public class ClaimNetworkDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serial")
     public String serial;
+
     public ClaimNetworkDevicesRequestBody withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -26,9 +27,11 @@ public class ClaimNetworkDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serials")
     public String[] serials;
+
     public ClaimNetworkDevicesRequestBody withSerials(String[] serials) {
         this.serials = serials;
         return this;
     }
     
+    public ClaimNetworkDevicesRequestBody(){}
 }

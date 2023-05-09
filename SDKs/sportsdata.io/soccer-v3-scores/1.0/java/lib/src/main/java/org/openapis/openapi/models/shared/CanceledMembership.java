@@ -12,6 +12,7 @@ public class CanceledMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CanceledMembershipId")
     public Long canceledMembershipId;
+
     public CanceledMembership withCanceledMembershipId(Long canceledMembershipId) {
         this.canceledMembershipId = canceledMembershipId;
         return this;
@@ -20,6 +21,7 @@ public class CanceledMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public CanceledMembership withCreated(String created) {
         this.created = created;
         return this;
@@ -28,6 +30,7 @@ public class CanceledMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MembershipId")
     public Long membershipId;
+
     public CanceledMembership withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -36,6 +39,7 @@ public class CanceledMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public CanceledMembership withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,9 +48,11 @@ public class CanceledMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public CanceledMembership withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public CanceledMembership(){}
 }

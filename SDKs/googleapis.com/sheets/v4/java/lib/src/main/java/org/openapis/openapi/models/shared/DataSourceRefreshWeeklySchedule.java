@@ -18,6 +18,7 @@ public class DataSourceRefreshWeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysOfWeek")
     public DataSourceRefreshWeeklyScheduleDaysOfWeekEnum[] daysOfWeek;
+
     public DataSourceRefreshWeeklySchedule withDaysOfWeek(DataSourceRefreshWeeklyScheduleDaysOfWeekEnum[] daysOfWeek) {
         this.daysOfWeek = daysOfWeek;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceRefreshWeeklySchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public TimeOfDay startTime;
+
     public DataSourceRefreshWeeklySchedule withStartTime(TimeOfDay startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DataSourceRefreshWeeklySchedule(){}
 }

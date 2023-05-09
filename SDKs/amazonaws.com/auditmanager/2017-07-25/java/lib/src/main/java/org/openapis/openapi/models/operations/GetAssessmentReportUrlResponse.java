@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssessmentReportUrlResponse {
@@ -12,6 +13,7 @@ public class GetAssessmentReportUrlResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAssessmentReportUrlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAssessmentReportUrlResponse {
     
     
     public String contentType;
+
     public GetAssessmentReportUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAssessmentReportUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssessmentReportUrlResponse getAssessmentReportUrlResponse;
+
     public GetAssessmentReportUrlResponse withGetAssessmentReportUrlResponse(org.openapis.openapi.models.shared.GetAssessmentReportUrlResponse getAssessmentReportUrlResponse) {
         this.getAssessmentReportUrlResponse = getAssessmentReportUrlResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAssessmentReportUrlResponse {
      */
     
     public Object internalServerException;
+
     public GetAssessmentReportUrlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetAssessmentReportUrlResponse {
     
     
     public Integer statusCode;
+
     public GetAssessmentReportUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAssessmentReportUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssessmentReportUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetAssessmentReportUrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAssessmentReportUrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetAssessmentReportUrlResponse {
      */
     
     public Object validationException;
+
     public GetAssessmentReportUrlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAssessmentReportUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

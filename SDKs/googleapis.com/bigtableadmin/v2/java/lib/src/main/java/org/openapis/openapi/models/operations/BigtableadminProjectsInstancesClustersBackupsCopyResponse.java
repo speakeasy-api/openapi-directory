@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BigtableadminProjectsInstancesClustersBackupsCopyResponse {
     
     public String contentType;
+
     public BigtableadminProjectsInstancesClustersBackupsCopyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BigtableadminProjectsInstancesClustersBackupsCopyResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public BigtableadminProjectsInstancesClustersBackupsCopyResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class BigtableadminProjectsInstancesClustersBackupsCopyResponse {
     
     
     public Integer statusCode;
+
     public BigtableadminProjectsInstancesClustersBackupsCopyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BigtableadminProjectsInstancesClustersBackupsCopyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BigtableadminProjectsInstancesClustersBackupsCopyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BigtableadminProjectsInstancesClustersBackupsCopyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class AccountAssignmentOperationStatusMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public AccountAssignmentOperationStatusMetadata withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class AccountAssignmentOperationStatusMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public AccountAssignmentOperationStatusMetadata withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -38,9 +40,11 @@ public class AccountAssignmentOperationStatusMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusValuesEnum status;
+
     public AccountAssignmentOperationStatusMetadata withStatus(StatusValuesEnum status) {
         this.status = status;
         return this;
     }
     
+    public AccountAssignmentOperationStatusMetadata(){}
 }

@@ -18,6 +18,7 @@ public class MarketingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ad")
     public Ad ad;
+
     public MarketingRecommendation withAd(Ad ad) {
         this.ad = ad;
         return this;
@@ -29,9 +30,11 @@ public class MarketingRecommendation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MarketingRecommendation withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MarketingRecommendation(){}
 }

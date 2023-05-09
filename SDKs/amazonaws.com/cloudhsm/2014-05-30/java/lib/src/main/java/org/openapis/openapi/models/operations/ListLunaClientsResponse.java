@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListLunaClientsResponse {
@@ -12,6 +13,7 @@ public class ListLunaClientsResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public ListLunaClientsResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class ListLunaClientsResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ListLunaClientsResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListLunaClientsResponse {
     
     
     public String contentType;
+
     public ListLunaClientsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListLunaClientsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListLunaClientsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListLunaClientsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLunaClientsResponse listLunaClientsResponse;
+
     public ListLunaClientsResponse withListLunaClientsResponse(org.openapis.openapi.models.shared.ListLunaClientsResponse listLunaClientsResponse) {
         this.listLunaClientsResponse = listLunaClientsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListLunaClientsResponse {
     
     
     public Integer statusCode;
+
     public ListLunaClientsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListLunaClientsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListLunaClientsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListLunaClientsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

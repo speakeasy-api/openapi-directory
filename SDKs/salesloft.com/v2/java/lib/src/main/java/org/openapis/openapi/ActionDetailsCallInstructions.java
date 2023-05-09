@@ -59,11 +59,9 @@ public class ActionDetailsCallInstructions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonResponse res = new org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonResponse res = new org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class ActionDetailsCallInstructions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2ActionDetailsCallInstructionsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

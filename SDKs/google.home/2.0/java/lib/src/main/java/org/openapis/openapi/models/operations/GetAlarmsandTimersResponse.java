@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAlarmsandTimersResponse {
     
     public String contentType;
+
     public GetAlarmsandTimersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAlarmsandTimersResponse {
     
     
     public org.openapis.openapi.models.shared.Example18 example18;
+
     public GetAlarmsandTimersResponse withExample18(org.openapis.openapi.models.shared.Example18 example18) {
         this.example18 = example18;
         return this;
@@ -23,6 +26,7 @@ public class GetAlarmsandTimersResponse {
     
     
     public Integer statusCode;
+
     public GetAlarmsandTimersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetAlarmsandTimersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAlarmsandTimersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAlarmsandTimersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

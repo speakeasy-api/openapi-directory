@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProfileResponse {
@@ -12,6 +13,7 @@ public class DeleteProfileResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteProfileResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProfileResponse {
     
     
     public String contentType;
+
     public DeleteProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.ProfileDetailResponse profileDetailResponse;
+
     public DeleteProfileResponse withProfileDetailResponse(org.openapis.openapi.models.shared.ProfileDetailResponse profileDetailResponse) {
         this.profileDetailResponse = profileDetailResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

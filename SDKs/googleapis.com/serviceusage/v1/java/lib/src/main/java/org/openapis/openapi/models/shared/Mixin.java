@@ -18,6 +18,7 @@ public class Mixin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Mixin withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class Mixin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public String root;
+
     public Mixin withRoot(String root) {
         this.root = root;
         return this;
     }
     
+    public Mixin(){}
 }

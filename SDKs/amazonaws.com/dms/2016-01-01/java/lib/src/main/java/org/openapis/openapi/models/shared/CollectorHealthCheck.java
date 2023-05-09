@@ -15,6 +15,7 @@ public class CollectorHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectorStatus")
     public CollectorStatusEnum collectorStatus;
+
     public CollectorHealthCheck withCollectorStatus(CollectorStatusEnum collectorStatus) {
         this.collectorStatus = collectorStatus;
         return this;
@@ -23,6 +24,7 @@ public class CollectorHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalCollectorS3Access")
     public Boolean localCollectorS3Access;
+
     public CollectorHealthCheck withLocalCollectorS3Access(Boolean localCollectorS3Access) {
         this.localCollectorS3Access = localCollectorS3Access;
         return this;
@@ -31,6 +33,7 @@ public class CollectorHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebCollectorGrantedRoleBasedAccess")
     public Boolean webCollectorGrantedRoleBasedAccess;
+
     public CollectorHealthCheck withWebCollectorGrantedRoleBasedAccess(Boolean webCollectorGrantedRoleBasedAccess) {
         this.webCollectorGrantedRoleBasedAccess = webCollectorGrantedRoleBasedAccess;
         return this;
@@ -39,9 +42,11 @@ public class CollectorHealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebCollectorS3Access")
     public Boolean webCollectorS3Access;
+
     public CollectorHealthCheck withWebCollectorS3Access(Boolean webCollectorS3Access) {
         this.webCollectorS3Access = webCollectorS3Access;
         return this;
     }
     
+    public CollectorHealthCheck(){}
 }

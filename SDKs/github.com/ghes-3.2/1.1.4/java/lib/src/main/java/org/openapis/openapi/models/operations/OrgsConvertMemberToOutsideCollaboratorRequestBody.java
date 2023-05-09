@@ -15,9 +15,11 @@ public class OrgsConvertMemberToOutsideCollaboratorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("async")
     public Boolean async;
+
     public OrgsConvertMemberToOutsideCollaboratorRequestBody withAsync(Boolean async) {
         this.async = async;
         return this;
     }
     
+    public OrgsConvertMemberToOutsideCollaboratorRequestBody(){}
 }

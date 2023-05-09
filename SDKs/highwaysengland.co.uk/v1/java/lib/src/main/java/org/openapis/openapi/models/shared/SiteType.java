@@ -12,6 +12,7 @@ public class SiteType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SiteType withDescription(String description) {
         this.description = description;
         return this;
@@ -20,9 +21,11 @@ public class SiteType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SiteType withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SiteType(){}
 }

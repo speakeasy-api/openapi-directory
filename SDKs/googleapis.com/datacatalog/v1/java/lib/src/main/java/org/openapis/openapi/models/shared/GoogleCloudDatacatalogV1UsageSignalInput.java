@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1UsageSignalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonUsageWithinTimeRange")
     public java.util.Map<String, GoogleCloudDatacatalogV1CommonUsageStats> commonUsageWithinTimeRange;
+
     public GoogleCloudDatacatalogV1UsageSignalInput withCommonUsageWithinTimeRange(java.util.Map<String, GoogleCloudDatacatalogV1CommonUsageStats> commonUsageWithinTimeRange) {
         this.commonUsageWithinTimeRange = commonUsageWithinTimeRange;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1UsageSignalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("favoriteCount")
     public String favoriteCount;
+
     public GoogleCloudDatacatalogV1UsageSignalInput withFavoriteCount(String favoriteCount) {
         this.favoriteCount = favoriteCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1UsageSignalInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudDatacatalogV1UsageSignalInput withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1UsageSignalInput(){}
 }

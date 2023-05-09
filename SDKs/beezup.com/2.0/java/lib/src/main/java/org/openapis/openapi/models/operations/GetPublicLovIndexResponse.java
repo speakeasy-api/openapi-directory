@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPublicLovIndexResponse {
@@ -12,6 +13,7 @@ public class GetPublicLovIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetPublicLovIndexResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetPublicLovIndexResponse {
     
     
     public String contentType;
+
     public GetPublicLovIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPublicLovIndexResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPublicLovIndexResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetPublicLovIndexResponse {
     
     
     public Integer statusCode;
+
     public GetPublicLovIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetPublicLovIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPublicLovIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetPublicLovIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicLovIndex publicLovIndex;
+
     public GetPublicLovIndexResponse withPublicLovIndex(org.openapis.openapi.models.shared.PublicLovIndex publicLovIndex) {
         this.publicLovIndex = publicLovIndex;
         return this;
     }
     
+    public GetPublicLovIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

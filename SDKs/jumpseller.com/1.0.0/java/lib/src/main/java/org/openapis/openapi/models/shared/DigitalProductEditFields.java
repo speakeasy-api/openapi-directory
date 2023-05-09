@@ -15,6 +15,7 @@ public class DigitalProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public DigitalProductEditFields withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -26,9 +27,11 @@ public class DigitalProductEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public DigitalProductEditFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DigitalProductEditFields(){}
 }

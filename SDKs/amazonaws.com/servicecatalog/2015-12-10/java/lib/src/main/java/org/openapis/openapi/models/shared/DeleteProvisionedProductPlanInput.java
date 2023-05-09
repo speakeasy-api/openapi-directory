@@ -12,6 +12,7 @@ public class DeleteProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DeleteProvisionedProductPlanInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class DeleteProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnoreErrors")
     public Boolean ignoreErrors;
+
     public DeleteProvisionedProductPlanInput withIgnoreErrors(Boolean ignoreErrors) {
         this.ignoreErrors = ignoreErrors;
         return this;
@@ -27,9 +29,13 @@ public class DeleteProvisionedProductPlanInput {
     
     @JsonProperty("PlanId")
     public String planId;
+
     public DeleteProvisionedProductPlanInput withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public DeleteProvisionedProductPlanInput(@JsonProperty("PlanId") String planId) {
+        this.planId = planId;
+  }
 }

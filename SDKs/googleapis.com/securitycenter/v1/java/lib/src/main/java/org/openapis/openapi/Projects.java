@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsGroupResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsGroupResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsGroupResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsGroupResponse(contentType, httpRes.statusCode()) {{
             groupAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsAssetsListResponse(contentType, httpRes.statusCode()) {{
             listAssetsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsCreateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudSecuritycenterV1BigQueryExport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsBigQueryExportsListResponse(contentType, httpRes.statusCode()) {{
             listBigQueryExportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsFindingsBulkMuteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsFindingsBulkMuteResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsFindingsBulkMuteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsFindingsBulkMuteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudSecuritycenterV1MuteConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsMuteConfigsListResponse(contentType, httpRes.statusCode()) {{
             listMuteConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,103 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             notificationConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.NotificationConfig out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.NotificationConfig.class);
-                res.notificationConfig = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Deletes a notification config.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteResponse securitycenterProjectsNotificationConfigsDelete(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("DELETE");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsDeleteResponse() {{
-            empty = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
-                res.empty = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Gets a notification config.
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetResponse securitycenterProjectsNotificationConfigsGet(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetRequest.class, baseUrl, "/v1/{name}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsGetResponse() {{
-            notificationConfig = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsNotificationConfigsListResponse(contentType, httpRes.statusCode()) {{
             listNotificationConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -542,6 +432,272 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListNotificationConfigsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListNotificationConfigsResponse.class);
                 res.listNotificationConfigsResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Creates a resident SecurityHealthAnalyticsCustomModule at the scope of the given CRM parent, and also creates inherited SecurityHealthAnalyticsCustomModules for all CRM descendants of the given parent. These modules are enabled by default.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreate(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest.class, baseUrl, "/v1/{parent}/customModules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModuleInput", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesCreateResponse(contentType, httpRes.statusCode()) {{
+            googleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule.class);
+                res.googleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Deletes the specified SecurityHealthAnalyticsCustomModule and all of its descendants in the CRM hierarchy. This method is only supported for resident custom modules.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDelete(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesDeleteResponse(contentType, httpRes.statusCode()) {{
+            empty = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.empty = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns a list of all SecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesList(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest.class, baseUrl, "/v1/{parent}/customModules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListResponse(contentType, httpRes.statusCode()) {{
+            listSecurityHealthAnalyticsCustomModulesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListSecurityHealthAnalyticsCustomModulesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListSecurityHealthAnalyticsCustomModulesResponse.class);
+                res.listSecurityHealthAnalyticsCustomModulesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns a list of all resident SecurityHealthAnalyticsCustomModules under the given CRM parent and all of the parent\u2019s CRM descendants.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse securitycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendant(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest.class, baseUrl, "/v1/{parent}/customModules:listDescendant", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsCustomModulesListDescendantResponse(contentType, httpRes.statusCode()) {{
+            listDescendantSecurityHealthAnalyticsCustomModulesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListDescendantSecurityHealthAnalyticsCustomModulesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListDescendantSecurityHealthAnalyticsCustomModulesResponse.class);
+                res.listDescendantSecurityHealthAnalyticsCustomModulesResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieves an EffectiveSecurityHealthAnalyticsCustomModule.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse securitycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGet(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest.class, baseUrl, "/v1/{name}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesGetResponse(contentType, httpRes.statusCode()) {{
+            googleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule.class);
+                res.googleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Returns a list of all EffectiveSecurityHealthAnalyticsCustomModules for the given parent. This includes resident modules defined at the scope of the parent, and inherited modules, inherited from CRM ancestors.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse securitycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesList(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest request, org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest.class, baseUrl, "/v1/{parent}/effectiveCustomModules", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSecurityHealthAnalyticsSettingsEffectiveCustomModulesListResponse(contentType, httpRes.statusCode()) {{
+            listEffectiveSecurityHealthAnalyticsCustomModulesResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListEffectiveSecurityHealthAnalyticsCustomModulesResponse.class);
+                res.listEffectiveSecurityHealthAnalyticsCustomModulesResponse = out;
             }
         }
 
@@ -578,11 +734,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsExternalSystemsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudSecuritycenterV1ExternalSystem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsGroupResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsGroupResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsGroupResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsGroupResponse(contentType, httpRes.statusCode()) {{
             groupFindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +824,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsListResponse(contentType, httpRes.statusCode()) {{
             listFindingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +870,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetMuteResponse(contentType, httpRes.statusCode()) {{
             finding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -768,11 +916,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetStateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetStateResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetStateResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesFindingsSetStateResponse(contentType, httpRes.statusCode()) {{
             finding = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -814,11 +960,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesListResponse() {{
+        org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesListResponse res = new org.openapis.openapi.models.operations.SecuritycenterProjectsSourcesListResponse(contentType, httpRes.statusCode()) {{
             listSourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

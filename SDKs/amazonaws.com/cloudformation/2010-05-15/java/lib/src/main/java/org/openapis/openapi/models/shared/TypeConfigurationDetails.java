@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TypeConfigurationDetails {
     
     public String alias;
+
     public TypeConfigurationDetails withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class TypeConfigurationDetails {
     
     
     public String arn;
+
     public TypeConfigurationDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +28,7 @@ public class TypeConfigurationDetails {
     
     
     public String configuration;
+
     public TypeConfigurationDetails withConfiguration(String configuration) {
         this.configuration = configuration;
         return this;
@@ -33,6 +36,7 @@ public class TypeConfigurationDetails {
     
     
     public Boolean isDefaultConfiguration;
+
     public TypeConfigurationDetails withIsDefaultConfiguration(Boolean isDefaultConfiguration) {
         this.isDefaultConfiguration = isDefaultConfiguration;
         return this;
@@ -40,6 +44,7 @@ public class TypeConfigurationDetails {
     
     
     public OffsetDateTime lastUpdated;
+
     public TypeConfigurationDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -47,6 +52,7 @@ public class TypeConfigurationDetails {
     
     
     public String typeArn;
+
     public TypeConfigurationDetails withTypeArn(String typeArn) {
         this.typeArn = typeArn;
         return this;
@@ -54,9 +60,11 @@ public class TypeConfigurationDetails {
     
     
     public String typeName;
+
     public TypeConfigurationDetails withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public TypeConfigurationDetails(){}
 }

@@ -15,6 +15,7 @@ public class MetricsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentDigest")
     public String contentDigest;
+
     public MetricsSource withContentDigest(String contentDigest) {
         this.contentDigest = contentDigest;
         return this;
@@ -22,6 +23,7 @@ public class MetricsSource {
     
     @JsonProperty("ContentType")
     public String contentType;
+
     public MetricsSource withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +31,14 @@ public class MetricsSource {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public MetricsSource withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public MetricsSource(@JsonProperty("ContentType") String contentType, @JsonProperty("S3Uri") String s3Uri) {
+        this.contentType = contentType;
+        this.s3Uri = s3Uri;
+  }
 }

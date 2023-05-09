@@ -15,9 +15,11 @@ public class DeleteIdentitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedIdentityIds")
     public UnprocessedIdentityId[] unprocessedIdentityIds;
+
     public DeleteIdentitiesResponse withUnprocessedIdentityIds(UnprocessedIdentityId[] unprocessedIdentityIds) {
         this.unprocessedIdentityIds = unprocessedIdentityIds;
         return this;
     }
     
+    public DeleteIdentitiesResponse(){}
 }

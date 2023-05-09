@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRandomPasswordResponse {
     
     public String contentType;
+
     public GetRandomPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRandomPasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRandomPasswordResponse getRandomPasswordResponse;
+
     public GetRandomPasswordResponse withGetRandomPasswordResponse(org.openapis.openapi.models.shared.GetRandomPasswordResponse getRandomPasswordResponse) {
         this.getRandomPasswordResponse = getRandomPasswordResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetRandomPasswordResponse {
      */
     
     public Object internalServiceError;
+
     public GetRandomPasswordResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class GetRandomPasswordResponse {
      */
     
     public Object invalidParameterException;
+
     public GetRandomPasswordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetRandomPasswordResponse {
      */
     
     public Object invalidRequestException;
+
     public GetRandomPasswordResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class GetRandomPasswordResponse {
     
     
     public Integer statusCode;
+
     public GetRandomPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetRandomPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRandomPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRandomPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

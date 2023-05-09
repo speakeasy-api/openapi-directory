@@ -15,9 +15,11 @@ public class InsertEnumOptionForCustomField200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.EnumOption data;
+
     public InsertEnumOptionForCustomField200ApplicationJSON withData(org.openapis.openapi.models.shared.EnumOption data) {
         this.data = data;
         return this;
     }
     
+    public InsertEnumOptionForCustomField200ApplicationJSON(){}
 }

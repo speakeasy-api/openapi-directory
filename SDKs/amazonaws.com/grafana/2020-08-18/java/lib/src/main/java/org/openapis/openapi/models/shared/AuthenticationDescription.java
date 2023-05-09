@@ -15,6 +15,7 @@ public class AuthenticationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsSso")
     public AwsSsoAuthentication awsSso;
+
     public AuthenticationDescription withAwsSso(AwsSsoAuthentication awsSso) {
         this.awsSso = awsSso;
         return this;
@@ -22,6 +23,7 @@ public class AuthenticationDescription {
     
     @JsonProperty("providers")
     public AuthenticationProviderTypesEnum[] providers;
+
     public AuthenticationDescription withProviders(AuthenticationProviderTypesEnum[] providers) {
         this.providers = providers;
         return this;
@@ -30,9 +32,13 @@ public class AuthenticationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saml")
     public SamlAuthentication saml;
+
     public AuthenticationDescription withSaml(SamlAuthentication saml) {
         this.saml = saml;
         return this;
     }
     
+    public AuthenticationDescription(@JsonProperty("providers") AuthenticationProviderTypesEnum[] providers) {
+        this.providers = providers;
+  }
 }

@@ -15,9 +15,11 @@ public class CreateLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public CreateLifecyclePolicyResponse withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public CreateLifecyclePolicyResponse(){}
 }

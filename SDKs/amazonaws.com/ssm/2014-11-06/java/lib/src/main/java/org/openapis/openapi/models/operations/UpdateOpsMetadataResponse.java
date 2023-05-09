@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOpsMetadataResponse {
     
     public String contentType;
+
     public UpdateOpsMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateOpsMetadataResponse {
      */
     
     public Object internalServerError;
+
     public UpdateOpsMetadataResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateOpsMetadataResponse {
      */
     
     public Object opsMetadataInvalidArgumentException;
+
     public UpdateOpsMetadataResponse withOpsMetadataInvalidArgumentException(Object opsMetadataInvalidArgumentException) {
         this.opsMetadataInvalidArgumentException = opsMetadataInvalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateOpsMetadataResponse {
      */
     
     public Object opsMetadataKeyLimitExceededException;
+
     public UpdateOpsMetadataResponse withOpsMetadataKeyLimitExceededException(Object opsMetadataKeyLimitExceededException) {
         this.opsMetadataKeyLimitExceededException = opsMetadataKeyLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateOpsMetadataResponse {
      */
     
     public Object opsMetadataNotFoundException;
+
     public UpdateOpsMetadataResponse withOpsMetadataNotFoundException(Object opsMetadataNotFoundException) {
         this.opsMetadataNotFoundException = opsMetadataNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateOpsMetadataResponse {
      */
     
     public Object opsMetadataTooManyUpdatesException;
+
     public UpdateOpsMetadataResponse withOpsMetadataTooManyUpdatesException(Object opsMetadataTooManyUpdatesException) {
         this.opsMetadataTooManyUpdatesException = opsMetadataTooManyUpdatesException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateOpsMetadataResponse {
     
     
     public Integer statusCode;
+
     public UpdateOpsMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateOpsMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOpsMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateOpsMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateOpsMetadataResult updateOpsMetadataResult;
+
     public UpdateOpsMetadataResponse withUpdateOpsMetadataResult(org.openapis.openapi.models.shared.UpdateOpsMetadataResult updateOpsMetadataResult) {
         this.updateOpsMetadataResult = updateOpsMetadataResult;
         return this;
     }
     
+    public UpdateOpsMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

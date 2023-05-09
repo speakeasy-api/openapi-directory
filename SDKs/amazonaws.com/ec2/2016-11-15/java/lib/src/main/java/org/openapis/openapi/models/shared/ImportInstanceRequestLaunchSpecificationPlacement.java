@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     public String affinity;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withAffinity(String affinity) {
         this.affinity = affinity;
         return this;
@@ -19,6 +20,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String availabilityZone;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String groupId;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String groupName;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -40,6 +44,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String hostId;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -47,6 +52,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String hostResourceGroupArn;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public Long partitionNumber;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -61,6 +68,7 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public String spreadDomain;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withSpreadDomain(String spreadDomain) {
         this.spreadDomain = spreadDomain;
         return this;
@@ -68,9 +76,11 @@ public class ImportInstanceRequestLaunchSpecificationPlacement {
     
     
     public ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum tenancy;
+
     public ImportInstanceRequestLaunchSpecificationPlacement withTenancy(ImportInstanceRequestLaunchSpecificationPlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public ImportInstanceRequestLaunchSpecificationPlacement(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiV1ListsResponse {
     
     public String contentType;
+
     public DeleteApiV1ListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiV1ListsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteApiV1ListsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiV1ListsResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiV1ListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteApiV1ListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiV1ListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteApiV1ListsResponse {
      */
     
     public java.util.Map<String, Object> deleteApiV1Lists200ApplicationJSONObject;
+
     public DeleteApiV1ListsResponse withDeleteApiV1Lists200ApplicationJSONObject(java.util.Map<String, Object> deleteApiV1Lists200ApplicationJSONObject) {
         this.deleteApiV1Lists200ApplicationJSONObject = deleteApiV1Lists200ApplicationJSONObject;
         return this;
     }
     
+    public DeleteApiV1ListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

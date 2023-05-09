@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTldDomainItemRequest {
@@ -12,6 +13,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=A")
     public String a;
+
     public GetTldDomainItemRequest withA(String a) {
         this.a = a;
         return this;
@@ -22,6 +24,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CNAME")
     public String cname;
+
     public GetTldDomainItemRequest withCname(String cname) {
         this.cname = cname;
         return this;
@@ -32,6 +35,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MX")
     public String mx;
+
     public GetTldDomainItemRequest withMx(String mx) {
         this.mx = mx;
         return this;
@@ -42,6 +46,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NS")
     public String ns;
+
     public GetTldDomainItemRequest withNs(String ns) {
         this.ns = ns;
         return this;
@@ -52,6 +57,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TXT")
     public String txt;
+
     public GetTldDomainItemRequest withTxt(String txt) {
         this.txt = txt;
         return this;
@@ -62,6 +68,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetTldDomainItemRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -72,6 +79,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetTldDomainItemRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -82,6 +90,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetTldDomainItemRequest withDate(String date) {
         this.date = date;
         return this;
@@ -92,6 +101,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public GetTldDomainItemRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -102,6 +112,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isDead")
     public Boolean isDead;
+
     public GetTldDomainItemRequest withIsDead(Boolean isDead) {
         this.isDead = isDead;
         return this;
@@ -112,6 +123,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTldDomainItemRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -122,6 +134,7 @@ public class GetTldDomainItemRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetTldDomainItemRequest withPage(String page) {
         this.page = page;
         return this;
@@ -129,9 +142,13 @@ public class GetTldDomainItemRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone_id")
     public String zoneId;
+
     public GetTldDomainItemRequest withZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     
+    public GetTldDomainItemRequest(@JsonProperty("zone_id") String zoneId) {
+        this.zoneId = zoneId;
+  }
 }

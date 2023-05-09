@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAemProductInfoResponse {
     
     public String contentType;
+
     public GetAemProductInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAemProductInfoResponse {
     
     
     public Integer statusCode;
+
     public GetAemProductInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAemProductInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAemProductInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetAemProductInfoResponse {
      */
     
     public String[] getAemProductInfoDefaultApplicationJSONStrings;
+
     public GetAemProductInfoResponse withGetAemProductInfoDefaultApplicationJSONStrings(String[] getAemProductInfoDefaultApplicationJSONStrings) {
         this.getAemProductInfoDefaultApplicationJSONStrings = getAemProductInfoDefaultApplicationJSONStrings;
         return this;
     }
     
+    public GetAemProductInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

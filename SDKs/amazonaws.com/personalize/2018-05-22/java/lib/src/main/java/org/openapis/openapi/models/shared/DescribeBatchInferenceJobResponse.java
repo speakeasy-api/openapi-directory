@@ -15,9 +15,11 @@ public class DescribeBatchInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchInferenceJob")
     public BatchInferenceJob batchInferenceJob;
+
     public DescribeBatchInferenceJobResponse withBatchInferenceJob(BatchInferenceJob batchInferenceJob) {
         this.batchInferenceJob = batchInferenceJob;
         return this;
     }
     
+    public DescribeBatchInferenceJobResponse(){}
 }

@@ -18,6 +18,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountName")
     public String accountName;
+
     public AccountInput withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -29,6 +30,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationInfo")
     public OrganizationInfoInput organizationInfo;
+
     public AccountInput withOrganizationInfo(OrganizationInfoInput organizationInfo) {
         this.organizationInfo = organizationInfo;
         return this;
@@ -51,6 +54,7 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryOwner")
     public String primaryOwner;
+
     public AccountInput withPrimaryOwner(String primaryOwner) {
         this.primaryOwner = primaryOwner;
         return this;
@@ -62,9 +66,11 @@ public class AccountInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccountTypeEnum type;
+
     public AccountInput withType(AccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccountInput(){}
 }

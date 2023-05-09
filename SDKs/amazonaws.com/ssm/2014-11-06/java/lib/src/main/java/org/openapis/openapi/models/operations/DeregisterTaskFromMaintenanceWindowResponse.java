@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterTaskFromMaintenanceWindowResponse {
     
     public String contentType;
+
     public DeregisterTaskFromMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterTaskFromMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterTaskFromMaintenanceWindowResult deregisterTaskFromMaintenanceWindowResult;
+
     public DeregisterTaskFromMaintenanceWindowResponse withDeregisterTaskFromMaintenanceWindowResult(org.openapis.openapi.models.shared.DeregisterTaskFromMaintenanceWindowResult deregisterTaskFromMaintenanceWindowResult) {
         this.deregisterTaskFromMaintenanceWindowResult = deregisterTaskFromMaintenanceWindowResult;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterTaskFromMaintenanceWindowResponse {
      */
     
     public Object doesNotExistException;
+
     public DeregisterTaskFromMaintenanceWindowResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterTaskFromMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public DeregisterTaskFromMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterTaskFromMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public DeregisterTaskFromMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeregisterTaskFromMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterTaskFromMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeregisterTaskFromMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

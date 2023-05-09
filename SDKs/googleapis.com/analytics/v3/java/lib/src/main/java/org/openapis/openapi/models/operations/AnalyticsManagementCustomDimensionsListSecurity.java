@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementCustomDimensionsListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementCustomDimensionsListSecurityOption1 option1;
+
     public AnalyticsManagementCustomDimensionsListSecurity withOption1(AnalyticsManagementCustomDimensionsListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsManagementCustomDimensionsListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsManagementCustomDimensionsListSecurityOption2 option2;
+
     public AnalyticsManagementCustomDimensionsListSecurity withOption2(AnalyticsManagementCustomDimensionsListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsManagementCustomDimensionsListSecurity(){}
 }

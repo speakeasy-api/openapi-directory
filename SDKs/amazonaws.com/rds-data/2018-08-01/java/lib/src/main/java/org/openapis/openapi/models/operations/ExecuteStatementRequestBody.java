@@ -15,6 +15,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continueAfterTimeout")
     public Boolean continueAfterTimeout;
+
     public ExecuteStatementRequestBody withContinueAfterTimeout(Boolean continueAfterTimeout) {
         this.continueAfterTimeout = continueAfterTimeout;
         return this;
@@ -26,6 +27,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public ExecuteStatementRequestBody withDatabase(String database) {
         this.database = database;
         return this;
@@ -37,6 +39,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatRecordsAs")
     public ExecuteStatementRequestBodyFormatRecordsAsEnum formatRecordsAs;
+
     public ExecuteStatementRequestBody withFormatRecordsAs(ExecuteStatementRequestBodyFormatRecordsAsEnum formatRecordsAs) {
         this.formatRecordsAs = formatRecordsAs;
         return this;
@@ -48,6 +51,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeResultMetadata")
     public Boolean includeResultMetadata;
+
     public ExecuteStatementRequestBody withIncludeResultMetadata(Boolean includeResultMetadata) {
         this.includeResultMetadata = includeResultMetadata;
         return this;
@@ -59,6 +63,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public org.openapis.openapi.models.shared.SqlParameter[] parameters;
+
     public ExecuteStatementRequestBody withParameters(org.openapis.openapi.models.shared.SqlParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -69,6 +74,7 @@ public class ExecuteStatementRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public ExecuteStatementRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -80,6 +86,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultSetOptions")
     public ExecuteStatementRequestBodyResultSetOptions resultSetOptions;
+
     public ExecuteStatementRequestBody withResultSetOptions(ExecuteStatementRequestBodyResultSetOptions resultSetOptions) {
         this.resultSetOptions = resultSetOptions;
         return this;
@@ -91,6 +98,7 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public ExecuteStatementRequestBody withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -101,6 +109,7 @@ public class ExecuteStatementRequestBody {
      */
     @JsonProperty("secretArn")
     public String secretArn;
+
     public ExecuteStatementRequestBody withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -111,6 +120,7 @@ public class ExecuteStatementRequestBody {
      */
     @JsonProperty("sql")
     public String sql;
+
     public ExecuteStatementRequestBody withSql(String sql) {
         this.sql = sql;
         return this;
@@ -122,9 +132,15 @@ public class ExecuteStatementRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public ExecuteStatementRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ExecuteStatementRequestBody(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("secretArn") String secretArn, @JsonProperty("sql") String sql) {
+        this.resourceArn = resourceArn;
+        this.secretArn = secretArn;
+        this.sql = sql;
+  }
 }

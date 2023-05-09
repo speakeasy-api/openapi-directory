@@ -12,6 +12,7 @@ public class CreateLagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childConnectionTags")
     public Tag[] childConnectionTags;
+
     public CreateLagRequest withChildConnectionTags(Tag[] childConnectionTags) {
         this.childConnectionTags = childConnectionTags;
         return this;
@@ -20,6 +21,7 @@ public class CreateLagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public CreateLagRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -27,6 +29,7 @@ public class CreateLagRequest {
     
     @JsonProperty("connectionsBandwidth")
     public String connectionsBandwidth;
+
     public CreateLagRequest withConnectionsBandwidth(String connectionsBandwidth) {
         this.connectionsBandwidth = connectionsBandwidth;
         return this;
@@ -34,6 +37,7 @@ public class CreateLagRequest {
     
     @JsonProperty("lagName")
     public String lagName;
+
     public CreateLagRequest withLagName(String lagName) {
         this.lagName = lagName;
         return this;
@@ -41,6 +45,7 @@ public class CreateLagRequest {
     
     @JsonProperty("location")
     public String location;
+
     public CreateLagRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -48,6 +53,7 @@ public class CreateLagRequest {
     
     @JsonProperty("numberOfConnections")
     public Long numberOfConnections;
+
     public CreateLagRequest withNumberOfConnections(Long numberOfConnections) {
         this.numberOfConnections = numberOfConnections;
         return this;
@@ -56,6 +62,7 @@ public class CreateLagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public CreateLagRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -64,6 +71,7 @@ public class CreateLagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestMACSec")
     public Boolean requestMACSec;
+
     public CreateLagRequest withRequestMACSec(Boolean requestMACSec) {
         this.requestMACSec = requestMACSec;
         return this;
@@ -72,9 +80,16 @@ public class CreateLagRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateLagRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLagRequest(@JsonProperty("connectionsBandwidth") String connectionsBandwidth, @JsonProperty("lagName") String lagName, @JsonProperty("location") String location, @JsonProperty("numberOfConnections") Long numberOfConnections) {
+        this.connectionsBandwidth = connectionsBandwidth;
+        this.lagName = lagName;
+        this.location = location;
+        this.numberOfConnections = numberOfConnections;
+  }
 }

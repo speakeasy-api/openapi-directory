@@ -15,6 +15,7 @@ public class Operator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OperatorTypeEnum type;
+
     public Operator withType(OperatorTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class Operator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public Operator withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public Operator(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTextTranslationJobResponse {
     
     public String contentType;
+
     public DescribeTextTranslationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTextTranslationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTextTranslationJobResponse describeTextTranslationJobResponse;
+
     public DescribeTextTranslationJobResponse withDescribeTextTranslationJobResponse(org.openapis.openapi.models.shared.DescribeTextTranslationJobResponse describeTextTranslationJobResponse) {
         this.describeTextTranslationJobResponse = describeTextTranslationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTextTranslationJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTextTranslationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTextTranslationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTextTranslationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTextTranslationJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeTextTranslationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeTextTranslationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTextTranslationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeTextTranslationJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeTextTranslationJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeTextTranslationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

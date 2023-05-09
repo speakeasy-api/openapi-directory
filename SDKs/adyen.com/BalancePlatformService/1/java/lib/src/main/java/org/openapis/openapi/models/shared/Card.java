@@ -12,6 +12,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public Authentication authentication;
+
     public Card withAuthentication(Authentication authentication) {
         this.authentication = authentication;
         return this;
@@ -23,6 +24,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public Card withBin(String bin) {
         this.bin = bin;
         return this;
@@ -34,6 +36,7 @@ public class Card {
      */
     @JsonProperty("brand")
     public String brand;
+
     public Card withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -45,6 +48,7 @@ public class Card {
      */
     @JsonProperty("brandVariant")
     public String brandVariant;
+
     public Card withBrandVariant(String brandVariant) {
         this.brandVariant = brandVariant;
         return this;
@@ -56,6 +60,7 @@ public class Card {
      */
     @JsonProperty("cardholderName")
     public String cardholderName;
+
     public Card withCardholderName(String cardholderName) {
         this.cardholderName = cardholderName;
         return this;
@@ -64,6 +69,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public CardConfiguration configuration;
+
     public Card withConfiguration(CardConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -76,6 +82,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvc")
     public String cvc;
+
     public Card withCvc(String cvc) {
         this.cvc = cvc;
         return this;
@@ -84,6 +91,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryContact")
     public Contact deliveryContact;
+
     public Card withDeliveryContact(Contact deliveryContact) {
         this.deliveryContact = deliveryContact;
         return this;
@@ -92,6 +100,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public Expiry expiration;
+
     public Card withExpiration(Expiry expiration) {
         this.expiration = expiration;
         return this;
@@ -103,6 +112,7 @@ public class Card {
      */
     @JsonProperty("formFactor")
     public CardFormFactorEnum formFactor;
+
     public Card withFormFactor(CardFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -114,6 +124,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastFour")
     public String lastFour;
+
     public Card withLastFour(String lastFour) {
         this.lastFour = lastFour;
         return this;
@@ -125,9 +136,17 @@ public class Card {
      */
     @JsonProperty("number")
     public String number;
+
     public Card withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public Card(@JsonProperty("brand") String brand, @JsonProperty("brandVariant") String brandVariant, @JsonProperty("cardholderName") String cardholderName, @JsonProperty("formFactor") CardFormFactorEnum formFactor, @JsonProperty("number") String number) {
+        this.brand = brand;
+        this.brandVariant = brandVariant;
+        this.cardholderName = cardholderName;
+        this.formFactor = formFactor;
+        this.number = number;
+  }
 }

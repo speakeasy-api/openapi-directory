@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeClientPropertiesResponse {
@@ -12,6 +13,7 @@ public class DescribeClientPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeClientPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeClientPropertiesResponse {
     
     
     public String contentType;
+
     public DescribeClientPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeClientPropertiesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeClientPropertiesResult describeClientPropertiesResult;
+
     public DescribeClientPropertiesResponse withDescribeClientPropertiesResult(org.openapis.openapi.models.shared.DescribeClientPropertiesResult describeClientPropertiesResult) {
         this.describeClientPropertiesResult = describeClientPropertiesResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeClientPropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public DescribeClientPropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeClientPropertiesResponse {
     
     
     public Integer statusCode;
+
     public DescribeClientPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeClientPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeClientPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeClientPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeClientPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeClientPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Get {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public Get withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -22,6 +23,7 @@ public class Get {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public Get withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -30,6 +32,7 @@ public class Get {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionExpression")
     public String projectionExpression;
+
     public Get withProjectionExpression(String projectionExpression) {
         this.projectionExpression = projectionExpression;
         return this;
@@ -37,9 +40,14 @@ public class Get {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public Get withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public Get(@JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

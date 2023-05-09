@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CancelReservedInstancesListingResult {
     
     public CancelReservedInstancesListingResultReservedInstancesListings[] reservedInstancesListings;
+
     public CancelReservedInstancesListingResult withReservedInstancesListings(CancelReservedInstancesListingResultReservedInstancesListings[] reservedInstancesListings) {
         this.reservedInstancesListings = reservedInstancesListings;
         return this;
     }
     
+    public CancelReservedInstancesListingResult(){}
 }

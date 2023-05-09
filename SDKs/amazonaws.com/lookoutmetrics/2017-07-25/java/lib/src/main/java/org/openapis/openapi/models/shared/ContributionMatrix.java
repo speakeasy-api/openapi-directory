@@ -15,9 +15,11 @@ public class ContributionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionContributionList")
     public DimensionContribution[] dimensionContributionList;
+
     public ContributionMatrix withDimensionContributionList(DimensionContribution[] dimensionContributionList) {
         this.dimensionContributionList = dimensionContributionList;
         return this;
     }
     
+    public ContributionMatrix(){}
 }

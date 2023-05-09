@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LHDeepLinksITCORequest {
@@ -12,6 +13,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public LHDeepLinksITCORequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cabin-class")
     public String cabinClass;
+
     public LHDeepLinksITCORequest withCabinClass(String cabinClass) {
         this.cabinClass = cabinClass;
         return this;
@@ -32,6 +35,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=catalogues")
     public String catalogues;
+
     public LHDeepLinksITCORequest withCatalogues(String catalogues) {
         this.catalogues = catalogues;
         return this;
@@ -42,6 +46,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public LHDeepLinksITCORequest withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination")
     public String destination;
+
     public LHDeepLinksITCORequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -62,6 +68,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=encryption-key")
     public String encryptionKey;
+
     public LHDeepLinksITCORequest withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -72,6 +79,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare")
     public String fare;
+
     public LHDeepLinksITCORequest withFare(String fare) {
         this.fare = fare;
         return this;
@@ -82,6 +90,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fare-currency")
     public String fareCurrency;
+
     public LHDeepLinksITCORequest withFareCurrency(String fareCurrency) {
         this.fareCurrency = fareCurrency;
         return this;
@@ -92,6 +101,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public LHDeepLinksITCORequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -102,6 +112,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=net-fare")
     public String netFare;
+
     public LHDeepLinksITCORequest withNetFare(String netFare) {
         this.netFare = netFare;
         return this;
@@ -112,6 +123,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin")
     public String origin;
+
     public LHDeepLinksITCORequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -122,6 +134,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outbound-segments")
     public String outboundSegments;
+
     public LHDeepLinksITCORequest withOutboundSegments(String outboundSegments) {
         this.outboundSegments = outboundSegments;
         return this;
@@ -132,6 +145,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerid")
     public String partnerid;
+
     public LHDeepLinksITCORequest withPartnerid(String partnerid) {
         this.partnerid = partnerid;
         return this;
@@ -142,6 +156,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-date")
     public String returnDate;
+
     public LHDeepLinksITCORequest withReturnDate(String returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -152,6 +167,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=return-segments")
     public String returnSegments;
+
     public LHDeepLinksITCORequest withReturnSegments(String returnSegments) {
         this.returnSegments = returnSegments;
         return this;
@@ -162,6 +178,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=trackingid")
     public String trackingid;
+
     public LHDeepLinksITCORequest withTrackingid(String trackingid) {
         this.trackingid = trackingid;
         return this;
@@ -172,6 +189,7 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travel-date")
     public String travelDate;
+
     public LHDeepLinksITCORequest withTravelDate(String travelDate) {
         this.travelDate = travelDate;
         return this;
@@ -182,9 +200,23 @@ public class LHDeepLinksITCORequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=travelers")
     public String travelers;
+
     public LHDeepLinksITCORequest withTravelers(String travelers) {
         this.travelers = travelers;
         return this;
     }
     
+    public LHDeepLinksITCORequest(@JsonProperty("Accept") String accept, @JsonProperty("catalogues") String catalogues, @JsonProperty("country") String country, @JsonProperty("destination") String destination, @JsonProperty("fare") String fare, @JsonProperty("fare-currency") String fareCurrency, @JsonProperty("lang") String lang, @JsonProperty("origin") String origin, @JsonProperty("outbound-segments") String outboundSegments, @JsonProperty("trackingid") String trackingid, @JsonProperty("travel-date") String travelDate) {
+        this.accept = accept;
+        this.catalogues = catalogues;
+        this.country = country;
+        this.destination = destination;
+        this.fare = fare;
+        this.fareCurrency = fareCurrency;
+        this.lang = lang;
+        this.origin = origin;
+        this.outboundSegments = outboundSegments;
+        this.trackingid = trackingid;
+        this.travelDate = travelDate;
+  }
 }

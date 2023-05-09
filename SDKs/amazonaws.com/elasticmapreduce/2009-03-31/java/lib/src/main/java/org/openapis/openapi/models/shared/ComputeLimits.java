@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ComputeLimits {
     @JsonProperty("MaximumCapacityUnits")
     public Long maximumCapacityUnits;
+
     public ComputeLimits withMaximumCapacityUnits(Long maximumCapacityUnits) {
         this.maximumCapacityUnits = maximumCapacityUnits;
         return this;
@@ -22,6 +23,7 @@ public class ComputeLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumCoreCapacityUnits")
     public Long maximumCoreCapacityUnits;
+
     public ComputeLimits withMaximumCoreCapacityUnits(Long maximumCoreCapacityUnits) {
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         return this;
@@ -30,6 +32,7 @@ public class ComputeLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumOnDemandCapacityUnits")
     public Long maximumOnDemandCapacityUnits;
+
     public ComputeLimits withMaximumOnDemandCapacityUnits(Long maximumOnDemandCapacityUnits) {
         this.maximumOnDemandCapacityUnits = maximumOnDemandCapacityUnits;
         return this;
@@ -37,6 +40,7 @@ public class ComputeLimits {
     
     @JsonProperty("MinimumCapacityUnits")
     public Long minimumCapacityUnits;
+
     public ComputeLimits withMinimumCapacityUnits(Long minimumCapacityUnits) {
         this.minimumCapacityUnits = minimumCapacityUnits;
         return this;
@@ -44,9 +48,15 @@ public class ComputeLimits {
     
     @JsonProperty("UnitType")
     public ComputeLimitsUnitTypeEnum unitType;
+
     public ComputeLimits withUnitType(ComputeLimitsUnitTypeEnum unitType) {
         this.unitType = unitType;
         return this;
     }
     
+    public ComputeLimits(@JsonProperty("MaximumCapacityUnits") Long maximumCapacityUnits, @JsonProperty("MinimumCapacityUnits") Long minimumCapacityUnits, @JsonProperty("UnitType") ComputeLimitsUnitTypeEnum unitType) {
+        this.maximumCapacityUnits = maximumCapacityUnits;
+        this.minimumCapacityUnits = minimumCapacityUnits;
+        this.unitType = unitType;
+  }
 }

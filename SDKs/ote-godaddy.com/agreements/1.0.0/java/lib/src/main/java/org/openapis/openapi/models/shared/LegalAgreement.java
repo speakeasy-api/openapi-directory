@@ -14,6 +14,7 @@ public class LegalAgreement {
      */
     @JsonProperty("agreementKey")
     public String agreementKey;
+
     public LegalAgreement withAgreementKey(String agreementKey) {
         this.agreementKey = agreementKey;
         return this;
@@ -24,6 +25,7 @@ public class LegalAgreement {
      */
     @JsonProperty("content")
     public String content;
+
     public LegalAgreement withContent(String content) {
         this.content = content;
         return this;
@@ -34,6 +36,7 @@ public class LegalAgreement {
      */
     @JsonProperty("title")
     public String title;
+
     public LegalAgreement withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,15 @@ public class LegalAgreement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LegalAgreement withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LegalAgreement(@JsonProperty("agreementKey") String agreementKey, @JsonProperty("content") String content, @JsonProperty("title") String title) {
+        this.agreementKey = agreementKey;
+        this.content = content;
+        this.title = title;
+  }
 }

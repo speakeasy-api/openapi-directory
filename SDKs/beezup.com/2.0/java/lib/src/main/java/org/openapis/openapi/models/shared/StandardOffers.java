@@ -15,6 +15,7 @@ public class StandardOffers {
      */
     @JsonProperty("functionalities")
     public Functionality[] functionalities;
+
     public StandardOffers withFunctionalities(Functionality[] functionalities) {
         this.functionalities = functionalities;
         return this;
@@ -22,6 +23,7 @@ public class StandardOffers {
     
     @JsonProperty("links")
     public StandardOffersLinks links;
+
     public StandardOffers withLinks(StandardOffersLinks links) {
         this.links = links;
         return this;
@@ -32,9 +34,15 @@ public class StandardOffers {
      */
     @JsonProperty("offers")
     public StandardOffer[] offers;
+
     public StandardOffers withOffers(StandardOffer[] offers) {
         this.offers = offers;
         return this;
     }
     
+    public StandardOffers(@JsonProperty("functionalities") Functionality[] functionalities, @JsonProperty("links") StandardOffersLinks links, @JsonProperty("offers") StandardOffer[] offers) {
+        this.functionalities = functionalities;
+        this.links = links;
+        this.offers = offers;
+  }
 }

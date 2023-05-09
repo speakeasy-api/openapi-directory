@@ -15,9 +15,11 @@ public class DescribeLayersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Layers")
     public Layer[] layers;
+
     public DescribeLayersResult withLayers(Layer[] layers) {
         this.layers = layers;
         return this;
     }
     
+    public DescribeLayersResult(){}
 }

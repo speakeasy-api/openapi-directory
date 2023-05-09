@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables {
     
     public OffsetDateTime creationTime;
+
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables 
     
     
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTablesStateEnum state;
+
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables withState(DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTablesStateEnum state) {
         this.state = state;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables 
     
     
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTablesTags[] tags;
+
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables withTags(DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTablesTags[] tags) {
         this.tags = tags;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables 
     
     
     public String transitGatewayId;
+
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -40,9 +44,11 @@ public class DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables 
     
     
     public String transitGatewayPolicyTableId;
+
     public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
     }
     
+    public DescribeTransitGatewayPolicyTablesResultTransitGatewayPolicyTables(){}
 }

@@ -15,6 +15,7 @@ public class SearchUsers503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public SearchUsers503ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class SearchUsers503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public SearchUsers503ApplicationJSON withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -31,9 +33,11 @@ public class SearchUsers503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SearchUsers503ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SearchUsers503ApplicationJSON(){}
 }

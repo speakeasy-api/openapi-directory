@@ -18,6 +18,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeId")
     public Integer codeId;
+
     public Asp withCodeId(Integer codeId) {
         this.codeId = codeId;
         return this;
@@ -29,6 +30,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public Asp withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -40,6 +42,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Asp withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Asp withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTimeUsed")
     public String lastTimeUsed;
+
     public Asp withLastTimeUsed(String lastTimeUsed) {
         this.lastTimeUsed = lastTimeUsed;
         return this;
@@ -73,6 +78,7 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Asp withName(String name) {
         this.name = name;
         return this;
@@ -84,9 +90,11 @@ public class Asp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userKey")
     public String userKey;
+
     public Asp withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public Asp(){}
 }

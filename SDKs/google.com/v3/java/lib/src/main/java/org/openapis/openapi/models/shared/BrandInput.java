@@ -18,6 +18,7 @@ public class BrandInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayNames")
     public LocalizedText[] displayNames;
+
     public BrandInput withDisplayNames(LocalizedText[] displayNames) {
         this.displayNames = displayNames;
         return this;
@@ -29,9 +30,11 @@ public class BrandInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public BrandInput withIcon(String icon) {
         this.icon = icon;
         return this;
     }
     
+    public BrandInput(){}
 }

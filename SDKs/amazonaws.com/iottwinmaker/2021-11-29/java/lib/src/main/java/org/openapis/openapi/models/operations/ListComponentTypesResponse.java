@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComponentTypesResponse {
@@ -12,6 +13,7 @@ public class ListComponentTypesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListComponentTypesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListComponentTypesResponse {
     
     
     public String contentType;
+
     public ListComponentTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListComponentTypesResponse {
      */
     
     public Object internalServerException;
+
     public ListComponentTypesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListComponentTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComponentTypesResponse listComponentTypesResponse;
+
     public ListComponentTypesResponse withListComponentTypesResponse(org.openapis.openapi.models.shared.ListComponentTypesResponse listComponentTypesResponse) {
         this.listComponentTypesResponse = listComponentTypesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListComponentTypesResponse {
     
     
     public Integer statusCode;
+
     public ListComponentTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListComponentTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComponentTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListComponentTypesResponse {
      */
     
     public Object throttlingException;
+
     public ListComponentTypesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListComponentTypesResponse {
      */
     
     public Object validationException;
+
     public ListComponentTypesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListComponentTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

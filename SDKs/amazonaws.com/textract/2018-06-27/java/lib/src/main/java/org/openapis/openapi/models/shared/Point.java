@@ -15,6 +15,7 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("X")
     public Float x;
+
     public Point withX(Float x) {
         this.x = x;
         return this;
@@ -23,9 +24,11 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Y")
     public Float y;
+
     public Point withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public Point(){}
 }

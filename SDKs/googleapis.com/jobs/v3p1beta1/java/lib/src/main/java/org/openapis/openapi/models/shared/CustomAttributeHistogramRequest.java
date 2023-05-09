@@ -18,6 +18,7 @@ public class CustomAttributeHistogramRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CustomAttributeHistogramRequest withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class CustomAttributeHistogramRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longValueHistogramBucketingOption")
     public NumericBucketingOption longValueHistogramBucketingOption;
+
     public CustomAttributeHistogramRequest withLongValueHistogramBucketingOption(NumericBucketingOption longValueHistogramBucketingOption) {
         this.longValueHistogramBucketingOption = longValueHistogramBucketingOption;
         return this;
@@ -40,9 +42,11 @@ public class CustomAttributeHistogramRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValueHistogram")
     public Boolean stringValueHistogram;
+
     public CustomAttributeHistogramRequest withStringValueHistogram(Boolean stringValueHistogram) {
         this.stringValueHistogram = stringValueHistogram;
         return this;
     }
     
+    public CustomAttributeHistogramRequest(){}
 }

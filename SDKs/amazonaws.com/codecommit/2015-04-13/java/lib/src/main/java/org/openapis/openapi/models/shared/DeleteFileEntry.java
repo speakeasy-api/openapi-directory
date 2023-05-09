@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFileEntry {
     @JsonProperty("filePath")
     public String filePath;
+
     public DeleteFileEntry withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public DeleteFileEntry(@JsonProperty("filePath") String filePath) {
+        this.filePath = filePath;
+  }
 }

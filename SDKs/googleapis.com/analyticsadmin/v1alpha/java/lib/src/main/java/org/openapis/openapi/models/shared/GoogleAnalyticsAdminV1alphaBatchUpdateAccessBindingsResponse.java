@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessBindings")
     public GoogleAnalyticsAdminV1alphaAccessBinding[] accessBindings;
+
     public GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse withAccessBindings(GoogleAnalyticsAdminV1alphaAccessBinding[] accessBindings) {
         this.accessBindings = accessBindings;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBatchUpdateAccessBindingsResponse(){}
 }

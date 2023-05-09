@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacement {
     
     public String availabilityZone;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacement withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPl
     
     
     public String groupName;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacement withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -26,9 +28,11 @@ public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPl
     
     
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum tenancy;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacement withTenancy(RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsPlacement(){}
 }

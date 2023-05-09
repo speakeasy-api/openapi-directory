@@ -15,6 +15,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AndAllFilters")
     public AttributeFilter[] andAllFilters;
+
     public AttributeFilter withAndAllFilters(AttributeFilter[] andAllFilters) {
         this.andAllFilters = andAllFilters;
         return this;
@@ -23,6 +24,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsAll")
     public DocumentAttribute containsAll;
+
     public AttributeFilter withContainsAll(DocumentAttribute containsAll) {
         this.containsAll = containsAll;
         return this;
@@ -31,6 +33,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsAny")
     public DocumentAttribute containsAny;
+
     public AttributeFilter withContainsAny(DocumentAttribute containsAny) {
         this.containsAny = containsAny;
         return this;
@@ -39,6 +42,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EqualsTo")
     public DocumentAttribute equalsTo;
+
     public AttributeFilter withEqualsTo(DocumentAttribute equalsTo) {
         this.equalsTo = equalsTo;
         return this;
@@ -47,6 +51,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GreaterThan")
     public DocumentAttribute greaterThan;
+
     public AttributeFilter withGreaterThan(DocumentAttribute greaterThan) {
         this.greaterThan = greaterThan;
         return this;
@@ -55,6 +60,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GreaterThanOrEquals")
     public DocumentAttribute greaterThanOrEquals;
+
     public AttributeFilter withGreaterThanOrEquals(DocumentAttribute greaterThanOrEquals) {
         this.greaterThanOrEquals = greaterThanOrEquals;
         return this;
@@ -63,6 +69,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LessThan")
     public DocumentAttribute lessThan;
+
     public AttributeFilter withLessThan(DocumentAttribute lessThan) {
         this.lessThan = lessThan;
         return this;
@@ -71,6 +78,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LessThanOrEquals")
     public DocumentAttribute lessThanOrEquals;
+
     public AttributeFilter withLessThanOrEquals(DocumentAttribute lessThanOrEquals) {
         this.lessThanOrEquals = lessThanOrEquals;
         return this;
@@ -79,6 +87,7 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotFilter")
     public AttributeFilter notFilter;
+
     public AttributeFilter withNotFilter(AttributeFilter notFilter) {
         this.notFilter = notFilter;
         return this;
@@ -87,9 +96,11 @@ public class AttributeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrAllFilters")
     public AttributeFilter[] orAllFilters;
+
     public AttributeFilter withOrAllFilters(AttributeFilter[] orAllFilters) {
         this.orAllFilters = orAllFilters;
         return this;
     }
     
+    public AttributeFilter(){}
 }

@@ -12,6 +12,7 @@ public class ApplicationsDatapoint {
      */
     
     public Double count;
+
     public ApplicationsDatapoint withCount(Double count) {
         this.count = count;
         return this;
@@ -22,9 +23,11 @@ public class ApplicationsDatapoint {
      */
     
     public OffsetDateTime time;
+
     public ApplicationsDatapoint withTime(OffsetDateTime time) {
         this.time = time;
         return this;
     }
     
+    public ApplicationsDatapoint(){}
 }

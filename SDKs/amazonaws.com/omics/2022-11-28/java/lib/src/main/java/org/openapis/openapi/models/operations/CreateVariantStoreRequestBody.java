@@ -15,6 +15,7 @@ public class CreateVariantStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateVariantStoreRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateVariantStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateVariantStoreRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateVariantStoreRequestBody {
      */
     @JsonProperty("reference")
     public CreateVariantStoreRequestBodyReference reference;
+
     public CreateVariantStoreRequestBody withReference(CreateVariantStoreRequestBodyReference reference) {
         this.reference = reference;
         return this;
@@ -47,6 +50,7 @@ public class CreateVariantStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sseConfig")
     public CreateVariantStoreRequestBodySseConfig sseConfig;
+
     public CreateVariantStoreRequestBody withSseConfig(CreateVariantStoreRequestBodySseConfig sseConfig) {
         this.sseConfig = sseConfig;
         return this;
@@ -58,9 +62,13 @@ public class CreateVariantStoreRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateVariantStoreRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVariantStoreRequestBody(@JsonProperty("reference") CreateVariantStoreRequestBodyReference reference) {
+        this.reference = reference;
+  }
 }

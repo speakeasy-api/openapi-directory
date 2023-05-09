@@ -12,6 +12,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drives")
     public Long drives;
+
     public AdvancedSeasonStatOffense withDrives(Long drives) {
         this.drives = drives;
         return this;
@@ -20,6 +21,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explosiveness")
     public Double explosiveness;
+
     public AdvancedSeasonStatOffense withExplosiveness(Double explosiveness) {
         this.explosiveness = explosiveness;
         return this;
@@ -28,6 +30,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPosition")
     public AdvancedSeasonStatOffenseFieldPosition fieldPosition;
+
     public AdvancedSeasonStatOffense withFieldPosition(AdvancedSeasonStatOffenseFieldPosition fieldPosition) {
         this.fieldPosition = fieldPosition;
         return this;
@@ -36,6 +39,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("havoc")
     public AdvancedSeasonStatOffenseHavoc havoc;
+
     public AdvancedSeasonStatOffense withHavoc(AdvancedSeasonStatOffenseHavoc havoc) {
         this.havoc = havoc;
         return this;
@@ -44,6 +48,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYards")
     public Double lineYards;
+
     public AdvancedSeasonStatOffense withLineYards(Double lineYards) {
         this.lineYards = lineYards;
         return this;
@@ -52,6 +57,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineYardsTotal")
     public Double lineYardsTotal;
+
     public AdvancedSeasonStatOffense withLineYardsTotal(Double lineYardsTotal) {
         this.lineYardsTotal = lineYardsTotal;
         return this;
@@ -60,6 +66,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYards")
     public Double openFieldYards;
+
     public AdvancedSeasonStatOffense withOpenFieldYards(Double openFieldYards) {
         this.openFieldYards = openFieldYards;
         return this;
@@ -68,6 +75,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openFieldYardsTotal")
     public Long openFieldYardsTotal;
+
     public AdvancedSeasonStatOffense withOpenFieldYardsTotal(Long openFieldYardsTotal) {
         this.openFieldYardsTotal = openFieldYardsTotal;
         return this;
@@ -76,6 +84,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public AdvancedSeasonStatOffensePassingDowns passingDowns;
+
     public AdvancedSeasonStatOffense withPassingDowns(AdvancedSeasonStatOffensePassingDowns passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -84,6 +93,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingPlays")
     public AdvancedSeasonStatOffensePassingPlays passingPlays;
+
     public AdvancedSeasonStatOffense withPassingPlays(AdvancedSeasonStatOffensePassingPlays passingPlays) {
         this.passingPlays = passingPlays;
         return this;
@@ -92,6 +102,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plays")
     public Long plays;
+
     public AdvancedSeasonStatOffense withPlays(Long plays) {
         this.plays = plays;
         return this;
@@ -100,6 +111,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointsPerOpportunity")
     public Double pointsPerOpportunity;
+
     public AdvancedSeasonStatOffense withPointsPerOpportunity(Double pointsPerOpportunity) {
         this.pointsPerOpportunity = pointsPerOpportunity;
         return this;
@@ -108,6 +120,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("powerSuccess")
     public Double powerSuccess;
+
     public AdvancedSeasonStatOffense withPowerSuccess(Double powerSuccess) {
         this.powerSuccess = powerSuccess;
         return this;
@@ -116,6 +129,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ppa")
     public Double ppa;
+
     public AdvancedSeasonStatOffense withPpa(Double ppa) {
         this.ppa = ppa;
         return this;
@@ -124,6 +138,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushingPlays")
     public AdvancedSeasonStatOffenseRushingPlays rushingPlays;
+
     public AdvancedSeasonStatOffense withRushingPlays(AdvancedSeasonStatOffenseRushingPlays rushingPlays) {
         this.rushingPlays = rushingPlays;
         return this;
@@ -132,6 +147,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYards")
     public Double secondLevelYards;
+
     public AdvancedSeasonStatOffense withSecondLevelYards(Double secondLevelYards) {
         this.secondLevelYards = secondLevelYards;
         return this;
@@ -140,6 +156,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondLevelYardsTotal")
     public Long secondLevelYardsTotal;
+
     public AdvancedSeasonStatOffense withSecondLevelYardsTotal(Long secondLevelYardsTotal) {
         this.secondLevelYardsTotal = secondLevelYardsTotal;
         return this;
@@ -148,6 +165,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public AdvancedSeasonStatOffenseStandardDowns standardDowns;
+
     public AdvancedSeasonStatOffense withStandardDowns(AdvancedSeasonStatOffenseStandardDowns standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -156,6 +174,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stuffRate")
     public Double stuffRate;
+
     public AdvancedSeasonStatOffense withStuffRate(Double stuffRate) {
         this.stuffRate = stuffRate;
         return this;
@@ -164,6 +183,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successRate")
     public Double successRate;
+
     public AdvancedSeasonStatOffense withSuccessRate(Double successRate) {
         this.successRate = successRate;
         return this;
@@ -172,6 +192,7 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalOpportunies")
     public Long totalOpportunies;
+
     public AdvancedSeasonStatOffense withTotalOpportunies(Long totalOpportunies) {
         this.totalOpportunies = totalOpportunies;
         return this;
@@ -180,9 +201,11 @@ public class AdvancedSeasonStatOffense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPPA")
     public Double totalPPA;
+
     public AdvancedSeasonStatOffense withTotalPPA(Double totalPPA) {
         this.totalPPA = totalPPA;
         return this;
     }
     
+    public AdvancedSeasonStatOffense(){}
 }

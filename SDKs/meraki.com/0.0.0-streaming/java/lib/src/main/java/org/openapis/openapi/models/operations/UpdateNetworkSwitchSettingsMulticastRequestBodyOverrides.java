@@ -14,6 +14,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides {
      */
     @JsonProperty("floodUnknownMulticastTrafficEnabled")
     public Boolean floodUnknownMulticastTrafficEnabled;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides withFloodUnknownMulticastTrafficEnabled(Boolean floodUnknownMulticastTrafficEnabled) {
         this.floodUnknownMulticastTrafficEnabled = floodUnknownMulticastTrafficEnabled;
         return this;
@@ -24,6 +25,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides {
      */
     @JsonProperty("igmpSnoopingEnabled")
     public Boolean igmpSnoopingEnabled;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides withIgmpSnoopingEnabled(Boolean igmpSnoopingEnabled) {
         this.igmpSnoopingEnabled = igmpSnoopingEnabled;
         return this;
@@ -35,6 +37,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stacks")
     public String[] stacks;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides withStacks(String[] stacks) {
         this.stacks = stacks;
         return this;
@@ -46,6 +49,7 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switchProfiles")
     public String[] switchProfiles;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides withSwitchProfiles(String[] switchProfiles) {
         this.switchProfiles = switchProfiles;
         return this;
@@ -57,9 +61,14 @@ public class UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("switches")
     public String[] switches;
+
     public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides withSwitches(String[] switches) {
         this.switches = switches;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsMulticastRequestBodyOverrides(@JsonProperty("floodUnknownMulticastTrafficEnabled") Boolean floodUnknownMulticastTrafficEnabled, @JsonProperty("igmpSnoopingEnabled") Boolean igmpSnoopingEnabled) {
+        this.floodUnknownMulticastTrafficEnabled = floodUnknownMulticastTrafficEnabled;
+        this.igmpSnoopingEnabled = igmpSnoopingEnabled;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DialogflowProjectsLocationsAgentsTestCasesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DialogflowProjectsLocationsAgentsTestCasesListSecurityOption1 option1;
+
     public DialogflowProjectsLocationsAgentsTestCasesListSecurity withOption1(DialogflowProjectsLocationsAgentsTestCasesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DialogflowProjectsLocationsAgentsTestCasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DialogflowProjectsLocationsAgentsTestCasesListSecurityOption2 option2;
+
     public DialogflowProjectsLocationsAgentsTestCasesListSecurity withOption2(DialogflowProjectsLocationsAgentsTestCasesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DialogflowProjectsLocationsAgentsTestCasesListSecurity(){}
 }

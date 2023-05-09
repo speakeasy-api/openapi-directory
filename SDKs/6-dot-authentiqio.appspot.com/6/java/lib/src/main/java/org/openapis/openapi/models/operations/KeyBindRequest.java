@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeyBindRequest {
@@ -12,6 +13,7 @@ public class KeyBindRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PK")
     public String pk;
+
     public KeyBindRequest withPk(String pk) {
         this.pk = pk;
         return this;
@@ -22,9 +24,14 @@ public class KeyBindRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/jwt")
     public byte[] requestBody;
+
     public KeyBindRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public KeyBindRequest(@JsonProperty("PK") String pk, @JsonProperty("RequestBody") byte[] requestBody) {
+        this.pk = pk;
+        this.requestBody = requestBody;
+  }
 }

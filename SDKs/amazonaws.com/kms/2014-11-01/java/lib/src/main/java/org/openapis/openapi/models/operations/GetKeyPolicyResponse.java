@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetKeyPolicyResponse {
     
     public String contentType;
+
     public GetKeyPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetKeyPolicyResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GetKeyPolicyResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GetKeyPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetKeyPolicyResponse getKeyPolicyResponse;
+
     public GetKeyPolicyResponse withGetKeyPolicyResponse(org.openapis.openapi.models.shared.GetKeyPolicyResponse getKeyPolicyResponse) {
         this.getKeyPolicyResponse = getKeyPolicyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetKeyPolicyResponse {
      */
     
     public Object invalidArnException;
+
     public GetKeyPolicyResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class GetKeyPolicyResponse {
      */
     
     public Object kmsInternalException;
+
     public GetKeyPolicyResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class GetKeyPolicyResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GetKeyPolicyResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class GetKeyPolicyResponse {
      */
     
     public Object notFoundException;
+
     public GetKeyPolicyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetKeyPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetKeyPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetKeyPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetKeyPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetKeyPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

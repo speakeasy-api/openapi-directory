@@ -22,9 +22,11 @@ public class GetFullPriceRenewalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetFullPriceRenewalRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetFullPriceRenewalRequest(){}
 }

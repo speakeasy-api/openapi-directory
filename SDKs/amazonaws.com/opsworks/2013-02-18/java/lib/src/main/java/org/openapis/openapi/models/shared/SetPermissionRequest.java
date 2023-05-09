@@ -12,6 +12,7 @@ public class SetPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowSsh")
     public Boolean allowSsh;
+
     public SetPermissionRequest withAllowSsh(Boolean allowSsh) {
         this.allowSsh = allowSsh;
         return this;
@@ -20,6 +21,7 @@ public class SetPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowSudo")
     public Boolean allowSudo;
+
     public SetPermissionRequest withAllowSudo(Boolean allowSudo) {
         this.allowSudo = allowSudo;
         return this;
@@ -27,6 +29,7 @@ public class SetPermissionRequest {
     
     @JsonProperty("IamUserArn")
     public String iamUserArn;
+
     public SetPermissionRequest withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -35,6 +38,7 @@ public class SetPermissionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Level")
     public String level;
+
     public SetPermissionRequest withLevel(String level) {
         this.level = level;
         return this;
@@ -42,9 +46,14 @@ public class SetPermissionRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public SetPermissionRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public SetPermissionRequest(@JsonProperty("IamUserArn") String iamUserArn, @JsonProperty("StackId") String stackId) {
+        this.iamUserArn = iamUserArn;
+        this.stackId = stackId;
+  }
 }

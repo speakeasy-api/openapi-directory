@@ -12,9 +12,13 @@ public class RatcrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public RatcrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public RatcrRequestBodyCertificateParameters(@JsonProperty("UID") String uid) {
+        this.uid = uid;
+  }
 }

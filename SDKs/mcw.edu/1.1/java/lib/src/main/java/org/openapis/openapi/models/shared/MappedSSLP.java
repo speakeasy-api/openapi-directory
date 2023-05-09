@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class MappedSSLP {
     
     public String chromosome;
+
     public MappedSSLP withChromosome(String chromosome) {
         this.chromosome = chromosome;
         return this;
@@ -16,6 +17,7 @@ public class MappedSSLP {
     
     
     public Integer mapKey;
+
     public MappedSSLP withMapKey(Integer mapKey) {
         this.mapKey = mapKey;
         return this;
@@ -23,6 +25,7 @@ public class MappedSSLP {
     
     
     public Sslp sslp;
+
     public MappedSSLP withSslp(Sslp sslp) {
         this.sslp = sslp;
         return this;
@@ -30,6 +33,7 @@ public class MappedSSLP {
     
     
     public Long start;
+
     public MappedSSLP withStart(Long start) {
         this.start = start;
         return this;
@@ -37,6 +41,7 @@ public class MappedSSLP {
     
     
     public Long stop;
+
     public MappedSSLP withStop(Long stop) {
         this.stop = stop;
         return this;
@@ -44,9 +49,11 @@ public class MappedSSLP {
     
     
     public String strand;
+
     public MappedSSLP withStrand(String strand) {
         this.strand = strand;
         return this;
     }
     
+    public MappedSSLP(){}
 }

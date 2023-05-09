@@ -12,6 +12,7 @@ public class ProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public Long clientId;
+
     public ProjectCreateDTO withClientId(Long clientId) {
         this.clientId = clientId;
         return this;
@@ -20,6 +21,7 @@ public class ProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public ProjectCreateDTO withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -28,6 +30,7 @@ public class ProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProjectCreateDTO withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class ProjectCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceId")
     public Long serviceId;
+
     public ProjectCreateDTO withServiceId(Long serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ProjectCreateDTO(){}
 }

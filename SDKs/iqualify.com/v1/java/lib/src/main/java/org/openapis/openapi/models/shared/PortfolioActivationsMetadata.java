@@ -12,9 +12,11 @@ public class PortfolioActivationsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootContentId")
     public String rootContentId;
+
     public PortfolioActivationsMetadata withRootContentId(String rootContentId) {
         this.rootContentId = rootContentId;
         return this;
     }
     
+    public PortfolioActivationsMetadata(){}
 }

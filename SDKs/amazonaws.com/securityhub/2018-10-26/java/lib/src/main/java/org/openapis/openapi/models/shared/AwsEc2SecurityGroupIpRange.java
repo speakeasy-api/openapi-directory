@@ -15,9 +15,11 @@ public class AwsEc2SecurityGroupIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrIp")
     public String cidrIp;
+
     public AwsEc2SecurityGroupIpRange withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
     }
     
+    public AwsEc2SecurityGroupIpRange(){}
 }

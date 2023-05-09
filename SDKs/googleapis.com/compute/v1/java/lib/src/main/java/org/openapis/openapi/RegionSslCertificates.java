@@ -59,11 +59,9 @@ public class RegionSslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionSslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesGetResponse(contentType, httpRes.statusCode()) {{
             sslCertificate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionSslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionSslCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionSslCertificatesListResponse(contentType, httpRes.statusCode()) {{
             sslCertificateList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

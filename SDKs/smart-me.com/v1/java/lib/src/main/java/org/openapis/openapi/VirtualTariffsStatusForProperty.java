@@ -47,14 +47,12 @@ public class VirtualTariffsStatusForProperty {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetResponse res = new org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetResponse() {{
+        org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetResponse res = new org.openapis.openapi.models.operations.VirtualTariffsStatusForPropertyGetResponse(contentType, httpRes.statusCode()) {{
             virtualTariffsStatusForPropertyGet200ApplicationJSONString = null;
             virtualTariffsStatusForPropertyGet200ApplicationXMLString = null;
             virtualTariffsStatusForPropertyGet200TextJSONString = null;
             virtualTariffsStatusForPropertyGet200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

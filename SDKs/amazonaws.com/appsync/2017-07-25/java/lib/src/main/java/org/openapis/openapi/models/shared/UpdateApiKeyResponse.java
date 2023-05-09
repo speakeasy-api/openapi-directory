@@ -15,9 +15,11 @@ public class UpdateApiKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public ApiKey apiKey;
+
     public UpdateApiKeyResponse withApiKey(ApiKey apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public UpdateApiKeyResponse(){}
 }

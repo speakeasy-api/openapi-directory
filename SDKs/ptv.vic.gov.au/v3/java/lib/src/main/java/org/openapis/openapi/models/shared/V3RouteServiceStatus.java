@@ -17,6 +17,7 @@ public class V3RouteServiceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public V3RouteServiceStatus withDescription(String description) {
         this.description = description;
         return this;
@@ -27,9 +28,11 @@ public class V3RouteServiceStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public V3RouteServiceStatus withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public V3RouteServiceStatus(){}
 }

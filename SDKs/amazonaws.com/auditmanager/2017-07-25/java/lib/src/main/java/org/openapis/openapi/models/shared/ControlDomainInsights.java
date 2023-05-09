@@ -20,6 +20,7 @@ public class ControlDomainInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlsCountByNoncompliantEvidence")
     public Long controlsCountByNoncompliantEvidence;
+
     public ControlDomainInsights withControlsCountByNoncompliantEvidence(Long controlsCountByNoncompliantEvidence) {
         this.controlsCountByNoncompliantEvidence = controlsCountByNoncompliantEvidence;
         return this;
@@ -28,6 +29,7 @@ public class ControlDomainInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceInsights")
     public EvidenceInsights evidenceInsights;
+
     public ControlDomainInsights withEvidenceInsights(EvidenceInsights evidenceInsights) {
         this.evidenceInsights = evidenceInsights;
         return this;
@@ -36,6 +38,7 @@ public class ControlDomainInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControlDomainInsights withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ControlDomainInsights {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public ControlDomainInsights withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -54,6 +58,7 @@ public class ControlDomainInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControlDomainInsights withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class ControlDomainInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalControlsCount")
     public Long totalControlsCount;
+
     public ControlDomainInsights withTotalControlsCount(Long totalControlsCount) {
         this.totalControlsCount = totalControlsCount;
         return this;
     }
     
+    public ControlDomainInsights(){}
 }

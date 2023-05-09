@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CurrencyFormat {
     @JsonProperty("currency_symbol")
     public String currencySymbol;
+
     public CurrencyFormat withCurrencySymbol(String currencySymbol) {
         this.currencySymbol = currencySymbol;
         return this;
@@ -19,6 +20,7 @@ public class CurrencyFormat {
     
     @JsonProperty("decimal_digits")
     public Integer decimalDigits;
+
     public CurrencyFormat withDecimalDigits(Integer decimalDigits) {
         this.decimalDigits = decimalDigits;
         return this;
@@ -26,6 +28,7 @@ public class CurrencyFormat {
     
     @JsonProperty("decimal_separator")
     public String decimalSeparator;
+
     public CurrencyFormat withDecimalSeparator(String decimalSeparator) {
         this.decimalSeparator = decimalSeparator;
         return this;
@@ -33,6 +36,7 @@ public class CurrencyFormat {
     
     @JsonProperty("display_symbol")
     public Boolean displaySymbol;
+
     public CurrencyFormat withDisplaySymbol(Boolean displaySymbol) {
         this.displaySymbol = displaySymbol;
         return this;
@@ -40,6 +44,7 @@ public class CurrencyFormat {
     
     @JsonProperty("example_format")
     public String exampleFormat;
+
     public CurrencyFormat withExampleFormat(String exampleFormat) {
         this.exampleFormat = exampleFormat;
         return this;
@@ -47,6 +52,7 @@ public class CurrencyFormat {
     
     @JsonProperty("group_separator")
     public String groupSeparator;
+
     public CurrencyFormat withGroupSeparator(String groupSeparator) {
         this.groupSeparator = groupSeparator;
         return this;
@@ -54,6 +60,7 @@ public class CurrencyFormat {
     
     @JsonProperty("iso_code")
     public String isoCode;
+
     public CurrencyFormat withIsoCode(String isoCode) {
         this.isoCode = isoCode;
         return this;
@@ -61,9 +68,20 @@ public class CurrencyFormat {
     
     @JsonProperty("symbol_first")
     public Boolean symbolFirst;
+
     public CurrencyFormat withSymbolFirst(Boolean symbolFirst) {
         this.symbolFirst = symbolFirst;
         return this;
     }
     
+    public CurrencyFormat(@JsonProperty("currency_symbol") String currencySymbol, @JsonProperty("decimal_digits") Integer decimalDigits, @JsonProperty("decimal_separator") String decimalSeparator, @JsonProperty("display_symbol") Boolean displaySymbol, @JsonProperty("example_format") String exampleFormat, @JsonProperty("group_separator") String groupSeparator, @JsonProperty("iso_code") String isoCode, @JsonProperty("symbol_first") Boolean symbolFirst) {
+        this.currencySymbol = currencySymbol;
+        this.decimalDigits = decimalDigits;
+        this.decimalSeparator = decimalSeparator;
+        this.displaySymbol = displaySymbol;
+        this.exampleFormat = exampleFormat;
+        this.groupSeparator = groupSeparator;
+        this.isoCode = isoCode;
+        this.symbolFirst = symbolFirst;
+  }
 }

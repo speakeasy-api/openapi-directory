@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2Scim20UsersResponse {
     
     public String contentType;
+
     public GetV2Scim20UsersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV2Scim20UsersResponse {
     
     
     public Integer statusCode;
+
     public GetV2Scim20UsersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV2Scim20UsersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2Scim20UsersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,6 +34,7 @@ public class GetV2Scim20UsersResponse {
     
     
     public GetV2Scim20Users200ApplicationScimPlusJson getV2Scim20Users200ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users200ApplicationScimPlusJsonObject(GetV2Scim20Users200ApplicationScimPlusJson getV2Scim20Users200ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users200ApplicationScimPlusJsonObject = getV2Scim20Users200ApplicationScimPlusJsonObject;
         return this;
@@ -40,6 +45,7 @@ public class GetV2Scim20UsersResponse {
      */
     
     public GetV2Scim20Users400ApplicationScimPlusJson getV2Scim20Users400ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users400ApplicationScimPlusJsonObject(GetV2Scim20Users400ApplicationScimPlusJson getV2Scim20Users400ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users400ApplicationScimPlusJsonObject = getV2Scim20Users400ApplicationScimPlusJsonObject;
         return this;
@@ -50,6 +56,7 @@ public class GetV2Scim20UsersResponse {
      */
     
     public GetV2Scim20Users401ApplicationScimPlusJson getV2Scim20Users401ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users401ApplicationScimPlusJsonObject(GetV2Scim20Users401ApplicationScimPlusJson getV2Scim20Users401ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users401ApplicationScimPlusJsonObject = getV2Scim20Users401ApplicationScimPlusJsonObject;
         return this;
@@ -60,6 +67,7 @@ public class GetV2Scim20UsersResponse {
      */
     
     public GetV2Scim20Users403ApplicationScimPlusJson getV2Scim20Users403ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users403ApplicationScimPlusJsonObject(GetV2Scim20Users403ApplicationScimPlusJson getV2Scim20Users403ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users403ApplicationScimPlusJsonObject = getV2Scim20Users403ApplicationScimPlusJsonObject;
         return this;
@@ -70,6 +78,7 @@ public class GetV2Scim20UsersResponse {
      */
     
     public GetV2Scim20Users404ApplicationScimPlusJson getV2Scim20Users404ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users404ApplicationScimPlusJsonObject(GetV2Scim20Users404ApplicationScimPlusJson getV2Scim20Users404ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users404ApplicationScimPlusJsonObject = getV2Scim20Users404ApplicationScimPlusJsonObject;
         return this;
@@ -80,9 +89,14 @@ public class GetV2Scim20UsersResponse {
      */
     
     public GetV2Scim20Users500ApplicationScimPlusJson getV2Scim20Users500ApplicationScimPlusJsonObject;
+
     public GetV2Scim20UsersResponse withGetV2Scim20Users500ApplicationScimPlusJsonObject(GetV2Scim20Users500ApplicationScimPlusJson getV2Scim20Users500ApplicationScimPlusJsonObject) {
         this.getV2Scim20Users500ApplicationScimPlusJsonObject = getV2Scim20Users500ApplicationScimPlusJsonObject;
         return this;
     }
     
+    public GetV2Scim20UsersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

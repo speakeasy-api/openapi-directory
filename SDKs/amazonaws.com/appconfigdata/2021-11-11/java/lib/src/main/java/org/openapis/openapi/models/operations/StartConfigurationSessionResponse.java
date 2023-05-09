@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartConfigurationSessionResponse {
@@ -12,6 +13,7 @@ public class StartConfigurationSessionResponse {
      */
     
     public Object badRequestException;
+
     public StartConfigurationSessionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class StartConfigurationSessionResponse {
     
     
     public String contentType;
+
     public StartConfigurationSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartConfigurationSessionResponse {
      */
     
     public Object internalServerException;
+
     public StartConfigurationSessionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartConfigurationSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartConfigurationSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartConfigurationSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartConfigurationSessionResponse startConfigurationSessionResponse;
+
     public StartConfigurationSessionResponse withStartConfigurationSessionResponse(org.openapis.openapi.models.shared.StartConfigurationSessionResponse startConfigurationSessionResponse) {
         this.startConfigurationSessionResponse = startConfigurationSessionResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartConfigurationSessionResponse {
     
     
     public Integer statusCode;
+
     public StartConfigurationSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartConfigurationSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartConfigurationSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartConfigurationSessionResponse {
      */
     
     public Object throttlingException;
+
     public StartConfigurationSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartConfigurationSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

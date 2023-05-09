@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposGetCodeFrequencyStatsResponse {
     
     public String contentType;
+
     public ReposGetCodeFrequencyStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposGetCodeFrequencyStatsResponse {
     
     
     public Integer statusCode;
+
     public ReposGetCodeFrequencyStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposGetCodeFrequencyStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposGetCodeFrequencyStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposGetCodeFrequencyStatsResponse {
      */
     
     public Long[][] codeFrequencyStats;
+
     public ReposGetCodeFrequencyStatsResponse withCodeFrequencyStats(Long[][] codeFrequencyStats) {
         this.codeFrequencyStats = codeFrequencyStats;
         return this;
@@ -43,9 +48,14 @@ public class ReposGetCodeFrequencyStatsResponse {
      */
     
     public java.util.Map<String, Object> reposGetCodeFrequencyStats202ApplicationJSONObject;
+
     public ReposGetCodeFrequencyStatsResponse withReposGetCodeFrequencyStats202ApplicationJSONObject(java.util.Map<String, Object> reposGetCodeFrequencyStats202ApplicationJSONObject) {
         this.reposGetCodeFrequencyStats202ApplicationJSONObject = reposGetCodeFrequencyStats202ApplicationJSONObject;
         return this;
     }
     
+    public ReposGetCodeFrequencyStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

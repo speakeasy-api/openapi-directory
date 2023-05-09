@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesBindDeviceToGatewayResponse(contentType, httpRes.statusCode()) {{
             bindDeviceToGatewayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesCreateResponse(contentType, httpRes.statusCode()) {{
             deviceRegistry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesConfigVersionsListResponse(contentType, httpRes.statusCode()) {{
             listDeviceConfigVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesCreateResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesGetResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesModifyCloudToDeviceConfigResponse(contentType, httpRes.statusCode()) {{
             deviceConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesPatchResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesSendCommandToDeviceResponse(contentType, httpRes.statusCode()) {{
             sendCommandToDeviceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesDevicesStatesListResponse(contentType, httpRes.statusCode()) {{
             listDeviceStatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsDevicesListResponse(contentType, httpRes.statusCode()) {{
             listDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesGroupsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesListResponse(contentType, httpRes.statusCode()) {{
             listDeviceRegistriesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse() {{
+        org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse res = new org.openapis.openapi.models.operations.CloudiotProjectsLocationsRegistriesUnbindDeviceFromGatewayResponse(contentType, httpRes.statusCode()) {{
             unbindDeviceFromGatewayResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

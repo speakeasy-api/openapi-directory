@@ -14,6 +14,7 @@ public class OBError1 {
      */
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public OBError1 withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -25,6 +26,7 @@ public class OBError1 {
      */
     @JsonProperty("Message")
     public String message;
+
     public OBError1 withMessage(String message) {
         this.message = message;
         return this;
@@ -36,6 +38,7 @@ public class OBError1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public OBError1 withPath(String path) {
         this.path = path;
         return this;
@@ -47,9 +50,14 @@ public class OBError1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public OBError1 withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OBError1(@JsonProperty("ErrorCode") String errorCode, @JsonProperty("Message") String message) {
+        this.errorCode = errorCode;
+        this.message = message;
+  }
 }

@@ -22,6 +22,7 @@ public class ProvisioningArtifact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisioningArtifact withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -30,6 +31,7 @@ public class ProvisioningArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ProvisioningArtifact withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ProvisioningArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Guidance")
     public ProvisioningArtifactGuidanceEnum guidance;
+
     public ProvisioningArtifact withGuidance(ProvisioningArtifactGuidanceEnum guidance) {
         this.guidance = guidance;
         return this;
@@ -46,6 +49,7 @@ public class ProvisioningArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProvisioningArtifact withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +58,11 @@ public class ProvisioningArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProvisioningArtifact withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProvisioningArtifact(){}
 }

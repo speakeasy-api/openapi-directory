@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesCustomDimensionsListResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesCustomDimensionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesCustomDimensionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaListCustomDimensionsResponse googleAnalyticsAdminV1betaListCustomDimensionsResponse;
+
     public AnalyticsadminPropertiesCustomDimensionsListResponse withGoogleAnalyticsAdminV1betaListCustomDimensionsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaListCustomDimensionsResponse googleAnalyticsAdminV1betaListCustomDimensionsResponse) {
         this.googleAnalyticsAdminV1betaListCustomDimensionsResponse = googleAnalyticsAdminV1betaListCustomDimensionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesCustomDimensionsListResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesCustomDimensionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesCustomDimensionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesCustomDimensionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesCustomDimensionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

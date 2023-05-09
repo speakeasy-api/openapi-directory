@@ -15,6 +15,7 @@ public class ListBudgetsForResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Budgets")
     public BudgetDetail[] budgets;
+
     public ListBudgetsForResourceOutput withBudgets(BudgetDetail[] budgets) {
         this.budgets = budgets;
         return this;
@@ -23,9 +24,11 @@ public class ListBudgetsForResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListBudgetsForResourceOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBudgetsForResourceOutput(){}
 }

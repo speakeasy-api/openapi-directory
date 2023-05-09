@@ -15,6 +15,7 @@ public class ExecuteCommandLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchEncryptionEnabled")
     public Boolean cloudWatchEncryptionEnabled;
+
     public ExecuteCommandLogConfiguration withCloudWatchEncryptionEnabled(Boolean cloudWatchEncryptionEnabled) {
         this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
         return this;
@@ -23,6 +24,7 @@ public class ExecuteCommandLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogGroupName")
     public String cloudWatchLogGroupName;
+
     public ExecuteCommandLogConfiguration withCloudWatchLogGroupName(String cloudWatchLogGroupName) {
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         return this;
@@ -31,6 +33,7 @@ public class ExecuteCommandLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketName")
     public String s3BucketName;
+
     public ExecuteCommandLogConfiguration withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -39,6 +42,7 @@ public class ExecuteCommandLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3EncryptionEnabled")
     public Boolean s3EncryptionEnabled;
+
     public ExecuteCommandLogConfiguration withS3EncryptionEnabled(Boolean s3EncryptionEnabled) {
         this.s3EncryptionEnabled = s3EncryptionEnabled;
         return this;
@@ -47,9 +51,11 @@ public class ExecuteCommandLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3KeyPrefix")
     public String s3KeyPrefix;
+
     public ExecuteCommandLogConfiguration withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
     }
     
+    public ExecuteCommandLogConfiguration(){}
 }

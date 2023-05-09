@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProvisionByoipCidrResponse {
@@ -12,6 +13,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public Object accessDeniedException;
+
     public ProvisionByoipCidrResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ProvisionByoipCidrResponse {
     
     
     public String contentType;
+
     public ProvisionByoipCidrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public Object incorrectCidrStateException;
+
     public ProvisionByoipCidrResponse withIncorrectCidrStateException(Object incorrectCidrStateException) {
         this.incorrectCidrStateException = incorrectCidrStateException;
         return this;
@@ -39,6 +43,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ProvisionByoipCidrResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public Object invalidArgumentException;
+
     public ProvisionByoipCidrResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public Object limitExceededException;
+
     public ProvisionByoipCidrResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ProvisionByoipCidrResponse {
      */
     
     public org.openapis.openapi.models.shared.ProvisionByoipCidrResponse provisionByoipCidrResponse;
+
     public ProvisionByoipCidrResponse withProvisionByoipCidrResponse(org.openapis.openapi.models.shared.ProvisionByoipCidrResponse provisionByoipCidrResponse) {
         this.provisionByoipCidrResponse = provisionByoipCidrResponse;
         return this;
@@ -76,6 +84,7 @@ public class ProvisionByoipCidrResponse {
     
     
     public Integer statusCode;
+
     public ProvisionByoipCidrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ProvisionByoipCidrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProvisionByoipCidrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProvisionByoipCidrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

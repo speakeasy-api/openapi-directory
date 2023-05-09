@@ -18,6 +18,7 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public DomainAlias withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainAliasName")
     public String domainAliasName;
+
     public DomainAlias withDomainAliasName(String domainAliasName) {
         this.domainAliasName = domainAliasName;
         return this;
@@ -40,6 +42,7 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public DomainAlias withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -51,6 +54,7 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public DomainAlias withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentDomainName")
     public String parentDomainName;
+
     public DomainAlias withParentDomainName(String parentDomainName) {
         this.parentDomainName = parentDomainName;
         return this;
@@ -73,9 +78,11 @@ public class DomainAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verified")
     public Boolean verified;
+
     public DomainAlias withVerified(Boolean verified) {
         this.verified = verified;
         return this;
     }
     
+    public DomainAlias(){}
 }

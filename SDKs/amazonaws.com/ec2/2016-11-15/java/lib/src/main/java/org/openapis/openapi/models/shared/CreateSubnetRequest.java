@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateSubnetRequest {
     
     public String availabilityZone;
+
     public CreateSubnetRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -16,6 +17,7 @@ public class CreateSubnetRequest {
     
     
     public String availabilityZoneId;
+
     public CreateSubnetRequest withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -23,6 +25,7 @@ public class CreateSubnetRequest {
     
     
     public String cidrBlock;
+
     public CreateSubnetRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -30,6 +33,7 @@ public class CreateSubnetRequest {
     
     
     public Boolean dryRun;
+
     public CreateSubnetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -37,6 +41,7 @@ public class CreateSubnetRequest {
     
     
     public String ipv6CidrBlock;
+
     public CreateSubnetRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -44,6 +49,7 @@ public class CreateSubnetRequest {
     
     
     public Boolean ipv6Native;
+
     public CreateSubnetRequest withIpv6Native(Boolean ipv6Native) {
         this.ipv6Native = ipv6Native;
         return this;
@@ -51,6 +57,7 @@ public class CreateSubnetRequest {
     
     
     public String outpostArn;
+
     public CreateSubnetRequest withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -58,6 +65,7 @@ public class CreateSubnetRequest {
     
     
     public CreateSubnetRequestTagSpecifications[] tagSpecifications;
+
     public CreateSubnetRequest withTagSpecifications(CreateSubnetRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -65,9 +73,13 @@ public class CreateSubnetRequest {
     
     
     public String vpcId;
+
     public CreateSubnetRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateSubnetRequest(@JsonProperty("VpcId") String vpcId) {
+        this.vpcId = vpcId;
+  }
 }

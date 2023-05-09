@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Person {
     
     public EmbeddedResource account;
+
     public Person withAccount(EmbeddedResource account) {
         this.account = account;
         return this;
@@ -22,6 +23,7 @@ public class Person {
      */
     
     public Boolean bouncing;
+
     public Person withBouncing(Boolean bouncing) {
         this.bouncing = bouncing;
         return this;
@@ -32,6 +34,7 @@ public class Person {
      */
     
     public EmbeddedResource[] cadences;
+
     public Person withCadences(EmbeddedResource[] cadences) {
         this.cadences = cadences;
         return this;
@@ -42,6 +45,7 @@ public class Person {
      */
     
     public String city;
+
     public Person withCity(String city) {
         this.city = city;
         return this;
@@ -52,6 +56,7 @@ public class Person {
      */
     
     public String[] contactRestrictions;
+
     public Person withContactRestrictions(String[] contactRestrictions) {
         this.contactRestrictions = contactRestrictions;
         return this;
@@ -62,6 +67,7 @@ public class Person {
      */
     
     public String country;
+
     public Person withCountry(String country) {
         this.country = country;
         return this;
@@ -69,6 +75,7 @@ public class Person {
     
     
     public PersonCounts counts;
+
     public Person withCounts(PersonCounts counts) {
         this.counts = counts;
         return this;
@@ -79,6 +86,7 @@ public class Person {
      */
     
     public OffsetDateTime createdAt;
+
     public Person withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -89,6 +97,7 @@ public class Person {
      */
     
     public String crmId;
+
     public Person withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -99,6 +108,7 @@ public class Person {
      */
     
     public String crmObjectType;
+
     public Person withCrmObjectType(String crmObjectType) {
         this.crmObjectType = crmObjectType;
         return this;
@@ -109,6 +119,7 @@ public class Person {
      */
     
     public String crmUrl;
+
     public Person withCrmUrl(String crmUrl) {
         this.crmUrl = crmUrl;
         return this;
@@ -119,6 +130,7 @@ public class Person {
      */
     
     public java.util.Map<String, Object> customFields;
+
     public Person withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -129,6 +141,7 @@ public class Person {
      */
     
     public String displayName;
+
     public Person withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -139,6 +152,7 @@ public class Person {
      */
     
     public Boolean doNotContact;
+
     public Person withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -149,6 +163,7 @@ public class Person {
      */
     
     public String emailAddress;
+
     public Person withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -159,6 +174,7 @@ public class Person {
      */
     
     public Boolean euResident;
+
     public Person withEuResident(Boolean euResident) {
         this.euResident = euResident;
         return this;
@@ -169,6 +185,7 @@ public class Person {
      */
     
     public String firstName;
+
     public Person withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -179,6 +196,7 @@ public class Person {
      */
     
     public String fullEmailAddress;
+
     public Person withFullEmailAddress(String fullEmailAddress) {
         this.fullEmailAddress = fullEmailAddress;
         return this;
@@ -189,6 +207,7 @@ public class Person {
      */
     
     public String homePhone;
+
     public Person withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -199,6 +218,7 @@ public class Person {
      */
     
     public Long id;
+
     public Person withId(Long id) {
         this.id = id;
         return this;
@@ -206,6 +226,7 @@ public class Person {
     
     
     public EmbeddedResource import_;
+
     public Person withImport(EmbeddedResource import_) {
         this.import_ = import_;
         return this;
@@ -216,6 +237,7 @@ public class Person {
      */
     
     public String jobSeniority;
+
     public Person withJobSeniority(String jobSeniority) {
         this.jobSeniority = jobSeniority;
         return this;
@@ -223,6 +245,7 @@ public class Person {
     
     
     public EmbeddedResource lastCompletedStep;
+
     public Person withLastCompletedStep(EmbeddedResource lastCompletedStep) {
         this.lastCompletedStep = lastCompletedStep;
         return this;
@@ -230,6 +253,7 @@ public class Person {
     
     
     public EmbeddedResource lastCompletedStepCadence;
+
     public Person withLastCompletedStepCadence(EmbeddedResource lastCompletedStepCadence) {
         this.lastCompletedStepCadence = lastCompletedStepCadence;
         return this;
@@ -240,6 +264,7 @@ public class Person {
      */
     
     public OffsetDateTime lastContactedAt;
+
     public Person withLastContactedAt(OffsetDateTime lastContactedAt) {
         this.lastContactedAt = lastContactedAt;
         return this;
@@ -247,6 +272,7 @@ public class Person {
     
     
     public EmbeddedResource lastContactedBy;
+
     public Person withLastContactedBy(EmbeddedResource lastContactedBy) {
         this.lastContactedBy = lastContactedBy;
         return this;
@@ -257,6 +283,7 @@ public class Person {
      */
     
     public String lastContactedType;
+
     public Person withLastContactedType(String lastContactedType) {
         this.lastContactedType = lastContactedType;
         return this;
@@ -267,6 +294,7 @@ public class Person {
      */
     
     public String lastName;
+
     public Person withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -277,6 +305,7 @@ public class Person {
      */
     
     public OffsetDateTime lastRepliedAt;
+
     public Person withLastRepliedAt(OffsetDateTime lastRepliedAt) {
         this.lastRepliedAt = lastRepliedAt;
         return this;
@@ -287,6 +316,7 @@ public class Person {
      */
     
     public String linkedinUrl;
+
     public Person withLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
@@ -297,6 +327,7 @@ public class Person {
      */
     
     public String locale;
+
     public Person withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -307,6 +338,7 @@ public class Person {
      */
     
     public Long localeUtcOffset;
+
     public Person withLocaleUtcOffset(Long localeUtcOffset) {
         this.localeUtcOffset = localeUtcOffset;
         return this;
@@ -317,6 +349,7 @@ public class Person {
      */
     
     public String mobilePhone;
+
     public Person withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -324,6 +357,7 @@ public class Person {
     
     
     public EmbeddedResource mostRecentCadence;
+
     public Person withMostRecentCadence(EmbeddedResource mostRecentCadence) {
         this.mostRecentCadence = mostRecentCadence;
         return this;
@@ -331,6 +365,7 @@ public class Person {
     
     
     public EmbeddedResource owner;
+
     public Person withOwner(EmbeddedResource owner) {
         this.owner = owner;
         return this;
@@ -341,6 +376,7 @@ public class Person {
      */
     
     public String ownerCrmId;
+
     public Person withOwnerCrmId(String ownerCrmId) {
         this.ownerCrmId = ownerCrmId;
         return this;
@@ -351,6 +387,7 @@ public class Person {
      */
     
     public String personCompanyIndustry;
+
     public Person withPersonCompanyIndustry(String personCompanyIndustry) {
         this.personCompanyIndustry = personCompanyIndustry;
         return this;
@@ -361,6 +398,7 @@ public class Person {
      */
     
     public String personCompanyName;
+
     public Person withPersonCompanyName(String personCompanyName) {
         this.personCompanyName = personCompanyName;
         return this;
@@ -371,6 +409,7 @@ public class Person {
      */
     
     public String personCompanyWebsite;
+
     public Person withPersonCompanyWebsite(String personCompanyWebsite) {
         this.personCompanyWebsite = personCompanyWebsite;
         return this;
@@ -378,6 +417,7 @@ public class Person {
     
     
     public EmbeddedResource personStage;
+
     public Person withPersonStage(EmbeddedResource personStage) {
         this.personStage = personStage;
         return this;
@@ -388,6 +428,7 @@ public class Person {
      */
     
     public String personalEmailAddress;
+
     public Person withPersonalEmailAddress(String personalEmailAddress) {
         this.personalEmailAddress = personalEmailAddress;
         return this;
@@ -398,6 +439,7 @@ public class Person {
      */
     
     public String personalWebsite;
+
     public Person withPersonalWebsite(String personalWebsite) {
         this.personalWebsite = personalWebsite;
         return this;
@@ -408,6 +450,7 @@ public class Person {
      */
     
     public String phone;
+
     public Person withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -418,6 +461,7 @@ public class Person {
      */
     
     public String phoneExtension;
+
     public Person withPhoneExtension(String phoneExtension) {
         this.phoneExtension = phoneExtension;
         return this;
@@ -428,6 +472,7 @@ public class Person {
      */
     
     public String secondaryEmailAddress;
+
     public Person withSecondaryEmailAddress(String secondaryEmailAddress) {
         this.secondaryEmailAddress = secondaryEmailAddress;
         return this;
@@ -438,6 +483,7 @@ public class Person {
      */
     
     public Boolean starred;
+
     public Person withStarred(Boolean starred) {
         this.starred = starred;
         return this;
@@ -448,6 +494,7 @@ public class Person {
      */
     
     public String state;
+
     public Person withState(String state) {
         this.state = state;
         return this;
@@ -458,6 +505,7 @@ public class Person {
      */
     
     public Long successCount;
+
     public Person withSuccessCount(Long successCount) {
         this.successCount = successCount;
         return this;
@@ -468,6 +516,7 @@ public class Person {
      */
     
     public String[] tags;
+
     public Person withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -478,6 +527,7 @@ public class Person {
      */
     
     public String title;
+
     public Person withTitle(String title) {
         this.title = title;
         return this;
@@ -488,6 +538,7 @@ public class Person {
      */
     
     public String twitterHandle;
+
     public Person withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -498,6 +549,7 @@ public class Person {
      */
     
     public Boolean untouched;
+
     public Person withUntouched(Boolean untouched) {
         this.untouched = untouched;
         return this;
@@ -508,6 +560,7 @@ public class Person {
      */
     
     public OffsetDateTime updatedAt;
+
     public Person withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -518,6 +571,7 @@ public class Person {
      */
     
     public String workCity;
+
     public Person withWorkCity(String workCity) {
         this.workCity = workCity;
         return this;
@@ -528,6 +582,7 @@ public class Person {
      */
     
     public String workCountry;
+
     public Person withWorkCountry(String workCountry) {
         this.workCountry = workCountry;
         return this;
@@ -538,9 +593,11 @@ public class Person {
      */
     
     public String workState;
+
     public Person withWorkState(String workState) {
         this.workState = workState;
         return this;
     }
     
+    public Person(){}
 }

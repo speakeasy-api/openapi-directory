@@ -58,11 +58,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse() {{
+        org.openapis.openapi.models.operations.CreateUserResponse res = new org.openapis.openapi.models.operations.CreateUserResponse(contentType, httpRes.statusCode()) {{
             createUser200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse() {{
+        org.openapis.openapi.models.operations.DeleteUserResponse res = new org.openapis.openapi.models.operations.DeleteUserResponse(contentType, httpRes.statusCode()) {{
             deleteUser200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse() {{
+        org.openapis.openapi.models.operations.GetUserResponse res = new org.openapis.openapi.models.operations.GetUserResponse(contentType, httpRes.statusCode()) {{
             getUser200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,7 +153,9 @@ public class User {
      * This endpoint is **DEPRECATED**. Please use [/v0.2/users](/api/conversation.v2#get-users).
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetUsersResponse getUsers() throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/users");
@@ -175,11 +171,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersResponse res = new org.openapis.openapi.models.operations.GetUsersResponse() {{
+        org.openapis.openapi.models.operations.GetUsersResponse res = new org.openapis.openapi.models.operations.GetUsersResponse(contentType, httpRes.statusCode()) {{
             getUsers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +208,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetuserConversationsResponse res = new org.openapis.openapi.models.operations.GetuserConversationsResponse() {{
+        org.openapis.openapi.models.operations.GetuserConversationsResponse res = new org.openapis.openapi.models.operations.GetuserConversationsResponse(contentType, httpRes.statusCode()) {{
             getuserConversations200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,11 +247,9 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUserResponse res = new org.openapis.openapi.models.operations.UpdateUserResponse() {{
+        org.openapis.openapi.models.operations.UpdateUserResponse res = new org.openapis.openapi.models.operations.UpdateUserResponse(contentType, httpRes.statusCode()) {{
             updateUser200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

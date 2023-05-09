@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Queue {
     @JsonProperty("content")
     public Content[] content;
+
     public Queue withContent(Content[] content) {
         this.content = content;
         return this;
@@ -19,6 +20,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentItemsCount")
     public Long contentItemsCount;
+
     public Queue withContentItemsCount(Long contentItemsCount) {
         this.contentItemsCount = contentItemsCount;
         return this;
@@ -27,6 +29,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controls")
     public java.util.Map<String, PlayMediaControl> controls;
+
     public Queue withControls(java.util.Map<String, PlayMediaControl> controls) {
         this.controls = controls;
         return this;
@@ -34,6 +37,7 @@ public class Queue {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public Queue withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -42,6 +46,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertPointer")
     public QueueInsertPointer insertPointer;
+
     public Queue withInsertPointer(QueueInsertPointer insertPointer) {
         this.insertPointer = insertPointer;
         return this;
@@ -50,6 +55,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextContentUrl")
     public String nextContentUrl;
+
     public Queue withNextContentUrl(String nextContentUrl) {
         this.nextContentUrl = nextContentUrl;
         return this;
@@ -58,6 +64,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playPointer")
     public QueuePlayPointer playPointer;
+
     public Queue withPlayPointer(QueuePlayPointer playPointer) {
         this.playPointer = playPointer;
         return this;
@@ -66,6 +73,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prerollSeconds")
     public Double prerollSeconds;
+
     public Queue withPrerollSeconds(Double prerollSeconds) {
         this.prerollSeconds = prerollSeconds;
         return this;
@@ -74,6 +82,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousContentUrl")
     public String previousContentUrl;
+
     public Queue withPreviousContentUrl(String previousContentUrl) {
         this.previousContentUrl = previousContentUrl;
         return this;
@@ -82,6 +91,7 @@ public class Queue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipsRemaining")
     public Long skipsRemaining;
+
     public Queue withSkipsRemaining(Long skipsRemaining) {
         this.skipsRemaining = skipsRemaining;
         return this;
@@ -89,9 +99,15 @@ public class Queue {
     
     @JsonProperty("version")
     public String version;
+
     public Queue withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Queue(@JsonProperty("content") Content[] content, @JsonProperty("identifier") String identifier, @JsonProperty("version") String version) {
+        this.content = content;
+        this.identifier = identifier;
+        this.version = version;
+  }
 }

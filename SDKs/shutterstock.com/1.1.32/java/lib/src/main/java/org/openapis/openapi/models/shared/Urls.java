@@ -15,9 +15,13 @@ public class Urls {
      */
     @JsonProperty("urls")
     public String[] urls;
+
     public Urls withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public Urls(@JsonProperty("urls") String[] urls) {
+        this.urls = urls;
+  }
 }

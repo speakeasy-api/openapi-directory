@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EscerResponse {
     
     public String contentType;
+
     public EscerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EscerResponse {
     
     
     public Integer statusCode;
+
     public EscerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EscerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EscerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EscerResponse {
      */
     
     public Escer400ApplicationJSON escer400ApplicationJSONObject;
+
     public EscerResponse withEscer400ApplicationJSONObject(Escer400ApplicationJSON escer400ApplicationJSONObject) {
         this.escer400ApplicationJSONObject = escer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EscerResponse {
      */
     
     public Escer401ApplicationJSON escer401ApplicationJSONObject;
+
     public EscerResponse withEscer401ApplicationJSONObject(Escer401ApplicationJSON escer401ApplicationJSONObject) {
         this.escer401ApplicationJSONObject = escer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class EscerResponse {
      */
     
     public Escer404ApplicationJSON escer404ApplicationJSONObject;
+
     public EscerResponse withEscer404ApplicationJSONObject(Escer404ApplicationJSON escer404ApplicationJSONObject) {
         this.escer404ApplicationJSONObject = escer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class EscerResponse {
      */
     
     public Escer500ApplicationJSON escer500ApplicationJSONObject;
+
     public EscerResponse withEscer500ApplicationJSONObject(Escer500ApplicationJSON escer500ApplicationJSONObject) {
         this.escer500ApplicationJSONObject = escer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class EscerResponse {
      */
     
     public Escer502ApplicationJSON escer502ApplicationJSONObject;
+
     public EscerResponse withEscer502ApplicationJSONObject(Escer502ApplicationJSON escer502ApplicationJSONObject) {
         this.escer502ApplicationJSONObject = escer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class EscerResponse {
      */
     
     public Escer503ApplicationJSON escer503ApplicationJSONObject;
+
     public EscerResponse withEscer503ApplicationJSONObject(Escer503ApplicationJSON escer503ApplicationJSONObject) {
         this.escer503ApplicationJSONObject = escer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class EscerResponse {
      */
     
     public Escer504ApplicationJSON escer504ApplicationJSONObject;
+
     public EscerResponse withEscer504ApplicationJSONObject(Escer504ApplicationJSON escer504ApplicationJSONObject) {
         this.escer504ApplicationJSONObject = escer504ApplicationJSONObject;
         return this;
     }
     
+    public EscerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

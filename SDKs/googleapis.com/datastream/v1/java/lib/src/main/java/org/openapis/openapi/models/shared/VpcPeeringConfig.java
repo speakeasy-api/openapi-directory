@@ -18,6 +18,7 @@ public class VpcPeeringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public String subnet;
+
     public VpcPeeringConfig withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
@@ -29,9 +30,11 @@ public class VpcPeeringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpc")
     public String vpc;
+
     public VpcPeeringConfig withVpc(String vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public VpcPeeringConfig(){}
 }

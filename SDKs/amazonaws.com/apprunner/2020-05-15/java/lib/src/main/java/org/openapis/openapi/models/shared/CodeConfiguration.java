@@ -15,6 +15,7 @@ public class CodeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeConfigurationValues")
     public CodeConfigurationValues codeConfigurationValues;
+
     public CodeConfiguration withCodeConfigurationValues(CodeConfigurationValues codeConfigurationValues) {
         this.codeConfigurationValues = codeConfigurationValues;
         return this;
@@ -22,9 +23,13 @@ public class CodeConfiguration {
     
     @JsonProperty("ConfigurationSource")
     public ConfigurationSourceEnum configurationSource;
+
     public CodeConfiguration withConfigurationSource(ConfigurationSourceEnum configurationSource) {
         this.configurationSource = configurationSource;
         return this;
     }
     
+    public CodeConfiguration(@JsonProperty("ConfigurationSource") ConfigurationSourceEnum configurationSource) {
+        this.configurationSource = configurationSource;
+  }
 }

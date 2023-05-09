@@ -18,6 +18,7 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInstancesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public Instance[] resources;
+
     public ListInstancesResponse withResources(Instance[] resources) {
         this.resources = resources;
         return this;
@@ -40,9 +42,11 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListInstancesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListInstancesResponse(){}
 }

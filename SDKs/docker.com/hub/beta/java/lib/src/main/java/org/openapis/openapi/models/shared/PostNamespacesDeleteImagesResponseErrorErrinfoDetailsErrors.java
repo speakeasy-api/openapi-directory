@@ -15,6 +15,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -26,6 +27,7 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum error;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors withError(PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrorsErrorEnum error) {
         this.error = error;
         return this;
@@ -37,9 +39,11 @@ public class PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public String repository;
+
     public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public PostNamespacesDeleteImagesResponseErrorErrinfoDetailsErrors(){}
 }

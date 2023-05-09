@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteApplicationReferenceDataSourceRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public DeleteApplicationReferenceDataSourceRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,6 +17,7 @@ public class DeleteApplicationReferenceDataSourceRequest {
     
     @JsonProperty("CurrentApplicationVersionId")
     public Long currentApplicationVersionId;
+
     public DeleteApplicationReferenceDataSourceRequest withCurrentApplicationVersionId(Long currentApplicationVersionId) {
         this.currentApplicationVersionId = currentApplicationVersionId;
         return this;
@@ -23,9 +25,15 @@ public class DeleteApplicationReferenceDataSourceRequest {
     
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public DeleteApplicationReferenceDataSourceRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public DeleteApplicationReferenceDataSourceRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("CurrentApplicationVersionId") Long currentApplicationVersionId, @JsonProperty("ReferenceId") String referenceId) {
+        this.applicationName = applicationName;
+        this.currentApplicationVersionId = currentApplicationVersionId;
+        this.referenceId = referenceId;
+  }
 }

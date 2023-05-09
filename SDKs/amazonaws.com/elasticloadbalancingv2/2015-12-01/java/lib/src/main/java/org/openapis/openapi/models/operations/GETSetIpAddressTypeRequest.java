@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIpAddressTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetIpAddressTypeActionEnum action;
+
     public GETSetIpAddressTypeRequest withAction(GETSetIpAddressTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetIpAddressTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=IpAddressType")
     public GETSetIPAddressTypeIPAddressTypeEnum ipAddressType;
+
     public GETSetIpAddressTypeRequest withIpAddressType(GETSetIPAddressTypeIPAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -29,6 +32,7 @@ public class GETSetIpAddressTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerArn")
     public String loadBalancerArn;
+
     public GETSetIpAddressTypeRequest withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -36,6 +40,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetIpAddressTypeVersionEnum version;
+
     public GETSetIpAddressTypeRequest withVersion(GETSetIpAddressTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetIpAddressTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetIpAddressTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetIpAddressTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetIpAddressTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetIpAddressTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetIpAddressTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETSetIpAddressTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetIpAddressTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetIpAddressTypeRequest(@JsonProperty("Action") GETSetIpAddressTypeActionEnum action, @JsonProperty("IpAddressType") GETSetIPAddressTypeIPAddressTypeEnum ipAddressType, @JsonProperty("LoadBalancerArn") String loadBalancerArn, @JsonProperty("Version") GETSetIpAddressTypeVersionEnum version) {
+        this.action = action;
+        this.ipAddressType = ipAddressType;
+        this.loadBalancerArn = loadBalancerArn;
+        this.version = version;
+  }
 }

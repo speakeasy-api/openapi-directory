@@ -18,6 +18,7 @@ public class GetLatestBaseCurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base")
     public String base;
+
     public GetLatestBaseCurrency200ApplicationJSON withBase(String base) {
         this.base = base;
         return this;
@@ -29,6 +30,7 @@ public class GetLatestBaseCurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public GetLatestBaseCurrency200ApplicationJSON withDate(String date) {
         this.date = date;
         return this;
@@ -40,6 +42,7 @@ public class GetLatestBaseCurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rates")
     public java.util.Map<String, Double> rates;
+
     public GetLatestBaseCurrency200ApplicationJSON withRates(java.util.Map<String, Double> rates) {
         this.rates = rates;
         return this;
@@ -51,9 +54,11 @@ public class GetLatestBaseCurrency200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_last_updated")
     public Long timeLastUpdated;
+
     public GetLatestBaseCurrency200ApplicationJSON withTimeLastUpdated(Long timeLastUpdated) {
         this.timeLastUpdated = timeLastUpdated;
         return this;
     }
     
+    public GetLatestBaseCurrency200ApplicationJSON(){}
 }

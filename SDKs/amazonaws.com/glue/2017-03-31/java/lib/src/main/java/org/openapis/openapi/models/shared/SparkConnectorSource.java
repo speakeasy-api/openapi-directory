@@ -15,6 +15,7 @@ public class SparkConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public java.util.Map<String, String> additionalOptions;
+
     public SparkConnectorSource withAdditionalOptions(java.util.Map<String, String> additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -22,6 +23,7 @@ public class SparkConnectorSource {
     
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public SparkConnectorSource withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -29,6 +31,7 @@ public class SparkConnectorSource {
     
     @JsonProperty("ConnectionType")
     public String connectionType;
+
     public SparkConnectorSource withConnectionType(String connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -36,6 +39,7 @@ public class SparkConnectorSource {
     
     @JsonProperty("ConnectorName")
     public String connectorName;
+
     public SparkConnectorSource withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -43,6 +47,7 @@ public class SparkConnectorSource {
     
     @JsonProperty("Name")
     public String name;
+
     public SparkConnectorSource withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,16 @@ public class SparkConnectorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public SparkConnectorSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
     }
     
+    public SparkConnectorSource(@JsonProperty("ConnectionName") String connectionName, @JsonProperty("ConnectionType") String connectionType, @JsonProperty("ConnectorName") String connectorName, @JsonProperty("Name") String name) {
+        this.connectionName = connectionName;
+        this.connectionType = connectionType;
+        this.connectorName = connectorName;
+        this.name = name;
+  }
 }

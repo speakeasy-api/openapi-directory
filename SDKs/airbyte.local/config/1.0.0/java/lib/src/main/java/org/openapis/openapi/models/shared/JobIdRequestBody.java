@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobIdRequestBody {
     @JsonProperty("id")
     public Long id;
+
     public JobIdRequestBody withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public JobIdRequestBody(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

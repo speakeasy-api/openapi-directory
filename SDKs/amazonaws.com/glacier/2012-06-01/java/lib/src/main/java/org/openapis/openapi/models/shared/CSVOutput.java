@@ -15,6 +15,7 @@ public class CSVOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldDelimiter")
     public String fieldDelimiter;
+
     public CSVOutput withFieldDelimiter(String fieldDelimiter) {
         this.fieldDelimiter = fieldDelimiter;
         return this;
@@ -23,6 +24,7 @@ public class CSVOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteCharacter")
     public String quoteCharacter;
+
     public CSVOutput withQuoteCharacter(String quoteCharacter) {
         this.quoteCharacter = quoteCharacter;
         return this;
@@ -31,6 +33,7 @@ public class CSVOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteEscapeCharacter")
     public String quoteEscapeCharacter;
+
     public CSVOutput withQuoteEscapeCharacter(String quoteEscapeCharacter) {
         this.quoteEscapeCharacter = quoteEscapeCharacter;
         return this;
@@ -39,6 +42,7 @@ public class CSVOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteFields")
     public QuoteFieldsEnum quoteFields;
+
     public CSVOutput withQuoteFields(QuoteFieldsEnum quoteFields) {
         this.quoteFields = quoteFields;
         return this;
@@ -47,9 +51,11 @@ public class CSVOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDelimiter")
     public String recordDelimiter;
+
     public CSVOutput withRecordDelimiter(String recordDelimiter) {
         this.recordDelimiter = recordDelimiter;
         return this;
     }
     
+    public CSVOutput(){}
 }

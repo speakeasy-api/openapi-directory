@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBadgeRequest {
@@ -12,9 +13,13 @@ public class GetBadgeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public GetBadgeRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetBadgeRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

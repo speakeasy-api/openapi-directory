@@ -19,6 +19,7 @@ public class RepositorySubscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public RepositorySubscription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class RepositorySubscription {
      */
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public RepositorySubscription withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
@@ -36,6 +38,7 @@ public class RepositorySubscription {
     
     @JsonProperty("reason")
     public String reason;
+
     public RepositorySubscription withReason(String reason) {
         this.reason = reason;
         return this;
@@ -43,6 +46,7 @@ public class RepositorySubscription {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public RepositorySubscription withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -53,6 +57,7 @@ public class RepositorySubscription {
      */
     @JsonProperty("subscribed")
     public Boolean subscribed;
+
     public RepositorySubscription withSubscribed(Boolean subscribed) {
         this.subscribed = subscribed;
         return this;
@@ -60,9 +65,18 @@ public class RepositorySubscription {
     
     @JsonProperty("url")
     public String url;
+
     public RepositorySubscription withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RepositorySubscription(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("ignored") Boolean ignored, @JsonProperty("reason") String reason, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("subscribed") Boolean subscribed, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.ignored = ignored;
+        this.reason = reason;
+        this.repositoryUrl = repositoryUrl;
+        this.subscribed = subscribed;
+        this.url = url;
+  }
 }

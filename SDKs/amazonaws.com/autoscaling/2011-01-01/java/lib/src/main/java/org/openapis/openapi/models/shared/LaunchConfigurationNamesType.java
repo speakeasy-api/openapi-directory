@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchConfigurationNamesType {
     
     public String[] launchConfigurationNames;
+
     public LaunchConfigurationNamesType withLaunchConfigurationNames(String[] launchConfigurationNames) {
         this.launchConfigurationNames = launchConfigurationNames;
         return this;
@@ -16,6 +17,7 @@ public class LaunchConfigurationNamesType {
     
     
     public Long maxRecords;
+
     public LaunchConfigurationNamesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class LaunchConfigurationNamesType {
     
     
     public String nextToken;
+
     public LaunchConfigurationNamesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public LaunchConfigurationNamesType(){}
 }

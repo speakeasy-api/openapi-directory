@@ -18,9 +18,11 @@ public class GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1beta2ShotChangeDetectionConfig(){}
 }

@@ -15,6 +15,7 @@ public class VirtualGatewayListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionPool")
     public VirtualGatewayConnectionPool connectionPool;
+
     public VirtualGatewayListener withConnectionPool(VirtualGatewayConnectionPool connectionPool) {
         this.connectionPool = connectionPool;
         return this;
@@ -23,6 +24,7 @@ public class VirtualGatewayListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheck")
     public VirtualGatewayHealthCheckPolicy healthCheck;
+
     public VirtualGatewayListener withHealthCheck(VirtualGatewayHealthCheckPolicy healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -30,6 +32,7 @@ public class VirtualGatewayListener {
     
     @JsonProperty("portMapping")
     public VirtualGatewayPortMapping portMapping;
+
     public VirtualGatewayListener withPortMapping(VirtualGatewayPortMapping portMapping) {
         this.portMapping = portMapping;
         return this;
@@ -38,9 +41,13 @@ public class VirtualGatewayListener {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public VirtualGatewayListenerTls tls;
+
     public VirtualGatewayListener withTls(VirtualGatewayListenerTls tls) {
         this.tls = tls;
         return this;
     }
     
+    public VirtualGatewayListener(@JsonProperty("portMapping") VirtualGatewayPortMapping portMapping) {
+        this.portMapping = portMapping;
+  }
 }

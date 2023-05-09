@@ -15,9 +15,11 @@ public class JourneyEmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public JourneyEmailMessage withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
     }
     
+    public JourneyEmailMessage(){}
 }

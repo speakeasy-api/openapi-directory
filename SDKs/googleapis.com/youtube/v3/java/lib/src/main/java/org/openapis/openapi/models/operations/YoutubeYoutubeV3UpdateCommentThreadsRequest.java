@@ -12,6 +12,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +20,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CommentThread commentThread;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withCommentThread(org.openapis.openapi.models.shared.CommentThread commentThread) {
         this.commentThread = commentThread;
         return this;
@@ -29,6 +31,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +42,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +53,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +64,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +75,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +86,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +97,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -99,6 +108,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +119,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +130,7 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +141,11 @@ public class YoutubeYoutubeV3UpdateCommentThreadsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeYoutubeV3UpdateCommentThreadsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeYoutubeV3UpdateCommentThreadsRequest(){}
 }

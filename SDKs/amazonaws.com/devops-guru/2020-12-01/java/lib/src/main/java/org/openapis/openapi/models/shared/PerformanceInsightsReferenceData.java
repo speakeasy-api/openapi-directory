@@ -15,6 +15,7 @@ public class PerformanceInsightsReferenceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonValues")
     public PerformanceInsightsReferenceComparisonValues comparisonValues;
+
     public PerformanceInsightsReferenceData withComparisonValues(PerformanceInsightsReferenceComparisonValues comparisonValues) {
         this.comparisonValues = comparisonValues;
         return this;
@@ -23,9 +24,11 @@ public class PerformanceInsightsReferenceData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PerformanceInsightsReferenceData withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PerformanceInsightsReferenceData(){}
 }

@@ -15,6 +15,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cost")
     public Double cost;
+
     public OrderItemApiModel withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -26,6 +27,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public OrderItemApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductItemId")
     public Integer productItemId;
+
     public OrderItemApiModel withProductItemId(Integer productItemId) {
         this.productItemId = productItemId;
         return this;
@@ -48,6 +51,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quantity")
     public Double quantity;
+
     public OrderItemApiModel withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -59,6 +63,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public String referenceId;
+
     public OrderItemApiModel withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -70,6 +75,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubTotalAmount")
     public Double subTotalAmount;
+
     public OrderItemApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -81,6 +87,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxAmount")
     public Double taxAmount;
+
     public OrderItemApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -92,6 +99,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxId")
     public Integer taxId;
+
     public OrderItemApiModel withTaxId(Integer taxId) {
         this.taxId = taxId;
         return this;
@@ -103,6 +111,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxPercentage")
     public Double taxPercentage;
+
     public OrderItemApiModel withTaxPercentage(Double taxPercentage) {
         this.taxPercentage = taxPercentage;
         return this;
@@ -114,6 +123,7 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmount")
     public Double totalAmount;
+
     public OrderItemApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -125,9 +135,11 @@ public class OrderItemApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkTypeId")
     public Integer workTypeId;
+
     public OrderItemApiModel withWorkTypeId(Integer workTypeId) {
         this.workTypeId = workTypeId;
         return this;
     }
     
+    public OrderItemApiModel(){}
 }

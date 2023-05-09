@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetCallLogsSecurity;
 import org.openapis.openapi.models.operations.GetCallLogsDirectionEnum;
 import org.openapis.openapi.models.operations.GetCallLogsRequest;
 import org.openapis.openapi.models.operations.GetCallLogsResponse;
+import org.openapis.openapi.models.operations.GetCallLogsSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,30 +14,27 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetCallLogsRequest req = new GetCallLogsRequest() {{
-                accountId = "corrupti";
-                destinationUser = "provident";
-                direction = "Outbound";
-                endGte = "quibusdam";
-                endLte = "unde";
-                from = "nulla";
-                page = 5448.83;
-                pageSize = 8472.52;
-                sourceUser = "vel";
-                startGte = "error";
-                startLte = "deserunt";
+            GetCallLogsRequest req = new GetCallLogsRequest("corrupti", 5928.45, 7151.9, "quibusdam", "unde") {{
+                destinationUser = "nulla";
+                direction = GetCallLogsDirectionEnum.OUTBOUND;
+                endGte = "illum";
+                endLte = "vel";
+                from = "error";
+                sourceUser = "deserunt";
                 to = "suscipit";
-            }}            
+            }};            
 
-            GetCallLogsResponse res = sdk.getCallLogs(req, new GetCallLogsSecurity() {{
+            GetCallLogsResponse res = sdk.getCallLogs(req, new GetCallLogsSecurity("iure") {{
                 bearerAuth = "Bearer YOUR_BEARER_TOKEN_HERE";
             }});
 
-            if (res.callLogsHalResponse.isPresent()) {
+            if (res.callLogsHalResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

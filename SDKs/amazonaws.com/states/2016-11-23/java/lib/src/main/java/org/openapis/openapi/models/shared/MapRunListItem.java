@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MapRunListItem {
     @JsonProperty("executionArn")
     public String executionArn;
+
     public MapRunListItem withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -26,6 +27,7 @@ public class MapRunListItem {
     
     @JsonProperty("mapRunArn")
     public String mapRunArn;
+
     public MapRunListItem withMapRunArn(String mapRunArn) {
         this.mapRunArn = mapRunArn;
         return this;
@@ -35,6 +37,7 @@ public class MapRunListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public MapRunListItem withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -42,6 +45,7 @@ public class MapRunListItem {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public MapRunListItem withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -52,9 +56,16 @@ public class MapRunListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public MapRunListItem withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
     }
     
+    public MapRunListItem(@JsonProperty("executionArn") String executionArn, @JsonProperty("mapRunArn") String mapRunArn, @JsonProperty("startDate") OffsetDateTime startDate, @JsonProperty("stateMachineArn") String stateMachineArn) {
+        this.executionArn = executionArn;
+        this.mapRunArn = mapRunArn;
+        this.startDate = startDate;
+        this.stateMachineArn = stateMachineArn;
+  }
 }

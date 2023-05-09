@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateBlueGreenDeploymentRequest {
     
     public String blueGreenDeploymentName;
+
     public CreateBlueGreenDeploymentRequest withBlueGreenDeploymentName(String blueGreenDeploymentName) {
         this.blueGreenDeploymentName = blueGreenDeploymentName;
         return this;
@@ -16,6 +17,7 @@ public class CreateBlueGreenDeploymentRequest {
     
     
     public String source;
+
     public CreateBlueGreenDeploymentRequest withSource(String source) {
         this.source = source;
         return this;
@@ -23,6 +25,7 @@ public class CreateBlueGreenDeploymentRequest {
     
     
     public TagList[] tags;
+
     public CreateBlueGreenDeploymentRequest withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -30,6 +33,7 @@ public class CreateBlueGreenDeploymentRequest {
     
     
     public String targetDBClusterParameterGroupName;
+
     public CreateBlueGreenDeploymentRequest withTargetDBClusterParameterGroupName(String targetDBClusterParameterGroupName) {
         this.targetDBClusterParameterGroupName = targetDBClusterParameterGroupName;
         return this;
@@ -37,6 +41,7 @@ public class CreateBlueGreenDeploymentRequest {
     
     
     public String targetDBParameterGroupName;
+
     public CreateBlueGreenDeploymentRequest withTargetDBParameterGroupName(String targetDBParameterGroupName) {
         this.targetDBParameterGroupName = targetDBParameterGroupName;
         return this;
@@ -44,9 +49,14 @@ public class CreateBlueGreenDeploymentRequest {
     
     
     public String targetEngineVersion;
+
     public CreateBlueGreenDeploymentRequest withTargetEngineVersion(String targetEngineVersion) {
         this.targetEngineVersion = targetEngineVersion;
         return this;
     }
     
+    public CreateBlueGreenDeploymentRequest(@JsonProperty("BlueGreenDeploymentName") String blueGreenDeploymentName, @JsonProperty("Source") String source) {
+        this.blueGreenDeploymentName = blueGreenDeploymentName;
+        this.source = source;
+  }
 }

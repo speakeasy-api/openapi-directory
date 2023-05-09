@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateContactMethodResponse {
@@ -12,6 +13,7 @@ public class CreateContactMethodResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateContactMethodResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateContactMethodResponse {
     
     
     public String contentType;
+
     public CreateContactMethodResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateContactMethodResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateContactMethodResult createContactMethodResult;
+
     public CreateContactMethodResponse withCreateContactMethodResult(org.openapis.openapi.models.shared.CreateContactMethodResult createContactMethodResult) {
         this.createContactMethodResult = createContactMethodResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateContactMethodResponse {
      */
     
     public Object invalidInputException;
+
     public CreateContactMethodResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class CreateContactMethodResponse {
      */
     
     public Object notFoundException;
+
     public CreateContactMethodResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateContactMethodResponse {
      */
     
     public Object operationFailureException;
+
     public CreateContactMethodResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class CreateContactMethodResponse {
      */
     
     public Object serviceException;
+
     public CreateContactMethodResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class CreateContactMethodResponse {
     
     
     public Integer statusCode;
+
     public CreateContactMethodResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateContactMethodResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateContactMethodResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateContactMethodResponse {
      */
     
     public Object unauthenticatedException;
+
     public CreateContactMethodResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public CreateContactMethodResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

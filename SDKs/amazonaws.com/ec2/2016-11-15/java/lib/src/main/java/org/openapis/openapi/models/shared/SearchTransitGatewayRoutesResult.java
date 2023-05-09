@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchTransitGatewayRoutesResult {
     
     public Boolean additionalRoutesAvailable;
+
     public SearchTransitGatewayRoutesResult withAdditionalRoutesAvailable(Boolean additionalRoutesAvailable) {
         this.additionalRoutesAvailable = additionalRoutesAvailable;
         return this;
@@ -19,9 +20,11 @@ public class SearchTransitGatewayRoutesResult {
     
     
     public SearchTransitGatewayRoutesResultRoutes[] routes;
+
     public SearchTransitGatewayRoutesResult withRoutes(SearchTransitGatewayRoutesResultRoutes[] routes) {
         this.routes = routes;
         return this;
     }
     
+    public SearchTransitGatewayRoutesResult(){}
 }

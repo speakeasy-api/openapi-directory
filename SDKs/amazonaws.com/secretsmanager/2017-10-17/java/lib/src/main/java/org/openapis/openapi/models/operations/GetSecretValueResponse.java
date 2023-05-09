@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSecretValueResponse {
     
     public String contentType;
+
     public GetSecretValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSecretValueResponse {
      */
     
     public Object decryptionFailure;
+
     public GetSecretValueResponse withDecryptionFailure(Object decryptionFailure) {
         this.decryptionFailure = decryptionFailure;
         return this;
@@ -29,6 +32,7 @@ public class GetSecretValueResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSecretValueResponse getSecretValueResponse;
+
     public GetSecretValueResponse withGetSecretValueResponse(org.openapis.openapi.models.shared.GetSecretValueResponse getSecretValueResponse) {
         this.getSecretValueResponse = getSecretValueResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSecretValueResponse {
      */
     
     public Object internalServiceError;
+
     public GetSecretValueResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class GetSecretValueResponse {
      */
     
     public Object invalidParameterException;
+
     public GetSecretValueResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetSecretValueResponse {
      */
     
     public Object invalidRequestException;
+
     public GetSecretValueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetSecretValueResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSecretValueResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetSecretValueResponse {
     
     
     public Integer statusCode;
+
     public GetSecretValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetSecretValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSecretValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSecretValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

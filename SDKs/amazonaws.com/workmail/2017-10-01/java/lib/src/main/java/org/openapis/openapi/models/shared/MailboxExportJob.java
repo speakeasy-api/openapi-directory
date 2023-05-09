@@ -20,6 +20,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public MailboxExportJob withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class MailboxExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public MailboxExportJob withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public MailboxExportJob withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -46,6 +49,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedProgress")
     public Long estimatedProgress;
+
     public MailboxExportJob withEstimatedProgress(Long estimatedProgress) {
         this.estimatedProgress = estimatedProgress;
         return this;
@@ -54,6 +58,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public MailboxExportJob withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -62,6 +67,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public MailboxExportJob withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -70,6 +76,7 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Path")
     public String s3Path;
+
     public MailboxExportJob withS3Path(String s3Path) {
         this.s3Path = s3Path;
         return this;
@@ -80,6 +87,7 @@ public class MailboxExportJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public MailboxExportJob withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -88,9 +96,11 @@ public class MailboxExportJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public MailboxExportJobStateEnum state;
+
     public MailboxExportJob withState(MailboxExportJobStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public MailboxExportJob(){}
 }

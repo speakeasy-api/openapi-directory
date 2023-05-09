@@ -15,6 +15,7 @@ public class ListLanguageModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Models")
     public LanguageModel[] models;
+
     public ListLanguageModelsResponse withModels(LanguageModel[] models) {
         this.models = models;
         return this;
@@ -23,9 +24,11 @@ public class ListLanguageModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLanguageModelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLanguageModelsResponse(){}
 }

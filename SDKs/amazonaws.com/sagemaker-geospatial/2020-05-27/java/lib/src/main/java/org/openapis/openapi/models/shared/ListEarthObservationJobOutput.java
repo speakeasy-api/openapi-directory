@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEarthObservationJobOutput {
     @JsonProperty("EarthObservationJobSummaries")
     public ListEarthObservationJobOutputConfig[] earthObservationJobSummaries;
+
     public ListEarthObservationJobOutput withEarthObservationJobSummaries(ListEarthObservationJobOutputConfig[] earthObservationJobSummaries) {
         this.earthObservationJobSummaries = earthObservationJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListEarthObservationJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEarthObservationJobOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEarthObservationJobOutput(@JsonProperty("EarthObservationJobSummaries") ListEarthObservationJobOutputConfig[] earthObservationJobSummaries) {
+        this.earthObservationJobSummaries = earthObservationJobSummaries;
+  }
 }

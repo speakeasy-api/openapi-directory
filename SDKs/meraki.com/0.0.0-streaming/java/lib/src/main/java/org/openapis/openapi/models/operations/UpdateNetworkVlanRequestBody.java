@@ -15,6 +15,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applianceIp")
     public String applianceIp;
+
     public UpdateNetworkVlanRequestBody withApplianceIp(String applianceIp) {
         this.applianceIp = applianceIp;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpBootFilename")
     public String dhcpBootFilename;
+
     public UpdateNetworkVlanRequestBody withDhcpBootFilename(String dhcpBootFilename) {
         this.dhcpBootFilename = dhcpBootFilename;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpBootNextServer")
     public String dhcpBootNextServer;
+
     public UpdateNetworkVlanRequestBody withDhcpBootNextServer(String dhcpBootNextServer) {
         this.dhcpBootNextServer = dhcpBootNextServer;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpBootOptionsEnabled")
     public Boolean dhcpBootOptionsEnabled;
+
     public UpdateNetworkVlanRequestBody withDhcpBootOptionsEnabled(Boolean dhcpBootOptionsEnabled) {
         this.dhcpBootOptionsEnabled = dhcpBootOptionsEnabled;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpHandling")
     public UpdateNetworkVlanRequestBodyDhcpHandlingEnum dhcpHandling;
+
     public UpdateNetworkVlanRequestBody withDhcpHandling(UpdateNetworkVlanRequestBodyDhcpHandlingEnum dhcpHandling) {
         this.dhcpHandling = dhcpHandling;
         return this;
@@ -70,6 +75,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpLeaseTime")
     public UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum dhcpLeaseTime;
+
     public UpdateNetworkVlanRequestBody withDhcpLeaseTime(UpdateNetworkVlanRequestBodyDhcpLeaseTimeEnum dhcpLeaseTime) {
         this.dhcpLeaseTime = dhcpLeaseTime;
         return this;
@@ -81,6 +87,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpOptions")
     public UpdateNetworkVlanRequestBodyDhcpOptions[] dhcpOptions;
+
     public UpdateNetworkVlanRequestBody withDhcpOptions(UpdateNetworkVlanRequestBodyDhcpOptions[] dhcpOptions) {
         this.dhcpOptions = dhcpOptions;
         return this;
@@ -92,6 +99,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dhcpRelayServerIps")
     public String[] dhcpRelayServerIps;
+
     public UpdateNetworkVlanRequestBody withDhcpRelayServerIps(String[] dhcpRelayServerIps) {
         this.dhcpRelayServerIps = dhcpRelayServerIps;
         return this;
@@ -103,6 +111,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsNameservers")
     public String dnsNameservers;
+
     public UpdateNetworkVlanRequestBody withDnsNameservers(String dnsNameservers) {
         this.dnsNameservers = dnsNameservers;
         return this;
@@ -114,6 +123,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedIpAssignments")
     public java.util.Map<String, Object> fixedIpAssignments;
+
     public UpdateNetworkVlanRequestBody withFixedIpAssignments(java.util.Map<String, Object> fixedIpAssignments) {
         this.fixedIpAssignments = fixedIpAssignments;
         return this;
@@ -125,6 +135,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPolicyId")
     public String groupPolicyId;
+
     public UpdateNetworkVlanRequestBody withGroupPolicyId(String groupPolicyId) {
         this.groupPolicyId = groupPolicyId;
         return this;
@@ -136,6 +147,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkVlanRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -147,6 +159,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRanges")
     public UpdateNetworkVlanRequestBodyReservedIpRanges[] reservedIpRanges;
+
     public UpdateNetworkVlanRequestBody withReservedIpRanges(UpdateNetworkVlanRequestBodyReservedIpRanges[] reservedIpRanges) {
         this.reservedIpRanges = reservedIpRanges;
         return this;
@@ -158,6 +171,7 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public String subnet;
+
     public UpdateNetworkVlanRequestBody withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
@@ -169,9 +183,11 @@ public class UpdateNetworkVlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnNatSubnet")
     public String vpnNatSubnet;
+
     public UpdateNetworkVlanRequestBody withVpnNatSubnet(String vpnNatSubnet) {
         this.vpnNatSubnet = vpnNatSubnet;
         return this;
     }
     
+    public UpdateNetworkVlanRequestBody(){}
 }

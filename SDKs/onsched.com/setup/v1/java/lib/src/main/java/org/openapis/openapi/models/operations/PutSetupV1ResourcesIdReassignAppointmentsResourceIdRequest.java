@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=calendarId")
     public String calendarId;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -23,6 +25,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDate")
     public OffsetDateTime endDate;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -33,6 +36,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +47,7 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceId")
     public String resourceId;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -53,9 +58,14 @@ public class PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDate")
     public OffsetDateTime startDate;
+
     public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public PutSetupV1ResourcesIdReassignAppointmentsResourceIdRequest(@JsonProperty("id") String id, @JsonProperty("resourceId") String resourceId) {
+        this.id = id;
+        this.resourceId = resourceId;
+  }
 }

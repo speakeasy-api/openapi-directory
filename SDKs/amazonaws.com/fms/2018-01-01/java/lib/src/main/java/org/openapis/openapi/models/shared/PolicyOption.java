@@ -15,6 +15,7 @@ public class PolicyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkFirewallPolicy")
     public NetworkFirewallPolicy networkFirewallPolicy;
+
     public PolicyOption withNetworkFirewallPolicy(NetworkFirewallPolicy networkFirewallPolicy) {
         this.networkFirewallPolicy = networkFirewallPolicy;
         return this;
@@ -23,9 +24,11 @@ public class PolicyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallPolicy")
     public ThirdPartyFirewallPolicy thirdPartyFirewallPolicy;
+
     public PolicyOption withThirdPartyFirewallPolicy(ThirdPartyFirewallPolicy thirdPartyFirewallPolicy) {
         this.thirdPartyFirewallPolicy = thirdPartyFirewallPolicy;
         return this;
     }
     
+    public PolicyOption(){}
 }

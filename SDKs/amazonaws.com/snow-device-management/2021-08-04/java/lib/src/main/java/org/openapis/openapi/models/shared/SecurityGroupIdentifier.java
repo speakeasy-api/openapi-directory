@@ -15,6 +15,7 @@ public class SecurityGroupIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public SecurityGroupIdentifier withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,9 +24,11 @@ public class SecurityGroupIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public SecurityGroupIdentifier withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public SecurityGroupIdentifier(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetComponentResponse {
     @JsonProperty("recipe")
     public String recipe;
+
     public GetComponentResponse withRecipe(String recipe) {
         this.recipe = recipe;
         return this;
@@ -21,6 +22,7 @@ public class GetComponentResponse {
     
     @JsonProperty("recipeOutputFormat")
     public RecipeOutputFormatEnum recipeOutputFormat;
+
     public GetComponentResponse withRecipeOutputFormat(RecipeOutputFormatEnum recipeOutputFormat) {
         this.recipeOutputFormat = recipeOutputFormat;
         return this;
@@ -29,9 +31,14 @@ public class GetComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetComponentResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetComponentResponse(@JsonProperty("recipe") String recipe, @JsonProperty("recipeOutputFormat") RecipeOutputFormatEnum recipeOutputFormat) {
+        this.recipe = recipe;
+        this.recipeOutputFormat = recipeOutputFormat;
+  }
 }

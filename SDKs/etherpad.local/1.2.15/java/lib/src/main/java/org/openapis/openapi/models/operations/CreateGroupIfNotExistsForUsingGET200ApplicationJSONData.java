@@ -12,9 +12,11 @@ public class CreateGroupIfNotExistsForUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public String groupID;
+
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSONData withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingGET200ApplicationJSONData(){}
 }

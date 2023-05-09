@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Search {
     @JsonProperty("search")
     public String search;
+
     public Search withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public Search(@JsonProperty("search") String search) {
+        this.search = search;
+  }
 }

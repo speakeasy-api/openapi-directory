@@ -15,6 +15,7 @@ public class ListCreateAccountStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateAccountStatuses")
     public CreateAccountStatus[] createAccountStatuses;
+
     public ListCreateAccountStatusResponse withCreateAccountStatuses(CreateAccountStatus[] createAccountStatuses) {
         this.createAccountStatuses = createAccountStatuses;
         return this;
@@ -23,9 +24,11 @@ public class ListCreateAccountStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCreateAccountStatusResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCreateAccountStatusResponse(){}
 }

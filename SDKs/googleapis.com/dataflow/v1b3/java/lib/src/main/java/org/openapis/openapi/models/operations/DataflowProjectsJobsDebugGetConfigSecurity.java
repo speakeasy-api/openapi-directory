@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsJobsDebugGetConfigSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsDebugGetConfigSecurityOption1 option1;
+
     public DataflowProjectsJobsDebugGetConfigSecurity withOption1(DataflowProjectsJobsDebugGetConfigSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsJobsDebugGetConfigSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsDebugGetConfigSecurityOption2 option2;
+
     public DataflowProjectsJobsDebugGetConfigSecurity withOption2(DataflowProjectsJobsDebugGetConfigSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsJobsDebugGetConfigSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsDebugGetConfigSecurityOption3 option3;
+
     public DataflowProjectsJobsDebugGetConfigSecurity withOption3(DataflowProjectsJobsDebugGetConfigSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsJobsDebugGetConfigSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsJobsDebugGetConfigSecurityOption4 option4;
+
     public DataflowProjectsJobsDebugGetConfigSecurity withOption4(DataflowProjectsJobsDebugGetConfigSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsJobsDebugGetConfigSecurity(){}
 }

@@ -14,6 +14,7 @@ public class EnterpriseAdminCreateOrgRequestBody {
      */
     @JsonProperty("admin")
     public String admin;
+
     public EnterpriseAdminCreateOrgRequestBody withAdmin(String admin) {
         this.admin = admin;
         return this;
@@ -24,6 +25,7 @@ public class EnterpriseAdminCreateOrgRequestBody {
      */
     @JsonProperty("login")
     public String login;
+
     public EnterpriseAdminCreateOrgRequestBody withLogin(String login) {
         this.login = login;
         return this;
@@ -35,9 +37,14 @@ public class EnterpriseAdminCreateOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_name")
     public String profileName;
+
     public EnterpriseAdminCreateOrgRequestBody withProfileName(String profileName) {
         this.profileName = profileName;
         return this;
     }
     
+    public EnterpriseAdminCreateOrgRequestBody(@JsonProperty("admin") String admin, @JsonProperty("login") String login) {
+        this.admin = admin;
+        this.login = login;
+  }
 }

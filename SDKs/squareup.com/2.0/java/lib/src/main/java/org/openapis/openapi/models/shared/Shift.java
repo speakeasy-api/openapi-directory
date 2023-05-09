@@ -20,6 +20,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breaks")
     public Break[] breaks;
+
     public Shift withBreaks(Break[] breaks) {
         this.breaks = breaks;
         return this;
@@ -31,6 +32,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Shift withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public Shift withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -54,6 +57,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_at")
     public String endAt;
+
     public Shift withEndAt(String endAt) {
         this.endAt = endAt;
         return this;
@@ -65,6 +69,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Shift withId(String id) {
         this.id = id;
         return this;
@@ -77,6 +82,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Shift withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -88,6 +94,7 @@ public class Shift {
      */
     @JsonProperty("start_at")
     public String startAt;
+
     public Shift withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -99,6 +106,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Shift withStatus(String status) {
         this.status = status;
         return this;
@@ -110,6 +118,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_id")
     public String teamMemberId;
+
     public Shift withTeamMemberId(String teamMemberId) {
         this.teamMemberId = teamMemberId;
         return this;
@@ -123,6 +132,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Shift withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -134,6 +144,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Shift withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -148,6 +159,7 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Shift withVersion(Long version) {
         this.version = version;
         return this;
@@ -159,9 +171,13 @@ public class Shift {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wage")
     public ShiftWage wage;
+
     public Shift withWage(ShiftWage wage) {
         this.wage = wage;
         return this;
     }
     
+    public Shift(@JsonProperty("start_at") String startAt) {
+        this.startAt = startAt;
+  }
 }

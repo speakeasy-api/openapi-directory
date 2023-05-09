@@ -23,6 +23,7 @@ public class AutoScaleRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public AutoScaleRunError error;
+
     public AutoScaleRun withError(AutoScaleRunError error) {
         this.error = error;
         return this;
@@ -34,6 +35,7 @@ public class AutoScaleRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public String results;
+
     public AutoScaleRun withResults(String results) {
         this.results = results;
         return this;
@@ -46,9 +48,13 @@ public class AutoScaleRun {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AutoScaleRun withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public AutoScaleRun(@JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.timestamp = timestamp;
+  }
 }

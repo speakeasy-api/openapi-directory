@@ -18,6 +18,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationReadable")
     public Boolean applicationReadable;
+
     public StaticFilesHandler withApplicationReadable(Boolean applicationReadable) {
         this.applicationReadable = applicationReadable;
         return this;
@@ -29,6 +30,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public String expiration;
+
     public StaticFilesHandler withExpiration(String expiration) {
         this.expiration = expiration;
         return this;
@@ -40,6 +42,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpHeaders")
     public java.util.Map<String, String> httpHeaders;
+
     public StaticFilesHandler withHttpHeaders(java.util.Map<String, String> httpHeaders) {
         this.httpHeaders = httpHeaders;
         return this;
@@ -51,6 +54,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public StaticFilesHandler withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -62,6 +66,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public StaticFilesHandler withPath(String path) {
         this.path = path;
         return this;
@@ -73,6 +78,7 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireMatchingFile")
     public Boolean requireMatchingFile;
+
     public StaticFilesHandler withRequireMatchingFile(Boolean requireMatchingFile) {
         this.requireMatchingFile = requireMatchingFile;
         return this;
@@ -84,9 +90,11 @@ public class StaticFilesHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadPathRegex")
     public String uploadPathRegex;
+
     public StaticFilesHandler withUploadPathRegex(String uploadPathRegex) {
         this.uploadPathRegex = uploadPathRegex;
         return this;
     }
     
+    public StaticFilesHandler(){}
 }

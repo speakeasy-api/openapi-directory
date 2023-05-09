@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPdusizeRequest {
@@ -12,6 +13,7 @@ public class SetPdusizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetPdusizeRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetPdusizeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pdusize")
     public Integer pdusize;
+
     public SetPdusizeRequest withPdusize(Integer pdusize) {
         this.pdusize = pdusize;
         return this;
     }
     
+    public SetPdusizeRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("pdusize") Integer pdusize) {
+        this.agentNum = agentNum;
+        this.pdusize = pdusize;
+  }
 }

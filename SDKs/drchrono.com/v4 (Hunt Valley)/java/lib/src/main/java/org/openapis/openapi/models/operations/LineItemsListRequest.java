@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LineItemsListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public LineItemsListRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public LineItemsListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +25,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public LineItemsListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -30,6 +33,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public Long office;
+
     public LineItemsListRequest withOffice(Long office) {
         this.office = office;
         return this;
@@ -37,6 +41,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public LineItemsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -44,6 +49,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public LineItemsListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -51,6 +57,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posted_date")
     public String postedDate;
+
     public LineItemsListRequest withPostedDate(String postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -58,6 +65,7 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_date")
     public String serviceDate;
+
     public LineItemsListRequest withServiceDate(String serviceDate) {
         this.serviceDate = serviceDate;
         return this;
@@ -65,9 +73,11 @@ public class LineItemsListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public LineItemsListRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public LineItemsListRequest(){}
 }

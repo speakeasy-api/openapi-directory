@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class TokensRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token_ids")
     public String tokenIds;
+
     public TokensRequest withTokenIds(String tokenIds) {
         this.tokenIds = tokenIds;
         return this;
@@ -16,6 +17,7 @@ public class TokensRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token_names")
     public String tokenNames;
+
     public TokensRequest withTokenNames(String tokenNames) {
         this.tokenNames = tokenNames;
         return this;
@@ -23,9 +25,11 @@ public class TokensRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token_symbols")
     public String tokenSymbols;
+
     public TokensRequest withTokenSymbols(String tokenSymbols) {
         this.tokenSymbols = tokenSymbols;
         return this;
     }
     
+    public TokensRequest(){}
 }

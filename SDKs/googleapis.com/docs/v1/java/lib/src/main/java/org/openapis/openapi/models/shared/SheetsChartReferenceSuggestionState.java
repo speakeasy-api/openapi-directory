@@ -18,6 +18,7 @@ public class SheetsChartReferenceSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartIdSuggested")
     public Boolean chartIdSuggested;
+
     public SheetsChartReferenceSuggestionState withChartIdSuggested(Boolean chartIdSuggested) {
         this.chartIdSuggested = chartIdSuggested;
         return this;
@@ -29,9 +30,11 @@ public class SheetsChartReferenceSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetIdSuggested")
     public Boolean spreadsheetIdSuggested;
+
     public SheetsChartReferenceSuggestionState withSpreadsheetIdSuggested(Boolean spreadsheetIdSuggested) {
         this.spreadsheetIdSuggested = spreadsheetIdSuggested;
         return this;
     }
     
+    public SheetsChartReferenceSuggestionState(){}
 }

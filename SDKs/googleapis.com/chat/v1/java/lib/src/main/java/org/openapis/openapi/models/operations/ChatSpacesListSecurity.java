@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ChatSpacesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ChatSpacesListSecurityOption1 option1;
+
     public ChatSpacesListSecurity withOption1(ChatSpacesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ChatSpacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ChatSpacesListSecurityOption2 option2;
+
     public ChatSpacesListSecurity withOption2(ChatSpacesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ChatSpacesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ChatSpacesListSecurityOption3 option3;
+
     public ChatSpacesListSecurity withOption3(ChatSpacesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ChatSpacesListSecurity(){}
 }

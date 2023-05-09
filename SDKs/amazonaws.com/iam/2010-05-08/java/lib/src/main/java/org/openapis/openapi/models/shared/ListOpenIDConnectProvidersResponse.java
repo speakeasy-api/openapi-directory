@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListOpenIDConnectProvidersResponse {
     
     public OpenIDConnectProviderListEntry[] openIDConnectProviderList;
+
     public ListOpenIDConnectProvidersResponse withOpenIDConnectProviderList(OpenIDConnectProviderListEntry[] openIDConnectProviderList) {
         this.openIDConnectProviderList = openIDConnectProviderList;
         return this;
     }
     
+    public ListOpenIDConnectProvidersResponse(){}
 }

@@ -15,6 +15,7 @@ public class AwsEc2InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpEndpoint")
     public String httpEndpoint;
+
     public AwsEc2InstanceMetadataOptions withHttpEndpoint(String httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpProtocolIpv6")
     public String httpProtocolIpv6;
+
     public AwsEc2InstanceMetadataOptions withHttpProtocolIpv6(String httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpPutResponseHopLimit")
     public Long httpPutResponseHopLimit;
+
     public AwsEc2InstanceMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpTokens")
     public String httpTokens;
+
     public AwsEc2InstanceMetadataOptions withHttpTokens(String httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -47,9 +51,11 @@ public class AwsEc2InstanceMetadataOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMetadataTags")
     public String instanceMetadataTags;
+
     public AwsEc2InstanceMetadataOptions withInstanceMetadataTags(String instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
     }
     
+    public AwsEc2InstanceMetadataOptions(){}
 }

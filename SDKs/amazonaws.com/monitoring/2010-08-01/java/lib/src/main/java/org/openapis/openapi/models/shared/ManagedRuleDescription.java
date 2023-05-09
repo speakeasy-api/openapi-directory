@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ManagedRuleDescription {
     
     public String resourceARN;
+
     public ManagedRuleDescription withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -19,6 +20,7 @@ public class ManagedRuleDescription {
     
     
     public ManagedRuleState ruleState;
+
     public ManagedRuleDescription withRuleState(ManagedRuleState ruleState) {
         this.ruleState = ruleState;
         return this;
@@ -26,9 +28,11 @@ public class ManagedRuleDescription {
     
     
     public String templateName;
+
     public ManagedRuleDescription withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public ManagedRuleDescription(){}
 }

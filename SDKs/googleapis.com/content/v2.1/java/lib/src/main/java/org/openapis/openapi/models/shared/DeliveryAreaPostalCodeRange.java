@@ -18,6 +18,7 @@ public class DeliveryAreaPostalCodeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPostalCode")
     public String firstPostalCode;
+
     public DeliveryAreaPostalCodeRange withFirstPostalCode(String firstPostalCode) {
         this.firstPostalCode = firstPostalCode;
         return this;
@@ -29,9 +30,11 @@ public class DeliveryAreaPostalCodeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastPostalCode")
     public String lastPostalCode;
+
     public DeliveryAreaPostalCodeRange withLastPostalCode(String lastPostalCode) {
         this.lastPostalCode = lastPostalCode;
         return this;
     }
     
+    public DeliveryAreaPostalCodeRange(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SessionsIdViewsPostResponse {
     
     public String contentType;
+
     public SessionsIdViewsPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SessionsIdViewsPostResponse {
     
     
     public Integer statusCode;
+
     public SessionsIdViewsPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SessionsIdViewsPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SessionsIdViewsPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SessionsIdViewsPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetail problemDetail;
+
     public SessionsIdViewsPostResponse withProblemDetail(org.openapis.openapi.models.shared.ProblemDetail problemDetail) {
         this.problemDetail = problemDetail;
         return this;
@@ -43,9 +48,14 @@ public class SessionsIdViewsPostResponse {
      */
     
     public org.openapis.openapi.models.shared.View view;
+
     public SessionsIdViewsPostResponse withView(org.openapis.openapi.models.shared.View view) {
         this.view = view;
         return this;
     }
     
+    public SessionsIdViewsPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

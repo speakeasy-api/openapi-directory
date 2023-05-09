@@ -10,14 +10,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum - The status code return by the API. It can be 400 or 403 or 500.
  */
 public enum AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum {
-    FOUR_HUNDRED("400"),
-    FOUR_HUNDRED_AND_THREE("403"),
-    FIVE_HUNDRED("500");
+    FOUR_HUNDRED(400L),
+    FOUR_HUNDRED_AND_THREE(403L),
+    FIVE_HUNDRED(500L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum(String value) {
+    private AnalyticsCrashGroupsTotalsDefaultApplicationJSONErrorCodeEnum(Long value) {
         this.value = value;
     }
 }

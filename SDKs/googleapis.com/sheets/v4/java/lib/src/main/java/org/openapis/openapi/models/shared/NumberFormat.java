@@ -18,6 +18,7 @@ public class NumberFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public NumberFormat withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -29,9 +30,11 @@ public class NumberFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NumberFormatTypeEnum type;
+
     public NumberFormat withType(NumberFormatTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NumberFormat(){}
 }

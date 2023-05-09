@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentPage")
     public GoogleCloudDialogflowCxV3PageInput currentPage;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withCurrentPage(GoogleCloudDialogflowCxV3PageInput currentPage) {
         this.currentPage = currentPage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnosticInfo")
     public java.util.Map<String, Object> diagnosticInfo;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withDiagnosticInfo(java.util.Map<String, Object> diagnosticInfo) {
         this.diagnosticInfo = diagnosticInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionParameters")
     public java.util.Map<String, Object> sessionParameters;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withSessionParameters(java.util.Map<String, Object> sessionParameters) {
         this.sessionParameters = sessionParameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textResponses")
     public GoogleCloudDialogflowCxV3ResponseMessageTextInput[] textResponses;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withTextResponses(GoogleCloudDialogflowCxV3ResponseMessageTextInput[] textResponses) {
         this.textResponses = textResponses;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggeredIntent")
     public GoogleCloudDialogflowCxV3Intent triggeredIntent;
+
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput withTriggeredIntent(GoogleCloudDialogflowCxV3Intent triggeredIntent) {
         this.triggeredIntent = triggeredIntent;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput(){}
 }

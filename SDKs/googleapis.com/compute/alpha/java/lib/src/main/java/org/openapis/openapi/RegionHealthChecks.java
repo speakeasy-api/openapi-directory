@@ -59,11 +59,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksGetResponse(contentType, httpRes.statusCode()) {{
             healthCheck = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksListResponse(contentType, httpRes.statusCode()) {{
             healthCheckList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +331,9 @@ public class RegionHealthChecks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse res = new org.openapis.openapi.models.operations.ComputeRegionHealthChecksUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

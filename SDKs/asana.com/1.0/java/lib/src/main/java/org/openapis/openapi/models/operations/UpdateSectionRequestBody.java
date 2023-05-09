@@ -15,9 +15,11 @@ public class UpdateSectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.SectionRequest data;
+
     public UpdateSectionRequestBody withData(org.openapis.openapi.models.shared.SectionRequest data) {
         this.data = data;
         return this;
     }
     
+    public UpdateSectionRequestBody(){}
 }

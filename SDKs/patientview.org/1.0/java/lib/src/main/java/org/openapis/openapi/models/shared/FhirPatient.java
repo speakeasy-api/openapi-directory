@@ -17,6 +17,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address1")
     public String address1;
+
     public FhirPatient withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -25,6 +26,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public FhirPatient withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -33,6 +35,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address3")
     public String address3;
+
     public FhirPatient withAddress3(String address3) {
         this.address3 = address3;
         return this;
@@ -41,6 +44,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address4")
     public String address4;
+
     public FhirPatient withAddress4(String address4) {
         this.address4 = address4;
         return this;
@@ -49,6 +53,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public FhirContact[] contacts;
+
     public FhirPatient withContacts(FhirContact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -59,6 +64,7 @@ public class FhirPatient {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateOfBirth")
     public OffsetDateTime dateOfBirth;
+
     public FhirPatient withDateOfBirth(OffsetDateTime dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -67,6 +73,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfBirthNoTime")
     public String dateOfBirthNoTime;
+
     public FhirPatient withDateOfBirthNoTime(String dateOfBirthNoTime) {
         this.dateOfBirthNoTime = dateOfBirthNoTime;
         return this;
@@ -75,6 +82,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forename")
     public String forename;
+
     public FhirPatient withForename(String forename) {
         this.forename = forename;
         return this;
@@ -83,6 +91,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public FhirPatient withGender(String gender) {
         this.gender = gender;
         return this;
@@ -91,6 +100,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public Group group;
+
     public FhirPatient withGroup(Group group) {
         this.group = group;
         return this;
@@ -99,6 +109,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupCode")
     public String groupCode;
+
     public FhirPatient withGroupCode(String groupCode) {
         this.groupCode = groupCode;
         return this;
@@ -107,6 +118,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public FhirPatient withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -115,6 +127,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifiers")
     public FhirIdentifier[] identifiers;
+
     public FhirPatient withIdentifiers(FhirIdentifier[] identifiers) {
         this.identifiers = identifiers;
         return this;
@@ -123,6 +136,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postcode")
     public String postcode;
+
     public FhirPatient withPostcode(String postcode) {
         this.postcode = postcode;
         return this;
@@ -131,6 +145,7 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("practitioners")
     public FhirPractitioner[] practitioners;
+
     public FhirPatient withPractitioners(FhirPractitioner[] practitioners) {
         this.practitioners = practitioners;
         return this;
@@ -139,9 +154,11 @@ public class FhirPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surname")
     public String surname;
+
     public FhirPatient withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public FhirPatient(){}
 }

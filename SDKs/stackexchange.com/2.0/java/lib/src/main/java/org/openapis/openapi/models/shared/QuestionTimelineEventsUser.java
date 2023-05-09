@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionTimelineEventsUser {
     
     public Long acceptRate;
+
     public QuestionTimelineEventsUser withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class QuestionTimelineEventsUser {
     
     
     public QuestionTimelineEventsUserBadgeCounts badgeCounts;
+
     public QuestionTimelineEventsUser withBadgeCounts(QuestionTimelineEventsUserBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class QuestionTimelineEventsUser {
     
     
     public String displayName;
+
     public QuestionTimelineEventsUser withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class QuestionTimelineEventsUser {
     
     
     public String link;
+
     public QuestionTimelineEventsUser withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class QuestionTimelineEventsUser {
     
     
     public String profileImage;
+
     public QuestionTimelineEventsUser withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class QuestionTimelineEventsUser {
     
     
     public Long reputation;
+
     public QuestionTimelineEventsUser withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class QuestionTimelineEventsUser {
     
     
     public Long userId;
+
     public QuestionTimelineEventsUser withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class QuestionTimelineEventsUser {
     
     
     public String userType;
+
     public QuestionTimelineEventsUser withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public QuestionTimelineEventsUser(){}
 }

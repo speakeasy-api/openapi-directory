@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEmergencyContactSettingsResponse {
     
     public String contentType;
+
     public DescribeEmergencyContactSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEmergencyContactSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEmergencyContactSettingsResponse describeEmergencyContactSettingsResponse;
+
     public DescribeEmergencyContactSettingsResponse withDescribeEmergencyContactSettingsResponse(org.openapis.openapi.models.shared.DescribeEmergencyContactSettingsResponse describeEmergencyContactSettingsResponse) {
         this.describeEmergencyContactSettingsResponse = describeEmergencyContactSettingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEmergencyContactSettingsResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeEmergencyContactSettingsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeEmergencyContactSettingsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEmergencyContactSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeEmergencyContactSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEmergencyContactSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeEmergencyContactSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeEmergencyContactSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeEmergencyContactSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

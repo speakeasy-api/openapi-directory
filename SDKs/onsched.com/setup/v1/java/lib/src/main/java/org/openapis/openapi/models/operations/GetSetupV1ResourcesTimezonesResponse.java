@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1ResourcesTimezonesResponse {
     
     public String contentType;
+
     public GetSetupV1ResourcesTimezonesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSetupV1ResourcesTimezonesResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1ResourcesTimezonesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSetupV1ResourcesTimezonesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1ResourcesTimezonesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1ResourcesTimezonesResponse {
      */
     
     public org.openapis.openapi.models.shared.SystemTimezoneViewModel systemTimezoneViewModel;
+
     public GetSetupV1ResourcesTimezonesResponse withSystemTimezoneViewModel(org.openapis.openapi.models.shared.SystemTimezoneViewModel systemTimezoneViewModel) {
         this.systemTimezoneViewModel = systemTimezoneViewModel;
         return this;
     }
     
+    public GetSetupV1ResourcesTimezonesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

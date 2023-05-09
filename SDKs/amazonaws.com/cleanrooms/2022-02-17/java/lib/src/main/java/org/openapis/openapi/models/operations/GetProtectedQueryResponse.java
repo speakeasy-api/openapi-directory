@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProtectedQueryResponse {
@@ -12,6 +13,7 @@ public class GetProtectedQueryResponse {
      */
     
     public Object accessDeniedException;
+
     public GetProtectedQueryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetProtectedQueryResponse {
     
     
     public String contentType;
+
     public GetProtectedQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetProtectedQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProtectedQueryOutput getProtectedQueryOutput;
+
     public GetProtectedQueryResponse withGetProtectedQueryOutput(org.openapis.openapi.models.shared.GetProtectedQueryOutput getProtectedQueryOutput) {
         this.getProtectedQueryOutput = getProtectedQueryOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetProtectedQueryResponse {
      */
     
     public Object internalServerException;
+
     public GetProtectedQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetProtectedQueryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProtectedQueryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetProtectedQueryResponse {
     
     
     public Integer statusCode;
+
     public GetProtectedQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetProtectedQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProtectedQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetProtectedQueryResponse {
      */
     
     public Object throttlingException;
+
     public GetProtectedQueryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetProtectedQueryResponse {
      */
     
     public Object validationException;
+
     public GetProtectedQueryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetProtectedQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

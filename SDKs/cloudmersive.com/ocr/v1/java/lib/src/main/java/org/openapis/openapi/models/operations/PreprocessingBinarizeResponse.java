@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PreprocessingBinarizeResponse {
     
     public String contentType;
+
     public PreprocessingBinarizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PreprocessingBinarizeResponse {
      */
     
     public String preprocessingBinarize200ApplicationJSONByteString;
+
     public PreprocessingBinarizeResponse withPreprocessingBinarize200ApplicationJSONByteString(String preprocessingBinarize200ApplicationJSONByteString) {
         this.preprocessingBinarize200ApplicationJSONByteString = preprocessingBinarize200ApplicationJSONByteString;
         return this;
@@ -29,6 +32,7 @@ public class PreprocessingBinarizeResponse {
      */
     
     public String preprocessingBinarize200ApplicationXMLByteString;
+
     public PreprocessingBinarizeResponse withPreprocessingBinarize200ApplicationXMLByteString(String preprocessingBinarize200ApplicationXMLByteString) {
         this.preprocessingBinarize200ApplicationXMLByteString = preprocessingBinarize200ApplicationXMLByteString;
         return this;
@@ -39,6 +43,7 @@ public class PreprocessingBinarizeResponse {
      */
     
     public String preprocessingBinarize200TextJSONByteString;
+
     public PreprocessingBinarizeResponse withPreprocessingBinarize200TextJSONByteString(String preprocessingBinarize200TextJSONByteString) {
         this.preprocessingBinarize200TextJSONByteString = preprocessingBinarize200TextJSONByteString;
         return this;
@@ -49,6 +54,7 @@ public class PreprocessingBinarizeResponse {
      */
     
     public String preprocessingBinarize200TextXMLByteString;
+
     public PreprocessingBinarizeResponse withPreprocessingBinarize200TextXMLByteString(String preprocessingBinarize200TextXMLByteString) {
         this.preprocessingBinarize200TextXMLByteString = preprocessingBinarize200TextXMLByteString;
         return this;
@@ -56,6 +62,7 @@ public class PreprocessingBinarizeResponse {
     
     
     public Integer statusCode;
+
     public PreprocessingBinarizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class PreprocessingBinarizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PreprocessingBinarizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PreprocessingBinarizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

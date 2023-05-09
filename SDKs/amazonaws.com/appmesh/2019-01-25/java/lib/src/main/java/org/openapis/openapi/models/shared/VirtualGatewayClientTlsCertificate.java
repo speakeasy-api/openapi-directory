@@ -15,6 +15,7 @@ public class VirtualGatewayClientTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public VirtualGatewayListenerTlsFileCertificate file;
+
     public VirtualGatewayClientTlsCertificate withFile(VirtualGatewayListenerTlsFileCertificate file) {
         this.file = file;
         return this;
@@ -23,9 +24,11 @@ public class VirtualGatewayClientTlsCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public VirtualGatewayListenerTlsSdsCertificate sds;
+
     public VirtualGatewayClientTlsCertificate withSds(VirtualGatewayListenerTlsSdsCertificate sds) {
         this.sds = sds;
         return this;
     }
     
+    public VirtualGatewayClientTlsCertificate(){}
 }

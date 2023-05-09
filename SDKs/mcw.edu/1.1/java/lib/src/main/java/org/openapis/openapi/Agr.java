@@ -49,11 +49,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse res = new org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse res = new org.openapis.openapi.models.operations.GETAffectedGenomicModelsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETAllelesForTaxonUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,11 +123,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETExpressionForTaxonUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,11 +160,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesForLatestAssemblyUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +197,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETPhenotypesForTaxonUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +234,9 @@ public class Agr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETResponse res = new org.openapis.openapi.models.operations.GETVariantsForTaxonUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

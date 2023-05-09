@@ -12,6 +12,7 @@ public class RegisterUsageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nonce")
     public String nonce;
+
     public RegisterUsageRequest withNonce(String nonce) {
         this.nonce = nonce;
         return this;
@@ -19,6 +20,7 @@ public class RegisterUsageRequest {
     
     @JsonProperty("ProductCode")
     public String productCode;
+
     public RegisterUsageRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -26,9 +28,14 @@ public class RegisterUsageRequest {
     
     @JsonProperty("PublicKeyVersion")
     public Long publicKeyVersion;
+
     public RegisterUsageRequest withPublicKeyVersion(Long publicKeyVersion) {
         this.publicKeyVersion = publicKeyVersion;
         return this;
     }
     
+    public RegisterUsageRequest(@JsonProperty("ProductCode") String productCode, @JsonProperty("PublicKeyVersion") Long publicKeyVersion) {
+        this.productCode = productCode;
+        this.publicKeyVersion = publicKeyVersion;
+  }
 }

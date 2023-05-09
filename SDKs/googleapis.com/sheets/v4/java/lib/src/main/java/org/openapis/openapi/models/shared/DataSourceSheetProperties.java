@@ -18,6 +18,7 @@ public class DataSourceSheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columns")
     public DataSourceColumn[] columns;
+
     public DataSourceSheetProperties withColumns(DataSourceColumn[] columns) {
         this.columns = columns;
         return this;
@@ -29,6 +30,7 @@ public class DataSourceSheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataExecutionStatus")
     public DataExecutionStatus dataExecutionStatus;
+
     public DataSourceSheetProperties withDataExecutionStatus(DataExecutionStatus dataExecutionStatus) {
         this.dataExecutionStatus = dataExecutionStatus;
         return this;
@@ -40,9 +42,11 @@ public class DataSourceSheetProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceId")
     public String dataSourceId;
+
     public DataSourceSheetProperties withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public DataSourceSheetProperties(){}
 }

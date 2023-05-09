@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChangeOrderListV3Response {
@@ -12,6 +13,7 @@ public class ChangeOrderListV3Response {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ChangeOrderListV3Response withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ChangeOrderListV3Response {
     
     
     public String contentType;
+
     public ChangeOrderListV3Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ChangeOrderListV3Response {
     
     
     public Integer statusCode;
+
     public ChangeOrderListV3Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ChangeOrderListV3Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChangeOrderListV3Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ChangeOrderListV3Response {
      */
     
     public org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse;
+
     public ChangeOrderListV3Response withBatchOrderOperationResponse(org.openapis.openapi.models.shared.BatchOrderOperationResponse batchOrderOperationResponse) {
         this.batchOrderOperationResponse = batchOrderOperationResponse;
         return this;
@@ -53,9 +59,14 @@ public class ChangeOrderListV3Response {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public ChangeOrderListV3Response withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
     }
     
+    public ChangeOrderListV3Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

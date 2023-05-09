@@ -12,6 +12,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field1")
     public String field1;
+
     public CustomFieldUpdateModel withField1(String field1) {
         this.field1 = field1;
         return this;
@@ -20,6 +21,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field10")
     public String field10;
+
     public CustomFieldUpdateModel withField10(String field10) {
         this.field10 = field10;
         return this;
@@ -28,6 +30,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field2")
     public String field2;
+
     public CustomFieldUpdateModel withField2(String field2) {
         this.field2 = field2;
         return this;
@@ -36,6 +39,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field3")
     public String field3;
+
     public CustomFieldUpdateModel withField3(String field3) {
         this.field3 = field3;
         return this;
@@ -44,6 +48,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field4")
     public String field4;
+
     public CustomFieldUpdateModel withField4(String field4) {
         this.field4 = field4;
         return this;
@@ -52,6 +57,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field5")
     public String field5;
+
     public CustomFieldUpdateModel withField5(String field5) {
         this.field5 = field5;
         return this;
@@ -60,6 +66,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field6")
     public String field6;
+
     public CustomFieldUpdateModel withField6(String field6) {
         this.field6 = field6;
         return this;
@@ -68,6 +75,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field7")
     public String field7;
+
     public CustomFieldUpdateModel withField7(String field7) {
         this.field7 = field7;
         return this;
@@ -76,6 +84,7 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field8")
     public String field8;
+
     public CustomFieldUpdateModel withField8(String field8) {
         this.field8 = field8;
         return this;
@@ -84,9 +93,11 @@ public class CustomFieldUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field9")
     public String field9;
+
     public CustomFieldUpdateModel withField9(String field9) {
         this.field9 = field9;
         return this;
     }
     
+    public CustomFieldUpdateModel(){}
 }

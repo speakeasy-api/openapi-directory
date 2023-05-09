@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class File {
     @JsonProperty("bucket")
     public String bucket;
+
     public File withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -21,6 +22,7 @@ public class File {
     
     @JsonProperty("key")
     public String key;
+
     public File withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +31,14 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionId")
     public String versionId;
+
     public File withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public File(@JsonProperty("bucket") String bucket, @JsonProperty("key") String key) {
+        this.bucket = bucket;
+        this.key = key;
+  }
 }

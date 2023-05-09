@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClassifyImageUrlWithNoStoreJsonResponse {
     
     public byte[] body;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ClassifyImageUrlWithNoStoreJsonResponse {
     
     
     public String contentType;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ClassifyImageUrlWithNoStoreJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomVisionError customVisionError;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withCustomVisionError(org.openapis.openapi.models.shared.CustomVisionError customVisionError) {
         this.customVisionError = customVisionError;
         return this;
@@ -36,6 +40,7 @@ public class ClassifyImageUrlWithNoStoreJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ImagePrediction imagePrediction;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withImagePrediction(org.openapis.openapi.models.shared.ImagePrediction imagePrediction) {
         this.imagePrediction = imagePrediction;
         return this;
@@ -43,6 +48,7 @@ public class ClassifyImageUrlWithNoStoreJsonResponse {
     
     
     public Integer statusCode;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class ClassifyImageUrlWithNoStoreJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClassifyImageUrlWithNoStoreJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClassifyImageUrlWithNoStoreJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -17,6 +17,7 @@ public class Plan {
      */
     @JsonProperty("alias")
     public String alias;
+
     public Plan withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -27,6 +28,7 @@ public class Plan {
      */
     @JsonProperty("benefits")
     public String[] benefits;
+
     public Plan withBenefits(String[] benefits) {
         this.benefits = benefits;
         return this;
@@ -37,6 +39,7 @@ public class Plan {
      */
     @JsonProperty("billingPeriodFrequency")
     public Integer billingPeriodFrequency;
+
     public Plan withBillingPeriodFrequency(Integer billingPeriodFrequency) {
         this.billingPeriodFrequency = billingPeriodFrequency;
         return this;
@@ -47,6 +50,7 @@ public class Plan {
      */
     @JsonProperty("billingPeriodType")
     public PlanBillingPeriodTypeEnum billingPeriodType;
+
     public Plan withBillingPeriodType(PlanBillingPeriodTypeEnum billingPeriodType) {
         this.billingPeriodType = billingPeriodType;
         return this;
@@ -57,6 +61,7 @@ public class Plan {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Plan withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -68,6 +73,7 @@ public class Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public Plan withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -78,6 +84,7 @@ public class Plan {
      */
     @JsonProperty("hasTrialPeriod")
     public Boolean hasTrialPeriod;
+
     public Plan withHasTrialPeriod(Boolean hasTrialPeriod) {
         this.hasTrialPeriod = hasTrialPeriod;
         return this;
@@ -88,6 +95,7 @@ public class Plan {
      */
     @JsonProperty("id")
     public String id;
+
     public Plan withId(String id) {
         this.id = id;
         return this;
@@ -98,6 +106,7 @@ public class Plan {
      */
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Plan withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -108,6 +117,7 @@ public class Plan {
      */
     @JsonProperty("isFeatured")
     public Boolean isFeatured;
+
     public Plan withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -118,6 +128,7 @@ public class Plan {
      */
     @JsonProperty("isPrivate")
     public Boolean isPrivate;
+
     public Plan withIsPrivate(Boolean isPrivate) {
         this.isPrivate = isPrivate;
         return this;
@@ -129,6 +140,7 @@ public class Plan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public Plan withPrice(Float price) {
         this.price = price;
         return this;
@@ -139,6 +151,7 @@ public class Plan {
      */
     @JsonProperty("revenueType")
     public PlanRevenueTypeEnum revenueType;
+
     public Plan withRevenueType(PlanRevenueTypeEnum revenueType) {
         this.revenueType = revenueType;
         return this;
@@ -149,6 +162,7 @@ public class Plan {
      */
     @JsonProperty("subscriptionCode")
     public String subscriptionCode;
+
     public Plan withSubscriptionCode(String subscriptionCode) {
         this.subscriptionCode = subscriptionCode;
         return this;
@@ -159,6 +173,7 @@ public class Plan {
      */
     @JsonProperty("tagline")
     public String tagline;
+
     public Plan withTagline(String tagline) {
         this.tagline = tagline;
         return this;
@@ -169,6 +184,7 @@ public class Plan {
      */
     @JsonProperty("termsAndConditions")
     public String termsAndConditions;
+
     public Plan withTermsAndConditions(String termsAndConditions) {
         this.termsAndConditions = termsAndConditions;
         return this;
@@ -179,6 +195,7 @@ public class Plan {
      */
     @JsonProperty("title")
     public String title;
+
     public Plan withTitle(String title) {
         this.title = title;
         return this;
@@ -189,6 +206,7 @@ public class Plan {
      */
     @JsonProperty("trialPeriodDays")
     public Integer trialPeriodDays;
+
     public Plan withTrialPeriodDays(Integer trialPeriodDays) {
         this.trialPeriodDays = trialPeriodDays;
         return this;
@@ -199,9 +217,29 @@ public class Plan {
      */
     @JsonProperty("type")
     public PlanTypeEnum type;
+
     public Plan withType(PlanTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Plan(@JsonProperty("alias") String alias, @JsonProperty("benefits") String[] benefits, @JsonProperty("billingPeriodFrequency") Integer billingPeriodFrequency, @JsonProperty("billingPeriodType") PlanBillingPeriodTypeEnum billingPeriodType, @JsonProperty("currency") String currency, @JsonProperty("hasTrialPeriod") Boolean hasTrialPeriod, @JsonProperty("id") String id, @JsonProperty("isActive") Boolean isActive, @JsonProperty("isFeatured") Boolean isFeatured, @JsonProperty("isPrivate") Boolean isPrivate, @JsonProperty("revenueType") PlanRevenueTypeEnum revenueType, @JsonProperty("subscriptionCode") String subscriptionCode, @JsonProperty("tagline") String tagline, @JsonProperty("termsAndConditions") String termsAndConditions, @JsonProperty("title") String title, @JsonProperty("trialPeriodDays") Integer trialPeriodDays, @JsonProperty("type") PlanTypeEnum type) {
+        this.alias = alias;
+        this.benefits = benefits;
+        this.billingPeriodFrequency = billingPeriodFrequency;
+        this.billingPeriodType = billingPeriodType;
+        this.currency = currency;
+        this.hasTrialPeriod = hasTrialPeriod;
+        this.id = id;
+        this.isActive = isActive;
+        this.isFeatured = isFeatured;
+        this.isPrivate = isPrivate;
+        this.revenueType = revenueType;
+        this.subscriptionCode = subscriptionCode;
+        this.tagline = tagline;
+        this.termsAndConditions = termsAndConditions;
+        this.title = title;
+        this.trialPeriodDays = trialPeriodDays;
+        this.type = type;
+  }
 }

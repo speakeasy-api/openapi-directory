@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Policies {
     
     public AppCookieStickinessPolicy[] appCookieStickinessPolicies;
+
     public Policies withAppCookieStickinessPolicies(AppCookieStickinessPolicy[] appCookieStickinessPolicies) {
         this.appCookieStickinessPolicies = appCookieStickinessPolicies;
         return this;
@@ -19,6 +20,7 @@ public class Policies {
     
     
     public LBCookieStickinessPolicy[] lbCookieStickinessPolicies;
+
     public Policies withLBCookieStickinessPolicies(LBCookieStickinessPolicy[] lbCookieStickinessPolicies) {
         this.lbCookieStickinessPolicies = lbCookieStickinessPolicies;
         return this;
@@ -26,9 +28,11 @@ public class Policies {
     
     
     public String[] otherPolicies;
+
     public Policies withOtherPolicies(String[] otherPolicies) {
         this.otherPolicies = otherPolicies;
         return this;
     }
     
+    public Policies(){}
 }

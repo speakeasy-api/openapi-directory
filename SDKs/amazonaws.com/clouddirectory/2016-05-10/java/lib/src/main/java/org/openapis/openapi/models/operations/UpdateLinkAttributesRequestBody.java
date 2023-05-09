@@ -12,6 +12,7 @@ public class UpdateLinkAttributesRequestBody {
      */
     @JsonProperty("AttributeUpdates")
     public org.openapis.openapi.models.shared.LinkAttributeUpdate[] attributeUpdates;
+
     public UpdateLinkAttributesRequestBody withAttributeUpdates(org.openapis.openapi.models.shared.LinkAttributeUpdate[] attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -22,9 +23,14 @@ public class UpdateLinkAttributesRequestBody {
      */
     @JsonProperty("TypedLinkSpecifier")
     public UpdateLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier;
+
     public UpdateLinkAttributesRequestBody withTypedLinkSpecifier(UpdateLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
         this.typedLinkSpecifier = typedLinkSpecifier;
         return this;
     }
     
+    public UpdateLinkAttributesRequestBody(@JsonProperty("AttributeUpdates") org.openapis.openapi.models.shared.LinkAttributeUpdate[] attributeUpdates, @JsonProperty("TypedLinkSpecifier") UpdateLinkAttributesRequestBodyTypedLinkSpecifier typedLinkSpecifier) {
+        this.attributeUpdates = attributeUpdates;
+        this.typedLinkSpecifier = typedLinkSpecifier;
+  }
 }

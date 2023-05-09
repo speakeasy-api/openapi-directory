@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSchemaVersionMetadataResponse {
@@ -12,6 +13,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public PutSchemaVersionMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public Object alreadyExistsException;
+
     public PutSchemaVersionMetadataResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class PutSchemaVersionMetadataResponse {
     
     
     public String contentType;
+
     public PutSchemaVersionMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public Object entityNotFoundException;
+
     public PutSchemaVersionMetadataResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public Object invalidInputException;
+
     public PutSchemaVersionMetadataResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSchemaVersionMetadataResponse putSchemaVersionMetadataResponse;
+
     public PutSchemaVersionMetadataResponse withPutSchemaVersionMetadataResponse(org.openapis.openapi.models.shared.PutSchemaVersionMetadataResponse putSchemaVersionMetadataResponse) {
         this.putSchemaVersionMetadataResponse = putSchemaVersionMetadataResponse;
         return this;
@@ -69,6 +76,7 @@ public class PutSchemaVersionMetadataResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public PutSchemaVersionMetadataResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class PutSchemaVersionMetadataResponse {
     
     
     public Integer statusCode;
+
     public PutSchemaVersionMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutSchemaVersionMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSchemaVersionMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSchemaVersionMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

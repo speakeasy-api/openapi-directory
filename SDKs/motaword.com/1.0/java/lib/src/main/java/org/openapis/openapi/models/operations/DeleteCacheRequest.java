@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCacheRequest {
@@ -12,9 +13,13 @@ public class DeleteCacheRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public DeleteCacheRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public DeleteCacheRequest(@JsonProperty("key") String key) {
+        this.key = key;
+  }
 }

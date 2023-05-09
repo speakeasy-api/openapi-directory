@@ -61,11 +61,9 @@ public class Cargo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse() {{
+        org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse res = new org.openapis.openapi.models.operations.CargoGetRouteFromDateProductCodeByOriginAndDestinationGetResponse(contentType, httpRes.statusCode()) {{
             cargoGetRouteFromDateProductCodeByOriginAndDestinationGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Cargo {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse res = new org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse() {{
+        org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse res = new org.openapis.openapi.models.operations.CargoShipmentTrackingByAWBPrefixAndAWBNumberGetResponse(contentType, httpRes.statusCode()) {{
             cargoShipmentTrackingByAWBPrefixAndAWBNumberGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

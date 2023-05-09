@@ -15,6 +15,7 @@ public class DescribeRepositoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRepositoriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRepositoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public Repository[] repositories;
+
     public DescribeRepositoriesResponse withRepositories(Repository[] repositories) {
         this.repositories = repositories;
         return this;
     }
     
+    public DescribeRepositoriesResponse(){}
 }

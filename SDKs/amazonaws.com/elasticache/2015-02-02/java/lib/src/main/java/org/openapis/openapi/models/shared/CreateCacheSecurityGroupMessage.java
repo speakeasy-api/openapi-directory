@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateCacheSecurityGroupMessage - Represents the input of a &lt;code&gt;CreateCacheSecurityGroup&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCacheSecurityGroupMessage {
     
     public String cacheSecurityGroupName;
+
     public CreateCacheSecurityGroupMessage withCacheSecurityGroupName(String cacheSecurityGroupName) {
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
@@ -19,6 +20,7 @@ public class CreateCacheSecurityGroupMessage {
     
     
     public String description;
+
     public CreateCacheSecurityGroupMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,14 @@ public class CreateCacheSecurityGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateCacheSecurityGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCacheSecurityGroupMessage(@JsonProperty("CacheSecurityGroupName") String cacheSecurityGroupName, @JsonProperty("Description") String description) {
+        this.cacheSecurityGroupName = cacheSecurityGroupName;
+        this.description = description;
+  }
 }

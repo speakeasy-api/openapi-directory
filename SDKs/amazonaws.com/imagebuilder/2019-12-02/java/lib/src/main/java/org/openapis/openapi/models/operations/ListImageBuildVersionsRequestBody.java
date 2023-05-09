@@ -15,6 +15,7 @@ public class ListImageBuildVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListImageBuildVersionsRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -25,6 +26,7 @@ public class ListImageBuildVersionsRequestBody {
      */
     @JsonProperty("imageVersionArn")
     public String imageVersionArn;
+
     public ListImageBuildVersionsRequestBody withImageVersionArn(String imageVersionArn) {
         this.imageVersionArn = imageVersionArn;
         return this;
@@ -36,6 +38,7 @@ public class ListImageBuildVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImageBuildVersionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,9 +50,13 @@ public class ListImageBuildVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImageBuildVersionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImageBuildVersionsRequestBody(@JsonProperty("imageVersionArn") String imageVersionArn) {
+        this.imageVersionArn = imageVersionArn;
+  }
 }

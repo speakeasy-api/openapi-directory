@@ -18,6 +18,7 @@ public class PostVCustomPricesRules200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public Object email;
+
     public PostVCustomPricesRules200ApplicationJSON withEmail(Object email) {
         this.email = email;
         return this;
@@ -28,6 +29,7 @@ public class PostVCustomPricesRules200ApplicationJSON {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostVCustomPricesRules200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class PostVCustomPricesRules200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderType")
     public String orderType;
+
     public PostVCustomPricesRules200ApplicationJSON withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -49,6 +52,7 @@ public class PostVCustomPricesRules200ApplicationJSON {
      */
     @JsonProperty("pricetable")
     public String pricetable;
+
     public PostVCustomPricesRules200ApplicationJSON withPricetable(String pricetable) {
         this.pricetable = pricetable;
         return this;
@@ -60,9 +64,14 @@ public class PostVCustomPricesRules200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public PostVCustomPricesRules200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
     }
     
+    public PostVCustomPricesRules200ApplicationJSON(@JsonProperty("id") Long id, @JsonProperty("pricetable") String pricetable) {
+        this.id = id;
+        this.pricetable = pricetable;
+  }
 }

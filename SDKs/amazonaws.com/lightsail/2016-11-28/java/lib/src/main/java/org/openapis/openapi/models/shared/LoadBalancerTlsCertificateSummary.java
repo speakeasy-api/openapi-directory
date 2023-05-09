@@ -15,6 +15,7 @@ public class LoadBalancerTlsCertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAttached")
     public Boolean isAttached;
+
     public LoadBalancerTlsCertificateSummary withIsAttached(Boolean isAttached) {
         this.isAttached = isAttached;
         return this;
@@ -23,9 +24,11 @@ public class LoadBalancerTlsCertificateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LoadBalancerTlsCertificateSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LoadBalancerTlsCertificateSummary(){}
 }

@@ -18,6 +18,7 @@ public class MysqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseName")
     public String databaseName;
+
     public MysqlDatabase withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -29,9 +30,11 @@ public class MysqlDatabase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlTables")
     public MysqlTable[] mysqlTables;
+
     public MysqlDatabase withMysqlTables(MysqlTable[] mysqlTables) {
         this.mysqlTables = mysqlTables;
         return this;
     }
     
+    public MysqlDatabase(){}
 }

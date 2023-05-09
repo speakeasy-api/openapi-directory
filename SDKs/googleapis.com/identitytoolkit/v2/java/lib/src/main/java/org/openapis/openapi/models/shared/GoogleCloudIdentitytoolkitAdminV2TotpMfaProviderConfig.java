@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2TotpMfaProviderConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjacentIntervals")
     public Integer adjacentIntervals;
+
     public GoogleCloudIdentitytoolkitAdminV2TotpMfaProviderConfig withAdjacentIntervals(Integer adjacentIntervals) {
         this.adjacentIntervals = adjacentIntervals;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2TotpMfaProviderConfig(){}
 }

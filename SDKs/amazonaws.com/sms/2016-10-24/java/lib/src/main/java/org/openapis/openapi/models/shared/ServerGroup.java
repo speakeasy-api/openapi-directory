@@ -15,6 +15,7 @@ public class ServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServerGroup withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupId")
     public String serverGroupId;
+
     public ServerGroup withServerGroupId(String serverGroupId) {
         this.serverGroupId = serverGroupId;
         return this;
@@ -31,9 +33,11 @@ public class ServerGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverList")
     public Server[] serverList;
+
     public ServerGroup withServerList(Server[] serverList) {
         this.serverList = serverList;
         return this;
     }
     
+    public ServerGroup(){}
 }

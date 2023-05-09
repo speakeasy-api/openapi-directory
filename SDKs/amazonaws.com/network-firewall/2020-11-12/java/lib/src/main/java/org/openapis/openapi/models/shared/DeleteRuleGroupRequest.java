@@ -12,6 +12,7 @@ public class DeleteRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupArn")
     public String ruleGroupArn;
+
     public DeleteRuleGroupRequest withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -20,6 +21,7 @@ public class DeleteRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public DeleteRuleGroupRequest withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
@@ -28,9 +30,11 @@ public class DeleteRuleGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RuleGroupTypeEnum type;
+
     public DeleteRuleGroupRequest withType(RuleGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DeleteRuleGroupRequest(){}
 }

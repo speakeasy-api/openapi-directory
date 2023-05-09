@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AssociateEnclaveCertificateIamRoleRequest {
     
     public String certificateArn;
+
     public AssociateEnclaveCertificateIamRoleRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -16,6 +17,7 @@ public class AssociateEnclaveCertificateIamRoleRequest {
     
     
     public Boolean dryRun;
+
     public AssociateEnclaveCertificateIamRoleRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,14 @@ public class AssociateEnclaveCertificateIamRoleRequest {
     
     
     public String roleArn;
+
     public AssociateEnclaveCertificateIamRoleRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AssociateEnclaveCertificateIamRoleRequest(@JsonProperty("CertificateArn") String certificateArn, @JsonProperty("RoleArn") String roleArn) {
+        this.certificateArn = certificateArn;
+        this.roleArn = roleArn;
+  }
 }

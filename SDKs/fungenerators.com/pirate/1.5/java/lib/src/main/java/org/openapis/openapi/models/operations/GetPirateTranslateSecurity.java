@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPirateTranslateSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-Fungenerators-Api-Secret")
     public String xFungeneratorsApiSecret;
+
     public GetPirateTranslateSecurity withXFungeneratorsApiSecret(String xFungeneratorsApiSecret) {
         this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
         return this;
     }
     
+    public GetPirateTranslateSecurity(@JsonProperty("X-Fungenerators-Api-Secret") String xFungeneratorsApiSecret) {
+        this.xFungeneratorsApiSecret = xFungeneratorsApiSecret;
+  }
 }

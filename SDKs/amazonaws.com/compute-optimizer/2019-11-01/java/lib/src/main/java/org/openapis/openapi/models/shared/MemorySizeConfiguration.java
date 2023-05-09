@@ -15,6 +15,7 @@ public class MemorySizeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public MemorySizeConfiguration withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -23,9 +24,11 @@ public class MemorySizeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryReservation")
     public Long memoryReservation;
+
     public MemorySizeConfiguration withMemoryReservation(Long memoryReservation) {
         this.memoryReservation = memoryReservation;
         return this;
     }
     
+    public MemorySizeConfiguration(){}
 }

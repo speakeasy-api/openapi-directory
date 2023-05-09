@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StorageBucketAccessControlsGetResponse {
@@ -12,6 +13,7 @@ public class StorageBucketAccessControlsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.BucketAccessControl bucketAccessControl;
+
     public StorageBucketAccessControlsGetResponse withBucketAccessControl(org.openapis.openapi.models.shared.BucketAccessControl bucketAccessControl) {
         this.bucketAccessControl = bucketAccessControl;
         return this;
@@ -19,6 +21,7 @@ public class StorageBucketAccessControlsGetResponse {
     
     
     public String contentType;
+
     public StorageBucketAccessControlsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class StorageBucketAccessControlsGetResponse {
     
     
     public Integer statusCode;
+
     public StorageBucketAccessControlsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StorageBucketAccessControlsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StorageBucketAccessControlsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StorageBucketAccessControlsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

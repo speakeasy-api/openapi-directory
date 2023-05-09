@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Email {
     @JsonProperty("email")
     public String email;
+
     public Email withEmail(String email) {
         this.email = email;
         return this;
@@ -19,6 +20,7 @@ public class Email {
     
     @JsonProperty("primary")
     public Boolean primary;
+
     public Email withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -26,6 +28,7 @@ public class Email {
     
     @JsonProperty("verified")
     public Boolean verified;
+
     public Email withVerified(Boolean verified) {
         this.verified = verified;
         return this;
@@ -33,9 +36,16 @@ public class Email {
     
     @JsonProperty("visibility")
     public String visibility;
+
     public Email withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public Email(@JsonProperty("email") String email, @JsonProperty("primary") Boolean primary, @JsonProperty("verified") Boolean verified, @JsonProperty("visibility") String visibility) {
+        this.email = email;
+        this.primary = primary;
+        this.verified = verified;
+        this.visibility = visibility;
+  }
 }

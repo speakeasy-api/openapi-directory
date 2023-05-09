@@ -15,9 +15,11 @@ public class RemoveAllBackendsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cleanAmplifyApp")
     public Boolean cleanAmplifyApp;
+
     public RemoveAllBackendsRequestBody withCleanAmplifyApp(Boolean cleanAmplifyApp) {
         this.cleanAmplifyApp = cleanAmplifyApp;
         return this;
     }
     
+    public RemoveAllBackendsRequestBody(){}
 }

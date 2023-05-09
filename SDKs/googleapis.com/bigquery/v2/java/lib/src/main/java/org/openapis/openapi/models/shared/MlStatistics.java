@@ -15,6 +15,7 @@ public class MlStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iterationResults")
     public IterationResult[] iterationResults;
+
     public MlStatistics withIterationResults(IterationResult[] iterationResults) {
         this.iterationResults = iterationResults;
         return this;
@@ -26,9 +27,11 @@ public class MlStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIterations")
     public String maxIterations;
+
     public MlStatistics withMaxIterations(String maxIterations) {
         this.maxIterations = maxIterations;
         return this;
     }
     
+    public MlStatistics(){}
 }

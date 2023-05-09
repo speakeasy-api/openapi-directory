@@ -18,6 +18,7 @@ public class PivotHeaderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionNames")
     public String[] dimensionNames;
+
     public PivotHeaderEntry withDimensionNames(String[] dimensionNames) {
         this.dimensionNames = dimensionNames;
         return this;
@@ -29,6 +30,7 @@ public class PivotHeaderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValues")
     public String[] dimensionValues;
+
     public PivotHeaderEntry withDimensionValues(String[] dimensionValues) {
         this.dimensionValues = dimensionValues;
         return this;
@@ -40,9 +42,11 @@ public class PivotHeaderEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public MetricHeaderEntry metric;
+
     public PivotHeaderEntry withMetric(MetricHeaderEntry metric) {
         this.metric = metric;
         return this;
     }
     
+    public PivotHeaderEntry(){}
 }

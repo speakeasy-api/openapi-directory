@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrymatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcountrymatch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcountrymatchResponse.java
+docs/sdk/README.md
+docs/countrymatchsimilaritykey/README.md
 USAGE.md

@@ -15,9 +15,11 @@ public class CreateGraphResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public CreateGraphResponse withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public CreateGraphResponse(){}
 }

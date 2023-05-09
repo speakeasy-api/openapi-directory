@@ -19,6 +19,7 @@ public class SourceApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("application_id")
     public String applicationId;
+
     public SourceApplication withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -31,6 +32,7 @@ public class SourceApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SourceApplication withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +44,11 @@ public class SourceApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public String product;
+
     public SourceApplication withProduct(String product) {
         this.product = product;
         return this;
     }
     
+    public SourceApplication(){}
 }

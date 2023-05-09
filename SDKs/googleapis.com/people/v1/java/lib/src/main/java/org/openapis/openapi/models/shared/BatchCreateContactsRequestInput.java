@@ -18,6 +18,7 @@ public class BatchCreateContactsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public ContactToCreateInput[] contacts;
+
     public BatchCreateContactsRequestInput withContacts(ContactToCreateInput[] contacts) {
         this.contacts = contacts;
         return this;
@@ -29,6 +30,7 @@ public class BatchCreateContactsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readMask")
     public String readMask;
+
     public BatchCreateContactsRequestInput withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -40,9 +42,11 @@ public class BatchCreateContactsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public BatchCreateContactsRequestSourcesEnum[] sources;
+
     public BatchCreateContactsRequestInput withSources(BatchCreateContactsRequestSourcesEnum[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public BatchCreateContactsRequestInput(){}
 }

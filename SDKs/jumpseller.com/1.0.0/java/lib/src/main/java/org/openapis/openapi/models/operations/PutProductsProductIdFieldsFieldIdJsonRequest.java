@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsProductIdFieldsFieldIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutProductsProductIdFieldsFieldIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutProductsProductIdFieldsFieldIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class PutProductsProductIdFieldsFieldIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
     public Integer fieldId;
+
     public PutProductsProductIdFieldsFieldIdJsonRequest withFieldId(Integer fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -32,6 +35,7 @@ public class PutProductsProductIdFieldsFieldIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutProductsProductIdFieldsFieldIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -42,9 +46,16 @@ public class PutProductsProductIdFieldsFieldIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=product_id")
     public Integer productId;
+
     public PutProductsProductIdFieldsFieldIdJsonRequest withProductId(Integer productId) {
         this.productId = productId;
         return this;
     }
     
+    public PutProductsProductIdFieldsFieldIdJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("field_id") Integer fieldId, @JsonProperty("login") String login, @JsonProperty("product_id") Integer productId) {
+        this.authtoken = authtoken;
+        this.fieldId = fieldId;
+        this.login = login;
+        this.productId = productId;
+  }
 }

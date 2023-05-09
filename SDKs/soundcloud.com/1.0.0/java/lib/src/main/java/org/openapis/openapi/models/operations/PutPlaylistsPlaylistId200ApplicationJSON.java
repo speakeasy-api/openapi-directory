@@ -18,6 +18,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artwork_url")
     public String artworkUrl;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withArtworkUrl(String artworkUrl) {
         this.artworkUrl = artworkUrl;
         return this;
@@ -29,6 +30,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadable")
     public Boolean downloadable;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withDownloadable(Boolean downloadable) {
         this.downloadable = downloadable;
         return this;
@@ -62,6 +66,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -73,6 +78,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withEan(String ean) {
         this.ean = ean;
         return this;
@@ -84,6 +90,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddable_by")
     public String embeddableBy;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withEmbeddableBy(String embeddableBy) {
         this.embeddableBy = embeddableBy;
         return this;
@@ -95,6 +102,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre")
     public String genre;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withGenre(String genre) {
         this.genre = genre;
         return this;
@@ -106,6 +114,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +138,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_id")
     public Long labelId;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withLabelId(Long labelId) {
         this.labelId = labelId;
         return this;
@@ -139,6 +150,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_name")
     public String labelName;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -150,6 +162,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_modified")
     public String lastModified;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withLastModified(String lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -161,6 +174,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public String license;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withLicense(String license) {
         this.license = license;
         return this;
@@ -172,6 +186,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink")
     public String permalink;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withPermalink(String permalink) {
         this.permalink = permalink;
         return this;
@@ -183,6 +198,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -194,6 +210,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playlist_type")
     public String playlistType;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withPlaylistType(String playlistType) {
         this.playlistType = playlistType;
         return this;
@@ -205,6 +222,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_title")
     public String purchaseTitle;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withPurchaseTitle(String purchaseTitle) {
         this.purchaseTitle = purchaseTitle;
         return this;
@@ -216,6 +234,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_url")
     public String purchaseUrl;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withPurchaseUrl(String purchaseUrl) {
         this.purchaseUrl = purchaseUrl;
         return this;
@@ -227,6 +246,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release")
     public String release;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withRelease(String release) {
         this.release = release;
         return this;
@@ -238,6 +258,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_day")
     public Long releaseDay;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withReleaseDay(Long releaseDay) {
         this.releaseDay = releaseDay;
         return this;
@@ -249,6 +270,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_month")
     public Long releaseMonth;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withReleaseMonth(Long releaseMonth) {
         this.releaseMonth = releaseMonth;
         return this;
@@ -260,6 +282,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_year")
     public Long releaseYear;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withReleaseYear(Long releaseYear) {
         this.releaseYear = releaseYear;
         return this;
@@ -271,6 +294,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharing")
     public String sharing;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withSharing(String sharing) {
         this.sharing = sharing;
         return this;
@@ -282,6 +306,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamable")
     public Boolean streamable;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withStreamable(Boolean streamable) {
         this.streamable = streamable;
         return this;
@@ -293,6 +318,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag_list")
     public String tagList;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withTagList(String tagList) {
         this.tagList = tagList;
         return this;
@@ -304,6 +330,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -315,6 +342,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track_count")
     public Long trackCount;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withTrackCount(Long trackCount) {
         this.trackCount = trackCount;
         return this;
@@ -326,6 +354,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracks")
     public PutPlaylistsPlaylistId200ApplicationJSONTracks[] tracks;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withTracks(PutPlaylistsPlaylistId200ApplicationJSONTracks[] tracks) {
         this.tracks = tracks;
         return this;
@@ -337,6 +366,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
@@ -348,6 +378,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withUri(String uri) {
         this.uri = uri;
         return this;
@@ -359,6 +390,7 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public org.openapis.openapi.models.shared.MetaUser user;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withUser(org.openapis.openapi.models.shared.MetaUser user) {
         this.user = user;
         return this;
@@ -370,9 +402,11 @@ public class PutPlaylistsPlaylistId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public PutPlaylistsPlaylistId200ApplicationJSON withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public PutPlaylistsPlaylistId200ApplicationJSON(){}
 }

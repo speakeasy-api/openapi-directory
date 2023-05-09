@@ -18,9 +18,11 @@ public class NfsExportList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public NfsExport[] entries;
+
     public NfsExportList withEntries(NfsExport[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public NfsExportList(){}
 }

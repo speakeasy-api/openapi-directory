@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findings")
     public GooglePrivacyDlpV2Finding[] findings;
+
     public GooglePrivacyDlpV2InspectResult withFindings(GooglePrivacyDlpV2Finding[] findings) {
         this.findings = findings;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2InspectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingsTruncated")
     public Boolean findingsTruncated;
+
     public GooglePrivacyDlpV2InspectResult withFindingsTruncated(Boolean findingsTruncated) {
         this.findingsTruncated = findingsTruncated;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectResult(){}
 }

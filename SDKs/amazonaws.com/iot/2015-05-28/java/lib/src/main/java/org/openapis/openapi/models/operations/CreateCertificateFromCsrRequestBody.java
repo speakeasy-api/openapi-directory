@@ -12,9 +12,13 @@ public class CreateCertificateFromCsrRequestBody {
      */
     @JsonProperty("certificateSigningRequest")
     public String certificateSigningRequest;
+
     public CreateCertificateFromCsrRequestBody withCertificateSigningRequest(String certificateSigningRequest) {
         this.certificateSigningRequest = certificateSigningRequest;
         return this;
     }
     
+    public CreateCertificateFromCsrRequestBody(@JsonProperty("certificateSigningRequest") String certificateSigningRequest) {
+        this.certificateSigningRequest = certificateSigningRequest;
+  }
 }

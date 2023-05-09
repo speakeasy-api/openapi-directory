@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAutoMLJobResponse {
     
     public String contentType;
+
     public CreateAutoMLJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAutoMLJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAutoMLJobResponse createAutoMLJobResponse;
+
     public CreateAutoMLJobResponse withCreateAutoMLJobResponse(org.openapis.openapi.models.shared.CreateAutoMLJobResponse createAutoMLJobResponse) {
         this.createAutoMLJobResponse = createAutoMLJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAutoMLJobResponse {
      */
     
     public Object resourceInUse;
+
     public CreateAutoMLJobResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -36,6 +40,7 @@ public class CreateAutoMLJobResponse {
     
     
     public Integer statusCode;
+
     public CreateAutoMLJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateAutoMLJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAutoMLJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateAutoMLJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateAutoMLJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateAutoMLJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

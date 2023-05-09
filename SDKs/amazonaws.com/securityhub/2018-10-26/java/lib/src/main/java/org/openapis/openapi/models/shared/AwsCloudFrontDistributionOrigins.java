@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionOrigins {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public AwsCloudFrontDistributionOriginItem[] items;
+
     public AwsCloudFrontDistributionOrigins withItems(AwsCloudFrontDistributionOriginItem[] items) {
         this.items = items;
         return this;
     }
     
+    public AwsCloudFrontDistributionOrigins(){}
 }

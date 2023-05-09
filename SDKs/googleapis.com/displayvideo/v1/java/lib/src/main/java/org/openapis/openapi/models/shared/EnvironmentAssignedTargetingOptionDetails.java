@@ -18,6 +18,7 @@ public class EnvironmentAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public EnvironmentAssignedTargetingOptionDetailsEnvironmentEnum environment;
+
     public EnvironmentAssignedTargetingOptionDetails withEnvironment(EnvironmentAssignedTargetingOptionDetailsEnvironmentEnum environment) {
         this.environment = environment;
         return this;
@@ -29,9 +30,11 @@ public class EnvironmentAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public EnvironmentAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public EnvironmentAssignedTargetingOptionDetails(){}
 }

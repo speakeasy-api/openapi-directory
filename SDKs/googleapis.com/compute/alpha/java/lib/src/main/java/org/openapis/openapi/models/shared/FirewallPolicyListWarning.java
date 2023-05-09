@@ -18,6 +18,7 @@ public class FirewallPolicyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FirewallPolicyListWarningCodeEnum code;
+
     public FirewallPolicyListWarning withCode(FirewallPolicyListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public FirewallPolicyListWarningData[] data;
+
     public FirewallPolicyListWarning withData(FirewallPolicyListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class FirewallPolicyListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FirewallPolicyListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FirewallPolicyListWarning(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApnsChannelResponse {
@@ -12,6 +13,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApnsChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApnsChannelResponse {
     
     
     public String contentType;
+
     public UpdateApnsChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateApnsChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateApnsChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateApnsChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApnsChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateApnsChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateApnsChannelResponse {
     
     
     public Integer statusCode;
+
     public UpdateApnsChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateApnsChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApnsChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateApnsChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateApnsChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateApnsChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApnsChannelResponse updateApnsChannelResponse;
+
     public UpdateApnsChannelResponse withUpdateApnsChannelResponse(org.openapis.openapi.models.shared.UpdateApnsChannelResponse updateApnsChannelResponse) {
         this.updateApnsChannelResponse = updateApnsChannelResponse;
         return this;
     }
     
+    public UpdateApnsChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

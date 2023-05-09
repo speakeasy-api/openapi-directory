@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterCertificateResponse {
@@ -12,6 +13,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object certificateDoesNotExistException;
+
     public DeregisterCertificateResponse withCertificateDoesNotExistException(Object certificateDoesNotExistException) {
         this.certificateDoesNotExistException = certificateDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object certificateInUseException;
+
     public DeregisterCertificateResponse withCertificateInUseException(Object certificateInUseException) {
         this.certificateInUseException = certificateInUseException;
         return this;
@@ -32,6 +35,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object clientException;
+
     public DeregisterCertificateResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterCertificateResponse {
     
     
     public String contentType;
+
     public DeregisterCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeregisterCertificateResponse {
      */
     
     public java.util.Map<String, Object> deregisterCertificateResult;
+
     public DeregisterCertificateResponse withDeregisterCertificateResult(java.util.Map<String, Object> deregisterCertificateResult) {
         this.deregisterCertificateResult = deregisterCertificateResult;
         return this;
@@ -59,6 +65,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public DeregisterCertificateResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -69,6 +76,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object directoryUnavailableException;
+
     public DeregisterCertificateResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class DeregisterCertificateResponse {
      */
     
     public Object serviceException;
+
     public DeregisterCertificateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class DeregisterCertificateResponse {
     
     
     public Integer statusCode;
+
     public DeregisterCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DeregisterCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DeregisterCertificateResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeregisterCertificateResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeregisterCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

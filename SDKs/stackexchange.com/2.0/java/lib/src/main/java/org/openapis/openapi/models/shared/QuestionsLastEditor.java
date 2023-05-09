@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionsLastEditor {
     
     public Long acceptRate;
+
     public QuestionsLastEditor withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -16,6 +17,7 @@ public class QuestionsLastEditor {
     
     
     public QuestionsLastEditorBadgeCounts badgeCounts;
+
     public QuestionsLastEditor withBadgeCounts(QuestionsLastEditorBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -23,6 +25,7 @@ public class QuestionsLastEditor {
     
     
     public String displayName;
+
     public QuestionsLastEditor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -30,6 +33,7 @@ public class QuestionsLastEditor {
     
     
     public String link;
+
     public QuestionsLastEditor withLink(String link) {
         this.link = link;
         return this;
@@ -37,6 +41,7 @@ public class QuestionsLastEditor {
     
     
     public String profileImage;
+
     public QuestionsLastEditor withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -44,6 +49,7 @@ public class QuestionsLastEditor {
     
     
     public Long reputation;
+
     public QuestionsLastEditor withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -51,6 +57,7 @@ public class QuestionsLastEditor {
     
     
     public Long userId;
+
     public QuestionsLastEditor withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -58,9 +65,11 @@ public class QuestionsLastEditor {
     
     
     public String userType;
+
     public QuestionsLastEditor withUserType(String userType) {
         this.userType = userType;
         return this;
     }
     
+    public QuestionsLastEditor(){}
 }

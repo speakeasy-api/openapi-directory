@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFirewallPolicyResponse {
     
     public String contentType;
+
     public DeleteFirewallPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFirewallPolicyResponse deleteFirewallPolicyResponse;
+
     public DeleteFirewallPolicyResponse withDeleteFirewallPolicyResponse(org.openapis.openapi.models.shared.DeleteFirewallPolicyResponse deleteFirewallPolicyResponse) {
         this.deleteFirewallPolicyResponse = deleteFirewallPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteFirewallPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteFirewallPolicyResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteFirewallPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFirewallPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteFirewallPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFirewallPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFirewallPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFirewallPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFirewallPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteFirewallPolicyResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DeleteFirewallPolicyResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DeleteFirewallPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

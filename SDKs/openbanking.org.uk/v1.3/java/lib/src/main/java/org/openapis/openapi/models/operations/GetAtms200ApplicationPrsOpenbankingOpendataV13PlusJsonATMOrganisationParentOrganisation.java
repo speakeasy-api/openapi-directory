@@ -18,6 +18,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BIC")
     public String bic;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation withBic(String bic) {
         this.bic = bic;
         return this;
@@ -29,6 +30,7 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LEI")
     public String lei;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation withLei(String lei) {
         this.lei = lei;
         return this;
@@ -39,9 +41,13 @@ public class GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisati
      */
     @JsonProperty("OrganisationName")
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisationOrganisationName organisationName;
+
     public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation withOrganisationName(GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisationOrganisationName organisationName) {
         this.organisationName = organisationName;
         return this;
     }
     
+    public GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisation(@JsonProperty("OrganisationName") GetAtms200ApplicationPrsOpenbankingOpendataV13PlusJsonATMOrganisationParentOrganisationOrganisationName organisationName) {
+        this.organisationName = organisationName;
+  }
 }

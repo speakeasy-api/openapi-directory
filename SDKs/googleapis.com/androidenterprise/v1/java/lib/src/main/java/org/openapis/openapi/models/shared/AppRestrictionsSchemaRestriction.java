@@ -18,6 +18,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public AppRestrictionsSchemaRestrictionRestrictionValue defaultValue;
+
     public AppRestrictionsSchemaRestriction withDefaultValue(AppRestrictionsSchemaRestrictionRestrictionValue defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppRestrictionsSchemaRestriction withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entry")
     public String[] entry;
+
     public AppRestrictionsSchemaRestriction withEntry(String[] entry) {
         this.entry = entry;
         return this;
@@ -51,6 +54,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryValue")
     public String[] entryValue;
+
     public AppRestrictionsSchemaRestriction withEntryValue(String[] entryValue) {
         this.entryValue = entryValue;
         return this;
@@ -62,6 +66,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public AppRestrictionsSchemaRestriction withKey(String key) {
         this.key = key;
         return this;
@@ -73,6 +78,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nestedRestriction")
     public AppRestrictionsSchemaRestriction[] nestedRestriction;
+
     public AppRestrictionsSchemaRestriction withNestedRestriction(AppRestrictionsSchemaRestriction[] nestedRestriction) {
         this.nestedRestriction = nestedRestriction;
         return this;
@@ -84,6 +90,7 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictionType")
     public AppRestrictionsSchemaRestrictionRestrictionTypeEnum restrictionType;
+
     public AppRestrictionsSchemaRestriction withRestrictionType(AppRestrictionsSchemaRestrictionRestrictionTypeEnum restrictionType) {
         this.restrictionType = restrictionType;
         return this;
@@ -95,9 +102,11 @@ public class AppRestrictionsSchemaRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AppRestrictionsSchemaRestriction withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AppRestrictionsSchemaRestriction(){}
 }

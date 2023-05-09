@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IntegerParameterRange {
     @JsonProperty("MaxValue")
     public String maxValue;
+
     public IntegerParameterRange withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -21,6 +22,7 @@ public class IntegerParameterRange {
     
     @JsonProperty("MinValue")
     public String minValue;
+
     public IntegerParameterRange withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
@@ -28,6 +30,7 @@ public class IntegerParameterRange {
     
     @JsonProperty("Name")
     public String name;
+
     public IntegerParameterRange withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class IntegerParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingType")
     public HyperParameterScalingTypeEnum scalingType;
+
     public IntegerParameterRange withScalingType(HyperParameterScalingTypeEnum scalingType) {
         this.scalingType = scalingType;
         return this;
     }
     
+    public IntegerParameterRange(@JsonProperty("MaxValue") String maxValue, @JsonProperty("MinValue") String minValue, @JsonProperty("Name") String name) {
+        this.maxValue = maxValue;
+        this.minValue = minValue;
+        this.name = name;
+  }
 }

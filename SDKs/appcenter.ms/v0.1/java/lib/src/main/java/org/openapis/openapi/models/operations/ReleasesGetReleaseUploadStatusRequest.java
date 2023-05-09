@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesGetReleaseUploadStatusRequest {
@@ -12,6 +13,7 @@ public class ReleasesGetReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesGetReleaseUploadStatusRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesGetReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesGetReleaseUploadStatusRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class ReleasesGetReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
     public String uploadId;
+
     public ReleasesGetReleaseUploadStatusRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public ReleasesGetReleaseUploadStatusRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("upload_id") String uploadId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.uploadId = uploadId;
+  }
 }

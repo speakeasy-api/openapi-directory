@@ -20,6 +20,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public WorkspaceSummary withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -27,6 +28,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("arn")
     public String arn;
+
     public WorkspaceSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class WorkspaceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WorkspaceSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class WorkspaceSummary {
     
     @JsonProperty("status")
     public WorkspaceStatus status;
+
     public WorkspaceSummary withStatus(WorkspaceStatus status) {
         this.status = status;
         return this;
@@ -51,6 +55,7 @@ public class WorkspaceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public WorkspaceSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -58,9 +63,16 @@ public class WorkspaceSummary {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public WorkspaceSummary withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public WorkspaceSummary(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("status") WorkspaceStatus status, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.status = status;
+        this.workspaceId = workspaceId;
+  }
 }

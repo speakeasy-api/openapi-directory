@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePadUsingGETResponse {
     
     public String contentType;
+
     public DeletePadUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeletePadUsingGETResponse {
     
     
     public Integer statusCode;
+
     public DeletePadUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeletePadUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePadUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeletePadUsingGETResponse {
      */
     
     public DeletePadUsingGET200ApplicationJSON deletePadUsingGET200ApplicationJSONObject;
+
     public DeletePadUsingGETResponse withDeletePadUsingGET200ApplicationJSONObject(DeletePadUsingGET200ApplicationJSON deletePadUsingGET200ApplicationJSONObject) {
         this.deletePadUsingGET200ApplicationJSONObject = deletePadUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeletePadUsingGETResponse {
      */
     
     public DeletePadUsingGET400ApplicationJSON deletePadUsingGET400ApplicationJSONObject;
+
     public DeletePadUsingGETResponse withDeletePadUsingGET400ApplicationJSONObject(DeletePadUsingGET400ApplicationJSON deletePadUsingGET400ApplicationJSONObject) {
         this.deletePadUsingGET400ApplicationJSONObject = deletePadUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeletePadUsingGETResponse {
      */
     
     public DeletePadUsingGET401ApplicationJSON deletePadUsingGET401ApplicationJSONObject;
+
     public DeletePadUsingGETResponse withDeletePadUsingGET401ApplicationJSONObject(DeletePadUsingGET401ApplicationJSON deletePadUsingGET401ApplicationJSONObject) {
         this.deletePadUsingGET401ApplicationJSONObject = deletePadUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeletePadUsingGETResponse {
      */
     
     public DeletePadUsingGET500ApplicationJSON deletePadUsingGET500ApplicationJSONObject;
+
     public DeletePadUsingGETResponse withDeletePadUsingGET500ApplicationJSONObject(DeletePadUsingGET500ApplicationJSON deletePadUsingGET500ApplicationJSONObject) {
         this.deletePadUsingGET500ApplicationJSONObject = deletePadUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public DeletePadUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

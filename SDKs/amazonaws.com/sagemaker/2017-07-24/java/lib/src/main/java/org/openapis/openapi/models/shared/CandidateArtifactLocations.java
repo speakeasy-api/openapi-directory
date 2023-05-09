@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CandidateArtifactLocations {
     @JsonProperty("Explainability")
     public String explainability;
+
     public CandidateArtifactLocations withExplainability(String explainability) {
         this.explainability = explainability;
         return this;
@@ -22,9 +23,13 @@ public class CandidateArtifactLocations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelInsights")
     public String modelInsights;
+
     public CandidateArtifactLocations withModelInsights(String modelInsights) {
         this.modelInsights = modelInsights;
         return this;
     }
     
+    public CandidateArtifactLocations(@JsonProperty("Explainability") String explainability) {
+        this.explainability = explainability;
+  }
 }

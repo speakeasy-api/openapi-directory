@@ -15,6 +15,7 @@ public class LoyaltyProgramTerminology {
      */
     @JsonProperty("one")
     public String one;
+
     public LoyaltyProgramTerminology withOne(String one) {
         this.one = one;
         return this;
@@ -25,9 +26,14 @@ public class LoyaltyProgramTerminology {
      */
     @JsonProperty("other")
     public String other;
+
     public LoyaltyProgramTerminology withOther(String other) {
         this.other = other;
         return this;
     }
     
+    public LoyaltyProgramTerminology(@JsonProperty("one") String one, @JsonProperty("other") String other) {
+        this.one = one;
+        this.other = other;
+  }
 }

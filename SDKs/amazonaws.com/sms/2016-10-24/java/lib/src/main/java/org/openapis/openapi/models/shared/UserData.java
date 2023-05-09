@@ -15,9 +15,11 @@ public class UserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public S3Location s3Location;
+
     public UserData withS3Location(S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public UserData(){}
 }

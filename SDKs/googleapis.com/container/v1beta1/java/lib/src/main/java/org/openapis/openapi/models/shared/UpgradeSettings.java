@@ -18,6 +18,7 @@ public class UpgradeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueGreenSettings")
     public BlueGreenSettings blueGreenSettings;
+
     public UpgradeSettings withBlueGreenSettings(BlueGreenSettings blueGreenSettings) {
         this.blueGreenSettings = blueGreenSettings;
         return this;
@@ -29,6 +30,7 @@ public class UpgradeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSurge")
     public Integer maxSurge;
+
     public UpgradeSettings withMaxSurge(Integer maxSurge) {
         this.maxSurge = maxSurge;
         return this;
@@ -40,6 +42,7 @@ public class UpgradeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUnavailable")
     public Integer maxUnavailable;
+
     public UpgradeSettings withMaxUnavailable(Integer maxUnavailable) {
         this.maxUnavailable = maxUnavailable;
         return this;
@@ -51,9 +54,11 @@ public class UpgradeSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public UpgradeSettingsStrategyEnum strategy;
+
     public UpgradeSettings withStrategy(UpgradeSettingsStrategyEnum strategy) {
         this.strategy = strategy;
         return this;
     }
     
+    public UpgradeSettings(){}
 }

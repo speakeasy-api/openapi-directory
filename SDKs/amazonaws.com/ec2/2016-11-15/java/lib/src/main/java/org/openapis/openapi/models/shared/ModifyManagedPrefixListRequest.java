@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyManagedPrefixListRequest {
     
     public AddPrefixListEntry[] addEntries;
+
     public ModifyManagedPrefixListRequest withAddEntries(AddPrefixListEntry[] addEntries) {
         this.addEntries = addEntries;
         return this;
@@ -16,6 +17,7 @@ public class ModifyManagedPrefixListRequest {
     
     
     public Long currentVersion;
+
     public ModifyManagedPrefixListRequest withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -23,6 +25,7 @@ public class ModifyManagedPrefixListRequest {
     
     
     public Boolean dryRun;
+
     public ModifyManagedPrefixListRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyManagedPrefixListRequest {
     
     
     public Long maxEntries;
+
     public ModifyManagedPrefixListRequest withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -37,6 +41,7 @@ public class ModifyManagedPrefixListRequest {
     
     
     public String prefixListId;
+
     public ModifyManagedPrefixListRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -44,6 +49,7 @@ public class ModifyManagedPrefixListRequest {
     
     
     public String prefixListName;
+
     public ModifyManagedPrefixListRequest withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -51,9 +57,13 @@ public class ModifyManagedPrefixListRequest {
     
     
     public RemovePrefixListEntry[] removeEntries;
+
     public ModifyManagedPrefixListRequest withRemoveEntries(RemovePrefixListEntry[] removeEntries) {
         this.removeEntries = removeEntries;
         return this;
     }
     
+    public ModifyManagedPrefixListRequest(@JsonProperty("PrefixListId") String prefixListId) {
+        this.prefixListId = prefixListId;
+  }
 }

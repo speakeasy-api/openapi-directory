@@ -15,6 +15,7 @@ public class ContainerServiceECRImagePullerRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public ContainerServiceECRImagePullerRole withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -23,9 +24,11 @@ public class ContainerServiceECRImagePullerRole {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalArn")
     public String principalArn;
+
     public ContainerServiceECRImagePullerRole withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
     }
     
+    public ContainerServiceECRImagePullerRole(){}
 }

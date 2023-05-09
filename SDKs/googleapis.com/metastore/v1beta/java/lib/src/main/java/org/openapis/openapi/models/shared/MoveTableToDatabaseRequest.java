@@ -18,6 +18,7 @@ public class MoveTableToDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbName")
     public String dbName;
+
     public MoveTableToDatabaseRequest withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -29,6 +30,7 @@ public class MoveTableToDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationDbName")
     public String destinationDbName;
+
     public MoveTableToDatabaseRequest withDestinationDbName(String destinationDbName) {
         this.destinationDbName = destinationDbName;
         return this;
@@ -40,9 +42,11 @@ public class MoveTableToDatabaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public MoveTableToDatabaseRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public MoveTableToDatabaseRequest(){}
 }

@@ -16,6 +16,7 @@ public class CommitteeHistoryProfileJfcCommittee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joint_committee_id")
     public String jointCommitteeId;
+
     public CommitteeHistoryProfileJfcCommittee withJointCommitteeId(String jointCommitteeId) {
         this.jointCommitteeId = jointCommitteeId;
         return this;
@@ -27,9 +28,11 @@ public class CommitteeHistoryProfileJfcCommittee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("joint_committee_name")
     public String jointCommitteeName;
+
     public CommitteeHistoryProfileJfcCommittee withJointCommitteeName(String jointCommitteeName) {
         this.jointCommitteeName = jointCommitteeName;
         return this;
     }
     
+    public CommitteeHistoryProfileJfcCommittee(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CampaignsFetchAllRequest {
@@ -12,6 +13,7 @@ public class CampaignsFetchAllRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public CampaignsFetchAllRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class CampaignsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CampaignsFetchAllRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class CampaignsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public CampaignsFetchAllRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +46,13 @@ public class CampaignsFetchAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public CampaignsFetchAllRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public CampaignsFetchAllRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

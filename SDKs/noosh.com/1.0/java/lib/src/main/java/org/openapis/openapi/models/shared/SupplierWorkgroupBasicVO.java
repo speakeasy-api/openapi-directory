@@ -15,6 +15,7 @@ public class SupplierWorkgroupBasicVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bu_supplier_workgroup_id")
     public Long buSupplierWorkgroupId;
+
     public SupplierWorkgroupBasicVO withBuSupplierWorkgroupId(Long buSupplierWorkgroupId) {
         this.buSupplierWorkgroupId = buSupplierWorkgroupId;
         return this;
@@ -23,9 +24,11 @@ public class SupplierWorkgroupBasicVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bu_supplier_workgroup_name")
     public String buSupplierWorkgroupName;
+
     public SupplierWorkgroupBasicVO withBuSupplierWorkgroupName(String buSupplierWorkgroupName) {
         this.buSupplierWorkgroupName = buSupplierWorkgroupName;
         return this;
     }
     
+    public SupplierWorkgroupBasicVO(){}
 }

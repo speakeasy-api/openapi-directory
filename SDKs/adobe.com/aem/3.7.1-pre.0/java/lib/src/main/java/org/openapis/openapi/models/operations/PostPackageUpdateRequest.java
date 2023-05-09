@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostPackageUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_charset_")
     public String charset;
+
     public PostPackageUpdateRequest withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -16,6 +18,7 @@ public class PostPackageUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public PostPackageUpdateRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -23,6 +26,7 @@ public class PostPackageUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupName")
     public String groupName;
+
     public PostPackageUpdateRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -30,6 +34,7 @@ public class PostPackageUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=packageName")
     public String packageName;
+
     public PostPackageUpdateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -37,6 +42,7 @@ public class PostPackageUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String path;
+
     public PostPackageUpdateRequest withPath(String path) {
         this.path = path;
         return this;
@@ -44,9 +50,16 @@ public class PostPackageUpdateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public PostPackageUpdateRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PostPackageUpdateRequest(@JsonProperty("groupName") String groupName, @JsonProperty("packageName") String packageName, @JsonProperty("path") String path, @JsonProperty("version") String version) {
+        this.groupName = groupName;
+        this.packageName = packageName;
+        this.path = path;
+        this.version = version;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListAccountAliasesResponse - Contains the response to a successful &lt;a&gt;ListAccountAliases&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListAccountAliasesResponse {
     
     public String[] accountAliases;
+
     public ListAccountAliasesResponse withAccountAliases(String[] accountAliases) {
         this.accountAliases = accountAliases;
         return this;
@@ -19,6 +20,7 @@ public class ListAccountAliasesResponse {
     
     
     public Boolean isTruncated;
+
     public ListAccountAliasesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,13 @@ public class ListAccountAliasesResponse {
     
     
     public String marker;
+
     public ListAccountAliasesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListAccountAliasesResponse(@JsonProperty("AccountAliases") String[] accountAliases) {
+        this.accountAliases = accountAliases;
+  }
 }

@@ -58,10 +58,8 @@ public class Changelog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateChangelogResponse res = new org.openapis.openapi.models.operations.CreateChangelogResponse() {{
+        org.openapis.openapi.models.operations.CreateChangelogResponse res = new org.openapis.openapi.models.operations.CreateChangelogResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {
@@ -93,10 +91,8 @@ public class Changelog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteChangelogResponse res = new org.openapis.openapi.models.operations.DeleteChangelogResponse() {{
+        org.openapis.openapi.models.operations.DeleteChangelogResponse res = new org.openapis.openapi.models.operations.DeleteChangelogResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -128,10 +124,8 @@ public class Changelog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangelogResponse res = new org.openapis.openapi.models.operations.GetChangelogResponse() {{
+        org.openapis.openapi.models.operations.GetChangelogResponse res = new org.openapis.openapi.models.operations.GetChangelogResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -169,10 +163,8 @@ public class Changelog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangelogsResponse res = new org.openapis.openapi.models.operations.GetChangelogsResponse() {{
+        org.openapis.openapi.models.operations.GetChangelogsResponse res = new org.openapis.openapi.models.operations.GetChangelogsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,10 +203,8 @@ public class Changelog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateChangelogResponse res = new org.openapis.openapi.models.operations.UpdateChangelogResponse() {{
+        org.openapis.openapi.models.operations.UpdateChangelogResponse res = new org.openapis.openapi.models.operations.UpdateChangelogResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

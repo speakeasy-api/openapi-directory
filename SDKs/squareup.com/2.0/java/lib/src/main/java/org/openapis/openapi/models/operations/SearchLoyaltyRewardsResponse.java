@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchLoyaltyRewardsResponse {
     
     public String contentType;
+
     public SearchLoyaltyRewardsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchLoyaltyRewardsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchLoyaltyRewardsResponse searchLoyaltyRewardsResponse;
+
     public SearchLoyaltyRewardsResponse withSearchLoyaltyRewardsResponse(org.openapis.openapi.models.shared.SearchLoyaltyRewardsResponse searchLoyaltyRewardsResponse) {
         this.searchLoyaltyRewardsResponse = searchLoyaltyRewardsResponse;
         return this;
@@ -26,6 +29,7 @@ public class SearchLoyaltyRewardsResponse {
     
     
     public Integer statusCode;
+
     public SearchLoyaltyRewardsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SearchLoyaltyRewardsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchLoyaltyRewardsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchLoyaltyRewardsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

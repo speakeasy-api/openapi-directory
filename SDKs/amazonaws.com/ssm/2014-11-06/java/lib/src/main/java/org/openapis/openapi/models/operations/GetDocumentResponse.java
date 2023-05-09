@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDocumentResponse {
     
     public String contentType;
+
     public GetDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDocumentResult getDocumentResult;
+
     public GetDocumentResponse withGetDocumentResult(org.openapis.openapi.models.shared.GetDocumentResult getDocumentResult) {
         this.getDocumentResult = getDocumentResult;
         return this;
@@ -29,6 +32,7 @@ public class GetDocumentResponse {
      */
     
     public Object internalServerError;
+
     public GetDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetDocumentResponse {
      */
     
     public Object invalidDocument;
+
     public GetDocumentResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -49,6 +54,7 @@ public class GetDocumentResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public GetDocumentResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -56,6 +62,7 @@ public class GetDocumentResponse {
     
     
     public Integer statusCode;
+
     public GetDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

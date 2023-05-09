@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON {
     @JsonProperty("portfolios")
     public PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios[] portfolios;
+
     public PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON withPortfolios(PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSON(@JsonProperty("portfolios") PostPortfolioSimulationRebalancingRandomWeight200ApplicationJSONPortfolios[] portfolios) {
+        this.portfolios = portfolios;
+  }
 }

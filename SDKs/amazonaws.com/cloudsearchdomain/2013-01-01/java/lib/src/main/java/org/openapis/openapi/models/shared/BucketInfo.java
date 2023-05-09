@@ -15,9 +15,11 @@ public class BucketInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public Bucket[] buckets;
+
     public BucketInfo withBuckets(Bucket[] buckets) {
         this.buckets = buckets;
         return this;
     }
     
+    public BucketInfo(){}
 }

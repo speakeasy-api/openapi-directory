@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetIntegrationResponse {
     
     public String contentType;
+
     public GetIntegrationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetIntegrationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetIntegrationResult getIntegrationResult;
+
     public GetIntegrationResponse withGetIntegrationResult(org.openapis.openapi.models.shared.GetIntegrationResult getIntegrationResult) {
         this.getIntegrationResult = getIntegrationResult;
         return this;
@@ -29,6 +32,7 @@ public class GetIntegrationResponse {
      */
     
     public Object notFoundException;
+
     public GetIntegrationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class GetIntegrationResponse {
     
     
     public Integer statusCode;
+
     public GetIntegrationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetIntegrationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetIntegrationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetIntegrationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetIntegrationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetIntegrationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

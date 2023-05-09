@@ -18,6 +18,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliated_committee_name")
     public String affiliatedCommitteeName;
+
     public CommitteeHistory withAffiliatedCommitteeName(String affiliatedCommitteeName) {
         this.affiliatedCommitteeName = affiliatedCommitteeName;
         return this;
@@ -26,11 +27,18 @@ public class CommitteeHistory {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_ids")
     public String[] candidateIds;
+
     public CommitteeHistory withCandidateIds(String[] candidateIds) {
         this.candidateIds = candidateIds;
         return this;
@@ -43,6 +51,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CommitteeHistory withCity(String city) {
         this.city = city;
         return this;
@@ -54,6 +63,7 @@ public class CommitteeHistory {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public CommitteeHistory withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -82,6 +92,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_type")
     public String committeeType;
+
     public CommitteeHistory withCommitteeType(String committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -110,6 +121,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_type_full")
     public String committeeTypeFull;
+
     public CommitteeHistory withCommitteeTypeFull(String committeeTypeFull) {
         this.committeeTypeFull = committeeTypeFull;
         return this;
@@ -123,6 +135,7 @@ public class CommitteeHistory {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public CommitteeHistory withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -137,6 +150,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycles")
     public Integer[] cycles;
+
     public CommitteeHistory withCycles(Integer[] cycles) {
         this.cycles = cycles;
         return this;
@@ -150,6 +164,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycles_has_activity")
     public Integer[] cyclesHasActivity;
+
     public CommitteeHistory withCyclesHasActivity(Integer[] cyclesHasActivity) {
         this.cyclesHasActivity = cyclesHasActivity;
         return this;
@@ -164,6 +179,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycles_has_financial")
     public Integer[] cyclesHasFinancial;
+
     public CommitteeHistory withCyclesHasFinancial(Integer[] cyclesHasFinancial) {
         this.cyclesHasFinancial = cyclesHasFinancial;
         return this;
@@ -182,6 +198,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designation")
     public String designation;
+
     public CommitteeHistory withDesignation(String designation) {
         this.designation = designation;
         return this;
@@ -200,6 +217,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("designation_full")
     public String designationFull;
+
     public CommitteeHistory withDesignationFull(String designationFull) {
         this.designationFull = designationFull;
         return this;
@@ -219,6 +237,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filing_frequency")
     public String filingFrequency;
+
     public CommitteeHistory withFilingFrequency(String filingFrequency) {
         this.filingFrequency = filingFrequency;
         return this;
@@ -231,6 +250,7 @@ public class CommitteeHistory {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("first_f1_date")
     public LocalDate firstF1Date;
+
     public CommitteeHistory withFirstF1Date(LocalDate firstF1Date) {
         this.firstF1Date = firstF1Date;
         return this;
@@ -243,6 +263,7 @@ public class CommitteeHistory {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("first_file_date")
     public LocalDate firstFileDate;
+
     public CommitteeHistory withFirstFileDate(LocalDate firstFileDate) {
         this.firstFileDate = firstFileDate;
         return this;
@@ -255,6 +276,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public CommitteeHistory withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -263,6 +285,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jfc_committee")
     public CommitteeHistoryJfcCommittee[] jfcCommittee;
+
     public CommitteeHistory withJfcCommittee(CommitteeHistoryJfcCommittee[] jfcCommittee) {
         this.jfcCommittee = jfcCommittee;
         return this;
@@ -275,6 +298,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_cycle_has_activity")
     public Integer lastCycleHasActivity;
+
     public CommitteeHistory withLastCycleHasActivity(Integer lastCycleHasActivity) {
         this.lastCycleHasActivity = lastCycleHasActivity;
         return this;
@@ -288,6 +312,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_cycle_has_financial")
     public Integer lastCycleHasFinancial;
+
     public CommitteeHistory withLastCycleHasFinancial(Integer lastCycleHasFinancial) {
         this.lastCycleHasFinancial = lastCycleHasFinancial;
         return this;
@@ -300,6 +325,7 @@ public class CommitteeHistory {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_f1_date")
     public LocalDate lastF1Date;
+
     public CommitteeHistory withLastF1Date(LocalDate lastF1Date) {
         this.lastF1Date = lastF1Date;
         return this;
@@ -312,6 +338,7 @@ public class CommitteeHistory {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_file_date")
     public LocalDate lastFileDate;
+
     public CommitteeHistory withLastFileDate(LocalDate lastFileDate) {
         this.lastFileDate = lastFileDate;
         return this;
@@ -323,6 +350,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CommitteeHistory withName(String name) {
         this.name = name;
         return this;
@@ -341,6 +369,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_type")
     public String organizationType;
+
     public CommitteeHistory withOrganizationType(String organizationType) {
         this.organizationType = organizationType;
         return this;
@@ -359,6 +388,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_type_full")
     public String organizationTypeFull;
+
     public CommitteeHistory withOrganizationTypeFull(String organizationTypeFull) {
         this.organizationTypeFull = organizationTypeFull;
         return this;
@@ -370,6 +400,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public String party;
+
     public CommitteeHistory withParty(String party) {
         this.party = party;
         return this;
@@ -381,6 +412,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party_full")
     public String partyFull;
+
     public CommitteeHistory withPartyFull(String partyFull) {
         this.partyFull = partyFull;
         return this;
@@ -393,6 +425,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CommitteeHistory withState(String state) {
         this.state = state;
         return this;
@@ -405,6 +438,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_full")
     public String stateFull;
+
     public CommitteeHistory withStateFull(String stateFull) {
         this.stateFull = stateFull;
         return this;
@@ -417,6 +451,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_1")
     public String street1;
+
     public CommitteeHistory withStreet1(String street1) {
         this.street1 = street1;
         return this;
@@ -429,6 +464,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_2")
     public String street2;
+
     public CommitteeHistory withStreet2(String street2) {
         this.street2 = street2;
         return this;
@@ -440,6 +476,7 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treasurer_name")
     public String treasurerName;
+
     public CommitteeHistory withTreasurerName(String treasurerName) {
         this.treasurerName = treasurerName;
         return this;
@@ -452,9 +489,14 @@ public class CommitteeHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public CommitteeHistory withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public CommitteeHistory(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+  }
 }

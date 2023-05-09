@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayData {
     @JsonProperty("meshName")
     public String meshName;
+
     public VirtualGatewayData withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -22,6 +23,7 @@ public class VirtualGatewayData {
      */
     @JsonProperty("metadata")
     public ResourceMetadata metadata;
+
     public VirtualGatewayData withMetadata(ResourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +31,7 @@ public class VirtualGatewayData {
     
     @JsonProperty("spec")
     public VirtualGatewaySpec spec;
+
     public VirtualGatewayData withSpec(VirtualGatewaySpec spec) {
         this.spec = spec;
         return this;
@@ -36,6 +39,7 @@ public class VirtualGatewayData {
     
     @JsonProperty("status")
     public VirtualGatewayStatus status;
+
     public VirtualGatewayData withStatus(VirtualGatewayStatus status) {
         this.status = status;
         return this;
@@ -43,9 +47,17 @@ public class VirtualGatewayData {
     
     @JsonProperty("virtualGatewayName")
     public String virtualGatewayName;
+
     public VirtualGatewayData withVirtualGatewayName(String virtualGatewayName) {
         this.virtualGatewayName = virtualGatewayName;
         return this;
     }
     
+    public VirtualGatewayData(@JsonProperty("meshName") String meshName, @JsonProperty("metadata") ResourceMetadata metadata, @JsonProperty("spec") VirtualGatewaySpec spec, @JsonProperty("status") VirtualGatewayStatus status, @JsonProperty("virtualGatewayName") String virtualGatewayName) {
+        this.meshName = meshName;
+        this.metadata = metadata;
+        this.spec = spec;
+        this.status = status;
+        this.virtualGatewayName = virtualGatewayName;
+  }
 }

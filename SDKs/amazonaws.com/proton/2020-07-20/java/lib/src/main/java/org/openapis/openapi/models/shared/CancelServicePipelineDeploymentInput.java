@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelServicePipelineDeploymentInput {
     @JsonProperty("serviceName")
     public String serviceName;
+
     public CancelServicePipelineDeploymentInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public CancelServicePipelineDeploymentInput(@JsonProperty("serviceName") String serviceName) {
+        this.serviceName = serviceName;
+  }
 }

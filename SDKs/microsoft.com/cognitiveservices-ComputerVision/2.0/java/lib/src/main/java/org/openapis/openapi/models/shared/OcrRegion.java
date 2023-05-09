@@ -18,6 +18,7 @@ public class OcrRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public String boundingBox;
+
     public OcrRegion withBoundingBox(String boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,9 +30,11 @@ public class OcrRegion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lines")
     public OcrLine[] lines;
+
     public OcrRegion withLines(OcrLine[] lines) {
         this.lines = lines;
         return this;
     }
     
+    public OcrRegion(){}
 }

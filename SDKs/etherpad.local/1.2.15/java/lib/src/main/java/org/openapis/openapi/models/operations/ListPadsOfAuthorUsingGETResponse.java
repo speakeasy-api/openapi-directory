@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPadsOfAuthorUsingGETResponse {
     
     public String contentType;
+
     public ListPadsOfAuthorUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListPadsOfAuthorUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListPadsOfAuthorUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListPadsOfAuthorUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPadsOfAuthorUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListPadsOfAuthorUsingGETResponse {
      */
     
     public ListPadsOfAuthorUsingGET200ApplicationJSON listPadsOfAuthorUsingGET200ApplicationJSONObject;
+
     public ListPadsOfAuthorUsingGETResponse withListPadsOfAuthorUsingGET200ApplicationJSONObject(ListPadsOfAuthorUsingGET200ApplicationJSON listPadsOfAuthorUsingGET200ApplicationJSONObject) {
         this.listPadsOfAuthorUsingGET200ApplicationJSONObject = listPadsOfAuthorUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListPadsOfAuthorUsingGETResponse {
      */
     
     public ListPadsOfAuthorUsingGET400ApplicationJSON listPadsOfAuthorUsingGET400ApplicationJSONObject;
+
     public ListPadsOfAuthorUsingGETResponse withListPadsOfAuthorUsingGET400ApplicationJSONObject(ListPadsOfAuthorUsingGET400ApplicationJSON listPadsOfAuthorUsingGET400ApplicationJSONObject) {
         this.listPadsOfAuthorUsingGET400ApplicationJSONObject = listPadsOfAuthorUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListPadsOfAuthorUsingGETResponse {
      */
     
     public ListPadsOfAuthorUsingGET401ApplicationJSON listPadsOfAuthorUsingGET401ApplicationJSONObject;
+
     public ListPadsOfAuthorUsingGETResponse withListPadsOfAuthorUsingGET401ApplicationJSONObject(ListPadsOfAuthorUsingGET401ApplicationJSON listPadsOfAuthorUsingGET401ApplicationJSONObject) {
         this.listPadsOfAuthorUsingGET401ApplicationJSONObject = listPadsOfAuthorUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListPadsOfAuthorUsingGETResponse {
      */
     
     public ListPadsOfAuthorUsingGET500ApplicationJSON listPadsOfAuthorUsingGET500ApplicationJSONObject;
+
     public ListPadsOfAuthorUsingGETResponse withListPadsOfAuthorUsingGET500ApplicationJSONObject(ListPadsOfAuthorUsingGET500ApplicationJSON listPadsOfAuthorUsingGET500ApplicationJSONObject) {
         this.listPadsOfAuthorUsingGET500ApplicationJSONObject = listPadsOfAuthorUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public ListPadsOfAuthorUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

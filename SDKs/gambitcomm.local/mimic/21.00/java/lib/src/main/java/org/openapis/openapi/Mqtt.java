@@ -52,11 +52,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientGetProtstateResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientGetProtstate200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientGetStateResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientGetStateResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientGetStateResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientGetStateResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientGetState200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageCardResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientMessageCard200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageGetResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientMessageGet200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +212,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientMessageSetResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientMessageSet200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,11 +252,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientResubscribeResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientResubscribe200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,11 +291,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeAbortResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientRuntimeAbort200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +331,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeConnectResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientRuntimeConnect200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +371,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientRuntimeDisconnectResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientRuntimeDisconnect200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -429,11 +411,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetBrokerResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetBroker200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -471,11 +451,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetCleansessionResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetCleansession200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -513,11 +491,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetClientidResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetClientid200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -555,11 +531,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetKeepaliveResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetKeepalive200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -597,11 +571,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetOnDisconnectResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetOnDisconnect200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -639,11 +611,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetPasswordResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetPassword200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -681,11 +651,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetPortResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetPortResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetPortResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetPortResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetPort200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -723,11 +691,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetUsernameResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetUsername200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -765,11 +731,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillmsgResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetWillmsg200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -807,11 +771,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillqosResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetWillqos200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -849,11 +811,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWillretainResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetWillretain200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -891,11 +851,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSetWilltopicResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSetWilltopic200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -933,11 +891,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeCardResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSubscribeCard200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -975,11 +931,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeGetResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSubscribeGet200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1017,11 +971,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientSubscribeSetResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientSubscribeSet200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1059,11 +1011,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeResponse res = new org.openapis.openapi.models.operations.ProtocolMqttClientUnsubscribeResponse(contentType, httpRes.statusCode()) {{
             protocolMqttClientUnsubscribe200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1050,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolMqttGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1142,11 +1090,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetConfigResponse(contentType, httpRes.statusCode()) {{
             configMQTT = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1184,11 +1130,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolMqttGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1225,11 +1169,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolMqttGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1267,11 +1209,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolMqttGetTraceResponse(contentType, httpRes.statusCode()) {{
             configMQTT = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1309,11 +1249,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolMqttSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolMqttSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolMqttSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1350,11 +1288,9 @@ public class Mqtt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolMqttSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolMqttSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolMqttSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolMqttSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolMqttSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesEbsInfo {
     
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo ebsOptimizedInfo;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfo withEbsOptimizedInfo(DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedInfo ebsOptimizedInfo) {
         this.ebsOptimizedInfo = ebsOptimizedInfo;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum ebsOptimizedSupport;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfo withEbsOptimizedSupport(DescribeInstanceTypesResultInstanceTypesEbsInfoEbsOptimizedSupportEnum ebsOptimizedSupport) {
         this.ebsOptimizedSupport = ebsOptimizedSupport;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum encryptionSupport;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfo withEncryptionSupport(DescribeInstanceTypesResultInstanceTypesEbsInfoEncryptionSupportEnum encryptionSupport) {
         this.encryptionSupport = encryptionSupport;
         return this;
@@ -33,9 +36,11 @@ public class DescribeInstanceTypesResultInstanceTypesEbsInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum nvmeSupport;
+
     public DescribeInstanceTypesResultInstanceTypesEbsInfo withNvmeSupport(DescribeInstanceTypesResultInstanceTypesEbsInfoNvmeSupportEnum nvmeSupport) {
         this.nvmeSupport = nvmeSupport;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesEbsInfo(){}
 }

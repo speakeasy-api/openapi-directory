@@ -15,6 +15,7 @@ public class ListUsageForLicenseConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurationUsageList")
     public LicenseConfigurationUsage[] licenseConfigurationUsageList;
+
     public ListUsageForLicenseConfigurationResponse withLicenseConfigurationUsageList(LicenseConfigurationUsage[] licenseConfigurationUsageList) {
         this.licenseConfigurationUsageList = licenseConfigurationUsageList;
         return this;
@@ -23,9 +24,11 @@ public class ListUsageForLicenseConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListUsageForLicenseConfigurationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListUsageForLicenseConfigurationResponse(){}
 }

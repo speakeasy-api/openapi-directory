@@ -15,6 +15,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("begins_at")
     public String beginsAt;
+
     public PromotionFields withBeginsAt(String beginsAt) {
         this.beginsAt = beginsAt;
         return this;
@@ -26,6 +27,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public Id[] categories;
+
     public PromotionFields withCategories(Id[] categories) {
         this.categories = categories;
         return this;
@@ -37,6 +39,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PromotionFields withCode(String code) {
         this.code = code;
         return this;
@@ -48,6 +51,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition_price")
     public Float conditionPrice;
+
     public PromotionFields withConditionPrice(Float conditionPrice) {
         this.conditionPrice = conditionPrice;
         return this;
@@ -59,6 +63,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition_qty")
     public Integer conditionQty;
+
     public PromotionFields withConditionQty(Integer conditionQty) {
         this.conditionQty = conditionQty;
         return this;
@@ -70,6 +75,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulative")
     public Boolean cumulative;
+
     public PromotionFields withCumulative(Boolean cumulative) {
         this.cumulative = cumulative;
         return this;
@@ -81,6 +87,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_categories")
     public Id[] customerCategories;
+
     public PromotionFields withCustomerCategories(Id[] customerCategories) {
         this.customerCategories = customerCategories;
         return this;
@@ -92,6 +99,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount_fix")
     public Float discountAmountFix;
+
     public PromotionFields withDiscountAmountFix(Float discountAmountFix) {
         this.discountAmountFix = discountAmountFix;
         return this;
@@ -103,6 +111,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_amount_percent")
     public Float discountAmountPercent;
+
     public PromotionFields withDiscountAmountPercent(Float discountAmountPercent) {
         this.discountAmountPercent = discountAmountPercent;
         return this;
@@ -114,6 +123,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_target")
     public String discountTarget;
+
     public PromotionFields withDiscountTarget(String discountTarget) {
         this.discountTarget = discountTarget;
         return this;
@@ -125,6 +135,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PromotionFields withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -136,6 +147,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public PromotionFields withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -147,6 +159,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public PromotionFields withId(Integer id) {
         this.id = id;
         return this;
@@ -158,6 +171,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lasts")
     public String lasts;
+
     public PromotionFields withLasts(String lasts) {
         this.lasts = lasts;
         return this;
@@ -169,6 +183,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_times_used")
     public Integer maxTimesUsed;
+
     public PromotionFields withMaxTimesUsed(Integer maxTimesUsed) {
         this.maxTimesUsed = maxTimesUsed;
         return this;
@@ -180,6 +195,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PromotionFields withName(String name) {
         this.name = name;
         return this;
@@ -191,6 +207,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public Id[] products;
+
     public PromotionFields withProducts(Id[] products) {
         this.products = products;
         return this;
@@ -202,6 +219,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products_x")
     public Id[] productsX;
+
     public PromotionFields withProductsX(Id[] productsX) {
         this.productsX = productsX;
         return this;
@@ -213,6 +231,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_x")
     public Integer quantityX;
+
     public PromotionFields withQuantityX(Integer quantityX) {
         this.quantityX = quantityX;
         return this;
@@ -224,6 +243,7 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PromotionFields withStatus(String status) {
         this.status = status;
         return this;
@@ -235,9 +255,11 @@ public class PromotionFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("times_used")
     public Integer timesUsed;
+
     public PromotionFields withTimesUsed(Integer timesUsed) {
         this.timesUsed = timesUsed;
         return this;
     }
     
+    public PromotionFields(){}
 }

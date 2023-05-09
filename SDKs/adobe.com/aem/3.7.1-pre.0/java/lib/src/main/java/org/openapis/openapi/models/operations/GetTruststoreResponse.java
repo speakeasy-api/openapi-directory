@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTruststoreResponse {
     
     public String contentType;
+
     public GetTruststoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTruststoreResponse {
     
     
     public Integer statusCode;
+
     public GetTruststoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTruststoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTruststoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTruststoreResponse {
      */
     
     public byte[] getTruststoreDefaultApplicationOctetStreamBinaryString;
+
     public GetTruststoreResponse withGetTruststoreDefaultApplicationOctetStreamBinaryString(byte[] getTruststoreDefaultApplicationOctetStreamBinaryString) {
         this.getTruststoreDefaultApplicationOctetStreamBinaryString = getTruststoreDefaultApplicationOctetStreamBinaryString;
         return this;
     }
     
+    public GetTruststoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

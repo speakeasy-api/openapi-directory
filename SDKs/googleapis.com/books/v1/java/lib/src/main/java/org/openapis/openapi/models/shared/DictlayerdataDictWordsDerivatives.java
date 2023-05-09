@@ -12,6 +12,7 @@ public class DictlayerdataDictWordsDerivatives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public DictlayerdataDictWordsDerivativesSource source;
+
     public DictlayerdataDictWordsDerivatives withSource(DictlayerdataDictWordsDerivativesSource source) {
         this.source = source;
         return this;
@@ -20,9 +21,11 @@ public class DictlayerdataDictWordsDerivatives {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public DictlayerdataDictWordsDerivatives withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DictlayerdataDictWordsDerivatives(){}
 }

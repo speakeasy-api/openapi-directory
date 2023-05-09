@@ -15,6 +15,7 @@ public class AwsEcsContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public AwsEcsContainerDetails withImage(String image) {
         this.image = image;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountPoints")
     public AwsMountPoint[] mountPoints;
+
     public AwsEcsContainerDetails withMountPoints(AwsMountPoint[] mountPoints) {
         this.mountPoints = mountPoints;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsContainerDetails withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class AwsEcsContainerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Privileged")
     public Boolean privileged;
+
     public AwsEcsContainerDetails withPrivileged(Boolean privileged) {
         this.privileged = privileged;
         return this;
     }
     
+    public AwsEcsContainerDetails(){}
 }

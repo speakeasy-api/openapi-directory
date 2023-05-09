@@ -121,4 +121,17 @@ lib/src/main/java/org/openapis/openapi/models/shared/SmsUniqueRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SMSRequestGmtZoneEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SMSRequestNumAzurEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/SMSRequest.java
+docs/sdk/README.md
+docs/addshortlink/README.md
+docs/addsubaccount/README.md
+docs/campagne/README.md
+docs/comptage/README.md
+docs/credit/README.md
+docs/dellistenoire/README.md
+docs/editsubaccount/README.md
+docs/getlistenoire/README.md
+docs/hlr/README.md
+docs/repertoire/README.md
+docs/setlistenoire/README.md
+docs/sms/README.md
 USAGE.md

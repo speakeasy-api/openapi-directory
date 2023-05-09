@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class NotifyApplicationStateRequest {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public NotifyApplicationStateRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -24,6 +25,7 @@ public class NotifyApplicationStateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public NotifyApplicationStateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -31,6 +33,7 @@ public class NotifyApplicationStateRequest {
     
     @JsonProperty("Status")
     public ApplicationStatusEnum status;
+
     public NotifyApplicationStateRequest withStatus(ApplicationStatusEnum status) {
         this.status = status;
         return this;
@@ -41,9 +44,14 @@ public class NotifyApplicationStateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateDateTime")
     public OffsetDateTime updateDateTime;
+
     public NotifyApplicationStateRequest withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public NotifyApplicationStateRequest(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("Status") ApplicationStatusEnum status) {
+        this.applicationId = applicationId;
+        this.status = status;
+  }
 }

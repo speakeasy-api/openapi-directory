@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withActionsSetDefaultWorkflowPermissions(org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions) {
         this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
         return this;
@@ -19,9 +21,14 @@ public class ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
     }
     
+    public ActionsSetGithubActionsDefaultWorkflowPermissionsEnterpriseRequest(@JsonProperty("actions-set-default-workflow-permissions") org.openapis.openapi.models.shared.ActionsSetDefaultWorkflowPermissions actionsSetDefaultWorkflowPermissions, @JsonProperty("enterprise") String enterprise) {
+        this.actionsSetDefaultWorkflowPermissions = actionsSetDefaultWorkflowPermissions;
+        this.enterprise = enterprise;
+  }
 }

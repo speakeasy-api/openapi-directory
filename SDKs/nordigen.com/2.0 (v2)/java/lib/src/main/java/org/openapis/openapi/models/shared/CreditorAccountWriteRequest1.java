@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,13 +16,49 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=account multipartForm:name=account")
     public String account;
+
     public CreditorAccountWriteRequest1 withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    /**
+     * * `AT` - Austria
+     * * `BE` - Belgium
+     * * `BG` - Bulgaria
+     * * `HR` - Croatia
+     * * `CY` - Cyprus
+     * * `CZ` - Czechia
+     * * `DK` - Denmark
+     * * `EE` - Estonia
+     * * `FI` - Finland
+     * * `FR` - France
+     * * `DE` - Germany
+     * * `GR` - Greece
+     * * `HU` - Hungary
+     * * `IS` - Iceland
+     * * `IE` - Ireland
+     * * `IT` - Italy
+     * * `LV` - Latvia
+     * * `LI` - Liechtenstein
+     * * `LT` - Lithuania
+     * * `LU` - Luxembourg
+     * * `MT` - Malta
+     * * `NL` - Netherlands
+     * * `NO` - Norway
+     * * `PL` - Poland
+     * * `PT` - Portugal
+     * * `RO` - Romania
+     * * `SK` - Slovakia
+     * * `SI` - Slovenia
+     * * `ES` - Spain
+     * * `SE` - Sweden
+     * * `GB` - United Kingdom
+     * * `US` - United States of America
+     */
     @SpeakeasyMetadata("form:name=address_country multipartForm:name=address_country")
     public AddressCountryEnumEnum addressCountry;
+
     public CreditorAccountWriteRequest1 withAddressCountry(AddressCountryEnumEnum addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -32,6 +69,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=address_street multipartForm:name=address_street")
     public String addressStreet;
+
     public CreditorAccountWriteRequest1 withAddressStreet(String addressStreet) {
         this.addressStreet = addressStreet;
         return this;
@@ -42,6 +80,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=agent multipartForm:name=agent")
     public String agent;
+
     public CreditorAccountWriteRequest1 withAgent(String agent) {
         this.agent = agent;
         return this;
@@ -52,6 +91,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=agent_name multipartForm:name=agent_name")
     public String agentName;
+
     public CreditorAccountWriteRequest1 withAgentName(String agentName) {
         this.agentName = agentName;
         return this;
@@ -62,6 +102,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=currency multipartForm:name=currency")
     public String currency;
+
     public CreditorAccountWriteRequest1 withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -72,6 +113,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=institution_id multipartForm:name=institution_id")
     public String institutionId;
+
     public CreditorAccountWriteRequest1 withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -82,6 +124,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=name multipartForm:name=name")
     public String name;
+
     public CreditorAccountWriteRequest1 withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +135,7 @@ public class CreditorAccountWriteRequest1 {
      */
     @SpeakeasyMetadata("form:name=post_code multipartForm:name=post_code")
     public String postCode;
+
     public CreditorAccountWriteRequest1 withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
@@ -99,12 +143,21 @@ public class CreditorAccountWriteRequest1 {
     
     /**
      * Creditor account type
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
      */
     @SpeakeasyMetadata("form:name=type multipartForm:name=type")
     public Object type;
+
     public CreditorAccountWriteRequest1 withType(Object type) {
         this.type = type;
         return this;
     }
     
+    public CreditorAccountWriteRequest1(@JsonProperty("account") String account, @JsonProperty("currency") String currency, @JsonProperty("name") String name) {
+        this.account = account;
+        this.currency = currency;
+        this.name = name;
+  }
 }

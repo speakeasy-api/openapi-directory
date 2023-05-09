@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetPendingDeploymentsForRunResponse {
     
     public String contentType;
+
     public ActionsGetPendingDeploymentsForRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetPendingDeploymentsForRunResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetPendingDeploymentsForRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetPendingDeploymentsForRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetPendingDeploymentsForRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetPendingDeploymentsForRunResponse {
      */
     
     public org.openapis.openapi.models.shared.PendingDeployment[] pendingDeployments;
+
     public ActionsGetPendingDeploymentsForRunResponse withPendingDeployments(org.openapis.openapi.models.shared.PendingDeployment[] pendingDeployments) {
         this.pendingDeployments = pendingDeployments;
         return this;
     }
     
+    public ActionsGetPendingDeploymentsForRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledProductCountExcludingUncategorized")
     public Integer disabledProductCountExcludingUncategorized;
+
     public ChannelCatalogProductsCounters withDisabledProductCountExcludingUncategorized(Integer disabledProductCountExcludingUncategorized) {
         this.disabledProductCountExcludingUncategorized = disabledProductCountExcludingUncategorized;
         return this;
@@ -29,6 +30,7 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledProductCountIncludingUncategorized")
     public Integer disabledProductCountIncludingUncategorized;
+
     public ChannelCatalogProductsCounters withDisabledProductCountIncludingUncategorized(Integer disabledProductCountIncludingUncategorized) {
         this.disabledProductCountIncludingUncategorized = disabledProductCountIncludingUncategorized;
         return this;
@@ -40,6 +42,7 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedProductCountExcludingUncategorizedAndDisabled")
     public Integer excludedProductCountExcludingUncategorizedAndDisabled;
+
     public ChannelCatalogProductsCounters withExcludedProductCountExcludingUncategorizedAndDisabled(Integer excludedProductCountExcludingUncategorizedAndDisabled) {
         this.excludedProductCountExcludingUncategorizedAndDisabled = excludedProductCountExcludingUncategorizedAndDisabled;
         return this;
@@ -51,6 +54,7 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedProductCountIncludingUncategorizedAndDisabled")
     public Integer excludedProductCountIncludingUncategorizedAndDisabled;
+
     public ChannelCatalogProductsCounters withExcludedProductCountIncludingUncategorizedAndDisabled(Integer excludedProductCountIncludingUncategorizedAndDisabled) {
         this.excludedProductCountIncludingUncategorizedAndDisabled = excludedProductCountIncludingUncategorizedAndDisabled;
         return this;
@@ -62,6 +66,7 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingProductCount")
     public Integer existingProductCount;
+
     public ChannelCatalogProductsCounters withExistingProductCount(Integer existingProductCount) {
         this.existingProductCount = existingProductCount;
         return this;
@@ -73,9 +78,11 @@ public class ChannelCatalogProductsCounters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uncategorizedProductCount")
     public Integer uncategorizedProductCount;
+
     public ChannelCatalogProductsCounters withUncategorizedProductCount(Integer uncategorizedProductCount) {
         this.uncategorizedProductCount = uncategorizedProductCount;
         return this;
     }
     
+    public ChannelCatalogProductsCounters(){}
 }

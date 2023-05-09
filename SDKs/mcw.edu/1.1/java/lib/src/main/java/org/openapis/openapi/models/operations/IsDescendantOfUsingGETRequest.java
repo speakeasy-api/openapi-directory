@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IsDescendantOfUsingGETRequest {
@@ -12,6 +13,7 @@ public class IsDescendantOfUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId1")
     public String accId1;
+
     public IsDescendantOfUsingGETRequest withAccId1(String accId1) {
         this.accId1 = accId1;
         return this;
@@ -22,9 +24,14 @@ public class IsDescendantOfUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId2")
     public String accId2;
+
     public IsDescendantOfUsingGETRequest withAccId2(String accId2) {
         this.accId2 = accId2;
         return this;
     }
     
+    public IsDescendantOfUsingGETRequest(@JsonProperty("accId1") String accId1, @JsonProperty("accId2") String accId2) {
+        this.accId1 = accId1;
+        this.accId2 = accId2;
+  }
 }

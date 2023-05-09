@@ -20,6 +20,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public TableInput withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class TableInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessTime")
     public OffsetDateTime lastAccessTime;
+
     public TableInput withLastAccessTime(OffsetDateTime lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -40,6 +42,7 @@ public class TableInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAnalyzedTime")
     public OffsetDateTime lastAnalyzedTime;
+
     public TableInput withLastAnalyzedTime(OffsetDateTime lastAnalyzedTime) {
         this.lastAnalyzedTime = lastAnalyzedTime;
         return this;
@@ -47,6 +50,7 @@ public class TableInput {
     
     @JsonProperty("Name")
     public String name;
+
     public TableInput withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public TableInput withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -63,6 +68,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public TableInput withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -71,6 +77,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public Column[] partitionKeys;
+
     public TableInput withPartitionKeys(Column[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -79,6 +86,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Retention")
     public Long retention;
+
     public TableInput withRetention(Long retention) {
         this.retention = retention;
         return this;
@@ -87,6 +95,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageDescriptor")
     public StorageDescriptor storageDescriptor;
+
     public TableInput withStorageDescriptor(StorageDescriptor storageDescriptor) {
         this.storageDescriptor = storageDescriptor;
         return this;
@@ -95,6 +104,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableType")
     public String tableType;
+
     public TableInput withTableType(String tableType) {
         this.tableType = tableType;
         return this;
@@ -103,6 +113,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetTable")
     public TableIdentifier targetTable;
+
     public TableInput withTargetTable(TableIdentifier targetTable) {
         this.targetTable = targetTable;
         return this;
@@ -111,6 +122,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewExpandedText")
     public String viewExpandedText;
+
     public TableInput withViewExpandedText(String viewExpandedText) {
         this.viewExpandedText = viewExpandedText;
         return this;
@@ -119,9 +131,13 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewOriginalText")
     public String viewOriginalText;
+
     public TableInput withViewOriginalText(String viewOriginalText) {
         this.viewOriginalText = viewOriginalText;
         return this;
     }
     
+    public TableInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

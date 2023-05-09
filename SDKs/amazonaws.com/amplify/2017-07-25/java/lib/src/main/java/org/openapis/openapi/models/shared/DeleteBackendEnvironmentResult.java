@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteBackendEnvironmentResult {
     @JsonProperty("backendEnvironment")
     public BackendEnvironment backendEnvironment;
+
     public DeleteBackendEnvironmentResult withBackendEnvironment(BackendEnvironment backendEnvironment) {
         this.backendEnvironment = backendEnvironment;
         return this;
     }
     
+    public DeleteBackendEnvironmentResult(@JsonProperty("backendEnvironment") BackendEnvironment backendEnvironment) {
+        this.backendEnvironment = backendEnvironment;
+  }
 }

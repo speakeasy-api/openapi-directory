@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRouteOutput {
     @JsonProperty("route")
     public RouteData route;
+
     public DeleteRouteOutput withRoute(RouteData route) {
         this.route = route;
         return this;
     }
     
+    public DeleteRouteOutput(@JsonProperty("route") RouteData route) {
+        this.route = route;
+  }
 }

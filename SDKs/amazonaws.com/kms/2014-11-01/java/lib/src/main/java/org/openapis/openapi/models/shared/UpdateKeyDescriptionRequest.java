@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateKeyDescriptionRequest {
     @JsonProperty("Description")
     public String description;
+
     public UpdateKeyDescriptionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,9 +17,14 @@ public class UpdateKeyDescriptionRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public UpdateKeyDescriptionRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public UpdateKeyDescriptionRequest(@JsonProperty("Description") String description, @JsonProperty("KeyId") String keyId) {
+        this.description = description;
+        this.keyId = keyId;
+  }
 }

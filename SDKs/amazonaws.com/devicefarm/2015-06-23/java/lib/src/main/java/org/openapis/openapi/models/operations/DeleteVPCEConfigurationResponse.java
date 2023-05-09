@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVPCEConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteVPCEConfigurationResponse {
      */
     
     public Object argumentException;
+
     public DeleteVPCEConfigurationResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVPCEConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteVPCEConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVPCEConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteVPCEConfigurationResult;
+
     public DeleteVPCEConfigurationResponse withDeleteVPCEConfigurationResult(java.util.Map<String, Object> deleteVPCEConfigurationResult) {
         this.deleteVPCEConfigurationResult = deleteVPCEConfigurationResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVPCEConfigurationResponse {
      */
     
     public Object invalidOperationException;
+
     public DeleteVPCEConfigurationResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVPCEConfigurationResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVPCEConfigurationResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVPCEConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteVPCEConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVPCEConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVPCEConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVPCEConfigurationResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteVPCEConfigurationResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
     }
     
+    public DeleteVPCEConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVoiceTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateVoiceTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVoiceTemplateResponse {
     
     
     public String contentType;
+
     public UpdateVoiceTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateVoiceTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateVoiceTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateVoiceTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateVoiceTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateVoiceTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateVoiceTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateVoiceTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateVoiceTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVoiceTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateVoiceTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateVoiceTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVoiceTemplateResponse updateVoiceTemplateResponse;
+
     public UpdateVoiceTemplateResponse withUpdateVoiceTemplateResponse(org.openapis.openapi.models.shared.UpdateVoiceTemplateResponse updateVoiceTemplateResponse) {
         this.updateVoiceTemplateResponse = updateVoiceTemplateResponse;
         return this;
     }
     
+    public UpdateVoiceTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

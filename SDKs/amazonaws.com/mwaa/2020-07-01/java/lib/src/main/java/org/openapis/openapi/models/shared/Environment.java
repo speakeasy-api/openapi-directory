@@ -20,6 +20,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirflowConfigurationOptions")
     public java.util.Map<String, String> airflowConfigurationOptions;
+
     public Environment withAirflowConfigurationOptions(java.util.Map<String, String> airflowConfigurationOptions) {
         this.airflowConfigurationOptions = airflowConfigurationOptions;
         return this;
@@ -28,6 +29,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AirflowVersion")
     public String airflowVersion;
+
     public Environment withAirflowVersion(String airflowVersion) {
         this.airflowVersion = airflowVersion;
         return this;
@@ -36,6 +38,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Environment withArn(String arn) {
         this.arn = arn;
         return this;
@@ -46,6 +49,7 @@ public class Environment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Environment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DagS3Path")
     public String dagS3Path;
+
     public Environment withDagS3Path(String dagS3Path) {
         this.dagS3Path = dagS3Path;
         return this;
@@ -62,6 +67,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentClass")
     public String environmentClass;
+
     public Environment withEnvironmentClass(String environmentClass) {
         this.environmentClass = environmentClass;
         return this;
@@ -70,6 +76,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public Environment withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -78,6 +85,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public Environment withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -86,6 +94,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdate")
     public LastUpdate lastUpdate;
+
     public Environment withLastUpdate(LastUpdate lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -94,6 +103,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public Environment withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
@@ -102,6 +112,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxWorkers")
     public Long maxWorkers;
+
     public Environment withMaxWorkers(Long maxWorkers) {
         this.maxWorkers = maxWorkers;
         return this;
@@ -110,6 +121,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinWorkers")
     public Long minWorkers;
+
     public Environment withMinWorkers(Long minWorkers) {
         this.minWorkers = minWorkers;
         return this;
@@ -118,6 +130,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Environment withName(String name) {
         this.name = name;
         return this;
@@ -126,6 +139,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public Environment withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -134,6 +148,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginsS3ObjectVersion")
     public String pluginsS3ObjectVersion;
+
     public Environment withPluginsS3ObjectVersion(String pluginsS3ObjectVersion) {
         this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
         return this;
@@ -142,6 +157,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PluginsS3Path")
     public String pluginsS3Path;
+
     public Environment withPluginsS3Path(String pluginsS3Path) {
         this.pluginsS3Path = pluginsS3Path;
         return this;
@@ -150,6 +166,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequirementsS3ObjectVersion")
     public String requirementsS3ObjectVersion;
+
     public Environment withRequirementsS3ObjectVersion(String requirementsS3ObjectVersion) {
         this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
         return this;
@@ -158,6 +175,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequirementsS3Path")
     public String requirementsS3Path;
+
     public Environment withRequirementsS3Path(String requirementsS3Path) {
         this.requirementsS3Path = requirementsS3Path;
         return this;
@@ -166,6 +184,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedulers")
     public Long schedulers;
+
     public Environment withSchedulers(Long schedulers) {
         this.schedulers = schedulers;
         return this;
@@ -174,6 +193,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRoleArn")
     public String serviceRoleArn;
+
     public Environment withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -182,14 +202,34 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBucketArn")
     public String sourceBucketArn;
+
     public Environment withSourceBucketArn(String sourceBucketArn) {
         this.sourceBucketArn = sourceBucketArn;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartupScriptS3ObjectVersion")
+    public String startupScriptS3ObjectVersion;
+
+    public Environment withStartupScriptS3ObjectVersion(String startupScriptS3ObjectVersion) {
+        this.startupScriptS3ObjectVersion = startupScriptS3ObjectVersion;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("StartupScriptS3Path")
+    public String startupScriptS3Path;
+
+    public Environment withStartupScriptS3Path(String startupScriptS3Path) {
+        this.startupScriptS3Path = startupScriptS3Path;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EnvironmentStatusEnum status;
+
     public Environment withStatus(EnvironmentStatusEnum status) {
         this.status = status;
         return this;
@@ -198,6 +238,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Environment withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -206,6 +247,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebserverAccessMode")
     public WebserverAccessModeEnum webserverAccessMode;
+
     public Environment withWebserverAccessMode(WebserverAccessModeEnum webserverAccessMode) {
         this.webserverAccessMode = webserverAccessMode;
         return this;
@@ -214,6 +256,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebserverUrl")
     public String webserverUrl;
+
     public Environment withWebserverUrl(String webserverUrl) {
         this.webserverUrl = webserverUrl;
         return this;
@@ -222,9 +265,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeeklyMaintenanceWindowStart")
     public String weeklyMaintenanceWindowStart;
+
     public Environment withWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
         this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
         return this;
     }
     
+    public Environment(){}
 }

@@ -14,6 +14,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("certificate")
     public String certificate;
+
     public PostCertificatesCreateCertificateResponseCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -24,6 +25,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("created")
     public String created;
+
     public PostCertificatesCreateCertificateResponseCertificate withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("domain_names")
     public String[] domainNames;
+
     public PostCertificatesCreateCertificateResponseCertificate withDomainNames(String[] domainNames) {
         this.domainNames = domainNames;
         return this;
@@ -44,6 +47,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public PostCertificatesCreateCertificateResponseCertificate withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -54,6 +58,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostCertificatesCreateCertificateResponseCertificate withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostCertificatesCreateCertificateResponseCertificate withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -74,6 +80,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("name")
     public String name;
+
     public PostCertificatesCreateCertificateResponseCertificate withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +91,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("not_valid_after")
     public String notValidAfter;
+
     public PostCertificatesCreateCertificateResponseCertificate withNotValidAfter(String notValidAfter) {
         this.notValidAfter = notValidAfter;
         return this;
@@ -94,6 +102,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("not_valid_before")
     public String notValidBefore;
+
     public PostCertificatesCreateCertificateResponseCertificate withNotValidBefore(String notValidBefore) {
         this.notValidBefore = notValidBefore;
         return this;
@@ -105,6 +114,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PostCertificatesCreateCertificateResponseCertificateStatus status;
+
     public PostCertificatesCreateCertificateResponseCertificate withStatus(PostCertificatesCreateCertificateResponseCertificateStatus status) {
         this.status = status;
         return this;
@@ -116,6 +126,7 @@ public class PostCertificatesCreateCertificateResponseCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostCertificatesCreateCertificateResponseCertificateTypeEnum type;
+
     public PostCertificatesCreateCertificateResponseCertificate withType(PostCertificatesCreateCertificateResponseCertificateTypeEnum type) {
         this.type = type;
         return this;
@@ -126,9 +137,22 @@ public class PostCertificatesCreateCertificateResponseCertificate {
      */
     @JsonProperty("used_by")
     public PostCertificatesCreateCertificateResponseCertificateUsedBy[] usedBy;
+
     public PostCertificatesCreateCertificateResponseCertificate withUsedBy(PostCertificatesCreateCertificateResponseCertificateUsedBy[] usedBy) {
         this.usedBy = usedBy;
         return this;
     }
     
+    public PostCertificatesCreateCertificateResponseCertificate(@JsonProperty("certificate") String certificate, @JsonProperty("created") String created, @JsonProperty("domain_names") String[] domainNames, @JsonProperty("fingerprint") String fingerprint, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("not_valid_after") String notValidAfter, @JsonProperty("not_valid_before") String notValidBefore, @JsonProperty("used_by") PostCertificatesCreateCertificateResponseCertificateUsedBy[] usedBy) {
+        this.certificate = certificate;
+        this.created = created;
+        this.domainNames = domainNames;
+        this.fingerprint = fingerprint;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.notValidAfter = notValidAfter;
+        this.notValidBefore = notValidBefore;
+        this.usedBy = usedBy;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchDeleteConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public java.util.Map<String, ErrorDetail> errors;
+
     public BatchDeleteConnectionResponse withErrors(java.util.Map<String, ErrorDetail> errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class BatchDeleteConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Succeeded")
     public String[] succeeded;
+
     public BatchDeleteConnectionResponse withSucceeded(String[] succeeded) {
         this.succeeded = succeeded;
         return this;
     }
     
+    public BatchDeleteConnectionResponse(){}
 }

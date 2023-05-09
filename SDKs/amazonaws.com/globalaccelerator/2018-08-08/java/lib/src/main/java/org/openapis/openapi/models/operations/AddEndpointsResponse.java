@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddEndpointsResponse {
@@ -12,6 +13,7 @@ public class AddEndpointsResponse {
      */
     
     public Object accessDeniedException;
+
     public AddEndpointsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddEndpointsResponse addEndpointsResponse;
+
     public AddEndpointsResponse withAddEndpointsResponse(org.openapis.openapi.models.shared.AddEndpointsResponse addEndpointsResponse) {
         this.addEndpointsResponse = addEndpointsResponse;
         return this;
@@ -29,6 +32,7 @@ public class AddEndpointsResponse {
     
     
     public String contentType;
+
     public AddEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddEndpointsResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public AddEndpointsResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class AddEndpointsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public AddEndpointsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class AddEndpointsResponse {
      */
     
     public Object invalidArgumentException;
+
     public AddEndpointsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -69,6 +76,7 @@ public class AddEndpointsResponse {
      */
     
     public Object limitExceededException;
+
     public AddEndpointsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class AddEndpointsResponse {
     
     
     public Integer statusCode;
+
     public AddEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AddEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class AddEndpointsResponse {
      */
     
     public Object transactionInProgressException;
+
     public AddEndpointsResponse withTransactionInProgressException(Object transactionInProgressException) {
         this.transactionInProgressException = transactionInProgressException;
         return this;
     }
     
+    public AddEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

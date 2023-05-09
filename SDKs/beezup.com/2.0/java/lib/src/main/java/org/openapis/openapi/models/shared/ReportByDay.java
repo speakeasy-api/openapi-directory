@@ -11,6 +11,7 @@ import java.time.LocalDate;
 public class ReportByDay {
     @JsonProperty("allChannels")
     public ReportByDayAllChannels allChannels;
+
     public ReportByDay withAllChannels(ReportByDayAllChannels allChannels) {
         this.allChannels = allChannels;
         return this;
@@ -18,6 +19,7 @@ public class ReportByDay {
     
     @JsonProperty("byChannels")
     public ReportByDayByChannel[] byChannels;
+
     public ReportByDay withByChannels(ReportByDayByChannel[] byChannels) {
         this.byChannels = byChannels;
         return this;
@@ -26,9 +28,15 @@ public class ReportByDay {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("day")
     public LocalDate day;
+
     public ReportByDay withDay(LocalDate day) {
         this.day = day;
         return this;
     }
     
+    public ReportByDay(@JsonProperty("allChannels") ReportByDayAllChannels allChannels, @JsonProperty("byChannels") ReportByDayByChannel[] byChannels, @JsonProperty("day") LocalDate day) {
+        this.allChannels = allChannels;
+        this.byChannels = byChannels;
+        this.day = day;
+  }
 }

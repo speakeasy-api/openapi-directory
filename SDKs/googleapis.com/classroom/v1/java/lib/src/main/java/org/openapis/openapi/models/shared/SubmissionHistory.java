@@ -18,6 +18,7 @@ public class SubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradeHistory")
     public GradeHistory gradeHistory;
+
     public SubmissionHistory withGradeHistory(GradeHistory gradeHistory) {
         this.gradeHistory = gradeHistory;
         return this;
@@ -29,9 +30,11 @@ public class SubmissionHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateHistory")
     public StateHistory stateHistory;
+
     public SubmissionHistory withStateHistory(StateHistory stateHistory) {
         this.stateHistory = stateHistory;
         return this;
     }
     
+    public SubmissionHistory(){}
 }

@@ -15,6 +15,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountNumber")
     public String bankAccountNumber;
+
     public BankAccount withBankAccountNumber(String bankAccountNumber) {
         this.bankAccountNumber = bankAccountNumber;
         return this;
@@ -26,6 +27,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankCity")
     public String bankCity;
+
     public BankAccount withBankCity(String bankCity) {
         this.bankCity = bankCity;
         return this;
@@ -37,6 +39,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankLocationId")
     public String bankLocationId;
+
     public BankAccount withBankLocationId(String bankLocationId) {
         this.bankLocationId = bankLocationId;
         return this;
@@ -48,6 +51,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankName")
     public String bankName;
+
     public BankAccount withBankName(String bankName) {
         this.bankName = bankName;
         return this;
@@ -59,6 +63,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bic")
     public String bic;
+
     public BankAccount withBic(String bic) {
         this.bic = bic;
         return this;
@@ -72,6 +77,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public BankAccount withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -83,6 +89,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public BankAccount withIban(String iban) {
         this.iban = iban;
         return this;
@@ -104,6 +111,7 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerName")
     public String ownerName;
+
     public BankAccount withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -115,9 +123,11 @@ public class BankAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxId")
     public String taxId;
+
     public BankAccount withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
     }
     
+    public BankAccount(){}
 }

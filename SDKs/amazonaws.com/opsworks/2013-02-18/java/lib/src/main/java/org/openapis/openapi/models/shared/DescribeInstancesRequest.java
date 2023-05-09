@@ -12,6 +12,7 @@ public class DescribeInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceIds")
     public String[] instanceIds;
+
     public DescribeInstancesRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public DescribeInstancesRequest withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -28,9 +30,11 @@ public class DescribeInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public DescribeInstancesRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public DescribeInstancesRequest(){}
 }

@@ -15,6 +15,7 @@ public class CollectorShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectorName")
     public String collectorName;
+
     public CollectorShortInfoResponse withCollectorName(String collectorName) {
         this.collectorName = collectorName;
         return this;
@@ -23,9 +24,11 @@ public class CollectorShortInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectorReferencedId")
     public String collectorReferencedId;
+
     public CollectorShortInfoResponse withCollectorReferencedId(String collectorReferencedId) {
         this.collectorReferencedId = collectorReferencedId;
         return this;
     }
     
+    public CollectorShortInfoResponse(){}
 }

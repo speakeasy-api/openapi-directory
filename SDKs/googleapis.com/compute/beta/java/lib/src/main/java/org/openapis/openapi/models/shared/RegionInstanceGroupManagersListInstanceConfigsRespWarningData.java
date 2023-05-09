@@ -15,6 +15,7 @@ public class RegionInstanceGroupManagersListInstanceConfigsRespWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public RegionInstanceGroupManagersListInstanceConfigsRespWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class RegionInstanceGroupManagersListInstanceConfigsRespWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public RegionInstanceGroupManagersListInstanceConfigsRespWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RegionInstanceGroupManagersListInstanceConfigsRespWarningData(){}
 }

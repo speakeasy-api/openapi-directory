@@ -20,6 +20,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupArn")
     public String backupArn;
+
     public BackupSummary withBackupArn(String backupArn) {
         this.backupArn = backupArn;
         return this;
@@ -30,6 +31,7 @@ public class BackupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BackupCreationDateTime")
     public OffsetDateTime backupCreationDateTime;
+
     public BackupSummary withBackupCreationDateTime(OffsetDateTime backupCreationDateTime) {
         this.backupCreationDateTime = backupCreationDateTime;
         return this;
@@ -40,6 +42,7 @@ public class BackupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("BackupExpiryDateTime")
     public OffsetDateTime backupExpiryDateTime;
+
     public BackupSummary withBackupExpiryDateTime(OffsetDateTime backupExpiryDateTime) {
         this.backupExpiryDateTime = backupExpiryDateTime;
         return this;
@@ -48,6 +51,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupName")
     public String backupName;
+
     public BackupSummary withBackupName(String backupName) {
         this.backupName = backupName;
         return this;
@@ -56,6 +60,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupSizeBytes")
     public Long backupSizeBytes;
+
     public BackupSummary withBackupSizeBytes(Long backupSizeBytes) {
         this.backupSizeBytes = backupSizeBytes;
         return this;
@@ -64,6 +69,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupStatus")
     public BackupStatusEnum backupStatus;
+
     public BackupSummary withBackupStatus(BackupStatusEnum backupStatus) {
         this.backupStatus = backupStatus;
         return this;
@@ -72,6 +78,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupType")
     public BackupTypeEnum backupType;
+
     public BackupSummary withBackupType(BackupTypeEnum backupType) {
         this.backupType = backupType;
         return this;
@@ -80,6 +87,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public BackupSummary withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
@@ -88,6 +96,7 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableId")
     public String tableId;
+
     public BackupSummary withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -96,9 +105,11 @@ public class BackupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public BackupSummary withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public BackupSummary(){}
 }

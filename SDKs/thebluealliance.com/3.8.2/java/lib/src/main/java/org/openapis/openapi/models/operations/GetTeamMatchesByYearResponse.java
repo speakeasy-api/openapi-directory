@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamMatchesByYearResponse {
     
     public String contentType;
+
     public GetTeamMatchesByYearResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamMatchesByYearResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetTeamMatchesByYearResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class GetTeamMatchesByYearResponse {
      */
     
     public org.openapis.openapi.models.shared.Match[] matches;
+
     public GetTeamMatchesByYearResponse withMatches(org.openapis.openapi.models.shared.Match[] matches) {
         this.matches = matches;
         return this;
@@ -33,6 +37,7 @@ public class GetTeamMatchesByYearResponse {
     
     
     public Integer statusCode;
+
     public GetTeamMatchesByYearResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetTeamMatchesByYearResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamMatchesByYearResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTeamMatchesByYearResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ public class PutBackupPolicyRequestBody {
      */
     @JsonProperty("BackupPolicy")
     public PutBackupPolicyRequestBodyBackupPolicy backupPolicy;
+
     public PutBackupPolicyRequestBody withBackupPolicy(PutBackupPolicyRequestBodyBackupPolicy backupPolicy) {
         this.backupPolicy = backupPolicy;
         return this;
     }
     
+    public PutBackupPolicyRequestBody(@JsonProperty("BackupPolicy") PutBackupPolicyRequestBodyBackupPolicy backupPolicy) {
+        this.backupPolicy = backupPolicy;
+  }
 }

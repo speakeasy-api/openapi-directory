@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mid")
     public String mid;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation withMid(String mid) {
         this.mid = mid;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1ProductSearchResultsObjectAnnotation(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SchedulingPolicyListingDetail {
     @JsonProperty("arn")
     public String arn;
+
     public SchedulingPolicyListingDetail withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public SchedulingPolicyListingDetail(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

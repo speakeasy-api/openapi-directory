@@ -15,6 +15,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyPrivateIp")
     public Boolean copyPrivateIp;
+
     public LaunchConfiguration withCopyPrivateIp(Boolean copyPrivateIp) {
         this.copyPrivateIp = copyPrivateIp;
         return this;
@@ -23,6 +24,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyTags")
     public Boolean copyTags;
+
     public LaunchConfiguration withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -31,6 +33,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2LaunchTemplateID")
     public String ec2LaunchTemplateID;
+
     public LaunchConfiguration withEc2LaunchTemplateID(String ec2LaunchTemplateID) {
         this.ec2LaunchTemplateID = ec2LaunchTemplateID;
         return this;
@@ -39,6 +42,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDisposition")
     public LaunchDispositionEnum launchDisposition;
+
     public LaunchConfiguration withLaunchDisposition(LaunchDispositionEnum launchDisposition) {
         this.launchDisposition = launchDisposition;
         return this;
@@ -47,6 +51,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licensing")
     public Licensing licensing;
+
     public LaunchConfiguration withLicensing(Licensing licensing) {
         this.licensing = licensing;
         return this;
@@ -55,6 +60,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LaunchConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public LaunchConfiguration withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
@@ -71,9 +78,11 @@ public class LaunchConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceTypeRightSizingMethod")
     public TargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod;
+
     public LaunchConfiguration withTargetInstanceTypeRightSizingMethod(TargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod) {
         this.targetInstanceTypeRightSizingMethod = targetInstanceTypeRightSizingMethod;
         return this;
     }
     
+    public LaunchConfiguration(){}
 }

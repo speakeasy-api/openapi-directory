@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Name {
     @JsonProperty("type")
     public String type;
+
     public Name withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Name(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

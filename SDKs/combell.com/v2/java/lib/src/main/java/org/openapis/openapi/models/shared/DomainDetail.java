@@ -23,6 +23,7 @@ public class DomainDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("can_toggle_renew")
     public Boolean canToggleRenew;
+
     public DomainDetail withCanToggleRenew(Boolean canToggleRenew) {
         this.canToggleRenew = canToggleRenew;
         return this;
@@ -34,6 +35,7 @@ public class DomainDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public DomainDetail withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -47,6 +49,7 @@ public class DomainDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration_date")
     public OffsetDateTime expirationDate;
+
     public DomainDetail withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -58,6 +61,7 @@ public class DomainDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name_servers")
     public NameServer[] nameServers;
+
     public DomainDetail withNameServers(NameServer[] nameServers) {
         this.nameServers = nameServers;
         return this;
@@ -66,6 +70,7 @@ public class DomainDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrant")
     public Registrant registrant;
+
     public DomainDetail withRegistrant(Registrant registrant) {
         this.registrant = registrant;
         return this;
@@ -78,9 +83,11 @@ public class DomainDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("will_renew")
     public Boolean willRenew;
+
     public DomainDetail withWillRenew(Boolean willRenew) {
         this.willRenew = willRenew;
         return this;
     }
     
+    public DomainDetail(){}
 }

@@ -18,6 +18,7 @@ public class PauseProposalDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalDealIds")
     public String[] externalDealIds;
+
     public PauseProposalDealsRequest withExternalDealIds(String[] externalDealIds) {
         this.externalDealIds = externalDealIds;
         return this;
@@ -29,9 +30,11 @@ public class PauseProposalDealsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PauseProposalDealsRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public PauseProposalDealsRequest(){}
 }

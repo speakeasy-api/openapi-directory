@@ -18,6 +18,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCampaignId")
     public String defaultCampaignId;
+
     public GuaranteedOrderInput withDefaultCampaignId(String defaultCampaignId) {
         this.defaultCampaignId = defaultCampaignId;
         return this;
@@ -29,6 +30,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GuaranteedOrderInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchange")
     public GuaranteedOrderExchangeEnum exchange;
+
     public GuaranteedOrderInput withExchange(GuaranteedOrderExchangeEnum exchange) {
         this.exchange = exchange;
         return this;
@@ -51,6 +54,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherName")
     public String publisherName;
+
     public GuaranteedOrderInput withPublisherName(String publisherName) {
         this.publisherName = publisherName;
         return this;
@@ -62,6 +66,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessInherited")
     public Boolean readAccessInherited;
+
     public GuaranteedOrderInput withReadAccessInherited(Boolean readAccessInherited) {
         this.readAccessInherited = readAccessInherited;
         return this;
@@ -73,6 +78,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAdvertiserIds")
     public String[] readAdvertiserIds;
+
     public GuaranteedOrderInput withReadAdvertiserIds(String[] readAdvertiserIds) {
         this.readAdvertiserIds = readAdvertiserIds;
         return this;
@@ -84,6 +90,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readWriteAdvertiserId")
     public String readWriteAdvertiserId;
+
     public GuaranteedOrderInput withReadWriteAdvertiserId(String readWriteAdvertiserId) {
         this.readWriteAdvertiserId = readWriteAdvertiserId;
         return this;
@@ -95,6 +102,7 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readWritePartnerId")
     public String readWritePartnerId;
+
     public GuaranteedOrderInput withReadWritePartnerId(String readWritePartnerId) {
         this.readWritePartnerId = readWritePartnerId;
         return this;
@@ -106,9 +114,11 @@ public class GuaranteedOrderInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GuaranteedOrderStatusInput status;
+
     public GuaranteedOrderInput withStatus(GuaranteedOrderStatusInput status) {
         this.status = status;
         return this;
     }
     
+    public GuaranteedOrderInput(){}
 }

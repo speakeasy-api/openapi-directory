@@ -208,6 +208,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -245,13 +250,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse() {{
+        org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.AcceptDirectConnectGatewayAssociationProposalResponse(contentType, httpRes.statusCode()) {{
             acceptDirectConnectGatewayAssociationProposalResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -284,7 +287,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectResponse allocateConnectionOnInterconnect(org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=OvertureService.AllocateConnectionOnInterconnect");
@@ -313,13 +318,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectResponse res = new org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectResponse() {{
+        org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectResponse res = new org.openapis.openapi.models.operations.AllocateConnectionOnInterconnectResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -381,15 +384,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllocateHostedConnectionResponse res = new org.openapis.openapi.models.operations.AllocateHostedConnectionResponse() {{
+        org.openapis.openapi.models.operations.AllocateHostedConnectionResponse res = new org.openapis.openapi.models.operations.AllocateHostedConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -465,15 +466,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllocatePrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocatePrivateVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.AllocatePrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocatePrivateVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -549,15 +548,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllocatePublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocatePublicVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.AllocatePublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocatePublicVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -633,15 +630,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllocateTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocateTransitVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.AllocateTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AllocateTransitVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             allocateTransitVirtualInterfaceResult = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -717,13 +712,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateConnectionWithLagResponse res = new org.openapis.openapi.models.operations.AssociateConnectionWithLagResponse() {{
+        org.openapis.openapi.models.operations.AssociateConnectionWithLagResponse res = new org.openapis.openapi.models.operations.AssociateConnectionWithLagResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,13 +778,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateHostedConnectionResponse res = new org.openapis.openapi.models.operations.AssociateHostedConnectionResponse() {{
+        org.openapis.openapi.models.operations.AssociateHostedConnectionResponse res = new org.openapis.openapi.models.operations.AssociateHostedConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -853,13 +844,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateMacSecKeyResponse res = new org.openapis.openapi.models.operations.AssociateMacSecKeyResponse() {{
+        org.openapis.openapi.models.operations.AssociateMacSecKeyResponse res = new org.openapis.openapi.models.operations.AssociateMacSecKeyResponse(contentType, httpRes.statusCode()) {{
             associateMacSecKeyResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -921,13 +910,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AssociateVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.AssociateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.AssociateVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -989,13 +976,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmConnectionResponse res = new org.openapis.openapi.models.operations.ConfirmConnectionResponse() {{
+        org.openapis.openapi.models.operations.ConfirmConnectionResponse res = new org.openapis.openapi.models.operations.ConfirmConnectionResponse(contentType, httpRes.statusCode()) {{
             confirmConnectionResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1057,13 +1042,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCustomerAgreementResponse res = new org.openapis.openapi.models.operations.ConfirmCustomerAgreementResponse() {{
+        org.openapis.openapi.models.operations.ConfirmCustomerAgreementResponse res = new org.openapis.openapi.models.operations.ConfirmCustomerAgreementResponse(contentType, httpRes.statusCode()) {{
             confirmCustomerAgreementResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1125,13 +1108,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmPrivateVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmPrivateVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             confirmPrivateVirtualInterfaceResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1193,13 +1174,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmPublicVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.ConfirmPublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmPublicVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             confirmPublicVirtualInterfaceResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1261,13 +1240,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmTransitVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.ConfirmTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.ConfirmTransitVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             confirmTransitVirtualInterfaceResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1329,13 +1306,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBGPPeerResponse res = new org.openapis.openapi.models.operations.CreateBGPPeerResponse() {{
+        org.openapis.openapi.models.operations.CreateBGPPeerResponse res = new org.openapis.openapi.models.operations.CreateBGPPeerResponse(contentType, httpRes.statusCode()) {{
             createBGPPeerResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1397,15 +1372,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateConnectionResponse res = new org.openapis.openapi.models.operations.CreateConnectionResponse() {{
+        org.openapis.openapi.models.operations.CreateConnectionResponse res = new org.openapis.openapi.models.operations.CreateConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1481,13 +1454,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayResponse() {{
+        org.openapis.openapi.models.operations.CreateDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayResponse(contentType, httpRes.statusCode()) {{
             createDirectConnectGatewayResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1549,13 +1520,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationResponse() {{
+        org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationResponse(contentType, httpRes.statusCode()) {{
             createDirectConnectGatewayAssociationResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1617,13 +1586,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationProposalResponse() {{
+        org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.CreateDirectConnectGatewayAssociationProposalResponse(contentType, httpRes.statusCode()) {{
             createDirectConnectGatewayAssociationProposalResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1685,15 +1652,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateInterconnectResponse res = new org.openapis.openapi.models.operations.CreateInterconnectResponse() {{
+        org.openapis.openapi.models.operations.CreateInterconnectResponse res = new org.openapis.openapi.models.operations.CreateInterconnectResponse(contentType, httpRes.statusCode()) {{
             interconnect = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1769,15 +1734,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLagResponse res = new org.openapis.openapi.models.operations.CreateLagResponse() {{
+        org.openapis.openapi.models.operations.CreateLagResponse res = new org.openapis.openapi.models.operations.CreateLagResponse(contentType, httpRes.statusCode()) {{
             lag = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1853,15 +1816,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreatePrivateVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.CreatePrivateVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreatePrivateVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1937,15 +1898,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreatePublicVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.CreatePublicVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreatePublicVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2021,15 +1980,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreateTransitVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.CreateTransitVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.CreateTransitVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             createTransitVirtualInterfaceResult = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2105,13 +2062,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBGPPeerResponse res = new org.openapis.openapi.models.operations.DeleteBGPPeerResponse() {{
+        org.openapis.openapi.models.operations.DeleteBGPPeerResponse res = new org.openapis.openapi.models.operations.DeleteBGPPeerResponse(contentType, httpRes.statusCode()) {{
             deleteBGPPeerResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2173,13 +2128,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteConnectionResponse res = new org.openapis.openapi.models.operations.DeleteConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2241,13 +2194,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayResponse() {{
+        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayResponse(contentType, httpRes.statusCode()) {{
             deleteDirectConnectGatewayResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2309,13 +2260,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationResponse() {{
+        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationResponse(contentType, httpRes.statusCode()) {{
             deleteDirectConnectGatewayAssociationResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2377,13 +2326,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationProposalResponse() {{
+        org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationProposalResponse res = new org.openapis.openapi.models.operations.DeleteDirectConnectGatewayAssociationProposalResponse(contentType, httpRes.statusCode()) {{
             deleteDirectConnectGatewayAssociationProposalResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2445,13 +2392,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteInterconnectResponse res = new org.openapis.openapi.models.operations.DeleteInterconnectResponse() {{
+        org.openapis.openapi.models.operations.DeleteInterconnectResponse res = new org.openapis.openapi.models.operations.DeleteInterconnectResponse(contentType, httpRes.statusCode()) {{
             deleteInterconnectResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2513,13 +2458,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLagResponse res = new org.openapis.openapi.models.operations.DeleteLagResponse() {{
+        org.openapis.openapi.models.operations.DeleteLagResponse res = new org.openapis.openapi.models.operations.DeleteLagResponse(contentType, httpRes.statusCode()) {{
             lag = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2581,13 +2524,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.DeleteVirtualInterfaceResponse() {{
+        org.openapis.openapi.models.operations.DeleteVirtualInterfaceResponse res = new org.openapis.openapi.models.operations.DeleteVirtualInterfaceResponse(contentType, httpRes.statusCode()) {{
             deleteVirtualInterfaceResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2620,7 +2561,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeConnectionLoaResponse describeConnectionLoa(org.openapis.openapi.models.operations.DescribeConnectionLoaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=OvertureService.DescribeConnectionLoa");
@@ -2649,13 +2592,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeConnectionLoaResponse res = new org.openapis.openapi.models.operations.DescribeConnectionLoaResponse() {{
+        org.openapis.openapi.models.operations.DescribeConnectionLoaResponse res = new org.openapis.openapi.models.operations.DescribeConnectionLoaResponse(contentType, httpRes.statusCode()) {{
             describeConnectionLoaResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2717,13 +2658,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeConnectionsResponse() {{
+        org.openapis.openapi.models.operations.DescribeConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeConnectionsResponse(contentType, httpRes.statusCode()) {{
             connections = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2756,7 +2695,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectResponse describeConnectionsOnInterconnect(org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=OvertureService.DescribeConnectionsOnInterconnect");
@@ -2785,13 +2726,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectResponse res = new org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectResponse() {{
+        org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectResponse res = new org.openapis.openapi.models.operations.DescribeConnectionsOnInterconnectResponse(contentType, httpRes.statusCode()) {{
             connections = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2848,13 +2787,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCustomerMetadataResponse res = new org.openapis.openapi.models.operations.DescribeCustomerMetadataResponse() {{
+        org.openapis.openapi.models.operations.DescribeCustomerMetadataResponse res = new org.openapis.openapi.models.operations.DescribeCustomerMetadataResponse(contentType, httpRes.statusCode()) {{
             describeCustomerMetadataResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2916,13 +2853,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationProposalsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationProposalsResponse() {{
+        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationProposalsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationProposalsResponse(contentType, httpRes.statusCode()) {{
             describeDirectConnectGatewayAssociationProposalsResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2984,13 +2919,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationsResponse() {{
+        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAssociationsResponse(contentType, httpRes.statusCode()) {{
             describeDirectConnectGatewayAssociationsResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3052,13 +2985,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAttachmentsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAttachmentsResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewayAttachmentsResponse(contentType, httpRes.statusCode()) {{
             describeDirectConnectGatewayAttachmentsResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3120,13 +3051,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDirectConnectGatewaysResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewaysResponse() {{
+        org.openapis.openapi.models.operations.DescribeDirectConnectGatewaysResponse res = new org.openapis.openapi.models.operations.DescribeDirectConnectGatewaysResponse(contentType, httpRes.statusCode()) {{
             describeDirectConnectGatewaysResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3188,13 +3117,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeHostedConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeHostedConnectionsResponse() {{
+        org.openapis.openapi.models.operations.DescribeHostedConnectionsResponse res = new org.openapis.openapi.models.operations.DescribeHostedConnectionsResponse(contentType, httpRes.statusCode()) {{
             connections = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3227,7 +3154,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeInterconnectLoaResponse describeInterconnectLoa(org.openapis.openapi.models.operations.DescribeInterconnectLoaRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=OvertureService.DescribeInterconnectLoa");
@@ -3256,13 +3185,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeInterconnectLoaResponse res = new org.openapis.openapi.models.operations.DescribeInterconnectLoaResponse() {{
+        org.openapis.openapi.models.operations.DescribeInterconnectLoaResponse res = new org.openapis.openapi.models.operations.DescribeInterconnectLoaResponse(contentType, httpRes.statusCode()) {{
             describeInterconnectLoaResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3324,13 +3251,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeInterconnectsResponse res = new org.openapis.openapi.models.operations.DescribeInterconnectsResponse() {{
+        org.openapis.openapi.models.operations.DescribeInterconnectsResponse res = new org.openapis.openapi.models.operations.DescribeInterconnectsResponse(contentType, httpRes.statusCode()) {{
             interconnects = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3392,13 +3317,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLagsResponse res = new org.openapis.openapi.models.operations.DescribeLagsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLagsResponse res = new org.openapis.openapi.models.operations.DescribeLagsResponse(contentType, httpRes.statusCode()) {{
             lags = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3460,13 +3383,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLoaResponse res = new org.openapis.openapi.models.operations.DescribeLoaResponse() {{
+        org.openapis.openapi.models.operations.DescribeLoaResponse res = new org.openapis.openapi.models.operations.DescribeLoaResponse(contentType, httpRes.statusCode()) {{
             loa = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3523,13 +3444,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLocationsResponse res = new org.openapis.openapi.models.operations.DescribeLocationsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLocationsResponse res = new org.openapis.openapi.models.operations.DescribeLocationsResponse(contentType, httpRes.statusCode()) {{
             locations = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3591,13 +3510,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRouterConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeRouterConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeRouterConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeRouterConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeRouterConfigurationResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3659,13 +3576,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTagsResponse res = new org.openapis.openapi.models.operations.DescribeTagsResponse() {{
+        org.openapis.openapi.models.operations.DescribeTagsResponse res = new org.openapis.openapi.models.operations.DescribeTagsResponse(contentType, httpRes.statusCode()) {{
             describeTagsResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3722,13 +3637,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualGatewaysResponse res = new org.openapis.openapi.models.operations.DescribeVirtualGatewaysResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualGatewaysResponse res = new org.openapis.openapi.models.operations.DescribeVirtualGatewaysResponse(contentType, httpRes.statusCode()) {{
             virtualGateways = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3790,13 +3703,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeVirtualInterfacesResponse res = new org.openapis.openapi.models.operations.DescribeVirtualInterfacesResponse() {{
+        org.openapis.openapi.models.operations.DescribeVirtualInterfacesResponse res = new org.openapis.openapi.models.operations.DescribeVirtualInterfacesResponse(contentType, httpRes.statusCode()) {{
             virtualInterfaces = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3858,13 +3769,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateConnectionFromLagResponse res = new org.openapis.openapi.models.operations.DisassociateConnectionFromLagResponse() {{
+        org.openapis.openapi.models.operations.DisassociateConnectionFromLagResponse res = new org.openapis.openapi.models.operations.DisassociateConnectionFromLagResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3926,13 +3835,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateMacSecKeyResponse res = new org.openapis.openapi.models.operations.DisassociateMacSecKeyResponse() {{
+        org.openapis.openapi.models.operations.DisassociateMacSecKeyResponse res = new org.openapis.openapi.models.operations.DisassociateMacSecKeyResponse(contentType, httpRes.statusCode()) {{
             disassociateMacSecKeyResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3994,13 +3901,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVirtualInterfaceTestHistoryResponse res = new org.openapis.openapi.models.operations.ListVirtualInterfaceTestHistoryResponse() {{
+        org.openapis.openapi.models.operations.ListVirtualInterfaceTestHistoryResponse res = new org.openapis.openapi.models.operations.ListVirtualInterfaceTestHistoryResponse(contentType, httpRes.statusCode()) {{
             listVirtualInterfaceTestHistoryResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4062,13 +3967,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartBgpFailoverTestResponse res = new org.openapis.openapi.models.operations.StartBgpFailoverTestResponse() {{
+        org.openapis.openapi.models.operations.StartBgpFailoverTestResponse res = new org.openapis.openapi.models.operations.StartBgpFailoverTestResponse(contentType, httpRes.statusCode()) {{
             startBgpFailoverTestResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4130,13 +4033,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopBgpFailoverTestResponse res = new org.openapis.openapi.models.operations.StopBgpFailoverTestResponse() {{
+        org.openapis.openapi.models.operations.StopBgpFailoverTestResponse res = new org.openapis.openapi.models.operations.StopBgpFailoverTestResponse(contentType, httpRes.statusCode()) {{
             stopBgpFailoverTestResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4198,15 +4099,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             duplicateTagKeysException = null;
             tooManyTagsException = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4282,13 +4181,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4350,13 +4247,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConnectionResponse res = new org.openapis.openapi.models.operations.UpdateConnectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateConnectionResponse res = new org.openapis.openapi.models.operations.UpdateConnectionResponse(contentType, httpRes.statusCode()) {{
             connection = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4418,13 +4313,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.UpdateDirectConnectGatewayResponse() {{
+        org.openapis.openapi.models.operations.UpdateDirectConnectGatewayResponse res = new org.openapis.openapi.models.operations.UpdateDirectConnectGatewayResponse(contentType, httpRes.statusCode()) {{
             updateDirectConnectGatewayResponse = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4486,13 +4379,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.UpdateDirectConnectGatewayAssociationResponse() {{
+        org.openapis.openapi.models.operations.UpdateDirectConnectGatewayAssociationResponse res = new org.openapis.openapi.models.operations.UpdateDirectConnectGatewayAssociationResponse(contentType, httpRes.statusCode()) {{
             updateDirectConnectGatewayAssociationResult = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4554,13 +4445,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLagResponse res = new org.openapis.openapi.models.operations.UpdateLagResponse() {{
+        org.openapis.openapi.models.operations.UpdateLagResponse res = new org.openapis.openapi.models.operations.UpdateLagResponse(contentType, httpRes.statusCode()) {{
             lag = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4622,13 +4511,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVirtualInterfaceAttributesResponse res = new org.openapis.openapi.models.operations.UpdateVirtualInterfaceAttributesResponse() {{
+        org.openapis.openapi.models.operations.UpdateVirtualInterfaceAttributesResponse res = new org.openapis.openapi.models.operations.UpdateVirtualInterfaceAttributesResponse(contentType, httpRes.statusCode()) {{
             virtualInterface = null;
             directConnectServerException = null;
             directConnectClientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

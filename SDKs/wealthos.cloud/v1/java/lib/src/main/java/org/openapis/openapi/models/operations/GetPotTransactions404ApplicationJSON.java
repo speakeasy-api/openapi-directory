@@ -18,6 +18,7 @@ public class GetPotTransactions404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public GetPotTransactions404ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class GetPotTransactions404ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public GetPotTransactions404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetPotTransactions404ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

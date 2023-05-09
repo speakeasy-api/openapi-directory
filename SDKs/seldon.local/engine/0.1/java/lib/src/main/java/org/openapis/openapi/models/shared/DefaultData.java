@@ -12,6 +12,7 @@ public class DefaultData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public DefaultData withNames(String[] names) {
         this.names = names;
         return this;
@@ -20,6 +21,7 @@ public class DefaultData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ndarray")
     public Object[] ndarray;
+
     public DefaultData withNdarray(Object[] ndarray) {
         this.ndarray = ndarray;
         return this;
@@ -28,6 +30,7 @@ public class DefaultData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensor")
     public Tensor tensor;
+
     public DefaultData withTensor(Tensor tensor) {
         this.tensor = tensor;
         return this;
@@ -39,9 +42,11 @@ public class DefaultData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tftensor")
     public TensorflowTensorProto tftensor;
+
     public DefaultData withTftensor(TensorflowTensorProto tftensor) {
         this.tftensor = tftensor;
         return this;
     }
     
+    public DefaultData(){}
 }

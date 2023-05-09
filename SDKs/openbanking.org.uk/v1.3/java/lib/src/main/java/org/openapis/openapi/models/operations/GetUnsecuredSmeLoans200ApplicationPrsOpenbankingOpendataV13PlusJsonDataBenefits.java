@@ -17,6 +17,7 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
      */
     @JsonProperty("Benefit")
     public Boolean benefit;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefit(Boolean benefit) {
         this.benefit = benefit;
         return this;
@@ -25,9 +26,13 @@ public class GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJson
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenefitGroup")
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup;
+
     public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefitGroup(GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup) {
         this.benefitGroup = benefitGroup;
         return this;
     }
     
+    public GetUnsecuredSmeLoans200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits(@JsonProperty("Benefit") Boolean benefit) {
+        this.benefit = benefit;
+  }
 }

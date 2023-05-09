@@ -15,6 +15,7 @@ public class ListCompanyApiCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public PaginationLinks links;
+
     public ListCompanyApiCredentialsResponse withLinks(PaginationLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class ListCompanyApiCredentialsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CompanyApiCredential[] data;
+
     public ListCompanyApiCredentialsResponse withData(CompanyApiCredential[] data) {
         this.data = data;
         return this;
@@ -36,6 +38,7 @@ public class ListCompanyApiCredentialsResponse {
      */
     @JsonProperty("itemsTotal")
     public Integer itemsTotal;
+
     public ListCompanyApiCredentialsResponse withItemsTotal(Integer itemsTotal) {
         this.itemsTotal = itemsTotal;
         return this;
@@ -46,9 +49,14 @@ public class ListCompanyApiCredentialsResponse {
      */
     @JsonProperty("pagesTotal")
     public Integer pagesTotal;
+
     public ListCompanyApiCredentialsResponse withPagesTotal(Integer pagesTotal) {
         this.pagesTotal = pagesTotal;
         return this;
     }
     
+    public ListCompanyApiCredentialsResponse(@JsonProperty("itemsTotal") Integer itemsTotal, @JsonProperty("pagesTotal") Integer pagesTotal) {
+        this.itemsTotal = itemsTotal;
+        this.pagesTotal = pagesTotal;
+  }
 }

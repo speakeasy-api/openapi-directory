@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GsiMarketdataResponse {
     
     public String contentType;
+
     public GsiMarketdataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GsiMarketdataResponse {
     
     
     public Integer statusCode;
+
     public GsiMarketdataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GsiMarketdataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GsiMarketdataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GsiMarketdataResponse {
      */
     
     public GsiMarketdata200ApplicationJSON gsiMarketdata200ApplicationJSONObject;
+
     public GsiMarketdataResponse withGsiMarketdata200ApplicationJSONObject(GsiMarketdata200ApplicationJSON gsiMarketdata200ApplicationJSONObject) {
         this.gsiMarketdata200ApplicationJSONObject = gsiMarketdata200ApplicationJSONObject;
         return this;
     }
     
+    public GsiMarketdataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

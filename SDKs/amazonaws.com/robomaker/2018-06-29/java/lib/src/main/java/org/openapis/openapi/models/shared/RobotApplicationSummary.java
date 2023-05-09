@@ -20,6 +20,7 @@ public class RobotApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public RobotApplicationSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class RobotApplicationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public RobotApplicationSummary withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class RobotApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RobotApplicationSummary withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class RobotApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotSoftwareSuite")
     public RobotSoftwareSuite robotSoftwareSuite;
+
     public RobotApplicationSummary withRobotSoftwareSuite(RobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -54,9 +58,11 @@ public class RobotApplicationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public RobotApplicationSummary withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RobotApplicationSummary(){}
 }

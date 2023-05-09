@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeMapResponse {
     @JsonProperty("Configuration")
     public MapConfiguration configuration;
+
     public DescribeMapResponse withConfiguration(MapConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -28,6 +29,7 @@ public class DescribeMapResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribeMapResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -35,6 +37,7 @@ public class DescribeMapResponse {
     
     @JsonProperty("DataSource")
     public String dataSource;
+
     public DescribeMapResponse withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -42,6 +45,7 @@ public class DescribeMapResponse {
     
     @JsonProperty("Description")
     public String description;
+
     public DescribeMapResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +53,7 @@ public class DescribeMapResponse {
     
     @JsonProperty("MapArn")
     public String mapArn;
+
     public DescribeMapResponse withMapArn(String mapArn) {
         this.mapArn = mapArn;
         return this;
@@ -56,6 +61,7 @@ public class DescribeMapResponse {
     
     @JsonProperty("MapName")
     public String mapName;
+
     public DescribeMapResponse withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -64,6 +70,7 @@ public class DescribeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public DescribeMapResponsePricingPlanEnum pricingPlan;
+
     public DescribeMapResponse withPricingPlan(DescribeMapResponsePricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -72,6 +79,7 @@ public class DescribeMapResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeMapResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -81,9 +89,19 @@ public class DescribeMapResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribeMapResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeMapResponse(@JsonProperty("Configuration") MapConfiguration configuration, @JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("DataSource") String dataSource, @JsonProperty("Description") String description, @JsonProperty("MapArn") String mapArn, @JsonProperty("MapName") String mapName, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.configuration = configuration;
+        this.createTime = createTime;
+        this.dataSource = dataSource;
+        this.description = description;
+        this.mapArn = mapArn;
+        this.mapName = mapName;
+        this.updateTime = updateTime;
+  }
 }

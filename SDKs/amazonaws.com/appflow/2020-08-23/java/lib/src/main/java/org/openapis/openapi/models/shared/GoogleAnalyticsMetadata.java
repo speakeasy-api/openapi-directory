@@ -15,9 +15,11 @@ public class GoogleAnalyticsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthScopes")
     public String[] oAuthScopes;
+
     public GoogleAnalyticsMetadata withOAuthScopes(String[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
     }
     
+    public GoogleAnalyticsMetadata(){}
 }

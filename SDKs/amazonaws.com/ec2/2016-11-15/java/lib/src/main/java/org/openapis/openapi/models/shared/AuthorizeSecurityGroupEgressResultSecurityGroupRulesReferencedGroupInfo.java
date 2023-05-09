@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo {
     
     public String groupId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroup
     
     
     public String peeringStatus;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -26,6 +28,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroup
     
     
     public String userId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -33,6 +36,7 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroup
     
     
     public String vpcId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -40,9 +44,11 @@ public class AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroup
     
     
     public String vpcPeeringConnectionId;
+
     public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public AuthorizeSecurityGroupEgressResultSecurityGroupRulesReferencedGroupInfo(){}
 }

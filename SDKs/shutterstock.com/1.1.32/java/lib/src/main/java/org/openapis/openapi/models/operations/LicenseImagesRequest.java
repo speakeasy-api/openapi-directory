@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicenseImagesRequest {
@@ -12,6 +13,7 @@ public class LicenseImagesRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LicenseImageRequest licenseImageRequest;
+
     public LicenseImagesRequest withLicenseImageRequest(org.openapis.openapi.models.shared.LicenseImageRequest licenseImageRequest) {
         this.licenseImageRequest = licenseImageRequest;
         return this;
@@ -19,9 +21,13 @@ public class LicenseImagesRequest {
     
     /**
      * (Deprecated) Image format
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
+    @Deprecated
     public LicenseImagesFormatEnum format;
+
+    @Deprecated
     public LicenseImagesRequest withFormat(LicenseImagesFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +38,7 @@ public class LicenseImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public LicenseImagesRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -42,6 +49,7 @@ public class LicenseImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public LicenseImagesSizeEnum size;
+
     public LicenseImagesRequest withSize(LicenseImagesSizeEnum size) {
         this.size = size;
         return this;
@@ -52,9 +60,13 @@ public class LicenseImagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subscription_id")
     public String subscriptionId;
+
     public LicenseImagesRequest withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public LicenseImagesRequest(@JsonProperty("LicenseImageRequest") org.openapis.openapi.models.shared.LicenseImageRequest licenseImageRequest) {
+        this.licenseImageRequest = licenseImageRequest;
+  }
 }

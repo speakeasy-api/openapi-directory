@@ -15,6 +15,7 @@ public class UpdateMeshRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressFilter")
     public org.openapis.openapi.models.shared.EgressFilter egressFilter;
+
     public UpdateMeshRequestBodySpec withEgressFilter(org.openapis.openapi.models.shared.EgressFilter egressFilter) {
         this.egressFilter = egressFilter;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMeshRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDiscovery")
     public org.openapis.openapi.models.shared.MeshServiceDiscovery serviceDiscovery;
+
     public UpdateMeshRequestBodySpec withServiceDiscovery(org.openapis.openapi.models.shared.MeshServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
         return this;
     }
     
+    public UpdateMeshRequestBodySpec(){}
 }

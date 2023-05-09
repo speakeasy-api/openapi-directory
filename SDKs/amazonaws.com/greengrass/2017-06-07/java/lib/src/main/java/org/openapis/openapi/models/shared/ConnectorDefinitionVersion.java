@@ -15,9 +15,11 @@ public class ConnectorDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Connectors")
     public Connector[] connectors;
+
     public ConnectorDefinitionVersion withConnectors(Connector[] connectors) {
         this.connectors = connectors;
         return this;
     }
     
+    public ConnectorDefinitionVersion(){}
 }

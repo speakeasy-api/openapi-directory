@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupRulesRequest {
     
     public Boolean dryRun;
+
     public DescribeSecurityGroupRulesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSecurityGroupRulesRequest {
     
     
     public DescribeSecurityGroupRulesRequestFilters[] filters;
+
     public DescribeSecurityGroupRulesRequest withFilters(DescribeSecurityGroupRulesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSecurityGroupRulesRequest {
     
     
     public Long maxResults;
+
     public DescribeSecurityGroupRulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeSecurityGroupRulesRequest {
     
     
     public String nextToken;
+
     public DescribeSecurityGroupRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeSecurityGroupRulesRequest {
     
     
     public String[] securityGroupRuleIds;
+
     public DescribeSecurityGroupRulesRequest withSecurityGroupRuleIds(String[] securityGroupRuleIds) {
         this.securityGroupRuleIds = securityGroupRuleIds;
         return this;
     }
     
+    public DescribeSecurityGroupRulesRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenderUiTemplateResponse {
     @JsonProperty("Errors")
     public RenderingError[] errors;
+
     public RenderUiTemplateResponse withErrors(RenderingError[] errors) {
         this.errors = errors;
         return this;
@@ -19,9 +20,14 @@ public class RenderUiTemplateResponse {
     
     @JsonProperty("RenderedContent")
     public String renderedContent;
+
     public RenderUiTemplateResponse withRenderedContent(String renderedContent) {
         this.renderedContent = renderedContent;
         return this;
     }
     
+    public RenderUiTemplateResponse(@JsonProperty("Errors") RenderingError[] errors, @JsonProperty("RenderedContent") String renderedContent) {
+        this.errors = errors;
+        this.renderedContent = renderedContent;
+  }
 }

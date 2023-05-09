@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity;
-import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListViewEnum;
 import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListRequest;
 import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListResponse;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListSecurity;
+import org.openapis.openapi.models.operations.OsconfigProjectsLocationsInstancesInventoriesListViewEnum;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,36 +29,37 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            OsconfigProjectsLocationsInstancesInventoriesListRequest req = new OsconfigProjectsLocationsInstancesInventoriesListRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                filter = "nulla";
-                key = "corrupti";
-                oauthToken = "illum";
-                pageSize = 423655;
-                pageToken = "error";
-                parent = "deserunt";
+            OsconfigProjectsLocationsInstancesInventoriesListRequest req = new OsconfigProjectsLocationsInstancesInventoriesListRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                filter = "corrupti";
+                key = "illum";
+                oauthToken = "vel";
+                pageSize = 623564L;
+                pageToken = "deserunt";
                 prettyPrint = false;
                 quotaUser = "suscipit";
                 uploadType = "iure";
                 uploadProtocol = "magnam";
-                view = "FULL";
-            }}            
+                view = OsconfigProjectsLocationsInstancesInventoriesListViewEnum.FULL;
+            }};            
 
-            OsconfigProjectsLocationsInstancesInventoriesListResponse res = sdk.projects.osconfigProjectsLocationsInstancesInventoriesList(req, new OsconfigProjectsLocationsInstancesInventoriesListSecurity() {{
+            OsconfigProjectsLocationsInstancesInventoriesListResponse res = sdk.projects.osconfigProjectsLocationsInstancesInventoriesList(req, new OsconfigProjectsLocationsInstancesInventoriesListSecurity("ipsa", "delectus") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listInventoriesResponse.isPresent()) {
+            if (res.listInventoriesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,25 +67,25 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `osconfigProjectsLocationsInstancesInventoriesList` - List inventory data for all VM instances in the specified zone.
-* `osconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList` - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
-* `osconfigProjectsLocationsInstancesVulnerabilityReportsList` - List vulnerability reports for all VM instances in the specified zone.
-* `osconfigProjectsLocationsOsPolicyAssignmentsCreate` - Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
-* `osconfigProjectsLocationsOsPolicyAssignmentsList` - List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
-* `osconfigProjectsLocationsOsPolicyAssignmentsListRevisions` - List the OS policy assignment revisions for a given OS policy assignment.
-* `osconfigProjectsPatchDeploymentsCreate` - Create an OS Config patch deployment.
-* `osconfigProjectsPatchDeploymentsDelete` - Delete an OS Config patch deployment.
-* `osconfigProjectsPatchDeploymentsList` - Get a page of OS Config patch deployments.
-* `osconfigProjectsPatchDeploymentsPatch` - Update an OS Config patch deployment.
-* `osconfigProjectsPatchDeploymentsPause` - Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate patch jobs.
-* `osconfigProjectsPatchDeploymentsResume` - Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to generate patch jobs.
-* `osconfigProjectsPatchJobsCancel` - Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
-* `osconfigProjectsPatchJobsExecute` - Patch VM instances by creating and running a patch job.
-* `osconfigProjectsPatchJobsGet` - Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.
-* `osconfigProjectsPatchJobsInstanceDetailsList` - Get a list of instance details for a given patch job.
-* `osconfigProjectsPatchJobsList` - Get a list of patch jobs.
+* [osconfigProjectsLocationsInstancesInventoriesList](docs/projects/README.md#osconfigprojectslocationsinstancesinventorieslist) - List inventory data for all VM instances in the specified zone.
+* [osconfigProjectsLocationsInstancesOsPolicyAssignmentsReportsList](docs/projects/README.md#osconfigprojectslocationsinstancesospolicyassignmentsreportslist) - List OS policy asssignment reports for all Compute Engine VM instances in the specified zone.
+* [osconfigProjectsLocationsInstancesVulnerabilityReportsList](docs/projects/README.md#osconfigprojectslocationsinstancesvulnerabilityreportslist) - List vulnerability reports for all VM instances in the specified zone.
+* [osconfigProjectsLocationsOsPolicyAssignmentsCreate](docs/projects/README.md#osconfigprojectslocationsospolicyassignmentscreate) - Create an OS policy assignment. This method also creates the first revision of the OS policy assignment. This method returns a long running operation (LRO) that contains the rollout details. The rollout can be cancelled by cancelling the LRO. For more information, see [Method: projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+* [osconfigProjectsLocationsOsPolicyAssignmentsList](docs/projects/README.md#osconfigprojectslocationsospolicyassignmentslist) - List the OS policy assignments under the parent resource. For each OS policy assignment, the latest revision is returned.
+* [osconfigProjectsLocationsOsPolicyAssignmentsListRevisions](docs/projects/README.md#osconfigprojectslocationsospolicyassignmentslistrevisions) - List the OS policy assignment revisions for a given OS policy assignment.
+* [osconfigProjectsPatchDeploymentsCreate](docs/projects/README.md#osconfigprojectspatchdeploymentscreate) - Create an OS Config patch deployment.
+* [osconfigProjectsPatchDeploymentsDelete](docs/projects/README.md#osconfigprojectspatchdeploymentsdelete) - Delete an OS Config patch deployment.
+* [osconfigProjectsPatchDeploymentsList](docs/projects/README.md#osconfigprojectspatchdeploymentslist) - Get a page of OS Config patch deployments.
+* [osconfigProjectsPatchDeploymentsPatch](docs/projects/README.md#osconfigprojectspatchdeploymentspatch) - Update an OS Config patch deployment.
+* [osconfigProjectsPatchDeploymentsPause](docs/projects/README.md#osconfigprojectspatchdeploymentspause) - Change state of patch deployment to "PAUSED". Patch deployment in paused state doesn't generate patch jobs.
+* [osconfigProjectsPatchDeploymentsResume](docs/projects/README.md#osconfigprojectspatchdeploymentsresume) - Change state of patch deployment back to "ACTIVE". Patch deployment in active state continues to generate patch jobs.
+* [osconfigProjectsPatchJobsCancel](docs/projects/README.md#osconfigprojectspatchjobscancel) - Cancel a patch job. The patch job must be active. Canceled patch jobs cannot be restarted.
+* [osconfigProjectsPatchJobsExecute](docs/projects/README.md#osconfigprojectspatchjobsexecute) - Patch VM instances by creating and running a patch job.
+* [osconfigProjectsPatchJobsGet](docs/projects/README.md#osconfigprojectspatchjobsget) - Get the patch job. This can be used to track the progress of an ongoing patch job or review the details of completed jobs.
+* [osconfigProjectsPatchJobsInstanceDetailsList](docs/projects/README.md#osconfigprojectspatchjobsinstancedetailslist) - Get a list of instance details for a given patch job.
+* [osconfigProjectsPatchJobsList](docs/projects/README.md#osconfigprojectspatchjobslist) - Get a list of patch jobs.
 <!-- End SDK Available Operations -->
 
 ### Maturity

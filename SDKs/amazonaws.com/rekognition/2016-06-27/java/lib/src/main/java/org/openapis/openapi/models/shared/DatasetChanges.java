@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatasetChanges {
     @JsonProperty("GroundTruth")
     public String groundTruth;
+
     public DatasetChanges withGroundTruth(String groundTruth) {
         this.groundTruth = groundTruth;
         return this;
     }
     
+    public DatasetChanges(@JsonProperty("GroundTruth") String groundTruth) {
+        this.groundTruth = groundTruth;
+  }
 }

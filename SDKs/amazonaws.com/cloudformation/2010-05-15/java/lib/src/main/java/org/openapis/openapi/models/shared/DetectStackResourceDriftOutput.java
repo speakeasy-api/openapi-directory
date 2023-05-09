@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DetectStackResourceDriftOutput - Success
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DetectStackResourceDriftOutput {
     
     public StackResourceDrift stackResourceDrift;
+
     public DetectStackResourceDriftOutput withStackResourceDrift(StackResourceDrift stackResourceDrift) {
         this.stackResourceDrift = stackResourceDrift;
         return this;
     }
     
+    public DetectStackResourceDriftOutput(@JsonProperty("StackResourceDrift") StackResourceDrift stackResourceDrift) {
+        this.stackResourceDrift = stackResourceDrift;
+  }
 }

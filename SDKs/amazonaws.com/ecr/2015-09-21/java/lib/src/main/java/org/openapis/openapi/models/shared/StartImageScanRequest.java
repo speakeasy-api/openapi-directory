@@ -14,6 +14,7 @@ public class StartImageScanRequest {
      */
     @JsonProperty("imageId")
     public ImageIdentifier imageId;
+
     public StartImageScanRequest withImageId(ImageIdentifier imageId) {
         this.imageId = imageId;
         return this;
@@ -22,6 +23,7 @@ public class StartImageScanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public StartImageScanRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -29,9 +31,14 @@ public class StartImageScanRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public StartImageScanRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public StartImageScanRequest(@JsonProperty("imageId") ImageIdentifier imageId, @JsonProperty("repositoryName") String repositoryName) {
+        this.imageId = imageId;
+        this.repositoryName = repositoryName;
+  }
 }

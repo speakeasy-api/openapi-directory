@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEffectiveRecommendationPreferencesResponse {
@@ -12,6 +13,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEffectiveRecommendationPreferencesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
     
     
     public String contentType;
+
     public GetEffectiveRecommendationPreferencesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesResponse getEffectiveRecommendationPreferencesResponse;
+
     public GetEffectiveRecommendationPreferencesResponse withGetEffectiveRecommendationPreferencesResponse(org.openapis.openapi.models.shared.GetEffectiveRecommendationPreferencesResponse getEffectiveRecommendationPreferencesResponse) {
         this.getEffectiveRecommendationPreferencesResponse = getEffectiveRecommendationPreferencesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object internalServerException;
+
     public GetEffectiveRecommendationPreferencesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetEffectiveRecommendationPreferencesResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetEffectiveRecommendationPreferencesResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object optInRequiredException;
+
     public GetEffectiveRecommendationPreferencesResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
     
     
     public Integer statusCode;
+
     public GetEffectiveRecommendationPreferencesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEffectiveRecommendationPreferencesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEffectiveRecommendationPreferencesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetEffectiveRecommendationPreferencesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetEffectiveRecommendationPreferencesResponse {
      */
     
     public Object throttlingException;
+
     public GetEffectiveRecommendationPreferencesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetEffectiveRecommendationPreferencesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

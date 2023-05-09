@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProductsJsonRequest {
@@ -12,6 +13,7 @@ public class PostProductsJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ProductEdit productEdit;
+
     public PostProductsJsonRequest withProductEdit(org.openapis.openapi.models.shared.ProductEdit productEdit) {
         this.productEdit = productEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostProductsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public PostProductsJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,9 +46,15 @@ public class PostProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostProductsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostProductsJsonRequest(@JsonProperty("ProductEdit") org.openapis.openapi.models.shared.ProductEdit productEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.productEdit = productEdit;
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

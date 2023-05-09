@@ -20,6 +20,7 @@ public class WebsiteAuthorizationProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizationProviderId")
     public String authorizationProviderId;
+
     public WebsiteAuthorizationProviderSummary withAuthorizationProviderId(String authorizationProviderId) {
         this.authorizationProviderId = authorizationProviderId;
         return this;
@@ -27,6 +28,7 @@ public class WebsiteAuthorizationProviderSummary {
     
     @JsonProperty("AuthorizationProviderType")
     public AuthorizationProviderTypeEnum authorizationProviderType;
+
     public WebsiteAuthorizationProviderSummary withAuthorizationProviderType(AuthorizationProviderTypeEnum authorizationProviderType) {
         this.authorizationProviderType = authorizationProviderType;
         return this;
@@ -37,6 +39,7 @@ public class WebsiteAuthorizationProviderSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public WebsiteAuthorizationProviderSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -45,9 +48,13 @@ public class WebsiteAuthorizationProviderSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public WebsiteAuthorizationProviderSummary withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public WebsiteAuthorizationProviderSummary(@JsonProperty("AuthorizationProviderType") AuthorizationProviderTypeEnum authorizationProviderType) {
+        this.authorizationProviderType = authorizationProviderType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataPointsGetStatisticsListRequest {
@@ -12,6 +13,7 @@ public class DataPointsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public DataPointsGetStatisticsListRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -22,6 +24,7 @@ public class DataPointsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupBy")
     public DataPointsGetStatisticsListGroupByEnum groupBy;
+
     public DataPointsGetStatisticsListRequest withGroupBy(DataPointsGetStatisticsListGroupByEnum groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -32,6 +35,7 @@ public class DataPointsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DataPointsGetStatisticsListRequest withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class DataPointsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public DataPointsGetStatisticsListTimeFrameEnum timeFrame;
+
     public DataPointsGetStatisticsListRequest withTimeFrame(DataPointsGetStatisticsListTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -52,9 +57,14 @@ public class DataPointsGetStatisticsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public DataPointsGetStatisticsListRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public DataPointsGetStatisticsListRequest(@JsonProperty("id") Long id, @JsonProperty("timeFrame") DataPointsGetStatisticsListTimeFrameEnum timeFrame) {
+        this.id = id;
+        this.timeFrame = timeFrame;
+  }
 }

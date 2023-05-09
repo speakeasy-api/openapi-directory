@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributionModelSettings")
     public GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings attributionModelSettings;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withAttributionModelSettings(GoogleAdsSearchads360V0ResourcesConversionActionAttributionModelSettings attributionModelSettings) {
         this.attributionModelSettings = attributionModelSettings;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum category;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withCategory(GoogleAdsSearchads360V0ResourcesConversionActionCategoryEnum category) {
         this.category = category;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughLookbackWindowDays")
     public String clickThroughLookbackWindowDays;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withClickThroughLookbackWindowDays(String clickThroughLookbackWindowDays) {
         this.clickThroughLookbackWindowDays = clickThroughLookbackWindowDays;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightSettings")
     public GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings floodlightSettings;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withFloodlightSettings(GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings floodlightSettings) {
         this.floodlightSettings = floodlightSettings;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInClientAccountConversionsMetric")
     public Boolean includeInClientAccountConversionsMetric;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withIncludeInClientAccountConversionsMetric(Boolean includeInClientAccountConversionsMetric) {
         this.includeInClientAccountConversionsMetric = includeInClientAccountConversionsMetric;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInConversionsMetric")
     public Boolean includeInConversionsMetric;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withIncludeInConversionsMetric(Boolean includeInConversionsMetric) {
         this.includeInConversionsMetric = includeInConversionsMetric;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerCustomer")
     public String ownerCustomer;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withOwnerCustomer(String ownerCustomer) {
         this.ownerCustomer = ownerCustomer;
         return this;
@@ -139,6 +150,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryForGoal")
     public Boolean primaryForGoal;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withPrimaryForGoal(Boolean primaryForGoal) {
         this.primaryForGoal = primaryForGoal;
         return this;
@@ -150,6 +162,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -161,6 +174,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum status;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withStatus(GoogleAdsSearchads360V0ResourcesConversionActionStatusEnum status) {
         this.status = status;
         return this;
@@ -172,6 +186,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum type;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withType(GoogleAdsSearchads360V0ResourcesConversionActionTypeEnum type) {
         this.type = type;
         return this;
@@ -183,9 +198,11 @@ public class GoogleAdsSearchads360V0ResourcesConversionAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueSettings")
     public GoogleAdsSearchads360V0ResourcesConversionActionValueSettings valueSettings;
+
     public GoogleAdsSearchads360V0ResourcesConversionAction withValueSettings(GoogleAdsSearchads360V0ResourcesConversionActionValueSettings valueSettings) {
         this.valueSettings = valueSettings;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesConversionAction(){}
 }

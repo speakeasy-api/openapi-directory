@@ -18,6 +18,7 @@ public class InboundSamlSsoProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public InboundSamlSsoProfileInput withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -29,6 +30,7 @@ public class InboundSamlSsoProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InboundSamlSsoProfileInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class InboundSamlSsoProfileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpConfig")
     public SamlIdpConfig idpConfig;
+
     public InboundSamlSsoProfileInput withIdpConfig(SamlIdpConfig idpConfig) {
         this.idpConfig = idpConfig;
         return this;
     }
     
+    public InboundSamlSsoProfileInput(){}
 }

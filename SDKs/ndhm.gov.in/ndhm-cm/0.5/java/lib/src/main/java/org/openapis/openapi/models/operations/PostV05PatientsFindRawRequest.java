@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsFindRawRequest {
@@ -12,6 +13,7 @@ public class PostV05PatientsFindRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05PatientsFindRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05PatientsFindRawRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
     public byte[] requestBody;
+
     public PostV05PatientsFindRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostV05PatientsFindRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("RequestBody") byte[] requestBody) {
+        this.authorization = authorization;
+        this.requestBody = requestBody;
+  }
 }

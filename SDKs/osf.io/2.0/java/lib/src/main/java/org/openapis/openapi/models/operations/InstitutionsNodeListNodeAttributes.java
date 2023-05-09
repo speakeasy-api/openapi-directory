@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public InstitutionsNodeListNodeAttributesCategoryEnum category;
+
     public InstitutionsNodeListNodeAttributes withCategory(InstitutionsNodeListNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean collection;
+
     public InstitutionsNodeListNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public InstitutionsNodeListNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public InstitutionsNodeListNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public InstitutionsNodeListNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public InstitutionsNodeListNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String description;
+
     public InstitutionsNodeListNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean fork;
+
     public InstitutionsNodeListNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public InstitutionsNodeListNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String nodeLicense;
+
     public InstitutionsNodeListNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean preprint;
+
     public InstitutionsNodeListNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean public_;
+
     public InstitutionsNodeListNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public Boolean registration;
+
     public InstitutionsNodeListNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String[] tags;
+
     public InstitutionsNodeListNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String templateFrom;
+
     public InstitutionsNodeListNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class InstitutionsNodeListNodeAttributes {
      */
     
     public String title;
+
     public InstitutionsNodeListNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public InstitutionsNodeListNodeAttributes(@JsonProperty("category") InstitutionsNodeListNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

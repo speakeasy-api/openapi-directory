@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMaskRequest {
@@ -12,6 +13,7 @@ public class SetMaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Long agentNum;
+
     public SetMaskRequest withAgentNum(Long agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetMaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mask")
     public String mask;
+
     public SetMaskRequest withMask(String mask) {
         this.mask = mask;
         return this;
     }
     
+    public SetMaskRequest(@JsonProperty("agentNum") Long agentNum, @JsonProperty("mask") String mask) {
+        this.agentNum = agentNum;
+        this.mask = mask;
+  }
 }

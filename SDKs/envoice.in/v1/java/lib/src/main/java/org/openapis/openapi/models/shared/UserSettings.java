@@ -12,6 +12,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountantEmail")
     public String accountantEmail;
+
     public UserSettings withAccountantEmail(String accountantEmail) {
         this.accountantEmail = accountantEmail;
         return this;
@@ -20,6 +21,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public UserSettings withAddress(String address) {
         this.address = address;
         return this;
@@ -28,6 +30,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKey")
     public String apiKey;
+
     public UserSettings withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -36,6 +39,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiSecret")
     public String apiSecret;
+
     public UserSettings withApiSecret(String apiSecret) {
         this.apiSecret = apiSecret;
         return this;
@@ -44,6 +48,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackgroundImage")
     public String backgroundImage;
+
     public UserSettings withBackgroundImage(String backgroundImage) {
         this.backgroundImage = backgroundImage;
         return this;
@@ -52,6 +57,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bank")
     public String bank;
+
     public UserSettings withBank(String bank) {
         this.bank = bank;
         return this;
@@ -60,6 +66,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BankAccount")
     public String bankAccount;
+
     public UserSettings withBankAccount(String bankAccount) {
         this.bankAccount = bankAccount;
         return this;
@@ -68,6 +75,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cname")
     public String cname;
+
     public UserSettings withCname(String cname) {
         this.cname = cname;
         return this;
@@ -76,6 +84,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyRegistrationNumber")
     public String companyRegistrationNumber;
+
     public UserSettings withCompanyRegistrationNumber(String companyRegistrationNumber) {
         this.companyRegistrationNumber = companyRegistrationNumber;
         return this;
@@ -84,6 +93,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public Country country;
+
     public UserSettings withCountry(Country country) {
         this.country = country;
         return this;
@@ -92,6 +102,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryId")
     public Integer countryId;
+
     public UserSettings withCountryId(Integer countryId) {
         this.countryId = countryId;
         return this;
@@ -100,6 +111,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public Currency currency;
+
     public UserSettings withCurrency(Currency currency) {
         this.currency = currency;
         return this;
@@ -108,6 +120,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyId")
     public Integer currencyId;
+
     public UserSettings withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -116,6 +129,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencySymbol")
     public String currencySymbol;
+
     public UserSettings withCurrencySymbol(String currencySymbol) {
         this.currencySymbol = currencySymbol;
         return this;
@@ -124,6 +138,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultDateFormat")
     public String defaultDateFormat;
+
     public UserSettings withDefaultDateFormat(String defaultDateFormat) {
         this.defaultDateFormat = defaultDateFormat;
         return this;
@@ -132,6 +147,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultDueDateInDays")
     public Integer defaultDueDateInDays;
+
     public UserSettings withDefaultDueDateInDays(Integer defaultDueDateInDays) {
         this.defaultDueDateInDays = defaultDueDateInDays;
         return this;
@@ -140,6 +156,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoNotTrack")
     public Boolean doNotTrack;
+
     public UserSettings withDoNotTrack(Boolean doNotTrack) {
         this.doNotTrack = doNotTrack;
         return this;
@@ -148,6 +165,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableClientPortal")
     public Boolean enableClientPortal;
+
     public UserSettings withEnableClientPortal(Boolean enableClientPortal) {
         this.enableClientPortal = enableClientPortal;
         return this;
@@ -156,6 +174,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnablePredictiveInvoicing")
     public Boolean enablePredictiveInvoicing;
+
     public UserSettings withEnablePredictiveInvoicing(Boolean enablePredictiveInvoicing) {
         this.enablePredictiveInvoicing = enablePredictiveInvoicing;
         return this;
@@ -164,6 +183,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableRecurringInvoicing")
     public Boolean enableRecurringInvoicing;
+
     public UserSettings withEnableRecurringInvoicing(Boolean enableRecurringInvoicing) {
         this.enableRecurringInvoicing = enableRecurringInvoicing;
         return this;
@@ -172,6 +192,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasInvoiceLogo")
     public Boolean hasInvoiceLogo;
+
     public UserSettings withHasInvoiceLogo(Boolean hasInvoiceLogo) {
         this.hasInvoiceLogo = hasInvoiceLogo;
         return this;
@@ -180,6 +201,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iban")
     public String iban;
+
     public UserSettings withIban(String iban) {
         this.iban = iban;
         return this;
@@ -188,6 +210,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public UserSettings withId(Integer id) {
         this.id = id;
         return this;
@@ -196,6 +219,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceTemplate")
     public UserSettingsInvoiceTemplateEnum invoiceTemplate;
+
     public UserSettings withInvoiceTemplate(UserSettingsInvoiceTemplateEnum invoiceTemplate) {
         this.invoiceTemplate = invoiceTemplate;
         return this;
@@ -204,6 +228,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InvoiceTemplateColorHex")
     public String invoiceTemplateColorHex;
+
     public UserSettings withInvoiceTemplateColorHex(String invoiceTemplateColorHex) {
         this.invoiceTemplateColorHex = invoiceTemplateColorHex;
         return this;
@@ -212,6 +237,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public UserSettings withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -220,6 +246,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Profession")
     public UserSettingsProfessionEnum profession;
+
     public UserSettings withProfession(UserSettingsProfessionEnum profession) {
         this.profession = profession;
         return this;
@@ -228,6 +255,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceiveSmsNotifications")
     public Boolean receiveSmsNotifications;
+
     public UserSettings withReceiveSmsNotifications(Boolean receiveSmsNotifications) {
         this.receiveSmsNotifications = receiveSmsNotifications;
         return this;
@@ -236,6 +264,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferralProgram")
     public UserSettingsReferralProgramEnum referralProgram;
+
     public UserSettings withReferralProgram(UserSettingsReferralProgramEnum referralProgram) {
         this.referralProgram = referralProgram;
         return this;
@@ -244,6 +273,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreCheckoutFields")
     public UserSettingsStoreCheckoutFieldsEnum storeCheckoutFields;
+
     public UserSettings withStoreCheckoutFields(UserSettingsStoreCheckoutFieldsEnum storeCheckoutFields) {
         this.storeCheckoutFields = storeCheckoutFields;
         return this;
@@ -252,6 +282,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreColorHex")
     public String storeColorHex;
+
     public UserSettings withStoreColorHex(String storeColorHex) {
         this.storeColorHex = storeColorHex;
         return this;
@@ -260,6 +291,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreCurrency")
     public Currency storeCurrency;
+
     public UserSettings withStoreCurrency(Currency storeCurrency) {
         this.storeCurrency = storeCurrency;
         return this;
@@ -268,6 +300,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreCurrencyId")
     public Integer storeCurrencyId;
+
     public UserSettings withStoreCurrencyId(Integer storeCurrencyId) {
         this.storeCurrencyId = storeCurrencyId;
         return this;
@@ -276,6 +309,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreCustomJavaScript")
     public String storeCustomJavaScript;
+
     public UserSettings withStoreCustomJavaScript(String storeCustomJavaScript) {
         this.storeCustomJavaScript = storeCustomJavaScript;
         return this;
@@ -284,6 +318,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreDescription")
     public String storeDescription;
+
     public UserSettings withStoreDescription(String storeDescription) {
         this.storeDescription = storeDescription;
         return this;
@@ -292,6 +327,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreEmail")
     public String storeEmail;
+
     public UserSettings withStoreEmail(String storeEmail) {
         this.storeEmail = storeEmail;
         return this;
@@ -300,6 +336,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreLanguage")
     public UiLanguage storeLanguage;
+
     public UserSettings withStoreLanguage(UiLanguage storeLanguage) {
         this.storeLanguage = storeLanguage;
         return this;
@@ -308,6 +345,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreLanguageId")
     public Integer storeLanguageId;
+
     public UserSettings withStoreLanguageId(Integer storeLanguageId) {
         this.storeLanguageId = storeLanguageId;
         return this;
@@ -316,6 +354,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreName")
     public String storeName;
+
     public UserSettings withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
@@ -324,6 +363,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorePurchaseEmailMessage")
     public String storePurchaseEmailMessage;
+
     public UserSettings withStorePurchaseEmailMessage(String storePurchaseEmailMessage) {
         this.storePurchaseEmailMessage = storePurchaseEmailMessage;
         return this;
@@ -332,6 +372,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorePurchaseThankYouMessage")
     public String storePurchaseThankYouMessage;
+
     public UserSettings withStorePurchaseThankYouMessage(String storePurchaseThankYouMessage) {
         this.storePurchaseThankYouMessage = storePurchaseThankYouMessage;
         return this;
@@ -340,6 +381,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreTextColorHex")
     public String storeTextColorHex;
+
     public UserSettings withStoreTextColorHex(String storeTextColorHex) {
         this.storeTextColorHex = storeTextColorHex;
         return this;
@@ -348,6 +390,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoreUrl")
     public String storeUrl;
+
     public UserSettings withStoreUrl(String storeUrl) {
         this.storeUrl = storeUrl;
         return this;
@@ -356,6 +399,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscribeToProductEmails")
     public Boolean subscribeToProductEmails;
+
     public UserSettings withSubscribeToProductEmails(Boolean subscribeToProductEmails) {
         this.subscribeToProductEmails = subscribeToProductEmails;
         return this;
@@ -364,6 +408,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Swift")
     public String swift;
+
     public UserSettings withSwift(String swift) {
         this.swift = swift;
         return this;
@@ -372,6 +417,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terms")
     public String terms;
+
     public UserSettings withTerms(String terms) {
         this.terms = terms;
         return this;
@@ -380,6 +426,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public UserSettings withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -388,6 +435,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSignature")
     public String userSignature;
+
     public UserSettings withUserSignature(String userSignature) {
         this.userSignature = userSignature;
         return this;
@@ -396,6 +444,7 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VatNumber")
     public String vatNumber;
+
     public UserSettings withVatNumber(String vatNumber) {
         this.vatNumber = vatNumber;
         return this;
@@ -404,9 +453,11 @@ public class UserSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YearsOfExperience")
     public Integer yearsOfExperience;
+
     public UserSettings withYearsOfExperience(Integer yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
         return this;
     }
     
+    public UserSettings(){}
 }

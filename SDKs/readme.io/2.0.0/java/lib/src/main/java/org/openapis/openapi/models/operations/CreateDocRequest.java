@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDocRequest {
@@ -12,6 +13,7 @@ public class CreateDocRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Doc doc;
+
     public CreateDocRequest withDoc(org.openapis.openapi.models.shared.Doc doc) {
         this.doc = doc;
         return this;
@@ -22,9 +24,14 @@ public class CreateDocRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-readme-version")
     public String xReadmeVersion;
+
     public CreateDocRequest withXReadmeVersion(String xReadmeVersion) {
         this.xReadmeVersion = xReadmeVersion;
         return this;
     }
     
+    public CreateDocRequest(@JsonProperty("Doc") org.openapis.openapi.models.shared.Doc doc, @JsonProperty("x-readme-version") String xReadmeVersion) {
+        this.doc = doc;
+        this.xReadmeVersion = xReadmeVersion;
+  }
 }

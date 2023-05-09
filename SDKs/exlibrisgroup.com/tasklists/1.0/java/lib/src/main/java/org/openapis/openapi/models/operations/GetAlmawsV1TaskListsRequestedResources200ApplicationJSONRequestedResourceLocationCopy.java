@@ -18,6 +18,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternative_call_number")
     public String alternativeCallNumber;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withAlternativeCallNumber(String alternativeCallNumber) {
         this.alternativeCallNumber = alternativeCallNumber;
         return this;
@@ -29,6 +30,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("barcode")
     public String barcode;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withBarcode(String barcode) {
         this.barcode = barcode;
         return this;
@@ -37,6 +39,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_status")
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopyBaseStatus baseStatus;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withBaseStatus(GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopyBaseStatus baseStatus) {
         this.baseStatus = baseStatus;
         return this;
@@ -45,6 +48,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withLink(String link) {
         this.link = link;
         return this;
@@ -56,6 +60,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pid")
     public String pid;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withPid(String pid) {
         this.pid = pid;
         return this;
@@ -67,9 +72,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storage_location_id")
     public String storageLocationId;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy withStorageLocationId(String storageLocationId) {
         this.storageLocationId = storageLocationId;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceLocationCopy(){}
 }

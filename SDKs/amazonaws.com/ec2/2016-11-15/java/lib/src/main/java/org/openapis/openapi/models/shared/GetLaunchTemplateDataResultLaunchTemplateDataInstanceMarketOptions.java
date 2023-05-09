@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptions {
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum marketType;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptions withMarketType(GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsMarketTypeEnum marketType) {
         this.marketType = marketType;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptions 
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions spotOptions;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptions withSpotOptions(GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptionsSpotOptions spotOptions) {
         this.spotOptions = spotOptions;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceMarketOptions(){}
 }

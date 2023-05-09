@@ -15,6 +15,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportBuiltInVariables")
     public Boolean supportBuiltInVariables;
+
     public ContainerFeatures withSupportBuiltInVariables(Boolean supportBuiltInVariables) {
         this.supportBuiltInVariables = supportBuiltInVariables;
         return this;
@@ -26,6 +27,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportClients")
     public Boolean supportClients;
+
     public ContainerFeatures withSupportClients(Boolean supportClients) {
         this.supportClients = supportClients;
         return this;
@@ -37,6 +39,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportEnvironments")
     public Boolean supportEnvironments;
+
     public ContainerFeatures withSupportEnvironments(Boolean supportEnvironments) {
         this.supportEnvironments = supportEnvironments;
         return this;
@@ -48,6 +51,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportFolders")
     public Boolean supportFolders;
+
     public ContainerFeatures withSupportFolders(Boolean supportFolders) {
         this.supportFolders = supportFolders;
         return this;
@@ -59,6 +63,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportGtagConfigs")
     public Boolean supportGtagConfigs;
+
     public ContainerFeatures withSupportGtagConfigs(Boolean supportGtagConfigs) {
         this.supportGtagConfigs = supportGtagConfigs;
         return this;
@@ -70,6 +75,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportTags")
     public Boolean supportTags;
+
     public ContainerFeatures withSupportTags(Boolean supportTags) {
         this.supportTags = supportTags;
         return this;
@@ -81,6 +87,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportTemplates")
     public Boolean supportTemplates;
+
     public ContainerFeatures withSupportTemplates(Boolean supportTemplates) {
         this.supportTemplates = supportTemplates;
         return this;
@@ -92,6 +99,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportTriggers")
     public Boolean supportTriggers;
+
     public ContainerFeatures withSupportTriggers(Boolean supportTriggers) {
         this.supportTriggers = supportTriggers;
         return this;
@@ -103,6 +111,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportUserPermissions")
     public Boolean supportUserPermissions;
+
     public ContainerFeatures withSupportUserPermissions(Boolean supportUserPermissions) {
         this.supportUserPermissions = supportUserPermissions;
         return this;
@@ -114,6 +123,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportVariables")
     public Boolean supportVariables;
+
     public ContainerFeatures withSupportVariables(Boolean supportVariables) {
         this.supportVariables = supportVariables;
         return this;
@@ -125,6 +135,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportVersions")
     public Boolean supportVersions;
+
     public ContainerFeatures withSupportVersions(Boolean supportVersions) {
         this.supportVersions = supportVersions;
         return this;
@@ -136,6 +147,7 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportWorkspaces")
     public Boolean supportWorkspaces;
+
     public ContainerFeatures withSupportWorkspaces(Boolean supportWorkspaces) {
         this.supportWorkspaces = supportWorkspaces;
         return this;
@@ -147,9 +159,11 @@ public class ContainerFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportZones")
     public Boolean supportZones;
+
     public ContainerFeatures withSupportZones(Boolean supportZones) {
         this.supportZones = supportZones;
         return this;
     }
     
+    public ContainerFeatures(){}
 }

@@ -15,6 +15,7 @@ public class ListFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functions")
     public FunctionConfiguration[] functions;
+
     public ListFunctionsResponse withFunctions(FunctionConfiguration[] functions) {
         this.functions = functions;
         return this;
@@ -23,9 +24,11 @@ public class ListFunctionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFunctionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFunctionsResponse(){}
 }

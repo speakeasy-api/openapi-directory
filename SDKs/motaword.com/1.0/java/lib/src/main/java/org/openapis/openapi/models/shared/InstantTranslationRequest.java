@@ -15,6 +15,7 @@ public class InstantTranslationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String[] contents;
+
     public InstantTranslationRequest withContents(String[] contents) {
         this.contents = contents;
         return this;
@@ -26,6 +27,7 @@ public class InstantTranslationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public FileAsData[] documents;
+
     public InstantTranslationRequest withDocuments(FileAsData[] documents) {
         this.documents = documents;
         return this;
@@ -34,6 +36,7 @@ public class InstantTranslationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public InstantTranslationFilter filters;
+
     public InstantTranslationRequest withFilters(InstantTranslationFilter filters) {
         this.filters = filters;
         return this;
@@ -45,9 +48,11 @@ public class InstantTranslationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public java.util.Map<String, Object> meta;
+
     public InstantTranslationRequest withMeta(java.util.Map<String, Object> meta) {
         this.meta = meta;
         return this;
     }
     
+    public InstantTranslationRequest(){}
 }

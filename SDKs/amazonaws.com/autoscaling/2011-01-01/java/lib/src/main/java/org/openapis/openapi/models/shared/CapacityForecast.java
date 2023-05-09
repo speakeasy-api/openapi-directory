@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class CapacityForecast {
     
     public OffsetDateTime[] timestamps;
+
     public CapacityForecast withTimestamps(OffsetDateTime[] timestamps) {
         this.timestamps = timestamps;
         return this;
@@ -19,9 +21,14 @@ public class CapacityForecast {
     
     
     public Double[] values;
+
     public CapacityForecast withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public CapacityForecast(@JsonProperty("Timestamps") OffsetDateTime[] timestamps, @JsonProperty("Values") Double[] values) {
+        this.timestamps = timestamps;
+        this.values = values;
+  }
 }

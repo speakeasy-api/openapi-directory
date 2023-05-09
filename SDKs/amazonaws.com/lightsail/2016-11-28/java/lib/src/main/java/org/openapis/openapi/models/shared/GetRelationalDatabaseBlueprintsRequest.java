@@ -12,9 +12,11 @@ public class GetRelationalDatabaseBlueprintsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseBlueprintsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetRelationalDatabaseBlueprintsRequest(){}
 }

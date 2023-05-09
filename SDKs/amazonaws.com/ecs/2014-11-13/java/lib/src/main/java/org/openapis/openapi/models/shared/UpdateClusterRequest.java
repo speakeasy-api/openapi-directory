@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateClusterRequest {
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateClusterRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,6 +20,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public ClusterConfiguration configuration;
+
     public UpdateClusterRequest withConfiguration(ClusterConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -27,6 +29,7 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceConnectDefaults")
     public ClusterServiceConnectDefaultsRequest serviceConnectDefaults;
+
     public UpdateClusterRequest withServiceConnectDefaults(ClusterServiceConnectDefaultsRequest serviceConnectDefaults) {
         this.serviceConnectDefaults = serviceConnectDefaults;
         return this;
@@ -35,9 +38,13 @@ public class UpdateClusterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public ClusterSetting[] settings;
+
     public UpdateClusterRequest withSettings(ClusterSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public UpdateClusterRequest(@JsonProperty("cluster") String cluster) {
+        this.cluster = cluster;
+  }
 }

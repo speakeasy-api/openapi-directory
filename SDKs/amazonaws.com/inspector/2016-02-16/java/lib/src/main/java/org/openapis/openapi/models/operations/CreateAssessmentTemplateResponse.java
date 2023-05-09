@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAssessmentTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAssessmentTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateAssessmentTemplateResponse {
     
     
     public String contentType;
+
     public CreateAssessmentTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAssessmentTemplateResponse createAssessmentTemplateResponse;
+
     public CreateAssessmentTemplateResponse withCreateAssessmentTemplateResponse(org.openapis.openapi.models.shared.CreateAssessmentTemplateResponse createAssessmentTemplateResponse) {
         this.createAssessmentTemplateResponse = createAssessmentTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object internalException;
+
     public CreateAssessmentTemplateResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object invalidInputException;
+
     public CreateAssessmentTemplateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAssessmentTemplateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object noSuchEntityException;
+
     public CreateAssessmentTemplateResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -79,6 +87,7 @@ public class CreateAssessmentTemplateResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public CreateAssessmentTemplateResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateAssessmentTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateAssessmentTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateAssessmentTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAssessmentTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAssessmentTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

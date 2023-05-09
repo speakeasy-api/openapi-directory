@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExecuteSellTrasactionSellTransactionRequest {
     @JsonProperty("pot_id")
     public String potId;
+
     public ExecuteSellTrasactionSellTransactionRequest withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -22,6 +23,7 @@ public class ExecuteSellTrasactionSellTransactionRequest {
      */
     @JsonProperty("request_id")
     public String requestId;
+
     public ExecuteSellTrasactionSellTransactionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -29,9 +31,15 @@ public class ExecuteSellTrasactionSellTransactionRequest {
     
     @JsonProperty("sell_instructions")
     public ExecuteSellTrasactionSellTransactionRequestInstructionBuySell[] sellInstructions;
+
     public ExecuteSellTrasactionSellTransactionRequest withSellInstructions(ExecuteSellTrasactionSellTransactionRequestInstructionBuySell[] sellInstructions) {
         this.sellInstructions = sellInstructions;
         return this;
     }
     
+    public ExecuteSellTrasactionSellTransactionRequest(@JsonProperty("pot_id") String potId, @JsonProperty("request_id") String requestId, @JsonProperty("sell_instructions") ExecuteSellTrasactionSellTransactionRequestInstructionBuySell[] sellInstructions) {
+        this.potId = potId;
+        this.requestId = requestId;
+        this.sellInstructions = sellInstructions;
+  }
 }

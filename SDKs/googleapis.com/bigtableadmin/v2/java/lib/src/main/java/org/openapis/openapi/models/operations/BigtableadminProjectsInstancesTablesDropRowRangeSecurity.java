@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesDropRowRangeSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurity withOption1(BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesDropRowRangeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurity withOption2(BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesDropRowRangeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurity withOption3(BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesDropRowRangeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurity withOption4(BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class BigtableadminProjectsInstancesTablesDropRowRangeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesDropRowRangeSecurity withOption5(BigtableadminProjectsInstancesTablesDropRowRangeSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesDropRowRangeSecurity(){}
 }

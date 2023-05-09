@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesTagsTagLanguagesFormatResponse {
     
     public String contentType;
+
     public GetResourcesTagsTagLanguagesFormatResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetResourcesTagsTagLanguagesFormatResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesTagsTagLanguagesFormatResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetResourcesTagsTagLanguagesFormatResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesTagsTagLanguagesFormatResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesTagsTagLanguagesFormatResponse {
      */
     
     public org.openapis.openapi.models.shared.TagLanguageMarshallerWrapped[] tagLanguageMarshallerWrappeds;
+
     public GetResourcesTagsTagLanguagesFormatResponse withTagLanguageMarshallerWrappeds(org.openapis.openapi.models.shared.TagLanguageMarshallerWrapped[] tagLanguageMarshallerWrappeds) {
         this.tagLanguageMarshallerWrappeds = tagLanguageMarshallerWrappeds;
         return this;
     }
     
+    public GetResourcesTagsTagLanguagesFormatResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

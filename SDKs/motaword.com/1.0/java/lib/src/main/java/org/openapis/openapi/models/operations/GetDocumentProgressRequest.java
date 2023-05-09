@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentProgressRequest {
@@ -12,9 +13,13 @@ public class GetDocumentProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=documentId")
     public Double documentId;
+
     public GetDocumentProgressRequest withDocumentId(Double documentId) {
         this.documentId = documentId;
         return this;
     }
     
+    public GetDocumentProgressRequest(@JsonProperty("documentId") Double documentId) {
+        this.documentId = documentId;
+  }
 }

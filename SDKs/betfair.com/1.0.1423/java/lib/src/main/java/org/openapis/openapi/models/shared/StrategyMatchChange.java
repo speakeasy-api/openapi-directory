@@ -15,6 +15,7 @@ public class StrategyMatchChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mb")
     public Double[][] mb;
+
     public StrategyMatchChange withMb(Double[][] mb) {
         this.mb = mb;
         return this;
@@ -26,9 +27,11 @@ public class StrategyMatchChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ml")
     public Double[][] ml;
+
     public StrategyMatchChange withMl(Double[][] ml) {
         this.ml = ml;
         return this;
     }
     
+    public StrategyMatchChange(){}
 }

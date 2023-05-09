@@ -15,6 +15,7 @@ public class WorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_default")
     public Boolean isDefault;
+
     public WorkgroupSimpleVO withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -26,6 +27,7 @@ public class WorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_workgroup")
     public WorkgroupBaseVO parentWorkgroup;
+
     public WorkgroupSimpleVO withParentWorkgroup(WorkgroupBaseVO parentWorkgroup) {
         this.parentWorkgroup = parentWorkgroup;
         return this;
@@ -34,6 +36,7 @@ public class WorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_id")
     public Long workgroupId;
+
     public WorkgroupSimpleVO withWorkgroupId(Long workgroupId) {
         this.workgroupId = workgroupId;
         return this;
@@ -42,9 +45,11 @@ public class WorkgroupSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroup_name")
     public String workgroupName;
+
     public WorkgroupSimpleVO withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public WorkgroupSimpleVO(){}
 }

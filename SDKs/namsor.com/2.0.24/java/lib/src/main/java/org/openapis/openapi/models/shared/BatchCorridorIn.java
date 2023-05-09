@@ -15,6 +15,7 @@ public class BatchCorridorIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corridorFromTo")
     public CorridorIn[] corridorFromTo;
+
     public BatchCorridorIn withCorridorFromTo(CorridorIn[] corridorFromTo) {
         this.corridorFromTo = corridorFromTo;
         return this;
@@ -23,9 +24,11 @@ public class BatchCorridorIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchCorridorIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
     }
     
+    public BatchCorridorIn(){}
 }

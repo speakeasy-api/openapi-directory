@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
     public Boolean correctSide;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withCorrectSide(Boolean correctSide) {
         this.correctSide = correctSide;
         return this;
@@ -23,6 +25,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
     public GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum criteria;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withCriteria(GetTruckDistanceBetweenPairsOutputFormatCriteriaEnum criteria) {
         this.criteria = criteria;
         return this;
@@ -33,6 +36,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
     public OffsetDateTime departure;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withDeparture(OffsetDateTime departure) {
         this.departure = departure;
         return this;
@@ -43,6 +47,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
     public String disable;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withDisable(String disable) {
         this.disable = disable;
         return this;
@@ -53,6 +58,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
     public GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum distanceUnit;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withDistanceUnit(GetTruckDistanceBetweenPairsOutputFormatDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -63,6 +69,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromPoints")
     public String fromPoints;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withFromPoints(String fromPoints) {
         this.fromPoints = fromPoints;
         return this;
@@ -73,6 +80,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxPairs")
     public Long maxPairs;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withMaxPairs(Long maxPairs) {
         this.maxPairs = maxPairs;
         return this;
@@ -83,6 +91,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum outputFormat;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withOutputFormat(GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -93,6 +102,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum outputSRS;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withOutputSRS(GetTruckDistanceBetweenPairsOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -103,6 +113,7 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
     public String routeDescription;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withRouteDescription(String routeDescription) {
         this.routeDescription = routeDescription;
         return this;
@@ -113,9 +124,15 @@ public class GetTruckDistanceBetweenPairsOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toPoints")
     public String toPoints;
+
     public GetTruckDistanceBetweenPairsOutputFormatRequest withToPoints(String toPoints) {
         this.toPoints = toPoints;
         return this;
     }
     
+    public GetTruckDistanceBetweenPairsOutputFormatRequest(@JsonProperty("fromPoints") String fromPoints, @JsonProperty("outputFormat") GetTruckDistanceBetweenPairsOutputFormatOutputFormatEnum outputFormat, @JsonProperty("toPoints") String toPoints) {
+        this.fromPoints = fromPoints;
+        this.outputFormat = outputFormat;
+        this.toPoints = toPoints;
+  }
 }

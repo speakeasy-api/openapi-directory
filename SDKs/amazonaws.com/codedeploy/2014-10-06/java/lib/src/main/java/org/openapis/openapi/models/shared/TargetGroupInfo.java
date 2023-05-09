@@ -15,9 +15,11 @@ public class TargetGroupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetGroupInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TargetGroupInfo(){}
 }

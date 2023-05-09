@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class Builder {
     
     public String arn;
+
     public Builder withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public Builder(){}
 }

@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity;
 import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest;
 import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ApiInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -17,49 +16,50 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ApigeeregistryProjectsLocationsApisCreateRequest req = new ApigeeregistryProjectsLocationsApisCreateRequest() {{
-                dollarXgafv = "2";
+            ApigeeregistryProjectsLocationsApisCreateRequest req = new ApigeeregistryProjectsLocationsApisCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 apiInput = new ApiInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("distinctio", "quibusdam");
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
-                    availability = "vel";
-                    description = "error";
-                    displayName = "deserunt";
+                    availability = "error";
+                    description = "deserunt";
+                    displayName = "suscipit";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    name = "delectus";
-                    recommendedDeployment = "tempora";
-                    recommendedVersion = "suscipit";
-                }};
-                accessToken = "molestiae";
-                alt = "proto";
-                apiId = "placeat";
-                callback = "voluptatum";
-                fields = "iusto";
-                key = "excepturi";
-                oauthToken = "nisi";
-                parent = "recusandae";
+                    name = "Laurie Kreiger";
+                    recommendedDeployment = "voluptatum";
+                    recommendedVersion = "iusto";
+                }};;
+                accessToken = "excepturi";
+                alt = AltEnum.MEDIA;
+                apiId = "recusandae";
+                callback = "temporibus";
+                fields = "ab";
+                key = "quis";
+                oauthToken = "veritatis";
                 prettyPrint = false;
-                quotaUser = "temporibus";
-                uploadType = "ab";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "deserunt";
+                uploadType = "perferendis";
+                uploadProtocol = "ipsam";
+            }};            
 
-            ApigeeregistryProjectsLocationsApisCreateResponse res = sdk.projects.apigeeregistryProjectsLocationsApisCreate(req, new ApigeeregistryProjectsLocationsApisCreateSecurity() {{
+            ApigeeregistryProjectsLocationsApisCreateResponse res = sdk.projects.apigeeregistryProjectsLocationsApisCreate(req, new ApigeeregistryProjectsLocationsApisCreateSecurity("repellendus", "sapiente") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.api.isPresent()) {
+            if (res.api != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Address {
     @JsonProperty("address")
     public String address;
+
     public Address withAddress(String address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class Address {
     
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +25,7 @@ public class Address {
     
     @JsonProperty("country_code")
     public CountryEnum countryCode;
+
     public Address withCountryCode(CountryEnum countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -30,9 +33,16 @@ public class Address {
     
     @JsonProperty("post_code")
     public String postCode;
+
     public Address withPostCode(String postCode) {
         this.postCode = postCode;
         return this;
     }
     
+    public Address(@JsonProperty("address") String address, @JsonProperty("city") String city, @JsonProperty("country_code") CountryEnum countryCode, @JsonProperty("post_code") String postCode) {
+        this.address = address;
+        this.city = city;
+        this.countryCode = countryCode;
+        this.postCode = postCode;
+  }
 }

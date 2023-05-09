@@ -12,6 +12,7 @@ public class CtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("ApplicationNo")
     public String applicationNo;
+
     public CtcerRequestBodyCertificateParameters withApplicationNo(String applicationNo) {
         this.applicationNo = applicationNo;
         return this;
@@ -22,9 +23,14 @@ public class CtcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CertificateID")
     public String certificateID;
+
     public CtcerRequestBodyCertificateParameters withCertificateID(String certificateID) {
         this.certificateID = certificateID;
         return this;
     }
     
+    public CtcerRequestBodyCertificateParameters(@JsonProperty("ApplicationNo") String applicationNo, @JsonProperty("CertificateID") String certificateID) {
+        this.applicationNo = applicationNo;
+        this.certificateID = certificateID;
+  }
 }

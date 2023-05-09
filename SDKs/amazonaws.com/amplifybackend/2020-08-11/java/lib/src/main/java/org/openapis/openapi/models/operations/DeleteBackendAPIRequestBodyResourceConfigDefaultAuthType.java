@@ -15,6 +15,7 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum mode;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType withMode(DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeModeEnum mode) {
         this.mode = mode;
         return this;
@@ -23,9 +24,11 @@ public class DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings settings;
+
     public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType withSettings(DeleteBackendAPIRequestBodyResourceConfigDefaultAuthTypeSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public DeleteBackendAPIRequestBodyResourceConfigDefaultAuthType(){}
 }

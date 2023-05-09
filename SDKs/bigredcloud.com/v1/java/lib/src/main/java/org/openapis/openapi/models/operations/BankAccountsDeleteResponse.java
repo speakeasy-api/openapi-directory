@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BankAccountsDeleteResponse {
@@ -12,6 +13,7 @@ public class BankAccountsDeleteResponse {
      */
     
     public java.util.Map<String, Object> bankAccountsDelete200ApplicationJSONObject;
+
     public BankAccountsDeleteResponse withBankAccountsDelete200ApplicationJSONObject(java.util.Map<String, Object> bankAccountsDelete200ApplicationJSONObject) {
         this.bankAccountsDelete200ApplicationJSONObject = bankAccountsDelete200ApplicationJSONObject;
         return this;
@@ -19,6 +21,7 @@ public class BankAccountsDeleteResponse {
     
     
     public String contentType;
+
     public BankAccountsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BankAccountsDeleteResponse {
     
     
     public Integer statusCode;
+
     public BankAccountsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BankAccountsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BankAccountsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BankAccountsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

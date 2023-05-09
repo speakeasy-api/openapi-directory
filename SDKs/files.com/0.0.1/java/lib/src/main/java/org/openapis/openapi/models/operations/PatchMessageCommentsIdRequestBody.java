@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchMessageCommentsIdRequestBody {
@@ -12,9 +13,13 @@ public class PatchMessageCommentsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=body")
     public String body;
+
     public PatchMessageCommentsIdRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public PatchMessageCommentsIdRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

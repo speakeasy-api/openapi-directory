@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApprovalRuleTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateContentRequiredException;
+
     public CreateApprovalRuleTemplateResponse withApprovalRuleTemplateContentRequiredException(Object approvalRuleTemplateContentRequiredException) {
         this.approvalRuleTemplateContentRequiredException = approvalRuleTemplateContentRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateNameAlreadyExistsException;
+
     public CreateApprovalRuleTemplateResponse withApprovalRuleTemplateNameAlreadyExistsException(Object approvalRuleTemplateNameAlreadyExistsException) {
         this.approvalRuleTemplateNameAlreadyExistsException = approvalRuleTemplateNameAlreadyExistsException;
         return this;
@@ -32,6 +35,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object approvalRuleTemplateNameRequiredException;
+
     public CreateApprovalRuleTemplateResponse withApprovalRuleTemplateNameRequiredException(Object approvalRuleTemplateNameRequiredException) {
         this.approvalRuleTemplateNameRequiredException = approvalRuleTemplateNameRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApprovalRuleTemplateResponse {
     
     
     public String contentType;
+
     public CreateApprovalRuleTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApprovalRuleTemplateOutput createApprovalRuleTemplateOutput;
+
     public CreateApprovalRuleTemplateResponse withCreateApprovalRuleTemplateOutput(org.openapis.openapi.models.shared.CreateApprovalRuleTemplateOutput createApprovalRuleTemplateOutput) {
         this.createApprovalRuleTemplateOutput = createApprovalRuleTemplateOutput;
         return this;
@@ -59,6 +65,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateContentException;
+
     public CreateApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateContentException(Object invalidApprovalRuleTemplateContentException) {
         this.invalidApprovalRuleTemplateContentException = invalidApprovalRuleTemplateContentException;
         return this;
@@ -69,6 +76,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateDescriptionException;
+
     public CreateApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateDescriptionException(Object invalidApprovalRuleTemplateDescriptionException) {
         this.invalidApprovalRuleTemplateDescriptionException = invalidApprovalRuleTemplateDescriptionException;
         return this;
@@ -79,6 +87,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object invalidApprovalRuleTemplateNameException;
+
     public CreateApprovalRuleTemplateResponse withInvalidApprovalRuleTemplateNameException(Object invalidApprovalRuleTemplateNameException) {
         this.invalidApprovalRuleTemplateNameException = invalidApprovalRuleTemplateNameException;
         return this;
@@ -89,6 +98,7 @@ public class CreateApprovalRuleTemplateResponse {
      */
     
     public Object numberOfRuleTemplatesExceededException;
+
     public CreateApprovalRuleTemplateResponse withNumberOfRuleTemplatesExceededException(Object numberOfRuleTemplatesExceededException) {
         this.numberOfRuleTemplatesExceededException = numberOfRuleTemplatesExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateApprovalRuleTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateApprovalRuleTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateApprovalRuleTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApprovalRuleTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateApprovalRuleTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

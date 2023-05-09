@@ -62,11 +62,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesCreateResponse(contentType, httpRes.statusCode()) {{
             enterprise = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesIssueCommandResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesListResponse(contentType, httpRes.statusCode()) {{
             listDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesDevicesOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensCreateResponse(contentType, httpRes.statusCode()) {{
             enrollmentToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesEnrollmentTokensListResponse(contentType, httpRes.statusCode()) {{
             listEnrollmentTokensResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesListResponse(contentType, httpRes.statusCode()) {{
             listEnterprisesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsCreateResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsGetResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsListResponse(contentType, httpRes.statusCode()) {{
             listWebAppsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -622,11 +598,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebAppsPatchResponse(contentType, httpRes.statusCode()) {{
             webApp = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,11 +644,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse res = new org.openapis.openapi.models.operations.AndroidmanagementEnterprisesWebTokensCreateResponse(contentType, httpRes.statusCode()) {{
             webToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -19,6 +19,7 @@ public class UpdateSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public UpdateSubscriptionResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -32,9 +33,11 @@ public class UpdateSubscriptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public Subscription subscription;
+
     public UpdateSubscriptionResponse withSubscription(Subscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public UpdateSubscriptionResponse(){}
 }

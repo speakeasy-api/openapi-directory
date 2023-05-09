@@ -12,6 +12,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public ProductSearch200ApplicationJSON withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -20,6 +21,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public ProductSearch200ApplicationJSON withCategory(String category) {
         this.category = category;
         return this;
@@ -28,6 +30,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public ProductSearch200ApplicationJSON withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -36,6 +39,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductSearch200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasOptions")
     public Boolean hasOptions;
+
     public ProductSearch200ApplicationJSON withHasOptions(Boolean hasOptions) {
         this.hasOptions = hasOptions;
         return this;
@@ -52,6 +57,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public String[] options;
+
     public ProductSearch200ApplicationJSON withOptions(String[] options) {
         this.options = options;
         return this;
@@ -60,6 +66,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Float price;
+
     public ProductSearch200ApplicationJSON withPrice(Float price) {
         this.price = price;
         return this;
@@ -68,6 +75,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public String provider;
+
     public ProductSearch200ApplicationJSON withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -76,6 +84,7 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public ProductSearch200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -84,9 +93,11 @@ public class ProductSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProductSearch200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ProductSearch200ApplicationJSON(){}
 }

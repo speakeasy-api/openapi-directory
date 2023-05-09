@@ -15,6 +15,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrayProperties")
     public SubmitJobRequestBodyArrayProperties arrayProperties;
+
     public SubmitJobRequestBody withArrayProperties(SubmitJobRequestBodyArrayProperties arrayProperties) {
         this.arrayProperties = arrayProperties;
         return this;
@@ -26,6 +27,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerOverrides")
     public SubmitJobRequestBodyContainerOverrides containerOverrides;
+
     public SubmitJobRequestBody withContainerOverrides(SubmitJobRequestBodyContainerOverrides containerOverrides) {
         this.containerOverrides = containerOverrides;
         return this;
@@ -37,6 +39,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dependsOn")
     public org.openapis.openapi.models.shared.JobDependency[] dependsOn;
+
     public SubmitJobRequestBody withDependsOn(org.openapis.openapi.models.shared.JobDependency[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -48,6 +51,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksPropertiesOverride")
     public SubmitJobRequestBodyEksPropertiesOverride eksPropertiesOverride;
+
     public SubmitJobRequestBody withEksPropertiesOverride(SubmitJobRequestBodyEksPropertiesOverride eksPropertiesOverride) {
         this.eksPropertiesOverride = eksPropertiesOverride;
         return this;
@@ -58,6 +62,7 @@ public class SubmitJobRequestBody {
      */
     @JsonProperty("jobDefinition")
     public String jobDefinition;
+
     public SubmitJobRequestBody withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
@@ -68,6 +73,7 @@ public class SubmitJobRequestBody {
      */
     @JsonProperty("jobName")
     public String jobName;
+
     public SubmitJobRequestBody withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -78,6 +84,7 @@ public class SubmitJobRequestBody {
      */
     @JsonProperty("jobQueue")
     public String jobQueue;
+
     public SubmitJobRequestBody withJobQueue(String jobQueue) {
         this.jobQueue = jobQueue;
         return this;
@@ -89,6 +96,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeOverrides")
     public SubmitJobRequestBodyNodeOverrides nodeOverrides;
+
     public SubmitJobRequestBody withNodeOverrides(SubmitJobRequestBodyNodeOverrides nodeOverrides) {
         this.nodeOverrides = nodeOverrides;
         return this;
@@ -100,6 +108,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public SubmitJobRequestBody withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -111,6 +120,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propagateTags")
     public Boolean propagateTags;
+
     public SubmitJobRequestBody withPropagateTags(Boolean propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -122,6 +132,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public SubmitJobRequestBodyRetryStrategy retryStrategy;
+
     public SubmitJobRequestBody withRetryStrategy(SubmitJobRequestBodyRetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
@@ -133,6 +144,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedulingPriorityOverride")
     public Long schedulingPriorityOverride;
+
     public SubmitJobRequestBody withSchedulingPriorityOverride(Long schedulingPriorityOverride) {
         this.schedulingPriorityOverride = schedulingPriorityOverride;
         return this;
@@ -144,6 +156,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareIdentifier")
     public String shareIdentifier;
+
     public SubmitJobRequestBody withShareIdentifier(String shareIdentifier) {
         this.shareIdentifier = shareIdentifier;
         return this;
@@ -155,6 +168,7 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SubmitJobRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -166,9 +180,15 @@ public class SubmitJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public SubmitJobRequestBodyTimeout timeout;
+
     public SubmitJobRequestBody withTimeout(SubmitJobRequestBodyTimeout timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public SubmitJobRequestBody(@JsonProperty("jobDefinition") String jobDefinition, @JsonProperty("jobName") String jobName, @JsonProperty("jobQueue") String jobQueue) {
+        this.jobDefinition = jobDefinition;
+        this.jobName = jobName;
+        this.jobQueue = jobQueue;
+  }
 }

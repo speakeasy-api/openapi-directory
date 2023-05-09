@@ -18,6 +18,7 @@ public class CertificateReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeLocation")
     public CertificateReferenceStoreLocationEnum storeLocation;
+
     public CertificateReference withStoreLocation(CertificateReferenceStoreLocationEnum storeLocation) {
         this.storeLocation = storeLocation;
         return this;
@@ -29,6 +30,7 @@ public class CertificateReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeName")
     public String storeName;
+
     public CertificateReference withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
@@ -39,6 +41,7 @@ public class CertificateReference {
      */
     @JsonProperty("thumbprint")
     public String thumbprint;
+
     public CertificateReference withThumbprint(String thumbprint) {
         this.thumbprint = thumbprint;
         return this;
@@ -49,6 +52,7 @@ public class CertificateReference {
      */
     @JsonProperty("thumbprintAlgorithm")
     public String thumbprintAlgorithm;
+
     public CertificateReference withThumbprintAlgorithm(String thumbprintAlgorithm) {
         this.thumbprintAlgorithm = thumbprintAlgorithm;
         return this;
@@ -60,9 +64,14 @@ public class CertificateReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public String visibility;
+
     public CertificateReference withVisibility(String visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public CertificateReference(@JsonProperty("thumbprint") String thumbprint, @JsonProperty("thumbprintAlgorithm") String thumbprintAlgorithm) {
+        this.thumbprint = thumbprint;
+        this.thumbprintAlgorithm = thumbprintAlgorithm;
+  }
 }

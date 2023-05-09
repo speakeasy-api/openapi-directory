@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsSpotOptions {
     
     public DescribeFleetsResultFleetsSpotOptionsAllocationStrategyEnum allocationStrategy;
+
     public DescribeFleetsResultFleetsSpotOptions withAllocationStrategy(DescribeFleetsResultFleetsSpotOptionsAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public DescribeFleetsResultFleetsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior;
+
     public DescribeFleetsResultFleetsSpotOptions withInstanceInterruptionBehavior(DescribeFleetsResultFleetsSpotOptionsInstanceInterruptionBehaviorEnum instanceInterruptionBehavior) {
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public Long instancePoolsToUseCount;
+
     public DescribeFleetsResultFleetsSpotOptions withInstancePoolsToUseCount(Long instancePoolsToUseCount) {
         this.instancePoolsToUseCount = instancePoolsToUseCount;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public DescribeFleetsResultFleetsSpotOptionsMaintenanceStrategies maintenanceStrategies;
+
     public DescribeFleetsResultFleetsSpotOptions withMaintenanceStrategies(DescribeFleetsResultFleetsSpotOptionsMaintenanceStrategies maintenanceStrategies) {
         this.maintenanceStrategies = maintenanceStrategies;
         return this;
@@ -40,6 +44,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public String maxTotalPrice;
+
     public DescribeFleetsResultFleetsSpotOptions withMaxTotalPrice(String maxTotalPrice) {
         this.maxTotalPrice = maxTotalPrice;
         return this;
@@ -47,6 +52,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public Long minTargetCapacity;
+
     public DescribeFleetsResultFleetsSpotOptions withMinTargetCapacity(Long minTargetCapacity) {
         this.minTargetCapacity = minTargetCapacity;
         return this;
@@ -54,6 +60,7 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public Boolean singleAvailabilityZone;
+
     public DescribeFleetsResultFleetsSpotOptions withSingleAvailabilityZone(Boolean singleAvailabilityZone) {
         this.singleAvailabilityZone = singleAvailabilityZone;
         return this;
@@ -61,9 +68,11 @@ public class DescribeFleetsResultFleetsSpotOptions {
     
     
     public Boolean singleInstanceType;
+
     public DescribeFleetsResultFleetsSpotOptions withSingleInstanceType(Boolean singleInstanceType) {
         this.singleInstanceType = singleInstanceType;
         return this;
     }
     
+    public DescribeFleetsResultFleetsSpotOptions(){}
 }

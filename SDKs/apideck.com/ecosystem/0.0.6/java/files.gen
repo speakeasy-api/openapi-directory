@@ -98,4 +98,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/CardSettings.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetListingResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetProductsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetProductResponse.java
+docs/sdk/README.md
+docs/category/README.md
+docs/collection/README.md
+docs/ecosystem/README.md
+docs/listing/README.md
+docs/product/README.md
 USAGE.md

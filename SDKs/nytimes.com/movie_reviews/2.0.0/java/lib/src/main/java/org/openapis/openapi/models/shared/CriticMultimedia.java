@@ -12,9 +12,11 @@ public class CriticMultimedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public CriticMultimediaResource resource;
+
     public CriticMultimedia withResource(CriticMultimediaResource resource) {
         this.resource = resource;
         return this;
     }
     
+    public CriticMultimedia(){}
 }

@@ -17,6 +17,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public QuoteOfWgLevelSimpleVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -28,6 +29,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public QuoteOfWgLevelSimpleVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -39,6 +41,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBaseVO project;
+
     public QuoteOfWgLevelSimpleVO withProject(ProjectBaseVO project) {
         this.project = project;
         return this;
@@ -47,6 +50,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public Long quoteId;
+
     public QuoteOfWgLevelSimpleVO withQuoteId(Long quoteId) {
         this.quoteId = quoteId;
         return this;
@@ -55,6 +59,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_title")
     public String quoteTitle;
+
     public QuoteOfWgLevelSimpleVO withQuoteTitle(String quoteTitle) {
         this.quoteTitle = quoteTitle;
         return this;
@@ -66,6 +71,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfq")
     public RfqBaseVO rfq;
+
     public QuoteOfWgLevelSimpleVO withRfq(RfqBaseVO rfq) {
         this.rfq = rfq;
         return this;
@@ -74,6 +80,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public QuoteOfWgLevelSimpleVO withStatus(String status) {
         this.status = status;
         return this;
@@ -83,6 +90,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("submit_date")
     public LocalDate submitDate;
+
     public QuoteOfWgLevelSimpleVO withSubmitDate(LocalDate submitDate) {
         this.submitDate = submitDate;
         return this;
@@ -91,6 +99,7 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public QuoteOfWgLevelSimpleVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -102,9 +111,11 @@ public class QuoteOfWgLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public QuoteOfWgLevelSimpleVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
     }
     
+    public QuoteOfWgLevelSimpleVO(){}
 }

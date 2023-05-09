@@ -18,6 +18,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliasName")
     public String aliasName;
+
     public AirbyteStreamConfiguration withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -29,6 +30,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursorField")
     public String[] cursorField;
+
     public AirbyteStreamConfiguration withCursorField(String[] cursorField) {
         this.cursorField = cursorField;
         return this;
@@ -36,6 +38,7 @@ public class AirbyteStreamConfiguration {
     
     @JsonProperty("destinationSyncMode")
     public DestinationSyncModeEnum destinationSyncMode;
+
     public AirbyteStreamConfiguration withDestinationSyncMode(DestinationSyncModeEnum destinationSyncMode) {
         this.destinationSyncMode = destinationSyncMode;
         return this;
@@ -47,6 +50,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldSelectionEnabled")
     public Boolean fieldSelectionEnabled;
+
     public AirbyteStreamConfiguration withFieldSelectionEnabled(Boolean fieldSelectionEnabled) {
         this.fieldSelectionEnabled = fieldSelectionEnabled;
         return this;
@@ -58,6 +62,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryKey")
     public String[][] primaryKey;
+
     public AirbyteStreamConfiguration withPrimaryKey(String[][] primaryKey) {
         this.primaryKey = primaryKey;
         return this;
@@ -69,6 +74,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected")
     public Boolean selected;
+
     public AirbyteStreamConfiguration withSelected(Boolean selected) {
         this.selected = selected;
         return this;
@@ -80,6 +86,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectedFields")
     public SelectedFieldInfo[] selectedFields;
+
     public AirbyteStreamConfiguration withSelectedFields(SelectedFieldInfo[] selectedFields) {
         this.selectedFields = selectedFields;
         return this;
@@ -91,6 +98,7 @@ public class AirbyteStreamConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggested")
     public Boolean suggested;
+
     public AirbyteStreamConfiguration withSuggested(Boolean suggested) {
         this.suggested = suggested;
         return this;
@@ -98,9 +106,14 @@ public class AirbyteStreamConfiguration {
     
     @JsonProperty("syncMode")
     public SyncModeEnum syncMode;
+
     public AirbyteStreamConfiguration withSyncMode(SyncModeEnum syncMode) {
         this.syncMode = syncMode;
         return this;
     }
     
+    public AirbyteStreamConfiguration(@JsonProperty("destinationSyncMode") DestinationSyncModeEnum destinationSyncMode, @JsonProperty("syncMode") SyncModeEnum syncMode) {
+        this.destinationSyncMode = destinationSyncMode;
+        this.syncMode = syncMode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixBoundsRequestBody {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixBoundsRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -19,19 +20,26 @@ public class PostAssetsCorrelationMatrixBoundsRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixBoundsRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
     }
     
     /**
-     * assetsGroup[k] is the indexes of the assets belonging to the assets group
+     * assetsGroup[k] is the indexes of the assets belonging to the assets group k
      */
     @JsonProperty("assetsGroup")
     public Long[] assetsGroup;
+
     public PostAssetsCorrelationMatrixBoundsRequestBody withAssetsGroup(Long[] assetsGroup) {
         this.assetsGroup = assetsGroup;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixBoundsRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("assetsGroup") Long[] assetsGroup) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.assetsGroup = assetsGroup;
+  }
 }

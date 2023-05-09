@@ -12,6 +12,7 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointmentId")
     public String appointmentId;
+
     public AppointmentResourceViewModel withAppointmentId(String appointmentId) {
         this.appointmentId = appointmentId;
         return this;
@@ -20,6 +21,7 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceEmail")
     public String resourceEmail;
+
     public AppointmentResourceViewModel withResourceEmail(String resourceEmail) {
         this.resourceEmail = resourceEmail;
         return this;
@@ -28,6 +30,7 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceGroupId")
     public String resourceGroupId;
+
     public AppointmentResourceViewModel withResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
@@ -36,6 +39,7 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public AppointmentResourceViewModel withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -44,6 +48,7 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceImageUrl")
     public String resourceImageUrl;
+
     public AppointmentResourceViewModel withResourceImageUrl(String resourceImageUrl) {
         this.resourceImageUrl = resourceImageUrl;
         return this;
@@ -52,9 +57,11 @@ public class AppointmentResourceViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public AppointmentResourceViewModel withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public AppointmentResourceViewModel(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartDTMFRequest {
@@ -12,6 +13,7 @@ public class StartDTMFRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DTMFRequest dtmfRequest;
+
     public StartDTMFRequest withDTMFRequest(org.openapis.openapi.models.shared.DTMFRequest dtmfRequest) {
         this.dtmfRequest = dtmfRequest;
         return this;
@@ -22,9 +24,14 @@ public class StartDTMFRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public StartDTMFRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StartDTMFRequest(@JsonProperty("DTMFRequest") org.openapis.openapi.models.shared.DTMFRequest dtmfRequest, @JsonProperty("uuid") String uuid) {
+        this.dtmfRequest = dtmfRequest;
+        this.uuid = uuid;
+  }
 }

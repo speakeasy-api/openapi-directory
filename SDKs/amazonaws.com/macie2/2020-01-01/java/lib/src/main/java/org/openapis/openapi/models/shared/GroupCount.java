@@ -15,6 +15,7 @@ public class GroupCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public GroupCount withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class GroupCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupKey")
     public String groupKey;
+
     public GroupCount withGroupKey(String groupKey) {
         this.groupKey = groupKey;
         return this;
     }
     
+    public GroupCount(){}
 }

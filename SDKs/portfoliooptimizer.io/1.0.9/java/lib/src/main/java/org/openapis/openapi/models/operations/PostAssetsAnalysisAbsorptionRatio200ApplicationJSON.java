@@ -15,9 +15,13 @@ public class PostAssetsAnalysisAbsorptionRatio200ApplicationJSON {
      */
     @JsonProperty("assetsAbsorptionRatio")
     public Double assetsAbsorptionRatio;
+
     public PostAssetsAnalysisAbsorptionRatio200ApplicationJSON withAssetsAbsorptionRatio(Double assetsAbsorptionRatio) {
         this.assetsAbsorptionRatio = assetsAbsorptionRatio;
         return this;
     }
     
+    public PostAssetsAnalysisAbsorptionRatio200ApplicationJSON(@JsonProperty("assetsAbsorptionRatio") Double assetsAbsorptionRatio) {
+        this.assetsAbsorptionRatio = assetsAbsorptionRatio;
+  }
 }

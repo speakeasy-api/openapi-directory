@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFeatureMetadataRequest {
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public DescribeFeatureMetadataRequest withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DescribeFeatureMetadataRequest {
     
     @JsonProperty("FeatureName")
     public String featureName;
+
     public DescribeFeatureMetadataRequest withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
     }
     
+    public DescribeFeatureMetadataRequest(@JsonProperty("FeatureGroupName") String featureGroupName, @JsonProperty("FeatureName") String featureName) {
+        this.featureGroupName = featureGroupName;
+        this.featureName = featureName;
+  }
 }

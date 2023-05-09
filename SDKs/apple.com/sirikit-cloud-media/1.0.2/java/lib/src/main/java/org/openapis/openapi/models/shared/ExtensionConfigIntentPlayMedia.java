@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ExtensionConfigIntentPlayMedia {
     
     public java.util.Map<String, Object> hdr;
+
     public ExtensionConfigIntentPlayMedia withHdr(java.util.Map<String, Object> hdr) {
         this.hdr = hdr;
         return this;
@@ -16,6 +17,7 @@ public class ExtensionConfigIntentPlayMedia {
     
     
     public ExtensionConfigIntentPlayMediaOptEnum[] opt;
+
     public ExtensionConfigIntentPlayMedia withOpt(ExtensionConfigIntentPlayMediaOptEnum[] opt) {
         this.opt = opt;
         return this;
@@ -23,9 +25,11 @@ public class ExtensionConfigIntentPlayMedia {
     
     
     public String url;
+
     public ExtensionConfigIntentPlayMedia withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ExtensionConfigIntentPlayMedia(){}
 }

@@ -56,11 +56,9 @@ public class Publishers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishersListResponse res = new org.openapis.openapi.models.operations.PublishersListResponse() {{
+        org.openapis.openapi.models.operations.PublishersListResponse res = new org.openapis.openapi.models.operations.PublishersListResponse(contentType, httpRes.statusCode()) {{
             publishersList200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Publishers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishersReadResponse res = new org.openapis.openapi.models.operations.PublishersReadResponse() {{
+        org.openapis.openapi.models.operations.PublishersReadResponse res = new org.openapis.openapi.models.operations.PublishersReadResponse(contentType, httpRes.statusCode()) {{
             publisherSingle = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

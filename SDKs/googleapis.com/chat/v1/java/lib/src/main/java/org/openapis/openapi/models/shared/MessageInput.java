@@ -18,6 +18,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionResponse")
     public ActionResponse actionResponse;
+
     public MessageInput withActionResponse(ActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -29,6 +30,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public AttachmentInput[] attachment;
+
     public MessageInput withAttachment(AttachmentInput[] attachment) {
         this.attachment = attachment;
         return this;
@@ -40,6 +42,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cards")
     public Card[] cards;
+
     public MessageInput withCards(Card[] cards) {
         this.cards = cards;
         return this;
@@ -51,6 +54,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardsV2")
     public CardWithId[] cardsV2;
+
     public MessageInput withCardsV2(CardWithId[] cardsV2) {
         this.cardsV2 = cardsV2;
         return this;
@@ -62,6 +66,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAssignedMessageId")
     public String clientAssignedMessageId;
+
     public MessageInput withClientAssignedMessageId(String clientAssignedMessageId) {
         this.clientAssignedMessageId = clientAssignedMessageId;
         return this;
@@ -73,6 +78,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallbackText")
     public String fallbackText;
+
     public MessageInput withFallbackText(String fallbackText) {
         this.fallbackText = fallbackText;
         return this;
@@ -84,6 +90,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MessageInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sender")
     public UserInput sender;
+
     public MessageInput withSender(UserInput sender) {
         this.sender = sender;
         return this;
@@ -106,6 +114,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slashCommand")
     public SlashCommand slashCommand;
+
     public MessageInput withSlashCommand(SlashCommand slashCommand) {
         this.slashCommand = slashCommand;
         return this;
@@ -117,6 +126,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space")
     public SpaceInput space;
+
     public MessageInput withSpace(SpaceInput space) {
         this.space = space;
         return this;
@@ -128,6 +138,7 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public MessageInput withText(String text) {
         this.text = text;
         return this;
@@ -139,9 +150,11 @@ public class MessageInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thread")
     public Thread thread;
+
     public MessageInput withThread(Thread thread) {
         this.thread = thread;
         return this;
     }
     
+    public MessageInput(){}
 }

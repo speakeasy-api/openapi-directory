@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationCustomRulePolicyResponse {
     
     public String contentType;
+
     public GetOrganizationCustomRulePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetOrganizationCustomRulePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOrganizationCustomRulePolicyResponse getOrganizationCustomRulePolicyResponse;
+
     public GetOrganizationCustomRulePolicyResponse withGetOrganizationCustomRulePolicyResponse(org.openapis.openapi.models.shared.GetOrganizationCustomRulePolicyResponse getOrganizationCustomRulePolicyResponse) {
         this.getOrganizationCustomRulePolicyResponse = getOrganizationCustomRulePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetOrganizationCustomRulePolicyResponse {
      */
     
     public Object noSuchOrganizationConfigRuleException;
+
     public GetOrganizationCustomRulePolicyResponse withNoSuchOrganizationConfigRuleException(Object noSuchOrganizationConfigRuleException) {
         this.noSuchOrganizationConfigRuleException = noSuchOrganizationConfigRuleException;
         return this;
@@ -39,6 +43,7 @@ public class GetOrganizationCustomRulePolicyResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public GetOrganizationCustomRulePolicyResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -46,6 +51,7 @@ public class GetOrganizationCustomRulePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationCustomRulePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetOrganizationCustomRulePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationCustomRulePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOrganizationCustomRulePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

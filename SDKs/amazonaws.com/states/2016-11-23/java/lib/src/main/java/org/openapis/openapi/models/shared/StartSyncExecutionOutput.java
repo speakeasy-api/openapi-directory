@@ -20,6 +20,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingDetails")
     public BillingDetails billingDetails;
+
     public StartSyncExecutionOutput withBillingDetails(BillingDetails billingDetails) {
         this.billingDetails = billingDetails;
         return this;
@@ -28,6 +29,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public StartSyncExecutionOutput withCause(String cause) {
         this.cause = cause;
         return this;
@@ -36,6 +38,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public StartSyncExecutionOutput withError(String error) {
         this.error = error;
         return this;
@@ -43,6 +46,7 @@ public class StartSyncExecutionOutput {
     
     @JsonProperty("executionArn")
     public String executionArn;
+
     public StartSyncExecutionOutput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
@@ -51,6 +55,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public StartSyncExecutionOutput withInput(String input) {
         this.input = input;
         return this;
@@ -62,6 +67,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDetails")
     public CloudWatchEventsExecutionDataDetails inputDetails;
+
     public StartSyncExecutionOutput withInputDetails(CloudWatchEventsExecutionDataDetails inputDetails) {
         this.inputDetails = inputDetails;
         return this;
@@ -70,6 +76,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartSyncExecutionOutput withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public StartSyncExecutionOutput withOutput(String output) {
         this.output = output;
         return this;
@@ -89,6 +97,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public CloudWatchEventsExecutionDataDetails outputDetails;
+
     public StartSyncExecutionOutput withOutputDetails(CloudWatchEventsExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
@@ -98,6 +107,7 @@ public class StartSyncExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public StartSyncExecutionOutput withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -106,6 +116,7 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public StartSyncExecutionOutput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -113,6 +124,7 @@ public class StartSyncExecutionOutput {
     
     @JsonProperty("status")
     public SyncExecutionStatusEnum status;
+
     public StartSyncExecutionOutput withStatus(SyncExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -122,6 +134,7 @@ public class StartSyncExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public StartSyncExecutionOutput withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
@@ -130,9 +143,16 @@ public class StartSyncExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceHeader")
     public String traceHeader;
+
     public StartSyncExecutionOutput withTraceHeader(String traceHeader) {
         this.traceHeader = traceHeader;
         return this;
     }
     
+    public StartSyncExecutionOutput(@JsonProperty("executionArn") String executionArn, @JsonProperty("startDate") OffsetDateTime startDate, @JsonProperty("status") SyncExecutionStatusEnum status, @JsonProperty("stopDate") OffsetDateTime stopDate) {
+        this.executionArn = executionArn;
+        this.startDate = startDate;
+        this.status = status;
+        this.stopDate = stopDate;
+  }
 }

@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PlatformInput - &lt;p/&gt;
+ * PlatformInput - The input structure for specifying Platform. Platform refers to the unique name of the specific platform the instrument is attached to. For satellites it is the name of the satellite, eg. landsat-8 (Landsat-8), sentinel-2a.
  */
 public class PlatformInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public PlatformInput withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -22,9 +23,13 @@ public class PlatformInput {
     
     @JsonProperty("Value")
     public String value;
+
     public PlatformInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PlatformInput(@JsonProperty("Value") String value) {
+        this.value = value;
+  }
 }

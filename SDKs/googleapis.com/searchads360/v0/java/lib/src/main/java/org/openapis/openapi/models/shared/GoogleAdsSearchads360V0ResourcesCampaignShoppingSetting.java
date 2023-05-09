@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignPriority")
     public Integer campaignPriority;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withCampaignPriority(Integer campaignPriority) {
         this.campaignPriority = campaignPriority;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLocal")
     public Boolean enableLocal;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withEnableLocal(Boolean enableLocal) {
         this.enableLocal = enableLocal;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedLabel")
     public String feedLabel;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withFeedLabel(String feedLabel) {
         this.feedLabel = feedLabel;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesCountry")
     public String salesCountry;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withSalesCountry(String salesCountry) {
         this.salesCountry = salesCountry;
         return this;
@@ -73,9 +78,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useVehicleInventory")
     public Boolean useVehicleInventory;
+
     public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting withUseVehicleInventory(Boolean useVehicleInventory) {
         this.useVehicleInventory = useVehicleInventory;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting(){}
 }

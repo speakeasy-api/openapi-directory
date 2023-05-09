@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendCommandResponse {
     
     public String contentType;
+
     public SendCommandResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendCommandResponse {
      */
     
     public Object duplicateInstanceId;
+
     public SendCommandResponse withDuplicateInstanceId(Object duplicateInstanceId) {
         this.duplicateInstanceId = duplicateInstanceId;
         return this;
@@ -29,6 +32,7 @@ public class SendCommandResponse {
      */
     
     public Object internalServerError;
+
     public SendCommandResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidDocument;
+
     public SendCommandResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -49,6 +54,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public SendCommandResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -59,6 +65,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidInstanceId;
+
     public SendCommandResponse withInvalidInstanceId(Object invalidInstanceId) {
         this.invalidInstanceId = invalidInstanceId;
         return this;
@@ -69,6 +76,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidNotificationConfig;
+
     public SendCommandResponse withInvalidNotificationConfig(Object invalidNotificationConfig) {
         this.invalidNotificationConfig = invalidNotificationConfig;
         return this;
@@ -79,6 +87,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidOutputFolder;
+
     public SendCommandResponse withInvalidOutputFolder(Object invalidOutputFolder) {
         this.invalidOutputFolder = invalidOutputFolder;
         return this;
@@ -89,6 +98,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidParameters;
+
     public SendCommandResponse withInvalidParameters(Object invalidParameters) {
         this.invalidParameters = invalidParameters;
         return this;
@@ -99,6 +109,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidRole;
+
     public SendCommandResponse withInvalidRole(Object invalidRole) {
         this.invalidRole = invalidRole;
         return this;
@@ -109,6 +120,7 @@ public class SendCommandResponse {
      */
     
     public Object maxDocumentSizeExceeded;
+
     public SendCommandResponse withMaxDocumentSizeExceeded(Object maxDocumentSizeExceeded) {
         this.maxDocumentSizeExceeded = maxDocumentSizeExceeded;
         return this;
@@ -119,6 +131,7 @@ public class SendCommandResponse {
      */
     
     public org.openapis.openapi.models.shared.SendCommandResult sendCommandResult;
+
     public SendCommandResponse withSendCommandResult(org.openapis.openapi.models.shared.SendCommandResult sendCommandResult) {
         this.sendCommandResult = sendCommandResult;
         return this;
@@ -126,6 +139,7 @@ public class SendCommandResponse {
     
     
     public Integer statusCode;
+
     public SendCommandResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class SendCommandResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendCommandResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class SendCommandResponse {
      */
     
     public Object unsupportedPlatformType;
+
     public SendCommandResponse withUnsupportedPlatformType(Object unsupportedPlatformType) {
         this.unsupportedPlatformType = unsupportedPlatformType;
         return this;
     }
     
+    public SendCommandResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AlgorithmImage {
     @JsonProperty("dockerURI")
     public String dockerURI;
+
     public AlgorithmImage withDockerURI(String dockerURI) {
         this.dockerURI = dockerURI;
         return this;
@@ -22,9 +23,13 @@ public class AlgorithmImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AlgorithmImage withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AlgorithmImage(@JsonProperty("dockerURI") String dockerURI) {
+        this.dockerURI = dockerURI;
+  }
 }

@@ -18,6 +18,7 @@ public class TableDataInsertAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insertErrors")
     public TableDataInsertAllResponseInsertErrors[] insertErrors;
+
     public TableDataInsertAllResponse withInsertErrors(TableDataInsertAllResponseInsertErrors[] insertErrors) {
         this.insertErrors = insertErrors;
         return this;
@@ -29,9 +30,11 @@ public class TableDataInsertAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TableDataInsertAllResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public TableDataInsertAllResponse(){}
 }

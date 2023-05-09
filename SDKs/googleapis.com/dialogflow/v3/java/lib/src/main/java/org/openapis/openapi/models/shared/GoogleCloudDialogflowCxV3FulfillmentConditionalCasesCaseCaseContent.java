@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalCases")
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCases additionalCases;
+
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent withAdditionalCases(GoogleCloudDialogflowCxV3FulfillmentConditionalCases additionalCases) {
         this.additionalCases = additionalCases;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public GoogleCloudDialogflowCxV3ResponseMessage message;
+
     public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent withMessage(GoogleCloudDialogflowCxV3ResponseMessage message) {
         this.message = message;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent(){}
 }

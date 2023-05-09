@@ -18,6 +18,7 @@ public class TargetFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCount")
     public String targetCount;
+
     public TargetFrequency withTargetCount(String targetCount) {
         this.targetCount = targetCount;
         return this;
@@ -29,6 +30,7 @@ public class TargetFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeUnit")
     public TargetFrequencyTimeUnitEnum timeUnit;
+
     public TargetFrequency withTimeUnit(TargetFrequencyTimeUnitEnum timeUnit) {
         this.timeUnit = timeUnit;
         return this;
@@ -40,9 +42,11 @@ public class TargetFrequency {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeUnitCount")
     public Integer timeUnitCount;
+
     public TargetFrequency withTimeUnitCount(Integer timeUnitCount) {
         this.timeUnitCount = timeUnitCount;
         return this;
     }
     
+    public TargetFrequency(){}
 }

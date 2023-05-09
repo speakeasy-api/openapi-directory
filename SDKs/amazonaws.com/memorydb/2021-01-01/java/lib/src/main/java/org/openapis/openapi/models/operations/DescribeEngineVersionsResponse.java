@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEngineVersionsResponse {
     
     public String contentType;
+
     public DescribeEngineVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEngineVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEngineVersionsResponse describeEngineVersionsResponse;
+
     public DescribeEngineVersionsResponse withDescribeEngineVersionsResponse(org.openapis.openapi.models.shared.DescribeEngineVersionsResponse describeEngineVersionsResponse) {
         this.describeEngineVersionsResponse = describeEngineVersionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEngineVersionsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeEngineVersionsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEngineVersionsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeEngineVersionsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEngineVersionsResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DescribeEngineVersionsResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEngineVersionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeEngineVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeEngineVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEngineVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeEngineVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

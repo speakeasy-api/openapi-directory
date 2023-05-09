@@ -18,6 +18,7 @@ public class TargetsPresentCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingTargets")
     public String[] missingTargets;
+
     public TargetsPresentCondition withMissingTargets(String[] missingTargets) {
         this.missingTargets = missingTargets;
         return this;
@@ -29,6 +30,7 @@ public class TargetsPresentCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public TargetsPresentCondition withStatus(Boolean status) {
         this.status = status;
         return this;
@@ -40,9 +42,11 @@ public class TargetsPresentCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public TargetsPresentCondition withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public TargetsPresentCondition(){}
 }

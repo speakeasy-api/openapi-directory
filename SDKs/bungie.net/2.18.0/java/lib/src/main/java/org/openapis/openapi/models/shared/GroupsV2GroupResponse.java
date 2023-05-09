@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupResponse {
     
     public Integer allianceStatus;
+
     public GroupsV2GroupResponse withAllianceStatus(Integer allianceStatus) {
         this.allianceStatus = allianceStatus;
         return this;
@@ -16,6 +17,7 @@ public class GroupsV2GroupResponse {
     
     
     public Long[] alliedIds;
+
     public GroupsV2GroupResponse withAlliedIds(Long[] alliedIds) {
         this.alliedIds = alliedIds;
         return this;
@@ -26,6 +28,7 @@ public class GroupsV2GroupResponse {
      */
     
     public java.util.Map<String, GroupsV2GroupMember> currentUserMemberMap;
+
     public GroupsV2GroupResponse withCurrentUserMemberMap(java.util.Map<String, GroupsV2GroupMember> currentUserMemberMap) {
         this.currentUserMemberMap = currentUserMemberMap;
         return this;
@@ -36,6 +39,7 @@ public class GroupsV2GroupResponse {
      */
     
     public Boolean currentUserMembershipsInactiveForDestiny;
+
     public GroupsV2GroupResponse withCurrentUserMembershipsInactiveForDestiny(Boolean currentUserMembershipsInactiveForDestiny) {
         this.currentUserMembershipsInactiveForDestiny = currentUserMembershipsInactiveForDestiny;
         return this;
@@ -46,6 +50,7 @@ public class GroupsV2GroupResponse {
      */
     
     public java.util.Map<String, GroupsV2GroupPotentialMember> currentUserPotentialMemberMap;
+
     public GroupsV2GroupResponse withCurrentUserPotentialMemberMap(java.util.Map<String, GroupsV2GroupPotentialMember> currentUserPotentialMemberMap) {
         this.currentUserPotentialMemberMap = currentUserPotentialMemberMap;
         return this;
@@ -53,6 +58,7 @@ public class GroupsV2GroupResponse {
     
     
     public GroupsV2GroupV2 detail;
+
     public GroupsV2GroupResponse withDetail(GroupsV2GroupV2 detail) {
         this.detail = detail;
         return this;
@@ -60,6 +66,7 @@ public class GroupsV2GroupResponse {
     
     
     public GroupsV2GroupMember founder;
+
     public GroupsV2GroupResponse withFounder(GroupsV2GroupMember founder) {
         this.founder = founder;
         return this;
@@ -67,6 +74,7 @@ public class GroupsV2GroupResponse {
     
     
     public Integer groupJoinInviteCount;
+
     public GroupsV2GroupResponse withGroupJoinInviteCount(Integer groupJoinInviteCount) {
         this.groupJoinInviteCount = groupJoinInviteCount;
         return this;
@@ -74,9 +82,11 @@ public class GroupsV2GroupResponse {
     
     
     public GroupsV2GroupV2 parentGroup;
+
     public GroupsV2GroupResponse withParentGroup(GroupsV2GroupV2 parentGroup) {
         this.parentGroup = parentGroup;
         return this;
     }
     
+    public GroupsV2GroupResponse(){}
 }

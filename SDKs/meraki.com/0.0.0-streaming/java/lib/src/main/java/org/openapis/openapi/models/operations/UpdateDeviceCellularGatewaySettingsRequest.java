@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDeviceCellularGatewaySettingsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateDeviceCellularGatewaySettingsRequestBody requestBody;
+
     public UpdateDeviceCellularGatewaySettingsRequest withRequestBody(UpdateDeviceCellularGatewaySettingsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateDeviceCellularGatewaySettingsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public UpdateDeviceCellularGatewaySettingsRequest withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsRequest(@JsonProperty("serial") String serial) {
+        this.serial = serial;
+  }
 }

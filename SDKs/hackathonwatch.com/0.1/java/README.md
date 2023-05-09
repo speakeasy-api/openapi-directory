@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatRequest;
 import org.openapis.openapi.models.operations.GETHackathonsIdFormatResponse;
 
@@ -26,9 +25,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest() {{
-                id = 548814;
-            }}            
+            GETHackathonsIdFormatRequest req = new GETHackathonsIdFormatRequest(548814);            
 
             GETHackathonsIdFormatResponse res = sdk.hackathons.getHackathonsIdFormat(req);
 
@@ -38,6 +35,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -45,15 +44,15 @@ public class Application {
 ## Available Resources and Operations
 
 
-### hackathons
+### [hackathons](docs/hackathons/README.md)
 
-* `getHackathonsIdFormat` - Return the detail of a given hackathon
-* `getHackathonsComingFormat` - Return a list of coming hackathons
+* [getHackathonsIdFormat](docs/hackathons/README.md#gethackathonsidformat) - Return the detail of a given hackathon
+* [getHackathonsComingFormat](docs/hackathons/README.md#gethackathonscomingformat) - Return a list of coming hackathons
 
-### swaggerDoc
+### [swaggerDoc](docs/swaggerdoc/README.md)
 
-* `getSwaggerDocFormat` - Swagger compatible API description
-* `getSwaggerDocNameFormat` - Swagger compatible API description for specific API
+* [getSwaggerDocFormat](docs/swaggerdoc/README.md#getswaggerdocformat) - Swagger compatible API description
+* [getSwaggerDocNameFormat](docs/swaggerdoc/README.md#getswaggerdocnameformat) - Swagger compatible API description for specific API
 <!-- End SDK Available Operations -->
 
 ### Maturity

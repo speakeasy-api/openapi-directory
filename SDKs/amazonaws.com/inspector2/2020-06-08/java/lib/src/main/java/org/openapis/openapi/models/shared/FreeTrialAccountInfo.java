@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FreeTrialAccountInfo {
     @JsonProperty("accountId")
     public String accountId;
+
     public FreeTrialAccountInfo withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,9 +20,14 @@ public class FreeTrialAccountInfo {
     
     @JsonProperty("freeTrialInfo")
     public FreeTrialInfo[] freeTrialInfo;
+
     public FreeTrialAccountInfo withFreeTrialInfo(FreeTrialInfo[] freeTrialInfo) {
         this.freeTrialInfo = freeTrialInfo;
         return this;
     }
     
+    public FreeTrialAccountInfo(@JsonProperty("accountId") String accountId, @JsonProperty("freeTrialInfo") FreeTrialInfo[] freeTrialInfo) {
+        this.accountId = accountId;
+        this.freeTrialInfo = freeTrialInfo;
+  }
 }

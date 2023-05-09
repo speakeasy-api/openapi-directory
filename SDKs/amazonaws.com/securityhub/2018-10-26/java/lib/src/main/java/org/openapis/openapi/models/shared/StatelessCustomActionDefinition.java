@@ -15,9 +15,11 @@ public class StatelessCustomActionDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublishMetricAction")
     public StatelessCustomPublishMetricAction publishMetricAction;
+
     public StatelessCustomActionDefinition withPublishMetricAction(StatelessCustomPublishMetricAction publishMetricAction) {
         this.publishMetricAction = publishMetricAction;
         return this;
     }
     
+    public StatelessCustomActionDefinition(){}
 }

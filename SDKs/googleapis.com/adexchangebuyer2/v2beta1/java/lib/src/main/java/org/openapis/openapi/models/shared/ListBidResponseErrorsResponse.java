@@ -18,6 +18,7 @@ public class ListBidResponseErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calloutStatusRows")
     public CalloutStatusRow[] calloutStatusRows;
+
     public ListBidResponseErrorsResponse withCalloutStatusRows(CalloutStatusRow[] calloutStatusRows) {
         this.calloutStatusRows = calloutStatusRows;
         return this;
@@ -29,9 +30,11 @@ public class ListBidResponseErrorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBidResponseErrorsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBidResponseErrorsResponse(){}
 }

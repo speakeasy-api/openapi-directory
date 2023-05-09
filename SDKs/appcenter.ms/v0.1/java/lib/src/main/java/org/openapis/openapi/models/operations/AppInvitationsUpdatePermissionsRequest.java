@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppInvitationsUpdatePermissionsRequest {
@@ -12,6 +13,7 @@ public class AppInvitationsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AppInvitationsUpdatePermissionsRequestBody requestBody;
+
     public AppInvitationsUpdatePermissionsRequest withRequestBody(AppInvitationsUpdatePermissionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AppInvitationsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AppInvitationsUpdatePermissionsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class AppInvitationsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AppInvitationsUpdatePermissionsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,9 +46,16 @@ public class AppInvitationsUpdatePermissionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_email")
     public String userEmail;
+
     public AppInvitationsUpdatePermissionsRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public AppInvitationsUpdatePermissionsRequest(@JsonProperty("RequestBody") AppInvitationsUpdatePermissionsRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("user_email") String userEmail) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.userEmail = userEmail;
+  }
 }

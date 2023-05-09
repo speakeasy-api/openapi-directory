@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyAadharOtpUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public VerifyAadharOtpUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class VerifyAadharOtpUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateHealthIdOptRequest createHealthIdOptRequest;
+
     public VerifyAadharOtpUsingPOSTRequest withCreateHealthIdOptRequest(org.openapis.openapi.models.shared.CreateHealthIdOptRequest createHealthIdOptRequest) {
         this.createHealthIdOptRequest = createHealthIdOptRequest;
         return this;
     }
     
+    public VerifyAadharOtpUsingPOSTRequest(@JsonProperty("CreateHealthIdOptRequest") org.openapis.openapi.models.shared.CreateHealthIdOptRequest createHealthIdOptRequest) {
+        this.createHealthIdOptRequest = createHealthIdOptRequest;
+  }
 }

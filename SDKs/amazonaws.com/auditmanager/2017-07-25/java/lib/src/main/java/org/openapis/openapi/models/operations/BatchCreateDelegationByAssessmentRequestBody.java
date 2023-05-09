@@ -12,9 +12,13 @@ public class BatchCreateDelegationByAssessmentRequestBody {
      */
     @JsonProperty("createDelegationRequests")
     public org.openapis.openapi.models.shared.CreateDelegationRequest[] createDelegationRequests;
+
     public BatchCreateDelegationByAssessmentRequestBody withCreateDelegationRequests(org.openapis.openapi.models.shared.CreateDelegationRequest[] createDelegationRequests) {
         this.createDelegationRequests = createDelegationRequests;
         return this;
     }
     
+    public BatchCreateDelegationByAssessmentRequestBody(@JsonProperty("createDelegationRequests") org.openapis.openapi.models.shared.CreateDelegationRequest[] createDelegationRequests) {
+        this.createDelegationRequests = createDelegationRequests;
+  }
 }

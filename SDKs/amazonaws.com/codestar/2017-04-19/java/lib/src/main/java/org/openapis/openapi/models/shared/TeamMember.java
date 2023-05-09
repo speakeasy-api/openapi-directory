@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TeamMember {
     @JsonProperty("projectRole")
     public String projectRole;
+
     public TeamMember withProjectRole(String projectRole) {
         this.projectRole = projectRole;
         return this;
@@ -22,6 +23,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessAllowed")
     public Boolean remoteAccessAllowed;
+
     public TeamMember withRemoteAccessAllowed(Boolean remoteAccessAllowed) {
         this.remoteAccessAllowed = remoteAccessAllowed;
         return this;
@@ -29,9 +31,14 @@ public class TeamMember {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public TeamMember withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public TeamMember(@JsonProperty("projectRole") String projectRole, @JsonProperty("userArn") String userArn) {
+        this.projectRole = projectRole;
+        this.userArn = userArn;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProtocolsListResponse {
     
     public String contentType;
+
     public GetProtocolsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProtocolsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProtocolsListResponse getProtocolsListResponse;
+
     public GetProtocolsListResponse withGetProtocolsListResponse(org.openapis.openapi.models.shared.GetProtocolsListResponse getProtocolsListResponse) {
         this.getProtocolsListResponse = getProtocolsListResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetProtocolsListResponse {
      */
     
     public Object internalErrorException;
+
     public GetProtocolsListResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetProtocolsListResponse {
      */
     
     public Object invalidOperationException;
+
     public GetProtocolsListResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class GetProtocolsListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProtocolsListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetProtocolsListResponse {
     
     
     public Integer statusCode;
+
     public GetProtocolsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetProtocolsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProtocolsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProtocolsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPrefixContractRequest {
@@ -12,9 +13,13 @@ public class GetPrefixContractRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uri")
     public String uri;
+
     public GetPrefixContractRequest withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GetPrefixContractRequest(@JsonProperty("uri") String uri) {
+        this.uri = uri;
+  }
 }

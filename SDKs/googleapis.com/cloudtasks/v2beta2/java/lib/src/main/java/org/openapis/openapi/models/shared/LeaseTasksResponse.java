@@ -18,9 +18,11 @@ public class LeaseTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public Task[] tasks;
+
     public LeaseTasksResponse withTasks(Task[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public LeaseTasksResponse(){}
 }

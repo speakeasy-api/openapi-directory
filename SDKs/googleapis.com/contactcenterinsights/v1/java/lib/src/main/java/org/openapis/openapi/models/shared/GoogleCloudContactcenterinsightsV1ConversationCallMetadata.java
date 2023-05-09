@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationCallMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentChannel")
     public Integer agentChannel;
+
     public GoogleCloudContactcenterinsightsV1ConversationCallMetadata withAgentChannel(Integer agentChannel) {
         this.agentChannel = agentChannel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationCallMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerChannel")
     public Integer customerChannel;
+
     public GoogleCloudContactcenterinsightsV1ConversationCallMetadata withCustomerChannel(Integer customerChannel) {
         this.customerChannel = customerChannel;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationCallMetadata(){}
 }

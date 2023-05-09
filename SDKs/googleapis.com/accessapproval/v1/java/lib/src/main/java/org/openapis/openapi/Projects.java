@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsApproveResponse(contentType, httpRes.statusCode()) {{
             approvalRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsDismissResponse(contentType, httpRes.statusCode()) {{
             approvalRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsGetResponse(contentType, httpRes.statusCode()) {{
             approvalRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsInvalidateResponse(contentType, httpRes.statusCode()) {{
             approvalRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsApprovalRequestsListResponse(contentType, httpRes.statusCode()) {{
             listApprovalRequestsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsDeleteAccessApprovalSettingsResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse() {{
+        org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse res = new org.openapis.openapi.models.operations.AccessapprovalProjectsUpdateAccessApprovalSettingsResponse(contentType, httpRes.statusCode()) {{
             accessApprovalSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

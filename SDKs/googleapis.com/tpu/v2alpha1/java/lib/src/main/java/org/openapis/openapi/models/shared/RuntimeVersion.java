@@ -18,6 +18,7 @@ public class RuntimeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RuntimeVersion withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public RuntimeVersion withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RuntimeVersion(){}
 }

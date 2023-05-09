@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateOrganizationResponse {
@@ -12,6 +13,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object accessDeniedForDependencyException;
+
     public CreateOrganizationResponse withAccessDeniedForDependencyException(Object accessDeniedForDependencyException) {
         this.accessDeniedForDependencyException = accessDeniedForDependencyException;
         return this;
@@ -32,6 +35,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object alreadyInOrganizationException;
+
     public CreateOrganizationResponse withAlreadyInOrganizationException(Object alreadyInOrganizationException) {
         this.alreadyInOrganizationException = alreadyInOrganizationException;
         return this;
@@ -42,6 +46,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -52,6 +57,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object constraintViolationException;
+
     public CreateOrganizationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateOrganizationResponse {
     
     
     public String contentType;
+
     public CreateOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class CreateOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateOrganizationResponse createOrganizationResponse;
+
     public CreateOrganizationResponse withCreateOrganizationResponse(org.openapis.openapi.models.shared.CreateOrganizationResponse createOrganizationResponse) {
         this.createOrganizationResponse = createOrganizationResponse;
         return this;
@@ -79,6 +87,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public CreateOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -89,6 +98,7 @@ public class CreateOrganizationResponse {
      */
     
     public Object serviceException;
+
     public CreateOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class CreateOrganizationResponse {
     
     
     public Integer statusCode;
+
     public CreateOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

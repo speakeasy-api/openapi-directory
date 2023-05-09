@@ -18,6 +18,7 @@ public class SkuCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costEstimate")
     public CostEstimate costEstimate;
+
     public SkuCostEstimate withCostEstimate(CostEstimate costEstimate) {
         this.costEstimate = costEstimate;
         return this;
@@ -29,6 +30,7 @@ public class SkuCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public SkuCostEstimate withSku(String sku) {
         this.sku = sku;
         return this;
@@ -40,6 +42,7 @@ public class SkuCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageAmount")
     public Double usageAmount;
+
     public SkuCostEstimate withUsageAmount(Double usageAmount) {
         this.usageAmount = usageAmount;
         return this;
@@ -51,9 +54,11 @@ public class SkuCostEstimate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageUnit")
     public String usageUnit;
+
     public SkuCostEstimate withUsageUnit(String usageUnit) {
         this.usageUnit = usageUnit;
         return this;
     }
     
+    public SkuCostEstimate(){}
 }

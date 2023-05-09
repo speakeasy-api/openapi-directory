@@ -15,6 +15,7 @@ public class StreamQueryStreamResultOfServingResponseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public org.openapis.openapi.models.shared.GooglerpcStatus error;
+
     public StreamQueryStreamResultOfServingResponseSet withError(org.openapis.openapi.models.shared.GooglerpcStatus error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class StreamQueryStreamResultOfServingResponseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public org.openapis.openapi.models.shared.ServingResponseSet result;
+
     public StreamQueryStreamResultOfServingResponseSet withResult(org.openapis.openapi.models.shared.ServingResponseSet result) {
         this.result = result;
         return this;
     }
     
+    public StreamQueryStreamResultOfServingResponseSet(){}
 }

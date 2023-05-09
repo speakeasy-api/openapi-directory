@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaskPriorityListResponse {
     
     public byte[] body;
+
     public TaskPriorityListResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TaskPriorityListResponse {
     
     
     public String contentType;
+
     public TaskPriorityListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TaskPriorityListResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public TaskPriorityListResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class TaskPriorityListResponse {
     
     
     public Integer statusCode;
+
     public TaskPriorityListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class TaskPriorityListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaskPriorityListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class TaskPriorityListResponse {
      */
     
     public org.openapis.openapi.models.shared.TaskPriorityListVO taskPriorityListVO;
+
     public TaskPriorityListResponse withTaskPriorityListVO(org.openapis.openapi.models.shared.TaskPriorityListVO taskPriorityListVO) {
         this.taskPriorityListVO = taskPriorityListVO;
         return this;
     }
     
+    public TaskPriorityListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

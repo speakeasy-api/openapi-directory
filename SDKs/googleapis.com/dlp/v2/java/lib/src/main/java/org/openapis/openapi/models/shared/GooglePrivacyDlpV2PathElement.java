@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GooglePrivacyDlpV2PathElement withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GooglePrivacyDlpV2PathElement withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2PathElement withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GooglePrivacyDlpV2PathElement(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeGenEdge {
     @JsonProperty("Source")
     public String source;
+
     public CodeGenEdge withSource(String source) {
         this.source = source;
         return this;
@@ -21,6 +22,7 @@ public class CodeGenEdge {
     
     @JsonProperty("Target")
     public String target;
+
     public CodeGenEdge withTarget(String target) {
         this.target = target;
         return this;
@@ -29,9 +31,14 @@ public class CodeGenEdge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetParameter")
     public String targetParameter;
+
     public CodeGenEdge withTargetParameter(String targetParameter) {
         this.targetParameter = targetParameter;
         return this;
     }
     
+    public CodeGenEdge(@JsonProperty("Source") String source, @JsonProperty("Target") String target) {
+        this.source = source;
+        this.target = target;
+  }
 }

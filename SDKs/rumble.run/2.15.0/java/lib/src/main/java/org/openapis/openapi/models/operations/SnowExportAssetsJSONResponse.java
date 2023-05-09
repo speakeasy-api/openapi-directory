@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SnowExportAssetsJSONResponse {
@@ -12,6 +13,7 @@ public class SnowExportAssetsJSONResponse {
      */
     
     public org.openapis.openapi.models.shared.AssetServiceNow[] assetServiceNows;
+
     public SnowExportAssetsJSONResponse withAssetServiceNows(org.openapis.openapi.models.shared.AssetServiceNow[] assetServiceNows) {
         this.assetServiceNows = assetServiceNows;
         return this;
@@ -19,6 +21,7 @@ public class SnowExportAssetsJSONResponse {
     
     
     public String contentType;
+
     public SnowExportAssetsJSONResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SnowExportAssetsJSONResponse {
     
     
     public Integer statusCode;
+
     public SnowExportAssetsJSONResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SnowExportAssetsJSONResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SnowExportAssetsJSONResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SnowExportAssetsJSONResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

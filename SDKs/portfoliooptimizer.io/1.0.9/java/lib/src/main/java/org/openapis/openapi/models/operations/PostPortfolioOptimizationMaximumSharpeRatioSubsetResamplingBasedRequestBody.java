@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -42,6 +45,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withConstraints(PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -52,6 +56,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
@@ -63,6 +68,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfolios")
     public Long subsetPortfolios;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withSubsetPortfolios(Long subsetPortfolios) {
         this.subsetPortfolios = subsetPortfolios;
         return this;
@@ -74,6 +80,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosAggregationMethod")
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withSubsetPortfoliosAggregationMethod(PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod) {
         this.subsetPortfoliosAggregationMethod = subsetPortfoliosAggregationMethod;
         return this;
@@ -85,6 +92,7 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosEnumerationMethod")
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withSubsetPortfoliosEnumerationMethod(PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod) {
         this.subsetPortfoliosEnumerationMethod = subsetPortfoliosEnumerationMethod;
         return this;
@@ -96,9 +104,16 @@ public class PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedReq
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetSize")
     public Long subsetSize;
+
     public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody withSubsetSize(Long subsetSize) {
         this.subsetSize = subsetSize;
         return this;
     }
     
+    public PostPortfolioOptimizationMaximumSharpeRatioSubsetResamplingBasedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

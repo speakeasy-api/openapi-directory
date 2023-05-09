@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionsList {
     
     public DBSecurityGroupMembershipList[] dbSecurityGroupMemberships;
+
     public OptionsList withDBSecurityGroupMemberships(DBSecurityGroupMembershipList[] dbSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         return this;
@@ -19,6 +20,7 @@ public class OptionsList {
     
     
     public String optionDescription;
+
     public OptionsList withOptionDescription(String optionDescription) {
         this.optionDescription = optionDescription;
         return this;
@@ -26,6 +28,7 @@ public class OptionsList {
     
     
     public String optionName;
+
     public OptionsList withOptionName(String optionName) {
         this.optionName = optionName;
         return this;
@@ -33,6 +36,7 @@ public class OptionsList {
     
     
     public OptionSettingConfigurationList[] optionSettings;
+
     public OptionsList withOptionSettings(OptionSettingConfigurationList[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -40,6 +44,7 @@ public class OptionsList {
     
     
     public String optionVersion;
+
     public OptionsList withOptionVersion(String optionVersion) {
         this.optionVersion = optionVersion;
         return this;
@@ -47,6 +52,7 @@ public class OptionsList {
     
     
     public Boolean permanent;
+
     public OptionsList withPermanent(Boolean permanent) {
         this.permanent = permanent;
         return this;
@@ -54,6 +60,7 @@ public class OptionsList {
     
     
     public Boolean persistent;
+
     public OptionsList withPersistent(Boolean persistent) {
         this.persistent = persistent;
         return this;
@@ -61,6 +68,7 @@ public class OptionsList {
     
     
     public Long port;
+
     public OptionsList withPort(Long port) {
         this.port = port;
         return this;
@@ -68,9 +76,11 @@ public class OptionsList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroupMemberships;
+
     public OptionsList withVpcSecurityGroupMemberships(VpcSecurityGroupMembershipList[] vpcSecurityGroupMemberships) {
         this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
         return this;
     }
     
+    public OptionsList(){}
 }

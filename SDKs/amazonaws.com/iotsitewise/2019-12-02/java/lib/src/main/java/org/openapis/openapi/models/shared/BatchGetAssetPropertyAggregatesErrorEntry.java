@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetAssetPropertyAggregatesErrorEntry {
     @JsonProperty("entryId")
     public String entryId;
+
     public BatchGetAssetPropertyAggregatesErrorEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -19,6 +20,7 @@ public class BatchGetAssetPropertyAggregatesErrorEntry {
     
     @JsonProperty("errorCode")
     public BatchGetAssetPropertyAggregatesErrorCodeEnum errorCode;
+
     public BatchGetAssetPropertyAggregatesErrorEntry withErrorCode(BatchGetAssetPropertyAggregatesErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -26,9 +28,15 @@ public class BatchGetAssetPropertyAggregatesErrorEntry {
     
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchGetAssetPropertyAggregatesErrorEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchGetAssetPropertyAggregatesErrorEntry(@JsonProperty("entryId") String entryId, @JsonProperty("errorCode") BatchGetAssetPropertyAggregatesErrorCodeEnum errorCode, @JsonProperty("errorMessage") String errorMessage) {
+        this.entryId = entryId;
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+  }
 }

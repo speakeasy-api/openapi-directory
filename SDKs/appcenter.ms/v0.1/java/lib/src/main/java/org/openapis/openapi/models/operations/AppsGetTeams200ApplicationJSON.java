@@ -15,6 +15,7 @@ public class AppsGetTeams200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsGetTeams200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class AppsGetTeams200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsGetTeams200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class AppsGetTeams200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsGetTeams200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class AppsGetTeams200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsGetTeams200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -56,9 +60,15 @@ public class AppsGetTeams200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public AppsGetTeams200ApplicationJSONPermissionsEnum[] permissions;
+
     public AppsGetTeams200ApplicationJSON withPermissions(AppsGetTeams200ApplicationJSONPermissionsEnum[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public AppsGetTeams200ApplicationJSON(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+  }
 }

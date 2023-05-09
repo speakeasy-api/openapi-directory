@@ -13,6 +13,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListGiftCardActivitiesRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -25,6 +26,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListGiftCardActivitiesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -36,6 +38,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListGiftCardActivitiesRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -48,6 +51,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=gift_card_id")
     public String giftCardId;
+
     public ListGiftCardActivitiesRequest withGiftCardId(String giftCardId) {
         this.giftCardId = giftCardId;
         return this;
@@ -59,6 +63,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListGiftCardActivitiesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -70,6 +75,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListGiftCardActivitiesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -82,6 +88,7 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListGiftCardActivitiesRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -93,9 +100,11 @@ public class ListGiftCardActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public ListGiftCardActivitiesRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ListGiftCardActivitiesRequest(){}
 }

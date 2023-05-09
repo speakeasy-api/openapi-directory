@@ -15,6 +15,7 @@ public class UpdateGraphqlApiRequestBodyLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogsRoleArn")
     public String cloudWatchLogsRoleArn;
+
     public UpdateGraphqlApiRequestBodyLogConfig withCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
         this.cloudWatchLogsRoleArn = cloudWatchLogsRoleArn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGraphqlApiRequestBodyLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeVerboseContent")
     public Boolean excludeVerboseContent;
+
     public UpdateGraphqlApiRequestBodyLogConfig withExcludeVerboseContent(Boolean excludeVerboseContent) {
         this.excludeVerboseContent = excludeVerboseContent;
         return this;
@@ -31,9 +33,11 @@ public class UpdateGraphqlApiRequestBodyLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLogLevel")
     public org.openapis.openapi.models.shared.FieldLogLevelEnum fieldLogLevel;
+
     public UpdateGraphqlApiRequestBodyLogConfig withFieldLogLevel(org.openapis.openapi.models.shared.FieldLogLevelEnum fieldLogLevel) {
         this.fieldLogLevel = fieldLogLevel;
         return this;
     }
     
+    public UpdateGraphqlApiRequestBodyLogConfig(){}
 }

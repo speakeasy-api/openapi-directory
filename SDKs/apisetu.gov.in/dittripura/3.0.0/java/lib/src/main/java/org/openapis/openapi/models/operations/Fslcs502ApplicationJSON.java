@@ -15,6 +15,7 @@ public class Fslcs502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Fslcs502ApplicationJSONErrorEnum error;
+
     public Fslcs502ApplicationJSON withError(Fslcs502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Fslcs502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Fslcs502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Fslcs502ApplicationJSON withErrorDescription(Fslcs502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Fslcs502ApplicationJSON(){}
 }

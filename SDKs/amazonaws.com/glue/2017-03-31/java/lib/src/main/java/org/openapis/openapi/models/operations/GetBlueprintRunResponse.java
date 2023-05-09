@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlueprintRunResponse {
     
     public String contentType;
+
     public GetBlueprintRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBlueprintRunResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetBlueprintRunResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetBlueprintRunResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlueprintRunResponse getBlueprintRunResponse;
+
     public GetBlueprintRunResponse withGetBlueprintRunResponse(org.openapis.openapi.models.shared.GetBlueprintRunResponse getBlueprintRunResponse) {
         this.getBlueprintRunResponse = getBlueprintRunResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetBlueprintRunResponse {
      */
     
     public Object internalServiceException;
+
     public GetBlueprintRunResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetBlueprintRunResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetBlueprintRunResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class GetBlueprintRunResponse {
     
     
     public Integer statusCode;
+
     public GetBlueprintRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetBlueprintRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlueprintRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBlueprintRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

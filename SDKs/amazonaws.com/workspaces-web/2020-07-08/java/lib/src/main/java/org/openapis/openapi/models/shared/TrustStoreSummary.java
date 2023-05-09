@@ -15,9 +15,11 @@ public class TrustStoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustStoreArn")
     public String trustStoreArn;
+
     public TrustStoreSummary withTrustStoreArn(String trustStoreArn) {
         this.trustStoreArn = trustStoreArn;
         return this;
     }
     
+    public TrustStoreSummary(){}
 }

@@ -12,6 +12,7 @@ public class DeleteServersId200ApplicationJSONActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public DeleteServersId200ApplicationJSONActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class DeleteServersId200ApplicationJSONActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public DeleteServersId200ApplicationJSONActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeleteServersId200ApplicationJSONActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

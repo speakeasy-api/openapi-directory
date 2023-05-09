@@ -15,6 +15,7 @@ public class ListCallAnalyticsJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CallAnalyticsJobSummaries")
     public CallAnalyticsJobSummary[] callAnalyticsJobSummaries;
+
     public ListCallAnalyticsJobsResponse withCallAnalyticsJobSummaries(CallAnalyticsJobSummary[] callAnalyticsJobSummaries) {
         this.callAnalyticsJobSummaries = callAnalyticsJobSummaries;
         return this;
@@ -23,6 +24,7 @@ public class ListCallAnalyticsJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCallAnalyticsJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class ListCallAnalyticsJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CallAnalyticsJobStatusEnum status;
+
     public ListCallAnalyticsJobsResponse withStatus(CallAnalyticsJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListCallAnalyticsJobsResponse(){}
 }

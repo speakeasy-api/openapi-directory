@@ -12,6 +12,7 @@ public class ScimEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display")
     public String display;
+
     public ScimEmail withDisplay(String display) {
         this.display = display;
         return this;
@@ -20,6 +21,7 @@ public class ScimEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary")
     public Boolean primary;
+
     public ScimEmail withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -28,9 +30,11 @@ public class ScimEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ScimEmail withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ScimEmail(){}
 }

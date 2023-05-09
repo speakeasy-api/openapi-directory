@@ -15,6 +15,7 @@ public class HealthProfileResourceAttributesStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answered")
     public Double answered;
+
     public HealthProfileResourceAttributesStats withAnswered(Double answered) {
         this.answered = answered;
         return this;
@@ -23,6 +24,7 @@ public class HealthProfileResourceAttributesStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public HealthProfileResourceAttributesStatsCategoryEnum category;
+
     public HealthProfileResourceAttributesStats withCategory(HealthProfileResourceAttributesStatsCategoryEnum category) {
         this.category = category;
         return this;
@@ -31,9 +33,11 @@ public class HealthProfileResourceAttributesStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public HealthProfileResourceAttributesStats withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public HealthProfileResourceAttributesStats(){}
 }

@@ -20,6 +20,7 @@ public class DeploymentConfigInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public ComputePlatformEnum computePlatform;
+
     public DeploymentConfigInfo withComputePlatform(ComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -30,6 +31,7 @@ public class DeploymentConfigInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public DeploymentConfigInfo withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class DeploymentConfigInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigId")
     public String deploymentConfigId;
+
     public DeploymentConfigInfo withDeploymentConfigId(String deploymentConfigId) {
         this.deploymentConfigId = deploymentConfigId;
         return this;
@@ -46,6 +49,7 @@ public class DeploymentConfigInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfigName")
     public String deploymentConfigName;
+
     public DeploymentConfigInfo withDeploymentConfigName(String deploymentConfigName) {
         this.deploymentConfigName = deploymentConfigName;
         return this;
@@ -54,6 +58,7 @@ public class DeploymentConfigInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumHealthyHosts")
     public MinimumHealthyHosts minimumHealthyHosts;
+
     public DeploymentConfigInfo withMinimumHealthyHosts(MinimumHealthyHosts minimumHealthyHosts) {
         this.minimumHealthyHosts = minimumHealthyHosts;
         return this;
@@ -62,9 +67,11 @@ public class DeploymentConfigInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficRoutingConfig")
     public TrafficRoutingConfig trafficRoutingConfig;
+
     public DeploymentConfigInfo withTrafficRoutingConfig(TrafficRoutingConfig trafficRoutingConfig) {
         this.trafficRoutingConfig = trafficRoutingConfig;
         return this;
     }
     
+    public DeploymentConfigInfo(){}
 }

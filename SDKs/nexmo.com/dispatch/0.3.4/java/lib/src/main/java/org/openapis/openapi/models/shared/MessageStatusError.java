@@ -15,6 +15,7 @@ public class MessageStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public MessageStatusError withCode(Long code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class MessageStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public MessageStatusError withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public MessageStatusError(){}
 }

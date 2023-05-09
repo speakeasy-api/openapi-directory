@@ -60,12 +60,10 @@ public class Provinces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvinceResponse res = new org.openapis.openapi.models.operations.ProvinceResponse() {{
+        org.openapis.openapi.models.operations.ProvinceResponse res = new org.openapis.openapi.models.operations.ProvinceResponse(contentType, httpRes.statusCode()) {{
             province200ApplicationJSONObject = null;
             province400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class Provinces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvincesResponse res = new org.openapis.openapi.models.operations.ProvincesResponse() {{
+        org.openapis.openapi.models.operations.ProvincesResponse res = new org.openapis.openapi.models.operations.ProvincesResponse(contentType, httpRes.statusCode()) {{
             provinces200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

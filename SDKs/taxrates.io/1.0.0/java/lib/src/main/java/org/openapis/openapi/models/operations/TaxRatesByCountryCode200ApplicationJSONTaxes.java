@@ -12,6 +12,7 @@ public class TaxRatesByCountryCode200ApplicationJSONTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public TaxRatesByCountryCode200ApplicationJSONTaxes withCountry(String country) {
         this.country = country;
         return this;
@@ -20,6 +21,7 @@ public class TaxRatesByCountryCode200ApplicationJSONTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public TaxRatesByCountryCode200ApplicationJSONTaxes withType(String type) {
         this.type = type;
         return this;
@@ -28,6 +30,7 @@ public class TaxRatesByCountryCode200ApplicationJSONTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_name")
     public String dataName;
+
     public TaxRatesByCountryCode200ApplicationJSONTaxes withDataName(String dataName) {
         this.dataName = dataName;
         return this;
@@ -36,9 +39,11 @@ public class TaxRatesByCountryCode200ApplicationJSONTaxes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data_value")
     public String dataValue;
+
     public TaxRatesByCountryCode200ApplicationJSONTaxes withDataValue(String dataValue) {
         this.dataValue = dataValue;
         return this;
     }
     
+    public TaxRatesByCountryCode200ApplicationJSONTaxes(){}
 }

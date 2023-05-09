@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.enabled")
     public Boolean proxyEnabled;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyEnabled(Boolean proxyEnabled) {
         this.proxyEnabled = proxyEnabled;
         return this;
@@ -16,6 +17,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.enabled@TypeHint")
     public String proxyEnabledAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyEnabledAtTypeHint(String proxyEnabledAtTypeHint) {
         this.proxyEnabledAtTypeHint = proxyEnabledAtTypeHint;
         return this;
@@ -23,6 +25,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.exceptions")
     public String[] proxyExceptions;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyExceptions(String[] proxyExceptions) {
         this.proxyExceptions = proxyExceptions;
         return this;
@@ -30,6 +33,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.exceptions@TypeHint")
     public String proxyExceptionsAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyExceptionsAtTypeHint(String proxyExceptionsAtTypeHint) {
         this.proxyExceptionsAtTypeHint = proxyExceptionsAtTypeHint;
         return this;
@@ -37,6 +41,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.host")
     public String proxyHost;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyHost(String proxyHost) {
         this.proxyHost = proxyHost;
         return this;
@@ -44,6 +49,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.host@TypeHint")
     public String proxyHostAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyHostAtTypeHint(String proxyHostAtTypeHint) {
         this.proxyHostAtTypeHint = proxyHostAtTypeHint;
         return this;
@@ -51,6 +57,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.password")
     public String proxyPassword;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyPassword(String proxyPassword) {
         this.proxyPassword = proxyPassword;
         return this;
@@ -58,6 +65,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.password@TypeHint")
     public String proxyPasswordAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyPasswordAtTypeHint(String proxyPasswordAtTypeHint) {
         this.proxyPasswordAtTypeHint = proxyPasswordAtTypeHint;
         return this;
@@ -65,6 +73,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.port")
     public Long proxyPort;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyPort(Long proxyPort) {
         this.proxyPort = proxyPort;
         return this;
@@ -72,6 +81,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.port@TypeHint")
     public String proxyPortAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyPortAtTypeHint(String proxyPortAtTypeHint) {
         this.proxyPortAtTypeHint = proxyPortAtTypeHint;
         return this;
@@ -79,6 +89,7 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.user")
     public String proxyUser;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyUser(String proxyUser) {
         this.proxyUser = proxyUser;
         return this;
@@ -86,9 +97,11 @@ public class PostConfigApacheHttpComponentsProxyConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=proxy.user@TypeHint")
     public String proxyUserAtTypeHint;
+
     public PostConfigApacheHttpComponentsProxyConfigurationRequest withProxyUserAtTypeHint(String proxyUserAtTypeHint) {
         this.proxyUserAtTypeHint = proxyUserAtTypeHint;
         return this;
     }
     
+    public PostConfigApacheHttpComponentsProxyConfigurationRequest(){}
 }

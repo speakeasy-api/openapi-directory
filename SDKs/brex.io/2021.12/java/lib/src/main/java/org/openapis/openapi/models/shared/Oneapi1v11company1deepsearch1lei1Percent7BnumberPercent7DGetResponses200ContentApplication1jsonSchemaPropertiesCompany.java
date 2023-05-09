@@ -12,6 +12,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withAddress(String[] address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     
     @JsonProperty("country")
     public String country;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withCountry(String country) {
         this.country = country;
         return this;
@@ -27,6 +29,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOfIncorporation")
     public String dateOfIncorporation;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withDateOfIncorporation(String dateOfIncorporation) {
         this.dateOfIncorporation = dateOfIncorporation;
         return this;
@@ -35,6 +38,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraData")
     public java.util.Map<String, Object> extraData;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withExtraData(java.util.Map<String, Object> extraData) {
         this.extraData = extraData;
         return this;
@@ -43,6 +47,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedAddress")
     public String[] formattedAddress;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withFormattedAddress(String[] formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -50,6 +55,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     
     @JsonProperty("id")
     public String id;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +64,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalForm")
     public String legalForm;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withLegalForm(String legalForm) {
         this.legalForm = legalForm;
         return this;
@@ -66,6 +73,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managingDirectors")
     public String[] managingDirectors;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withManagingDirectors(String[] managingDirectors) {
         this.managingDirectors = managingDirectors;
         return this;
@@ -73,6 +81,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     
     @JsonProperty("name")
     public String name;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +89,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     
     @JsonProperty("registrationNumber")
     public String registrationNumber;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
         return this;
@@ -88,6 +98,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestTime")
     public Long requestTime;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withRequestTime(Long requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -96,6 +107,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretaries")
     public String[] secretaries;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withSecretaries(String[] secretaries) {
         this.secretaries = secretaries;
         return this;
@@ -104,6 +116,7 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sicNaceCodes")
     public String[] sicNaceCodes;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withSicNaceCodes(String[] sicNaceCodes) {
         this.sicNaceCodes = sicNaceCodes;
         return this;
@@ -112,9 +125,16 @@ public class Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetRespons
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany(@JsonProperty("country") String country, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("registrationNumber") String registrationNumber) {
+        this.country = country;
+        this.id = id;
+        this.name = name;
+        this.registrationNumber = registrationNumber;
+  }
 }

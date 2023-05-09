@@ -15,6 +15,7 @@ public class UnprocessedCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public UnprocessedCluster withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -23,6 +24,7 @@ public class UnprocessedCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public UnprocessedCluster withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class UnprocessedCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorType")
     public String errorType;
+
     public UnprocessedCluster withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
     }
     
+    public UnprocessedCluster(){}
 }

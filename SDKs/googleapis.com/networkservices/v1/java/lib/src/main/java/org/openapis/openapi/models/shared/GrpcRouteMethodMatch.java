@@ -18,6 +18,7 @@ public class GrpcRouteMethodMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public GrpcRouteMethodMatch withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
@@ -29,6 +30,7 @@ public class GrpcRouteMethodMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcMethod")
     public String grpcMethod;
+
     public GrpcRouteMethodMatch withGrpcMethod(String grpcMethod) {
         this.grpcMethod = grpcMethod;
         return this;
@@ -40,6 +42,7 @@ public class GrpcRouteMethodMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grpcService")
     public String grpcService;
+
     public GrpcRouteMethodMatch withGrpcService(String grpcService) {
         this.grpcService = grpcService;
         return this;
@@ -51,9 +54,11 @@ public class GrpcRouteMethodMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GrpcRouteMethodMatchTypeEnum type;
+
     public GrpcRouteMethodMatch withType(GrpcRouteMethodMatchTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GrpcRouteMethodMatch(){}
 }

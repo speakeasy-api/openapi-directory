@@ -12,6 +12,7 @@ public class UpdateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataStorageConfig")
     public InferenceExperimentDataStorageConfig dataStorageConfig;
+
     public UpdateInferenceExperimentRequest withDataStorageConfig(InferenceExperimentDataStorageConfig dataStorageConfig) {
         this.dataStorageConfig = dataStorageConfig;
         return this;
@@ -20,6 +21,7 @@ public class UpdateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateInferenceExperimentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVariants")
     public ModelVariantConfig[] modelVariants;
+
     public UpdateInferenceExperimentRequest withModelVariants(ModelVariantConfig[] modelVariants) {
         this.modelVariants = modelVariants;
         return this;
@@ -35,6 +38,7 @@ public class UpdateInferenceExperimentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateInferenceExperimentRequest withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class UpdateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public InferenceExperimentSchedule schedule;
+
     public UpdateInferenceExperimentRequest withSchedule(InferenceExperimentSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -51,9 +56,13 @@ public class UpdateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShadowModeConfig")
     public ShadowModeConfig shadowModeConfig;
+
     public UpdateInferenceExperimentRequest withShadowModeConfig(ShadowModeConfig shadowModeConfig) {
         this.shadowModeConfig = shadowModeConfig;
         return this;
     }
     
+    public UpdateInferenceExperimentRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

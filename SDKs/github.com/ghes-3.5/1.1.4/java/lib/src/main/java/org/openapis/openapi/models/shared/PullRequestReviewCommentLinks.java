@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestReviewCommentLinks {
     @JsonProperty("html")
     public PullRequestReviewCommentLinksHtml html;
+
     public PullRequestReviewCommentLinks withHtml(PullRequestReviewCommentLinksHtml html) {
         this.html = html;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestReviewCommentLinks {
     
     @JsonProperty("pull_request")
     public PullRequestReviewCommentLinksPullRequest pullRequest;
+
     public PullRequestReviewCommentLinks withPullRequest(PullRequestReviewCommentLinksPullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -23,9 +25,15 @@ public class PullRequestReviewCommentLinks {
     
     @JsonProperty("self")
     public PullRequestReviewCommentLinksSelf self;
+
     public PullRequestReviewCommentLinks withSelf(PullRequestReviewCommentLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public PullRequestReviewCommentLinks(@JsonProperty("html") PullRequestReviewCommentLinksHtml html, @JsonProperty("pull_request") PullRequestReviewCommentLinksPullRequest pullRequest, @JsonProperty("self") PullRequestReviewCommentLinksSelf self) {
+        this.html = html;
+        this.pullRequest = pullRequest;
+        this.self = self;
+  }
 }

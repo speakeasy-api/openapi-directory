@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthInitJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthInitJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthInitJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthInitRequest patientAuthInitRequest;
+
     public PostV05UsersAuthInitJsonRequest withPatientAuthInitRequest(org.openapis.openapi.models.shared.PatientAuthInitRequest patientAuthInitRequest) {
         this.patientAuthInitRequest = patientAuthInitRequest;
         return this;
@@ -29,9 +32,15 @@ public class PostV05UsersAuthInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05UsersAuthInitJsonRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05UsersAuthInitJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthInitRequest") org.openapis.openapi.models.shared.PatientAuthInitRequest patientAuthInitRequest, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.patientAuthInitRequest = patientAuthInitRequest;
+        this.xCmId = xCmId;
+  }
 }

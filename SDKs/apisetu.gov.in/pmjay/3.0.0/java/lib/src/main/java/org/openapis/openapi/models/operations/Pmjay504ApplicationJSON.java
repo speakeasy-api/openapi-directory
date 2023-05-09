@@ -15,6 +15,7 @@ public class Pmjay504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Pmjay504ApplicationJSONErrorEnum error;
+
     public Pmjay504ApplicationJSON withError(Pmjay504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Pmjay504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Pmjay504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Pmjay504ApplicationJSON withErrorDescription(Pmjay504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Pmjay504ApplicationJSON(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse {
     
     public String contentType;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
      */
     
     public java.util.Map<String, Object> empty;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -29,6 +32,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
      */
     
     public org.openapis.openapi.models.shared.ScoutingObservationAttachments scoutingObservationAttachments;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withScoutingObservationAttachments(org.openapis.openapi.models.shared.ScoutingObservationAttachments scoutingObservationAttachments) {
         this.scoutingObservationAttachments = scoutingObservationAttachments;
         return this;
@@ -53,6 +59,7 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
     
     
     public Integer statusCode;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,9 +67,14 @@ public class GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResp
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV4LayersScoutingObservationsScoutingObservationIdAttachmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

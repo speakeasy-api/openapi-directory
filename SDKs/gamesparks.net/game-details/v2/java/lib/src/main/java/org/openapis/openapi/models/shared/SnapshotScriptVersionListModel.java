@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SnapshotScriptVersionListModel {
     
     public SnapshotScriptVersionModel[] scriptVersions;
+
     public SnapshotScriptVersionListModel withScriptVersions(SnapshotScriptVersionModel[] scriptVersions) {
         this.scriptVersions = scriptVersions;
         return this;
     }
     
+    public SnapshotScriptVersionListModel(){}
 }

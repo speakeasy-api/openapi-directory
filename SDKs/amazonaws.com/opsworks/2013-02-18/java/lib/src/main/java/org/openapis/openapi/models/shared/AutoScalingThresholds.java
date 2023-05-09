@@ -15,6 +15,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alarms")
     public String[] alarms;
+
     public AutoScalingThresholds withAlarms(String[] alarms) {
         this.alarms = alarms;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CpuThreshold")
     public Double cpuThreshold;
+
     public AutoScalingThresholds withCpuThreshold(Double cpuThreshold) {
         this.cpuThreshold = cpuThreshold;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IgnoreMetricsTime")
     public Long ignoreMetricsTime;
+
     public AutoScalingThresholds withIgnoreMetricsTime(Long ignoreMetricsTime) {
         this.ignoreMetricsTime = ignoreMetricsTime;
         return this;
@@ -39,6 +42,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public AutoScalingThresholds withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -47,6 +51,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadThreshold")
     public Double loadThreshold;
+
     public AutoScalingThresholds withLoadThreshold(Double loadThreshold) {
         this.loadThreshold = loadThreshold;
         return this;
@@ -55,6 +60,7 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryThreshold")
     public Double memoryThreshold;
+
     public AutoScalingThresholds withMemoryThreshold(Double memoryThreshold) {
         this.memoryThreshold = memoryThreshold;
         return this;
@@ -63,9 +69,11 @@ public class AutoScalingThresholds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThresholdsWaitTime")
     public Long thresholdsWaitTime;
+
     public AutoScalingThresholds withThresholdsWaitTime(Long thresholdsWaitTime) {
         this.thresholdsWaitTime = thresholdsWaitTime;
         return this;
     }
     
+    public AutoScalingThresholds(){}
 }

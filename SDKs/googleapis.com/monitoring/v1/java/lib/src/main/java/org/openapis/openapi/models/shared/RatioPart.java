@@ -18,6 +18,7 @@ public class RatioPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregation")
     public Aggregation aggregation;
+
     public RatioPart withAggregation(Aggregation aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -29,9 +30,11 @@ public class RatioPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public RatioPart withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public RatioPart(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamespaceTimespansRequest {
@@ -12,6 +13,7 @@ public class GetNamespaceTimespansRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=namespace")
     public String namespace;
+
     public GetNamespaceTimespansRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -22,6 +24,7 @@ public class GetNamespaceTimespansRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=timespantype")
     public org.openapis.openapi.models.shared.TimespanTypeEnum timespantype;
+
     public GetNamespaceTimespansRequest withTimespantype(org.openapis.openapi.models.shared.TimespanTypeEnum timespantype) {
         this.timespantype = timespantype;
         return this;
@@ -32,9 +35,15 @@ public class GetNamespaceTimespansRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=year")
     public Long year;
+
     public GetNamespaceTimespansRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetNamespaceTimespansRequest(@JsonProperty("namespace") String namespace, @JsonProperty("timespantype") org.openapis.openapi.models.shared.TimespanTypeEnum timespantype, @JsonProperty("year") Long year) {
+        this.namespace = namespace;
+        this.timespantype = timespantype;
+        this.year = year;
+  }
 }

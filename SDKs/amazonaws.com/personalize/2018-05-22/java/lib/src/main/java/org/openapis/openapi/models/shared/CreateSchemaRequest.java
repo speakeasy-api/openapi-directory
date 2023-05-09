@@ -12,6 +12,7 @@ public class CreateSchemaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public DomainEnum domain;
+
     public CreateSchemaRequest withDomain(DomainEnum domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class CreateSchemaRequest {
     
     @JsonProperty("name")
     public String name;
+
     public CreateSchemaRequest withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,14 @@ public class CreateSchemaRequest {
     
     @JsonProperty("schema")
     public String schema;
+
     public CreateSchemaRequest withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateSchemaRequest(@JsonProperty("name") String name, @JsonProperty("schema") String schema) {
+        this.name = name;
+        this.schema = schema;
+  }
 }

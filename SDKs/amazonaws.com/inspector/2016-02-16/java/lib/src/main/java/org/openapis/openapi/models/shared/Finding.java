@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Finding {
     @JsonProperty("arn")
     public String arn;
+
     public Finding withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetAttributes")
     public AssetAttributes assetAttributes;
+
     public Finding withAssetAttributes(AssetAttributes assetAttributes) {
         this.assetAttributes = assetAttributes;
         return this;
@@ -35,6 +37,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetType")
     public AssetTypeEnum assetType;
+
     public Finding withAssetType(AssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -42,6 +45,7 @@ public class Finding {
     
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public Finding withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -50,6 +54,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Long confidence;
+
     public Finding withConfidence(Long confidence) {
         this.confidence = confidence;
         return this;
@@ -59,6 +64,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Finding withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -67,6 +73,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Finding withDescription(String description) {
         this.description = description;
         return this;
@@ -75,6 +82,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Finding withId(String id) {
         this.id = id;
         return this;
@@ -83,6 +91,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indicatorOfCompromise")
     public Boolean indicatorOfCompromise;
+
     public Finding withIndicatorOfCompromise(Boolean indicatorOfCompromise) {
         this.indicatorOfCompromise = indicatorOfCompromise;
         return this;
@@ -91,6 +100,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numericSeverity")
     public Double numericSeverity;
+
     public Finding withNumericSeverity(Double numericSeverity) {
         this.numericSeverity = numericSeverity;
         return this;
@@ -99,6 +109,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendation")
     public String recommendation;
+
     public Finding withRecommendation(String recommendation) {
         this.recommendation = recommendation;
         return this;
@@ -107,6 +118,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public Long schemaVersion;
+
     public Finding withSchemaVersion(Long schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -115,6 +127,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public Finding withService(String service) {
         this.service = service;
         return this;
@@ -123,6 +136,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttributes")
     public InspectorServiceAttributes serviceAttributes;
+
     public Finding withServiceAttributes(InspectorServiceAttributes serviceAttributes) {
         this.serviceAttributes = serviceAttributes;
         return this;
@@ -131,6 +145,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public SeverityEnum severity;
+
     public Finding withSeverity(SeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -139,6 +154,7 @@ public class Finding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Finding withTitle(String title) {
         this.title = title;
         return this;
@@ -148,6 +164,7 @@ public class Finding {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Finding withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -155,9 +172,17 @@ public class Finding {
     
     @JsonProperty("userAttributes")
     public Attribute[] userAttributes;
+
     public Finding withUserAttributes(Attribute[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
     }
     
+    public Finding(@JsonProperty("arn") String arn, @JsonProperty("attributes") Attribute[] attributes, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("updatedAt") OffsetDateTime updatedAt, @JsonProperty("userAttributes") Attribute[] userAttributes) {
+        this.arn = arn;
+        this.attributes = attributes;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.userAttributes = userAttributes;
+  }
 }

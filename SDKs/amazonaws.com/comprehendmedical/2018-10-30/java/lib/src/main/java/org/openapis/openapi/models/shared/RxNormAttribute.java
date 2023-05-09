@@ -15,6 +15,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public RxNormAttribute withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public RxNormAttribute withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -31,6 +33,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public RxNormAttribute withId(Long id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipScore")
     public Float relationshipScore;
+
     public RxNormAttribute withRelationshipScore(Float relationshipScore) {
         this.relationshipScore = relationshipScore;
         return this;
@@ -47,6 +51,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public RxNormAttribute withScore(Float score) {
         this.score = score;
         return this;
@@ -55,6 +60,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public RxNormAttribute withText(String text) {
         this.text = text;
         return this;
@@ -63,6 +69,7 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public RxNormTrait[] traits;
+
     public RxNormAttribute withTraits(RxNormTrait[] traits) {
         this.traits = traits;
         return this;
@@ -71,9 +78,11 @@ public class RxNormAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RxNormAttributeTypeEnum type;
+
     public RxNormAttribute withType(RxNormAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RxNormAttribute(){}
 }

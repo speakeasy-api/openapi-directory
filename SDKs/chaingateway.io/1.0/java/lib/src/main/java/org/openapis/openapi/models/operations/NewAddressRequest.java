@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewAddressRequest {
@@ -12,6 +13,7 @@ public class NewAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public NewAddressRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class NewAddressRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NewAddressRequest newAddressRequest;
+
     public NewAddressRequest withNewAddressRequest(org.openapis.openapi.models.shared.NewAddressRequest newAddressRequest) {
         this.newAddressRequest = newAddressRequest;
         return this;
     }
     
+    public NewAddressRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("newAddressRequest") org.openapis.openapi.models.shared.NewAddressRequest newAddressRequest) {
+        this.authorization = authorization;
+        this.newAddressRequest = newAddressRequest;
+  }
 }

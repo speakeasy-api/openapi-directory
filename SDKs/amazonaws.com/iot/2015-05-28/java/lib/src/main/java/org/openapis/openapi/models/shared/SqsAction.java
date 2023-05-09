@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqsAction {
     @JsonProperty("queueUrl")
     public String queueUrl;
+
     public SqsAction withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
@@ -21,6 +22,7 @@ public class SqsAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public SqsAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -29,9 +31,14 @@ public class SqsAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useBase64")
     public Boolean useBase64;
+
     public SqsAction withUseBase64(Boolean useBase64) {
         this.useBase64 = useBase64;
         return this;
     }
     
+    public SqsAction(@JsonProperty("queueUrl") String queueUrl, @JsonProperty("roleArn") String roleArn) {
+        this.queueUrl = queueUrl;
+        this.roleArn = roleArn;
+  }
 }

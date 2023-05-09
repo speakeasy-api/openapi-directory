@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StackSetOperationSummary {
     
     public StackSetOperationActionEnum action;
+
     public StackSetOperationSummary withAction(StackSetOperationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class StackSetOperationSummary {
     
     
     public OffsetDateTime creationTimestamp;
+
     public StackSetOperationSummary withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -26,6 +28,7 @@ public class StackSetOperationSummary {
     
     
     public OffsetDateTime endTimestamp;
+
     public StackSetOperationSummary withEndTimestamp(OffsetDateTime endTimestamp) {
         this.endTimestamp = endTimestamp;
         return this;
@@ -33,6 +36,7 @@ public class StackSetOperationSummary {
     
     
     public String operationId;
+
     public StackSetOperationSummary withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -43,6 +47,7 @@ public class StackSetOperationSummary {
      */
     
     public StackSetOperationPreferences operationPreferences;
+
     public StackSetOperationSummary withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -50,6 +55,7 @@ public class StackSetOperationSummary {
     
     
     public StackSetOperationStatusEnum status;
+
     public StackSetOperationSummary withStatus(StackSetOperationStatusEnum status) {
         this.status = status;
         return this;
@@ -57,6 +63,7 @@ public class StackSetOperationSummary {
     
     
     public StackSetOperationStatusDetails statusDetails;
+
     public StackSetOperationSummary withStatusDetails(StackSetOperationStatusDetails statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -64,9 +71,11 @@ public class StackSetOperationSummary {
     
     
     public String statusReason;
+
     public StackSetOperationSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public StackSetOperationSummary(){}
 }

@@ -12,6 +12,7 @@ public class CreateCollectionRequestBodyCollectionItemItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public CreateCollectionRequestBodyCollectionItemItemRequestBody withMode(String mode) {
         this.mode = mode;
         return this;
@@ -20,9 +21,11 @@ public class CreateCollectionRequestBodyCollectionItemItemRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raw")
     public String raw;
+
     public CreateCollectionRequestBodyCollectionItemItemRequestBody withRaw(String raw) {
         this.raw = raw;
         return this;
     }
     
+    public CreateCollectionRequestBodyCollectionItemItemRequestBody(){}
 }

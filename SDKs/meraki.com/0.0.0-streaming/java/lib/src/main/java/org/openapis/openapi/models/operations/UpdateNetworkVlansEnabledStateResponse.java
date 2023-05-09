@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkVlansEnabledStateResponse {
     
     public String contentType;
+
     public UpdateNetworkVlansEnabledStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkVlansEnabledStateResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkVlansEnabledStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateNetworkVlansEnabledStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkVlansEnabledStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNetworkVlansEnabledStateResponse {
      */
     
     public java.util.Map<String, Object> updateNetworkVlansEnabledState200ApplicationJSONObject;
+
     public UpdateNetworkVlansEnabledStateResponse withUpdateNetworkVlansEnabledState200ApplicationJSONObject(java.util.Map<String, Object> updateNetworkVlansEnabledState200ApplicationJSONObject) {
         this.updateNetworkVlansEnabledState200ApplicationJSONObject = updateNetworkVlansEnabledState200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateNetworkVlansEnabledStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

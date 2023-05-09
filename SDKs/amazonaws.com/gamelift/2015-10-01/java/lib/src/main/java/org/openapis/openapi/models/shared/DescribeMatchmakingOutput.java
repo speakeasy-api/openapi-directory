@@ -15,9 +15,11 @@ public class DescribeMatchmakingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TicketList")
     public MatchmakingTicket[] ticketList;
+
     public DescribeMatchmakingOutput withTicketList(MatchmakingTicket[] ticketList) {
         this.ticketList = ticketList;
         return this;
     }
     
+    public DescribeMatchmakingOutput(){}
 }

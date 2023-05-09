@@ -12,6 +12,7 @@ public class DescribeLoggingConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallArn")
     public String firewallArn;
+
     public DescribeLoggingConfigurationRequest withFirewallArn(String firewallArn) {
         this.firewallArn = firewallArn;
         return this;
@@ -20,9 +21,11 @@ public class DescribeLoggingConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallName")
     public String firewallName;
+
     public DescribeLoggingConfigurationRequest withFirewallName(String firewallName) {
         this.firewallName = firewallName;
         return this;
     }
     
+    public DescribeLoggingConfigurationRequest(){}
 }

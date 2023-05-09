@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EstimationApiNewJsonResponse {
     
     public byte[] body;
+
     public EstimationApiNewJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class EstimationApiNewJsonResponse {
     
     
     public String contentType;
+
     public EstimationApiNewJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class EstimationApiNewJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.EstimationFullDetailsApiModel estimationFullDetailsApiModel;
+
     public EstimationApiNewJsonResponse withEstimationFullDetailsApiModel(org.openapis.openapi.models.shared.EstimationFullDetailsApiModel estimationFullDetailsApiModel) {
         this.estimationFullDetailsApiModel = estimationFullDetailsApiModel;
         return this;
@@ -33,6 +37,7 @@ public class EstimationApiNewJsonResponse {
     
     
     public Integer statusCode;
+
     public EstimationApiNewJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class EstimationApiNewJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EstimationApiNewJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EstimationApiNewJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

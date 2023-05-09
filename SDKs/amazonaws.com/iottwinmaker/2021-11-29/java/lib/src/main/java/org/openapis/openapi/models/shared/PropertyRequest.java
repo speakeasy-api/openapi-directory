@@ -15,6 +15,7 @@ public class PropertyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public PropertyDefinitionRequest definition;
+
     public PropertyRequest withDefinition(PropertyDefinitionRequest definition) {
         this.definition = definition;
         return this;
@@ -23,6 +24,7 @@ public class PropertyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateType")
     public PropertyUpdateTypeEnum updateType;
+
     public PropertyRequest withUpdateType(PropertyUpdateTypeEnum updateType) {
         this.updateType = updateType;
         return this;
@@ -31,9 +33,11 @@ public class PropertyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public DataValue value;
+
     public PropertyRequest withValue(DataValue value) {
         this.value = value;
         return this;
     }
     
+    public PropertyRequest(){}
 }

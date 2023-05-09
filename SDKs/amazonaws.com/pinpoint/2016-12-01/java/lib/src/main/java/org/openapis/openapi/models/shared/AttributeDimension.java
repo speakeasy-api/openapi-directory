@@ -15,6 +15,7 @@ public class AttributeDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeType")
     public AttributeTypeEnum attributeType;
+
     public AttributeDimension withAttributeType(AttributeTypeEnum attributeType) {
         this.attributeType = attributeType;
         return this;
@@ -22,9 +23,13 @@ public class AttributeDimension {
     
     @JsonProperty("Values")
     public String[] values;
+
     public AttributeDimension withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public AttributeDimension(@JsonProperty("Values") String[] values) {
+        this.values = values;
+  }
 }

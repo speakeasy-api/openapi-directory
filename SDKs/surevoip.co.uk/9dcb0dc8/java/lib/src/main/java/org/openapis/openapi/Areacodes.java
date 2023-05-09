@@ -52,10 +52,8 @@ public class Areacodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAreacodesResponse res = new org.openapis.openapi.models.operations.GetAreacodesResponse() {{
+        org.openapis.openapi.models.operations.GetAreacodesResponse res = new org.openapis.openapi.models.operations.GetAreacodesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,11 +84,9 @@ public class Areacodes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNumbersAreacodesResponse res = new org.openapis.openapi.models.operations.GetNumbersAreacodesResponse() {{
+        org.openapis.openapi.models.operations.GetNumbersAreacodesResponse res = new org.openapis.openapi.models.operations.GetNumbersAreacodesResponse(contentType, httpRes.statusCode()) {{
             getNumbersAreacodes200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

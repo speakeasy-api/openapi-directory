@@ -21,6 +21,7 @@ public class HyperParameterTuningJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public HyperParameterTuningJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class HyperParameterTuningJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("HyperParameterTuningEndTime")
     public OffsetDateTime hyperParameterTuningEndTime;
+
     public HyperParameterTuningJobSummary withHyperParameterTuningEndTime(OffsetDateTime hyperParameterTuningEndTime) {
         this.hyperParameterTuningEndTime = hyperParameterTuningEndTime;
         return this;
@@ -38,6 +40,7 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("HyperParameterTuningJobArn")
     public String hyperParameterTuningJobArn;
+
     public HyperParameterTuningJobSummary withHyperParameterTuningJobArn(String hyperParameterTuningJobArn) {
         this.hyperParameterTuningJobArn = hyperParameterTuningJobArn;
         return this;
@@ -45,6 +48,7 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public HyperParameterTuningJobSummary withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
@@ -52,6 +56,7 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("HyperParameterTuningJobStatus")
     public HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus;
+
     public HyperParameterTuningJobSummary withHyperParameterTuningJobStatus(HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus) {
         this.hyperParameterTuningJobStatus = hyperParameterTuningJobStatus;
         return this;
@@ -62,6 +67,7 @@ public class HyperParameterTuningJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public HyperParameterTuningJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -69,6 +75,7 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("ObjectiveStatusCounters")
     public ObjectiveStatusCounters objectiveStatusCounters;
+
     public HyperParameterTuningJobSummary withObjectiveStatusCounters(ObjectiveStatusCounters objectiveStatusCounters) {
         this.objectiveStatusCounters = objectiveStatusCounters;
         return this;
@@ -77,6 +84,7 @@ public class HyperParameterTuningJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceLimits")
     public ResourceLimits resourceLimits;
+
     public HyperParameterTuningJobSummary withResourceLimits(ResourceLimits resourceLimits) {
         this.resourceLimits = resourceLimits;
         return this;
@@ -84,6 +92,7 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("Strategy")
     public HyperParameterTuningJobStrategyTypeEnum strategy;
+
     public HyperParameterTuningJobSummary withStrategy(HyperParameterTuningJobStrategyTypeEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -91,9 +100,19 @@ public class HyperParameterTuningJobSummary {
     
     @JsonProperty("TrainingJobStatusCounters")
     public TrainingJobStatusCounters trainingJobStatusCounters;
+
     public HyperParameterTuningJobSummary withTrainingJobStatusCounters(TrainingJobStatusCounters trainingJobStatusCounters) {
         this.trainingJobStatusCounters = trainingJobStatusCounters;
         return this;
     }
     
+    public HyperParameterTuningJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HyperParameterTuningJobArn") String hyperParameterTuningJobArn, @JsonProperty("HyperParameterTuningJobName") String hyperParameterTuningJobName, @JsonProperty("HyperParameterTuningJobStatus") HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus, @JsonProperty("ObjectiveStatusCounters") ObjectiveStatusCounters objectiveStatusCounters, @JsonProperty("Strategy") HyperParameterTuningJobStrategyTypeEnum strategy, @JsonProperty("TrainingJobStatusCounters") TrainingJobStatusCounters trainingJobStatusCounters) {
+        this.creationTime = creationTime;
+        this.hyperParameterTuningJobArn = hyperParameterTuningJobArn;
+        this.hyperParameterTuningJobName = hyperParameterTuningJobName;
+        this.hyperParameterTuningJobStatus = hyperParameterTuningJobStatus;
+        this.objectiveStatusCounters = objectiveStatusCounters;
+        this.strategy = strategy;
+        this.trainingJobStatusCounters = trainingJobStatusCounters;
+  }
 }

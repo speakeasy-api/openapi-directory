@@ -15,6 +15,7 @@ public class OneDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableLocalGroups")
     public Boolean disableLocalGroups;
+
     public OneDriveConfiguration withDisableLocalGroups(Boolean disableLocalGroups) {
         this.disableLocalGroups = disableLocalGroups;
         return this;
@@ -23,6 +24,7 @@ public class OneDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusionPatterns")
     public String[] exclusionPatterns;
+
     public OneDriveConfiguration withExclusionPatterns(String[] exclusionPatterns) {
         this.exclusionPatterns = exclusionPatterns;
         return this;
@@ -31,6 +33,7 @@ public class OneDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public OneDriveConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -39,6 +42,7 @@ public class OneDriveConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InclusionPatterns")
     public String[] inclusionPatterns;
+
     public OneDriveConfiguration withInclusionPatterns(String[] inclusionPatterns) {
         this.inclusionPatterns = inclusionPatterns;
         return this;
@@ -46,6 +50,7 @@ public class OneDriveConfiguration {
     
     @JsonProperty("OneDriveUsers")
     public OneDriveUsers oneDriveUsers;
+
     public OneDriveConfiguration withOneDriveUsers(OneDriveUsers oneDriveUsers) {
         this.oneDriveUsers = oneDriveUsers;
         return this;
@@ -53,6 +58,7 @@ public class OneDriveConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public OneDriveConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -60,9 +66,15 @@ public class OneDriveConfiguration {
     
     @JsonProperty("TenantDomain")
     public String tenantDomain;
+
     public OneDriveConfiguration withTenantDomain(String tenantDomain) {
         this.tenantDomain = tenantDomain;
         return this;
     }
     
+    public OneDriveConfiguration(@JsonProperty("OneDriveUsers") OneDriveUsers oneDriveUsers, @JsonProperty("SecretArn") String secretArn, @JsonProperty("TenantDomain") String tenantDomain) {
+        this.oneDriveUsers = oneDriveUsers;
+        this.secretArn = secretArn;
+        this.tenantDomain = tenantDomain;
+  }
 }

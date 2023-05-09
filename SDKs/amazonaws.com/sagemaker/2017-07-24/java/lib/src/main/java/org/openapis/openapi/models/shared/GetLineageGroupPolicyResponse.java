@@ -15,6 +15,7 @@ public class GetLineageGroupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public GetLineageGroupPolicyResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -23,9 +24,11 @@ public class GetLineageGroupPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourcePolicy")
     public String resourcePolicy;
+
     public GetLineageGroupPolicyResponse withResourcePolicy(String resourcePolicy) {
         this.resourcePolicy = resourcePolicy;
         return this;
     }
     
+    public GetLineageGroupPolicyResponse(){}
 }

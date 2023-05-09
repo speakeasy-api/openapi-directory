@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TpuProjectsLocationsNodesGetGuestAttributesResponse {
     
     public String contentType;
+
     public TpuProjectsLocationsNodesGetGuestAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TpuProjectsLocationsNodesGetGuestAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGuestAttributesResponse getGuestAttributesResponse;
+
     public TpuProjectsLocationsNodesGetGuestAttributesResponse withGetGuestAttributesResponse(org.openapis.openapi.models.shared.GetGuestAttributesResponse getGuestAttributesResponse) {
         this.getGuestAttributesResponse = getGuestAttributesResponse;
         return this;
@@ -26,6 +29,7 @@ public class TpuProjectsLocationsNodesGetGuestAttributesResponse {
     
     
     public Integer statusCode;
+
     public TpuProjectsLocationsNodesGetGuestAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TpuProjectsLocationsNodesGetGuestAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TpuProjectsLocationsNodesGetGuestAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TpuProjectsLocationsNodesGetGuestAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

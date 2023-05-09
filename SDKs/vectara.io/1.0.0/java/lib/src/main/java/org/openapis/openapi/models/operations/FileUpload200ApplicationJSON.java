@@ -15,9 +15,11 @@ public class FileUpload200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public FileUpload200ApplicationJSONResponse response;
+
     public FileUpload200ApplicationJSON withResponse(FileUpload200ApplicationJSONResponse response) {
         this.response = response;
         return this;
     }
     
+    public FileUpload200ApplicationJSON(){}
 }

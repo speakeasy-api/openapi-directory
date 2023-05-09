@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeScalingActivitiesType {
     
     public String[] activityIds;
+
     public DescribeScalingActivitiesType withActivityIds(String[] activityIds) {
         this.activityIds = activityIds;
         return this;
@@ -16,6 +17,7 @@ public class DescribeScalingActivitiesType {
     
     
     public String autoScalingGroupName;
+
     public DescribeScalingActivitiesType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -23,6 +25,7 @@ public class DescribeScalingActivitiesType {
     
     
     public Boolean includeDeletedGroups;
+
     public DescribeScalingActivitiesType withIncludeDeletedGroups(Boolean includeDeletedGroups) {
         this.includeDeletedGroups = includeDeletedGroups;
         return this;
@@ -30,6 +33,7 @@ public class DescribeScalingActivitiesType {
     
     
     public Long maxRecords;
+
     public DescribeScalingActivitiesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -37,9 +41,11 @@ public class DescribeScalingActivitiesType {
     
     
     public String nextToken;
+
     public DescribeScalingActivitiesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeScalingActivitiesType(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExportTaskResponse {
     
     public String contentType;
+
     public CreateExportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateExportTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExportTaskResponse createExportTaskResponse;
+
     public CreateExportTaskResponse withCreateExportTaskResponse(org.openapis.openapi.models.shared.CreateExportTaskResponse createExportTaskResponse) {
         this.createExportTaskResponse = createExportTaskResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateExportTaskResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object limitExceededException;
+
     public CreateExportTaskResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object operationAbortedException;
+
     public CreateExportTaskResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateExportTaskResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -69,6 +76,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExportTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateExportTaskResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateExportTaskResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class CreateExportTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateExportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateExportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateExportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

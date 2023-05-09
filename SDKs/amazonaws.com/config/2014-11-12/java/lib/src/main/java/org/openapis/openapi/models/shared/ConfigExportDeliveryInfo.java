@@ -22,6 +22,7 @@ public class ConfigExportDeliveryInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAttemptTime")
     public OffsetDateTime lastAttemptTime;
+
     public ConfigExportDeliveryInfo withLastAttemptTime(OffsetDateTime lastAttemptTime) {
         this.lastAttemptTime = lastAttemptTime;
         return this;
@@ -30,6 +31,7 @@ public class ConfigExportDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorCode")
     public String lastErrorCode;
+
     public ConfigExportDeliveryInfo withLastErrorCode(String lastErrorCode) {
         this.lastErrorCode = lastErrorCode;
         return this;
@@ -38,6 +40,7 @@ public class ConfigExportDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorMessage")
     public String lastErrorMessage;
+
     public ConfigExportDeliveryInfo withLastErrorMessage(String lastErrorMessage) {
         this.lastErrorMessage = lastErrorMessage;
         return this;
@@ -46,6 +49,7 @@ public class ConfigExportDeliveryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatus")
     public DeliveryStatusEnum lastStatus;
+
     public ConfigExportDeliveryInfo withLastStatus(DeliveryStatusEnum lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -56,6 +60,7 @@ public class ConfigExportDeliveryInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSuccessfulTime")
     public OffsetDateTime lastSuccessfulTime;
+
     public ConfigExportDeliveryInfo withLastSuccessfulTime(OffsetDateTime lastSuccessfulTime) {
         this.lastSuccessfulTime = lastSuccessfulTime;
         return this;
@@ -66,9 +71,11 @@ public class ConfigExportDeliveryInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("nextDeliveryTime")
     public OffsetDateTime nextDeliveryTime;
+
     public ConfigExportDeliveryInfo withNextDeliveryTime(OffsetDateTime nextDeliveryTime) {
         this.nextDeliveryTime = nextDeliveryTime;
         return this;
     }
     
+    public ConfigExportDeliveryInfo(){}
 }

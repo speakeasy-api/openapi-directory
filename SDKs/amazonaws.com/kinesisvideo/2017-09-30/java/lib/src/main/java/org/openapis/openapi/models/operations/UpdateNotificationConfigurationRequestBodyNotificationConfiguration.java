@@ -15,6 +15,7 @@ public class UpdateNotificationConfigurationRequestBodyNotificationConfiguration
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public org.openapis.openapi.models.shared.NotificationDestinationConfig destinationConfig;
+
     public UpdateNotificationConfigurationRequestBodyNotificationConfiguration withDestinationConfig(org.openapis.openapi.models.shared.NotificationDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -23,9 +24,11 @@ public class UpdateNotificationConfigurationRequestBodyNotificationConfiguration
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public org.openapis.openapi.models.shared.ConfigurationStatusEnum status;
+
     public UpdateNotificationConfigurationRequestBodyNotificationConfiguration withStatus(org.openapis.openapi.models.shared.ConfigurationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateNotificationConfigurationRequestBodyNotificationConfiguration(){}
 }

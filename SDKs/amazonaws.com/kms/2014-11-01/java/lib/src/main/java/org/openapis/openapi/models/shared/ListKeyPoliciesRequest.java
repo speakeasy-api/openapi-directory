@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListKeyPoliciesRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public ListKeyPoliciesRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -19,6 +20,7 @@ public class ListKeyPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListKeyPoliciesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,9 +29,13 @@ public class ListKeyPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListKeyPoliciesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListKeyPoliciesRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

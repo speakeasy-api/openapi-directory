@@ -15,6 +15,7 @@ public class CreateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateVpcEndpointDetail withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class CreateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateVpcEndpointDetail withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class CreateVpcEndpointDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpcEndpointStatusEnum status;
+
     public CreateVpcEndpointDetail withStatus(VpcEndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateVpcEndpointDetail(){}
 }

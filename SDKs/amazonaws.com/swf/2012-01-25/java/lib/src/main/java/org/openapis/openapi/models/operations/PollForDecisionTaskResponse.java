@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PollForDecisionTaskResponse {
     
     public String contentType;
+
     public PollForDecisionTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PollForDecisionTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DecisionTask decisionTask;
+
     public PollForDecisionTaskResponse withDecisionTask(org.openapis.openapi.models.shared.DecisionTask decisionTask) {
         this.decisionTask = decisionTask;
         return this;
@@ -29,6 +32,7 @@ public class PollForDecisionTaskResponse {
      */
     
     public Object limitExceededFault;
+
     public PollForDecisionTaskResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -39,6 +43,7 @@ public class PollForDecisionTaskResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public PollForDecisionTaskResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -46,6 +51,7 @@ public class PollForDecisionTaskResponse {
     
     
     public Integer statusCode;
+
     public PollForDecisionTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PollForDecisionTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PollForDecisionTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PollForDecisionTaskResponse {
      */
     
     public Object unknownResourceFault;
+
     public PollForDecisionTaskResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public PollForDecisionTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

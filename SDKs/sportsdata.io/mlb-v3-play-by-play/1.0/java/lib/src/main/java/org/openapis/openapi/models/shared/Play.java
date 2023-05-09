@@ -12,6 +12,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AtBat")
     public Boolean atBat;
+
     public Play withAtBat(Boolean atBat) {
         this.atBat = atBat;
         return this;
@@ -20,6 +21,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamRuns")
     public Long awayTeamRuns;
+
     public Play withAwayTeamRuns(Long awayTeamRuns) {
         this.awayTeamRuns = awayTeamRuns;
         return this;
@@ -28,6 +30,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Balls")
     public Long balls;
+
     public Play withBalls(Long balls) {
         this.balls = balls;
         return this;
@@ -36,6 +39,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Play withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public Boolean error;
+
     public Play withError(Boolean error) {
         this.error = error;
         return this;
@@ -52,6 +57,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hit")
     public Boolean hit;
+
     public Play withHit(Boolean hit) {
         this.hit = hit;
         return this;
@@ -60,6 +66,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterBatHand")
     public String hitterBatHand;
+
     public Play withHitterBatHand(String hitterBatHand) {
         this.hitterBatHand = hitterBatHand;
         return this;
@@ -68,6 +75,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterID")
     public Long hitterID;
+
     public Play withHitterID(Long hitterID) {
         this.hitterID = hitterID;
         return this;
@@ -76,6 +84,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterName")
     public String hitterName;
+
     public Play withHitterName(String hitterName) {
         this.hitterName = hitterName;
         return this;
@@ -84,6 +93,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterPosition")
     public String hitterPosition;
+
     public Play withHitterPosition(String hitterPosition) {
         this.hitterPosition = hitterPosition;
         return this;
@@ -92,6 +102,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterTeamID")
     public Long hitterTeamID;
+
     public Play withHitterTeamID(Long hitterTeamID) {
         this.hitterTeamID = hitterTeamID;
         return this;
@@ -100,6 +111,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamRuns")
     public Long homeTeamRuns;
+
     public Play withHomeTeamRuns(Long homeTeamRuns) {
         this.homeTeamRuns = homeTeamRuns;
         return this;
@@ -108,6 +120,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningBatterNumber")
     public Long inningBatterNumber;
+
     public Play withInningBatterNumber(Long inningBatterNumber) {
         this.inningBatterNumber = inningBatterNumber;
         return this;
@@ -116,6 +129,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningHalf")
     public String inningHalf;
+
     public Play withInningHalf(String inningHalf) {
         this.inningHalf = inningHalf;
         return this;
@@ -124,6 +138,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningID")
     public Long inningID;
+
     public Play withInningID(Long inningID) {
         this.inningID = inningID;
         return this;
@@ -132,6 +147,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningNumber")
     public Long inningNumber;
+
     public Play withInningNumber(Long inningNumber) {
         this.inningNumber = inningNumber;
         return this;
@@ -140,6 +156,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfOutsOnPlay")
     public Long numberOfOutsOnPlay;
+
     public Play withNumberOfOutsOnPlay(Long numberOfOutsOnPlay) {
         this.numberOfOutsOnPlay = numberOfOutsOnPlay;
         return this;
@@ -148,6 +165,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Out")
     public Boolean out;
+
     public Play withOut(Boolean out) {
         this.out = out;
         return this;
@@ -156,6 +174,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outs")
     public Long outs;
+
     public Play withOuts(Long outs) {
         this.outs = outs;
         return this;
@@ -164,6 +183,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchNumberThisAtBat")
     public Long pitchNumberThisAtBat;
+
     public Play withPitchNumberThisAtBat(Long pitchNumberThisAtBat) {
         this.pitchNumberThisAtBat = pitchNumberThisAtBat;
         return this;
@@ -172,6 +192,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitcherID")
     public Long pitcherID;
+
     public Play withPitcherID(Long pitcherID) {
         this.pitcherID = pitcherID;
         return this;
@@ -180,6 +201,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitcherName")
     public String pitcherName;
+
     public Play withPitcherName(String pitcherName) {
         this.pitcherName = pitcherName;
         return this;
@@ -188,6 +210,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitcherTeamID")
     public Long pitcherTeamID;
+
     public Play withPitcherTeamID(Long pitcherTeamID) {
         this.pitcherTeamID = pitcherTeamID;
         return this;
@@ -196,6 +219,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitcherThrowHand")
     public String pitcherThrowHand;
+
     public Play withPitcherThrowHand(String pitcherThrowHand) {
         this.pitcherThrowHand = pitcherThrowHand;
         return this;
@@ -204,6 +228,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pitches")
     public Pitch[] pitches;
+
     public Play withPitches(Pitch[] pitches) {
         this.pitches = pitches;
         return this;
@@ -212,6 +237,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayID")
     public Long playID;
+
     public Play withPlayID(Long playID) {
         this.playID = playID;
         return this;
@@ -220,6 +246,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayNumber")
     public Long playNumber;
+
     public Play withPlayNumber(Long playNumber) {
         this.playNumber = playNumber;
         return this;
@@ -228,6 +255,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public String result;
+
     public Play withResult(String result) {
         this.result = result;
         return this;
@@ -236,6 +264,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runner1ID")
     public Long runner1ID;
+
     public Play withRunner1ID(Long runner1ID) {
         this.runner1ID = runner1ID;
         return this;
@@ -244,6 +273,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runner2ID")
     public Long runner2ID;
+
     public Play withRunner2ID(Long runner2ID) {
         this.runner2ID = runner2ID;
         return this;
@@ -252,6 +282,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runner3ID")
     public Long runner3ID;
+
     public Play withRunner3ID(Long runner3ID) {
         this.runner3ID = runner3ID;
         return this;
@@ -260,6 +291,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunsBattedIn")
     public Long runsBattedIn;
+
     public Play withRunsBattedIn(Long runsBattedIn) {
         this.runsBattedIn = runsBattedIn;
         return this;
@@ -268,6 +300,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacrifice")
     public Boolean sacrifice;
+
     public Play withSacrifice(Boolean sacrifice) {
         this.sacrifice = sacrifice;
         return this;
@@ -276,6 +309,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Strikeout")
     public Boolean strikeout;
+
     public Play withStrikeout(Boolean strikeout) {
         this.strikeout = strikeout;
         return this;
@@ -284,6 +318,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Strikes")
     public Long strikes;
+
     public Play withStrikes(Long strikes) {
         this.strikes = strikes;
         return this;
@@ -292,6 +327,7 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Play withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -300,9 +336,11 @@ public class Play {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Walk")
     public Boolean walk;
+
     public Play withWalk(Boolean walk) {
         this.walk = walk;
         return this;
     }
     
+    public Play(){}
 }

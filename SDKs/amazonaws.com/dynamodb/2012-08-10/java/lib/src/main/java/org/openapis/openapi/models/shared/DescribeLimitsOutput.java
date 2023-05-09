@@ -15,6 +15,7 @@ public class DescribeLimitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountMaxReadCapacityUnits")
     public Long accountMaxReadCapacityUnits;
+
     public DescribeLimitsOutput withAccountMaxReadCapacityUnits(Long accountMaxReadCapacityUnits) {
         this.accountMaxReadCapacityUnits = accountMaxReadCapacityUnits;
         return this;
@@ -23,6 +24,7 @@ public class DescribeLimitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountMaxWriteCapacityUnits")
     public Long accountMaxWriteCapacityUnits;
+
     public DescribeLimitsOutput withAccountMaxWriteCapacityUnits(Long accountMaxWriteCapacityUnits) {
         this.accountMaxWriteCapacityUnits = accountMaxWriteCapacityUnits;
         return this;
@@ -31,6 +33,7 @@ public class DescribeLimitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableMaxReadCapacityUnits")
     public Long tableMaxReadCapacityUnits;
+
     public DescribeLimitsOutput withTableMaxReadCapacityUnits(Long tableMaxReadCapacityUnits) {
         this.tableMaxReadCapacityUnits = tableMaxReadCapacityUnits;
         return this;
@@ -39,9 +42,11 @@ public class DescribeLimitsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableMaxWriteCapacityUnits")
     public Long tableMaxWriteCapacityUnits;
+
     public DescribeLimitsOutput withTableMaxWriteCapacityUnits(Long tableMaxWriteCapacityUnits) {
         this.tableMaxWriteCapacityUnits = tableMaxWriteCapacityUnits;
         return this;
     }
     
+    public DescribeLimitsOutput(){}
 }

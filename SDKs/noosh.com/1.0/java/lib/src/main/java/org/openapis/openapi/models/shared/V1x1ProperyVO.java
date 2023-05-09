@@ -15,6 +15,7 @@ public class V1x1ProperyVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_attributes")
     public V1x1SpecPamAndAttVO[] propertyAttributes;
+
     public V1x1ProperyVO withPropertyAttributes(V1x1SpecPamAndAttVO[] propertyAttributes) {
         this.propertyAttributes = propertyAttributes;
         return this;
@@ -23,6 +24,7 @@ public class V1x1ProperyVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_id")
     public Long propertyId;
+
     public V1x1ProperyVO withPropertyId(Long propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -31,9 +33,11 @@ public class V1x1ProperyVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property_name")
     public String propertyName;
+
     public V1x1ProperyVO withPropertyName(String propertyName) {
         this.propertyName = propertyName;
         return this;
     }
     
+    public V1x1ProperyVO(){}
 }

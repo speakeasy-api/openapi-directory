@@ -12,6 +12,7 @@ public class PsprtRequestBodyCertificateParameters {
      */
     @JsonProperty("Name")
     public String name;
+
     public PsprtRequestBodyCertificateParameters withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class PsprtRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public PsprtRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
     }
     
+    public PsprtRequestBodyCertificateParameters(@JsonProperty("Name") String name, @JsonProperty("RefNo") String refNo) {
+        this.name = name;
+        this.refNo = refNo;
+  }
 }

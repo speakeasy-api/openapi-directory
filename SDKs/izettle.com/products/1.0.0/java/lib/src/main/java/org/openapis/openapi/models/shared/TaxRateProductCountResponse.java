@@ -15,9 +15,11 @@ public class TaxRateProductCountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counts")
     public TaxRateProductCount[] counts;
+
     public TaxRateProductCountResponse withCounts(TaxRateProductCount[] counts) {
         this.counts = counts;
         return this;
     }
     
+    public TaxRateProductCountResponse(){}
 }

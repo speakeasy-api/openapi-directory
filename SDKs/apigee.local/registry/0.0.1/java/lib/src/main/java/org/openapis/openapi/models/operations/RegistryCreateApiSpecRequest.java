@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiSpecRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput;
+
     public RegistryCreateApiSpecRequest withApiSpecInput(org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput) {
         this.apiSpecInput = apiSpecInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryCreateApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryCreateApiSpecRequest withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +32,7 @@ public class RegistryCreateApiSpecRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiSpecId")
     public String apiSpecId;
+
     public RegistryCreateApiSpecRequest withApiSpecId(String apiSpecId) {
         this.apiSpecId = apiSpecId;
         return this;
@@ -39,6 +43,7 @@ public class RegistryCreateApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryCreateApiSpecRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,6 +54,7 @@ public class RegistryCreateApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryCreateApiSpecRequest withProject(String project) {
         this.project = project;
         return this;
@@ -59,9 +65,17 @@ public class RegistryCreateApiSpecRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public RegistryCreateApiSpecRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegistryCreateApiSpecRequest(@JsonProperty("ApiSpecInput") org.openapis.openapi.models.shared.ApiSpecInput apiSpecInput, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project, @JsonProperty("version") String version) {
+        this.apiSpecInput = apiSpecInput;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+        this.version = version;
+  }
 }

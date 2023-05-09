@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NetworkBandwidthGbpsRequest {
     
     public Double max;
+
     public NetworkBandwidthGbpsRequest withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class NetworkBandwidthGbpsRequest {
     
     
     public Double min;
+
     public NetworkBandwidthGbpsRequest withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public NetworkBandwidthGbpsRequest(){}
 }

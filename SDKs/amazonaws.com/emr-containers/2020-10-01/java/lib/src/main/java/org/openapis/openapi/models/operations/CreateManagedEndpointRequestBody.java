@@ -15,6 +15,7 @@ public class CreateManagedEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public CreateManagedEndpointRequestBody withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -25,6 +26,7 @@ public class CreateManagedEndpointRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateManagedEndpointRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -36,6 +38,7 @@ public class CreateManagedEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public CreateManagedEndpointRequestBodyConfigurationOverrides configurationOverrides;
+
     public CreateManagedEndpointRequestBody withConfigurationOverrides(CreateManagedEndpointRequestBodyConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -46,6 +49,7 @@ public class CreateManagedEndpointRequestBody {
      */
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public CreateManagedEndpointRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -56,6 +60,7 @@ public class CreateManagedEndpointRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateManagedEndpointRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +71,7 @@ public class CreateManagedEndpointRequestBody {
      */
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public CreateManagedEndpointRequestBody withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -77,6 +83,7 @@ public class CreateManagedEndpointRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateManagedEndpointRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,9 +94,17 @@ public class CreateManagedEndpointRequestBody {
      */
     @JsonProperty("type")
     public String type;
+
     public CreateManagedEndpointRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateManagedEndpointRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("executionRoleArn") String executionRoleArn, @JsonProperty("name") String name, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("type") String type) {
+        this.clientToken = clientToken;
+        this.executionRoleArn = executionRoleArn;
+        this.name = name;
+        this.releaseLabel = releaseLabel;
+        this.type = type;
+  }
 }

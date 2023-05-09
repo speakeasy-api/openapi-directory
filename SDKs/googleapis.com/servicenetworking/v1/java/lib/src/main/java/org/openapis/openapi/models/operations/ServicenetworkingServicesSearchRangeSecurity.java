@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicenetworkingServicesSearchRangeSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesSearchRangeSecurityOption1 option1;
+
     public ServicenetworkingServicesSearchRangeSecurity withOption1(ServicenetworkingServicesSearchRangeSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ServicenetworkingServicesSearchRangeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicenetworkingServicesSearchRangeSecurityOption2 option2;
+
     public ServicenetworkingServicesSearchRangeSecurity withOption2(ServicenetworkingServicesSearchRangeSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ServicenetworkingServicesSearchRangeSecurity(){}
 }

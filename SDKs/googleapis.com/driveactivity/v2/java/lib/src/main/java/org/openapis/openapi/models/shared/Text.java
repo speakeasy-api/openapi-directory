@@ -18,9 +18,11 @@ public class Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Text withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Text(){}
 }

@@ -15,6 +15,7 @@ public class ListDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSummaries")
     public DomainSummary[] domainSummaries;
+
     public ListDomainsResponse withDomainSummaries(DomainSummary[] domainSummaries) {
         this.domainSummaries = domainSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDomainsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainsResponse(){}
 }

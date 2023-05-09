@@ -12,6 +12,7 @@ public class CreateDirectConnectGatewayRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amazonSideAsn")
     public Long amazonSideAsn;
+
     public CreateDirectConnectGatewayRequest withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,9 +20,13 @@ public class CreateDirectConnectGatewayRequest {
     
     @JsonProperty("directConnectGatewayName")
     public String directConnectGatewayName;
+
     public CreateDirectConnectGatewayRequest withDirectConnectGatewayName(String directConnectGatewayName) {
         this.directConnectGatewayName = directConnectGatewayName;
         return this;
     }
     
+    public CreateDirectConnectGatewayRequest(@JsonProperty("directConnectGatewayName") String directConnectGatewayName) {
+        this.directConnectGatewayName = directConnectGatewayName;
+  }
 }

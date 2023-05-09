@@ -56,10 +56,8 @@ public class OntolIdentifier {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOntolIdentifierResourceResponse res = new org.openapis.openapi.models.operations.GetOntolIdentifierResourceResponse() {{
+        org.openapis.openapi.models.operations.GetOntolIdentifierResourceResponse res = new org.openapis.openapi.models.operations.GetOntolIdentifierResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,10 +94,8 @@ public class OntolIdentifier {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOntolIdentifierResourceResponse res = new org.openapis.openapi.models.operations.PostOntolIdentifierResourceResponse() {{
+        org.openapis.openapi.models.operations.PostOntolIdentifierResourceResponse res = new org.openapis.openapi.models.operations.PostOntolIdentifierResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

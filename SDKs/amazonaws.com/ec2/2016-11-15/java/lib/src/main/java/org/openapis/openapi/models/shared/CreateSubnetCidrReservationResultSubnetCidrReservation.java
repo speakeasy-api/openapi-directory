@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     public String cidr;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public String description;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public String ownerId;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public CreateSubnetCidrReservationResultSubnetCidrReservationReservationTypeEnum reservationType;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withReservationType(CreateSubnetCidrReservationResultSubnetCidrReservationReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
@@ -40,6 +44,7 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public String subnetCidrReservationId;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withSubnetCidrReservationId(String subnetCidrReservationId) {
         this.subnetCidrReservationId = subnetCidrReservationId;
         return this;
@@ -47,6 +52,7 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public String subnetId;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -54,9 +60,11 @@ public class CreateSubnetCidrReservationResultSubnetCidrReservation {
     
     
     public CreateSubnetCidrReservationResultSubnetCidrReservationTags[] tags;
+
     public CreateSubnetCidrReservationResultSubnetCidrReservation withTags(CreateSubnetCidrReservationResultSubnetCidrReservationTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSubnetCidrReservationResultSubnetCidrReservation(){}
 }

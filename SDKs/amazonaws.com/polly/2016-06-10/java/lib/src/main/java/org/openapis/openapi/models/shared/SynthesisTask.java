@@ -22,6 +22,7 @@ public class SynthesisTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public SynthesisTask withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Engine")
     public EngineEnum engine;
+
     public SynthesisTask withEngine(EngineEnum engine) {
         this.engine = engine;
         return this;
@@ -38,6 +40,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public SynthesisTask withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -46,6 +49,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LexiconNames")
     public String[] lexiconNames;
+
     public SynthesisTask withLexiconNames(String[] lexiconNames) {
         this.lexiconNames = lexiconNames;
         return this;
@@ -54,6 +58,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputFormat")
     public OutputFormatEnum outputFormat;
+
     public SynthesisTask withOutputFormat(OutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -62,6 +67,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUri")
     public String outputUri;
+
     public SynthesisTask withOutputUri(String outputUri) {
         this.outputUri = outputUri;
         return this;
@@ -70,6 +76,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestCharacters")
     public Long requestCharacters;
+
     public SynthesisTask withRequestCharacters(Long requestCharacters) {
         this.requestCharacters = requestCharacters;
         return this;
@@ -78,6 +85,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampleRate")
     public String sampleRate;
+
     public SynthesisTask withSampleRate(String sampleRate) {
         this.sampleRate = sampleRate;
         return this;
@@ -86,6 +94,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsTopicArn")
     public String snsTopicArn;
+
     public SynthesisTask withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -94,6 +103,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpeechMarkTypes")
     public SpeechMarkTypeEnum[] speechMarkTypes;
+
     public SynthesisTask withSpeechMarkTypes(SpeechMarkTypeEnum[] speechMarkTypes) {
         this.speechMarkTypes = speechMarkTypes;
         return this;
@@ -102,6 +112,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskId")
     public String taskId;
+
     public SynthesisTask withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
@@ -110,6 +121,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskStatus")
     public TaskStatusEnum taskStatus;
+
     public SynthesisTask withTaskStatus(TaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
@@ -118,6 +130,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskStatusReason")
     public String taskStatusReason;
+
     public SynthesisTask withTaskStatusReason(String taskStatusReason) {
         this.taskStatusReason = taskStatusReason;
         return this;
@@ -126,6 +139,7 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextType")
     public TextTypeEnum textType;
+
     public SynthesisTask withTextType(TextTypeEnum textType) {
         this.textType = textType;
         return this;
@@ -134,9 +148,11 @@ public class SynthesisTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceId")
     public VoiceIdEnum voiceId;
+
     public SynthesisTask withVoiceId(VoiceIdEnum voiceId) {
         this.voiceId = voiceId;
         return this;
     }
     
+    public SynthesisTask(){}
 }

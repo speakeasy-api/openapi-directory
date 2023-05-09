@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListManagedResourcesResponse {
     @JsonProperty("items")
     public ManagedResourceSummary[] items;
+
     public ListManagedResourcesResponse withItems(ManagedResourceSummary[] items) {
         this.items = items;
         return this;
@@ -22,9 +23,13 @@ public class ListManagedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListManagedResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedResourcesResponse(@JsonProperty("items") ManagedResourceSummary[] items) {
+        this.items = items;
+  }
 }

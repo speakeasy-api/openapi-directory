@@ -15,6 +15,7 @@ public class SortOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public SortOptions withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -26,9 +27,11 @@ public class SortOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortOptionsSortOrderEnum sortOrder;
+
     public SortOptions withSortOrder(SortOptionsSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortOptions(){}
 }

@@ -60,11 +60,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersAddonAccountsListResponse res = new org.openapis.openapi.models.operations.UsersAddonAccountsListResponse() {{
+        org.openapis.openapi.models.operations.UsersAddonAccountsListResponse res = new org.openapis.openapi.models.operations.UsersAddonAccountsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersAddonAccountsReadResponse res = new org.openapis.openapi.models.operations.UsersAddonAccountsReadResponse() {{
+        org.openapis.openapi.models.operations.UsersAddonAccountsReadResponse res = new org.openapis.openapi.models.operations.UsersAddonAccountsReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -161,11 +157,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersAddonsListResponse res = new org.openapis.openapi.models.operations.UsersAddonsListResponse() {{
+        org.openapis.openapi.models.operations.UsersAddonsListResponse res = new org.openapis.openapi.models.operations.UsersAddonsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -210,11 +204,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersAddonsReadResponse res = new org.openapis.openapi.models.operations.UsersAddonsReadResponse() {{
+        org.openapis.openapi.models.operations.UsersAddonsReadResponse res = new org.openapis.openapi.models.operations.UsersAddonsReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -254,11 +246,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersInstitutionsListResponse res = new org.openapis.openapi.models.operations.UsersInstitutionsListResponse() {{
+        org.openapis.openapi.models.operations.UsersInstitutionsListResponse res = new org.openapis.openapi.models.operations.UsersInstitutionsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -308,11 +298,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse() {{
+        org.openapis.openapi.models.operations.UsersListResponse res = new org.openapis.openapi.models.operations.UsersListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,11 +348,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersNodesListResponse res = new org.openapis.openapi.models.operations.UsersNodesListResponse() {{
+        org.openapis.openapi.models.operations.UsersNodesListResponse res = new org.openapis.openapi.models.operations.UsersNodesListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -411,10 +397,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersPartialUpdateResponse res = new org.openapis.openapi.models.operations.UsersPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.UsersPartialUpdateResponse res = new org.openapis.openapi.models.operations.UsersPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -454,11 +438,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersPreprintsListResponse res = new org.openapis.openapi.models.operations.UsersPreprintsListResponse() {{
+        org.openapis.openapi.models.operations.UsersPreprintsListResponse res = new org.openapis.openapi.models.operations.UsersPreprintsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -502,11 +484,9 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersReadResponse res = new org.openapis.openapi.models.operations.UsersReadResponse() {{
+        org.openapis.openapi.models.operations.UsersReadResponse res = new org.openapis.openapi.models.operations.UsersReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -554,10 +534,8 @@ public class Users {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UsersRegistrationsListResponse res = new org.openapis.openapi.models.operations.UsersRegistrationsListResponse() {{
+        org.openapis.openapi.models.operations.UsersRegistrationsListResponse res = new org.openapis.openapi.models.operations.UsersRegistrationsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

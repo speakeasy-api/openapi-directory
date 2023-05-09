@@ -15,6 +15,7 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public Document[] documents;
+
     public DocumentList withDocuments(Document[] documents) {
         this.documents = documents;
         return this;
@@ -23,9 +24,11 @@ public class DocumentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public DocumentList withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public DocumentList(){}
 }

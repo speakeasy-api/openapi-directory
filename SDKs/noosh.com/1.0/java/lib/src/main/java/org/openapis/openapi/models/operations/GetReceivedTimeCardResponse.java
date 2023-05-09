@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReceivedTimeCardResponse {
     
     public byte[] body;
+
     public GetReceivedTimeCardResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetReceivedTimeCardResponse {
     
     
     public String contentType;
+
     public GetReceivedTimeCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetReceivedTimeCardResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetReceivedTimeCardResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetReceivedTimeCardResponse {
     
     
     public Integer statusCode;
+
     public GetReceivedTimeCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetReceivedTimeCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReceivedTimeCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetReceivedTimeCardResponse {
      */
     
     public org.openapis.openapi.models.shared.TimeCardReceivedDetailVO timeCardReceivedDetailVO;
+
     public GetReceivedTimeCardResponse withTimeCardReceivedDetailVO(org.openapis.openapi.models.shared.TimeCardReceivedDetailVO timeCardReceivedDetailVO) {
         this.timeCardReceivedDetailVO = timeCardReceivedDetailVO;
         return this;
     }
     
+    public GetReceivedTimeCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

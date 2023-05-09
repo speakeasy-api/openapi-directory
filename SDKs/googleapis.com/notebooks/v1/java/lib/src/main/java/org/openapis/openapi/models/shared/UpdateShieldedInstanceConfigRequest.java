@@ -18,9 +18,11 @@ public class UpdateShieldedInstanceConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceConfig")
     public ShieldedInstanceConfig shieldedInstanceConfig;
+
     public UpdateShieldedInstanceConfigRequest withShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
         this.shieldedInstanceConfig = shieldedInstanceConfig;
         return this;
     }
     
+    public UpdateShieldedInstanceConfigRequest(){}
 }

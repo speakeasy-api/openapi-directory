@@ -15,9 +15,11 @@ public class WorkflowMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppflowIntegration")
     public AppflowIntegrationWorkflowMetrics appflowIntegration;
+
     public WorkflowMetrics withAppflowIntegration(AppflowIntegrationWorkflowMetrics appflowIntegration) {
         this.appflowIntegration = appflowIntegration;
         return this;
     }
     
+    public WorkflowMetrics(){}
 }

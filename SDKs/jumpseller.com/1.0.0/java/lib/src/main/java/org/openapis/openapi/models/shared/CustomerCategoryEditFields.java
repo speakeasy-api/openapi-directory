@@ -15,9 +15,11 @@ public class CustomerCategoryEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomerCategoryEditFields withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomerCategoryEditFields(){}
 }

@@ -18,6 +18,7 @@ public class CriteriaTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedCriteriaIds")
     public String[] excludedCriteriaIds;
+
     public CriteriaTargeting withExcludedCriteriaIds(String[] excludedCriteriaIds) {
         this.excludedCriteriaIds = excludedCriteriaIds;
         return this;
@@ -29,9 +30,11 @@ public class CriteriaTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetedCriteriaIds")
     public String[] targetedCriteriaIds;
+
     public CriteriaTargeting withTargetedCriteriaIds(String[] targetedCriteriaIds) {
         this.targetedCriteriaIds = targetedCriteriaIds;
         return this;
     }
     
+    public CriteriaTargeting(){}
 }

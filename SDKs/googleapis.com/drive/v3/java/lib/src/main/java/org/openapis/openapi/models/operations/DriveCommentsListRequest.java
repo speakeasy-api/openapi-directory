@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveCommentsListRequest {
@@ -12,6 +13,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveCommentsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveCommentsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveCommentsListRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -42,6 +46,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeDeleted")
     public Boolean includeDeleted;
+
     public DriveCommentsListRequest withIncludeDeleted(Boolean includeDeleted) {
         this.includeDeleted = includeDeleted;
         return this;
@@ -52,6 +57,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveCommentsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveCommentsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DriveCommentsListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -82,6 +90,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DriveCommentsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -92,6 +101,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveCommentsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveCommentsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startModifiedTime")
     public String startModifiedTime;
+
     public DriveCommentsListRequest withStartModifiedTime(String startModifiedTime) {
         this.startModifiedTime = startModifiedTime;
         return this;
@@ -122,9 +134,13 @@ public class DriveCommentsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveCommentsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveCommentsListRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

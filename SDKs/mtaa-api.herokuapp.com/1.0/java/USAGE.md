@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DistrictsInARegionRequest;
 import org.openapis.openapi.models.operations.DistrictsInARegionResponse;
 
@@ -13,10 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DistrictsInARegionRequest req = new DistrictsInARegionRequest() {{
-                country = "Malta";
-                region = "provident";
-            }}            
+            DistrictsInARegionRequest req = new DistrictsInARegionRequest("corrupti", "provident");            
 
             DistrictsInARegionResponse res = sdk.districtsInRegion.districtsInARegion(req);
 
@@ -26,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

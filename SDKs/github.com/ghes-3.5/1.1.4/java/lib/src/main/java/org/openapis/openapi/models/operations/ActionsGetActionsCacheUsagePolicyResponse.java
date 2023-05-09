@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetActionsCacheUsagePolicyResponse {
     
     public String contentType;
+
     public ActionsGetActionsCacheUsagePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetActionsCacheUsagePolicyResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetActionsCacheUsagePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetActionsCacheUsagePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetActionsCacheUsagePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetActionsCacheUsagePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsCacheUsagePolicyForRepository actionsCacheUsagePolicyForRepository;
+
     public ActionsGetActionsCacheUsagePolicyResponse withActionsCacheUsagePolicyForRepository(org.openapis.openapi.models.shared.ActionsCacheUsagePolicyForRepository actionsCacheUsagePolicyForRepository) {
         this.actionsCacheUsagePolicyForRepository = actionsCacheUsagePolicyForRepository;
         return this;
     }
     
+    public ActionsGetActionsCacheUsagePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

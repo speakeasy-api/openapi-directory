@@ -15,6 +15,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipRange")
     public String ipRange;
+
     public RouterInterface withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -26,6 +27,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedInterconnectAttachment")
     public String linkedInterconnectAttachment;
+
     public RouterInterface withLinkedInterconnectAttachment(String linkedInterconnectAttachment) {
         this.linkedInterconnectAttachment = linkedInterconnectAttachment;
         return this;
@@ -37,6 +39,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedVpnTunnel")
     public String linkedVpnTunnel;
+
     public RouterInterface withLinkedVpnTunnel(String linkedVpnTunnel) {
         this.linkedVpnTunnel = linkedVpnTunnel;
         return this;
@@ -48,6 +51,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementType")
     public RouterInterfaceManagementTypeEnum managementType;
+
     public RouterInterface withManagementType(RouterInterfaceManagementTypeEnum managementType) {
         this.managementType = managementType;
         return this;
@@ -59,6 +63,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RouterInterface withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpAddress")
     public String privateIpAddress;
+
     public RouterInterface withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -81,6 +87,7 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redundantInterface")
     public String redundantInterface;
+
     public RouterInterface withRedundantInterface(String redundantInterface) {
         this.redundantInterface = redundantInterface;
         return this;
@@ -92,9 +99,11 @@ public class RouterInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public RouterInterface withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
     }
     
+    public RouterInterface(){}
 }

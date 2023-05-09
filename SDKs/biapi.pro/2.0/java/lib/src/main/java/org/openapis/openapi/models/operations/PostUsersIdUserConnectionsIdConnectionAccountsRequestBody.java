@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
@@ -12,6 +13,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=balance")
     public Float balance;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withBalance(Float balance) {
         this.balance = balance;
         return this;
@@ -22,6 +24,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=iban")
     public String iban;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withIban(String iban) {
         this.iban = iban;
         return this;
@@ -32,6 +35,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_connection")
     public Long idConnection;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -42,6 +46,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_currency")
     public String idCurrency;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withIdCurrency(String idCurrency) {
         this.idCurrency = idCurrency;
         return this;
@@ -52,6 +57,7 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +68,13 @@ public class PostUsersIdUserConnectionsIdConnectionAccountsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=number")
     public String number;
+
     public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public PostUsersIdUserConnectionsIdConnectionAccountsRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

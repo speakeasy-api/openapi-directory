@@ -22,6 +22,7 @@ public class ListSequenceStoresRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAfter")
     public OffsetDateTime createdAfter;
+
     public ListSequenceStoresRequestBodyFilter withCreatedAfter(OffsetDateTime createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -32,6 +33,7 @@ public class ListSequenceStoresRequestBodyFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdBefore")
     public OffsetDateTime createdBefore;
+
     public ListSequenceStoresRequestBodyFilter withCreatedBefore(OffsetDateTime createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -40,9 +42,11 @@ public class ListSequenceStoresRequestBodyFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ListSequenceStoresRequestBodyFilter withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListSequenceStoresRequestBodyFilter(){}
 }

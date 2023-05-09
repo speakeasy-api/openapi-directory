@@ -12,9 +12,13 @@ public class LockRuleRequestBody {
      */
     @JsonProperty("LockConfiguration")
     public LockRuleRequestBodyLockConfiguration lockConfiguration;
+
     public LockRuleRequestBody withLockConfiguration(LockRuleRequestBodyLockConfiguration lockConfiguration) {
         this.lockConfiguration = lockConfiguration;
         return this;
     }
     
+    public LockRuleRequestBody(@JsonProperty("LockConfiguration") LockRuleRequestBodyLockConfiguration lockConfiguration) {
+        this.lockConfiguration = lockConfiguration;
+  }
 }

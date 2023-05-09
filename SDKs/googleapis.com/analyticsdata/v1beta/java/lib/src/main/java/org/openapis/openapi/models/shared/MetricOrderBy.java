@@ -18,9 +18,11 @@ public class MetricOrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public MetricOrderBy withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public MetricOrderBy(){}
 }

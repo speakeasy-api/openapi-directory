@@ -15,6 +15,7 @@ public class PutEncryptionConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public PutEncryptionConfigRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -25,9 +26,13 @@ public class PutEncryptionConfigRequestBody {
      */
     @JsonProperty("Type")
     public PutEncryptionConfigRequestBodyTypeEnum type;
+
     public PutEncryptionConfigRequestBody withType(PutEncryptionConfigRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutEncryptionConfigRequestBody(@JsonProperty("Type") PutEncryptionConfigRequestBodyTypeEnum type) {
+        this.type = type;
+  }
 }

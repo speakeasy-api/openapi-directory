@@ -18,9 +18,11 @@ public class DealServingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealPauseStatus")
     public DealPauseStatus dealPauseStatus;
+
     public DealServingMetadata withDealPauseStatus(DealPauseStatus dealPauseStatus) {
         this.dealPauseStatus = dealPauseStatus;
         return this;
     }
     
+    public DealServingMetadata(){}
 }

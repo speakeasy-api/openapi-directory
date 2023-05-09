@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VerifyTrustRequest {
     @JsonProperty("TrustId")
     public String trustId;
+
     public VerifyTrustRequest withTrustId(String trustId) {
         this.trustId = trustId;
         return this;
     }
     
+    public VerifyTrustRequest(@JsonProperty("TrustId") String trustId) {
+        this.trustId = trustId;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyIpamPoolRequestRemoveAllocationResourceTags {
     
     public String key;
+
     public ModifyIpamPoolRequestRemoveAllocationResourceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ModifyIpamPoolRequestRemoveAllocationResourceTags {
     
     
     public String value;
+
     public ModifyIpamPoolRequestRemoveAllocationResourceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyIpamPoolRequestRemoveAllocationResourceTags(){}
 }

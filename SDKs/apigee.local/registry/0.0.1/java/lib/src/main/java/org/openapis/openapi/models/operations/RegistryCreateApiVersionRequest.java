@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryCreateApiVersionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput;
+
     public RegistryCreateApiVersionRequest withApiVersionInput(org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput) {
         this.apiVersionInput = apiVersionInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryCreateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryCreateApiVersionRequest withApi(String api) {
         this.api = api;
         return this;
@@ -29,6 +32,7 @@ public class RegistryCreateApiVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apiVersionId")
     public String apiVersionId;
+
     public RegistryCreateApiVersionRequest withApiVersionId(String apiVersionId) {
         this.apiVersionId = apiVersionId;
         return this;
@@ -39,6 +43,7 @@ public class RegistryCreateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryCreateApiVersionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,9 +54,16 @@ public class RegistryCreateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryCreateApiVersionRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryCreateApiVersionRequest(@JsonProperty("ApiVersionInput") org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.apiVersionInput = apiVersionInput;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobBookmarkResponse {
     
     public String contentType;
+
     public GetJobBookmarkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobBookmarkResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetJobBookmarkResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetJobBookmarkResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobBookmarkResponse getJobBookmarkResponse;
+
     public GetJobBookmarkResponse withGetJobBookmarkResponse(org.openapis.openapi.models.shared.GetJobBookmarkResponse getJobBookmarkResponse) {
         this.getJobBookmarkResponse = getJobBookmarkResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetJobBookmarkResponse {
      */
     
     public Object internalServiceException;
+
     public GetJobBookmarkResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetJobBookmarkResponse {
      */
     
     public Object invalidInputException;
+
     public GetJobBookmarkResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetJobBookmarkResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetJobBookmarkResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetJobBookmarkResponse {
     
     
     public Integer statusCode;
+
     public GetJobBookmarkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetJobBookmarkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobBookmarkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetJobBookmarkResponse {
      */
     
     public Object validationException;
+
     public GetJobBookmarkResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetJobBookmarkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

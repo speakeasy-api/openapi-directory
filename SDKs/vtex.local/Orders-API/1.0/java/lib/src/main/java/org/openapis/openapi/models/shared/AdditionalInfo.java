@@ -15,6 +15,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("brandId")
     public String brandId;
+
     public AdditionalInfo withBrandId(String brandId) {
         this.brandId = brandId;
         return this;
@@ -25,6 +26,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("brandName")
     public String brandName;
+
     public AdditionalInfo withBrandName(String brandName) {
         this.brandName = brandName;
         return this;
@@ -35,6 +37,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("categoriesIds")
     public String categoriesIds;
+
     public AdditionalInfo withCategoriesIds(String categoriesIds) {
         this.categoriesIds = categoriesIds;
         return this;
@@ -45,6 +48,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("commercialConditionId")
     public String commercialConditionId;
+
     public AdditionalInfo withCommercialConditionId(String commercialConditionId) {
         this.commercialConditionId = commercialConditionId;
         return this;
@@ -52,6 +56,7 @@ public class AdditionalInfo {
     
     @JsonProperty("dimension")
     public Dimension dimension;
+
     public AdditionalInfo withDimension(Dimension dimension) {
         this.dimension = dimension;
         return this;
@@ -62,6 +67,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("offeringInfo")
     public String offeringInfo;
+
     public AdditionalInfo withOfferingInfo(String offeringInfo) {
         this.offeringInfo = offeringInfo;
         return this;
@@ -72,6 +78,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("offeringType")
     public String offeringType;
+
     public AdditionalInfo withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -82,6 +89,7 @@ public class AdditionalInfo {
      */
     @JsonProperty("offeringTypeId")
     public String offeringTypeId;
+
     public AdditionalInfo withOfferingTypeId(String offeringTypeId) {
         this.offeringTypeId = offeringTypeId;
         return this;
@@ -92,9 +100,21 @@ public class AdditionalInfo {
      */
     @JsonProperty("productClusterId")
     public String productClusterId;
+
     public AdditionalInfo withProductClusterId(String productClusterId) {
         this.productClusterId = productClusterId;
         return this;
     }
     
+    public AdditionalInfo(@JsonProperty("brandId") String brandId, @JsonProperty("brandName") String brandName, @JsonProperty("categoriesIds") String categoriesIds, @JsonProperty("commercialConditionId") String commercialConditionId, @JsonProperty("dimension") Dimension dimension, @JsonProperty("offeringInfo") String offeringInfo, @JsonProperty("offeringType") String offeringType, @JsonProperty("offeringTypeId") String offeringTypeId, @JsonProperty("productClusterId") String productClusterId) {
+        this.brandId = brandId;
+        this.brandName = brandName;
+        this.categoriesIds = categoriesIds;
+        this.commercialConditionId = commercialConditionId;
+        this.dimension = dimension;
+        this.offeringInfo = offeringInfo;
+        this.offeringType = offeringType;
+        this.offeringTypeId = offeringTypeId;
+        this.productClusterId = productClusterId;
+  }
 }

@@ -12,6 +12,7 @@ public class GetPayoutsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetPayoutsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +23,7 @@ public class GetPayoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetPayoutsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class GetPayoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetPayoutsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetPayoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetPayoutsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -52,9 +56,11 @@ public class GetPayoutsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetPayoutsRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetPayoutsRequest(){}
 }

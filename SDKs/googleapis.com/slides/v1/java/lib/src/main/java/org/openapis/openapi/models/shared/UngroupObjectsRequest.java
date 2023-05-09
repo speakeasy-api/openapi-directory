@@ -18,9 +18,11 @@ public class UngroupObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectIds")
     public String[] objectIds;
+
     public UngroupObjectsRequest withObjectIds(String[] objectIds) {
         this.objectIds = objectIds;
         return this;
     }
     
+    public UngroupObjectsRequest(){}
 }

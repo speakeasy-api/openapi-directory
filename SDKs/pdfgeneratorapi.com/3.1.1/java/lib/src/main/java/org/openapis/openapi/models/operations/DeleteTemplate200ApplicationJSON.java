@@ -15,9 +15,11 @@ public class DeleteTemplate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public DeleteTemplate200ApplicationJSONResponse response;
+
     public DeleteTemplate200ApplicationJSON withResponse(DeleteTemplate200ApplicationJSONResponse response) {
         this.response = response;
         return this;
     }
     
+    public DeleteTemplate200ApplicationJSON(){}
 }

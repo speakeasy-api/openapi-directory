@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindPlacesFindPlacesGetRequest {
@@ -12,6 +13,7 @@ public class FindPlacesFindPlacesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public FindPlacesFindPlacesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class FindPlacesFindPlacesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public FindPlacesFindPlacesGetLanguageLanguageEnum language;
+
     public FindPlacesFindPlacesGetRequest withLanguage(FindPlacesFindPlacesGetLanguageLanguageEnum language) {
         this.language = language;
         return this;
@@ -41,9 +44,13 @@ public class FindPlacesFindPlacesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public FindPlacesFindPlacesGetRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public FindPlacesFindPlacesGetRequest(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

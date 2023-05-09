@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetDefaultAuthorizerResponse {
     
     public String contentType;
+
     public SetDefaultAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public SetDefaultAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public SetDefaultAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public SetDefaultAuthorizerResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetDefaultAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SetDefaultAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.SetDefaultAuthorizerResponse setDefaultAuthorizerResponse;
+
     public SetDefaultAuthorizerResponse withSetDefaultAuthorizerResponse(org.openapis.openapi.models.shared.SetDefaultAuthorizerResponse setDefaultAuthorizerResponse) {
         this.setDefaultAuthorizerResponse = setDefaultAuthorizerResponse;
         return this;
@@ -76,6 +84,7 @@ public class SetDefaultAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public SetDefaultAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SetDefaultAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetDefaultAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public SetDefaultAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class SetDefaultAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public SetDefaultAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public SetDefaultAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

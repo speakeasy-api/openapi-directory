@@ -15,6 +15,7 @@ public class DownloadHistoryRevshareDetails {
      */
     @JsonProperty("purchase_amount")
     public String purchaseAmount;
+
     public DownloadHistoryRevshareDetails withPurchaseAmount(String purchaseAmount) {
         this.purchaseAmount = purchaseAmount;
         return this;
@@ -25,9 +26,14 @@ public class DownloadHistoryRevshareDetails {
      */
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public DownloadHistoryRevshareDetails withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
     }
     
+    public DownloadHistoryRevshareDetails(@JsonProperty("purchase_amount") String purchaseAmount, @JsonProperty("purchase_currency") String purchaseCurrency) {
+        this.purchaseAmount = purchaseAmount;
+        this.purchaseCurrency = purchaseCurrency;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteIdentityProviderRequest {
     @JsonProperty("ProviderName")
     public String providerName;
+
     public DeleteIdentityProviderRequest withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteIdentityProviderRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public DeleteIdentityProviderRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public DeleteIdentityProviderRequest(@JsonProperty("ProviderName") String providerName, @JsonProperty("UserPoolId") String userPoolId) {
+        this.providerName = providerName;
+        this.userPoolId = userPoolId;
+  }
 }

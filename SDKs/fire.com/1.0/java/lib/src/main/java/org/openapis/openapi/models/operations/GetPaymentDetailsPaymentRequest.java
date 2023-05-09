@@ -23,6 +23,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalFields")
     public String additionalFields;
+
     public GetPaymentDetailsPaymentRequest withAdditionalFields(String additionalFields) {
         this.additionalFields = additionalFields;
         return this;
@@ -34,6 +35,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Long amount;
+
     public GetPaymentDetailsPaymentRequest withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -45,6 +47,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectFields")
     public String collectFields;
+
     public GetPaymentDetailsPaymentRequest withCollectFields(String collectFields) {
         this.collectFields = collectFields;
         return this;
@@ -56,6 +59,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetPaymentDetailsPaymentRequestCurrency currency;
+
     public GetPaymentDetailsPaymentRequest withCurrency(GetPaymentDetailsPaymentRequestCurrency currency) {
         this.currency = currency;
         return this;
@@ -67,6 +71,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetPaymentDetailsPaymentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -80,6 +85,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiry")
     public OffsetDateTime expiry;
+
     public GetPaymentDetailsPaymentRequest withExpiry(OffsetDateTime expiry) {
         this.expiry = expiry;
         return this;
@@ -91,6 +97,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icanTo")
     public Long icanTo;
+
     public GetPaymentDetailsPaymentRequest withIcanTo(Long icanTo) {
         this.icanTo = icanTo;
         return this;
@@ -102,6 +109,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatoryFields")
     public String mandatoryFields;
+
     public GetPaymentDetailsPaymentRequest withMandatoryFields(String mandatoryFields) {
         this.mandatoryFields = mandatoryFields;
         return this;
@@ -113,6 +121,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumberPayments")
     public Long maxNumberPayments;
+
     public GetPaymentDetailsPaymentRequest withMaxNumberPayments(Long maxNumberPayments) {
         this.maxNumberPayments = maxNumberPayments;
         return this;
@@ -124,6 +133,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("myRef")
     public String myRef;
+
     public GetPaymentDetailsPaymentRequest withMyRef(String myRef) {
         this.myRef = myRef;
         return this;
@@ -132,6 +142,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderDetails")
     public GetPaymentDetailsPaymentRequestOrderDetails orderDetails;
+
     public GetPaymentDetailsPaymentRequest withOrderDetails(GetPaymentDetailsPaymentRequestOrderDetails orderDetails) {
         this.orderDetails = orderDetails;
         return this;
@@ -143,6 +154,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentRequestCode")
     public String paymentRequestCode;
+
     public GetPaymentDetailsPaymentRequest withPaymentRequestCode(String paymentRequestCode) {
         this.paymentRequestCode = paymentRequestCode;
         return this;
@@ -154,6 +166,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentUuid")
     public String paymentUuid;
+
     public GetPaymentDetailsPaymentRequest withPaymentUuid(String paymentUuid) {
         this.paymentUuid = paymentUuid;
         return this;
@@ -165,6 +178,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnUrl")
     public String returnUrl;
+
     public GetPaymentDetailsPaymentRequest withReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
@@ -176,6 +190,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetPaymentDetailsPaymentRequestStatusEnum status;
+
     public GetPaymentDetailsPaymentRequest withStatus(GetPaymentDetailsPaymentRequestStatusEnum status) {
         this.status = status;
         return this;
@@ -187,6 +202,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionType")
     public GetPaymentDetailsPaymentRequestTransactionTypeEnum transactionType;
+
     public GetPaymentDetailsPaymentRequest withTransactionType(GetPaymentDetailsPaymentRequestTransactionTypeEnum transactionType) {
         this.transactionType = transactionType;
         return this;
@@ -198,6 +214,7 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetPaymentDetailsPaymentRequestTypeEnum type;
+
     public GetPaymentDetailsPaymentRequest withType(GetPaymentDetailsPaymentRequestTypeEnum type) {
         this.type = type;
         return this;
@@ -209,9 +226,11 @@ public class GetPaymentDetailsPaymentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookUrl")
     public String webhookUrl;
+
     public GetPaymentDetailsPaymentRequest withWebhookUrl(String webhookUrl) {
         this.webhookUrl = webhookUrl;
         return this;
     }
     
+    public GetPaymentDetailsPaymentRequest(){}
 }

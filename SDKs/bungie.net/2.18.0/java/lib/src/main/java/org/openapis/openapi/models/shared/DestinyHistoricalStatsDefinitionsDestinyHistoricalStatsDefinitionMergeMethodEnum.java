@@ -10,14 +10,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum - Optional icon for the statistic
  */
 public enum DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2");
+    ZERO(0),
+    ONE(1),
+    TWO(2);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum(String value) {
+    private DestinyHistoricalStatsDefinitionsDestinyHistoricalStatsDefinitionMergeMethodEnum(Integer value) {
         this.value = value;
     }
 }

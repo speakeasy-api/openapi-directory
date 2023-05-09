@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductRetrieveDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public ProductRetrieveDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class ProductRetrieveDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public ProductRetrieveDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class ProductRetrieveDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ProductRetrieveDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class ProductRetrieveDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public ProductRetrieveDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public ProductRetrieveDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

@@ -15,6 +15,7 @@ public class ListInferenceRecommendationsJobStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInferenceRecommendationsJobStepsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListInferenceRecommendationsJobStepsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public InferenceRecommendationsJobStep[] steps;
+
     public ListInferenceRecommendationsJobStepsResponse withSteps(InferenceRecommendationsJobStep[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public ListInferenceRecommendationsJobStepsResponse(){}
 }

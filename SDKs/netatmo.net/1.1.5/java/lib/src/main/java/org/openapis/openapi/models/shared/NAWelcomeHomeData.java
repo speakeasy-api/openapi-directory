@@ -12,6 +12,7 @@ public class NAWelcomeHomeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global_info")
     public NAWelcomeGlobalInfo globalInfo;
+
     public NAWelcomeHomeData withGlobalInfo(NAWelcomeGlobalInfo globalInfo) {
         this.globalInfo = globalInfo;
         return this;
@@ -20,6 +21,7 @@ public class NAWelcomeHomeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homes")
     public NAWelcomeHome[] homes;
+
     public NAWelcomeHomeData withHomes(NAWelcomeHome[] homes) {
         this.homes = homes;
         return this;
@@ -28,9 +30,11 @@ public class NAWelcomeHomeData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public NAWelcomeUser user;
+
     public NAWelcomeHomeData withUser(NAWelcomeUser user) {
         this.user = user;
         return this;
     }
     
+    public NAWelcomeHomeData(){}
 }

@@ -15,6 +15,7 @@ public class Body {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Html")
     public Content html;
+
     public Body withHtml(Content html) {
         this.html = html;
         return this;
@@ -23,9 +24,11 @@ public class Body {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public Content text;
+
     public Body withText(Content text) {
         this.text = text;
         return this;
     }
     
+    public Body(){}
 }

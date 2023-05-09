@@ -15,6 +15,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("achievableRpoInSecs")
     public Long achievableRpoInSecs;
+
     public DisruptionCompliance withAchievableRpoInSecs(Long achievableRpoInSecs) {
         this.achievableRpoInSecs = achievableRpoInSecs;
         return this;
@@ -23,6 +24,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("achievableRtoInSecs")
     public Long achievableRtoInSecs;
+
     public DisruptionCompliance withAchievableRtoInSecs(Long achievableRtoInSecs) {
         this.achievableRtoInSecs = achievableRtoInSecs;
         return this;
@@ -30,6 +32,7 @@ public class DisruptionCompliance {
     
     @JsonProperty("complianceStatus")
     public ComplianceStatusEnum complianceStatus;
+
     public DisruptionCompliance withComplianceStatus(ComplianceStatusEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -38,6 +41,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRpoInSecs")
     public Long currentRpoInSecs;
+
     public DisruptionCompliance withCurrentRpoInSecs(Long currentRpoInSecs) {
         this.currentRpoInSecs = currentRpoInSecs;
         return this;
@@ -46,6 +50,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRtoInSecs")
     public Long currentRtoInSecs;
+
     public DisruptionCompliance withCurrentRtoInSecs(Long currentRtoInSecs) {
         this.currentRtoInSecs = currentRtoInSecs;
         return this;
@@ -54,6 +59,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DisruptionCompliance withMessage(String message) {
         this.message = message;
         return this;
@@ -62,6 +68,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rpoDescription")
     public String rpoDescription;
+
     public DisruptionCompliance withRpoDescription(String rpoDescription) {
         this.rpoDescription = rpoDescription;
         return this;
@@ -70,6 +77,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rpoReferenceId")
     public String rpoReferenceId;
+
     public DisruptionCompliance withRpoReferenceId(String rpoReferenceId) {
         this.rpoReferenceId = rpoReferenceId;
         return this;
@@ -78,6 +86,7 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rtoDescription")
     public String rtoDescription;
+
     public DisruptionCompliance withRtoDescription(String rtoDescription) {
         this.rtoDescription = rtoDescription;
         return this;
@@ -86,9 +95,13 @@ public class DisruptionCompliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rtoReferenceId")
     public String rtoReferenceId;
+
     public DisruptionCompliance withRtoReferenceId(String rtoReferenceId) {
         this.rtoReferenceId = rtoReferenceId;
         return this;
     }
     
+    public DisruptionCompliance(@JsonProperty("complianceStatus") ComplianceStatusEnum complianceStatus) {
+        this.complianceStatus = complianceStatus;
+  }
 }

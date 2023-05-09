@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class UserSearchResultItem {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public UserSearchResultItem withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -27,6 +28,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bio")
     public String bio;
+
     public UserSearchResultItem withBio(String bio) {
         this.bio = bio;
         return this;
@@ -35,6 +37,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blog")
     public String blog;
+
     public UserSearchResultItem withBlog(String blog) {
         this.blog = blog;
         return this;
@@ -43,6 +46,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company")
     public String company;
+
     public UserSearchResultItem withCompany(String company) {
         this.company = company;
         return this;
@@ -53,6 +57,7 @@ public class UserSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public UserSearchResultItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -61,6 +66,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserSearchResultItem withEmail(String email) {
         this.email = email;
         return this;
@@ -68,6 +74,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public UserSearchResultItem withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -76,6 +83,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public Long followers;
+
     public UserSearchResultItem withFollowers(Long followers) {
         this.followers = followers;
         return this;
@@ -83,6 +91,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public UserSearchResultItem withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -91,6 +100,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("following")
     public Long following;
+
     public UserSearchResultItem withFollowing(Long following) {
         this.following = following;
         return this;
@@ -98,6 +108,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public UserSearchResultItem withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -105,6 +116,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public UserSearchResultItem withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -112,6 +124,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public UserSearchResultItem withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -120,6 +133,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hireable")
     public Boolean hireable;
+
     public UserSearchResultItem withHireable(Boolean hireable) {
         this.hireable = hireable;
         return this;
@@ -127,6 +141,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public UserSearchResultItem withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -134,6 +149,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("id")
     public Long id;
+
     public UserSearchResultItem withId(Long id) {
         this.id = id;
         return this;
@@ -142,6 +158,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public UserSearchResultItem withLocation(String location) {
         this.location = location;
         return this;
@@ -149,6 +166,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("login")
     public String login;
+
     public UserSearchResultItem withLogin(String login) {
         this.login = login;
         return this;
@@ -157,6 +175,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserSearchResultItem withName(String name) {
         this.name = name;
         return this;
@@ -164,6 +183,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public UserSearchResultItem withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -171,6 +191,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public UserSearchResultItem withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -179,6 +200,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_gists")
     public Long publicGists;
+
     public UserSearchResultItem withPublicGists(Long publicGists) {
         this.publicGists = publicGists;
         return this;
@@ -187,6 +209,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_repos")
     public Long publicRepos;
+
     public UserSearchResultItem withPublicRepos(Long publicRepos) {
         this.publicRepos = publicRepos;
         return this;
@@ -194,6 +217,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public UserSearchResultItem withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -201,6 +225,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public UserSearchResultItem withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -208,6 +233,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("score")
     public Double score;
+
     public UserSearchResultItem withScore(Double score) {
         this.score = score;
         return this;
@@ -215,6 +241,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public UserSearchResultItem withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -222,6 +249,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public UserSearchResultItem withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -229,6 +257,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public UserSearchResultItem withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -239,6 +268,7 @@ public class UserSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspended_at")
     public OffsetDateTime suspendedAt;
+
     public UserSearchResultItem withSuspendedAt(OffsetDateTime suspendedAt) {
         this.suspendedAt = suspendedAt;
         return this;
@@ -247,6 +277,7 @@ public class UserSearchResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_matches")
     public SearchResultTextMatches[] textMatches;
+
     public UserSearchResultItem withTextMatches(SearchResultTextMatches[] textMatches) {
         this.textMatches = textMatches;
         return this;
@@ -254,6 +285,7 @@ public class UserSearchResultItem {
     
     @JsonProperty("type")
     public String type;
+
     public UserSearchResultItem withType(String type) {
         this.type = type;
         return this;
@@ -264,6 +296,7 @@ public class UserSearchResultItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public UserSearchResultItem withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -271,9 +304,31 @@ public class UserSearchResultItem {
     
     @JsonProperty("url")
     public String url;
+
     public UserSearchResultItem withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UserSearchResultItem(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("score") Double score, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.eventsUrl = eventsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.login = login;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.score = score;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

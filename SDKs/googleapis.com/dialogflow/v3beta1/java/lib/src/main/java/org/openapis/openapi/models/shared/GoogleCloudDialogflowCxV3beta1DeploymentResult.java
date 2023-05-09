@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1DeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentTestResults")
     public String[] deploymentTestResults;
+
     public GoogleCloudDialogflowCxV3beta1DeploymentResult withDeploymentTestResults(String[] deploymentTestResults) {
         this.deploymentTestResults = deploymentTestResults;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1DeploymentResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiment")
     public String experiment;
+
     public GoogleCloudDialogflowCxV3beta1DeploymentResult withExperiment(String experiment) {
         this.experiment = experiment;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1DeploymentResult(){}
 }

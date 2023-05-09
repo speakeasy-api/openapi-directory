@@ -20,6 +20,7 @@ public class QueryExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AthenaError")
     public AthenaError athenaError;
+
     public QueryExecutionStatus withAthenaError(AthenaError athenaError) {
         this.athenaError = athenaError;
         return this;
@@ -30,6 +31,7 @@ public class QueryExecutionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CompletionDateTime")
     public OffsetDateTime completionDateTime;
+
     public QueryExecutionStatus withCompletionDateTime(OffsetDateTime completionDateTime) {
         this.completionDateTime = completionDateTime;
         return this;
@@ -38,6 +40,7 @@ public class QueryExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public QueryExecutionStateEnum state;
+
     public QueryExecutionStatus withState(QueryExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -46,6 +49,7 @@ public class QueryExecutionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public String stateChangeReason;
+
     public QueryExecutionStatus withStateChangeReason(String stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -56,9 +60,11 @@ public class QueryExecutionStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmissionDateTime")
     public OffsetDateTime submissionDateTime;
+
     public QueryExecutionStatus withSubmissionDateTime(OffsetDateTime submissionDateTime) {
         this.submissionDateTime = submissionDateTime;
         return this;
     }
     
+    public QueryExecutionStatus(){}
 }

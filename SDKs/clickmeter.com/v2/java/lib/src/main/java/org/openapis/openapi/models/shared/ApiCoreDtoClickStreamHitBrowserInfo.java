@@ -12,6 +12,7 @@ public class ApiCoreDtoClickStreamHitBrowserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserType")
     public String browserType;
+
     public ApiCoreDtoClickStreamHitBrowserInfo withBrowserType(String browserType) {
         this.browserType = browserType;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoClickStreamHitBrowserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyId")
     public Long familyId;
+
     public ApiCoreDtoClickStreamHitBrowserInfo withFamilyId(Long familyId) {
         this.familyId = familyId;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoClickStreamHitBrowserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public ApiCoreDtoClickStreamHitBrowserInfo withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -36,6 +39,7 @@ public class ApiCoreDtoClickStreamHitBrowserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCoreDtoClickStreamHitBrowserInfo withId(Long id) {
         this.id = id;
         return this;
@@ -44,9 +48,11 @@ public class ApiCoreDtoClickStreamHitBrowserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCoreDtoClickStreamHitBrowserInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitBrowserInfo(){}
 }

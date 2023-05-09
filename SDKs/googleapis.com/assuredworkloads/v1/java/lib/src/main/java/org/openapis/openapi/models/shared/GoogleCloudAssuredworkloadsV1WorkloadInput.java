@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingAccount")
     public String billingAccount;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withBillingAccount(String billingAccount) {
         this.billingAccount = billingAccount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceRegime")
     public GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum complianceRegime;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withComplianceRegime(GoogleCloudAssuredworkloadsV1WorkloadComplianceRegimeEnum complianceRegime) {
         this.complianceRegime = complianceRegime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStatus")
     public GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus complianceStatus;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withComplianceStatus(GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ekmProvisioningResponse")
     public GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse ekmProvisioningResponse;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withEkmProvisioningResponse(GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse ekmProvisioningResponse) {
         this.ekmProvisioningResponse = ekmProvisioningResponse;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableSovereignControls")
     public Boolean enableSovereignControls;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withEnableSovereignControls(Boolean enableSovereignControls) {
         this.enableSovereignControls = enableSovereignControls;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsSettings")
     public GoogleCloudAssuredworkloadsV1WorkloadKMSSettings kmsSettings;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withKmsSettings(GoogleCloudAssuredworkloadsV1WorkloadKMSSettings kmsSettings) {
         this.kmsSettings = kmsSettings;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partner")
     public GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum partner;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withPartner(GoogleCloudAssuredworkloadsV1WorkloadPartnerEnum partner) {
         this.partner = partner;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedResourcesParent")
     public String provisionedResourcesParent;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withProvisionedResourcesParent(String provisionedResourcesParent) {
         this.provisionedResourcesParent = provisionedResourcesParent;
         return this;
@@ -150,6 +162,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceSettings")
     public GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[] resourceSettings;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withResourceSettings(GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[] resourceSettings) {
         this.resourceSettings = resourceSettings;
         return this;
@@ -161,9 +174,23 @@ public class GoogleCloudAssuredworkloadsV1WorkloadInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saaEnrollmentResponse")
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse saaEnrollmentResponse;
+
     public GoogleCloudAssuredworkloadsV1WorkloadInput withSaaEnrollmentResponse(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse saaEnrollmentResponse) {
         this.saaEnrollmentResponse = saaEnrollmentResponse;
         return this;
     }
     
+    /**
+     * Optional. Indicates whether the e-mail notification for a violation is enabled for a workload. This value will be by default True, and if not present will be considered as true. This should only be updated via updateWorkload call. Any Changes to this field during the createWorkload call will not be honored.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("violationNotificationsEnabled")
+    public Boolean violationNotificationsEnabled;
+
+    public GoogleCloudAssuredworkloadsV1WorkloadInput withViolationNotificationsEnabled(Boolean violationNotificationsEnabled) {
+        this.violationNotificationsEnabled = violationNotificationsEnabled;
+        return this;
+    }
+    
+    public GoogleCloudAssuredworkloadsV1WorkloadInput(){}
 }

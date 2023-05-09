@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserSettingsResponse {
@@ -12,6 +13,7 @@ public class ListUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListUserSettingsResponse {
     
     
     public String contentType;
+
     public ListUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public ListUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserSettingsResponse listUserSettingsResponse;
+
     public ListUserSettingsResponse withListUserSettingsResponse(org.openapis.openapi.models.shared.ListUserSettingsResponse listUserSettingsResponse) {
         this.listUserSettingsResponse = listUserSettingsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public ListUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public ListUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListUserSettingsResponse {
      */
     
     public Object validationException;
+
     public ListUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

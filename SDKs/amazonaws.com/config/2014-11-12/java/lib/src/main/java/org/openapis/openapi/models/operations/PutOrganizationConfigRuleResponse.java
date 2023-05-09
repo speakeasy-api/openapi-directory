@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutOrganizationConfigRuleResponse {
     
     public String contentType;
+
     public PutOrganizationConfigRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object insufficientPermissionsException;
+
     public PutOrganizationConfigRuleResponse withInsufficientPermissionsException(Object insufficientPermissionsException) {
         this.insufficientPermissionsException = insufficientPermissionsException;
         return this;
@@ -29,6 +32,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutOrganizationConfigRuleResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object maxNumberOfOrganizationConfigRulesExceededException;
+
     public PutOrganizationConfigRuleResponse withMaxNumberOfOrganizationConfigRulesExceededException(Object maxNumberOfOrganizationConfigRulesExceededException) {
         this.maxNumberOfOrganizationConfigRulesExceededException = maxNumberOfOrganizationConfigRulesExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public PutOrganizationConfigRuleResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -59,6 +65,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object organizationAccessDeniedException;
+
     public PutOrganizationConfigRuleResponse withOrganizationAccessDeniedException(Object organizationAccessDeniedException) {
         this.organizationAccessDeniedException = organizationAccessDeniedException;
         return this;
@@ -69,6 +76,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object organizationAllFeaturesNotEnabledException;
+
     public PutOrganizationConfigRuleResponse withOrganizationAllFeaturesNotEnabledException(Object organizationAllFeaturesNotEnabledException) {
         this.organizationAllFeaturesNotEnabledException = organizationAllFeaturesNotEnabledException;
         return this;
@@ -79,6 +87,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.PutOrganizationConfigRuleResponse putOrganizationConfigRuleResponse;
+
     public PutOrganizationConfigRuleResponse withPutOrganizationConfigRuleResponse(org.openapis.openapi.models.shared.PutOrganizationConfigRuleResponse putOrganizationConfigRuleResponse) {
         this.putOrganizationConfigRuleResponse = putOrganizationConfigRuleResponse;
         return this;
@@ -86,6 +95,7 @@ public class PutOrganizationConfigRuleResponse {
     
     
     public Integer statusCode;
+
     public PutOrganizationConfigRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutOrganizationConfigRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutOrganizationConfigRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object resourceInUseException;
+
     public PutOrganizationConfigRuleResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -113,9 +125,14 @@ public class PutOrganizationConfigRuleResponse {
      */
     
     public Object validationException;
+
     public PutOrganizationConfigRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutOrganizationConfigRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

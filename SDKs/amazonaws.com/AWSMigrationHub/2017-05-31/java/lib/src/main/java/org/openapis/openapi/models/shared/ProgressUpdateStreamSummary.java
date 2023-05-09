@@ -15,9 +15,11 @@ public class ProgressUpdateStreamSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressUpdateStreamName")
     public String progressUpdateStreamName;
+
     public ProgressUpdateStreamSummary withProgressUpdateStreamName(String progressUpdateStreamName) {
         this.progressUpdateStreamName = progressUpdateStreamName;
         return this;
     }
     
+    public ProgressUpdateStreamSummary(){}
 }

@@ -12,9 +12,11 @@ public class HealthProfileQuestionResourceRelationshipsQuestionDefinitionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public HealthProfileQuestionResourceRelationshipsQuestionDefinitionLinksLinks links;
+
     public HealthProfileQuestionResourceRelationshipsQuestionDefinitionLinks withLinks(HealthProfileQuestionResourceRelationshipsQuestionDefinitionLinksLinks links) {
         this.links = links;
         return this;
     }
     
+    public HealthProfileQuestionResourceRelationshipsQuestionDefinitionLinks(){}
 }

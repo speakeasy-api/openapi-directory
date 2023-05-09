@@ -18,6 +18,7 @@ public class UpdateInvestor403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_code")
     public String errorCode;
+
     public UpdateInvestor403ApplicationJSON withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -28,9 +29,13 @@ public class UpdateInvestor403ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public UpdateInvestor403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UpdateInvestor403ApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

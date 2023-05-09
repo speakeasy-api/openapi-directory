@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGroupResponse {
     
     public String contentType;
+
     public DescribeGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGroupResponse describeGroupResponse;
+
     public DescribeGroupResponse withDescribeGroupResponse(org.openapis.openapi.models.shared.DescribeGroupResponse describeGroupResponse) {
         this.describeGroupResponse = describeGroupResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGroupResponse {
      */
     
     public Object entityNotFoundException;
+
     public DescribeGroupResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeGroupResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DescribeGroupResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeGroupResponse {
      */
     
     public Object organizationStateException;
+
     public DescribeGroupResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeGroupResponse {
     
     
     public Integer statusCode;
+
     public DescribeGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

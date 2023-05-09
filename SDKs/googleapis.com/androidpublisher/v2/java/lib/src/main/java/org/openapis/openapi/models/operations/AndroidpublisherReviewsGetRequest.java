@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherReviewsGetRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherReviewsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherReviewsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherReviewsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherReviewsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherReviewsGetRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherReviewsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherReviewsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherReviewsGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public AndroidpublisherReviewsGetRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -86,6 +95,7 @@ public class AndroidpublisherReviewsGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=translationLanguage")
     public String translationLanguage;
+
     public AndroidpublisherReviewsGetRequest withTranslationLanguage(String translationLanguage) {
         this.translationLanguage = translationLanguage;
         return this;
@@ -96,9 +106,14 @@ public class AndroidpublisherReviewsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherReviewsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherReviewsGetRequest(@JsonProperty("packageName") String packageName, @JsonProperty("reviewId") String reviewId) {
+        this.packageName = packageName;
+        this.reviewId = reviewId;
+  }
 }

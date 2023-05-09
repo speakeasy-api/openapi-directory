@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetThingRuntimeConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetThingRuntimeConfigurationResponse {
      */
     
     public Object badRequestException;
+
     public GetThingRuntimeConfigurationResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetThingRuntimeConfigurationResponse {
     
     
     public String contentType;
+
     public GetThingRuntimeConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetThingRuntimeConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetThingRuntimeConfigurationResponse getThingRuntimeConfigurationResponse;
+
     public GetThingRuntimeConfigurationResponse withGetThingRuntimeConfigurationResponse(org.openapis.openapi.models.shared.GetThingRuntimeConfigurationResponse getThingRuntimeConfigurationResponse) {
         this.getThingRuntimeConfigurationResponse = getThingRuntimeConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetThingRuntimeConfigurationResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetThingRuntimeConfigurationResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -46,6 +51,7 @@ public class GetThingRuntimeConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetThingRuntimeConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetThingRuntimeConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetThingRuntimeConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetThingRuntimeConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

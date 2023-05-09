@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendPipelineExecutionStepSuccessResponse {
     
     public String contentType;
+
     public SendPipelineExecutionStepSuccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendPipelineExecutionStepSuccessResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public SendPipelineExecutionStepSuccessResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -29,6 +32,7 @@ public class SendPipelineExecutionStepSuccessResponse {
      */
     
     public Object resourceNotFound;
+
     public SendPipelineExecutionStepSuccessResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -39,6 +43,7 @@ public class SendPipelineExecutionStepSuccessResponse {
      */
     
     public org.openapis.openapi.models.shared.SendPipelineExecutionStepSuccessResponse sendPipelineExecutionStepSuccessResponse;
+
     public SendPipelineExecutionStepSuccessResponse withSendPipelineExecutionStepSuccessResponse(org.openapis.openapi.models.shared.SendPipelineExecutionStepSuccessResponse sendPipelineExecutionStepSuccessResponse) {
         this.sendPipelineExecutionStepSuccessResponse = sendPipelineExecutionStepSuccessResponse;
         return this;
@@ -46,6 +51,7 @@ public class SendPipelineExecutionStepSuccessResponse {
     
     
     public Integer statusCode;
+
     public SendPipelineExecutionStepSuccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class SendPipelineExecutionStepSuccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendPipelineExecutionStepSuccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendPipelineExecutionStepSuccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Model - The model that describes the cost and pricing for apps
@@ -15,6 +15,7 @@ public class Model {
      */
     
     public ModelBillingPeriodEnum billingPeriod;
+
     public Model withBillingPeriod(ModelBillingPeriodEnum billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -25,6 +26,7 @@ public class Model {
      */
     
     public Long billingPeriodUnit;
+
     public Model withBillingPeriodUnit(Long billingPeriodUnit) {
         this.billingPeriodUnit = billingPeriodUnit;
         return this;
@@ -35,6 +37,7 @@ public class Model {
      */
     
     public Long commission;
+
     public Model withCommission(Long commission) {
         this.commission = commission;
         return this;
@@ -45,6 +48,7 @@ public class Model {
      */
     
     public String currency;
+
     public Model withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -55,6 +59,7 @@ public class Model {
      */
     
     public java.util.Map<String, Object> customData;
+
     public Model withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -65,6 +70,7 @@ public class Model {
      */
     
     public ModelFeePayerEnum feePayer;
+
     public Model withFeePayer(ModelFeePayerEnum feePayer) {
         this.feePayer = feePayer;
         return this;
@@ -75,6 +81,7 @@ public class Model {
      */
     
     public ModelLicenseEnum license;
+
     public Model withLicense(ModelLicenseEnum license) {
         this.license = license;
         return this;
@@ -85,6 +92,7 @@ public class Model {
      */
     
     public String modelId;
+
     public Model withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -95,6 +103,7 @@ public class Model {
      */
     
     public Long price;
+
     public Model withPrice(Long price) {
         this.price = price;
         return this;
@@ -105,6 +114,7 @@ public class Model {
      */
     
     public ModelSubtypeEnum subtype;
+
     public Model withSubtype(ModelSubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -115,6 +125,7 @@ public class Model {
      */
     
     public Long trial;
+
     public Model withTrial(Long trial) {
         this.trial = trial;
         return this;
@@ -125,9 +136,19 @@ public class Model {
      */
     
     public ModelTypeEnum type;
+
     public Model withType(ModelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Model(@JsonProperty("commission") Long commission, @JsonProperty("currency") String currency, @JsonProperty("feePayer") ModelFeePayerEnum feePayer, @JsonProperty("license") ModelLicenseEnum license, @JsonProperty("price") Long price, @JsonProperty("trial") Long trial, @JsonProperty("type") ModelTypeEnum type) {
+        this.commission = commission;
+        this.currency = currency;
+        this.feePayer = feePayer;
+        this.license = license;
+        this.price = price;
+        this.trial = trial;
+        this.type = type;
+  }
 }

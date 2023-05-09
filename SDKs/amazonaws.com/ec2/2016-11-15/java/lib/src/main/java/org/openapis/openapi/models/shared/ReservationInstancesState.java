@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReservationInstancesState {
     
     public Long code;
+
     public ReservationInstancesState withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ReservationInstancesState {
     
     
     public ReservationInstancesStateNameEnum name;
+
     public ReservationInstancesState withName(ReservationInstancesStateNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public ReservationInstancesState(){}
 }

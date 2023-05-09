@@ -18,6 +18,7 @@ public class ItemCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionDescription")
     public String conditionDescription;
+
     public ItemCondition withConditionDescription(String conditionDescription) {
         this.conditionDescription = conditionDescription;
         return this;
@@ -29,6 +30,7 @@ public class ItemCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionId")
     public String conditionId;
+
     public ItemCondition withConditionId(String conditionId) {
         this.conditionId = conditionId;
         return this;
@@ -40,9 +42,11 @@ public class ItemCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public ItemCondition withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public ItemCondition(){}
 }

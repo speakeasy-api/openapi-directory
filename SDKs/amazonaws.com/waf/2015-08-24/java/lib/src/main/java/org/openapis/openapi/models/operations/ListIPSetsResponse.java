@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIPSetsResponse {
     
     public String contentType;
+
     public ListIPSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListIPSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIPSetsResponse listIPSetsResponse;
+
     public ListIPSetsResponse withListIPSetsResponse(org.openapis.openapi.models.shared.ListIPSetsResponse listIPSetsResponse) {
         this.listIPSetsResponse = listIPSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListIPSetsResponse {
     
     
     public Integer statusCode;
+
     public ListIPSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListIPSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIPSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListIPSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListIPSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListIPSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListIPSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListIPSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

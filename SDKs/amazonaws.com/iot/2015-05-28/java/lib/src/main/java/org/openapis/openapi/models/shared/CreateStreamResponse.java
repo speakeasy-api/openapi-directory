@@ -15,6 +15,7 @@ public class CreateStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateStreamResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class CreateStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamArn")
     public String streamArn;
+
     public CreateStreamResponse withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
@@ -31,6 +33,7 @@ public class CreateStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public CreateStreamResponse withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
@@ -39,9 +42,11 @@ public class CreateStreamResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamVersion")
     public Long streamVersion;
+
     public CreateStreamResponse withStreamVersion(Long streamVersion) {
         this.streamVersion = streamVersion;
         return this;
     }
     
+    public CreateStreamResponse(){}
 }

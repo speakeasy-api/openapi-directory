@@ -57,11 +57,9 @@ public class CustomFieldSelectOptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsJsonResponse(contentType, httpRes.statusCode()) {{
             customFieldSelectOptions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class CustomFieldSelectOptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse res = new org.openapis.openapi.models.operations.GetCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse(contentType, httpRes.statusCode()) {{
             customFieldSelectOption = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class CustomFieldSelectOptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonResponse res = new org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonResponse res = new org.openapis.openapi.models.operations.PostCustomFieldsIdSelectOptionsJsonResponse(contentType, httpRes.statusCode()) {{
             customFieldSelectOption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,12 +201,10 @@ public class CustomFieldSelectOptions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse res = new org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse res = new org.openapis.openapi.models.operations.PutCustomFieldsIdSelectOptionsCustomFieldSelectOptionIdJsonResponse(contentType, httpRes.statusCode()) {{
             customFieldSelectOption = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -20,6 +20,7 @@ public class CreateComponentVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateComponentVersionResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class CreateComponentVersionResponse {
     
     @JsonProperty("componentName")
     public String componentName;
+
     public CreateComponentVersionResponse withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -34,6 +36,7 @@ public class CreateComponentVersionResponse {
     
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public CreateComponentVersionResponse withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -43,6 +46,7 @@ public class CreateComponentVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public CreateComponentVersionResponse withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -50,9 +54,16 @@ public class CreateComponentVersionResponse {
     
     @JsonProperty("status")
     public CloudComponentStatus status;
+
     public CreateComponentVersionResponse withStatus(CloudComponentStatus status) {
         this.status = status;
         return this;
     }
     
+    public CreateComponentVersionResponse(@JsonProperty("componentName") String componentName, @JsonProperty("componentVersion") String componentVersion, @JsonProperty("creationTimestamp") OffsetDateTime creationTimestamp, @JsonProperty("status") CloudComponentStatus status) {
+        this.componentName = componentName;
+        this.componentVersion = componentVersion;
+        this.creationTimestamp = creationTimestamp;
+        this.status = status;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetActionNotificationExportResultsRequest {
@@ -12,6 +13,7 @@ public class GetActionNotificationExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action_notification_export_id")
     public Integer actionNotificationExportId;
+
     public GetActionNotificationExportResultsRequest withActionNotificationExportId(Integer actionNotificationExportId) {
         this.actionNotificationExportId = actionNotificationExportId;
         return this;
@@ -22,6 +24,7 @@ public class GetActionNotificationExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetActionNotificationExportResultsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +35,7 @@ public class GetActionNotificationExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetActionNotificationExportResultsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetActionNotificationExportResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
     public Integer userId;
+
     public GetActionNotificationExportResultsRequest withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetActionNotificationExportResultsRequest(@JsonProperty("action_notification_export_id") Integer actionNotificationExportId) {
+        this.actionNotificationExportId = actionNotificationExportId;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DeploymentmanagerCompositeTypesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerCompositeTypesInsertSecurityOption1 option1;
+
     public DeploymentmanagerCompositeTypesInsertSecurity withOption1(DeploymentmanagerCompositeTypesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DeploymentmanagerCompositeTypesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DeploymentmanagerCompositeTypesInsertSecurityOption2 option2;
+
     public DeploymentmanagerCompositeTypesInsertSecurity withOption2(DeploymentmanagerCompositeTypesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DeploymentmanagerCompositeTypesInsertSecurity(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BorrowConfiguration {
     @JsonProperty("AllowEarlyCheckIn")
     public Boolean allowEarlyCheckIn;
+
     public BorrowConfiguration withAllowEarlyCheckIn(Boolean allowEarlyCheckIn) {
         this.allowEarlyCheckIn = allowEarlyCheckIn;
         return this;
@@ -19,9 +20,14 @@ public class BorrowConfiguration {
     
     @JsonProperty("MaxTimeToLiveInMinutes")
     public Long maxTimeToLiveInMinutes;
+
     public BorrowConfiguration withMaxTimeToLiveInMinutes(Long maxTimeToLiveInMinutes) {
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
         return this;
     }
     
+    public BorrowConfiguration(@JsonProperty("AllowEarlyCheckIn") Boolean allowEarlyCheckIn, @JsonProperty("MaxTimeToLiveInMinutes") Long maxTimeToLiveInMinutes) {
+        this.allowEarlyCheckIn = allowEarlyCheckIn;
+        this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
+  }
 }

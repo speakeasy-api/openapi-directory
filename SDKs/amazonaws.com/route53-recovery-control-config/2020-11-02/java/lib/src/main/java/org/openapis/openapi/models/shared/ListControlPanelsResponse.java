@@ -15,6 +15,7 @@ public class ListControlPanelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ControlPanels")
     public ControlPanel[] controlPanels;
+
     public ListControlPanelsResponse withControlPanels(ControlPanel[] controlPanels) {
         this.controlPanels = controlPanels;
         return this;
@@ -23,9 +24,11 @@ public class ListControlPanelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListControlPanelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListControlPanelsResponse(){}
 }

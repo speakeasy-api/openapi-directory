@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     public String cidr;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -19,6 +20,7 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public String description;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public String ipamPoolAllocationId;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withIpamPoolAllocationId(String ipamPoolAllocationId) {
         this.ipamPoolAllocationId = ipamPoolAllocationId;
         return this;
@@ -33,6 +36,7 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public String resourceId;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public String resourceOwner;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withResourceOwner(String resourceOwner) {
         this.resourceOwner = resourceOwner;
         return this;
@@ -47,6 +52,7 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public String resourceRegion;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -54,9 +60,11 @@ public class GetIpamPoolAllocationsResultIpamPoolAllocations {
     
     
     public GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum resourceType;
+
     public GetIpamPoolAllocationsResultIpamPoolAllocations withResourceType(GetIpamPoolAllocationsResultIpamPoolAllocationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetIpamPoolAllocationsResultIpamPoolAllocations(){}
 }

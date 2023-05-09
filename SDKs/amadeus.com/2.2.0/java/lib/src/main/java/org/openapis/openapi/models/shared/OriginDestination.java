@@ -15,6 +15,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeDestinationsCodes")
     public String[] alternativeDestinationsCodes;
+
     public OriginDestination withAlternativeDestinationsCodes(String[] alternativeDestinationsCodes) {
         this.alternativeDestinationsCodes = alternativeDestinationsCodes;
         return this;
@@ -26,6 +27,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternativeOriginsCodes")
     public String[] alternativeOriginsCodes;
+
     public OriginDestination withAlternativeOriginsCodes(String[] alternativeOriginsCodes) {
         this.alternativeOriginsCodes = alternativeOriginsCodes;
         return this;
@@ -34,6 +36,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrivalDateTimeRange")
     public DateTimeRange arrivalDateTimeRange;
+
     public OriginDestination withArrivalDateTimeRange(DateTimeRange arrivalDateTimeRange) {
         this.arrivalDateTimeRange = arrivalDateTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureDateTimeRange")
     public DateTimeRange departureDateTimeRange;
+
     public OriginDestination withDepartureDateTimeRange(DateTimeRange departureDateTimeRange) {
         this.departureDateTimeRange = departureDateTimeRange;
         return this;
@@ -53,6 +57,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationLocationCode")
     public String destinationLocationCode;
+
     public OriginDestination withDestinationLocationCode(String destinationLocationCode) {
         this.destinationLocationCode = destinationLocationCode;
         return this;
@@ -67,6 +72,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationRadius")
     public Double destinationRadius;
+
     public OriginDestination withDestinationRadius(Double destinationRadius) {
         this.destinationRadius = destinationRadius;
         return this;
@@ -78,6 +84,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedConnectionPoints")
     public String[] excludedConnectionPoints;
+
     public OriginDestination withExcludedConnectionPoints(String[] excludedConnectionPoints) {
         this.excludedConnectionPoints = excludedConnectionPoints;
         return this;
@@ -86,6 +93,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public OriginDestination withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedConnectionPoints")
     public String[] includedConnectionPoints;
+
     public OriginDestination withIncludedConnectionPoints(String[] includedConnectionPoints) {
         this.includedConnectionPoints = includedConnectionPoints;
         return this;
@@ -108,6 +117,7 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originLocationCode")
     public String originLocationCode;
+
     public OriginDestination withOriginLocationCode(String originLocationCode) {
         this.originLocationCode = originLocationCode;
         return this;
@@ -122,9 +132,11 @@ public class OriginDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originRadius")
     public Double originRadius;
+
     public OriginDestination withOriginRadius(Double originRadius) {
         this.originRadius = originRadius;
         return this;
     }
     
+    public OriginDestination(){}
 }

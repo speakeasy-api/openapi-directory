@@ -12,6 +12,7 @@ public class DescribePullThroughCacheRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecrRepositoryPrefixes")
     public String[] ecrRepositoryPrefixes;
+
     public DescribePullThroughCacheRulesRequest withEcrRepositoryPrefixes(String[] ecrRepositoryPrefixes) {
         this.ecrRepositoryPrefixes = ecrRepositoryPrefixes;
         return this;
@@ -20,6 +21,7 @@ public class DescribePullThroughCacheRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribePullThroughCacheRulesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribePullThroughCacheRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribePullThroughCacheRulesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribePullThroughCacheRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public DescribePullThroughCacheRulesRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
     }
     
+    public DescribePullThroughCacheRulesRequest(){}
 }

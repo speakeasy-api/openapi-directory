@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeletHookRequest {
@@ -12,9 +13,13 @@ public class DeletHookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public String hookId;
+
     public DeletHookRequest withHookId(String hookId) {
         this.hookId = hookId;
         return this;
     }
     
+    public DeletHookRequest(@JsonProperty("hook_id") String hookId) {
+        this.hookId = hookId;
+  }
 }

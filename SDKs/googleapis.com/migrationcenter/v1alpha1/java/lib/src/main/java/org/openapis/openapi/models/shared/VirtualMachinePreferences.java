@@ -18,6 +18,7 @@ public class VirtualMachinePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitmentPlan")
     public VirtualMachinePreferencesCommitmentPlanEnum commitmentPlan;
+
     public VirtualMachinePreferences withCommitmentPlan(VirtualMachinePreferencesCommitmentPlanEnum commitmentPlan) {
         this.commitmentPlan = commitmentPlan;
         return this;
@@ -29,6 +30,7 @@ public class VirtualMachinePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEnginePreferences")
     public ComputeEnginePreferences computeEnginePreferences;
+
     public VirtualMachinePreferences withComputeEnginePreferences(ComputeEnginePreferences computeEnginePreferences) {
         this.computeEnginePreferences = computeEnginePreferences;
         return this;
@@ -40,6 +42,7 @@ public class VirtualMachinePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionPreferences")
     public RegionPreferences regionPreferences;
+
     public VirtualMachinePreferences withRegionPreferences(RegionPreferences regionPreferences) {
         this.regionPreferences = regionPreferences;
         return this;
@@ -51,9 +54,11 @@ public class VirtualMachinePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizingOptimizationStrategy")
     public VirtualMachinePreferencesSizingOptimizationStrategyEnum sizingOptimizationStrategy;
+
     public VirtualMachinePreferences withSizingOptimizationStrategy(VirtualMachinePreferencesSizingOptimizationStrategyEnum sizingOptimizationStrategy) {
         this.sizingOptimizationStrategy = sizingOptimizationStrategy;
         return this;
     }
     
+    public VirtualMachinePreferences(){}
 }

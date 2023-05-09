@@ -18,9 +18,11 @@ public class PostRequestPasswordResetSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostRequestPasswordResetSample withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PostRequestPasswordResetSample(){}
 }

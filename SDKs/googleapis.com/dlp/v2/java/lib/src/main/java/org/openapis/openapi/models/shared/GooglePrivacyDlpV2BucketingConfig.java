@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2BucketingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public GooglePrivacyDlpV2Bucket[] buckets;
+
     public GooglePrivacyDlpV2BucketingConfig withBuckets(GooglePrivacyDlpV2Bucket[] buckets) {
         this.buckets = buckets;
         return this;
     }
     
+    public GooglePrivacyDlpV2BucketingConfig(){}
 }

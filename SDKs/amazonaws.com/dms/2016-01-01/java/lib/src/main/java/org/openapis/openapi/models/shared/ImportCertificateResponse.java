@@ -15,9 +15,11 @@ public class ImportCertificateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public Certificate certificate;
+
     public ImportCertificateResponse withCertificate(Certificate certificate) {
         this.certificate = certificate;
         return this;
     }
     
+    public ImportCertificateResponse(){}
 }

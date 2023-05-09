@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SlotValueRegexFilter {
     @JsonProperty("pattern")
     public String pattern;
+
     public SlotValueRegexFilter withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public SlotValueRegexFilter(@JsonProperty("pattern") String pattern) {
+        this.pattern = pattern;
+  }
 }

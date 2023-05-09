@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchPublicKeysIdRequestBody {
@@ -12,9 +13,13 @@ public class PatchPublicKeysIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=title")
     public String title;
+
     public PatchPublicKeysIdRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PatchPublicKeysIdRequestBody(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

@@ -15,6 +15,7 @@ public class SecurityPolicyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionPolicyCount")
     public Long encryptionPolicyCount;
+
     public SecurityPolicyStats withEncryptionPolicyCount(Long encryptionPolicyCount) {
         this.encryptionPolicyCount = encryptionPolicyCount;
         return this;
@@ -23,9 +24,11 @@ public class SecurityPolicyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkPolicyCount")
     public Long networkPolicyCount;
+
     public SecurityPolicyStats withNetworkPolicyCount(Long networkPolicyCount) {
         this.networkPolicyCount = networkPolicyCount;
         return this;
     }
     
+    public SecurityPolicyStats(){}
 }

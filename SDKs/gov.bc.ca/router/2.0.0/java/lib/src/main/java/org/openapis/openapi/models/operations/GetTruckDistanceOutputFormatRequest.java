@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
     public Boolean correctSide;
+
     public GetTruckDistanceOutputFormatRequest withCorrectSide(Boolean correctSide) {
         this.correctSide = correctSide;
         return this;
@@ -23,6 +25,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
     public GetTruckDistanceOutputFormatCriteriaEnum criteria;
+
     public GetTruckDistanceOutputFormatRequest withCriteria(GetTruckDistanceOutputFormatCriteriaEnum criteria) {
         this.criteria = criteria;
         return this;
@@ -33,6 +36,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
     public OffsetDateTime departure;
+
     public GetTruckDistanceOutputFormatRequest withDeparture(OffsetDateTime departure) {
         this.departure = departure;
         return this;
@@ -43,6 +47,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
     public String disable;
+
     public GetTruckDistanceOutputFormatRequest withDisable(String disable) {
         this.disable = disable;
         return this;
@@ -53,6 +58,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
     public GetTruckDistanceOutputFormatDistanceUnitEnum distanceUnit;
+
     public GetTruckDistanceOutputFormatRequest withDistanceUnit(GetTruckDistanceOutputFormatDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -63,6 +69,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public GetTruckDistanceOutputFormatOutputFormatEnum outputFormat;
+
     public GetTruckDistanceOutputFormatRequest withOutputFormat(GetTruckDistanceOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -73,6 +80,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetTruckDistanceOutputFormatOutputSrsEnum outputSRS;
+
     public GetTruckDistanceOutputFormatRequest withOutputSRS(GetTruckDistanceOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -83,6 +91,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points")
     public String points;
+
     public GetTruckDistanceOutputFormatRequest withPoints(String points) {
         this.points = points;
         return this;
@@ -93,6 +102,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roundTrip")
     public Boolean roundTrip;
+
     public GetTruckDistanceOutputFormatRequest withRoundTrip(Boolean roundTrip) {
         this.roundTrip = roundTrip;
         return this;
@@ -103,6 +113,7 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
     public String routeDescription;
+
     public GetTruckDistanceOutputFormatRequest withRouteDescription(String routeDescription) {
         this.routeDescription = routeDescription;
         return this;
@@ -113,9 +124,14 @@ public class GetTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=truckRouteMultiplier")
     public Long truckRouteMultiplier;
+
     public GetTruckDistanceOutputFormatRequest withTruckRouteMultiplier(Long truckRouteMultiplier) {
         this.truckRouteMultiplier = truckRouteMultiplier;
         return this;
     }
     
+    public GetTruckDistanceOutputFormatRequest(@JsonProperty("outputFormat") GetTruckDistanceOutputFormatOutputFormatEnum outputFormat, @JsonProperty("points") String points) {
+        this.outputFormat = outputFormat;
+        this.points = points;
+  }
 }

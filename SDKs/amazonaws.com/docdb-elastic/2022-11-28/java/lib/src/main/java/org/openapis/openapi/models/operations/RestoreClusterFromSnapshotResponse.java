@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RestoreClusterFromSnapshotResponse {
@@ -12,6 +13,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object accessDeniedException;
+
     public RestoreClusterFromSnapshotResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object conflictException;
+
     public RestoreClusterFromSnapshotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RestoreClusterFromSnapshotResponse {
     
     
     public String contentType;
+
     public RestoreClusterFromSnapshotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object internalServerException;
+
     public RestoreClusterFromSnapshotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RestoreClusterFromSnapshotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public org.openapis.openapi.models.shared.RestoreClusterFromSnapshotOutput restoreClusterFromSnapshotOutput;
+
     public RestoreClusterFromSnapshotResponse withRestoreClusterFromSnapshotOutput(org.openapis.openapi.models.shared.RestoreClusterFromSnapshotOutput restoreClusterFromSnapshotOutput) {
         this.restoreClusterFromSnapshotOutput = restoreClusterFromSnapshotOutput;
         return this;
@@ -66,6 +73,7 @@ public class RestoreClusterFromSnapshotResponse {
     
     
     public Integer statusCode;
+
     public RestoreClusterFromSnapshotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class RestoreClusterFromSnapshotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RestoreClusterFromSnapshotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public RestoreClusterFromSnapshotResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object throttlingException;
+
     public RestoreClusterFromSnapshotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class RestoreClusterFromSnapshotResponse {
      */
     
     public Object validationException;
+
     public RestoreClusterFromSnapshotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RestoreClusterFromSnapshotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

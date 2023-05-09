@@ -18,6 +18,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelType")
     public ChannelChannelTypeEnum channelType;
+
     public Channel withChannelType(ChannelChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -29,9 +30,11 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Channel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Channel(){}
 }

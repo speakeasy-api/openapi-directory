@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StandbyWorkspace {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public StandbyWorkspace withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -21,6 +22,7 @@ public class StandbyWorkspace {
     
     @JsonProperty("PrimaryWorkspaceId")
     public String primaryWorkspaceId;
+
     public StandbyWorkspace withPrimaryWorkspaceId(String primaryWorkspaceId) {
         this.primaryWorkspaceId = primaryWorkspaceId;
         return this;
@@ -29,6 +31,7 @@ public class StandbyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StandbyWorkspace withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -37,9 +40,14 @@ public class StandbyWorkspace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeEncryptionKey")
     public String volumeEncryptionKey;
+
     public StandbyWorkspace withVolumeEncryptionKey(String volumeEncryptionKey) {
         this.volumeEncryptionKey = volumeEncryptionKey;
         return this;
     }
     
+    public StandbyWorkspace(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("PrimaryWorkspaceId") String primaryWorkspaceId) {
+        this.directoryId = directoryId;
+        this.primaryWorkspaceId = primaryWorkspaceId;
+  }
 }

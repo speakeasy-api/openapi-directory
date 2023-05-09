@@ -12,9 +12,13 @@ public class UpdateEndpointsBatchRequestBody {
      */
     @JsonProperty("EndpointBatchRequest")
     public UpdateEndpointsBatchRequestBodyEndpointBatchRequest endpointBatchRequest;
+
     public UpdateEndpointsBatchRequestBody withEndpointBatchRequest(UpdateEndpointsBatchRequestBodyEndpointBatchRequest endpointBatchRequest) {
         this.endpointBatchRequest = endpointBatchRequest;
         return this;
     }
     
+    public UpdateEndpointsBatchRequestBody(@JsonProperty("EndpointBatchRequest") UpdateEndpointsBatchRequestBodyEndpointBatchRequest endpointBatchRequest) {
+        this.endpointBatchRequest = endpointBatchRequest;
+  }
 }

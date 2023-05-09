@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccessTokensResponse {
@@ -12,6 +13,7 @@ public class ListAccessTokensResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccessTokensResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListAccessTokensResponse {
      */
     
     public Object conflictException;
+
     public ListAccessTokensResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccessTokensResponse {
     
     
     public String contentType;
+
     public ListAccessTokensResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAccessTokensResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccessTokensResponse listAccessTokensResponse;
+
     public ListAccessTokensResponse withListAccessTokensResponse(org.openapis.openapi.models.shared.ListAccessTokensResponse listAccessTokensResponse) {
         this.listAccessTokensResponse = listAccessTokensResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAccessTokensResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccessTokensResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListAccessTokensResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListAccessTokensResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListAccessTokensResponse {
     
     
     public Integer statusCode;
+
     public ListAccessTokensResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListAccessTokensResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccessTokensResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListAccessTokensResponse {
      */
     
     public Object throttlingException;
+
     public ListAccessTokensResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListAccessTokensResponse {
      */
     
     public Object validationException;
+
     public ListAccessTokensResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAccessTokensResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

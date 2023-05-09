@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPublicationsResponse {
@@ -12,6 +13,7 @@ public class GetPublicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetPublicationsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetPublicationsResponse {
     
     
     public String contentType;
+
     public GetPublicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPublicationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPublicationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetPublicationsResponse {
     
     
     public Integer statusCode;
+
     public GetPublicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetPublicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPublicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetPublicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.AccountPublications accountPublications;
+
     public GetPublicationsResponse withAccountPublications(org.openapis.openapi.models.shared.AccountPublications accountPublications) {
         this.accountPublications = accountPublications;
         return this;
     }
     
+    public GetPublicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

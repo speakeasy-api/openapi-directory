@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTemplateActiveVersionResponse {
@@ -12,6 +13,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object badRequestException;
+
     public UpdateTemplateActiveVersionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTemplateActiveVersionResponse {
     
     
     public String contentType;
+
     public UpdateTemplateActiveVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateTemplateActiveVersionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateTemplateActiveVersionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateTemplateActiveVersionResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object notFoundException;
+
     public UpdateTemplateActiveVersionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateTemplateActiveVersionResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateTemplateActiveVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateTemplateActiveVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTemplateActiveVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTemplateActiveVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateTemplateActiveVersionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateTemplateActiveVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTemplateActiveVersionResponse updateTemplateActiveVersionResponse;
+
     public UpdateTemplateActiveVersionResponse withUpdateTemplateActiveVersionResponse(org.openapis.openapi.models.shared.UpdateTemplateActiveVersionResponse updateTemplateActiveVersionResponse) {
         this.updateTemplateActiveVersionResponse = updateTemplateActiveVersionResponse;
         return this;
     }
     
+    public UpdateTemplateActiveVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

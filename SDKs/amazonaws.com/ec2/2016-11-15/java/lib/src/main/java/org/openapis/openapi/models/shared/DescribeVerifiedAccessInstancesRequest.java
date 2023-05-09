@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessInstancesRequest {
     
     public Boolean dryRun;
+
     public DescribeVerifiedAccessInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVerifiedAccessInstancesRequest {
     
     
     public DescribeVerifiedAccessInstancesRequestFilters[] filters;
+
     public DescribeVerifiedAccessInstancesRequest withFilters(DescribeVerifiedAccessInstancesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVerifiedAccessInstancesRequest {
     
     
     public Long maxResults;
+
     public DescribeVerifiedAccessInstancesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVerifiedAccessInstancesRequest {
     
     
     public String nextToken;
+
     public DescribeVerifiedAccessInstancesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVerifiedAccessInstancesRequest {
     
     
     public String[] verifiedAccessInstanceIds;
+
     public DescribeVerifiedAccessInstancesRequest withVerifiedAccessInstanceIds(String[] verifiedAccessInstanceIds) {
         this.verifiedAccessInstanceIds = verifiedAccessInstanceIds;
         return this;
     }
     
+    public DescribeVerifiedAccessInstancesRequest(){}
 }

@@ -15,9 +15,11 @@ public class InstanceAssociationOutputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Location")
     public S3OutputLocation s3Location;
+
     public InstanceAssociationOutputLocation withS3Location(S3OutputLocation s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public InstanceAssociationOutputLocation(){}
 }

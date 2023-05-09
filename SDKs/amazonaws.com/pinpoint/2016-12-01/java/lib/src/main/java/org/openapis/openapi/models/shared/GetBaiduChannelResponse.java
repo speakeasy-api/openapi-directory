@@ -15,9 +15,13 @@ public class GetBaiduChannelResponse {
      */
     @JsonProperty("BaiduChannelResponse")
     public BaiduChannelResponse baiduChannelResponse;
+
     public GetBaiduChannelResponse withBaiduChannelResponse(BaiduChannelResponse baiduChannelResponse) {
         this.baiduChannelResponse = baiduChannelResponse;
         return this;
     }
     
+    public GetBaiduChannelResponse(@JsonProperty("BaiduChannelResponse") BaiduChannelResponse baiduChannelResponse) {
+        this.baiduChannelResponse = baiduChannelResponse;
+  }
 }

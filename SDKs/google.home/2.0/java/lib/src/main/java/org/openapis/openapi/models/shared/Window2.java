@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Window2 {
     @JsonProperty("days")
     public Integer[] days;
+
     public Window2 withDays(Integer[] days) {
         this.days = days;
         return this;
@@ -16,6 +17,7 @@ public class Window2 {
     
     @JsonProperty("length_hours")
     public Double lengthHours;
+
     public Window2 withLengthHours(Double lengthHours) {
         this.lengthHours = lengthHours;
         return this;
@@ -23,9 +25,15 @@ public class Window2 {
     
     @JsonProperty("start_hour")
     public Double startHour;
+
     public Window2 withStartHour(Double startHour) {
         this.startHour = startHour;
         return this;
     }
     
+    public Window2(@JsonProperty("days") Integer[] days, @JsonProperty("length_hours") Double lengthHours, @JsonProperty("start_hour") Double startHour) {
+        this.days = days;
+        this.lengthHours = lengthHours;
+        this.startHour = startHour;
+  }
 }

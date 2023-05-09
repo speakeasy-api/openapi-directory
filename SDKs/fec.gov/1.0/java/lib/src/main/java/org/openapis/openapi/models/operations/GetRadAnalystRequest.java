@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyst_id")
     public Integer[] analystId;
+
     public GetRadAnalystRequest withAnalystId(Integer[] analystId) {
         this.analystId = analystId;
         return this;
@@ -23,6 +25,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=analyst_short_id")
     public Integer[] analystShortId;
+
     public GetRadAnalystRequest withAnalystShortId(Integer[] analystShortId) {
         this.analystShortId = analystShortId;
         return this;
@@ -34,6 +37,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetRadAnalystRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -45,6 +49,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetRadAnalystRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -55,6 +60,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String[] email;
+
     public GetRadAnalystRequest withEmail(String[] email) {
         this.email = email;
         return this;
@@ -65,6 +71,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_assignment_update_date")
     public LocalDate maxAssignmentUpdateDate;
+
     public GetRadAnalystRequest withMaxAssignmentUpdateDate(LocalDate maxAssignmentUpdateDate) {
         this.maxAssignmentUpdateDate = maxAssignmentUpdateDate;
         return this;
@@ -75,6 +82,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_assignment_update_date")
     public LocalDate minAssignmentUpdateDate;
+
     public GetRadAnalystRequest withMinAssignmentUpdateDate(LocalDate minAssignmentUpdateDate) {
         this.minAssignmentUpdateDate = minAssignmentUpdateDate;
         return this;
@@ -85,6 +93,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String[] name;
+
     public GetRadAnalystRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -95,6 +104,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetRadAnalystRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -105,6 +115,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetRadAnalystRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -116,6 +127,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRadAnalystRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -126,6 +138,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetRadAnalystRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -136,6 +149,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetRadAnalystRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -146,6 +160,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetRadAnalystRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -156,6 +171,7 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=telephone_ext")
     public Integer[] telephoneExt;
+
     public GetRadAnalystRequest withTelephoneExt(Integer[] telephoneExt) {
         this.telephoneExt = telephoneExt;
         return this;
@@ -166,9 +182,13 @@ public class GetRadAnalystRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String[] title;
+
     public GetRadAnalystRequest withTitle(String[] title) {
         this.title = title;
         return this;
     }
     
+    public GetRadAnalystRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

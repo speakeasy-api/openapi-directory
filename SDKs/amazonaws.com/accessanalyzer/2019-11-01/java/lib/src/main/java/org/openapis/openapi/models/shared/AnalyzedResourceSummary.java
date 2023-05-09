@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyzedResourceSummary {
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public AnalyzedResourceSummary withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -19,6 +20,7 @@ public class AnalyzedResourceSummary {
     
     @JsonProperty("resourceOwnerAccount")
     public String resourceOwnerAccount;
+
     public AnalyzedResourceSummary withResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -26,9 +28,15 @@ public class AnalyzedResourceSummary {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public AnalyzedResourceSummary withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AnalyzedResourceSummary(@JsonProperty("resourceArn") String resourceArn, @JsonProperty("resourceOwnerAccount") String resourceOwnerAccount, @JsonProperty("resourceType") ResourceTypeEnum resourceType) {
+        this.resourceArn = resourceArn;
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        this.resourceType = resourceType;
+  }
 }

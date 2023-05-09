@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchImportEvidenceToAssessmentControlRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BatchImportEvidenceToAssessmentControlRequestBody requestBody;
+
     public BatchImportEvidenceToAssessmentControlRequest withRequestBody(BatchImportEvidenceToAssessmentControlRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchImportEvidenceToAssessmentControlRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assessmentId")
     public String assessmentId;
+
     public BatchImportEvidenceToAssessmentControlRequest withAssessmentId(String assessmentId) {
         this.assessmentId = assessmentId;
         return this;
@@ -78,6 +88,7 @@ public class BatchImportEvidenceToAssessmentControlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=controlId")
     public String controlId;
+
     public BatchImportEvidenceToAssessmentControlRequest withControlId(String controlId) {
         this.controlId = controlId;
         return this;
@@ -88,9 +99,16 @@ public class BatchImportEvidenceToAssessmentControlRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=controlSetId")
     public String controlSetId;
+
     public BatchImportEvidenceToAssessmentControlRequest withControlSetId(String controlSetId) {
         this.controlSetId = controlSetId;
         return this;
     }
     
+    public BatchImportEvidenceToAssessmentControlRequest(@JsonProperty("RequestBody") BatchImportEvidenceToAssessmentControlRequestBody requestBody, @JsonProperty("assessmentId") String assessmentId, @JsonProperty("controlId") String controlId, @JsonProperty("controlSetId") String controlSetId) {
+        this.requestBody = requestBody;
+        this.assessmentId = assessmentId;
+        this.controlId = controlId;
+        this.controlSetId = controlSetId;
+  }
 }

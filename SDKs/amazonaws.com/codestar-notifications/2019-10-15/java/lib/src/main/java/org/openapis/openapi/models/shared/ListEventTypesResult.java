@@ -15,6 +15,7 @@ public class ListEventTypesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypes")
     public EventTypeSummary[] eventTypes;
+
     public ListEventTypesResult withEventTypes(EventTypeSummary[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -23,9 +24,11 @@ public class ListEventTypesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEventTypesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEventTypesResult(){}
 }

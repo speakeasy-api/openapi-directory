@@ -12,6 +12,7 @@ public class ExternalGroupMembers {
      */
     @JsonProperty("member_email")
     public String memberEmail;
+
     public ExternalGroupMembers withMemberEmail(String memberEmail) {
         this.memberEmail = memberEmail;
         return this;
@@ -22,6 +23,7 @@ public class ExternalGroupMembers {
      */
     @JsonProperty("member_id")
     public Long memberId;
+
     public ExternalGroupMembers withMemberId(Long memberId) {
         this.memberId = memberId;
         return this;
@@ -32,6 +34,7 @@ public class ExternalGroupMembers {
      */
     @JsonProperty("member_login")
     public String memberLogin;
+
     public ExternalGroupMembers withMemberLogin(String memberLogin) {
         this.memberLogin = memberLogin;
         return this;
@@ -42,9 +45,16 @@ public class ExternalGroupMembers {
      */
     @JsonProperty("member_name")
     public String memberName;
+
     public ExternalGroupMembers withMemberName(String memberName) {
         this.memberName = memberName;
         return this;
     }
     
+    public ExternalGroupMembers(@JsonProperty("member_email") String memberEmail, @JsonProperty("member_id") Long memberId, @JsonProperty("member_login") String memberLogin, @JsonProperty("member_name") String memberName) {
+        this.memberEmail = memberEmail;
+        this.memberId = memberId;
+        this.memberLogin = memberLogin;
+        this.memberName = memberName;
+  }
 }

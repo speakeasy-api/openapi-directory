@@ -18,9 +18,11 @@ public class DeviceTierSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceTiers")
     public DeviceTier[] deviceTiers;
+
     public DeviceTierSet withDeviceTiers(DeviceTier[] deviceTiers) {
         this.deviceTiers = deviceTiers;
         return this;
     }
     
+    public DeviceTierSet(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SmartReplyMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowlistCoverage")
     public Float allowlistCoverage;
+
     public GoogleCloudDialogflowV2SmartReplyMetrics withAllowlistCoverage(Float allowlistCoverage) {
         this.allowlistCoverage = allowlistCoverage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2SmartReplyMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationCount")
     public String conversationCount;
+
     public GoogleCloudDialogflowV2SmartReplyMetrics withConversationCount(String conversationCount) {
         this.conversationCount = conversationCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2SmartReplyMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topNMetrics")
     public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics[] topNMetrics;
+
     public GoogleCloudDialogflowV2SmartReplyMetrics withTopNMetrics(GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics[] topNMetrics) {
         this.topNMetrics = topNMetrics;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SmartReplyMetrics(){}
 }

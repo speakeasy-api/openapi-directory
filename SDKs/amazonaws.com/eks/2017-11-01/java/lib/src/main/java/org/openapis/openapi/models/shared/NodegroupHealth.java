@@ -15,9 +15,11 @@ public class NodegroupHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public Issue[] issues;
+
     public NodegroupHealth withIssues(Issue[] issues) {
         this.issues = issues;
         return this;
     }
     
+    public NodegroupHealth(){}
 }

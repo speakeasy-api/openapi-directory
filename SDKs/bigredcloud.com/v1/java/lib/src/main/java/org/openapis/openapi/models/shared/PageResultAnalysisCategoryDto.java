@@ -15,6 +15,7 @@ public class PageResultAnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultAnalysisCategoryDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultAnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public AnalysisCategoryDto[] items;
+
     public PageResultAnalysisCategoryDto withItems(AnalysisCategoryDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultAnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultAnalysisCategoryDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultAnalysisCategoryDto(){}
 }

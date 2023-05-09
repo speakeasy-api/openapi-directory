@@ -18,6 +18,7 @@ public class ListCombinedAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combinedAudiences")
     public CombinedAudience[] combinedAudiences;
+
     public ListCombinedAudiencesResponse withCombinedAudiences(CombinedAudience[] combinedAudiences) {
         this.combinedAudiences = combinedAudiences;
         return this;
@@ -29,9 +30,11 @@ public class ListCombinedAudiencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCombinedAudiencesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCombinedAudiencesResponse(){}
 }

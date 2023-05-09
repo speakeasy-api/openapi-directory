@@ -18,6 +18,7 @@ public class ActingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ActingUser withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class ActingUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public ActingUser withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
     
+    public ActingUser(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProductsResponse {
     
     public String contentType;
+
     public GetProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProductsResponse {
      */
     
     public Object expiredNextTokenException;
+
     public GetProductsResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class GetProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProductsResponse getProductsResponse;
+
     public GetProductsResponse withGetProductsResponse(org.openapis.openapi.models.shared.GetProductsResponse getProductsResponse) {
         this.getProductsResponse = getProductsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetProductsResponse {
      */
     
     public Object internalErrorException;
+
     public GetProductsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetProductsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetProductsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetProductsResponse {
      */
     
     public Object invalidParameterException;
+
     public GetProductsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetProductsResponse {
      */
     
     public Object notFoundException;
+
     public GetProductsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetProductsResponse {
     
     
     public Integer statusCode;
+
     public GetProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

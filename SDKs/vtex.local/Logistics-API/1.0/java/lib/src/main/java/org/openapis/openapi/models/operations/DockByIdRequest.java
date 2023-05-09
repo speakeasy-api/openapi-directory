@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DockByIdRequest {
@@ -12,6 +13,7 @@ public class DockByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DockByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DockByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DockByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class DockByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
     public String dockId;
+
     public DockByIdRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
     }
     
+    public DockByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("dockId") String dockId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.dockId = dockId;
+  }
 }

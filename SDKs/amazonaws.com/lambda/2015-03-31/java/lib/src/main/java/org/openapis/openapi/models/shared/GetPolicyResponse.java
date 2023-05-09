@@ -15,6 +15,7 @@ public class GetPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetPolicyResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,9 +24,11 @@ public class GetPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RevisionId")
     public String revisionId;
+
     public GetPolicyResponse withRevisionId(String revisionId) {
         this.revisionId = revisionId;
         return this;
     }
     
+    public GetPolicyResponse(){}
 }

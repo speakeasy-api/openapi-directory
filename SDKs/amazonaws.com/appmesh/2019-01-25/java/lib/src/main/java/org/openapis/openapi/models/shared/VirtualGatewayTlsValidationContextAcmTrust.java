@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualGatewayTlsValidationContextAcmTrust {
     @JsonProperty("certificateAuthorityArns")
     public String[] certificateAuthorityArns;
+
     public VirtualGatewayTlsValidationContextAcmTrust withCertificateAuthorityArns(String[] certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
         return this;
     }
     
+    public VirtualGatewayTlsValidationContextAcmTrust(@JsonProperty("certificateAuthorityArns") String[] certificateAuthorityArns) {
+        this.certificateAuthorityArns = certificateAuthorityArns;
+  }
 }

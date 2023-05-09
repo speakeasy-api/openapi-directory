@@ -15,6 +15,7 @@ public class TimelineListResponse {
      */
     
     public TimelineItem[] items;
+
     public TimelineListResponse withItems(TimelineItem[] items) {
         this.items = items;
         return this;
@@ -25,6 +26,7 @@ public class TimelineListResponse {
      */
     
     public String kind;
+
     public TimelineListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -35,9 +37,11 @@ public class TimelineListResponse {
      */
     
     public String nextPageToken;
+
     public TimelineListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public TimelineListResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverageScore")
     public Float coverageScore;
+
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage withCoverageScore(Float coverageScore) {
         this.coverageScore = coverageScore;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeGroup")
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroup routeGroup;
+
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage withRouteGroup(GoogleCloudDialogflowCxV3beta1TransitionRouteGroup routeGroup) {
         this.routeGroup = routeGroup;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitions")
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition[] transitions;
+
     public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage withTransitions(GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverageTransition[] transitions) {
         this.transitions = transitions;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TransitionRouteGroupCoverageCoverage(){}
 }

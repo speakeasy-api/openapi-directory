@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayVideo360AdvertiserLinkProposals")
     public GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal[] displayVideo360AdvertiserLinkProposals;
+
     public GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse withDisplayVideo360AdvertiserLinkProposals(GoogleAnalyticsAdminV1alphaDisplayVideo360AdvertiserLinkProposal[] displayVideo360AdvertiserLinkProposals) {
         this.displayVideo360AdvertiserLinkProposals = displayVideo360AdvertiserLinkProposals;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListDisplayVideo360AdvertiserLinkProposalsResponse(){}
 }

@@ -20,6 +20,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UnlockRuleResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public UnlockRuleResponse withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -36,6 +38,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockConfiguration")
     public LockConfiguration lockConfiguration;
+
     public UnlockRuleResponse withLockConfiguration(LockConfiguration lockConfiguration) {
         this.lockConfiguration = lockConfiguration;
         return this;
@@ -46,6 +49,7 @@ public class UnlockRuleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LockEndTime")
     public OffsetDateTime lockEndTime;
+
     public UnlockRuleResponse withLockEndTime(OffsetDateTime lockEndTime) {
         this.lockEndTime = lockEndTime;
         return this;
@@ -54,6 +58,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockState")
     public LockStateEnum lockState;
+
     public UnlockRuleResponse withLockState(LockStateEnum lockState) {
         this.lockState = lockState;
         return this;
@@ -62,6 +67,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public ResourceTag[] resourceTags;
+
     public UnlockRuleResponse withResourceTags(ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -70,6 +76,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public UnlockRuleResponse withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -81,6 +88,7 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public UnlockRuleResponse withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -89,9 +97,11 @@ public class UnlockRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public RuleStatusEnum status;
+
     public UnlockRuleResponse withStatus(RuleStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UnlockRuleResponse(){}
 }

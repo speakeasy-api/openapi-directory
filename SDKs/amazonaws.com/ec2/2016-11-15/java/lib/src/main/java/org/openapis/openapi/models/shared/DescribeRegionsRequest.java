@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRegionsRequest {
     
     public Boolean allRegions;
+
     public DescribeRegionsRequest withAllRegions(Boolean allRegions) {
         this.allRegions = allRegions;
         return this;
@@ -16,6 +17,7 @@ public class DescribeRegionsRequest {
     
     
     public Boolean dryRun;
+
     public DescribeRegionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DescribeRegionsRequest {
     
     
     public DescribeRegionsRequestFilters[] filters;
+
     public DescribeRegionsRequest withFilters(DescribeRegionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -30,9 +33,11 @@ public class DescribeRegionsRequest {
     
     
     public String[] regionNames;
+
     public DescribeRegionsRequest withRegionNames(String[] regionNames) {
         this.regionNames = regionNames;
         return this;
     }
     
+    public DescribeRegionsRequest(){}
 }

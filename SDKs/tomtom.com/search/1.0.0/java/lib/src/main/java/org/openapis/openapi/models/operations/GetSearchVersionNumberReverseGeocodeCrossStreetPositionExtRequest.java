@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=heading")
     public Float heading;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withHeading(Float heading) {
         this.heading = heading;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -42,6 +46,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=position")
     public String position;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withPosition(String position) {
         this.position = position;
         return this;
@@ -62,6 +68,7 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -69,9 +76,13 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
     
     /**
      * If the "spatialKeys" flag is set, the response will also contain a proprietary geospatial keys for a specified location.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spatialKeys")
+    @Deprecated
     public Boolean spatialKeys;
+
+    @Deprecated
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withSpatialKeys(Boolean spatialKeys) {
         this.spatialKeys = spatialKeys;
         return this;
@@ -82,9 +93,15 @@ public class GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public GetSearchVersionNumberReverseGeocodeCrossStreetPositionExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("position") String position, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.position = position;
+        this.versionNumber = versionNumber;
+  }
 }

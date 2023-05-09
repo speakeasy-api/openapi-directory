@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InAppMessageHeaderConfig {
     @JsonProperty("Alignment")
     public AlignmentEnum alignment;
+
     public InAppMessageHeaderConfig withAlignment(AlignmentEnum alignment) {
         this.alignment = alignment;
         return this;
@@ -19,6 +20,7 @@ public class InAppMessageHeaderConfig {
     
     @JsonProperty("Header")
     public String header;
+
     public InAppMessageHeaderConfig withHeader(String header) {
         this.header = header;
         return this;
@@ -26,9 +28,15 @@ public class InAppMessageHeaderConfig {
     
     @JsonProperty("TextColor")
     public String textColor;
+
     public InAppMessageHeaderConfig withTextColor(String textColor) {
         this.textColor = textColor;
         return this;
     }
     
+    public InAppMessageHeaderConfig(@JsonProperty("Alignment") AlignmentEnum alignment, @JsonProperty("Header") String header, @JsonProperty("TextColor") String textColor) {
+        this.alignment = alignment;
+        this.header = header;
+        this.textColor = textColor;
+  }
 }

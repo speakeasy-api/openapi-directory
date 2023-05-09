@@ -20,6 +20,7 @@ public class LineString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinates")
     public Double[][] coordinates;
+
     public LineString withCoordinates(Double[][] coordinates) {
         this.coordinates = coordinates;
         return this;
@@ -28,9 +29,11 @@ public class LineString {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public LineString withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LineString(){}
 }

@@ -15,6 +15,7 @@ public class ActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computerAttributes")
     public ActiveDirectoryComputerAttribute[] computerAttributes;
+
     public ActiveDirectoryConfiguration withComputerAttributes(ActiveDirectoryComputerAttribute[] computerAttributes) {
         this.computerAttributes = computerAttributes;
         return this;
@@ -23,6 +24,7 @@ public class ActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("directoryId")
     public String directoryId;
+
     public ActiveDirectoryConfiguration withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -31,9 +33,11 @@ public class ActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationalUnitDistinguishedName")
     public String organizationalUnitDistinguishedName;
+
     public ActiveDirectoryConfiguration withOrganizationalUnitDistinguishedName(String organizationalUnitDistinguishedName) {
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
         return this;
     }
     
+    public ActiveDirectoryConfiguration(){}
 }

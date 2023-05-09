@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("phoneno")
     public String phoneno;
+
     public CripcRequestBodyCertificateParameters withPhoneno(String phoneno) {
         this.phoneno = phoneno;
         return this;
@@ -22,9 +23,14 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("policyno")
     public String policyno;
+
     public CripcRequestBodyCertificateParameters withPolicyno(String policyno) {
         this.policyno = policyno;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("phoneno") String phoneno, @JsonProperty("policyno") String policyno) {
+        this.phoneno = phoneno;
+        this.policyno = policyno;
+  }
 }

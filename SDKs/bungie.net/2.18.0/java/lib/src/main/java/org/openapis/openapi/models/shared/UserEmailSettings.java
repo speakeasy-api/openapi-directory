@@ -15,6 +15,7 @@ public class UserEmailSettings {
      */
     
     public java.util.Map<String, UserEmailOptInDefinition> optInDefinitions;
+
     public UserEmailSettings withOptInDefinitions(java.util.Map<String, UserEmailOptInDefinition> optInDefinitions) {
         this.optInDefinitions = optInDefinitions;
         return this;
@@ -25,6 +26,7 @@ public class UserEmailSettings {
      */
     
     public java.util.Map<String, UserEmailSubscriptionDefinition> subscriptionDefinitions;
+
     public UserEmailSettings withSubscriptionDefinitions(java.util.Map<String, UserEmailSubscriptionDefinition> subscriptionDefinitions) {
         this.subscriptionDefinitions = subscriptionDefinitions;
         return this;
@@ -35,9 +37,11 @@ public class UserEmailSettings {
      */
     
     public java.util.Map<String, UserEmailViewDefinition> views;
+
     public UserEmailSettings withViews(java.util.Map<String, UserEmailViewDefinition> views) {
         this.views = views;
         return this;
     }
     
+    public UserEmailSettings(){}
 }

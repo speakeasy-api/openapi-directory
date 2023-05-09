@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthTokenRequestBody {
@@ -12,6 +13,7 @@ public class PostAuthTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=application")
     public String application;
+
     public PostAuthTokenRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -22,6 +24,7 @@ public class PostAuthTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=grant_type")
     public String grantType;
+
     public PostAuthTokenRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -32,6 +35,7 @@ public class PostAuthTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public PostAuthTokenRequestBody withPassword(String password) {
         this.password = password;
         return this;
@@ -42,6 +46,7 @@ public class PostAuthTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=scope")
     public String scope;
+
     public PostAuthTokenRequestBody withScope(String scope) {
         this.scope = scope;
         return this;
@@ -52,9 +57,15 @@ public class PostAuthTokenRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=username")
     public String username;
+
     public PostAuthTokenRequestBody withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostAuthTokenRequestBody(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("application") String application) {
+        this.username = username;
+        this.password = password;
+        this.application = application;
+  }
 }

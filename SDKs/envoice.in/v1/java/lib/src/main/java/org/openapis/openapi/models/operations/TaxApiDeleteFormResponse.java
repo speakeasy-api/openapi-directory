@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaxApiDeleteFormResponse {
     
     public byte[] body;
+
     public TaxApiDeleteFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TaxApiDeleteFormResponse {
     
     
     public String contentType;
+
     public TaxApiDeleteFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TaxApiDeleteFormResponse {
     
     
     public Integer statusCode;
+
     public TaxApiDeleteFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TaxApiDeleteFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaxApiDeleteFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TaxApiDeleteFormResponse {
      */
     
     public Integer taxApiDeleteForm200ApplicationJSONInt32Integer;
+
     public TaxApiDeleteFormResponse withTaxApiDeleteForm200ApplicationJSONInt32Integer(Integer taxApiDeleteForm200ApplicationJSONInt32Integer) {
         this.taxApiDeleteForm200ApplicationJSONInt32Integer = taxApiDeleteForm200ApplicationJSONInt32Integer;
         return this;
@@ -50,9 +56,14 @@ public class TaxApiDeleteFormResponse {
      */
     
     public Integer taxApiDeleteForm200TextJSONInt32Integer;
+
     public TaxApiDeleteFormResponse withTaxApiDeleteForm200TextJSONInt32Integer(Integer taxApiDeleteForm200TextJSONInt32Integer) {
         this.taxApiDeleteForm200TextJSONInt32Integer = taxApiDeleteForm200TextJSONInt32Integer;
         return this;
     }
     
+    public TaxApiDeleteFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetinventorywithdispatchedreservationsRequest {
@@ -12,6 +13,7 @@ public class GetinventorywithdispatchedreservationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetinventorywithdispatchedreservationsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetinventorywithdispatchedreservationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetinventorywithdispatchedreservationsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetinventorywithdispatchedreservationsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public GetinventorywithdispatchedreservationsRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -36,9 +40,16 @@ public class GetinventorywithdispatchedreservationsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=warehouseId")
     public String warehouseId;
+
     public GetinventorywithdispatchedreservationsRequest withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public GetinventorywithdispatchedreservationsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("itemId") String itemId, @JsonProperty("warehouseId") String warehouseId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.itemId = itemId;
+        this.warehouseId = warehouseId;
+  }
 }

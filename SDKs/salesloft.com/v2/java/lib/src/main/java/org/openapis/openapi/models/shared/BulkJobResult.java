@@ -12,6 +12,7 @@ public class BulkJobResult {
      */
     
     public String error;
+
     public BulkJobResult withError(String error) {
         this.error = error;
         return this;
@@ -22,6 +23,7 @@ public class BulkJobResult {
      */
     
     public Long id;
+
     public BulkJobResult withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class BulkJobResult {
      */
     
     public java.util.Map<String, Object> record;
+
     public BulkJobResult withRecord(java.util.Map<String, Object> record) {
         this.record = record;
         return this;
@@ -42,6 +45,7 @@ public class BulkJobResult {
      */
     
     public java.util.Map<String, Object> resource;
+
     public BulkJobResult withResource(java.util.Map<String, Object> resource) {
         this.resource = resource;
         return this;
@@ -52,9 +56,11 @@ public class BulkJobResult {
      */
     
     public String status;
+
     public BulkJobResult withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BulkJobResult(){}
 }

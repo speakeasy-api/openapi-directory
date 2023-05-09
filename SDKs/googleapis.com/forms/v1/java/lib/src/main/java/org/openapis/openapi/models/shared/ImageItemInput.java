@@ -18,9 +18,11 @@ public class ImageItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ImageInput image;
+
     public ImageItemInput withImage(ImageInput image) {
         this.image = image;
         return this;
     }
     
+    public ImageItemInput(){}
 }

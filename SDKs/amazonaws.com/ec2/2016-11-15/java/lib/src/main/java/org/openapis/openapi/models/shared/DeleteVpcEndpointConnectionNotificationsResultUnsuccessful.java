@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteVpcEndpointConnectionNotificationsResultUnsuccessful {
     
     public DeleteVpcEndpointConnectionNotificationsResultUnsuccessfulError error;
+
     public DeleteVpcEndpointConnectionNotificationsResultUnsuccessful withError(DeleteVpcEndpointConnectionNotificationsResultUnsuccessfulError error) {
         this.error = error;
         return this;
@@ -19,9 +20,11 @@ public class DeleteVpcEndpointConnectionNotificationsResultUnsuccessful {
     
     
     public String resourceId;
+
     public DeleteVpcEndpointConnectionNotificationsResultUnsuccessful withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public DeleteVpcEndpointConnectionNotificationsResultUnsuccessful(){}
 }

@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupModelCountsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AnalyticsCrashGroupModelCountsDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsCrashGroupModelCountsDefaultApplicationJSONError withCode(AnalyticsCrashGroupModelCountsDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashGroupModelCountsDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalyticsCrashGroupModelCountsDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsCrashGroupModelCountsDefaultApplicationJSONError(){}
 }

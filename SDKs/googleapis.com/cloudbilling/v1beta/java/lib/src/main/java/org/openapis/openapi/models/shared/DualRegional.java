@@ -18,9 +18,11 @@ public class DualRegional {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DualRegional withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DualRegional(){}
 }

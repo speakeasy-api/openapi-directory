@@ -18,9 +18,11 @@ public class PhysicalPlatformDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public PhysicalPlatformDetails withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public PhysicalPlatformDetails(){}
 }

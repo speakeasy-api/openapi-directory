@@ -15,6 +15,7 @@ public class GetPersonalizedRankingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalizedRanking")
     public PredictedItem[] personalizedRanking;
+
     public GetPersonalizedRankingResponse withPersonalizedRanking(PredictedItem[] personalizedRanking) {
         this.personalizedRanking = personalizedRanking;
         return this;
@@ -23,9 +24,11 @@ public class GetPersonalizedRankingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public GetPersonalizedRankingResponse withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public GetPersonalizedRankingResponse(){}
 }

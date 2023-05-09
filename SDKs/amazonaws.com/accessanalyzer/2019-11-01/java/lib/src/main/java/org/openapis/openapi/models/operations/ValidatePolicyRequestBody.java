@@ -15,6 +15,7 @@ public class ValidatePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public ValidatePolicyRequestBodyLocaleEnum locale;
+
     public ValidatePolicyRequestBody withLocale(ValidatePolicyRequestBodyLocaleEnum locale) {
         this.locale = locale;
         return this;
@@ -25,6 +26,7 @@ public class ValidatePolicyRequestBody {
      */
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public ValidatePolicyRequestBody withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -35,6 +37,7 @@ public class ValidatePolicyRequestBody {
      */
     @JsonProperty("policyType")
     public ValidatePolicyRequestBodyPolicyTypeEnum policyType;
+
     public ValidatePolicyRequestBody withPolicyType(ValidatePolicyRequestBodyPolicyTypeEnum policyType) {
         this.policyType = policyType;
         return this;
@@ -46,9 +49,14 @@ public class ValidatePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validatePolicyResourceType")
     public ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum validatePolicyResourceType;
+
     public ValidatePolicyRequestBody withValidatePolicyResourceType(ValidatePolicyRequestBodyValidatePolicyResourceTypeEnum validatePolicyResourceType) {
         this.validatePolicyResourceType = validatePolicyResourceType;
         return this;
     }
     
+    public ValidatePolicyRequestBody(@JsonProperty("policyDocument") String policyDocument, @JsonProperty("policyType") ValidatePolicyRequestBodyPolicyTypeEnum policyType) {
+        this.policyDocument = policyDocument;
+        this.policyType = policyType;
+  }
 }

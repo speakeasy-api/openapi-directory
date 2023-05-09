@@ -15,6 +15,7 @@ public class ExecutionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValues")
     public String[] defaultValues;
+
     public ExecutionParameter withDefaultValues(String[] defaultValues) {
         this.defaultValues = defaultValues;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ExecutionParameter withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ExecutionParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ExecutionParameter withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ExecutionParameter(){}
 }

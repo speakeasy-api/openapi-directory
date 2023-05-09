@@ -15,6 +15,7 @@ public class UpdateConfiguredTableAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateConfiguredTableAssociationRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateConfiguredTableAssociationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateConfiguredTableAssociationRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateConfiguredTableAssociationRequestBody(){}
 }

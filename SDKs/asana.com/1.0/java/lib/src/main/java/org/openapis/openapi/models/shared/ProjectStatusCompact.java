@@ -19,6 +19,7 @@ public class ProjectStatusCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectStatusCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -30,6 +31,7 @@ public class ProjectStatusCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectStatusCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -41,9 +43,11 @@ public class ProjectStatusCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectStatusCompact withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectStatusCompact(){}
 }

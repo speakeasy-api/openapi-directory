@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiscoverSchemaForSourceResponse {
     
     public String contentType;
+
     public DiscoverSchemaForSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiscoverSchemaForSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public DiscoverSchemaForSourceResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class DiscoverSchemaForSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public DiscoverSchemaForSourceResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class DiscoverSchemaForSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.SourceDiscoverSchemaRead sourceDiscoverSchemaRead;
+
     public DiscoverSchemaForSourceResponse withSourceDiscoverSchemaRead(org.openapis.openapi.models.shared.SourceDiscoverSchemaRead sourceDiscoverSchemaRead) {
         this.sourceDiscoverSchemaRead = sourceDiscoverSchemaRead;
         return this;
@@ -46,6 +51,7 @@ public class DiscoverSchemaForSourceResponse {
     
     
     public Integer statusCode;
+
     public DiscoverSchemaForSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DiscoverSchemaForSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiscoverSchemaForSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiscoverSchemaForSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

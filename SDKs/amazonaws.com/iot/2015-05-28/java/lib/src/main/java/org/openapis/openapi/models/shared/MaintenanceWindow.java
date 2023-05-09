@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MaintenanceWindow {
     @JsonProperty("durationInMinutes")
     public Long durationInMinutes;
+
     public MaintenanceWindow withDurationInMinutes(Long durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
         return this;
@@ -19,9 +20,14 @@ public class MaintenanceWindow {
     
     @JsonProperty("startTime")
     public String startTime;
+
     public MaintenanceWindow withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public MaintenanceWindow(@JsonProperty("durationInMinutes") Long durationInMinutes, @JsonProperty("startTime") String startTime) {
+        this.durationInMinutes = durationInMinutes;
+        this.startTime = startTime;
+  }
 }

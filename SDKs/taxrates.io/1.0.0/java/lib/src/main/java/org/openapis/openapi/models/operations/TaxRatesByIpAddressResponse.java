@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TaxRatesByIpAddressResponse {
     
     public String contentType;
+
     public TaxRatesByIpAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TaxRatesByIpAddressResponse {
     
     
     public Integer statusCode;
+
     public TaxRatesByIpAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TaxRatesByIpAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TaxRatesByIpAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TaxRatesByIpAddressResponse {
      */
     
     public TaxRatesByIpAddress200ApplicationJSON[] taxRatesByIpAddress200ApplicationJSONObjects;
+
     public TaxRatesByIpAddressResponse withTaxRatesByIpAddress200ApplicationJSONObjects(TaxRatesByIpAddress200ApplicationJSON[] taxRatesByIpAddress200ApplicationJSONObjects) {
         this.taxRatesByIpAddress200ApplicationJSONObjects = taxRatesByIpAddress200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class TaxRatesByIpAddressResponse {
      */
     
     public TaxRatesByIpAddress500ApplicationJSON taxRatesByIpAddress500ApplicationJSONObject;
+
     public TaxRatesByIpAddressResponse withTaxRatesByIpAddress500ApplicationJSONObject(TaxRatesByIpAddress500ApplicationJSON taxRatesByIpAddress500ApplicationJSONObject) {
         this.taxRatesByIpAddress500ApplicationJSONObject = taxRatesByIpAddress500ApplicationJSONObject;
         return this;
     }
     
+    public TaxRatesByIpAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

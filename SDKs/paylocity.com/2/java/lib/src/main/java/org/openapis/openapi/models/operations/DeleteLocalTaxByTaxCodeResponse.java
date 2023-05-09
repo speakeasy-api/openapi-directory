@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLocalTaxByTaxCodeResponse {
     
     public String contentType;
+
     public DeleteLocalTaxByTaxCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteLocalTaxByTaxCodeResponse {
     
     
     public Integer statusCode;
+
     public DeleteLocalTaxByTaxCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteLocalTaxByTaxCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLocalTaxByTaxCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DeleteLocalTaxByTaxCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public DeleteLocalTaxByTaxCodeResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public DeleteLocalTaxByTaxCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

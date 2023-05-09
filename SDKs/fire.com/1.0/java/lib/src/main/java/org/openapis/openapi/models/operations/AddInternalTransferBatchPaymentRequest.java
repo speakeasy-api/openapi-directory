@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddInternalTransferBatchPaymentRequest {
@@ -12,6 +13,7 @@ public class AddInternalTransferBatchPaymentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AddInternalTransferBatchPaymentBatchItemInternalTransfer requestBody;
+
     public AddInternalTransferBatchPaymentRequest withRequestBody(AddInternalTransferBatchPaymentBatchItemInternalTransfer requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class AddInternalTransferBatchPaymentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
     public String batchUuid;
+
     public AddInternalTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
     }
     
+    public AddInternalTransferBatchPaymentRequest(@JsonProperty("RequestBody") AddInternalTransferBatchPaymentBatchItemInternalTransfer requestBody, @JsonProperty("batchUuid") String batchUuid) {
+        this.requestBody = requestBody;
+        this.batchUuid = batchUuid;
+  }
 }

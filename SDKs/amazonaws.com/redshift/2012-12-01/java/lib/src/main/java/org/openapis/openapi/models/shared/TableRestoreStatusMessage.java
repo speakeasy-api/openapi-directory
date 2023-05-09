@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TableRestoreStatusMessage {
     
     public String marker;
+
     public TableRestoreStatusMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class TableRestoreStatusMessage {
     
     
     public TableRestoreStatusList[] tableRestoreStatusDetails;
+
     public TableRestoreStatusMessage withTableRestoreStatusDetails(TableRestoreStatusList[] tableRestoreStatusDetails) {
         this.tableRestoreStatusDetails = tableRestoreStatusDetails;
         return this;
     }
     
+    public TableRestoreStatusMessage(){}
 }

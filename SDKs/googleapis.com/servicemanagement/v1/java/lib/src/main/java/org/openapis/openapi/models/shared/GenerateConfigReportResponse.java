@@ -18,6 +18,7 @@ public class GenerateConfigReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeReports")
     public ChangeReport[] changeReports;
+
     public GenerateConfigReportResponse withChangeReports(ChangeReport[] changeReports) {
         this.changeReports = changeReports;
         return this;
@@ -29,6 +30,7 @@ public class GenerateConfigReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diagnostics")
     public Diagnostic[] diagnostics;
+
     public GenerateConfigReportResponse withDiagnostics(Diagnostic[] diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -40,6 +42,7 @@ public class GenerateConfigReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GenerateConfigReportResponse withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class GenerateConfigReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GenerateConfigReportResponse withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GenerateConfigReportResponse(){}
 }

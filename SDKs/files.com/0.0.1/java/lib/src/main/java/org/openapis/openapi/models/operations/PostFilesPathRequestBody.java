@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=action")
     public String action;
+
     public PostFilesPathRequestBody withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +25,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=etags[etag]")
     public String[] etagsEtag;
+
     public PostFilesPathRequestBody withEtagsEtag(String[] etagsEtag) {
         this.etagsEtag = etagsEtag;
         return this;
@@ -33,6 +36,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=etags[part]")
     public Integer[] etagsPart;
+
     public PostFilesPathRequestBody withEtagsPart(Integer[] etagsPart) {
         this.etagsPart = etagsPart;
         return this;
@@ -43,6 +47,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=length")
     public Integer length;
+
     public PostFilesPathRequestBody withLength(Integer length) {
         this.length = length;
         return this;
@@ -53,6 +58,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=mkdir_parents")
     public Boolean mkdirParents;
+
     public PostFilesPathRequestBody withMkdirParents(Boolean mkdirParents) {
         this.mkdirParents = mkdirParents;
         return this;
@@ -63,6 +69,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=part")
     public Integer part;
+
     public PostFilesPathRequestBody withPart(Integer part) {
         this.part = part;
         return this;
@@ -73,6 +80,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=parts")
     public Integer parts;
+
     public PostFilesPathRequestBody withParts(Integer parts) {
         this.parts = parts;
         return this;
@@ -83,6 +91,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=provided_mtime")
     public OffsetDateTime providedMtime;
+
     public PostFilesPathRequestBody withProvidedMtime(OffsetDateTime providedMtime) {
         this.providedMtime = providedMtime;
         return this;
@@ -90,6 +99,7 @@ public class PostFilesPathRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=ref")
     public String ref;
+
     public PostFilesPathRequestBody withRef(String ref) {
         this.ref = ref;
         return this;
@@ -100,6 +110,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=restart")
     public Integer restart;
+
     public PostFilesPathRequestBody withRestart(Integer restart) {
         this.restart = restart;
         return this;
@@ -110,6 +121,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=size")
     public Integer size;
+
     public PostFilesPathRequestBody withSize(Integer size) {
         this.size = size;
         return this;
@@ -120,6 +132,7 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=structure")
     public String structure;
+
     public PostFilesPathRequestBody withStructure(String structure) {
         this.structure = structure;
         return this;
@@ -130,9 +143,14 @@ public class PostFilesPathRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=with_rename")
     public Boolean withRename;
+
     public PostFilesPathRequestBody withWithRename(Boolean withRename) {
         this.withRename = withRename;
         return this;
     }
     
+    public PostFilesPathRequestBody(@JsonProperty("etags[etag]") String[] etagsEtag, @JsonProperty("etags[part]") Integer[] etagsPart) {
+        this.etagsEtag = etagsEtag;
+        this.etagsPart = etagsPart;
+  }
 }

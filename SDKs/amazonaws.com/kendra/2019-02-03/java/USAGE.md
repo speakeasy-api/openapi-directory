@@ -3,59 +3,55 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceRequest;
 import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceResponse;
+import org.openapis.openapi.models.operations.AssociateEntitiesToExperienceXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AssociateEntitiesToExperienceRequest;
 import org.openapis.openapi.models.shared.EntityConfiguration;
 import org.openapis.openapi.models.shared.EntityTypeEnum;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AssociateEntitiesToExperienceRequest req = new AssociateEntitiesToExperienceRequest() {{
-                associateEntitiesToExperienceRequest = new AssociateEntitiesToExperienceRequest() {{
-                    entityList = new org.openapis.openapi.models.shared.EntityConfiguration[]{{
-                        add(new EntityConfiguration() {{
-                            entityId = "provident";
-                            entityType = "GROUP";
-                        }}),
-                        add(new EntityConfiguration() {{
-                            entityId = "quibusdam";
-                            entityType = "GROUP";
-                        }}),
-                        add(new EntityConfiguration() {{
-                            entityId = "nulla";
-                            entityType = "GROUP";
-                        }}),
-                    }};
-                    id = "illum";
-                    indexId = "vel";
-                }};
-                xAmzAlgorithm = "error";
-                xAmzContentSha256 = "deserunt";
+            AssociateEntitiesToExperienceRequest req = new AssociateEntitiesToExperienceRequest(                new AssociateEntitiesToExperienceRequest(                new org.openapis.openapi.models.shared.EntityConfiguration[]{{
+                                                add(new EntityConfiguration("unde", EntityTypeEnum.GROUP) {{
+                                                    entityId = "distinctio";
+                                                    entityType = EntityTypeEnum.GROUP;
+                                                }}),
+                                                add(new EntityConfiguration("vel", EntityTypeEnum.GROUP) {{
+                                                    entityId = "corrupti";
+                                                    entityType = EntityTypeEnum.GROUP;
+                                                }}),
+                                                add(new EntityConfiguration("iure", EntityTypeEnum.USER) {{
+                                                    entityId = "deserunt";
+                                                    entityType = EntityTypeEnum.USER;
+                                                }}),
+                                            }}, "debitis", "ipsa");, AssociateEntitiesToExperienceXAmzTargetEnum.AWS_KENDRA_FRONTEND_SERVICE_ASSOCIATE_ENTITIES_TO_EXPERIENCE) {{
+                xAmzAlgorithm = "delectus";
+                xAmzContentSha256 = "tempora";
                 xAmzCredential = "suscipit";
-                xAmzDate = "iure";
-                xAmzSecurityToken = "magnam";
-                xAmzSignature = "debitis";
-                xAmzSignedHeaders = "ipsa";
-                xAmzTarget = "AWSKendraFrontendService.AssociateEntitiesToExperience";
-            }}            
+                xAmzDate = "molestiae";
+                xAmzSecurityToken = "minus";
+                xAmzSignature = "placeat";
+                xAmzSignedHeaders = "voluptatum";
+            }};            
 
             AssociateEntitiesToExperienceResponse res = sdk.associateEntitiesToExperience(req);
 
-            if (res.associateEntitiesToExperienceResponse.isPresent()) {
+            if (res.associateEntitiesToExperienceResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

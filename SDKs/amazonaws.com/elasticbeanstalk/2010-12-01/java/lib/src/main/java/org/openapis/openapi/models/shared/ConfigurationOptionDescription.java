@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationOptionDescription {
     
     public String changeSeverity;
+
     public ConfigurationOptionDescription withChangeSeverity(String changeSeverity) {
         this.changeSeverity = changeSeverity;
         return this;
@@ -19,6 +20,7 @@ public class ConfigurationOptionDescription {
     
     
     public String defaultValue;
+
     public ConfigurationOptionDescription withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -26,6 +28,7 @@ public class ConfigurationOptionDescription {
     
     
     public Long maxLength;
+
     public ConfigurationOptionDescription withMaxLength(Long maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -33,6 +36,7 @@ public class ConfigurationOptionDescription {
     
     
     public Long maxValue;
+
     public ConfigurationOptionDescription withMaxValue(Long maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -40,6 +44,7 @@ public class ConfigurationOptionDescription {
     
     
     public Long minValue;
+
     public ConfigurationOptionDescription withMinValue(Long minValue) {
         this.minValue = minValue;
         return this;
@@ -47,6 +52,7 @@ public class ConfigurationOptionDescription {
     
     
     public String name;
+
     public ConfigurationOptionDescription withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +60,7 @@ public class ConfigurationOptionDescription {
     
     
     public String namespace;
+
     public ConfigurationOptionDescription withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -61,6 +68,7 @@ public class ConfigurationOptionDescription {
     
     
     public OptionRestrictionRegex regex;
+
     public ConfigurationOptionDescription withRegex(OptionRestrictionRegex regex) {
         this.regex = regex;
         return this;
@@ -68,6 +76,7 @@ public class ConfigurationOptionDescription {
     
     
     public Boolean userDefined;
+
     public ConfigurationOptionDescription withUserDefined(Boolean userDefined) {
         this.userDefined = userDefined;
         return this;
@@ -75,6 +84,7 @@ public class ConfigurationOptionDescription {
     
     
     public String[] valueOptions;
+
     public ConfigurationOptionDescription withValueOptions(String[] valueOptions) {
         this.valueOptions = valueOptions;
         return this;
@@ -82,9 +92,11 @@ public class ConfigurationOptionDescription {
     
     
     public ConfigurationOptionValueTypeEnum valueType;
+
     public ConfigurationOptionDescription withValueType(ConfigurationOptionValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public ConfigurationOptionDescription(){}
 }

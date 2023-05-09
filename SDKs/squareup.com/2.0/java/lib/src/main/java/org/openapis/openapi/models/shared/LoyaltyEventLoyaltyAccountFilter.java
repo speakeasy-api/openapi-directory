@@ -15,9 +15,13 @@ public class LoyaltyEventLoyaltyAccountFilter {
      */
     @JsonProperty("loyalty_account_id")
     public String loyaltyAccountId;
+
     public LoyaltyEventLoyaltyAccountFilter withLoyaltyAccountId(String loyaltyAccountId) {
         this.loyaltyAccountId = loyaltyAccountId;
         return this;
     }
     
+    public LoyaltyEventLoyaltyAccountFilter(@JsonProperty("loyalty_account_id") String loyaltyAccountId) {
+        this.loyaltyAccountId = loyaltyAccountId;
+  }
 }

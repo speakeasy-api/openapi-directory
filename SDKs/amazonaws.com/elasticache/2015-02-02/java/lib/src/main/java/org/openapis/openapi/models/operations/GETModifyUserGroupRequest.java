@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyUserGroupRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyUserGroupActionEnum action;
+
     public GETModifyUserGroupRequest withAction(GETModifyUserGroupActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyUserGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserGroupId")
     public String userGroupId;
+
     public GETModifyUserGroupRequest withUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyUserGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserIdsToAdd")
     public String[] userIdsToAdd;
+
     public GETModifyUserGroupRequest withUserIdsToAdd(String[] userIdsToAdd) {
         this.userIdsToAdd = userIdsToAdd;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyUserGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UserIdsToRemove")
     public String[] userIdsToRemove;
+
     public GETModifyUserGroupRequest withUserIdsToRemove(String[] userIdsToRemove) {
         this.userIdsToRemove = userIdsToRemove;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyUserGroupVersionEnum version;
+
     public GETModifyUserGroupRequest withVersion(GETModifyUserGroupVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyUserGroupRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyUserGroupRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyUserGroupRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyUserGroupRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyUserGroupRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyUserGroupRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETModifyUserGroupRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyUserGroupRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyUserGroupRequest(@JsonProperty("Action") GETModifyUserGroupActionEnum action, @JsonProperty("UserGroupId") String userGroupId, @JsonProperty("Version") GETModifyUserGroupVersionEnum version) {
+        this.action = action;
+        this.userGroupId = userGroupId;
+        this.version = version;
+  }
 }

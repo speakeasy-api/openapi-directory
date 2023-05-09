@@ -18,6 +18,7 @@ public class ServiceLevelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicSli")
     public BasicSli basicSli;
+
     public ServiceLevelIndicator withBasicSli(BasicSli basicSli) {
         this.basicSli = basicSli;
         return this;
@@ -29,6 +30,7 @@ public class ServiceLevelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestBased")
     public RequestBasedSli requestBased;
+
     public ServiceLevelIndicator withRequestBased(RequestBasedSli requestBased) {
         this.requestBased = requestBased;
         return this;
@@ -40,9 +42,11 @@ public class ServiceLevelIndicator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsBased")
     public WindowsBasedSli windowsBased;
+
     public ServiceLevelIndicator withWindowsBased(WindowsBasedSli windowsBased) {
         this.windowsBased = windowsBased;
         return this;
     }
     
+    public ServiceLevelIndicator(){}
 }

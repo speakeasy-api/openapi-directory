@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks[] associatedTargetNetworks;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withAssociatedTargetNetworks(DescribeClientVpnEndpointsResultClientVpnEndpointsAssociatedTargetNetworks[] associatedTargetNetworks) {
         this.associatedTargetNetworks = associatedTargetNetworks;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions[] authenticationOptions;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withAuthenticationOptions(DescribeClientVpnEndpointsResultClientVpnEndpointsAuthenticationOptions[] authenticationOptions) {
         this.authenticationOptions = authenticationOptions;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String clientCidrBlock;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withClientCidrBlock(String clientCidrBlock) {
         this.clientCidrBlock = clientCidrBlock;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions clientConnectOptions;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withClientConnectOptions(DescribeClientVpnEndpointsResultClientVpnEndpointsClientConnectOptions clientConnectOptions) {
         this.clientConnectOptions = clientConnectOptions;
         return this;
@@ -40,6 +44,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions clientLoginBannerOptions;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withClientLoginBannerOptions(DescribeClientVpnEndpointsResultClientVpnEndpointsClientLoginBannerOptions clientLoginBannerOptions) {
         this.clientLoginBannerOptions = clientLoginBannerOptions;
         return this;
@@ -47,6 +52,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String clientVpnEndpointId;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsConnectionLogOptions connectionLogOptions;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withConnectionLogOptions(DescribeClientVpnEndpointsResultClientVpnEndpointsConnectionLogOptions connectionLogOptions) {
         this.connectionLogOptions = connectionLogOptions;
         return this;
@@ -61,6 +68,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String creationTime;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -68,6 +76,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String deletionTime;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -75,6 +84,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String description;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withDescription(String description) {
         this.description = description;
         return this;
@@ -82,6 +92,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String dnsName;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -89,6 +100,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String[] dnsServers;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withDnsServers(String[] dnsServers) {
         this.dnsServers = dnsServers;
         return this;
@@ -96,6 +108,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String[] securityGroupIds;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +116,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String selfServicePortalUrl;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withSelfServicePortalUrl(String selfServicePortalUrl) {
         this.selfServicePortalUrl = selfServicePortalUrl;
         return this;
@@ -110,6 +124,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String serverCertificateArn;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withServerCertificateArn(String serverCertificateArn) {
         this.serverCertificateArn = serverCertificateArn;
         return this;
@@ -117,6 +132,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public Long sessionTimeoutHours;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withSessionTimeoutHours(Long sessionTimeoutHours) {
         this.sessionTimeoutHours = sessionTimeoutHours;
         return this;
@@ -124,6 +140,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public Boolean splitTunnel;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withSplitTunnel(Boolean splitTunnel) {
         this.splitTunnel = splitTunnel;
         return this;
@@ -131,6 +148,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsStatus status;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withStatus(DescribeClientVpnEndpointsResultClientVpnEndpointsStatus status) {
         this.status = status;
         return this;
@@ -138,6 +156,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsTags[] tags;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withTags(DescribeClientVpnEndpointsResultClientVpnEndpointsTags[] tags) {
         this.tags = tags;
         return this;
@@ -145,6 +164,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum transportProtocol;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withTransportProtocol(DescribeClientVpnEndpointsResultClientVpnEndpointsTransportProtocolEnum transportProtocol) {
         this.transportProtocol = transportProtocol;
         return this;
@@ -152,6 +172,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public String vpcId;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -159,6 +180,7 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public Long vpnPort;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withVpnPort(Long vpnPort) {
         this.vpnPort = vpnPort;
         return this;
@@ -166,9 +188,11 @@ public class DescribeClientVpnEndpointsResultClientVpnEndpoints {
     
     
     public DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum vpnProtocol;
+
     public DescribeClientVpnEndpointsResultClientVpnEndpoints withVpnProtocol(DescribeClientVpnEndpointsResultClientVpnEndpointsVpnProtocolEnum vpnProtocol) {
         this.vpnProtocol = vpnProtocol;
         return this;
     }
     
+    public DescribeClientVpnEndpointsResultClientVpnEndpoints(){}
 }

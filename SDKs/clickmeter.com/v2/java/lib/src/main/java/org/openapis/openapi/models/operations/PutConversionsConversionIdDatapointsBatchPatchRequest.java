@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConversionsConversionIdDatapointsBatchPatchRequest {
@@ -12,6 +13,7 @@ public class PutConversionsConversionIdDatapointsBatchPatchRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch apiCoreRequestsPatchBodyBatch;
+
     public PutConversionsConversionIdDatapointsBatchPatchRequest withApiCoreRequestsPatchBodyBatch(org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch apiCoreRequestsPatchBodyBatch) {
         this.apiCoreRequestsPatchBodyBatch = apiCoreRequestsPatchBodyBatch;
         return this;
@@ -22,9 +24,14 @@ public class PutConversionsConversionIdDatapointsBatchPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public PutConversionsConversionIdDatapointsBatchPatchRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
     }
     
+    public PutConversionsConversionIdDatapointsBatchPatchRequest(@JsonProperty("Api.Core.Requests.PatchBodyBatch") org.openapis.openapi.models.shared.ApiCoreRequestsPatchBodyBatch apiCoreRequestsPatchBodyBatch, @JsonProperty("conversionId") Long conversionId) {
+        this.apiCoreRequestsPatchBodyBatch = apiCoreRequestsPatchBodyBatch;
+        this.conversionId = conversionId;
+  }
 }

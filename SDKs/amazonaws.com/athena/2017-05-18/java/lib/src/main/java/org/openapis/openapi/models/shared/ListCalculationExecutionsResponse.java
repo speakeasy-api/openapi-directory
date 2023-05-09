@@ -15,6 +15,7 @@ public class ListCalculationExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Calculations")
     public CalculationSummary[] calculations;
+
     public ListCalculationExecutionsResponse withCalculations(CalculationSummary[] calculations) {
         this.calculations = calculations;
         return this;
@@ -23,9 +24,11 @@ public class ListCalculationExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCalculationExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCalculationExecutionsResponse(){}
 }

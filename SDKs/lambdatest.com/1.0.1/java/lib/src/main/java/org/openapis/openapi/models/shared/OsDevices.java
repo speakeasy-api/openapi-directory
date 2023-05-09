@@ -15,6 +15,7 @@ public class OsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android 7.0")
     public Android70 android70;
+
     public OsDevices withAndroid70(Android70 android70) {
         this.android70 = android70;
         return this;
@@ -23,9 +24,11 @@ public class OsDevices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ios 12.0")
     public Ios120 ios120;
+
     public OsDevices withIos120(Ios120 ios120) {
         this.ios120 = ios120;
         return this;
     }
     
+    public OsDevices(){}
 }

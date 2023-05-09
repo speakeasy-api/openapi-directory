@@ -20,6 +20,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public Application[] applications;
+
     public Image withApplications(Application[] applications) {
         this.applications = applications;
         return this;
@@ -28,6 +29,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppstreamAgentVersion")
     public String appstreamAgentVersion;
+
     public Image withAppstreamAgentVersion(String appstreamAgentVersion) {
         this.appstreamAgentVersion = appstreamAgentVersion;
         return this;
@@ -36,6 +38,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Image withArn(String arn) {
         this.arn = arn;
         return this;
@@ -44,6 +47,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseImageArn")
     public String baseImageArn;
+
     public Image withBaseImageArn(String baseImageArn) {
         this.baseImageArn = baseImageArn;
         return this;
@@ -54,6 +58,7 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public Image withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -62,6 +67,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Image withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +76,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public Image withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -78,6 +85,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilderName")
     public String imageBuilderName;
+
     public Image withImageBuilderName(String imageBuilderName) {
         this.imageBuilderName = imageBuilderName;
         return this;
@@ -86,6 +94,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageBuilderSupported")
     public Boolean imageBuilderSupported;
+
     public Image withImageBuilderSupported(Boolean imageBuilderSupported) {
         this.imageBuilderSupported = imageBuilderSupported;
         return this;
@@ -94,6 +103,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageErrors")
     public ResourceError[] imageErrors;
+
     public Image withImageErrors(ResourceError[] imageErrors) {
         this.imageErrors = imageErrors;
         return this;
@@ -102,6 +112,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImagePermissions")
     public ImagePermissions imagePermissions;
+
     public Image withImagePermissions(ImagePermissions imagePermissions) {
         this.imagePermissions = imagePermissions;
         return this;
@@ -109,6 +120,7 @@ public class Image {
     
     @JsonProperty("Name")
     public String name;
+
     public Image withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +129,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public PlatformTypeEnum platform;
+
     public Image withPlatform(PlatformTypeEnum platform) {
         this.platform = platform;
         return this;
@@ -127,6 +140,7 @@ public class Image {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PublicBaseImageReleasedDate")
     public OffsetDateTime publicBaseImageReleasedDate;
+
     public Image withPublicBaseImageReleasedDate(OffsetDateTime publicBaseImageReleasedDate) {
         this.publicBaseImageReleasedDate = publicBaseImageReleasedDate;
         return this;
@@ -135,6 +149,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ImageStateEnum state;
+
     public Image withState(ImageStateEnum state) {
         this.state = state;
         return this;
@@ -143,6 +158,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public ImageStateChangeReason stateChangeReason;
+
     public Image withStateChangeReason(ImageStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -151,9 +167,13 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Visibility")
     public VisibilityTypeEnum visibility;
+
     public Image withVisibility(VisibilityTypeEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public Image(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class Requester {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public RequesterIdentifier identifier;
+
     public Requester withIdentifier(RequesterIdentifier identifier) {
         this.identifier = identifier;
         return this;
@@ -19,9 +20,13 @@ public class Requester {
     
     @JsonProperty("name")
     public String name;
+
     public Requester withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Requester(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

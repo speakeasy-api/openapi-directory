@@ -15,9 +15,11 @@ public class RebootInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public RebootInstanceResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public RebootInstanceResult(){}
 }

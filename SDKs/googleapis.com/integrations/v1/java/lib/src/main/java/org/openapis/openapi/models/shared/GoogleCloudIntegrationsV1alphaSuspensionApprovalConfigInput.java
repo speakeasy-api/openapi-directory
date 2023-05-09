@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMessage")
     public String customMessage;
+
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput withCustomMessage(String customMessage) {
         this.customMessage = customMessage;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddresses")
     public String[] emailAddresses;
+
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiration")
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput expiration;
+
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput withExpiration(GoogleCloudIntegrationsV1alphaSuspensionApprovalExpirationInput expiration) {
         this.expiration = expiration;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput(){}
 }

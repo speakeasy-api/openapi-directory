@@ -15,6 +15,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Getweather200ApplicationJSON withCity(String city) {
         this.city = city;
         return this;
@@ -23,6 +24,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getweather200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -31,6 +33,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getweather200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelativeHumidity")
     public String relativeHumidity;
+
     public Getweather200ApplicationJSON withRelativeHumidity(String relativeHumidity) {
         this.relativeHumidity = relativeHumidity;
         return this;
@@ -47,6 +51,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Getweather200ApplicationJSON withState(String state) {
         this.state = state;
         return this;
@@ -55,6 +60,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TempC")
     public String tempC;
+
     public Getweather200ApplicationJSON withTempC(String tempC) {
         this.tempC = tempC;
         return this;
@@ -63,6 +69,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TempF")
     public String tempF;
+
     public Getweather200ApplicationJSON withTempF(String tempF) {
         this.tempF = tempF;
         return this;
@@ -71,6 +78,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibilityMiles")
     public String visibilityMiles;
+
     public Getweather200ApplicationJSON withVisibilityMiles(String visibilityMiles) {
         this.visibilityMiles = visibilityMiles;
         return this;
@@ -79,6 +87,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weather")
     public String weather;
+
     public Getweather200ApplicationJSON withWeather(String weather) {
         this.weather = weather;
         return this;
@@ -87,6 +96,7 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindDir")
     public String windDir;
+
     public Getweather200ApplicationJSON withWindDir(String windDir) {
         this.windDir = windDir;
         return this;
@@ -95,9 +105,11 @@ public class Getweather200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindMPH")
     public String windMPH;
+
     public Getweather200ApplicationJSON withWindMPH(String windMPH) {
         this.windMPH = windMPH;
         return this;
     }
     
+    public Getweather200ApplicationJSON(){}
 }

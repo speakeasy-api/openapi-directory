@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageResultTags {
     
     public String key;
+
     public ImportImageResultTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ImportImageResultTags {
     
     
     public String value;
+
     public ImportImageResultTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImportImageResultTags(){}
 }

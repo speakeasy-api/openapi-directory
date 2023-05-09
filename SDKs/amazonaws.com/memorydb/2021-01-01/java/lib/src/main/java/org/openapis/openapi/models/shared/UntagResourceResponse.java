@@ -15,9 +15,11 @@ public class UntagResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public UntagResourceResponse withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public UntagResourceResponse(){}
 }

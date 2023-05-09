@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddDraftAppVersionResourceMappingsResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public AddDraftAppVersionResourceMappingsResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -19,6 +20,7 @@ public class AddDraftAppVersionResourceMappingsResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public AddDraftAppVersionResourceMappingsResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -26,9 +28,15 @@ public class AddDraftAppVersionResourceMappingsResponse {
     
     @JsonProperty("resourceMappings")
     public ResourceMapping[] resourceMappings;
+
     public AddDraftAppVersionResourceMappingsResponse withResourceMappings(ResourceMapping[] resourceMappings) {
         this.resourceMappings = resourceMappings;
         return this;
     }
     
+    public AddDraftAppVersionResourceMappingsResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("resourceMappings") ResourceMapping[] resourceMappings) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.resourceMappings = resourceMappings;
+  }
 }

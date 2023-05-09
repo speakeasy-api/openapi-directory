@@ -15,6 +15,7 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineId")
     public String businessLineId;
+
     public CreateMerchantRequest withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -25,6 +26,7 @@ public class CreateMerchantRequest {
      */
     @JsonProperty("companyId")
     public String companyId;
+
     public CreateMerchantRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -36,6 +38,7 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateMerchantRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public CreateMerchantRequest withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -58,6 +62,7 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricingPlan")
     public String pricingPlan;
+
     public CreateMerchantRequest withPricingPlan(String pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -69,6 +74,7 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public CreateMerchantRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -80,9 +86,13 @@ public class CreateMerchantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public CreateMerchantRequest withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
     }
     
+    public CreateMerchantRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CodeRepositorySummary {
     @JsonProperty("CodeRepositoryArn")
     public String codeRepositoryArn;
+
     public CodeRepositorySummary withCodeRepositoryArn(String codeRepositoryArn) {
         this.codeRepositoryArn = codeRepositoryArn;
         return this;
@@ -26,6 +27,7 @@ public class CodeRepositorySummary {
     
     @JsonProperty("CodeRepositoryName")
     public String codeRepositoryName;
+
     public CodeRepositorySummary withCodeRepositoryName(String codeRepositoryName) {
         this.codeRepositoryName = codeRepositoryName;
         return this;
@@ -35,6 +37,7 @@ public class CodeRepositorySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public CodeRepositorySummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -43,6 +46,7 @@ public class CodeRepositorySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GitConfig")
     public GitConfig gitConfig;
+
     public CodeRepositorySummary withGitConfig(GitConfig gitConfig) {
         this.gitConfig = gitConfig;
         return this;
@@ -52,9 +56,16 @@ public class CodeRepositorySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CodeRepositorySummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public CodeRepositorySummary(@JsonProperty("CodeRepositoryArn") String codeRepositoryArn, @JsonProperty("CodeRepositoryName") String codeRepositoryName, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.codeRepositoryArn = codeRepositoryArn;
+        this.codeRepositoryName = codeRepositoryName;
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

@@ -15,6 +15,7 @@ public class QueuedResponse {
      */
     @JsonProperty("message")
     public String message;
+
     public QueuedResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class QueuedResponse {
      */
     @JsonProperty("response")
     public QueuedResponseData response;
+
     public QueuedResponse withResponse(QueuedResponseData response) {
         this.response = response;
         return this;
@@ -35,9 +37,15 @@ public class QueuedResponse {
      */
     @JsonProperty("success")
     public Boolean success;
+
     public QueuedResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public QueuedResponse(@JsonProperty("message") String message, @JsonProperty("response") QueuedResponseData response, @JsonProperty("success") Boolean success) {
+        this.message = message;
+        this.response = response;
+        this.success = success;
+  }
 }

@@ -21,6 +21,7 @@ public class ListWorkweekConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListWorkweekConfigsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class ListWorkweekConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListWorkweekConfigsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +45,11 @@ public class ListWorkweekConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workweek_configs")
     public WorkweekConfig[] workweekConfigs;
+
     public ListWorkweekConfigsResponse withWorkweekConfigs(WorkweekConfig[] workweekConfigs) {
         this.workweekConfigs = workweekConfigs;
         return this;
     }
     
+    public ListWorkweekConfigsResponse(){}
 }

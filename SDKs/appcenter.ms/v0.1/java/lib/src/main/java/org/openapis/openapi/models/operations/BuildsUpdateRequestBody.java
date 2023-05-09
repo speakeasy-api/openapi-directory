@@ -15,9 +15,11 @@ public class BuildsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BuildsUpdateRequestBodyStatusEnum status;
+
     public BuildsUpdateRequestBody withStatus(BuildsUpdateRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BuildsUpdateRequestBody(){}
 }

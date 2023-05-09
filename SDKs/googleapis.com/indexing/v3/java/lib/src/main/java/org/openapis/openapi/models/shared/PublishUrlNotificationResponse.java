@@ -18,9 +18,11 @@ public class PublishUrlNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlNotificationMetadata")
     public UrlNotificationMetadata urlNotificationMetadata;
+
     public PublishUrlNotificationResponse withUrlNotificationMetadata(UrlNotificationMetadata urlNotificationMetadata) {
         this.urlNotificationMetadata = urlNotificationMetadata;
         return this;
     }
     
+    public PublishUrlNotificationResponse(){}
 }

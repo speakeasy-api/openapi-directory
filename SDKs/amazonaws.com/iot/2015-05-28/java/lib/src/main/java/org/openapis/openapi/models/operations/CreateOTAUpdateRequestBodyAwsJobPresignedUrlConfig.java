@@ -15,9 +15,11 @@ public class CreateOTAUpdateRequestBodyAwsJobPresignedUrlConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresInSec")
     public Long expiresInSec;
+
     public CreateOTAUpdateRequestBodyAwsJobPresignedUrlConfig withExpiresInSec(Long expiresInSec) {
         this.expiresInSec = expiresInSec;
         return this;
     }
     
+    public CreateOTAUpdateRequestBodyAwsJobPresignedUrlConfig(){}
 }

@@ -14,6 +14,7 @@ public class AftermarketListingExpiryCreate {
      */
     @JsonProperty("domain")
     public String domain;
+
     public AftermarketListingExpiryCreate withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -24,6 +25,7 @@ public class AftermarketListingExpiryCreate {
      */
     @JsonProperty("expiresAt")
     public String expiresAt;
+
     public AftermarketListingExpiryCreate withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -34,6 +36,7 @@ public class AftermarketListingExpiryCreate {
      */
     @JsonProperty("losingRegistrarId")
     public Long losingRegistrarId;
+
     public AftermarketListingExpiryCreate withLosingRegistrarId(Long losingRegistrarId) {
         this.losingRegistrarId = losingRegistrarId;
         return this;
@@ -45,6 +48,7 @@ public class AftermarketListingExpiryCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageViewsMonthly")
     public Long pageViewsMonthly;
+
     public AftermarketListingExpiryCreate withPageViewsMonthly(Long pageViewsMonthly) {
         this.pageViewsMonthly = pageViewsMonthly;
         return this;
@@ -56,9 +60,15 @@ public class AftermarketListingExpiryCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenueMonthly")
     public Long revenueMonthly;
+
     public AftermarketListingExpiryCreate withRevenueMonthly(Long revenueMonthly) {
         this.revenueMonthly = revenueMonthly;
         return this;
     }
     
+    public AftermarketListingExpiryCreate(@JsonProperty("domain") String domain, @JsonProperty("expiresAt") String expiresAt, @JsonProperty("losingRegistrarId") Long losingRegistrarId) {
+        this.domain = domain;
+        this.expiresAt = expiresAt;
+        this.losingRegistrarId = losingRegistrarId;
+  }
 }

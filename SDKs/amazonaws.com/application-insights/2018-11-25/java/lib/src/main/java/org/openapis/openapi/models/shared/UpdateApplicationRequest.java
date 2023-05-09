@@ -12,6 +12,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoConfigEnabled")
     public Boolean autoConfigEnabled;
+
     public UpdateApplicationRequest withAutoConfigEnabled(Boolean autoConfigEnabled) {
         this.autoConfigEnabled = autoConfigEnabled;
         return this;
@@ -20,6 +21,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CWEMonitorEnabled")
     public Boolean cweMonitorEnabled;
+
     public UpdateApplicationRequest withCWEMonitorEnabled(Boolean cweMonitorEnabled) {
         this.cweMonitorEnabled = cweMonitorEnabled;
         return this;
@@ -28,6 +30,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsCenterEnabled")
     public Boolean opsCenterEnabled;
+
     public UpdateApplicationRequest withOpsCenterEnabled(Boolean opsCenterEnabled) {
         this.opsCenterEnabled = opsCenterEnabled;
         return this;
@@ -36,6 +39,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsItemSNSTopicArn")
     public String opsItemSNSTopicArn;
+
     public UpdateApplicationRequest withOpsItemSNSTopicArn(String opsItemSNSTopicArn) {
         this.opsItemSNSTopicArn = opsItemSNSTopicArn;
         return this;
@@ -44,6 +48,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoveSNSTopic")
     public Boolean removeSNSTopic;
+
     public UpdateApplicationRequest withRemoveSNSTopic(Boolean removeSNSTopic) {
         this.removeSNSTopic = removeSNSTopic;
         return this;
@@ -51,9 +56,13 @@ public class UpdateApplicationRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public UpdateApplicationRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public UpdateApplicationRequest(@JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+  }
 }

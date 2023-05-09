@@ -15,6 +15,7 @@ public class BatchGetVpcEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpointDetails")
     public VpcEndpointDetail[] vpcEndpointDetails;
+
     public BatchGetVpcEndpointResponse withVpcEndpointDetails(VpcEndpointDetail[] vpcEndpointDetails) {
         this.vpcEndpointDetails = vpcEndpointDetails;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetVpcEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpointErrorDetails")
     public VpcEndpointErrorDetail[] vpcEndpointErrorDetails;
+
     public BatchGetVpcEndpointResponse withVpcEndpointErrorDetails(VpcEndpointErrorDetail[] vpcEndpointErrorDetails) {
         this.vpcEndpointErrorDetails = vpcEndpointErrorDetails;
         return this;
     }
     
+    public BatchGetVpcEndpointResponse(){}
 }

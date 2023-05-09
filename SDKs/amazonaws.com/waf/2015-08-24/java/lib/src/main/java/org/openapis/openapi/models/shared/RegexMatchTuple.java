@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegexMatchTuple {
     @JsonProperty("FieldToMatch")
     public FieldToMatch fieldToMatch;
+
     public RegexMatchTuple withFieldToMatch(FieldToMatch fieldToMatch) {
         this.fieldToMatch = fieldToMatch;
         return this;
@@ -19,6 +20,7 @@ public class RegexMatchTuple {
     
     @JsonProperty("RegexPatternSetId")
     public String regexPatternSetId;
+
     public RegexMatchTuple withRegexPatternSetId(String regexPatternSetId) {
         this.regexPatternSetId = regexPatternSetId;
         return this;
@@ -26,9 +28,15 @@ public class RegexMatchTuple {
     
     @JsonProperty("TextTransformation")
     public TextTransformationEnum textTransformation;
+
     public RegexMatchTuple withTextTransformation(TextTransformationEnum textTransformation) {
         this.textTransformation = textTransformation;
         return this;
     }
     
+    public RegexMatchTuple(@JsonProperty("FieldToMatch") FieldToMatch fieldToMatch, @JsonProperty("RegexPatternSetId") String regexPatternSetId, @JsonProperty("TextTransformation") TextTransformationEnum textTransformation) {
+        this.fieldToMatch = fieldToMatch;
+        this.regexPatternSetId = regexPatternSetId;
+        this.textTransformation = textTransformation;
+  }
 }

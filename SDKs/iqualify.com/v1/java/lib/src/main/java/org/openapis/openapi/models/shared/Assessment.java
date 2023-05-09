@@ -17,6 +17,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Assessment withContent(String content) {
         this.content = content;
         return this;
@@ -27,6 +28,7 @@ public class Assessment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dueDate")
     public OffsetDateTime dueDate;
+
     public Assessment withDueDate(OffsetDateTime dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -35,6 +37,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markNumber")
     public String markNumber;
+
     public Assessment withMarkNumber(String markNumber) {
         this.markNumber = markNumber;
         return this;
@@ -43,6 +46,7 @@ public class Assessment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markType")
     public String markType;
+
     public Assessment withMarkType(String markType) {
         this.markType = markType;
         return this;
@@ -53,9 +57,11 @@ public class Assessment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("openDate")
     public OffsetDateTime openDate;
+
     public Assessment withOpenDate(OffsetDateTime openDate) {
         this.openDate = openDate;
         return this;
     }
     
+    public Assessment(){}
 }

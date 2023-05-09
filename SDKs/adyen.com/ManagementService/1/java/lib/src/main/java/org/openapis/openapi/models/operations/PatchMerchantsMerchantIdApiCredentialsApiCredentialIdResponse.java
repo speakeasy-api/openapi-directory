@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
@@ -12,6 +13,7 @@ public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiCredential apiCredential;
+
     public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse withApiCredential(org.openapis.openapi.models.shared.ApiCredential apiCredential) {
         this.apiCredential = apiCredential;
         return this;
@@ -19,6 +21,7 @@ public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
     
     
     public String contentType;
+
     public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
     
     
     public Integer statusCode;
+
     public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchMerchantsMerchantIdApiCredentialsApiCredentialIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

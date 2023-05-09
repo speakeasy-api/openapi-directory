@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListExportsResponse {
     
     public String contentType;
+
     public ListExportsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListExportsResponse {
      */
     
     public Object internalServerError;
+
     public ListExportsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListExportsResponse {
      */
     
     public Object limitExceededException;
+
     public ListExportsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListExportsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListExportsOutput listExportsOutput;
+
     public ListExportsResponse withListExportsOutput(org.openapis.openapi.models.shared.ListExportsOutput listExportsOutput) {
         this.listExportsOutput = listExportsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListExportsResponse {
     
     
     public Integer statusCode;
+
     public ListExportsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListExportsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListExportsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListExportsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

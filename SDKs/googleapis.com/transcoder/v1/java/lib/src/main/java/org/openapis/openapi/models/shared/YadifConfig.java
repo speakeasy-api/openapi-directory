@@ -18,6 +18,7 @@ public class YadifConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deinterlaceAllFrames")
     public Boolean deinterlaceAllFrames;
+
     public YadifConfig withDeinterlaceAllFrames(Boolean deinterlaceAllFrames) {
         this.deinterlaceAllFrames = deinterlaceAllFrames;
         return this;
@@ -29,6 +30,7 @@ public class YadifConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSpatialInterlacing")
     public Boolean disableSpatialInterlacing;
+
     public YadifConfig withDisableSpatialInterlacing(Boolean disableSpatialInterlacing) {
         this.disableSpatialInterlacing = disableSpatialInterlacing;
         return this;
@@ -40,6 +42,7 @@ public class YadifConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public String mode;
+
     public YadifConfig withMode(String mode) {
         this.mode = mode;
         return this;
@@ -51,9 +54,11 @@ public class YadifConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parity")
     public String parity;
+
     public YadifConfig withParity(String parity) {
         this.parity = parity;
         return this;
     }
     
+    public YadifConfig(){}
 }

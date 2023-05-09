@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBudgetActionHistoriesResponse {
@@ -12,6 +13,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBudgetActionHistoriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetActionHistoriesResponse {
     
     
     public String contentType;
+
     public DescribeBudgetActionHistoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBudgetActionHistoriesResponse describeBudgetActionHistoriesResponse;
+
     public DescribeBudgetActionHistoriesResponse withDescribeBudgetActionHistoriesResponse(org.openapis.openapi.models.shared.DescribeBudgetActionHistoriesResponse describeBudgetActionHistoriesResponse) {
         this.describeBudgetActionHistoriesResponse = describeBudgetActionHistoriesResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeBudgetActionHistoriesResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeBudgetActionHistoriesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeBudgetActionHistoriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeBudgetActionHistoriesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeBudgetActionHistoriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeBudgetActionHistoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeBudgetActionHistoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBudgetActionHistoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeBudgetActionHistoriesResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBudgetActionHistoriesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBudgetActionHistoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

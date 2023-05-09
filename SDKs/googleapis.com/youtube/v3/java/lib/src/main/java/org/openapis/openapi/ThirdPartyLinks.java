@@ -57,10 +57,8 @@ public class ThirdPartyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class ThirdPartyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksInsertResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksInsertResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksInsertResponse(contentType, httpRes.statusCode()) {{
             thirdPartyLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class ThirdPartyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksListResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksListResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksListResponse(contentType, httpRes.statusCode()) {{
             thirdPartyLinkListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class ThirdPartyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeThirdPartyLinksUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeThirdPartyLinksUpdateResponse(contentType, httpRes.statusCode()) {{
             thirdPartyLink = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

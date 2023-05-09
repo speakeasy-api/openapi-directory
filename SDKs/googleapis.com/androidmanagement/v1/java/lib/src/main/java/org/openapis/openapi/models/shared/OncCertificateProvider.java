@@ -18,6 +18,7 @@ public class OncCertificateProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateReferences")
     public String[] certificateReferences;
+
     public OncCertificateProvider withCertificateReferences(String[] certificateReferences) {
         this.certificateReferences = certificateReferences;
         return this;
@@ -29,9 +30,11 @@ public class OncCertificateProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentProviderEndpoint")
     public ContentProviderEndpoint contentProviderEndpoint;
+
     public OncCertificateProvider withContentProviderEndpoint(ContentProviderEndpoint contentProviderEndpoint) {
         this.contentProviderEndpoint = contentProviderEndpoint;
         return this;
     }
     
+    public OncCertificateProvider(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TestingApplicationDetailServiceGetApkDetailsResponse {
     
     public String contentType;
+
     public TestingApplicationDetailServiceGetApkDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TestingApplicationDetailServiceGetApkDetailsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApkDetailsResponse getApkDetailsResponse;
+
     public TestingApplicationDetailServiceGetApkDetailsResponse withGetApkDetailsResponse(org.openapis.openapi.models.shared.GetApkDetailsResponse getApkDetailsResponse) {
         this.getApkDetailsResponse = getApkDetailsResponse;
         return this;
@@ -26,6 +29,7 @@ public class TestingApplicationDetailServiceGetApkDetailsResponse {
     
     
     public Integer statusCode;
+
     public TestingApplicationDetailServiceGetApkDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TestingApplicationDetailServiceGetApkDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TestingApplicationDetailServiceGetApkDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TestingApplicationDetailServiceGetApkDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

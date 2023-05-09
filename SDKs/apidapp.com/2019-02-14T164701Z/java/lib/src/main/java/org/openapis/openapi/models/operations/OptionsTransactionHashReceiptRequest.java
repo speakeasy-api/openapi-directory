@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OptionsTransactionHashReceiptRequest {
@@ -12,9 +13,13 @@ public class OptionsTransactionHashReceiptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hash")
     public String hash;
+
     public OptionsTransactionHashReceiptRequest withHash(String hash) {
         this.hash = hash;
         return this;
     }
     
+    public OptionsTransactionHashReceiptRequest(@JsonProperty("hash") String hash) {
+        this.hash = hash;
+  }
 }

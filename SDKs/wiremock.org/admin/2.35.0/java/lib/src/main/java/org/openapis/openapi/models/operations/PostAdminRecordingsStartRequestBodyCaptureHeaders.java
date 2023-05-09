@@ -12,9 +12,11 @@ public class PostAdminRecordingsStartRequestBodyCaptureHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseInsensitive")
     public Boolean caseInsensitive;
+
     public PostAdminRecordingsStartRequestBodyCaptureHeaders withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
     }
     
+    public PostAdminRecordingsStartRequestBodyCaptureHeaders(){}
 }

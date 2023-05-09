@@ -18,6 +18,7 @@ public class ListVolumeSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListVolumeSnapshotsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListVolumeSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListVolumeSnapshotsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
@@ -40,9 +42,11 @@ public class ListVolumeSnapshotsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeSnapshots")
     public VolumeSnapshot[] volumeSnapshots;
+
     public ListVolumeSnapshotsResponse withVolumeSnapshots(VolumeSnapshot[] volumeSnapshots) {
         this.volumeSnapshots = volumeSnapshots;
         return this;
     }
     
+    public ListVolumeSnapshotsResponse(){}
 }

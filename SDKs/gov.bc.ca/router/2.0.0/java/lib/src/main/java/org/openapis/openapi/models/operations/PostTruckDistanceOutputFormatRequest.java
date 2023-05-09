@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=correctSide")
     public Boolean correctSide;
+
     public PostTruckDistanceOutputFormatRequest withCorrectSide(Boolean correctSide) {
         this.correctSide = correctSide;
         return this;
@@ -23,6 +25,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=criteria")
     public PostTruckDistanceOutputFormatCriteriaEnum criteria;
+
     public PostTruckDistanceOutputFormatRequest withCriteria(PostTruckDistanceOutputFormatCriteriaEnum criteria) {
         this.criteria = criteria;
         return this;
@@ -33,6 +36,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departure")
     public OffsetDateTime departure;
+
     public PostTruckDistanceOutputFormatRequest withDeparture(OffsetDateTime departure) {
         this.departure = departure;
         return this;
@@ -43,6 +47,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disable")
     public String disable;
+
     public PostTruckDistanceOutputFormatRequest withDisable(String disable) {
         this.disable = disable;
         return this;
@@ -53,6 +58,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distanceUnit")
     public PostTruckDistanceOutputFormatDistanceUnitEnum distanceUnit;
+
     public PostTruckDistanceOutputFormatRequest withDistanceUnit(PostTruckDistanceOutputFormatDistanceUnitEnum distanceUnit) {
         this.distanceUnit = distanceUnit;
         return this;
@@ -63,6 +69,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=outputFormat")
     public PostTruckDistanceOutputFormatOutputFormatEnum outputFormat;
+
     public PostTruckDistanceOutputFormatRequest withOutputFormat(PostTruckDistanceOutputFormatOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -73,6 +80,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public PostTruckDistanceOutputFormatOutputSrsEnum outputSRS;
+
     public PostTruckDistanceOutputFormatRequest withOutputSRS(PostTruckDistanceOutputFormatOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -83,6 +91,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=points")
     public String points;
+
     public PostTruckDistanceOutputFormatRequest withPoints(String points) {
         this.points = points;
         return this;
@@ -93,6 +102,7 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roundTrip")
     public Boolean roundTrip;
+
     public PostTruckDistanceOutputFormatRequest withRoundTrip(Boolean roundTrip) {
         this.roundTrip = roundTrip;
         return this;
@@ -103,9 +113,14 @@ public class PostTruckDistanceOutputFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeDescription")
     public String routeDescription;
+
     public PostTruckDistanceOutputFormatRequest withRouteDescription(String routeDescription) {
         this.routeDescription = routeDescription;
         return this;
     }
     
+    public PostTruckDistanceOutputFormatRequest(@JsonProperty("outputFormat") PostTruckDistanceOutputFormatOutputFormatEnum outputFormat, @JsonProperty("points") String points) {
+        this.outputFormat = outputFormat;
+        this.points = points;
+  }
 }

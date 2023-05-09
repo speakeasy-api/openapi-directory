@@ -12,9 +12,11 @@ public class ContactCenterActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public ContactCenterActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
     }
     
+    public ContactCenterActivity(){}
 }

@@ -60,11 +60,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesListResponse res = new org.openapis.openapi.models.operations.ChatSpacesListResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesListResponse res = new org.openapis.openapi.models.operations.ChatSpacesListResponse(contentType, httpRes.statusCode()) {{
             listSpacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMembersListResponse res = new org.openapis.openapi.models.operations.ChatSpacesMembersListResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMembersListResponse res = new org.openapis.openapi.models.operations.ChatSpacesMembersListResponse(contentType, httpRes.statusCode()) {{
             listMembershipsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMessagesAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesAttachmentsGetResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMessagesAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesAttachmentsGetResponse(contentType, httpRes.statusCode()) {{
             attachment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMessagesCreateResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesCreateResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMessagesCreateResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesCreateResponse(contentType, httpRes.statusCode()) {{
             message = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,11 +238,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMessagesDeleteResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMessagesDeleteResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,7 +255,7 @@ public class Spaces {
     }
 
     /**
-     * Updates a message. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
+     * Updates a message. There's a difference between `patch` and `update` methods. The `patch` method uses a `patch` request while the `update` method uses a `put` request. We recommend using the `patch` method. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -294,11 +284,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMessagesPatchResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesPatchResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMessagesPatchResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesPatchResponse(contentType, httpRes.statusCode()) {{
             message = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -313,7 +301,7 @@ public class Spaces {
     }
 
     /**
-     * Updates a message. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
+     * Updates a message. There's a difference between `patch` and `update` methods. The `patch` method uses a `patch` request while the `update` method uses a `put` request. We recommend using the `patch` method. For example usage, see [Update a message](https://developers.google.com/chat/api/guides/crudl/messages#update_a_message). Requires [authentication](https://developers.google.com/chat/api/guides/auth/). Fully supports [service account authentication](https://developers.google.com/chat/api/guides/auth/service-accounts). Supports [user authentication](https://developers.google.com/chat/api/guides/auth/users) as part of the [Google Workspace Developer Preview Program](https://developers.google.com/workspace/preview), which grants early access to certain features. [User authentication](https://developers.google.com/chat/api/guides/auth/users) requires the `chat.messages` authorization scope.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -342,11 +330,9 @@ public class Spaces {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChatSpacesMessagesUpdateResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.ChatSpacesMessagesUpdateResponse res = new org.openapis.openapi.models.operations.ChatSpacesMessagesUpdateResponse(contentType, httpRes.statusCode()) {{
             message = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

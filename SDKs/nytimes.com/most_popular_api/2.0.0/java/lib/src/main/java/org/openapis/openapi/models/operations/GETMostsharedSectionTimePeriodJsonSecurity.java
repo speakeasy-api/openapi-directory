@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETMostsharedSectionTimePeriodJsonSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=query,name=api-key")
     public String apiKey;
+
     public GETMostsharedSectionTimePeriodJsonSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GETMostsharedSectionTimePeriodJsonSecurity(@JsonProperty("api-key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -18,6 +18,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archived")
     public Boolean archived;
+
     public AppointmentTemplate withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -26,6 +27,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_end")
     public String dateEnd;
+
     public AppointmentTemplate withDateEnd(String dateEnd) {
         this.dateEnd = dateEnd;
         return this;
@@ -34,6 +36,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_start")
     public String dateStart;
+
     public AppointmentTemplate withDateStart(String dateStart) {
         this.dateStart = dateStart;
         return this;
@@ -45,6 +48,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Long duration;
+
     public AppointmentTemplate withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -55,6 +59,7 @@ public class AppointmentTemplate {
      */
     @JsonProperty("exam_room")
     public Long examRoom;
+
     public AppointmentTemplate withExamRoom(Long examRoom) {
         this.examRoom = examRoom;
         return this;
@@ -63,6 +68,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AppointmentTemplate withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +76,7 @@ public class AppointmentTemplate {
     
     @JsonProperty("office")
     public Long office;
+
     public AppointmentTemplate withOffice(Long office) {
         this.office = office;
         return this;
@@ -81,6 +88,7 @@ public class AppointmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open_slots")
     public AppointmentTemplateOpenSlot[] openSlots;
+
     public AppointmentTemplate withOpenSlots(AppointmentTemplateOpenSlot[] openSlots) {
         this.openSlots = openSlots;
         return this;
@@ -91,6 +99,7 @@ public class AppointmentTemplate {
      */
     @JsonProperty("profile")
     public Long profile;
+
     public AppointmentTemplate withProfile(Long profile) {
         this.profile = profile;
         return this;
@@ -98,6 +107,7 @@ public class AppointmentTemplate {
     
     @JsonProperty("scheduled_time")
     public String scheduledTime;
+
     public AppointmentTemplate withScheduledTime(String scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -108,9 +118,17 @@ public class AppointmentTemplate {
      */
     @JsonProperty("week_days")
     public Long[] weekDays;
+
     public AppointmentTemplate withWeekDays(Long[] weekDays) {
         this.weekDays = weekDays;
         return this;
     }
     
+    public AppointmentTemplate(@JsonProperty("exam_room") Long examRoom, @JsonProperty("office") Long office, @JsonProperty("profile") Long profile, @JsonProperty("scheduled_time") String scheduledTime, @JsonProperty("week_days") Long[] weekDays) {
+        this.examRoom = examRoom;
+        this.office = office;
+        this.profile = profile;
+        this.scheduledTime = scheduledTime;
+        this.weekDays = weekDays;
+  }
 }

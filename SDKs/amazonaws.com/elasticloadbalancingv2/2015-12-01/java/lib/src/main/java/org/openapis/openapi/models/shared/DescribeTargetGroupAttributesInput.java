@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeTargetGroupAttributesInput {
     
     public String targetGroupArn;
+
     public DescribeTargetGroupAttributesInput withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
     }
     
+    public DescribeTargetGroupAttributesInput(@JsonProperty("TargetGroupArn") String targetGroupArn) {
+        this.targetGroupArn = targetGroupArn;
+  }
 }

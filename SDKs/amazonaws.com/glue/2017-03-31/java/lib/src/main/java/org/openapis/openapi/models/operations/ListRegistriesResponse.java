@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRegistriesResponse {
@@ -12,6 +13,7 @@ public class ListRegistriesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRegistriesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRegistriesResponse {
     
     
     public String contentType;
+
     public ListRegistriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRegistriesResponse {
      */
     
     public Object internalServiceException;
+
     public ListRegistriesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListRegistriesResponse {
      */
     
     public Object invalidInputException;
+
     public ListRegistriesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListRegistriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRegistriesResponse listRegistriesResponse;
+
     public ListRegistriesResponse withListRegistriesResponse(org.openapis.openapi.models.shared.ListRegistriesResponse listRegistriesResponse) {
         this.listRegistriesResponse = listRegistriesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListRegistriesResponse {
     
     
     public Integer statusCode;
+
     public ListRegistriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListRegistriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRegistriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRegistriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

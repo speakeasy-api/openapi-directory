@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PaymentMethod {
     @JsonProperty("paymentAccountId")
     public String paymentAccountId;
+
     public PaymentMethod withPaymentAccountId(String paymentAccountId) {
         this.paymentAccountId = paymentAccountId;
         return this;
@@ -16,9 +17,14 @@ public class PaymentMethod {
     
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public PaymentMethod withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
     }
     
+    public PaymentMethod(@JsonProperty("paymentAccountId") String paymentAccountId, @JsonProperty("paymentSystem") String paymentSystem) {
+        this.paymentAccountId = paymentAccountId;
+        this.paymentSystem = paymentSystem;
+  }
 }

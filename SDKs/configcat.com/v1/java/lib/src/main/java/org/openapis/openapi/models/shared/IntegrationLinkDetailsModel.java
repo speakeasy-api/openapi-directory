@@ -15,6 +15,7 @@ public class IntegrationLinkDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allIntegrationLinkCount")
     public Integer allIntegrationLinkCount;
+
     public IntegrationLinkDetailsModel withAllIntegrationLinkCount(Integer allIntegrationLinkCount) {
         this.allIntegrationLinkCount = allIntegrationLinkCount;
         return this;
@@ -23,9 +24,11 @@ public class IntegrationLinkDetailsModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public IntegrationLinkDetail[] details;
+
     public IntegrationLinkDetailsModel withDetails(IntegrationLinkDetail[] details) {
         this.details = details;
         return this;
     }
     
+    public IntegrationLinkDetailsModel(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookDefinition {
     @JsonProperty("authentication")
     public WebhookAuthenticationTypeEnum authentication;
+
     public WebhookDefinition withAuthentication(WebhookAuthenticationTypeEnum authentication) {
         this.authentication = authentication;
         return this;
@@ -19,6 +20,7 @@ public class WebhookDefinition {
     
     @JsonProperty("authenticationConfiguration")
     public WebhookAuthConfiguration authenticationConfiguration;
+
     public WebhookDefinition withAuthenticationConfiguration(WebhookAuthConfiguration authenticationConfiguration) {
         this.authenticationConfiguration = authenticationConfiguration;
         return this;
@@ -26,6 +28,7 @@ public class WebhookDefinition {
     
     @JsonProperty("filters")
     public WebhookFilterRule[] filters;
+
     public WebhookDefinition withFilters(WebhookFilterRule[] filters) {
         this.filters = filters;
         return this;
@@ -33,6 +36,7 @@ public class WebhookDefinition {
     
     @JsonProperty("name")
     public String name;
+
     public WebhookDefinition withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class WebhookDefinition {
     
     @JsonProperty("targetAction")
     public String targetAction;
+
     public WebhookDefinition withTargetAction(String targetAction) {
         this.targetAction = targetAction;
         return this;
@@ -47,9 +52,18 @@ public class WebhookDefinition {
     
     @JsonProperty("targetPipeline")
     public String targetPipeline;
+
     public WebhookDefinition withTargetPipeline(String targetPipeline) {
         this.targetPipeline = targetPipeline;
         return this;
     }
     
+    public WebhookDefinition(@JsonProperty("authentication") WebhookAuthenticationTypeEnum authentication, @JsonProperty("authenticationConfiguration") WebhookAuthConfiguration authenticationConfiguration, @JsonProperty("filters") WebhookFilterRule[] filters, @JsonProperty("name") String name, @JsonProperty("targetAction") String targetAction, @JsonProperty("targetPipeline") String targetPipeline) {
+        this.authentication = authentication;
+        this.authenticationConfiguration = authenticationConfiguration;
+        this.filters = filters;
+        this.name = name;
+        this.targetAction = targetAction;
+        this.targetPipeline = targetPipeline;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEventDataStoreResponse {
@@ -12,6 +13,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object cloudTrailAccessNotEnabledException;
+
     public UpdateEventDataStoreResponse withCloudTrailAccessNotEnabledException(Object cloudTrailAccessNotEnabledException) {
         this.cloudTrailAccessNotEnabledException = cloudTrailAccessNotEnabledException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEventDataStoreResponse {
     
     
     public String contentType;
+
     public UpdateEventDataStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public UpdateEventDataStoreResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object eventDataStoreHasOngoingImportException;
+
     public UpdateEventDataStoreResponse withEventDataStoreHasOngoingImportException(Object eventDataStoreHasOngoingImportException) {
         this.eventDataStoreHasOngoingImportException = eventDataStoreHasOngoingImportException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public UpdateEventDataStoreResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public UpdateEventDataStoreResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public UpdateEventDataStoreResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public UpdateEventDataStoreResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object invalidEventSelectorsException;
+
     public UpdateEventDataStoreResponse withInvalidEventSelectorsException(Object invalidEventSelectorsException) {
         this.invalidEventSelectorsException = invalidEventSelectorsException;
         return this;
@@ -99,6 +109,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object invalidKmsKeyIdException;
+
     public UpdateEventDataStoreResponse withInvalidKmsKeyIdException(Object invalidKmsKeyIdException) {
         this.invalidKmsKeyIdException = invalidKmsKeyIdException;
         return this;
@@ -109,6 +120,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateEventDataStoreResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -119,6 +131,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object kmsException;
+
     public UpdateEventDataStoreResponse withKmsException(Object kmsException) {
         this.kmsException = kmsException;
         return this;
@@ -129,6 +142,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object kmsKeyNotFoundException;
+
     public UpdateEventDataStoreResponse withKmsKeyNotFoundException(Object kmsKeyNotFoundException) {
         this.kmsKeyNotFoundException = kmsKeyNotFoundException;
         return this;
@@ -139,6 +153,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public UpdateEventDataStoreResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -149,6 +164,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public UpdateEventDataStoreResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -159,6 +175,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateEventDataStoreResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -169,6 +186,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public UpdateEventDataStoreResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -179,6 +197,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object organizationsNotInUseException;
+
     public UpdateEventDataStoreResponse withOrganizationsNotInUseException(Object organizationsNotInUseException) {
         this.organizationsNotInUseException = organizationsNotInUseException;
         return this;
@@ -186,6 +205,7 @@ public class UpdateEventDataStoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateEventDataStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -193,6 +213,7 @@ public class UpdateEventDataStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEventDataStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -203,6 +224,7 @@ public class UpdateEventDataStoreResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdateEventDataStoreResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -213,9 +235,14 @@ public class UpdateEventDataStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEventDataStoreResponse updateEventDataStoreResponse;
+
     public UpdateEventDataStoreResponse withUpdateEventDataStoreResponse(org.openapis.openapi.models.shared.UpdateEventDataStoreResponse updateEventDataStoreResponse) {
         this.updateEventDataStoreResponse = updateEventDataStoreResponse;
         return this;
     }
     
+    public UpdateEventDataStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

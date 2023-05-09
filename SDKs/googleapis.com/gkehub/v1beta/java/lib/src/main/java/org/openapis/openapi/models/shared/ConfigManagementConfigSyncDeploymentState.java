@@ -18,6 +18,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admissionWebhook")
     public ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum admissionWebhook;
+
     public ConfigManagementConfigSyncDeploymentState withAdmissionWebhook(ConfigManagementConfigSyncDeploymentStateAdmissionWebhookEnum admissionWebhook) {
         this.admissionWebhook = admissionWebhook;
         return this;
@@ -29,6 +30,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitSync")
     public ConfigManagementConfigSyncDeploymentStateGitSyncEnum gitSync;
+
     public ConfigManagementConfigSyncDeploymentState withGitSync(ConfigManagementConfigSyncDeploymentStateGitSyncEnum gitSync) {
         this.gitSync = gitSync;
         return this;
@@ -40,6 +42,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importer")
     public ConfigManagementConfigSyncDeploymentStateImporterEnum importer;
+
     public ConfigManagementConfigSyncDeploymentState withImporter(ConfigManagementConfigSyncDeploymentStateImporterEnum importer) {
         this.importer = importer;
         return this;
@@ -51,6 +54,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitor")
     public ConfigManagementConfigSyncDeploymentStateMonitorEnum monitor;
+
     public ConfigManagementConfigSyncDeploymentState withMonitor(ConfigManagementConfigSyncDeploymentStateMonitorEnum monitor) {
         this.monitor = monitor;
         return this;
@@ -62,6 +66,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconcilerManager")
     public ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum reconcilerManager;
+
     public ConfigManagementConfigSyncDeploymentState withReconcilerManager(ConfigManagementConfigSyncDeploymentStateReconcilerManagerEnum reconcilerManager) {
         this.reconcilerManager = reconcilerManager;
         return this;
@@ -73,6 +78,7 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootReconciler")
     public ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum rootReconciler;
+
     public ConfigManagementConfigSyncDeploymentState withRootReconciler(ConfigManagementConfigSyncDeploymentStateRootReconcilerEnum rootReconciler) {
         this.rootReconciler = rootReconciler;
         return this;
@@ -84,9 +90,11 @@ public class ConfigManagementConfigSyncDeploymentState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncer")
     public ConfigManagementConfigSyncDeploymentStateSyncerEnum syncer;
+
     public ConfigManagementConfigSyncDeploymentState withSyncer(ConfigManagementConfigSyncDeploymentStateSyncerEnum syncer) {
         this.syncer = syncer;
         return this;
     }
     
+    public ConfigManagementConfigSyncDeploymentState(){}
 }

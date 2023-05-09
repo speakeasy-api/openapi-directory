@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteCoipCidrRequest {
     
     public String cidr;
+
     public DeleteCoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class DeleteCoipCidrRequest {
     
     
     public String coipPoolId;
+
     public DeleteCoipCidrRequest withCoipPoolId(String coipPoolId) {
         this.coipPoolId = coipPoolId;
         return this;
@@ -23,9 +25,14 @@ public class DeleteCoipCidrRequest {
     
     
     public Boolean dryRun;
+
     public DeleteCoipCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DeleteCoipCidrRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("CoipPoolId") String coipPoolId) {
+        this.cidr = cidr;
+        this.coipPoolId = coipPoolId;
+  }
 }

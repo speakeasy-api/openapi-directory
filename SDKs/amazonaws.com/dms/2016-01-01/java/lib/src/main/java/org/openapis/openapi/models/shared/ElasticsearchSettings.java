@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ElasticsearchSettings {
     @JsonProperty("EndpointUri")
     public String endpointUri;
+
     public ElasticsearchSettings withEndpointUri(String endpointUri) {
         this.endpointUri = endpointUri;
         return this;
@@ -22,6 +23,7 @@ public class ElasticsearchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorRetryDuration")
     public Long errorRetryDuration;
+
     public ElasticsearchSettings withErrorRetryDuration(Long errorRetryDuration) {
         this.errorRetryDuration = errorRetryDuration;
         return this;
@@ -30,6 +32,7 @@ public class ElasticsearchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullLoadErrorPercentage")
     public Long fullLoadErrorPercentage;
+
     public ElasticsearchSettings withFullLoadErrorPercentage(Long fullLoadErrorPercentage) {
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;
         return this;
@@ -37,6 +40,7 @@ public class ElasticsearchSettings {
     
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public ElasticsearchSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
@@ -45,9 +49,14 @@ public class ElasticsearchSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseNewMappingType")
     public Boolean useNewMappingType;
+
     public ElasticsearchSettings withUseNewMappingType(Boolean useNewMappingType) {
         this.useNewMappingType = useNewMappingType;
         return this;
     }
     
+    public ElasticsearchSettings(@JsonProperty("EndpointUri") String endpointUri, @JsonProperty("ServiceAccessRoleArn") String serviceAccessRoleArn) {
+        this.endpointUri = endpointUri;
+        this.serviceAccessRoleArn = serviceAccessRoleArn;
+  }
 }

@@ -15,9 +15,11 @@ public class WebDataExemption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public WebDataExemptionReasonEnum reason;
+
     public WebDataExemption withReason(WebDataExemptionReasonEnum reason) {
         this.reason = reason;
         return this;
     }
     
+    public WebDataExemption(){}
 }

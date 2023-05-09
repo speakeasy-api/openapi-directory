@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportTerminologyResponse {
@@ -12,6 +13,7 @@ public class ImportTerminologyResponse {
      */
     
     public Object concurrentModificationException;
+
     public ImportTerminologyResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class ImportTerminologyResponse {
     
     
     public String contentType;
+
     public ImportTerminologyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportTerminologyResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportTerminologyResponse importTerminologyResponse;
+
     public ImportTerminologyResponse withImportTerminologyResponse(org.openapis.openapi.models.shared.ImportTerminologyResponse importTerminologyResponse) {
         this.importTerminologyResponse = importTerminologyResponse;
         return this;
@@ -39,6 +43,7 @@ public class ImportTerminologyResponse {
      */
     
     public Object internalServerException;
+
     public ImportTerminologyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ImportTerminologyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ImportTerminologyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ImportTerminologyResponse {
      */
     
     public Object limitExceededException;
+
     public ImportTerminologyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ImportTerminologyResponse {
     
     
     public Integer statusCode;
+
     public ImportTerminologyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ImportTerminologyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportTerminologyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ImportTerminologyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ImportTerminologyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class ImportTerminologyResponse {
      */
     
     public Object tooManyTagsException;
+
     public ImportTerminologyResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public ImportTerminologyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

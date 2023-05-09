@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PlatformSummary {
     
     public String operatingSystemName;
+
     public PlatformSummary withOperatingSystemName(String operatingSystemName) {
         this.operatingSystemName = operatingSystemName;
         return this;
@@ -19,6 +20,7 @@ public class PlatformSummary {
     
     
     public String operatingSystemVersion;
+
     public PlatformSummary withOperatingSystemVersion(String operatingSystemVersion) {
         this.operatingSystemVersion = operatingSystemVersion;
         return this;
@@ -26,6 +28,7 @@ public class PlatformSummary {
     
     
     public String platformArn;
+
     public PlatformSummary withPlatformArn(String platformArn) {
         this.platformArn = platformArn;
         return this;
@@ -33,6 +36,7 @@ public class PlatformSummary {
     
     
     public String platformBranchLifecycleState;
+
     public PlatformSummary withPlatformBranchLifecycleState(String platformBranchLifecycleState) {
         this.platformBranchLifecycleState = platformBranchLifecycleState;
         return this;
@@ -40,6 +44,7 @@ public class PlatformSummary {
     
     
     public String platformBranchName;
+
     public PlatformSummary withPlatformBranchName(String platformBranchName) {
         this.platformBranchName = platformBranchName;
         return this;
@@ -47,6 +52,7 @@ public class PlatformSummary {
     
     
     public String platformCategory;
+
     public PlatformSummary withPlatformCategory(String platformCategory) {
         this.platformCategory = platformCategory;
         return this;
@@ -54,6 +60,7 @@ public class PlatformSummary {
     
     
     public String platformLifecycleState;
+
     public PlatformSummary withPlatformLifecycleState(String platformLifecycleState) {
         this.platformLifecycleState = platformLifecycleState;
         return this;
@@ -61,6 +68,7 @@ public class PlatformSummary {
     
     
     public String platformOwner;
+
     public PlatformSummary withPlatformOwner(String platformOwner) {
         this.platformOwner = platformOwner;
         return this;
@@ -68,6 +76,7 @@ public class PlatformSummary {
     
     
     public PlatformStatusEnum platformStatus;
+
     public PlatformSummary withPlatformStatus(PlatformStatusEnum platformStatus) {
         this.platformStatus = platformStatus;
         return this;
@@ -75,6 +84,7 @@ public class PlatformSummary {
     
     
     public String platformVersion;
+
     public PlatformSummary withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -82,6 +92,7 @@ public class PlatformSummary {
     
     
     public String[] supportedAddonList;
+
     public PlatformSummary withSupportedAddonList(String[] supportedAddonList) {
         this.supportedAddonList = supportedAddonList;
         return this;
@@ -89,9 +100,11 @@ public class PlatformSummary {
     
     
     public String[] supportedTierList;
+
     public PlatformSummary withSupportedTierList(String[] supportedTierList) {
         this.supportedTierList = supportedTierList;
         return this;
     }
     
+    public PlatformSummary(){}
 }

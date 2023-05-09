@@ -15,9 +15,11 @@ public class InvokeAsyncResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Long status;
+
     public InvokeAsyncResponse withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public InvokeAsyncResponse(){}
 }

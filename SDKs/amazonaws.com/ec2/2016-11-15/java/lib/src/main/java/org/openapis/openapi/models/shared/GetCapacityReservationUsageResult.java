@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetCapacityReservationUsageResult {
     
     public Long availableInstanceCount;
+
     public GetCapacityReservationUsageResult withAvailableInstanceCount(Long availableInstanceCount) {
         this.availableInstanceCount = availableInstanceCount;
         return this;
@@ -19,6 +20,7 @@ public class GetCapacityReservationUsageResult {
     
     
     public String capacityReservationId;
+
     public GetCapacityReservationUsageResult withCapacityReservationId(String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
         return this;
@@ -26,6 +28,7 @@ public class GetCapacityReservationUsageResult {
     
     
     public String instanceType;
+
     public GetCapacityReservationUsageResult withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,6 +36,7 @@ public class GetCapacityReservationUsageResult {
     
     
     public GetCapacityReservationUsageResultInstanceUsages[] instanceUsages;
+
     public GetCapacityReservationUsageResult withInstanceUsages(GetCapacityReservationUsageResultInstanceUsages[] instanceUsages) {
         this.instanceUsages = instanceUsages;
         return this;
@@ -40,6 +44,7 @@ public class GetCapacityReservationUsageResult {
     
     
     public String nextToken;
+
     public GetCapacityReservationUsageResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,6 +52,7 @@ public class GetCapacityReservationUsageResult {
     
     
     public GetCapacityReservationUsageResultStateEnum state;
+
     public GetCapacityReservationUsageResult withState(GetCapacityReservationUsageResultStateEnum state) {
         this.state = state;
         return this;
@@ -54,9 +60,11 @@ public class GetCapacityReservationUsageResult {
     
     
     public Long totalInstanceCount;
+
     public GetCapacityReservationUsageResult withTotalInstanceCount(Long totalInstanceCount) {
         this.totalInstanceCount = totalInstanceCount;
         return this;
     }
     
+    public GetCapacityReservationUsageResult(){}
 }

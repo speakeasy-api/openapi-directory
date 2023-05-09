@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ScheduledInstancesEbs {
     
     public Boolean deleteOnTermination;
+
     public ScheduledInstancesEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class ScheduledInstancesEbs {
     
     
     public Boolean encrypted;
+
     public ScheduledInstancesEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class ScheduledInstancesEbs {
     
     
     public Long iops;
+
     public ScheduledInstancesEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class ScheduledInstancesEbs {
     
     
     public String snapshotId;
+
     public ScheduledInstancesEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -40,6 +44,7 @@ public class ScheduledInstancesEbs {
     
     
     public Long volumeSize;
+
     public ScheduledInstancesEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -47,9 +52,11 @@ public class ScheduledInstancesEbs {
     
     
     public String volumeType;
+
     public ScheduledInstancesEbs withVolumeType(String volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public ScheduledInstancesEbs(){}
 }

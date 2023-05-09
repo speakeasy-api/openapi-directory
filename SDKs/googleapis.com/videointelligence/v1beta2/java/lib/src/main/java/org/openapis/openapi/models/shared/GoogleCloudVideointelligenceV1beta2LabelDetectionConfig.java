@@ -18,6 +18,7 @@ public class GoogleCloudVideointelligenceV1beta2LabelDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameConfidenceThreshold")
     public Float frameConfidenceThreshold;
+
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig withFrameConfidenceThreshold(Float frameConfidenceThreshold) {
         this.frameConfidenceThreshold = frameConfidenceThreshold;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVideointelligenceV1beta2LabelDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelDetectionMode")
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum labelDetectionMode;
+
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig withLabelDetectionMode(GoogleCloudVideointelligenceV1beta2LabelDetectionConfigLabelDetectionModeEnum labelDetectionMode) {
         this.labelDetectionMode = labelDetectionMode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVideointelligenceV1beta2LabelDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig withModel(String model) {
         this.model = model;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudVideointelligenceV1beta2LabelDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stationaryCamera")
     public Boolean stationaryCamera;
+
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig withStationaryCamera(Boolean stationaryCamera) {
         this.stationaryCamera = stationaryCamera;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudVideointelligenceV1beta2LabelDetectionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoConfidenceThreshold")
     public Float videoConfidenceThreshold;
+
     public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig withVideoConfidenceThreshold(Float videoConfidenceThreshold) {
         this.videoConfidenceThreshold = videoConfidenceThreshold;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1beta2LabelDetectionConfig(){}
 }

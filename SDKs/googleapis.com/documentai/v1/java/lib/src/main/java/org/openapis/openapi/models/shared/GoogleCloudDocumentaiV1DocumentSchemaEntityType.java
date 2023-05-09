@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentSchemaEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTypes")
     public String[] baseTypes;
+
     public GoogleCloudDocumentaiV1DocumentSchemaEntityType withBaseTypes(String[] baseTypes) {
         this.baseTypes = baseTypes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentSchemaEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDocumentaiV1DocumentSchemaEntityType withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1DocumentSchemaEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumValues")
     public GoogleCloudDocumentaiV1DocumentSchemaEntityTypeEnumValues enumValues;
+
     public GoogleCloudDocumentaiV1DocumentSchemaEntityType withEnumValues(GoogleCloudDocumentaiV1DocumentSchemaEntityTypeEnumValues enumValues) {
         this.enumValues = enumValues;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1DocumentSchemaEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1DocumentSchemaEntityType withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDocumentaiV1DocumentSchemaEntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty[] properties;
+
     public GoogleCloudDocumentaiV1DocumentSchemaEntityType withProperties(GoogleCloudDocumentaiV1DocumentSchemaEntityTypeProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentSchemaEntityType(){}
 }

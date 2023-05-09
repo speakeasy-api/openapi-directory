@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayVirtualInterfacesRequest {
     
     public Boolean dryRun;
+
     public DescribeLocalGatewayVirtualInterfacesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLocalGatewayVirtualInterfacesRequest {
     
     
     public DescribeLocalGatewayVirtualInterfacesRequestFilters[] filters;
+
     public DescribeLocalGatewayVirtualInterfacesRequest withFilters(DescribeLocalGatewayVirtualInterfacesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLocalGatewayVirtualInterfacesRequest {
     
     
     public String[] localGatewayVirtualInterfaceIds;
+
     public DescribeLocalGatewayVirtualInterfacesRequest withLocalGatewayVirtualInterfaceIds(String[] localGatewayVirtualInterfaceIds) {
         this.localGatewayVirtualInterfaceIds = localGatewayVirtualInterfaceIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLocalGatewayVirtualInterfacesRequest {
     
     
     public Long maxResults;
+
     public DescribeLocalGatewayVirtualInterfacesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeLocalGatewayVirtualInterfacesRequest {
     
     
     public String nextToken;
+
     public DescribeLocalGatewayVirtualInterfacesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewayVirtualInterfacesRequest(){}
 }

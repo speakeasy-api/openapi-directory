@@ -4,10 +4,13 @@
 
 package org.openapis.openapi;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
+import org.openapis.openapi.utils.JSON;
 import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
@@ -137,9 +140,9 @@ public class SDK {
 	 */
 	public static final String[] SERVERS = {
         /**
-         * API server
+         * V1 API server
          */
-        "https://api.contentgroove.com",
+        "https://api.contentgroove.com/api/v1",
 	};
 	
 	
@@ -245,8 +248,186 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
+
+    /**
+     * create clip
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateClipResponse createClip(org.openapis.openapi.models.operations.CreateClipRequestBody request, org.openapis.openapi.models.operations.CreateClipSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/clips");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateClipResponse res = new org.openapis.openapi.models.operations.CreateClipResponse(contentType, httpRes.statusCode()) {{
+            clipResponseObject = null;
+            unauthorizedErrorResponseObject = null;
+            paymentRequiredErrorResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ClipResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ClipResponseObject.class);
+                res.clipResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.UnauthorizedErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.UnauthorizedErrorResponseObject.class);
+                res.unauthorizedErrorResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 402) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PaymentRequiredErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaymentRequiredErrorResponseObject.class);
+                res.paymentRequiredErrorResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * create media
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateMediaResponse createMedia(org.openapis.openapi.models.operations.CreateMediaRequestBody request, org.openapis.openapi.models.operations.CreateMediaSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/medias");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateMediaResponse res = new org.openapis.openapi.models.operations.CreateMediaResponse(contentType, httpRes.statusCode()) {{
+            mediaResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.MediaResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.MediaResponseObject.class);
+                res.mediaResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 402) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * create webhook subscription
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateWebhookSubscriptionResponse createWebhookSubscription(org.openapis.openapi.models.operations.CreateWebhookSubscriptionRequestBody request, org.openapis.openapi.models.operations.CreateWebhookSubscriptionSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhook_subscriptions");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateWebhookSubscriptionResponse res = new org.openapis.openapi.models.operations.CreateWebhookSubscriptionResponse(contentType, httpRes.statusCode()) {{
+            webhookSubscriptionResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.WebhookSubscriptionResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.WebhookSubscriptionResponseObject.class);
+                res.webhookSubscriptionResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
+        }
+
+        return res;
+    }
 
     /**
      * delete clip
@@ -255,9 +436,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse deleteApiV1ClipsId(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1ClipsIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteClipByIdResponse deleteClipById(org.openapis.openapi.models.operations.DeleteClipByIdRequest request, org.openapis.openapi.models.operations.DeleteClipByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteClipByIdRequest.class, baseUrl, "/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -270,10 +451,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV1ClipsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteClipByIdResponse res = new org.openapis.openapi.models.operations.DeleteClipByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -289,9 +468,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1MediasIdResponse deleteApiV1MediasId(org.openapis.openapi.models.operations.DeleteApiV1MediasIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1MediasIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteMediaByIdResponse deleteMediaById(org.openapis.openapi.models.operations.DeleteMediaByIdRequest request, org.openapis.openapi.models.operations.DeleteMediaByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteMediaByIdRequest.class, baseUrl, "/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -304,10 +483,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV1MediasIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV1MediasIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMediaByIdResponse res = new org.openapis.openapi.models.operations.DeleteMediaByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
@@ -323,9 +500,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdResponse deleteApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdRequest request, org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdResponse deleteWebhookSubscriptionById(org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdRequest request, org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdRequest.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdRequest.class, baseUrl, "/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -338,53 +515,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.DeleteApiV1WebhookSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdResponse res = new org.openapis.openapi.models.operations.DeleteWebhookSubscriptionByIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
-        }
-
-        return res;
-    }
-
-    /**
-     * list clips
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetApiV1ClipsResponse getApiV1Clips(org.openapis.openapi.models.operations.GetApiV1ClipsRequest request, org.openapis.openapi.models.operations.GetApiV1ClipsSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/clips");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1ClipsRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetApiV1ClipsResponse res = new org.openapis.openapi.models.operations.GetApiV1ClipsResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
         }
 
         return res;
@@ -397,9 +532,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1ClipsIdResponse getApiV1ClipsId(org.openapis.openapi.models.operations.GetApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.GetApiV1ClipsIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetClipByIdResponse getClipById(org.openapis.openapi.models.operations.GetClipByIdRequest request, org.openapis.openapi.models.operations.GetClipByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetClipByIdRequest.class, baseUrl, "/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -412,65 +547,48 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1ClipsIdResponse res = new org.openapis.openapi.models.operations.GetApiV1ClipsIdResponse() {{
+        org.openapis.openapi.models.operations.GetClipByIdResponse res = new org.openapis.openapi.models.operations.GetClipByIdResponse(contentType, httpRes.statusCode()) {{
+            clipResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ClipResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ClipResponseObject.class);
+                res.clipResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
     }
 
     /**
-     * prepare presigned upload url
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.GetApiV1DirectUploadsResponse getApiV1DirectUploads() throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/direct_uploads");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._defaultClient;
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.GetApiV1DirectUploadsResponse res = new org.openapis.openapi.models.operations.GetApiV1DirectUploadsResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
-        }
-
-        return res;
-    }
-
-    /**
-     * list medias
+     * list clips
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1MediasResponse getApiV1Medias(org.openapis.openapi.models.operations.GetApiV1MediasRequest request, org.openapis.openapi.models.operations.GetApiV1MediasSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetClipsResponse getClips(org.openapis.openapi.models.operations.GetClipsRequest request, org.openapis.openapi.models.operations.GetClipsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/medias");
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/clips");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1MediasRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetClipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -483,13 +601,33 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1MediasResponse res = new org.openapis.openapi.models.operations.GetApiV1MediasResponse() {{
+        org.openapis.openapi.models.operations.GetClipsResponse res = new org.openapis.openapi.models.operations.GetClipsResponse(contentType, httpRes.statusCode()) {{
+            clipsResponseObject = null;
+            unauthorizedErrorResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ClipsResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ClipsResponseObject.class);
+                res.clipsResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.UnauthorizedErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.UnauthorizedErrorResponseObject.class);
+                res.unauthorizedErrorResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
@@ -502,9 +640,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1MediasIdResponse getApiV1MediasId(org.openapis.openapi.models.operations.GetApiV1MediasIdRequest request, org.openapis.openapi.models.operations.GetApiV1MediasIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediaByIdResponse getMediaById(org.openapis.openapi.models.operations.GetMediaByIdRequest request, org.openapis.openapi.models.operations.GetMediaByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetMediaByIdRequest.class, baseUrl, "/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -517,34 +655,48 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1MediasIdResponse res = new org.openapis.openapi.models.operations.GetApiV1MediasIdResponse() {{
+        org.openapis.openapi.models.operations.GetMediaByIdResponse res = new org.openapis.openapi.models.operations.GetMediaByIdResponse(contentType, httpRes.statusCode()) {{
+            mediaResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.MediaResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.MediaResponseObject.class);
+                res.mediaResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
     }
 
     /**
-     * list webhook subscriptions
+     * list medias
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsResponse getApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsRequest request, org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetMediasResponse getMedias(org.openapis.openapi.models.operations.GetMediasRequest request, org.openapis.openapi.models.operations.GetMediasSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/webhook_subscriptions");
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/medias");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetMediasRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -557,28 +709,41 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.GetMediasResponse res = new org.openapis.openapi.models.operations.GetMediasResponse(contentType, httpRes.statusCode()) {{
+            mediasResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.MediasResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.MediasResponseObject.class);
+                res.mediasResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
     }
 
     /**
-     * show webhook subscription
-     * @param request the request object containing all of the parameters for the API call
+     * prepare presigned upload url
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdResponse getApiV1WebhookSubscriptionsId(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdRequest request, org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetUploadUrlResponse getUploadUrl(org.openapis.openapi.models.operations.GetUploadUrlSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdRequest.class, baseUrl, "/api/v1/webhook_subscriptions/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/direct_uploads");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -591,37 +756,46 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdResponse res = new org.openapis.openapi.models.operations.GetApiV1WebhookSubscriptionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetUploadUrlResponse res = new org.openapis.openapi.models.operations.GetUploadUrlResponse(contentType, httpRes.statusCode()) {{
+            directUploadResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DirectUploadResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DirectUploadResponseObject.class);
+                res.directUploadResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
     }
 
     /**
-     * create clip
+     * show webhook subscription
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1ClipsResponse postApiV1Clips(org.openapis.openapi.models.operations.PostApiV1ClipsRequestBody request, org.openapis.openapi.models.operations.PostApiV1ClipsSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdResponse getWebhookSubscriptionById(org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdRequest request, org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/clips");
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdRequest.class, baseUrl, "/webhook_subscriptions/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("GET");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
         
         
         HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
@@ -630,38 +804,53 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV1ClipsResponse res = new org.openapis.openapi.models.operations.PostApiV1ClipsResponse() {{
+        org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdResponse res = new org.openapis.openapi.models.operations.GetWebhookSubscriptionByIdResponse(contentType, httpRes.statusCode()) {{
+            webhookSubscriptionResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 402 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.WebhookSubscriptionResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.WebhookSubscriptionResponseObject.class);
+                res.webhookSubscriptionResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
     }
 
     /**
-     * create media
+     * list webhook subscriptions
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiV1MediasResponse postApiV1Medias(org.openapis.openapi.models.operations.PostApiV1MediasRequestBody request, org.openapis.openapi.models.operations.PostApiV1MediasSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.GetWebhookSubscriptionsResponse getWebhookSubscriptions(org.openapis.openapi.models.operations.GetWebhookSubscriptionsRequest request, org.openapis.openapi.models.operations.GetWebhookSubscriptionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/medias");
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/webhook_subscriptions");
         
         HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
+        req.setMethod("GET");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
         
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.GetWebhookSubscriptionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
         
         HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
         
@@ -669,52 +858,27 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiV1MediasResponse res = new org.openapis.openapi.models.operations.PostApiV1MediasResponse() {{
+        org.openapis.openapi.models.operations.GetWebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.GetWebhookSubscriptionsResponse(contentType, httpRes.statusCode()) {{
+            webhookSubscriptionsResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 402 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.WebhookSubscriptionsResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.WebhookSubscriptionsResponseObject.class);
+                res.webhookSubscriptionsResponseObject = out;
+            }
         }
-
-        return res;
-    }
-
-    /**
-     * create webhook subscription
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsResponse postApiV1WebhookSubscriptions(org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsRequestBody request, org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/webhook_subscriptions");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
+        else if (httpRes.statusCode() == 401) {
         }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsResponse res = new org.openapis.openapi.models.operations.PostApiV1WebhookSubscriptionsResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
@@ -727,9 +891,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutApiV1ClipsIdResponse putApiV1ClipsId(org.openapis.openapi.models.operations.PutApiV1ClipsIdRequest request, org.openapis.openapi.models.operations.PutApiV1ClipsIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateClipByIdResponse updateClipById(org.openapis.openapi.models.operations.UpdateClipByIdRequest request, org.openapis.openapi.models.operations.UpdateClipByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1ClipsIdRequest.class, baseUrl, "/api/v1/clips/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateClipByIdRequest.class, baseUrl, "/clips/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -747,13 +911,27 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiV1ClipsIdResponse res = new org.openapis.openapi.models.operations.PutApiV1ClipsIdResponse() {{
+        org.openapis.openapi.models.operations.UpdateClipByIdResponse res = new org.openapis.openapi.models.operations.UpdateClipByIdResponse(contentType, httpRes.statusCode()) {{
+            clipResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ClipResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ClipResponseObject.class);
+                res.clipResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;
@@ -766,9 +944,9 @@ public class SDK {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PutApiV1MediasIdResponse putApiV1MediasId(org.openapis.openapi.models.operations.PutApiV1MediasIdRequest request, org.openapis.openapi.models.operations.PutApiV1MediasIdSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.UpdateMediaByIdResponse updateMediaById(org.openapis.openapi.models.operations.UpdateMediaByIdRequest request, org.openapis.openapi.models.operations.UpdateMediaByIdSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PutApiV1MediasIdRequest.class, baseUrl, "/api/v1/medias/{id}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UpdateMediaByIdRequest.class, baseUrl, "/medias/{id}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PUT");
@@ -786,13 +964,27 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiV1MediasIdResponse res = new org.openapis.openapi.models.operations.PutApiV1MediasIdResponse() {{
+        org.openapis.openapi.models.operations.UpdateMediaByIdResponse res = new org.openapis.openapi.models.operations.UpdateMediaByIdResponse(contentType, httpRes.statusCode()) {{
+            mediaResponseObject = null;
+            tooManyRequestsErrorResponseObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.MediaResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.MediaResponseObject.class);
+                res.mediaResponseObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
+        }
+        else if (httpRes.statusCode() == 429) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.TooManyRequestsErrorResponseObject.class);
+                res.tooManyRequestsErrorResponseObject = out;
+            }
         }
 
         return res;

@@ -15,6 +15,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateDeploymentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentDeploymentSpecification> components;
+
     public CreateDeploymentRequestBody withComponents(java.util.Map<String, org.openapis.openapi.models.shared.ComponentDeploymentSpecification> components) {
         this.components = components;
         return this;
@@ -37,6 +39,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentName")
     public String deploymentName;
+
     public CreateDeploymentRequestBody withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -48,6 +51,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentPolicies")
     public CreateDeploymentRequestBodyDeploymentPolicies deploymentPolicies;
+
     public CreateDeploymentRequestBody withDeploymentPolicies(CreateDeploymentRequestBodyDeploymentPolicies deploymentPolicies) {
         this.deploymentPolicies = deploymentPolicies;
         return this;
@@ -59,6 +63,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobConfiguration")
     public CreateDeploymentRequestBodyIotJobConfiguration iotJobConfiguration;
+
     public CreateDeploymentRequestBody withIotJobConfiguration(CreateDeploymentRequestBodyIotJobConfiguration iotJobConfiguration) {
         this.iotJobConfiguration = iotJobConfiguration;
         return this;
@@ -70,6 +75,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentTargetArn")
     public String parentTargetArn;
+
     public CreateDeploymentRequestBody withParentTargetArn(String parentTargetArn) {
         this.parentTargetArn = parentTargetArn;
         return this;
@@ -81,6 +87,7 @@ public class CreateDeploymentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateDeploymentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -91,9 +98,13 @@ public class CreateDeploymentRequestBody {
      */
     @JsonProperty("targetArn")
     public String targetArn;
+
     public CreateDeploymentRequestBody withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public CreateDeploymentRequestBody(@JsonProperty("targetArn") String targetArn) {
+        this.targetArn = targetArn;
+  }
 }

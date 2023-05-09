@@ -15,6 +15,7 @@ public class GetAppsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppsList")
     public AppsListData appsList;
+
     public GetAppsListResponse withAppsList(AppsListData appsList) {
         this.appsList = appsList;
         return this;
@@ -23,9 +24,11 @@ public class GetAppsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppsListArn")
     public String appsListArn;
+
     public GetAppsListResponse withAppsListArn(String appsListArn) {
         this.appsListArn = appsListArn;
         return this;
     }
     
+    public GetAppsListResponse(){}
 }

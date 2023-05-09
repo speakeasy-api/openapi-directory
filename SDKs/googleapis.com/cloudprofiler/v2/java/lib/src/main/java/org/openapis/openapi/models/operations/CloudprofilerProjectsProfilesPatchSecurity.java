@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CloudprofilerProjectsProfilesPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public CloudprofilerProjectsProfilesPatchSecurityOption1 option1;
+
     public CloudprofilerProjectsProfilesPatchSecurity withOption1(CloudprofilerProjectsProfilesPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class CloudprofilerProjectsProfilesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudprofilerProjectsProfilesPatchSecurityOption2 option2;
+
     public CloudprofilerProjectsProfilesPatchSecurity withOption2(CloudprofilerProjectsProfilesPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class CloudprofilerProjectsProfilesPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public CloudprofilerProjectsProfilesPatchSecurityOption3 option3;
+
     public CloudprofilerProjectsProfilesPatchSecurity withOption3(CloudprofilerProjectsProfilesPatchSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public CloudprofilerProjectsProfilesPatchSecurity(){}
 }

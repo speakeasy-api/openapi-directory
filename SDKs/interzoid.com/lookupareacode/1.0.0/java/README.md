@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetareacodeRequest;
 import org.openapis.openapi.models.operations.GetareacodeResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetareacodeRequest req = new GetareacodeRequest() {{
-                areacode = "corrupti";
-                license = "provident";
-            }}            
+            GetareacodeRequest req = new GetareacodeRequest("corrupti", "provident");            
 
             GetareacodeResponse res = sdk.areaCodeInformation.getareacode(req);
 
-            if (res.getareacode200ApplicationJSONObject.isPresent()) {
+            if (res.getareacode200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### areaCodeInformation
+### [areaCodeInformation](docs/areacodeinformation/README.md)
 
-* `getareacode` - Gets telephone area code information
+* [getareacode](docs/areacodeinformation/README.md#getareacode) - Gets telephone area code information
 <!-- End SDK Available Operations -->
 
 ### Maturity

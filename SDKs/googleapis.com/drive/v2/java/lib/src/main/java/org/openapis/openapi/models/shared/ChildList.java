@@ -18,6 +18,7 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ChildList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ChildReference[] items;
+
     public ChildList withItems(ChildReference[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ChildList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextLink")
     public String nextLink;
+
     public ChildList withNextLink(String nextLink) {
         this.nextLink = nextLink;
         return this;
@@ -62,6 +66,7 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ChildList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -73,9 +78,11 @@ public class ChildList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ChildList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ChildList(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetSpotPlacementScoresResult {
     
     public String nextToken;
+
     public GetSpotPlacementScoresResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class GetSpotPlacementScoresResult {
     
     
     public GetSpotPlacementScoresResultSpotPlacementScores[] spotPlacementScores;
+
     public GetSpotPlacementScoresResult withSpotPlacementScores(GetSpotPlacementScoresResultSpotPlacementScores[] spotPlacementScores) {
         this.spotPlacementScores = spotPlacementScores;
         return this;
     }
     
+    public GetSpotPlacementScoresResult(){}
 }

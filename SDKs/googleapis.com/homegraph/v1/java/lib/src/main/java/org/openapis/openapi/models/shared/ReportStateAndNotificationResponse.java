@@ -18,9 +18,11 @@ public class ReportStateAndNotificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public ReportStateAndNotificationResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public ReportStateAndNotificationResponse(){}
 }

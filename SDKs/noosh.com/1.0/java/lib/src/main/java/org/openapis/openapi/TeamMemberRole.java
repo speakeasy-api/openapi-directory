@@ -50,7 +50,7 @@ public class TeamMemberRole {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMemberRolesResponse res = new org.openapis.openapi.models.operations.GetMemberRolesResponse() {{
+        org.openapis.openapi.models.operations.GetMemberRolesResponse res = new org.openapis.openapi.models.operations.GetMemberRolesResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -68,8 +68,6 @@ public class TeamMemberRole {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

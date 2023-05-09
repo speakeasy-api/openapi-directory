@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodePushDeploymentUploadCreateResponse {
     
     public String contentType;
+
     public CodePushDeploymentUploadCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodePushDeploymentUploadCreateResponse {
     
     
     public Integer statusCode;
+
     public CodePushDeploymentUploadCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodePushDeploymentUploadCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodePushDeploymentUploadCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodePushDeploymentUploadCreateResponse {
      */
     
     public CodePushDeploymentUploadCreate200ApplicationJSON codePushDeploymentUploadCreate200ApplicationJSONObject;
+
     public CodePushDeploymentUploadCreateResponse withCodePushDeploymentUploadCreate200ApplicationJSONObject(CodePushDeploymentUploadCreate200ApplicationJSON codePushDeploymentUploadCreate200ApplicationJSONObject) {
         this.codePushDeploymentUploadCreate200ApplicationJSONObject = codePushDeploymentUploadCreate200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class CodePushDeploymentUploadCreateResponse {
      */
     
     public CodePushDeploymentUploadCreateDefaultApplicationJSON codePushDeploymentUploadCreateDefaultApplicationJSONObject;
+
     public CodePushDeploymentUploadCreateResponse withCodePushDeploymentUploadCreateDefaultApplicationJSONObject(CodePushDeploymentUploadCreateDefaultApplicationJSON codePushDeploymentUploadCreateDefaultApplicationJSONObject) {
         this.codePushDeploymentUploadCreateDefaultApplicationJSONObject = codePushDeploymentUploadCreateDefaultApplicationJSONObject;
         return this;
     }
     
+    public CodePushDeploymentUploadCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

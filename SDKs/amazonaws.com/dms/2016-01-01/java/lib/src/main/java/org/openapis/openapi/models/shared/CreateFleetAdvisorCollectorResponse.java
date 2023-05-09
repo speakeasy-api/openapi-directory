@@ -15,6 +15,7 @@ public class CreateFleetAdvisorCollectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectorName")
     public String collectorName;
+
     public CreateFleetAdvisorCollectorResponse withCollectorName(String collectorName) {
         this.collectorName = collectorName;
         return this;
@@ -23,6 +24,7 @@ public class CreateFleetAdvisorCollectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectorReferencedId")
     public String collectorReferencedId;
+
     public CreateFleetAdvisorCollectorResponse withCollectorReferencedId(String collectorReferencedId) {
         this.collectorReferencedId = collectorReferencedId;
         return this;
@@ -31,6 +33,7 @@ public class CreateFleetAdvisorCollectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateFleetAdvisorCollectorResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class CreateFleetAdvisorCollectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CreateFleetAdvisorCollectorResponse withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -47,9 +51,11 @@ public class CreateFleetAdvisorCollectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public CreateFleetAdvisorCollectorResponse withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public CreateFleetAdvisorCollectorResponse(){}
 }

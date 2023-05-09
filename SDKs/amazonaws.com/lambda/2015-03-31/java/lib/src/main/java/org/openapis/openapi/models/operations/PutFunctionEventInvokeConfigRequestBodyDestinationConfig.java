@@ -15,6 +15,7 @@ public class PutFunctionEventInvokeConfigRequestBodyDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnFailure")
     public org.openapis.openapi.models.shared.OnFailure onFailure;
+
     public PutFunctionEventInvokeConfigRequestBodyDestinationConfig withOnFailure(org.openapis.openapi.models.shared.OnFailure onFailure) {
         this.onFailure = onFailure;
         return this;
@@ -23,9 +24,11 @@ public class PutFunctionEventInvokeConfigRequestBodyDestinationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnSuccess")
     public org.openapis.openapi.models.shared.OnSuccess onSuccess;
+
     public PutFunctionEventInvokeConfigRequestBodyDestinationConfig withOnSuccess(org.openapis.openapi.models.shared.OnSuccess onSuccess) {
         this.onSuccess = onSuccess;
         return this;
     }
     
+    public PutFunctionEventInvokeConfigRequestBodyDestinationConfig(){}
 }

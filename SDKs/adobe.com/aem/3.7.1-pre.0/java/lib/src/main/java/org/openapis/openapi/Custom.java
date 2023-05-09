@@ -49,11 +49,9 @@ public class Custom {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAemHealthCheckResponse res = new org.openapis.openapi.models.operations.GetAemHealthCheckResponse() {{
+        org.openapis.openapi.models.operations.GetAemHealthCheckResponse res = new org.openapis.openapi.models.operations.GetAemHealthCheckResponse(contentType, httpRes.statusCode()) {{
             getAemHealthCheckDefaultApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -87,10 +85,8 @@ public class Custom {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigAemHealthCheckServletResponse res = new org.openapis.openapi.models.operations.PostConfigAemHealthCheckServletResponse() {{
+        org.openapis.openapi.models.operations.PostConfigAemHealthCheckServletResponse res = new org.openapis.openapi.models.operations.PostConfigAemHealthCheckServletResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -120,10 +116,8 @@ public class Custom {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigAemPasswordResetResponse res = new org.openapis.openapi.models.operations.PostConfigAemPasswordResetResponse() {{
+        org.openapis.openapi.models.operations.PostConfigAemPasswordResetResponse res = new org.openapis.openapi.models.operations.PostConfigAemPasswordResetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

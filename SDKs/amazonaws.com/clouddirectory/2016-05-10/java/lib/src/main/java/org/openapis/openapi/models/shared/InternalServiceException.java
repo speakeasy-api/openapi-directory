@@ -15,9 +15,11 @@ public class InternalServiceException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public InternalServiceException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InternalServiceException(){}
 }

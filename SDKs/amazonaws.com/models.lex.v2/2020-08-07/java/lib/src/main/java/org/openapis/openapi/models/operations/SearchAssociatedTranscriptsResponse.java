@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchAssociatedTranscriptsResponse {
     
     public String contentType;
+
     public SearchAssociatedTranscriptsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public Object internalServerException;
+
     public SearchAssociatedTranscriptsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchAssociatedTranscriptsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchAssociatedTranscriptsResponse searchAssociatedTranscriptsResponse;
+
     public SearchAssociatedTranscriptsResponse withSearchAssociatedTranscriptsResponse(org.openapis.openapi.models.shared.SearchAssociatedTranscriptsResponse searchAssociatedTranscriptsResponse) {
         this.searchAssociatedTranscriptsResponse = searchAssociatedTranscriptsResponse;
         return this;
@@ -49,6 +54,7 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public SearchAssociatedTranscriptsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class SearchAssociatedTranscriptsResponse {
     
     
     public Integer statusCode;
+
     public SearchAssociatedTranscriptsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchAssociatedTranscriptsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchAssociatedTranscriptsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public Object throttlingException;
+
     public SearchAssociatedTranscriptsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class SearchAssociatedTranscriptsResponse {
      */
     
     public Object validationException;
+
     public SearchAssociatedTranscriptsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SearchAssociatedTranscriptsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleAnalyticsAdminV1alphaAudienceFilterClause - A clause for defining either a simple or sequence filter. A filter can be inclusive (i.e., users satisfying the filter clause are included in the Audience) or exclusive (i.e., users satisfying the filter clause are excluded from the Audience).
+ * GoogleAnalyticsAdminV1alphaAudienceFilterClause - A clause for defining either a simple or sequence filter. A filter can be inclusive (For example, users satisfying the filter clause are included in the Audience) or exclusive (For example, users satisfying the filter clause are excluded from the Audience).
  */
 public class GoogleAnalyticsAdminV1alphaAudienceFilterClause {
     /**
@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clauseType")
     public GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum clauseType;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterClause withClauseType(GoogleAnalyticsAdminV1alphaAudienceFilterClauseClauseTypeEnum clauseType) {
         this.clauseType = clauseType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceFilter")
     public GoogleAnalyticsAdminV1alphaAudienceSequenceFilter sequenceFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterClause withSequenceFilter(GoogleAnalyticsAdminV1alphaAudienceSequenceFilter sequenceFilter) {
         this.sequenceFilter = sequenceFilter;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1alphaAudienceFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleFilter")
     public GoogleAnalyticsAdminV1alphaAudienceSimpleFilter simpleFilter;
+
     public GoogleAnalyticsAdminV1alphaAudienceFilterClause withSimpleFilter(GoogleAnalyticsAdminV1alphaAudienceSimpleFilter simpleFilter) {
         this.simpleFilter = simpleFilter;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAudienceFilterClause(){}
 }

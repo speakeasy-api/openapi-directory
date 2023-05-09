@@ -12,6 +12,7 @@ public class CompanyLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCredentials")
     public LinksElement apiCredentials;
+
     public CompanyLinks withApiCredentials(LinksElement apiCredentials) {
         this.apiCredentials = apiCredentials;
         return this;
@@ -19,6 +20,7 @@ public class CompanyLinks {
     
     @JsonProperty("self")
     public LinksElement self;
+
     public CompanyLinks withSelf(LinksElement self) {
         this.self = self;
         return this;
@@ -27,6 +29,7 @@ public class CompanyLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public LinksElement users;
+
     public CompanyLinks withUsers(LinksElement users) {
         this.users = users;
         return this;
@@ -35,9 +38,13 @@ public class CompanyLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public LinksElement webhooks;
+
     public CompanyLinks withWebhooks(LinksElement webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public CompanyLinks(@JsonProperty("self") LinksElement self) {
+        this.self = self;
+  }
 }

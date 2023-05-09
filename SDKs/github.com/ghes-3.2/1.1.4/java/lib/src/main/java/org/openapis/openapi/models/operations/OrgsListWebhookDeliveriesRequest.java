@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListWebhookDeliveriesRequest {
@@ -12,6 +13,7 @@ public class OrgsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public OrgsListWebhookDeliveriesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +24,7 @@ public class OrgsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hook_id")
     public Long hookId;
+
     public OrgsListWebhookDeliveriesRequest withHookId(Long hookId) {
         this.hookId = hookId;
         return this;
@@ -32,6 +35,7 @@ public class OrgsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsListWebhookDeliveriesRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -42,9 +46,14 @@ public class OrgsListWebhookDeliveriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsListWebhookDeliveriesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public OrgsListWebhookDeliveriesRequest(@JsonProperty("hook_id") Long hookId, @JsonProperty("org") String org) {
+        this.hookId = hookId;
+        this.org = org;
+  }
 }

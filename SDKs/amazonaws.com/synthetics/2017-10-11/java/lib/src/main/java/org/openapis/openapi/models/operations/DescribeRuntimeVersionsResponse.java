@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRuntimeVersionsResponse {
     
     public String contentType;
+
     public DescribeRuntimeVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRuntimeVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRuntimeVersionsResponse describeRuntimeVersionsResponse;
+
     public DescribeRuntimeVersionsResponse withDescribeRuntimeVersionsResponse(org.openapis.openapi.models.shared.DescribeRuntimeVersionsResponse describeRuntimeVersionsResponse) {
         this.describeRuntimeVersionsResponse = describeRuntimeVersionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRuntimeVersionsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRuntimeVersionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeRuntimeVersionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeRuntimeVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeRuntimeVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRuntimeVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeRuntimeVersionsResponse {
      */
     
     public Object validationException;
+
     public DescribeRuntimeVersionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeRuntimeVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

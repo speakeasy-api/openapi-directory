@@ -22,9 +22,11 @@ public class PutApprovalResultOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("approvedAt")
     public OffsetDateTime approvedAt;
+
     public PutApprovalResultOutput withApprovedAt(OffsetDateTime approvedAt) {
         this.approvedAt = approvedAt;
         return this;
     }
     
+    public PutApprovalResultOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest {
@@ -12,6 +13,7 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
     public GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum aspectId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withAspectId(GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum aspectId) {
         this.aspectId = aspectId;
         return this;
@@ -22,6 +24,7 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixDocumentId")
     public String civixDocumentId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withCivixDocumentId(String civixDocumentId) {
         this.civixDocumentId = civixDocumentId;
         return this;
@@ -32,6 +35,7 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=civixIndexId")
     public String civixIndexId;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withCivixIndexId(String civixIndexId) {
         this.civixIndexId = civixIndexId;
         return this;
@@ -42,9 +46,16 @@ public class GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringR
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=searchString")
     public String searchString;
+
     public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest withSearchString(String searchString) {
         this.searchString = searchString;
         return this;
     }
     
+    public GetDocumentIdAspectIdCivixIndexIdCivixDocumentIdSearchSearchStringRequest(@JsonProperty("aspectId") GetDocumentIDAspectIDCivixIndexIDCivixDocumentIDSearchSearchStringAspectIDEnum aspectId, @JsonProperty("civixDocumentId") String civixDocumentId, @JsonProperty("civixIndexId") String civixIndexId, @JsonProperty("searchString") String searchString) {
+        this.aspectId = aspectId;
+        this.civixDocumentId = civixDocumentId;
+        this.civixIndexId = civixIndexId;
+        this.searchString = searchString;
+  }
 }

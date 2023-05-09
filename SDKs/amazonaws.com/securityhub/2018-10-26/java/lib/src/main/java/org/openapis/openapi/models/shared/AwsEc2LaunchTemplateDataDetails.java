@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockDeviceMappingSet")
     public AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails[] blockDeviceMappingSet;
+
     public AwsEc2LaunchTemplateDataDetails withBlockDeviceMappingSet(AwsEc2LaunchTemplateDataBlockDeviceMappingSetDetails[] blockDeviceMappingSet) {
         this.blockDeviceMappingSet = blockDeviceMappingSet;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationSpecification")
     public AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails capacityReservationSpecification;
+
     public AwsEc2LaunchTemplateDataDetails withCapacityReservationSpecification(AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails capacityReservationSpecification) {
         this.capacityReservationSpecification = capacityReservationSpecification;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CpuOptions")
     public AwsEc2LaunchTemplateDataCpuOptionsDetails cpuOptions;
+
     public AwsEc2LaunchTemplateDataDetails withCpuOptions(AwsEc2LaunchTemplateDataCpuOptionsDetails cpuOptions) {
         this.cpuOptions = cpuOptions;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditSpecification")
     public AwsEc2LaunchTemplateDataCreditSpecificationDetails creditSpecification;
+
     public AwsEc2LaunchTemplateDataDetails withCreditSpecification(AwsEc2LaunchTemplateDataCreditSpecificationDetails creditSpecification) {
         this.creditSpecification = creditSpecification;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableApiStop")
     public Boolean disableApiStop;
+
     public AwsEc2LaunchTemplateDataDetails withDisableApiStop(Boolean disableApiStop) {
         this.disableApiStop = disableApiStop;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableApiTermination")
     public Boolean disableApiTermination;
+
     public AwsEc2LaunchTemplateDataDetails withDisableApiTermination(Boolean disableApiTermination) {
         this.disableApiTermination = disableApiTermination;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public AwsEc2LaunchTemplateDataDetails withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticGpuSpecificationSet")
     public AwsEc2LaunchTemplateDataElasticGpuSpecificationSetDetails[] elasticGpuSpecificationSet;
+
     public AwsEc2LaunchTemplateDataDetails withElasticGpuSpecificationSet(AwsEc2LaunchTemplateDataElasticGpuSpecificationSetDetails[] elasticGpuSpecificationSet) {
         this.elasticGpuSpecificationSet = elasticGpuSpecificationSet;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticInferenceAcceleratorSet")
     public AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails[] elasticInferenceAcceleratorSet;
+
     public AwsEc2LaunchTemplateDataDetails withElasticInferenceAcceleratorSet(AwsEc2LaunchTemplateDataElasticInferenceAcceleratorSetDetails[] elasticInferenceAcceleratorSet) {
         this.elasticInferenceAcceleratorSet = elasticInferenceAcceleratorSet;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnclaveOptions")
     public AwsEc2LaunchTemplateDataEnclaveOptionsDetails enclaveOptions;
+
     public AwsEc2LaunchTemplateDataDetails withEnclaveOptions(AwsEc2LaunchTemplateDataEnclaveOptionsDetails enclaveOptions) {
         this.enclaveOptions = enclaveOptions;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HibernationOptions")
     public AwsEc2LaunchTemplateDataHibernationOptionsDetails hibernationOptions;
+
     public AwsEc2LaunchTemplateDataDetails withHibernationOptions(AwsEc2LaunchTemplateDataHibernationOptionsDetails hibernationOptions) {
         this.hibernationOptions = hibernationOptions;
         return this;
@@ -103,6 +114,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IamInstanceProfile")
     public AwsEc2LaunchTemplateDataIamInstanceProfileDetails iamInstanceProfile;
+
     public AwsEc2LaunchTemplateDataDetails withIamInstanceProfile(AwsEc2LaunchTemplateDataIamInstanceProfileDetails iamInstanceProfile) {
         this.iamInstanceProfile = iamInstanceProfile;
         return this;
@@ -111,6 +123,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public AwsEc2LaunchTemplateDataDetails withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -119,6 +132,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceInitiatedShutdownBehavior")
     public String instanceInitiatedShutdownBehavior;
+
     public AwsEc2LaunchTemplateDataDetails withInstanceInitiatedShutdownBehavior(String instanceInitiatedShutdownBehavior) {
         this.instanceInitiatedShutdownBehavior = instanceInitiatedShutdownBehavior;
         return this;
@@ -127,6 +141,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceMarketOptions")
     public AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails instanceMarketOptions;
+
     public AwsEc2LaunchTemplateDataDetails withInstanceMarketOptions(AwsEc2LaunchTemplateDataInstanceMarketOptionsDetails instanceMarketOptions) {
         this.instanceMarketOptions = instanceMarketOptions;
         return this;
@@ -135,6 +150,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceRequirements")
     public AwsEc2LaunchTemplateDataInstanceRequirementsDetails instanceRequirements;
+
     public AwsEc2LaunchTemplateDataDetails withInstanceRequirements(AwsEc2LaunchTemplateDataInstanceRequirementsDetails instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -143,6 +159,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public AwsEc2LaunchTemplateDataDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -151,6 +168,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelId")
     public String kernelId;
+
     public AwsEc2LaunchTemplateDataDetails withKernelId(String kernelId) {
         this.kernelId = kernelId;
         return this;
@@ -159,6 +177,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyName")
     public String keyName;
+
     public AwsEc2LaunchTemplateDataDetails withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
@@ -167,6 +186,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseSet")
     public AwsEc2LaunchTemplateDataLicenseSetDetails[] licenseSet;
+
     public AwsEc2LaunchTemplateDataDetails withLicenseSet(AwsEc2LaunchTemplateDataLicenseSetDetails[] licenseSet) {
         this.licenseSet = licenseSet;
         return this;
@@ -175,6 +195,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaintenanceOptions")
     public AwsEc2LaunchTemplateDataMaintenanceOptionsDetails maintenanceOptions;
+
     public AwsEc2LaunchTemplateDataDetails withMaintenanceOptions(AwsEc2LaunchTemplateDataMaintenanceOptionsDetails maintenanceOptions) {
         this.maintenanceOptions = maintenanceOptions;
         return this;
@@ -183,6 +204,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataOptions")
     public AwsEc2LaunchTemplateDataMetadataOptionsDetails metadataOptions;
+
     public AwsEc2LaunchTemplateDataDetails withMetadataOptions(AwsEc2LaunchTemplateDataMetadataOptionsDetails metadataOptions) {
         this.metadataOptions = metadataOptions;
         return this;
@@ -191,6 +213,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monitoring")
     public AwsEc2LaunchTemplateDataMonitoringDetails monitoring;
+
     public AwsEc2LaunchTemplateDataDetails withMonitoring(AwsEc2LaunchTemplateDataMonitoringDetails monitoring) {
         this.monitoring = monitoring;
         return this;
@@ -199,6 +222,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceSet")
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails[] networkInterfaceSet;
+
     public AwsEc2LaunchTemplateDataDetails withNetworkInterfaceSet(AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails[] networkInterfaceSet) {
         this.networkInterfaceSet = networkInterfaceSet;
         return this;
@@ -207,6 +231,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Placement")
     public AwsEc2LaunchTemplateDataPlacementDetails placement;
+
     public AwsEc2LaunchTemplateDataDetails withPlacement(AwsEc2LaunchTemplateDataPlacementDetails placement) {
         this.placement = placement;
         return this;
@@ -215,6 +240,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateDnsNameOptions")
     public AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails privateDnsNameOptions;
+
     public AwsEc2LaunchTemplateDataDetails withPrivateDnsNameOptions(AwsEc2LaunchTemplateDataPrivateDnsNameOptionsDetails privateDnsNameOptions) {
         this.privateDnsNameOptions = privateDnsNameOptions;
         return this;
@@ -223,6 +249,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RamDiskId")
     public String ramDiskId;
+
     public AwsEc2LaunchTemplateDataDetails withRamDiskId(String ramDiskId) {
         this.ramDiskId = ramDiskId;
         return this;
@@ -231,6 +258,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIdSet")
     public String[] securityGroupIdSet;
+
     public AwsEc2LaunchTemplateDataDetails withSecurityGroupIdSet(String[] securityGroupIdSet) {
         this.securityGroupIdSet = securityGroupIdSet;
         return this;
@@ -239,6 +267,7 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupSet")
     public String[] securityGroupSet;
+
     public AwsEc2LaunchTemplateDataDetails withSecurityGroupSet(String[] securityGroupSet) {
         this.securityGroupSet = securityGroupSet;
         return this;
@@ -247,9 +276,11 @@ public class AwsEc2LaunchTemplateDataDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserData")
     public String userData;
+
     public AwsEc2LaunchTemplateDataDetails withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataDetails(){}
 }

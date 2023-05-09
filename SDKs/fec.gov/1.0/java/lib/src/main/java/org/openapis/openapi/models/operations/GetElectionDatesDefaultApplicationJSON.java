@@ -12,6 +12,7 @@ public class GetElectionDatesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.OffsetInfo pagination;
+
     public GetElectionDatesDefaultApplicationJSON withPagination(org.openapis.openapi.models.shared.OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class GetElectionDatesDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.ElectionDate[] results;
+
     public GetElectionDatesDefaultApplicationJSON withResults(org.openapis.openapi.models.shared.ElectionDate[] results) {
         this.results = results;
         return this;
     }
     
+    public GetElectionDatesDefaultApplicationJSON(){}
 }

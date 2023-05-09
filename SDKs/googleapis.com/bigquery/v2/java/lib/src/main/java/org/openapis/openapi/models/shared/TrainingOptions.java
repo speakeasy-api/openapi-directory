@@ -18,6 +18,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustStepChanges")
     public Boolean adjustStepChanges;
+
     public TrainingOptions withAdjustStepChanges(Boolean adjustStepChanges) {
         this.adjustStepChanges = adjustStepChanges;
         return this;
@@ -29,19 +30,33 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoArima")
     public Boolean autoArima;
+
     public TrainingOptions withAutoArima(Boolean autoArima) {
         this.autoArima = autoArima;
         return this;
     }
     
     /**
-     * The max value of non-seasonal p and q.
+     * The max value of the sum of non-seasonal p and q.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoArimaMaxOrder")
     public String autoArimaMaxOrder;
+
     public TrainingOptions withAutoArimaMaxOrder(String autoArimaMaxOrder) {
         this.autoArimaMaxOrder = autoArimaMaxOrder;
+        return this;
+    }
+    
+    /**
+     * The min value of the sum of non-seasonal p and q.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("autoArimaMinOrder")
+    public String autoArimaMinOrder;
+
+    public TrainingOptions withAutoArimaMinOrder(String autoArimaMinOrder) {
+        this.autoArimaMinOrder = autoArimaMinOrder;
         return this;
     }
     
@@ -51,6 +66,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSize")
     public String batchSize;
+
     public TrainingOptions withBatchSize(String batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -62,6 +78,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boosterType")
     public TrainingOptionsBoosterTypeEnum boosterType;
+
     public TrainingOptions withBoosterType(TrainingOptionsBoosterTypeEnum boosterType) {
         this.boosterType = boosterType;
         return this;
@@ -73,6 +90,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatePValues")
     public Boolean calculatePValues;
+
     public TrainingOptions withCalculatePValues(Boolean calculatePValues) {
         this.calculatePValues = calculatePValues;
         return this;
@@ -84,6 +102,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cleanSpikesAndDips")
     public Boolean cleanSpikesAndDips;
+
     public TrainingOptions withCleanSpikesAndDips(Boolean cleanSpikesAndDips) {
         this.cleanSpikesAndDips = cleanSpikesAndDips;
         return this;
@@ -95,6 +114,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorSpace")
     public TrainingOptionsColorSpaceEnum colorSpace;
+
     public TrainingOptions withColorSpace(TrainingOptionsColorSpaceEnum colorSpace) {
         this.colorSpace = colorSpace;
         return this;
@@ -106,6 +126,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBylevel")
     public Double colsampleBylevel;
+
     public TrainingOptions withColsampleBylevel(Double colsampleBylevel) {
         this.colsampleBylevel = colsampleBylevel;
         return this;
@@ -117,6 +138,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBynode")
     public Double colsampleBynode;
+
     public TrainingOptions withColsampleBynode(Double colsampleBynode) {
         this.colsampleBynode = colsampleBynode;
         return this;
@@ -128,6 +150,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colsampleBytree")
     public Double colsampleBytree;
+
     public TrainingOptions withColsampleBytree(Double colsampleBytree) {
         this.colsampleBytree = colsampleBytree;
         return this;
@@ -139,6 +162,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dartNormalizeType")
     public TrainingOptionsDartNormalizeTypeEnum dartNormalizeType;
+
     public TrainingOptions withDartNormalizeType(TrainingOptionsDartNormalizeTypeEnum dartNormalizeType) {
         this.dartNormalizeType = dartNormalizeType;
         return this;
@@ -150,6 +174,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFrequency")
     public TrainingOptionsDataFrequencyEnum dataFrequency;
+
     public TrainingOptions withDataFrequency(TrainingOptionsDataFrequencyEnum dataFrequency) {
         this.dataFrequency = dataFrequency;
         return this;
@@ -161,6 +186,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSplitColumn")
     public String dataSplitColumn;
+
     public TrainingOptions withDataSplitColumn(String dataSplitColumn) {
         this.dataSplitColumn = dataSplitColumn;
         return this;
@@ -172,6 +198,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSplitEvalFraction")
     public Double dataSplitEvalFraction;
+
     public TrainingOptions withDataSplitEvalFraction(Double dataSplitEvalFraction) {
         this.dataSplitEvalFraction = dataSplitEvalFraction;
         return this;
@@ -183,6 +210,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSplitMethod")
     public TrainingOptionsDataSplitMethodEnum dataSplitMethod;
+
     public TrainingOptions withDataSplitMethod(TrainingOptionsDataSplitMethodEnum dataSplitMethod) {
         this.dataSplitMethod = dataSplitMethod;
         return this;
@@ -194,6 +222,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decomposeTimeSeries")
     public Boolean decomposeTimeSeries;
+
     public TrainingOptions withDecomposeTimeSeries(Boolean decomposeTimeSeries) {
         this.decomposeTimeSeries = decomposeTimeSeries;
         return this;
@@ -205,6 +234,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distanceType")
     public TrainingOptionsDistanceTypeEnum distanceType;
+
     public TrainingOptions withDistanceType(TrainingOptionsDistanceTypeEnum distanceType) {
         this.distanceType = distanceType;
         return this;
@@ -216,6 +246,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropout")
     public Double dropout;
+
     public TrainingOptions withDropout(Double dropout) {
         this.dropout = dropout;
         return this;
@@ -227,6 +258,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earlyStop")
     public Boolean earlyStop;
+
     public TrainingOptions withEarlyStop(Boolean earlyStop) {
         this.earlyStop = earlyStop;
         return this;
@@ -238,6 +270,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableGlobalExplain")
     public Boolean enableGlobalExplain;
+
     public TrainingOptions withEnableGlobalExplain(Boolean enableGlobalExplain) {
         this.enableGlobalExplain = enableGlobalExplain;
         return this;
@@ -249,6 +282,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackType")
     public TrainingOptionsFeedbackTypeEnum feedbackType;
+
     public TrainingOptions withFeedbackType(TrainingOptionsFeedbackTypeEnum feedbackType) {
         this.feedbackType = feedbackType;
         return this;
@@ -260,6 +294,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenUnits")
     public String[] hiddenUnits;
+
     public TrainingOptions withHiddenUnits(String[] hiddenUnits) {
         this.hiddenUnits = hiddenUnits;
         return this;
@@ -271,6 +306,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("holidayRegion")
     public TrainingOptionsHolidayRegionEnum holidayRegion;
+
     public TrainingOptions withHolidayRegion(TrainingOptionsHolidayRegionEnum holidayRegion) {
         this.holidayRegion = holidayRegion;
         return this;
@@ -282,6 +318,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("horizon")
     public String horizon;
+
     public TrainingOptions withHorizon(String horizon) {
         this.horizon = horizon;
         return this;
@@ -293,6 +330,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hparamTuningObjectives")
     public TrainingOptionsHparamTuningObjectivesEnum[] hparamTuningObjectives;
+
     public TrainingOptions withHparamTuningObjectives(TrainingOptionsHparamTuningObjectivesEnum[] hparamTuningObjectives) {
         this.hparamTuningObjectives = hparamTuningObjectives;
         return this;
@@ -304,6 +342,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDrift")
     public Boolean includeDrift;
+
     public TrainingOptions withIncludeDrift(Boolean includeDrift) {
         this.includeDrift = includeDrift;
         return this;
@@ -315,6 +354,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialLearnRate")
     public Double initialLearnRate;
+
     public TrainingOptions withInitialLearnRate(Double initialLearnRate) {
         this.initialLearnRate = initialLearnRate;
         return this;
@@ -326,8 +366,21 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputLabelColumns")
     public String[] inputLabelColumns;
+
     public TrainingOptions withInputLabelColumns(String[] inputLabelColumns) {
         this.inputLabelColumns = inputLabelColumns;
+        return this;
+    }
+    
+    /**
+     * Name of the instance weight column for training data. This column isn't be used as a feature.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("instanceWeightColumn")
+    public String instanceWeightColumn;
+
+    public TrainingOptions withInstanceWeightColumn(String instanceWeightColumn) {
+        this.instanceWeightColumn = instanceWeightColumn;
         return this;
     }
     
@@ -337,6 +390,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integratedGradientsNumSteps")
     public String integratedGradientsNumSteps;
+
     public TrainingOptions withIntegratedGradientsNumSteps(String integratedGradientsNumSteps) {
         this.integratedGradientsNumSteps = integratedGradientsNumSteps;
         return this;
@@ -348,6 +402,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemColumn")
     public String itemColumn;
+
     public TrainingOptions withItemColumn(String itemColumn) {
         this.itemColumn = itemColumn;
         return this;
@@ -359,6 +414,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmeansInitializationColumn")
     public String kmeansInitializationColumn;
+
     public TrainingOptions withKmeansInitializationColumn(String kmeansInitializationColumn) {
         this.kmeansInitializationColumn = kmeansInitializationColumn;
         return this;
@@ -370,6 +426,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmeansInitializationMethod")
     public TrainingOptionsKmeansInitializationMethodEnum kmeansInitializationMethod;
+
     public TrainingOptions withKmeansInitializationMethod(TrainingOptionsKmeansInitializationMethodEnum kmeansInitializationMethod) {
         this.kmeansInitializationMethod = kmeansInitializationMethod;
         return this;
@@ -381,6 +438,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l1Regularization")
     public Double l1Regularization;
+
     public TrainingOptions withL1Regularization(Double l1Regularization) {
         this.l1Regularization = l1Regularization;
         return this;
@@ -392,6 +450,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l2Regularization")
     public Double l2Regularization;
+
     public TrainingOptions withL2Regularization(Double l2Regularization) {
         this.l2Regularization = l2Regularization;
         return this;
@@ -403,6 +462,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelClassWeights")
     public java.util.Map<String, Double> labelClassWeights;
+
     public TrainingOptions withLabelClassWeights(java.util.Map<String, Double> labelClassWeights) {
         this.labelClassWeights = labelClassWeights;
         return this;
@@ -414,6 +474,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRate")
     public Double learnRate;
+
     public TrainingOptions withLearnRate(Double learnRate) {
         this.learnRate = learnRate;
         return this;
@@ -425,6 +486,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRateStrategy")
     public TrainingOptionsLearnRateStrategyEnum learnRateStrategy;
+
     public TrainingOptions withLearnRateStrategy(TrainingOptionsLearnRateStrategyEnum learnRateStrategy) {
         this.learnRateStrategy = learnRateStrategy;
         return this;
@@ -436,6 +498,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lossType")
     public TrainingOptionsLossTypeEnum lossType;
+
     public TrainingOptions withLossType(TrainingOptionsLossTypeEnum lossType) {
         this.lossType = lossType;
         return this;
@@ -447,6 +510,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxIterations")
     public String maxIterations;
+
     public TrainingOptions withMaxIterations(String maxIterations) {
         this.maxIterations = maxIterations;
         return this;
@@ -458,6 +522,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxParallelTrials")
     public String maxParallelTrials;
+
     public TrainingOptions withMaxParallelTrials(String maxParallelTrials) {
         this.maxParallelTrials = maxParallelTrials;
         return this;
@@ -469,6 +534,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTimeSeriesLength")
     public String maxTimeSeriesLength;
+
     public TrainingOptions withMaxTimeSeriesLength(String maxTimeSeriesLength) {
         this.maxTimeSeriesLength = maxTimeSeriesLength;
         return this;
@@ -480,6 +546,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTreeDepth")
     public String maxTreeDepth;
+
     public TrainingOptions withMaxTreeDepth(String maxTreeDepth) {
         this.maxTreeDepth = maxTreeDepth;
         return this;
@@ -491,6 +558,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minRelativeProgress")
     public Double minRelativeProgress;
+
     public TrainingOptions withMinRelativeProgress(Double minRelativeProgress) {
         this.minRelativeProgress = minRelativeProgress;
         return this;
@@ -502,6 +570,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSplitLoss")
     public Double minSplitLoss;
+
     public TrainingOptions withMinSplitLoss(Double minSplitLoss) {
         this.minSplitLoss = minSplitLoss;
         return this;
@@ -513,6 +582,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTimeSeriesLength")
     public String minTimeSeriesLength;
+
     public TrainingOptions withMinTimeSeriesLength(String minTimeSeriesLength) {
         this.minTimeSeriesLength = minTimeSeriesLength;
         return this;
@@ -524,6 +594,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTreeChildWeight")
     public String minTreeChildWeight;
+
     public TrainingOptions withMinTreeChildWeight(String minTreeChildWeight) {
         this.minTreeChildWeight = minTreeChildWeight;
         return this;
@@ -535,6 +606,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelUri")
     public String modelUri;
+
     public TrainingOptions withModelUri(String modelUri) {
         this.modelUri = modelUri;
         return this;
@@ -546,6 +618,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonSeasonalOrder")
     public ArimaOrder nonSeasonalOrder;
+
     public TrainingOptions withNonSeasonalOrder(ArimaOrder nonSeasonalOrder) {
         this.nonSeasonalOrder = nonSeasonalOrder;
         return this;
@@ -557,6 +630,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numClusters")
     public String numClusters;
+
     public TrainingOptions withNumClusters(String numClusters) {
         this.numClusters = numClusters;
         return this;
@@ -568,6 +642,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numFactors")
     public String numFactors;
+
     public TrainingOptions withNumFactors(String numFactors) {
         this.numFactors = numFactors;
         return this;
@@ -579,6 +654,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numParallelTree")
     public String numParallelTree;
+
     public TrainingOptions withNumParallelTree(String numParallelTree) {
         this.numParallelTree = numParallelTree;
         return this;
@@ -590,6 +666,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTrials")
     public String numTrials;
+
     public TrainingOptions withNumTrials(String numTrials) {
         this.numTrials = numTrials;
         return this;
@@ -601,6 +678,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationStrategy")
     public TrainingOptionsOptimizationStrategyEnum optimizationStrategy;
+
     public TrainingOptions withOptimizationStrategy(TrainingOptionsOptimizationStrategyEnum optimizationStrategy) {
         this.optimizationStrategy = optimizationStrategy;
         return this;
@@ -612,6 +690,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preserveInputStructs")
     public Boolean preserveInputStructs;
+
     public TrainingOptions withPreserveInputStructs(Boolean preserveInputStructs) {
         this.preserveInputStructs = preserveInputStructs;
         return this;
@@ -623,6 +702,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampledShapleyNumPaths")
     public String sampledShapleyNumPaths;
+
     public TrainingOptions withSampledShapleyNumPaths(String sampledShapleyNumPaths) {
         this.sampledShapleyNumPaths = sampledShapleyNumPaths;
         return this;
@@ -634,8 +714,21 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsample")
     public Double subsample;
+
     public TrainingOptions withSubsample(Double subsample) {
         this.subsample = subsample;
+        return this;
+    }
+    
+    /**
+     * Based on the selected TF version, the corresponding docker image is used to train external models.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("tfVersion")
+    public String tfVersion;
+
+    public TrainingOptions withTfVersion(String tfVersion) {
+        this.tfVersion = tfVersion;
         return this;
     }
     
@@ -645,6 +738,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesDataColumn")
     public String timeSeriesDataColumn;
+
     public TrainingOptions withTimeSeriesDataColumn(String timeSeriesDataColumn) {
         this.timeSeriesDataColumn = timeSeriesDataColumn;
         return this;
@@ -656,6 +750,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesIdColumn")
     public String timeSeriesIdColumn;
+
     public TrainingOptions withTimeSeriesIdColumn(String timeSeriesIdColumn) {
         this.timeSeriesIdColumn = timeSeriesIdColumn;
         return this;
@@ -667,6 +762,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesIdColumns")
     public String[] timeSeriesIdColumns;
+
     public TrainingOptions withTimeSeriesIdColumns(String[] timeSeriesIdColumns) {
         this.timeSeriesIdColumns = timeSeriesIdColumns;
         return this;
@@ -678,6 +774,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesLengthFraction")
     public Double timeSeriesLengthFraction;
+
     public TrainingOptions withTimeSeriesLengthFraction(Double timeSeriesLengthFraction) {
         this.timeSeriesLengthFraction = timeSeriesLengthFraction;
         return this;
@@ -689,6 +786,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSeriesTimestampColumn")
     public String timeSeriesTimestampColumn;
+
     public TrainingOptions withTimeSeriesTimestampColumn(String timeSeriesTimestampColumn) {
         this.timeSeriesTimestampColumn = timeSeriesTimestampColumn;
         return this;
@@ -700,6 +798,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeMethod")
     public TrainingOptionsTreeMethodEnum treeMethod;
+
     public TrainingOptions withTreeMethod(TrainingOptionsTreeMethodEnum treeMethod) {
         this.treeMethod = treeMethod;
         return this;
@@ -711,6 +810,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trendSmoothingWindowSize")
     public String trendSmoothingWindowSize;
+
     public TrainingOptions withTrendSmoothingWindowSize(String trendSmoothingWindowSize) {
         this.trendSmoothingWindowSize = trendSmoothingWindowSize;
         return this;
@@ -722,6 +822,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userColumn")
     public String userColumn;
+
     public TrainingOptions withUserColumn(String userColumn) {
         this.userColumn = userColumn;
         return this;
@@ -733,6 +834,7 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("walsAlpha")
     public Double walsAlpha;
+
     public TrainingOptions withWalsAlpha(Double walsAlpha) {
         this.walsAlpha = walsAlpha;
         return this;
@@ -744,9 +846,23 @@ public class TrainingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warmStart")
     public Boolean warmStart;
+
     public TrainingOptions withWarmStart(Boolean warmStart) {
         this.warmStart = warmStart;
         return this;
     }
     
+    /**
+     * User-selected XGBoost versions for training of XGBoost models.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("xgboostVersion")
+    public String xgboostVersion;
+
+    public TrainingOptions withXgboostVersion(String xgboostVersion) {
+        this.xgboostVersion = xgboostVersion;
+        return this;
+    }
+    
+    public TrainingOptions(){}
 }

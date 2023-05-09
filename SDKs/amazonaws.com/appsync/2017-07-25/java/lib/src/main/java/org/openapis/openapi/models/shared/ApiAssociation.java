@@ -15,6 +15,7 @@ public class ApiAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiId")
     public String apiId;
+
     public ApiAssociation withApiId(String apiId) {
         this.apiId = apiId;
         return this;
@@ -23,6 +24,7 @@ public class ApiAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationStatus")
     public AssociationStatusEnum associationStatus;
+
     public ApiAssociation withAssociationStatus(AssociationStatusEnum associationStatus) {
         this.associationStatus = associationStatus;
         return this;
@@ -31,6 +33,7 @@ public class ApiAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentDetail")
     public String deploymentDetail;
+
     public ApiAssociation withDeploymentDetail(String deploymentDetail) {
         this.deploymentDetail = deploymentDetail;
         return this;
@@ -39,9 +42,11 @@ public class ApiAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public ApiAssociation withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public ApiAssociation(){}
 }

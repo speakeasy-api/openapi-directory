@@ -22,6 +22,7 @@ public class QuerySuggestionsBlockListSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public QuerySuggestionsBlockListSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class QuerySuggestionsBlockListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public QuerySuggestionsBlockListSummary withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class QuerySuggestionsBlockListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public QuerySuggestionsBlockListSummary withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -46,6 +49,7 @@ public class QuerySuggestionsBlockListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public QuerySuggestionsBlockListSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class QuerySuggestionsBlockListSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public QuerySuggestionsBlockListStatusEnum status;
+
     public QuerySuggestionsBlockListSummary withStatus(QuerySuggestionsBlockListStatusEnum status) {
         this.status = status;
         return this;
@@ -64,9 +69,11 @@ public class QuerySuggestionsBlockListSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public QuerySuggestionsBlockListSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public QuerySuggestionsBlockListSummary(){}
 }

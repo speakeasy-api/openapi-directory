@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DnsServiceDiscovery {
     @JsonProperty("hostname")
     public String hostname;
+
     public DnsServiceDiscovery withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -22,6 +23,7 @@ public class DnsServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPreference")
     public IpPreferenceEnum ipPreference;
+
     public DnsServiceDiscovery withIpPreference(IpPreferenceEnum ipPreference) {
         this.ipPreference = ipPreference;
         return this;
@@ -30,9 +32,13 @@ public class DnsServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseType")
     public DnsResponseTypeEnum responseType;
+
     public DnsServiceDiscovery withResponseType(DnsResponseTypeEnum responseType) {
         this.responseType = responseType;
         return this;
     }
     
+    public DnsServiceDiscovery(@JsonProperty("hostname") String hostname) {
+        this.hostname = hostname;
+  }
 }

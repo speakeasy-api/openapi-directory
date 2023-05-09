@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * GetResourceShareAssociationsRequestBodyAssociationStatusEnum - Specifies that you want to retrieve only associations with this status.
+ * GetResourceShareAssociationsRequestBodyAssociationStatusEnum - Specifies that you want to retrieve only associations that have this status.
  */
 public enum GetResourceShareAssociationsRequestBodyAssociationStatusEnum {
     ASSOCIATING("ASSOCIATING"),

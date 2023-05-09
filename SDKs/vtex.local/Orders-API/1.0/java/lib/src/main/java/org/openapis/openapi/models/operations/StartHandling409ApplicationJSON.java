@@ -18,9 +18,11 @@ public class StartHandling409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public StartHandling409ApplicationJSONError error;
+
     public StartHandling409ApplicationJSON withError(StartHandling409ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public StartHandling409ApplicationJSON(){}
 }

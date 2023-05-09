@@ -12,6 +12,7 @@ public class PayItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeductionTypes")
     public DeductionTypeInput[] deductionTypes;
+
     public PayItemInput withDeductionTypes(DeductionTypeInput[] deductionTypes) {
         this.deductionTypes = deductionTypes;
         return this;
@@ -20,6 +21,7 @@ public class PayItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarningsRates")
     public EarningsRateInput[] earningsRates;
+
     public PayItemInput withEarningsRates(EarningsRateInput[] earningsRates) {
         this.earningsRates = earningsRates;
         return this;
@@ -28,6 +30,7 @@ public class PayItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeaveTypes")
     public LeaveTypeInput[] leaveTypes;
+
     public PayItemInput withLeaveTypes(LeaveTypeInput[] leaveTypes) {
         this.leaveTypes = leaveTypes;
         return this;
@@ -36,9 +39,11 @@ public class PayItemInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReimbursementTypes")
     public ReimbursementTypeInput[] reimbursementTypes;
+
     public PayItemInput withReimbursementTypes(ReimbursementTypeInput[] reimbursementTypes) {
         this.reimbursementTypes = reimbursementTypes;
         return this;
     }
     
+    public PayItemInput(){}
 }

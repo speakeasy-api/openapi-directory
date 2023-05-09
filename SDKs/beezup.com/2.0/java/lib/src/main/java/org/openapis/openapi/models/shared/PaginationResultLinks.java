@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PaginationResultLinks {
     @JsonProperty("first")
     public Link3 first;
+
     public PaginationResultLinks withFirst(Link3 first) {
         this.first = first;
         return this;
@@ -21,6 +22,7 @@ public class PaginationResultLinks {
     
     @JsonProperty("last")
     public Link3 last;
+
     public PaginationResultLinks withLast(Link3 last) {
         this.last = last;
         return this;
@@ -29,6 +31,7 @@ public class PaginationResultLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public Link3 next;
+
     public PaginationResultLinks withNext(Link3 next) {
         this.next = next;
         return this;
@@ -37,9 +40,14 @@ public class PaginationResultLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public Link3 previous;
+
     public PaginationResultLinks withPrevious(Link3 previous) {
         this.previous = previous;
         return this;
     }
     
+    public PaginationResultLinks(@JsonProperty("first") Link3 first, @JsonProperty("last") Link3 last) {
+        this.first = first;
+        this.last = last;
+  }
 }

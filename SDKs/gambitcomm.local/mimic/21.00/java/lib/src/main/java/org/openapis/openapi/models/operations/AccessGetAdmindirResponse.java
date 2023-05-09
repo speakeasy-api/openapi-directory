@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccessGetAdmindirResponse {
     
     public String contentType;
+
     public AccessGetAdmindirResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AccessGetAdmindirResponse {
     
     
     public Integer statusCode;
+
     public AccessGetAdmindirResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AccessGetAdmindirResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccessGetAdmindirResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AccessGetAdmindirResponse {
      */
     
     public String accessGetAdmindir200ApplicationJSONString;
+
     public AccessGetAdmindirResponse withAccessGetAdmindir200ApplicationJSONString(String accessGetAdmindir200ApplicationJSONString) {
         this.accessGetAdmindir200ApplicationJSONString = accessGetAdmindir200ApplicationJSONString;
         return this;
     }
     
+    public AccessGetAdmindirResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

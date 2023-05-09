@@ -12,6 +12,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDiscoveredResourcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListDiscoveredResourcesRequest {
     
     @JsonProperty("MigrationTaskName")
     public String migrationTaskName;
+
     public ListDiscoveredResourcesRequest withMigrationTaskName(String migrationTaskName) {
         this.migrationTaskName = migrationTaskName;
         return this;
@@ -27,6 +29,7 @@ public class ListDiscoveredResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDiscoveredResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListDiscoveredResourcesRequest {
     
     @JsonProperty("ProgressUpdateStream")
     public String progressUpdateStream;
+
     public ListDiscoveredResourcesRequest withProgressUpdateStream(String progressUpdateStream) {
         this.progressUpdateStream = progressUpdateStream;
         return this;
     }
     
+    public ListDiscoveredResourcesRequest(@JsonProperty("MigrationTaskName") String migrationTaskName, @JsonProperty("ProgressUpdateStream") String progressUpdateStream) {
+        this.migrationTaskName = migrationTaskName;
+        this.progressUpdateStream = progressUpdateStream;
+  }
 }

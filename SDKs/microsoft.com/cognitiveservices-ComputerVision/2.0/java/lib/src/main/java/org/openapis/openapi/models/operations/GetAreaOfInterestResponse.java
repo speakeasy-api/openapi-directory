@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAreaOfInterestResponse {
@@ -12,6 +13,7 @@ public class GetAreaOfInterestResponse {
      */
     
     public org.openapis.openapi.models.shared.AreaOfInterestResult areaOfInterestResult;
+
     public GetAreaOfInterestResponse withAreaOfInterestResult(org.openapis.openapi.models.shared.AreaOfInterestResult areaOfInterestResult) {
         this.areaOfInterestResult = areaOfInterestResult;
         return this;
@@ -22,6 +24,7 @@ public class GetAreaOfInterestResponse {
      */
     
     public org.openapis.openapi.models.shared.ComputerVisionError computerVisionError;
+
     public GetAreaOfInterestResponse withComputerVisionError(org.openapis.openapi.models.shared.ComputerVisionError computerVisionError) {
         this.computerVisionError = computerVisionError;
         return this;
@@ -29,6 +32,7 @@ public class GetAreaOfInterestResponse {
     
     
     public String contentType;
+
     public GetAreaOfInterestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetAreaOfInterestResponse {
     
     
     public Integer statusCode;
+
     public GetAreaOfInterestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetAreaOfInterestResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAreaOfInterestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAreaOfInterestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

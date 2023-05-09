@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateNetworkInsightsAccessScopeRequest {
     
     public String clientToken;
+
     public CreateNetworkInsightsAccessScopeRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateNetworkInsightsAccessScopeRequest {
     
     
     public Boolean dryRun;
+
     public CreateNetworkInsightsAccessScopeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateNetworkInsightsAccessScopeRequest {
     
     
     public CreateNetworkInsightsAccessScopeRequestExcludePaths[] excludePaths;
+
     public CreateNetworkInsightsAccessScopeRequest withExcludePaths(CreateNetworkInsightsAccessScopeRequestExcludePaths[] excludePaths) {
         this.excludePaths = excludePaths;
         return this;
@@ -30,6 +33,7 @@ public class CreateNetworkInsightsAccessScopeRequest {
     
     
     public CreateNetworkInsightsAccessScopeRequestMatchPaths[] matchPaths;
+
     public CreateNetworkInsightsAccessScopeRequest withMatchPaths(CreateNetworkInsightsAccessScopeRequestMatchPaths[] matchPaths) {
         this.matchPaths = matchPaths;
         return this;
@@ -37,9 +41,13 @@ public class CreateNetworkInsightsAccessScopeRequest {
     
     
     public CreateNetworkInsightsAccessScopeRequestTagSpecifications[] tagSpecifications;
+
     public CreateNetworkInsightsAccessScopeRequest withTagSpecifications(CreateNetworkInsightsAccessScopeRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateNetworkInsightsAccessScopeRequest(@JsonProperty("ClientToken") String clientToken) {
+        this.clientToken = clientToken;
+  }
 }

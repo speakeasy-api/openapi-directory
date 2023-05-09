@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteStackInstancesOutput {
     
     public String operationId;
+
     public DeleteStackInstancesOutput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public DeleteStackInstancesOutput(){}
 }

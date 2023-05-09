@@ -18,6 +18,7 @@ public class MaintenanceDocumentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MimeType")
     public String mimeType;
+
     public MaintenanceDocumentModel withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -29,9 +30,11 @@ public class MaintenanceDocumentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("URL")
     public String url;
+
     public MaintenanceDocumentModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MaintenanceDocumentModel(){}
 }

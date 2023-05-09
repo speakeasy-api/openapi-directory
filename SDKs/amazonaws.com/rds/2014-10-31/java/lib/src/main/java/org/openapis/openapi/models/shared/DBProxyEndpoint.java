@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBProxyEndpoint {
     
     public OffsetDateTime createdDate;
+
     public DBProxyEndpoint withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -19,6 +20,7 @@ public class DBProxyEndpoint {
     
     
     public String dbProxyEndpointArn;
+
     public DBProxyEndpoint withDBProxyEndpointArn(String dbProxyEndpointArn) {
         this.dbProxyEndpointArn = dbProxyEndpointArn;
         return this;
@@ -26,6 +28,7 @@ public class DBProxyEndpoint {
     
     
     public String dbProxyEndpointName;
+
     public DBProxyEndpoint withDBProxyEndpointName(String dbProxyEndpointName) {
         this.dbProxyEndpointName = dbProxyEndpointName;
         return this;
@@ -33,6 +36,7 @@ public class DBProxyEndpoint {
     
     
     public String dbProxyName;
+
     public DBProxyEndpoint withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -40,6 +44,7 @@ public class DBProxyEndpoint {
     
     
     public String endpoint;
+
     public DBProxyEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -47,6 +52,7 @@ public class DBProxyEndpoint {
     
     
     public Boolean isDefault;
+
     public DBProxyEndpoint withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -54,6 +60,7 @@ public class DBProxyEndpoint {
     
     
     public DBProxyEndpointStatusEnum status;
+
     public DBProxyEndpoint withStatus(DBProxyEndpointStatusEnum status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class DBProxyEndpoint {
     
     
     public DBProxyEndpointTargetRoleEnum targetRole;
+
     public DBProxyEndpoint withTargetRole(DBProxyEndpointTargetRoleEnum targetRole) {
         this.targetRole = targetRole;
         return this;
@@ -68,6 +76,7 @@ public class DBProxyEndpoint {
     
     
     public String vpcId;
+
     public DBProxyEndpoint withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -75,6 +84,7 @@ public class DBProxyEndpoint {
     
     
     public String[] vpcSecurityGroupIds;
+
     public DBProxyEndpoint withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -82,9 +92,11 @@ public class DBProxyEndpoint {
     
     
     public String[] vpcSubnetIds;
+
     public DBProxyEndpoint withVpcSubnetIds(String[] vpcSubnetIds) {
         this.vpcSubnetIds = vpcSubnetIds;
         return this;
     }
     
+    public DBProxyEndpoint(){}
 }

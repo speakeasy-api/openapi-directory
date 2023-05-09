@@ -18,6 +18,7 @@ public class AttachmentResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public AttachmentResponseParent withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class AttachmentResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AttachmentResponseParent withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class AttachmentResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public AttachmentResponseParentResourceSubtypeEnum resourceSubtype;
+
     public AttachmentResponseParent withResourceSubtype(AttachmentResponseParentResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -52,9 +55,11 @@ public class AttachmentResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public AttachmentResponseParent withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AttachmentResponseParent(){}
 }

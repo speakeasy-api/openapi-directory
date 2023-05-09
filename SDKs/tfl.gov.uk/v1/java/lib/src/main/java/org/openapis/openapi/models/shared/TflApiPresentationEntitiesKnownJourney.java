@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesKnownJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public String hour;
+
     public TflApiPresentationEntitiesKnownJourney withHour(String hour) {
         this.hour = hour;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesKnownJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalId")
     public Integer intervalId;
+
     public TflApiPresentationEntitiesKnownJourney withIntervalId(Integer intervalId) {
         this.intervalId = intervalId;
         return this;
@@ -28,9 +30,11 @@ public class TflApiPresentationEntitiesKnownJourney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public String minute;
+
     public TflApiPresentationEntitiesKnownJourney withMinute(String minute) {
         this.minute = minute;
         return this;
     }
     
+    public TflApiPresentationEntitiesKnownJourney(){}
 }

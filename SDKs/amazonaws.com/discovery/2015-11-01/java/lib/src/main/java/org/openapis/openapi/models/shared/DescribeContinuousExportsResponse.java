@@ -15,6 +15,7 @@ public class DescribeContinuousExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public ContinuousExportDescription[] descriptions;
+
     public DescribeContinuousExportsResponse withDescriptions(ContinuousExportDescription[] descriptions) {
         this.descriptions = descriptions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeContinuousExportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeContinuousExportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeContinuousExportsResponse(){}
 }

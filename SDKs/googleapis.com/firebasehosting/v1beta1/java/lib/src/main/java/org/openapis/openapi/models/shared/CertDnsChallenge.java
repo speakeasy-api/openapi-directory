@@ -18,6 +18,7 @@ public class CertDnsChallenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public CertDnsChallenge withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,9 +30,11 @@ public class CertDnsChallenge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public CertDnsChallenge withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public CertDnsChallenge(){}
 }

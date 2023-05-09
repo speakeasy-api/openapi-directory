@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDBParameterGroupMessage {
     
     public String dbParameterGroupName;
+
     public DeleteDBParameterGroupMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
     }
     
+    public DeleteDBParameterGroupMessage(@JsonProperty("DBParameterGroupName") String dbParameterGroupName) {
+        this.dbParameterGroupName = dbParameterGroupName;
+  }
 }

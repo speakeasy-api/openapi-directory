@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Error - An error occurred.
@@ -15,6 +15,7 @@ public class Error {
      */
     
     public String category;
+
     public Error withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class Error {
      */
     
     public java.util.Map<String, String[]> context;
+
     public Error withContext(java.util.Map<String, String[]> context) {
         this.context = context;
         return this;
@@ -35,6 +37,7 @@ public class Error {
      */
     
     public String correlationId;
+
     public Error withCorrelationId(String correlationId) {
         this.correlationId = correlationId;
         return this;
@@ -45,6 +48,7 @@ public class Error {
      */
     
     public ErrorDetail[] errors;
+
     public Error withErrors(ErrorDetail[] errors) {
         this.errors = errors;
         return this;
@@ -55,6 +59,7 @@ public class Error {
      */
     
     public java.util.Map<String, String> links;
+
     public Error withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -65,6 +70,7 @@ public class Error {
      */
     
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -75,9 +81,15 @@ public class Error {
      */
     
     public String subCategory;
+
     public Error withSubCategory(String subCategory) {
         this.subCategory = subCategory;
         return this;
     }
     
+    public Error(@JsonProperty("category") String category, @JsonProperty("correlationId") String correlationId, @JsonProperty("message") String message) {
+        this.category = category;
+        this.correlationId = correlationId;
+        this.message = message;
+  }
 }

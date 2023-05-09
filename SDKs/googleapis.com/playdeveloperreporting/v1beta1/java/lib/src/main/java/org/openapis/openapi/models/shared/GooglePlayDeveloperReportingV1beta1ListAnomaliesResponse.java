@@ -18,6 +18,7 @@ public class GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anomalies")
     public GooglePlayDeveloperReportingV1beta1Anomaly[] anomalies;
+
     public GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse withAnomalies(GooglePlayDeveloperReportingV1beta1Anomaly[] anomalies) {
         this.anomalies = anomalies;
         return this;
@@ -29,9 +30,11 @@ public class GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse(){}
 }

@@ -15,6 +15,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceledChecks")
     public Long canceledChecks;
+
     public TaskStatistics withCanceledChecks(Long canceledChecks) {
         this.canceledChecks = canceledChecks;
         return this;
@@ -23,6 +24,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compliantChecks")
     public Long compliantChecks;
+
     public TaskStatistics withCompliantChecks(Long compliantChecks) {
         this.compliantChecks = compliantChecks;
         return this;
@@ -31,6 +33,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedChecks")
     public Long failedChecks;
+
     public TaskStatistics withFailedChecks(Long failedChecks) {
         this.failedChecks = failedChecks;
         return this;
@@ -39,6 +42,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressChecks")
     public Long inProgressChecks;
+
     public TaskStatistics withInProgressChecks(Long inProgressChecks) {
         this.inProgressChecks = inProgressChecks;
         return this;
@@ -47,6 +51,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonCompliantChecks")
     public Long nonCompliantChecks;
+
     public TaskStatistics withNonCompliantChecks(Long nonCompliantChecks) {
         this.nonCompliantChecks = nonCompliantChecks;
         return this;
@@ -55,6 +60,7 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalChecks")
     public Long totalChecks;
+
     public TaskStatistics withTotalChecks(Long totalChecks) {
         this.totalChecks = totalChecks;
         return this;
@@ -63,9 +69,11 @@ public class TaskStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitingForDataCollectionChecks")
     public Long waitingForDataCollectionChecks;
+
     public TaskStatistics withWaitingForDataCollectionChecks(Long waitingForDataCollectionChecks) {
         this.waitingForDataCollectionChecks = waitingForDataCollectionChecks;
         return this;
     }
     
+    public TaskStatistics(){}
 }

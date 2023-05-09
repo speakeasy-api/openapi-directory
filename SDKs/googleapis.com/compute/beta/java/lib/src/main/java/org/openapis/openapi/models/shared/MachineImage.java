@@ -18,6 +18,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public MachineImage withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MachineImage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestFlush")
     public Boolean guestFlush;
+
     public MachineImage withGuestFlush(Boolean guestFlush) {
         this.guestFlush = guestFlush;
         return this;
@@ -51,6 +54,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MachineImage withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProperties")
     public InstanceProperties instanceProperties;
+
     public MachineImage withInstanceProperties(InstanceProperties instanceProperties) {
         this.instanceProperties = instanceProperties;
         return this;
@@ -70,6 +75,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public MachineImage withKind(String kind) {
         this.kind = kind;
         return this;
@@ -78,6 +84,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineImageEncryptionKey")
     public CustomerEncryptionKey machineImageEncryptionKey;
+
     public MachineImage withMachineImageEncryptionKey(CustomerEncryptionKey machineImageEncryptionKey) {
         this.machineImageEncryptionKey = machineImageEncryptionKey;
         return this;
@@ -89,6 +96,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MachineImage withName(String name) {
         this.name = name;
         return this;
@@ -100,6 +108,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public MachineImage withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -111,6 +120,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savedDisks")
     public SavedDisk[] savedDisks;
+
     public MachineImage withSavedDisks(SavedDisk[] savedDisks) {
         this.savedDisks = savedDisks;
         return this;
@@ -122,6 +132,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public MachineImage withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -133,6 +144,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskEncryptionKeys")
     public SourceDiskEncryptionKey[] sourceDiskEncryptionKeys;
+
     public MachineImage withSourceDiskEncryptionKeys(SourceDiskEncryptionKey[] sourceDiskEncryptionKeys) {
         this.sourceDiskEncryptionKeys = sourceDiskEncryptionKeys;
         return this;
@@ -144,6 +156,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstance")
     public String sourceInstance;
+
     public MachineImage withSourceInstance(String sourceInstance) {
         this.sourceInstance = sourceInstance;
         return this;
@@ -155,6 +168,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceProperties")
     public SourceInstanceProperties sourceInstanceProperties;
+
     public MachineImage withSourceInstanceProperties(SourceInstanceProperties sourceInstanceProperties) {
         this.sourceInstanceProperties = sourceInstanceProperties;
         return this;
@@ -166,6 +180,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MachineImageStatusEnum status;
+
     public MachineImage withStatus(MachineImageStatusEnum status) {
         this.status = status;
         return this;
@@ -177,6 +192,7 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageLocations")
     public String[] storageLocations;
+
     public MachineImage withStorageLocations(String[] storageLocations) {
         this.storageLocations = storageLocations;
         return this;
@@ -188,9 +204,11 @@ public class MachineImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStorageBytes")
     public String totalStorageBytes;
+
     public MachineImage withTotalStorageBytes(String totalStorageBytes) {
         this.totalStorageBytes = totalStorageBytes;
         return this;
     }
     
+    public MachineImage(){}
 }

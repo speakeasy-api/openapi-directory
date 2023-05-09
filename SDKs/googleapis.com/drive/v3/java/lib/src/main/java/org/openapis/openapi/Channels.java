@@ -58,10 +58,8 @@ public class Channels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveChannelsStopResponse res = new org.openapis.openapi.models.operations.DriveChannelsStopResponse() {{
+        org.openapis.openapi.models.operations.DriveChannelsStopResponse res = new org.openapis.openapi.models.operations.DriveChannelsStopResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

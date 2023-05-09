@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenZFSNfsExport {
     @JsonProperty("ClientConfigurations")
     public OpenZFSClientConfiguration[] clientConfigurations;
+
     public OpenZFSNfsExport withClientConfigurations(OpenZFSClientConfiguration[] clientConfigurations) {
         this.clientConfigurations = clientConfigurations;
         return this;
     }
     
+    public OpenZFSNfsExport(@JsonProperty("ClientConfigurations") OpenZFSClientConfiguration[] clientConfigurations) {
+        this.clientConfigurations = clientConfigurations;
+  }
 }

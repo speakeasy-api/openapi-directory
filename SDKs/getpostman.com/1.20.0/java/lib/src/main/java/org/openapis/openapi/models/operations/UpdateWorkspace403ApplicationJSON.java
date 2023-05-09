@@ -15,9 +15,11 @@ public class UpdateWorkspace403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public UpdateWorkspace403ApplicationJSONError error;
+
     public UpdateWorkspace403ApplicationJSON withError(UpdateWorkspace403ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public UpdateWorkspace403ApplicationJSON(){}
 }

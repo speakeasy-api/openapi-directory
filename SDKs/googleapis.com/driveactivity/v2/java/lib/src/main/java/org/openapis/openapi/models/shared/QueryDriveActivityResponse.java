@@ -18,6 +18,7 @@ public class QueryDriveActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activities")
     public DriveActivity[] activities;
+
     public QueryDriveActivityResponse withActivities(DriveActivity[] activities) {
         this.activities = activities;
         return this;
@@ -29,9 +30,11 @@ public class QueryDriveActivityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public QueryDriveActivityResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public QueryDriveActivityResponse(){}
 }

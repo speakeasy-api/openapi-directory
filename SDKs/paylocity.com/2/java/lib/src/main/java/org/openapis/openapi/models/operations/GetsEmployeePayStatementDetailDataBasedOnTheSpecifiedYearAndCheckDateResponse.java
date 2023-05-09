@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse {
     
     public String contentType;
+
     public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDa
     
     
     public Integer statusCode;
+
     public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDa
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDa
      */
     
     public org.openapis.openapi.models.shared.Error[] errors;
+
     public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse withErrors(org.openapis.openapi.models.shared.Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +48,14 @@ public class GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDa
      */
     
     public org.openapis.openapi.models.shared.PayStatementDetails[] payStatementDetails;
+
     public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse withPayStatementDetails(org.openapis.openapi.models.shared.PayStatementDetails[] payStatementDetails) {
         this.payStatementDetails = payStatementDetails;
         return this;
     }
     
+    public GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

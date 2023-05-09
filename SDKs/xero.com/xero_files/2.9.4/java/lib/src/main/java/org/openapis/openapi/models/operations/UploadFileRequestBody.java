@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class UploadFileRequestBody {
     @SpeakeasyMetadata("multipartForm:name=body")
     public String body;
+
     public UploadFileRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -16,6 +17,7 @@ public class UploadFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=filename")
     public String filename;
+
     public UploadFileRequestBody withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -23,6 +25,7 @@ public class UploadFileRequestBody {
     
     @SpeakeasyMetadata("multipartForm:name=mimeType")
     public String mimeType;
+
     public UploadFileRequestBody withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -33,9 +36,11 @@ public class UploadFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public UploadFileRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UploadFileRequestBody(){}
 }

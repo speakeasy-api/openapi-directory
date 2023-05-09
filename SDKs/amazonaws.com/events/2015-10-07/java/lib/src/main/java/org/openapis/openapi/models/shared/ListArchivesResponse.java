@@ -15,6 +15,7 @@ public class ListArchivesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Archives")
     public Archive[] archives;
+
     public ListArchivesResponse withArchives(Archive[] archives) {
         this.archives = archives;
         return this;
@@ -23,9 +24,11 @@ public class ListArchivesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListArchivesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListArchivesResponse(){}
 }

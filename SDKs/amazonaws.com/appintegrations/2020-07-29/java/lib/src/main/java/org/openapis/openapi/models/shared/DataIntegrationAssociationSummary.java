@@ -15,6 +15,7 @@ public class DataIntegrationAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public DataIntegrationAssociationSummary withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class DataIntegrationAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataIntegrationArn")
     public String dataIntegrationArn;
+
     public DataIntegrationAssociationSummary withDataIntegrationArn(String dataIntegrationArn) {
         this.dataIntegrationArn = dataIntegrationArn;
         return this;
@@ -31,9 +33,11 @@ public class DataIntegrationAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataIntegrationAssociationArn")
     public String dataIntegrationAssociationArn;
+
     public DataIntegrationAssociationSummary withDataIntegrationAssociationArn(String dataIntegrationAssociationArn) {
         this.dataIntegrationAssociationArn = dataIntegrationAssociationArn;
         return this;
     }
     
+    public DataIntegrationAssociationSummary(){}
 }

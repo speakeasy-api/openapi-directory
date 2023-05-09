@@ -15,6 +15,7 @@ public class EdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionConfig")
     public DeletionConfig deletionConfig;
+
     public EdgeConfig withDeletionConfig(DeletionConfig deletionConfig) {
         this.deletionConfig = deletionConfig;
         return this;
@@ -22,6 +23,7 @@ public class EdgeConfig {
     
     @JsonProperty("HubDeviceArn")
     public String hubDeviceArn;
+
     public EdgeConfig withHubDeviceArn(String hubDeviceArn) {
         this.hubDeviceArn = hubDeviceArn;
         return this;
@@ -29,6 +31,7 @@ public class EdgeConfig {
     
     @JsonProperty("RecorderConfig")
     public RecorderConfig recorderConfig;
+
     public EdgeConfig withRecorderConfig(RecorderConfig recorderConfig) {
         this.recorderConfig = recorderConfig;
         return this;
@@ -37,9 +40,14 @@ public class EdgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploaderConfig")
     public UploaderConfig uploaderConfig;
+
     public EdgeConfig withUploaderConfig(UploaderConfig uploaderConfig) {
         this.uploaderConfig = uploaderConfig;
         return this;
     }
     
+    public EdgeConfig(@JsonProperty("HubDeviceArn") String hubDeviceArn, @JsonProperty("RecorderConfig") RecorderConfig recorderConfig) {
+        this.hubDeviceArn = hubDeviceArn;
+        this.recorderConfig = recorderConfig;
+  }
 }

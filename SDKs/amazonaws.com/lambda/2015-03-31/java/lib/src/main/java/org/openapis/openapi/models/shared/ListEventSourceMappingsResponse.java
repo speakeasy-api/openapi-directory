@@ -15,6 +15,7 @@ public class ListEventSourceMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceMappings")
     public EventSourceMappingConfiguration[] eventSourceMappings;
+
     public ListEventSourceMappingsResponse withEventSourceMappings(EventSourceMappingConfiguration[] eventSourceMappings) {
         this.eventSourceMappings = eventSourceMappings;
         return this;
@@ -23,9 +24,11 @@ public class ListEventSourceMappingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListEventSourceMappingsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListEventSourceMappingsResponse(){}
 }

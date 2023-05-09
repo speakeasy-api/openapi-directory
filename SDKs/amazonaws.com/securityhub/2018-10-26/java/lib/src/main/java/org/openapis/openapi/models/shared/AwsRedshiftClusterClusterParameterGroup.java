@@ -15,6 +15,7 @@ public class AwsRedshiftClusterClusterParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterParameterStatusList")
     public AwsRedshiftClusterClusterParameterStatus[] clusterParameterStatusList;
+
     public AwsRedshiftClusterClusterParameterGroup withClusterParameterStatusList(AwsRedshiftClusterClusterParameterStatus[] clusterParameterStatusList) {
         this.clusterParameterStatusList = clusterParameterStatusList;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterClusterParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterApplyStatus")
     public String parameterApplyStatus;
+
     public AwsRedshiftClusterClusterParameterGroup withParameterApplyStatus(String parameterApplyStatus) {
         this.parameterApplyStatus = parameterApplyStatus;
         return this;
@@ -31,9 +33,11 @@ public class AwsRedshiftClusterClusterParameterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public AwsRedshiftClusterClusterParameterGroup withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public AwsRedshiftClusterClusterParameterGroup(){}
 }

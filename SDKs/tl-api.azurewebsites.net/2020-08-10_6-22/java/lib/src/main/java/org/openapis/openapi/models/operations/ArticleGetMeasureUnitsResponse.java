@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleGetMeasureUnitsResponse {
     
     public org.openapis.openapi.models.shared.ApiResponse apiResponse;
+
     public ArticleGetMeasureUnitsResponse withApiResponse(org.openapis.openapi.models.shared.ApiResponse apiResponse) {
         this.apiResponse = apiResponse;
         return this;
@@ -16,6 +18,7 @@ public class ArticleGetMeasureUnitsResponse {
     
     
     public String contentType;
+
     public ArticleGetMeasureUnitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ArticleGetMeasureUnitsResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfStatusDTO defaultResponseDTOOfStatusDTO;
+
     public ArticleGetMeasureUnitsResponse withDefaultResponseDTOOfStatusDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfStatusDTO defaultResponseDTOOfStatusDTO) {
         this.defaultResponseDTOOfStatusDTO = defaultResponseDTOOfStatusDTO;
         return this;
@@ -30,6 +34,7 @@ public class ArticleGetMeasureUnitsResponse {
     
     
     public Integer statusCode;
+
     public ArticleGetMeasureUnitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class ArticleGetMeasureUnitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleGetMeasureUnitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleGetMeasureUnitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

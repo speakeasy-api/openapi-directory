@@ -17,9 +17,11 @@ public class SendInvoiceToAccountantApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public SendInvoiceToAccountantApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public SendInvoiceToAccountantApiModel(){}
 }

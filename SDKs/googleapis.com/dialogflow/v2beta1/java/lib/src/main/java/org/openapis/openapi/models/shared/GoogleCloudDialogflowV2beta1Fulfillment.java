@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2beta1Fulfillment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudDialogflowV2beta1Fulfillment withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public GoogleCloudDialogflowV2beta1FulfillmentFeature[] features;
+
     public GoogleCloudDialogflowV2beta1Fulfillment withFeatures(GoogleCloudDialogflowV2beta1FulfillmentFeature[] features) {
         this.features = features;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genericWebService")
     public GoogleCloudDialogflowV2beta1FulfillmentGenericWebService genericWebService;
+
     public GoogleCloudDialogflowV2beta1Fulfillment withGenericWebService(GoogleCloudDialogflowV2beta1FulfillmentGenericWebService genericWebService) {
         this.genericWebService = genericWebService;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2beta1Fulfillment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2beta1Fulfillment withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1Fulfillment(){}
 }

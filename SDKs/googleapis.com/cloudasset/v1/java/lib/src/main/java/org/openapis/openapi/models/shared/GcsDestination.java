@@ -18,6 +18,7 @@ public class GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
@@ -29,9 +30,11 @@ public class GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriPrefix")
     public String uriPrefix;
+
     public GcsDestination withUriPrefix(String uriPrefix) {
         this.uriPrefix = uriPrefix;
         return this;
     }
     
+    public GcsDestination(){}
 }

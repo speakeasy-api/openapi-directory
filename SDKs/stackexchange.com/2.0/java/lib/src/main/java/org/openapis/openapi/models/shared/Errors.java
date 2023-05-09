@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Errors {
     
     public String description;
+
     public Errors withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class Errors {
     
     
     public Long errorId;
+
     public Errors withErrorId(Long errorId) {
         this.errorId = errorId;
         return this;
@@ -23,9 +25,11 @@ public class Errors {
     
     
     public String errorName;
+
     public Errors withErrorName(String errorName) {
         this.errorName = errorName;
         return this;
     }
     
+    public Errors(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReplaceSettingValueBySdkkeyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel;
+
     public ReplaceSettingValueBySdkkeyRequest withUpdateSettingValueModel(org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel) {
         this.updateSettingValueModel = updateSettingValueModel;
         return this;
@@ -19,6 +21,7 @@ public class ReplaceSettingValueBySdkkeyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CONFIGCAT-SDKKEY")
     public String xConfigcatSdkkey;
+
     public ReplaceSettingValueBySdkkeyRequest withXConfigcatSdkkey(String xConfigcatSdkkey) {
         this.xConfigcatSdkkey = xConfigcatSdkkey;
         return this;
@@ -29,6 +32,7 @@ public class ReplaceSettingValueBySdkkeyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reason")
     public String reason;
+
     public ReplaceSettingValueBySdkkeyRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -39,9 +43,14 @@ public class ReplaceSettingValueBySdkkeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingKeyOrId")
     public String settingKeyOrId;
+
     public ReplaceSettingValueBySdkkeyRequest withSettingKeyOrId(String settingKeyOrId) {
         this.settingKeyOrId = settingKeyOrId;
         return this;
     }
     
+    public ReplaceSettingValueBySdkkeyRequest(@JsonProperty("UpdateSettingValueModel") org.openapis.openapi.models.shared.UpdateSettingValueModel updateSettingValueModel, @JsonProperty("settingKeyOrId") String settingKeyOrId) {
+        this.updateSettingValueModel = updateSettingValueModel;
+        this.settingKeyOrId = settingKeyOrId;
+  }
 }

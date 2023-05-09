@@ -15,6 +15,7 @@ public class DomainConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationArn")
     public String domainConfigurationArn;
+
     public DomainConfigurationSummary withDomainConfigurationArn(String domainConfigurationArn) {
         this.domainConfigurationArn = domainConfigurationArn;
         return this;
@@ -23,6 +24,7 @@ public class DomainConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainConfigurationName")
     public String domainConfigurationName;
+
     public DomainConfigurationSummary withDomainConfigurationName(String domainConfigurationName) {
         this.domainConfigurationName = domainConfigurationName;
         return this;
@@ -31,9 +33,11 @@ public class DomainConfigurationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public ServiceTypeEnum serviceType;
+
     public DomainConfigurationSummary withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public DomainConfigurationSummary(){}
 }

@@ -18,9 +18,11 @@ public class AccountActionRequiredException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AccountActionRequiredException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AccountActionRequiredException(){}
 }

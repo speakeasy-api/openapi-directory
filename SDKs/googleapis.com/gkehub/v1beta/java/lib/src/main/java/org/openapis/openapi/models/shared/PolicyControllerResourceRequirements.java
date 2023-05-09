@@ -18,6 +18,7 @@ public class PolicyControllerResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limits")
     public PolicyControllerResourceList limits;
+
     public PolicyControllerResourceRequirements withLimits(PolicyControllerResourceList limits) {
         this.limits = limits;
         return this;
@@ -29,9 +30,11 @@ public class PolicyControllerResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public PolicyControllerResourceList requests;
+
     public PolicyControllerResourceRequirements withRequests(PolicyControllerResourceList requests) {
         this.requests = requests;
         return this;
     }
     
+    public PolicyControllerResourceRequirements(){}
 }

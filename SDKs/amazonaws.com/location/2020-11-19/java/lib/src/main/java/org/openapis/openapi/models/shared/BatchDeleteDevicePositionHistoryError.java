@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDeleteDevicePositionHistoryError {
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public BatchDeleteDevicePositionHistoryError withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,9 +23,14 @@ public class BatchDeleteDevicePositionHistoryError {
      */
     @JsonProperty("Error")
     public BatchItemError error;
+
     public BatchDeleteDevicePositionHistoryError withError(BatchItemError error) {
         this.error = error;
         return this;
     }
     
+    public BatchDeleteDevicePositionHistoryError(@JsonProperty("DeviceId") String deviceId, @JsonProperty("Error") BatchItemError error) {
+        this.deviceId = deviceId;
+        this.error = error;
+  }
 }

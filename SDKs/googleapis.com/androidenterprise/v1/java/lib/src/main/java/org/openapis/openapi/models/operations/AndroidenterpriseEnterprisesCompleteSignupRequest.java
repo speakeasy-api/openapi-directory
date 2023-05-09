@@ -12,6 +12,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +23,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +34,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +45,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +56,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completionToken")
     public String completionToken;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withCompletionToken(String completionToken) {
         this.completionToken = completionToken;
         return this;
@@ -62,6 +67,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enterpriseToken")
     public String enterpriseToken;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withEnterpriseToken(String enterpriseToken) {
         this.enterpriseToken = enterpriseToken;
         return this;
@@ -72,6 +78,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +89,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +100,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +111,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +122,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +133,7 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +144,11 @@ public class AndroidenterpriseEnterprisesCompleteSignupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidenterpriseEnterprisesCompleteSignupRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidenterpriseEnterprisesCompleteSignupRequest(){}
 }

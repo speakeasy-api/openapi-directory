@@ -18,6 +18,7 @@ public class VendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorAdditionalFixedProperties")
     public String vendorAdditionalFixedProperties;
+
     public VendorProperties withVendorAdditionalFixedProperties(String vendorAdditionalFixedProperties) {
         this.vendorAdditionalFixedProperties = vendorAdditionalFixedProperties;
         return this;
@@ -29,6 +30,7 @@ public class VendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorAdditionalTransientProperties")
     public String vendorAdditionalTransientProperties;
+
     public VendorProperties withVendorAdditionalTransientProperties(String vendorAdditionalTransientProperties) {
         this.vendorAdditionalTransientProperties = vendorAdditionalTransientProperties;
         return this;
@@ -39,6 +41,7 @@ public class VendorProperties {
      */
     @JsonProperty("vendorWorkerId")
     public String vendorWorkerId;
+
     public VendorProperties withVendorWorkerId(String vendorWorkerId) {
         this.vendorWorkerId = vendorWorkerId;
         return this;
@@ -50,9 +53,13 @@ public class VendorProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorWorkerIpAddress")
     public String vendorWorkerIpAddress;
+
     public VendorProperties withVendorWorkerIpAddress(String vendorWorkerIpAddress) {
         this.vendorWorkerIpAddress = vendorWorkerIpAddress;
         return this;
     }
     
+    public VendorProperties(@JsonProperty("vendorWorkerId") String vendorWorkerId) {
+        this.vendorWorkerId = vendorWorkerId;
+  }
 }

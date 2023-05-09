@@ -15,6 +15,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public Transaction withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -26,6 +27,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_in_base_currency")
     public Double amountInBaseCurrency;
+
     public Transaction withAmountInBaseCurrency(Double amountInBaseCurrency) {
         this.amountInBaseCurrency = amountInBaseCurrency;
         return this;
@@ -34,6 +36,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public Category category;
+
     public Transaction withCategory(Category category) {
         this.category = category;
         return this;
@@ -42,6 +45,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cheque_number")
     public String chequeNumber;
+
     public Transaction withChequeNumber(String chequeNumber) {
         this.chequeNumber = chequeNumber;
         return this;
@@ -53,6 +57,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_balance")
     public Double closingBalance;
+
     public Transaction withClosingBalance(Double closingBalance) {
         this.closingBalance = closingBalance;
         return this;
@@ -64,6 +69,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Transaction withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -75,6 +81,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public Transaction withDate(String date) {
         this.date = date;
         return this;
@@ -86,6 +93,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Transaction withId(Long id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_transfer")
     public Boolean isTransfer;
+
     public Transaction withIsTransfer(Boolean isTransfer) {
         this.isTransfer = isTransfer;
         return this;
@@ -105,6 +114,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public Transaction withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -113,6 +123,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public Transaction withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -124,6 +135,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("needs_review")
     public Boolean needsReview;
+
     public Transaction withNeedsReview(Boolean needsReview) {
         this.needsReview = needsReview;
         return this;
@@ -132,6 +144,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public Transaction withNote(String note) {
         this.note = note;
         return this;
@@ -143,6 +156,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_payee")
     public String originalPayee;
+
     public Transaction withOriginalPayee(String originalPayee) {
         this.originalPayee = originalPayee;
         return this;
@@ -154,6 +168,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee")
     public String payee;
+
     public Transaction withPayee(String payee) {
         this.payee = payee;
         return this;
@@ -165,6 +180,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TransactionStatusEnum status;
+
     public Transaction withStatus(TransactionStatusEnum status) {
         this.status = status;
         return this;
@@ -173,6 +189,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction_account")
     public TransactionAccount transactionAccount;
+
     public Transaction withTransactionAccount(TransactionAccount transactionAccount) {
         this.transactionAccount = transactionAccount;
         return this;
@@ -184,6 +201,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TransactionTypeEnum type;
+
     public Transaction withType(TransactionTypeEnum type) {
         this.type = type;
         return this;
@@ -195,6 +213,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Transaction withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -206,9 +225,11 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_source")
     public String uploadSource;
+
     public Transaction withUploadSource(String uploadSource) {
         this.uploadSource = uploadSource;
         return this;
     }
     
+    public Transaction(){}
 }

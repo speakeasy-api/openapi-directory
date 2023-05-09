@@ -15,6 +15,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public TaskExecutionResultDetail withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorDetail")
     public String errorDetail;
+
     public TaskExecutionResultDetail withErrorDetail(String errorDetail) {
         this.errorDetail = errorDetail;
         return this;
@@ -31,6 +33,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrepareDuration")
     public Long prepareDuration;
+
     public TaskExecutionResultDetail withPrepareDuration(Long prepareDuration) {
         this.prepareDuration = prepareDuration;
         return this;
@@ -39,6 +42,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrepareStatus")
     public PhaseStatusEnum prepareStatus;
+
     public TaskExecutionResultDetail withPrepareStatus(PhaseStatusEnum prepareStatus) {
         this.prepareStatus = prepareStatus;
         return this;
@@ -47,6 +51,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalDuration")
     public Long totalDuration;
+
     public TaskExecutionResultDetail withTotalDuration(Long totalDuration) {
         this.totalDuration = totalDuration;
         return this;
@@ -55,6 +60,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferDuration")
     public Long transferDuration;
+
     public TaskExecutionResultDetail withTransferDuration(Long transferDuration) {
         this.transferDuration = transferDuration;
         return this;
@@ -63,6 +69,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransferStatus")
     public PhaseStatusEnum transferStatus;
+
     public TaskExecutionResultDetail withTransferStatus(PhaseStatusEnum transferStatus) {
         this.transferStatus = transferStatus;
         return this;
@@ -71,6 +78,7 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifyDuration")
     public Long verifyDuration;
+
     public TaskExecutionResultDetail withVerifyDuration(Long verifyDuration) {
         this.verifyDuration = verifyDuration;
         return this;
@@ -79,9 +87,11 @@ public class TaskExecutionResultDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerifyStatus")
     public PhaseStatusEnum verifyStatus;
+
     public TaskExecutionResultDetail withVerifyStatus(PhaseStatusEnum verifyStatus) {
         this.verifyStatus = verifyStatus;
         return this;
     }
     
+    public TaskExecutionResultDetail(){}
 }

@@ -18,9 +18,11 @@ public class ListMetricsScopesByMonitoredProjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsScopes")
     public MetricsScope[] metricsScopes;
+
     public ListMetricsScopesByMonitoredProjectResponse withMetricsScopes(MetricsScope[] metricsScopes) {
         this.metricsScopes = metricsScopes;
         return this;
     }
     
+    public ListMetricsScopesByMonitoredProjectResponse(){}
 }

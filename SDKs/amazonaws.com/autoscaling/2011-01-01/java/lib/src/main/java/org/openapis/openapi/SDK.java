@@ -267,6 +267,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -305,11 +310,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAttachInstancesResponse res = new org.openapis.openapi.models.operations.GETAttachInstancesResponse() {{
+        org.openapis.openapi.models.operations.GETAttachInstancesResponse res = new org.openapis.openapi.models.operations.GETAttachInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -325,7 +328,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Attaches one or more target groups to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation is used with the following load balancer types: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Application Load Balancer - Operates at the application layer (layer 7) and supports HTTP and HTTPS. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Network Load Balancer - Operates at the transport layer (layer 4) and supports TCP, TLS, and UDP. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Gateway Load Balancer - Operates at the network layer (layer 3).&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To describe the target groups for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API. To detach the target group from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing target groups or Classic Load Balancers from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;AttachTrafficSources&lt;/a&gt;, which can attach multiple traffic sources types. We recommend using &lt;code&gt;AttachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;AttachLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;AttachLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;AttachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more target groups to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation is used with the following load balancer types: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Application Load Balancer - Operates at the application layer (layer 7) and supports HTTP and HTTPS. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Network Load Balancer - Operates at the transport layer (layer 4) and supports TCP, TLS, and UDP. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Gateway Load Balancer - Operates at the network layer (layer 3).&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To describe the target groups for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API. To detach the target group from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing target groups or Classic Load Balancers from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -359,11 +362,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAttachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETAttachLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.GETAttachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETAttachLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -377,7 +378,7 @@ public class SDK {
     }
 
     /**
-     * &lt;note&gt; &lt;p&gt;To attach an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer, use the &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt; API operation instead.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more Classic Load Balancers to the specified Auto Scaling group. Amazon EC2 Auto Scaling registers the running instances with these Classic Load Balancers.&lt;/p&gt; &lt;p&gt;To describe the load balancers for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API. To detach a load balancer from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancers&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing Classic Load Balancers or target groups from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;AttachTrafficSources&lt;/a&gt;, which can attach multiple traffic sources types. We recommend using &lt;code&gt;AttachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;AttachLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;AttachLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;AttachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more Classic Load Balancers to the specified Auto Scaling group. Amazon EC2 Auto Scaling registers the running instances with these Classic Load Balancers.&lt;/p&gt; &lt;p&gt;To describe the load balancers for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API. To detach a load balancer from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancers&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing Classic Load Balancers or target groups from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -411,11 +412,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAttachLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETAttachLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.GETAttachLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETAttachLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -463,11 +462,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETBatchDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.GETBatchDeleteScheduledActionResponse() {{
+        org.openapis.openapi.models.operations.GETBatchDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.GETBatchDeleteScheduledActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -515,11 +512,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETCancelInstanceRefreshResponse res = new org.openapis.openapi.models.operations.GETCancelInstanceRefreshResponse() {{
+        org.openapis.openapi.models.operations.GETCancelInstanceRefreshResponse res = new org.openapis.openapi.models.operations.GETCancelInstanceRefreshResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -567,11 +562,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETCompleteLifecycleActionResponse res = new org.openapis.openapi.models.operations.GETCompleteLifecycleActionResponse() {{
+        org.openapis.openapi.models.operations.GETCompleteLifecycleActionResponse res = new org.openapis.openapi.models.operations.GETCompleteLifecycleActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -619,11 +612,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.GETDeleteAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.GETDeleteAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,11 +664,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.GETDeleteLaunchConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.GETDeleteLaunchConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -727,11 +716,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteLifecycleHookResponse res = new org.openapis.openapi.models.operations.GETDeleteLifecycleHookResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteLifecycleHookResponse res = new org.openapis.openapi.models.operations.GETDeleteLifecycleHookResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -779,11 +766,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.GETDeleteNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.GETDeleteNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -833,11 +818,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeletePolicyResponse res = new org.openapis.openapi.models.operations.GETDeletePolicyResponse() {{
+        org.openapis.openapi.models.operations.GETDeletePolicyResponse res = new org.openapis.openapi.models.operations.GETDeletePolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -887,11 +870,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.GETDeleteScheduledActionResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.GETDeleteScheduledActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -941,11 +922,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteWarmPoolResponse res = new org.openapis.openapi.models.operations.GETDeleteWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteWarmPoolResponse res = new org.openapis.openapi.models.operations.GETDeleteWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -993,11 +972,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAccountLimitsResponse res = new org.openapis.openapi.models.operations.GETDescribeAccountLimitsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAccountLimitsResponse res = new org.openapis.openapi.models.operations.GETDescribeAccountLimitsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1045,11 +1022,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAdjustmentTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeAdjustmentTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAdjustmentTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeAdjustmentTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1097,11 +1072,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAutoScalingInstancesResponse res = new org.openapis.openapi.models.operations.GETDescribeAutoScalingInstancesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAutoScalingInstancesResponse res = new org.openapis.openapi.models.operations.GETDescribeAutoScalingInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1149,11 +1122,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAutoScalingNotificationTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeAutoScalingNotificationTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAutoScalingNotificationTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeAutoScalingNotificationTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1201,11 +1172,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeInstanceRefreshesResponse res = new org.openapis.openapi.models.operations.GETDescribeInstanceRefreshesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeInstanceRefreshesResponse res = new org.openapis.openapi.models.operations.GETDescribeInstanceRefreshesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1253,11 +1222,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeLaunchConfigurationsResponse res = new org.openapis.openapi.models.operations.GETDescribeLaunchConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeLaunchConfigurationsResponse res = new org.openapis.openapi.models.operations.GETDescribeLaunchConfigurationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1305,11 +1272,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeLifecycleHookTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeLifecycleHookTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeLifecycleHookTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeLifecycleHookTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1357,11 +1322,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeLifecycleHooksResponse res = new org.openapis.openapi.models.operations.GETDescribeLifecycleHooksResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeLifecycleHooksResponse res = new org.openapis.openapi.models.operations.GETDescribeLifecycleHooksResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1375,7 +1338,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets information about the Elastic Load Balancing target groups for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the target group, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a target group to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the target group. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the target group is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the target group doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Target groups also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your target group state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to describe target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DescribeTrafficSources&lt;/a&gt;, which can describe multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DescribeLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;DescribeLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;DescribeTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Gets information about the Elastic Load Balancing target groups for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the target group, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a target group to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the target group. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the target group is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the target group doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Target groups also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your target group state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to describe target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1409,11 +1372,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETDescribeLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETDescribeLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1427,7 +1388,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets information about the load balancers for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation describes only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancer, use the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the load balancer, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a load balancer to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the load balancer. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the load balancer is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the load balancer doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Load balancers also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your load balancer state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DescribeTrafficSources&lt;/a&gt;, which can describe multiple traffic sources types. We recommend using &lt;code&gt;DescribeTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DescribeLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;DescribeLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;DescribeTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Gets information about the load balancers for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation describes only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the load balancer, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a load balancer to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the load balancer. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the load balancer is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the load balancer doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Load balancers also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your load balancer state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1461,11 +1422,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETDescribeLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETDescribeLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1513,11 +1472,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeMetricCollectionTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeMetricCollectionTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeMetricCollectionTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeMetricCollectionTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1565,11 +1522,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.GETDescribeNotificationConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.GETDescribeNotificationConfigurationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1617,11 +1572,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribePoliciesResponse res = new org.openapis.openapi.models.operations.GETDescribePoliciesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribePoliciesResponse res = new org.openapis.openapi.models.operations.GETDescribePoliciesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1669,11 +1622,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeScalingActivitiesResponse res = new org.openapis.openapi.models.operations.GETDescribeScalingActivitiesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeScalingActivitiesResponse res = new org.openapis.openapi.models.operations.GETDescribeScalingActivitiesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1721,11 +1672,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeScalingProcessTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeScalingProcessTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeScalingProcessTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeScalingProcessTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1773,11 +1722,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeScheduledActionsResponse res = new org.openapis.openapi.models.operations.GETDescribeScheduledActionsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeScheduledActionsResponse res = new org.openapis.openapi.models.operations.GETDescribeScheduledActionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1825,11 +1772,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeTerminationPolicyTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeTerminationPolicyTypesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeTerminationPolicyTypesResponse res = new org.openapis.openapi.models.operations.GETDescribeTerminationPolicyTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1843,7 +1788,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for production workloads. This API is also subject to change.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Gets information about the traffic sources for the specified Auto Scaling group.&lt;/p&gt;
+     * &lt;p&gt;Gets information about the traffic sources for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;You can optionally provide a traffic source type. If you provide a traffic source type, then the results only include that traffic source type.&lt;/p&gt; &lt;p&gt;If you do not provide a traffic source type, then the results include all the traffic sources for the specified Auto Scaling group. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -1877,11 +1822,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeTrafficSourcesResponse res = new org.openapis.openapi.models.operations.GETDescribeTrafficSourcesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeTrafficSourcesResponse res = new org.openapis.openapi.models.operations.GETDescribeTrafficSourcesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1929,11 +1872,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeWarmPoolResponse res = new org.openapis.openapi.models.operations.GETDescribeWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeWarmPoolResponse res = new org.openapis.openapi.models.operations.GETDescribeWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1981,11 +1922,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDetachInstancesResponse res = new org.openapis.openapi.models.operations.GETDetachInstancesResponse() {{
+        org.openapis.openapi.models.operations.GETDetachInstancesResponse res = new org.openapis.openapi.models.operations.GETDetachInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1999,7 +1938,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Detaches one or more target groups from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;When you detach a target group, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the target group using the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API call. The instances remain running.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to detach target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DetachTrafficSources&lt;/a&gt;, which can detach multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DetachLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;DetachLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;DetachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Detaches one or more target groups from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;When you detach a target group, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the target group using the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API call. The instances remain running.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to detach target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2033,11 +1972,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDetachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETDetachLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.GETDetachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.GETDetachLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2051,7 +1988,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Detaches one or more Classic Load Balancers from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation detaches only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancer, use the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;When you detach a load balancer, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the load balancer using the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API call. The instances remain running.&lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DetachTrafficSources&lt;/a&gt;, which can detach multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DetachLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;DetachLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;DetachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Detaches one or more Classic Load Balancers from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation detaches only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;When you detach a load balancer, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the load balancer using the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API call. The instances remain running.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2085,11 +2022,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDetachLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETDetachLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.GETDetachLoadBalancersResponse res = new org.openapis.openapi.models.operations.GETDetachLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2137,11 +2072,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDisableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.GETDisableMetricsCollectionResponse() {{
+        org.openapis.openapi.models.operations.GETDisableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.GETDisableMetricsCollectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2191,11 +2124,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.GETEnableMetricsCollectionResponse() {{
+        org.openapis.openapi.models.operations.GETEnableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.GETEnableMetricsCollectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2245,11 +2176,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnterStandbyResponse res = new org.openapis.openapi.models.operations.GETEnterStandbyResponse() {{
+        org.openapis.openapi.models.operations.GETEnterStandbyResponse res = new org.openapis.openapi.models.operations.GETEnterStandbyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2297,11 +2226,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETExecutePolicyResponse res = new org.openapis.openapi.models.operations.GETExecutePolicyResponse() {{
+        org.openapis.openapi.models.operations.GETExecutePolicyResponse res = new org.openapis.openapi.models.operations.GETExecutePolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2351,11 +2278,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETExitStandbyResponse res = new org.openapis.openapi.models.operations.GETExitStandbyResponse() {{
+        org.openapis.openapi.models.operations.GETExitStandbyResponse res = new org.openapis.openapi.models.operations.GETExitStandbyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2403,11 +2328,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGETPredictiveScalingForecastResponse res = new org.openapis.openapi.models.operations.GETGETPredictiveScalingForecastResponse() {{
+        org.openapis.openapi.models.operations.GETGETPredictiveScalingForecastResponse res = new org.openapis.openapi.models.operations.GETGETPredictiveScalingForecastResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2455,11 +2378,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPutLifecycleHookResponse res = new org.openapis.openapi.models.operations.GETPutLifecycleHookResponse() {{
+        org.openapis.openapi.models.operations.GETPutLifecycleHookResponse res = new org.openapis.openapi.models.operations.GETPutLifecycleHookResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2507,11 +2428,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPutNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.GETPutNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GETPutNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.GETPutNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2561,11 +2480,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.GETPutScheduledUpdateGroupActionResponse() {{
+        org.openapis.openapi.models.operations.GETPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.GETPutScheduledUpdateGroupActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2615,11 +2532,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPutWarmPoolResponse res = new org.openapis.openapi.models.operations.GETPutWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.GETPutWarmPoolResponse res = new org.openapis.openapi.models.operations.GETPutWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2667,11 +2582,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRecordLifecycleActionHeartbeatResponse res = new org.openapis.openapi.models.operations.GETRecordLifecycleActionHeartbeatResponse() {{
+        org.openapis.openapi.models.operations.GETRecordLifecycleActionHeartbeatResponse res = new org.openapis.openapi.models.operations.GETRecordLifecycleActionHeartbeatResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2719,11 +2632,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETResumeProcessesResponse res = new org.openapis.openapi.models.operations.GETResumeProcessesResponse() {{
+        org.openapis.openapi.models.operations.GETResumeProcessesResponse res = new org.openapis.openapi.models.operations.GETResumeProcessesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2773,11 +2684,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETRollbackInstanceRefreshResponse res = new org.openapis.openapi.models.operations.GETRollbackInstanceRefreshResponse() {{
+        org.openapis.openapi.models.operations.GETRollbackInstanceRefreshResponse res = new org.openapis.openapi.models.operations.GETRollbackInstanceRefreshResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -2825,11 +2734,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSetDesiredCapacityResponse res = new org.openapis.openapi.models.operations.GETSetDesiredCapacityResponse() {{
+        org.openapis.openapi.models.operations.GETSetDesiredCapacityResponse res = new org.openapis.openapi.models.operations.GETSetDesiredCapacityResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2879,11 +2786,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSetInstanceHealthResponse res = new org.openapis.openapi.models.operations.GETSetInstanceHealthResponse() {{
+        org.openapis.openapi.models.operations.GETSetInstanceHealthResponse res = new org.openapis.openapi.models.operations.GETSetInstanceHealthResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2933,11 +2838,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSetInstanceProtectionResponse res = new org.openapis.openapi.models.operations.GETSetInstanceProtectionResponse() {{
+        org.openapis.openapi.models.operations.GETSetInstanceProtectionResponse res = new org.openapis.openapi.models.operations.GETSetInstanceProtectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2985,11 +2888,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSuspendProcessesResponse res = new org.openapis.openapi.models.operations.GETSuspendProcessesResponse() {{
+        org.openapis.openapi.models.operations.GETSuspendProcessesResponse res = new org.openapis.openapi.models.operations.GETSuspendProcessesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3039,11 +2940,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETTerminateInstanceInAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.GETTerminateInstanceInAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.GETTerminateInstanceInAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.GETTerminateInstanceInAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -3093,11 +2992,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTAttachInstancesResponse res = new org.openapis.openapi.models.operations.POSTAttachInstancesResponse() {{
+        org.openapis.openapi.models.operations.POSTAttachInstancesResponse res = new org.openapis.openapi.models.operations.POSTAttachInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3113,7 +3010,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Attaches one or more target groups to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation is used with the following load balancer types: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Application Load Balancer - Operates at the application layer (layer 7) and supports HTTP and HTTPS. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Network Load Balancer - Operates at the transport layer (layer 4) and supports TCP, TLS, and UDP. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Gateway Load Balancer - Operates at the network layer (layer 3).&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To describe the target groups for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API. To detach the target group from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing target groups or Classic Load Balancers from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;AttachTrafficSources&lt;/a&gt;, which can attach multiple traffic sources types. We recommend using &lt;code&gt;AttachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;AttachLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;AttachLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;AttachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more target groups to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation is used with the following load balancer types: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Application Load Balancer - Operates at the application layer (layer 7) and supports HTTP and HTTPS. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Network Load Balancer - Operates at the transport layer (layer 4) and supports TCP, TLS, and UDP. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Gateway Load Balancer - Operates at the network layer (layer 3).&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To describe the target groups for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API. To detach the target group from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing target groups or Classic Load Balancers from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3149,11 +3046,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTAttachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTAttachLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.POSTAttachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTAttachLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -3167,7 +3062,7 @@ public class SDK {
     }
 
     /**
-     * &lt;note&gt; &lt;p&gt;To attach an Application Load Balancer, Network Load Balancer, or Gateway Load Balancer, use the &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt; API operation instead.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more Classic Load Balancers to the specified Auto Scaling group. Amazon EC2 Auto Scaling registers the running instances with these Classic Load Balancers.&lt;/p&gt; &lt;p&gt;To describe the load balancers for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API. To detach a load balancer from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancers&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing Classic Load Balancers or target groups from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;AttachTrafficSources&lt;/a&gt;, which can attach multiple traffic sources types. We recommend using &lt;code&gt;AttachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;AttachLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;AttachLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;AttachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Attaches one or more Classic Load Balancers to the specified Auto Scaling group. Amazon EC2 Auto Scaling registers the running instances with these Classic Load Balancers.&lt;/p&gt; &lt;p&gt;To describe the load balancers for an Auto Scaling group, call the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API. To detach a load balancer from the Auto Scaling group, call the &lt;a&gt;DetachLoadBalancers&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing Classic Load Balancers or target groups from the Auto Scaling group.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3203,11 +3098,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTAttachLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTAttachLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.POSTAttachLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTAttachLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -3221,7 +3114,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for production workloads. This API is also subject to change.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Attaches one or more traffic sources to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;To describe the traffic sources for an Auto Scaling group, call the &lt;a&gt;DescribeTrafficSources&lt;/a&gt; API. To detach a traffic source from the Auto Scaling group, call the &lt;a&gt;DetachTrafficSources&lt;/a&gt; API.&lt;/p&gt; &lt;p&gt;This operation is additive and does not detach existing traffic sources from the Auto Scaling group.&lt;/p&gt;
+     * &lt;p&gt;Attaches one or more traffic sources to the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;You can use any of the following as traffic sources for an Auto Scaling group:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Application Load Balancer&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Classic Load Balancer&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Gateway Load Balancer&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Network Load Balancer&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;VPC Lattice&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;This operation is additive and does not detach existing traffic sources from the Auto Scaling group. &lt;/p&gt; &lt;p&gt;After the operation completes, use the &lt;a&gt;DescribeTrafficSources&lt;/a&gt; API to return details about the state of the attachments between traffic sources and your Auto Scaling group. To detach a traffic source from the Auto Scaling group, call the &lt;a&gt;DetachTrafficSources&lt;/a&gt; API.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3257,11 +3150,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTAttachTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTAttachTrafficSourcesResponse() {{
+        org.openapis.openapi.models.operations.POSTAttachTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTAttachTrafficSourcesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -3311,11 +3202,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTBatchDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.POSTBatchDeleteScheduledActionResponse() {{
+        org.openapis.openapi.models.operations.POSTBatchDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.POSTBatchDeleteScheduledActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -3365,11 +3254,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTBatchPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.POSTBatchPutScheduledUpdateGroupActionResponse() {{
+        org.openapis.openapi.models.operations.POSTBatchPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.POSTBatchPutScheduledUpdateGroupActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -3419,11 +3306,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTCancelInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTCancelInstanceRefreshResponse() {{
+        org.openapis.openapi.models.operations.POSTCancelInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTCancelInstanceRefreshResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -3473,11 +3358,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTCompleteLifecycleActionResponse res = new org.openapis.openapi.models.operations.POSTCompleteLifecycleActionResponse() {{
+        org.openapis.openapi.models.operations.POSTCompleteLifecycleActionResponse res = new org.openapis.openapi.models.operations.POSTCompleteLifecycleActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -3527,11 +3410,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTCreateAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTCreateAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.POSTCreateAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTCreateAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3583,11 +3464,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTCreateLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.POSTCreateLaunchConfigurationResponse() {{
+        org.openapis.openapi.models.operations.POSTCreateLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.POSTCreateLaunchConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3639,11 +3518,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTCreateOrUpdateTagsResponse res = new org.openapis.openapi.models.operations.POSTCreateOrUpdateTagsResponse() {{
+        org.openapis.openapi.models.operations.POSTCreateOrUpdateTagsResponse res = new org.openapis.openapi.models.operations.POSTCreateOrUpdateTagsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3695,11 +3572,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTDeleteAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTDeleteAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3751,11 +3626,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.POSTDeleteLaunchConfigurationResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteLaunchConfigurationResponse res = new org.openapis.openapi.models.operations.POSTDeleteLaunchConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3807,11 +3680,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteLifecycleHookResponse res = new org.openapis.openapi.models.operations.POSTDeleteLifecycleHookResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteLifecycleHookResponse res = new org.openapis.openapi.models.operations.POSTDeleteLifecycleHookResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -3861,11 +3732,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.POSTDeleteNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.POSTDeleteNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3917,11 +3786,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeletePolicyResponse res = new org.openapis.openapi.models.operations.POSTDeletePolicyResponse() {{
+        org.openapis.openapi.models.operations.POSTDeletePolicyResponse res = new org.openapis.openapi.models.operations.POSTDeletePolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3973,11 +3840,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.POSTDeleteScheduledActionResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteScheduledActionResponse res = new org.openapis.openapi.models.operations.POSTDeleteScheduledActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4029,11 +3894,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteTagsResponse res = new org.openapis.openapi.models.operations.POSTDeleteTagsResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteTagsResponse res = new org.openapis.openapi.models.operations.POSTDeleteTagsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4085,11 +3948,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTDeleteWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTDeleteWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -4137,11 +3998,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAccountLimitsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAccountLimitsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAccountLimitsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAccountLimitsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4189,11 +4048,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAdjustmentTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAdjustmentTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAdjustmentTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAdjustmentTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4243,11 +4100,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAutoScalingGroupsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingGroupsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAutoScalingGroupsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4297,11 +4152,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAutoScalingInstancesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingInstancesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAutoScalingInstancesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4349,11 +4202,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAutoScalingNotificationTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingNotificationTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAutoScalingNotificationTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeAutoScalingNotificationTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4403,11 +4254,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeInstanceRefreshesResponse res = new org.openapis.openapi.models.operations.POSTDescribeInstanceRefreshesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeInstanceRefreshesResponse res = new org.openapis.openapi.models.operations.POSTDescribeInstanceRefreshesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4457,11 +4306,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeLaunchConfigurationsResponse res = new org.openapis.openapi.models.operations.POSTDescribeLaunchConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeLaunchConfigurationsResponse res = new org.openapis.openapi.models.operations.POSTDescribeLaunchConfigurationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4509,11 +4356,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeLifecycleHookTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeLifecycleHookTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeLifecycleHookTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeLifecycleHookTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4563,11 +4408,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeLifecycleHooksResponse res = new org.openapis.openapi.models.operations.POSTDescribeLifecycleHooksResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeLifecycleHooksResponse res = new org.openapis.openapi.models.operations.POSTDescribeLifecycleHooksResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4581,7 +4424,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets information about the Elastic Load Balancing target groups for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the target group, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a target group to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the target group. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the target group is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the target group doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Target groups also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your target group state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to describe target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DescribeTrafficSources&lt;/a&gt;, which can describe multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DescribeLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;DescribeLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;DescribeTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Gets information about the Elastic Load Balancing target groups for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the target group, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a target group to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the target group. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the target group is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the target group doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Target groups also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your target group state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to describe target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4617,11 +4460,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTDescribeLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTDescribeLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4635,7 +4476,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets information about the load balancers for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation describes only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancer, use the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the load balancer, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a load balancer to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the load balancer. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the load balancer is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the load balancer doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Load balancers also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your load balancer state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DescribeTrafficSources&lt;/a&gt;, which can describe multiple traffic sources types. We recommend using &lt;code&gt;DescribeTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DescribeLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;DescribeLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;DescribeTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Gets information about the load balancers for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation describes only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;To determine the attachment status of the load balancer, use the &lt;code&gt;State&lt;/code&gt; element in the response. When you attach a load balancer to an Auto Scaling group, the initial &lt;code&gt;State&lt;/code&gt; value is &lt;code&gt;Adding&lt;/code&gt;. The state transitions to &lt;code&gt;Added&lt;/code&gt; after all Auto Scaling instances are registered with the load balancer. If Elastic Load Balancing health checks are enabled for the Auto Scaling group, the state transitions to &lt;code&gt;InService&lt;/code&gt; after at least one Auto Scaling instance passes the health check. When the load balancer is in the &lt;code&gt;InService&lt;/code&gt; state, Amazon EC2 Auto Scaling can terminate and replace any instances that are reported as unhealthy. If no registered instances pass the health checks, the load balancer doesn't enter the &lt;code&gt;InService&lt;/code&gt; state. &lt;/p&gt; &lt;p&gt;Load balancers also have an &lt;code&gt;InService&lt;/code&gt; state if you attach them in the &lt;a&gt;CreateAutoScalingGroup&lt;/a&gt; API call. If your load balancer state is &lt;code&gt;InService&lt;/code&gt;, but it is not working properly, check the scaling activities by calling &lt;a&gt;DescribeScalingActivities&lt;/a&gt; and take any corrective actions necessary.&lt;/p&gt; &lt;p&gt;For help with failed health checks, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/ts-as-healthchecks.html"&gt;Troubleshooting Amazon EC2 Auto Scaling: Health checks&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/autoscaling-load-balancer.html"&gt;Use Elastic Load Balancing to distribute traffic across the instances in your Auto Scaling group&lt;/a&gt; in the &lt;i&gt;Amazon EC2 Auto Scaling User Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -4671,11 +4512,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTDescribeLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTDescribeLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4723,11 +4562,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeMetricCollectionTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeMetricCollectionTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeMetricCollectionTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeMetricCollectionTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4777,11 +4614,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.POSTDescribeNotificationConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.POSTDescribeNotificationConfigurationsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4831,11 +4666,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribePoliciesResponse res = new org.openapis.openapi.models.operations.POSTDescribePoliciesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribePoliciesResponse res = new org.openapis.openapi.models.operations.POSTDescribePoliciesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -4885,11 +4718,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeScalingActivitiesResponse res = new org.openapis.openapi.models.operations.POSTDescribeScalingActivitiesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeScalingActivitiesResponse res = new org.openapis.openapi.models.operations.POSTDescribeScalingActivitiesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -4937,11 +4768,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeScalingProcessTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeScalingProcessTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeScalingProcessTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeScalingProcessTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -4991,11 +4820,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeScheduledActionsResponse res = new org.openapis.openapi.models.operations.POSTDescribeScheduledActionsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeScheduledActionsResponse res = new org.openapis.openapi.models.operations.POSTDescribeScheduledActionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -5045,11 +4872,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeTagsResponse res = new org.openapis.openapi.models.operations.POSTDescribeTagsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeTagsResponse res = new org.openapis.openapi.models.operations.POSTDescribeTagsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -5097,11 +4922,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeTerminationPolicyTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeTerminationPolicyTypesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeTerminationPolicyTypesResponse res = new org.openapis.openapi.models.operations.POSTDescribeTerminationPolicyTypesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5115,7 +4938,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for production workloads. This API is also subject to change.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Gets information about the traffic sources for the specified Auto Scaling group.&lt;/p&gt;
+     * &lt;p&gt;Gets information about the traffic sources for the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;You can optionally provide a traffic source type. If you provide a traffic source type, then the results only include that traffic source type.&lt;/p&gt; &lt;p&gt;If you do not provide a traffic source type, then the results include all the traffic sources for the specified Auto Scaling group. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5151,11 +4974,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTDescribeTrafficSourcesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTDescribeTrafficSourcesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -5205,11 +5026,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTDescribeWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTDescribeWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -5259,11 +5078,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDetachInstancesResponse res = new org.openapis.openapi.models.operations.POSTDetachInstancesResponse() {{
+        org.openapis.openapi.models.operations.POSTDetachInstancesResponse res = new org.openapis.openapi.models.operations.POSTDetachInstancesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5277,7 +5094,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Detaches one or more target groups from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;When you detach a target group, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the target group using the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API call. The instances remain running.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to detach target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DetachTrafficSources&lt;/a&gt;, which can detach multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DetachLoadBalancerTargetGroups&lt;/code&gt;. You can use both the original &lt;code&gt;DetachLoadBalancerTargetGroups&lt;/code&gt; API operation and &lt;code&gt;DetachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Detaches one or more target groups from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;When you detach a target group, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the target group using the &lt;a&gt;DescribeLoadBalancerTargetGroups&lt;/a&gt; API call. The instances remain running.&lt;/p&gt; &lt;note&gt; &lt;p&gt;You can use this operation to detach target groups that were attached by using &lt;a&gt;AttachLoadBalancerTargetGroups&lt;/a&gt;, but not for target groups that were attached by using &lt;a&gt;AttachTrafficSources&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5313,11 +5130,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDetachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTDetachLoadBalancerTargetGroupsResponse() {{
+        org.openapis.openapi.models.operations.POSTDetachLoadBalancerTargetGroupsResponse res = new org.openapis.openapi.models.operations.POSTDetachLoadBalancerTargetGroupsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5331,7 +5146,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Detaches one or more Classic Load Balancers from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation detaches only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancer, use the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;When you detach a load balancer, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the load balancer using the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API call. The instances remain running.&lt;/p&gt;
+     * &lt;note&gt; &lt;p&gt;This API operation is superseded by &lt;a&gt;DetachTrafficSources&lt;/a&gt;, which can detach multiple traffic sources types. We recommend using &lt;code&gt;DetachTrafficSources&lt;/code&gt; to simplify how you manage traffic sources. However, we continue to support &lt;code&gt;DetachLoadBalancers&lt;/code&gt;. You can use both the original &lt;code&gt;DetachLoadBalancers&lt;/code&gt; API operation and &lt;code&gt;DetachTrafficSources&lt;/code&gt; on the same Auto Scaling group.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;Detaches one or more Classic Load Balancers from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;This operation detaches only Classic Load Balancers. If you have Application Load Balancers, Network Load Balancers, or Gateway Load Balancers, use the &lt;a&gt;DetachLoadBalancerTargetGroups&lt;/a&gt; API instead.&lt;/p&gt; &lt;p&gt;When you detach a load balancer, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the load balancer using the &lt;a&gt;DescribeLoadBalancers&lt;/a&gt; API call. The instances remain running.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5367,11 +5182,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDetachLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTDetachLoadBalancersResponse() {{
+        org.openapis.openapi.models.operations.POSTDetachLoadBalancersResponse res = new org.openapis.openapi.models.operations.POSTDetachLoadBalancersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5385,7 +5198,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt; &lt;b&gt;Reserved for use with Amazon VPC Lattice, which is in preview and subject to change. Do not use this API for production workloads. This API is also subject to change.&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Detaches one or more traffic sources from the specified Auto Scaling group.&lt;/p&gt;
+     * &lt;p&gt;Detaches one or more traffic sources from the specified Auto Scaling group.&lt;/p&gt; &lt;p&gt;When you detach a taffic, it enters the &lt;code&gt;Removing&lt;/code&gt; state while deregistering the instances in the group. When all instances are deregistered, then you can no longer describe the traffic source using the &lt;a&gt;DescribeTrafficSources&lt;/a&gt; API call. The instances continue to run.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5421,11 +5234,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDetachTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTDetachTrafficSourcesResponse() {{
+        org.openapis.openapi.models.operations.POSTDetachTrafficSourcesResponse res = new org.openapis.openapi.models.operations.POSTDetachTrafficSourcesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5475,11 +5286,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDisableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.POSTDisableMetricsCollectionResponse() {{
+        org.openapis.openapi.models.operations.POSTDisableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.POSTDisableMetricsCollectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5531,11 +5340,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTEnableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.POSTEnableMetricsCollectionResponse() {{
+        org.openapis.openapi.models.operations.POSTEnableMetricsCollectionResponse res = new org.openapis.openapi.models.operations.POSTEnableMetricsCollectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5587,11 +5394,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTEnterStandbyResponse res = new org.openapis.openapi.models.operations.POSTEnterStandbyResponse() {{
+        org.openapis.openapi.models.operations.POSTEnterStandbyResponse res = new org.openapis.openapi.models.operations.POSTEnterStandbyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5641,11 +5446,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTExecutePolicyResponse res = new org.openapis.openapi.models.operations.POSTExecutePolicyResponse() {{
+        org.openapis.openapi.models.operations.POSTExecutePolicyResponse res = new org.openapis.openapi.models.operations.POSTExecutePolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5697,11 +5500,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTExitStandbyResponse res = new org.openapis.openapi.models.operations.POSTExitStandbyResponse() {{
+        org.openapis.openapi.models.operations.POSTExitStandbyResponse res = new org.openapis.openapi.models.operations.POSTExitStandbyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5751,11 +5552,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetPredictiveScalingForecastResponse res = new org.openapis.openapi.models.operations.POSTGetPredictiveScalingForecastResponse() {{
+        org.openapis.openapi.models.operations.POSTGetPredictiveScalingForecastResponse res = new org.openapis.openapi.models.operations.POSTGetPredictiveScalingForecastResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -5805,11 +5604,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutLifecycleHookResponse res = new org.openapis.openapi.models.operations.POSTPutLifecycleHookResponse() {{
+        org.openapis.openapi.models.operations.POSTPutLifecycleHookResponse res = new org.openapis.openapi.models.operations.POSTPutLifecycleHookResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -5859,11 +5656,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.POSTPutNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.POSTPutNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.POSTPutNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5915,11 +5710,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutScalingPolicyResponse res = new org.openapis.openapi.models.operations.POSTPutScalingPolicyResponse() {{
+        org.openapis.openapi.models.operations.POSTPutScalingPolicyResponse res = new org.openapis.openapi.models.operations.POSTPutScalingPolicyResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -5969,11 +5762,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.POSTPutScheduledUpdateGroupActionResponse() {{
+        org.openapis.openapi.models.operations.POSTPutScheduledUpdateGroupActionResponse res = new org.openapis.openapi.models.operations.POSTPutScheduledUpdateGroupActionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6025,11 +5816,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTPutWarmPoolResponse() {{
+        org.openapis.openapi.models.operations.POSTPutWarmPoolResponse res = new org.openapis.openapi.models.operations.POSTPutWarmPoolResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -6079,11 +5868,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTRecordLifecycleActionHeartbeatResponse res = new org.openapis.openapi.models.operations.POSTRecordLifecycleActionHeartbeatResponse() {{
+        org.openapis.openapi.models.operations.POSTRecordLifecycleActionHeartbeatResponse res = new org.openapis.openapi.models.operations.POSTRecordLifecycleActionHeartbeatResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -6133,11 +5920,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTResumeProcessesResponse res = new org.openapis.openapi.models.operations.POSTResumeProcessesResponse() {{
+        org.openapis.openapi.models.operations.POSTResumeProcessesResponse res = new org.openapis.openapi.models.operations.POSTResumeProcessesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6189,11 +5974,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTRollbackInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTRollbackInstanceRefreshResponse() {{
+        org.openapis.openapi.models.operations.POSTRollbackInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTRollbackInstanceRefreshResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -6243,11 +6026,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTSetDesiredCapacityResponse res = new org.openapis.openapi.models.operations.POSTSetDesiredCapacityResponse() {{
+        org.openapis.openapi.models.operations.POSTSetDesiredCapacityResponse res = new org.openapis.openapi.models.operations.POSTSetDesiredCapacityResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6299,11 +6080,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTSetInstanceHealthResponse res = new org.openapis.openapi.models.operations.POSTSetInstanceHealthResponse() {{
+        org.openapis.openapi.models.operations.POSTSetInstanceHealthResponse res = new org.openapis.openapi.models.operations.POSTSetInstanceHealthResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6355,11 +6134,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTSetInstanceProtectionResponse res = new org.openapis.openapi.models.operations.POSTSetInstanceProtectionResponse() {{
+        org.openapis.openapi.models.operations.POSTSetInstanceProtectionResponse res = new org.openapis.openapi.models.operations.POSTSetInstanceProtectionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -6409,11 +6186,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTStartInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTStartInstanceRefreshResponse() {{
+        org.openapis.openapi.models.operations.POSTStartInstanceRefreshResponse res = new org.openapis.openapi.models.operations.POSTStartInstanceRefreshResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -6463,11 +6238,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTSuspendProcessesResponse res = new org.openapis.openapi.models.operations.POSTSuspendProcessesResponse() {{
+        org.openapis.openapi.models.operations.POSTSuspendProcessesResponse res = new org.openapis.openapi.models.operations.POSTSuspendProcessesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -6519,11 +6292,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTTerminateInstanceInAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTTerminateInstanceInAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.POSTTerminateInstanceInAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTTerminateInstanceInAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -6573,11 +6344,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTUpdateAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTUpdateAutoScalingGroupResponse() {{
+        org.openapis.openapi.models.operations.POSTUpdateAutoScalingGroupResponse res = new org.openapis.openapi.models.operations.POSTUpdateAutoScalingGroupResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

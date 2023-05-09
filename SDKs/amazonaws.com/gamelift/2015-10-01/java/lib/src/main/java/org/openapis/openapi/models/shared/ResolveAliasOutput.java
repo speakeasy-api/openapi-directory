@@ -15,6 +15,7 @@ public class ResolveAliasOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public ResolveAliasOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,9 +24,11 @@ public class ResolveAliasOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public ResolveAliasOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public ResolveAliasOutput(){}
 }

@@ -18,6 +18,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alignment")
     public ParagraphStyleAlignmentEnum alignment;
+
     public ParagraphStyle withAlignment(ParagraphStyleAlignmentEnum alignment) {
         this.alignment = alignment;
         return this;
@@ -29,6 +30,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public ParagraphStyleDirectionEnum direction;
+
     public ParagraphStyle withDirection(ParagraphStyleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -40,6 +42,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentEnd")
     public Dimension indentEnd;
+
     public ParagraphStyle withIndentEnd(Dimension indentEnd) {
         this.indentEnd = indentEnd;
         return this;
@@ -51,6 +54,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentFirstLine")
     public Dimension indentFirstLine;
+
     public ParagraphStyle withIndentFirstLine(Dimension indentFirstLine) {
         this.indentFirstLine = indentFirstLine;
         return this;
@@ -62,6 +66,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentStart")
     public Dimension indentStart;
+
     public ParagraphStyle withIndentStart(Dimension indentStart) {
         this.indentStart = indentStart;
         return this;
@@ -73,6 +78,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineSpacing")
     public Float lineSpacing;
+
     public ParagraphStyle withLineSpacing(Float lineSpacing) {
         this.lineSpacing = lineSpacing;
         return this;
@@ -84,6 +90,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceAbove")
     public Dimension spaceAbove;
+
     public ParagraphStyle withSpaceAbove(Dimension spaceAbove) {
         this.spaceAbove = spaceAbove;
         return this;
@@ -95,6 +102,7 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceBelow")
     public Dimension spaceBelow;
+
     public ParagraphStyle withSpaceBelow(Dimension spaceBelow) {
         this.spaceBelow = spaceBelow;
         return this;
@@ -106,9 +114,11 @@ public class ParagraphStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spacingMode")
     public ParagraphStyleSpacingModeEnum spacingMode;
+
     public ParagraphStyle withSpacingMode(ParagraphStyleSpacingModeEnum spacingMode) {
         this.spacingMode = spacingMode;
         return this;
     }
     
+    public ParagraphStyle(){}
 }

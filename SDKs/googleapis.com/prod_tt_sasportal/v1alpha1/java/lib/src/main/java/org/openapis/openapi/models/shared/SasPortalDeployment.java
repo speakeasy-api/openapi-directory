@@ -18,6 +18,7 @@ public class SasPortalDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SasPortalDeployment withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frns")
     public String[] frns;
+
     public SasPortalDeployment withFrns(String[] frns) {
         this.frns = frns;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SasPortalDeployment withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class SasPortalDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUserIds")
     public String[] sasUserIds;
+
     public SasPortalDeployment withSasUserIds(String[] sasUserIds) {
         this.sasUserIds = sasUserIds;
         return this;
     }
     
+    public SasPortalDeployment(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrderRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
     public String authorizationToken;
+
     public CreateOrderRequest withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
@@ -16,9 +18,13 @@ public class CreateOrderRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateOrderRequestInput createOrderRequestInput;
+
     public CreateOrderRequest withCreateOrderRequestInput(org.openapis.openapi.models.shared.CreateOrderRequestInput createOrderRequestInput) {
         this.createOrderRequestInput = createOrderRequestInput;
         return this;
     }
     
+    public CreateOrderRequest(@JsonProperty("authorizationToken") String authorizationToken) {
+        this.authorizationToken = authorizationToken;
+  }
 }

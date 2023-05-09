@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TrendingStickersResponse {
     
     public String contentType;
+
     public TrendingStickersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TrendingStickersResponse {
     
     
     public Integer statusCode;
+
     public TrendingStickersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TrendingStickersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TrendingStickersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class TrendingStickersResponse {
     
     
     public TrendingStickers200ApplicationJSON trendingStickers200ApplicationJSONObject;
+
     public TrendingStickersResponse withTrendingStickers200ApplicationJSONObject(TrendingStickers200ApplicationJSON trendingStickers200ApplicationJSONObject) {
         this.trendingStickers200ApplicationJSONObject = trendingStickers200ApplicationJSONObject;
         return this;
     }
     
+    public TrendingStickersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

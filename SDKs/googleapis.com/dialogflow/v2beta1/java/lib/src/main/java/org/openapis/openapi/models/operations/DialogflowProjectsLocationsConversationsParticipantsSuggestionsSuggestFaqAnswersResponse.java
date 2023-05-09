@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse googleCloudDialogflowV2beta1SuggestFaqAnswersResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse withGoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SuggestFaqAnswersResponse googleCloudDialogflowV2beta1SuggestFaqAnswersResponse) {
         this.googleCloudDialogflowV2beta1SuggestFaqAnswersResponse = googleCloudDialogflowV2beta1SuggestFaqAnswersResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestFaqAnswersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

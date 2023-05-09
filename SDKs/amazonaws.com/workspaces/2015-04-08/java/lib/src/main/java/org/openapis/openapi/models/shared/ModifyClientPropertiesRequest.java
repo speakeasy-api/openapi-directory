@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifyClientPropertiesRequest {
     @JsonProperty("ClientProperties")
     public ClientProperties clientProperties;
+
     public ModifyClientPropertiesRequest withClientProperties(ClientProperties clientProperties) {
         this.clientProperties = clientProperties;
         return this;
@@ -16,9 +17,14 @@ public class ModifyClientPropertiesRequest {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ModifyClientPropertiesRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ModifyClientPropertiesRequest(@JsonProperty("ClientProperties") ClientProperties clientProperties, @JsonProperty("ResourceId") String resourceId) {
+        this.clientProperties = clientProperties;
+        this.resourceId = resourceId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListQueriesUsingGETResponse {
     
     public String contentType;
+
     public ListQueriesUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListQueriesUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageItemSummary[] manageItemSummaries;
+
     public ListQueriesUsingGETResponse withManageItemSummaries(org.openapis.openapi.models.shared.ManageItemSummary[] manageItemSummaries) {
         this.manageItemSummaries = manageItemSummaries;
         return this;
@@ -29,6 +32,7 @@ public class ListQueriesUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public ListQueriesUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class ListQueriesUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListQueriesUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListQueriesUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListQueriesUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListQueriesUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

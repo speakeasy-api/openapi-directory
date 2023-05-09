@@ -63,11 +63,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMultipleReviewsResponse res = new org.openapis.openapi.models.operations.DeleteMultipleReviewsResponse() {{
+        org.openapis.openapi.models.operations.DeleteMultipleReviewsResponse res = new org.openapis.openapi.models.operations.DeleteMultipleReviewsResponse(contentType, httpRes.statusCode()) {{
             deleteMultipleReviews200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteReviewResponse res = new org.openapis.openapi.models.operations.DeleteReviewResponse() {{
+        org.openapis.openapi.models.operations.DeleteReviewResponse res = new org.openapis.openapi.models.operations.DeleteReviewResponse(contentType, httpRes.statusCode()) {{
             deleteReview200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,11 +160,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EditReviewResponse res = new org.openapis.openapi.models.operations.EditReviewResponse() {{
+        org.openapis.openapi.models.operations.EditReviewResponse res = new org.openapis.openapi.models.operations.EditReviewResponse(contentType, httpRes.statusCode()) {{
             editReview200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,11 +206,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReviewbyReviewIdResponse res = new org.openapis.openapi.models.operations.GetReviewbyReviewIdResponse() {{
+        org.openapis.openapi.models.operations.GetReviewbyReviewIdResponse res = new org.openapis.openapi.models.operations.GetReviewbyReviewIdResponse(contentType, httpRes.statusCode()) {{
             getReviewbyReviewId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -266,11 +258,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetalistofReviewsResponse res = new org.openapis.openapi.models.operations.GetalistofReviewsResponse() {{
+        org.openapis.openapi.models.operations.GetalistofReviewsResponse res = new org.openapis.openapi.models.operations.GetalistofReviewsResponse(contentType, httpRes.statusCode()) {{
             getalistofReviews200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,11 +309,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveMultipleReviewsResponse res = new org.openapis.openapi.models.operations.SaveMultipleReviewsResponse() {{
+        org.openapis.openapi.models.operations.SaveMultipleReviewsResponse res = new org.openapis.openapi.models.operations.SaveMultipleReviewsResponse(contentType, httpRes.statusCode()) {{
             saveMultipleReviews200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -372,11 +360,9 @@ public class Review {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveReviewResponse res = new org.openapis.openapi.models.operations.SaveReviewResponse() {{
+        org.openapis.openapi.models.operations.SaveReviewResponse res = new org.openapis.openapi.models.operations.SaveReviewResponse(contentType, httpRes.statusCode()) {{
             saveReview200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceResponse {
     
     public String contentType;
+
     public DeleteResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceResponse {
      */
     
     public java.util.Map<String, Object> deleteResourceResponse;
+
     public DeleteResourceResponse withDeleteResourceResponse(java.util.Map<String, Object> deleteResourceResponse) {
         this.deleteResourceResponse = deleteResourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourceResponse {
      */
     
     public Object entityStateException;
+
     public DeleteResourceResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourceResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteResourceResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResourceResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteResourceResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteResourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

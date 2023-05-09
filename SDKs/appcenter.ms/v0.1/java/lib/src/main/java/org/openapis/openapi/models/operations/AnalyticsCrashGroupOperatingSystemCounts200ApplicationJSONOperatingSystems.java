@@ -15,6 +15,7 @@ public class AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONOperating
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_count")
     public Long crashCount;
+
     public AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONOperatingSystems withCrashCount(Long crashCount) {
         this.crashCount = crashCount;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONOperating
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operating_system_name")
     public String operatingSystemName;
+
     public AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONOperatingSystems withOperatingSystemName(String operatingSystemName) {
         this.operatingSystemName = operatingSystemName;
         return this;
     }
     
+    public AnalyticsCrashGroupOperatingSystemCounts200ApplicationJSONOperatingSystems(){}
 }

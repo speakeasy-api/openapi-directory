@@ -18,6 +18,7 @@ public class IosTestSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalIpas")
     public FileReference[] additionalIpas;
+
     public IosTestSetup withAdditionalIpas(FileReference[] additionalIpas) {
         this.additionalIpas = additionalIpas;
         return this;
@@ -29,6 +30,7 @@ public class IosTestSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkProfile")
     public String networkProfile;
+
     public IosTestSetup withNetworkProfile(String networkProfile) {
         this.networkProfile = networkProfile;
         return this;
@@ -40,6 +42,7 @@ public class IosTestSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullDirectories")
     public IosDeviceFile[] pullDirectories;
+
     public IosTestSetup withPullDirectories(IosDeviceFile[] pullDirectories) {
         this.pullDirectories = pullDirectories;
         return this;
@@ -51,9 +54,11 @@ public class IosTestSetup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pushFiles")
     public IosDeviceFile[] pushFiles;
+
     public IosTestSetup withPushFiles(IosDeviceFile[] pushFiles) {
         this.pushFiles = pushFiles;
         return this;
     }
     
+    public IosTestSetup(){}
 }

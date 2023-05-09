@@ -12,6 +12,7 @@ public class UpdateContainerAgentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cluster")
     public String cluster;
+
     public UpdateContainerAgentRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -19,9 +20,13 @@ public class UpdateContainerAgentRequest {
     
     @JsonProperty("containerInstance")
     public String containerInstance;
+
     public UpdateContainerAgentRequest withContainerInstance(String containerInstance) {
         this.containerInstance = containerInstance;
         return this;
     }
     
+    public UpdateContainerAgentRequest(@JsonProperty("containerInstance") String containerInstance) {
+        this.containerInstance = containerInstance;
+  }
 }

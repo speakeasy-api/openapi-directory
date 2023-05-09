@@ -18,6 +18,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoGrownSizeGib")
     public String autoGrownSizeGib;
+
     public VolumeInput withAutoGrownSizeGib(String autoGrownSizeGib) {
         this.autoGrownSizeGib = autoGrownSizeGib;
         return this;
@@ -29,6 +30,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentSizeGib")
     public String currentSizeGib;
+
     public VolumeInput withCurrentSizeGib(String currentSizeGib) {
         this.currentSizeGib = currentSizeGib;
         return this;
@@ -40,6 +42,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emergencySizeGib")
     public String emergencySizeGib;
+
     public VolumeInput withEmergencySizeGib(String emergencySizeGib) {
         this.emergencySizeGib = emergencySizeGib;
         return this;
@@ -51,6 +54,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VolumeInput withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public VolumeInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSizeGib")
     public String maxSizeGib;
+
     public VolumeInput withMaxSizeGib(String maxSizeGib) {
         this.maxSizeGib = maxSizeGib;
         return this;
@@ -84,6 +90,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public VolumeInput withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -95,6 +102,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originallyRequestedSizeGib")
     public String originallyRequestedSizeGib;
+
     public VolumeInput withOriginallyRequestedSizeGib(String originallyRequestedSizeGib) {
         this.originallyRequestedSizeGib = originallyRequestedSizeGib;
         return this;
@@ -106,6 +114,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performanceTier")
     public VolumePerformanceTierEnum performanceTier;
+
     public VolumeInput withPerformanceTier(VolumePerformanceTierEnum performanceTier) {
         this.performanceTier = performanceTier;
         return this;
@@ -117,6 +126,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pod")
     public String pod;
+
     public VolumeInput withPod(String pod) {
         this.pod = pod;
         return this;
@@ -128,6 +138,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remainingSpaceGib")
     public String remainingSpaceGib;
+
     public VolumeInput withRemainingSpaceGib(String remainingSpaceGib) {
         this.remainingSpaceGib = remainingSpaceGib;
         return this;
@@ -139,6 +150,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedSizeGib")
     public String requestedSizeGib;
+
     public VolumeInput withRequestedSizeGib(String requestedSizeGib) {
         this.requestedSizeGib = requestedSizeGib;
         return this;
@@ -150,6 +162,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotAutoDeleteBehavior")
     public VolumeSnapshotAutoDeleteBehaviorEnum snapshotAutoDeleteBehavior;
+
     public VolumeInput withSnapshotAutoDeleteBehavior(VolumeSnapshotAutoDeleteBehaviorEnum snapshotAutoDeleteBehavior) {
         this.snapshotAutoDeleteBehavior = snapshotAutoDeleteBehavior;
         return this;
@@ -161,6 +174,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotEnabled")
     public Boolean snapshotEnabled;
+
     public VolumeInput withSnapshotEnabled(Boolean snapshotEnabled) {
         this.snapshotEnabled = snapshotEnabled;
         return this;
@@ -172,6 +186,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotReservationDetail")
     public SnapshotReservationDetail snapshotReservationDetail;
+
     public VolumeInput withSnapshotReservationDetail(SnapshotReservationDetail snapshotReservationDetail) {
         this.snapshotReservationDetail = snapshotReservationDetail;
         return this;
@@ -183,6 +198,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotSchedulePolicy")
     public String snapshotSchedulePolicy;
+
     public VolumeInput withSnapshotSchedulePolicy(String snapshotSchedulePolicy) {
         this.snapshotSchedulePolicy = snapshotSchedulePolicy;
         return this;
@@ -194,6 +210,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VolumeStateEnum state;
+
     public VolumeInput withState(VolumeStateEnum state) {
         this.state = state;
         return this;
@@ -205,6 +222,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageAggregatePool")
     public String storageAggregatePool;
+
     public VolumeInput withStorageAggregatePool(String storageAggregatePool) {
         this.storageAggregatePool = storageAggregatePool;
         return this;
@@ -216,6 +234,7 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageType")
     public VolumeStorageTypeEnum storageType;
+
     public VolumeInput withStorageType(VolumeStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
@@ -227,9 +246,11 @@ public class VolumeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadProfile")
     public VolumeWorkloadProfileEnum workloadProfile;
+
     public VolumeInput withWorkloadProfile(VolumeWorkloadProfileEnum workloadProfile) {
         this.workloadProfile = workloadProfile;
         return this;
     }
     
+    public VolumeInput(){}
 }

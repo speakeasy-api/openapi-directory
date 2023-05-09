@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSecretResponse {
     
     public String contentType;
+
     public CreateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSecretResponse createSecretResponse;
+
     public CreateSecretResponse withCreateSecretResponse(org.openapis.openapi.models.shared.CreateSecretResponse createSecretResponse) {
         this.createSecretResponse = createSecretResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSecretResponse {
      */
     
     public Object decryptionFailure;
+
     public CreateSecretResponse withDecryptionFailure(Object decryptionFailure) {
         this.decryptionFailure = decryptionFailure;
         return this;
@@ -39,6 +43,7 @@ public class CreateSecretResponse {
      */
     
     public Object encryptionFailure;
+
     public CreateSecretResponse withEncryptionFailure(Object encryptionFailure) {
         this.encryptionFailure = encryptionFailure;
         return this;
@@ -49,6 +54,7 @@ public class CreateSecretResponse {
      */
     
     public Object internalServiceError;
+
     public CreateSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -59,6 +65,7 @@ public class CreateSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CreateSecretResponse {
      */
     
     public Object limitExceededException;
+
     public CreateSecretResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class CreateSecretResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public CreateSecretResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -99,6 +109,7 @@ public class CreateSecretResponse {
      */
     
     public Object preconditionNotMetException;
+
     public CreateSecretResponse withPreconditionNotMetException(Object preconditionNotMetException) {
         this.preconditionNotMetException = preconditionNotMetException;
         return this;
@@ -109,6 +120,7 @@ public class CreateSecretResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateSecretResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -119,6 +131,7 @@ public class CreateSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class CreateSecretResponse {
     
     
     public Integer statusCode;
+
     public CreateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class CreateSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

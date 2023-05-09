@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutEventsResponse {
@@ -12,6 +13,7 @@ public class PutEventsResponse {
      */
     
     public Object badRequestException;
+
     public PutEventsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutEventsResponse {
     
     
     public String contentType;
+
     public PutEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutEventsResponse {
      */
     
     public Object forbiddenException;
+
     public PutEventsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class PutEventsResponse {
      */
     
     public Object internalServerErrorException;
+
     public PutEventsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class PutEventsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public PutEventsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class PutEventsResponse {
      */
     
     public Object notFoundException;
+
     public PutEventsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutEventsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public PutEventsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -79,6 +87,7 @@ public class PutEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutEventsResponse putEventsResponse;
+
     public PutEventsResponse withPutEventsResponse(org.openapis.openapi.models.shared.PutEventsResponse putEventsResponse) {
         this.putEventsResponse = putEventsResponse;
         return this;
@@ -86,6 +95,7 @@ public class PutEventsResponse {
     
     
     public Integer statusCode;
+
     public PutEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PutEventsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutEventsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

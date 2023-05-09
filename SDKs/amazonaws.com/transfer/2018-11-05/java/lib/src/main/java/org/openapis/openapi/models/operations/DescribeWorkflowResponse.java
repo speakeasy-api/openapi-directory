@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeWorkflowResponse {
     
     public String contentType;
+
     public DescribeWorkflowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeWorkflowResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeWorkflowResponse describeWorkflowResponse;
+
     public DescribeWorkflowResponse withDescribeWorkflowResponse(org.openapis.openapi.models.shared.DescribeWorkflowResponse describeWorkflowResponse) {
         this.describeWorkflowResponse = describeWorkflowResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeWorkflowResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeWorkflowResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeWorkflowResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeWorkflowResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeWorkflowResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeWorkflowResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeWorkflowResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeWorkflowResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeWorkflowResponse {
     
     
     public Integer statusCode;
+
     public DescribeWorkflowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeWorkflowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeWorkflowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeWorkflowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

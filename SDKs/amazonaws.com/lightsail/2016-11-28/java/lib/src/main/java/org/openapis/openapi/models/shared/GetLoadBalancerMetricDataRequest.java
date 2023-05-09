@@ -16,6 +16,7 @@ public class GetLoadBalancerMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetLoadBalancerMetricDataRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetLoadBalancerMetricDataRequest {
     
     @JsonProperty("loadBalancerName")
     public String loadBalancerName;
+
     public GetLoadBalancerMetricDataRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -30,6 +32,7 @@ public class GetLoadBalancerMetricDataRequest {
     
     @JsonProperty("metricName")
     public LoadBalancerMetricNameEnum metricName;
+
     public GetLoadBalancerMetricDataRequest withMetricName(LoadBalancerMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -37,6 +40,7 @@ public class GetLoadBalancerMetricDataRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetLoadBalancerMetricDataRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -46,6 +50,7 @@ public class GetLoadBalancerMetricDataRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetLoadBalancerMetricDataRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -53,6 +58,7 @@ public class GetLoadBalancerMetricDataRequest {
     
     @JsonProperty("statistics")
     public MetricStatisticEnum[] statistics;
+
     public GetLoadBalancerMetricDataRequest withStatistics(MetricStatisticEnum[] statistics) {
         this.statistics = statistics;
         return this;
@@ -60,9 +66,19 @@ public class GetLoadBalancerMetricDataRequest {
     
     @JsonProperty("unit")
     public MetricUnitEnum unit;
+
     public GetLoadBalancerMetricDataRequest withUnit(MetricUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetLoadBalancerMetricDataRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("loadBalancerName") String loadBalancerName, @JsonProperty("metricName") LoadBalancerMetricNameEnum metricName, @JsonProperty("period") Long period, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("statistics") MetricStatisticEnum[] statistics, @JsonProperty("unit") MetricUnitEnum unit) {
+        this.endTime = endTime;
+        this.loadBalancerName = loadBalancerName;
+        this.metricName = metricName;
+        this.period = period;
+        this.startTime = startTime;
+        this.statistics = statistics;
+        this.unit = unit;
+  }
 }

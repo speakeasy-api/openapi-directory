@@ -18,6 +18,7 @@ public class CategoryRatedAreasGeoCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Float latitude;
+
     public CategoryRatedAreasGeoCode withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class CategoryRatedAreasGeoCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Float longitude;
+
     public CategoryRatedAreasGeoCode withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public CategoryRatedAreasGeoCode(){}
 }

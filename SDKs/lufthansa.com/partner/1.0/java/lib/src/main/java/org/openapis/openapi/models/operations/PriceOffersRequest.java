@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PriceOffersRequest {
@@ -12,6 +13,7 @@ public class PriceOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=departureDate")
     public String departureDate;
+
     public PriceOffersRequest withDepartureDate(String departureDate) {
         this.departureDate = departureDate;
         return this;
@@ -22,6 +24,7 @@ public class PriceOffersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destination")
     public String destination;
+
     public PriceOffersRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -32,6 +35,7 @@ public class PriceOffersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=origin")
     public String origin;
+
     public PriceOffersRequest withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -42,6 +46,7 @@ public class PriceOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=returnDate")
     public String returnDate;
+
     public PriceOffersRequest withReturnDate(String returnDate) {
         this.returnDate = returnDate;
         return this;
@@ -52,9 +57,16 @@ public class PriceOffersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service")
     public String service;
+
     public PriceOffersRequest withService(String service) {
         this.service = service;
         return this;
     }
     
+    public PriceOffersRequest(@JsonProperty("departureDate") String departureDate, @JsonProperty("destination") String destination, @JsonProperty("origin") String origin, @JsonProperty("returnDate") String returnDate) {
+        this.departureDate = departureDate;
+        this.destination = destination;
+        this.origin = origin;
+        this.returnDate = returnDate;
+  }
 }

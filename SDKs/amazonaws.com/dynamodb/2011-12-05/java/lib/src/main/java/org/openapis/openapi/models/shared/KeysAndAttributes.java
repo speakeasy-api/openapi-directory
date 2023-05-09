@@ -15,6 +15,7 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public KeysAndAttributes withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -26,6 +27,7 @@ public class KeysAndAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public KeysAndAttributes withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -33,9 +35,13 @@ public class KeysAndAttributes {
     
     @JsonProperty("Keys")
     public Key[] keys;
+
     public KeysAndAttributes withKeys(Key[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public KeysAndAttributes(@JsonProperty("Keys") Key[] keys) {
+        this.keys = keys;
+  }
 }

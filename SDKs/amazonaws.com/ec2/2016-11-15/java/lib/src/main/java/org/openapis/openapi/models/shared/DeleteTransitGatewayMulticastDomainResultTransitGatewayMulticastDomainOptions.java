@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions {
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsAutoAcceptSharedAssociationsEnum autoAcceptSharedAssociations;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withAutoAcceptSharedAssociations(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsAutoAcceptSharedAssociationsEnum autoAcceptSharedAssociations) {
         this.autoAcceptSharedAssociations = autoAcceptSharedAssociations;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsIgmpv2SupportEnum igmpv2Support;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withIgmpv2Support(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsIgmpv2SupportEnum igmpv2Support) {
         this.igmpv2Support = igmpv2Support;
         return this;
@@ -26,9 +28,11 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsStaticSourcesSupportEnum staticSourcesSupport;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions withStaticSourcesSupport(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptionsStaticSourcesSupportEnum staticSourcesSupport) {
         this.staticSourcesSupport = staticSourcesSupport;
         return this;
     }
     
+    public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions(){}
 }

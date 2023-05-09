@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposDownloadTarballArchiveRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposDownloadTarballArchiveRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -16,6 +18,7 @@ public class ReposDownloadTarballArchiveRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
     public String ref;
+
     public ReposDownloadTarballArchiveRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -23,9 +26,15 @@ public class ReposDownloadTarballArchiveRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposDownloadTarballArchiveRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposDownloadTarballArchiveRequest(@JsonProperty("owner") String owner, @JsonProperty("ref") String ref, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.ref = ref;
+        this.repo = repo;
+  }
 }

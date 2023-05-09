@@ -18,6 +18,7 @@ public class ListInvoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoices")
     public Invoice[] invoices;
+
     public ListInvoicesResponse withInvoices(Invoice[] invoices) {
         this.invoices = invoices;
         return this;
@@ -29,9 +30,11 @@ public class ListInvoicesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListInvoicesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListInvoicesResponse(){}
 }

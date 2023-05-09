@@ -15,6 +15,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationError")
     public RecoveryInstanceDataReplicationError dataReplicationError;
+
     public RecoveryInstanceDataReplicationInfo withDataReplicationError(RecoveryInstanceDataReplicationError dataReplicationError) {
         this.dataReplicationError = dataReplicationError;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationInitiation")
     public RecoveryInstanceDataReplicationInitiation dataReplicationInitiation;
+
     public RecoveryInstanceDataReplicationInfo withDataReplicationInitiation(RecoveryInstanceDataReplicationInitiation dataReplicationInitiation) {
         this.dataReplicationInitiation = dataReplicationInitiation;
         return this;
@@ -31,6 +33,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataReplicationState")
     public RecoveryInstanceDataReplicationStateEnum dataReplicationState;
+
     public RecoveryInstanceDataReplicationInfo withDataReplicationState(RecoveryInstanceDataReplicationStateEnum dataReplicationState) {
         this.dataReplicationState = dataReplicationState;
         return this;
@@ -39,6 +42,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etaDateTime")
     public String etaDateTime;
+
     public RecoveryInstanceDataReplicationInfo withEtaDateTime(String etaDateTime) {
         this.etaDateTime = etaDateTime;
         return this;
@@ -47,6 +51,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagDuration")
     public String lagDuration;
+
     public RecoveryInstanceDataReplicationInfo withLagDuration(String lagDuration) {
         this.lagDuration = lagDuration;
         return this;
@@ -55,6 +60,7 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicatedDisks")
     public RecoveryInstanceDataReplicationInfoReplicatedDisk[] replicatedDisks;
+
     public RecoveryInstanceDataReplicationInfo withReplicatedDisks(RecoveryInstanceDataReplicationInfoReplicatedDisk[] replicatedDisks) {
         this.replicatedDisks = replicatedDisks;
         return this;
@@ -63,9 +69,11 @@ public class RecoveryInstanceDataReplicationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stagingAvailabilityZone")
     public String stagingAvailabilityZone;
+
     public RecoveryInstanceDataReplicationInfo withStagingAvailabilityZone(String stagingAvailabilityZone) {
         this.stagingAvailabilityZone = stagingAvailabilityZone;
         return this;
     }
     
+    public RecoveryInstanceDataReplicationInfo(){}
 }

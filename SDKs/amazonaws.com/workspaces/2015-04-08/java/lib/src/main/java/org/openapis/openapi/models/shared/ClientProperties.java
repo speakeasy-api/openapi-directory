@@ -15,6 +15,7 @@ public class ClientProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUploadEnabled")
     public LogUploadEnumEnum logUploadEnabled;
+
     public ClientProperties withLogUploadEnabled(LogUploadEnumEnum logUploadEnabled) {
         this.logUploadEnabled = logUploadEnabled;
         return this;
@@ -23,9 +24,11 @@ public class ClientProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReconnectEnabled")
     public ReconnectEnumEnum reconnectEnabled;
+
     public ClientProperties withReconnectEnabled(ReconnectEnumEnum reconnectEnabled) {
         this.reconnectEnabled = reconnectEnabled;
         return this;
     }
     
+    public ClientProperties(){}
 }

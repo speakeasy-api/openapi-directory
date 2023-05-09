@@ -20,6 +20,7 @@ public class UpdateMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public UpdateMedicalVocabularyResponse withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -30,6 +31,7 @@ public class UpdateMedicalVocabularyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public UpdateMedicalVocabularyResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -38,6 +40,7 @@ public class UpdateMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public UpdateMedicalVocabularyResponse withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
@@ -46,9 +49,11 @@ public class UpdateMedicalVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyState")
     public VocabularyStateEnum vocabularyState;
+
     public UpdateMedicalVocabularyResponse withVocabularyState(VocabularyStateEnum vocabularyState) {
         this.vocabularyState = vocabularyState;
         return this;
     }
     
+    public UpdateMedicalVocabularyResponse(){}
 }

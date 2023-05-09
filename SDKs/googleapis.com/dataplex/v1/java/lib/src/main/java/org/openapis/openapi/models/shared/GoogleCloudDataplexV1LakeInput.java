@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetStatus")
     public GoogleCloudDataplexV1AssetStatus assetStatus;
+
     public GoogleCloudDataplexV1LakeInput withAssetStatus(GoogleCloudDataplexV1AssetStatus assetStatus) {
         this.assetStatus = assetStatus;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1LakeInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1LakeInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1LakeInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastore")
     public GoogleCloudDataplexV1LakeMetastore metastore;
+
     public GoogleCloudDataplexV1LakeInput withMetastore(GoogleCloudDataplexV1LakeMetastore metastore) {
         this.metastore = metastore;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDataplexV1LakeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastoreStatus")
     public GoogleCloudDataplexV1LakeMetastoreStatus metastoreStatus;
+
     public GoogleCloudDataplexV1LakeInput withMetastoreStatus(GoogleCloudDataplexV1LakeMetastoreStatus metastoreStatus) {
         this.metastoreStatus = metastoreStatus;
         return this;
     }
     
+    public GoogleCloudDataplexV1LakeInput(){}
 }

@@ -20,6 +20,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ProvisionedProductDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ProvisionedProductDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisionedProductDetail withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProvisionedProductDetail withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public ProvisionedProductDetail withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -54,6 +58,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastProvisioningRecordId")
     public String lastProvisioningRecordId;
+
     public ProvisionedProductDetail withLastProvisioningRecordId(String lastProvisioningRecordId) {
         this.lastProvisioningRecordId = lastProvisioningRecordId;
         return this;
@@ -62,6 +67,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRecordId")
     public String lastRecordId;
+
     public ProvisionedProductDetail withLastRecordId(String lastRecordId) {
         this.lastRecordId = lastRecordId;
         return this;
@@ -70,6 +76,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfulProvisioningRecordId")
     public String lastSuccessfulProvisioningRecordId;
+
     public ProvisionedProductDetail withLastSuccessfulProvisioningRecordId(String lastSuccessfulProvisioningRecordId) {
         this.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
         return this;
@@ -78,6 +85,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchRoleArn")
     public String launchRoleArn;
+
     public ProvisionedProductDetail withLaunchRoleArn(String launchRoleArn) {
         this.launchRoleArn = launchRoleArn;
         return this;
@@ -86,6 +94,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProvisionedProductDetail withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ProvisionedProductDetail withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -102,6 +112,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ProvisionedProductDetail withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -110,6 +121,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProvisionedProductStatusEnum status;
+
     public ProvisionedProductDetail withStatus(ProvisionedProductStatusEnum status) {
         this.status = status;
         return this;
@@ -118,6 +130,7 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProvisionedProductDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -126,9 +139,11 @@ public class ProvisionedProductDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ProvisionedProductDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ProvisionedProductDetail(){}
 }

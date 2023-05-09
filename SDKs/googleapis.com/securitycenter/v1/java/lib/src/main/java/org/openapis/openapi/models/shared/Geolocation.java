@@ -18,9 +18,11 @@ public class Geolocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public Geolocation withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public Geolocation(){}
 }

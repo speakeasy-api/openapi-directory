@@ -19,9 +19,11 @@ public class DetectLanguageRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("q")
     public String[] q;
+
     public DetectLanguageRequest withQ(String[] q) {
         this.q = q;
         return this;
     }
     
+    public DetectLanguageRequest(){}
 }

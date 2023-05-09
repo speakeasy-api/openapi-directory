@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEnvironmentResourcesMessage {
     
     public String environmentId;
+
     public DescribeEnvironmentResourcesMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeEnvironmentResourcesMessage {
     
     
     public String environmentName;
+
     public DescribeEnvironmentResourcesMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public DescribeEnvironmentResourcesMessage(){}
 }

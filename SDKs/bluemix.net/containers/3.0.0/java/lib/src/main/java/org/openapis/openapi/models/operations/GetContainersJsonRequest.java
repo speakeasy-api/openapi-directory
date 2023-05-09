@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContainersJsonRequest {
@@ -12,6 +13,7 @@ public class GetContainersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Project-Id")
     public String xAuthProjectId;
+
     public GetContainersJsonRequest withXAuthProjectId(String xAuthProjectId) {
         this.xAuthProjectId = xAuthProjectId;
         return this;
@@ -22,6 +24,7 @@ public class GetContainersJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Auth-Token")
     public String xAuthToken;
+
     public GetContainersJsonRequest withXAuthToken(String xAuthToken) {
         this.xAuthToken = xAuthToken;
         return this;
@@ -32,6 +35,7 @@ public class GetContainersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all")
     public String all;
+
     public GetContainersJsonRequest withAll(String all) {
         this.all = all;
         return this;
@@ -42,9 +46,14 @@ public class GetContainersJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filters")
     public String filters;
+
     public GetContainersJsonRequest withFilters(String filters) {
         this.filters = filters;
         return this;
     }
     
+    public GetContainersJsonRequest(@JsonProperty("X-Auth-Project-Id") String xAuthProjectId, @JsonProperty("X-Auth-Token") String xAuthToken) {
+        this.xAuthProjectId = xAuthProjectId;
+        this.xAuthToken = xAuthToken;
+  }
 }

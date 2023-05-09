@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse {
     
     public String contentType;
+
     public AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse 
      */
     
     public org.openapis.openapi.models.shared.ListGcpUserAccessBindingsResponse listGcpUserAccessBindingsResponse;
+
     public AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse withListGcpUserAccessBindingsResponse(org.openapis.openapi.models.shared.ListGcpUserAccessBindingsResponse listGcpUserAccessBindingsResponse) {
         this.listGcpUserAccessBindingsResponse = listGcpUserAccessBindingsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse 
     
     
     public Integer statusCode;
+
     public AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AccesscontextmanagerOrganizationsGcpUserAccessBindingsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

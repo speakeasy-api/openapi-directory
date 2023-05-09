@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenAIFile {
     @JsonProperty("bytes")
     public Long bytes;
+
     public OpenAIFile withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -21,6 +22,7 @@ public class OpenAIFile {
     
     @JsonProperty("created_at")
     public Long createdAt;
+
     public OpenAIFile withCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +30,7 @@ public class OpenAIFile {
     
     @JsonProperty("filename")
     public String filename;
+
     public OpenAIFile withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -35,6 +38,7 @@ public class OpenAIFile {
     
     @JsonProperty("id")
     public String id;
+
     public OpenAIFile withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class OpenAIFile {
     
     @JsonProperty("object")
     public String object;
+
     public OpenAIFile withObject(String object) {
         this.object = object;
         return this;
@@ -49,6 +54,7 @@ public class OpenAIFile {
     
     @JsonProperty("purpose")
     public String purpose;
+
     public OpenAIFile withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -57,6 +63,7 @@ public class OpenAIFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public OpenAIFile withStatus(String status) {
         this.status = status;
         return this;
@@ -65,9 +72,18 @@ public class OpenAIFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_details")
     public java.util.Map<String, Object> statusDetails;
+
     public OpenAIFile withStatusDetails(java.util.Map<String, Object> statusDetails) {
         this.statusDetails = statusDetails;
         return this;
     }
     
+    public OpenAIFile(@JsonProperty("bytes") Long bytes, @JsonProperty("created_at") Long createdAt, @JsonProperty("filename") String filename, @JsonProperty("id") String id, @JsonProperty("object") String object, @JsonProperty("purpose") String purpose) {
+        this.bytes = bytes;
+        this.createdAt = createdAt;
+        this.filename = filename;
+        this.id = id;
+        this.object = object;
+        this.purpose = purpose;
+  }
 }

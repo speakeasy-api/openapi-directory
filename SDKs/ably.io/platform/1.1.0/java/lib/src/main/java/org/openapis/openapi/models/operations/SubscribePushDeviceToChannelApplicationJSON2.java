@@ -15,6 +15,7 @@ public class SubscribePushDeviceToChannelApplicationJSON2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public SubscribePushDeviceToChannelApplicationJSON2 withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -26,9 +27,11 @@ public class SubscribePushDeviceToChannelApplicationJSON2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public SubscribePushDeviceToChannelApplicationJSON2 withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public SubscribePushDeviceToChannelApplicationJSON2(){}
 }

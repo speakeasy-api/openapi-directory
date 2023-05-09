@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionTypePermissions {
     @JsonProperty("allowedAccounts")
     public String[] allowedAccounts;
+
     public ActionTypePermissions withAllowedAccounts(String[] allowedAccounts) {
         this.allowedAccounts = allowedAccounts;
         return this;
     }
     
+    public ActionTypePermissions(@JsonProperty("allowedAccounts") String[] allowedAccounts) {
+        this.allowedAccounts = allowedAccounts;
+  }
 }

@@ -15,6 +15,7 @@ public class NOLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public NOLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,9 +26,14 @@ public class NOLocalAccountIdentification {
      */
     @JsonProperty("type")
     public NOLocalAccountIdentificationTypeEnum type;
+
     public NOLocalAccountIdentification withType(NOLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NOLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("type") NOLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.type = type;
+  }
 }

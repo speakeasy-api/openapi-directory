@@ -15,6 +15,7 @@ public class BatchStartRecommendationsErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public BatchStartRecommendationsErrorEntry withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class BatchStartRecommendationsErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public BatchStartRecommendationsErrorEntry withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -31,9 +33,11 @@ public class BatchStartRecommendationsErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BatchStartRecommendationsErrorEntry withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BatchStartRecommendationsErrorEntry(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RemoveAvailabilityZonesInput - Contains the parameters for DisableAvailabilityZonesForLoadBalancer.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RemoveAvailabilityZonesInput {
     
     public String[] availabilityZones;
+
     public RemoveAvailabilityZonesInput withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,9 +20,14 @@ public class RemoveAvailabilityZonesInput {
     
     
     public String loadBalancerName;
+
     public RemoveAvailabilityZonesInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public RemoveAvailabilityZonesInput(@JsonProperty("AvailabilityZones") String[] availabilityZones, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.availabilityZones = availabilityZones;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

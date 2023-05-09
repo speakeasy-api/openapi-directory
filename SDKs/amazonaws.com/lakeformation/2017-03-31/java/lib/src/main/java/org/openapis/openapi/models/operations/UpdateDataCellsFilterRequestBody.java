@@ -12,9 +12,13 @@ public class UpdateDataCellsFilterRequestBody {
      */
     @JsonProperty("TableData")
     public UpdateDataCellsFilterRequestBodyTableData tableData;
+
     public UpdateDataCellsFilterRequestBody withTableData(UpdateDataCellsFilterRequestBodyTableData tableData) {
         this.tableData = tableData;
         return this;
     }
     
+    public UpdateDataCellsFilterRequestBody(@JsonProperty("TableData") UpdateDataCellsFilterRequestBodyTableData tableData) {
+        this.tableData = tableData;
+  }
 }

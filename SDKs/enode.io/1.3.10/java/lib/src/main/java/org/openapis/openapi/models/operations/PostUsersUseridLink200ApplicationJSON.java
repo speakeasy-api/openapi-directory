@@ -15,9 +15,11 @@ public class PostUsersUseridLink200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkState")
     public String linkState;
+
     public PostUsersUseridLink200ApplicationJSON withLinkState(String linkState) {
         this.linkState = linkState;
         return this;
     }
     
+    public PostUsersUseridLink200ApplicationJSON(){}
 }

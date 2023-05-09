@@ -4,14 +4,29 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateConnectorProfileRequestBody {
+    /**
+     * &lt;p&gt;The &lt;code&gt;clientToken&lt;/code&gt; parameter is an idempotency token. It ensures that your &lt;code&gt;UpdateConnectorProfile&lt;/code&gt; request completes only once. You choose the value to pass. For example, if you don't receive a response from your request, you can safely retry the request with the same &lt;code&gt;clientToken&lt;/code&gt; parameter value.&lt;/p&gt; &lt;p&gt;If you omit a &lt;code&gt;clientToken&lt;/code&gt; value, the Amazon Web Services SDK that you are using inserts a value for you. This way, the SDK can safely retry requests multiple times after a network error. You must provide your own value for other use cases.&lt;/p&gt; &lt;p&gt;If you specify input parameters that differ from your first request, an error occurs. If you use a different value for &lt;code&gt;clientToken&lt;/code&gt;, Amazon AppFlow considers it a new call to &lt;code&gt;UpdateConnectorProfile&lt;/code&gt;. The token is active for 8 hours.&lt;/p&gt;
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public UpdateConnectorProfileRequestBody withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
     /**
      *  Indicates the connection mode and if it is public or private. 
      */
     @JsonProperty("connectionMode")
     public UpdateConnectorProfileRequestBodyConnectionModeEnum connectionMode;
+
     public UpdateConnectorProfileRequestBody withConnectionMode(UpdateConnectorProfileRequestBodyConnectionModeEnum connectionMode) {
         this.connectionMode = connectionMode;
         return this;
@@ -22,6 +37,7 @@ public class UpdateConnectorProfileRequestBody {
      */
     @JsonProperty("connectorProfileConfig")
     public UpdateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig;
+
     public UpdateConnectorProfileRequestBody withConnectorProfileConfig(UpdateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig) {
         this.connectorProfileConfig = connectorProfileConfig;
         return this;
@@ -32,9 +48,15 @@ public class UpdateConnectorProfileRequestBody {
      */
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public UpdateConnectorProfileRequestBody withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
     }
     
+    public UpdateConnectorProfileRequestBody(@JsonProperty("connectionMode") UpdateConnectorProfileRequestBodyConnectionModeEnum connectionMode, @JsonProperty("connectorProfileConfig") UpdateConnectorProfileRequestBodyConnectorProfileConfig connectorProfileConfig, @JsonProperty("connectorProfileName") String connectorProfileName) {
+        this.connectionMode = connectionMode;
+        this.connectorProfileConfig = connectorProfileConfig;
+        this.connectorProfileName = connectorProfileName;
+  }
 }

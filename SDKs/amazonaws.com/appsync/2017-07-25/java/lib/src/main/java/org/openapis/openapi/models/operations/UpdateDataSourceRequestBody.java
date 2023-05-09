@@ -15,6 +15,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateDataSourceRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamodbConfig")
     public UpdateDataSourceRequestBodyDynamodbConfig dynamodbConfig;
+
     public UpdateDataSourceRequestBody withDynamodbConfig(UpdateDataSourceRequestBodyDynamodbConfig dynamodbConfig) {
         this.dynamodbConfig = dynamodbConfig;
         return this;
@@ -37,6 +39,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elasticsearchConfig")
     public UpdateDataSourceRequestBodyElasticsearchConfig elasticsearchConfig;
+
     public UpdateDataSourceRequestBody withElasticsearchConfig(UpdateDataSourceRequestBodyElasticsearchConfig elasticsearchConfig) {
         this.elasticsearchConfig = elasticsearchConfig;
         return this;
@@ -48,6 +51,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventBridgeConfig")
     public UpdateDataSourceRequestBodyEventBridgeConfig eventBridgeConfig;
+
     public UpdateDataSourceRequestBody withEventBridgeConfig(UpdateDataSourceRequestBodyEventBridgeConfig eventBridgeConfig) {
         this.eventBridgeConfig = eventBridgeConfig;
         return this;
@@ -59,6 +63,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpConfig")
     public UpdateDataSourceRequestBodyHttpConfig httpConfig;
+
     public UpdateDataSourceRequestBody withHttpConfig(UpdateDataSourceRequestBodyHttpConfig httpConfig) {
         this.httpConfig = httpConfig;
         return this;
@@ -70,6 +75,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaConfig")
     public UpdateDataSourceRequestBodyLambdaConfig lambdaConfig;
+
     public UpdateDataSourceRequestBody withLambdaConfig(UpdateDataSourceRequestBodyLambdaConfig lambdaConfig) {
         this.lambdaConfig = lambdaConfig;
         return this;
@@ -81,6 +87,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openSearchServiceConfig")
     public UpdateDataSourceRequestBodyOpenSearchServiceConfig openSearchServiceConfig;
+
     public UpdateDataSourceRequestBody withOpenSearchServiceConfig(UpdateDataSourceRequestBodyOpenSearchServiceConfig openSearchServiceConfig) {
         this.openSearchServiceConfig = openSearchServiceConfig;
         return this;
@@ -92,6 +99,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseConfig")
     public UpdateDataSourceRequestBodyRelationalDatabaseConfig relationalDatabaseConfig;
+
     public UpdateDataSourceRequestBody withRelationalDatabaseConfig(UpdateDataSourceRequestBodyRelationalDatabaseConfig relationalDatabaseConfig) {
         this.relationalDatabaseConfig = relationalDatabaseConfig;
         return this;
@@ -103,6 +111,7 @@ public class UpdateDataSourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRoleArn")
     public String serviceRoleArn;
+
     public UpdateDataSourceRequestBody withServiceRoleArn(String serviceRoleArn) {
         this.serviceRoleArn = serviceRoleArn;
         return this;
@@ -113,9 +122,13 @@ public class UpdateDataSourceRequestBody {
      */
     @JsonProperty("type")
     public UpdateDataSourceRequestBodyTypeEnum type;
+
     public UpdateDataSourceRequestBody withType(UpdateDataSourceRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateDataSourceRequestBody(@JsonProperty("type") UpdateDataSourceRequestBodyTypeEnum type) {
+        this.type = type;
+  }
 }

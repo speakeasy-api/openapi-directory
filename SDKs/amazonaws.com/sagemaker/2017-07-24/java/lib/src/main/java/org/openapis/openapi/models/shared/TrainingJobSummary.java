@@ -21,6 +21,7 @@ public class TrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public TrainingJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class TrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TrainingJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -41,6 +43,7 @@ public class TrainingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrainingEndTime")
     public OffsetDateTime trainingEndTime;
+
     public TrainingJobSummary withTrainingEndTime(OffsetDateTime trainingEndTime) {
         this.trainingEndTime = trainingEndTime;
         return this;
@@ -48,6 +51,7 @@ public class TrainingJobSummary {
     
     @JsonProperty("TrainingJobArn")
     public String trainingJobArn;
+
     public TrainingJobSummary withTrainingJobArn(String trainingJobArn) {
         this.trainingJobArn = trainingJobArn;
         return this;
@@ -55,6 +59,7 @@ public class TrainingJobSummary {
     
     @JsonProperty("TrainingJobName")
     public String trainingJobName;
+
     public TrainingJobSummary withTrainingJobName(String trainingJobName) {
         this.trainingJobName = trainingJobName;
         return this;
@@ -62,6 +67,7 @@ public class TrainingJobSummary {
     
     @JsonProperty("TrainingJobStatus")
     public TrainingJobStatusEnum trainingJobStatus;
+
     public TrainingJobSummary withTrainingJobStatus(TrainingJobStatusEnum trainingJobStatus) {
         this.trainingJobStatus = trainingJobStatus;
         return this;
@@ -70,9 +76,16 @@ public class TrainingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmPoolStatus")
     public WarmPoolStatus warmPoolStatus;
+
     public TrainingJobSummary withWarmPoolStatus(WarmPoolStatus warmPoolStatus) {
         this.warmPoolStatus = warmPoolStatus;
         return this;
     }
     
+    public TrainingJobSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("TrainingJobArn") String trainingJobArn, @JsonProperty("TrainingJobName") String trainingJobName, @JsonProperty("TrainingJobStatus") TrainingJobStatusEnum trainingJobStatus) {
+        this.creationTime = creationTime;
+        this.trainingJobArn = trainingJobArn;
+        this.trainingJobName = trainingJobName;
+        this.trainingJobStatus = trainingJobStatus;
+  }
 }

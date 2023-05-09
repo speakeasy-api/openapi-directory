@@ -15,9 +15,11 @@ public class StartStreamProcessorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionId")
     public String sessionId;
+
     public StartStreamProcessorResponse withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public StartStreamProcessorResponse(){}
 }

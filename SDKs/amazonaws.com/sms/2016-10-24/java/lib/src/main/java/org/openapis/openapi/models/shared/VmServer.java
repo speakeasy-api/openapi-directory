@@ -15,6 +15,7 @@ public class VmServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerName")
     public String vmManagerName;
+
     public VmServer withVmManagerName(String vmManagerName) {
         this.vmManagerName = vmManagerName;
         return this;
@@ -23,6 +24,7 @@ public class VmServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmManagerType")
     public VmManagerTypeEnum vmManagerType;
+
     public VmServer withVmManagerType(VmManagerTypeEnum vmManagerType) {
         this.vmManagerType = vmManagerType;
         return this;
@@ -31,6 +33,7 @@ public class VmServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmName")
     public String vmName;
+
     public VmServer withVmName(String vmName) {
         this.vmName = vmName;
         return this;
@@ -39,6 +42,7 @@ public class VmServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmPath")
     public String vmPath;
+
     public VmServer withVmPath(String vmPath) {
         this.vmPath = vmPath;
         return this;
@@ -47,9 +51,11 @@ public class VmServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmServerAddress")
     public VmServerAddress vmServerAddress;
+
     public VmServer withVmServerAddress(VmServerAddress vmServerAddress) {
         this.vmServerAddress = vmServerAddress;
         return this;
     }
     
+    public VmServer(){}
 }

@@ -18,6 +18,7 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listFindingsResults")
     public ListFindingsResult[] listFindingsResults;
+
     public ListFindingsResponse withListFindingsResults(ListFindingsResult[] listFindingsResults) {
         this.listFindingsResults = listFindingsResults;
         return this;
@@ -29,6 +30,7 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListFindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ListFindingsResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -51,9 +54,11 @@ public class ListFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListFindingsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListFindingsResponse(){}
 }

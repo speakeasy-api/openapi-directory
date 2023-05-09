@@ -12,6 +12,7 @@ public class FeedConfigurationRequest {
      */
     @JsonProperty("filter")
     public FeedFilter filter;
+
     public FeedConfigurationRequest withFilter(FeedFilter filter) {
         this.filter = filter;
         return this;
@@ -22,9 +23,14 @@ public class FeedConfigurationRequest {
      */
     @JsonProperty("queue")
     public Queue queue;
+
     public FeedConfigurationRequest withQueue(Queue queue) {
         this.queue = queue;
         return this;
     }
     
+    public FeedConfigurationRequest(@JsonProperty("filter") FeedFilter filter, @JsonProperty("queue") Queue queue) {
+        this.filter = filter;
+        this.queue = queue;
+  }
 }

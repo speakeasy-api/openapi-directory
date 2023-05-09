@@ -15,6 +15,7 @@ public class InstanceGroupModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public InstanceGroupModifyConfig withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -23,6 +24,7 @@ public class InstanceGroupModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InstanceIdsToTerminate")
     public String[] ec2InstanceIdsToTerminate;
+
     public InstanceGroupModifyConfig withEc2InstanceIdsToTerminate(String[] ec2InstanceIdsToTerminate) {
         this.ec2InstanceIdsToTerminate = ec2InstanceIdsToTerminate;
         return this;
@@ -31,6 +33,7 @@ public class InstanceGroupModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public InstanceGroupModifyConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -38,6 +41,7 @@ public class InstanceGroupModifyConfig {
     
     @JsonProperty("InstanceGroupId")
     public String instanceGroupId;
+
     public InstanceGroupModifyConfig withInstanceGroupId(String instanceGroupId) {
         this.instanceGroupId = instanceGroupId;
         return this;
@@ -46,6 +50,7 @@ public class InstanceGroupModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReconfigurationType")
     public ReconfigurationTypeEnum reconfigurationType;
+
     public InstanceGroupModifyConfig withReconfigurationType(ReconfigurationTypeEnum reconfigurationType) {
         this.reconfigurationType = reconfigurationType;
         return this;
@@ -54,9 +59,13 @@ public class InstanceGroupModifyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShrinkPolicy")
     public ShrinkPolicy shrinkPolicy;
+
     public InstanceGroupModifyConfig withShrinkPolicy(ShrinkPolicy shrinkPolicy) {
         this.shrinkPolicy = shrinkPolicy;
         return this;
     }
     
+    public InstanceGroupModifyConfig(@JsonProperty("InstanceGroupId") String instanceGroupId) {
+        this.instanceGroupId = instanceGroupId;
+  }
 }

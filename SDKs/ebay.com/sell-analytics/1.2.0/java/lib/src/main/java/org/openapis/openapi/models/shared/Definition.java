@@ -18,6 +18,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public Definition withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Definition withKey(String key) {
         this.key = key;
         return this;
@@ -40,9 +42,11 @@ public class Definition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedName")
     public String localizedName;
+
     public Definition withLocalizedName(String localizedName) {
         this.localizedName = localizedName;
         return this;
     }
     
+    public Definition(){}
 }

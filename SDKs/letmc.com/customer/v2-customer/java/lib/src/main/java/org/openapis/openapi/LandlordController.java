@@ -58,14 +58,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceResponse res = new org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceResponse res = new org.openapis.openapi.models.operations.LandlordControllerCreateMaintenancePreferenceResponse(contentType, httpRes.statusCode()) {{
             landlordControllerCreateMaintenancePreference200ApplicationJSONString = null;
             landlordControllerCreateMaintenancePreference200ApplicationXMLString = null;
             landlordControllerCreateMaintenancePreference200TextJSONString = null;
             landlordControllerCreateMaintenancePreference200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetAccountsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetAccountsResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetAccountsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetAccountsResponse(contentType, httpRes.statusCode()) {{
             landlordAccountingModel = null;
             landlordAccountingModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,14 +162,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetDocumentResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetDocumentResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetDocumentResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetDocumentResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,14 +220,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetInvetoryReportResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,14 +278,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetInvoiceResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetInvoiceResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetInvoiceResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetInvoiceResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,14 +336,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetLandlordCrmEntriesResponse(contentType, httpRes.statusCode()) {{
             landlordCrmEntries = null;
             landlordCrmEntries = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,12 +394,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetMaintenanceJobsResponse(contentType, httpRes.statusCode()) {{
             landlordMaintenanceModel = null;
             landlordMaintenanceModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -456,12 +442,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetProfitLossReportResponse(contentType, httpRes.statusCode()) {{
             landlordProfitLossModel = null;
             landlordProfitLossModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,12 +490,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetRentArrearsResponse(contentType, httpRes.statusCode()) {{
             landlordRentArrearsModel = null;
             landlordRentArrearsModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,14 +538,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetSASReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSASReportResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetSASReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSASReportResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -616,12 +596,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetSettingsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSettingsResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetSettingsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSettingsResponse(contentType, httpRes.statusCode()) {{
             landlordSettingsModel = null;
             landlordSettingsModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -666,12 +644,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetSummaryDetailsResponse(contentType, httpRes.statusCode()) {{
             landlordSummaryModel = null;
             landlordSummaryModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,12 +692,10 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetTenancyResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetTenancyResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetTenancyResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetTenancyResponse(contentType, httpRes.statusCode()) {{
             landlordTenancyModel = null;
             landlordTenancyModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,14 +740,12 @@ public class LandlordController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportResponse() {{
+        org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportResponse res = new org.openapis.openapi.models.operations.LandlordControllerGetTenancyAgreementReportResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

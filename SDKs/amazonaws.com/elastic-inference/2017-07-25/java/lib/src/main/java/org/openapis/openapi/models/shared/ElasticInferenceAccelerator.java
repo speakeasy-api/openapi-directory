@@ -15,6 +15,7 @@ public class ElasticInferenceAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorHealth")
     public ElasticInferenceAcceleratorHealth acceleratorHealth;
+
     public ElasticInferenceAccelerator withAcceleratorHealth(ElasticInferenceAcceleratorHealth acceleratorHealth) {
         this.acceleratorHealth = acceleratorHealth;
         return this;
@@ -23,6 +24,7 @@ public class ElasticInferenceAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorId")
     public String acceleratorId;
+
     public ElasticInferenceAccelerator withAcceleratorId(String acceleratorId) {
         this.acceleratorId = acceleratorId;
         return this;
@@ -31,6 +33,7 @@ public class ElasticInferenceAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public ElasticInferenceAccelerator withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -39,6 +42,7 @@ public class ElasticInferenceAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedResource")
     public String attachedResource;
+
     public ElasticInferenceAccelerator withAttachedResource(String attachedResource) {
         this.attachedResource = attachedResource;
         return this;
@@ -47,9 +51,11 @@ public class ElasticInferenceAccelerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public ElasticInferenceAccelerator withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
     }
     
+    public ElasticInferenceAccelerator(){}
 }

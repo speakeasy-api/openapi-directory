@@ -15,6 +15,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public ActionEnum action;
+
     public FirewallRule withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -23,6 +24,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDnsType")
     public BlockOverrideDnsTypeEnum blockOverrideDnsType;
+
     public FirewallRule withBlockOverrideDnsType(BlockOverrideDnsTypeEnum blockOverrideDnsType) {
         this.blockOverrideDnsType = blockOverrideDnsType;
         return this;
@@ -31,6 +33,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideDomain")
     public String blockOverrideDomain;
+
     public FirewallRule withBlockOverrideDomain(String blockOverrideDomain) {
         this.blockOverrideDomain = blockOverrideDomain;
         return this;
@@ -39,6 +42,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockOverrideTtl")
     public Long blockOverrideTtl;
+
     public FirewallRule withBlockOverrideTtl(Long blockOverrideTtl) {
         this.blockOverrideTtl = blockOverrideTtl;
         return this;
@@ -47,6 +51,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockResponse")
     public BlockResponseEnum blockResponse;
+
     public FirewallRule withBlockResponse(BlockResponseEnum blockResponse) {
         this.blockResponse = blockResponse;
         return this;
@@ -55,6 +60,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationTime")
     public String creationTime;
+
     public FirewallRule withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -63,6 +69,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public FirewallRule withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -71,6 +78,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public FirewallRule withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -79,6 +87,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallRuleGroupId")
     public String firewallRuleGroupId;
+
     public FirewallRule withFirewallRuleGroupId(String firewallRuleGroupId) {
         this.firewallRuleGroupId = firewallRuleGroupId;
         return this;
@@ -87,6 +96,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModificationTime")
     public String modificationTime;
+
     public FirewallRule withModificationTime(String modificationTime) {
         this.modificationTime = modificationTime;
         return this;
@@ -95,6 +105,7 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FirewallRule withName(String name) {
         this.name = name;
         return this;
@@ -103,9 +114,11 @@ public class FirewallRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Priority")
     public Long priority;
+
     public FirewallRule withPriority(Long priority) {
         this.priority = priority;
         return this;
     }
     
+    public FirewallRule(){}
 }

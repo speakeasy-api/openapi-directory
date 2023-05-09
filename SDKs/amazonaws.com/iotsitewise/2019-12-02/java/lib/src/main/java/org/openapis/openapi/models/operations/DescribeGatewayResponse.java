@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGatewayResponse {
     
     public String contentType;
+
     public DescribeGatewayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGatewayResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGatewayResponse describeGatewayResponse;
+
     public DescribeGatewayResponse withDescribeGatewayResponse(org.openapis.openapi.models.shared.DescribeGatewayResponse describeGatewayResponse) {
         this.describeGatewayResponse = describeGatewayResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGatewayResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeGatewayResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGatewayResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeGatewayResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeGatewayResponse {
     
     
     public Integer statusCode;
+
     public DescribeGatewayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeGatewayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGatewayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeGatewayResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeGatewayResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeGatewayResponse {
      */
     
     public Object throttlingException;
+
     public DescribeGatewayResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeGatewayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

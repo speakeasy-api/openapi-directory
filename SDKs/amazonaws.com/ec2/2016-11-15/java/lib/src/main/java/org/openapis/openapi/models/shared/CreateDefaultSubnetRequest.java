@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDefaultSubnetRequest {
     
     public String availabilityZone;
+
     public CreateDefaultSubnetRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -16,6 +17,7 @@ public class CreateDefaultSubnetRequest {
     
     
     public Boolean dryRun;
+
     public CreateDefaultSubnetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class CreateDefaultSubnetRequest {
     
     
     public Boolean ipv6Native;
+
     public CreateDefaultSubnetRequest withIpv6Native(Boolean ipv6Native) {
         this.ipv6Native = ipv6Native;
         return this;
     }
     
+    public CreateDefaultSubnetRequest(@JsonProperty("AvailabilityZone") String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+  }
 }

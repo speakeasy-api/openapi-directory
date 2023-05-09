@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyClusterSnapshotScheduleMessage {
     
     public String clusterIdentifier;
+
     public ModifyClusterSnapshotScheduleMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class ModifyClusterSnapshotScheduleMessage {
     
     
     public Boolean disassociateSchedule;
+
     public ModifyClusterSnapshotScheduleMessage withDisassociateSchedule(Boolean disassociateSchedule) {
         this.disassociateSchedule = disassociateSchedule;
         return this;
@@ -23,9 +25,13 @@ public class ModifyClusterSnapshotScheduleMessage {
     
     
     public String scheduleIdentifier;
+
     public ModifyClusterSnapshotScheduleMessage withScheduleIdentifier(String scheduleIdentifier) {
         this.scheduleIdentifier = scheduleIdentifier;
         return this;
     }
     
+    public ModifyClusterSnapshotScheduleMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

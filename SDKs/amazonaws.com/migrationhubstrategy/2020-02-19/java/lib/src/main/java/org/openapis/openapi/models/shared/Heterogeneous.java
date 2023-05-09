@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Heterogeneous {
     @JsonProperty("targetDatabaseEngine")
     public HeterogeneousTargetDatabaseEngineEnum[] targetDatabaseEngine;
+
     public Heterogeneous withTargetDatabaseEngine(HeterogeneousTargetDatabaseEngineEnum[] targetDatabaseEngine) {
         this.targetDatabaseEngine = targetDatabaseEngine;
         return this;
     }
     
+    public Heterogeneous(@JsonProperty("targetDatabaseEngine") HeterogeneousTargetDatabaseEngineEnum[] targetDatabaseEngine) {
+        this.targetDatabaseEngine = targetDatabaseEngine;
+  }
 }

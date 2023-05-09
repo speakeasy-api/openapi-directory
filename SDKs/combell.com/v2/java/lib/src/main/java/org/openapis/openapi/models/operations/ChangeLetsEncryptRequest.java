@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeLetsEncryptRequest {
@@ -12,6 +13,7 @@ public class ChangeLetsEncryptRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LetsEncryptConfig letsEncryptConfig;
+
     public ChangeLetsEncryptRequest withLetsEncryptConfig(org.openapis.openapi.models.shared.LetsEncryptConfig letsEncryptConfig) {
         this.letsEncryptConfig = letsEncryptConfig;
         return this;
@@ -22,6 +24,7 @@ public class ChangeLetsEncryptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ChangeLetsEncryptRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,6 +35,7 @@ public class ChangeLetsEncryptRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ChangeLetsEncryptRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -42,9 +46,15 @@ public class ChangeLetsEncryptRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hostname")
     public String hostname;
+
     public ChangeLetsEncryptRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public ChangeLetsEncryptRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("hostname") String hostname) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.hostname = hostname;
+  }
 }

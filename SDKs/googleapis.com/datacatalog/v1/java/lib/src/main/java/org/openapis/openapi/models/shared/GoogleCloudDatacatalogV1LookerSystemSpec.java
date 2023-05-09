@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentInstanceDisplayName")
     public String parentInstanceDisplayName;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentInstanceDisplayName(String parentInstanceDisplayName) {
         this.parentInstanceDisplayName = parentInstanceDisplayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentInstanceId")
     public String parentInstanceId;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentInstanceId(String parentInstanceId) {
         this.parentInstanceId = parentInstanceId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentModelDisplayName")
     public String parentModelDisplayName;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentModelDisplayName(String parentModelDisplayName) {
         this.parentModelDisplayName = parentModelDisplayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentModelId")
     public String parentModelId;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentModelId(String parentModelId) {
         this.parentModelId = parentModelId;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentViewDisplayName")
     public String parentViewDisplayName;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentViewDisplayName(String parentViewDisplayName) {
         this.parentViewDisplayName = parentViewDisplayName;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDatacatalogV1LookerSystemSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentViewId")
     public String parentViewId;
+
     public GoogleCloudDatacatalogV1LookerSystemSpec withParentViewId(String parentViewId) {
         this.parentViewId = parentViewId;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1LookerSystemSpec(){}
 }

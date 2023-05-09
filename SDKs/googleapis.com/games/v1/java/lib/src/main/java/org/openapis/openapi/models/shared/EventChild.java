@@ -18,6 +18,7 @@ public class EventChild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childId")
     public String childId;
+
     public EventChild withChildId(String childId) {
         this.childId = childId;
         return this;
@@ -29,9 +30,11 @@ public class EventChild {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public EventChild withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public EventChild(){}
 }

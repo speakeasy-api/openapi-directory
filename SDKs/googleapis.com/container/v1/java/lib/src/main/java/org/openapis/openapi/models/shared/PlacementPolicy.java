@@ -18,9 +18,11 @@ public class PlacementPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PlacementPolicyTypeEnum type;
+
     public PlacementPolicy withType(PlacementPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PlacementPolicy(){}
 }

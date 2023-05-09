@@ -15,6 +15,7 @@ public class SimpleRepository {
      */
     @JsonProperty("archive_url")
     public String archiveUrl;
+
     public SimpleRepository withArchiveUrl(String archiveUrl) {
         this.archiveUrl = archiveUrl;
         return this;
@@ -25,6 +26,7 @@ public class SimpleRepository {
      */
     @JsonProperty("assignees_url")
     public String assigneesUrl;
+
     public SimpleRepository withAssigneesUrl(String assigneesUrl) {
         this.assigneesUrl = assigneesUrl;
         return this;
@@ -35,6 +37,7 @@ public class SimpleRepository {
      */
     @JsonProperty("blobs_url")
     public String blobsUrl;
+
     public SimpleRepository withBlobsUrl(String blobsUrl) {
         this.blobsUrl = blobsUrl;
         return this;
@@ -45,6 +48,7 @@ public class SimpleRepository {
      */
     @JsonProperty("branches_url")
     public String branchesUrl;
+
     public SimpleRepository withBranchesUrl(String branchesUrl) {
         this.branchesUrl = branchesUrl;
         return this;
@@ -55,6 +59,7 @@ public class SimpleRepository {
      */
     @JsonProperty("collaborators_url")
     public String collaboratorsUrl;
+
     public SimpleRepository withCollaboratorsUrl(String collaboratorsUrl) {
         this.collaboratorsUrl = collaboratorsUrl;
         return this;
@@ -65,6 +70,7 @@ public class SimpleRepository {
      */
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public SimpleRepository withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -75,6 +81,7 @@ public class SimpleRepository {
      */
     @JsonProperty("commits_url")
     public String commitsUrl;
+
     public SimpleRepository withCommitsUrl(String commitsUrl) {
         this.commitsUrl = commitsUrl;
         return this;
@@ -85,6 +92,7 @@ public class SimpleRepository {
      */
     @JsonProperty("compare_url")
     public String compareUrl;
+
     public SimpleRepository withCompareUrl(String compareUrl) {
         this.compareUrl = compareUrl;
         return this;
@@ -95,6 +103,7 @@ public class SimpleRepository {
      */
     @JsonProperty("contents_url")
     public String contentsUrl;
+
     public SimpleRepository withContentsUrl(String contentsUrl) {
         this.contentsUrl = contentsUrl;
         return this;
@@ -105,6 +114,7 @@ public class SimpleRepository {
      */
     @JsonProperty("contributors_url")
     public String contributorsUrl;
+
     public SimpleRepository withContributorsUrl(String contributorsUrl) {
         this.contributorsUrl = contributorsUrl;
         return this;
@@ -115,6 +125,7 @@ public class SimpleRepository {
      */
     @JsonProperty("deployments_url")
     public String deploymentsUrl;
+
     public SimpleRepository withDeploymentsUrl(String deploymentsUrl) {
         this.deploymentsUrl = deploymentsUrl;
         return this;
@@ -125,6 +136,7 @@ public class SimpleRepository {
      */
     @JsonProperty("description")
     public String description;
+
     public SimpleRepository withDescription(String description) {
         this.description = description;
         return this;
@@ -135,6 +147,7 @@ public class SimpleRepository {
      */
     @JsonProperty("downloads_url")
     public String downloadsUrl;
+
     public SimpleRepository withDownloadsUrl(String downloadsUrl) {
         this.downloadsUrl = downloadsUrl;
         return this;
@@ -145,6 +158,7 @@ public class SimpleRepository {
      */
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public SimpleRepository withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -155,6 +169,7 @@ public class SimpleRepository {
      */
     @JsonProperty("fork")
     public Boolean fork;
+
     public SimpleRepository withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -165,6 +180,7 @@ public class SimpleRepository {
      */
     @JsonProperty("forks_url")
     public String forksUrl;
+
     public SimpleRepository withForksUrl(String forksUrl) {
         this.forksUrl = forksUrl;
         return this;
@@ -175,6 +191,7 @@ public class SimpleRepository {
      */
     @JsonProperty("full_name")
     public String fullName;
+
     public SimpleRepository withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -185,6 +202,7 @@ public class SimpleRepository {
      */
     @JsonProperty("git_commits_url")
     public String gitCommitsUrl;
+
     public SimpleRepository withGitCommitsUrl(String gitCommitsUrl) {
         this.gitCommitsUrl = gitCommitsUrl;
         return this;
@@ -195,6 +213,7 @@ public class SimpleRepository {
      */
     @JsonProperty("git_refs_url")
     public String gitRefsUrl;
+
     public SimpleRepository withGitRefsUrl(String gitRefsUrl) {
         this.gitRefsUrl = gitRefsUrl;
         return this;
@@ -205,6 +224,7 @@ public class SimpleRepository {
      */
     @JsonProperty("git_tags_url")
     public String gitTagsUrl;
+
     public SimpleRepository withGitTagsUrl(String gitTagsUrl) {
         this.gitTagsUrl = gitTagsUrl;
         return this;
@@ -215,6 +235,7 @@ public class SimpleRepository {
      */
     @JsonProperty("hooks_url")
     public String hooksUrl;
+
     public SimpleRepository withHooksUrl(String hooksUrl) {
         this.hooksUrl = hooksUrl;
         return this;
@@ -225,6 +246,7 @@ public class SimpleRepository {
      */
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public SimpleRepository withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -235,6 +257,7 @@ public class SimpleRepository {
      */
     @JsonProperty("id")
     public Long id;
+
     public SimpleRepository withId(Long id) {
         this.id = id;
         return this;
@@ -245,6 +268,7 @@ public class SimpleRepository {
      */
     @JsonProperty("issue_comment_url")
     public String issueCommentUrl;
+
     public SimpleRepository withIssueCommentUrl(String issueCommentUrl) {
         this.issueCommentUrl = issueCommentUrl;
         return this;
@@ -255,6 +279,7 @@ public class SimpleRepository {
      */
     @JsonProperty("issue_events_url")
     public String issueEventsUrl;
+
     public SimpleRepository withIssueEventsUrl(String issueEventsUrl) {
         this.issueEventsUrl = issueEventsUrl;
         return this;
@@ -265,6 +290,7 @@ public class SimpleRepository {
      */
     @JsonProperty("issues_url")
     public String issuesUrl;
+
     public SimpleRepository withIssuesUrl(String issuesUrl) {
         this.issuesUrl = issuesUrl;
         return this;
@@ -275,6 +301,7 @@ public class SimpleRepository {
      */
     @JsonProperty("keys_url")
     public String keysUrl;
+
     public SimpleRepository withKeysUrl(String keysUrl) {
         this.keysUrl = keysUrl;
         return this;
@@ -285,6 +312,7 @@ public class SimpleRepository {
      */
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public SimpleRepository withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -295,6 +323,7 @@ public class SimpleRepository {
      */
     @JsonProperty("languages_url")
     public String languagesUrl;
+
     public SimpleRepository withLanguagesUrl(String languagesUrl) {
         this.languagesUrl = languagesUrl;
         return this;
@@ -305,6 +334,7 @@ public class SimpleRepository {
      */
     @JsonProperty("merges_url")
     public String mergesUrl;
+
     public SimpleRepository withMergesUrl(String mergesUrl) {
         this.mergesUrl = mergesUrl;
         return this;
@@ -315,6 +345,7 @@ public class SimpleRepository {
      */
     @JsonProperty("milestones_url")
     public String milestonesUrl;
+
     public SimpleRepository withMilestonesUrl(String milestonesUrl) {
         this.milestonesUrl = milestonesUrl;
         return this;
@@ -325,6 +356,7 @@ public class SimpleRepository {
      */
     @JsonProperty("name")
     public String name;
+
     public SimpleRepository withName(String name) {
         this.name = name;
         return this;
@@ -335,6 +367,7 @@ public class SimpleRepository {
      */
     @JsonProperty("node_id")
     public String nodeId;
+
     public SimpleRepository withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -345,6 +378,7 @@ public class SimpleRepository {
      */
     @JsonProperty("notifications_url")
     public String notificationsUrl;
+
     public SimpleRepository withNotificationsUrl(String notificationsUrl) {
         this.notificationsUrl = notificationsUrl;
         return this;
@@ -355,6 +389,7 @@ public class SimpleRepository {
      */
     @JsonProperty("owner")
     public SimpleUser owner;
+
     public SimpleRepository withOwner(SimpleUser owner) {
         this.owner = owner;
         return this;
@@ -365,6 +400,7 @@ public class SimpleRepository {
      */
     @JsonProperty("private")
     public Boolean private_;
+
     public SimpleRepository withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -375,6 +411,7 @@ public class SimpleRepository {
      */
     @JsonProperty("pulls_url")
     public String pullsUrl;
+
     public SimpleRepository withPullsUrl(String pullsUrl) {
         this.pullsUrl = pullsUrl;
         return this;
@@ -385,6 +422,7 @@ public class SimpleRepository {
      */
     @JsonProperty("releases_url")
     public String releasesUrl;
+
     public SimpleRepository withReleasesUrl(String releasesUrl) {
         this.releasesUrl = releasesUrl;
         return this;
@@ -395,6 +433,7 @@ public class SimpleRepository {
      */
     @JsonProperty("stargazers_url")
     public String stargazersUrl;
+
     public SimpleRepository withStargazersUrl(String stargazersUrl) {
         this.stargazersUrl = stargazersUrl;
         return this;
@@ -405,6 +444,7 @@ public class SimpleRepository {
      */
     @JsonProperty("statuses_url")
     public String statusesUrl;
+
     public SimpleRepository withStatusesUrl(String statusesUrl) {
         this.statusesUrl = statusesUrl;
         return this;
@@ -415,6 +455,7 @@ public class SimpleRepository {
      */
     @JsonProperty("subscribers_url")
     public String subscribersUrl;
+
     public SimpleRepository withSubscribersUrl(String subscribersUrl) {
         this.subscribersUrl = subscribersUrl;
         return this;
@@ -425,6 +466,7 @@ public class SimpleRepository {
      */
     @JsonProperty("subscription_url")
     public String subscriptionUrl;
+
     public SimpleRepository withSubscriptionUrl(String subscriptionUrl) {
         this.subscriptionUrl = subscriptionUrl;
         return this;
@@ -435,6 +477,7 @@ public class SimpleRepository {
      */
     @JsonProperty("tags_url")
     public String tagsUrl;
+
     public SimpleRepository withTagsUrl(String tagsUrl) {
         this.tagsUrl = tagsUrl;
         return this;
@@ -445,6 +488,7 @@ public class SimpleRepository {
      */
     @JsonProperty("teams_url")
     public String teamsUrl;
+
     public SimpleRepository withTeamsUrl(String teamsUrl) {
         this.teamsUrl = teamsUrl;
         return this;
@@ -455,6 +499,7 @@ public class SimpleRepository {
      */
     @JsonProperty("trees_url")
     public String treesUrl;
+
     public SimpleRepository withTreesUrl(String treesUrl) {
         this.treesUrl = treesUrl;
         return this;
@@ -465,9 +510,58 @@ public class SimpleRepository {
      */
     @JsonProperty("url")
     public String url;
+
     public SimpleRepository withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SimpleRepository(@JsonProperty("archive_url") String archiveUrl, @JsonProperty("assignees_url") String assigneesUrl, @JsonProperty("blobs_url") String blobsUrl, @JsonProperty("branches_url") String branchesUrl, @JsonProperty("collaborators_url") String collaboratorsUrl, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("commits_url") String commitsUrl, @JsonProperty("compare_url") String compareUrl, @JsonProperty("contents_url") String contentsUrl, @JsonProperty("contributors_url") String contributorsUrl, @JsonProperty("deployments_url") String deploymentsUrl, @JsonProperty("description") String description, @JsonProperty("downloads_url") String downloadsUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("fork") Boolean fork, @JsonProperty("forks_url") String forksUrl, @JsonProperty("full_name") String fullName, @JsonProperty("git_commits_url") String gitCommitsUrl, @JsonProperty("git_refs_url") String gitRefsUrl, @JsonProperty("git_tags_url") String gitTagsUrl, @JsonProperty("hooks_url") String hooksUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issue_comment_url") String issueCommentUrl, @JsonProperty("issue_events_url") String issueEventsUrl, @JsonProperty("issues_url") String issuesUrl, @JsonProperty("keys_url") String keysUrl, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("languages_url") String languagesUrl, @JsonProperty("merges_url") String mergesUrl, @JsonProperty("milestones_url") String milestonesUrl, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("notifications_url") String notificationsUrl, @JsonProperty("owner") SimpleUser owner, @JsonProperty("private") Boolean private_, @JsonProperty("pulls_url") String pullsUrl, @JsonProperty("releases_url") String releasesUrl, @JsonProperty("stargazers_url") String stargazersUrl, @JsonProperty("statuses_url") String statusesUrl, @JsonProperty("subscribers_url") String subscribersUrl, @JsonProperty("subscription_url") String subscriptionUrl, @JsonProperty("tags_url") String tagsUrl, @JsonProperty("teams_url") String teamsUrl, @JsonProperty("trees_url") String treesUrl, @JsonProperty("url") String url) {
+        this.archiveUrl = archiveUrl;
+        this.assigneesUrl = assigneesUrl;
+        this.blobsUrl = blobsUrl;
+        this.branchesUrl = branchesUrl;
+        this.collaboratorsUrl = collaboratorsUrl;
+        this.commentsUrl = commentsUrl;
+        this.commitsUrl = commitsUrl;
+        this.compareUrl = compareUrl;
+        this.contentsUrl = contentsUrl;
+        this.contributorsUrl = contributorsUrl;
+        this.deploymentsUrl = deploymentsUrl;
+        this.description = description;
+        this.downloadsUrl = downloadsUrl;
+        this.eventsUrl = eventsUrl;
+        this.fork = fork;
+        this.forksUrl = forksUrl;
+        this.fullName = fullName;
+        this.gitCommitsUrl = gitCommitsUrl;
+        this.gitRefsUrl = gitRefsUrl;
+        this.gitTagsUrl = gitTagsUrl;
+        this.hooksUrl = hooksUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issueCommentUrl = issueCommentUrl;
+        this.issueEventsUrl = issueEventsUrl;
+        this.issuesUrl = issuesUrl;
+        this.keysUrl = keysUrl;
+        this.labelsUrl = labelsUrl;
+        this.languagesUrl = languagesUrl;
+        this.mergesUrl = mergesUrl;
+        this.milestonesUrl = milestonesUrl;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.notificationsUrl = notificationsUrl;
+        this.owner = owner;
+        this.private_ = private_;
+        this.pullsUrl = pullsUrl;
+        this.releasesUrl = releasesUrl;
+        this.stargazersUrl = stargazersUrl;
+        this.statusesUrl = statusesUrl;
+        this.subscribersUrl = subscribersUrl;
+        this.subscriptionUrl = subscriptionUrl;
+        this.tagsUrl = tagsUrl;
+        this.teamsUrl = teamsUrl;
+        this.treesUrl = treesUrl;
+        this.url = url;
+  }
 }

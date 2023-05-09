@@ -18,9 +18,11 @@ public class DisputedPayment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public DisputedPayment withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
     }
     
+    public DisputedPayment(){}
 }

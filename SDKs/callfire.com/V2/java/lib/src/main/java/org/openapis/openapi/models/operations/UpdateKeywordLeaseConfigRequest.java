@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateKeywordLeaseConfigRequest {
@@ -12,6 +13,7 @@ public class UpdateKeywordLeaseConfigRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.KeywordConfig keywordConfig;
+
     public UpdateKeywordLeaseConfigRequest withKeywordConfig(org.openapis.openapi.models.shared.KeywordConfig keywordConfig) {
         this.keywordConfig = keywordConfig;
         return this;
@@ -22,9 +24,13 @@ public class UpdateKeywordLeaseConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=keyword")
     public String keyword;
+
     public UpdateKeywordLeaseConfigRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
     
+    public UpdateKeywordLeaseConfigRequest(@JsonProperty("keyword") String keyword) {
+        this.keyword = keyword;
+  }
 }

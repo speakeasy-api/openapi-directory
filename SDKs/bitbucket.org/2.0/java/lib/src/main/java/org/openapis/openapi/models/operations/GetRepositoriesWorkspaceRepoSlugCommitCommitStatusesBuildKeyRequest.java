@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key")
     public String key;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -34,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -46,9 +50,16 @@ public class GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugCommitCommitStatusesBuildKeyRequest(@JsonProperty("commit") String commit, @JsonProperty("key") String key, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.key = key;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

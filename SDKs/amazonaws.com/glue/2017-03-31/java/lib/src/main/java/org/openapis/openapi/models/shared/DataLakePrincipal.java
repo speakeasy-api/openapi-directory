@@ -15,9 +15,11 @@ public class DataLakePrincipal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakePrincipalIdentifier")
     public String dataLakePrincipalIdentifier;
+
     public DataLakePrincipal withDataLakePrincipalIdentifier(String dataLakePrincipalIdentifier) {
         this.dataLakePrincipalIdentifier = dataLakePrincipalIdentifier;
         return this;
     }
     
+    public DataLakePrincipal(){}
 }

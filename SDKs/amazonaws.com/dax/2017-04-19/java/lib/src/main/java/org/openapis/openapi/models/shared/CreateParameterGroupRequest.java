@@ -12,6 +12,7 @@ public class CreateParameterGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateParameterGroupRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,13 @@ public class CreateParameterGroupRequest {
     
     @JsonProperty("ParameterGroupName")
     public String parameterGroupName;
+
     public CreateParameterGroupRequest withParameterGroupName(String parameterGroupName) {
         this.parameterGroupName = parameterGroupName;
         return this;
     }
     
+    public CreateParameterGroupRequest(@JsonProperty("ParameterGroupName") String parameterGroupName) {
+        this.parameterGroupName = parameterGroupName;
+  }
 }

@@ -23,6 +23,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public AbortConfig abortConfig;
+
     public DescribeJobTemplateResponse withAbortConfig(AbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -33,6 +34,7 @@ public class DescribeJobTemplateResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeJobTemplateResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeJobTemplateResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +52,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public DescribeJobTemplateResponse withDocument(String document) {
         this.document = document;
         return this;
@@ -57,6 +61,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentSource")
     public String documentSource;
+
     public DescribeJobTemplateResponse withDocumentSource(String documentSource) {
         this.documentSource = documentSource;
         return this;
@@ -65,6 +70,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRetryConfig")
     public JobExecutionsRetryConfig jobExecutionsRetryConfig;
+
     public DescribeJobTemplateResponse withJobExecutionsRetryConfig(JobExecutionsRetryConfig jobExecutionsRetryConfig) {
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
         return this;
@@ -76,6 +82,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public JobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public DescribeJobTemplateResponse withJobExecutionsRolloutConfig(JobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -84,6 +91,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateArn")
     public String jobTemplateArn;
+
     public DescribeJobTemplateResponse withJobTemplateArn(String jobTemplateArn) {
         this.jobTemplateArn = jobTemplateArn;
         return this;
@@ -92,6 +100,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateId")
     public String jobTemplateId;
+
     public DescribeJobTemplateResponse withJobTemplateId(String jobTemplateId) {
         this.jobTemplateId = jobTemplateId;
         return this;
@@ -100,6 +109,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceWindows")
     public MaintenanceWindow[] maintenanceWindows;
+
     public DescribeJobTemplateResponse withMaintenanceWindows(MaintenanceWindow[] maintenanceWindows) {
         this.maintenanceWindows = maintenanceWindows;
         return this;
@@ -111,6 +121,7 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presignedUrlConfig")
     public PresignedUrlConfig presignedUrlConfig;
+
     public DescribeJobTemplateResponse withPresignedUrlConfig(PresignedUrlConfig presignedUrlConfig) {
         this.presignedUrlConfig = presignedUrlConfig;
         return this;
@@ -122,9 +133,11 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public TimeoutConfig timeoutConfig;
+
     public DescribeJobTemplateResponse withTimeoutConfig(TimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public DescribeJobTemplateResponse(){}
 }

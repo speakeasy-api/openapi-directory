@@ -18,6 +18,7 @@ public class BulkUpdateTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public BulkUpdateTeamMembersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class BulkUpdateTeamMembersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_members")
     public java.util.Map<String, UpdateTeamMemberResponse> teamMembers;
+
     public BulkUpdateTeamMembersResponse withTeamMembers(java.util.Map<String, UpdateTeamMemberResponse> teamMembers) {
         this.teamMembers = teamMembers;
         return this;
     }
     
+    public BulkUpdateTeamMembersResponse(){}
 }

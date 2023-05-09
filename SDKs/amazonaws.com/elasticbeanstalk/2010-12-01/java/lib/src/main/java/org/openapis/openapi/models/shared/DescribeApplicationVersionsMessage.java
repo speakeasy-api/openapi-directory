@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeApplicationVersionsMessage {
     
     public String applicationName;
+
     public DescribeApplicationVersionsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeApplicationVersionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeApplicationVersionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -26,6 +28,7 @@ public class DescribeApplicationVersionsMessage {
     
     
     public String nextToken;
+
     public DescribeApplicationVersionsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -33,9 +36,11 @@ public class DescribeApplicationVersionsMessage {
     
     
     public String[] versionLabels;
+
     public DescribeApplicationVersionsMessage withVersionLabels(String[] versionLabels) {
         this.versionLabels = versionLabels;
         return this;
     }
     
+    public DescribeApplicationVersionsMessage(){}
 }

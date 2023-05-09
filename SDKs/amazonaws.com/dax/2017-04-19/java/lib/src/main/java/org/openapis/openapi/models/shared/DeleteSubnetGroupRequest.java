@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteSubnetGroupRequest {
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public DeleteSubnetGroupRequest withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
     }
     
+    public DeleteSubnetGroupRequest(@JsonProperty("SubnetGroupName") String subnetGroupName) {
+        this.subnetGroupName = subnetGroupName;
+  }
 }

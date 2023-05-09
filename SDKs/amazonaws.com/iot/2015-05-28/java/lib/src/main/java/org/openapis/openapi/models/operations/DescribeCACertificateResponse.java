@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCACertificateResponse {
     
     public String contentType;
+
     public DescribeCACertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCACertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCACertificateResponse describeCACertificateResponse;
+
     public DescribeCACertificateResponse withDescribeCACertificateResponse(org.openapis.openapi.models.shared.DescribeCACertificateResponse describeCACertificateResponse) {
         this.describeCACertificateResponse = describeCACertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCACertificateResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeCACertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeCACertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeCACertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeCACertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeCACertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeCACertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeCACertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeCACertificateResponse {
     
     
     public Integer statusCode;
+
     public DescribeCACertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeCACertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCACertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeCACertificateResponse {
      */
     
     public Object throttlingException;
+
     public DescribeCACertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeCACertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeCACertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeCACertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

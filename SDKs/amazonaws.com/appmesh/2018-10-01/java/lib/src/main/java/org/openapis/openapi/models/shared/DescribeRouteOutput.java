@@ -15,9 +15,11 @@ public class DescribeRouteOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public RouteData route;
+
     public DescribeRouteOutput withRoute(RouteData route) {
         this.route = route;
         return this;
     }
     
+    public DescribeRouteOutput(){}
 }

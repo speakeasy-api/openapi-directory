@@ -15,9 +15,11 @@ public class GetEnvironmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public Environment environment;
+
     public GetEnvironmentResponse withEnvironment(Environment environment) {
         this.environment = environment;
         return this;
     }
     
+    public GetEnvironmentResponse(){}
 }

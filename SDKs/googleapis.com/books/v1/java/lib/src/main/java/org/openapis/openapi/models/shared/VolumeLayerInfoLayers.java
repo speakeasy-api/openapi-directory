@@ -15,6 +15,7 @@ public class VolumeLayerInfoLayers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerId")
     public String layerId;
+
     public VolumeLayerInfoLayers withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -26,9 +27,11 @@ public class VolumeLayerInfoLayers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeAnnotationsVersion")
     public String volumeAnnotationsVersion;
+
     public VolumeLayerInfoLayers withVolumeAnnotationsVersion(String volumeAnnotationsVersion) {
         this.volumeAnnotationsVersion = volumeAnnotationsVersion;
         return this;
     }
     
+    public VolumeLayerInfoLayers(){}
 }

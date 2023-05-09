@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1ChannelPartnerRepricingConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repricingConfig")
     public GoogleCloudChannelV1RepricingConfig repricingConfig;
+
     public GoogleCloudChannelV1ChannelPartnerRepricingConfigInput withRepricingConfig(GoogleCloudChannelV1RepricingConfig repricingConfig) {
         this.repricingConfig = repricingConfig;
         return this;
     }
     
+    public GoogleCloudChannelV1ChannelPartnerRepricingConfigInput(){}
 }

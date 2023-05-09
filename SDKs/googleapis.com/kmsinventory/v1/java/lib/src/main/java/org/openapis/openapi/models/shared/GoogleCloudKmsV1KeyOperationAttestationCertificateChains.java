@@ -18,6 +18,7 @@ public class GoogleCloudKmsV1KeyOperationAttestationCertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caviumCerts")
     public String[] caviumCerts;
+
     public GoogleCloudKmsV1KeyOperationAttestationCertificateChains withCaviumCerts(String[] caviumCerts) {
         this.caviumCerts = caviumCerts;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsV1KeyOperationAttestationCertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCardCerts")
     public String[] googleCardCerts;
+
     public GoogleCloudKmsV1KeyOperationAttestationCertificateChains withGoogleCardCerts(String[] googleCardCerts) {
         this.googleCardCerts = googleCardCerts;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudKmsV1KeyOperationAttestationCertificateChains {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePartitionCerts")
     public String[] googlePartitionCerts;
+
     public GoogleCloudKmsV1KeyOperationAttestationCertificateChains withGooglePartitionCerts(String[] googlePartitionCerts) {
         this.googlePartitionCerts = googlePartitionCerts;
         return this;
     }
     
+    public GoogleCloudKmsV1KeyOperationAttestationCertificateChains(){}
 }

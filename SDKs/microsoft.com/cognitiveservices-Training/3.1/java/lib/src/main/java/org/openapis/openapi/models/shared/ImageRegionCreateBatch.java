@@ -17,9 +17,11 @@ public class ImageRegionCreateBatch {
     @JsonProperty("regions")
     @SpeakeasyMetadata("form:name=regions,json")
     public ImageRegionCreateEntry[] regions;
+
     public ImageRegionCreateBatch withRegions(ImageRegionCreateEntry[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public ImageRegionCreateBatch(){}
 }

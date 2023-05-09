@@ -18,9 +18,11 @@ public class ActivityContentDetailsSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public ResourceId resourceId;
+
     public ActivityContentDetailsSubscription withResourceId(ResourceId resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActivityContentDetailsSubscription(){}
 }

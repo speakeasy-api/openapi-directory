@@ -12,6 +12,7 @@ public class BatchItemQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public QuoteDto item;
+
     public BatchItemQuoteDto withItem(QuoteDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemQuoteDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemQuoteDtoOpCodeEnum opCode;
+
     public BatchItemQuoteDto withOpCode(BatchItemQuoteDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemQuoteDto(){}
 }

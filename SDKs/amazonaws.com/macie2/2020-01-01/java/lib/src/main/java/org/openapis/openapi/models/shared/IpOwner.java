@@ -15,6 +15,7 @@ public class IpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asn")
     public String asn;
+
     public IpOwner withAsn(String asn) {
         this.asn = asn;
         return this;
@@ -23,6 +24,7 @@ public class IpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asnOrg")
     public String asnOrg;
+
     public IpOwner withAsnOrg(String asnOrg) {
         this.asnOrg = asnOrg;
         return this;
@@ -31,6 +33,7 @@ public class IpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isp")
     public String isp;
+
     public IpOwner withIsp(String isp) {
         this.isp = isp;
         return this;
@@ -39,9 +42,11 @@ public class IpOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
+
     public IpOwner withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public IpOwner(){}
 }

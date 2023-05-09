@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyConfig")
     public GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withDeidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig deidentifyConfig) {
         this.deidentifyConfig = deidentifyConfig;
         return this;
@@ -40,6 +42,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class GooglePrivacyDlpV2DeidentifyTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GooglePrivacyDlpV2DeidentifyTemplate withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GooglePrivacyDlpV2DeidentifyTemplate(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LabrpResponse {
     
     public String contentType;
+
     public LabrpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LabrpResponse {
     
     
     public Integer statusCode;
+
     public LabrpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LabrpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LabrpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LabrpResponse {
      */
     
     public Labrp400ApplicationJSON labrp400ApplicationJSONObject;
+
     public LabrpResponse withLabrp400ApplicationJSONObject(Labrp400ApplicationJSON labrp400ApplicationJSONObject) {
         this.labrp400ApplicationJSONObject = labrp400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LabrpResponse {
      */
     
     public Labrp401ApplicationJSON labrp401ApplicationJSONObject;
+
     public LabrpResponse withLabrp401ApplicationJSONObject(Labrp401ApplicationJSON labrp401ApplicationJSONObject) {
         this.labrp401ApplicationJSONObject = labrp401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LabrpResponse {
      */
     
     public Labrp404ApplicationJSON labrp404ApplicationJSONObject;
+
     public LabrpResponse withLabrp404ApplicationJSONObject(Labrp404ApplicationJSON labrp404ApplicationJSONObject) {
         this.labrp404ApplicationJSONObject = labrp404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LabrpResponse {
      */
     
     public Labrp500ApplicationJSON labrp500ApplicationJSONObject;
+
     public LabrpResponse withLabrp500ApplicationJSONObject(Labrp500ApplicationJSON labrp500ApplicationJSONObject) {
         this.labrp500ApplicationJSONObject = labrp500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LabrpResponse {
      */
     
     public Labrp502ApplicationJSON labrp502ApplicationJSONObject;
+
     public LabrpResponse withLabrp502ApplicationJSONObject(Labrp502ApplicationJSON labrp502ApplicationJSONObject) {
         this.labrp502ApplicationJSONObject = labrp502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LabrpResponse {
      */
     
     public Labrp503ApplicationJSON labrp503ApplicationJSONObject;
+
     public LabrpResponse withLabrp503ApplicationJSONObject(Labrp503ApplicationJSON labrp503ApplicationJSONObject) {
         this.labrp503ApplicationJSONObject = labrp503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LabrpResponse {
      */
     
     public Labrp504ApplicationJSON labrp504ApplicationJSONObject;
+
     public LabrpResponse withLabrp504ApplicationJSONObject(Labrp504ApplicationJSON labrp504ApplicationJSONObject) {
         this.labrp504ApplicationJSONObject = labrp504ApplicationJSONObject;
         return this;
     }
     
+    public LabrpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

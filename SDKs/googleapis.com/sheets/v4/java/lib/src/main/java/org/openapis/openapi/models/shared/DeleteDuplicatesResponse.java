@@ -18,9 +18,11 @@ public class DeleteDuplicatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicatesRemovedCount")
     public Integer duplicatesRemovedCount;
+
     public DeleteDuplicatesResponse withDuplicatesRemovedCount(Integer duplicatesRemovedCount) {
         this.duplicatesRemovedCount = duplicatesRemovedCount;
         return this;
     }
     
+    public DeleteDuplicatesResponse(){}
 }

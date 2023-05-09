@@ -15,6 +15,7 @@ public class GetEntitlementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public java.util.Map<String, String[]> filter;
+
     public GetEntitlementsRequest withFilter(java.util.Map<String, String[]> filter) {
         this.filter = filter;
         return this;
@@ -23,6 +24,7 @@ public class GetEntitlementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetEntitlementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -31,6 +33,7 @@ public class GetEntitlementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetEntitlementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,9 +41,13 @@ public class GetEntitlementsRequest {
     
     @JsonProperty("ProductCode")
     public String productCode;
+
     public GetEntitlementsRequest withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
     }
     
+    public GetEntitlementsRequest(@JsonProperty("ProductCode") String productCode) {
+        this.productCode = productCode;
+  }
 }

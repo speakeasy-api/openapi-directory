@@ -58,11 +58,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

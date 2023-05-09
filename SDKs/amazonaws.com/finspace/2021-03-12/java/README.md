@@ -16,90 +16,90 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequest;
+import org.openapis.openapi.models.operations.CreateEnvironmentRequestBody;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationModeEnum;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodyFederationParameters;
 import org.openapis.openapi.models.operations.CreateEnvironmentRequestBodySuperuserParameters;
-import org.openapis.openapi.models.operations.CreateEnvironmentRequestBody;
-import org.openapis.openapi.models.operations.CreateEnvironmentRequest;
 import org.openapis.openapi.models.operations.CreateEnvironmentResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateEnvironmentRequest req = new CreateEnvironmentRequest() {{
-                requestBody = new CreateEnvironmentRequestBody() {{
-                    dataBundles = new String[]{{
-                        add("provident"),
-                        add("distinctio"),
-                        add("quibusdam"),
-                    }};
-                    description = "unde";
-                    federationMode = "LOCAL";
-                    federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
-                        applicationCallBackURL = "corrupti";
-                        attributeMap = new java.util.HashMap<String, String>() {{
-                            put("vel", "error");
-                            put("deserunt", "suscipit");
-                            put("iure", "magnam");
-                            put("debitis", "ipsa");
-                        }};
-                        federationProviderName = "delectus";
-                        federationURN = "tempora";
-                        samlMetadataDocument = "suscipit";
-                        samlMetadataURL = "molestiae";
-                    }};
-                    kmsKeyId = "minus";
-                    name = "placeat";
-                    superuserParameters = new CreateEnvironmentRequestBodySuperuserParameters() {{
-                        emailAddress = "voluptatum";
-                        firstName = "Jaycee";
-                        lastName = "Mante";
-                    }};
-                    tags = new java.util.HashMap<String, String>() {{
-                        put("recusandae", "temporibus");
-                        put("ab", "quis");
-                    }};
-                }};
-                xAmzAlgorithm = "veritatis";
-                xAmzContentSha256 = "deserunt";
-                xAmzCredential = "perferendis";
-                xAmzDate = "ipsam";
-                xAmzSecurityToken = "repellendus";
-                xAmzSignature = "sapiente";
-                xAmzSignedHeaders = "quo";
-            }}            
+            CreateEnvironmentRequest req = new CreateEnvironmentRequest(                new CreateEnvironmentRequestBody("provident") {{
+                                dataBundles = new String[]{{
+                                    add("quibusdam"),
+                                    add("unde"),
+                                    add("nulla"),
+                                }};
+                                description = "corrupti";
+                                federationMode = CreateEnvironmentRequestBodyFederationModeEnum.LOCAL;
+                                federationParameters = new CreateEnvironmentRequestBodyFederationParameters() {{
+                                    applicationCallBackURL = "vel";
+                                    attributeMap = new java.util.HashMap<String, String>() {{
+                                        put("deserunt", "suscipit");
+                                        put("iure", "magnam");
+                                        put("debitis", "ipsa");
+                                    }};
+                                    federationProviderName = "delectus";
+                                    federationURN = "tempora";
+                                    samlMetadataDocument = "suscipit";
+                                    samlMetadataURL = "molestiae";
+                                }};;
+                                kmsKeyId = "minus";
+                                superuserParameters = new CreateEnvironmentRequestBodySuperuserParameters() {{
+                                    emailAddress = "placeat";
+                                    firstName = "Junior";
+                                    lastName = "Kshlerin";
+                                }};;
+                                tags = new java.util.HashMap<String, String>() {{
+                                    put("nisi", "recusandae");
+                                    put("temporibus", "ab");
+                                    put("quis", "veritatis");
+                                }};
+                            }};) {{
+                xAmzAlgorithm = "deserunt";
+                xAmzContentSha256 = "perferendis";
+                xAmzCredential = "ipsam";
+                xAmzDate = "repellendus";
+                xAmzSecurityToken = "sapiente";
+                xAmzSignature = "quo";
+                xAmzSignedHeaders = "odit";
+            }};            
 
             CreateEnvironmentResponse res = sdk.createEnvironment(req);
 
-            if (res.createEnvironmentResponse.isPresent()) {
+            if (res.createEnvironmentResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createEnvironment` - Create a new FinSpace environment.
-* `deleteEnvironment` - Delete an FinSpace environment.
-* `getEnvironment` - Returns the FinSpace environment object.
-* `listEnvironments` - A list of all of your FinSpace environments.
-* `listTagsForResource` - A list of all tags for a resource.
-* `tagResource` - Adds metadata tags to a FinSpace resource.
-* `untagResource` - Removes metadata tags from a FinSpace resource.
-* `updateEnvironment` - Update your FinSpace environment.
+* [createEnvironment](docs/sdk/README.md#createenvironment) - Create a new FinSpace environment.
+* [deleteEnvironment](docs/sdk/README.md#deleteenvironment) - Delete an FinSpace environment.
+* [getEnvironment](docs/sdk/README.md#getenvironment) - Returns the FinSpace environment object.
+* [listEnvironments](docs/sdk/README.md#listenvironments) - A list of all of your FinSpace environments.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - A list of all tags for a resource.
+* [tagResource](docs/sdk/README.md#tagresource) - Adds metadata tags to a FinSpace resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Removes metadata tags from a FinSpace resource.
+* [updateEnvironment](docs/sdk/README.md#updateenvironment) - Update your FinSpace environment.
 <!-- End SDK Available Operations -->
 
 ### Maturity

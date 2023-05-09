@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPaymentInformationResponse {
     
     public byte[] body;
+
     public GetPaymentInformationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPaymentInformationResponse {
     
     
     public String contentType;
+
     public GetPaymentInformationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS;
+
     public GetPaymentInformationResponse withError400NGPIS(org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS) {
         this.error400NGPIS = error400NGPIS;
         return this;
@@ -36,6 +40,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400PIS error400PIS;
+
     public GetPaymentInformationResponse withError400PIS(org.openapis.openapi.models.shared.Error400PIS error400PIS) {
         this.error400PIS = error400PIS;
         return this;
@@ -46,6 +51,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS;
+
     public GetPaymentInformationResponse withError401NGPIS(org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS) {
         this.error401NGPIS = error401NGPIS;
         return this;
@@ -56,6 +62,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIS error401PIS;
+
     public GetPaymentInformationResponse withError401PIS(org.openapis.openapi.models.shared.Error401PIS error401PIS) {
         this.error401PIS = error401PIS;
         return this;
@@ -66,6 +73,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS;
+
     public GetPaymentInformationResponse withError403NGPIS(org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS) {
         this.error403NGPIS = error403NGPIS;
         return this;
@@ -76,6 +84,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIS error403PIS;
+
     public GetPaymentInformationResponse withError403PIS(org.openapis.openapi.models.shared.Error403PIS error403PIS) {
         this.error403PIS = error403PIS;
         return this;
@@ -86,6 +95,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS;
+
     public GetPaymentInformationResponse withError404NGPIS(org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS) {
         this.error404NGPIS = error404NGPIS;
         return this;
@@ -96,6 +106,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIS error404PIS;
+
     public GetPaymentInformationResponse withError404PIS(org.openapis.openapi.models.shared.Error404PIS error404PIS) {
         this.error404PIS = error404PIS;
         return this;
@@ -106,6 +117,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS;
+
     public GetPaymentInformationResponse withError405NGPIS(org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS) {
         this.error405NGPIS = error405NGPIS;
         return this;
@@ -116,6 +128,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PIS error405PIS;
+
     public GetPaymentInformationResponse withError405PIS(org.openapis.openapi.models.shared.Error405PIS error405PIS) {
         this.error405PIS = error405PIS;
         return this;
@@ -126,6 +139,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS;
+
     public GetPaymentInformationResponse withError409NGPIS(org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS) {
         this.error409NGPIS = error409NGPIS;
         return this;
@@ -136,6 +150,7 @@ public class GetPaymentInformationResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIS error409PIS;
+
     public GetPaymentInformationResponse withError409PIS(org.openapis.openapi.models.shared.Error409PIS error409PIS) {
         this.error409PIS = error409PIS;
         return this;
@@ -143,6 +158,7 @@ public class GetPaymentInformationResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPaymentInformationResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -150,6 +166,7 @@ public class GetPaymentInformationResponse {
     
     
     public Integer statusCode;
+
     public GetPaymentInformationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -157,6 +174,7 @@ public class GetPaymentInformationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPaymentInformationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -167,9 +185,14 @@ public class GetPaymentInformationResponse {
      */
     
     public Object getPaymentInformation200ApplicationJSONOneOf;
+
     public GetPaymentInformationResponse withGetPaymentInformation200ApplicationJSONOneOf(Object getPaymentInformation200ApplicationJSONOneOf) {
         this.getPaymentInformation200ApplicationJSONOneOf = getPaymentInformation200ApplicationJSONOneOf;
         return this;
     }
     
+    public GetPaymentInformationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

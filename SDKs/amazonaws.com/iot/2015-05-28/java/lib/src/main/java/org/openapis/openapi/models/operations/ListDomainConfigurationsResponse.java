@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDomainConfigurationsResponse {
     
     public String contentType;
+
     public ListDomainConfigurationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDomainConfigurationsResponse {
      */
     
     public Object internalFailureException;
+
     public ListDomainConfigurationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListDomainConfigurationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListDomainConfigurationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListDomainConfigurationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDomainConfigurationsResponse listDomainConfigurationsResponse;
+
     public ListDomainConfigurationsResponse withListDomainConfigurationsResponse(org.openapis.openapi.models.shared.ListDomainConfigurationsResponse listDomainConfigurationsResponse) {
         this.listDomainConfigurationsResponse = listDomainConfigurationsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListDomainConfigurationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListDomainConfigurationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListDomainConfigurationsResponse {
     
     
     public Integer statusCode;
+
     public ListDomainConfigurationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListDomainConfigurationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDomainConfigurationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListDomainConfigurationsResponse {
      */
     
     public Object throttlingException;
+
     public ListDomainConfigurationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListDomainConfigurationsResponse {
      */
     
     public Object unauthorizedException;
+
     public ListDomainConfigurationsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListDomainConfigurationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

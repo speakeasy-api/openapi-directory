@@ -15,6 +15,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeRuleResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public DescribeRuleResponse withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -31,6 +33,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeRuleResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public DescribeRuleResponse withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -47,6 +51,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventPattern")
     public String eventPattern;
+
     public DescribeRuleResponse withEventPattern(String eventPattern) {
         this.eventPattern = eventPattern;
         return this;
@@ -55,6 +60,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedBy")
     public String managedBy;
+
     public DescribeRuleResponse withManagedBy(String managedBy) {
         this.managedBy = managedBy;
         return this;
@@ -63,6 +69,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeRuleResponse withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeRuleResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,6 +87,7 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public DescribeRuleResponse withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -87,9 +96,11 @@ public class DescribeRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RuleStateEnum state;
+
     public DescribeRuleResponse withState(RuleStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeRuleResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMetadataOfAllChannelsResponse {
     
     public byte[] body;
+
     public GetMetadataOfAllChannelsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetMetadataOfAllChannelsResponse {
     
     
     public String contentType;
+
     public GetMetadataOfAllChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetMetadataOfAllChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetMetadataOfAllChannelsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class GetMetadataOfAllChannelsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetMetadataOfAllChannelsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -40,6 +45,7 @@ public class GetMetadataOfAllChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetMetadataOfAllChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +53,7 @@ public class GetMetadataOfAllChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMetadataOfAllChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,6 +64,7 @@ public class GetMetadataOfAllChannelsResponse {
      */
     
     public Object getMetadataOfAllChannels2XXApplicationJSONOneOf;
+
     public GetMetadataOfAllChannelsResponse withGetMetadataOfAllChannels2XXApplicationJSONOneOf(Object getMetadataOfAllChannels2XXApplicationJSONOneOf) {
         this.getMetadataOfAllChannels2XXApplicationJSONOneOf = getMetadataOfAllChannels2XXApplicationJSONOneOf;
         return this;
@@ -67,9 +75,14 @@ public class GetMetadataOfAllChannelsResponse {
      */
     
     public String getMetadataOfAllChannels2XXTextHTMLString;
+
     public GetMetadataOfAllChannelsResponse withGetMetadataOfAllChannels2XXTextHTMLString(String getMetadataOfAllChannels2XXTextHTMLString) {
         this.getMetadataOfAllChannels2XXTextHTMLString = getMetadataOfAllChannels2XXTextHTMLString;
         return this;
     }
     
+    public GetMetadataOfAllChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNamespaceResponse {
@@ -12,6 +13,7 @@ public class UpdateNamespaceResponse {
      */
     
     public Object conflictException;
+
     public UpdateNamespaceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateNamespaceResponse {
     
     
     public String contentType;
+
     public UpdateNamespaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateNamespaceResponse {
      */
     
     public Object internalServerException;
+
     public UpdateNamespaceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateNamespaceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateNamespaceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateNamespaceResponse {
     
     
     public Integer statusCode;
+
     public UpdateNamespaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateNamespaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNamespaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateNamespaceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateNamespaceResponse updateNamespaceResponse;
+
     public UpdateNamespaceResponse withUpdateNamespaceResponse(org.openapis.openapi.models.shared.UpdateNamespaceResponse updateNamespaceResponse) {
         this.updateNamespaceResponse = updateNamespaceResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateNamespaceResponse {
      */
     
     public Object validationException;
+
     public UpdateNamespaceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateNamespaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

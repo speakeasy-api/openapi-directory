@@ -18,6 +18,7 @@ public class ResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrights")
     public String[] copyrights;
+
     public ResponseInfo withCopyrights(String[] copyrights) {
         this.copyrights = copyrights;
         return this;
@@ -26,9 +27,11 @@ public class ResponseInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("took")
     public Double took;
+
     public ResponseInfo withTook(Double took) {
         this.took = took;
         return this;
     }
     
+    public ResponseInfo(){}
 }

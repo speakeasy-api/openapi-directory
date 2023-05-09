@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SiteTypesGetSitesForPublicFacingAPIResponse {
     
     public String contentType;
+
     public SiteTypesGetSitesForPublicFacingAPIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SiteTypesGetSitesForPublicFacingAPIResponse {
     
     
     public org.openapis.openapi.models.shared.SiteTypeLayer siteTypeLayer;
+
     public SiteTypesGetSitesForPublicFacingAPIResponse withSiteTypeLayer(org.openapis.openapi.models.shared.SiteTypeLayer siteTypeLayer) {
         this.siteTypeLayer = siteTypeLayer;
         return this;
@@ -23,6 +26,7 @@ public class SiteTypesGetSitesForPublicFacingAPIResponse {
     
     
     public Integer statusCode;
+
     public SiteTypesGetSitesForPublicFacingAPIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SiteTypesGetSitesForPublicFacingAPIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SiteTypesGetSitesForPublicFacingAPIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SiteTypesGetSitesForPublicFacingAPIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

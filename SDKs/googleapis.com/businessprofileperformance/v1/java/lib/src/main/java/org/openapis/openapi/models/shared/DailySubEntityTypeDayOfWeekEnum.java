@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * DailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY.
+ * DailySubEntityTypeDayOfWeekEnum - Represents the day of the week. Eg: MONDAY. Currently supported DailyMetrics = NONE.
  */
 public enum DailySubEntityTypeDayOfWeekEnum {
     DAY_OF_WEEK_UNSPECIFIED("DAY_OF_WEEK_UNSPECIFIED"),

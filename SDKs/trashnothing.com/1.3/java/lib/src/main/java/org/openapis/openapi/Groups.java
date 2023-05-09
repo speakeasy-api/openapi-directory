@@ -11,7 +11,6 @@ import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
-import org.openapis.openapi.utils.SerializedBody;
 
 /**
  * Search, subscribe and unsubscribe to groups.
@@ -35,44 +34,6 @@ public class Groups {
 	}
 
     /**
-     * Contact group moderators
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ContactModeratorsResponse contactModerators(org.openapis.openapi.models.operations.ContactModeratorsRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ContactModeratorsRequest.class, baseUrl, "/groups/{group_id}/contact", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ContactModeratorsResponse res = new org.openapis.openapi.models.operations.ContactModeratorsResponse() {{
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
      * Retrieve a group
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
@@ -94,11 +55,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupResponse res = new org.openapis.openapi.models.operations.GetGroupResponse() {{
+        org.openapis.openapi.models.operations.GetGroupResponse res = new org.openapis.openapi.models.operations.GetGroupResponse(contentType, httpRes.statusCode()) {{
             group = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +101,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGroupsByIdsResponse res = new org.openapis.openapi.models.operations.GetGroupsByIdsResponse() {{
+        org.openapis.openapi.models.operations.GetGroupsByIdsResponse res = new org.openapis.openapi.models.operations.GetGroupsByIdsResponse(contentType, httpRes.statusCode()) {{
             groups = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,95 +114,6 @@ public class Groups {
             }
         }
         else if (httpRes.statusCode() == 400) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Join groups
-     * Request membership to one or more groups. &lt;br /&gt;&lt;br /&gt; NOTE: Any group with a has_questions field set to true will also require answers to the groups' new member questionnaire to be submitted.  Groups waiting for answers will have their membership field set to 'pending-questions'.  And the questionnaire that needs to be answered can be found in the membership.questionnaire field of the group after a subscribe request is made to that group.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.JoinGroupsResponse joinGroups(org.openapis.openapi.models.operations.JoinGroupsRequestBody request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/groups/subscribe");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "request", "multipart");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.JoinGroupsResponse res = new org.openapis.openapi.models.operations.JoinGroupsResponse() {{
-            joinGroups200ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.operations.JoinGroups200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.JoinGroups200ApplicationJSON.class);
-                res.joinGroups200ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Leave a group
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.LeaveGroupResponse leaveGroup(org.openapis.openapi.models.operations.LeaveGroupRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.LeaveGroupRequest.class, baseUrl, "/groups/{group_id}/unsubscribe", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.LeaveGroupResponse res = new org.openapis.openapi.models.operations.LeaveGroupResponse() {{
-            group = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Group out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Group.class);
-                res.group = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
         }
 
         return res;
@@ -279,11 +147,9 @@ public class Groups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGroupsResponse res = new org.openapis.openapi.models.operations.SearchGroupsResponse() {{
+        org.openapis.openapi.models.operations.SearchGroupsResponse res = new org.openapis.openapi.models.operations.SearchGroupsResponse(contentType, httpRes.statusCode()) {{
             searchGroups200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,54 +160,6 @@ public class Groups {
             }
         }
         else if (httpRes.statusCode() == 400) {
-        }
-
-        return res;
-    }
-
-    /**
-     * Submit group answers
-     * Submits answers to a groups' membership questionnaire. &lt;br /&gt;&lt;br /&gt; The request body should be a JSON object mapping each question from the group membership.questionnaire.questions field to an answer (eg. {"Where do you live?": "New York City"} ). All questions are required so no null or empty string answers are allowed.
-     * 
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.SubmitAnswersResponse submitAnswers(org.openapis.openapi.models.operations.SubmitAnswersRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.SubmitAnswersRequest.class, baseUrl, "/groups/{group_id}/answers", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        if (serializedRequestBody == null) {
-            throw new Exception("Request body is required");
-        }
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.SubmitAnswersResponse res = new org.openapis.openapi.models.operations.SubmitAnswersResponse() {{
-            group = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Group out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Group.class);
-                res.group = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
         }
 
         return res;

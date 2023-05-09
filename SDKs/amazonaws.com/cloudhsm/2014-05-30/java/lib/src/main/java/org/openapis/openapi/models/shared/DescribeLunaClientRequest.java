@@ -12,6 +12,7 @@ public class DescribeLunaClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateFingerprint")
     public String certificateFingerprint;
+
     public DescribeLunaClientRequest withCertificateFingerprint(String certificateFingerprint) {
         this.certificateFingerprint = certificateFingerprint;
         return this;
@@ -20,9 +21,11 @@ public class DescribeLunaClientRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientArn")
     public String clientArn;
+
     public DescribeLunaClientRequest withClientArn(String clientArn) {
         this.clientArn = clientArn;
         return this;
     }
     
+    public DescribeLunaClientRequest(){}
 }

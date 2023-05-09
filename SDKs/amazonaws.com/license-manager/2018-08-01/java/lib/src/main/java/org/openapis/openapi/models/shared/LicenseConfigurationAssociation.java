@@ -20,6 +20,7 @@ public class LicenseConfigurationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiAssociationScope")
     public String amiAssociationScope;
+
     public LicenseConfigurationAssociation withAmiAssociationScope(String amiAssociationScope) {
         this.amiAssociationScope = amiAssociationScope;
         return this;
@@ -30,6 +31,7 @@ public class LicenseConfigurationAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AssociationTime")
     public OffsetDateTime associationTime;
+
     public LicenseConfigurationAssociation withAssociationTime(OffsetDateTime associationTime) {
         this.associationTime = associationTime;
         return this;
@@ -38,6 +40,7 @@ public class LicenseConfigurationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public LicenseConfigurationAssociation withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -46,6 +49,7 @@ public class LicenseConfigurationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceOwnerId")
     public String resourceOwnerId;
+
     public LicenseConfigurationAssociation withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -54,9 +58,11 @@ public class LicenseConfigurationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public ResourceTypeEnum resourceType;
+
     public LicenseConfigurationAssociation withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public LicenseConfigurationAssociation(){}
 }

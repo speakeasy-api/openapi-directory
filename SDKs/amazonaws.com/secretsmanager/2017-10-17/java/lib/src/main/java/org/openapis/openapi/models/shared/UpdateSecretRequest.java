@@ -12,6 +12,7 @@ public class UpdateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public UpdateSecretRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateSecretRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class UpdateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public UpdateSecretRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -36,6 +39,7 @@ public class UpdateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretBinary")
     public String secretBinary;
+
     public UpdateSecretRequest withSecretBinary(String secretBinary) {
         this.secretBinary = secretBinary;
         return this;
@@ -43,6 +47,7 @@ public class UpdateSecretRequest {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public UpdateSecretRequest withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
@@ -51,9 +56,13 @@ public class UpdateSecretRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretString")
     public String secretString;
+
     public UpdateSecretRequest withSecretString(String secretString) {
         this.secretString = secretString;
         return this;
     }
     
+    public UpdateSecretRequest(@JsonProperty("SecretId") String secretId) {
+        this.secretId = secretId;
+  }
 }

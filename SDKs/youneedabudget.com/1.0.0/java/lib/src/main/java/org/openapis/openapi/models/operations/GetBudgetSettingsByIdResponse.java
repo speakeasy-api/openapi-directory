@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBudgetSettingsByIdResponse {
@@ -12,6 +13,7 @@ public class GetBudgetSettingsByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BudgetSettingsResponse budgetSettingsResponse;
+
     public GetBudgetSettingsByIdResponse withBudgetSettingsResponse(org.openapis.openapi.models.shared.BudgetSettingsResponse budgetSettingsResponse) {
         this.budgetSettingsResponse = budgetSettingsResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetBudgetSettingsByIdResponse {
     
     
     public String contentType;
+
     public GetBudgetSettingsByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBudgetSettingsByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetBudgetSettingsByIdResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetBudgetSettingsByIdResponse {
     
     
     public Integer statusCode;
+
     public GetBudgetSettingsByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetBudgetSettingsByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBudgetSettingsByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBudgetSettingsByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

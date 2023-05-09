@@ -12,9 +12,11 @@ public class ConsentRequestConsentPatient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ConsentRequestConsentPatient withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ConsentRequestConsentPatient(){}
 }

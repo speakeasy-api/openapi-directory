@@ -15,6 +15,7 @@ public class AcceleratorTypeOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorType")
     public String acceleratorType;
+
     public AcceleratorTypeOffering withAcceleratorType(String acceleratorType) {
         this.acceleratorType = acceleratorType;
         return this;
@@ -23,6 +24,7 @@ public class AcceleratorTypeOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public AcceleratorTypeOffering withLocation(String location) {
         this.location = location;
         return this;
@@ -31,9 +33,11 @@ public class AcceleratorTypeOffering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationType")
     public LocationTypeEnum locationType;
+
     public AcceleratorTypeOffering withLocationType(LocationTypeEnum locationType) {
         this.locationType = locationType;
         return this;
     }
     
+    public AcceleratorTypeOffering(){}
 }

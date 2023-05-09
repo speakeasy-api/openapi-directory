@@ -12,9 +12,11 @@ public class GetReisezentrenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetReisezentrenRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetReisezentrenRequest(){}
 }

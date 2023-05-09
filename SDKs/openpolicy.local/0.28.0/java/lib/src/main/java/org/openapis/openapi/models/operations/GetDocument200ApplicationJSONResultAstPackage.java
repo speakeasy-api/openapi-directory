@@ -15,9 +15,11 @@ public class GetDocument200ApplicationJSONResultAstPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public GetDocument200ApplicationJSONResultAstPackagePath[] path;
+
     public GetDocument200ApplicationJSONResultAstPackage withPath(GetDocument200ApplicationJSONResultAstPackagePath[] path) {
         this.path = path;
         return this;
     }
     
+    public GetDocument200ApplicationJSONResultAstPackage(){}
 }

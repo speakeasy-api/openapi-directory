@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AuthorizeCacheSecurityGroupIngressMessage - Represents the input of an AuthorizeCacheSecurityGroupIngress operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AuthorizeCacheSecurityGroupIngressMessage {
     
     public String cacheSecurityGroupName;
+
     public AuthorizeCacheSecurityGroupIngressMessage withCacheSecurityGroupName(String cacheSecurityGroupName) {
         this.cacheSecurityGroupName = cacheSecurityGroupName;
         return this;
@@ -19,6 +20,7 @@ public class AuthorizeCacheSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupName;
+
     public AuthorizeCacheSecurityGroupIngressMessage withEc2SecurityGroupName(String ec2SecurityGroupName) {
         this.ec2SecurityGroupName = ec2SecurityGroupName;
         return this;
@@ -26,9 +28,15 @@ public class AuthorizeCacheSecurityGroupIngressMessage {
     
     
     public String ec2SecurityGroupOwnerId;
+
     public AuthorizeCacheSecurityGroupIngressMessage withEc2SecurityGroupOwnerId(String ec2SecurityGroupOwnerId) {
         this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
         return this;
     }
     
+    public AuthorizeCacheSecurityGroupIngressMessage(@JsonProperty("CacheSecurityGroupName") String cacheSecurityGroupName, @JsonProperty("EC2SecurityGroupName") String ec2SecurityGroupName, @JsonProperty("EC2SecurityGroupOwnerId") String ec2SecurityGroupOwnerId) {
+        this.cacheSecurityGroupName = cacheSecurityGroupName;
+        this.ec2SecurityGroupName = ec2SecurityGroupName;
+        this.ec2SecurityGroupOwnerId = ec2SecurityGroupOwnerId;
+  }
 }

@@ -57,10 +57,8 @@ public class Copyrights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 304 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 410 || httpRes.statusCode() == 500) {
@@ -97,10 +95,8 @@ public class Copyrights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsCaptionFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 304 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 410 || httpRes.statusCode() == 500) {
@@ -139,10 +135,8 @@ public class Copyrights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsMinLonMinLatMaxLonMaxLatFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 304 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 410 || httpRes.statusCode() == 500) {
@@ -181,10 +175,8 @@ public class Copyrights {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse() {{
+        org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse res = new org.openapis.openapi.models.operations.GetMapVersionNumberCopyrightsZoomXYFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 304 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 410 || httpRes.statusCode() == 500) {

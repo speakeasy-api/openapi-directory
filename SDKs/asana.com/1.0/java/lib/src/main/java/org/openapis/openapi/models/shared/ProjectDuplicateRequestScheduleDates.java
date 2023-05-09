@@ -18,6 +18,7 @@ public class ProjectDuplicateRequestScheduleDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_on")
     public String dueOn;
+
     public ProjectDuplicateRequestScheduleDates withDueOn(String dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -28,6 +29,7 @@ public class ProjectDuplicateRequestScheduleDates {
      */
     @JsonProperty("should_skip_weekends")
     public Boolean shouldSkipWeekends;
+
     public ProjectDuplicateRequestScheduleDates withShouldSkipWeekends(Boolean shouldSkipWeekends) {
         this.shouldSkipWeekends = shouldSkipWeekends;
         return this;
@@ -39,9 +41,13 @@ public class ProjectDuplicateRequestScheduleDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_on")
     public String startOn;
+
     public ProjectDuplicateRequestScheduleDates withStartOn(String startOn) {
         this.startOn = startOn;
         return this;
     }
     
+    public ProjectDuplicateRequestScheduleDates(@JsonProperty("should_skip_weekends") Boolean shouldSkipWeekends) {
+        this.shouldSkipWeekends = shouldSkipWeekends;
+  }
 }

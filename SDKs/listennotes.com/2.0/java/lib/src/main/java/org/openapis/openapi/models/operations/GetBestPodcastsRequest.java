@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBestPodcastsRequest {
@@ -12,6 +13,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetBestPodcastsRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -22,6 +24,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=genre_id")
     public String genreId;
+
     public GetBestPodcastsRequest withGenreId(String genreId) {
         this.genreId = genreId;
         return this;
@@ -35,6 +38,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetBestPodcastsRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -45,6 +49,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetBestPodcastsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -62,6 +67,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publisher_region")
     public String publisherRegion;
+
     public GetBestPodcastsRequest withPublisherRegion(String publisherRegion) {
         this.publisherRegion = publisherRegion;
         return this;
@@ -77,6 +83,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
     public String region;
+
     public GetBestPodcastsRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -87,6 +94,7 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
     public org.openapis.openapi.models.shared.SafeModeParamEnum safeMode;
+
     public GetBestPodcastsRequest withSafeMode(org.openapis.openapi.models.shared.SafeModeParamEnum safeMode) {
         this.safeMode = safeMode;
         return this;
@@ -99,9 +107,13 @@ public class GetBestPodcastsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetBestPodcastsSortEnum sort;
+
     public GetBestPodcastsRequest withSort(GetBestPodcastsSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetBestPodcastsRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

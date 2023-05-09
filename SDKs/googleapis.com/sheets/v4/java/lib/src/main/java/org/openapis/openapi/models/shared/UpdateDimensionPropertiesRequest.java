@@ -18,6 +18,7 @@ public class UpdateDimensionPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceSheetRange")
     public DataSourceSheetDimensionRange dataSourceSheetRange;
+
     public UpdateDimensionPropertiesRequest withDataSourceSheetRange(DataSourceSheetDimensionRange dataSourceSheetRange) {
         this.dataSourceSheetRange = dataSourceSheetRange;
         return this;
@@ -29,6 +30,7 @@ public class UpdateDimensionPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateDimensionPropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,6 +42,7 @@ public class UpdateDimensionPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public DimensionProperties properties;
+
     public UpdateDimensionPropertiesRequest withProperties(DimensionProperties properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class UpdateDimensionPropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public DimensionRange range;
+
     public UpdateDimensionPropertiesRequest withRange(DimensionRange range) {
         this.range = range;
         return this;
     }
     
+    public UpdateDimensionPropertiesRequest(){}
 }

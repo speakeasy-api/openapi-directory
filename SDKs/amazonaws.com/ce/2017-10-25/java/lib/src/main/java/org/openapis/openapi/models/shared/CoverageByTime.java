@@ -15,6 +15,7 @@ public class CoverageByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public ReservationCoverageGroup[] groups;
+
     public CoverageByTime withGroups(ReservationCoverageGroup[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +24,7 @@ public class CoverageByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public CoverageByTime withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -31,9 +33,11 @@ public class CoverageByTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Coverage total;
+
     public CoverageByTime withTotal(Coverage total) {
         this.total = total;
         return this;
     }
     
+    public CoverageByTime(){}
 }

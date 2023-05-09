@@ -21,6 +21,7 @@ public class CatalogItemOptionValueForItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
     public String itemOptionId;
+
     public CatalogItemOptionValueForItemVariation withItemOptionId(String itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
@@ -32,9 +33,11 @@ public class CatalogItemOptionValueForItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_value_id")
     public String itemOptionValueId;
+
     public CatalogItemOptionValueForItemVariation withItemOptionValueId(String itemOptionValueId) {
         this.itemOptionValueId = itemOptionValueId;
         return this;
     }
     
+    public CatalogItemOptionValueForItemVariation(){}
 }

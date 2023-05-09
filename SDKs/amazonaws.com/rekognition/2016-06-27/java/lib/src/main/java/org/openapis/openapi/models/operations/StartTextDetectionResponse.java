@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTextDetectionResponse {
@@ -12,6 +13,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartTextDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartTextDetectionResponse {
     
     
     public String contentType;
+
     public StartTextDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public StartTextDetectionResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object internalServerError;
+
     public StartTextDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public StartTextDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public StartTextDetectionResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -69,6 +76,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object limitExceededException;
+
     public StartTextDetectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public StartTextDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -89,6 +98,7 @@ public class StartTextDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTextDetectionResponse startTextDetectionResponse;
+
     public StartTextDetectionResponse withStartTextDetectionResponse(org.openapis.openapi.models.shared.StartTextDetectionResponse startTextDetectionResponse) {
         this.startTextDetectionResponse = startTextDetectionResponse;
         return this;
@@ -96,6 +106,7 @@ public class StartTextDetectionResponse {
     
     
     public Integer statusCode;
+
     public StartTextDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class StartTextDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTextDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class StartTextDetectionResponse {
      */
     
     public Object throttlingException;
+
     public StartTextDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -123,9 +136,14 @@ public class StartTextDetectionResponse {
      */
     
     public Object videoTooLargeException;
+
     public StartTextDetectionResponse withVideoTooLargeException(Object videoTooLargeException) {
         this.videoTooLargeException = videoTooLargeException;
         return this;
     }
     
+    public StartTextDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

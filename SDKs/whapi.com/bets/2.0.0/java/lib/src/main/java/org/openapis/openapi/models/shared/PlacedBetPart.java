@@ -14,6 +14,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("description")
     public String description;
+
     public PlacedBetPart withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eachWayDen")
     public Long eachWayDen;
+
     public PlacedBetPart withEachWayDen(Long eachWayDen) {
         this.eachWayDen = eachWayDen;
         return this;
@@ -36,6 +38,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eachWayNum")
     public Long eachWayNum;
+
     public PlacedBetPart withEachWayNum(Long eachWayNum) {
         this.eachWayNum = eachWayNum;
         return this;
@@ -47,6 +50,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eachWayPlaces")
     public Long eachWayPlaces;
+
     public PlacedBetPart withEachWayPlaces(Long eachWayPlaces) {
         this.eachWayPlaces = eachWayPlaces;
         return this;
@@ -57,6 +61,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("eventDescription")
     public String eventDescription;
+
     public PlacedBetPart withEventDescription(String eventDescription) {
         this.eventDescription = eventDescription;
         return this;
@@ -67,6 +72,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("eventId")
     public String eventId;
+
     public PlacedBetPart withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -78,6 +84,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventMarketDescription")
     public String eventMarketDescription;
+
     public PlacedBetPart withEventMarketDescription(String eventMarketDescription) {
         this.eventMarketDescription = eventMarketDescription;
         return this;
@@ -89,6 +96,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypeDescription")
     public String eventTypeDescription;
+
     public PlacedBetPart withEventTypeDescription(String eventTypeDescription) {
         this.eventTypeDescription = eventTypeDescription;
         return this;
@@ -100,6 +108,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("handicap")
     public Double handicap;
+
     public PlacedBetPart withHandicap(Double handicap) {
         this.handicap = handicap;
         return this;
@@ -110,6 +119,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("number")
     public Long number;
+
     public PlacedBetPart withNumber(Long number) {
         this.number = number;
         return this;
@@ -120,6 +130,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("priceDen")
     public Long priceDen;
+
     public PlacedBetPart withPriceDen(Long priceDen) {
         this.priceDen = priceDen;
         return this;
@@ -128,6 +139,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceFormatted")
     public PriceFormatted priceFormatted;
+
     public PlacedBetPart withPriceFormatted(PriceFormatted priceFormatted) {
         this.priceFormatted = priceFormatted;
         return this;
@@ -138,6 +150,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("priceNum")
     public Long priceNum;
+
     public PlacedBetPart withPriceNum(Long priceNum) {
         this.priceNum = priceNum;
         return this;
@@ -148,6 +161,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("priceType")
     public String priceType;
+
     public PlacedBetPart withPriceType(String priceType) {
         this.priceType = priceType;
         return this;
@@ -158,6 +172,7 @@ public class PlacedBetPart {
      */
     @JsonProperty("result")
     public String result;
+
     public PlacedBetPart withResult(String result) {
         this.result = result;
         return this;
@@ -169,6 +184,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule4Deductions")
     public Double rule4Deductions;
+
     public PlacedBetPart withRule4Deductions(Double rule4Deductions) {
         this.rule4Deductions = rule4Deductions;
         return this;
@@ -180,6 +196,7 @@ public class PlacedBetPart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionId")
     public String selectionId;
+
     public PlacedBetPart withSelectionId(String selectionId) {
         this.selectionId = selectionId;
         return this;
@@ -190,9 +207,21 @@ public class PlacedBetPart {
      */
     @JsonProperty("startDateTime")
     public String startDateTime;
+
     public PlacedBetPart withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
     }
     
+    public PlacedBetPart(@JsonProperty("description") String description, @JsonProperty("eventDescription") String eventDescription, @JsonProperty("eventId") String eventId, @JsonProperty("number") Long number, @JsonProperty("priceDen") Long priceDen, @JsonProperty("priceNum") Long priceNum, @JsonProperty("priceType") String priceType, @JsonProperty("result") String result, @JsonProperty("startDateTime") String startDateTime) {
+        this.description = description;
+        this.eventDescription = eventDescription;
+        this.eventId = eventId;
+        this.number = number;
+        this.priceDen = priceDen;
+        this.priceNum = priceNum;
+        this.priceType = priceType;
+        this.result = result;
+        this.startDateTime = startDateTime;
+  }
 }

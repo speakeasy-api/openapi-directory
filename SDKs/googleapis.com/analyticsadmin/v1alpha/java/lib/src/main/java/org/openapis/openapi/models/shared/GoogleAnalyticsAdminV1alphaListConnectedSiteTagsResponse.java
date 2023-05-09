@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedSiteTags")
     public GoogleAnalyticsAdminV1alphaConnectedSiteTag[] connectedSiteTags;
+
     public GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse withConnectedSiteTags(GoogleAnalyticsAdminV1alphaConnectedSiteTag[] connectedSiteTags) {
         this.connectedSiteTags = connectedSiteTags;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListConnectedSiteTagsResponse(){}
 }

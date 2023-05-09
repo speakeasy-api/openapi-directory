@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestCardRangeThreeDDirector
 lib/src/main/java/org/openapis/openapi/models/shared/TestCardRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/AvsAddress.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

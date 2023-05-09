@@ -15,9 +15,11 @@ public class CreateConnectorProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileArn")
     public String connectorProfileArn;
+
     public CreateConnectorProfileResponse withConnectorProfileArn(String connectorProfileArn) {
         this.connectorProfileArn = connectorProfileArn;
         return this;
     }
     
+    public CreateConnectorProfileResponse(){}
 }

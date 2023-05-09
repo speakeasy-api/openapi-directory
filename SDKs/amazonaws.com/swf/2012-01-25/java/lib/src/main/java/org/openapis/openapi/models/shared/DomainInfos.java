@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainInfos {
     @JsonProperty("domainInfos")
     public DomainInfo[] domainInfos;
+
     public DomainInfos withDomainInfos(DomainInfo[] domainInfos) {
         this.domainInfos = domainInfos;
         return this;
@@ -22,9 +23,13 @@ public class DomainInfos {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public DomainInfos withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public DomainInfos(@JsonProperty("domainInfos") DomainInfo[] domainInfos) {
+        this.domainInfos = domainInfos;
+  }
 }

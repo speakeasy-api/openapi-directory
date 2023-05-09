@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePipeResponse {
@@ -12,6 +13,7 @@ public class DeletePipeResponse {
      */
     
     public Object conflictException;
+
     public DeletePipeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePipeResponse {
     
     
     public String contentType;
+
     public DeletePipeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePipeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePipeResponse deletePipeResponse;
+
     public DeletePipeResponse withDeletePipeResponse(org.openapis.openapi.models.shared.DeletePipeResponse deletePipeResponse) {
         this.deletePipeResponse = deletePipeResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePipeResponse {
      */
     
     public Object internalException;
+
     public DeletePipeResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePipeResponse {
      */
     
     public Object notFoundException;
+
     public DeletePipeResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePipeResponse {
     
     
     public Integer statusCode;
+
     public DeletePipeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePipeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePipeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeletePipeResponse {
      */
     
     public Object throttlingException;
+
     public DeletePipeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePipeResponse {
      */
     
     public Object validationException;
+
     public DeletePipeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePipeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -64,11 +64,9 @@ public class Two4UserSafeScoringOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse res = new org.openapis.openapi.models.operations.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse() {{
+        org.openapis.openapi.models.operations.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse res = new org.openapis.openapi.models.operations.UserSafeScoringAccumulatedValueV1ScoringsIndividualResponse(contentType, httpRes.statusCode()) {{
             userSafeScoringAccumulatedValueV1ScoringsIndividual200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,11 +109,9 @@ public class Two4UserSafeScoringOptional {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse res = new org.openapis.openapi.models.operations.UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse() {{
+        org.openapis.openapi.models.operations.UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse res = new org.openapis.openapi.models.operations.UserSafeScoringDailyValueV1ScoringsIndividualDailyResponse(contentType, httpRes.statusCode()) {{
             userSafeScoringDailyValueV1ScoringsIndividualDaily200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

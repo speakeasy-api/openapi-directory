@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminGetAuditLogRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public EnterpriseAdminGetAuditLogRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public EnterpriseAdminGetAuditLogRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -32,6 +35,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminGetAuditLogRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.AuditLogOrderEnum order;
+
     public EnterpriseAdminGetAuditLogRequest withOrder(org.openapis.openapi.models.shared.AuditLogOrderEnum order) {
         this.order = order;
         return this;
@@ -54,6 +59,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminGetAuditLogRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -64,6 +70,7 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminGetAuditLogRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -74,9 +81,13 @@ public class EnterpriseAdminGetAuditLogRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phrase")
     public String phrase;
+
     public EnterpriseAdminGetAuditLogRequest withPhrase(String phrase) {
         this.phrase = phrase;
         return this;
     }
     
+    public EnterpriseAdminGetAuditLogRequest(@JsonProperty("enterprise") String enterprise) {
+        this.enterprise = enterprise;
+  }
 }

@@ -18,9 +18,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAuto")
     public java.util.Map<String, Object> googleAuto;
+
     public Account withGoogleAuto(java.util.Map<String, Object> googleAuto) {
         this.googleAuto = googleAuto;
         return this;
     }
     
+    public Account(){}
 }

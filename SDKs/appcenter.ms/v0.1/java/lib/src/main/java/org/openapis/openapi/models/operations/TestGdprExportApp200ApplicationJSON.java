@@ -15,9 +15,11 @@ public class TestGdprExportApp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash_files_url")
     public String hashFilesUrl;
+
     public TestGdprExportApp200ApplicationJSON withHashFilesUrl(String hashFilesUrl) {
         this.hashFilesUrl = hashFilesUrl;
         return this;
     }
     
+    public TestGdprExportApp200ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class RbacPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RbacPolicy withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class RbacPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public Permission[] permissions;
+
     public RbacPolicy withPermissions(Permission[] permissions) {
         this.permissions = permissions;
         return this;
@@ -37,9 +39,11 @@ public class RbacPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principals")
     public Principal[] principals;
+
     public RbacPolicy withPrincipals(Principal[] principals) {
         this.principals = principals;
         return this;
     }
     
+    public RbacPolicy(){}
 }

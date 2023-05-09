@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StaticColumn {
     @JsonProperty("name")
     public String name;
+
     public StaticColumn withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StaticColumn(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

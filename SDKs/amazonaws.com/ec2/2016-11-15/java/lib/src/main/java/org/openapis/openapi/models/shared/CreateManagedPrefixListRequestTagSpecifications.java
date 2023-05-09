@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateManagedPrefixListRequestTagSpecifications {
     
     public CreateManagedPrefixListRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateManagedPrefixListRequestTagSpecifications withResourceType(CreateManagedPrefixListRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateManagedPrefixListRequestTagSpecifications {
     
     
     public CreateManagedPrefixListRequestTagSpecificationsTags[] tags;
+
     public CreateManagedPrefixListRequestTagSpecifications withTags(CreateManagedPrefixListRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateManagedPrefixListRequestTagSpecifications(){}
 }

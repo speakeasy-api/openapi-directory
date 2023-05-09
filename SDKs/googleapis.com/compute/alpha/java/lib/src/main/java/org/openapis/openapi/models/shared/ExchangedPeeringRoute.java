@@ -15,6 +15,7 @@ public class ExchangedPeeringRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destRange")
     public String destRange;
+
     public ExchangedPeeringRoute withDestRange(String destRange) {
         this.destRange = destRange;
         return this;
@@ -26,6 +27,7 @@ public class ExchangedPeeringRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imported")
     public Boolean imported;
+
     public ExchangedPeeringRoute withImported(Boolean imported) {
         this.imported = imported;
         return this;
@@ -37,6 +39,7 @@ public class ExchangedPeeringRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopRegion")
     public String nextHopRegion;
+
     public ExchangedPeeringRoute withNextHopRegion(String nextHopRegion) {
         this.nextHopRegion = nextHopRegion;
         return this;
@@ -48,6 +51,7 @@ public class ExchangedPeeringRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public ExchangedPeeringRoute withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -59,9 +63,11 @@ public class ExchangedPeeringRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ExchangedPeeringRouteTypeEnum type;
+
     public ExchangedPeeringRoute withType(ExchangedPeeringRouteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExchangedPeeringRoute(){}
 }

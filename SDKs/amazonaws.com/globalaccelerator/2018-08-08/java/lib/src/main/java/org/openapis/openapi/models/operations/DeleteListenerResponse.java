@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteListenerResponse {
@@ -12,6 +13,7 @@ public class DeleteListenerResponse {
      */
     
     public Object associatedEndpointGroupFoundException;
+
     public DeleteListenerResponse withAssociatedEndpointGroupFoundException(Object associatedEndpointGroupFoundException) {
         this.associatedEndpointGroupFoundException = associatedEndpointGroupFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteListenerResponse {
     
     
     public String contentType;
+
     public DeleteListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteListenerResponse {
      */
     
     public Object listenerNotFoundException;
+
     public DeleteListenerResponse withListenerNotFoundException(Object listenerNotFoundException) {
         this.listenerNotFoundException = listenerNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteListenerResponse {
     
     
     public Integer statusCode;
+
     public DeleteListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

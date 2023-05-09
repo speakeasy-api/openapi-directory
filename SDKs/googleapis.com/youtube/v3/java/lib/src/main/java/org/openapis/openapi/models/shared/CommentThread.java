@@ -18,6 +18,7 @@ public class CommentThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public CommentThread withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class CommentThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CommentThread withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class CommentThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CommentThread withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class CommentThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public CommentThreadReplies replies;
+
     public CommentThread withReplies(CommentThreadReplies replies) {
         this.replies = replies;
         return this;
@@ -62,9 +66,11 @@ public class CommentThread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public CommentThreadSnippet snippet;
+
     public CommentThread withSnippet(CommentThreadSnippet snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public CommentThread(){}
 }

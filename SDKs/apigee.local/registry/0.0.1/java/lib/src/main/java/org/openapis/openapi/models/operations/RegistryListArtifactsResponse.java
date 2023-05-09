@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegistryListArtifactsResponse {
     
     public String contentType;
+
     public RegistryListArtifactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegistryListArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListArtifactsResponse listArtifactsResponse;
+
     public RegistryListArtifactsResponse withListArtifactsResponse(org.openapis.openapi.models.shared.ListArtifactsResponse listArtifactsResponse) {
         this.listArtifactsResponse = listArtifactsResponse;
         return this;
@@ -29,6 +32,7 @@ public class RegistryListArtifactsResponse {
      */
     
     public org.openapis.openapi.models.shared.Status status;
+
     public RegistryListArtifactsResponse withStatus(org.openapis.openapi.models.shared.Status status) {
         this.status = status;
         return this;
@@ -36,6 +40,7 @@ public class RegistryListArtifactsResponse {
     
     
     public Integer statusCode;
+
     public RegistryListArtifactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RegistryListArtifactsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegistryListArtifactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegistryListArtifactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

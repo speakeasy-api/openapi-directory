@@ -20,6 +20,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("ApiUrl")
     @SpeakeasyMetadata("form:name=ApiUrl")
     public String apiUrl;
+
     public RegisterRealtimeApiData withApiUrl(String apiUrl) {
         this.apiUrl = apiUrl;
         return this;
@@ -32,6 +33,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("BasicAuthPassword")
     @SpeakeasyMetadata("form:name=BasicAuthPassword")
     public String basicAuthPassword;
+
     public RegisterRealtimeApiData withBasicAuthPassword(String basicAuthPassword) {
         this.basicAuthPassword = basicAuthPassword;
         return this;
@@ -44,6 +46,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("BasicAuthUsername")
     @SpeakeasyMetadata("form:name=BasicAuthUsername")
     public String basicAuthUsername;
+
     public RegisterRealtimeApiData withBasicAuthUsername(String basicAuthUsername) {
         this.basicAuthUsername = basicAuthUsername;
         return this;
@@ -56,6 +59,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public RegisterRealtimeApiData withId(String id) {
         this.id = id;
         return this;
@@ -68,6 +72,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("MeterId")
     @SpeakeasyMetadata("form:name=MeterId")
     public String meterId;
+
     public RegisterRealtimeApiData withMeterId(String meterId) {
         this.meterId = meterId;
         return this;
@@ -80,6 +85,7 @@ public class RegisterRealtimeApiData {
     @JsonProperty("RegistrationType")
     @SpeakeasyMetadata("form:name=RegistrationType")
     public RegisterRealtimeApiDataRegistrationTypeEnum registrationType;
+
     public RegisterRealtimeApiData withRegistrationType(RegisterRealtimeApiDataRegistrationTypeEnum registrationType) {
         this.registrationType = registrationType;
         return this;
@@ -93,9 +99,11 @@ public class RegisterRealtimeApiData {
     @JsonProperty("SerialNumber")
     @SpeakeasyMetadata("form:name=SerialNumber")
     public String serialNumber;
+
     public RegisterRealtimeApiData withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public RegisterRealtimeApiData(){}
 }

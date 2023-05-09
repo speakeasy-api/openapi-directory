@@ -15,6 +15,7 @@ public class DetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinBoundingBoxHeight")
     public Float minBoundingBoxHeight;
+
     public DetectionFilter withMinBoundingBoxHeight(Float minBoundingBoxHeight) {
         this.minBoundingBoxHeight = minBoundingBoxHeight;
         return this;
@@ -23,6 +24,7 @@ public class DetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinBoundingBoxWidth")
     public Float minBoundingBoxWidth;
+
     public DetectionFilter withMinBoundingBoxWidth(Float minBoundingBoxWidth) {
         this.minBoundingBoxWidth = minBoundingBoxWidth;
         return this;
@@ -31,9 +33,11 @@ public class DetectionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public DetectionFilter withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
     }
     
+    public DetectionFilter(){}
 }

@@ -18,6 +18,7 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public Fee withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -29,6 +30,7 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeJurisdiction")
     public FeeJurisdiction feeJurisdiction;
+
     public Fee withFeeJurisdiction(FeeJurisdiction feeJurisdiction) {
         this.feeJurisdiction = feeJurisdiction;
         return this;
@@ -40,6 +42,7 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeMemo")
     public String feeMemo;
+
     public Fee withFeeMemo(String feeMemo) {
         this.feeMemo = feeMemo;
         return this;
@@ -51,9 +54,11 @@ public class Fee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeType")
     public String feeType;
+
     public Fee withFeeType(String feeType) {
         this.feeType = feeType;
         return this;
     }
     
+    public Fee(){}
 }

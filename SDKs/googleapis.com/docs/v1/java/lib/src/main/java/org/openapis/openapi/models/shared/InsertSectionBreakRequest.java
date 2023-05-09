@@ -18,6 +18,7 @@ public class InsertSectionBreakRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOfSegmentLocation")
     public EndOfSegmentLocation endOfSegmentLocation;
+
     public InsertSectionBreakRequest withEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
         this.endOfSegmentLocation = endOfSegmentLocation;
         return this;
@@ -29,6 +30,7 @@ public class InsertSectionBreakRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public InsertSectionBreakRequest withLocation(Location location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class InsertSectionBreakRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public InsertSectionBreakRequestSectionTypeEnum sectionType;
+
     public InsertSectionBreakRequest withSectionType(InsertSectionBreakRequestSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
     }
     
+    public InsertSectionBreakRequest(){}
 }

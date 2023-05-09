@@ -15,6 +15,7 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximateNumberOfObjectsToProcess")
     public Double approximateNumberOfObjectsToProcess;
+
     public Statistics withApproximateNumberOfObjectsToProcess(Double approximateNumberOfObjectsToProcess) {
         this.approximateNumberOfObjectsToProcess = approximateNumberOfObjectsToProcess;
         return this;
@@ -23,9 +24,11 @@ public class Statistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfRuns")
     public Double numberOfRuns;
+
     public Statistics withNumberOfRuns(Double numberOfRuns) {
         this.numberOfRuns = numberOfRuns;
         return this;
     }
     
+    public Statistics(){}
 }

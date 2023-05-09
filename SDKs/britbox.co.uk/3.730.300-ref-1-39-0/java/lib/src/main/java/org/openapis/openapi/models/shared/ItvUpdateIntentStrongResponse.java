@@ -15,6 +15,7 @@ public class ItvUpdateIntentStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ItvUpdateIntentStrongResponse withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -26,6 +27,7 @@ public class ItvUpdateIntentStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public ItvUpdateIntentStrongResponse withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -37,6 +39,7 @@ public class ItvUpdateIntentStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentType")
     public String intentType;
+
     public ItvUpdateIntentStrongResponse withIntentType(String intentType) {
         this.intentType = intentType;
         return this;
@@ -48,9 +51,11 @@ public class ItvUpdateIntentStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ItvUpdateIntentStrongResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ItvUpdateIntentStrongResponse(){}
 }

@@ -18,6 +18,7 @@ public class GroupSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishedAt")
     public String publishedAt;
+
     public GroupSnippet withPublishedAt(String publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -29,9 +30,11 @@ public class GroupSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GroupSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GroupSnippet(){}
 }

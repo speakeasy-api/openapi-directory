@@ -15,6 +15,7 @@ public class AccessLevelFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public AccessLevelFilterKeyEnum key;
+
     public AccessLevelFilter withKey(AccessLevelFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class AccessLevelFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AccessLevelFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AccessLevelFilter(){}
 }

@@ -18,6 +18,7 @@ public class SortedDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SortedDimension withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class SortedDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SortedDimension withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class SortedDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public SortedDimensionSortOrderEnum sortOrder;
+
     public SortedDimension withSortOrder(SortedDimensionSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public SortedDimension(){}
 }

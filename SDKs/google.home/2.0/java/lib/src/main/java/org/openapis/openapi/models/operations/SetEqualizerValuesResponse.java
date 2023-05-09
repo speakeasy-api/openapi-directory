@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetEqualizerValuesResponse {
     
     public String contentType;
+
     public SetEqualizerValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetEqualizerValuesResponse {
     
     
     public String setEqualizerValues200TextPlainObject;
+
     public SetEqualizerValuesResponse withSetEqualizerValues200TextPlainObject(String setEqualizerValues200TextPlainObject) {
         this.setEqualizerValues200TextPlainObject = setEqualizerValues200TextPlainObject;
         return this;
@@ -23,6 +26,7 @@ public class SetEqualizerValuesResponse {
     
     
     public Integer statusCode;
+
     public SetEqualizerValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class SetEqualizerValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetEqualizerValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SetEqualizerValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

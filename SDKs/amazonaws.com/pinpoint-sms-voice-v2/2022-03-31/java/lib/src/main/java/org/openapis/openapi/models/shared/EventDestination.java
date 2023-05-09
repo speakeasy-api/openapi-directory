@@ -15,6 +15,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsDestination")
     public CloudWatchLogsDestination cloudWatchLogsDestination;
+
     public EventDestination withCloudWatchLogsDestination(CloudWatchLogsDestination cloudWatchLogsDestination) {
         this.cloudWatchLogsDestination = cloudWatchLogsDestination;
         return this;
@@ -22,6 +23,7 @@ public class EventDestination {
     
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public EventDestination withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +31,7 @@ public class EventDestination {
     
     @JsonProperty("EventDestinationName")
     public String eventDestinationName;
+
     public EventDestination withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
@@ -37,6 +40,7 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisFirehoseDestination")
     public KinesisFirehoseDestination kinesisFirehoseDestination;
+
     public EventDestination withKinesisFirehoseDestination(KinesisFirehoseDestination kinesisFirehoseDestination) {
         this.kinesisFirehoseDestination = kinesisFirehoseDestination;
         return this;
@@ -44,6 +48,7 @@ public class EventDestination {
     
     @JsonProperty("MatchingEventTypes")
     public EventTypeEnum[] matchingEventTypes;
+
     public EventDestination withMatchingEventTypes(EventTypeEnum[] matchingEventTypes) {
         this.matchingEventTypes = matchingEventTypes;
         return this;
@@ -52,9 +57,15 @@ public class EventDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnsDestination")
     public SnsDestination snsDestination;
+
     public EventDestination withSnsDestination(SnsDestination snsDestination) {
         this.snsDestination = snsDestination;
         return this;
     }
     
+    public EventDestination(@JsonProperty("Enabled") Boolean enabled, @JsonProperty("EventDestinationName") String eventDestinationName, @JsonProperty("MatchingEventTypes") EventTypeEnum[] matchingEventTypes) {
+        this.enabled = enabled;
+        this.eventDestinationName = eventDestinationName;
+        this.matchingEventTypes = matchingEventTypes;
+  }
 }

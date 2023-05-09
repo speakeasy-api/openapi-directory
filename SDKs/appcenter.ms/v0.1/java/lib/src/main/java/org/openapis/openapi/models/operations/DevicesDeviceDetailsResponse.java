@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DevicesDeviceDetailsResponse {
     
     public String contentType;
+
     public DevicesDeviceDetailsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DevicesDeviceDetailsResponse {
     
     
     public Integer statusCode;
+
     public DevicesDeviceDetailsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DevicesDeviceDetailsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DevicesDeviceDetailsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DevicesDeviceDetailsResponse {
      */
     
     public DevicesDeviceDetails200ApplicationJSON devicesDeviceDetails200ApplicationJSONObject;
+
     public DevicesDeviceDetailsResponse withDevicesDeviceDetails200ApplicationJSONObject(DevicesDeviceDetails200ApplicationJSON devicesDeviceDetails200ApplicationJSONObject) {
         this.devicesDeviceDetails200ApplicationJSONObject = devicesDeviceDetails200ApplicationJSONObject;
         return this;
@@ -44,6 +49,7 @@ public class DevicesDeviceDetailsResponse {
      */
     
     public DevicesDeviceDetails400ApplicationJSON devicesDeviceDetails400ApplicationJSONObject;
+
     public DevicesDeviceDetailsResponse withDevicesDeviceDetails400ApplicationJSONObject(DevicesDeviceDetails400ApplicationJSON devicesDeviceDetails400ApplicationJSONObject) {
         this.devicesDeviceDetails400ApplicationJSONObject = devicesDeviceDetails400ApplicationJSONObject;
         return this;
@@ -55,6 +61,7 @@ public class DevicesDeviceDetailsResponse {
      */
     
     public DevicesDeviceDetails403ApplicationJSON devicesDeviceDetails403ApplicationJSONObject;
+
     public DevicesDeviceDetailsResponse withDevicesDeviceDetails403ApplicationJSONObject(DevicesDeviceDetails403ApplicationJSON devicesDeviceDetails403ApplicationJSONObject) {
         this.devicesDeviceDetails403ApplicationJSONObject = devicesDeviceDetails403ApplicationJSONObject;
         return this;
@@ -66,9 +73,14 @@ public class DevicesDeviceDetailsResponse {
      */
     
     public DevicesDeviceDetails404ApplicationJSON devicesDeviceDetails404ApplicationJSONObject;
+
     public DevicesDeviceDetailsResponse withDevicesDeviceDetails404ApplicationJSONObject(DevicesDeviceDetails404ApplicationJSON devicesDeviceDetails404ApplicationJSONObject) {
         this.devicesDeviceDetails404ApplicationJSONObject = devicesDeviceDetails404ApplicationJSONObject;
         return this;
     }
     
+    public DevicesDeviceDetailsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

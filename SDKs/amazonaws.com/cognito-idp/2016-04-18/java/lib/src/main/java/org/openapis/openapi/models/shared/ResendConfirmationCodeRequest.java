@@ -15,6 +15,7 @@ public class ResendConfirmationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyticsMetadata")
     public AnalyticsMetadataType analyticsMetadata;
+
     public ResendConfirmationCodeRequest withAnalyticsMetadata(AnalyticsMetadataType analyticsMetadata) {
         this.analyticsMetadata = analyticsMetadata;
         return this;
@@ -22,6 +23,7 @@ public class ResendConfirmationCodeRequest {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public ResendConfirmationCodeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -30,6 +32,7 @@ public class ResendConfirmationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public ResendConfirmationCodeRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -38,6 +41,7 @@ public class ResendConfirmationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretHash")
     public String secretHash;
+
     public ResendConfirmationCodeRequest withSecretHash(String secretHash) {
         this.secretHash = secretHash;
         return this;
@@ -46,6 +50,7 @@ public class ResendConfirmationCodeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextData")
     public UserContextDataType userContextData;
+
     public ResendConfirmationCodeRequest withUserContextData(UserContextDataType userContextData) {
         this.userContextData = userContextData;
         return this;
@@ -53,9 +58,14 @@ public class ResendConfirmationCodeRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public ResendConfirmationCodeRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ResendConfirmationCodeRequest(@JsonProperty("ClientId") String clientId, @JsonProperty("Username") String username) {
+        this.clientId = clientId;
+        this.username = username;
+  }
 }

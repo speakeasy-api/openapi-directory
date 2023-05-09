@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignTokenRequest {
@@ -12,6 +13,7 @@ public class AssignTokenRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvAssignBtTokenRequest itvAssignBtTokenRequest;
+
     public AssignTokenRequest withItvAssignBtTokenRequest(org.openapis.openapi.models.shared.ItvAssignBtTokenRequest itvAssignBtTokenRequest) {
         this.itvAssignBtTokenRequest = itvAssignBtTokenRequest;
         return this;
@@ -32,9 +34,13 @@ public class AssignTokenRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public AssignTokenRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public AssignTokenRequest(@JsonProperty("ItvAssignBtTokenRequest") org.openapis.openapi.models.shared.ItvAssignBtTokenRequest itvAssignBtTokenRequest) {
+        this.itvAssignBtTokenRequest = itvAssignBtTokenRequest;
+  }
 }

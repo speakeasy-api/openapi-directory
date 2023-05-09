@@ -15,6 +15,7 @@ public class DetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public BoundingBox boundingBox;
+
     public DetectionResult withBoundingBox(BoundingBox boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -26,6 +27,7 @@ public class DetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public DetectionResult withLabel(String label) {
         this.label = label;
         return this;
@@ -37,9 +39,11 @@ public class DetectionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Float probability;
+
     public DetectionResult withProbability(Float probability) {
         this.probability = probability;
         return this;
     }
     
+    public DetectionResult(){}
 }

@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1BatchGetSafetyNetConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configs")
     public GoogleFirebaseAppcheckV1SafetyNetConfig[] configs;
+
     public GoogleFirebaseAppcheckV1BatchGetSafetyNetConfigsResponse withConfigs(GoogleFirebaseAppcheckV1SafetyNetConfig[] configs) {
         this.configs = configs;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1BatchGetSafetyNetConfigsResponse(){}
 }

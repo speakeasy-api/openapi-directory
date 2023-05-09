@@ -15,6 +15,7 @@ public class CreateFunctionRequestBodyImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public CreateFunctionRequestBodyImageConfig withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class CreateFunctionRequestBodyImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntryPoint")
     public String[] entryPoint;
+
     public CreateFunctionRequestBodyImageConfig withEntryPoint(String[] entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -31,9 +33,11 @@ public class CreateFunctionRequestBodyImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public CreateFunctionRequestBodyImageConfig withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public CreateFunctionRequestBodyImageConfig(){}
 }

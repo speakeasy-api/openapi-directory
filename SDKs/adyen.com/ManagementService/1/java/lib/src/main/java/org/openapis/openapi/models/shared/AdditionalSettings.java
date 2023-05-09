@@ -15,6 +15,7 @@ public class AdditionalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeEventCodes")
     public String[] includeEventCodes;
+
     public AdditionalSettings withIncludeEventCodes(String[] includeEventCodes) {
         this.includeEventCodes = includeEventCodes;
         return this;
@@ -27,9 +28,11 @@ public class AdditionalSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Boolean> properties;
+
     public AdditionalSettings withProperties(java.util.Map<String, Boolean> properties) {
         this.properties = properties;
         return this;
     }
     
+    public AdditionalSettings(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDirectoryLimitsResponse {
@@ -12,6 +13,7 @@ public class GetDirectoryLimitsResponse {
      */
     
     public Object clientException;
+
     public GetDirectoryLimitsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class GetDirectoryLimitsResponse {
     
     
     public String contentType;
+
     public GetDirectoryLimitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDirectoryLimitsResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public GetDirectoryLimitsResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class GetDirectoryLimitsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDirectoryLimitsResult getDirectoryLimitsResult;
+
     public GetDirectoryLimitsResponse withGetDirectoryLimitsResult(org.openapis.openapi.models.shared.GetDirectoryLimitsResult getDirectoryLimitsResult) {
         this.getDirectoryLimitsResult = getDirectoryLimitsResult;
         return this;
@@ -46,6 +51,7 @@ public class GetDirectoryLimitsResponse {
     
     
     public Integer statusCode;
+
     public GetDirectoryLimitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDirectoryLimitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDirectoryLimitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDirectoryLimitsResponse {
      */
     
     public Object serviceException;
+
     public GetDirectoryLimitsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
     }
     
+    public GetDirectoryLimitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

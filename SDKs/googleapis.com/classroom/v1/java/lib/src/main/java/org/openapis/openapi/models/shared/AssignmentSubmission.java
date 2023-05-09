@@ -18,9 +18,11 @@ public class AssignmentSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public AssignmentSubmission withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
     }
     
+    public AssignmentSubmission(){}
 }

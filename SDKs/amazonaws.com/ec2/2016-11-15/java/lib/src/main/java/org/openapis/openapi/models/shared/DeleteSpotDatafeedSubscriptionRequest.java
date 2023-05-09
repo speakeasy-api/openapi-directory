@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteSpotDatafeedSubscriptionRequest {
     
     public Boolean dryRun;
+
     public DeleteSpotDatafeedSubscriptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DeleteSpotDatafeedSubscriptionRequest(){}
 }

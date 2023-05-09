@@ -18,6 +18,7 @@ public class DeleteParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public DeleteParagraphBulletsRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class DeleteParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DeleteParagraphBulletsRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class DeleteParagraphBulletsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRange")
     public Range textRange;
+
     public DeleteParagraphBulletsRequest withTextRange(Range textRange) {
         this.textRange = textRange;
         return this;
     }
     
+    public DeleteParagraphBulletsRequest(){}
 }

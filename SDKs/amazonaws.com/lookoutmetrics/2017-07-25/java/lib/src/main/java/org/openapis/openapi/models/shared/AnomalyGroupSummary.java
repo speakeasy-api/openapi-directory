@@ -15,6 +15,7 @@ public class AnomalyGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupId")
     public String anomalyGroupId;
+
     public AnomalyGroupSummary withAnomalyGroupId(String anomalyGroupId) {
         this.anomalyGroupId = anomalyGroupId;
         return this;
@@ -23,6 +24,7 @@ public class AnomalyGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyGroupScore")
     public Double anomalyGroupScore;
+
     public AnomalyGroupSummary withAnomalyGroupScore(Double anomalyGroupScore) {
         this.anomalyGroupScore = anomalyGroupScore;
         return this;
@@ -31,6 +33,7 @@ public class AnomalyGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTime")
     public String endTime;
+
     public AnomalyGroupSummary withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -39,6 +42,7 @@ public class AnomalyGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryMetricName")
     public String primaryMetricName;
+
     public AnomalyGroupSummary withPrimaryMetricName(String primaryMetricName) {
         this.primaryMetricName = primaryMetricName;
         return this;
@@ -47,9 +51,11 @@ public class AnomalyGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTime")
     public String startTime;
+
     public AnomalyGroupSummary withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AnomalyGroupSummary(){}
 }

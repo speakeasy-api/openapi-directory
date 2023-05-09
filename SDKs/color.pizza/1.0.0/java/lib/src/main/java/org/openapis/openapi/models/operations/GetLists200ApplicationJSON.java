@@ -15,6 +15,7 @@ public class GetLists200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listDescriptions")
     public GetLists200ApplicationJSONListDescriptions listDescriptions;
+
     public GetLists200ApplicationJSON withListDescriptions(GetLists200ApplicationJSONListDescriptions listDescriptions) {
         this.listDescriptions = listDescriptions;
         return this;
@@ -23,9 +24,11 @@ public class GetLists200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localAvailableColorNameLists")
     public String[] localAvailableColorNameLists;
+
     public GetLists200ApplicationJSON withLocalAvailableColorNameLists(String[] localAvailableColorNameLists) {
         this.localAvailableColorNameLists = localAvailableColorNameLists;
         return this;
     }
     
+    public GetLists200ApplicationJSON(){}
 }

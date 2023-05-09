@@ -18,9 +18,11 @@ public class ChartOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public ChartOptionsModeEnum mode;
+
     public ChartOptions withMode(ChartOptionsModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public ChartOptions(){}
 }

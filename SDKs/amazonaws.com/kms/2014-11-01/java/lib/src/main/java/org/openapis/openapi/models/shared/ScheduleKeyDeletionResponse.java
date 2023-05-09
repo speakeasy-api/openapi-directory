@@ -22,6 +22,7 @@ public class ScheduleKeyDeletionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletionDate")
     public OffsetDateTime deletionDate;
+
     public ScheduleKeyDeletionResponse withDeletionDate(OffsetDateTime deletionDate) {
         this.deletionDate = deletionDate;
         return this;
@@ -30,6 +31,7 @@ public class ScheduleKeyDeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public ScheduleKeyDeletionResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -38,6 +40,7 @@ public class ScheduleKeyDeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyState")
     public KeyStateEnum keyState;
+
     public ScheduleKeyDeletionResponse withKeyState(KeyStateEnum keyState) {
         this.keyState = keyState;
         return this;
@@ -46,9 +49,11 @@ public class ScheduleKeyDeletionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PendingWindowInDays")
     public Long pendingWindowInDays;
+
     public ScheduleKeyDeletionResponse withPendingWindowInDays(Long pendingWindowInDays) {
         this.pendingWindowInDays = pendingWindowInDays;
         return this;
     }
     
+    public ScheduleKeyDeletionResponse(){}
 }

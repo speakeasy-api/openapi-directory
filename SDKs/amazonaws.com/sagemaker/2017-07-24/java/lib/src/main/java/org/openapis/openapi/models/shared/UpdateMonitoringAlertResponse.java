@@ -15,6 +15,7 @@ public class UpdateMonitoringAlertResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringAlertName")
     public String monitoringAlertName;
+
     public UpdateMonitoringAlertResponse withMonitoringAlertName(String monitoringAlertName) {
         this.monitoringAlertName = monitoringAlertName;
         return this;
@@ -22,9 +23,13 @@ public class UpdateMonitoringAlertResponse {
     
     @JsonProperty("MonitoringScheduleArn")
     public String monitoringScheduleArn;
+
     public UpdateMonitoringAlertResponse withMonitoringScheduleArn(String monitoringScheduleArn) {
         this.monitoringScheduleArn = monitoringScheduleArn;
         return this;
     }
     
+    public UpdateMonitoringAlertResponse(@JsonProperty("MonitoringScheduleArn") String monitoringScheduleArn) {
+        this.monitoringScheduleArn = monitoringScheduleArn;
+  }
 }

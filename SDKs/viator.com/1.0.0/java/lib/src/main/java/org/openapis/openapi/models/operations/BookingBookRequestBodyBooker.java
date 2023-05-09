@@ -24,6 +24,7 @@ public class BookingBookRequestBodyBooker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellPhone")
     public String cellPhone;
+
     public BookingBookRequestBodyBooker withCellPhone(String cellPhone) {
         this.cellPhone = cellPhone;
         return this;
@@ -41,6 +42,7 @@ public class BookingBookRequestBodyBooker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellPhoneCountryCode")
     public String cellPhoneCountryCode;
+
     public BookingBookRequestBodyBooker withCellPhoneCountryCode(String cellPhoneCountryCode) {
         this.cellPhoneCountryCode = cellPhoneCountryCode;
         return this;
@@ -52,6 +54,7 @@ public class BookingBookRequestBodyBooker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public BookingBookRequestBodyBooker withEmail(String email) {
         this.email = email;
         return this;
@@ -63,6 +66,7 @@ public class BookingBookRequestBodyBooker {
      */
     @JsonProperty("firstname")
     public String firstname;
+
     public BookingBookRequestBodyBooker withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -74,6 +78,7 @@ public class BookingBookRequestBodyBooker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homePhone")
     public String homePhone;
+
     public BookingBookRequestBodyBooker withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -84,6 +89,7 @@ public class BookingBookRequestBodyBooker {
      */
     @JsonProperty("surname")
     public String surname;
+
     public BookingBookRequestBodyBooker withSurname(String surname) {
         this.surname = surname;
         return this;
@@ -95,9 +101,14 @@ public class BookingBookRequestBodyBooker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public BookingBookRequestBodyBooker withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public BookingBookRequestBodyBooker(@JsonProperty("firstname") String firstname, @JsonProperty("surname") String surname) {
+        this.firstname = firstname;
+        this.surname = surname;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDRTAccessResponse {
     
     public String contentType;
+
     public DescribeDRTAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDRTAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDRTAccessResponse describeDRTAccessResponse;
+
     public DescribeDRTAccessResponse withDescribeDRTAccessResponse(org.openapis.openapi.models.shared.DescribeDRTAccessResponse describeDRTAccessResponse) {
         this.describeDRTAccessResponse = describeDRTAccessResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDRTAccessResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeDRTAccessResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeDRTAccessResponse {
     
     
     public Integer statusCode;
+
     public DescribeDRTAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeDRTAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDRTAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeDRTAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDRTAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeDRTAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

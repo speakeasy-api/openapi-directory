@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCorsPolicyInput {
     @JsonProperty("ContainerName")
     public String containerName;
+
     public GetCorsPolicyInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public GetCorsPolicyInput(@JsonProperty("ContainerName") String containerName) {
+        this.containerName = containerName;
+  }
 }

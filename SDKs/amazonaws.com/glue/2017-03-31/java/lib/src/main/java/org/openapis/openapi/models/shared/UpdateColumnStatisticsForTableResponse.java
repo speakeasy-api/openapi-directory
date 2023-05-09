@@ -15,9 +15,11 @@ public class UpdateColumnStatisticsForTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public ColumnStatisticsError[] errors;
+
     public UpdateColumnStatisticsForTableResponse withErrors(ColumnStatisticsError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public UpdateColumnStatisticsForTableResponse(){}
 }

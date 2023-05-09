@@ -12,6 +12,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntry {
      */
     
     public Long characterId;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntry withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -22,6 +23,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntry {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer player;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntry withPlayer(DestinyHistoricalStatsDestinyLeaderboardEntryPlayer player) {
         this.player = player;
         return this;
@@ -32,6 +34,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntry {
      */
     
     public Integer rank;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntry withRank(Integer rank) {
         this.rank = rank;
         return this;
@@ -42,9 +45,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntry {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryValue value;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntry withValue(DestinyHistoricalStatsDestinyLeaderboardEntryValue value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntry(){}
 }

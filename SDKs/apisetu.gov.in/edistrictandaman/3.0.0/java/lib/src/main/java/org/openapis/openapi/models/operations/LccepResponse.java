@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LccepResponse {
     
     public String contentType;
+
     public LccepResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LccepResponse {
     
     
     public Integer statusCode;
+
     public LccepResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LccepResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LccepResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LccepResponse {
      */
     
     public Lccep400ApplicationJSON lccep400ApplicationJSONObject;
+
     public LccepResponse withLccep400ApplicationJSONObject(Lccep400ApplicationJSON lccep400ApplicationJSONObject) {
         this.lccep400ApplicationJSONObject = lccep400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LccepResponse {
      */
     
     public Lccep401ApplicationJSON lccep401ApplicationJSONObject;
+
     public LccepResponse withLccep401ApplicationJSONObject(Lccep401ApplicationJSON lccep401ApplicationJSONObject) {
         this.lccep401ApplicationJSONObject = lccep401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LccepResponse {
      */
     
     public Lccep404ApplicationJSON lccep404ApplicationJSONObject;
+
     public LccepResponse withLccep404ApplicationJSONObject(Lccep404ApplicationJSON lccep404ApplicationJSONObject) {
         this.lccep404ApplicationJSONObject = lccep404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LccepResponse {
      */
     
     public Lccep500ApplicationJSON lccep500ApplicationJSONObject;
+
     public LccepResponse withLccep500ApplicationJSONObject(Lccep500ApplicationJSON lccep500ApplicationJSONObject) {
         this.lccep500ApplicationJSONObject = lccep500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LccepResponse {
      */
     
     public Lccep502ApplicationJSON lccep502ApplicationJSONObject;
+
     public LccepResponse withLccep502ApplicationJSONObject(Lccep502ApplicationJSON lccep502ApplicationJSONObject) {
         this.lccep502ApplicationJSONObject = lccep502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LccepResponse {
      */
     
     public Lccep503ApplicationJSON lccep503ApplicationJSONObject;
+
     public LccepResponse withLccep503ApplicationJSONObject(Lccep503ApplicationJSON lccep503ApplicationJSONObject) {
         this.lccep503ApplicationJSONObject = lccep503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LccepResponse {
      */
     
     public Lccep504ApplicationJSON lccep504ApplicationJSONObject;
+
     public LccepResponse withLccep504ApplicationJSONObject(Lccep504ApplicationJSON lccep504ApplicationJSONObject) {
         this.lccep504ApplicationJSONObject = lccep504ApplicationJSONObject;
         return this;
     }
     
+    public LccepResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

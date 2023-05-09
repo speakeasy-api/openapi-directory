@@ -22,6 +22,7 @@ public class InstanceInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deregisterTime")
     public OffsetDateTime deregisterTime;
+
     public InstanceInfo withDeregisterTime(OffsetDateTime deregisterTime) {
         this.deregisterTime = deregisterTime;
         return this;
@@ -30,6 +31,7 @@ public class InstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamSessionArn")
     public String iamSessionArn;
+
     public InstanceInfo withIamSessionArn(String iamSessionArn) {
         this.iamSessionArn = iamSessionArn;
         return this;
@@ -38,6 +40,7 @@ public class InstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamUserArn")
     public String iamUserArn;
+
     public InstanceInfo withIamUserArn(String iamUserArn) {
         this.iamUserArn = iamUserArn;
         return this;
@@ -46,6 +49,7 @@ public class InstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceArn")
     public String instanceArn;
+
     public InstanceInfo withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -54,6 +58,7 @@ public class InstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public InstanceInfo withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -64,6 +69,7 @@ public class InstanceInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registerTime")
     public OffsetDateTime registerTime;
+
     public InstanceInfo withRegisterTime(OffsetDateTime registerTime) {
         this.registerTime = registerTime;
         return this;
@@ -72,9 +78,11 @@ public class InstanceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public InstanceInfo withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public InstanceInfo(){}
 }

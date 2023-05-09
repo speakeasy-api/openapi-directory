@@ -15,9 +15,11 @@ public class DescribeFeatureTransformationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureTransformation")
     public FeatureTransformation featureTransformation;
+
     public DescribeFeatureTransformationResponse withFeatureTransformation(FeatureTransformation featureTransformation) {
         this.featureTransformation = featureTransformation;
         return this;
     }
     
+    public DescribeFeatureTransformationResponse(){}
 }

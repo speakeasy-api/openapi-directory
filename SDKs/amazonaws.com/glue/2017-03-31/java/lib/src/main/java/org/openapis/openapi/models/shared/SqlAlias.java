@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SqlAlias {
     @JsonProperty("Alias")
     public String alias;
+
     public SqlAlias withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,9 +20,14 @@ public class SqlAlias {
     
     @JsonProperty("From")
     public String from;
+
     public SqlAlias withFrom(String from) {
         this.from = from;
         return this;
     }
     
+    public SqlAlias(@JsonProperty("Alias") String alias, @JsonProperty("From") String from) {
+        this.alias = alias;
+        this.from = from;
+  }
 }

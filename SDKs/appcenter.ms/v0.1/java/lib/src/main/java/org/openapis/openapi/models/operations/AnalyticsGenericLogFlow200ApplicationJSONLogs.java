@@ -24,6 +24,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account_id")
     public String accountId;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -36,6 +37,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_provider")
     public String authProvider;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withAuthProvider(String authProvider) {
         this.authProvider = authProvider;
         return this;
@@ -46,6 +48,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("device")
     public AnalyticsGenericLogFlow200ApplicationJSONLogsDevice device;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withDevice(AnalyticsGenericLogFlow200ApplicationJSONLogsDevice device) {
         this.device = device;
         return this;
@@ -58,6 +61,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_id")
     public String eventId;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -70,6 +74,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_name")
     public String eventName;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -81,6 +86,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("install_id")
     public String installId;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withInstallId(String installId) {
         this.installId = installId;
         return this;
@@ -93,6 +99,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_id")
     public String messageId;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -105,6 +112,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -117,6 +125,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session_id")
     public String sessionId;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -130,6 +139,7 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -141,9 +151,16 @@ public class AnalyticsGenericLogFlow200ApplicationJSONLogs {
      */
     @JsonProperty("type")
     public AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum type;
+
     public AnalyticsGenericLogFlow200ApplicationJSONLogs withType(AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AnalyticsGenericLogFlow200ApplicationJSONLogs(@JsonProperty("device") AnalyticsGenericLogFlow200ApplicationJSONLogsDevice device, @JsonProperty("install_id") String installId, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("type") AnalyticsGenericLogFlow200ApplicationJSONLogsTypeEnum type) {
+        this.device = device;
+        this.installId = installId;
+        this.timestamp = timestamp;
+        this.type = type;
+  }
 }

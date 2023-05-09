@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeNodeTypesAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeNodeTypesAggregatedListSecurityOption1 option1;
+
     public ComputeNodeTypesAggregatedListSecurity withOption1(ComputeNodeTypesAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeNodeTypesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNodeTypesAggregatedListSecurityOption2 option2;
+
     public ComputeNodeTypesAggregatedListSecurity withOption2(ComputeNodeTypesAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeNodeTypesAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeNodeTypesAggregatedListSecurityOption3 option3;
+
     public ComputeNodeTypesAggregatedListSecurity withOption3(ComputeNodeTypesAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeNodeTypesAggregatedListSecurity(){}
 }

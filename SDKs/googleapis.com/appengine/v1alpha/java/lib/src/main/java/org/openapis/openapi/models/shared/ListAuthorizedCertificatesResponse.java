@@ -18,6 +18,7 @@ public class ListAuthorizedCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificates")
     public AuthorizedCertificate[] certificates;
+
     public ListAuthorizedCertificatesResponse withCertificates(AuthorizedCertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -29,9 +30,11 @@ public class ListAuthorizedCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAuthorizedCertificatesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAuthorizedCertificatesResponse(){}
 }

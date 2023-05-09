@@ -12,9 +12,11 @@ public class BranchProtectionRequiredLinearHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BranchProtectionRequiredLinearHistory withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public BranchProtectionRequiredLinearHistory(){}
 }

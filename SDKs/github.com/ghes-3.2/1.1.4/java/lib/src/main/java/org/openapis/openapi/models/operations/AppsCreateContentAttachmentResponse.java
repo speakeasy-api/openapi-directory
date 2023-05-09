@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsCreateContentAttachmentResponse {
     
     public String contentType;
+
     public AppsCreateContentAttachmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsCreateContentAttachmentResponse {
     
     
     public Integer statusCode;
+
     public AppsCreateContentAttachmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsCreateContentAttachmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsCreateContentAttachmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsCreateContentAttachmentResponse {
      */
     
     public AppsCreateContentAttachment415ApplicationJSON appsCreateContentAttachment415ApplicationJSONObject;
+
     public AppsCreateContentAttachmentResponse withAppsCreateContentAttachment415ApplicationJSONObject(AppsCreateContentAttachment415ApplicationJSON appsCreateContentAttachment415ApplicationJSONObject) {
         this.appsCreateContentAttachment415ApplicationJSONObject = appsCreateContentAttachment415ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppsCreateContentAttachmentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public AppsCreateContentAttachmentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -53,6 +59,7 @@ public class AppsCreateContentAttachmentResponse {
      */
     
     public org.openapis.openapi.models.shared.ContentReferenceAttachment contentReferenceAttachment;
+
     public AppsCreateContentAttachmentResponse withContentReferenceAttachment(org.openapis.openapi.models.shared.ContentReferenceAttachment contentReferenceAttachment) {
         this.contentReferenceAttachment = contentReferenceAttachment;
         return this;
@@ -63,9 +70,14 @@ public class AppsCreateContentAttachmentResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public AppsCreateContentAttachmentResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public AppsCreateContentAttachmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

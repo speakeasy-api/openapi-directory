@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyFleetRequest {
     
     public String context;
+
     public ModifyFleetRequest withContext(String context) {
         this.context = context;
         return this;
@@ -16,6 +17,7 @@ public class ModifyFleetRequest {
     
     
     public Boolean dryRun;
+
     public ModifyFleetRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyFleetRequest {
     
     
     public FleetExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy;
+
     public ModifyFleetRequest withExcessCapacityTerminationPolicy(FleetExcessCapacityTerminationPolicyEnum excessCapacityTerminationPolicy) {
         this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
         return this;
@@ -30,6 +33,7 @@ public class ModifyFleetRequest {
     
     
     public String fleetId;
+
     public ModifyFleetRequest withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -37,6 +41,7 @@ public class ModifyFleetRequest {
     
     
     public ModifyFleetRequestLaunchTemplateConfigs[] launchTemplateConfigs;
+
     public ModifyFleetRequest withLaunchTemplateConfigs(ModifyFleetRequestLaunchTemplateConfigs[] launchTemplateConfigs) {
         this.launchTemplateConfigs = launchTemplateConfigs;
         return this;
@@ -44,9 +49,13 @@ public class ModifyFleetRequest {
     
     
     public TargetCapacitySpecificationRequest targetCapacitySpecification;
+
     public ModifyFleetRequest withTargetCapacitySpecification(TargetCapacitySpecificationRequest targetCapacitySpecification) {
         this.targetCapacitySpecification = targetCapacitySpecification;
         return this;
     }
     
+    public ModifyFleetRequest(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

@@ -12,6 +12,7 @@ public class PostUsersIdAccountsRequestBody {
      */
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public PostUsersIdAccountsRequestBody withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -22,6 +23,7 @@ public class PostUsersIdAccountsRequestBody {
      */
     @JsonProperty("institution_id")
     public Long institutionId;
+
     public PostUsersIdAccountsRequestBody withInstitutionId(Long institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -32,6 +34,7 @@ public class PostUsersIdAccountsRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public PostUsersIdAccountsRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,16 @@ public class PostUsersIdAccountsRequestBody {
      */
     @JsonProperty("type")
     public PostUsersIdAccountsRequestBodyTypeEnum type;
+
     public PostUsersIdAccountsRequestBody withType(PostUsersIdAccountsRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostUsersIdAccountsRequestBody(@JsonProperty("currency_code") String currencyCode, @JsonProperty("institution_id") Long institutionId, @JsonProperty("title") String title, @JsonProperty("type") PostUsersIdAccountsRequestBodyTypeEnum type) {
+        this.currencyCode = currencyCode;
+        this.institutionId = institutionId;
+        this.title = title;
+        this.type = type;
+  }
 }

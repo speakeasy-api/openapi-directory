@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CheckAnnotation {
     @JsonProperty("annotation_level")
     public String annotationLevel;
+
     public CheckAnnotation withAnnotationLevel(String annotationLevel) {
         this.annotationLevel = annotationLevel;
         return this;
@@ -19,6 +20,7 @@ public class CheckAnnotation {
     
     @JsonProperty("blob_href")
     public String blobHref;
+
     public CheckAnnotation withBlobHref(String blobHref) {
         this.blobHref = blobHref;
         return this;
@@ -26,6 +28,7 @@ public class CheckAnnotation {
     
     @JsonProperty("end_column")
     public Long endColumn;
+
     public CheckAnnotation withEndColumn(Long endColumn) {
         this.endColumn = endColumn;
         return this;
@@ -33,6 +36,7 @@ public class CheckAnnotation {
     
     @JsonProperty("end_line")
     public Long endLine;
+
     public CheckAnnotation withEndLine(Long endLine) {
         this.endLine = endLine;
         return this;
@@ -40,6 +44,7 @@ public class CheckAnnotation {
     
     @JsonProperty("message")
     public String message;
+
     public CheckAnnotation withMessage(String message) {
         this.message = message;
         return this;
@@ -47,6 +52,7 @@ public class CheckAnnotation {
     
     @JsonProperty("path")
     public String path;
+
     public CheckAnnotation withPath(String path) {
         this.path = path;
         return this;
@@ -54,6 +60,7 @@ public class CheckAnnotation {
     
     @JsonProperty("raw_details")
     public String rawDetails;
+
     public CheckAnnotation withRawDetails(String rawDetails) {
         this.rawDetails = rawDetails;
         return this;
@@ -61,6 +68,7 @@ public class CheckAnnotation {
     
     @JsonProperty("start_column")
     public Long startColumn;
+
     public CheckAnnotation withStartColumn(Long startColumn) {
         this.startColumn = startColumn;
         return this;
@@ -68,6 +76,7 @@ public class CheckAnnotation {
     
     @JsonProperty("start_line")
     public Long startLine;
+
     public CheckAnnotation withStartLine(Long startLine) {
         this.startLine = startLine;
         return this;
@@ -75,9 +84,22 @@ public class CheckAnnotation {
     
     @JsonProperty("title")
     public String title;
+
     public CheckAnnotation withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CheckAnnotation(@JsonProperty("annotation_level") String annotationLevel, @JsonProperty("blob_href") String blobHref, @JsonProperty("end_column") Long endColumn, @JsonProperty("end_line") Long endLine, @JsonProperty("message") String message, @JsonProperty("path") String path, @JsonProperty("raw_details") String rawDetails, @JsonProperty("start_column") Long startColumn, @JsonProperty("start_line") Long startLine, @JsonProperty("title") String title) {
+        this.annotationLevel = annotationLevel;
+        this.blobHref = blobHref;
+        this.endColumn = endColumn;
+        this.endLine = endLine;
+        this.message = message;
+        this.path = path;
+        this.rawDetails = rawDetails;
+        this.startColumn = startColumn;
+        this.startLine = startLine;
+        this.title = title;
+  }
 }

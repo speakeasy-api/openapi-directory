@@ -18,6 +18,7 @@ public class ListIngressRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingressRules")
     public FirewallRule[] ingressRules;
+
     public ListIngressRulesResponse withIngressRules(FirewallRule[] ingressRules) {
         this.ingressRules = ingressRules;
         return this;
@@ -29,9 +30,11 @@ public class ListIngressRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListIngressRulesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListIngressRulesResponse(){}
 }

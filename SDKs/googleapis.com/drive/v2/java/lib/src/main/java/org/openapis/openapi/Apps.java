@@ -58,11 +58,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveAppsGetResponse res = new org.openapis.openapi.models.operations.DriveAppsGetResponse() {{
+        org.openapis.openapi.models.operations.DriveAppsGetResponse res = new org.openapis.openapi.models.operations.DriveAppsGetResponse(contentType, httpRes.statusCode()) {{
             app = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Apps {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveAppsListResponse res = new org.openapis.openapi.models.operations.DriveAppsListResponse() {{
+        org.openapis.openapi.models.operations.DriveAppsListResponse res = new org.openapis.openapi.models.operations.DriveAppsListResponse(contentType, httpRes.statusCode()) {{
             appList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

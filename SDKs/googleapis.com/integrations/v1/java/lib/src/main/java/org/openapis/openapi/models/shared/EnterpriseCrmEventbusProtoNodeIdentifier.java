@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoNodeIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementIdentifier")
     public String elementIdentifier;
+
     public EnterpriseCrmEventbusProtoNodeIdentifier withElementIdentifier(String elementIdentifier) {
         this.elementIdentifier = elementIdentifier;
         return this;
@@ -29,9 +30,11 @@ public class EnterpriseCrmEventbusProtoNodeIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elementType")
     public EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum elementType;
+
     public EnterpriseCrmEventbusProtoNodeIdentifier withElementType(EnterpriseCrmEventbusProtoNodeIdentifierElementTypeEnum elementType) {
         this.elementType = elementType;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoNodeIdentifier(){}
 }

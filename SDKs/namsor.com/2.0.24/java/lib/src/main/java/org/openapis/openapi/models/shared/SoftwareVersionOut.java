@@ -18,6 +18,7 @@ public class SoftwareVersionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareNameAndVersion")
     public String softwareNameAndVersion;
+
     public SoftwareVersionOut withSoftwareNameAndVersion(String softwareNameAndVersion) {
         this.softwareNameAndVersion = softwareNameAndVersion;
         return this;
@@ -29,9 +30,11 @@ public class SoftwareVersionOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareVersion")
     public Integer[] softwareVersion;
+
     public SoftwareVersionOut withSoftwareVersion(Integer[] softwareVersion) {
         this.softwareVersion = softwareVersion;
         return this;
     }
     
+    public SoftwareVersionOut(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TotalValue {
     @JsonProperty("Count")
     public Integer count;
+
     public TotalValue withCount(Integer count) {
         this.count = count;
         return this;
@@ -16,6 +17,7 @@ public class TotalValue {
     
     @JsonProperty("Facets")
     public Facets facets;
+
     public TotalValue withFacets(Facets facets) {
         this.facets = facets;
         return this;
@@ -23,6 +25,7 @@ public class TotalValue {
     
     @JsonProperty("Max")
     public Integer max;
+
     public TotalValue withMax(Integer max) {
         this.max = max;
         return this;
@@ -30,6 +33,7 @@ public class TotalValue {
     
     @JsonProperty("Mean")
     public Double mean;
+
     public TotalValue withMean(Double mean) {
         this.mean = mean;
         return this;
@@ -37,6 +41,7 @@ public class TotalValue {
     
     @JsonProperty("Min")
     public Integer min;
+
     public TotalValue withMin(Integer min) {
         this.min = min;
         return this;
@@ -44,6 +49,7 @@ public class TotalValue {
     
     @JsonProperty("Missing")
     public Integer missing;
+
     public TotalValue withMissing(Integer missing) {
         this.missing = missing;
         return this;
@@ -51,6 +57,7 @@ public class TotalValue {
     
     @JsonProperty("StdDev")
     public Double stdDev;
+
     public TotalValue withStdDev(Double stdDev) {
         this.stdDev = stdDev;
         return this;
@@ -58,6 +65,7 @@ public class TotalValue {
     
     @JsonProperty("Sum")
     public Integer sum;
+
     public TotalValue withSum(Integer sum) {
         this.sum = sum;
         return this;
@@ -65,9 +73,21 @@ public class TotalValue {
     
     @JsonProperty("SumOfSquares")
     public Long sumOfSquares;
+
     public TotalValue withSumOfSquares(Long sumOfSquares) {
         this.sumOfSquares = sumOfSquares;
         return this;
     }
     
+    public TotalValue(@JsonProperty("Count") Integer count, @JsonProperty("Facets") Facets facets, @JsonProperty("Max") Integer max, @JsonProperty("Mean") Double mean, @JsonProperty("Min") Integer min, @JsonProperty("Missing") Integer missing, @JsonProperty("StdDev") Double stdDev, @JsonProperty("Sum") Integer sum, @JsonProperty("SumOfSquares") Long sumOfSquares) {
+        this.count = count;
+        this.facets = facets;
+        this.max = max;
+        this.mean = mean;
+        this.min = min;
+        this.missing = missing;
+        this.stdDev = stdDev;
+        this.sum = sum;
+        this.sumOfSquares = sumOfSquares;
+  }
 }

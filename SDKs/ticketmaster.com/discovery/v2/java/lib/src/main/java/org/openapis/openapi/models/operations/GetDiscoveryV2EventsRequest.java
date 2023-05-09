@@ -12,6 +12,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=attractionId")
     public String attractionId;
+
     public GetDiscoveryV2EventsRequest withAttractionId(String attractionId) {
         this.attractionId = attractionId;
         return this;
@@ -22,6 +23,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String city;
+
     public GetDiscoveryV2EventsRequest withCity(String city) {
         this.city = city;
         return this;
@@ -32,6 +34,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationId")
     public Object[] classificationId;
+
     public GetDiscoveryV2EventsRequest withClassificationId(Object[] classificationId) {
         this.classificationId = classificationId;
         return this;
@@ -42,6 +45,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=classificationName")
     public Object[] classificationName;
+
     public GetDiscoveryV2EventsRequest withClassificationName(Object[] classificationName) {
         this.classificationName = classificationName;
         return this;
@@ -52,6 +56,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientVisibility")
     public String clientVisibility;
+
     public GetDiscoveryV2EventsRequest withClientVisibility(String clientVisibility) {
         this.clientVisibility = clientVisibility;
         return this;
@@ -62,6 +67,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
     public String countryCode;
+
     public GetDiscoveryV2EventsRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -72,6 +78,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dmaId")
     public String dmaId;
+
     public GetDiscoveryV2EventsRequest withDmaId(String dmaId) {
         this.dmaId = dmaId;
         return this;
@@ -82,6 +89,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endDateTime")
     public String endDateTime;
+
     public GetDiscoveryV2EventsRequest withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -92,6 +100,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoPoint")
     public String geoPoint;
+
     public GetDiscoveryV2EventsRequest withGeoPoint(String geoPoint) {
         this.geoPoint = geoPoint;
         return this;
@@ -102,6 +111,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetDiscoveryV2EventsRequest withId(String id) {
         this.id = id;
         return this;
@@ -112,6 +122,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetDiscoveryV2EventsIncludeLicensedContentEnum includeLicensedContent;
+
     public GetDiscoveryV2EventsRequest withIncludeLicensedContent(GetDiscoveryV2EventsIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -122,6 +133,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
     public GetDiscoveryV2EventsIncludeSpellcheckEnum includeSpellcheck;
+
     public GetDiscoveryV2EventsRequest withIncludeSpellcheck(GetDiscoveryV2EventsIncludeSpellcheckEnum includeSpellcheck) {
         this.includeSpellcheck = includeSpellcheck;
         return this;
@@ -132,6 +144,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBA")
     public GetDiscoveryV2EventsIncludeTbaEnum includeTBA;
+
     public GetDiscoveryV2EventsRequest withIncludeTBA(GetDiscoveryV2EventsIncludeTbaEnum includeTBA) {
         this.includeTBA = includeTBA;
         return this;
@@ -142,6 +155,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTBD")
     public GetDiscoveryV2EventsIncludeTbdEnum includeTBD;
+
     public GetDiscoveryV2EventsRequest withIncludeTBD(GetDiscoveryV2EventsIncludeTbdEnum includeTBD) {
         this.includeTBD = includeTBD;
         return this;
@@ -152,6 +166,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
     public GetDiscoveryV2EventsIncludeTestEnum includeTest;
+
     public GetDiscoveryV2EventsRequest withIncludeTest(GetDiscoveryV2EventsIncludeTestEnum includeTest) {
         this.includeTest = includeTest;
         return this;
@@ -162,6 +177,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetDiscoveryV2EventsRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -172,6 +188,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latlong")
     public String latlong;
+
     public GetDiscoveryV2EventsRequest withLatlong(String latlong) {
         this.latlong = latlong;
         return this;
@@ -182,6 +199,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetDiscoveryV2EventsRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -192,6 +210,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marketId")
     public String marketId;
+
     public GetDiscoveryV2EventsRequest withMarketId(String marketId) {
         this.marketId = marketId;
         return this;
@@ -202,6 +221,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleEndDateTime")
     public String onsaleEndDateTime;
+
     public GetDiscoveryV2EventsRequest withOnsaleEndDateTime(String onsaleEndDateTime) {
         this.onsaleEndDateTime = onsaleEndDateTime;
         return this;
@@ -212,6 +232,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleOnAfterStartDate")
     public String onsaleOnAfterStartDate;
+
     public GetDiscoveryV2EventsRequest withOnsaleOnAfterStartDate(String onsaleOnAfterStartDate) {
         this.onsaleOnAfterStartDate = onsaleOnAfterStartDate;
         return this;
@@ -222,6 +243,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleOnStartDate")
     public String onsaleOnStartDate;
+
     public GetDiscoveryV2EventsRequest withOnsaleOnStartDate(String onsaleOnStartDate) {
         this.onsaleOnStartDate = onsaleOnStartDate;
         return this;
@@ -232,6 +254,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onsaleStartDateTime")
     public String onsaleStartDateTime;
+
     public GetDiscoveryV2EventsRequest withOnsaleStartDateTime(String onsaleStartDateTime) {
         this.onsaleStartDateTime = onsaleStartDateTime;
         return this;
@@ -242,6 +265,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDiscoveryV2EventsRequest withPage(String page) {
         this.page = page;
         return this;
@@ -252,6 +276,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
     public String postalCode;
+
     public GetDiscoveryV2EventsRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -262,6 +287,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=promoterId")
     public String promoterId;
+
     public GetDiscoveryV2EventsRequest withPromoterId(String promoterId) {
         this.promoterId = promoterId;
         return this;
@@ -272,6 +298,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public String radius;
+
     public GetDiscoveryV2EventsRequest withRadius(String radius) {
         this.radius = radius;
         return this;
@@ -282,6 +309,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentId")
     public String segmentId;
+
     public GetDiscoveryV2EventsRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -292,6 +320,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segmentName")
     public String segmentName;
+
     public GetDiscoveryV2EventsRequest withSegmentName(String segmentName) {
         this.segmentName = segmentName;
         return this;
@@ -302,6 +331,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetDiscoveryV2EventsRequest withSize(String size) {
         this.size = size;
         return this;
@@ -312,6 +342,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetDiscoveryV2EventsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -322,6 +353,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public GetDiscoveryV2EventsSourceEnum source;
+
     public GetDiscoveryV2EventsRequest withSource(GetDiscoveryV2EventsSourceEnum source) {
         this.source = source;
         return this;
@@ -332,6 +364,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startDateTime")
     public String startDateTime;
+
     public GetDiscoveryV2EventsRequest withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -342,6 +375,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
     public String stateCode;
+
     public GetDiscoveryV2EventsRequest withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -352,6 +386,7 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public GetDiscoveryV2EventsUnitEnum unit;
+
     public GetDiscoveryV2EventsRequest withUnit(GetDiscoveryV2EventsUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -362,9 +397,11 @@ public class GetDiscoveryV2EventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=venueId")
     public String venueId;
+
     public GetDiscoveryV2EventsRequest withVenueId(String venueId) {
         this.venueId = venueId;
         return this;
     }
     
+    public GetDiscoveryV2EventsRequest(){}
 }

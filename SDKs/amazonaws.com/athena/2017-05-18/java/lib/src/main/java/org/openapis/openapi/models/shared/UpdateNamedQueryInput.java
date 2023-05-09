@@ -12,6 +12,7 @@ public class UpdateNamedQueryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateNamedQueryInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class UpdateNamedQueryInput {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateNamedQueryInput withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class UpdateNamedQueryInput {
     
     @JsonProperty("NamedQueryId")
     public String namedQueryId;
+
     public UpdateNamedQueryInput withNamedQueryId(String namedQueryId) {
         this.namedQueryId = namedQueryId;
         return this;
@@ -33,9 +36,15 @@ public class UpdateNamedQueryInput {
     
     @JsonProperty("QueryString")
     public String queryString;
+
     public UpdateNamedQueryInput withQueryString(String queryString) {
         this.queryString = queryString;
         return this;
     }
     
+    public UpdateNamedQueryInput(@JsonProperty("Name") String name, @JsonProperty("NamedQueryId") String namedQueryId, @JsonProperty("QueryString") String queryString) {
+        this.name = name;
+        this.namedQueryId = namedQueryId;
+        this.queryString = queryString;
+  }
 }

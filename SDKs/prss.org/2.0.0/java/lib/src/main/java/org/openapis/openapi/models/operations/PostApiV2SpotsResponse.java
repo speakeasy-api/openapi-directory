@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiV2SpotsResponse {
     
     public String contentType;
+
     public PostApiV2SpotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostApiV2SpotsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostApiV2SpotsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class PostApiV2SpotsResponse {
      */
     
     public org.openapis.openapi.models.shared.Spot spot;
+
     public PostApiV2SpotsResponse withSpot(org.openapis.openapi.models.shared.Spot spot) {
         this.spot = spot;
         return this;
@@ -36,6 +40,7 @@ public class PostApiV2SpotsResponse {
     
     
     public Integer statusCode;
+
     public PostApiV2SpotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostApiV2SpotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiV2SpotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostApiV2SpotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

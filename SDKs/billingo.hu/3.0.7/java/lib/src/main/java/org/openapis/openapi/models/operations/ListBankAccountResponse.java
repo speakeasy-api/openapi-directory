@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBankAccountResponse {
@@ -12,6 +13,7 @@ public class ListBankAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.BankAccountList bankAccountList;
+
     public ListBankAccountResponse withBankAccountList(org.openapis.openapi.models.shared.BankAccountList bankAccountList) {
         this.bankAccountList = bankAccountList;
         return this;
@@ -22,6 +24,7 @@ public class ListBankAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public ListBankAccountResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class ListBankAccountResponse {
     
     
     public String contentType;
+
     public ListBankAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class ListBankAccountResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ListBankAccountResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -46,6 +51,7 @@ public class ListBankAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public ListBankAccountResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListBankAccountResponse {
     
     
     public Integer statusCode;
+
     public ListBankAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class ListBankAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBankAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class ListBankAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public ListBankAccountResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public ListBankAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

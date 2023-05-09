@@ -20,6 +20,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorldGenerationJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateWorldGenerationJobResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateWorldGenerationJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public WorldGenerationJobErrorCodeEnum failureCode;
+
     public CreateWorldGenerationJobResponse withFailureCode(WorldGenerationJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -54,6 +58,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorldGenerationJobStatusEnum status;
+
     public CreateWorldGenerationJobResponse withStatus(WorldGenerationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -62,6 +67,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorldGenerationJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -70,6 +76,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public CreateWorldGenerationJobResponse withTemplate(String template) {
         this.template = template;
         return this;
@@ -78,6 +85,7 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldCount")
     public WorldCount worldCount;
+
     public CreateWorldGenerationJobResponse withWorldCount(WorldCount worldCount) {
         this.worldCount = worldCount;
         return this;
@@ -86,9 +94,11 @@ public class CreateWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldTags")
     public java.util.Map<String, String> worldTags;
+
     public CreateWorldGenerationJobResponse withWorldTags(java.util.Map<String, String> worldTags) {
         this.worldTags = worldTags;
         return this;
     }
     
+    public CreateWorldGenerationJobResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCostCategoryDefinitionResponse {
     
     public String contentType;
+
     public UpdateCostCategoryDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCostCategoryDefinitionResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateCostCategoryDefinitionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateCostCategoryDefinitionResponse {
     
     
     public Integer statusCode;
+
     public UpdateCostCategoryDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateCostCategoryDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCostCategoryDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCostCategoryDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCostCategoryDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCostCategoryDefinitionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateCostCategoryDefinitionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCostCategoryDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateCostCategoryDefinitionResponse updateCostCategoryDefinitionResponse;
+
     public UpdateCostCategoryDefinitionResponse withUpdateCostCategoryDefinitionResponse(org.openapis.openapi.models.shared.UpdateCostCategoryDefinitionResponse updateCostCategoryDefinitionResponse) {
         this.updateCostCategoryDefinitionResponse = updateCostCategoryDefinitionResponse;
         return this;
     }
     
+    public UpdateCostCategoryDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

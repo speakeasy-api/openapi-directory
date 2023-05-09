@@ -15,6 +15,7 @@ public class BatchPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Batch[] items;
+
     public BatchPage withItems(Batch[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class BatchPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public BatchPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class BatchPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public BatchPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class BatchPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public BatchPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public BatchPage(){}
 }

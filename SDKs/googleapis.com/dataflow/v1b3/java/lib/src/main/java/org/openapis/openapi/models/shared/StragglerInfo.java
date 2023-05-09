@@ -18,6 +18,7 @@ public class StragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causes")
     public java.util.Map<String, StragglerDebuggingInfo> causes;
+
     public StragglerInfo withCauses(java.util.Map<String, StragglerDebuggingInfo> causes) {
         this.causes = causes;
         return this;
@@ -29,9 +30,11 @@ public class StragglerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public StragglerInfo withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public StragglerInfo(){}
 }

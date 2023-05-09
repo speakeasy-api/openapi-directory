@@ -15,6 +15,7 @@ public class AwsS3BucketWebsiteConfigurationRoutingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public AwsS3BucketWebsiteConfigurationRoutingRuleCondition condition;
+
     public AwsS3BucketWebsiteConfigurationRoutingRule withCondition(AwsS3BucketWebsiteConfigurationRoutingRuleCondition condition) {
         this.condition = condition;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketWebsiteConfigurationRoutingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Redirect")
     public AwsS3BucketWebsiteConfigurationRoutingRuleRedirect redirect;
+
     public AwsS3BucketWebsiteConfigurationRoutingRule withRedirect(AwsS3BucketWebsiteConfigurationRoutingRuleRedirect redirect) {
         this.redirect = redirect;
         return this;
     }
     
+    public AwsS3BucketWebsiteConfigurationRoutingRule(){}
 }

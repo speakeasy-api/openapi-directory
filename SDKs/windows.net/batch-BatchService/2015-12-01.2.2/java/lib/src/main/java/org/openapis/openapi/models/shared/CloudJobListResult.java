@@ -18,6 +18,7 @@ public class CloudJobListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("odata.nextLink")
     public String odataNextLink;
+
     public CloudJobListResult withOdataNextLink(String odataNextLink) {
         this.odataNextLink = odataNextLink;
         return this;
@@ -29,9 +30,11 @@ public class CloudJobListResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public CloudJob[] value;
+
     public CloudJobListResult withValue(CloudJob[] value) {
         this.value = value;
         return this;
     }
     
+    public CloudJobListResult(){}
 }

@@ -18,6 +18,7 @@ public class CreativeFieldAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeFieldId")
     public String creativeFieldId;
+
     public CreativeFieldAssignment withCreativeFieldId(String creativeFieldId) {
         this.creativeFieldId = creativeFieldId;
         return this;
@@ -29,9 +30,11 @@ public class CreativeFieldAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeFieldValueId")
     public String creativeFieldValueId;
+
     public CreativeFieldAssignment withCreativeFieldValueId(String creativeFieldValueId) {
         this.creativeFieldValueId = creativeFieldValueId;
         return this;
     }
     
+    public CreativeFieldAssignment(){}
 }

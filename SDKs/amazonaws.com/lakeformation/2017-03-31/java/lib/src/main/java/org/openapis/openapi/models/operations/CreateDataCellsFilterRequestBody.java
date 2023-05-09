@@ -12,9 +12,13 @@ public class CreateDataCellsFilterRequestBody {
      */
     @JsonProperty("TableData")
     public CreateDataCellsFilterRequestBodyTableData tableData;
+
     public CreateDataCellsFilterRequestBody withTableData(CreateDataCellsFilterRequestBodyTableData tableData) {
         this.tableData = tableData;
         return this;
     }
     
+    public CreateDataCellsFilterRequestBody(@JsonProperty("TableData") CreateDataCellsFilterRequestBodyTableData tableData) {
+        this.tableData = tableData;
+  }
 }

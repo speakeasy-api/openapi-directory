@@ -18,6 +18,7 @@ public class V2KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public V2KeyInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class V2KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public V2KeyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class V2KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public V2Restrictions restrictions;
+
     public V2KeyInput withRestrictions(V2Restrictions restrictions) {
         this.restrictions = restrictions;
         return this;
     }
     
+    public V2KeyInput(){}
 }

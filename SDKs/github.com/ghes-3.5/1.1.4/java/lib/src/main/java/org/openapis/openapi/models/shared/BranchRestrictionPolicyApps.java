@@ -12,6 +12,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public BranchRestrictionPolicyApps withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -20,6 +21,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BranchRestrictionPolicyApps withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public BranchRestrictionPolicyApps withEvents(String[] events) {
         this.events = events;
         return this;
@@ -36,6 +39,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_url")
     public String externalUrl;
+
     public BranchRestrictionPolicyApps withExternalUrl(String externalUrl) {
         this.externalUrl = externalUrl;
         return this;
@@ -44,6 +48,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public BranchRestrictionPolicyApps withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -52,6 +57,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BranchRestrictionPolicyApps withId(Long id) {
         this.id = id;
         return this;
@@ -60,6 +66,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BranchRestrictionPolicyApps withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +75,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_id")
     public String nodeId;
+
     public BranchRestrictionPolicyApps withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -76,6 +84,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public BranchRestrictionPolicyAppsOwner owner;
+
     public BranchRestrictionPolicyApps withOwner(BranchRestrictionPolicyAppsOwner owner) {
         this.owner = owner;
         return this;
@@ -84,6 +93,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public BranchRestrictionPolicyAppsPermissions permissions;
+
     public BranchRestrictionPolicyApps withPermissions(BranchRestrictionPolicyAppsPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -92,6 +102,7 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public BranchRestrictionPolicyApps withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -100,9 +111,11 @@ public class BranchRestrictionPolicyApps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public BranchRestrictionPolicyApps withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public BranchRestrictionPolicyApps(){}
 }

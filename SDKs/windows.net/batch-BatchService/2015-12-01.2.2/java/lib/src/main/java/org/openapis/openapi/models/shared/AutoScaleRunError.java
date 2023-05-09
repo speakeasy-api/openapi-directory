@@ -18,6 +18,7 @@ public class AutoScaleRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public AutoScaleRunError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class AutoScaleRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AutoScaleRunError withMessage(String message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class AutoScaleRunError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public NameValuePair[] values;
+
     public AutoScaleRunError withValues(NameValuePair[] values) {
         this.values = values;
         return this;
     }
     
+    public AutoScaleRunError(){}
 }

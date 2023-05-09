@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterChangeRequest {
@@ -12,6 +13,7 @@ public class RegisterChangeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RegisterChangeRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RegisterChangeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RegisterChangeRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterChangeRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RegisterChangeRequest registerChangeRequest;
+
     public RegisterChangeRequest withRegisterChangeRequest(org.openapis.openapi.models.shared.RegisterChangeRequest registerChangeRequest) {
         this.registerChangeRequest = registerChangeRequest;
         return this;
@@ -39,9 +43,16 @@ public class RegisterChangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public RegisterChangeRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
     }
     
+    public RegisterChangeRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RegisterChangeRequest") org.openapis.openapi.models.shared.RegisterChangeRequest registerChangeRequest, @JsonProperty("orderId") String orderId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.registerChangeRequest = registerChangeRequest;
+        this.orderId = orderId;
+  }
 }

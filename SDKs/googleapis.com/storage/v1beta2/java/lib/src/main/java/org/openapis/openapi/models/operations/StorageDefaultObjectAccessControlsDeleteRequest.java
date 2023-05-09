@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageDefaultObjectAccessControlsDeleteRequest {
@@ -12,6 +13,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bucket")
     public String bucket;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -32,6 +35,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity")
     public String entity;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withEntity(String entity) {
         this.entity = entity;
         return this;
@@ -42,6 +46,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class StorageDefaultObjectAccessControlsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageDefaultObjectAccessControlsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public StorageDefaultObjectAccessControlsDeleteRequest(@JsonProperty("bucket") String bucket, @JsonProperty("entity") String entity) {
+        this.bucket = bucket;
+        this.entity = entity;
+  }
 }

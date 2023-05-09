@@ -15,6 +15,7 @@ public class SourceAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public SourceAuth withResource(String resource) {
         this.resource = resource;
         return this;
@@ -22,9 +23,13 @@ public class SourceAuth {
     
     @JsonProperty("type")
     public SourceAuthTypeEnum type;
+
     public SourceAuth withType(SourceAuthTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceAuth(@JsonProperty("type") SourceAuthTypeEnum type) {
+        this.type = type;
+  }
 }

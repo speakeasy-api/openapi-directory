@@ -12,6 +12,7 @@ public class PostCheckCodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PostCheckCodeRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class PostCheckCodeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PostCheckCodeRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public PostCheckCodeRequestBody(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LanguageDocumentsAnalyzeEntitySentimentResponse {
@@ -12,6 +13,7 @@ public class LanguageDocumentsAnalyzeEntitySentimentResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeEntitySentimentResponse analyzeEntitySentimentResponse;
+
     public LanguageDocumentsAnalyzeEntitySentimentResponse withAnalyzeEntitySentimentResponse(org.openapis.openapi.models.shared.AnalyzeEntitySentimentResponse analyzeEntitySentimentResponse) {
         this.analyzeEntitySentimentResponse = analyzeEntitySentimentResponse;
         return this;
@@ -19,6 +21,7 @@ public class LanguageDocumentsAnalyzeEntitySentimentResponse {
     
     
     public String contentType;
+
     public LanguageDocumentsAnalyzeEntitySentimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class LanguageDocumentsAnalyzeEntitySentimentResponse {
     
     
     public Integer statusCode;
+
     public LanguageDocumentsAnalyzeEntitySentimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class LanguageDocumentsAnalyzeEntitySentimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LanguageDocumentsAnalyzeEntitySentimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public LanguageDocumentsAnalyzeEntitySentimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

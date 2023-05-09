@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostCommentForPullRequestInput {
     @JsonProperty("afterCommitId")
     public String afterCommitId;
+
     public PostCommentForPullRequestInput withAfterCommitId(String afterCommitId) {
         this.afterCommitId = afterCommitId;
         return this;
@@ -18,6 +19,7 @@ public class PostCommentForPullRequestInput {
     
     @JsonProperty("beforeCommitId")
     public String beforeCommitId;
+
     public PostCommentForPullRequestInput withBeforeCommitId(String beforeCommitId) {
         this.beforeCommitId = beforeCommitId;
         return this;
@@ -26,6 +28,7 @@ public class PostCommentForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public PostCommentForPullRequestInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -33,6 +36,7 @@ public class PostCommentForPullRequestInput {
     
     @JsonProperty("content")
     public String content;
+
     public PostCommentForPullRequestInput withContent(String content) {
         this.content = content;
         return this;
@@ -41,6 +45,7 @@ public class PostCommentForPullRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public PostCommentForPullRequestInput withLocation(Location location) {
         this.location = location;
         return this;
@@ -48,6 +53,7 @@ public class PostCommentForPullRequestInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public PostCommentForPullRequestInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -55,9 +61,17 @@ public class PostCommentForPullRequestInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PostCommentForPullRequestInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PostCommentForPullRequestInput(@JsonProperty("afterCommitId") String afterCommitId, @JsonProperty("beforeCommitId") String beforeCommitId, @JsonProperty("content") String content, @JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("repositoryName") String repositoryName) {
+        this.afterCommitId = afterCommitId;
+        this.beforeCommitId = beforeCommitId;
+        this.content = content;
+        this.pullRequestId = pullRequestId;
+        this.repositoryName = repositoryName;
+  }
 }

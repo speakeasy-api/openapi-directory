@@ -15,6 +15,7 @@ public class GdataMedia {
      */
     
     public String algorithm;
+
     public GdataMedia withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -25,6 +26,7 @@ public class GdataMedia {
      */
     
     public String bigstoreObjectRef;
+
     public GdataMedia withBigstoreObjectRef(String bigstoreObjectRef) {
         this.bigstoreObjectRef = bigstoreObjectRef;
         return this;
@@ -35,6 +37,7 @@ public class GdataMedia {
      */
     
     public String blobRef;
+
     public GdataMedia withBlobRef(String blobRef) {
         this.blobRef = blobRef;
         return this;
@@ -45,6 +48,7 @@ public class GdataMedia {
      */
     
     public GdataBlobstore2Info blobstore2Info;
+
     public GdataMedia withBlobstore2Info(GdataBlobstore2Info blobstore2Info) {
         this.blobstore2Info = blobstore2Info;
         return this;
@@ -55,6 +59,7 @@ public class GdataMedia {
      */
     
     public GdataCompositeMedia[] compositeMedia;
+
     public GdataMedia withCompositeMedia(GdataCompositeMedia[] compositeMedia) {
         this.compositeMedia = compositeMedia;
         return this;
@@ -65,6 +70,7 @@ public class GdataMedia {
      */
     
     public String contentType;
+
     public GdataMedia withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -75,6 +81,7 @@ public class GdataMedia {
      */
     
     public GdataContentTypeInfo contentTypeInfo;
+
     public GdataMedia withContentTypeInfo(GdataContentTypeInfo contentTypeInfo) {
         this.contentTypeInfo = contentTypeInfo;
         return this;
@@ -85,6 +92,7 @@ public class GdataMedia {
      */
     
     public String cosmoBinaryReference;
+
     public GdataMedia withCosmoBinaryReference(String cosmoBinaryReference) {
         this.cosmoBinaryReference = cosmoBinaryReference;
         return this;
@@ -95,6 +103,7 @@ public class GdataMedia {
      */
     
     public Long crc32cHash;
+
     public GdataMedia withCrc32cHash(Long crc32cHash) {
         this.crc32cHash = crc32cHash;
         return this;
@@ -105,6 +114,7 @@ public class GdataMedia {
      */
     
     public GdataDiffChecksumsResponse diffChecksumsResponse;
+
     public GdataMedia withDiffChecksumsResponse(GdataDiffChecksumsResponse diffChecksumsResponse) {
         this.diffChecksumsResponse = diffChecksumsResponse;
         return this;
@@ -115,6 +125,7 @@ public class GdataMedia {
      */
     
     public GdataDiffDownloadResponse diffDownloadResponse;
+
     public GdataMedia withDiffDownloadResponse(GdataDiffDownloadResponse diffDownloadResponse) {
         this.diffDownloadResponse = diffDownloadResponse;
         return this;
@@ -125,6 +136,7 @@ public class GdataMedia {
      */
     
     public GdataDiffUploadRequest diffUploadRequest;
+
     public GdataMedia withDiffUploadRequest(GdataDiffUploadRequest diffUploadRequest) {
         this.diffUploadRequest = diffUploadRequest;
         return this;
@@ -135,6 +147,7 @@ public class GdataMedia {
      */
     
     public GdataDiffUploadResponse diffUploadResponse;
+
     public GdataMedia withDiffUploadResponse(GdataDiffUploadResponse diffUploadResponse) {
         this.diffUploadResponse = diffUploadResponse;
         return this;
@@ -145,6 +158,7 @@ public class GdataMedia {
      */
     
     public GdataDiffVersionResponse diffVersionResponse;
+
     public GdataMedia withDiffVersionResponse(GdataDiffVersionResponse diffVersionResponse) {
         this.diffVersionResponse = diffVersionResponse;
         return this;
@@ -155,6 +169,7 @@ public class GdataMedia {
      */
     
     public GdataDownloadParameters downloadParameters;
+
     public GdataMedia withDownloadParameters(GdataDownloadParameters downloadParameters) {
         this.downloadParameters = downloadParameters;
         return this;
@@ -165,6 +180,7 @@ public class GdataMedia {
      */
     
     public String filename;
+
     public GdataMedia withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -175,6 +191,7 @@ public class GdataMedia {
      */
     
     public String hash;
+
     public GdataMedia withHash(String hash) {
         this.hash = hash;
         return this;
@@ -185,6 +202,7 @@ public class GdataMedia {
      */
     
     public Boolean hashVerified;
+
     public GdataMedia withHashVerified(Boolean hashVerified) {
         this.hashVerified = hashVerified;
         return this;
@@ -195,6 +213,7 @@ public class GdataMedia {
      */
     
     public String inline;
+
     public GdataMedia withInline(String inline) {
         this.inline = inline;
         return this;
@@ -205,6 +224,7 @@ public class GdataMedia {
      */
     
     public Boolean isPotentialRetry;
+
     public GdataMedia withIsPotentialRetry(Boolean isPotentialRetry) {
         this.isPotentialRetry = isPotentialRetry;
         return this;
@@ -215,6 +235,7 @@ public class GdataMedia {
      */
     
     public String length;
+
     public GdataMedia withLength(String length) {
         this.length = length;
         return this;
@@ -225,6 +246,7 @@ public class GdataMedia {
      */
     
     public String md5Hash;
+
     public GdataMedia withMd5Hash(String md5Hash) {
         this.md5Hash = md5Hash;
         return this;
@@ -235,6 +257,7 @@ public class GdataMedia {
      */
     
     public String mediaId;
+
     public GdataMedia withMediaId(String mediaId) {
         this.mediaId = mediaId;
         return this;
@@ -245,6 +268,7 @@ public class GdataMedia {
      */
     
     public GdataObjectId objectId;
+
     public GdataMedia withObjectId(GdataObjectId objectId) {
         this.objectId = objectId;
         return this;
@@ -255,6 +279,7 @@ public class GdataMedia {
      */
     
     public String path;
+
     public GdataMedia withPath(String path) {
         this.path = path;
         return this;
@@ -265,6 +290,7 @@ public class GdataMedia {
      */
     
     public GdataMediaReferenceTypeEnum referenceType;
+
     public GdataMedia withReferenceType(GdataMediaReferenceTypeEnum referenceType) {
         this.referenceType = referenceType;
         return this;
@@ -275,6 +301,7 @@ public class GdataMedia {
      */
     
     public String sha1Hash;
+
     public GdataMedia withSha1Hash(String sha1Hash) {
         this.sha1Hash = sha1Hash;
         return this;
@@ -285,6 +312,7 @@ public class GdataMedia {
      */
     
     public String sha256Hash;
+
     public GdataMedia withSha256Hash(String sha256Hash) {
         this.sha256Hash = sha256Hash;
         return this;
@@ -295,6 +323,7 @@ public class GdataMedia {
      */
     
     public String timestamp;
+
     public GdataMedia withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -305,9 +334,11 @@ public class GdataMedia {
      */
     
     public String token;
+
     public GdataMedia withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GdataMedia(){}
 }

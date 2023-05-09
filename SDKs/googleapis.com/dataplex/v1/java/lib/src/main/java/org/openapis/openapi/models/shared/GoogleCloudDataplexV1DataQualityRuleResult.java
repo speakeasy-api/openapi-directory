@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluatedCount")
     public String evaluatedCount;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withEvaluatedCount(String evaluatedCount) {
         this.evaluatedCount = evaluatedCount;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failingRowsQuery")
     public String failingRowsQuery;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withFailingRowsQuery(String failingRowsQuery) {
         this.failingRowsQuery = failingRowsQuery;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nullCount")
     public String nullCount;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withNullCount(String nullCount) {
         this.nullCount = nullCount;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passRatio")
     public Double passRatio;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withPassRatio(Double passRatio) {
         this.passRatio = passRatio;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Boolean passed;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withPassed(Boolean passed) {
         this.passed = passed;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passedCount")
     public String passedCount;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withPassedCount(String passedCount) {
         this.passedCount = passedCount;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDataplexV1DataQualityRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudDataplexV1DataQualityRule rule;
+
     public GoogleCloudDataplexV1DataQualityRuleResult withRule(GoogleCloudDataplexV1DataQualityRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataQualityRuleResult(){}
 }

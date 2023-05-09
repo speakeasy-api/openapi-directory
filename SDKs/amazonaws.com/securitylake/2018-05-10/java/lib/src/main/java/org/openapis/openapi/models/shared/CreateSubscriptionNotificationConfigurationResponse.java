@@ -15,9 +15,11 @@ public class CreateSubscriptionNotificationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueArn")
     public String queueArn;
+
     public CreateSubscriptionNotificationConfigurationResponse withQueueArn(String queueArn) {
         this.queueArn = queueArn;
         return this;
     }
     
+    public CreateSubscriptionNotificationConfigurationResponse(){}
 }

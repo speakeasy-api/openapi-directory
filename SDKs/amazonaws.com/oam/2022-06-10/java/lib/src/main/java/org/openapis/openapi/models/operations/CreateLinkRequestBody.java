@@ -14,6 +14,7 @@ public class CreateLinkRequestBody {
      */
     @JsonProperty("LabelTemplate")
     public String labelTemplate;
+
     public CreateLinkRequestBody withLabelTemplate(String labelTemplate) {
         this.labelTemplate = labelTemplate;
         return this;
@@ -24,6 +25,7 @@ public class CreateLinkRequestBody {
      */
     @JsonProperty("ResourceTypes")
     public org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes;
+
     public CreateLinkRequestBody withResourceTypes(org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -34,6 +36,7 @@ public class CreateLinkRequestBody {
      */
     @JsonProperty("SinkIdentifier")
     public String sinkIdentifier;
+
     public CreateLinkRequestBody withSinkIdentifier(String sinkIdentifier) {
         this.sinkIdentifier = sinkIdentifier;
         return this;
@@ -45,9 +48,15 @@ public class CreateLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateLinkRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLinkRequestBody(@JsonProperty("LabelTemplate") String labelTemplate, @JsonProperty("ResourceTypes") org.openapis.openapi.models.shared.ResourceTypeEnum[] resourceTypes, @JsonProperty("SinkIdentifier") String sinkIdentifier) {
+        this.labelTemplate = labelTemplate;
+        this.resourceTypes = resourceTypes;
+        this.sinkIdentifier = sinkIdentifier;
+  }
 }

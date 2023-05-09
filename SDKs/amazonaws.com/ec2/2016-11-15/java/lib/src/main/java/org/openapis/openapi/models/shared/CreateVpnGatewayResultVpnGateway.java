@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnGatewayResultVpnGateway {
     
     public Long amazonSideAsn;
+
     public CreateVpnGatewayResultVpnGateway withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public String availabilityZone;
+
     public CreateVpnGatewayResultVpnGateway withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public CreateVpnGatewayResultVpnGatewayStateEnum state;
+
     public CreateVpnGatewayResultVpnGateway withState(CreateVpnGatewayResultVpnGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public CreateVpnGatewayResultVpnGatewayTags[] tags;
+
     public CreateVpnGatewayResultVpnGateway withTags(CreateVpnGatewayResultVpnGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public CreateVpnGatewayResultVpnGatewayTypeEnum type;
+
     public CreateVpnGatewayResultVpnGateway withType(CreateVpnGatewayResultVpnGatewayTypeEnum type) {
         this.type = type;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public CreateVpnGatewayResultVpnGatewayVpcAttachments[] vpcAttachments;
+
     public CreateVpnGatewayResultVpnGateway withVpcAttachments(CreateVpnGatewayResultVpnGatewayVpcAttachments[] vpcAttachments) {
         this.vpcAttachments = vpcAttachments;
         return this;
@@ -54,9 +60,11 @@ public class CreateVpnGatewayResultVpnGateway {
     
     
     public String vpnGatewayId;
+
     public CreateVpnGatewayResultVpnGateway withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public CreateVpnGatewayResultVpnGateway(){}
 }

@@ -15,9 +15,11 @@ public class ProjectSaveAsTemplate201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.JobResponse data;
+
     public ProjectSaveAsTemplate201ApplicationJSON withData(org.openapis.openapi.models.shared.JobResponse data) {
         this.data = data;
         return this;
     }
     
+    public ProjectSaveAsTemplate201ApplicationJSON(){}
 }

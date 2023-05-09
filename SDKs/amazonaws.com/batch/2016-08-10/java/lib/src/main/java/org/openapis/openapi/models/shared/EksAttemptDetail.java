@@ -15,6 +15,7 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public EksAttemptContainerDetail[] containers;
+
     public EksAttemptDetail withContainers(EksAttemptContainerDetail[] containers) {
         this.containers = containers;
         return this;
@@ -23,6 +24,7 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeName")
     public String nodeName;
+
     public EksAttemptDetail withNodeName(String nodeName) {
         this.nodeName = nodeName;
         return this;
@@ -31,6 +33,7 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podName")
     public String podName;
+
     public EksAttemptDetail withPodName(String podName) {
         this.podName = podName;
         return this;
@@ -39,6 +42,7 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startedAt")
     public Long startedAt;
+
     public EksAttemptDetail withStartedAt(Long startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -47,6 +51,7 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public EksAttemptDetail withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -55,9 +60,11 @@ public class EksAttemptDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stoppedAt")
     public Long stoppedAt;
+
     public EksAttemptDetail withStoppedAt(Long stoppedAt) {
         this.stoppedAt = stoppedAt;
         return this;
     }
     
+    public EksAttemptDetail(){}
 }

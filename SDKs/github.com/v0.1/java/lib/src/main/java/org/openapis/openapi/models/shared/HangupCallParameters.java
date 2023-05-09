@@ -15,6 +15,7 @@ public class HangupCallParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUID")
     public String callUUID;
+
     public HangupCallParameters withCallUUID(String callUUID) {
         this.callUUID = callUUID;
         return this;
@@ -25,9 +26,11 @@ public class HangupCallParameters {
      */
     @SpeakeasyMetadata("form:name=RequestUUID")
     public String requestUUID;
+
     public HangupCallParameters withRequestUUID(String requestUUID) {
         this.requestUUID = requestUUID;
         return this;
     }
     
+    public HangupCallParameters(){}
 }

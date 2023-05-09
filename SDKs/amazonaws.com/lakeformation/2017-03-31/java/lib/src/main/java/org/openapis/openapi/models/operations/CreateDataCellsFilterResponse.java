@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataCellsFilterResponse {
@@ -12,6 +13,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDataCellsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateDataCellsFilterResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataCellsFilterResponse {
     
     
     public String contentType;
+
     public CreateDataCellsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public java.util.Map<String, Object> createDataCellsFilterResponse;
+
     public CreateDataCellsFilterResponse withCreateDataCellsFilterResponse(java.util.Map<String, Object> createDataCellsFilterResponse) {
         this.createDataCellsFilterResponse = createDataCellsFilterResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object entityNotFoundException;
+
     public CreateDataCellsFilterResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object internalServiceException;
+
     public CreateDataCellsFilterResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDataCellsFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateDataCellsFilterResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +98,7 @@ public class CreateDataCellsFilterResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateDataCellsFilterResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateDataCellsFilterResponse {
     
     
     public Integer statusCode;
+
     public CreateDataCellsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateDataCellsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataCellsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDataCellsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionButtonLabels")
     public String[] actionButtonLabels;
+
     public VideoPerformanceAd withActionButtonLabels(String[] actionButtonLabels) {
         this.actionButtonLabels = actionButtonLabels;
         return this;
@@ -29,6 +30,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companionBanners")
     public ImageAsset[] companionBanners;
+
     public VideoPerformanceAd withCompanionBanners(ImageAsset[] companionBanners) {
         this.companionBanners = companionBanners;
         return this;
@@ -40,6 +42,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customParameters")
     public java.util.Map<String, String> customParameters;
+
     public VideoPerformanceAd withCustomParameters(java.util.Map<String, String> customParameters) {
         this.customParameters = customParameters;
         return this;
@@ -51,6 +54,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptions")
     public String[] descriptions;
+
     public VideoPerformanceAd withDescriptions(String[] descriptions) {
         this.descriptions = descriptions;
         return this;
@@ -62,6 +66,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayUrlBreadcrumb1")
     public String displayUrlBreadcrumb1;
+
     public VideoPerformanceAd withDisplayUrlBreadcrumb1(String displayUrlBreadcrumb1) {
         this.displayUrlBreadcrumb1 = displayUrlBreadcrumb1;
         return this;
@@ -73,6 +78,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayUrlBreadcrumb2")
     public String displayUrlBreadcrumb2;
+
     public VideoPerformanceAd withDisplayUrlBreadcrumb2(String displayUrlBreadcrumb2) {
         this.displayUrlBreadcrumb2 = displayUrlBreadcrumb2;
         return this;
@@ -84,6 +90,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public VideoPerformanceAd withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -95,6 +102,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrl")
     public String finalUrl;
+
     public VideoPerformanceAd withFinalUrl(String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -106,6 +114,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headlines")
     public String[] headlines;
+
     public VideoPerformanceAd withHeadlines(String[] headlines) {
         this.headlines = headlines;
         return this;
@@ -117,6 +126,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longHeadlines")
     public String[] longHeadlines;
+
     public VideoPerformanceAd withLongHeadlines(String[] longHeadlines) {
         this.longHeadlines = longHeadlines;
         return this;
@@ -128,6 +138,7 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public VideoPerformanceAd withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
@@ -139,9 +150,11 @@ public class VideoPerformanceAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videos")
     public YoutubeVideoDetails[] videos;
+
     public VideoPerformanceAd withVideos(YoutubeVideoDetails[] videos) {
         this.videos = videos;
         return this;
     }
     
+    public VideoPerformanceAd(){}
 }

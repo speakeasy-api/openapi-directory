@@ -15,9 +15,11 @@ public class ProjectSaveAsTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectSaveAsTemplateRequest data;
+
     public ProjectSaveAsTemplateRequestBody withData(org.openapis.openapi.models.shared.ProjectSaveAsTemplateRequest data) {
         this.data = data;
         return this;
     }
     
+    public ProjectSaveAsTemplateRequestBody(){}
 }

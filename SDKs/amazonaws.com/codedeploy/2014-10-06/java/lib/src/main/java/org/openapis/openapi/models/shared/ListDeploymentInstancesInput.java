@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDeploymentInstancesInput {
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public ListDeploymentInstancesInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -22,6 +23,7 @@ public class ListDeploymentInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceStatusFilter")
     public InstanceStatusEnum[] instanceStatusFilter;
+
     public ListDeploymentInstancesInput withInstanceStatusFilter(InstanceStatusEnum[] instanceStatusFilter) {
         this.instanceStatusFilter = instanceStatusFilter;
         return this;
@@ -30,6 +32,7 @@ public class ListDeploymentInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTypeFilter")
     public InstanceTypeEnum[] instanceTypeFilter;
+
     public ListDeploymentInstancesInput withInstanceTypeFilter(InstanceTypeEnum[] instanceTypeFilter) {
         this.instanceTypeFilter = instanceTypeFilter;
         return this;
@@ -38,9 +41,13 @@ public class ListDeploymentInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentInstancesInput(@JsonProperty("deploymentId") String deploymentId) {
+        this.deploymentId = deploymentId;
+  }
 }

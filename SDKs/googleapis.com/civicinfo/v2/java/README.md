@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchRequest;
 import org.openapis.openapi.models.operations.CivicinfoDivisionsSearchResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -29,9 +28,9 @@ public class Application {
                 .build();
 
             CivicinfoDivisionsSearchRequest req = new CivicinfoDivisionsSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
@@ -41,16 +40,18 @@ public class Application {
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
             CivicinfoDivisionsSearchResponse res = sdk.divisions.civicinfoDivisionsSearch(req);
 
-            if (res.divisionSearchResponse.isPresent()) {
+            if (res.divisionSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -58,19 +59,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### divisions
+### [divisions](docs/divisions/README.md)
 
-* `civicinfoDivisionsSearch` - Searches for political divisions by their natural name or OCD ID.
+* [civicinfoDivisionsSearch](docs/divisions/README.md#civicinfodivisionssearch) - Searches for political divisions by their natural name or OCD ID.
 
-### elections
+### [elections](docs/elections/README.md)
 
-* `civicinfoElectionsElectionQuery` - List of available elections to query.
-* `civicinfoElectionsVoterInfoQuery` - Looks up information relevant to a voter based on the voter's registered address.
+* [civicinfoElectionsElectionQuery](docs/elections/README.md#civicinfoelectionselectionquery) - List of available elections to query.
+* [civicinfoElectionsVoterInfoQuery](docs/elections/README.md#civicinfoelectionsvoterinfoquery) - Looks up information relevant to a voter based on the voter's registered address.
 
-### representatives
+### [representatives](docs/representatives/README.md)
 
-* `civicinfoRepresentativesRepresentativeInfoByAddress` - Looks up political geography and representative information for a single address.
-* `civicinfoRepresentativesRepresentativeInfoByDivision` - Looks up representative information for a single geographic division.
+* [civicinfoRepresentativesRepresentativeInfoByAddress](docs/representatives/README.md#civicinforepresentativesrepresentativeinfobyaddress) - Looks up political geography and representative information for a single address.
+* [civicinfoRepresentativesRepresentativeInfoByDivision](docs/representatives/README.md#civicinforepresentativesrepresentativeinfobydivision) - Looks up representative information for a single geographic division.
 <!-- End SDK Available Operations -->
 
 ### Maturity

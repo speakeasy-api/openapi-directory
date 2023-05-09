@@ -18,6 +18,7 @@ public class TiersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Tier[] items;
+
     public TiersListResponse withItems(Tier[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class TiersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TiersListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public TiersListResponse(){}
 }

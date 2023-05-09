@@ -18,6 +18,7 @@ public class IndexEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public IndexEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -29,6 +30,7 @@ public class IndexEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IndexEntity withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class IndexEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableColumns")
     public String[] tableColumns;
+
     public IndexEntity withTableColumns(String[] tableColumns) {
         this.tableColumns = tableColumns;
         return this;
@@ -51,6 +54,7 @@ public class IndexEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public IndexEntity withType(String type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class IndexEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unique")
     public Boolean unique;
+
     public IndexEntity withUnique(Boolean unique) {
         this.unique = unique;
         return this;
     }
     
+    public IndexEntity(){}
 }

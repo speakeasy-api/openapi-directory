@@ -15,6 +15,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public AddPaymentDataRequestBodyPayments withGroup(String group) {
         this.group = group;
         return this;
@@ -26,6 +27,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDefaultBillingAddress")
     public Boolean hasDefaultBillingAddress;
+
     public AddPaymentDataRequestBodyPayments withHasDefaultBillingAddress(Boolean hasDefaultBillingAddress) {
         this.hasDefaultBillingAddress = hasDefaultBillingAddress;
         return this;
@@ -37,6 +39,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installments")
     public Long installments;
+
     public AddPaymentDataRequestBodyPayments withInstallments(Long installments) {
         this.installments = installments;
         return this;
@@ -48,6 +51,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installmentsInterestRate")
     public Double installmentsInterestRate;
+
     public AddPaymentDataRequestBodyPayments withInstallmentsInterestRate(Double installmentsInterestRate) {
         this.installmentsInterestRate = installmentsInterestRate;
         return this;
@@ -59,6 +63,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installmentsValue")
     public Long installmentsValue;
+
     public AddPaymentDataRequestBodyPayments withInstallmentsValue(Long installmentsValue) {
         this.installmentsValue = installmentsValue;
         return this;
@@ -70,6 +75,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystem")
     public Long paymentSystem;
+
     public AddPaymentDataRequestBodyPayments withPaymentSystem(Long paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -81,6 +87,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystemName")
     public String paymentSystemName;
+
     public AddPaymentDataRequestBodyPayments withPaymentSystemName(String paymentSystemName) {
         this.paymentSystemName = paymentSystemName;
         return this;
@@ -92,6 +99,7 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public AddPaymentDataRequestBodyPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -103,9 +111,11 @@ public class AddPaymentDataRequestBodyPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public AddPaymentDataRequestBodyPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public AddPaymentDataRequestBodyPayments(){}
 }

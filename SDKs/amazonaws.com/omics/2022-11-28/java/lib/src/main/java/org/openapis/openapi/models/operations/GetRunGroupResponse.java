@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRunGroupResponse {
@@ -12,6 +13,7 @@ public class GetRunGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRunGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRunGroupResponse {
      */
     
     public Object conflictException;
+
     public GetRunGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetRunGroupResponse {
     
     
     public String contentType;
+
     public GetRunGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRunGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRunGroupResponse getRunGroupResponse;
+
     public GetRunGroupResponse withGetRunGroupResponse(org.openapis.openapi.models.shared.GetRunGroupResponse getRunGroupResponse) {
         this.getRunGroupResponse = getRunGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetRunGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetRunGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetRunGroupResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetRunGroupResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class GetRunGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRunGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetRunGroupResponse {
     
     
     public Integer statusCode;
+
     public GetRunGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetRunGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRunGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetRunGroupResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetRunGroupResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -103,6 +114,7 @@ public class GetRunGroupResponse {
      */
     
     public Object throttlingException;
+
     public GetRunGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class GetRunGroupResponse {
      */
     
     public Object validationException;
+
     public GetRunGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRunGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

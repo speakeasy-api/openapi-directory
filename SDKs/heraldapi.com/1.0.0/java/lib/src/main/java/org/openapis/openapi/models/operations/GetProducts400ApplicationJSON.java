@@ -15,9 +15,11 @@ public class GetProducts400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public org.openapis.openapi.models.shared.ErrorV1[] errors;
+
     public GetProducts400ApplicationJSON withErrors(org.openapis.openapi.models.shared.ErrorV1[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetProducts400ApplicationJSON(){}
 }

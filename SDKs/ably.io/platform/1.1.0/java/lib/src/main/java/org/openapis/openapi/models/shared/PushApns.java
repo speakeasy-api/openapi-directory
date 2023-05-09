@@ -15,9 +15,11 @@ public class PushApns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notification")
     public Notification notification;
+
     public PushApns withNotification(Notification notification) {
         this.notification = notification;
         return this;
     }
     
+    public PushApns(){}
 }

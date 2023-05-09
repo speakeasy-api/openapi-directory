@@ -15,6 +15,7 @@ public class InstanceGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroups")
     public InstanceGroup[] instanceGroups;
+
     public InstanceGroupsScopedList withInstanceGroups(InstanceGroup[] instanceGroups) {
         this.instanceGroups = instanceGroups;
         return this;
@@ -26,9 +27,11 @@ public class InstanceGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public InstanceGroupsScopedListWarning warning;
+
     public InstanceGroupsScopedList withWarning(InstanceGroupsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public InstanceGroupsScopedList(){}
 }

@@ -15,9 +15,11 @@ public class CreateAppImageConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppImageConfigArn")
     public String appImageConfigArn;
+
     public CreateAppImageConfigResponse withAppImageConfigArn(String appImageConfigArn) {
         this.appImageConfigArn = appImageConfigArn;
         return this;
     }
     
+    public CreateAppImageConfigResponse(){}
 }

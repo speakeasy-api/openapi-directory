@@ -14,6 +14,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("app_secret")
     public String appSecret;
+
     public AppsGetForOrgUser200ApplicationJSON withAppSecret(String appSecret) {
         this.appSecret = appSecret;
         return this;
@@ -22,6 +23,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azure_subscription")
     public AppsGetForOrgUser200ApplicationJSONAzureSubscription azureSubscription;
+
     public AppsGetForOrgUser200ApplicationJSON withAzureSubscription(AppsGetForOrgUser200ApplicationJSONAzureSubscription azureSubscription) {
         this.azureSubscription = azureSubscription;
         return this;
@@ -33,6 +35,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public AppsGetForOrgUser200ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +47,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsGetForOrgUser200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsGetForOrgUser200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +70,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_source")
     public String iconSource;
+
     public AppsGetForOrgUser200ApplicationJSON withIconSource(String iconSource) {
         this.iconSource = iconSource;
         return this;
@@ -76,6 +82,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppsGetForOrgUser200ApplicationJSON withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -86,6 +93,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public AppsGetForOrgUser200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -97,6 +105,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_permissions")
     public AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum[] memberPermissions;
+
     public AppsGetForOrgUser200ApplicationJSON withMemberPermissions(AppsGetForOrgUser200ApplicationJSONMemberPermissionsEnum[] memberPermissions) {
         this.memberPermissions = memberPermissions;
         return this;
@@ -107,6 +116,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public AppsGetForOrgUser200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +127,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("origin")
     public AppsGetForOrgUser200ApplicationJSONOriginEnum origin;
+
     public AppsGetForOrgUser200ApplicationJSON withOrigin(AppsGetForOrgUser200ApplicationJSONOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -127,6 +138,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("os")
     public AppsGetForOrgUser200ApplicationJSONOsEnum os;
+
     public AppsGetForOrgUser200ApplicationJSON withOs(AppsGetForOrgUser200ApplicationJSONOsEnum os) {
         this.os = os;
         return this;
@@ -137,6 +149,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("owner")
     public AppsGetForOrgUser200ApplicationJSONOwner owner;
+
     public AppsGetForOrgUser200ApplicationJSON withOwner(AppsGetForOrgUser200ApplicationJSONOwner owner) {
         this.owner = owner;
         return this;
@@ -147,6 +160,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
      */
     @JsonProperty("platform")
     public AppsGetForOrgUser200ApplicationJSONPlatformEnum platform;
+
     public AppsGetForOrgUser200ApplicationJSON withPlatform(AppsGetForOrgUser200ApplicationJSONPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -158,6 +172,7 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsGetForOrgUser200ApplicationJSON withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
@@ -169,9 +184,20 @@ public class AppsGetForOrgUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public AppsGetForOrgUser200ApplicationJSON withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AppsGetForOrgUser200ApplicationJSON(@JsonProperty("app_secret") String appSecret, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") AppsGetForOrgUser200ApplicationJSONOriginEnum origin, @JsonProperty("os") AppsGetForOrgUser200ApplicationJSONOsEnum os, @JsonProperty("owner") AppsGetForOrgUser200ApplicationJSONOwner owner, @JsonProperty("platform") AppsGetForOrgUser200ApplicationJSONPlatformEnum platform) {
+        this.appSecret = appSecret;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.os = os;
+        this.owner = owner;
+        this.platform = platform;
+  }
 }

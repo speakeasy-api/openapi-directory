@@ -18,6 +18,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscaling")
     public NodePoolAutoscaling autoscaling;
+
     public NodePool withAutoscaling(NodePoolAutoscaling autoscaling) {
         this.autoscaling = autoscaling;
         return this;
@@ -29,6 +30,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public StatusCondition[] conditions;
+
     public NodePool withConditions(StatusCondition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -40,6 +42,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public NodeConfig config;
+
     public NodePool withConfig(NodeConfig config) {
         this.config = config;
         return this;
@@ -51,6 +54,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public NodePool withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialNodeCount")
     public Integer initialNodeCount;
+
     public NodePool withInitialNodeCount(Integer initialNodeCount) {
         this.initialNodeCount = initialNodeCount;
         return this;
@@ -73,6 +78,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceGroupUrls")
     public String[] instanceGroupUrls;
+
     public NodePool withInstanceGroupUrls(String[] instanceGroupUrls) {
         this.instanceGroupUrls = instanceGroupUrls;
         return this;
@@ -84,6 +90,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public String[] locations;
+
     public NodePool withLocations(String[] locations) {
         this.locations = locations;
         return this;
@@ -95,6 +102,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("management")
     public NodeManagement management;
+
     public NodePool withManagement(NodeManagement management) {
         this.management = management;
         return this;
@@ -106,6 +114,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxPodsConstraint")
     public MaxPodsConstraint maxPodsConstraint;
+
     public NodePool withMaxPodsConstraint(MaxPodsConstraint maxPodsConstraint) {
         this.maxPodsConstraint = maxPodsConstraint;
         return this;
@@ -117,6 +126,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodePool withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfig")
     public NodeNetworkConfig networkConfig;
+
     public NodePool withNetworkConfig(NodeNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -139,6 +150,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementPolicy")
     public PlacementPolicy placementPolicy;
+
     public NodePool withPlacementPolicy(PlacementPolicy placementPolicy) {
         this.placementPolicy = placementPolicy;
         return this;
@@ -150,6 +162,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podIpv4CidrSize")
     public Integer podIpv4CidrSize;
+
     public NodePool withPodIpv4CidrSize(Integer podIpv4CidrSize) {
         this.podIpv4CidrSize = podIpv4CidrSize;
         return this;
@@ -161,6 +174,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NodePool withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -172,6 +186,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NodePoolStatusEnum status;
+
     public NodePool withStatus(NodePoolStatusEnum status) {
         this.status = status;
         return this;
@@ -183,6 +198,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public NodePool withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -194,6 +210,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateInfo")
     public UpdateInfo updateInfo;
+
     public NodePool withUpdateInfo(UpdateInfo updateInfo) {
         this.updateInfo = updateInfo;
         return this;
@@ -205,6 +222,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeSettings")
     public UpgradeSettings upgradeSettings;
+
     public NodePool withUpgradeSettings(UpgradeSettings upgradeSettings) {
         this.upgradeSettings = upgradeSettings;
         return this;
@@ -216,9 +234,11 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public NodePool withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public NodePool(){}
 }

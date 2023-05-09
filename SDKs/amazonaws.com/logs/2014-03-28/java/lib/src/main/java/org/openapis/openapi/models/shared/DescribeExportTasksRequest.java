@@ -12,6 +12,7 @@ public class DescribeExportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public DescribeExportTasksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeExportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeExportTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeExportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public ExportTaskStatusCodeEnum statusCode;
+
     public DescribeExportTasksRequest withStatusCode(ExportTaskStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -36,9 +39,11 @@ public class DescribeExportTasksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public DescribeExportTasksRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public DescribeExportTasksRequest(){}
 }

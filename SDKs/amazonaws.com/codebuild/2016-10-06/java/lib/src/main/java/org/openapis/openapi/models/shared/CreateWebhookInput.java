@@ -12,6 +12,7 @@ public class CreateWebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchFilter")
     public String branchFilter;
+
     public CreateWebhookInput withBranchFilter(String branchFilter) {
         this.branchFilter = branchFilter;
         return this;
@@ -20,6 +21,7 @@ public class CreateWebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildType")
     public WebhookBuildTypeEnum buildType;
+
     public CreateWebhookInput withBuildType(WebhookBuildTypeEnum buildType) {
         this.buildType = buildType;
         return this;
@@ -28,6 +30,7 @@ public class CreateWebhookInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterGroups")
     public WebhookFilter[][] filterGroups;
+
     public CreateWebhookInput withFilterGroups(WebhookFilter[][] filterGroups) {
         this.filterGroups = filterGroups;
         return this;
@@ -35,9 +38,13 @@ public class CreateWebhookInput {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public CreateWebhookInput withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public CreateWebhookInput(@JsonProperty("projectName") String projectName) {
+        this.projectName = projectName;
+  }
 }

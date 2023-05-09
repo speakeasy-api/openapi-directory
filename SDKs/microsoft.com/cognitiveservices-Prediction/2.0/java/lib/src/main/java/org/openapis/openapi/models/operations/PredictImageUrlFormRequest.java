@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PredictImageUrlFormRequest {
@@ -12,6 +13,7 @@ public class PredictImageUrlFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ImageUrl imageUrl;
+
     public PredictImageUrlFormRequest withImageUrl(org.openapis.openapi.models.shared.ImageUrl imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -19,6 +21,7 @@ public class PredictImageUrlFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Prediction-Key")
     public String predictionKey;
+
     public PredictImageUrlFormRequest withPredictionKey(String predictionKey) {
         this.predictionKey = predictionKey;
         return this;
@@ -29,6 +32,7 @@ public class PredictImageUrlFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=application")
     public String application;
+
     public PredictImageUrlFormRequest withApplication(String application) {
         this.application = application;
         return this;
@@ -40,6 +44,7 @@ public class PredictImageUrlFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public PredictImageUrlFormRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -50,9 +55,15 @@ public class PredictImageUrlFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public PredictImageUrlFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PredictImageUrlFormRequest(@JsonProperty("ImageUrl") org.openapis.openapi.models.shared.ImageUrl imageUrl, @JsonProperty("Prediction-Key") String predictionKey, @JsonProperty("projectId") String projectId) {
+        this.imageUrl = imageUrl;
+        this.predictionKey = predictionKey;
+        this.projectId = projectId;
+  }
 }

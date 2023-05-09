@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchUpdateFindingsUnprocessedFinding {
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public BatchUpdateFindingsUnprocessedFinding withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class BatchUpdateFindingsUnprocessedFinding {
     
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public BatchUpdateFindingsUnprocessedFinding withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,9 +28,15 @@ public class BatchUpdateFindingsUnprocessedFinding {
     
     @JsonProperty("FindingIdentifier")
     public AwsSecurityFindingIdentifier findingIdentifier;
+
     public BatchUpdateFindingsUnprocessedFinding withFindingIdentifier(AwsSecurityFindingIdentifier findingIdentifier) {
         this.findingIdentifier = findingIdentifier;
         return this;
     }
     
+    public BatchUpdateFindingsUnprocessedFinding(@JsonProperty("ErrorCode") String errorCode, @JsonProperty("ErrorMessage") String errorMessage, @JsonProperty("FindingIdentifier") AwsSecurityFindingIdentifier findingIdentifier) {
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.findingIdentifier = findingIdentifier;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateSaveOfferRequest {
@@ -12,6 +13,7 @@ public class ActivateSaveOfferRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public ActivateSaveOfferRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -32,9 +34,13 @@ public class ActivateSaveOfferRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ActivateSaveOfferRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public ActivateSaveOfferRequest(@JsonProperty("RequestBody") String requestBody) {
+        this.requestBody = requestBody;
+  }
 }

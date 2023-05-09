@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostAccountAccessConsentsResponse {
     
     public String contentType;
+
     public PostAccountAccessConsentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostAccountAccessConsentsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public PostAccountAccessConsentsResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -29,6 +32,7 @@ public class PostAccountAccessConsentsResponse {
      */
     
     public org.openapis.openapi.models.shared.OBReadConsentResponse1 obReadConsentResponse1;
+
     public PostAccountAccessConsentsResponse withOBReadConsentResponse1(org.openapis.openapi.models.shared.OBReadConsentResponse1 obReadConsentResponse1) {
         this.obReadConsentResponse1 = obReadConsentResponse1;
         return this;
@@ -36,6 +40,7 @@ public class PostAccountAccessConsentsResponse {
     
     
     public Integer statusCode;
+
     public PostAccountAccessConsentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostAccountAccessConsentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostAccountAccessConsentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostAccountAccessConsentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

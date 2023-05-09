@@ -12,6 +12,7 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public UpdateAgreementRequest withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -19,6 +20,7 @@ public class UpdateAgreementRequest {
     
     @JsonProperty("AgreementId")
     public String agreementId;
+
     public UpdateAgreementRequest withAgreementId(String agreementId) {
         this.agreementId = agreementId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseDirectory")
     public String baseDirectory;
+
     public UpdateAgreementRequest withBaseDirectory(String baseDirectory) {
         this.baseDirectory = baseDirectory;
         return this;
@@ -35,6 +38,7 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateAgreementRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalProfileId")
     public String localProfileId;
+
     public UpdateAgreementRequest withLocalProfileId(String localProfileId) {
         this.localProfileId = localProfileId;
         return this;
@@ -51,6 +56,7 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartnerProfileId")
     public String partnerProfileId;
+
     public UpdateAgreementRequest withPartnerProfileId(String partnerProfileId) {
         this.partnerProfileId = partnerProfileId;
         return this;
@@ -58,6 +64,7 @@ public class UpdateAgreementRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public UpdateAgreementRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -66,9 +73,14 @@ public class UpdateAgreementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public AgreementStatusTypeEnum status;
+
     public UpdateAgreementRequest withStatus(AgreementStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateAgreementRequest(@JsonProperty("AgreementId") String agreementId, @JsonProperty("ServerId") String serverId) {
+        this.agreementId = agreementId;
+        this.serverId = serverId;
+  }
 }

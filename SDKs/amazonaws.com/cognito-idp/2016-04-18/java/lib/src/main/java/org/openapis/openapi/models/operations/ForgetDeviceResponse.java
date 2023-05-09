@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ForgetDeviceResponse {
     
     public String contentType;
+
     public ForgetDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object forbiddenException;
+
     public ForgetDeviceResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object internalErrorException;
+
     public ForgetDeviceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object invalidParameterException;
+
     public ForgetDeviceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public ForgetDeviceResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -59,6 +65,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object notAuthorizedException;
+
     public ForgetDeviceResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public ForgetDeviceResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -79,6 +87,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ForgetDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class ForgetDeviceResponse {
     
     
     public Integer statusCode;
+
     public ForgetDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ForgetDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ForgetDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ForgetDeviceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,6 +125,7 @@ public class ForgetDeviceResponse {
      */
     
     public Object userNotConfirmedException;
+
     public ForgetDeviceResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -123,9 +136,14 @@ public class ForgetDeviceResponse {
      */
     
     public Object userNotFoundException;
+
     public ForgetDeviceResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public ForgetDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayPeeringAttachmentRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayPeeringAttachmentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public CreateTransitGatewayPeeringAttachmentRequestOptions options;
+
     public CreateTransitGatewayPeeringAttachmentRequest withOptions(CreateTransitGatewayPeeringAttachmentRequestOptions options) {
         this.options = options;
         return this;
@@ -23,6 +25,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public String peerAccountId;
+
     public CreateTransitGatewayPeeringAttachmentRequest withPeerAccountId(String peerAccountId) {
         this.peerAccountId = peerAccountId;
         return this;
@@ -30,6 +33,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public String peerRegion;
+
     public CreateTransitGatewayPeeringAttachmentRequest withPeerRegion(String peerRegion) {
         this.peerRegion = peerRegion;
         return this;
@@ -37,6 +41,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public String peerTransitGatewayId;
+
     public CreateTransitGatewayPeeringAttachmentRequest withPeerTransitGatewayId(String peerTransitGatewayId) {
         this.peerTransitGatewayId = peerTransitGatewayId;
         return this;
@@ -44,6 +49,7 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public CreateTransitGatewayPeeringAttachmentRequestTagSpecifications[] tagSpecifications;
+
     public CreateTransitGatewayPeeringAttachmentRequest withTagSpecifications(CreateTransitGatewayPeeringAttachmentRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -51,9 +57,16 @@ public class CreateTransitGatewayPeeringAttachmentRequest {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayPeeringAttachmentRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public CreateTransitGatewayPeeringAttachmentRequest(@JsonProperty("PeerAccountId") String peerAccountId, @JsonProperty("PeerRegion") String peerRegion, @JsonProperty("PeerTransitGatewayId") String peerTransitGatewayId, @JsonProperty("TransitGatewayId") String transitGatewayId) {
+        this.peerAccountId = peerAccountId;
+        this.peerRegion = peerRegion;
+        this.peerTransitGatewayId = peerTransitGatewayId;
+        this.transitGatewayId = transitGatewayId;
+  }
 }

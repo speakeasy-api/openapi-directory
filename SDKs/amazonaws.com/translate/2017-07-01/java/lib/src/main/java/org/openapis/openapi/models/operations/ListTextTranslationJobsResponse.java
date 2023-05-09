@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTextTranslationJobsResponse {
     
     public String contentType;
+
     public ListTextTranslationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTextTranslationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListTextTranslationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListTextTranslationJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListTextTranslationJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListTextTranslationJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTextTranslationJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListTextTranslationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTextTranslationJobsResponse listTextTranslationJobsResponse;
+
     public ListTextTranslationJobsResponse withListTextTranslationJobsResponse(org.openapis.openapi.models.shared.ListTextTranslationJobsResponse listTextTranslationJobsResponse) {
         this.listTextTranslationJobsResponse = listTextTranslationJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListTextTranslationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListTextTranslationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTextTranslationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTextTranslationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListTextTranslationJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListTextTranslationJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListTextTranslationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsSignerJobId")
     public String awsSignerJobId;
+
     public CodeSigning withAwsSignerJobId(String awsSignerJobId) {
         this.awsSignerJobId = awsSignerJobId;
         return this;
@@ -23,6 +24,7 @@ public class CodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customCodeSigning")
     public CustomCodeSigning customCodeSigning;
+
     public CodeSigning withCustomCodeSigning(CustomCodeSigning customCodeSigning) {
         this.customCodeSigning = customCodeSigning;
         return this;
@@ -31,9 +33,11 @@ public class CodeSigning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startSigningJobParameter")
     public StartSigningJobParameter startSigningJobParameter;
+
     public CodeSigning withStartSigningJobParameter(StartSigningJobParameter startSigningJobParameter) {
         this.startSigningJobParameter = startSigningJobParameter;
         return this;
     }
     
+    public CodeSigning(){}
 }

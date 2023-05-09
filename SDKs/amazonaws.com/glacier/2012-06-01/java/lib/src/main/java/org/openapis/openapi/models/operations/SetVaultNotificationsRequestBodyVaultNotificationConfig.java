@@ -15,6 +15,7 @@ public class SetVaultNotificationsRequestBodyVaultNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public String[] events;
+
     public SetVaultNotificationsRequestBodyVaultNotificationConfig withEvents(String[] events) {
         this.events = events;
         return this;
@@ -23,9 +24,11 @@ public class SetVaultNotificationsRequestBodyVaultNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNSTopic")
     public String snsTopic;
+
     public SetVaultNotificationsRequestBodyVaultNotificationConfig withSNSTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
     }
     
+    public SetVaultNotificationsRequestBodyVaultNotificationConfig(){}
 }

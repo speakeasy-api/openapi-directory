@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartDevEnvironmentResponse {
@@ -12,6 +13,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object accessDeniedException;
+
     public StartDevEnvironmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object conflictException;
+
     public StartDevEnvironmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartDevEnvironmentResponse {
     
     
     public String contentType;
+
     public StartDevEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartDevEnvironmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartDevEnvironmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -59,6 +65,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartDevEnvironmentResponse startDevEnvironmentResponse;
+
     public StartDevEnvironmentResponse withStartDevEnvironmentResponse(org.openapis.openapi.models.shared.StartDevEnvironmentResponse startDevEnvironmentResponse) {
         this.startDevEnvironmentResponse = startDevEnvironmentResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartDevEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public StartDevEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartDevEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartDevEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object throttlingException;
+
     public StartDevEnvironmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartDevEnvironmentResponse {
      */
     
     public Object validationException;
+
     public StartDevEnvironmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartDevEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

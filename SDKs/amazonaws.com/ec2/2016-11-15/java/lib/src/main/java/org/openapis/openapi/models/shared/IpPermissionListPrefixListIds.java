@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IpPermissionListPrefixListIds {
     
     public String description;
+
     public IpPermissionListPrefixListIds withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class IpPermissionListPrefixListIds {
     
     
     public String prefixListId;
+
     public IpPermissionListPrefixListIds withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public IpPermissionListPrefixListIds(){}
 }

@@ -19,6 +19,7 @@ public class ListRecoveryPointsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ListRecoveryPointsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -27,6 +28,7 @@ public class ListRecoveryPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListRecoveryPointsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +37,7 @@ public class ListRecoveryPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public ListRecoveryPointsRequest withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -43,6 +46,7 @@ public class ListRecoveryPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public ListRecoveryPointsRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -51,6 +55,7 @@ public class ListRecoveryPointsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRecoveryPointsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,9 +66,11 @@ public class ListRecoveryPointsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ListRecoveryPointsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListRecoveryPointsRequest(){}
 }

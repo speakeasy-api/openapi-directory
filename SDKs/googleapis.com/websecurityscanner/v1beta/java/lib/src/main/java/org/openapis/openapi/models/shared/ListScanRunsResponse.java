@@ -18,6 +18,7 @@ public class ListScanRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListScanRunsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListScanRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanRuns")
     public ScanRun[] scanRuns;
+
     public ListScanRunsResponse withScanRuns(ScanRun[] scanRuns) {
         this.scanRuns = scanRuns;
         return this;
     }
     
+    public ListScanRunsResponse(){}
 }

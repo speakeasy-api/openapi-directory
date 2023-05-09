@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StorageLocation {
     
     public String bucket;
+
     public StorageLocation withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -19,9 +20,11 @@ public class StorageLocation {
     
     
     public String key;
+
     public StorageLocation withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public StorageLocation(){}
 }

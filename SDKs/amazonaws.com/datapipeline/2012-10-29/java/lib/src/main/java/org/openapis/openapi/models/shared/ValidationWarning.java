@@ -15,6 +15,7 @@ public class ValidationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ValidationWarning withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class ValidationWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public String[] warnings;
+
     public ValidationWarning withWarnings(String[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ValidationWarning(){}
 }

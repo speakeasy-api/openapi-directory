@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePoolResponse {
@@ -12,6 +13,7 @@ public class CreatePoolResponse {
      */
     
     public Object accessDeniedException;
+
     public CreatePoolResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreatePoolResponse {
      */
     
     public Object conflictException;
+
     public CreatePoolResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreatePoolResponse {
     
     
     public String contentType;
+
     public CreatePoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreatePoolResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePoolResult createPoolResult;
+
     public CreatePoolResponse withCreatePoolResult(org.openapis.openapi.models.shared.CreatePoolResult createPoolResult) {
         this.createPoolResult = createPoolResult;
         return this;
@@ -49,6 +54,7 @@ public class CreatePoolResponse {
      */
     
     public Object internalServerException;
+
     public CreatePoolResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePoolResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreatePoolResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePoolResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreatePoolResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePoolResponse {
     
     
     public Integer statusCode;
+
     public CreatePoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreatePoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreatePoolResponse {
      */
     
     public Object throttlingException;
+
     public CreatePoolResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreatePoolResponse {
      */
     
     public Object validationException;
+
     public CreatePoolResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreatePoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

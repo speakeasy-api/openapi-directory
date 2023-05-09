@@ -12,6 +12,7 @@ public class GetPhysicalInteractionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String contributor;
+
     public GetPhysicalInteractionRequest withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -22,9 +23,11 @@ public class GetPhysicalInteractionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GetPhysicalInteractionRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetPhysicalInteractionRequest(){}
 }

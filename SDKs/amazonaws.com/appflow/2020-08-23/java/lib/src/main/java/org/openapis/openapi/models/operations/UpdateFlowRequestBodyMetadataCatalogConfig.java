@@ -15,9 +15,11 @@ public class UpdateFlowRequestBodyMetadataCatalogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glueDataCatalog")
     public org.openapis.openapi.models.shared.GlueDataCatalogConfig glueDataCatalog;
+
     public UpdateFlowRequestBodyMetadataCatalogConfig withGlueDataCatalog(org.openapis.openapi.models.shared.GlueDataCatalogConfig glueDataCatalog) {
         this.glueDataCatalog = glueDataCatalog;
         return this;
     }
     
+    public UpdateFlowRequestBodyMetadataCatalogConfig(){}
 }

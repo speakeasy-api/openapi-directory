@@ -18,6 +18,7 @@ public class SignRequest201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public String job;
+
     public SignRequest201ApplicationJSON withJob(String job) {
         this.job = job;
         return this;
@@ -29,9 +30,11 @@ public class SignRequest201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SignRequest201ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SignRequest201ApplicationJSON(){}
 }

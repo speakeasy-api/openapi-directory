@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetArtifactRuleConfigResponse {
     
     public String contentType;
+
     public GetArtifactRuleConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetArtifactRuleConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetArtifactRuleConfigResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetArtifactRuleConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.Rule rule;
+
     public GetArtifactRuleConfigResponse withRule(org.openapis.openapi.models.shared.Rule rule) {
         this.rule = rule;
         return this;
@@ -36,6 +40,7 @@ public class GetArtifactRuleConfigResponse {
     
     
     public Integer statusCode;
+
     public GetArtifactRuleConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetArtifactRuleConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetArtifactRuleConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetArtifactRuleConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

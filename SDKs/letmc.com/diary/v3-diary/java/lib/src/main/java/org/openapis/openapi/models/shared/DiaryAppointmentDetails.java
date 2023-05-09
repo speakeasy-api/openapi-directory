@@ -20,6 +20,7 @@ public class DiaryAppointmentDetails {
     @JsonProperty("AllocationDetails")
     @SpeakeasyMetadata("form:name=AllocationDetails,json")
     public DiaryBookingModel allocationDetails;
+
     public DiaryAppointmentDetails withAllocationDetails(DiaryBookingModel allocationDetails) {
         this.allocationDetails = allocationDetails;
         return this;
@@ -32,6 +33,7 @@ public class DiaryAppointmentDetails {
     @JsonProperty("AppointmentType")
     @SpeakeasyMetadata("form:name=AppointmentType")
     public String appointmentType;
+
     public DiaryAppointmentDetails withAppointmentType(String appointmentType) {
         this.appointmentType = appointmentType;
         return this;
@@ -44,6 +46,7 @@ public class DiaryAppointmentDetails {
     @JsonProperty("ExtraComments")
     @SpeakeasyMetadata("form:name=ExtraComments")
     public String extraComments;
+
     public DiaryAppointmentDetails withExtraComments(String extraComments) {
         this.extraComments = extraComments;
         return this;
@@ -56,6 +59,7 @@ public class DiaryAppointmentDetails {
     @JsonProperty("Guests")
     @SpeakeasyMetadata("form:name=Guests,json")
     public DiaryGuestDetails[] guests;
+
     public DiaryAppointmentDetails withGuests(DiaryGuestDetails[] guests) {
         this.guests = guests;
         return this;
@@ -68,9 +72,11 @@ public class DiaryAppointmentDetails {
     @JsonProperty("Subject")
     @SpeakeasyMetadata("form:name=Subject")
     public String subject;
+
     public DiaryAppointmentDetails withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DiaryAppointmentDetails(){}
 }

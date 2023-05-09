@@ -15,9 +15,11 @@ public class TargetSslProxiesSetProxyHeaderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyHeader")
     public TargetSslProxiesSetProxyHeaderRequestProxyHeaderEnum proxyHeader;
+
     public TargetSslProxiesSetProxyHeaderRequest withProxyHeader(TargetSslProxiesSetProxyHeaderRequestProxyHeaderEnum proxyHeader) {
         this.proxyHeader = proxyHeader;
         return this;
     }
     
+    public TargetSslProxiesSetProxyHeaderRequest(){}
 }

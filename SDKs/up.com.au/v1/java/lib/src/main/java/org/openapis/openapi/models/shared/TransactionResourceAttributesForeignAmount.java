@@ -17,6 +17,7 @@ public class TransactionResourceAttributesForeignAmount {
      */
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public TransactionResourceAttributesForeignAmount withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -30,6 +31,7 @@ public class TransactionResourceAttributesForeignAmount {
      */
     @JsonProperty("value")
     public String value;
+
     public TransactionResourceAttributesForeignAmount withValue(String value) {
         this.value = value;
         return this;
@@ -43,9 +45,15 @@ public class TransactionResourceAttributesForeignAmount {
      */
     @JsonProperty("valueInBaseUnits")
     public Long valueInBaseUnits;
+
     public TransactionResourceAttributesForeignAmount withValueInBaseUnits(Long valueInBaseUnits) {
         this.valueInBaseUnits = valueInBaseUnits;
         return this;
     }
     
+    public TransactionResourceAttributesForeignAmount(@JsonProperty("currencyCode") String currencyCode, @JsonProperty("value") String value, @JsonProperty("valueInBaseUnits") Long valueInBaseUnits) {
+        this.currencyCode = currencyCode;
+        this.value = value;
+        this.valueInBaseUnits = valueInBaseUnits;
+  }
 }

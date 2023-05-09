@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrderSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauth2;
+
     public CreateOrderSecurity withOauth2(String oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
+    public CreateOrderSecurity(@JsonProperty("oauth2") String oauth2) {
+        this.oauth2 = oauth2;
+  }
 }

@@ -17,6 +17,7 @@ public class SnapshotDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTableReference")
     public TableReference baseTableReference;
+
     public SnapshotDefinition withBaseTableReference(TableReference baseTableReference) {
         this.baseTableReference = baseTableReference;
         return this;
@@ -30,9 +31,11 @@ public class SnapshotDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("snapshotTime")
     public OffsetDateTime snapshotTime;
+
     public SnapshotDefinition withSnapshotTime(OffsetDateTime snapshotTime) {
         this.snapshotTime = snapshotTime;
         return this;
     }
     
+    public SnapshotDefinition(){}
 }

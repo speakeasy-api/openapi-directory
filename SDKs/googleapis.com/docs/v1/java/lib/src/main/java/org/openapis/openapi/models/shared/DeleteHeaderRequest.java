@@ -18,9 +18,11 @@ public class DeleteHeaderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerId")
     public String headerId;
+
     public DeleteHeaderRequest withHeaderId(String headerId) {
         this.headerId = headerId;
         return this;
     }
     
+    public DeleteHeaderRequest(){}
 }

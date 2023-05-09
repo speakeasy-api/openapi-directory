@@ -15,6 +15,7 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public ActivitiesCollection[] collection;
+
     public Activities withCollection(ActivitiesCollection[] collection) {
         this.collection = collection;
         return this;
@@ -23,6 +24,7 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("future_href")
     public String futureHref;
+
     public Activities withFutureHref(String futureHref) {
         this.futureHref = futureHref;
         return this;
@@ -31,9 +33,11 @@ public class Activities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public Activities withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public Activities(){}
 }

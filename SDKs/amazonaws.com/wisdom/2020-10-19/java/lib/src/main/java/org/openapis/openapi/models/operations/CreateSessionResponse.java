@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSessionResponse {
@@ -12,6 +13,7 @@ public class CreateSessionResponse {
      */
     
     public Object conflictException;
+
     public CreateSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSessionResponse {
     
     
     public String contentType;
+
     public CreateSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSessionResponse createSessionResponse;
+
     public CreateSessionResponse withCreateSessionResponse(org.openapis.openapi.models.shared.CreateSessionResponse createSessionResponse) {
         this.createSessionResponse = createSessionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class CreateSessionResponse {
     
     
     public Integer statusCode;
+
     public CreateSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateSessionResponse {
      */
     
     public Object validationException;
+
     public CreateSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

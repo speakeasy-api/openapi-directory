@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutOrganisationsPartyIdResponse {
     
     public String contentType;
+
     public PutOrganisationsPartyIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutOrganisationsPartyIdResponse {
     
     
     public Integer statusCode;
+
     public PutOrganisationsPartyIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutOrganisationsPartyIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutOrganisationsPartyIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PutOrganisationsPartyIdResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -43,6 +48,7 @@ public class PutOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutOrganisationsPartyIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -53,6 +59,7 @@ public class PutOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Organisation organisation;
+
     public PutOrganisationsPartyIdResponse withOrganisation(org.openapis.openapi.models.shared.Organisation organisation) {
         this.organisation = organisation;
         return this;
@@ -63,9 +70,14 @@ public class PutOrganisationsPartyIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PutOrganisationsPartyIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PutOrganisationsPartyIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

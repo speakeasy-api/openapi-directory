@@ -134,4 +134,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/RewritingRuleSerializer.jav
 lib/src/main/java/org/openapis/openapi/models/shared/Project.java
 lib/src/main/java/org/openapis/openapi/models/shared/ProjectSettingsSerializer.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/analysis/README.md
+docs/project/README.md
+docs/user/README.md
 USAGE.md

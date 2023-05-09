@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDatasetGroupRequest {
     @JsonProperty("datasetGroupArn")
     public String datasetGroupArn;
+
     public DeleteDatasetGroupRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
     }
     
+    public DeleteDatasetGroupRequest(@JsonProperty("datasetGroupArn") String datasetGroupArn) {
+        this.datasetGroupArn = datasetGroupArn;
+  }
 }

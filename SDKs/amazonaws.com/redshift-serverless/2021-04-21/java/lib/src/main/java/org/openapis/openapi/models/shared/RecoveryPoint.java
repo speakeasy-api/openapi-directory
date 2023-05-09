@@ -20,6 +20,7 @@ public class RecoveryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public RecoveryPoint withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -28,6 +29,7 @@ public class RecoveryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public RecoveryPoint withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -38,6 +40,7 @@ public class RecoveryPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("recoveryPointCreateTime")
     public OffsetDateTime recoveryPointCreateTime;
+
     public RecoveryPoint withRecoveryPointCreateTime(OffsetDateTime recoveryPointCreateTime) {
         this.recoveryPointCreateTime = recoveryPointCreateTime;
         return this;
@@ -46,6 +49,7 @@ public class RecoveryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoveryPointId")
     public String recoveryPointId;
+
     public RecoveryPoint withRecoveryPointId(String recoveryPointId) {
         this.recoveryPointId = recoveryPointId;
         return this;
@@ -54,6 +58,7 @@ public class RecoveryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSizeInMegaBytes")
     public Double totalSizeInMegaBytes;
+
     public RecoveryPoint withTotalSizeInMegaBytes(Double totalSizeInMegaBytes) {
         this.totalSizeInMegaBytes = totalSizeInMegaBytes;
         return this;
@@ -62,9 +67,11 @@ public class RecoveryPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public RecoveryPoint withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public RecoveryPoint(){}
 }

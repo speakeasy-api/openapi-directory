@@ -3,31 +3,28 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AbortMultipartUploadRequest;
 import org.openapis.openapi.models.operations.AbortMultipartUploadResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AbortMultipartUploadRequest req = new AbortMultipartUploadRequest() {{
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "provident";
-                xAmzCredential = "distinctio";
-                xAmzDate = "quibusdam";
-                xAmzSecurityToken = "unde";
-                xAmzSignature = "nulla";
-                xAmzSignedHeaders = "corrupti";
-                accountId = "illum";
-                uploadId = "vel";
-                vaultName = "error";
-            }}            
+            AbortMultipartUploadRequest req = new AbortMultipartUploadRequest("provident", "distinctio", "quibusdam") {{
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }};            
 
             AbortMultipartUploadResponse res = sdk.abortMultipartUpload(req);
 
@@ -37,5 +34,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

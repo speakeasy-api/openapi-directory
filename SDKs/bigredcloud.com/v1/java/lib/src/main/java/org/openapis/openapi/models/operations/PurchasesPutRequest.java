@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PurchasesPutRequest {
@@ -12,6 +13,7 @@ public class PurchasesPutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PurchaseDto purchaseDto;
+
     public PurchasesPutRequest withPurchaseDto(org.openapis.openapi.models.shared.PurchaseDto purchaseDto) {
         this.purchaseDto = purchaseDto;
         return this;
@@ -22,9 +24,14 @@ public class PurchasesPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PurchasesPutRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PurchasesPutRequest(@JsonProperty("PurchaseDto") org.openapis.openapi.models.shared.PurchaseDto purchaseDto, @JsonProperty("id") Long id) {
+        this.purchaseDto = purchaseDto;
+        this.id = id;
+  }
 }

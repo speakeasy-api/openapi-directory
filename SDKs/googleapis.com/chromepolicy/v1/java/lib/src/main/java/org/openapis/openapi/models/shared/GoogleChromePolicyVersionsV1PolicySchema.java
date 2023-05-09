@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessRestrictions")
     public String[] accessRestrictions;
+
     public GoogleChromePolicyVersionsV1PolicySchema withAccessRestrictions(String[] accessRestrictions) {
         this.accessRestrictions = accessRestrictions;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTargetKeyNames")
     public GoogleChromePolicyVersionsV1AdditionalTargetKeyName[] additionalTargetKeyNames;
+
     public GoogleChromePolicyVersionsV1PolicySchema withAdditionalTargetKeyNames(GoogleChromePolicyVersionsV1AdditionalTargetKeyName[] additionalTargetKeyNames) {
         this.additionalTargetKeyNames = additionalTargetKeyNames;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTitle")
     public String categoryTitle;
+
     public GoogleChromePolicyVersionsV1PolicySchema withCategoryTitle(String categoryTitle) {
         this.categoryTitle = categoryTitle;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public Proto2FileDescriptorProto definition;
+
     public GoogleChromePolicyVersionsV1PolicySchema withDefinition(Proto2FileDescriptorProto definition) {
         this.definition = definition;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldDescriptions")
     public GoogleChromePolicyVersionsV1PolicySchemaFieldDescription[] fieldDescriptions;
+
     public GoogleChromePolicyVersionsV1PolicySchema withFieldDescriptions(GoogleChromePolicyVersionsV1PolicySchemaFieldDescription[] fieldDescriptions) {
         this.fieldDescriptions = fieldDescriptions;
         return this;
@@ -73,6 +78,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromePolicyVersionsV1PolicySchema withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notices")
     public GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription[] notices;
+
     public GoogleChromePolicyVersionsV1PolicySchema withNotices(GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription[] notices) {
         this.notices = notices;
         return this;
@@ -92,6 +99,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyApiLifecycle")
     public ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle;
+
     public GoogleChromePolicyVersionsV1PolicySchema withPolicyApiLifecycle(ChromeCrosDpanelAutosettingsProtoPolicyApiLifecycle policyApiLifecycle) {
         this.policyApiLifecycle = policyApiLifecycle;
         return this;
@@ -103,6 +111,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDescription")
     public String policyDescription;
+
     public GoogleChromePolicyVersionsV1PolicySchema withPolicyDescription(String policyDescription) {
         this.policyDescription = policyDescription;
         return this;
@@ -114,6 +123,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaName")
     public String schemaName;
+
     public GoogleChromePolicyVersionsV1PolicySchema withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -125,6 +135,7 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportUri")
     public String supportUri;
+
     public GoogleChromePolicyVersionsV1PolicySchema withSupportUri(String supportUri) {
         this.supportUri = supportUri;
         return this;
@@ -136,9 +147,11 @@ public class GoogleChromePolicyVersionsV1PolicySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validTargetResources")
     public GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum[] validTargetResources;
+
     public GoogleChromePolicyVersionsV1PolicySchema withValidTargetResources(GoogleChromePolicyVersionsV1PolicySchemaValidTargetResourcesEnum[] validTargetResources) {
         this.validTargetResources = validTargetResources;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchema(){}
 }

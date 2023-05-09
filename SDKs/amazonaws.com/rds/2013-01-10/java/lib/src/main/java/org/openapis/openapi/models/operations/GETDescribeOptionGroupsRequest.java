@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeOptionGroupsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeOptionGroupsActionEnum action;
+
     public GETDescribeOptionGroupsRequest withAction(GETDescribeOptionGroupsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EngineName")
     public String engineName;
+
     public GETDescribeOptionGroupsRequest withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MajorEngineVersion")
     public String majorEngineVersion;
+
     public GETDescribeOptionGroupsRequest withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -30,6 +34,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeOptionGroupsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,6 +42,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeOptionGroupsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -44,6 +50,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OptionGroupName")
     public String optionGroupName;
+
     public GETDescribeOptionGroupsRequest withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -51,6 +58,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeOptionGroupsVersionEnum version;
+
     public GETDescribeOptionGroupsRequest withVersion(GETDescribeOptionGroupsVersionEnum version) {
         this.version = version;
         return this;
@@ -58,6 +66,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeOptionGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -65,6 +74,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeOptionGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -72,6 +82,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeOptionGroupsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -79,6 +90,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeOptionGroupsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -86,6 +98,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeOptionGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -93,6 +106,7 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeOptionGroupsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -100,9 +114,14 @@ public class GETDescribeOptionGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeOptionGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeOptionGroupsRequest(@JsonProperty("Action") GETDescribeOptionGroupsActionEnum action, @JsonProperty("Version") GETDescribeOptionGroupsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

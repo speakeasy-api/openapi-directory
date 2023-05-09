@@ -15,6 +15,7 @@ public class JobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public ParametricConfigurationOverrides configurationOverrides;
+
     public JobTemplateData withConfigurationOverrides(ParametricConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -22,6 +23,7 @@ public class JobTemplateData {
     
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public JobTemplateData withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -32,6 +34,7 @@ public class JobTemplateData {
      */
     @JsonProperty("jobDriver")
     public JobDriver jobDriver;
+
     public JobTemplateData withJobDriver(JobDriver jobDriver) {
         this.jobDriver = jobDriver;
         return this;
@@ -40,6 +43,7 @@ public class JobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTags")
     public java.util.Map<String, String> jobTags;
+
     public JobTemplateData withJobTags(java.util.Map<String, String> jobTags) {
         this.jobTags = jobTags;
         return this;
@@ -48,6 +52,7 @@ public class JobTemplateData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterConfiguration")
     public java.util.Map<String, TemplateParameterConfiguration> parameterConfiguration;
+
     public JobTemplateData withParameterConfiguration(java.util.Map<String, TemplateParameterConfiguration> parameterConfiguration) {
         this.parameterConfiguration = parameterConfiguration;
         return this;
@@ -55,9 +60,15 @@ public class JobTemplateData {
     
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public JobTemplateData withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
     }
     
+    public JobTemplateData(@JsonProperty("executionRoleArn") String executionRoleArn, @JsonProperty("jobDriver") JobDriver jobDriver, @JsonProperty("releaseLabel") String releaseLabel) {
+        this.executionRoleArn = executionRoleArn;
+        this.jobDriver = jobDriver;
+        this.releaseLabel = releaseLabel;
+  }
 }

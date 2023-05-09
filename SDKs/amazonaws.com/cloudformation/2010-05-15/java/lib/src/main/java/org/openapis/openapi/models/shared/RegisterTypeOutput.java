@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RegisterTypeOutput {
     
     public String registrationToken;
+
     public RegisterTypeOutput withRegistrationToken(String registrationToken) {
         this.registrationToken = registrationToken;
         return this;
     }
     
+    public RegisterTypeOutput(){}
 }

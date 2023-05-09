@@ -15,9 +15,11 @@ public class GetDeviceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public Device device;
+
     public GetDeviceResult withDevice(Device device) {
         this.device = device;
         return this;
     }
     
+    public GetDeviceResult(){}
 }

@@ -15,6 +15,7 @@ public class GenericAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentLinkUrl")
     public String attachmentLinkUrl;
+
     public GenericAttachment withAttachmentLinkUrl(String attachmentLinkUrl) {
         this.attachmentLinkUrl = attachmentLinkUrl;
         return this;
@@ -23,6 +24,7 @@ public class GenericAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public Button[] buttons;
+
     public GenericAttachment withButtons(Button[] buttons) {
         this.buttons = buttons;
         return this;
@@ -31,6 +33,7 @@ public class GenericAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public GenericAttachment withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -39,6 +42,7 @@ public class GenericAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subTitle")
     public String subTitle;
+
     public GenericAttachment withSubTitle(String subTitle) {
         this.subTitle = subTitle;
         return this;
@@ -47,9 +51,11 @@ public class GenericAttachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GenericAttachment withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GenericAttachment(){}
 }

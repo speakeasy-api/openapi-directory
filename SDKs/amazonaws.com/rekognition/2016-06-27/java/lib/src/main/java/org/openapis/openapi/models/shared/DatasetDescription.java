@@ -22,6 +22,7 @@ public class DatasetDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public DatasetDescription withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class DatasetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetStats")
     public DatasetStats datasetStats;
+
     public DatasetDescription withDatasetStats(DatasetStats datasetStats) {
         this.datasetStats = datasetStats;
         return this;
@@ -40,6 +42,7 @@ public class DatasetDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public DatasetDescription withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class DatasetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DatasetStatusEnum status;
+
     public DatasetDescription withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class DatasetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public DatasetDescription withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -64,9 +69,11 @@ public class DatasetDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessageCode")
     public DatasetStatusMessageCodeEnum statusMessageCode;
+
     public DatasetDescription withStatusMessageCode(DatasetStatusMessageCodeEnum statusMessageCode) {
         this.statusMessageCode = statusMessageCode;
         return this;
     }
     
+    public DatasetDescription(){}
 }

@@ -15,6 +15,7 @@ public class CreateVirtualClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CreateVirtualClusterResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateVirtualClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateVirtualClusterResponse withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class CreateVirtualClusterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateVirtualClusterResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateVirtualClusterResponse(){}
 }

@@ -19,6 +19,7 @@ public class EndpointSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EndpointSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class EndpointSummary {
     
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public EndpointSummary withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -33,6 +35,7 @@ public class EndpointSummary {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public EndpointSummary withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -40,6 +43,7 @@ public class EndpointSummary {
     
     @JsonProperty("EndpointStatus")
     public EndpointStatusEnum endpointStatus;
+
     public EndpointSummary withEndpointStatus(EndpointStatusEnum endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -49,9 +53,17 @@ public class EndpointSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public EndpointSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public EndpointSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("EndpointArn") String endpointArn, @JsonProperty("EndpointName") String endpointName, @JsonProperty("EndpointStatus") EndpointStatusEnum endpointStatus, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime) {
+        this.creationTime = creationTime;
+        this.endpointArn = endpointArn;
+        this.endpointName = endpointName;
+        this.endpointStatus = endpointStatus;
+        this.lastModifiedTime = lastModifiedTime;
+  }
 }

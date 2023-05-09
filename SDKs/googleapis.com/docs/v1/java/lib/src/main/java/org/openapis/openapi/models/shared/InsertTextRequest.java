@@ -18,6 +18,7 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOfSegmentLocation")
     public EndOfSegmentLocation endOfSegmentLocation;
+
     public InsertTextRequest withEndOfSegmentLocation(EndOfSegmentLocation endOfSegmentLocation) {
         this.endOfSegmentLocation = endOfSegmentLocation;
         return this;
@@ -29,6 +30,7 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public Location location;
+
     public InsertTextRequest withLocation(Location location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class InsertTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public InsertTextRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public InsertTextRequest(){}
 }

@@ -18,6 +18,7 @@ public class GetCallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public GetCallsResponseEmbedded embedded;
+
     public GetCallsResponse withEmbedded(GetCallsResponseEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -26,6 +27,7 @@ public class GetCallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public GetCallsResponseLinks links;
+
     public GetCallsResponse withLinks(GetCallsResponseLinks links) {
         this.links = links;
         return this;
@@ -34,6 +36,7 @@ public class GetCallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public GetCallsResponse withCount(Long count) {
         this.count = count;
         return this;
@@ -42,6 +45,7 @@ public class GetCallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public GetCallsResponse withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -50,9 +54,11 @@ public class GetCallsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("record_index")
     public Long recordIndex;
+
     public GetCallsResponse withRecordIndex(Long recordIndex) {
         this.recordIndex = recordIndex;
         return this;
     }
     
+    public GetCallsResponse(){}
 }

@@ -15,6 +15,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeDataType")
     public AttributeDataTypeEnum attributeDataType;
+
     public SchemaAttributeType withAttributeDataType(AttributeDataTypeEnum attributeDataType) {
         this.attributeDataType = attributeDataType;
         return this;
@@ -23,6 +24,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeveloperOnlyAttribute")
     public Boolean developerOnlyAttribute;
+
     public SchemaAttributeType withDeveloperOnlyAttribute(Boolean developerOnlyAttribute) {
         this.developerOnlyAttribute = developerOnlyAttribute;
         return this;
@@ -31,6 +33,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mutable")
     public Boolean mutable;
+
     public SchemaAttributeType withMutable(Boolean mutable) {
         this.mutable = mutable;
         return this;
@@ -39,6 +42,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SchemaAttributeType withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberAttributeConstraints")
     public NumberAttributeConstraintsType numberAttributeConstraints;
+
     public SchemaAttributeType withNumberAttributeConstraints(NumberAttributeConstraintsType numberAttributeConstraints) {
         this.numberAttributeConstraints = numberAttributeConstraints;
         return this;
@@ -55,6 +60,7 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Required")
     public Boolean required;
+
     public SchemaAttributeType withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -63,9 +69,11 @@ public class SchemaAttributeType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StringAttributeConstraints")
     public StringAttributeConstraintsType stringAttributeConstraints;
+
     public SchemaAttributeType withStringAttributeConstraints(StringAttributeConstraintsType stringAttributeConstraints) {
         this.stringAttributeConstraints = stringAttributeConstraints;
         return this;
     }
     
+    public SchemaAttributeType(){}
 }

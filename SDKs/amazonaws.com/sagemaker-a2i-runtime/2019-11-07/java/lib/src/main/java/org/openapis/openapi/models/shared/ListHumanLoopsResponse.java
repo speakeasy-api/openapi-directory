@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListHumanLoopsResponse {
     @JsonProperty("HumanLoopSummaries")
     public HumanLoopSummary[] humanLoopSummaries;
+
     public ListHumanLoopsResponse withHumanLoopSummaries(HumanLoopSummary[] humanLoopSummaries) {
         this.humanLoopSummaries = humanLoopSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListHumanLoopsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHumanLoopsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHumanLoopsResponse(@JsonProperty("HumanLoopSummaries") HumanLoopSummary[] humanLoopSummaries) {
+        this.humanLoopSummaries = humanLoopSummaries;
+  }
 }

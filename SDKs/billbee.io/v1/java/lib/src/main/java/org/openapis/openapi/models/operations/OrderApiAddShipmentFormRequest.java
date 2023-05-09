@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiAddShipmentFormRequest {
@@ -12,6 +13,7 @@ public class OrderApiAddShipmentFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel;
+
     public OrderApiAddShipmentFormRequest withRechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel) {
         this.rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel = rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel;
         return this;
@@ -22,9 +24,14 @@ public class OrderApiAddShipmentFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiAddShipmentFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiAddShipmentFormRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.ApiAddShipmentToOrderModel") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel = rechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel;
+        this.id = id;
+  }
 }

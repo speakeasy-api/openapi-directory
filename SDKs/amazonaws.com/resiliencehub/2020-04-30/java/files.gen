@@ -301,4 +301,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateAppVersionAppComponen
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAppVersionResourceResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateResiliencyPolicyResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

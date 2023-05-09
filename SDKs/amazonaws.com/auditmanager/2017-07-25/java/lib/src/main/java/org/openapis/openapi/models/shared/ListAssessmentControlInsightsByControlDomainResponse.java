@@ -15,6 +15,7 @@ public class ListAssessmentControlInsightsByControlDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlInsightsByAssessment")
     public ControlInsightsMetadataByAssessmentItem[] controlInsightsByAssessment;
+
     public ListAssessmentControlInsightsByControlDomainResponse withControlInsightsByAssessment(ControlInsightsMetadataByAssessmentItem[] controlInsightsByAssessment) {
         this.controlInsightsByAssessment = controlInsightsByAssessment;
         return this;
@@ -23,9 +24,11 @@ public class ListAssessmentControlInsightsByControlDomainResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssessmentControlInsightsByControlDomainResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssessmentControlInsightsByControlDomainResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartTextTranslationJobResponse {
     
     public String contentType;
+
     public StartTextTranslationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object internalServerException;
+
     public StartTextTranslationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object invalidParameterValueException;
+
     public StartTextTranslationJobResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartTextTranslationJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartTextTranslationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartTextTranslationJobResponse startTextTranslationJobResponse;
+
     public StartTextTranslationJobResponse withStartTextTranslationJobResponse(org.openapis.openapi.models.shared.StartTextTranslationJobResponse startTextTranslationJobResponse) {
         this.startTextTranslationJobResponse = startTextTranslationJobResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartTextTranslationJobResponse {
     
     
     public Integer statusCode;
+
     public StartTextTranslationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartTextTranslationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartTextTranslationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartTextTranslationJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class StartTextTranslationJobResponse {
      */
     
     public Object unsupportedLanguagePairException;
+
     public StartTextTranslationJobResponse withUnsupportedLanguagePairException(Object unsupportedLanguagePairException) {
         this.unsupportedLanguagePairException = unsupportedLanguagePairException;
         return this;
     }
     
+    public StartTextTranslationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

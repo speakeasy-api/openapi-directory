@@ -15,6 +15,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("players")
     public BoxScorePlayers players;
+
     public BoxScore withPlayers(BoxScorePlayers players) {
         this.players = players;
         return this;
@@ -23,9 +24,11 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public BoxScoreTeams teams;
+
     public BoxScore withTeams(BoxScoreTeams teams) {
         this.teams = teams;
         return this;
     }
     
+    public BoxScore(){}
 }

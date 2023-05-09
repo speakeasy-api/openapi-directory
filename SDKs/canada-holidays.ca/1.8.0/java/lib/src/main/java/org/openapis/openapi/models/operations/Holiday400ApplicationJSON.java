@@ -15,9 +15,11 @@ public class Holiday400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public org.openapis.openapi.models.shared.Error error;
+
     public Holiday400ApplicationJSON withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
     }
     
+    public Holiday400ApplicationJSON(){}
 }

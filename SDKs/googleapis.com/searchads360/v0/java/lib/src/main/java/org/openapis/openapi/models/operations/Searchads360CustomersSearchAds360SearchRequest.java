@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Searchads360CustomersSearchAds360SearchRequest {
@@ -12,6 +13,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public Searchads360CustomersSearchAds360SearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request googleAdsSearchads360V0ServicesSearchSearchAds360Request;
+
     public Searchads360CustomersSearchAds360SearchRequest withGoogleAdsSearchads360V0ServicesSearchSearchAds360Request(org.openapis.openapi.models.shared.GoogleAdsSearchads360V0ServicesSearchSearchAds360Request googleAdsSearchads360V0ServicesSearchSearchAds360Request) {
         this.googleAdsSearchads360V0ServicesSearchSearchAds360Request = googleAdsSearchads360V0ServicesSearchSearchAds360Request;
         return this;
@@ -29,6 +32,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public Searchads360CustomersSearchAds360SearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public Searchads360CustomersSearchAds360SearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public Searchads360CustomersSearchAds360SearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public Searchads360CustomersSearchAds360SearchRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -69,6 +76,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public Searchads360CustomersSearchAds360SearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public Searchads360CustomersSearchAds360SearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public Searchads360CustomersSearchAds360SearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public Searchads360CustomersSearchAds360SearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public Searchads360CustomersSearchAds360SearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public Searchads360CustomersSearchAds360SearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class Searchads360CustomersSearchAds360SearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public Searchads360CustomersSearchAds360SearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public Searchads360CustomersSearchAds360SearchRequest(@JsonProperty("customerId") String customerId) {
+        this.customerId = customerId;
+  }
 }

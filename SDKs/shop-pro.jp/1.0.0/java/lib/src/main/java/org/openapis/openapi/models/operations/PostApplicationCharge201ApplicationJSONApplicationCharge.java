@@ -15,6 +15,7 @@ public class PostApplicationCharge201ApplicationJSONApplicationCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostApplicationCharge201ApplicationJSONApplicationCharge withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class PostApplicationCharge201ApplicationJSONApplicationCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("make_date")
     public Long makeDate;
+
     public PostApplicationCharge201ApplicationJSONApplicationCharge withMakeDate(Long makeDate) {
         this.makeDate = makeDate;
         return this;
@@ -37,6 +39,7 @@ public class PostApplicationCharge201ApplicationJSONApplicationCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point")
     public Long point;
+
     public PostApplicationCharge201ApplicationJSONApplicationCharge withPoint(Long point) {
         this.point = point;
         return this;
@@ -48,9 +51,11 @@ public class PostApplicationCharge201ApplicationJSONApplicationCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_date")
     public Long updateDate;
+
     public PostApplicationCharge201ApplicationJSONApplicationCharge withUpdateDate(Long updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public PostApplicationCharge201ApplicationJSONApplicationCharge(){}
 }

@@ -15,6 +15,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("account_id")
     public Long accountId;
+
     public ProjectCompletePrivate withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("collaborators")
     public Collaborator[] collaborators;
+
     public ProjectCompletePrivate withCollaborators(Collaborator[] collaborators) {
         this.collaborators = collaborators;
         return this;
@@ -35,6 +37,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public ProjectCompletePrivate withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -45,6 +48,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("custom_fields")
     public CustomArticleField[] customFields;
+
     public ProjectCompletePrivate withCustomFields(CustomArticleField[] customFields) {
         this.customFields = customFields;
         return this;
@@ -55,6 +59,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("description")
     public String description;
+
     public ProjectCompletePrivate withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("figshare_url")
     public String figshareUrl;
+
     public ProjectCompletePrivate withFigshareUrl(String figshareUrl) {
         this.figshareUrl = figshareUrl;
         return this;
@@ -75,6 +81,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("funding")
     public String funding;
+
     public ProjectCompletePrivate withFunding(String funding) {
         this.funding = funding;
         return this;
@@ -85,6 +92,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("funding_list")
     public FundingInformation[] fundingList;
+
     public ProjectCompletePrivate withFundingList(FundingInformation[] fundingList) {
         this.fundingList = fundingList;
         return this;
@@ -95,6 +103,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public ProjectCompletePrivate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -105,6 +114,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectCompletePrivate withId(Long id) {
         this.id = id;
         return this;
@@ -115,6 +125,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public ProjectCompletePrivate withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -125,6 +136,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("published_date")
     public String publishedDate;
+
     public ProjectCompletePrivate withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -135,6 +147,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("quota")
     public Long quota;
+
     public ProjectCompletePrivate withQuota(Long quota) {
         this.quota = quota;
         return this;
@@ -145,6 +158,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("role")
     public ProjectCompletePrivateRoleEnum role;
+
     public ProjectCompletePrivate withRole(ProjectCompletePrivateRoleEnum role) {
         this.role = role;
         return this;
@@ -155,6 +169,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("storage")
     public ProjectCompletePrivateStorageEnum storage;
+
     public ProjectCompletePrivate withStorage(ProjectCompletePrivateStorageEnum storage) {
         this.storage = storage;
         return this;
@@ -165,6 +180,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("title")
     public String title;
+
     public ProjectCompletePrivate withTitle(String title) {
         this.title = title;
         return this;
@@ -175,6 +191,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("url")
     public String url;
+
     public ProjectCompletePrivate withUrl(String url) {
         this.url = url;
         return this;
@@ -185,6 +202,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("used_quota")
     public Long usedQuota;
+
     public ProjectCompletePrivate withUsedQuota(Long usedQuota) {
         this.usedQuota = usedQuota;
         return this;
@@ -195,6 +213,7 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("used_quota_private")
     public Long usedQuotaPrivate;
+
     public ProjectCompletePrivate withUsedQuotaPrivate(Long usedQuotaPrivate) {
         this.usedQuotaPrivate = usedQuotaPrivate;
         return this;
@@ -205,9 +224,32 @@ public class ProjectCompletePrivate {
      */
     @JsonProperty("used_quota_public")
     public Long usedQuotaPublic;
+
     public ProjectCompletePrivate withUsedQuotaPublic(Long usedQuotaPublic) {
         this.usedQuotaPublic = usedQuotaPublic;
         return this;
     }
     
+    public ProjectCompletePrivate(@JsonProperty("account_id") Long accountId, @JsonProperty("collaborators") Collaborator[] collaborators, @JsonProperty("created_date") String createdDate, @JsonProperty("custom_fields") CustomArticleField[] customFields, @JsonProperty("description") String description, @JsonProperty("figshare_url") String figshareUrl, @JsonProperty("funding") String funding, @JsonProperty("funding_list") FundingInformation[] fundingList, @JsonProperty("group_id") Long groupId, @JsonProperty("id") Long id, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("published_date") String publishedDate, @JsonProperty("quota") Long quota, @JsonProperty("role") ProjectCompletePrivateRoleEnum role, @JsonProperty("storage") ProjectCompletePrivateStorageEnum storage, @JsonProperty("title") String title, @JsonProperty("url") String url, @JsonProperty("used_quota") Long usedQuota, @JsonProperty("used_quota_private") Long usedQuotaPrivate, @JsonProperty("used_quota_public") Long usedQuotaPublic) {
+        this.accountId = accountId;
+        this.collaborators = collaborators;
+        this.createdDate = createdDate;
+        this.customFields = customFields;
+        this.description = description;
+        this.figshareUrl = figshareUrl;
+        this.funding = funding;
+        this.fundingList = fundingList;
+        this.groupId = groupId;
+        this.id = id;
+        this.modifiedDate = modifiedDate;
+        this.publishedDate = publishedDate;
+        this.quota = quota;
+        this.role = role;
+        this.storage = storage;
+        this.title = title;
+        this.url = url;
+        this.usedQuota = usedQuota;
+        this.usedQuotaPrivate = usedQuotaPrivate;
+        this.usedQuotaPublic = usedQuotaPublic;
+  }
 }

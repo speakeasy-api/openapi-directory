@@ -12,6 +12,7 @@ public class RetrieveAllRequisitionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public RetrieveAllRequisitionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class RetrieveAllRequisitionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public RetrieveAllRequisitionsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public RetrieveAllRequisitionsRequest(){}
 }

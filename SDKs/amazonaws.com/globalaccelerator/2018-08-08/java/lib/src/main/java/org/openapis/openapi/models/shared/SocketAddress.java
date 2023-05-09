@@ -15,6 +15,7 @@ public class SocketAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public SocketAddress withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,9 +24,11 @@ public class SocketAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public SocketAddress withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public SocketAddress(){}
 }

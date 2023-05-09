@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBandwidthSnapshotsResponse {
@@ -12,6 +13,7 @@ public class GetBandwidthSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.BandwidthSnapshotEntity[] bandwidthSnapshotEntities;
+
     public GetBandwidthSnapshotsResponse withBandwidthSnapshotEntities(org.openapis.openapi.models.shared.BandwidthSnapshotEntity[] bandwidthSnapshotEntities) {
         this.bandwidthSnapshotEntities = bandwidthSnapshotEntities;
         return this;
@@ -19,6 +21,7 @@ public class GetBandwidthSnapshotsResponse {
     
     
     public String contentType;
+
     public GetBandwidthSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBandwidthSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public GetBandwidthSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetBandwidthSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBandwidthSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetBandwidthSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

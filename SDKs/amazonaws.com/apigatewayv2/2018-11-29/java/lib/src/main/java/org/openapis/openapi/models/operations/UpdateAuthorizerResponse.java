@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAuthorizerResponse {
@@ -12,6 +13,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object badRequestException;
+
     public UpdateAuthorizerResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object conflictException;
+
     public UpdateAuthorizerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAuthorizerResponse {
     
     
     public String contentType;
+
     public UpdateAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object notFoundException;
+
     public UpdateAuthorizerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public UpdateAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAuthorizerResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAuthorizerResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAuthorizerResponse updateAuthorizerResponse;
+
     public UpdateAuthorizerResponse withUpdateAuthorizerResponse(org.openapis.openapi.models.shared.UpdateAuthorizerResponse updateAuthorizerResponse) {
         this.updateAuthorizerResponse = updateAuthorizerResponse;
         return this;
     }
     
+    public UpdateAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

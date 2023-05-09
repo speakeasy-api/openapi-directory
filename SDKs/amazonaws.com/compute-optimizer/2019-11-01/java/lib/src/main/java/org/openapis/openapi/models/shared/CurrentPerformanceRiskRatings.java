@@ -15,6 +15,7 @@ public class CurrentPerformanceRiskRatings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Long high;
+
     public CurrentPerformanceRiskRatings withHigh(Long high) {
         this.high = high;
         return this;
@@ -23,6 +24,7 @@ public class CurrentPerformanceRiskRatings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Long low;
+
     public CurrentPerformanceRiskRatings withLow(Long low) {
         this.low = low;
         return this;
@@ -31,6 +33,7 @@ public class CurrentPerformanceRiskRatings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public Long medium;
+
     public CurrentPerformanceRiskRatings withMedium(Long medium) {
         this.medium = medium;
         return this;
@@ -39,9 +42,11 @@ public class CurrentPerformanceRiskRatings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("veryLow")
     public Long veryLow;
+
     public CurrentPerformanceRiskRatings withVeryLow(Long veryLow) {
         this.veryLow = veryLow;
         return this;
     }
     
+    public CurrentPerformanceRiskRatings(){}
 }

@@ -15,6 +15,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public Dimension[] dimensions;
+
     public Record withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureName")
     public String measureName;
+
     public Record withMeasureName(String measureName) {
         this.measureName = measureName;
         return this;
@@ -31,6 +33,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureValue")
     public String measureValue;
+
     public Record withMeasureValue(String measureValue) {
         this.measureValue = measureValue;
         return this;
@@ -39,6 +42,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureValueType")
     public MeasureValueTypeEnum measureValueType;
+
     public Record withMeasureValueType(MeasureValueTypeEnum measureValueType) {
         this.measureValueType = measureValueType;
         return this;
@@ -47,6 +51,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureValues")
     public MeasureValue[] measureValues;
+
     public Record withMeasureValues(MeasureValue[] measureValues) {
         this.measureValues = measureValues;
         return this;
@@ -55,6 +60,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Time")
     public String time;
+
     public Record withTime(String time) {
         this.time = time;
         return this;
@@ -63,6 +69,7 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeUnit")
     public TimeUnitEnum timeUnit;
+
     public Record withTimeUnit(TimeUnitEnum timeUnit) {
         this.timeUnit = timeUnit;
         return this;
@@ -71,9 +78,11 @@ public class Record {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public Record withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Record(){}
 }

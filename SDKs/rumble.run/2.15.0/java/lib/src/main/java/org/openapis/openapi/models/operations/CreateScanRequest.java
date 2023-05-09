@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateScanRequest {
     @SpeakeasyMetadata("request:mediaType=text/json")
     public org.openapis.openapi.models.shared.ScanOptions scanOptions;
+
     public CreateScanRequest withScanOptions(org.openapis.openapi.models.shared.ScanOptions scanOptions) {
         this.scanOptions = scanOptions;
         return this;
@@ -19,9 +21,13 @@ public class CreateScanRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=site_id")
     public String siteId;
+
     public CreateScanRequest withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public CreateScanRequest(@JsonProperty("site_id") String siteId) {
+        this.siteId = siteId;
+  }
 }

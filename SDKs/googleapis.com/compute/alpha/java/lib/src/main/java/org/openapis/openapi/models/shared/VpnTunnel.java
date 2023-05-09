@@ -18,6 +18,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public VpnTunnel withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public VpnTunnel withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailedStatus")
     public String detailedStatus;
+
     public VpnTunnel withDetailedStatus(String detailedStatus) {
         this.detailedStatus = detailedStatus;
         return this;
@@ -51,6 +54,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VpnTunnel withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeVersion")
     public Integer ikeVersion;
+
     public VpnTunnel withIkeVersion(Integer ikeVersion) {
         this.ikeVersion = ikeVersion;
         return this;
@@ -73,6 +78,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public VpnTunnel withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public VpnTunnel withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -95,6 +102,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public VpnTunnel withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +114,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTrafficSelector")
     public String[] localTrafficSelector;
+
     public VpnTunnel withLocalTrafficSelector(String[] localTrafficSelector) {
         this.localTrafficSelector = localTrafficSelector;
         return this;
@@ -117,6 +126,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VpnTunnel withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerExternalGateway")
     public String peerExternalGateway;
+
     public VpnTunnel withPeerExternalGateway(String peerExternalGateway) {
         this.peerExternalGateway = peerExternalGateway;
         return this;
@@ -139,6 +150,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerExternalGatewayInterface")
     public Integer peerExternalGatewayInterface;
+
     public VpnTunnel withPeerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
         this.peerExternalGatewayInterface = peerExternalGatewayInterface;
         return this;
@@ -150,6 +162,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerGcpGateway")
     public String peerGcpGateway;
+
     public VpnTunnel withPeerGcpGateway(String peerGcpGateway) {
         this.peerGcpGateway = peerGcpGateway;
         return this;
@@ -161,6 +174,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerIp")
     public String peerIp;
+
     public VpnTunnel withPeerIp(String peerIp) {
         this.peerIp = peerIp;
         return this;
@@ -172,6 +186,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public VpnTunnel withRegion(String region) {
         this.region = region;
         return this;
@@ -183,6 +198,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteTrafficSelector")
     public String[] remoteTrafficSelector;
+
     public VpnTunnel withRemoteTrafficSelector(String[] remoteTrafficSelector) {
         this.remoteTrafficSelector = remoteTrafficSelector;
         return this;
@@ -194,6 +210,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("router")
     public String router;
+
     public VpnTunnel withRouter(String router) {
         this.router = router;
         return this;
@@ -205,6 +222,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public VpnTunnel withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -216,6 +234,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedSecret")
     public String sharedSecret;
+
     public VpnTunnel withSharedSecret(String sharedSecret) {
         this.sharedSecret = sharedSecret;
         return this;
@@ -227,6 +246,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedSecretHash")
     public String sharedSecretHash;
+
     public VpnTunnel withSharedSecretHash(String sharedSecretHash) {
         this.sharedSecretHash = sharedSecretHash;
         return this;
@@ -238,6 +258,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VpnTunnelStatusEnum status;
+
     public VpnTunnel withStatus(VpnTunnelStatusEnum status) {
         this.status = status;
         return this;
@@ -249,6 +270,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetVpnGateway")
     public String targetVpnGateway;
+
     public VpnTunnel withTargetVpnGateway(String targetVpnGateway) {
         this.targetVpnGateway = targetVpnGateway;
         return this;
@@ -260,6 +282,7 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnGateway")
     public String vpnGateway;
+
     public VpnTunnel withVpnGateway(String vpnGateway) {
         this.vpnGateway = vpnGateway;
         return this;
@@ -271,9 +294,11 @@ public class VpnTunnel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnGatewayInterface")
     public Integer vpnGatewayInterface;
+
     public VpnTunnel withVpnGatewayInterface(Integer vpnGatewayInterface) {
         this.vpnGatewayInterface = vpnGatewayInterface;
         return this;
     }
     
+    public VpnTunnel(){}
 }

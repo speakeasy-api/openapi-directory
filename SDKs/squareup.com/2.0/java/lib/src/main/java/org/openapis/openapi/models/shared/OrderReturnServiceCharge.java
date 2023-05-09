@@ -23,6 +23,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public OrderReturnServiceCharge withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -39,6 +40,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderReturnServiceCharge withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -54,6 +56,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_taxes")
     public OrderLineItemAppliedTax[] appliedTaxes;
+
     public OrderReturnServiceCharge withAppliedTaxes(OrderLineItemAppliedTax[] appliedTaxes) {
         this.appliedTaxes = appliedTaxes;
         return this;
@@ -65,6 +68,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculation_phase")
     public String calculationPhase;
+
     public OrderReturnServiceCharge withCalculationPhase(String calculationPhase) {
         this.calculationPhase = calculationPhase;
         return this;
@@ -76,6 +80,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderReturnServiceCharge withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -87,6 +92,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderReturnServiceCharge withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -98,6 +104,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderReturnServiceCharge withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +120,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public OrderReturnServiceCharge withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -126,6 +134,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_service_charge_uid")
     public String sourceServiceChargeUid;
+
     public OrderReturnServiceCharge withSourceServiceChargeUid(String sourceServiceChargeUid) {
         this.sourceServiceChargeUid = sourceServiceChargeUid;
         return this;
@@ -138,6 +147,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxable")
     public Boolean taxable;
+
     public OrderReturnServiceCharge withTaxable(Boolean taxable) {
         this.taxable = taxable;
         return this;
@@ -154,6 +164,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public Money totalMoney;
+
     public OrderReturnServiceCharge withTotalMoney(Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
@@ -170,6 +181,7 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_tax_money")
     public Money totalTaxMoney;
+
     public OrderReturnServiceCharge withTotalTaxMoney(Money totalTaxMoney) {
         this.totalTaxMoney = totalTaxMoney;
         return this;
@@ -181,9 +193,11 @@ public class OrderReturnServiceCharge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturnServiceCharge withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderReturnServiceCharge(){}
 }

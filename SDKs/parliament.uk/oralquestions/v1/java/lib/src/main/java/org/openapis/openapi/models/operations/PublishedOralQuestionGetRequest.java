@@ -13,6 +13,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringBodyIds")
     public Integer[] parametersAnsweringBodyIds;
+
     public PublishedOralQuestionGetRequest withParametersAnsweringBodyIds(Integer[] parametersAnsweringBodyIds) {
         this.parametersAnsweringBodyIds = parametersAnsweringBodyIds;
         return this;
@@ -23,6 +24,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateEnd")
     public OffsetDateTime parametersAnsweringDateEnd;
+
     public PublishedOralQuestionGetRequest withParametersAnsweringDateEnd(OffsetDateTime parametersAnsweringDateEnd) {
         this.parametersAnsweringDateEnd = parametersAnsweringDateEnd;
         return this;
@@ -33,6 +35,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.answeringDateStart")
     public OffsetDateTime parametersAnsweringDateStart;
+
     public PublishedOralQuestionGetRequest withParametersAnsweringDateStart(OffsetDateTime parametersAnsweringDateStart) {
         this.parametersAnsweringDateStart = parametersAnsweringDateStart;
         return this;
@@ -43,6 +46,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.askingMemberIds")
     public Integer[] parametersAskingMemberIds;
+
     public PublishedOralQuestionGetRequest withParametersAskingMemberIds(Integer[] parametersAskingMemberIds) {
         this.parametersAskingMemberIds = parametersAskingMemberIds;
         return this;
@@ -53,6 +57,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.oralQuestionTimeId")
     public Integer parametersOralQuestionTimeId;
+
     public PublishedOralQuestionGetRequest withParametersOralQuestionTimeId(Integer parametersOralQuestionTimeId) {
         this.parametersOralQuestionTimeId = parametersOralQuestionTimeId;
         return this;
@@ -63,6 +68,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.questionType")
     public PublishedOralQuestionGetParametersQuestionTypeEnum parametersQuestionType;
+
     public PublishedOralQuestionGetRequest withParametersQuestionType(PublishedOralQuestionGetParametersQuestionTypeEnum parametersQuestionType) {
         this.parametersQuestionType = parametersQuestionType;
         return this;
@@ -73,6 +79,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.skip")
     public Integer parametersSkip;
+
     public PublishedOralQuestionGetRequest withParametersSkip(Integer parametersSkip) {
         this.parametersSkip = parametersSkip;
         return this;
@@ -83,6 +90,7 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.take")
     public Integer parametersTake;
+
     public PublishedOralQuestionGetRequest withParametersTake(Integer parametersTake) {
         this.parametersTake = parametersTake;
         return this;
@@ -93,9 +101,11 @@ public class PublishedOralQuestionGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameters.uINs")
     public Integer[] parametersUINs;
+
     public PublishedOralQuestionGetRequest withParametersUINs(Integer[] parametersUINs) {
         this.parametersUINs = parametersUINs;
         return this;
     }
     
+    public PublishedOralQuestionGetRequest(){}
 }

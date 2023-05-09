@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListParallelDataResponse {
     
     public String contentType;
+
     public ListParallelDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListParallelDataResponse {
      */
     
     public Object internalServerException;
+
     public ListParallelDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListParallelDataResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListParallelDataResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class ListParallelDataResponse {
      */
     
     public org.openapis.openapi.models.shared.ListParallelDataResponse listParallelDataResponse;
+
     public ListParallelDataResponse withListParallelDataResponse(org.openapis.openapi.models.shared.ListParallelDataResponse listParallelDataResponse) {
         this.listParallelDataResponse = listParallelDataResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListParallelDataResponse {
     
     
     public Integer statusCode;
+
     public ListParallelDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListParallelDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListParallelDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListParallelDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListParallelDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListParallelDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnlabelParameterVersionResponse {
     
     public String contentType;
+
     public UnlabelParameterVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UnlabelParameterVersionResponse {
      */
     
     public Object internalServerError;
+
     public UnlabelParameterVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class UnlabelParameterVersionResponse {
      */
     
     public Object parameterNotFound;
+
     public UnlabelParameterVersionResponse withParameterNotFound(Object parameterNotFound) {
         this.parameterNotFound = parameterNotFound;
         return this;
@@ -39,6 +43,7 @@ public class UnlabelParameterVersionResponse {
      */
     
     public Object parameterVersionNotFound;
+
     public UnlabelParameterVersionResponse withParameterVersionNotFound(Object parameterVersionNotFound) {
         this.parameterVersionNotFound = parameterVersionNotFound;
         return this;
@@ -46,6 +51,7 @@ public class UnlabelParameterVersionResponse {
     
     
     public Integer statusCode;
+
     public UnlabelParameterVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UnlabelParameterVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnlabelParameterVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UnlabelParameterVersionResponse {
      */
     
     public Object tooManyUpdates;
+
     public UnlabelParameterVersionResponse withTooManyUpdates(Object tooManyUpdates) {
         this.tooManyUpdates = tooManyUpdates;
         return this;
@@ -73,9 +81,14 @@ public class UnlabelParameterVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UnlabelParameterVersionResult unlabelParameterVersionResult;
+
     public UnlabelParameterVersionResponse withUnlabelParameterVersionResult(org.openapis.openapi.models.shared.UnlabelParameterVersionResult unlabelParameterVersionResult) {
         this.unlabelParameterVersionResult = unlabelParameterVersionResult;
         return this;
     }
     
+    public UnlabelParameterVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

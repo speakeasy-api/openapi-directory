@@ -15,6 +15,7 @@ public class GetTimeSeriesServiceStatisticsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsOldGroupVersions")
     public Boolean containsOldGroupVersions;
+
     public GetTimeSeriesServiceStatisticsResult withContainsOldGroupVersions(Boolean containsOldGroupVersions) {
         this.containsOldGroupVersions = containsOldGroupVersions;
         return this;
@@ -23,6 +24,7 @@ public class GetTimeSeriesServiceStatisticsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTimeSeriesServiceStatisticsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class GetTimeSeriesServiceStatisticsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesServiceStatistics")
     public TimeSeriesServiceStatistics[] timeSeriesServiceStatistics;
+
     public GetTimeSeriesServiceStatisticsResult withTimeSeriesServiceStatistics(TimeSeriesServiceStatistics[] timeSeriesServiceStatistics) {
         this.timeSeriesServiceStatistics = timeSeriesServiceStatistics;
         return this;
     }
     
+    public GetTimeSeriesServiceStatisticsResult(){}
 }

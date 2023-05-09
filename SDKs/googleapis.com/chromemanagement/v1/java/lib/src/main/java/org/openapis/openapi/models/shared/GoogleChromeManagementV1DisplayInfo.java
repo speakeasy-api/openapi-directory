@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public GoogleChromeManagementV1DisplayInfo withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleChromeManagementV1DisplayInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInternal")
     public Boolean isInternal;
+
     public GoogleChromeManagementV1DisplayInfo withIsInternal(Boolean isInternal) {
         this.isInternal = isInternal;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshRate")
     public Integer refreshRate;
+
     public GoogleChromeManagementV1DisplayInfo withRefreshRate(Integer refreshRate) {
         this.refreshRate = refreshRate;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolutionHeight")
     public Integer resolutionHeight;
+
     public GoogleChromeManagementV1DisplayInfo withResolutionHeight(Integer resolutionHeight) {
         this.resolutionHeight = resolutionHeight;
         return this;
@@ -73,9 +78,11 @@ public class GoogleChromeManagementV1DisplayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolutionWidth")
     public Integer resolutionWidth;
+
     public GoogleChromeManagementV1DisplayInfo withResolutionWidth(Integer resolutionWidth) {
         this.resolutionWidth = resolutionWidth;
         return this;
     }
     
+    public GoogleChromeManagementV1DisplayInfo(){}
 }

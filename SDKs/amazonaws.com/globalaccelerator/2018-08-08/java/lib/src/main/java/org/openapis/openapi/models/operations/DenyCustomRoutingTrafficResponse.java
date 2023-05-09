@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DenyCustomRoutingTrafficResponse {
     
     public String contentType;
+
     public DenyCustomRoutingTrafficResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DenyCustomRoutingTrafficResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public DenyCustomRoutingTrafficResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DenyCustomRoutingTrafficResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DenyCustomRoutingTrafficResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DenyCustomRoutingTrafficResponse {
      */
     
     public Object invalidArgumentException;
+
     public DenyCustomRoutingTrafficResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -46,6 +51,7 @@ public class DenyCustomRoutingTrafficResponse {
     
     
     public Integer statusCode;
+
     public DenyCustomRoutingTrafficResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DenyCustomRoutingTrafficResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DenyCustomRoutingTrafficResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DenyCustomRoutingTrafficResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

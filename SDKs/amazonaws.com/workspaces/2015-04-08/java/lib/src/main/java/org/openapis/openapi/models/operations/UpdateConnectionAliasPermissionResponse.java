@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateConnectionAliasPermissionResponse {
@@ -12,6 +13,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateConnectionAliasPermissionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateConnectionAliasPermissionResponse {
     
     
     public String contentType;
+
     public UpdateConnectionAliasPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public UpdateConnectionAliasPermissionResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object invalidResourceStateException;
+
     public UpdateConnectionAliasPermissionResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object operationNotSupportedException;
+
     public UpdateConnectionAliasPermissionResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object resourceAssociatedException;
+
     public UpdateConnectionAliasPermissionResponse withResourceAssociatedException(Object resourceAssociatedException) {
         this.resourceAssociatedException = resourceAssociatedException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public UpdateConnectionAliasPermissionResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateConnectionAliasPermissionResponse {
     
     
     public Integer statusCode;
+
     public UpdateConnectionAliasPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateConnectionAliasPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateConnectionAliasPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateConnectionAliasPermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateConnectionAliasPermissionResponse {
      */
     
     public java.util.Map<String, Object> updateConnectionAliasPermissionResult;
+
     public UpdateConnectionAliasPermissionResponse withUpdateConnectionAliasPermissionResult(java.util.Map<String, Object> updateConnectionAliasPermissionResult) {
         this.updateConnectionAliasPermissionResult = updateConnectionAliasPermissionResult;
         return this;
     }
     
+    public UpdateConnectionAliasPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -58,11 +58,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClientsIdClientResponse res = new org.openapis.openapi.models.operations.DeleteClientsIdClientResponse() {{
+        org.openapis.openapi.models.operations.DeleteClientsIdClientResponse res = new org.openapis.openapi.models.operations.DeleteClientsIdClientResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClientsIdClientLogoResponse res = new org.openapis.openapi.models.operations.DeleteClientsIdClientLogoResponse() {{
+        org.openapis.openapi.models.operations.DeleteClientsIdClientLogoResponse res = new org.openapis.openapi.models.operations.DeleteClientsIdClientLogoResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -191,11 +185,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksAuthResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksAuthResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksAuthResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksAuthResponse(contentType, httpRes.statusCode()) {{
             authProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksAuthIdAuthResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksAuthIdAuthResponse(contentType, httpRes.statusCode()) {{
             authProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -325,11 +313,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -369,11 +355,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataKeyResponse() {{
+        org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.DeleteWebhooksIdWebhookAddToDataKeyResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,11 +397,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClientsResponse res = new org.openapis.openapi.models.operations.GetClientsResponse() {{
+        org.openapis.openapi.models.operations.GetClientsResponse res = new org.openapis.openapi.models.operations.GetClientsResponse(contentType, httpRes.statusCode()) {{
             getClients200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -458,11 +440,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClientsIdClientResponse res = new org.openapis.openapi.models.operations.GetClientsIdClientResponse() {{
+        org.openapis.openapi.models.operations.GetClientsIdClientResponse res = new org.openapis.openapi.models.operations.GetClientsIdClientResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -503,10 +483,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse() {{
+        org.openapis.openapi.models.operations.GetConfigResponse res = new org.openapis.openapi.models.operations.GetConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -542,11 +520,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigLogsResponse res = new org.openapis.openapi.models.operations.GetConfigLogsResponse() {{
+        org.openapis.openapi.models.operations.GetConfigLogsResponse res = new org.openapis.openapi.models.operations.GetConfigLogsResponse(contentType, httpRes.statusCode()) {{
             getConfigLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -586,10 +562,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMonitoringResponse res = new org.openapis.openapi.models.operations.GetMonitoringResponse() {{
+        org.openapis.openapi.models.operations.GetMonitoringResponse res = new org.openapis.openapi.models.operations.GetMonitoringResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,10 +591,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublickeyResponse res = new org.openapis.openapi.models.operations.GetPublickeyResponse() {{
+        org.openapis.openapi.models.operations.GetPublickeyResponse res = new org.openapis.openapi.models.operations.GetPublickeyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -655,11 +627,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksResponse res = new org.openapis.openapi.models.operations.GetWebhooksResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksResponse res = new org.openapis.openapi.models.operations.GetWebhooksResponse(contentType, httpRes.statusCode()) {{
             getWebhooks200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -699,11 +669,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksAuthResponse res = new org.openapis.openapi.models.operations.GetWebhooksAuthResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksAuthResponse res = new org.openapis.openapi.models.operations.GetWebhooksAuthResponse(contentType, httpRes.statusCode()) {{
             getWebhooksAuth200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -743,11 +711,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataResponse(contentType, httpRes.statusCode()) {{
             getWebhooksIdWebhookAddToData200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -787,11 +753,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataKeyResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookAddToDataKeyResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -832,11 +796,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWebhooksIdWebhookLogsResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookLogsResponse() {{
+        org.openapis.openapi.models.operations.GetWebhooksIdWebhookLogsResponse res = new org.openapis.openapi.models.operations.GetWebhooksIdWebhookLogsResponse(contentType, httpRes.statusCode()) {{
             getWebhooksIdWebhookLogs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -878,11 +840,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostClientsResponse res = new org.openapis.openapi.models.operations.PostClientsResponse() {{
+        org.openapis.openapi.models.operations.PostClientsResponse res = new org.openapis.openapi.models.operations.PostClientsResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -922,11 +882,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostClientsIdClientLogoResponse res = new org.openapis.openapi.models.operations.PostClientsIdClientLogoResponse() {{
+        org.openapis.openapi.models.operations.PostClientsIdClientLogoResponse res = new org.openapis.openapi.models.operations.PostClientsIdClientLogoResponse(contentType, httpRes.statusCode()) {{
             file = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -959,10 +917,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostConfigResponse res = new org.openapis.openapi.models.operations.PostConfigResponse() {{
+        org.openapis.openapi.models.operations.PostConfigResponse res = new org.openapis.openapi.models.operations.PostConfigResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -991,10 +947,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTestSyncResponse res = new org.openapis.openapi.models.operations.PostTestSyncResponse() {{
+        org.openapis.openapi.models.operations.PostTestSyncResponse res = new org.openapis.openapi.models.operations.PostTestSyncResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1023,10 +977,8 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTestWebhooksResponse res = new org.openapis.openapi.models.operations.PostTestWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostTestWebhooksResponse res = new org.openapis.openapi.models.operations.PostTestWebhooksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1063,11 +1015,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksResponse res = new org.openapis.openapi.models.operations.PostWebhooksResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksResponse res = new org.openapis.openapi.models.operations.PostWebhooksResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1112,11 +1062,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksAuthResponse res = new org.openapis.openapi.models.operations.PostWebhooksAuthResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksAuthResponse res = new org.openapis.openapi.models.operations.PostWebhooksAuthResponse(contentType, httpRes.statusCode()) {{
             authProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1161,11 +1109,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.PostWebhooksAuthIdAuthResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.PostWebhooksAuthIdAuthResponse(contentType, httpRes.statusCode()) {{
             authProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1207,11 +1153,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,11 +1196,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1297,11 +1239,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataKeyResponse() {{
+        org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataKeyResponse res = new org.openapis.openapi.models.operations.PostWebhooksIdWebhookAddToDataKeyResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1343,11 +1283,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutClientsIdClientResponse res = new org.openapis.openapi.models.operations.PutClientsIdClientResponse() {{
+        org.openapis.openapi.models.operations.PutClientsIdClientResponse res = new org.openapis.openapi.models.operations.PutClientsIdClientResponse(contentType, httpRes.statusCode()) {{
             client = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1392,11 +1330,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.PutWebhooksAuthIdAuthResponse() {{
+        org.openapis.openapi.models.operations.PutWebhooksAuthIdAuthResponse res = new org.openapis.openapi.models.operations.PutWebhooksAuthIdAuthResponse(contentType, httpRes.statusCode()) {{
             authProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1438,11 +1374,9 @@ public class Administration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.PutWebhooksIdWebhookResponse() {{
+        org.openapis.openapi.models.operations.PutWebhooksIdWebhookResponse res = new org.openapis.openapi.models.operations.PutWebhooksIdWebhookResponse(contentType, httpRes.statusCode()) {{
             webhook = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

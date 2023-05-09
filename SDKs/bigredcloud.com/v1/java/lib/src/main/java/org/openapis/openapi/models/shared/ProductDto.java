@@ -15,6 +15,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String[] details;
+
     public ProductDto withDetails(String[] details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grossUnitPrice")
     public Boolean grossUnitPrice;
+
     public ProductDto withGrossUnitPrice(Boolean grossUnitPrice) {
         this.grossUnitPrice = grossUnitPrice;
         return this;
@@ -31,6 +33,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasDefaultVatRate")
     public Boolean hasDefaultVatRate;
+
     public ProductDto withHasDefaultVatRate(Boolean hasDefaultVatRate) {
         this.hasDefaultVatRate = hasDefaultVatRate;
         return this;
@@ -39,6 +42,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProductDto withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypeId")
     public Long productTypeId;
+
     public ProductDto withProductTypeId(Long productTypeId) {
         this.productTypeId = productTypeId;
         return this;
@@ -55,6 +60,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockCode")
     public String stockCode;
+
     public ProductDto withStockCode(String stockCode) {
         this.stockCode = stockCode;
         return this;
@@ -63,6 +69,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public ProductDto withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -71,6 +78,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPrice")
     public Double unitPrice;
+
     public ProductDto withUnitPrice(Double unitPrice) {
         this.unitPrice = unitPrice;
         return this;
@@ -79,6 +87,7 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatAnalysisTypeId")
     public Long vatAnalysisTypeId;
+
     public ProductDto withVatAnalysisTypeId(Long vatAnalysisTypeId) {
         this.vatAnalysisTypeId = vatAnalysisTypeId;
         return this;
@@ -87,9 +96,11 @@ public class ProductDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatRateId")
     public Long vatRateId;
+
     public ProductDto withVatRateId(Long vatRateId) {
         this.vatRateId = vatRateId;
         return this;
     }
     
+    public ProductDto(){}
 }

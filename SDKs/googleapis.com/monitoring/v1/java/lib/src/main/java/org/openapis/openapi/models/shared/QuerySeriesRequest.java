@@ -18,6 +18,7 @@ public class QuerySeriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public QuerySeriesRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -29,9 +30,11 @@ public class QuerySeriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public QuerySeriesRequest withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public QuerySeriesRequest(){}
 }

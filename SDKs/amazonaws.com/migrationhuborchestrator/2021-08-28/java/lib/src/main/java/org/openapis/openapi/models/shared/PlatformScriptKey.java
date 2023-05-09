@@ -15,6 +15,7 @@ public class PlatformScriptKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linux")
     public String linux;
+
     public PlatformScriptKey withLinux(String linux) {
         this.linux = linux;
         return this;
@@ -23,9 +24,11 @@ public class PlatformScriptKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windows")
     public String windows;
+
     public PlatformScriptKey withWindows(String windows) {
         this.windows = windows;
         return this;
     }
     
+    public PlatformScriptKey(){}
 }

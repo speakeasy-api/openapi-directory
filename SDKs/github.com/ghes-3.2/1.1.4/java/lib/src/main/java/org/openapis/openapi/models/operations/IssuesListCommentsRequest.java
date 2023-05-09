@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
     public Long issueNumber;
+
     public IssuesListCommentsRequest withIssueNumber(Long issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -23,6 +25,7 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesListCommentsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,6 +36,7 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public IssuesListCommentsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -43,6 +47,7 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public IssuesListCommentsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -53,6 +58,7 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesListCommentsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -63,9 +69,15 @@ public class IssuesListCommentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public OffsetDateTime since;
+
     public IssuesListCommentsRequest withSince(OffsetDateTime since) {
         this.since = since;
         return this;
     }
     
+    public IssuesListCommentsRequest(@JsonProperty("issue_number") Long issueNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.issueNumber = issueNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

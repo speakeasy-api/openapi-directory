@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
@@ -12,6 +13,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=agentId")
     public String agentId;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -42,6 +46,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=debuggeeId")
     public String debuggeeId;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withDebuggeeId(String debuggeeId) {
         this.debuggeeId = debuggeeId;
         return this;
@@ -72,6 +79,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=successOnTimeout")
     public Boolean successOnTimeout;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withSuccessOnTimeout(Boolean successOnTimeout) {
         this.successOnTimeout = successOnTimeout;
         return this;
@@ -132,6 +145,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,13 @@ public class ClouddebuggerControllerDebuggeesBreakpointsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=waitToken")
     public String waitToken;
+
     public ClouddebuggerControllerDebuggeesBreakpointsListRequest withWaitToken(String waitToken) {
         this.waitToken = waitToken;
         return this;
     }
     
+    public ClouddebuggerControllerDebuggeesBreakpointsListRequest(@JsonProperty("debuggeeId") String debuggeeId) {
+        this.debuggeeId = debuggeeId;
+  }
 }

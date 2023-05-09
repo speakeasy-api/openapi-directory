@@ -18,6 +18,7 @@ public class ListRuntimesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRuntimesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListRuntimesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimes")
     public Runtime[] runtimes;
+
     public ListRuntimesResponse withRuntimes(Runtime[] runtimes) {
         this.runtimes = runtimes;
         return this;
@@ -40,9 +42,11 @@ public class ListRuntimesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListRuntimesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListRuntimesResponse(){}
 }

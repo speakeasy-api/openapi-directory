@@ -18,6 +18,7 @@ public class MetadataCredentialsFromPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MetadataCredentialsFromPlugin withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class MetadataCredentialsFromPlugin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structConfig")
     public String structConfig;
+
     public MetadataCredentialsFromPlugin withStructConfig(String structConfig) {
         this.structConfig = structConfig;
         return this;
     }
     
+    public MetadataCredentialsFromPlugin(){}
 }

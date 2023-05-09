@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetContactsForStudentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetContactsForStudentRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +18,13 @@ public class GetContactsForStudentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetContactsForStudentRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetContactsForStudentRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

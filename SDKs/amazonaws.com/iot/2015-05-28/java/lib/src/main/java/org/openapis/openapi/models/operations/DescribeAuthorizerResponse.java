@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAuthorizerResponse {
     
     public String contentType;
+
     public DescribeAuthorizerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAuthorizerResponse describeAuthorizerResponse;
+
     public DescribeAuthorizerResponse withDescribeAuthorizerResponse(org.openapis.openapi.models.shared.DescribeAuthorizerResponse describeAuthorizerResponse) {
         this.describeAuthorizerResponse = describeAuthorizerResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeAuthorizerResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAuthorizerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAuthorizerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeAuthorizerResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeAuthorizerResponse {
     
     
     public Integer statusCode;
+
     public DescribeAuthorizerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAuthorizerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAuthorizerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAuthorizerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeAuthorizerResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeAuthorizerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeAuthorizerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

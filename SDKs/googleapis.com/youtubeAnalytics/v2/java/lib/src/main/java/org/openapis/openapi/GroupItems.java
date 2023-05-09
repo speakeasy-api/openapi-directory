@@ -59,11 +59,9 @@ public class GroupItems {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsDeleteResponse(contentType, httpRes.statusCode()) {{
             emptyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class GroupItems {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsInsertResponse(contentType, httpRes.statusCode()) {{
             groupItem = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class GroupItems {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse res = new org.openapis.openapi.models.operations.YoutubeAnalyticsGroupItemsListResponse(contentType, httpRes.statusCode()) {{
             listGroupItemsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

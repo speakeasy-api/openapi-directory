@@ -15,6 +15,7 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("height")
     public Float height;
+
     public ImageRegionCreateEntry withHeight(Float height) {
         this.height = height;
         return this;
@@ -25,6 +26,7 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("imageId")
     public String imageId;
+
     public ImageRegionCreateEntry withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -35,6 +37,7 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("left")
     public Float left;
+
     public ImageRegionCreateEntry withLeft(Float left) {
         this.left = left;
         return this;
@@ -45,6 +48,7 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("tagId")
     public String tagId;
+
     public ImageRegionCreateEntry withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -55,6 +59,7 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("top")
     public Float top;
+
     public ImageRegionCreateEntry withTop(Float top) {
         this.top = top;
         return this;
@@ -65,9 +70,18 @@ public class ImageRegionCreateEntry {
      */
     @JsonProperty("width")
     public Float width;
+
     public ImageRegionCreateEntry withWidth(Float width) {
         this.width = width;
         return this;
     }
     
+    public ImageRegionCreateEntry(@JsonProperty("height") Float height, @JsonProperty("imageId") String imageId, @JsonProperty("left") Float left, @JsonProperty("tagId") String tagId, @JsonProperty("top") Float top, @JsonProperty("width") Float width) {
+        this.height = height;
+        this.imageId = imageId;
+        this.left = left;
+        this.tagId = tagId;
+        this.top = top;
+        this.width = width;
+  }
 }

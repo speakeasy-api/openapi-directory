@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportAddress {
     @JsonProperty("content")
     public String content;
+
     public ExportAddress withContent(String content) {
         this.content = content;
         return this;
@@ -16,6 +17,7 @@ public class ExportAddress {
     
     @JsonProperty("filename")
     public String filename;
+
     public ExportAddress withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -23,9 +25,15 @@ public class ExportAddress {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ExportAddress withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public ExportAddress(@JsonProperty("content") String content, @JsonProperty("filename") String filename, @JsonProperty("ok") Boolean ok) {
+        this.content = content;
+        this.filename = filename;
+        this.ok = ok;
+  }
 }

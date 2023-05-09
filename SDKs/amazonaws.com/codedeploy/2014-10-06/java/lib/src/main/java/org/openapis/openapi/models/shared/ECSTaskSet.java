@@ -15,6 +15,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredCount")
     public Long desiredCount;
+
     public ECSTaskSet withDesiredCount(Long desiredCount) {
         this.desiredCount = desiredCount;
         return this;
@@ -23,6 +24,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifer")
     public String identifer;
+
     public ECSTaskSet withIdentifer(String identifer) {
         this.identifer = identifer;
         return this;
@@ -31,6 +33,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingCount")
     public Long pendingCount;
+
     public ECSTaskSet withPendingCount(Long pendingCount) {
         this.pendingCount = pendingCount;
         return this;
@@ -39,6 +42,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runningCount")
     public Long runningCount;
+
     public ECSTaskSet withRunningCount(Long runningCount) {
         this.runningCount = runningCount;
         return this;
@@ -47,6 +51,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ECSTaskSet withStatus(String status) {
         this.status = status;
         return this;
@@ -55,6 +60,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGroup")
     public TargetGroupInfo targetGroup;
+
     public ECSTaskSet withTargetGroup(TargetGroupInfo targetGroup) {
         this.targetGroup = targetGroup;
         return this;
@@ -63,6 +69,7 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskSetLabel")
     public TargetLabelEnum taskSetLabel;
+
     public ECSTaskSet withTaskSetLabel(TargetLabelEnum taskSetLabel) {
         this.taskSetLabel = taskSetLabel;
         return this;
@@ -71,9 +78,11 @@ public class ECSTaskSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficWeight")
     public Double trafficWeight;
+
     public ECSTaskSet withTrafficWeight(Double trafficWeight) {
         this.trafficWeight = trafficWeight;
         return this;
     }
     
+    public ECSTaskSet(){}
 }

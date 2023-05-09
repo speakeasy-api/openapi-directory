@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TargetTrackingMetricDimension {
     @JsonProperty("Name")
     public String name;
+
     public TargetTrackingMetricDimension withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class TargetTrackingMetricDimension {
     
     @JsonProperty("Value")
     public String value;
+
     public TargetTrackingMetricDimension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TargetTrackingMetricDimension(@JsonProperty("Name") String name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

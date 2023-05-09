@@ -20,6 +20,7 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CdcStartPosition")
     public String cdcStartPosition;
+
     public CreateReplicationTaskMessage withCdcStartPosition(String cdcStartPosition) {
         this.cdcStartPosition = cdcStartPosition;
         return this;
@@ -30,6 +31,7 @@ public class CreateReplicationTaskMessage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CdcStartTime")
     public OffsetDateTime cdcStartTime;
+
     public CreateReplicationTaskMessage withCdcStartTime(OffsetDateTime cdcStartTime) {
         this.cdcStartTime = cdcStartTime;
         return this;
@@ -38,6 +40,7 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CdcStopPosition")
     public String cdcStopPosition;
+
     public CreateReplicationTaskMessage withCdcStopPosition(String cdcStopPosition) {
         this.cdcStopPosition = cdcStopPosition;
         return this;
@@ -45,6 +48,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("MigrationType")
     public MigrationTypeValueEnum migrationType;
+
     public CreateReplicationTaskMessage withMigrationType(MigrationTypeValueEnum migrationType) {
         this.migrationType = migrationType;
         return this;
@@ -52,6 +56,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public CreateReplicationTaskMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
@@ -59,6 +64,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("ReplicationTaskIdentifier")
     public String replicationTaskIdentifier;
+
     public CreateReplicationTaskMessage withReplicationTaskIdentifier(String replicationTaskIdentifier) {
         this.replicationTaskIdentifier = replicationTaskIdentifier;
         return this;
@@ -67,6 +73,7 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskSettings")
     public String replicationTaskSettings;
+
     public CreateReplicationTaskMessage withReplicationTaskSettings(String replicationTaskSettings) {
         this.replicationTaskSettings = replicationTaskSettings;
         return this;
@@ -75,6 +82,7 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceIdentifier")
     public String resourceIdentifier;
+
     public CreateReplicationTaskMessage withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
@@ -82,6 +90,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("SourceEndpointArn")
     public String sourceEndpointArn;
+
     public CreateReplicationTaskMessage withSourceEndpointArn(String sourceEndpointArn) {
         this.sourceEndpointArn = sourceEndpointArn;
         return this;
@@ -89,6 +98,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("TableMappings")
     public String tableMappings;
+
     public CreateReplicationTaskMessage withTableMappings(String tableMappings) {
         this.tableMappings = tableMappings;
         return this;
@@ -97,6 +107,7 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateReplicationTaskMessage withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -104,6 +115,7 @@ public class CreateReplicationTaskMessage {
     
     @JsonProperty("TargetEndpointArn")
     public String targetEndpointArn;
+
     public CreateReplicationTaskMessage withTargetEndpointArn(String targetEndpointArn) {
         this.targetEndpointArn = targetEndpointArn;
         return this;
@@ -112,9 +124,18 @@ public class CreateReplicationTaskMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskData")
     public String taskData;
+
     public CreateReplicationTaskMessage withTaskData(String taskData) {
         this.taskData = taskData;
         return this;
     }
     
+    public CreateReplicationTaskMessage(@JsonProperty("MigrationType") MigrationTypeValueEnum migrationType, @JsonProperty("ReplicationInstanceArn") String replicationInstanceArn, @JsonProperty("ReplicationTaskIdentifier") String replicationTaskIdentifier, @JsonProperty("SourceEndpointArn") String sourceEndpointArn, @JsonProperty("TableMappings") String tableMappings, @JsonProperty("TargetEndpointArn") String targetEndpointArn) {
+        this.migrationType = migrationType;
+        this.replicationInstanceArn = replicationInstanceArn;
+        this.replicationTaskIdentifier = replicationTaskIdentifier;
+        this.sourceEndpointArn = sourceEndpointArn;
+        this.tableMappings = tableMappings;
+        this.targetEndpointArn = targetEndpointArn;
+  }
 }

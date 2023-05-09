@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInstanceSnapshotRequest {
     @JsonProperty("instanceName")
     public String instanceName;
+
     public CreateInstanceSnapshotRequest withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -18,6 +19,7 @@ public class CreateInstanceSnapshotRequest {
     
     @JsonProperty("instanceSnapshotName")
     public String instanceSnapshotName;
+
     public CreateInstanceSnapshotRequest withInstanceSnapshotName(String instanceSnapshotName) {
         this.instanceSnapshotName = instanceSnapshotName;
         return this;
@@ -26,9 +28,14 @@ public class CreateInstanceSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateInstanceSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateInstanceSnapshotRequest(@JsonProperty("instanceName") String instanceName, @JsonProperty("instanceSnapshotName") String instanceSnapshotName) {
+        this.instanceName = instanceName;
+        this.instanceSnapshotName = instanceSnapshotName;
+  }
 }

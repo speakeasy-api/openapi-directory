@@ -19,6 +19,7 @@ public class MarkFeedback {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public MarkFeedback withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class MarkFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public String feedback;
+
     public MarkFeedback withFeedback(String feedback) {
         this.feedback = feedback;
         return this;
@@ -35,6 +37,7 @@ public class MarkFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedbackBy")
     public String feedbackBy;
+
     public MarkFeedback withFeedbackBy(String feedbackBy) {
         this.feedbackBy = feedbackBy;
         return this;
@@ -43,6 +46,7 @@ public class MarkFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MarkFeedback withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class MarkFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mark")
     public String mark;
+
     public MarkFeedback withMark(String mark) {
         this.mark = mark;
         return this;
@@ -59,9 +64,11 @@ public class MarkFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markerId")
     public String markerId;
+
     public MarkFeedback withMarkerId(String markerId) {
         this.markerId = markerId;
         return this;
     }
     
+    public MarkFeedback(){}
 }

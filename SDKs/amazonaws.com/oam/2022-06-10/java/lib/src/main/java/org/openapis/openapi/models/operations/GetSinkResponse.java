@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSinkResponse {
     
     public String contentType;
+
     public GetSinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSinkResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSinkOutput getSinkOutput;
+
     public GetSinkResponse withGetSinkOutput(org.openapis.openapi.models.shared.GetSinkOutput getSinkOutput) {
         this.getSinkOutput = getSinkOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetSinkResponse {
      */
     
     public Object internalServiceFault;
+
     public GetSinkResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -39,6 +43,7 @@ public class GetSinkResponse {
      */
     
     public Object invalidParameterException;
+
     public GetSinkResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetSinkResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public GetSinkResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetSinkResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSinkResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetSinkResponse {
     
     
     public Integer statusCode;
+
     public GetSinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

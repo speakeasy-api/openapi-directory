@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListRatePlansForHotel200ApplicationJSON {
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.RatePlan[] data;
+
     public ListRatePlansForHotel200ApplicationJSON withData(org.openapis.openapi.models.shared.RatePlan[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class ListRatePlansForHotel200ApplicationJSON {
      */
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.Pagination pagination;
+
     public ListRatePlansForHotel200ApplicationJSON withPagination(org.openapis.openapi.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public ListRatePlansForHotel200ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.RatePlan[] data, @JsonProperty("pagination") org.openapis.openapi.models.shared.Pagination pagination) {
+        this.data = data;
+        this.pagination = pagination;
+  }
 }

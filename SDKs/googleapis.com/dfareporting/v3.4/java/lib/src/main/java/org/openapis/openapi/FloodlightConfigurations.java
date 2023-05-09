@@ -59,11 +59,9 @@ public class FloodlightConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             floodlightConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class FloodlightConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsListResponse(contentType, httpRes.statusCode()) {{
             floodlightConfigurationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class FloodlightConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsPatchResponse(contentType, httpRes.statusCode()) {{
             floodlightConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class FloodlightConfigurations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingFloodlightConfigurationsUpdateResponse(contentType, httpRes.statusCode()) {{
             floodlightConfiguration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

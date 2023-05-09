@@ -15,6 +15,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public String creationTime;
+
     public GetTemplateStepResponse withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -23,6 +24,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetTemplateStepResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetTemplateStepResponse withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetTemplateStepResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public GetTemplateStepResponse withNext(String[] next) {
         this.next = next;
         return this;
@@ -55,6 +60,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public StepOutput[] outputs;
+
     public GetTemplateStepResponse withOutputs(StepOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -63,6 +69,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public GetTemplateStepResponse withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -71,6 +78,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepActionType")
     public StepActionTypeEnum stepActionType;
+
     public GetTemplateStepResponse withStepActionType(StepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -79,6 +87,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepAutomationConfiguration")
     public StepAutomationConfiguration stepAutomationConfiguration;
+
     public GetTemplateStepResponse withStepAutomationConfiguration(StepAutomationConfiguration stepAutomationConfiguration) {
         this.stepAutomationConfiguration = stepAutomationConfiguration;
         return this;
@@ -87,6 +96,7 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public GetTemplateStepResponse withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -95,9 +105,11 @@ public class GetTemplateStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateId")
     public String templateId;
+
     public GetTemplateStepResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GetTemplateStepResponse(){}
 }

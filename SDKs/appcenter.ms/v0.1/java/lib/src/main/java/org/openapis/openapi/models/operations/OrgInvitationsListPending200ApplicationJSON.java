@@ -12,6 +12,7 @@ public class OrgInvitationsListPending200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public OrgInvitationsListPending200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class OrgInvitationsListPending200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public OrgInvitationsListPending200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +34,15 @@ public class OrgInvitationsListPending200ApplicationJSON {
      */
     @JsonProperty("role")
     public String role;
+
     public OrgInvitationsListPending200ApplicationJSON withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public OrgInvitationsListPending200ApplicationJSON(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("role") String role) {
+        this.email = email;
+        this.id = id;
+        this.role = role;
+  }
 }

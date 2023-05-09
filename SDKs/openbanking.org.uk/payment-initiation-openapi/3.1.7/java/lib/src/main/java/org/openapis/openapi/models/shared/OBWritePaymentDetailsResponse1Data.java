@@ -12,9 +12,11 @@ public class OBWritePaymentDetailsResponse1Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaymentStatus")
     public OBWritePaymentDetailsResponse1DataPaymentStatus[] paymentStatus;
+
     public OBWritePaymentDetailsResponse1Data withPaymentStatus(OBWritePaymentDetailsResponse1DataPaymentStatus[] paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
     }
     
+    public OBWritePaymentDetailsResponse1Data(){}
 }

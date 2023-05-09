@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PipelineObject {
     @JsonProperty("fields")
     public Field[] fields;
+
     public PipelineObject withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -19,6 +20,7 @@ public class PipelineObject {
     
     @JsonProperty("id")
     public String id;
+
     public PipelineObject withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +28,15 @@ public class PipelineObject {
     
     @JsonProperty("name")
     public String name;
+
     public PipelineObject withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PipelineObject(@JsonProperty("fields") Field[] fields, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.fields = fields;
+        this.id = id;
+        this.name = name;
+  }
 }

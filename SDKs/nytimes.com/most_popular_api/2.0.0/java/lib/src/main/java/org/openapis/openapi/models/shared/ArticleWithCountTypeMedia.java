@@ -12,6 +12,7 @@ public class ArticleWithCountTypeMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public ArticleWithCountTypeMedia withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -20,6 +21,7 @@ public class ArticleWithCountTypeMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public ArticleWithCountTypeMedia withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -28,6 +30,7 @@ public class ArticleWithCountTypeMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media-metadata")
     public ArticleWithCountTypeMediaMediaMetadata mediaMetadata;
+
     public ArticleWithCountTypeMedia withMediaMetadata(ArticleWithCountTypeMediaMediaMetadata mediaMetadata) {
         this.mediaMetadata = mediaMetadata;
         return this;
@@ -36,6 +39,7 @@ public class ArticleWithCountTypeMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public ArticleWithCountTypeMedia withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -44,9 +48,11 @@ public class ArticleWithCountTypeMedia {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ArticleWithCountTypeMedia withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ArticleWithCountTypeMedia(){}
 }

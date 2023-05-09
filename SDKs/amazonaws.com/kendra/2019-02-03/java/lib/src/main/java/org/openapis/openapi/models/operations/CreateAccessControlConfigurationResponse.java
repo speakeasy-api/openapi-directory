@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccessControlConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAccessControlConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object conflictException;
+
     public CreateAccessControlConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAccessControlConfigurationResponse {
     
     
     public String contentType;
+
     public CreateAccessControlConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccessControlConfigurationResponse createAccessControlConfigurationResponse;
+
     public CreateAccessControlConfigurationResponse withCreateAccessControlConfigurationResponse(org.openapis.openapi.models.shared.CreateAccessControlConfigurationResponse createAccessControlConfigurationResponse) {
         this.createAccessControlConfigurationResponse = createAccessControlConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public CreateAccessControlConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAccessControlConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAccessControlConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateAccessControlConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateAccessControlConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateAccessControlConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccessControlConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public CreateAccessControlConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAccessControlConfigurationResponse {
      */
     
     public Object validationException;
+
     public CreateAccessControlConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAccessControlConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

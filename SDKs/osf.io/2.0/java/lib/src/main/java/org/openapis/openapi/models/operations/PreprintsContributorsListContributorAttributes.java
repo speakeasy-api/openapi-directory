@@ -15,6 +15,7 @@ public class PreprintsContributorsListContributorAttributes {
      */
     
     public Boolean bibliographic;
+
     public PreprintsContributorsListContributorAttributes withBibliographic(Boolean bibliographic) {
         this.bibliographic = bibliographic;
         return this;
@@ -25,6 +26,7 @@ public class PreprintsContributorsListContributorAttributes {
      */
     
     public Long index;
+
     public PreprintsContributorsListContributorAttributes withIndex(Long index) {
         this.index = index;
         return this;
@@ -35,6 +37,7 @@ public class PreprintsContributorsListContributorAttributes {
      */
     
     public PreprintsContributorsListContributorAttributesPermissionEnum permission;
+
     public PreprintsContributorsListContributorAttributes withPermission(PreprintsContributorsListContributorAttributesPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -45,9 +48,11 @@ public class PreprintsContributorsListContributorAttributes {
      */
     
     public String unregisteredContributor;
+
     public PreprintsContributorsListContributorAttributes withUnregisteredContributor(String unregisteredContributor) {
         this.unregisteredContributor = unregisteredContributor;
         return this;
     }
     
+    public PreprintsContributorsListContributorAttributes(){}
 }

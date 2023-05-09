@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteTrafficMirrorFilterRequest {
     
     public Boolean dryRun;
+
     public DeleteTrafficMirrorFilterRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteTrafficMirrorFilterRequest {
     
     
     public String trafficMirrorFilterId;
+
     public DeleteTrafficMirrorFilterRequest withTrafficMirrorFilterId(String trafficMirrorFilterId) {
         this.trafficMirrorFilterId = trafficMirrorFilterId;
         return this;
     }
     
+    public DeleteTrafficMirrorFilterRequest(@JsonProperty("TrafficMirrorFilterId") String trafficMirrorFilterId) {
+        this.trafficMirrorFilterId = trafficMirrorFilterId;
+  }
 }

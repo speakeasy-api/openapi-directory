@@ -53,4 +53,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/PredictImageWithNoStore
 lib/src/main/java/org/openapis/openapi/models/shared/ImagePredictionResultModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageTagPredictionModel.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImageUrl.java
+docs/sdk/README.md
+docs/imagepredictionapi/README.md
 USAGE.md

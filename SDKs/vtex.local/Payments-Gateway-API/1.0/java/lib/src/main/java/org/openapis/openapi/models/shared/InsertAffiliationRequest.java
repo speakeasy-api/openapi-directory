@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InsertAffiliationRequest {
     @JsonProperty("configuration")
     public Configuration[] configuration;
+
     public InsertAffiliationRequest withConfiguration(Configuration[] configuration) {
         this.configuration = configuration;
         return this;
@@ -16,6 +17,7 @@ public class InsertAffiliationRequest {
     
     @JsonProperty("implementation")
     public String implementation;
+
     public InsertAffiliationRequest withImplementation(String implementation) {
         this.implementation = implementation;
         return this;
@@ -23,6 +25,7 @@ public class InsertAffiliationRequest {
     
     @JsonProperty("isConfigured")
     public Boolean isConfigured;
+
     public InsertAffiliationRequest withIsConfigured(Boolean isConfigured) {
         this.isConfigured = isConfigured;
         return this;
@@ -30,6 +33,7 @@ public class InsertAffiliationRequest {
     
     @JsonProperty("isdelivered")
     public Boolean isdelivered;
+
     public InsertAffiliationRequest withIsdelivered(Boolean isdelivered) {
         this.isdelivered = isdelivered;
         return this;
@@ -37,9 +41,17 @@ public class InsertAffiliationRequest {
     
     @JsonProperty("name")
     public String name;
+
     public InsertAffiliationRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InsertAffiliationRequest(@JsonProperty("configuration") Configuration[] configuration, @JsonProperty("implementation") String implementation, @JsonProperty("isConfigured") Boolean isConfigured, @JsonProperty("isdelivered") Boolean isdelivered, @JsonProperty("name") String name) {
+        this.configuration = configuration;
+        this.implementation = implementation;
+        this.isConfigured = isConfigured;
+        this.isdelivered = isdelivered;
+        this.name = name;
+  }
 }

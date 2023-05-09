@@ -15,6 +15,7 @@ public class TaskTypeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_type")
     public String taskType;
+
     public TaskTypeSimpleVO withTaskType(String taskType) {
         this.taskType = taskType;
         return this;
@@ -23,9 +24,11 @@ public class TaskTypeSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task_type_id")
     public Long taskTypeId;
+
     public TaskTypeSimpleVO withTaskTypeId(Long taskTypeId) {
         this.taskTypeId = taskTypeId;
         return this;
     }
     
+    public TaskTypeSimpleVO(){}
 }

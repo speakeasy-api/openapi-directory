@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasedatabaseProjectsLocationsInstancesUndeleteResponse {
     
     public String contentType;
+
     public FirebasedatabaseProjectsLocationsInstancesUndeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FirebasedatabaseProjectsLocationsInstancesUndeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.DatabaseInstance databaseInstance;
+
     public FirebasedatabaseProjectsLocationsInstancesUndeleteResponse withDatabaseInstance(org.openapis.openapi.models.shared.DatabaseInstance databaseInstance) {
         this.databaseInstance = databaseInstance;
         return this;
@@ -26,6 +29,7 @@ public class FirebasedatabaseProjectsLocationsInstancesUndeleteResponse {
     
     
     public Integer statusCode;
+
     public FirebasedatabaseProjectsLocationsInstancesUndeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasedatabaseProjectsLocationsInstancesUndeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasedatabaseProjectsLocationsInstancesUndeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasedatabaseProjectsLocationsInstancesUndeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

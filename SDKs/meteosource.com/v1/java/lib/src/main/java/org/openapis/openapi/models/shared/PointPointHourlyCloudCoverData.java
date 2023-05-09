@@ -16,6 +16,7 @@ public class PointPointHourlyCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Double high;
+
     public PointPointHourlyCloudCoverData withHigh(Double high) {
         this.high = high;
         return this;
@@ -28,6 +29,7 @@ public class PointPointHourlyCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Double low;
+
     public PointPointHourlyCloudCoverData withLow(Double low) {
         this.low = low;
         return this;
@@ -40,6 +42,7 @@ public class PointPointHourlyCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middle")
     public Double middle;
+
     public PointPointHourlyCloudCoverData withMiddle(Double middle) {
         this.middle = middle;
         return this;
@@ -51,9 +54,11 @@ public class PointPointHourlyCloudCoverData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public PointPointHourlyCloudCoverData withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public PointPointHourlyCloudCoverData(){}
 }

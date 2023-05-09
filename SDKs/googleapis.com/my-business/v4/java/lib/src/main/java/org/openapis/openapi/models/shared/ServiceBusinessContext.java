@@ -18,9 +18,11 @@ public class ServiceBusinessContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public PostalAddress address;
+
     public ServiceBusinessContext withAddress(PostalAddress address) {
         this.address = address;
         return this;
     }
     
+    public ServiceBusinessContext(){}
 }

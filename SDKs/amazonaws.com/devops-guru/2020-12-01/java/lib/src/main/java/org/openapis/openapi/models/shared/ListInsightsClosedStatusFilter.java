@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListInsightsClosedStatusFilter {
     @JsonProperty("EndTimeRange")
     public EndTimeRange endTimeRange;
+
     public ListInsightsClosedStatusFilter withEndTimeRange(EndTimeRange endTimeRange) {
         this.endTimeRange = endTimeRange;
         return this;
@@ -19,9 +20,14 @@ public class ListInsightsClosedStatusFilter {
     
     @JsonProperty("Type")
     public InsightTypeEnum type;
+
     public ListInsightsClosedStatusFilter withType(InsightTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListInsightsClosedStatusFilter(@JsonProperty("EndTimeRange") EndTimeRange endTimeRange, @JsonProperty("Type") InsightTypeEnum type) {
+        this.endTimeRange = endTimeRange;
+        this.type = type;
+  }
 }

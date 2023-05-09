@@ -151,6 +151,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -189,7 +194,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteThingShadowResponse res = new org.openapis.openapi.models.operations.DeleteThingShadowResponse() {{
+        org.openapis.openapi.models.operations.DeleteThingShadowResponse res = new org.openapis.openapi.models.operations.DeleteThingShadowResponse(contentType, httpRes.statusCode()) {{
             deleteThingShadowResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
@@ -200,8 +205,6 @@ public class SDK {
             methodNotAllowedException = null;
             unsupportedDocumentEncodingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,7 +275,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Gets the details of a single retained message for the specified topic.&lt;/p&gt; &lt;p&gt;This action returns the message payload of the retained message, which can incur messaging costs. To list only the topic names of the retained messages, call &lt;a href="/iot/latest/developerguide/API_iotdata_ListRetainedMessages.html"&gt;ListRetainedMessages&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Requires permission to access the &lt;a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"&gt;GetRetainedMessage&lt;/a&gt; action.&lt;/p&gt; &lt;p&gt;For more information about messaging costs, see &lt;a href="http://aws.amazon.com/iot-core/pricing/#Messaging"&gt;Amazon Web Services IoT Core pricing - Messaging&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Gets the details of a single retained message for the specified topic.&lt;/p&gt; &lt;p&gt;This action returns the message payload of the retained message, which can incur messaging costs. To list only the topic names of the retained messages, call &lt;a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_ListRetainedMessages.html"&gt;ListRetainedMessages&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Requires permission to access the &lt;a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"&gt;GetRetainedMessage&lt;/a&gt; action.&lt;/p&gt; &lt;p&gt;For more information about messaging costs, see &lt;a href="http://aws.amazon.com/iot-core/pricing/#Messaging"&gt;Amazon Web Services IoT Core pricing - Messaging&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -300,7 +303,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRetainedMessageResponse res = new org.openapis.openapi.models.operations.GetRetainedMessageResponse() {{
+        org.openapis.openapi.models.operations.GetRetainedMessageResponse res = new org.openapis.openapi.models.operations.GetRetainedMessageResponse(contentType, httpRes.statusCode()) {{
             getRetainedMessageResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -310,8 +313,6 @@ public class SDK {
             internalFailureException = null;
             methodNotAllowedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,7 +410,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetThingShadowResponse res = new org.openapis.openapi.models.operations.GetThingShadowResponse() {{
+        org.openapis.openapi.models.operations.GetThingShadowResponse res = new org.openapis.openapi.models.operations.GetThingShadowResponse(contentType, httpRes.statusCode()) {{
             getThingShadowResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -420,8 +421,6 @@ public class SDK {
             methodNotAllowedException = null;
             unsupportedDocumentEncodingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -526,7 +525,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNamedShadowsForThingResponse res = new org.openapis.openapi.models.operations.ListNamedShadowsForThingResponse() {{
+        org.openapis.openapi.models.operations.ListNamedShadowsForThingResponse res = new org.openapis.openapi.models.operations.ListNamedShadowsForThingResponse(contentType, httpRes.statusCode()) {{
             listNamedShadowsForThingResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
@@ -536,8 +535,6 @@ public class SDK {
             internalFailureException = null;
             methodNotAllowedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,7 +598,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Lists summary information about the retained messages stored for the account.&lt;/p&gt; &lt;p&gt;This action returns only the topic names of the retained messages. It doesn't return any message payloads. Although this action doesn't return a message payload, it can still incur messaging costs.&lt;/p&gt; &lt;p&gt;To get the message payload of a retained message, call &lt;a href="https://docs.aws.amazon.com/iot/latest/developerguide/API_iotdata_GetRetainedMessage.html"&gt;GetRetainedMessage&lt;/a&gt; with the topic name of the retained message.&lt;/p&gt; &lt;p&gt;Requires permission to access the &lt;a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"&gt;ListRetainedMessages&lt;/a&gt; action.&lt;/p&gt; &lt;p&gt;For more information about messaging costs, see &lt;a href="http://aws.amazon.com/iot-core/pricing/#Messaging"&gt;Amazon Web Services IoT Core pricing - Messaging&lt;/a&gt;.&lt;/p&gt;
+     * &lt;p&gt;Lists summary information about the retained messages stored for the account.&lt;/p&gt; &lt;p&gt;This action returns only the topic names of the retained messages. It doesn't return any message payloads. Although this action doesn't return a message payload, it can still incur messaging costs.&lt;/p&gt; &lt;p&gt;To get the message payload of a retained message, call &lt;a href="https://docs.aws.amazon.com/iot/latest/apireference/API_iotdata_GetRetainedMessage.html"&gt;GetRetainedMessage&lt;/a&gt; with the topic name of the retained message.&lt;/p&gt; &lt;p&gt;Requires permission to access the &lt;a href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html#awsiotfleethubfordevicemanagement-actions-as-permissions"&gt;ListRetainedMessages&lt;/a&gt; action.&lt;/p&gt; &lt;p&gt;For more information about messaging costs, see &lt;a href="http://aws.amazon.com/iot-core/pricing/#Messaging"&gt;Amazon Web Services IoT Core pricing - Messaging&lt;/a&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -635,7 +632,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRetainedMessagesResponse res = new org.openapis.openapi.models.operations.ListRetainedMessagesResponse() {{
+        org.openapis.openapi.models.operations.ListRetainedMessagesResponse res = new org.openapis.openapi.models.operations.ListRetainedMessagesResponse(contentType, httpRes.statusCode()) {{
             listRetainedMessagesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
@@ -644,8 +641,6 @@ public class SDK {
             internalFailureException = null;
             methodNotAllowedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -741,15 +736,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PublishResponse res = new org.openapis.openapi.models.operations.PublishResponse() {{
+        org.openapis.openapi.models.operations.PublishResponse res = new org.openapis.openapi.models.operations.PublishResponse(contentType, httpRes.statusCode()) {{
             internalFailureException = null;
             invalidRequestException = null;
             unauthorizedException = null;
             methodNotAllowedException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -833,7 +826,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateThingShadowResponse res = new org.openapis.openapi.models.operations.UpdateThingShadowResponse() {{
+        org.openapis.openapi.models.operations.UpdateThingShadowResponse res = new org.openapis.openapi.models.operations.UpdateThingShadowResponse(contentType, httpRes.statusCode()) {{
             updateThingShadowResponse = null;
             conflictException = null;
             requestEntityTooLargeException = null;
@@ -845,8 +838,6 @@ public class SDK {
             methodNotAllowedException = null;
             unsupportedDocumentEncodingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     public OffsetDateTime analysisStartTimeBegin;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withAnalysisStartTimeBegin(OffsetDateTime analysisStartTimeBegin) {
         this.analysisStartTimeBegin = analysisStartTimeBegin;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public OffsetDateTime analysisStartTimeEnd;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withAnalysisStartTimeEnd(OffsetDateTime analysisStartTimeEnd) {
         this.analysisStartTimeEnd = analysisStartTimeEnd;
         return this;
@@ -23,6 +25,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public Boolean dryRun;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public DescribeNetworkInsightsAccessScopeAnalysesRequestFilters[] filters;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withFilters(DescribeNetworkInsightsAccessScopeAnalysesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +41,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +49,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public String[] networkInsightsAccessScopeAnalysisIds;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withNetworkInsightsAccessScopeAnalysisIds(String[] networkInsightsAccessScopeAnalysisIds) {
         this.networkInsightsAccessScopeAnalysisIds = networkInsightsAccessScopeAnalysisIds;
         return this;
@@ -51,6 +57,7 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public String networkInsightsAccessScopeId;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withNetworkInsightsAccessScopeId(String networkInsightsAccessScopeId) {
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
         return this;
@@ -58,9 +65,11 @@ public class DescribeNetworkInsightsAccessScopeAnalysesRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkInsightsAccessScopeAnalysesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInsightsAccessScopeAnalysesRequest(){}
 }

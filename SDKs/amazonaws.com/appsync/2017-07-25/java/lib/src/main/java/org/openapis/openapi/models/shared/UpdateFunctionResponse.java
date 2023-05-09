@@ -15,9 +15,11 @@ public class UpdateFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionConfiguration")
     public FunctionConfiguration functionConfiguration;
+
     public UpdateFunctionResponse withFunctionConfiguration(FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
     }
     
+    public UpdateFunctionResponse(){}
 }

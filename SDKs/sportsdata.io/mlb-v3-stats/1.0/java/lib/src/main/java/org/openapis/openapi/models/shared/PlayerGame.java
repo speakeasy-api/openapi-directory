@@ -12,6 +12,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AtBats")
     public Double atBats;
+
     public PlayerGame withAtBats(Double atBats) {
         this.atBats = atBats;
         return this;
@@ -20,6 +21,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BallsInPlay")
     public Double ballsInPlay;
+
     public PlayerGame withBallsInPlay(Double ballsInPlay) {
         this.ballsInPlay = ballsInPlay;
         return this;
@@ -28,6 +30,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BattingAverage")
     public Double battingAverage;
+
     public PlayerGame withBattingAverage(Double battingAverage) {
         this.battingAverage = battingAverage;
         return this;
@@ -36,6 +39,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BattingAverageOnBallsInPlay")
     public Double battingAverageOnBallsInPlay;
+
     public PlayerGame withBattingAverageOnBallsInPlay(Double battingAverageOnBallsInPlay) {
         this.battingAverageOnBallsInPlay = battingAverageOnBallsInPlay;
         return this;
@@ -44,6 +48,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BattingOrder")
     public Long battingOrder;
+
     public PlayerGame withBattingOrder(Long battingOrder) {
         this.battingOrder = battingOrder;
         return this;
@@ -52,6 +57,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BattingOrderConfirmed")
     public Boolean battingOrderConfirmed;
+
     public PlayerGame withBattingOrderConfirmed(Boolean battingOrderConfirmed) {
         this.battingOrderConfirmed = battingOrderConfirmed;
         return this;
@@ -60,6 +66,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaughtStealing")
     public Double caughtStealing;
+
     public PlayerGame withCaughtStealing(Double caughtStealing) {
         this.caughtStealing = caughtStealing;
         return this;
@@ -68,6 +75,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public PlayerGame withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -76,6 +84,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public PlayerGame withDay(String day) {
         this.day = day;
         return this;
@@ -84,6 +93,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DoublePlays")
     public Double doublePlays;
+
     public PlayerGame withDoublePlays(Double doublePlays) {
         this.doublePlays = doublePlays;
         return this;
@@ -92,6 +102,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Doubles")
     public Double doubles;
+
     public PlayerGame withDoubles(Double doubles) {
         this.doubles = doubles;
         return this;
@@ -100,6 +111,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsPosition")
     public String draftKingsPosition;
+
     public PlayerGame withDraftKingsPosition(String draftKingsPosition) {
         this.draftKingsPosition = draftKingsPosition;
         return this;
@@ -108,6 +120,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DraftKingsSalary")
     public Long draftKingsSalary;
+
     public PlayerGame withDraftKingsSalary(Long draftKingsSalary) {
         this.draftKingsSalary = draftKingsSalary;
         return this;
@@ -116,6 +129,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EarnedRunAverage")
     public Double earnedRunAverage;
+
     public PlayerGame withEarnedRunAverage(Double earnedRunAverage) {
         this.earnedRunAverage = earnedRunAverage;
         return this;
@@ -124,6 +138,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public Double errors;
+
     public PlayerGame withErrors(Double errors) {
         this.errors = errors;
         return this;
@@ -132,6 +147,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelPosition")
     public String fanDuelPosition;
+
     public PlayerGame withFanDuelPosition(String fanDuelPosition) {
         this.fanDuelPosition = fanDuelPosition;
         return this;
@@ -140,6 +156,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FanDuelSalary")
     public Long fanDuelSalary;
+
     public PlayerGame withFanDuelSalary(Long fanDuelSalary) {
         this.fanDuelSalary = fanDuelSalary;
         return this;
@@ -148,6 +165,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDataSalary")
     public Long fantasyDataSalary;
+
     public PlayerGame withFantasyDataSalary(Long fantasyDataSalary) {
         this.fantasyDataSalary = fantasyDataSalary;
         return this;
@@ -156,6 +174,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftPosition")
     public String fantasyDraftPosition;
+
     public PlayerGame withFantasyDraftPosition(String fantasyDraftPosition) {
         this.fantasyDraftPosition = fantasyDraftPosition;
         return this;
@@ -164,6 +183,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyDraftSalary")
     public Long fantasyDraftSalary;
+
     public PlayerGame withFantasyDraftSalary(Long fantasyDraftSalary) {
         this.fantasyDraftSalary = fantasyDraftSalary;
         return this;
@@ -172,6 +192,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerGame withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -180,6 +201,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsBatting")
     public Double fantasyPointsBatting;
+
     public PlayerGame withFantasyPointsBatting(Double fantasyPointsBatting) {
         this.fantasyPointsBatting = fantasyPointsBatting;
         return this;
@@ -188,6 +210,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsDraftKings")
     public Double fantasyPointsDraftKings;
+
     public PlayerGame withFantasyPointsDraftKings(Double fantasyPointsDraftKings) {
         this.fantasyPointsDraftKings = fantasyPointsDraftKings;
         return this;
@@ -196,6 +219,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFanDuel")
     public Double fantasyPointsFanDuel;
+
     public PlayerGame withFantasyPointsFanDuel(Double fantasyPointsFanDuel) {
         this.fantasyPointsFanDuel = fantasyPointsFanDuel;
         return this;
@@ -204,6 +228,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsFantasyDraft")
     public Double fantasyPointsFantasyDraft;
+
     public PlayerGame withFantasyPointsFantasyDraft(Double fantasyPointsFantasyDraft) {
         this.fantasyPointsFantasyDraft = fantasyPointsFantasyDraft;
         return this;
@@ -212,6 +237,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsPitching")
     public Double fantasyPointsPitching;
+
     public PlayerGame withFantasyPointsPitching(Double fantasyPointsPitching) {
         this.fantasyPointsPitching = fantasyPointsPitching;
         return this;
@@ -220,6 +246,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPointsYahoo")
     public Double fantasyPointsYahoo;
+
     public PlayerGame withFantasyPointsYahoo(Double fantasyPointsYahoo) {
         this.fantasyPointsYahoo = fantasyPointsYahoo;
         return this;
@@ -228,6 +255,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldingIndependentPitching")
     public Double fieldingIndependentPitching;
+
     public PlayerGame withFieldingIndependentPitching(Double fieldingIndependentPitching) {
         this.fieldingIndependentPitching = fieldingIndependentPitching;
         return this;
@@ -236,6 +264,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlyOuts")
     public Double flyOuts;
+
     public PlayerGame withFlyOuts(Double flyOuts) {
         this.flyOuts = flyOuts;
         return this;
@@ -244,6 +273,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameID")
     public Long gameID;
+
     public PlayerGame withGameID(Long gameID) {
         this.gameID = gameID;
         return this;
@@ -252,6 +282,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Long games;
+
     public PlayerGame withGames(Long games) {
         this.games = games;
         return this;
@@ -260,6 +291,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalGameID")
     public Long globalGameID;
+
     public PlayerGame withGlobalGameID(Long globalGameID) {
         this.globalGameID = globalGameID;
         return this;
@@ -268,6 +300,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalOpponentID")
     public Long globalOpponentID;
+
     public PlayerGame withGlobalOpponentID(Long globalOpponentID) {
         this.globalOpponentID = globalOpponentID;
         return this;
@@ -276,6 +309,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTeamID")
     public Long globalTeamID;
+
     public PlayerGame withGlobalTeamID(Long globalTeamID) {
         this.globalTeamID = globalTeamID;
         return this;
@@ -284,6 +318,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrandSlams")
     public Double grandSlams;
+
     public PlayerGame withGrandSlams(Double grandSlams) {
         this.grandSlams = grandSlams;
         return this;
@@ -292,6 +327,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroundIntoDoublePlay")
     public Double groundIntoDoublePlay;
+
     public PlayerGame withGroundIntoDoublePlay(Double groundIntoDoublePlay) {
         this.groundIntoDoublePlay = groundIntoDoublePlay;
         return this;
@@ -300,6 +336,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroundOuts")
     public Double groundOuts;
+
     public PlayerGame withGroundOuts(Double groundOuts) {
         this.groundOuts = groundOuts;
         return this;
@@ -308,6 +345,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitByPitch")
     public Double hitByPitch;
+
     public PlayerGame withHitByPitch(Double hitByPitch) {
         this.hitByPitch = hitByPitch;
         return this;
@@ -316,6 +354,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hits")
     public Double hits;
+
     public PlayerGame withHits(Double hits) {
         this.hits = hits;
         return this;
@@ -324,6 +363,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeOrAway")
     public String homeOrAway;
+
     public PlayerGame withHomeOrAway(String homeOrAway) {
         this.homeOrAway = homeOrAway;
         return this;
@@ -332,6 +372,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeRuns")
     public Double homeRuns;
+
     public PlayerGame withHomeRuns(Double homeRuns) {
         this.homeRuns = homeRuns;
         return this;
@@ -340,6 +381,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryBodyPart")
     public String injuryBodyPart;
+
     public PlayerGame withInjuryBodyPart(String injuryBodyPart) {
         this.injuryBodyPart = injuryBodyPart;
         return this;
@@ -348,6 +390,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryNotes")
     public String injuryNotes;
+
     public PlayerGame withInjuryNotes(String injuryNotes) {
         this.injuryNotes = injuryNotes;
         return this;
@@ -356,6 +399,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStartDate")
     public String injuryStartDate;
+
     public PlayerGame withInjuryStartDate(String injuryStartDate) {
         this.injuryStartDate = injuryStartDate;
         return this;
@@ -364,6 +408,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InjuryStatus")
     public String injuryStatus;
+
     public PlayerGame withInjuryStatus(String injuryStatus) {
         this.injuryStatus = injuryStatus;
         return this;
@@ -372,6 +417,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningsPitchedDecimal")
     public Double inningsPitchedDecimal;
+
     public PlayerGame withInningsPitchedDecimal(Double inningsPitchedDecimal) {
         this.inningsPitchedDecimal = inningsPitchedDecimal;
         return this;
@@ -380,6 +426,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningsPitchedFull")
     public Double inningsPitchedFull;
+
     public PlayerGame withInningsPitchedFull(Double inningsPitchedFull) {
         this.inningsPitchedFull = inningsPitchedFull;
         return this;
@@ -388,6 +435,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InningsPitchedOuts")
     public Double inningsPitchedOuts;
+
     public PlayerGame withInningsPitchedOuts(Double inningsPitchedOuts) {
         this.inningsPitchedOuts = inningsPitchedOuts;
         return this;
@@ -396,6 +444,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntentionalWalks")
     public Double intentionalWalks;
+
     public PlayerGame withIntentionalWalks(Double intentionalWalks) {
         this.intentionalWalks = intentionalWalks;
         return this;
@@ -404,6 +453,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsGameOver")
     public Boolean isGameOver;
+
     public PlayerGame withIsGameOver(Boolean isGameOver) {
         this.isGameOver = isGameOver;
         return this;
@@ -412,6 +462,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsolatedPower")
     public Double isolatedPower;
+
     public PlayerGame withIsolatedPower(Double isolatedPower) {
         this.isolatedPower = isolatedPower;
         return this;
@@ -420,6 +471,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LeftOnBase")
     public Double leftOnBase;
+
     public PlayerGame withLeftOnBase(Double leftOnBase) {
         this.leftOnBase = leftOnBase;
         return this;
@@ -428,6 +480,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineOuts")
     public Double lineOuts;
+
     public PlayerGame withLineOuts(Double lineOuts) {
         this.lineOuts = lineOuts;
         return this;
@@ -436,6 +489,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Losses")
     public Double losses;
+
     public PlayerGame withLosses(Double losses) {
         this.losses = losses;
         return this;
@@ -444,6 +498,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerGame withName(String name) {
         this.name = name;
         return this;
@@ -452,6 +507,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnBasePercentage")
     public Double onBasePercentage;
+
     public PlayerGame withOnBasePercentage(Double onBasePercentage) {
         this.onBasePercentage = onBasePercentage;
         return this;
@@ -460,6 +516,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnBasePlusSlugging")
     public Double onBasePlusSlugging;
+
     public PlayerGame withOnBasePlusSlugging(Double onBasePlusSlugging) {
         this.onBasePlusSlugging = onBasePlusSlugging;
         return this;
@@ -468,6 +525,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Opponent")
     public String opponent;
+
     public PlayerGame withOpponent(String opponent) {
         this.opponent = opponent;
         return this;
@@ -476,6 +534,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentID")
     public Long opponentID;
+
     public PlayerGame withOpponentID(Long opponentID) {
         this.opponentID = opponentID;
         return this;
@@ -484,6 +543,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentPositionRank")
     public Long opponentPositionRank;
+
     public PlayerGame withOpponentPositionRank(Long opponentPositionRank) {
         this.opponentPositionRank = opponentPositionRank;
         return this;
@@ -492,6 +552,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpponentRank")
     public Long opponentRank;
+
     public PlayerGame withOpponentRank(Long opponentRank) {
         this.opponentRank = opponentRank;
         return this;
@@ -500,6 +561,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outs")
     public Double outs;
+
     public PlayerGame withOuts(Double outs) {
         this.outs = outs;
         return this;
@@ -508,6 +570,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchesSeen")
     public Double pitchesSeen;
+
     public PlayerGame withPitchesSeen(Double pitchesSeen) {
         this.pitchesSeen = pitchesSeen;
         return this;
@@ -516,6 +579,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchesThrown")
     public Double pitchesThrown;
+
     public PlayerGame withPitchesThrown(Double pitchesThrown) {
         this.pitchesThrown = pitchesThrown;
         return this;
@@ -524,6 +588,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchesThrownStrikes")
     public Double pitchesThrownStrikes;
+
     public PlayerGame withPitchesThrownStrikes(Double pitchesThrownStrikes) {
         this.pitchesThrownStrikes = pitchesThrownStrikes;
         return this;
@@ -532,6 +597,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingBallsInPlay")
     public Double pitchingBallsInPlay;
+
     public PlayerGame withPitchingBallsInPlay(Double pitchingBallsInPlay) {
         this.pitchingBallsInPlay = pitchingBallsInPlay;
         return this;
@@ -540,6 +606,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingBattingAverageAgainst")
     public Double pitchingBattingAverageAgainst;
+
     public PlayerGame withPitchingBattingAverageAgainst(Double pitchingBattingAverageAgainst) {
         this.pitchingBattingAverageAgainst = pitchingBattingAverageAgainst;
         return this;
@@ -548,6 +615,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingBattingAverageOnBallsInPlay")
     public Double pitchingBattingAverageOnBallsInPlay;
+
     public PlayerGame withPitchingBattingAverageOnBallsInPlay(Double pitchingBattingAverageOnBallsInPlay) {
         this.pitchingBattingAverageOnBallsInPlay = pitchingBattingAverageOnBallsInPlay;
         return this;
@@ -556,6 +624,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingBlownSaves")
     public Double pitchingBlownSaves;
+
     public PlayerGame withPitchingBlownSaves(Double pitchingBlownSaves) {
         this.pitchingBlownSaves = pitchingBlownSaves;
         return this;
@@ -564,6 +633,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingCatchersInterference")
     public Double pitchingCatchersInterference;
+
     public PlayerGame withPitchingCatchersInterference(Double pitchingCatchersInterference) {
         this.pitchingCatchersInterference = pitchingCatchersInterference;
         return this;
@@ -572,6 +642,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingCompleteGames")
     public Double pitchingCompleteGames;
+
     public PlayerGame withPitchingCompleteGames(Double pitchingCompleteGames) {
         this.pitchingCompleteGames = pitchingCompleteGames;
         return this;
@@ -580,6 +651,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingDoublePlays")
     public Double pitchingDoublePlays;
+
     public PlayerGame withPitchingDoublePlays(Double pitchingDoublePlays) {
         this.pitchingDoublePlays = pitchingDoublePlays;
         return this;
@@ -588,6 +660,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingDoubles")
     public Double pitchingDoubles;
+
     public PlayerGame withPitchingDoubles(Double pitchingDoubles) {
         this.pitchingDoubles = pitchingDoubles;
         return this;
@@ -596,6 +669,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingEarnedRuns")
     public Double pitchingEarnedRuns;
+
     public PlayerGame withPitchingEarnedRuns(Double pitchingEarnedRuns) {
         this.pitchingEarnedRuns = pitchingEarnedRuns;
         return this;
@@ -604,6 +678,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingFlyOuts")
     public Double pitchingFlyOuts;
+
     public PlayerGame withPitchingFlyOuts(Double pitchingFlyOuts) {
         this.pitchingFlyOuts = pitchingFlyOuts;
         return this;
@@ -612,6 +687,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingGrandSlams")
     public Double pitchingGrandSlams;
+
     public PlayerGame withPitchingGrandSlams(Double pitchingGrandSlams) {
         this.pitchingGrandSlams = pitchingGrandSlams;
         return this;
@@ -620,6 +696,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingGroundIntoDoublePlay")
     public Double pitchingGroundIntoDoublePlay;
+
     public PlayerGame withPitchingGroundIntoDoublePlay(Double pitchingGroundIntoDoublePlay) {
         this.pitchingGroundIntoDoublePlay = pitchingGroundIntoDoublePlay;
         return this;
@@ -628,6 +705,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingGroundOuts")
     public Double pitchingGroundOuts;
+
     public PlayerGame withPitchingGroundOuts(Double pitchingGroundOuts) {
         this.pitchingGroundOuts = pitchingGroundOuts;
         return this;
@@ -636,6 +714,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingHitByPitch")
     public Double pitchingHitByPitch;
+
     public PlayerGame withPitchingHitByPitch(Double pitchingHitByPitch) {
         this.pitchingHitByPitch = pitchingHitByPitch;
         return this;
@@ -644,6 +723,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingHits")
     public Double pitchingHits;
+
     public PlayerGame withPitchingHits(Double pitchingHits) {
         this.pitchingHits = pitchingHits;
         return this;
@@ -652,6 +732,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingHolds")
     public Double pitchingHolds;
+
     public PlayerGame withPitchingHolds(Double pitchingHolds) {
         this.pitchingHolds = pitchingHolds;
         return this;
@@ -660,6 +741,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingHomeRuns")
     public Double pitchingHomeRuns;
+
     public PlayerGame withPitchingHomeRuns(Double pitchingHomeRuns) {
         this.pitchingHomeRuns = pitchingHomeRuns;
         return this;
@@ -668,6 +750,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingInningStarted")
     public Long pitchingInningStarted;
+
     public PlayerGame withPitchingInningStarted(Long pitchingInningStarted) {
         this.pitchingInningStarted = pitchingInningStarted;
         return this;
@@ -676,6 +759,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingIntentionalWalks")
     public Double pitchingIntentionalWalks;
+
     public PlayerGame withPitchingIntentionalWalks(Double pitchingIntentionalWalks) {
         this.pitchingIntentionalWalks = pitchingIntentionalWalks;
         return this;
@@ -684,6 +768,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingLineOuts")
     public Double pitchingLineOuts;
+
     public PlayerGame withPitchingLineOuts(Double pitchingLineOuts) {
         this.pitchingLineOuts = pitchingLineOuts;
         return this;
@@ -692,6 +777,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingNoHitters")
     public Double pitchingNoHitters;
+
     public PlayerGame withPitchingNoHitters(Double pitchingNoHitters) {
         this.pitchingNoHitters = pitchingNoHitters;
         return this;
@@ -700,6 +786,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingOnBasePercentage")
     public Double pitchingOnBasePercentage;
+
     public PlayerGame withPitchingOnBasePercentage(Double pitchingOnBasePercentage) {
         this.pitchingOnBasePercentage = pitchingOnBasePercentage;
         return this;
@@ -708,6 +795,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingOnBasePlusSlugging")
     public Double pitchingOnBasePlusSlugging;
+
     public PlayerGame withPitchingOnBasePlusSlugging(Double pitchingOnBasePlusSlugging) {
         this.pitchingOnBasePlusSlugging = pitchingOnBasePlusSlugging;
         return this;
@@ -716,6 +804,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingPerfectGames")
     public Double pitchingPerfectGames;
+
     public PlayerGame withPitchingPerfectGames(Double pitchingPerfectGames) {
         this.pitchingPerfectGames = pitchingPerfectGames;
         return this;
@@ -724,6 +813,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingPlateAppearances")
     public Double pitchingPlateAppearances;
+
     public PlayerGame withPitchingPlateAppearances(Double pitchingPlateAppearances) {
         this.pitchingPlateAppearances = pitchingPlateAppearances;
         return this;
@@ -732,6 +822,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingPopOuts")
     public Double pitchingPopOuts;
+
     public PlayerGame withPitchingPopOuts(Double pitchingPopOuts) {
         this.pitchingPopOuts = pitchingPopOuts;
         return this;
@@ -740,6 +831,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingQualityStarts")
     public Double pitchingQualityStarts;
+
     public PlayerGame withPitchingQualityStarts(Double pitchingQualityStarts) {
         this.pitchingQualityStarts = pitchingQualityStarts;
         return this;
@@ -748,6 +840,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingReachedOnError")
     public Double pitchingReachedOnError;
+
     public PlayerGame withPitchingReachedOnError(Double pitchingReachedOnError) {
         this.pitchingReachedOnError = pitchingReachedOnError;
         return this;
@@ -756,6 +849,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingRuns")
     public Double pitchingRuns;
+
     public PlayerGame withPitchingRuns(Double pitchingRuns) {
         this.pitchingRuns = pitchingRuns;
         return this;
@@ -764,6 +858,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingSacrificeFlies")
     public Double pitchingSacrificeFlies;
+
     public PlayerGame withPitchingSacrificeFlies(Double pitchingSacrificeFlies) {
         this.pitchingSacrificeFlies = pitchingSacrificeFlies;
         return this;
@@ -772,6 +867,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingSacrifices")
     public Double pitchingSacrifices;
+
     public PlayerGame withPitchingSacrifices(Double pitchingSacrifices) {
         this.pitchingSacrifices = pitchingSacrifices;
         return this;
@@ -780,6 +876,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingShutOuts")
     public Double pitchingShutOuts;
+
     public PlayerGame withPitchingShutOuts(Double pitchingShutOuts) {
         this.pitchingShutOuts = pitchingShutOuts;
         return this;
@@ -788,6 +885,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingSingles")
     public Double pitchingSingles;
+
     public PlayerGame withPitchingSingles(Double pitchingSingles) {
         this.pitchingSingles = pitchingSingles;
         return this;
@@ -796,6 +894,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingSluggingPercentage")
     public Double pitchingSluggingPercentage;
+
     public PlayerGame withPitchingSluggingPercentage(Double pitchingSluggingPercentage) {
         this.pitchingSluggingPercentage = pitchingSluggingPercentage;
         return this;
@@ -804,6 +903,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingStrikeouts")
     public Double pitchingStrikeouts;
+
     public PlayerGame withPitchingStrikeouts(Double pitchingStrikeouts) {
         this.pitchingStrikeouts = pitchingStrikeouts;
         return this;
@@ -812,6 +912,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingStrikeoutsPerNineInnings")
     public Double pitchingStrikeoutsPerNineInnings;
+
     public PlayerGame withPitchingStrikeoutsPerNineInnings(Double pitchingStrikeoutsPerNineInnings) {
         this.pitchingStrikeoutsPerNineInnings = pitchingStrikeoutsPerNineInnings;
         return this;
@@ -820,6 +921,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingTotalBases")
     public Double pitchingTotalBases;
+
     public PlayerGame withPitchingTotalBases(Double pitchingTotalBases) {
         this.pitchingTotalBases = pitchingTotalBases;
         return this;
@@ -828,6 +930,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingTriples")
     public Double pitchingTriples;
+
     public PlayerGame withPitchingTriples(Double pitchingTriples) {
         this.pitchingTriples = pitchingTriples;
         return this;
@@ -836,6 +939,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingWalks")
     public Double pitchingWalks;
+
     public PlayerGame withPitchingWalks(Double pitchingWalks) {
         this.pitchingWalks = pitchingWalks;
         return this;
@@ -844,6 +948,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingWalksPerNineInnings")
     public Double pitchingWalksPerNineInnings;
+
     public PlayerGame withPitchingWalksPerNineInnings(Double pitchingWalksPerNineInnings) {
         this.pitchingWalksPerNineInnings = pitchingWalksPerNineInnings;
         return this;
@@ -852,6 +957,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchingWeightedOnBasePercentage")
     public Double pitchingWeightedOnBasePercentage;
+
     public PlayerGame withPitchingWeightedOnBasePercentage(Double pitchingWeightedOnBasePercentage) {
         this.pitchingWeightedOnBasePercentage = pitchingWeightedOnBasePercentage;
         return this;
@@ -860,6 +966,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlateAppearances")
     public Double plateAppearances;
+
     public PlayerGame withPlateAppearances(Double plateAppearances) {
         this.plateAppearances = plateAppearances;
         return this;
@@ -868,6 +975,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerGame withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -876,6 +984,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PopOuts")
     public Double popOuts;
+
     public PlayerGame withPopOuts(Double popOuts) {
         this.popOuts = popOuts;
         return this;
@@ -884,6 +993,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerGame withPosition(String position) {
         this.position = position;
         return this;
@@ -892,6 +1002,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerGame withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -900,6 +1011,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReachedOnError")
     public Double reachedOnError;
+
     public PlayerGame withReachedOnError(Double reachedOnError) {
         this.reachedOnError = reachedOnError;
         return this;
@@ -908,6 +1020,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runs")
     public Double runs;
+
     public PlayerGame withRuns(Double runs) {
         this.runs = runs;
         return this;
@@ -916,6 +1029,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunsBattedIn")
     public Double runsBattedIn;
+
     public PlayerGame withRunsBattedIn(Double runsBattedIn) {
         this.runsBattedIn = runsBattedIn;
         return this;
@@ -924,6 +1038,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SacrificeFlies")
     public Double sacrificeFlies;
+
     public PlayerGame withSacrificeFlies(Double sacrificeFlies) {
         this.sacrificeFlies = sacrificeFlies;
         return this;
@@ -932,6 +1047,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sacrifices")
     public Double sacrifices;
+
     public PlayerGame withSacrifices(Double sacrifices) {
         this.sacrifices = sacrifices;
         return this;
@@ -940,6 +1056,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Saves")
     public Double saves;
+
     public PlayerGame withSaves(Double saves) {
         this.saves = saves;
         return this;
@@ -948,6 +1065,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerGame withSeason(Long season) {
         this.season = season;
         return this;
@@ -956,6 +1074,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeasonType")
     public Long seasonType;
+
     public PlayerGame withSeasonType(Long seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -964,6 +1083,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Singles")
     public Double singles;
+
     public PlayerGame withSingles(Double singles) {
         this.singles = singles;
         return this;
@@ -972,6 +1092,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SluggingPercentage")
     public Double sluggingPercentage;
+
     public PlayerGame withSluggingPercentage(Double sluggingPercentage) {
         this.sluggingPercentage = sluggingPercentage;
         return this;
@@ -980,6 +1101,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Started")
     public Long started;
+
     public PlayerGame withStarted(Long started) {
         this.started = started;
         return this;
@@ -988,6 +1110,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatID")
     public Long statID;
+
     public PlayerGame withStatID(Long statID) {
         this.statID = statID;
         return this;
@@ -996,6 +1119,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StolenBases")
     public Double stolenBases;
+
     public PlayerGame withStolenBases(Double stolenBases) {
         this.stolenBases = stolenBases;
         return this;
@@ -1004,6 +1128,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Strikeouts")
     public Double strikeouts;
+
     public PlayerGame withStrikeouts(Double strikeouts) {
         this.strikeouts = strikeouts;
         return this;
@@ -1012,6 +1137,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubstituteBattingOrder")
     public Long substituteBattingOrder;
+
     public PlayerGame withSubstituteBattingOrder(Long substituteBattingOrder) {
         this.substituteBattingOrder = substituteBattingOrder;
         return this;
@@ -1020,6 +1146,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubstituteBattingOrderSequence")
     public Long substituteBattingOrderSequence;
+
     public PlayerGame withSubstituteBattingOrderSequence(Long substituteBattingOrderSequence) {
         this.substituteBattingOrderSequence = substituteBattingOrderSequence;
         return this;
@@ -1028,6 +1155,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerGame withTeam(String team) {
         this.team = team;
         return this;
@@ -1036,6 +1164,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerGame withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
@@ -1044,6 +1173,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalBases")
     public Double totalBases;
+
     public PlayerGame withTotalBases(Double totalBases) {
         this.totalBases = totalBases;
         return this;
@@ -1052,6 +1182,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalOutsPitched")
     public Double totalOutsPitched;
+
     public PlayerGame withTotalOutsPitched(Double totalOutsPitched) {
         this.totalOutsPitched = totalOutsPitched;
         return this;
@@ -1060,6 +1191,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Triples")
     public Double triples;
+
     public PlayerGame withTriples(Double triples) {
         this.triples = triples;
         return this;
@@ -1068,6 +1200,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerGame withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -1076,6 +1209,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Walks")
     public Double walks;
+
     public PlayerGame withWalks(Double walks) {
         this.walks = walks;
         return this;
@@ -1084,6 +1218,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WalksHitsPerInningsPitched")
     public Double walksHitsPerInningsPitched;
+
     public PlayerGame withWalksHitsPerInningsPitched(Double walksHitsPerInningsPitched) {
         this.walksHitsPerInningsPitched = walksHitsPerInningsPitched;
         return this;
@@ -1092,6 +1227,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WeightedOnBasePercentage")
     public Double weightedOnBasePercentage;
+
     public PlayerGame withWeightedOnBasePercentage(Double weightedOnBasePercentage) {
         this.weightedOnBasePercentage = weightedOnBasePercentage;
         return this;
@@ -1100,6 +1236,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wins")
     public Double wins;
+
     public PlayerGame withWins(Double wins) {
         this.wins = wins;
         return this;
@@ -1108,6 +1245,7 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooPosition")
     public String yahooPosition;
+
     public PlayerGame withYahooPosition(String yahooPosition) {
         this.yahooPosition = yahooPosition;
         return this;
@@ -1116,9 +1254,11 @@ public class PlayerGame {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YahooSalary")
     public Long yahooSalary;
+
     public PlayerGame withYahooSalary(Long yahooSalary) {
         this.yahooSalary = yahooSalary;
         return this;
     }
     
+    public PlayerGame(){}
 }

@@ -18,6 +18,7 @@ public class Admin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public Admin withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class Admin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public String admin;
+
     public Admin withAdmin(String admin) {
         this.admin = admin;
         return this;
@@ -40,6 +42,7 @@ public class Admin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Admin withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Admin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingInvitation")
     public Boolean pendingInvitation;
+
     public Admin withPendingInvitation(Boolean pendingInvitation) {
         this.pendingInvitation = pendingInvitation;
         return this;
@@ -62,9 +66,11 @@ public class Admin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public AdminRoleEnum role;
+
     public Admin withRole(AdminRoleEnum role) {
         this.role = role;
         return this;
     }
     
+    public Admin(){}
 }

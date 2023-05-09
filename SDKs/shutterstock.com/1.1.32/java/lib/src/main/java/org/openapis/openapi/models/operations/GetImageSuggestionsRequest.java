@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImageSuggestionsRequest {
@@ -12,6 +13,7 @@ public class GetImageSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetImageSuggestionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +24,13 @@ public class GetImageSuggestionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetImageSuggestionsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetImageSuggestionsRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

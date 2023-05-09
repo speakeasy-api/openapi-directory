@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckAvailabilityOfFundsResponse {
     
     public String contentType;
+
     public CheckAvailabilityOfFundsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400AIS error400AIS;
+
     public CheckAvailabilityOfFundsResponse withError400AIS(org.openapis.openapi.models.shared.Error400AIS error400AIS) {
         this.error400AIS = error400AIS;
         return this;
@@ -29,6 +32,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGAIS error400NGAIS;
+
     public CheckAvailabilityOfFundsResponse withError400NGAIS(org.openapis.openapi.models.shared.Error400NGAIS error400NGAIS) {
         this.error400NGAIS = error400NGAIS;
         return this;
@@ -39,6 +43,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIIS error401NGPIIS;
+
     public CheckAvailabilityOfFundsResponse withError401NGPIIS(org.openapis.openapi.models.shared.Error401NGPIIS error401NGPIIS) {
         this.error401NGPIIS = error401NGPIIS;
         return this;
@@ -49,6 +54,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIIS error401PIIS;
+
     public CheckAvailabilityOfFundsResponse withError401PIIS(org.openapis.openapi.models.shared.Error401PIIS error401PIIS) {
         this.error401PIIS = error401PIIS;
         return this;
@@ -59,6 +65,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIIS error403NGPIIS;
+
     public CheckAvailabilityOfFundsResponse withError403NGPIIS(org.openapis.openapi.models.shared.Error403NGPIIS error403NGPIIS) {
         this.error403NGPIIS = error403NGPIIS;
         return this;
@@ -69,6 +76,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIIS error403PIIS;
+
     public CheckAvailabilityOfFundsResponse withError403PIIS(org.openapis.openapi.models.shared.Error403PIIS error403PIIS) {
         this.error403PIIS = error403PIIS;
         return this;
@@ -79,6 +87,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIIS error404NGPIIS;
+
     public CheckAvailabilityOfFundsResponse withError404NGPIIS(org.openapis.openapi.models.shared.Error404NGPIIS error404NGPIIS) {
         this.error404NGPIIS = error404NGPIIS;
         return this;
@@ -89,6 +98,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIIS error404PIIS;
+
     public CheckAvailabilityOfFundsResponse withError404PIIS(org.openapis.openapi.models.shared.Error404PIIS error404PIIS) {
         this.error404PIIS = error404PIIS;
         return this;
@@ -99,6 +109,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPIIS error405NGPIIS;
+
     public CheckAvailabilityOfFundsResponse withError405NGPIIS(org.openapis.openapi.models.shared.Error405NGPIIS error405NGPIIS) {
         this.error405NGPIIS = error405NGPIIS;
         return this;
@@ -109,6 +120,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PIIS error405PIIS;
+
     public CheckAvailabilityOfFundsResponse withError405PIIS(org.openapis.openapi.models.shared.Error405PIIS error405PIIS) {
         this.error405PIIS = error405PIIS;
         return this;
@@ -119,6 +131,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIIS error409NGPIIS;
+
     public CheckAvailabilityOfFundsResponse withError409NGPIIS(org.openapis.openapi.models.shared.Error409NGPIIS error409NGPIIS) {
         this.error409NGPIIS = error409NGPIIS;
         return this;
@@ -129,6 +142,7 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIIS error409PIIS;
+
     public CheckAvailabilityOfFundsResponse withError409PIIS(org.openapis.openapi.models.shared.Error409PIIS error409PIIS) {
         this.error409PIIS = error409PIIS;
         return this;
@@ -136,6 +150,7 @@ public class CheckAvailabilityOfFundsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CheckAvailabilityOfFundsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class CheckAvailabilityOfFundsResponse {
     
     
     public Integer statusCode;
+
     public CheckAvailabilityOfFundsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class CheckAvailabilityOfFundsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckAvailabilityOfFundsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,9 +177,14 @@ public class CheckAvailabilityOfFundsResponse {
      */
     
     public CheckAvailabilityOfFunds200ApplicationJSON checkAvailabilityOfFunds200ApplicationJSONObject;
+
     public CheckAvailabilityOfFundsResponse withCheckAvailabilityOfFunds200ApplicationJSONObject(CheckAvailabilityOfFunds200ApplicationJSON checkAvailabilityOfFunds200ApplicationJSONObject) {
         this.checkAvailabilityOfFunds200ApplicationJSONObject = checkAvailabilityOfFunds200ApplicationJSONObject;
         return this;
     }
     
+    public CheckAvailabilityOfFundsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

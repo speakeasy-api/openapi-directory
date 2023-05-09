@@ -15,6 +15,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public NAUserAdministrative withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feel_like_algo")
     public String feelLikeAlgo;
+
     public NAUserAdministrative withFeelLikeAlgo(String feelLikeAlgo) {
         this.feelLikeAlgo = feelLikeAlgo;
         return this;
@@ -37,6 +39,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lang")
     public String lang;
+
     public NAUserAdministrative withLang(String lang) {
         this.lang = lang;
         return this;
@@ -48,6 +51,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pressureunit")
     public String pressureunit;
+
     public NAUserAdministrative withPressureunit(String pressureunit) {
         this.pressureunit = pressureunit;
         return this;
@@ -59,6 +63,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reg_locale")
     public String regLocale;
+
     public NAUserAdministrative withRegLocale(String regLocale) {
         this.regLocale = regLocale;
         return this;
@@ -70,6 +75,7 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public NAUserAdministrative withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -81,9 +87,11 @@ public class NAUserAdministrative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windunit")
     public String windunit;
+
     public NAUserAdministrative withWindunit(String windunit) {
         this.windunit = windunit;
         return this;
     }
     
+    public NAUserAdministrative(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourceSharesResponse {
     
     public String contentType;
+
     public GetResourceSharesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResourceSharesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResourceSharesResponse getResourceSharesResponse;
+
     public GetResourceSharesResponse withGetResourceSharesResponse(org.openapis.openapi.models.shared.GetResourceSharesResponse getResourceSharesResponse) {
         this.getResourceSharesResponse = getResourceSharesResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResourceSharesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetResourceSharesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetResourceSharesResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResourceSharesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetResourceSharesResponse {
      */
     
     public Object malformedArnException;
+
     public GetResourceSharesResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -56,6 +62,7 @@ public class GetResourceSharesResponse {
     
     
     public Integer statusCode;
+
     public GetResourceSharesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResourceSharesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourceSharesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetResourceSharesResponse {
      */
     
     public Object serverInternalException;
+
     public GetResourceSharesResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -83,6 +92,7 @@ public class GetResourceSharesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetResourceSharesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class GetResourceSharesResponse {
      */
     
     public Object unknownResourceException;
+
     public GetResourceSharesResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public GetResourceSharesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

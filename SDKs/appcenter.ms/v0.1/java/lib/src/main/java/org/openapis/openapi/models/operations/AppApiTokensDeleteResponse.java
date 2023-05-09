@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppApiTokensDeleteResponse {
     
     public String contentType;
+
     public AppApiTokensDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppApiTokensDeleteResponse {
     
     
     public Integer statusCode;
+
     public AppApiTokensDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppApiTokensDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppApiTokensDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppApiTokensDeleteResponse {
      */
     
     public AppApiTokensDelete400ApplicationJSON appApiTokensDelete400ApplicationJSONObject;
+
     public AppApiTokensDeleteResponse withAppApiTokensDelete400ApplicationJSONObject(AppApiTokensDelete400ApplicationJSON appApiTokensDelete400ApplicationJSONObject) {
         this.appApiTokensDelete400ApplicationJSONObject = appApiTokensDelete400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class AppApiTokensDeleteResponse {
      */
     
     public AppApiTokensDelete401ApplicationJSON appApiTokensDelete401ApplicationJSONObject;
+
     public AppApiTokensDeleteResponse withAppApiTokensDelete401ApplicationJSONObject(AppApiTokensDelete401ApplicationJSON appApiTokensDelete401ApplicationJSONObject) {
         this.appApiTokensDelete401ApplicationJSONObject = appApiTokensDelete401ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class AppApiTokensDeleteResponse {
      */
     
     public AppApiTokensDelete404ApplicationJSON appApiTokensDelete404ApplicationJSONObject;
+
     public AppApiTokensDeleteResponse withAppApiTokensDelete404ApplicationJSONObject(AppApiTokensDelete404ApplicationJSON appApiTokensDelete404ApplicationJSONObject) {
         this.appApiTokensDelete404ApplicationJSONObject = appApiTokensDelete404ApplicationJSONObject;
         return this;
     }
     
+    public AppApiTokensDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

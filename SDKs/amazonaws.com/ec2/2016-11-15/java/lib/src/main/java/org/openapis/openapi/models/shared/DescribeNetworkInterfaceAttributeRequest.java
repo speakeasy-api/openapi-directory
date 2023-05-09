@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeNetworkInterfaceAttributeRequest - Contains the parameters for DescribeNetworkInterfaceAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfaceAttributeRequest {
     
     public DescribeNetworkInterfaceAttributeRequestAttributeEnum attribute;
+
     public DescribeNetworkInterfaceAttributeRequest withAttribute(DescribeNetworkInterfaceAttributeRequestAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfaceAttributeRequest {
     
     
     public Boolean dryRun;
+
     public DescribeNetworkInterfaceAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,9 +28,13 @@ public class DescribeNetworkInterfaceAttributeRequest {
     
     
     public String networkInterfaceId;
+
     public DescribeNetworkInterfaceAttributeRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
     }
     
+    public DescribeNetworkInterfaceAttributeRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId) {
+        this.networkInterfaceId = networkInterfaceId;
+  }
 }

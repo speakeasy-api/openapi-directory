@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileCacheLustreMetadataConfiguration {
     @JsonProperty("StorageCapacity")
     public Long storageCapacity;
+
     public FileCacheLustreMetadataConfiguration withStorageCapacity(Long storageCapacity) {
         this.storageCapacity = storageCapacity;
         return this;
     }
     
+    public FileCacheLustreMetadataConfiguration(@JsonProperty("StorageCapacity") Long storageCapacity) {
+        this.storageCapacity = storageCapacity;
+  }
 }

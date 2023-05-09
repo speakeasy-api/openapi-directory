@@ -25,6 +25,7 @@ public class GitCreateCommitRequestBodyAuthor {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public GitCreateCommitRequestBodyAuthor withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -35,6 +36,7 @@ public class GitCreateCommitRequestBodyAuthor {
      */
     @JsonProperty("email")
     public String email;
+
     public GitCreateCommitRequestBodyAuthor withEmail(String email) {
         this.email = email;
         return this;
@@ -45,9 +47,14 @@ public class GitCreateCommitRequestBodyAuthor {
      */
     @JsonProperty("name")
     public String name;
+
     public GitCreateCommitRequestBodyAuthor withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GitCreateCommitRequestBodyAuthor(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

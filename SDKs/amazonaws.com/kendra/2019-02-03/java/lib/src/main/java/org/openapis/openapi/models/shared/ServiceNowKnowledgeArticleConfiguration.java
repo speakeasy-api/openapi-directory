@@ -15,6 +15,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public ServiceNowKnowledgeArticleConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
@@ -22,6 +23,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     
     @JsonProperty("DocumentDataFieldName")
     public String documentDataFieldName;
+
     public ServiceNowKnowledgeArticleConfiguration withDocumentDataFieldName(String documentDataFieldName) {
         this.documentDataFieldName = documentDataFieldName;
         return this;
@@ -30,6 +32,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public ServiceNowKnowledgeArticleConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -38,6 +41,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeAttachmentFilePatterns")
     public String[] excludeAttachmentFilePatterns;
+
     public ServiceNowKnowledgeArticleConfiguration withExcludeAttachmentFilePatterns(String[] excludeAttachmentFilePatterns) {
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         return this;
@@ -46,6 +50,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public ServiceNowKnowledgeArticleConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -54,6 +59,7 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterQuery")
     public String filterQuery;
+
     public ServiceNowKnowledgeArticleConfiguration withFilterQuery(String filterQuery) {
         this.filterQuery = filterQuery;
         return this;
@@ -62,9 +68,13 @@ public class ServiceNowKnowledgeArticleConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeAttachmentFilePatterns")
     public String[] includeAttachmentFilePatterns;
+
     public ServiceNowKnowledgeArticleConfiguration withIncludeAttachmentFilePatterns(String[] includeAttachmentFilePatterns) {
         this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
         return this;
     }
     
+    public ServiceNowKnowledgeArticleConfiguration(@JsonProperty("DocumentDataFieldName") String documentDataFieldName) {
+        this.documentDataFieldName = documentDataFieldName;
+  }
 }

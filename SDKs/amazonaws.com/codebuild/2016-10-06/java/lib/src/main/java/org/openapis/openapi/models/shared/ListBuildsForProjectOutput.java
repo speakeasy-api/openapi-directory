@@ -15,6 +15,7 @@ public class ListBuildsForProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public ListBuildsForProjectOutput withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -23,9 +24,11 @@ public class ListBuildsForProjectOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBuildsForProjectOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBuildsForProjectOutput(){}
 }

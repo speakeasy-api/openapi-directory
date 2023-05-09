@@ -12,9 +12,13 @@ public class PaymentData {
      */
     @JsonProperty("transactions")
     public Transaction[] transactions;
+
     public PaymentData withTransactions(Transaction[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public PaymentData(@JsonProperty("transactions") Transaction[] transactions) {
+        this.transactions = transactions;
+  }
 }

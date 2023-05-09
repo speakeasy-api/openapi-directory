@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class GetInsightRuleReportInput {
     
     public OffsetDateTime endTime;
+
     public GetInsightRuleReportInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -16,6 +18,7 @@ public class GetInsightRuleReportInput {
     
     
     public Long maxContributorCount;
+
     public GetInsightRuleReportInput withMaxContributorCount(Long maxContributorCount) {
         this.maxContributorCount = maxContributorCount;
         return this;
@@ -23,6 +26,7 @@ public class GetInsightRuleReportInput {
     
     
     public String[] metrics;
+
     public GetInsightRuleReportInput withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
@@ -30,6 +34,7 @@ public class GetInsightRuleReportInput {
     
     
     public String orderBy;
+
     public GetInsightRuleReportInput withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -37,6 +42,7 @@ public class GetInsightRuleReportInput {
     
     
     public Long period;
+
     public GetInsightRuleReportInput withPeriod(Long period) {
         this.period = period;
         return this;
@@ -44,6 +50,7 @@ public class GetInsightRuleReportInput {
     
     
     public String ruleName;
+
     public GetInsightRuleReportInput withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -51,9 +58,16 @@ public class GetInsightRuleReportInput {
     
     
     public OffsetDateTime startTime;
+
     public GetInsightRuleReportInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetInsightRuleReportInput(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("Period") Long period, @JsonProperty("RuleName") String ruleName, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.period = period;
+        this.ruleName = ruleName;
+        this.startTime = startTime;
+  }
 }

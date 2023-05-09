@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetPreparedStatementResponse {
@@ -12,6 +13,7 @@ public class BatchGetPreparedStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetPreparedStatementOutput batchGetPreparedStatementOutput;
+
     public BatchGetPreparedStatementResponse withBatchGetPreparedStatementOutput(org.openapis.openapi.models.shared.BatchGetPreparedStatementOutput batchGetPreparedStatementOutput) {
         this.batchGetPreparedStatementOutput = batchGetPreparedStatementOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetPreparedStatementResponse {
     
     
     public String contentType;
+
     public BatchGetPreparedStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetPreparedStatementResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetPreparedStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetPreparedStatementResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchGetPreparedStatementResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetPreparedStatementResponse {
     
     
     public Integer statusCode;
+
     public BatchGetPreparedStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetPreparedStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetPreparedStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetPreparedStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

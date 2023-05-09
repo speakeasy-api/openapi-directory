@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckDomainTransferabilityResponse {
@@ -12,6 +13,7 @@ public class CheckDomainTransferabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckDomainTransferabilityResponse checkDomainTransferabilityResponse;
+
     public CheckDomainTransferabilityResponse withCheckDomainTransferabilityResponse(org.openapis.openapi.models.shared.CheckDomainTransferabilityResponse checkDomainTransferabilityResponse) {
         this.checkDomainTransferabilityResponse = checkDomainTransferabilityResponse;
         return this;
@@ -19,6 +21,7 @@ public class CheckDomainTransferabilityResponse {
     
     
     public String contentType;
+
     public CheckDomainTransferabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CheckDomainTransferabilityResponse {
      */
     
     public Object invalidInput;
+
     public CheckDomainTransferabilityResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -36,6 +40,7 @@ public class CheckDomainTransferabilityResponse {
     
     
     public Integer statusCode;
+
     public CheckDomainTransferabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CheckDomainTransferabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckDomainTransferabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CheckDomainTransferabilityResponse {
      */
     
     public Object unsupportedTLD;
+
     public CheckDomainTransferabilityResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public CheckDomainTransferabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsRedshiftClusterVpcSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRedshiftClusterVpcSecurityGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class AwsRedshiftClusterVpcSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSecurityGroupId")
     public String vpcSecurityGroupId;
+
     public AwsRedshiftClusterVpcSecurityGroup withVpcSecurityGroupId(String vpcSecurityGroupId) {
         this.vpcSecurityGroupId = vpcSecurityGroupId;
         return this;
     }
     
+    public AwsRedshiftClusterVpcSecurityGroup(){}
 }

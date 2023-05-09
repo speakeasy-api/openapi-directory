@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserResponse {
     
     public String contentType;
+
     public CreateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserResponse createUserResponse;
+
     public CreateUserResponse withCreateUserResponse(org.openapis.openapi.models.shared.CreateUserResponse createUserResponse) {
         this.createUserResponse = createUserResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserResponse {
      */
     
     public Object internalServiceError;
+
     public CreateUserResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateUserResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateUserResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateUserResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateUserResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class CreateUserResponse {
     
     
     public Integer statusCode;
+
     public CreateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

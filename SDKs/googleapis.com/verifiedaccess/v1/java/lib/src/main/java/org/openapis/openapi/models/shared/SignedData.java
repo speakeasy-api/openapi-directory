@@ -18,6 +18,7 @@ public class SignedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public SignedData withData(String data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class SignedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signature")
     public String signature;
+
     public SignedData withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public SignedData(){}
 }

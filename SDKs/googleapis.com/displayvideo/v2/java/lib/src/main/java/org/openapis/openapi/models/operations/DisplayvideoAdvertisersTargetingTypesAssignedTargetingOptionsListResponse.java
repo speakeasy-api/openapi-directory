@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse {
     
     public String contentType;
+
     public DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRe
      */
     
     public org.openapis.openapi.models.shared.ListAdvertiserAssignedTargetingOptionsResponse listAdvertiserAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse withListAdvertiserAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.ListAdvertiserAssignedTargetingOptionsResponse listAdvertiserAssignedTargetingOptionsResponse) {
         this.listAdvertiserAssignedTargetingOptionsResponse = listAdvertiserAssignedTargetingOptionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRe
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersTargetingTypesAssignedTargetingOptionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

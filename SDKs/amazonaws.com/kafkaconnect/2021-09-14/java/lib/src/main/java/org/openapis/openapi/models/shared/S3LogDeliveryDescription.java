@@ -15,6 +15,7 @@ public class S3LogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public S3LogDeliveryDescription withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3LogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public S3LogDeliveryDescription withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,9 +33,11 @@ public class S3LogDeliveryDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public S3LogDeliveryDescription withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public S3LogDeliveryDescription(){}
 }

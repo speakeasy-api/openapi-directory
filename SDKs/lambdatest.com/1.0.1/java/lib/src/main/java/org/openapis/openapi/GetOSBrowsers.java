@@ -59,12 +59,10 @@ public class GetOSBrowsers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OsBrowsersResponse res = new org.openapis.openapi.models.operations.OsBrowsersResponse() {{
+        org.openapis.openapi.models.operations.OsBrowsersResponse res = new org.openapis.openapi.models.operations.OsBrowsersResponse(contentType, httpRes.statusCode()) {{
             osBrowsers = null;
             accessDenied = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

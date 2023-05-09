@@ -53,11 +53,9 @@ public class WirelessSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse res = new org.openapis.openapi.models.operations.GetNetworkWirelessSettingsResponse(contentType, httpRes.statusCode()) {{
             getNetworkWirelessSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class WirelessSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse res = new org.openapis.openapi.models.operations.UpdateNetworkWirelessSettingsResponse(contentType, httpRes.statusCode()) {{
             updateNetworkWirelessSettings200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

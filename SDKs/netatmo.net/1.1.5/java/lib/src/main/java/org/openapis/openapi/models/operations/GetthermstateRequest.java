@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetthermstateRequest {
@@ -12,6 +13,7 @@ public class GetthermstateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public GetthermstateRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,9 +24,14 @@ public class GetthermstateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
     public String moduleId;
+
     public GetthermstateRequest withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     
+    public GetthermstateRequest(@JsonProperty("device_id") String deviceId, @JsonProperty("module_id") String moduleId) {
+        this.deviceId = deviceId;
+        this.moduleId = moduleId;
+  }
 }

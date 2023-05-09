@@ -18,6 +18,7 @@ public class VpcConnectorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public VpcConnectorInfo withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class VpcConnectorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public VpcConnectorInfo withLocation(String location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class VpcConnectorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public VpcConnectorInfo withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public VpcConnectorInfo(){}
 }

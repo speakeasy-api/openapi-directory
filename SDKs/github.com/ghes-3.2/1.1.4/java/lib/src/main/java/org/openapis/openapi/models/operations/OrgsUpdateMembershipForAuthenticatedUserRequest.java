@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsUpdateMembershipForAuthenticatedUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public OrgsUpdateMembershipForAuthenticatedUserRequestBody requestBody;
+
     public OrgsUpdateMembershipForAuthenticatedUserRequest withRequestBody(OrgsUpdateMembershipForAuthenticatedUserRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class OrgsUpdateMembershipForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsUpdateMembershipForAuthenticatedUserRequest withOrg(String org) {
         this.org = org;
         return this;
     }
     
+    public OrgsUpdateMembershipForAuthenticatedUserRequest(@JsonProperty("RequestBody") OrgsUpdateMembershipForAuthenticatedUserRequestBody requestBody, @JsonProperty("org") String org) {
+        this.requestBody = requestBody;
+        this.org = org;
+  }
 }

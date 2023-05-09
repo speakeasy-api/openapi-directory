@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetMerchantOrderInfoV3Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public SetMerchantOrderInfoV3Request withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class SetMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public SetMerchantOrderInfoV3Request withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -29,6 +32,7 @@ public class SetMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public SetMerchantOrderInfoV3Request withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -36,6 +40,7 @@ public class SetMerchantOrderInfoV3Request {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest;
+
     public SetMerchantOrderInfoV3Request withSetMerchantOrderInfoRequest(org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
         this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
         return this;
@@ -46,9 +51,16 @@ public class SetMerchantOrderInfoV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=testMode")
     public Boolean testMode;
+
     public SetMerchantOrderInfoV3Request withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
     }
     
+    public SetMerchantOrderInfoV3Request(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("setMerchantOrderInfoRequest") org.openapis.openapi.models.shared.SetMerchantOrderInfoRequest setMerchantOrderInfoRequest) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.setMerchantOrderInfoRequest = setMerchantOrderInfoRequest;
+  }
 }

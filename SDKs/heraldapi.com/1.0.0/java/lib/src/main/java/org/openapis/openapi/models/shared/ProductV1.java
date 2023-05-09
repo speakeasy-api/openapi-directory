@@ -15,6 +15,7 @@ public class ProductV1 {
      */
     @JsonProperty("id")
     public String id;
+
     public ProductV1 withId(String id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class ProductV1 {
      */
     @JsonProperty("institution_id")
     public String institutionId;
+
     public ProductV1 withInstitutionId(String institutionId) {
         this.institutionId = institutionId;
         return this;
@@ -35,6 +37,7 @@ public class ProductV1 {
      */
     @JsonProperty("name")
     public String name;
+
     public ProductV1 withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class ProductV1 {
      */
     @JsonProperty("product_line")
     public ProductV1ProductLineEnum productLine;
+
     public ProductV1 withProductLine(ProductV1ProductLineEnum productLine) {
         this.productLine = productLine;
         return this;
     }
     
+    public ProductV1(@JsonProperty("id") String id, @JsonProperty("institution_id") String institutionId, @JsonProperty("name") String name, @JsonProperty("product_line") ProductV1ProductLineEnum productLine) {
+        this.id = id;
+        this.institutionId = institutionId;
+        this.name = name;
+        this.productLine = productLine;
+  }
 }

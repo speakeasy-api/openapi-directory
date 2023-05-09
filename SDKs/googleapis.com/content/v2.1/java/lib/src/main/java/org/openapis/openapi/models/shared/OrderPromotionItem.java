@@ -15,6 +15,7 @@ public class OrderPromotionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrderPromotionItem withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -26,6 +27,7 @@ public class OrderPromotionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public OrderPromotionItem withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -37,6 +39,7 @@ public class OrderPromotionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrderPromotionItem withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -48,9 +51,11 @@ public class OrderPromotionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Integer quantity;
+
     public OrderPromotionItem withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public OrderPromotionItem(){}
 }

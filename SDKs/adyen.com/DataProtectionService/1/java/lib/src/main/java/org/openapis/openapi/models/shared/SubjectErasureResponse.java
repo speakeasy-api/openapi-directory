@@ -18,9 +18,11 @@ public class SubjectErasureResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public SubjectErasureResponseResultEnum result;
+
     public SubjectErasureResponse withResult(SubjectErasureResponseResultEnum result) {
         this.result = result;
         return this;
     }
     
+    public SubjectErasureResponse(){}
 }

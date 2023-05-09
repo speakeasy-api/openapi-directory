@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchedulesScheduleAByEmployerResponse {
     
     public String contentType;
+
     public GetSchedulesScheduleAByEmployerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSchedulesScheduleAByEmployerResponse {
     
     
     public org.openapis.openapi.models.shared.ScheduleAByEmployerPage scheduleAByEmployerPage;
+
     public GetSchedulesScheduleAByEmployerResponse withScheduleAByEmployerPage(org.openapis.openapi.models.shared.ScheduleAByEmployerPage scheduleAByEmployerPage) {
         this.scheduleAByEmployerPage = scheduleAByEmployerPage;
         return this;
@@ -23,6 +26,7 @@ public class GetSchedulesScheduleAByEmployerResponse {
     
     
     public Integer statusCode;
+
     public GetSchedulesScheduleAByEmployerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetSchedulesScheduleAByEmployerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchedulesScheduleAByEmployerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchedulesScheduleAByEmployerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

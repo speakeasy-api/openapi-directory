@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPatientManagementRequest {
@@ -12,6 +13,7 @@ public class GetPatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GetPatientManagementRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -22,6 +24,7 @@ public class GetPatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=identifierId")
     public Long identifierId;
+
     public GetPatientManagementRequest withIdentifierId(Long identifierId) {
         this.identifierId = identifierId;
         return this;
@@ -32,9 +35,15 @@ public class GetPatientManagementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public Long userId;
+
     public GetPatientManagementRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetPatientManagementRequest(@JsonProperty("groupId") Long groupId, @JsonProperty("identifierId") Long identifierId, @JsonProperty("userId") Long userId) {
+        this.groupId = groupId;
+        this.identifierId = identifierId;
+        this.userId = userId;
+  }
 }

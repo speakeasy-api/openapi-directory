@@ -12,6 +12,7 @@ public class GetMobileDeviceAccessEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceModel")
     public String deviceModel;
+
     public GetMobileDeviceAccessEffectRequest withDeviceModel(String deviceModel) {
         this.deviceModel = deviceModel;
         return this;
@@ -20,6 +21,7 @@ public class GetMobileDeviceAccessEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceOperatingSystem")
     public String deviceOperatingSystem;
+
     public GetMobileDeviceAccessEffectRequest withDeviceOperatingSystem(String deviceOperatingSystem) {
         this.deviceOperatingSystem = deviceOperatingSystem;
         return this;
@@ -28,6 +30,7 @@ public class GetMobileDeviceAccessEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceType")
     public String deviceType;
+
     public GetMobileDeviceAccessEffectRequest withDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -36,6 +39,7 @@ public class GetMobileDeviceAccessEffectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceUserAgent")
     public String deviceUserAgent;
+
     public GetMobileDeviceAccessEffectRequest withDeviceUserAgent(String deviceUserAgent) {
         this.deviceUserAgent = deviceUserAgent;
         return this;
@@ -43,9 +47,13 @@ public class GetMobileDeviceAccessEffectRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public GetMobileDeviceAccessEffectRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GetMobileDeviceAccessEffectRequest(@JsonProperty("OrganizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

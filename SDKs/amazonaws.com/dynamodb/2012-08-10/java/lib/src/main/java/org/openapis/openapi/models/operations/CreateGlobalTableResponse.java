@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGlobalTableResponse {
     
     public String contentType;
+
     public CreateGlobalTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGlobalTableResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGlobalTableOutput createGlobalTableOutput;
+
     public CreateGlobalTableResponse withCreateGlobalTableOutput(org.openapis.openapi.models.shared.CreateGlobalTableOutput createGlobalTableOutput) {
         this.createGlobalTableOutput = createGlobalTableOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateGlobalTableResponse {
      */
     
     public Object globalTableAlreadyExistsException;
+
     public CreateGlobalTableResponse withGlobalTableAlreadyExistsException(Object globalTableAlreadyExistsException) {
         this.globalTableAlreadyExistsException = globalTableAlreadyExistsException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGlobalTableResponse {
      */
     
     public Object internalServerError;
+
     public CreateGlobalTableResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateGlobalTableResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGlobalTableResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateGlobalTableResponse {
     
     
     public Integer statusCode;
+
     public CreateGlobalTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateGlobalTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGlobalTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateGlobalTableResponse {
      */
     
     public Object tableNotFoundException;
+
     public CreateGlobalTableResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
     }
     
+    public CreateGlobalTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

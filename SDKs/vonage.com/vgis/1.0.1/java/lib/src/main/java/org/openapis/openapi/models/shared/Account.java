@@ -18,6 +18,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Account withId(Long id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Account withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org")
     public String org;
+
     public Account withOrg(String org) {
         this.org = org;
         return this;
@@ -51,6 +54,7 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AccountStatusEnum status;
+
     public Account withStatus(AccountStatusEnum status) {
         this.status = status;
         return this;
@@ -59,9 +63,11 @@ public class Account {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ucis")
     public AccountUcis[] ucis;
+
     public Account withUcis(AccountUcis[] ucis) {
         this.ucis = ucis;
         return this;
     }
     
+    public Account(){}
 }

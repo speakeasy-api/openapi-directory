@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse {
     
     public String contentType;
+
     public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse {
      */
     
     public String deleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString;
+
     public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse withDeleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString(String deleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString) {
         this.deleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString = deleteProductsIdDigitalProductsDigitalProductIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteProductsIdDigitalProductsDigitalProductIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

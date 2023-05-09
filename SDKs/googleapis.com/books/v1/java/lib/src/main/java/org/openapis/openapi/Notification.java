@@ -58,11 +58,9 @@ public class Notification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksNotificationGetResponse res = new org.openapis.openapi.models.operations.BooksNotificationGetResponse() {{
+        org.openapis.openapi.models.operations.BooksNotificationGetResponse res = new org.openapis.openapi.models.operations.BooksNotificationGetResponse(contentType, httpRes.statusCode()) {{
             notification = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

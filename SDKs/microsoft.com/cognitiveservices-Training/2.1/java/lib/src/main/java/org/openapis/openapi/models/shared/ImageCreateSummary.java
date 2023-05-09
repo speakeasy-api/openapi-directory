@@ -15,6 +15,7 @@ public class ImageCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public ImageCreateResult[] images;
+
     public ImageCreateSummary withImages(ImageCreateResult[] images) {
         this.images = images;
         return this;
@@ -23,9 +24,11 @@ public class ImageCreateSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBatchSuccessful")
     public Boolean isBatchSuccessful;
+
     public ImageCreateSummary withIsBatchSuccessful(Boolean isBatchSuccessful) {
         this.isBatchSuccessful = isBatchSuccessful;
         return this;
     }
     
+    public ImageCreateSummary(){}
 }

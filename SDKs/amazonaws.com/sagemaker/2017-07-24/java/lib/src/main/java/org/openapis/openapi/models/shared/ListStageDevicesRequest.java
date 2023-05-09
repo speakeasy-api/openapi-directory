@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListStageDevicesRequest {
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public ListStageDevicesRequest withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -19,6 +20,7 @@ public class ListStageDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeDevicesDeployedInOtherStage")
     public Boolean excludeDevicesDeployedInOtherStage;
+
     public ListStageDevicesRequest withExcludeDevicesDeployedInOtherStage(Boolean excludeDevicesDeployedInOtherStage) {
         this.excludeDevicesDeployedInOtherStage = excludeDevicesDeployedInOtherStage;
         return this;
@@ -27,6 +29,7 @@ public class ListStageDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListStageDevicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListStageDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStageDevicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class ListStageDevicesRequest {
     
     @JsonProperty("StageName")
     public String stageName;
+
     public ListStageDevicesRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
     }
     
+    public ListStageDevicesRequest(@JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName, @JsonProperty("StageName") String stageName) {
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+        this.stageName = stageName;
+  }
 }

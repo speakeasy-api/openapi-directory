@@ -60,11 +60,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse(contentType, httpRes.statusCode()) {{
             campaignWrapped = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdJsonResponse(contentType, httpRes.statusCode()) {{
             campaignWrapped = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdMediaJsonResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrapped = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Campaigns {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesCampaignsIdSyndicateFormatResponse(contentType, httpRes.statusCode()) {{
             syndicateMarshallerWrapped = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

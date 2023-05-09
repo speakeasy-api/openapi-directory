@@ -15,6 +15,7 @@ public class CustomerManagedDatastoreS3StorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public CustomerManagedDatastoreS3StorageSummary withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class CustomerManagedDatastoreS3StorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public CustomerManagedDatastoreS3StorageSummary withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -31,9 +33,11 @@ public class CustomerManagedDatastoreS3StorageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CustomerManagedDatastoreS3StorageSummary withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CustomerManagedDatastoreS3StorageSummary(){}
 }

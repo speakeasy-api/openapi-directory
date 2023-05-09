@@ -15,6 +15,7 @@ public class ServicePlansCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ServicePlan[] data;
+
     public ServicePlansCollection withData(ServicePlan[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ServicePlansCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CollectionLinks links;
+
     public ServicePlansCollection withLinks(CollectionLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ServicePlansCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CollectionMetadata meta;
+
     public ServicePlansCollection withMeta(CollectionMetadata meta) {
         this.meta = meta;
         return this;
     }
     
+    public ServicePlansCollection(){}
 }

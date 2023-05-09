@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AmplitudeConnectorProfileCredentials {
     @JsonProperty("apiKey")
     public String apiKey;
+
     public AmplitudeConnectorProfileCredentials withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -19,9 +20,14 @@ public class AmplitudeConnectorProfileCredentials {
     
     @JsonProperty("secretKey")
     public String secretKey;
+
     public AmplitudeConnectorProfileCredentials withSecretKey(String secretKey) {
         this.secretKey = secretKey;
         return this;
     }
     
+    public AmplitudeConnectorProfileCredentials(@JsonProperty("apiKey") String apiKey, @JsonProperty("secretKey") String secretKey) {
+        this.apiKey = apiKey;
+        this.secretKey = secretKey;
+  }
 }

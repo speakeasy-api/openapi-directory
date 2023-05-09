@@ -15,6 +15,7 @@ public class AssociateRepositoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public AssociateRepositoryRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -26,6 +27,7 @@ public class AssociateRepositoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKeyDetails")
     public AssociateRepositoryRequestBodyKMSKeyDetails kmsKeyDetails;
+
     public AssociateRepositoryRequestBody withKMSKeyDetails(AssociateRepositoryRequestBodyKMSKeyDetails kmsKeyDetails) {
         this.kmsKeyDetails = kmsKeyDetails;
         return this;
@@ -36,6 +38,7 @@ public class AssociateRepositoryRequestBody {
      */
     @JsonProperty("Repository")
     public AssociateRepositoryRequestBodyRepository repository;
+
     public AssociateRepositoryRequestBody withRepository(AssociateRepositoryRequestBodyRepository repository) {
         this.repository = repository;
         return this;
@@ -47,9 +50,13 @@ public class AssociateRepositoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public AssociateRepositoryRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public AssociateRepositoryRequestBody(@JsonProperty("Repository") AssociateRepositoryRequestBodyRepository repository) {
+        this.repository = repository;
+  }
 }

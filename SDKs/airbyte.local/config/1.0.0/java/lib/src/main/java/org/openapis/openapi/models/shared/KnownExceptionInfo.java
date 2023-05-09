@@ -15,6 +15,7 @@ public class KnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionClassName")
     public String exceptionClassName;
+
     public KnownExceptionInfo withExceptionClassName(String exceptionClassName) {
         this.exceptionClassName = exceptionClassName;
         return this;
@@ -23,6 +24,7 @@ public class KnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exceptionStack")
     public String[] exceptionStack;
+
     public KnownExceptionInfo withExceptionStack(String[] exceptionStack) {
         this.exceptionStack = exceptionStack;
         return this;
@@ -30,6 +32,7 @@ public class KnownExceptionInfo {
     
     @JsonProperty("message")
     public String message;
+
     public KnownExceptionInfo withMessage(String message) {
         this.message = message;
         return this;
@@ -38,6 +41,7 @@ public class KnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootCauseExceptionClassName")
     public String rootCauseExceptionClassName;
+
     public KnownExceptionInfo withRootCauseExceptionClassName(String rootCauseExceptionClassName) {
         this.rootCauseExceptionClassName = rootCauseExceptionClassName;
         return this;
@@ -46,9 +50,13 @@ public class KnownExceptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootCauseExceptionStack")
     public String[] rootCauseExceptionStack;
+
     public KnownExceptionInfo withRootCauseExceptionStack(String[] rootCauseExceptionStack) {
         this.rootCauseExceptionStack = rootCauseExceptionStack;
         return this;
     }
     
+    public KnownExceptionInfo(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

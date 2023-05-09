@@ -15,9 +15,11 @@ public class StartOnDemandAuditTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public StartOnDemandAuditTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public StartOnDemandAuditTaskResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
@@ -12,6 +13,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SetNetworkPolicyRequest setNetworkPolicyRequest;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withSetNetworkPolicyRequest(org.openapis.openapi.models.shared.SetNetworkPolicyRequest setNetworkPolicyRequest) {
         this.setNetworkPolicyRequest = setNetworkPolicyRequest;
         return this;
@@ -29,6 +32,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=clusterId")
     public String clusterId;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -69,6 +76,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -119,6 +131,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,6 +153,7 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -149,9 +164,15 @@ public class ContainerProjectsZonesClustersSetNetworkPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=zone")
     public String zone;
+
     public ContainerProjectsZonesClustersSetNetworkPolicyRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public ContainerProjectsZonesClustersSetNetworkPolicyRequest(@JsonProperty("clusterId") String clusterId, @JsonProperty("projectId") String projectId, @JsonProperty("zone") String zone) {
+        this.clusterId = clusterId;
+        this.projectId = projectId;
+        this.zone = zone;
+  }
 }

@@ -15,6 +15,7 @@ public class S3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public S3Configuration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,6 +24,7 @@ public class S3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionOption")
     public S3EncryptionOptionEnum encryptionOption;
+
     public S3Configuration withEncryptionOption(S3EncryptionOptionEnum encryptionOption) {
         this.encryptionOption = encryptionOption;
         return this;
@@ -31,6 +33,7 @@ public class S3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public S3Configuration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -39,9 +42,11 @@ public class S3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectKeyPrefix")
     public String objectKeyPrefix;
+
     public S3Configuration withObjectKeyPrefix(String objectKeyPrefix) {
         this.objectKeyPrefix = objectKeyPrefix;
         return this;
     }
     
+    public S3Configuration(){}
 }

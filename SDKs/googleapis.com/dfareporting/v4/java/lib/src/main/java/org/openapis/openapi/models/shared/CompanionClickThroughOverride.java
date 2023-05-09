@@ -18,6 +18,7 @@ public class CompanionClickThroughOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrl")
     public ClickThroughUrl clickThroughUrl;
+
     public CompanionClickThroughOverride withClickThroughUrl(ClickThroughUrl clickThroughUrl) {
         this.clickThroughUrl = clickThroughUrl;
         return this;
@@ -29,9 +30,11 @@ public class CompanionClickThroughOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public CompanionClickThroughOverride withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
     }
     
+    public CompanionClickThroughOverride(){}
 }

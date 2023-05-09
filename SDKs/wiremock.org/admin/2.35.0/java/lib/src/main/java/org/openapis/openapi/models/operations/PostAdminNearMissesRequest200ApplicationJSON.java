@@ -15,9 +15,11 @@ public class PostAdminNearMissesRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nearMisses")
     public PostAdminNearMissesRequest200ApplicationJSONNearMisses[] nearMisses;
+
     public PostAdminNearMissesRequest200ApplicationJSON withNearMisses(PostAdminNearMissesRequest200ApplicationJSONNearMisses[] nearMisses) {
         this.nearMisses = nearMisses;
         return this;
     }
     
+    public PostAdminNearMissesRequest200ApplicationJSON(){}
 }

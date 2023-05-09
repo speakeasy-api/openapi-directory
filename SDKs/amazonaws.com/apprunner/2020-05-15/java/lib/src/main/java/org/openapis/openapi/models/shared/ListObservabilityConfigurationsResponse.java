@@ -15,6 +15,7 @@ public class ListObservabilityConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObservabilityConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListObservabilityConfigurationsResponse {
     
     @JsonProperty("ObservabilityConfigurationSummaryList")
     public ObservabilityConfigurationSummary[] observabilityConfigurationSummaryList;
+
     public ListObservabilityConfigurationsResponse withObservabilityConfigurationSummaryList(ObservabilityConfigurationSummary[] observabilityConfigurationSummaryList) {
         this.observabilityConfigurationSummaryList = observabilityConfigurationSummaryList;
         return this;
     }
     
+    public ListObservabilityConfigurationsResponse(@JsonProperty("ObservabilityConfigurationSummaryList") ObservabilityConfigurationSummary[] observabilityConfigurationSummaryList) {
+        this.observabilityConfigurationSummaryList = observabilityConfigurationSummaryList;
+  }
 }

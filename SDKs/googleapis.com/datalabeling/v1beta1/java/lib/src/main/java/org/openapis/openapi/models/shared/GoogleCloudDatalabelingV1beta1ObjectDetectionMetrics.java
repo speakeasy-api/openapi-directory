@@ -15,9 +15,11 @@ public class GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prCurve")
     public GoogleCloudDatalabelingV1beta1PrCurve prCurve;
+
     public GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics withPrCurve(GoogleCloudDatalabelingV1beta1PrCurve prCurve) {
         this.prCurve = prCurve;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics(){}
 }

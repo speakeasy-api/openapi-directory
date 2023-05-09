@@ -15,9 +15,11 @@ public class CancelDomainTransferToAnotherAwsAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OperationId")
     public String operationId;
+
     public CancelDomainTransferToAnotherAwsAccountResponse withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
     }
     
+    public CancelDomainTransferToAnotherAwsAccountResponse(){}
 }

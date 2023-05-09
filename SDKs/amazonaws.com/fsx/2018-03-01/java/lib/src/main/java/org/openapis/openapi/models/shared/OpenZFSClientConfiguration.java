@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OpenZFSClientConfiguration {
     @JsonProperty("Clients")
     public String clients;
+
     public OpenZFSClientConfiguration withClients(String clients) {
         this.clients = clients;
         return this;
@@ -19,9 +20,14 @@ public class OpenZFSClientConfiguration {
     
     @JsonProperty("Options")
     public String[] options;
+
     public OpenZFSClientConfiguration withOptions(String[] options) {
         this.options = options;
         return this;
     }
     
+    public OpenZFSClientConfiguration(@JsonProperty("Clients") String clients, @JsonProperty("Options") String[] options) {
+        this.clients = clients;
+        this.options = options;
+  }
 }

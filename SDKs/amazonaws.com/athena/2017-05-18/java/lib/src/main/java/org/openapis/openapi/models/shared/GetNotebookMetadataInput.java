@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNotebookMetadataInput {
     @JsonProperty("NotebookId")
     public String notebookId;
+
     public GetNotebookMetadataInput withNotebookId(String notebookId) {
         this.notebookId = notebookId;
         return this;
     }
     
+    public GetNotebookMetadataInput(@JsonProperty("NotebookId") String notebookId) {
+        this.notebookId = notebookId;
+  }
 }

@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableDeliveryWindows")
     public CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows availableDeliveryWindows;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withAvailableDeliveryWindows(CartSimulation200ApplicationJSONLogisticsInfoSlasAvailableDeliveryWindows availableDeliveryWindows) {
         this.availableDeliveryWindows = availableDeliveryWindows;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryIds")
     public CartSimulation200ApplicationJSONLogisticsInfoSlasDeliveryIds[] deliveryIds;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withDeliveryIds(CartSimulation200ApplicationJSONLogisticsInfoSlasDeliveryIds[] deliveryIds) {
         this.deliveryIds = deliveryIds;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryWindow")
     public CartSimulation200ApplicationJSONLogisticsInfoSlasDeliveryWindow deliveryWindow;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withDeliveryWindow(CartSimulation200ApplicationJSONLogisticsInfoSlasDeliveryWindow deliveryWindow) {
         this.deliveryWindow = deliveryWindow;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withId(String id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -81,6 +87,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -92,6 +99,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +111,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupDistance")
     public Long pickupDistance;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withPickupDistance(Long pickupDistance) {
         this.pickupDistance = pickupDistance;
         return this;
@@ -114,6 +123,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPointId")
     public String pickupPointId;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
@@ -125,6 +135,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupStoreInfo")
     public CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo pickupStoreInfo;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withPickupStoreInfo(CartSimulation200ApplicationJSONLogisticsInfoSlasPickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -136,6 +147,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polygonName")
     public String polygonName;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -147,6 +159,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withPrice(Long price) {
         this.price = price;
         return this;
@@ -158,6 +171,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
@@ -169,6 +183,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimateDate")
     public String shippingEstimateDate;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withShippingEstimateDate(String shippingEstimateDate) {
         this.shippingEstimateDate = shippingEstimateDate;
         return this;
@@ -180,6 +195,7 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -191,9 +207,11 @@ public class CartSimulation200ApplicationJSONLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTime")
     public String transitTime;
+
     public CartSimulation200ApplicationJSONLogisticsInfoSlas withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONLogisticsInfoSlas(){}
 }

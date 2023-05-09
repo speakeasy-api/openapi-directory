@@ -15,6 +15,7 @@ public class DealServingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alcoholAdsAllowed")
     public Boolean alcoholAdsAllowed;
+
     public DealServingMetadata withAlcoholAdsAllowed(Boolean alcoholAdsAllowed) {
         this.alcoholAdsAllowed = alcoholAdsAllowed;
         return this;
@@ -26,9 +27,11 @@ public class DealServingMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealPauseStatus")
     public DealServingMetadataDealPauseStatus dealPauseStatus;
+
     public DealServingMetadata withDealPauseStatus(DealServingMetadataDealPauseStatus dealPauseStatus) {
         this.dealPauseStatus = dealPauseStatus;
         return this;
     }
     
+    public DealServingMetadata(){}
 }

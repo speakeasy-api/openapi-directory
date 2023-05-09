@@ -12,6 +12,7 @@ public class TransactWriteItemsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public TransactWriteItemsInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -23,6 +24,7 @@ public class TransactWriteItemsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public TransactWriteItemsInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -31,6 +33,7 @@ public class TransactWriteItemsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnItemCollectionMetrics")
     public ReturnItemCollectionMetricsEnum returnItemCollectionMetrics;
+
     public TransactWriteItemsInput withReturnItemCollectionMetrics(ReturnItemCollectionMetricsEnum returnItemCollectionMetrics) {
         this.returnItemCollectionMetrics = returnItemCollectionMetrics;
         return this;
@@ -38,9 +41,13 @@ public class TransactWriteItemsInput {
     
     @JsonProperty("TransactItems")
     public TransactWriteItem[] transactItems;
+
     public TransactWriteItemsInput withTransactItems(TransactWriteItem[] transactItems) {
         this.transactItems = transactItems;
         return this;
     }
     
+    public TransactWriteItemsInput(@JsonProperty("TransactItems") TransactWriteItem[] transactItems) {
+        this.transactItems = transactItems;
+  }
 }

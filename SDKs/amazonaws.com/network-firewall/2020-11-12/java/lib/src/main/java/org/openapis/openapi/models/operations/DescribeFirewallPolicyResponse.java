@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFirewallPolicyResponse {
     
     public String contentType;
+
     public DescribeFirewallPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFirewallPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFirewallPolicyResponse describeFirewallPolicyResponse;
+
     public DescribeFirewallPolicyResponse withDescribeFirewallPolicyResponse(org.openapis.openapi.models.shared.DescribeFirewallPolicyResponse describeFirewallPolicyResponse) {
         this.describeFirewallPolicyResponse = describeFirewallPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFirewallPolicyResponse {
      */
     
     public Object internalServerError;
+
     public DescribeFirewallPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFirewallPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFirewallPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFirewallPolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribeFirewallPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFirewallPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFirewallPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFirewallPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFirewallPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFirewallPolicyResponse {
      */
     
     public Object throttlingException;
+
     public DescribeFirewallPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeFirewallPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

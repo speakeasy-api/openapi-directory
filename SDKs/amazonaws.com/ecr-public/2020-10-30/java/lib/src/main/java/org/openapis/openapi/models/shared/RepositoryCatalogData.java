@@ -15,6 +15,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aboutText")
     public String aboutText;
+
     public RepositoryCatalogData withAboutText(String aboutText) {
         this.aboutText = aboutText;
         return this;
@@ -23,6 +24,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architectures")
     public String[] architectures;
+
     public RepositoryCatalogData withArchitectures(String[] architectures) {
         this.architectures = architectures;
         return this;
@@ -31,6 +33,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RepositoryCatalogData withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logoUrl")
     public String logoUrl;
+
     public RepositoryCatalogData withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -47,6 +51,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceCertified")
     public Boolean marketplaceCertified;
+
     public RepositoryCatalogData withMarketplaceCertified(Boolean marketplaceCertified) {
         this.marketplaceCertified = marketplaceCertified;
         return this;
@@ -55,6 +60,7 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystems")
     public String[] operatingSystems;
+
     public RepositoryCatalogData withOperatingSystems(String[] operatingSystems) {
         this.operatingSystems = operatingSystems;
         return this;
@@ -63,9 +69,11 @@ public class RepositoryCatalogData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageText")
     public String usageText;
+
     public RepositoryCatalogData withUsageText(String usageText) {
         this.usageText = usageText;
         return this;
     }
     
+    public RepositoryCatalogData(){}
 }

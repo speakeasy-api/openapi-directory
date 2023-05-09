@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCommentReplyResponse {
@@ -12,6 +13,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object clientRequestTokenRequiredException;
+
     public PostCommentReplyResponse withClientRequestTokenRequiredException(Object clientRequestTokenRequiredException) {
         this.clientRequestTokenRequiredException = clientRequestTokenRequiredException;
         return this;
@@ -22,6 +24,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object commentContentRequiredException;
+
     public PostCommentReplyResponse withCommentContentRequiredException(Object commentContentRequiredException) {
         this.commentContentRequiredException = commentContentRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object commentContentSizeLimitExceededException;
+
     public PostCommentReplyResponse withCommentContentSizeLimitExceededException(Object commentContentSizeLimitExceededException) {
         this.commentContentSizeLimitExceededException = commentContentSizeLimitExceededException;
         return this;
@@ -42,6 +46,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object commentDoesNotExistException;
+
     public PostCommentReplyResponse withCommentDoesNotExistException(Object commentDoesNotExistException) {
         this.commentDoesNotExistException = commentDoesNotExistException;
         return this;
@@ -52,6 +57,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object commentIdRequiredException;
+
     public PostCommentReplyResponse withCommentIdRequiredException(Object commentIdRequiredException) {
         this.commentIdRequiredException = commentIdRequiredException;
         return this;
@@ -59,6 +65,7 @@ public class PostCommentReplyResponse {
     
     
     public String contentType;
+
     public PostCommentReplyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object idempotencyParameterMismatchException;
+
     public PostCommentReplyResponse withIdempotencyParameterMismatchException(Object idempotencyParameterMismatchException) {
         this.idempotencyParameterMismatchException = idempotencyParameterMismatchException;
         return this;
@@ -79,6 +87,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object invalidClientRequestTokenException;
+
     public PostCommentReplyResponse withInvalidClientRequestTokenException(Object invalidClientRequestTokenException) {
         this.invalidClientRequestTokenException = invalidClientRequestTokenException;
         return this;
@@ -89,6 +98,7 @@ public class PostCommentReplyResponse {
      */
     
     public Object invalidCommentIdException;
+
     public PostCommentReplyResponse withInvalidCommentIdException(Object invalidCommentIdException) {
         this.invalidCommentIdException = invalidCommentIdException;
         return this;
@@ -99,6 +109,7 @@ public class PostCommentReplyResponse {
      */
     
     public org.openapis.openapi.models.shared.PostCommentReplyOutput postCommentReplyOutput;
+
     public PostCommentReplyResponse withPostCommentReplyOutput(org.openapis.openapi.models.shared.PostCommentReplyOutput postCommentReplyOutput) {
         this.postCommentReplyOutput = postCommentReplyOutput;
         return this;
@@ -106,6 +117,7 @@ public class PostCommentReplyResponse {
     
     
     public Integer statusCode;
+
     public PostCommentReplyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class PostCommentReplyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCommentReplyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCommentReplyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

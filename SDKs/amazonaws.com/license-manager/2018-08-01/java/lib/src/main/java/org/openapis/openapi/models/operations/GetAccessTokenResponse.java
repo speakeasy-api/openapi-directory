@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccessTokenResponse {
@@ -12,6 +13,7 @@ public class GetAccessTokenResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAccessTokenResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetAccessTokenResponse {
      */
     
     public Object authorizationException;
+
     public GetAccessTokenResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class GetAccessTokenResponse {
     
     
     public String contentType;
+
     public GetAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetAccessTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccessTokenResponse getAccessTokenResponse;
+
     public GetAccessTokenResponse withGetAccessTokenResponse(org.openapis.openapi.models.shared.GetAccessTokenResponse getAccessTokenResponse) {
         this.getAccessTokenResponse = getAccessTokenResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetAccessTokenResponse {
      */
     
     public Object rateLimitExceededException;
+
     public GetAccessTokenResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class GetAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public GetAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAccessTokenResponse {
      */
     
     public Object serverInternalException;
+
     public GetAccessTokenResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -83,9 +92,14 @@ public class GetAccessTokenResponse {
      */
     
     public Object validationException;
+
     public GetAccessTokenResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

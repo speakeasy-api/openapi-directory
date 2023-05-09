@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveCatalogCollectionItems {
     @JsonProperty("items")
     public RemoveCatalogCollectionItem[] items;
+
     public RemoveCatalogCollectionItems withItems(RemoveCatalogCollectionItem[] items) {
         this.items = items;
         return this;
     }
     
+    public RemoveCatalogCollectionItems(@JsonProperty("items") RemoveCatalogCollectionItem[] items) {
+        this.items = items;
+  }
 }

@@ -12,6 +12,7 @@ public class PostAdminJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=duration")
     public Long duration;
+
     public PostAdminJwtRequestBody withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -22,9 +23,11 @@ public class PostAdminJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=scope")
     public String scope;
+
     public PostAdminJwtRequestBody withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public PostAdminJwtRequestBody(){}
 }

@@ -12,6 +12,7 @@ public class GetReportGroupTrendInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numOfReports")
     public Long numOfReports;
+
     public GetReportGroupTrendInput withNumOfReports(Long numOfReports) {
         this.numOfReports = numOfReports;
         return this;
@@ -19,6 +20,7 @@ public class GetReportGroupTrendInput {
     
     @JsonProperty("reportGroupArn")
     public String reportGroupArn;
+
     public GetReportGroupTrendInput withReportGroupArn(String reportGroupArn) {
         this.reportGroupArn = reportGroupArn;
         return this;
@@ -26,9 +28,14 @@ public class GetReportGroupTrendInput {
     
     @JsonProperty("trendField")
     public ReportGroupTrendFieldTypeEnum trendField;
+
     public GetReportGroupTrendInput withTrendField(ReportGroupTrendFieldTypeEnum trendField) {
         this.trendField = trendField;
         return this;
     }
     
+    public GetReportGroupTrendInput(@JsonProperty("reportGroupArn") String reportGroupArn, @JsonProperty("trendField") ReportGroupTrendFieldTypeEnum trendField) {
+        this.reportGroupArn = reportGroupArn;
+        this.trendField = trendField;
+  }
 }

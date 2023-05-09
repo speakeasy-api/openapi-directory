@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableAllFeaturesResponse {
@@ -12,6 +13,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public EnableAllFeaturesResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object accessDeniedException;
+
     public EnableAllFeaturesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object concurrentModificationException;
+
     public EnableAllFeaturesResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class EnableAllFeaturesResponse {
     
     
     public String contentType;
+
     public EnableAllFeaturesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public org.openapis.openapi.models.shared.EnableAllFeaturesResponse enableAllFeaturesResponse;
+
     public EnableAllFeaturesResponse withEnableAllFeaturesResponse(org.openapis.openapi.models.shared.EnableAllFeaturesResponse enableAllFeaturesResponse) {
         this.enableAllFeaturesResponse = enableAllFeaturesResponse;
         return this;
@@ -59,6 +65,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object handshakeConstraintViolationException;
+
     public EnableAllFeaturesResponse withHandshakeConstraintViolationException(Object handshakeConstraintViolationException) {
         this.handshakeConstraintViolationException = handshakeConstraintViolationException;
         return this;
@@ -69,6 +76,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object invalidInputException;
+
     public EnableAllFeaturesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object serviceException;
+
     public EnableAllFeaturesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class EnableAllFeaturesResponse {
     
     
     public Integer statusCode;
+
     public EnableAllFeaturesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class EnableAllFeaturesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableAllFeaturesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class EnableAllFeaturesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public EnableAllFeaturesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public EnableAllFeaturesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

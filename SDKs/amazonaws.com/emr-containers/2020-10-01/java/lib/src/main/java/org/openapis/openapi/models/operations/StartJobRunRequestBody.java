@@ -14,6 +14,7 @@ public class StartJobRunRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public StartJobRunRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationOverrides")
     public StartJobRunRequestBodyConfigurationOverrides configurationOverrides;
+
     public StartJobRunRequestBody withConfigurationOverrides(StartJobRunRequestBodyConfigurationOverrides configurationOverrides) {
         this.configurationOverrides = configurationOverrides;
         return this;
@@ -36,6 +38,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionRoleArn")
     public String executionRoleArn;
+
     public StartJobRunRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -47,6 +50,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDriver")
     public StartJobRunRequestBodyJobDriver jobDriver;
+
     public StartJobRunRequestBody withJobDriver(StartJobRunRequestBodyJobDriver jobDriver) {
         this.jobDriver = jobDriver;
         return this;
@@ -58,6 +62,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateId")
     public String jobTemplateId;
+
     public StartJobRunRequestBody withJobTemplateId(String jobTemplateId) {
         this.jobTemplateId = jobTemplateId;
         return this;
@@ -69,6 +74,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplateParameters")
     public java.util.Map<String, String> jobTemplateParameters;
+
     public StartJobRunRequestBody withJobTemplateParameters(java.util.Map<String, String> jobTemplateParameters) {
         this.jobTemplateParameters = jobTemplateParameters;
         return this;
@@ -80,6 +86,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StartJobRunRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -91,6 +98,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public StartJobRunRequestBody withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -102,6 +110,7 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPolicyConfiguration")
     public StartJobRunRequestBodyRetryPolicyConfiguration retryPolicyConfiguration;
+
     public StartJobRunRequestBody withRetryPolicyConfiguration(StartJobRunRequestBodyRetryPolicyConfiguration retryPolicyConfiguration) {
         this.retryPolicyConfiguration = retryPolicyConfiguration;
         return this;
@@ -113,9 +122,13 @@ public class StartJobRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartJobRunRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartJobRunRequestBody(@JsonProperty("clientToken") String clientToken) {
+        this.clientToken = clientToken;
+  }
 }

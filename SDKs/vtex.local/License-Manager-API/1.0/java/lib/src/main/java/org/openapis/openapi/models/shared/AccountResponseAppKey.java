@@ -15,6 +15,7 @@ public class AccountResponseAppKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccountResponseAppKey withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AccountResponseAppKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public AccountResponseAppKey withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public AccountResponseAppKey(){}
 }

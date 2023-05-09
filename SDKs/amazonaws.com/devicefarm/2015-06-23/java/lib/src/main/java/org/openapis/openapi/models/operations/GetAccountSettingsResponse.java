@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountSettingsResponse {
@@ -12,6 +13,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object argumentException;
+
     public GetAccountSettingsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountSettingsResponse {
     
     
     public String contentType;
+
     public GetAccountSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccountSettingsResult getAccountSettingsResult;
+
     public GetAccountSettingsResponse withGetAccountSettingsResult(org.openapis.openapi.models.shared.GetAccountSettingsResult getAccountSettingsResult) {
         this.getAccountSettingsResult = getAccountSettingsResult;
         return this;
@@ -39,6 +43,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object limitExceededException;
+
     public GetAccountSettingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object notFoundException;
+
     public GetAccountSettingsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object serviceAccountException;
+
     public GetAccountSettingsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class GetAccountSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetAccountSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetAccountSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAccountSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

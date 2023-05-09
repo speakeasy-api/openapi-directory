@@ -18,6 +18,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public java.util.Map<String, Object> count;
+
     public Aggregation withCount(java.util.Map<String, Object> count) {
         this.count = count;
         return this;
@@ -29,6 +30,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public Aggregation withField(String field) {
         this.field = field;
         return this;
@@ -40,6 +42,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public java.util.Map<String, Object> frequency;
+
     public Aggregation withFrequency(java.util.Map<String, Object> frequency) {
         this.frequency = frequency;
         return this;
@@ -51,6 +54,7 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogram")
     public AggregationHistogram histogram;
+
     public Aggregation withHistogram(AggregationHistogram histogram) {
         this.histogram = histogram;
         return this;
@@ -62,9 +66,11 @@ public class Aggregation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sum")
     public java.util.Map<String, Object> sum;
+
     public Aggregation withSum(java.util.Map<String, Object> sum) {
         this.sum = sum;
         return this;
     }
     
+    public Aggregation(){}
 }

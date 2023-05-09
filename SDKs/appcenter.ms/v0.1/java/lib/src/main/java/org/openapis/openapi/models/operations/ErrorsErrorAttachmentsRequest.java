@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsErrorAttachmentsRequest {
@@ -12,6 +13,7 @@ public class ErrorsErrorAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsErrorAttachmentsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsErrorAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
     public String errorId;
+
     public ErrorsErrorAttachmentsRequest withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -32,9 +35,15 @@ public class ErrorsErrorAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsErrorAttachmentsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsErrorAttachmentsRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorId") String errorId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.errorId = errorId;
+        this.ownerName = ownerName;
+  }
 }

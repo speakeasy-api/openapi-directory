@@ -15,6 +15,7 @@ public class EditorialCoverItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public EditorialCoverItem withHeight(Long height) {
         this.height = height;
         return this;
@@ -22,6 +23,7 @@ public class EditorialCoverItem {
     
     @JsonProperty("id")
     public String id;
+
     public EditorialCoverItem withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class EditorialCoverItem {
     
     @JsonProperty("url")
     public String url;
+
     public EditorialCoverItem withUrl(String url) {
         this.url = url;
         return this;
@@ -37,9 +40,14 @@ public class EditorialCoverItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public EditorialCoverItem withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public EditorialCoverItem(@JsonProperty("id") String id, @JsonProperty("url") String url) {
+        this.id = id;
+        this.url = url;
+  }
 }

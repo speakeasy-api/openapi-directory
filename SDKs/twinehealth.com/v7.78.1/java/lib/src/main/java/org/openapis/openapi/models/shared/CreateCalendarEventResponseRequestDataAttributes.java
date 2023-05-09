@@ -12,6 +12,7 @@ public class CreateCalendarEventResponseRequestDataAttributes {
      */
     @JsonProperty("attendee")
     public java.util.Map<String, Object> attendee;
+
     public CreateCalendarEventResponseRequestDataAttributes withAttendee(java.util.Map<String, Object> attendee) {
         this.attendee = attendee;
         return this;
@@ -22,9 +23,14 @@ public class CreateCalendarEventResponseRequestDataAttributes {
      */
     @JsonProperty("response_status")
     public CreateCalendarEventResponseRequestDataAttributesResponseStatusEnum responseStatus;
+
     public CreateCalendarEventResponseRequestDataAttributes withResponseStatus(CreateCalendarEventResponseRequestDataAttributesResponseStatusEnum responseStatus) {
         this.responseStatus = responseStatus;
         return this;
     }
     
+    public CreateCalendarEventResponseRequestDataAttributes(@JsonProperty("attendee") java.util.Map<String, Object> attendee, @JsonProperty("response_status") CreateCalendarEventResponseRequestDataAttributesResponseStatusEnum responseStatus) {
+        this.attendee = attendee;
+        this.responseStatus = responseStatus;
+  }
 }

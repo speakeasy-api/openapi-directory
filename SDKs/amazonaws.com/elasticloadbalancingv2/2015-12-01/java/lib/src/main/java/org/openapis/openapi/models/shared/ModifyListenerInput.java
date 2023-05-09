@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyListenerInput {
     
     public String[] alpnPolicy;
+
     public ModifyListenerInput withAlpnPolicy(String[] alpnPolicy) {
         this.alpnPolicy = alpnPolicy;
         return this;
@@ -16,6 +17,7 @@ public class ModifyListenerInput {
     
     
     public Certificate[] certificates;
+
     public ModifyListenerInput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -23,6 +25,7 @@ public class ModifyListenerInput {
     
     
     public Action[] defaultActions;
+
     public ModifyListenerInput withDefaultActions(Action[] defaultActions) {
         this.defaultActions = defaultActions;
         return this;
@@ -30,6 +33,7 @@ public class ModifyListenerInput {
     
     
     public String listenerArn;
+
     public ModifyListenerInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -37,6 +41,7 @@ public class ModifyListenerInput {
     
     
     public Long port;
+
     public ModifyListenerInput withPort(Long port) {
         this.port = port;
         return this;
@@ -44,6 +49,7 @@ public class ModifyListenerInput {
     
     
     public ProtocolEnumEnum protocol;
+
     public ModifyListenerInput withProtocol(ProtocolEnumEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -51,9 +57,13 @@ public class ModifyListenerInput {
     
     
     public String sslPolicy;
+
     public ModifyListenerInput withSslPolicy(String sslPolicy) {
         this.sslPolicy = sslPolicy;
         return this;
     }
     
+    public ModifyListenerInput(@JsonProperty("ListenerArn") String listenerArn) {
+        this.listenerArn = listenerArn;
+  }
 }

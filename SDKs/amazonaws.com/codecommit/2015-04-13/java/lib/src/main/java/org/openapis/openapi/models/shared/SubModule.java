@@ -15,6 +15,7 @@ public class SubModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolutePath")
     public String absolutePath;
+
     public SubModule withAbsolutePath(String absolutePath) {
         this.absolutePath = absolutePath;
         return this;
@@ -23,6 +24,7 @@ public class SubModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public SubModule withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,9 +33,11 @@ public class SubModule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public SubModule withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
     }
     
+    public SubModule(){}
 }

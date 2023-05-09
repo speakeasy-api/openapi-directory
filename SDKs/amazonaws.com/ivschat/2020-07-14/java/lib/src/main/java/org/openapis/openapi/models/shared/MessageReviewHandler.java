@@ -15,6 +15,7 @@ public class MessageReviewHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fallbackResult")
     public FallbackResultEnum fallbackResult;
+
     public MessageReviewHandler withFallbackResult(FallbackResultEnum fallbackResult) {
         this.fallbackResult = fallbackResult;
         return this;
@@ -23,9 +24,11 @@ public class MessageReviewHandler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public MessageReviewHandler withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public MessageReviewHandler(){}
 }

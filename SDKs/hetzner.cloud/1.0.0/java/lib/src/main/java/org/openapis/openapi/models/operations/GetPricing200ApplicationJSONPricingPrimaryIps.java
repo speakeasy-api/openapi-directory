@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricingPrimaryIps {
      */
     @JsonProperty("prices")
     public GetPricing200ApplicationJSONPricingPrimaryIpsPrices[] prices;
+
     public GetPricing200ApplicationJSONPricingPrimaryIps withPrices(GetPricing200ApplicationJSONPricingPrimaryIpsPrices[] prices) {
         this.prices = prices;
         return this;
@@ -22,9 +23,14 @@ public class GetPricing200ApplicationJSONPricingPrimaryIps {
      */
     @JsonProperty("type")
     public GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum type;
+
     public GetPricing200ApplicationJSONPricingPrimaryIps withType(GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricingPrimaryIps(@JsonProperty("prices") GetPricing200ApplicationJSONPricingPrimaryIpsPrices[] prices, @JsonProperty("type") GetPricing200ApplicationJSONPricingPrimaryIpsTypeEnum type) {
+        this.prices = prices;
+        this.type = type;
+  }
 }

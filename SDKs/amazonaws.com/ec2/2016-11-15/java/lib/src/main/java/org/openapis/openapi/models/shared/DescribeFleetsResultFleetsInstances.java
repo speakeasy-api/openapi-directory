@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsInstances {
     
     public String[] instanceIds;
+
     public DescribeFleetsResultFleetsInstances withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsInstances {
     
     
     public DescribeFleetsResultFleetsInstancesInstanceTypeEnum instanceType;
+
     public DescribeFleetsResultFleetsInstances withInstanceType(DescribeFleetsResultFleetsInstancesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsInstances {
     
     
     public DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverrides launchTemplateAndOverrides;
+
     public DescribeFleetsResultFleetsInstances withLaunchTemplateAndOverrides(DescribeFleetsResultFleetsInstancesLaunchTemplateAndOverrides launchTemplateAndOverrides) {
         this.launchTemplateAndOverrides = launchTemplateAndOverrides;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsInstances {
     
     
     public DescribeFleetsResultFleetsInstancesLifecycleEnum lifecycle;
+
     public DescribeFleetsResultFleetsInstances withLifecycle(DescribeFleetsResultFleetsInstancesLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -40,9 +44,11 @@ public class DescribeFleetsResultFleetsInstances {
     
     
     public DescribeFleetsResultFleetsInstancesPlatformEnum platform;
+
     public DescribeFleetsResultFleetsInstances withPlatform(DescribeFleetsResultFleetsInstancesPlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public DescribeFleetsResultFleetsInstances(){}
 }

@@ -12,9 +12,13 @@ public class DeleteVcenterClientRequestBody {
      */
     @JsonProperty("vcenterClientID")
     public String vcenterClientID;
+
     public DeleteVcenterClientRequestBody withVcenterClientID(String vcenterClientID) {
         this.vcenterClientID = vcenterClientID;
         return this;
     }
     
+    public DeleteVcenterClientRequestBody(@JsonProperty("vcenterClientID") String vcenterClientID) {
+        this.vcenterClientID = vcenterClientID;
+  }
 }

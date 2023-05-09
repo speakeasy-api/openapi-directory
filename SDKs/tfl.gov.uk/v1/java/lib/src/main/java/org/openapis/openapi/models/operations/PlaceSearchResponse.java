@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlaceSearchResponse {
     
     public byte[] body;
+
     public PlaceSearchResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PlaceSearchResponse {
     
     
     public String contentType;
+
     public PlaceSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PlaceSearchResponse {
     
     
     public Integer statusCode;
+
     public PlaceSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PlaceSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlaceSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class PlaceSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces;
+
     public PlaceSearchResponse withTflApiPresentationEntitiesPlaces(org.openapis.openapi.models.shared.TflApiPresentationEntitiesPlace[] tflApiPresentationEntitiesPlaces) {
         this.tflApiPresentationEntitiesPlaces = tflApiPresentationEntitiesPlaces;
         return this;
     }
     
+    public PlaceSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

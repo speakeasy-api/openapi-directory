@@ -15,6 +15,7 @@ public class RuleGroupSourceStatefulRulesOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keyword")
     public String keyword;
+
     public RuleGroupSourceStatefulRulesOptionsDetails withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatefulRulesOptionsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public String[] settings;
+
     public RuleGroupSourceStatefulRulesOptionsDetails withSettings(String[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public RuleGroupSourceStatefulRulesOptionsDetails(){}
 }

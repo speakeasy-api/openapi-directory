@@ -15,6 +15,7 @@ public class InAppMessageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Android")
     public OverrideButtonConfiguration android;
+
     public InAppMessageButton withAndroid(OverrideButtonConfiguration android) {
         this.android = android;
         return this;
@@ -23,6 +24,7 @@ public class InAppMessageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultConfig")
     public DefaultButtonConfiguration defaultConfig;
+
     public InAppMessageButton withDefaultConfig(DefaultButtonConfiguration defaultConfig) {
         this.defaultConfig = defaultConfig;
         return this;
@@ -31,6 +33,7 @@ public class InAppMessageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IOS")
     public OverrideButtonConfiguration ios;
+
     public InAppMessageButton withIos(OverrideButtonConfiguration ios) {
         this.ios = ios;
         return this;
@@ -39,9 +42,11 @@ public class InAppMessageButton {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Web")
     public OverrideButtonConfiguration web;
+
     public InAppMessageButton withWeb(OverrideButtonConfiguration web) {
         this.web = web;
         return this;
     }
     
+    public InAppMessageButton(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEndpointsBatchResponse {
@@ -12,6 +13,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object badRequestException;
+
     public UpdateEndpointsBatchResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEndpointsBatchResponse {
     
     
     public String contentType;
+
     public UpdateEndpointsBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateEndpointsBatchResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateEndpointsBatchResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateEndpointsBatchResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object notFoundException;
+
     public UpdateEndpointsBatchResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateEndpointsBatchResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateEndpointsBatchResponse {
     
     
     public Integer statusCode;
+
     public UpdateEndpointsBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEndpointsBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEndpointsBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEndpointsBatchResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateEndpointsBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEndpointsBatchResponse updateEndpointsBatchResponse;
+
     public UpdateEndpointsBatchResponse withUpdateEndpointsBatchResponse(org.openapis.openapi.models.shared.UpdateEndpointsBatchResponse updateEndpointsBatchResponse) {
         this.updateEndpointsBatchResponse = updateEndpointsBatchResponse;
         return this;
     }
     
+    public UpdateEndpointsBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

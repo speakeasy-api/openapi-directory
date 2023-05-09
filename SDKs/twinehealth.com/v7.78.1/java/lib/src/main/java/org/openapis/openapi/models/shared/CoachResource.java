@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CoachResource {
     @JsonProperty("attributes")
     public CoachResourceAttributes attributes;
+
     public CoachResource withAttributes(CoachResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -18,6 +19,7 @@ public class CoachResource {
     
     @JsonProperty("id")
     public String id;
+
     public CoachResource withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class CoachResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public CoachResourceLinks links;
+
     public CoachResource withLinks(CoachResourceLinks links) {
         this.links = links;
         return this;
@@ -33,9 +36,15 @@ public class CoachResource {
     
     @JsonProperty("type")
     public CoachResourceTypeEnum type;
+
     public CoachResource withType(CoachResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CoachResource(@JsonProperty("attributes") CoachResourceAttributes attributes, @JsonProperty("id") String id, @JsonProperty("type") CoachResourceTypeEnum type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.type = type;
+  }
 }

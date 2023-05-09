@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteMLTransformResponse {
     
     public String contentType;
+
     public DeleteMLTransformResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteMLTransformResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteMLTransformResponse deleteMLTransformResponse;
+
     public DeleteMLTransformResponse withDeleteMLTransformResponse(org.openapis.openapi.models.shared.DeleteMLTransformResponse deleteMLTransformResponse) {
         this.deleteMLTransformResponse = deleteMLTransformResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteMLTransformResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteMLTransformResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteMLTransformResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteMLTransformResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteMLTransformResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteMLTransformResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteMLTransformResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteMLTransformResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteMLTransformResponse {
     
     
     public Integer statusCode;
+
     public DeleteMLTransformResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteMLTransformResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteMLTransformResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteMLTransformResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class QueryRequestRerankingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerankerId")
     public Long rerankerId;
+
     public QueryRequestRerankingConfig withRerankerId(Long rerankerId) {
         this.rerankerId = rerankerId;
         return this;
     }
     
+    public QueryRequestRerankingConfig(){}
 }

@@ -15,6 +15,7 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlanValidity {
      */
     @JsonProperty("begin")
     public String begin;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlanValidity withBegin(String begin) {
         this.begin = begin;
         return this;
@@ -25,9 +26,14 @@ public class UserorderdetailsSubscriptionDataSubscriptionsPlanValidity {
      */
     @JsonProperty("end")
     public String end;
+
     public UserorderdetailsSubscriptionDataSubscriptionsPlanValidity withEnd(String end) {
         this.end = end;
         return this;
     }
     
+    public UserorderdetailsSubscriptionDataSubscriptionsPlanValidity(@JsonProperty("begin") String begin, @JsonProperty("end") String end) {
+        this.begin = begin;
+        this.end = end;
+  }
 }

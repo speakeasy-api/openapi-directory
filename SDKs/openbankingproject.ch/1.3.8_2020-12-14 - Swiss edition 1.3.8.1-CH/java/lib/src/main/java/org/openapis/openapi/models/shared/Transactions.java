@@ -17,6 +17,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Transactions withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -29,6 +30,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInformation")
     public String additionalInformation;
+
     public Transactions withAdditionalInformation(String additionalInformation) {
         this.additionalInformation = additionalInformation;
         return this;
@@ -42,6 +44,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInformationStructured")
     public AdditionalInformationStructured additionalInformationStructured;
+
     public Transactions withAdditionalInformationStructured(AdditionalInformationStructured additionalInformationStructured) {
         this.additionalInformationStructured = additionalInformationStructured;
         return this;
@@ -54,6 +57,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAfterTransaction")
     public Balance balanceAfterTransaction;
+
     public Transactions withBalanceAfterTransaction(Balance balanceAfterTransaction) {
         this.balanceAfterTransaction = balanceAfterTransaction;
         return this;
@@ -72,6 +76,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankTransactionCode")
     public String bankTransactionCode;
+
     public Transactions withBankTransactionCode(String bankTransactionCode) {
         this.bankTransactionCode = bankTransactionCode;
         return this;
@@ -84,6 +89,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchIndicator")
     public Boolean batchIndicator;
+
     public Transactions withBatchIndicator(Boolean batchIndicator) {
         this.batchIndicator = batchIndicator;
         return this;
@@ -96,6 +102,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchNumberOfTransactions")
     public Long batchNumberOfTransactions;
+
     public Transactions withBatchNumberOfTransactions(Long batchNumberOfTransactions) {
         this.batchNumberOfTransactions = batchNumberOfTransactions;
         return this;
@@ -109,6 +116,7 @@ public class Transactions {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("bookingDate")
     public LocalDate bookingDate;
+
     public Transactions withBookingDate(LocalDate bookingDate) {
         this.bookingDate = bookingDate;
         return this;
@@ -120,6 +128,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkId")
     public String checkId;
+
     public Transactions withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -135,6 +144,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAccount")
     public AccountReference16CH creditorAccount;
+
     public Transactions withCreditorAccount(AccountReference16CH creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -147,6 +157,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorAgent")
     public String creditorAgent;
+
     public Transactions withCreditorAgent(String creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -158,6 +169,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorId")
     public String creditorId;
+
     public Transactions withCreditorId(String creditorId) {
         this.creditorId = creditorId;
         return this;
@@ -169,6 +181,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorName")
     public String creditorName;
+
     public Transactions withCreditorName(String creditorName) {
         this.creditorName = creditorName;
         return this;
@@ -180,6 +193,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyExchange")
     public ReportExchangeRate[] currencyExchange;
+
     public Transactions withCurrencyExchange(ReportExchangeRate[] currencyExchange) {
         this.currencyExchange = currencyExchange;
         return this;
@@ -195,6 +209,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public Transactions withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -207,6 +222,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorAgent")
     public String debtorAgent;
+
     public Transactions withDebtorAgent(String debtorAgent) {
         this.debtorAgent = debtorAgent;
         return this;
@@ -218,6 +234,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorName")
     public String debtorName;
+
     public Transactions withDebtorName(String debtorName) {
         this.debtorName = debtorName;
         return this;
@@ -229,6 +246,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endToEndId")
     public String endToEndId;
+
     public Transactions withEndToEndId(String endToEndId) {
         this.endToEndId = endToEndId;
         return this;
@@ -241,6 +259,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryDetails")
     public EntryDetailsElement[] entryDetails;
+
     public Transactions withEntryDetails(EntryDetailsElement[] entryDetails) {
         this.entryDetails = entryDetails;
         return this;
@@ -254,6 +273,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryReference")
     public String entryReference;
+
     public Transactions withEntryReference(String entryReference) {
         this.entryReference = entryReference;
         return this;
@@ -265,6 +285,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateId")
     public String mandateId;
+
     public Transactions withMandateId(String mandateId) {
         this.mandateId = mandateId;
         return this;
@@ -278,6 +299,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proprietaryBankTransactionCode")
     public String proprietaryBankTransactionCode;
+
     public Transactions withProprietaryBankTransactionCode(String proprietaryBankTransactionCode) {
         this.proprietaryBankTransactionCode = proprietaryBankTransactionCode;
         return this;
@@ -292,6 +314,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purposeCode")
     public PurposeCodeEnum purposeCode;
+
     public Transactions withPurposeCode(PurposeCodeEnum purposeCode) {
         this.purposeCode = purposeCode;
         return this;
@@ -304,6 +327,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructured")
     public String remittanceInformationStructured;
+
     public Transactions withRemittanceInformationStructured(String remittanceInformationStructured) {
         this.remittanceInformationStructured = remittanceInformationStructured;
         return this;
@@ -316,6 +340,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationStructuredArray")
     public RemittanceInformationStructured[] remittanceInformationStructuredArray;
+
     public Transactions withRemittanceInformationStructuredArray(RemittanceInformationStructured[] remittanceInformationStructuredArray) {
         this.remittanceInformationStructuredArray = remittanceInformationStructuredArray;
         return this;
@@ -328,6 +353,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructured")
     public String remittanceInformationUnstructured;
+
     public Transactions withRemittanceInformationUnstructured(String remittanceInformationUnstructured) {
         this.remittanceInformationUnstructured = remittanceInformationUnstructured;
         return this;
@@ -340,6 +366,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remittanceInformationUnstructuredArray")
     public String[] remittanceInformationUnstructuredArray;
+
     public Transactions withRemittanceInformationUnstructuredArray(String[] remittanceInformationUnstructuredArray) {
         this.remittanceInformationUnstructuredArray = remittanceInformationUnstructuredArray;
         return this;
@@ -347,6 +374,7 @@ public class Transactions {
     
     @JsonProperty("transactionAmount")
     public Amount transactionAmount;
+
     public Transactions withTransactionAmount(Amount transactionAmount) {
         this.transactionAmount = transactionAmount;
         return this;
@@ -359,6 +387,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionId")
     public String transactionId;
+
     public Transactions withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -370,6 +399,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateCreditor")
     public String ultimateCreditor;
+
     public Transactions withUltimateCreditor(String ultimateCreditor) {
         this.ultimateCreditor = ultimateCreditor;
         return this;
@@ -381,6 +411,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ultimateDebtor")
     public String ultimateDebtor;
+
     public Transactions withUltimateDebtor(String ultimateDebtor) {
         this.ultimateDebtor = ultimateDebtor;
         return this;
@@ -393,9 +424,13 @@ public class Transactions {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("valueDate")
     public LocalDate valueDate;
+
     public Transactions withValueDate(LocalDate valueDate) {
         this.valueDate = valueDate;
         return this;
     }
     
+    public Transactions(@JsonProperty("transactionAmount") Amount transactionAmount) {
+        this.transactionAmount = transactionAmount;
+  }
 }

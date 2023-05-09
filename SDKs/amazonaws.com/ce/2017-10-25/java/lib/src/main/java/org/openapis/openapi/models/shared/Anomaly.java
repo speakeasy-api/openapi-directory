@@ -15,6 +15,7 @@ public class Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyEndDate")
     public String anomalyEndDate;
+
     public Anomaly withAnomalyEndDate(String anomalyEndDate) {
         this.anomalyEndDate = anomalyEndDate;
         return this;
@@ -22,6 +23,7 @@ public class Anomaly {
     
     @JsonProperty("AnomalyId")
     public String anomalyId;
+
     public Anomaly withAnomalyId(String anomalyId) {
         this.anomalyId = anomalyId;
         return this;
@@ -29,6 +31,7 @@ public class Anomaly {
     
     @JsonProperty("AnomalyScore")
     public AnomalyScore anomalyScore;
+
     public Anomaly withAnomalyScore(AnomalyScore anomalyScore) {
         this.anomalyScore = anomalyScore;
         return this;
@@ -37,6 +40,7 @@ public class Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyStartDate")
     public String anomalyStartDate;
+
     public Anomaly withAnomalyStartDate(String anomalyStartDate) {
         this.anomalyStartDate = anomalyStartDate;
         return this;
@@ -45,6 +49,7 @@ public class Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValue")
     public String dimensionValue;
+
     public Anomaly withDimensionValue(String dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
@@ -53,6 +58,7 @@ public class Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Feedback")
     public AnomalyFeedbackTypeEnum feedback;
+
     public Anomaly withFeedback(AnomalyFeedbackTypeEnum feedback) {
         this.feedback = feedback;
         return this;
@@ -60,6 +66,7 @@ public class Anomaly {
     
     @JsonProperty("Impact")
     public Impact impact;
+
     public Anomaly withImpact(Impact impact) {
         this.impact = impact;
         return this;
@@ -67,6 +74,7 @@ public class Anomaly {
     
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public Anomaly withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -75,9 +83,16 @@ public class Anomaly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootCauses")
     public RootCause[] rootCauses;
+
     public Anomaly withRootCauses(RootCause[] rootCauses) {
         this.rootCauses = rootCauses;
         return this;
     }
     
+    public Anomaly(@JsonProperty("AnomalyId") String anomalyId, @JsonProperty("AnomalyScore") AnomalyScore anomalyScore, @JsonProperty("Impact") Impact impact, @JsonProperty("MonitorArn") String monitorArn) {
+        this.anomalyId = anomalyId;
+        this.anomalyScore = anomalyScore;
+        this.impact = impact;
+        this.monitorArn = monitorArn;
+  }
 }

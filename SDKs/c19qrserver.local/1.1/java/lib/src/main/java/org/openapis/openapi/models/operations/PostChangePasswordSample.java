@@ -18,6 +18,7 @@ public class PostChangePasswordSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("old_password")
     public String oldPassword;
+
     public PostChangePasswordSample withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
@@ -29,9 +30,11 @@ public class PostChangePasswordSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public PostChangePasswordSample withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public PostChangePasswordSample(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWorkspacesResponse {
@@ -12,6 +13,7 @@ public class ListWorkspacesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListWorkspacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListWorkspacesResponse {
     
     
     public String contentType;
+
     public ListWorkspacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListWorkspacesResponse {
      */
     
     public Object internalServerException;
+
     public ListWorkspacesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListWorkspacesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWorkspacesResponse listWorkspacesResponse;
+
     public ListWorkspacesResponse withListWorkspacesResponse(org.openapis.openapi.models.shared.ListWorkspacesResponse listWorkspacesResponse) {
         this.listWorkspacesResponse = listWorkspacesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListWorkspacesResponse {
     
     
     public Integer statusCode;
+
     public ListWorkspacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListWorkspacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWorkspacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListWorkspacesResponse {
      */
     
     public Object throttlingException;
+
     public ListWorkspacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListWorkspacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

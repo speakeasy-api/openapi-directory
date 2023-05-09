@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelPackageValidationSpecification {
     @JsonProperty("ValidationProfiles")
     public ModelPackageValidationProfile[] validationProfiles;
+
     public ModelPackageValidationSpecification withValidationProfiles(ModelPackageValidationProfile[] validationProfiles) {
         this.validationProfiles = validationProfiles;
         return this;
@@ -19,9 +20,14 @@ public class ModelPackageValidationSpecification {
     
     @JsonProperty("ValidationRole")
     public String validationRole;
+
     public ModelPackageValidationSpecification withValidationRole(String validationRole) {
         this.validationRole = validationRole;
         return this;
     }
     
+    public ModelPackageValidationSpecification(@JsonProperty("ValidationProfiles") ModelPackageValidationProfile[] validationProfiles, @JsonProperty("ValidationRole") String validationRole) {
+        this.validationProfiles = validationProfiles;
+        this.validationRole = validationRole;
+  }
 }

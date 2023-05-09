@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CheckAvailabilityOfFundsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerAuthOAuth;
+
     public CheckAvailabilityOfFundsSecurity withBearerAuthOAuth(String bearerAuthOAuth) {
         this.bearerAuthOAuth = bearerAuthOAuth;
         return this;
     }
     
+    public CheckAvailabilityOfFundsSecurity(){}
 }

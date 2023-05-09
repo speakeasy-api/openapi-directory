@@ -15,6 +15,7 @@ public class ListPipelinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMoreResults")
     public Boolean hasMoreResults;
+
     public ListPipelinesOutput withHasMoreResults(Boolean hasMoreResults) {
         this.hasMoreResults = hasMoreResults;
         return this;
@@ -23,6 +24,7 @@ public class ListPipelinesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public ListPipelinesOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +32,13 @@ public class ListPipelinesOutput {
     
     @JsonProperty("pipelineIdList")
     public PipelineIdName[] pipelineIdList;
+
     public ListPipelinesOutput withPipelineIdList(PipelineIdName[] pipelineIdList) {
         this.pipelineIdList = pipelineIdList;
         return this;
     }
     
+    public ListPipelinesOutput(@JsonProperty("pipelineIdList") PipelineIdName[] pipelineIdList) {
+        this.pipelineIdList = pipelineIdList;
+  }
 }

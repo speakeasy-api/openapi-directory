@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigeeregistryProjectsLocationsArtifactsCreateResponse {
@@ -12,6 +13,7 @@ public class ApigeeregistryProjectsLocationsArtifactsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Artifact artifact;
+
     public ApigeeregistryProjectsLocationsArtifactsCreateResponse withArtifact(org.openapis.openapi.models.shared.Artifact artifact) {
         this.artifact = artifact;
         return this;
@@ -19,6 +21,7 @@ public class ApigeeregistryProjectsLocationsArtifactsCreateResponse {
     
     
     public String contentType;
+
     public ApigeeregistryProjectsLocationsArtifactsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigeeregistryProjectsLocationsArtifactsCreateResponse {
     
     
     public Integer statusCode;
+
     public ApigeeregistryProjectsLocationsArtifactsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigeeregistryProjectsLocationsArtifactsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigeeregistryProjectsLocationsArtifactsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigeeregistryProjectsLocationsArtifactsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

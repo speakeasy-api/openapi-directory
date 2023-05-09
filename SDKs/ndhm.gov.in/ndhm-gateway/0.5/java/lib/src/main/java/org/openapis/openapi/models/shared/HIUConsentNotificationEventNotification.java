@@ -15,6 +15,7 @@ public class HIUConsentNotificationEventNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtefacts")
     public ConsentArtefactReference[] consentArtefacts;
+
     public HIUConsentNotificationEventNotification withConsentArtefacts(ConsentArtefactReference[] consentArtefacts) {
         this.consentArtefacts = consentArtefacts;
         return this;
@@ -22,6 +23,7 @@ public class HIUConsentNotificationEventNotification {
     
     @JsonProperty("consentRequestId")
     public String consentRequestId;
+
     public HIUConsentNotificationEventNotification withConsentRequestId(String consentRequestId) {
         this.consentRequestId = consentRequestId;
         return this;
@@ -29,9 +31,14 @@ public class HIUConsentNotificationEventNotification {
     
     @JsonProperty("status")
     public ConsentStatusEnum status;
+
     public HIUConsentNotificationEventNotification withStatus(ConsentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public HIUConsentNotificationEventNotification(@JsonProperty("consentRequestId") String consentRequestId, @JsonProperty("status") ConsentStatusEnum status) {
+        this.consentRequestId = consentRequestId;
+        this.status = status;
+  }
 }

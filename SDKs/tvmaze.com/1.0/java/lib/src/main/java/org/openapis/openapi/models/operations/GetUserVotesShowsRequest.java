@@ -12,9 +12,11 @@ public class GetUserVotesShowsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetUserVotesShowsEmbedEnum embed;
+
     public GetUserVotesShowsRequest withEmbed(GetUserVotesShowsEmbedEnum embed) {
         this.embed = embed;
         return this;
     }
     
+    public GetUserVotesShowsRequest(){}
 }

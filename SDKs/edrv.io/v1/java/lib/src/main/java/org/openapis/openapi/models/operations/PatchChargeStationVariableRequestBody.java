@@ -15,6 +15,7 @@ public class PatchChargeStationVariableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PatchChargeStationVariableRequestBody withValue(String value) {
         this.value = value;
         return this;
@@ -23,9 +24,11 @@ public class PatchChargeStationVariableRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public PatchChargeStationVariableRequestBodyVariableEnum variable;
+
     public PatchChargeStationVariableRequestBody withVariable(PatchChargeStationVariableRequestBodyVariableEnum variable) {
         this.variable = variable;
         return this;
     }
     
+    public PatchChargeStationVariableRequestBody(){}
 }

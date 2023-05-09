@@ -18,6 +18,7 @@ public class MeshInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MeshInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class MeshInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interceptionPort")
     public Integer interceptionPort;
+
     public MeshInput withInterceptionPort(Integer interceptionPort) {
         this.interceptionPort = interceptionPort;
         return this;
@@ -40,6 +42,7 @@ public class MeshInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public MeshInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,9 +54,11 @@ public class MeshInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MeshInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MeshInput(){}
 }

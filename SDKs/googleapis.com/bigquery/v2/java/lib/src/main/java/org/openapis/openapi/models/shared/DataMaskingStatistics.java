@@ -15,9 +15,11 @@ public class DataMaskingStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataMaskingApplied")
     public Boolean dataMaskingApplied;
+
     public DataMaskingStatistics withDataMaskingApplied(Boolean dataMaskingApplied) {
         this.dataMaskingApplied = dataMaskingApplied;
         return this;
     }
     
+    public DataMaskingStatistics(){}
 }

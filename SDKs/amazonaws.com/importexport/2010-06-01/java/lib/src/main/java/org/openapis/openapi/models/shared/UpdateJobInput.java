@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateJobInput - Input structure for the UpateJob operation.
@@ -15,6 +15,7 @@ public class UpdateJobInput {
      */
     
     public String apiVersion;
+
     public UpdateJobInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,6 +26,7 @@ public class UpdateJobInput {
      */
     
     public String jobId;
+
     public UpdateJobInput withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -35,6 +37,7 @@ public class UpdateJobInput {
      */
     
     public JobTypeEnum jobType;
+
     public UpdateJobInput withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -45,6 +48,7 @@ public class UpdateJobInput {
      */
     
     public String manifest;
+
     public UpdateJobInput withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -55,9 +59,16 @@ public class UpdateJobInput {
      */
     
     public Boolean validateOnly;
+
     public UpdateJobInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public UpdateJobInput(@JsonProperty("JobId") String jobId, @JsonProperty("JobType") JobTypeEnum jobType, @JsonProperty("Manifest") String manifest, @JsonProperty("ValidateOnly") Boolean validateOnly) {
+        this.jobId = jobId;
+        this.jobType = jobType;
+        this.manifest = manifest;
+        this.validateOnly = validateOnly;
+  }
 }

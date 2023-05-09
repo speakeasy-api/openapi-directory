@@ -21,6 +21,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public BatchResponseSubscriberEmailResponse withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -29,6 +30,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public StandardError[] errors;
+
     public BatchResponseSubscriberEmailResponse withErrors(StandardError[] errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, String> links;
+
     public BatchResponseSubscriberEmailResponse withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numErrors")
     public Integer numErrors;
+
     public BatchResponseSubscriberEmailResponse withNumErrors(Integer numErrors) {
         this.numErrors = numErrors;
         return this;
@@ -55,6 +59,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public BatchResponseSubscriberEmailResponse withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -62,6 +67,7 @@ public class BatchResponseSubscriberEmailResponse {
     
     @JsonProperty("results")
     public SubscriberEmailResponse[] results;
+
     public BatchResponseSubscriberEmailResponse withResults(SubscriberEmailResponse[] results) {
         this.results = results;
         return this;
@@ -71,6 +77,7 @@ public class BatchResponseSubscriberEmailResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public BatchResponseSubscriberEmailResponse withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -78,9 +85,16 @@ public class BatchResponseSubscriberEmailResponse {
     
     @JsonProperty("status")
     public BatchResponseSubscriberEmailResponseStatusEnum status;
+
     public BatchResponseSubscriberEmailResponse withStatus(BatchResponseSubscriberEmailResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchResponseSubscriberEmailResponse(@JsonProperty("completedAt") OffsetDateTime completedAt, @JsonProperty("results") SubscriberEmailResponse[] results, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") BatchResponseSubscriberEmailResponseStatusEnum status) {
+        this.completedAt = completedAt;
+        this.results = results;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

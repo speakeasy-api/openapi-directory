@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoreSetRequest {
@@ -12,6 +13,7 @@ public class StoreSetRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public StoreSetRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class StoreSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=persist")
     public Integer persist;
+
     public StoreSetRequest withPersist(Integer persist) {
         this.persist = persist;
         return this;
@@ -32,9 +35,14 @@ public class StoreSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
     public String var;
+
     public StoreSetRequest withVar(String var) {
         this.var = var;
         return this;
     }
     
+    public StoreSetRequest(@JsonProperty("persist") Integer persist, @JsonProperty("var") String var) {
+        this.persist = persist;
+        this.var = var;
+  }
 }

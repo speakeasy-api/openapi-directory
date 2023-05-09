@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectVendorSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken;
+
     public DisconnectVendorSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
     }
     
+    public DisconnectVendorSecurity(@JsonProperty("UserAccessToken") String userAccessToken) {
+        this.userAccessToken = userAccessToken;
+  }
 }

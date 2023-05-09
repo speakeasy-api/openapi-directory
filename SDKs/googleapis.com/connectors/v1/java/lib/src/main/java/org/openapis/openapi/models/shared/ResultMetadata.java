@@ -18,6 +18,7 @@ public class ResultMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public ResultMetadataDataTypeEnum dataType;
+
     public ResultMetadata withDataType(ResultMetadataDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -29,6 +30,7 @@ public class ResultMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResultMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -40,9 +42,11 @@ public class ResultMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ResultMetadata withField(String field) {
         this.field = field;
         return this;
     }
     
+    public ResultMetadata(){}
 }

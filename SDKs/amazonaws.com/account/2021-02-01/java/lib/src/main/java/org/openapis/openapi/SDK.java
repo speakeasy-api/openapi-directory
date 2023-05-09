@@ -153,6 +153,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -190,15 +195,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAlternateContactResponse res = new org.openapis.openapi.models.operations.DeleteAlternateContactResponse() {{
+        org.openapis.openapi.models.operations.DeleteAlternateContactResponse res = new org.openapis.openapi.models.operations.DeleteAlternateContactResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             validationException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -276,15 +279,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableRegionResponse res = new org.openapis.openapi.models.operations.DisableRegionResponse() {{
+        org.openapis.openapi.models.operations.DisableRegionResponse res = new org.openapis.openapi.models.operations.DisableRegionResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             conflictException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,15 +363,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableRegionResponse res = new org.openapis.openapi.models.operations.EnableRegionResponse() {{
+        org.openapis.openapi.models.operations.EnableRegionResponse res = new org.openapis.openapi.models.operations.EnableRegionResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             conflictException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -448,7 +447,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlternateContactResponse res = new org.openapis.openapi.models.operations.GetAlternateContactResponse() {{
+        org.openapis.openapi.models.operations.GetAlternateContactResponse res = new org.openapis.openapi.models.operations.GetAlternateContactResponse(contentType, httpRes.statusCode()) {{
             getAlternateContactResponse = null;
             resourceNotFoundException = null;
             validationException = null;
@@ -456,8 +455,6 @@ public class SDK {
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -540,7 +537,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetContactInformationResponse res = new org.openapis.openapi.models.operations.GetContactInformationResponse() {{
+        org.openapis.openapi.models.operations.GetContactInformationResponse res = new org.openapis.openapi.models.operations.GetContactInformationResponse(contentType, httpRes.statusCode()) {{
             getContactInformationResponse = null;
             resourceNotFoundException = null;
             validationException = null;
@@ -548,8 +545,6 @@ public class SDK {
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -632,15 +627,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegionOptStatusResponse res = new org.openapis.openapi.models.operations.GetRegionOptStatusResponse() {{
+        org.openapis.openapi.models.operations.GetRegionOptStatusResponse res = new org.openapis.openapi.models.operations.GetRegionOptStatusResponse(contentType, httpRes.statusCode()) {{
             getRegionOptStatusResponse = null;
             validationException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,15 +715,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRegionsResponse res = new org.openapis.openapi.models.operations.ListRegionsResponse() {{
+        org.openapis.openapi.models.operations.ListRegionsResponse res = new org.openapis.openapi.models.operations.ListRegionsResponse(contentType, httpRes.statusCode()) {{
             listRegionsResponse = null;
             validationException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -806,14 +797,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAlternateContactResponse res = new org.openapis.openapi.models.operations.PutAlternateContactResponse() {{
+        org.openapis.openapi.models.operations.PutAlternateContactResponse res = new org.openapis.openapi.models.operations.PutAlternateContactResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -884,14 +873,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutContactInformationResponse res = new org.openapis.openapi.models.operations.PutContactInformationResponse() {{
+        org.openapis.openapi.models.operations.PutContactInformationResponse res = new org.openapis.openapi.models.operations.PutContactInformationResponse(contentType, httpRes.statusCode()) {{
             validationException = null;
             accessDeniedException = null;
             tooManyRequestsException = null;
             internalServerException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

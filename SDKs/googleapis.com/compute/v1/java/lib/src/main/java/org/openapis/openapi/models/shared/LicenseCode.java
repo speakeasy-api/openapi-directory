@@ -18,6 +18,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public LicenseCode withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LicenseCode withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public LicenseCode withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LicenseCode withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseAlias")
     public LicenseCodeLicenseAlias[] licenseAlias;
+
     public LicenseCode withLicenseAlias(LicenseCodeLicenseAlias[] licenseAlias) {
         this.licenseAlias = licenseAlias;
         return this;
@@ -73,6 +78,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LicenseCode withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public LicenseCode withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -95,6 +102,7 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public LicenseCodeStateEnum state;
+
     public LicenseCode withState(LicenseCodeStateEnum state) {
         this.state = state;
         return this;
@@ -106,9 +114,11 @@ public class LicenseCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferable")
     public Boolean transferable;
+
     public LicenseCode withTransferable(Boolean transferable) {
         this.transferable = transferable;
         return this;
     }
     
+    public LicenseCode(){}
 }

@@ -18,6 +18,7 @@ public class ListAvailableOrgPolicyConstraintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public Constraint[] constraints;
+
     public ListAvailableOrgPolicyConstraintsResponse withConstraints(Constraint[] constraints) {
         this.constraints = constraints;
         return this;
@@ -29,9 +30,11 @@ public class ListAvailableOrgPolicyConstraintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAvailableOrgPolicyConstraintsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAvailableOrgPolicyConstraintsResponse(){}
 }

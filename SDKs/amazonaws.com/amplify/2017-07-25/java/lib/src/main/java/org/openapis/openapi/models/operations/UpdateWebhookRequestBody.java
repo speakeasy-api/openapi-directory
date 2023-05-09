@@ -15,6 +15,7 @@ public class UpdateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchName")
     public String branchName;
+
     public UpdateWebhookRequestBody withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -26,9 +27,11 @@ public class UpdateWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateWebhookRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public UpdateWebhookRequestBody(){}
 }

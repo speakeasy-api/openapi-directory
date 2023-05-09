@@ -62,7 +62,7 @@ public class Transcript {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTranscriptByIdResponse res = new org.openapis.openapi.models.operations.GetTranscriptByIdResponse() {{
+        org.openapis.openapi.models.operations.GetTranscriptByIdResponse res = new org.openapis.openapi.models.operations.GetTranscriptByIdResponse(contentType, httpRes.statusCode()) {{
             transcript = null;
             transcriptText = null;
             getTranscriptById401ApplicationProblemPlusJsonObject = null;
@@ -70,8 +70,6 @@ public class Transcript {
             getTranscriptById406ApplicationProblemPlusJsonObject = null;
             getTranscriptById409ApplicationProblemPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

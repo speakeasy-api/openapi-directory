@@ -15,6 +15,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude")
     public MigrationsStartForOrgRequestBodyExcludeEnum[] exclude;
+
     public MigrationsStartForOrgRequestBody withExclude(MigrationsStartForOrgRequestBodyExcludeEnum[] exclude) {
         this.exclude = exclude;
         return this;
@@ -26,6 +27,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_attachments")
     public Boolean excludeAttachments;
+
     public MigrationsStartForOrgRequestBody withExcludeAttachments(Boolean excludeAttachments) {
         this.excludeAttachments = excludeAttachments;
         return this;
@@ -37,6 +39,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_git_data")
     public Boolean excludeGitData;
+
     public MigrationsStartForOrgRequestBody withExcludeGitData(Boolean excludeGitData) {
         this.excludeGitData = excludeGitData;
         return this;
@@ -48,6 +51,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_metadata")
     public Boolean excludeMetadata;
+
     public MigrationsStartForOrgRequestBody withExcludeMetadata(Boolean excludeMetadata) {
         this.excludeMetadata = excludeMetadata;
         return this;
@@ -59,6 +63,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_owner_projects")
     public Boolean excludeOwnerProjects;
+
     public MigrationsStartForOrgRequestBody withExcludeOwnerProjects(Boolean excludeOwnerProjects) {
         this.excludeOwnerProjects = excludeOwnerProjects;
         return this;
@@ -70,6 +75,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude_releases")
     public Boolean excludeReleases;
+
     public MigrationsStartForOrgRequestBody withExcludeReleases(Boolean excludeReleases) {
         this.excludeReleases = excludeReleases;
         return this;
@@ -81,6 +87,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lock_repositories")
     public Boolean lockRepositories;
+
     public MigrationsStartForOrgRequestBody withLockRepositories(Boolean lockRepositories) {
         this.lockRepositories = lockRepositories;
         return this;
@@ -92,6 +99,7 @@ public class MigrationsStartForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_metadata_only")
     public Boolean orgMetadataOnly;
+
     public MigrationsStartForOrgRequestBody withOrgMetadataOnly(Boolean orgMetadataOnly) {
         this.orgMetadataOnly = orgMetadataOnly;
         return this;
@@ -102,9 +110,13 @@ public class MigrationsStartForOrgRequestBody {
      */
     @JsonProperty("repositories")
     public String[] repositories;
+
     public MigrationsStartForOrgRequestBody withRepositories(String[] repositories) {
         this.repositories = repositories;
         return this;
     }
     
+    public MigrationsStartForOrgRequestBody(@JsonProperty("repositories") String[] repositories) {
+        this.repositories = repositories;
+  }
 }

@@ -18,6 +18,7 @@ public class Asps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Asps withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Asps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Asp[] items;
+
     public Asps withItems(Asp[] items) {
         this.items = items;
         return this;
@@ -40,9 +42,11 @@ public class Asps {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Asps withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Asps(){}
 }

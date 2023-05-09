@@ -18,6 +18,7 @@ public class GetAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessment")
     public Assessment assessment;
+
     public GetAssessmentResponse withAssessment(Assessment assessment) {
         this.assessment = assessment;
         return this;
@@ -29,9 +30,11 @@ public class GetAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRole")
     public Role userRole;
+
     public GetAssessmentResponse withUserRole(Role userRole) {
         this.userRole = userRole;
         return this;
     }
     
+    public GetAssessmentResponse(){}
 }

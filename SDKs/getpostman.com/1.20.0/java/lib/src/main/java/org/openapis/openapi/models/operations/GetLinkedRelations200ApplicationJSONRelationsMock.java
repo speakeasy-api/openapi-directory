@@ -12,9 +12,11 @@ public class GetLinkedRelations200ApplicationJSONRelationsMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("4ccd755f-2c80-481b-a262-49b55e12f5e1")
     public GetLinkedRelations200ApplicationJSONRelationsMock4ccd755f2c80481bA26249b55e12f5e1 fourccd755f2c80481bA26249b55e12f5e1;
+
     public GetLinkedRelations200ApplicationJSONRelationsMock withFourccd755f2c80481bA26249b55e12f5e1(GetLinkedRelations200ApplicationJSONRelationsMock4ccd755f2c80481bA26249b55e12f5e1 fourccd755f2c80481bA26249b55e12f5e1) {
         this.fourccd755f2c80481bA26249b55e12f5e1 = fourccd755f2c80481bA26249b55e12f5e1;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSONRelationsMock(){}
 }

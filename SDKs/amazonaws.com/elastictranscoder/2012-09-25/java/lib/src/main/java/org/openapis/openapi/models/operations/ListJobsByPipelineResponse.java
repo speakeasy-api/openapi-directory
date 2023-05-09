@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJobsByPipelineResponse {
@@ -12,6 +13,7 @@ public class ListJobsByPipelineResponse {
      */
     
     public Object accessDeniedException;
+
     public ListJobsByPipelineResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListJobsByPipelineResponse {
     
     
     public String contentType;
+
     public ListJobsByPipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListJobsByPipelineResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ListJobsByPipelineResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ListJobsByPipelineResponse {
      */
     
     public Object internalServiceException;
+
     public ListJobsByPipelineResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListJobsByPipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJobsByPipelineResponse listJobsByPipelineResponse;
+
     public ListJobsByPipelineResponse withListJobsByPipelineResponse(org.openapis.openapi.models.shared.ListJobsByPipelineResponse listJobsByPipelineResponse) {
         this.listJobsByPipelineResponse = listJobsByPipelineResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListJobsByPipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListJobsByPipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListJobsByPipelineResponse {
     
     
     public Integer statusCode;
+
     public ListJobsByPipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListJobsByPipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJobsByPipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListJobsByPipelineResponse {
      */
     
     public Object validationException;
+
     public ListJobsByPipelineResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListJobsByPipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

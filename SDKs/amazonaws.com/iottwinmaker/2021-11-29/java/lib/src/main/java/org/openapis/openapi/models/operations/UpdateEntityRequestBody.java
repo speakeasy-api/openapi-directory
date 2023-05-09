@@ -15,6 +15,7 @@ public class UpdateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentUpdates")
     public java.util.Map<String, org.openapis.openapi.models.shared.ComponentUpdateRequest> componentUpdates;
+
     public UpdateEntityRequestBody withComponentUpdates(java.util.Map<String, org.openapis.openapi.models.shared.ComponentUpdateRequest> componentUpdates) {
         this.componentUpdates = componentUpdates;
         return this;
@@ -26,6 +27,7 @@ public class UpdateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEntityRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class UpdateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityName")
     public String entityName;
+
     public UpdateEntityRequestBody withEntityName(String entityName) {
         this.entityName = entityName;
         return this;
@@ -48,9 +51,11 @@ public class UpdateEntityRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityUpdate")
     public UpdateEntityRequestBodyParentEntityUpdate parentEntityUpdate;
+
     public UpdateEntityRequestBody withParentEntityUpdate(UpdateEntityRequestBodyParentEntityUpdate parentEntityUpdate) {
         this.parentEntityUpdate = parentEntityUpdate;
         return this;
     }
     
+    public UpdateEntityRequestBody(){}
 }

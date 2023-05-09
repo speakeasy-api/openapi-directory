@@ -18,6 +18,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundingSource")
     public FundingSource fundingSource;
+
     public Transfer withFundingSource(FundingSource fundingSource) {
         this.fundingSource = fundingSource;
         return this;
@@ -29,6 +30,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionDate")
     public String transactionDate;
+
     public Transfer withTransactionDate(String transactionDate) {
         this.transactionDate = transactionDate;
         return this;
@@ -40,6 +42,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferAmount")
     public Amount transferAmount;
+
     public Transfer withTransferAmount(Amount transferAmount) {
         this.transferAmount = transferAmount;
         return this;
@@ -51,6 +54,7 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferDetail")
     public TransferDetail transferDetail;
+
     public Transfer withTransferDetail(TransferDetail transferDetail) {
         this.transferDetail = transferDetail;
         return this;
@@ -62,9 +66,11 @@ public class Transfer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferId")
     public String transferId;
+
     public Transfer withTransferId(String transferId) {
         this.transferId = transferId;
         return this;
     }
     
+    public Transfer(){}
 }

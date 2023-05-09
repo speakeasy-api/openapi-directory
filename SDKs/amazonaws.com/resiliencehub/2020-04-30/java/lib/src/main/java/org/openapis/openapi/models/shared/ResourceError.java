@@ -15,6 +15,7 @@ public class ResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalResourceId")
     public String logicalResourceId;
+
     public ResourceError withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -23,6 +24,7 @@ public class ResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalResourceId")
     public String physicalResourceId;
+
     public ResourceError withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -31,9 +33,11 @@ public class ResourceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ResourceError withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ResourceError(){}
 }

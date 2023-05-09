@@ -18,6 +18,7 @@ public class DiscoverConnectionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlRdbms")
     public MysqlRdbms mysqlRdbms;
+
     public DiscoverConnectionProfileResponse withMysqlRdbms(MysqlRdbms mysqlRdbms) {
         this.mysqlRdbms = mysqlRdbms;
         return this;
@@ -29,9 +30,11 @@ public class DiscoverConnectionProfileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oracleRdbms")
     public OracleRdbms oracleRdbms;
+
     public DiscoverConnectionProfileResponse withOracleRdbms(OracleRdbms oracleRdbms) {
         this.oracleRdbms = oracleRdbms;
         return this;
     }
     
+    public DiscoverConnectionProfileResponse(){}
 }

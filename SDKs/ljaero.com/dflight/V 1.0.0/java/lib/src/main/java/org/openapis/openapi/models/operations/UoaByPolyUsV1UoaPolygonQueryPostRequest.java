@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UoaByPolyUsV1UoaPolygonQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UOAsByPolygon uoAsByPolygon;
+
     public UoaByPolyUsV1UoaPolygonQueryPostRequest withUOAsByPolygon(org.openapis.openapi.models.shared.UOAsByPolygon uoAsByPolygon) {
         this.uoAsByPolygon = uoAsByPolygon;
         return this;
@@ -16,9 +18,13 @@ public class UoaByPolyUsV1UoaPolygonQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public UoaByPolyUsV1UoaPolygonQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public UoaByPolyUsV1UoaPolygonQueryPostRequest(@JsonProperty("UOAsByPolygon") org.openapis.openapi.models.shared.UOAsByPolygon uoAsByPolygon) {
+        this.uoAsByPolygon = uoAsByPolygon;
+  }
 }

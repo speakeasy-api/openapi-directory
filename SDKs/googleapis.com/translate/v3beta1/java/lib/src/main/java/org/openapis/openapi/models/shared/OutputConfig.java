@@ -18,9 +18,11 @@ public class OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsDestination gcsDestination;
+
     public OutputConfig withGcsDestination(GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public OutputConfig(){}
 }

@@ -15,6 +15,7 @@ public class Content {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charset")
     public String charset;
+
     public Content withCharset(String charset) {
         this.charset = charset;
         return this;
@@ -22,9 +23,13 @@ public class Content {
     
     @JsonProperty("Data")
     public String data;
+
     public Content withData(String data) {
         this.data = data;
         return this;
     }
     
+    public Content(@JsonProperty("Data") String data) {
+        this.data = data;
+  }
 }

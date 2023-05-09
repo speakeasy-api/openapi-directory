@@ -15,6 +15,7 @@ public class Egipc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Egipc503ApplicationJSONErrorEnum error;
+
     public Egipc503ApplicationJSON withError(Egipc503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Egipc503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Egipc503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Egipc503ApplicationJSON withErrorDescription(Egipc503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Egipc503ApplicationJSON(){}
 }

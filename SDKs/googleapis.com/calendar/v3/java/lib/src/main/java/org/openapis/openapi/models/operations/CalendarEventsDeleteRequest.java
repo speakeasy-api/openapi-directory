@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsDeleteRequest {
@@ -12,6 +13,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsDeleteRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -32,6 +35,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=eventId")
     public String eventId;
+
     public CalendarEventsDeleteRequest withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -42,6 +46,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +57,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -94,6 +103,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
     public Boolean sendNotifications;
+
     public CalendarEventsDeleteRequest withSendNotifications(Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
         return this;
@@ -104,6 +114,7 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendUpdates")
     public CalendarEventsDeleteSendUpdatesEnum sendUpdates;
+
     public CalendarEventsDeleteRequest withSendUpdates(CalendarEventsDeleteSendUpdatesEnum sendUpdates) {
         this.sendUpdates = sendUpdates;
         return this;
@@ -114,9 +125,14 @@ public class CalendarEventsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsDeleteRequest(@JsonProperty("calendarId") String calendarId, @JsonProperty("eventId") String eventId) {
+        this.calendarId = calendarId;
+        this.eventId = eventId;
+  }
 }

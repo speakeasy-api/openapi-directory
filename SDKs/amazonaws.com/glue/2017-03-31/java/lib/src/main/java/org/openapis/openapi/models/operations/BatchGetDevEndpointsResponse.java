@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetDevEndpointsResponse {
@@ -12,6 +13,7 @@ public class BatchGetDevEndpointsResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetDevEndpointsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetDevEndpointsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetDevEndpointsResponse batchGetDevEndpointsResponse;
+
     public BatchGetDevEndpointsResponse withBatchGetDevEndpointsResponse(org.openapis.openapi.models.shared.BatchGetDevEndpointsResponse batchGetDevEndpointsResponse) {
         this.batchGetDevEndpointsResponse = batchGetDevEndpointsResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetDevEndpointsResponse {
     
     
     public String contentType;
+
     public BatchGetDevEndpointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetDevEndpointsResponse {
      */
     
     public Object internalServiceException;
+
     public BatchGetDevEndpointsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetDevEndpointsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetDevEndpointsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetDevEndpointsResponse {
      */
     
     public Object operationTimeoutException;
+
     public BatchGetDevEndpointsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class BatchGetDevEndpointsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetDevEndpointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchGetDevEndpointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetDevEndpointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetDevEndpointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

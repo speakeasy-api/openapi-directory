@@ -18,6 +18,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colHeaders")
     public String[] colHeaders;
+
     public APIUsageAggregatedOut withColHeaders(String[] colHeaders) {
         this.colHeaders = colHeaders;
         return this;
@@ -29,6 +30,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Integer[][] data;
+
     public APIUsageAggregatedOut withData(Integer[][] data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("historyTruncated")
     public Boolean historyTruncated;
+
     public APIUsageAggregatedOut withHistoryTruncated(Boolean historyTruncated) {
         this.historyTruncated = historyTruncated;
         return this;
@@ -51,6 +54,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodEnd")
     public Long periodEnd;
+
     public APIUsageAggregatedOut withPeriodEnd(Long periodEnd) {
         this.periodEnd = periodEnd;
         return this;
@@ -62,6 +66,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodStart")
     public Long periodStart;
+
     public APIUsageAggregatedOut withPeriodStart(Long periodStart) {
         this.periodStart = periodStart;
         return this;
@@ -73,6 +78,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowHeaders")
     public String[] rowHeaders;
+
     public APIUsageAggregatedOut withRowHeaders(String[] rowHeaders) {
         this.rowHeaders = rowHeaders;
         return this;
@@ -84,6 +90,7 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeUnit")
     public String timeUnit;
+
     public APIUsageAggregatedOut withTimeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
         return this;
@@ -95,9 +102,11 @@ public class APIUsageAggregatedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalUsage")
     public Long totalUsage;
+
     public APIUsageAggregatedOut withTotalUsage(Long totalUsage) {
         this.totalUsage = totalUsage;
         return this;
     }
     
+    public APIUsageAggregatedOut(){}
 }

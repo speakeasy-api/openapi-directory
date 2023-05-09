@@ -15,6 +15,7 @@ public class ProductErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPColumnName")
     public String beezUPColumnName;
+
     public ProductErrorCode withBeezUPColumnName(String beezUPColumnName) {
         this.beezUPColumnName = beezUPColumnName;
         return this;
@@ -26,6 +27,7 @@ public class ProductErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public ProductErrorCode withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -34,6 +36,7 @@ public class ProductErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ProductErrorCode withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -45,9 +48,11 @@ public class ProductErrorCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userColumName")
     public String userColumName;
+
     public ProductErrorCode withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public ProductErrorCode(){}
 }

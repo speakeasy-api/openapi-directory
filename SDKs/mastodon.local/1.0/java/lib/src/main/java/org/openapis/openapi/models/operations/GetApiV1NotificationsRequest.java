@@ -12,6 +12,7 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account_id")
     public String accountId;
+
     public GetApiV1NotificationsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_types")
     public String[] excludeTypes;
+
     public GetApiV1NotificationsRequest withExcludeTypes(String[] excludeTypes) {
         this.excludeTypes = excludeTypes;
         return this;
@@ -32,6 +34,7 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1NotificationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1NotificationsRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -52,6 +56,7 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_id")
     public String minId;
+
     public GetApiV1NotificationsRequest withMinId(String minId) {
         this.minId = minId;
         return this;
@@ -62,9 +67,11 @@ public class GetApiV1NotificationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1NotificationsRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1NotificationsRequest(){}
 }

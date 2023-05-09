@@ -14,6 +14,7 @@ public class UpgradePublishedSchemaRequestBody {
      */
     @JsonProperty("DevelopmentSchemaArn")
     public String developmentSchemaArn;
+
     public UpgradePublishedSchemaRequestBody withDevelopmentSchemaArn(String developmentSchemaArn) {
         this.developmentSchemaArn = developmentSchemaArn;
         return this;
@@ -25,6 +26,7 @@ public class UpgradePublishedSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DryRun")
     public Boolean dryRun;
+
     public UpgradePublishedSchemaRequestBody withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -35,6 +37,7 @@ public class UpgradePublishedSchemaRequestBody {
      */
     @JsonProperty("MinorVersion")
     public String minorVersion;
+
     public UpgradePublishedSchemaRequestBody withMinorVersion(String minorVersion) {
         this.minorVersion = minorVersion;
         return this;
@@ -45,9 +48,15 @@ public class UpgradePublishedSchemaRequestBody {
      */
     @JsonProperty("PublishedSchemaArn")
     public String publishedSchemaArn;
+
     public UpgradePublishedSchemaRequestBody withPublishedSchemaArn(String publishedSchemaArn) {
         this.publishedSchemaArn = publishedSchemaArn;
         return this;
     }
     
+    public UpgradePublishedSchemaRequestBody(@JsonProperty("DevelopmentSchemaArn") String developmentSchemaArn, @JsonProperty("MinorVersion") String minorVersion, @JsonProperty("PublishedSchemaArn") String publishedSchemaArn) {
+        this.developmentSchemaArn = developmentSchemaArn;
+        this.minorVersion = minorVersion;
+        this.publishedSchemaArn = publishedSchemaArn;
+  }
 }

@@ -15,6 +15,7 @@ public class AdministratorWebTokenSpecPlaySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approveApps")
     public Boolean approveApps;
+
     public AdministratorWebTokenSpecPlaySearch withApproveApps(Boolean approveApps) {
         this.approveApps = approveApps;
         return this;
@@ -26,9 +27,11 @@ public class AdministratorWebTokenSpecPlaySearch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AdministratorWebTokenSpecPlaySearch withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public AdministratorWebTokenSpecPlaySearch(){}
 }

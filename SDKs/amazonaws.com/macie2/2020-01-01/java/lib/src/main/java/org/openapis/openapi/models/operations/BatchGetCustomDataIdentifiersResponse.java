@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetCustomDataIdentifiersResponse {
@@ -12,6 +13,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetCustomDataIdentifiersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetCustomDataIdentifiersResponse batchGetCustomDataIdentifiersResponse;
+
     public BatchGetCustomDataIdentifiersResponse withBatchGetCustomDataIdentifiersResponse(org.openapis.openapi.models.shared.BatchGetCustomDataIdentifiersResponse batchGetCustomDataIdentifiersResponse) {
         this.batchGetCustomDataIdentifiersResponse = batchGetCustomDataIdentifiersResponse;
         return this;
@@ -32,6 +35,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object conflictException;
+
     public BatchGetCustomDataIdentifiersResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetCustomDataIdentifiersResponse {
     
     
     public String contentType;
+
     public BatchGetCustomDataIdentifiersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetCustomDataIdentifiersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetCustomDataIdentifiersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public BatchGetCustomDataIdentifiersResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class BatchGetCustomDataIdentifiersResponse {
     
     
     public Integer statusCode;
+
     public BatchGetCustomDataIdentifiersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class BatchGetCustomDataIdentifiersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetCustomDataIdentifiersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetCustomDataIdentifiersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class BatchGetCustomDataIdentifiersResponse {
      */
     
     public Object validationException;
+
     public BatchGetCustomDataIdentifiersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetCustomDataIdentifiersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

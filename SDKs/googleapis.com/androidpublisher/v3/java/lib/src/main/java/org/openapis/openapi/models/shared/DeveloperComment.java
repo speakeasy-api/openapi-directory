@@ -18,6 +18,7 @@ public class DeveloperComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public Timestamp lastModified;
+
     public DeveloperComment withLastModified(Timestamp lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -29,9 +30,11 @@ public class DeveloperComment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public DeveloperComment withText(String text) {
         this.text = text;
         return this;
     }
     
+    public DeveloperComment(){}
 }

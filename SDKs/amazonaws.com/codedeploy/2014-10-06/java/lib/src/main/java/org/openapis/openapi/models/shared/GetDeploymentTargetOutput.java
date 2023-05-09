@@ -15,9 +15,11 @@ public class GetDeploymentTargetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentTarget")
     public DeploymentTarget deploymentTarget;
+
     public GetDeploymentTargetOutput withDeploymentTarget(DeploymentTarget deploymentTarget) {
         this.deploymentTarget = deploymentTarget;
         return this;
     }
     
+    public GetDeploymentTargetOutput(){}
 }

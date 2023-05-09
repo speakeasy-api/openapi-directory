@@ -12,6 +12,7 @@ public class ReportRequest {
      */
     @JsonProperty("file_id")
     public String fileId;
+
     public ReportRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,9 +23,14 @@ public class ReportRequest {
      */
     @JsonProperty("process")
     public String process;
+
     public ReportRequest withProcess(String process) {
         this.process = process;
         return this;
     }
     
+    public ReportRequest(@JsonProperty("file_id") String fileId, @JsonProperty("process") String process) {
+        this.fileId = fileId;
+        this.process = process;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public GoogleCloudIntegrationsV1alphaCoordinate withX(Integer x) {
         this.x = x;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIntegrationsV1alphaCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public GoogleCloudIntegrationsV1alphaCoordinate withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCoordinate(){}
 }

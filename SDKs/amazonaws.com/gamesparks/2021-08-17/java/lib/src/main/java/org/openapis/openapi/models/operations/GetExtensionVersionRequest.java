@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExtensionVersionRequest {
@@ -12,6 +13,7 @@ public class GetExtensionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ExtensionVersion")
     public String extensionVersion;
+
     public GetExtensionVersionRequest withExtensionVersion(String extensionVersion) {
         this.extensionVersion = extensionVersion;
         return this;
@@ -22,6 +24,7 @@ public class GetExtensionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Name")
     public String name;
+
     public GetExtensionVersionRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +35,7 @@ public class GetExtensionVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Namespace")
     public String namespace;
+
     public GetExtensionVersionRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -39,6 +43,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetExtensionVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetExtensionVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetExtensionVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetExtensionVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetExtensionVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetExtensionVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,15 @@ public class GetExtensionVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetExtensionVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GetExtensionVersionRequest(@JsonProperty("ExtensionVersion") String extensionVersion, @JsonProperty("Name") String name, @JsonProperty("Namespace") String namespace) {
+        this.extensionVersion = extensionVersion;
+        this.name = name;
+        this.namespace = namespace;
+  }
 }

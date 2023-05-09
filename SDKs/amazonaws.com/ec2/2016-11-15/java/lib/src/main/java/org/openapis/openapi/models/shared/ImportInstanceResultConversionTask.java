@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceResultConversionTask {
     
     public String conversionTaskId;
+
     public ImportInstanceResultConversionTask withConversionTaskId(String conversionTaskId) {
         this.conversionTaskId = conversionTaskId;
         return this;
@@ -19,6 +20,7 @@ public class ImportInstanceResultConversionTask {
     
     
     public String expirationTime;
+
     public ImportInstanceResultConversionTask withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -26,6 +28,7 @@ public class ImportInstanceResultConversionTask {
     
     
     public ImportInstanceResultConversionTaskImportInstance importInstance;
+
     public ImportInstanceResultConversionTask withImportInstance(ImportInstanceResultConversionTaskImportInstance importInstance) {
         this.importInstance = importInstance;
         return this;
@@ -33,6 +36,7 @@ public class ImportInstanceResultConversionTask {
     
     
     public ImportInstanceResultConversionTaskImportVolume importVolume;
+
     public ImportInstanceResultConversionTask withImportVolume(ImportInstanceResultConversionTaskImportVolume importVolume) {
         this.importVolume = importVolume;
         return this;
@@ -40,6 +44,7 @@ public class ImportInstanceResultConversionTask {
     
     
     public ImportInstanceResultConversionTaskStateEnum state;
+
     public ImportInstanceResultConversionTask withState(ImportInstanceResultConversionTaskStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class ImportInstanceResultConversionTask {
     
     
     public String statusMessage;
+
     public ImportInstanceResultConversionTask withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class ImportInstanceResultConversionTask {
     
     
     public ImportInstanceResultConversionTaskTags[] tags;
+
     public ImportInstanceResultConversionTask withTags(ImportInstanceResultConversionTaskTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ImportInstanceResultConversionTask(){}
 }

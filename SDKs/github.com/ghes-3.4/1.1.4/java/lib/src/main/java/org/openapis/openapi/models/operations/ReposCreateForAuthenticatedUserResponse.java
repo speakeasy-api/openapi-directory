@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateForAuthenticatedUserResponse {
     
     public String contentType;
+
     public ReposCreateForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReposCreateForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReposCreateForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReposCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReposCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.Repository repository;
+
     public ReposCreateForAuthenticatedUserResponse withRepository(org.openapis.openapi.models.shared.Repository repository) {
         this.repository = repository;
         return this;
@@ -60,6 +67,7 @@ public class ReposCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposCreateForAuthenticatedUserResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -70,9 +78,14 @@ public class ReposCreateForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateForAuthenticatedUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

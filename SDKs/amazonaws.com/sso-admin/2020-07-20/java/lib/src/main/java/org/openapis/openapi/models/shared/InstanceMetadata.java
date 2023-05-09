@@ -15,6 +15,7 @@ public class InstanceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public InstanceMetadata withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -23,9 +24,11 @@ public class InstanceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public InstanceMetadata withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
     }
     
+    public InstanceMetadata(){}
 }

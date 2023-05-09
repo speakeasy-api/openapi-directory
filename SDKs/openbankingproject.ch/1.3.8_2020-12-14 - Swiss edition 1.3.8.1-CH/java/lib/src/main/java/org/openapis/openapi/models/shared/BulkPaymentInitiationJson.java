@@ -34,6 +34,7 @@ public class BulkPaymentInitiationJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchBookingPreferred")
     public Boolean batchBookingPreferred;
+
     public BulkPaymentInitiationJson withBatchBookingPreferred(Boolean batchBookingPreferred) {
         this.batchBookingPreferred = batchBookingPreferred;
         return this;
@@ -48,6 +49,7 @@ public class BulkPaymentInitiationJson {
      */
     @JsonProperty("debtorAccount")
     public AccountReference16CH debtorAccount;
+
     public BulkPaymentInitiationJson withDebtorAccount(AccountReference16CH debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -62,6 +64,7 @@ public class BulkPaymentInitiationJson {
      */
     @JsonProperty("debtorAgent")
     public DebtorAgent7CH debtorAgent;
+
     public BulkPaymentInitiationJson withDebtorAgent(DebtorAgent7CH debtorAgent) {
         this.debtorAgent = debtorAgent;
         return this;
@@ -75,6 +78,7 @@ public class BulkPaymentInitiationJson {
      */
     @JsonProperty("payments")
     public PaymentInitiationBulkElementJson[] payments;
+
     public BulkPaymentInitiationJson withPayments(PaymentInitiationBulkElementJson[] payments) {
         this.payments = payments;
         return this;
@@ -84,6 +88,7 @@ public class BulkPaymentInitiationJson {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("requestedExecutionDate")
     public LocalDate requestedExecutionDate;
+
     public BulkPaymentInitiationJson withRequestedExecutionDate(LocalDate requestedExecutionDate) {
         this.requestedExecutionDate = requestedExecutionDate;
         return this;
@@ -94,9 +99,15 @@ public class BulkPaymentInitiationJson {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedExecutionTime")
     public OffsetDateTime requestedExecutionTime;
+
     public BulkPaymentInitiationJson withRequestedExecutionTime(OffsetDateTime requestedExecutionTime) {
         this.requestedExecutionTime = requestedExecutionTime;
         return this;
     }
     
+    public BulkPaymentInitiationJson(@JsonProperty("debtorAccount") AccountReference16CH debtorAccount, @JsonProperty("debtorAgent") DebtorAgent7CH debtorAgent, @JsonProperty("payments") PaymentInitiationBulkElementJson[] payments) {
+        this.debtorAccount = debtorAccount;
+        this.debtorAgent = debtorAgent;
+        this.payments = payments;
+  }
 }

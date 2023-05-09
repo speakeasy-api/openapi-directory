@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAdditionalAssignmentsForHITResponse {
     
     public String contentType;
+
     public CreateAdditionalAssignmentsForHITResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAdditionalAssignmentsForHITResponse {
      */
     
     public java.util.Map<String, Object> createAdditionalAssignmentsForHITResponse;
+
     public CreateAdditionalAssignmentsForHITResponse withCreateAdditionalAssignmentsForHITResponse(java.util.Map<String, Object> createAdditionalAssignmentsForHITResponse) {
         this.createAdditionalAssignmentsForHITResponse = createAdditionalAssignmentsForHITResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAdditionalAssignmentsForHITResponse {
      */
     
     public Object requestError;
+
     public CreateAdditionalAssignmentsForHITResponse withRequestError(Object requestError) {
         this.requestError = requestError;
         return this;
@@ -39,6 +43,7 @@ public class CreateAdditionalAssignmentsForHITResponse {
      */
     
     public Object serviceFault;
+
     public CreateAdditionalAssignmentsForHITResponse withServiceFault(Object serviceFault) {
         this.serviceFault = serviceFault;
         return this;
@@ -46,6 +51,7 @@ public class CreateAdditionalAssignmentsForHITResponse {
     
     
     public Integer statusCode;
+
     public CreateAdditionalAssignmentsForHITResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateAdditionalAssignmentsForHITResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAdditionalAssignmentsForHITResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateAdditionalAssignmentsForHITResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

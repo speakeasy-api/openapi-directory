@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutObjectRequest {
@@ -12,6 +13,7 @@ public class PutObjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Cache-Control")
     public String cacheControl;
+
     public PutObjectRequest withCacheControl(String cacheControl) {
         this.cacheControl = cacheControl;
         return this;
@@ -22,6 +24,7 @@ public class PutObjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PutObjectRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class PutObjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Path")
     public String path;
+
     public PutObjectRequest withPath(String path) {
         this.path = path;
         return this;
@@ -39,6 +43,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutObjectRequestBody requestBody;
+
     public PutObjectRequest withRequestBody(PutObjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -46,6 +51,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutObjectRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -53,6 +59,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutObjectRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -60,6 +67,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutObjectRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -67,6 +75,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutObjectRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -74,6 +83,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutObjectRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -81,6 +91,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutObjectRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -88,6 +99,7 @@ public class PutObjectRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutObjectRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -98,6 +110,7 @@ public class PutObjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-storage-class")
     public PutObjectXAmzStorageClassEnum xAmzStorageClass;
+
     public PutObjectRequest withXAmzStorageClass(PutObjectXAmzStorageClassEnum xAmzStorageClass) {
         this.xAmzStorageClass = xAmzStorageClass;
         return this;
@@ -108,9 +121,14 @@ public class PutObjectRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-upload-availability")
     public PutObjectXAmzUploadAvailabilityEnum xAmzUploadAvailability;
+
     public PutObjectRequest withXAmzUploadAvailability(PutObjectXAmzUploadAvailabilityEnum xAmzUploadAvailability) {
         this.xAmzUploadAvailability = xAmzUploadAvailability;
         return this;
     }
     
+    public PutObjectRequest(@JsonProperty("Path") String path, @JsonProperty("RequestBody") PutObjectRequestBody requestBody) {
+        this.path = path;
+        this.requestBody = requestBody;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFaqRequest {
     @JsonProperty("Id")
     public String id;
+
     public DescribeFaqRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class DescribeFaqRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribeFaqRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribeFaqRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

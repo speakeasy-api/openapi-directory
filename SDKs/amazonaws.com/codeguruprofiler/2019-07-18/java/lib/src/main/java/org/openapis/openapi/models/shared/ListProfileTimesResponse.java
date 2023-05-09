@@ -15,6 +15,7 @@ public class ListProfileTimesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListProfileTimesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListProfileTimesResponse {
     
     @JsonProperty("profileTimes")
     public ProfileTime[] profileTimes;
+
     public ListProfileTimesResponse withProfileTimes(ProfileTime[] profileTimes) {
         this.profileTimes = profileTimes;
         return this;
     }
     
+    public ListProfileTimesResponse(@JsonProperty("profileTimes") ProfileTime[] profileTimes) {
+        this.profileTimes = profileTimes;
+  }
 }

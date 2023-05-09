@@ -20,6 +20,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationState")
     public String evaluationState;
+
     public PredictorMonitorEvaluation withEvaluationState(String evaluationState) {
         this.evaluationState = evaluationState;
         return this;
@@ -30,6 +31,7 @@ public class PredictorMonitorEvaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EvaluationTime")
     public OffsetDateTime evaluationTime;
+
     public PredictorMonitorEvaluation withEvaluationTime(OffsetDateTime evaluationTime) {
         this.evaluationTime = evaluationTime;
         return this;
@@ -38,6 +40,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PredictorMonitorEvaluation withMessage(String message) {
         this.message = message;
         return this;
@@ -46,6 +49,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricResults")
     public MetricResult[] metricResults;
+
     public PredictorMonitorEvaluation withMetricResults(MetricResult[] metricResults) {
         this.metricResults = metricResults;
         return this;
@@ -54,6 +58,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public PredictorMonitorEvaluation withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -62,6 +67,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitorDataSource")
     public MonitorDataSource monitorDataSource;
+
     public PredictorMonitorEvaluation withMonitorDataSource(MonitorDataSource monitorDataSource) {
         this.monitorDataSource = monitorDataSource;
         return this;
@@ -70,6 +76,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumItemsEvaluated")
     public Long numItemsEvaluated;
+
     public PredictorMonitorEvaluation withNumItemsEvaluated(Long numItemsEvaluated) {
         this.numItemsEvaluated = numItemsEvaluated;
         return this;
@@ -78,6 +85,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorEvent")
     public PredictorEvent predictorEvent;
+
     public PredictorMonitorEvaluation withPredictorEvent(PredictorEvent predictorEvent) {
         this.predictorEvent = predictorEvent;
         return this;
@@ -86,6 +94,7 @@ public class PredictorMonitorEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public PredictorMonitorEvaluation withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -96,6 +105,7 @@ public class PredictorMonitorEvaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("WindowEndDatetime")
     public OffsetDateTime windowEndDatetime;
+
     public PredictorMonitorEvaluation withWindowEndDatetime(OffsetDateTime windowEndDatetime) {
         this.windowEndDatetime = windowEndDatetime;
         return this;
@@ -106,9 +116,11 @@ public class PredictorMonitorEvaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("WindowStartDatetime")
     public OffsetDateTime windowStartDatetime;
+
     public PredictorMonitorEvaluation withWindowStartDatetime(OffsetDateTime windowStartDatetime) {
         this.windowStartDatetime = windowStartDatetime;
         return this;
     }
     
+    public PredictorMonitorEvaluation(){}
 }

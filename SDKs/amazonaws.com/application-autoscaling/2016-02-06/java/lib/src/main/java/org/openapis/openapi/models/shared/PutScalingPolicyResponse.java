@@ -15,6 +15,7 @@ public class PutScalingPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alarms")
     public Alarm[] alarms;
+
     public PutScalingPolicyResponse withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -22,9 +23,13 @@ public class PutScalingPolicyResponse {
     
     @JsonProperty("PolicyARN")
     public String policyARN;
+
     public PutScalingPolicyResponse withPolicyARN(String policyARN) {
         this.policyARN = policyARN;
         return this;
     }
     
+    public PutScalingPolicyResponse(@JsonProperty("PolicyARN") String policyARN) {
+        this.policyARN = policyARN;
+  }
 }

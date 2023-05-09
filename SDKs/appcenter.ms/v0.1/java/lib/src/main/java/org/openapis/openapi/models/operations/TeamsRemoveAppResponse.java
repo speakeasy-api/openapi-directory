@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsRemoveAppResponse {
     
     public String contentType;
+
     public TeamsRemoveAppResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsRemoveAppResponse {
     
     
     public Integer statusCode;
+
     public TeamsRemoveAppResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsRemoveAppResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsRemoveAppResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsRemoveAppResponse {
      */
     
     public TeamsRemoveAppDefaultApplicationJSON teamsRemoveAppDefaultApplicationJSONObject;
+
     public TeamsRemoveAppResponse withTeamsRemoveAppDefaultApplicationJSONObject(TeamsRemoveAppDefaultApplicationJSON teamsRemoveAppDefaultApplicationJSONObject) {
         this.teamsRemoveAppDefaultApplicationJSONObject = teamsRemoveAppDefaultApplicationJSONObject;
         return this;
     }
     
+    public TeamsRemoveAppResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

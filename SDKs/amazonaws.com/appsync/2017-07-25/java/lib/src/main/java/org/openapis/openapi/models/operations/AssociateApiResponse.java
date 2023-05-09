@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateApiResponse {
@@ -12,6 +13,7 @@ public class AssociateApiResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateApiResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateApiResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateApiResponse associateApiResponse;
+
     public AssociateApiResponse withAssociateApiResponse(org.openapis.openapi.models.shared.AssociateApiResponse associateApiResponse) {
         this.associateApiResponse = associateApiResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateApiResponse {
      */
     
     public Object badRequestException;
+
     public AssociateApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateApiResponse {
     
     
     public String contentType;
+
     public AssociateApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateApiResponse {
      */
     
     public Object internalFailureException;
+
     public AssociateApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateApiResponse {
      */
     
     public Object notFoundException;
+
     public AssociateApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AssociateApiResponse {
     
     
     public Integer statusCode;
+
     public AssociateApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class AssociateApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

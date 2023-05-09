@@ -114,4 +114,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventor
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventory200ApplicationJSONNodes.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventory200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateMultiNodeInventoryResponse.java
+docs/sdk/README.md
+docs/inventory/README.md
 USAGE.md

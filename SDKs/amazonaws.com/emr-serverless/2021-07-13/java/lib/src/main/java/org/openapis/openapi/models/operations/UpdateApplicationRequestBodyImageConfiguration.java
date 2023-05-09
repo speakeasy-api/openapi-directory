@@ -15,9 +15,11 @@ public class UpdateApplicationRequestBodyImageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public UpdateApplicationRequestBodyImageConfiguration withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public UpdateApplicationRequestBodyImageConfiguration(){}
 }

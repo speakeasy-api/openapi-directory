@@ -15,9 +15,11 @@ public class LifeCycleLastCutoverReverted {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiCallDateTime")
     public String apiCallDateTime;
+
     public LifeCycleLastCutoverReverted withApiCallDateTime(String apiCallDateTime) {
         this.apiCallDateTime = apiCallDateTime;
         return this;
     }
     
+    public LifeCycleLastCutoverReverted(){}
 }

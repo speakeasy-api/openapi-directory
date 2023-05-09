@@ -18,6 +18,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Category withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("experiencePoints")
     public String experiencePoints;
+
     public Category withExperiencePoints(String experiencePoints) {
         this.experiencePoints = experiencePoints;
         return this;
@@ -40,9 +42,11 @@ public class Category {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Category withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public Category(){}
 }

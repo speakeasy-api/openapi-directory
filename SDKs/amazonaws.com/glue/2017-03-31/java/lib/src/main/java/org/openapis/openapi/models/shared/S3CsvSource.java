@@ -15,6 +15,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalOptions")
     public S3DirectSourceAdditionalOptions additionalOptions;
+
     public S3CsvSource withAdditionalOptions(S3DirectSourceAdditionalOptions additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -23,6 +24,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompressionType")
     public CompressionTypeEnum compressionType;
+
     public S3CsvSource withCompressionType(CompressionTypeEnum compressionType) {
         this.compressionType = compressionType;
         return this;
@@ -31,6 +33,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Escaper")
     public String escaper;
+
     public S3CsvSource withEscaper(String escaper) {
         this.escaper = escaper;
         return this;
@@ -39,6 +42,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Exclusions")
     public String[] exclusions;
+
     public S3CsvSource withExclusions(String[] exclusions) {
         this.exclusions = exclusions;
         return this;
@@ -47,6 +51,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupFiles")
     public String groupFiles;
+
     public S3CsvSource withGroupFiles(String groupFiles) {
         this.groupFiles = groupFiles;
         return this;
@@ -55,6 +60,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupSize")
     public String groupSize;
+
     public S3CsvSource withGroupSize(String groupSize) {
         this.groupSize = groupSize;
         return this;
@@ -63,6 +69,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxBand")
     public Long maxBand;
+
     public S3CsvSource withMaxBand(Long maxBand) {
         this.maxBand = maxBand;
         return this;
@@ -71,6 +78,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxFilesInBand")
     public Long maxFilesInBand;
+
     public S3CsvSource withMaxFilesInBand(Long maxFilesInBand) {
         this.maxFilesInBand = maxFilesInBand;
         return this;
@@ -79,6 +87,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Multiline")
     public Boolean multiline;
+
     public S3CsvSource withMultiline(Boolean multiline) {
         this.multiline = multiline;
         return this;
@@ -86,6 +95,7 @@ public class S3CsvSource {
     
     @JsonProperty("Name")
     public String name;
+
     public S3CsvSource withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +104,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizePerformance")
     public Boolean optimizePerformance;
+
     public S3CsvSource withOptimizePerformance(Boolean optimizePerformance) {
         this.optimizePerformance = optimizePerformance;
         return this;
@@ -102,6 +113,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public S3CsvSource withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
@@ -109,6 +121,7 @@ public class S3CsvSource {
     
     @JsonProperty("Paths")
     public String[] paths;
+
     public S3CsvSource withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -116,6 +129,7 @@ public class S3CsvSource {
     
     @JsonProperty("QuoteChar")
     public QuoteCharEnum quoteChar;
+
     public S3CsvSource withQuoteChar(QuoteCharEnum quoteChar) {
         this.quoteChar = quoteChar;
         return this;
@@ -124,6 +138,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recurse")
     public Boolean recurse;
+
     public S3CsvSource withRecurse(Boolean recurse) {
         this.recurse = recurse;
         return this;
@@ -131,6 +146,7 @@ public class S3CsvSource {
     
     @JsonProperty("Separator")
     public SeparatorEnum separator;
+
     public S3CsvSource withSeparator(SeparatorEnum separator) {
         this.separator = separator;
         return this;
@@ -139,6 +155,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipFirst")
     public Boolean skipFirst;
+
     public S3CsvSource withSkipFirst(Boolean skipFirst) {
         this.skipFirst = skipFirst;
         return this;
@@ -147,6 +164,7 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithHeader")
     public Boolean withHeader;
+
     public S3CsvSource withWithHeader(Boolean withHeader) {
         this.withHeader = withHeader;
         return this;
@@ -155,9 +173,16 @@ public class S3CsvSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteHeader")
     public Boolean writeHeader;
+
     public S3CsvSource withWriteHeader(Boolean writeHeader) {
         this.writeHeader = writeHeader;
         return this;
     }
     
+    public S3CsvSource(@JsonProperty("Name") String name, @JsonProperty("Paths") String[] paths, @JsonProperty("QuoteChar") QuoteCharEnum quoteChar, @JsonProperty("Separator") SeparatorEnum separator) {
+        this.name = name;
+        this.paths = paths;
+        this.quoteChar = quoteChar;
+        this.separator = separator;
+  }
 }

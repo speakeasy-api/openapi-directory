@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAnalyticsTokenRequest {
@@ -12,9 +13,13 @@ public class GetAnalyticsTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetAnalyticsTokenRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public GetAnalyticsTokenRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

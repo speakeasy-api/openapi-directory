@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayRouteTableAnnouncementsRequest {
     
     public Boolean dryRun;
+
     public DescribeTransitGatewayRouteTableAnnouncementsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTransitGatewayRouteTableAnnouncementsRequest {
     
     
     public DescribeTransitGatewayRouteTableAnnouncementsRequestFilters[] filters;
+
     public DescribeTransitGatewayRouteTableAnnouncementsRequest withFilters(DescribeTransitGatewayRouteTableAnnouncementsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTransitGatewayRouteTableAnnouncementsRequest {
     
     
     public Long maxResults;
+
     public DescribeTransitGatewayRouteTableAnnouncementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTransitGatewayRouteTableAnnouncementsRequest {
     
     
     public String nextToken;
+
     public DescribeTransitGatewayRouteTableAnnouncementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTransitGatewayRouteTableAnnouncementsRequest {
     
     
     public String[] transitGatewayRouteTableAnnouncementIds;
+
     public DescribeTransitGatewayRouteTableAnnouncementsRequest withTransitGatewayRouteTableAnnouncementIds(String[] transitGatewayRouteTableAnnouncementIds) {
         this.transitGatewayRouteTableAnnouncementIds = transitGatewayRouteTableAnnouncementIds;
         return this;
     }
     
+    public DescribeTransitGatewayRouteTableAnnouncementsRequest(){}
 }

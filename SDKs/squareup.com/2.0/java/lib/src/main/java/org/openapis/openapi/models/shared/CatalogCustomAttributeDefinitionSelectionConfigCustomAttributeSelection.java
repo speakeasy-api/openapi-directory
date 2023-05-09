@@ -17,6 +17,7 @@ public class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelec
      */
     @JsonProperty("name")
     public String name;
+
     public CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +29,13 @@ public class CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelec
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelection(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

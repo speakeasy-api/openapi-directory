@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegionsRequest {
@@ -12,9 +13,13 @@ public class GetRegionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetRegionsRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
     }
     
+    public GetRegionsRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey) {
+        this.xListenAPIKey = xListenAPIKey;
+  }
 }

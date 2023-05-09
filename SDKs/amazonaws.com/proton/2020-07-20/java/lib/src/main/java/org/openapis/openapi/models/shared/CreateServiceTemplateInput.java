@@ -12,6 +12,7 @@ public class CreateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateServiceTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CreateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateServiceTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -28,6 +30,7 @@ public class CreateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public CreateServiceTemplateInput withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -35,6 +38,7 @@ public class CreateServiceTemplateInput {
     
     @JsonProperty("name")
     public String name;
+
     public CreateServiceTemplateInput withName(String name) {
         this.name = name;
         return this;
@@ -43,6 +47,7 @@ public class CreateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineProvisioning")
     public ProvisioningEnum pipelineProvisioning;
+
     public CreateServiceTemplateInput withPipelineProvisioning(ProvisioningEnum pipelineProvisioning) {
         this.pipelineProvisioning = pipelineProvisioning;
         return this;
@@ -51,9 +56,13 @@ public class CreateServiceTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateServiceTemplateInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateServiceTemplateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

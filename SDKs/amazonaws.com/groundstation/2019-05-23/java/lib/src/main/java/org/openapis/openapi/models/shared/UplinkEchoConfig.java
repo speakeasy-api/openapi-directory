@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UplinkEchoConfig {
     @JsonProperty("antennaUplinkConfigArn")
     public String antennaUplinkConfigArn;
+
     public UplinkEchoConfig withAntennaUplinkConfigArn(String antennaUplinkConfigArn) {
         this.antennaUplinkConfigArn = antennaUplinkConfigArn;
         return this;
@@ -19,9 +20,14 @@ public class UplinkEchoConfig {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UplinkEchoConfig withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UplinkEchoConfig(@JsonProperty("antennaUplinkConfigArn") String antennaUplinkConfigArn, @JsonProperty("enabled") Boolean enabled) {
+        this.antennaUplinkConfigArn = antennaUplinkConfigArn;
+        this.enabled = enabled;
+  }
 }

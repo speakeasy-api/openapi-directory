@@ -15,6 +15,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateCustomLineItemOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationSize")
     public Long associationSize;
+
     public UpdateCustomLineItemOutput withAssociationSize(Long associationSize) {
         this.associationSize = associationSize;
         return this;
@@ -31,6 +33,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingGroupArn")
     public String billingGroupArn;
+
     public UpdateCustomLineItemOutput withBillingGroupArn(String billingGroupArn) {
         this.billingGroupArn = billingGroupArn;
         return this;
@@ -39,6 +42,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeDetails")
     public ListCustomLineItemChargeDetails chargeDetails;
+
     public UpdateCustomLineItemOutput withChargeDetails(ListCustomLineItemChargeDetails chargeDetails) {
         this.chargeDetails = chargeDetails;
         return this;
@@ -47,6 +51,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateCustomLineItemOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public UpdateCustomLineItemOutput withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -63,9 +69,11 @@ public class UpdateCustomLineItemOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateCustomLineItemOutput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateCustomLineItemOutput(){}
 }

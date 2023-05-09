@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatepartialrecurrenceRequest {
@@ -12,6 +13,7 @@ public class UpdatepartialrecurrenceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdatepartialrecurrenceRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdatepartialrecurrenceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdatepartialrecurrenceRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatepartialrecurrenceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdatepartialrecurrenceRequest updatepartialrecurrenceRequest;
+
     public UpdatepartialrecurrenceRequest withUpdatepartialrecurrenceRequest(org.openapis.openapi.models.shared.UpdatepartialrecurrenceRequest updatepartialrecurrenceRequest) {
         this.updatepartialrecurrenceRequest = updatepartialrecurrenceRequest;
         return this;
@@ -36,9 +40,16 @@ public class UpdatepartialrecurrenceRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=recurrenceId")
     public String recurrenceId;
+
     public UpdatepartialrecurrenceRequest withRecurrenceId(String recurrenceId) {
         this.recurrenceId = recurrenceId;
         return this;
     }
     
+    public UpdatepartialrecurrenceRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdatepartialrecurrenceRequest") org.openapis.openapi.models.shared.UpdatepartialrecurrenceRequest updatepartialrecurrenceRequest, @JsonProperty("recurrenceId") String recurrenceId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updatepartialrecurrenceRequest = updatepartialrecurrenceRequest;
+        this.recurrenceId = recurrenceId;
+  }
 }

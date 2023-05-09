@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job_title")
     public String jobTitle;
+
     public JobSearchReadRequest withJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
         return this;
     }
     
+    public JobSearchReadRequest(@JsonProperty("job_title") String jobTitle) {
+        this.jobTitle = jobTitle;
+  }
 }

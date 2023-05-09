@@ -55,12 +55,10 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDocumentResponse res = new org.openapis.openapi.models.operations.DeleteDocumentResponse() {{
+        org.openapis.openapi.models.operations.DeleteDocumentResponse res = new org.openapis.openapi.models.operations.DeleteDocumentResponse(contentType, httpRes.statusCode()) {{
             fourHundredAndFour = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -114,12 +112,10 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentResponse res = new org.openapis.openapi.models.operations.GetDocumentResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentResponse res = new org.openapis.openapi.models.operations.GetDocumentResponse(contentType, httpRes.statusCode()) {{
             getDocument200ApplicationJSONObject = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,12 +172,10 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentWithPathResponse res = new org.openapis.openapi.models.operations.GetDocumentWithPathResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentWithPathResponse res = new org.openapis.openapi.models.operations.GetDocumentWithPathResponse(contentType, httpRes.statusCode()) {{
             getDocumentWithPath200ApplicationJSONObject = null;
             fourHundred = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,13 +237,11 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentWithWebHookResponse res = new org.openapis.openapi.models.operations.GetDocumentWithWebHookResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentWithWebHookResponse res = new org.openapis.openapi.models.operations.GetDocumentWithWebHookResponse(contentType, httpRes.statusCode()) {{
             getDocumentWithWebHook200ApplicationJSONObject = null;
             fourHundred = null;
             fourHundredAndFour = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,12 +295,10 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchDocumentResponse res = new org.openapis.openapi.models.operations.PatchDocumentResponse() {{
+        org.openapis.openapi.models.operations.PatchDocumentResponse res = new org.openapis.openapi.models.operations.PatchDocumentResponse(contentType, httpRes.statusCode()) {{
             fourHundred = null;
             fourHundredAndFour = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -367,12 +357,10 @@ public class DataAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutDocumentResponse res = new org.openapis.openapi.models.operations.PutDocumentResponse() {{
+        org.openapis.openapi.models.operations.PutDocumentResponse res = new org.openapis.openapi.models.operations.PutDocumentResponse(contentType, httpRes.statusCode()) {{
             fourHundred = null;
             fourHundredAndFour = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 304) {

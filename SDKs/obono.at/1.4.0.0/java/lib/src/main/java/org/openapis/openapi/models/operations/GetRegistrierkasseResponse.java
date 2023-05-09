@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegistrierkasseResponse {
     
     public String contentType;
+
     public GetRegistrierkasseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRegistrierkasseResponse {
      */
     
     public org.openapis.openapi.models.shared.Registrierkasse registrierkasse;
+
     public GetRegistrierkasseResponse withRegistrierkasse(org.openapis.openapi.models.shared.Registrierkasse registrierkasse) {
         this.registrierkasse = registrierkasse;
         return this;
@@ -26,6 +29,7 @@ public class GetRegistrierkasseResponse {
     
     
     public Integer statusCode;
+
     public GetRegistrierkasseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetRegistrierkasseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegistrierkasseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRegistrierkasseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

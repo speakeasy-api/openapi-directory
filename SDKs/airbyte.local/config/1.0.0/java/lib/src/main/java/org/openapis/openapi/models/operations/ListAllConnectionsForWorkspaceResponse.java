@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllConnectionsForWorkspaceResponse {
@@ -12,6 +13,7 @@ public class ListAllConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectionReadList connectionReadList;
+
     public ListAllConnectionsForWorkspaceResponse withConnectionReadList(org.openapis.openapi.models.shared.ConnectionReadList connectionReadList) {
         this.connectionReadList = connectionReadList;
         return this;
@@ -19,6 +21,7 @@ public class ListAllConnectionsForWorkspaceResponse {
     
     
     public String contentType;
+
     public ListAllConnectionsForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAllConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public ListAllConnectionsForWorkspaceResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class ListAllConnectionsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public ListAllConnectionsForWorkspaceResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class ListAllConnectionsForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public ListAllConnectionsForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAllConnectionsForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllConnectionsForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAllConnectionsForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

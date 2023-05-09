@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DlpProjectsLocationsDeidentifyTemplatesListResponse {
     
     public String contentType;
+
     public DlpProjectsLocationsDeidentifyTemplatesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DlpProjectsLocationsDeidentifyTemplatesListResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse googlePrivacyDlpV2ListDeidentifyTemplatesResponse;
+
     public DlpProjectsLocationsDeidentifyTemplatesListResponse withGooglePrivacyDlpV2ListDeidentifyTemplatesResponse(org.openapis.openapi.models.shared.GooglePrivacyDlpV2ListDeidentifyTemplatesResponse googlePrivacyDlpV2ListDeidentifyTemplatesResponse) {
         this.googlePrivacyDlpV2ListDeidentifyTemplatesResponse = googlePrivacyDlpV2ListDeidentifyTemplatesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DlpProjectsLocationsDeidentifyTemplatesListResponse {
     
     
     public Integer statusCode;
+
     public DlpProjectsLocationsDeidentifyTemplatesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DlpProjectsLocationsDeidentifyTemplatesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DlpProjectsLocationsDeidentifyTemplatesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DlpProjectsLocationsDeidentifyTemplatesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

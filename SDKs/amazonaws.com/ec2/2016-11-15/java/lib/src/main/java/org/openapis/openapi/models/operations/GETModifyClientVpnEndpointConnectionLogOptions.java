@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyClientVpnEndpointConnectionLogOptions {
     @SpeakeasyMetadata("queryParam:name=CloudwatchLogGroup")
     public String cloudwatchLogGroup;
+
     public GETModifyClientVpnEndpointConnectionLogOptions withCloudwatchLogGroup(String cloudwatchLogGroup) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyClientVpnEndpointConnectionLogOptions {
     
     @SpeakeasyMetadata("queryParam:name=CloudwatchLogStream")
     public String cloudwatchLogStream;
+
     public GETModifyClientVpnEndpointConnectionLogOptions withCloudwatchLogStream(String cloudwatchLogStream) {
         this.cloudwatchLogStream = cloudwatchLogStream;
         return this;
@@ -26,9 +28,11 @@ public class GETModifyClientVpnEndpointConnectionLogOptions {
     
     @SpeakeasyMetadata("queryParam:name=Enabled")
     public Boolean enabled;
+
     public GETModifyClientVpnEndpointConnectionLogOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GETModifyClientVpnEndpointConnectionLogOptions(){}
 }

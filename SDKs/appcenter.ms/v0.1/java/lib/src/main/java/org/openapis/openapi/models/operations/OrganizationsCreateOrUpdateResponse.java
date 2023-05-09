@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrganizationsCreateOrUpdateResponse {
     
     public String contentType;
+
     public OrganizationsCreateOrUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrganizationsCreateOrUpdateResponse {
     
     
     public Integer statusCode;
+
     public OrganizationsCreateOrUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class OrganizationsCreateOrUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrganizationsCreateOrUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class OrganizationsCreateOrUpdateResponse {
      */
     
     public OrganizationsCreateOrUpdate201ApplicationJSON organizationsCreateOrUpdate201ApplicationJSONObject;
+
     public OrganizationsCreateOrUpdateResponse withOrganizationsCreateOrUpdate201ApplicationJSONObject(OrganizationsCreateOrUpdate201ApplicationJSON organizationsCreateOrUpdate201ApplicationJSONObject) {
         this.organizationsCreateOrUpdate201ApplicationJSONObject = organizationsCreateOrUpdate201ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class OrganizationsCreateOrUpdateResponse {
      */
     
     public OrganizationsCreateOrUpdateDefaultApplicationJSON organizationsCreateOrUpdateDefaultApplicationJSONObject;
+
     public OrganizationsCreateOrUpdateResponse withOrganizationsCreateOrUpdateDefaultApplicationJSONObject(OrganizationsCreateOrUpdateDefaultApplicationJSON organizationsCreateOrUpdateDefaultApplicationJSONObject) {
         this.organizationsCreateOrUpdateDefaultApplicationJSONObject = organizationsCreateOrUpdateDefaultApplicationJSONObject;
         return this;
     }
     
+    public OrganizationsCreateOrUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

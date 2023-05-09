@@ -15,6 +15,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public CreateTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public Long expiresIn;
+
     public CreateTokenResponse withExpiresIn(Long expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -31,6 +33,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public CreateTokenResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -39,6 +42,7 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public CreateTokenResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -47,9 +51,11 @@ public class CreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenType")
     public String tokenType;
+
     public CreateTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public CreateTokenResponse(){}
 }

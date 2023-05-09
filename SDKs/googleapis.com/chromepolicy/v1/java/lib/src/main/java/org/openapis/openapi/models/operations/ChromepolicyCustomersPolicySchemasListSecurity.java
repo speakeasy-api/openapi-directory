@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ChromepolicyCustomersPolicySchemasListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ChromepolicyCustomersPolicySchemasListSecurityOption1 option1;
+
     public ChromepolicyCustomersPolicySchemasListSecurity withOption1(ChromepolicyCustomersPolicySchemasListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ChromepolicyCustomersPolicySchemasListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ChromepolicyCustomersPolicySchemasListSecurityOption2 option2;
+
     public ChromepolicyCustomersPolicySchemasListSecurity withOption2(ChromepolicyCustomersPolicySchemasListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ChromepolicyCustomersPolicySchemasListSecurity(){}
 }

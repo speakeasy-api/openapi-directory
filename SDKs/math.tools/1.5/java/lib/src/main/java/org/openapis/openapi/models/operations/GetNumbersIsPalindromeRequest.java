@@ -12,9 +12,11 @@ public class GetNumbersIsPalindromeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersIsPalindromeRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersIsPalindromeRequest(){}
 }

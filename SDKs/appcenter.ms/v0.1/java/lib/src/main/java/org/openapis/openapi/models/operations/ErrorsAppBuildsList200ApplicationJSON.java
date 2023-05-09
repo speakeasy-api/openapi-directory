@@ -15,9 +15,11 @@ public class ErrorsAppBuildsList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appBuilds")
     public String[] appBuilds;
+
     public ErrorsAppBuildsList200ApplicationJSON withAppBuilds(String[] appBuilds) {
         this.appBuilds = appBuilds;
         return this;
     }
     
+    public ErrorsAppBuildsList200ApplicationJSON(){}
 }

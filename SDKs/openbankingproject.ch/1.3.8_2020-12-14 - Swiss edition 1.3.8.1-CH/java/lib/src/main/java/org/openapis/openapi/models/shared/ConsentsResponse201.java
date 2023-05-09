@@ -61,6 +61,7 @@ public class ConsentsResponse201 {
      */
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public ConsentsResponse201 withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -74,6 +75,7 @@ public class ConsentsResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeData")
     public ChallengeData challengeData;
+
     public ConsentsResponse201 withChallengeData(ChallengeData challengeData) {
         this.challengeData = challengeData;
         return this;
@@ -86,6 +88,7 @@ public class ConsentsResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chosenScaMethod")
     public ChosenScaMethod chosenScaMethod;
+
     public ConsentsResponse201 withChosenScaMethod(ChosenScaMethod chosenScaMethod) {
         this.chosenScaMethod = chosenScaMethod;
         return this;
@@ -97,6 +100,7 @@ public class ConsentsResponse201 {
      */
     @JsonProperty("consentId")
     public String consentId;
+
     public ConsentsResponse201 withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -121,6 +125,7 @@ public class ConsentsResponse201 {
      */
     @JsonProperty("consentStatus")
     public ConsentStatusEnum consentStatus;
+
     public ConsentsResponse201 withConsentStatus(ConsentStatusEnum consentStatus) {
         this.consentStatus = consentStatus;
         return this;
@@ -132,6 +137,7 @@ public class ConsentsResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public ConsentsResponse201 withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -153,9 +159,15 @@ public class ConsentsResponse201 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public ConsentsResponse201 withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
     }
     
+    public ConsentsResponse201(@JsonProperty("_links") java.util.Map<String, HrefType> links, @JsonProperty("consentId") String consentId, @JsonProperty("consentStatus") ConsentStatusEnum consentStatus) {
+        this.links = links;
+        this.consentId = consentId;
+        this.consentStatus = consentStatus;
+  }
 }

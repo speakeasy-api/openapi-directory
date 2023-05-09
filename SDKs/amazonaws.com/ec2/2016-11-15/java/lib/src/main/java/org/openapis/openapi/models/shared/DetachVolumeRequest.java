@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetachVolumeRequest {
     
     public String device;
+
     public DetachVolumeRequest withDevice(String device) {
         this.device = device;
         return this;
@@ -16,6 +17,7 @@ public class DetachVolumeRequest {
     
     
     public Boolean dryRun;
+
     public DetachVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DetachVolumeRequest {
     
     
     public Boolean force;
+
     public DetachVolumeRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -30,6 +33,7 @@ public class DetachVolumeRequest {
     
     
     public String instanceId;
+
     public DetachVolumeRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -37,9 +41,13 @@ public class DetachVolumeRequest {
     
     
     public String volumeId;
+
     public DetachVolumeRequest withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DetachVolumeRequest(@JsonProperty("VolumeId") String volumeId) {
+        this.volumeId = volumeId;
+  }
 }

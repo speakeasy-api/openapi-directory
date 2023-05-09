@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DownloadFileByIDRequest {
@@ -12,6 +13,7 @@ public class DownloadFileByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileUuid")
     public String fileUuid;
+
     public DownloadFileByIDRequest withFileUuid(String fileUuid) {
         this.fileUuid = fileUuid;
         return this;
@@ -22,6 +24,7 @@ public class DownloadFileByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
     public String itemUuid;
+
     public DownloadFileByIDRequest withItemUuid(String itemUuid) {
         this.itemUuid = itemUuid;
         return this;
@@ -32,9 +35,15 @@ public class DownloadFileByIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
     public String vaultUuid;
+
     public DownloadFileByIDRequest withVaultUuid(String vaultUuid) {
         this.vaultUuid = vaultUuid;
         return this;
     }
     
+    public DownloadFileByIDRequest(@JsonProperty("fileUuid") String fileUuid, @JsonProperty("itemUuid") String itemUuid, @JsonProperty("vaultUuid") String vaultUuid) {
+        this.fileUuid = fileUuid;
+        this.itemUuid = itemUuid;
+        this.vaultUuid = vaultUuid;
+  }
 }

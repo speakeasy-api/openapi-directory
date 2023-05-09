@@ -18,6 +18,7 @@ public class CreativeFilteringReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public CreativeFilteringReasons withDate(String date) {
         this.date = date;
         return this;
@@ -29,9 +30,11 @@ public class CreativeFilteringReasons {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasons")
     public CreativeFilteringReasonsReasons[] reasons;
+
     public CreativeFilteringReasons withReasons(CreativeFilteringReasonsReasons[] reasons) {
         this.reasons = reasons;
         return this;
     }
     
+    public CreativeFilteringReasons(){}
 }

@@ -15,6 +15,7 @@ public class InventoryDeletionSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public InventoryDeletionSummaryItem withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class InventoryDeletionSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemainingCount")
     public Long remainingCount;
+
     public InventoryDeletionSummaryItem withRemainingCount(Long remainingCount) {
         this.remainingCount = remainingCount;
         return this;
@@ -31,9 +33,11 @@ public class InventoryDeletionSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public InventoryDeletionSummaryItem withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public InventoryDeletionSummaryItem(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.AuthTokenResponse;
 import org.openapis.openapi.models.shared.TokenRequest;
 
@@ -30,16 +29,18 @@ public class Application {
                 clientId = "00000000-0000-0000-0000-00000000000";
                 clientSecret = "00000000-0000-0000-0000-00000000000";
                 grantType = "client_credentials";
-            }}            
+            }};            
 
             AuthTokenResponse res = sdk.authentication.authToken(req);
 
-            if (res.tokenResponse.isPresent()) {
+            if (res.tokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -47,57 +48,57 @@ public class Application {
 ## Available Resources and Operations
 
 
-### authentication
+### [authentication](docs/authentication/README.md)
 
-* `authToken` - Get token for accessing APIs
+* [authToken](docs/authentication/README.md#authtoken) - Get token for accessing APIs
 
-### campaigns
+### [campaigns](docs/campaigns/README.md)
 
-* `campaignsCreate` - Create campaign
-* `campaignsFetch` - Fetch campaign by ID
-* `campaignsFetchAll` - Fetch campaigns
-* `campaignsRemove` - Deletes a campaign
-* `campaignsUpdate` - Updates a campaign
+* [campaignsCreate](docs/campaigns/README.md#campaignscreate) - Create campaign
+* [campaignsFetch](docs/campaigns/README.md#campaignsfetch) - Fetch campaign by ID
+* [campaignsFetchAll](docs/campaigns/README.md#campaignsfetchall) - Fetch campaigns
+* [campaignsRemove](docs/campaigns/README.md#campaignsremove) - Deletes a campaign
+* [campaignsUpdate](docs/campaigns/README.md#campaignsupdate) - Updates a campaign
 
-### contacts
+### [contacts](docs/contacts/README.md)
 
-* `contactsCreateJson` - Create contact
-* `contactsCreateString` - Create contact
-* `contactsFetch` - Fetch contact by ID
-* `contactsFetchAll` - Fetch contacts
-* `contactsRemove` - Deletes a contact
-* `contactsUpdate` - Updates a contact
+* [contactsCreateJson](docs/contacts/README.md#contactscreatejson) - Create contact
+* [contactsCreateString](docs/contacts/README.md#contactscreatestring) - Create contact
+* [contactsFetch](docs/contacts/README.md#contactsfetch) - Fetch contact by ID
+* [contactsFetchAll](docs/contacts/README.md#contactsfetchall) - Fetch contacts
+* [contactsRemove](docs/contacts/README.md#contactsremove) - Deletes a contact
+* [contactsUpdate](docs/contacts/README.md#contactsupdate) - Updates a contact
 
-### conversations
+### [conversations](docs/conversations/README.md)
 
-* `conversationsClose` - Closes a conversation
-* `conversationsFetch` - Fetch conversation by ID
-* `conversationsFetchAll` - Fetch conversations
+* [conversationsClose](docs/conversations/README.md#conversationsclose) - Closes a conversation
+* [conversationsFetch](docs/conversations/README.md#conversationsfetch) - Fetch conversation by ID
+* [conversationsFetchAll](docs/conversations/README.md#conversationsfetchall) - Fetch conversations
 
-### messages
+### [messages](docs/messages/README.md)
 
-* `messagesFetch` - Fetch message by id
-* `messagesFetchAll` - Fetch messages
-* `messagesSend` - Send Messages
+* [messagesFetch](docs/messages/README.md#messagesfetch) - Fetch message by id
+* [messagesFetchAll](docs/messages/README.md#messagesfetchall) - Fetch messages
+* [messagesSend](docs/messages/README.md#messagessend) - Send Messages
 
-### templates
+### [templates](docs/templates/README.md)
 
-* `templatesCreate` - Create template
-* `templatesFetch` - Fetch template by ID
-* `templatesFetchAll` - Fetch templates
-* `templatesRemove` - Deletes a template
-* `templatesUpdate` - Updates a template
+* [templatesCreate](docs/templates/README.md#templatescreate) - Create template
+* [templatesFetch](docs/templates/README.md#templatesfetch) - Fetch template by ID
+* [templatesFetchAll](docs/templates/README.md#templatesfetchall) - Fetch templates
+* [templatesRemove](docs/templates/README.md#templatesremove) - Deletes a template
+* [templatesUpdate](docs/templates/README.md#templatesupdate) - Updates a template
 
-### tools
+### [tools](docs/tools/README.md)
 
-* `toolsShareFileMultipart` - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
-* `toolsShareFileRaw` - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
+* [toolsShareFileMultipart](docs/tools/README.md#toolssharefilemultipart) - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
+* [toolsShareFileRaw](docs/tools/README.md#toolssharefileraw) - Share file - use to host a file and generate a short link to be used directly in a message or as a link to media for a MMS
 
-### webhooks
+### [webhooks](docs/webhooks/README.md)
 
-* `webhooksFetchAll` - Fetch active webhooks
-* `webhooksSubscribe` - Subscribe to message events
-* `webhooksUnsubscribe` - Unsubscribe to message events
+* [webhooksFetchAll](docs/webhooks/README.md#webhooksfetchall) - Fetch active webhooks
+* [webhooksSubscribe](docs/webhooks/README.md#webhookssubscribe) - Subscribe to message events
+* [webhooksUnsubscribe](docs/webhooks/README.md#webhooksunsubscribe) - Unsubscribe to message events
 <!-- End SDK Available Operations -->
 
 ### Maturity

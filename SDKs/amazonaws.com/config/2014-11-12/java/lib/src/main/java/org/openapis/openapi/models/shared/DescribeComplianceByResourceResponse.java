@@ -15,6 +15,7 @@ public class DescribeComplianceByResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceByResources")
     public ComplianceByResource[] complianceByResources;
+
     public DescribeComplianceByResourceResponse withComplianceByResources(ComplianceByResource[] complianceByResources) {
         this.complianceByResources = complianceByResources;
         return this;
@@ -23,9 +24,11 @@ public class DescribeComplianceByResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeComplianceByResourceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeComplianceByResourceResponse(){}
 }

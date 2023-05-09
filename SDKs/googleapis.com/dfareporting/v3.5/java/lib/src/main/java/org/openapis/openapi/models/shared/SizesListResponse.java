@@ -18,6 +18,7 @@ public class SizesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SizesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class SizesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizes")
     public Size[] sizes;
+
     public SizesListResponse withSizes(Size[] sizes) {
         this.sizes = sizes;
         return this;
     }
     
+    public SizesListResponse(){}
 }

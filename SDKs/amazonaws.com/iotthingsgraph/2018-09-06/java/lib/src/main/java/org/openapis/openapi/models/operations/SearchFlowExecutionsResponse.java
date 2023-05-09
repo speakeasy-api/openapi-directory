@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchFlowExecutionsResponse {
     
     public String contentType;
+
     public SearchFlowExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchFlowExecutionsResponse {
      */
     
     public Object internalFailureException;
+
     public SearchFlowExecutionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class SearchFlowExecutionsResponse {
      */
     
     public Object invalidRequestException;
+
     public SearchFlowExecutionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SearchFlowExecutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SearchFlowExecutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SearchFlowExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchFlowExecutionsResponse searchFlowExecutionsResponse;
+
     public SearchFlowExecutionsResponse withSearchFlowExecutionsResponse(org.openapis.openapi.models.shared.SearchFlowExecutionsResponse searchFlowExecutionsResponse) {
         this.searchFlowExecutionsResponse = searchFlowExecutionsResponse;
         return this;
@@ -56,6 +62,7 @@ public class SearchFlowExecutionsResponse {
     
     
     public Integer statusCode;
+
     public SearchFlowExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SearchFlowExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchFlowExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class SearchFlowExecutionsResponse {
      */
     
     public Object throttlingException;
+
     public SearchFlowExecutionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public SearchFlowExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateLaunchTemplateVersionRequest {
     
     public String clientToken;
+
     public CreateLaunchTemplateVersionRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public Boolean dryRun;
+
     public CreateLaunchTemplateVersionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public RequestLaunchTemplateData launchTemplateData;
+
     public CreateLaunchTemplateVersionRequest withLaunchTemplateData(RequestLaunchTemplateData launchTemplateData) {
         this.launchTemplateData = launchTemplateData;
         return this;
@@ -30,6 +33,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public String launchTemplateId;
+
     public CreateLaunchTemplateVersionRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -37,6 +41,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public String launchTemplateName;
+
     public CreateLaunchTemplateVersionRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -44,6 +49,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public Boolean resolveAlias;
+
     public CreateLaunchTemplateVersionRequest withResolveAlias(Boolean resolveAlias) {
         this.resolveAlias = resolveAlias;
         return this;
@@ -51,6 +57,7 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public String sourceVersion;
+
     public CreateLaunchTemplateVersionRequest withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
@@ -58,9 +65,13 @@ public class CreateLaunchTemplateVersionRequest {
     
     
     public String versionDescription;
+
     public CreateLaunchTemplateVersionRequest withVersionDescription(String versionDescription) {
         this.versionDescription = versionDescription;
         return this;
     }
     
+    public CreateLaunchTemplateVersionRequest(@JsonProperty("LaunchTemplateData") RequestLaunchTemplateData launchTemplateData) {
+        this.launchTemplateData = launchTemplateData;
+  }
 }

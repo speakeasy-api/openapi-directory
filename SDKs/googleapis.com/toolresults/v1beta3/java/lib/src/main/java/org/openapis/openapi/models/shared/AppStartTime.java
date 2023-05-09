@@ -15,6 +15,7 @@ public class AppStartTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyDrawnTime")
     public Duration fullyDrawnTime;
+
     public AppStartTime withFullyDrawnTime(Duration fullyDrawnTime) {
         this.fullyDrawnTime = fullyDrawnTime;
         return this;
@@ -26,9 +27,11 @@ public class AppStartTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialDisplayTime")
     public Duration initialDisplayTime;
+
     public AppStartTime withInitialDisplayTime(Duration initialDisplayTime) {
         this.initialDisplayTime = initialDisplayTime;
         return this;
     }
     
+    public AppStartTime(){}
 }

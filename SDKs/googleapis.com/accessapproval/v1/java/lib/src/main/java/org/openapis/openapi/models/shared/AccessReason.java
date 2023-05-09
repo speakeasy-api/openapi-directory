@@ -15,6 +15,7 @@ public class AccessReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public AccessReason withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,9 +27,11 @@ public class AccessReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AccessReasonTypeEnum type;
+
     public AccessReason withType(AccessReasonTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AccessReason(){}
 }

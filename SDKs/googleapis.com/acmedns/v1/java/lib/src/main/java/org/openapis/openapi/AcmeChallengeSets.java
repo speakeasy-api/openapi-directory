@@ -57,11 +57,9 @@ public class AcmeChallengeSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse res = new org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse() {{
+        org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse res = new org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsGetResponse(contentType, httpRes.statusCode()) {{
             acmeChallengeSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class AcmeChallengeSets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesResponse res = new org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesResponse() {{
+        org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesResponse res = new org.openapis.openapi.models.operations.AcmednsAcmeChallengeSetsRotateChallengesResponse(contentType, httpRes.statusCode()) {{
             acmeChallengeSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

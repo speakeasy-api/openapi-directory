@@ -15,9 +15,11 @@ public class GetPortfolioSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentSummary")
     public AssessmentSummary assessmentSummary;
+
     public GetPortfolioSummaryResponse withAssessmentSummary(AssessmentSummary assessmentSummary) {
         this.assessmentSummary = assessmentSummary;
         return this;
     }
     
+    public GetPortfolioSummaryResponse(){}
 }

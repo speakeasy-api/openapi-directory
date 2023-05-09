@@ -12,6 +12,7 @@ public class AvailableSalesChannel {
      */
     @JsonProperty("id")
     public Integer id;
+
     public AvailableSalesChannel withId(Integer id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class AvailableSalesChannel {
      */
     @JsonProperty("isSelected")
     public Boolean isSelected;
+
     public AvailableSalesChannel withIsSelected(Boolean isSelected) {
         this.isSelected = isSelected;
         return this;
@@ -32,9 +34,15 @@ public class AvailableSalesChannel {
      */
     @JsonProperty("name")
     public String name;
+
     public AvailableSalesChannel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AvailableSalesChannel(@JsonProperty("id") Integer id, @JsonProperty("isSelected") Boolean isSelected, @JsonProperty("name") String name) {
+        this.id = id;
+        this.isSelected = isSelected;
+        this.name = name;
+  }
 }

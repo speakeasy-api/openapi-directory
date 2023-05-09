@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchReviewsReviewIdRequest {
@@ -12,6 +13,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PatchReviewsReviewIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public PatchReviewsReviewIdRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=headline")
     public String headline;
+
     public PatchReviewsReviewIdRequest withHeadline(String headline) {
         this.headline = headline;
         return this;
@@ -42,6 +46,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public Long rating;
+
     public PatchReviewsReviewIdRequest withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -52,6 +57,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public PatchReviewsReviewIdRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
@@ -62,6 +68,7 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userAccountId")
     public String userAccountId;
+
     public PatchReviewsReviewIdRequest withUserAccountId(String userAccountId) {
         this.userAccountId = userAccountId;
         return this;
@@ -72,9 +79,14 @@ public class PatchReviewsReviewIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PatchReviewsReviewIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PatchReviewsReviewIdRequest(@JsonProperty("reviewId") String reviewId, @JsonProperty("userId") String userId) {
+        this.reviewId = reviewId;
+        this.userId = userId;
+  }
 }

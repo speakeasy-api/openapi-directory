@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEpisodesIdPreviousSiblingRequest {
@@ -12,6 +13,7 @@ public class GetEpisodesIdPreviousSiblingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetEpisodesIdPreviousSiblingRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +25,13 @@ public class GetEpisodesIdPreviousSiblingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rss")
     public Boolean rss;
+
     public GetEpisodesIdPreviousSiblingRequest withRss(Boolean rss) {
         this.rss = rss;
         return this;
     }
     
+    public GetEpisodesIdPreviousSiblingRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

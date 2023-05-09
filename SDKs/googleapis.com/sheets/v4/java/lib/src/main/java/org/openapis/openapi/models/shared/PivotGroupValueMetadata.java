@@ -18,6 +18,7 @@ public class PivotGroupValueMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collapsed")
     public Boolean collapsed;
+
     public PivotGroupValueMetadata withCollapsed(Boolean collapsed) {
         this.collapsed = collapsed;
         return this;
@@ -29,9 +30,11 @@ public class PivotGroupValueMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ExtendedValue value;
+
     public PivotGroupValueMetadata withValue(ExtendedValue value) {
         this.value = value;
         return this;
     }
     
+    public PivotGroupValueMetadata(){}
 }

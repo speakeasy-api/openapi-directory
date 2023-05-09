@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveFilesInsertRequest {
     @SpeakeasyMetadata("request:mediaType=application/octet-stream")
     public byte[] requestBody;
+
     public DriveFilesInsertRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +20,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveFilesInsertRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=convert")
     public Boolean convert;
+
     public DriveFilesInsertRequest withConvert(Boolean convert) {
         this.convert = convert;
         return this;
@@ -39,6 +42,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enforceSingleParent")
     public Boolean enforceSingleParent;
+
     public DriveFilesInsertRequest withEnforceSingleParent(Boolean enforceSingleParent) {
         this.enforceSingleParent = enforceSingleParent;
         return this;
@@ -49,6 +53,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveFilesInsertRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +64,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
     public String includeLabels;
+
     public DriveFilesInsertRequest withIncludeLabels(String includeLabels) {
         this.includeLabels = includeLabels;
         return this;
@@ -69,6 +75,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
     public String includePermissionsForView;
+
     public DriveFilesInsertRequest withIncludePermissionsForView(String includePermissionsForView) {
         this.includePermissionsForView = includePermissionsForView;
         return this;
@@ -79,6 +86,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveFilesInsertRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +97,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveFilesInsertRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +108,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocr")
     public Boolean ocr;
+
     public DriveFilesInsertRequest withOcr(Boolean ocr) {
         this.ocr = ocr;
         return this;
@@ -109,6 +119,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ocrLanguage")
     public String ocrLanguage;
+
     public DriveFilesInsertRequest withOcrLanguage(String ocrLanguage) {
         this.ocrLanguage = ocrLanguage;
         return this;
@@ -119,6 +130,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pinned")
     public Boolean pinned;
+
     public DriveFilesInsertRequest withPinned(Boolean pinned) {
         this.pinned = pinned;
         return this;
@@ -129,6 +141,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveFilesInsertRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -139,6 +152,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveFilesInsertRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -149,6 +163,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveFilesInsertRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -159,6 +174,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveFilesInsertRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -169,6 +185,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextLanguage")
     public String timedTextLanguage;
+
     public DriveFilesInsertRequest withTimedTextLanguage(String timedTextLanguage) {
         this.timedTextLanguage = timedTextLanguage;
         return this;
@@ -179,6 +196,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timedTextTrackName")
     public String timedTextTrackName;
+
     public DriveFilesInsertRequest withTimedTextTrackName(String timedTextTrackName) {
         this.timedTextTrackName = timedTextTrackName;
         return this;
@@ -189,6 +207,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useContentAsIndexableText")
     public Boolean useContentAsIndexableText;
+
     public DriveFilesInsertRequest withUseContentAsIndexableText(Boolean useContentAsIndexableText) {
         this.useContentAsIndexableText = useContentAsIndexableText;
         return this;
@@ -199,6 +218,7 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveFilesInsertRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -209,9 +229,11 @@ public class DriveFilesInsertRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=visibility")
     public DriveFilesInsertVisibilityEnum visibility;
+
     public DriveFilesInsertRequest withVisibility(DriveFilesInsertVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public DriveFilesInsertRequest(){}
 }

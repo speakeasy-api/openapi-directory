@@ -18,6 +18,7 @@ public class TextAtom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputs")
     public TextInput[] inputs;
+
     public TextAtom withInputs(TextInput[] inputs) {
         this.inputs = inputs;
         return this;
@@ -29,9 +30,11 @@ public class TextAtom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public TextAtom withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public TextAtom(){}
 }

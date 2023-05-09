@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDescribeGlobalClustersResponse {
     
     public byte[] body;
+
     public POSTDescribeGlobalClustersResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDescribeGlobalClustersResponse {
     
     
     public String contentType;
+
     public POSTDescribeGlobalClustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDescribeGlobalClustersResponse {
     
     
     public Integer statusCode;
+
     public POSTDescribeGlobalClustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDescribeGlobalClustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDescribeGlobalClustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDescribeGlobalClustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

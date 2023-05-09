@@ -15,6 +15,7 @@ public class DescribePatchGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mappings")
     public PatchGroupPatchBaselineMapping[] mappings;
+
     public DescribePatchGroupsResult withMappings(PatchGroupPatchBaselineMapping[] mappings) {
         this.mappings = mappings;
         return this;
@@ -23,9 +24,11 @@ public class DescribePatchGroupsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePatchGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribePatchGroupsResult(){}
 }

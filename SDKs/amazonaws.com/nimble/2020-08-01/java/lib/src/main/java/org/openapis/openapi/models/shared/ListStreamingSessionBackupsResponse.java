@@ -15,6 +15,7 @@ public class ListStreamingSessionBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListStreamingSessionBackupsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListStreamingSessionBackupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingSessionBackups")
     public StreamingSessionBackup[] streamingSessionBackups;
+
     public ListStreamingSessionBackupsResponse withStreamingSessionBackups(StreamingSessionBackup[] streamingSessionBackups) {
         this.streamingSessionBackups = streamingSessionBackups;
         return this;
     }
     
+    public ListStreamingSessionBackupsResponse(){}
 }

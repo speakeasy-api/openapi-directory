@@ -14,6 +14,7 @@ public class UpdateSimulationApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public UpdateSimulationApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,6 +26,7 @@ public class UpdateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentRevisionId")
     public String currentRevisionId;
+
     public UpdateSimulationApplicationRequestBody withCurrentRevisionId(String currentRevisionId) {
         this.currentRevisionId = currentRevisionId;
         return this;
@@ -36,6 +38,7 @@ public class UpdateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public UpdateSimulationApplicationRequestBodyEnvironment environment;
+
     public UpdateSimulationApplicationRequestBody withEnvironment(UpdateSimulationApplicationRequestBodyEnvironment environment) {
         this.environment = environment;
         return this;
@@ -47,6 +50,7 @@ public class UpdateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderingEngine")
     public UpdateSimulationApplicationRequestBodyRenderingEngine renderingEngine;
+
     public UpdateSimulationApplicationRequestBody withRenderingEngine(UpdateSimulationApplicationRequestBodyRenderingEngine renderingEngine) {
         this.renderingEngine = renderingEngine;
         return this;
@@ -57,6 +61,7 @@ public class UpdateSimulationApplicationRequestBody {
      */
     @JsonProperty("robotSoftwareSuite")
     public UpdateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite;
+
     public UpdateSimulationApplicationRequestBody withRobotSoftwareSuite(UpdateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite) {
         this.robotSoftwareSuite = robotSoftwareSuite;
         return this;
@@ -67,6 +72,7 @@ public class UpdateSimulationApplicationRequestBody {
      */
     @JsonProperty("simulationSoftwareSuite")
     public UpdateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite;
+
     public UpdateSimulationApplicationRequestBody withSimulationSoftwareSuite(UpdateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite) {
         this.simulationSoftwareSuite = simulationSoftwareSuite;
         return this;
@@ -78,9 +84,15 @@ public class UpdateSimulationApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public org.openapis.openapi.models.shared.SourceConfig[] sources;
+
     public UpdateSimulationApplicationRequestBody withSources(org.openapis.openapi.models.shared.SourceConfig[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public UpdateSimulationApplicationRequestBody(@JsonProperty("application") String application, @JsonProperty("robotSoftwareSuite") UpdateSimulationApplicationRequestBodyRobotSoftwareSuite robotSoftwareSuite, @JsonProperty("simulationSoftwareSuite") UpdateSimulationApplicationRequestBodySimulationSoftwareSuite simulationSoftwareSuite) {
+        this.application = application;
+        this.robotSoftwareSuite = robotSoftwareSuite;
+        this.simulationSoftwareSuite = simulationSoftwareSuite;
+  }
 }

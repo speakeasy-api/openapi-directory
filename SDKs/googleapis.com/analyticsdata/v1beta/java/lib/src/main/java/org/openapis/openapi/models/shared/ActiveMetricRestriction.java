@@ -18,6 +18,7 @@ public class ActiveMetricRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public ActiveMetricRestriction withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -29,9 +30,11 @@ public class ActiveMetricRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedMetricTypes")
     public ActiveMetricRestrictionRestrictedMetricTypesEnum[] restrictedMetricTypes;
+
     public ActiveMetricRestriction withRestrictedMetricTypes(ActiveMetricRestrictionRestrictedMetricTypesEnum[] restrictedMetricTypes) {
         this.restrictedMetricTypes = restrictedMetricTypes;
         return this;
     }
     
+    public ActiveMetricRestriction(){}
 }

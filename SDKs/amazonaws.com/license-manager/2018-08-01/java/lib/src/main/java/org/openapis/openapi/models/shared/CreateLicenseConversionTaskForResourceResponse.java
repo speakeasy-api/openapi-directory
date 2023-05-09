@@ -15,9 +15,11 @@ public class CreateLicenseConversionTaskForResourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConversionTaskId")
     public String licenseConversionTaskId;
+
     public CreateLicenseConversionTaskForResourceResponse withLicenseConversionTaskId(String licenseConversionTaskId) {
         this.licenseConversionTaskId = licenseConversionTaskId;
         return this;
     }
     
+    public CreateLicenseConversionTaskForResourceResponse(){}
 }

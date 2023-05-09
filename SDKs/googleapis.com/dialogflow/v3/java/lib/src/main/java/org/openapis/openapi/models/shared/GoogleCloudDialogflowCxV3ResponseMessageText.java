@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ResponseMessageText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPlaybackInterruption")
     public Boolean allowPlaybackInterruption;
+
     public GoogleCloudDialogflowCxV3ResponseMessageText withAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ResponseMessageText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String[] text;
+
     public GoogleCloudDialogflowCxV3ResponseMessageText withText(String[] text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ResponseMessageText(){}
 }

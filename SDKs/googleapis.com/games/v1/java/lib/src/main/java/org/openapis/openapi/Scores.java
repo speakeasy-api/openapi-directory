@@ -59,11 +59,9 @@ public class Scores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesScoresGetResponse res = new org.openapis.openapi.models.operations.GamesScoresGetResponse() {{
+        org.openapis.openapi.models.operations.GamesScoresGetResponse res = new org.openapis.openapi.models.operations.GamesScoresGetResponse(contentType, httpRes.statusCode()) {{
             playerLeaderboardScoreListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Scores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesScoresListResponse res = new org.openapis.openapi.models.operations.GamesScoresListResponse() {{
+        org.openapis.openapi.models.operations.GamesScoresListResponse res = new org.openapis.openapi.models.operations.GamesScoresListResponse(contentType, httpRes.statusCode()) {{
             leaderboardScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Scores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesScoresListWindowResponse res = new org.openapis.openapi.models.operations.GamesScoresListWindowResponse() {{
+        org.openapis.openapi.models.operations.GamesScoresListWindowResponse res = new org.openapis.openapi.models.operations.GamesScoresListWindowResponse(contentType, httpRes.statusCode()) {{
             leaderboardScores = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Scores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesScoresSubmitResponse res = new org.openapis.openapi.models.operations.GamesScoresSubmitResponse() {{
+        org.openapis.openapi.models.operations.GamesScoresSubmitResponse res = new org.openapis.openapi.models.operations.GamesScoresSubmitResponse(contentType, httpRes.statusCode()) {{
             playerScoreResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Scores {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesScoresSubmitMultipleResponse res = new org.openapis.openapi.models.operations.GamesScoresSubmitMultipleResponse() {{
+        org.openapis.openapi.models.operations.GamesScoresSubmitMultipleResponse res = new org.openapis.openapi.models.operations.GamesScoresSubmitMultipleResponse(contentType, httpRes.statusCode()) {{
             playerScoreListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

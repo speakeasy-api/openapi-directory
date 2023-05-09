@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingDisk")
     public ExistingDisk existingDisk;
+
     public Volume withExistingDisk(ExistingDisk existingDisk) {
         this.existingDisk = existingDisk;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfsMount")
     public NFSMount nfsMount;
+
     public Volume withNfsMount(NFSMount nfsMount) {
         this.nfsMount = nfsMount;
         return this;
@@ -40,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistentDisk")
     public PersistentDisk persistentDisk;
+
     public Volume withPersistentDisk(PersistentDisk persistentDisk) {
         this.persistentDisk = persistentDisk;
         return this;
@@ -51,9 +54,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume")
     public String volume;
+
     public Volume withVolume(String volume) {
         this.volume = volume;
         return this;
     }
     
+    public Volume(){}
 }

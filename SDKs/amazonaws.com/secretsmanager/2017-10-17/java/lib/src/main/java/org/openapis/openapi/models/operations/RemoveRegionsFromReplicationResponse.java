@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveRegionsFromReplicationResponse {
     
     public String contentType;
+
     public RemoveRegionsFromReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveRegionsFromReplicationResponse {
      */
     
     public Object internalServiceError;
+
     public RemoveRegionsFromReplicationResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class RemoveRegionsFromReplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public RemoveRegionsFromReplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveRegionsFromReplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public RemoveRegionsFromReplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveRegionsFromReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveRegionsFromReplicationResponse removeRegionsFromReplicationResponse;
+
     public RemoveRegionsFromReplicationResponse withRemoveRegionsFromReplicationResponse(org.openapis.openapi.models.shared.RemoveRegionsFromReplicationResponse removeRegionsFromReplicationResponse) {
         this.removeRegionsFromReplicationResponse = removeRegionsFromReplicationResponse;
         return this;
@@ -59,6 +65,7 @@ public class RemoveRegionsFromReplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveRegionsFromReplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class RemoveRegionsFromReplicationResponse {
     
     
     public Integer statusCode;
+
     public RemoveRegionsFromReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RemoveRegionsFromReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveRegionsFromReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveRegionsFromReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

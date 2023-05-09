@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachTypedLinkResponse {
@@ -12,6 +13,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public AttachTypedLinkResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachTypedLinkResponse attachTypedLinkResponse;
+
     public AttachTypedLinkResponse withAttachTypedLinkResponse(org.openapis.openapi.models.shared.AttachTypedLinkResponse attachTypedLinkResponse) {
         this.attachTypedLinkResponse = attachTypedLinkResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachTypedLinkResponse {
     
     
     public String contentType;
+
     public AttachTypedLinkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException;
+
     public AttachTypedLinkResponse withDirectoryNotEnabledException(org.openapis.openapi.models.shared.DirectoryNotEnabledException directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.FacetValidationException facetValidationException;
+
     public AttachTypedLinkResponse withFacetValidationException(org.openapis.openapi.models.shared.FacetValidationException facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public AttachTypedLinkResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public AttachTypedLinkResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException;
+
     public AttachTypedLinkResponse withInvalidAttachmentException(org.openapis.openapi.models.shared.InvalidAttachmentException invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -89,6 +98,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public AttachTypedLinkResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class AttachTypedLinkResponse {
     
     
     public Integer statusCode;
+
     public AttachTypedLinkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class AttachTypedLinkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachTypedLinkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public AttachTypedLinkResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public AttachTypedLinkResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class AttachTypedLinkResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public AttachTypedLinkResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachTypedLinkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

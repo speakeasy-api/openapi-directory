@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopContinuousExportRequest {
     @JsonProperty("exportId")
     public String exportId;
+
     public StopContinuousExportRequest withExportId(String exportId) {
         this.exportId = exportId;
         return this;
     }
     
+    public StopContinuousExportRequest(@JsonProperty("exportId") String exportId) {
+        this.exportId = exportId;
+  }
 }

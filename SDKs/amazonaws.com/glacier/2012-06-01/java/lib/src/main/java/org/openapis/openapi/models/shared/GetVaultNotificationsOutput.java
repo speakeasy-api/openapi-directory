@@ -15,9 +15,11 @@ public class GetVaultNotificationsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vaultNotificationConfig")
     public VaultNotificationConfig vaultNotificationConfig;
+
     public GetVaultNotificationsOutput withVaultNotificationConfig(VaultNotificationConfig vaultNotificationConfig) {
         this.vaultNotificationConfig = vaultNotificationConfig;
         return this;
     }
     
+    public GetVaultNotificationsOutput(){}
 }

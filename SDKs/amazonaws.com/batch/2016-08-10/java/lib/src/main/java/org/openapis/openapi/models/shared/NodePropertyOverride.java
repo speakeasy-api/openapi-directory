@@ -15,6 +15,7 @@ public class NodePropertyOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerOverrides")
     public ContainerOverrides containerOverrides;
+
     public NodePropertyOverride withContainerOverrides(ContainerOverrides containerOverrides) {
         this.containerOverrides = containerOverrides;
         return this;
@@ -22,9 +23,13 @@ public class NodePropertyOverride {
     
     @JsonProperty("targetNodes")
     public String targetNodes;
+
     public NodePropertyOverride withTargetNodes(String targetNodes) {
         this.targetNodes = targetNodes;
         return this;
     }
     
+    public NodePropertyOverride(@JsonProperty("targetNodes") String targetNodes) {
+        this.targetNodes = targetNodes;
+  }
 }

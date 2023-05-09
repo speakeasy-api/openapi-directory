@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ApplicationDescription {
     
     public String applicationArn;
+
     public ApplicationDescription withApplicationArn(String applicationArn) {
         this.applicationArn = applicationArn;
         return this;
@@ -19,6 +20,7 @@ public class ApplicationDescription {
     
     
     public String applicationName;
+
     public ApplicationDescription withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -26,6 +28,7 @@ public class ApplicationDescription {
     
     
     public String[] configurationTemplates;
+
     public ApplicationDescription withConfigurationTemplates(String[] configurationTemplates) {
         this.configurationTemplates = configurationTemplates;
         return this;
@@ -33,6 +36,7 @@ public class ApplicationDescription {
     
     
     public OffsetDateTime dateCreated;
+
     public ApplicationDescription withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -40,6 +44,7 @@ public class ApplicationDescription {
     
     
     public OffsetDateTime dateUpdated;
+
     public ApplicationDescription withDateUpdated(OffsetDateTime dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -47,6 +52,7 @@ public class ApplicationDescription {
     
     
     public String description;
+
     public ApplicationDescription withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +60,7 @@ public class ApplicationDescription {
     
     
     public ApplicationResourceLifecycleConfig resourceLifecycleConfig;
+
     public ApplicationDescription withResourceLifecycleConfig(ApplicationResourceLifecycleConfig resourceLifecycleConfig) {
         this.resourceLifecycleConfig = resourceLifecycleConfig;
         return this;
@@ -61,9 +68,11 @@ public class ApplicationDescription {
     
     
     public String[] versions;
+
     public ApplicationDescription withVersions(String[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public ApplicationDescription(){}
 }

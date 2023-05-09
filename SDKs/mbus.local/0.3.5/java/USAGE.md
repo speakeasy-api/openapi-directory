@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 import org.openapis.openapi.models.shared.BaudrateEnum;
@@ -14,19 +13,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetRequest req = new GetRequest() {{
-                address = "48";
-                baudrate = "2400";
-                device = "ttyAMA0";
-            }}            
+            GetRequest req = new GetRequest("48", BaudrateEnum.TWO_THOUSAND_FOUR_HUNDRED, "ttyAMA0");            
 
             GetResponse res = sdk.get(req);
 
-            if (res.mbusData.isPresent()) {
+            if (res.mbusData != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

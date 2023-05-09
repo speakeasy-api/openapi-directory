@@ -15,6 +15,7 @@ public class VPCConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignPublicIp")
     public Boolean assignPublicIp;
+
     public VPCConfigResponse withAssignPublicIp(Boolean assignPublicIp) {
         this.assignPublicIp = assignPublicIp;
         return this;
@@ -23,6 +24,7 @@ public class VPCConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroups")
     public String[] securityGroups;
+
     public VPCConfigResponse withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -31,6 +33,7 @@ public class VPCConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnets")
     public String[] subnets;
+
     public VPCConfigResponse withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -39,9 +42,11 @@ public class VPCConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VPCConfigResponse withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VPCConfigResponse(){}
 }

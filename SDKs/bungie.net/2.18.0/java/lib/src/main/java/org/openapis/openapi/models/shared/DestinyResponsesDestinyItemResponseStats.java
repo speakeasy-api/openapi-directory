@@ -18,6 +18,7 @@ public class DestinyResponsesDestinyItemResponseStats {
      */
     
     public DestinyEntitiesItemsDestinyItemStatsComponent data;
+
     public DestinyResponsesDestinyItemResponseStats withData(DestinyEntitiesItemsDestinyItemStatsComponent data) {
         this.data = data;
         return this;
@@ -28,6 +29,7 @@ public class DestinyResponsesDestinyItemResponseStats {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyItemResponseStats withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -35,9 +37,11 @@ public class DestinyResponsesDestinyItemResponseStats {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyItemResponseStats withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyItemResponseStats(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReferencesByContentHashResponse {
@@ -12,6 +13,7 @@ public class ReferencesByContentHashResponse {
      */
     
     public org.openapis.openapi.models.shared.ArtifactReference[] artifactReferences;
+
     public ReferencesByContentHashResponse withArtifactReferences(org.openapis.openapi.models.shared.ArtifactReference[] artifactReferences) {
         this.artifactReferences = artifactReferences;
         return this;
@@ -19,6 +21,7 @@ public class ReferencesByContentHashResponse {
     
     
     public String contentType;
+
     public ReferencesByContentHashResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ReferencesByContentHashResponse {
     
     
     public Integer statusCode;
+
     public ReferencesByContentHashResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ReferencesByContentHashResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReferencesByContentHashResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReferencesByContentHashResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

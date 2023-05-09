@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagSAMLProviderRequest {
     
     public String samlProviderArn;
+
     public TagSAMLProviderRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
@@ -16,9 +17,14 @@ public class TagSAMLProviderRequest {
     
     
     public Tag[] tags;
+
     public TagSAMLProviderRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagSAMLProviderRequest(@JsonProperty("SAMLProviderArn") String samlProviderArn, @JsonProperty("Tags") Tag[] tags) {
+        this.samlProviderArn = samlProviderArn;
+        this.tags = tags;
+  }
 }

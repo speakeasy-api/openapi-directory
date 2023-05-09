@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutExternalEvaluationResponse {
     
     public String contentType;
+
     public PutExternalEvaluationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutExternalEvaluationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutExternalEvaluationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutExternalEvaluationResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public PutExternalEvaluationResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -39,6 +43,7 @@ public class PutExternalEvaluationResponse {
      */
     
     public java.util.Map<String, Object> putExternalEvaluationResponse;
+
     public PutExternalEvaluationResponse withPutExternalEvaluationResponse(java.util.Map<String, Object> putExternalEvaluationResponse) {
         this.putExternalEvaluationResponse = putExternalEvaluationResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutExternalEvaluationResponse {
     
     
     public Integer statusCode;
+
     public PutExternalEvaluationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutExternalEvaluationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutExternalEvaluationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutExternalEvaluationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

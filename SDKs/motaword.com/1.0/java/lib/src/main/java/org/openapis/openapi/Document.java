@@ -52,11 +52,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllDocumentSubjectsResponse res = new org.openapis.openapi.models.operations.GetAllDocumentSubjectsResponse() {{
+        org.openapis.openapi.models.operations.GetAllDocumentSubjectsResponse res = new org.openapis.openapi.models.operations.GetAllDocumentSubjectsResponse(contentType, httpRes.statusCode()) {{
             documentSubjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentResponse res = new org.openapis.openapi.models.operations.GetDocumentResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentResponse res = new org.openapis.openapi.models.operations.GetDocumentResponse(contentType, httpRes.statusCode()) {{
             continuousProjectDocument = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,12 +128,10 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentProgressResponse res = new org.openapis.openapi.models.operations.GetDocumentProgressResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentProgressResponse res = new org.openapis.openapi.models.operations.GetDocumentProgressResponse(contentType, httpRes.statusCode()) {{
             progress = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentsResponse res = new org.openapis.openapi.models.operations.GetDocumentsResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentsResponse res = new org.openapis.openapi.models.operations.GetDocumentsResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -232,11 +224,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSimilarDocumentsResponse res = new org.openapis.openapi.models.operations.GetSimilarDocumentsResponse() {{
+        org.openapis.openapi.models.operations.GetSimilarDocumentsResponse res = new org.openapis.openapi.models.operations.GetSimilarDocumentsResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -278,11 +268,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserDocumentsResponse res = new org.openapis.openapi.models.operations.GetUserDocumentsResponse() {{
+        org.openapis.openapi.models.operations.GetUserDocumentsResponse res = new org.openapis.openapi.models.operations.GetUserDocumentsResponse(contentType, httpRes.statusCode()) {{
             documentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +306,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegeneratePreviewResponse res = new org.openapis.openapi.models.operations.RegeneratePreviewResponse() {{
+        org.openapis.openapi.models.operations.RegeneratePreviewResponse res = new org.openapis.openapi.models.operations.RegeneratePreviewResponse(contentType, httpRes.statusCode()) {{
             regeneratePreviewResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,11 +346,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UseAsDraftResponse res = new org.openapis.openapi.models.operations.UseAsDraftResponse() {{
+        org.openapis.openapi.models.operations.UseAsDraftResponse res = new org.openapis.openapi.models.operations.UseAsDraftResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -402,11 +386,9 @@ public class Document {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UseAsRegularResponse res = new org.openapis.openapi.models.operations.UseAsRegularResponse() {{
+        org.openapis.openapi.models.operations.UseAsRegularResponse res = new org.openapis.openapi.models.operations.UseAsRegularResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterDelegatedAdministratorRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public RegisterDelegatedAdministratorRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -16,9 +17,14 @@ public class RegisterDelegatedAdministratorRequest {
     
     @JsonProperty("ServicePrincipal")
     public String servicePrincipal;
+
     public RegisterDelegatedAdministratorRequest withServicePrincipal(String servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
         return this;
     }
     
+    public RegisterDelegatedAdministratorRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ServicePrincipal") String servicePrincipal) {
+        this.accountId = accountId;
+        this.servicePrincipal = servicePrincipal;
+  }
 }

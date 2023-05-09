@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpnConnectionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpnConnectionActionEnum action;
+
     public GETModifyVpnConnectionRequest withAction(GETModifyVpnConnectionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CustomerGatewayId")
     public String customerGatewayId;
+
     public GETModifyVpnConnectionRequest withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpnConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayId")
     public String transitGatewayId;
+
     public GETModifyVpnConnectionRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpnConnectionVersionEnum version;
+
     public GETModifyVpnConnectionRequest withVersion(GETModifyVpnConnectionVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
     public String vpnConnectionId;
+
     public GETModifyVpnConnectionRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -66,6 +73,7 @@ public class GETModifyVpnConnectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnGatewayId")
     public String vpnGatewayId;
+
     public GETModifyVpnConnectionRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
@@ -73,6 +81,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpnConnectionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpnConnectionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpnConnectionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpnConnectionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpnConnectionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpnConnectionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETModifyVpnConnectionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpnConnectionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpnConnectionRequest(@JsonProperty("Action") GETModifyVpnConnectionActionEnum action, @JsonProperty("Version") GETModifyVpnConnectionVersionEnum version, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.action = action;
+        this.version = version;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

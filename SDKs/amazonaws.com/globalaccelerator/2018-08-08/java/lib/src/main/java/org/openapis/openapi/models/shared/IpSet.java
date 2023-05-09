@@ -15,6 +15,7 @@ public class IpSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressFamily")
     public IpAddressFamilyEnum ipAddressFamily;
+
     public IpSet withIpAddressFamily(IpAddressFamilyEnum ipAddressFamily) {
         this.ipAddressFamily = ipAddressFamily;
         return this;
@@ -23,6 +24,7 @@ public class IpSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddresses")
     public String[] ipAddresses;
+
     public IpSet withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -31,9 +33,11 @@ public class IpSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpFamily")
     public String ipFamily;
+
     public IpSet withIpFamily(String ipFamily) {
         this.ipFamily = ipFamily;
         return this;
     }
     
+    public IpSet(){}
 }

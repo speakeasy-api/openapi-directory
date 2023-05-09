@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
@@ -12,6 +13,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -22,6 +24,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withPath(String path) {
         this.path = path;
         return this;
@@ -33,6 +36,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withQ(String q) {
         this.q = q;
         return this;
@@ -45,6 +49,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=renames")
     public String renames;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withRenames(String renames) {
         this.renames = renames;
         return this;
@@ -57,6 +62,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -69,6 +75,7 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -81,9 +88,16 @@ public class GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugFilehistoryCommitPathRequest(@JsonProperty("commit") String commit, @JsonProperty("path") String path, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.commit = commit;
+        this.path = path;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

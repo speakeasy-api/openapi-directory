@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateTerminationProtectionInput {
     
     public Boolean enableTerminationProtection;
+
     public UpdateTerminationProtectionInput withEnableTerminationProtection(Boolean enableTerminationProtection) {
         this.enableTerminationProtection = enableTerminationProtection;
         return this;
@@ -16,9 +17,14 @@ public class UpdateTerminationProtectionInput {
     
     
     public String stackName;
+
     public UpdateTerminationProtectionInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public UpdateTerminationProtectionInput(@JsonProperty("EnableTerminationProtection") Boolean enableTerminationProtection, @JsonProperty("StackName") String stackName) {
+        this.enableTerminationProtection = enableTerminationProtection;
+        this.stackName = stackName;
+  }
 }

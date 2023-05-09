@@ -15,9 +15,11 @@ public class AwsCloudFrontDistributionDefaultCacheBehavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewerProtocolPolicy")
     public String viewerProtocolPolicy;
+
     public AwsCloudFrontDistributionDefaultCacheBehavior withViewerProtocolPolicy(String viewerProtocolPolicy) {
         this.viewerProtocolPolicy = viewerProtocolPolicy;
         return this;
     }
     
+    public AwsCloudFrontDistributionDefaultCacheBehavior(){}
 }

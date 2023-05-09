@@ -15,6 +15,7 @@ public class ImportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefineSegment")
     public Boolean defineSegment;
+
     public ImportJobResource withDefineSegment(Boolean defineSegment) {
         this.defineSegment = defineSegment;
         return this;
@@ -23,6 +24,7 @@ public class ImportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public ImportJobResource withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -30,6 +32,7 @@ public class ImportJobResource {
     
     @JsonProperty("Format")
     public FormatEnum format;
+
     public ImportJobResource withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -38,6 +41,7 @@ public class ImportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisterEndpoints")
     public Boolean registerEndpoints;
+
     public ImportJobResource withRegisterEndpoints(Boolean registerEndpoints) {
         this.registerEndpoints = registerEndpoints;
         return this;
@@ -45,6 +49,7 @@ public class ImportJobResource {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public ImportJobResource withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -52,6 +57,7 @@ public class ImportJobResource {
     
     @JsonProperty("S3Url")
     public String s3Url;
+
     public ImportJobResource withS3Url(String s3Url) {
         this.s3Url = s3Url;
         return this;
@@ -60,6 +66,7 @@ public class ImportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentId")
     public String segmentId;
+
     public ImportJobResource withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -68,9 +75,15 @@ public class ImportJobResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentName")
     public String segmentName;
+
     public ImportJobResource withSegmentName(String segmentName) {
         this.segmentName = segmentName;
         return this;
     }
     
+    public ImportJobResource(@JsonProperty("Format") FormatEnum format, @JsonProperty("RoleArn") String roleArn, @JsonProperty("S3Url") String s3Url) {
+        this.format = format;
+        this.roleArn = roleArn;
+        this.s3Url = s3Url;
+  }
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAuditTasksRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAuditTasksRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -17,6 +19,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAuditTasksRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -24,6 +27,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAuditTasksRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -31,6 +35,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAuditTasksRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -38,6 +43,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAuditTasksRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -45,6 +51,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAuditTasksRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -52,6 +59,7 @@ public class ListAuditTasksRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAuditTasksRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -62,6 +70,7 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=endTime")
     public OffsetDateTime endTime;
+
     public ListAuditTasksRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -72,6 +81,7 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListAuditTasksRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -82,6 +92,7 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAuditTasksRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -92,6 +103,7 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startTime")
     public OffsetDateTime startTime;
+
     public ListAuditTasksRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -102,6 +114,7 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taskStatus")
     public ListAuditTasksTaskStatusEnum taskStatus;
+
     public ListAuditTasksRequest withTaskStatus(ListAuditTasksTaskStatusEnum taskStatus) {
         this.taskStatus = taskStatus;
         return this;
@@ -112,9 +125,14 @@ public class ListAuditTasksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taskType")
     public ListAuditTasksTaskTypeEnum taskType;
+
     public ListAuditTasksRequest withTaskType(ListAuditTasksTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public ListAuditTasksRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

@@ -15,6 +15,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public ProviderPersonDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public PersonContactDTO contact;
+
     public ProviderPersonDTO withContact(PersonContactDTO contact) {
         this.contact = contact;
         return this;
@@ -31,6 +33,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public CustomFieldDTO[] customFields;
+
     public ProviderPersonDTO withCustomFields(CustomFieldDTO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -39,6 +42,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public ProviderPersonDTOGenderEnum gender;
+
     public ProviderPersonDTO withGender(ProviderPersonDTOGenderEnum gender) {
         this.gender = gender;
         return this;
@@ -47,6 +51,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ProviderPersonDTO withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public ProviderPersonDTO withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -63,6 +69,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("motherTonguesIds")
     public Long[] motherTonguesIds;
+
     public ProviderPersonDTO withMotherTonguesIds(Long[] motherTonguesIds) {
         this.motherTonguesIds = motherTonguesIds;
         return this;
@@ -71,6 +78,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProviderPersonDTO withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positionId")
     public Long positionId;
+
     public ProviderPersonDTO withPositionId(Long positionId) {
         this.positionId = positionId;
         return this;
@@ -87,9 +96,11 @@ public class ProviderPersonDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerId")
     public Long providerId;
+
     public ProviderPersonDTO withProviderId(Long providerId) {
         this.providerId = providerId;
         return this;
     }
     
+    public ProviderPersonDTO(){}
 }

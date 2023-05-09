@@ -17,6 +17,7 @@ public class InvoiceSort {
      */
     @JsonProperty("field")
     public String field;
+
     public InvoiceSort withField(String field) {
         this.field = field;
         return this;
@@ -28,9 +29,13 @@ public class InvoiceSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public String order;
+
     public InvoiceSort withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public InvoiceSort(@JsonProperty("field") String field) {
+        this.field = field;
+  }
 }

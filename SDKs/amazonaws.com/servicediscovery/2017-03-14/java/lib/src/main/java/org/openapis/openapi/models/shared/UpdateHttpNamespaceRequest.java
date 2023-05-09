@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateHttpNamespaceRequest {
     @JsonProperty("Id")
     public String id;
+
     public UpdateHttpNamespaceRequest withId(String id) {
         this.id = id;
         return this;
@@ -18,6 +19,7 @@ public class UpdateHttpNamespaceRequest {
     
     @JsonProperty("Namespace")
     public HttpNamespaceChange namespace;
+
     public UpdateHttpNamespaceRequest withNamespace(HttpNamespaceChange namespace) {
         this.namespace = namespace;
         return this;
@@ -26,9 +28,14 @@ public class UpdateHttpNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdaterRequestId")
     public String updaterRequestId;
+
     public UpdateHttpNamespaceRequest withUpdaterRequestId(String updaterRequestId) {
         this.updaterRequestId = updaterRequestId;
         return this;
     }
     
+    public UpdateHttpNamespaceRequest(@JsonProperty("Id") String id, @JsonProperty("Namespace") HttpNamespaceChange namespace) {
+        this.id = id;
+        this.namespace = namespace;
+  }
 }

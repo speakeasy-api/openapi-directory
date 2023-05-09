@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPricingPipelineCatalogPriceTableIdRequest {
@@ -12,6 +13,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutPricingPipelineCatalogPriceTableIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PutPricingPipelineCatalogPriceTableIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutPricingPipelineCatalogPriceTableIdRequestBody requestBody;
+
     public PutPricingPipelineCatalogPriceTableIdRequest withRequestBody(PutPricingPipelineCatalogPriceTableIdRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,15 @@ public class PutPricingPipelineCatalogPriceTableIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=priceTableId")
     public String priceTableId;
+
     public PutPricingPipelineCatalogPriceTableIdRequest withPriceTableId(String priceTableId) {
         this.priceTableId = priceTableId;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("priceTableId") String priceTableId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.priceTableId = priceTableId;
+  }
 }

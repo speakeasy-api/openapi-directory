@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BookingStatusRequest {
@@ -13,6 +14,7 @@ public class BookingStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public BookingStatusRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,9 +22,13 @@ public class BookingStatusRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BookingStatusRequestBody requestBody;
+
     public BookingStatusRequest withRequestBody(BookingStatusRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public BookingStatusRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

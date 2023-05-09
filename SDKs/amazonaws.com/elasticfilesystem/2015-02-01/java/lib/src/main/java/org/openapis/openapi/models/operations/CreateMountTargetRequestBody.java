@@ -14,6 +14,7 @@ public class CreateMountTargetRequestBody {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public CreateMountTargetRequestBody withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -25,6 +26,7 @@ public class CreateMountTargetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public CreateMountTargetRequestBody withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -36,6 +38,7 @@ public class CreateMountTargetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public CreateMountTargetRequestBody withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -46,9 +49,14 @@ public class CreateMountTargetRequestBody {
      */
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public CreateMountTargetRequestBody withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public CreateMountTargetRequestBody(@JsonProperty("FileSystemId") String fileSystemId, @JsonProperty("SubnetId") String subnetId) {
+        this.fileSystemId = fileSystemId;
+        this.subnetId = subnetId;
+  }
 }

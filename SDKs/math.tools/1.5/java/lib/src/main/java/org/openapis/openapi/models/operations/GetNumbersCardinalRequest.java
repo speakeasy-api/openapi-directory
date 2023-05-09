@@ -12,6 +12,7 @@ public class GetNumbersCardinalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetNumbersCardinalRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -22,9 +23,11 @@ public class GetNumbersCardinalRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersCardinalRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersCardinalRequest(){}
 }

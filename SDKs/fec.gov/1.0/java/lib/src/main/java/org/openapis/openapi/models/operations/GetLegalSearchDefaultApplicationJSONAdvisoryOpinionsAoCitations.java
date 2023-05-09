@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations withName(String name) {
         this.name = name;
         return this;
@@ -20,9 +21,11 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations withNo(String no) {
         this.no = no;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsAoCitations(){}
 }

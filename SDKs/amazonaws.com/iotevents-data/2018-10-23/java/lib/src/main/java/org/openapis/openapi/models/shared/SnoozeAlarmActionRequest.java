@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SnoozeAlarmActionRequest {
     @JsonProperty("alarmModelName")
     public String alarmModelName;
+
     public SnoozeAlarmActionRequest withAlarmModelName(String alarmModelName) {
         this.alarmModelName = alarmModelName;
         return this;
@@ -22,6 +23,7 @@ public class SnoozeAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public String keyValue;
+
     public SnoozeAlarmActionRequest withKeyValue(String keyValue) {
         this.keyValue = keyValue;
         return this;
@@ -30,6 +32,7 @@ public class SnoozeAlarmActionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public SnoozeAlarmActionRequest withNote(String note) {
         this.note = note;
         return this;
@@ -37,6 +40,7 @@ public class SnoozeAlarmActionRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public SnoozeAlarmActionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -44,9 +48,15 @@ public class SnoozeAlarmActionRequest {
     
     @JsonProperty("snoozeDuration")
     public Long snoozeDuration;
+
     public SnoozeAlarmActionRequest withSnoozeDuration(Long snoozeDuration) {
         this.snoozeDuration = snoozeDuration;
         return this;
     }
     
+    public SnoozeAlarmActionRequest(@JsonProperty("alarmModelName") String alarmModelName, @JsonProperty("requestId") String requestId, @JsonProperty("snoozeDuration") Long snoozeDuration) {
+        this.alarmModelName = alarmModelName;
+        this.requestId = requestId;
+        this.snoozeDuration = snoozeDuration;
+  }
 }

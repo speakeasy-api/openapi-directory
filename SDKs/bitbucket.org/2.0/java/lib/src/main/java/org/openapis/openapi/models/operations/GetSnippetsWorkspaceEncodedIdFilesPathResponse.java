@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnippetsWorkspaceEncodedIdFilesPathResponse {
     
     public String contentType;
+
     public GetSnippetsWorkspaceEncodedIdFilesPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSnippetsWorkspaceEncodedIdFilesPathResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSnippetsWorkspaceEncodedIdFilesPathResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetSnippetsWorkspaceEncodedIdFilesPathResponse {
     
     
     public Integer statusCode;
+
     public GetSnippetsWorkspaceEncodedIdFilesPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSnippetsWorkspaceEncodedIdFilesPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnippetsWorkspaceEncodedIdFilesPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetSnippetsWorkspaceEncodedIdFilesPathResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetSnippetsWorkspaceEncodedIdFilesPathResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdFilesPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

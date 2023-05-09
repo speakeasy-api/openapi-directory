@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListOpenIDConnectProviderTagsResponse - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListOpenIDConnectProviderTagsResponse {
     
     public Boolean isTruncated;
+
     public ListOpenIDConnectProviderTagsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -19,6 +20,7 @@ public class ListOpenIDConnectProviderTagsResponse {
     
     
     public String marker;
+
     public ListOpenIDConnectProviderTagsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,9 +28,13 @@ public class ListOpenIDConnectProviderTagsResponse {
     
     
     public Tag[] tags;
+
     public ListOpenIDConnectProviderTagsResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ListOpenIDConnectProviderTagsResponse(@JsonProperty("Tags") Tag[] tags) {
+        this.tags = tags;
+  }
 }

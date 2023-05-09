@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AcceptReservedNodeExchangeOutputMessage {
     
     public ReservedNode exchangedReservedNode;
+
     public AcceptReservedNodeExchangeOutputMessage withExchangedReservedNode(ReservedNode exchangedReservedNode) {
         this.exchangedReservedNode = exchangedReservedNode;
         return this;
     }
     
+    public AcceptReservedNodeExchangeOutputMessage(){}
 }

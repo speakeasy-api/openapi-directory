@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAlarmRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAlarmRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAlarmRecommendationsResponse {
     
     
     public String contentType;
+
     public ListAlarmRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ListAlarmRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAlarmRecommendationsResponse listAlarmRecommendationsResponse;
+
     public ListAlarmRecommendationsResponse withListAlarmRecommendationsResponse(org.openapis.openapi.models.shared.ListAlarmRecommendationsResponse listAlarmRecommendationsResponse) {
         this.listAlarmRecommendationsResponse = listAlarmRecommendationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAlarmRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ListAlarmRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAlarmRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAlarmRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAlarmRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ListAlarmRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAlarmRecommendationsResponse {
      */
     
     public Object validationException;
+
     public ListAlarmRecommendationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAlarmRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

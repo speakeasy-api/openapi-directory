@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApikeysKeysLookupKeyResponse {
     
     public String contentType;
+
     public ApikeysKeysLookupKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ApikeysKeysLookupKeyResponse {
     
     
     public Integer statusCode;
+
     public ApikeysKeysLookupKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ApikeysKeysLookupKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApikeysKeysLookupKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ApikeysKeysLookupKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.V2LookupKeyResponse v2LookupKeyResponse;
+
     public ApikeysKeysLookupKeyResponse withV2LookupKeyResponse(org.openapis.openapi.models.shared.V2LookupKeyResponse v2LookupKeyResponse) {
         this.v2LookupKeyResponse = v2LookupKeyResponse;
         return this;
     }
     
+    public ApikeysKeysLookupKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

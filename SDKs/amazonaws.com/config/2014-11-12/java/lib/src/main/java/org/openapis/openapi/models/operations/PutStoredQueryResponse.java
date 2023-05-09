@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutStoredQueryResponse {
     
     public String contentType;
+
     public PutStoredQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutStoredQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.PutStoredQueryResponse putStoredQueryResponse;
+
     public PutStoredQueryResponse withPutStoredQueryResponse(org.openapis.openapi.models.shared.PutStoredQueryResponse putStoredQueryResponse) {
         this.putStoredQueryResponse = putStoredQueryResponse;
         return this;
@@ -26,6 +29,7 @@ public class PutStoredQueryResponse {
     
     
     public Integer statusCode;
+
     public PutStoredQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutStoredQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutStoredQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PutStoredQueryResponse {
      */
     
     public Object resourceConcurrentModificationException;
+
     public PutStoredQueryResponse withResourceConcurrentModificationException(Object resourceConcurrentModificationException) {
         this.resourceConcurrentModificationException = resourceConcurrentModificationException;
         return this;
@@ -53,6 +59,7 @@ public class PutStoredQueryResponse {
      */
     
     public Object tooManyTagsException;
+
     public PutStoredQueryResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
@@ -63,9 +70,14 @@ public class PutStoredQueryResponse {
      */
     
     public Object validationException;
+
     public PutStoredQueryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutStoredQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

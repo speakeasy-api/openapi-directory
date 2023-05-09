@@ -18,6 +18,7 @@ public class PreprintsContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bibliographic")
     public Boolean bibliographic;
+
     public PreprintsContributorsCreateContributorAttributesInput withBibliographic(Boolean bibliographic) {
         this.bibliographic = bibliographic;
         return this;
@@ -29,6 +30,7 @@ public class PreprintsContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public PreprintsContributorsCreateContributorAttributesInput withIndex(Long index) {
         this.index = index;
         return this;
@@ -40,9 +42,11 @@ public class PreprintsContributorsCreateContributorAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public PreprintsContributorsCreateContributorAttributesPermissionEnum permission;
+
     public PreprintsContributorsCreateContributorAttributesInput withPermission(PreprintsContributorsCreateContributorAttributesPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public PreprintsContributorsCreateContributorAttributesInput(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreManagedPrefixListVersionResultPrefixList {
     
     public String addressFamily;
+
     public RestoreManagedPrefixListVersionResultPrefixList withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public Long maxEntries;
+
     public RestoreManagedPrefixListVersionResultPrefixList withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -26,6 +28,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public String ownerId;
+
     public RestoreManagedPrefixListVersionResultPrefixList withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public String prefixListArn;
+
     public RestoreManagedPrefixListVersionResultPrefixList withPrefixListArn(String prefixListArn) {
         this.prefixListArn = prefixListArn;
         return this;
@@ -40,6 +44,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public String prefixListId;
+
     public RestoreManagedPrefixListVersionResultPrefixList withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +52,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public String prefixListName;
+
     public RestoreManagedPrefixListVersionResultPrefixList withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -54,6 +60,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public RestoreManagedPrefixListVersionResultPrefixListStateEnum state;
+
     public RestoreManagedPrefixListVersionResultPrefixList withState(RestoreManagedPrefixListVersionResultPrefixListStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public String stateMessage;
+
     public RestoreManagedPrefixListVersionResultPrefixList withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -68,6 +76,7 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public RestoreManagedPrefixListVersionResultPrefixListTags[] tags;
+
     public RestoreManagedPrefixListVersionResultPrefixList withTags(RestoreManagedPrefixListVersionResultPrefixListTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class RestoreManagedPrefixListVersionResultPrefixList {
     
     
     public Long version;
+
     public RestoreManagedPrefixListVersionResultPrefixList withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public RestoreManagedPrefixListVersionResultPrefixList(){}
 }

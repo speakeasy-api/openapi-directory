@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeProtectionGroupRequest {
     @JsonProperty("ProtectionGroupId")
     public String protectionGroupId;
+
     public DescribeProtectionGroupRequest withProtectionGroupId(String protectionGroupId) {
         this.protectionGroupId = protectionGroupId;
         return this;
     }
     
+    public DescribeProtectionGroupRequest(@JsonProperty("ProtectionGroupId") String protectionGroupId) {
+        this.protectionGroupId = protectionGroupId;
+  }
 }

@@ -18,6 +18,7 @@ public class PaginationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Long number;
+
     public PaginationData withNumber(Long number) {
         this.number = number;
         return this;
@@ -29,6 +30,7 @@ public class PaginationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public PaginationData withSize(Long size) {
         this.size = size;
         return this;
@@ -40,6 +42,7 @@ public class PaginationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalElements")
     public Long totalElements;
+
     public PaginationData withTotalElements(Long totalElements) {
         this.totalElements = totalElements;
         return this;
@@ -51,9 +54,11 @@ public class PaginationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPages")
     public Long totalPages;
+
     public PaginationData withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public PaginationData(){}
 }

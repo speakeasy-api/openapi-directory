@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaLocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes;
+
     public GoogleCloudRetailV2alphaLocalInventory withAttributes(java.util.Map<String, GoogleCloudRetailV2alphaCustomAttribute> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaLocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentTypes")
     public String[] fulfillmentTypes;
+
     public GoogleCloudRetailV2alphaLocalInventory withFulfillmentTypes(String[] fulfillmentTypes) {
         this.fulfillmentTypes = fulfillmentTypes;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaLocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeId")
     public String placeId;
+
     public GoogleCloudRetailV2alphaLocalInventory withPlaceId(String placeId) {
         this.placeId = placeId;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRetailV2alphaLocalInventory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceInfo")
     public GoogleCloudRetailV2alphaPriceInfo priceInfo;
+
     public GoogleCloudRetailV2alphaLocalInventory withPriceInfo(GoogleCloudRetailV2alphaPriceInfo priceInfo) {
         this.priceInfo = priceInfo;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaLocalInventory(){}
 }

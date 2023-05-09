@@ -53,10 +53,8 @@ public class InformationRetrieval {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KeywordExtractionResponse res = new org.openapis.openapi.models.operations.KeywordExtractionResponse() {{
+        org.openapis.openapi.models.operations.KeywordExtractionResponse res = new org.openapis.openapi.models.operations.KeywordExtractionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,10 +86,8 @@ public class InformationRetrieval {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TextExtractionResponse res = new org.openapis.openapi.models.operations.TextExtractionResponse() {{
+        org.openapis.openapi.models.operations.TextExtractionResponse res = new org.openapis.openapi.models.operations.TextExtractionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

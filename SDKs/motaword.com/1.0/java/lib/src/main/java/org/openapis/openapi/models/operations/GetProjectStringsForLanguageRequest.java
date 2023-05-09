@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectStringsForLanguageRequest {
@@ -12,6 +13,7 @@ public class GetProjectStringsForLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public GetProjectStringsForLanguageRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -22,9 +24,14 @@ public class GetProjectStringsForLanguageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public GetProjectStringsForLanguageRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetProjectStringsForLanguageRequest(@JsonProperty("language") String language, @JsonProperty("projectId") Long projectId) {
+        this.language = language;
+        this.projectId = projectId;
+  }
 }

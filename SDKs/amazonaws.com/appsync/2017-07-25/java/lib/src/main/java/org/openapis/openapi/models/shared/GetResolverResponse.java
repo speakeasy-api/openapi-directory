@@ -15,9 +15,11 @@ public class GetResolverResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolver")
     public Resolver resolver;
+
     public GetResolverResponse withResolver(Resolver resolver) {
         this.resolver = resolver;
         return this;
     }
     
+    public GetResolverResponse(){}
 }

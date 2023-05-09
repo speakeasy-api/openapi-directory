@@ -15,6 +15,7 @@ public class AgentConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentParameters")
     public java.util.Map<String, String> agentParameters;
+
     public AgentConfiguration withAgentParameters(java.util.Map<String, String> agentParameters) {
         this.agentParameters = agentParameters;
         return this;
@@ -22,6 +23,7 @@ public class AgentConfiguration {
     
     @JsonProperty("periodInSeconds")
     public Long periodInSeconds;
+
     public AgentConfiguration withPeriodInSeconds(Long periodInSeconds) {
         this.periodInSeconds = periodInSeconds;
         return this;
@@ -29,9 +31,14 @@ public class AgentConfiguration {
     
     @JsonProperty("shouldProfile")
     public Boolean shouldProfile;
+
     public AgentConfiguration withShouldProfile(Boolean shouldProfile) {
         this.shouldProfile = shouldProfile;
         return this;
     }
     
+    public AgentConfiguration(@JsonProperty("periodInSeconds") Long periodInSeconds, @JsonProperty("shouldProfile") Boolean shouldProfile) {
+        this.periodInSeconds = periodInSeconds;
+        this.shouldProfile = shouldProfile;
+  }
 }

@@ -12,6 +12,7 @@ public class GetMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public Location location;
+
     public GetMappingRequest withLocation(Location location) {
         this.location = location;
         return this;
@@ -20,6 +21,7 @@ public class GetMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sinks")
     public CatalogEntry[] sinks;
+
     public GetMappingRequest withSinks(CatalogEntry[] sinks) {
         this.sinks = sinks;
         return this;
@@ -27,9 +29,13 @@ public class GetMappingRequest {
     
     @JsonProperty("Source")
     public CatalogEntry source;
+
     public GetMappingRequest withSource(CatalogEntry source) {
         this.source = source;
         return this;
     }
     
+    public GetMappingRequest(@JsonProperty("Source") CatalogEntry source) {
+        this.source = source;
+  }
 }

@@ -18,6 +18,7 @@ public class AttributionSettingsConversionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeInReporting")
     public Boolean includeInReporting;
+
     public AttributionSettingsConversionType withIncludeInReporting(Boolean includeInReporting) {
         this.includeInReporting = includeInReporting;
         return this;
@@ -29,9 +30,11 @@ public class AttributionSettingsConversionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AttributionSettingsConversionType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AttributionSettingsConversionType(){}
 }

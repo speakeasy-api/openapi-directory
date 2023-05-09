@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetHITRequest {
     @JsonProperty("HITId")
     public String hitId;
+
     public GetHITRequest withHITId(String hitId) {
         this.hitId = hitId;
         return this;
     }
     
+    public GetHITRequest(@JsonProperty("HITId") String hitId) {
+        this.hitId = hitId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV3DiaryShortNameCompanyBranchesBranchIDRequest {
@@ -12,6 +13,7 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
     public String branchID;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -22,9 +24,14 @@ public class GetV3DiaryShortNameCompanyBranchesBranchIDRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public GetV3DiaryShortNameCompanyBranchesBranchIDRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public GetV3DiaryShortNameCompanyBranchesBranchIDRequest(@JsonProperty("branchID") String branchID, @JsonProperty("shortName") String shortName) {
+        this.branchID = branchID;
+        this.shortName = shortName;
+  }
 }

@@ -18,6 +18,7 @@ public class MoveItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newLocation")
     public Location newLocation;
+
     public MoveItemRequest withNewLocation(Location newLocation) {
         this.newLocation = newLocation;
         return this;
@@ -29,9 +30,11 @@ public class MoveItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalLocation")
     public Location originalLocation;
+
     public MoveItemRequest withOriginalLocation(Location originalLocation) {
         this.originalLocation = originalLocation;
         return this;
     }
     
+    public MoveItemRequest(){}
 }

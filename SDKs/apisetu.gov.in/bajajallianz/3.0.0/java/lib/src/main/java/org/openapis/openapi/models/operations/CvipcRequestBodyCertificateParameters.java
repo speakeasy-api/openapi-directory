@@ -12,6 +12,7 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CvipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class CvipcRequestBodyCertificateParameters {
      */
     @JsonProperty("policy_number")
     public String policyNumber;
+
     public CvipcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
     }
     
+    public CvipcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("policy_number") String policyNumber) {
+        this.fullName = fullName;
+        this.policyNumber = policyNumber;
+  }
 }

@@ -18,6 +18,7 @@ public class MonitoredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public MonitoredResource withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -29,9 +30,11 @@ public class MonitoredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MonitoredResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public MonitoredResource(){}
 }

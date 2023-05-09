@@ -12,6 +12,7 @@ public class JsonNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public JsonNodeOptions options;
+
     public JsonNode withOptions(JsonNodeOptions options) {
         this.options = options;
         return this;
@@ -20,6 +21,7 @@ public class JsonNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public JsonNode parent;
+
     public JsonNode withParent(JsonNode parent) {
         this.parent = parent;
         return this;
@@ -28,9 +30,11 @@ public class JsonNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("root")
     public JsonNode root;
+
     public JsonNode withRoot(JsonNode root) {
         this.root = root;
         return this;
     }
     
+    public JsonNode(){}
 }

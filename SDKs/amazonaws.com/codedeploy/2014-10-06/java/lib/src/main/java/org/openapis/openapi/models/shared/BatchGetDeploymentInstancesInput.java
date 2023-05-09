@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetDeploymentInstancesInput {
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public BatchGetDeploymentInstancesInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetDeploymentInstancesInput {
     
     @JsonProperty("instanceIds")
     public String[] instanceIds;
+
     public BatchGetDeploymentInstancesInput withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public BatchGetDeploymentInstancesInput(@JsonProperty("deploymentId") String deploymentId, @JsonProperty("instanceIds") String[] instanceIds) {
+        this.deploymentId = deploymentId;
+        this.instanceIds = instanceIds;
+  }
 }

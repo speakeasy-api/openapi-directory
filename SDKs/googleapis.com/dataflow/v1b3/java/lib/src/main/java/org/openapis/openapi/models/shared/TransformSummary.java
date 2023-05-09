@@ -18,6 +18,7 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayData")
     public DisplayData[] displayData;
+
     public TransformSummary withDisplayData(DisplayData[] displayData) {
         this.displayData = displayData;
         return this;
@@ -29,6 +30,7 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TransformSummary withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputCollectionName")
     public String[] inputCollectionName;
+
     public TransformSummary withInputCollectionName(String[] inputCollectionName) {
         this.inputCollectionName = inputCollectionName;
         return this;
@@ -51,6 +54,7 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public TransformSummaryKindEnum kind;
+
     public TransformSummary withKind(TransformSummaryKindEnum kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TransformSummary withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class TransformSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputCollectionName")
     public String[] outputCollectionName;
+
     public TransformSummary withOutputCollectionName(String[] outputCollectionName) {
         this.outputCollectionName = outputCollectionName;
         return this;
     }
     
+    public TransformSummary(){}
 }

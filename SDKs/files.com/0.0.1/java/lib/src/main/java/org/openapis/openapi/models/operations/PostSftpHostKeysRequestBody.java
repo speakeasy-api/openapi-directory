@@ -12,6 +12,7 @@ public class PostSftpHostKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostSftpHostKeysRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,11 @@ public class PostSftpHostKeysRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=private_key")
     public String privateKey;
+
     public PostSftpHostKeysRequestBody withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
     }
     
+    public PostSftpHostKeysRequestBody(){}
 }

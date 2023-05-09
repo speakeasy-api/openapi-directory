@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteKeyspaceRequest {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public DeleteKeyspaceRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
     }
     
+    public DeleteKeyspaceRequest(@JsonProperty("keyspaceName") String keyspaceName) {
+        this.keyspaceName = keyspaceName;
+  }
 }

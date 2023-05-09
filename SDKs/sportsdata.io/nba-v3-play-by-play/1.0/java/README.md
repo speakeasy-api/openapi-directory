@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.PlayByPlayFormatEnum;
 import org.openapis.openapi.models.operations.PlayByPlayRequest;
 import org.openapis.openapi.models.operations.PlayByPlayResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,29 +30,28 @@ public class Application {
                 }})
                 .build();
 
-            PlayByPlayRequest req = new PlayByPlayRequest() {{
-                format = "JSON";
-                gameid = "provident";
-            }}            
+            PlayByPlayRequest req = new PlayByPlayRequest(PlayByPlayFormatEnum.JSON, "provident");            
 
             PlayByPlayResponse res = sdk.playByPlay(req);
 
-            if (res.playByPlay.isPresent()) {
+            if (res.playByPlay != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `playByPlay` - Play By Play
-* `playByPlayDelta` - Play By Play Delta
+* [playByPlay](docs/sdk/README.md#playbyplay) - Play By Play
+* [playByPlayDelta](docs/sdk/README.md#playbyplaydelta) - Play By Play Delta
 <!-- End SDK Available Operations -->
 
 ### Maturity

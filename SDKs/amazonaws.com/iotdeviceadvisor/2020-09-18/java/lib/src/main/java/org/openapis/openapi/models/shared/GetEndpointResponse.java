@@ -15,9 +15,11 @@ public class GetEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public GetEndpointResponse withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public GetEndpointResponse(){}
 }

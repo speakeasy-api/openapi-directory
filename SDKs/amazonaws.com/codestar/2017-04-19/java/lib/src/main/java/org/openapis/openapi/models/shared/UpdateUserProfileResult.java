@@ -22,6 +22,7 @@ public class UpdateUserProfileResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public UpdateUserProfileResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class UpdateUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateUserProfileResult withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -38,6 +40,7 @@ public class UpdateUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public UpdateUserProfileResult withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -48,6 +51,7 @@ public class UpdateUserProfileResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTimestamp")
     public OffsetDateTime lastModifiedTimestamp;
+
     public UpdateUserProfileResult withLastModifiedTimestamp(OffsetDateTime lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
@@ -56,6 +60,7 @@ public class UpdateUserProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public UpdateUserProfileResult withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
@@ -63,9 +68,13 @@ public class UpdateUserProfileResult {
     
     @JsonProperty("userArn")
     public String userArn;
+
     public UpdateUserProfileResult withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
     }
     
+    public UpdateUserProfileResult(@JsonProperty("userArn") String userArn) {
+        this.userArn = userArn;
+  }
 }

@@ -15,9 +15,11 @@ public class OutputLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public S3Location s3;
+
     public OutputLocation withS3(S3Location s3) {
         this.s3 = s3;
         return this;
     }
     
+    public OutputLocation(){}
 }

@@ -18,9 +18,11 @@ public class RestoreInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public RestoreInfoSourceTypeEnum sourceType;
+
     public RestoreInfoInput withSourceType(RestoreInfoSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public RestoreInfoInput(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpcEndpointServiceConfigurationRequest {
     
     public Boolean acceptanceRequired;
+
     public ModifyVpcEndpointServiceConfigurationRequest withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] addGatewayLoadBalancerArns;
+
     public ModifyVpcEndpointServiceConfigurationRequest withAddGatewayLoadBalancerArns(String[] addGatewayLoadBalancerArns) {
         this.addGatewayLoadBalancerArns = addGatewayLoadBalancerArns;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] addNetworkLoadBalancerArns;
+
     public ModifyVpcEndpointServiceConfigurationRequest withAddNetworkLoadBalancerArns(String[] addNetworkLoadBalancerArns) {
         this.addNetworkLoadBalancerArns = addNetworkLoadBalancerArns;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] addSupportedIpAddressTypes;
+
     public ModifyVpcEndpointServiceConfigurationRequest withAddSupportedIpAddressTypes(String[] addSupportedIpAddressTypes) {
         this.addSupportedIpAddressTypes = addSupportedIpAddressTypes;
         return this;
@@ -37,6 +41,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpcEndpointServiceConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -44,6 +49,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String privateDnsName;
+
     public ModifyVpcEndpointServiceConfigurationRequest withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -51,6 +57,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] removeGatewayLoadBalancerArns;
+
     public ModifyVpcEndpointServiceConfigurationRequest withRemoveGatewayLoadBalancerArns(String[] removeGatewayLoadBalancerArns) {
         this.removeGatewayLoadBalancerArns = removeGatewayLoadBalancerArns;
         return this;
@@ -58,6 +65,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] removeNetworkLoadBalancerArns;
+
     public ModifyVpcEndpointServiceConfigurationRequest withRemoveNetworkLoadBalancerArns(String[] removeNetworkLoadBalancerArns) {
         this.removeNetworkLoadBalancerArns = removeNetworkLoadBalancerArns;
         return this;
@@ -65,6 +73,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public Boolean removePrivateDnsName;
+
     public ModifyVpcEndpointServiceConfigurationRequest withRemovePrivateDnsName(Boolean removePrivateDnsName) {
         this.removePrivateDnsName = removePrivateDnsName;
         return this;
@@ -72,6 +81,7 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String[] removeSupportedIpAddressTypes;
+
     public ModifyVpcEndpointServiceConfigurationRequest withRemoveSupportedIpAddressTypes(String[] removeSupportedIpAddressTypes) {
         this.removeSupportedIpAddressTypes = removeSupportedIpAddressTypes;
         return this;
@@ -79,9 +89,13 @@ public class ModifyVpcEndpointServiceConfigurationRequest {
     
     
     public String serviceId;
+
     public ModifyVpcEndpointServiceConfigurationRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public ModifyVpcEndpointServiceConfigurationRequest(@JsonProperty("ServiceId") String serviceId) {
+        this.serviceId = serviceId;
+  }
 }

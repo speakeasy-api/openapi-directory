@@ -18,6 +18,7 @@ public class OperationErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public OperationError[] errors;
+
     public OperationErrors withErrors(OperationError[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +30,11 @@ public class OperationErrors {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OperationErrors withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public OperationErrors(){}
 }

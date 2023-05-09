@@ -17,6 +17,7 @@ public class OrgMembership {
      */
     @JsonProperty("organization")
     public OrganizationSimple organization;
+
     public OrgMembership withOrganization(OrganizationSimple organization) {
         this.organization = organization;
         return this;
@@ -24,6 +25,7 @@ public class OrgMembership {
     
     @JsonProperty("organization_url")
     public String organizationUrl;
+
     public OrgMembership withOrganizationUrl(String organizationUrl) {
         this.organizationUrl = organizationUrl;
         return this;
@@ -32,6 +34,7 @@ public class OrgMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public OrgMembershipPermissions permissions;
+
     public OrgMembership withPermissions(OrgMembershipPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -42,6 +45,7 @@ public class OrgMembership {
      */
     @JsonProperty("role")
     public OrgMembershipRoleEnum role;
+
     public OrgMembership withRole(OrgMembershipRoleEnum role) {
         this.role = role;
         return this;
@@ -52,6 +56,7 @@ public class OrgMembership {
      */
     @JsonProperty("state")
     public OrgMembershipStateEnum state;
+
     public OrgMembership withState(OrgMembershipStateEnum state) {
         this.state = state;
         return this;
@@ -59,6 +64,7 @@ public class OrgMembership {
     
     @JsonProperty("url")
     public String url;
+
     public OrgMembership withUrl(String url) {
         this.url = url;
         return this;
@@ -69,9 +75,18 @@ public class OrgMembership {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public OrgMembership withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public OrgMembership(@JsonProperty("organization") OrganizationSimple organization, @JsonProperty("organization_url") String organizationUrl, @JsonProperty("role") OrgMembershipRoleEnum role, @JsonProperty("state") OrgMembershipStateEnum state, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.organization = organization;
+        this.organizationUrl = organizationUrl;
+        this.role = role;
+        this.state = state;
+        this.url = url;
+        this.user = user;
+  }
 }

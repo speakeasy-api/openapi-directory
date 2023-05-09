@@ -20,6 +20,7 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public VirtualCluster withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerProvider")
     public ContainerProvider containerProvider;
+
     public VirtualCluster withContainerProvider(ContainerProvider containerProvider) {
         this.containerProvider = containerProvider;
         return this;
@@ -38,6 +40,7 @@ public class VirtualCluster {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public VirtualCluster withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public VirtualCluster withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public VirtualCluster withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public VirtualClusterStateEnum state;
+
     public VirtualCluster withState(VirtualClusterStateEnum state) {
         this.state = state;
         return this;
@@ -70,9 +76,11 @@ public class VirtualCluster {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public VirtualCluster withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public VirtualCluster(){}
 }

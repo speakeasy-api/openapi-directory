@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DomainSummary {
     @JsonProperty("domainArn")
     public String domainArn;
+
     public DomainSummary withDomainArn(String domainArn) {
         this.domainArn = domainArn;
         return this;
@@ -19,6 +20,7 @@ public class DomainSummary {
     
     @JsonProperty("domainId")
     public String domainId;
+
     public DomainSummary withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -26,9 +28,15 @@ public class DomainSummary {
     
     @JsonProperty("name")
     public String name;
+
     public DomainSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DomainSummary(@JsonProperty("domainArn") String domainArn, @JsonProperty("domainId") String domainId, @JsonProperty("name") String name) {
+        this.domainArn = domainArn;
+        this.domainId = domainId;
+        this.name = name;
+  }
 }

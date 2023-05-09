@@ -15,9 +15,11 @@ public class AwsEcsServiceDeploymentControllerDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsServiceDeploymentControllerDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEcsServiceDeploymentControllerDetails(){}
 }

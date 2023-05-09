@@ -18,6 +18,7 @@ public class DataSourceRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterOptions")
     public FilterOptions[] filterOptions;
+
     public DataSourceRestriction withFilterOptions(FilterOptions[] filterOptions) {
         this.filterOptions = filterOptions;
         return this;
@@ -29,9 +30,11 @@ public class DataSourceRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public DataSourceRestriction withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public DataSourceRestriction(){}
 }

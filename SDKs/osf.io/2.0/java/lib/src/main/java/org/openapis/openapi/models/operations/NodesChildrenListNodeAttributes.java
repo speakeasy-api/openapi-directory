@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -15,6 +16,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public NodesChildrenListNodeAttributesCategoryEnum category;
+
     public NodesChildrenListNodeAttributes withCategory(NodesChildrenListNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,6 +27,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean collection;
+
     public NodesChildrenListNodeAttributes withCollection(Boolean collection) {
         this.collection = collection;
         return this;
@@ -35,6 +38,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean currentUserCanComment;
+
     public NodesChildrenListNodeAttributes withCurrentUserCanComment(Boolean currentUserCanComment) {
         this.currentUserCanComment = currentUserCanComment;
         return this;
@@ -45,6 +49,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public NodesChildrenListNodeAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -55,6 +60,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public OffsetDateTime dateCreated;
+
     public NodesChildrenListNodeAttributes withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -65,6 +71,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public OffsetDateTime dateModified;
+
     public NodesChildrenListNodeAttributes withDateModified(OffsetDateTime dateModified) {
         this.dateModified = dateModified;
         return this;
@@ -75,6 +82,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String description;
+
     public NodesChildrenListNodeAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -85,6 +93,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean fork;
+
     public NodesChildrenListNodeAttributes withFork(Boolean fork) {
         this.fork = fork;
         return this;
@@ -95,6 +104,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public OffsetDateTime forkedDate;
+
     public NodesChildrenListNodeAttributes withForkedDate(OffsetDateTime forkedDate) {
         this.forkedDate = forkedDate;
         return this;
@@ -105,6 +115,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String nodeLicense;
+
     public NodesChildrenListNodeAttributes withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -115,6 +126,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean preprint;
+
     public NodesChildrenListNodeAttributes withPreprint(Boolean preprint) {
         this.preprint = preprint;
         return this;
@@ -125,6 +137,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean public_;
+
     public NodesChildrenListNodeAttributes withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -135,6 +148,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public Boolean registration;
+
     public NodesChildrenListNodeAttributes withRegistration(Boolean registration) {
         this.registration = registration;
         return this;
@@ -145,6 +159,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String[] tags;
+
     public NodesChildrenListNodeAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -155,6 +170,7 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String templateFrom;
+
     public NodesChildrenListNodeAttributes withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -165,9 +181,14 @@ public class NodesChildrenListNodeAttributes {
      */
     
     public String title;
+
     public NodesChildrenListNodeAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesChildrenListNodeAttributes(@JsonProperty("category") NodesChildrenListNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

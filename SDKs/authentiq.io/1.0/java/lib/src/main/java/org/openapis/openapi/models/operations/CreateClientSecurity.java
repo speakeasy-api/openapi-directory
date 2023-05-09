@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateClientSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Authorization")
     public String clientRegistrationToken;
+
     public CreateClientSecurity withClientRegistrationToken(String clientRegistrationToken) {
         this.clientRegistrationToken = clientRegistrationToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateClientSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauthCode;
+
     public CreateClientSecurity withOauthCode(String oauthCode) {
         this.oauthCode = oauthCode;
         return this;
@@ -23,9 +25,11 @@ public class CreateClientSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String oauthImplicit;
+
     public CreateClientSecurity withOauthImplicit(String oauthImplicit) {
         this.oauthImplicit = oauthImplicit;
         return this;
     }
     
+    public CreateClientSecurity(){}
 }

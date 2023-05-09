@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateMemberToGroupResponse {
@@ -12,6 +13,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public java.util.Map<String, Object> associateMemberToGroupResponse;
+
     public AssociateMemberToGroupResponse withAssociateMemberToGroupResponse(java.util.Map<String, Object> associateMemberToGroupResponse) {
         this.associateMemberToGroupResponse = associateMemberToGroupResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateMemberToGroupResponse {
     
     
     public String contentType;
+
     public AssociateMemberToGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public AssociateMemberToGroupResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object directoryUnavailableException;
+
     public AssociateMemberToGroupResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object entityNotFoundException;
+
     public AssociateMemberToGroupResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object entityStateException;
+
     public AssociateMemberToGroupResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateMemberToGroupResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object organizationNotFoundException;
+
     public AssociateMemberToGroupResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object organizationStateException;
+
     public AssociateMemberToGroupResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -96,6 +106,7 @@ public class AssociateMemberToGroupResponse {
     
     
     public Integer statusCode;
+
     public AssociateMemberToGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class AssociateMemberToGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateMemberToGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class AssociateMemberToGroupResponse {
      */
     
     public Object unsupportedOperationException;
+
     public AssociateMemberToGroupResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public AssociateMemberToGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

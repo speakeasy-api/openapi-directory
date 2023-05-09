@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse {
     
     public String contentType;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRespons
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse withGoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse) {
         this.googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse = googleAnalyticsAdminV1alphaFetchAutomatedGa4ConfigurationOptOutResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRespons
     
     
     public Integer statusCode;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminPropertiesFetchAutomatedGa4ConfigurationOptOutResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDatapipelinesV1RunPipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public GoogleCloudDatapipelinesV1Job job;
+
     public GoogleCloudDatapipelinesV1RunPipelineResponse withJob(GoogleCloudDatapipelinesV1Job job) {
         this.job = job;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1RunPipelineResponse(){}
 }

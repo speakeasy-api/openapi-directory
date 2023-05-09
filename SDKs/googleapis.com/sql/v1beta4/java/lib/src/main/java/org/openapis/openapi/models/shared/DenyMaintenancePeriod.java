@@ -18,6 +18,7 @@ public class DenyMaintenancePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public DenyMaintenancePeriod withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -29,6 +30,7 @@ public class DenyMaintenancePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public DenyMaintenancePeriod withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -40,9 +42,11 @@ public class DenyMaintenancePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public String time;
+
     public DenyMaintenancePeriod withTime(String time) {
         this.time = time;
         return this;
     }
     
+    public DenyMaintenancePeriod(){}
 }

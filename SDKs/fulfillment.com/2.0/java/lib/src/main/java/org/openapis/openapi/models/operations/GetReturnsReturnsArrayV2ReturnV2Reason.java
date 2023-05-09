@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetReturnsReturnsArrayV2ReturnV2Reason {
     @JsonProperty("id")
     public Long id;
+
     public GetReturnsReturnsArrayV2ReturnV2Reason withId(Long id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class GetReturnsReturnsArrayV2ReturnV2Reason {
     
     @JsonProperty("title")
     public String title;
+
     public GetReturnsReturnsArrayV2ReturnV2Reason withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2ReturnV2Reason(@JsonProperty("id") Long id, @JsonProperty("title") String title) {
+        this.id = id;
+        this.title = title;
+  }
 }

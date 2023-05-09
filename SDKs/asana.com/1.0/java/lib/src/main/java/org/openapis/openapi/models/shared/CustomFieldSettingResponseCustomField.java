@@ -20,6 +20,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asana_created_field")
     public CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum asanaCreatedField;
+
     public CustomFieldSettingResponseCustomField withAsanaCreatedField(CustomFieldSettingResponseCustomFieldAsanaCreatedFieldEnum asanaCreatedField) {
         this.asanaCreatedField = asanaCreatedField;
         return this;
@@ -28,6 +29,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompact createdBy;
+
     public CustomFieldSettingResponseCustomField withCreatedBy(UserCompact createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -39,6 +41,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency_code")
     public String currencyCode;
+
     public CustomFieldSettingResponseCustomField withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -50,6 +53,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_label")
     public String customLabel;
+
     public CustomFieldSettingResponseCustomField withCustomLabel(String customLabel) {
         this.customLabel = customLabel;
         return this;
@@ -61,6 +65,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_label_position")
     public CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum customLabelPosition;
+
     public CustomFieldSettingResponseCustomField withCustomLabelPosition(CustomFieldSettingResponseCustomFieldCustomLabelPositionEnum customLabelPosition) {
         this.customLabelPosition = customLabelPosition;
         return this;
@@ -72,6 +77,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date_value")
     public CustomFieldSettingResponseCustomFieldDateValue dateValue;
+
     public CustomFieldSettingResponseCustomField withDateValue(CustomFieldSettingResponseCustomFieldDateValue dateValue) {
         this.dateValue = dateValue;
         return this;
@@ -83,6 +89,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomFieldSettingResponseCustomField withDescription(String description) {
         this.description = description;
         return this;
@@ -94,6 +101,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_value")
     public String displayValue;
+
     public CustomFieldSettingResponseCustomField withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -105,6 +113,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CustomFieldSettingResponseCustomField withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -116,6 +125,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enum_options")
     public EnumOption[] enumOptions;
+
     public CustomFieldSettingResponseCustomField withEnumOptions(EnumOption[] enumOptions) {
         this.enumOptions = enumOptions;
         return this;
@@ -124,6 +134,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enum_value")
     public CustomFieldSettingResponseCustomFieldEnumValue enumValue;
+
     public CustomFieldSettingResponseCustomField withEnumValue(CustomFieldSettingResponseCustomFieldEnumValue enumValue) {
         this.enumValue = enumValue;
         return this;
@@ -135,6 +146,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public CustomFieldSettingResponseCustomFieldFormatEnum format;
+
     public CustomFieldSettingResponseCustomField withFormat(CustomFieldSettingResponseCustomFieldFormatEnum format) {
         this.format = format;
         return this;
@@ -146,6 +158,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public CustomFieldSettingResponseCustomField withGid(String gid) {
         this.gid = gid;
         return this;
@@ -157,6 +170,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_notifications_enabled")
     public Boolean hasNotificationsEnabled;
+
     public CustomFieldSettingResponseCustomField withHasNotificationsEnabled(Boolean hasNotificationsEnabled) {
         this.hasNotificationsEnabled = hasNotificationsEnabled;
         return this;
@@ -168,6 +182,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_global_to_workspace")
     public Boolean isGlobalToWorkspace;
+
     public CustomFieldSettingResponseCustomField withIsGlobalToWorkspace(Boolean isGlobalToWorkspace) {
         this.isGlobalToWorkspace = isGlobalToWorkspace;
         return this;
@@ -179,6 +194,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multi_enum_values")
     public EnumOption[] multiEnumValues;
+
     public CustomFieldSettingResponseCustomField withMultiEnumValues(EnumOption[] multiEnumValues) {
         this.multiEnumValues = multiEnumValues;
         return this;
@@ -190,6 +206,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomFieldSettingResponseCustomField withName(String name) {
         this.name = name;
         return this;
@@ -201,6 +218,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_value")
     public Double numberValue;
+
     public CustomFieldSettingResponseCustomField withNumberValue(Double numberValue) {
         this.numberValue = numberValue;
         return this;
@@ -212,6 +230,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("people_value")
     public UserCompact[] peopleValue;
+
     public CustomFieldSettingResponseCustomField withPeopleValue(UserCompact[] peopleValue) {
         this.peopleValue = peopleValue;
         return this;
@@ -225,6 +244,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Long precision;
+
     public CustomFieldSettingResponseCustomField withPrecision(Long precision) {
         this.precision = precision;
         return this;
@@ -237,6 +257,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public CustomFieldSettingResponseCustomFieldResourceSubtypeEnum resourceSubtype;
+
     public CustomFieldSettingResponseCustomField withResourceSubtype(CustomFieldSettingResponseCustomFieldResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -248,6 +269,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public CustomFieldSettingResponseCustomField withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -259,6 +281,7 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_value")
     public String textValue;
+
     public CustomFieldSettingResponseCustomField withTextValue(String textValue) {
         this.textValue = textValue;
         return this;
@@ -271,9 +294,11 @@ public class CustomFieldSettingResponseCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomFieldSettingResponseCustomFieldTypeEnum type;
+
     public CustomFieldSettingResponseCustomField withType(CustomFieldSettingResponseCustomFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CustomFieldSettingResponseCustomField(){}
 }

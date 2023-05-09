@@ -18,6 +18,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public NumberOrder withCreated(Long created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public NumberOrder withId(Long id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public NumberOrderItem keywords;
+
     public NumberOrder withKeywords(NumberOrderItem keywords) {
         this.keywords = keywords;
         return this;
@@ -51,6 +54,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localNumbers")
     public NumberOrderItem localNumbers;
+
     public NumberOrder withLocalNumbers(NumberOrderItem localNumbers) {
         this.localNumbers = localNumbers;
         return this;
@@ -62,6 +66,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesTax")
     public Float salesTax;
+
     public NumberOrder withSalesTax(Float salesTax) {
         this.salesTax = salesTax;
         return this;
@@ -73,6 +78,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NumberOrderStatusEnum status;
+
     public NumberOrder withStatus(NumberOrderStatusEnum status) {
         this.status = status;
         return this;
@@ -84,6 +90,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public Float summary;
+
     public NumberOrder withSummary(Float summary) {
         this.summary = summary;
         return this;
@@ -95,6 +102,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tollFreeNumbers")
     public NumberOrderItem tollFreeNumbers;
+
     public NumberOrder withTollFreeNumbers(NumberOrderItem tollFreeNumbers) {
         this.tollFreeNumbers = tollFreeNumbers;
         return this;
@@ -106,6 +114,7 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public NumberOrder withTotal(Float total) {
         this.total = total;
         return this;
@@ -117,9 +126,11 @@ public class NumberOrder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCost")
     public Float totalCost;
+
     public NumberOrder withTotalCost(Float totalCost) {
         this.totalCost = totalCost;
         return this;
     }
     
+    public NumberOrder(){}
 }

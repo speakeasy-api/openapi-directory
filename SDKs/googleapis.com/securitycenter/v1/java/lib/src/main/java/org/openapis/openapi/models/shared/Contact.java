@@ -18,9 +18,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Contact withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public Contact(){}
 }

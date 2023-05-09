@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatientMessagesReadRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientMessagesReadRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +18,7 @@ public class PatientMessagesReadRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatientMessagesReadRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class PatientMessagesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public PatientMessagesReadRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -30,9 +34,13 @@ public class PatientMessagesReadRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientMessagesReadRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientMessagesReadRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

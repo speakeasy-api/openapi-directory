@@ -18,9 +18,11 @@ public class CpuUsageSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizedPercentage")
     public Float utilizedPercentage;
+
     public CpuUsageSample withUtilizedPercentage(Float utilizedPercentage) {
         this.utilizedPercentage = utilizedPercentage;
         return this;
     }
     
+    public CpuUsageSample(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInternationalPaymentsJsonResponse {
     
     public byte[] body;
+
     public CreateInternationalPaymentsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateInternationalPaymentsJsonResponse {
     
     
     public String contentType;
+
     public CreateInternationalPaymentsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class CreateInternationalPaymentsJsonResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public CreateInternationalPaymentsJsonResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class CreateInternationalPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1;
+
     public CreateInternationalPaymentsJsonResponse withOBErrorResponse1(org.openapis.openapi.models.shared.OBErrorResponse1 obErrorResponse1) {
         this.obErrorResponse1 = obErrorResponse1;
         return this;
@@ -43,6 +48,7 @@ public class CreateInternationalPaymentsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.OBWriteInternationalResponse5 obWriteInternationalResponse5;
+
     public CreateInternationalPaymentsJsonResponse withOBWriteInternationalResponse5(org.openapis.openapi.models.shared.OBWriteInternationalResponse5 obWriteInternationalResponse5) {
         this.obWriteInternationalResponse5 = obWriteInternationalResponse5;
         return this;
@@ -50,6 +56,7 @@ public class CreateInternationalPaymentsJsonResponse {
     
     
     public Integer statusCode;
+
     public CreateInternationalPaymentsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -57,9 +64,14 @@ public class CreateInternationalPaymentsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInternationalPaymentsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInternationalPaymentsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

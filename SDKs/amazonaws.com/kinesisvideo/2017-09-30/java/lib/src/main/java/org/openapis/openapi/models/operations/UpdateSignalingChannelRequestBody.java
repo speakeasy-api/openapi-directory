@@ -14,6 +14,7 @@ public class UpdateSignalingChannelRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public UpdateSignalingChannelRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -24,6 +25,7 @@ public class UpdateSignalingChannelRequestBody {
      */
     @JsonProperty("CurrentVersion")
     public String currentVersion;
+
     public UpdateSignalingChannelRequestBody withCurrentVersion(String currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -35,9 +37,14 @@ public class UpdateSignalingChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SingleMasterConfiguration")
     public UpdateSignalingChannelRequestBodySingleMasterConfiguration singleMasterConfiguration;
+
     public UpdateSignalingChannelRequestBody withSingleMasterConfiguration(UpdateSignalingChannelRequestBodySingleMasterConfiguration singleMasterConfiguration) {
         this.singleMasterConfiguration = singleMasterConfiguration;
         return this;
     }
     
+    public UpdateSignalingChannelRequestBody(@JsonProperty("ChannelARN") String channelARN, @JsonProperty("CurrentVersion") String currentVersion) {
+        this.channelARN = channelARN;
+        this.currentVersion = currentVersion;
+  }
 }

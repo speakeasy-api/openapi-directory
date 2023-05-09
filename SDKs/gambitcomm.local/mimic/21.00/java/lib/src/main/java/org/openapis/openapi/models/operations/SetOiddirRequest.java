@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetOiddirRequest {
@@ -12,6 +13,7 @@ public class SetOiddirRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetOiddirRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetOiddirRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=oiddir")
     public String oiddir;
+
     public SetOiddirRequest withOiddir(String oiddir) {
         this.oiddir = oiddir;
         return this;
     }
     
+    public SetOiddirRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("oiddir") String oiddir) {
+        this.agentNum = agentNum;
+        this.oiddir = oiddir;
+  }
 }

@@ -15,6 +15,7 @@ public class MetadataKeyValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataKey")
     public String metadataKey;
+
     public MetadataKeyValuePair withMetadataKey(String metadataKey) {
         this.metadataKey = metadataKey;
         return this;
@@ -23,9 +24,11 @@ public class MetadataKeyValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataValue")
     public String metadataValue;
+
     public MetadataKeyValuePair withMetadataValue(String metadataValue) {
         this.metadataValue = metadataValue;
         return this;
     }
     
+    public MetadataKeyValuePair(){}
 }

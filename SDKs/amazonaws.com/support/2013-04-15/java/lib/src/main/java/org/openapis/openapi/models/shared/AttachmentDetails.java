@@ -15,6 +15,7 @@ public class AttachmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentId")
     public String attachmentId;
+
     public AttachmentDetails withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -23,9 +24,11 @@ public class AttachmentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public AttachmentDetails withFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
     
+    public AttachmentDetails(){}
 }

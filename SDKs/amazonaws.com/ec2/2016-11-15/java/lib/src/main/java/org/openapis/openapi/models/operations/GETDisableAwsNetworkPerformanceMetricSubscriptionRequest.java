@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableAwsNetworkPerformanceMetricSubscriptionActionEnum action;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withAction(GETDisableAwsNetworkPerformanceMetricSubscriptionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Destination")
     public String destination;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -29,6 +32,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Metric")
     public GETDisableAwsNetworkPerformanceMetricSubscriptionMetricEnum metric;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withMetric(GETDisableAwsNetworkPerformanceMetricSubscriptionMetricEnum metric) {
         this.metric = metric;
         return this;
@@ -49,6 +54,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Source")
     public String source;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withSource(String source) {
         this.source = source;
         return this;
@@ -59,6 +65,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Statistic")
     public GETDisableAwsNetworkPerformanceMetricSubscriptionStatisticEnum statistic;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withStatistic(GETDisableAwsNetworkPerformanceMetricSubscriptionStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -66,6 +73,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableAwsNetworkPerformanceMetricSubscriptionVersionEnum version;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withVersion(GETDisableAwsNetworkPerformanceMetricSubscriptionVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,14 @@ public class GETDisableAwsNetworkPerformanceMetricSubscriptionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableAwsNetworkPerformanceMetricSubscriptionRequest(@JsonProperty("Action") GETDisableAwsNetworkPerformanceMetricSubscriptionActionEnum action, @JsonProperty("Version") GETDisableAwsNetworkPerformanceMetricSubscriptionVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

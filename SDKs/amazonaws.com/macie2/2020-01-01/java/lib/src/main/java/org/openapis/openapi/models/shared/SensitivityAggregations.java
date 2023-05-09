@@ -15,6 +15,7 @@ public class SensitivityAggregations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiableSizeInBytes")
     public Long classifiableSizeInBytes;
+
     public SensitivityAggregations withClassifiableSizeInBytes(Long classifiableSizeInBytes) {
         this.classifiableSizeInBytes = classifiableSizeInBytes;
         return this;
@@ -23,6 +24,7 @@ public class SensitivityAggregations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publiclyAccessibleCount")
     public Long publiclyAccessibleCount;
+
     public SensitivityAggregations withPubliclyAccessibleCount(Long publiclyAccessibleCount) {
         this.publiclyAccessibleCount = publiclyAccessibleCount;
         return this;
@@ -31,6 +33,7 @@ public class SensitivityAggregations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public SensitivityAggregations withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
@@ -39,9 +42,11 @@ public class SensitivityAggregations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSizeInBytes")
     public Long totalSizeInBytes;
+
     public SensitivityAggregations withTotalSizeInBytes(Long totalSizeInBytes) {
         this.totalSizeInBytes = totalSizeInBytes;
         return this;
     }
     
+    public SensitivityAggregations(){}
 }

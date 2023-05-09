@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListSecurity;
 import org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListRequest;
 import org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListResponse;
+import org.openapis.openapi.models.operations.GmailpostmastertoolsDomainsListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -30,32 +29,34 @@ public class Application {
                 .build();
 
             GmailpostmastertoolsDomainsListRequest req = new GmailpostmastertoolsDomainsListRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
                 oauthToken = "corrupti";
-                pageSize = 847252;
+                pageSize = 847252L;
                 pageToken = "vel";
                 prettyPrint = false;
                 quotaUser = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
-            GmailpostmastertoolsDomainsListResponse res = sdk.domains.gmailpostmastertoolsDomainsList(req, new GmailpostmastertoolsDomainsListSecurity() {{
+            GmailpostmastertoolsDomainsListResponse res = sdk.domains.gmailpostmastertoolsDomainsList(req, new GmailpostmastertoolsDomainsListSecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listDomainsResponse.isPresent()) {
+            if (res.listDomainsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -63,11 +64,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### domains
+### [domains](docs/domains/README.md)
 
-* `gmailpostmastertoolsDomainsList` - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
-* `gmailpostmastertoolsDomainsTrafficStatsGet` - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
-* `gmailpostmastertoolsDomainsTrafficStatsList` - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [gmailpostmastertoolsDomainsList](docs/domains/README.md#gmailpostmastertoolsdomainslist) - Lists the domains that have been registered by the client. The order of domains in the response is unspecified and non-deterministic. Newly created domains will not necessarily be added to the end of this list.
+* [gmailpostmastertoolsDomainsTrafficStatsGet](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatsget) - Get traffic statistics for a domain on a specific date. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
+* [gmailpostmastertoolsDomainsTrafficStatsList](docs/domains/README.md#gmailpostmastertoolsdomainstrafficstatslist) - List traffic statistics for all available days. Returns PERMISSION_DENIED if user does not have permission to access TrafficStats for the domain.
 <!-- End SDK Available Operations -->
 
 ### Maturity

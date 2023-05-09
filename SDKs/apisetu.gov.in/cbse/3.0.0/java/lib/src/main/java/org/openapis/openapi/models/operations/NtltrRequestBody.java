@@ -15,6 +15,7 @@ public class NtltrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public NtltrRequestBodyCertificateParameters certificateParameters;
+
     public NtltrRequestBody withCertificateParameters(NtltrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class NtltrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public NtltrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class NtltrRequestBody {
      */
     @JsonProperty("format")
     public NtltrRequestBodyFormatEnum format;
+
     public NtltrRequestBody withFormat(NtltrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class NtltrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public NtltrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public NtltrRequestBody(@JsonProperty("format") NtltrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

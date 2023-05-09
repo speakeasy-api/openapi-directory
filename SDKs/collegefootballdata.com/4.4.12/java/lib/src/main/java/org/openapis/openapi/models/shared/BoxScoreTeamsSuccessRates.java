@@ -12,6 +12,7 @@ public class BoxScoreTeamsSuccessRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public BoxScoreTeamsSuccessRatesOverall overall;
+
     public BoxScoreTeamsSuccessRates withOverall(BoxScoreTeamsSuccessRatesOverall overall) {
         this.overall = overall;
         return this;
@@ -20,6 +21,7 @@ public class BoxScoreTeamsSuccessRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passingDowns")
     public BoxScoreTeamsSuccessRatesPassingDowns passingDowns;
+
     public BoxScoreTeamsSuccessRates withPassingDowns(BoxScoreTeamsSuccessRatesPassingDowns passingDowns) {
         this.passingDowns = passingDowns;
         return this;
@@ -28,6 +30,7 @@ public class BoxScoreTeamsSuccessRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDowns")
     public BoxScoreTeamsSuccessRatesStandardDowns standardDowns;
+
     public BoxScoreTeamsSuccessRates withStandardDowns(BoxScoreTeamsSuccessRatesStandardDowns standardDowns) {
         this.standardDowns = standardDowns;
         return this;
@@ -36,9 +39,11 @@ public class BoxScoreTeamsSuccessRates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public BoxScoreTeamsSuccessRates withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public BoxScoreTeamsSuccessRates(){}
 }

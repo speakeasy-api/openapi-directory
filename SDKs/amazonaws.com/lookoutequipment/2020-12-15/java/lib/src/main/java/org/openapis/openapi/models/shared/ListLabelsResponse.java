@@ -15,6 +15,7 @@ public class ListLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelSummaries")
     public LabelSummary[] labelSummaries;
+
     public ListLabelsResponse withLabelSummaries(LabelSummary[] labelSummaries) {
         this.labelSummaries = labelSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLabelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLabelsResponse(){}
 }

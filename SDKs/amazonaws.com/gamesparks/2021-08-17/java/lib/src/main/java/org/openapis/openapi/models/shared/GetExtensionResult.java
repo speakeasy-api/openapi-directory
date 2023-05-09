@@ -15,9 +15,11 @@ public class GetExtensionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Extension")
     public ExtensionDetails extension;
+
     public GetExtensionResult withExtension(ExtensionDetails extension) {
         this.extension = extension;
         return this;
     }
     
+    public GetExtensionResult(){}
 }

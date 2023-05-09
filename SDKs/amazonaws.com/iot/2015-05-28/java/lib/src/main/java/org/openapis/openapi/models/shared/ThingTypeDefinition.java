@@ -15,6 +15,7 @@ public class ThingTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeArn")
     public String thingTypeArn;
+
     public ThingTypeDefinition withThingTypeArn(String thingTypeArn) {
         this.thingTypeArn = thingTypeArn;
         return this;
@@ -23,6 +24,7 @@ public class ThingTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeMetadata")
     public ThingTypeMetadata thingTypeMetadata;
+
     public ThingTypeDefinition withThingTypeMetadata(ThingTypeMetadata thingTypeMetadata) {
         this.thingTypeMetadata = thingTypeMetadata;
         return this;
@@ -31,6 +33,7 @@ public class ThingTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeName")
     public String thingTypeName;
+
     public ThingTypeDefinition withThingTypeName(String thingTypeName) {
         this.thingTypeName = thingTypeName;
         return this;
@@ -39,9 +42,11 @@ public class ThingTypeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingTypeProperties")
     public ThingTypeProperties thingTypeProperties;
+
     public ThingTypeDefinition withThingTypeProperties(ThingTypeProperties thingTypeProperties) {
         this.thingTypeProperties = thingTypeProperties;
         return this;
     }
     
+    public ThingTypeDefinition(){}
 }

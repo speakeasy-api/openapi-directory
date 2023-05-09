@@ -12,9 +12,13 @@ public class AcceptInvitationRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public AcceptInvitationRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public AcceptInvitationRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

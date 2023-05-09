@@ -18,6 +18,7 @@ public class ListPreferenceSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPreferenceSetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListPreferenceSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferenceSets")
     public PreferenceSet[] preferenceSets;
+
     public ListPreferenceSetsResponse withPreferenceSets(PreferenceSet[] preferenceSets) {
         this.preferenceSets = preferenceSets;
         return this;
@@ -40,9 +42,11 @@ public class ListPreferenceSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListPreferenceSetsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListPreferenceSetsResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentHandlingStrategy")
     public CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum contentHandlingStrategy;
+
     public CreateIntegrationResponseRequestBody withContentHandlingStrategy(CreateIntegrationResponseRequestBodyContentHandlingStrategyEnum contentHandlingStrategy) {
         this.contentHandlingStrategy = contentHandlingStrategy;
         return this;
@@ -25,6 +26,7 @@ public class CreateIntegrationResponseRequestBody {
      */
     @JsonProperty("integrationResponseKey")
     public String integrationResponseKey;
+
     public CreateIntegrationResponseRequestBody withIntegrationResponseKey(String integrationResponseKey) {
         this.integrationResponseKey = integrationResponseKey;
         return this;
@@ -41,6 +43,7 @@ public class CreateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseParameters")
     public java.util.Map<String, String> responseParameters;
+
     public CreateIntegrationResponseRequestBody withResponseParameters(java.util.Map<String, String> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -52,6 +55,7 @@ public class CreateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseTemplates")
     public java.util.Map<String, String> responseTemplates;
+
     public CreateIntegrationResponseRequestBody withResponseTemplates(java.util.Map<String, String> responseTemplates) {
         this.responseTemplates = responseTemplates;
         return this;
@@ -63,9 +67,13 @@ public class CreateIntegrationResponseRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateSelectionExpression")
     public String templateSelectionExpression;
+
     public CreateIntegrationResponseRequestBody withTemplateSelectionExpression(String templateSelectionExpression) {
         this.templateSelectionExpression = templateSelectionExpression;
         return this;
     }
     
+    public CreateIntegrationResponseRequestBody(@JsonProperty("integrationResponseKey") String integrationResponseKey) {
+        this.integrationResponseKey = integrationResponseKey;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateDelegationSignerToDomainResponse {
@@ -12,6 +13,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateDelegationSignerToDomainResponse associateDelegationSignerToDomainResponse;
+
     public AssociateDelegationSignerToDomainResponse withAssociateDelegationSignerToDomainResponse(org.openapis.openapi.models.shared.AssociateDelegationSignerToDomainResponse associateDelegationSignerToDomainResponse) {
         this.associateDelegationSignerToDomainResponse = associateDelegationSignerToDomainResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateDelegationSignerToDomainResponse {
     
     
     public String contentType;
+
     public AssociateDelegationSignerToDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object dnssecLimitExceeded;
+
     public AssociateDelegationSignerToDomainResponse withDnssecLimitExceeded(Object dnssecLimitExceeded) {
         this.dnssecLimitExceeded = dnssecLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object duplicateRequest;
+
     public AssociateDelegationSignerToDomainResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -49,6 +54,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object invalidInput;
+
     public AssociateDelegationSignerToDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -59,6 +65,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public AssociateDelegationSignerToDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -66,6 +73,7 @@ public class AssociateDelegationSignerToDomainResponse {
     
     
     public Integer statusCode;
+
     public AssociateDelegationSignerToDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AssociateDelegationSignerToDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateDelegationSignerToDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object tldRulesViolation;
+
     public AssociateDelegationSignerToDomainResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -93,9 +103,14 @@ public class AssociateDelegationSignerToDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public AssociateDelegationSignerToDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public AssociateDelegationSignerToDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

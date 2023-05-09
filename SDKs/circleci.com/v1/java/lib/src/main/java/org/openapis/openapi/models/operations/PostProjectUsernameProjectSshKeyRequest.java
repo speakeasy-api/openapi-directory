@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectUsernameProjectSshKeyRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public PostProjectUsernameProjectSshKeyContentTypeEnum contentType;
+
     public PostProjectUsernameProjectSshKeyRequest withContentType(PostProjectUsernameProjectSshKeyContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostProjectUsernameProjectSshKeyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostProjectUsernameProjectSshKeyRequestBody requestBody;
+
     public PostProjectUsernameProjectSshKeyRequest withRequestBody(PostProjectUsernameProjectSshKeyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -27,6 +30,7 @@ public class PostProjectUsernameProjectSshKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public PostProjectUsernameProjectSshKeyRequest withProject(String project) {
         this.project = project;
         return this;
@@ -38,9 +42,16 @@ public class PostProjectUsernameProjectSshKeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public PostProjectUsernameProjectSshKeyRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public PostProjectUsernameProjectSshKeyRequest(@JsonProperty("Content-Type") PostProjectUsernameProjectSshKeyContentTypeEnum contentType, @JsonProperty("RequestBody") PostProjectUsernameProjectSshKeyRequestBody requestBody, @JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.project = project;
+        this.username = username;
+  }
 }

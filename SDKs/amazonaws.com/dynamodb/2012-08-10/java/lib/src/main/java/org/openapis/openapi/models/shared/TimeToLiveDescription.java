@@ -15,6 +15,7 @@ public class TimeToLiveDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public TimeToLiveDescription withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -23,9 +24,11 @@ public class TimeToLiveDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeToLiveStatus")
     public TimeToLiveStatusEnum timeToLiveStatus;
+
     public TimeToLiveDescription withTimeToLiveStatus(TimeToLiveStatusEnum timeToLiveStatus) {
         this.timeToLiveStatus = timeToLiveStatus;
         return this;
     }
     
+    public TimeToLiveDescription(){}
 }

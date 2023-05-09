@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelExplainabilityJobDefinitionRequest {
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public CreateModelExplainabilityJobDefinitionRequest withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -21,6 +22,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public CreateModelExplainabilityJobDefinitionRequest withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -28,6 +30,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     
     @JsonProperty("ModelExplainabilityAppSpecification")
     public ModelExplainabilityAppSpecification modelExplainabilityAppSpecification;
+
     public CreateModelExplainabilityJobDefinitionRequest withModelExplainabilityAppSpecification(ModelExplainabilityAppSpecification modelExplainabilityAppSpecification) {
         this.modelExplainabilityAppSpecification = modelExplainabilityAppSpecification;
         return this;
@@ -36,6 +39,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelExplainabilityBaselineConfig")
     public ModelExplainabilityBaselineConfig modelExplainabilityBaselineConfig;
+
     public CreateModelExplainabilityJobDefinitionRequest withModelExplainabilityBaselineConfig(ModelExplainabilityBaselineConfig modelExplainabilityBaselineConfig) {
         this.modelExplainabilityBaselineConfig = modelExplainabilityBaselineConfig;
         return this;
@@ -43,6 +47,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     
     @JsonProperty("ModelExplainabilityJobInput")
     public ModelExplainabilityJobInput modelExplainabilityJobInput;
+
     public CreateModelExplainabilityJobDefinitionRequest withModelExplainabilityJobInput(ModelExplainabilityJobInput modelExplainabilityJobInput) {
         this.modelExplainabilityJobInput = modelExplainabilityJobInput;
         return this;
@@ -53,6 +58,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
      */
     @JsonProperty("ModelExplainabilityJobOutputConfig")
     public MonitoringOutputConfig modelExplainabilityJobOutputConfig;
+
     public CreateModelExplainabilityJobDefinitionRequest withModelExplainabilityJobOutputConfig(MonitoringOutputConfig modelExplainabilityJobOutputConfig) {
         this.modelExplainabilityJobOutputConfig = modelExplainabilityJobOutputConfig;
         return this;
@@ -61,6 +67,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public CreateModelExplainabilityJobDefinitionRequest withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -68,6 +75,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateModelExplainabilityJobDefinitionRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,6 +87,7 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public CreateModelExplainabilityJobDefinitionRequest withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -87,9 +96,18 @@ public class CreateModelExplainabilityJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelExplainabilityJobDefinitionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateModelExplainabilityJobDefinitionRequest(@JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("ModelExplainabilityAppSpecification") ModelExplainabilityAppSpecification modelExplainabilityAppSpecification, @JsonProperty("ModelExplainabilityJobInput") ModelExplainabilityJobInput modelExplainabilityJobInput, @JsonProperty("ModelExplainabilityJobOutputConfig") MonitoringOutputConfig modelExplainabilityJobOutputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.modelExplainabilityAppSpecification = modelExplainabilityAppSpecification;
+        this.modelExplainabilityJobInput = modelExplainabilityJobInput;
+        this.modelExplainabilityJobOutputConfig = modelExplainabilityJobOutputConfig;
+        this.roleArn = roleArn;
+  }
 }

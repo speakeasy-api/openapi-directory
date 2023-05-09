@@ -22,6 +22,7 @@ public class PermissionSetProvisioningStatusMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public PermissionSetProvisioningStatusMetadata withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class PermissionSetProvisioningStatusMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestId")
     public String requestId;
+
     public PermissionSetProvisioningStatusMetadata withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -38,9 +40,11 @@ public class PermissionSetProvisioningStatusMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusValuesEnum status;
+
     public PermissionSetProvisioningStatusMetadata withStatus(StatusValuesEnum status) {
         this.status = status;
         return this;
     }
     
+    public PermissionSetProvisioningStatusMetadata(){}
 }

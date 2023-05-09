@@ -17,6 +17,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("code")
     @SpeakeasyMetadata("form:name=code")
     public String code;
+
     public ApiCoreDtoConversionsConversion withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("creationDate")
     @SpeakeasyMetadata("form:name=creationDate")
     public String creationDate;
+
     public ApiCoreDtoConversionsConversion withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("deleted")
     @SpeakeasyMetadata("form:name=deleted")
     public Boolean deleted;
+
     public ApiCoreDtoConversionsConversion withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -47,6 +50,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("description")
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public ApiCoreDtoConversionsConversion withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +60,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public Long id;
+
     public ApiCoreDtoConversionsConversion withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ApiCoreDtoConversionsConversion withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +80,7 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("protocol")
     @SpeakeasyMetadata("form:name=protocol")
     public ApiCoreDtoConversionsConversionProtocolEnum protocol;
+
     public ApiCoreDtoConversionsConversion withProtocol(ApiCoreDtoConversionsConversionProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -83,9 +90,11 @@ public class ApiCoreDtoConversionsConversion {
     @JsonProperty("value")
     @SpeakeasyMetadata("form:name=value")
     public Double value;
+
     public ApiCoreDtoConversionsConversion withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ApiCoreDtoConversionsConversion(){}
 }

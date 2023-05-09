@@ -45,4 +45,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetailsResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecurringDetailsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/RecurringContractEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Recurring.java
+docs/sdk/README.md
 USAGE.md

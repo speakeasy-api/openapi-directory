@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatasetImportJobResponse {
     
     public String contentType;
+
     public CreateDatasetImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatasetImportJobResponse createDatasetImportJobResponse;
+
     public CreateDatasetImportJobResponse withCreateDatasetImportJobResponse(org.openapis.openapi.models.shared.CreateDatasetImportJobResponse createDatasetImportJobResponse) {
         this.createDatasetImportJobResponse = createDatasetImportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDatasetImportJobResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDatasetImportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateDatasetImportJobResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDatasetImportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateDatasetImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatasetImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatasetImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateDatasetImportJobResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDatasetImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDatasetImportJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateDatasetImportJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateDatasetImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

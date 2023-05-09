@@ -181,6 +181,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -189,7 +194,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AssociateEntityToThingResponse associateEntityToThing(org.openapis.openapi.models.operations.AssociateEntityToThingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.AssociateEntityToThing");
@@ -218,15 +225,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateEntityToThingResponse res = new org.openapis.openapi.models.operations.AssociateEntityToThingResponse() {{
+        org.openapis.openapi.models.operations.AssociateEntityToThingResponse res = new org.openapis.openapi.models.operations.AssociateEntityToThingResponse(contentType, httpRes.statusCode()) {{
             associateEntityToThingResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,7 +278,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateFlowTemplateResponse createFlowTemplate(org.openapis.openapi.models.operations.CreateFlowTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateFlowTemplate");
@@ -302,7 +309,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFlowTemplateResponse res = new org.openapis.openapi.models.operations.CreateFlowTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateFlowTemplateResponse res = new org.openapis.openapi.models.operations.CreateFlowTemplateResponse(contentType, httpRes.statusCode()) {{
             createFlowTemplateResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
@@ -310,8 +317,6 @@ public class SDK {
             limitExceededException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -365,7 +370,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateSystemInstanceResponse createSystemInstance(org.openapis.openapi.models.operations.CreateSystemInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemInstance");
@@ -394,7 +401,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSystemInstanceResponse res = new org.openapis.openapi.models.operations.CreateSystemInstanceResponse() {{
+        org.openapis.openapi.models.operations.CreateSystemInstanceResponse res = new org.openapis.openapi.models.operations.CreateSystemInstanceResponse(contentType, httpRes.statusCode()) {{
             createSystemInstanceResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
@@ -402,8 +409,6 @@ public class SDK {
             internalFailureException = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -457,7 +462,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateSystemTemplateResponse createSystemTemplate(org.openapis.openapi.models.operations.CreateSystemTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.CreateSystemTemplate");
@@ -486,15 +493,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSystemTemplateResponse res = new org.openapis.openapi.models.operations.CreateSystemTemplateResponse() {{
+        org.openapis.openapi.models.operations.CreateSystemTemplateResponse res = new org.openapis.openapi.models.operations.CreateSystemTemplateResponse(contentType, httpRes.statusCode()) {{
             createSystemTemplateResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -541,7 +546,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteFlowTemplateResponse deleteFlowTemplate(org.openapis.openapi.models.operations.DeleteFlowTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteFlowTemplate");
@@ -570,15 +577,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFlowTemplateResponse res = new org.openapis.openapi.models.operations.DeleteFlowTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteFlowTemplateResponse res = new org.openapis.openapi.models.operations.DeleteFlowTemplateResponse(contentType, httpRes.statusCode()) {{
             deleteFlowTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -625,7 +630,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteNamespaceResponse deleteNamespace(org.openapis.openapi.models.operations.DeleteNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteNamespace");
@@ -654,13 +661,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNamespaceResponse res = new org.openapis.openapi.models.operations.DeleteNamespaceResponse() {{
+        org.openapis.openapi.models.operations.DeleteNamespaceResponse res = new org.openapis.openapi.models.operations.DeleteNamespaceResponse(contentType, httpRes.statusCode()) {{
             deleteNamespaceResponse = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -693,7 +698,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteSystemInstanceResponse deleteSystemInstance(org.openapis.openapi.models.operations.DeleteSystemInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemInstance");
@@ -722,15 +729,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSystemInstanceResponse res = new org.openapis.openapi.models.operations.DeleteSystemInstanceResponse() {{
+        org.openapis.openapi.models.operations.DeleteSystemInstanceResponse res = new org.openapis.openapi.models.operations.DeleteSystemInstanceResponse(contentType, httpRes.statusCode()) {{
             deleteSystemInstanceResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -777,7 +782,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteSystemTemplateResponse deleteSystemTemplate(org.openapis.openapi.models.operations.DeleteSystemTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeleteSystemTemplate");
@@ -806,15 +813,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSystemTemplateResponse res = new org.openapis.openapi.models.operations.DeleteSystemTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeleteSystemTemplateResponse res = new org.openapis.openapi.models.operations.DeleteSystemTemplateResponse(contentType, httpRes.statusCode()) {{
             deleteSystemTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -861,7 +866,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeploySystemInstanceResponse deploySystemInstance(org.openapis.openapi.models.operations.DeploySystemInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeploySystemInstance");
@@ -890,7 +897,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploySystemInstanceResponse res = new org.openapis.openapi.models.operations.DeploySystemInstanceResponse() {{
+        org.openapis.openapi.models.operations.DeploySystemInstanceResponse res = new org.openapis.openapi.models.operations.DeploySystemInstanceResponse(contentType, httpRes.statusCode()) {{
             deploySystemInstanceResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
@@ -898,8 +905,6 @@ public class SDK {
             internalFailureException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -953,7 +958,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeprecateFlowTemplateResponse deprecateFlowTemplate(org.openapis.openapi.models.operations.DeprecateFlowTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateFlowTemplate");
@@ -982,15 +989,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecateFlowTemplateResponse res = new org.openapis.openapi.models.operations.DeprecateFlowTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeprecateFlowTemplateResponse res = new org.openapis.openapi.models.operations.DeprecateFlowTemplateResponse(contentType, httpRes.statusCode()) {{
             deprecateFlowTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1037,7 +1042,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeprecateSystemTemplateResponse deprecateSystemTemplate(org.openapis.openapi.models.operations.DeprecateSystemTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DeprecateSystemTemplate");
@@ -1066,15 +1073,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeprecateSystemTemplateResponse res = new org.openapis.openapi.models.operations.DeprecateSystemTemplateResponse() {{
+        org.openapis.openapi.models.operations.DeprecateSystemTemplateResponse res = new org.openapis.openapi.models.operations.DeprecateSystemTemplateResponse(contentType, httpRes.statusCode()) {{
             deprecateSystemTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1121,7 +1126,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeNamespaceResponse describeNamespace(org.openapis.openapi.models.operations.DescribeNamespaceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DescribeNamespace");
@@ -1150,15 +1157,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeNamespaceResponse res = new org.openapis.openapi.models.operations.DescribeNamespaceResponse() {{
+        org.openapis.openapi.models.operations.DescribeNamespaceResponse res = new org.openapis.openapi.models.operations.DescribeNamespaceResponse(contentType, httpRes.statusCode()) {{
             describeNamespaceResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1205,7 +1210,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DissociateEntityFromThingResponse dissociateEntityFromThing(org.openapis.openapi.models.operations.DissociateEntityFromThingRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.DissociateEntityFromThing");
@@ -1234,15 +1241,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DissociateEntityFromThingResponse res = new org.openapis.openapi.models.operations.DissociateEntityFromThingResponse() {{
+        org.openapis.openapi.models.operations.DissociateEntityFromThingResponse res = new org.openapis.openapi.models.operations.DissociateEntityFromThingResponse(contentType, httpRes.statusCode()) {{
             dissociateEntityFromThingResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1289,7 +1294,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetEntitiesResponse getEntities(org.openapis.openapi.models.operations.GetEntitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetEntities");
@@ -1318,15 +1325,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse() {{
+        org.openapis.openapi.models.operations.GetEntitiesResponse res = new org.openapis.openapi.models.operations.GetEntitiesResponse(contentType, httpRes.statusCode()) {{
             getEntitiesResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1373,7 +1378,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetFlowTemplateResponse getFlowTemplate(org.openapis.openapi.models.operations.GetFlowTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplate");
@@ -1402,15 +1409,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFlowTemplateResponse res = new org.openapis.openapi.models.operations.GetFlowTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetFlowTemplateResponse res = new org.openapis.openapi.models.operations.GetFlowTemplateResponse(contentType, httpRes.statusCode()) {{
             getFlowTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1457,7 +1462,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetFlowTemplateRevisionsResponse getFlowTemplateRevisions(org.openapis.openapi.models.operations.GetFlowTemplateRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetFlowTemplateRevisions");
@@ -1492,15 +1499,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFlowTemplateRevisionsResponse res = new org.openapis.openapi.models.operations.GetFlowTemplateRevisionsResponse() {{
+        org.openapis.openapi.models.operations.GetFlowTemplateRevisionsResponse res = new org.openapis.openapi.models.operations.GetFlowTemplateRevisionsResponse(contentType, httpRes.statusCode()) {{
             getFlowTemplateRevisionsResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1547,7 +1552,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetNamespaceDeletionStatusResponse getNamespaceDeletionStatus(org.openapis.openapi.models.operations.GetNamespaceDeletionStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetNamespaceDeletionStatus");
@@ -1576,14 +1583,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamespaceDeletionStatusResponse res = new org.openapis.openapi.models.operations.GetNamespaceDeletionStatusResponse() {{
+        org.openapis.openapi.models.operations.GetNamespaceDeletionStatusResponse res = new org.openapis.openapi.models.operations.GetNamespaceDeletionStatusResponse(contentType, httpRes.statusCode()) {{
             getNamespaceDeletionStatusResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1623,7 +1628,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSystemInstanceResponse getSystemInstance(org.openapis.openapi.models.operations.GetSystemInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemInstance");
@@ -1652,15 +1659,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSystemInstanceResponse res = new org.openapis.openapi.models.operations.GetSystemInstanceResponse() {{
+        org.openapis.openapi.models.operations.GetSystemInstanceResponse res = new org.openapis.openapi.models.operations.GetSystemInstanceResponse(contentType, httpRes.statusCode()) {{
             getSystemInstanceResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1707,7 +1712,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSystemTemplateResponse getSystemTemplate(org.openapis.openapi.models.operations.GetSystemTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplate");
@@ -1736,15 +1743,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSystemTemplateResponse res = new org.openapis.openapi.models.operations.GetSystemTemplateResponse() {{
+        org.openapis.openapi.models.operations.GetSystemTemplateResponse res = new org.openapis.openapi.models.operations.GetSystemTemplateResponse(contentType, httpRes.statusCode()) {{
             getSystemTemplateResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1791,7 +1796,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSystemTemplateRevisionsResponse getSystemTemplateRevisions(org.openapis.openapi.models.operations.GetSystemTemplateRevisionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetSystemTemplateRevisions");
@@ -1826,15 +1833,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSystemTemplateRevisionsResponse res = new org.openapis.openapi.models.operations.GetSystemTemplateRevisionsResponse() {{
+        org.openapis.openapi.models.operations.GetSystemTemplateRevisionsResponse res = new org.openapis.openapi.models.operations.GetSystemTemplateRevisionsResponse(contentType, httpRes.statusCode()) {{
             getSystemTemplateRevisionsResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1881,7 +1886,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetUploadStatusResponse getUploadStatus(org.openapis.openapi.models.operations.GetUploadStatusRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.GetUploadStatus");
@@ -1910,15 +1917,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUploadStatusResponse res = new org.openapis.openapi.models.operations.GetUploadStatusResponse() {{
+        org.openapis.openapi.models.operations.GetUploadStatusResponse res = new org.openapis.openapi.models.operations.GetUploadStatusResponse(contentType, httpRes.statusCode()) {{
             getUploadStatusResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1965,7 +1970,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListFlowExecutionMessagesResponse listFlowExecutionMessages(org.openapis.openapi.models.operations.ListFlowExecutionMessagesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.ListFlowExecutionMessages");
@@ -2000,15 +2007,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFlowExecutionMessagesResponse res = new org.openapis.openapi.models.operations.ListFlowExecutionMessagesResponse() {{
+        org.openapis.openapi.models.operations.ListFlowExecutionMessagesResponse res = new org.openapis.openapi.models.operations.ListFlowExecutionMessagesResponse(contentType, httpRes.statusCode()) {{
             listFlowExecutionMessagesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2055,7 +2060,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListTagsForResourceResponse listTagsForResource(org.openapis.openapi.models.operations.ListTagsForResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.ListTagsForResource");
@@ -2090,15 +2097,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2145,7 +2150,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchEntitiesResponse searchEntities(org.openapis.openapi.models.operations.SearchEntitiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchEntities");
@@ -2180,14 +2187,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchEntitiesResponse res = new org.openapis.openapi.models.operations.SearchEntitiesResponse() {{
+        org.openapis.openapi.models.operations.SearchEntitiesResponse res = new org.openapis.openapi.models.operations.SearchEntitiesResponse(contentType, httpRes.statusCode()) {{
             searchEntitiesResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2227,7 +2232,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchFlowExecutionsResponse searchFlowExecutions(org.openapis.openapi.models.operations.SearchFlowExecutionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowExecutions");
@@ -2262,15 +2269,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFlowExecutionsResponse res = new org.openapis.openapi.models.operations.SearchFlowExecutionsResponse() {{
+        org.openapis.openapi.models.operations.SearchFlowExecutionsResponse res = new org.openapis.openapi.models.operations.SearchFlowExecutionsResponse(contentType, httpRes.statusCode()) {{
             searchFlowExecutionsResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2317,7 +2322,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchFlowTemplatesResponse searchFlowTemplates(org.openapis.openapi.models.operations.SearchFlowTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchFlowTemplates");
@@ -2352,14 +2359,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchFlowTemplatesResponse res = new org.openapis.openapi.models.operations.SearchFlowTemplatesResponse() {{
+        org.openapis.openapi.models.operations.SearchFlowTemplatesResponse res = new org.openapis.openapi.models.operations.SearchFlowTemplatesResponse(contentType, httpRes.statusCode()) {{
             searchFlowTemplatesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2399,7 +2404,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchSystemInstancesResponse searchSystemInstances(org.openapis.openapi.models.operations.SearchSystemInstancesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemInstances");
@@ -2434,14 +2441,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSystemInstancesResponse res = new org.openapis.openapi.models.operations.SearchSystemInstancesResponse() {{
+        org.openapis.openapi.models.operations.SearchSystemInstancesResponse res = new org.openapis.openapi.models.operations.SearchSystemInstancesResponse(contentType, httpRes.statusCode()) {{
             searchSystemInstancesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2481,7 +2486,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchSystemTemplatesResponse searchSystemTemplates(org.openapis.openapi.models.operations.SearchSystemTemplatesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchSystemTemplates");
@@ -2516,14 +2523,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchSystemTemplatesResponse res = new org.openapis.openapi.models.operations.SearchSystemTemplatesResponse() {{
+        org.openapis.openapi.models.operations.SearchSystemTemplatesResponse res = new org.openapis.openapi.models.operations.SearchSystemTemplatesResponse(contentType, httpRes.statusCode()) {{
             searchSystemTemplatesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2563,7 +2568,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SearchThingsResponse searchThings(org.openapis.openapi.models.operations.SearchThingsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.SearchThings");
@@ -2598,15 +2605,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchThingsResponse res = new org.openapis.openapi.models.operations.SearchThingsResponse() {{
+        org.openapis.openapi.models.operations.SearchThingsResponse res = new org.openapis.openapi.models.operations.SearchThingsResponse(contentType, httpRes.statusCode()) {{
             searchThingsResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2653,7 +2658,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TagResourceResponse tagResource(org.openapis.openapi.models.operations.TagResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.TagResource");
@@ -2682,15 +2689,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2737,7 +2742,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UndeploySystemInstanceResponse undeploySystemInstance(org.openapis.openapi.models.operations.UndeploySystemInstanceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.UndeploySystemInstance");
@@ -2766,7 +2773,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UndeploySystemInstanceResponse res = new org.openapis.openapi.models.operations.UndeploySystemInstanceResponse() {{
+        org.openapis.openapi.models.operations.UndeploySystemInstanceResponse res = new org.openapis.openapi.models.operations.UndeploySystemInstanceResponse(contentType, httpRes.statusCode()) {{
             undeploySystemInstanceResponse = null;
             invalidRequestException = null;
             throttlingException = null;
@@ -2774,8 +2781,6 @@ public class SDK {
             resourceNotFoundException = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2829,7 +2834,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UntagResourceResponse untagResource(org.openapis.openapi.models.operations.UntagResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.UntagResource");
@@ -2858,15 +2865,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             invalidRequestException = null;
             resourceAlreadyExistsException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2913,7 +2918,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateFlowTemplateResponse updateFlowTemplate(org.openapis.openapi.models.operations.UpdateFlowTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateFlowTemplate");
@@ -2942,15 +2949,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFlowTemplateResponse res = new org.openapis.openapi.models.operations.UpdateFlowTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdateFlowTemplateResponse res = new org.openapis.openapi.models.operations.UpdateFlowTemplateResponse(contentType, httpRes.statusCode()) {{
             updateFlowTemplateResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2997,7 +3002,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateSystemTemplateResponse updateSystemTemplate(org.openapis.openapi.models.operations.UpdateSystemTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.UpdateSystemTemplate");
@@ -3026,15 +3033,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSystemTemplateResponse res = new org.openapis.openapi.models.operations.UpdateSystemTemplateResponse() {{
+        org.openapis.openapi.models.operations.UpdateSystemTemplateResponse res = new org.openapis.openapi.models.operations.UpdateSystemTemplateResponse(contentType, httpRes.statusCode()) {{
             updateSystemTemplateResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalFailureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3081,7 +3086,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UploadEntityDefinitionsResponse uploadEntityDefinitions(org.openapis.openapi.models.operations.UploadEntityDefinitionsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=IotThingsGraphFrontEndService.UploadEntityDefinitions");
@@ -3110,14 +3117,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadEntityDefinitionsResponse res = new org.openapis.openapi.models.operations.UploadEntityDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.UploadEntityDefinitionsResponse res = new org.openapis.openapi.models.operations.UploadEntityDefinitionsResponse(contentType, httpRes.statusCode()) {{
             uploadEntityDefinitionsResponse = null;
             invalidRequestException = null;
             internalFailureException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

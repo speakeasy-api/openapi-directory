@@ -18,6 +18,7 @@ public class ListScopesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListScopesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListScopesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public Scope[] scopes;
+
     public ListScopesResponse withScopes(Scope[] scopes) {
         this.scopes = scopes;
         return this;
     }
     
+    public ListScopesResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupEgressResult {
     
     public Boolean return_;
+
     public RevokeSecurityGroupEgressResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
@@ -19,9 +20,11 @@ public class RevokeSecurityGroupEgressResult {
     
     
     public RevokeSecurityGroupEgressResultUnknownIpPermissions[] unknownIpPermissions;
+
     public RevokeSecurityGroupEgressResult withUnknownIpPermissions(RevokeSecurityGroupEgressResultUnknownIpPermissions[] unknownIpPermissions) {
         this.unknownIpPermissions = unknownIpPermissions;
         return this;
     }
     
+    public RevokeSecurityGroupEgressResult(){}
 }

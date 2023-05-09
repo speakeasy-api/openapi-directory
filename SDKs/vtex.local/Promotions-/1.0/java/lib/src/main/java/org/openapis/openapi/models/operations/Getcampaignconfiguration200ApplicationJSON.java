@@ -18,6 +18,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginDateUtc")
     public String beginDateUtc;
+
     public Getcampaignconfiguration200ApplicationJSON withBeginDateUtc(String beginDateUtc) {
         this.beginDateUtc = beginDateUtc;
         return this;
@@ -29,6 +30,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public Getcampaignconfiguration200ApplicationJSON withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -40,6 +42,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Getcampaignconfiguration200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Getcampaignconfiguration200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -62,6 +66,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAndOperator")
     public Boolean isAndOperator;
+
     public Getcampaignconfiguration200ApplicationJSON withIsAndOperator(Boolean isAndOperator) {
         this.isAndOperator = isAndOperator;
         return this;
@@ -73,6 +78,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public Getcampaignconfiguration200ApplicationJSON withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -84,6 +90,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModified")
     public Getcampaignconfiguration200ApplicationJSONLastModified lastModified;
+
     public Getcampaignconfiguration200ApplicationJSON withLastModified(Getcampaignconfiguration200ApplicationJSONLastModified lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -95,6 +102,7 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Getcampaignconfiguration200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -106,9 +114,11 @@ public class Getcampaignconfiguration200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetConfigurations")
     public Getcampaignconfiguration200ApplicationJSONTargetConfigurations[] targetConfigurations;
+
     public Getcampaignconfiguration200ApplicationJSON withTargetConfigurations(Getcampaignconfiguration200ApplicationJSONTargetConfigurations[] targetConfigurations) {
         this.targetConfigurations = targetConfigurations;
         return this;
     }
     
+    public Getcampaignconfiguration200ApplicationJSON(){}
 }

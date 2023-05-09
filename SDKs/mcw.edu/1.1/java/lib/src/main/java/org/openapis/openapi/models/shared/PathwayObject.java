@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class PathwayObject {
     
     public String accId;
+
     public PathwayObject withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -16,6 +17,7 @@ public class PathwayObject {
     
     
     public String id;
+
     public PathwayObject withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class PathwayObject {
     
     
     public String objDesc;
+
     public PathwayObject withObjDesc(String objDesc) {
         this.objDesc = objDesc;
         return this;
@@ -30,6 +33,7 @@ public class PathwayObject {
     
     
     public String objName;
+
     public PathwayObject withObjName(String objName) {
         this.objName = objName;
         return this;
@@ -37,6 +41,7 @@ public class PathwayObject {
     
     
     public Integer typeId;
+
     public PathwayObject withTypeId(Integer typeId) {
         this.typeId = typeId;
         return this;
@@ -44,6 +49,7 @@ public class PathwayObject {
     
     
     public String typeName;
+
     public PathwayObject withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -51,6 +57,7 @@ public class PathwayObject {
     
     
     public String url;
+
     public PathwayObject withUrl(String url) {
         this.url = url;
         return this;
@@ -58,9 +65,11 @@ public class PathwayObject {
     
     
     public Integer xdbKey;
+
     public PathwayObject withXdbKey(Integer xdbKey) {
         this.xdbKey = xdbKey;
         return this;
     }
     
+    public PathwayObject(){}
 }

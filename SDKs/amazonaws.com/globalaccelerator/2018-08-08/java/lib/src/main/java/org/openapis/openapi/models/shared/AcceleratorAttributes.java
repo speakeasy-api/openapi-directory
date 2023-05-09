@@ -15,6 +15,7 @@ public class AcceleratorAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsEnabled")
     public Boolean flowLogsEnabled;
+
     public AcceleratorAttributes withFlowLogsEnabled(Boolean flowLogsEnabled) {
         this.flowLogsEnabled = flowLogsEnabled;
         return this;
@@ -23,6 +24,7 @@ public class AcceleratorAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Bucket")
     public String flowLogsS3Bucket;
+
     public AcceleratorAttributes withFlowLogsS3Bucket(String flowLogsS3Bucket) {
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         return this;
@@ -31,9 +33,11 @@ public class AcceleratorAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Prefix")
     public String flowLogsS3Prefix;
+
     public AcceleratorAttributes withFlowLogsS3Prefix(String flowLogsS3Prefix) {
         this.flowLogsS3Prefix = flowLogsS3Prefix;
         return this;
     }
     
+    public AcceleratorAttributes(){}
 }

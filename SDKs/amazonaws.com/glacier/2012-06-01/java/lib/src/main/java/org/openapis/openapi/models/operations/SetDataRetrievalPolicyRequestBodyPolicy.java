@@ -15,9 +15,11 @@ public class SetDataRetrievalPolicyRequestBodyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rules")
     public org.openapis.openapi.models.shared.DataRetrievalRule[] rules;
+
     public SetDataRetrievalPolicyRequestBodyPolicy withRules(org.openapis.openapi.models.shared.DataRetrievalRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public SetDataRetrievalPolicyRequestBodyPolicy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClusterSessionCredentialsResponse {
     
     public String contentType;
+
     public GetClusterSessionCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetClusterSessionCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetClusterSessionCredentialsOutput getClusterSessionCredentialsOutput;
+
     public GetClusterSessionCredentialsResponse withGetClusterSessionCredentialsOutput(org.openapis.openapi.models.shared.GetClusterSessionCredentialsOutput getClusterSessionCredentialsOutput) {
         this.getClusterSessionCredentialsOutput = getClusterSessionCredentialsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetClusterSessionCredentialsResponse {
      */
     
     public Object internalServerError;
+
     public GetClusterSessionCredentialsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetClusterSessionCredentialsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetClusterSessionCredentialsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetClusterSessionCredentialsResponse {
     
     
     public Integer statusCode;
+
     public GetClusterSessionCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetClusterSessionCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClusterSessionCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetClusterSessionCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

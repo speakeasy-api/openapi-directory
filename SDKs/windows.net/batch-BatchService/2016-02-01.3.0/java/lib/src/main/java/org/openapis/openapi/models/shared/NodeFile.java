@@ -18,6 +18,7 @@ public class NodeFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDirectory")
     public Boolean isDirectory;
+
     public NodeFile withIsDirectory(Boolean isDirectory) {
         this.isDirectory = isDirectory;
         return this;
@@ -29,6 +30,7 @@ public class NodeFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NodeFile withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class NodeFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public FileProperties properties;
+
     public NodeFile withProperties(FileProperties properties) {
         this.properties = properties;
         return this;
@@ -51,9 +54,11 @@ public class NodeFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public NodeFile withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NodeFile(){}
 }

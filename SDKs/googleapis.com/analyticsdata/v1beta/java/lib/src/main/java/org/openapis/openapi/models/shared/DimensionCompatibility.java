@@ -18,6 +18,7 @@ public class DimensionCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibility")
     public DimensionCompatibilityCompatibilityEnum compatibility;
+
     public DimensionCompatibility withCompatibility(DimensionCompatibilityCompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -29,9 +30,11 @@ public class DimensionCompatibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionMetadata")
     public DimensionMetadata dimensionMetadata;
+
     public DimensionCompatibility withDimensionMetadata(DimensionMetadata dimensionMetadata) {
         this.dimensionMetadata = dimensionMetadata;
         return this;
     }
     
+    public DimensionCompatibility(){}
 }

@@ -12,6 +12,7 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineNumber")
     public Long lineNumber;
+
     public PlayerLine withLineNumber(Long lineNumber) {
         this.lineNumber = lineNumber;
         return this;
@@ -20,6 +21,7 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineType")
     public String lineType;
+
     public PlayerLine withLineType(String lineType) {
         this.lineType = lineType;
         return this;
@@ -28,6 +30,7 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerLine withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerLine withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,6 +48,7 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerLine withPosition(String position) {
         this.position = position;
         return this;
@@ -52,9 +57,11 @@ public class PlayerLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shoots")
     public String shoots;
+
     public PlayerLine withShoots(String shoots) {
         this.shoots = shoots;
         return this;
     }
     
+    public PlayerLine(){}
 }

@@ -12,6 +12,7 @@ public class DeleteSecurityConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteSecurityConfigRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,13 @@ public class DeleteSecurityConfigRequest {
     
     @JsonProperty("id")
     public String id;
+
     public DeleteSecurityConfigRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteSecurityConfigRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -18,6 +18,7 @@ public class SendDebugCaptureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentId")
     public String componentId;
+
     public SendDebugCaptureRequest withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
@@ -29,6 +30,7 @@ public class SendDebugCaptureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public SendDebugCaptureRequest withData(String data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class SendDebugCaptureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataFormat")
     public SendDebugCaptureRequestDataFormatEnum dataFormat;
+
     public SendDebugCaptureRequest withDataFormat(SendDebugCaptureRequestDataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -51,6 +54,7 @@ public class SendDebugCaptureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public SendDebugCaptureRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -62,9 +66,11 @@ public class SendDebugCaptureRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerId")
     public String workerId;
+
     public SendDebugCaptureRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public SendDebugCaptureRequest(){}
 }

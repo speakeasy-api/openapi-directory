@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProvisioningTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public DeleteProvisioningTemplateVersionResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProvisioningTemplateVersionResponse {
     
     
     public String contentType;
+
     public DeleteProvisioningTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object deleteConflictException;
+
     public DeleteProvisioningTemplateVersionResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public java.util.Map<String, Object> deleteProvisioningTemplateVersionResponse;
+
     public DeleteProvisioningTemplateVersionResponse withDeleteProvisioningTemplateVersionResponse(java.util.Map<String, Object> deleteProvisioningTemplateVersionResponse) {
         this.deleteProvisioningTemplateVersionResponse = deleteProvisioningTemplateVersionResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteProvisioningTemplateVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteProvisioningTemplateVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteProvisioningTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public DeleteProvisioningTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteProvisioningTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProvisioningTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProvisioningTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProvisioningTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteProvisioningTemplateVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteProvisioningTemplateVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteProvisioningTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

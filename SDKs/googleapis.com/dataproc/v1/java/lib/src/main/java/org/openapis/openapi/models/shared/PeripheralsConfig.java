@@ -18,6 +18,7 @@ public class PeripheralsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metastoreService")
     public String metastoreService;
+
     public PeripheralsConfig withMetastoreService(String metastoreService) {
         this.metastoreService = metastoreService;
         return this;
@@ -29,9 +30,11 @@ public class PeripheralsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkHistoryServerConfig")
     public SparkHistoryServerConfig sparkHistoryServerConfig;
+
     public PeripheralsConfig withSparkHistoryServerConfig(SparkHistoryServerConfig sparkHistoryServerConfig) {
         this.sparkHistoryServerConfig = sparkHistoryServerConfig;
         return this;
     }
     
+    public PeripheralsConfig(){}
 }

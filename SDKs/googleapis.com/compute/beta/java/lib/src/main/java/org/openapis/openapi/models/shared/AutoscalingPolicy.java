@@ -18,6 +18,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coolDownPeriodSec")
     public Integer coolDownPeriodSec;
+
     public AutoscalingPolicy withCoolDownPeriodSec(Integer coolDownPeriodSec) {
         this.coolDownPeriodSec = coolDownPeriodSec;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuUtilization")
     public AutoscalingPolicyCpuUtilization cpuUtilization;
+
     public AutoscalingPolicy withCpuUtilization(AutoscalingPolicyCpuUtilization cpuUtilization) {
         this.cpuUtilization = cpuUtilization;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customMetricUtilizations")
     public AutoscalingPolicyCustomMetricUtilization[] customMetricUtilizations;
+
     public AutoscalingPolicy withCustomMetricUtilizations(AutoscalingPolicyCustomMetricUtilization[] customMetricUtilizations) {
         this.customMetricUtilizations = customMetricUtilizations;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancingUtilization")
     public AutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization;
+
     public AutoscalingPolicy withLoadBalancingUtilization(AutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
         this.loadBalancingUtilization = loadBalancingUtilization;
         return this;
@@ -62,6 +66,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumReplicas")
     public Integer maxNumReplicas;
+
     public AutoscalingPolicy withMaxNumReplicas(Integer maxNumReplicas) {
         this.maxNumReplicas = maxNumReplicas;
         return this;
@@ -73,6 +78,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNumReplicas")
     public Integer minNumReplicas;
+
     public AutoscalingPolicy withMinNumReplicas(Integer minNumReplicas) {
         this.minNumReplicas = minNumReplicas;
         return this;
@@ -84,6 +90,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public AutoscalingPolicyModeEnum mode;
+
     public AutoscalingPolicy withMode(AutoscalingPolicyModeEnum mode) {
         this.mode = mode;
         return this;
@@ -95,6 +102,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleDownControl")
     public AutoscalingPolicyScaleDownControl scaleDownControl;
+
     public AutoscalingPolicy withScaleDownControl(AutoscalingPolicyScaleDownControl scaleDownControl) {
         this.scaleDownControl = scaleDownControl;
         return this;
@@ -106,6 +114,7 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaleInControl")
     public AutoscalingPolicyScaleInControl scaleInControl;
+
     public AutoscalingPolicy withScaleInControl(AutoscalingPolicyScaleInControl scaleInControl) {
         this.scaleInControl = scaleInControl;
         return this;
@@ -117,9 +126,11 @@ public class AutoscalingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scalingSchedules")
     public java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules;
+
     public AutoscalingPolicy withScalingSchedules(java.util.Map<String, AutoscalingPolicyScalingSchedule> scalingSchedules) {
         this.scalingSchedules = scalingSchedules;
         return this;
     }
     
+    public AutoscalingPolicy(){}
 }

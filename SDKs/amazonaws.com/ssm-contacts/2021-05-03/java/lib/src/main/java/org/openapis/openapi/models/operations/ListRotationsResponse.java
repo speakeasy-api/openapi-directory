@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRotationsResponse {
@@ -12,6 +13,7 @@ public class ListRotationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRotationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRotationsResponse {
     
     
     public String contentType;
+
     public ListRotationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRotationsResponse {
      */
     
     public Object internalServerException;
+
     public ListRotationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListRotationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRotationsResult listRotationsResult;
+
     public ListRotationsResponse withListRotationsResult(org.openapis.openapi.models.shared.ListRotationsResult listRotationsResult) {
         this.listRotationsResult = listRotationsResult;
         return this;
@@ -46,6 +51,7 @@ public class ListRotationsResponse {
     
     
     public Integer statusCode;
+
     public ListRotationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListRotationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRotationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListRotationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRotationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListRotationsResponse {
      */
     
     public Object throttlingException;
+
     public ListRotationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListRotationsResponse {
      */
     
     public Object validationException;
+
     public ListRotationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRotationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

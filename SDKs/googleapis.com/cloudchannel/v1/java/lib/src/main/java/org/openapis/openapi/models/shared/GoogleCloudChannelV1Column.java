@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnId")
     public String columnId;
+
     public GoogleCloudChannelV1Column withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public GoogleCloudChannelV1ColumnDataTypeEnum dataType;
+
     public GoogleCloudChannelV1Column withDataType(GoogleCloudChannelV1ColumnDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1Column {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudChannelV1Column withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public GoogleCloudChannelV1Column(){}
 }

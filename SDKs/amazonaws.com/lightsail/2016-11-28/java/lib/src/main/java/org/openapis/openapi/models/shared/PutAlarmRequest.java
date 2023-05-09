@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutAlarmRequest {
     @JsonProperty("alarmName")
     public String alarmName;
+
     public PutAlarmRequest withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -18,6 +19,7 @@ public class PutAlarmRequest {
     
     @JsonProperty("comparisonOperator")
     public ComparisonOperatorEnum comparisonOperator;
+
     public PutAlarmRequest withComparisonOperator(ComparisonOperatorEnum comparisonOperator) {
         this.comparisonOperator = comparisonOperator;
         return this;
@@ -26,6 +28,7 @@ public class PutAlarmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactProtocols")
     public ContactProtocolEnum[] contactProtocols;
+
     public PutAlarmRequest withContactProtocols(ContactProtocolEnum[] contactProtocols) {
         this.contactProtocols = contactProtocols;
         return this;
@@ -34,6 +37,7 @@ public class PutAlarmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointsToAlarm")
     public Long datapointsToAlarm;
+
     public PutAlarmRequest withDatapointsToAlarm(Long datapointsToAlarm) {
         this.datapointsToAlarm = datapointsToAlarm;
         return this;
@@ -41,6 +45,7 @@ public class PutAlarmRequest {
     
     @JsonProperty("evaluationPeriods")
     public Long evaluationPeriods;
+
     public PutAlarmRequest withEvaluationPeriods(Long evaluationPeriods) {
         this.evaluationPeriods = evaluationPeriods;
         return this;
@@ -48,6 +53,7 @@ public class PutAlarmRequest {
     
     @JsonProperty("metricName")
     public MetricNameEnum metricName;
+
     public PutAlarmRequest withMetricName(MetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
@@ -55,6 +61,7 @@ public class PutAlarmRequest {
     
     @JsonProperty("monitoredResourceName")
     public String monitoredResourceName;
+
     public PutAlarmRequest withMonitoredResourceName(String monitoredResourceName) {
         this.monitoredResourceName = monitoredResourceName;
         return this;
@@ -63,6 +70,7 @@ public class PutAlarmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationEnabled")
     public Boolean notificationEnabled;
+
     public PutAlarmRequest withNotificationEnabled(Boolean notificationEnabled) {
         this.notificationEnabled = notificationEnabled;
         return this;
@@ -71,6 +79,7 @@ public class PutAlarmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationTriggers")
     public AlarmStateEnum[] notificationTriggers;
+
     public PutAlarmRequest withNotificationTriggers(AlarmStateEnum[] notificationTriggers) {
         this.notificationTriggers = notificationTriggers;
         return this;
@@ -78,6 +87,7 @@ public class PutAlarmRequest {
     
     @JsonProperty("threshold")
     public Double threshold;
+
     public PutAlarmRequest withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
@@ -86,9 +96,18 @@ public class PutAlarmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatMissingData")
     public TreatMissingDataEnum treatMissingData;
+
     public PutAlarmRequest withTreatMissingData(TreatMissingDataEnum treatMissingData) {
         this.treatMissingData = treatMissingData;
         return this;
     }
     
+    public PutAlarmRequest(@JsonProperty("alarmName") String alarmName, @JsonProperty("comparisonOperator") ComparisonOperatorEnum comparisonOperator, @JsonProperty("evaluationPeriods") Long evaluationPeriods, @JsonProperty("metricName") MetricNameEnum metricName, @JsonProperty("monitoredResourceName") String monitoredResourceName, @JsonProperty("threshold") Double threshold) {
+        this.alarmName = alarmName;
+        this.comparisonOperator = comparisonOperator;
+        this.evaluationPeriods = evaluationPeriods;
+        this.metricName = metricName;
+        this.monitoredResourceName = monitoredResourceName;
+        this.threshold = threshold;
+  }
 }

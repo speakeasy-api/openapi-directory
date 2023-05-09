@@ -12,6 +12,7 @@ public class ServiceFeesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationFeeAmount")
     public Double cancellationFeeAmount;
+
     public ServiceFeesUpdateModel withCancellationFeeAmount(Double cancellationFeeAmount) {
         this.cancellationFeeAmount = cancellationFeeAmount;
         return this;
@@ -20,6 +21,7 @@ public class ServiceFeesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancellationFeeTaxable")
     public Boolean cancellationFeeTaxable;
+
     public ServiceFeesUpdateModel withCancellationFeeTaxable(Boolean cancellationFeeTaxable) {
         this.cancellationFeeTaxable = cancellationFeeTaxable;
         return this;
@@ -28,6 +30,7 @@ public class ServiceFeesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeAmount")
     public Double feeAmount;
+
     public ServiceFeesUpdateModel withFeeAmount(Double feeAmount) {
         this.feeAmount = feeAmount;
         return this;
@@ -36,6 +39,7 @@ public class ServiceFeesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feeTaxable")
     public Boolean feeTaxable;
+
     public ServiceFeesUpdateModel withFeeTaxable(Boolean feeTaxable) {
         this.feeTaxable = feeTaxable;
         return this;
@@ -44,9 +48,11 @@ public class ServiceFeesUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonRefundable")
     public Boolean nonRefundable;
+
     public ServiceFeesUpdateModel withNonRefundable(Boolean nonRefundable) {
         this.nonRefundable = nonRefundable;
         return this;
     }
     
+    public ServiceFeesUpdateModel(){}
 }

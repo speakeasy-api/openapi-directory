@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCACertificateResponse {
     
     public String contentType;
+
     public UpdateCACertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCACertificateResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateCACertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCACertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateCACertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCACertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCACertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCACertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateCACertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCACertificateResponse {
     
     
     public Integer statusCode;
+
     public UpdateCACertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCACertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCACertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCACertificateResponse {
      */
     
     public Object throttlingException;
+
     public UpdateCACertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCACertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateCACertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public UpdateCACertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

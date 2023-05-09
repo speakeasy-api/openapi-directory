@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress {
     
     public Long fromPort;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String ipProtocol;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String[] ipRanges;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withIpRanges(String[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public String[] prefixListIds;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withPrefixListIds(String[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -40,6 +44,7 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public Long toPort;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -47,9 +52,11 @@ public class DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermis
     
     
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgressUserIdGroupPairs[] userIdGroupPairs;
+
     public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress withUserIdGroupPairs(DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgressUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public DescribeStaleSecurityGroupsResultStaleSecurityGroupSetStaleIpPermissionsEgress(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeImageGenerationConfigurationResponse {
@@ -12,6 +13,7 @@ public class DescribeImageGenerationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeImageGenerationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeImageGenerationConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public DescribeImageGenerationConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeImageGenerationConfigurationResponse {
     
     
     public String contentType;
+
     public DescribeImageGenerationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeImageGenerationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeImageGenerationConfigurationOutput describeImageGenerationConfigurationOutput;
+
     public DescribeImageGenerationConfigurationResponse withDescribeImageGenerationConfigurationOutput(org.openapis.openapi.models.shared.DescribeImageGenerationConfigurationOutput describeImageGenerationConfigurationOutput) {
         this.describeImageGenerationConfigurationOutput = describeImageGenerationConfigurationOutput;
         return this;
@@ -49,6 +54,7 @@ public class DescribeImageGenerationConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DescribeImageGenerationConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeImageGenerationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeImageGenerationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeImageGenerationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeImageGenerationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeImageGenerationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeImageGenerationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DescribeImageGenerationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

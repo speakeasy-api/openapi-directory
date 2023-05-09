@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCostEstimationResponse {
@@ -12,6 +13,7 @@ public class StartCostEstimationResponse {
      */
     
     public Object accessDeniedException;
+
     public StartCostEstimationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartCostEstimationResponse {
      */
     
     public Object conflictException;
+
     public StartCostEstimationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartCostEstimationResponse {
     
     
     public String contentType;
+
     public StartCostEstimationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartCostEstimationResponse {
      */
     
     public Object internalServerException;
+
     public StartCostEstimationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartCostEstimationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartCostEstimationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartCostEstimationResponse {
      */
     
     public java.util.Map<String, Object> startCostEstimationResponse;
+
     public StartCostEstimationResponse withStartCostEstimationResponse(java.util.Map<String, Object> startCostEstimationResponse) {
         this.startCostEstimationResponse = startCostEstimationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartCostEstimationResponse {
     
     
     public Integer statusCode;
+
     public StartCostEstimationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartCostEstimationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCostEstimationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartCostEstimationResponse {
      */
     
     public Object throttlingException;
+
     public StartCostEstimationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartCostEstimationResponse {
      */
     
     public Object validationException;
+
     public StartCostEstimationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartCostEstimationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

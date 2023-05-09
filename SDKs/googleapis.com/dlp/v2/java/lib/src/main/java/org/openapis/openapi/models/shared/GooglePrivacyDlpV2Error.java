@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public GoogleRpcStatus details;
+
     public GooglePrivacyDlpV2Error withDetails(GoogleRpcStatus details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamps")
     public String[] timestamps;
+
     public GooglePrivacyDlpV2Error withTimestamps(String[] timestamps) {
         this.timestamps = timestamps;
         return this;
     }
     
+    public GooglePrivacyDlpV2Error(){}
 }

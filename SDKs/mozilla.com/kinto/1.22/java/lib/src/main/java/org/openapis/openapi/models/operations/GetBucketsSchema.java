@@ -15,9 +15,11 @@ public class GetBucketsSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetBucketsSchemaData[] data;
+
     public GetBucketsSchema withData(GetBucketsSchemaData[] data) {
         this.data = data;
         return this;
     }
     
+    public GetBucketsSchema(){}
 }

@@ -15,6 +15,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedResourceArns")
     public String[] associatedResourceArns;
+
     public ProactiveInsightSummary withAssociatedResourceArns(String[] associatedResourceArns) {
         this.associatedResourceArns = associatedResourceArns;
         return this;
@@ -23,6 +24,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProactiveInsightSummary withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightTimeRange")
     public InsightTimeRange insightTimeRange;
+
     public ProactiveInsightSummary withInsightTimeRange(InsightTimeRange insightTimeRange) {
         this.insightTimeRange = insightTimeRange;
         return this;
@@ -42,6 +45,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProactiveInsightSummary withName(String name) {
         this.name = name;
         return this;
@@ -53,6 +57,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionTimeRange")
     public PredictionTimeRange predictionTimeRange;
+
     public ProactiveInsightSummary withPredictionTimeRange(PredictionTimeRange predictionTimeRange) {
         this.predictionTimeRange = predictionTimeRange;
         return this;
@@ -64,6 +69,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceCollection")
     public ResourceCollection resourceCollection;
+
     public ProactiveInsightSummary withResourceCollection(ResourceCollection resourceCollection) {
         this.resourceCollection = resourceCollection;
         return this;
@@ -72,6 +78,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCollection")
     public ServiceCollection serviceCollection;
+
     public ProactiveInsightSummary withServiceCollection(ServiceCollection serviceCollection) {
         this.serviceCollection = serviceCollection;
         return this;
@@ -80,6 +87,7 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public InsightSeverityEnum severity;
+
     public ProactiveInsightSummary withSeverity(InsightSeverityEnum severity) {
         this.severity = severity;
         return this;
@@ -88,9 +96,11 @@ public class ProactiveInsightSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public InsightStatusEnum status;
+
     public ProactiveInsightSummary withStatus(InsightStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProactiveInsightSummary(){}
 }

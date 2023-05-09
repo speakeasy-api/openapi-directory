@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSlackChannelConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSlackChannelConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public Object conflictException;
+
     public CreateSlackChannelConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSlackChannelConfigurationResponse {
     
     
     public String contentType;
+
     public CreateSlackChannelConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public java.util.Map<String, Object> createSlackChannelConfigurationResult;
+
     public CreateSlackChannelConfigurationResponse withCreateSlackChannelConfigurationResult(java.util.Map<String, Object> createSlackChannelConfigurationResult) {
         this.createSlackChannelConfigurationResult = createSlackChannelConfigurationResult;
         return this;
@@ -49,6 +54,7 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public CreateSlackChannelConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSlackChannelConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSlackChannelConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateSlackChannelConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSlackChannelConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSlackChannelConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateSlackChannelConfigurationResponse {
      */
     
     public Object validationException;
+
     public CreateSlackChannelConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSlackChannelConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

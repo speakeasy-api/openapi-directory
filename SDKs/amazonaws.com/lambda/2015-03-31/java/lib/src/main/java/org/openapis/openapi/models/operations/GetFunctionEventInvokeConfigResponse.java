@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFunctionEventInvokeConfigResponse {
     
     public String contentType;
+
     public GetFunctionEventInvokeConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFunctionEventInvokeConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionEventInvokeConfig functionEventInvokeConfig;
+
     public GetFunctionEventInvokeConfigResponse withFunctionEventInvokeConfig(org.openapis.openapi.models.shared.FunctionEventInvokeConfig functionEventInvokeConfig) {
         this.functionEventInvokeConfig = functionEventInvokeConfig;
         return this;
@@ -29,6 +32,7 @@ public class GetFunctionEventInvokeConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetFunctionEventInvokeConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetFunctionEventInvokeConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetFunctionEventInvokeConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetFunctionEventInvokeConfigResponse {
      */
     
     public Object serviceException;
+
     public GetFunctionEventInvokeConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class GetFunctionEventInvokeConfigResponse {
     
     
     public Integer statusCode;
+
     public GetFunctionEventInvokeConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetFunctionEventInvokeConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFunctionEventInvokeConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetFunctionEventInvokeConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetFunctionEventInvokeConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetFunctionEventInvokeConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ExpenseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public ExpenseType withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -23,9 +24,11 @@ public class ExpenseType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public ExpenseType withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ExpenseType(){}
 }

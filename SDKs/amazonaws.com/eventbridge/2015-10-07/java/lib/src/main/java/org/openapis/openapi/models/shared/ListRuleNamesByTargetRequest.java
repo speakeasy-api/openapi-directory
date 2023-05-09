@@ -12,6 +12,7 @@ public class ListRuleNamesByTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public ListRuleNamesByTargetRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -20,6 +21,7 @@ public class ListRuleNamesByTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListRuleNamesByTargetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class ListRuleNamesByTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRuleNamesByTargetRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class ListRuleNamesByTargetRequest {
     
     @JsonProperty("TargetArn")
     public String targetArn;
+
     public ListRuleNamesByTargetRequest withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public ListRuleNamesByTargetRequest(@JsonProperty("TargetArn") String targetArn) {
+        this.targetArn = targetArn;
+  }
 }

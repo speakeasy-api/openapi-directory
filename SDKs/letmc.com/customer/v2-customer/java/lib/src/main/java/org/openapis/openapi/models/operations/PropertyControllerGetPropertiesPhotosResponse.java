@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PropertyControllerGetPropertiesPhotosResponse {
     
     public byte[] body;
+
     public PropertyControllerGetPropertiesPhotosResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PropertyControllerGetPropertiesPhotosResponse {
     
     
     public String contentType;
+
     public PropertyControllerGetPropertiesPhotosResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PropertyControllerGetPropertiesPhotosResponse {
      */
     
     public org.openapis.openapi.models.shared.LandlordPhotoModelResults landlordPhotoModelResults;
+
     public PropertyControllerGetPropertiesPhotosResponse withLandlordPhotoModelResults(org.openapis.openapi.models.shared.LandlordPhotoModelResults landlordPhotoModelResults) {
         this.landlordPhotoModelResults = landlordPhotoModelResults;
         return this;
@@ -33,6 +37,7 @@ public class PropertyControllerGetPropertiesPhotosResponse {
     
     
     public Integer statusCode;
+
     public PropertyControllerGetPropertiesPhotosResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PropertyControllerGetPropertiesPhotosResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PropertyControllerGetPropertiesPhotosResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PropertyControllerGetPropertiesPhotosResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFirewallRuleGroupResponse {
@@ -12,6 +13,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFirewallRuleGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object conflictException;
+
     public DeleteFirewallRuleGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFirewallRuleGroupResponse {
     
     
     public String contentType;
+
     public DeleteFirewallRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFirewallRuleGroupResponse deleteFirewallRuleGroupResponse;
+
     public DeleteFirewallRuleGroupResponse withDeleteFirewallRuleGroupResponse(org.openapis.openapi.models.shared.DeleteFirewallRuleGroupResponse deleteFirewallRuleGroupResponse) {
         this.deleteFirewallRuleGroupResponse = deleteFirewallRuleGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteFirewallRuleGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFirewallRuleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteFirewallRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteFirewallRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFirewallRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFirewallRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFirewallRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteFirewallRuleGroupResponse {
      */
     
     public Object validationException;
+
     public DeleteFirewallRuleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteFirewallRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

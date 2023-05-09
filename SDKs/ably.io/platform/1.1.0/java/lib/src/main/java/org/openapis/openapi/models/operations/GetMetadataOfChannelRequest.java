@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMetadataOfChannelRequest {
@@ -12,6 +13,7 @@ public class GetMetadataOfChannelRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public GetMetadataOfChannelRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -22,6 +24,7 @@ public class GetMetadataOfChannelRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channel_id")
     public String channelId;
+
     public GetMetadataOfChannelRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -32,9 +35,13 @@ public class GetMetadataOfChannelRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public GetMetadataOfChannelRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public GetMetadataOfChannelRequest(@JsonProperty("channel_id") String channelId) {
+        this.channelId = channelId;
+  }
 }

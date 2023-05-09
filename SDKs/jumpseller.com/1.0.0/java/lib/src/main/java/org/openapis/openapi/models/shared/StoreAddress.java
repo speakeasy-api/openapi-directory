@@ -15,6 +15,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public StoreAddress withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public StoreAddress withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public StoreAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -48,6 +51,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public StoreAddress withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -59,6 +63,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public StoreAddress withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -70,6 +75,7 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public StoreAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -81,9 +87,11 @@ public class StoreAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region_code")
     public String regionCode;
+
     public StoreAddress withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public StoreAddress(){}
 }

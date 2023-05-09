@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyCheckRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.CheckRequest checkRequest;
+
     public VerifyCheckRequest withCheckRequest(org.openapis.openapi.models.shared.CheckRequest checkRequest) {
         this.checkRequest = checkRequest;
         return this;
@@ -19,9 +21,14 @@ public class VerifyCheckRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public VerifyCheckRequest withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public VerifyCheckRequest(@JsonProperty("checkRequest") org.openapis.openapi.models.shared.CheckRequest checkRequest, @JsonProperty("format") org.openapis.openapi.models.shared.FormatEnum format) {
+        this.checkRequest = checkRequest;
+        this.format = format;
+  }
 }

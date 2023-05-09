@@ -15,6 +15,7 @@ public class GraphicsStatsBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frameCount")
     public String frameCount;
+
     public GraphicsStatsBucket withFrameCount(String frameCount) {
         this.frameCount = frameCount;
         return this;
@@ -26,9 +27,11 @@ public class GraphicsStatsBucket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderMillis")
     public String renderMillis;
+
     public GraphicsStatsBucket withRenderMillis(String renderMillis) {
         this.renderMillis = renderMillis;
         return this;
     }
     
+    public GraphicsStatsBucket(){}
 }

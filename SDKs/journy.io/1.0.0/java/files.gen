@@ -308,4 +308,13 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippet200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippet200ApplicationJSONMeta.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippet200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTrackingSnippetResponse.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/events/README.md
+docs/properties/README.md
+docs/segments/README.md
+docs/track/README.md
+docs/users/README.md
+docs/validation/README.md
+docs/websites/README.md
 USAGE.md

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDhcpOptionsRequest {
     
     public String dhcpOptionsId;
+
     public DeleteDhcpOptionsRequest withDhcpOptionsId(String dhcpOptionsId) {
         this.dhcpOptionsId = dhcpOptionsId;
         return this;
@@ -16,9 +17,13 @@ public class DeleteDhcpOptionsRequest {
     
     
     public Boolean dryRun;
+
     public DeleteDhcpOptionsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public DeleteDhcpOptionsRequest(@JsonProperty("DhcpOptionsId") String dhcpOptionsId) {
+        this.dhcpOptionsId = dhcpOptionsId;
+  }
 }

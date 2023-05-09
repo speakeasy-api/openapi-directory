@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Market - A marketplace
@@ -15,6 +15,7 @@ public class Market {
      */
     
     public Attributes[] attributes;
+
     public Market withAttributes(Attributes[] attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class Market {
      */
     
     public CategoryGroups[] categoryGroups;
+
     public Market withCategoryGroups(CategoryGroups[] categoryGroups) {
         this.categoryGroups = categoryGroups;
         return this;
@@ -35,6 +37,7 @@ public class Market {
      */
     
     public String marketplaceId;
+
     public Market withMarketplaceId(String marketplaceId) {
         this.marketplaceId = marketplaceId;
         return this;
@@ -45,6 +48,7 @@ public class Market {
      */
     
     public String previewAppUrl;
+
     public Market withPreviewAppUrl(String previewAppUrl) {
         this.previewAppUrl = previewAppUrl;
         return this;
@@ -55,9 +59,16 @@ public class Market {
      */
     
     public String viewAppUrl;
+
     public Market withViewAppUrl(String viewAppUrl) {
         this.viewAppUrl = viewAppUrl;
         return this;
     }
     
+    public Market(@JsonProperty("attributes") Attributes[] attributes, @JsonProperty("marketplaceId") String marketplaceId, @JsonProperty("previewAppUrl") String previewAppUrl, @JsonProperty("viewAppUrl") String viewAppUrl) {
+        this.attributes = attributes;
+        this.marketplaceId = marketplaceId;
+        this.previewAppUrl = previewAppUrl;
+        this.viewAppUrl = viewAppUrl;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataflowEndpointConfig {
     @JsonProperty("dataflowEndpointName")
     public String dataflowEndpointName;
+
     public DataflowEndpointConfig withDataflowEndpointName(String dataflowEndpointName) {
         this.dataflowEndpointName = dataflowEndpointName;
         return this;
@@ -22,9 +23,13 @@ public class DataflowEndpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowEndpointRegion")
     public String dataflowEndpointRegion;
+
     public DataflowEndpointConfig withDataflowEndpointRegion(String dataflowEndpointRegion) {
         this.dataflowEndpointRegion = dataflowEndpointRegion;
         return this;
     }
     
+    public DataflowEndpointConfig(@JsonProperty("dataflowEndpointName") String dataflowEndpointName) {
+        this.dataflowEndpointName = dataflowEndpointName;
+  }
 }

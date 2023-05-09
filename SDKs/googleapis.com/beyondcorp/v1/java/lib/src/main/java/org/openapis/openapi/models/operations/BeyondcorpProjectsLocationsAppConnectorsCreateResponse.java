@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeyondcorpProjectsLocationsAppConnectorsCreateResponse {
     
     public String contentType;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateResponse withGoogleLongrunningOperation(org.openapis.openapi.models.shared.GoogleLongrunningOperation googleLongrunningOperation) {
         this.googleLongrunningOperation = googleLongrunningOperation;
         return this;
@@ -26,6 +29,7 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateResponse {
     
     
     public Integer statusCode;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BeyondcorpProjectsLocationsAppConnectorsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeyondcorpProjectsLocationsAppConnectorsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsAppConnectorsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

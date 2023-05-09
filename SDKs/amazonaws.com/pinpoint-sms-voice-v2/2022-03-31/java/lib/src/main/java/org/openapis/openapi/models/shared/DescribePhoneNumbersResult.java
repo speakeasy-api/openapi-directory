@@ -15,6 +15,7 @@ public class DescribePhoneNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePhoneNumbersResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribePhoneNumbersResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumbers")
     public PhoneNumberInformation[] phoneNumbers;
+
     public DescribePhoneNumbersResult withPhoneNumbers(PhoneNumberInformation[] phoneNumbers) {
         this.phoneNumbers = phoneNumbers;
         return this;
     }
     
+    public DescribePhoneNumbersResult(){}
 }

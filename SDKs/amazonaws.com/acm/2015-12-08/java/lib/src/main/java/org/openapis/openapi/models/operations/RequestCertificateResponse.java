@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RequestCertificateResponse {
     
     public String contentType;
+
     public RequestCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RequestCertificateResponse {
      */
     
     public Object invalidArnException;
+
     public RequestCertificateResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class RequestCertificateResponse {
      */
     
     public Object invalidDomainValidationOptionsException;
+
     public RequestCertificateResponse withInvalidDomainValidationOptionsException(Object invalidDomainValidationOptionsException) {
         this.invalidDomainValidationOptionsException = invalidDomainValidationOptionsException;
         return this;
@@ -39,6 +43,7 @@ public class RequestCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public RequestCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class RequestCertificateResponse {
      */
     
     public Object invalidTagException;
+
     public RequestCertificateResponse withInvalidTagException(Object invalidTagException) {
         this.invalidTagException = invalidTagException;
         return this;
@@ -59,6 +65,7 @@ public class RequestCertificateResponse {
      */
     
     public Object limitExceededException;
+
     public RequestCertificateResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class RequestCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestCertificateResponse requestCertificateResponse;
+
     public RequestCertificateResponse withRequestCertificateResponse(org.openapis.openapi.models.shared.RequestCertificateResponse requestCertificateResponse) {
         this.requestCertificateResponse = requestCertificateResponse;
         return this;
@@ -76,6 +84,7 @@ public class RequestCertificateResponse {
     
     
     public Integer statusCode;
+
     public RequestCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RequestCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RequestCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class RequestCertificateResponse {
      */
     
     public Object tagPolicyException;
+
     public RequestCertificateResponse withTagPolicyException(Object tagPolicyException) {
         this.tagPolicyException = tagPolicyException;
         return this;
@@ -103,9 +114,14 @@ public class RequestCertificateResponse {
      */
     
     public Object tooManyTagsException;
+
     public RequestCertificateResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public RequestCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

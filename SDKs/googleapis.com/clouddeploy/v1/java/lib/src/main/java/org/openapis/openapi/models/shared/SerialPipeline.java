@@ -18,9 +18,11 @@ public class SerialPipeline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stages")
     public Stage[] stages;
+
     public SerialPipeline withStages(Stage[] stages) {
         this.stages = stages;
         return this;
     }
     
+    public SerialPipeline(){}
 }

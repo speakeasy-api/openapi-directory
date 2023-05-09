@@ -15,6 +15,7 @@ public class UpdateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateNetworkSettingsRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateNetworkSettingsRequestBody withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateNetworkSettingsRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -48,9 +51,11 @@ public class UpdateNetworkSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public UpdateNetworkSettingsRequestBody withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public UpdateNetworkSettingsRequestBody(){}
 }

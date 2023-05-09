@@ -12,6 +12,7 @@ public class CreateAliasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAliasInput withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class CreateAliasInput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAliasInput withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class CreateAliasInput {
     
     @JsonProperty("RoutingStrategy")
     public RoutingStrategy routingStrategy;
+
     public CreateAliasInput withRoutingStrategy(RoutingStrategy routingStrategy) {
         this.routingStrategy = routingStrategy;
         return this;
@@ -34,9 +37,14 @@ public class CreateAliasInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateAliasInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateAliasInput(@JsonProperty("Name") String name, @JsonProperty("RoutingStrategy") RoutingStrategy routingStrategy) {
+        this.name = name;
+        this.routingStrategy = routingStrategy;
+  }
 }

@@ -18,6 +18,7 @@ public class BiosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biosManufacturer")
     public String biosManufacturer;
+
     public BiosDetails withBiosManufacturer(String biosManufacturer) {
         this.biosManufacturer = biosManufacturer;
         return this;
@@ -29,6 +30,7 @@ public class BiosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biosName")
     public String biosName;
+
     public BiosDetails withBiosName(String biosName) {
         this.biosName = biosName;
         return this;
@@ -40,6 +42,7 @@ public class BiosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biosReleaseDate")
     public String biosReleaseDate;
+
     public BiosDetails withBiosReleaseDate(String biosReleaseDate) {
         this.biosReleaseDate = biosReleaseDate;
         return this;
@@ -51,6 +54,7 @@ public class BiosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biosVersion")
     public String biosVersion;
+
     public BiosDetails withBiosVersion(String biosVersion) {
         this.biosVersion = biosVersion;
         return this;
@@ -62,9 +66,11 @@ public class BiosDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smbiosUuid")
     public String smbiosUuid;
+
     public BiosDetails withSmbiosUuid(String smbiosUuid) {
         this.smbiosUuid = smbiosUuid;
         return this;
     }
     
+    public BiosDetails(){}
 }

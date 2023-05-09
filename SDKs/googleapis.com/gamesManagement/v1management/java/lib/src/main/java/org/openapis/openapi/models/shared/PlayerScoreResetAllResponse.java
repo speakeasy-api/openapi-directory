@@ -18,6 +18,7 @@ public class PlayerScoreResetAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerScoreResetAllResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PlayerScoreResetAllResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public PlayerScoreResetResponse[] results;
+
     public PlayerScoreResetAllResponse withResults(PlayerScoreResetResponse[] results) {
         this.results = results;
         return this;
     }
     
+    public PlayerScoreResetAllResponse(){}
 }

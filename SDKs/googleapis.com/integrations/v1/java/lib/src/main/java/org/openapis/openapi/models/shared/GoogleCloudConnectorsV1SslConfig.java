@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalVariables")
     public GoogleCloudConnectorsV1ConfigVariable[] additionalVariables;
+
     public GoogleCloudConnectorsV1SslConfig withAdditionalVariables(GoogleCloudConnectorsV1ConfigVariable[] additionalVariables) {
         this.additionalVariables = additionalVariables;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertType")
     public GoogleCloudConnectorsV1SslConfigClientCertTypeEnum clientCertType;
+
     public GoogleCloudConnectorsV1SslConfig withClientCertType(GoogleCloudConnectorsV1SslConfigClientCertTypeEnum clientCertType) {
         this.clientCertType = clientCertType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public GoogleCloudConnectorsV1Secret clientCertificate;
+
     public GoogleCloudConnectorsV1SslConfig withClientCertificate(GoogleCloudConnectorsV1Secret clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPrivateKey")
     public GoogleCloudConnectorsV1Secret clientPrivateKey;
+
     public GoogleCloudConnectorsV1SslConfig withClientPrivateKey(GoogleCloudConnectorsV1Secret clientPrivateKey) {
         this.clientPrivateKey = clientPrivateKey;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPrivateKeyPass")
     public GoogleCloudConnectorsV1Secret clientPrivateKeyPass;
+
     public GoogleCloudConnectorsV1SslConfig withClientPrivateKeyPass(GoogleCloudConnectorsV1Secret clientPrivateKeyPass) {
         this.clientPrivateKeyPass = clientPrivateKeyPass;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateServerCertificate")
     public GoogleCloudConnectorsV1Secret privateServerCertificate;
+
     public GoogleCloudConnectorsV1SslConfig withPrivateServerCertificate(GoogleCloudConnectorsV1Secret privateServerCertificate) {
         this.privateServerCertificate = privateServerCertificate;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertType")
     public GoogleCloudConnectorsV1SslConfigServerCertTypeEnum serverCertType;
+
     public GoogleCloudConnectorsV1SslConfig withServerCertType(GoogleCloudConnectorsV1SslConfigServerCertTypeEnum serverCertType) {
         this.serverCertType = serverCertType;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trustModel")
     public GoogleCloudConnectorsV1SslConfigTrustModelEnum trustModel;
+
     public GoogleCloudConnectorsV1SslConfig withTrustModel(GoogleCloudConnectorsV1SslConfigTrustModelEnum trustModel) {
         this.trustModel = trustModel;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudConnectorsV1SslConfigTypeEnum type;
+
     public GoogleCloudConnectorsV1SslConfig withType(GoogleCloudConnectorsV1SslConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudConnectorsV1SslConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useSsl")
     public Boolean useSsl;
+
     public GoogleCloudConnectorsV1SslConfig withUseSsl(Boolean useSsl) {
         this.useSsl = useSsl;
         return this;
     }
     
+    public GoogleCloudConnectorsV1SslConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SignOutUserResponse {
     
     public String contentType;
+
     public SignOutUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SignOutUserResponse {
      */
     
     public Object internalServerErrorException;
+
     public SignOutUserResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class SignOutUserResponse {
      */
     
     public Object invalidRequestException;
+
     public SignOutUserResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class SignOutUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SignOutUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class SignOutUserResponse {
      */
     
     public java.util.Map<String, Object> signOutUserResponse;
+
     public SignOutUserResponse withSignOutUserResponse(java.util.Map<String, Object> signOutUserResponse) {
         this.signOutUserResponse = signOutUserResponse;
         return this;
@@ -56,6 +62,7 @@ public class SignOutUserResponse {
     
     
     public Integer statusCode;
+
     public SignOutUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class SignOutUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SignOutUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class SignOutUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SignOutUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class SignOutUserResponse {
      */
     
     public Object unauthorizedException;
+
     public SignOutUserResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public SignOutUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

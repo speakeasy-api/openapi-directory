@@ -12,6 +12,7 @@ public class GetTransactionInfoResponseVoutScriptPubKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addresses")
     public String[] addresses;
+
     public GetTransactionInfoResponseVoutScriptPubKey withAddresses(String[] addresses) {
         this.addresses = addresses;
         return this;
@@ -20,6 +21,7 @@ public class GetTransactionInfoResponseVoutScriptPubKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asm")
     public String asm;
+
     public GetTransactionInfoResponseVoutScriptPubKey withAsm(String asm) {
         this.asm = asm;
         return this;
@@ -28,6 +30,7 @@ public class GetTransactionInfoResponseVoutScriptPubKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hex")
     public String hex;
+
     public GetTransactionInfoResponseVoutScriptPubKey withHex(String hex) {
         this.hex = hex;
         return this;
@@ -36,6 +39,7 @@ public class GetTransactionInfoResponseVoutScriptPubKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reqSigs")
     public Double reqSigs;
+
     public GetTransactionInfoResponseVoutScriptPubKey withReqSigs(Double reqSigs) {
         this.reqSigs = reqSigs;
         return this;
@@ -44,9 +48,11 @@ public class GetTransactionInfoResponseVoutScriptPubKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetTransactionInfoResponseVoutScriptPubKey withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetTransactionInfoResponseVoutScriptPubKey(){}
 }

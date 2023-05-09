@@ -12,6 +12,7 @@ public class ProjectNote {
      */
     @JsonProperty("abstract")
     public String abstract_;
+
     public ProjectNote withAbstract(String abstract_) {
         this.abstract_ = abstract_;
         return this;
@@ -22,6 +23,7 @@ public class ProjectNote {
      */
     @JsonProperty("created_date")
     public String createdDate;
+
     public ProjectNote withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -32,6 +34,7 @@ public class ProjectNote {
      */
     @JsonProperty("id")
     public Long id;
+
     public ProjectNote withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class ProjectNote {
      */
     @JsonProperty("modified_date")
     public String modifiedDate;
+
     public ProjectNote withModifiedDate(String modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -52,6 +56,7 @@ public class ProjectNote {
      */
     @JsonProperty("user_id")
     public Long userId;
+
     public ProjectNote withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -62,9 +67,18 @@ public class ProjectNote {
      */
     @JsonProperty("user_name")
     public String userName;
+
     public ProjectNote withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ProjectNote(@JsonProperty("abstract") String abstract_, @JsonProperty("created_date") String createdDate, @JsonProperty("id") Long id, @JsonProperty("modified_date") String modifiedDate, @JsonProperty("user_id") Long userId, @JsonProperty("user_name") String userName) {
+        this.abstract_ = abstract_;
+        this.createdDate = createdDate;
+        this.id = id;
+        this.modifiedDate = modifiedDate;
+        this.userId = userId;
+        this.userName = userName;
+  }
 }

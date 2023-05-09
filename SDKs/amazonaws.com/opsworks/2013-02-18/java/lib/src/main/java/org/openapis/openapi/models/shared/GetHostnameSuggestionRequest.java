@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetHostnameSuggestionRequest {
     @JsonProperty("LayerId")
     public String layerId;
+
     public GetHostnameSuggestionRequest withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
     }
     
+    public GetHostnameSuggestionRequest(@JsonProperty("LayerId") String layerId) {
+        this.layerId = layerId;
+  }
 }

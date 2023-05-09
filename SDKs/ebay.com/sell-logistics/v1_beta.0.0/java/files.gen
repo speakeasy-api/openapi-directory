@@ -67,4 +67,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorParameter.java
 lib/src/main/java/org/openapis/openapi/models/shared/Rate.java
 lib/src/main/java/org/openapis/openapi/models/shared/PickupSlot.java
 lib/src/main/java/org/openapis/openapi/models/shared/ShippingQuoteRequest.java
+docs/sdk/README.md
+docs/shipment/README.md
+docs/shippingquote/README.md
 USAGE.md

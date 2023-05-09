@@ -15,9 +15,11 @@ public class ResetParameterGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroup")
     public ParameterGroup parameterGroup;
+
     public ResetParameterGroupResponse withParameterGroup(ParameterGroup parameterGroup) {
         this.parameterGroup = parameterGroup;
         return this;
     }
     
+    public ResetParameterGroupResponse(){}
 }

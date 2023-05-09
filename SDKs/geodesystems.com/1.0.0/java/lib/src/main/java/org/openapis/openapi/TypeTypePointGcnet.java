@@ -57,10 +57,8 @@ public class TypeTypePointGcnet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypePointGcnetResponse res = new org.openapis.openapi.models.operations.SearchTypePointGcnetResponse() {{
+        org.openapis.openapi.models.operations.SearchTypePointGcnetResponse res = new org.openapis.openapi.models.operations.SearchTypePointGcnetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

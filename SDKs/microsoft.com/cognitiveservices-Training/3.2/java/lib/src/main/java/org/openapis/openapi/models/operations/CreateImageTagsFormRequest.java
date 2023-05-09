@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImageTagsFormRequest {
@@ -12,6 +13,7 @@ public class CreateImageTagsFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch;
+
     public CreateImageTagsFormRequest withImageTagCreateBatch(org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch) {
         this.imageTagCreateBatch = imageTagCreateBatch;
         return this;
@@ -22,9 +24,14 @@ public class CreateImageTagsFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateImageTagsFormRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateImageTagsFormRequest(@JsonProperty("ImageTagCreateBatch") org.openapis.openapi.models.shared.ImageTagCreateBatch imageTagCreateBatch, @JsonProperty("projectId") String projectId) {
+        this.imageTagCreateBatch = imageTagCreateBatch;
+        this.projectId = projectId;
+  }
 }

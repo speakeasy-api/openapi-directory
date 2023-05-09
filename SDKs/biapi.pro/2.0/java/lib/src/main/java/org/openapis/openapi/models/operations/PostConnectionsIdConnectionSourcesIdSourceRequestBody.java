@@ -12,6 +12,7 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled")
     public Boolean disabled;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -22,9 +23,11 @@ public class PostConnectionsIdConnectionSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=synchronize")
     public Boolean synchronize;
+
     public PostConnectionsIdConnectionSourcesIdSourceRequestBody withSynchronize(Boolean synchronize) {
         this.synchronize = synchronize;
         return this;
     }
     
+    public PostConnectionsIdConnectionSourcesIdSourceRequestBody(){}
 }

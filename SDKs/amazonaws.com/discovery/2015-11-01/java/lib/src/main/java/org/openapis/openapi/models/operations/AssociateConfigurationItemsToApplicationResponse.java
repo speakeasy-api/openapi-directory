@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateConfigurationItemsToApplicationResponse {
@@ -12,6 +13,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public java.util.Map<String, Object> associateConfigurationItemsToApplicationResponse;
+
     public AssociateConfigurationItemsToApplicationResponse withAssociateConfigurationItemsToApplicationResponse(java.util.Map<String, Object> associateConfigurationItemsToApplicationResponse) {
         this.associateConfigurationItemsToApplicationResponse = associateConfigurationItemsToApplicationResponse;
         return this;
@@ -22,6 +24,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public Object authorizationErrorException;
+
     public AssociateConfigurationItemsToApplicationResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -29,6 +32,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
     
     
     public String contentType;
+
     public AssociateConfigurationItemsToApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public AssociateConfigurationItemsToApplicationResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public AssociateConfigurationItemsToApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public AssociateConfigurationItemsToApplicationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
      */
     
     public Object serverInternalErrorException;
+
     public AssociateConfigurationItemsToApplicationResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -76,6 +84,7 @@ public class AssociateConfigurationItemsToApplicationResponse {
     
     
     public Integer statusCode;
+
     public AssociateConfigurationItemsToApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AssociateConfigurationItemsToApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateConfigurationItemsToApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateConfigurationItemsToApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

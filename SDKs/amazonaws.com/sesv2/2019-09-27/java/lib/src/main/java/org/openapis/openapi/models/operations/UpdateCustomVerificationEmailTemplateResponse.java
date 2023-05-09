@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCustomVerificationEmailTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateCustomVerificationEmailTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
     
     
     public String contentType;
+
     public UpdateCustomVerificationEmailTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateCustomVerificationEmailTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateCustomVerificationEmailTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCustomVerificationEmailTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCustomVerificationEmailTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateCustomVerificationEmailTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateCustomVerificationEmailTemplateResponse {
      */
     
     public java.util.Map<String, Object> updateCustomVerificationEmailTemplateResponse;
+
     public UpdateCustomVerificationEmailTemplateResponse withUpdateCustomVerificationEmailTemplateResponse(java.util.Map<String, Object> updateCustomVerificationEmailTemplateResponse) {
         this.updateCustomVerificationEmailTemplateResponse = updateCustomVerificationEmailTemplateResponse;
         return this;
     }
     
+    public UpdateCustomVerificationEmailTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

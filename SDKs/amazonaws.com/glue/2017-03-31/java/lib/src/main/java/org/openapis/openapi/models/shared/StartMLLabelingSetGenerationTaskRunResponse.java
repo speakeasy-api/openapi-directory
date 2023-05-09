@@ -15,9 +15,11 @@ public class StartMLLabelingSetGenerationTaskRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public StartMLLabelingSetGenerationTaskRunResponse withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
     }
     
+    public StartMLLabelingSetGenerationTaskRunResponse(){}
 }

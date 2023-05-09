@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetGroup {
     
     public Boolean healthCheckEnabled;
+
     public TargetGroup withHealthCheckEnabled(Boolean healthCheckEnabled) {
         this.healthCheckEnabled = healthCheckEnabled;
         return this;
@@ -19,6 +20,7 @@ public class TargetGroup {
     
     
     public Long healthCheckIntervalSeconds;
+
     public TargetGroup withHealthCheckIntervalSeconds(Long healthCheckIntervalSeconds) {
         this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
         return this;
@@ -26,6 +28,7 @@ public class TargetGroup {
     
     
     public String healthCheckPath;
+
     public TargetGroup withHealthCheckPath(String healthCheckPath) {
         this.healthCheckPath = healthCheckPath;
         return this;
@@ -33,6 +36,7 @@ public class TargetGroup {
     
     
     public String healthCheckPort;
+
     public TargetGroup withHealthCheckPort(String healthCheckPort) {
         this.healthCheckPort = healthCheckPort;
         return this;
@@ -40,6 +44,7 @@ public class TargetGroup {
     
     
     public ProtocolEnumEnum healthCheckProtocol;
+
     public TargetGroup withHealthCheckProtocol(ProtocolEnumEnum healthCheckProtocol) {
         this.healthCheckProtocol = healthCheckProtocol;
         return this;
@@ -47,6 +52,7 @@ public class TargetGroup {
     
     
     public Long healthCheckTimeoutSeconds;
+
     public TargetGroup withHealthCheckTimeoutSeconds(Long healthCheckTimeoutSeconds) {
         this.healthCheckTimeoutSeconds = healthCheckTimeoutSeconds;
         return this;
@@ -54,6 +60,7 @@ public class TargetGroup {
     
     
     public Long healthyThresholdCount;
+
     public TargetGroup withHealthyThresholdCount(Long healthyThresholdCount) {
         this.healthyThresholdCount = healthyThresholdCount;
         return this;
@@ -61,6 +68,7 @@ public class TargetGroup {
     
     
     public TargetGroupIpAddressTypeEnumEnum ipAddressType;
+
     public TargetGroup withIpAddressType(TargetGroupIpAddressTypeEnumEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -68,6 +76,7 @@ public class TargetGroup {
     
     
     public String[] loadBalancerArns;
+
     public TargetGroup withLoadBalancerArns(String[] loadBalancerArns) {
         this.loadBalancerArns = loadBalancerArns;
         return this;
@@ -75,6 +84,7 @@ public class TargetGroup {
     
     
     public Matcher matcher;
+
     public TargetGroup withMatcher(Matcher matcher) {
         this.matcher = matcher;
         return this;
@@ -82,6 +92,7 @@ public class TargetGroup {
     
     
     public Long port;
+
     public TargetGroup withPort(Long port) {
         this.port = port;
         return this;
@@ -89,6 +100,7 @@ public class TargetGroup {
     
     
     public ProtocolEnumEnum protocol;
+
     public TargetGroup withProtocol(ProtocolEnumEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -96,6 +108,7 @@ public class TargetGroup {
     
     
     public String protocolVersion;
+
     public TargetGroup withProtocolVersion(String protocolVersion) {
         this.protocolVersion = protocolVersion;
         return this;
@@ -103,6 +116,7 @@ public class TargetGroup {
     
     
     public String targetGroupArn;
+
     public TargetGroup withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -110,6 +124,7 @@ public class TargetGroup {
     
     
     public String targetGroupName;
+
     public TargetGroup withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
@@ -117,6 +132,7 @@ public class TargetGroup {
     
     
     public TargetTypeEnumEnum targetType;
+
     public TargetGroup withTargetType(TargetTypeEnumEnum targetType) {
         this.targetType = targetType;
         return this;
@@ -124,6 +140,7 @@ public class TargetGroup {
     
     
     public Long unhealthyThresholdCount;
+
     public TargetGroup withUnhealthyThresholdCount(Long unhealthyThresholdCount) {
         this.unhealthyThresholdCount = unhealthyThresholdCount;
         return this;
@@ -131,9 +148,11 @@ public class TargetGroup {
     
     
     public String vpcId;
+
     public TargetGroup withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public TargetGroup(){}
 }

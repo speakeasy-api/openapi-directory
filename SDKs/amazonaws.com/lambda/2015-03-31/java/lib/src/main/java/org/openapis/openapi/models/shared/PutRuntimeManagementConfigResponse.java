@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRuntimeManagementConfigResponse {
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public PutRuntimeManagementConfigResponse withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -22,6 +23,7 @@ public class PutRuntimeManagementConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersionArn")
     public String runtimeVersionArn;
+
     public PutRuntimeManagementConfigResponse withRuntimeVersionArn(String runtimeVersionArn) {
         this.runtimeVersionArn = runtimeVersionArn;
         return this;
@@ -29,9 +31,14 @@ public class PutRuntimeManagementConfigResponse {
     
     @JsonProperty("UpdateRuntimeOn")
     public UpdateRuntimeOnEnum updateRuntimeOn;
+
     public PutRuntimeManagementConfigResponse withUpdateRuntimeOn(UpdateRuntimeOnEnum updateRuntimeOn) {
         this.updateRuntimeOn = updateRuntimeOn;
         return this;
     }
     
+    public PutRuntimeManagementConfigResponse(@JsonProperty("FunctionArn") String functionArn, @JsonProperty("UpdateRuntimeOn") UpdateRuntimeOnEnum updateRuntimeOn) {
+        this.functionArn = functionArn;
+        this.updateRuntimeOn = updateRuntimeOn;
+  }
 }

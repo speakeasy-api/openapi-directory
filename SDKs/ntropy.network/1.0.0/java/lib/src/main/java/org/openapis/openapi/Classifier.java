@@ -50,11 +50,9 @@ public class Classifier {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsResponse res = new org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsResponse() {{
+        org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsResponse res = new org.openapis.openapi.models.operations.GetABatchOfBusinessTransactionClassificationResultsResponse(contentType, httpRes.statusCode()) {{
             getABatchOfBusinessTransactionClassificationResults200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,11 +89,9 @@ public class Classifier {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse res = new org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse() {{
+        org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse res = new org.openapis.openapi.models.operations.GetABatchOfConsumerTransactionClassificationResultsResponse(contentType, httpRes.statusCode()) {{
             getABatchOfConsumerTransactionClassificationResults200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

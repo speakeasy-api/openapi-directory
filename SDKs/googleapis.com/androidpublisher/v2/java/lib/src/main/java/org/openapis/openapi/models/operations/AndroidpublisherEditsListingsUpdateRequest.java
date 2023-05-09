@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsListingsUpdateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Listing listing;
+
     public AndroidpublisherEditsListingsUpdateRequest withListing(org.openapis.openapi.models.shared.Listing listing) {
         this.listing = listing;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsListingsUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsListingsUpdateRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsListingsUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsListingsUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=language")
     public String language;
+
     public AndroidpublisherEditsListingsUpdateRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsListingsUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsListingsUpdateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsListingsUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsListingsUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,9 +120,15 @@ public class AndroidpublisherEditsListingsUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AndroidpublisherEditsListingsUpdateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AndroidpublisherEditsListingsUpdateRequest(@JsonProperty("editId") String editId, @JsonProperty("language") String language, @JsonProperty("packageName") String packageName) {
+        this.editId = editId;
+        this.language = language;
+        this.packageName = packageName;
+  }
 }

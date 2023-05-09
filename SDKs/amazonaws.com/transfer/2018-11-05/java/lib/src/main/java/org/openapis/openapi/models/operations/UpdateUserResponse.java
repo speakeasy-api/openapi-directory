@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserResponse {
     
     public String contentType;
+
     public UpdateUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateUserResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateUserResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateUserResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUserResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateUserResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateUserResponse {
      */
     
     public Object throttlingException;
+
     public UpdateUserResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateUserResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserResponse updateUserResponse;
+
     public UpdateUserResponse withUpdateUserResponse(org.openapis.openapi.models.shared.UpdateUserResponse updateUserResponse) {
         this.updateUserResponse = updateUserResponse;
         return this;
     }
     
+    public UpdateUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

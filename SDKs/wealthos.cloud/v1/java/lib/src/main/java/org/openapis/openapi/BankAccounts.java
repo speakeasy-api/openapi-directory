@@ -73,7 +73,7 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBankAccountResponse res = new org.openapis.openapi.models.operations.UpdateBankAccountResponse() {{
+        org.openapis.openapi.models.operations.UpdateBankAccountResponse res = new org.openapis.openapi.models.operations.UpdateBankAccountResponse(contentType, httpRes.statusCode()) {{
             updateBankAccount201ApplicationJSONObject = null;
             updateBankAccount400ApplicationJSONObject = null;
             updateBankAccount401ApplicationJSONObject = null;
@@ -83,8 +83,6 @@ public class BankAccounts {
             updateBankAccount429ApplicationJSONObject = null;
             updateBankAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -179,7 +177,7 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBankAccountResponse res = new org.openapis.openapi.models.operations.CreateBankAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateBankAccountResponse res = new org.openapis.openapi.models.operations.CreateBankAccountResponse(contentType, httpRes.statusCode()) {{
             createBankAccount201ApplicationJSONObject = null;
             createBankAccount400ApplicationJSONObject = null;
             createBankAccount401ApplicationJSONObject = null;
@@ -189,8 +187,6 @@ public class BankAccounts {
             createBankAccount429ApplicationJSONObject = null;
             createBankAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -289,7 +285,7 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllBankAccountsResponse res = new org.openapis.openapi.models.operations.GetAllBankAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetAllBankAccountsResponse res = new org.openapis.openapi.models.operations.GetAllBankAccountsResponse(contentType, httpRes.statusCode()) {{
             getAllBankAccounts200ApplicationJSONObject = null;
             getAllBankAccounts400ApplicationJSONObject = null;
             getAllBankAccounts401ApplicationJSONObject = null;
@@ -299,8 +295,6 @@ public class BankAccounts {
             getAllBankAccounts429ApplicationJSONObject = null;
             getAllBankAccounts500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,7 +387,7 @@ public class BankAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBankAccountResponse res = new org.openapis.openapi.models.operations.GetBankAccountResponse() {{
+        org.openapis.openapi.models.operations.GetBankAccountResponse res = new org.openapis.openapi.models.operations.GetBankAccountResponse(contentType, httpRes.statusCode()) {{
             getBankAccount200ApplicationJSONObject = null;
             getBankAccount400ApplicationJSONObject = null;
             getBankAccount401ApplicationJSONObject = null;
@@ -403,8 +397,6 @@ public class BankAccounts {
             getBankAccount429ApplicationJSONObject = null;
             getBankAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

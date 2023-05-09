@@ -15,6 +15,7 @@ public class DescribeAccessControlConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessControlList")
     public Principal[] accessControlList;
+
     public DescribeAccessControlConfigurationResponse withAccessControlList(Principal[] accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -23,6 +24,7 @@ public class DescribeAccessControlConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeAccessControlConfigurationResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class DescribeAccessControlConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public DescribeAccessControlConfigurationResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,6 +42,7 @@ public class DescribeAccessControlConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HierarchicalAccessControlList")
     public HierarchicalPrincipal[] hierarchicalAccessControlList;
+
     public DescribeAccessControlConfigurationResponse withHierarchicalAccessControlList(HierarchicalPrincipal[] hierarchicalAccessControlList) {
         this.hierarchicalAccessControlList = hierarchicalAccessControlList;
         return this;
@@ -46,9 +50,13 @@ public class DescribeAccessControlConfigurationResponse {
     
     @JsonProperty("Name")
     public String name;
+
     public DescribeAccessControlConfigurationResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DescribeAccessControlConfigurationResponse(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

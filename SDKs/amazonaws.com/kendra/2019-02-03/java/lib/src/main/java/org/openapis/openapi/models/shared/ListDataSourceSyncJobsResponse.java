@@ -15,6 +15,7 @@ public class ListDataSourceSyncJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("History")
     public DataSourceSyncJob[] history;
+
     public ListDataSourceSyncJobsResponse withHistory(DataSourceSyncJob[] history) {
         this.history = history;
         return this;
@@ -23,9 +24,11 @@ public class ListDataSourceSyncJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataSourceSyncJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataSourceSyncJobsResponse(){}
 }

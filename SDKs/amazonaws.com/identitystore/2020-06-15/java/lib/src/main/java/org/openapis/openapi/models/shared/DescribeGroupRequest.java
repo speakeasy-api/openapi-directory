@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeGroupRequest {
     @JsonProperty("GroupId")
     public String groupId;
+
     public DescribeGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeGroupRequest {
     
     @JsonProperty("IdentityStoreId")
     public String identityStoreId;
+
     public DescribeGroupRequest withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
     }
     
+    public DescribeGroupRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("IdentityStoreId") String identityStoreId) {
+        this.groupId = groupId;
+        this.identityStoreId = identityStoreId;
+  }
 }

@@ -15,6 +15,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public Object[] errors;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSON withErrors(Object[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public RootV1ScoringsConsolidatedDaily200ApplicationJSONResult[] result;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSON withResult(RootV1ScoringsConsolidatedDaily200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
@@ -31,6 +33,7 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public Double status;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSON withStatus(Double status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class RootV1ScoringsConsolidatedDaily200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public RootV1ScoringsConsolidatedDaily200ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public RootV1ScoringsConsolidatedDaily200ApplicationJSON(){}
 }

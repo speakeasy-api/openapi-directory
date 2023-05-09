@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkAclsResult {
     
     public DescribeNetworkAclsResultNetworkAcls[] networkAcls;
+
     public DescribeNetworkAclsResult withNetworkAcls(DescribeNetworkAclsResultNetworkAcls[] networkAcls) {
         this.networkAcls = networkAcls;
         return this;
@@ -19,9 +20,11 @@ public class DescribeNetworkAclsResult {
     
     
     public String nextToken;
+
     public DescribeNetworkAclsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkAclsResult(){}
 }

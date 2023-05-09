@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteResult {
     
     public Boolean return_;
+
     public CreateRouteResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public CreateRouteResult(){}
 }

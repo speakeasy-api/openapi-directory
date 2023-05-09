@@ -18,6 +18,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicksLookbackWindow")
     public Integer clicksLookbackWindow;
+
     public ReportPathToConversionCriteriaReportProperties withClicksLookbackWindow(Integer clicksLookbackWindow) {
         this.clicksLookbackWindow = clicksLookbackWindow;
         return this;
@@ -29,6 +30,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionsLookbackWindow")
     public Integer impressionsLookbackWindow;
+
     public ReportPathToConversionCriteriaReportProperties withImpressionsLookbackWindow(Integer impressionsLookbackWindow) {
         this.impressionsLookbackWindow = impressionsLookbackWindow;
         return this;
@@ -40,6 +42,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeAttributedIPConversions")
     public Boolean includeAttributedIPConversions;
+
     public ReportPathToConversionCriteriaReportProperties withIncludeAttributedIPConversions(Boolean includeAttributedIPConversions) {
         this.includeAttributedIPConversions = includeAttributedIPConversions;
         return this;
@@ -51,6 +54,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeUnattributedCookieConversions")
     public Boolean includeUnattributedCookieConversions;
+
     public ReportPathToConversionCriteriaReportProperties withIncludeUnattributedCookieConversions(Boolean includeUnattributedCookieConversions) {
         this.includeUnattributedCookieConversions = includeUnattributedCookieConversions;
         return this;
@@ -62,6 +66,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeUnattributedIPConversions")
     public Boolean includeUnattributedIPConversions;
+
     public ReportPathToConversionCriteriaReportProperties withIncludeUnattributedIPConversions(Boolean includeUnattributedIPConversions) {
         this.includeUnattributedIPConversions = includeUnattributedIPConversions;
         return this;
@@ -73,6 +78,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumClickInteractions")
     public Integer maximumClickInteractions;
+
     public ReportPathToConversionCriteriaReportProperties withMaximumClickInteractions(Integer maximumClickInteractions) {
         this.maximumClickInteractions = maximumClickInteractions;
         return this;
@@ -84,6 +90,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumImpressionInteractions")
     public Integer maximumImpressionInteractions;
+
     public ReportPathToConversionCriteriaReportProperties withMaximumImpressionInteractions(Integer maximumImpressionInteractions) {
         this.maximumImpressionInteractions = maximumImpressionInteractions;
         return this;
@@ -95,6 +102,7 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumInteractionGap")
     public Integer maximumInteractionGap;
+
     public ReportPathToConversionCriteriaReportProperties withMaximumInteractionGap(Integer maximumInteractionGap) {
         this.maximumInteractionGap = maximumInteractionGap;
         return this;
@@ -106,9 +114,11 @@ public class ReportPathToConversionCriteriaReportProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivotOnInteractionPath")
     public Boolean pivotOnInteractionPath;
+
     public ReportPathToConversionCriteriaReportProperties withPivotOnInteractionPath(Boolean pivotOnInteractionPath) {
         this.pivotOnInteractionPath = pivotOnInteractionPath;
         return this;
     }
     
+    public ReportPathToConversionCriteriaReportProperties(){}
 }

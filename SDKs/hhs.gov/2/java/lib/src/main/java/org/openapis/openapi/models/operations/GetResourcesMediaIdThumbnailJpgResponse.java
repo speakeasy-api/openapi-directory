@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResourcesMediaIdThumbnailJpgResponse {
     
     public String contentType;
+
     public GetResourcesMediaIdThumbnailJpgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetResourcesMediaIdThumbnailJpgResponse {
     
     
     public Integer statusCode;
+
     public GetResourcesMediaIdThumbnailJpgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetResourcesMediaIdThumbnailJpgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResourcesMediaIdThumbnailJpgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetResourcesMediaIdThumbnailJpgResponse {
      */
     
     public java.util.Map<String, Object> getResourcesMediaIdThumbnailJpg200ApplicationJSONObject;
+
     public GetResourcesMediaIdThumbnailJpgResponse withGetResourcesMediaIdThumbnailJpg200ApplicationJSONObject(java.util.Map<String, Object> getResourcesMediaIdThumbnailJpg200ApplicationJSONObject) {
         this.getResourcesMediaIdThumbnailJpg200ApplicationJSONObject = getResourcesMediaIdThumbnailJpg200ApplicationJSONObject;
         return this;
     }
     
+    public GetResourcesMediaIdThumbnailJpgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

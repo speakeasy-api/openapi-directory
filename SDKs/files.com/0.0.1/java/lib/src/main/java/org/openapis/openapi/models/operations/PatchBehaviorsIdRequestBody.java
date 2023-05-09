@@ -12,6 +12,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=attachment_delete")
     public Boolean attachmentDelete;
+
     public PatchBehaviorsIdRequestBody withAttachmentDelete(Boolean attachmentDelete) {
         this.attachmentDelete = attachmentDelete;
         return this;
@@ -22,6 +23,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PatchBehaviorsIdRequestBodyAttachmentFile attachmentFile;
+
     public PatchBehaviorsIdRequestBody withAttachmentFile(PatchBehaviorsIdRequestBodyAttachmentFile attachmentFile) {
         this.attachmentFile = attachmentFile;
         return this;
@@ -32,6 +34,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=behavior")
     public String behavior;
+
     public PatchBehaviorsIdRequestBody withBehavior(String behavior) {
         this.behavior = behavior;
         return this;
@@ -42,6 +45,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PatchBehaviorsIdRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +56,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PatchBehaviorsIdRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PatchBehaviorsIdRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -72,9 +78,11 @@ public class PatchBehaviorsIdRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=value")
     public String value;
+
     public PatchBehaviorsIdRequestBody withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PatchBehaviorsIdRequestBody(){}
 }

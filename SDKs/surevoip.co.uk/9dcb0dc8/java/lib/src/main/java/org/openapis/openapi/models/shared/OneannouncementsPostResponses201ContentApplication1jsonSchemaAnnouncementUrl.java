@@ -12,6 +12,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download")
     public String download;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl withDownload(String download) {
         this.download = download;
         return this;
@@ -20,6 +21,7 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl withHref(String href) {
         this.href = href;
         return this;
@@ -28,9 +30,11 @@ public class OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnoun
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public OneannouncementsPostResponses201ContentApplication1jsonSchemaAnnouncementUrl(){}
 }

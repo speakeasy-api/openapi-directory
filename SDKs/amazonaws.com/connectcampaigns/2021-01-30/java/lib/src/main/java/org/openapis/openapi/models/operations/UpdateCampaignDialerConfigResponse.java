@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCampaignDialerConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateCampaignDialerConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateCampaignDialerConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCampaignDialerConfigResponse {
      */
     
     public Object conflictException;
+
     public UpdateCampaignDialerConfigResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCampaignDialerConfigResponse {
     
     
     public String contentType;
+
     public UpdateCampaignDialerConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCampaignDialerConfigResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCampaignDialerConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateCampaignDialerConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCampaignDialerConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateCampaignDialerConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateCampaignDialerConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCampaignDialerConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCampaignDialerConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateCampaignDialerConfigResponse {
      */
     
     public Object validationException;
+
     public UpdateCampaignDialerConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCampaignDialerConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

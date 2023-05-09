@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchTransitGatewayMulticastGroupsResult {
     
     public SearchTransitGatewayMulticastGroupsResultMulticastGroups[] multicastGroups;
+
     public SearchTransitGatewayMulticastGroupsResult withMulticastGroups(SearchTransitGatewayMulticastGroupsResultMulticastGroups[] multicastGroups) {
         this.multicastGroups = multicastGroups;
         return this;
@@ -19,9 +20,11 @@ public class SearchTransitGatewayMulticastGroupsResult {
     
     
     public String nextToken;
+
     public SearchTransitGatewayMulticastGroupsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchTransitGatewayMulticastGroupsResult(){}
 }

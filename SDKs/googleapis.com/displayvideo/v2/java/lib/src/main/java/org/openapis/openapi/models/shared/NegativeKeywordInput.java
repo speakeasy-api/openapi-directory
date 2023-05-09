@@ -18,9 +18,11 @@ public class NegativeKeywordInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywordValue")
     public String keywordValue;
+
     public NegativeKeywordInput withKeywordValue(String keywordValue) {
         this.keywordValue = keywordValue;
         return this;
     }
     
+    public NegativeKeywordInput(){}
 }

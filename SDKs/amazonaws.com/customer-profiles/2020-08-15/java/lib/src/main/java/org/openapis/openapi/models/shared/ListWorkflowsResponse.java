@@ -15,6 +15,7 @@ public class ListWorkflowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public ListWorkflowsItem[] items;
+
     public ListWorkflowsResponse withItems(ListWorkflowsItem[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class ListWorkflowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkflowsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListWorkflowsResponse(){}
 }

@@ -20,6 +20,7 @@ public class IdentityUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataStorage")
     public Long dataStorage;
+
     public IdentityUsage withDataStorage(Long dataStorage) {
         this.dataStorage = dataStorage;
         return this;
@@ -28,6 +29,7 @@ public class IdentityUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetCount")
     public Long datasetCount;
+
     public IdentityUsage withDatasetCount(Long datasetCount) {
         this.datasetCount = datasetCount;
         return this;
@@ -36,6 +38,7 @@ public class IdentityUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public IdentityUsage withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -44,6 +47,7 @@ public class IdentityUsage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public IdentityUsage withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -54,9 +58,11 @@ public class IdentityUsage {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public IdentityUsage withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
     }
     
+    public IdentityUsage(){}
 }

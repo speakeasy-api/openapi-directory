@@ -18,9 +18,11 @@ public class HotKeyDebuggingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectedHotKeys")
     public java.util.Map<String, HotKeyInfo> detectedHotKeys;
+
     public HotKeyDebuggingInfo withDetectedHotKeys(java.util.Map<String, HotKeyInfo> detectedHotKeys) {
         this.detectedHotKeys = detectedHotKeys;
         return this;
     }
     
+    public HotKeyDebuggingInfo(){}
 }

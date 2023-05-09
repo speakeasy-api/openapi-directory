@@ -18,9 +18,11 @@ public class TlsRouteRouteAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public TlsRouteRouteDestination[] destinations;
+
     public TlsRouteRouteAction withDestinations(TlsRouteRouteDestination[] destinations) {
         this.destinations = destinations;
         return this;
     }
     
+    public TlsRouteRouteAction(){}
 }

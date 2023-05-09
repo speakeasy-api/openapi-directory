@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTDeleteHsmClientCertificateResponse {
     
     public byte[] body;
+
     public POSTDeleteHsmClientCertificateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTDeleteHsmClientCertificateResponse {
     
     
     public String contentType;
+
     public POSTDeleteHsmClientCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTDeleteHsmClientCertificateResponse {
     
     
     public Integer statusCode;
+
     public POSTDeleteHsmClientCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTDeleteHsmClientCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTDeleteHsmClientCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTDeleteHsmClientCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class GetSavingsPlansUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetSavingsPlansUtilizationRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetSavingsPlansUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetSavingsPlansUtilizationRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -28,6 +30,7 @@ public class GetSavingsPlansUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition sortBy;
+
     public GetSavingsPlansUtilizationRequest withSortBy(SortDefinition sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -35,9 +38,13 @@ public class GetSavingsPlansUtilizationRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetSavingsPlansUtilizationRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetSavingsPlansUtilizationRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

@@ -15,9 +15,11 @@ public class RegisterScalableTargetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableTargetARN")
     public String scalableTargetARN;
+
     public RegisterScalableTargetResponse withScalableTargetARN(String scalableTargetARN) {
         this.scalableTargetARN = scalableTargetARN;
         return this;
     }
     
+    public RegisterScalableTargetResponse(){}
 }

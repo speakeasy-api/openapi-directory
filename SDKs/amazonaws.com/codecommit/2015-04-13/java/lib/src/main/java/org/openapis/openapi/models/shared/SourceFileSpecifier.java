@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SourceFileSpecifier {
     @JsonProperty("filePath")
     public String filePath;
+
     public SourceFileSpecifier withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -22,9 +23,13 @@ public class SourceFileSpecifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMove")
     public Boolean isMove;
+
     public SourceFileSpecifier withIsMove(Boolean isMove) {
         this.isMove = isMove;
         return this;
     }
     
+    public SourceFileSpecifier(@JsonProperty("filePath") String filePath) {
+        this.filePath = filePath;
+  }
 }

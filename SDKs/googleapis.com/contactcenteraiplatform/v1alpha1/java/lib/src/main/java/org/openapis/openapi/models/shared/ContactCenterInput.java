@@ -18,6 +18,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUser")
     public AdminUser adminUser;
+
     public ContactCenterInput withAdminUser(AdminUser adminUser) {
         this.adminUser = adminUser;
         return this;
@@ -29,6 +30,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ccaipManagedUsers")
     public Boolean ccaipManagedUsers;
+
     public ContactCenterInput withCcaipManagedUsers(Boolean ccaipManagedUsers) {
         this.ccaipManagedUsers = ccaipManagedUsers;
         return this;
@@ -40,6 +42,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDomainPrefix")
     public String customerDomainPrefix;
+
     public ContactCenterInput withCustomerDomainPrefix(String customerDomainPrefix) {
         this.customerDomainPrefix = customerDomainPrefix;
         return this;
@@ -51,6 +54,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ContactCenterInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConfig")
     public InstanceConfig instanceConfig;
+
     public ContactCenterInput withInstanceConfig(InstanceConfig instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
@@ -73,6 +78,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ContactCenterInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -84,6 +90,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContactCenterInput withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlParams")
     public SAMLParams samlParams;
+
     public ContactCenterInput withSamlParams(SAMLParams samlParams) {
         this.samlParams = samlParams;
         return this;
@@ -106,6 +114,7 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public URIs uris;
+
     public ContactCenterInput withUris(URIs uris) {
         this.uris = uris;
         return this;
@@ -117,9 +126,11 @@ public class ContactCenterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public ContactCenterInput withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public ContactCenterInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DomainsUpdateJsonRequest {
@@ -12,6 +13,7 @@ public class DomainsUpdateJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain;
+
     public DomainsUpdateJsonRequest withApiCoreDtoDomainsDomain(org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain) {
         this.apiCoreDtoDomainsDomain = apiCoreDtoDomainsDomain;
         return this;
@@ -22,9 +24,14 @@ public class DomainsUpdateJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public DomainsUpdateJsonRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public DomainsUpdateJsonRequest(@JsonProperty("Api.Core.Dto.Domains.Domain") org.openapis.openapi.models.shared.ApiCoreDtoDomainsDomain apiCoreDtoDomainsDomain, @JsonProperty("id") Long id) {
+        this.apiCoreDtoDomainsDomain = apiCoreDtoDomainsDomain;
+        this.id = id;
+  }
 }

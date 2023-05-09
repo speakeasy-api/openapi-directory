@@ -15,6 +15,7 @@ public class TrialComponentSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJob")
     public ProcessingJob processingJob;
+
     public TrialComponentSourceDetail withProcessingJob(ProcessingJob processingJob) {
         this.processingJob = processingJob;
         return this;
@@ -23,6 +24,7 @@ public class TrialComponentSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public TrialComponentSourceDetail withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -31,6 +33,7 @@ public class TrialComponentSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJob")
     public TrainingJob trainingJob;
+
     public TrialComponentSourceDetail withTrainingJob(TrainingJob trainingJob) {
         this.trainingJob = trainingJob;
         return this;
@@ -39,9 +42,11 @@ public class TrialComponentSourceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformJob")
     public TransformJob transformJob;
+
     public TrialComponentSourceDetail withTransformJob(TransformJob transformJob) {
         this.transformJob = transformJob;
         return this;
     }
     
+    public TrialComponentSourceDetail(){}
 }

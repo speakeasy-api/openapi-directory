@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectorRequest {
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public CreateConnectorRequest withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -18,6 +19,7 @@ public class CreateConnectorRequest {
     
     @JsonProperty("As2Config")
     public As2ConnectorConfig as2Config;
+
     public CreateConnectorRequest withAs2Config(As2ConnectorConfig as2Config) {
         this.as2Config = as2Config;
         return this;
@@ -26,6 +28,7 @@ public class CreateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingRole")
     public String loggingRole;
+
     public CreateConnectorRequest withLoggingRole(String loggingRole) {
         this.loggingRole = loggingRole;
         return this;
@@ -34,6 +37,7 @@ public class CreateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateConnectorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -41,9 +45,15 @@ public class CreateConnectorRequest {
     
     @JsonProperty("Url")
     public String url;
+
     public CreateConnectorRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateConnectorRequest(@JsonProperty("AccessRole") String accessRole, @JsonProperty("As2Config") As2ConnectorConfig as2Config, @JsonProperty("Url") String url) {
+        this.accessRole = accessRole;
+        this.as2Config = as2Config;
+        this.url = url;
+  }
 }

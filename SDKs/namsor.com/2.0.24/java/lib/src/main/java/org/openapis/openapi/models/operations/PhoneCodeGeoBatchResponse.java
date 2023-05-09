@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PhoneCodeGeoBatchResponse {
@@ -12,6 +13,7 @@ public class PhoneCodeGeoBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchFirstLastNamePhoneCodedOut batchFirstLastNamePhoneCodedOut;
+
     public PhoneCodeGeoBatchResponse withBatchFirstLastNamePhoneCodedOut(org.openapis.openapi.models.shared.BatchFirstLastNamePhoneCodedOut batchFirstLastNamePhoneCodedOut) {
         this.batchFirstLastNamePhoneCodedOut = batchFirstLastNamePhoneCodedOut;
         return this;
@@ -19,6 +21,7 @@ public class PhoneCodeGeoBatchResponse {
     
     
     public String contentType;
+
     public PhoneCodeGeoBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PhoneCodeGeoBatchResponse {
     
     
     public Integer statusCode;
+
     public PhoneCodeGeoBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PhoneCodeGeoBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PhoneCodeGeoBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PhoneCodeGeoBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

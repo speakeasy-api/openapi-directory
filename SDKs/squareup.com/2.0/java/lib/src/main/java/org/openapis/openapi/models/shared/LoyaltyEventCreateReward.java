@@ -17,6 +17,7 @@ public class LoyaltyEventCreateReward {
      */
     @JsonProperty("loyalty_program_id")
     public String loyaltyProgramId;
+
     public LoyaltyEventCreateReward withLoyaltyProgramId(String loyaltyProgramId) {
         this.loyaltyProgramId = loyaltyProgramId;
         return this;
@@ -27,6 +28,7 @@ public class LoyaltyEventCreateReward {
      */
     @JsonProperty("points")
     public Long points;
+
     public LoyaltyEventCreateReward withPoints(Long points) {
         this.points = points;
         return this;
@@ -39,9 +41,14 @@ public class LoyaltyEventCreateReward {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reward_id")
     public String rewardId;
+
     public LoyaltyEventCreateReward withRewardId(String rewardId) {
         this.rewardId = rewardId;
         return this;
     }
     
+    public LoyaltyEventCreateReward(@JsonProperty("loyalty_program_id") String loyaltyProgramId, @JsonProperty("points") Long points) {
+        this.loyaltyProgramId = loyaltyProgramId;
+        this.points = points;
+  }
 }

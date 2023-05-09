@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountAttributesMessage {
     
     public String[] attributeNames;
+
     public DescribeAccountAttributesMessage withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
     }
     
+    public DescribeAccountAttributesMessage(){}
 }

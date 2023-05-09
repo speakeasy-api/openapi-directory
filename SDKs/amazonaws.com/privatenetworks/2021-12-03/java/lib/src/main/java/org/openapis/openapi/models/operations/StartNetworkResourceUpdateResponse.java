@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartNetworkResourceUpdateResponse {
     
     public String contentType;
+
     public StartNetworkResourceUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartNetworkResourceUpdateResponse {
      */
     
     public Object internalServerException;
+
     public StartNetworkResourceUpdateResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartNetworkResourceUpdateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartNetworkResourceUpdateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartNetworkResourceUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.StartNetworkResourceUpdateResponse startNetworkResourceUpdateResponse;
+
     public StartNetworkResourceUpdateResponse withStartNetworkResourceUpdateResponse(org.openapis.openapi.models.shared.StartNetworkResourceUpdateResponse startNetworkResourceUpdateResponse) {
         this.startNetworkResourceUpdateResponse = startNetworkResourceUpdateResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartNetworkResourceUpdateResponse {
     
     
     public Integer statusCode;
+
     public StartNetworkResourceUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartNetworkResourceUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartNetworkResourceUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartNetworkResourceUpdateResponse {
      */
     
     public Object validationException;
+
     public StartNetworkResourceUpdateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartNetworkResourceUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

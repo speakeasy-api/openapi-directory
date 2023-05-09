@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFileResponse {
@@ -12,6 +13,7 @@ public class GetFileResponse {
      */
     
     public Object commitDoesNotExistException;
+
     public GetFileResponse withCommitDoesNotExistException(Object commitDoesNotExistException) {
         this.commitDoesNotExistException = commitDoesNotExistException;
         return this;
@@ -19,6 +21,7 @@ public class GetFileResponse {
     
     
     public String contentType;
+
     public GetFileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetFileResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public GetFileResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -39,6 +43,7 @@ public class GetFileResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public GetFileResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class GetFileResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public GetFileResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -59,6 +65,7 @@ public class GetFileResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public GetFileResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetFileResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public GetFileResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -79,6 +87,7 @@ public class GetFileResponse {
      */
     
     public Object fileDoesNotExistException;
+
     public GetFileResponse withFileDoesNotExistException(Object fileDoesNotExistException) {
         this.fileDoesNotExistException = fileDoesNotExistException;
         return this;
@@ -89,6 +98,7 @@ public class GetFileResponse {
      */
     
     public Object fileTooLargeException;
+
     public GetFileResponse withFileTooLargeException(Object fileTooLargeException) {
         this.fileTooLargeException = fileTooLargeException;
         return this;
@@ -99,6 +109,7 @@ public class GetFileResponse {
      */
     
     public org.openapis.openapi.models.shared.GetFileOutput getFileOutput;
+
     public GetFileResponse withGetFileOutput(org.openapis.openapi.models.shared.GetFileOutput getFileOutput) {
         this.getFileOutput = getFileOutput;
         return this;
@@ -109,6 +120,7 @@ public class GetFileResponse {
      */
     
     public Object invalidCommitException;
+
     public GetFileResponse withInvalidCommitException(Object invalidCommitException) {
         this.invalidCommitException = invalidCommitException;
         return this;
@@ -119,6 +131,7 @@ public class GetFileResponse {
      */
     
     public Object invalidPathException;
+
     public GetFileResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -129,6 +142,7 @@ public class GetFileResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public GetFileResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -139,6 +153,7 @@ public class GetFileResponse {
      */
     
     public Object pathRequiredException;
+
     public GetFileResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -149,6 +164,7 @@ public class GetFileResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public GetFileResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -159,6 +175,7 @@ public class GetFileResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public GetFileResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -166,6 +183,7 @@ public class GetFileResponse {
     
     
     public Integer statusCode;
+
     public GetFileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -173,9 +191,14 @@ public class GetFileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

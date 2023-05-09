@@ -15,6 +15,7 @@ public class SqlApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputUpdates")
     public InputUpdate[] inputUpdates;
+
     public SqlApplicationConfigurationUpdate withInputUpdates(InputUpdate[] inputUpdates) {
         this.inputUpdates = inputUpdates;
         return this;
@@ -23,6 +24,7 @@ public class SqlApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputUpdates")
     public OutputUpdate[] outputUpdates;
+
     public SqlApplicationConfigurationUpdate withOutputUpdates(OutputUpdate[] outputUpdates) {
         this.outputUpdates = outputUpdates;
         return this;
@@ -31,9 +33,11 @@ public class SqlApplicationConfigurationUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceDataSourceUpdates")
     public ReferenceDataSourceUpdate[] referenceDataSourceUpdates;
+
     public SqlApplicationConfigurationUpdate withReferenceDataSourceUpdates(ReferenceDataSourceUpdate[] referenceDataSourceUpdates) {
         this.referenceDataSourceUpdates = referenceDataSourceUpdates;
         return this;
     }
     
+    public SqlApplicationConfigurationUpdate(){}
 }

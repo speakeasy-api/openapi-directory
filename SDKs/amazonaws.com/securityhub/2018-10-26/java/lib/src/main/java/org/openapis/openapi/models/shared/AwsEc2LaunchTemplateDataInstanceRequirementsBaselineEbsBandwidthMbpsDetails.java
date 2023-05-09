@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Long max;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsDetails withMax(Long max) {
         this.max = max;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbp
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Long min;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsDetails withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceRequirementsBaselineEbsBandwidthMbpsDetails(){}
 }

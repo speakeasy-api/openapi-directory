@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetJobRunResponse {
     @JsonProperty("jobRun")
     public JobRun jobRun;
+
     public GetJobRunResponse withJobRun(JobRun jobRun) {
         this.jobRun = jobRun;
         return this;
     }
     
+    public GetJobRunResponse(@JsonProperty("jobRun") JobRun jobRun) {
+        this.jobRun = jobRun;
+  }
 }

@@ -5,7 +5,6 @@
 package org.openapis.openapi;
 
 import java.net.http.HttpResponse;
-import java.nio.charset.StandardCharsets;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 
@@ -46,16 +45,14 @@ public class Openapi {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOpenApiSpecResponse res = new org.openapis.openapi.models.operations.GetOpenApiSpecResponse() {{
+        org.openapis.openapi.models.operations.GetOpenApiSpecResponse res = new org.openapis.openapi.models.operations.GetOpenApiSpecResponse(contentType, httpRes.statusCode()) {{
             getOpenApiSpec200TextPlainBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/plain")) {
-                String out = new String(httpRes.body(), StandardCharsets.UTF_8);
+                byte[] out = httpRes.body();
                 res.getOpenApiSpec200TextPlainBinaryString = out;
             }
         }

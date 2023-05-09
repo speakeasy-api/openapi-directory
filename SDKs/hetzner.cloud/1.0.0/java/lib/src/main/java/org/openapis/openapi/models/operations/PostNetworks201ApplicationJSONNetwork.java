@@ -14,6 +14,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("created")
     public String created;
+
     public PostNetworks201ApplicationJSONNetwork withCreated(String created) {
         this.created = created;
         return this;
@@ -24,6 +25,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostNetworks201ApplicationJSONNetwork withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("ip_range")
     public String ipRange;
+
     public PostNetworks201ApplicationJSONNetwork withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -44,6 +47,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public PostNetworks201ApplicationJSONNetwork withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -55,6 +59,7 @@ public class PostNetworks201ApplicationJSONNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_balancers")
     public Long[] loadBalancers;
+
     public PostNetworks201ApplicationJSONNetwork withLoadBalancers(Long[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -65,6 +70,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("name")
     public String name;
+
     public PostNetworks201ApplicationJSONNetwork withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("protection")
     public PostNetworks201ApplicationJSONNetworkProtection protection;
+
     public PostNetworks201ApplicationJSONNetwork withProtection(PostNetworks201ApplicationJSONNetworkProtection protection) {
         this.protection = protection;
         return this;
@@ -85,6 +92,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("routes")
     public PostNetworks201ApplicationJSONNetworkRoutes[] routes;
+
     public PostNetworks201ApplicationJSONNetwork withRoutes(PostNetworks201ApplicationJSONNetworkRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -95,6 +103,7 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("servers")
     public Long[] servers;
+
     public PostNetworks201ApplicationJSONNetwork withServers(Long[] servers) {
         this.servers = servers;
         return this;
@@ -105,9 +114,21 @@ public class PostNetworks201ApplicationJSONNetwork {
      */
     @JsonProperty("subnets")
     public PostNetworks201ApplicationJSONNetworkSubnets[] subnets;
+
     public PostNetworks201ApplicationJSONNetwork withSubnets(PostNetworks201ApplicationJSONNetworkSubnets[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public PostNetworks201ApplicationJSONNetwork(@JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("ip_range") String ipRange, @JsonProperty("labels") java.util.Map<String, Object> labels, @JsonProperty("name") String name, @JsonProperty("protection") PostNetworks201ApplicationJSONNetworkProtection protection, @JsonProperty("routes") PostNetworks201ApplicationJSONNetworkRoutes[] routes, @JsonProperty("servers") Long[] servers, @JsonProperty("subnets") PostNetworks201ApplicationJSONNetworkSubnets[] subnets) {
+        this.created = created;
+        this.id = id;
+        this.ipRange = ipRange;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.routes = routes;
+        this.servers = servers;
+        this.subnets = subnets;
+  }
 }

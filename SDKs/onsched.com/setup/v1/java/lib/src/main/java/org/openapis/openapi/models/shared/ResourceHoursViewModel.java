@@ -12,6 +12,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fri")
     public ResourceHourViewModel fri;
+
     public ResourceHoursViewModel withFri(ResourceHourViewModel fri) {
         this.fri = fri;
         return this;
@@ -20,6 +21,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mon")
     public ResourceHourViewModel mon;
+
     public ResourceHoursViewModel withMon(ResourceHourViewModel mon) {
         this.mon = mon;
         return this;
@@ -28,6 +30,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sat")
     public ResourceHourViewModel sat;
+
     public ResourceHoursViewModel withSat(ResourceHourViewModel sat) {
         this.sat = sat;
         return this;
@@ -36,6 +39,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sun")
     public ResourceHourViewModel sun;
+
     public ResourceHoursViewModel withSun(ResourceHourViewModel sun) {
         this.sun = sun;
         return this;
@@ -44,6 +48,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thu")
     public ResourceHourViewModel thu;
+
     public ResourceHoursViewModel withThu(ResourceHourViewModel thu) {
         this.thu = thu;
         return this;
@@ -52,6 +57,7 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tue")
     public ResourceHourViewModel tue;
+
     public ResourceHoursViewModel withTue(ResourceHourViewModel tue) {
         this.tue = tue;
         return this;
@@ -60,9 +66,11 @@ public class ResourceHoursViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wed")
     public ResourceHourViewModel wed;
+
     public ResourceHoursViewModel withWed(ResourceHourViewModel wed) {
         this.wed = wed;
         return this;
     }
     
+    public ResourceHoursViewModel(){}
 }

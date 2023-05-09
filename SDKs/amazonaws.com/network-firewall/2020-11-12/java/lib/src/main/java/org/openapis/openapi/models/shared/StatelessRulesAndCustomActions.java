@@ -15,6 +15,7 @@ public class StatelessRulesAndCustomActions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomActions")
     public CustomAction[] customActions;
+
     public StatelessRulesAndCustomActions withCustomActions(CustomAction[] customActions) {
         this.customActions = customActions;
         return this;
@@ -22,9 +23,13 @@ public class StatelessRulesAndCustomActions {
     
     @JsonProperty("StatelessRules")
     public StatelessRule[] statelessRules;
+
     public StatelessRulesAndCustomActions withStatelessRules(StatelessRule[] statelessRules) {
         this.statelessRules = statelessRules;
         return this;
     }
     
+    public StatelessRulesAndCustomActions(@JsonProperty("StatelessRules") StatelessRule[] statelessRules) {
+        this.statelessRules = statelessRules;
+  }
 }

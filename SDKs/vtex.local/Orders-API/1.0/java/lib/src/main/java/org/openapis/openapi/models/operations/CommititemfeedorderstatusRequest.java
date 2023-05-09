@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommititemfeedorderstatusRequest {
@@ -12,6 +13,7 @@ public class CommititemfeedorderstatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CommititemfeedorderstatusRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class CommititemfeedorderstatusRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest commititemfeedorderstatusRequest;
+
     public CommititemfeedorderstatusRequest withCommititemfeedorderstatusRequest(org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest commititemfeedorderstatusRequest) {
         this.commititemfeedorderstatusRequest = commititemfeedorderstatusRequest;
         return this;
@@ -29,9 +32,15 @@ public class CommititemfeedorderstatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CommititemfeedorderstatusRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public CommititemfeedorderstatusRequest(@JsonProperty("Accept") String accept, @JsonProperty("CommititemfeedorderstatusRequest") org.openapis.openapi.models.shared.CommititemfeedorderstatusRequest commititemfeedorderstatusRequest, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.commititemfeedorderstatusRequest = commititemfeedorderstatusRequest;
+        this.contentType = contentType;
+  }
 }

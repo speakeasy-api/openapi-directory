@@ -15,6 +15,7 @@ public class PrivateFile {
      */
     @JsonProperty("computed_md5")
     public String computedMd5;
+
     public PrivateFile withComputedMd5(String computedMd5) {
         this.computedMd5 = computedMd5;
         return this;
@@ -25,6 +26,7 @@ public class PrivateFile {
      */
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public PrivateFile withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -35,6 +37,7 @@ public class PrivateFile {
      */
     @JsonProperty("id")
     public Long id;
+
     public PrivateFile withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class PrivateFile {
      */
     @JsonProperty("is_attached_to_public_version")
     public Boolean isAttachedToPublicVersion;
+
     public PrivateFile withIsAttachedToPublicVersion(Boolean isAttachedToPublicVersion) {
         this.isAttachedToPublicVersion = isAttachedToPublicVersion;
         return this;
@@ -55,6 +59,7 @@ public class PrivateFile {
      */
     @JsonProperty("is_link_only")
     public Boolean isLinkOnly;
+
     public PrivateFile withIsLinkOnly(Boolean isLinkOnly) {
         this.isLinkOnly = isLinkOnly;
         return this;
@@ -65,6 +70,7 @@ public class PrivateFile {
      */
     @JsonProperty("name")
     public String name;
+
     public PrivateFile withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class PrivateFile {
      */
     @JsonProperty("preview_state")
     public String previewState;
+
     public PrivateFile withPreviewState(String previewState) {
         this.previewState = previewState;
         return this;
@@ -85,6 +92,7 @@ public class PrivateFile {
      */
     @JsonProperty("size")
     public Long size;
+
     public PrivateFile withSize(Long size) {
         this.size = size;
         return this;
@@ -95,6 +103,7 @@ public class PrivateFile {
      */
     @JsonProperty("status")
     public String status;
+
     public PrivateFile withStatus(String status) {
         this.status = status;
         return this;
@@ -105,6 +114,7 @@ public class PrivateFile {
      */
     @JsonProperty("supplied_md5")
     public String suppliedMd5;
+
     public PrivateFile withSuppliedMd5(String suppliedMd5) {
         this.suppliedMd5 = suppliedMd5;
         return this;
@@ -115,6 +125,7 @@ public class PrivateFile {
      */
     @JsonProperty("upload_token")
     public String uploadToken;
+
     public PrivateFile withUploadToken(String uploadToken) {
         this.uploadToken = uploadToken;
         return this;
@@ -125,6 +136,7 @@ public class PrivateFile {
      */
     @JsonProperty("upload_url")
     public String uploadUrl;
+
     public PrivateFile withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
@@ -135,9 +147,25 @@ public class PrivateFile {
      */
     @JsonProperty("viewer_type")
     public String viewerType;
+
     public PrivateFile withViewerType(String viewerType) {
         this.viewerType = viewerType;
         return this;
     }
     
+    public PrivateFile(@JsonProperty("computed_md5") String computedMd5, @JsonProperty("download_url") String downloadUrl, @JsonProperty("id") Long id, @JsonProperty("is_attached_to_public_version") Boolean isAttachedToPublicVersion, @JsonProperty("is_link_only") Boolean isLinkOnly, @JsonProperty("name") String name, @JsonProperty("preview_state") String previewState, @JsonProperty("size") Long size, @JsonProperty("status") String status, @JsonProperty("supplied_md5") String suppliedMd5, @JsonProperty("upload_token") String uploadToken, @JsonProperty("upload_url") String uploadUrl, @JsonProperty("viewer_type") String viewerType) {
+        this.computedMd5 = computedMd5;
+        this.downloadUrl = downloadUrl;
+        this.id = id;
+        this.isAttachedToPublicVersion = isAttachedToPublicVersion;
+        this.isLinkOnly = isLinkOnly;
+        this.name = name;
+        this.previewState = previewState;
+        this.size = size;
+        this.status = status;
+        this.suppliedMd5 = suppliedMd5;
+        this.uploadToken = uploadToken;
+        this.uploadUrl = uploadUrl;
+        this.viewerType = viewerType;
+  }
 }

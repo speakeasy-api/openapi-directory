@@ -12,9 +12,11 @@ public class NetworkPerformanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalEgressBandwidthTier")
     public NetworkPerformanceConfigTotalEgressBandwidthTierEnum totalEgressBandwidthTier;
+
     public NetworkPerformanceConfig withTotalEgressBandwidthTier(NetworkPerformanceConfigTotalEgressBandwidthTierEnum totalEgressBandwidthTier) {
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
         return this;
     }
     
+    public NetworkPerformanceConfig(){}
 }

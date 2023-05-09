@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiActivitySecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String connectToken;
+
     public GetApiActivitySecurity withConnectToken(String connectToken) {
         this.connectToken = connectToken;
         return this;
     }
     
+    public GetApiActivitySecurity(@JsonProperty("ConnectToken") String connectToken) {
+        this.connectToken = connectToken;
+  }
 }

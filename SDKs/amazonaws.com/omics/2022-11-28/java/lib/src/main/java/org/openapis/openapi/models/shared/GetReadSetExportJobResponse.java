@@ -22,6 +22,7 @@ public class GetReadSetExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completionTime")
     public OffsetDateTime completionTime;
+
     public GetReadSetExportJobResponse withCompletionTime(OffsetDateTime completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -31,6 +32,7 @@ public class GetReadSetExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReadSetExportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class GetReadSetExportJobResponse {
     
     @JsonProperty("destination")
     public String destination;
+
     public GetReadSetExportJobResponse withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -45,6 +48,7 @@ public class GetReadSetExportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReadSetExportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -53,6 +57,7 @@ public class GetReadSetExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readSets")
     public ExportReadSetDetail[] readSets;
+
     public GetReadSetExportJobResponse withReadSets(ExportReadSetDetail[] readSets) {
         this.readSets = readSets;
         return this;
@@ -60,6 +65,7 @@ public class GetReadSetExportJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public GetReadSetExportJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -67,6 +73,7 @@ public class GetReadSetExportJobResponse {
     
     @JsonProperty("status")
     public ReadSetExportJobStatusEnum status;
+
     public GetReadSetExportJobResponse withStatus(ReadSetExportJobStatusEnum status) {
         this.status = status;
         return this;
@@ -75,9 +82,17 @@ public class GetReadSetExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public GetReadSetExportJobResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public GetReadSetExportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("destination") String destination, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetExportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.destination = destination;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

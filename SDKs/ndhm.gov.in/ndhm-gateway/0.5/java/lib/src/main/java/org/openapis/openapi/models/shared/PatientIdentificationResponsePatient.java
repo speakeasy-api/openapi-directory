@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientIdentificationResponsePatient {
     @JsonProperty("id")
     public String id;
+
     public PatientIdentificationResponsePatient withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class PatientIdentificationResponsePatient {
     
     @JsonProperty("name")
     public String name;
+
     public PatientIdentificationResponsePatient withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PatientIdentificationResponsePatient(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

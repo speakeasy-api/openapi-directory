@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePasswordV1RequestBody {
@@ -12,6 +13,7 @@ public class RemovePasswordV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public RemovePasswordV1RequestBodyFile file;
+
     public RemovePasswordV1RequestBody withFile(RemovePasswordV1RequestBodyFile file) {
         this.file = file;
         return this;
@@ -22,9 +24,14 @@ public class RemovePasswordV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=password")
     public String password;
+
     public RemovePasswordV1RequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public RemovePasswordV1RequestBody(@JsonProperty("file") RemovePasswordV1RequestBodyFile file, @JsonProperty("password") String password) {
+        this.file = file;
+        this.password = password;
+  }
 }

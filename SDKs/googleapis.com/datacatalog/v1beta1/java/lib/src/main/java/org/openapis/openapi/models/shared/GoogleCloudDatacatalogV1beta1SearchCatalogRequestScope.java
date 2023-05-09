@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeGcpPublicDatasets")
     public Boolean includeGcpPublicDatasets;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope withIncludeGcpPublicDatasets(Boolean includeGcpPublicDatasets) {
         this.includeGcpPublicDatasets = includeGcpPublicDatasets;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOrgIds")
     public String[] includeOrgIds;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope withIncludeOrgIds(String[] includeOrgIds) {
         this.includeOrgIds = includeOrgIds;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeProjectIds")
     public String[] includeProjectIds;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope withIncludeProjectIds(String[] includeProjectIds) {
         this.includeProjectIds = includeProjectIds;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedLocations")
     public String[] restrictedLocations;
+
     public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope withRestrictedLocations(String[] restrictedLocations) {
         this.restrictedLocations = restrictedLocations;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1SearchCatalogRequestScope(){}
 }

@@ -15,6 +15,7 @@ public class MonitorDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetImportJobArn")
     public String datasetImportJobArn;
+
     public MonitorDataSource withDatasetImportJobArn(String datasetImportJobArn) {
         this.datasetImportJobArn = datasetImportJobArn;
         return this;
@@ -23,6 +24,7 @@ public class MonitorDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public MonitorDataSource withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -31,9 +33,11 @@ public class MonitorDataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictorArn")
     public String predictorArn;
+
     public MonitorDataSource withPredictorArn(String predictorArn) {
         this.predictorArn = predictorArn;
         return this;
     }
     
+    public MonitorDataSource(){}
 }

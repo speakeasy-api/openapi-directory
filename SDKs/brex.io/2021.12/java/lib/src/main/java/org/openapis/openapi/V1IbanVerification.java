@@ -61,12 +61,10 @@ public class V1IbanVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IbanBasicResponse res = new org.openapis.openapi.models.operations.IbanBasicResponse() {{
+        org.openapis.openapi.models.operations.IbanBasicResponse res = new org.openapis.openapi.models.operations.IbanBasicResponse(contentType, httpRes.statusCode()) {{
             ibanBasic200ApplicationJSONObject = null;
             ibanBasicDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class V1IbanVerification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IbanComprehensiveResponse res = new org.openapis.openapi.models.operations.IbanComprehensiveResponse() {{
+        org.openapis.openapi.models.operations.IbanComprehensiveResponse res = new org.openapis.openapi.models.operations.IbanComprehensiveResponse(contentType, httpRes.statusCode()) {{
             oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema = null;
             ibanComprehensiveDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class StoredValueBalanceCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public StoredValueBalanceCheckRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class StoredValueBalanceCheckRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueBalanceCheckRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -32,6 +34,7 @@ public class StoredValueBalanceCheckRequest {
      */
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueBalanceCheckRequest withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -40,6 +43,7 @@ public class StoredValueBalanceCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoredValueBalanceCheckRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -52,6 +56,7 @@ public class StoredValueBalanceCheckRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueBalanceCheckRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -70,6 +75,7 @@ public class StoredValueBalanceCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoredValueBalanceCheckRequestShopperInteractionEnum shopperInteraction;
+
     public StoredValueBalanceCheckRequest withShopperInteraction(StoredValueBalanceCheckRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -78,6 +84,7 @@ public class StoredValueBalanceCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoredValueBalanceCheckRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -89,9 +96,15 @@ public class StoredValueBalanceCheckRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueBalanceCheckRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public StoredValueBalanceCheckRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("paymentMethod") java.util.Map<String, String> paymentMethod, @JsonProperty("reference") String reference) {
+        this.merchantAccount = merchantAccount;
+        this.paymentMethod = paymentMethod;
+        this.reference = reference;
+  }
 }

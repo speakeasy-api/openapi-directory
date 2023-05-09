@@ -15,6 +15,7 @@ public class CreateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateRuleRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class CreateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LockConfiguration")
     public CreateRuleRequestBodyLockConfiguration lockConfiguration;
+
     public CreateRuleRequestBody withLockConfiguration(CreateRuleRequestBodyLockConfiguration lockConfiguration) {
         this.lockConfiguration = lockConfiguration;
         return this;
@@ -37,6 +39,7 @@ public class CreateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTags")
     public org.openapis.openapi.models.shared.ResourceTag[] resourceTags;
+
     public CreateRuleRequestBody withResourceTags(org.openapis.openapi.models.shared.ResourceTag[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -47,6 +50,7 @@ public class CreateRuleRequestBody {
      */
     @JsonProperty("ResourceType")
     public CreateRuleRequestBodyResourceTypeEnum resourceType;
+
     public CreateRuleRequestBody withResourceType(CreateRuleRequestBodyResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -57,6 +61,7 @@ public class CreateRuleRequestBody {
      */
     @JsonProperty("RetentionPeriod")
     public CreateRuleRequestBodyRetentionPeriod retentionPeriod;
+
     public CreateRuleRequestBody withRetentionPeriod(CreateRuleRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -68,9 +73,14 @@ public class CreateRuleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateRuleRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateRuleRequestBody(@JsonProperty("ResourceType") CreateRuleRequestBodyResourceTypeEnum resourceType, @JsonProperty("RetentionPeriod") CreateRuleRequestBodyRetentionPeriod retentionPeriod) {
+        this.resourceType = resourceType;
+        this.retentionPeriod = retentionPeriod;
+  }
 }

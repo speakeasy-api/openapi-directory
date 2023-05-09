@@ -15,6 +15,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public AwsCertificateManagerCertificateDomainValidationOption withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +24,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRecord")
     public AwsCertificateManagerCertificateResourceRecord resourceRecord;
+
     public AwsCertificateManagerCertificateDomainValidationOption withResourceRecord(AwsCertificateManagerCertificateResourceRecord resourceRecord) {
         this.resourceRecord = resourceRecord;
         return this;
@@ -31,6 +33,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationDomain")
     public String validationDomain;
+
     public AwsCertificateManagerCertificateDomainValidationOption withValidationDomain(String validationDomain) {
         this.validationDomain = validationDomain;
         return this;
@@ -39,6 +42,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationEmails")
     public String[] validationEmails;
+
     public AwsCertificateManagerCertificateDomainValidationOption withValidationEmails(String[] validationEmails) {
         this.validationEmails = validationEmails;
         return this;
@@ -47,6 +51,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationMethod")
     public String validationMethod;
+
     public AwsCertificateManagerCertificateDomainValidationOption withValidationMethod(String validationMethod) {
         this.validationMethod = validationMethod;
         return this;
@@ -55,9 +60,11 @@ public class AwsCertificateManagerCertificateDomainValidationOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationStatus")
     public String validationStatus;
+
     public AwsCertificateManagerCertificateDomainValidationOption withValidationStatus(String validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public AwsCertificateManagerCertificateDomainValidationOption(){}
 }

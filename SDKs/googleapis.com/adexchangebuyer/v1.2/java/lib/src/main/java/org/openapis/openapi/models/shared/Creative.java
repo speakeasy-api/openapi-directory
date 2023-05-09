@@ -23,6 +23,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HTMLSnippet")
     public String htmlSnippet;
+
     public Creative withHTMLSnippet(String htmlSnippet) {
         this.htmlSnippet = htmlSnippet;
         return this;
@@ -34,6 +35,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Integer accountId;
+
     public Creative withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -45,6 +47,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String[] advertiserId;
+
     public Creative withAdvertiserId(String[] advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -56,6 +59,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserName")
     public String advertiserName;
+
     public Creative withAdvertiserName(String advertiserName) {
         this.advertiserName = advertiserName;
         return this;
@@ -67,6 +71,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agencyId")
     public String agencyId;
+
     public Creative withAgencyId(String agencyId) {
         this.agencyId = agencyId;
         return this;
@@ -80,6 +85,7 @@ public class Creative {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("apiUploadTimestamp")
     public OffsetDateTime apiUploadTimestamp;
+
     public Creative withApiUploadTimestamp(OffsetDateTime apiUploadTimestamp) {
         this.apiUploadTimestamp = apiUploadTimestamp;
         return this;
@@ -91,6 +97,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attribute")
     public Integer[] attribute;
+
     public Creative withAttribute(Integer[] attribute) {
         this.attribute = attribute;
         return this;
@@ -102,6 +109,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyerCreativeId")
     public String buyerCreativeId;
+
     public Creative withBuyerCreativeId(String buyerCreativeId) {
         this.buyerCreativeId = buyerCreativeId;
         return this;
@@ -113,6 +121,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrl")
     public String[] clickThroughUrl;
+
     public Creative withClickThroughUrl(String[] clickThroughUrl) {
         this.clickThroughUrl = clickThroughUrl;
         return this;
@@ -124,6 +133,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corrections")
     public CreativeCorrections[] corrections;
+
     public Creative withCorrections(CreativeCorrections[] corrections) {
         this.corrections = corrections;
         return this;
@@ -135,6 +145,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disapprovalReasons")
     public CreativeDisapprovalReasons[] disapprovalReasons;
+
     public Creative withDisapprovalReasons(CreativeDisapprovalReasons[] disapprovalReasons) {
         this.disapprovalReasons = disapprovalReasons;
         return this;
@@ -146,6 +157,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringReasons")
     public CreativeFilteringReasons filteringReasons;
+
     public Creative withFilteringReasons(CreativeFilteringReasons filteringReasons) {
         this.filteringReasons = filteringReasons;
         return this;
@@ -157,6 +169,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public Creative withHeight(Integer height) {
         this.height = height;
         return this;
@@ -168,6 +181,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressionTrackingUrl")
     public String[] impressionTrackingUrl;
+
     public Creative withImpressionTrackingUrl(String[] impressionTrackingUrl) {
         this.impressionTrackingUrl = impressionTrackingUrl;
         return this;
@@ -179,6 +193,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Creative withKind(String kind) {
         this.kind = kind;
         return this;
@@ -190,6 +205,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategories")
     public Integer[] productCategories;
+
     public Creative withProductCategories(Integer[] productCategories) {
         this.productCategories = productCategories;
         return this;
@@ -201,6 +217,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictedCategories")
     public Integer[] restrictedCategories;
+
     public Creative withRestrictedCategories(Integer[] restrictedCategories) {
         this.restrictedCategories = restrictedCategories;
         return this;
@@ -212,6 +229,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitiveCategories")
     public Integer[] sensitiveCategories;
+
     public Creative withSensitiveCategories(Integer[] sensitiveCategories) {
         this.sensitiveCategories = sensitiveCategories;
         return this;
@@ -223,6 +241,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Creative withStatus(String status) {
         this.status = status;
         return this;
@@ -234,6 +253,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorType")
     public Integer[] vendorType;
+
     public Creative withVendorType(Integer[] vendorType) {
         this.vendorType = vendorType;
         return this;
@@ -245,6 +265,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public Creative withVersion(Integer version) {
         this.version = version;
         return this;
@@ -256,6 +277,7 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoURL")
     public String videoURL;
+
     public Creative withVideoURL(String videoURL) {
         this.videoURL = videoURL;
         return this;
@@ -267,9 +289,11 @@ public class Creative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public Creative withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Creative(){}
 }

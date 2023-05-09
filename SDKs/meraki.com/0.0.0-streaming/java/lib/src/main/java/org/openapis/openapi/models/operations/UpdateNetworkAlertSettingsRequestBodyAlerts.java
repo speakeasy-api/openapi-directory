@@ -15,6 +15,7 @@ public class UpdateNetworkAlertSettingsRequestBodyAlerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alertDestinations")
     public UpdateNetworkAlertSettingsRequestBodyAlertsAlertDestinations alertDestinations;
+
     public UpdateNetworkAlertSettingsRequestBodyAlerts withAlertDestinations(UpdateNetworkAlertSettingsRequestBodyAlertsAlertDestinations alertDestinations) {
         this.alertDestinations = alertDestinations;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkAlertSettingsRequestBodyAlerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateNetworkAlertSettingsRequestBodyAlerts withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkAlertSettingsRequestBodyAlerts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public java.util.Map<String, Object> filters;
+
     public UpdateNetworkAlertSettingsRequestBodyAlerts withFilters(java.util.Map<String, Object> filters) {
         this.filters = filters;
         return this;
@@ -47,9 +50,13 @@ public class UpdateNetworkAlertSettingsRequestBodyAlerts {
      */
     @JsonProperty("type")
     public String type;
+
     public UpdateNetworkAlertSettingsRequestBodyAlerts withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateNetworkAlertSettingsRequestBodyAlerts(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

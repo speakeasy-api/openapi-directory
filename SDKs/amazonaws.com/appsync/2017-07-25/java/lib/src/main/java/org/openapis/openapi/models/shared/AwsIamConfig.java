@@ -15,6 +15,7 @@ public class AwsIamConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingRegion")
     public String signingRegion;
+
     public AwsIamConfig withSigningRegion(String signingRegion) {
         this.signingRegion = signingRegion;
         return this;
@@ -23,9 +24,11 @@ public class AwsIamConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signingServiceName")
     public String signingServiceName;
+
     public AwsIamConfig withSigningServiceName(String signingServiceName) {
         this.signingServiceName = signingServiceName;
         return this;
     }
     
+    public AwsIamConfig(){}
 }

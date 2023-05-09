@@ -20,6 +20,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public BucketMetadata withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +29,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsUnencryptedObjectUploads")
     public AllowsUnencryptedObjectUploadsEnum allowsUnencryptedObjectUploads;
+
     public BucketMetadata withAllowsUnencryptedObjectUploads(AllowsUnencryptedObjectUploadsEnum allowsUnencryptedObjectUploads) {
         this.allowsUnencryptedObjectUploads = allowsUnencryptedObjectUploads;
         return this;
@@ -36,6 +38,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketArn")
     public String bucketArn;
+
     public BucketMetadata withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -46,6 +49,7 @@ public class BucketMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("bucketCreatedAt")
     public OffsetDateTime bucketCreatedAt;
+
     public BucketMetadata withBucketCreatedAt(OffsetDateTime bucketCreatedAt) {
         this.bucketCreatedAt = bucketCreatedAt;
         return this;
@@ -54,6 +58,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketName")
     public String bucketName;
+
     public BucketMetadata withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -62,6 +67,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiableObjectCount")
     public Long classifiableObjectCount;
+
     public BucketMetadata withClassifiableObjectCount(Long classifiableObjectCount) {
         this.classifiableObjectCount = classifiableObjectCount;
         return this;
@@ -70,6 +76,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifiableSizeInBytes")
     public Long classifiableSizeInBytes;
+
     public BucketMetadata withClassifiableSizeInBytes(Long classifiableSizeInBytes) {
         this.classifiableSizeInBytes = classifiableSizeInBytes;
         return this;
@@ -78,6 +85,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public BucketMetadataErrorCodeEnum errorCode;
+
     public BucketMetadata withErrorCode(BucketMetadataErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -86,6 +94,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BucketMetadata withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -94,6 +103,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDetails")
     public JobDetails jobDetails;
+
     public BucketMetadata withJobDetails(JobDetails jobDetails) {
         this.jobDetails = jobDetails;
         return this;
@@ -104,6 +114,7 @@ public class BucketMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAutomatedDiscoveryTime")
     public OffsetDateTime lastAutomatedDiscoveryTime;
+
     public BucketMetadata withLastAutomatedDiscoveryTime(OffsetDateTime lastAutomatedDiscoveryTime) {
         this.lastAutomatedDiscoveryTime = lastAutomatedDiscoveryTime;
         return this;
@@ -114,6 +125,7 @@ public class BucketMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public BucketMetadata withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -122,6 +134,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectCount")
     public Long objectCount;
+
     public BucketMetadata withObjectCount(Long objectCount) {
         this.objectCount = objectCount;
         return this;
@@ -130,6 +143,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectCountByEncryptionType")
     public ObjectCountByEncryptionType objectCountByEncryptionType;
+
     public BucketMetadata withObjectCountByEncryptionType(ObjectCountByEncryptionType objectCountByEncryptionType) {
         this.objectCountByEncryptionType = objectCountByEncryptionType;
         return this;
@@ -138,6 +152,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicAccess")
     public BucketPublicAccess publicAccess;
+
     public BucketMetadata withPublicAccess(BucketPublicAccess publicAccess) {
         this.publicAccess = publicAccess;
         return this;
@@ -146,6 +161,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public BucketMetadata withRegion(String region) {
         this.region = region;
         return this;
@@ -154,6 +170,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationDetails")
     public ReplicationDetails replicationDetails;
+
     public BucketMetadata withReplicationDetails(ReplicationDetails replicationDetails) {
         this.replicationDetails = replicationDetails;
         return this;
@@ -162,6 +179,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitivityScore")
     public Long sensitivityScore;
+
     public BucketMetadata withSensitivityScore(Long sensitivityScore) {
         this.sensitivityScore = sensitivityScore;
         return this;
@@ -170,6 +188,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverSideEncryption")
     public BucketServerSideEncryption serverSideEncryption;
+
     public BucketMetadata withServerSideEncryption(BucketServerSideEncryption serverSideEncryption) {
         this.serverSideEncryption = serverSideEncryption;
         return this;
@@ -178,6 +197,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedAccess")
     public SharedAccessEnum sharedAccess;
+
     public BucketMetadata withSharedAccess(SharedAccessEnum sharedAccess) {
         this.sharedAccess = sharedAccess;
         return this;
@@ -186,6 +206,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInBytes")
     public Long sizeInBytes;
+
     public BucketMetadata withSizeInBytes(Long sizeInBytes) {
         this.sizeInBytes = sizeInBytes;
         return this;
@@ -194,6 +215,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeInBytesCompressed")
     public Long sizeInBytesCompressed;
+
     public BucketMetadata withSizeInBytesCompressed(Long sizeInBytesCompressed) {
         this.sizeInBytesCompressed = sizeInBytesCompressed;
         return this;
@@ -202,6 +224,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public KeyValuePair[] tags;
+
     public BucketMetadata withTags(KeyValuePair[] tags) {
         this.tags = tags;
         return this;
@@ -210,6 +233,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unclassifiableObjectCount")
     public ObjectLevelStatistics unclassifiableObjectCount;
+
     public BucketMetadata withUnclassifiableObjectCount(ObjectLevelStatistics unclassifiableObjectCount) {
         this.unclassifiableObjectCount = unclassifiableObjectCount;
         return this;
@@ -218,6 +242,7 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unclassifiableObjectSizeInBytes")
     public ObjectLevelStatistics unclassifiableObjectSizeInBytes;
+
     public BucketMetadata withUnclassifiableObjectSizeInBytes(ObjectLevelStatistics unclassifiableObjectSizeInBytes) {
         this.unclassifiableObjectSizeInBytes = unclassifiableObjectSizeInBytes;
         return this;
@@ -226,9 +251,11 @@ public class BucketMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioning")
     public Boolean versioning;
+
     public BucketMetadata withVersioning(Boolean versioning) {
         this.versioning = versioning;
         return this;
     }
     
+    public BucketMetadata(){}
 }

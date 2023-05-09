@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class AnalyticsCrashFreeDevicePercentagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsCrashFreeDevicePercentagesRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -23,6 +25,7 @@ public class AnalyticsCrashFreeDevicePercentagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public AnalyticsCrashFreeDevicePercentagesRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -33,6 +36,7 @@ public class AnalyticsCrashFreeDevicePercentagesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsCrashFreeDevicePercentagesRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -43,6 +47,7 @@ public class AnalyticsCrashFreeDevicePercentagesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public AnalyticsCrashFreeDevicePercentagesRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -50,9 +55,16 @@ public class AnalyticsCrashFreeDevicePercentagesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public AnalyticsCrashFreeDevicePercentagesRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AnalyticsCrashFreeDevicePercentagesRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("start") OffsetDateTime start, @JsonProperty("version") String version) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.start = start;
+        this.version = version;
+  }
 }

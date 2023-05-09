@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCustomersAccountAnnouncementsRequest {
@@ -12,9 +13,13 @@ public class GetCustomersAccountAnnouncementsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account")
     public Long account;
+
     public GetCustomersAccountAnnouncementsRequest withAccount(Long account) {
         this.account = account;
         return this;
     }
     
+    public GetCustomersAccountAnnouncementsRequest(@JsonProperty("account") Long account) {
+        this.account = account;
+  }
 }

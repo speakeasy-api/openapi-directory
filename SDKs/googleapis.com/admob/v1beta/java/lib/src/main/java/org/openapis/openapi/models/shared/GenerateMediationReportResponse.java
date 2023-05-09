@@ -18,6 +18,7 @@ public class GenerateMediationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer")
     public ReportFooter footer;
+
     public GenerateMediationReportResponse withFooter(ReportFooter footer) {
         this.footer = footer;
         return this;
@@ -29,6 +30,7 @@ public class GenerateMediationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public ReportHeader header;
+
     public GenerateMediationReportResponse withHeader(ReportHeader header) {
         this.header = header;
         return this;
@@ -40,9 +42,11 @@ public class GenerateMediationReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public ReportRow row;
+
     public GenerateMediationReportResponse withRow(ReportRow row) {
         this.row = row;
         return this;
     }
     
+    public GenerateMediationReportResponse(){}
 }

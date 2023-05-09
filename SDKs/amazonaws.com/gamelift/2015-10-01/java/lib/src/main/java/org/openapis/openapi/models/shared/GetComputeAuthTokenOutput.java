@@ -20,6 +20,7 @@ public class GetComputeAuthTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthToken")
     public String authToken;
+
     public GetComputeAuthTokenOutput withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -28,6 +29,7 @@ public class GetComputeAuthTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeArn")
     public String computeArn;
+
     public GetComputeAuthTokenOutput withComputeArn(String computeArn) {
         this.computeArn = computeArn;
         return this;
@@ -36,6 +38,7 @@ public class GetComputeAuthTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComputeName")
     public String computeName;
+
     public GetComputeAuthTokenOutput withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -46,6 +49,7 @@ public class GetComputeAuthTokenOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTimestamp")
     public OffsetDateTime expirationTimestamp;
+
     public GetComputeAuthTokenOutput withExpirationTimestamp(OffsetDateTime expirationTimestamp) {
         this.expirationTimestamp = expirationTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class GetComputeAuthTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public GetComputeAuthTokenOutput withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -62,9 +67,11 @@ public class GetComputeAuthTokenOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public GetComputeAuthTokenOutput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public GetComputeAuthTokenOutput(){}
 }

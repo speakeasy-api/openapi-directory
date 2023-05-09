@@ -12,6 +12,7 @@ public class UpdateQuerySuggestionsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeQueriesWithoutUserInformation")
     public Boolean includeQueriesWithoutUserInformation;
+
     public UpdateQuerySuggestionsConfigRequest withIncludeQueriesWithoutUserInformation(Boolean includeQueriesWithoutUserInformation) {
         this.includeQueriesWithoutUserInformation = includeQueriesWithoutUserInformation;
         return this;
@@ -19,6 +20,7 @@ public class UpdateQuerySuggestionsConfigRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public UpdateQuerySuggestionsConfigRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -27,6 +29,7 @@ public class UpdateQuerySuggestionsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumNumberOfQueryingUsers")
     public Long minimumNumberOfQueryingUsers;
+
     public UpdateQuerySuggestionsConfigRequest withMinimumNumberOfQueryingUsers(Long minimumNumberOfQueryingUsers) {
         this.minimumNumberOfQueryingUsers = minimumNumberOfQueryingUsers;
         return this;
@@ -35,6 +38,7 @@ public class UpdateQuerySuggestionsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumQueryCount")
     public Long minimumQueryCount;
+
     public UpdateQuerySuggestionsConfigRequest withMinimumQueryCount(Long minimumQueryCount) {
         this.minimumQueryCount = minimumQueryCount;
         return this;
@@ -43,6 +47,7 @@ public class UpdateQuerySuggestionsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public ModeEnum mode;
+
     public UpdateQuerySuggestionsConfigRequest withMode(ModeEnum mode) {
         this.mode = mode;
         return this;
@@ -51,9 +56,13 @@ public class UpdateQuerySuggestionsConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryLogLookBackWindowInDays")
     public Long queryLogLookBackWindowInDays;
+
     public UpdateQuerySuggestionsConfigRequest withQueryLogLookBackWindowInDays(Long queryLogLookBackWindowInDays) {
         this.queryLogLookBackWindowInDays = queryLogLookBackWindowInDays;
         return this;
     }
     
+    public UpdateQuerySuggestionsConfigRequest(@JsonProperty("IndexId") String indexId) {
+        this.indexId = indexId;
+  }
 }

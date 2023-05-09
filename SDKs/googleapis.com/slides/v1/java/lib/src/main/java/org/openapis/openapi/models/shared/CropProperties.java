@@ -18,6 +18,7 @@ public class CropProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Float angle;
+
     public CropProperties withAngle(Float angle) {
         this.angle = angle;
         return this;
@@ -29,6 +30,7 @@ public class CropProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottomOffset")
     public Float bottomOffset;
+
     public CropProperties withBottomOffset(Float bottomOffset) {
         this.bottomOffset = bottomOffset;
         return this;
@@ -40,6 +42,7 @@ public class CropProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leftOffset")
     public Float leftOffset;
+
     public CropProperties withLeftOffset(Float leftOffset) {
         this.leftOffset = leftOffset;
         return this;
@@ -51,6 +54,7 @@ public class CropProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rightOffset")
     public Float rightOffset;
+
     public CropProperties withRightOffset(Float rightOffset) {
         this.rightOffset = rightOffset;
         return this;
@@ -62,9 +66,11 @@ public class CropProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topOffset")
     public Float topOffset;
+
     public CropProperties withTopOffset(Float topOffset) {
         this.topOffset = topOffset;
         return this;
     }
     
+    public CropProperties(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLikesPlaylistsPlaylistIdResponse {
     
     public String contentType;
+
     public DeleteLikesPlaylistsPlaylistIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLikesPlaylistsPlaylistIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public DeleteLikesPlaylistsPlaylistIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class DeleteLikesPlaylistsPlaylistIdResponse {
     
     
     public Integer statusCode;
+
     public DeleteLikesPlaylistsPlaylistIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteLikesPlaylistsPlaylistIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLikesPlaylistsPlaylistIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLikesPlaylistsPlaylistIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProfilingGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateProfilingGroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateProfilingGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProfilingGroupResponse {
     
     
     public String contentType;
+
     public UpdateProfilingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProfilingGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateProfilingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateProfilingGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateProfilingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProfilingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProfilingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateProfilingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProfilingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProfilingGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateProfilingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateProfilingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProfilingGroupResponse updateProfilingGroupResponse;
+
     public UpdateProfilingGroupResponse withUpdateProfilingGroupResponse(org.openapis.openapi.models.shared.UpdateProfilingGroupResponse updateProfilingGroupResponse) {
         this.updateProfilingGroupResponse = updateProfilingGroupResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateProfilingGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateProfilingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateProfilingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

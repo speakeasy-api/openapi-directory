@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeOrganizationSecurityPoliciesMoveRequest {
@@ -12,6 +13,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentId")
     public String parentId;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
@@ -92,6 +101,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -122,6 +134,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=securityPolicy")
     public String securityPolicy;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -132,6 +145,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,13 @@ public class ComputeOrganizationSecurityPoliciesMoveRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeOrganizationSecurityPoliciesMoveRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeOrganizationSecurityPoliciesMoveRequest(@JsonProperty("securityPolicy") String securityPolicy) {
+        this.securityPolicy = securityPolicy;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BalanceLookupRequest {
@@ -12,9 +13,13 @@ public class BalanceLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public BalanceLookupRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public BalanceLookupRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

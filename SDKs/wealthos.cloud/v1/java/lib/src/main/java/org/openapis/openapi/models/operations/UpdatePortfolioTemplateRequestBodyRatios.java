@@ -12,6 +12,7 @@ public class UpdatePortfolioTemplateRequestBodyRatios {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public UpdatePortfolioTemplateRequestBodyRatios withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -22,9 +23,14 @@ public class UpdatePortfolioTemplateRequestBodyRatios {
      */
     @JsonProperty("ratio")
     public String ratio;
+
     public UpdatePortfolioTemplateRequestBodyRatios withRatio(String ratio) {
         this.ratio = ratio;
         return this;
     }
     
+    public UpdatePortfolioTemplateRequestBodyRatios(@JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("ratio") String ratio) {
+        this.investmentProductId = investmentProductId;
+        this.ratio = ratio;
+  }
 }

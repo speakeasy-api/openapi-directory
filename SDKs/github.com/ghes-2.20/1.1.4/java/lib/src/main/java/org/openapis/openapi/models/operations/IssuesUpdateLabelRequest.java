@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class IssuesUpdateLabelRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public IssuesUpdateLabelRequestBody requestBody;
+
     public IssuesUpdateLabelRequest withRequestBody(IssuesUpdateLabelRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class IssuesUpdateLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public IssuesUpdateLabelRequest withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +26,7 @@ public class IssuesUpdateLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public IssuesUpdateLabelRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -30,9 +34,15 @@ public class IssuesUpdateLabelRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public IssuesUpdateLabelRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public IssuesUpdateLabelRequest(@JsonProperty("name") String name, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.name = name;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

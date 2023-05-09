@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DelcsResponse {
     
     public String contentType;
+
     public DelcsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DelcsResponse {
     
     
     public Integer statusCode;
+
     public DelcsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DelcsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DelcsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DelcsResponse {
      */
     
     public Delcs400ApplicationJSON delcs400ApplicationJSONObject;
+
     public DelcsResponse withDelcs400ApplicationJSONObject(Delcs400ApplicationJSON delcs400ApplicationJSONObject) {
         this.delcs400ApplicationJSONObject = delcs400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DelcsResponse {
      */
     
     public Delcs401ApplicationJSON delcs401ApplicationJSONObject;
+
     public DelcsResponse withDelcs401ApplicationJSONObject(Delcs401ApplicationJSON delcs401ApplicationJSONObject) {
         this.delcs401ApplicationJSONObject = delcs401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DelcsResponse {
      */
     
     public Delcs404ApplicationJSON delcs404ApplicationJSONObject;
+
     public DelcsResponse withDelcs404ApplicationJSONObject(Delcs404ApplicationJSON delcs404ApplicationJSONObject) {
         this.delcs404ApplicationJSONObject = delcs404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DelcsResponse {
      */
     
     public Delcs500ApplicationJSON delcs500ApplicationJSONObject;
+
     public DelcsResponse withDelcs500ApplicationJSONObject(Delcs500ApplicationJSON delcs500ApplicationJSONObject) {
         this.delcs500ApplicationJSONObject = delcs500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DelcsResponse {
      */
     
     public Delcs502ApplicationJSON delcs502ApplicationJSONObject;
+
     public DelcsResponse withDelcs502ApplicationJSONObject(Delcs502ApplicationJSON delcs502ApplicationJSONObject) {
         this.delcs502ApplicationJSONObject = delcs502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class DelcsResponse {
      */
     
     public Delcs503ApplicationJSON delcs503ApplicationJSONObject;
+
     public DelcsResponse withDelcs503ApplicationJSONObject(Delcs503ApplicationJSON delcs503ApplicationJSONObject) {
         this.delcs503ApplicationJSONObject = delcs503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class DelcsResponse {
      */
     
     public Delcs504ApplicationJSON delcs504ApplicationJSONObject;
+
     public DelcsResponse withDelcs504ApplicationJSONObject(Delcs504ApplicationJSON delcs504ApplicationJSONObject) {
         this.delcs504ApplicationJSONObject = delcs504ApplicationJSONObject;
         return this;
     }
     
+    public DelcsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

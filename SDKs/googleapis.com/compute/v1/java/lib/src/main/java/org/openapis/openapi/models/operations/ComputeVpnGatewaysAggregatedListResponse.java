@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeVpnGatewaysAggregatedListResponse {
     
     public String contentType;
+
     public ComputeVpnGatewaysAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeVpnGatewaysAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeVpnGatewaysAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeVpnGatewaysAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeVpnGatewaysAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeVpnGatewaysAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.VpnGatewayAggregatedList vpnGatewayAggregatedList;
+
     public ComputeVpnGatewaysAggregatedListResponse withVpnGatewayAggregatedList(org.openapis.openapi.models.shared.VpnGatewayAggregatedList vpnGatewayAggregatedList) {
         this.vpnGatewayAggregatedList = vpnGatewayAggregatedList;
         return this;
     }
     
+    public ComputeVpnGatewaysAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

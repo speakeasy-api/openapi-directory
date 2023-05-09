@@ -18,6 +18,7 @@ public class UserCountrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCodes")
     public String[] countryCodes;
+
     public UserCountrySet withCountryCodes(String[] countryCodes) {
         this.countryCodes = countryCodes;
         return this;
@@ -29,9 +30,11 @@ public class UserCountrySet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserCountrySet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UserCountrySet(){}
 }

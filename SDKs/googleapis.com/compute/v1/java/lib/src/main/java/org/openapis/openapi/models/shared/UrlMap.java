@@ -18,6 +18,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public UrlMap withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -26,6 +27,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRouteAction")
     public HttpRouteAction defaultRouteAction;
+
     public UrlMap withDefaultRouteAction(HttpRouteAction defaultRouteAction) {
         this.defaultRouteAction = defaultRouteAction;
         return this;
@@ -37,6 +39,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultService")
     public String defaultService;
+
     public UrlMap withDefaultService(String defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -48,6 +51,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultUrlRedirect")
     public HttpRedirectAction defaultUrlRedirect;
+
     public UrlMap withDefaultUrlRedirect(HttpRedirectAction defaultUrlRedirect) {
         this.defaultUrlRedirect = defaultUrlRedirect;
         return this;
@@ -59,6 +63,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UrlMap withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +75,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public UrlMap withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -81,6 +87,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerAction")
     public HttpHeaderAction headerAction;
+
     public UrlMap withHeaderAction(HttpHeaderAction headerAction) {
         this.headerAction = headerAction;
         return this;
@@ -92,6 +99,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostRules")
     public HostRule[] hostRules;
+
     public UrlMap withHostRules(HostRule[] hostRules) {
         this.hostRules = hostRules;
         return this;
@@ -103,6 +111,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UrlMap withId(String id) {
         this.id = id;
         return this;
@@ -114,6 +123,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UrlMap withKind(String kind) {
         this.kind = kind;
         return this;
@@ -125,6 +135,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UrlMap withName(String name) {
         this.name = name;
         return this;
@@ -136,6 +147,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathMatchers")
     public PathMatcher[] pathMatchers;
+
     public UrlMap withPathMatchers(PathMatcher[] pathMatchers) {
         this.pathMatchers = pathMatchers;
         return this;
@@ -147,6 +159,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public UrlMap withRegion(String region) {
         this.region = region;
         return this;
@@ -158,6 +171,7 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public UrlMap withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -169,9 +183,11 @@ public class UrlMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tests")
     public UrlMapTest[] tests;
+
     public UrlMap withTests(UrlMapTest[] tests) {
         this.tests = tests;
         return this;
     }
     
+    public UrlMap(){}
 }

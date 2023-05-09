@@ -17,6 +17,7 @@ public class GetVCustomPricesSessionSchemaRequestBody {
      */
     @JsonProperty("fields")
     public GetVCustomPricesSessionSchemaRequestBodyFields[] fields;
+
     public GetVCustomPricesSessionSchemaRequestBody withFields(GetVCustomPricesSessionSchemaRequestBodyFields[] fields) {
         this.fields = fields;
         return this;
@@ -28,9 +29,13 @@ public class GetVCustomPricesSessionSchemaRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useEmail")
     public Boolean useEmail;
+
     public GetVCustomPricesSessionSchemaRequestBody withUseEmail(Boolean useEmail) {
         this.useEmail = useEmail;
         return this;
     }
     
+    public GetVCustomPricesSessionSchemaRequestBody(@JsonProperty("fields") GetVCustomPricesSessionSchemaRequestBodyFields[] fields) {
+        this.fields = fields;
+  }
 }

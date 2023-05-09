@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CopyDBParameterGroupMessage {
     
     public String sourceDBParameterGroupIdentifier;
+
     public CopyDBParameterGroupMessage withSourceDBParameterGroupIdentifier(String sourceDBParameterGroupIdentifier) {
         this.sourceDBParameterGroupIdentifier = sourceDBParameterGroupIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class CopyDBParameterGroupMessage {
     
     
     public TagList[] tags;
+
     public CopyDBParameterGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -23,6 +25,7 @@ public class CopyDBParameterGroupMessage {
     
     
     public String targetDBParameterGroupDescription;
+
     public CopyDBParameterGroupMessage withTargetDBParameterGroupDescription(String targetDBParameterGroupDescription) {
         this.targetDBParameterGroupDescription = targetDBParameterGroupDescription;
         return this;
@@ -30,9 +33,15 @@ public class CopyDBParameterGroupMessage {
     
     
     public String targetDBParameterGroupIdentifier;
+
     public CopyDBParameterGroupMessage withTargetDBParameterGroupIdentifier(String targetDBParameterGroupIdentifier) {
         this.targetDBParameterGroupIdentifier = targetDBParameterGroupIdentifier;
         return this;
     }
     
+    public CopyDBParameterGroupMessage(@JsonProperty("SourceDBParameterGroupIdentifier") String sourceDBParameterGroupIdentifier, @JsonProperty("TargetDBParameterGroupDescription") String targetDBParameterGroupDescription, @JsonProperty("TargetDBParameterGroupIdentifier") String targetDBParameterGroupIdentifier) {
+        this.sourceDBParameterGroupIdentifier = sourceDBParameterGroupIdentifier;
+        this.targetDBParameterGroupDescription = targetDBParameterGroupDescription;
+        this.targetDBParameterGroupIdentifier = targetDBParameterGroupIdentifier;
+  }
 }

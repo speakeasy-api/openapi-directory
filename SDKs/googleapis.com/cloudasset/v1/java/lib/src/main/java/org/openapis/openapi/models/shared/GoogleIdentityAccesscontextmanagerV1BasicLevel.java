@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1BasicLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combiningFunction")
     public GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum combiningFunction;
+
     public GoogleIdentityAccesscontextmanagerV1BasicLevel withCombiningFunction(GoogleIdentityAccesscontextmanagerV1BasicLevelCombiningFunctionEnum combiningFunction) {
         this.combiningFunction = combiningFunction;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityAccesscontextmanagerV1BasicLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleIdentityAccesscontextmanagerV1Condition[] conditions;
+
     public GoogleIdentityAccesscontextmanagerV1BasicLevel withConditions(GoogleIdentityAccesscontextmanagerV1Condition[] conditions) {
         this.conditions = conditions;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1BasicLevel(){}
 }

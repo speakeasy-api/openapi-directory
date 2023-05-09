@@ -18,6 +18,7 @@ public class ResourceManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterScoped")
     public Boolean clusterScoped;
+
     public ResourceManifest withClusterScoped(Boolean clusterScoped) {
         this.clusterScoped = clusterScoped;
         return this;
@@ -29,9 +30,11 @@ public class ResourceManifest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manifest")
     public String manifest;
+
     public ResourceManifest withManifest(String manifest) {
         this.manifest = manifest;
         return this;
     }
     
+    public ResourceManifest(){}
 }

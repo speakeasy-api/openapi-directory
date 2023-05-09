@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ListPadsUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
     public String groupID;
+
     public ListPadsUsingGETRequest withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
     }
     
+    public ListPadsUsingGETRequest(){}
 }

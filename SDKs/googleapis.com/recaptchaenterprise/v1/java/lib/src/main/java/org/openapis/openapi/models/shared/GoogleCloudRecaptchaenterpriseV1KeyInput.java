@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidSettings")
     public GoogleCloudRecaptchaenterpriseV1AndroidKeySettings androidSettings;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withAndroidSettings(GoogleCloudRecaptchaenterpriseV1AndroidKeySettings androidSettings) {
         this.androidSettings = androidSettings;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosSettings")
     public GoogleCloudRecaptchaenterpriseV1IOSKeySettings iosSettings;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withIosSettings(GoogleCloudRecaptchaenterpriseV1IOSKeySettings iosSettings) {
         this.iosSettings = iosSettings;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testingOptions")
     public GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withTestingOptions(GoogleCloudRecaptchaenterpriseV1TestingOptions testingOptions) {
         this.testingOptions = testingOptions;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wafSettings")
     public GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withWafSettings(GoogleCloudRecaptchaenterpriseV1WafSettings wafSettings) {
         this.wafSettings = wafSettings;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudRecaptchaenterpriseV1KeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webSettings")
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings webSettings;
+
     public GoogleCloudRecaptchaenterpriseV1KeyInput withWebSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettings webSettings) {
         this.webSettings = webSettings;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1KeyInput(){}
 }

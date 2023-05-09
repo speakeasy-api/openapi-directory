@@ -15,9 +15,13 @@ public class ChangeOrderListRequest {
      */
     @JsonProperty("changeOrders")
     public ChangeOrderListRequestItem[] changeOrders;
+
     public ChangeOrderListRequest withChangeOrders(ChangeOrderListRequestItem[] changeOrders) {
         this.changeOrders = changeOrders;
         return this;
     }
     
+    public ChangeOrderListRequest(@JsonProperty("changeOrders") ChangeOrderListRequestItem[] changeOrders) {
+        this.changeOrders = changeOrders;
+  }
 }

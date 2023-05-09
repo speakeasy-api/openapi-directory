@@ -15,6 +15,7 @@ public class ReleasesUpdateRequestBodyDestinations {
      */
     
     public String id;
+
     public ReleasesUpdateRequestBodyDestinations withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,11 @@ public class ReleasesUpdateRequestBodyDestinations {
      */
     
     public String name;
+
     public ReleasesUpdateRequestBodyDestinations withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReleasesUpdateRequestBodyDestinations(){}
 }

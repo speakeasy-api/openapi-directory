@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateAdminAccountRequest {
     @JsonProperty("AdminAccount")
     public String adminAccount;
+
     public AssociateAdminAccountRequest withAdminAccount(String adminAccount) {
         this.adminAccount = adminAccount;
         return this;
     }
     
+    public AssociateAdminAccountRequest(@JsonProperty("AdminAccount") String adminAccount) {
+        this.adminAccount = adminAccount;
+  }
 }

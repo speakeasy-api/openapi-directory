@@ -15,6 +15,7 @@ public class Assets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Asset[] items;
+
     public Assets withItems(Asset[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class Assets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public Pagination pagination;
+
     public Assets withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public Assets(){}
 }

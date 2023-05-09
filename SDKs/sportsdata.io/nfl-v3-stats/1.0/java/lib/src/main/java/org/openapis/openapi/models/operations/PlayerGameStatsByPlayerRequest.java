@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerGameStatsByPlayerRequest {
@@ -12,6 +13,7 @@ public class PlayerGameStatsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PlayerGameStatsByPlayerFormatEnum format;
+
     public PlayerGameStatsByPlayerRequest withFormat(PlayerGameStatsByPlayerFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class PlayerGameStatsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playerid")
     public String playerid;
+
     public PlayerGameStatsByPlayerRequest withPlayerid(String playerid) {
         this.playerid = playerid;
         return this;
@@ -34,6 +37,7 @@ public class PlayerGameStatsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public PlayerGameStatsByPlayerRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -46,9 +50,16 @@ public class PlayerGameStatsByPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=week")
     public String week;
+
     public PlayerGameStatsByPlayerRequest withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public PlayerGameStatsByPlayerRequest(@JsonProperty("format") PlayerGameStatsByPlayerFormatEnum format, @JsonProperty("playerid") String playerid, @JsonProperty("season") String season, @JsonProperty("week") String week) {
+        this.format = format;
+        this.playerid = playerid;
+        this.season = season;
+        this.week = week;
+  }
 }

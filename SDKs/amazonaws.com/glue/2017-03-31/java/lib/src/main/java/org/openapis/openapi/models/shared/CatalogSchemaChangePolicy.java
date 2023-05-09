@@ -15,6 +15,7 @@ public class CatalogSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableUpdateCatalog")
     public Boolean enableUpdateCatalog;
+
     public CatalogSchemaChangePolicy withEnableUpdateCatalog(Boolean enableUpdateCatalog) {
         this.enableUpdateCatalog = enableUpdateCatalog;
         return this;
@@ -23,9 +24,11 @@ public class CatalogSchemaChangePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateBehavior")
     public UpdateCatalogBehaviorEnum updateBehavior;
+
     public CatalogSchemaChangePolicy withUpdateBehavior(UpdateCatalogBehaviorEnum updateBehavior) {
         this.updateBehavior = updateBehavior;
         return this;
     }
     
+    public CatalogSchemaChangePolicy(){}
 }

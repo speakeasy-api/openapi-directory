@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeRepository {
     @JsonProperty("RepositoryUrl")
     public String repositoryUrl;
+
     public CodeRepository withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
     }
     
+    public CodeRepository(@JsonProperty("RepositoryUrl") String repositoryUrl) {
+        this.repositoryUrl = repositoryUrl;
+  }
 }

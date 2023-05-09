@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListConfigurationHistoryResponse {
     
     public String contentType;
+
     public ListConfigurationHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListConfigurationHistoryResponse {
      */
     
     public Object internalServerException;
+
     public ListConfigurationHistoryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListConfigurationHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ListConfigurationHistoryResponse listConfigurationHistoryResponse;
+
     public ListConfigurationHistoryResponse withListConfigurationHistoryResponse(org.openapis.openapi.models.shared.ListConfigurationHistoryResponse listConfigurationHistoryResponse) {
         this.listConfigurationHistoryResponse = listConfigurationHistoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListConfigurationHistoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListConfigurationHistoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListConfigurationHistoryResponse {
     
     
     public Integer statusCode;
+
     public ListConfigurationHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListConfigurationHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListConfigurationHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListConfigurationHistoryResponse {
      */
     
     public Object validationException;
+
     public ListConfigurationHistoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListConfigurationHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

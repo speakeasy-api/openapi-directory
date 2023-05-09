@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Spend {
     @JsonProperty("Amount")
     public String amount;
+
     public Spend withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -19,9 +20,14 @@ public class Spend {
     
     @JsonProperty("Unit")
     public String unit;
+
     public Spend withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public Spend(@JsonProperty("Amount") String amount, @JsonProperty("Unit") String unit) {
+        this.amount = amount;
+        this.unit = unit;
+  }
 }

@@ -18,6 +18,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SslCertificateAggregatedList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public java.util.Map<String, SslCertificatesScopedList> items;
+
     public SslCertificateAggregatedList withItems(java.util.Map<String, SslCertificatesScopedList> items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SslCertificateAggregatedList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SslCertificateAggregatedList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public SslCertificateAggregatedList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,6 +78,7 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachables")
     public String[] unreachables;
+
     public SslCertificateAggregatedList withUnreachables(String[] unreachables) {
         this.unreachables = unreachables;
         return this;
@@ -84,9 +90,11 @@ public class SslCertificateAggregatedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public SslCertificateAggregatedListWarning warning;
+
     public SslCertificateAggregatedList withWarning(SslCertificateAggregatedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public SslCertificateAggregatedList(){}
 }

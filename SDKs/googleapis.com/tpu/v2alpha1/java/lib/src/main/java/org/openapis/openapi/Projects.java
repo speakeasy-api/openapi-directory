@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsAcceleratorTypesListResponse(contentType, httpRes.statusCode()) {{
             listAcceleratorTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsGenerateServiceIdentityResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsGenerateServiceIdentityResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsGenerateServiceIdentityResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsGenerateServiceIdentityResponse(contentType, httpRes.statusCode()) {{
             generateServiceIdentityResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesCreateResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesCreateResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesCreateResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesGetGuestAttributesResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesGetGuestAttributesResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesGetGuestAttributesResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesGetGuestAttributesResponse(contentType, httpRes.statusCode()) {{
             getGuestAttributesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesListResponse(contentType, httpRes.statusCode()) {{
             listNodesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesPatchResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesPatchResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesPatchResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesSimulateMaintenanceEventResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesSimulateMaintenanceEventResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesSimulateMaintenanceEventResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStartResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStartResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStartResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStopResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStopResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStopResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsNodesStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesCreateResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesCreateResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesCreateResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesDeleteResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesDeleteResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesDeleteResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -720,11 +692,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesListResponse(contentType, httpRes.statusCode()) {{
             listQueuedResourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -732,54 +702,6 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ListQueuedResourcesResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListQueuedResourcesResponse.class);
                 res.listQueuedResourcesResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Resets a QueuedResource TPU instance
-     * @param request the request object containing all of the parameters for the API call
-     * @param security the security details to use for authentication
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetResponse tpuProjectsLocationsQueuedResourcesReset(org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetRequest request, org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetSecurity security) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetRequest.class, baseUrl, "/v2alpha1/{name}:reset", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        req.setBody(serializedRequestBody);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsQueuedResourcesResetResponse() {{
-            operation = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
-                res.operation = out;
             }
         }
 
@@ -814,11 +736,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsGetResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsGetResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsGetResponse(contentType, httpRes.statusCode()) {{
             runtimeVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -860,11 +780,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsListResponse() {{
+        org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsListResponse res = new org.openapis.openapi.models.operations.TpuProjectsLocationsRuntimeVersionsListResponse(contentType, httpRes.statusCode()) {{
             listRuntimeVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleAppsCardV1TextInput - A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect abstract data from users, use a text input. To collect defined data from users, use the selection input widget instead.
+ * GoogleAppsCardV1TextInput - A field in which users can enter text. Supports suggestions and on-change actions. Chat apps receive and can process the value of entered text during form input events. For details about working with form inputs, see [Receive form data](https://developers.google.com/chat/how-tos/dialogs#receive_form_data_from_dialogs). When you need to collect undefined or abstract data from users, use a text input. To collect defined or enumerated data from users, use the SelectionInput widget.
  */
 public class GoogleAppsCardV1TextInput {
     /**
@@ -18,6 +18,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCompleteAction")
     public GoogleAppsCardV1Action autoCompleteAction;
+
     public GoogleAppsCardV1TextInput withAutoCompleteAction(GoogleAppsCardV1Action autoCompleteAction) {
         this.autoCompleteAction = autoCompleteAction;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hintText")
     public String hintText;
+
     public GoogleAppsCardV1TextInput withHintText(String hintText) {
         this.hintText = hintText;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialSuggestions")
     public GoogleAppsCardV1Suggestions initialSuggestions;
+
     public GoogleAppsCardV1TextInput withInitialSuggestions(GoogleAppsCardV1Suggestions initialSuggestions) {
         this.initialSuggestions = initialSuggestions;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleAppsCardV1TextInput withLabel(String label) {
         this.label = label;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsCardV1TextInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onChangeAction")
     public GoogleAppsCardV1Action onChangeAction;
+
     public GoogleAppsCardV1TextInput withOnChangeAction(GoogleAppsCardV1Action onChangeAction) {
         this.onChangeAction = onChangeAction;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleAppsCardV1TextInputTypeEnum type;
+
     public GoogleAppsCardV1TextInput withType(GoogleAppsCardV1TextInputTypeEnum type) {
         this.type = type;
         return this;
@@ -95,9 +102,11 @@ public class GoogleAppsCardV1TextInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleAppsCardV1TextInput withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleAppsCardV1TextInput(){}
 }

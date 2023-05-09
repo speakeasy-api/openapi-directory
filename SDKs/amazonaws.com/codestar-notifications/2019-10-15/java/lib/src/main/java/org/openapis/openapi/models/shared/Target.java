@@ -15,6 +15,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetAddress")
     public String targetAddress;
+
     public Target withTargetAddress(String targetAddress) {
         this.targetAddress = targetAddress;
         return this;
@@ -23,9 +24,11 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetType")
     public String targetType;
+
     public Target withTargetType(String targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public Target(){}
 }

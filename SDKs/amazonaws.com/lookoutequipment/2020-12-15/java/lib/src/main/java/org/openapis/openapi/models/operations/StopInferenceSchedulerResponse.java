@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopInferenceSchedulerResponse {
@@ -12,6 +13,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object accessDeniedException;
+
     public StopInferenceSchedulerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object conflictException;
+
     public StopInferenceSchedulerResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StopInferenceSchedulerResponse {
     
     
     public String contentType;
+
     public StopInferenceSchedulerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object internalServerException;
+
     public StopInferenceSchedulerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class StopInferenceSchedulerResponse {
     
     
     public Integer statusCode;
+
     public StopInferenceSchedulerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StopInferenceSchedulerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopInferenceSchedulerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopInferenceSchedulerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public org.openapis.openapi.models.shared.StopInferenceSchedulerResponse stopInferenceSchedulerResponse;
+
     public StopInferenceSchedulerResponse withStopInferenceSchedulerResponse(org.openapis.openapi.models.shared.StopInferenceSchedulerResponse stopInferenceSchedulerResponse) {
         this.stopInferenceSchedulerResponse = stopInferenceSchedulerResponse;
         return this;
@@ -83,6 +92,7 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object throttlingException;
+
     public StopInferenceSchedulerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StopInferenceSchedulerResponse {
      */
     
     public Object validationException;
+
     public StopInferenceSchedulerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopInferenceSchedulerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

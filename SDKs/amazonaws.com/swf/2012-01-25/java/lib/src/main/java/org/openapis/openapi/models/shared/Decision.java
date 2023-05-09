@@ -15,6 +15,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelTimerDecisionAttributes")
     public CancelTimerDecisionAttributes cancelTimerDecisionAttributes;
+
     public Decision withCancelTimerDecisionAttributes(CancelTimerDecisionAttributes cancelTimerDecisionAttributes) {
         this.cancelTimerDecisionAttributes = cancelTimerDecisionAttributes;
         return this;
@@ -23,6 +24,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelWorkflowExecutionDecisionAttributes")
     public CancelWorkflowExecutionDecisionAttributes cancelWorkflowExecutionDecisionAttributes;
+
     public Decision withCancelWorkflowExecutionDecisionAttributes(CancelWorkflowExecutionDecisionAttributes cancelWorkflowExecutionDecisionAttributes) {
         this.cancelWorkflowExecutionDecisionAttributes = cancelWorkflowExecutionDecisionAttributes;
         return this;
@@ -31,6 +33,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeWorkflowExecutionDecisionAttributes")
     public CompleteWorkflowExecutionDecisionAttributes completeWorkflowExecutionDecisionAttributes;
+
     public Decision withCompleteWorkflowExecutionDecisionAttributes(CompleteWorkflowExecutionDecisionAttributes completeWorkflowExecutionDecisionAttributes) {
         this.completeWorkflowExecutionDecisionAttributes = completeWorkflowExecutionDecisionAttributes;
         return this;
@@ -39,6 +42,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continueAsNewWorkflowExecutionDecisionAttributes")
     public ContinueAsNewWorkflowExecutionDecisionAttributes continueAsNewWorkflowExecutionDecisionAttributes;
+
     public Decision withContinueAsNewWorkflowExecutionDecisionAttributes(ContinueAsNewWorkflowExecutionDecisionAttributes continueAsNewWorkflowExecutionDecisionAttributes) {
         this.continueAsNewWorkflowExecutionDecisionAttributes = continueAsNewWorkflowExecutionDecisionAttributes;
         return this;
@@ -46,6 +50,7 @@ public class Decision {
     
     @JsonProperty("decisionType")
     public DecisionTypeEnum decisionType;
+
     public Decision withDecisionType(DecisionTypeEnum decisionType) {
         this.decisionType = decisionType;
         return this;
@@ -54,6 +59,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failWorkflowExecutionDecisionAttributes")
     public FailWorkflowExecutionDecisionAttributes failWorkflowExecutionDecisionAttributes;
+
     public Decision withFailWorkflowExecutionDecisionAttributes(FailWorkflowExecutionDecisionAttributes failWorkflowExecutionDecisionAttributes) {
         this.failWorkflowExecutionDecisionAttributes = failWorkflowExecutionDecisionAttributes;
         return this;
@@ -62,6 +68,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordMarkerDecisionAttributes")
     public RecordMarkerDecisionAttributes recordMarkerDecisionAttributes;
+
     public Decision withRecordMarkerDecisionAttributes(RecordMarkerDecisionAttributes recordMarkerDecisionAttributes) {
         this.recordMarkerDecisionAttributes = recordMarkerDecisionAttributes;
         return this;
@@ -70,6 +77,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCancelActivityTaskDecisionAttributes")
     public RequestCancelActivityTaskDecisionAttributes requestCancelActivityTaskDecisionAttributes;
+
     public Decision withRequestCancelActivityTaskDecisionAttributes(RequestCancelActivityTaskDecisionAttributes requestCancelActivityTaskDecisionAttributes) {
         this.requestCancelActivityTaskDecisionAttributes = requestCancelActivityTaskDecisionAttributes;
         return this;
@@ -78,6 +86,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCancelExternalWorkflowExecutionDecisionAttributes")
     public RequestCancelExternalWorkflowExecutionDecisionAttributes requestCancelExternalWorkflowExecutionDecisionAttributes;
+
     public Decision withRequestCancelExternalWorkflowExecutionDecisionAttributes(RequestCancelExternalWorkflowExecutionDecisionAttributes requestCancelExternalWorkflowExecutionDecisionAttributes) {
         this.requestCancelExternalWorkflowExecutionDecisionAttributes = requestCancelExternalWorkflowExecutionDecisionAttributes;
         return this;
@@ -86,6 +95,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleActivityTaskDecisionAttributes")
     public ScheduleActivityTaskDecisionAttributes scheduleActivityTaskDecisionAttributes;
+
     public Decision withScheduleActivityTaskDecisionAttributes(ScheduleActivityTaskDecisionAttributes scheduleActivityTaskDecisionAttributes) {
         this.scheduleActivityTaskDecisionAttributes = scheduleActivityTaskDecisionAttributes;
         return this;
@@ -94,6 +104,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleLambdaFunctionDecisionAttributes")
     public ScheduleLambdaFunctionDecisionAttributes scheduleLambdaFunctionDecisionAttributes;
+
     public Decision withScheduleLambdaFunctionDecisionAttributes(ScheduleLambdaFunctionDecisionAttributes scheduleLambdaFunctionDecisionAttributes) {
         this.scheduleLambdaFunctionDecisionAttributes = scheduleLambdaFunctionDecisionAttributes;
         return this;
@@ -102,6 +113,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalExternalWorkflowExecutionDecisionAttributes")
     public SignalExternalWorkflowExecutionDecisionAttributes signalExternalWorkflowExecutionDecisionAttributes;
+
     public Decision withSignalExternalWorkflowExecutionDecisionAttributes(SignalExternalWorkflowExecutionDecisionAttributes signalExternalWorkflowExecutionDecisionAttributes) {
         this.signalExternalWorkflowExecutionDecisionAttributes = signalExternalWorkflowExecutionDecisionAttributes;
         return this;
@@ -110,6 +122,7 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startChildWorkflowExecutionDecisionAttributes")
     public StartChildWorkflowExecutionDecisionAttributes startChildWorkflowExecutionDecisionAttributes;
+
     public Decision withStartChildWorkflowExecutionDecisionAttributes(StartChildWorkflowExecutionDecisionAttributes startChildWorkflowExecutionDecisionAttributes) {
         this.startChildWorkflowExecutionDecisionAttributes = startChildWorkflowExecutionDecisionAttributes;
         return this;
@@ -118,9 +131,13 @@ public class Decision {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimerDecisionAttributes")
     public StartTimerDecisionAttributes startTimerDecisionAttributes;
+
     public Decision withStartTimerDecisionAttributes(StartTimerDecisionAttributes startTimerDecisionAttributes) {
         this.startTimerDecisionAttributes = startTimerDecisionAttributes;
         return this;
     }
     
+    public Decision(@JsonProperty("decisionType") DecisionTypeEnum decisionType) {
+        this.decisionType = decisionType;
+  }
 }

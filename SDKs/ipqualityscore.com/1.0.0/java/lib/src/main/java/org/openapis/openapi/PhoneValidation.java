@@ -57,13 +57,11 @@ public class PhoneValidation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PhoneValidationResponse res = new org.openapis.openapi.models.operations.PhoneValidationResponse() {{
+        org.openapis.openapi.models.operations.PhoneValidationResponse res = new org.openapis.openapi.models.operations.PhoneValidationResponse(contentType, httpRes.statusCode()) {{
             phoneValidation200ApplicationJSONObject = null;
             phoneValidation400ApplicationJSONObject = null;
             phoneValidation500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

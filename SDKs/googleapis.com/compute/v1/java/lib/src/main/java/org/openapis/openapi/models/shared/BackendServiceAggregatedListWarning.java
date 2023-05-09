@@ -18,6 +18,7 @@ public class BackendServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public BackendServiceAggregatedListWarningCodeEnum code;
+
     public BackendServiceAggregatedListWarning withCode(BackendServiceAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BackendServiceAggregatedListWarningData[] data;
+
     public BackendServiceAggregatedListWarning withData(BackendServiceAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class BackendServiceAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BackendServiceAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BackendServiceAggregatedListWarning(){}
 }

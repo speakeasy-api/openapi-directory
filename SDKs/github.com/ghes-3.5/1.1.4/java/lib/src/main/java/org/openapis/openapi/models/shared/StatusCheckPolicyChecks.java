@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StatusCheckPolicyChecks {
     @JsonProperty("app_id")
     public Long appId;
+
     public StatusCheckPolicyChecks withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -16,9 +17,14 @@ public class StatusCheckPolicyChecks {
     
     @JsonProperty("context")
     public String context;
+
     public StatusCheckPolicyChecks withContext(String context) {
         this.context = context;
         return this;
     }
     
+    public StatusCheckPolicyChecks(@JsonProperty("app_id") Long appId, @JsonProperty("context") String context) {
+        this.appId = appId;
+        this.context = context;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class GetVpnConnectionDeviceTypesRequest {
     
     public Boolean dryRun;
+
     public GetVpnConnectionDeviceTypesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetVpnConnectionDeviceTypesRequest {
     
     
     public Long maxResults;
+
     public GetVpnConnectionDeviceTypesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -23,9 +25,11 @@ public class GetVpnConnectionDeviceTypesRequest {
     
     
     public String nextToken;
+
     public GetVpnConnectionDeviceTypesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetVpnConnectionDeviceTypesRequest(){}
 }

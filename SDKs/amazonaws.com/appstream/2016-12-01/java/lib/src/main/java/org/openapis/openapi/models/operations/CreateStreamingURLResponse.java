@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamingURLResponse {
     
     public String contentType;
+
     public CreateStreamingURLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStreamingURLResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamingURLResult createStreamingURLResult;
+
     public CreateStreamingURLResponse withCreateStreamingURLResult(org.openapis.openapi.models.shared.CreateStreamingURLResult createStreamingURLResult) {
         this.createStreamingURLResult = createStreamingURLResult;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamingURLResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateStreamingURLResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamingURLResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateStreamingURLResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamingURLResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public CreateStreamingURLResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -59,6 +65,7 @@ public class CreateStreamingURLResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamingURLResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateStreamingURLResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamingURLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateStreamingURLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamingURLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateStreamingURLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

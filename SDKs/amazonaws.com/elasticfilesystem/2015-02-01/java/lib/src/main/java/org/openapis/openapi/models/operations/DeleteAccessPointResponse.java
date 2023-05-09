@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAccessPointResponse {
@@ -12,6 +13,7 @@ public class DeleteAccessPointResponse {
      */
     
     public Object accessPointNotFound;
+
     public DeleteAccessPointResponse withAccessPointNotFound(Object accessPointNotFound) {
         this.accessPointNotFound = accessPointNotFound;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAccessPointResponse {
      */
     
     public Object badRequest;
+
     public DeleteAccessPointResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAccessPointResponse {
     
     
     public String contentType;
+
     public DeleteAccessPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAccessPointResponse {
      */
     
     public Object internalServerError;
+
     public DeleteAccessPointResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -46,6 +51,7 @@ public class DeleteAccessPointResponse {
     
     
     public Integer statusCode;
+
     public DeleteAccessPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteAccessPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAccessPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAccessPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateOrUpdateProfileSchemaRequest {
@@ -12,6 +13,7 @@ public class CreateOrUpdateProfileSchemaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateOrUpdateProfileSchemaRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateOrUpdateProfileSchemaRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateOrUpdateProfileSchemaRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class CreateOrUpdateProfileSchemaRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Schema schema;
+
     public CreateOrUpdateProfileSchemaRequest withSchema(org.openapis.openapi.models.shared.Schema schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateOrUpdateProfileSchemaRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleChromePolicyVersionsV1DefineNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromePolicyVersionsV1DefineNetworkRequest withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromePolicyVersionsV1DefineNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public GoogleChromePolicyVersionsV1NetworkSetting[] settings;
+
     public GoogleChromePolicyVersionsV1DefineNetworkRequest withSettings(GoogleChromePolicyVersionsV1NetworkSetting[] settings) {
         this.settings = settings;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromePolicyVersionsV1DefineNetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResource")
     public String targetResource;
+
     public GoogleChromePolicyVersionsV1DefineNetworkRequest withTargetResource(String targetResource) {
         this.targetResource = targetResource;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1DefineNetworkRequest(){}
 }

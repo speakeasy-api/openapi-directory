@@ -18,9 +18,11 @@ public class CsmSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rctokenAud")
     public String rctokenAud;
+
     public CsmSettings withRctokenAud(String rctokenAud) {
         this.rctokenAud = rctokenAud;
         return this;
     }
     
+    public CsmSettings(){}
 }

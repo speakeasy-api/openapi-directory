@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class PolicyVersion {
     
     public OffsetDateTime createDate;
+
     public PolicyVersion withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -19,6 +20,7 @@ public class PolicyVersion {
     
     
     public String document;
+
     public PolicyVersion withDocument(String document) {
         this.document = document;
         return this;
@@ -26,6 +28,7 @@ public class PolicyVersion {
     
     
     public Boolean isDefaultVersion;
+
     public PolicyVersion withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -33,9 +36,11 @@ public class PolicyVersion {
     
     
     public String versionId;
+
     public PolicyVersion withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public PolicyVersion(){}
 }

@@ -15,6 +15,7 @@ public class S3SourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundedFiles")
     public Long boundedFiles;
+
     public S3SourceAdditionalOptions withBoundedFiles(Long boundedFiles) {
         this.boundedFiles = boundedFiles;
         return this;
@@ -23,9 +24,11 @@ public class S3SourceAdditionalOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BoundedSize")
     public Long boundedSize;
+
     public S3SourceAdditionalOptions withBoundedSize(Long boundedSize) {
         this.boundedSize = boundedSize;
         return this;
     }
     
+    public S3SourceAdditionalOptions(){}
 }

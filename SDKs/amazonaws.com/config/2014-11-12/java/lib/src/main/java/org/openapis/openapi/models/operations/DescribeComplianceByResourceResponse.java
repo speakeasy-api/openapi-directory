@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeComplianceByResourceResponse {
     
     public String contentType;
+
     public DescribeComplianceByResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeComplianceByResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeComplianceByResourceResponse describeComplianceByResourceResponse;
+
     public DescribeComplianceByResourceResponse withDescribeComplianceByResourceResponse(org.openapis.openapi.models.shared.DescribeComplianceByResourceResponse describeComplianceByResourceResponse) {
         this.describeComplianceByResourceResponse = describeComplianceByResourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeComplianceByResourceResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeComplianceByResourceResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeComplianceByResourceResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeComplianceByResourceResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeComplianceByResourceResponse {
     
     
     public Integer statusCode;
+
     public DescribeComplianceByResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeComplianceByResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeComplianceByResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeComplianceByResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

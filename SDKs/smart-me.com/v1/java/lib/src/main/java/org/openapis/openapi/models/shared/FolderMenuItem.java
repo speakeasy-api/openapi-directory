@@ -18,6 +18,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoExportSettings")
     public AutoExportSettings autoExportSettings;
+
     public FolderMenuItem withAutoExportSettings(AutoExportSettings autoExportSettings) {
         this.autoExportSettings = autoExportSettings;
         return this;
@@ -29,6 +30,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Children")
     public FolderMenuItem[] children;
+
     public FolderMenuItem withChildren(FolderMenuItem[] children) {
         this.children = children;
         return this;
@@ -40,6 +42,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FolderMenuItem withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FolderType")
     public FolderMenuItemFolderTypeEnum folderType;
+
     public FolderMenuItem withFolderType(FolderMenuItemFolderTypeEnum folderType) {
         this.folderType = folderType;
         return this;
@@ -62,6 +66,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Icon")
     public String icon;
+
     public FolderMenuItem withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -73,6 +78,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public FolderMenuItem withId(String id) {
         this.id = id;
         return this;
@@ -85,6 +91,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeterSerialNumber")
     public String meterSerialNumber;
+
     public FolderMenuItem withMeterSerialNumber(String meterSerialNumber) {
         this.meterSerialNumber = meterSerialNumber;
         return this;
@@ -96,6 +103,7 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FolderMenuItem withName(String name) {
         this.name = name;
         return this;
@@ -107,9 +115,11 @@ public class FolderMenuItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public FolderMenuItem withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public FolderMenuItem(){}
 }

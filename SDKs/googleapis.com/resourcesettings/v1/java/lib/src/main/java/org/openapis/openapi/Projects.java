@@ -59,11 +59,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetResponse() {{
+        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsGetResponse(contentType, httpRes.statusCode()) {{
             googleCloudResourcesettingsV1Setting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsListResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsListResponse() {{
+        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsListResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudResourcesettingsV1ListSettingsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsPatchResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsPatchResponse() {{
+        org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsPatchResponse res = new org.openapis.openapi.models.operations.ResourcesettingsProjectsSettingsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudResourcesettingsV1Setting = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRiskParametersResponse {
     
     public String contentType;
+
     public GetRiskParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRiskParametersResponse {
     
     
     public Integer statusCode;
+
     public GetRiskParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRiskParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRiskParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetRiskParametersResponse {
      */
     
     public GetRiskParameters200ApplicationJSON getRiskParameters200ApplicationJSONObject;
+
     public GetRiskParametersResponse withGetRiskParameters200ApplicationJSONObject(GetRiskParameters200ApplicationJSON getRiskParameters200ApplicationJSONObject) {
         this.getRiskParameters200ApplicationJSONObject = getRiskParameters200ApplicationJSONObject;
         return this;
     }
     
+    public GetRiskParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

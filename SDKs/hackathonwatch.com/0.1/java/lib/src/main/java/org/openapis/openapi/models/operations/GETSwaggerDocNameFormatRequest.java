@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSwaggerDocNameFormatRequest {
@@ -12,9 +13,13 @@ public class GETSwaggerDocNameFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public GETSwaggerDocNameFormatRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GETSwaggerDocNameFormatRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

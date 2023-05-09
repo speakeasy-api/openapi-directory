@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCACertificateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateCACertificateRequestBody requestBody;
+
     public UpdateCACertificateRequest withRequestBody(UpdateCACertificateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateCACertificateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateCACertificateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateCACertificateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateCACertificateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateCACertificateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateCACertificateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateCACertificateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateCACertificateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateCACertificateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=caCertificateId")
     public String caCertificateId;
+
     public UpdateCACertificateRequest withCaCertificateId(String caCertificateId) {
         this.caCertificateId = caCertificateId;
         return this;
@@ -78,6 +88,7 @@ public class UpdateCACertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newAutoRegistrationStatus")
     public UpdateCACertificateNewAutoRegistrationStatusEnum newAutoRegistrationStatus;
+
     public UpdateCACertificateRequest withNewAutoRegistrationStatus(UpdateCACertificateNewAutoRegistrationStatusEnum newAutoRegistrationStatus) {
         this.newAutoRegistrationStatus = newAutoRegistrationStatus;
         return this;
@@ -88,9 +99,14 @@ public class UpdateCACertificateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=newStatus")
     public UpdateCACertificateNewStatusEnum newStatus;
+
     public UpdateCACertificateRequest withNewStatus(UpdateCACertificateNewStatusEnum newStatus) {
         this.newStatus = newStatus;
         return this;
     }
     
+    public UpdateCACertificateRequest(@JsonProperty("RequestBody") UpdateCACertificateRequestBody requestBody, @JsonProperty("caCertificateId") String caCertificateId) {
+        this.requestBody = requestBody;
+        this.caCertificateId = caCertificateId;
+  }
 }

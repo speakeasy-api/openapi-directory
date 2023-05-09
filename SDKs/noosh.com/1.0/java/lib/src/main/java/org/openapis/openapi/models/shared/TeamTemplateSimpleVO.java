@@ -15,6 +15,7 @@ public class TeamTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template_id")
     public Long teamTemplateId;
+
     public TeamTemplateSimpleVO withTeamTemplateId(Long teamTemplateId) {
         this.teamTemplateId = teamTemplateId;
         return this;
@@ -23,9 +24,11 @@ public class TeamTemplateSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_template_name")
     public String teamTemplateName;
+
     public TeamTemplateSimpleVO withTeamTemplateName(String teamTemplateName) {
         this.teamTemplateName = teamTemplateName;
         return this;
     }
     
+    public TeamTemplateSimpleVO(){}
 }

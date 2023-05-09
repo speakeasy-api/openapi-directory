@@ -59,11 +59,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesGetResponse(contentType, httpRes.statusCode()) {{
             targetHttpProxy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesInsertResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesListResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesListResponse(contentType, httpRes.statusCode()) {{
             targetHttpProxyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesSetUrlMapResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesSetUrlMapResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesSetUrlMapResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesSetUrlMapResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class RegionTargetHttpProxies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeRegionTargetHttpProxiesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

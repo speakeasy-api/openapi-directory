@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetAdvisorCollectorsResponse {
     
     public String contentType;
+
     public DescribeFleetAdvisorCollectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetAdvisorCollectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetAdvisorCollectorsResponse describeFleetAdvisorCollectorsResponse;
+
     public DescribeFleetAdvisorCollectorsResponse withDescribeFleetAdvisorCollectorsResponse(org.openapis.openapi.models.shared.DescribeFleetAdvisorCollectorsResponse describeFleetAdvisorCollectorsResponse) {
         this.describeFleetAdvisorCollectorsResponse = describeFleetAdvisorCollectorsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetAdvisorCollectorsResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DescribeFleetAdvisorCollectorsResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DescribeFleetAdvisorCollectorsResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetAdvisorCollectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeFleetAdvisorCollectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetAdvisorCollectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeFleetAdvisorCollectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

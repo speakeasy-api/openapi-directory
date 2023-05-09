@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUploadRequest {
     @JsonProperty("arn")
     public String arn;
+
     public DeleteUploadRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteUploadRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

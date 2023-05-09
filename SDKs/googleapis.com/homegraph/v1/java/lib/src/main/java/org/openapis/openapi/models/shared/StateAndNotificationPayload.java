@@ -18,9 +18,11 @@ public class StateAndNotificationPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public ReportStateAndNotificationDevice devices;
+
     public StateAndNotificationPayload withDevices(ReportStateAndNotificationDevice devices) {
         this.devices = devices;
         return this;
     }
     
+    public StateAndNotificationPayload(){}
 }

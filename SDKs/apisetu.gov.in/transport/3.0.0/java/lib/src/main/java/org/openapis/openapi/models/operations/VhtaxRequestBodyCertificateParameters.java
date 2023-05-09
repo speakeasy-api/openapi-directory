@@ -12,6 +12,7 @@ public class VhtaxRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public VhtaxRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class VhtaxRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public VhtaxRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
@@ -32,6 +34,7 @@ public class VhtaxRequestBodyCertificateParameters {
      */
     @JsonProperty("chasis_no")
     public String chasisNo;
+
     public VhtaxRequestBodyCertificateParameters withChasisNo(String chasisNo) {
         this.chasisNo = chasisNo;
         return this;
@@ -42,6 +45,7 @@ public class VhtaxRequestBodyCertificateParameters {
      */
     @JsonProperty("reg_no")
     public String regNo;
+
     public VhtaxRequestBodyCertificateParameters withRegNo(String regNo) {
         this.regNo = regNo;
         return this;
@@ -52,9 +56,17 @@ public class VhtaxRequestBodyCertificateParameters {
      */
     @JsonProperty("swd_name")
     public String swdName;
+
     public VhtaxRequestBodyCertificateParameters withSwdName(String swdName) {
         this.swdName = swdName;
         return this;
     }
     
+    public VhtaxRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("UID") String uid, @JsonProperty("chasis_no") String chasisNo, @JsonProperty("reg_no") String regNo, @JsonProperty("swd_name") String swdName) {
+        this.fullName = fullName;
+        this.uid = uid;
+        this.chasisNo = chasisNo;
+        this.regNo = regNo;
+        this.swdName = swdName;
+  }
 }

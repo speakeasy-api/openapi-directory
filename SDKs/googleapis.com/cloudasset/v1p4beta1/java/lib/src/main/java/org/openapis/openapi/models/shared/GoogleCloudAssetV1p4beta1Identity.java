@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1p4beta1Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analysisState")
     public GoogleCloudAssetV1p4beta1AnalysisState analysisState;
+
     public GoogleCloudAssetV1p4beta1Identity withAnalysisState(GoogleCloudAssetV1p4beta1AnalysisState analysisState) {
         this.analysisState = analysisState;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssetV1p4beta1Identity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudAssetV1p4beta1Identity withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudAssetV1p4beta1Identity(){}
 }

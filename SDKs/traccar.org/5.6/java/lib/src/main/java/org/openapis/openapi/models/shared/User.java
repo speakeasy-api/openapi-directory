@@ -20,6 +20,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrator")
     public Boolean administrator;
+
     public User withAdministrator(Boolean administrator) {
         this.administrator = administrator;
         return this;
@@ -28,6 +29,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public User withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -36,6 +38,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinateFormat")
     public String coordinateFormat;
+
     public User withCoordinateFormat(String coordinateFormat) {
         this.coordinateFormat = coordinateFormat;
         return this;
@@ -44,6 +47,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceLimit")
     public Long deviceLimit;
+
     public User withDeviceLimit(Long deviceLimit) {
         this.deviceLimit = deviceLimit;
         return this;
@@ -52,6 +56,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceReadonly")
     public Boolean deviceReadonly;
+
     public User withDeviceReadonly(Boolean deviceReadonly) {
         this.deviceReadonly = deviceReadonly;
         return this;
@@ -60,6 +65,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public User withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -68,6 +74,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -81,6 +88,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationTime")
     public OffsetDateTime expirationTime;
+
     public User withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -89,6 +97,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -97,6 +106,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public User withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -105,6 +115,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitCommands")
     public Boolean limitCommands;
+
     public User withLimitCommands(Boolean limitCommands) {
         this.limitCommands = limitCommands;
         return this;
@@ -113,6 +124,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public User withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -121,6 +133,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("map")
     public String map;
+
     public User withMap(String map) {
         this.map = map;
         return this;
@@ -129,6 +142,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -137,6 +151,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public User withPassword(String password) {
         this.password = password;
         return this;
@@ -145,6 +160,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public User withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -153,6 +169,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poiLayer")
     public String poiLayer;
+
     public User withPoiLayer(String poiLayer) {
         this.poiLayer = poiLayer;
         return this;
@@ -161,6 +178,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readonly")
     public Boolean readonly;
+
     public User withReadonly(Boolean readonly) {
         this.readonly = readonly;
         return this;
@@ -169,6 +187,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twelveHourFormat")
     public Boolean twelveHourFormat;
+
     public User withTwelveHourFormat(Boolean twelveHourFormat) {
         this.twelveHourFormat = twelveHourFormat;
         return this;
@@ -177,6 +196,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLimit")
     public Long userLimit;
+
     public User withUserLimit(Long userLimit) {
         this.userLimit = userLimit;
         return this;
@@ -185,9 +205,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zoom")
     public Long zoom;
+
     public User withZoom(Long zoom) {
         this.zoom = zoom;
         return this;
     }
     
+    public User(){}
 }

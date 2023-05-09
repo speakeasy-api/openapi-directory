@@ -18,6 +18,7 @@ public class SearchOrganizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchOrganizationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SearchOrganizationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizations")
     public Organization[] organizations;
+
     public SearchOrganizationsResponse withOrganizations(Organization[] organizations) {
         this.organizations = organizations;
         return this;
     }
     
+    public SearchOrganizationsResponse(){}
 }

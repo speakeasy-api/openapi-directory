@@ -15,9 +15,13 @@ public class BtPlans {
      */
     @JsonProperty("plans")
     public BtPlanListItem[] plans;
+
     public BtPlans withPlans(BtPlanListItem[] plans) {
         this.plans = plans;
         return this;
     }
     
+    public BtPlans(@JsonProperty("plans") BtPlanListItem[] plans) {
+        this.plans = plans;
+  }
 }

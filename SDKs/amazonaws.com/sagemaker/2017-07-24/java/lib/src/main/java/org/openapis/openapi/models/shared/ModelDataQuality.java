@@ -15,6 +15,7 @@ public class ModelDataQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Constraints")
     public MetricsSource constraints;
+
     public ModelDataQuality withConstraints(MetricsSource constraints) {
         this.constraints = constraints;
         return this;
@@ -23,9 +24,11 @@ public class ModelDataQuality {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Statistics")
     public MetricsSource statistics;
+
     public ModelDataQuality withStatistics(MetricsSource statistics) {
         this.statistics = statistics;
         return this;
     }
     
+    public ModelDataQuality(){}
 }

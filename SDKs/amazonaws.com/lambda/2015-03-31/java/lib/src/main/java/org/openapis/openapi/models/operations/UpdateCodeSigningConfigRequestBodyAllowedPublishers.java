@@ -15,9 +15,11 @@ public class UpdateCodeSigningConfigRequestBodyAllowedPublishers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningProfileVersionArns")
     public String[] signingProfileVersionArns;
+
     public UpdateCodeSigningConfigRequestBodyAllowedPublishers withSigningProfileVersionArns(String[] signingProfileVersionArns) {
         this.signingProfileVersionArns = signingProfileVersionArns;
         return this;
     }
     
+    public UpdateCodeSigningConfigRequestBodyAllowedPublishers(){}
 }

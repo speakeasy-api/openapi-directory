@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProvisionedConcurrencyConfigResponse {
     
     public String contentType;
+
     public DeleteProvisionedConcurrencyConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteProvisionedConcurrencyConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteProvisionedConcurrencyConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
      */
     
     public Object serviceException;
+
     public DeleteProvisionedConcurrencyConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteProvisionedConcurrencyConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProvisionedConcurrencyConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteProvisionedConcurrencyConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProvisionedConcurrencyConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteProvisionedConcurrencyConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteProvisionedConcurrencyConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteProvisionedConcurrencyConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

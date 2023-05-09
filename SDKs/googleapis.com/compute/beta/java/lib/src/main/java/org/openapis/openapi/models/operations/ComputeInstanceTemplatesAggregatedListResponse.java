@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstanceTemplatesAggregatedListResponse {
     
     public String contentType;
+
     public ComputeInstanceTemplatesAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstanceTemplatesAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.InstanceTemplateAggregatedList instanceTemplateAggregatedList;
+
     public ComputeInstanceTemplatesAggregatedListResponse withInstanceTemplateAggregatedList(org.openapis.openapi.models.shared.InstanceTemplateAggregatedList instanceTemplateAggregatedList) {
         this.instanceTemplateAggregatedList = instanceTemplateAggregatedList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstanceTemplatesAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstanceTemplatesAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstanceTemplatesAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstanceTemplatesAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstanceTemplatesAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

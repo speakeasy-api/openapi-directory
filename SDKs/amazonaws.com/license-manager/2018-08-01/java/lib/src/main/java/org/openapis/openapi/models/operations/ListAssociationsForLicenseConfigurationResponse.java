@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssociationsForLicenseConfigurationResponse {
@@ -12,6 +13,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssociationsForLicenseConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object authorizationException;
+
     public ListAssociationsForLicenseConfigurationResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
     
     
     public String contentType;
+
     public ListAssociationsForLicenseConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object filterLimitExceededException;
+
     public ListAssociationsForLicenseConfigurationResponse withFilterLimitExceededException(Object filterLimitExceededException) {
         this.filterLimitExceededException = filterLimitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListAssociationsForLicenseConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssociationsForLicenseConfigurationResponse listAssociationsForLicenseConfigurationResponse;
+
     public ListAssociationsForLicenseConfigurationResponse withListAssociationsForLicenseConfigurationResponse(org.openapis.openapi.models.shared.ListAssociationsForLicenseConfigurationResponse listAssociationsForLicenseConfigurationResponse) {
         this.listAssociationsForLicenseConfigurationResponse = listAssociationsForLicenseConfigurationResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListAssociationsForLicenseConfigurationResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
     
     
     public Integer statusCode;
+
     public ListAssociationsForLicenseConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListAssociationsForLicenseConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssociationsForLicenseConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListAssociationsForLicenseConfigurationResponse {
      */
     
     public Object serverInternalException;
+
     public ListAssociationsForLicenseConfigurationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public ListAssociationsForLicenseConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

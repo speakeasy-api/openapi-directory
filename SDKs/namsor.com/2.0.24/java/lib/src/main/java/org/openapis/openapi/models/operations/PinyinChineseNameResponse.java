@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PinyinChineseNameResponse {
     
     public String contentType;
+
     public PinyinChineseNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PinyinChineseNameResponse {
      */
     
     public org.openapis.openapi.models.shared.PersonalNameParsedOut personalNameParsedOut;
+
     public PinyinChineseNameResponse withPersonalNameParsedOut(org.openapis.openapi.models.shared.PersonalNameParsedOut personalNameParsedOut) {
         this.personalNameParsedOut = personalNameParsedOut;
         return this;
@@ -26,6 +29,7 @@ public class PinyinChineseNameResponse {
     
     
     public Integer statusCode;
+
     public PinyinChineseNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PinyinChineseNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PinyinChineseNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PinyinChineseNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

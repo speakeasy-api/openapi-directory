@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelSpotInstanceRequestsRequest - Contains the parameters for CancelSpotInstanceRequests.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotInstanceRequestsRequest {
     
     public Boolean dryRun;
+
     public CancelSpotInstanceRequestsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,9 +20,13 @@ public class CancelSpotInstanceRequestsRequest {
     
     
     public String[] spotInstanceRequestIds;
+
     public CancelSpotInstanceRequestsRequest withSpotInstanceRequestIds(String[] spotInstanceRequestIds) {
         this.spotInstanceRequestIds = spotInstanceRequestIds;
         return this;
     }
     
+    public CancelSpotInstanceRequestsRequest(@JsonProperty("SpotInstanceRequestIds") String[] spotInstanceRequestIds) {
+        this.spotInstanceRequestIds = spotInstanceRequestIds;
+  }
 }

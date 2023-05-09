@@ -18,6 +18,7 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AppsUpdateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public AppsUpdateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_asset_id")
     public String iconAssetId;
+
     public AppsUpdateRequestBody withIconAssetId(String iconAssetId) {
         this.iconAssetId = iconAssetId;
         return this;
@@ -51,6 +54,7 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon_url")
     public String iconUrl;
+
     public AppsUpdateRequestBody withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -62,6 +66,7 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AppsUpdateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class AppsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_type")
     public String releaseType;
+
     public AppsUpdateRequestBody withReleaseType(String releaseType) {
         this.releaseType = releaseType;
         return this;
     }
     
+    public AppsUpdateRequestBody(){}
 }

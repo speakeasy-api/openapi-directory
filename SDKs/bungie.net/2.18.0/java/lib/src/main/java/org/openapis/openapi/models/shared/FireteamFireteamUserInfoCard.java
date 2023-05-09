@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class FireteamFireteamUserInfoCard {
     
     public String fireteamDisplayName;
+
     public FireteamFireteamUserInfoCard withFireteamDisplayName(String fireteamDisplayName) {
         this.fireteamDisplayName = fireteamDisplayName;
         return this;
@@ -16,6 +17,7 @@ public class FireteamFireteamUserInfoCard {
     
     
     public Integer fireteamMembershipType;
+
     public FireteamFireteamUserInfoCard withFireteamMembershipType(Integer fireteamMembershipType) {
         this.fireteamMembershipType = fireteamMembershipType;
         return this;
@@ -27,6 +29,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public FireteamFireteamUserInfoCard withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -37,6 +40,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public String bungieGlobalDisplayName;
+
     public FireteamFireteamUserInfoCard withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -47,6 +51,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public FireteamFireteamUserInfoCard withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -57,6 +62,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Integer crossSaveOverride;
+
     public FireteamFireteamUserInfoCard withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -67,6 +73,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public String displayName;
+
     public FireteamFireteamUserInfoCard withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -77,6 +84,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public String iconPath;
+
     public FireteamFireteamUserInfoCard withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -87,6 +95,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Boolean isPublic;
+
     public FireteamFireteamUserInfoCard withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -97,6 +106,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Long membershipId;
+
     public FireteamFireteamUserInfoCard withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -107,6 +117,7 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public Integer membershipType;
+
     public FireteamFireteamUserInfoCard withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -117,9 +128,11 @@ public class FireteamFireteamUserInfoCard {
      */
     
     public String supplementalDisplayName;
+
     public FireteamFireteamUserInfoCard withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public FireteamFireteamUserInfoCard(){}
 }

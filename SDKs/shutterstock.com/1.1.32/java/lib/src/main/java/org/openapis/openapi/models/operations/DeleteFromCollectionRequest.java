@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFromCollectionRequest {
@@ -12,6 +13,7 @@ public class DeleteFromCollectionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RemoveCatalogCollectionItems removeCatalogCollectionItems;
+
     public DeleteFromCollectionRequest withRemoveCatalogCollectionItems(org.openapis.openapi.models.shared.RemoveCatalogCollectionItems removeCatalogCollectionItems) {
         this.removeCatalogCollectionItems = removeCatalogCollectionItems;
         return this;
@@ -22,9 +24,14 @@ public class DeleteFromCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection_id")
     public String collectionId;
+
     public DeleteFromCollectionRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
     }
     
+    public DeleteFromCollectionRequest(@JsonProperty("RemoveCatalogCollectionItems") org.openapis.openapi.models.shared.RemoveCatalogCollectionItems removeCatalogCollectionItems, @JsonProperty("collection_id") String collectionId) {
+        this.removeCatalogCollectionItems = removeCatalogCollectionItems;
+        this.collectionId = collectionId;
+  }
 }

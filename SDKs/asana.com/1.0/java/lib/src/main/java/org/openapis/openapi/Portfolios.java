@@ -68,12 +68,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddCustomFieldSettingForPortfolioResponse res = new org.openapis.openapi.models.operations.AddCustomFieldSettingForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.AddCustomFieldSettingForPortfolioResponse res = new org.openapis.openapi.models.operations.AddCustomFieldSettingForPortfolioResponse(contentType, httpRes.statusCode()) {{
             addCustomFieldSettingForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -128,12 +126,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddItemForPortfolioResponse res = new org.openapis.openapi.models.operations.AddItemForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.AddItemForPortfolioResponse res = new org.openapis.openapi.models.operations.AddItemForPortfolioResponse(contentType, httpRes.statusCode()) {{
             addItemForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,12 +184,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddMembersForPortfolioResponse res = new org.openapis.openapi.models.operations.AddMembersForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.AddMembersForPortfolioResponse res = new org.openapis.openapi.models.operations.AddMembersForPortfolioResponse(contentType, httpRes.statusCode()) {{
             addMembersForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,12 +247,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePortfolioResponse res = new org.openapis.openapi.models.operations.CreatePortfolioResponse() {{
+        org.openapis.openapi.models.operations.CreatePortfolioResponse res = new org.openapis.openapi.models.operations.CreatePortfolioResponse(contentType, httpRes.statusCode()) {{
             createPortfolio201ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -310,12 +302,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePortfolioResponse res = new org.openapis.openapi.models.operations.DeletePortfolioResponse() {{
+        org.openapis.openapi.models.operations.DeletePortfolioResponse res = new org.openapis.openapi.models.operations.DeletePortfolioResponse(contentType, httpRes.statusCode()) {{
             deletePortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,12 +354,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetItemsForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.GetItemsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetItemsForPortfolioResponse(contentType, httpRes.statusCode()) {{
             getItemsForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -418,12 +406,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfolioResponse res = new org.openapis.openapi.models.operations.GetPortfolioResponse() {{
+        org.openapis.openapi.models.operations.GetPortfolioResponse res = new org.openapis.openapi.models.operations.GetPortfolioResponse(contentType, httpRes.statusCode()) {{
             getPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -472,12 +458,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfoliosResponse res = new org.openapis.openapi.models.operations.GetPortfoliosResponse() {{
+        org.openapis.openapi.models.operations.GetPortfoliosResponse res = new org.openapis.openapi.models.operations.GetPortfoliosResponse(contentType, httpRes.statusCode()) {{
             getPortfolios200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -531,12 +515,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveCustomFieldSettingForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveCustomFieldSettingForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.RemoveCustomFieldSettingForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveCustomFieldSettingForPortfolioResponse(contentType, httpRes.statusCode()) {{
             removeCustomFieldSettingForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -591,12 +573,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveItemForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveItemForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.RemoveItemForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveItemForPortfolioResponse(contentType, httpRes.statusCode()) {{
             removeItemForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -651,12 +631,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveMembersForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveMembersForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.RemoveMembersForPortfolioResponse res = new org.openapis.openapi.models.operations.RemoveMembersForPortfolioResponse(contentType, httpRes.statusCode()) {{
             removeMembersForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -714,12 +692,10 @@ public class Portfolios {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePortfolioResponse res = new org.openapis.openapi.models.operations.UpdatePortfolioResponse() {{
+        org.openapis.openapi.models.operations.UpdatePortfolioResponse res = new org.openapis.openapi.models.operations.UpdatePortfolioResponse(contentType, httpRes.statusCode()) {{
             updatePortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

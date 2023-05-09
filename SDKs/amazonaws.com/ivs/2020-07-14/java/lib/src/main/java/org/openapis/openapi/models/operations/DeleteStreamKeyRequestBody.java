@@ -12,9 +12,13 @@ public class DeleteStreamKeyRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteStreamKeyRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteStreamKeyRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

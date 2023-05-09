@@ -15,9 +15,11 @@ public class SoftwareTokenMfaConfigType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public SoftwareTokenMfaConfigType withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public SoftwareTokenMfaConfigType(){}
 }

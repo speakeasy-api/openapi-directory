@@ -12,6 +12,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public FindWebhooksRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -22,6 +23,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enabled")
     public Boolean enabled;
+
     public FindWebhooksRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -32,6 +34,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event")
     public String event;
+
     public FindWebhooksRequest withEvent(String event) {
         this.event = event;
         return this;
@@ -42,6 +45,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindWebhooksRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,6 +56,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindWebhooksRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public FindWebhooksRequest withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindWebhooksRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -82,9 +89,11 @@ public class FindWebhooksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource")
     public String resource;
+
     public FindWebhooksRequest withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public FindWebhooksRequest(){}
 }

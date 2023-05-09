@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWindowsHostingResponse {
     
     public String contentType;
+
     public GetWindowsHostingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWindowsHostingResponse {
     
     
     public Integer statusCode;
+
     public GetWindowsHostingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWindowsHostingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWindowsHostingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetWindowsHostingResponse {
      */
     
     public org.openapis.openapi.models.shared.WindowsHostingDetail windowsHostingDetail;
+
     public GetWindowsHostingResponse withWindowsHostingDetail(org.openapis.openapi.models.shared.WindowsHostingDetail windowsHostingDetail) {
         this.windowsHostingDetail = windowsHostingDetail;
         return this;
     }
     
+    public GetWindowsHostingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

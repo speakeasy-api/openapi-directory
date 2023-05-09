@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchReadRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public BatchReadRequestBody requestBody;
+
     public BatchReadRequest withRequestBody(BatchReadRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchReadRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchReadRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchReadRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchReadRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchReadRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchReadRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchReadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchReadRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class BatchReadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-consistency-level")
     public BatchReadXAmzConsistencyLevelEnum xAmzConsistencyLevel;
+
     public BatchReadRequest withXAmzConsistencyLevel(BatchReadXAmzConsistencyLevelEnum xAmzConsistencyLevel) {
         this.xAmzConsistencyLevel = xAmzConsistencyLevel;
         return this;
@@ -78,9 +88,14 @@ public class BatchReadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-data-partition")
     public String xAmzDataPartition;
+
     public BatchReadRequest withXAmzDataPartition(String xAmzDataPartition) {
         this.xAmzDataPartition = xAmzDataPartition;
         return this;
     }
     
+    public BatchReadRequest(@JsonProperty("RequestBody") BatchReadRequestBody requestBody, @JsonProperty("x-amz-data-partition") String xAmzDataPartition) {
+        this.requestBody = requestBody;
+        this.xAmzDataPartition = xAmzDataPartition;
+  }
 }

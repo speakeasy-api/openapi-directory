@@ -15,6 +15,7 @@ public class ActivateNetworkSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public ActivateNetworkSiteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class ActivateNetworkSiteRequestBody {
      */
     @JsonProperty("networkSiteArn")
     public String networkSiteArn;
+
     public ActivateNetworkSiteRequestBody withNetworkSiteArn(String networkSiteArn) {
         this.networkSiteArn = networkSiteArn;
         return this;
@@ -35,9 +37,14 @@ public class ActivateNetworkSiteRequestBody {
      */
     @JsonProperty("shippingAddress")
     public ActivateNetworkSiteRequestBodyShippingAddress shippingAddress;
+
     public ActivateNetworkSiteRequestBody withShippingAddress(ActivateNetworkSiteRequestBodyShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public ActivateNetworkSiteRequestBody(@JsonProperty("networkSiteArn") String networkSiteArn, @JsonProperty("shippingAddress") ActivateNetworkSiteRequestBodyShippingAddress shippingAddress) {
+        this.networkSiteArn = networkSiteArn;
+        this.shippingAddress = shippingAddress;
+  }
 }

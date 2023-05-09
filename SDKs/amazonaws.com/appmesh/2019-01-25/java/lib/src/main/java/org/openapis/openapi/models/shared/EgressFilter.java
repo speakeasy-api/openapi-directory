@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EgressFilter {
     @JsonProperty("type")
     public EgressFilterTypeEnum type;
+
     public EgressFilter withType(EgressFilterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public EgressFilter(@JsonProperty("type") EgressFilterTypeEnum type) {
+        this.type = type;
+  }
 }

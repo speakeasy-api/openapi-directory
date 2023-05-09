@@ -16,14 +16,14 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAccountResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
@@ -31,12 +31,14 @@ public class Application {
 
             GetAccountResponse res = sdk.account.getAccount();
 
-            if (res.accountResponse.isPresent()) {
+            if (res.accountResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -44,32 +46,32 @@ public class Application {
 ## Available Resources and Operations
 
 
-### account
+### [account](docs/account/README.md)
 
-* `getAccount` - Get information about account
+* [getAccount](docs/account/README.md#getaccount) - Get information about account
 
-### appKeys
+### [appKeys](docs/appkeys/README.md)
 
-* `createnewappkey` - Create new appkey
-* `getappkeysfromaccount` - Get appKeys from account
-* `updateappkey` - Update appkey
+* [createnewappkey](docs/appkeys/README.md#createnewappkey) - Create new appkey
+* [getappkeysfromaccount](docs/appkeys/README.md#getappkeysfromaccount) - Get appKeys from account
+* [updateappkey](docs/appkeys/README.md#updateappkey) - Update appkey
 
-### roles
+### [roles](docs/roles/README.md)
 
-* `getListRoles` - Get List of Roles
-* `getRolesbyUser` - Get Roles by User/appKey
-* `putRolesinUser` - Put Roles in User/appKey
-* `removeRolefromUser` - Remove Role from User/appKey
+* [getListRoles](docs/roles/README.md#getlistroles) - Get List of Roles
+* [getRolesbyUser](docs/roles/README.md#getrolesbyuser) - Get Roles by User/appKey
+* [putRolesinUser](docs/roles/README.md#putrolesinuser) - Put Roles in User/appKey
+* [removeRolefromUser](docs/roles/README.md#removerolefromuser) - Remove Role from User/appKey
 
-### store
+### [store](docs/store/README.md)
 
-* `getByAccount` - Get Stores
+* [getByAccount](docs/store/README.md#getbyaccount) - Get Stores
 
-### user
+### [user](docs/user/README.md)
 
-* `createUser` - Create User
-* `getListUsers` - Get List of Users
-* `getUser` - Get User
+* [createUser](docs/user/README.md#createuser) - Create User
+* [getListUsers](docs/user/README.md#getlistusers) - Get List of Users
+* [getUser](docs/user/README.md#getuser) - Get User
 <!-- End SDK Available Operations -->
 
 ### Maturity

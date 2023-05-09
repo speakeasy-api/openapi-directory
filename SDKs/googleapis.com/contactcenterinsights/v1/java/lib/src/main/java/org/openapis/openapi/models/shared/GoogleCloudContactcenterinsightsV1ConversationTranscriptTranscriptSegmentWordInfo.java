@@ -18,6 +18,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffset")
     public String endOffset;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo withEndOffset(String endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOffset")
     public String startOffset;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo withStartOffset(String startOffset) {
         this.startOffset = startOffset;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("word")
     public String word;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo withWord(String word) {
         this.word = word;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VirtualServiceStatus {
     @JsonProperty("status")
     public VirtualServiceStatusCodeEnum status;
+
     public VirtualServiceStatus withStatus(VirtualServiceStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public VirtualServiceStatus(@JsonProperty("status") VirtualServiceStatusCodeEnum status) {
+        this.status = status;
+  }
 }

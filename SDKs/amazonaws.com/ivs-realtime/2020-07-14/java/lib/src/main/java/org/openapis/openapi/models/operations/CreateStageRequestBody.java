@@ -15,6 +15,7 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateStageRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantTokenConfigurations")
     public org.openapis.openapi.models.shared.ParticipantTokenConfiguration[] participantTokenConfigurations;
+
     public CreateStageRequestBody withParticipantTokenConfigurations(org.openapis.openapi.models.shared.ParticipantTokenConfiguration[] participantTokenConfigurations) {
         this.participantTokenConfigurations = participantTokenConfigurations;
         return this;
@@ -37,9 +39,11 @@ public class CreateStageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStageRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateStageRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class LiveChatModeratorSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveChatId")
     public String liveChatId;
+
     public LiveChatModeratorSnippet withLiveChatId(String liveChatId) {
         this.liveChatId = liveChatId;
         return this;
@@ -23,9 +24,11 @@ public class LiveChatModeratorSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moderatorDetails")
     public ChannelProfileDetails moderatorDetails;
+
     public LiveChatModeratorSnippet withModeratorDetails(ChannelProfileDetails moderatorDetails) {
         this.moderatorDetails = moderatorDetails;
         return this;
     }
     
+    public LiveChatModeratorSnippet(){}
 }

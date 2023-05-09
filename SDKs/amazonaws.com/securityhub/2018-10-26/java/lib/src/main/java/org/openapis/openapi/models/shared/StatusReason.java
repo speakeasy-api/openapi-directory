@@ -15,6 +15,7 @@ public class StatusReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StatusReason withDescription(String description) {
         this.description = description;
         return this;
@@ -22,9 +23,13 @@ public class StatusReason {
     
     @JsonProperty("ReasonCode")
     public String reasonCode;
+
     public StatusReason withReasonCode(String reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public StatusReason(@JsonProperty("ReasonCode") String reasonCode) {
+        this.reasonCode = reasonCode;
+  }
 }

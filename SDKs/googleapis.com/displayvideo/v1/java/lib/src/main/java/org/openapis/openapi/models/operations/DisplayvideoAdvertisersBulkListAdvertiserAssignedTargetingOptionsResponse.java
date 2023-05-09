@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRe
      */
     
     public org.openapis.openapi.models.shared.BulkListAdvertiserAssignedTargetingOptionsResponse bulkListAdvertiserAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse withBulkListAdvertiserAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkListAdvertiserAssignedTargetingOptionsResponse bulkListAdvertiserAssignedTargetingOptionsResponse) {
         this.bulkListAdvertiserAssignedTargetingOptionsResponse = bulkListAdvertiserAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRe
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRe
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersBulkListAdvertiserAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

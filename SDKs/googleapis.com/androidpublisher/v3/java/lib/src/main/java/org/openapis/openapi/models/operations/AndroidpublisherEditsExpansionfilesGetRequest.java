@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherEditsExpansionfilesGetRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apkVersionCode")
     public Long apkVersionCode;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withApkVersionCode(Long apkVersionCode) {
         this.apkVersionCode = apkVersionCode;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=editId")
     public String editId;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withEditId(String editId) {
         this.editId = editId;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=expansionFileType")
     public AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withExpansionFileType(AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType) {
         this.expansionFileType = expansionFileType;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,16 @@ public class AndroidpublisherEditsExpansionfilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherEditsExpansionfilesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AndroidpublisherEditsExpansionfilesGetRequest(@JsonProperty("apkVersionCode") Long apkVersionCode, @JsonProperty("editId") String editId, @JsonProperty("expansionFileType") AndroidpublisherEditsExpansionfilesGetExpansionFileTypeEnum expansionFileType, @JsonProperty("packageName") String packageName) {
+        this.apkVersionCode = apkVersionCode;
+        this.editId = editId;
+        this.expansionFileType = expansionFileType;
+        this.packageName = packageName;
+  }
 }

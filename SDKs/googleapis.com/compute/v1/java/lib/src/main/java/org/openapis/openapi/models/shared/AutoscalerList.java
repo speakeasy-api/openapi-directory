@@ -18,6 +18,7 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AutoscalerList withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Autoscaler[] items;
+
     public AutoscalerList withItems(Autoscaler[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AutoscalerList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AutoscalerList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,6 +66,7 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public AutoscalerList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -73,9 +78,11 @@ public class AutoscalerList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public AutoscalerListWarning warning;
+
     public AutoscalerList withWarning(AutoscalerListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public AutoscalerList(){}
 }

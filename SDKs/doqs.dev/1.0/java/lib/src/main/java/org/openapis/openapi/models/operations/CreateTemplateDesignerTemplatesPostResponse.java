@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTemplateDesignerTemplatesPostResponse {
     
     public String contentType;
+
     public CreateTemplateDesignerTemplatesPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateTemplateDesignerTemplatesPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public CreateTemplateDesignerTemplatesPostResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class CreateTemplateDesignerTemplatesPostResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkDesignerTemplate responseOkDesignerTemplate;
+
     public CreateTemplateDesignerTemplatesPostResponse withResponseOkDesignerTemplate(org.openapis.openapi.models.shared.ResponseOkDesignerTemplate responseOkDesignerTemplate) {
         this.responseOkDesignerTemplate = responseOkDesignerTemplate;
         return this;
@@ -36,6 +40,7 @@ public class CreateTemplateDesignerTemplatesPostResponse {
     
     
     public Integer statusCode;
+
     public CreateTemplateDesignerTemplatesPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateTemplateDesignerTemplatesPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTemplateDesignerTemplatesPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateTemplateDesignerTemplatesPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

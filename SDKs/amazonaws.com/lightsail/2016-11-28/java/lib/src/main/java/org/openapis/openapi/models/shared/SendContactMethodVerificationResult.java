@@ -15,9 +15,11 @@ public class SendContactMethodVerificationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public SendContactMethodVerificationResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public SendContactMethodVerificationResult(){}
 }

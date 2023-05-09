@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddEmployeeRequest {
@@ -12,6 +13,7 @@ public class AddEmployeeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddEmployeeRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,9 +24,14 @@ public class AddEmployeeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Employee employee;
+
     public AddEmployeeRequest withEmployee(org.openapis.openapi.models.shared.Employee employee) {
         this.employee = employee;
         return this;
     }
     
+    public AddEmployeeRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employee") org.openapis.openapi.models.shared.Employee employee) {
+        this.companyId = companyId;
+        this.employee = employee;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudProduct")
     public String cloudProduct;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withCloudProduct(String cloudProduct) {
         this.cloudProduct = cloudProduct;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyVersion")
     public String cryptoKeyVersion;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withCryptoKeyVersion(String cryptoKeyVersion) {
         this.cryptoKeyVersion = cryptoKeyVersion;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cryptoKeyVersions")
     public String[] cryptoKeyVersions;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withCryptoKeyVersions(String[] cryptoKeyVersions) {
         this.cryptoKeyVersions = cryptoKeyVersions;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withLocation(String location) {
         this.location = location;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withProject(String project) {
         this.project = project;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudKmsInventoryV1ProtectedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public GoogleCloudKmsInventoryV1ProtectedResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GoogleCloudKmsInventoryV1ProtectedResource(){}
 }

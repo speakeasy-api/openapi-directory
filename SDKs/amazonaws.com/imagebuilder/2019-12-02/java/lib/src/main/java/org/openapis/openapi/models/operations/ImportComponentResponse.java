@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportComponentResponse {
@@ -12,6 +13,7 @@ public class ImportComponentResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ImportComponentResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ImportComponentResponse {
      */
     
     public Object clientException;
+
     public ImportComponentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ImportComponentResponse {
     
     
     public String contentType;
+
     public ImportComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ImportComponentResponse {
      */
     
     public Object forbiddenException;
+
     public ImportComponentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ImportComponentResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public ImportComponentResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -59,6 +65,7 @@ public class ImportComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportComponentResponse importComponentResponse;
+
     public ImportComponentResponse withImportComponentResponse(org.openapis.openapi.models.shared.ImportComponentResponse importComponentResponse) {
         this.importComponentResponse = importComponentResponse;
         return this;
@@ -69,6 +76,7 @@ public class ImportComponentResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public ImportComponentResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -79,6 +87,7 @@ public class ImportComponentResponse {
      */
     
     public Object invalidRequestException;
+
     public ImportComponentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -89,6 +98,7 @@ public class ImportComponentResponse {
      */
     
     public Object invalidVersionNumberException;
+
     public ImportComponentResponse withInvalidVersionNumberException(Object invalidVersionNumberException) {
         this.invalidVersionNumberException = invalidVersionNumberException;
         return this;
@@ -99,6 +109,7 @@ public class ImportComponentResponse {
      */
     
     public Object resourceInUseException;
+
     public ImportComponentResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -109,6 +120,7 @@ public class ImportComponentResponse {
      */
     
     public Object serviceException;
+
     public ImportComponentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -116,6 +128,7 @@ public class ImportComponentResponse {
     
     
     public Integer statusCode;
+
     public ImportComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class ImportComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,9 +147,14 @@ public class ImportComponentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ImportComponentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ImportComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

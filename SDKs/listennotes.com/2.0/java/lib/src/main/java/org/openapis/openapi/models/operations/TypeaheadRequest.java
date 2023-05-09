@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TypeaheadRequest {
@@ -12,6 +13,7 @@ public class TypeaheadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public TypeaheadRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -23,6 +25,7 @@ public class TypeaheadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public TypeaheadRequest withQ(String q) {
         this.q = q;
         return this;
@@ -34,6 +37,7 @@ public class TypeaheadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safe_mode")
     public TypeaheadSafeModeEnum safeMode;
+
     public TypeaheadRequest withSafeMode(TypeaheadSafeModeEnum safeMode) {
         this.safeMode = safeMode;
         return this;
@@ -45,6 +49,7 @@ public class TypeaheadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_genres")
     public TypeaheadShowGenresEnum showGenres;
+
     public TypeaheadRequest withShowGenres(TypeaheadShowGenresEnum showGenres) {
         this.showGenres = showGenres;
         return this;
@@ -56,9 +61,14 @@ public class TypeaheadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=show_podcasts")
     public TypeaheadShowPodcastsEnum showPodcasts;
+
     public TypeaheadRequest withShowPodcasts(TypeaheadShowPodcastsEnum showPodcasts) {
         this.showPodcasts = showPodcasts;
         return this;
     }
     
+    public TypeaheadRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("q") String q) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.q = q;
+  }
 }

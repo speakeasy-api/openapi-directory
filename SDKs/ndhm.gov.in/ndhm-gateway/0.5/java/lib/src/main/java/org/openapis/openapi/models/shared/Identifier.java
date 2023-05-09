@@ -12,6 +12,7 @@ public class Identifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public IdentifierTypeEnum type;
+
     public Identifier withType(IdentifierTypeEnum type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class Identifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Identifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Identifier(){}
 }

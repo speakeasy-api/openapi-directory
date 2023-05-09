@@ -12,9 +12,13 @@ public class UpdateCampaignDialerConfigRequestBody {
      */
     @JsonProperty("dialerConfig")
     public UpdateCampaignDialerConfigRequestBodyDialerConfig dialerConfig;
+
     public UpdateCampaignDialerConfigRequestBody withDialerConfig(UpdateCampaignDialerConfigRequestBodyDialerConfig dialerConfig) {
         this.dialerConfig = dialerConfig;
         return this;
     }
     
+    public UpdateCampaignDialerConfigRequestBody(@JsonProperty("dialerConfig") UpdateCampaignDialerConfigRequestBodyDialerConfig dialerConfig) {
+        this.dialerConfig = dialerConfig;
+  }
 }

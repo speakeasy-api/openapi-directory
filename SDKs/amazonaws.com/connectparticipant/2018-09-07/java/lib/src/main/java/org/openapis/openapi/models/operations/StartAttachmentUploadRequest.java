@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartAttachmentUploadRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StartAttachmentUploadRequestBody requestBody;
+
     public StartAttachmentUploadRequest withRequestBody(StartAttachmentUploadRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartAttachmentUploadRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -26,6 +29,7 @@ public class StartAttachmentUploadRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Bearer")
     public String xAmzBearer;
+
     public StartAttachmentUploadRequest withXAmzBearer(String xAmzBearer) {
         this.xAmzBearer = xAmzBearer;
         return this;
@@ -33,6 +37,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartAttachmentUploadRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartAttachmentUploadRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartAttachmentUploadRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartAttachmentUploadRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartAttachmentUploadRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class StartAttachmentUploadRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartAttachmentUploadRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public StartAttachmentUploadRequest(@JsonProperty("RequestBody") StartAttachmentUploadRequestBody requestBody, @JsonProperty("X-Amz-Bearer") String xAmzBearer) {
+        this.requestBody = requestBody;
+        this.xAmzBearer = xAmzBearer;
+  }
 }

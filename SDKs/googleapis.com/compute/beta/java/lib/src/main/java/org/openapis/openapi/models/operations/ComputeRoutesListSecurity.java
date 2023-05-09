@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRoutesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutesListSecurityOption1 option1;
+
     public ComputeRoutesListSecurity withOption1(ComputeRoutesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeRoutesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutesListSecurityOption2 option2;
+
     public ComputeRoutesListSecurity withOption2(ComputeRoutesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeRoutesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRoutesListSecurityOption3 option3;
+
     public ComputeRoutesListSecurity withOption3(ComputeRoutesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeRoutesListSecurity(){}
 }

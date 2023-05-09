@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataSetImportTaskResponse {
     @JsonProperty("status")
     public DataSetTaskLifecycleEnum status;
+
     public GetDataSetImportTaskResponse withStatus(DataSetTaskLifecycleEnum status) {
         this.status = status;
         return this;
@@ -22,6 +23,7 @@ public class GetDataSetImportTaskResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public DataSetImportSummary summary;
+
     public GetDataSetImportTaskResponse withSummary(DataSetImportSummary summary) {
         this.summary = summary;
         return this;
@@ -29,9 +31,14 @@ public class GetDataSetImportTaskResponse {
     
     @JsonProperty("taskId")
     public String taskId;
+
     public GetDataSetImportTaskResponse withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GetDataSetImportTaskResponse(@JsonProperty("status") DataSetTaskLifecycleEnum status, @JsonProperty("taskId") String taskId) {
+        this.status = status;
+        this.taskId = taskId;
+  }
 }

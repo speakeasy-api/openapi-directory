@@ -18,6 +18,7 @@ public class ShoppingAdsProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalState")
     public ShoppingAdsProgramStatusGlobalStateEnum globalState;
+
     public ShoppingAdsProgramStatus withGlobalState(ShoppingAdsProgramStatusGlobalStateEnum globalState) {
         this.globalState = globalState;
         return this;
@@ -29,9 +30,11 @@ public class ShoppingAdsProgramStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionStatuses")
     public ShoppingAdsProgramStatusRegionStatus[] regionStatuses;
+
     public ShoppingAdsProgramStatus withRegionStatuses(ShoppingAdsProgramStatusRegionStatus[] regionStatuses) {
         this.regionStatuses = regionStatuses;
         return this;
     }
     
+    public ShoppingAdsProgramStatus(){}
 }

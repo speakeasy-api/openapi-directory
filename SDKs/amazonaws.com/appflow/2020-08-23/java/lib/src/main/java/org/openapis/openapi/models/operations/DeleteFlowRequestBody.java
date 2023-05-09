@@ -14,6 +14,7 @@ public class DeleteFlowRequestBody {
      */
     @JsonProperty("flowName")
     public String flowName;
+
     public DeleteFlowRequestBody withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -25,9 +26,13 @@ public class DeleteFlowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDelete")
     public Boolean forceDelete;
+
     public DeleteFlowRequestBody withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public DeleteFlowRequestBody(@JsonProperty("flowName") String flowName) {
+        this.flowName = flowName;
+  }
 }

@@ -15,9 +15,11 @@ public class CopyDBParameterGroupResult {
      */
     
     public DBParameterGroup dbParameterGroup;
+
     public CopyDBParameterGroupResult withDBParameterGroup(DBParameterGroup dbParameterGroup) {
         this.dbParameterGroup = dbParameterGroup;
         return this;
     }
     
+    public CopyDBParameterGroupResult(){}
 }

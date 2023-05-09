@@ -19,6 +19,7 @@ public class ListModelCardVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListModelCardVersionsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListModelCardVersionsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListModelCardVersionsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListModelCardVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListModelCardVersionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +47,7 @@ public class ListModelCardVersionsRequest {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ListModelCardVersionsRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -52,6 +56,7 @@ public class ListModelCardVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardStatus")
     public ModelCardStatusEnum modelCardStatus;
+
     public ListModelCardVersionsRequest withModelCardStatus(ModelCardStatusEnum modelCardStatus) {
         this.modelCardStatus = modelCardStatus;
         return this;
@@ -60,6 +65,7 @@ public class ListModelCardVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelCardVersionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -68,6 +74,7 @@ public class ListModelCardVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ModelCardVersionSortByEnum sortBy;
+
     public ListModelCardVersionsRequest withSortBy(ModelCardVersionSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -76,9 +83,13 @@ public class ListModelCardVersionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public ModelCardSortOrderEnum sortOrder;
+
     public ListModelCardVersionsRequest withSortOrder(ModelCardSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListModelCardVersionsRequest(@JsonProperty("ModelCardName") String modelCardName) {
+        this.modelCardName = modelCardName;
+  }
 }

@@ -15,6 +15,7 @@ public class ListDelegatedServicesForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DelegatedServices")
     public DelegatedService[] delegatedServices;
+
     public ListDelegatedServicesForAccountResponse withDelegatedServices(DelegatedService[] delegatedServices) {
         this.delegatedServices = delegatedServices;
         return this;
@@ -23,9 +24,11 @@ public class ListDelegatedServicesForAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDelegatedServicesForAccountResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDelegatedServicesForAccountResponse(){}
 }

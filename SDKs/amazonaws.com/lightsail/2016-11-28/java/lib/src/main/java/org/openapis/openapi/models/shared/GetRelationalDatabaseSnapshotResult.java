@@ -15,9 +15,11 @@ public class GetRelationalDatabaseSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseSnapshot")
     public RelationalDatabaseSnapshot relationalDatabaseSnapshot;
+
     public GetRelationalDatabaseSnapshotResult withRelationalDatabaseSnapshot(RelationalDatabaseSnapshot relationalDatabaseSnapshot) {
         this.relationalDatabaseSnapshot = relationalDatabaseSnapshot;
         return this;
     }
     
+    public GetRelationalDatabaseSnapshotResult(){}
 }

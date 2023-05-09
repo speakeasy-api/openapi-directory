@@ -18,6 +18,7 @@ public class StragglerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentStragglers")
     public Straggler[] recentStragglers;
+
     public StragglerSummary withRecentStragglers(Straggler[] recentStragglers) {
         this.recentStragglers = recentStragglers;
         return this;
@@ -29,6 +30,7 @@ public class StragglerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stragglerCauseCount")
     public java.util.Map<String, String> stragglerCauseCount;
+
     public StragglerSummary withStragglerCauseCount(java.util.Map<String, String> stragglerCauseCount) {
         this.stragglerCauseCount = stragglerCauseCount;
         return this;
@@ -40,9 +42,11 @@ public class StragglerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalStragglerCount")
     public String totalStragglerCount;
+
     public StragglerSummary withTotalStragglerCount(String totalStragglerCount) {
         this.totalStragglerCount = totalStragglerCount;
         return this;
     }
     
+    public StragglerSummary(){}
 }

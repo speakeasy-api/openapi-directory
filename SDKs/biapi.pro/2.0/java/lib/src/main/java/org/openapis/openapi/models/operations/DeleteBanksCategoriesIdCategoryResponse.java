@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBanksCategoriesIdCategoryResponse {
@@ -12,6 +13,7 @@ public class DeleteBanksCategoriesIdCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectorCategory connectorCategory;
+
     public DeleteBanksCategoriesIdCategoryResponse withConnectorCategory(org.openapis.openapi.models.shared.ConnectorCategory connectorCategory) {
         this.connectorCategory = connectorCategory;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBanksCategoriesIdCategoryResponse {
     
     
     public String contentType;
+
     public DeleteBanksCategoriesIdCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteBanksCategoriesIdCategoryResponse {
     
     
     public Integer statusCode;
+
     public DeleteBanksCategoriesIdCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteBanksCategoriesIdCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBanksCategoriesIdCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBanksCategoriesIdCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

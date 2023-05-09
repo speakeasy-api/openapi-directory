@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEffectivePermissionsForPathResponse {
     
     public String contentType;
+
     public GetEffectivePermissionsForPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEffectivePermissionsForPathResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetEffectivePermissionsForPathResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetEffectivePermissionsForPathResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEffectivePermissionsForPathResponse getEffectivePermissionsForPathResponse;
+
     public GetEffectivePermissionsForPathResponse withGetEffectivePermissionsForPathResponse(org.openapis.openapi.models.shared.GetEffectivePermissionsForPathResponse getEffectivePermissionsForPathResponse) {
         this.getEffectivePermissionsForPathResponse = getEffectivePermissionsForPathResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEffectivePermissionsForPathResponse {
      */
     
     public Object internalServiceException;
+
     public GetEffectivePermissionsForPathResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetEffectivePermissionsForPathResponse {
      */
     
     public Object invalidInputException;
+
     public GetEffectivePermissionsForPathResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetEffectivePermissionsForPathResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetEffectivePermissionsForPathResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetEffectivePermissionsForPathResponse {
     
     
     public Integer statusCode;
+
     public GetEffectivePermissionsForPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetEffectivePermissionsForPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEffectivePermissionsForPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEffectivePermissionsForPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleFirebaseAppdistroV1ListGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public GoogleFirebaseAppdistroV1Group[] groups;
+
     public GoogleFirebaseAppdistroV1ListGroupsResponse withGroups(GoogleFirebaseAppdistroV1Group[] groups) {
         this.groups = groups;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppdistroV1ListGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleFirebaseAppdistroV1ListGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1ListGroupsResponse(){}
 }

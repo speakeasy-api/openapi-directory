@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDeliveryChannelRequest {
     @JsonProperty("DeliveryChannelName")
     public String deliveryChannelName;
+
     public DeleteDeliveryChannelRequest withDeliveryChannelName(String deliveryChannelName) {
         this.deliveryChannelName = deliveryChannelName;
         return this;
     }
     
+    public DeleteDeliveryChannelRequest(@JsonProperty("DeliveryChannelName") String deliveryChannelName) {
+        this.deliveryChannelName = deliveryChannelName;
+  }
 }

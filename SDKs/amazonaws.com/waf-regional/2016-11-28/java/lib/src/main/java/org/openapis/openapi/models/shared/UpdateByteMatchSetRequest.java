@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateByteMatchSetRequest {
     @JsonProperty("ByteMatchSetId")
     public String byteMatchSetId;
+
     public UpdateByteMatchSetRequest withByteMatchSetId(String byteMatchSetId) {
         this.byteMatchSetId = byteMatchSetId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateByteMatchSetRequest {
     
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateByteMatchSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +25,15 @@ public class UpdateByteMatchSetRequest {
     
     @JsonProperty("Updates")
     public ByteMatchSetUpdate[] updates;
+
     public UpdateByteMatchSetRequest withUpdates(ByteMatchSetUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateByteMatchSetRequest(@JsonProperty("ByteMatchSetId") String byteMatchSetId, @JsonProperty("ChangeToken") String changeToken, @JsonProperty("Updates") ByteMatchSetUpdate[] updates) {
+        this.byteMatchSetId = byteMatchSetId;
+        this.changeToken = changeToken;
+        this.updates = updates;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateGroupRequestBodyInsightsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InsightsEnabled")
     public Boolean insightsEnabled;
+
     public CreateGroupRequestBodyInsightsConfiguration withInsightsEnabled(Boolean insightsEnabled) {
         this.insightsEnabled = insightsEnabled;
         return this;
@@ -23,9 +24,11 @@ public class CreateGroupRequestBodyInsightsConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationsEnabled")
     public Boolean notificationsEnabled;
+
     public CreateGroupRequestBodyInsightsConfiguration withNotificationsEnabled(Boolean notificationsEnabled) {
         this.notificationsEnabled = notificationsEnabled;
         return this;
     }
     
+    public CreateGroupRequestBodyInsightsConfiguration(){}
 }

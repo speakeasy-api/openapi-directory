@@ -15,6 +15,7 @@ public class ListSimulationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSimulationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListSimulationJobsResponse {
     
     @JsonProperty("simulationJobSummaries")
     public SimulationJobSummary[] simulationJobSummaries;
+
     public ListSimulationJobsResponse withSimulationJobSummaries(SimulationJobSummary[] simulationJobSummaries) {
         this.simulationJobSummaries = simulationJobSummaries;
         return this;
     }
     
+    public ListSimulationJobsResponse(@JsonProperty("simulationJobSummaries") SimulationJobSummary[] simulationJobSummaries) {
+        this.simulationJobSummaries = simulationJobSummaries;
+  }
 }

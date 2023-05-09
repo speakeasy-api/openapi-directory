@@ -18,6 +18,7 @@ public class SeedConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCommit")
     public Boolean autoCommit;
+
     public SeedConversionWorkspaceRequest withAutoCommit(Boolean autoCommit) {
         this.autoCommit = autoCommit;
         return this;
@@ -29,6 +30,7 @@ public class SeedConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationConnectionProfile")
     public String destinationConnectionProfile;
+
     public SeedConversionWorkspaceRequest withDestinationConnectionProfile(String destinationConnectionProfile) {
         this.destinationConnectionProfile = destinationConnectionProfile;
         return this;
@@ -40,9 +42,11 @@ public class SeedConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConnectionProfile")
     public String sourceConnectionProfile;
+
     public SeedConversionWorkspaceRequest withSourceConnectionProfile(String sourceConnectionProfile) {
         this.sourceConnectionProfile = sourceConnectionProfile;
         return this;
     }
     
+    public SeedConversionWorkspaceRequest(){}
 }

@@ -18,6 +18,7 @@ public class SplitInt64 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highBits")
     public Integer highBits;
+
     public SplitInt64 withHighBits(Integer highBits) {
         this.highBits = highBits;
         return this;
@@ -29,9 +30,11 @@ public class SplitInt64 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowBits")
     public Long lowBits;
+
     public SplitInt64 withLowBits(Long lowBits) {
         this.lowBits = lowBits;
         return this;
     }
     
+    public SplitInt64(){}
 }

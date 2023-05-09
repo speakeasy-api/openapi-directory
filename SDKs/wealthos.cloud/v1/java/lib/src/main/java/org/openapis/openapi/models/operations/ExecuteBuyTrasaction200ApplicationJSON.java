@@ -18,6 +18,7 @@ public class ExecuteBuyTrasaction200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ExecuteBuyTrasaction200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -25,6 +26,7 @@ public class ExecuteBuyTrasaction200ApplicationJSON {
     
     @JsonProperty("pot_id")
     public String potId;
+
     public ExecuteBuyTrasaction200ApplicationJSON withPotId(String potId) {
         this.potId = potId;
         return this;
@@ -38,6 +40,7 @@ public class ExecuteBuyTrasaction200ApplicationJSON {
      */
     @JsonProperty("status")
     public ExecuteBuyTrasaction200ApplicationJSONStatusEnum status;
+
     public ExecuteBuyTrasaction200ApplicationJSON withStatus(ExecuteBuyTrasaction200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -46,9 +49,14 @@ public class ExecuteBuyTrasaction200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactions")
     public ExecuteBuyTrasaction200ApplicationJSONTransactions[] transactions;
+
     public ExecuteBuyTrasaction200ApplicationJSON withTransactions(ExecuteBuyTrasaction200ApplicationJSONTransactions[] transactions) {
         this.transactions = transactions;
         return this;
     }
     
+    public ExecuteBuyTrasaction200ApplicationJSON(@JsonProperty("pot_id") String potId, @JsonProperty("status") ExecuteBuyTrasaction200ApplicationJSONStatusEnum status) {
+        this.potId = potId;
+        this.status = status;
+  }
 }

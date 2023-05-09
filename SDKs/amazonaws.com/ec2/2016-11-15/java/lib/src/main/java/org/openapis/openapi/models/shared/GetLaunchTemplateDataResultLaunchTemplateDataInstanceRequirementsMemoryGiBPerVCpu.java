@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu {
     
     public Double max;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMe
     
     
     public Double min;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpu(){}
 }

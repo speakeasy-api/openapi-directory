@@ -18,6 +18,7 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public BigQueryDestination withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public BigQueryDestination withForce(Boolean force) {
         this.force = force;
         return this;
@@ -40,6 +42,7 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionSpec")
     public PartitionSpec partitionSpec;
+
     public BigQueryDestination withPartitionSpec(PartitionSpec partitionSpec) {
         this.partitionSpec = partitionSpec;
         return this;
@@ -51,6 +54,7 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("separateTablesPerAssetType")
     public Boolean separateTablesPerAssetType;
+
     public BigQueryDestination withSeparateTablesPerAssetType(Boolean separateTablesPerAssetType) {
         this.separateTablesPerAssetType = separateTablesPerAssetType;
         return this;
@@ -62,9 +66,11 @@ public class BigQueryDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public BigQueryDestination withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public BigQueryDestination(){}
 }

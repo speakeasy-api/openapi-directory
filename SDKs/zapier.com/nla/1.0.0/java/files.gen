@@ -29,11 +29,17 @@ lib/src/main/java/org/openapis/openapi/utils/SpeakeasyMetadata.java
 lib/src/main/java/org/openapis/openapi/utils/Types.java
 lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
+lib/src/main/java/org/openapis/openapi/models/operations/CheckSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CheckResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteAppActionEndpointSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteAppActionEndpointRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ExecuteAppActionEndpointResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetConfigurationLinkSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetConfigurationLinkResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetExecutionLogEndpointSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetExecutionLogEndpointRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetExecutionLogEndpointResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListExposedActionsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListExposedActionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteResponseStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteResponse.java
@@ -41,4 +47,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ErrorResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExecuteRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExposedActionResponseSchema.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExposedActionSchema.java
+docs/sdk/README.md
 USAGE.md

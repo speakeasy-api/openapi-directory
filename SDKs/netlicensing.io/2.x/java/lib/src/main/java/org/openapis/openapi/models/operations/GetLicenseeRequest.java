@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLicenseeRequest {
@@ -12,9 +13,13 @@ public class GetLicenseeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
     public String licenseeNumber;
+
     public GetLicenseeRequest withLicenseeNumber(String licenseeNumber) {
         this.licenseeNumber = licenseeNumber;
         return this;
     }
     
+    public GetLicenseeRequest(@JsonProperty("licenseeNumber") String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
+  }
 }

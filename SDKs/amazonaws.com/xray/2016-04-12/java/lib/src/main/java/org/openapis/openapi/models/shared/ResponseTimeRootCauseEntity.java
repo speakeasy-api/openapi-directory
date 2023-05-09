@@ -15,6 +15,7 @@ public class ResponseTimeRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Coverage")
     public Double coverage;
+
     public ResponseTimeRootCauseEntity withCoverage(Double coverage) {
         this.coverage = coverage;
         return this;
@@ -23,6 +24,7 @@ public class ResponseTimeRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ResponseTimeRootCauseEntity withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class ResponseTimeRootCauseEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remote")
     public Boolean remote;
+
     public ResponseTimeRootCauseEntity withRemote(Boolean remote) {
         this.remote = remote;
         return this;
     }
     
+    public ResponseTimeRootCauseEntity(){}
 }

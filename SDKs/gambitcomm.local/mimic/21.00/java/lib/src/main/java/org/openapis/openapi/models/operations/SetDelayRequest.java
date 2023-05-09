@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetDelayRequest {
@@ -12,6 +13,7 @@ public class SetDelayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetDelayRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetDelayRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=delay")
     public Integer delay;
+
     public SetDelayRequest withDelay(Integer delay) {
         this.delay = delay;
         return this;
     }
     
+    public SetDelayRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("delay") Integer delay) {
+        this.agentNum = agentNum;
+        this.delay = delay;
+  }
 }

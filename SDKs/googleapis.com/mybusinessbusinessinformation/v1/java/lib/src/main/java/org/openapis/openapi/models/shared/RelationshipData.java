@@ -18,6 +18,7 @@ public class RelationshipData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childrenLocations")
     public RelevantLocation[] childrenLocations;
+
     public RelationshipData withChildrenLocations(RelevantLocation[] childrenLocations) {
         this.childrenLocations = childrenLocations;
         return this;
@@ -29,6 +30,7 @@ public class RelationshipData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentChain")
     public String parentChain;
+
     public RelationshipData withParentChain(String parentChain) {
         this.parentChain = parentChain;
         return this;
@@ -40,9 +42,11 @@ public class RelationshipData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentLocation")
     public RelevantLocation parentLocation;
+
     public RelationshipData withParentLocation(RelevantLocation parentLocation) {
         this.parentLocation = parentLocation;
         return this;
     }
     
+    public RelationshipData(){}
 }

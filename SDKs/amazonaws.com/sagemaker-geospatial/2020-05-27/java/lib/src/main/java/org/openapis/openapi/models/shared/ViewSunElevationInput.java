@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ViewSunElevationInput - &lt;p/&gt;
+ * ViewSunElevationInput - The input structure for specifying ViewSunElevation angle property filter. 
  */
 public class ViewSunElevationInput {
     @JsonProperty("LowerBound")
     public Float lowerBound;
+
     public ViewSunElevationInput withLowerBound(Float lowerBound) {
         this.lowerBound = lowerBound;
         return this;
@@ -19,9 +20,14 @@ public class ViewSunElevationInput {
     
     @JsonProperty("UpperBound")
     public Float upperBound;
+
     public ViewSunElevationInput withUpperBound(Float upperBound) {
         this.upperBound = upperBound;
         return this;
     }
     
+    public ViewSunElevationInput(@JsonProperty("LowerBound") Float lowerBound, @JsonProperty("UpperBound") Float upperBound) {
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+  }
 }

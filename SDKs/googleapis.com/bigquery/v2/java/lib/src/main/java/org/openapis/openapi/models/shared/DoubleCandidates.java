@@ -18,9 +18,11 @@ public class DoubleCandidates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public Double[] candidates;
+
     public DoubleCandidates withCandidates(Double[] candidates) {
         this.candidates = candidates;
         return this;
     }
     
+    public DoubleCandidates(){}
 }

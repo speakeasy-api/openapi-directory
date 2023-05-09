@@ -15,6 +15,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMessage")
     public String developerMessage;
+
     public ErrorResponse withDeveloperMessage(String developerMessage) {
         this.developerMessage = developerMessage;
         return this;
@@ -23,6 +24,7 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorType")
     public String errorType;
+
     public ErrorResponse withErrorType(String errorType) {
         this.errorType = errorType;
         return this;
@@ -31,9 +33,11 @@ public class ErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violations")
     public ConstraintViolation[] violations;
+
     public ErrorResponse withViolations(ConstraintViolation[] violations) {
         this.violations = violations;
         return this;
     }
     
+    public ErrorResponse(){}
 }

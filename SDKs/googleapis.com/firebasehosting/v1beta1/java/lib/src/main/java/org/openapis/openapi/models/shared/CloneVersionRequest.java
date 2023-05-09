@@ -15,6 +15,7 @@ public class CloneVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude")
     public PathFilter exclude;
+
     public CloneVersionRequest withExclude(PathFilter exclude) {
         this.exclude = exclude;
         return this;
@@ -26,6 +27,7 @@ public class CloneVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalize")
     public Boolean finalize;
+
     public CloneVersionRequest withFinalize(Boolean finalize) {
         this.finalize = finalize;
         return this;
@@ -37,6 +39,7 @@ public class CloneVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public PathFilter include;
+
     public CloneVersionRequest withInclude(PathFilter include) {
         this.include = include;
         return this;
@@ -48,9 +51,11 @@ public class CloneVersionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceVersion")
     public String sourceVersion;
+
     public CloneVersionRequest withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
     }
     
+    public CloneVersionRequest(){}
 }

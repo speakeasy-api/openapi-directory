@@ -18,6 +18,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public QueryOperator withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumValues")
     public String[] enumValues;
+
     public QueryOperator withEnumValues(String[] enumValues) {
         this.enumValues = enumValues;
         return this;
@@ -40,6 +42,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("greaterThanOperatorName")
     public String greaterThanOperatorName;
+
     public QueryOperator withGreaterThanOperatorName(String greaterThanOperatorName) {
         this.greaterThanOperatorName = greaterThanOperatorName;
         return this;
@@ -51,6 +54,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFacetable")
     public Boolean isFacetable;
+
     public QueryOperator withIsFacetable(Boolean isFacetable) {
         this.isFacetable = isFacetable;
         return this;
@@ -62,6 +66,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRepeatable")
     public Boolean isRepeatable;
+
     public QueryOperator withIsRepeatable(Boolean isRepeatable) {
         this.isRepeatable = isRepeatable;
         return this;
@@ -73,6 +78,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReturnable")
     public Boolean isReturnable;
+
     public QueryOperator withIsReturnable(Boolean isReturnable) {
         this.isReturnable = isReturnable;
         return this;
@@ -84,6 +90,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSortable")
     public Boolean isSortable;
+
     public QueryOperator withIsSortable(Boolean isSortable) {
         this.isSortable = isSortable;
         return this;
@@ -95,6 +102,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSuggestable")
     public Boolean isSuggestable;
+
     public QueryOperator withIsSuggestable(Boolean isSuggestable) {
         this.isSuggestable = isSuggestable;
         return this;
@@ -106,6 +114,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lessThanOperatorName")
     public String lessThanOperatorName;
+
     public QueryOperator withLessThanOperatorName(String lessThanOperatorName) {
         this.lessThanOperatorName = lessThanOperatorName;
         return this;
@@ -117,6 +126,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public String objectType;
+
     public QueryOperator withObjectType(String objectType) {
         this.objectType = objectType;
         return this;
@@ -128,6 +138,7 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorName")
     public String operatorName;
+
     public QueryOperator withOperatorName(String operatorName) {
         this.operatorName = operatorName;
         return this;
@@ -139,9 +150,11 @@ public class QueryOperator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public QueryOperatorTypeEnum type;
+
     public QueryOperator withType(QueryOperatorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public QueryOperator(){}
 }

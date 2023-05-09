@@ -18,6 +18,7 @@ public class UserDetailsExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public UserDetailsVO result;
+
     public UserDetailsExpandVO withResult(UserDetailsVO result) {
         this.result = result;
         return this;
@@ -26,6 +27,7 @@ public class UserDetailsExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public UserDetailsExpandVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +36,11 @@ public class UserDetailsExpandVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public UserDetailsExpandVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public UserDetailsExpandVO(){}
 }

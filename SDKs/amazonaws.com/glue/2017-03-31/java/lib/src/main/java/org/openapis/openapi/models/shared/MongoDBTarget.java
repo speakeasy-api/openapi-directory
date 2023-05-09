@@ -15,6 +15,7 @@ public class MongoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionName")
     public String connectionName;
+
     public MongoDBTarget withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -23,6 +24,7 @@ public class MongoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public MongoDBTarget withPath(String path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class MongoDBTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanAll")
     public Boolean scanAll;
+
     public MongoDBTarget withScanAll(Boolean scanAll) {
         this.scanAll = scanAll;
         return this;
     }
     
+    public MongoDBTarget(){}
 }

@@ -12,9 +12,11 @@ public class EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("booleanValues")
     public Boolean[] booleanValues;
+
     public EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray withBooleanValues(Boolean[] booleanValues) {
         this.booleanValues = booleanValues;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray(){}
 }

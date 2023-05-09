@@ -20,6 +20,7 @@ public class View {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public SearchFilter filters;
+
     public View withFilters(SearchFilter filters) {
         this.filters = filters;
         return this;
@@ -28,6 +29,7 @@ public class View {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludedProperties")
     public IncludedProperty[] includedProperties;
+
     public View withIncludedProperties(IncludedProperty[] includedProperties) {
         this.includedProperties = includedProperties;
         return this;
@@ -38,6 +40,7 @@ public class View {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public View withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -46,6 +49,7 @@ public class View {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public View withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -54,6 +58,7 @@ public class View {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public String scope;
+
     public View withScope(String scope) {
         this.scope = scope;
         return this;
@@ -62,9 +67,11 @@ public class View {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewArn")
     public String viewArn;
+
     public View withViewArn(String viewArn) {
         this.viewArn = viewArn;
         return this;
     }
     
+    public View(){}
 }

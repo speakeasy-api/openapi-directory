@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateSnapshotMessage - Represents the input of a &lt;code&gt;CreateSnapshot&lt;/code&gt; operation.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateSnapshotMessage {
     
     public String cacheClusterId;
+
     public CreateSnapshotMessage withCacheClusterId(String cacheClusterId) {
         this.cacheClusterId = cacheClusterId;
         return this;
@@ -19,6 +20,7 @@ public class CreateSnapshotMessage {
     
     
     public String kmsKeyId;
+
     public CreateSnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -26,6 +28,7 @@ public class CreateSnapshotMessage {
     
     
     public String replicationGroupId;
+
     public CreateSnapshotMessage withReplicationGroupId(String replicationGroupId) {
         this.replicationGroupId = replicationGroupId;
         return this;
@@ -33,6 +36,7 @@ public class CreateSnapshotMessage {
     
     
     public String snapshotName;
+
     public CreateSnapshotMessage withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -40,9 +44,13 @@ public class CreateSnapshotMessage {
     
     
     public TagList[] tags;
+
     public CreateSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotMessage(@JsonProperty("SnapshotName") String snapshotName) {
+        this.snapshotName = snapshotName;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIdFormatRequest {
     
     public String resource;
+
     public ModifyIdFormatRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -16,9 +17,14 @@ public class ModifyIdFormatRequest {
     
     
     public Boolean useLongIds;
+
     public ModifyIdFormatRequest withUseLongIds(Boolean useLongIds) {
         this.useLongIds = useLongIds;
         return this;
     }
     
+    public ModifyIdFormatRequest(@JsonProperty("Resource") String resource, @JsonProperty("UseLongIds") Boolean useLongIds) {
+        this.resource = resource;
+        this.useLongIds = useLongIds;
+  }
 }

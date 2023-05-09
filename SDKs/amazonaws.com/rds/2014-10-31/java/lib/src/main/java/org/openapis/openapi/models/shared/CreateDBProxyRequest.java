@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBProxyRequest {
     
     public UserAuthConfig[] auth;
+
     public CreateDBProxyRequest withAuth(UserAuthConfig[] auth) {
         this.auth = auth;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBProxyRequest {
     
     
     public String dbProxyName;
+
     public CreateDBProxyRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBProxyRequest {
     
     
     public Boolean debugLogging;
+
     public CreateDBProxyRequest withDebugLogging(Boolean debugLogging) {
         this.debugLogging = debugLogging;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBProxyRequest {
     
     
     public EngineFamilyEnum engineFamily;
+
     public CreateDBProxyRequest withEngineFamily(EngineFamilyEnum engineFamily) {
         this.engineFamily = engineFamily;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBProxyRequest {
     
     
     public Long idleClientTimeout;
+
     public CreateDBProxyRequest withIdleClientTimeout(Long idleClientTimeout) {
         this.idleClientTimeout = idleClientTimeout;
         return this;
@@ -44,6 +49,7 @@ public class CreateDBProxyRequest {
     
     
     public Boolean requireTLS;
+
     public CreateDBProxyRequest withRequireTLS(Boolean requireTLS) {
         this.requireTLS = requireTLS;
         return this;
@@ -51,6 +57,7 @@ public class CreateDBProxyRequest {
     
     
     public String roleArn;
+
     public CreateDBProxyRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -58,6 +65,7 @@ public class CreateDBProxyRequest {
     
     
     public TagList[] tags;
+
     public CreateDBProxyRequest withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -65,6 +73,7 @@ public class CreateDBProxyRequest {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateDBProxyRequest withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
@@ -72,9 +81,17 @@ public class CreateDBProxyRequest {
     
     
     public String[] vpcSubnetIds;
+
     public CreateDBProxyRequest withVpcSubnetIds(String[] vpcSubnetIds) {
         this.vpcSubnetIds = vpcSubnetIds;
         return this;
     }
     
+    public CreateDBProxyRequest(@JsonProperty("Auth") UserAuthConfig[] auth, @JsonProperty("DBProxyName") String dbProxyName, @JsonProperty("EngineFamily") EngineFamilyEnum engineFamily, @JsonProperty("RoleArn") String roleArn, @JsonProperty("VpcSubnetIds") String[] vpcSubnetIds) {
+        this.auth = auth;
+        this.dbProxyName = dbProxyName;
+        this.engineFamily = engineFamily;
+        this.roleArn = roleArn;
+        this.vpcSubnetIds = vpcSubnetIds;
+  }
 }

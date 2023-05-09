@@ -15,9 +15,11 @@ public class DeleteCollection200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public DeleteCollection200ApplicationJSONCollection collection;
+
     public DeleteCollection200ApplicationJSON withCollection(DeleteCollection200ApplicationJSONCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public DeleteCollection200ApplicationJSON(){}
 }

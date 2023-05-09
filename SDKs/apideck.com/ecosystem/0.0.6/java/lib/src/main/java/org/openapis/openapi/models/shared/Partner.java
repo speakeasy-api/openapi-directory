@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Partner {
     @JsonProperty("company")
     public String company;
+
     public Partner withCompany(String company) {
         this.company = company;
         return this;
@@ -24,6 +25,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contacts")
     public Contact[] contacts;
+
     public Partner withContacts(Contact[] contacts) {
         this.contacts = contacts;
         return this;
@@ -34,6 +36,7 @@ public class Partner {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Partner withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +45,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public File icon;
+
     public Partner withIcon(File icon) {
         this.icon = icon;
         return this;
@@ -50,6 +54,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Partner withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listed")
     public String listed;
+
     public Partner withListed(String listed) {
         this.listed = listed;
         return this;
@@ -66,6 +72,7 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter")
     public String twitter;
+
     public Partner withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
@@ -76,6 +83,7 @@ public class Partner {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public Partner withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -84,9 +92,13 @@ public class Partner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public Partner withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public Partner(@JsonProperty("company") String company) {
+        this.company = company;
+  }
 }

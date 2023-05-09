@@ -19,6 +19,7 @@ public class ModelCardExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ModelCardExportJobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class ModelCardExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public ModelCardExportJobSummary withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -35,6 +37,7 @@ public class ModelCardExportJobSummary {
     
     @JsonProperty("ModelCardExportJobArn")
     public String modelCardExportJobArn;
+
     public ModelCardExportJobSummary withModelCardExportJobArn(String modelCardExportJobArn) {
         this.modelCardExportJobArn = modelCardExportJobArn;
         return this;
@@ -42,6 +45,7 @@ public class ModelCardExportJobSummary {
     
     @JsonProperty("ModelCardExportJobName")
     public String modelCardExportJobName;
+
     public ModelCardExportJobSummary withModelCardExportJobName(String modelCardExportJobName) {
         this.modelCardExportJobName = modelCardExportJobName;
         return this;
@@ -49,6 +53,7 @@ public class ModelCardExportJobSummary {
     
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public ModelCardExportJobSummary withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -56,6 +61,7 @@ public class ModelCardExportJobSummary {
     
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public ModelCardExportJobSummary withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
@@ -63,9 +69,19 @@ public class ModelCardExportJobSummary {
     
     @JsonProperty("Status")
     public ModelCardExportJobStatusEnum status;
+
     public ModelCardExportJobSummary withStatus(ModelCardExportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ModelCardExportJobSummary(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("LastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("ModelCardExportJobArn") String modelCardExportJobArn, @JsonProperty("ModelCardExportJobName") String modelCardExportJobName, @JsonProperty("ModelCardName") String modelCardName, @JsonProperty("ModelCardVersion") Long modelCardVersion, @JsonProperty("Status") ModelCardExportJobStatusEnum status) {
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.modelCardExportJobArn = modelCardExportJobArn;
+        this.modelCardExportJobName = modelCardExportJobName;
+        this.modelCardName = modelCardName;
+        this.modelCardVersion = modelCardVersion;
+        this.status = status;
+  }
 }

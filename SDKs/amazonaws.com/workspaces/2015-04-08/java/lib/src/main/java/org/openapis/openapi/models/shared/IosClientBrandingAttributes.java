@@ -15,6 +15,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForgotPasswordLink")
     public String forgotPasswordLink;
+
     public IosClientBrandingAttributes withForgotPasswordLink(String forgotPasswordLink) {
         this.forgotPasswordLink = forgotPasswordLink;
         return this;
@@ -23,6 +24,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoginMessage")
     public java.util.Map<String, String> loginMessage;
+
     public IosClientBrandingAttributes withLoginMessage(java.util.Map<String, String> loginMessage) {
         this.loginMessage = loginMessage;
         return this;
@@ -31,6 +33,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logo2xUrl")
     public String logo2xUrl;
+
     public IosClientBrandingAttributes withLogo2xUrl(String logo2xUrl) {
         this.logo2xUrl = logo2xUrl;
         return this;
@@ -39,6 +42,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Logo3xUrl")
     public String logo3xUrl;
+
     public IosClientBrandingAttributes withLogo3xUrl(String logo3xUrl) {
         this.logo3xUrl = logo3xUrl;
         return this;
@@ -47,6 +51,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogoUrl")
     public String logoUrl;
+
     public IosClientBrandingAttributes withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -55,6 +60,7 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportEmail")
     public String supportEmail;
+
     public IosClientBrandingAttributes withSupportEmail(String supportEmail) {
         this.supportEmail = supportEmail;
         return this;
@@ -63,9 +69,11 @@ public class IosClientBrandingAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportLink")
     public String supportLink;
+
     public IosClientBrandingAttributes withSupportLink(String supportLink) {
         this.supportLink = supportLink;
         return this;
     }
     
+    public IosClientBrandingAttributes(){}
 }

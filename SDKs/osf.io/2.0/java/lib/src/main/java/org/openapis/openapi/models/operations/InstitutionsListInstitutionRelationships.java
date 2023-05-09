@@ -15,6 +15,7 @@ public class InstitutionsListInstitutionRelationships {
      */
     
     public String nodes;
+
     public InstitutionsListInstitutionRelationships withNodes(String nodes) {
         this.nodes = nodes;
         return this;
@@ -25,6 +26,7 @@ public class InstitutionsListInstitutionRelationships {
      */
     
     public String registrations;
+
     public InstitutionsListInstitutionRelationships withRegistrations(String registrations) {
         this.registrations = registrations;
         return this;
@@ -35,9 +37,11 @@ public class InstitutionsListInstitutionRelationships {
      */
     
     public String users;
+
     public InstitutionsListInstitutionRelationships withUsers(String users) {
         this.users = users;
         return this;
     }
     
+    public InstitutionsListInstitutionRelationships(){}
 }

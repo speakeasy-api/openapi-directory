@@ -15,9 +15,11 @@ public class StopGameSessionPlacementOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionPlacement")
     public GameSessionPlacement gameSessionPlacement;
+
     public StopGameSessionPlacementOutput withGameSessionPlacement(GameSessionPlacement gameSessionPlacement) {
         this.gameSessionPlacement = gameSessionPlacement;
         return this;
     }
     
+    public StopGameSessionPlacementOutput(){}
 }

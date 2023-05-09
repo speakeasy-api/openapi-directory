@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse {
     
     public String contentType;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse {
     
     
     public Integer statusCode;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse {
      */
     
     public String deleteProductsIdOptionsOptionIdValuesValueIdJSON200ApplicationJSONString;
+
     public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse withDeleteProductsIdOptionsOptionIdValuesValueIdJSON200ApplicationJSONString(String deleteProductsIdOptionsOptionIdValuesValueIdJSON200ApplicationJSONString) {
         this.deleteProductsIdOptionsOptionIdValuesValueIdJSON200ApplicationJSONString = deleteProductsIdOptionsOptionIdValuesValueIdJSON200ApplicationJSONString;
         return this;
     }
     
+    public DeleteProductsIdOptionsOptionIdValuesValueIdJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

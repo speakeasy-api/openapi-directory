@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteFlowLogsRequest {
     
     public Boolean dryRun;
+
     public DeleteFlowLogsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteFlowLogsRequest {
     
     
     public String[] flowLogIds;
+
     public DeleteFlowLogsRequest withFlowLogIds(String[] flowLogIds) {
         this.flowLogIds = flowLogIds;
         return this;
     }
     
+    public DeleteFlowLogsRequest(@JsonProperty("FlowLogIds") String[] flowLogIds) {
+        this.flowLogIds = flowLogIds;
+  }
 }

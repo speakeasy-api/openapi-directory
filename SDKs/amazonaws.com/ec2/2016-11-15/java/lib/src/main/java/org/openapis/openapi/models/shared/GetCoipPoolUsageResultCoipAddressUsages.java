@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetCoipPoolUsageResultCoipAddressUsages {
     
     public String allocationId;
+
     public GetCoipPoolUsageResultCoipAddressUsages withAllocationId(String allocationId) {
         this.allocationId = allocationId;
         return this;
@@ -19,6 +20,7 @@ public class GetCoipPoolUsageResultCoipAddressUsages {
     
     
     public String awsAccountId;
+
     public GetCoipPoolUsageResultCoipAddressUsages withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -26,6 +28,7 @@ public class GetCoipPoolUsageResultCoipAddressUsages {
     
     
     public String awsService;
+
     public GetCoipPoolUsageResultCoipAddressUsages withAwsService(String awsService) {
         this.awsService = awsService;
         return this;
@@ -33,9 +36,11 @@ public class GetCoipPoolUsageResultCoipAddressUsages {
     
     
     public String coIp;
+
     public GetCoipPoolUsageResultCoipAddressUsages withCoIp(String coIp) {
         this.coIp = coIp;
         return this;
     }
     
+    public GetCoipPoolUsageResultCoipAddressUsages(){}
 }

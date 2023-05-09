@@ -59,11 +59,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsGetResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsGetResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsGetResponse(contentType, httpRes.statusCode()) {{
             snapshot = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsInsertResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsInsertResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsListResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsListResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsListResponse(contentType, httpRes.statusCode()) {{
             snapshotList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class Snapshots {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeSnapshotsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeSnapshotsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeSnapshotsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

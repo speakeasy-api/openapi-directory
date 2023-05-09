@@ -12,6 +12,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppSource")
     public Source appSource;
+
     public CreateAppRequest withAppSource(Source appSource) {
         this.appSource = appSource;
         return this;
@@ -20,6 +21,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateAppRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -28,6 +30,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSources")
     public DataSource[] dataSources;
+
     public CreateAppRequest withDataSources(DataSource[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -36,6 +39,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateAppRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Domains")
     public String[] domains;
+
     public CreateAppRequest withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -52,6 +57,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableSsl")
     public Boolean enableSsl;
+
     public CreateAppRequest withEnableSsl(Boolean enableSsl) {
         this.enableSsl = enableSsl;
         return this;
@@ -60,6 +66,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public EnvironmentVariable[] environment;
+
     public CreateAppRequest withEnvironment(EnvironmentVariable[] environment) {
         this.environment = environment;
         return this;
@@ -67,6 +74,7 @@ public class CreateAppRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateAppRequest withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +83,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shortname")
     public String shortname;
+
     public CreateAppRequest withShortname(String shortname) {
         this.shortname = shortname;
         return this;
@@ -83,6 +92,7 @@ public class CreateAppRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslConfiguration")
     public SslConfiguration sslConfiguration;
+
     public CreateAppRequest withSslConfiguration(SslConfiguration sslConfiguration) {
         this.sslConfiguration = sslConfiguration;
         return this;
@@ -90,6 +100,7 @@ public class CreateAppRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public CreateAppRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -97,9 +108,15 @@ public class CreateAppRequest {
     
     @JsonProperty("Type")
     public AppTypeEnum type;
+
     public CreateAppRequest withType(AppTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateAppRequest(@JsonProperty("Name") String name, @JsonProperty("StackId") String stackId, @JsonProperty("Type") AppTypeEnum type) {
+        this.name = name;
+        this.stackId = stackId;
+        this.type = type;
+  }
 }

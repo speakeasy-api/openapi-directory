@@ -18,9 +18,11 @@ public class SampleAesEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyUri")
     public String keyUri;
+
     public SampleAesEncryption withKeyUri(String keyUri) {
         this.keyUri = keyUri;
         return this;
     }
     
+    public SampleAesEncryption(){}
 }

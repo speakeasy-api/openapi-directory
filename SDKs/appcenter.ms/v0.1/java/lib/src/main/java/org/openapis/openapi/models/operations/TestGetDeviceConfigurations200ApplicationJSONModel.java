@@ -12,6 +12,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityCount")
     public Double availabilityCount;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withAvailabilityCount(Double availabilityCount) {
         this.availabilityCount = availabilityCount;
         return this;
@@ -23,6 +24,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public TestGetDeviceConfigurations200ApplicationJSONModelCpu cpu;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withCpu(TestGetDeviceConfigurations200ApplicationJSONModelCpu cpu) {
         this.cpu = cpu;
         return this;
@@ -31,6 +33,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceFrame")
     public TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame deviceFrame;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withDeviceFrame(TestGetDeviceConfigurations200ApplicationJSONModelDeviceFrame deviceFrame) {
         this.deviceFrame = deviceFrame;
         return this;
@@ -42,6 +45,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public TestGetDeviceConfigurations200ApplicationJSONModelDimensions dimensions;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withDimensions(TestGetDeviceConfigurations200ApplicationJSONModelDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -50,6 +54,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formFactor")
     public String formFactor;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withFormFactor(String formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -58,6 +63,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer")
     public String manufacturer;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -69,6 +75,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public TestGetDeviceConfigurations200ApplicationJSONModelMemory memory;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withMemory(TestGetDeviceConfigurations200ApplicationJSONModelMemory memory) {
         this.memory = memory;
         return this;
@@ -77,6 +84,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withModel(String model) {
         this.model = model;
         return this;
@@ -85,6 +93,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +102,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public String platform;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -101,6 +111,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseDate")
     public String releaseDate;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
         return this;
@@ -112,6 +123,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public TestGetDeviceConfigurations200ApplicationJSONModelResolution resolution;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withResolution(TestGetDeviceConfigurations200ApplicationJSONModelResolution resolution) {
         this.resolution = resolution;
         return this;
@@ -120,6 +132,7 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenRotation")
     public Double screenRotation;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withScreenRotation(Double screenRotation) {
         this.screenRotation = screenRotation;
         return this;
@@ -131,9 +144,11 @@ public class TestGetDeviceConfigurations200ApplicationJSONModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenSize")
     public TestGetDeviceConfigurations200ApplicationJSONModelScreenSize screenSize;
+
     public TestGetDeviceConfigurations200ApplicationJSONModel withScreenSize(TestGetDeviceConfigurations200ApplicationJSONModelScreenSize screenSize) {
         this.screenSize = screenSize;
         return this;
     }
     
+    public TestGetDeviceConfigurations200ApplicationJSONModel(){}
 }

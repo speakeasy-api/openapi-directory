@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleAppsDriveLabelsV2LabelProperties withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2LabelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleAppsDriveLabelsV2LabelProperties withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelProperties(){}
 }

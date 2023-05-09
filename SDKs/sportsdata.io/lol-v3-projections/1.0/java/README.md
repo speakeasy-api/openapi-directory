@@ -16,10 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DfsSlatesByDateFormatEnum;
 import org.openapis.openapi.models.operations.DfsSlatesByDateRequest;
 import org.openapis.openapi.models.operations.DfsSlatesByDateResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,30 +30,29 @@ public class Application {
                 }})
                 .build();
 
-            DfsSlatesByDateRequest req = new DfsSlatesByDateRequest() {{
-                date = "corrupti";
-                format = "xml";
-            }}            
+            DfsSlatesByDateRequest req = new DfsSlatesByDateRequest("corrupti", DfsSlatesByDateFormatEnum.XML);            
 
             DfsSlatesByDateResponse res = sdk.dfsSlatesByDate(req);
 
-            if (res.dfsSlates.isPresent()) {
+            if (res.dfsSlates != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `dfsSlatesByDate` - Dfs Slates By Date
-* `projectedPlayerGameStatsByDate` - Projected Player Game Stats by Date
-* `projectedPlayerGameStatsByPlayer` - Projected Player Game Stats by Player
+* [dfsSlatesByDate](docs/sdk/README.md#dfsslatesbydate) - Dfs Slates By Date
+* [projectedPlayerGameStatsByDate](docs/sdk/README.md#projectedplayergamestatsbydate) - Projected Player Game Stats by Date
+* [projectedPlayerGameStatsByPlayer](docs/sdk/README.md#projectedplayergamestatsbyplayer) - Projected Player Game Stats by Player
 <!-- End SDK Available Operations -->
 
 ### Maturity

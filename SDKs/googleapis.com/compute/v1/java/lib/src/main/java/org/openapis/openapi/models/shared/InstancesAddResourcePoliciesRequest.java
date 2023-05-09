@@ -15,9 +15,11 @@ public class InstancesAddResourcePoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public InstancesAddResourcePoliciesRequest withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
     }
     
+    public InstancesAddResourcePoliciesRequest(){}
 }

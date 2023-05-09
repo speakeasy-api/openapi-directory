@@ -12,6 +12,7 @@ public class CreateApiVersion200ApplicationJSONVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api")
     public String api;
+
     public CreateApiVersion200ApplicationJSONVersion withApi(String api) {
         this.api = api;
         return this;
@@ -20,6 +21,7 @@ public class CreateApiVersion200ApplicationJSONVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateApiVersion200ApplicationJSONVersion withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class CreateApiVersion200ApplicationJSONVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateApiVersion200ApplicationJSONVersion withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateApiVersion200ApplicationJSONVersion(){}
 }

@@ -19,6 +19,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appointment_segments")
     public AppointmentSegment[] appointmentSegments;
+
     public Booking withAppointmentSegments(AppointmentSegment[] appointmentSegments) {
         this.appointmentSegments = appointmentSegments;
         return this;
@@ -30,6 +31,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public Booking withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_id")
     public String customerId;
+
     public Booking withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -52,6 +55,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_note")
     public String customerNote;
+
     public Booking withCustomerNote(String customerNote) {
         this.customerNote = customerNote;
         return this;
@@ -63,6 +67,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Booking withId(String id) {
         this.id = id;
         return this;
@@ -74,6 +79,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public Booking withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -86,6 +92,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller_note")
     public String sellerNote;
+
     public Booking withSellerNote(String sellerNote) {
         this.sellerNote = sellerNote;
         return this;
@@ -97,6 +104,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_at")
     public String startAt;
+
     public Booking withStartAt(String startAt) {
         this.startAt = startAt;
         return this;
@@ -108,6 +116,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Booking withStatus(String status) {
         this.status = status;
         return this;
@@ -119,6 +128,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public Booking withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -130,9 +140,11 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Booking withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Booking(){}
 }

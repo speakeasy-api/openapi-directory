@@ -14,17 +14,19 @@ public class ListImagePackagesRequestBody {
      */
     @JsonProperty("imageBuildVersionArn")
     public String imageBuildVersionArn;
+
     public ListImagePackagesRequestBody withImageBuildVersionArn(String imageBuildVersionArn) {
         this.imageBuildVersionArn = imageBuildVersionArn;
         return this;
     }
     
     /**
-     * The maxiumum number of results to return from the ListImagePackages request.
+     * The maximum items to return in a request.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImagePackagesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListImagePackagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagePackagesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImagePackagesRequestBody(@JsonProperty("imageBuildVersionArn") String imageBuildVersionArn) {
+        this.imageBuildVersionArn = imageBuildVersionArn;
+  }
 }

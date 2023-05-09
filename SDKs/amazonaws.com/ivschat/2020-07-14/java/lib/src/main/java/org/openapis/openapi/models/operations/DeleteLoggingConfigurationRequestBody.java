@@ -12,9 +12,13 @@ public class DeleteLoggingConfigurationRequestBody {
      */
     @JsonProperty("identifier")
     public String identifier;
+
     public DeleteLoggingConfigurationRequestBody withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public DeleteLoggingConfigurationRequestBody(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

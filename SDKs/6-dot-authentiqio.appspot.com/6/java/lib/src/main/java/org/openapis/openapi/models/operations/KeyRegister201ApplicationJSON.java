@@ -18,6 +18,7 @@ public class KeyRegister201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public KeyRegister201ApplicationJSON withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -29,9 +30,11 @@ public class KeyRegister201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public KeyRegister201ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public KeyRegister201ApplicationJSON(){}
 }

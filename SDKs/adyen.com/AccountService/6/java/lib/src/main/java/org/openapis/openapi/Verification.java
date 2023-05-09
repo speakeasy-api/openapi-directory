@@ -55,12 +55,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCheckAccountHolderResponse res = new org.openapis.openapi.models.operations.PostCheckAccountHolderResponse() {{
+        org.openapis.openapi.models.operations.PostCheckAccountHolderResponse res = new org.openapis.openapi.models.operations.PostCheckAccountHolderResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -106,12 +104,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse res = new org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse() {{
+        org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse res = new org.openapis.openapi.models.operations.PostDeleteBankAccountsResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -157,12 +153,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse res = new org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse() {{
+        org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse res = new org.openapis.openapi.models.operations.PostDeleteLegalArrangementsResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -208,12 +202,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeletePayoutMethodsResponse res = new org.openapis.openapi.models.operations.PostDeletePayoutMethodsResponse() {{
+        org.openapis.openapi.models.operations.PostDeletePayoutMethodsResponse res = new org.openapis.openapi.models.operations.PostDeletePayoutMethodsResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -259,12 +251,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeleteShareholdersResponse res = new org.openapis.openapi.models.operations.PostDeleteShareholdersResponse() {{
+        org.openapis.openapi.models.operations.PostDeleteShareholdersResponse res = new org.openapis.openapi.models.operations.PostDeleteShareholdersResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -310,12 +300,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse res = new org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse() {{
+        org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse res = new org.openapis.openapi.models.operations.PostDeleteSignatoriesResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -362,12 +350,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse res = new org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse() {{
+        org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse res = new org.openapis.openapi.models.operations.PostGetUploadedDocumentsResponse(contentType, httpRes.statusCode()) {{
             getUploadedDocumentsResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,12 +399,10 @@ public class Verification {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUploadDocumentResponse res = new org.openapis.openapi.models.operations.PostUploadDocumentResponse() {{
+        org.openapis.openapi.models.operations.PostUploadDocumentResponse res = new org.openapis.openapi.models.operations.PostUploadDocumentResponse(contentType, httpRes.statusCode()) {{
             updateAccountHolderResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {

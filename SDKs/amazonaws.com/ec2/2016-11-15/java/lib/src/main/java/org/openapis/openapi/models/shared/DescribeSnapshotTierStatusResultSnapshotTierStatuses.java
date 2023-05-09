@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     public OffsetDateTime archivalCompleteTime;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withArchivalCompleteTime(OffsetDateTime archivalCompleteTime) {
         this.archivalCompleteTime = archivalCompleteTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum lastTieringOperationStatus;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withLastTieringOperationStatus(DescribeSnapshotTierStatusResultSnapshotTierStatusesLastTieringOperationStatusEnum lastTieringOperationStatus) {
         this.lastTieringOperationStatus = lastTieringOperationStatus;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public String lastTieringOperationStatusDetail;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withLastTieringOperationStatusDetail(String lastTieringOperationStatusDetail) {
         this.lastTieringOperationStatusDetail = lastTieringOperationStatusDetail;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public Long lastTieringProgress;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withLastTieringProgress(Long lastTieringProgress) {
         this.lastTieringProgress = lastTieringProgress;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public OffsetDateTime lastTieringStartTime;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withLastTieringStartTime(OffsetDateTime lastTieringStartTime) {
         this.lastTieringStartTime = lastTieringStartTime;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public String ownerId;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public OffsetDateTime restoreExpiryTime;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withRestoreExpiryTime(OffsetDateTime restoreExpiryTime) {
         this.restoreExpiryTime = restoreExpiryTime;
         return this;
@@ -61,6 +68,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public String snapshotId;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum status;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withStatus(DescribeSnapshotTierStatusResultSnapshotTierStatusesStatusEnum status) {
         this.status = status;
         return this;
@@ -75,6 +84,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum storageTier;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withStorageTier(DescribeSnapshotTierStatusResultSnapshotTierStatusesStorageTierEnum storageTier) {
         this.storageTier = storageTier;
         return this;
@@ -82,6 +92,7 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public DescribeSnapshotTierStatusResultSnapshotTierStatusesTags[] tags;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withTags(DescribeSnapshotTierStatusResultSnapshotTierStatusesTags[] tags) {
         this.tags = tags;
         return this;
@@ -89,9 +100,11 @@ public class DescribeSnapshotTierStatusResultSnapshotTierStatuses {
     
     
     public String volumeId;
+
     public DescribeSnapshotTierStatusResultSnapshotTierStatuses withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public DescribeSnapshotTierStatusResultSnapshotTierStatuses(){}
 }

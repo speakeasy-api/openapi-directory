@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCommitteesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,10 +24,17 @@ public class GetCommitteesRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String[] candidateId;
+
     public GetCommitteesRequest withCandidateId(String[] candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -37,6 +46,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetCommitteesRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -64,6 +74,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public GetCommitteesCommitteeTypeEnum[] committeeType;
+
     public GetCommitteesRequest withCommitteeType(GetCommitteesCommitteeTypeEnum[] committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -77,6 +88,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetCommitteesRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -94,6 +106,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=designation")
     public GetCommitteesDesignationEnum[] designation;
+
     public GetCommitteesRequest withDesignation(GetCommitteesDesignationEnum[] designation) {
         this.designation = designation;
         return this;
@@ -112,6 +125,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filing_frequency")
     public GetCommitteesFilingFrequencyEnum[] filingFrequency;
+
     public GetCommitteesRequest withFilingFrequency(GetCommitteesFilingFrequencyEnum[] filingFrequency) {
         this.filingFrequency = filingFrequency;
         return this;
@@ -122,6 +136,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_first_f1_date")
     public LocalDate maxFirstF1Date;
+
     public GetCommitteesRequest withMaxFirstF1Date(LocalDate maxFirstF1Date) {
         this.maxFirstF1Date = maxFirstF1Date;
         return this;
@@ -132,6 +147,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_first_file_date")
     public LocalDate maxFirstFileDate;
+
     public GetCommitteesRequest withMaxFirstFileDate(LocalDate maxFirstFileDate) {
         this.maxFirstFileDate = maxFirstFileDate;
         return this;
@@ -142,6 +158,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_last_f1_date")
     public LocalDate maxLastF1Date;
+
     public GetCommitteesRequest withMaxLastF1Date(LocalDate maxLastF1Date) {
         this.maxLastF1Date = maxLastF1Date;
         return this;
@@ -152,6 +169,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_first_f1_date")
     public LocalDate minFirstF1Date;
+
     public GetCommitteesRequest withMinFirstF1Date(LocalDate minFirstF1Date) {
         this.minFirstF1Date = minFirstF1Date;
         return this;
@@ -162,6 +180,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_first_file_date")
     public LocalDate minFirstFileDate;
+
     public GetCommitteesRequest withMinFirstFileDate(LocalDate minFirstFileDate) {
         this.minFirstFileDate = minFirstFileDate;
         return this;
@@ -172,6 +191,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_last_f1_date")
     public LocalDate minLastF1Date;
+
     public GetCommitteesRequest withMinLastF1Date(LocalDate minLastF1Date) {
         this.minLastF1Date = minLastF1Date;
         return this;
@@ -189,6 +209,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization_type")
     public GetCommitteesOrganizationTypeEnum[] organizationType;
+
     public GetCommitteesRequest withOrganizationType(GetCommitteesOrganizationTypeEnum[] organizationType) {
         this.organizationType = organizationType;
         return this;
@@ -199,6 +220,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCommitteesRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -209,6 +231,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=party")
     public String[] party;
+
     public GetCommitteesRequest withParty(String[] party) {
         this.party = party;
         return this;
@@ -219,6 +242,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCommitteesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -229,6 +253,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String[] q;
+
     public GetCommitteesRequest withQ(String[] q) {
         this.q = q;
         return this;
@@ -240,6 +265,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCommitteesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -250,6 +276,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCommitteesRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -260,6 +287,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCommitteesRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -270,18 +298,19 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCommitteesRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
     /**
-     * A unique identifier assigned to each candidate registered with the FEC.
-     * If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
+     * A unique identifier assigned to each candidate registered with the FEC. If a person runs for several offices, that person will have separate candidate IDs for each office. This is a filter for Leadership PAC sponsor.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sponsor_candidate_id")
     public String[] sponsorCandidateId;
+
     public GetCommitteesRequest withSponsorCandidateId(String[] sponsorCandidateId) {
         this.sponsorCandidateId = sponsorCandidateId;
         return this;
@@ -292,6 +321,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String[] state;
+
     public GetCommitteesRequest withState(String[] state) {
         this.state = state;
         return this;
@@ -302,6 +332,7 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=treasurer_name")
     public String[] treasurerName;
+
     public GetCommitteesRequest withTreasurerName(String[] treasurerName) {
         this.treasurerName = treasurerName;
         return this;
@@ -312,9 +343,13 @@ public class GetCommitteesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Integer[] year;
+
     public GetCommitteesRequest withYear(Integer[] year) {
         this.year = year;
         return this;
     }
     
+    public GetCommitteesRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobError {
     @JsonProperty("code")
     public JobErrorCodeEnum code;
+
     public JobError withCode(JobErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class JobError {
     
     @JsonProperty("message")
     public String message;
+
     public JobError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public JobError(@JsonProperty("code") JobErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

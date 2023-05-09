@@ -15,6 +15,7 @@ public class V3DisruptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruption")
     public V3Disruption disruption;
+
     public V3DisruptionResponse withDisruption(V3Disruption disruption) {
         this.disruption = disruption;
         return this;
@@ -23,9 +24,11 @@ public class V3DisruptionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public V3Status status;
+
     public V3DisruptionResponse withStatus(V3Status status) {
         this.status = status;
         return this;
     }
     
+    public V3DisruptionResponse(){}
 }

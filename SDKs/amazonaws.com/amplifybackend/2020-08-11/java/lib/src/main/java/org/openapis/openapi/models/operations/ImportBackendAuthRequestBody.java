@@ -15,6 +15,7 @@ public class ImportBackendAuthRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityPoolId")
     public String identityPoolId;
+
     public ImportBackendAuthRequestBody withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -25,6 +26,7 @@ public class ImportBackendAuthRequestBody {
      */
     @JsonProperty("nativeClientId")
     public String nativeClientId;
+
     public ImportBackendAuthRequestBody withNativeClientId(String nativeClientId) {
         this.nativeClientId = nativeClientId;
         return this;
@@ -35,6 +37,7 @@ public class ImportBackendAuthRequestBody {
      */
     @JsonProperty("userPoolId")
     public String userPoolId;
+
     public ImportBackendAuthRequestBody withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -45,9 +48,15 @@ public class ImportBackendAuthRequestBody {
      */
     @JsonProperty("webClientId")
     public String webClientId;
+
     public ImportBackendAuthRequestBody withWebClientId(String webClientId) {
         this.webClientId = webClientId;
         return this;
     }
     
+    public ImportBackendAuthRequestBody(@JsonProperty("nativeClientId") String nativeClientId, @JsonProperty("userPoolId") String userPoolId, @JsonProperty("webClientId") String webClientId) {
+        this.nativeClientId = nativeClientId;
+        this.userPoolId = userPoolId;
+        this.webClientId = webClientId;
+  }
 }

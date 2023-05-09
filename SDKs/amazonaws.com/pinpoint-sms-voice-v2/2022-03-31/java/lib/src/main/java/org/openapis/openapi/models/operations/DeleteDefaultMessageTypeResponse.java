@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDefaultMessageTypeResponse {
@@ -12,6 +13,7 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDefaultMessageTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDefaultMessageTypeResponse {
     
     
     public String contentType;
+
     public DeleteDefaultMessageTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteDefaultMessageTypeResult deleteDefaultMessageTypeResult;
+
     public DeleteDefaultMessageTypeResponse withDeleteDefaultMessageTypeResult(org.openapis.openapi.models.shared.DeleteDefaultMessageTypeResult deleteDefaultMessageTypeResult) {
         this.deleteDefaultMessageTypeResult = deleteDefaultMessageTypeResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public Object internalServerException;
+
     public DeleteDefaultMessageTypeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteDefaultMessageTypeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDefaultMessageTypeResponse {
     
     
     public Integer statusCode;
+
     public DeleteDefaultMessageTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDefaultMessageTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDefaultMessageTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public Object throttlingException;
+
     public DeleteDefaultMessageTypeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDefaultMessageTypeResponse {
      */
     
     public Object validationException;
+
     public DeleteDefaultMessageTypeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteDefaultMessageTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

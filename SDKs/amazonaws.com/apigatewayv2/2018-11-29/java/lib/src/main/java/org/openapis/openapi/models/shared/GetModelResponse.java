@@ -15,6 +15,7 @@ public class GetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public GetModelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class GetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetModelResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class GetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelId")
     public String modelId;
+
     public GetModelResponse withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -39,6 +42,7 @@ public class GetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetModelResponse withName(String name) {
         this.name = name;
         return this;
@@ -47,9 +51,11 @@ public class GetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public String schema;
+
     public GetModelResponse withSchema(String schema) {
         this.schema = schema;
         return this;
     }
     
+    public GetModelResponse(){}
 }

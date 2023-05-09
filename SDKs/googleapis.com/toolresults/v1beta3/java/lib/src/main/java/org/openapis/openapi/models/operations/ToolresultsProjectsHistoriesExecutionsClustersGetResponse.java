@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ToolresultsProjectsHistoriesExecutionsClustersGetResponse {
     
     public String contentType;
+
     public ToolresultsProjectsHistoriesExecutionsClustersGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ToolresultsProjectsHistoriesExecutionsClustersGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ScreenshotCluster screenshotCluster;
+
     public ToolresultsProjectsHistoriesExecutionsClustersGetResponse withScreenshotCluster(org.openapis.openapi.models.shared.ScreenshotCluster screenshotCluster) {
         this.screenshotCluster = screenshotCluster;
         return this;
@@ -26,6 +29,7 @@ public class ToolresultsProjectsHistoriesExecutionsClustersGetResponse {
     
     
     public Integer statusCode;
+
     public ToolresultsProjectsHistoriesExecutionsClustersGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ToolresultsProjectsHistoriesExecutionsClustersGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ToolresultsProjectsHistoriesExecutionsClustersGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ToolresultsProjectsHistoriesExecutionsClustersGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

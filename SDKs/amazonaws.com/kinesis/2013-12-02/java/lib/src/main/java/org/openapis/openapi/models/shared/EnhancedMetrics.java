@@ -15,9 +15,11 @@ public class EnhancedMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShardLevelMetrics")
     public MetricsNameEnum[] shardLevelMetrics;
+
     public EnhancedMetrics withShardLevelMetrics(MetricsNameEnum[] shardLevelMetrics) {
         this.shardLevelMetrics = shardLevelMetrics;
         return this;
     }
     
+    public EnhancedMetrics(){}
 }

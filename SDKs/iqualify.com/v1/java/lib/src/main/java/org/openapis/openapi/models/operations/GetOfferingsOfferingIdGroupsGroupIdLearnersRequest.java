@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOfferingsOfferingIdGroupsGroupIdLearnersRequest {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdGroupsGroupIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public GetOfferingsOfferingIdGroupsGroupIdLearnersRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -22,9 +24,14 @@ public class GetOfferingsOfferingIdGroupsGroupIdLearnersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public GetOfferingsOfferingIdGroupsGroupIdLearnersRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public GetOfferingsOfferingIdGroupsGroupIdLearnersRequest(@JsonProperty("groupId") String groupId, @JsonProperty("offeringId") String offeringId) {
+        this.groupId = groupId;
+        this.offeringId = offeringId;
+  }
 }

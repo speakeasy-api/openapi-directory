@@ -18,6 +18,7 @@ public class ListColumnSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpecs")
     public ColumnSpec[] columnSpecs;
+
     public ListColumnSpecsResponse withColumnSpecs(ColumnSpec[] columnSpecs) {
         this.columnSpecs = columnSpecs;
         return this;
@@ -29,9 +30,11 @@ public class ListColumnSpecsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListColumnSpecsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListColumnSpecsResponse(){}
 }

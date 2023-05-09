@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBucketResponse {
@@ -12,6 +13,7 @@ public class UpdateBucketResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateBucketResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBucketResponse {
     
     
     public String contentType;
+
     public UpdateBucketResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBucketResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateBucketResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBucketResponse {
      */
     
     public Object notFoundException;
+
     public UpdateBucketResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBucketResponse {
     
     
     public Integer statusCode;
+
     public UpdateBucketResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBucketResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBucketResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBucketResponse {
      */
     
     public Object serviceException;
+
     public UpdateBucketResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBucketResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateBucketResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateBucketResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBucketResult updateBucketResult;
+
     public UpdateBucketResponse withUpdateBucketResult(org.openapis.openapi.models.shared.UpdateBucketResult updateBucketResult) {
         this.updateBucketResult = updateBucketResult;
         return this;
     }
     
+    public UpdateBucketResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPortfoliosForProductResponse {
     
     public String contentType;
+
     public ListPortfoliosForProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPortfoliosForProductResponse {
      */
     
     public Object invalidParametersException;
+
     public ListPortfoliosForProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class ListPortfoliosForProductResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPortfoliosForProductOutput listPortfoliosForProductOutput;
+
     public ListPortfoliosForProductResponse withListPortfoliosForProductOutput(org.openapis.openapi.models.shared.ListPortfoliosForProductOutput listPortfoliosForProductOutput) {
         this.listPortfoliosForProductOutput = listPortfoliosForProductOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListPortfoliosForProductResponse {
     
     
     public Integer statusCode;
+
     public ListPortfoliosForProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListPortfoliosForProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPortfoliosForProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class ListPortfoliosForProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPortfoliosForProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListPortfoliosForProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePatientRequest {
     @SpeakeasyMetadata("request:mediaType=application/vnd.api+json")
     public org.openapis.openapi.models.shared.UpdatePatientRequestInput updatePatientRequestInput;
+
     public UpdatePatientRequest withUpdatePatientRequestInput(org.openapis.openapi.models.shared.UpdatePatientRequestInput updatePatientRequestInput) {
         this.updatePatientRequestInput = updatePatientRequestInput;
         return this;
@@ -19,9 +21,14 @@ public class UpdatePatientRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdatePatientRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdatePatientRequest(@JsonProperty("UpdatePatientRequestInput") org.openapis.openapi.models.shared.UpdatePatientRequestInput updatePatientRequestInput, @JsonProperty("id") String id) {
+        this.updatePatientRequestInput = updatePatientRequestInput;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceSummaries")
     public InstanceSummary[] instanceSummaries;
+
     public ListInstancesResponse withInstanceSummaries(InstanceSummary[] instanceSummaries) {
         this.instanceSummaries = instanceSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInstancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListInstancesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ZippedScreenshotsRequest {
@@ -12,9 +13,13 @@ public class ZippedScreenshotsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_id")
     public String testId;
+
     public ZippedScreenshotsRequest withTestId(String testId) {
         this.testId = testId;
         return this;
     }
     
+    public ZippedScreenshotsRequest(@JsonProperty("test_id") String testId) {
+        this.testId = testId;
+  }
 }

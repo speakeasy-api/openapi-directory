@@ -18,6 +18,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_user_id")
     public String externalUserId;
+
     public RepositoryConfigurationsCreateOrUpdateRequestBody withExternalUserId(String externalUserId) {
         this.externalUserId = externalUserId;
         return this;
@@ -29,6 +30,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installation_id")
     public String installationId;
+
     public RepositoryConfigurationsCreateOrUpdateRequestBody withInstallationId(String installationId) {
         this.installationId = installationId;
         return this;
@@ -40,6 +42,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_id")
     public String repoId;
+
     public RepositoryConfigurationsCreateOrUpdateRequestBody withRepoId(String repoId) {
         this.repoId = repoId;
         return this;
@@ -50,6 +53,7 @@ public class RepositoryConfigurationsCreateOrUpdateRequestBody {
      */
     @JsonProperty("repo_url")
     public String repoUrl;
+
     public RepositoryConfigurationsCreateOrUpdateRequestBody withRepoUrl(String repoUrl) {
         this.repoUrl = repoUrl;
         return this;
@@ -61,9 +65,13 @@ public class RepositoryConfigurationsCreateOrUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_connection_id")
     public String serviceConnectionId;
+
     public RepositoryConfigurationsCreateOrUpdateRequestBody withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
     }
     
+    public RepositoryConfigurationsCreateOrUpdateRequestBody(@JsonProperty("repo_url") String repoUrl) {
+        this.repoUrl = repoUrl;
+  }
 }

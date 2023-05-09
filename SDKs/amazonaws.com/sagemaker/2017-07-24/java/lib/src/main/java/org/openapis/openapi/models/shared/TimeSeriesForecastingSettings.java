@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas app.
+ * TimeSeriesForecastingSettings - Time series forecast settings for the SageMaker Canvas application.
  */
 public class TimeSeriesForecastingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonForecastRoleArn")
     public String amazonForecastRoleArn;
+
     public TimeSeriesForecastingSettings withAmazonForecastRoleArn(String amazonForecastRoleArn) {
         this.amazonForecastRoleArn = amazonForecastRoleArn;
         return this;
@@ -23,9 +24,11 @@ public class TimeSeriesForecastingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FeatureStatusEnum status;
+
     public TimeSeriesForecastingSettings withStatus(FeatureStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public TimeSeriesForecastingSettings(){}
 }

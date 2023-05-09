@@ -18,6 +18,7 @@ public class JwtLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cookie")
     public String cookie;
+
     public JwtLocation withCookie(String cookie) {
         this.cookie = cookie;
         return this;
@@ -29,6 +30,7 @@ public class JwtLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public String header;
+
     public JwtLocation withHeader(String header) {
         this.header = header;
         return this;
@@ -40,6 +42,7 @@ public class JwtLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public JwtLocation withQuery(String query) {
         this.query = query;
         return this;
@@ -51,9 +54,11 @@ public class JwtLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valuePrefix")
     public String valuePrefix;
+
     public JwtLocation withValuePrefix(String valuePrefix) {
         this.valuePrefix = valuePrefix;
         return this;
     }
     
+    public JwtLocation(){}
 }

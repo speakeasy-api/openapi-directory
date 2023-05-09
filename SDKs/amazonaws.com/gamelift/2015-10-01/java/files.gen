@@ -632,4 +632,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateScriptInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateMatchmakingRuleSetOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValidateMatchmakingRuleSetInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

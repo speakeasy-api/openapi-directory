@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DevicelistSecurity;
 import org.openapis.openapi.models.operations.DevicelistAppTypeEnum;
 import org.openapis.openapi.models.operations.DevicelistRequest;
 import org.openapis.openapi.models.operations.DevicelistResponse;
+import org.openapis.openapi.models.operations.DevicelistSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -29,21 +28,23 @@ public class Application {
                 .build();
 
             DevicelistRequest req = new DevicelistRequest() {{
-                appType = "app_station";
+                appType = DevicelistAppTypeEnum.APP_STATION;
                 deviceId = "provident";
                 getFavorites = false;
-            }}            
+            }};            
 
             DevicelistResponse res = sdk.deprecated.devicelist(req, new DevicelistSecurity() {{
                 codeOauth = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.naDeviceListResponse.isPresent()) {
+            if (res.naDeviceListResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -51,66 +52,66 @@ public class Application {
 ## Available Resources and Operations
 
 
-### deprecated
+### [deprecated](docs/deprecated/README.md)
 
-* `devicelist` - The method devicelist returns the list of devices owned by the user, and their modules.
+* [~~devicelist~~](docs/deprecated/README.md#devicelist) - The method devicelist returns the list of devices owned by the user, and their modules.
 A device is identified by its _id (which is its mac address) and each device may have one, several or no modules, also identified by an _id.
+ :warning: **Deprecated**
+* [~~getthermstate~~](docs/deprecated/README.md#getthermstate) - The method getthermstate returns the last Thermostat measurements, its current weekly schedule, and, if present, its current manual temperature setpoint. :warning: **Deprecated**
+* [~~getuser~~](docs/deprecated/README.md#getuser) - The method getuser returns information about a user such as prefered language, prefered units, and list of devices.
+ :warning: **Deprecated**
 
-* `getthermstate` - The method getthermstate returns the last Thermostat measurements, its current weekly schedule, and, if present, its current manual temperature setpoint.
-* `getuser` - The method getuser returns information about a user such as prefered language, prefered units, and list of devices.
+### [healthyhomecoach](docs/healthyhomecoach/README.md)
 
+* [gethomecoachsdata](docs/healthyhomecoach/README.md#gethomecoachsdata) - The method gethomecoachsdata Returns data from a user Healthy Home Coach Station (measures and device specific data).
 
-### healthyhomecoach
+### [partner](docs/partner/README.md)
 
-* `gethomecoachsdata` - The method gethomecoachsdata Returns data from a user Healthy Home Coach Station (measures and device specific data).
+* [getmeasure](docs/partner/README.md#getmeasure) - The method getmeasure returns the measurements of a device or a module.
 
-### partner
+* [partnerdevices](docs/partner/README.md#partnerdevices) - The method partnerdevices returns the list of device_id to which your partner application has access to.
 
-* `getmeasure` - The method getmeasure returns the measurements of a device or a module.
+### [public_](docs/public/README.md)
 
-* `partnerdevices` - The method partnerdevices returns the list of device_id to which your partner application has access to.
+* [getmeasure](docs/public/README.md#getmeasure) - The method getmeasure returns the measurements of a device or a module.
 
-### public_
+* [getpublicdata](docs/public/README.md#getpublicdata) - Retrieves publicly shared weather data from Outdoor Modules within a predefined area.
 
-* `getmeasure` - The method getmeasure returns the measurements of a device or a module.
+### [station](docs/station/README.md)
 
-* `getpublicdata` - Retrieves publicly shared weather data from Outdoor Modules within a predefined area.
+* [getmeasure](docs/station/README.md#getmeasure) - The method getmeasure returns the measurements of a device or a module.
 
-### station
+* [getstationsdata](docs/station/README.md#getstationsdata) - The method getstationsdata Returns data from a user's Weather Stations (measures and device specific data).
 
-* `getmeasure` - The method getmeasure returns the measurements of a device or a module.
+### [thermostat](docs/thermostat/README.md)
 
-* `getstationsdata` - The method getstationsdata Returns data from a user's Weather Stations (measures and device specific data).
+* [createnewschedule](docs/thermostat/README.md#createnewschedule) - The method createnewschedule creates a new schedule stored in the backup list.
+* [getmeasure](docs/thermostat/README.md#getmeasure) - The method getmeasure returns the measurements of a device or a module.
 
-### thermostat
+* [getthermostatsdata](docs/thermostat/README.md#getthermostatsdata) - The method getthermostatsdata returns information about user's thermostats such as their last measurements.
+* [setthermpoint](docs/thermostat/README.md#setthermpoint) - The method setthermpoint changes the Thermostat manual temperature setpoint.
+* [switchschedule](docs/thermostat/README.md#switchschedule) - The method switchschedule switches the Thermostat's schedule to another existing schedule.
+* [syncschedule](docs/thermostat/README.md#syncschedule) - The method syncschedule changes the Thermostat weekly schedule.
 
-* `createnewschedule` - The method createnewschedule creates a new schedule stored in the backup list.
-* `getmeasure` - The method getmeasure returns the measurements of a device or a module.
+### [welcome](docs/welcome/README.md)
 
-* `getthermostatsdata` - The method getthermostatsdata returns information about user's thermostats such as their last measurements.
-* `setthermpoint` - The method setthermpoint changes the Thermostat manual temperature setpoint.
-* `switchschedule` - The method switchschedule switches the Thermostat's schedule to another existing schedule.
-* `syncschedule` - The method syncschedule changes the Thermostat weekly schedule.
+* [addwebhook](docs/welcome/README.md#addwebhook) - Links a callback url to a user.
 
-### welcome
+* [dropwebhook](docs/welcome/README.md#dropwebhook) - Dissociates a webhook from a user.
 
-* `addwebhook` - Links a callback url to a user.
+* [getcamerapicture](docs/welcome/README.md#getcamerapicture) - Returns the snapshot associated to an event.
 
-* `dropwebhook` - Dissociates a webhook from a user.
+* [geteventsuntil](docs/welcome/README.md#geteventsuntil) - Returns the snapshot associated to an event.
 
-* `getcamerapicture` - Returns the snapshot associated to an event.
+* [gethomedata](docs/welcome/README.md#gethomedata) - Returns information about users homes and cameras.
 
-* `geteventsuntil` - Returns the snapshot associated to an event.
+* [getlasteventof](docs/welcome/README.md#getlasteventof) - Returns most recent events.
 
-* `gethomedata` - Returns information about users homes and cameras.
+* [getnextevents](docs/welcome/README.md#getnextevents) - Returns previous events.
 
-* `getlasteventof` - Returns most recent events.
+* [setpersonsaway](docs/welcome/README.md#setpersonsaway) - Sets a person as 'Away' or the Home as 'Empty'. The event will be added to the user’s timeline.
 
-* `getnextevents` - Returns previous events.
-
-* `setpersonsaway` - Sets a person as 'Away' or the Home as 'Empty'. The event will be added to the user’s timeline.
-
-* `setpersonshome` - Sets a person as 'At home'.
+* [setpersonshome](docs/welcome/README.md#setpersonshome) - Sets a person as 'At home'.
 
 <!-- End SDK Available Operations -->
 

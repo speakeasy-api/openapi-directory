@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQuestionsUnansweredResponse {
     
     public byte[] body;
+
     public GetQuestionsUnansweredResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetQuestionsUnansweredResponse {
     
     
     public String contentType;
+
     public GetQuestionsUnansweredResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetQuestionsUnansweredResponse {
     
     
     public Integer statusCode;
+
     public GetQuestionsUnansweredResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetQuestionsUnansweredResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQuestionsUnansweredResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetQuestionsUnansweredResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

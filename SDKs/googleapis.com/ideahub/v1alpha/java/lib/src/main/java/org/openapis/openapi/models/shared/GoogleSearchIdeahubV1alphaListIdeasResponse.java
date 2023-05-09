@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1alphaListIdeasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ideas")
     public GoogleSearchIdeahubV1alphaIdea[] ideas;
+
     public GoogleSearchIdeahubV1alphaListIdeasResponse withIdeas(GoogleSearchIdeahubV1alphaIdea[] ideas) {
         this.ideas = ideas;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSearchIdeahubV1alphaListIdeasResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleSearchIdeahubV1alphaListIdeasResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleSearchIdeahubV1alphaListIdeasResponse(){}
 }

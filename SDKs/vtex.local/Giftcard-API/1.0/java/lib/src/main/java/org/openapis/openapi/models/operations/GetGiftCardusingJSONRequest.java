@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGiftCardusingJSONRequest {
@@ -12,6 +13,7 @@ public class GetGiftCardusingJSONRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetGiftCardusingJSONRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetGiftCardusingJSONRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetGiftCardusingJSONRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGiftCardusingJSONRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest getGiftCardusingJSONRequest;
+
     public GetGiftCardusingJSONRequest withGetGiftCardusingJSONRequest(org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest getGiftCardusingJSONRequest) {
         this.getGiftCardusingJSONRequest = getGiftCardusingJSONRequest;
         return this;
@@ -39,9 +43,15 @@ public class GetGiftCardusingJSONRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=REST-Range")
     public String restRange;
+
     public GetGiftCardusingJSONRequest withRESTRange(String restRange) {
         this.restRange = restRange;
         return this;
     }
     
+    public GetGiftCardusingJSONRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("GetGiftCardusingJSONRequest") org.openapis.openapi.models.shared.GetGiftCardusingJSONRequest getGiftCardusingJSONRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.getGiftCardusingJSONRequest = getGiftCardusingJSONRequest;
+  }
 }

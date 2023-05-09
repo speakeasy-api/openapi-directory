@@ -37,6 +37,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostGetPciQuestionnaire
 lib/src/main/java/org/openapis/openapi/models/operations/PostGetPciQuestionnaireUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ServiceError.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetOnboardingUrlResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/ErrorFieldTypeWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorFieldType.java
 lib/src/main/java/org/openapis/openapi/models/shared/FieldTypeFieldNameEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FieldType.java
@@ -46,4 +47,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/CollectInformation.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPciUrlRequest.java
+docs/sdk/README.md
+docs/hostedonboardingpage/README.md
+docs/pcicompliancequestionnairepage/README.md
 USAGE.md

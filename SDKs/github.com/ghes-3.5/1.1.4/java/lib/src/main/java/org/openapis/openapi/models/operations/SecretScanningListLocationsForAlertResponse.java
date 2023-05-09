@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecretScanningListLocationsForAlertResponse {
     
     public String contentType;
+
     public SecretScanningListLocationsForAlertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SecretScanningListLocationsForAlertResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public SecretScanningListLocationsForAlertResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class SecretScanningListLocationsForAlertResponse {
     
     
     public Integer statusCode;
+
     public SecretScanningListLocationsForAlertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class SecretScanningListLocationsForAlertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecretScanningListLocationsForAlertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class SecretScanningListLocationsForAlertResponse {
      */
     
     public org.openapis.openapi.models.shared.SecretScanningLocation[] secretScanningLocations;
+
     public SecretScanningListLocationsForAlertResponse withSecretScanningLocations(org.openapis.openapi.models.shared.SecretScanningLocation[] secretScanningLocations) {
         this.secretScanningLocations = secretScanningLocations;
         return this;
@@ -50,9 +56,14 @@ public class SecretScanningListLocationsForAlertResponse {
      */
     
     public SecretScanningListLocationsForAlert503ApplicationJSON secretScanningListLocationsForAlert503ApplicationJSONObject;
+
     public SecretScanningListLocationsForAlertResponse withSecretScanningListLocationsForAlert503ApplicationJSONObject(SecretScanningListLocationsForAlert503ApplicationJSON secretScanningListLocationsForAlert503ApplicationJSONObject) {
         this.secretScanningListLocationsForAlert503ApplicationJSONObject = secretScanningListLocationsForAlert503ApplicationJSONObject;
         return this;
     }
     
+    public SecretScanningListLocationsForAlertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

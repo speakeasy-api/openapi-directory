@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBodyFile;
-import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBody;
 import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequest;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBody;
+import org.openapis.openapi.models.operations.FilterFileDataStoppingsRequestBodyFile;
 import org.openapis.openapi.models.operations.FilterFileDataStoppingsResponse;
 
 public class Application {
@@ -28,24 +27,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FilterFileDataStoppingsRequest req = new FilterFileDataStoppingsRequest() {{
-                requestBody = new FilterFileDataStoppingsRequestBody() {{
-                    file = new FilterFileDataStoppingsRequestBodyFile() {{
-                        content = "corrupti".getBytes();
-                        file = "provident";
-                    }};
-                }};
-                type = "distinctio";
-            }}            
+            FilterFileDataStoppingsRequest req = new FilterFileDataStoppingsRequest(                new FilterFileDataStoppingsRequestBody() {{
+                                file = new FilterFileDataStoppingsRequestBodyFile("corrupti".getBytes(), "provident");;
+                            }};, "distinctio");            
 
             FilterFileDataStoppingsResponse res = sdk.exude.filterFileDataStoppings(req);
 
-            if (res.exudeResponseBean.isPresent()) {
+            if (res.exudeResponseBean != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -53,10 +48,10 @@ public class Application {
 ## Available Resources and Operations
 
 
-### exude
+### [exude](docs/exude/README.md)
 
-* `filterFileDataStoppings` - Filter the stopping words from the provided input file
-* `filterStoppings` - Filter the stopping words from the provided input data or links
+* [filterFileDataStoppings](docs/exude/README.md#filterfiledatastoppings) - Filter the stopping words from the provided input file
+* [filterStoppings](docs/exude/README.md#filterstoppings) - Filter the stopping words from the provided input data or links
 <!-- End SDK Available Operations -->
 
 ### Maturity

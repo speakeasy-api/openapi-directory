@@ -15,6 +15,7 @@ public class AutoscalerStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AutoscalerStatusDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -26,9 +27,11 @@ public class AutoscalerStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AutoscalerStatusDetailsTypeEnum type;
+
     public AutoscalerStatusDetails withType(AutoscalerStatusDetailsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AutoscalerStatusDetails(){}
 }

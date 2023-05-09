@@ -51,4 +51,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/PagespeedApiFormatStringV4A
 lib/src/main/java/org/openapis/openapi/models/shared/PagespeedApiFormatStringV4Args.java
 lib/src/main/java/org/openapis/openapi/models/shared/PagespeedApiFormatStringV4.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+docs/sdk/README.md
+docs/pagespeedapi/README.md
 USAGE.md

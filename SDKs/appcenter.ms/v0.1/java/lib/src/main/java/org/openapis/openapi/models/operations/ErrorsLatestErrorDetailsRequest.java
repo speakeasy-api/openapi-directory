@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsLatestErrorDetailsRequest {
@@ -12,6 +13,7 @@ public class ErrorsLatestErrorDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsLatestErrorDetailsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsLatestErrorDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsLatestErrorDetailsRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -32,9 +35,15 @@ public class ErrorsLatestErrorDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsLatestErrorDetailsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsLatestErrorDetailsRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.ownerName = ownerName;
+  }
 }

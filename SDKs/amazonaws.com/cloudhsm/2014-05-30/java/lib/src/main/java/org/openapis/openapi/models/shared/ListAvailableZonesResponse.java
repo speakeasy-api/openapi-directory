@@ -15,9 +15,11 @@ public class ListAvailableZonesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AZList")
     public String[] azList;
+
     public ListAvailableZonesResponse withAZList(String[] azList) {
         this.azList = azList;
         return this;
     }
     
+    public ListAvailableZonesResponse(){}
 }

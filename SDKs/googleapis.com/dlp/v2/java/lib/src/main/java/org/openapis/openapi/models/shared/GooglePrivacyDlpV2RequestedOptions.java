@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RequestedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobConfig")
     public GooglePrivacyDlpV2InspectJobConfig jobConfig;
+
     public GooglePrivacyDlpV2RequestedOptions withJobConfig(GooglePrivacyDlpV2InspectJobConfig jobConfig) {
         this.jobConfig = jobConfig;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2RequestedOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotInspectTemplate")
     public GooglePrivacyDlpV2InspectTemplate snapshotInspectTemplate;
+
     public GooglePrivacyDlpV2RequestedOptions withSnapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplate snapshotInspectTemplate) {
         this.snapshotInspectTemplate = snapshotInspectTemplate;
         return this;
     }
     
+    public GooglePrivacyDlpV2RequestedOptions(){}
 }

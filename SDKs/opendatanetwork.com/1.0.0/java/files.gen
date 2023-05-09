@@ -50,4 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetSuggestionsResponse.
 lib/src/main/java/org/openapis/openapi/models/operations/GetValuesForVariablesFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetValuesForVariablesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetValuesForVariablesResponse.java
+docs/sdk/README.md
 USAGE.md

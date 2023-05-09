@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ThemeSummary {
     @JsonProperty("appId")
     public String appId;
+
     public ThemeSummary withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -19,6 +20,7 @@ public class ThemeSummary {
     
     @JsonProperty("environmentName")
     public String environmentName;
+
     public ThemeSummary withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class ThemeSummary {
     
     @JsonProperty("id")
     public String id;
+
     public ThemeSummary withId(String id) {
         this.id = id;
         return this;
@@ -33,9 +36,16 @@ public class ThemeSummary {
     
     @JsonProperty("name")
     public String name;
+
     public ThemeSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ThemeSummary(@JsonProperty("appId") String appId, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.appId = appId;
+        this.environmentName = environmentName;
+        this.id = id;
+        this.name = name;
+  }
 }

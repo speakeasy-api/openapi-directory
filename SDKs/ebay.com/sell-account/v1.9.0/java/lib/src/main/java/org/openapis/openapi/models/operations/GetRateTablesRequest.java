@@ -12,9 +12,11 @@ public class GetRateTablesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_code")
     public String countryCode;
+
     public GetRateTablesRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public GetRateTablesRequest(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigureAgentResponse {
     @JsonProperty("configuration")
     public AgentConfiguration configuration;
+
     public ConfigureAgentResponse withConfiguration(AgentConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public ConfigureAgentResponse(@JsonProperty("configuration") AgentConfiguration configuration) {
+        this.configuration = configuration;
+  }
 }

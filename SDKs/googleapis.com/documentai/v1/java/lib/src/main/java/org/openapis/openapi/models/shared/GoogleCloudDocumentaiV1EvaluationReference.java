@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1EvaluationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateMetrics")
     public GoogleCloudDocumentaiV1EvaluationMetrics aggregateMetrics;
+
     public GoogleCloudDocumentaiV1EvaluationReference withAggregateMetrics(GoogleCloudDocumentaiV1EvaluationMetrics aggregateMetrics) {
         this.aggregateMetrics = aggregateMetrics;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1EvaluationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateMetricsExact")
     public GoogleCloudDocumentaiV1EvaluationMetrics aggregateMetricsExact;
+
     public GoogleCloudDocumentaiV1EvaluationReference withAggregateMetricsExact(GoogleCloudDocumentaiV1EvaluationMetrics aggregateMetricsExact) {
         this.aggregateMetricsExact = aggregateMetricsExact;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1EvaluationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluation")
     public String evaluation;
+
     public GoogleCloudDocumentaiV1EvaluationReference withEvaluation(String evaluation) {
         this.evaluation = evaluation;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1EvaluationReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public GoogleCloudDocumentaiV1EvaluationReference withOperation(String operation) {
         this.operation = operation;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1EvaluationReference(){}
 }

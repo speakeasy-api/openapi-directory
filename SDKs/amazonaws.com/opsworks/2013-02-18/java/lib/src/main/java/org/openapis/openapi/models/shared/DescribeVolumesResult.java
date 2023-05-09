@@ -15,9 +15,11 @@ public class DescribeVolumesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public Volume[] volumes;
+
     public DescribeVolumesResult withVolumes(Volume[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public DescribeVolumesResult(){}
 }

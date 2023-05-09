@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeSpotFleetRequestHistoryResponseHistoryRecords {
     
     public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation eventInformation;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecords withEventInformation(DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventInformation eventInformation) {
         this.eventInformation = eventInformation;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetRequestHistoryResponseHistoryRecords {
     
     
     public DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventTypeEnum eventType;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecords withEventType(DescribeSpotFleetRequestHistoryResponseHistoryRecordsEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSpotFleetRequestHistoryResponseHistoryRecords {
     
     
     public OffsetDateTime timestamp;
+
     public DescribeSpotFleetRequestHistoryResponseHistoryRecords withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public DescribeSpotFleetRequestHistoryResponseHistoryRecords(){}
 }

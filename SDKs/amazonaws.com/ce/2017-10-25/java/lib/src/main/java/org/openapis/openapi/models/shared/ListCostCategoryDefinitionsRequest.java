@@ -12,6 +12,7 @@ public class ListCostCategoryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveOn")
     public String effectiveOn;
+
     public ListCostCategoryDefinitionsRequest withEffectiveOn(String effectiveOn) {
         this.effectiveOn = effectiveOn;
         return this;
@@ -20,6 +21,7 @@ public class ListCostCategoryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCostCategoryDefinitionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListCostCategoryDefinitionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCostCategoryDefinitionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCostCategoryDefinitionsRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImportationProductsReportResponse {
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public GetImportationProductsReportResponse withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
@@ -25,9 +26,13 @@ public class GetImportationProductsReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productErrors")
     public ProductError[] productErrors;
+
     public GetImportationProductsReportResponse withProductErrors(ProductError[] productErrors) {
         this.productErrors = productErrors;
         return this;
     }
     
+    public GetImportationProductsReportResponse(@JsonProperty("paginationResult") BeezUPCommonPaginationResult paginationResult) {
+        this.paginationResult = paginationResult;
+  }
 }

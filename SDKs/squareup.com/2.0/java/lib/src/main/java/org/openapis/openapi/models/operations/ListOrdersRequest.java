@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrdersRequest {
@@ -13,6 +14,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
     public String batchToken;
+
     public ListOrdersRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -23,6 +25,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListOrdersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -33,6 +36,7 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public ListOrdersRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -43,9 +47,13 @@ public class ListOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public ListOrdersRequest withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public ListOrdersRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

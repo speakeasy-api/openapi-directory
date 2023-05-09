@@ -18,9 +18,11 @@ public class CommitConversionWorkspaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitName")
     public String commitName;
+
     public CommitConversionWorkspaceRequest withCommitName(String commitName) {
         this.commitName = commitName;
         return this;
     }
     
+    public CommitConversionWorkspaceRequest(){}
 }

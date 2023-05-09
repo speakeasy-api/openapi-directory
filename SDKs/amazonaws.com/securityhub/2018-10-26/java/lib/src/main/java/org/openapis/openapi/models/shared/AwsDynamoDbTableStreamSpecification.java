@@ -15,6 +15,7 @@ public class AwsDynamoDbTableStreamSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamEnabled")
     public Boolean streamEnabled;
+
     public AwsDynamoDbTableStreamSpecification withStreamEnabled(Boolean streamEnabled) {
         this.streamEnabled = streamEnabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableStreamSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamViewType")
     public String streamViewType;
+
     public AwsDynamoDbTableStreamSpecification withStreamViewType(String streamViewType) {
         this.streamViewType = streamViewType;
         return this;
     }
     
+    public AwsDynamoDbTableStreamSpecification(){}
 }

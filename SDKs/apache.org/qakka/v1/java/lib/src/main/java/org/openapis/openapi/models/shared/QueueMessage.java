@@ -18,6 +18,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public QueueMessage withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDate")
     public Long createDate;
+
     public QueueMessage withCreateDate(Long createDate) {
         this.createDate = createDate;
         return this;
@@ -40,6 +42,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public QueueMessage withData(String data) {
         this.data = data;
         return this;
@@ -51,6 +54,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public QueueMessage withHref(String href) {
         this.href = href;
         return this;
@@ -62,6 +66,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public QueueMessage withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -73,6 +78,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueMessageId")
     public String queueMessageId;
+
     public QueueMessage withQueueMessageId(String queueMessageId) {
         this.queueMessageId = queueMessageId;
         return this;
@@ -83,6 +89,7 @@ public class QueueMessage {
      */
     @JsonProperty("queueName")
     public String queueName;
+
     public QueueMessage withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -94,6 +101,7 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receivingRegion")
     public String receivingRegion;
+
     public QueueMessage withReceivingRegion(String receivingRegion) {
         this.receivingRegion = receivingRegion;
         return this;
@@ -105,9 +113,13 @@ public class QueueMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sendingRegion")
     public String sendingRegion;
+
     public QueueMessage withSendingRegion(String sendingRegion) {
         this.sendingRegion = sendingRegion;
         return this;
     }
     
+    public QueueMessage(@JsonProperty("queueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

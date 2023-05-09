@@ -15,6 +15,7 @@ public class ListAccountSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAccountSettingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListAccountSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public Setting[] settings;
+
     public ListAccountSettingsResponse withSettings(Setting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public ListAccountSettingsResponse(){}
 }

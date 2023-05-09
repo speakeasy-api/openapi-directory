@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GenerateServiceLastAccessedDetailsRequest {
     
     public String arn;
+
     public GenerateServiceLastAccessedDetailsRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,9 +17,13 @@ public class GenerateServiceLastAccessedDetailsRequest {
     
     
     public AccessAdvisorUsageGranularityTypeEnum granularity;
+
     public GenerateServiceLastAccessedDetailsRequest withGranularity(AccessAdvisorUsageGranularityTypeEnum granularity) {
         this.granularity = granularity;
         return this;
     }
     
+    public GenerateServiceLastAccessedDetailsRequest(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

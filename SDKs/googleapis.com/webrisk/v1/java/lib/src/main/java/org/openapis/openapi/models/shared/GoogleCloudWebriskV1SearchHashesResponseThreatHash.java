@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1SearchHashesResponseThreatHash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudWebriskV1SearchHashesResponseThreatHash withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudWebriskV1SearchHashesResponseThreatHash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public GoogleCloudWebriskV1SearchHashesResponseThreatHash withHash(String hash) {
         this.hash = hash;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudWebriskV1SearchHashesResponseThreatHash {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatTypes")
     public GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum[] threatTypes;
+
     public GoogleCloudWebriskV1SearchHashesResponseThreatHash withThreatTypes(GoogleCloudWebriskV1SearchHashesResponseThreatHashThreatTypesEnum[] threatTypes) {
         this.threatTypes = threatTypes;
         return this;
     }
     
+    public GoogleCloudWebriskV1SearchHashesResponseThreatHash(){}
 }

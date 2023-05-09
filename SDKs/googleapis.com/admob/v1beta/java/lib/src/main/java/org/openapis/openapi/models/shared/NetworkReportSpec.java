@@ -18,6 +18,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public NetworkReportSpec withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -29,6 +30,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilters")
     public NetworkReportSpecDimensionFilter[] dimensionFilters;
+
     public NetworkReportSpec withDimensionFilters(NetworkReportSpecDimensionFilter[] dimensionFilters) {
         this.dimensionFilters = dimensionFilters;
         return this;
@@ -40,6 +42,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public NetworkReportSpecDimensionsEnum[] dimensions;
+
     public NetworkReportSpec withDimensions(NetworkReportSpecDimensionsEnum[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -51,6 +54,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizationSettings")
     public LocalizationSettings localizationSettings;
+
     public NetworkReportSpec withLocalizationSettings(LocalizationSettings localizationSettings) {
         this.localizationSettings = localizationSettings;
         return this;
@@ -62,6 +66,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxReportRows")
     public Integer maxReportRows;
+
     public NetworkReportSpec withMaxReportRows(Integer maxReportRows) {
         this.maxReportRows = maxReportRows;
         return this;
@@ -73,6 +78,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public NetworkReportSpecMetricsEnum[] metrics;
+
     public NetworkReportSpec withMetrics(NetworkReportSpecMetricsEnum[] metrics) {
         this.metrics = metrics;
         return this;
@@ -84,6 +90,7 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortConditions")
     public NetworkReportSpecSortCondition[] sortConditions;
+
     public NetworkReportSpec withSortConditions(NetworkReportSpecSortCondition[] sortConditions) {
         this.sortConditions = sortConditions;
         return this;
@@ -95,9 +102,11 @@ public class NetworkReportSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public NetworkReportSpec withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public NetworkReportSpec(){}
 }

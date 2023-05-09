@@ -20,6 +20,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministrativeActions")
     public AdministrativeAction[] administrativeActions;
+
     public Snapshot withAdministrativeActions(AdministrativeAction[] administrativeActions) {
         this.administrativeActions = administrativeActions;
         return this;
@@ -33,6 +34,7 @@ public class Snapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Snapshot withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public SnapshotLifecycleEnum lifecycle;
+
     public Snapshot withLifecycle(SnapshotLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -52,6 +55,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleTransitionReason")
     public LifecycleTransitionReason lifecycleTransitionReason;
+
     public Snapshot withLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
         this.lifecycleTransitionReason = lifecycleTransitionReason;
         return this;
@@ -60,6 +64,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Snapshot withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +76,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public Snapshot withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -79,6 +85,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public Snapshot withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -90,6 +97,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public Snapshot withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -98,9 +106,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeId")
     public String volumeId;
+
     public Snapshot withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public Snapshot(){}
 }

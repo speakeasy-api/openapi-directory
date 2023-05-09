@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PurchaseOfferingRequest {
     @JsonProperty("offeringId")
     public String offeringId;
+
     public PurchaseOfferingRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -22,6 +23,7 @@ public class PurchaseOfferingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringPromotionId")
     public String offeringPromotionId;
+
     public PurchaseOfferingRequest withOfferingPromotionId(String offeringPromotionId) {
         this.offeringPromotionId = offeringPromotionId;
         return this;
@@ -29,9 +31,14 @@ public class PurchaseOfferingRequest {
     
     @JsonProperty("quantity")
     public Long quantity;
+
     public PurchaseOfferingRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public PurchaseOfferingRequest(@JsonProperty("offeringId") String offeringId, @JsonProperty("quantity") Long quantity) {
+        this.offeringId = offeringId;
+        this.quantity = quantity;
+  }
 }

@@ -15,6 +15,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterConditionList")
     public org.openapis.openapi.models.shared.FilterCondition[] filterConditionList;
+
     public ListResourcesRequestBody withFilterConditionList(org.openapis.openapi.models.shared.FilterCondition[] filterConditionList) {
         this.filterConditionList = filterConditionList;
         return this;
@@ -26,6 +27,7 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListResourcesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListResourcesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourcesRequestBody(){}
 }

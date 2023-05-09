@@ -15,9 +15,11 @@ public class Outline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outline")
     public String outline;
+
     public Outline withOutline(String outline) {
         this.outline = outline;
         return this;
     }
     
+    public Outline(){}
 }

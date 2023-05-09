@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDatasetSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=http,subtype=bearer,name=Authorization")
     public String bearerToken;
+
     public DeleteDatasetSecurity withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
     }
     
+    public DeleteDatasetSecurity(@JsonProperty("bearer_token") String bearerToken) {
+        this.bearerToken = bearerToken;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateLongTermPricingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLongTermPricingAutoRenew")
     public Boolean isLongTermPricingAutoRenew;
+
     public CreateLongTermPricingRequest withIsLongTermPricingAutoRenew(Boolean isLongTermPricingAutoRenew) {
         this.isLongTermPricingAutoRenew = isLongTermPricingAutoRenew;
         return this;
@@ -19,6 +20,7 @@ public class CreateLongTermPricingRequest {
     
     @JsonProperty("LongTermPricingType")
     public LongTermPricingTypeEnum longTermPricingType;
+
     public CreateLongTermPricingRequest withLongTermPricingType(LongTermPricingTypeEnum longTermPricingType) {
         this.longTermPricingType = longTermPricingType;
         return this;
@@ -27,9 +29,13 @@ public class CreateLongTermPricingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public CreateLongTermPricingRequest withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
     }
     
+    public CreateLongTermPricingRequest(@JsonProperty("LongTermPricingType") LongTermPricingTypeEnum longTermPricingType) {
+        this.longTermPricingType = longTermPricingType;
+  }
 }

@@ -15,20 +15,20 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.LocalDate;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostStoreDetailSecurity;
 import org.openapis.openapi.models.operations.PostStoreDetailResponse;
-import org.openapis.openapi.models.shared.StoreDetailRequestEntityTypeEnum;
-import org.openapis.openapi.models.shared.StoreDetailRequest;
-import org.openapis.openapi.models.shared.Name;
-import org.openapis.openapi.models.shared.RecurringContractEnum;
-import org.openapis.openapi.models.shared.RecurringTokenServiceEnum;
-import org.openapis.openapi.models.shared.Recurring;
-import org.openapis.openapi.models.shared.Card;
+import org.openapis.openapi.models.operations.PostStoreDetailSecurity;
 import org.openapis.openapi.models.shared.Address;
 import org.openapis.openapi.models.shared.BankAccount;
+import org.openapis.openapi.models.shared.Card;
+import org.openapis.openapi.models.shared.Name;
+import org.openapis.openapi.models.shared.Recurring;
+import org.openapis.openapi.models.shared.RecurringContractEnum;
+import org.openapis.openapi.models.shared.RecurringTokenServiceEnum;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.StoreDetailRequest;
+import org.openapis.openapi.models.shared.StoreDetailRequestEntityTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
@@ -36,71 +36,58 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.StoreDetailRequest req = new StoreDetailRequest() {{
+            org.openapis.openapi.models.shared.StoreDetailRequest req = new StoreDetailRequest(LocalDate.parse("2021-10-25"), StoreDetailRequestEntityTypeEnum.COMPANY, "quibusdam", "unde",                 new Recurring() {{
+                                contract = RecurringContractEnum.PAYOUT;
+                                recurringDetailName = "corrupti";
+                                tokenService = RecurringTokenServiceEnum.MCTOKENSERVICE;
+                            }};, "vel", "error") {{
                 additionalData = new java.util.HashMap<String, String>() {{
-                    put("provident", "distinctio");
-                    put("quibusdam", "unde");
-                    put("nulla", "corrupti");
+                    put("suscipit", "iure");
+                    put("magnam", "debitis");
+                    put("ipsa", "delectus");
                 }};
                 bank = new BankAccount() {{
-                    bankAccountNumber = "illum";
-                    bankCity = "vel";
-                    bankLocationId = "error";
-                    bankName = "deserunt";
-                    bic = "suscipit";
-                    countryCode = "iure";
-                    iban = "magnam";
-                    ownerName = "debitis";
-                    taxId = "ipsa";
-                }};
-                billingAddress = new Address() {{
-                    city = "Edinburg";
-                    country = "Holy See (Vatican City State)";
-                    houseNumberOrName = "molestiae";
-                    postalCode = "85453-9803";
-                    stateOrProvince = "veritatis";
-                    street = "0389 Connelly Trace";
-                }};
+                    bankAccountNumber = "tempora";
+                    bankCity = "suscipit";
+                    bankLocationId = "molestiae";
+                    bankName = "minus";
+                    bic = "placeat";
+                    countryCode = "LS";
+                    iban = "iusto";
+                    ownerName = "excepturi";
+                    taxId = "nisi";
+                }};;
+                billingAddress = new Address("recusandae", "temporibus", "ab", "quis", "veritatis") {{
+                    stateOrProvince = "deserunt";
+                }};;
                 card = new Card() {{
-                    cvc = "at";
-                    expiryMonth = "maiores";
-                    expiryYear = "molestiae";
-                    holderName = "quod";
-                    issueNumber = "quod";
-                    number = "esse";
-                    startMonth = "totam";
-                    startYear = "porro";
-                }};
-                dateOfBirth = "2022-10-06T15:49:54.663Z";
-                entityType = "Company";
-                fraudOffset = 639921;
-                merchantAccount = "occaecati";
-                nationality = "fugit";
-                recurring = new Recurring() {{
-                    contract = "RECURRING";
-                    recurringDetailName = "hic";
-                    tokenService = "MCTOKENSERVICE";
-                }};
-                selectedBrand = "totam";
-                shopperEmail = "beatae";
-                shopperName = new Name() {{
-                    firstName = "Haskell";
-                    lastName = "Krajcik";
-                }};
-                shopperReference = "modi";
-                socialSecurityNumber = "qui";
-            }}            
+                    cvc = "perferendis";
+                    expiryMonth = "ipsam";
+                    expiryYear = "repellendus";
+                    holderName = "sapiente";
+                    issueNumber = "quo";
+                    number = "odit";
+                    startMonth = "at";
+                    startYear = "at";
+                }};;
+                fraudOffset = 978619;
+                selectedBrand = "molestiae";
+                shopperName = new Name("quod", "quod");;
+                socialSecurityNumber = "esse";
+            }};            
 
             PostStoreDetailResponse res = sdk.initialization.postStoreDetail(req, new PostStoreDetailSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.storeDetailResponse.isPresent()) {
+            if (res.storeDetailResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -108,20 +95,20 @@ public class Application {
 ## Available Resources and Operations
 
 
-### initialization
+### [initialization](docs/initialization/README.md)
 
-* `postStoreDetail` - Store payout details
-* `postStoreDetailAndSubmitThirdParty` - Store details and submit a payout
-* `postSubmitThirdParty` - Submit a payout
+* [postStoreDetail](docs/initialization/README.md#poststoredetail) - Store payout details
+* [postStoreDetailAndSubmitThirdParty](docs/initialization/README.md#poststoredetailandsubmitthirdparty) - Store details and submit a payout
+* [postSubmitThirdParty](docs/initialization/README.md#postsubmitthirdparty) - Submit a payout
 
-### instantPayouts
+### [instantPayouts](docs/instantpayouts/README.md)
 
-* `postPayout` - Make an instant card payout
+* [postPayout](docs/instantpayouts/README.md#postpayout) - Make an instant card payout
 
-### reviewing
+### [reviewing](docs/reviewing/README.md)
 
-* `postConfirmThirdParty` - Confirm a payout
-* `postDeclineThirdParty` - Cancel a payout
+* [postConfirmThirdParty](docs/reviewing/README.md#postconfirmthirdparty) - Confirm a payout
+* [postDeclineThirdParty](docs/reviewing/README.md#postdeclinethirdparty) - Cancel a payout
 <!-- End SDK Available Operations -->
 
 ### Maturity

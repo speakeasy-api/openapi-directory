@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PurchaseScheduledInstancesResult {
     
     public PurchaseScheduledInstancesResultScheduledInstanceSet[] scheduledInstanceSet;
+
     public PurchaseScheduledInstancesResult withScheduledInstanceSet(PurchaseScheduledInstancesResultScheduledInstanceSet[] scheduledInstanceSet) {
         this.scheduledInstanceSet = scheduledInstanceSet;
         return this;
     }
     
+    public PurchaseScheduledInstancesResult(){}
 }

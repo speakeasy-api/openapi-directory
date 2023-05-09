@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETListTypesFilters {
     @SpeakeasyMetadata("queryParam:name=Category")
     public org.openapis.openapi.models.shared.CategoryEnum category;
+
     public GETListTypesFilters withCategory(org.openapis.openapi.models.shared.CategoryEnum category) {
         this.category = category;
         return this;
@@ -19,6 +20,7 @@ public class GETListTypesFilters {
     
     @SpeakeasyMetadata("queryParam:name=PublisherId")
     public String publisherId;
+
     public GETListTypesFilters withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -26,9 +28,11 @@ public class GETListTypesFilters {
     
     @SpeakeasyMetadata("queryParam:name=TypeNamePrefix")
     public String typeNamePrefix;
+
     public GETListTypesFilters withTypeNamePrefix(String typeNamePrefix) {
         this.typeNamePrefix = typeNamePrefix;
         return this;
     }
     
+    public GETListTypesFilters(){}
 }

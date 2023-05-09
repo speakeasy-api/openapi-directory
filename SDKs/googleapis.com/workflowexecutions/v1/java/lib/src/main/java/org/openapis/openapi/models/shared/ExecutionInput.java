@@ -18,6 +18,7 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argument")
     public String argument;
+
     public ExecutionInput withArgument(String argument) {
         this.argument = argument;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callLogLevel")
     public ExecutionCallLogLevelEnum callLogLevel;
+
     public ExecutionInput withCallLogLevel(ExecutionCallLogLevelEnum callLogLevel) {
         this.callLogLevel = callLogLevel;
         return this;
@@ -40,6 +42,7 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public ExecutionInput withError(Error error) {
         this.error = error;
         return this;
@@ -51,8 +54,21 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ExecutionInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
+        return this;
+    }
+    
+    /**
+     * Describes an error related to the current state of the Execution resource.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("stateError")
+    public StateError stateError;
+
+    public ExecutionInput withStateError(StateError stateError) {
+        this.stateError = stateError;
         return this;
     }
     
@@ -62,9 +78,11 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public ExecutionInput withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public ExecutionInput(){}
 }

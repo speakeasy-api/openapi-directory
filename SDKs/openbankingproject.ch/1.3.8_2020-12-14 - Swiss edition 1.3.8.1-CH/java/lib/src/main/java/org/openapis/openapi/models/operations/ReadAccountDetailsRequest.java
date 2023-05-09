@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReadAccountDetailsRequest {
@@ -13,6 +14,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public ReadAccountDetailsRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -23,6 +25,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public ReadAccountDetailsRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -34,6 +37,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public ReadAccountDetailsRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -45,6 +49,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public ReadAccountDetailsRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -56,6 +61,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public ReadAccountDetailsRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -67,6 +73,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public ReadAccountDetailsRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -80,6 +87,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public ReadAccountDetailsRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -91,6 +99,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public ReadAccountDetailsRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -108,6 +117,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public ReadAccountDetailsRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -121,6 +131,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public ReadAccountDetailsRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -132,6 +143,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public ReadAccountDetailsRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -143,6 +155,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public ReadAccountDetailsRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -154,6 +167,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public ReadAccountDetailsRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -166,6 +180,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public ReadAccountDetailsRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -176,6 +191,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public ReadAccountDetailsRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -190,6 +206,7 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=account-id")
     public String accountId;
+
     public ReadAccountDetailsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -203,9 +220,15 @@ public class ReadAccountDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=withBalance")
     public Boolean withBalance;
+
     public ReadAccountDetailsRequest withWithBalance(Boolean withBalance) {
         this.withBalance = withBalance;
         return this;
     }
     
+    public ReadAccountDetailsRequest(@JsonProperty("Consent-ID") String consentID, @JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("account-id") String accountId) {
+        this.consentID = consentID;
+        this.xRequestID = xRequestID;
+        this.accountId = accountId;
+  }
 }

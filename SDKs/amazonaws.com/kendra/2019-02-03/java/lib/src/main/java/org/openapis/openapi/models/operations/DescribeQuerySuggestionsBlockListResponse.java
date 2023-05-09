@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeQuerySuggestionsBlockListResponse {
@@ -12,6 +13,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeQuerySuggestionsBlockListResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     
     
     public String contentType;
+
     public DescribeQuerySuggestionsBlockListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeQuerySuggestionsBlockListResponse describeQuerySuggestionsBlockListResponse;
+
     public DescribeQuerySuggestionsBlockListResponse withDescribeQuerySuggestionsBlockListResponse(org.openapis.openapi.models.shared.DescribeQuerySuggestionsBlockListResponse describeQuerySuggestionsBlockListResponse) {
         this.describeQuerySuggestionsBlockListResponse = describeQuerySuggestionsBlockListResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public Object internalServerException;
+
     public DescribeQuerySuggestionsBlockListResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeQuerySuggestionsBlockListResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     
     
     public Integer statusCode;
+
     public DescribeQuerySuggestionsBlockListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeQuerySuggestionsBlockListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public Object throttlingException;
+
     public DescribeQuerySuggestionsBlockListResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeQuerySuggestionsBlockListResponse {
      */
     
     public Object validationException;
+
     public DescribeQuerySuggestionsBlockListResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeQuerySuggestionsBlockListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregate_amount_personal_contributions_general")
     public Double aggregateAmountPersonalContributionsGeneral;
+
     public CommitteeReports withAggregateAmountPersonalContributionsGeneral(Double aggregateAmountPersonalContributionsGeneral) {
         this.aggregateAmountPersonalContributionsGeneral = aggregateAmountPersonalContributionsGeneral;
         return this;
@@ -27,6 +28,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregate_contributions_personal_funds_primary")
     public Double aggregateContributionsPersonalFundsPrimary;
+
     public CommitteeReports withAggregateContributionsPersonalFundsPrimary(Double aggregateContributionsPersonalFundsPrimary) {
         this.aggregateContributionsPersonalFundsPrimary = aggregateContributionsPersonalFundsPrimary;
         return this;
@@ -35,6 +37,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_loans_received_period")
     public Double allLoansReceivedPeriod;
+
     public CommitteeReports withAllLoansReceivedPeriod(Double allLoansReceivedPeriod) {
         this.allLoansReceivedPeriod = allLoansReceivedPeriod;
         return this;
@@ -43,6 +46,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_loans_received_ytd")
     public Double allLoansReceivedYtd;
+
     public CommitteeReports withAllLoansReceivedYtd(Double allLoansReceivedYtd) {
         this.allLoansReceivedYtd = allLoansReceivedYtd;
         return this;
@@ -51,6 +55,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_other_loans_period")
     public Double allOtherLoansPeriod;
+
     public CommitteeReports withAllOtherLoansPeriod(Double allOtherLoansPeriod) {
         this.allOtherLoansPeriod = allOtherLoansPeriod;
         return this;
@@ -59,6 +64,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_other_loans_ytd")
     public Double allOtherLoansYtd;
+
     public CommitteeReports withAllOtherLoansYtd(Double allOtherLoansYtd) {
         this.allOtherLoansYtd = allOtherLoansYtd;
         return this;
@@ -67,6 +73,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocated_federal_election_levin_share_period")
     public Double allocatedFederalElectionLevinSharePeriod;
+
     public CommitteeReports withAllocatedFederalElectionLevinSharePeriod(Double allocatedFederalElectionLevinSharePeriod) {
         this.allocatedFederalElectionLevinSharePeriod = allocatedFederalElectionLevinSharePeriod;
         return this;
@@ -80,6 +87,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_chain")
     public Double[] amendmentChain;
+
     public CommitteeReports withAmendmentChain(Double[] amendmentChain) {
         this.amendmentChain = amendmentChain;
         return this;
@@ -88,6 +96,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_indicator")
     public String amendmentIndicator;
+
     public CommitteeReports withAmendmentIndicator(String amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -96,6 +105,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amendment_indicator_full")
     public String amendmentIndicatorFull;
+
     public CommitteeReports withAmendmentIndicatorFull(String amendmentIndicatorFull) {
         this.amendmentIndicatorFull = amendmentIndicatorFull;
         return this;
@@ -104,6 +114,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginning_image_number")
     public String beginningImageNumber;
+
     public CommitteeReports withBeginningImageNumber(String beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -112,6 +123,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_ytd")
     public Integer calendarYtd;
+
     public CommitteeReports withCalendarYtd(Integer calendarYtd) {
         this.calendarYtd = calendarYtd;
         return this;
@@ -120,6 +132,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_contribution_period")
     public Double candidateContributionPeriod;
+
     public CommitteeReports withCandidateContributionPeriod(Double candidateContributionPeriod) {
         this.candidateContributionPeriod = candidateContributionPeriod;
         return this;
@@ -128,6 +141,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_contribution_ytd")
     public Double candidateContributionYtd;
+
     public CommitteeReports withCandidateContributionYtd(Double candidateContributionYtd) {
         this.candidateContributionYtd = candidateContributionYtd;
         return this;
@@ -136,6 +150,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_on_hand_beginning_calendar_ytd")
     public Double cashOnHandBeginningCalendarYtd;
+
     public CommitteeReports withCashOnHandBeginningCalendarYtd(Double cashOnHandBeginningCalendarYtd) {
         this.cashOnHandBeginningCalendarYtd = cashOnHandBeginningCalendarYtd;
         return this;
@@ -147,6 +162,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_on_hand_beginning_period")
     public Double cashOnHandBeginningPeriod;
+
     public CommitteeReports withCashOnHandBeginningPeriod(Double cashOnHandBeginningPeriod) {
         this.cashOnHandBeginningPeriod = cashOnHandBeginningPeriod;
         return this;
@@ -155,6 +171,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_on_hand_close_ytd")
     public Double cashOnHandCloseYtd;
+
     public CommitteeReports withCashOnHandCloseYtd(Double cashOnHandCloseYtd) {
         this.cashOnHandCloseYtd = cashOnHandCloseYtd;
         return this;
@@ -166,6 +183,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cash_on_hand_end_period")
     public Double cashOnHandEndPeriod;
+
     public CommitteeReports withCashOnHandEndPeriod(Double cashOnHandEndPeriod) {
         this.cashOnHandEndPeriod = cashOnHandEndPeriod;
         return this;
@@ -178,6 +196,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public CommitteeReports withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -189,6 +208,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_name")
     public String committeeName;
+
     public CommitteeReports withCommitteeName(String committeeName) {
         this.committeeName = committeeName;
         return this;
@@ -197,6 +217,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_type")
     public String committeeType;
+
     public CommitteeReports withCommitteeType(String committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -205,6 +226,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinated_expenditures_by_party_committee_period")
     public Double coordinatedExpendituresByPartyCommitteePeriod;
+
     public CommitteeReports withCoordinatedExpendituresByPartyCommitteePeriod(Double coordinatedExpendituresByPartyCommitteePeriod) {
         this.coordinatedExpendituresByPartyCommitteePeriod = coordinatedExpendituresByPartyCommitteePeriod;
         return this;
@@ -213,6 +235,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coordinated_expenditures_by_party_committee_ytd")
     public Double coordinatedExpendituresByPartyCommitteeYtd;
+
     public CommitteeReports withCoordinatedExpendituresByPartyCommitteeYtd(Double coordinatedExpendituresByPartyCommitteeYtd) {
         this.coordinatedExpendituresByPartyCommitteeYtd = coordinatedExpendituresByPartyCommitteeYtd;
         return this;
@@ -226,6 +249,7 @@ public class CommitteeReports {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("coverage_end_date")
     public OffsetDateTime coverageEndDate;
+
     public CommitteeReports withCoverageEndDate(OffsetDateTime coverageEndDate) {
         this.coverageEndDate = coverageEndDate;
         return this;
@@ -239,6 +263,7 @@ public class CommitteeReports {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("coverage_start_date")
     public OffsetDateTime coverageStartDate;
+
     public CommitteeReports withCoverageStartDate(OffsetDateTime coverageStartDate) {
         this.coverageStartDate = coverageStartDate;
         return this;
@@ -247,6 +272,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csv_url")
     public String csvUrl;
+
     public CommitteeReports withCsvUrl(String csvUrl) {
         this.csvUrl = csvUrl;
         return this;
@@ -263,6 +289,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public CommitteeReports withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -274,6 +301,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debts_owed_by_committee")
     public Double debtsOwedByCommittee;
+
     public CommitteeReports withDebtsOwedByCommittee(Double debtsOwedByCommittee) {
         this.debtsOwedByCommittee = debtsOwedByCommittee;
         return this;
@@ -285,6 +313,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debts_owed_to_committee")
     public Double debtsOwedToCommittee;
+
     public CommitteeReports withDebtsOwedToCommittee(Double debtsOwedToCommittee) {
         this.debtsOwedToCommittee = debtsOwedToCommittee;
         return this;
@@ -293,6 +322,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_description")
     public String documentDescription;
+
     public CommitteeReports withDocumentDescription(String documentDescription) {
         this.documentDescription = documentDescription;
         return this;
@@ -301,6 +331,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_image_number")
     public String endImageNumber;
+
     public CommitteeReports withEndImageNumber(String endImageNumber) {
         this.endImageNumber = endImageNumber;
         return this;
@@ -309,6 +340,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exempt_legal_accounting_disbursement_period")
     public Double exemptLegalAccountingDisbursementPeriod;
+
     public CommitteeReports withExemptLegalAccountingDisbursementPeriod(Double exemptLegalAccountingDisbursementPeriod) {
         this.exemptLegalAccountingDisbursementPeriod = exemptLegalAccountingDisbursementPeriod;
         return this;
@@ -317,6 +349,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exempt_legal_accounting_disbursement_ytd")
     public Double exemptLegalAccountingDisbursementYtd;
+
     public CommitteeReports withExemptLegalAccountingDisbursementYtd(Double exemptLegalAccountingDisbursementYtd) {
         this.exemptLegalAccountingDisbursementYtd = exemptLegalAccountingDisbursementYtd;
         return this;
@@ -325,6 +358,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expenditure_subject_to_limits")
     public Double expenditureSubjectToLimits;
+
     public CommitteeReports withExpenditureSubjectToLimits(Double expenditureSubjectToLimits) {
         this.expenditureSubjectToLimits = expenditureSubjectToLimits;
         return this;
@@ -333,6 +367,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fec_file_id")
     public String fecFileId;
+
     public CommitteeReports withFecFileId(String fecFileId) {
         this.fecFileId = fecFileId;
         return this;
@@ -341,6 +376,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fec_url")
     public String fecUrl;
+
     public CommitteeReports withFecUrl(String fecUrl) {
         this.fecUrl = fecUrl;
         return this;
@@ -349,6 +385,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fed_candidate_committee_contribution_refunds_ytd")
     public Double fedCandidateCommitteeContributionRefundsYtd;
+
     public CommitteeReports withFedCandidateCommitteeContributionRefundsYtd(Double fedCandidateCommitteeContributionRefundsYtd) {
         this.fedCandidateCommitteeContributionRefundsYtd = fedCandidateCommitteeContributionRefundsYtd;
         return this;
@@ -357,6 +394,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fed_candidate_committee_contributions_period")
     public Double fedCandidateCommitteeContributionsPeriod;
+
     public CommitteeReports withFedCandidateCommitteeContributionsPeriod(Double fedCandidateCommitteeContributionsPeriod) {
         this.fedCandidateCommitteeContributionsPeriod = fedCandidateCommitteeContributionsPeriod;
         return this;
@@ -365,6 +403,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fed_candidate_committee_contributions_ytd")
     public Double fedCandidateCommitteeContributionsYtd;
+
     public CommitteeReports withFedCandidateCommitteeContributionsYtd(Double fedCandidateCommitteeContributionsYtd) {
         this.fedCandidateCommitteeContributionsYtd = fedCandidateCommitteeContributionsYtd;
         return this;
@@ -373,6 +412,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fed_candidate_contribution_refunds_period")
     public Double fedCandidateContributionRefundsPeriod;
+
     public CommitteeReports withFedCandidateContributionRefundsPeriod(Double fedCandidateContributionRefundsPeriod) {
         this.fedCandidateContributionRefundsPeriod = fedCandidateContributionRefundsPeriod;
         return this;
@@ -381,6 +421,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federal_funds_period")
     public Double federalFundsPeriod;
+
     public CommitteeReports withFederalFundsPeriod(Double federalFundsPeriod) {
         this.federalFundsPeriod = federalFundsPeriod;
         return this;
@@ -389,6 +430,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federal_funds_ytd")
     public Double federalFundsYtd;
+
     public CommitteeReports withFederalFundsYtd(Double federalFundsYtd) {
         this.federalFundsYtd = federalFundsYtd;
         return this;
@@ -397,6 +439,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_number")
     public Integer fileNumber;
+
     public CommitteeReports withFileNumber(Integer fileNumber) {
         this.fileNumber = fileNumber;
         return this;
@@ -405,6 +448,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundraising_disbursements_period")
     public Double fundraisingDisbursementsPeriod;
+
     public CommitteeReports withFundraisingDisbursementsPeriod(Double fundraisingDisbursementsPeriod) {
         this.fundraisingDisbursementsPeriod = fundraisingDisbursementsPeriod;
         return this;
@@ -413,6 +457,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fundraising_disbursements_ytd")
     public Double fundraisingDisbursementsYtd;
+
     public CommitteeReports withFundraisingDisbursementsYtd(Double fundraisingDisbursementsYtd) {
         this.fundraisingDisbursementsYtd = fundraisingDisbursementsYtd;
         return this;
@@ -421,6 +466,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_receipt_authorized_committee_general")
     public Double grossReceiptAuthorizedCommitteeGeneral;
+
     public CommitteeReports withGrossReceiptAuthorizedCommitteeGeneral(Double grossReceiptAuthorizedCommitteeGeneral) {
         this.grossReceiptAuthorizedCommitteeGeneral = grossReceiptAuthorizedCommitteeGeneral;
         return this;
@@ -429,6 +475,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_receipt_authorized_committee_primary")
     public Double grossReceiptAuthorizedCommitteePrimary;
+
     public CommitteeReports withGrossReceiptAuthorizedCommitteePrimary(Double grossReceiptAuthorizedCommitteePrimary) {
         this.grossReceiptAuthorizedCommitteePrimary = grossReceiptAuthorizedCommitteePrimary;
         return this;
@@ -437,6 +484,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_receipt_minus_personal_contribution_general")
     public Double grossReceiptMinusPersonalContributionGeneral;
+
     public CommitteeReports withGrossReceiptMinusPersonalContributionGeneral(Double grossReceiptMinusPersonalContributionGeneral) {
         this.grossReceiptMinusPersonalContributionGeneral = grossReceiptMinusPersonalContributionGeneral;
         return this;
@@ -445,6 +493,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_receipt_minus_personal_contributions_primary")
     public Double grossReceiptMinusPersonalContributionsPrimary;
+
     public CommitteeReports withGrossReceiptMinusPersonalContributionsPrimary(Double grossReceiptMinusPersonalContributionsPrimary) {
         this.grossReceiptMinusPersonalContributionsPrimary = grossReceiptMinusPersonalContributionsPrimary;
         return this;
@@ -457,6 +506,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public CommitteeReports withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -465,6 +515,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("independent_contributions_period")
     public Double independentContributionsPeriod;
+
     public CommitteeReports withIndependentContributionsPeriod(Double independentContributionsPeriod) {
         this.independentContributionsPeriod = independentContributionsPeriod;
         return this;
@@ -473,6 +524,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("independent_expenditures_period")
     public Double independentExpendituresPeriod;
+
     public CommitteeReports withIndependentExpendituresPeriod(Double independentExpendituresPeriod) {
         this.independentExpendituresPeriod = independentExpendituresPeriod;
         return this;
@@ -481,6 +533,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("independent_expenditures_ytd")
     public Double independentExpendituresYtd;
+
     public CommitteeReports withIndependentExpendituresYtd(Double independentExpendituresYtd) {
         this.independentExpendituresYtd = independentExpendituresYtd;
         return this;
@@ -492,6 +545,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual_itemized_contributions_period")
     public Double individualItemizedContributionsPeriod;
+
     public CommitteeReports withIndividualItemizedContributionsPeriod(Double individualItemizedContributionsPeriod) {
         this.individualItemizedContributionsPeriod = individualItemizedContributionsPeriod;
         return this;
@@ -503,6 +557,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual_itemized_contributions_ytd")
     public Double individualItemizedContributionsYtd;
+
     public CommitteeReports withIndividualItemizedContributionsYtd(Double individualItemizedContributionsYtd) {
         this.individualItemizedContributionsYtd = individualItemizedContributionsYtd;
         return this;
@@ -514,6 +569,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual_unitemized_contributions_period")
     public Double individualUnitemizedContributionsPeriod;
+
     public CommitteeReports withIndividualUnitemizedContributionsPeriod(Double individualUnitemizedContributionsPeriod) {
         this.individualUnitemizedContributionsPeriod = individualUnitemizedContributionsPeriod;
         return this;
@@ -525,6 +581,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individual_unitemized_contributions_ytd")
     public Double individualUnitemizedContributionsYtd;
+
     public CommitteeReports withIndividualUnitemizedContributionsYtd(Double individualUnitemizedContributionsYtd) {
         this.individualUnitemizedContributionsYtd = individualUnitemizedContributionsYtd;
         return this;
@@ -537,6 +594,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_amended")
     public Boolean isAmended;
+
     public CommitteeReports withIsAmended(Boolean isAmended) {
         this.isAmended = isAmended;
         return this;
@@ -545,6 +603,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items_on_hand_liquidated")
     public Double itemsOnHandLiquidated;
+
     public CommitteeReports withItemsOnHandLiquidated(Double itemsOnHandLiquidated) {
         this.itemsOnHandLiquidated = itemsOnHandLiquidated;
         return this;
@@ -553,6 +612,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_candidate_loans_period")
     public Double loanRepaymentsCandidateLoansPeriod;
+
     public CommitteeReports withLoanRepaymentsCandidateLoansPeriod(Double loanRepaymentsCandidateLoansPeriod) {
         this.loanRepaymentsCandidateLoansPeriod = loanRepaymentsCandidateLoansPeriod;
         return this;
@@ -561,6 +621,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_candidate_loans_ytd")
     public Double loanRepaymentsCandidateLoansYtd;
+
     public CommitteeReports withLoanRepaymentsCandidateLoansYtd(Double loanRepaymentsCandidateLoansYtd) {
         this.loanRepaymentsCandidateLoansYtd = loanRepaymentsCandidateLoansYtd;
         return this;
@@ -569,6 +630,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_made_period")
     public Double loanRepaymentsMadePeriod;
+
     public CommitteeReports withLoanRepaymentsMadePeriod(Double loanRepaymentsMadePeriod) {
         this.loanRepaymentsMadePeriod = loanRepaymentsMadePeriod;
         return this;
@@ -577,6 +639,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_made_ytd")
     public Double loanRepaymentsMadeYtd;
+
     public CommitteeReports withLoanRepaymentsMadeYtd(Double loanRepaymentsMadeYtd) {
         this.loanRepaymentsMadeYtd = loanRepaymentsMadeYtd;
         return this;
@@ -585,6 +648,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_other_loans_period")
     public Double loanRepaymentsOtherLoansPeriod;
+
     public CommitteeReports withLoanRepaymentsOtherLoansPeriod(Double loanRepaymentsOtherLoansPeriod) {
         this.loanRepaymentsOtherLoansPeriod = loanRepaymentsOtherLoansPeriod;
         return this;
@@ -593,6 +657,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_other_loans_ytd")
     public Double loanRepaymentsOtherLoansYtd;
+
     public CommitteeReports withLoanRepaymentsOtherLoansYtd(Double loanRepaymentsOtherLoansYtd) {
         this.loanRepaymentsOtherLoansYtd = loanRepaymentsOtherLoansYtd;
         return this;
@@ -601,6 +666,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_received_period")
     public Double loanRepaymentsReceivedPeriod;
+
     public CommitteeReports withLoanRepaymentsReceivedPeriod(Double loanRepaymentsReceivedPeriod) {
         this.loanRepaymentsReceivedPeriod = loanRepaymentsReceivedPeriod;
         return this;
@@ -609,6 +675,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loan_repayments_received_ytd")
     public Double loanRepaymentsReceivedYtd;
+
     public CommitteeReports withLoanRepaymentsReceivedYtd(Double loanRepaymentsReceivedYtd) {
         this.loanRepaymentsReceivedYtd = loanRepaymentsReceivedYtd;
         return this;
@@ -617,6 +684,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_made_by_candidate_period")
     public Double loansMadeByCandidatePeriod;
+
     public CommitteeReports withLoansMadeByCandidatePeriod(Double loansMadeByCandidatePeriod) {
         this.loansMadeByCandidatePeriod = loansMadeByCandidatePeriod;
         return this;
@@ -625,6 +693,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_made_by_candidate_ytd")
     public Double loansMadeByCandidateYtd;
+
     public CommitteeReports withLoansMadeByCandidateYtd(Double loansMadeByCandidateYtd) {
         this.loansMadeByCandidateYtd = loansMadeByCandidateYtd;
         return this;
@@ -633,6 +702,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_made_period")
     public Double loansMadePeriod;
+
     public CommitteeReports withLoansMadePeriod(Double loansMadePeriod) {
         this.loansMadePeriod = loansMadePeriod;
         return this;
@@ -641,6 +711,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_made_ytd")
     public Double loansMadeYtd;
+
     public CommitteeReports withLoansMadeYtd(Double loansMadeYtd) {
         this.loansMadeYtd = loansMadeYtd;
         return this;
@@ -649,6 +720,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_received_from_candidate_period")
     public Double loansReceivedFromCandidatePeriod;
+
     public CommitteeReports withLoansReceivedFromCandidatePeriod(Double loansReceivedFromCandidatePeriod) {
         this.loansReceivedFromCandidatePeriod = loansReceivedFromCandidatePeriod;
         return this;
@@ -657,6 +729,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loans_received_from_candidate_ytd")
     public Double loansReceivedFromCandidateYtd;
+
     public CommitteeReports withLoansReceivedFromCandidateYtd(Double loansReceivedFromCandidateYtd) {
         this.loansReceivedFromCandidateYtd = loansReceivedFromCandidateYtd;
         return this;
@@ -668,6 +741,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("means_filed")
     public String meansFiled;
+
     public CommitteeReports withMeansFiled(String meansFiled) {
         this.meansFiled = meansFiled;
         return this;
@@ -680,6 +754,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("most_recent")
     public Boolean mostRecent;
+
     public CommitteeReports withMostRecent(Boolean mostRecent) {
         this.mostRecent = mostRecent;
         return this;
@@ -688,6 +763,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("most_recent_file_number")
     public Double mostRecentFileNumber;
+
     public CommitteeReports withMostRecentFileNumber(Double mostRecentFileNumber) {
         this.mostRecentFileNumber = mostRecentFileNumber;
         return this;
@@ -696,6 +772,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_contributions_cycle_to_date")
     public Double netContributionsCycleToDate;
+
     public CommitteeReports withNetContributionsCycleToDate(Double netContributionsCycleToDate) {
         this.netContributionsCycleToDate = netContributionsCycleToDate;
         return this;
@@ -704,6 +781,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_contributions_period")
     public Double netContributionsPeriod;
+
     public CommitteeReports withNetContributionsPeriod(Double netContributionsPeriod) {
         this.netContributionsPeriod = netContributionsPeriod;
         return this;
@@ -712,6 +790,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_contributions_ytd")
     public Double netContributionsYtd;
+
     public CommitteeReports withNetContributionsYtd(Double netContributionsYtd) {
         this.netContributionsYtd = netContributionsYtd;
         return this;
@@ -720,6 +799,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_operating_expenditures_cycle_to_date")
     public Double netOperatingExpendituresCycleToDate;
+
     public CommitteeReports withNetOperatingExpendituresCycleToDate(Double netOperatingExpendituresCycleToDate) {
         this.netOperatingExpendituresCycleToDate = netOperatingExpendituresCycleToDate;
         return this;
@@ -728,6 +808,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_operating_expenditures_period")
     public Double netOperatingExpendituresPeriod;
+
     public CommitteeReports withNetOperatingExpendituresPeriod(Double netOperatingExpendituresPeriod) {
         this.netOperatingExpendituresPeriod = netOperatingExpendituresPeriod;
         return this;
@@ -736,6 +817,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_operating_expenditures_ytd")
     public Double netOperatingExpendituresYtd;
+
     public CommitteeReports withNetOperatingExpendituresYtd(Double netOperatingExpendituresYtd) {
         this.netOperatingExpendituresYtd = netOperatingExpendituresYtd;
         return this;
@@ -744,6 +826,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_allocated_fed_election_activity_period")
     public Double nonAllocatedFedElectionActivityPeriod;
+
     public CommitteeReports withNonAllocatedFedElectionActivityPeriod(Double nonAllocatedFedElectionActivityPeriod) {
         this.nonAllocatedFedElectionActivityPeriod = nonAllocatedFedElectionActivityPeriod;
         return this;
@@ -752,6 +835,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("non_allocated_fed_election_activity_ytd")
     public Double nonAllocatedFedElectionActivityYtd;
+
     public CommitteeReports withNonAllocatedFedElectionActivityYtd(Double nonAllocatedFedElectionActivityYtd) {
         this.nonAllocatedFedElectionActivityYtd = nonAllocatedFedElectionActivityYtd;
         return this;
@@ -760,6 +844,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonfed_share_allocated_disbursements_period")
     public Double nonfedShareAllocatedDisbursementsPeriod;
+
     public CommitteeReports withNonfedShareAllocatedDisbursementsPeriod(Double nonfedShareAllocatedDisbursementsPeriod) {
         this.nonfedShareAllocatedDisbursementsPeriod = nonfedShareAllocatedDisbursementsPeriod;
         return this;
@@ -768,6 +853,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_fundraising_expenditures_period")
     public Double offsetsToFundraisingExpendituresPeriod;
+
     public CommitteeReports withOffsetsToFundraisingExpendituresPeriod(Double offsetsToFundraisingExpendituresPeriod) {
         this.offsetsToFundraisingExpendituresPeriod = offsetsToFundraisingExpendituresPeriod;
         return this;
@@ -776,6 +862,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_fundraising_expenditures_ytd")
     public Double offsetsToFundraisingExpendituresYtd;
+
     public CommitteeReports withOffsetsToFundraisingExpendituresYtd(Double offsetsToFundraisingExpendituresYtd) {
         this.offsetsToFundraisingExpendituresYtd = offsetsToFundraisingExpendituresYtd;
         return this;
@@ -784,6 +871,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_legal_accounting_period")
     public Double offsetsToLegalAccountingPeriod;
+
     public CommitteeReports withOffsetsToLegalAccountingPeriod(Double offsetsToLegalAccountingPeriod) {
         this.offsetsToLegalAccountingPeriod = offsetsToLegalAccountingPeriod;
         return this;
@@ -792,6 +880,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_legal_accounting_ytd")
     public Double offsetsToLegalAccountingYtd;
+
     public CommitteeReports withOffsetsToLegalAccountingYtd(Double offsetsToLegalAccountingYtd) {
         this.offsetsToLegalAccountingYtd = offsetsToLegalAccountingYtd;
         return this;
@@ -803,6 +892,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_operating_expenditures_period")
     public Double offsetsToOperatingExpendituresPeriod;
+
     public CommitteeReports withOffsetsToOperatingExpendituresPeriod(Double offsetsToOperatingExpendituresPeriod) {
         this.offsetsToOperatingExpendituresPeriod = offsetsToOperatingExpendituresPeriod;
         return this;
@@ -814,6 +904,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsets_to_operating_expenditures_ytd")
     public Double offsetsToOperatingExpendituresYtd;
+
     public CommitteeReports withOffsetsToOperatingExpendituresYtd(Double offsetsToOperatingExpendituresYtd) {
         this.offsetsToOperatingExpendituresYtd = offsetsToOperatingExpendituresYtd;
         return this;
@@ -822,6 +913,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operating_expenditures_period")
     public Double operatingExpendituresPeriod;
+
     public CommitteeReports withOperatingExpendituresPeriod(Double operatingExpendituresPeriod) {
         this.operatingExpendituresPeriod = operatingExpendituresPeriod;
         return this;
@@ -830,6 +922,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operating_expenditures_ytd")
     public Double operatingExpendituresYtd;
+
     public CommitteeReports withOperatingExpendituresYtd(Double operatingExpendituresYtd) {
         this.operatingExpendituresYtd = operatingExpendituresYtd;
         return this;
@@ -841,6 +934,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_disbursements_period")
     public Double otherDisbursementsPeriod;
+
     public CommitteeReports withOtherDisbursementsPeriod(Double otherDisbursementsPeriod) {
         this.otherDisbursementsPeriod = otherDisbursementsPeriod;
         return this;
@@ -852,6 +946,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_disbursements_ytd")
     public Double otherDisbursementsYtd;
+
     public CommitteeReports withOtherDisbursementsYtd(Double otherDisbursementsYtd) {
         this.otherDisbursementsYtd = otherDisbursementsYtd;
         return this;
@@ -860,6 +955,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_fed_operating_expenditures_period")
     public Double otherFedOperatingExpendituresPeriod;
+
     public CommitteeReports withOtherFedOperatingExpendituresPeriod(Double otherFedOperatingExpendituresPeriod) {
         this.otherFedOperatingExpendituresPeriod = otherFedOperatingExpendituresPeriod;
         return this;
@@ -868,6 +964,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_fed_operating_expenditures_ytd")
     public Double otherFedOperatingExpendituresYtd;
+
     public CommitteeReports withOtherFedOperatingExpendituresYtd(Double otherFedOperatingExpendituresYtd) {
         this.otherFedOperatingExpendituresYtd = otherFedOperatingExpendituresYtd;
         return this;
@@ -876,6 +973,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_fed_receipts_period")
     public Double otherFedReceiptsPeriod;
+
     public CommitteeReports withOtherFedReceiptsPeriod(Double otherFedReceiptsPeriod) {
         this.otherFedReceiptsPeriod = otherFedReceiptsPeriod;
         return this;
@@ -884,6 +982,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_fed_receipts_ytd")
     public Double otherFedReceiptsYtd;
+
     public CommitteeReports withOtherFedReceiptsYtd(Double otherFedReceiptsYtd) {
         this.otherFedReceiptsYtd = otherFedReceiptsYtd;
         return this;
@@ -892,6 +991,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_loans_received_period")
     public Double otherLoansReceivedPeriod;
+
     public CommitteeReports withOtherLoansReceivedPeriod(Double otherLoansReceivedPeriod) {
         this.otherLoansReceivedPeriod = otherLoansReceivedPeriod;
         return this;
@@ -900,6 +1000,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_loans_received_ytd")
     public Double otherLoansReceivedYtd;
+
     public CommitteeReports withOtherLoansReceivedYtd(Double otherLoansReceivedYtd) {
         this.otherLoansReceivedYtd = otherLoansReceivedYtd;
         return this;
@@ -911,6 +1012,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_political_committee_contributions_period")
     public Double otherPoliticalCommitteeContributionsPeriod;
+
     public CommitteeReports withOtherPoliticalCommitteeContributionsPeriod(Double otherPoliticalCommitteeContributionsPeriod) {
         this.otherPoliticalCommitteeContributionsPeriod = otherPoliticalCommitteeContributionsPeriod;
         return this;
@@ -922,6 +1024,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_political_committee_contributions_ytd")
     public Double otherPoliticalCommitteeContributionsYtd;
+
     public CommitteeReports withOtherPoliticalCommitteeContributionsYtd(Double otherPoliticalCommitteeContributionsYtd) {
         this.otherPoliticalCommitteeContributionsYtd = otherPoliticalCommitteeContributionsYtd;
         return this;
@@ -930,6 +1033,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_receipts_period")
     public Double otherReceiptsPeriod;
+
     public CommitteeReports withOtherReceiptsPeriod(Double otherReceiptsPeriod) {
         this.otherReceiptsPeriod = otherReceiptsPeriod;
         return this;
@@ -938,6 +1042,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("other_receipts_ytd")
     public Double otherReceiptsYtd;
+
     public CommitteeReports withOtherReceiptsYtd(Double otherReceiptsYtd) {
         this.otherReceiptsYtd = otherReceiptsYtd;
         return this;
@@ -946,6 +1051,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pdf_url")
     public String pdfUrl;
+
     public CommitteeReports withPdfUrl(String pdfUrl) {
         this.pdfUrl = pdfUrl;
         return this;
@@ -957,6 +1063,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("political_party_committee_contributions_period")
     public Double politicalPartyCommitteeContributionsPeriod;
+
     public CommitteeReports withPoliticalPartyCommitteeContributionsPeriod(Double politicalPartyCommitteeContributionsPeriod) {
         this.politicalPartyCommitteeContributionsPeriod = politicalPartyCommitteeContributionsPeriod;
         return this;
@@ -968,6 +1075,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("political_party_committee_contributions_ytd")
     public Double politicalPartyCommitteeContributionsYtd;
+
     public CommitteeReports withPoliticalPartyCommitteeContributionsYtd(Double politicalPartyCommitteeContributionsYtd) {
         this.politicalPartyCommitteeContributionsYtd = politicalPartyCommitteeContributionsYtd;
         return this;
@@ -976,6 +1084,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous_file_number")
     public Double previousFileNumber;
+
     public CommitteeReports withPreviousFileNumber(Double previousFileNumber) {
         this.previousFileNumber = previousFileNumber;
         return this;
@@ -988,6 +1097,7 @@ public class CommitteeReports {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("receipt_date")
     public LocalDate receiptDate;
+
     public CommitteeReports withReceiptDate(LocalDate receiptDate) {
         this.receiptDate = receiptDate;
         return this;
@@ -999,6 +1109,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_individual_contributions_period")
     public Double refundedIndividualContributionsPeriod;
+
     public CommitteeReports withRefundedIndividualContributionsPeriod(Double refundedIndividualContributionsPeriod) {
         this.refundedIndividualContributionsPeriod = refundedIndividualContributionsPeriod;
         return this;
@@ -1010,6 +1121,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_individual_contributions_ytd")
     public Double refundedIndividualContributionsYtd;
+
     public CommitteeReports withRefundedIndividualContributionsYtd(Double refundedIndividualContributionsYtd) {
         this.refundedIndividualContributionsYtd = refundedIndividualContributionsYtd;
         return this;
@@ -1021,6 +1133,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_other_political_committee_contributions_period")
     public Double refundedOtherPoliticalCommitteeContributionsPeriod;
+
     public CommitteeReports withRefundedOtherPoliticalCommitteeContributionsPeriod(Double refundedOtherPoliticalCommitteeContributionsPeriod) {
         this.refundedOtherPoliticalCommitteeContributionsPeriod = refundedOtherPoliticalCommitteeContributionsPeriod;
         return this;
@@ -1032,6 +1145,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_other_political_committee_contributions_ytd")
     public Double refundedOtherPoliticalCommitteeContributionsYtd;
+
     public CommitteeReports withRefundedOtherPoliticalCommitteeContributionsYtd(Double refundedOtherPoliticalCommitteeContributionsYtd) {
         this.refundedOtherPoliticalCommitteeContributionsYtd = refundedOtherPoliticalCommitteeContributionsYtd;
         return this;
@@ -1043,6 +1157,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_political_party_committee_contributions_period")
     public Double refundedPoliticalPartyCommitteeContributionsPeriod;
+
     public CommitteeReports withRefundedPoliticalPartyCommitteeContributionsPeriod(Double refundedPoliticalPartyCommitteeContributionsPeriod) {
         this.refundedPoliticalPartyCommitteeContributionsPeriod = refundedPoliticalPartyCommitteeContributionsPeriod;
         return this;
@@ -1054,6 +1169,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_political_party_committee_contributions_ytd")
     public Double refundedPoliticalPartyCommitteeContributionsYtd;
+
     public CommitteeReports withRefundedPoliticalPartyCommitteeContributionsYtd(Double refundedPoliticalPartyCommitteeContributionsYtd) {
         this.refundedPoliticalPartyCommitteeContributionsYtd = refundedPoliticalPartyCommitteeContributionsYtd;
         return this;
@@ -1062,6 +1178,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunds_total_contributions_col_total_ytd")
     public Double refundsTotalContributionsColTotalYtd;
+
     public CommitteeReports withRefundsTotalContributionsColTotalYtd(Double refundsTotalContributionsColTotalYtd) {
         this.refundsTotalContributionsColTotalYtd = refundsTotalContributionsColTotalYtd;
         return this;
@@ -1070,6 +1187,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repayments_loans_made_by_candidate_period")
     public Double repaymentsLoansMadeByCandidatePeriod;
+
     public CommitteeReports withRepaymentsLoansMadeByCandidatePeriod(Double repaymentsLoansMadeByCandidatePeriod) {
         this.repaymentsLoansMadeByCandidatePeriod = repaymentsLoansMadeByCandidatePeriod;
         return this;
@@ -1078,6 +1196,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repayments_loans_made_candidate_ytd")
     public Double repaymentsLoansMadeCandidateYtd;
+
     public CommitteeReports withRepaymentsLoansMadeCandidateYtd(Double repaymentsLoansMadeCandidateYtd) {
         this.repaymentsLoansMadeCandidateYtd = repaymentsLoansMadeCandidateYtd;
         return this;
@@ -1086,6 +1205,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repayments_other_loans_period")
     public Double repaymentsOtherLoansPeriod;
+
     public CommitteeReports withRepaymentsOtherLoansPeriod(Double repaymentsOtherLoansPeriod) {
         this.repaymentsOtherLoansPeriod = repaymentsOtherLoansPeriod;
         return this;
@@ -1094,6 +1214,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repayments_other_loans_ytd")
     public Double repaymentsOtherLoansYtd;
+
     public CommitteeReports withRepaymentsOtherLoansYtd(Double repaymentsOtherLoansYtd) {
         this.repaymentsOtherLoansYtd = repaymentsOtherLoansYtd;
         return this;
@@ -1102,6 +1223,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_form")
     public String reportForm;
+
     public CommitteeReports withReportForm(String reportForm) {
         this.reportForm = reportForm;
         return this;
@@ -1163,6 +1285,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public CommitteeReports withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -1224,6 +1347,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type_full")
     public String reportTypeFull;
+
     public CommitteeReports withReportTypeFull(String reportTypeFull) {
         this.reportTypeFull = reportTypeFull;
         return this;
@@ -1239,6 +1363,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public Integer reportYear;
+
     public CommitteeReports withReportYear(Integer reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -1247,6 +1372,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_fed_activity_nonfed_ytd")
     public Double sharedFedActivityNonfedYtd;
+
     public CommitteeReports withSharedFedActivityNonfedYtd(Double sharedFedActivityNonfedYtd) {
         this.sharedFedActivityNonfedYtd = sharedFedActivityNonfedYtd;
         return this;
@@ -1255,6 +1381,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_fed_activity_period")
     public Double sharedFedActivityPeriod;
+
     public CommitteeReports withSharedFedActivityPeriod(Double sharedFedActivityPeriod) {
         this.sharedFedActivityPeriod = sharedFedActivityPeriod;
         return this;
@@ -1263,6 +1390,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_fed_activity_ytd")
     public Double sharedFedActivityYtd;
+
     public CommitteeReports withSharedFedActivityYtd(Double sharedFedActivityYtd) {
         this.sharedFedActivityYtd = sharedFedActivityYtd;
         return this;
@@ -1271,6 +1399,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_fed_operating_expenditures_period")
     public Double sharedFedOperatingExpendituresPeriod;
+
     public CommitteeReports withSharedFedOperatingExpendituresPeriod(Double sharedFedOperatingExpendituresPeriod) {
         this.sharedFedOperatingExpendituresPeriod = sharedFedOperatingExpendituresPeriod;
         return this;
@@ -1279,6 +1408,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_fed_operating_expenditures_ytd")
     public Double sharedFedOperatingExpendituresYtd;
+
     public CommitteeReports withSharedFedOperatingExpendituresYtd(Double sharedFedOperatingExpendituresYtd) {
         this.sharedFedOperatingExpendituresYtd = sharedFedOperatingExpendituresYtd;
         return this;
@@ -1287,6 +1417,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_nonfed_operating_expenditures_period")
     public Double sharedNonfedOperatingExpendituresPeriod;
+
     public CommitteeReports withSharedNonfedOperatingExpendituresPeriod(Double sharedNonfedOperatingExpendituresPeriod) {
         this.sharedNonfedOperatingExpendituresPeriod = sharedNonfedOperatingExpendituresPeriod;
         return this;
@@ -1295,6 +1426,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_nonfed_operating_expenditures_ytd")
     public Double sharedNonfedOperatingExpendituresYtd;
+
     public CommitteeReports withSharedNonfedOperatingExpendituresYtd(Double sharedNonfedOperatingExpendituresYtd) {
         this.sharedNonfedOperatingExpendituresYtd = sharedNonfedOperatingExpendituresYtd;
         return this;
@@ -1303,6 +1435,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_period")
     public Double subtotalPeriod;
+
     public CommitteeReports withSubtotalPeriod(Double subtotalPeriod) {
         this.subtotalPeriod = subtotalPeriod;
         return this;
@@ -1311,6 +1444,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_summary_page_period")
     public Double subtotalSummaryPagePeriod;
+
     public CommitteeReports withSubtotalSummaryPagePeriod(Double subtotalSummaryPagePeriod) {
         this.subtotalSummaryPagePeriod = subtotalSummaryPagePeriod;
         return this;
@@ -1319,6 +1453,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_summary_period")
     public Double subtotalSummaryPeriod;
+
     public CommitteeReports withSubtotalSummaryPeriod(Double subtotalSummaryPeriod) {
         this.subtotalSummaryPeriod = subtotalSummaryPeriod;
         return this;
@@ -1327,6 +1462,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtotal_summary_ytd")
     public Double subtotalSummaryYtd;
+
     public CommitteeReports withSubtotalSummaryYtd(Double subtotalSummaryYtd) {
         this.subtotalSummaryYtd = subtotalSummaryYtd;
         return this;
@@ -1335,6 +1471,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contribution_refunds_col_total_period")
     public Double totalContributionRefundsColTotalPeriod;
+
     public CommitteeReports withTotalContributionRefundsColTotalPeriod(Double totalContributionRefundsColTotalPeriod) {
         this.totalContributionRefundsColTotalPeriod = totalContributionRefundsColTotalPeriod;
         return this;
@@ -1346,6 +1483,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contribution_refunds_period")
     public Double totalContributionRefundsPeriod;
+
     public CommitteeReports withTotalContributionRefundsPeriod(Double totalContributionRefundsPeriod) {
         this.totalContributionRefundsPeriod = totalContributionRefundsPeriod;
         return this;
@@ -1357,6 +1495,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contribution_refunds_ytd")
     public Double totalContributionRefundsYtd;
+
     public CommitteeReports withTotalContributionRefundsYtd(Double totalContributionRefundsYtd) {
         this.totalContributionRefundsYtd = totalContributionRefundsYtd;
         return this;
@@ -1365,6 +1504,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contributions_column_total_period")
     public Double totalContributionsColumnTotalPeriod;
+
     public CommitteeReports withTotalContributionsColumnTotalPeriod(Double totalContributionsColumnTotalPeriod) {
         this.totalContributionsColumnTotalPeriod = totalContributionsColumnTotalPeriod;
         return this;
@@ -1376,6 +1516,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contributions_period")
     public Double totalContributionsPeriod;
+
     public CommitteeReports withTotalContributionsPeriod(Double totalContributionsPeriod) {
         this.totalContributionsPeriod = totalContributionsPeriod;
         return this;
@@ -1387,6 +1528,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_contributions_ytd")
     public Double totalContributionsYtd;
+
     public CommitteeReports withTotalContributionsYtd(Double totalContributionsYtd) {
         this.totalContributionsYtd = totalContributionsYtd;
         return this;
@@ -1398,6 +1540,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_disbursements_period")
     public Double totalDisbursementsPeriod;
+
     public CommitteeReports withTotalDisbursementsPeriod(Double totalDisbursementsPeriod) {
         this.totalDisbursementsPeriod = totalDisbursementsPeriod;
         return this;
@@ -1409,6 +1552,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_disbursements_ytd")
     public Double totalDisbursementsYtd;
+
     public CommitteeReports withTotalDisbursementsYtd(Double totalDisbursementsYtd) {
         this.totalDisbursementsYtd = totalDisbursementsYtd;
         return this;
@@ -1417,6 +1561,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_disbursements_period")
     public Double totalFedDisbursementsPeriod;
+
     public CommitteeReports withTotalFedDisbursementsPeriod(Double totalFedDisbursementsPeriod) {
         this.totalFedDisbursementsPeriod = totalFedDisbursementsPeriod;
         return this;
@@ -1425,6 +1570,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_disbursements_ytd")
     public Double totalFedDisbursementsYtd;
+
     public CommitteeReports withTotalFedDisbursementsYtd(Double totalFedDisbursementsYtd) {
         this.totalFedDisbursementsYtd = totalFedDisbursementsYtd;
         return this;
@@ -1433,6 +1579,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_election_activity_period")
     public Double totalFedElectionActivityPeriod;
+
     public CommitteeReports withTotalFedElectionActivityPeriod(Double totalFedElectionActivityPeriod) {
         this.totalFedElectionActivityPeriod = totalFedElectionActivityPeriod;
         return this;
@@ -1441,6 +1588,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_election_activity_ytd")
     public Double totalFedElectionActivityYtd;
+
     public CommitteeReports withTotalFedElectionActivityYtd(Double totalFedElectionActivityYtd) {
         this.totalFedElectionActivityYtd = totalFedElectionActivityYtd;
         return this;
@@ -1449,6 +1597,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_operating_expenditures_period")
     public Double totalFedOperatingExpendituresPeriod;
+
     public CommitteeReports withTotalFedOperatingExpendituresPeriod(Double totalFedOperatingExpendituresPeriod) {
         this.totalFedOperatingExpendituresPeriod = totalFedOperatingExpendituresPeriod;
         return this;
@@ -1457,6 +1606,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_operating_expenditures_ytd")
     public Double totalFedOperatingExpendituresYtd;
+
     public CommitteeReports withTotalFedOperatingExpendituresYtd(Double totalFedOperatingExpendituresYtd) {
         this.totalFedOperatingExpendituresYtd = totalFedOperatingExpendituresYtd;
         return this;
@@ -1465,6 +1615,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_receipts_period")
     public Double totalFedReceiptsPeriod;
+
     public CommitteeReports withTotalFedReceiptsPeriod(Double totalFedReceiptsPeriod) {
         this.totalFedReceiptsPeriod = totalFedReceiptsPeriod;
         return this;
@@ -1473,6 +1624,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_fed_receipts_ytd")
     public Double totalFedReceiptsYtd;
+
     public CommitteeReports withTotalFedReceiptsYtd(Double totalFedReceiptsYtd) {
         this.totalFedReceiptsYtd = totalFedReceiptsYtd;
         return this;
@@ -1484,6 +1636,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_individual_contributions_period")
     public Double totalIndividualContributionsPeriod;
+
     public CommitteeReports withTotalIndividualContributionsPeriod(Double totalIndividualContributionsPeriod) {
         this.totalIndividualContributionsPeriod = totalIndividualContributionsPeriod;
         return this;
@@ -1495,6 +1648,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_individual_contributions_ytd")
     public Double totalIndividualContributionsYtd;
+
     public CommitteeReports withTotalIndividualContributionsYtd(Double totalIndividualContributionsYtd) {
         this.totalIndividualContributionsYtd = totalIndividualContributionsYtd;
         return this;
@@ -1503,6 +1657,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_loan_repayments_made_period")
     public Double totalLoanRepaymentsMadePeriod;
+
     public CommitteeReports withTotalLoanRepaymentsMadePeriod(Double totalLoanRepaymentsMadePeriod) {
         this.totalLoanRepaymentsMadePeriod = totalLoanRepaymentsMadePeriod;
         return this;
@@ -1511,6 +1666,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_loan_repayments_made_ytd")
     public Double totalLoanRepaymentsMadeYtd;
+
     public CommitteeReports withTotalLoanRepaymentsMadeYtd(Double totalLoanRepaymentsMadeYtd) {
         this.totalLoanRepaymentsMadeYtd = totalLoanRepaymentsMadeYtd;
         return this;
@@ -1519,6 +1675,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_loans_received_period")
     public Double totalLoansReceivedPeriod;
+
     public CommitteeReports withTotalLoansReceivedPeriod(Double totalLoansReceivedPeriod) {
         this.totalLoansReceivedPeriod = totalLoansReceivedPeriod;
         return this;
@@ -1527,6 +1684,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_loans_received_ytd")
     public Double totalLoansReceivedYtd;
+
     public CommitteeReports withTotalLoansReceivedYtd(Double totalLoansReceivedYtd) {
         this.totalLoansReceivedYtd = totalLoansReceivedYtd;
         return this;
@@ -1535,6 +1693,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_nonfed_transfers_period")
     public Double totalNonfedTransfersPeriod;
+
     public CommitteeReports withTotalNonfedTransfersPeriod(Double totalNonfedTransfersPeriod) {
         this.totalNonfedTransfersPeriod = totalNonfedTransfersPeriod;
         return this;
@@ -1543,6 +1702,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_nonfed_transfers_ytd")
     public Double totalNonfedTransfersYtd;
+
     public CommitteeReports withTotalNonfedTransfersYtd(Double totalNonfedTransfersYtd) {
         this.totalNonfedTransfersYtd = totalNonfedTransfersYtd;
         return this;
@@ -1551,6 +1711,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_offsets_to_operating_expenditures_period")
     public Double totalOffsetsToOperatingExpendituresPeriod;
+
     public CommitteeReports withTotalOffsetsToOperatingExpendituresPeriod(Double totalOffsetsToOperatingExpendituresPeriod) {
         this.totalOffsetsToOperatingExpendituresPeriod = totalOffsetsToOperatingExpendituresPeriod;
         return this;
@@ -1559,6 +1720,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_offsets_to_operating_expenditures_ytd")
     public Double totalOffsetsToOperatingExpendituresYtd;
+
     public CommitteeReports withTotalOffsetsToOperatingExpendituresYtd(Double totalOffsetsToOperatingExpendituresYtd) {
         this.totalOffsetsToOperatingExpendituresYtd = totalOffsetsToOperatingExpendituresYtd;
         return this;
@@ -1567,6 +1729,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_operating_expenditures_period")
     public Double totalOperatingExpendituresPeriod;
+
     public CommitteeReports withTotalOperatingExpendituresPeriod(Double totalOperatingExpendituresPeriod) {
         this.totalOperatingExpendituresPeriod = totalOperatingExpendituresPeriod;
         return this;
@@ -1575,6 +1738,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_operating_expenditures_ytd")
     public Double totalOperatingExpendituresYtd;
+
     public CommitteeReports withTotalOperatingExpendituresYtd(Double totalOperatingExpendituresYtd) {
         this.totalOperatingExpendituresYtd = totalOperatingExpendituresYtd;
         return this;
@@ -1583,6 +1747,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_period")
     public Double totalPeriod;
+
     public CommitteeReports withTotalPeriod(Double totalPeriod) {
         this.totalPeriod = totalPeriod;
         return this;
@@ -1594,6 +1759,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_receipts_period")
     public Double totalReceiptsPeriod;
+
     public CommitteeReports withTotalReceiptsPeriod(Double totalReceiptsPeriod) {
         this.totalReceiptsPeriod = totalReceiptsPeriod;
         return this;
@@ -1605,6 +1771,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_receipts_ytd")
     public Double totalReceiptsYtd;
+
     public CommitteeReports withTotalReceiptsYtd(Double totalReceiptsYtd) {
         this.totalReceiptsYtd = totalReceiptsYtd;
         return this;
@@ -1613,6 +1780,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_ytd")
     public Double totalYtd;
+
     public CommitteeReports withTotalYtd(Double totalYtd) {
         this.totalYtd = totalYtd;
         return this;
@@ -1621,6 +1789,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_affiliated_committee_period")
     public Double transfersFromAffiliatedCommitteePeriod;
+
     public CommitteeReports withTransfersFromAffiliatedCommitteePeriod(Double transfersFromAffiliatedCommitteePeriod) {
         this.transfersFromAffiliatedCommitteePeriod = transfersFromAffiliatedCommitteePeriod;
         return this;
@@ -1629,6 +1798,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_affiliated_committee_ytd")
     public Double transfersFromAffiliatedCommitteeYtd;
+
     public CommitteeReports withTransfersFromAffiliatedCommitteeYtd(Double transfersFromAffiliatedCommitteeYtd) {
         this.transfersFromAffiliatedCommitteeYtd = transfersFromAffiliatedCommitteeYtd;
         return this;
@@ -1637,6 +1807,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_affiliated_party_period")
     public Double transfersFromAffiliatedPartyPeriod;
+
     public CommitteeReports withTransfersFromAffiliatedPartyPeriod(Double transfersFromAffiliatedPartyPeriod) {
         this.transfersFromAffiliatedPartyPeriod = transfersFromAffiliatedPartyPeriod;
         return this;
@@ -1645,6 +1816,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_affiliated_party_ytd")
     public Double transfersFromAffiliatedPartyYtd;
+
     public CommitteeReports withTransfersFromAffiliatedPartyYtd(Double transfersFromAffiliatedPartyYtd) {
         this.transfersFromAffiliatedPartyYtd = transfersFromAffiliatedPartyYtd;
         return this;
@@ -1653,6 +1825,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_nonfed_account_period")
     public Double transfersFromNonfedAccountPeriod;
+
     public CommitteeReports withTransfersFromNonfedAccountPeriod(Double transfersFromNonfedAccountPeriod) {
         this.transfersFromNonfedAccountPeriod = transfersFromNonfedAccountPeriod;
         return this;
@@ -1661,6 +1834,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_nonfed_account_ytd")
     public Double transfersFromNonfedAccountYtd;
+
     public CommitteeReports withTransfersFromNonfedAccountYtd(Double transfersFromNonfedAccountYtd) {
         this.transfersFromNonfedAccountYtd = transfersFromNonfedAccountYtd;
         return this;
@@ -1669,6 +1843,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_nonfed_levin_period")
     public Double transfersFromNonfedLevinPeriod;
+
     public CommitteeReports withTransfersFromNonfedLevinPeriod(Double transfersFromNonfedLevinPeriod) {
         this.transfersFromNonfedLevinPeriod = transfersFromNonfedLevinPeriod;
         return this;
@@ -1677,6 +1852,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_nonfed_levin_ytd")
     public Double transfersFromNonfedLevinYtd;
+
     public CommitteeReports withTransfersFromNonfedLevinYtd(Double transfersFromNonfedLevinYtd) {
         this.transfersFromNonfedLevinYtd = transfersFromNonfedLevinYtd;
         return this;
@@ -1685,6 +1861,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_other_authorized_committee_period")
     public Double transfersFromOtherAuthorizedCommitteePeriod;
+
     public CommitteeReports withTransfersFromOtherAuthorizedCommitteePeriod(Double transfersFromOtherAuthorizedCommitteePeriod) {
         this.transfersFromOtherAuthorizedCommitteePeriod = transfersFromOtherAuthorizedCommitteePeriod;
         return this;
@@ -1693,6 +1870,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_from_other_authorized_committee_ytd")
     public Double transfersFromOtherAuthorizedCommitteeYtd;
+
     public CommitteeReports withTransfersFromOtherAuthorizedCommitteeYtd(Double transfersFromOtherAuthorizedCommitteeYtd) {
         this.transfersFromOtherAuthorizedCommitteeYtd = transfersFromOtherAuthorizedCommitteeYtd;
         return this;
@@ -1701,6 +1879,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_to_affiliated_committee_period")
     public Double transfersToAffiliatedCommitteePeriod;
+
     public CommitteeReports withTransfersToAffiliatedCommitteePeriod(Double transfersToAffiliatedCommitteePeriod) {
         this.transfersToAffiliatedCommitteePeriod = transfersToAffiliatedCommitteePeriod;
         return this;
@@ -1709,6 +1888,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_to_affilitated_committees_ytd")
     public Double transfersToAffilitatedCommitteesYtd;
+
     public CommitteeReports withTransfersToAffilitatedCommitteesYtd(Double transfersToAffilitatedCommitteesYtd) {
         this.transfersToAffilitatedCommitteesYtd = transfersToAffilitatedCommitteesYtd;
         return this;
@@ -1717,6 +1897,7 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_to_other_authorized_committee_period")
     public Double transfersToOtherAuthorizedCommitteePeriod;
+
     public CommitteeReports withTransfersToOtherAuthorizedCommitteePeriod(Double transfersToOtherAuthorizedCommitteePeriod) {
         this.transfersToOtherAuthorizedCommitteePeriod = transfersToOtherAuthorizedCommitteePeriod;
         return this;
@@ -1725,9 +1906,11 @@ public class CommitteeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transfers_to_other_authorized_committee_ytd")
     public Double transfersToOtherAuthorizedCommitteeYtd;
+
     public CommitteeReports withTransfersToOtherAuthorizedCommitteeYtd(Double transfersToOtherAuthorizedCommitteeYtd) {
         this.transfersToOtherAuthorizedCommitteeYtd = transfersToOtherAuthorizedCommitteeYtd;
         return this;
     }
     
+    public CommitteeReports(){}
 }

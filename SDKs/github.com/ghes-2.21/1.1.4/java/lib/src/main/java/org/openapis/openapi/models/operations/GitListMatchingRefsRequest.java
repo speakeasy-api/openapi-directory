@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitListMatchingRefsRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitListMatchingRefsRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GitListMatchingRefsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GitListMatchingRefsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -39,6 +43,7 @@ public class GitListMatchingRefsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
     public String ref;
+
     public GitListMatchingRefsRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -46,9 +51,15 @@ public class GitListMatchingRefsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitListMatchingRefsRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public GitListMatchingRefsRequest(@JsonProperty("owner") String owner, @JsonProperty("ref") String ref, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.ref = ref;
+        this.repo = repo;
+  }
 }

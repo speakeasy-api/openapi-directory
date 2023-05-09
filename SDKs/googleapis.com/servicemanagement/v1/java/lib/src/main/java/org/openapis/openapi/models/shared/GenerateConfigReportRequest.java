@@ -18,6 +18,7 @@ public class GenerateConfigReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newConfig")
     public java.util.Map<String, Object> newConfig;
+
     public GenerateConfigReportRequest withNewConfig(java.util.Map<String, Object> newConfig) {
         this.newConfig = newConfig;
         return this;
@@ -29,9 +30,11 @@ public class GenerateConfigReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldConfig")
     public java.util.Map<String, Object> oldConfig;
+
     public GenerateConfigReportRequest withOldConfig(java.util.Map<String, Object> oldConfig) {
         this.oldConfig = oldConfig;
         return this;
     }
     
+    public GenerateConfigReportRequest(){}
 }

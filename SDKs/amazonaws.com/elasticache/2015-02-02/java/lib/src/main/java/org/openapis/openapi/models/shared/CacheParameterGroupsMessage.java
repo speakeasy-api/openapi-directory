@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CacheParameterGroupsMessage {
     
     public CacheParameterGroupList[] cacheParameterGroups;
+
     public CacheParameterGroupsMessage withCacheParameterGroups(CacheParameterGroupList[] cacheParameterGroups) {
         this.cacheParameterGroups = cacheParameterGroups;
         return this;
@@ -19,9 +20,11 @@ public class CacheParameterGroupsMessage {
     
     
     public String marker;
+
     public CacheParameterGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public CacheParameterGroupsMessage(){}
 }

@@ -54,10 +54,8 @@ public class SavedListViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.DeleteV2SavedListViewsIdJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -95,11 +93,9 @@ public class SavedListViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2SavedListViewsJsonResponse res = new org.openapis.openapi.models.operations.GetV2SavedListViewsJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2SavedListViewsJsonResponse res = new org.openapis.openapi.models.operations.GetV2SavedListViewsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class SavedListViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.GetV2SavedListViewsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class SavedListViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse res = new org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse res = new org.openapis.openapi.models.operations.PostV2SavedListViewsJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class SavedListViews {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonResponse() {{
+        org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonResponse res = new org.openapis.openapi.models.operations.PutV2SavedListViewsIdJsonResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminUpdateDeviceStatusRequest {
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public AdminUpdateDeviceStatusRequest withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
@@ -22,6 +23,7 @@ public class AdminUpdateDeviceStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceRememberedStatus")
     public DeviceRememberedStatusTypeEnum deviceRememberedStatus;
+
     public AdminUpdateDeviceStatusRequest withDeviceRememberedStatus(DeviceRememberedStatusTypeEnum deviceRememberedStatus) {
         this.deviceRememberedStatus = deviceRememberedStatus;
         return this;
@@ -29,6 +31,7 @@ public class AdminUpdateDeviceStatusRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminUpdateDeviceStatusRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -36,9 +39,15 @@ public class AdminUpdateDeviceStatusRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminUpdateDeviceStatusRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminUpdateDeviceStatusRequest(@JsonProperty("DeviceKey") String deviceKey, @JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.deviceKey = deviceKey;
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

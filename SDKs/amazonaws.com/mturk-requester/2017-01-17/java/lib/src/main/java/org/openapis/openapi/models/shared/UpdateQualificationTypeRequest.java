@@ -12,6 +12,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnswerKey")
     public String answerKey;
+
     public UpdateQualificationTypeRequest withAnswerKey(String answerKey) {
         this.answerKey = answerKey;
         return this;
@@ -20,6 +21,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGranted")
     public Boolean autoGranted;
+
     public UpdateQualificationTypeRequest withAutoGranted(Boolean autoGranted) {
         this.autoGranted = autoGranted;
         return this;
@@ -28,6 +30,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoGrantedValue")
     public Long autoGrantedValue;
+
     public UpdateQualificationTypeRequest withAutoGrantedValue(Long autoGrantedValue) {
         this.autoGrantedValue = autoGrantedValue;
         return this;
@@ -36,6 +39,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateQualificationTypeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class UpdateQualificationTypeRequest {
     
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public UpdateQualificationTypeRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -51,6 +56,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationTypeStatus")
     public QualificationTypeStatusEnum qualificationTypeStatus;
+
     public UpdateQualificationTypeRequest withQualificationTypeStatus(QualificationTypeStatusEnum qualificationTypeStatus) {
         this.qualificationTypeStatus = qualificationTypeStatus;
         return this;
@@ -59,6 +65,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryDelayInSeconds")
     public Long retryDelayInSeconds;
+
     public UpdateQualificationTypeRequest withRetryDelayInSeconds(Long retryDelayInSeconds) {
         this.retryDelayInSeconds = retryDelayInSeconds;
         return this;
@@ -67,6 +74,7 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Test")
     public String test;
+
     public UpdateQualificationTypeRequest withTest(String test) {
         this.test = test;
         return this;
@@ -75,9 +83,13 @@ public class UpdateQualificationTypeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestDurationInSeconds")
     public Long testDurationInSeconds;
+
     public UpdateQualificationTypeRequest withTestDurationInSeconds(Long testDurationInSeconds) {
         this.testDurationInSeconds = testDurationInSeconds;
         return this;
     }
     
+    public UpdateQualificationTypeRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId) {
+        this.qualificationTypeId = qualificationTypeId;
+  }
 }

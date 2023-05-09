@@ -18,6 +18,7 @@ public class ListRulesetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRulesetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRulesetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesets")
     public Ruleset[] rulesets;
+
     public ListRulesetsResponse withRulesets(Ruleset[] rulesets) {
         this.rulesets = rulesets;
         return this;
     }
     
+    public ListRulesetsResponse(){}
 }

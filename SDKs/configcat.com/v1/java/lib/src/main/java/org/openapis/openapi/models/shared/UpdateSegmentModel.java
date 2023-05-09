@@ -12,6 +12,7 @@ public class UpdateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public RolloutRuleComparatorEnum comparator;
+
     public UpdateSegmentModel withComparator(RolloutRuleComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonAttribute")
     public String comparisonAttribute;
+
     public UpdateSegmentModel withComparisonAttribute(String comparisonAttribute) {
         this.comparisonAttribute = comparisonAttribute;
         return this;
@@ -28,6 +30,7 @@ public class UpdateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public UpdateSegmentModel withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -36,6 +39,7 @@ public class UpdateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSegmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -44,9 +48,11 @@ public class UpdateSegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateSegmentModel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateSegmentModel(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContinuousParameterRange {
     @JsonProperty("MaxValue")
     public String maxValue;
+
     public ContinuousParameterRange withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -21,6 +22,7 @@ public class ContinuousParameterRange {
     
     @JsonProperty("MinValue")
     public String minValue;
+
     public ContinuousParameterRange withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
@@ -28,6 +30,7 @@ public class ContinuousParameterRange {
     
     @JsonProperty("Name")
     public String name;
+
     public ContinuousParameterRange withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class ContinuousParameterRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingType")
     public HyperParameterScalingTypeEnum scalingType;
+
     public ContinuousParameterRange withScalingType(HyperParameterScalingTypeEnum scalingType) {
         this.scalingType = scalingType;
         return this;
     }
     
+    public ContinuousParameterRange(@JsonProperty("MaxValue") String maxValue, @JsonProperty("MinValue") String minValue, @JsonProperty("Name") String name) {
+        this.maxValue = maxValue;
+        this.minValue = minValue;
+        this.name = name;
+  }
 }

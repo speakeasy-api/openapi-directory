@@ -15,6 +15,7 @@ public class SensitiveDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SensitiveDataItemCategoryEnum category;
+
     public SensitiveDataItem withCategory(SensitiveDataItemCategoryEnum category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class SensitiveDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detections")
     public DefaultDetection[] detections;
+
     public SensitiveDataItem withDetections(DefaultDetection[] detections) {
         this.detections = detections;
         return this;
@@ -31,9 +33,11 @@ public class SensitiveDataItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public SensitiveDataItem withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public SensitiveDataItem(){}
 }

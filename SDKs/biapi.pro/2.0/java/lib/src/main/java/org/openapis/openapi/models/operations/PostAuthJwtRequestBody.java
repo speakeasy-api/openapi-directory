@@ -12,6 +12,7 @@ public class PostAuthJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public String clientId;
+
     public PostAuthJwtRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +23,7 @@ public class PostAuthJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_secret")
     public String clientSecret;
+
     public PostAuthJwtRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,6 +34,7 @@ public class PostAuthJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=expire")
     public Boolean expire;
+
     public PostAuthJwtRequestBody withExpire(Boolean expire) {
         this.expire = expire;
         return this;
@@ -42,6 +45,7 @@ public class PostAuthJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_user")
     public Long idUser;
+
     public PostAuthJwtRequestBody withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -52,9 +56,11 @@ public class PostAuthJwtRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=scope")
     public String scope;
+
     public PostAuthJwtRequestBody withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public PostAuthJwtRequestBody(){}
 }

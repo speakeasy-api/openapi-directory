@@ -12,6 +12,7 @@ public class RegisterComputeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificatePath")
     public String certificatePath;
+
     public RegisterComputeInput withCertificatePath(String certificatePath) {
         this.certificatePath = certificatePath;
         return this;
@@ -19,6 +20,7 @@ public class RegisterComputeInput {
     
     @JsonProperty("ComputeName")
     public String computeName;
+
     public RegisterComputeInput withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -27,6 +29,7 @@ public class RegisterComputeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public RegisterComputeInput withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -34,6 +37,7 @@ public class RegisterComputeInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public RegisterComputeInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -42,6 +46,7 @@ public class RegisterComputeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public RegisterComputeInput withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -50,9 +55,14 @@ public class RegisterComputeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public RegisterComputeInput withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public RegisterComputeInput(@JsonProperty("ComputeName") String computeName, @JsonProperty("FleetId") String fleetId) {
+        this.computeName = computeName;
+        this.fleetId = fleetId;
+  }
 }

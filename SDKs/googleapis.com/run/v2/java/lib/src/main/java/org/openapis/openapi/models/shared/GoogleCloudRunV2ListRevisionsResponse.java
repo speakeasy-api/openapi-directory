@@ -18,6 +18,7 @@ public class GoogleCloudRunV2ListRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRunV2ListRevisionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2ListRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public GoogleCloudRunV2Revision[] revisions;
+
     public GoogleCloudRunV2ListRevisionsResponse withRevisions(GoogleCloudRunV2Revision[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public GoogleCloudRunV2ListRevisionsResponse(){}
 }

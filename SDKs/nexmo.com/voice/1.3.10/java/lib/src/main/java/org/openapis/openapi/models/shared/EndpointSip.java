@@ -17,6 +17,7 @@ public class EndpointSip {
      */
     @JsonProperty("type")
     public String type;
+
     public EndpointSip withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +29,13 @@ public class EndpointSip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public EndpointSip withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public EndpointSip(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

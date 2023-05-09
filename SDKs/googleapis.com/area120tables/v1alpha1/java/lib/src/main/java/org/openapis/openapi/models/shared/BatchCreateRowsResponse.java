@@ -18,9 +18,11 @@ public class BatchCreateRowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public BatchCreateRowsResponse withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public BatchCreateRowsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchFormFieldSetsIdRequest {
@@ -12,6 +13,7 @@ public class PatchFormFieldSetsIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PatchFormFieldSetsIdRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -19,9 +21,14 @@ public class PatchFormFieldSetsIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchFormFieldSets patchFormFieldSets;
+
     public PatchFormFieldSetsIdRequest withPatchFormFieldSets(org.openapis.openapi.models.shared.PatchFormFieldSets patchFormFieldSets) {
         this.patchFormFieldSets = patchFormFieldSets;
         return this;
     }
     
+    public PatchFormFieldSetsIdRequest(@JsonProperty("id") Integer id, @JsonProperty("patchFormFieldSets") org.openapis.openapi.models.shared.PatchFormFieldSets patchFormFieldSets) {
+        this.id = id;
+        this.patchFormFieldSets = patchFormFieldSets;
+  }
 }

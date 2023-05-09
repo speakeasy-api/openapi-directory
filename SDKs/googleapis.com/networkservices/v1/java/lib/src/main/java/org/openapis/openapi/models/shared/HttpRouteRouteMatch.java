@@ -18,6 +18,7 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullPathMatch")
     public String fullPathMatch;
+
     public HttpRouteRouteMatch withFullPathMatch(String fullPathMatch) {
         this.fullPathMatch = fullPathMatch;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public HttpRouteHeaderMatch[] headers;
+
     public HttpRouteRouteMatch withHeaders(HttpRouteHeaderMatch[] headers) {
         this.headers = headers;
         return this;
@@ -40,6 +42,7 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreCase")
     public Boolean ignoreCase;
+
     public HttpRouteRouteMatch withIgnoreCase(Boolean ignoreCase) {
         this.ignoreCase = ignoreCase;
         return this;
@@ -51,6 +54,7 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixMatch")
     public String prefixMatch;
+
     public HttpRouteRouteMatch withPrefixMatch(String prefixMatch) {
         this.prefixMatch = prefixMatch;
         return this;
@@ -62,6 +66,7 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParameters")
     public HttpRouteQueryParameterMatch[] queryParameters;
+
     public HttpRouteRouteMatch withQueryParameters(HttpRouteQueryParameterMatch[] queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -73,9 +78,11 @@ public class HttpRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexMatch")
     public String regexMatch;
+
     public HttpRouteRouteMatch withRegexMatch(String regexMatch) {
         this.regexMatch = regexMatch;
         return this;
     }
     
+    public HttpRouteRouteMatch(){}
 }

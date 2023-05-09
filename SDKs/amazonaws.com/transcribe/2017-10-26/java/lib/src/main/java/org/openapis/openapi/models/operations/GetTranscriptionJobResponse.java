@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTranscriptionJobResponse {
@@ -12,6 +13,7 @@ public class GetTranscriptionJobResponse {
      */
     
     public Object badRequestException;
+
     public GetTranscriptionJobResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetTranscriptionJobResponse {
     
     
     public String contentType;
+
     public GetTranscriptionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetTranscriptionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTranscriptionJobResponse getTranscriptionJobResponse;
+
     public GetTranscriptionJobResponse withGetTranscriptionJobResponse(org.openapis.openapi.models.shared.GetTranscriptionJobResponse getTranscriptionJobResponse) {
         this.getTranscriptionJobResponse = getTranscriptionJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTranscriptionJobResponse {
      */
     
     public Object internalFailureException;
+
     public GetTranscriptionJobResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetTranscriptionJobResponse {
      */
     
     public Object limitExceededException;
+
     public GetTranscriptionJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetTranscriptionJobResponse {
      */
     
     public Object notFoundException;
+
     public GetTranscriptionJobResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetTranscriptionJobResponse {
     
     
     public Integer statusCode;
+
     public GetTranscriptionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetTranscriptionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTranscriptionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTranscriptionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

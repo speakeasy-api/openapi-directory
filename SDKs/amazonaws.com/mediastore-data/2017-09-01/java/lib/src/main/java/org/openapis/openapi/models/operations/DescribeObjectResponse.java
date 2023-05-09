@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeObjectResponse {
@@ -12,6 +13,7 @@ public class DescribeObjectResponse {
      */
     
     public Object containerNotFoundException;
+
     public DescribeObjectResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeObjectResponse {
     
     
     public String contentType;
+
     public DescribeObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeObjectResponse {
      */
     
     public java.util.Map<String, Object> describeObjectResponse;
+
     public DescribeObjectResponse withDescribeObjectResponse(java.util.Map<String, Object> describeObjectResponse) {
         this.describeObjectResponse = describeObjectResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeObjectResponse {
      */
     
     public Object internalServerError;
+
     public DescribeObjectResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeObjectResponse {
      */
     
     public Object objectNotFoundException;
+
     public DescribeObjectResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeObjectResponse {
     
     
     public Integer statusCode;
+
     public DescribeObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

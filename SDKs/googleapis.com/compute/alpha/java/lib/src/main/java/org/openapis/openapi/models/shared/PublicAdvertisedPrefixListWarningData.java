@@ -15,6 +15,7 @@ public class PublicAdvertisedPrefixListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PublicAdvertisedPrefixListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class PublicAdvertisedPrefixListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PublicAdvertisedPrefixListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PublicAdvertisedPrefixListWarningData(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelCatalogExportationHistory {
     @JsonProperty("exportations")
     public ChannelCatalogExportationReporting[] exportations;
+
     public ChannelCatalogExportationHistory withExportations(ChannelCatalogExportationReporting[] exportations) {
         this.exportations = exportations;
         return this;
@@ -21,6 +22,7 @@ public class ChannelCatalogExportationHistory {
     
     @JsonProperty("links")
     public ChannelCatalogExportationHistoryLinks links;
+
     public ChannelCatalogExportationHistory withLinks(ChannelCatalogExportationHistoryLinks links) {
         this.links = links;
         return this;
@@ -29,9 +31,14 @@ public class ChannelCatalogExportationHistory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ChannelCatalogExportationHistory withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public ChannelCatalogExportationHistory(@JsonProperty("exportations") ChannelCatalogExportationReporting[] exportations, @JsonProperty("links") ChannelCatalogExportationHistoryLinks links) {
+        this.exportations = exportations;
+        this.links = links;
+  }
 }

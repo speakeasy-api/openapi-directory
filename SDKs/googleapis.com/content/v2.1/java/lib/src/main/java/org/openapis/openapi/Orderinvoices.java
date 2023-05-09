@@ -61,11 +61,9 @@ public class Orderinvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse res = new org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse() {{
+        org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse res = new org.openapis.openapi.models.operations.ContentOrderinvoicesCreatechargeinvoiceResponse(contentType, httpRes.statusCode()) {{
             orderinvoicesCreateChargeInvoiceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Orderinvoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse res = new org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse() {{
+        org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse res = new org.openapis.openapi.models.operations.ContentOrderinvoicesCreaterefundinvoiceResponse(contentType, httpRes.statusCode()) {{
             orderinvoicesCreateRefundInvoiceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

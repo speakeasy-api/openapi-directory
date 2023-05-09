@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsDeleteInOrgRequest {
@@ -12,6 +13,7 @@ public class TeamsDeleteInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsDeleteInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,9 +24,14 @@ public class TeamsDeleteInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsDeleteInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsDeleteInOrgRequest(@JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

@@ -12,6 +12,7 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionId")
     public String gameSessionId;
+
     public DescribePlayerSessionsInput withGameSessionId(String gameSessionId) {
         this.gameSessionId = gameSessionId;
         return this;
@@ -20,6 +21,7 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribePlayerSessionsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,6 +30,7 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribePlayerSessionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public String playerId;
+
     public DescribePlayerSessionsInput withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -44,6 +48,7 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessionId")
     public String playerSessionId;
+
     public DescribePlayerSessionsInput withPlayerSessionId(String playerSessionId) {
         this.playerSessionId = playerSessionId;
         return this;
@@ -52,9 +57,11 @@ public class DescribePlayerSessionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSessionStatusFilter")
     public String playerSessionStatusFilter;
+
     public DescribePlayerSessionsInput withPlayerSessionStatusFilter(String playerSessionStatusFilter) {
         this.playerSessionStatusFilter = playerSessionStatusFilter;
         return this;
     }
     
+    public DescribePlayerSessionsInput(){}
 }

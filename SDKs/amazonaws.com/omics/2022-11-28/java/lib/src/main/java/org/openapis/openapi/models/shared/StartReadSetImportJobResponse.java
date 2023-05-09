@@ -19,6 +19,7 @@ public class StartReadSetImportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public StartReadSetImportJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class StartReadSetImportJobResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartReadSetImportJobResponse withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class StartReadSetImportJobResponse {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartReadSetImportJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -40,6 +43,7 @@ public class StartReadSetImportJobResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public StartReadSetImportJobResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -47,9 +51,17 @@ public class StartReadSetImportJobResponse {
     
     @JsonProperty("status")
     public ReadSetImportJobStatusEnum status;
+
     public StartReadSetImportJobResponse withStatus(ReadSetImportJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StartReadSetImportJobResponse(@JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("roleArn") String roleArn, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetImportJobStatusEnum status) {
+        this.creationTime = creationTime;
+        this.id = id;
+        this.roleArn = roleArn;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

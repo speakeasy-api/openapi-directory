@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetAuthorizersCacheResponse {
     
     public String contentType;
+
     public ResetAuthorizersCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetAuthorizersCacheResponse {
      */
     
     public Object notFoundException;
+
     public ResetAuthorizersCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -26,6 +29,7 @@ public class ResetAuthorizersCacheResponse {
     
     
     public Integer statusCode;
+
     public ResetAuthorizersCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ResetAuthorizersCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetAuthorizersCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ResetAuthorizersCacheResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ResetAuthorizersCacheResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ResetAuthorizersCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

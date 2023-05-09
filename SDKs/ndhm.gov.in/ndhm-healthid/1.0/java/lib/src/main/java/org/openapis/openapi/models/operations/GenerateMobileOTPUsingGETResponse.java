@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateMobileOTPUsingGETResponse {
     
     public String contentType;
+
     public GenerateMobileOTPUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GenerateMobileOTPUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GenerateMobileOTPUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GenerateMobileOTPUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateMobileOTPUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GenerateMobileOTPUsingGETResponse {
      */
     
     public String generateMobileOTPUsingGET200WildcardString;
+
     public GenerateMobileOTPUsingGETResponse withGenerateMobileOTPUsingGET200WildcardString(String generateMobileOTPUsingGET200WildcardString) {
         this.generateMobileOTPUsingGET200WildcardString = generateMobileOTPUsingGET200WildcardString;
         return this;
     }
     
+    public GenerateMobileOTPUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

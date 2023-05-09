@@ -3,30 +3,30 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetApplicationsStatusRequest;
 import org.openapis.openapi.models.operations.GetApplicationsStatusResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            GetApplicationsStatusRequest req = new GetApplicationsStatusRequest() {{
-                key = "corrupti";
-            }}            
+            GetApplicationsStatusRequest req = new GetApplicationsStatusRequest("provident");            
 
             GetApplicationsStatusResponse res = sdk.application.getApplicationsStatus(req);
 
-            if (res.applicationStatus.isPresent()) {
+            if (res.applicationStatus != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

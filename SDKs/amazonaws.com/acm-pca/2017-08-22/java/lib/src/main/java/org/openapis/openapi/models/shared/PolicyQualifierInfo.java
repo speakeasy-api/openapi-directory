@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PolicyQualifierInfo {
     @JsonProperty("PolicyQualifierId")
     public PolicyQualifierIdEnum policyQualifierId;
+
     public PolicyQualifierInfo withPolicyQualifierId(PolicyQualifierIdEnum policyQualifierId) {
         this.policyQualifierId = policyQualifierId;
         return this;
@@ -19,9 +20,14 @@ public class PolicyQualifierInfo {
     
     @JsonProperty("Qualifier")
     public Qualifier qualifier;
+
     public PolicyQualifierInfo withQualifier(Qualifier qualifier) {
         this.qualifier = qualifier;
         return this;
     }
     
+    public PolicyQualifierInfo(@JsonProperty("PolicyQualifierId") PolicyQualifierIdEnum policyQualifierId, @JsonProperty("Qualifier") Qualifier qualifier) {
+        this.policyQualifierId = policyQualifierId;
+        this.qualifier = qualifier;
+  }
 }

@@ -15,6 +15,7 @@ public class Userorderdetails {
      */
     @JsonProperty("affiliateId")
     public String affiliateId;
+
     public Userorderdetails withAffiliateId(String affiliateId) {
         this.affiliateId = affiliateId;
         return this;
@@ -25,6 +26,7 @@ public class Userorderdetails {
      */
     @JsonProperty("allowCancellation")
     public Boolean allowCancellation;
+
     public Userorderdetails withAllowCancellation(Boolean allowCancellation) {
         this.allowCancellation = allowCancellation;
         return this;
@@ -35,6 +37,7 @@ public class Userorderdetails {
      */
     @JsonProperty("allowEdition")
     public Boolean allowEdition;
+
     public Userorderdetails withAllowEdition(Boolean allowEdition) {
         this.allowEdition = allowEdition;
         return this;
@@ -45,6 +48,7 @@ public class Userorderdetails {
      */
     @JsonProperty("authorizedDate")
     public String authorizedDate;
+
     public Userorderdetails withAuthorizedDate(String authorizedDate) {
         this.authorizedDate = authorizedDate;
         return this;
@@ -55,6 +59,7 @@ public class Userorderdetails {
      */
     @JsonProperty("callCenterOperatorData")
     public String callCenterOperatorData;
+
     public Userorderdetails withCallCenterOperatorData(String callCenterOperatorData) {
         this.callCenterOperatorData = callCenterOperatorData;
         return this;
@@ -65,6 +70,7 @@ public class Userorderdetails {
      */
     @JsonProperty("cancelReason")
     public String cancelReason;
+
     public Userorderdetails withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -75,6 +81,7 @@ public class Userorderdetails {
      */
     @JsonProperty("cancellationData")
     public UserorderdetailsCancellationData cancellationData;
+
     public Userorderdetails withCancellationData(UserorderdetailsCancellationData cancellationData) {
         this.cancellationData = cancellationData;
         return this;
@@ -85,6 +92,7 @@ public class Userorderdetails {
      */
     @JsonProperty("changesAttachment")
     public ChangesAttachment changesAttachment;
+
     public Userorderdetails withChangesAttachment(ChangesAttachment changesAttachment) {
         this.changesAttachment = changesAttachment;
         return this;
@@ -95,6 +103,7 @@ public class Userorderdetails {
      */
     @JsonProperty("checkedInPickupPointId")
     public String checkedInPickupPointId;
+
     public Userorderdetails withCheckedInPickupPointId(String checkedInPickupPointId) {
         this.checkedInPickupPointId = checkedInPickupPointId;
         return this;
@@ -105,6 +114,7 @@ public class Userorderdetails {
      */
     @JsonProperty("clientPreferencesData")
     public UserorderdetailsClientPreferencesData clientPreferencesData;
+
     public Userorderdetails withClientPreferencesData(UserorderdetailsClientPreferencesData clientPreferencesData) {
         this.clientPreferencesData = clientPreferencesData;
         return this;
@@ -115,6 +125,7 @@ public class Userorderdetails {
      */
     @JsonProperty("clientProfileData")
     public ClientProfileData clientProfileData;
+
     public Userorderdetails withClientProfileData(ClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -125,6 +136,7 @@ public class Userorderdetails {
      */
     @JsonProperty("commercialConditionData")
     public String commercialConditionData;
+
     public Userorderdetails withCommercialConditionData(String commercialConditionData) {
         this.commercialConditionData = commercialConditionData;
         return this;
@@ -135,6 +147,7 @@ public class Userorderdetails {
      */
     @JsonProperty("creationDate")
     public String creationDate;
+
     public Userorderdetails withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -145,6 +158,7 @@ public class Userorderdetails {
      */
     @JsonProperty("customData")
     public String customData;
+
     public Userorderdetails withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -155,6 +169,7 @@ public class Userorderdetails {
      */
     @JsonProperty("followUpEmail")
     public String followUpEmail;
+
     public Userorderdetails withFollowUpEmail(String followUpEmail) {
         this.followUpEmail = followUpEmail;
         return this;
@@ -165,6 +180,7 @@ public class Userorderdetails {
      */
     @JsonProperty("giftRegistryData")
     public String giftRegistryData;
+
     public Userorderdetails withGiftRegistryData(String giftRegistryData) {
         this.giftRegistryData = giftRegistryData;
         return this;
@@ -175,6 +191,7 @@ public class Userorderdetails {
      */
     @JsonProperty("hostname")
     public String hostname;
+
     public Userorderdetails withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -185,6 +202,7 @@ public class Userorderdetails {
      */
     @JsonProperty("invoiceData")
     public java.util.Map<String, Object> invoiceData;
+
     public Userorderdetails withInvoiceData(java.util.Map<String, Object> invoiceData) {
         this.invoiceData = invoiceData;
         return this;
@@ -195,6 +213,7 @@ public class Userorderdetails {
      */
     @JsonProperty("invoicedDate")
     public String invoicedDate;
+
     public Userorderdetails withInvoicedDate(String invoicedDate) {
         this.invoicedDate = invoicedDate;
         return this;
@@ -205,6 +224,7 @@ public class Userorderdetails {
      */
     @JsonProperty("isCheckedIn")
     public Boolean isCheckedIn;
+
     public Userorderdetails withIsCheckedIn(Boolean isCheckedIn) {
         this.isCheckedIn = isCheckedIn;
         return this;
@@ -215,6 +235,7 @@ public class Userorderdetails {
      */
     @JsonProperty("isCompleted")
     public Boolean isCompleted;
+
     public Userorderdetails withIsCompleted(Boolean isCompleted) {
         this.isCompleted = isCompleted;
         return this;
@@ -225,6 +246,7 @@ public class Userorderdetails {
      */
     @JsonProperty("itemMetadata")
     public UserorderdetailsItemMetadata itemMetadata;
+
     public Userorderdetails withItemMetadata(UserorderdetailsItemMetadata itemMetadata) {
         this.itemMetadata = itemMetadata;
         return this;
@@ -235,6 +257,7 @@ public class Userorderdetails {
      */
     @JsonProperty("items")
     public Item[] items;
+
     public Userorderdetails withItems(Item[] items) {
         this.items = items;
         return this;
@@ -245,6 +268,7 @@ public class Userorderdetails {
      */
     @JsonProperty("lastChange")
     public String lastChange;
+
     public Userorderdetails withLastChange(String lastChange) {
         this.lastChange = lastChange;
         return this;
@@ -255,6 +279,7 @@ public class Userorderdetails {
      */
     @JsonProperty("lastMessage")
     public String lastMessage;
+
     public Userorderdetails withLastMessage(String lastMessage) {
         this.lastMessage = lastMessage;
         return this;
@@ -265,6 +290,7 @@ public class Userorderdetails {
      */
     @JsonProperty("marketingData")
     public UserorderdetailsMarketingData marketingData;
+
     public Userorderdetails withMarketingData(UserorderdetailsMarketingData marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -275,6 +301,7 @@ public class Userorderdetails {
      */
     @JsonProperty("marketplace")
     public Marketplace marketplace;
+
     public Userorderdetails withMarketplace(Marketplace marketplace) {
         this.marketplace = marketplace;
         return this;
@@ -285,6 +312,7 @@ public class Userorderdetails {
      */
     @JsonProperty("marketplaceItems")
     public String[] marketplaceItems;
+
     public Userorderdetails withMarketplaceItems(String[] marketplaceItems) {
         this.marketplaceItems = marketplaceItems;
         return this;
@@ -295,6 +323,7 @@ public class Userorderdetails {
      */
     @JsonProperty("marketplaceOrderId")
     public String marketplaceOrderId;
+
     public Userorderdetails withMarketplaceOrderId(String marketplaceOrderId) {
         this.marketplaceOrderId = marketplaceOrderId;
         return this;
@@ -305,6 +334,7 @@ public class Userorderdetails {
      */
     @JsonProperty("marketplaceServicesEndpoint")
     public String marketplaceServicesEndpoint;
+
     public Userorderdetails withMarketplaceServicesEndpoint(String marketplaceServicesEndpoint) {
         this.marketplaceServicesEndpoint = marketplaceServicesEndpoint;
         return this;
@@ -315,6 +345,7 @@ public class Userorderdetails {
      */
     @JsonProperty("merchantName")
     public String merchantName;
+
     public Userorderdetails withMerchantName(String merchantName) {
         this.merchantName = merchantName;
         return this;
@@ -331,6 +362,7 @@ public class Userorderdetails {
      */
     @JsonProperty("openTextField")
     public String openTextField;
+
     public Userorderdetails withOpenTextField(String openTextField) {
         this.openTextField = openTextField;
         return this;
@@ -341,6 +373,7 @@ public class Userorderdetails {
      */
     @JsonProperty("orderFormId")
     public String orderFormId;
+
     public Userorderdetails withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -351,6 +384,7 @@ public class Userorderdetails {
      */
     @JsonProperty("orderGroup")
     public String orderGroup;
+
     public Userorderdetails withOrderGroup(String orderGroup) {
         this.orderGroup = orderGroup;
         return this;
@@ -361,6 +395,7 @@ public class Userorderdetails {
      */
     @JsonProperty("orderId")
     public String orderId;
+
     public Userorderdetails withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -371,6 +406,7 @@ public class Userorderdetails {
      */
     @JsonProperty("origin")
     public String origin;
+
     public Userorderdetails withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -381,6 +417,7 @@ public class Userorderdetails {
      */
     @JsonProperty("packageAttachment")
     public PackageAttachment packageAttachment;
+
     public Userorderdetails withPackageAttachment(PackageAttachment packageAttachment) {
         this.packageAttachment = packageAttachment;
         return this;
@@ -391,6 +428,7 @@ public class Userorderdetails {
      */
     @JsonProperty("paymentData")
     public PaymentData paymentData;
+
     public Userorderdetails withPaymentData(PaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -401,6 +439,7 @@ public class Userorderdetails {
      */
     @JsonProperty("ratesAndBenefitsData")
     public RatesAndBenefitsData ratesAndBenefitsData;
+
     public Userorderdetails withRatesAndBenefitsData(RatesAndBenefitsData ratesAndBenefitsData) {
         this.ratesAndBenefitsData = ratesAndBenefitsData;
         return this;
@@ -411,6 +450,7 @@ public class Userorderdetails {
      */
     @JsonProperty("roundingError")
     public Integer roundingError;
+
     public Userorderdetails withRoundingError(Integer roundingError) {
         this.roundingError = roundingError;
         return this;
@@ -421,6 +461,7 @@ public class Userorderdetails {
      */
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public Userorderdetails withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -431,6 +472,7 @@ public class Userorderdetails {
      */
     @JsonProperty("sellerOrderId")
     public String sellerOrderId;
+
     public Userorderdetails withSellerOrderId(String sellerOrderId) {
         this.sellerOrderId = sellerOrderId;
         return this;
@@ -441,6 +483,7 @@ public class Userorderdetails {
      */
     @JsonProperty("sellers")
     public Seller[] sellers;
+
     public Userorderdetails withSellers(Seller[] sellers) {
         this.sellers = sellers;
         return this;
@@ -451,6 +494,7 @@ public class Userorderdetails {
      */
     @JsonProperty("sequence")
     public String sequence;
+
     public Userorderdetails withSequence(String sequence) {
         this.sequence = sequence;
         return this;
@@ -461,6 +505,7 @@ public class Userorderdetails {
      */
     @JsonProperty("shippingData")
     public ShippingData shippingData;
+
     public Userorderdetails withShippingData(ShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
@@ -471,6 +516,7 @@ public class Userorderdetails {
      */
     @JsonProperty("status")
     public String status;
+
     public Userorderdetails withStatus(String status) {
         this.status = status;
         return this;
@@ -481,6 +527,7 @@ public class Userorderdetails {
      */
     @JsonProperty("statusDescription")
     public String statusDescription;
+
     public Userorderdetails withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
@@ -491,6 +538,7 @@ public class Userorderdetails {
      */
     @JsonProperty("storePreferencesData")
     public StorePreferencesData storePreferencesData;
+
     public Userorderdetails withStorePreferencesData(StorePreferencesData storePreferencesData) {
         this.storePreferencesData = storePreferencesData;
         return this;
@@ -501,6 +549,7 @@ public class Userorderdetails {
      */
     @JsonProperty("subscriptionData")
     public UserorderdetailsSubscriptionData subscriptionData;
+
     public Userorderdetails withSubscriptionData(UserorderdetailsSubscriptionData subscriptionData) {
         this.subscriptionData = subscriptionData;
         return this;
@@ -511,6 +560,7 @@ public class Userorderdetails {
      */
     @JsonProperty("taxData")
     public UserorderdetailsTaxData taxData;
+
     public Userorderdetails withTaxData(UserorderdetailsTaxData taxData) {
         this.taxData = taxData;
         return this;
@@ -521,6 +571,7 @@ public class Userorderdetails {
      */
     @JsonProperty("totals")
     public Total[] totals;
+
     public Userorderdetails withTotals(Total[] totals) {
         this.totals = totals;
         return this;
@@ -531,9 +582,64 @@ public class Userorderdetails {
      */
     @JsonProperty("value")
     public Integer value;
+
     public Userorderdetails withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public Userorderdetails(@JsonProperty("affiliateId") String affiliateId, @JsonProperty("allowCancellation") Boolean allowCancellation, @JsonProperty("allowEdition") Boolean allowEdition, @JsonProperty("authorizedDate") String authorizedDate, @JsonProperty("callCenterOperatorData") String callCenterOperatorData, @JsonProperty("cancelReason") String cancelReason, @JsonProperty("cancellationData") UserorderdetailsCancellationData cancellationData, @JsonProperty("changesAttachment") ChangesAttachment changesAttachment, @JsonProperty("checkedInPickupPointId") String checkedInPickupPointId, @JsonProperty("clientPreferencesData") UserorderdetailsClientPreferencesData clientPreferencesData, @JsonProperty("clientProfileData") ClientProfileData clientProfileData, @JsonProperty("commercialConditionData") String commercialConditionData, @JsonProperty("creationDate") String creationDate, @JsonProperty("customData") String customData, @JsonProperty("followUpEmail") String followUpEmail, @JsonProperty("giftRegistryData") String giftRegistryData, @JsonProperty("hostname") String hostname, @JsonProperty("invoiceData") java.util.Map<String, Object> invoiceData, @JsonProperty("invoicedDate") String invoicedDate, @JsonProperty("isCheckedIn") Boolean isCheckedIn, @JsonProperty("isCompleted") Boolean isCompleted, @JsonProperty("itemMetadata") UserorderdetailsItemMetadata itemMetadata, @JsonProperty("items") Item[] items, @JsonProperty("lastChange") String lastChange, @JsonProperty("lastMessage") String lastMessage, @JsonProperty("marketingData") UserorderdetailsMarketingData marketingData, @JsonProperty("marketplace") Marketplace marketplace, @JsonProperty("marketplaceItems") String[] marketplaceItems, @JsonProperty("marketplaceOrderId") String marketplaceOrderId, @JsonProperty("marketplaceServicesEndpoint") String marketplaceServicesEndpoint, @JsonProperty("merchantName") String merchantName, @JsonProperty("openTextField") String openTextField, @JsonProperty("orderFormId") String orderFormId, @JsonProperty("orderGroup") String orderGroup, @JsonProperty("orderId") String orderId, @JsonProperty("origin") String origin, @JsonProperty("packageAttachment") PackageAttachment packageAttachment, @JsonProperty("paymentData") PaymentData paymentData, @JsonProperty("ratesAndBenefitsData") RatesAndBenefitsData ratesAndBenefitsData, @JsonProperty("roundingError") Integer roundingError, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("sellerOrderId") String sellerOrderId, @JsonProperty("sellers") Seller[] sellers, @JsonProperty("sequence") String sequence, @JsonProperty("shippingData") ShippingData shippingData, @JsonProperty("status") String status, @JsonProperty("statusDescription") String statusDescription, @JsonProperty("storePreferencesData") StorePreferencesData storePreferencesData, @JsonProperty("subscriptionData") UserorderdetailsSubscriptionData subscriptionData, @JsonProperty("taxData") UserorderdetailsTaxData taxData, @JsonProperty("totals") Total[] totals, @JsonProperty("value") Integer value) {
+        this.affiliateId = affiliateId;
+        this.allowCancellation = allowCancellation;
+        this.allowEdition = allowEdition;
+        this.authorizedDate = authorizedDate;
+        this.callCenterOperatorData = callCenterOperatorData;
+        this.cancelReason = cancelReason;
+        this.cancellationData = cancellationData;
+        this.changesAttachment = changesAttachment;
+        this.checkedInPickupPointId = checkedInPickupPointId;
+        this.clientPreferencesData = clientPreferencesData;
+        this.clientProfileData = clientProfileData;
+        this.commercialConditionData = commercialConditionData;
+        this.creationDate = creationDate;
+        this.customData = customData;
+        this.followUpEmail = followUpEmail;
+        this.giftRegistryData = giftRegistryData;
+        this.hostname = hostname;
+        this.invoiceData = invoiceData;
+        this.invoicedDate = invoicedDate;
+        this.isCheckedIn = isCheckedIn;
+        this.isCompleted = isCompleted;
+        this.itemMetadata = itemMetadata;
+        this.items = items;
+        this.lastChange = lastChange;
+        this.lastMessage = lastMessage;
+        this.marketingData = marketingData;
+        this.marketplace = marketplace;
+        this.marketplaceItems = marketplaceItems;
+        this.marketplaceOrderId = marketplaceOrderId;
+        this.marketplaceServicesEndpoint = marketplaceServicesEndpoint;
+        this.merchantName = merchantName;
+        this.openTextField = openTextField;
+        this.orderFormId = orderFormId;
+        this.orderGroup = orderGroup;
+        this.orderId = orderId;
+        this.origin = origin;
+        this.packageAttachment = packageAttachment;
+        this.paymentData = paymentData;
+        this.ratesAndBenefitsData = ratesAndBenefitsData;
+        this.roundingError = roundingError;
+        this.salesChannel = salesChannel;
+        this.sellerOrderId = sellerOrderId;
+        this.sellers = sellers;
+        this.sequence = sequence;
+        this.shippingData = shippingData;
+        this.status = status;
+        this.statusDescription = statusDescription;
+        this.storePreferencesData = storePreferencesData;
+        this.subscriptionData = subscriptionData;
+        this.taxData = taxData;
+        this.totals = totals;
+        this.value = value;
+  }
 }

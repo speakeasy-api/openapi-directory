@@ -15,6 +15,7 @@ public class MapRunFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public MapRunFailedEventDetails withCause(String cause) {
         this.cause = cause;
         return this;
@@ -23,9 +24,11 @@ public class MapRunFailedEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public MapRunFailedEventDetails withError(String error) {
         this.error = error;
         return this;
     }
     
+    public MapRunFailedEventDetails(){}
 }

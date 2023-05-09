@@ -15,6 +15,7 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.SavingsPlanFilter[] filters;
+
     public DescribeSavingsPlansRequestBody withFilters(org.openapis.openapi.models.shared.SavingsPlanFilter[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeSavingsPlansRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSavingsPlansRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -48,6 +51,7 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanArns")
     public String[] savingsPlanArns;
+
     public DescribeSavingsPlansRequestBody withSavingsPlanArns(String[] savingsPlanArns) {
         this.savingsPlanArns = savingsPlanArns;
         return this;
@@ -59,6 +63,7 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanIds")
     public String[] savingsPlanIds;
+
     public DescribeSavingsPlansRequestBody withSavingsPlanIds(String[] savingsPlanIds) {
         this.savingsPlanIds = savingsPlanIds;
         return this;
@@ -70,9 +75,11 @@ public class DescribeSavingsPlansRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public org.openapis.openapi.models.shared.SavingsPlanStateEnum[] states;
+
     public DescribeSavingsPlansRequestBody withStates(org.openapis.openapi.models.shared.SavingsPlanStateEnum[] states) {
         this.states = states;
         return this;
     }
     
+    public DescribeSavingsPlansRequestBody(){}
 }

@@ -15,9 +15,11 @@ public class PerformanceMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public PerformanceMetrics withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public PerformanceMetrics(){}
 }

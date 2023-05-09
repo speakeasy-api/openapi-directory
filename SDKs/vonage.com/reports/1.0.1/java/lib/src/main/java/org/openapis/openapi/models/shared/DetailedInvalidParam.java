@@ -15,6 +15,7 @@ public class DetailedInvalidParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DetailedInvalidParam withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class DetailedInvalidParam {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public DetailedInvalidParam withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public DetailedInvalidParam(){}
 }

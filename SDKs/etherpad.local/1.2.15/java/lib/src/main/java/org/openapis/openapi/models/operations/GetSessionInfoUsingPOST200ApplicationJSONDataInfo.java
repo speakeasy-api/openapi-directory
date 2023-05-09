@@ -12,6 +12,7 @@ public class GetSessionInfoUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorID")
     public String authorID;
+
     public GetSessionInfoUsingPOST200ApplicationJSONDataInfo withAuthorID(String authorID) {
         this.authorID = authorID;
         return this;
@@ -20,6 +21,7 @@ public class GetSessionInfoUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public String groupID;
+
     public GetSessionInfoUsingPOST200ApplicationJSONDataInfo withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
@@ -28,6 +30,7 @@ public class GetSessionInfoUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetSessionInfoUsingPOST200ApplicationJSONDataInfo withId(String id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class GetSessionInfoUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntil")
     public Long validUntil;
+
     public GetSessionInfoUsingPOST200ApplicationJSONDataInfo withValidUntil(Long validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public GetSessionInfoUsingPOST200ApplicationJSONDataInfo(){}
 }

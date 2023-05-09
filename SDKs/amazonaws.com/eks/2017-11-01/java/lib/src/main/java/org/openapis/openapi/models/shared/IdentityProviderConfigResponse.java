@@ -15,9 +15,11 @@ public class IdentityProviderConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidc")
     public OidcIdentityProviderConfig oidc;
+
     public IdentityProviderConfigResponse withOidc(OidcIdentityProviderConfig oidc) {
         this.oidc = oidc;
         return this;
     }
     
+    public IdentityProviderConfigResponse(){}
 }

@@ -15,6 +15,7 @@ public class QueryParameterTypeStructTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public QueryParameterTypeStructTypes withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +27,7 @@ public class QueryParameterTypeStructTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public QueryParameterTypeStructTypes withName(String name) {
         this.name = name;
         return this;
@@ -34,9 +36,11 @@ public class QueryParameterTypeStructTypes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public QueryParameterType type;
+
     public QueryParameterTypeStructTypes withType(QueryParameterType type) {
         this.type = type;
         return this;
     }
     
+    public QueryParameterTypeStructTypes(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRiskRequest {
@@ -12,9 +13,13 @@ public class GetRiskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
     public String firmwareHash;
+
     public GetRiskRequest withFirmwareHash(String firmwareHash) {
         this.firmwareHash = firmwareHash;
         return this;
     }
     
+    public GetRiskRequest(@JsonProperty("firmware_hash") String firmwareHash) {
+        this.firmwareHash = firmwareHash;
+  }
 }

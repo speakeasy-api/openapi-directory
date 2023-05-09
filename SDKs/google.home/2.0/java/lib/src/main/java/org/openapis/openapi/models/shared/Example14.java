@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example14 {
     @JsonProperty("display_string")
     public String displayString;
+
     public Example14 withDisplayString(String displayString) {
         this.displayString = displayString;
         return this;
@@ -16,6 +17,7 @@ public class Example14 {
     
     @JsonProperty("offset")
     public Integer offset;
+
     public Example14 withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -23,9 +25,15 @@ public class Example14 {
     
     @JsonProperty("timezone")
     public String timezone;
+
     public Example14 withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Example14(@JsonProperty("display_string") String displayString, @JsonProperty("offset") Integer offset, @JsonProperty("timezone") String timezone) {
+        this.displayString = displayString;
+        this.offset = offset;
+        this.timezone = timezone;
+  }
 }

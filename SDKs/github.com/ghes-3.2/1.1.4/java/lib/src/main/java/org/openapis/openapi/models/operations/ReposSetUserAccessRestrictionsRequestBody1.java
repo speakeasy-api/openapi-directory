@@ -12,9 +12,13 @@ public class ReposSetUserAccessRestrictionsRequestBody1 {
      */
     @JsonProperty("users")
     public String[] users;
+
     public ReposSetUserAccessRestrictionsRequestBody1 withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public ReposSetUserAccessRestrictionsRequestBody1(@JsonProperty("users") String[] users) {
+        this.users = users;
+  }
 }

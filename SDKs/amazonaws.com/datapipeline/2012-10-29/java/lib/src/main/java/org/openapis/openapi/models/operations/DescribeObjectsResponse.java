@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeObjectsResponse {
     
     public String contentType;
+
     public DescribeObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeObjectsOutput describeObjectsOutput;
+
     public DescribeObjectsResponse withDescribeObjectsOutput(org.openapis.openapi.models.shared.DescribeObjectsOutput describeObjectsOutput) {
         this.describeObjectsOutput = describeObjectsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeObjectsResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeObjectsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeObjectsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeObjectsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeObjectsResponse {
      */
     
     public Object pipelineDeletedException;
+
     public DescribeObjectsResponse withPipelineDeletedException(Object pipelineDeletedException) {
         this.pipelineDeletedException = pipelineDeletedException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeObjectsResponse {
      */
     
     public Object pipelineNotFoundException;
+
     public DescribeObjectsResponse withPipelineNotFoundException(Object pipelineNotFoundException) {
         this.pipelineNotFoundException = pipelineNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeObjectsResponse {
     
     
     public Integer statusCode;
+
     public DescribeObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeComputeEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEnvironments")
     public ComputeEnvironmentDetail[] computeEnvironments;
+
     public DescribeComputeEnvironmentsResponse withComputeEnvironments(ComputeEnvironmentDetail[] computeEnvironments) {
         this.computeEnvironments = computeEnvironments;
         return this;
@@ -23,9 +24,11 @@ public class DescribeComputeEnvironmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeComputeEnvironmentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeComputeEnvironmentsResponse(){}
 }

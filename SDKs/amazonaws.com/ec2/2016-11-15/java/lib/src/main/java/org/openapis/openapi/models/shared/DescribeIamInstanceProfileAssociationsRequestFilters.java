@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIamInstanceProfileAssociationsRequestFilters {
     
     public String name;
+
     public DescribeIamInstanceProfileAssociationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIamInstanceProfileAssociationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeIamInstanceProfileAssociationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeIamInstanceProfileAssociationsRequestFilters(){}
 }

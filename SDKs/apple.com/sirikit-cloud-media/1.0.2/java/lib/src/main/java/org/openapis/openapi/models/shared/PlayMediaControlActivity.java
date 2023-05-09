@@ -12,6 +12,7 @@ public class PlayMediaControlActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playElapsed")
     public Long playElapsed;
+
     public PlayMediaControlActivity withPlayElapsed(Long playElapsed) {
         this.playElapsed = playElapsed;
         return this;
@@ -20,6 +21,7 @@ public class PlayMediaControlActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playElapsedInterval")
     public Long playElapsedInterval;
+
     public PlayMediaControlActivity withPlayElapsedInterval(Long playElapsedInterval) {
         this.playElapsedInterval = playElapsedInterval;
         return this;
@@ -28,9 +30,11 @@ public class PlayMediaControlActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playPaused")
     public Long playPaused;
+
     public PlayMediaControlActivity withPlayPaused(Long playPaused) {
         this.playPaused = playPaused;
         return this;
     }
     
+    public PlayMediaControlActivity(){}
 }

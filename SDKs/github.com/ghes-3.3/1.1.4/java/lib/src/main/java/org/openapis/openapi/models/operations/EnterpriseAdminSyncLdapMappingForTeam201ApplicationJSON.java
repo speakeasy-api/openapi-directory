@@ -15,9 +15,11 @@ public class EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EnterpriseAdminSyncLdapMappingForTeam201ApplicationJSON(){}
 }

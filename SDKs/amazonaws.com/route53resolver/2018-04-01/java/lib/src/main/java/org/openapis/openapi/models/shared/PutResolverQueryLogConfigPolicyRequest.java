@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutResolverQueryLogConfigPolicyRequest {
     @JsonProperty("Arn")
     public String arn;
+
     public PutResolverQueryLogConfigPolicyRequest withArn(String arn) {
         this.arn = arn;
         return this;
@@ -16,9 +17,14 @@ public class PutResolverQueryLogConfigPolicyRequest {
     
     @JsonProperty("ResolverQueryLogConfigPolicy")
     public String resolverQueryLogConfigPolicy;
+
     public PutResolverQueryLogConfigPolicyRequest withResolverQueryLogConfigPolicy(String resolverQueryLogConfigPolicy) {
         this.resolverQueryLogConfigPolicy = resolverQueryLogConfigPolicy;
         return this;
     }
     
+    public PutResolverQueryLogConfigPolicyRequest(@JsonProperty("Arn") String arn, @JsonProperty("ResolverQueryLogConfigPolicy") String resolverQueryLogConfigPolicy) {
+        this.arn = arn;
+        this.resolverQueryLogConfigPolicy = resolverQueryLogConfigPolicy;
+  }
 }

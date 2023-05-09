@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDataCellsFilterResponse {
@@ -12,6 +13,7 @@ public class ListDataCellsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDataCellsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListDataCellsFilterResponse {
     
     
     public String contentType;
+
     public ListDataCellsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListDataCellsFilterResponse {
      */
     
     public Object internalServiceException;
+
     public ListDataCellsFilterResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListDataCellsFilterResponse {
      */
     
     public Object invalidInputException;
+
     public ListDataCellsFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListDataCellsFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDataCellsFilterResponse listDataCellsFilterResponse;
+
     public ListDataCellsFilterResponse withListDataCellsFilterResponse(org.openapis.openapi.models.shared.ListDataCellsFilterResponse listDataCellsFilterResponse) {
         this.listDataCellsFilterResponse = listDataCellsFilterResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListDataCellsFilterResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListDataCellsFilterResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class ListDataCellsFilterResponse {
     
     
     public Integer statusCode;
+
     public ListDataCellsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListDataCellsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDataCellsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDataCellsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

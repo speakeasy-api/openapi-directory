@@ -15,6 +15,7 @@ public class TagStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public TagStreamRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -26,6 +27,7 @@ public class TagStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public TagStreamRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
@@ -36,9 +38,13 @@ public class TagStreamRequestBody {
      */
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public TagStreamRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagStreamRequestBody(@JsonProperty("Tags") java.util.Map<String, String> tags) {
+        this.tags = tags;
+  }
 }

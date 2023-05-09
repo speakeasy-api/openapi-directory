@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SettleGiftCardTransactionRequest {
@@ -12,6 +13,7 @@ public class SettleGiftCardTransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SettleGiftCardTransactionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SettleGiftCardTransactionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SettleGiftCardTransactionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SettleGiftCardTransactionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SettleGiftCardTransactionRequest settleGiftCardTransactionRequest;
+
     public SettleGiftCardTransactionRequest withSettleGiftCardTransactionRequest(org.openapis.openapi.models.shared.SettleGiftCardTransactionRequest settleGiftCardTransactionRequest) {
         this.settleGiftCardTransactionRequest = settleGiftCardTransactionRequest;
         return this;
@@ -36,6 +40,7 @@ public class SettleGiftCardTransactionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
     public String giftCardID;
+
     public SettleGiftCardTransactionRequest withGiftCardID(String giftCardID) {
         this.giftCardID = giftCardID;
         return this;
@@ -43,9 +48,17 @@ public class SettleGiftCardTransactionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionID")
     public String transactionID;
+
     public SettleGiftCardTransactionRequest withTransactionID(String transactionID) {
         this.transactionID = transactionID;
         return this;
     }
     
+    public SettleGiftCardTransactionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SettleGiftCardTransactionRequest") org.openapis.openapi.models.shared.SettleGiftCardTransactionRequest settleGiftCardTransactionRequest, @JsonProperty("giftCardID") String giftCardID, @JsonProperty("transactionID") String transactionID) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.settleGiftCardTransactionRequest = settleGiftCardTransactionRequest;
+        this.giftCardID = giftCardID;
+        this.transactionID = transactionID;
+  }
 }

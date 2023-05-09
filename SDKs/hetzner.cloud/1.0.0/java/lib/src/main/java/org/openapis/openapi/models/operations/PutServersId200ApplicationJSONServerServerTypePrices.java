@@ -12,6 +12,7 @@ public class PutServersId200ApplicationJSONServerServerTypePrices {
      */
     @JsonProperty("location")
     public String location;
+
     public PutServersId200ApplicationJSONServerServerTypePrices withLocation(String location) {
         this.location = location;
         return this;
@@ -22,6 +23,7 @@ public class PutServersId200ApplicationJSONServerServerTypePrices {
      */
     @JsonProperty("price_hourly")
     public PutServersId200ApplicationJSONServerServerTypePricesPriceHourly priceHourly;
+
     public PutServersId200ApplicationJSONServerServerTypePrices withPriceHourly(PutServersId200ApplicationJSONServerServerTypePricesPriceHourly priceHourly) {
         this.priceHourly = priceHourly;
         return this;
@@ -32,9 +34,15 @@ public class PutServersId200ApplicationJSONServerServerTypePrices {
      */
     @JsonProperty("price_monthly")
     public PutServersId200ApplicationJSONServerServerTypePricesPriceMonthly priceMonthly;
+
     public PutServersId200ApplicationJSONServerServerTypePrices withPriceMonthly(PutServersId200ApplicationJSONServerServerTypePricesPriceMonthly priceMonthly) {
         this.priceMonthly = priceMonthly;
         return this;
     }
     
+    public PutServersId200ApplicationJSONServerServerTypePrices(@JsonProperty("location") String location, @JsonProperty("price_hourly") PutServersId200ApplicationJSONServerServerTypePricesPriceHourly priceHourly, @JsonProperty("price_monthly") PutServersId200ApplicationJSONServerServerTypePricesPriceMonthly priceMonthly) {
+        this.location = location;
+        this.priceHourly = priceHourly;
+        this.priceMonthly = priceMonthly;
+  }
 }

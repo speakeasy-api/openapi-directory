@@ -18,6 +18,7 @@ public class AutoscalingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public AutoscalingSettingsAlgorithmEnum algorithm;
+
     public AutoscalingSettings withAlgorithm(AutoscalingSettingsAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,9 +30,11 @@ public class AutoscalingSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxNumWorkers")
     public Integer maxNumWorkers;
+
     public AutoscalingSettings withMaxNumWorkers(Integer maxNumWorkers) {
         this.maxNumWorkers = maxNumWorkers;
         return this;
     }
     
+    public AutoscalingSettings(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExplainabilityExportResponse {
     
     public String contentType;
+
     public CreateExplainabilityExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateExplainabilityExportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExplainabilityExportResponse createExplainabilityExportResponse;
+
     public CreateExplainabilityExportResponse withCreateExplainabilityExportResponse(org.openapis.openapi.models.shared.CreateExplainabilityExportResponse createExplainabilityExportResponse) {
         this.createExplainabilityExportResponse = createExplainabilityExportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateExplainabilityExportResponse {
      */
     
     public Object invalidInputException;
+
     public CreateExplainabilityExportResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateExplainabilityExportResponse {
      */
     
     public Object limitExceededException;
+
     public CreateExplainabilityExportResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExplainabilityExportResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateExplainabilityExportResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExplainabilityExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExplainabilityExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateExplainabilityExportResponse {
     
     
     public Integer statusCode;
+
     public CreateExplainabilityExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateExplainabilityExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExplainabilityExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateExplainabilityExportResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateExplainabilityExportResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateExplainabilityExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ContainerVersion withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInVariable")
     public BuiltInVariable[] builtInVariable;
+
     public ContainerVersion withBuiltInVariable(BuiltInVariable[] builtInVariable) {
         this.builtInVariable = builtInVariable;
         return this;
@@ -40,6 +42,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public Client[] client;
+
     public ContainerVersion withClient(Client[] client) {
         this.client = client;
         return this;
@@ -51,6 +54,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public Container container;
+
     public ContainerVersion withContainer(Container container) {
         this.container = container;
         return this;
@@ -62,6 +66,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public ContainerVersion withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -73,6 +78,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerVersionId")
     public String containerVersionId;
+
     public ContainerVersion withContainerVersionId(String containerVersionId) {
         this.containerVersionId = containerVersionId;
         return this;
@@ -84,6 +90,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customTemplate")
     public CustomTemplate[] customTemplate;
+
     public ContainerVersion withCustomTemplate(CustomTemplate[] customTemplate) {
         this.customTemplate = customTemplate;
         return this;
@@ -95,6 +102,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public ContainerVersion withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -106,6 +114,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ContainerVersion withDescription(String description) {
         this.description = description;
         return this;
@@ -117,6 +126,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public ContainerVersion withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -128,6 +138,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folder")
     public Folder[] folder;
+
     public ContainerVersion withFolder(Folder[] folder) {
         this.folder = folder;
         return this;
@@ -139,6 +150,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtagConfig")
     public GtagConfig[] gtagConfig;
+
     public ContainerVersion withGtagConfig(GtagConfig[] gtagConfig) {
         this.gtagConfig = gtagConfig;
         return this;
@@ -150,6 +162,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContainerVersion withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public ContainerVersion withPath(String path) {
         this.path = path;
         return this;
@@ -172,6 +186,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public Tag[] tag;
+
     public ContainerVersion withTag(Tag[] tag) {
         this.tag = tag;
         return this;
@@ -183,6 +198,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagManagerUrl")
     public String tagManagerUrl;
+
     public ContainerVersion withTagManagerUrl(String tagManagerUrl) {
         this.tagManagerUrl = tagManagerUrl;
         return this;
@@ -194,6 +210,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public Trigger[] trigger;
+
     public ContainerVersion withTrigger(Trigger[] trigger) {
         this.trigger = trigger;
         return this;
@@ -205,6 +222,7 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variable")
     public Variable[] variable;
+
     public ContainerVersion withVariable(Variable[] variable) {
         this.variable = variable;
         return this;
@@ -216,9 +234,11 @@ public class ContainerVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public Zone[] zone;
+
     public ContainerVersion withZone(Zone[] zone) {
         this.zone = zone;
         return this;
     }
     
+    public ContainerVersion(){}
 }

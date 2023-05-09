@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateDatasetRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDatasetRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -18,6 +19,7 @@ public class CreateDatasetRequest {
     
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public CreateDatasetRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -26,6 +28,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetSchema")
     public DatasetSchema datasetSchema;
+
     public CreateDatasetRequest withDatasetSchema(DatasetSchema datasetSchema) {
         this.datasetSchema = datasetSchema;
         return this;
@@ -34,6 +37,7 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideKmsKeyId")
     public String serverSideKmsKeyId;
+
     public CreateDatasetRequest withServerSideKmsKeyId(String serverSideKmsKeyId) {
         this.serverSideKmsKeyId = serverSideKmsKeyId;
         return this;
@@ -42,9 +46,14 @@ public class CreateDatasetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDatasetRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDatasetRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DatasetName") String datasetName) {
+        this.clientToken = clientToken;
+        this.datasetName = datasetName;
+  }
 }

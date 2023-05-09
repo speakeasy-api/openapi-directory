@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMailboxPermissionsResponse {
     
     public String contentType;
+
     public ListMailboxPermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMailboxPermissionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListMailboxPermissionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListMailboxPermissionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMailboxPermissionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListMailboxPermissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMailboxPermissionsResponse listMailboxPermissionsResponse;
+
     public ListMailboxPermissionsResponse withListMailboxPermissionsResponse(org.openapis.openapi.models.shared.ListMailboxPermissionsResponse listMailboxPermissionsResponse) {
         this.listMailboxPermissionsResponse = listMailboxPermissionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListMailboxPermissionsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListMailboxPermissionsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListMailboxPermissionsResponse {
      */
     
     public Object organizationStateException;
+
     public ListMailboxPermissionsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class ListMailboxPermissionsResponse {
     
     
     public Integer statusCode;
+
     public ListMailboxPermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListMailboxPermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMailboxPermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMailboxPermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class DetectedMetricSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3SourceConfig")
     public DetectedS3SourceConfig s3SourceConfig;
+
     public DetectedMetricSource withS3SourceConfig(DetectedS3SourceConfig s3SourceConfig) {
         this.s3SourceConfig = s3SourceConfig;
         return this;
     }
     
+    public DetectedMetricSource(){}
 }

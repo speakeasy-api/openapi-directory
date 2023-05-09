@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateBucketAccessKeyRequest {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public CreateBucketAccessKeyRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
     }
     
+    public CreateBucketAccessKeyRequest(@JsonProperty("bucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

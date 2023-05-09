@@ -15,9 +15,13 @@ public class Recommendation {
      */
     @JsonProperty("id")
     public String id;
+
     public Recommendation withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Recommendation(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

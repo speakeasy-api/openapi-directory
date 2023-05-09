@@ -15,6 +15,7 @@ public class DropDuplicates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Columns")
     public String[][] columns;
+
     public DropDuplicates withColumns(String[][] columns) {
         this.columns = columns;
         return this;
@@ -22,6 +23,7 @@ public class DropDuplicates {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public DropDuplicates withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -29,9 +31,14 @@ public class DropDuplicates {
     
     @JsonProperty("Name")
     public String name;
+
     public DropDuplicates withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DropDuplicates(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

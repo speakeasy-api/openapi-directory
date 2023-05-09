@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RebootInstanceResponse {
     
     public String contentType;
+
     public RebootInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RebootInstanceResponse {
     
     
     public Integer statusCode;
+
     public RebootInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RebootInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RebootInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RebootInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RebootInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class RebootInstanceResponse {
      */
     
     public Object validationException;
+
     public RebootInstanceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RebootInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

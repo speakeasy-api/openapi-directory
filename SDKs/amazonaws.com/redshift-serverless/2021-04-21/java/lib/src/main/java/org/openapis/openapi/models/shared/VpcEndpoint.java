@@ -15,6 +15,7 @@ public class VpcEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkInterfaces")
     public NetworkInterface[] networkInterfaces;
+
     public VpcEndpoint withNetworkInterfaces(NetworkInterface[] networkInterfaces) {
         this.networkInterfaces = networkInterfaces;
         return this;
@@ -23,6 +24,7 @@ public class VpcEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcEndpointId")
     public String vpcEndpointId;
+
     public VpcEndpoint withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -31,9 +33,11 @@ public class VpcEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcId")
     public String vpcId;
+
     public VpcEndpoint withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public VpcEndpoint(){}
 }

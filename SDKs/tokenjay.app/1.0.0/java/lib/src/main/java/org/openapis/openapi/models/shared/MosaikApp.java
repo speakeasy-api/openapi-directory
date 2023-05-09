@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MosaikApp {
     
     public Action[] actions;
+
     public MosaikApp withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -19,6 +20,7 @@ public class MosaikApp {
     
     
     public MosaikManifest manifest;
+
     public MosaikApp withManifest(MosaikManifest manifest) {
         this.manifest = manifest;
         return this;
@@ -26,9 +28,11 @@ public class MosaikApp {
     
     
     public ViewElement view;
+
     public MosaikApp withView(ViewElement view) {
         this.view = view;
         return this;
     }
     
+    public MosaikApp(){}
 }

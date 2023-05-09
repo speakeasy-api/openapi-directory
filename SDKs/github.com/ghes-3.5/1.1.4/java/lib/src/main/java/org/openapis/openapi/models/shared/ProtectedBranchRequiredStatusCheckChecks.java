@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchRequiredStatusCheckChecks {
     @JsonProperty("app_id")
     public Long appId;
+
     public ProtectedBranchRequiredStatusCheckChecks withAppId(Long appId) {
         this.appId = appId;
         return this;
@@ -16,9 +17,14 @@ public class ProtectedBranchRequiredStatusCheckChecks {
     
     @JsonProperty("context")
     public String context;
+
     public ProtectedBranchRequiredStatusCheckChecks withContext(String context) {
         this.context = context;
         return this;
     }
     
+    public ProtectedBranchRequiredStatusCheckChecks(@JsonProperty("app_id") Long appId, @JsonProperty("context") String context) {
+        this.appId = appId;
+        this.context = context;
+  }
 }

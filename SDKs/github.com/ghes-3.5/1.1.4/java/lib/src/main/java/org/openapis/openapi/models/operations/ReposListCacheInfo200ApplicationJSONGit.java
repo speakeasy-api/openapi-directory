@@ -16,6 +16,7 @@ public class ReposListCacheInfo200ApplicationJSONGit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_sync")
     public OffsetDateTime lastSync;
+
     public ReposListCacheInfo200ApplicationJSONGit withLastSync(OffsetDateTime lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -23,9 +24,14 @@ public class ReposListCacheInfo200ApplicationJSONGit {
     
     @JsonProperty("sync_status")
     public ReposListCacheInfo200ApplicationJSONGitSyncStatusEnum syncStatus;
+
     public ReposListCacheInfo200ApplicationJSONGit withSyncStatus(ReposListCacheInfo200ApplicationJSONGitSyncStatusEnum syncStatus) {
         this.syncStatus = syncStatus;
         return this;
     }
     
+    public ReposListCacheInfo200ApplicationJSONGit(@JsonProperty("last_sync") OffsetDateTime lastSync, @JsonProperty("sync_status") ReposListCacheInfo200ApplicationJSONGitSyncStatusEnum syncStatus) {
+        this.lastSync = lastSync;
+        this.syncStatus = syncStatus;
+  }
 }

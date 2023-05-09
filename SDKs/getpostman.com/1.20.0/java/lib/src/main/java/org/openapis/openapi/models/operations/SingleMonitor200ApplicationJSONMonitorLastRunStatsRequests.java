@@ -12,9 +12,11 @@ public class SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public SingleMonitor200ApplicationJSONMonitorLastRunStatsRequests(){}
 }

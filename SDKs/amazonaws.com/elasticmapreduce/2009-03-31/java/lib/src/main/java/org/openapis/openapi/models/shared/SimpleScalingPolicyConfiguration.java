@@ -15,6 +15,7 @@ public class SimpleScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdjustmentType")
     public AdjustmentTypeEnum adjustmentType;
+
     public SimpleScalingPolicyConfiguration withAdjustmentType(AdjustmentTypeEnum adjustmentType) {
         this.adjustmentType = adjustmentType;
         return this;
@@ -23,6 +24,7 @@ public class SimpleScalingPolicyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoolDown")
     public Long coolDown;
+
     public SimpleScalingPolicyConfiguration withCoolDown(Long coolDown) {
         this.coolDown = coolDown;
         return this;
@@ -30,9 +32,13 @@ public class SimpleScalingPolicyConfiguration {
     
     @JsonProperty("ScalingAdjustment")
     public Long scalingAdjustment;
+
     public SimpleScalingPolicyConfiguration withScalingAdjustment(Long scalingAdjustment) {
         this.scalingAdjustment = scalingAdjustment;
         return this;
     }
     
+    public SimpleScalingPolicyConfiguration(@JsonProperty("ScalingAdjustment") Long scalingAdjustment) {
+        this.scalingAdjustment = scalingAdjustment;
+  }
 }

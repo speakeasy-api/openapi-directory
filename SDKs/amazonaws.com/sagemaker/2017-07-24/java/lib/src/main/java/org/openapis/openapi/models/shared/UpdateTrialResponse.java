@@ -15,9 +15,11 @@ public class UpdateTrialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialArn")
     public String trialArn;
+
     public UpdateTrialResponse withTrialArn(String trialArn) {
         this.trialArn = trialArn;
         return this;
     }
     
+    public UpdateTrialResponse(){}
 }

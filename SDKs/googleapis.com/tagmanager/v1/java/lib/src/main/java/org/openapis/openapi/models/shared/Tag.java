@@ -18,6 +18,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Tag withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockingRuleId")
     public String[] blockingRuleId;
+
     public Tag withBlockingRuleId(String[] blockingRuleId) {
         this.blockingRuleId = blockingRuleId;
         return this;
@@ -40,6 +42,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockingTriggerId")
     public String[] blockingTriggerId;
+
     public Tag withBlockingTriggerId(String[] blockingTriggerId) {
         this.blockingTriggerId = blockingTriggerId;
         return this;
@@ -51,6 +54,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Tag withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -62,6 +66,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Tag withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firingRuleId")
     public String[] firingRuleId;
+
     public Tag withFiringRuleId(String[] firingRuleId) {
         this.firingRuleId = firingRuleId;
         return this;
@@ -84,6 +90,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firingTriggerId")
     public String[] firingTriggerId;
+
     public Tag withFiringTriggerId(String[] firingTriggerId) {
         this.firingTriggerId = firingTriggerId;
         return this;
@@ -95,6 +102,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveOnly")
     public Boolean liveOnly;
+
     public Tag withLiveOnly(Boolean liveOnly) {
         this.liveOnly = liveOnly;
         return this;
@@ -106,6 +114,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Tag withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -128,6 +138,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public Parameter[] parameter;
+
     public Tag withParameter(Parameter[] parameter) {
         this.parameter = parameter;
         return this;
@@ -139,6 +150,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentFolderId")
     public String parentFolderId;
+
     public Tag withParentFolderId(String parentFolderId) {
         this.parentFolderId = parentFolderId;
         return this;
@@ -150,6 +162,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paused")
     public Boolean paused;
+
     public Tag withPaused(Boolean paused) {
         this.paused = paused;
         return this;
@@ -161,6 +174,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Parameter priority;
+
     public Tag withPriority(Parameter priority) {
         this.priority = priority;
         return this;
@@ -172,6 +186,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleEndMs")
     public String scheduleEndMs;
+
     public Tag withScheduleEndMs(String scheduleEndMs) {
         this.scheduleEndMs = scheduleEndMs;
         return this;
@@ -183,6 +198,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleStartMs")
     public String scheduleStartMs;
+
     public Tag withScheduleStartMs(String scheduleStartMs) {
         this.scheduleStartMs = scheduleStartMs;
         return this;
@@ -194,6 +210,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setupTag")
     public SetupTag[] setupTag;
+
     public Tag withSetupTag(SetupTag[] setupTag) {
         this.setupTag = setupTag;
         return this;
@@ -205,6 +222,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagFiringOption")
     public TagTagFiringOptionEnum tagFiringOption;
+
     public Tag withTagFiringOption(TagTagFiringOptionEnum tagFiringOption) {
         this.tagFiringOption = tagFiringOption;
         return this;
@@ -216,6 +234,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public Tag withTagId(String tagId) {
         this.tagId = tagId;
         return this;
@@ -227,6 +246,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teardownTag")
     public TeardownTag[] teardownTag;
+
     public Tag withTeardownTag(TeardownTag[] teardownTag) {
         this.teardownTag = teardownTag;
         return this;
@@ -238,9 +258,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Tag withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Tag(){}
 }

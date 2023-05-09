@@ -15,6 +15,7 @@ public class ServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingConfiguration")
     public AutoScalingConfigurationEnum autoScalingConfiguration;
+
     public ServiceConfiguration withAutoScalingConfiguration(AutoScalingConfigurationEnum autoScalingConfiguration) {
         this.autoScalingConfiguration = autoScalingConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerConfigurations")
     public ContainerConfiguration[] containerConfigurations;
+
     public ServiceConfiguration withContainerConfigurations(ContainerConfiguration[] containerConfigurations) {
         this.containerConfigurations = containerConfigurations;
         return this;
@@ -31,6 +33,7 @@ public class ServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpu")
     public Long cpu;
+
     public ServiceConfiguration withCpu(Long cpu) {
         this.cpu = cpu;
         return this;
@@ -39,6 +42,7 @@ public class ServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public ServiceConfiguration withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -47,9 +51,11 @@ public class ServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskDefinitionArn")
     public String taskDefinitionArn;
+
     public ServiceConfiguration withTaskDefinitionArn(String taskDefinitionArn) {
         this.taskDefinitionArn = taskDefinitionArn;
         return this;
     }
     
+    public ServiceConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class ContainerServiceStateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ContainerServiceStateDetailCodeEnum code;
+
     public ContainerServiceStateDetail withCode(ContainerServiceStateDetailCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ContainerServiceStateDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ContainerServiceStateDetail withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ContainerServiceStateDetail(){}
 }

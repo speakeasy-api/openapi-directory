@@ -18,6 +18,7 @@ public class IdentityServiceMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public IdentityServiceMembershipState withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -29,6 +30,7 @@ public class IdentityServiceMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installedVersion")
     public String installedVersion;
+
     public IdentityServiceMembershipState withInstalledVersion(String installedVersion) {
         this.installedVersion = installedVersion;
         return this;
@@ -40,6 +42,7 @@ public class IdentityServiceMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberConfig")
     public IdentityServiceMembershipSpec memberConfig;
+
     public IdentityServiceMembershipState withMemberConfig(IdentityServiceMembershipSpec memberConfig) {
         this.memberConfig = memberConfig;
         return this;
@@ -51,9 +54,11 @@ public class IdentityServiceMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public IdentityServiceMembershipStateStateEnum state;
+
     public IdentityServiceMembershipState withState(IdentityServiceMembershipStateStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public IdentityServiceMembershipState(){}
 }

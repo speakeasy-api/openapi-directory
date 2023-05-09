@@ -15,9 +15,11 @@ public class ResourceGroupReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public ResourceGroupReference withGroup(String group) {
         this.group = group;
         return this;
     }
     
+    public ResourceGroupReference(){}
 }

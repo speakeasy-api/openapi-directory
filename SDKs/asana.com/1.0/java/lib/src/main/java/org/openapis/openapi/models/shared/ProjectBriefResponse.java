@@ -18,6 +18,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectBriefResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public ProjectBriefResponse withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -40,6 +42,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permalink_url")
     public String permalinkUrl;
+
     public ProjectBriefResponse withPermalinkUrl(String permalinkUrl) {
         this.permalinkUrl = permalinkUrl;
         return this;
@@ -48,6 +51,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBriefResponseProject project;
+
     public ProjectBriefResponse withProject(ProjectBriefResponseProject project) {
         this.project = project;
         return this;
@@ -59,6 +63,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectBriefResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -70,6 +75,7 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ProjectBriefResponse withText(String text) {
         this.text = text;
         return this;
@@ -81,9 +87,11 @@ public class ProjectBriefResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectBriefResponse withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectBriefResponse(){}
 }

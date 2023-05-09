@@ -12,9 +12,11 @@ public class GetContinuousProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetContinuousProjectsTypeEnum type;
+
     public GetContinuousProjectsRequest withType(GetContinuousProjectsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetContinuousProjectsRequest(){}
 }

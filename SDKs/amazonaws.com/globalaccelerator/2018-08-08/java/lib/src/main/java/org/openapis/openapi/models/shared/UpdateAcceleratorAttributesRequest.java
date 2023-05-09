@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAcceleratorAttributesRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public UpdateAcceleratorAttributesRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsEnabled")
     public Boolean flowLogsEnabled;
+
     public UpdateAcceleratorAttributesRequest withFlowLogsEnabled(Boolean flowLogsEnabled) {
         this.flowLogsEnabled = flowLogsEnabled;
         return this;
@@ -27,6 +29,7 @@ public class UpdateAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Bucket")
     public String flowLogsS3Bucket;
+
     public UpdateAcceleratorAttributesRequest withFlowLogsS3Bucket(String flowLogsS3Bucket) {
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         return this;
@@ -35,9 +38,13 @@ public class UpdateAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Prefix")
     public String flowLogsS3Prefix;
+
     public UpdateAcceleratorAttributesRequest withFlowLogsS3Prefix(String flowLogsS3Prefix) {
         this.flowLogsS3Prefix = flowLogsS3Prefix;
         return this;
     }
     
+    public UpdateAcceleratorAttributesRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

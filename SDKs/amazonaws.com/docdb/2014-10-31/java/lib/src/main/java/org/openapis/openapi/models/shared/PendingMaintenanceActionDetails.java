@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class PendingMaintenanceActionDetails {
     
     public String action;
+
     public PendingMaintenanceActionDetails withAction(String action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class PendingMaintenanceActionDetails {
     
     
     public OffsetDateTime autoAppliedAfterDate;
+
     public PendingMaintenanceActionDetails withAutoAppliedAfterDate(OffsetDateTime autoAppliedAfterDate) {
         this.autoAppliedAfterDate = autoAppliedAfterDate;
         return this;
@@ -26,6 +28,7 @@ public class PendingMaintenanceActionDetails {
     
     
     public OffsetDateTime currentApplyDate;
+
     public PendingMaintenanceActionDetails withCurrentApplyDate(OffsetDateTime currentApplyDate) {
         this.currentApplyDate = currentApplyDate;
         return this;
@@ -33,6 +36,7 @@ public class PendingMaintenanceActionDetails {
     
     
     public String description;
+
     public PendingMaintenanceActionDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class PendingMaintenanceActionDetails {
     
     
     public OffsetDateTime forcedApplyDate;
+
     public PendingMaintenanceActionDetails withForcedApplyDate(OffsetDateTime forcedApplyDate) {
         this.forcedApplyDate = forcedApplyDate;
         return this;
@@ -47,9 +52,11 @@ public class PendingMaintenanceActionDetails {
     
     
     public String optInStatus;
+
     public PendingMaintenanceActionDetails withOptInStatus(String optInStatus) {
         this.optInStatus = optInStatus;
         return this;
     }
     
+    public PendingMaintenanceActionDetails(){}
 }

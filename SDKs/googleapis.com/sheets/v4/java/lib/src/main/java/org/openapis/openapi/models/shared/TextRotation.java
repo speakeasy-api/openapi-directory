@@ -18,6 +18,7 @@ public class TextRotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Integer angle;
+
     public TextRotation withAngle(Integer angle) {
         this.angle = angle;
         return this;
@@ -29,9 +30,11 @@ public class TextRotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertical")
     public Boolean vertical;
+
     public TextRotation withVertical(Boolean vertical) {
         this.vertical = vertical;
         return this;
     }
     
+    public TextRotation(){}
 }

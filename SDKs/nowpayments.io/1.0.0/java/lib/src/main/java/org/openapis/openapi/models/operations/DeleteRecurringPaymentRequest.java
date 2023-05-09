@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRecurringPaymentRequest {
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public byte[] requestBody;
+
     public DeleteRecurringPaymentRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class DeleteRecurringPaymentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sub_id")
     public String subId;
+
     public DeleteRecurringPaymentRequest withSubId(String subId) {
         this.subId = subId;
         return this;
     }
     
+    public DeleteRecurringPaymentRequest(@JsonProperty("sub_id") String subId) {
+        this.subId = subId;
+  }
 }

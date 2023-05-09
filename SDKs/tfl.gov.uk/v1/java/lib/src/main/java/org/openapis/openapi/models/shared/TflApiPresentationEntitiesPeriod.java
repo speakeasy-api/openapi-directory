@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frequency")
     public TflApiPresentationEntitiesServiceFrequency frequency;
+
     public TflApiPresentationEntitiesPeriod withFrequency(TflApiPresentationEntitiesServiceFrequency frequency) {
         this.frequency = frequency;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromTime")
     public TflApiPresentationEntitiesTwentyFourHourClockTime fromTime;
+
     public TflApiPresentationEntitiesPeriod withFromTime(TflApiPresentationEntitiesTwentyFourHourClockTime fromTime) {
         this.fromTime = fromTime;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toTime")
     public TflApiPresentationEntitiesTwentyFourHourClockTime toTime;
+
     public TflApiPresentationEntitiesPeriod withToTime(TflApiPresentationEntitiesTwentyFourHourClockTime toTime) {
         this.toTime = toTime;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesPeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TflApiPresentationEntitiesPeriodTypeEnum type;
+
     public TflApiPresentationEntitiesPeriod withType(TflApiPresentationEntitiesPeriodTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesPeriod(){}
 }

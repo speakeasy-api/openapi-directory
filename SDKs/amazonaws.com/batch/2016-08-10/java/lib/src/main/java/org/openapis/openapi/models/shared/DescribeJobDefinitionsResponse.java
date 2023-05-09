@@ -15,6 +15,7 @@ public class DescribeJobDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobDefinitions")
     public JobDefinition[] jobDefinitions;
+
     public DescribeJobDefinitionsResponse withJobDefinitions(JobDefinition[] jobDefinitions) {
         this.jobDefinitions = jobDefinitions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeJobDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeJobDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeJobDefinitionsResponse(){}
 }

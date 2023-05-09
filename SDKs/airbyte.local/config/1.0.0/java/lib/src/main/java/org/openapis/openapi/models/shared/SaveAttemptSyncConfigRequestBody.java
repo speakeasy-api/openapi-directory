@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveAttemptSyncConfigRequestBody {
     @JsonProperty("attemptNumber")
     public Integer attemptNumber;
+
     public SaveAttemptSyncConfigRequestBody withAttemptNumber(Integer attemptNumber) {
         this.attemptNumber = attemptNumber;
         return this;
@@ -16,6 +17,7 @@ public class SaveAttemptSyncConfigRequestBody {
     
     @JsonProperty("jobId")
     public Long jobId;
+
     public SaveAttemptSyncConfigRequestBody withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +25,15 @@ public class SaveAttemptSyncConfigRequestBody {
     
     @JsonProperty("syncConfig")
     public AttemptSyncConfig syncConfig;
+
     public SaveAttemptSyncConfigRequestBody withSyncConfig(AttemptSyncConfig syncConfig) {
         this.syncConfig = syncConfig;
         return this;
     }
     
+    public SaveAttemptSyncConfigRequestBody(@JsonProperty("attemptNumber") Integer attemptNumber, @JsonProperty("jobId") Long jobId, @JsonProperty("syncConfig") AttemptSyncConfig syncConfig) {
+        this.attemptNumber = attemptNumber;
+        this.jobId = jobId;
+        this.syncConfig = syncConfig;
+  }
 }

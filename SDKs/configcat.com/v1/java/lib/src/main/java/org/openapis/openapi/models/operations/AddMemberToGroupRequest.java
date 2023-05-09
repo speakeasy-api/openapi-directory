@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddMemberToGroupRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddUserToGroupRequest addUserToGroupRequest;
+
     public AddMemberToGroupRequest withAddUserToGroupRequest(org.openapis.openapi.models.shared.AddUserToGroupRequest addUserToGroupRequest) {
         this.addUserToGroupRequest = addUserToGroupRequest;
         return this;
@@ -19,6 +21,7 @@ public class AddMemberToGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public AddMemberToGroupRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -29,9 +32,15 @@ public class AddMemberToGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public AddMemberToGroupRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AddMemberToGroupRequest(@JsonProperty("AddUserToGroupRequest") org.openapis.openapi.models.shared.AddUserToGroupRequest addUserToGroupRequest, @JsonProperty("organizationId") String organizationId, @JsonProperty("userId") String userId) {
+        this.addUserToGroupRequest = addUserToGroupRequest;
+        this.organizationId = organizationId;
+        this.userId = userId;
+  }
 }

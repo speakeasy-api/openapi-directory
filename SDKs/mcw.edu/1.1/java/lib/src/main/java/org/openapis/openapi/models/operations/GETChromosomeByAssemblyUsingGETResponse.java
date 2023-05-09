@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETChromosomeByAssemblyUsingGETResponse {
     
     public byte[] body;
+
     public GETChromosomeByAssemblyUsingGETResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETChromosomeByAssemblyUsingGETResponse {
     
     
     public String contentType;
+
     public GETChromosomeByAssemblyUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETChromosomeByAssemblyUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETChromosomeByAssemblyUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETChromosomeByAssemblyUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETChromosomeByAssemblyUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETChromosomeByAssemblyUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

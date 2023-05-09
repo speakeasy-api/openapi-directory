@@ -15,6 +15,7 @@ public class Armtw500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Armtw500ApplicationJSONErrorEnum error;
+
     public Armtw500ApplicationJSON withError(Armtw500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Armtw500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Armtw500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Armtw500ApplicationJSON withErrorDescription(Armtw500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Armtw500ApplicationJSON(){}
 }

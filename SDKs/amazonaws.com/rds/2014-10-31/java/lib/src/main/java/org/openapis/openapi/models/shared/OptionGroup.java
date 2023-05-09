@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class OptionGroup {
     
     public Boolean allowsVpcAndNonVpcInstanceMemberships;
+
     public OptionGroup withAllowsVpcAndNonVpcInstanceMemberships(Boolean allowsVpcAndNonVpcInstanceMemberships) {
         this.allowsVpcAndNonVpcInstanceMemberships = allowsVpcAndNonVpcInstanceMemberships;
         return this;
@@ -19,6 +20,7 @@ public class OptionGroup {
     
     
     public OffsetDateTime copyTimestamp;
+
     public OptionGroup withCopyTimestamp(OffsetDateTime copyTimestamp) {
         this.copyTimestamp = copyTimestamp;
         return this;
@@ -26,6 +28,7 @@ public class OptionGroup {
     
     
     public String engineName;
+
     public OptionGroup withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -33,6 +36,7 @@ public class OptionGroup {
     
     
     public String majorEngineVersion;
+
     public OptionGroup withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -40,6 +44,7 @@ public class OptionGroup {
     
     
     public String optionGroupArn;
+
     public OptionGroup withOptionGroupArn(String optionGroupArn) {
         this.optionGroupArn = optionGroupArn;
         return this;
@@ -47,6 +52,7 @@ public class OptionGroup {
     
     
     public String optionGroupDescription;
+
     public OptionGroup withOptionGroupDescription(String optionGroupDescription) {
         this.optionGroupDescription = optionGroupDescription;
         return this;
@@ -54,6 +60,7 @@ public class OptionGroup {
     
     
     public String optionGroupName;
+
     public OptionGroup withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -61,6 +68,7 @@ public class OptionGroup {
     
     
     public OptionsList[] options;
+
     public OptionGroup withOptions(OptionsList[] options) {
         this.options = options;
         return this;
@@ -68,6 +76,7 @@ public class OptionGroup {
     
     
     public String sourceAccountId;
+
     public OptionGroup withSourceAccountId(String sourceAccountId) {
         this.sourceAccountId = sourceAccountId;
         return this;
@@ -75,6 +84,7 @@ public class OptionGroup {
     
     
     public String sourceOptionGroup;
+
     public OptionGroup withSourceOptionGroup(String sourceOptionGroup) {
         this.sourceOptionGroup = sourceOptionGroup;
         return this;
@@ -82,9 +92,11 @@ public class OptionGroup {
     
     
     public String vpcId;
+
     public OptionGroup withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public OptionGroup(){}
 }

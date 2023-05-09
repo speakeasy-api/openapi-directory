@@ -12,6 +12,7 @@ public class PolicySaveRequest {
      */
     @JsonProperty("description")
     public String description;
+
     public PolicySaveRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class PolicySaveRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public PolicySaveRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class PolicySaveRequest {
      */
     @JsonProperty("statements")
     public StatementGetResponse[] statements;
+
     public PolicySaveRequest withStatements(StatementGetResponse[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public PolicySaveRequest(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("statements") StatementGetResponse[] statements) {
+        this.description = description;
+        this.name = name;
+        this.statements = statements;
+  }
 }

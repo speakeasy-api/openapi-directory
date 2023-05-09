@@ -15,6 +15,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public AwsEc2SecurityGroupUserIdGroupPair withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsEc2SecurityGroupUserIdGroupPair withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeeringStatus")
     public String peeringStatus;
+
     public AwsEc2SecurityGroupUserIdGroupPair withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public String userId;
+
     public AwsEc2SecurityGroupUserIdGroupPair withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2SecurityGroupUserIdGroupPair withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -55,9 +60,11 @@ public class AwsEc2SecurityGroupUserIdGroupPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public AwsEc2SecurityGroupUserIdGroupPair withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public AwsEc2SecurityGroupUserIdGroupPair(){}
 }

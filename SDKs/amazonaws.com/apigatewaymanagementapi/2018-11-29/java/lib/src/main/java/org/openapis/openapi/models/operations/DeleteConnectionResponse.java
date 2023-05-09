@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectionResponse {
     
     public String contentType;
+
     public DeleteConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectionResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteConnectionResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteConnectionResponse {
      */
     
     public Object goneException;
+
     public DeleteConnectionResponse withGoneException(Object goneException) {
         this.goneException = goneException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteConnectionResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteConnectionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteConnectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

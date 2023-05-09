@@ -18,6 +18,7 @@ public class StringTargetingDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingMode")
     public StringTargetingDimensionTargetingModeEnum targetingMode;
+
     public StringTargetingDimension withTargetingMode(StringTargetingDimensionTargetingModeEnum targetingMode) {
         this.targetingMode = targetingMode;
         return this;
@@ -29,9 +30,11 @@ public class StringTargetingDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public StringTargetingDimension withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public StringTargetingDimension(){}
 }

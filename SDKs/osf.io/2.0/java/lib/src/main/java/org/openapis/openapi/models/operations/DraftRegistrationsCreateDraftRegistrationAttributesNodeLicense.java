@@ -15,6 +15,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright_holders")
     public String[] copyrightHolders;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense withCopyrightHolders(String[] copyrightHolders) {
         this.copyrightHolders = copyrightHolders;
         return this;
@@ -26,9 +27,11 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense(){}
 }

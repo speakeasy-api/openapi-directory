@@ -15,6 +15,7 @@ public class Icd10CMTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public Icd10CMTraitNameEnum name;
+
     public Icd10CMTrait withName(Icd10CMTraitNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Icd10CMTrait {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Icd10CMTrait withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public Icd10CMTrait(){}
 }

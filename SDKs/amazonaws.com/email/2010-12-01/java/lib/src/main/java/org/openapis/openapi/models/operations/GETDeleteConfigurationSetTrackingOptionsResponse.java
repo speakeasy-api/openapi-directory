@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDeleteConfigurationSetTrackingOptionsResponse {
     
     public byte[] body;
+
     public GETDeleteConfigurationSetTrackingOptionsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDeleteConfigurationSetTrackingOptionsResponse {
     
     
     public String contentType;
+
     public GETDeleteConfigurationSetTrackingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDeleteConfigurationSetTrackingOptionsResponse {
     
     
     public Integer statusCode;
+
     public GETDeleteConfigurationSetTrackingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDeleteConfigurationSetTrackingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDeleteConfigurationSetTrackingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDeleteConfigurationSetTrackingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

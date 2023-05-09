@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1AccountsIdFollowersRequest {
@@ -12,6 +13,7 @@ public class GetApiV1AccountsIdFollowersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetApiV1AccountsIdFollowersRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV1AccountsIdFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetApiV1AccountsIdFollowersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV1AccountsIdFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_id")
     public String maxId;
+
     public GetApiV1AccountsIdFollowersRequest withMaxId(String maxId) {
         this.maxId = maxId;
         return this;
@@ -42,9 +46,13 @@ public class GetApiV1AccountsIdFollowersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since_id")
     public String sinceId;
+
     public GetApiV1AccountsIdFollowersRequest withSinceId(String sinceId) {
         this.sinceId = sinceId;
         return this;
     }
     
+    public GetApiV1AccountsIdFollowersRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

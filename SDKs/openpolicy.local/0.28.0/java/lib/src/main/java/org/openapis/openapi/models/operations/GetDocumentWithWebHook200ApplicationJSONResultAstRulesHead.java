@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesHeadKey key;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead withKey(GetDocumentWithWebHook200ApplicationJSONResultAstRulesHeadKey key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONResultAstRulesHead(){}
 }

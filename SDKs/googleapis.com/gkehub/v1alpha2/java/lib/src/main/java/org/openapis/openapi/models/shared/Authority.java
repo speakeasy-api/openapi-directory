@@ -18,6 +18,7 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProvider")
     public String identityProvider;
+
     public Authority withIdentityProvider(String identityProvider) {
         this.identityProvider = identityProvider;
         return this;
@@ -29,6 +30,7 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuer")
     public String issuer;
+
     public Authority withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +42,7 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidcJwks")
     public String oidcJwks;
+
     public Authority withOidcJwks(String oidcJwks) {
         this.oidcJwks = oidcJwks;
         return this;
@@ -51,9 +54,11 @@ public class Authority {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadIdentityPool")
     public String workloadIdentityPool;
+
     public Authority withWorkloadIdentityPool(String workloadIdentityPool) {
         this.workloadIdentityPool = workloadIdentityPool;
         return this;
     }
     
+    public Authority(){}
 }

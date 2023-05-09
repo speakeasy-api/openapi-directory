@@ -12,9 +12,11 @@ public class ActionResourceRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public ActionResourceRelationshipsPlan plan;
+
     public ActionResourceRelationships withPlan(ActionResourceRelationshipsPlan plan) {
         this.plan = plan;
         return this;
     }
     
+    public ActionResourceRelationships(){}
 }

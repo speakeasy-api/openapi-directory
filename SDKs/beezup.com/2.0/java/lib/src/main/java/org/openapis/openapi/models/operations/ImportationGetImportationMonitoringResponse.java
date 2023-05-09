@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationGetImportationMonitoringResponse {
@@ -12,6 +13,7 @@ public class ImportationGetImportationMonitoringResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationGetImportationMonitoringResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ImportationGetImportationMonitoringResponse {
     
     
     public String contentType;
+
     public ImportationGetImportationMonitoringResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportationGetImportationMonitoringResponse {
     
     
     public Integer statusCode;
+
     public ImportationGetImportationMonitoringResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ImportationGetImportationMonitoringResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationGetImportationMonitoringResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ImportationGetImportationMonitoringResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportationMonitoring importationMonitoring;
+
     public ImportationGetImportationMonitoringResponse withImportationMonitoring(org.openapis.openapi.models.shared.ImportationMonitoring importationMonitoring) {
         this.importationMonitoring = importationMonitoring;
         return this;
     }
     
+    public ImportationGetImportationMonitoringResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

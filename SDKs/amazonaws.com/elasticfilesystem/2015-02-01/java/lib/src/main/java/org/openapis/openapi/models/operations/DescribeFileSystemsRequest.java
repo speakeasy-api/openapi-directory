@@ -12,6 +12,7 @@ public class DescribeFileSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CreationToken")
     public String creationToken;
+
     public DescribeFileSystemsRequest withCreationToken(String creationToken) {
         this.creationToken = creationToken;
         return this;
@@ -22,6 +23,7 @@ public class DescribeFileSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FileSystemId")
     public String fileSystemId;
+
     public DescribeFileSystemsRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
@@ -32,6 +34,7 @@ public class DescribeFileSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public DescribeFileSystemsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -42,6 +45,7 @@ public class DescribeFileSystemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public DescribeFileSystemsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -49,6 +53,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DescribeFileSystemsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -56,6 +61,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DescribeFileSystemsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -63,6 +69,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DescribeFileSystemsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -70,6 +77,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DescribeFileSystemsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -77,6 +85,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DescribeFileSystemsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -84,6 +93,7 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DescribeFileSystemsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -91,9 +101,11 @@ public class DescribeFileSystemsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DescribeFileSystemsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DescribeFileSystemsRequest(){}
 }

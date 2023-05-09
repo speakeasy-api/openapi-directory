@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * LocationConfiguration - A remote location where a multi-location fleet can deploy EC2 instances for game hosting. 
+ * LocationConfiguration - A remote location where a multi-location fleet can deploy game servers for game hosting. 
  */
 public class LocationConfiguration {
     @JsonProperty("Location")
     public String location;
+
     public LocationConfiguration withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public LocationConfiguration(@JsonProperty("Location") String location) {
+        this.location = location;
+  }
 }

@@ -18,6 +18,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobs")
     public Job[] jobs;
+
     public ListJobsResponse withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
@@ -29,6 +30,7 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetadata metadata;
+
     public ListJobsResponse withMetadata(ResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class ListJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListJobsResponse(){}
 }

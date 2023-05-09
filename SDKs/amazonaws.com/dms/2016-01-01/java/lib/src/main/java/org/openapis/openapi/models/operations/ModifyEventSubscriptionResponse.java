@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyEventSubscriptionResponse {
     
     public String contentType;
+
     public ModifyEventSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object kmsAccessDeniedFault;
+
     public ModifyEventSubscriptionResponse withKMSAccessDeniedFault(Object kmsAccessDeniedFault) {
         this.kmsAccessDeniedFault = kmsAccessDeniedFault;
         return this;
@@ -29,6 +32,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object kmsDisabledFault;
+
     public ModifyEventSubscriptionResponse withKMSDisabledFault(Object kmsDisabledFault) {
         this.kmsDisabledFault = kmsDisabledFault;
         return this;
@@ -39,6 +43,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object kmsInvalidStateFault;
+
     public ModifyEventSubscriptionResponse withKMSInvalidStateFault(Object kmsInvalidStateFault) {
         this.kmsInvalidStateFault = kmsInvalidStateFault;
         return this;
@@ -49,6 +54,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object kmsNotFoundFault;
+
     public ModifyEventSubscriptionResponse withKMSNotFoundFault(Object kmsNotFoundFault) {
         this.kmsNotFoundFault = kmsNotFoundFault;
         return this;
@@ -59,6 +65,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object kmsThrottlingFault;
+
     public ModifyEventSubscriptionResponse withKMSThrottlingFault(Object kmsThrottlingFault) {
         this.kmsThrottlingFault = kmsThrottlingFault;
         return this;
@@ -69,6 +76,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyEventSubscriptionResponse modifyEventSubscriptionResponse;
+
     public ModifyEventSubscriptionResponse withModifyEventSubscriptionResponse(org.openapis.openapi.models.shared.ModifyEventSubscriptionResponse modifyEventSubscriptionResponse) {
         this.modifyEventSubscriptionResponse = modifyEventSubscriptionResponse;
         return this;
@@ -79,6 +87,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public ModifyEventSubscriptionResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -89,6 +98,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public ModifyEventSubscriptionResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -96,6 +106,7 @@ public class ModifyEventSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public ModifyEventSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class ModifyEventSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyEventSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object snsInvalidTopicFault;
+
     public ModifyEventSubscriptionResponse withSNSInvalidTopicFault(Object snsInvalidTopicFault) {
         this.snsInvalidTopicFault = snsInvalidTopicFault;
         return this;
@@ -123,9 +136,14 @@ public class ModifyEventSubscriptionResponse {
      */
     
     public Object snsNoAuthorizationFault;
+
     public ModifyEventSubscriptionResponse withSNSNoAuthorizationFault(Object snsNoAuthorizationFault) {
         this.snsNoAuthorizationFault = snsNoAuthorizationFault;
         return this;
     }
     
+    public ModifyEventSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

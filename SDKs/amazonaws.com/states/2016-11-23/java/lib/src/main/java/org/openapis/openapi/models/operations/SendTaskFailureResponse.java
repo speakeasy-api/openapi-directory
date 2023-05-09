@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendTaskFailureResponse {
     
     public String contentType;
+
     public SendTaskFailureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendTaskFailureResponse {
      */
     
     public Object invalidToken;
+
     public SendTaskFailureResponse withInvalidToken(Object invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -29,6 +32,7 @@ public class SendTaskFailureResponse {
      */
     
     public java.util.Map<String, Object> sendTaskFailureOutput;
+
     public SendTaskFailureResponse withSendTaskFailureOutput(java.util.Map<String, Object> sendTaskFailureOutput) {
         this.sendTaskFailureOutput = sendTaskFailureOutput;
         return this;
@@ -36,6 +40,7 @@ public class SendTaskFailureResponse {
     
     
     public Integer statusCode;
+
     public SendTaskFailureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class SendTaskFailureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendTaskFailureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class SendTaskFailureResponse {
      */
     
     public Object taskDoesNotExist;
+
     public SendTaskFailureResponse withTaskDoesNotExist(Object taskDoesNotExist) {
         this.taskDoesNotExist = taskDoesNotExist;
         return this;
@@ -63,9 +70,14 @@ public class SendTaskFailureResponse {
      */
     
     public Object taskTimedOut;
+
     public SendTaskFailureResponse withTaskTimedOut(Object taskTimedOut) {
         this.taskTimedOut = taskTimedOut;
         return this;
     }
     
+    public SendTaskFailureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

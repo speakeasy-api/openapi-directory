@@ -18,6 +18,7 @@ public class VmEndpointNatMappingsListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public VmEndpointNatMappingsListWarningCodeEnum code;
+
     public VmEndpointNatMappingsListWarning withCode(VmEndpointNatMappingsListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class VmEndpointNatMappingsListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public VmEndpointNatMappingsListWarningData[] data;
+
     public VmEndpointNatMappingsListWarning withData(VmEndpointNatMappingsListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class VmEndpointNatMappingsListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public VmEndpointNatMappingsListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public VmEndpointNatMappingsListWarning(){}
 }

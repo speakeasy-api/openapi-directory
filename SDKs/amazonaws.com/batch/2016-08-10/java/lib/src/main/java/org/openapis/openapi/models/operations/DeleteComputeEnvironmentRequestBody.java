@@ -12,9 +12,13 @@ public class DeleteComputeEnvironmentRequestBody {
      */
     @JsonProperty("computeEnvironment")
     public String computeEnvironment;
+
     public DeleteComputeEnvironmentRequestBody withComputeEnvironment(String computeEnvironment) {
         this.computeEnvironment = computeEnvironment;
         return this;
     }
     
+    public DeleteComputeEnvironmentRequestBody(@JsonProperty("computeEnvironment") String computeEnvironment) {
+        this.computeEnvironment = computeEnvironment;
+  }
 }

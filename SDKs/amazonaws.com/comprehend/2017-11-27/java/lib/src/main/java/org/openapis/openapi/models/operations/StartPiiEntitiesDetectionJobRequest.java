@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartPiiEntitiesDetectionJobRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StartPiiEntitiesDetectionJobRequest startPiiEntitiesDetectionJobRequest;
+
     public StartPiiEntitiesDetectionJobRequest withStartPiiEntitiesDetectionJobRequest(org.openapis.openapi.models.shared.StartPiiEntitiesDetectionJobRequest startPiiEntitiesDetectionJobRequest) {
         this.startPiiEntitiesDetectionJobRequest = startPiiEntitiesDetectionJobRequest;
         return this;
@@ -16,6 +18,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class StartPiiEntitiesDetectionJobRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public StartPiiEntitiesDetectionJobXAmzTargetEnum xAmzTarget;
+
     public StartPiiEntitiesDetectionJobRequest withXAmzTarget(StartPiiEntitiesDetectionJobXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public StartPiiEntitiesDetectionJobRequest(@JsonProperty("StartPiiEntitiesDetectionJobRequest") org.openapis.openapi.models.shared.StartPiiEntitiesDetectionJobRequest startPiiEntitiesDetectionJobRequest, @JsonProperty("X-Amz-Target") StartPiiEntitiesDetectionJobXAmzTargetEnum xAmzTarget) {
+        this.startPiiEntitiesDetectionJobRequest = startPiiEntitiesDetectionJobRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

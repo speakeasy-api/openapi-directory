@@ -12,6 +12,7 @@ public class ListStudioSessionMappingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityType")
     public IdentityTypeEnum identityType;
+
     public ListStudioSessionMappingsInput withIdentityType(IdentityTypeEnum identityType) {
         this.identityType = identityType;
         return this;
@@ -20,6 +21,7 @@ public class ListStudioSessionMappingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListStudioSessionMappingsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -28,9 +30,11 @@ public class ListStudioSessionMappingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StudioId")
     public String studioId;
+
     public ListStudioSessionMappingsInput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public ListStudioSessionMappingsInput(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KeysApiExpiryRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=serial")
     public String serial;
+
     public KeysApiExpiryRequest withSerial(String serial) {
         this.serial = serial;
         return this;
     }
     
+    public KeysApiExpiryRequest(@JsonProperty("serial") String serial) {
+        this.serial = serial;
+  }
 }

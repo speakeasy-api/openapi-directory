@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2CadenceMembershipsJsonResponse {
     
     public byte[] body;
+
     public GetV2CadenceMembershipsJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV2CadenceMembershipsJsonResponse {
     
     
     public String contentType;
+
     public GetV2CadenceMembershipsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetV2CadenceMembershipsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetV2CadenceMembershipsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetV2CadenceMembershipsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2CadenceMembershipsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV2CadenceMembershipsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

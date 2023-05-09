@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetConsoleOutputRequest {
     
     public Boolean dryRun;
+
     public GetConsoleOutputRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetConsoleOutputRequest {
     
     
     public String instanceId;
+
     public GetConsoleOutputRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,9 +25,13 @@ public class GetConsoleOutputRequest {
     
     
     public Boolean latest;
+
     public GetConsoleOutputRequest withLatest(Boolean latest) {
         this.latest = latest;
         return this;
     }
     
+    public GetConsoleOutputRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

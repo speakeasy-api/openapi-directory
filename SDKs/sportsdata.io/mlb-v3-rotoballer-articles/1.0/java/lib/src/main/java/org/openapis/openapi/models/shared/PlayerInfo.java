@@ -12,6 +12,7 @@ public class PlayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerInfo withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class PlayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerInfo withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -28,6 +30,7 @@ public class PlayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerInfo withPosition(String position) {
         this.position = position;
         return this;
@@ -36,6 +39,7 @@ public class PlayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerInfo withTeam(String team) {
         this.team = team;
         return this;
@@ -44,9 +48,11 @@ public class PlayerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public PlayerInfo withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public PlayerInfo(){}
 }

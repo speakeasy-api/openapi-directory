@@ -18,9 +18,11 @@ public class VolumeSearchInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSnippet")
     public String textSnippet;
+
     public VolumeSearchInfo withTextSnippet(String textSnippet) {
         this.textSnippet = textSnippet;
         return this;
     }
     
+    public VolumeSearchInfo(){}
 }

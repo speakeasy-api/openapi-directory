@@ -18,9 +18,11 @@ public class ProductSearch200ApplicationJSONItemsSellersCommertialOfferDeliveryS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("0")
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion0 zero;
+
     public ProductSearch200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion withZero(ProductSearch200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion0 zero) {
         this.zero = zero;
         return this;
     }
     
+    public ProductSearch200ApplicationJSONItemsSellersCommertialOfferDeliverySlaSamplesPerRegion(){}
 }

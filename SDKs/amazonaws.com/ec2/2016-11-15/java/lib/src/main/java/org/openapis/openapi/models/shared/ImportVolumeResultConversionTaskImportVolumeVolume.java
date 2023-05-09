@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeResultConversionTaskImportVolumeVolume {
     
     public String id;
+
     public ImportVolumeResultConversionTaskImportVolumeVolume withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,11 @@ public class ImportVolumeResultConversionTaskImportVolumeVolume {
     
     
     public Long size;
+
     public ImportVolumeResultConversionTaskImportVolumeVolume withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ImportVolumeResultConversionTaskImportVolumeVolume(){}
 }

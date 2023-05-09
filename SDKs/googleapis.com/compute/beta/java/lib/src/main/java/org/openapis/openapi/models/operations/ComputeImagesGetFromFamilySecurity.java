@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeImagesGetFromFamilySecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeImagesGetFromFamilySecurityOption1 option1;
+
     public ComputeImagesGetFromFamilySecurity withOption1(ComputeImagesGetFromFamilySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeImagesGetFromFamilySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeImagesGetFromFamilySecurityOption2 option2;
+
     public ComputeImagesGetFromFamilySecurity withOption2(ComputeImagesGetFromFamilySecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeImagesGetFromFamilySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeImagesGetFromFamilySecurityOption3 option3;
+
     public ComputeImagesGetFromFamilySecurity withOption3(ComputeImagesGetFromFamilySecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeImagesGetFromFamilySecurity(){}
 }

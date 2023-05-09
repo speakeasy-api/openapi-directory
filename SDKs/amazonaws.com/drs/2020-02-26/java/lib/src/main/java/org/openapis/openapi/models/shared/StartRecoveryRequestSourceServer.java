@@ -15,6 +15,7 @@ public class StartRecoveryRequestSourceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recoverySnapshotID")
     public String recoverySnapshotID;
+
     public StartRecoveryRequestSourceServer withRecoverySnapshotID(String recoverySnapshotID) {
         this.recoverySnapshotID = recoverySnapshotID;
         return this;
@@ -22,9 +23,13 @@ public class StartRecoveryRequestSourceServer {
     
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public StartRecoveryRequestSourceServer withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public StartRecoveryRequestSourceServer(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

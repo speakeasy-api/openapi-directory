@@ -15,6 +15,7 @@ public class ListTargetsForPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTargetsForPolicyResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTargetsForPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public PolicyTargetSummary[] targets;
+
     public ListTargetsForPolicyResponse withTargets(PolicyTargetSummary[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public ListTargetsForPolicyResponse(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest withIcon(String icon) {
         this.icon = icon;
         return this;
     }
     
+    public GoogleCloudPrivatecatalogproducerV1beta1UploadIconRequest(){}
 }

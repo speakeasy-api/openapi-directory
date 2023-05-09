@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public Long orgId;
+
     public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withOrgId(Long orgId) {
         this.orgId = orgId;
         return this;
@@ -32,9 +35,15 @@ public class EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=runner_group_id")
     public Long runnerGroupId;
+
     public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest withRunnerGroupId(Long runnerGroupId) {
         this.runnerGroupId = runnerGroupId;
         return this;
     }
     
+    public EnterpriseAdminRemoveOrgAccessToSelfHostedRunnerGroupInEnterpriseRequest(@JsonProperty("enterprise") String enterprise, @JsonProperty("org_id") Long orgId, @JsonProperty("runner_group_id") Long runnerGroupId) {
+        this.enterprise = enterprise;
+        this.orgId = orgId;
+        this.runnerGroupId = runnerGroupId;
+  }
 }

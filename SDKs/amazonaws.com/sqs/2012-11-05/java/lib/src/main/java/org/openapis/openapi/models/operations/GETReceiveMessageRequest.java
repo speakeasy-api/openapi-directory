@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETReceiveMessageRequest {
@@ -12,6 +13,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETReceiveMessageRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETReceiveMessageActionEnum action;
+
     public GETReceiveMessageRequest withAction(GETReceiveMessageActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeNames")
     public GETReceiveMessageAttributeNamesEnum[] attributeNames;
+
     public GETReceiveMessageRequest withAttributeNames(GETReceiveMessageAttributeNamesEnum[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -39,6 +43,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxNumberOfMessages")
     public Long maxNumberOfMessages;
+
     public GETReceiveMessageRequest withMaxNumberOfMessages(Long maxNumberOfMessages) {
         this.maxNumberOfMessages = maxNumberOfMessages;
         return this;
@@ -49,6 +54,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MessageAttributeNames")
     public String[] messageAttributeNames;
+
     public GETReceiveMessageRequest withMessageAttributeNames(String[] messageAttributeNames) {
         this.messageAttributeNames = messageAttributeNames;
         return this;
@@ -59,6 +65,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETReceiveMessageRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -69,6 +76,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReceiveRequestAttemptId")
     public String receiveRequestAttemptId;
+
     public GETReceiveMessageRequest withReceiveRequestAttemptId(String receiveRequestAttemptId) {
         this.receiveRequestAttemptId = receiveRequestAttemptId;
         return this;
@@ -76,6 +84,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETReceiveMessageVersionEnum version;
+
     public GETReceiveMessageRequest withVersion(GETReceiveMessageVersionEnum version) {
         this.version = version;
         return this;
@@ -86,6 +95,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VisibilityTimeout")
     public Long visibilityTimeout;
+
     public GETReceiveMessageRequest withVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
@@ -96,6 +106,7 @@ public class GETReceiveMessageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=WaitTimeSeconds")
     public Long waitTimeSeconds;
+
     public GETReceiveMessageRequest withWaitTimeSeconds(Long waitTimeSeconds) {
         this.waitTimeSeconds = waitTimeSeconds;
         return this;
@@ -103,6 +114,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETReceiveMessageRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -110,6 +122,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETReceiveMessageRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -117,6 +130,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETReceiveMessageRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -124,6 +138,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETReceiveMessageRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -131,6 +146,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETReceiveMessageRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -138,6 +154,7 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETReceiveMessageRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -145,9 +162,16 @@ public class GETReceiveMessageRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETReceiveMessageRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETReceiveMessageRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETReceiveMessageActionEnum action, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETReceiveMessageVersionEnum version) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

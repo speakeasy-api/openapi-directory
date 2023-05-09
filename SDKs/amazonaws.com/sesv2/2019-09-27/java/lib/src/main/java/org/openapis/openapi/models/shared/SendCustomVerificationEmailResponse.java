@@ -15,9 +15,11 @@ public class SendCustomVerificationEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageId")
     public String messageId;
+
     public SendCustomVerificationEmailResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendCustomVerificationEmailResponse(){}
 }

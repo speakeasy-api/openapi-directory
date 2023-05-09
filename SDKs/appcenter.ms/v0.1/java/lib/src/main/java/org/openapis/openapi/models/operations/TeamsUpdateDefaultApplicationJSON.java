@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TeamsUpdateDefaultApplicationJSON {
     @JsonProperty("error")
     public TeamsUpdateDefaultApplicationJSONError error;
+
     public TeamsUpdateDefaultApplicationJSON withError(TeamsUpdateDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public TeamsUpdateDefaultApplicationJSON(@JsonProperty("error") TeamsUpdateDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

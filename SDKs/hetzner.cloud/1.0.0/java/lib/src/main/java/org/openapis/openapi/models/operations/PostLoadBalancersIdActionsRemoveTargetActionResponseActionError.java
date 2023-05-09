@@ -15,6 +15,7 @@ public class PostLoadBalancersIdActionsRemoveTargetActionResponseActionError {
      */
     @JsonProperty("code")
     public String code;
+
     public PostLoadBalancersIdActionsRemoveTargetActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostLoadBalancersIdActionsRemoveTargetActionResponseActionError {
      */
     @JsonProperty("message")
     public String message;
+
     public PostLoadBalancersIdActionsRemoveTargetActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostLoadBalancersIdActionsRemoveTargetActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

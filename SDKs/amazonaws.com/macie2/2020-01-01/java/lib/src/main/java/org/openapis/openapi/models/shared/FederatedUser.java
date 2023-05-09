@@ -15,6 +15,7 @@ public class FederatedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessKeyId")
     public String accessKeyId;
+
     public FederatedUser withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -23,6 +24,7 @@ public class FederatedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public FederatedUser withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -31,6 +33,7 @@ public class FederatedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public FederatedUser withArn(String arn) {
         this.arn = arn;
         return this;
@@ -39,6 +42,7 @@ public class FederatedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public FederatedUser withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -47,9 +51,11 @@ public class FederatedUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionContext")
     public SessionContext sessionContext;
+
     public FederatedUser withSessionContext(SessionContext sessionContext) {
         this.sessionContext = sessionContext;
         return this;
     }
     
+    public FederatedUser(){}
 }

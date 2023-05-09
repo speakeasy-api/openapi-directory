@@ -63,12 +63,10 @@ public class DependencyGraph {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DependencyGraphDiffRangeResponse res = new org.openapis.openapi.models.operations.DependencyGraphDiffRangeResponse() {{
+        org.openapis.openapi.models.operations.DependencyGraphDiffRangeResponse res = new org.openapis.openapi.models.operations.DependencyGraphDiffRangeResponse(contentType, httpRes.statusCode()) {{
             dependencyGraphDiff = null;
             basicError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

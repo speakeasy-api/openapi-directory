@@ -8,10 +8,22 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingsChangesRequest {
     /**
+     * If set, return records where the specified field is equal to the supplied value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key_id")
+    public String apiKeyId;
+
+    public GetSettingsChangesRequest withApiKeyId(String apiKeyId) {
+        this.apiKeyId = apiKeyId;
+        return this;
+    }
+    
+    /**
      * Used for pagination.  When a list request has more records available, cursors are provided in the response headers `X-Files-Cursor-Next` and `X-Files-Cursor-Prev`.  Send one of those cursor value here to resume an existing list from the next available record.  Note: many of our SDKs have iterator methods that will automatically handle cursor-based pagination.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetSettingsChangesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,58 +34,9 @@ public class GetSettingsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetSettingsChangesRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `api_key_id` and `user_id`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
-    public java.util.Map<String, Object> filterGt;
-    public GetSettingsChangesRequest withFilterGt(java.util.Map<String, Object> filterGt) {
-        this.filterGt = filterGt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
-    public java.util.Map<String, Object> filterGteq;
-    public GetSettingsChangesRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
-        this.filterGteq = filterGteq;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetSettingsChangesRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `api_key_id` and `user_id`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
-    public java.util.Map<String, Object> filterLt;
-    public GetSettingsChangesRequest withFilterLt(java.util.Map<String, Object> filterLt) {
-        this.filterLt = filterLt;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `api_key_id` and `user_id`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
-    public java.util.Map<String, Object> filterLteq;
-    public GetSettingsChangesRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
-        this.filterLteq = filterLteq;
         return this;
     }
     
@@ -82,6 +45,7 @@ public class GetSettingsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetSettingsChangesRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -92,9 +56,22 @@ public class GetSettingsChangesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetSettingsChangesRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    /**
+     * If set, return records where the specified field is equal to the supplied value.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_id")
+    public String userId;
+
+    public GetSettingsChangesRequest withUserId(String userId) {
+        this.userId = userId;
+        return this;
+    }
+    
+    public GetSettingsChangesRequest(){}
 }

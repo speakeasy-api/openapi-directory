@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CartesianCoordinates {
     @JsonProperty("x")
     public Double x;
+
     public CartesianCoordinates withX(Double x) {
         this.x = x;
         return this;
@@ -21,6 +22,7 @@ public class CartesianCoordinates {
     
     @JsonProperty("y")
     public Double y;
+
     public CartesianCoordinates withY(Double y) {
         this.y = y;
         return this;
@@ -29,9 +31,14 @@ public class CartesianCoordinates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("z")
     public Double z;
+
     public CartesianCoordinates withZ(Double z) {
         this.z = z;
         return this;
     }
     
+    public CartesianCoordinates(@JsonProperty("x") Double x, @JsonProperty("y") Double y) {
+        this.x = x;
+        this.y = y;
+  }
 }

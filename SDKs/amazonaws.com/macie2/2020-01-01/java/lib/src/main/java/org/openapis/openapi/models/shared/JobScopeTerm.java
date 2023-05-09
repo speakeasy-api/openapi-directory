@@ -15,6 +15,7 @@ public class JobScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simpleScopeTerm")
     public SimpleScopeTerm simpleScopeTerm;
+
     public JobScopeTerm withSimpleScopeTerm(SimpleScopeTerm simpleScopeTerm) {
         this.simpleScopeTerm = simpleScopeTerm;
         return this;
@@ -23,9 +24,11 @@ public class JobScopeTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagScopeTerm")
     public TagScopeTerm tagScopeTerm;
+
     public JobScopeTerm withTagScopeTerm(TagScopeTerm tagScopeTerm) {
         this.tagScopeTerm = tagScopeTerm;
         return this;
     }
     
+    public JobScopeTerm(){}
 }

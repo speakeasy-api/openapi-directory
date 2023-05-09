@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class VerifiedAccessLogOptions {
     
     public VerifiedAccessLogCloudWatchLogsDestinationOptions cloudWatchLogs;
+
     public VerifiedAccessLogOptions withCloudWatchLogs(VerifiedAccessLogCloudWatchLogsDestinationOptions cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -19,6 +20,7 @@ public class VerifiedAccessLogOptions {
     
     
     public VerifiedAccessLogKinesisDataFirehoseDestinationOptions kinesisDataFirehose;
+
     public VerifiedAccessLogOptions withKinesisDataFirehose(VerifiedAccessLogKinesisDataFirehoseDestinationOptions kinesisDataFirehose) {
         this.kinesisDataFirehose = kinesisDataFirehose;
         return this;
@@ -26,9 +28,11 @@ public class VerifiedAccessLogOptions {
     
     
     public VerifiedAccessLogS3DestinationOptions s3;
+
     public VerifiedAccessLogOptions withS3(VerifiedAccessLogS3DestinationOptions s3) {
         this.s3 = s3;
         return this;
     }
     
+    public VerifiedAccessLogOptions(){}
 }

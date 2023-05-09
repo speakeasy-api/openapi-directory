@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StoryIdCollaboratorsUseridPermissiontypeGetResponse {
     
     public String contentType;
+
     public StoryIdCollaboratorsUseridPermissiontypeGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class StoryIdCollaboratorsUseridPermissiontypeGetResponse {
     
     
     public Integer statusCode;
+
     public StoryIdCollaboratorsUseridPermissiontypeGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class StoryIdCollaboratorsUseridPermissiontypeGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StoryIdCollaboratorsUseridPermissiontypeGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class StoryIdCollaboratorsUseridPermissiontypeGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ProblemDetail problemDetail;
+
     public StoryIdCollaboratorsUseridPermissiontypeGetResponse withProblemDetail(org.openapis.openapi.models.shared.ProblemDetail problemDetail) {
         this.problemDetail = problemDetail;
         return this;
     }
     
+    public StoryIdCollaboratorsUseridPermissiontypeGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GuestConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fstab")
     public FstabEntryList fstab;
+
     public GuestConfigDetails withFstab(FstabEntryList fstab) {
         this.fstab = fstab;
         return this;
@@ -29,6 +30,7 @@ public class GuestConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public HostsEntryList hosts;
+
     public GuestConfigDetails withHosts(HostsEntryList hosts) {
         this.hosts = hosts;
         return this;
@@ -40,6 +42,7 @@ public class GuestConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issue")
     public String issue;
+
     public GuestConfigDetails withIssue(String issue) {
         this.issue = issue;
         return this;
@@ -51,6 +54,7 @@ public class GuestConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nfsExports")
     public NfsExportList nfsExports;
+
     public GuestConfigDetails withNfsExports(NfsExportList nfsExports) {
         this.nfsExports = nfsExports;
         return this;
@@ -62,9 +66,11 @@ public class GuestConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selinux")
     public Selinux selinux;
+
     public GuestConfigDetails withSelinux(Selinux selinux) {
         this.selinux = selinux;
         return this;
     }
     
+    public GuestConfigDetails(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Collaborator {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public Collaborator withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -22,6 +23,7 @@ public class Collaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Collaborator withEmail(String email) {
         this.email = email;
         return this;
@@ -29,6 +31,7 @@ public class Collaborator {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public Collaborator withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -36,6 +39,7 @@ public class Collaborator {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public Collaborator withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -43,6 +47,7 @@ public class Collaborator {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public Collaborator withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -50,6 +55,7 @@ public class Collaborator {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public Collaborator withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -57,6 +63,7 @@ public class Collaborator {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public Collaborator withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -64,6 +71,7 @@ public class Collaborator {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public Collaborator withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -71,6 +79,7 @@ public class Collaborator {
     
     @JsonProperty("id")
     public Long id;
+
     public Collaborator withId(Long id) {
         this.id = id;
         return this;
@@ -78,6 +87,7 @@ public class Collaborator {
     
     @JsonProperty("login")
     public String login;
+
     public Collaborator withLogin(String login) {
         this.login = login;
         return this;
@@ -86,6 +96,7 @@ public class Collaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Collaborator withName(String name) {
         this.name = name;
         return this;
@@ -93,6 +104,7 @@ public class Collaborator {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Collaborator withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -100,6 +112,7 @@ public class Collaborator {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public Collaborator withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -108,6 +121,7 @@ public class Collaborator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public CollaboratorPermissions permissions;
+
     public Collaborator withPermissions(CollaboratorPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -115,6 +129,7 @@ public class Collaborator {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public Collaborator withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -122,6 +137,7 @@ public class Collaborator {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public Collaborator withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -129,6 +145,7 @@ public class Collaborator {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public Collaborator withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -136,6 +153,7 @@ public class Collaborator {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public Collaborator withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -143,6 +161,7 @@ public class Collaborator {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public Collaborator withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -150,6 +169,7 @@ public class Collaborator {
     
     @JsonProperty("type")
     public String type;
+
     public Collaborator withType(String type) {
         this.type = type;
         return this;
@@ -157,9 +177,30 @@ public class Collaborator {
     
     @JsonProperty("url")
     public String url;
+
     public Collaborator withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Collaborator(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("login") String login, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.eventsUrl = eventsUrl;
+        this.followersUrl = followersUrl;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.login = login;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.type = type;
+        this.url = url;
+  }
 }

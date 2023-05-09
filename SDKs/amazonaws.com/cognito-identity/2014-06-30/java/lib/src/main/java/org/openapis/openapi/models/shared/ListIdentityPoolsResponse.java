@@ -15,6 +15,7 @@ public class ListIdentityPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPools")
     public IdentityPoolShortDescription[] identityPools;
+
     public ListIdentityPoolsResponse withIdentityPools(IdentityPoolShortDescription[] identityPools) {
         this.identityPools = identityPools;
         return this;
@@ -23,9 +24,11 @@ public class ListIdentityPoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityPoolsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityPoolsResponse(){}
 }

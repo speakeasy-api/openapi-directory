@@ -14,6 +14,7 @@ public class SegmentAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public SegmentAnalyticsRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -26,6 +27,7 @@ public class SegmentAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public SegmentAnalyticsRequest withLength(String length) {
         this.length = length;
         return this;
@@ -38,9 +40,11 @@ public class SegmentAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=segment_id")
     public String segmentId;
+
     public SegmentAnalyticsRequest withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
     }
     
+    public SegmentAnalyticsRequest(){}
 }

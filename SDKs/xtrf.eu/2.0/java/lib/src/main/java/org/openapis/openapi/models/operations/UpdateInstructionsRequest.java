@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateInstructionsRequest {
@@ -12,6 +13,7 @@ public class UpdateInstructionsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO;
+
     public UpdateInstructionsRequest withInstructionsDTO(org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO) {
         this.instructionsDTO = instructionsDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdateInstructionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public UpdateInstructionsRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public UpdateInstructionsRequest(@JsonProperty("InstructionsDTO") org.openapis.openapi.models.shared.InstructionsDTO instructionsDTO, @JsonProperty("jobId") String jobId) {
+        this.instructionsDTO = instructionsDTO;
+        this.jobId = jobId;
+  }
 }

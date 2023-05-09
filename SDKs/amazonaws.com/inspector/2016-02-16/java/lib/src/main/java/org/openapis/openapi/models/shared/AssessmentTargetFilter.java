@@ -15,9 +15,11 @@ public class AssessmentTargetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentTargetNamePattern")
     public String assessmentTargetNamePattern;
+
     public AssessmentTargetFilter withAssessmentTargetNamePattern(String assessmentTargetNamePattern) {
         this.assessmentTargetNamePattern = assessmentTargetNamePattern;
         return this;
     }
     
+    public AssessmentTargetFilter(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     public OffsetDateTime attachTime;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withAttachTime(OffsetDateTime attachTime) {
         this.attachTime = attachTime;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public String attachmentId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public Boolean deleteOnTermination;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public Long deviceIndex;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceAttachmentEnaSrdSpecification enaSrdSpecification;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withEnaSrdSpecification(CreateNetworkInterfaceResultNetworkInterfaceAttachmentEnaSrdSpecification enaSrdSpecification) {
         this.enaSrdSpecification = enaSrdSpecification;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public String instanceId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -54,6 +60,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public String instanceOwnerId;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -61,6 +68,7 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public Long networkCardIndex;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -68,9 +76,11 @@ public class CreateNetworkInterfaceResultNetworkInterfaceAttachment {
     
     
     public CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum status;
+
     public CreateNetworkInterfaceResultNetworkInterfaceAttachment withStatus(CreateNetworkInterfaceResultNetworkInterfaceAttachmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateNetworkInterfaceResultNetworkInterfaceAttachment(){}
 }

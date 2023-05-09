@@ -57,11 +57,9 @@ public class ViewOnlyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ViewOnlyLinksNodeListResponse res = new org.openapis.openapi.models.operations.ViewOnlyLinksNodeListResponse() {{
+        org.openapis.openapi.models.operations.ViewOnlyLinksNodeListResponse res = new org.openapis.openapi.models.operations.ViewOnlyLinksNodeListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class ViewOnlyLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ViewOnlyLinksReadResponse res = new org.openapis.openapi.models.operations.ViewOnlyLinksReadResponse() {{
+        org.openapis.openapi.models.operations.ViewOnlyLinksReadResponse res = new org.openapis.openapi.models.operations.ViewOnlyLinksReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

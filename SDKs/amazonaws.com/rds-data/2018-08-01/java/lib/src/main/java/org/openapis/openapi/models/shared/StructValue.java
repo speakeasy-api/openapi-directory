@@ -15,9 +15,11 @@ public class StructValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Value[] attributes;
+
     public StructValue withAttributes(Value[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public StructValue(){}
 }

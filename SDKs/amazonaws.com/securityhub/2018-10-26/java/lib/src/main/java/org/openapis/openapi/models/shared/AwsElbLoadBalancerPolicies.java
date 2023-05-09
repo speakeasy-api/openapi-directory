@@ -15,6 +15,7 @@ public class AwsElbLoadBalancerPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppCookieStickinessPolicies")
     public AwsElbAppCookieStickinessPolicy[] appCookieStickinessPolicies;
+
     public AwsElbLoadBalancerPolicies withAppCookieStickinessPolicies(AwsElbAppCookieStickinessPolicy[] appCookieStickinessPolicies) {
         this.appCookieStickinessPolicies = appCookieStickinessPolicies;
         return this;
@@ -23,6 +24,7 @@ public class AwsElbLoadBalancerPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LbCookieStickinessPolicies")
     public AwsElbLbCookieStickinessPolicy[] lbCookieStickinessPolicies;
+
     public AwsElbLoadBalancerPolicies withLbCookieStickinessPolicies(AwsElbLbCookieStickinessPolicy[] lbCookieStickinessPolicies) {
         this.lbCookieStickinessPolicies = lbCookieStickinessPolicies;
         return this;
@@ -31,9 +33,11 @@ public class AwsElbLoadBalancerPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OtherPolicies")
     public String[] otherPolicies;
+
     public AwsElbLoadBalancerPolicies withOtherPolicies(String[] otherPolicies) {
         this.otherPolicies = otherPolicies;
         return this;
     }
     
+    public AwsElbLoadBalancerPolicies(){}
 }

@@ -9,29 +9,32 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ExfilResource - Resource that has been exfiltrated or exfiltrated_to.
+ * ExfilResource - Resource where data was exfiltrated from or exfiltrated to.
  */
 public class ExfilResource {
     /**
-     * Subcomponents of the asset that is exfiltrated - these could be URIs used during exfiltration, table names, databases, filenames, etc. For example, multiple tables may be exfiltrated from the same CloudSQL instance, or multiple files from the same Cloud Storage bucket.
+     * Subcomponents of the asset that was exfiltrated, like URIs used during exfiltration, table names, databases, and filenames. For example, multiple tables might have been exfiltrated from the same Cloud SQL instance, or multiple files might have been exfiltrated from the same Cloud Storage bucket.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("components")
     public String[] components;
+
     public ExfilResource withComponents(String[] components) {
         this.components = components;
         return this;
     }
     
     /**
-     * Resource's URI (https://google.aip.dev/122#full-resource-names)
+     * The resource's [full resource name](https://cloud.google.com/apis/design/resource_names#full_resource_name).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExfilResource withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ExfilResource(){}
 }

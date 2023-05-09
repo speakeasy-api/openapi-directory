@@ -63,10 +63,8 @@ public class GlobalWineScore {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse res = new org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse() {{
+        org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse res = new org.openapis.openapi.models.operations.GetGlobalwinescoresLatestResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +109,8 @@ public class GlobalWineScore {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHistoricalGWSResponse res = new org.openapis.openapi.models.operations.ListHistoricalGWSResponse() {{
+        org.openapis.openapi.models.operations.ListHistoricalGWSResponse res = new org.openapis.openapi.models.operations.ListHistoricalGWSResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

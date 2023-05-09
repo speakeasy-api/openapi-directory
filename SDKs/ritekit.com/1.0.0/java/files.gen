@@ -54,4 +54,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/TextToImageRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TextToImageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrendingHashtagsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/TrendingHashtagsResponse.java
+docs/sdk/README.md
 USAGE.md

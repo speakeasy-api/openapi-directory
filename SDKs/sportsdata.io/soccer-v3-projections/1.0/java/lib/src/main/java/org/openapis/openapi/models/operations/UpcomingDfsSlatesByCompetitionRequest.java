@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpcomingDfsSlatesByCompetitionRequest {
@@ -13,6 +14,7 @@ public class UpcomingDfsSlatesByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=competitionId")
     public String competitionId;
+
     public UpcomingDfsSlatesByCompetitionRequest withCompetitionId(String competitionId) {
         this.competitionId = competitionId;
         return this;
@@ -23,9 +25,14 @@ public class UpcomingDfsSlatesByCompetitionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public UpcomingDfsSlatesByCompetitionFormatEnum format;
+
     public UpcomingDfsSlatesByCompetitionRequest withFormat(UpcomingDfsSlatesByCompetitionFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public UpcomingDfsSlatesByCompetitionRequest(@JsonProperty("competitionId") String competitionId, @JsonProperty("format") UpcomingDfsSlatesByCompetitionFormatEnum format) {
+        this.competitionId = competitionId;
+        this.format = format;
+  }
 }

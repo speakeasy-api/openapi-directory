@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestHeadRepoPermissions {
     @JsonProperty("admin")
     public Boolean admin;
+
     public PullRequestHeadRepoPermissions withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -19,6 +20,7 @@ public class PullRequestHeadRepoPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintain")
     public Boolean maintain;
+
     public PullRequestHeadRepoPermissions withMaintain(Boolean maintain) {
         this.maintain = maintain;
         return this;
@@ -26,6 +28,7 @@ public class PullRequestHeadRepoPermissions {
     
     @JsonProperty("pull")
     public Boolean pull;
+
     public PullRequestHeadRepoPermissions withPull(Boolean pull) {
         this.pull = pull;
         return this;
@@ -33,6 +36,7 @@ public class PullRequestHeadRepoPermissions {
     
     @JsonProperty("push")
     public Boolean push;
+
     public PullRequestHeadRepoPermissions withPush(Boolean push) {
         this.push = push;
         return this;
@@ -41,9 +45,15 @@ public class PullRequestHeadRepoPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triage")
     public Boolean triage;
+
     public PullRequestHeadRepoPermissions withTriage(Boolean triage) {
         this.triage = triage;
         return this;
     }
     
+    public PullRequestHeadRepoPermissions(@JsonProperty("admin") Boolean admin, @JsonProperty("pull") Boolean pull, @JsonProperty("push") Boolean push) {
+        this.admin = admin;
+        this.pull = pull;
+        this.push = push;
+  }
 }

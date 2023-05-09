@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Antifraud1 {
     @JsonProperty("affiliationId")
     public String affiliationId;
+
     public Antifraud1 withAffiliationId(String affiliationId) {
         this.affiliationId = affiliationId;
         return this;
     }
     
+    public Antifraud1(@JsonProperty("affiliationId") String affiliationId) {
+        this.affiliationId = affiliationId;
+  }
 }

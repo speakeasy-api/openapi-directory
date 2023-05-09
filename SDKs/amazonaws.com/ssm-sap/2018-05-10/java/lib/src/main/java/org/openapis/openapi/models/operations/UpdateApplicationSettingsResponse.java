@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationSettingsResponse {
     
     public String contentType;
+
     public UpdateApplicationSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApplicationSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateApplicationSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class UpdateApplicationSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateApplicationSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateApplicationSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateApplicationSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApplicationSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApplicationSettingsOutput updateApplicationSettingsOutput;
+
     public UpdateApplicationSettingsResponse withUpdateApplicationSettingsOutput(org.openapis.openapi.models.shared.UpdateApplicationSettingsOutput updateApplicationSettingsOutput) {
         this.updateApplicationSettingsOutput = updateApplicationSettingsOutput;
         return this;
@@ -63,9 +70,14 @@ public class UpdateApplicationSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateApplicationSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateApplicationSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

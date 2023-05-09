@@ -15,6 +15,7 @@ public class ListedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ListedConnector withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class ListedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public ListedConnector withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -31,9 +33,11 @@ public class ListedConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public ListedConnector withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ListedConnector(){}
 }

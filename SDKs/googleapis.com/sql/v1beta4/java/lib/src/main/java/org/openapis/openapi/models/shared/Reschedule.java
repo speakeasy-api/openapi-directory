@@ -15,6 +15,7 @@ public class Reschedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescheduleType")
     public RescheduleRescheduleTypeEnum rescheduleType;
+
     public Reschedule withRescheduleType(RescheduleRescheduleTypeEnum rescheduleType) {
         this.rescheduleType = rescheduleType;
         return this;
@@ -26,9 +27,11 @@ public class Reschedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public Reschedule withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public Reschedule(){}
 }

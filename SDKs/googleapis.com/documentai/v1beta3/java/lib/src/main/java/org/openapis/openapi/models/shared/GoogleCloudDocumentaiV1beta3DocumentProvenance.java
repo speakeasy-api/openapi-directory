@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenance withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parents")
     public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent[] parents;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenance withParents(GoogleCloudDocumentaiV1beta3DocumentProvenanceParent[] parents) {
         this.parents = parents;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Integer revision;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenance withRevision(Integer revision) {
         this.revision = revision;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDocumentaiV1beta3DocumentProvenanceTypeEnum type;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenance withType(GoogleCloudDocumentaiV1beta3DocumentProvenanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentProvenance(){}
 }

@@ -23,6 +23,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppointmentType")
     public String appointmentType;
+
     public DiaryAppointmentModel withAppointmentType(String appointmentType) {
         this.appointmentType = appointmentType;
         return this;
@@ -34,6 +35,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cancelled")
     public Boolean cancelled;
+
     public DiaryAppointmentModel withCancelled(Boolean cancelled) {
         this.cancelled = cancelled;
         return this;
@@ -45,6 +47,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comment")
     public String comment;
+
     public DiaryAppointmentModel withComment(String comment) {
         this.comment = comment;
         return this;
@@ -58,6 +61,7 @@ public class DiaryAppointmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DiaryAppointmentModel withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public DiaryAppointmentModel withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -80,6 +85,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public DiaryAppointmentModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -93,8 +99,21 @@ public class DiaryAppointmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("End")
     public OffsetDateTime end;
+
     public DiaryAppointmentModel withEnd(OffsetDateTime end) {
         this.end = end;
+        return this;
+    }
+    
+    /**
+     * Linked Guest Model:-
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("LinkedGuest")
+    public LinkedGuestModel[] linkedGuest;
+
+    public DiaryAppointmentModel withLinkedGuest(LinkedGuestModel[] linkedGuest) {
+        this.linkedGuest = linkedGuest;
         return this;
     }
     
@@ -104,6 +123,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkedProperties")
     public LinkedPropertiesModel[] linkedProperties;
+
     public DiaryAppointmentModel withLinkedProperties(LinkedPropertiesModel[] linkedProperties) {
         this.linkedProperties = linkedProperties;
         return this;
@@ -117,6 +137,7 @@ public class DiaryAppointmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NextRecurringDate")
     public OffsetDateTime nextRecurringDate;
+
     public DiaryAppointmentModel withNextRecurringDate(OffsetDateTime nextRecurringDate) {
         this.nextRecurringDate = nextRecurringDate;
         return this;
@@ -128,6 +149,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public DiaryAppointmentModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -139,6 +161,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recurrence")
     public Integer recurrence;
+
     public DiaryAppointmentModel withRecurrence(Integer recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -150,6 +173,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecurrenceType")
     public String recurrenceType;
+
     public DiaryAppointmentModel withRecurrenceType(String recurrenceType) {
         this.recurrenceType = recurrenceType;
         return this;
@@ -163,6 +187,7 @@ public class DiaryAppointmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RemindAt")
     public OffsetDateTime remindAt;
+
     public DiaryAppointmentModel withRemindAt(OffsetDateTime remindAt) {
         this.remindAt = remindAt;
         return this;
@@ -174,6 +199,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemindBefore")
     public DiaryAppointmentModelRemindBeforeEnum remindBefore;
+
     public DiaryAppointmentModel withRemindBefore(DiaryAppointmentModelRemindBeforeEnum remindBefore) {
         this.remindBefore = remindBefore;
         return this;
@@ -185,6 +211,7 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Staff")
     public String staff;
+
     public DiaryAppointmentModel withStaff(String staff) {
         this.staff = staff;
         return this;
@@ -198,6 +225,7 @@ public class DiaryAppointmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Start")
     public OffsetDateTime start;
+
     public DiaryAppointmentModel withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -209,9 +237,11 @@ public class DiaryAppointmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public DiaryAppointmentModel withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DiaryAppointmentModel(){}
 }

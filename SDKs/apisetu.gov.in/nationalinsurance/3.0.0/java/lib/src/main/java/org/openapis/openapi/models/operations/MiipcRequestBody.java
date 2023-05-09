@@ -15,6 +15,7 @@ public class MiipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public MiipcRequestBodyCertificateParameters certificateParameters;
+
     public MiipcRequestBody withCertificateParameters(MiipcRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class MiipcRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public MiipcRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class MiipcRequestBody {
      */
     @JsonProperty("format")
     public MiipcRequestBodyFormatEnum format;
+
     public MiipcRequestBody withFormat(MiipcRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class MiipcRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public MiipcRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public MiipcRequestBody(@JsonProperty("format") MiipcRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

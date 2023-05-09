@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeCanariesLastRunResponse {
     
     public String contentType;
+
     public DescribeCanariesLastRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeCanariesLastRunResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeCanariesLastRunResponse describeCanariesLastRunResponse;
+
     public DescribeCanariesLastRunResponse withDescribeCanariesLastRunResponse(org.openapis.openapi.models.shared.DescribeCanariesLastRunResponse describeCanariesLastRunResponse) {
         this.describeCanariesLastRunResponse = describeCanariesLastRunResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeCanariesLastRunResponse {
      */
     
     public Object internalServerException;
+
     public DescribeCanariesLastRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeCanariesLastRunResponse {
     
     
     public Integer statusCode;
+
     public DescribeCanariesLastRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeCanariesLastRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeCanariesLastRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeCanariesLastRunResponse {
      */
     
     public Object validationException;
+
     public DescribeCanariesLastRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeCanariesLastRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

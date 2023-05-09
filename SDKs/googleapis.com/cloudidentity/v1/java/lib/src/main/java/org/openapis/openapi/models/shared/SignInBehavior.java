@@ -18,9 +18,11 @@ public class SignInBehavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectCondition")
     public SignInBehaviorRedirectConditionEnum redirectCondition;
+
     public SignInBehavior withRedirectCondition(SignInBehaviorRedirectConditionEnum redirectCondition) {
         this.redirectCondition = redirectCondition;
         return this;
     }
     
+    public SignInBehavior(){}
 }

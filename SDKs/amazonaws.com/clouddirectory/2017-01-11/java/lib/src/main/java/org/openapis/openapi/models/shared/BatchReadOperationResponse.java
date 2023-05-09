@@ -15,6 +15,7 @@ public class BatchReadOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExceptionResponse")
     public BatchReadException exceptionResponse;
+
     public BatchReadOperationResponse withExceptionResponse(BatchReadException exceptionResponse) {
         this.exceptionResponse = exceptionResponse;
         return this;
@@ -23,9 +24,11 @@ public class BatchReadOperationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessfulResponse")
     public BatchReadSuccessfulResponse successfulResponse;
+
     public BatchReadOperationResponse withSuccessfulResponse(BatchReadSuccessfulResponse successfulResponse) {
         this.successfulResponse = successfulResponse;
         return this;
     }
     
+    public BatchReadOperationResponse(){}
 }

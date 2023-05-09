@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RenewOfferingResponse {
@@ -12,6 +13,7 @@ public class RenewOfferingResponse {
      */
     
     public Object argumentException;
+
     public RenewOfferingResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class RenewOfferingResponse {
     
     
     public String contentType;
+
     public RenewOfferingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RenewOfferingResponse {
      */
     
     public Object limitExceededException;
+
     public RenewOfferingResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class RenewOfferingResponse {
      */
     
     public Object notEligibleException;
+
     public RenewOfferingResponse withNotEligibleException(Object notEligibleException) {
         this.notEligibleException = notEligibleException;
         return this;
@@ -49,6 +54,7 @@ public class RenewOfferingResponse {
      */
     
     public Object notFoundException;
+
     public RenewOfferingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RenewOfferingResponse {
      */
     
     public org.openapis.openapi.models.shared.RenewOfferingResult renewOfferingResult;
+
     public RenewOfferingResponse withRenewOfferingResult(org.openapis.openapi.models.shared.RenewOfferingResult renewOfferingResult) {
         this.renewOfferingResult = renewOfferingResult;
         return this;
@@ -69,6 +76,7 @@ public class RenewOfferingResponse {
      */
     
     public Object serviceAccountException;
+
     public RenewOfferingResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class RenewOfferingResponse {
     
     
     public Integer statusCode;
+
     public RenewOfferingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RenewOfferingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RenewOfferingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RenewOfferingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

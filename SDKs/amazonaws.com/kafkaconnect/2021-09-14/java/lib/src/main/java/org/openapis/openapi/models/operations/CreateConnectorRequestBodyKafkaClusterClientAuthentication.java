@@ -15,9 +15,11 @@ public class CreateConnectorRequestBodyKafkaClusterClientAuthentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationType")
     public org.openapis.openapi.models.shared.KafkaClusterClientAuthenticationTypeEnum authenticationType;
+
     public CreateConnectorRequestBodyKafkaClusterClientAuthentication withAuthenticationType(org.openapis.openapi.models.shared.KafkaClusterClientAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
     }
     
+    public CreateConnectorRequestBodyKafkaClusterClientAuthentication(){}
 }

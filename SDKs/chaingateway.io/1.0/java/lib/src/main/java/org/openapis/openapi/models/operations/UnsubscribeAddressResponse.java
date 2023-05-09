@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnsubscribeAddressResponse {
     
     public String contentType;
+
     public UnsubscribeAddressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UnsubscribeAddressResponse {
     
     
     public Integer statusCode;
+
     public UnsubscribeAddressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UnsubscribeAddressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnsubscribeAddressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class UnsubscribeAddressResponse {
     
     
     public org.openapis.openapi.models.shared.UnsubscribeAddress unsubscribeAddress;
+
     public UnsubscribeAddressResponse withUnsubscribeAddress(org.openapis.openapi.models.shared.UnsubscribeAddress unsubscribeAddress) {
         this.unsubscribeAddress = unsubscribeAddress;
         return this;
     }
     
+    public UnsubscribeAddressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

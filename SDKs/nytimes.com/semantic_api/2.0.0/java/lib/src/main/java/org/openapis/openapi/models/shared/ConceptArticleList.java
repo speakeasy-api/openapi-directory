@@ -12,6 +12,7 @@ public class ConceptArticleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ConceptArticleListResults[] results;
+
     public ConceptArticleList withResults(ConceptArticleListResults[] results) {
         this.results = results;
         return this;
@@ -20,9 +21,11 @@ public class ConceptArticleList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ConceptArticleList withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ConceptArticleList(){}
 }

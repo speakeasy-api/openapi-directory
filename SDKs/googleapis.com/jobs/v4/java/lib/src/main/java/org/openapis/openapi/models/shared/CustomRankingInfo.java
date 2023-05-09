@@ -18,6 +18,7 @@ public class CustomRankingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importanceLevel")
     public CustomRankingInfoImportanceLevelEnum importanceLevel;
+
     public CustomRankingInfo withImportanceLevel(CustomRankingInfoImportanceLevelEnum importanceLevel) {
         this.importanceLevel = importanceLevel;
         return this;
@@ -29,9 +30,11 @@ public class CustomRankingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rankingExpression")
     public String rankingExpression;
+
     public CustomRankingInfo withRankingExpression(String rankingExpression) {
         this.rankingExpression = rankingExpression;
         return this;
     }
     
+    public CustomRankingInfo(){}
 }

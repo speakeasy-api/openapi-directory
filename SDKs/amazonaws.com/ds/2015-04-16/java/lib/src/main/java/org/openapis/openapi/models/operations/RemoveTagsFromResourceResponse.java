@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveTagsFromResourceResponse {
@@ -12,6 +13,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object clientException;
+
     public RemoveTagsFromResourceResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class RemoveTagsFromResourceResponse {
     
     
     public String contentType;
+
     public RemoveTagsFromResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public RemoveTagsFromResourceResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public RemoveTagsFromResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public java.util.Map<String, Object> removeTagsFromResourceResult;
+
     public RemoveTagsFromResourceResponse withRemoveTagsFromResourceResult(java.util.Map<String, Object> removeTagsFromResourceResult) {
         this.removeTagsFromResourceResult = removeTagsFromResourceResult;
         return this;
@@ -59,6 +65,7 @@ public class RemoveTagsFromResourceResponse {
      */
     
     public Object serviceException;
+
     public RemoveTagsFromResourceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class RemoveTagsFromResourceResponse {
     
     
     public Integer statusCode;
+
     public RemoveTagsFromResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RemoveTagsFromResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveTagsFromResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveTagsFromResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ReleasesUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public ReleasesUpdate200ApplicationJSON withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public ReleasesUpdate200ApplicationJSON(){}
 }

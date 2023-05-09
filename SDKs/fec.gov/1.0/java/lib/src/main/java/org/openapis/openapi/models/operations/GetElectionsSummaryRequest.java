@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetElectionsSummaryRequest {
@@ -13,6 +14,7 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetElectionsSummaryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -30,6 +32,7 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer cycle;
+
     public GetElectionsSummaryRequest withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -40,6 +43,7 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=district")
     public String district;
+
     public GetElectionsSummaryRequest withDistrict(String district) {
         this.district = district;
         return this;
@@ -51,6 +55,7 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetElectionsSummaryRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -61,6 +66,7 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetElectionsSummaryOfficeEnum office;
+
     public GetElectionsSummaryRequest withOffice(GetElectionsSummaryOfficeEnum office) {
         this.office = office;
         return this;
@@ -71,9 +77,15 @@ public class GetElectionsSummaryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetElectionsSummaryRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetElectionsSummaryRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("cycle") Integer cycle, @JsonProperty("office") GetElectionsSummaryOfficeEnum office) {
+        this.apiKey = apiKey;
+        this.cycle = cycle;
+        this.office = office;
+  }
 }

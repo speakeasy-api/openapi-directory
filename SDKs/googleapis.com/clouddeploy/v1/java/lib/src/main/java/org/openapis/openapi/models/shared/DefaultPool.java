@@ -18,6 +18,7 @@ public class DefaultPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactStorage")
     public String artifactStorage;
+
     public DefaultPool withArtifactStorage(String artifactStorage) {
         this.artifactStorage = artifactStorage;
         return this;
@@ -29,9 +30,11 @@ public class DefaultPool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public DefaultPool withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public DefaultPool(){}
 }

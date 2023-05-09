@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetryPipelineExecutionResponse {
@@ -12,6 +13,7 @@ public class RetryPipelineExecutionResponse {
      */
     
     public Object conflictException;
+
     public RetryPipelineExecutionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class RetryPipelineExecutionResponse {
     
     
     public String contentType;
+
     public RetryPipelineExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RetryPipelineExecutionResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public RetryPipelineExecutionResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class RetryPipelineExecutionResponse {
      */
     
     public Object resourceNotFound;
+
     public RetryPipelineExecutionResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -49,6 +54,7 @@ public class RetryPipelineExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryPipelineExecutionResponse retryPipelineExecutionResponse;
+
     public RetryPipelineExecutionResponse withRetryPipelineExecutionResponse(org.openapis.openapi.models.shared.RetryPipelineExecutionResponse retryPipelineExecutionResponse) {
         this.retryPipelineExecutionResponse = retryPipelineExecutionResponse;
         return this;
@@ -56,6 +62,7 @@ public class RetryPipelineExecutionResponse {
     
     
     public Integer statusCode;
+
     public RetryPipelineExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RetryPipelineExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetryPipelineExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RetryPipelineExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

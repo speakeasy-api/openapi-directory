@@ -18,9 +18,11 @@ public class InstancesRotateServerCaRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotateServerCaContext")
     public RotateServerCaContext rotateServerCaContext;
+
     public InstancesRotateServerCaRequest withRotateServerCaContext(RotateServerCaContext rotateServerCaContext) {
         this.rotateServerCaContext = rotateServerCaContext;
         return this;
     }
     
+    public InstancesRotateServerCaRequest(){}
 }

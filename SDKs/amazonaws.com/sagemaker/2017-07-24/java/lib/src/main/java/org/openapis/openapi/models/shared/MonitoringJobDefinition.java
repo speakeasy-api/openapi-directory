@@ -15,6 +15,7 @@ public class MonitoringJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineConfig")
     public MonitoringBaselineConfig baselineConfig;
+
     public MonitoringJobDefinition withBaselineConfig(MonitoringBaselineConfig baselineConfig) {
         this.baselineConfig = baselineConfig;
         return this;
@@ -23,6 +24,7 @@ public class MonitoringJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public MonitoringJobDefinition withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -30,6 +32,7 @@ public class MonitoringJobDefinition {
     
     @JsonProperty("MonitoringAppSpecification")
     public MonitoringAppSpecification monitoringAppSpecification;
+
     public MonitoringJobDefinition withMonitoringAppSpecification(MonitoringAppSpecification monitoringAppSpecification) {
         this.monitoringAppSpecification = monitoringAppSpecification;
         return this;
@@ -37,6 +40,7 @@ public class MonitoringJobDefinition {
     
     @JsonProperty("MonitoringInputs")
     public MonitoringInput[] monitoringInputs;
+
     public MonitoringJobDefinition withMonitoringInputs(MonitoringInput[] monitoringInputs) {
         this.monitoringInputs = monitoringInputs;
         return this;
@@ -44,6 +48,7 @@ public class MonitoringJobDefinition {
     
     @JsonProperty("MonitoringOutputConfig")
     public MonitoringOutputConfig monitoringOutputConfig;
+
     public MonitoringJobDefinition withMonitoringOutputConfig(MonitoringOutputConfig monitoringOutputConfig) {
         this.monitoringOutputConfig = monitoringOutputConfig;
         return this;
@@ -51,6 +56,7 @@ public class MonitoringJobDefinition {
     
     @JsonProperty("MonitoringResources")
     public MonitoringResources monitoringResources;
+
     public MonitoringJobDefinition withMonitoringResources(MonitoringResources monitoringResources) {
         this.monitoringResources = monitoringResources;
         return this;
@@ -59,6 +65,7 @@ public class MonitoringJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public NetworkConfig networkConfig;
+
     public MonitoringJobDefinition withNetworkConfig(NetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -66,6 +73,7 @@ public class MonitoringJobDefinition {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public MonitoringJobDefinition withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -74,9 +82,17 @@ public class MonitoringJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public MonitoringJobDefinition withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
     }
     
+    public MonitoringJobDefinition(@JsonProperty("MonitoringAppSpecification") MonitoringAppSpecification monitoringAppSpecification, @JsonProperty("MonitoringInputs") MonitoringInput[] monitoringInputs, @JsonProperty("MonitoringOutputConfig") MonitoringOutputConfig monitoringOutputConfig, @JsonProperty("MonitoringResources") MonitoringResources monitoringResources, @JsonProperty("RoleArn") String roleArn) {
+        this.monitoringAppSpecification = monitoringAppSpecification;
+        this.monitoringInputs = monitoringInputs;
+        this.monitoringOutputConfig = monitoringOutputConfig;
+        this.monitoringResources = monitoringResources;
+        this.roleArn = roleArn;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccessDescription {
     @JsonProperty("AccessLocation")
     public GeneralName accessLocation;
+
     public AccessDescription withAccessLocation(GeneralName accessLocation) {
         this.accessLocation = accessLocation;
         return this;
@@ -19,9 +20,14 @@ public class AccessDescription {
     
     @JsonProperty("AccessMethod")
     public AccessMethod accessMethod;
+
     public AccessDescription withAccessMethod(AccessMethod accessMethod) {
         this.accessMethod = accessMethod;
         return this;
     }
     
+    public AccessDescription(@JsonProperty("AccessLocation") GeneralName accessLocation, @JsonProperty("AccessMethod") AccessMethod accessMethod) {
+        this.accessLocation = accessLocation;
+        this.accessMethod = accessMethod;
+  }
 }

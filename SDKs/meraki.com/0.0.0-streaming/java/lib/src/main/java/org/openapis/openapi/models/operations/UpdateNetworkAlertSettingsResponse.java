@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateNetworkAlertSettingsResponse {
     
     public String contentType;
+
     public UpdateNetworkAlertSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateNetworkAlertSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateNetworkAlertSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateNetworkAlertSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateNetworkAlertSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateNetworkAlertSettingsResponse {
      */
     
     public java.util.Map<String, Object> updateNetworkAlertSettings200ApplicationJSONObject;
+
     public UpdateNetworkAlertSettingsResponse withUpdateNetworkAlertSettings200ApplicationJSONObject(java.util.Map<String, Object> updateNetworkAlertSettings200ApplicationJSONObject) {
         this.updateNetworkAlertSettings200ApplicationJSONObject = updateNetworkAlertSettings200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateNetworkAlertSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

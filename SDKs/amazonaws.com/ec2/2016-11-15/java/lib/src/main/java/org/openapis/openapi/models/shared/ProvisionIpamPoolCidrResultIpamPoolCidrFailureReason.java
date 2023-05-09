@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ProvisionIpamPoolCidrResultIpamPoolCidrFailureReason {
     
     public ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum code;
+
     public ProvisionIpamPoolCidrResultIpamPoolCidrFailureReason withCode(ProvisionIpamPoolCidrResultIpamPoolCidrFailureReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class ProvisionIpamPoolCidrResultIpamPoolCidrFailureReason {
     
     
     public String message;
+
     public ProvisionIpamPoolCidrResultIpamPoolCidrFailureReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ProvisionIpamPoolCidrResultIpamPoolCidrFailureReason(){}
 }

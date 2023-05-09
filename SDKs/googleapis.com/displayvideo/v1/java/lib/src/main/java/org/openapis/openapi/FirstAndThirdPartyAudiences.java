@@ -61,11 +61,9 @@ public class FirstAndThirdPartyAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesCreateResponse(contentType, httpRes.statusCode()) {{
             firstAndThirdPartyAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class FirstAndThirdPartyAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesEditCustomerMatchMembersResponse(contentType, httpRes.statusCode()) {{
             editCustomerMatchMembersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class FirstAndThirdPartyAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesGetResponse(contentType, httpRes.statusCode()) {{
             firstAndThirdPartyAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class FirstAndThirdPartyAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesListResponse(contentType, httpRes.statusCode()) {{
             listFirstAndThirdPartyAudiencesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class FirstAndThirdPartyAudiences {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse res = new org.openapis.openapi.models.operations.DisplayvideoFirstAndThirdPartyAudiencesPatchResponse(contentType, httpRes.statusCode()) {{
             firstAndThirdPartyAudience = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

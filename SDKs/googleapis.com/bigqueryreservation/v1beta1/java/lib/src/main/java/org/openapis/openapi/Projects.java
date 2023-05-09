@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsCreateResponse(contentType, httpRes.statusCode()) {{
             capacityCommitment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsListResponse(contentType, httpRes.statusCode()) {{
             listCapacityCommitmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsMergeResponse(contentType, httpRes.statusCode()) {{
             capacityCommitment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsCapacityCommitmentsSplitResponse(contentType, httpRes.statusCode()) {{
             splitCapacityCommitmentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsCreateResponse(contentType, httpRes.statusCode()) {{
             assignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsListResponse(contentType, httpRes.statusCode()) {{
             listAssignmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsMoveResponse(contentType, httpRes.statusCode()) {{
             assignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsAssignmentsPatchResponse(contentType, httpRes.statusCode()) {{
             assignment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsCreateResponse(contentType, httpRes.statusCode()) {{
             reservation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsGetResponse(contentType, httpRes.statusCode()) {{
             reservation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsReservationsListResponse(contentType, httpRes.statusCode()) {{
             listReservationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse() {{
+        org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse res = new org.openapis.openapi.models.operations.BigqueryreservationProjectsLocationsSearchAssignmentsResponse(contentType, httpRes.statusCode()) {{
             searchAssignmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

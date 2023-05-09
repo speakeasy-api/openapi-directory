@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState {
     
     public AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum state;
+
     public AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState withState(AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockStateStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState {
     
     
     public String statusMessage;
+
     public AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public AssociateVpcCidrBlockResultCidrBlockAssociationCidrBlockState(){}
 }

@@ -18,6 +18,7 @@ public class RepricingRuleStatsBasedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentageDelta")
     public Integer percentageDelta;
+
     public RepricingRuleStatsBasedRule withPercentageDelta(Integer percentageDelta) {
         this.percentageDelta = percentageDelta;
         return this;
@@ -29,9 +30,11 @@ public class RepricingRuleStatsBasedRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDelta")
     public String priceDelta;
+
     public RepricingRuleStatsBasedRule withPriceDelta(String priceDelta) {
         this.priceDelta = priceDelta;
         return this;
     }
     
+    public RepricingRuleStatsBasedRule(){}
 }

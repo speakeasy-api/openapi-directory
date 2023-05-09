@@ -18,6 +18,7 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deal")
     public Deal deal;
+
     public FinalizedDeal withDeal(Deal deal) {
         this.deal = deal;
         return this;
@@ -29,6 +30,7 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealPausingInfo")
     public DealPausingInfo dealPausingInfo;
+
     public FinalizedDeal withDealPausingInfo(DealPausingInfo dealPausingInfo) {
         this.dealPausingInfo = dealPausingInfo;
         return this;
@@ -40,6 +42,7 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealServingStatus")
     public FinalizedDealDealServingStatusEnum dealServingStatus;
+
     public FinalizedDeal withDealServingStatus(FinalizedDealDealServingStatusEnum dealServingStatus) {
         this.dealServingStatus = dealServingStatus;
         return this;
@@ -51,6 +54,7 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FinalizedDeal withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readyToServe")
     public Boolean readyToServe;
+
     public FinalizedDeal withReadyToServe(Boolean readyToServe) {
         this.readyToServe = readyToServe;
         return this;
@@ -73,9 +78,11 @@ public class FinalizedDeal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rtbMetrics")
     public RtbMetrics rtbMetrics;
+
     public FinalizedDeal withRtbMetrics(RtbMetrics rtbMetrics) {
         this.rtbMetrics = rtbMetrics;
         return this;
     }
     
+    public FinalizedDeal(){}
 }

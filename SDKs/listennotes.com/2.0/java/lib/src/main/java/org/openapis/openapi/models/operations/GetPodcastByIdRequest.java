@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPodcastByIdRequest {
@@ -12,6 +13,7 @@ public class GetPodcastByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetPodcastByIdRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -22,6 +24,7 @@ public class GetPodcastByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPodcastByIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class GetPodcastByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=next_episode_pub_date")
     public Long nextEpisodePubDate;
+
     public GetPodcastByIdRequest withNextEpisodePubDate(Long nextEpisodePubDate) {
         this.nextEpisodePubDate = nextEpisodePubDate;
         return this;
@@ -44,9 +48,14 @@ public class GetPodcastByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetPodcastByIdSortEnum sort;
+
     public GetPodcastByIdRequest withSort(GetPodcastByIdSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetPodcastByIdRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("id") String id) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.id = id;
+  }
 }

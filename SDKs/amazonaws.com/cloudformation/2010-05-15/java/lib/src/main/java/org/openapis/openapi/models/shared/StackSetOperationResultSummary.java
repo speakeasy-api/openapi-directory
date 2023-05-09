@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StackSetOperationResultSummary {
     
     public String account;
+
     public StackSetOperationResultSummary withAccount(String account) {
         this.account = account;
         return this;
@@ -19,6 +20,7 @@ public class StackSetOperationResultSummary {
     
     
     public AccountGateResult accountGateResult;
+
     public StackSetOperationResultSummary withAccountGateResult(AccountGateResult accountGateResult) {
         this.accountGateResult = accountGateResult;
         return this;
@@ -26,6 +28,7 @@ public class StackSetOperationResultSummary {
     
     
     public String organizationalUnitId;
+
     public StackSetOperationResultSummary withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
@@ -33,6 +36,7 @@ public class StackSetOperationResultSummary {
     
     
     public String region;
+
     public StackSetOperationResultSummary withRegion(String region) {
         this.region = region;
         return this;
@@ -40,6 +44,7 @@ public class StackSetOperationResultSummary {
     
     
     public StackSetOperationResultStatusEnum status;
+
     public StackSetOperationResultSummary withStatus(StackSetOperationResultStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +52,11 @@ public class StackSetOperationResultSummary {
     
     
     public String statusReason;
+
     public StackSetOperationResultSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public StackSetOperationResultSummary(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateFirewallPolicyResponse {
     @JsonProperty("FirewallPolicyResponse")
     public FirewallPolicyResponse firewallPolicyResponse;
+
     public UpdateFirewallPolicyResponse withFirewallPolicyResponse(FirewallPolicyResponse firewallPolicyResponse) {
         this.firewallPolicyResponse = firewallPolicyResponse;
         return this;
@@ -19,9 +20,14 @@ public class UpdateFirewallPolicyResponse {
     
     @JsonProperty("UpdateToken")
     public String updateToken;
+
     public UpdateFirewallPolicyResponse withUpdateToken(String updateToken) {
         this.updateToken = updateToken;
         return this;
     }
     
+    public UpdateFirewallPolicyResponse(@JsonProperty("FirewallPolicyResponse") FirewallPolicyResponse firewallPolicyResponse, @JsonProperty("UpdateToken") String updateToken) {
+        this.firewallPolicyResponse = firewallPolicyResponse;
+        this.updateToken = updateToken;
+  }
 }

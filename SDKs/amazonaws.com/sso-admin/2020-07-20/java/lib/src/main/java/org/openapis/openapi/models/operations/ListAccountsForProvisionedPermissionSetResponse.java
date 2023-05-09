@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccountsForProvisionedPermissionSetResponse {
@@ -12,6 +13,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccountsForProvisionedPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
     
     
     public String contentType;
+
     public ListAccountsForProvisionedPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public ListAccountsForProvisionedPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccountsForProvisionedPermissionSetResponse listAccountsForProvisionedPermissionSetResponse;
+
     public ListAccountsForProvisionedPermissionSetResponse withListAccountsForProvisionedPermissionSetResponse(org.openapis.openapi.models.shared.ListAccountsForProvisionedPermissionSetResponse listAccountsForProvisionedPermissionSetResponse) {
         this.listAccountsForProvisionedPermissionSetResponse = listAccountsForProvisionedPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccountsForProvisionedPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public ListAccountsForProvisionedPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccountsForProvisionedPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public ListAccountsForProvisionedPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAccountsForProvisionedPermissionSetResponse {
      */
     
     public Object validationException;
+
     public ListAccountsForProvisionedPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAccountsForProvisionedPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

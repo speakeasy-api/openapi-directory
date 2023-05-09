@@ -18,6 +18,7 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseView")
     public CreateTaskRequestResponseViewEnum responseView;
+
     public CreateTaskRequest withResponseView(CreateTaskRequestResponseViewEnum responseView) {
         this.responseView = responseView;
         return this;
@@ -29,9 +30,11 @@ public class CreateTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("task")
     public Task task;
+
     public CreateTaskRequest withTask(Task task) {
         this.task = task;
         return this;
     }
     
+    public CreateTaskRequest(){}
 }

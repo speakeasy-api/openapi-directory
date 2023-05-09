@@ -57,12 +57,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateApiCredentialResponse res = new org.openapis.openapi.models.operations.CreateApiCredentialResponse() {{
+        org.openapis.openapi.models.operations.CreateApiCredentialResponse res = new org.openapis.openapi.models.operations.CreateApiCredentialResponse(contentType, httpRes.statusCode()) {{
             apiCredential = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteApiCredentialResponse res = new org.openapis.openapi.models.operations.DeleteApiCredentialResponse() {{
+        org.openapis.openapi.models.operations.DeleteApiCredentialResponse res = new org.openapis.openapi.models.operations.DeleteApiCredentialResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -147,11 +143,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableApiCredentialsResponse res = new org.openapis.openapi.models.operations.DisableApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.DisableApiCredentialsResponse res = new org.openapis.openapi.models.operations.DisableApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -188,11 +182,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableApiCredentialsResponse res = new org.openapis.openapi.models.operations.EnableApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.EnableApiCredentialsResponse res = new org.openapis.openapi.models.operations.EnableApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -235,12 +227,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindApiCredentialsResponse res = new org.openapis.openapi.models.operations.FindApiCredentialsResponse() {{
+        org.openapis.openapi.models.operations.FindApiCredentialsResponse res = new org.openapis.openapi.models.operations.FindApiCredentialsResponse(contentType, httpRes.statusCode()) {{
             apiCredentialPage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,12 +280,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountResponse res = new org.openapis.openapi.models.operations.GetAccountResponse() {{
+        org.openapis.openapi.models.operations.GetAccountResponse res = new org.openapis.openapi.models.operations.GetAccountResponse(contentType, httpRes.statusCode()) {{
             account = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,12 +333,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiCredentialResponse res = new org.openapis.openapi.models.operations.GetApiCredentialResponse() {{
+        org.openapis.openapi.models.operations.GetApiCredentialResponse res = new org.openapis.openapi.models.operations.GetApiCredentialResponse(contentType, httpRes.statusCode()) {{
             apiCredential = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -374,10 +360,11 @@ public class Me {
     /**
      * Find plan usage
      * Searches for the data of a billing plan usage for the user. Returns the data of a billing plan usage for the current month. For authentication use api credentials.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBillingPlanUsageResponse getBillingPlanUsage() throws Exception {
+    public org.openapis.openapi.models.operations.GetBillingPlanUsageResponse getBillingPlanUsage(org.openapis.openapi.models.operations.GetBillingPlanUsageSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/billing/plan-usage");
         
@@ -386,17 +373,16 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBillingPlanUsageResponse res = new org.openapis.openapi.models.operations.GetBillingPlanUsageResponse() {{
+        org.openapis.openapi.models.operations.GetBillingPlanUsageResponse res = new org.openapis.openapi.models.operations.GetBillingPlanUsageResponse(contentType, httpRes.statusCode()) {{
             billingPlanUsage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,10 +406,11 @@ public class Me {
     /**
      * Find caller ids
      * Returns a list of verified caller ids. If the number is not shown in the list, then it is not verified. In this case sending of a verification code is required. For authentication use api credentials.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetCallerIdsResponse getCallerIds() throws Exception {
+    public org.openapis.openapi.models.operations.GetCallerIdsResponse getCallerIds(org.openapis.openapi.models.operations.GetCallerIdsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/me/callerids");
         
@@ -432,17 +419,16 @@ public class Me {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCallerIdsResponse res = new org.openapis.openapi.models.operations.GetCallerIdsResponse() {{
+        org.openapis.openapi.models.operations.GetCallerIdsResponse res = new org.openapis.openapi.models.operations.GetCallerIdsResponse(contentType, httpRes.statusCode()) {{
             callerIdList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -492,12 +478,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditUsageResponse res = new org.openapis.openapi.models.operations.GetCreditUsageResponse() {{
+        org.openapis.openapi.models.operations.GetCreditUsageResponse res = new org.openapis.openapi.models.operations.GetCreditUsageResponse(contentType, httpRes.statusCode()) {{
             creditUsage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -541,11 +525,9 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse res = new org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse() {{
+        org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse res = new org.openapis.openapi.models.operations.SendVerificationCodeToCallerIdResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -584,12 +566,10 @@ public class Me {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyCallerIdResponse res = new org.openapis.openapi.models.operations.VerifyCallerIdResponse() {{
+        org.openapis.openapi.models.operations.VerifyCallerIdResponse res = new org.openapis.openapi.models.operations.VerifyCallerIdResponse(contentType, httpRes.statusCode()) {{
             verifyCallerId200ApplicationJSONBoolean = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

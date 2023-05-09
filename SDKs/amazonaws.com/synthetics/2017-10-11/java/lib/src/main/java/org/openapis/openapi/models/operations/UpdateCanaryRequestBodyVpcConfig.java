@@ -15,6 +15,7 @@ public class UpdateCanaryRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateCanaryRequestBodyVpcConfig withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,9 +24,11 @@ public class UpdateCanaryRequestBodyVpcConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public UpdateCanaryRequestBodyVpcConfig withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateCanaryRequestBodyVpcConfig(){}
 }

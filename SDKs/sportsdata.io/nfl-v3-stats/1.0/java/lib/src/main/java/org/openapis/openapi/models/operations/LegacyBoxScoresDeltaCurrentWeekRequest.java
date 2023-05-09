@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LegacyBoxScoresDeltaCurrentWeekRequest {
@@ -12,6 +13,7 @@ public class LegacyBoxScoresDeltaCurrentWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LegacyBoxScoresDeltaCurrentWeekFormatEnum format;
+
     public LegacyBoxScoresDeltaCurrentWeekRequest withFormat(LegacyBoxScoresDeltaCurrentWeekFormatEnum format) {
         this.format = format;
         return this;
@@ -24,9 +26,14 @@ public class LegacyBoxScoresDeltaCurrentWeekRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public LegacyBoxScoresDeltaCurrentWeekRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public LegacyBoxScoresDeltaCurrentWeekRequest(@JsonProperty("format") LegacyBoxScoresDeltaCurrentWeekFormatEnum format, @JsonProperty("minutes") String minutes) {
+        this.format = format;
+        this.minutes = minutes;
+  }
 }

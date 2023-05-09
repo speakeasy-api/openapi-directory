@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamPoolResultIpamPoolTags {
     
     public String key;
+
     public DeleteIpamPoolResultIpamPoolTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DeleteIpamPoolResultIpamPoolTags {
     
     
     public String value;
+
     public DeleteIpamPoolResultIpamPoolTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DeleteIpamPoolResultIpamPoolTags(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchRetrieveCatalogObjectsResponse {
@@ -12,6 +13,7 @@ public class BatchRetrieveCatalogObjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchRetrieveCatalogObjectsResponse batchRetrieveCatalogObjectsResponse;
+
     public BatchRetrieveCatalogObjectsResponse withBatchRetrieveCatalogObjectsResponse(org.openapis.openapi.models.shared.BatchRetrieveCatalogObjectsResponse batchRetrieveCatalogObjectsResponse) {
         this.batchRetrieveCatalogObjectsResponse = batchRetrieveCatalogObjectsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchRetrieveCatalogObjectsResponse {
     
     
     public String contentType;
+
     public BatchRetrieveCatalogObjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class BatchRetrieveCatalogObjectsResponse {
     
     
     public Integer statusCode;
+
     public BatchRetrieveCatalogObjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BatchRetrieveCatalogObjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchRetrieveCatalogObjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchRetrieveCatalogObjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

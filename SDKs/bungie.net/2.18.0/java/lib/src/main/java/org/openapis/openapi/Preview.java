@@ -53,11 +53,9 @@ public class Preview {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Preview {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Preview {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Preview {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class Preview {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,10 +234,11 @@ public class Preview {
 
     /**
      * Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlug/");
         
@@ -256,16 +247,15 @@ public class Preview {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse() {{
+        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,10 +270,11 @@ public class Preview {
 
     /**
      * Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlugFree/");
         
@@ -292,16 +283,15 @@ public class Preview {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse() {{
+        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class UpdateWorkspaceRequestBodyVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public UpdateWorkspaceRequestBodyVpcConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -23,9 +24,11 @@ public class UpdateWorkspaceRequestBodyVpcConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public UpdateWorkspaceRequestBodyVpcConfiguration withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public UpdateWorkspaceRequestBodyVpcConfiguration(){}
 }

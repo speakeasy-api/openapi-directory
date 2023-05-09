@@ -18,6 +18,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestSellers")
     public BestSellers bestSellers;
+
     public ReportRow withBestSellers(BestSellers bestSellers) {
         this.bestSellers = bestSellers;
         return this;
@@ -29,6 +30,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public Brand brand;
+
     public ReportRow withBrand(Brand brand) {
         this.brand = brand;
         return this;
@@ -40,6 +42,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metrics metrics;
+
     public ReportRow withMetrics(Metrics metrics) {
         this.metrics = metrics;
         return this;
@@ -51,6 +54,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCompetitiveness")
     public PriceCompetitiveness priceCompetitiveness;
+
     public ReportRow withPriceCompetitiveness(PriceCompetitiveness priceCompetitiveness) {
         this.priceCompetitiveness = priceCompetitiveness;
         return this;
@@ -62,6 +66,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceInsights")
     public PriceInsights priceInsights;
+
     public ReportRow withPriceInsights(PriceInsights priceInsights) {
         this.priceInsights = priceInsights;
         return this;
@@ -73,6 +78,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCluster")
     public ProductCluster productCluster;
+
     public ReportRow withProductCluster(ProductCluster productCluster) {
         this.productCluster = productCluster;
         return this;
@@ -84,6 +90,7 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productView")
     public ProductView productView;
+
     public ReportRow withProductView(ProductView productView) {
         this.productView = productView;
         return this;
@@ -95,9 +102,11 @@ public class ReportRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public Segments segments;
+
     public ReportRow withSegments(Segments segments) {
         this.segments = segments;
         return this;
     }
     
+    public ReportRow(){}
 }

@@ -164,6 +164,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -201,7 +206,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse() {{
+        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse(contentType, httpRes.statusCode()) {{
             createClusterResponse = null;
             clusterAlreadyExistsFault = null;
             invalidClusterStateFault = null;
@@ -219,8 +224,6 @@ public class SDK {
             invalidParameterCombinationException = null;
             serviceQuotaExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,7 +376,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateParameterGroupResponse res = new org.openapis.openapi.models.operations.CreateParameterGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateParameterGroupResponse res = new org.openapis.openapi.models.operations.CreateParameterGroupResponse(contentType, httpRes.statusCode()) {{
             createParameterGroupResponse = null;
             parameterGroupQuotaExceededFault = null;
             parameterGroupAlreadyExistsFault = null;
@@ -382,8 +385,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -473,7 +474,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSubnetGroupResponse res = new org.openapis.openapi.models.operations.CreateSubnetGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateSubnetGroupResponse res = new org.openapis.openapi.models.operations.CreateSubnetGroupResponse(contentType, httpRes.statusCode()) {{
             createSubnetGroupResponse = null;
             subnetGroupAlreadyExistsFault = null;
             subnetGroupQuotaExceededFault = null;
@@ -481,8 +482,6 @@ public class SDK {
             invalidSubnet = null;
             serviceLinkedRoleNotFoundFault = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -565,7 +564,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DecreaseReplicationFactorResponse res = new org.openapis.openapi.models.operations.DecreaseReplicationFactorResponse() {{
+        org.openapis.openapi.models.operations.DecreaseReplicationFactorResponse res = new org.openapis.openapi.models.operations.DecreaseReplicationFactorResponse(contentType, httpRes.statusCode()) {{
             decreaseReplicationFactorResponse = null;
             clusterNotFoundFault = null;
             nodeNotFoundFault = null;
@@ -574,8 +573,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -665,7 +662,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse() {{
+        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse(contentType, httpRes.statusCode()) {{
             deleteClusterResponse = null;
             clusterNotFoundFault = null;
             invalidClusterStateFault = null;
@@ -673,8 +670,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,7 +752,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteParameterGroupResponse res = new org.openapis.openapi.models.operations.DeleteParameterGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteParameterGroupResponse res = new org.openapis.openapi.models.operations.DeleteParameterGroupResponse(contentType, httpRes.statusCode()) {{
             deleteParameterGroupResponse = null;
             invalidParameterGroupStateFault = null;
             parameterGroupNotFoundFault = null;
@@ -765,8 +760,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -849,14 +842,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSubnetGroupResponse res = new org.openapis.openapi.models.operations.DeleteSubnetGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteSubnetGroupResponse res = new org.openapis.openapi.models.operations.DeleteSubnetGroupResponse(contentType, httpRes.statusCode()) {{
             deleteSubnetGroupResponse = null;
             subnetGroupInUseFault = null;
             subnetGroupNotFoundFault = null;
             serviceLinkedRoleNotFoundFault = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -925,15 +916,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse() {{
+        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse(contentType, httpRes.statusCode()) {{
             describeClustersResponse = null;
             clusterNotFoundFault = null;
             serviceLinkedRoleNotFoundFault = null;
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1009,14 +998,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDefaultParametersResponse res = new org.openapis.openapi.models.operations.DescribeDefaultParametersResponse() {{
+        org.openapis.openapi.models.operations.DescribeDefaultParametersResponse res = new org.openapis.openapi.models.operations.DescribeDefaultParametersResponse(contentType, httpRes.statusCode()) {{
             describeDefaultParametersResponse = null;
             serviceLinkedRoleNotFoundFault = null;
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1085,14 +1072,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEventsResponse res = new org.openapis.openapi.models.operations.DescribeEventsResponse() {{
+        org.openapis.openapi.models.operations.DescribeEventsResponse res = new org.openapis.openapi.models.operations.DescribeEventsResponse(contentType, httpRes.statusCode()) {{
             describeEventsResponse = null;
             serviceLinkedRoleNotFoundFault = null;
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1161,15 +1146,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeParameterGroupsResponse res = new org.openapis.openapi.models.operations.DescribeParameterGroupsResponse() {{
+        org.openapis.openapi.models.operations.DescribeParameterGroupsResponse res = new org.openapis.openapi.models.operations.DescribeParameterGroupsResponse(contentType, httpRes.statusCode()) {{
             describeParameterGroupsResponse = null;
             parameterGroupNotFoundFault = null;
             serviceLinkedRoleNotFoundFault = null;
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1245,15 +1228,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeParametersResponse res = new org.openapis.openapi.models.operations.DescribeParametersResponse() {{
+        org.openapis.openapi.models.operations.DescribeParametersResponse res = new org.openapis.openapi.models.operations.DescribeParametersResponse(contentType, httpRes.statusCode()) {{
             describeParametersResponse = null;
             parameterGroupNotFoundFault = null;
             serviceLinkedRoleNotFoundFault = null;
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1329,13 +1310,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSubnetGroupsResponse res = new org.openapis.openapi.models.operations.DescribeSubnetGroupsResponse() {{
+        org.openapis.openapi.models.operations.DescribeSubnetGroupsResponse res = new org.openapis.openapi.models.operations.DescribeSubnetGroupsResponse(contentType, httpRes.statusCode()) {{
             describeSubnetGroupsResponse = null;
             subnetGroupNotFoundFault = null;
             serviceLinkedRoleNotFoundFault = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1397,7 +1376,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IncreaseReplicationFactorResponse res = new org.openapis.openapi.models.operations.IncreaseReplicationFactorResponse() {{
+        org.openapis.openapi.models.operations.IncreaseReplicationFactorResponse res = new org.openapis.openapi.models.operations.IncreaseReplicationFactorResponse(contentType, httpRes.statusCode()) {{
             increaseReplicationFactorResponse = null;
             clusterNotFoundFault = null;
             invalidClusterStateFault = null;
@@ -1409,8 +1388,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1521,7 +1498,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse() {{
+        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse(contentType, httpRes.statusCode()) {{
             listTagsResponse = null;
             clusterNotFoundFault = null;
             invalidARNFault = null;
@@ -1530,8 +1507,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1621,7 +1596,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RebootNodeResponse res = new org.openapis.openapi.models.operations.RebootNodeResponse() {{
+        org.openapis.openapi.models.operations.RebootNodeResponse res = new org.openapis.openapi.models.operations.RebootNodeResponse(contentType, httpRes.statusCode()) {{
             rebootNodeResponse = null;
             clusterNotFoundFault = null;
             nodeNotFoundFault = null;
@@ -1630,8 +1605,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1721,7 +1694,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             clusterNotFoundFault = null;
             tagQuotaPerResourceExceeded = null;
@@ -1731,8 +1704,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1829,7 +1800,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             clusterNotFoundFault = null;
             invalidARNFault = null;
@@ -1839,8 +1810,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1937,7 +1906,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse() {{
+        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse(contentType, httpRes.statusCode()) {{
             updateClusterResponse = null;
             invalidClusterStateFault = null;
             clusterNotFoundFault = null;
@@ -1947,8 +1916,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2045,7 +2012,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateParameterGroupResponse res = new org.openapis.openapi.models.operations.UpdateParameterGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateParameterGroupResponse res = new org.openapis.openapi.models.operations.UpdateParameterGroupResponse(contentType, httpRes.statusCode()) {{
             updateParameterGroupResponse = null;
             invalidParameterGroupStateFault = null;
             parameterGroupNotFoundFault = null;
@@ -2053,8 +2020,6 @@ public class SDK {
             invalidParameterValueException = null;
             invalidParameterCombinationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2137,7 +2102,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSubnetGroupResponse res = new org.openapis.openapi.models.operations.UpdateSubnetGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateSubnetGroupResponse res = new org.openapis.openapi.models.operations.UpdateSubnetGroupResponse(contentType, httpRes.statusCode()) {{
             updateSubnetGroupResponse = null;
             subnetGroupNotFoundFault = null;
             subnetQuotaExceededFault = null;
@@ -2145,8 +2110,6 @@ public class SDK {
             invalidSubnet = null;
             serviceLinkedRoleNotFoundFault = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

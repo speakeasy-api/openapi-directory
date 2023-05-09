@@ -15,6 +15,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("min_uom_qty")
     public Long minUomQty;
+
     public PaperItemPO withMinUomQty(Long minUomQty) {
         this.minUomQty = minUomQty;
         return this;
@@ -23,6 +24,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paper_id")
     public Long paperId;
+
     public PaperItemPO withPaperId(Long paperId) {
         this.paperId = paperId;
         return this;
@@ -34,6 +36,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_1")
     public Object price1;
+
     public PaperItemPO withPrice1(Object price1) {
         this.price1 = price1;
         return this;
@@ -45,6 +48,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_2")
     public Object price2;
+
     public PaperItemPO withPrice2(Object price2) {
         this.price2 = price2;
         return this;
@@ -56,6 +60,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_3")
     public Object price3;
+
     public PaperItemPO withPrice3(Object price3) {
         this.price3 = price3;
         return this;
@@ -67,6 +72,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_4")
     public Object price4;
+
     public PaperItemPO withPrice4(Object price4) {
         this.price4 = price4;
         return this;
@@ -78,6 +84,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_5")
     public Object price5;
+
     public PaperItemPO withPrice5(Object price5) {
         this.price5 = price5;
         return this;
@@ -89,6 +96,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_per_tonne")
     public Object pricePerTonne;
+
     public PaperItemPO withPricePerTonne(Object pricePerTonne) {
         this.pricePerTonne = pricePerTonne;
         return this;
@@ -97,6 +105,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qty_uom")
     public String qtyUom;
+
     public PaperItemPO withQtyUom(String qtyUom) {
         this.qtyUom = qtyUom;
         return this;
@@ -105,6 +114,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_1")
     public Long quantity1;
+
     public PaperItemPO withQuantity1(Long quantity1) {
         this.quantity1 = quantity1;
         return this;
@@ -113,6 +123,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_2")
     public Long quantity2;
+
     public PaperItemPO withQuantity2(Long quantity2) {
         this.quantity2 = quantity2;
         return this;
@@ -121,6 +132,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_3")
     public Long quantity3;
+
     public PaperItemPO withQuantity3(Long quantity3) {
         this.quantity3 = quantity3;
         return this;
@@ -129,6 +141,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_4")
     public Long quantity4;
+
     public PaperItemPO withQuantity4(Long quantity4) {
         this.quantity4 = quantity4;
         return this;
@@ -137,6 +150,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_5")
     public Long quantity5;
+
     public PaperItemPO withQuantity5(Long quantity5) {
         this.quantity5 = quantity5;
         return this;
@@ -145,6 +159,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public PaperItemPO withSize(String size) {
         this.size = size;
         return this;
@@ -153,6 +168,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public PaperItemPO withSku(String sku) {
         this.sku = sku;
         return this;
@@ -164,6 +180,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price_1")
     public Object unitPrice1;
+
     public PaperItemPO withUnitPrice1(Object unitPrice1) {
         this.unitPrice1 = unitPrice1;
         return this;
@@ -175,6 +192,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price_2")
     public Object unitPrice2;
+
     public PaperItemPO withUnitPrice2(Object unitPrice2) {
         this.unitPrice2 = unitPrice2;
         return this;
@@ -186,6 +204,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price_3")
     public Object unitPrice3;
+
     public PaperItemPO withUnitPrice3(Object unitPrice3) {
         this.unitPrice3 = unitPrice3;
         return this;
@@ -197,6 +216,7 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price_4")
     public Object unitPrice4;
+
     public PaperItemPO withUnitPrice4(Object unitPrice4) {
         this.unitPrice4 = unitPrice4;
         return this;
@@ -208,9 +228,11 @@ public class PaperItemPO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit_price_5")
     public Object unitPrice5;
+
     public PaperItemPO withUnitPrice5(Object unitPrice5) {
         this.unitPrice5 = unitPrice5;
         return this;
     }
     
+    public PaperItemPO(){}
 }

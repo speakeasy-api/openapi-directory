@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     public DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent instances;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withInstances(DictionaryComponentResponseOfint64AndDestinyItemInstanceComponent instances) {
         this.instances = instances;
         return this;
@@ -20,6 +21,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withObjectives(DictionaryComponentResponseOfint64AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -27,6 +29,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemPerksComponent perks;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withPerks(DictionaryComponentResponseOfint64AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
@@ -34,6 +37,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent plugObjectives;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withPlugObjectives(DictionaryComponentResponseOfint64AndDestinyItemPlugObjectivesComponent plugObjectives) {
         this.plugObjectives = plugObjectives;
         return this;
@@ -41,6 +45,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withPlugStates(DictionaryComponentResponseOfuint32AndDestinyItemPlugComponent plugStates) {
         this.plugStates = plugStates;
         return this;
@@ -48,6 +53,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemRenderComponent renderData;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withRenderData(DictionaryComponentResponseOfint64AndDestinyItemRenderComponent renderData) {
         this.renderData = renderData;
         return this;
@@ -55,6 +61,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent reusablePlugs;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withReusablePlugs(DictionaryComponentResponseOfint64AndDestinyItemReusablePlugsComponent reusablePlugs) {
         this.reusablePlugs = reusablePlugs;
         return this;
@@ -62,6 +69,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent sockets;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withSockets(DictionaryComponentResponseOfint64AndDestinyItemSocketsComponent sockets) {
         this.sockets = sockets;
         return this;
@@ -69,6 +77,7 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemStatsComponent stats;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withStats(DictionaryComponentResponseOfint64AndDestinyItemStatsComponent stats) {
         this.stats = stats;
         return this;
@@ -76,9 +85,11 @@ public class DestinyResponsesDestinyProfileResponseItemComponents {
     
     
     public DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent talentGrids;
+
     public DestinyResponsesDestinyProfileResponseItemComponents withTalentGrids(DictionaryComponentResponseOfint64AndDestinyItemTalentGridComponent talentGrids) {
         this.talentGrids = talentGrids;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseItemComponents(){}
 }

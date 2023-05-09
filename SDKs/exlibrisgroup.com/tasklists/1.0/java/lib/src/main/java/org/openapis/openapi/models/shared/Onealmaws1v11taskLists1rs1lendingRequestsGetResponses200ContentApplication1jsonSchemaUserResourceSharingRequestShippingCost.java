@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCost {
     /**
@@ -12,6 +12,7 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCostCurrency currency;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCost withCurrency(Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCostCurrency currency) {
         this.currency = currency;
         return this;
@@ -22,9 +23,14 @@ public class Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentAppl
      */
     
     public Double sum;
+
     public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCost withSum(Double sum) {
         this.sum = sum;
         return this;
     }
     
+    public Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCost(@JsonProperty("currency") Onealmaws1v11taskLists1rs1lendingRequestsGetResponses200ContentApplication1jsonSchemaUserResourceSharingRequestShippingCostCurrency currency, @JsonProperty("sum") Double sum) {
+        this.currency = currency;
+        this.sum = sum;
+  }
 }

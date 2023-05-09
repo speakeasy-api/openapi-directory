@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyInstancePlacementRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyInstancePlacementActionEnum action;
+
     public GETModifyInstancePlacementRequest withAction(GETModifyInstancePlacementActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Affinity")
     public GETModifyInstancePlacementAffinityEnum affinity;
+
     public GETModifyInstancePlacementRequest withAffinity(GETModifyInstancePlacementAffinityEnum affinity) {
         this.affinity = affinity;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupId")
     public String groupId;
+
     public GETModifyInstancePlacementRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GroupName")
     public String groupName;
+
     public GETModifyInstancePlacementRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostId")
     public String hostId;
+
     public GETModifyInstancePlacementRequest withHostId(String hostId) {
         this.hostId = hostId;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostResourceGroupArn")
     public String hostResourceGroupArn;
+
     public GETModifyInstancePlacementRequest withHostResourceGroupArn(String hostResourceGroupArn) {
         this.hostResourceGroupArn = hostResourceGroupArn;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETModifyInstancePlacementRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -79,6 +87,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartitionNumber")
     public Long partitionNumber;
+
     public GETModifyInstancePlacementRequest withPartitionNumber(Long partitionNumber) {
         this.partitionNumber = partitionNumber;
         return this;
@@ -89,6 +98,7 @@ public class GETModifyInstancePlacementRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Tenancy")
     public GETModifyInstancePlacementTenancyEnum tenancy;
+
     public GETModifyInstancePlacementRequest withTenancy(GETModifyInstancePlacementTenancyEnum tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -96,6 +106,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyInstancePlacementVersionEnum version;
+
     public GETModifyInstancePlacementRequest withVersion(GETModifyInstancePlacementVersionEnum version) {
         this.version = version;
         return this;
@@ -103,6 +114,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyInstancePlacementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -110,6 +122,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyInstancePlacementRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -117,6 +130,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyInstancePlacementRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -124,6 +138,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyInstancePlacementRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -131,6 +146,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyInstancePlacementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -138,6 +154,7 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyInstancePlacementRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -145,9 +162,15 @@ public class GETModifyInstancePlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyInstancePlacementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyInstancePlacementRequest(@JsonProperty("Action") GETModifyInstancePlacementActionEnum action, @JsonProperty("InstanceId") String instanceId, @JsonProperty("Version") GETModifyInstancePlacementVersionEnum version) {
+        this.action = action;
+        this.instanceId = instanceId;
+        this.version = version;
+  }
 }

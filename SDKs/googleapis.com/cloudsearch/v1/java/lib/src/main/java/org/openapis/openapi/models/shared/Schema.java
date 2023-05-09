@@ -18,6 +18,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectDefinitions")
     public ObjectDefinition[] objectDefinitions;
+
     public Schema withObjectDefinitions(ObjectDefinition[] objectDefinitions) {
         this.objectDefinitions = objectDefinitions;
         return this;
@@ -29,9 +30,11 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public Schema withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
     }
     
+    public Schema(){}
 }

@@ -15,6 +15,7 @@ public class Userlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public Userlist withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -23,9 +24,11 @@ public class Userlist {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public User[] user;
+
     public Userlist withUser(User[] user) {
         this.user = user;
         return this;
     }
     
+    public Userlist(){}
 }

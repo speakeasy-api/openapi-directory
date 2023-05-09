@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AlgorithmSummary {
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public AlgorithmSummary withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -27,6 +28,7 @@ public class AlgorithmSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmDescription")
     public String algorithmDescription;
+
     public AlgorithmSummary withAlgorithmDescription(String algorithmDescription) {
         this.algorithmDescription = algorithmDescription;
         return this;
@@ -34,6 +36,7 @@ public class AlgorithmSummary {
     
     @JsonProperty("AlgorithmName")
     public String algorithmName;
+
     public AlgorithmSummary withAlgorithmName(String algorithmName) {
         this.algorithmName = algorithmName;
         return this;
@@ -41,6 +44,7 @@ public class AlgorithmSummary {
     
     @JsonProperty("AlgorithmStatus")
     public AlgorithmStatusEnum algorithmStatus;
+
     public AlgorithmSummary withAlgorithmStatus(AlgorithmStatusEnum algorithmStatus) {
         this.algorithmStatus = algorithmStatus;
         return this;
@@ -50,9 +54,16 @@ public class AlgorithmSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AlgorithmSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
     }
     
+    public AlgorithmSummary(@JsonProperty("AlgorithmArn") String algorithmArn, @JsonProperty("AlgorithmName") String algorithmName, @JsonProperty("AlgorithmStatus") AlgorithmStatusEnum algorithmStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime) {
+        this.algorithmArn = algorithmArn;
+        this.algorithmName = algorithmName;
+        this.algorithmStatus = algorithmStatus;
+        this.creationTime = creationTime;
+  }
 }

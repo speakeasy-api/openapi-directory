@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse {
     
     public String contentType;
+
     public CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIdpCredentialsResponse listIdpCredentialsResponse;
+
     public CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse withListIdpCredentialsResponse(org.openapis.openapi.models.shared.ListIdpCredentialsResponse listIdpCredentialsResponse) {
         this.listIdpCredentialsResponse = listIdpCredentialsResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse {
     
     
     public Integer statusCode;
+
     public CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudidentityInboundSamlSsoProfilesIdpCredentialsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

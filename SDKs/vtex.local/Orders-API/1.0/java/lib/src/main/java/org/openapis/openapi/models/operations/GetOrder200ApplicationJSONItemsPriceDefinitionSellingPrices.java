@@ -15,6 +15,7 @@ public class GetOrder200ApplicationJSONItemsPriceDefinitionSellingPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetOrder200ApplicationJSONItemsPriceDefinitionSellingPrices withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -26,9 +27,11 @@ public class GetOrder200ApplicationJSONItemsPriceDefinitionSellingPrices {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public GetOrder200ApplicationJSONItemsPriceDefinitionSellingPrices withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public GetOrder200ApplicationJSONItemsPriceDefinitionSellingPrices(){}
 }

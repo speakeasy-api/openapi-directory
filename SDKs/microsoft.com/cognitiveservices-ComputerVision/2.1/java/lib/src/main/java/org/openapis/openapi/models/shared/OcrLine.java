@@ -18,6 +18,7 @@ public class OcrLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBox")
     public String boundingBox;
+
     public OcrLine withBoundingBox(String boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -29,9 +30,11 @@ public class OcrLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("words")
     public OcrWord[] words;
+
     public OcrLine withWords(OcrWord[] words) {
         this.words = words;
         return this;
     }
     
+    public OcrLine(){}
 }

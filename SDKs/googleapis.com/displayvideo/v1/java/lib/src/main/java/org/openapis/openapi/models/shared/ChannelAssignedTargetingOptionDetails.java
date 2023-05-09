@@ -18,6 +18,7 @@ public class ChannelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public ChannelAssignedTargetingOptionDetails withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,9 +30,11 @@ public class ChannelAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public ChannelAssignedTargetingOptionDetails withNegative(Boolean negative) {
         this.negative = negative;
         return this;
     }
     
+    public ChannelAssignedTargetingOptionDetails(){}
 }

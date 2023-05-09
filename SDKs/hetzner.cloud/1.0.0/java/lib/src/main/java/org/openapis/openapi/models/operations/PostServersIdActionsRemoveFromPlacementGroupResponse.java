@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostServersIdActionsRemoveFromPlacementGroupResponse {
@@ -12,6 +13,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupResponse {
      */
     
     public PostServersIdActionsRemoveFromPlacementGroupActionResponse actionResponse;
+
     public PostServersIdActionsRemoveFromPlacementGroupResponse withActionResponse(PostServersIdActionsRemoveFromPlacementGroupActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupResponse {
     
     
     public String contentType;
+
     public PostServersIdActionsRemoveFromPlacementGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostServersIdActionsRemoveFromPlacementGroupResponse {
     
     
     public Integer statusCode;
+
     public PostServersIdActionsRemoveFromPlacementGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostServersIdActionsRemoveFromPlacementGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostServersIdActionsRemoveFromPlacementGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostServersIdActionsRemoveFromPlacementGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

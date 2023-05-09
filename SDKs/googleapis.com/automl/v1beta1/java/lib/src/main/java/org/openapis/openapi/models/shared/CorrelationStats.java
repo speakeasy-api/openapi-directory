@@ -18,9 +18,11 @@ public class CorrelationStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cramersV")
     public Double cramersV;
+
     public CorrelationStats withCramersV(Double cramersV) {
         this.cramersV = cramersV;
         return this;
     }
     
+    public CorrelationStats(){}
 }

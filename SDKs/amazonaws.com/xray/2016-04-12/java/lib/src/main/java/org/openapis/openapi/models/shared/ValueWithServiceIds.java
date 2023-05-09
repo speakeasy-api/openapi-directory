@@ -15,6 +15,7 @@ public class ValueWithServiceIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnnotationValue")
     public AnnotationValue annotationValue;
+
     public ValueWithServiceIds withAnnotationValue(AnnotationValue annotationValue) {
         this.annotationValue = annotationValue;
         return this;
@@ -23,9 +24,11 @@ public class ValueWithServiceIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceIds")
     public ServiceId[] serviceIds;
+
     public ValueWithServiceIds withServiceIds(ServiceId[] serviceIds) {
         this.serviceIds = serviceIds;
         return this;
     }
     
+    public ValueWithServiceIds(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class App {
     @JsonProperty("AppName")
     public String appName;
+
     public App withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -19,6 +20,7 @@ public class App {
     
     @JsonProperty("Port")
     public Long port;
+
     public App withPort(Long port) {
         this.port = port;
         return this;
@@ -26,9 +28,15 @@ public class App {
     
     @JsonProperty("Protocol")
     public String protocol;
+
     public App withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public App(@JsonProperty("AppName") String appName, @JsonProperty("Port") Long port, @JsonProperty("Protocol") String protocol) {
+        this.appName = appName;
+        this.port = port;
+        this.protocol = protocol;
+  }
 }

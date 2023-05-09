@@ -15,6 +15,7 @@ public class LicenseResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minGuestCpuCount")
     public Integer minGuestCpuCount;
+
     public LicenseResourceRequirements withMinGuestCpuCount(Integer minGuestCpuCount) {
         this.minGuestCpuCount = minGuestCpuCount;
         return this;
@@ -26,9 +27,11 @@ public class LicenseResourceRequirements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minMemoryMb")
     public Integer minMemoryMb;
+
     public LicenseResourceRequirements withMinMemoryMb(Integer minMemoryMb) {
         this.minMemoryMb = minMemoryMb;
         return this;
     }
     
+    public LicenseResourceRequirements(){}
 }

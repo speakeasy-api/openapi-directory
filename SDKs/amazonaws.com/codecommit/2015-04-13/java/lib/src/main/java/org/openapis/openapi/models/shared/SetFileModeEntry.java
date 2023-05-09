@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetFileModeEntry {
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public SetFileModeEntry withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -19,9 +20,14 @@ public class SetFileModeEntry {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public SetFileModeEntry withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
     }
     
+    public SetFileModeEntry(@JsonProperty("fileMode") FileModeTypeEnumEnum fileMode, @JsonProperty("filePath") String filePath) {
+        this.fileMode = fileMode;
+        this.filePath = filePath;
+  }
 }

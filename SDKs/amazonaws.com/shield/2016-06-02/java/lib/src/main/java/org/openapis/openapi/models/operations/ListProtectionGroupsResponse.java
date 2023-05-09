@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProtectionGroupsResponse {
     
     public String contentType;
+
     public ListProtectionGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProtectionGroupsResponse {
      */
     
     public Object internalErrorException;
+
     public ListProtectionGroupsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListProtectionGroupsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListProtectionGroupsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListProtectionGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProtectionGroupsResponse listProtectionGroupsResponse;
+
     public ListProtectionGroupsResponse withListProtectionGroupsResponse(org.openapis.openapi.models.shared.ListProtectionGroupsResponse listProtectionGroupsResponse) {
         this.listProtectionGroupsResponse = listProtectionGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListProtectionGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListProtectionGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProtectionGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProtectionGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListProtectionGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProtectionGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListProtectionGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

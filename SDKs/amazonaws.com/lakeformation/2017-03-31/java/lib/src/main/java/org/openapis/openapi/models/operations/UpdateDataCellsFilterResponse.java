@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataCellsFilterResponse {
@@ -12,6 +13,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateDataCellsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateDataCellsFilterResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataCellsFilterResponse {
     
     
     public String contentType;
+
     public UpdateDataCellsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateDataCellsFilterResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateDataCellsFilterResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDataCellsFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateDataCellsFilterResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateDataCellsFilterResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataCellsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDataCellsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataCellsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDataCellsFilterResponse {
      */
     
     public java.util.Map<String, Object> updateDataCellsFilterResponse;
+
     public UpdateDataCellsFilterResponse withUpdateDataCellsFilterResponse(java.util.Map<String, Object> updateDataCellsFilterResponse) {
         this.updateDataCellsFilterResponse = updateDataCellsFilterResponse;
         return this;
     }
     
+    public UpdateDataCellsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class SendMessageRequestBody3File {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody3FileChannelEnum channel;
+
     public SendMessageRequestBody3File withChannel(SendMessageRequestBody3FileChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -25,6 +26,7 @@ public class SendMessageRequestBody3File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody3File withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -32,6 +34,7 @@ public class SendMessageRequestBody3File {
     
     @JsonProperty("file")
     public SendMessageRequestBody3FileFile file;
+
     public SendMessageRequestBody3File withFile(SendMessageRequestBody3FileFile file) {
         this.file = file;
         return this;
@@ -43,6 +46,7 @@ public class SendMessageRequestBody3File {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody3File withFrom(String from) {
         this.from = from;
         return this;
@@ -53,6 +57,7 @@ public class SendMessageRequestBody3File {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody3FileMessageTypeEnum messageType;
+
     public SendMessageRequestBody3File withMessageType(SendMessageRequestBody3FileMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -64,9 +69,17 @@ public class SendMessageRequestBody3File {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody3File withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public SendMessageRequestBody3File(@JsonProperty("channel") SendMessageRequestBody3FileChannelEnum channel, @JsonProperty("file") SendMessageRequestBody3FileFile file, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody3FileMessageTypeEnum messageType, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.file = file;
+        this.from = from;
+        this.messageType = messageType;
+        this.to = to;
+  }
 }

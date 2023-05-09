@@ -67,6 +67,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTag200Ap
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTag200ApplicationJSONInlineScriptTag.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTag200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTagResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTagsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTags200ApplicationJSONInlineScriptTagsDisplayScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTags200ApplicationJSONInlineScriptTagsTriggerEventEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetInlineScriptTags200ApplicationJSONInlineScriptTags.java
@@ -100,6 +101,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTag200Appl
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTag200ApplicationJSONScriptTag.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTag200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTagResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTagsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTags200ApplicationJSONScriptTags.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetShopScriptTags200ApplicationJSON.java
@@ -130,6 +132,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTag200Applicat
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTag200ApplicationJSONScriptTag.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTag200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTagResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTagsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTags200ApplicationJSONScriptTagsDisplayScopeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTags200ApplicationJSONScriptTags.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetScriptTags200ApplicationJSON.java
@@ -143,7 +146,14 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateScriptTag200Appli
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateScriptTag200ApplicationJSONScriptTag.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateScriptTag200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateScriptTagResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteInstallationSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteInstallation200ApplicationJSONUsageCharge.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteInstallation200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteInstallationResponse.java
+docs/sdk/README.md
+docs/applicationcharge/README.md
+docs/inlinescript/README.md
+docs/script/README.md
+docs/scriptdeprecated/README.md
+docs/uninstallation/README.md
 USAGE.md

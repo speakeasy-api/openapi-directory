@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentDescriptionsMessage {
     
     public EnvironmentDescription[] environments;
+
     public EnvironmentDescriptionsMessage withEnvironments(EnvironmentDescription[] environments) {
         this.environments = environments;
         return this;
@@ -19,9 +20,11 @@ public class EnvironmentDescriptionsMessage {
     
     
     public String nextToken;
+
     public EnvironmentDescriptionsMessage withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public EnvironmentDescriptionsMessage(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScalingTrigger {
     @JsonProperty("CloudWatchAlarmDefinition")
     public CloudWatchAlarmDefinition cloudWatchAlarmDefinition;
+
     public ScalingTrigger withCloudWatchAlarmDefinition(CloudWatchAlarmDefinition cloudWatchAlarmDefinition) {
         this.cloudWatchAlarmDefinition = cloudWatchAlarmDefinition;
         return this;
     }
     
+    public ScalingTrigger(@JsonProperty("CloudWatchAlarmDefinition") CloudWatchAlarmDefinition cloudWatchAlarmDefinition) {
+        this.cloudWatchAlarmDefinition = cloudWatchAlarmDefinition;
+  }
 }

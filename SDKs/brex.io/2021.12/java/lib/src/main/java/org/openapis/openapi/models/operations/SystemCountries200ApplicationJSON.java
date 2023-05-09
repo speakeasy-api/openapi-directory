@@ -12,6 +12,7 @@ public class SystemCountries200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public SystemCountries200ApplicationJSON withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -20,9 +21,11 @@ public class SystemCountries200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_name")
     public String countryName;
+
     public SystemCountries200ApplicationJSON withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
     }
     
+    public SystemCountries200ApplicationJSON(){}
 }

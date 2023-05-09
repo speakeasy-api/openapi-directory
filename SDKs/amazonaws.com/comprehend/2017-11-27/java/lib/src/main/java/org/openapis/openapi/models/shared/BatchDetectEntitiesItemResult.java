@@ -15,6 +15,7 @@ public class BatchDetectEntitiesItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public Entity[] entities;
+
     public BatchDetectEntitiesItemResult withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -23,9 +24,11 @@ public class BatchDetectEntitiesItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectEntitiesItemResult withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public BatchDetectEntitiesItemResult(){}
 }

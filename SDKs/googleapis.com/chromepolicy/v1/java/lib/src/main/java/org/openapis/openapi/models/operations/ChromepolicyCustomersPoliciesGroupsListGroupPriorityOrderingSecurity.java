@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurityOption1 option1;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity withOption1(ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurit
     
     @SpeakeasyMetadata("security:option=true")
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurityOption2 option2;
+
     public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity withOption2(ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesGroupsListGroupPriorityOrderingSecurity(){}
 }

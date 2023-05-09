@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecModeEnum mode;
+
     public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpec withMode(GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpec(){}
 }

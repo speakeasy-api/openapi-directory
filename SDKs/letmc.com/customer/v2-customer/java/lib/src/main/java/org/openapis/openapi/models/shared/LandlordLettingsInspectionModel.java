@@ -25,6 +25,7 @@ public class LandlordLettingsInspectionModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InspectionDate")
     public OffsetDateTime inspectionDate;
+
     public LandlordLettingsInspectionModel withInspectionDate(OffsetDateTime inspectionDate) {
         this.inspectionDate = inspectionDate;
         return this;
@@ -36,9 +37,11 @@ public class LandlordLettingsInspectionModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public LandlordLettingsInspectionModel withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public LandlordLettingsInspectionModel(){}
 }

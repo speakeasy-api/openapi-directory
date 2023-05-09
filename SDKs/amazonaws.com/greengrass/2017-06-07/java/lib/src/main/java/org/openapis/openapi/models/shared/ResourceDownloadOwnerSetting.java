@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceDownloadOwnerSetting {
     @JsonProperty("GroupOwner")
     public String groupOwner;
+
     public ResourceDownloadOwnerSetting withGroupOwner(String groupOwner) {
         this.groupOwner = groupOwner;
         return this;
@@ -19,9 +20,14 @@ public class ResourceDownloadOwnerSetting {
     
     @JsonProperty("GroupPermission")
     public PermissionEnum groupPermission;
+
     public ResourceDownloadOwnerSetting withGroupPermission(PermissionEnum groupPermission) {
         this.groupPermission = groupPermission;
         return this;
     }
     
+    public ResourceDownloadOwnerSetting(@JsonProperty("GroupOwner") String groupOwner, @JsonProperty("GroupPermission") PermissionEnum groupPermission) {
+        this.groupOwner = groupOwner;
+        this.groupPermission = groupPermission;
+  }
 }

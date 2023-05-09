@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResetCardPaymentCodeResponse {
     
     public String contentType;
+
     public ResetCardPaymentCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResetCardPaymentCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.CreditCard creditCard;
+
     public ResetCardPaymentCodeResponse withCreditCard(org.openapis.openapi.models.shared.CreditCard creditCard) {
         this.creditCard = creditCard;
         return this;
@@ -29,6 +32,7 @@ public class ResetCardPaymentCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public ResetCardPaymentCodeResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class ResetCardPaymentCodeResponse {
     
     
     public Integer statusCode;
+
     public ResetCardPaymentCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ResetCardPaymentCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResetCardPaymentCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResetCardPaymentCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionOpenCounts {
     @JsonProperty("openActivityTasks")
     public Long openActivityTasks;
+
     public WorkflowExecutionOpenCounts withOpenActivityTasks(Long openActivityTasks) {
         this.openActivityTasks = openActivityTasks;
         return this;
@@ -21,6 +22,7 @@ public class WorkflowExecutionOpenCounts {
     
     @JsonProperty("openChildWorkflowExecutions")
     public Long openChildWorkflowExecutions;
+
     public WorkflowExecutionOpenCounts withOpenChildWorkflowExecutions(Long openChildWorkflowExecutions) {
         this.openChildWorkflowExecutions = openChildWorkflowExecutions;
         return this;
@@ -28,6 +30,7 @@ public class WorkflowExecutionOpenCounts {
     
     @JsonProperty("openDecisionTasks")
     public Long openDecisionTasks;
+
     public WorkflowExecutionOpenCounts withOpenDecisionTasks(Long openDecisionTasks) {
         this.openDecisionTasks = openDecisionTasks;
         return this;
@@ -36,6 +39,7 @@ public class WorkflowExecutionOpenCounts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openLambdaFunctions")
     public Long openLambdaFunctions;
+
     public WorkflowExecutionOpenCounts withOpenLambdaFunctions(Long openLambdaFunctions) {
         this.openLambdaFunctions = openLambdaFunctions;
         return this;
@@ -43,9 +47,16 @@ public class WorkflowExecutionOpenCounts {
     
     @JsonProperty("openTimers")
     public Long openTimers;
+
     public WorkflowExecutionOpenCounts withOpenTimers(Long openTimers) {
         this.openTimers = openTimers;
         return this;
     }
     
+    public WorkflowExecutionOpenCounts(@JsonProperty("openActivityTasks") Long openActivityTasks, @JsonProperty("openChildWorkflowExecutions") Long openChildWorkflowExecutions, @JsonProperty("openDecisionTasks") Long openDecisionTasks, @JsonProperty("openTimers") Long openTimers) {
+        this.openActivityTasks = openActivityTasks;
+        this.openChildWorkflowExecutions = openChildWorkflowExecutions;
+        this.openDecisionTasks = openDecisionTasks;
+        this.openTimers = openTimers;
+  }
 }

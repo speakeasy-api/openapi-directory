@@ -18,6 +18,7 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowImpreciseAddresses")
     public Boolean allowImpreciseAddresses;
+
     public CommuteFilter withAllowImpreciseAddresses(Boolean allowImpreciseAddresses) {
         this.allowImpreciseAddresses = allowImpreciseAddresses;
         return this;
@@ -29,6 +30,7 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commuteMethod")
     public CommuteFilterCommuteMethodEnum commuteMethod;
+
     public CommuteFilter withCommuteMethod(CommuteFilterCommuteMethodEnum commuteMethod) {
         this.commuteMethod = commuteMethod;
         return this;
@@ -40,6 +42,7 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureTime")
     public TimeOfDay departureTime;
+
     public CommuteFilter withDepartureTime(TimeOfDay departureTime) {
         this.departureTime = departureTime;
         return this;
@@ -51,6 +54,7 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadTraffic")
     public CommuteFilterRoadTrafficEnum roadTraffic;
+
     public CommuteFilter withRoadTraffic(CommuteFilterRoadTrafficEnum roadTraffic) {
         this.roadTraffic = roadTraffic;
         return this;
@@ -62,6 +66,7 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startCoordinates")
     public LatLng startCoordinates;
+
     public CommuteFilter withStartCoordinates(LatLng startCoordinates) {
         this.startCoordinates = startCoordinates;
         return this;
@@ -73,9 +78,11 @@ public class CommuteFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("travelDuration")
     public String travelDuration;
+
     public CommuteFilter withTravelDuration(String travelDuration) {
         this.travelDuration = travelDuration;
         return this;
     }
     
+    public CommuteFilter(){}
 }

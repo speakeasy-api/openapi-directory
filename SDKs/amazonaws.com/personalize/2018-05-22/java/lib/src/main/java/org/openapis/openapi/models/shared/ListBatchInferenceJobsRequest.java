@@ -12,6 +12,7 @@ public class ListBatchInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListBatchInferenceJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListBatchInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBatchInferenceJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListBatchInferenceJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public ListBatchInferenceJobsRequest withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
     }
     
+    public ListBatchInferenceJobsRequest(){}
 }

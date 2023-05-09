@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutQueryDefinitionResponse {
     
     public String contentType;
+
     public PutQueryDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutQueryDefinitionResponse {
      */
     
     public Object invalidParameterException;
+
     public PutQueryDefinitionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutQueryDefinitionResponse {
      */
     
     public Object limitExceededException;
+
     public PutQueryDefinitionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutQueryDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.PutQueryDefinitionResponse putQueryDefinitionResponse;
+
     public PutQueryDefinitionResponse withPutQueryDefinitionResponse(org.openapis.openapi.models.shared.PutQueryDefinitionResponse putQueryDefinitionResponse) {
         this.putQueryDefinitionResponse = putQueryDefinitionResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutQueryDefinitionResponse {
     
     
     public Integer statusCode;
+
     public PutQueryDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutQueryDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutQueryDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutQueryDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutQueryDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class PutQueryDefinitionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutQueryDefinitionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutQueryDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

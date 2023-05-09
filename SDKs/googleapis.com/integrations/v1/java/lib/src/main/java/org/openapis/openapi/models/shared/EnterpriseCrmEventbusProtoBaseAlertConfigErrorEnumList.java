@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enumStrings")
     public String[] enumStrings;
+
     public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList withEnumStrings(String[] enumStrings) {
         this.enumStrings = enumStrings;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterType")
     public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumListFilterTypeEnum filterType;
+
     public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList withFilterType(EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumListFilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList(){}
 }

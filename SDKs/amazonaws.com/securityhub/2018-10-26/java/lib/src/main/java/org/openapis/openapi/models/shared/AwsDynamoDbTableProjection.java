@@ -15,6 +15,7 @@ public class AwsDynamoDbTableProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonKeyAttributes")
     public String[] nonKeyAttributes;
+
     public AwsDynamoDbTableProjection withNonKeyAttributes(String[] nonKeyAttributes) {
         this.nonKeyAttributes = nonKeyAttributes;
         return this;
@@ -23,9 +24,11 @@ public class AwsDynamoDbTableProjection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionType")
     public String projectionType;
+
     public AwsDynamoDbTableProjection withProjectionType(String projectionType) {
         this.projectionType = projectionType;
         return this;
     }
     
+    public AwsDynamoDbTableProjection(){}
 }

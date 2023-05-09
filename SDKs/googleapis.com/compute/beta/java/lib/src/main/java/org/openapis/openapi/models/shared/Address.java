@@ -18,6 +18,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public Address withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public AddressAddressTypeEnum addressType;
+
     public Address withAddressType(AddressAddressTypeEnum addressType) {
         this.addressType = addressType;
         return this;
@@ -40,6 +42,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Address withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Address withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Address withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +78,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipVersion")
     public AddressIpVersionEnum ipVersion;
+
     public Address withIpVersion(AddressIpVersionEnum ipVersion) {
         this.ipVersion = ipVersion;
         return this;
@@ -84,6 +90,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv6EndpointType")
     public AddressIpv6EndpointTypeEnum ipv6EndpointType;
+
     public Address withIpv6EndpointType(AddressIpv6EndpointTypeEnum ipv6EndpointType) {
         this.ipv6EndpointType = ipv6EndpointType;
         return this;
@@ -95,6 +102,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Address withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Address withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -117,6 +126,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Address withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -128,6 +138,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Address withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +150,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Address withNetwork(String network) {
         this.network = network;
         return this;
@@ -150,6 +162,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTier")
     public AddressNetworkTierEnum networkTier;
+
     public Address withNetworkTier(AddressNetworkTierEnum networkTier) {
         this.networkTier = networkTier;
         return this;
@@ -161,6 +174,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixLength")
     public Integer prefixLength;
+
     public Address withPrefixLength(Integer prefixLength) {
         this.prefixLength = prefixLength;
         return this;
@@ -172,6 +186,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public AddressPurposeEnum purpose;
+
     public Address withPurpose(AddressPurposeEnum purpose) {
         this.purpose = purpose;
         return this;
@@ -183,6 +198,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Address withRegion(String region) {
         this.region = region;
         return this;
@@ -194,6 +210,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Address withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -205,6 +222,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AddressStatusEnum status;
+
     public Address withStatus(AddressStatusEnum status) {
         this.status = status;
         return this;
@@ -216,6 +234,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public Address withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -227,9 +246,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public Address withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public Address(){}
 }

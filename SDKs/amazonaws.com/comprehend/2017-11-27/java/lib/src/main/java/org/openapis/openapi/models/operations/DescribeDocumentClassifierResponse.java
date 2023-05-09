@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDocumentClassifierResponse {
     
     public String contentType;
+
     public DescribeDocumentClassifierResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDocumentClassifierResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDocumentClassifierResponse describeDocumentClassifierResponse;
+
     public DescribeDocumentClassifierResponse withDescribeDocumentClassifierResponse(org.openapis.openapi.models.shared.DescribeDocumentClassifierResponse describeDocumentClassifierResponse) {
         this.describeDocumentClassifierResponse = describeDocumentClassifierResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDocumentClassifierResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDocumentClassifierResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDocumentClassifierResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDocumentClassifierResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDocumentClassifierResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDocumentClassifierResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDocumentClassifierResponse {
     
     
     public Integer statusCode;
+
     public DescribeDocumentClassifierResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDocumentClassifierResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDocumentClassifierResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDocumentClassifierResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeDocumentClassifierResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeDocumentClassifierResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

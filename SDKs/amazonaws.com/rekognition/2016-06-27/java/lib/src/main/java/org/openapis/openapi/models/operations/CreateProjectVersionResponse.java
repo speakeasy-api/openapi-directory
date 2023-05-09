@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProjectVersionResponse {
@@ -12,6 +13,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateProjectVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateProjectVersionResponse {
     
     
     public String contentType;
+
     public CreateProjectVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateProjectVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProjectVersionResponse createProjectVersionResponse;
+
     public CreateProjectVersionResponse withCreateProjectVersionResponse(org.openapis.openapi.models.shared.CreateProjectVersionResponse createProjectVersionResponse) {
         this.createProjectVersionResponse = createProjectVersionResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object internalServerError;
+
     public CreateProjectVersionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateProjectVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProjectVersionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public CreateProjectVersionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateProjectVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -86,6 +95,7 @@ public class CreateProjectVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateProjectVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateProjectVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProjectVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProjectVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class CreateProjectVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateProjectVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -123,9 +136,14 @@ public class CreateProjectVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateProjectVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateProjectVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

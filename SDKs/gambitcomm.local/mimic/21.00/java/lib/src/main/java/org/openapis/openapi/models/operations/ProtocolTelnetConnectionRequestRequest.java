@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolTelnetConnectionRequestRequest {
@@ -12,6 +13,7 @@ public class ProtocolTelnetConnectionRequestRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolTelnetConnectionRequestRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolTelnetConnectionRequestRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=command")
     public String command;
+
     public ProtocolTelnetConnectionRequestRequest withCommand(String command) {
         this.command = command;
         return this;
@@ -26,9 +29,15 @@ public class ProtocolTelnetConnectionRequestRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connectionID")
     public Integer connectionID;
+
     public ProtocolTelnetConnectionRequestRequest withConnectionID(Integer connectionID) {
         this.connectionID = connectionID;
         return this;
     }
     
+    public ProtocolTelnetConnectionRequestRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("command") String command, @JsonProperty("connectionID") Integer connectionID) {
+        this.agentNum = agentNum;
+        this.command = command;
+        this.connectionID = connectionID;
+  }
 }

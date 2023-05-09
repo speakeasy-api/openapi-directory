@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRetargetingIdResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript;
+
     public GetRetargetingIdResponse withApiCoreDtoRetargetingRetargetingScript(org.openapis.openapi.models.shared.ApiCoreDtoRetargetingRetargetingScript apiCoreDtoRetargetingRetargetingScript) {
         this.apiCoreDtoRetargetingRetargetingScript = apiCoreDtoRetargetingRetargetingScript;
         return this;
@@ -16,6 +18,7 @@ public class GetRetargetingIdResponse {
     
     
     public byte[] body;
+
     public GetRetargetingIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class GetRetargetingIdResponse {
     
     
     public String contentType;
+
     public GetRetargetingIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class GetRetargetingIdResponse {
     
     
     public Integer statusCode;
+
     public GetRetargetingIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class GetRetargetingIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRetargetingIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetRetargetingIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

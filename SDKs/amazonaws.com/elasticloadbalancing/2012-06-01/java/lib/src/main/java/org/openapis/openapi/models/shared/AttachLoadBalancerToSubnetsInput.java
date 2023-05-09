@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AttachLoadBalancerToSubnetsInput - Contains the parameters for AttachLoaBalancerToSubnets.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachLoadBalancerToSubnetsInput {
     
     public String loadBalancerName;
+
     public AttachLoadBalancerToSubnetsInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -19,9 +20,14 @@ public class AttachLoadBalancerToSubnetsInput {
     
     
     public String[] subnets;
+
     public AttachLoadBalancerToSubnetsInput withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public AttachLoadBalancerToSubnetsInput(@JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("Subnets") String[] subnets) {
+        this.loadBalancerName = loadBalancerName;
+        this.subnets = subnets;
+  }
 }

@@ -18,6 +18,7 @@ public class DownloadSizeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topUrlDownloadSizeBreakdowns")
     public UrlDownloadSize[] topUrlDownloadSizeBreakdowns;
+
     public DownloadSizeEvidence withTopUrlDownloadSizeBreakdowns(UrlDownloadSize[] topUrlDownloadSizeBreakdowns) {
         this.topUrlDownloadSizeBreakdowns = topUrlDownloadSizeBreakdowns;
         return this;
@@ -29,9 +30,11 @@ public class DownloadSizeEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDownloadSizeKb")
     public Integer totalDownloadSizeKb;
+
     public DownloadSizeEvidence withTotalDownloadSizeKb(Integer totalDownloadSizeKb) {
         this.totalDownloadSizeKb = totalDownloadSizeKb;
         return this;
     }
     
+    public DownloadSizeEvidence(){}
 }

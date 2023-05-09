@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListResponse {
     
     public String contentType;
+
     public TeamsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListResponse {
     
     
     public Integer statusCode;
+
     public TeamsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class TeamsListResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamList teamList;
+
     public TeamsListResponse withTeamList(org.openapis.openapi.models.shared.TeamList teamList) {
         this.teamList = teamList;
         return this;
     }
     
+    public TeamsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

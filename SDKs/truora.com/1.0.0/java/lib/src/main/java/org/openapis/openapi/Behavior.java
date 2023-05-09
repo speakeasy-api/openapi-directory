@@ -93,12 +93,10 @@ public class Behavior {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReportBehaviorResponse res = new org.openapis.openapi.models.operations.ReportBehaviorResponse() {{
+        org.openapis.openapi.models.operations.ReportBehaviorResponse res = new org.openapis.openapi.models.operations.ReportBehaviorResponse(contentType, httpRes.statusCode()) {{
             behaviourOutput = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

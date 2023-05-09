@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWorkforceResponse {
@@ -12,6 +13,7 @@ public class UpdateWorkforceResponse {
      */
     
     public Object conflictException;
+
     public UpdateWorkforceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWorkforceResponse {
     
     
     public String contentType;
+
     public UpdateWorkforceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class UpdateWorkforceResponse {
     
     
     public Integer statusCode;
+
     public UpdateWorkforceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UpdateWorkforceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWorkforceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class UpdateWorkforceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWorkforceResponse updateWorkforceResponse;
+
     public UpdateWorkforceResponse withUpdateWorkforceResponse(org.openapis.openapi.models.shared.UpdateWorkforceResponse updateWorkforceResponse) {
         this.updateWorkforceResponse = updateWorkforceResponse;
         return this;
     }
     
+    public UpdateWorkforceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

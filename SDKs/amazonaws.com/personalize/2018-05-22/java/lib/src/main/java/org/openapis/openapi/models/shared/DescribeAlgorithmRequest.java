@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAlgorithmRequest {
     @JsonProperty("algorithmArn")
     public String algorithmArn;
+
     public DescribeAlgorithmRequest withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
     }
     
+    public DescribeAlgorithmRequest(@JsonProperty("algorithmArn") String algorithmArn) {
+        this.algorithmArn = algorithmArn;
+  }
 }

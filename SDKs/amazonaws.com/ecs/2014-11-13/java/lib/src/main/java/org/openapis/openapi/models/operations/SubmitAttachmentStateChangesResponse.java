@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubmitAttachmentStateChangesResponse {
@@ -12,6 +13,7 @@ public class SubmitAttachmentStateChangesResponse {
      */
     
     public Object accessDeniedException;
+
     public SubmitAttachmentStateChangesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SubmitAttachmentStateChangesResponse {
      */
     
     public Object clientException;
+
     public SubmitAttachmentStateChangesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class SubmitAttachmentStateChangesResponse {
     
     
     public String contentType;
+
     public SubmitAttachmentStateChangesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SubmitAttachmentStateChangesResponse {
      */
     
     public Object invalidParameterException;
+
     public SubmitAttachmentStateChangesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class SubmitAttachmentStateChangesResponse {
     
     
     public Integer statusCode;
+
     public SubmitAttachmentStateChangesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SubmitAttachmentStateChangesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubmitAttachmentStateChangesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class SubmitAttachmentStateChangesResponse {
      */
     
     public Object serverException;
+
     public SubmitAttachmentStateChangesResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -73,9 +81,14 @@ public class SubmitAttachmentStateChangesResponse {
      */
     
     public org.openapis.openapi.models.shared.SubmitAttachmentStateChangesResponse submitAttachmentStateChangesResponse;
+
     public SubmitAttachmentStateChangesResponse withSubmitAttachmentStateChangesResponse(org.openapis.openapi.models.shared.SubmitAttachmentStateChangesResponse submitAttachmentStateChangesResponse) {
         this.submitAttachmentStateChangesResponse = submitAttachmentStateChangesResponse;
         return this;
     }
     
+    public SubmitAttachmentStateChangesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

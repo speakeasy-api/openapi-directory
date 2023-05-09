@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBotAliasesResponse {
     
     public String contentType;
+
     public ListBotAliasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBotAliasesResponse {
      */
     
     public Object internalServerException;
+
     public ListBotAliasesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListBotAliasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBotAliasesResponse listBotAliasesResponse;
+
     public ListBotAliasesResponse withListBotAliasesResponse(org.openapis.openapi.models.shared.ListBotAliasesResponse listBotAliasesResponse) {
         this.listBotAliasesResponse = listBotAliasesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListBotAliasesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListBotAliasesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class ListBotAliasesResponse {
     
     
     public Integer statusCode;
+
     public ListBotAliasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBotAliasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBotAliasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBotAliasesResponse {
      */
     
     public Object throttlingException;
+
     public ListBotAliasesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListBotAliasesResponse {
      */
     
     public Object validationException;
+
     public ListBotAliasesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListBotAliasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

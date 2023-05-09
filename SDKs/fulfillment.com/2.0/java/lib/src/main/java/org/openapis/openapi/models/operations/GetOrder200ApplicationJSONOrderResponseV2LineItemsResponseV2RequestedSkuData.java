@@ -12,6 +12,7 @@ public class GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2Request
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declaredValue")
     public String declaredValue;
+
     public GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2RequestedSkuData withDeclaredValue(String declaredValue) {
         this.declaredValue = declaredValue;
         return this;
@@ -20,6 +21,7 @@ public class GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2Request
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2RequestedSkuData withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2Request
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2RequestedSkuData withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -36,9 +39,11 @@ public class GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2Request
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2RequestedSkuData withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public GetOrder200ApplicationJSONOrderResponseV2LineItemsResponseV2RequestedSkuData(){}
 }

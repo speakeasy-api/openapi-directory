@@ -18,6 +18,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Contact withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public Contact withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -40,6 +42,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalSystem")
     public String externalSystem;
+
     public Contact withExternalSystem(String externalSystem) {
         this.externalSystem = externalSystem;
         return this;
@@ -51,6 +54,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraPhone1")
     public String extraPhone1;
+
     public Contact withExtraPhone1(String extraPhone1) {
         this.extraPhone1 = extraPhone1;
         return this;
@@ -62,6 +66,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraPhone2")
     public String extraPhone2;
+
     public Contact withExtraPhone2(String extraPhone2) {
         this.extraPhone2 = extraPhone2;
         return this;
@@ -73,6 +78,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraPhone3")
     public String extraPhone3;
+
     public Contact withExtraPhone3(String extraPhone3) {
         this.extraPhone3 = extraPhone3;
         return this;
@@ -84,6 +90,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public Contact withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -95,6 +102,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homePhone")
     public String homePhone;
+
     public Contact withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -106,6 +114,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Contact withId(Long id) {
         this.id = id;
         return this;
@@ -117,6 +126,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public Contact withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -128,6 +138,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobilePhone")
     public String mobilePhone;
+
     public Contact withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -139,6 +150,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public Contact withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -150,6 +162,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workPhone")
     public String workPhone;
+
     public Contact withWorkPhone(String workPhone) {
         this.workPhone = workPhone;
         return this;
@@ -161,9 +174,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipcode")
     public String zipcode;
+
     public Contact withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public Contact(){}
 }

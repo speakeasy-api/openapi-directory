@@ -12,6 +12,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InnerException")
     public Object innerException;
+
     public ApiException withInnerException(Object innerException) {
         this.innerException = innerException;
         return this;
@@ -20,6 +21,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ApiException withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +30,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public ApiException withSource(String source) {
         this.source = source;
         return this;
@@ -36,6 +39,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackTrace")
     public String stackTrace;
+
     public ApiException withStackTrace(String stackTrace) {
         this.stackTrace = stackTrace;
         return this;
@@ -44,6 +48,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customError")
     public Object customError;
+
     public ApiException withCustomError(Object customError) {
         this.customError = customError;
         return this;
@@ -52,6 +57,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ValidationError[] errors;
+
     public ApiException withErrors(ValidationError[] errors) {
         this.errors = errors;
         return this;
@@ -60,6 +66,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCustomErrorObject")
     public Boolean isCustomErrorObject;
+
     public ApiException withIsCustomErrorObject(Boolean isCustomErrorObject) {
         this.isCustomErrorObject = isCustomErrorObject;
         return this;
@@ -68,6 +75,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isModelValidatonError")
     public Boolean isModelValidatonError;
+
     public ApiException withIsModelValidatonError(Boolean isModelValidatonError) {
         this.isModelValidatonError = isModelValidatonError;
         return this;
@@ -76,6 +84,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceDocumentLink")
     public String referenceDocumentLink;
+
     public ApiException withReferenceDocumentLink(String referenceDocumentLink) {
         this.referenceDocumentLink = referenceDocumentLink;
         return this;
@@ -84,6 +93,7 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceErrorCode")
     public String referenceErrorCode;
+
     public ApiException withReferenceErrorCode(String referenceErrorCode) {
         this.referenceErrorCode = referenceErrorCode;
         return this;
@@ -92,9 +102,11 @@ public class ApiException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public Integer statusCode;
+
     public ApiException withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public ApiException(){}
 }

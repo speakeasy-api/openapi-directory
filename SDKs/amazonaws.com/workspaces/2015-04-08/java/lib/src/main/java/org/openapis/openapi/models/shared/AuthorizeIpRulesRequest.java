@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthorizeIpRulesRequest {
     @JsonProperty("GroupId")
     public String groupId;
+
     public AuthorizeIpRulesRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -16,9 +17,14 @@ public class AuthorizeIpRulesRequest {
     
     @JsonProperty("UserRules")
     public IpRuleItem[] userRules;
+
     public AuthorizeIpRulesRequest withUserRules(IpRuleItem[] userRules) {
         this.userRules = userRules;
         return this;
     }
     
+    public AuthorizeIpRulesRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("UserRules") IpRuleItem[] userRules) {
+        this.groupId = groupId;
+        this.userRules = userRules;
+  }
 }

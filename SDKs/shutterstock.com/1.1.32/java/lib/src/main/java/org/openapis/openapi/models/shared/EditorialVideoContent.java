@@ -17,6 +17,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect")
     public Double aspect;
+
     public EditorialVideoContent withAspect(Double aspect) {
         this.aspect = aspect;
         return this;
@@ -28,6 +29,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public EditorialVideoAssets assets;
+
     public EditorialVideoContent withAssets(EditorialVideoAssets assets) {
         this.assets = assets;
         return this;
@@ -36,6 +38,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public String byline;
+
     public EditorialVideoContent withByline(String byline) {
         this.byline = byline;
         return this;
@@ -44,6 +47,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public EditorialVideoContent withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -55,6 +59,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public EditorialCategory[] categories;
+
     public EditorialVideoContent withCategories(EditorialCategory[] categories) {
         this.categories = categories;
         return this;
@@ -64,6 +69,7 @@ public class EditorialVideoContent {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_taken")
     public LocalDate dateTaken;
+
     public EditorialVideoContent withDateTaken(LocalDate dateTaken) {
         this.dateTaken = dateTaken;
         return this;
@@ -72,6 +78,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EditorialVideoContent withDescription(String description) {
         this.description = description;
         return this;
@@ -79,6 +86,7 @@ public class EditorialVideoContent {
     
     @JsonProperty("id")
     public String id;
+
     public EditorialVideoContent withId(String id) {
         this.id = id;
         return this;
@@ -87,6 +95,7 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public EditorialVideoContent withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -95,9 +104,13 @@ public class EditorialVideoContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EditorialVideoContent withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EditorialVideoContent(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

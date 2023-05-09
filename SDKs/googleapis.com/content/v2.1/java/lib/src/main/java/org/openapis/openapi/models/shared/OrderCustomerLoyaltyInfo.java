@@ -15,6 +15,7 @@ public class OrderCustomerLoyaltyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loyaltyNumber")
     public String loyaltyNumber;
+
     public OrderCustomerLoyaltyInfo withLoyaltyNumber(String loyaltyNumber) {
         this.loyaltyNumber = loyaltyNumber;
         return this;
@@ -26,9 +27,11 @@ public class OrderCustomerLoyaltyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderCustomerLoyaltyInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrderCustomerLoyaltyInfo(){}
 }

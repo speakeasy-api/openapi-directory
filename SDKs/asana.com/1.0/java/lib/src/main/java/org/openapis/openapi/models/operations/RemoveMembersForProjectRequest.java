@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveMembersForProjectRequest {
@@ -12,6 +13,7 @@ public class RemoveMembersForProjectRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RemoveMembersForProjectRequestBody requestBody;
+
     public RemoveMembersForProjectRequest withRequestBody(RemoveMembersForProjectRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class RemoveMembersForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public RemoveMembersForProjectRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class RemoveMembersForProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public RemoveMembersForProjectRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class RemoveMembersForProjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_gid")
     public String projectGid;
+
     public RemoveMembersForProjectRequest withProjectGid(String projectGid) {
         this.projectGid = projectGid;
         return this;
     }
     
+    public RemoveMembersForProjectRequest(@JsonProperty("RequestBody") RemoveMembersForProjectRequestBody requestBody, @JsonProperty("project_gid") String projectGid) {
+        this.requestBody = requestBody;
+        this.projectGid = projectGid;
+  }
 }

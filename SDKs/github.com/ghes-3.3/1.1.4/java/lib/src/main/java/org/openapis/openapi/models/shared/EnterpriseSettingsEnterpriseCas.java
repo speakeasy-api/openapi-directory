@@ -12,9 +12,11 @@ public class EnterpriseSettingsEnterpriseCas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public EnterpriseSettingsEnterpriseCas withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseCas(){}
 }

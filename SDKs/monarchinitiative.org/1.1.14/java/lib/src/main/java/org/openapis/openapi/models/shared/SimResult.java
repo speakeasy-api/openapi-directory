@@ -15,6 +15,7 @@ public class SimResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public SimMatch[] matches;
+
     public SimResult withMatches(SimMatch[] matches) {
         this.matches = matches;
         return this;
@@ -23,6 +24,7 @@ public class SimResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SimMetadata metadata;
+
     public SimResult withMetadata(SimMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -31,9 +33,11 @@ public class SimResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public SimQuery query;
+
     public SimResult withQuery(SimQuery query) {
         this.query = query;
         return this;
     }
     
+    public SimResult(){}
 }

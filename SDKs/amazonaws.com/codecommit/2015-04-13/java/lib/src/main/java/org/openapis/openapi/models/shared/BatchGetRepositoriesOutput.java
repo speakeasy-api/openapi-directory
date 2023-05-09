@@ -15,6 +15,7 @@ public class BatchGetRepositoriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositories")
     public RepositoryMetadata[] repositories;
+
     public BatchGetRepositoriesOutput withRepositories(RepositoryMetadata[] repositories) {
         this.repositories = repositories;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetRepositoriesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoriesNotFound")
     public String[] repositoriesNotFound;
+
     public BatchGetRepositoriesOutput withRepositoriesNotFound(String[] repositoriesNotFound) {
         this.repositoriesNotFound = repositoriesNotFound;
         return this;
     }
     
+    public BatchGetRepositoriesOutput(){}
 }

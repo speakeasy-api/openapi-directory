@@ -12,6 +12,7 @@ public class ListLogSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public ListLogSubscriptionsRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -20,6 +21,7 @@ public class ListLogSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListLogSubscriptionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,9 +30,11 @@ public class ListLogSubscriptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLogSubscriptionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLogSubscriptionsRequest(){}
 }

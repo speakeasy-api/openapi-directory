@@ -7,6 +7,7 @@ package org.openapis.openapi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import org.apache.http.NameValuePair;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
 import org.openapis.openapi.utils.JSON;
@@ -29,6 +30,66 @@ public class PdfOcr {
 		this._sdkVersion = sdkVersion;
 		this._genVersion = genVersion;
 	}
+
+    /**
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusResponse pdfOcrGetAsyncJobStatus(org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusRequest request, org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/ocr/pdf/get-job-status");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusResponse res = new org.openapis.openapi.models.operations.PdfOcrGetAsyncJobStatusResponse(contentType, httpRes.statusCode()) {{
+            pdfToTextResponse = null;
+            pdfToTextResponse = null;
+            body = null;
+            body = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PdfToTextResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PdfToTextResponse.class);
+                res.pdfToTextResponse = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PdfToTextResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PdfToTextResponse.class);
+                res.pdfToTextResponse = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "text/xml")) {
+                byte[] out = httpRes.body();
+                res.body = out;
+            }
+        }
+
+        return res;
+    }
 
     /**
      * Convert a PDF into text lines with location
@@ -66,14 +127,12 @@ public class PdfOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PdfOcrPdfToLinesWithLocationResponse res = new org.openapis.openapi.models.operations.PdfOcrPdfToLinesWithLocationResponse() {{
+        org.openapis.openapi.models.operations.PdfOcrPdfToLinesWithLocationResponse res = new org.openapis.openapi.models.operations.PdfOcrPdfToLinesWithLocationResponse(contentType, httpRes.statusCode()) {{
             pdfToLinesWithLocationResult = null;
             pdfToLinesWithLocationResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,14 +195,12 @@ public class PdfOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PdfOcrPdfToWordsWithLocationResponse res = new org.openapis.openapi.models.operations.PdfOcrPdfToWordsWithLocationResponse() {{
+        org.openapis.openapi.models.operations.PdfOcrPdfToWordsWithLocationResponse res = new org.openapis.openapi.models.operations.PdfOcrPdfToWordsWithLocationResponse(contentType, httpRes.statusCode()) {{
             pdfToWordsWithLocationResult = null;
             pdfToWordsWithLocationResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,14 +262,12 @@ public class PdfOcr {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PdfOcrPostResponse res = new org.openapis.openapi.models.operations.PdfOcrPostResponse() {{
+        org.openapis.openapi.models.operations.PdfOcrPostResponse res = new org.openapis.openapi.models.operations.PdfOcrPostResponse(contentType, httpRes.statusCode()) {{
             pdfToTextResponse = null;
             pdfToTextResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesJourneyPlannerObstacle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incline")
     public String incline;
+
     public TflApiPresentationEntitiesJourneyPlannerObstacle withIncline(String incline) {
         this.incline = incline;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesJourneyPlannerObstacle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public String position;
+
     public TflApiPresentationEntitiesJourneyPlannerObstacle withPosition(String position) {
         this.position = position;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesJourneyPlannerObstacle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stopId")
     public Integer stopId;
+
     public TflApiPresentationEntitiesJourneyPlannerObstacle withStopId(Integer stopId) {
         this.stopId = stopId;
         return this;
@@ -36,9 +39,11 @@ public class TflApiPresentationEntitiesJourneyPlannerObstacle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TflApiPresentationEntitiesJourneyPlannerObstacle withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerObstacle(){}
 }

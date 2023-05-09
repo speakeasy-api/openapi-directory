@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeIpv6PoolsResultIpv6PoolsTags {
     
     public String key;
+
     public DescribeIpv6PoolsResultIpv6PoolsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeIpv6PoolsResultIpv6PoolsTags {
     
     
     public String value;
+
     public DescribeIpv6PoolsResultIpv6PoolsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeIpv6PoolsResultIpv6PoolsTags(){}
 }

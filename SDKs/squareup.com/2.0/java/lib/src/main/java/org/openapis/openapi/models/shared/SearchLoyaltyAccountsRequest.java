@@ -23,6 +23,7 @@ public class SearchLoyaltyAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchLoyaltyAccountsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -34,6 +35,7 @@ public class SearchLoyaltyAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchLoyaltyAccountsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -45,9 +47,11 @@ public class SearchLoyaltyAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public SearchLoyaltyAccountsRequestLoyaltyAccountQuery query;
+
     public SearchLoyaltyAccountsRequest withQuery(SearchLoyaltyAccountsRequestLoyaltyAccountQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchLoyaltyAccountsRequest(){}
 }

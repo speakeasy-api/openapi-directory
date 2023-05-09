@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesCreateLabelResponse {
     
     public String contentType;
+
     public IssuesCreateLabelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesCreateLabelResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesCreateLabelResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesCreateLabelResponse {
     
     
     public Integer statusCode;
+
     public IssuesCreateLabelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesCreateLabelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesCreateLabelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesCreateLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesCreateLabelResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class IssuesCreateLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.Label label;
+
     public IssuesCreateLabelResponse withLabel(org.openapis.openapi.models.shared.Label label) {
         this.label = label;
         return this;
@@ -60,9 +67,14 @@ public class IssuesCreateLabelResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesCreateLabelResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesCreateLabelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

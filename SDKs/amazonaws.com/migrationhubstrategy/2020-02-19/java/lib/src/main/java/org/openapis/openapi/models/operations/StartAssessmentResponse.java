@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAssessmentResponse {
@@ -12,6 +13,7 @@ public class StartAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public StartAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartAssessmentResponse {
     
     
     public String contentType;
+
     public StartAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public StartAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartAssessmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartAssessmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAssessmentResponse startAssessmentResponse;
+
     public StartAssessmentResponse withStartAssessmentResponse(org.openapis.openapi.models.shared.StartAssessmentResponse startAssessmentResponse) {
         this.startAssessmentResponse = startAssessmentResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartAssessmentResponse {
     
     
     public Integer statusCode;
+
     public StartAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartAssessmentResponse {
      */
     
     public Object throttlingException;
+
     public StartAssessmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public StartAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

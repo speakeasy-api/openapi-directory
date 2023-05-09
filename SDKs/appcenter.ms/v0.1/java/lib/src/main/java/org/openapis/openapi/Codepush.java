@@ -50,12 +50,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushAcquisitionGetAcquisitionStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionGetAcquisitionStatusResponse() {{
+        org.openapis.openapi.models.operations.CodePushAcquisitionGetAcquisitionStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionGetAcquisitionStatusResponse(contentType, httpRes.statusCode()) {{
             codePushAcquisitionGetAcquisitionStatus200ApplicationJSONObject = null;
             codePushAcquisitionGetAcquisitionStatusDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,12 +100,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckResponse() {{
+        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateCheckResponse(contentType, httpRes.statusCode()) {{
             codePushAcquisitionUpdateCheck200ApplicationJSONObject = null;
             codePushAcquisitionUpdateCheckDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse() {{
+        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDeployStatusResponse(contentType, httpRes.statusCode()) {{
             codePushAcquisitionUpdateDeployStatusDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -198,11 +192,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse() {{
+        org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse res = new org.openapis.openapi.models.operations.CodePushAcquisitionUpdateDownloadStatusResponse(contentType, httpRes.statusCode()) {{
             codePushAcquisitionUpdateDownloadStatusDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,12 +232,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentMetricsGetResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentMetricsGet200ApplicationJSONObjects = null;
             codePushDeploymentMetricsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -290,12 +280,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleaseRollbackResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentReleaseRollback201ApplicationJSONObject = null;
             codePushDeploymentReleaseRollbackDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -343,12 +331,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesCreateResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentReleasesCreate201ApplicationJSONObject = null;
             codePushDeploymentReleasesCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -391,11 +377,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesDeleteResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentReleasesDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -433,12 +417,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentReleasesGetResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentReleasesGet200ApplicationJSONAnies = null;
             codePushDeploymentReleasesGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -481,12 +463,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentUploadCreateResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentUploadCreate200ApplicationJSONObject = null;
             codePushDeploymentUploadCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,12 +514,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsCreateResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsCreate201ApplicationJSONObject = null;
             codePushDeploymentsCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -584,11 +562,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsDeleteResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -626,12 +602,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsGetResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsGet200ApplicationJSONObject = null;
             codePushDeploymentsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,12 +648,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsListResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsListResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsListResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsListResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsList200ApplicationJSONObjects = null;
             codePushDeploymentsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,12 +696,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsPromoteResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsPromote200ApplicationJSONObject = null;
             codePushDeploymentsPromoteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -777,11 +747,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse res = new org.openapis.openapi.models.operations.CodePushDeploymentsUpdateResponse(contentType, httpRes.statusCode()) {{
             codePushDeploymentsUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -824,12 +792,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentReleasesUpdateResponse(contentType, httpRes.statusCode()) {{
             deploymentReleasesUpdate200ApplicationJSONObject = null;
             deploymentReleasesUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -880,12 +846,10 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse() {{
+        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateCheckResponse(contentType, httpRes.statusCode()) {{
             legacyCodePushAcquisitionUpdateCheck200ApplicationJSONObject = null;
             legacyCodePushAcquisitionUpdateCheckDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -933,11 +897,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse() {{
+        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateDownloadStatusResponse(contentType, httpRes.statusCode()) {{
             legacyCodePushAcquisitionUpdateDownloadStatusDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -980,11 +942,9 @@ public class Codepush {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse() {{
+        org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse res = new org.openapis.openapi.models.operations.LegacyCodePushAcquisitionUpdateInstallsStatusResponse(contentType, httpRes.statusCode()) {{
             legacyCodePushAcquisitionUpdateInstallsStatusDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

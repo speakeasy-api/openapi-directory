@@ -15,6 +15,7 @@ public class ListFraudstersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FraudsterSummaries")
     public FraudsterSummary[] fraudsterSummaries;
+
     public ListFraudstersResponse withFraudsterSummaries(FraudsterSummary[] fraudsterSummaries) {
         this.fraudsterSummaries = fraudsterSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListFraudstersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFraudstersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFraudstersResponse(){}
 }

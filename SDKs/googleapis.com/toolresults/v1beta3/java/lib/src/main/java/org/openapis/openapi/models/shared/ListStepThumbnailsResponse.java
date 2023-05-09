@@ -18,6 +18,7 @@ public class ListStepThumbnailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListStepThumbnailsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListStepThumbnailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public Image[] thumbnails;
+
     public ListStepThumbnailsResponse withThumbnails(Image[] thumbnails) {
         this.thumbnails = thumbnails;
         return this;
     }
     
+    public ListStepThumbnailsResponse(){}
 }

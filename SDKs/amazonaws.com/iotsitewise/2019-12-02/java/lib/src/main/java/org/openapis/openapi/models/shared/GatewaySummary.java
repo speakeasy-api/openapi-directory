@@ -21,6 +21,7 @@ public class GatewaySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public GatewaySummary withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -29,6 +30,7 @@ public class GatewaySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayCapabilitySummaries")
     public GatewayCapabilitySummary[] gatewayCapabilitySummaries;
+
     public GatewaySummary withGatewayCapabilitySummaries(GatewayCapabilitySummary[] gatewayCapabilitySummaries) {
         this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
         return this;
@@ -36,6 +38,7 @@ public class GatewaySummary {
     
     @JsonProperty("gatewayId")
     public String gatewayId;
+
     public GatewaySummary withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -43,6 +46,7 @@ public class GatewaySummary {
     
     @JsonProperty("gatewayName")
     public String gatewayName;
+
     public GatewaySummary withGatewayName(String gatewayName) {
         this.gatewayName = gatewayName;
         return this;
@@ -54,6 +58,7 @@ public class GatewaySummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayPlatform")
     public GatewayPlatform gatewayPlatform;
+
     public GatewaySummary withGatewayPlatform(GatewayPlatform gatewayPlatform) {
         this.gatewayPlatform = gatewayPlatform;
         return this;
@@ -63,9 +68,16 @@ public class GatewaySummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateDate")
     public OffsetDateTime lastUpdateDate;
+
     public GatewaySummary withLastUpdateDate(OffsetDateTime lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
     }
     
+    public GatewaySummary(@JsonProperty("creationDate") OffsetDateTime creationDate, @JsonProperty("gatewayId") String gatewayId, @JsonProperty("gatewayName") String gatewayName, @JsonProperty("lastUpdateDate") OffsetDateTime lastUpdateDate) {
+        this.creationDate = creationDate;
+        this.gatewayId = gatewayId;
+        this.gatewayName = gatewayName;
+        this.lastUpdateDate = lastUpdateDate;
+  }
 }

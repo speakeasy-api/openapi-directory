@@ -20,6 +20,7 @@ public class LDAPSSettingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LDAPSStatus")
     public LDAPSStatusEnum ldapsStatus;
+
     public LDAPSSettingInfo withLDAPSStatus(LDAPSStatusEnum ldapsStatus) {
         this.ldapsStatus = ldapsStatus;
         return this;
@@ -28,6 +29,7 @@ public class LDAPSSettingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LDAPSStatusReason")
     public String ldapsStatusReason;
+
     public LDAPSSettingInfo withLDAPSStatusReason(String ldapsStatusReason) {
         this.ldapsStatusReason = ldapsStatusReason;
         return this;
@@ -38,9 +40,11 @@ public class LDAPSSettingInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public LDAPSSettingInfo withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
     }
     
+    public LDAPSSettingInfo(){}
 }

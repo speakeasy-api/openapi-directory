@@ -15,6 +15,7 @@ public class BurnTokenRequestBurn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public BurnTokenRequestBurn withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,11 @@ public class BurnTokenRequestBurn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenId")
     public String tokenId;
+
     public BurnTokenRequestBurn withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
     }
     
+    public BurnTokenRequestBurn(){}
 }

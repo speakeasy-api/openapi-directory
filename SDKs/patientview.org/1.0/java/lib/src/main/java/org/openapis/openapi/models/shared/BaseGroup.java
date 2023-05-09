@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class BaseGroup {
     
     public String code;
+
     public BaseGroup withCode(String code) {
         this.code = code;
         return this;
@@ -16,6 +17,7 @@ public class BaseGroup {
     
     
     public Lookup groupType;
+
     public BaseGroup withGroupType(Lookup groupType) {
         this.groupType = groupType;
         return this;
@@ -23,6 +25,7 @@ public class BaseGroup {
     
     
     public Long id;
+
     public BaseGroup withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +33,7 @@ public class BaseGroup {
     
     
     public OffsetDateTime lastImportDate;
+
     public BaseGroup withLastImportDate(OffsetDateTime lastImportDate) {
         this.lastImportDate = lastImportDate;
         return this;
@@ -37,6 +41,7 @@ public class BaseGroup {
     
     
     public String name;
+
     public BaseGroup withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +49,7 @@ public class BaseGroup {
     
     
     public String[] parentCodes;
+
     public BaseGroup withParentCodes(String[] parentCodes) {
         this.parentCodes = parentCodes;
         return this;
@@ -51,6 +57,7 @@ public class BaseGroup {
     
     
     public String shortName;
+
     public BaseGroup withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -58,6 +65,7 @@ public class BaseGroup {
     
     
     public Boolean visible;
+
     public BaseGroup withVisible(Boolean visible) {
         this.visible = visible;
         return this;
@@ -65,9 +73,11 @@ public class BaseGroup {
     
     
     public Boolean visibleToJoin;
+
     public BaseGroup withVisibleToJoin(Boolean visibleToJoin) {
         this.visibleToJoin = visibleToJoin;
         return this;
     }
     
+    public BaseGroup(){}
 }

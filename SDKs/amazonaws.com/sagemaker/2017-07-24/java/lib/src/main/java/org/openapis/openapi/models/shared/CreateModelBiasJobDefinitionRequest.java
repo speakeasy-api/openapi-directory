@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateModelBiasJobDefinitionRequest {
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public CreateModelBiasJobDefinitionRequest withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -21,6 +22,7 @@ public class CreateModelBiasJobDefinitionRequest {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public CreateModelBiasJobDefinitionRequest withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -28,6 +30,7 @@ public class CreateModelBiasJobDefinitionRequest {
     
     @JsonProperty("ModelBiasAppSpecification")
     public ModelBiasAppSpecification modelBiasAppSpecification;
+
     public CreateModelBiasJobDefinitionRequest withModelBiasAppSpecification(ModelBiasAppSpecification modelBiasAppSpecification) {
         this.modelBiasAppSpecification = modelBiasAppSpecification;
         return this;
@@ -36,6 +39,7 @@ public class CreateModelBiasJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelBiasBaselineConfig")
     public ModelBiasBaselineConfig modelBiasBaselineConfig;
+
     public CreateModelBiasJobDefinitionRequest withModelBiasBaselineConfig(ModelBiasBaselineConfig modelBiasBaselineConfig) {
         this.modelBiasBaselineConfig = modelBiasBaselineConfig;
         return this;
@@ -43,6 +47,7 @@ public class CreateModelBiasJobDefinitionRequest {
     
     @JsonProperty("ModelBiasJobInput")
     public ModelBiasJobInput modelBiasJobInput;
+
     public CreateModelBiasJobDefinitionRequest withModelBiasJobInput(ModelBiasJobInput modelBiasJobInput) {
         this.modelBiasJobInput = modelBiasJobInput;
         return this;
@@ -53,6 +58,7 @@ public class CreateModelBiasJobDefinitionRequest {
      */
     @JsonProperty("ModelBiasJobOutputConfig")
     public MonitoringOutputConfig modelBiasJobOutputConfig;
+
     public CreateModelBiasJobDefinitionRequest withModelBiasJobOutputConfig(MonitoringOutputConfig modelBiasJobOutputConfig) {
         this.modelBiasJobOutputConfig = modelBiasJobOutputConfig;
         return this;
@@ -61,6 +67,7 @@ public class CreateModelBiasJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public CreateModelBiasJobDefinitionRequest withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -68,6 +75,7 @@ public class CreateModelBiasJobDefinitionRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateModelBiasJobDefinitionRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -79,6 +87,7 @@ public class CreateModelBiasJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public CreateModelBiasJobDefinitionRequest withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -87,9 +96,18 @@ public class CreateModelBiasJobDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateModelBiasJobDefinitionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateModelBiasJobDefinitionRequest(@JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("ModelBiasAppSpecification") ModelBiasAppSpecification modelBiasAppSpecification, @JsonProperty("ModelBiasJobInput") ModelBiasJobInput modelBiasJobInput, @JsonProperty("ModelBiasJobOutputConfig") MonitoringOutputConfig modelBiasJobOutputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.modelBiasAppSpecification = modelBiasAppSpecification;
+        this.modelBiasJobInput = modelBiasJobInput;
+        this.modelBiasJobOutputConfig = modelBiasJobOutputConfig;
+        this.roleArn = roleArn;
+  }
 }

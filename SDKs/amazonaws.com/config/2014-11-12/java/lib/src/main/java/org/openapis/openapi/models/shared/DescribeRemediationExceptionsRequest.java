@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeRemediationExceptionsRequest {
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public DescribeRemediationExceptionsRequest withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeRemediationExceptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeRemediationExceptionsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeRemediationExceptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeRemediationExceptionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeRemediationExceptionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceKeys")
     public RemediationExceptionResourceKey[] resourceKeys;
+
     public DescribeRemediationExceptionsRequest withResourceKeys(RemediationExceptionResourceKey[] resourceKeys) {
         this.resourceKeys = resourceKeys;
         return this;
     }
     
+    public DescribeRemediationExceptionsRequest(@JsonProperty("ConfigRuleName") String configRuleName) {
+        this.configRuleName = configRuleName;
+  }
 }

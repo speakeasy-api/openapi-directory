@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AcademicCertificateSchemaCertificateDataSchool {
     
     public String code;
+
     public AcademicCertificateSchemaCertificateDataSchool withCode(String code) {
         this.code = code;
         return this;
@@ -16,9 +17,14 @@ public class AcademicCertificateSchemaCertificateDataSchool {
     
     
     public String name;
+
     public AcademicCertificateSchemaCertificateDataSchool withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AcademicCertificateSchemaCertificateDataSchool(@JsonProperty("code") String code, @JsonProperty("name") String name) {
+        this.code = code;
+        this.name = name;
+  }
 }

@@ -167,6 +167,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -204,15 +209,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelRotateSecretResponse res = new org.openapis.openapi.models.operations.CancelRotateSecretResponse() {{
+        org.openapis.openapi.models.operations.CancelRotateSecretResponse res = new org.openapis.openapi.models.operations.CancelRotateSecretResponse(contentType, httpRes.statusCode()) {{
             cancelRotateSecretResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServiceError = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,7 +291,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateSecretResponse res = new org.openapis.openapi.models.operations.CreateSecretResponse() {{
+        org.openapis.openapi.models.operations.CreateSecretResponse res = new org.openapis.openapi.models.operations.CreateSecretResponse(contentType, httpRes.statusCode()) {{
             createSecretResponse = null;
             invalidParameterException = null;
             invalidRequestException = null;
@@ -301,8 +304,6 @@ public class SDK {
             preconditionNotMetException = null;
             decryptionFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -420,15 +421,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             deleteResourcePolicyResponse = null;
             resourceNotFoundException = null;
             internalServiceError = null;
             invalidRequestException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -504,15 +503,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSecretResponse res = new org.openapis.openapi.models.operations.DeleteSecretResponse() {{
+        org.openapis.openapi.models.operations.DeleteSecretResponse res = new org.openapis.openapi.models.operations.DeleteSecretResponse(contentType, httpRes.statusCode()) {{
             deleteSecretResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             invalidRequestException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,14 +585,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeSecretResponse res = new org.openapis.openapi.models.operations.DescribeSecretResponse() {{
+        org.openapis.openapi.models.operations.DescribeSecretResponse res = new org.openapis.openapi.models.operations.DescribeSecretResponse(contentType, httpRes.statusCode()) {{
             describeSecretResponse = null;
             resourceNotFoundException = null;
             internalServiceError = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -664,14 +659,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRandomPasswordResponse res = new org.openapis.openapi.models.operations.GetRandomPasswordResponse() {{
+        org.openapis.openapi.models.operations.GetRandomPasswordResponse res = new org.openapis.openapi.models.operations.GetRandomPasswordResponse(contentType, httpRes.statusCode()) {{
             getRandomPasswordResponse = null;
             invalidParameterException = null;
             invalidRequestException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -740,15 +733,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcePolicyResponse res = new org.openapis.openapi.models.operations.GetResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.GetResourcePolicyResponse res = new org.openapis.openapi.models.operations.GetResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             getResourcePolicyResponse = null;
             resourceNotFoundException = null;
             internalServiceError = null;
             invalidRequestException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -824,7 +815,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSecretValueResponse res = new org.openapis.openapi.models.operations.GetSecretValueResponse() {{
+        org.openapis.openapi.models.operations.GetSecretValueResponse res = new org.openapis.openapi.models.operations.GetSecretValueResponse(contentType, httpRes.statusCode()) {{
             getSecretValueResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -832,8 +823,6 @@ public class SDK {
             decryptionFailure = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -922,15 +911,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSecretVersionIdsResponse res = new org.openapis.openapi.models.operations.ListSecretVersionIdsResponse() {{
+        org.openapis.openapi.models.operations.ListSecretVersionIdsResponse res = new org.openapis.openapi.models.operations.ListSecretVersionIdsResponse(contentType, httpRes.statusCode()) {{
             listSecretVersionIdsResponse = null;
             invalidNextTokenException = null;
             resourceNotFoundException = null;
             internalServiceError = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1012,14 +999,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListSecretsResponse res = new org.openapis.openapi.models.operations.ListSecretsResponse() {{
+        org.openapis.openapi.models.operations.ListSecretsResponse res = new org.openapis.openapi.models.operations.ListSecretsResponse(contentType, httpRes.statusCode()) {{
             listSecretsResponse = null;
             invalidParameterException = null;
             invalidNextTokenException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1088,7 +1073,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             putResourcePolicyResponse = null;
             malformedPolicyDocumentException = null;
             resourceNotFoundException = null;
@@ -1097,8 +1082,6 @@ public class SDK {
             invalidRequestException = null;
             publicPolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1188,7 +1171,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSecretValueResponse res = new org.openapis.openapi.models.operations.PutSecretValueResponse() {{
+        org.openapis.openapi.models.operations.PutSecretValueResponse res = new org.openapis.openapi.models.operations.PutSecretValueResponse(contentType, httpRes.statusCode()) {{
             putSecretValueResponse = null;
             invalidParameterException = null;
             invalidRequestException = null;
@@ -1199,8 +1182,6 @@ public class SDK {
             internalServiceError = null;
             decryptionFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1304,15 +1285,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemoveRegionsFromReplicationResponse res = new org.openapis.openapi.models.operations.RemoveRegionsFromReplicationResponse() {{
+        org.openapis.openapi.models.operations.RemoveRegionsFromReplicationResponse res = new org.openapis.openapi.models.operations.RemoveRegionsFromReplicationResponse(contentType, httpRes.statusCode()) {{
             removeRegionsFromReplicationResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
             invalidParameterException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1388,15 +1367,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReplicateSecretToRegionsResponse res = new org.openapis.openapi.models.operations.ReplicateSecretToRegionsResponse() {{
+        org.openapis.openapi.models.operations.ReplicateSecretToRegionsResponse res = new org.openapis.openapi.models.operations.ReplicateSecretToRegionsResponse(contentType, httpRes.statusCode()) {{
             replicateSecretToRegionsResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
             invalidParameterException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1472,15 +1449,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreSecretResponse res = new org.openapis.openapi.models.operations.RestoreSecretResponse() {{
+        org.openapis.openapi.models.operations.RestoreSecretResponse res = new org.openapis.openapi.models.operations.RestoreSecretResponse(contentType, httpRes.statusCode()) {{
             restoreSecretResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             invalidRequestException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1556,15 +1531,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RotateSecretResponse res = new org.openapis.openapi.models.operations.RotateSecretResponse() {{
+        org.openapis.openapi.models.operations.RotateSecretResponse res = new org.openapis.openapi.models.operations.RotateSecretResponse(contentType, httpRes.statusCode()) {{
             rotateSecretResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
             internalServiceError = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1640,15 +1613,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopReplicationToReplicaResponse res = new org.openapis.openapi.models.operations.StopReplicationToReplicaResponse() {{
+        org.openapis.openapi.models.operations.StopReplicationToReplicaResponse res = new org.openapis.openapi.models.operations.StopReplicationToReplicaResponse(contentType, httpRes.statusCode()) {{
             stopReplicationToReplicaResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
             invalidParameterException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1724,14 +1695,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidRequestException = null;
             invalidParameterException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1802,14 +1771,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             resourceNotFoundException = null;
             invalidRequestException = null;
             invalidParameterException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1880,7 +1847,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSecretResponse res = new org.openapis.openapi.models.operations.UpdateSecretResponse() {{
+        org.openapis.openapi.models.operations.UpdateSecretResponse res = new org.openapis.openapi.models.operations.UpdateSecretResponse(contentType, httpRes.statusCode()) {{
             updateSecretResponse = null;
             invalidParameterException = null;
             invalidRequestException = null;
@@ -1893,8 +1860,6 @@ public class SDK {
             preconditionNotMetException = null;
             decryptionFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2012,7 +1977,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSecretVersionStageResponse res = new org.openapis.openapi.models.operations.UpdateSecretVersionStageResponse() {{
+        org.openapis.openapi.models.operations.UpdateSecretVersionStageResponse res = new org.openapis.openapi.models.operations.UpdateSecretVersionStageResponse(contentType, httpRes.statusCode()) {{
             updateSecretVersionStageResponse = null;
             resourceNotFoundException = null;
             invalidParameterException = null;
@@ -2020,8 +1985,6 @@ public class SDK {
             limitExceededException = null;
             internalServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2071,7 +2034,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Validates that a resource policy does not grant a wide range of principals access to your secret. A resource-based policy is optional for secrets.&lt;/p&gt; &lt;p&gt;The API performs three checks when validating the policy:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Sends a call to &lt;a href="https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/"&gt;Zelkova&lt;/a&gt;, an automated reasoning engine, to ensure your resource policy does not allow broad access to your secret, for example policies that use a wildcard for the principal.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Checks for correct syntax in a policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Verifies the policy does not lock out a caller.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Secrets Manager generates a CloudTrail log entry when you call this action. Do not include sensitive information in request parameters because it might be logged. For more information, see &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieve-ct-entries.html"&gt;Logging Secrets Manager events with CloudTrail&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Required permissions: &lt;/b&gt; &lt;code&gt;secretsmanager:ValidateResourcePolicy&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"&gt; IAM policy actions for Secrets Manager&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html"&gt;Authentication and access control in Secrets Manager&lt;/a&gt;. &lt;/p&gt;
+     * &lt;p&gt;Validates that a resource policy does not grant a wide range of principals access to your secret. A resource-based policy is optional for secrets.&lt;/p&gt; &lt;p&gt;The API performs three checks when validating the policy:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Sends a call to &lt;a href="https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/"&gt;Zelkova&lt;/a&gt;, an automated reasoning engine, to ensure your resource policy does not allow broad access to your secret, for example policies that use a wildcard for the principal.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Checks for correct syntax in a policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Verifies the policy does not lock out a caller.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Secrets Manager generates a CloudTrail log entry when you call this action. Do not include sensitive information in request parameters because it might be logged. For more information, see &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieve-ct-entries.html"&gt;Logging Secrets Manager events with CloudTrail&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; &lt;b&gt;Required permissions: &lt;/b&gt; &lt;code&gt;secretsmanager:ValidateResourcePolicy&lt;/code&gt; and &lt;code&gt;secretsmanager:PutResourcePolicy&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#reference_iam-permissions_actions"&gt; IAM policy actions for Secrets Manager&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access.html"&gt;Authentication and access control in Secrets Manager&lt;/a&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2104,7 +2067,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ValidateResourcePolicyResponse res = new org.openapis.openapi.models.operations.ValidateResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.ValidateResourcePolicyResponse res = new org.openapis.openapi.models.operations.ValidateResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             validateResourcePolicyResponse = null;
             malformedPolicyDocumentException = null;
             resourceNotFoundException = null;
@@ -2112,8 +2075,6 @@ public class SDK {
             internalServiceError = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class GetVendorProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed")
     public Boolean completed;
+
     public GetVendorProjectsRequest withCompleted(Boolean completed) {
         this.completed = completed;
         return this;
@@ -22,6 +23,7 @@ public class GetVendorProjectsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=joined")
     public Boolean joined;
+
     public GetVendorProjectsRequest withJoined(Boolean joined) {
         this.joined = joined;
         return this;
@@ -29,6 +31,7 @@ public class GetVendorProjectsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetVendorProjectsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -36,9 +39,11 @@ public class GetVendorProjectsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetVendorProjectsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetVendorProjectsRequest(){}
 }

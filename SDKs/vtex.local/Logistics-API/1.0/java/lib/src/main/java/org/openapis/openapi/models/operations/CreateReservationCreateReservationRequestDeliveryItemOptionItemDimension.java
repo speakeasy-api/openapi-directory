@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension {
     @JsonProperty("height")
     public Integer height;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension withHeight(Integer height) {
         this.height = height;
         return this;
@@ -16,6 +17,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItemDime
     
     @JsonProperty("length")
     public Integer length;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension withLength(Integer length) {
         this.length = length;
         return this;
@@ -23,6 +25,7 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItemDime
     
     @JsonProperty("weight")
     public Integer weight;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -30,9 +33,16 @@ public class CreateReservationCreateReservationRequestDeliveryItemOptionItemDime
     
     @JsonProperty("width")
     public Integer width;
+
     public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public CreateReservationCreateReservationRequestDeliveryItemOptionItemDimension(@JsonProperty("height") Integer height, @JsonProperty("length") Integer length, @JsonProperty("weight") Integer weight, @JsonProperty("width") Integer width) {
+        this.height = height;
+        this.length = length;
+        this.weight = weight;
+        this.width = width;
+  }
 }

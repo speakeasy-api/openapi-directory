@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CodeScanningGetAnalysisResponse {
     
     public String contentType;
+
     public CodeScanningGetAnalysisResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CodeScanningGetAnalysisResponse {
     
     
     public Integer statusCode;
+
     public CodeScanningGetAnalysisResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CodeScanningGetAnalysisResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CodeScanningGetAnalysisResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CodeScanningGetAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public CodeScanningGetAnalysisResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class CodeScanningGetAnalysisResponse {
      */
     
     public org.openapis.openapi.models.shared.CodeScanningAnalysis codeScanningAnalysis;
+
     public CodeScanningGetAnalysisResponse withCodeScanningAnalysis(org.openapis.openapi.models.shared.CodeScanningAnalysis codeScanningAnalysis) {
         this.codeScanningAnalysis = codeScanningAnalysis;
         return this;
@@ -53,6 +59,7 @@ public class CodeScanningGetAnalysisResponse {
      */
     
     public java.util.Map<String, Object> codeScanningGetAnalysis200ApplicationJsonPlusSarifObject;
+
     public CodeScanningGetAnalysisResponse withCodeScanningGetAnalysis200ApplicationJsonPlusSarifObject(java.util.Map<String, Object> codeScanningGetAnalysis200ApplicationJsonPlusSarifObject) {
         this.codeScanningGetAnalysis200ApplicationJsonPlusSarifObject = codeScanningGetAnalysis200ApplicationJsonPlusSarifObject;
         return this;
@@ -63,9 +70,14 @@ public class CodeScanningGetAnalysisResponse {
      */
     
     public CodeScanningGetAnalysis503ApplicationJSON codeScanningGetAnalysis503ApplicationJSONObject;
+
     public CodeScanningGetAnalysisResponse withCodeScanningGetAnalysis503ApplicationJSONObject(CodeScanningGetAnalysis503ApplicationJSON codeScanningGetAnalysis503ApplicationJSONObject) {
         this.codeScanningGetAnalysis503ApplicationJSONObject = codeScanningGetAnalysis503ApplicationJSONObject;
         return this;
     }
     
+    public CodeScanningGetAnalysisResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

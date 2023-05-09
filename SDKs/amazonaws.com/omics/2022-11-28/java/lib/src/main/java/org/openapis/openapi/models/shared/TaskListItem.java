@@ -20,6 +20,7 @@ public class TaskListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpus")
     public Long cpus;
+
     public TaskListItem withCpus(Long cpus) {
         this.cpus = cpus;
         return this;
@@ -30,6 +31,7 @@ public class TaskListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public TaskListItem withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class TaskListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public Long memory;
+
     public TaskListItem withMemory(Long memory) {
         this.memory = memory;
         return this;
@@ -46,6 +49,7 @@ public class TaskListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskListItem withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class TaskListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public TaskListItem withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -64,6 +69,7 @@ public class TaskListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TaskStatusEnum status;
+
     public TaskListItem withStatus(TaskStatusEnum status) {
         this.status = status;
         return this;
@@ -74,6 +80,7 @@ public class TaskListItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public TaskListItem withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
@@ -82,9 +89,11 @@ public class TaskListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public TaskListItem withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public TaskListItem(){}
 }

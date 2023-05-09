@@ -15,6 +15,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public Entity withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockReferences")
     public BlockReference[] blockReferences;
+
     public Entity withBlockReferences(BlockReference[] blockReferences) {
         this.blockReferences = blockReferences;
         return this;
@@ -31,6 +33,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public Entity withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -39,6 +42,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public Entity withScore(Float score) {
         this.score = score;
         return this;
@@ -47,6 +51,7 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public Entity withText(String text) {
         this.text = text;
         return this;
@@ -55,9 +60,11 @@ public class Entity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public EntityTypeEnum type;
+
     public Entity withType(EntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Entity(){}
 }

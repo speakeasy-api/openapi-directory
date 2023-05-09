@@ -14,6 +14,7 @@ public class SaveSubTransaction {
      */
     @JsonProperty("amount")
     public Long amount;
+
     public SaveSubTransaction withAmount(Long amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class SaveSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_id")
     public String categoryId;
+
     public SaveSubTransaction withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -33,6 +35,7 @@ public class SaveSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memo")
     public String memo;
+
     public SaveSubTransaction withMemo(String memo) {
         this.memo = memo;
         return this;
@@ -44,6 +47,7 @@ public class SaveSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_id")
     public String payeeId;
+
     public SaveSubTransaction withPayeeId(String payeeId) {
         this.payeeId = payeeId;
         return this;
@@ -55,9 +59,13 @@ public class SaveSubTransaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payee_name")
     public String payeeName;
+
     public SaveSubTransaction withPayeeName(String payeeName) {
         this.payeeName = payeeName;
         return this;
     }
     
+    public SaveSubTransaction(@JsonProperty("amount") Long amount) {
+        this.amount = amount;
+  }
 }

@@ -15,9 +15,11 @@ public class ConfluenceBlogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlogFieldMappings")
     public ConfluenceBlogToIndexFieldMapping[] blogFieldMappings;
+
     public ConfluenceBlogConfiguration withBlogFieldMappings(ConfluenceBlogToIndexFieldMapping[] blogFieldMappings) {
         this.blogFieldMappings = blogFieldMappings;
         return this;
     }
     
+    public ConfluenceBlogConfiguration(){}
 }

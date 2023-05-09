@@ -22,6 +22,7 @@ public class SuiteRunInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SuiteRunInformation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class SuiteRunInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endAt")
     public OffsetDateTime endAt;
+
     public SuiteRunInformation withEndAt(OffsetDateTime endAt) {
         this.endAt = endAt;
         return this;
@@ -40,6 +42,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Long failed;
+
     public SuiteRunInformation withFailed(Long failed) {
         this.failed = failed;
         return this;
@@ -48,6 +51,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passed")
     public Long passed;
+
     public SuiteRunInformation withPassed(Long passed) {
         this.passed = passed;
         return this;
@@ -58,6 +62,7 @@ public class SuiteRunInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public SuiteRunInformation withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -66,6 +71,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SuiteRunStatusEnum status;
+
     public SuiteRunInformation withStatus(SuiteRunStatusEnum status) {
         this.status = status;
         return this;
@@ -74,6 +80,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionId")
     public String suiteDefinitionId;
+
     public SuiteRunInformation withSuiteDefinitionId(String suiteDefinitionId) {
         this.suiteDefinitionId = suiteDefinitionId;
         return this;
@@ -82,6 +89,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionName")
     public String suiteDefinitionName;
+
     public SuiteRunInformation withSuiteDefinitionName(String suiteDefinitionName) {
         this.suiteDefinitionName = suiteDefinitionName;
         return this;
@@ -90,6 +98,7 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionVersion")
     public String suiteDefinitionVersion;
+
     public SuiteRunInformation withSuiteDefinitionVersion(String suiteDefinitionVersion) {
         this.suiteDefinitionVersion = suiteDefinitionVersion;
         return this;
@@ -98,9 +107,11 @@ public class SuiteRunInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunId")
     public String suiteRunId;
+
     public SuiteRunInformation withSuiteRunId(String suiteRunId) {
         this.suiteRunId = suiteRunId;
         return this;
     }
     
+    public SuiteRunInformation(){}
 }

@@ -15,6 +15,7 @@ public class ListDataCellsFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCellsFilters")
     public DataCellsFilter[] dataCellsFilters;
+
     public ListDataCellsFilterResponse withDataCellsFilters(DataCellsFilter[] dataCellsFilters) {
         this.dataCellsFilters = dataCellsFilters;
         return this;
@@ -23,9 +24,11 @@ public class ListDataCellsFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataCellsFilterResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDataCellsFilterResponse(){}
 }

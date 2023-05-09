@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AllocateTransitVirtualInterfaceRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public AllocateTransitVirtualInterfaceRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -16,6 +17,7 @@ public class AllocateTransitVirtualInterfaceRequest {
     
     @JsonProperty("newTransitVirtualInterfaceAllocation")
     public NewTransitVirtualInterfaceAllocation newTransitVirtualInterfaceAllocation;
+
     public AllocateTransitVirtualInterfaceRequest withNewTransitVirtualInterfaceAllocation(NewTransitVirtualInterfaceAllocation newTransitVirtualInterfaceAllocation) {
         this.newTransitVirtualInterfaceAllocation = newTransitVirtualInterfaceAllocation;
         return this;
@@ -23,9 +25,15 @@ public class AllocateTransitVirtualInterfaceRequest {
     
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public AllocateTransitVirtualInterfaceRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
     
+    public AllocateTransitVirtualInterfaceRequest(@JsonProperty("connectionId") String connectionId, @JsonProperty("newTransitVirtualInterfaceAllocation") NewTransitVirtualInterfaceAllocation newTransitVirtualInterfaceAllocation, @JsonProperty("ownerAccount") String ownerAccount) {
+        this.connectionId = connectionId;
+        this.newTransitVirtualInterfaceAllocation = newTransitVirtualInterfaceAllocation;
+        this.ownerAccount = ownerAccount;
+  }
 }

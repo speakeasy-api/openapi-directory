@@ -62,11 +62,9 @@ public class Freebusy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CalendarFreebusyQueryResponse res = new org.openapis.openapi.models.operations.CalendarFreebusyQueryResponse() {{
+        org.openapis.openapi.models.operations.CalendarFreebusyQueryResponse res = new org.openapis.openapi.models.operations.CalendarFreebusyQueryResponse(contentType, httpRes.statusCode()) {{
             freeBusyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

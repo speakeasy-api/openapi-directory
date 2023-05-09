@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateArtifactRawRequest {
@@ -24,6 +25,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public CreateArtifactRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -34,6 +36,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactId")
     public String xRegistryArtifactId;
+
     public CreateArtifactRawRequest withXRegistryArtifactId(String xRegistryArtifactId) {
         this.xRegistryArtifactId = xRegistryArtifactId;
         return this;
@@ -54,6 +57,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
     public String xRegistryArtifactType;
+
     public CreateArtifactRawRequest withXRegistryArtifactType(String xRegistryArtifactType) {
         this.xRegistryArtifactType = xRegistryArtifactType;
         return this;
@@ -64,6 +68,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Content-Hash")
     public String xRegistryContentHash;
+
     public CreateArtifactRawRequest withXRegistryContentHash(String xRegistryContentHash) {
         this.xRegistryContentHash = xRegistryContentHash;
         return this;
@@ -74,6 +79,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description")
     public String xRegistryDescription;
+
     public CreateArtifactRawRequest withXRegistryDescription(String xRegistryDescription) {
         this.xRegistryDescription = xRegistryDescription;
         return this;
@@ -84,6 +90,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Description-Encoded")
     public String xRegistryDescriptionEncoded;
+
     public CreateArtifactRawRequest withXRegistryDescriptionEncoded(String xRegistryDescriptionEncoded) {
         this.xRegistryDescriptionEncoded = xRegistryDescriptionEncoded;
         return this;
@@ -94,6 +101,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Hash-Algorithm")
     public CreateArtifactRawXRegistryHashAlgorithmEnum xRegistryHashAlgorithm;
+
     public CreateArtifactRawRequest withXRegistryHashAlgorithm(CreateArtifactRawXRegistryHashAlgorithmEnum xRegistryHashAlgorithm) {
         this.xRegistryHashAlgorithm = xRegistryHashAlgorithm;
         return this;
@@ -104,6 +112,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name")
     public String xRegistryName;
+
     public CreateArtifactRawRequest withXRegistryName(String xRegistryName) {
         this.xRegistryName = xRegistryName;
         return this;
@@ -114,6 +123,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Name-Encoded")
     public String xRegistryNameEncoded;
+
     public CreateArtifactRawRequest withXRegistryNameEncoded(String xRegistryNameEncoded) {
         this.xRegistryNameEncoded = xRegistryNameEncoded;
         return this;
@@ -126,6 +136,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-Version")
     public String xRegistryVersion;
+
     public CreateArtifactRawRequest withXRegistryVersion(String xRegistryVersion) {
         this.xRegistryVersion = xRegistryVersion;
         return this;
@@ -136,6 +147,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=canonical")
     public Boolean canonical;
+
     public CreateArtifactRawRequest withCanonical(Boolean canonical) {
         this.canonical = canonical;
         return this;
@@ -146,6 +158,7 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public CreateArtifactRawRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -156,9 +169,14 @@ public class CreateArtifactRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifExists")
     public org.openapis.openapi.models.shared.IfExistsEnum ifExists;
+
     public CreateArtifactRawRequest withIfExists(org.openapis.openapi.models.shared.IfExistsEnum ifExists) {
         this.ifExists = ifExists;
         return this;
     }
     
+    public CreateArtifactRawRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("groupId") String groupId) {
+        this.requestBody = requestBody;
+        this.groupId = groupId;
+  }
 }

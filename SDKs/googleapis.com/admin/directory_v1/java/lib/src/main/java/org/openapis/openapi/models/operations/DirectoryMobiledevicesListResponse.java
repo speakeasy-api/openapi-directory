@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryMobiledevicesListResponse {
     
     public String contentType;
+
     public DirectoryMobiledevicesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryMobiledevicesListResponse {
      */
     
     public org.openapis.openapi.models.shared.MobileDevices mobileDevices;
+
     public DirectoryMobiledevicesListResponse withMobileDevices(org.openapis.openapi.models.shared.MobileDevices mobileDevices) {
         this.mobileDevices = mobileDevices;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryMobiledevicesListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryMobiledevicesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryMobiledevicesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryMobiledevicesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryMobiledevicesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

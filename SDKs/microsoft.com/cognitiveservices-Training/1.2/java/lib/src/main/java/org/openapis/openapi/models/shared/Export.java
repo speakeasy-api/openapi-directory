@@ -15,6 +15,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DownloadUri")
     public String downloadUri;
+
     public Export withDownloadUri(String downloadUri) {
         this.downloadUri = downloadUri;
         return this;
@@ -23,6 +24,7 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public ExportPlatformEnum platform;
+
     public Export withPlatform(ExportPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -31,9 +33,11 @@ public class Export {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ExportStatusEnum status;
+
     public Export withStatus(ExportStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Export(){}
 }

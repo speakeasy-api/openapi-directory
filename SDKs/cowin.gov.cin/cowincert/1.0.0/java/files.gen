@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatePdfSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetCertificatePdfResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/CertificateRequest.java
+docs/sdk/README.md
+docs/certificate/README.md
 USAGE.md

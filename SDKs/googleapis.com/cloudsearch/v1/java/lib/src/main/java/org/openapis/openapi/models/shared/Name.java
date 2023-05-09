@@ -18,9 +18,11 @@ public class Name {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Name withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public Name(){}
 }

@@ -18,6 +18,7 @@ public class ClusterAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingLimits")
     public AutoscalingLimits autoscalingLimits;
+
     public ClusterAutoscalingConfig withAutoscalingLimits(AutoscalingLimits autoscalingLimits) {
         this.autoscalingLimits = autoscalingLimits;
         return this;
@@ -29,9 +30,11 @@ public class ClusterAutoscalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalingTargets")
     public AutoscalingTargets autoscalingTargets;
+
     public ClusterAutoscalingConfig withAutoscalingTargets(AutoscalingTargets autoscalingTargets) {
         this.autoscalingTargets = autoscalingTargets;
         return this;
     }
     
+    public ClusterAutoscalingConfig(){}
 }

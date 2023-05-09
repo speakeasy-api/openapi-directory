@@ -15,6 +15,7 @@ public class GetCommercialCreditCardsErrorObject {
      */
     @JsonProperty("description")
     public String description;
+
     public GetCommercialCreditCardsErrorObject withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetCommercialCreditCardsErrorObject {
      */
     @JsonProperty("status")
     public String status;
+
     public GetCommercialCreditCardsErrorObject withStatus(String status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class GetCommercialCreditCardsErrorObject {
      */
     @JsonProperty("title")
     public String title;
+
     public GetCommercialCreditCardsErrorObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetCommercialCreditCardsErrorObject(@JsonProperty("description") String description, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

@@ -15,6 +15,7 @@ public class ListPadsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ListPadsOfAuthorUsingPOST200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class ListPadsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ListPadsOfAuthorUsingPOST200ApplicationJSONData data;
+
     public ListPadsOfAuthorUsingPOST200ApplicationJSON withData(ListPadsOfAuthorUsingPOST200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class ListPadsOfAuthorUsingPOST200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ListPadsOfAuthorUsingPOST200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ListPadsOfAuthorUsingPOST200ApplicationJSON(){}
 }

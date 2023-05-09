@@ -15,6 +15,7 @@ public class StreamConfigurationSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxBackupsToRetain")
     public Long maxBackupsToRetain;
+
     public StreamConfigurationSessionBackup withMaxBackupsToRetain(Long maxBackupsToRetain) {
         this.maxBackupsToRetain = maxBackupsToRetain;
         return this;
@@ -23,9 +24,11 @@ public class StreamConfigurationSessionBackup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public SessionBackupModeEnum mode;
+
     public StreamConfigurationSessionBackup withMode(SessionBackupModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public StreamConfigurationSessionBackup(){}
 }

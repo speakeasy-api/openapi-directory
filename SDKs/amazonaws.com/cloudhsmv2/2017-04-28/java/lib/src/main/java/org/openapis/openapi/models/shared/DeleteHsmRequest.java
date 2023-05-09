@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteHsmRequest {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public DeleteHsmRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniId")
     public String eniId;
+
     public DeleteHsmRequest withEniId(String eniId) {
         this.eniId = eniId;
         return this;
@@ -27,6 +29,7 @@ public class DeleteHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EniIp")
     public String eniIp;
+
     public DeleteHsmRequest withEniIp(String eniIp) {
         this.eniIp = eniIp;
         return this;
@@ -35,9 +38,13 @@ public class DeleteHsmRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmId")
     public String hsmId;
+
     public DeleteHsmRequest withHsmId(String hsmId) {
         this.hsmId = hsmId;
         return this;
     }
     
+    public DeleteHsmRequest(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

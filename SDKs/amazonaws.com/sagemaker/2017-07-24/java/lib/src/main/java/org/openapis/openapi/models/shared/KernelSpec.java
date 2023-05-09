@@ -15,6 +15,7 @@ public class KernelSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public KernelSpec withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -22,9 +23,13 @@ public class KernelSpec {
     
     @JsonProperty("Name")
     public String name;
+
     public KernelSpec withName(String name) {
         this.name = name;
         return this;
     }
     
+    public KernelSpec(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCaseEventConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public PutCaseEventConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutCaseEventConfigurationResponse {
     
     
     public String contentType;
+
     public PutCaseEventConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public PutCaseEventConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public java.util.Map<String, Object> putCaseEventConfigurationResponse;
+
     public PutCaseEventConfigurationResponse withPutCaseEventConfigurationResponse(java.util.Map<String, Object> putCaseEventConfigurationResponse) {
         this.putCaseEventConfigurationResponse = putCaseEventConfigurationResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutCaseEventConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutCaseEventConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutCaseEventConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCaseEventConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutCaseEventConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public PutCaseEventConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class PutCaseEventConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutCaseEventConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutCaseEventConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

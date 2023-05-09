@@ -15,6 +15,7 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostServersIdActionsCreateImage201ApplicationJSONImageCreatedFrom(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

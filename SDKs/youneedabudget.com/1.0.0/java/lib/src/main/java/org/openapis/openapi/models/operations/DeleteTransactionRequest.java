@@ -4,14 +4,16 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteTransactionRequest {
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public DeleteTransactionRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -22,9 +24,14 @@ public class DeleteTransactionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
     public String transactionId;
+
     public DeleteTransactionRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DeleteTransactionRequest(@JsonProperty("budget_id") String budgetId, @JsonProperty("transaction_id") String transactionId) {
+        this.budgetId = budgetId;
+        this.transactionId = transactionId;
+  }
 }

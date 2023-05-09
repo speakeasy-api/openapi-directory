@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixDistanceRequestBody {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixDistanceRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -21,6 +22,7 @@ public class PostAssetsCorrelationMatrixDistanceRequestBody {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixDistanceRequestBody withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -32,6 +34,7 @@ public class PostAssetsCorrelationMatrixDistanceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distanceMetric")
     public PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum distanceMetric;
+
     public PostAssetsCorrelationMatrixDistanceRequestBody withDistanceMetric(PostAssetsCorrelationMatrixDistanceRequestBodyDistanceMetricEnum distanceMetric) {
         this.distanceMetric = distanceMetric;
         return this;
@@ -42,9 +45,15 @@ public class PostAssetsCorrelationMatrixDistanceRequestBody {
      */
     @JsonProperty("referenceCorrelationMatrix")
     public Double[][] referenceCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixDistanceRequestBody withReferenceCorrelationMatrix(Double[][] referenceCorrelationMatrix) {
         this.referenceCorrelationMatrix = referenceCorrelationMatrix;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixDistanceRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("referenceCorrelationMatrix") Double[][] referenceCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.referenceCorrelationMatrix = referenceCorrelationMatrix;
+  }
 }

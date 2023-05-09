@@ -18,6 +18,7 @@ public class FindingTypeStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingCount")
     public Integer findingCount;
+
     public FindingTypeStats withFindingCount(Integer findingCount) {
         this.findingCount = findingCount;
         return this;
@@ -29,9 +30,11 @@ public class FindingTypeStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingType")
     public String findingType;
+
     public FindingTypeStats withFindingType(String findingType) {
         this.findingType = findingType;
         return this;
     }
     
+    public FindingTypeStats(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubscriberEmailResponse {
     @JsonProperty("email")
     public String email;
+
     public SubscriberEmailResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -16,9 +17,14 @@ public class SubscriberEmailResponse {
     
     @JsonProperty("vid")
     public Integer vid;
+
     public SubscriberEmailResponse withVid(Integer vid) {
         this.vid = vid;
         return this;
     }
     
+    public SubscriberEmailResponse(@JsonProperty("email") String email, @JsonProperty("vid") Integer vid) {
+        this.email = email;
+        this.vid = vid;
+  }
 }

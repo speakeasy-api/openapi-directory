@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStylesPathRequest {
@@ -12,9 +13,13 @@ public class DeleteStylesPathRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=path")
     public String path;
+
     public DeleteStylesPathRequest withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public DeleteStylesPathRequest(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

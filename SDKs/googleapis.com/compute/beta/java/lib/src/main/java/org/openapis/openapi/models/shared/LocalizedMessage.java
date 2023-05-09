@@ -18,6 +18,7 @@ public class LocalizedMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public LocalizedMessage withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -29,9 +30,11 @@ public class LocalizedMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public LocalizedMessage withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public LocalizedMessage(){}
 }

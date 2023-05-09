@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateLabelingJobResponse {
     @JsonProperty("LabelingJobArn")
     public String labelingJobArn;
+
     public CreateLabelingJobResponse withLabelingJobArn(String labelingJobArn) {
         this.labelingJobArn = labelingJobArn;
         return this;
     }
     
+    public CreateLabelingJobResponse(@JsonProperty("LabelingJobArn") String labelingJobArn) {
+        this.labelingJobArn = labelingJobArn;
+  }
 }

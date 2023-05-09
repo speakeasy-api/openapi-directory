@@ -18,6 +18,7 @@ public class GsiPrediction200ApplicationJSONMatrixH0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_1")
     public String avg1;
+
     public GsiPrediction200ApplicationJSONMatrixH0 withAvg1(String avg1) {
         this.avg1 = avg1;
         return this;
@@ -29,6 +30,7 @@ public class GsiPrediction200ApplicationJSONMatrixH0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_2")
     public String avg2;
+
     public GsiPrediction200ApplicationJSONMatrixH0 withAvg2(String avg2) {
         this.avg2 = avg2;
         return this;
@@ -40,9 +42,11 @@ public class GsiPrediction200ApplicationJSONMatrixH0 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_3")
     public String avg3;
+
     public GsiPrediction200ApplicationJSONMatrixH0 withAvg3(String avg3) {
         this.avg3 = avg3;
         return this;
     }
     
+    public GsiPrediction200ApplicationJSONMatrixH0(){}
 }

@@ -15,6 +15,7 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStatus")
     public LaunchStatusEnum launchStatus;
+
     public ParticipatingServer withLaunchStatus(LaunchStatusEnum launchStatus) {
         this.launchStatus = launchStatus;
         return this;
@@ -23,6 +24,7 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchedEc2InstanceID")
     public String launchedEc2InstanceID;
+
     public ParticipatingServer withLaunchedEc2InstanceID(String launchedEc2InstanceID) {
         this.launchedEc2InstanceID = launchedEc2InstanceID;
         return this;
@@ -31,6 +33,7 @@ public class ParticipatingServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActionsStatus")
     public PostLaunchActionsStatus postLaunchActionsStatus;
+
     public ParticipatingServer withPostLaunchActionsStatus(PostLaunchActionsStatus postLaunchActionsStatus) {
         this.postLaunchActionsStatus = postLaunchActionsStatus;
         return this;
@@ -38,9 +41,13 @@ public class ParticipatingServer {
     
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public ParticipatingServer withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public ParticipatingServer(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

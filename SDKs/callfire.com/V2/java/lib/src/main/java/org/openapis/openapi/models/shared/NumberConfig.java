@@ -18,6 +18,7 @@ public class NumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callTrackingConfig")
     public CallTrackingConfig callTrackingConfig;
+
     public NumberConfig withCallTrackingConfig(CallTrackingConfig callTrackingConfig) {
         this.callTrackingConfig = callTrackingConfig;
         return this;
@@ -29,6 +30,7 @@ public class NumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configType")
     public NumberConfigConfigTypeEnum configType;
+
     public NumberConfig withConfigType(NumberConfigConfigTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -40,6 +42,7 @@ public class NumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ivrInboundConfig")
     public IvrInboundConfig ivrInboundConfig;
+
     public NumberConfig withIvrInboundConfig(IvrInboundConfig ivrInboundConfig) {
         this.ivrInboundConfig = ivrInboundConfig;
         return this;
@@ -51,6 +54,7 @@ public class NumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public NumberConfig withNumber(String number) {
         this.number = number;
         return this;
@@ -62,9 +66,11 @@ public class NumberConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textInboundConfig")
     public TextInboundConfig textInboundConfig;
+
     public NumberConfig withTextInboundConfig(TextInboundConfig textInboundConfig) {
         this.textInboundConfig = textInboundConfig;
         return this;
     }
     
+    public NumberConfig(){}
 }

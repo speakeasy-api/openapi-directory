@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDetachLoadBalancerTargetGroupsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDetachLoadBalancerTargetGroupsActionEnum action;
+
     public GETDetachLoadBalancerTargetGroupsRequest withAction(GETDetachLoadBalancerTargetGroupsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoScalingGroupName")
     public String autoScalingGroupName;
+
     public GETDetachLoadBalancerTargetGroupsRequest withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -29,6 +32,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TargetGroupARNs")
     public String[] targetGroupARNs;
+
     public GETDetachLoadBalancerTargetGroupsRequest withTargetGroupARNs(String[] targetGroupARNs) {
         this.targetGroupARNs = targetGroupARNs;
         return this;
@@ -36,6 +40,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDetachLoadBalancerTargetGroupsVersionEnum version;
+
     public GETDetachLoadBalancerTargetGroupsRequest withVersion(GETDetachLoadBalancerTargetGroupsVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETDetachLoadBalancerTargetGroupsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDetachLoadBalancerTargetGroupsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDetachLoadBalancerTargetGroupsRequest(@JsonProperty("Action") GETDetachLoadBalancerTargetGroupsActionEnum action, @JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("TargetGroupARNs") String[] targetGroupARNs, @JsonProperty("Version") GETDetachLoadBalancerTargetGroupsVersionEnum version) {
+        this.action = action;
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.targetGroupARNs = targetGroupARNs;
+        this.version = version;
+  }
 }

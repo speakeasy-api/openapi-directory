@@ -18,9 +18,11 @@ public class CustomBiddingScriptInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("script")
     public CustomBiddingScriptRef script;
+
     public CustomBiddingScriptInput withScript(CustomBiddingScriptRef script) {
         this.script = script;
         return this;
     }
     
+    public CustomBiddingScriptInput(){}
 }

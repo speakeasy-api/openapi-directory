@@ -18,6 +18,7 @@ public class GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogItems")
     public GoogleCloudRecommendationengineV1beta1CatalogItem[] catalogItems;
+
     public GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse withCatalogItems(GoogleCloudRecommendationengineV1beta1CatalogItem[] catalogItems) {
         this.catalogItems = catalogItems;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse(){}
 }

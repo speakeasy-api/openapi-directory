@@ -47,6 +47,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteLicenseResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListLicensesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLicensesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLicenseSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLicenseRequestBody.java
@@ -61,6 +62,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteLicenseTemplateRe
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseTemplateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseTemplateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListLicenseTemplatesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLicenseTemplatesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLicenseTemplateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateLicenseTemplateRequestBody.java
@@ -75,6 +77,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteLicenseeResponse.
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseeSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseeRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetLicenseeResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListLicenseesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListLicenseesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/TransferLicensesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/TransferLicensesRequestBody.java
@@ -92,6 +95,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/ValidateLicenseeRespons
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentMethodSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentMethodRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPaymentMethodResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListPaymentMethodsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListPaymentMethodsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePaymentMethodSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePaymentMethodRequestBody.java
@@ -104,6 +108,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateProductResponse.j
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteProductSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteProductRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteProductResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListProductsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListProductsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProductNumberSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ProductNumberRequest.java
@@ -124,6 +129,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteProductModuleResp
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductModuleSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductModuleRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetProductModuleResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListProductModulesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListProductModulesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateProductModuleSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateProductModuleRequestBodyLicenseTemplateEnum.java
@@ -144,6 +150,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/DeleteTokenResponse.jav
 lib/src/main/java/org/openapis/openapi/models/operations/GetTokenSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTokenResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTokensSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTokensResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTransactionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateTransactionRequestBodySourceEnum.java
@@ -153,6 +160,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/CreateTransactionRespon
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetTransactionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListTransactionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionRequestBodySourceEnum.java
@@ -160,7 +168,19 @@ lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionReques
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdateTransactionResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/LicenseTypesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseTypesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/LicensingModelsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicensingModelsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Netlicensing.java
+docs/sdk/README.md
+docs/license/README.md
+docs/licensetemplate/README.md
+docs/licensee/README.md
+docs/paymentmethod/README.md
+docs/product/README.md
+docs/productmodule/README.md
+docs/token/README.md
+docs/transaction/README.md
+docs/utility/README.md
 USAGE.md

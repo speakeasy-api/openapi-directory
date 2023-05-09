@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSystemTemplateRevisionsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetSystemTemplateRevisionsRequest getSystemTemplateRevisionsRequest;
+
     public GetSystemTemplateRevisionsRequest withGetSystemTemplateRevisionsRequest(org.openapis.openapi.models.shared.GetSystemTemplateRevisionsRequest getSystemTemplateRevisionsRequest) {
         this.getSystemTemplateRevisionsRequest = getSystemTemplateRevisionsRequest;
         return this;
@@ -16,6 +18,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetSystemTemplateRevisionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetSystemTemplateRevisionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetSystemTemplateRevisionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetSystemTemplateRevisionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetSystemTemplateRevisionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetSystemTemplateRevisionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetSystemTemplateRevisionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,6 +74,7 @@ public class GetSystemTemplateRevisionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public GetSystemTemplateRevisionsXAmzTargetEnum xAmzTarget;
+
     public GetSystemTemplateRevisionsRequest withXAmzTarget(GetSystemTemplateRevisionsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
@@ -75,6 +85,7 @@ public class GetSystemTemplateRevisionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public GetSystemTemplateRevisionsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -85,9 +96,14 @@ public class GetSystemTemplateRevisionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public GetSystemTemplateRevisionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetSystemTemplateRevisionsRequest(@JsonProperty("GetSystemTemplateRevisionsRequest") org.openapis.openapi.models.shared.GetSystemTemplateRevisionsRequest getSystemTemplateRevisionsRequest, @JsonProperty("X-Amz-Target") GetSystemTemplateRevisionsXAmzTargetEnum xAmzTarget) {
+        this.getSystemTemplateRevisionsRequest = getSystemTemplateRevisionsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

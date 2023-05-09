@@ -18,6 +18,7 @@ public class MembershipStateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public MembershipStateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class MembershipStateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public MembershipStateInput withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public MembershipStateInput(){}
 }

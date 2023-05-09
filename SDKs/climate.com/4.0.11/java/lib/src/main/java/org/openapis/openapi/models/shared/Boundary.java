@@ -15,6 +15,7 @@ public class Boundary {
      */
     @JsonProperty("geometry")
     public Geometry geometry;
+
     public Boundary withGeometry(Geometry geometry) {
         this.geometry = geometry;
         return this;
@@ -22,6 +23,7 @@ public class Boundary {
     
     @JsonProperty("id")
     public String id;
+
     public Boundary withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Boundary {
      */
     @JsonProperty("properties")
     public BoundaryProperties properties;
+
     public Boundary withProperties(BoundaryProperties properties) {
         this.properties = properties;
         return this;
@@ -39,9 +42,16 @@ public class Boundary {
     
     @JsonProperty("type")
     public BoundaryTypeEnum type;
+
     public Boundary withType(BoundaryTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Boundary(@JsonProperty("geometry") Geometry geometry, @JsonProperty("id") String id, @JsonProperty("properties") BoundaryProperties properties, @JsonProperty("type") BoundaryTypeEnum type) {
+        this.geometry = geometry;
+        this.id = id;
+        this.properties = properties;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReadJobResponse {
@@ -12,6 +13,7 @@ public class ReadJobResponse {
      */
     
     public Object accessDeniedException;
+
     public ReadJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ReadJobResponse {
     
     
     public String contentType;
+
     public ReadJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ReadJobResponse {
      */
     
     public Object incompatibleVersionException;
+
     public ReadJobResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -39,6 +43,7 @@ public class ReadJobResponse {
      */
     
     public Object internalServiceException;
+
     public ReadJobResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ReadJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ReadJobResponse readJobResponse;
+
     public ReadJobResponse withReadJobResponse(org.openapis.openapi.models.shared.ReadJobResponse readJobResponse) {
         this.readJobResponse = readJobResponse;
         return this;
@@ -59,6 +65,7 @@ public class ReadJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReadJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ReadJobResponse {
     
     
     public Integer statusCode;
+
     public ReadJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ReadJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReadJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ReadJobResponse {
      */
     
     public Object validationException;
+
     public ReadJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ReadJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

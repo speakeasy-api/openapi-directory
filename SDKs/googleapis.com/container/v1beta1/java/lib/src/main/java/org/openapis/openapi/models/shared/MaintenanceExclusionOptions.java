@@ -18,9 +18,11 @@ public class MaintenanceExclusionOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public MaintenanceExclusionOptionsScopeEnum scope;
+
     public MaintenanceExclusionOptions withScope(MaintenanceExclusionOptionsScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public MaintenanceExclusionOptions(){}
 }

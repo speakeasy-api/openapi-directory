@@ -20,6 +20,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public String algorithm;
+
     public Metrics withAlgorithm(String algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -33,6 +34,7 @@ public class Metrics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Metrics withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -44,6 +46,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Metrics withId(String id) {
         this.id = id;
         return this;
@@ -52,6 +55,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Metrics withLanguage(String language) {
         this.language = language;
         return this;
@@ -63,6 +67,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricsData")
     public java.util.Map<String, Object> metricsData;
+
     public Metrics withMetricsData(java.util.Map<String, Object> metricsData) {
         this.metricsData = metricsData;
         return this;
@@ -71,9 +76,11 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public Metrics withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public Metrics(){}
 }

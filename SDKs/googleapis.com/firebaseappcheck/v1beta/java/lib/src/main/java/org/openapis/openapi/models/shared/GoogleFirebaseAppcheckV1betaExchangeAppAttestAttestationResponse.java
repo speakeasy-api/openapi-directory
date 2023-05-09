@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appCheckToken")
     public GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse withAppCheckToken(GoogleFirebaseAppcheckV1betaAppCheckToken appCheckToken) {
         this.appCheckToken = appCheckToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifact")
     public String artifact;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse withArtifact(String artifact) {
         this.artifact = artifact;
         return this;
@@ -40,9 +42,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attestationToken")
     public GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken;
+
     public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse withAttestationToken(GoogleFirebaseAppcheckV1betaAttestationTokenResponse attestationToken) {
         this.attestationToken = attestationToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeAppAttestAttestationResponse(){}
 }

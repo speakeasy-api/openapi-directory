@@ -15,6 +15,7 @@ public class NSXControllerDataCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controller_password")
     public String controllerPassword;
+
     public NSXControllerDataCollection withControllerPassword(String controllerPassword) {
         this.controllerPassword = controllerPassword;
         return this;
@@ -23,9 +24,11 @@ public class NSXControllerDataCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NSXControllerDataCollection withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public NSXControllerDataCollection(){}
 }

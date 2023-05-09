@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImageRecipePolicyResponse {
@@ -12,6 +13,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetImageRecipePolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetImageRecipePolicyResponse {
     
     
     public String contentType;
+
     public GetImageRecipePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object forbiddenException;
+
     public GetImageRecipePolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImageRecipePolicyResponse getImageRecipePolicyResponse;
+
     public GetImageRecipePolicyResponse withGetImageRecipePolicyResponse(org.openapis.openapi.models.shared.GetImageRecipePolicyResponse getImageRecipePolicyResponse) {
         this.getImageRecipePolicyResponse = getImageRecipePolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public GetImageRecipePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImageRecipePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object serviceException;
+
     public GetImageRecipePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetImageRecipePolicyResponse {
     
     
     public Integer statusCode;
+
     public GetImageRecipePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetImageRecipePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImageRecipePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetImageRecipePolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetImageRecipePolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetImageRecipePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

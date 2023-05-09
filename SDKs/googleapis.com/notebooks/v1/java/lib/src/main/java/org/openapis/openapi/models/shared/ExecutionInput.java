@@ -18,6 +18,7 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExecutionInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionTemplate")
     public ExecutionTemplate executionTemplate;
+
     public ExecutionInput withExecutionTemplate(ExecutionTemplate executionTemplate) {
         this.executionTemplate = executionTemplate;
         return this;
@@ -40,9 +42,11 @@ public class ExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputNotebookFile")
     public String outputNotebookFile;
+
     public ExecutionInput withOutputNotebookFile(String outputNotebookFile) {
         this.outputNotebookFile = outputNotebookFile;
         return this;
     }
     
+    public ExecutionInput(){}
 }

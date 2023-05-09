@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail {
     
     public String description;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public Double diskImageSize;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withDiskImageSize(Double diskImageSize) {
         this.diskImageSize = diskImageSize;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public Boolean encrypted;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -33,6 +36,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String format;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +44,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String kmsKeyId;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String progress;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -54,6 +60,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String snapshotId;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -61,6 +68,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String status;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withStatus(String status) {
         this.status = status;
         return this;
@@ -68,6 +76,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String statusMessage;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -75,6 +84,7 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public String url;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withUrl(String url) {
         this.url = url;
         return this;
@@ -82,9 +92,11 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDet
     
     
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetailUserBucket userBucket;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail withUserBucket(DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetailUserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public DescribeImportSnapshotTasksResultImportSnapshotTasksSnapshotTaskDetail(){}
 }

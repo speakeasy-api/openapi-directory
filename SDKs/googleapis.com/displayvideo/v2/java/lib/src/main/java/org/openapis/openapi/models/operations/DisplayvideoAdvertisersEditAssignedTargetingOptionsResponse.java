@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BulkEditAdvertiserAssignedTargetingOptionsResponse bulkEditAdvertiserAssignedTargetingOptionsResponse;
+
     public DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse withBulkEditAdvertiserAssignedTargetingOptionsResponse(org.openapis.openapi.models.shared.BulkEditAdvertiserAssignedTargetingOptionsResponse bulkEditAdvertiserAssignedTargetingOptionsResponse) {
         this.bulkEditAdvertiserAssignedTargetingOptionsResponse = bulkEditAdvertiserAssignedTargetingOptionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse {
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse {
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersEditAssignedTargetingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

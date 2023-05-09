@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteDatasetRequest {
@@ -12,6 +13,7 @@ public class DeleteDatasetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
     public String datasetName;
+
     public DeleteDatasetRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDatasetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
     public String identityId;
+
     public DeleteDatasetRequest withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -32,6 +35,7 @@ public class DeleteDatasetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
     public String identityPoolId;
+
     public DeleteDatasetRequest withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteDatasetRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteDatasetRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteDatasetRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteDatasetRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteDatasetRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteDatasetRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,15 @@ public class DeleteDatasetRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteDatasetRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DeleteDatasetRequest(@JsonProperty("DatasetName") String datasetName, @JsonProperty("IdentityId") String identityId, @JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.datasetName = datasetName;
+        this.identityId = identityId;
+        this.identityPoolId = identityPoolId;
+  }
 }

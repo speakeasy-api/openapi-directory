@@ -18,9 +18,11 @@ public class SasPortalGenerateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public SasPortalGenerateSecretResponse withSecret(String secret) {
         this.secret = secret;
         return this;
     }
     
+    public SasPortalGenerateSecretResponse(){}
 }

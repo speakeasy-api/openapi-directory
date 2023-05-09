@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidatesTotalsByOfficeByPartyRequest {
@@ -13,6 +14,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -37,6 +40,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_year")
     public Integer[] electionYear;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withElectionYear(Integer[] electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -50,6 +54,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active_candidate")
     public Boolean isActiveCandidate;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withIsActiveCandidate(Boolean isActiveCandidate) {
         this.isActiveCandidate = isActiveCandidate;
         return this;
@@ -60,6 +65,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=office")
     public GetCandidatesTotalsByOfficeByPartyOfficeEnum office;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withOffice(GetCandidatesTotalsByOfficeByPartyOfficeEnum office) {
         this.office = office;
         return this;
@@ -70,6 +76,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -80,6 +87,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -91,6 +99,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -101,6 +110,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -111,6 +121,7 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -121,9 +132,13 @@ public class GetCandidatesTotalsByOfficeByPartyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidatesTotalsByOfficeByPartyRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCandidatesTotalsByOfficeByPartyRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

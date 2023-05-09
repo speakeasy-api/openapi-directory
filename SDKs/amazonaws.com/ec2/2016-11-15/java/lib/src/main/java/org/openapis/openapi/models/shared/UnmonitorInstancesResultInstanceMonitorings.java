@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UnmonitorInstancesResultInstanceMonitorings {
     
     public String instanceId;
+
     public UnmonitorInstancesResultInstanceMonitorings withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,9 +20,11 @@ public class UnmonitorInstancesResultInstanceMonitorings {
     
     
     public UnmonitorInstancesResultInstanceMonitoringsMonitoring monitoring;
+
     public UnmonitorInstancesResultInstanceMonitorings withMonitoring(UnmonitorInstancesResultInstanceMonitoringsMonitoring monitoring) {
         this.monitoring = monitoring;
         return this;
     }
     
+    public UnmonitorInstancesResultInstanceMonitorings(){}
 }

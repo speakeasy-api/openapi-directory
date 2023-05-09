@@ -12,9 +12,13 @@ public class StatusRequestBody {
      */
     @JsonProperty("endpoint")
     public String endpoint;
+
     public StatusRequestBody withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public StatusRequestBody(@JsonProperty("endpoint") String endpoint) {
+        this.endpoint = endpoint;
+  }
 }

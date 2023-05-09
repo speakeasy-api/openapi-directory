@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectorLogo {
     @JsonProperty("id")
     public Long id;
+
     public ConnectorLogo withId(Long id) {
         this.id = id;
         return this;
@@ -24,6 +25,7 @@ public class ConnectorLogo {
      */
     @JsonProperty("id_connector")
     public Long idConnector;
+
     public ConnectorLogo withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
@@ -34,6 +36,7 @@ public class ConnectorLogo {
      */
     @JsonProperty("id_file")
     public Long idFile;
+
     public ConnectorLogo withIdFile(Long idFile) {
         this.idFile = idFile;
         return this;
@@ -45,9 +48,15 @@ public class ConnectorLogo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ConnectorLogo withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ConnectorLogo(@JsonProperty("id") Long id, @JsonProperty("id_connector") Long idConnector, @JsonProperty("id_file") Long idFile) {
+        this.id = id;
+        this.idConnector = idConnector;
+        this.idFile = idFile;
+  }
 }

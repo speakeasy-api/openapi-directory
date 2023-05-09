@@ -23,6 +23,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public GetMandateMandate withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -34,6 +35,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public GetMandateMandateCurrency currency;
+
     public GetMandateMandate withCurrency(GetMandateMandateCurrency currency) {
         this.currency = currency;
         return this;
@@ -47,6 +49,7 @@ public class GetMandateMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCancelled")
     public OffsetDateTime dateCancelled;
+
     public GetMandateMandate withDateCancelled(OffsetDateTime dateCancelled) {
         this.dateCancelled = dateCancelled;
         return this;
@@ -60,6 +63,7 @@ public class GetMandateMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCompleted")
     public OffsetDateTime dateCompleted;
+
     public GetMandateMandate withDateCompleted(OffsetDateTime dateCompleted) {
         this.dateCompleted = dateCompleted;
         return this;
@@ -73,6 +77,7 @@ public class GetMandateMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateCreated")
     public OffsetDateTime dateCreated;
+
     public GetMandateMandate withDateCreated(OffsetDateTime dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -84,6 +89,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fireRejectionReason")
     public GetMandateMandateFireRejectionReasonEnum fireRejectionReason;
+
     public GetMandateMandate withFireRejectionReason(GetMandateMandateFireRejectionReasonEnum fireRejectionReason) {
         this.fireRejectionReason = fireRejectionReason;
         return this;
@@ -97,6 +103,7 @@ public class GetMandateMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GetMandateMandate withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -108,6 +115,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestDirectDebitAmount")
     public Long latestDirectDebitAmount;
+
     public GetMandateMandate withLatestDirectDebitAmount(Long latestDirectDebitAmount) {
         this.latestDirectDebitAmount = latestDirectDebitAmount;
         return this;
@@ -121,6 +129,7 @@ public class GetMandateMandate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("latestDirectDebitDate")
     public OffsetDateTime latestDirectDebitDate;
+
     public GetMandateMandate withLatestDirectDebitDate(OffsetDateTime latestDirectDebitDate) {
         this.latestDirectDebitDate = latestDirectDebitDate;
         return this;
@@ -132,6 +141,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateReference")
     public String mandateReference;
+
     public GetMandateMandate withMandateReference(String mandateReference) {
         this.mandateReference = mandateReference;
         return this;
@@ -143,6 +153,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandateUuid")
     public String mandateUuid;
+
     public GetMandateMandate withMandateUuid(String mandateUuid) {
         this.mandateUuid = mandateUuid;
         return this;
@@ -154,6 +165,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfDirectDebitCollected")
     public Long numberOfDirectDebitCollected;
+
     public GetMandateMandate withNumberOfDirectDebitCollected(Long numberOfDirectDebitCollected) {
         this.numberOfDirectDebitCollected = numberOfDirectDebitCollected;
         return this;
@@ -165,6 +177,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorAlias")
     public String originatorAlias;
+
     public GetMandateMandate withOriginatorAlias(String originatorAlias) {
         this.originatorAlias = originatorAlias;
         return this;
@@ -176,6 +189,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlLarge")
     public String originatorLogoUrlLarge;
+
     public GetMandateMandate withOriginatorLogoUrlLarge(String originatorLogoUrlLarge) {
         this.originatorLogoUrlLarge = originatorLogoUrlLarge;
         return this;
@@ -187,6 +201,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorLogoUrlSmall")
     public String originatorLogoUrlSmall;
+
     public GetMandateMandate withOriginatorLogoUrlSmall(String originatorLogoUrlSmall) {
         this.originatorLogoUrlSmall = originatorLogoUrlSmall;
         return this;
@@ -198,6 +213,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorName")
     public String originatorName;
+
     public GetMandateMandate withOriginatorName(String originatorName) {
         this.originatorName = originatorName;
         return this;
@@ -209,6 +225,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originatorReference")
     public String originatorReference;
+
     public GetMandateMandate withOriginatorReference(String originatorReference) {
         this.originatorReference = originatorReference;
         return this;
@@ -220,6 +237,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeCancelReason")
     public String schemeCancelReason;
+
     public GetMandateMandate withSchemeCancelReason(String schemeCancelReason) {
         this.schemeCancelReason = schemeCancelReason;
         return this;
@@ -231,6 +249,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemeCancelReasonCode")
     public String schemeCancelReasonCode;
+
     public GetMandateMandate withSchemeCancelReasonCode(String schemeCancelReasonCode) {
         this.schemeCancelReasonCode = schemeCancelReasonCode;
         return this;
@@ -257,6 +276,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetMandateMandateStatusEnum status;
+
     public GetMandateMandate withStatus(GetMandateMandateStatusEnum status) {
         this.status = status;
         return this;
@@ -268,6 +288,7 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIcan")
     public Long targetIcan;
+
     public GetMandateMandate withTargetIcan(Long targetIcan) {
         this.targetIcan = targetIcan;
         return this;
@@ -279,9 +300,11 @@ public class GetMandateMandate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueOfDirectDebitCollected")
     public Long valueOfDirectDebitCollected;
+
     public GetMandateMandate withValueOfDirectDebitCollected(Long valueOfDirectDebitCollected) {
         this.valueOfDirectDebitCollected = valueOfDirectDebitCollected;
         return this;
     }
     
+    public GetMandateMandate(){}
 }

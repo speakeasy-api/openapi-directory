@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTestsResponse {
@@ -12,6 +13,7 @@ public class ListTestsResponse {
      */
     
     public Object argumentException;
+
     public ListTestsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListTestsResponse {
     
     
     public String contentType;
+
     public ListTestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTestsResponse {
      */
     
     public Object limitExceededException;
+
     public ListTestsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListTestsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTestsResult listTestsResult;
+
     public ListTestsResponse withListTestsResult(org.openapis.openapi.models.shared.ListTestsResult listTestsResult) {
         this.listTestsResult = listTestsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListTestsResponse {
      */
     
     public Object notFoundException;
+
     public ListTestsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListTestsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListTestsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListTestsResponse {
     
     
     public Integer statusCode;
+
     public ListTestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListTestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

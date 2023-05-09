@@ -58,11 +58,9 @@ public class MachineTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             machineTypeAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class MachineTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesGetResponse(contentType, httpRes.statusCode()) {{
             machineType = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class MachineTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeMachineTypesListResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeMachineTypesListResponse res = new org.openapis.openapi.models.operations.ComputeMachineTypesListResponse(contentType, httpRes.statusCode()) {{
             machineTypeList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

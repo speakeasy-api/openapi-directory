@@ -15,9 +15,11 @@ public class AwsElbLoadBalancerConnectionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleTimeout")
     public Long idleTimeout;
+
     public AwsElbLoadBalancerConnectionSettings withIdleTimeout(Long idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
     
+    public AwsElbLoadBalancerConnectionSettings(){}
 }

@@ -15,9 +15,11 @@ public class UpdateDataRepositoryAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Association")
     public DataRepositoryAssociation association;
+
     public UpdateDataRepositoryAssociationResponse withAssociation(DataRepositoryAssociation association) {
         this.association = association;
         return this;
     }
     
+    public UpdateDataRepositoryAssociationResponse(){}
 }

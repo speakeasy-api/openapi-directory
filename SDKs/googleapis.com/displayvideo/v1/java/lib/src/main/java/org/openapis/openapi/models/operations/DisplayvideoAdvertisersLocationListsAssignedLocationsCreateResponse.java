@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse
      */
     
     public org.openapis.openapi.models.shared.AssignedLocation assignedLocation;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse withAssignedLocation(org.openapis.openapi.models.shared.AssignedLocation assignedLocation) {
         this.assignedLocation = assignedLocation;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse
     
     
     public String contentType;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse
     
     
     public Integer statusCode;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DisplayvideoAdvertisersLocationListsAssignedLocationsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

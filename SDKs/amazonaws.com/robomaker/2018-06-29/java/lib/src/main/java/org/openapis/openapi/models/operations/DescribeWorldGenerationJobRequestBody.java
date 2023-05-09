@@ -12,9 +12,13 @@ public class DescribeWorldGenerationJobRequestBody {
      */
     @JsonProperty("job")
     public String job;
+
     public DescribeWorldGenerationJobRequestBody withJob(String job) {
         this.job = job;
         return this;
     }
     
+    public DescribeWorldGenerationJobRequestBody(@JsonProperty("job") String job) {
+        this.job = job;
+  }
 }

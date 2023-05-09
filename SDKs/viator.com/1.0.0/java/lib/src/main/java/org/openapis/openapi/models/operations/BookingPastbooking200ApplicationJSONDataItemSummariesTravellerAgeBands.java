@@ -17,6 +17,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageBandId")
     public Long ageBandId;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands withAgeBandId(Long ageBandId) {
         this.ageBandId = ageBandId;
         return this;
@@ -28,6 +29,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands withCount(Long count) {
         this.count = count;
         return this;
@@ -39,6 +41,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +53,7 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pluralDescription")
     public String pluralDescription;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands withPluralDescription(String pluralDescription) {
         this.pluralDescription = pluralDescription;
         return this;
@@ -61,9 +65,11 @@ public class BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public BookingPastbooking200ApplicationJSONDataItemSummariesTravellerAgeBands(){}
 }

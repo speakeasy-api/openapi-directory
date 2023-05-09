@@ -15,9 +15,11 @@ public class DeleteInstanceSnapshotResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteInstanceSnapshotResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteInstanceSnapshotResult(){}
 }

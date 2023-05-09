@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAddressRequest {
@@ -12,6 +13,7 @@ public class GetAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetAddressRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetAddressRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetAddressRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=addressId")
     public String addressId;
+
     public GetAddressRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -44,6 +48,7 @@ public class GetAddressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alternativeKey")
     public String alternativeKey;
+
     public GetAddressRequest withAlternativeKey(String alternativeKey) {
         this.alternativeKey = alternativeKey;
         return this;
@@ -54,9 +59,16 @@ public class GetAddressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetAddressRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public GetAddressRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("addressId") String addressId, @JsonProperty("profileId") String profileId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.addressId = addressId;
+        this.profileId = profileId;
+  }
 }

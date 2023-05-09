@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEfileReportsHouseSenateResponse {
     
     public org.openapis.openapi.models.shared.BaseF3FilingPage baseF3FilingPage;
+
     public GetEfileReportsHouseSenateResponse withBaseF3FilingPage(org.openapis.openapi.models.shared.BaseF3FilingPage baseF3FilingPage) {
         this.baseF3FilingPage = baseF3FilingPage;
         return this;
@@ -16,6 +18,7 @@ public class GetEfileReportsHouseSenateResponse {
     
     
     public String contentType;
+
     public GetEfileReportsHouseSenateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetEfileReportsHouseSenateResponse {
     
     
     public Integer statusCode;
+
     public GetEfileReportsHouseSenateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetEfileReportsHouseSenateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEfileReportsHouseSenateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEfileReportsHouseSenateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

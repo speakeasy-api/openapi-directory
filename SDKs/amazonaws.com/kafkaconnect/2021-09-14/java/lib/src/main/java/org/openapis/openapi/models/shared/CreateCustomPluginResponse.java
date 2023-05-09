@@ -15,6 +15,7 @@ public class CreateCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public CreateCustomPluginResponse withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -23,6 +24,7 @@ public class CreateCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginState")
     public CustomPluginStateEnum customPluginState;
+
     public CreateCustomPluginResponse withCustomPluginState(CustomPluginStateEnum customPluginState) {
         this.customPluginState = customPluginState;
         return this;
@@ -31,6 +33,7 @@ public class CreateCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateCustomPluginResponse withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class CreateCustomPluginResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Long revision;
+
     public CreateCustomPluginResponse withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public CreateCustomPluginResponse(){}
 }

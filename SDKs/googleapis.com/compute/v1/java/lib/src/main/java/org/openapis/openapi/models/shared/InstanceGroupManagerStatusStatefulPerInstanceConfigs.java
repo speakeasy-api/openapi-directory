@@ -15,9 +15,11 @@ public class InstanceGroupManagerStatusStatefulPerInstanceConfigs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allEffective")
     public Boolean allEffective;
+
     public InstanceGroupManagerStatusStatefulPerInstanceConfigs withAllEffective(Boolean allEffective) {
         this.allEffective = allEffective;
         return this;
     }
     
+    public InstanceGroupManagerStatusStatefulPerInstanceConfigs(){}
 }

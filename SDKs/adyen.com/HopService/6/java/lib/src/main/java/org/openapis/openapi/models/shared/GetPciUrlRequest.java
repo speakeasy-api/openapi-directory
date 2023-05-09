@@ -14,6 +14,7 @@ public class GetPciUrlRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetPciUrlRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -25,9 +26,13 @@ public class GetPciUrlRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnUrl")
     public String returnUrl;
+
     public GetPciUrlRequest withReturnUrl(String returnUrl) {
         this.returnUrl = returnUrl;
         return this;
     }
     
+    public GetPciUrlRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

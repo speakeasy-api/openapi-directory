@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsMoveCardRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ProjectsMoveCardRequestBody requestBody;
+
     public ProjectsMoveCardRequest withRequestBody(ProjectsMoveCardRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class ProjectsMoveCardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=card_id")
     public Long cardId;
+
     public ProjectsMoveCardRequest withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public ProjectsMoveCardRequest(@JsonProperty("RequestBody") ProjectsMoveCardRequestBody requestBody, @JsonProperty("card_id") Long cardId) {
+        this.requestBody = requestBody;
+        this.cardId = cardId;
+  }
 }

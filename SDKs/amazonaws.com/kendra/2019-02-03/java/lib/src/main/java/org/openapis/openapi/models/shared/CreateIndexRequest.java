@@ -12,6 +12,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateIndexRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateIndexRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Edition")
     public IndexEditionEnum edition;
+
     public CreateIndexRequest withEdition(IndexEditionEnum edition) {
         this.edition = edition;
         return this;
@@ -35,6 +38,7 @@ public class CreateIndexRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateIndexRequest withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class CreateIndexRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateIndexRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -50,6 +55,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public CreateIndexRequest withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -58,6 +64,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateIndexRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -66,6 +73,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserContextPolicy")
     public UserContextPolicyEnum userContextPolicy;
+
     public CreateIndexRequest withUserContextPolicy(UserContextPolicyEnum userContextPolicy) {
         this.userContextPolicy = userContextPolicy;
         return this;
@@ -74,6 +82,7 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserGroupResolutionConfiguration")
     public UserGroupResolutionConfiguration userGroupResolutionConfiguration;
+
     public CreateIndexRequest withUserGroupResolutionConfiguration(UserGroupResolutionConfiguration userGroupResolutionConfiguration) {
         this.userGroupResolutionConfiguration = userGroupResolutionConfiguration;
         return this;
@@ -82,9 +91,14 @@ public class CreateIndexRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserTokenConfigurations")
     public UserTokenConfiguration[] userTokenConfigurations;
+
     public CreateIndexRequest withUserTokenConfigurations(UserTokenConfiguration[] userTokenConfigurations) {
         this.userTokenConfigurations = userTokenConfigurations;
         return this;
     }
     
+    public CreateIndexRequest(@JsonProperty("Name") String name, @JsonProperty("RoleArn") String roleArn) {
+        this.name = name;
+        this.roleArn = roleArn;
+  }
 }

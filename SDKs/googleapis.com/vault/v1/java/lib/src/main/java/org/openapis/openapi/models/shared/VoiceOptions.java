@@ -18,9 +18,11 @@ public class VoiceOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coveredData")
     public VoiceOptionsCoveredDataEnum[] coveredData;
+
     public VoiceOptions withCoveredData(VoiceOptionsCoveredDataEnum[] coveredData) {
         this.coveredData = coveredData;
         return this;
     }
     
+    public VoiceOptions(){}
 }

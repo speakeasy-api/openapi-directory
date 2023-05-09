@@ -15,6 +15,7 @@ public class EncryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CiphertextBlob")
     public String ciphertextBlob;
+
     public EncryptResponse withCiphertextBlob(String ciphertextBlob) {
         this.ciphertextBlob = ciphertextBlob;
         return this;
@@ -23,6 +24,7 @@ public class EncryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithm")
     public EncryptionAlgorithmSpecEnum encryptionAlgorithm;
+
     public EncryptResponse withEncryptionAlgorithm(EncryptionAlgorithmSpecEnum encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -31,9 +33,11 @@ public class EncryptResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public EncryptResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public EncryptResponse(){}
 }

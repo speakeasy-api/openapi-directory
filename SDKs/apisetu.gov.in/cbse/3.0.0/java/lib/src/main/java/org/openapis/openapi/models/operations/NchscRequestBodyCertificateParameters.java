@@ -12,6 +12,7 @@ public class NchscRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public NchscRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class NchscRequestBodyCertificateParameters {
      */
     @JsonProperty("rollno")
     public String rollno;
+
     public NchscRequestBodyCertificateParameters withRollno(String rollno) {
         this.rollno = rollno;
         return this;
@@ -32,9 +34,15 @@ public class NchscRequestBodyCertificateParameters {
      */
     @JsonProperty("year")
     public String year;
+
     public NchscRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public NchscRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("rollno") String rollno, @JsonProperty("year") String year) {
+        this.fullName = fullName;
+        this.rollno = rollno;
+        this.year = year;
+  }
 }

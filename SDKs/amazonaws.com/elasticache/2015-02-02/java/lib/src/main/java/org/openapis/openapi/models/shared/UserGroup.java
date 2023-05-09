@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserGroup {
     
     public String arn;
+
     public UserGroup withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,6 +20,7 @@ public class UserGroup {
     
     
     public String engine;
+
     public UserGroup withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -26,6 +28,7 @@ public class UserGroup {
     
     
     public String minimumEngineVersion;
+
     public UserGroup withMinimumEngineVersion(String minimumEngineVersion) {
         this.minimumEngineVersion = minimumEngineVersion;
         return this;
@@ -33,6 +36,7 @@ public class UserGroup {
     
     
     public UserGroupPendingChanges pendingChanges;
+
     public UserGroup withPendingChanges(UserGroupPendingChanges pendingChanges) {
         this.pendingChanges = pendingChanges;
         return this;
@@ -40,6 +44,7 @@ public class UserGroup {
     
     
     public String[] replicationGroups;
+
     public UserGroup withReplicationGroups(String[] replicationGroups) {
         this.replicationGroups = replicationGroups;
         return this;
@@ -47,6 +52,7 @@ public class UserGroup {
     
     
     public String status;
+
     public UserGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class UserGroup {
     
     
     public String userGroupId;
+
     public UserGroup withUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
@@ -61,9 +68,11 @@ public class UserGroup {
     
     
     public String[] userIds;
+
     public UserGroup withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
     }
     
+    public UserGroup(){}
 }

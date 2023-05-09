@@ -3,12 +3,12 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
+import org.openapis.openapi.models.operations.GetClassificationsRequest;
+import org.openapis.openapi.models.operations.GetClassificationsResponse;
 import org.openapis.openapi.models.operations.GetClassificationsSecurity;
 import org.openapis.openapi.models.operations.GetClassificationsSortEnum;
 import org.openapis.openapi.models.operations.GetClassificationsTypeEnum;
-import org.openapis.openapi.models.operations.GetClassificationsRequest;
-import org.openapis.openapi.models.operations.GetClassificationsResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -23,25 +23,27 @@ public class Application {
                     add("b7392059-2939-46fe-a759-6eb10faaa235"),
                 }};
                 isCountry = "explicabo";
-                pageNumber = 750686;
-                pageSize = 315428;
+                pageNumber = 750686L;
+                pageSize = 315428L;
                 q = "omnis";
                 sort = new org.openapis.openapi.models.operations.GetClassificationsSortEnum[]{{
-                    add("created_at"),
-                    add("updated_at"),
+                    add(GetClassificationsSortEnum.CREATED_AT),
+                    add(GetClassificationsSortEnum.UPDATED_AT),
                 }};
-                type = "AlternateFeedType";
-            }}            
+                type = GetClassificationsTypeEnum.ALTERNATE_FEED_TYPE;
+            }};            
 
-            GetClassificationsResponse res = sdk.classification.getClassifications(req, new GetClassificationsSecurity() {{
+            GetClassificationsResponse res = sdk.classification.getClassifications(req, new GetClassificationsSecurity("iure") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getClassifications200ApplicationVndApiPlusJsonObject.isPresent()) {
+            if (res.getClassifications200ApplicationVndApiPlusJsonObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2LifecycleInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabledPolicy")
     public GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy;
+
     public GoogleAppsDriveLabelsV2LifecycleInput withDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy disabledPolicy) {
         this.disabledPolicy = disabledPolicy;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LifecycleInput(){}
 }

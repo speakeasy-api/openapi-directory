@@ -12,6 +12,7 @@ public class ChangesDatum {
      */
     @JsonProperty("discountValue")
     public Integer discountValue;
+
     public ChangesDatum withDiscountValue(Integer discountValue) {
         this.discountValue = discountValue;
         return this;
@@ -22,6 +23,7 @@ public class ChangesDatum {
      */
     @JsonProperty("incrementValue")
     public Integer incrementValue;
+
     public ChangesDatum withIncrementValue(Integer incrementValue) {
         this.incrementValue = incrementValue;
         return this;
@@ -32,6 +34,7 @@ public class ChangesDatum {
      */
     @JsonProperty("itemsAdded")
     public String[] itemsAdded;
+
     public ChangesDatum withItemsAdded(String[] itemsAdded) {
         this.itemsAdded = itemsAdded;
         return this;
@@ -42,6 +45,7 @@ public class ChangesDatum {
      */
     @JsonProperty("itemsRemoved")
     public ItemsRemoved[] itemsRemoved;
+
     public ChangesDatum withItemsRemoved(ItemsRemoved[] itemsRemoved) {
         this.itemsRemoved = itemsRemoved;
         return this;
@@ -52,6 +56,7 @@ public class ChangesDatum {
      */
     @JsonProperty("reason")
     public String reason;
+
     public ChangesDatum withReason(String reason) {
         this.reason = reason;
         return this;
@@ -59,9 +64,18 @@ public class ChangesDatum {
     
     @JsonProperty("receipt")
     public Receipt receipt;
+
     public ChangesDatum withReceipt(Receipt receipt) {
         this.receipt = receipt;
         return this;
     }
     
+    public ChangesDatum(@JsonProperty("discountValue") Integer discountValue, @JsonProperty("incrementValue") Integer incrementValue, @JsonProperty("itemsAdded") String[] itemsAdded, @JsonProperty("itemsRemoved") ItemsRemoved[] itemsRemoved, @JsonProperty("reason") String reason, @JsonProperty("receipt") Receipt receipt) {
+        this.discountValue = discountValue;
+        this.incrementValue = incrementValue;
+        this.itemsAdded = itemsAdded;
+        this.itemsRemoved = itemsRemoved;
+        this.reason = reason;
+        this.receipt = receipt;
+  }
 }

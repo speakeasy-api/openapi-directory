@@ -12,9 +12,13 @@ public class DescribeSchedulingPoliciesRequestBody {
      */
     @JsonProperty("arns")
     public String[] arns;
+
     public DescribeSchedulingPoliciesRequestBody withArns(String[] arns) {
         this.arns = arns;
         return this;
     }
     
+    public DescribeSchedulingPoliciesRequestBody(@JsonProperty("arns") String[] arns) {
+        this.arns = arns;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SubSlotTypeComposition {
     @JsonProperty("name")
     public String name;
+
     public SubSlotTypeComposition withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class SubSlotTypeComposition {
     
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public SubSlotTypeComposition withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
     }
     
+    public SubSlotTypeComposition(@JsonProperty("name") String name, @JsonProperty("slotTypeId") String slotTypeId) {
+        this.name = name;
+        this.slotTypeId = slotTypeId;
+  }
 }

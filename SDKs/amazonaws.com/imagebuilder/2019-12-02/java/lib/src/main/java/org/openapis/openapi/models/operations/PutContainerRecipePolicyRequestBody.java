@@ -12,6 +12,7 @@ public class PutContainerRecipePolicyRequestBody {
      */
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public PutContainerRecipePolicyRequestBody withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
@@ -22,9 +23,14 @@ public class PutContainerRecipePolicyRequestBody {
      */
     @JsonProperty("policy")
     public String policy;
+
     public PutContainerRecipePolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public PutContainerRecipePolicyRequestBody(@JsonProperty("containerRecipeArn") String containerRecipeArn, @JsonProperty("policy") String policy) {
+        this.containerRecipeArn = containerRecipeArn;
+        this.policy = policy;
+  }
 }

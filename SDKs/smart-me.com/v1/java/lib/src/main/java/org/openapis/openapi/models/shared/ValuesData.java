@@ -25,6 +25,7 @@ public class ValuesData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public ValuesData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -36,6 +37,7 @@ public class ValuesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceId")
     public String deviceId;
+
     public ValuesData withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -47,9 +49,11 @@ public class ValuesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public ValueData[] values;
+
     public ValuesData withValues(ValueData[] values) {
         this.values = values;
         return this;
     }
     
+    public ValuesData(){}
 }

@@ -59,11 +59,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdResponse(contentType, httpRes.statusCode()) {{
             getApiCatalogSystemPubProductsOffersProductId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse res = new org.openapis.openapi.models.operations.GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse(contentType, httpRes.statusCode()) {{
             getApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

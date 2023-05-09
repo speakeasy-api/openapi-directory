@@ -15,6 +15,7 @@ public class MaintenanceWindowStepFunctionsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public String input;
+
     public MaintenanceWindowStepFunctionsParameters withInput(String input) {
         this.input = input;
         return this;
@@ -23,9 +24,11 @@ public class MaintenanceWindowStepFunctionsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public MaintenanceWindowStepFunctionsParameters withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MaintenanceWindowStepFunctionsParameters(){}
 }

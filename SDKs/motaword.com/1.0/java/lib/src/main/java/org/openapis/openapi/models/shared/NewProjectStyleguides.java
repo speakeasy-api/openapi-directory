@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewProjectStyleguides {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public NewProjectStyleguides withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class NewProjectStyleguides {
     
     @SpeakeasyMetadata("multipartForm:name=styleguides[]")
     public String styleguides;
+
     public NewProjectStyleguides withStyleguides(String styleguides) {
         this.styleguides = styleguides;
         return this;
     }
     
+    public NewProjectStyleguides(@JsonProperty("content") byte[] content, @JsonProperty("styleguides[]") String styleguides) {
+        this.content = content;
+        this.styleguides = styleguides;
+  }
 }

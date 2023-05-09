@@ -15,9 +15,11 @@ public class CreateDiskResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public CreateDiskResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public CreateDiskResult(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisableClientAuthenticationRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public DisableClientAuthenticationRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class DisableClientAuthenticationRequest {
     
     @JsonProperty("Type")
     public ClientAuthenticationTypeEnum type;
+
     public DisableClientAuthenticationRequest withType(ClientAuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DisableClientAuthenticationRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("Type") ClientAuthenticationTypeEnum type) {
+        this.directoryId = directoryId;
+        this.type = type;
+  }
 }

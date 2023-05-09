@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DependabotListOrgSecretsResponse {
     
     public String contentType;
+
     public DependabotListOrgSecretsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DependabotListOrgSecretsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public DependabotListOrgSecretsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class DependabotListOrgSecretsResponse {
     
     
     public Integer statusCode;
+
     public DependabotListOrgSecretsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DependabotListOrgSecretsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DependabotListOrgSecretsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class DependabotListOrgSecretsResponse {
      */
     
     public DependabotListOrgSecrets200ApplicationJSON dependabotListOrgSecrets200ApplicationJSONObject;
+
     public DependabotListOrgSecretsResponse withDependabotListOrgSecrets200ApplicationJSONObject(DependabotListOrgSecrets200ApplicationJSON dependabotListOrgSecrets200ApplicationJSONObject) {
         this.dependabotListOrgSecrets200ApplicationJSONObject = dependabotListOrgSecrets200ApplicationJSONObject;
         return this;
     }
     
+    public DependabotListOrgSecretsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

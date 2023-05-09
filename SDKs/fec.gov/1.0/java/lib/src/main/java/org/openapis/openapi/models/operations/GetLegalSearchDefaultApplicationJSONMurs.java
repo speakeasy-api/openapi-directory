@@ -15,6 +15,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("close_date")
     public LocalDate closeDate;
+
     public GetLegalSearchDefaultApplicationJSONMurs withCloseDate(LocalDate closeDate) {
         this.closeDate = closeDate;
         return this;
@@ -23,6 +24,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission_votes")
     public GetLegalSearchDefaultApplicationJSONMursCommissionVotes[] commissionVotes;
+
     public GetLegalSearchDefaultApplicationJSONMurs withCommissionVotes(GetLegalSearchDefaultApplicationJSONMursCommissionVotes[] commissionVotes) {
         this.commissionVotes = commissionVotes;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispositions")
     public GetLegalSearchDefaultApplicationJSONMursDispositions[] dispositions;
+
     public GetLegalSearchDefaultApplicationJSONMurs withDispositions(GetLegalSearchDefaultApplicationJSONMursDispositions[] dispositions) {
         this.dispositions = dispositions;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_id")
     public String docId;
+
     public GetLegalSearchDefaultApplicationJSONMurs withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_highlights")
     public java.util.Map<String, Object> documentHighlights;
+
     public GetLegalSearchDefaultApplicationJSONMurs withDocumentHighlights(java.util.Map<String, Object> documentHighlights) {
         this.documentHighlights = documentHighlights;
         return this;
@@ -55,6 +60,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GetLegalSearchDefaultApplicationJSONMursDocuments[] documents;
+
     public GetLegalSearchDefaultApplicationJSONMurs withDocuments(GetLegalSearchDefaultApplicationJSONMursDocuments[] documents) {
         this.documents = documents;
         return this;
@@ -63,6 +69,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_cycles")
     public Long electionCycles;
+
     public GetLegalSearchDefaultApplicationJSONMurs withElectionCycles(Long electionCycles) {
         this.electionCycles = electionCycles;
         return this;
@@ -71,6 +78,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public String[] highlights;
+
     public GetLegalSearchDefaultApplicationJSONMurs withHighlights(String[] highlights) {
         this.highlights = highlights;
         return this;
@@ -79,6 +87,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mur_type")
     public GetLegalSearchDefaultApplicationJSONMursMurTypeEnum murType;
+
     public GetLegalSearchDefaultApplicationJSONMurs withMurType(GetLegalSearchDefaultApplicationJSONMursMurTypeEnum murType) {
         this.murType = murType;
         return this;
@@ -87,6 +96,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONMurs withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONMurs withNo(String no) {
         this.no = no;
         return this;
@@ -104,6 +115,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("open_date")
     public LocalDate openDate;
+
     public GetLegalSearchDefaultApplicationJSONMurs withOpenDate(LocalDate openDate) {
         this.openDate = openDate;
         return this;
@@ -112,6 +124,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participants")
     public GetLegalSearchDefaultApplicationJSONMursParticipants[] participants;
+
     public GetLegalSearchDefaultApplicationJSONMurs withParticipants(GetLegalSearchDefaultApplicationJSONMursParticipants[] participants) {
         this.participants = participants;
         return this;
@@ -120,6 +133,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("respondents")
     public String[] respondents;
+
     public GetLegalSearchDefaultApplicationJSONMurs withRespondents(String[] respondents) {
         this.respondents = respondents;
         return this;
@@ -128,6 +142,7 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjects")
     public String[] subjects;
+
     public GetLegalSearchDefaultApplicationJSONMurs withSubjects(String[] subjects) {
         this.subjects = subjects;
         return this;
@@ -136,9 +151,11 @@ public class GetLegalSearchDefaultApplicationJSONMurs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONMurs withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONMurs(){}
 }

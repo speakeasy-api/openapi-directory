@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class VenuePolyResponse {
     @JsonProperty("found")
     public java.util.Map<String, Object> found;
+
     public VenuePolyResponse withFound(java.util.Map<String, Object> found) {
         this.found = found;
         return this;
     }
     
+    public VenuePolyResponse(@JsonProperty("found") java.util.Map<String, Object> found) {
+        this.found = found;
+  }
 }

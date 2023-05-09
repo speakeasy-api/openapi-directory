@@ -18,6 +18,7 @@ public class GKEMasterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterNetworkUri")
     public String clusterNetworkUri;
+
     public GKEMasterInfo withClusterNetworkUri(String clusterNetworkUri) {
         this.clusterNetworkUri = clusterNetworkUri;
         return this;
@@ -29,6 +30,7 @@ public class GKEMasterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterUri")
     public String clusterUri;
+
     public GKEMasterInfo withClusterUri(String clusterUri) {
         this.clusterUri = clusterUri;
         return this;
@@ -40,6 +42,7 @@ public class GKEMasterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalIp")
     public String externalIp;
+
     public GKEMasterInfo withExternalIp(String externalIp) {
         this.externalIp = externalIp;
         return this;
@@ -51,9 +54,11 @@ public class GKEMasterInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalIp")
     public String internalIp;
+
     public GKEMasterInfo withInternalIp(String internalIp) {
         this.internalIp = internalIp;
         return this;
     }
     
+    public GKEMasterInfo(){}
 }

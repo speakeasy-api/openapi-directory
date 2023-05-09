@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetAlarmStateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetAlarmStateActionEnum action;
+
     public GETSetAlarmStateRequest withAction(GETSetAlarmStateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetAlarmStateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AlarmName")
     public String alarmName;
+
     public GETSetAlarmStateRequest withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -29,6 +32,7 @@ public class GETSetAlarmStateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateReason")
     public String stateReason;
+
     public GETSetAlarmStateRequest withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -39,6 +43,7 @@ public class GETSetAlarmStateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateReasonData")
     public String stateReasonData;
+
     public GETSetAlarmStateRequest withStateReasonData(String stateReasonData) {
         this.stateReasonData = stateReasonData;
         return this;
@@ -49,6 +54,7 @@ public class GETSetAlarmStateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StateValue")
     public GETSetAlarmStateStateValueEnum stateValue;
+
     public GETSetAlarmStateRequest withStateValue(GETSetAlarmStateStateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
@@ -56,6 +62,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetAlarmStateVersionEnum version;
+
     public GETSetAlarmStateRequest withVersion(GETSetAlarmStateVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetAlarmStateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetAlarmStateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetAlarmStateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetAlarmStateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetAlarmStateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetAlarmStateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETSetAlarmStateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetAlarmStateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetAlarmStateRequest(@JsonProperty("Action") GETSetAlarmStateActionEnum action, @JsonProperty("AlarmName") String alarmName, @JsonProperty("StateReason") String stateReason, @JsonProperty("StateValue") GETSetAlarmStateStateValueEnum stateValue, @JsonProperty("Version") GETSetAlarmStateVersionEnum version) {
+        this.action = action;
+        this.alarmName = alarmName;
+        this.stateReason = stateReason;
+        this.stateValue = stateValue;
+        this.version = version;
+  }
 }

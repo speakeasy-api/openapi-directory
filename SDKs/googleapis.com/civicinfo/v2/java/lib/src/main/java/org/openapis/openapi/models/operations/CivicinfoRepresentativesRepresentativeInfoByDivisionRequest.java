@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
@@ -12,6 +13,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=levels")
     public CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum[] levels;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withLevels(CivicinfoRepresentativesRepresentativeInfoByDivisionLevelsEnum[] levels) {
         this.levels = levels;
         return this;
@@ -82,6 +90,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ocdId")
     public String ocdId;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withOcdId(String ocdId) {
         this.ocdId = ocdId;
         return this;
@@ -102,6 +112,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
@@ -132,6 +145,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roles")
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum[] roles;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withRoles(CivicinfoRepresentativesRepresentativeInfoByDivisionRolesEnum[] roles) {
         this.roles = roles;
         return this;
@@ -142,6 +156,7 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,13 @@ public class CivicinfoRepresentativesRepresentativeInfoByDivisionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CivicinfoRepresentativesRepresentativeInfoByDivisionRequest(@JsonProperty("ocdId") String ocdId) {
+        this.ocdId = ocdId;
+  }
 }

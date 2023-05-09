@@ -18,9 +18,11 @@ public class Union {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public GcRule[] rules;
+
     public Union withRules(GcRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Union(){}
 }

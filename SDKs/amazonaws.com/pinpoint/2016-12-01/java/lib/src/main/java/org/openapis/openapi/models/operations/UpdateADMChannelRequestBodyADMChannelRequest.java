@@ -15,6 +15,7 @@ public class UpdateADMChannelRequestBodyADMChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public UpdateADMChannelRequestBodyADMChannelRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateADMChannelRequestBodyADMChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public UpdateADMChannelRequestBodyADMChannelRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -31,9 +33,11 @@ public class UpdateADMChannelRequestBodyADMChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateADMChannelRequestBodyADMChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateADMChannelRequestBodyADMChannelRequest(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageResultSnapshotDetails {
     
     public String description;
+
     public ImportImageResultSnapshotDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String deviceName;
+
     public ImportImageResultSnapshotDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -26,6 +28,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public Double diskImageSize;
+
     public ImportImageResultSnapshotDetails withDiskImageSize(Double diskImageSize) {
         this.diskImageSize = diskImageSize;
         return this;
@@ -33,6 +36,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String format;
+
     public ImportImageResultSnapshotDetails withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +44,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String progress;
+
     public ImportImageResultSnapshotDetails withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -47,6 +52,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String snapshotId;
+
     public ImportImageResultSnapshotDetails withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String status;
+
     public ImportImageResultSnapshotDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String statusMessage;
+
     public ImportImageResultSnapshotDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -68,6 +76,7 @@ public class ImportImageResultSnapshotDetails {
     
     
     public String url;
+
     public ImportImageResultSnapshotDetails withUrl(String url) {
         this.url = url;
         return this;
@@ -75,9 +84,11 @@ public class ImportImageResultSnapshotDetails {
     
     
     public ImportImageResultSnapshotDetailsUserBucket userBucket;
+
     public ImportImageResultSnapshotDetails withUserBucket(ImportImageResultSnapshotDetailsUserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public ImportImageResultSnapshotDetails(){}
 }

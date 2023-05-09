@@ -18,6 +18,7 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public ErrorMessage withCode(Long code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class ErrorMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorMessage withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorMessage(){}
 }

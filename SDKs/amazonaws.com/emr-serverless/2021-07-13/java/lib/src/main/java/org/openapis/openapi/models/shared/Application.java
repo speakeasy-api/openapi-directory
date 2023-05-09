@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Application {
     @JsonProperty("applicationId")
     public String applicationId;
+
     public Application withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -27,6 +28,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ArchitectureEnum architecture;
+
     public Application withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -34,6 +36,7 @@ public class Application {
     
     @JsonProperty("arn")
     public String arn;
+
     public Application withArn(String arn) {
         this.arn = arn;
         return this;
@@ -42,6 +45,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStartConfiguration")
     public AutoStartConfig autoStartConfiguration;
+
     public Application withAutoStartConfiguration(AutoStartConfig autoStartConfiguration) {
         this.autoStartConfiguration = autoStartConfiguration;
         return this;
@@ -50,6 +54,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoStopConfiguration")
     public AutoStopConfig autoStopConfiguration;
+
     public Application withAutoStopConfiguration(AutoStopConfig autoStopConfiguration) {
         this.autoStopConfiguration = autoStopConfiguration;
         return this;
@@ -59,6 +64,7 @@ public class Application {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Application withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -67,6 +73,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageConfiguration")
     public ImageConfiguration imageConfiguration;
+
     public Application withImageConfiguration(ImageConfiguration imageConfiguration) {
         this.imageConfiguration = imageConfiguration;
         return this;
@@ -75,6 +82,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialCapacity")
     public java.util.Map<String, InitialCapacityConfig> initialCapacity;
+
     public Application withInitialCapacity(java.util.Map<String, InitialCapacityConfig> initialCapacity) {
         this.initialCapacity = initialCapacity;
         return this;
@@ -83,6 +91,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumCapacity")
     public MaximumAllowedResources maximumCapacity;
+
     public Application withMaximumCapacity(MaximumAllowedResources maximumCapacity) {
         this.maximumCapacity = maximumCapacity;
         return this;
@@ -91,6 +100,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -99,6 +109,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public Application withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -106,6 +117,7 @@ public class Application {
     
     @JsonProperty("releaseLabel")
     public String releaseLabel;
+
     public Application withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -113,6 +125,7 @@ public class Application {
     
     @JsonProperty("state")
     public ApplicationStateEnum state;
+
     public Application withState(ApplicationStateEnum state) {
         this.state = state;
         return this;
@@ -121,6 +134,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public Application withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
@@ -129,6 +143,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Application withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -136,6 +151,7 @@ public class Application {
     
     @JsonProperty("type")
     public String type;
+
     public Application withType(String type) {
         this.type = type;
         return this;
@@ -145,6 +161,7 @@ public class Application {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Application withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -153,9 +170,19 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerTypeSpecifications")
     public java.util.Map<String, WorkerTypeSpecification> workerTypeSpecifications;
+
     public Application withWorkerTypeSpecifications(java.util.Map<String, WorkerTypeSpecification> workerTypeSpecifications) {
         this.workerTypeSpecifications = workerTypeSpecifications;
         return this;
     }
     
+    public Application(@JsonProperty("applicationId") String applicationId, @JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("releaseLabel") String releaseLabel, @JsonProperty("state") ApplicationStateEnum state, @JsonProperty("type") String type, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.applicationId = applicationId;
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.releaseLabel = releaseLabel;
+        this.state = state;
+        this.type = type;
+        this.updatedAt = updatedAt;
+  }
 }

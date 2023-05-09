@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCustomersIdFieldsFieldIdRequest {
@@ -12,6 +13,7 @@ public class DeleteCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public DeleteCustomersIdFieldsFieldIdRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field_id")
     public Integer fieldId;
+
     public DeleteCustomersIdFieldsFieldIdRequest withFieldId(Integer fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public DeleteCustomersIdFieldsFieldIdRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class DeleteCustomersIdFieldsFieldIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public DeleteCustomersIdFieldsFieldIdRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public DeleteCustomersIdFieldsFieldIdRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("field_id") Integer fieldId, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.fieldId = fieldId;
+        this.id = id;
+        this.login = login;
+  }
 }

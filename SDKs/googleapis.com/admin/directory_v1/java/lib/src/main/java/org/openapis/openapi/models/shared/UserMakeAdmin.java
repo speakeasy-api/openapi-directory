@@ -15,9 +15,11 @@ public class UserMakeAdmin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public UserMakeAdmin withStatus(Boolean status) {
         this.status = status;
         return this;
     }
     
+    public UserMakeAdmin(){}
 }

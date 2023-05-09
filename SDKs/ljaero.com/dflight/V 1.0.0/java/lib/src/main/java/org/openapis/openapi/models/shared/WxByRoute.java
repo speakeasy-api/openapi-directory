@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WxByRoute {
     @JsonProperty("hours")
     public Long hours;
+
     public WxByRoute withHours(Long hours) {
         this.hours = hours;
         return this;
@@ -19,6 +20,7 @@ public class WxByRoute {
     
     @JsonProperty("route")
     public java.util.Map<String, Object> route;
+
     public WxByRoute withRoute(java.util.Map<String, Object> route) {
         this.route = route;
         return this;
@@ -26,9 +28,15 @@ public class WxByRoute {
     
     @JsonProperty("wxtypes")
     public String[] wxtypes;
+
     public WxByRoute withWxtypes(String[] wxtypes) {
         this.wxtypes = wxtypes;
         return this;
     }
     
+    public WxByRoute(@JsonProperty("hours") Long hours, @JsonProperty("route") java.util.Map<String, Object> route, @JsonProperty("wxtypes") String[] wxtypes) {
+        this.hours = hours;
+        this.route = route;
+        this.wxtypes = wxtypes;
+  }
 }

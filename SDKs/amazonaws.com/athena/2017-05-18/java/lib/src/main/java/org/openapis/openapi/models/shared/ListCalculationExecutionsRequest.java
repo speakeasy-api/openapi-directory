@@ -12,6 +12,7 @@ public class ListCalculationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCalculationExecutionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListCalculationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCalculationExecutionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class ListCalculationExecutionsRequest {
     
     @JsonProperty("SessionId")
     public String sessionId;
+
     public ListCalculationExecutionsRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
@@ -35,9 +38,13 @@ public class ListCalculationExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateFilter")
     public CalculationExecutionStateEnum stateFilter;
+
     public ListCalculationExecutionsRequest withStateFilter(CalculationExecutionStateEnum stateFilter) {
         this.stateFilter = stateFilter;
         return this;
     }
     
+    public ListCalculationExecutionsRequest(@JsonProperty("SessionId") String sessionId) {
+        this.sessionId = sessionId;
+  }
 }

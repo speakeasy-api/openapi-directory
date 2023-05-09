@@ -15,6 +15,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public ElasticLoadBalancer withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public ElasticLoadBalancer withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -31,6 +33,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ec2InstanceIds")
     public String[] ec2InstanceIds;
+
     public ElasticLoadBalancer withEc2InstanceIds(String[] ec2InstanceIds) {
         this.ec2InstanceIds = ec2InstanceIds;
         return this;
@@ -39,6 +42,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticLoadBalancerName")
     public String elasticLoadBalancerName;
+
     public ElasticLoadBalancer withElasticLoadBalancerName(String elasticLoadBalancerName) {
         this.elasticLoadBalancerName = elasticLoadBalancerName;
         return this;
@@ -47,6 +51,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public ElasticLoadBalancer withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -55,6 +60,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ElasticLoadBalancer withRegion(String region) {
         this.region = region;
         return this;
@@ -63,6 +69,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public ElasticLoadBalancer withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -71,6 +78,7 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public ElasticLoadBalancer withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -79,9 +87,11 @@ public class ElasticLoadBalancer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public ElasticLoadBalancer withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public ElasticLoadBalancer(){}
 }

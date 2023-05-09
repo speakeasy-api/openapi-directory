@@ -15,6 +15,7 @@ public class ListScriptsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListScriptsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListScriptsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scripts")
     public Script[] scripts;
+
     public ListScriptsOutput withScripts(Script[] scripts) {
         this.scripts = scripts;
         return this;
     }
     
+    public ListScriptsOutput(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimestampPartition {
     @JsonProperty("attributeName")
     public String attributeName;
+
     public TimestampPartition withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -22,9 +23,13 @@ public class TimestampPartition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampFormat")
     public String timestampFormat;
+
     public TimestampPartition withTimestampFormat(String timestampFormat) {
         this.timestampFormat = timestampFormat;
         return this;
     }
     
+    public TimestampPartition(@JsonProperty("attributeName") String attributeName) {
+        this.attributeName = attributeName;
+  }
 }

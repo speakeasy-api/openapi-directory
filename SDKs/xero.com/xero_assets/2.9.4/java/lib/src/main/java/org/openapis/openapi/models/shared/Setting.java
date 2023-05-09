@@ -15,11 +15,12 @@ import java.time.LocalDate;
  */
 public class Setting {
     /**
-     * The prefix used for fixed asset numbers (\u201cFA-\u201d by default)
+     * The prefix used for fixed asset numbers (“FA-” by default)
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetNumberPrefix")
     public String assetNumberPrefix;
+
     public Setting withAssetNumberPrefix(String assetNumberPrefix) {
         this.assetNumberPrefix = assetNumberPrefix;
         return this;
@@ -31,6 +32,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetNumberSequence")
     public String assetNumberSequence;
+
     public Setting withAssetNumberSequence(String assetNumberSequence) {
         this.assetNumberSequence = assetNumberSequence;
         return this;
@@ -43,6 +45,7 @@ public class Setting {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("assetStartDate")
     public LocalDate assetStartDate;
+
     public Setting withAssetStartDate(LocalDate assetStartDate) {
         this.assetStartDate = assetStartDate;
         return this;
@@ -54,6 +57,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCapitalGainOnDisposalAccountId")
     public String defaultCapitalGainOnDisposalAccountId;
+
     public Setting withDefaultCapitalGainOnDisposalAccountId(String defaultCapitalGainOnDisposalAccountId) {
         this.defaultCapitalGainOnDisposalAccountId = defaultCapitalGainOnDisposalAccountId;
         return this;
@@ -65,6 +69,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultGainOnDisposalAccountId")
     public String defaultGainOnDisposalAccountId;
+
     public Setting withDefaultGainOnDisposalAccountId(String defaultGainOnDisposalAccountId) {
         this.defaultGainOnDisposalAccountId = defaultGainOnDisposalAccountId;
         return this;
@@ -76,6 +81,7 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLossOnDisposalAccountId")
     public String defaultLossOnDisposalAccountId;
+
     public Setting withDefaultLossOnDisposalAccountId(String defaultLossOnDisposalAccountId) {
         this.defaultLossOnDisposalAccountId = defaultLossOnDisposalAccountId;
         return this;
@@ -88,6 +94,7 @@ public class Setting {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("lastDepreciationDate")
     public LocalDate lastDepreciationDate;
+
     public Setting withLastDepreciationDate(LocalDate lastDepreciationDate) {
         this.lastDepreciationDate = lastDepreciationDate;
         return this;
@@ -99,9 +106,11 @@ public class Setting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optInForTax")
     public Boolean optInForTax;
+
     public Setting withOptInForTax(Boolean optInForTax) {
         this.optInForTax = optInForTax;
         return this;
     }
     
+    public Setting(){}
 }

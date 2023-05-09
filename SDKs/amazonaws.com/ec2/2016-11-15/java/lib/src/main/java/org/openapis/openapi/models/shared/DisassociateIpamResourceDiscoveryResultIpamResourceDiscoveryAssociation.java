@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation {
     
     public String ipamArn;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ipamId;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ipamRegion;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ipamResourceDiscoveryAssociationArn;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamResourceDiscoveryAssociationArn(String ipamResourceDiscoveryAssociationArn) {
         this.ipamResourceDiscoveryAssociationArn = ipamResourceDiscoveryAssociationArn;
         return this;
@@ -40,6 +44,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ipamResourceDiscoveryAssociationId;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamResourceDiscoveryAssociationId(String ipamResourceDiscoveryAssociationId) {
         this.ipamResourceDiscoveryAssociationId = ipamResourceDiscoveryAssociationId;
         return this;
@@ -47,6 +52,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ipamResourceDiscoveryId;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -54,6 +60,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public Boolean isDefault;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -61,6 +68,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public String ownerId;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum resourceDiscoveryStatus;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withResourceDiscoveryStatus(DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationResourceDiscoveryStatusEnum resourceDiscoveryStatus) {
         this.resourceDiscoveryStatus = resourceDiscoveryStatus;
         return this;
@@ -75,6 +84,7 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum state;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withState(DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationStateEnum state) {
         this.state = state;
         return this;
@@ -82,9 +92,11 @@ public class DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssocia
     
     
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags[] tags;
+
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation withTags(DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociationTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation(){}
 }

@@ -18,6 +18,7 @@ public class ActionsOrganizationPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed_actions")
     public AllowedActionsEnum allowedActions;
+
     public ActionsOrganizationPermissions withAllowedActions(AllowedActionsEnum allowedActions) {
         this.allowedActions = allowedActions;
         return this;
@@ -28,6 +29,7 @@ public class ActionsOrganizationPermissions {
      */
     @JsonProperty("enabled_repositories")
     public EnabledRepositoriesEnum enabledRepositories;
+
     public ActionsOrganizationPermissions withEnabledRepositories(EnabledRepositoriesEnum enabledRepositories) {
         this.enabledRepositories = enabledRepositories;
         return this;
@@ -39,6 +41,7 @@ public class ActionsOrganizationPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_actions_url")
     public String selectedActionsUrl;
+
     public ActionsOrganizationPermissions withSelectedActionsUrl(String selectedActionsUrl) {
         this.selectedActionsUrl = selectedActionsUrl;
         return this;
@@ -50,9 +53,13 @@ public class ActionsOrganizationPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repositories_url")
     public String selectedRepositoriesUrl;
+
     public ActionsOrganizationPermissions withSelectedRepositoriesUrl(String selectedRepositoriesUrl) {
         this.selectedRepositoriesUrl = selectedRepositoriesUrl;
         return this;
     }
     
+    public ActionsOrganizationPermissions(@JsonProperty("enabled_repositories") EnabledRepositoriesEnum enabledRepositories) {
+        this.enabledRepositories = enabledRepositories;
+  }
 }

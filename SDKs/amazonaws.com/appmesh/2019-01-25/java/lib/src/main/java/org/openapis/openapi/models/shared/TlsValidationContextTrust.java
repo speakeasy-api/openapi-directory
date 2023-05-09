@@ -15,6 +15,7 @@ public class TlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acm")
     public TlsValidationContextAcmTrust acm;
+
     public TlsValidationContextTrust withAcm(TlsValidationContextAcmTrust acm) {
         this.acm = acm;
         return this;
@@ -23,6 +24,7 @@ public class TlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public TlsValidationContextFileTrust file;
+
     public TlsValidationContextTrust withFile(TlsValidationContextFileTrust file) {
         this.file = file;
         return this;
@@ -31,9 +33,11 @@ public class TlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public TlsValidationContextSdsTrust sds;
+
     public TlsValidationContextTrust withSds(TlsValidationContextSdsTrust sds) {
         this.sds = sds;
         return this;
     }
     
+    public TlsValidationContextTrust(){}
 }

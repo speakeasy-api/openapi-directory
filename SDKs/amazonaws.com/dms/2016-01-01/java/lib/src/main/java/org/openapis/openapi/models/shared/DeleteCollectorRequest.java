@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCollectorRequest {
     @JsonProperty("CollectorReferencedId")
     public String collectorReferencedId;
+
     public DeleteCollectorRequest withCollectorReferencedId(String collectorReferencedId) {
         this.collectorReferencedId = collectorReferencedId;
         return this;
     }
     
+    public DeleteCollectorRequest(@JsonProperty("CollectorReferencedId") String collectorReferencedId) {
+        this.collectorReferencedId = collectorReferencedId;
+  }
 }

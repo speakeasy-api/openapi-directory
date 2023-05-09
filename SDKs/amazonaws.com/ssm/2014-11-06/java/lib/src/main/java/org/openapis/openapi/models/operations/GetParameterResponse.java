@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParameterResponse {
     
     public String contentType;
+
     public GetParameterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParameterResponse {
      */
     
     public org.openapis.openapi.models.shared.GetParameterResult getParameterResult;
+
     public GetParameterResponse withGetParameterResult(org.openapis.openapi.models.shared.GetParameterResult getParameterResult) {
         this.getParameterResult = getParameterResult;
         return this;
@@ -29,6 +32,7 @@ public class GetParameterResponse {
      */
     
     public Object internalServerError;
+
     public GetParameterResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetParameterResponse {
      */
     
     public Object invalidKeyId;
+
     public GetParameterResponse withInvalidKeyId(Object invalidKeyId) {
         this.invalidKeyId = invalidKeyId;
         return this;
@@ -49,6 +54,7 @@ public class GetParameterResponse {
      */
     
     public Object parameterNotFound;
+
     public GetParameterResponse withParameterNotFound(Object parameterNotFound) {
         this.parameterNotFound = parameterNotFound;
         return this;
@@ -59,6 +65,7 @@ public class GetParameterResponse {
      */
     
     public Object parameterVersionNotFound;
+
     public GetParameterResponse withParameterVersionNotFound(Object parameterVersionNotFound) {
         this.parameterVersionNotFound = parameterVersionNotFound;
         return this;
@@ -66,6 +73,7 @@ public class GetParameterResponse {
     
     
     public Integer statusCode;
+
     public GetParameterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetParameterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParameterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetParameterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

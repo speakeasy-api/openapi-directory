@@ -18,6 +18,7 @@ public class ListCommentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public Comment[] comments;
+
     public ListCommentsResponse withComments(Comment[] comments) {
         this.comments = comments;
         return this;
@@ -29,9 +30,11 @@ public class ListCommentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCommentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCommentsResponse(){}
 }

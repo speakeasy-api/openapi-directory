@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListJobsForWorkflowRunRequest {
@@ -14,6 +15,7 @@ public class ActionsListJobsForWorkflowRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public ActionsListJobsForWorkflowRunFilterEnum filter;
+
     public ActionsListJobsForWorkflowRunRequest withFilter(ActionsListJobsForWorkflowRunFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -21,6 +23,7 @@ public class ActionsListJobsForWorkflowRunRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListJobsForWorkflowRunRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -31,6 +34,7 @@ public class ActionsListJobsForWorkflowRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListJobsForWorkflowRunRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -41,6 +45,7 @@ public class ActionsListJobsForWorkflowRunRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListJobsForWorkflowRunRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -48,6 +53,7 @@ public class ActionsListJobsForWorkflowRunRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListJobsForWorkflowRunRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -58,9 +64,15 @@ public class ActionsListJobsForWorkflowRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=run_id")
     public Long runId;
+
     public ActionsListJobsForWorkflowRunRequest withRunId(Long runId) {
         this.runId = runId;
         return this;
     }
     
+    public ActionsListJobsForWorkflowRunRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("run_id") Long runId) {
+        this.owner = owner;
+        this.repo = repo;
+        this.runId = runId;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayMulticastDomainsRequest {
     
     public Boolean dryRun;
+
     public DescribeTransitGatewayMulticastDomainsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeTransitGatewayMulticastDomainsRequest {
     
     
     public DescribeTransitGatewayMulticastDomainsRequestFilters[] filters;
+
     public DescribeTransitGatewayMulticastDomainsRequest withFilters(DescribeTransitGatewayMulticastDomainsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeTransitGatewayMulticastDomainsRequest {
     
     
     public Long maxResults;
+
     public DescribeTransitGatewayMulticastDomainsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeTransitGatewayMulticastDomainsRequest {
     
     
     public String nextToken;
+
     public DescribeTransitGatewayMulticastDomainsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeTransitGatewayMulticastDomainsRequest {
     
     
     public String[] transitGatewayMulticastDomainIds;
+
     public DescribeTransitGatewayMulticastDomainsRequest withTransitGatewayMulticastDomainIds(String[] transitGatewayMulticastDomainIds) {
         this.transitGatewayMulticastDomainIds = transitGatewayMulticastDomainIds;
         return this;
     }
     
+    public DescribeTransitGatewayMulticastDomainsRequest(){}
 }

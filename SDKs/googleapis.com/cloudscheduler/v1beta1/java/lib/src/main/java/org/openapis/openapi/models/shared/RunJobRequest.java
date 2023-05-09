@@ -18,9 +18,11 @@ public class RunJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyAppEngineCron")
     public Boolean legacyAppEngineCron;
+
     public RunJobRequest withLegacyAppEngineCron(Boolean legacyAppEngineCron) {
         this.legacyAppEngineCron = legacyAppEngineCron;
         return this;
     }
     
+    public RunJobRequest(){}
 }

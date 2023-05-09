@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ImportVolumeRequestVolume - The volume size.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ImportVolumeRequestVolume {
     
     public Long size;
+
     public ImportVolumeRequestVolume withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public ImportVolumeRequestVolume(@JsonProperty("Size") Long size) {
+        this.size = size;
+  }
 }

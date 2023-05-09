@@ -15,6 +15,7 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentRestoreRateInMegaBytesPerSecond")
     public Double currentRestoreRateInMegaBytesPerSecond;
+
     public AwsRedshiftClusterRestoreStatus withCurrentRestoreRateInMegaBytesPerSecond(Double currentRestoreRateInMegaBytesPerSecond) {
         this.currentRestoreRateInMegaBytesPerSecond = currentRestoreRateInMegaBytesPerSecond;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElapsedTimeInSeconds")
     public Long elapsedTimeInSeconds;
+
     public AwsRedshiftClusterRestoreStatus withElapsedTimeInSeconds(Long elapsedTimeInSeconds) {
         this.elapsedTimeInSeconds = elapsedTimeInSeconds;
         return this;
@@ -31,6 +33,7 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeToCompletionInSeconds")
     public Long estimatedTimeToCompletionInSeconds;
+
     public AwsRedshiftClusterRestoreStatus withEstimatedTimeToCompletionInSeconds(Long estimatedTimeToCompletionInSeconds) {
         this.estimatedTimeToCompletionInSeconds = estimatedTimeToCompletionInSeconds;
         return this;
@@ -39,6 +42,7 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressInMegaBytes")
     public Long progressInMegaBytes;
+
     public AwsRedshiftClusterRestoreStatus withProgressInMegaBytes(Long progressInMegaBytes) {
         this.progressInMegaBytes = progressInMegaBytes;
         return this;
@@ -47,6 +51,7 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotSizeInMegaBytes")
     public Long snapshotSizeInMegaBytes;
+
     public AwsRedshiftClusterRestoreStatus withSnapshotSizeInMegaBytes(Long snapshotSizeInMegaBytes) {
         this.snapshotSizeInMegaBytes = snapshotSizeInMegaBytes;
         return this;
@@ -55,9 +60,11 @@ public class AwsRedshiftClusterRestoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRedshiftClusterRestoreStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRedshiftClusterRestoreStatus(){}
 }

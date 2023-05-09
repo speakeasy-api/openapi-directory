@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmUserDeviceProfilesResponse {
     
     public String contentType;
+
     public GetNetworkSmUserDeviceProfilesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmUserDeviceProfilesResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmUserDeviceProfilesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmUserDeviceProfilesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmUserDeviceProfilesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSmUserDeviceProfilesResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmUserDeviceProfiles200ApplicationJSONObjects;
+
     public GetNetworkSmUserDeviceProfilesResponse withGetNetworkSmUserDeviceProfiles200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmUserDeviceProfiles200ApplicationJSONObjects) {
         this.getNetworkSmUserDeviceProfiles200ApplicationJSONObjects = getNetworkSmUserDeviceProfiles200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmUserDeviceProfilesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

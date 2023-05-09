@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmDesktopLogsResponse {
     
     public String contentType;
+
     public GetNetworkSmDesktopLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmDesktopLogsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetNetworkSmDesktopLogsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmDesktopLogsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmDesktopLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetNetworkSmDesktopLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmDesktopLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetNetworkSmDesktopLogsResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmDesktopLogs200ApplicationJSONObjects;
+
     public GetNetworkSmDesktopLogsResponse withGetNetworkSmDesktopLogs200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmDesktopLogs200ApplicationJSONObjects) {
         this.getNetworkSmDesktopLogs200ApplicationJSONObjects = getNetworkSmDesktopLogs200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmDesktopLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

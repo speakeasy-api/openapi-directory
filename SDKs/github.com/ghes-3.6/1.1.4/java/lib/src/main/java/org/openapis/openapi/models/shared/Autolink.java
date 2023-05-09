@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Autolink {
     @JsonProperty("id")
     public Long id;
+
     public Autolink withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class Autolink {
      */
     @JsonProperty("key_prefix")
     public String keyPrefix;
+
     public Autolink withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -32,9 +34,15 @@ public class Autolink {
      */
     @JsonProperty("url_template")
     public String urlTemplate;
+
     public Autolink withUrlTemplate(String urlTemplate) {
         this.urlTemplate = urlTemplate;
         return this;
     }
     
+    public Autolink(@JsonProperty("id") Long id, @JsonProperty("key_prefix") String keyPrefix, @JsonProperty("url_template") String urlTemplate) {
+        this.id = id;
+        this.keyPrefix = keyPrefix;
+        this.urlTemplate = urlTemplate;
+  }
 }

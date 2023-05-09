@@ -18,6 +18,7 @@ public class CreativeGroupAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeGroupId")
     public String creativeGroupId;
+
     public CreativeGroupAssignment withCreativeGroupId(String creativeGroupId) {
         this.creativeGroupId = creativeGroupId;
         return this;
@@ -29,9 +30,11 @@ public class CreativeGroupAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeGroupNumber")
     public CreativeGroupAssignmentCreativeGroupNumberEnum creativeGroupNumber;
+
     public CreativeGroupAssignment withCreativeGroupNumber(CreativeGroupAssignmentCreativeGroupNumberEnum creativeGroupNumber) {
         this.creativeGroupNumber = creativeGroupNumber;
         return this;
     }
     
+    public CreativeGroupAssignment(){}
 }

@@ -18,9 +18,11 @@ public class InstancesTruncateLogRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncateLogContext")
     public TruncateLogContext truncateLogContext;
+
     public InstancesTruncateLogRequest withTruncateLogContext(TruncateLogContext truncateLogContext) {
         this.truncateLogContext = truncateLogContext;
         return this;
     }
     
+    public InstancesTruncateLogRequest(){}
 }

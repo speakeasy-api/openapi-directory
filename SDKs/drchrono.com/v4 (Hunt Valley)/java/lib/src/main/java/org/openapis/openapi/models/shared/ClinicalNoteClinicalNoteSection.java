@@ -12,6 +12,7 @@ public class ClinicalNoteClinicalNoteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clinical_note_template")
     public Long clinicalNoteTemplate;
+
     public ClinicalNoteClinicalNoteSection withClinicalNoteTemplate(Long clinicalNoteTemplate) {
         this.clinicalNoteTemplate = clinicalNoteTemplate;
         return this;
@@ -20,6 +21,7 @@ public class ClinicalNoteClinicalNoteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClinicalNoteClinicalNoteSection withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ClinicalNoteClinicalNoteSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public ClinicalNoteClinicalNoteSectionValue[] values;
+
     public ClinicalNoteClinicalNoteSection withValues(ClinicalNoteClinicalNoteSectionValue[] values) {
         this.values = values;
         return this;
     }
     
+    public ClinicalNoteClinicalNoteSection(){}
 }

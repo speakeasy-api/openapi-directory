@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SharedconnectionConnectionsDefaultApplicationJSON {
     @JsonProperty("code")
     public SharedconnectionConnectionsDefaultApplicationJSONCodeEnum code;
+
     public SharedconnectionConnectionsDefaultApplicationJSON withCode(SharedconnectionConnectionsDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -20,9 +21,14 @@ public class SharedconnectionConnectionsDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public SharedconnectionConnectionsDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SharedconnectionConnectionsDefaultApplicationJSON(@JsonProperty("code") SharedconnectionConnectionsDefaultApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

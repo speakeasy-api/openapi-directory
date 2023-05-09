@@ -12,6 +12,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("error")
     public PostPrimaryIpsCreatePrimaryIPResponseActionError error;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withError(PostPrimaryIpsCreatePrimaryIPResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("resources")
     public PostPrimaryIpsCreatePrimaryIPResponseActionResources[] resources;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withResources(PostPrimaryIpsCreatePrimaryIPResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostPrimaryIpsCreatePrimaryIPResponseAction {
      */
     @JsonProperty("status")
     public PostPrimaryIpsCreatePrimaryIPResponseActionStatusEnum status;
+
     public PostPrimaryIpsCreatePrimaryIPResponseAction withStatus(PostPrimaryIpsCreatePrimaryIPResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostPrimaryIpsCreatePrimaryIPResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostPrimaryIpsCreatePrimaryIPResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostPrimaryIpsCreatePrimaryIPResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

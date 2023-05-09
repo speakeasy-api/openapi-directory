@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePortfolioTemplateResponse {
     
     public String contentType;
+
     public CreatePortfolioTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreatePortfolioTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreatePortfolioTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreatePortfolioTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePortfolioTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate201ApplicationJSON createPortfolioTemplate201ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate201ApplicationJSONObject(CreatePortfolioTemplate201ApplicationJSON createPortfolioTemplate201ApplicationJSONObject) {
         this.createPortfolioTemplate201ApplicationJSONObject = createPortfolioTemplate201ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate400ApplicationJSON createPortfolioTemplate400ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate400ApplicationJSONObject(CreatePortfolioTemplate400ApplicationJSON createPortfolioTemplate400ApplicationJSONObject) {
         this.createPortfolioTemplate400ApplicationJSONObject = createPortfolioTemplate400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate401ApplicationJSON createPortfolioTemplate401ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate401ApplicationJSONObject(CreatePortfolioTemplate401ApplicationJSON createPortfolioTemplate401ApplicationJSONObject) {
         this.createPortfolioTemplate401ApplicationJSONObject = createPortfolioTemplate401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate403ApplicationJSON createPortfolioTemplate403ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate403ApplicationJSONObject(CreatePortfolioTemplate403ApplicationJSON createPortfolioTemplate403ApplicationJSONObject) {
         this.createPortfolioTemplate403ApplicationJSONObject = createPortfolioTemplate403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate404ApplicationJSON createPortfolioTemplate404ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate404ApplicationJSONObject(CreatePortfolioTemplate404ApplicationJSON createPortfolioTemplate404ApplicationJSONObject) {
         this.createPortfolioTemplate404ApplicationJSONObject = createPortfolioTemplate404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate429ApplicationJSON createPortfolioTemplate429ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate429ApplicationJSONObject(CreatePortfolioTemplate429ApplicationJSON createPortfolioTemplate429ApplicationJSONObject) {
         this.createPortfolioTemplate429ApplicationJSONObject = createPortfolioTemplate429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class CreatePortfolioTemplateResponse {
      */
     
     public CreatePortfolioTemplate500ApplicationJSON createPortfolioTemplate500ApplicationJSONObject;
+
     public CreatePortfolioTemplateResponse withCreatePortfolioTemplate500ApplicationJSONObject(CreatePortfolioTemplate500ApplicationJSON createPortfolioTemplate500ApplicationJSONObject) {
         this.createPortfolioTemplate500ApplicationJSONObject = createPortfolioTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public CreatePortfolioTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

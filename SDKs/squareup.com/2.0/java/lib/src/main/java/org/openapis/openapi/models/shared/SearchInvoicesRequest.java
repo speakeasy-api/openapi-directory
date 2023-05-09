@@ -21,6 +21,7 @@ public class SearchInvoicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchInvoicesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -33,6 +34,7 @@ public class SearchInvoicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public SearchInvoicesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -43,9 +45,13 @@ public class SearchInvoicesRequest {
      */
     @JsonProperty("query")
     public InvoiceQuery query;
+
     public SearchInvoicesRequest withQuery(InvoiceQuery query) {
         this.query = query;
         return this;
     }
     
+    public SearchInvoicesRequest(@JsonProperty("query") InvoiceQuery query) {
+        this.query = query;
+  }
 }

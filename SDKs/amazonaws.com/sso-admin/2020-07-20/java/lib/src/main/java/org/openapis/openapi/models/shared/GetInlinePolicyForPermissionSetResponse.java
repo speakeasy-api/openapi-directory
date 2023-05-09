@@ -15,9 +15,11 @@ public class GetInlinePolicyForPermissionSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InlinePolicy")
     public String inlinePolicy;
+
     public GetInlinePolicyForPermissionSetResponse withInlinePolicy(String inlinePolicy) {
         this.inlinePolicy = inlinePolicy;
         return this;
     }
     
+    public GetInlinePolicyForPermissionSetResponse(){}
 }

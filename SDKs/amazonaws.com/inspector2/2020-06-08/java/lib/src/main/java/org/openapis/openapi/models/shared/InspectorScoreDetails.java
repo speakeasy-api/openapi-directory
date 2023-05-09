@@ -15,9 +15,11 @@ public class InspectorScoreDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adjustedCvss")
     public CvssScoreDetails adjustedCvss;
+
     public InspectorScoreDetails withAdjustedCvss(CvssScoreDetails adjustedCvss) {
         this.adjustedCvss = adjustedCvss;
         return this;
     }
     
+    public InspectorScoreDetails(){}
 }

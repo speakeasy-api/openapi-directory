@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SelfManageResources {
     @JsonProperty("targetDestination")
     public SelfManageTargetDestinationEnum[] targetDestination;
+
     public SelfManageResources withTargetDestination(SelfManageTargetDestinationEnum[] targetDestination) {
         this.targetDestination = targetDestination;
         return this;
     }
     
+    public SelfManageResources(@JsonProperty("targetDestination") SelfManageTargetDestinationEnum[] targetDestination) {
+        this.targetDestination = targetDestination;
+  }
 }

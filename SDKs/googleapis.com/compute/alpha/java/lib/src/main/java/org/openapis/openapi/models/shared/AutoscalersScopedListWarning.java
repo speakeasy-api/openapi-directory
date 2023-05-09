@@ -18,6 +18,7 @@ public class AutoscalersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AutoscalersScopedListWarningCodeEnum code;
+
     public AutoscalersScopedListWarning withCode(AutoscalersScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AutoscalersScopedListWarningData[] data;
+
     public AutoscalersScopedListWarning withData(AutoscalersScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class AutoscalersScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AutoscalersScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AutoscalersScopedListWarning(){}
 }

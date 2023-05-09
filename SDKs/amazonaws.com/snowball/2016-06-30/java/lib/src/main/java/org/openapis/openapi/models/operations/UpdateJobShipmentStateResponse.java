@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateJobShipmentStateResponse {
     
     public String contentType;
+
     public UpdateJobShipmentStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateJobShipmentStateResponse {
      */
     
     public Object invalidJobStateException;
+
     public UpdateJobShipmentStateResponse withInvalidJobStateException(Object invalidJobStateException) {
         this.invalidJobStateException = invalidJobStateException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateJobShipmentStateResponse {
      */
     
     public Object invalidResourceException;
+
     public UpdateJobShipmentStateResponse withInvalidResourceException(Object invalidResourceException) {
         this.invalidResourceException = invalidResourceException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateJobShipmentStateResponse {
     
     
     public Integer statusCode;
+
     public UpdateJobShipmentStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateJobShipmentStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateJobShipmentStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateJobShipmentStateResponse {
      */
     
     public java.util.Map<String, Object> updateJobShipmentStateResult;
+
     public UpdateJobShipmentStateResponse withUpdateJobShipmentStateResult(java.util.Map<String, Object> updateJobShipmentStateResult) {
         this.updateJobShipmentStateResult = updateJobShipmentStateResult;
         return this;
     }
     
+    public UpdateJobShipmentStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

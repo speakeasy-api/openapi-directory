@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveFilesTouchRequest {
@@ -12,6 +13,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveFilesTouchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveFilesTouchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DriveFilesTouchRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -42,6 +46,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLabels")
     public String includeLabels;
+
     public DriveFilesTouchRequest withIncludeLabels(String includeLabels) {
         this.includeLabels = includeLabels;
         return this;
@@ -52,6 +57,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includePermissionsForView")
     public String includePermissionsForView;
+
     public DriveFilesTouchRequest withIncludePermissionsForView(String includePermissionsForView) {
         this.includePermissionsForView = includePermissionsForView;
         return this;
@@ -62,6 +68,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveFilesTouchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveFilesTouchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveFilesTouchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -92,6 +101,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveFilesTouchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -102,6 +112,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DriveFilesTouchRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -112,6 +123,7 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DriveFilesTouchRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -122,9 +134,13 @@ public class DriveFilesTouchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveFilesTouchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveFilesTouchRequest(@JsonProperty("fileId") String fileId) {
+        this.fileId = fileId;
+  }
 }

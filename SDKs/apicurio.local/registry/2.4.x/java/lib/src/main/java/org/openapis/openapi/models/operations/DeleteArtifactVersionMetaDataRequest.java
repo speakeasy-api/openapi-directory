@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteArtifactVersionMetaDataRequest {
@@ -12,6 +13,7 @@ public class DeleteArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public DeleteArtifactVersionMetaDataRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public String groupId;
+
     public DeleteArtifactVersionMetaDataRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteArtifactVersionMetaDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public DeleteArtifactVersionMetaDataRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DeleteArtifactVersionMetaDataRequest(@JsonProperty("artifactId") String artifactId, @JsonProperty("groupId") String groupId, @JsonProperty("version") String version) {
+        this.artifactId = artifactId;
+        this.groupId = groupId;
+        this.version = version;
+  }
 }

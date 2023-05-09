@@ -18,6 +18,7 @@ public class ContentStreamTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentStreamType")
     public ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum contentStreamType;
+
     public ContentStreamTypeAssignedTargetingOptionDetails withContentStreamType(ContentStreamTypeAssignedTargetingOptionDetailsContentStreamTypeEnum contentStreamType) {
         this.contentStreamType = contentStreamType;
         return this;
@@ -29,9 +30,11 @@ public class ContentStreamTypeAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public ContentStreamTypeAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public ContentStreamTypeAssignedTargetingOptionDetails(){}
 }

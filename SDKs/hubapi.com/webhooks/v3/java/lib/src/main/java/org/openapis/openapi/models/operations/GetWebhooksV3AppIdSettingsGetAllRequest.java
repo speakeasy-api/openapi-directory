@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWebhooksV3AppIdSettingsGetAllRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public GetWebhooksV3AppIdSettingsGetAllRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public GetWebhooksV3AppIdSettingsGetAllRequest(@JsonProperty("appId") Integer appId) {
+        this.appId = appId;
+  }
 }

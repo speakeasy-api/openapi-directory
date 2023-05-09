@@ -14,6 +14,7 @@ public class UpdateInputRequestBody {
      */
     @JsonProperty("inputDefinition")
     public UpdateInputRequestBodyInputDefinition inputDefinition;
+
     public UpdateInputRequestBody withInputDefinition(UpdateInputRequestBodyInputDefinition inputDefinition) {
         this.inputDefinition = inputDefinition;
         return this;
@@ -25,9 +26,13 @@ public class UpdateInputRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDescription")
     public String inputDescription;
+
     public UpdateInputRequestBody withInputDescription(String inputDescription) {
         this.inputDescription = inputDescription;
         return this;
     }
     
+    public UpdateInputRequestBody(@JsonProperty("inputDefinition") UpdateInputRequestBodyInputDefinition inputDefinition) {
+        this.inputDefinition = inputDefinition;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
@@ -12,6 +13,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=connectorName")
     public String connectorName;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -62,6 +68,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=debugOptions.enableDebugging")
     public Boolean debugOptionsEnableDebugging;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withDebugOptionsEnableDebugging(Boolean debugOptionsEnableDebugging) {
         this.debugOptionsEnableDebugging = debugOptionsEnableDebugging;
         return this;
@@ -72,6 +79,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mode")
     public CloudsearchIndexingDatasourcesItemsDeleteModeEnum mode;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withMode(CloudsearchIndexingDatasourcesItemsDeleteModeEnum mode) {
         this.mode = mode;
         return this;
@@ -102,6 +112,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +123,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -122,6 +134,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,9 +178,13 @@ public class CloudsearchIndexingDatasourcesItemsDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=version")
     public String version;
+
     public CloudsearchIndexingDatasourcesItemsDeleteRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CloudsearchIndexingDatasourcesItemsDeleteRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

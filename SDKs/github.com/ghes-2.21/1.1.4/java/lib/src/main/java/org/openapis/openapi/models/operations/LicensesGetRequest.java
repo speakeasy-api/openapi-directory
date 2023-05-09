@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LicensesGetRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=license")
     public String license;
+
     public LicensesGetRequest withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public LicensesGetRequest(@JsonProperty("license") String license) {
+        this.license = license;
+  }
 }

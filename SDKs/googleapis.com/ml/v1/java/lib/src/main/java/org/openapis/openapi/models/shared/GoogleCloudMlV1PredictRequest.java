@@ -18,9 +18,11 @@ public class GoogleCloudMlV1PredictRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpBody")
     public GoogleApiHttpBody httpBody;
+
     public GoogleCloudMlV1PredictRequest withHttpBody(GoogleApiHttpBody httpBody) {
         this.httpBody = httpBody;
         return this;
     }
     
+    public GoogleCloudMlV1PredictRequest(){}
 }

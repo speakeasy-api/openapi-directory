@@ -18,6 +18,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AccessConfig withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIp")
     public String natIp;
+
     public AccessConfig withNatIp(String natIp) {
         this.natIp = natIp;
         return this;
@@ -40,9 +42,11 @@ public class AccessConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AccessConfig withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AccessConfig(){}
 }

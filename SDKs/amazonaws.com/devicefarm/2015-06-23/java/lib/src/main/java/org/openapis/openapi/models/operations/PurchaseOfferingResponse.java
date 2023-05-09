@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PurchaseOfferingResponse {
@@ -12,6 +13,7 @@ public class PurchaseOfferingResponse {
      */
     
     public Object argumentException;
+
     public PurchaseOfferingResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class PurchaseOfferingResponse {
     
     
     public String contentType;
+
     public PurchaseOfferingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PurchaseOfferingResponse {
      */
     
     public Object limitExceededException;
+
     public PurchaseOfferingResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PurchaseOfferingResponse {
      */
     
     public Object notEligibleException;
+
     public PurchaseOfferingResponse withNotEligibleException(Object notEligibleException) {
         this.notEligibleException = notEligibleException;
         return this;
@@ -49,6 +54,7 @@ public class PurchaseOfferingResponse {
      */
     
     public Object notFoundException;
+
     public PurchaseOfferingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PurchaseOfferingResponse {
      */
     
     public org.openapis.openapi.models.shared.PurchaseOfferingResult purchaseOfferingResult;
+
     public PurchaseOfferingResponse withPurchaseOfferingResult(org.openapis.openapi.models.shared.PurchaseOfferingResult purchaseOfferingResult) {
         this.purchaseOfferingResult = purchaseOfferingResult;
         return this;
@@ -69,6 +76,7 @@ public class PurchaseOfferingResponse {
      */
     
     public Object serviceAccountException;
+
     public PurchaseOfferingResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -76,6 +84,7 @@ public class PurchaseOfferingResponse {
     
     
     public Integer statusCode;
+
     public PurchaseOfferingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PurchaseOfferingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PurchaseOfferingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PurchaseOfferingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

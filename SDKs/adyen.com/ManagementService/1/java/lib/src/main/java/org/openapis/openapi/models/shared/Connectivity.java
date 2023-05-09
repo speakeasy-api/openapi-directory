@@ -19,9 +19,11 @@ public class Connectivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simcardStatus")
     public ConnectivitySimcardStatusEnum simcardStatus;
+
     public Connectivity withSimcardStatus(ConnectivitySimcardStatusEnum simcardStatus) {
         this.simcardStatus = simcardStatus;
         return this;
     }
     
+    public Connectivity(){}
 }

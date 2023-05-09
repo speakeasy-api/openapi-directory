@@ -14,6 +14,7 @@ public class ReposMergeRequestBody {
      */
     @JsonProperty("base")
     public String base;
+
     public ReposMergeRequestBody withBase(String base) {
         this.base = base;
         return this;
@@ -25,6 +26,7 @@ public class ReposMergeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_message")
     public String commitMessage;
+
     public ReposMergeRequestBody withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -35,9 +37,14 @@ public class ReposMergeRequestBody {
      */
     @JsonProperty("head")
     public String head;
+
     public ReposMergeRequestBody withHead(String head) {
         this.head = head;
         return this;
     }
     
+    public ReposMergeRequestBody(@JsonProperty("base") String base, @JsonProperty("head") String head) {
+        this.base = base;
+        this.head = head;
+  }
 }

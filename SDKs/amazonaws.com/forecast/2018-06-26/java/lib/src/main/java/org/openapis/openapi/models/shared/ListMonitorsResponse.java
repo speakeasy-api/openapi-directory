@@ -15,6 +15,7 @@ public class ListMonitorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Monitors")
     public MonitorSummary[] monitors;
+
     public ListMonitorsResponse withMonitors(MonitorSummary[] monitors) {
         this.monitors = monitors;
         return this;
@@ -23,9 +24,11 @@ public class ListMonitorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitorsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitorsResponse(){}
 }

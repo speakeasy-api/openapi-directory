@@ -18,6 +18,7 @@ public class PartitionQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public PartitionQueryRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class PartitionQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public PartitionQueryRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,6 +42,7 @@ public class PartitionQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionCount")
     public String partitionCount;
+
     public PartitionQueryRequest withPartitionCount(String partitionCount) {
         this.partitionCount = partitionCount;
         return this;
@@ -51,6 +54,7 @@ public class PartitionQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public PartitionQueryRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -62,9 +66,11 @@ public class PartitionQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredQuery")
     public StructuredQuery structuredQuery;
+
     public PartitionQueryRequest withStructuredQuery(StructuredQuery structuredQuery) {
         this.structuredQuery = structuredQuery;
         return this;
     }
     
+    public PartitionQueryRequest(){}
 }

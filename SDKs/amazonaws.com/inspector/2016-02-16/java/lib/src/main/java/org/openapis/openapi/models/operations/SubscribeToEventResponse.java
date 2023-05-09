@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubscribeToEventResponse {
@@ -12,6 +13,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object accessDeniedException;
+
     public SubscribeToEventResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class SubscribeToEventResponse {
     
     
     public String contentType;
+
     public SubscribeToEventResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object internalException;
+
     public SubscribeToEventResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object invalidInputException;
+
     public SubscribeToEventResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object limitExceededException;
+
     public SubscribeToEventResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object noSuchEntityException;
+
     public SubscribeToEventResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -69,6 +76,7 @@ public class SubscribeToEventResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public SubscribeToEventResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class SubscribeToEventResponse {
     
     
     public Integer statusCode;
+
     public SubscribeToEventResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class SubscribeToEventResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubscribeToEventResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SubscribeToEventResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

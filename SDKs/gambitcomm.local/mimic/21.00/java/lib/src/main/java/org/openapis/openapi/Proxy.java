@@ -52,11 +52,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolProxyGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetConfigResponse(contentType, httpRes.statusCode()) {{
             configPROXY = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolProxyGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolProxyGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolProxyGetTraceResponse(contentType, httpRes.statusCode()) {{
             configPROXY = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortAddResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortAddResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortAddResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortAddResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortAdd200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortIsstartedResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortIsstarted200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +328,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortListResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortListResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortListResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortList200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortRemoveResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortRemoveResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortRemoveResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortRemoveResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortRemove200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,11 +407,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortStartResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortStartResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortStartResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortStartResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortStart200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -466,11 +446,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxyPortStopResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortStopResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxyPortStopResponse res = new org.openapis.openapi.models.operations.ProtocolProxyPortStopResponse(contentType, httpRes.statusCode()) {{
             protocolProxyPortStop200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -507,11 +485,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxySetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolProxySetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxySetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolProxySetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolProxySetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -548,11 +524,9 @@ public class Proxy {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolProxySetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolProxySetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolProxySetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolProxySetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolProxySetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

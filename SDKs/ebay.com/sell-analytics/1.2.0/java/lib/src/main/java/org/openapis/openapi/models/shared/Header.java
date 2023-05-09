@@ -18,6 +18,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionKeys")
     public Definition[] dimensionKeys;
+
     public Header withDimensionKeys(Definition[] dimensionKeys) {
         this.dimensionKeys = dimensionKeys;
         return this;
@@ -29,9 +30,11 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Definition[] metrics;
+
     public Header withMetrics(Definition[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public Header(){}
 }

@@ -15,9 +15,11 @@ public class DeleteDBClusterResult {
      */
     
     public DBCluster dbCluster;
+
     public DeleteDBClusterResult withDBCluster(DBCluster dbCluster) {
         this.dbCluster = dbCluster;
         return this;
     }
     
+    public DeleteDBClusterResult(){}
 }

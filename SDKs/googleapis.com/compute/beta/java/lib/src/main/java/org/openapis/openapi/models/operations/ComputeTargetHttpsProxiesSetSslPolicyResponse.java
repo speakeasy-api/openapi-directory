@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeTargetHttpsProxiesSetSslPolicyResponse {
     
     public String contentType;
+
     public ComputeTargetHttpsProxiesSetSslPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeTargetHttpsProxiesSetSslPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public ComputeTargetHttpsProxiesSetSslPolicyResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class ComputeTargetHttpsProxiesSetSslPolicyResponse {
     
     
     public Integer statusCode;
+
     public ComputeTargetHttpsProxiesSetSslPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeTargetHttpsProxiesSetSslPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeTargetHttpsProxiesSetSslPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeTargetHttpsProxiesSetSslPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

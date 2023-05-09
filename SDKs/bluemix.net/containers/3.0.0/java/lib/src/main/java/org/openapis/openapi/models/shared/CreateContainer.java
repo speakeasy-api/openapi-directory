@@ -18,6 +18,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BluemixApp")
     public String bluemixApp;
+
     public CreateContainer withBluemixApp(String bluemixApp) {
         this.bluemixApp = bluemixApp;
         return this;
@@ -30,6 +31,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cmd")
     public String[] cmd;
+
     public CreateContainer withCmd(String[] cmd) {
         this.cmd = cmd;
         return this;
@@ -41,6 +43,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpuset")
     public String cpuset;
+
     public CreateContainer withCpuset(String cpuset) {
         this.cpuset = cpuset;
         return this;
@@ -52,6 +55,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Env")
     public String[] env;
+
     public CreateContainer withEnv(String[] env) {
         this.env = env;
         return this;
@@ -63,6 +67,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExposedPorts")
     public String[] exposedPorts;
+
     public CreateContainer withExposedPorts(String[] exposedPorts) {
         this.exposedPorts = exposedPorts;
         return this;
@@ -71,6 +76,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostConfig")
     public HostConfig hostConfig;
+
     public CreateContainer withHostConfig(HostConfig hostConfig) {
         this.hostConfig = hostConfig;
         return this;
@@ -81,6 +87,7 @@ public class CreateContainer {
      */
     @JsonProperty("Image")
     public String image;
+
     public CreateContainer withImage(String image) {
         this.image = image;
         return this;
@@ -92,6 +99,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Integer memory;
+
     public CreateContainer withMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -103,6 +111,7 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberCpus")
     public Integer numberCpus;
+
     public CreateContainer withNumberCpus(Integer numberCpus) {
         this.numberCpus = numberCpus;
         return this;
@@ -114,9 +123,13 @@ public class CreateContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public String volumes;
+
     public CreateContainer withVolumes(String volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public CreateContainer(@JsonProperty("Image") String image) {
+        this.image = image;
+  }
 }

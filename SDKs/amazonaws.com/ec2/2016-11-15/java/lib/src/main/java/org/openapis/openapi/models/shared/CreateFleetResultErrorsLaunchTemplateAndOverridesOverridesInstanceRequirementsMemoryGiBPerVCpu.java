@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu {
     
     public Double max;
+
     public CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu withMax(Double max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceR
     
     
     public Double min;
+
     public CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public CreateFleetResultErrorsLaunchTemplateAndOverridesOverridesInstanceRequirementsMemoryGiBPerVCpu(){}
 }

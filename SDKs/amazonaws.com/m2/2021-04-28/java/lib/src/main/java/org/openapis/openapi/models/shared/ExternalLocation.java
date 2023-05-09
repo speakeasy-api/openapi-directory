@@ -15,9 +15,11 @@ public class ExternalLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Location")
     public String s3Location;
+
     public ExternalLocation withS3Location(String s3Location) {
         this.s3Location = s3Location;
         return this;
     }
     
+    public ExternalLocation(){}
 }

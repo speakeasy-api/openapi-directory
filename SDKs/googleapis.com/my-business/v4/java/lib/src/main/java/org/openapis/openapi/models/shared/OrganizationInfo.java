@@ -18,6 +18,7 @@ public class OrganizationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public OrganizationInfo withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -29,6 +30,7 @@ public class OrganizationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalAddress")
     public PostalAddress postalAddress;
+
     public OrganizationInfo withPostalAddress(PostalAddress postalAddress) {
         this.postalAddress = postalAddress;
         return this;
@@ -40,9 +42,11 @@ public class OrganizationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredDomain")
     public String registeredDomain;
+
     public OrganizationInfo withRegisteredDomain(String registeredDomain) {
         this.registeredDomain = registeredDomain;
         return this;
     }
     
+    public OrganizationInfo(){}
 }

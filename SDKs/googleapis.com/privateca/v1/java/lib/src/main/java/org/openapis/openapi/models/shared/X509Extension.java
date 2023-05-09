@@ -18,6 +18,7 @@ public class X509Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("critical")
     public Boolean critical;
+
     public X509Extension withCritical(Boolean critical) {
         this.critical = critical;
         return this;
@@ -29,6 +30,7 @@ public class X509Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public ObjectId objectId;
+
     public X509Extension withObjectId(ObjectId objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class X509Extension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public X509Extension withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public X509Extension(){}
 }

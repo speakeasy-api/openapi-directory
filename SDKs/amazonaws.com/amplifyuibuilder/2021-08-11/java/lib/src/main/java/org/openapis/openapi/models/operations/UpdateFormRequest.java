@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateFormRequestBody requestBody;
+
     public UpdateFormRequest withRequestBody(UpdateFormRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateFormRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateFormRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateFormRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateFormRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateFormRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateFormRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateFormRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public String appId;
+
     public UpdateFormRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -78,6 +88,7 @@ public class UpdateFormRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientToken")
     public String clientToken;
+
     public UpdateFormRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -88,6 +99,7 @@ public class UpdateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentName")
     public String environmentName;
+
     public UpdateFormRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -98,9 +110,16 @@ public class UpdateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateFormRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateFormRequest(@JsonProperty("RequestBody") UpdateFormRequestBody requestBody, @JsonProperty("appId") String appId, @JsonProperty("environmentName") String environmentName, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.appId = appId;
+        this.environmentName = environmentName;
+        this.id = id;
+  }
 }

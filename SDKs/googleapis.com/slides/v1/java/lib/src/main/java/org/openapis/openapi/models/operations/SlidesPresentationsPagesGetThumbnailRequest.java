@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SlidesPresentationsPagesGetThumbnailRequest {
@@ -12,6 +13,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SlidesPresentationsPagesGetThumbnailRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SlidesPresentationsPagesGetThumbnailRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SlidesPresentationsPagesGetThumbnailRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SlidesPresentationsPagesGetThumbnailRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SlidesPresentationsPagesGetThumbnailRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SlidesPresentationsPagesGetThumbnailRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SlidesPresentationsPagesGetThumbnailRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageObjectId")
     public String pageObjectId;
+
     public SlidesPresentationsPagesGetThumbnailRequest withPageObjectId(String pageObjectId) {
         this.pageObjectId = pageObjectId;
         return this;
@@ -92,6 +101,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=presentationId")
     public String presentationId;
+
     public SlidesPresentationsPagesGetThumbnailRequest withPresentationId(String presentationId) {
         this.presentationId = presentationId;
         return this;
@@ -102,6 +112,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SlidesPresentationsPagesGetThumbnailRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SlidesPresentationsPagesGetThumbnailRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbnailProperties.mimeType")
     public SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum thumbnailPropertiesMimeType;
+
     public SlidesPresentationsPagesGetThumbnailRequest withThumbnailPropertiesMimeType(SlidesPresentationsPagesGetThumbnailThumbnailPropertiesMimeTypeEnum thumbnailPropertiesMimeType) {
         this.thumbnailPropertiesMimeType = thumbnailPropertiesMimeType;
         return this;
@@ -132,6 +145,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=thumbnailProperties.thumbnailSize")
     public SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum thumbnailPropertiesThumbnailSize;
+
     public SlidesPresentationsPagesGetThumbnailRequest withThumbnailPropertiesThumbnailSize(SlidesPresentationsPagesGetThumbnailThumbnailPropertiesThumbnailSizeEnum thumbnailPropertiesThumbnailSize) {
         this.thumbnailPropertiesThumbnailSize = thumbnailPropertiesThumbnailSize;
         return this;
@@ -142,6 +156,7 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SlidesPresentationsPagesGetThumbnailRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,14 @@ public class SlidesPresentationsPagesGetThumbnailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SlidesPresentationsPagesGetThumbnailRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SlidesPresentationsPagesGetThumbnailRequest(@JsonProperty("pageObjectId") String pageObjectId, @JsonProperty("presentationId") String presentationId) {
+        this.pageObjectId = pageObjectId;
+        this.presentationId = presentationId;
+  }
 }

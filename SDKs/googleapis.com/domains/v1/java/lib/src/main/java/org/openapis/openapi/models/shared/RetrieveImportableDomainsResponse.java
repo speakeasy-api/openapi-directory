@@ -18,6 +18,7 @@ public class RetrieveImportableDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public Domain[] domains;
+
     public RetrieveImportableDomainsResponse withDomains(Domain[] domains) {
         this.domains = domains;
         return this;
@@ -29,9 +30,11 @@ public class RetrieveImportableDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public RetrieveImportableDomainsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public RetrieveImportableDomainsResponse(){}
 }

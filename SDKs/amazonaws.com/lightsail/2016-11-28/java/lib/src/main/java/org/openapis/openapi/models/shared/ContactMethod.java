@@ -20,6 +20,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ContactMethod withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactEndpoint")
     public String contactEndpoint;
+
     public ContactMethod withContactEndpoint(String contactEndpoint) {
         this.contactEndpoint = contactEndpoint;
         return this;
@@ -38,6 +40,7 @@ public class ContactMethod {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ContactMethod withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public ContactMethod withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -54,6 +58,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContactMethod withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public ContactProtocolEnum protocol;
+
     public ContactMethod withProtocol(ContactProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -70,6 +76,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public ContactMethod withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -78,6 +85,7 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ContactMethodStatusEnum status;
+
     public ContactMethod withStatus(ContactMethodStatusEnum status) {
         this.status = status;
         return this;
@@ -86,9 +94,11 @@ public class ContactMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public ContactMethod withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
     }
     
+    public ContactMethod(){}
 }

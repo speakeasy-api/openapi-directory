@@ -18,6 +18,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Version withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Version withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptId")
     public String scriptId;
+
     public Version withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
@@ -51,9 +54,11 @@ public class Version {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionNumber")
     public Integer versionNumber;
+
     public Version withVersionNumber(Integer versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public Version(){}
 }

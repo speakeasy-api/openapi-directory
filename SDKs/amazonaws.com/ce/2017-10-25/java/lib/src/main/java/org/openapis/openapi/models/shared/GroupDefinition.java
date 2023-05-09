@@ -15,6 +15,7 @@ public class GroupDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public GroupDefinition withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class GroupDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public GroupDefinitionTypeEnum type;
+
     public GroupDefinition withType(GroupDefinitionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GroupDefinition(){}
 }

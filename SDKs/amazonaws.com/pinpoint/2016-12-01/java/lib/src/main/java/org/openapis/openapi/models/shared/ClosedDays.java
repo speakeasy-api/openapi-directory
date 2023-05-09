@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ClosedDays - The time when journey will stop sending messages.
+ * ClosedDays - The time when a journey will not send messages. QuietTime should be configured first and SendingSchedule should be set to true.
  */
 public class ClosedDays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CUSTOM")
     public ClosedDaysRule[] custom;
+
     public ClosedDays withCustom(ClosedDaysRule[] custom) {
         this.custom = custom;
         return this;
@@ -23,6 +24,7 @@ public class ClosedDays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EMAIL")
     public ClosedDaysRule[] email;
+
     public ClosedDays withEmail(ClosedDaysRule[] email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class ClosedDays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PUSH")
     public ClosedDaysRule[] push;
+
     public ClosedDays withPush(ClosedDaysRule[] push) {
         this.push = push;
         return this;
@@ -39,6 +42,7 @@ public class ClosedDays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMS")
     public ClosedDaysRule[] sms;
+
     public ClosedDays withSms(ClosedDaysRule[] sms) {
         this.sms = sms;
         return this;
@@ -47,9 +51,11 @@ public class ClosedDays {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VOICE")
     public ClosedDaysRule[] voice;
+
     public ClosedDays withVoice(ClosedDaysRule[] voice) {
         this.voice = voice;
         return this;
     }
     
+    public ClosedDays(){}
 }

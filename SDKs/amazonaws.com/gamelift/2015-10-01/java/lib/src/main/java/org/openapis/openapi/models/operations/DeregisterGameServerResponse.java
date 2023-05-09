@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterGameServerResponse {
     
     public String contentType;
+
     public DeregisterGameServerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterGameServerResponse {
      */
     
     public Object internalServiceException;
+
     public DeregisterGameServerResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterGameServerResponse {
      */
     
     public Object invalidRequestException;
+
     public DeregisterGameServerResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterGameServerResponse {
      */
     
     public Object notFoundException;
+
     public DeregisterGameServerResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterGameServerResponse {
     
     
     public Integer statusCode;
+
     public DeregisterGameServerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeregisterGameServerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterGameServerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeregisterGameServerResponse {
      */
     
     public Object unauthorizedException;
+
     public DeregisterGameServerResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeregisterGameServerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

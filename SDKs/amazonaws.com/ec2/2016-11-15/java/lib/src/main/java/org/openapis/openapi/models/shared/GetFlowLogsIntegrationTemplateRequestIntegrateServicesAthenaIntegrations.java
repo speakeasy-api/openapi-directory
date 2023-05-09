@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations {
     
     public String integrationResultS3DestinationArn;
+
     public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations withIntegrationResultS3DestinationArn(String integrationResultS3DestinationArn) {
         this.integrationResultS3DestinationArn = integrationResultS3DestinationArn;
         return this;
@@ -19,6 +21,7 @@ public class GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegra
     
     
     public OffsetDateTime partitionEndDate;
+
     public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations withPartitionEndDate(OffsetDateTime partitionEndDate) {
         this.partitionEndDate = partitionEndDate;
         return this;
@@ -26,6 +29,7 @@ public class GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegra
     
     
     public PartitionLoadFrequencyEnum partitionLoadFrequency;
+
     public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations withPartitionLoadFrequency(PartitionLoadFrequencyEnum partitionLoadFrequency) {
         this.partitionLoadFrequency = partitionLoadFrequency;
         return this;
@@ -33,9 +37,14 @@ public class GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegra
     
     
     public OffsetDateTime partitionStartDate;
+
     public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations withPartitionStartDate(OffsetDateTime partitionStartDate) {
         this.partitionStartDate = partitionStartDate;
         return this;
     }
     
+    public GetFlowLogsIntegrationTemplateRequestIntegrateServicesAthenaIntegrations(@JsonProperty("IntegrationResultS3DestinationArn") String integrationResultS3DestinationArn, @JsonProperty("PartitionLoadFrequency") PartitionLoadFrequencyEnum partitionLoadFrequency) {
+        this.integrationResultS3DestinationArn = integrationResultS3DestinationArn;
+        this.partitionLoadFrequency = partitionLoadFrequency;
+  }
 }

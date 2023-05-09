@@ -15,6 +15,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Wave withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateTime")
     public String creationDateTime;
+
     public Wave withCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -31,6 +33,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Wave withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public Wave withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -47,6 +51,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDateTime")
     public String lastModifiedDateTime;
+
     public Wave withLastModifiedDateTime(String lastModifiedDateTime) {
         this.lastModifiedDateTime = lastModifiedDateTime;
         return this;
@@ -55,6 +60,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Wave withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Wave withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -71,6 +78,7 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveAggregatedStatus")
     public WaveAggregatedStatus waveAggregatedStatus;
+
     public Wave withWaveAggregatedStatus(WaveAggregatedStatus waveAggregatedStatus) {
         this.waveAggregatedStatus = waveAggregatedStatus;
         return this;
@@ -79,9 +87,11 @@ public class Wave {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveID")
     public String waveID;
+
     public Wave withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public Wave(){}
 }

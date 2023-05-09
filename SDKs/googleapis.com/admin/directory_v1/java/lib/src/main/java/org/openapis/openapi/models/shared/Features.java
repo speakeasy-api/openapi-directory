@@ -18,6 +18,7 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Features withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("features")
     public Feature[] features;
+
     public Features withFeatures(Feature[] features) {
         this.features = features;
         return this;
@@ -40,6 +42,7 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Features withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class Features {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public Features withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public Features(){}
 }

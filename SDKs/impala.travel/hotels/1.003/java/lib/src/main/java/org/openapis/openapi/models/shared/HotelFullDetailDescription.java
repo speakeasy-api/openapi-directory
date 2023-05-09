@@ -15,9 +15,11 @@ public class HotelFullDetailDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("short")
     public String short_;
+
     public HotelFullDetailDescription withShort(String short_) {
         this.short_ = short_;
         return this;
     }
     
+    public HotelFullDetailDescription(){}
 }

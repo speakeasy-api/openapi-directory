@@ -15,6 +15,7 @@ public class PostServersCreateServerResponseServerServerTypePricesPriceMonthly {
      */
     @JsonProperty("gross")
     public String gross;
+
     public PostServersCreateServerResponseServerServerTypePricesPriceMonthly withGross(String gross) {
         this.gross = gross;
         return this;
@@ -25,9 +26,14 @@ public class PostServersCreateServerResponseServerServerTypePricesPriceMonthly {
      */
     @JsonProperty("net")
     public String net;
+
     public PostServersCreateServerResponseServerServerTypePricesPriceMonthly withNet(String net) {
         this.net = net;
         return this;
     }
     
+    public PostServersCreateServerResponseServerServerTypePricesPriceMonthly(@JsonProperty("gross") String gross, @JsonProperty("net") String net) {
+        this.gross = gross;
+        this.net = net;
+  }
 }

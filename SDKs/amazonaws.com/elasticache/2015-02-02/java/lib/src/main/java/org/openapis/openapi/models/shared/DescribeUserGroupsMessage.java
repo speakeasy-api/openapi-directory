@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeUserGroupsMessage {
     
     public String marker;
+
     public DescribeUserGroupsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class DescribeUserGroupsMessage {
     
     
     public Long maxRecords;
+
     public DescribeUserGroupsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class DescribeUserGroupsMessage {
     
     
     public String userGroupId;
+
     public DescribeUserGroupsMessage withUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
     }
     
+    public DescribeUserGroupsMessage(){}
 }

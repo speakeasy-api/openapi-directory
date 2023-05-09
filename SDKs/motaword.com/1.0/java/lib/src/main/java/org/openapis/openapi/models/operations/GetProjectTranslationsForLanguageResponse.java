@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectTranslationsForLanguageResponse {
     
     public String contentType;
+
     public GetProjectTranslationsForLanguageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetProjectTranslationsForLanguageResponse {
     
     
     public Integer statusCode;
+
     public GetProjectTranslationsForLanguageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetProjectTranslationsForLanguageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectTranslationsForLanguageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetProjectTranslationsForLanguageResponse {
      */
     
     public org.openapis.openapi.models.shared.StringList stringList;
+
     public GetProjectTranslationsForLanguageResponse withStringList(org.openapis.openapi.models.shared.StringList stringList) {
         this.stringList = stringList;
         return this;
     }
     
+    public GetProjectTranslationsForLanguageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

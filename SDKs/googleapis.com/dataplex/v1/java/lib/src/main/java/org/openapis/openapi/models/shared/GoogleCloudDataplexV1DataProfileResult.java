@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public GoogleCloudDataplexV1DataProfileResultProfile profile;
+
     public GoogleCloudDataplexV1DataProfileResult withProfile(GoogleCloudDataplexV1DataProfileResultProfile profile) {
         this.profile = profile;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public String rowCount;
+
     public GoogleCloudDataplexV1DataProfileResult withRowCount(String rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1DataProfileResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scannedData")
     public GoogleCloudDataplexV1ScannedData scannedData;
+
     public GoogleCloudDataplexV1DataProfileResult withScannedData(GoogleCloudDataplexV1ScannedData scannedData) {
         this.scannedData = scannedData;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataProfileResult(){}
 }

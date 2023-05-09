@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTagsTagTopAnswerersPeriodResponse {
     
     public byte[] body;
+
     public GetTagsTagTopAnswerersPeriodResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetTagsTagTopAnswerersPeriodResponse {
     
     
     public String contentType;
+
     public GetTagsTagTopAnswerersPeriodResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetTagsTagTopAnswerersPeriodResponse {
     
     
     public Integer statusCode;
+
     public GetTagsTagTopAnswerersPeriodResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetTagsTagTopAnswerersPeriodResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTagsTagTopAnswerersPeriodResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTagsTagTopAnswerersPeriodResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

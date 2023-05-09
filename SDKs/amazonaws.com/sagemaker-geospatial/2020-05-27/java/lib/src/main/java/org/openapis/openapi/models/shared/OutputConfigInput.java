@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OutputConfigInput {
     @JsonProperty("S3Data")
     public ExportS3DataInput s3Data;
+
     public OutputConfigInput withS3Data(ExportS3DataInput s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public OutputConfigInput(@JsonProperty("S3Data") ExportS3DataInput s3Data) {
+        this.s3Data = s3Data;
+  }
 }

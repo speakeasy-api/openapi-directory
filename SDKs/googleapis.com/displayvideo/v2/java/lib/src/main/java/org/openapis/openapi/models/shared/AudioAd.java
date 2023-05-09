@@ -18,6 +18,7 @@ public class AudioAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayUrl")
     public String displayUrl;
+
     public AudioAd withDisplayUrl(String displayUrl) {
         this.displayUrl = displayUrl;
         return this;
@@ -29,6 +30,7 @@ public class AudioAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finalUrl")
     public String finalUrl;
+
     public AudioAd withFinalUrl(String finalUrl) {
         this.finalUrl = finalUrl;
         return this;
@@ -40,6 +42,7 @@ public class AudioAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public AudioAd withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
@@ -51,9 +54,11 @@ public class AudioAd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("video")
     public YoutubeVideoDetails video;
+
     public AudioAd withVideo(YoutubeVideoDetails video) {
         this.video = video;
         return this;
     }
     
+    public AudioAd(){}
 }

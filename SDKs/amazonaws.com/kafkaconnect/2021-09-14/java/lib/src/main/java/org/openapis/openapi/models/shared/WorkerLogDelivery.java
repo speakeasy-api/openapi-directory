@@ -15,6 +15,7 @@ public class WorkerLogDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public CloudWatchLogsLogDelivery cloudWatchLogs;
+
     public WorkerLogDelivery withCloudWatchLogs(CloudWatchLogsLogDelivery cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,6 +24,7 @@ public class WorkerLogDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firehose")
     public FirehoseLogDelivery firehose;
+
     public WorkerLogDelivery withFirehose(FirehoseLogDelivery firehose) {
         this.firehose = firehose;
         return this;
@@ -31,9 +33,11 @@ public class WorkerLogDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3")
     public S3LogDelivery s3;
+
     public WorkerLogDelivery withS3(S3LogDelivery s3) {
         this.s3 = s3;
         return this;
     }
     
+    public WorkerLogDelivery(){}
 }

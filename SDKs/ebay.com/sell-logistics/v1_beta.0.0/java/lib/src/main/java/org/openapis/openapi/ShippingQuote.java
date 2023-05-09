@@ -65,11 +65,9 @@ public class ShippingQuote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateShippingQuoteResponse res = new org.openapis.openapi.models.operations.CreateShippingQuoteResponse() {{
+        org.openapis.openapi.models.operations.CreateShippingQuoteResponse res = new org.openapis.openapi.models.operations.CreateShippingQuoteResponse(contentType, httpRes.statusCode()) {{
             shippingQuote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -107,11 +105,9 @@ public class ShippingQuote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetShippingQuoteResponse res = new org.openapis.openapi.models.operations.GetShippingQuoteResponse() {{
+        org.openapis.openapi.models.operations.GetShippingQuoteResponse res = new org.openapis.openapi.models.operations.GetShippingQuoteResponse(contentType, httpRes.statusCode()) {{
             shippingQuote = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

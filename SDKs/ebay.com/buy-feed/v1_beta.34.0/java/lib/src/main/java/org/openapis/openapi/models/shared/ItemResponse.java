@@ -18,9 +18,11 @@ public class ItemResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public ItemResponse withItems(Item[] items) {
         this.items = items;
         return this;
     }
     
+    public ItemResponse(){}
 }

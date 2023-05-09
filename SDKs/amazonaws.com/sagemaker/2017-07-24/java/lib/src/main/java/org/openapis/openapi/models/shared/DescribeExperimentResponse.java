@@ -20,6 +20,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeExperimentResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -30,6 +31,7 @@ public class DescribeExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeExperimentResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeExperimentResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeExperimentResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -54,6 +58,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentArn")
     public String experimentArn;
+
     public DescribeExperimentResponse withExperimentArn(String experimentArn) {
         this.experimentArn = experimentArn;
         return this;
@@ -62,6 +67,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public DescribeExperimentResponse withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -70,6 +76,7 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeExperimentResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -80,6 +87,7 @@ public class DescribeExperimentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeExperimentResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -88,9 +96,11 @@ public class DescribeExperimentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ExperimentSource source;
+
     public DescribeExperimentResponse withSource(ExperimentSource source) {
         this.source = source;
         return this;
     }
     
+    public DescribeExperimentResponse(){}
 }

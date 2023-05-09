@@ -15,9 +15,11 @@ public class StartResourceEvaluationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public StartResourceEvaluationResponse withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
     }
     
+    public StartResourceEvaluationResponse(){}
 }

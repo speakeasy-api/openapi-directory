@@ -18,6 +18,7 @@ public class ListMilestonesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MilestoneSummaries")
     public MilestoneSummary[] milestoneSummaries;
+
     public ListMilestonesOutput withMilestoneSummaries(MilestoneSummary[] milestoneSummaries) {
         this.milestoneSummaries = milestoneSummaries;
         return this;
@@ -29,6 +30,7 @@ public class ListMilestonesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMilestonesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -40,9 +42,11 @@ public class ListMilestonesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadId")
     public String workloadId;
+
     public ListMilestonesOutput withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
     }
     
+    public ListMilestonesOutput(){}
 }

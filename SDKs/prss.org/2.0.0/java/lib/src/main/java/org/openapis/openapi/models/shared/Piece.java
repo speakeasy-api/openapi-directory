@@ -23,6 +23,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contributor")
     public String contributor;
+
     public Piece withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -36,6 +37,7 @@ public class Piece {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Piece withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -47,6 +49,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Piece withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +60,7 @@ public class Piece {
      */
     @JsonProperty("episodeId")
     public Long episodeId;
+
     public Piece withEpisodeId(Long episodeId) {
         this.episodeId = episodeId;
         return this;
@@ -68,6 +72,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullDescription")
     public String fullDescription;
+
     public Piece withFullDescription(String fullDescription) {
         this.fullDescription = fullDescription;
         return this;
@@ -79,6 +84,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Piece withId(Long id) {
         this.id = id;
         return this;
@@ -90,6 +96,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageCdDriveUri")
     public String imageCdDriveUri;
+
     public Piece withImageCdDriveUri(String imageCdDriveUri) {
         this.imageCdDriveUri = imageCdDriveUri;
         return this;
@@ -101,6 +108,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileName")
     public String imageFileName;
+
     public Piece withImageFileName(String imageFileName) {
         this.imageFileName = imageFileName;
         return this;
@@ -112,6 +120,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageFileSize")
     public Long imageFileSize;
+
     public Piece withImageFileSize(Long imageFileSize) {
         this.imageFileSize = imageFileSize;
         return this;
@@ -123,6 +132,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageOriginalFileName")
     public String imageOriginalFileName;
+
     public Piece withImageOriginalFileName(String imageOriginalFileName) {
         this.imageOriginalFileName = imageOriginalFileName;
         return this;
@@ -136,6 +146,7 @@ public class Piece {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Piece withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -146,6 +157,7 @@ public class Piece {
      */
     @JsonProperty("relativeEndTime")
     public Integer relativeEndTime;
+
     public Piece withRelativeEndTime(Integer relativeEndTime) {
         this.relativeEndTime = relativeEndTime;
         return this;
@@ -156,6 +168,7 @@ public class Piece {
      */
     @JsonProperty("relativeStartTime")
     public Integer relativeStartTime;
+
     public Piece withRelativeStartTime(Integer relativeStartTime) {
         this.relativeStartTime = relativeStartTime;
         return this;
@@ -167,6 +180,7 @@ public class Piece {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentNumber")
     public Integer segmentNumber;
+
     public Piece withSegmentNumber(Integer segmentNumber) {
         this.segmentNumber = segmentNumber;
         return this;
@@ -177,9 +191,16 @@ public class Piece {
      */
     @JsonProperty("title")
     public String title;
+
     public Piece withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Piece(@JsonProperty("episodeId") Long episodeId, @JsonProperty("relativeEndTime") Integer relativeEndTime, @JsonProperty("relativeStartTime") Integer relativeStartTime, @JsonProperty("title") String title) {
+        this.episodeId = episodeId;
+        this.relativeEndTime = relativeEndTime;
+        this.relativeStartTime = relativeStartTime;
+        this.title = title;
+  }
 }

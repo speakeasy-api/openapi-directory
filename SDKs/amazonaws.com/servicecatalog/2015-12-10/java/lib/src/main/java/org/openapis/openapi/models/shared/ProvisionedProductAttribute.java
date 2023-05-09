@@ -20,6 +20,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public ProvisionedProductAttribute withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class ProvisionedProductAttribute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public ProvisionedProductAttribute withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ProvisionedProductAttribute withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public ProvisionedProductAttribute withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -54,6 +58,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastProvisioningRecordId")
     public String lastProvisioningRecordId;
+
     public ProvisionedProductAttribute withLastProvisioningRecordId(String lastProvisioningRecordId) {
         this.lastProvisioningRecordId = lastProvisioningRecordId;
         return this;
@@ -62,6 +67,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRecordId")
     public String lastRecordId;
+
     public ProvisionedProductAttribute withLastRecordId(String lastRecordId) {
         this.lastRecordId = lastRecordId;
         return this;
@@ -70,6 +76,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSuccessfulProvisioningRecordId")
     public String lastSuccessfulProvisioningRecordId;
+
     public ProvisionedProductAttribute withLastSuccessfulProvisioningRecordId(String lastSuccessfulProvisioningRecordId) {
         this.lastSuccessfulProvisioningRecordId = lastSuccessfulProvisioningRecordId;
         return this;
@@ -78,6 +85,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ProvisionedProductAttribute withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhysicalId")
     public String physicalId;
+
     public ProvisionedProductAttribute withPhysicalId(String physicalId) {
         this.physicalId = physicalId;
         return this;
@@ -94,6 +103,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductId")
     public String productId;
+
     public ProvisionedProductAttribute withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -102,6 +112,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public ProvisionedProductAttribute withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -110,6 +121,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ProvisionedProductAttribute withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -118,6 +130,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactName")
     public String provisioningArtifactName;
+
     public ProvisionedProductAttribute withProvisioningArtifactName(String provisioningArtifactName) {
         this.provisioningArtifactName = provisioningArtifactName;
         return this;
@@ -126,6 +139,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ProvisionedProductStatusEnum status;
+
     public ProvisionedProductAttribute withStatus(ProvisionedProductStatusEnum status) {
         this.status = status;
         return this;
@@ -134,6 +148,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ProvisionedProductAttribute withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -142,6 +157,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ProvisionedProductAttribute withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -150,6 +166,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ProvisionedProductAttribute withType(String type) {
         this.type = type;
         return this;
@@ -158,6 +175,7 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserArn")
     public String userArn;
+
     public ProvisionedProductAttribute withUserArn(String userArn) {
         this.userArn = userArn;
         return this;
@@ -166,9 +184,11 @@ public class ProvisionedProductAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserArnSession")
     public String userArnSession;
+
     public ProvisionedProductAttribute withUserArnSession(String userArnSession) {
         this.userArnSession = userArnSession;
         return this;
     }
     
+    public ProvisionedProductAttribute(){}
 }

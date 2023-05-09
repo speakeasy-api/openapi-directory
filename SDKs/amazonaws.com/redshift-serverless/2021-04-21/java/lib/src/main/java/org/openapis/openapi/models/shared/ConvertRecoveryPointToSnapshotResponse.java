@@ -15,9 +15,11 @@ public class ConvertRecoveryPointToSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshot")
     public Snapshot snapshot;
+
     public ConvertRecoveryPointToSnapshotResponse withSnapshot(Snapshot snapshot) {
         this.snapshot = snapshot;
         return this;
     }
     
+    public ConvertRecoveryPointToSnapshotResponse(){}
 }

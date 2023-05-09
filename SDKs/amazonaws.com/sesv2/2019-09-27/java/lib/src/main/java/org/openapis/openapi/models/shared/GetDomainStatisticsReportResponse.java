@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDomainStatisticsReportResponse {
     @JsonProperty("DailyVolumes")
     public DailyVolume[] dailyVolumes;
+
     public GetDomainStatisticsReportResponse withDailyVolumes(DailyVolume[] dailyVolumes) {
         this.dailyVolumes = dailyVolumes;
         return this;
@@ -19,9 +20,14 @@ public class GetDomainStatisticsReportResponse {
     
     @JsonProperty("OverallVolume")
     public OverallVolume overallVolume;
+
     public GetDomainStatisticsReportResponse withOverallVolume(OverallVolume overallVolume) {
         this.overallVolume = overallVolume;
         return this;
     }
     
+    public GetDomainStatisticsReportResponse(@JsonProperty("DailyVolumes") DailyVolume[] dailyVolumes, @JsonProperty("OverallVolume") OverallVolume overallVolume) {
+        this.dailyVolumes = dailyVolumes;
+        this.overallVolume = overallVolume;
+  }
 }

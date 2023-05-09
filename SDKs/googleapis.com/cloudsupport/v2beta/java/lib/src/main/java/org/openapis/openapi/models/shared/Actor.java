@@ -18,6 +18,7 @@ public class Actor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Actor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Actor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Actor withEmail(String email) {
         this.email = email;
         return this;
@@ -40,9 +42,11 @@ public class Actor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleSupport")
     public Boolean googleSupport;
+
     public Actor withGoogleSupport(Boolean googleSupport) {
         this.googleSupport = googleSupport;
         return this;
     }
     
+    public Actor(){}
 }

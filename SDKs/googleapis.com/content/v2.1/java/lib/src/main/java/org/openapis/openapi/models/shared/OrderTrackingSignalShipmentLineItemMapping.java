@@ -18,6 +18,7 @@ public class OrderTrackingSignalShipmentLineItemMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrderTrackingSignalShipmentLineItemMapping withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -29,6 +30,7 @@ public class OrderTrackingSignalShipmentLineItemMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public OrderTrackingSignalShipmentLineItemMapping withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -40,9 +42,11 @@ public class OrderTrackingSignalShipmentLineItemMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipmentId")
     public String shipmentId;
+
     public OrderTrackingSignalShipmentLineItemMapping withShipmentId(String shipmentId) {
         this.shipmentId = shipmentId;
         return this;
     }
     
+    public OrderTrackingSignalShipmentLineItemMapping(){}
 }

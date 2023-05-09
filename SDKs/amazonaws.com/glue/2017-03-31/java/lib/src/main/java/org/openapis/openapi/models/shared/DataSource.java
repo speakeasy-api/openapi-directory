@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataSource {
     @JsonProperty("GlueTable")
     public GlueTable glueTable;
+
     public DataSource withGlueTable(GlueTable glueTable) {
         this.glueTable = glueTable;
         return this;
     }
     
+    public DataSource(@JsonProperty("GlueTable") GlueTable glueTable) {
+        this.glueTable = glueTable;
+  }
 }

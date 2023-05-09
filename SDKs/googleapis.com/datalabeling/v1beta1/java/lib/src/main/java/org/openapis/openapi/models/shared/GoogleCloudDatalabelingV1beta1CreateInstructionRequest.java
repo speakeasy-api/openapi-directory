@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1CreateInstructionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instruction")
     public GoogleCloudDatalabelingV1beta1Instruction instruction;
+
     public GoogleCloudDatalabelingV1beta1CreateInstructionRequest withInstruction(GoogleCloudDatalabelingV1beta1Instruction instruction) {
         this.instruction = instruction;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1CreateInstructionRequest(){}
 }

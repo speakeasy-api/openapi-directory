@@ -15,6 +15,7 @@ public class AnalysisStatusUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeAnalysisStatus")
     public RuntimeAnalysisStatusEnum runtimeAnalysisStatus;
+
     public AnalysisStatusUnion withRuntimeAnalysisStatus(RuntimeAnalysisStatusEnum runtimeAnalysisStatus) {
         this.runtimeAnalysisStatus = runtimeAnalysisStatus;
         return this;
@@ -23,9 +24,11 @@ public class AnalysisStatusUnion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcCodeOrDbAnalysisStatus")
     public SrcCodeOrDbAnalysisStatusEnum srcCodeOrDbAnalysisStatus;
+
     public AnalysisStatusUnion withSrcCodeOrDbAnalysisStatus(SrcCodeOrDbAnalysisStatusEnum srcCodeOrDbAnalysisStatus) {
         this.srcCodeOrDbAnalysisStatus = srcCodeOrDbAnalysisStatus;
         return this;
     }
     
+    public AnalysisStatusUnion(){}
 }

@@ -14,6 +14,7 @@ public class PaymentLink {
     @JsonProperty("AccessToken")
     @SpeakeasyMetadata("form:name=AccessToken")
     public String accessToken;
+
     public PaymentLink withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class PaymentLink {
     @JsonProperty("Client")
     @SpeakeasyMetadata("form:name=Client,json")
     public Client client;
+
     public PaymentLink withClient(Client client) {
         this.client = client;
         return this;
@@ -32,6 +34,7 @@ public class PaymentLink {
     @JsonProperty("ClientId")
     @SpeakeasyMetadata("form:name=ClientId")
     public Integer clientId;
+
     public PaymentLink withClientId(Integer clientId) {
         this.clientId = clientId;
         return this;
@@ -41,6 +44,7 @@ public class PaymentLink {
     @JsonProperty("Currency")
     @SpeakeasyMetadata("form:name=Currency,json")
     public Currency currency;
+
     public PaymentLink withCurrency(Currency currency) {
         this.currency = currency;
         return this;
@@ -50,6 +54,7 @@ public class PaymentLink {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public PaymentLink withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -59,6 +64,7 @@ public class PaymentLink {
     @JsonProperty("DiscountAmount")
     @SpeakeasyMetadata("form:name=DiscountAmount")
     public Double discountAmount;
+
     public PaymentLink withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -68,6 +74,7 @@ public class PaymentLink {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public PaymentLink withId(Integer id) {
         this.id = id;
         return this;
@@ -77,6 +84,7 @@ public class PaymentLink {
     @JsonProperty("Invoice")
     @SpeakeasyMetadata("form:name=Invoice,json")
     public Invoice invoice;
+
     public PaymentLink withInvoice(Invoice invoice) {
         this.invoice = invoice;
         return this;
@@ -86,6 +94,7 @@ public class PaymentLink {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public PaymentLinkItem[] items;
+
     public PaymentLink withItems(PaymentLinkItem[] items) {
         this.items = items;
         return this;
@@ -95,6 +104,7 @@ public class PaymentLink {
     @JsonProperty("Number")
     @SpeakeasyMetadata("form:name=Number")
     public String number;
+
     public PaymentLink withNumber(String number) {
         this.number = number;
         return this;
@@ -104,6 +114,7 @@ public class PaymentLink {
     @JsonProperty("SubTotalAmount")
     @SpeakeasyMetadata("form:name=SubTotalAmount")
     public Double subTotalAmount;
+
     public PaymentLink withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -113,6 +124,7 @@ public class PaymentLink {
     @JsonProperty("TaxAmount")
     @SpeakeasyMetadata("form:name=TaxAmount")
     public Double taxAmount;
+
     public PaymentLink withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -122,6 +134,7 @@ public class PaymentLink {
     @JsonProperty("TotalAmount")
     @SpeakeasyMetadata("form:name=TotalAmount")
     public Double totalAmount;
+
     public PaymentLink withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -131,6 +144,7 @@ public class PaymentLink {
     @JsonProperty("User")
     @SpeakeasyMetadata("form:name=User,json")
     public User user;
+
     public PaymentLink withUser(User user) {
         this.user = user;
         return this;
@@ -140,9 +154,11 @@ public class PaymentLink {
     @JsonProperty("UserId")
     @SpeakeasyMetadata("form:name=UserId")
     public Integer userId;
+
     public PaymentLink withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PaymentLink(){}
 }

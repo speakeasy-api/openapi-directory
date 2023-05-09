@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetEvents200ApplicationJSON {
     @JsonProperty("data")
     public GetEvents200ApplicationJSONData[] data;
+
     public GetEvents200ApplicationJSON withData(GetEvents200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -19,9 +20,14 @@ public class GetEvents200ApplicationJSON {
     
     @JsonProperty("meta")
     public GetEvents200ApplicationJSONMeta meta;
+
     public GetEvents200ApplicationJSON withMeta(GetEvents200ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetEvents200ApplicationJSON(@JsonProperty("data") GetEvents200ApplicationJSONData[] data, @JsonProperty("meta") GetEvents200ApplicationJSONMeta meta) {
+        this.data = data;
+        this.meta = meta;
+  }
 }

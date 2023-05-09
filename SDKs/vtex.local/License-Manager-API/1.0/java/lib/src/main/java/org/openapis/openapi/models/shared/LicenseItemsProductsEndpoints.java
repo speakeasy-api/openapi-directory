@@ -12,6 +12,7 @@ public class LicenseItemsProductsEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consoleUrl")
     public String consoleUrl;
+
     public LicenseItemsProductsEndpoints withConsoleUrl(String consoleUrl) {
         this.consoleUrl = consoleUrl;
         return this;
@@ -20,9 +21,11 @@ public class LicenseItemsProductsEndpoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webApiUrl")
     public String webApiUrl;
+
     public LicenseItemsProductsEndpoints withWebApiUrl(String webApiUrl) {
         this.webApiUrl = webApiUrl;
         return this;
     }
     
+    public LicenseItemsProductsEndpoints(){}
 }

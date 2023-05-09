@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplicationCredential {
     @JsonProperty("CredentialType")
     public CredentialTypeEnum credentialType;
+
     public ApplicationCredential withCredentialType(CredentialTypeEnum credentialType) {
         this.credentialType = credentialType;
         return this;
@@ -19,6 +20,7 @@ public class ApplicationCredential {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public ApplicationCredential withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,9 +28,15 @@ public class ApplicationCredential {
     
     @JsonProperty("SecretId")
     public String secretId;
+
     public ApplicationCredential withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public ApplicationCredential(@JsonProperty("CredentialType") CredentialTypeEnum credentialType, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("SecretId") String secretId) {
+        this.credentialType = credentialType;
+        this.databaseName = databaseName;
+        this.secretId = secretId;
+  }
 }

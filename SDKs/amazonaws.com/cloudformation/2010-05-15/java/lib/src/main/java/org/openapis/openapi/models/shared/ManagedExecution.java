@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ManagedExecution {
     
     public Boolean active;
+
     public ManagedExecution withActive(Boolean active) {
         this.active = active;
         return this;
     }
     
+    public ManagedExecution(){}
 }

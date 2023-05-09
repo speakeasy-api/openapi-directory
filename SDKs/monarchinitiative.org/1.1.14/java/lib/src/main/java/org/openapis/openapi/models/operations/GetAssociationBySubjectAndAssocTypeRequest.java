@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssociationBySubjectAndAssocTypeRequest {
@@ -12,6 +13,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=association_type")
     public String associationType;
+
     public GetAssociationBySubjectAndAssocTypeRequest withAssociationType(String associationType) {
         this.associationType = associationType;
         return this;
@@ -22,6 +24,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=evidence")
     public String evidence;
+
     public GetAssociationBySubjectAndAssocTypeRequest withEvidence(String evidence) {
         this.evidence = evidence;
         return this;
@@ -32,6 +35,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetAssociationBySubjectAndAssocTypeRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -42,6 +46,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object")
     public String object;
+
     public GetAssociationBySubjectAndAssocTypeRequest withObject(String object) {
         this.object = object;
         return this;
@@ -52,6 +57,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetAssociationBySubjectAndAssocTypeRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -62,6 +68,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetAssociationBySubjectAndAssocTypeRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -72,6 +79,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
     public String subject;
+
     public GetAssociationBySubjectAndAssocTypeRequest withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -82,6 +90,7 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unselect_evidence")
     public Boolean unselectEvidence;
+
     public GetAssociationBySubjectAndAssocTypeRequest withUnselectEvidence(Boolean unselectEvidence) {
         this.unselectEvidence = unselectEvidence;
         return this;
@@ -92,9 +101,13 @@ public class GetAssociationBySubjectAndAssocTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=use_compact_associations")
     public Boolean useCompactAssociations;
+
     public GetAssociationBySubjectAndAssocTypeRequest withUseCompactAssociations(Boolean useCompactAssociations) {
         this.useCompactAssociations = useCompactAssociations;
         return this;
     }
     
+    public GetAssociationBySubjectAndAssocTypeRequest(@JsonProperty("association_type") String associationType) {
+        this.associationType = associationType;
+  }
 }

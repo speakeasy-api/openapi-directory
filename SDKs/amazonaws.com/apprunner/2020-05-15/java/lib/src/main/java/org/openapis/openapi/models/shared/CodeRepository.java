@@ -15,6 +15,7 @@ public class CodeRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeConfiguration")
     public CodeConfiguration codeConfiguration;
+
     public CodeRepository withCodeConfiguration(CodeConfiguration codeConfiguration) {
         this.codeConfiguration = codeConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class CodeRepository {
     
     @JsonProperty("RepositoryUrl")
     public String repositoryUrl;
+
     public CodeRepository withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -29,9 +31,14 @@ public class CodeRepository {
     
     @JsonProperty("SourceCodeVersion")
     public SourceCodeVersion sourceCodeVersion;
+
     public CodeRepository withSourceCodeVersion(SourceCodeVersion sourceCodeVersion) {
         this.sourceCodeVersion = sourceCodeVersion;
         return this;
     }
     
+    public CodeRepository(@JsonProperty("RepositoryUrl") String repositoryUrl, @JsonProperty("SourceCodeVersion") SourceCodeVersion sourceCodeVersion) {
+        this.repositoryUrl = repositoryUrl;
+        this.sourceCodeVersion = sourceCodeVersion;
+  }
 }

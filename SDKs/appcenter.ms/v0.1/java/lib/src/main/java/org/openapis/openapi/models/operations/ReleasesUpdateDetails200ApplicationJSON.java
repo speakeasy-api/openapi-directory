@@ -15,6 +15,7 @@ public class ReleasesUpdateDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public ReleasesUpdateDetails200ApplicationJSONDestinations[] destinations;
+
     public ReleasesUpdateDetails200ApplicationJSON withDestinations(ReleasesUpdateDetails200ApplicationJSONDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -23,6 +24,7 @@ public class ReleasesUpdateDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ReleasesUpdateDetails200ApplicationJSON withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,6 +33,7 @@ public class ReleasesUpdateDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesUpdateDetails200ApplicationJSON withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -39,6 +42,7 @@ public class ReleasesUpdateDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning_status_url")
     public String provisioningStatusUrl;
+
     public ReleasesUpdateDetails200ApplicationJSON withProvisioningStatusUrl(String provisioningStatusUrl) {
         this.provisioningStatusUrl = provisioningStatusUrl;
         return this;
@@ -47,9 +51,11 @@ public class ReleasesUpdateDetails200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public ReleasesUpdateDetails200ApplicationJSON withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public ReleasesUpdateDetails200ApplicationJSON(){}
 }

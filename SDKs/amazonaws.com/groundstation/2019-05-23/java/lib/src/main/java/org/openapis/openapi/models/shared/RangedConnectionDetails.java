@@ -15,6 +15,7 @@ public class RangedConnectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtu")
     public Long mtu;
+
     public RangedConnectionDetails withMtu(Long mtu) {
         this.mtu = mtu;
         return this;
@@ -22,9 +23,13 @@ public class RangedConnectionDetails {
     
     @JsonProperty("socketAddress")
     public RangedSocketAddress socketAddress;
+
     public RangedConnectionDetails withSocketAddress(RangedSocketAddress socketAddress) {
         this.socketAddress = socketAddress;
         return this;
     }
     
+    public RangedConnectionDetails(@JsonProperty("socketAddress") RangedSocketAddress socketAddress) {
+        this.socketAddress = socketAddress;
+  }
 }

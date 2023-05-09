@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DevicesGetReleaseUpdateDevicesStatusResponse {
     
     public String contentType;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DevicesGetReleaseUpdateDevicesStatusResponse {
     
     
     public Integer statusCode;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DevicesGetReleaseUpdateDevicesStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DevicesGetReleaseUpdateDevicesStatusResponse {
      */
     
     public DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON devicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withDevicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject(DevicesGetReleaseUpdateDevicesStatus200ApplicationJSON devicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject) {
         this.devicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject = devicesGetReleaseUpdateDevicesStatus200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DevicesGetReleaseUpdateDevicesStatusResponse {
      */
     
     public DevicesGetReleaseUpdateDevicesStatus400ApplicationJSON devicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withDevicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject(DevicesGetReleaseUpdateDevicesStatus400ApplicationJSON devicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject) {
         this.devicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject = devicesGetReleaseUpdateDevicesStatus400ApplicationJSONObject;
         return this;
@@ -54,9 +60,14 @@ public class DevicesGetReleaseUpdateDevicesStatusResponse {
      */
     
     public DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON devicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject;
+
     public DevicesGetReleaseUpdateDevicesStatusResponse withDevicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject(DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON devicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject) {
         this.devicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject = devicesGetReleaseUpdateDevicesStatus404ApplicationJSONObject;
         return this;
     }
     
+    public DevicesGetReleaseUpdateDevicesStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

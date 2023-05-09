@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtifactSchemaConsentPermission {
     @JsonProperty("access")
     public String access;
+
     public ConsentArtifactSchemaConsentPermission withAccess(String access) {
         this.access = access;
         return this;
@@ -16,6 +17,7 @@ public class ConsentArtifactSchemaConsentPermission {
     
     @JsonProperty("dateRange")
     public ConsentArtifactSchemaConsentPermissionDateRange dateRange;
+
     public ConsentArtifactSchemaConsentPermission withDateRange(ConsentArtifactSchemaConsentPermissionDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -23,9 +25,15 @@ public class ConsentArtifactSchemaConsentPermission {
     
     @JsonProperty("frequency")
     public ConsentArtifactSchemaConsentPermissionFrequency frequency;
+
     public ConsentArtifactSchemaConsentPermission withFrequency(ConsentArtifactSchemaConsentPermissionFrequency frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentPermission(@JsonProperty("access") String access, @JsonProperty("dateRange") ConsentArtifactSchemaConsentPermissionDateRange dateRange, @JsonProperty("frequency") ConsentArtifactSchemaConsentPermissionFrequency frequency) {
+        this.access = access;
+        this.dateRange = dateRange;
+        this.frequency = frequency;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeFleetAdvisorDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Databases")
     public DatabaseResponse[] databases;
+
     public DescribeFleetAdvisorDatabasesResponse withDatabases(DatabaseResponse[] databases) {
         this.databases = databases;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetAdvisorDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetAdvisorDatabasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetAdvisorDatabasesResponse(){}
 }

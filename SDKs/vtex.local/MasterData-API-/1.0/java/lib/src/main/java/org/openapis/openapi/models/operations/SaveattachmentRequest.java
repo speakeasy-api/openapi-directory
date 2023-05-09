@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveattachmentRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public SaveattachmentRequestBody requestBody;
+
     public SaveattachmentRequest withRequestBody(SaveattachmentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class SaveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public SaveattachmentRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -29,6 +32,7 @@ public class SaveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=field")
     public String field;
+
     public SaveattachmentRequest withField(String field) {
         this.field = field;
         return this;
@@ -39,9 +43,15 @@ public class SaveattachmentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public SaveattachmentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SaveattachmentRequest(@JsonProperty("acronym") String acronym, @JsonProperty("field") String field, @JsonProperty("id") String id) {
+        this.acronym = acronym;
+        this.field = field;
+        this.id = id;
+  }
 }

@@ -12,6 +12,7 @@ public class Comments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public Comment[] collection;
+
     public Comments withCollection(Comment[] collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class Comments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public Comments withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public Comments(){}
 }

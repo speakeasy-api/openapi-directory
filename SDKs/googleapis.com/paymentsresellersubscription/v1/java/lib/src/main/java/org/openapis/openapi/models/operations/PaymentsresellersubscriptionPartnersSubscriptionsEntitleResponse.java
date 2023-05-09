@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse {
     
     public String contentType;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse googleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse withGoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse(org.openapis.openapi.models.shared.GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse googleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse) {
         this.googleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse = googleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse;
         return this;
@@ -26,6 +29,7 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse {
     
     
     public Integer statusCode;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PaymentsresellersubscriptionPartnersSubscriptionsEntitleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

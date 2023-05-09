@@ -18,6 +18,7 @@ public class LandlordMaintenancePreferenceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public LandlordMaintenancePreferenceModel withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class LandlordMaintenancePreferenceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notes")
     public String notes;
+
     public LandlordMaintenancePreferenceModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -40,9 +42,11 @@ public class LandlordMaintenancePreferenceModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public LandlordMaintenancePreferenceModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public LandlordMaintenancePreferenceModel(){}
 }

@@ -15,6 +15,7 @@ public class UpdateGCMChannelRequestBodyGCMChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKey")
     public String apiKey;
+
     public UpdateGCMChannelRequestBodyGCMChannelRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -23,9 +24,11 @@ public class UpdateGCMChannelRequestBodyGCMChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public UpdateGCMChannelRequestBodyGCMChannelRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateGCMChannelRequestBodyGCMChannelRequest(){}
 }

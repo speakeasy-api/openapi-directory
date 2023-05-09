@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * LaunchConfigurationsType - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LaunchConfigurationsType {
     
     public LaunchConfiguration[] launchConfigurations;
+
     public LaunchConfigurationsType withLaunchConfigurations(LaunchConfiguration[] launchConfigurations) {
         this.launchConfigurations = launchConfigurations;
         return this;
@@ -19,9 +20,13 @@ public class LaunchConfigurationsType {
     
     
     public String nextToken;
+
     public LaunchConfigurationsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public LaunchConfigurationsType(@JsonProperty("LaunchConfigurations") LaunchConfiguration[] launchConfigurations) {
+        this.launchConfigurations = launchConfigurations;
+  }
 }

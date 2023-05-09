@@ -20,6 +20,7 @@ public class TagFilter {
     @JsonProperty("tagIds")
     @SpeakeasyMetadata("form:name=tagIds")
     public String[] tagIds;
+
     public TagFilter withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
@@ -32,9 +33,11 @@ public class TagFilter {
     @JsonProperty("threshold")
     @SpeakeasyMetadata("form:name=threshold")
     public Double threshold;
+
     public TagFilter withThreshold(Double threshold) {
         this.threshold = threshold;
         return this;
     }
     
+    public TagFilter(){}
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV2SegmentsSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String cdOauth2;
+
     public GetApiV2SegmentsSecurity withCdOauth2(String cdOauth2) {
         this.cdOauth2 = cdOauth2;
         return this;
     }
     
+    public GetApiV2SegmentsSecurity(@JsonProperty("cd_oauth2") String cdOauth2) {
+        this.cdOauth2 = cdOauth2;
+  }
 }

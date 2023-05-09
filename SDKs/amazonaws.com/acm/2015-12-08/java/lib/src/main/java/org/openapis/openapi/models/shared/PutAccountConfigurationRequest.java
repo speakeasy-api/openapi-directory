@@ -12,6 +12,7 @@ public class PutAccountConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpiryEvents")
     public ExpiryEventsConfiguration expiryEvents;
+
     public PutAccountConfigurationRequest withExpiryEvents(ExpiryEventsConfiguration expiryEvents) {
         this.expiryEvents = expiryEvents;
         return this;
@@ -19,9 +20,13 @@ public class PutAccountConfigurationRequest {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public PutAccountConfigurationRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
     }
     
+    public PutAccountConfigurationRequest(@JsonProperty("IdempotencyToken") String idempotencyToken) {
+        this.idempotencyToken = idempotencyToken;
+  }
 }

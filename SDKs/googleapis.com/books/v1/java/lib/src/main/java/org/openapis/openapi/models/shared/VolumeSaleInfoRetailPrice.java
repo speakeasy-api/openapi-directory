@@ -18,6 +18,7 @@ public class VolumeSaleInfoRetailPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public VolumeSaleInfoRetailPrice withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class VolumeSaleInfoRetailPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public VolumeSaleInfoRetailPrice withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
     
+    public VolumeSaleInfoRetailPrice(){}
 }

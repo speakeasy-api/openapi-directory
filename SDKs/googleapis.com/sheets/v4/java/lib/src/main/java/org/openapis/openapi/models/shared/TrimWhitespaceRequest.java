@@ -18,9 +18,11 @@ public class TrimWhitespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public TrimWhitespaceRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public TrimWhitespaceRequest(){}
 }

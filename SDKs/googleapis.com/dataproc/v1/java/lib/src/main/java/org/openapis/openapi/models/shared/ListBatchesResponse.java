@@ -18,6 +18,7 @@ public class ListBatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batches")
     public Batch[] batches;
+
     public ListBatchesResponse withBatches(Batch[] batches) {
         this.batches = batches;
         return this;
@@ -29,9 +30,11 @@ public class ListBatchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListBatchesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListBatchesResponse(){}
 }

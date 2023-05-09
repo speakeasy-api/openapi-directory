@@ -18,9 +18,11 @@ public class StartManualTransferRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runs")
     public TransferRun[] runs;
+
     public StartManualTransferRunsResponse withRuns(TransferRun[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public StartManualTransferRunsResponse(){}
 }

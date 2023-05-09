@@ -53,11 +53,9 @@ public class MXVPNFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesResponse res = new org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesResponse res = new org.openapis.openapi.models.operations.GetOrganizationVpnFirewallRulesResponse(contentType, httpRes.statusCode()) {{
             getOrganizationVpnFirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,11 +93,9 @@ public class MXVPNFirewall {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesResponse() {{
+        org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesResponse res = new org.openapis.openapi.models.operations.UpdateOrganizationVpnFirewallRulesResponse(contentType, httpRes.statusCode()) {{
             updateOrganizationVpnFirewallRules200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

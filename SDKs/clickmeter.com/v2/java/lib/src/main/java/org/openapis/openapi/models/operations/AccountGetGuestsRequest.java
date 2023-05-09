@@ -12,6 +12,7 @@ public class AccountGetGuestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public AccountGetGuestsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class AccountGetGuestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public AccountGetGuestsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class AccountGetGuestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public AccountGetGuestsRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -42,6 +45,7 @@ public class AccountGetGuestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public AccountGetGuestsSortDirectionEnum sortDirection;
+
     public AccountGetGuestsRequest withSortDirection(AccountGetGuestsSortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -52,9 +56,11 @@ public class AccountGetGuestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public AccountGetGuestsRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
     }
     
+    public AccountGetGuestsRequest(){}
 }

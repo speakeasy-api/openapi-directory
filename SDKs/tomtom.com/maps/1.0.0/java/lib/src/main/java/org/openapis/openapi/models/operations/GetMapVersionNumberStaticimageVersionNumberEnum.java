@@ -10,12 +10,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * GetMapVersionNumberStaticimageVersionNumberEnum - Version of the service to call. The current version is 1.
  */
 public enum GetMapVersionNumberStaticimageVersionNumberEnum {
-    ONE("1");
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberStaticimageVersionNumberEnum(String value) {
+    private GetMapVersionNumberStaticimageVersionNumberEnum(Long value) {
         this.value = value;
     }
 }

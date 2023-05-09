@@ -15,6 +15,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public ShippingAddress withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ShippingAddress withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ShippingAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -48,6 +51,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("municipality")
     public String municipality;
+
     public ShippingAddress withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -59,6 +63,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ShippingAddress withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +75,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal")
     public String postal;
+
     public ShippingAddress withPostal(String postal) {
         this.postal = postal;
         return this;
@@ -81,6 +87,7 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ShippingAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -92,9 +99,11 @@ public class ShippingAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("surname")
     public String surname;
+
     public ShippingAddress withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public ShippingAddress(){}
 }

@@ -18,6 +18,7 @@ public class ListRegistrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListRegistrationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListRegistrationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrations")
     public Registration[] registrations;
+
     public ListRegistrationsResponse withRegistrations(Registration[] registrations) {
         this.registrations = registrations;
         return this;
     }
     
+    public ListRegistrationsResponse(){}
 }

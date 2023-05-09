@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelExplainabilityAppSpecification {
     @JsonProperty("ConfigUri")
     public String configUri;
+
     public ModelExplainabilityAppSpecification withConfigUri(String configUri) {
         this.configUri = configUri;
         return this;
@@ -22,6 +23,7 @@ public class ModelExplainabilityAppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Environment")
     public java.util.Map<String, String> environment;
+
     public ModelExplainabilityAppSpecification withEnvironment(java.util.Map<String, String> environment) {
         this.environment = environment;
         return this;
@@ -29,9 +31,14 @@ public class ModelExplainabilityAppSpecification {
     
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public ModelExplainabilityAppSpecification withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public ModelExplainabilityAppSpecification(@JsonProperty("ConfigUri") String configUri, @JsonProperty("ImageUri") String imageUri) {
+        this.configUri = configUri;
+        this.imageUri = imageUri;
+  }
 }

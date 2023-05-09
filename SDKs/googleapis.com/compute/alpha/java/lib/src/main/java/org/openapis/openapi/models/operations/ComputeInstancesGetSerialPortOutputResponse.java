@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeInstancesGetSerialPortOutputResponse {
     
     public String contentType;
+
     public ComputeInstancesGetSerialPortOutputResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeInstancesGetSerialPortOutputResponse {
      */
     
     public org.openapis.openapi.models.shared.SerialPortOutput serialPortOutput;
+
     public ComputeInstancesGetSerialPortOutputResponse withSerialPortOutput(org.openapis.openapi.models.shared.SerialPortOutput serialPortOutput) {
         this.serialPortOutput = serialPortOutput;
         return this;
@@ -26,6 +29,7 @@ public class ComputeInstancesGetSerialPortOutputResponse {
     
     
     public Integer statusCode;
+
     public ComputeInstancesGetSerialPortOutputResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeInstancesGetSerialPortOutputResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeInstancesGetSerialPortOutputResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeInstancesGetSerialPortOutputResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

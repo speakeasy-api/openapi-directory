@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NotifyApplicationStateResponse {
@@ -12,6 +13,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object accessDeniedException;
+
     public NotifyApplicationStateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class NotifyApplicationStateResponse {
     
     
     public String contentType;
+
     public NotifyApplicationStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object dryRunOperation;
+
     public NotifyApplicationStateResponse withDryRunOperation(Object dryRunOperation) {
         this.dryRunOperation = dryRunOperation;
         return this;
@@ -39,6 +43,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public NotifyApplicationStateResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object internalServerError;
+
     public NotifyApplicationStateResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object invalidInputException;
+
     public NotifyApplicationStateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public java.util.Map<String, Object> notifyApplicationStateResult;
+
     public NotifyApplicationStateResponse withNotifyApplicationStateResult(java.util.Map<String, Object> notifyApplicationStateResult) {
         this.notifyApplicationStateResult = notifyApplicationStateResult;
         return this;
@@ -79,6 +87,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object policyErrorException;
+
     public NotifyApplicationStateResponse withPolicyErrorException(Object policyErrorException) {
         this.policyErrorException = policyErrorException;
         return this;
@@ -86,6 +95,7 @@ public class NotifyApplicationStateResponse {
     
     
     public Integer statusCode;
+
     public NotifyApplicationStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class NotifyApplicationStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NotifyApplicationStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public NotifyApplicationStateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public NotifyApplicationStateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -123,6 +136,7 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object throttlingException;
+
     public NotifyApplicationStateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -133,9 +147,14 @@ public class NotifyApplicationStateResponse {
      */
     
     public Object unauthorizedOperation;
+
     public NotifyApplicationStateResponse withUnauthorizedOperation(Object unauthorizedOperation) {
         this.unauthorizedOperation = unauthorizedOperation;
         return this;
     }
     
+    public NotifyApplicationStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

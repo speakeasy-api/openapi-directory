@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeregisterTransitGatewayMulticastGroupMembersResult {
     
     public DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers deregisteredMulticastGroupMembers;
+
     public DeregisterTransitGatewayMulticastGroupMembersResult withDeregisteredMulticastGroupMembers(DeregisterTransitGatewayMulticastGroupMembersResultDeregisteredMulticastGroupMembers deregisteredMulticastGroupMembers) {
         this.deregisteredMulticastGroupMembers = deregisteredMulticastGroupMembers;
         return this;
     }
     
+    public DeregisterTransitGatewayMulticastGroupMembersResult(){}
 }

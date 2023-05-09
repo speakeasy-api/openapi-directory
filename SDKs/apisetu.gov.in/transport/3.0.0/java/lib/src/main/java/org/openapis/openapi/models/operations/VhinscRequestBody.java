@@ -15,6 +15,7 @@ public class VhinscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public VhinscRequestBodyCertificateParameters certificateParameters;
+
     public VhinscRequestBody withCertificateParameters(VhinscRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class VhinscRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public VhinscRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class VhinscRequestBody {
      */
     @JsonProperty("format")
     public VhinscRequestBodyFormatEnum format;
+
     public VhinscRequestBody withFormat(VhinscRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class VhinscRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public VhinscRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public VhinscRequestBody(@JsonProperty("format") VhinscRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

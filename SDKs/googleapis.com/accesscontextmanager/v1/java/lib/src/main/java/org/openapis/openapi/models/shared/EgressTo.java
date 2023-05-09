@@ -18,6 +18,7 @@ public class EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalResources")
     public String[] externalResources;
+
     public EgressTo withExternalResources(String[] externalResources) {
         this.externalResources = externalResources;
         return this;
@@ -29,6 +30,7 @@ public class EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public ApiOperation[] operations;
+
     public EgressTo withOperations(ApiOperation[] operations) {
         this.operations = operations;
         return this;
@@ -40,9 +42,11 @@ public class EgressTo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public String[] resources;
+
     public EgressTo withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public EgressTo(){}
 }

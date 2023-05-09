@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComponentResponse {
@@ -12,6 +13,7 @@ public class GetComponentResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetComponentResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetComponentResponse {
      */
     
     public Object clientException;
+
     public GetComponentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class GetComponentResponse {
     
     
     public String contentType;
+
     public GetComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetComponentResponse {
      */
     
     public Object forbiddenException;
+
     public GetComponentResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class GetComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComponentResponse getComponentResponse;
+
     public GetComponentResponse withGetComponentResponse(org.openapis.openapi.models.shared.GetComponentResponse getComponentResponse) {
         this.getComponentResponse = getComponentResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetComponentResponse {
      */
     
     public Object invalidRequestException;
+
     public GetComponentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetComponentResponse {
      */
     
     public Object serviceException;
+
     public GetComponentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetComponentResponse {
     
     
     public Integer statusCode;
+
     public GetComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetComponentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetComponentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ExamplePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public Document document;
+
     public ExamplePayload withDocument(Document document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class ExamplePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public ExamplePayload withImage(Image image) {
         this.image = image;
         return this;
@@ -40,6 +42,7 @@ public class ExamplePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public Row row;
+
     public ExamplePayload withRow(Row row) {
         this.row = row;
         return this;
@@ -51,9 +54,11 @@ public class ExamplePayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textSnippet")
     public TextSnippet textSnippet;
+
     public ExamplePayload withTextSnippet(TextSnippet textSnippet) {
         this.textSnippet = textSnippet;
         return this;
     }
     
+    public ExamplePayload(){}
 }

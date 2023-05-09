@@ -17,6 +17,7 @@ public class FourHundred {
      */
     @JsonProperty("code")
     public String code;
+
     public FourHundred withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +29,7 @@ public class FourHundred {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public FourHundredErrors[] errors;
+
     public FourHundred withErrors(FourHundredErrors[] errors) {
         this.errors = errors;
         return this;
@@ -38,9 +40,14 @@ public class FourHundred {
      */
     @JsonProperty("message")
     public String message;
+
     public FourHundred withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FourHundred(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

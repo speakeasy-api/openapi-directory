@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageCreateFileRequestBody {
@@ -12,6 +13,7 @@ public class StorageCreateFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public StorageCreateFileRequestBody withFile(String file) {
         this.file = file;
         return this;
@@ -22,6 +24,7 @@ public class StorageCreateFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=read")
     public String[] read;
+
     public StorageCreateFileRequestBody withRead(String[] read) {
         this.read = read;
         return this;
@@ -32,9 +35,13 @@ public class StorageCreateFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=write")
     public String[] write;
+
     public StorageCreateFileRequestBody withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public StorageCreateFileRequestBody(@JsonProperty("file") String file) {
+        this.file = file;
+  }
 }

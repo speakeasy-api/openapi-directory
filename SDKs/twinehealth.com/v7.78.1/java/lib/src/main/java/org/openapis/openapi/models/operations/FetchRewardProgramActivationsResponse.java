@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchRewardProgramActivationsResponse {
     
     public String contentType;
+
     public FetchRewardProgramActivationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchRewardProgramActivationsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchRewardProgramActivationsResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchRewardProgramActivationsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchRewardProgramActivationsResponse fetchRewardProgramActivationsResponse;
+
     public FetchRewardProgramActivationsResponse withFetchRewardProgramActivationsResponse(org.openapis.openapi.models.shared.FetchRewardProgramActivationsResponse fetchRewardProgramActivationsResponse) {
         this.fetchRewardProgramActivationsResponse = fetchRewardProgramActivationsResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchRewardProgramActivationsResponse {
     
     
     public Integer statusCode;
+
     public FetchRewardProgramActivationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchRewardProgramActivationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchRewardProgramActivationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchRewardProgramActivationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

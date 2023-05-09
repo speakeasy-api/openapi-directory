@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldGroup {
     @JsonProperty("fields")
     public FieldItem[] fields;
+
     public FieldGroup withFields(FieldItem[] fields) {
         this.fields = fields;
         return this;
@@ -22,9 +23,13 @@ public class FieldGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FieldGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FieldGroup(@JsonProperty("fields") FieldItem[] fields) {
+        this.fields = fields;
+  }
 }

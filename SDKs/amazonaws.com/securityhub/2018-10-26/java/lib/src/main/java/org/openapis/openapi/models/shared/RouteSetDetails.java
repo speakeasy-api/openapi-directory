@@ -15,6 +15,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CarrierGatewayId")
     public String carrierGatewayId;
+
     public RouteSetDetails withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -23,6 +24,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoreNetworkArn")
     public String coreNetworkArn;
+
     public RouteSetDetails withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -31,6 +33,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public RouteSetDetails withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -39,6 +42,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public RouteSetDetails withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -47,6 +51,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public RouteSetDetails withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -55,6 +60,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EgressOnlyInternetGatewayId")
     public String egressOnlyInternetGatewayId;
+
     public RouteSetDetails withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -63,6 +69,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public String gatewayId;
+
     public RouteSetDetails withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -71,6 +78,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RouteSetDetails withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -79,6 +87,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceOwnerId")
     public String instanceOwnerId;
+
     public RouteSetDetails withInstanceOwnerId(String instanceOwnerId) {
         this.instanceOwnerId = instanceOwnerId;
         return this;
@@ -87,6 +96,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalGatewayId")
     public String localGatewayId;
+
     public RouteSetDetails withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -95,6 +105,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NatGatewayId")
     public String natGatewayId;
+
     public RouteSetDetails withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -103,6 +114,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public RouteSetDetails withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -111,6 +123,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Origin")
     public String origin;
+
     public RouteSetDetails withOrigin(String origin) {
         this.origin = origin;
         return this;
@@ -119,6 +132,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public RouteSetDetails withState(String state) {
         this.state = state;
         return this;
@@ -127,6 +141,7 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitGatewayId")
     public String transitGatewayId;
+
     public RouteSetDetails withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -135,9 +150,11 @@ public class RouteSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public RouteSetDetails withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public RouteSetDetails(){}
 }

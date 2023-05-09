@@ -15,9 +15,11 @@ public class AggregationResultSum {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public AggregationResultSum withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public AggregationResultSum(){}
 }

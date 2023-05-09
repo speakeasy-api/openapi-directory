@@ -18,6 +18,7 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public TimeInterval interval;
+
     public Point withInterval(TimeInterval interval) {
         this.interval = interval;
         return this;
@@ -29,9 +30,11 @@ public class Point {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public TypedValue value;
+
     public Point withValue(TypedValue value) {
         this.value = value;
         return this;
     }
     
+    public Point(){}
 }

@@ -60,12 +60,10 @@ public class HealthProfile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchHealthProfileResponse res = new org.openapis.openapi.models.operations.FetchHealthProfileResponse() {{
+        org.openapis.openapi.models.operations.FetchHealthProfileResponse res = new org.openapis.openapi.models.operations.FetchHealthProfileResponse(contentType, httpRes.statusCode()) {{
             fetchHealthProfileResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,12 +111,10 @@ public class HealthProfile {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchHealthProfilesResponse res = new org.openapis.openapi.models.operations.FetchHealthProfilesResponse() {{
+        org.openapis.openapi.models.operations.FetchHealthProfilesResponse res = new org.openapis.openapi.models.operations.FetchHealthProfilesResponse(contentType, httpRes.statusCode()) {{
             fetchHealthProfilesResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

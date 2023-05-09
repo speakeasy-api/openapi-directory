@@ -15,9 +15,11 @@ public class Proto2OneofDescriptorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Proto2OneofDescriptorProto withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Proto2OneofDescriptorProto(){}
 }

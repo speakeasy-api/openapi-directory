@@ -15,6 +15,7 @@ public class ItvChangeMarketingRequest {
      */
     @JsonProperty("emailOptIn")
     public Boolean emailOptIn;
+
     public ItvChangeMarketingRequest withEmailOptIn(Boolean emailOptIn) {
         this.emailOptIn = emailOptIn;
         return this;
@@ -25,9 +26,14 @@ public class ItvChangeMarketingRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvChangeMarketingRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvChangeMarketingRequest(@JsonProperty("emailOptIn") Boolean emailOptIn, @JsonProperty("profileToken") String profileToken) {
+        this.emailOptIn = emailOptIn;
+        this.profileToken = profileToken;
+  }
 }

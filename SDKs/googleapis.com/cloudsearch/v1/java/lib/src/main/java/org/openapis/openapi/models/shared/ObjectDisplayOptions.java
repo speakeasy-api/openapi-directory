@@ -18,6 +18,7 @@ public class ObjectDisplayOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metalines")
     public Metaline[] metalines;
+
     public ObjectDisplayOptions withMetalines(Metaline[] metalines) {
         this.metalines = metalines;
         return this;
@@ -29,9 +30,11 @@ public class ObjectDisplayOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectDisplayLabel")
     public String objectDisplayLabel;
+
     public ObjectDisplayOptions withObjectDisplayLabel(String objectDisplayLabel) {
         this.objectDisplayLabel = objectDisplayLabel;
         return this;
     }
     
+    public ObjectDisplayOptions(){}
 }

@@ -15,9 +15,11 @@ public class InvalidParameterException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InvalidParameterException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidParameterException(){}
 }

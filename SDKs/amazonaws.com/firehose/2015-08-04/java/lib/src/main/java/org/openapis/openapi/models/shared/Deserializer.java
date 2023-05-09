@@ -15,6 +15,7 @@ public class Deserializer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HiveJsonSerDe")
     public HiveJsonSerDe hiveJsonSerDe;
+
     public Deserializer withHiveJsonSerDe(HiveJsonSerDe hiveJsonSerDe) {
         this.hiveJsonSerDe = hiveJsonSerDe;
         return this;
@@ -23,9 +24,11 @@ public class Deserializer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenXJsonSerDe")
     public OpenXJsonSerDe openXJsonSerDe;
+
     public Deserializer withOpenXJsonSerDe(OpenXJsonSerDe openXJsonSerDe) {
         this.openXJsonSerDe = openXJsonSerDe;
         return this;
     }
     
+    public Deserializer(){}
 }

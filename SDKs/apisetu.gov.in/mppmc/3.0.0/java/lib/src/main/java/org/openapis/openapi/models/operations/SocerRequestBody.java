@@ -15,6 +15,7 @@ public class SocerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public SocerRequestBodyCertificateParameters certificateParameters;
+
     public SocerRequestBody withCertificateParameters(SocerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class SocerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public SocerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class SocerRequestBody {
      */
     @JsonProperty("format")
     public SocerRequestBodyFormatEnum format;
+
     public SocerRequestBody withFormat(SocerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class SocerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public SocerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public SocerRequestBody(@JsonProperty("format") SocerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

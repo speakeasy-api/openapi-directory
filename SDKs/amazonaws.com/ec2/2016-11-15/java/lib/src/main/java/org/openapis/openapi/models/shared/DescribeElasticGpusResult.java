@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeElasticGpusResult {
     
     public DescribeElasticGpusResultElasticGpuSet[] elasticGpuSet;
+
     public DescribeElasticGpusResult withElasticGpuSet(DescribeElasticGpusResultElasticGpuSet[] elasticGpuSet) {
         this.elasticGpuSet = elasticGpuSet;
         return this;
@@ -19,6 +20,7 @@ public class DescribeElasticGpusResult {
     
     
     public Long maxResults;
+
     public DescribeElasticGpusResult withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,9 +28,11 @@ public class DescribeElasticGpusResult {
     
     
     public String nextToken;
+
     public DescribeElasticGpusResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeElasticGpusResult(){}
 }

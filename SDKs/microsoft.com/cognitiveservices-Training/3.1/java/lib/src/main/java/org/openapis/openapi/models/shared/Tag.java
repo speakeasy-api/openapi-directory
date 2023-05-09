@@ -17,6 +17,7 @@ public class Tag {
      */
     @JsonProperty("description")
     public String description;
+
     public Tag withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Tag withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +41,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageCount")
     public Integer imageCount;
+
     public Tag withImageCount(Integer imageCount) {
         this.imageCount = imageCount;
         return this;
@@ -49,6 +52,7 @@ public class Tag {
      */
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,15 @@ public class Tag {
      */
     @JsonProperty("type")
     public TagTypeEnum type;
+
     public Tag withType(TagTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Tag(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("type") TagTypeEnum type) {
+        this.description = description;
+        this.name = name;
+        this.type = type;
+  }
 }

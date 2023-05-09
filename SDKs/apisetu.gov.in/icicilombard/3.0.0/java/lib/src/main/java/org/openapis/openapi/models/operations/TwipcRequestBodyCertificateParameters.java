@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("InsuredDob")
     public String insuredDob;
+
     public TwipcRequestBodyCertificateParameters withInsuredDob(String insuredDob) {
         this.insuredDob = insuredDob;
         return this;
@@ -22,9 +23,14 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public TwipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("InsuredDob") String insuredDob, @JsonProperty("PolicyNo") String policyNo) {
+        this.insuredDob = insuredDob;
+        this.policyNo = policyNo;
+  }
 }

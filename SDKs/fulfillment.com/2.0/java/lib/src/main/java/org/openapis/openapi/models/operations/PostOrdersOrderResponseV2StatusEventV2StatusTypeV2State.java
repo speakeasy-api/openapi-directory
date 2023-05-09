@@ -12,6 +12,7 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostOrdersOrderResponseV2StatusEventV2StatusTypeV2State(){}
 }

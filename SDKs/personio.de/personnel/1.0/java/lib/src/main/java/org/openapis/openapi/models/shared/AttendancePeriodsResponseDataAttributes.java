@@ -11,6 +11,7 @@ import java.time.LocalDate;
 public class AttendancePeriodsResponseDataAttributes {
     @JsonProperty("break")
     public Long break_;
+
     public AttendancePeriodsResponseDataAttributes withBreak(Long break_) {
         this.break_ = break_;
         return this;
@@ -18,6 +19,7 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("comment")
     public String comment;
+
     public AttendancePeriodsResponseDataAttributes withComment(String comment) {
         this.comment = comment;
         return this;
@@ -26,6 +28,7 @@ public class AttendancePeriodsResponseDataAttributes {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public AttendancePeriodsResponseDataAttributes withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -33,6 +36,7 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("employee")
     public Long employee;
+
     public AttendancePeriodsResponseDataAttributes withEmployee(Long employee) {
         this.employee = employee;
         return this;
@@ -40,6 +44,7 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("end_time")
     public String endTime;
+
     public AttendancePeriodsResponseDataAttributes withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -47,6 +52,7 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("is_holiday")
     public Boolean isHoliday;
+
     public AttendancePeriodsResponseDataAttributes withIsHoliday(Boolean isHoliday) {
         this.isHoliday = isHoliday;
         return this;
@@ -54,6 +60,7 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("is_on_time_off")
     public Boolean isOnTimeOff;
+
     public AttendancePeriodsResponseDataAttributes withIsOnTimeOff(Boolean isOnTimeOff) {
         this.isOnTimeOff = isOnTimeOff;
         return this;
@@ -61,9 +68,20 @@ public class AttendancePeriodsResponseDataAttributes {
     
     @JsonProperty("start_time")
     public String startTime;
+
     public AttendancePeriodsResponseDataAttributes withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AttendancePeriodsResponseDataAttributes(@JsonProperty("break") Long break_, @JsonProperty("comment") String comment, @JsonProperty("date") LocalDate date, @JsonProperty("employee") Long employee, @JsonProperty("end_time") String endTime, @JsonProperty("is_holiday") Boolean isHoliday, @JsonProperty("is_on_time_off") Boolean isOnTimeOff, @JsonProperty("start_time") String startTime) {
+        this.break_ = break_;
+        this.comment = comment;
+        this.date = date;
+        this.employee = employee;
+        this.endTime = endTime;
+        this.isHoliday = isHoliday;
+        this.isOnTimeOff = isOnTimeOff;
+        this.startTime = startTime;
+  }
 }

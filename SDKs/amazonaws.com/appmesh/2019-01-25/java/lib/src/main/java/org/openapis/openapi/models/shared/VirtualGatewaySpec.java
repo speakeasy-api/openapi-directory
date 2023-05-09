@@ -15,6 +15,7 @@ public class VirtualGatewaySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendDefaults")
     public VirtualGatewayBackendDefaults backendDefaults;
+
     public VirtualGatewaySpec withBackendDefaults(VirtualGatewayBackendDefaults backendDefaults) {
         this.backendDefaults = backendDefaults;
         return this;
@@ -22,6 +23,7 @@ public class VirtualGatewaySpec {
     
     @JsonProperty("listeners")
     public VirtualGatewayListener[] listeners;
+
     public VirtualGatewaySpec withListeners(VirtualGatewayListener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -33,9 +35,13 @@ public class VirtualGatewaySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public VirtualGatewayLogging logging;
+
     public VirtualGatewaySpec withLogging(VirtualGatewayLogging logging) {
         this.logging = logging;
         return this;
     }
     
+    public VirtualGatewaySpec(@JsonProperty("listeners") VirtualGatewayListener[] listeners) {
+        this.listeners = listeners;
+  }
 }

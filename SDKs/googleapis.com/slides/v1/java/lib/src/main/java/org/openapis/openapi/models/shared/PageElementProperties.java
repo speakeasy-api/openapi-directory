@@ -18,6 +18,7 @@ public class PageElementProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageObjectId")
     public String pageObjectId;
+
     public PageElementProperties withPageObjectId(String pageObjectId) {
         this.pageObjectId = pageObjectId;
         return this;
@@ -29,6 +30,7 @@ public class PageElementProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Size size;
+
     public PageElementProperties withSize(Size size) {
         this.size = size;
         return this;
@@ -40,9 +42,11 @@ public class PageElementProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transform")
     public AffineTransform transform;
+
     public PageElementProperties withTransform(AffineTransform transform) {
         this.transform = transform;
         return this;
     }
     
+    public PageElementProperties(){}
 }

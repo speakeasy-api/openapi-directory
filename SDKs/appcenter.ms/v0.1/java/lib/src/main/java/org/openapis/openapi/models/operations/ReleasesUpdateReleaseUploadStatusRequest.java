@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesUpdateReleaseUploadStatusRequest {
@@ -12,6 +13,7 @@ public class ReleasesUpdateReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReleasesUpdateReleaseUploadStatusRequestBody requestBody;
+
     public ReleasesUpdateReleaseUploadStatusRequest withRequestBody(ReleasesUpdateReleaseUploadStatusRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesUpdateReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesUpdateReleaseUploadStatusRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class ReleasesUpdateReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extract")
     public Boolean extract;
+
     public ReleasesUpdateReleaseUploadStatusRequest withExtract(Boolean extract) {
         this.extract = extract;
         return this;
@@ -42,6 +46,7 @@ public class ReleasesUpdateReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesUpdateReleaseUploadStatusRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -52,9 +57,16 @@ public class ReleasesUpdateReleaseUploadStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=upload_id")
     public String uploadId;
+
     public ReleasesUpdateReleaseUploadStatusRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
     
+    public ReleasesUpdateReleaseUploadStatusRequest(@JsonProperty("RequestBody") ReleasesUpdateReleaseUploadStatusRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("upload_id") String uploadId) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.uploadId = uploadId;
+  }
 }

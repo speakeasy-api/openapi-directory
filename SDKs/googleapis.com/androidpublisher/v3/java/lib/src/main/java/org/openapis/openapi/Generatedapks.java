@@ -58,10 +58,8 @@ public class Generatedapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse res = new org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class Generatedapks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherGeneratedapksListResponse(contentType, httpRes.statusCode()) {{
             generatedApksListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

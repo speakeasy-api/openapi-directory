@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrderApiUpdateStateFormRequest {
@@ -12,6 +13,7 @@ public class OrderApiUpdateStateFormRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate;
+
     public OrderApiUpdateStateFormRequest withRechnungsdruckWebAppControllersApiOrderStateUpdate(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate) {
         this.rechnungsdruckWebAppControllersApiOrderStateUpdate = rechnungsdruckWebAppControllersApiOrderStateUpdate;
         return this;
@@ -22,9 +24,14 @@ public class OrderApiUpdateStateFormRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public OrderApiUpdateStateFormRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public OrderApiUpdateStateFormRequest(@JsonProperty("Rechnungsdruck.WebApp.Controllers.Api.OrderStateUpdate") org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersApiOrderStateUpdate rechnungsdruckWebAppControllersApiOrderStateUpdate, @JsonProperty("id") Long id) {
+        this.rechnungsdruckWebAppControllersApiOrderStateUpdate = rechnungsdruckWebAppControllersApiOrderStateUpdate;
+        this.id = id;
+  }
 }

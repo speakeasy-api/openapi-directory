@@ -53,11 +53,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddDaemonTimerScriptResponse res = new org.openapis.openapi.models.operations.AddDaemonTimerScriptResponse() {{
+        org.openapis.openapi.models.operations.AddDaemonTimerScriptResponse res = new org.openapis.openapi.models.operations.AddDaemonTimerScriptResponse(contentType, httpRes.statusCode()) {{
             addDaemonTimerScript200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CfgLoadResponse res = new org.openapis.openapi.models.operations.CfgLoadResponse() {{
+        org.openapis.openapi.models.operations.CfgLoadResponse res = new org.openapis.openapi.models.operations.CfgLoadResponse(contentType, httpRes.statusCode()) {{
             cfgLoad200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CfgNewResponse res = new org.openapis.openapi.models.operations.CfgNewResponse() {{
+        org.openapis.openapi.models.operations.CfgNewResponse res = new org.openapis.openapi.models.operations.CfgNewResponse(contentType, httpRes.statusCode()) {{
             cfgNew200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +167,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CfgSaveResponse res = new org.openapis.openapi.models.operations.CfgSaveResponse() {{
+        org.openapis.openapi.models.operations.CfgSaveResponse res = new org.openapis.openapi.models.operations.CfgSaveResponse(contentType, httpRes.statusCode()) {{
             cfgSave200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,11 +205,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CfgSaveasResponse res = new org.openapis.openapi.models.operations.CfgSaveasResponse() {{
+        org.openapis.openapi.models.operations.CfgSaveasResponse res = new org.openapis.openapi.models.operations.CfgSaveasResponse(contentType, httpRes.statusCode()) {{
             cfgSaveas200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,11 +243,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DelDaemonTimerScriptResponse res = new org.openapis.openapi.models.operations.DelDaemonTimerScriptResponse() {{
+        org.openapis.openapi.models.operations.DelDaemonTimerScriptResponse res = new org.openapis.openapi.models.operations.DelDaemonTimerScriptResponse(contentType, httpRes.statusCode()) {{
             delDaemonTimerScript200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +281,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActiveDataListResponse res = new org.openapis.openapi.models.operations.GetActiveDataListResponse() {{
+        org.openapis.openapi.models.operations.GetActiveDataListResponse res = new org.openapis.openapi.models.operations.GetActiveDataListResponse(contentType, httpRes.statusCode()) {{
             getActiveDataList200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +318,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetActiveListResponse res = new org.openapis.openapi.models.operations.GetActiveListResponse() {{
+        org.openapis.openapi.models.operations.GetActiveListResponse res = new org.openapis.openapi.models.operations.GetActiveListResponse(contentType, httpRes.statusCode()) {{
             getActiveList200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -371,11 +355,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCfgFileChangedResponse res = new org.openapis.openapi.models.operations.GetCfgFileChangedResponse() {{
+        org.openapis.openapi.models.operations.GetCfgFileChangedResponse res = new org.openapis.openapi.models.operations.GetCfgFileChangedResponse(contentType, httpRes.statusCode()) {{
             getCfgFileChanged200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -410,11 +392,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCfgfileResponse res = new org.openapis.openapi.models.operations.GetCfgfileResponse() {{
+        org.openapis.openapi.models.operations.GetCfgfileResponse res = new org.openapis.openapi.models.operations.GetCfgfileResponse(contentType, httpRes.statusCode()) {{
             getCfgfile200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -449,11 +429,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangedConfigListResponse res = new org.openapis.openapi.models.operations.GetChangedConfigListResponse() {{
+        org.openapis.openapi.models.operations.GetChangedConfigListResponse res = new org.openapis.openapi.models.operations.GetChangedConfigListResponse(contentType, httpRes.statusCode()) {{
             getChangedConfigList200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +466,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChangedStateListResponse res = new org.openapis.openapi.models.operations.GetChangedStateListResponse() {{
+        org.openapis.openapi.models.operations.GetChangedStateListResponse res = new org.openapis.openapi.models.operations.GetChangedStateListResponse(contentType, httpRes.statusCode()) {{
             agentStates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -527,11 +503,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClientsResponse res = new org.openapis.openapi.models.operations.GetClientsResponse() {{
+        org.openapis.openapi.models.operations.GetClientsResponse res = new org.openapis.openapi.models.operations.GetClientsResponse(contentType, httpRes.statusCode()) {{
             getClients200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -566,11 +540,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfiguredListResponse res = new org.openapis.openapi.models.operations.GetConfiguredListResponse() {{
+        org.openapis.openapi.models.operations.GetConfiguredListResponse res = new org.openapis.openapi.models.operations.GetConfiguredListResponse(contentType, httpRes.statusCode()) {{
             getConfiguredList200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -605,11 +577,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDaemonProtocolsResponse res = new org.openapis.openapi.models.operations.GetDaemonProtocolsResponse() {{
+        org.openapis.openapi.models.operations.GetDaemonProtocolsResponse res = new org.openapis.openapi.models.operations.GetDaemonProtocolsResponse(contentType, httpRes.statusCode()) {{
             getDaemonProtocols200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -644,11 +614,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInterfacesResponse res = new org.openapis.openapi.models.operations.GetInterfacesResponse() {{
+        org.openapis.openapi.models.operations.GetInterfacesResponse res = new org.openapis.openapi.models.operations.GetInterfacesResponse(contentType, httpRes.statusCode()) {{
             getInterfaces200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -683,11 +651,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLastResponse res = new org.openapis.openapi.models.operations.GetLastResponse() {{
+        org.openapis.openapi.models.operations.GetLastResponse res = new org.openapis.openapi.models.operations.GetLastResponse(contentType, httpRes.statusCode()) {{
             getLast200ApplicationJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +688,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLogResponse res = new org.openapis.openapi.models.operations.GetLogResponse() {{
+        org.openapis.openapi.models.operations.GetLogResponse res = new org.openapis.openapi.models.operations.GetLogResponse(contentType, httpRes.statusCode()) {{
             getLog200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -761,11 +725,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMaxResponse res = new org.openapis.openapi.models.operations.GetMaxResponse() {{
+        org.openapis.openapi.models.operations.GetMaxResponse res = new org.openapis.openapi.models.operations.GetMaxResponse(contentType, httpRes.statusCode()) {{
             getMax200ApplicationJSONInt32Integer = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -800,11 +762,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetaddrResponse res = new org.openapis.openapi.models.operations.GetNetaddrResponse() {{
+        org.openapis.openapi.models.operations.GetNetaddrResponse res = new org.openapis.openapi.models.operations.GetNetaddrResponse(contentType, httpRes.statusCode()) {{
             getNetaddr200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -839,11 +799,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetdevResponse res = new org.openapis.openapi.models.operations.GetNetdevResponse() {{
+        org.openapis.openapi.models.operations.GetNetdevResponse res = new org.openapis.openapi.models.operations.GetNetdevResponse(contentType, httpRes.statusCode()) {{
             getNetdev200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -878,11 +836,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductResponse res = new org.openapis.openapi.models.operations.GetProductResponse() {{
+        org.openapis.openapi.models.operations.GetProductResponse res = new org.openapis.openapi.models.operations.GetProductResponse(contentType, httpRes.statusCode()) {{
             getProduct200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -917,11 +873,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReturnResponse res = new org.openapis.openapi.models.operations.GetReturnResponse() {{
+        org.openapis.openapi.models.operations.GetReturnResponse res = new org.openapis.openapi.models.operations.GetReturnResponse(contentType, httpRes.statusCode()) {{
             getReturn200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,11 +910,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse() {{
+        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse(contentType, httpRes.statusCode()) {{
             getVersion200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -994,11 +946,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDaemonTimerScriptsResponse res = new org.openapis.openapi.models.operations.ListDaemonTimerScriptsResponse() {{
+        org.openapis.openapi.models.operations.ListDaemonTimerScriptsResponse res = new org.openapis.openapi.models.operations.ListDaemonTimerScriptsResponse(contentType, httpRes.statusCode()) {{
             timerScripts = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1036,11 +986,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MgetInfoResponse res = new org.openapis.openapi.models.operations.MgetInfoResponse() {{
+        org.openapis.openapi.models.operations.MgetInfoResponse res = new org.openapis.openapi.models.operations.MgetInfoResponse(contentType, httpRes.statusCode()) {{
             mgetInfo200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1083,11 +1031,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetLogResponse res = new org.openapis.openapi.models.operations.SetLogResponse() {{
+        org.openapis.openapi.models.operations.SetLogResponse res = new org.openapis.openapi.models.operations.SetLogResponse(contentType, httpRes.statusCode()) {{
             setLog200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1121,11 +1067,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetNetdevResponse res = new org.openapis.openapi.models.operations.SetNetdevResponse() {{
+        org.openapis.openapi.models.operations.SetNetdevResponse res = new org.openapis.openapi.models.operations.SetNetdevResponse(contentType, httpRes.statusCode()) {{
             setNetdev200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1160,11 +1104,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartAllAgentsResponse res = new org.openapis.openapi.models.operations.StartAllAgentsResponse() {{
+        org.openapis.openapi.models.operations.StartAllAgentsResponse res = new org.openapis.openapi.models.operations.StartAllAgentsResponse(contentType, httpRes.statusCode()) {{
             startAllAgents200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1199,11 +1141,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopAllAgentsResponse res = new org.openapis.openapi.models.operations.StopAllAgentsResponse() {{
+        org.openapis.openapi.models.operations.StopAllAgentsResponse res = new org.openapis.openapi.models.operations.StopAllAgentsResponse(contentType, httpRes.statusCode()) {{
             stopAllAgents200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1239,11 +1179,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreExistsResponse res = new org.openapis.openapi.models.operations.StoreExistsResponse() {{
+        org.openapis.openapi.models.operations.StoreExistsResponse res = new org.openapis.openapi.models.operations.StoreExistsResponse(contentType, httpRes.statusCode()) {{
             storeExists200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1280,11 +1218,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreGetResponse res = new org.openapis.openapi.models.operations.StoreGetResponse() {{
+        org.openapis.openapi.models.operations.StoreGetResponse res = new org.openapis.openapi.models.operations.StoreGetResponse(contentType, httpRes.statusCode()) {{
             storeGet200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1320,11 +1256,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreListResponse res = new org.openapis.openapi.models.operations.StoreListResponse() {{
+        org.openapis.openapi.models.operations.StoreListResponse res = new org.openapis.openapi.models.operations.StoreListResponse(contentType, httpRes.statusCode()) {{
             storeList200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1364,11 +1298,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreLreplaceResponse res = new org.openapis.openapi.models.operations.StoreLreplaceResponse() {{
+        org.openapis.openapi.models.operations.StoreLreplaceResponse res = new org.openapis.openapi.models.operations.StoreLreplaceResponse(contentType, httpRes.statusCode()) {{
             storeLreplace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1405,11 +1337,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StorePersistsResponse res = new org.openapis.openapi.models.operations.StorePersistsResponse() {{
+        org.openapis.openapi.models.operations.StorePersistsResponse res = new org.openapis.openapi.models.operations.StorePersistsResponse(contentType, httpRes.statusCode()) {{
             storePersists200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1445,11 +1375,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreSaveResponse res = new org.openapis.openapi.models.operations.StoreSaveResponse() {{
+        org.openapis.openapi.models.operations.StoreSaveResponse res = new org.openapis.openapi.models.operations.StoreSaveResponse(contentType, httpRes.statusCode()) {{
             storeSave200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1487,11 +1415,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreSetResponse res = new org.openapis.openapi.models.operations.StoreSetResponse() {{
+        org.openapis.openapi.models.operations.StoreSetResponse res = new org.openapis.openapi.models.operations.StoreSetResponse(contentType, httpRes.statusCode()) {{
             storeSet200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1528,11 +1454,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoreUnsetResponse res = new org.openapis.openapi.models.operations.StoreUnsetResponse() {{
+        org.openapis.openapi.models.operations.StoreUnsetResponse res = new org.openapis.openapi.models.operations.StoreUnsetResponse(contentType, httpRes.statusCode()) {{
             storeUnset200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1568,11 +1492,9 @@ public class Daemon {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TerminateResponse res = new org.openapis.openapi.models.operations.TerminateResponse() {{
+        org.openapis.openapi.models.operations.TerminateResponse res = new org.openapis.openapi.models.operations.TerminateResponse(contentType, httpRes.statusCode()) {{
             terminate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

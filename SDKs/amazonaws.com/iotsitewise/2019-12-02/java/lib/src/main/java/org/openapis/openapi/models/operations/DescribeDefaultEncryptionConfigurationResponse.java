@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDefaultEncryptionConfigurationResponse {
     
     public String contentType;
+
     public DescribeDefaultEncryptionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDefaultEncryptionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDefaultEncryptionConfigurationResponse describeDefaultEncryptionConfigurationResponse;
+
     public DescribeDefaultEncryptionConfigurationResponse withDescribeDefaultEncryptionConfigurationResponse(org.openapis.openapi.models.shared.DescribeDefaultEncryptionConfigurationResponse describeDefaultEncryptionConfigurationResponse) {
         this.describeDefaultEncryptionConfigurationResponse = describeDefaultEncryptionConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDefaultEncryptionConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDefaultEncryptionConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDefaultEncryptionConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDefaultEncryptionConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeDefaultEncryptionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeDefaultEncryptionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeDefaultEncryptionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDefaultEncryptionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeDefaultEncryptionConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDefaultEncryptionConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeDefaultEncryptionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

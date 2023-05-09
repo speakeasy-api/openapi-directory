@@ -18,6 +18,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("couponCode")
     public String couponCode;
+
     public Update200ApplicationJSON withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -29,6 +30,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationIntervalPerUse")
     public String expirationIntervalPerUse;
+
     public Update200ApplicationJSON withExpirationIntervalPerUse(String expirationIntervalPerUse) {
         this.expirationIntervalPerUse = expirationIntervalPerUse;
         return this;
@@ -40,6 +42,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public Update200ApplicationJSON withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -51,6 +54,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedUtc")
     public String lastModifiedUtc;
+
     public Update200ApplicationJSON withLastModifiedUtc(String lastModifiedUtc) {
         this.lastModifiedUtc = lastModifiedUtc;
         return this;
@@ -62,6 +66,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxItemsPerClient")
     public Long maxItemsPerClient;
+
     public Update200ApplicationJSON withMaxItemsPerClient(Long maxItemsPerClient) {
         this.maxItemsPerClient = maxItemsPerClient;
         return this;
@@ -73,6 +78,7 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public Update200ApplicationJSON withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -84,9 +90,11 @@ public class Update200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utmSource")
     public String utmSource;
+
     public Update200ApplicationJSON withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public Update200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportDirectory")
     public String exportDirectory;
+
     public NfsExport withExportDirectory(String exportDirectory) {
         this.exportDirectory = exportDirectory;
         return this;
@@ -29,9 +30,11 @@ public class NfsExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hosts")
     public String[] hosts;
+
     public NfsExport withHosts(String[] hosts) {
         this.hosts = hosts;
         return this;
     }
     
+    public NfsExport(){}
 }

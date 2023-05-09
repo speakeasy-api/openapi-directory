@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonitoringStoppingCondition {
     @JsonProperty("MaxRuntimeInSeconds")
     public Long maxRuntimeInSeconds;
+
     public MonitoringStoppingCondition withMaxRuntimeInSeconds(Long maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
         return this;
     }
     
+    public MonitoringStoppingCondition(@JsonProperty("MaxRuntimeInSeconds") Long maxRuntimeInSeconds) {
+        this.maxRuntimeInSeconds = maxRuntimeInSeconds;
+  }
 }

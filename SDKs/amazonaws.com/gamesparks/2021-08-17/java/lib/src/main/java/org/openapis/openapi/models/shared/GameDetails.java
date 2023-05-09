@@ -20,6 +20,7 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GameDetails withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GameDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public GameDetails withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -38,6 +40,7 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GameDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableTerminationProtection")
     public Boolean enableTerminationProtection;
+
     public GameDetails withEnableTerminationProtection(Boolean enableTerminationProtection) {
         this.enableTerminationProtection = enableTerminationProtection;
         return this;
@@ -56,6 +60,7 @@ public class GameDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public GameDetails withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -64,6 +69,7 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GameDetails withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public GameStateEnum state;
+
     public GameDetails withState(GameStateEnum state) {
         this.state = state;
         return this;
@@ -80,9 +87,11 @@ public class GameDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GameDetails withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GameDetails(){}
 }

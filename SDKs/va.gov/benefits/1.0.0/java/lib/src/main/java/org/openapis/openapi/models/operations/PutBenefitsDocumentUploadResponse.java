@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutBenefitsDocumentUploadResponse {
     
     public byte[] body;
+
     public PutBenefitsDocumentUploadResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutBenefitsDocumentUploadResponse {
     
     
     public String contentType;
+
     public PutBenefitsDocumentUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PutBenefitsDocumentUploadResponse {
     
     
     public Integer statusCode;
+
     public PutBenefitsDocumentUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PutBenefitsDocumentUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutBenefitsDocumentUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PutBenefitsDocumentUploadResponse {
      */
     
     public PutBenefitsDocumentUpload401ApplicationJSON putBenefitsDocumentUpload401ApplicationJSONObject;
+
     public PutBenefitsDocumentUploadResponse withPutBenefitsDocumentUpload401ApplicationJSONObject(PutBenefitsDocumentUpload401ApplicationJSON putBenefitsDocumentUpload401ApplicationJSONObject) {
         this.putBenefitsDocumentUpload401ApplicationJSONObject = putBenefitsDocumentUpload401ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class PutBenefitsDocumentUploadResponse {
      */
     
     public PutBenefitsDocumentUpload422ApplicationJSON putBenefitsDocumentUpload422ApplicationJSONObject;
+
     public PutBenefitsDocumentUploadResponse withPutBenefitsDocumentUpload422ApplicationJSONObject(PutBenefitsDocumentUpload422ApplicationJSON putBenefitsDocumentUpload422ApplicationJSONObject) {
         this.putBenefitsDocumentUpload422ApplicationJSONObject = putBenefitsDocumentUpload422ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class PutBenefitsDocumentUploadResponse {
      */
     
     public PutBenefitsDocumentUpload429ApplicationJSON putBenefitsDocumentUpload429ApplicationJSONObject;
+
     public PutBenefitsDocumentUploadResponse withPutBenefitsDocumentUpload429ApplicationJSONObject(PutBenefitsDocumentUpload429ApplicationJSON putBenefitsDocumentUpload429ApplicationJSONObject) {
         this.putBenefitsDocumentUpload429ApplicationJSONObject = putBenefitsDocumentUpload429ApplicationJSONObject;
         return this;
@@ -70,9 +78,14 @@ public class PutBenefitsDocumentUploadResponse {
      */
     
     public PutBenefitsDocumentUpload500ApplicationJSON putBenefitsDocumentUpload500ApplicationJSONObject;
+
     public PutBenefitsDocumentUploadResponse withPutBenefitsDocumentUpload500ApplicationJSONObject(PutBenefitsDocumentUpload500ApplicationJSON putBenefitsDocumentUpload500ApplicationJSONObject) {
         this.putBenefitsDocumentUpload500ApplicationJSONObject = putBenefitsDocumentUpload500ApplicationJSONObject;
         return this;
     }
     
+    public PutBenefitsDocumentUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

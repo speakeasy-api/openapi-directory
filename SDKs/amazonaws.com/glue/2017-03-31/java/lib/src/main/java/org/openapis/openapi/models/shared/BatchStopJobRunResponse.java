@@ -15,6 +15,7 @@ public class BatchStopJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public BatchStopJobRunError[] errors;
+
     public BatchStopJobRunResponse withErrors(BatchStopJobRunError[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class BatchStopJobRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuccessfulSubmissions")
     public BatchStopJobRunSuccessfulSubmission[] successfulSubmissions;
+
     public BatchStopJobRunResponse withSuccessfulSubmissions(BatchStopJobRunSuccessfulSubmission[] successfulSubmissions) {
         this.successfulSubmissions = successfulSubmissions;
         return this;
     }
     
+    public BatchStopJobRunResponse(){}
 }

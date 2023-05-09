@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWorldGenerationJobResponse {
     
     public String contentType;
+
     public CreateWorldGenerationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWorldGenerationJobResponse createWorldGenerationJobResponse;
+
     public CreateWorldGenerationJobResponse withCreateWorldGenerationJobResponse(org.openapis.openapi.models.shared.CreateWorldGenerationJobResponse createWorldGenerationJobResponse) {
         this.createWorldGenerationJobResponse = createWorldGenerationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateWorldGenerationJobResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object internalServerException;
+
     public CreateWorldGenerationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateWorldGenerationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object limitExceededException;
+
     public CreateWorldGenerationJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWorldGenerationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class CreateWorldGenerationJobResponse {
     
     
     public Integer statusCode;
+
     public CreateWorldGenerationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateWorldGenerationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWorldGenerationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateWorldGenerationJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class CreateWorldGenerationJobResponse {
      */
     
     public Object throttlingException;
+
     public CreateWorldGenerationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateWorldGenerationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestTrainingJob")
     public HyperParameterTrainingJobSummary bestTrainingJob;
+
     public DescribeHyperParameterTuningJobResponse withBestTrainingJob(HyperParameterTrainingJobSummary bestTrainingJob) {
         this.bestTrainingJob = bestTrainingJob;
         return this;
@@ -31,6 +32,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedResources")
     public HyperParameterTuningJobConsumedResources consumedResources;
+
     public DescribeHyperParameterTuningJobResponse withConsumedResources(HyperParameterTuningJobConsumedResources consumedResources) {
         this.consumedResources = consumedResources;
         return this;
@@ -40,6 +42,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeHyperParameterTuningJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeHyperParameterTuningJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -58,6 +62,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("HyperParameterTuningEndTime")
     public OffsetDateTime hyperParameterTuningEndTime;
+
     public DescribeHyperParameterTuningJobResponse withHyperParameterTuningEndTime(OffsetDateTime hyperParameterTuningEndTime) {
         this.hyperParameterTuningEndTime = hyperParameterTuningEndTime;
         return this;
@@ -65,6 +70,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("HyperParameterTuningJobArn")
     public String hyperParameterTuningJobArn;
+
     public DescribeHyperParameterTuningJobResponse withHyperParameterTuningJobArn(String hyperParameterTuningJobArn) {
         this.hyperParameterTuningJobArn = hyperParameterTuningJobArn;
         return this;
@@ -72,6 +78,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("HyperParameterTuningJobConfig")
     public HyperParameterTuningJobConfig hyperParameterTuningJobConfig;
+
     public DescribeHyperParameterTuningJobResponse withHyperParameterTuningJobConfig(HyperParameterTuningJobConfig hyperParameterTuningJobConfig) {
         this.hyperParameterTuningJobConfig = hyperParameterTuningJobConfig;
         return this;
@@ -79,6 +86,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("HyperParameterTuningJobName")
     public String hyperParameterTuningJobName;
+
     public DescribeHyperParameterTuningJobResponse withHyperParameterTuningJobName(String hyperParameterTuningJobName) {
         this.hyperParameterTuningJobName = hyperParameterTuningJobName;
         return this;
@@ -86,6 +94,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("HyperParameterTuningJobStatus")
     public HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus;
+
     public DescribeHyperParameterTuningJobResponse withHyperParameterTuningJobStatus(HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus) {
         this.hyperParameterTuningJobStatus = hyperParameterTuningJobStatus;
         return this;
@@ -96,6 +105,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeHyperParameterTuningJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -103,6 +113,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("ObjectiveStatusCounters")
     public ObjectiveStatusCounters objectiveStatusCounters;
+
     public DescribeHyperParameterTuningJobResponse withObjectiveStatusCounters(ObjectiveStatusCounters objectiveStatusCounters) {
         this.objectiveStatusCounters = objectiveStatusCounters;
         return this;
@@ -111,6 +122,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallBestTrainingJob")
     public HyperParameterTrainingJobSummary overallBestTrainingJob;
+
     public DescribeHyperParameterTuningJobResponse withOverallBestTrainingJob(HyperParameterTrainingJobSummary overallBestTrainingJob) {
         this.overallBestTrainingJob = overallBestTrainingJob;
         return this;
@@ -119,6 +131,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinition")
     public HyperParameterTrainingJobDefinition trainingJobDefinition;
+
     public DescribeHyperParameterTuningJobResponse withTrainingJobDefinition(HyperParameterTrainingJobDefinition trainingJobDefinition) {
         this.trainingJobDefinition = trainingJobDefinition;
         return this;
@@ -127,6 +140,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobDefinitions")
     public HyperParameterTrainingJobDefinition[] trainingJobDefinitions;
+
     public DescribeHyperParameterTuningJobResponse withTrainingJobDefinitions(HyperParameterTrainingJobDefinition[] trainingJobDefinitions) {
         this.trainingJobDefinitions = trainingJobDefinitions;
         return this;
@@ -134,6 +148,7 @@ public class DescribeHyperParameterTuningJobResponse {
     
     @JsonProperty("TrainingJobStatusCounters")
     public TrainingJobStatusCounters trainingJobStatusCounters;
+
     public DescribeHyperParameterTuningJobResponse withTrainingJobStatusCounters(TrainingJobStatusCounters trainingJobStatusCounters) {
         this.trainingJobStatusCounters = trainingJobStatusCounters;
         return this;
@@ -142,6 +157,7 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJobCompletionDetails")
     public HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails;
+
     public DescribeHyperParameterTuningJobResponse withTuningJobCompletionDetails(HyperParameterTuningJobCompletionDetails tuningJobCompletionDetails) {
         this.tuningJobCompletionDetails = tuningJobCompletionDetails;
         return this;
@@ -150,9 +166,19 @@ public class DescribeHyperParameterTuningJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WarmStartConfig")
     public HyperParameterTuningJobWarmStartConfig warmStartConfig;
+
     public DescribeHyperParameterTuningJobResponse withWarmStartConfig(HyperParameterTuningJobWarmStartConfig warmStartConfig) {
         this.warmStartConfig = warmStartConfig;
         return this;
     }
     
+    public DescribeHyperParameterTuningJobResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("HyperParameterTuningJobArn") String hyperParameterTuningJobArn, @JsonProperty("HyperParameterTuningJobConfig") HyperParameterTuningJobConfig hyperParameterTuningJobConfig, @JsonProperty("HyperParameterTuningJobName") String hyperParameterTuningJobName, @JsonProperty("HyperParameterTuningJobStatus") HyperParameterTuningJobStatusEnum hyperParameterTuningJobStatus, @JsonProperty("ObjectiveStatusCounters") ObjectiveStatusCounters objectiveStatusCounters, @JsonProperty("TrainingJobStatusCounters") TrainingJobStatusCounters trainingJobStatusCounters) {
+        this.creationTime = creationTime;
+        this.hyperParameterTuningJobArn = hyperParameterTuningJobArn;
+        this.hyperParameterTuningJobConfig = hyperParameterTuningJobConfig;
+        this.hyperParameterTuningJobName = hyperParameterTuningJobName;
+        this.hyperParameterTuningJobStatus = hyperParameterTuningJobStatus;
+        this.objectiveStatusCounters = objectiveStatusCounters;
+        this.trainingJobStatusCounters = trainingJobStatusCounters;
+  }
 }

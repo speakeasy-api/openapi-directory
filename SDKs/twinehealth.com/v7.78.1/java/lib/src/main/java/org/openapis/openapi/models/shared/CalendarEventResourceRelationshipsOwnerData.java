@@ -12,6 +12,7 @@ public class CalendarEventResourceRelationshipsOwnerData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CalendarEventResourceRelationshipsOwnerData withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class CalendarEventResourceRelationshipsOwnerData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CalendarEventResourceRelationshipsOwnerData withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CalendarEventResourceRelationshipsOwnerData(){}
 }

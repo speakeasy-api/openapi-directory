@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1CloudIdentityInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternateEmail")
     public String alternateEmail;
+
     public GoogleCloudChannelV1CloudIdentityInfoInput withAlternateEmail(String alternateEmail) {
         this.alternateEmail = alternateEmail;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1CloudIdentityInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerType")
     public GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum customerType;
+
     public GoogleCloudChannelV1CloudIdentityInfoInput withCustomerType(GoogleCloudChannelV1CloudIdentityInfoCustomerTypeEnum customerType) {
         this.customerType = customerType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudChannelV1CloudIdentityInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eduData")
     public GoogleCloudChannelV1EduData eduData;
+
     public GoogleCloudChannelV1CloudIdentityInfoInput withEduData(GoogleCloudChannelV1EduData eduData) {
         this.eduData = eduData;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudChannelV1CloudIdentityInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudChannelV1CloudIdentityInfoInput withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudChannelV1CloudIdentityInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudChannelV1CloudIdentityInfoInput withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GoogleCloudChannelV1CloudIdentityInfoInput(){}
 }

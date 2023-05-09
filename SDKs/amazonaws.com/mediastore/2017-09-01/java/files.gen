@@ -130,4 +130,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StopAccessLoggingInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/TagResourceInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/UntagResourceInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class UsersListFollowedByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public UsersListFollowedByAuthenticatedUserRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,9 +23,11 @@ public class UsersListFollowedByAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public UsersListFollowedByAuthenticatedUserRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public UsersListFollowedByAuthenticatedUserRequest(){}
 }

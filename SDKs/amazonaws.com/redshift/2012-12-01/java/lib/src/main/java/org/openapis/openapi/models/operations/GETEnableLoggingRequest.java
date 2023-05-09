@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETEnableLoggingRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETEnableLoggingActionEnum action;
+
     public GETEnableLoggingRequest withAction(GETEnableLoggingActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableLoggingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BucketName")
     public String bucketName;
+
     public GETEnableLoggingRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -29,6 +32,7 @@ public class GETEnableLoggingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETEnableLoggingRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETEnableLoggingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogDestinationType")
     public GETEnableLoggingLogDestinationTypeEnum logDestinationType;
+
     public GETEnableLoggingRequest withLogDestinationType(GETEnableLoggingLogDestinationTypeEnum logDestinationType) {
         this.logDestinationType = logDestinationType;
         return this;
@@ -49,6 +54,7 @@ public class GETEnableLoggingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogExports")
     public String[] logExports;
+
     public GETEnableLoggingRequest withLogExports(String[] logExports) {
         this.logExports = logExports;
         return this;
@@ -59,6 +65,7 @@ public class GETEnableLoggingRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=S3KeyPrefix")
     public String s3KeyPrefix;
+
     public GETEnableLoggingRequest withS3KeyPrefix(String s3KeyPrefix) {
         this.s3KeyPrefix = s3KeyPrefix;
         return this;
@@ -66,6 +73,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETEnableLoggingVersionEnum version;
+
     public GETEnableLoggingRequest withVersion(GETEnableLoggingVersionEnum version) {
         this.version = version;
         return this;
@@ -73,6 +81,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETEnableLoggingRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -80,6 +89,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETEnableLoggingRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -87,6 +97,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETEnableLoggingRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -94,6 +105,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETEnableLoggingRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -101,6 +113,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETEnableLoggingRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -108,6 +121,7 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETEnableLoggingRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -115,9 +129,15 @@ public class GETEnableLoggingRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETEnableLoggingRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETEnableLoggingRequest(@JsonProperty("Action") GETEnableLoggingActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("Version") GETEnableLoggingVersionEnum version) {
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.version = version;
+  }
 }

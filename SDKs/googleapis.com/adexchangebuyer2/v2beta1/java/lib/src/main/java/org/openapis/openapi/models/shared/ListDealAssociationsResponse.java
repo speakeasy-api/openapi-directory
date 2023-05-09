@@ -18,6 +18,7 @@ public class ListDealAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associations")
     public CreativeDealAssociation[] associations;
+
     public ListDealAssociationsResponse withAssociations(CreativeDealAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -29,9 +30,11 @@ public class ListDealAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDealAssociationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDealAssociationsResponse(){}
 }

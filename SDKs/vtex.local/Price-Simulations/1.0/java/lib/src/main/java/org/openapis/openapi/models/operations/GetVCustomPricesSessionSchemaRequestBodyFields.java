@@ -12,6 +12,7 @@ public class GetVCustomPricesSessionSchemaRequestBodyFields {
      */
     @JsonProperty("name")
     public String name;
+
     public GetVCustomPricesSessionSchemaRequestBodyFields withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,14 @@ public class GetVCustomPricesSessionSchemaRequestBodyFields {
      */
     @JsonProperty("type")
     public String type;
+
     public GetVCustomPricesSessionSchemaRequestBodyFields withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetVCustomPricesSessionSchemaRequestBodyFields(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

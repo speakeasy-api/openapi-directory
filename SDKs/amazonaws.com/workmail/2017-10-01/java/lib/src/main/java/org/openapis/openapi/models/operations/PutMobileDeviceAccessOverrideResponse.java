@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMobileDeviceAccessOverrideResponse {
     
     public String contentType;
+
     public PutMobileDeviceAccessOverrideResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public Object entityNotFoundException;
+
     public PutMobileDeviceAccessOverrideResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public Object entityStateException;
+
     public PutMobileDeviceAccessOverrideResponse withEntityStateException(Object entityStateException) {
         this.entityStateException = entityStateException;
         return this;
@@ -39,6 +43,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public Object invalidParameterException;
+
     public PutMobileDeviceAccessOverrideResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public Object organizationNotFoundException;
+
     public PutMobileDeviceAccessOverrideResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public Object organizationStateException;
+
     public PutMobileDeviceAccessOverrideResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -69,6 +76,7 @@ public class PutMobileDeviceAccessOverrideResponse {
      */
     
     public java.util.Map<String, Object> putMobileDeviceAccessOverrideResponse;
+
     public PutMobileDeviceAccessOverrideResponse withPutMobileDeviceAccessOverrideResponse(java.util.Map<String, Object> putMobileDeviceAccessOverrideResponse) {
         this.putMobileDeviceAccessOverrideResponse = putMobileDeviceAccessOverrideResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutMobileDeviceAccessOverrideResponse {
     
     
     public Integer statusCode;
+
     public PutMobileDeviceAccessOverrideResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutMobileDeviceAccessOverrideResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMobileDeviceAccessOverrideResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutMobileDeviceAccessOverrideResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

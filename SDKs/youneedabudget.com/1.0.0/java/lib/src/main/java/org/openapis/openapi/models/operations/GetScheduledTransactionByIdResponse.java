@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScheduledTransactionByIdResponse {
     
     public String contentType;
+
     public GetScheduledTransactionByIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetScheduledTransactionByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetScheduledTransactionByIdResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetScheduledTransactionByIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ScheduledTransactionResponse scheduledTransactionResponse;
+
     public GetScheduledTransactionByIdResponse withScheduledTransactionResponse(org.openapis.openapi.models.shared.ScheduledTransactionResponse scheduledTransactionResponse) {
         this.scheduledTransactionResponse = scheduledTransactionResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetScheduledTransactionByIdResponse {
     
     
     public Integer statusCode;
+
     public GetScheduledTransactionByIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetScheduledTransactionByIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScheduledTransactionByIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetScheduledTransactionByIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

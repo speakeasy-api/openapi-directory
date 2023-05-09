@@ -15,6 +15,7 @@ public class GetDownloadUrlForLayerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public GetDownloadUrlForLayerResponse withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -23,9 +24,11 @@ public class GetDownloadUrlForLayerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layerDigest")
     public String layerDigest;
+
     public GetDownloadUrlForLayerResponse withLayerDigest(String layerDigest) {
         this.layerDigest = layerDigest;
         return this;
     }
     
+    public GetDownloadUrlForLayerResponse(){}
 }

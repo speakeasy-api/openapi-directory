@@ -103,4 +103,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/CodeExternalStandard.java
 lib/src/main/java/org/openapis/openapi/models/shared/CodeCategory.java
 lib/src/main/java/org/openapis/openapi/models/shared/Category.java
 lib/src/main/java/org/openapis/openapi/models/shared/PatientManagement.java
+docs/sdk/README.md
+docs/authcontroller/README.md
+docs/observationcontroller/README.md
+docs/observationheadingcontroller/README.md
+docs/patientcontroller/README.md
+docs/patientmanagementcontroller/README.md
 USAGE.md

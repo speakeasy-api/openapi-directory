@@ -20,9 +20,13 @@ public class GiftCardActivityImportReversal {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityImportReversal withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
     }
     
+    public GiftCardActivityImportReversal(@JsonProperty("amount_money") Money amountMoney) {
+        this.amountMoney = amountMoney;
+  }
 }

@@ -18,6 +18,7 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerImage")
     public String containerImage;
+
     public RuntimeConfig withContainerImage(String containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public RuntimeConfig withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -40,9 +42,11 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public RuntimeConfig withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RuntimeConfig(){}
 }

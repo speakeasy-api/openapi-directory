@@ -14,6 +14,7 @@ public class ListAnomalyGroupSummariesRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public ListAnomalyGroupSummariesRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
@@ -25,6 +26,7 @@ public class ListAnomalyGroupSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAnomalyGroupSummariesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListAnomalyGroupSummariesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAnomalyGroupSummariesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,9 +49,14 @@ public class ListAnomalyGroupSummariesRequestBody {
      */
     @JsonProperty("SensitivityThreshold")
     public Long sensitivityThreshold;
+
     public ListAnomalyGroupSummariesRequestBody withSensitivityThreshold(Long sensitivityThreshold) {
         this.sensitivityThreshold = sensitivityThreshold;
         return this;
     }
     
+    public ListAnomalyGroupSummariesRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn, @JsonProperty("SensitivityThreshold") Long sensitivityThreshold) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+        this.sensitivityThreshold = sensitivityThreshold;
+  }
 }

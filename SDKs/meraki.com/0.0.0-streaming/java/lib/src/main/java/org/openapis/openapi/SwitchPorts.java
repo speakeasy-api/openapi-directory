@@ -59,11 +59,9 @@ public class SwitchPorts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesResponse res = new org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesResponse res = new org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesResponse(contentType, httpRes.statusCode()) {{
             getDeviceSwitchPortStatuses200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class SwitchPorts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsResponse res = new org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsResponse() {{
+        org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsResponse res = new org.openapis.openapi.models.operations.GetDeviceSwitchPortStatusesPacketsResponse(contentType, httpRes.statusCode()) {{
             getDeviceSwitchPortStatusesPackets200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

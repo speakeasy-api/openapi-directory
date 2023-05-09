@@ -15,6 +15,7 @@ public class ShareFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ShareFileResponseData data;
+
     public ShareFileResponse withData(ShareFileResponseData data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ShareFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public ShareFileResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ShareFileResponse(){}
 }

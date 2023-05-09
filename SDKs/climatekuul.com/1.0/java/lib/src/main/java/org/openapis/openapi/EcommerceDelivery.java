@@ -99,10 +99,8 @@ public class EcommerceDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmCarbonOffset1Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset1Response() {{
+        org.openapis.openapi.models.operations.ConfirmCarbonOffset1Response res = new org.openapis.openapi.models.operations.ConfirmCarbonOffset1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,10 +146,8 @@ public class EcommerceDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPayment1Response res = new org.openapis.openapi.models.operations.ConfirmPayment1Response() {{
+        org.openapis.openapi.models.operations.ConfirmPayment1Response res = new org.openapis.openapi.models.operations.ConfirmPayment1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,10 +193,8 @@ public class EcommerceDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction1Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction1Response() {{
+        org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction1Response res = new org.openapis.openapi.models.operations.ConfirmPaymentOfTransaction1Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,10 +240,8 @@ public class EcommerceDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmsPlanting2Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting2Response() {{
+        org.openapis.openapi.models.operations.ConfirmsPlanting2Response res = new org.openapis.openapi.models.operations.ConfirmsPlanting2Response(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,10 +295,8 @@ public class EcommerceDelivery {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EcommerceDeliveryResponse res = new org.openapis.openapi.models.operations.EcommerceDeliveryResponse() {{
+        org.openapis.openapi.models.operations.EcommerceDeliveryResponse res = new org.openapis.openapi.models.operations.EcommerceDeliveryResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

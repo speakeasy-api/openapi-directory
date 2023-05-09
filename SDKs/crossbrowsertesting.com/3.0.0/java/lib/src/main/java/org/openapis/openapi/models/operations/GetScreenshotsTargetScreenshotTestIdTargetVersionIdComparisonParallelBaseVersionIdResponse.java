@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse {
     
     public String contentType;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
     
     
     public Integer statusCode;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParall
      */
     
     public org.openapis.openapi.models.shared.SingleComparisonTest[] singleComparisonTests;
+
     public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse withSingleComparisonTests(org.openapis.openapi.models.shared.SingleComparisonTest[] singleComparisonTests) {
         this.singleComparisonTests = singleComparisonTests;
         return this;
     }
     
+    public GetScreenshotsTargetScreenshotTestIdTargetVersionIdComparisonParallelBaseVersionIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

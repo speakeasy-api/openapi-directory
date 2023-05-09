@@ -12,9 +12,13 @@ public class UpdateBotRecommendationRequestBody {
      */
     @JsonProperty("encryptionSetting")
     public UpdateBotRecommendationRequestBodyEncryptionSetting encryptionSetting;
+
     public UpdateBotRecommendationRequestBody withEncryptionSetting(UpdateBotRecommendationRequestBodyEncryptionSetting encryptionSetting) {
         this.encryptionSetting = encryptionSetting;
         return this;
     }
     
+    public UpdateBotRecommendationRequestBody(@JsonProperty("encryptionSetting") UpdateBotRecommendationRequestBodyEncryptionSetting encryptionSetting) {
+        this.encryptionSetting = encryptionSetting;
+  }
 }

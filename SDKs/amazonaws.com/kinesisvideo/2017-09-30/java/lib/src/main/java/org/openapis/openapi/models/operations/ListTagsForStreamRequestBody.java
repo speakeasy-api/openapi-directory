@@ -15,6 +15,7 @@ public class ListTagsForStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTagsForStreamRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +27,7 @@ public class ListTagsForStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ListTagsForStreamRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -37,9 +39,11 @@ public class ListTagsForStreamRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public ListTagsForStreamRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public ListTagsForStreamRequestBody(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeLicensesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeLicensesInsertSecurityOption1 option1;
+
     public ComputeLicensesInsertSecurity withOption1(ComputeLicensesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeLicensesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeLicensesInsertSecurityOption2 option2;
+
     public ComputeLicensesInsertSecurity withOption2(ComputeLicensesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class ComputeLicensesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeLicensesInsertSecurityOption3 option3;
+
     public ComputeLicensesInsertSecurity withOption3(ComputeLicensesInsertSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class ComputeLicensesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeLicensesInsertSecurityOption4 option4;
+
     public ComputeLicensesInsertSecurity withOption4(ComputeLicensesInsertSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class ComputeLicensesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeLicensesInsertSecurityOption5 option5;
+
     public ComputeLicensesInsertSecurity withOption5(ComputeLicensesInsertSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public ComputeLicensesInsertSecurity(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AdminDeleteUserAttributesRequest {
     @JsonProperty("UserAttributeNames")
     public String[] userAttributeNames;
+
     public AdminDeleteUserAttributesRequest withUserAttributeNames(String[] userAttributeNames) {
         this.userAttributeNames = userAttributeNames;
         return this;
@@ -19,6 +20,7 @@ public class AdminDeleteUserAttributesRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminDeleteUserAttributesRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -26,9 +28,15 @@ public class AdminDeleteUserAttributesRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminDeleteUserAttributesRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminDeleteUserAttributesRequest(@JsonProperty("UserAttributeNames") String[] userAttributeNames, @JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userAttributeNames = userAttributeNames;
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

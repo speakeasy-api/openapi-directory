@@ -15,9 +15,11 @@ public class CertificateOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateTransparencyLoggingPreference")
     public CertificateTransparencyLoggingPreferenceEnum certificateTransparencyLoggingPreference;
+
     public CertificateOptions withCertificateTransparencyLoggingPreference(CertificateTransparencyLoggingPreferenceEnum certificateTransparencyLoggingPreference) {
         this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
         return this;
     }
     
+    public CertificateOptions(){}
 }

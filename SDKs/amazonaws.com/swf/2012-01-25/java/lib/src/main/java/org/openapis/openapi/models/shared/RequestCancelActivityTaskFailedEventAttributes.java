@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestCancelActivityTaskFailedEventAttributes {
     @JsonProperty("activityId")
     public String activityId;
+
     public RequestCancelActivityTaskFailedEventAttributes withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -19,6 +20,7 @@ public class RequestCancelActivityTaskFailedEventAttributes {
     
     @JsonProperty("cause")
     public RequestCancelActivityTaskFailedCauseEnum cause;
+
     public RequestCancelActivityTaskFailedEventAttributes withCause(RequestCancelActivityTaskFailedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -26,9 +28,15 @@ public class RequestCancelActivityTaskFailedEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public RequestCancelActivityTaskFailedEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
     }
     
+    public RequestCancelActivityTaskFailedEventAttributes(@JsonProperty("activityId") String activityId, @JsonProperty("cause") RequestCancelActivityTaskFailedCauseEnum cause, @JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId) {
+        this.activityId = activityId;
+        this.cause = cause;
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+  }
 }

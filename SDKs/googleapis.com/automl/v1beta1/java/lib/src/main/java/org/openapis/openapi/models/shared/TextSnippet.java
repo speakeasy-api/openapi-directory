@@ -18,6 +18,7 @@ public class TextSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TextSnippet withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class TextSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUri")
     public String contentUri;
+
     public TextSnippet withContentUri(String contentUri) {
         this.contentUri = contentUri;
         return this;
@@ -40,9 +42,11 @@ public class TextSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public TextSnippet withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
     }
     
+    public TextSnippet(){}
 }

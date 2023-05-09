@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordExpirationBlock {
     
     public String description;
+
     public DestinyDefinitionsRecordsDestinyRecordExpirationBlock withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DestinyDefinitionsRecordsDestinyRecordExpirationBlock {
     
     
     public Boolean hasExpiration;
+
     public DestinyDefinitionsRecordsDestinyRecordExpirationBlock withHasExpiration(Boolean hasExpiration) {
         this.hasExpiration = hasExpiration;
         return this;
@@ -26,9 +28,11 @@ public class DestinyDefinitionsRecordsDestinyRecordExpirationBlock {
     
     
     public String icon;
+
     public DestinyDefinitionsRecordsDestinyRecordExpirationBlock withIcon(String icon) {
         this.icon = icon;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordExpirationBlock(){}
 }

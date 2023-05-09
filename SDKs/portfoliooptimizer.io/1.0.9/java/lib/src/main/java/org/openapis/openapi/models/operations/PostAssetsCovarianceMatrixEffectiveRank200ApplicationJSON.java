@@ -15,9 +15,13 @@ public class PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON {
      */
     @JsonProperty("assetsCovarianceMatrixEffectiveRank")
     public Double[][] assetsCovarianceMatrixEffectiveRank;
+
     public PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON withAssetsCovarianceMatrixEffectiveRank(Double[][] assetsCovarianceMatrixEffectiveRank) {
         this.assetsCovarianceMatrixEffectiveRank = assetsCovarianceMatrixEffectiveRank;
         return this;
     }
     
+    public PostAssetsCovarianceMatrixEffectiveRank200ApplicationJSON(@JsonProperty("assetsCovarianceMatrixEffectiveRank") Double[][] assetsCovarianceMatrixEffectiveRank) {
+        this.assetsCovarianceMatrixEffectiveRank = assetsCovarianceMatrixEffectiveRank;
+  }
 }

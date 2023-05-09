@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableFastLaunchRequest {
     
     public Boolean dryRun;
+
     public DisableFastLaunchRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DisableFastLaunchRequest {
     
     
     public Boolean force;
+
     public DisableFastLaunchRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -23,9 +25,13 @@ public class DisableFastLaunchRequest {
     
     
     public String imageId;
+
     public DisableFastLaunchRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public DisableFastLaunchRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

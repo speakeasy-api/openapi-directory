@@ -15,6 +15,7 @@ public class ListMonitoringAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringAlertSummaries")
     public MonitoringAlertSummary[] monitoringAlertSummaries;
+
     public ListMonitoringAlertsResponse withMonitoringAlertSummaries(MonitoringAlertSummary[] monitoringAlertSummaries) {
         this.monitoringAlertSummaries = monitoringAlertSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListMonitoringAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringAlertsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMonitoringAlertsResponse(){}
 }

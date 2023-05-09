@@ -18,6 +18,7 @@ public class MachineTypeAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public MachineTypeAggregatedListWarningCodeEnum code;
+
     public MachineTypeAggregatedListWarning withCode(MachineTypeAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class MachineTypeAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public MachineTypeAggregatedListWarningData[] data;
+
     public MachineTypeAggregatedListWarning withData(MachineTypeAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class MachineTypeAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MachineTypeAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MachineTypeAggregatedListWarning(){}
 }

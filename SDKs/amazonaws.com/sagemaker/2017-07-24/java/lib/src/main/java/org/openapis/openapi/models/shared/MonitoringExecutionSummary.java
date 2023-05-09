@@ -21,6 +21,7 @@ public class MonitoringExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public MonitoringExecutionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -29,6 +30,7 @@ public class MonitoringExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public MonitoringExecutionSummary withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -37,6 +39,7 @@ public class MonitoringExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public MonitoringExecutionSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class MonitoringExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public MonitoringExecutionSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -53,6 +57,7 @@ public class MonitoringExecutionSummary {
     
     @JsonProperty("MonitoringExecutionStatus")
     public ExecutionStatusEnum monitoringExecutionStatus;
+
     public MonitoringExecutionSummary withMonitoringExecutionStatus(ExecutionStatusEnum monitoringExecutionStatus) {
         this.monitoringExecutionStatus = monitoringExecutionStatus;
         return this;
@@ -61,6 +66,7 @@ public class MonitoringExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringJobDefinitionName")
     public String monitoringJobDefinitionName;
+
     public MonitoringExecutionSummary withMonitoringJobDefinitionName(String monitoringJobDefinitionName) {
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         return this;
@@ -68,6 +74,7 @@ public class MonitoringExecutionSummary {
     
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public MonitoringExecutionSummary withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -76,6 +83,7 @@ public class MonitoringExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringType")
     public MonitoringTypeEnum monitoringType;
+
     public MonitoringExecutionSummary withMonitoringType(MonitoringTypeEnum monitoringType) {
         this.monitoringType = monitoringType;
         return this;
@@ -84,6 +92,7 @@ public class MonitoringExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingJobArn")
     public String processingJobArn;
+
     public MonitoringExecutionSummary withProcessingJobArn(String processingJobArn) {
         this.processingJobArn = processingJobArn;
         return this;
@@ -93,9 +102,17 @@ public class MonitoringExecutionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ScheduledTime")
     public OffsetDateTime scheduledTime;
+
     public MonitoringExecutionSummary withScheduledTime(OffsetDateTime scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
     }
     
+    public MonitoringExecutionSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("MonitoringExecutionStatus") ExecutionStatusEnum monitoringExecutionStatus, @JsonProperty("MonitoringScheduleName") String monitoringScheduleName, @JsonProperty("ScheduledTime") OffsetDateTime scheduledTime) {
+        this.creationTime = creationTime;
+        this.lastModifiedTime = lastModifiedTime;
+        this.monitoringExecutionStatus = monitoringExecutionStatus;
+        this.monitoringScheduleName = monitoringScheduleName;
+        this.scheduledTime = scheduledTime;
+  }
 }

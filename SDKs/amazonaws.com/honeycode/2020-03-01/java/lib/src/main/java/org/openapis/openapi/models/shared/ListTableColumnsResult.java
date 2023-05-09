@@ -15,6 +15,7 @@ public class ListTableColumnsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTableColumnsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class ListTableColumnsResult {
     
     @JsonProperty("tableColumns")
     public TableColumn[] tableColumns;
+
     public ListTableColumnsResult withTableColumns(TableColumn[] tableColumns) {
         this.tableColumns = tableColumns;
         return this;
@@ -30,9 +32,13 @@ public class ListTableColumnsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workbookCursor")
     public Long workbookCursor;
+
     public ListTableColumnsResult withWorkbookCursor(Long workbookCursor) {
         this.workbookCursor = workbookCursor;
         return this;
     }
     
+    public ListTableColumnsResult(@JsonProperty("tableColumns") TableColumn[] tableColumns) {
+        this.tableColumns = tableColumns;
+  }
 }

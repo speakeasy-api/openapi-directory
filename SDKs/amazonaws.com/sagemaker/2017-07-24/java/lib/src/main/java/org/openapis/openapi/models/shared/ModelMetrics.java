@@ -15,6 +15,7 @@ public class ModelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bias")
     public Bias bias;
+
     public ModelMetrics withBias(Bias bias) {
         this.bias = bias;
         return this;
@@ -23,6 +24,7 @@ public class ModelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Explainability")
     public Explainability explainability;
+
     public ModelMetrics withExplainability(Explainability explainability) {
         this.explainability = explainability;
         return this;
@@ -31,6 +33,7 @@ public class ModelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDataQuality")
     public ModelDataQuality modelDataQuality;
+
     public ModelMetrics withModelDataQuality(ModelDataQuality modelDataQuality) {
         this.modelDataQuality = modelDataQuality;
         return this;
@@ -39,9 +42,11 @@ public class ModelMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelQuality")
     public ModelQuality modelQuality;
+
     public ModelMetrics withModelQuality(ModelQuality modelQuality) {
         this.modelQuality = modelQuality;
         return this;
     }
     
+    public ModelMetrics(){}
 }

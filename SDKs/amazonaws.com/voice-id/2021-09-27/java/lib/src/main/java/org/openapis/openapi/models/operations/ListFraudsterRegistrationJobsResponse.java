@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFraudsterRegistrationJobsResponse {
@@ -12,6 +13,7 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListFraudsterRegistrationJobsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListFraudsterRegistrationJobsResponse {
     
     
     public String contentType;
+
     public ListFraudsterRegistrationJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListFraudsterRegistrationJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFraudsterRegistrationJobsResponse listFraudsterRegistrationJobsResponse;
+
     public ListFraudsterRegistrationJobsResponse withListFraudsterRegistrationJobsResponse(org.openapis.openapi.models.shared.ListFraudsterRegistrationJobsResponse listFraudsterRegistrationJobsResponse) {
         this.listFraudsterRegistrationJobsResponse = listFraudsterRegistrationJobsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFraudsterRegistrationJobsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListFraudsterRegistrationJobsResponse {
     
     
     public Integer statusCode;
+
     public ListFraudsterRegistrationJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListFraudsterRegistrationJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFraudsterRegistrationJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public Object throttlingException;
+
     public ListFraudsterRegistrationJobsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListFraudsterRegistrationJobsResponse {
      */
     
     public Object validationException;
+
     public ListFraudsterRegistrationJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListFraudsterRegistrationJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

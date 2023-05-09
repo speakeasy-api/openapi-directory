@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inboundSamlConfigs")
     public GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig[] inboundSamlConfigs;
+
     public GoogleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse withInboundSamlConfigs(GoogleCloudIdentitytoolkitAdminV2InboundSamlConfig[] inboundSamlConfigs) {
         this.inboundSamlConfigs = inboundSamlConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ListInboundSamlConfigsResponse(){}
 }

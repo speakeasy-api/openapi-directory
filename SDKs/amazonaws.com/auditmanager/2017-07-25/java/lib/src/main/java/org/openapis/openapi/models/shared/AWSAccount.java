@@ -15,6 +15,7 @@ public class AWSAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public AWSAccount withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -23,6 +24,7 @@ public class AWSAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AWSAccount withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class AWSAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AWSAccount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AWSAccount(){}
 }

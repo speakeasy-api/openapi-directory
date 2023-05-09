@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsFirewallIngressRulesCreateResponse {
     
     public String contentType;
+
     public AppengineAppsFirewallIngressRulesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsFirewallIngressRulesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.FirewallRule firewallRule;
+
     public AppengineAppsFirewallIngressRulesCreateResponse withFirewallRule(org.openapis.openapi.models.shared.FirewallRule firewallRule) {
         this.firewallRule = firewallRule;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsFirewallIngressRulesCreateResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsFirewallIngressRulesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsFirewallIngressRulesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsFirewallIngressRulesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsFirewallIngressRulesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

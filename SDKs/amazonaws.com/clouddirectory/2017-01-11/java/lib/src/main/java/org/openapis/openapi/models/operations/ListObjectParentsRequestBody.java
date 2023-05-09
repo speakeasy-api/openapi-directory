@@ -15,6 +15,7 @@ public class ListObjectParentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeAllLinksToEachParent")
     public Boolean includeAllLinksToEachParent;
+
     public ListObjectParentsRequestBody withIncludeAllLinksToEachParent(Boolean includeAllLinksToEachParent) {
         this.includeAllLinksToEachParent = includeAllLinksToEachParent;
         return this;
@@ -26,6 +27,7 @@ public class ListObjectParentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListObjectParentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListObjectParentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListObjectParentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListObjectParentsRequestBody {
      */
     @JsonProperty("ObjectReference")
     public ListObjectParentsRequestBodyObjectReference objectReference;
+
     public ListObjectParentsRequestBody withObjectReference(ListObjectParentsRequestBodyObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public ListObjectParentsRequestBody(@JsonProperty("ObjectReference") ListObjectParentsRequestBodyObjectReference objectReference) {
+        this.objectReference = objectReference;
+  }
 }

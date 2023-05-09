@@ -12,6 +12,7 @@ public class RewardProgramResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public RewardProgramResourceAttributes attributes;
+
     public RewardProgramResource withAttributes(RewardProgramResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class RewardProgramResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RewardProgramResource withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class RewardProgramResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public RewardProgramResourceRelationships relationships;
+
     public RewardProgramResource withRelationships(RewardProgramResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -35,9 +38,13 @@ public class RewardProgramResource {
     
     @JsonProperty("type")
     public String type;
+
     public RewardProgramResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RewardProgramResource(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

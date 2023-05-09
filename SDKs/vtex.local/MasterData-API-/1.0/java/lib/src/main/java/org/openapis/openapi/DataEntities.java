@@ -69,11 +69,9 @@ public class DataEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetdataentitystructureResponse res = new org.openapis.openapi.models.operations.GetdataentitystructureResponse() {{
+        org.openapis.openapi.models.operations.GetdataentitystructureResponse res = new org.openapis.openapi.models.operations.GetdataentitystructureResponse(contentType, httpRes.statusCode()) {{
             getdataentityfields = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class DataEntities {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListdataentitiesResponse res = new org.openapis.openapi.models.operations.ListdataentitiesResponse() {{
+        org.openapis.openapi.models.operations.ListdataentitiesResponse res = new org.openapis.openapi.models.operations.ListdataentitiesResponse(contentType, httpRes.statusCode()) {{
             listdataentities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

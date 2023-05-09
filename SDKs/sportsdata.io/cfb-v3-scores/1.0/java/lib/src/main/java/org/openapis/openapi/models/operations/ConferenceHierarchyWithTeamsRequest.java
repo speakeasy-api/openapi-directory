@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConferenceHierarchyWithTeamsRequest {
@@ -12,9 +13,13 @@ public class ConferenceHierarchyWithTeamsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public ConferenceHierarchyWithTeamsFormatEnum format;
+
     public ConferenceHierarchyWithTeamsRequest withFormat(ConferenceHierarchyWithTeamsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public ConferenceHierarchyWithTeamsRequest(@JsonProperty("format") ConferenceHierarchyWithTeamsFormatEnum format) {
+        this.format = format;
+  }
 }

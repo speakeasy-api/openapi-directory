@@ -15,6 +15,7 @@ public class FailedRemediationExceptionBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedItems")
     public RemediationException[] failedItems;
+
     public FailedRemediationExceptionBatch withFailedItems(RemediationException[] failedItems) {
         this.failedItems = failedItems;
         return this;
@@ -23,9 +24,11 @@ public class FailedRemediationExceptionBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public FailedRemediationExceptionBatch withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
     }
     
+    public FailedRemediationExceptionBatch(){}
 }

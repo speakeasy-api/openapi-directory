@@ -59,4 +59,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DownloadModelResponseModelFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DownloadModelResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListModelsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

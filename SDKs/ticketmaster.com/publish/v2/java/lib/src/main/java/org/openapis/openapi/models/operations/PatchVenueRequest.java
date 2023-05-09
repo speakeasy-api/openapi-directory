@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchVenueRequest {
@@ -12,6 +13,7 @@ public class PatchVenueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AugmentationData augmentationData;
+
     public PatchVenueRequest withAugmentationData(org.openapis.openapi.models.shared.AugmentationData augmentationData) {
         this.augmentationData = augmentationData;
         return this;
@@ -22,6 +24,7 @@ public class PatchVenueRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TMPS-Correlation-Id")
     public String tmpsCorrelationId;
+
     public PatchVenueRequest withTMPSCorrelationId(String tmpsCorrelationId) {
         this.tmpsCorrelationId = tmpsCorrelationId;
         return this;
@@ -32,9 +35,15 @@ public class PatchVenueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchVenueRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchVenueRequest(@JsonProperty("AugmentationData") org.openapis.openapi.models.shared.AugmentationData augmentationData, @JsonProperty("TMPS-Correlation-Id") String tmpsCorrelationId, @JsonProperty("id") String id) {
+        this.augmentationData = augmentationData;
+        this.tmpsCorrelationId = tmpsCorrelationId;
+        this.id = id;
+  }
 }

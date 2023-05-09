@@ -15,9 +15,11 @@ public class GetStreamingImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingImage")
     public StreamingImage streamingImage;
+
     public GetStreamingImageResponse withStreamingImage(StreamingImage streamingImage) {
         this.streamingImage = streamingImage;
         return this;
     }
     
+    public GetStreamingImageResponse(){}
 }

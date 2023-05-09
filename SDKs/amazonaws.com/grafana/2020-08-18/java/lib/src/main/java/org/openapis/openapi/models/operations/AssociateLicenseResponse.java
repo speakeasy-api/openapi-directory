@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateLicenseResponse {
@@ -12,6 +13,7 @@ public class AssociateLicenseResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateLicenseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateLicenseResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateLicenseResponse associateLicenseResponse;
+
     public AssociateLicenseResponse withAssociateLicenseResponse(org.openapis.openapi.models.shared.AssociateLicenseResponse associateLicenseResponse) {
         this.associateLicenseResponse = associateLicenseResponse;
         return this;
@@ -29,6 +32,7 @@ public class AssociateLicenseResponse {
     
     
     public String contentType;
+
     public AssociateLicenseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AssociateLicenseResponse {
      */
     
     public Object internalServerException;
+
     public AssociateLicenseResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateLicenseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateLicenseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateLicenseResponse {
     
     
     public Integer statusCode;
+
     public AssociateLicenseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateLicenseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateLicenseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateLicenseResponse {
      */
     
     public Object throttlingException;
+
     public AssociateLicenseResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateLicenseResponse {
      */
     
     public Object validationException;
+
     public AssociateLicenseResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateLicenseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

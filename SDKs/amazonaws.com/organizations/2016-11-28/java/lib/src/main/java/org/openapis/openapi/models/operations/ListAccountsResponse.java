@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccountsResponse {
@@ -12,6 +13,7 @@ public class ListAccountsResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListAccountsResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListAccountsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccountsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountsResponse {
     
     
     public String contentType;
+
     public ListAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAccountsResponse {
      */
     
     public Object invalidInputException;
+
     public ListAccountsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccountsResponse listAccountsResponse;
+
     public ListAccountsResponse withListAccountsResponse(org.openapis.openapi.models.shared.ListAccountsResponse listAccountsResponse) {
         this.listAccountsResponse = listAccountsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAccountsResponse {
      */
     
     public Object serviceException;
+
     public ListAccountsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class ListAccountsResponse {
     
     
     public Integer statusCode;
+
     public ListAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListAccountsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListAccountsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

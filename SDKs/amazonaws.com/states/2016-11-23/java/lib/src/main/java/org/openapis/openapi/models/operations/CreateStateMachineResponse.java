@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStateMachineResponse {
     
     public String contentType;
+
     public CreateStateMachineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStateMachineResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStateMachineOutput createStateMachineOutput;
+
     public CreateStateMachineResponse withCreateStateMachineOutput(org.openapis.openapi.models.shared.CreateStateMachineOutput createStateMachineOutput) {
         this.createStateMachineOutput = createStateMachineOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object invalidArn;
+
     public CreateStateMachineResponse withInvalidArn(Object invalidArn) {
         this.invalidArn = invalidArn;
         return this;
@@ -39,6 +43,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object invalidDefinition;
+
     public CreateStateMachineResponse withInvalidDefinition(Object invalidDefinition) {
         this.invalidDefinition = invalidDefinition;
         return this;
@@ -49,6 +54,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object invalidLoggingConfiguration;
+
     public CreateStateMachineResponse withInvalidLoggingConfiguration(Object invalidLoggingConfiguration) {
         this.invalidLoggingConfiguration = invalidLoggingConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object invalidName;
+
     public CreateStateMachineResponse withInvalidName(Object invalidName) {
         this.invalidName = invalidName;
         return this;
@@ -69,6 +76,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object invalidTracingConfiguration;
+
     public CreateStateMachineResponse withInvalidTracingConfiguration(Object invalidTracingConfiguration) {
         this.invalidTracingConfiguration = invalidTracingConfiguration;
         return this;
@@ -79,6 +87,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object stateMachineAlreadyExists;
+
     public CreateStateMachineResponse withStateMachineAlreadyExists(Object stateMachineAlreadyExists) {
         this.stateMachineAlreadyExists = stateMachineAlreadyExists;
         return this;
@@ -89,6 +98,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object stateMachineDeleting;
+
     public CreateStateMachineResponse withStateMachineDeleting(Object stateMachineDeleting) {
         this.stateMachineDeleting = stateMachineDeleting;
         return this;
@@ -99,6 +109,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object stateMachineTypeNotSupported;
+
     public CreateStateMachineResponse withStateMachineTypeNotSupported(Object stateMachineTypeNotSupported) {
         this.stateMachineTypeNotSupported = stateMachineTypeNotSupported;
         return this;
@@ -106,6 +117,7 @@ public class CreateStateMachineResponse {
     
     
     public Integer statusCode;
+
     public CreateStateMachineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class CreateStateMachineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStateMachineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class CreateStateMachineResponse {
      */
     
     public Object stateMachineLimitExceeded;
+
     public CreateStateMachineResponse withStateMachineLimitExceeded(Object stateMachineLimitExceeded) {
         this.stateMachineLimitExceeded = stateMachineLimitExceeded;
         return this;
@@ -133,9 +147,14 @@ public class CreateStateMachineResponse {
      */
     
     public Object tooManyTags;
+
     public CreateStateMachineResponse withTooManyTags(Object tooManyTags) {
         this.tooManyTags = tooManyTags;
         return this;
     }
     
+    public CreateStateMachineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

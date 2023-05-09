@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFieldResponse {
@@ -12,6 +13,7 @@ public class CreateFieldResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateFieldResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateFieldResponse {
      */
     
     public Object conflictException;
+
     public CreateFieldResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateFieldResponse {
     
     
     public String contentType;
+
     public CreateFieldResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateFieldResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFieldResponse createFieldResponse;
+
     public CreateFieldResponse withCreateFieldResponse(org.openapis.openapi.models.shared.CreateFieldResponse createFieldResponse) {
         this.createFieldResponse = createFieldResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateFieldResponse {
      */
     
     public Object internalServerException;
+
     public CreateFieldResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateFieldResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateFieldResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateFieldResponse {
     
     
     public Integer statusCode;
+
     public CreateFieldResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateFieldResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFieldResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateFieldResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateFieldResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateFieldResponse {
      */
     
     public Object throttlingException;
+
     public CreateFieldResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateFieldResponse {
      */
     
     public Object validationException;
+
     public CreateFieldResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateFieldResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

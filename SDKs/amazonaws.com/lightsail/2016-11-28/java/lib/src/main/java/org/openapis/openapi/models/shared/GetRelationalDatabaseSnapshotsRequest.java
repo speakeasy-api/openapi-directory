@@ -12,9 +12,11 @@ public class GetRelationalDatabaseSnapshotsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetRelationalDatabaseSnapshotsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetRelationalDatabaseSnapshotsRequest(){}
 }

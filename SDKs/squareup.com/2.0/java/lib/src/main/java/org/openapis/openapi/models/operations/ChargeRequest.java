@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChargeRequest {
@@ -14,6 +15,7 @@ public class ChargeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChargeRequest chargeRequest;
+
     public ChargeRequest withChargeRequest(org.openapis.openapi.models.shared.ChargeRequest chargeRequest) {
         this.chargeRequest = chargeRequest;
         return this;
@@ -24,9 +26,14 @@ public class ChargeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public ChargeRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public ChargeRequest(@JsonProperty("ChargeRequest") org.openapis.openapi.models.shared.ChargeRequest chargeRequest, @JsonProperty("location_id") String locationId) {
+        this.chargeRequest = chargeRequest;
+        this.locationId = locationId;
+  }
 }

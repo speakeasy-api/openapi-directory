@@ -12,6 +12,7 @@ public class StartOnDemandReplicationRunRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public StartOnDemandReplicationRunRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,13 @@ public class StartOnDemandReplicationRunRequest {
     
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public StartOnDemandReplicationRunRequest withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
     }
     
+    public StartOnDemandReplicationRunRequest(@JsonProperty("replicationJobId") String replicationJobId) {
+        this.replicationJobId = replicationJobId;
+  }
 }

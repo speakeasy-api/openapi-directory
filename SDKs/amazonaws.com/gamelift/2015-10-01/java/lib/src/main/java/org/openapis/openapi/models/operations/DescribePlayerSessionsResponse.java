@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePlayerSessionsResponse {
     
     public String contentType;
+
     public DescribePlayerSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePlayerSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePlayerSessionsOutput describePlayerSessionsOutput;
+
     public DescribePlayerSessionsResponse withDescribePlayerSessionsOutput(org.openapis.openapi.models.shared.DescribePlayerSessionsOutput describePlayerSessionsOutput) {
         this.describePlayerSessionsOutput = describePlayerSessionsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribePlayerSessionsResponse {
      */
     
     public Object internalServiceException;
+
     public DescribePlayerSessionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePlayerSessionsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePlayerSessionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribePlayerSessionsResponse {
      */
     
     public Object notFoundException;
+
     public DescribePlayerSessionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribePlayerSessionsResponse {
     
     
     public Integer statusCode;
+
     public DescribePlayerSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribePlayerSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePlayerSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribePlayerSessionsResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribePlayerSessionsResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribePlayerSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

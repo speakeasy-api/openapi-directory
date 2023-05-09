@@ -18,6 +18,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalDurationDays")
     public Integer intervalDurationDays;
+
     public Schedule withIntervalDurationDays(Integer intervalDurationDays) {
         this.intervalDurationDays = intervalDurationDays;
         return this;
@@ -29,9 +30,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public Schedule withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public Schedule(){}
 }

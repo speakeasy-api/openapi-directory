@@ -13,6 +13,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchPoliceStopDataRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchPoliceStopDataRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchPoliceStopDataRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchPoliceStopDataRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchPoliceStopDataRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchPoliceStopDataRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchPoliceStopDataRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchPoliceStopDataRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchPoliceStopDataRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchPoliceStopDataRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchPoliceStopDataRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchPoliceStopDataRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchPoliceStopDataRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchPoliceStopDataRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.address")
     public String searchDbPoliceStopDataAddress;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataAddress(String searchDbPoliceStopDataAddress) {
         this.searchDbPoliceStopDataAddress = searchDbPoliceStopDataAddress;
         return this;
@@ -163,6 +178,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.date")
     public String searchDbPoliceStopDataDate;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataDate(String searchDbPoliceStopDataDate) {
         this.searchDbPoliceStopDataDate = searchDbPoliceStopDataDate;
         return this;
@@ -173,6 +189,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.ethnicity")
     public String searchDbPoliceStopDataEthnicity;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataEthnicity(String searchDbPoliceStopDataEthnicity) {
         this.searchDbPoliceStopDataEthnicity = searchDbPoliceStopDataEthnicity;
         return this;
@@ -183,6 +200,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.minutes")
     public Long searchDbPoliceStopDataMinutes;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataMinutes(Long searchDbPoliceStopDataMinutes) {
         this.searchDbPoliceStopDataMinutes = searchDbPoliceStopDataMinutes;
         return this;
@@ -193,6 +211,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.race")
     public String searchDbPoliceStopDataRace;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataRace(String searchDbPoliceStopDataRace) {
         this.searchDbPoliceStopDataRace = searchDbPoliceStopDataRace;
         return this;
@@ -203,6 +222,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.resident")
     public String searchDbPoliceStopDataResident;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataResident(String searchDbPoliceStopDataResident) {
         this.searchDbPoliceStopDataResident = searchDbPoliceStopDataResident;
         return this;
@@ -213,6 +233,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.db_police_stop_data.sex")
     public String searchDbPoliceStopDataSex;
+
     public SearchPoliceStopDataRequest withSearchDbPoliceStopDataSex(String searchDbPoliceStopDataSex) {
         this.searchDbPoliceStopDataSex = searchDbPoliceStopDataSex;
         return this;
@@ -223,6 +244,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchPoliceStopDataRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -233,6 +255,7 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchPoliceStopDataRequest withText(String text) {
         this.text = text;
         return this;
@@ -243,9 +266,11 @@ public class SearchPoliceStopDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchPoliceStopDataRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchPoliceStopDataRequest(){}
 }

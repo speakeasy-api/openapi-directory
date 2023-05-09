@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ManagedScaling - &lt;p&gt;The managed scaling settings for the Auto Scaling group capacity provider.&lt;/p&gt; &lt;p&gt;When managed scaling is enabled, Amazon ECS manages the scale-in and scale-out actions of the Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed CloudWatch metric with the specified &lt;code&gt;targetCapacity&lt;/code&gt; value as the target value for the metric. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling"&gt;Using managed scaling&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;If managed scaling is off, the user must manage the scaling of the Auto Scaling group.&lt;/p&gt;
+ * ManagedScaling - &lt;p&gt;The managed scaling settings for the Auto Scaling group capacity provider.&lt;/p&gt; &lt;p&gt;When managed scaling is turned on, Amazon ECS manages the scale-in and scale-out actions of the Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon ECS managed CloudWatch metric with the specified &lt;code&gt;targetCapacity&lt;/code&gt; value as the target value for the metric. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling"&gt;Using managed scaling&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;If managed scaling is off, the user must manage the scaling of the Auto Scaling group.&lt;/p&gt;
  */
 public class ManagedScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceWarmupPeriod")
     public Long instanceWarmupPeriod;
+
     public ManagedScaling withInstanceWarmupPeriod(Long instanceWarmupPeriod) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         return this;
@@ -23,6 +24,7 @@ public class ManagedScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumScalingStepSize")
     public Long maximumScalingStepSize;
+
     public ManagedScaling withMaximumScalingStepSize(Long maximumScalingStepSize) {
         this.maximumScalingStepSize = maximumScalingStepSize;
         return this;
@@ -31,6 +33,7 @@ public class ManagedScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumScalingStepSize")
     public Long minimumScalingStepSize;
+
     public ManagedScaling withMinimumScalingStepSize(Long minimumScalingStepSize) {
         this.minimumScalingStepSize = minimumScalingStepSize;
         return this;
@@ -39,6 +42,7 @@ public class ManagedScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ManagedScalingStatusEnum status;
+
     public ManagedScaling withStatus(ManagedScalingStatusEnum status) {
         this.status = status;
         return this;
@@ -47,9 +51,11 @@ public class ManagedScaling {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCapacity")
     public Long targetCapacity;
+
     public ManagedScaling withTargetCapacity(Long targetCapacity) {
         this.targetCapacity = targetCapacity;
         return this;
     }
     
+    public ManagedScaling(){}
 }

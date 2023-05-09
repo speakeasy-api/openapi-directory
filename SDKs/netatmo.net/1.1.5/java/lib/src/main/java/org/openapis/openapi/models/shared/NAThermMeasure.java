@@ -12,6 +12,7 @@ public class NAThermMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setpoint_temp")
     public Float setpointTemp;
+
     public NAThermMeasure withSetpointTemp(Float setpointTemp) {
         this.setpointTemp = setpointTemp;
         return this;
@@ -20,6 +21,7 @@ public class NAThermMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Float temperature;
+
     public NAThermMeasure withTemperature(Float temperature) {
         this.temperature = temperature;
         return this;
@@ -28,9 +30,11 @@ public class NAThermMeasure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Integer time;
+
     public NAThermMeasure withTime(Integer time) {
         this.time = time;
         return this;
     }
     
+    public NAThermMeasure(){}
 }

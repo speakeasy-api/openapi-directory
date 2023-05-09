@@ -18,6 +18,7 @@ public class ShippingsettingsGetSupportedCarriersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carriers")
     public CarriersCarrier[] carriers;
+
     public ShippingsettingsGetSupportedCarriersResponse withCarriers(CarriersCarrier[] carriers) {
         this.carriers = carriers;
         return this;
@@ -29,9 +30,11 @@ public class ShippingsettingsGetSupportedCarriersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ShippingsettingsGetSupportedCarriersResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ShippingsettingsGetSupportedCarriersResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteImportedKeyMaterialRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public DeleteImportedKeyMaterialRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public DeleteImportedKeyMaterialRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

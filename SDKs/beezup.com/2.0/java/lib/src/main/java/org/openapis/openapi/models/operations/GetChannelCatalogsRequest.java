@@ -12,9 +12,11 @@ public class GetChannelCatalogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public GetChannelCatalogsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public GetChannelCatalogsRequest(){}
 }

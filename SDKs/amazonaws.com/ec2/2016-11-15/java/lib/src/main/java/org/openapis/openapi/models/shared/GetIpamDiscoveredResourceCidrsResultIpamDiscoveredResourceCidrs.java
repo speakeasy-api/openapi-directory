@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     public Double ipUsage;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withIpUsage(Double ipUsage) {
         this.ipUsage = ipUsage;
         return this;
@@ -19,6 +20,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String ipamResourceDiscoveryId;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withIpamResourceDiscoveryId(String ipamResourceDiscoveryId) {
         this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
         return this;
@@ -26,6 +28,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String resourceCidr;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceCidr(String resourceCidr) {
         this.resourceCidr = resourceCidr;
         return this;
@@ -33,6 +36,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String resourceId;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -40,6 +44,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String resourceOwnerId;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
@@ -47,6 +52,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String resourceRegion;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceRegion(String resourceRegion) {
         this.resourceRegion = resourceRegion;
         return this;
@@ -54,6 +60,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTags[] resourceTags;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceTags(GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTags[] resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -61,6 +68,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum resourceType;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withResourceType(GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -68,6 +76,7 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public OffsetDateTime sampleTime;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withSampleTime(OffsetDateTime sampleTime) {
         this.sampleTime = sampleTime;
         return this;
@@ -75,9 +84,11 @@ public class GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs {
     
     
     public String vpcId;
+
     public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public GetIpamDiscoveredResourceCidrsResultIpamDiscoveredResourceCidrs(){}
 }

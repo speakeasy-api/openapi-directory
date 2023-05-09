@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answerRelevance")
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum answerRelevance;
+
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedback withAnswerRelevance(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackAnswerRelevanceEnum answerRelevance) {
         this.answerRelevance = answerRelevance;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentCorrectness")
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum documentCorrectness;
+
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedback withDocumentCorrectness(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentCorrectnessEnum documentCorrectness) {
         this.documentCorrectness = documentCorrectness;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentEfficiency")
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum documentEfficiency;
+
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedback withDocumentEfficiency(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackDocumentEfficiencyEnum documentEfficiency) {
         this.documentEfficiency = documentEfficiency;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2beta1AgentAssistantFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summarizationFeedback")
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizationFeedback summarizationFeedback;
+
     public GoogleCloudDialogflowV2beta1AgentAssistantFeedback withSummarizationFeedback(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackSummarizationFeedback summarizationFeedback) {
         this.summarizationFeedback = summarizationFeedback;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AgentAssistantFeedback(){}
 }

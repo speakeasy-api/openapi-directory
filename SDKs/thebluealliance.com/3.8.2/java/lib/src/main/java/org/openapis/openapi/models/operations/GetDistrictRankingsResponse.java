@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDistrictRankingsResponse {
     
     public String contentType;
+
     public GetDistrictRankingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDistrictRankingsResponse {
      */
     
     public org.openapis.openapi.models.shared.DistrictRanking[] districtRankings;
+
     public GetDistrictRankingsResponse withDistrictRankings(org.openapis.openapi.models.shared.DistrictRanking[] districtRankings) {
         this.districtRankings = districtRankings;
         return this;
@@ -26,6 +29,7 @@ public class GetDistrictRankingsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetDistrictRankingsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetDistrictRankingsResponse {
     
     
     public Integer statusCode;
+
     public GetDistrictRankingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetDistrictRankingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDistrictRankingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDistrictRankingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

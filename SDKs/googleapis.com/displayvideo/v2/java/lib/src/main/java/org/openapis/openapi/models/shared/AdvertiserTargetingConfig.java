@@ -18,9 +18,11 @@ public class AdvertiserTargetingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exemptTvFromViewabilityTargeting")
     public Boolean exemptTvFromViewabilityTargeting;
+
     public AdvertiserTargetingConfig withExemptTvFromViewabilityTargeting(Boolean exemptTvFromViewabilityTargeting) {
         this.exemptTvFromViewabilityTargeting = exemptTvFromViewabilityTargeting;
         return this;
     }
     
+    public AdvertiserTargetingConfig(){}
 }

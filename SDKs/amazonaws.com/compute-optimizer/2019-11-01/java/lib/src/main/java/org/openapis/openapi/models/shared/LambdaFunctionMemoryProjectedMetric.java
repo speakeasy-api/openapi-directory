@@ -15,6 +15,7 @@ public class LambdaFunctionMemoryProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public LambdaFunctionMemoryMetricNameEnum name;
+
     public LambdaFunctionMemoryProjectedMetric withName(LambdaFunctionMemoryMetricNameEnum name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionMemoryProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statistic")
     public LambdaFunctionMemoryMetricStatisticEnum statistic;
+
     public LambdaFunctionMemoryProjectedMetric withStatistic(LambdaFunctionMemoryMetricStatisticEnum statistic) {
         this.statistic = statistic;
         return this;
@@ -31,9 +33,11 @@ public class LambdaFunctionMemoryProjectedMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public LambdaFunctionMemoryProjectedMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public LambdaFunctionMemoryProjectedMetric(){}
 }

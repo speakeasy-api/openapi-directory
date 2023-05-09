@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2RecordKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigQueryKey")
     public GooglePrivacyDlpV2BigQueryKey bigQueryKey;
+
     public GooglePrivacyDlpV2RecordKey withBigQueryKey(GooglePrivacyDlpV2BigQueryKey bigQueryKey) {
         this.bigQueryKey = bigQueryKey;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2RecordKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datastoreKey")
     public GooglePrivacyDlpV2DatastoreKey datastoreKey;
+
     public GooglePrivacyDlpV2RecordKey withDatastoreKey(GooglePrivacyDlpV2DatastoreKey datastoreKey) {
         this.datastoreKey = datastoreKey;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2RecordKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idValues")
     public String[] idValues;
+
     public GooglePrivacyDlpV2RecordKey withIdValues(String[] idValues) {
         this.idValues = idValues;
         return this;
     }
     
+    public GooglePrivacyDlpV2RecordKey(){}
 }

@@ -12,6 +12,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public Status withCode(Integer code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public String info;
+
     public Status withInfo(String info) {
         this.info = info;
         return this;
@@ -28,6 +30,7 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Status withReason(String reason) {
         this.reason = reason;
         return this;
@@ -36,9 +39,11 @@ public class Status {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusStatusFlagEnum status;
+
     public Status withStatus(StatusStatusFlagEnum status) {
         this.status = status;
         return this;
     }
     
+    public Status(){}
 }

@@ -18,28 +18,19 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("build")
     public String build;
+
     public BuildConfig withBuild(String build) {
         this.build = build;
         return this;
     }
     
     /**
-     * Specifies one of the Google provided buildpack stacks.
-     */
-    @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("buildpackStack")
-    public String buildpackStack;
-    public BuildConfig withBuildpackStack(String buildpackStack) {
-        this.buildpackStack = buildpackStack;
-        return this;
-    }
-    
-    /**
-     * Optional. Docker Registry to use for this deployment. This configuration is only applicable to 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
+     * Docker Registry to use for this deployment. This configuration is only applicable to 1st Gen functions, 2nd Gen functions can only use Artifact Registry. If `docker_repository` field is specified, this field will be automatically set as `ARTIFACT_REGISTRY`. If unspecified, it currently defaults to `CONTAINER_REGISTRY`. This field may be overridden by the backend for eligible deployments.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerRegistry")
     public BuildConfigDockerRegistryEnum dockerRegistry;
+
     public BuildConfig withDockerRegistry(BuildConfigDockerRegistryEnum dockerRegistry) {
         this.dockerRegistry = dockerRegistry;
         return this;
@@ -51,6 +42,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerRepository")
     public String dockerRepository;
+
     public BuildConfig withDockerRepository(String dockerRepository) {
         this.dockerRepository = dockerRepository;
         return this;
@@ -62,6 +54,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoint")
     public String entryPoint;
+
     public BuildConfig withEntryPoint(String entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -73,6 +66,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentVariables")
     public java.util.Map<String, String> environmentVariables;
+
     public BuildConfig withEnvironmentVariables(java.util.Map<String, String> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
@@ -84,6 +78,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtime")
     public String runtime;
+
     public BuildConfig withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -95,6 +90,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public BuildConfig withSource(Source source) {
         this.source = source;
         return this;
@@ -106,6 +102,7 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceProvenance")
     public SourceProvenance sourceProvenance;
+
     public BuildConfig withSourceProvenance(SourceProvenance sourceProvenance) {
         this.sourceProvenance = sourceProvenance;
         return this;
@@ -117,9 +114,11 @@ public class BuildConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerPool")
     public String workerPool;
+
     public BuildConfig withWorkerPool(String workerPool) {
         this.workerPool = workerPool;
         return this;
     }
     
+    public BuildConfig(){}
 }

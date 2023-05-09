@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1VideoClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSetConfigs")
     public GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig[] annotationSpecSetConfigs;
+
     public GoogleCloudDatalabelingV1beta1VideoClassificationConfig withAnnotationSpecSetConfigs(GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig[] annotationSpecSetConfigs) {
         this.annotationSpecSetConfigs = annotationSpecSetConfigs;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1VideoClassificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applyShotDetection")
     public Boolean applyShotDetection;
+
     public GoogleCloudDatalabelingV1beta1VideoClassificationConfig withApplyShotDetection(Boolean applyShotDetection) {
         this.applyShotDetection = applyShotDetection;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1VideoClassificationConfig(){}
 }

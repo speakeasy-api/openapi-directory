@@ -18,9 +18,11 @@ public class GenerateServiceIdentityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public ServiceIdentity identity;
+
     public GenerateServiceIdentityResponse withIdentity(ServiceIdentity identity) {
         this.identity = identity;
         return this;
     }
     
+    public GenerateServiceIdentityResponse(){}
 }

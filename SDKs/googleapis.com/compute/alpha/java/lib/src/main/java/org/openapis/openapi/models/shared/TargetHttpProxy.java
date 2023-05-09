@@ -18,6 +18,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public TargetHttpProxy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TargetHttpProxy withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public TargetHttpProxy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,8 +54,21 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpFilters")
     public String[] httpFilters;
+
     public TargetHttpProxy withHttpFilters(String[] httpFilters) {
         this.httpFilters = httpFilters;
+        return this;
+    }
+    
+    /**
+     * Specifies how long to keep a connection open, after completing a response, while there is no matching traffic (in seconds). If an HTTP keep-alive is not specified, a default value (610 seconds) will be used. For Global external HTTP(S) load balancer, the minimum allowed value is 5 seconds and the maximum allowed value is 1200 seconds. For Global external HTTP(S) load balancer (classic), this option is not available publicly.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("httpKeepAliveTimeoutSec")
+    public Integer httpKeepAliveTimeoutSec;
+
+    public TargetHttpProxy withHttpKeepAliveTimeoutSec(Integer httpKeepAliveTimeoutSec) {
+        this.httpKeepAliveTimeoutSec = httpKeepAliveTimeoutSec;
         return this;
     }
     
@@ -62,6 +78,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TargetHttpProxy withId(String id) {
         this.id = id;
         return this;
@@ -73,6 +90,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public TargetHttpProxy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +102,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TargetHttpProxy withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +114,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxyBind")
     public Boolean proxyBind;
+
     public TargetHttpProxy withProxyBind(Boolean proxyBind) {
         this.proxyBind = proxyBind;
         return this;
@@ -106,6 +126,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public TargetHttpProxy withRegion(String region) {
         this.region = region;
         return this;
@@ -117,6 +138,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TargetHttpProxy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -128,6 +150,7 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public TargetHttpProxy withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -139,9 +162,11 @@ public class TargetHttpProxy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlMap")
     public String urlMap;
+
     public TargetHttpProxy withUrlMap(String urlMap) {
         this.urlMap = urlMap;
         return this;
     }
     
+    public TargetHttpProxy(){}
 }

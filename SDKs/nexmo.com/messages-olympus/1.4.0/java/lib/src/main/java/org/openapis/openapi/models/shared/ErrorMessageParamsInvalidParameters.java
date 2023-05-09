@@ -15,6 +15,7 @@ public class ErrorMessageParamsInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ErrorMessageParamsInvalidParameters withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class ErrorMessageParamsInvalidParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ErrorMessageParamsInvalidParameters withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ErrorMessageParamsInvalidParameters(){}
 }

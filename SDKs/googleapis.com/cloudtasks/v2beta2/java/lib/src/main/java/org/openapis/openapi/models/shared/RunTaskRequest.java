@@ -18,9 +18,11 @@ public class RunTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseView")
     public RunTaskRequestResponseViewEnum responseView;
+
     public RunTaskRequest withResponseView(RunTaskRequestResponseViewEnum responseView) {
         this.responseView = responseView;
         return this;
     }
     
+    public RunTaskRequest(){}
 }

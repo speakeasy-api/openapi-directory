@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMailDomainResponse {
     
     public String contentType;
+
     public GetMailDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMailDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMailDomainResponse getMailDomainResponse;
+
     public GetMailDomainResponse withGetMailDomainResponse(org.openapis.openapi.models.shared.GetMailDomainResponse getMailDomainResponse) {
         this.getMailDomainResponse = getMailDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetMailDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public GetMailDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class GetMailDomainResponse {
      */
     
     public Object mailDomainNotFoundException;
+
     public GetMailDomainResponse withMailDomainNotFoundException(Object mailDomainNotFoundException) {
         this.mailDomainNotFoundException = mailDomainNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class GetMailDomainResponse {
      */
     
     public Object organizationNotFoundException;
+
     public GetMailDomainResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetMailDomainResponse {
      */
     
     public Object organizationStateException;
+
     public GetMailDomainResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class GetMailDomainResponse {
     
     
     public Integer statusCode;
+
     public GetMailDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMailDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMailDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMailDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

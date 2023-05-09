@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * CaseSeverityEnum - The severity of this case. Deprecated. Use priority instead.
+ * CaseSeverityEnum - REMOVED. The severity of this case. Use priority instead.
  */
 public enum CaseSeverityEnum {
     SEVERITY_UNSPECIFIED("SEVERITY_UNSPECIFIED"),

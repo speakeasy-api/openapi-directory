@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesUpdateResponse {
     
     public String contentType;
+
     public IssuesUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesUpdateResponse {
     
     
     public Integer statusCode;
+
     public IssuesUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IssuesUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IssuesUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesUpdateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class IssuesUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.Issue issue;
+
     public IssuesUpdateResponse withIssue(org.openapis.openapi.models.shared.Issue issue) {
         this.issue = issue;
         return this;
@@ -53,6 +59,7 @@ public class IssuesUpdateResponse {
      */
     
     public IssuesUpdate503ApplicationJSON issuesUpdate503ApplicationJSONObject;
+
     public IssuesUpdateResponse withIssuesUpdate503ApplicationJSONObject(IssuesUpdate503ApplicationJSON issuesUpdate503ApplicationJSONObject) {
         this.issuesUpdate503ApplicationJSONObject = issuesUpdate503ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class IssuesUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesUpdateResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

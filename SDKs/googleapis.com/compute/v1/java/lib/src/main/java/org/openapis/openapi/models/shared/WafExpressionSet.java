@@ -15,6 +15,7 @@ public class WafExpressionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public String[] aliases;
+
     public WafExpressionSet withAliases(String[] aliases) {
         this.aliases = aliases;
         return this;
@@ -26,6 +27,7 @@ public class WafExpressionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressions")
     public WafExpressionSetExpression[] expressions;
+
     public WafExpressionSet withExpressions(WafExpressionSetExpression[] expressions) {
         this.expressions = expressions;
         return this;
@@ -37,9 +39,11 @@ public class WafExpressionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WafExpressionSet withId(String id) {
         this.id = id;
         return this;
     }
     
+    public WafExpressionSet(){}
 }

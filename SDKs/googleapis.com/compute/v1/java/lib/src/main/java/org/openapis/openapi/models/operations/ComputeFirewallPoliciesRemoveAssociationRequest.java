@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeFirewallPoliciesRemoveAssociationRequest {
@@ -12,6 +13,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firewallPolicy")
     public String firewallPolicy;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withFirewallPolicy(String firewallPolicy) {
         this.firewallPolicy = firewallPolicy;
         return this;
@@ -72,6 +79,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +101,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -132,6 +145,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,6 +156,7 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -152,9 +167,13 @@ public class ComputeFirewallPoliciesRemoveAssociationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeFirewallPoliciesRemoveAssociationRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeFirewallPoliciesRemoveAssociationRequest(@JsonProperty("firewallPolicy") String firewallPolicy) {
+        this.firewallPolicy = firewallPolicy;
+  }
 }

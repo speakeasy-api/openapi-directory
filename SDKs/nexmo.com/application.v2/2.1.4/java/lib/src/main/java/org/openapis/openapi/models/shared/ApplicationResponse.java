@@ -18,6 +18,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capabilities")
     public Capabilities capabilities;
+
     public ApplicationResponse withCapabilities(Capabilities capabilities) {
         this.capabilities = capabilities;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ApplicationResponse withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApplicationResponse withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy")
     public ApplicationResponsePrivacy privacy;
+
     public ApplicationResponse withPrivacy(ApplicationResponsePrivacy privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public ApplicationResponse(){}
 }

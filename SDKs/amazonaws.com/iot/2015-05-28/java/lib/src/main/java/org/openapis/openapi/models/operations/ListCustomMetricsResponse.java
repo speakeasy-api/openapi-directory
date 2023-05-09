@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomMetricsResponse {
     
     public String contentType;
+
     public ListCustomMetricsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomMetricsResponse {
      */
     
     public Object internalFailureException;
+
     public ListCustomMetricsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomMetricsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListCustomMetricsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomMetricsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomMetricsResponse listCustomMetricsResponse;
+
     public ListCustomMetricsResponse withListCustomMetricsResponse(org.openapis.openapi.models.shared.ListCustomMetricsResponse listCustomMetricsResponse) {
         this.listCustomMetricsResponse = listCustomMetricsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListCustomMetricsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomMetricsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCustomMetricsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomMetricsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListCustomMetricsResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomMetricsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListCustomMetricsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

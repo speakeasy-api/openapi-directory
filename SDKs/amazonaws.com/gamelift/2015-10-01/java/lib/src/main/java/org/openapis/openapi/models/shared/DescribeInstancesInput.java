@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInstancesInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeInstancesInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DescribeInstancesInput withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -27,6 +29,7 @@ public class DescribeInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeInstancesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +38,7 @@ public class DescribeInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public DescribeInstancesInput withLocation(String location) {
         this.location = location;
         return this;
@@ -43,9 +47,13 @@ public class DescribeInstancesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstancesInput(@JsonProperty("FleetId") String fleetId) {
+        this.fleetId = fleetId;
+  }
 }

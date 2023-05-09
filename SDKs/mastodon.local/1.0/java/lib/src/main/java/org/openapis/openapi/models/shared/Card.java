@@ -19,6 +19,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_name")
     public String authorName;
+
     public Card withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -30,6 +31,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_url")
     public String authorUrl;
+
     public Card withAuthorUrl(String authorUrl) {
         this.authorUrl = authorUrl;
         return this;
@@ -41,6 +43,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blurhash")
     public String blurhash;
+
     public Card withBlurhash(String blurhash) {
         this.blurhash = blurhash;
         return this;
@@ -51,6 +54,7 @@ public class Card {
      */
     @JsonProperty("description")
     public String description;
+
     public Card withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Long height;
+
     public Card withHeight(Long height) {
         this.height = height;
         return this;
@@ -73,6 +78,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public Card withHtml(String html) {
         this.html = html;
         return this;
@@ -84,6 +90,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Card withImage(String image) {
         this.image = image;
         return this;
@@ -95,6 +102,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider_name")
     public String providerName;
+
     public Card withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -106,6 +114,7 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider_url")
     public String providerUrl;
+
     public Card withProviderUrl(String providerUrl) {
         this.providerUrl = providerUrl;
         return this;
@@ -116,6 +125,7 @@ public class Card {
      */
     @JsonProperty("title")
     public String title;
+
     public Card withTitle(String title) {
         this.title = title;
         return this;
@@ -126,6 +136,7 @@ public class Card {
      */
     @JsonProperty("type")
     public CardTypeEnum type;
+
     public Card withType(CardTypeEnum type) {
         this.type = type;
         return this;
@@ -136,6 +147,7 @@ public class Card {
      */
     @JsonProperty("url")
     public String url;
+
     public Card withUrl(String url) {
         this.url = url;
         return this;
@@ -147,9 +159,16 @@ public class Card {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Long width;
+
     public Card withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Card(@JsonProperty("description") String description, @JsonProperty("title") String title, @JsonProperty("type") CardTypeEnum type, @JsonProperty("url") String url) {
+        this.description = description;
+        this.title = title;
+        this.type = type;
+        this.url = url;
+  }
 }

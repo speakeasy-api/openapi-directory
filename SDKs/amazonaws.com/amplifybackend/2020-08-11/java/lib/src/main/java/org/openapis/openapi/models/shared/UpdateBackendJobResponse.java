@@ -15,6 +15,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public UpdateBackendJobResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public UpdateBackendJobResponse withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTime")
     public String createTime;
+
     public UpdateBackendJobResponse withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -39,6 +42,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public UpdateBackendJobResponse withError(String error) {
         this.error = error;
         return this;
@@ -47,6 +51,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public UpdateBackendJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -55,6 +60,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public UpdateBackendJobResponse withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -63,6 +69,7 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public UpdateBackendJobResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -71,9 +78,11 @@ public class UpdateBackendJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateTime")
     public String updateTime;
+
     public UpdateBackendJobResponse withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UpdateBackendJobResponse(){}
 }

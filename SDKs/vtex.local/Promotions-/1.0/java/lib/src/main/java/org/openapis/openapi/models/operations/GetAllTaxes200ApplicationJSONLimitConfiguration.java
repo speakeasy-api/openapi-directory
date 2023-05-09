@@ -18,6 +18,7 @@ public class GetAllTaxes200ApplicationJSONLimitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activesCount")
     public Long activesCount;
+
     public GetAllTaxes200ApplicationJSONLimitConfiguration withActivesCount(Long activesCount) {
         this.activesCount = activesCount;
         return this;
@@ -29,9 +30,11 @@ public class GetAllTaxes200ApplicationJSONLimitConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public GetAllTaxes200ApplicationJSONLimitConfiguration withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public GetAllTaxes200ApplicationJSONLimitConfiguration(){}
 }

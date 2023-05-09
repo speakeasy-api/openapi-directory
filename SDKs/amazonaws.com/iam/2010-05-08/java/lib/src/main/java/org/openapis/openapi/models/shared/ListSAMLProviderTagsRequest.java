@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListSAMLProviderTagsRequest {
     
     public String marker;
+
     public ListSAMLProviderTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListSAMLProviderTagsRequest {
     
     
     public Long maxItems;
+
     public ListSAMLProviderTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,9 +25,13 @@ public class ListSAMLProviderTagsRequest {
     
     
     public String samlProviderArn;
+
     public ListSAMLProviderTagsRequest withSAMLProviderArn(String samlProviderArn) {
         this.samlProviderArn = samlProviderArn;
         return this;
     }
     
+    public ListSAMLProviderTagsRequest(@JsonProperty("SAMLProviderArn") String samlProviderArn) {
+        this.samlProviderArn = samlProviderArn;
+  }
 }

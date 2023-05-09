@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GameServerInstance - &lt;p&gt; &lt;b&gt;This data type is used with the GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt; Additional properties, including status, that describe an EC2 instance in a game server group. Instance configurations are set with game server group properties (see &lt;code&gt;DescribeGameServerGroup&lt;/code&gt; and with the EC2 launch template that was used when creating the game server group. &lt;/p&gt; &lt;p&gt;Retrieve game server instances for a game server group by calling &lt;code&gt;DescribeGameServerInstances&lt;/code&gt;. &lt;/p&gt;
+ * GameServerInstance - &lt;p&gt; &lt;b&gt;This data type is used with the Amazon GameLift FleetIQ and game server groups.&lt;/b&gt; &lt;/p&gt; &lt;p&gt; Additional properties, including status, that describe an EC2 instance in a game server group. Instance configurations are set with game server group properties (see &lt;code&gt;DescribeGameServerGroup&lt;/code&gt; and with the EC2 launch template that was used when creating the game server group. &lt;/p&gt; &lt;p&gt;Retrieve game server instances for a game server group by calling &lt;code&gt;DescribeGameServerInstances&lt;/code&gt;. &lt;/p&gt;
  */
 public class GameServerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupArn")
     public String gameServerGroupArn;
+
     public GameServerInstance withGameServerGroupArn(String gameServerGroupArn) {
         this.gameServerGroupArn = gameServerGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class GameServerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public GameServerInstance withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
@@ -31,6 +33,7 @@ public class GameServerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public GameServerInstance withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,9 +42,11 @@ public class GameServerInstance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceStatus")
     public GameServerInstanceStatusEnum instanceStatus;
+
     public GameServerInstance withInstanceStatus(GameServerInstanceStatusEnum instanceStatus) {
         this.instanceStatus = instanceStatus;
         return this;
     }
     
+    public GameServerInstance(){}
 }

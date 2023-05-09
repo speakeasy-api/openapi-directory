@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SuspendedProcess {
     
     public String processName;
+
     public SuspendedProcess withProcessName(String processName) {
         this.processName = processName;
         return this;
@@ -19,9 +20,11 @@ public class SuspendedProcess {
     
     
     public String suspensionReason;
+
     public SuspendedProcess withSuspensionReason(String suspensionReason) {
         this.suspensionReason = suspensionReason;
         return this;
     }
     
+    public SuspendedProcess(){}
 }

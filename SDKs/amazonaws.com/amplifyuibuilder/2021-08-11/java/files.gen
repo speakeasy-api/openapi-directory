@@ -117,6 +117,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/FormStyleConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/SectionalElement.java
 lib/src/main/java/org/openapis/openapi/models/shared/FieldPosition.java
 lib/src/main/java/org/openapis/openapi/models/shared/FixedPositionEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/LabelDecoratorEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormActionTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FieldConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/FieldValidationConfiguration.java
@@ -124,6 +125,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/FieldInputConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValueMappings.java
 lib/src/main/java/org/openapis/openapi/models/shared/ValueMapping.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormInputValueProperty.java
+lib/src/main/java/org/openapis/openapi/models/shared/FormInputValuePropertyBindingProperties.java
+lib/src/main/java/org/openapis/openapi/models/shared/FormInputBindingPropertiesValue.java
+lib/src/main/java/org/openapis/openapi/models/shared/FormInputBindingPropertiesValueProperties.java
+lib/src/main/java/org/openapis/openapi/models/shared/FileUploaderFieldConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/StorageAccessLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormDataTypeConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormDataSourceTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FormCTA.java
@@ -152,4 +158,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateComponentResponse.jav
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateFormResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateThemeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class CorsSettings {
      */
     @JsonProperty("allowCredentials")
     public Boolean allowCredentials;
+
     public CorsSettings withAllowCredentials(Boolean allowCredentials) {
         this.allowCredentials = allowCredentials;
         return this;
@@ -25,6 +26,7 @@ public class CorsSettings {
      */
     @JsonProperty("allowHeaders")
     public String[] allowHeaders;
+
     public CorsSettings withAllowHeaders(String[] allowHeaders) {
         this.allowHeaders = allowHeaders;
         return this;
@@ -35,6 +37,7 @@ public class CorsSettings {
      */
     @JsonProperty("allowMethods")
     public String[] allowMethods;
+
     public CorsSettings withAllowMethods(String[] allowMethods) {
         this.allowMethods = allowMethods;
         return this;
@@ -45,6 +48,7 @@ public class CorsSettings {
      */
     @JsonProperty("allowOrigin")
     public String allowOrigin;
+
     public CorsSettings withAllowOrigin(String allowOrigin) {
         this.allowOrigin = allowOrigin;
         return this;
@@ -55,6 +59,7 @@ public class CorsSettings {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CorsSettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -65,6 +70,7 @@ public class CorsSettings {
      */
     @JsonProperty("excludedPatterns")
     public String[] excludedPatterns;
+
     public CorsSettings withExcludedPatterns(String[] excludedPatterns) {
         this.excludedPatterns = excludedPatterns;
         return this;
@@ -75,6 +81,7 @@ public class CorsSettings {
      */
     @JsonProperty("exposeHeaders")
     public String[] exposeHeaders;
+
     public CorsSettings withExposeHeaders(String[] exposeHeaders) {
         this.exposeHeaders = exposeHeaders;
         return this;
@@ -85,9 +92,20 @@ public class CorsSettings {
      */
     @JsonProperty("maxAge")
     public Integer maxAge;
+
     public CorsSettings withMaxAge(Integer maxAge) {
         this.maxAge = maxAge;
         return this;
     }
     
+    public CorsSettings(@JsonProperty("allowCredentials") Boolean allowCredentials, @JsonProperty("allowHeaders") String[] allowHeaders, @JsonProperty("allowMethods") String[] allowMethods, @JsonProperty("allowOrigin") String allowOrigin, @JsonProperty("enabled") Boolean enabled, @JsonProperty("excludedPatterns") String[] excludedPatterns, @JsonProperty("exposeHeaders") String[] exposeHeaders, @JsonProperty("maxAge") Integer maxAge) {
+        this.allowCredentials = allowCredentials;
+        this.allowHeaders = allowHeaders;
+        this.allowMethods = allowMethods;
+        this.allowOrigin = allowOrigin;
+        this.enabled = enabled;
+        this.excludedPatterns = excludedPatterns;
+        this.exposeHeaders = exposeHeaders;
+        this.maxAge = maxAge;
+  }
 }

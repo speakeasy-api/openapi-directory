@@ -15,6 +15,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalBootstrapServers")
     public String[] additionalBootstrapServers;
+
     public PipeSourceSelfManagedKafkaParameters withAdditionalBootstrapServers(String[] additionalBootstrapServers) {
         this.additionalBootstrapServers = additionalBootstrapServers;
         return this;
@@ -23,6 +24,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceSelfManagedKafkaParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -31,6 +33,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumerGroupID")
     public String consumerGroupID;
+
     public PipeSourceSelfManagedKafkaParameters withConsumerGroupID(String consumerGroupID) {
         this.consumerGroupID = consumerGroupID;
         return this;
@@ -39,6 +42,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public SelfManagedKafkaAccessConfigurationCredentials credentials;
+
     public PipeSourceSelfManagedKafkaParameters withCredentials(SelfManagedKafkaAccessConfigurationCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -47,6 +51,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceSelfManagedKafkaParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -55,6 +60,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerRootCaCertificate")
     public String serverRootCaCertificate;
+
     public PipeSourceSelfManagedKafkaParameters withServerRootCaCertificate(String serverRootCaCertificate) {
         this.serverRootCaCertificate = serverRootCaCertificate;
         return this;
@@ -63,6 +69,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingPosition")
     public SelfManagedKafkaStartPositionEnum startingPosition;
+
     public PipeSourceSelfManagedKafkaParameters withStartingPosition(SelfManagedKafkaStartPositionEnum startingPosition) {
         this.startingPosition = startingPosition;
         return this;
@@ -70,6 +77,7 @@ public class PipeSourceSelfManagedKafkaParameters {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public PipeSourceSelfManagedKafkaParameters withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
@@ -78,9 +86,13 @@ public class PipeSourceSelfManagedKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vpc")
     public SelfManagedKafkaAccessConfigurationVpc vpc;
+
     public PipeSourceSelfManagedKafkaParameters withVpc(SelfManagedKafkaAccessConfigurationVpc vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public PipeSourceSelfManagedKafkaParameters(@JsonProperty("TopicName") String topicName) {
+        this.topicName = topicName;
+  }
 }

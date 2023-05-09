@@ -15,9 +15,13 @@ public class UpdateEndpointsBatchResponse {
      */
     @JsonProperty("MessageBody")
     public MessageBody messageBody;
+
     public UpdateEndpointsBatchResponse withMessageBody(MessageBody messageBody) {
         this.messageBody = messageBody;
         return this;
     }
     
+    public UpdateEndpointsBatchResponse(@JsonProperty("MessageBody") MessageBody messageBody) {
+        this.messageBody = messageBody;
+  }
 }

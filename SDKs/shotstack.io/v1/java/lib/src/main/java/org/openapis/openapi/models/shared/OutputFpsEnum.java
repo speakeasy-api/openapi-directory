@@ -16,16 +16,16 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * &lt;/ul&gt;
  */
 public enum OutputFpsEnum {
-    TWELVE("12"),
-    FIFTEEN("15"),
-    TWENTY_FOUR("24"),
-    TWENTY_FIVE("25"),
-    THIRTY("30");
+    TWELVE(12L),
+    FIFTEEN(15L),
+    TWENTY_FOUR(24L),
+    TWENTY_FIVE(25L),
+    THIRTY(30L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private OutputFpsEnum(String value) {
+    private OutputFpsEnum(Long value) {
         this.value = value;
     }
 }

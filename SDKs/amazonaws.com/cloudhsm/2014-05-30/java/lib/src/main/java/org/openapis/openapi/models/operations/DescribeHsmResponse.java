@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHsmResponse {
@@ -12,6 +13,7 @@ public class DescribeHsmResponse {
      */
     
     public Object cloudHsmInternalException;
+
     public DescribeHsmResponse withCloudHsmInternalException(Object cloudHsmInternalException) {
         this.cloudHsmInternalException = cloudHsmInternalException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeHsmResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public DescribeHsmResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHsmResponse {
     
     
     public String contentType;
+
     public DescribeHsmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHsmResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHsmResponse describeHsmResponse;
+
     public DescribeHsmResponse withDescribeHsmResponse(org.openapis.openapi.models.shared.DescribeHsmResponse describeHsmResponse) {
         this.describeHsmResponse = describeHsmResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHsmResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeHsmResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeHsmResponse {
     
     
     public Integer statusCode;
+
     public DescribeHsmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeHsmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHsmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeHsmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ReportRow[] results;
+
     public SearchResponse withResults(ReportRow[] results) {
         this.results = results;
         return this;
     }
     
+    public SearchResponse(){}
 }

@@ -18,6 +18,7 @@ public class AdvertisersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisers")
     public Advertiser[] advertisers;
+
     public AdvertisersListResponse withAdvertisers(Advertiser[] advertisers) {
         this.advertisers = advertisers;
         return this;
@@ -29,6 +30,7 @@ public class AdvertisersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AdvertisersListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class AdvertisersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public AdvertisersListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public AdvertisersListResponse(){}
 }

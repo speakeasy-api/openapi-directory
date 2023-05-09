@@ -12,6 +12,7 @@ public class CreateCollection400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateCollection400ApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
@@ -20,9 +21,11 @@ public class CreateCollection400ApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateCollection400ApplicationJSONError withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateCollection400ApplicationJSONError(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutConfigurationSetDeliveryOptionsRequest {
@@ -12,6 +13,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
     public String configurationSetName;
+
     public PutConfigurationSetDeliveryOptionsRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +21,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PutConfigurationSetDeliveryOptionsRequestBody requestBody;
+
     public PutConfigurationSetDeliveryOptionsRequest withRequestBody(PutConfigurationSetDeliveryOptionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -26,6 +29,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -33,6 +37,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -40,6 +45,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -47,6 +53,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -54,6 +61,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -61,6 +69,7 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -68,9 +77,14 @@ public class PutConfigurationSetDeliveryOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PutConfigurationSetDeliveryOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public PutConfigurationSetDeliveryOptionsRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("RequestBody") PutConfigurationSetDeliveryOptionsRequestBody requestBody) {
+        this.configurationSetName = configurationSetName;
+        this.requestBody = requestBody;
+  }
 }

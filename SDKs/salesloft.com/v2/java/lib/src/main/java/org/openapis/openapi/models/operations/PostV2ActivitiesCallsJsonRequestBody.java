@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV2ActivitiesCallsJsonRequestBody {
@@ -15,6 +16,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=action_id")
     public Long actionId;
+
     public PostV2ActivitiesCallsJsonRequestBody withActionId(Long actionId) {
         this.actionId = actionId;
         return this;
@@ -32,6 +34,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_params,json")
     public java.util.Map<String, Object> crmParams;
+
     public PostV2ActivitiesCallsJsonRequestBody withCrmParams(java.util.Map<String, Object> crmParams) {
         this.crmParams = crmParams;
         return this;
@@ -42,6 +45,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=disposition")
     public String disposition;
+
     public PostV2ActivitiesCallsJsonRequestBody withDisposition(String disposition) {
         this.disposition = disposition;
         return this;
@@ -52,6 +56,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=duration")
     public Long duration;
+
     public PostV2ActivitiesCallsJsonRequestBody withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -69,6 +74,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=linked_call_data_record_ids")
     public Long[] linkedCallDataRecordIds;
+
     public PostV2ActivitiesCallsJsonRequestBody withLinkedCallDataRecordIds(Long[] linkedCallDataRecordIds) {
         this.linkedCallDataRecordIds = linkedCallDataRecordIds;
         return this;
@@ -79,6 +85,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=notes")
     public String notes;
+
     public PostV2ActivitiesCallsJsonRequestBody withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -89,6 +96,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_id")
     public Long personId;
+
     public PostV2ActivitiesCallsJsonRequestBody withPersonId(Long personId) {
         this.personId = personId;
         return this;
@@ -99,6 +107,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=sentiment")
     public String sentiment;
+
     public PostV2ActivitiesCallsJsonRequestBody withSentiment(String sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -109,6 +118,7 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=to")
     public String to;
+
     public PostV2ActivitiesCallsJsonRequestBody withTo(String to) {
         this.to = to;
         return this;
@@ -119,9 +129,13 @@ public class PostV2ActivitiesCallsJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=user_guid")
     public String userGuid;
+
     public PostV2ActivitiesCallsJsonRequestBody withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public PostV2ActivitiesCallsJsonRequestBody(@JsonProperty("person_id") Long personId) {
+        this.personId = personId;
+  }
 }

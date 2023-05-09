@@ -14,6 +14,7 @@ public class DeleteRobotApplicationRequestBody {
      */
     @JsonProperty("application")
     public String application;
+
     public DeleteRobotApplicationRequestBody withApplication(String application) {
         this.application = application;
         return this;
@@ -25,9 +26,13 @@ public class DeleteRobotApplicationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationVersion")
     public String applicationVersion;
+
     public DeleteRobotApplicationRequestBody withApplicationVersion(String applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
     
+    public DeleteRobotApplicationRequestBody(@JsonProperty("application") String application) {
+        this.application = application;
+  }
 }

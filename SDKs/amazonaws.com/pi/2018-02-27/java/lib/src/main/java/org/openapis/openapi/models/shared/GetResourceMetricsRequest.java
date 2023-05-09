@@ -18,6 +18,7 @@ public class GetResourceMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public GetResourceMetricsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -25,6 +26,7 @@ public class GetResourceMetricsRequest {
     
     @JsonProperty("Identifier")
     public String identifier;
+
     public GetResourceMetricsRequest withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -33,6 +35,7 @@ public class GetResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetResourceMetricsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -40,6 +43,7 @@ public class GetResourceMetricsRequest {
     
     @JsonProperty("MetricQueries")
     public MetricQuery[] metricQueries;
+
     public GetResourceMetricsRequest withMetricQueries(MetricQuery[] metricQueries) {
         this.metricQueries = metricQueries;
         return this;
@@ -48,6 +52,7 @@ public class GetResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetResourceMetricsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -56,6 +61,7 @@ public class GetResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodAlignment")
     public PeriodAlignmentEnum periodAlignment;
+
     public GetResourceMetricsRequest withPeriodAlignment(PeriodAlignmentEnum periodAlignment) {
         this.periodAlignment = periodAlignment;
         return this;
@@ -64,6 +70,7 @@ public class GetResourceMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodInSeconds")
     public Long periodInSeconds;
+
     public GetResourceMetricsRequest withPeriodInSeconds(Long periodInSeconds) {
         this.periodInSeconds = periodInSeconds;
         return this;
@@ -71,6 +78,7 @@ public class GetResourceMetricsRequest {
     
     @JsonProperty("ServiceType")
     public ServiceTypeEnum serviceType;
+
     public GetResourceMetricsRequest withServiceType(ServiceTypeEnum serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -80,9 +88,17 @@ public class GetResourceMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public GetResourceMetricsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetResourceMetricsRequest(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("Identifier") String identifier, @JsonProperty("MetricQueries") MetricQuery[] metricQueries, @JsonProperty("ServiceType") ServiceTypeEnum serviceType, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.identifier = identifier;
+        this.metricQueries = metricQueries;
+        this.serviceType = serviceType;
+        this.startTime = startTime;
+  }
 }

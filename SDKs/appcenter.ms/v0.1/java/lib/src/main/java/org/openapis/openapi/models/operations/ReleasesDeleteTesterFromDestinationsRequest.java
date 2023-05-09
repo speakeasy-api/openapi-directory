@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReleasesDeleteTesterFromDestinationsRequest {
@@ -12,6 +13,7 @@ public class ReleasesDeleteTesterFromDestinationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ReleasesDeleteTesterFromDestinationsRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ReleasesDeleteTesterFromDestinationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ReleasesDeleteTesterFromDestinationsRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -32,9 +35,15 @@ public class ReleasesDeleteTesterFromDestinationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tester_id")
     public String testerId;
+
     public ReleasesDeleteTesterFromDestinationsRequest withTesterId(String testerId) {
         this.testerId = testerId;
         return this;
     }
     
+    public ReleasesDeleteTesterFromDestinationsRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("tester_id") String testerId) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.testerId = testerId;
+  }
 }

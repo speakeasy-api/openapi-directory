@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTablesGetRequest {
@@ -12,6 +13,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryTablesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryTablesGetRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,6 +35,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryTablesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryTablesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryTablesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryTablesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryTablesGetRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -82,6 +90,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryTablesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=selectedFields")
     public String selectedFields;
+
     public BigqueryTablesGetRequest withSelectedFields(String selectedFields) {
         this.selectedFields = selectedFields;
         return this;
@@ -102,6 +112,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public BigqueryTablesGetRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -112,6 +123,7 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryTablesGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -122,9 +134,15 @@ public class BigqueryTablesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public BigqueryTablesGetViewEnum view;
+
     public BigqueryTablesGetRequest withView(BigqueryTablesGetViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public BigqueryTablesGetRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId, @JsonProperty("tableId") String tableId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.tableId = tableId;
+  }
 }

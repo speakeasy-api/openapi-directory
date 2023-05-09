@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAppComponentCompliancesResponse {
     @JsonProperty("componentCompliances")
     public AppComponentCompliance[] componentCompliances;
+
     public ListAppComponentCompliancesResponse withComponentCompliances(AppComponentCompliance[] componentCompliances) {
         this.componentCompliances = componentCompliances;
         return this;
@@ -22,9 +23,13 @@ public class ListAppComponentCompliancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAppComponentCompliancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppComponentCompliancesResponse(@JsonProperty("componentCompliances") AppComponentCompliance[] componentCompliances) {
+        this.componentCompliances = componentCompliances;
+  }
 }

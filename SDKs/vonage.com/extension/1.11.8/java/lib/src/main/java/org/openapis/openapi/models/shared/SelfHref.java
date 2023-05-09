@@ -15,9 +15,11 @@ public class SelfHref {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public SelfHref withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public SelfHref(){}
 }

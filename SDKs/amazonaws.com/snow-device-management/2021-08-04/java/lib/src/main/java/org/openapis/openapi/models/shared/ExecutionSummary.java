@@ -15,6 +15,7 @@ public class ExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionId")
     public String executionId;
+
     public ExecutionSummary withExecutionId(String executionId) {
         this.executionId = executionId;
         return this;
@@ -23,6 +24,7 @@ public class ExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedDeviceId")
     public String managedDeviceId;
+
     public ExecutionSummary withManagedDeviceId(String managedDeviceId) {
         this.managedDeviceId = managedDeviceId;
         return this;
@@ -31,6 +33,7 @@ public class ExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExecutionStateEnum state;
+
     public ExecutionSummary withState(ExecutionStateEnum state) {
         this.state = state;
         return this;
@@ -39,9 +42,11 @@ public class ExecutionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public ExecutionSummary withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public ExecutionSummary(){}
 }

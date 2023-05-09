@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountAssignmentDeletionStatusResponse {
@@ -12,6 +13,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAccountAssignmentDeletionStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
     
     
     public String contentType;
+
     public DescribeAccountAssignmentDeletionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountAssignmentDeletionStatusResponse describeAccountAssignmentDeletionStatusResponse;
+
     public DescribeAccountAssignmentDeletionStatusResponse withDescribeAccountAssignmentDeletionStatusResponse(org.openapis.openapi.models.shared.DescribeAccountAssignmentDeletionStatusResponse describeAccountAssignmentDeletionStatusResponse) {
         this.describeAccountAssignmentDeletionStatusResponse = describeAccountAssignmentDeletionStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAccountAssignmentDeletionStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAccountAssignmentDeletionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountAssignmentDeletionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountAssignmentDeletionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAccountAssignmentDeletionStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAccountAssignmentDeletionStatusResponse {
      */
     
     public Object validationException;
+
     public DescribeAccountAssignmentDeletionStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAccountAssignmentDeletionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

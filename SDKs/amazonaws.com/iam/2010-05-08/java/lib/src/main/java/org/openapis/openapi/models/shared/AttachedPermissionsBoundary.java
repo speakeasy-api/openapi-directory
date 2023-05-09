@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachedPermissionsBoundary {
     
     public String permissionsBoundaryArn;
+
     public AttachedPermissionsBoundary withPermissionsBoundaryArn(String permissionsBoundaryArn) {
         this.permissionsBoundaryArn = permissionsBoundaryArn;
         return this;
@@ -19,9 +20,11 @@ public class AttachedPermissionsBoundary {
     
     
     public PermissionsBoundaryAttachmentTypeEnum permissionsBoundaryType;
+
     public AttachedPermissionsBoundary withPermissionsBoundaryType(PermissionsBoundaryAttachmentTypeEnum permissionsBoundaryType) {
         this.permissionsBoundaryType = permissionsBoundaryType;
         return this;
     }
     
+    public AttachedPermissionsBoundary(){}
 }

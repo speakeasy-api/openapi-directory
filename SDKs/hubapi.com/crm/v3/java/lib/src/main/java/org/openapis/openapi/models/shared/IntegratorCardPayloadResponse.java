@@ -18,6 +18,7 @@ public class IntegratorCardPayloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allItemsLinkUrl")
     public String allItemsLinkUrl;
+
     public IntegratorCardPayloadResponse withAllItemsLinkUrl(String allItemsLinkUrl) {
         this.allItemsLinkUrl = allItemsLinkUrl;
         return this;
@@ -29,6 +30,7 @@ public class IntegratorCardPayloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cardLabel")
     public String cardLabel;
+
     public IntegratorCardPayloadResponse withCardLabel(String cardLabel) {
         this.cardLabel = cardLabel;
         return this;
@@ -37,6 +39,7 @@ public class IntegratorCardPayloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseVersion")
     public IntegratorCardPayloadResponseResponseVersionEnum responseVersion;
+
     public IntegratorCardPayloadResponse withResponseVersion(IntegratorCardPayloadResponseResponseVersionEnum responseVersion) {
         this.responseVersion = responseVersion;
         return this;
@@ -48,6 +51,7 @@ public class IntegratorCardPayloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sections")
     public IntegratorObjectResult[] sections;
+
     public IntegratorCardPayloadResponse withSections(IntegratorObjectResult[] sections) {
         this.sections = sections;
         return this;
@@ -56,6 +60,7 @@ public class IntegratorCardPayloadResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLevelActions")
     public TopLevelActions topLevelActions;
+
     public IntegratorCardPayloadResponse withTopLevelActions(TopLevelActions topLevelActions) {
         this.topLevelActions = topLevelActions;
         return this;
@@ -66,9 +71,13 @@ public class IntegratorCardPayloadResponse {
      */
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public IntegratorCardPayloadResponse withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public IntegratorCardPayloadResponse(@JsonProperty("totalCount") Integer totalCount) {
+        this.totalCount = totalCount;
+  }
 }

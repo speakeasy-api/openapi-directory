@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReindexrecurrenceRequest {
     @JsonProperty("frequency")
     public Frequency frequency;
+
     public ReindexrecurrenceRequest withFrequency(Frequency frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public ReindexrecurrenceRequest(@JsonProperty("frequency") Frequency frequency) {
+        this.frequency = frequency;
+  }
 }

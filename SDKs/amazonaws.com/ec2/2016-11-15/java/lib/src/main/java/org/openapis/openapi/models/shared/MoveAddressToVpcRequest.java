@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MoveAddressToVpcRequest {
     
     public Boolean dryRun;
+
     public MoveAddressToVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class MoveAddressToVpcRequest {
     
     
     public String publicIp;
+
     public MoveAddressToVpcRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
     }
     
+    public MoveAddressToVpcRequest(@JsonProperty("PublicIp") String publicIp) {
+        this.publicIp = publicIp;
+  }
 }

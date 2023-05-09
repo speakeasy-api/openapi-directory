@@ -12,6 +12,7 @@ public class MovieLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggested_link_text")
     public String suggestedLinkText;
+
     public MovieLink withSuggestedLinkText(String suggestedLinkText) {
         this.suggestedLinkText = suggestedLinkText;
         return this;
@@ -20,6 +21,7 @@ public class MovieLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MovieLink withType(String type) {
         this.type = type;
         return this;
@@ -28,9 +30,11 @@ public class MovieLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public MovieLink withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public MovieLink(){}
 }

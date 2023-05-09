@@ -15,6 +15,7 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppVersion")
     public SetDimension appVersion;
+
     public SegmentDemographics withAppVersion(SetDimension appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -23,6 +24,7 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Channel")
     public SetDimension channel;
+
     public SegmentDemographics withChannel(SetDimension channel) {
         this.channel = channel;
         return this;
@@ -31,6 +33,7 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceType")
     public SetDimension deviceType;
+
     public SegmentDemographics withDeviceType(SetDimension deviceType) {
         this.deviceType = deviceType;
         return this;
@@ -39,6 +42,7 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Make")
     public SetDimension make;
+
     public SegmentDemographics withMake(SetDimension make) {
         this.make = make;
         return this;
@@ -47,6 +51,7 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Model")
     public SetDimension model;
+
     public SegmentDemographics withModel(SetDimension model) {
         this.model = model;
         return this;
@@ -55,9 +60,11 @@ public class SegmentDemographics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public SetDimension platform;
+
     public SegmentDemographics withPlatform(SetDimension platform) {
         this.platform = platform;
         return this;
     }
     
+    public SegmentDemographics(){}
 }

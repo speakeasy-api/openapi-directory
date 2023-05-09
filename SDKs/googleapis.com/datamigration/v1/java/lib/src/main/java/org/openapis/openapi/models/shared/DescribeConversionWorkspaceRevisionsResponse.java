@@ -18,9 +18,11 @@ public class DescribeConversionWorkspaceRevisionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public ConversionWorkspace[] revisions;
+
     public DescribeConversionWorkspaceRevisionsResponse withRevisions(ConversionWorkspace[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public DescribeConversionWorkspaceRevisionsResponse(){}
 }

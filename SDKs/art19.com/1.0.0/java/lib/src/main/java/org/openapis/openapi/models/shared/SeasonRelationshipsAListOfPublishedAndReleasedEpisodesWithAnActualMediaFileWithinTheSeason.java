@@ -12,9 +12,11 @@ public class SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualM
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public SeasonRelationshipsAListOfPublishedAndReleasedEpisodesWithAnActualMediaFileWithinTheSeason(){}
 }

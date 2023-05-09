@@ -15,6 +15,7 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -31,6 +33,7 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -39,6 +42,7 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -47,6 +51,7 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VoiceId")
     public String voiceId;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withVoiceId(String voiceId) {
         this.voiceId = voiceId;
         return this;
@@ -55,9 +60,11 @@ public class UpdateVoiceTemplateRequestBodyVoiceTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest(){}
 }

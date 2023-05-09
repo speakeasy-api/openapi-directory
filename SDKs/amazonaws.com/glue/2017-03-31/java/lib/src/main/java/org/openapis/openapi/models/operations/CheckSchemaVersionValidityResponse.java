@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckSchemaVersionValidityResponse {
@@ -12,6 +13,7 @@ public class CheckSchemaVersionValidityResponse {
      */
     
     public Object accessDeniedException;
+
     public CheckSchemaVersionValidityResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CheckSchemaVersionValidityResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckSchemaVersionValidityResponse checkSchemaVersionValidityResponse;
+
     public CheckSchemaVersionValidityResponse withCheckSchemaVersionValidityResponse(org.openapis.openapi.models.shared.CheckSchemaVersionValidityResponse checkSchemaVersionValidityResponse) {
         this.checkSchemaVersionValidityResponse = checkSchemaVersionValidityResponse;
         return this;
@@ -29,6 +32,7 @@ public class CheckSchemaVersionValidityResponse {
     
     
     public String contentType;
+
     public CheckSchemaVersionValidityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CheckSchemaVersionValidityResponse {
      */
     
     public Object internalServiceException;
+
     public CheckSchemaVersionValidityResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CheckSchemaVersionValidityResponse {
      */
     
     public Object invalidInputException;
+
     public CheckSchemaVersionValidityResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CheckSchemaVersionValidityResponse {
     
     
     public Integer statusCode;
+
     public CheckSchemaVersionValidityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CheckSchemaVersionValidityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckSchemaVersionValidityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CheckSchemaVersionValidityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

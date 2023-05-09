@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAnomalySubscriptionsResponse {
     
     public String contentType;
+
     public GetAnomalySubscriptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetAnomalySubscriptionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAnomalySubscriptionsResponse getAnomalySubscriptionsResponse;
+
     public GetAnomalySubscriptionsResponse withGetAnomalySubscriptionsResponse(org.openapis.openapi.models.shared.GetAnomalySubscriptionsResponse getAnomalySubscriptionsResponse) {
         this.getAnomalySubscriptionsResponse = getAnomalySubscriptionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetAnomalySubscriptionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetAnomalySubscriptionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class GetAnomalySubscriptionsResponse {
      */
     
     public Object limitExceededException;
+
     public GetAnomalySubscriptionsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetAnomalySubscriptionsResponse {
     
     
     public Integer statusCode;
+
     public GetAnomalySubscriptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetAnomalySubscriptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAnomalySubscriptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetAnomalySubscriptionsResponse {
      */
     
     public Object unknownSubscriptionException;
+
     public GetAnomalySubscriptionsResponse withUnknownSubscriptionException(Object unknownSubscriptionException) {
         this.unknownSubscriptionException = unknownSubscriptionException;
         return this;
     }
     
+    public GetAnomalySubscriptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

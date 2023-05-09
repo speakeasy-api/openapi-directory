@@ -61,12 +61,10 @@ public class Printouts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsResponse() {{
+        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsResponse(contentType, httpRes.statusCode()) {{
             getAlmawsV1TaskListsPrintouts200ApplicationJSONObject = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class Printouts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdResponse() {{
+        org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdResponse res = new org.openapis.openapi.models.operations.GetAlmawsV1TaskListsPrintoutsPrintoutIdResponse(contentType, httpRes.statusCode()) {{
             onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class Printouts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsResponse() {{
+        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsResponse(contentType, httpRes.statusCode()) {{
             onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchema = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,12 +214,10 @@ public class Printouts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse() {{
+        org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse res = new org.openapis.openapi.models.operations.PostAlmawsV1TaskListsPrintoutsPrintoutIdResponse(contentType, httpRes.statusCode()) {{
             onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPropertiesPrintoutItems = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

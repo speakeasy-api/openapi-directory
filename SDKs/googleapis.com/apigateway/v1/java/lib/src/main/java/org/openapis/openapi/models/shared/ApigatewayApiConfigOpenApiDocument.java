@@ -18,9 +18,11 @@ public class ApigatewayApiConfigOpenApiDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public ApigatewayApiConfigFile document;
+
     public ApigatewayApiConfigOpenApiDocument withDocument(ApigatewayApiConfigFile document) {
         this.document = document;
         return this;
     }
     
+    public ApigatewayApiConfigOpenApiDocument(){}
 }

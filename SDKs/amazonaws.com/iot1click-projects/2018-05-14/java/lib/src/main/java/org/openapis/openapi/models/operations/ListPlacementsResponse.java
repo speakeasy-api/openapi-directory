@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListPlacementsResponse {
     
     public String contentType;
+
     public ListPlacementsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListPlacementsResponse {
      */
     
     public Object internalFailureException;
+
     public ListPlacementsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListPlacementsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListPlacementsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListPlacementsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListPlacementsResponse listPlacementsResponse;
+
     public ListPlacementsResponse withListPlacementsResponse(org.openapis.openapi.models.shared.ListPlacementsResponse listPlacementsResponse) {
         this.listPlacementsResponse = listPlacementsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListPlacementsResponse {
     
     
     public Integer statusCode;
+
     public ListPlacementsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListPlacementsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListPlacementsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListPlacementsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListPlacementsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ListPlacementsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

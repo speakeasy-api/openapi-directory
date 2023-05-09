@@ -12,6 +12,7 @@ public class GetAuthorNameUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorId")
     public String colorId;
+
     public GetAuthorNameUsingPOST200ApplicationJSONDataInfo withColorId(String colorId) {
         this.colorId = colorId;
         return this;
@@ -20,6 +21,7 @@ public class GetAuthorNameUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAuthorNameUsingPOST200ApplicationJSONDataInfo withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GetAuthorNameUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAuthorNameUsingPOST200ApplicationJSONDataInfo withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GetAuthorNameUsingPOST200ApplicationJSONDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public GetAuthorNameUsingPOST200ApplicationJSONDataInfo withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public GetAuthorNameUsingPOST200ApplicationJSONDataInfo(){}
 }

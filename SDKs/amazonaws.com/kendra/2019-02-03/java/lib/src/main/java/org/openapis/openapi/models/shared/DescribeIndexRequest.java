@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeIndexRequest {
     @JsonProperty("Id")
     public String id;
+
     public DescribeIndexRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DescribeIndexRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

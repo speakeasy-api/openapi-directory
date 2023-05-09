@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MetricGranularityType {
     
     public String granularity;
+
     public MetricGranularityType withGranularity(String granularity) {
         this.granularity = granularity;
         return this;
     }
     
+    public MetricGranularityType(){}
 }

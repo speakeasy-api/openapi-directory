@@ -18,6 +18,7 @@ public class AddHeldAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public AddHeldAccountsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -29,9 +30,11 @@ public class AddHeldAccountsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public AddHeldAccountsRequest withEmails(String[] emails) {
         this.emails = emails;
         return this;
     }
     
+    public AddHeldAccountsRequest(){}
 }

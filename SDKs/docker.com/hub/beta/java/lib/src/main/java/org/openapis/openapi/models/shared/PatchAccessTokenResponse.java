@@ -15,6 +15,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public PatchAccessTokenResponse withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PatchAccessTokenResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_ip")
     public String creatorIp;
+
     public PatchAccessTokenResponse withCreatorIp(String creatorIp) {
         this.creatorIp = creatorIp;
         return this;
@@ -39,6 +42,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator_ua")
     public String creatorUa;
+
     public PatchAccessTokenResponse withCreatorUa(String creatorUa) {
         this.creatorUa = creatorUa;
         return this;
@@ -47,6 +51,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generated_by")
     public String generatedBy;
+
     public PatchAccessTokenResponse withGeneratedBy(String generatedBy) {
         this.generatedBy = generatedBy;
         return this;
@@ -55,6 +60,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public PatchAccessTokenResponse withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -63,6 +69,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_used")
     public String lastUsed;
+
     public PatchAccessTokenResponse withLastUsed(String lastUsed) {
         this.lastUsed = lastUsed;
         return this;
@@ -71,6 +78,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public PatchAccessTokenResponse withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -79,6 +87,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public PatchAccessTokenResponse withToken(String token) {
         this.token = token;
         return this;
@@ -87,6 +96,7 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token_label")
     public String tokenLabel;
+
     public PatchAccessTokenResponse withTokenLabel(String tokenLabel) {
         this.tokenLabel = tokenLabel;
         return this;
@@ -95,9 +105,11 @@ public class PatchAccessTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public PatchAccessTokenResponse withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public PatchAccessTokenResponse(){}
 }

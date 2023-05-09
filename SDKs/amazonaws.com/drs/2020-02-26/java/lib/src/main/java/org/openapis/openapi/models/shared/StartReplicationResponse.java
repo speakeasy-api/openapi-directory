@@ -15,9 +15,11 @@ public class StartReplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceServer")
     public SourceServer sourceServer;
+
     public StartReplicationResponse withSourceServer(SourceServer sourceServer) {
         this.sourceServer = sourceServer;
         return this;
     }
     
+    public StartReplicationResponse(){}
 }

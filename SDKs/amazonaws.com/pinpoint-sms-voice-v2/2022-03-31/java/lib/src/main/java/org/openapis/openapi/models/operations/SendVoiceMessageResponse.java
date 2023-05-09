@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendVoiceMessageResponse {
@@ -12,6 +13,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object accessDeniedException;
+
     public SendVoiceMessageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object conflictException;
+
     public SendVoiceMessageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class SendVoiceMessageResponse {
     
     
     public String contentType;
+
     public SendVoiceMessageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object internalServerException;
+
     public SendVoiceMessageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SendVoiceMessageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class SendVoiceMessageResponse {
      */
     
     public org.openapis.openapi.models.shared.SendVoiceMessageResult sendVoiceMessageResult;
+
     public SendVoiceMessageResponse withSendVoiceMessageResult(org.openapis.openapi.models.shared.SendVoiceMessageResult sendVoiceMessageResult) {
         this.sendVoiceMessageResult = sendVoiceMessageResult;
         return this;
@@ -69,6 +76,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public SendVoiceMessageResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class SendVoiceMessageResponse {
     
     
     public Integer statusCode;
+
     public SendVoiceMessageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class SendVoiceMessageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendVoiceMessageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class SendVoiceMessageResponse {
      */
     
     public Object throttlingException;
+
     public SendVoiceMessageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class SendVoiceMessageResponse {
      */
     
     public Object validationException;
+
     public SendVoiceMessageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SendVoiceMessageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

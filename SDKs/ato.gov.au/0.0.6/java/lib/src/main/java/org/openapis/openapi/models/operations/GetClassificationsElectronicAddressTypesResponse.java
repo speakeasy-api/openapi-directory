@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationsElectronicAddressTypesResponse {
     
     public String contentType;
+
     public GetClassificationsElectronicAddressTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationsElectronicAddressTypesResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationsElectronicAddressTypesResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationsElectronicAddressTypesResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationsElectronicAddressTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationsElectronicAddressTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationsElectronicAddressTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationsElectronicAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ElectronicAddressType[] electronicAddressTypes;
+
     public GetClassificationsElectronicAddressTypesResponse withElectronicAddressTypes(org.openapis.openapi.models.shared.ElectronicAddressType[] electronicAddressTypes) {
         this.electronicAddressTypes = electronicAddressTypes;
         return this;
@@ -50,6 +56,7 @@ public class GetClassificationsElectronicAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetClassificationsElectronicAddressTypesResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -60,9 +67,14 @@ public class GetClassificationsElectronicAddressTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetClassificationsElectronicAddressTypesResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetClassificationsElectronicAddressTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

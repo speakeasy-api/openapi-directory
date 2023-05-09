@@ -15,6 +15,7 @@ public class Marketplace {
      */
     @JsonProperty("baseURL")
     public String baseURL;
+
     public Marketplace withBaseURL(String baseURL) {
         this.baseURL = baseURL;
         return this;
@@ -25,6 +26,7 @@ public class Marketplace {
      */
     @JsonProperty("isCertified")
     public String isCertified;
+
     public Marketplace withIsCertified(String isCertified) {
         this.isCertified = isCertified;
         return this;
@@ -35,9 +37,15 @@ public class Marketplace {
      */
     @JsonProperty("name")
     public String name;
+
     public Marketplace withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Marketplace(@JsonProperty("baseURL") String baseURL, @JsonProperty("isCertified") String isCertified, @JsonProperty("name") String name) {
+        this.baseURL = baseURL;
+        this.isCertified = isCertified;
+        this.name = name;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EpfscResponse {
     
     public String contentType;
+
     public EpfscResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EpfscResponse {
     
     
     public Integer statusCode;
+
     public EpfscResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EpfscResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EpfscResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class EpfscResponse {
      */
     
     public Epfsc400ApplicationJSON epfsc400ApplicationJSONObject;
+
     public EpfscResponse withEpfsc400ApplicationJSONObject(Epfsc400ApplicationJSON epfsc400ApplicationJSONObject) {
         this.epfsc400ApplicationJSONObject = epfsc400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class EpfscResponse {
      */
     
     public Epfsc401ApplicationJSON epfsc401ApplicationJSONObject;
+
     public EpfscResponse withEpfsc401ApplicationJSONObject(Epfsc401ApplicationJSON epfsc401ApplicationJSONObject) {
         this.epfsc401ApplicationJSONObject = epfsc401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class EpfscResponse {
      */
     
     public Epfsc404ApplicationJSON epfsc404ApplicationJSONObject;
+
     public EpfscResponse withEpfsc404ApplicationJSONObject(Epfsc404ApplicationJSON epfsc404ApplicationJSONObject) {
         this.epfsc404ApplicationJSONObject = epfsc404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class EpfscResponse {
      */
     
     public Epfsc500ApplicationJSON epfsc500ApplicationJSONObject;
+
     public EpfscResponse withEpfsc500ApplicationJSONObject(Epfsc500ApplicationJSON epfsc500ApplicationJSONObject) {
         this.epfsc500ApplicationJSONObject = epfsc500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class EpfscResponse {
      */
     
     public Epfsc502ApplicationJSON epfsc502ApplicationJSONObject;
+
     public EpfscResponse withEpfsc502ApplicationJSONObject(Epfsc502ApplicationJSON epfsc502ApplicationJSONObject) {
         this.epfsc502ApplicationJSONObject = epfsc502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class EpfscResponse {
      */
     
     public Epfsc503ApplicationJSON epfsc503ApplicationJSONObject;
+
     public EpfscResponse withEpfsc503ApplicationJSONObject(Epfsc503ApplicationJSON epfsc503ApplicationJSONObject) {
         this.epfsc503ApplicationJSONObject = epfsc503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class EpfscResponse {
      */
     
     public Epfsc504ApplicationJSON epfsc504ApplicationJSONObject;
+
     public EpfscResponse withEpfsc504ApplicationJSONObject(Epfsc504ApplicationJSON epfsc504ApplicationJSONObject) {
         this.epfsc504ApplicationJSONObject = epfsc504ApplicationJSONObject;
         return this;
     }
     
+    public EpfscResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Amplitude")
     public java.util.Map<String, Object> amplitude;
+
     public ConnectorMetadata withAmplitude(java.util.Map<String, Object> amplitude) {
         this.amplitude = amplitude;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomerProfiles")
     public java.util.Map<String, Object> customerProfiles;
+
     public ConnectorMetadata withCustomerProfiles(java.util.Map<String, Object> customerProfiles) {
         this.customerProfiles = customerProfiles;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Datadog")
     public java.util.Map<String, Object> datadog;
+
     public ConnectorMetadata withDatadog(java.util.Map<String, Object> datadog) {
         this.datadog = datadog;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dynatrace")
     public java.util.Map<String, Object> dynatrace;
+
     public ConnectorMetadata withDynatrace(java.util.Map<String, Object> dynatrace) {
         this.dynatrace = dynatrace;
         return this;
@@ -47,6 +51,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridge")
     public java.util.Map<String, Object> eventBridge;
+
     public ConnectorMetadata withEventBridge(java.util.Map<String, Object> eventBridge) {
         this.eventBridge = eventBridge;
         return this;
@@ -55,6 +60,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GoogleAnalytics")
     public GoogleAnalyticsMetadata googleAnalytics;
+
     public ConnectorMetadata withGoogleAnalytics(GoogleAnalyticsMetadata googleAnalytics) {
         this.googleAnalytics = googleAnalytics;
         return this;
@@ -63,6 +69,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Honeycode")
     public HoneycodeMetadata honeycode;
+
     public ConnectorMetadata withHoneycode(HoneycodeMetadata honeycode) {
         this.honeycode = honeycode;
         return this;
@@ -71,6 +78,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InforNexus")
     public java.util.Map<String, Object> inforNexus;
+
     public ConnectorMetadata withInforNexus(java.util.Map<String, Object> inforNexus) {
         this.inforNexus = inforNexus;
         return this;
@@ -79,6 +87,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marketo")
     public java.util.Map<String, Object> marketo;
+
     public ConnectorMetadata withMarketo(java.util.Map<String, Object> marketo) {
         this.marketo = marketo;
         return this;
@@ -87,6 +96,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Pardot")
     public java.util.Map<String, Object> pardot;
+
     public ConnectorMetadata withPardot(java.util.Map<String, Object> pardot) {
         this.pardot = pardot;
         return this;
@@ -95,6 +105,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Redshift")
     public java.util.Map<String, Object> redshift;
+
     public ConnectorMetadata withRedshift(java.util.Map<String, Object> redshift) {
         this.redshift = redshift;
         return this;
@@ -103,6 +114,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3")
     public java.util.Map<String, Object> s3;
+
     public ConnectorMetadata withS3(java.util.Map<String, Object> s3) {
         this.s3 = s3;
         return this;
@@ -114,6 +126,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SAPOData")
     public java.util.Map<String, Object> sapoData;
+
     public ConnectorMetadata withSAPOData(java.util.Map<String, Object> sapoData) {
         this.sapoData = sapoData;
         return this;
@@ -122,6 +135,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Salesforce")
     public SalesforceMetadata salesforce;
+
     public ConnectorMetadata withSalesforce(SalesforceMetadata salesforce) {
         this.salesforce = salesforce;
         return this;
@@ -130,6 +144,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceNow")
     public java.util.Map<String, Object> serviceNow;
+
     public ConnectorMetadata withServiceNow(java.util.Map<String, Object> serviceNow) {
         this.serviceNow = serviceNow;
         return this;
@@ -138,6 +153,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Singular")
     public java.util.Map<String, Object> singular;
+
     public ConnectorMetadata withSingular(java.util.Map<String, Object> singular) {
         this.singular = singular;
         return this;
@@ -146,6 +162,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Slack")
     public SlackMetadata slack;
+
     public ConnectorMetadata withSlack(SlackMetadata slack) {
         this.slack = slack;
         return this;
@@ -154,6 +171,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Snowflake")
     public SnowflakeMetadata snowflake;
+
     public ConnectorMetadata withSnowflake(SnowflakeMetadata snowflake) {
         this.snowflake = snowflake;
         return this;
@@ -162,6 +180,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Trendmicro")
     public java.util.Map<String, Object> trendmicro;
+
     public ConnectorMetadata withTrendmicro(java.util.Map<String, Object> trendmicro) {
         this.trendmicro = trendmicro;
         return this;
@@ -170,6 +189,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Upsolver")
     public java.util.Map<String, Object> upsolver;
+
     public ConnectorMetadata withUpsolver(java.util.Map<String, Object> upsolver) {
         this.upsolver = upsolver;
         return this;
@@ -178,6 +198,7 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Veeva")
     public java.util.Map<String, Object> veeva;
+
     public ConnectorMetadata withVeeva(java.util.Map<String, Object> veeva) {
         this.veeva = veeva;
         return this;
@@ -186,9 +207,11 @@ public class ConnectorMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zendesk")
     public ZendeskMetadata zendesk;
+
     public ConnectorMetadata withZendesk(ZendeskMetadata zendesk) {
         this.zendesk = zendesk;
         return this;
     }
     
+    public ConnectorMetadata(){}
 }

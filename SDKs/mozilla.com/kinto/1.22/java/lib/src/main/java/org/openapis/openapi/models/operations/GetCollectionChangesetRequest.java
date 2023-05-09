@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCollectionChangesetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_expected")
     public String expected;
+
     public GetCollectionChangesetRequest withExpected(String expected) {
         this.expected = expected;
         return this;
@@ -16,6 +18,7 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_limit")
     public Long limit;
+
     public GetCollectionChangesetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,6 +26,7 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_since")
     public String since;
+
     public GetCollectionChangesetRequest withSince(String since) {
         this.since = since;
         return this;
@@ -30,6 +34,7 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bid")
     public String bid;
+
     public GetCollectionChangesetRequest withBid(String bid) {
         this.bid = bid;
         return this;
@@ -37,6 +42,7 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bucket")
     public String bucket;
+
     public GetCollectionChangesetRequest withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -44,6 +50,7 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cid")
     public String cid;
+
     public GetCollectionChangesetRequest withCid(String cid) {
         this.cid = cid;
         return this;
@@ -51,9 +58,15 @@ public class GetCollectionChangesetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=collection")
     public String collection;
+
     public GetCollectionChangesetRequest withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
+    public GetCollectionChangesetRequest(@JsonProperty("_expected") String expected, @JsonProperty("bid") String bid, @JsonProperty("cid") String cid) {
+        this.expected = expected;
+        this.bid = bid;
+        this.cid = cid;
+  }
 }

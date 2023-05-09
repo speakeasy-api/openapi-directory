@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV2CddriveFoldersFolderIdRequest {
@@ -12,6 +13,7 @@ public class DeleteApiV2CddriveFoldersFolderIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=folder-id")
     public Long folderId;
+
     public DeleteApiV2CddriveFoldersFolderIdRequest withFolderId(Long folderId) {
         this.folderId = folderId;
         return this;
@@ -22,9 +24,13 @@ public class DeleteApiV2CddriveFoldersFolderIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=recursive")
     public Boolean recursive;
+
     public DeleteApiV2CddriveFoldersFolderIdRequest withRecursive(Boolean recursive) {
         this.recursive = recursive;
         return this;
     }
     
+    public DeleteApiV2CddriveFoldersFolderIdRequest(@JsonProperty("folder-id") Long folderId) {
+        this.folderId = folderId;
+  }
 }

@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisAlpha200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioAlpha")
     public Double portfolioAlpha;
+
     public PostPortfolioAnalysisAlpha200ApplicationJSONPortfolios withPortfolioAlpha(Double portfolioAlpha) {
         this.portfolioAlpha = portfolioAlpha;
         return this;
     }
     
+    public PostPortfolioAnalysisAlpha200ApplicationJSONPortfolios(@JsonProperty("portfolioAlpha") Double portfolioAlpha) {
+        this.portfolioAlpha = portfolioAlpha;
+  }
 }

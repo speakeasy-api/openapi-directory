@@ -12,6 +12,7 @@ public class AdminSetUserMFAPreferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMSMfaSettings")
     public SMSMfaSettingsType smsMfaSettings;
+
     public AdminSetUserMFAPreferenceRequest withSMSMfaSettings(SMSMfaSettingsType smsMfaSettings) {
         this.smsMfaSettings = smsMfaSettings;
         return this;
@@ -20,6 +21,7 @@ public class AdminSetUserMFAPreferenceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SoftwareTokenMfaSettings")
     public SoftwareTokenMfaSettingsType softwareTokenMfaSettings;
+
     public AdminSetUserMFAPreferenceRequest withSoftwareTokenMfaSettings(SoftwareTokenMfaSettingsType softwareTokenMfaSettings) {
         this.softwareTokenMfaSettings = softwareTokenMfaSettings;
         return this;
@@ -27,6 +29,7 @@ public class AdminSetUserMFAPreferenceRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminSetUserMFAPreferenceRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -34,9 +37,14 @@ public class AdminSetUserMFAPreferenceRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminSetUserMFAPreferenceRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminSetUserMFAPreferenceRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

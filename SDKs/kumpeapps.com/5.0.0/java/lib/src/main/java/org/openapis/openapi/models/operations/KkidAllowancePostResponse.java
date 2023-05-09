@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KkidAllowancePostResponse {
@@ -12,6 +13,7 @@ public class KkidAllowancePostResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive;
+
     public KkidAllowancePostResponse withFourHundredAndFive(org.openapis.openapi.models.shared.FourHundredAndFive fourHundredAndFive) {
         this.fourHundredAndFive = fourHundredAndFive;
         return this;
@@ -22,6 +24,7 @@ public class KkidAllowancePostResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve;
+
     public KkidAllowancePostResponse withFourHundredAndTwelve(org.openapis.openapi.models.shared.FourHundredAndTwelve fourHundredAndTwelve) {
         this.fourHundredAndTwelve = fourHundredAndTwelve;
         return this;
@@ -29,6 +32,7 @@ public class KkidAllowancePostResponse {
     
     
     public String contentType;
+
     public KkidAllowancePostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class KkidAllowancePostResponse {
     
     
     public Integer statusCode;
+
     public KkidAllowancePostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class KkidAllowancePostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KkidAllowancePostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class KkidAllowancePostResponse {
      */
     
     public org.openapis.openapi.models.shared.Nodata nodata;
+
     public KkidAllowancePostResponse withNodata(org.openapis.openapi.models.shared.Nodata nodata) {
         this.nodata = nodata;
         return this;
@@ -63,9 +70,14 @@ public class KkidAllowancePostResponse {
      */
     
     public org.openapis.openapi.models.shared.Success success;
+
     public KkidAllowancePostResponse withSuccess(org.openapis.openapi.models.shared.Success success) {
         this.success = success;
         return this;
     }
     
+    public KkidAllowancePostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

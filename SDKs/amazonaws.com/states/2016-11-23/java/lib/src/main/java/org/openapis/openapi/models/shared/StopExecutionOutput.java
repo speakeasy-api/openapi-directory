@@ -19,9 +19,13 @@ public class StopExecutionOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopDate")
     public OffsetDateTime stopDate;
+
     public StopExecutionOutput withStopDate(OffsetDateTime stopDate) {
         this.stopDate = stopDate;
         return this;
     }
     
+    public StopExecutionOutput(@JsonProperty("stopDate") OffsetDateTime stopDate) {
+        this.stopDate = stopDate;
+  }
 }

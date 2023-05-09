@@ -15,6 +15,7 @@ public class CustomerTaxNoDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public CustomerTaxNoDTO withNumber(String number) {
         this.number = number;
         return this;
@@ -26,9 +27,11 @@ public class CustomerTaxNoDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CustomerTaxNoDTO withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CustomerTaxNoDTO(){}
 }

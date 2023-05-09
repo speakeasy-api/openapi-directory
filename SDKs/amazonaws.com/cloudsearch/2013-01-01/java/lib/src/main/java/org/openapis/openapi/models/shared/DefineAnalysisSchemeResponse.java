@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DefineAnalysisSchemeResponse - The result of a &lt;code&gt;&lt;a&gt;DefineAnalysisScheme&lt;/a&gt;&lt;/code&gt; request. Contains the status of the newly-configured analysis scheme.
@@ -15,9 +15,13 @@ public class DefineAnalysisSchemeResponse {
      */
     
     public AnalysisSchemeStatus analysisScheme;
+
     public DefineAnalysisSchemeResponse withAnalysisScheme(AnalysisSchemeStatus analysisScheme) {
         this.analysisScheme = analysisScheme;
         return this;
     }
     
+    public DefineAnalysisSchemeResponse(@JsonProperty("AnalysisScheme") AnalysisSchemeStatus analysisScheme) {
+        this.analysisScheme = analysisScheme;
+  }
 }

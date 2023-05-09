@@ -15,6 +15,7 @@ public class Artifact {
      */
     
     public String description;
+
     public Artifact withDescription(String description) {
         this.description = description;
         return this;
@@ -25,9 +26,11 @@ public class Artifact {
      */
     
     public String url;
+
     public Artifact withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Artifact(){}
 }

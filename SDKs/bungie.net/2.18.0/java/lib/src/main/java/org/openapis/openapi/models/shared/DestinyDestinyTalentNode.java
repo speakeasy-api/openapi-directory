@@ -15,6 +15,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Integer activationGridLevel;
+
     public DestinyDestinyTalentNode withActivationGridLevel(Integer activationGridLevel) {
         this.activationGridLevel = activationGridLevel;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Boolean hidden;
+
     public DestinyDestinyTalentNode withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Boolean isActivated;
+
     public DestinyDestinyTalentNode withIsActivated(Boolean isActivated) {
         this.isActivated = isActivated;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public DestinyDefinitionsDestinyMaterialRequirement[] materialsToUpgrade;
+
     public DestinyDestinyTalentNode withMaterialsToUpgrade(DestinyDefinitionsDestinyMaterialRequirement[] materialsToUpgrade) {
         this.materialsToUpgrade = materialsToUpgrade;
         return this;
@@ -55,6 +59,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Long nodeHash;
+
     public DestinyDestinyTalentNode withNodeHash(Long nodeHash) {
         this.nodeHash = nodeHash;
         return this;
@@ -65,6 +70,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Integer nodeIndex;
+
     public DestinyDestinyTalentNode withNodeIndex(Integer nodeIndex) {
         this.nodeIndex = nodeIndex;
         return this;
@@ -75,6 +81,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public DestinyDestinyTalentNodeNodeStatsBlock nodeStatsBlock;
+
     public DestinyDestinyTalentNode withNodeStatsBlock(DestinyDestinyTalentNodeNodeStatsBlock nodeStatsBlock) {
         this.nodeStatsBlock = nodeStatsBlock;
         return this;
@@ -85,6 +92,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Float progressPercent;
+
     public DestinyDestinyTalentNode withProgressPercent(Float progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -95,6 +103,7 @@ public class DestinyDestinyTalentNode {
      */
     
     public Integer state;
+
     public DestinyDestinyTalentNode withState(Integer state) {
         this.state = state;
         return this;
@@ -105,9 +114,11 @@ public class DestinyDestinyTalentNode {
      */
     
     public Integer stepIndex;
+
     public DestinyDestinyTalentNode withStepIndex(Integer stepIndex) {
         this.stepIndex = stepIndex;
         return this;
     }
     
+    public DestinyDestinyTalentNode(){}
 }

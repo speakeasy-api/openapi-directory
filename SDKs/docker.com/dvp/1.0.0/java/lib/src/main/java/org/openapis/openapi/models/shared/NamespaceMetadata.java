@@ -15,6 +15,7 @@ public class NamespaceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasets")
     public DatasetModel[] datasets;
+
     public NamespaceMetadata withDatasets(DatasetModel[] datasets) {
         this.datasets = datasets;
         return this;
@@ -23,6 +24,7 @@ public class NamespaceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraRepos")
     public String[] extraRepos;
+
     public NamespaceMetadata withExtraRepos(String[] extraRepos) {
         this.extraRepos = extraRepos;
         return this;
@@ -31,9 +33,11 @@ public class NamespaceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public NamespaceMetadata withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public NamespaceMetadata(){}
 }

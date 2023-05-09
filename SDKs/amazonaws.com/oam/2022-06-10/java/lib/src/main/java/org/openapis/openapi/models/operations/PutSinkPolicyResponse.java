@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSinkPolicyResponse {
     
     public String contentType;
+
     public PutSinkPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutSinkPolicyResponse {
      */
     
     public Object internalServiceFault;
+
     public PutSinkPolicyResponse withInternalServiceFault(Object internalServiceFault) {
         this.internalServiceFault = internalServiceFault;
         return this;
@@ -29,6 +32,7 @@ public class PutSinkPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutSinkPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class PutSinkPolicyResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public PutSinkPolicyResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class PutSinkPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSinkPolicyOutput putSinkPolicyOutput;
+
     public PutSinkPolicyResponse withPutSinkPolicyOutput(org.openapis.openapi.models.shared.PutSinkPolicyOutput putSinkPolicyOutput) {
         this.putSinkPolicyOutput = putSinkPolicyOutput;
         return this;
@@ -59,6 +65,7 @@ public class PutSinkPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutSinkPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutSinkPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutSinkPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutSinkPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSinkPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSinkPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

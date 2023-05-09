@@ -15,6 +15,7 @@ public class ParameterInlinePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyStatus")
     public String policyStatus;
+
     public ParameterInlinePolicy withPolicyStatus(String policyStatus) {
         this.policyStatus = policyStatus;
         return this;
@@ -23,6 +24,7 @@ public class ParameterInlinePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyText")
     public String policyText;
+
     public ParameterInlinePolicy withPolicyText(String policyText) {
         this.policyText = policyText;
         return this;
@@ -31,9 +33,11 @@ public class ParameterInlinePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyType")
     public String policyType;
+
     public ParameterInlinePolicy withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public ParameterInlinePolicy(){}
 }

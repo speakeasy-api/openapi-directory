@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CertificateSitesealGetResponse {
@@ -12,6 +13,7 @@ public class CertificateSitesealGetResponse {
      */
     
     public org.openapis.openapi.models.shared.CertificateSiteSeal certificateSiteSeal;
+
     public CertificateSitesealGetResponse withCertificateSiteSeal(org.openapis.openapi.models.shared.CertificateSiteSeal certificateSiteSeal) {
         this.certificateSiteSeal = certificateSiteSeal;
         return this;
@@ -19,6 +21,7 @@ public class CertificateSitesealGetResponse {
     
     
     public String contentType;
+
     public CertificateSitesealGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CertificateSitesealGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public CertificateSitesealGetResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class CertificateSitesealGetResponse {
     
     
     public Integer statusCode;
+
     public CertificateSitesealGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CertificateSitesealGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CertificateSitesealGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CertificateSitesealGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

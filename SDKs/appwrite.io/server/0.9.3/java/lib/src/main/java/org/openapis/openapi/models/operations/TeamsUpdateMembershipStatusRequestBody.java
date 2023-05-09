@@ -12,6 +12,7 @@ public class TeamsUpdateMembershipStatusRequestBody {
      */
     @JsonProperty("secret")
     public String secret;
+
     public TeamsUpdateMembershipStatusRequestBody withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -22,9 +23,14 @@ public class TeamsUpdateMembershipStatusRequestBody {
      */
     @JsonProperty("userId")
     public String userId;
+
     public TeamsUpdateMembershipStatusRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public TeamsUpdateMembershipStatusRequestBody(@JsonProperty("secret") String secret, @JsonProperty("userId") String userId) {
+        this.secret = secret;
+        this.userId = userId;
+  }
 }

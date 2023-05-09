@@ -18,6 +18,7 @@ public class AuditRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acronym")
     public String acronym;
+
     public AuditRefs withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -29,6 +30,7 @@ public class AuditRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public AuditRefs withGroup(String group) {
         this.group = group;
         return this;
@@ -40,6 +42,7 @@ public class AuditRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AuditRefs withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class AuditRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevantAudits")
     public String[] relevantAudits;
+
     public AuditRefs withRelevantAudits(String[] relevantAudits) {
         this.relevantAudits = relevantAudits;
         return this;
@@ -62,9 +66,11 @@ public class AuditRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Double weight;
+
     public AuditRefs withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public AuditRefs(){}
 }

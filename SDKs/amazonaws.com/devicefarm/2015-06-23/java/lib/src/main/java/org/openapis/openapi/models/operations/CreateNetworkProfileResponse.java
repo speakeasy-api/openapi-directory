@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNetworkProfileResponse {
@@ -12,6 +13,7 @@ public class CreateNetworkProfileResponse {
      */
     
     public Object argumentException;
+
     public CreateNetworkProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateNetworkProfileResponse {
     
     
     public String contentType;
+
     public CreateNetworkProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateNetworkProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNetworkProfileResult createNetworkProfileResult;
+
     public CreateNetworkProfileResponse withCreateNetworkProfileResult(org.openapis.openapi.models.shared.CreateNetworkProfileResult createNetworkProfileResult) {
         this.createNetworkProfileResult = createNetworkProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateNetworkProfileResponse {
      */
     
     public Object limitExceededException;
+
     public CreateNetworkProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateNetworkProfileResponse {
      */
     
     public Object notFoundException;
+
     public CreateNetworkProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateNetworkProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateNetworkProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class CreateNetworkProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateNetworkProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateNetworkProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNetworkProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateNetworkProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Servicepack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public Servicepack withId(Integer id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class Servicepack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Servicepack withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Servicepack(){}
 }

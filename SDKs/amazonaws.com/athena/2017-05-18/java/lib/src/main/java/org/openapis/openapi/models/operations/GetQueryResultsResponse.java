@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQueryResultsResponse {
     
     public String contentType;
+
     public GetQueryResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetQueryResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetQueryResultsOutput getQueryResultsOutput;
+
     public GetQueryResultsResponse withGetQueryResultsOutput(org.openapis.openapi.models.shared.GetQueryResultsOutput getQueryResultsOutput) {
         this.getQueryResultsOutput = getQueryResultsOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object internalServerException;
+
     public GetQueryResultsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetQueryResultsResponse {
      */
     
     public Object invalidRequestException;
+
     public GetQueryResultsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetQueryResultsResponse {
     
     
     public Integer statusCode;
+
     public GetQueryResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetQueryResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQueryResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetQueryResultsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetQueryResultsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetQueryResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

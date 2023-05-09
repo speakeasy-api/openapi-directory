@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2EditOptionalConversationRequest {
@@ -12,6 +13,7 @@ public class GroupV2EditOptionalConversationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversationId")
     public Long conversationId;
+
     public GroupV2EditOptionalConversationRequest withConversationId(Long conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -22,9 +24,14 @@ public class GroupV2EditOptionalConversationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2EditOptionalConversationRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public GroupV2EditOptionalConversationRequest(@JsonProperty("conversationId") Long conversationId, @JsonProperty("groupId") Long groupId) {
+        this.conversationId = conversationId;
+        this.groupId = groupId;
+  }
 }

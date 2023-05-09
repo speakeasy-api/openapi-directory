@@ -22,6 +22,7 @@ public class DescribeSpaceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeSpaceResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainId")
     public String domainId;
+
     public DescribeSpaceResponse withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -38,6 +40,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeSpaceResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystemUid")
     public String homeEfsFileSystemUid;
+
     public DescribeSpaceResponse withHomeEfsFileSystemUid(String homeEfsFileSystemUid) {
         this.homeEfsFileSystemUid = homeEfsFileSystemUid;
         return this;
@@ -56,6 +60,7 @@ public class DescribeSpaceResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeSpaceResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceArn")
     public String spaceArn;
+
     public DescribeSpaceResponse withSpaceArn(String spaceArn) {
         this.spaceArn = spaceArn;
         return this;
@@ -72,6 +78,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceName")
     public String spaceName;
+
     public DescribeSpaceResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -80,6 +87,7 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceSettings")
     public SpaceSettings spaceSettings;
+
     public DescribeSpaceResponse withSpaceSettings(SpaceSettings spaceSettings) {
         this.spaceSettings = spaceSettings;
         return this;
@@ -88,9 +96,11 @@ public class DescribeSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SpaceStatusEnum status;
+
     public DescribeSpaceResponse withStatus(SpaceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeSpaceResponse(){}
 }

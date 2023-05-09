@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMonitorResponse {
@@ -12,6 +13,7 @@ public class CreateMonitorResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateMonitorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateMonitorResponse {
      */
     
     public Object conflictException;
+
     public CreateMonitorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateMonitorResponse {
     
     
     public String contentType;
+
     public CreateMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateMonitorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMonitorOutput createMonitorOutput;
+
     public CreateMonitorResponse withCreateMonitorOutput(org.openapis.openapi.models.shared.CreateMonitorOutput createMonitorOutput) {
         this.createMonitorOutput = createMonitorOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateMonitorResponse {
      */
     
     public Object internalServerException;
+
     public CreateMonitorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateMonitorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMonitorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateMonitorResponse {
     
     
     public Integer statusCode;
+
     public CreateMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateMonitorResponse {
      */
     
     public Object throttlingException;
+
     public CreateMonitorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateMonitorResponse {
      */
     
     public Object validationException;
+
     public CreateMonitorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

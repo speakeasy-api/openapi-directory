@@ -15,9 +15,11 @@ public class DestinyComponentsItemsDestinyItemPlugObjectivesComponent {
      */
     
     public java.util.Map<String, DestinyQuestsDestinyObjectiveProgress[]> objectivesPerPlug;
+
     public DestinyComponentsItemsDestinyItemPlugObjectivesComponent withObjectivesPerPlug(java.util.Map<String, DestinyQuestsDestinyObjectiveProgress[]> objectivesPerPlug) {
         this.objectivesPerPlug = objectivesPerPlug;
         return this;
     }
     
+    public DestinyComponentsItemsDestinyItemPlugObjectivesComponent(){}
 }

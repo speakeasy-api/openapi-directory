@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopBotRecommendationResponse {
@@ -12,6 +13,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object conflictException;
+
     public StopBotRecommendationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopBotRecommendationResponse {
     
     
     public String contentType;
+
     public StopBotRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object internalServerException;
+
     public StopBotRecommendationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object preconditionFailedException;
+
     public StopBotRecommendationResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopBotRecommendationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class StopBotRecommendationResponse {
     
     
     public Integer statusCode;
+
     public StopBotRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StopBotRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopBotRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StopBotRecommendationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class StopBotRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.StopBotRecommendationResponse stopBotRecommendationResponse;
+
     public StopBotRecommendationResponse withStopBotRecommendationResponse(org.openapis.openapi.models.shared.StopBotRecommendationResponse stopBotRecommendationResponse) {
         this.stopBotRecommendationResponse = stopBotRecommendationResponse;
         return this;
@@ -93,6 +103,7 @@ public class StopBotRecommendationResponse {
      */
     
     public Object throttlingException;
+
     public StopBotRecommendationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StopBotRecommendationResponse {
      */
     
     public Object validationException;
+
     public StopBotRecommendationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopBotRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsHomeservicesLocalservicesV1BookingLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingAppointmentTimestamp")
     public String bookingAppointmentTimestamp;
+
     public GoogleAdsHomeservicesLocalservicesV1BookingLead withBookingAppointmentTimestamp(String bookingAppointmentTimestamp) {
         this.bookingAppointmentTimestamp = bookingAppointmentTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsHomeservicesLocalservicesV1BookingLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerEmail")
     public String consumerEmail;
+
     public GoogleAdsHomeservicesLocalservicesV1BookingLead withConsumerEmail(String consumerEmail) {
         this.consumerEmail = consumerEmail;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsHomeservicesLocalservicesV1BookingLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerPhoneNumber")
     public String consumerPhoneNumber;
+
     public GoogleAdsHomeservicesLocalservicesV1BookingLead withConsumerPhoneNumber(String consumerPhoneNumber) {
         this.consumerPhoneNumber = consumerPhoneNumber;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAdsHomeservicesLocalservicesV1BookingLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerName")
     public String customerName;
+
     public GoogleAdsHomeservicesLocalservicesV1BookingLead withCustomerName(String customerName) {
         this.customerName = customerName;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAdsHomeservicesLocalservicesV1BookingLead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public String jobType;
+
     public GoogleAdsHomeservicesLocalservicesV1BookingLead withJobType(String jobType) {
         this.jobType = jobType;
         return this;
     }
     
+    public GoogleAdsHomeservicesLocalservicesV1BookingLead(){}
 }

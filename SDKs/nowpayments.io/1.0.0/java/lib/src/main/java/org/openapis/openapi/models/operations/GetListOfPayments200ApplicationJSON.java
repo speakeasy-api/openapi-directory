@@ -15,6 +15,7 @@ public class GetListOfPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetListOfPayments200ApplicationJSONData[] data;
+
     public GetListOfPayments200ApplicationJSON withData(GetListOfPayments200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class GetListOfPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Double limit;
+
     public GetListOfPayments200ApplicationJSON withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -31,6 +33,7 @@ public class GetListOfPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Double page;
+
     public GetListOfPayments200ApplicationJSON withPage(Double page) {
         this.page = page;
         return this;
@@ -39,6 +42,7 @@ public class GetListOfPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesCount")
     public Double pagesCount;
+
     public GetListOfPayments200ApplicationJSON withPagesCount(Double pagesCount) {
         this.pagesCount = pagesCount;
         return this;
@@ -47,9 +51,11 @@ public class GetListOfPayments200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetListOfPayments200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetListOfPayments200ApplicationJSON(){}
 }

@@ -15,9 +15,13 @@ public class LicenseImageRequest {
      */
     @JsonProperty("images")
     public Object[] images;
+
     public LicenseImageRequest withImages(Object[] images) {
         this.images = images;
         return this;
     }
     
+    public LicenseImageRequest(@JsonProperty("images") Object[] images) {
+        this.images = images;
+  }
 }

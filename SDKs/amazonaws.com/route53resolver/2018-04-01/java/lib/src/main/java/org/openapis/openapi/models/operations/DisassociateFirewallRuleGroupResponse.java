@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateFirewallRuleGroupResponse {
@@ -12,6 +13,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateFirewallRuleGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object conflictException;
+
     public DisassociateFirewallRuleGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateFirewallRuleGroupResponse {
     
     
     public String contentType;
+
     public DisassociateFirewallRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.DisassociateFirewallRuleGroupResponse disassociateFirewallRuleGroupResponse;
+
     public DisassociateFirewallRuleGroupResponse withDisassociateFirewallRuleGroupResponse(org.openapis.openapi.models.shared.DisassociateFirewallRuleGroupResponse disassociateFirewallRuleGroupResponse) {
         this.disassociateFirewallRuleGroupResponse = disassociateFirewallRuleGroupResponse;
         return this;
@@ -49,6 +54,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DisassociateFirewallRuleGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateFirewallRuleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DisassociateFirewallRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public DisassociateFirewallRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateFirewallRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateFirewallRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateFirewallRuleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DisassociateFirewallRuleGroupResponse {
      */
     
     public Object validationException;
+
     public DisassociateFirewallRuleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateFirewallRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

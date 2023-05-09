@@ -12,9 +12,11 @@ public class QuittungTSERequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
     public String account;
+
     public QuittungTSERequest withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public QuittungTSERequest(){}
 }

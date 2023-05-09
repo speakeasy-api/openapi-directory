@@ -15,6 +15,7 @@ public class VirtualGatewayListenerTlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public VirtualGatewayTlsValidationContextFileTrust file;
+
     public VirtualGatewayListenerTlsValidationContextTrust withFile(VirtualGatewayTlsValidationContextFileTrust file) {
         this.file = file;
         return this;
@@ -23,9 +24,11 @@ public class VirtualGatewayListenerTlsValidationContextTrust {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sds")
     public VirtualGatewayTlsValidationContextSdsTrust sds;
+
     public VirtualGatewayListenerTlsValidationContextTrust withSds(VirtualGatewayTlsValidationContextSdsTrust sds) {
         this.sds = sds;
         return this;
     }
     
+    public VirtualGatewayListenerTlsValidationContextTrust(){}
 }

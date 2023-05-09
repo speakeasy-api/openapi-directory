@@ -15,6 +15,7 @@ public class IssuerCertificateIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCertificateSerialNumber")
     public String issuerCertificateSerialNumber;
+
     public IssuerCertificateIdentifier withIssuerCertificateSerialNumber(String issuerCertificateSerialNumber) {
         this.issuerCertificateSerialNumber = issuerCertificateSerialNumber;
         return this;
@@ -23,6 +24,7 @@ public class IssuerCertificateIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCertificateSubject")
     public String issuerCertificateSubject;
+
     public IssuerCertificateIdentifier withIssuerCertificateSubject(String issuerCertificateSubject) {
         this.issuerCertificateSubject = issuerCertificateSubject;
         return this;
@@ -31,9 +33,11 @@ public class IssuerCertificateIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerId")
     public String issuerId;
+
     public IssuerCertificateIdentifier withIssuerId(String issuerId) {
         this.issuerId = issuerId;
         return this;
     }
     
+    public IssuerCertificateIdentifier(){}
 }

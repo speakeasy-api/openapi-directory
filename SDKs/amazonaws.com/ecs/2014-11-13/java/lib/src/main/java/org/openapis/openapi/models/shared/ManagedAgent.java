@@ -22,6 +22,7 @@ public class ManagedAgent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartedAt")
     public OffsetDateTime lastStartedAt;
+
     public ManagedAgent withLastStartedAt(OffsetDateTime lastStartedAt) {
         this.lastStartedAt = lastStartedAt;
         return this;
@@ -30,6 +31,7 @@ public class ManagedAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatus")
     public String lastStatus;
+
     public ManagedAgent withLastStatus(String lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -38,6 +40,7 @@ public class ManagedAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ManagedAgentNameEnum name;
+
     public ManagedAgent withName(ManagedAgentNameEnum name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class ManagedAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ManagedAgent withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ManagedAgent(){}
 }

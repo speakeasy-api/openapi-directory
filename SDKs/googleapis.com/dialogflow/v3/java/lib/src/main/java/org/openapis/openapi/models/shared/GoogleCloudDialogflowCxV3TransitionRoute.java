@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public String intent;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withIntent(String intent) {
         this.intent = intent;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFlow")
     public String targetFlow;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withTargetFlow(String targetFlow) {
         this.targetFlow = targetFlow;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPage")
     public String targetPage;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withTargetPage(String targetPage) {
         this.targetPage = targetPage;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudDialogflowCxV3TransitionRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerFulfillment")
     public GoogleCloudDialogflowCxV3Fulfillment triggerFulfillment;
+
     public GoogleCloudDialogflowCxV3TransitionRoute withTriggerFulfillment(GoogleCloudDialogflowCxV3Fulfillment triggerFulfillment) {
         this.triggerFulfillment = triggerFulfillment;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3TransitionRoute(){}
 }

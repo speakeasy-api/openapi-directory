@@ -18,6 +18,7 @@ public class MultiClusterIngressFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing")
     public MultiClusterIngressFeatureSpecBillingEnum billing;
+
     public MultiClusterIngressFeatureSpec withBilling(MultiClusterIngressFeatureSpecBillingEnum billing) {
         this.billing = billing;
         return this;
@@ -29,9 +30,11 @@ public class MultiClusterIngressFeatureSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configMembership")
     public String configMembership;
+
     public MultiClusterIngressFeatureSpec withConfigMembership(String configMembership) {
         this.configMembership = configMembership;
         return this;
     }
     
+    public MultiClusterIngressFeatureSpec(){}
 }

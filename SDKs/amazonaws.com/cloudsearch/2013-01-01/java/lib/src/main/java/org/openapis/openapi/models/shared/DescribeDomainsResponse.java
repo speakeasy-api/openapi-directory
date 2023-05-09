@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeDomainsResponse - The result of a &lt;code&gt;DescribeDomains&lt;/code&gt; request. Contains the status of the domains specified in the request or all domains owned by the account.
@@ -15,9 +15,13 @@ public class DescribeDomainsResponse {
      */
     
     public DomainStatus[] domainStatusList;
+
     public DescribeDomainsResponse withDomainStatusList(DomainStatus[] domainStatusList) {
         this.domainStatusList = domainStatusList;
         return this;
     }
     
+    public DescribeDomainsResponse(@JsonProperty("DomainStatusList") DomainStatus[] domainStatusList) {
+        this.domainStatusList = domainStatusList;
+  }
 }

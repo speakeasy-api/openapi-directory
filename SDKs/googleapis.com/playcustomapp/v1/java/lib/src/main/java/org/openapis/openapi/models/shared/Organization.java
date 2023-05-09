@@ -18,6 +18,7 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public Organization withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -29,9 +30,11 @@ public class Organization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationName")
     public String organizationName;
+
     public Organization withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
     }
     
+    public Organization(){}
 }

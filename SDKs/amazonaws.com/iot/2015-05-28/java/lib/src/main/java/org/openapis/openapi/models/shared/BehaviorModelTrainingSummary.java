@@ -20,6 +20,7 @@ public class BehaviorModelTrainingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behaviorName")
     public String behaviorName;
+
     public BehaviorModelTrainingSummary withBehaviorName(String behaviorName) {
         this.behaviorName = behaviorName;
         return this;
@@ -28,6 +29,7 @@ public class BehaviorModelTrainingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointsCollectionPercentage")
     public Double datapointsCollectionPercentage;
+
     public BehaviorModelTrainingSummary withDatapointsCollectionPercentage(Double datapointsCollectionPercentage) {
         this.datapointsCollectionPercentage = datapointsCollectionPercentage;
         return this;
@@ -38,6 +40,7 @@ public class BehaviorModelTrainingSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModelRefreshDate")
     public OffsetDateTime lastModelRefreshDate;
+
     public BehaviorModelTrainingSummary withLastModelRefreshDate(OffsetDateTime lastModelRefreshDate) {
         this.lastModelRefreshDate = lastModelRefreshDate;
         return this;
@@ -46,6 +49,7 @@ public class BehaviorModelTrainingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelStatus")
     public ModelStatusEnum modelStatus;
+
     public BehaviorModelTrainingSummary withModelStatus(ModelStatusEnum modelStatus) {
         this.modelStatus = modelStatus;
         return this;
@@ -54,6 +58,7 @@ public class BehaviorModelTrainingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public BehaviorModelTrainingSummary withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -64,9 +69,11 @@ public class BehaviorModelTrainingSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("trainingDataCollectionStartDate")
     public OffsetDateTime trainingDataCollectionStartDate;
+
     public BehaviorModelTrainingSummary withTrainingDataCollectionStartDate(OffsetDateTime trainingDataCollectionStartDate) {
         this.trainingDataCollectionStartDate = trainingDataCollectionStartDate;
         return this;
     }
     
+    public BehaviorModelTrainingSummary(){}
 }

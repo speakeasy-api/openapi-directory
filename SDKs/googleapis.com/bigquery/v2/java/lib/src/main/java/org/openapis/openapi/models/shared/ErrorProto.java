@@ -15,6 +15,7 @@ public class ErrorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugInfo")
     public String debugInfo;
+
     public ErrorProto withDebugInfo(String debugInfo) {
         this.debugInfo = debugInfo;
         return this;
@@ -26,6 +27,7 @@ public class ErrorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ErrorProto withLocation(String location) {
         this.location = location;
         return this;
@@ -37,6 +39,7 @@ public class ErrorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorProto withMessage(String message) {
         this.message = message;
         return this;
@@ -48,9 +51,11 @@ public class ErrorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ErrorProto withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public ErrorProto(){}
 }

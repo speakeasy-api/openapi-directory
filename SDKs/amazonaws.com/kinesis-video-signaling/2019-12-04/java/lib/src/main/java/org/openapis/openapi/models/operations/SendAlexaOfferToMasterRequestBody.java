@@ -12,6 +12,7 @@ public class SendAlexaOfferToMasterRequestBody {
      */
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public SendAlexaOfferToMasterRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -22,6 +23,7 @@ public class SendAlexaOfferToMasterRequestBody {
      */
     @JsonProperty("MessagePayload")
     public String messagePayload;
+
     public SendAlexaOfferToMasterRequestBody withMessagePayload(String messagePayload) {
         this.messagePayload = messagePayload;
         return this;
@@ -32,9 +34,15 @@ public class SendAlexaOfferToMasterRequestBody {
      */
     @JsonProperty("SenderClientId")
     public String senderClientId;
+
     public SendAlexaOfferToMasterRequestBody withSenderClientId(String senderClientId) {
         this.senderClientId = senderClientId;
         return this;
     }
     
+    public SendAlexaOfferToMasterRequestBody(@JsonProperty("ChannelARN") String channelARN, @JsonProperty("MessagePayload") String messagePayload, @JsonProperty("SenderClientId") String senderClientId) {
+        this.channelARN = channelARN;
+        this.messagePayload = messagePayload;
+        this.senderClientId = senderClientId;
+  }
 }

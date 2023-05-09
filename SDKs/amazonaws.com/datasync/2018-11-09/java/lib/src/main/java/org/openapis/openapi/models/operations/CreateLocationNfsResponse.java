@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLocationNfsResponse {
     
     public String contentType;
+
     public CreateLocationNfsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateLocationNfsResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLocationNfsResponse createLocationNfsResponse;
+
     public CreateLocationNfsResponse withCreateLocationNfsResponse(org.openapis.openapi.models.shared.CreateLocationNfsResponse createLocationNfsResponse) {
         this.createLocationNfsResponse = createLocationNfsResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateLocationNfsResponse {
      */
     
     public Object internalException;
+
     public CreateLocationNfsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateLocationNfsResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateLocationNfsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CreateLocationNfsResponse {
     
     
     public Integer statusCode;
+
     public CreateLocationNfsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateLocationNfsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLocationNfsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateLocationNfsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

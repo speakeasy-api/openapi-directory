@@ -61,11 +61,9 @@ public class Text {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TexttospeechTextSynthesizeResponse res = new org.openapis.openapi.models.operations.TexttospeechTextSynthesizeResponse() {{
+        org.openapis.openapi.models.operations.TexttospeechTextSynthesizeResponse res = new org.openapis.openapi.models.operations.TexttospeechTextSynthesizeResponse(contentType, httpRes.statusCode()) {{
             synthesizeSpeechResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEndpointResponse {
     
     public String contentType;
+
     public GetEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEndpointResponse getEndpointResponse;
+
     public GetEndpointResponse withGetEndpointResponse(org.openapis.openapi.models.shared.GetEndpointResponse getEndpointResponse) {
         this.getEndpointResponse = getEndpointResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetEndpointResponse {
      */
     
     public Object internalServerException;
+
     public GetEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetEndpointResponse {
     
     
     public Integer statusCode;
+
     public GetEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEndpointResponse {
      */
     
     public Object validationException;
+
     public GetEndpointResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

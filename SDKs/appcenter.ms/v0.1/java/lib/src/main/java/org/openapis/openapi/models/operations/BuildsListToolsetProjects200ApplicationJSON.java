@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android")
     public BuildsListToolsetProjects200ApplicationJSONAndroid android;
+
     public BuildsListToolsetProjects200ApplicationJSON withAndroid(BuildsListToolsetProjects200ApplicationJSONAndroid android) {
         this.android = android;
         return this;
@@ -26,6 +27,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildscripts")
     public Object buildscripts;
+
     public BuildsListToolsetProjects200ApplicationJSON withBuildscripts(Object buildscripts) {
         this.buildscripts = buildscripts;
         return this;
@@ -37,6 +39,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit")
     public String commit;
+
     public BuildsListToolsetProjects200ApplicationJSON withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -45,6 +48,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javascript")
     public BuildsListToolsetProjects200ApplicationJSONJavascript javascript;
+
     public BuildsListToolsetProjects200ApplicationJSON withJavascript(BuildsListToolsetProjects200ApplicationJSONJavascript javascript) {
         this.javascript = javascript;
         return this;
@@ -53,6 +57,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testcloud")
     public BuildsListToolsetProjects200ApplicationJSONTestcloud testcloud;
+
     public BuildsListToolsetProjects200ApplicationJSON withTestcloud(BuildsListToolsetProjects200ApplicationJSONTestcloud testcloud) {
         this.testcloud = testcloud;
         return this;
@@ -61,6 +66,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uwp")
     public BuildsListToolsetProjects200ApplicationJSONUwp uwp;
+
     public BuildsListToolsetProjects200ApplicationJSON withUwp(BuildsListToolsetProjects200ApplicationJSONUwp uwp) {
         this.uwp = uwp;
         return this;
@@ -69,6 +75,7 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xamarin")
     public BuildsListToolsetProjects200ApplicationJSONXamarin xamarin;
+
     public BuildsListToolsetProjects200ApplicationJSON withXamarin(BuildsListToolsetProjects200ApplicationJSONXamarin xamarin) {
         this.xamarin = xamarin;
         return this;
@@ -77,9 +84,11 @@ public class BuildsListToolsetProjects200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcode")
     public BuildsListToolsetProjects200ApplicationJSONXcode xcode;
+
     public BuildsListToolsetProjects200ApplicationJSON withXcode(BuildsListToolsetProjects200ApplicationJSONXcode xcode) {
         this.xcode = xcode;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSON(){}
 }

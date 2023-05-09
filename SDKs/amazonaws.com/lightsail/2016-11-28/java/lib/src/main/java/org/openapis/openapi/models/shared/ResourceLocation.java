@@ -15,6 +15,7 @@ public class ResourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public ResourceLocation withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,9 +24,11 @@ public class ResourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionName")
     public RegionNameEnum regionName;
+
     public ResourceLocation withRegionName(RegionNameEnum regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public ResourceLocation(){}
 }

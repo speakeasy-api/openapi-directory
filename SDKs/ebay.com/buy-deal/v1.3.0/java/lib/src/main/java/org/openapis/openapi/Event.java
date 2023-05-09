@@ -60,11 +60,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse() {{
+        org.openapis.openapi.models.operations.GetEventResponse res = new org.openapis.openapi.models.operations.GetEventResponse(contentType, httpRes.statusCode()) {{
             event = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class Event {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse() {{
+        org.openapis.openapi.models.operations.GetEventsResponse res = new org.openapis.openapi.models.operations.GetEventsResponse(contentType, httpRes.statusCode()) {{
             eventSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

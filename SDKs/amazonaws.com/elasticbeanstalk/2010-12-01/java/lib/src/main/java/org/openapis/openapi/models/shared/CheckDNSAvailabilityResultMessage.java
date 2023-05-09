@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CheckDNSAvailabilityResultMessage {
     
     public Boolean available;
+
     public CheckDNSAvailabilityResultMessage withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -19,9 +20,11 @@ public class CheckDNSAvailabilityResultMessage {
     
     
     public String fullyQualifiedCNAME;
+
     public CheckDNSAvailabilityResultMessage withFullyQualifiedCNAME(String fullyQualifiedCNAME) {
         this.fullyQualifiedCNAME = fullyQualifiedCNAME;
         return this;
     }
     
+    public CheckDNSAvailabilityResultMessage(){}
 }

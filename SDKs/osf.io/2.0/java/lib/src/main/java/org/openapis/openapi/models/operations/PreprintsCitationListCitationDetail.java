@@ -12,6 +12,7 @@ public class PreprintsCitationListCitationDetail {
      */
     
     public PreprintsCitationListCitationDetailAttributes attributes;
+
     public PreprintsCitationListCitationDetail withAttributes(PreprintsCitationListCitationDetailAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class PreprintsCitationListCitationDetail {
      */
     
     public String id;
+
     public PreprintsCitationListCitationDetail withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PreprintsCitationListCitationDetail {
      */
     
     public PreprintsCitationListCitationDetailLinks links;
+
     public PreprintsCitationListCitationDetail withLinks(PreprintsCitationListCitationDetailLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,11 @@ public class PreprintsCitationListCitationDetail {
      */
     
     public String type;
+
     public PreprintsCitationListCitationDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintsCitationListCitationDetail(){}
 }

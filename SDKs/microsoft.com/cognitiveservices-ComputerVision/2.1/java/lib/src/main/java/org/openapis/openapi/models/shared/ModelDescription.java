@@ -18,6 +18,7 @@ public class ModelDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public String[] categories;
+
     public ModelDescription withCategories(String[] categories) {
         this.categories = categories;
         return this;
@@ -29,9 +30,11 @@ public class ModelDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ModelDescription withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ModelDescription(){}
 }

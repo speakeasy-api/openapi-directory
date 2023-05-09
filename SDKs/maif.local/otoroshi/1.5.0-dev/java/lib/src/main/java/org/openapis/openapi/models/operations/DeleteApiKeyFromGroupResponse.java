@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApiKeyFromGroupResponse {
     
     public String contentType;
+
     public DeleteApiKeyFromGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApiKeyFromGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.Deleted deleted;
+
     public DeleteApiKeyFromGroupResponse withDeleted(org.openapis.openapi.models.shared.Deleted deleted) {
         this.deleted = deleted;
         return this;
@@ -26,6 +29,7 @@ public class DeleteApiKeyFromGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteApiKeyFromGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteApiKeyFromGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApiKeyFromGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApiKeyFromGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

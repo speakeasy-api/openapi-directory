@@ -18,6 +18,7 @@ public class ServiceAccountConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ServiceAccountConfig withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,9 +30,11 @@ public class ServiceAccountConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantProjectRoles")
     public String[] tenantProjectRoles;
+
     public ServiceAccountConfig withTenantProjectRoles(String[] tenantProjectRoles) {
         this.tenantProjectRoles = tenantProjectRoles;
         return this;
     }
     
+    public ServiceAccountConfig(){}
 }

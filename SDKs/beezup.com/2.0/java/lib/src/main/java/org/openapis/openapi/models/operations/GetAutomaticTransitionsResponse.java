@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAutomaticTransitionsResponse {
@@ -12,6 +13,7 @@ public class GetAutomaticTransitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetAutomaticTransitionsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetAutomaticTransitionsResponse {
     
     
     public String contentType;
+
     public GetAutomaticTransitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAutomaticTransitionsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAutomaticTransitionsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetAutomaticTransitionsResponse {
     
     
     public Integer statusCode;
+
     public GetAutomaticTransitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetAutomaticTransitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAutomaticTransitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetAutomaticTransitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.AutomaticTransitionInfoList automaticTransitionInfoList;
+
     public GetAutomaticTransitionsResponse withAutomaticTransitionInfoList(org.openapis.openapi.models.shared.AutomaticTransitionInfoList automaticTransitionInfoList) {
         this.automaticTransitionInfoList = automaticTransitionInfoList;
         return this;
     }
     
+    public GetAutomaticTransitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

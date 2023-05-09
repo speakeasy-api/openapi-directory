@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TrafficRuleDescriptor {
     /**
@@ -12,6 +12,7 @@ public class TrafficRuleDescriptor {
      */
     
     public ActionEnum action;
+
     public TrafficRuleDescriptor withAction(ActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class TrafficRuleDescriptor {
     
     
     public InterfaceDescriptor[] dstInterface;
+
     public TrafficRuleDescriptor withDstInterface(InterfaceDescriptor[] dstInterface) {
         this.dstInterface = dstInterface;
         return this;
@@ -29,6 +31,7 @@ public class TrafficRuleDescriptor {
      */
     
     public FilterTypeEnum filterType;
+
     public TrafficRuleDescriptor withFilterType(FilterTypeEnum filterType) {
         this.filterType = filterType;
         return this;
@@ -39,6 +42,7 @@ public class TrafficRuleDescriptor {
      */
     
     public Long priority;
+
     public TrafficRuleDescriptor withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -49,6 +53,7 @@ public class TrafficRuleDescriptor {
      */
     
     public TrafficFilter[] trafficFilter;
+
     public TrafficRuleDescriptor withTrafficFilter(TrafficFilter[] trafficFilter) {
         this.trafficFilter = trafficFilter;
         return this;
@@ -59,9 +64,17 @@ public class TrafficRuleDescriptor {
      */
     
     public String trafficRuleId;
+
     public TrafficRuleDescriptor withTrafficRuleId(String trafficRuleId) {
         this.trafficRuleId = trafficRuleId;
         return this;
     }
     
+    public TrafficRuleDescriptor(@JsonProperty("action") ActionEnum action, @JsonProperty("filterType") FilterTypeEnum filterType, @JsonProperty("priority") Long priority, @JsonProperty("trafficFilter") TrafficFilter[] trafficFilter, @JsonProperty("trafficRuleId") String trafficRuleId) {
+        this.action = action;
+        this.filterType = filterType;
+        this.priority = priority;
+        this.trafficFilter = trafficFilter;
+        this.trafficRuleId = trafficRuleId;
+  }
 }

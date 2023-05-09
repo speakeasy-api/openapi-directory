@@ -28,6 +28,7 @@ public class EnumOptionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnumOptionRequestInput withColor(String color) {
         this.color = color;
         return this;
@@ -39,6 +40,7 @@ public class EnumOptionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnumOptionRequestInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,6 +52,7 @@ public class EnumOptionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public EnumOptionRequestInput withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -61,6 +64,7 @@ public class EnumOptionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public EnumOptionRequestInput withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -72,9 +76,11 @@ public class EnumOptionRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnumOptionRequestInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EnumOptionRequestInput(){}
 }

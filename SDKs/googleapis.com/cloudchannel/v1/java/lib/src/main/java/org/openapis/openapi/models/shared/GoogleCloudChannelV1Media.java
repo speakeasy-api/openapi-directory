@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public GoogleCloudChannelV1Media withContent(String content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudChannelV1Media withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1Media {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudChannelV1MediaTypeEnum type;
+
     public GoogleCloudChannelV1Media withType(GoogleCloudChannelV1MediaTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudChannelV1Media(){}
 }

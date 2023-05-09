@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteActivationRequest {
     @JsonProperty("ActivationId")
     public String activationId;
+
     public DeleteActivationRequest withActivationId(String activationId) {
         this.activationId = activationId;
         return this;
     }
     
+    public DeleteActivationRequest(@JsonProperty("ActivationId") String activationId) {
+        this.activationId = activationId;
+  }
 }

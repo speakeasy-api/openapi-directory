@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateRouteActionEnum action;
+
     public GETCreateRouteRequest withAction(GETCreateRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CarrierGatewayId")
     public String carrierGatewayId;
+
     public GETCreateRouteRequest withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CoreNetworkArn")
     public String coreNetworkArn;
+
     public GETCreateRouteRequest withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETCreateRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -49,6 +54,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationIpv6CidrBlock")
     public String destinationIpv6CidrBlock;
+
     public GETCreateRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -59,6 +65,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public GETCreateRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -69,6 +76,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETCreateRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -79,6 +87,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EgressOnlyInternetGatewayId")
     public String egressOnlyInternetGatewayId;
+
     public GETCreateRouteRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -89,6 +98,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=GatewayId")
     public String gatewayId;
+
     public GETCreateRouteRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -99,6 +109,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InstanceId")
     public String instanceId;
+
     public GETCreateRouteRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -109,6 +120,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayId")
     public String localGatewayId;
+
     public GETCreateRouteRequest withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -119,6 +131,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NatGatewayId")
     public String natGatewayId;
+
     public GETCreateRouteRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -129,6 +142,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETCreateRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -139,6 +153,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RouteTableId")
     public String routeTableId;
+
     public GETCreateRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -149,6 +164,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayId")
     public String transitGatewayId;
+
     public GETCreateRouteRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -156,6 +172,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateRouteVersionEnum version;
+
     public GETCreateRouteRequest withVersion(GETCreateRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -166,6 +183,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcEndpointId")
     public String vpcEndpointId;
+
     public GETCreateRouteRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -176,6 +194,7 @@ public class GETCreateRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public GETCreateRouteRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
@@ -183,6 +202,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -190,6 +210,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -197,6 +218,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -204,6 +226,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -211,6 +234,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -218,6 +242,7 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -225,9 +250,15 @@ public class GETCreateRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateRouteRequest(@JsonProperty("Action") GETCreateRouteActionEnum action, @JsonProperty("RouteTableId") String routeTableId, @JsonProperty("Version") GETCreateRouteVersionEnum version) {
+        this.action = action;
+        this.routeTableId = routeTableId;
+        this.version = version;
+  }
 }

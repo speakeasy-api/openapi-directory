@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TerminateInstancesResultTerminatingInstancesPreviousState {
     
     public Long code;
+
     public TerminateInstancesResultTerminatingInstancesPreviousState withCode(Long code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class TerminateInstancesResultTerminatingInstancesPreviousState {
     
     
     public TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum name;
+
     public TerminateInstancesResultTerminatingInstancesPreviousState withName(TerminateInstancesResultTerminatingInstancesPreviousStateNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public TerminateInstancesResultTerminatingInstancesPreviousState(){}
 }

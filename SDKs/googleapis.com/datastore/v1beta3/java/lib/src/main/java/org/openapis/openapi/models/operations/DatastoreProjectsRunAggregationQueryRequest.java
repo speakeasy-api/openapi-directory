@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatastoreProjectsRunAggregationQueryRequest {
@@ -12,6 +13,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatastoreProjectsRunAggregationQueryRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RunAggregationQueryRequest runAggregationQueryRequest;
+
     public DatastoreProjectsRunAggregationQueryRequest withRunAggregationQueryRequest(org.openapis.openapi.models.shared.RunAggregationQueryRequest runAggregationQueryRequest) {
         this.runAggregationQueryRequest = runAggregationQueryRequest;
         return this;
@@ -29,6 +32,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatastoreProjectsRunAggregationQueryRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatastoreProjectsRunAggregationQueryRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatastoreProjectsRunAggregationQueryRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatastoreProjectsRunAggregationQueryRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatastoreProjectsRunAggregationQueryRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatastoreProjectsRunAggregationQueryRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatastoreProjectsRunAggregationQueryRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DatastoreProjectsRunAggregationQueryRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -109,6 +120,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatastoreProjectsRunAggregationQueryRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatastoreProjectsRunAggregationQueryRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class DatastoreProjectsRunAggregationQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatastoreProjectsRunAggregationQueryRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatastoreProjectsRunAggregationQueryRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

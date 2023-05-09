@@ -148,6 +148,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -185,7 +190,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchMeterUsageResponse res = new org.openapis.openapi.models.operations.BatchMeterUsageResponse() {{
+        org.openapis.openapi.models.operations.BatchMeterUsageResponse res = new org.openapis.openapi.models.operations.BatchMeterUsageResponse(contentType, httpRes.statusCode()) {{
             batchMeterUsageResult = null;
             internalServiceErrorException = null;
             invalidProductCodeException = null;
@@ -197,8 +202,6 @@ public class SDK {
             throttlingException = null;
             disabledApiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -309,7 +312,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterUsageResponse res = new org.openapis.openapi.models.operations.MeterUsageResponse() {{
+        org.openapis.openapi.models.operations.MeterUsageResponse res = new org.openapis.openapi.models.operations.MeterUsageResponse(contentType, httpRes.statusCode()) {{
             meterUsageResult = null;
             internalServiceErrorException = null;
             invalidProductCodeException = null;
@@ -322,8 +325,6 @@ public class SDK {
             throttlingException = null;
             customerNotEntitledException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,7 +442,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterUsageResponse res = new org.openapis.openapi.models.operations.RegisterUsageResponse() {{
+        org.openapis.openapi.models.operations.RegisterUsageResponse res = new org.openapis.openapi.models.operations.RegisterUsageResponse(contentType, httpRes.statusCode()) {{
             registerUsageResult = null;
             invalidProductCodeException = null;
             invalidRegionException = null;
@@ -452,8 +453,6 @@ public class SDK {
             internalServiceErrorException = null;
             disabledApiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -557,7 +556,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResolveCustomerResponse res = new org.openapis.openapi.models.operations.ResolveCustomerResponse() {{
+        org.openapis.openapi.models.operations.ResolveCustomerResponse res = new org.openapis.openapi.models.operations.ResolveCustomerResponse(contentType, httpRes.statusCode()) {{
             resolveCustomerResult = null;
             invalidTokenException = null;
             expiredTokenException = null;
@@ -565,8 +564,6 @@ public class SDK {
             internalServiceErrorException = null;
             disabledApiException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

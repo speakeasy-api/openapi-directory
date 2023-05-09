@@ -15,6 +15,7 @@ public class BucketCountBySharedAccessType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external")
     public Long external;
+
     public BucketCountBySharedAccessType withExternal(Long external) {
         this.external = external;
         return this;
@@ -23,6 +24,7 @@ public class BucketCountBySharedAccessType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internal")
     public Long internal;
+
     public BucketCountBySharedAccessType withInternal(Long internal) {
         this.internal = internal;
         return this;
@@ -31,6 +33,7 @@ public class BucketCountBySharedAccessType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notShared")
     public Long notShared;
+
     public BucketCountBySharedAccessType withNotShared(Long notShared) {
         this.notShared = notShared;
         return this;
@@ -39,9 +42,11 @@ public class BucketCountBySharedAccessType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknown")
     public Long unknown;
+
     public BucketCountBySharedAccessType withUnknown(Long unknown) {
         this.unknown = unknown;
         return this;
     }
     
+    public BucketCountBySharedAccessType(){}
 }

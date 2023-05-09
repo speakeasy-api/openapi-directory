@@ -19,6 +19,7 @@ public class WorkweekConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public WorkweekConfig withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class WorkweekConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public WorkweekConfig withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +44,7 @@ public class WorkweekConfig {
      */
     @JsonProperty("start_of_day_local_time")
     public String startOfDayLocalTime;
+
     public WorkweekConfig withStartOfDayLocalTime(String startOfDayLocalTime) {
         this.startOfDayLocalTime = startOfDayLocalTime;
         return this;
@@ -53,6 +56,7 @@ public class WorkweekConfig {
      */
     @JsonProperty("start_of_week")
     public String startOfWeek;
+
     public WorkweekConfig withStartOfWeek(String startOfWeek) {
         this.startOfWeek = startOfWeek;
         return this;
@@ -64,6 +68,7 @@ public class WorkweekConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public WorkweekConfig withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -78,9 +83,14 @@ public class WorkweekConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public WorkweekConfig withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public WorkweekConfig(@JsonProperty("start_of_day_local_time") String startOfDayLocalTime, @JsonProperty("start_of_week") String startOfWeek) {
+        this.startOfDayLocalTime = startOfDayLocalTime;
+        this.startOfWeek = startOfWeek;
+  }
 }

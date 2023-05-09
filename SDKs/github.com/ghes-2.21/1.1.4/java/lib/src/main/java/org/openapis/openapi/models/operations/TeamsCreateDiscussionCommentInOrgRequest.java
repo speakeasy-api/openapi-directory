@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsCreateDiscussionCommentInOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsCreateDiscussionCommentInOrgRequestBody requestBody;
+
     public TeamsCreateDiscussionCommentInOrgRequest withRequestBody(TeamsCreateDiscussionCommentInOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class TeamsCreateDiscussionCommentInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public TeamsCreateDiscussionCommentInOrgRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -23,6 +26,7 @@ public class TeamsCreateDiscussionCommentInOrgRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsCreateDiscussionCommentInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -33,9 +37,16 @@ public class TeamsCreateDiscussionCommentInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsCreateDiscussionCommentInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsCreateDiscussionCommentInOrgRequest(@JsonProperty("RequestBody") TeamsCreateDiscussionCommentInOrgRequestBody requestBody, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.requestBody = requestBody;
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

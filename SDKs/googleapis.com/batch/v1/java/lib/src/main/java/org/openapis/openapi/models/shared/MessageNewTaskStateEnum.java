@@ -15,7 +15,8 @@ public enum MessageNewTaskStateEnum {
     ASSIGNED("ASSIGNED"),
     RUNNING("RUNNING"),
     FAILED("FAILED"),
-    SUCCEEDED("SUCCEEDED");
+    SUCCEEDED("SUCCEEDED"),
+    UNEXECUTED("UNEXECUTED");
 
     @JsonValue
     public final String value;

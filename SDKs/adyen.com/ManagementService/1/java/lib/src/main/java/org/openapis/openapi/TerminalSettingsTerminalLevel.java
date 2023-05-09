@@ -58,12 +58,10 @@ public class TerminalSettingsTerminalLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,6 +89,9 @@ public class TerminalSettingsTerminalLevel {
      * To make this request, your API credential must have one of the following [roles](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -111,12 +112,10 @@ public class TerminalSettingsTerminalLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.GetTerminalsTerminalIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,12 +167,10 @@ public class TerminalSettingsTerminalLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse() {{
+        org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse res = new org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalLogosResponse(contentType, httpRes.statusCode()) {{
             logo = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,6 +201,9 @@ public class TerminalSettingsTerminalLevel {
      * 
      * To make this request, your API credential must have the following [role](https://docs.adyen.com/development-resources/api-credentials#api-permissions):
      * * Management API\u2014Terminal settings read and write
+     * 
+     * For [sensitive terminal settings](https://docs.adyen.com/point-of-sale/automating-terminal-management/configure-terminals-api#sensitive-terminal-settings), your API credential must have the following role:
+     * * Management API\u2014Terminal settings Advanced read and write
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -226,12 +226,10 @@ public class TerminalSettingsTerminalLevel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse() {{
+        org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse res = new org.openapis.openapi.models.operations.PatchTerminalsTerminalIdTerminalSettingsResponse(contentType, httpRes.statusCode()) {{
             terminalSettings = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

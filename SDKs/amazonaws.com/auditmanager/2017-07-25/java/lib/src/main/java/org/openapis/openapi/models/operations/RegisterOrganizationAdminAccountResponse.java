@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterOrganizationAdminAccountResponse {
@@ -12,6 +13,7 @@ public class RegisterOrganizationAdminAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterOrganizationAdminAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterOrganizationAdminAccountResponse {
     
     
     public String contentType;
+
     public RegisterOrganizationAdminAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterOrganizationAdminAccountResponse {
      */
     
     public Object internalServerException;
+
     public RegisterOrganizationAdminAccountResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterOrganizationAdminAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterOrganizationAdminAccountResponse registerOrganizationAdminAccountResponse;
+
     public RegisterOrganizationAdminAccountResponse withRegisterOrganizationAdminAccountResponse(org.openapis.openapi.models.shared.RegisterOrganizationAdminAccountResponse registerOrganizationAdminAccountResponse) {
         this.registerOrganizationAdminAccountResponse = registerOrganizationAdminAccountResponse;
         return this;
@@ -46,6 +51,7 @@ public class RegisterOrganizationAdminAccountResponse {
     
     
     public Integer statusCode;
+
     public RegisterOrganizationAdminAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RegisterOrganizationAdminAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterOrganizationAdminAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class RegisterOrganizationAdminAccountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterOrganizationAdminAccountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class RegisterOrganizationAdminAccountResponse {
      */
     
     public Object validationException;
+
     public RegisterOrganizationAdminAccountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterOrganizationAdminAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

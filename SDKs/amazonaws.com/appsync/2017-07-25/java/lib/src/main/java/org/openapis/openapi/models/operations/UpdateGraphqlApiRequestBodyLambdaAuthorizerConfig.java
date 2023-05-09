@@ -15,6 +15,7 @@ public class UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerResultTtlInSeconds")
     public Long authorizerResultTtlInSeconds;
+
     public UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig withAuthorizerResultTtlInSeconds(Long authorizerResultTtlInSeconds) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         return this;
@@ -23,6 +24,7 @@ public class UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizerUri")
     public String authorizerUri;
+
     public UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig withAuthorizerUri(String authorizerUri) {
         this.authorizerUri = authorizerUri;
         return this;
@@ -31,9 +33,11 @@ public class UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityValidationExpression")
     public String identityValidationExpression;
+
     public UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig withIdentityValidationExpression(String identityValidationExpression) {
         this.identityValidationExpression = identityValidationExpression;
         return this;
     }
     
+    public UpdateGraphqlApiRequestBodyLambdaAuthorizerConfig(){}
 }

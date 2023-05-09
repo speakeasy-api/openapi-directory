@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TcpRoute {
     @JsonProperty("action")
     public TcpRouteAction action;
+
     public TcpRoute withAction(TcpRouteAction action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class TcpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public TcpRouteMatch match;
+
     public TcpRoute withMatch(TcpRouteMatch match) {
         this.match = match;
         return this;
@@ -30,9 +32,13 @@ public class TcpRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public TcpTimeout timeout;
+
     public TcpRoute withTimeout(TcpTimeout timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public TcpRoute(@JsonProperty("action") TcpRouteAction action) {
+        this.action = action;
+  }
 }

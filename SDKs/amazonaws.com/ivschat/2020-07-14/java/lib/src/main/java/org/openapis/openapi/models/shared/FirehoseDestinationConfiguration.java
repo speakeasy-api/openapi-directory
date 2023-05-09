@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FirehoseDestinationConfiguration {
     @JsonProperty("deliveryStreamName")
     public String deliveryStreamName;
+
     public FirehoseDestinationConfiguration withDeliveryStreamName(String deliveryStreamName) {
         this.deliveryStreamName = deliveryStreamName;
         return this;
     }
     
+    public FirehoseDestinationConfiguration(@JsonProperty("deliveryStreamName") String deliveryStreamName) {
+        this.deliveryStreamName = deliveryStreamName;
+  }
 }

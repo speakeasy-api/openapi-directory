@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1CommitmentSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalSettings")
     public GoogleCloudChannelV1RenewalSettings renewalSettings;
+
     public GoogleCloudChannelV1CommitmentSettingsInput withRenewalSettings(GoogleCloudChannelV1RenewalSettings renewalSettings) {
         this.renewalSettings = renewalSettings;
         return this;
     }
     
+    public GoogleCloudChannelV1CommitmentSettingsInput(){}
 }

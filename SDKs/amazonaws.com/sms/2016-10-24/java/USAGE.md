@@ -3,270 +3,230 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAppXAmzTargetEnum;
 import org.openapis.openapi.models.operations.CreateAppRequest;
 import org.openapis.openapi.models.operations.CreateAppResponse;
+import org.openapis.openapi.models.operations.CreateAppXAmzTargetEnum;
 import org.openapis.openapi.models.shared.CreateAppRequest;
-import org.openapis.openapi.models.shared.Tag;
-import org.openapis.openapi.models.shared.ServerGroup;
+import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.shared.Server;
+import org.openapis.openapi.models.shared.ServerGroup;
+import org.openapis.openapi.models.shared.ServerTypeEnum;
+import org.openapis.openapi.models.shared.Tag;
+import org.openapis.openapi.models.shared.VmManagerTypeEnum;
 import org.openapis.openapi.models.shared.VmServer;
 import org.openapis.openapi.models.shared.VmServerAddress;
-import org.openapis.openapi.models.shared.VmManagerTypeEnum;
-import org.openapis.openapi.models.shared.ServerTypeEnum;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateAppRequest req = new CreateAppRequest() {{
-                createAppRequest = new CreateAppRequest() {{
-                    clientToken = "corrupti";
-                    description = "provident";
-                    name = "distinctio";
-                    roleName = "quibusdam";
-                    serverGroups = new org.openapis.openapi.models.shared.ServerGroup[]{{
-                        add(new ServerGroup() {{
-                            name = "nulla";
-                            serverGroupId = "corrupti";
-                            serverList = new org.openapis.openapi.models.shared.Server[]{{
-                                add(new Server() {{
-                                    replicationJobId = "vel";
-                                    replicationJobTerminated = false;
-                                    serverId = "error";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "deserunt";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "iure";
-                                        vmPath = "magnam";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "debitis";
-                                            vmManagerId = "ipsa";
+            CreateAppRequest req = new CreateAppRequest(                new CreateAppRequest() {{
+                                clientToken = "provident";
+                                description = "distinctio";
+                                name = "Stuart Stiedemann";
+                                roleName = "vel";
+                                serverGroups = new org.openapis.openapi.models.shared.ServerGroup[]{{
+                                    add(new ServerGroup() {{
+                                        name = "Rick Kertzmann";
+                                        serverGroupId = "ipsa";
+                                        serverList = new org.openapis.openapi.models.shared.Server[]{{
+                                            add(new Server() {{
+                                                replicationJobId = "tempora";
+                                                replicationJobTerminated = false;
+                                                serverId = "suscipit";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "molestiae";
+                                                    vmManagerType = VmManagerTypeEnum.HYPERV_MANAGER;
+                                                    vmName = "placeat";
+                                                    vmPath = "voluptatum";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "iusto";
+                                                        vmManagerId = "excepturi";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "nisi";
+                                                replicationJobTerminated = false;
+                                                serverId = "recusandae";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "temporibus";
+                                                    vmManagerType = VmManagerTypeEnum.VSPHERE;
+                                                    vmName = "quis";
+                                                    vmPath = "veritatis";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "deserunt";
+                                                        vmManagerId = "perferendis";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "ipsam";
+                                                replicationJobTerminated = false;
+                                                serverId = "repellendus";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "sapiente";
+                                                    vmManagerType = VmManagerTypeEnum.HYPERV_MANAGER;
+                                                    vmName = "odit";
+                                                    vmPath = "at";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "at";
+                                                        vmManagerId = "maiores";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "molestiae";
+                                                replicationJobTerminated = false;
+                                                serverId = "quod";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "quod";
+                                                    vmManagerType = VmManagerTypeEnum.SCVMM;
+                                                    vmName = "totam";
+                                                    vmPath = "porro";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "dolorum";
+                                                        vmManagerId = "dicta";
+                                                    }};
+                                                }};
+                                            }}),
                                         }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "delectus";
-                                    replicationJobTerminated = false;
-                                    serverId = "tempora";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "suscipit";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "minus";
-                                        vmPath = "placeat";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "voluptatum";
-                                            vmManagerId = "iusto";
+                                    }}),
+                                    add(new ServerGroup() {{
+                                        name = "Luke McCullough";
+                                        serverGroupId = "hic";
+                                        serverList = new org.openapis.openapi.models.shared.Server[]{{
+                                            add(new Server() {{
+                                                replicationJobId = "totam";
+                                                replicationJobTerminated = false;
+                                                serverId = "beatae";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "commodi";
+                                                    vmManagerType = VmManagerTypeEnum.SCVMM;
+                                                    vmName = "modi";
+                                                    vmPath = "qui";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "impedit";
+                                                        vmManagerId = "cum";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "esse";
+                                                replicationJobTerminated = false;
+                                                serverId = "ipsum";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "excepturi";
+                                                    vmManagerType = VmManagerTypeEnum.VSPHERE;
+                                                    vmName = "perferendis";
+                                                    vmPath = "ad";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "natus";
+                                                        vmManagerId = "sed";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "iste";
+                                                replicationJobTerminated = false;
+                                                serverId = "dolor";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "natus";
+                                                    vmManagerType = VmManagerTypeEnum.SCVMM;
+                                                    vmName = "hic";
+                                                    vmPath = "saepe";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "fuga";
+                                                        vmManagerId = "in";
+                                                    }};
+                                                }};
+                                            }}),
+                                            add(new Server() {{
+                                                replicationJobId = "corporis";
+                                                replicationJobTerminated = false;
+                                                serverId = "iste";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "iure";
+                                                    vmManagerType = VmManagerTypeEnum.HYPERV_MANAGER;
+                                                    vmName = "quidem";
+                                                    vmPath = "architecto";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "ipsa";
+                                                        vmManagerId = "reiciendis";
+                                                    }};
+                                                }};
+                                            }}),
                                         }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "excepturi";
-                                    replicationJobTerminated = false;
-                                    serverId = "nisi";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "recusandae";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "ab";
-                                        vmPath = "quis";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "veritatis";
-                                            vmManagerId = "deserunt";
+                                    }}),
+                                    add(new ServerGroup() {{
+                                        name = "Shaun Osinski";
+                                        serverGroupId = "corporis";
+                                        serverList = new org.openapis.openapi.models.shared.Server[]{{
+                                            add(new Server() {{
+                                                replicationJobId = "nobis";
+                                                replicationJobTerminated = false;
+                                                serverId = "enim";
+                                                serverType = ServerTypeEnum.VIRTUAL_MACHINE;
+                                                vmServer = new VmServer() {{
+                                                    vmManagerName = "omnis";
+                                                    vmManagerType = VmManagerTypeEnum.SCVMM;
+                                                    vmName = "minima";
+                                                    vmPath = "excepturi";
+                                                    vmServerAddress = new VmServerAddress() {{
+                                                        vmId = "accusantium";
+                                                        vmManagerId = "iure";
+                                                    }};
+                                                }};
+                                            }}),
                                         }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "perferendis";
-                                    replicationJobTerminated = false;
-                                    serverId = "ipsam";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "repellendus";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "quo";
-                                        vmPath = "odit";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "at";
-                                            vmManagerId = "at";
-                                        }};
-                                    }};
-                                }}),
-                            }};
-                        }}),
-                        add(new ServerGroup() {{
-                            name = "maiores";
-                            serverGroupId = "molestiae";
-                            serverList = new org.openapis.openapi.models.shared.Server[]{{
-                                add(new Server() {{
-                                    replicationJobId = "quod";
-                                    replicationJobTerminated = false;
-                                    serverId = "esse";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "totam";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "dolorum";
-                                        vmPath = "dicta";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "nam";
-                                            vmManagerId = "officia";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "occaecati";
-                                    replicationJobTerminated = false;
-                                    serverId = "fugit";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "deleniti";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "optio";
-                                        vmPath = "totam";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "beatae";
-                                            vmManagerId = "commodi";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "molestiae";
-                                    replicationJobTerminated = false;
-                                    serverId = "modi";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "qui";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "cum";
-                                        vmPath = "esse";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "ipsum";
-                                            vmManagerId = "excepturi";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "aspernatur";
-                                    replicationJobTerminated = false;
-                                    serverId = "perferendis";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "ad";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "sed";
-                                        vmPath = "iste";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "dolor";
-                                            vmManagerId = "natus";
-                                        }};
-                                    }};
-                                }}),
-                            }};
-                        }}),
-                        add(new ServerGroup() {{
-                            name = "laboriosam";
-                            serverGroupId = "hic";
-                            serverList = new org.openapis.openapi.models.shared.Server[]{{
-                                add(new Server() {{
-                                    replicationJobId = "fuga";
-                                    replicationJobTerminated = false;
-                                    serverId = "in";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "corporis";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "iure";
-                                        vmPath = "saepe";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "quidem";
-                                            vmManagerId = "architecto";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "ipsa";
-                                    replicationJobTerminated = false;
-                                    serverId = "reiciendis";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "est";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "laborum";
-                                        vmPath = "dolores";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "dolorem";
-                                            vmManagerId = "corporis";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "explicabo";
-                                    replicationJobTerminated = false;
-                                    serverId = "nobis";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "enim";
-                                        vmManagerType = "SCVMM";
-                                        vmName = "nemo";
-                                        vmPath = "minima";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "excepturi";
-                                            vmManagerId = "accusantium";
-                                        }};
-                                    }};
-                                }}),
-                                add(new Server() {{
-                                    replicationJobId = "iure";
-                                    replicationJobTerminated = false;
-                                    serverId = "culpa";
-                                    serverType = "VIRTUAL_MACHINE";
-                                    vmServer = new VmServer() {{
-                                        vmManagerName = "doloribus";
-                                        vmManagerType = "HYPERV-MANAGER";
-                                        vmName = "architecto";
-                                        vmPath = "mollitia";
-                                        vmServerAddress = new VmServerAddress() {{
-                                            vmId = "dolorem";
-                                            vmManagerId = "culpa";
-                                        }};
-                                    }};
-                                }}),
-                            }};
-                        }}),
-                    }};
-                    tags = new org.openapis.openapi.models.shared.Tag[]{{
-                        add(new Tag() {{
-                            key = "repellat";
-                            value = "mollitia";
-                        }}),
-                    }};
-                }};
-                xAmzAlgorithm = "occaecati";
-                xAmzContentSha256 = "numquam";
-                xAmzCredential = "commodi";
-                xAmzDate = "quam";
-                xAmzSecurityToken = "molestiae";
-                xAmzSignature = "velit";
-                xAmzSignedHeaders = "error";
-                xAmzTarget = "AWSServerMigrationService_V2016_10_24.CreateApp";
-            }}            
+                                    }}),
+                                }};
+                                tags = new org.openapis.openapi.models.shared.Tag[]{{
+                                    add(new Tag() {{
+                                        key = "doloribus";
+                                        value = "sapiente";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "architecto";
+                                        value = "mollitia";
+                                    }}),
+                                    add(new Tag() {{
+                                        key = "dolorem";
+                                        value = "culpa";
+                                    }}),
+                                }};
+                            }};, CreateAppXAmzTargetEnum.AWS_SERVER_MIGRATION_SERVICE_V20161024_CREATE_APP) {{
+                xAmzAlgorithm = "consequuntur";
+                xAmzContentSha256 = "repellat";
+                xAmzCredential = "mollitia";
+                xAmzDate = "occaecati";
+                xAmzSecurityToken = "numquam";
+                xAmzSignature = "commodi";
+                xAmzSignedHeaders = "quam";
+            }};            
 
             CreateAppResponse res = sdk.createApp(req);
 
-            if (res.createAppResponse.isPresent()) {
+            if (res.createAppResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

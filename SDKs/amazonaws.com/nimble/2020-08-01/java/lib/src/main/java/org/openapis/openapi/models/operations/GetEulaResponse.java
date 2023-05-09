@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEulaResponse {
@@ -12,6 +13,7 @@ public class GetEulaResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEulaResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetEulaResponse {
      */
     
     public Object conflictException;
+
     public GetEulaResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class GetEulaResponse {
     
     
     public String contentType;
+
     public GetEulaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetEulaResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEulaResponse getEulaResponse;
+
     public GetEulaResponse withGetEulaResponse(org.openapis.openapi.models.shared.GetEulaResponse getEulaResponse) {
         this.getEulaResponse = getEulaResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetEulaResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetEulaResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetEulaResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEulaResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetEulaResponse {
     
     
     public Integer statusCode;
+
     public GetEulaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetEulaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEulaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetEulaResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public GetEulaResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class GetEulaResponse {
      */
     
     public Object throttlingException;
+
     public GetEulaResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetEulaResponse {
      */
     
     public Object validationException;
+
     public GetEulaResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEulaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

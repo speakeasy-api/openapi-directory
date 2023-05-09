@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsEventsDeleteRequest {
@@ -12,6 +13,7 @@ public class AnalyticsEventsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public AnalyticsEventsDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsEventsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_name")
     public String eventName;
+
     public AnalyticsEventsDeleteRequest withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -32,9 +35,15 @@ public class AnalyticsEventsDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public AnalyticsEventsDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public AnalyticsEventsDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("event_name") String eventName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.eventName = eventName;
+        this.ownerName = ownerName;
+  }
 }

@@ -18,6 +18,7 @@ public class SpaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SpaceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SpaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SpaceInput withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class SpaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleUserBotDm")
     public Boolean singleUserBotDm;
+
     public SpaceInput withSingleUserBotDm(Boolean singleUserBotDm) {
         this.singleUserBotDm = singleUserBotDm;
         return this;
@@ -51,9 +54,11 @@ public class SpaceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceDetails")
     public SpaceDetails spaceDetails;
+
     public SpaceInput withSpaceDetails(SpaceDetails spaceDetails) {
         this.spaceDetails = spaceDetails;
         return this;
     }
     
+    public SpaceInput(){}
 }

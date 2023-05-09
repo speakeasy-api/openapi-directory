@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firstAndThirdPartyAudienceId")
     public String firstAndThirdPartyAudienceId;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withFirstAndThirdPartyAudienceId(String firstAndThirdPartyAudienceId) {
         this.firstAndThirdPartyAudienceId = firstAndThirdPartyAudienceId;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
     public String partnerId;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DisplayvideoFirstAndThirdPartyAudiencesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoFirstAndThirdPartyAudiencesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoFirstAndThirdPartyAudiencesGetRequest(@JsonProperty("firstAndThirdPartyAudienceId") String firstAndThirdPartyAudienceId) {
+        this.firstAndThirdPartyAudienceId = firstAndThirdPartyAudienceId;
+  }
 }

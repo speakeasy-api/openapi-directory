@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PlayMediaRequest {
     @JsonProperty("constraints")
     public Constraints constraints;
+
     public PlayMediaRequest withConstraints(Constraints constraints) {
         this.constraints = constraints;
         return this;
@@ -16,6 +17,7 @@ public class PlayMediaRequest {
     
     @JsonProperty("userActivity")
     public UserActivity userActivity;
+
     public PlayMediaRequest withUserActivity(UserActivity userActivity) {
         this.userActivity = userActivity;
         return this;
@@ -23,9 +25,15 @@ public class PlayMediaRequest {
     
     @JsonProperty("version")
     public String version;
+
     public PlayMediaRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public PlayMediaRequest(@JsonProperty("constraints") Constraints constraints, @JsonProperty("userActivity") UserActivity userActivity, @JsonProperty("version") String version) {
+        this.constraints = constraints;
+        this.userActivity = userActivity;
+        this.version = version;
+  }
 }

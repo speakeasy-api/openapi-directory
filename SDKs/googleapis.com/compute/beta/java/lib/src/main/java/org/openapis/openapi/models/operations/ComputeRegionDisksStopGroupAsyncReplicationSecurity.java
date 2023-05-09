@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionDisksStopGroupAsyncReplicationSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksStopGroupAsyncReplicationSecurityOption1 option1;
+
     public ComputeRegionDisksStopGroupAsyncReplicationSecurity withOption1(ComputeRegionDisksStopGroupAsyncReplicationSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionDisksStopGroupAsyncReplicationSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksStopGroupAsyncReplicationSecurityOption2 option2;
+
     public ComputeRegionDisksStopGroupAsyncReplicationSecurity withOption2(ComputeRegionDisksStopGroupAsyncReplicationSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionDisksStopGroupAsyncReplicationSecurity(){}
 }

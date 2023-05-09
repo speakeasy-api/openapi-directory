@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MirrorTimelineAttachmentsGetRequest {
@@ -12,6 +13,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MirrorTimelineAttachmentsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=attachmentId")
     public String attachmentId;
+
     public MirrorTimelineAttachmentsGetRequest withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -32,6 +35,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MirrorTimelineAttachmentsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public String itemId;
+
     public MirrorTimelineAttachmentsGetRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -52,6 +57,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MirrorTimelineAttachmentsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +68,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MirrorTimelineAttachmentsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -72,6 +79,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MirrorTimelineAttachmentsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MirrorTimelineAttachmentsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,9 +101,14 @@ public class MirrorTimelineAttachmentsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public MirrorTimelineAttachmentsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public MirrorTimelineAttachmentsGetRequest(@JsonProperty("attachmentId") String attachmentId, @JsonProperty("itemId") String itemId) {
+        this.attachmentId = attachmentId;
+        this.itemId = itemId;
+  }
 }

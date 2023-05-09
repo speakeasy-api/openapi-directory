@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImageOcrPhotoRecognizeBusinessCardResponse {
     
     public byte[] body;
+
     public ImageOcrPhotoRecognizeBusinessCardResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -19,6 +21,7 @@ public class ImageOcrPhotoRecognizeBusinessCardResponse {
      */
     
     public org.openapis.openapi.models.shared.BusinessCardRecognitionResult businessCardRecognitionResult;
+
     public ImageOcrPhotoRecognizeBusinessCardResponse withBusinessCardRecognitionResult(org.openapis.openapi.models.shared.BusinessCardRecognitionResult businessCardRecognitionResult) {
         this.businessCardRecognitionResult = businessCardRecognitionResult;
         return this;
@@ -26,6 +29,7 @@ public class ImageOcrPhotoRecognizeBusinessCardResponse {
     
     
     public String contentType;
+
     public ImageOcrPhotoRecognizeBusinessCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class ImageOcrPhotoRecognizeBusinessCardResponse {
     
     
     public Integer statusCode;
+
     public ImageOcrPhotoRecognizeBusinessCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class ImageOcrPhotoRecognizeBusinessCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImageOcrPhotoRecognizeBusinessCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImageOcrPhotoRecognizeBusinessCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

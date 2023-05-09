@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InvokeAsyncResponse {
     
     public String contentType;
+
     public InvokeAsyncResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InvokeAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidRequestContentException invalidRequestContentException;
+
     public InvokeAsyncResponse withInvalidRequestContentException(org.openapis.openapi.models.shared.InvalidRequestContentException invalidRequestContentException) {
         this.invalidRequestContentException = invalidRequestContentException;
         return this;
@@ -29,6 +32,7 @@ public class InvokeAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.InvokeAsyncResponse invokeAsyncResponse;
+
     public InvokeAsyncResponse withInvokeAsyncResponse(org.openapis.openapi.models.shared.InvokeAsyncResponse invokeAsyncResponse) {
         this.invokeAsyncResponse = invokeAsyncResponse;
         return this;
@@ -39,6 +43,7 @@ public class InvokeAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceException serviceException;
+
     public InvokeAsyncResponse withServiceException(org.openapis.openapi.models.shared.ServiceException serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class InvokeAsyncResponse {
     
     
     public Integer statusCode;
+
     public InvokeAsyncResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class InvokeAsyncResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InvokeAsyncResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class InvokeAsyncResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public InvokeAsyncResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public InvokeAsyncResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

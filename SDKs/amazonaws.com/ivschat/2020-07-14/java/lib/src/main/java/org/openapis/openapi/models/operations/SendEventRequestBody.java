@@ -15,6 +15,7 @@ public class SendEventRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public SendEventRequestBody withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class SendEventRequestBody {
      */
     @JsonProperty("eventName")
     public String eventName;
+
     public SendEventRequestBody withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -35,9 +37,14 @@ public class SendEventRequestBody {
      */
     @JsonProperty("roomIdentifier")
     public String roomIdentifier;
+
     public SendEventRequestBody withRoomIdentifier(String roomIdentifier) {
         this.roomIdentifier = roomIdentifier;
         return this;
     }
     
+    public SendEventRequestBody(@JsonProperty("eventName") String eventName, @JsonProperty("roomIdentifier") String roomIdentifier) {
+        this.eventName = eventName;
+        this.roomIdentifier = roomIdentifier;
+  }
 }

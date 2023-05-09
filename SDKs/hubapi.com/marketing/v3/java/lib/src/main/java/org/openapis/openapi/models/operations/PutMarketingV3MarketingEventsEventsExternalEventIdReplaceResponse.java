@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse {
     
     public byte[] body;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse {
     
     
     public String contentType;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse {
      */
     
     public org.openapis.openapi.models.shared.MarketingEventPublicDefaultResponse marketingEventPublicDefaultResponse;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse withMarketingEventPublicDefaultResponse(org.openapis.openapi.models.shared.MarketingEventPublicDefaultResponse marketingEventPublicDefaultResponse) {
         this.marketingEventPublicDefaultResponse = marketingEventPublicDefaultResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse {
     
     
     public Integer statusCode;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

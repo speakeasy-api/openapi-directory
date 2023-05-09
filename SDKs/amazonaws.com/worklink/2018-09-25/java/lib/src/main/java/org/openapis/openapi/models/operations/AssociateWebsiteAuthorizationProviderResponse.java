@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateWebsiteAuthorizationProviderResponse {
@@ -12,6 +13,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateWebsiteAuthorizationProviderResponse associateWebsiteAuthorizationProviderResponse;
+
     public AssociateWebsiteAuthorizationProviderResponse withAssociateWebsiteAuthorizationProviderResponse(org.openapis.openapi.models.shared.AssociateWebsiteAuthorizationProviderResponse associateWebsiteAuthorizationProviderResponse) {
         this.associateWebsiteAuthorizationProviderResponse = associateWebsiteAuthorizationProviderResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
     
     
     public String contentType;
+
     public AssociateWebsiteAuthorizationProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object internalServerErrorException;
+
     public AssociateWebsiteAuthorizationProviderResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateWebsiteAuthorizationProviderResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public AssociateWebsiteAuthorizationProviderResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
     
     
     public Integer statusCode;
+
     public AssociateWebsiteAuthorizationProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateWebsiteAuthorizationProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateWebsiteAuthorizationProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AssociateWebsiteAuthorizationProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateWebsiteAuthorizationProviderResponse {
      */
     
     public Object unauthorizedException;
+
     public AssociateWebsiteAuthorizationProviderResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AssociateWebsiteAuthorizationProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

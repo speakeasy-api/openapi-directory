@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIdentityProviderResponse {
     
     public String contentType;
+
     public CreateIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIdentityProviderResponse createIdentityProviderResponse;
+
     public CreateIdentityProviderResponse withCreateIdentityProviderResponse(org.openapis.openapi.models.shared.CreateIdentityProviderResponse createIdentityProviderResponse) {
         this.createIdentityProviderResponse = createIdentityProviderResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object duplicateProviderException;
+
     public CreateIdentityProviderResponse withDuplicateProviderException(Object duplicateProviderException) {
         this.duplicateProviderException = duplicateProviderException;
         return this;
@@ -39,6 +43,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object internalErrorException;
+
     public CreateIdentityProviderResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateIdentityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object limitExceededException;
+
     public CreateIdentityProviderResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateIdentityProviderResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -76,6 +84,7 @@ public class CreateIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public CreateIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class CreateIdentityProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateIdentityProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.DotGetAvailableLocalesResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             DotGetAvailableLocalesResponse res = sdk.dotGetAvailableLocales();
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

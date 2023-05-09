@@ -15,6 +15,7 @@ public class CreateTopicRuleDestinationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpUrlConfiguration")
     public org.openapis.openapi.models.shared.HttpUrlDestinationConfiguration httpUrlConfiguration;
+
     public CreateTopicRuleDestinationRequestBodyDestinationConfiguration withHttpUrlConfiguration(org.openapis.openapi.models.shared.HttpUrlDestinationConfiguration httpUrlConfiguration) {
         this.httpUrlConfiguration = httpUrlConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class CreateTopicRuleDestinationRequestBodyDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfiguration")
     public org.openapis.openapi.models.shared.VpcDestinationConfiguration vpcConfiguration;
+
     public CreateTopicRuleDestinationRequestBodyDestinationConfiguration withVpcConfiguration(org.openapis.openapi.models.shared.VpcDestinationConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public CreateTopicRuleDestinationRequestBodyDestinationConfiguration(){}
 }

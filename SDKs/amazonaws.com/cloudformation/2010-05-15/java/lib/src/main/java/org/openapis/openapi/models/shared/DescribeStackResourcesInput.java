@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeStackResourcesInput {
     
     public String logicalResourceId;
+
     public DescribeStackResourcesInput withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeStackResourcesInput {
     
     
     public String physicalResourceId;
+
     public DescribeStackResourcesInput withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -26,9 +28,11 @@ public class DescribeStackResourcesInput {
     
     
     public String stackName;
+
     public DescribeStackResourcesInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public DescribeStackResourcesInput(){}
 }

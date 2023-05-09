@@ -18,9 +18,11 @@ public class InstancesExportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportContext")
     public ExportContext exportContext;
+
     public InstancesExportRequest withExportContext(ExportContext exportContext) {
         this.exportContext = exportContext;
         return this;
     }
     
+    public InstancesExportRequest(){}
 }

@@ -18,6 +18,7 @@ public class DeleteTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cellLocation")
     public TableCellLocation cellLocation;
+
     public DeleteTextRequest withCellLocation(TableCellLocation cellLocation) {
         this.cellLocation = cellLocation;
         return this;
@@ -29,6 +30,7 @@ public class DeleteTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public DeleteTextRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class DeleteTextRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textRange")
     public Range textRange;
+
     public DeleteTextRequest withTextRange(Range textRange) {
         this.textRange = textRange;
         return this;
     }
     
+    public DeleteTextRequest(){}
 }

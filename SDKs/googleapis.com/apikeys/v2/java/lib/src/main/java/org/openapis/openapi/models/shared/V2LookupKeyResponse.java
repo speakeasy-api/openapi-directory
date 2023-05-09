@@ -18,6 +18,7 @@ public class V2LookupKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V2LookupKeyResponse withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class V2LookupKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public V2LookupKeyResponse withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public V2LookupKeyResponse(){}
 }

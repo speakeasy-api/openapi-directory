@@ -18,6 +18,7 @@ public class RouterStatusNatStatusNatRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeNatIps")
     public String[] activeNatIps;
+
     public RouterStatusNatStatusNatRuleStatus withActiveNatIps(String[] activeNatIps) {
         this.activeNatIps = activeNatIps;
         return this;
@@ -29,6 +30,7 @@ public class RouterStatusNatStatusNatRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainNatIps")
     public String[] drainNatIps;
+
     public RouterStatusNatStatusNatRuleStatus withDrainNatIps(String[] drainNatIps) {
         this.drainNatIps = drainNatIps;
         return this;
@@ -40,6 +42,7 @@ public class RouterStatusNatStatusNatRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minExtraIpsNeeded")
     public Integer minExtraIpsNeeded;
+
     public RouterStatusNatStatusNatRuleStatus withMinExtraIpsNeeded(Integer minExtraIpsNeeded) {
         this.minExtraIpsNeeded = minExtraIpsNeeded;
         return this;
@@ -51,6 +54,7 @@ public class RouterStatusNatStatusNatRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numVmEndpointsWithNatMappings")
     public Integer numVmEndpointsWithNatMappings;
+
     public RouterStatusNatStatusNatRuleStatus withNumVmEndpointsWithNatMappings(Integer numVmEndpointsWithNatMappings) {
         this.numVmEndpointsWithNatMappings = numVmEndpointsWithNatMappings;
         return this;
@@ -62,9 +66,11 @@ public class RouterStatusNatStatusNatRuleStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleNumber")
     public Integer ruleNumber;
+
     public RouterStatusNatStatusNatRuleStatus withRuleNumber(Integer ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public RouterStatusNatStatusNatRuleStatus(){}
 }

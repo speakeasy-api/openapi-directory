@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuthLoginResponse {
@@ -12,6 +13,7 @@ public class AuthLoginResponse {
      */
     
     public byte[] authLogin200ApplicationOctetStreamBinaryString;
+
     public AuthLoginResponse withAuthLogin200ApplicationOctetStreamBinaryString(byte[] authLogin200ApplicationOctetStreamBinaryString) {
         this.authLogin200ApplicationOctetStreamBinaryString = authLogin200ApplicationOctetStreamBinaryString;
         return this;
@@ -19,6 +21,7 @@ public class AuthLoginResponse {
     
     
     public String contentType;
+
     public AuthLoginResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AuthLoginResponse {
     
     
     public Integer statusCode;
+
     public AuthLoginResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AuthLoginResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuthLoginResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AuthLoginResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

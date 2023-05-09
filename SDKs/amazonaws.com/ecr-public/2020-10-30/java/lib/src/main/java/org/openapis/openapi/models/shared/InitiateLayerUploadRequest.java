@@ -12,6 +12,7 @@ public class InitiateLayerUploadRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public InitiateLayerUploadRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -19,9 +20,13 @@ public class InitiateLayerUploadRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public InitiateLayerUploadRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public InitiateLayerUploadRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

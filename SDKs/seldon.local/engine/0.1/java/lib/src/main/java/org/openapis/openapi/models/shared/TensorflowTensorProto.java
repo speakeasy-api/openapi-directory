@@ -15,6 +15,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bool_val")
     public Boolean[] boolVal;
+
     public TensorflowTensorProto withBoolVal(Boolean[] boolVal) {
         this.boolVal = boolVal;
         return this;
@@ -26,6 +27,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dcomplex_val")
     public Double[] dcomplexVal;
+
     public TensorflowTensorProto withDcomplexVal(Double[] dcomplexVal) {
         this.dcomplexVal = dcomplexVal;
         return this;
@@ -37,6 +39,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("double_val")
     public Double[] doubleVal;
+
     public TensorflowTensorProto withDoubleVal(Double[] doubleVal) {
         this.doubleVal = doubleVal;
         return this;
@@ -48,6 +51,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtype")
     public TensorflowDataTypeEnum dtype;
+
     public TensorflowTensorProto withDtype(TensorflowDataTypeEnum dtype) {
         this.dtype = dtype;
         return this;
@@ -59,6 +63,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("float_val")
     public Float[] floatVal;
+
     public TensorflowTensorProto withFloatVal(Float[] floatVal) {
         this.floatVal = floatVal;
         return this;
@@ -70,6 +75,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("half_val")
     public Integer[] halfVal;
+
     public TensorflowTensorProto withHalfVal(Integer[] halfVal) {
         this.halfVal = halfVal;
         return this;
@@ -78,6 +84,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int64_val")
     public String[] int64Val;
+
     public TensorflowTensorProto withInt64Val(String[] int64Val) {
         this.int64Val = int64Val;
         return this;
@@ -89,6 +96,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("int_val")
     public Integer[] intVal;
+
     public TensorflowTensorProto withIntVal(Integer[] intVal) {
         this.intVal = intVal;
         return this;
@@ -97,6 +105,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_handle_val")
     public TensorflowResourceHandleProto[] resourceHandleVal;
+
     public TensorflowTensorProto withResourceHandleVal(TensorflowResourceHandleProto[] resourceHandleVal) {
         this.resourceHandleVal = resourceHandleVal;
         return this;
@@ -108,6 +117,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scomplex_val")
     public Float[] scomplexVal;
+
     public TensorflowTensorProto withScomplexVal(Float[] scomplexVal) {
         this.scomplexVal = scomplexVal;
         return this;
@@ -116,6 +126,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("string_val")
     public String[] stringVal;
+
     public TensorflowTensorProto withStringVal(String[] stringVal) {
         this.stringVal = stringVal;
         return this;
@@ -127,6 +138,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensor_content")
     public String tensorContent;
+
     public TensorflowTensorProto withTensorContent(String tensorContent) {
         this.tensorContent = tensorContent;
         return this;
@@ -138,6 +150,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tensor_shape")
     public TensorflowTensorShapeProto tensorShape;
+
     public TensorflowTensorProto withTensorShape(TensorflowTensorShapeProto tensorShape) {
         this.tensorShape = tensorShape;
         return this;
@@ -146,6 +159,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uint32_val")
     public Long[] uint32Val;
+
     public TensorflowTensorProto withUint32Val(Long[] uint32Val) {
         this.uint32Val = uint32Val;
         return this;
@@ -154,6 +168,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uint64_val")
     public String[] uint64Val;
+
     public TensorflowTensorProto withUint64Val(String[] uint64Val) {
         this.uint64Val = uint64Val;
         return this;
@@ -162,6 +177,7 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variant_val")
     public TensorflowVariantTensorDataProto[] variantVal;
+
     public TensorflowTensorProto withVariantVal(TensorflowVariantTensorDataProto[] variantVal) {
         this.variantVal = variantVal;
         return this;
@@ -174,9 +190,11 @@ public class TensorflowTensorProto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version_number")
     public Integer versionNumber;
+
     public TensorflowTensorProto withVersionNumber(Integer versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public TensorflowTensorProto(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DirectoryPrivilegesListResponse {
     
     public String contentType;
+
     public DirectoryPrivilegesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryPrivilegesListResponse {
      */
     
     public org.openapis.openapi.models.shared.Privileges privileges;
+
     public DirectoryPrivilegesListResponse withPrivileges(org.openapis.openapi.models.shared.Privileges privileges) {
         this.privileges = privileges;
         return this;
@@ -26,6 +29,7 @@ public class DirectoryPrivilegesListResponse {
     
     
     public Integer statusCode;
+
     public DirectoryPrivilegesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DirectoryPrivilegesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DirectoryPrivilegesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DirectoryPrivilegesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

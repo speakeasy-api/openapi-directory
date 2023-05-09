@@ -18,9 +18,11 @@ public class TranslationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("translatedContent")
     public TextSnippet translatedContent;
+
     public TranslationAnnotation withTranslatedContent(TextSnippet translatedContent) {
         this.translatedContent = translatedContent;
         return this;
     }
     
+    public TranslationAnnotation(){}
 }

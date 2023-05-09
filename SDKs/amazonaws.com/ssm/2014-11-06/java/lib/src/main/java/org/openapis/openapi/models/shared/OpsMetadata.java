@@ -22,6 +22,7 @@ public class OpsMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public OpsMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -32,6 +33,7 @@ public class OpsMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public OpsMetadata withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -40,6 +42,7 @@ public class OpsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedUser")
     public String lastModifiedUser;
+
     public OpsMetadata withLastModifiedUser(String lastModifiedUser) {
         this.lastModifiedUser = lastModifiedUser;
         return this;
@@ -48,6 +51,7 @@ public class OpsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsMetadataArn")
     public String opsMetadataArn;
+
     public OpsMetadata withOpsMetadataArn(String opsMetadataArn) {
         this.opsMetadataArn = opsMetadataArn;
         return this;
@@ -56,9 +60,11 @@ public class OpsMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public OpsMetadata withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public OpsMetadata(){}
 }

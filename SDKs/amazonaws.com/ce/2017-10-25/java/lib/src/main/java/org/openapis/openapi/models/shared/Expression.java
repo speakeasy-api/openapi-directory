@@ -15,6 +15,7 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("And")
     public Expression[] and;
+
     public Expression withAnd(Expression[] and) {
         this.and = and;
         return this;
@@ -23,6 +24,7 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CostCategories")
     public CostCategoryValues costCategories;
+
     public Expression withCostCategories(CostCategoryValues costCategories) {
         this.costCategories = costCategories;
         return this;
@@ -31,6 +33,7 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public DimensionValues dimensions;
+
     public Expression withDimensions(DimensionValues dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -39,6 +42,7 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Not")
     public Expression not;
+
     public Expression withNot(Expression not) {
         this.not = not;
         return this;
@@ -47,6 +51,7 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Or")
     public Expression[] or;
+
     public Expression withOr(Expression[] or) {
         this.or = or;
         return this;
@@ -55,9 +60,11 @@ public class Expression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public TagValues tags;
+
     public Expression withTags(TagValues tags) {
         this.tags = tags;
         return this;
     }
     
+    public Expression(){}
 }

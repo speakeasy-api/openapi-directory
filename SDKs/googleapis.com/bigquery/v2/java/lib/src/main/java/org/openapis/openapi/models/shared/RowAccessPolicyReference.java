@@ -15,6 +15,7 @@ public class RowAccessPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public RowAccessPolicyReference withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -26,6 +27,7 @@ public class RowAccessPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyId")
     public String policyId;
+
     public RowAccessPolicyReference withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
@@ -37,6 +39,7 @@ public class RowAccessPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public RowAccessPolicyReference withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -48,9 +51,11 @@ public class RowAccessPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public RowAccessPolicyReference withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public RowAccessPolicyReference(){}
 }

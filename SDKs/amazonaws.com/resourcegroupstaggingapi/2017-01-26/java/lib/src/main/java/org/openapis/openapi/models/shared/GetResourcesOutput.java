@@ -15,6 +15,7 @@ public class GetResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetResourcesOutput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -23,9 +24,11 @@ public class GetResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTagMappingList")
     public ResourceTagMapping[] resourceTagMappingList;
+
     public GetResourcesOutput withResourceTagMappingList(ResourceTagMapping[] resourceTagMappingList) {
         this.resourceTagMappingList = resourceTagMappingList;
         return this;
     }
     
+    public GetResourcesOutput(){}
 }

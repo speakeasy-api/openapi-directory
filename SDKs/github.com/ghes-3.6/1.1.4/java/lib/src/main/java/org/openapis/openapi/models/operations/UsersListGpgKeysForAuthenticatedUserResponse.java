@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UsersListGpgKeysForAuthenticatedUserResponse {
     
     public String contentType;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UsersListGpgKeysForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class UsersListGpgKeysForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class UsersListGpgKeysForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class UsersListGpgKeysForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class UsersListGpgKeysForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.GpgKey[] gpgKeys;
+
     public UsersListGpgKeysForAuthenticatedUserResponse withGpgKeys(org.openapis.openapi.models.shared.GpgKey[] gpgKeys) {
         this.gpgKeys = gpgKeys;
         return this;
     }
     
+    public UsersListGpgKeysForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

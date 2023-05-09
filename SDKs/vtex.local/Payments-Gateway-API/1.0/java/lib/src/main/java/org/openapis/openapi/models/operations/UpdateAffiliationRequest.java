@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAffiliationRequest {
@@ -12,6 +13,7 @@ public class UpdateAffiliationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateAffiliationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateAffiliationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateAffiliationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAffiliationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateAffiliationRequest updateAffiliationRequest;
+
     public UpdateAffiliationRequest withUpdateAffiliationRequest(org.openapis.openapi.models.shared.UpdateAffiliationRequest updateAffiliationRequest) {
         this.updateAffiliationRequest = updateAffiliationRequest;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAffiliationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public UpdateAffiliationRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAffiliationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public UpdateAffiliationRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -56,9 +62,18 @@ public class UpdateAffiliationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=affiliationId")
     public String affiliationId;
+
     public UpdateAffiliationRequest withAffiliationId(String affiliationId) {
         this.affiliationId = affiliationId;
         return this;
     }
     
+    public UpdateAffiliationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("UpdateAffiliationRequest") org.openapis.openapi.models.shared.UpdateAffiliationRequest updateAffiliationRequest, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("affiliationId") String affiliationId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.updateAffiliationRequest = updateAffiliationRequest;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.affiliationId = affiliationId;
+  }
 }

@@ -12,6 +12,7 @@ public class GetCompanyTimeOffTypes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.TimeOffTypeResource[] data;
+
     public GetCompanyTimeOffTypes200ApplicationJSON withData(org.openapis.openapi.models.shared.TimeOffTypeResource[] data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class GetCompanyTimeOffTypes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public GetCompanyTimeOffTypes200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public GetCompanyTimeOffTypes200ApplicationJSON(){}
 }

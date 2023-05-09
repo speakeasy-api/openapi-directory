@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutReturnsResponse {
     
     public String contentType;
+
     public PutReturnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutReturnsResponse {
      */
     
     public PutReturnsRmaResponseV2 rmaResponseV2;
+
     public PutReturnsResponse withRmaResponseV2(PutReturnsRmaResponseV2 rmaResponseV2) {
         this.rmaResponseV2 = rmaResponseV2;
         return this;
@@ -26,6 +29,7 @@ public class PutReturnsResponse {
     
     
     public Integer statusCode;
+
     public PutReturnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class PutReturnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutReturnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class PutReturnsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema;
+
     public PutReturnsResponse withOneordersGetResponses404ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema) {
         this.oneordersGetResponses404ContentApplication1jsonSchema = oneordersGetResponses404ContentApplication1jsonSchema;
         return this;
@@ -53,9 +59,14 @@ public class PutReturnsResponse {
      */
     
     public org.openapis.openapi.models.shared.OnereturnsPutResponses201ContentApplication1jsonSchema onereturnsPutResponses201ContentApplication1jsonSchema;
+
     public PutReturnsResponse withOnereturnsPutResponses201ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OnereturnsPutResponses201ContentApplication1jsonSchema onereturnsPutResponses201ContentApplication1jsonSchema) {
         this.onereturnsPutResponses201ContentApplication1jsonSchema = onereturnsPutResponses201ContentApplication1jsonSchema;
         return this;
     }
     
+    public PutReturnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

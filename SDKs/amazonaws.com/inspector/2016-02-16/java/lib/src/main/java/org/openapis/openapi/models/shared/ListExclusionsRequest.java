@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListExclusionsRequest {
     @JsonProperty("assessmentRunArn")
     public String assessmentRunArn;
+
     public ListExclusionsRequest withAssessmentRunArn(String assessmentRunArn) {
         this.assessmentRunArn = assessmentRunArn;
         return this;
@@ -19,6 +20,7 @@ public class ListExclusionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListExclusionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListExclusionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListExclusionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListExclusionsRequest(@JsonProperty("assessmentRunArn") String assessmentRunArn) {
+        this.assessmentRunArn = assessmentRunArn;
+  }
 }

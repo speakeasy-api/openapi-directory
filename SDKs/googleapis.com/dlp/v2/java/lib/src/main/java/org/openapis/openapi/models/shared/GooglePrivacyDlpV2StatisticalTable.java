@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2StatisticalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quasiIds")
     public GooglePrivacyDlpV2QuasiIdentifierField[] quasiIds;
+
     public GooglePrivacyDlpV2StatisticalTable withQuasiIds(GooglePrivacyDlpV2QuasiIdentifierField[] quasiIds) {
         this.quasiIds = quasiIds;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2StatisticalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeFrequency")
     public GooglePrivacyDlpV2FieldId relativeFrequency;
+
     public GooglePrivacyDlpV2StatisticalTable withRelativeFrequency(GooglePrivacyDlpV2FieldId relativeFrequency) {
         this.relativeFrequency = relativeFrequency;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2StatisticalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public GooglePrivacyDlpV2BigQueryTable table;
+
     public GooglePrivacyDlpV2StatisticalTable withTable(GooglePrivacyDlpV2BigQueryTable table) {
         this.table = table;
         return this;
     }
     
+    public GooglePrivacyDlpV2StatisticalTable(){}
 }

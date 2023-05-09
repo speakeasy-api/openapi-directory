@@ -60,11 +60,9 @@ public class Sources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesSourcesJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesSourcesJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesJsonResponse(contentType, httpRes.statusCode()) {{
             sourceWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Sources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesIdJsonResponse(contentType, httpRes.statusCode()) {{
             sourceWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Sources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatResponse() {{
+        org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatResponse res = new org.openapis.openapi.models.operations.GetResourcesSourcesIdSyndicateFormatResponse(contentType, httpRes.statusCode()) {{
             mediaItemWrappeds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

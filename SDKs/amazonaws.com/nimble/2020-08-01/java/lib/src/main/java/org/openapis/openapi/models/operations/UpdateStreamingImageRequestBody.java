@@ -15,6 +15,7 @@ public class UpdateStreamingImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateStreamingImageRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateStreamingImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateStreamingImageRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateStreamingImageRequestBody(){}
 }

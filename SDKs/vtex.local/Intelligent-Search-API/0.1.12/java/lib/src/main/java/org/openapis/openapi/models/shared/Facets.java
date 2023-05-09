@@ -18,6 +18,7 @@ public class Facets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breadcrumb")
     public FacetsBreadcrumb[] breadcrumb;
+
     public Facets withBreadcrumb(FacetsBreadcrumb[] breadcrumb) {
         this.breadcrumb = breadcrumb;
         return this;
@@ -29,6 +30,7 @@ public class Facets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facets")
     public FacetsFacets[] facets;
+
     public Facets withFacets(FacetsFacets[] facets) {
         this.facets = facets;
         return this;
@@ -40,6 +42,7 @@ public class Facets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryArgs")
     public FacetsQueryArgs queryArgs;
+
     public Facets withQueryArgs(FacetsQueryArgs queryArgs) {
         this.queryArgs = queryArgs;
         return this;
@@ -51,9 +54,11 @@ public class Facets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampling")
     public Boolean sampling;
+
     public Facets withSampling(Boolean sampling) {
         this.sampling = sampling;
         return this;
     }
     
+    public Facets(){}
 }

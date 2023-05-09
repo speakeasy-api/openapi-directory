@@ -15,6 +15,7 @@ public class ModelPackageStatusItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public ModelPackageStatusItem withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -22,6 +23,7 @@ public class ModelPackageStatusItem {
     
     @JsonProperty("Name")
     public String name;
+
     public ModelPackageStatusItem withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +31,14 @@ public class ModelPackageStatusItem {
     
     @JsonProperty("Status")
     public DetailedModelPackageStatusEnum status;
+
     public ModelPackageStatusItem withStatus(DetailedModelPackageStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ModelPackageStatusItem(@JsonProperty("Name") String name, @JsonProperty("Status") DetailedModelPackageStatusEnum status) {
+        this.name = name;
+        this.status = status;
+  }
 }

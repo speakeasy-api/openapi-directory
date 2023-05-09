@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateTransitGatewayPolicyTableRequest {
     
     public Boolean dryRun;
+
     public CreateTransitGatewayPolicyTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class CreateTransitGatewayPolicyTableRequest {
     
     
     public TagSpecificationList[] tagSpecifications;
+
     public CreateTransitGatewayPolicyTableRequest withTagSpecifications(TagSpecificationList[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -23,9 +25,13 @@ public class CreateTransitGatewayPolicyTableRequest {
     
     
     public String transitGatewayId;
+
     public CreateTransitGatewayPolicyTableRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public CreateTransitGatewayPolicyTableRequest(@JsonProperty("TransitGatewayId") String transitGatewayId) {
+        this.transitGatewayId = transitGatewayId;
+  }
 }

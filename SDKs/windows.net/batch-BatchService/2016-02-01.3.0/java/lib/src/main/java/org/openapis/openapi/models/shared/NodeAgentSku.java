@@ -18,6 +18,7 @@ public class NodeAgentSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodeAgentSku withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NodeAgentSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osType")
     public NodeAgentSkuOsTypeEnum osType;
+
     public NodeAgentSku withOsType(NodeAgentSkuOsTypeEnum osType) {
         this.osType = osType;
         return this;
@@ -40,9 +42,11 @@ public class NodeAgentSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifiedImageReferences")
     public ImageReference[] verifiedImageReferences;
+
     public NodeAgentSku withVerifiedImageReferences(ImageReference[] verifiedImageReferences) {
         this.verifiedImageReferences = verifiedImageReferences;
         return this;
     }
     
+    public NodeAgentSku(){}
 }

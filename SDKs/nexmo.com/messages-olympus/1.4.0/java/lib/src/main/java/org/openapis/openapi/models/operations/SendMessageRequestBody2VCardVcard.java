@@ -12,9 +12,13 @@ public class SendMessageRequestBody2VCardVcard {
      */
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody2VCardVcard withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody2VCardVcard(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

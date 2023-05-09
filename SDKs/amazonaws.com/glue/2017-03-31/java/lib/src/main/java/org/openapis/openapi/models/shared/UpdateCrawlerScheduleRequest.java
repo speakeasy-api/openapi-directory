@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCrawlerScheduleRequest {
     @JsonProperty("CrawlerName")
     public String crawlerName;
+
     public UpdateCrawlerScheduleRequest withCrawlerName(String crawlerName) {
         this.crawlerName = crawlerName;
         return this;
@@ -19,9 +20,13 @@ public class UpdateCrawlerScheduleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public UpdateCrawlerScheduleRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public UpdateCrawlerScheduleRequest(@JsonProperty("CrawlerName") String crawlerName) {
+        this.crawlerName = crawlerName;
+  }
 }

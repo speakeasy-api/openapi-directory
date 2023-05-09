@@ -22,6 +22,7 @@ public class RealtimeEndpointInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public RealtimeEndpointInfo withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class RealtimeEndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointStatus")
     public RealtimeEndpointStatusEnum endpointStatus;
+
     public RealtimeEndpointInfo withEndpointStatus(RealtimeEndpointStatusEnum endpointStatus) {
         this.endpointStatus = endpointStatus;
         return this;
@@ -38,6 +40,7 @@ public class RealtimeEndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointUrl")
     public String endpointUrl;
+
     public RealtimeEndpointInfo withEndpointUrl(String endpointUrl) {
         this.endpointUrl = endpointUrl;
         return this;
@@ -46,9 +49,11 @@ public class RealtimeEndpointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeakRequestsPerSecond")
     public Long peakRequestsPerSecond;
+
     public RealtimeEndpointInfo withPeakRequestsPerSecond(Long peakRequestsPerSecond) {
         this.peakRequestsPerSecond = peakRequestsPerSecond;
         return this;
     }
     
+    public RealtimeEndpointInfo(){}
 }

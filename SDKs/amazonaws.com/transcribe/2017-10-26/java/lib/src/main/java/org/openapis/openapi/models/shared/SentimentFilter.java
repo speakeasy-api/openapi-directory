@@ -15,6 +15,7 @@ public class SentimentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AbsoluteTimeRange")
     public AbsoluteTimeRange absoluteTimeRange;
+
     public SentimentFilter withAbsoluteTimeRange(AbsoluteTimeRange absoluteTimeRange) {
         this.absoluteTimeRange = absoluteTimeRange;
         return this;
@@ -23,6 +24,7 @@ public class SentimentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negate")
     public Boolean negate;
+
     public SentimentFilter withNegate(Boolean negate) {
         this.negate = negate;
         return this;
@@ -31,6 +33,7 @@ public class SentimentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParticipantRole")
     public ParticipantRoleEnum participantRole;
+
     public SentimentFilter withParticipantRole(ParticipantRoleEnum participantRole) {
         this.participantRole = participantRole;
         return this;
@@ -39,6 +42,7 @@ public class SentimentFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelativeTimeRange")
     public RelativeTimeRange relativeTimeRange;
+
     public SentimentFilter withRelativeTimeRange(RelativeTimeRange relativeTimeRange) {
         this.relativeTimeRange = relativeTimeRange;
         return this;
@@ -46,9 +50,13 @@ public class SentimentFilter {
     
     @JsonProperty("Sentiments")
     public SentimentValueEnum[] sentiments;
+
     public SentimentFilter withSentiments(SentimentValueEnum[] sentiments) {
         this.sentiments = sentiments;
         return this;
     }
     
+    public SentimentFilter(@JsonProperty("Sentiments") SentimentValueEnum[] sentiments) {
+        this.sentiments = sentiments;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportEBSVolumeRecommendationsResponse {
@@ -12,6 +13,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportEBSVolumeRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ExportEBSVolumeRecommendationsResponse {
     
     
     public String contentType;
+
     public ExportEBSVolumeRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportEBSVolumeRecommendationsResponse exportEBSVolumeRecommendationsResponse;
+
     public ExportEBSVolumeRecommendationsResponse withExportEBSVolumeRecommendationsResponse(org.openapis.openapi.models.shared.ExportEBSVolumeRecommendationsResponse exportEBSVolumeRecommendationsResponse) {
         this.exportEBSVolumeRecommendationsResponse = exportEBSVolumeRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public ExportEBSVolumeRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ExportEBSVolumeRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object limitExceededException;
+
     public ExportEBSVolumeRecommendationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public ExportEBSVolumeRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -79,6 +87,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public ExportEBSVolumeRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class ExportEBSVolumeRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public ExportEBSVolumeRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ExportEBSVolumeRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportEBSVolumeRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ExportEBSVolumeRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class ExportEBSVolumeRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public ExportEBSVolumeRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ExportEBSVolumeRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

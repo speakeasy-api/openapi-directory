@@ -18,6 +18,7 @@ public class GetSearchApplicationQueryStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public SearchApplicationQueryStats[] stats;
+
     public GetSearchApplicationQueryStatsResponse withStats(SearchApplicationQueryStats[] stats) {
         this.stats = stats;
         return this;
@@ -29,9 +30,11 @@ public class GetSearchApplicationQueryStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalQueryCount")
     public String totalQueryCount;
+
     public GetSearchApplicationQueryStatsResponse withTotalQueryCount(String totalQueryCount) {
         this.totalQueryCount = totalQueryCount;
         return this;
     }
     
+    public GetSearchApplicationQueryStatsResponse(){}
 }

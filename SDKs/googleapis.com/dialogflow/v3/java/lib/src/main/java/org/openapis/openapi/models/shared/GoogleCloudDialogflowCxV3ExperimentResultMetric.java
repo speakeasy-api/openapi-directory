@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceInterval")
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval confidenceInterval;
+
     public GoogleCloudDialogflowCxV3ExperimentResultMetric withConfidenceInterval(GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval confidenceInterval) {
         this.confidenceInterval = confidenceInterval;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public GoogleCloudDialogflowCxV3ExperimentResultMetric withCount(Double count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countType")
     public GoogleCloudDialogflowCxV3ExperimentResultMetricCountTypeEnum countType;
+
     public GoogleCloudDialogflowCxV3ExperimentResultMetric withCountType(GoogleCloudDialogflowCxV3ExperimentResultMetricCountTypeEnum countType) {
         this.countType = countType;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratio")
     public Double ratio;
+
     public GoogleCloudDialogflowCxV3ExperimentResultMetric withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowCxV3ExperimentResultMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDialogflowCxV3ExperimentResultMetricTypeEnum type;
+
     public GoogleCloudDialogflowCxV3ExperimentResultMetric withType(GoogleCloudDialogflowCxV3ExperimentResultMetricTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ExperimentResultMetric(){}
 }

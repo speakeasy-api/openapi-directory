@@ -15,6 +15,7 @@ public class NameFound {
      */
     @JsonProperty("count")
     public Long count;
+
     public NameFound withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class NameFound {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public NameFound withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -35,9 +37,15 @@ public class NameFound {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public NameFound withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public NameFound(@JsonProperty("count") Long count, @JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName) {
+        this.count = count;
+        this.firstName = firstName;
+        this.lastName = lastName;
+  }
 }

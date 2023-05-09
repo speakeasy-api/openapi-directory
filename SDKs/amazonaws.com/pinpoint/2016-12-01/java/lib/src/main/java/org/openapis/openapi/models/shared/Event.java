@@ -15,6 +15,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppPackageName")
     public String appPackageName;
+
     public Event withAppPackageName(String appPackageName) {
         this.appPackageName = appPackageName;
         return this;
@@ -23,6 +24,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppTitle")
     public String appTitle;
+
     public Event withAppTitle(String appTitle) {
         this.appTitle = appTitle;
         return this;
@@ -31,6 +33,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppVersionCode")
     public String appVersionCode;
+
     public Event withAppVersionCode(String appVersionCode) {
         this.appVersionCode = appVersionCode;
         return this;
@@ -39,6 +42,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public Event withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -47,6 +51,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientSdkVersion")
     public String clientSDKVersion;
+
     public Event withClientSDKVersion(String clientSDKVersion) {
         this.clientSDKVersion = clientSDKVersion;
         return this;
@@ -54,6 +59,7 @@ public class Event {
     
     @JsonProperty("EventType")
     public String eventType;
+
     public Event withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -62,6 +68,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public java.util.Map<String, Double> metrics;
+
     public Event withMetrics(java.util.Map<String, Double> metrics) {
         this.metrics = metrics;
         return this;
@@ -70,6 +77,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SdkName")
     public String sdkName;
+
     public Event withSDKName(String sdkName) {
         this.sdkName = sdkName;
         return this;
@@ -78,6 +86,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public Session session;
+
     public Event withSession(Session session) {
         this.session = session;
         return this;
@@ -85,9 +94,14 @@ public class Event {
     
     @JsonProperty("Timestamp")
     public String timestamp;
+
     public Event withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public Event(@JsonProperty("EventType") String eventType, @JsonProperty("Timestamp") String timestamp) {
+        this.eventType = eventType;
+        this.timestamp = timestamp;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportImageRequestDiskContainers {
     
     public String description;
+
     public ImportImageRequestDiskContainers withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class ImportImageRequestDiskContainers {
     
     
     public String deviceName;
+
     public ImportImageRequestDiskContainers withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -26,6 +28,7 @@ public class ImportImageRequestDiskContainers {
     
     
     public String format;
+
     public ImportImageRequestDiskContainers withFormat(String format) {
         this.format = format;
         return this;
@@ -33,6 +36,7 @@ public class ImportImageRequestDiskContainers {
     
     
     public String snapshotId;
+
     public ImportImageRequestDiskContainers withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -40,6 +44,7 @@ public class ImportImageRequestDiskContainers {
     
     
     public String url;
+
     public ImportImageRequestDiskContainers withUrl(String url) {
         this.url = url;
         return this;
@@ -47,9 +52,11 @@ public class ImportImageRequestDiskContainers {
     
     
     public UserBucket userBucket;
+
     public ImportImageRequestDiskContainers withUserBucket(UserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public ImportImageRequestDiskContainers(){}
 }

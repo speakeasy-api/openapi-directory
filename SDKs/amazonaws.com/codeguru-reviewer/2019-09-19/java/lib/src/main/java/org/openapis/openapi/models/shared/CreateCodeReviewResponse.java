@@ -18,9 +18,11 @@ public class CreateCodeReviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeReview")
     public CodeReview codeReview;
+
     public CreateCodeReviewResponse withCodeReview(CodeReview codeReview) {
         this.codeReview = codeReview;
         return this;
     }
     
+    public CreateCodeReviewResponse(){}
 }

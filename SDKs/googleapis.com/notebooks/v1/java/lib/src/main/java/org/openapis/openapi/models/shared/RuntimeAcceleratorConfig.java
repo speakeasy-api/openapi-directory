@@ -18,6 +18,7 @@ public class RuntimeAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreCount")
     public String coreCount;
+
     public RuntimeAcceleratorConfig withCoreCount(String coreCount) {
         this.coreCount = coreCount;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeAcceleratorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public RuntimeAcceleratorConfigTypeEnum type;
+
     public RuntimeAcceleratorConfig withType(RuntimeAcceleratorConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RuntimeAcceleratorConfig(){}
 }

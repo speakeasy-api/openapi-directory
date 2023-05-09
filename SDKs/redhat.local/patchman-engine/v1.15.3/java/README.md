@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LatestPackageSecurity;
 import org.openapis.openapi.models.operations.LatestPackageRequest;
 import org.openapis.openapi.models.operations.LatestPackageResponse;
+import org.openapis.openapi.models.operations.LatestPackageSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,49 +26,49 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            LatestPackageRequest req = new LatestPackageRequest() {{
-                packageName = "corrupti";
-            }}            
+            LatestPackageRequest req = new LatestPackageRequest("corrupti");            
 
-            LatestPackageResponse res = sdk.latestPackage(req, new LatestPackageSecurity() {{
+            LatestPackageResponse res = sdk.latestPackage(req, new LatestPackageSecurity("provident") {{
                 rhIdentity = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.controllersPackageDetailResponse.isPresent()) {
+            if (res.controllersPackageDetailResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `latestPackage` - Show me metadata of selected package
-* `deletesystem` - Delete system by inventory id
-* `detailAdvisory` - Show me details an advisory by given advisory name
-* `detailSystem` - Show me details about a system by given inventory id
-* `exportAdvisories` - Export applicable advisories for all my systems
-* `exportAdvisorySystems` - Export systems for my account
-* `exportPackageSystems` - Show me all my systems which have a package installed
-* `exportPackages` - Show me all installed packages across my systems
-* `exportSystemAdvisories` - Export applicable advisories for all my systems
-* `exportSystemPackages` - Show me details about a system packages by given inventory id
-* `exportSystems` - Export systems for my account
-* `listAdvisories` - Show me all applicable advisories for all my systems
-* `listAdvisorySystems` - Show me systems on which the given advisory is applicable
-* `listPackages` - Show me all installed packages across my systems
-* `listSystemAdvisories` - Show me advisories for a system by given inventory id
-* `listSystems` - Show me all my systems
-* `packageSystems` - Show me all my systems which have a package installed
-* `packageVersions` - Show me all package versions installed on some system
-* `systemPackages` - Show me details about a system packages by given inventory id
-* `viewAdvisoriesSystems` - View advisory-system pairs for selected systems and advisories
-* `viewSystemsAdvisories` - View system-advisory pairs for selected systems and advisories
+* [latestPackage](docs/sdk/README.md#latestpackage) - Show me metadata of selected package
+* [deletesystem](docs/sdk/README.md#deletesystem) - Delete system by inventory id
+* [detailAdvisory](docs/sdk/README.md#detailadvisory) - Show me details an advisory by given advisory name
+* [detailSystem](docs/sdk/README.md#detailsystem) - Show me details about a system by given inventory id
+* [exportAdvisories](docs/sdk/README.md#exportadvisories) - Export applicable advisories for all my systems
+* [exportAdvisorySystems](docs/sdk/README.md#exportadvisorysystems) - Export systems for my account
+* [exportPackageSystems](docs/sdk/README.md#exportpackagesystems) - Show me all my systems which have a package installed
+* [exportPackages](docs/sdk/README.md#exportpackages) - Show me all installed packages across my systems
+* [exportSystemAdvisories](docs/sdk/README.md#exportsystemadvisories) - Export applicable advisories for all my systems
+* [exportSystemPackages](docs/sdk/README.md#exportsystempackages) - Show me details about a system packages by given inventory id
+* [exportSystems](docs/sdk/README.md#exportsystems) - Export systems for my account
+* [listAdvisories](docs/sdk/README.md#listadvisories) - Show me all applicable advisories for all my systems
+* [listAdvisorySystems](docs/sdk/README.md#listadvisorysystems) - Show me systems on which the given advisory is applicable
+* [listPackages](docs/sdk/README.md#listpackages) - Show me all installed packages across my systems
+* [listSystemAdvisories](docs/sdk/README.md#listsystemadvisories) - Show me advisories for a system by given inventory id
+* [listSystems](docs/sdk/README.md#listsystems) - Show me all my systems
+* [packageSystems](docs/sdk/README.md#packagesystems) - Show me all my systems which have a package installed
+* [packageVersions](docs/sdk/README.md#packageversions) - Show me all package versions installed on some system
+* [systemPackages](docs/sdk/README.md#systempackages) - Show me details about a system packages by given inventory id
+* [viewAdvisoriesSystems](docs/sdk/README.md#viewadvisoriessystems) - View advisory-system pairs for selected systems and advisories
+* [viewSystemsAdvisories](docs/sdk/README.md#viewsystemsadvisories) - View system-advisory pairs for selected systems and advisories
 <!-- End SDK Available Operations -->
 
 ### Maturity

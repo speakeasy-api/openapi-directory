@@ -12,6 +12,7 @@ public class Uint128 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public String high;
+
     public Uint128 withHigh(String high) {
         this.high = high;
         return this;
@@ -20,9 +21,11 @@ public class Uint128 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public String low;
+
     public Uint128 withLow(String low) {
         this.low = low;
         return this;
     }
     
+    public Uint128(){}
 }

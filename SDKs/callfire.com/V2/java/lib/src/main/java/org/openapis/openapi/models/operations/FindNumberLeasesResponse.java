@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindNumberLeasesResponse {
     
     public String contentType;
+
     public FindNumberLeasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindNumberLeasesResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindNumberLeasesResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FindNumberLeasesResponse {
      */
     
     public org.openapis.openapi.models.shared.NumberLeasePage numberLeasePage;
+
     public FindNumberLeasesResponse withNumberLeasePage(org.openapis.openapi.models.shared.NumberLeasePage numberLeasePage) {
         this.numberLeasePage = numberLeasePage;
         return this;
@@ -36,6 +40,7 @@ public class FindNumberLeasesResponse {
     
     
     public Integer statusCode;
+
     public FindNumberLeasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindNumberLeasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindNumberLeasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindNumberLeasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

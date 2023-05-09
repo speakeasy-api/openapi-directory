@@ -18,6 +18,7 @@ public class StreamingComputationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computationId")
     public String computationId;
+
     public StreamingComputationConfig withComputationId(String computationId) {
         this.computationId = computationId;
         return this;
@@ -29,6 +30,7 @@ public class StreamingComputationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instructions")
     public ParallelInstruction[] instructions;
+
     public StreamingComputationConfig withInstructions(ParallelInstruction[] instructions) {
         this.instructions = instructions;
         return this;
@@ -40,6 +42,7 @@ public class StreamingComputationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageName")
     public String stageName;
+
     public StreamingComputationConfig withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -51,6 +54,7 @@ public class StreamingComputationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public StreamingComputationConfig withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
@@ -62,9 +66,11 @@ public class StreamingComputationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transformUserNameToStateFamily")
     public java.util.Map<String, String> transformUserNameToStateFamily;
+
     public StreamingComputationConfig withTransformUserNameToStateFamily(java.util.Map<String, String> transformUserNameToStateFamily) {
         this.transformUserNameToStateFamily = transformUserNameToStateFamily;
         return this;
     }
     
+    public StreamingComputationConfig(){}
 }

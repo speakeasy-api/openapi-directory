@@ -18,9 +18,11 @@ public class ProductSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productValues")
     public java.util.Map<String, String> productValues;
+
     public ProductSample withProductValues(java.util.Map<String, String> productValues) {
         this.productValues = productValues;
         return this;
     }
     
+    public ProductSample(){}
 }

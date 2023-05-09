@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImageBuilderResponse {
@@ -12,6 +13,7 @@ public class StartImageBuilderResponse {
      */
     
     public Object concurrentModificationException;
+
     public StartImageBuilderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class StartImageBuilderResponse {
     
     
     public String contentType;
+
     public StartImageBuilderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartImageBuilderResponse {
      */
     
     public Object incompatibleImageException;
+
     public StartImageBuilderResponse withIncompatibleImageException(Object incompatibleImageException) {
         this.incompatibleImageException = incompatibleImageException;
         return this;
@@ -39,6 +43,7 @@ public class StartImageBuilderResponse {
      */
     
     public Object invalidAccountStatusException;
+
     public StartImageBuilderResponse withInvalidAccountStatusException(Object invalidAccountStatusException) {
         this.invalidAccountStatusException = invalidAccountStatusException;
         return this;
@@ -49,6 +54,7 @@ public class StartImageBuilderResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public StartImageBuilderResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -59,6 +65,7 @@ public class StartImageBuilderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartImageBuilderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class StartImageBuilderResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImageBuilderResult startImageBuilderResult;
+
     public StartImageBuilderResponse withStartImageBuilderResult(org.openapis.openapi.models.shared.StartImageBuilderResult startImageBuilderResult) {
         this.startImageBuilderResult = startImageBuilderResult;
         return this;
@@ -76,6 +84,7 @@ public class StartImageBuilderResponse {
     
     
     public Integer statusCode;
+
     public StartImageBuilderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartImageBuilderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImageBuilderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartImageBuilderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

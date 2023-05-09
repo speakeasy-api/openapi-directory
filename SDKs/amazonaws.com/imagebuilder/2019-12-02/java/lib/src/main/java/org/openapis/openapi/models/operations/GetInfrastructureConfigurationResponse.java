@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInfrastructureConfigurationResponse {
@@ -12,6 +13,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetInfrastructureConfigurationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object clientException;
+
     public GetInfrastructureConfigurationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class GetInfrastructureConfigurationResponse {
     
     
     public String contentType;
+
     public GetInfrastructureConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object forbiddenException;
+
     public GetInfrastructureConfigurationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInfrastructureConfigurationResponse getInfrastructureConfigurationResponse;
+
     public GetInfrastructureConfigurationResponse withGetInfrastructureConfigurationResponse(org.openapis.openapi.models.shared.GetInfrastructureConfigurationResponse getInfrastructureConfigurationResponse) {
         this.getInfrastructureConfigurationResponse = getInfrastructureConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public GetInfrastructureConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object serviceException;
+
     public GetInfrastructureConfigurationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetInfrastructureConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetInfrastructureConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetInfrastructureConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInfrastructureConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetInfrastructureConfigurationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetInfrastructureConfigurationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetInfrastructureConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

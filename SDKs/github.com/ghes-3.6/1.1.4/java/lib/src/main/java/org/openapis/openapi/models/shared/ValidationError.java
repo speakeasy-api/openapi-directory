@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ValidationError {
     @JsonProperty("documentation_url")
     public String documentationUrl;
+
     public ValidationError withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -22,6 +23,7 @@ public class ValidationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ValidationErrorErrors[] errors;
+
     public ValidationError withErrors(ValidationErrorErrors[] errors) {
         this.errors = errors;
         return this;
@@ -29,9 +31,14 @@ public class ValidationError {
     
     @JsonProperty("message")
     public String message;
+
     public ValidationError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ValidationError(@JsonProperty("documentation_url") String documentationUrl, @JsonProperty("message") String message) {
+        this.documentationUrl = documentationUrl;
+        this.message = message;
+  }
 }

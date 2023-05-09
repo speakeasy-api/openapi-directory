@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupIngressResultUnknownIpPermissionsPrefixListIds {
     
     public String description;
+
     public RevokeSecurityGroupIngressResultUnknownIpPermissionsPrefixListIds withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class RevokeSecurityGroupIngressResultUnknownIpPermissionsPrefixListIds {
     
     
     public String prefixListId;
+
     public RevokeSecurityGroupIngressResultUnknownIpPermissionsPrefixListIds withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
     }
     
+    public RevokeSecurityGroupIngressResultUnknownIpPermissionsPrefixListIds(){}
 }

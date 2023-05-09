@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPermissionsBoundaryForPermissionSetResponse {
@@ -12,6 +13,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPermissionsBoundaryForPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
     
     
     public String contentType;
+
     public GetPermissionsBoundaryForPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPermissionsBoundaryForPermissionSetResponse getPermissionsBoundaryForPermissionSetResponse;
+
     public GetPermissionsBoundaryForPermissionSetResponse withGetPermissionsBoundaryForPermissionSetResponse(org.openapis.openapi.models.shared.GetPermissionsBoundaryForPermissionSetResponse getPermissionsBoundaryForPermissionSetResponse) {
         this.getPermissionsBoundaryForPermissionSetResponse = getPermissionsBoundaryForPermissionSetResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public GetPermissionsBoundaryForPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPermissionsBoundaryForPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public GetPermissionsBoundaryForPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPermissionsBoundaryForPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public GetPermissionsBoundaryForPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetPermissionsBoundaryForPermissionSetResponse {
      */
     
     public Object validationException;
+
     public GetPermissionsBoundaryForPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPermissionsBoundaryForPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

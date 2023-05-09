@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions {
     
     public String networkInterfaceId;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInte
     
     
     public Long port;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -26,9 +28,11 @@ public class CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInte
     
     
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum protocol;
+
     public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions withProtocol(CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptionsProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public CreateVerifiedAccessEndpointResultVerifiedAccessEndpointNetworkInterfaceOptions(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsadminPropertiesAccessBindingsBatchGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesAccessBindingsBatchGetSecurityOption1 option1;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetSecurity withOption1(AnalyticsadminPropertiesAccessBindingsBatchGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AnalyticsadminPropertiesAccessBindingsBatchGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AnalyticsadminPropertiesAccessBindingsBatchGetSecurityOption2 option2;
+
     public AnalyticsadminPropertiesAccessBindingsBatchGetSecurity withOption2(AnalyticsadminPropertiesAccessBindingsBatchGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AnalyticsadminPropertiesAccessBindingsBatchGetSecurity(){}
 }

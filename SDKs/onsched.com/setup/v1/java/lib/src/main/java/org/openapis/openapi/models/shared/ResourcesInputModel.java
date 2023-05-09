@@ -15,9 +15,11 @@ public class ResourcesInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public ResourceInputModel[] resources;
+
     public ResourcesInputModel withResources(ResourceInputModel[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ResourcesInputModel(){}
 }

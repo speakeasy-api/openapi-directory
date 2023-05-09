@@ -15,6 +15,7 @@ public class CreateWebLoginTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebServerHostname")
     public String webServerHostname;
+
     public CreateWebLoginTokenResponse withWebServerHostname(String webServerHostname) {
         this.webServerHostname = webServerHostname;
         return this;
@@ -23,9 +24,11 @@ public class CreateWebLoginTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebToken")
     public String webToken;
+
     public CreateWebLoginTokenResponse withWebToken(String webToken) {
         this.webToken = webToken;
         return this;
     }
     
+    public CreateWebLoginTokenResponse(){}
 }

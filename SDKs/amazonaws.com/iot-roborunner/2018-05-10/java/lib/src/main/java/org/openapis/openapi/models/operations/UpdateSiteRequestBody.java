@@ -15,6 +15,7 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public UpdateSiteRequestBody withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateSiteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class UpdateSiteRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public UpdateSiteRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -47,9 +50,13 @@ public class UpdateSiteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateSiteRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateSiteRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

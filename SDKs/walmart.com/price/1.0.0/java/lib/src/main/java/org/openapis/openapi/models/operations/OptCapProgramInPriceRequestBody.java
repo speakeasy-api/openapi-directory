@@ -18,6 +18,7 @@ public class OptCapProgramInPriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsidyEnrolled")
     public Boolean subsidyEnrolled;
+
     public OptCapProgramInPriceRequestBody withSubsidyEnrolled(Boolean subsidyEnrolled) {
         this.subsidyEnrolled = subsidyEnrolled;
         return this;
@@ -29,9 +30,11 @@ public class OptCapProgramInPriceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsidyPreference")
     public Boolean subsidyPreference;
+
     public OptCapProgramInPriceRequestBody withSubsidyPreference(Boolean subsidyPreference) {
         this.subsidyPreference = subsidyPreference;
         return this;
     }
     
+    public OptCapProgramInPriceRequestBody(){}
 }

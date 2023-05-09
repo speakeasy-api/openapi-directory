@@ -15,6 +15,7 @@ public class TestAvailabilityConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public TestAvailabilityConfigurationResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -23,9 +24,11 @@ public class TestAvailabilityConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestPassed")
     public Boolean testPassed;
+
     public TestAvailabilityConfigurationResponse withTestPassed(Boolean testPassed) {
         this.testPassed = testPassed;
         return this;
     }
     
+    public TestAvailabilityConfigurationResponse(){}
 }

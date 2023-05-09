@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveautoapproveforaccountRequest {
@@ -12,6 +13,7 @@ public class SaveautoapproveforaccountRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveautoapproveforaccountRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveautoapproveforaccountRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveautoapproveforaccountRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class SaveautoapproveforaccountRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest saveautoapproveforaccountRequest;
+
     public SaveautoapproveforaccountRequest withSaveautoapproveforaccountRequest(org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest saveautoapproveforaccountRequest) {
         this.saveautoapproveforaccountRequest = saveautoapproveforaccountRequest;
         return this;
@@ -39,9 +43,16 @@ public class SaveautoapproveforaccountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public SaveautoapproveforaccountRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
     
+    public SaveautoapproveforaccountRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SaveautoapproveforaccountRequest") org.openapis.openapi.models.shared.SaveautoapproveforaccountRequest saveautoapproveforaccountRequest, @JsonProperty("accountName") String accountName) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.saveautoapproveforaccountRequest = saveautoapproveforaccountRequest;
+        this.accountName = accountName;
+  }
 }

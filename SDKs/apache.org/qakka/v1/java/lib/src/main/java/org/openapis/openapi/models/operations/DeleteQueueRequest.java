@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteQueueRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=confirm")
     public Boolean confirm;
+
     public DeleteQueueRequest withConfirm(Boolean confirm) {
         this.confirm = confirm;
         return this;
@@ -16,9 +18,13 @@ public class DeleteQueueRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=queueName")
     public String queueName;
+
     public DeleteQueueRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
     }
     
+    public DeleteQueueRequest(@JsonProperty("queueName") String queueName) {
+        this.queueName = queueName;
+  }
 }

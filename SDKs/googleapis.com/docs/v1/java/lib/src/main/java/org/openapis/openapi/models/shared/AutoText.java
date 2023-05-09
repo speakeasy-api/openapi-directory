@@ -18,6 +18,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public AutoText withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -29,6 +30,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public AutoText withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -40,6 +42,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTextStyleChanges")
     public java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges;
+
     public AutoText withSuggestedTextStyleChanges(java.util.Map<String, SuggestedTextStyle> suggestedTextStyleChanges) {
         this.suggestedTextStyleChanges = suggestedTextStyleChanges;
         return this;
@@ -51,6 +54,7 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public AutoText withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
@@ -62,9 +66,11 @@ public class AutoText {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AutoTextTypeEnum type;
+
     public AutoText withType(AutoTextTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AutoText(){}
 }

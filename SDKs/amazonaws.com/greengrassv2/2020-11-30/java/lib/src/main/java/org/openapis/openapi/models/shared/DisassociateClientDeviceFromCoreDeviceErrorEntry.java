@@ -15,6 +15,7 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public DisassociateClientDeviceFromCoreDeviceErrorEntry withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DisassociateClientDeviceFromCoreDeviceErrorEntry withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class DisassociateClientDeviceFromCoreDeviceErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public DisassociateClientDeviceFromCoreDeviceErrorEntry withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DisassociateClientDeviceFromCoreDeviceErrorEntry(){}
 }

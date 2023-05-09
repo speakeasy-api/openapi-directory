@@ -15,6 +15,7 @@ public class RegistrationsContributorsListContributorAttributes {
      */
     
     public Boolean bibliographic;
+
     public RegistrationsContributorsListContributorAttributes withBibliographic(Boolean bibliographic) {
         this.bibliographic = bibliographic;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsContributorsListContributorAttributes {
      */
     
     public Long index;
+
     public RegistrationsContributorsListContributorAttributes withIndex(Long index) {
         this.index = index;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsContributorsListContributorAttributes {
      */
     
     public RegistrationsContributorsListContributorAttributesPermissionEnum permission;
+
     public RegistrationsContributorsListContributorAttributes withPermission(RegistrationsContributorsListContributorAttributesPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -45,9 +48,11 @@ public class RegistrationsContributorsListContributorAttributes {
      */
     
     public String unregisteredContributor;
+
     public RegistrationsContributorsListContributorAttributes withUnregisteredContributor(String unregisteredContributor) {
         this.unregisteredContributor = unregisteredContributor;
         return this;
     }
     
+    public RegistrationsContributorsListContributorAttributes(){}
 }

@@ -18,6 +18,7 @@ public class ClickTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickThroughUrl")
     public CreativeClickThroughUrl clickThroughUrl;
+
     public ClickTag withClickThroughUrl(CreativeClickThroughUrl clickThroughUrl) {
         this.clickThroughUrl = clickThroughUrl;
         return this;
@@ -29,6 +30,7 @@ public class ClickTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventName")
     public String eventName;
+
     public ClickTag withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -40,9 +42,11 @@ public class ClickTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClickTag withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ClickTag(){}
 }

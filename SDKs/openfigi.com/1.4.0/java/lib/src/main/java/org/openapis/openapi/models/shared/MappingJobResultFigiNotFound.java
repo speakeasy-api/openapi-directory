@@ -12,9 +12,11 @@ public class MappingJobResultFigiNotFound {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public String warning;
+
     public MappingJobResultFigiNotFound withWarning(String warning) {
         this.warning = warning;
         return this;
     }
     
+    public MappingJobResultFigiNotFound(){}
 }

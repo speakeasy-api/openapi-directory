@@ -18,6 +18,7 @@ public class OrgUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public OrgUnits withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class OrgUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OrgUnits withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class OrgUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationUnits")
     public OrgUnit[] organizationUnits;
+
     public OrgUnits withOrganizationUnits(OrgUnit[] organizationUnits) {
         this.organizationUnits = organizationUnits;
         return this;
     }
     
+    public OrgUnits(){}
 }

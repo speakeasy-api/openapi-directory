@@ -15,6 +15,7 @@ public class ListCustomPluginsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPlugins")
     public CustomPluginSummary[] customPlugins;
+
     public ListCustomPluginsResponse withCustomPlugins(CustomPluginSummary[] customPlugins) {
         this.customPlugins = customPlugins;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomPluginsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCustomPluginsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomPluginsResponse(){}
 }

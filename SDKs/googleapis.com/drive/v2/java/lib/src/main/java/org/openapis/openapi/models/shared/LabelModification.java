@@ -18,6 +18,7 @@ public class LabelModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldModifications")
     public LabelFieldModification[] fieldModifications;
+
     public LabelModification withFieldModifications(LabelFieldModification[] fieldModifications) {
         this.fieldModifications = fieldModifications;
         return this;
@@ -29,6 +30,7 @@ public class LabelModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public LabelModification withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class LabelModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelId")
     public String labelId;
+
     public LabelModification withLabelId(String labelId) {
         this.labelId = labelId;
         return this;
@@ -51,9 +54,11 @@ public class LabelModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeLabel")
     public Boolean removeLabel;
+
     public LabelModification withRemoveLabel(Boolean removeLabel) {
         this.removeLabel = removeLabel;
         return this;
     }
     
+    public LabelModification(){}
 }

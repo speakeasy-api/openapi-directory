@@ -12,6 +12,7 @@ public class PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreArrayOrder")
     public Boolean ignoreArrayOrder;
+
     public PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch withIgnoreArrayOrder(Boolean ignoreArrayOrder) {
         this.ignoreArrayOrder = ignoreArrayOrder;
         return this;
@@ -20,6 +21,7 @@ public class PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreExtraElements")
     public Boolean ignoreExtraElements;
+
     public PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch withIgnoreExtraElements(Boolean ignoreExtraElements) {
         this.ignoreExtraElements = ignoreExtraElements;
         return this;
@@ -27,9 +29,13 @@ public class PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch {
     
     @JsonProperty("matchesJsonPath")
     public String matchesJsonPath;
+
     public PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch withMatchesJsonPath(String matchesJsonPath) {
         this.matchesJsonPath = matchesJsonPath;
         return this;
     }
     
+    public PostAdminRequestsRemoveByMetadataRequestBodyJSONPathMatch(@JsonProperty("matchesJsonPath") String matchesJsonPath) {
+        this.matchesJsonPath = matchesJsonPath;
+  }
 }

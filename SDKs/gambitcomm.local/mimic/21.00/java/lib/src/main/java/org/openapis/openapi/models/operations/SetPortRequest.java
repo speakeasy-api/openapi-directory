@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetPortRequest {
@@ -12,6 +13,7 @@ public class SetPortRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetPortRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetPortRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=port")
     public Integer port;
+
     public SetPortRequest withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public SetPortRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("port") Integer port) {
+        this.agentNum = agentNum;
+        this.port = port;
+  }
 }

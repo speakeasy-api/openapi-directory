@@ -15,9 +15,11 @@ public class ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf withHref(String href) {
         this.href = href;
         return this;
     }
     
+    public ListConversations200ApplicationJSONEmbeddedConversationsLinksSelf(){}
 }

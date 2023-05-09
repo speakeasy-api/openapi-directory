@@ -15,6 +15,7 @@ public class BatchDetectKeyPhrasesItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectKeyPhrasesItemResult withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,9 +24,11 @@ public class BatchDetectKeyPhrasesItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPhrases")
     public KeyPhrase[] keyPhrases;
+
     public BatchDetectKeyPhrasesItemResult withKeyPhrases(KeyPhrase[] keyPhrases) {
         this.keyPhrases = keyPhrases;
         return this;
     }
     
+    public BatchDetectKeyPhrasesItemResult(){}
 }

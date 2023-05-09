@@ -15,6 +15,7 @@ public class RegionAddressesMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RegionAddressesMoveRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class RegionAddressesMoveRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAddress")
     public String destinationAddress;
+
     public RegionAddressesMoveRequest withDestinationAddress(String destinationAddress) {
         this.destinationAddress = destinationAddress;
         return this;
     }
     
+    public RegionAddressesMoveRequest(){}
 }

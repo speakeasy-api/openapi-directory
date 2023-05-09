@@ -61,11 +61,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersCreateResponse(contentType, httpRes.statusCode()) {{
             container = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -149,11 +145,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsCreateResponse(contentType, httpRes.statusCode()) {{
             environment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,10 +189,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,11 +227,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsGetResponse(contentType, httpRes.statusCode()) {{
             environment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +271,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsListResponse(contentType, httpRes.statusCode()) {{
             listEnvironmentsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -329,11 +317,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersEnvironmentsUpdateResponse(contentType, httpRes.statusCode()) {{
             environment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -377,11 +363,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersCreateResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -423,10 +407,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -463,11 +445,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersEntitiesListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersEntitiesListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersEntitiesListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersEntitiesListResponse(contentType, httpRes.statusCode()) {{
             folderEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,11 +489,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersGetResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -555,11 +533,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersListResponse(contentType, httpRes.statusCode()) {{
             listFoldersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -603,11 +579,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersFoldersUpdateResponse(contentType, httpRes.statusCode()) {{
             folder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -649,11 +623,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersGetResponse(contentType, httpRes.statusCode()) {{
             container = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -695,11 +667,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersListResponse(contentType, httpRes.statusCode()) {{
             listContainersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -743,10 +713,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersMoveFoldersUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,11 +753,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersReauthorizeEnvironmentsUpdateResponse(contentType, httpRes.statusCode()) {{
             environment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -833,11 +799,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsCreateResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -879,10 +843,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -919,11 +881,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsGetResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -965,11 +925,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsListResponse(contentType, httpRes.statusCode()) {{
             listTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1013,11 +971,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTagsUpdateResponse(contentType, httpRes.statusCode()) {{
             tag = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1061,11 +1017,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersCreateResponse(contentType, httpRes.statusCode()) {{
             trigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1107,10 +1061,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1147,11 +1099,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersGetResponse(contentType, httpRes.statusCode()) {{
             trigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1193,11 +1143,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersListResponse(contentType, httpRes.statusCode()) {{
             listTriggersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1241,11 +1189,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersTriggersUpdateResponse(contentType, httpRes.statusCode()) {{
             trigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1289,11 +1235,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersUpdateResponse(contentType, httpRes.statusCode()) {{
             container = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1337,11 +1281,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesCreateResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1383,10 +1325,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1423,11 +1363,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesGetResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1469,11 +1407,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesListResponse(contentType, httpRes.statusCode()) {{
             listVariablesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1517,11 +1453,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVariablesUpdateResponse(contentType, httpRes.statusCode()) {{
             variable = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1565,11 +1499,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsCreateResponse(contentType, httpRes.statusCode()) {{
             createContainerVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1611,10 +1543,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1651,11 +1581,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsGetResponse(contentType, httpRes.statusCode()) {{
             containerVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1697,11 +1625,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsListResponse(contentType, httpRes.statusCode()) {{
             listContainerVersionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1743,11 +1669,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsPublishResponse(contentType, httpRes.statusCode()) {{
             publishContainerVersionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1789,11 +1713,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsRestoreResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsRestoreResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsRestoreResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsRestoreResponse(contentType, httpRes.statusCode()) {{
             containerVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1835,11 +1757,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUndeleteResponse(contentType, httpRes.statusCode()) {{
             containerVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1883,11 +1803,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsContainersVersionsUpdateResponse(contentType, httpRes.statusCode()) {{
             containerVersion = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1929,11 +1847,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsGetResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1975,11 +1891,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsListResponse(contentType, httpRes.statusCode()) {{
             listAccountsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2023,11 +1937,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsCreateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsCreateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsCreateResponse(contentType, httpRes.statusCode()) {{
             userAccess = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2069,10 +1981,8 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsDeleteResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2109,11 +2019,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsGetResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsGetResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsGetResponse(contentType, httpRes.statusCode()) {{
             userAccess = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2155,11 +2063,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsListResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsListResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsListResponse(contentType, httpRes.statusCode()) {{
             listAccountUsersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2203,11 +2109,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsPermissionsUpdateResponse(contentType, httpRes.statusCode()) {{
             userAccess = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2251,11 +2155,9 @@ public class Accounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagmanagerAccountsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsUpdateResponse() {{
+        org.openapis.openapi.models.operations.TagmanagerAccountsUpdateResponse res = new org.openapis.openapi.models.operations.TagmanagerAccountsUpdateResponse(contentType, httpRes.statusCode()) {{
             account = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

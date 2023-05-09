@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDefaultBranchInput {
     @JsonProperty("defaultBranchName")
     public String defaultBranchName;
+
     public UpdateDefaultBranchInput withDefaultBranchName(String defaultBranchName) {
         this.defaultBranchName = defaultBranchName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateDefaultBranchInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public UpdateDefaultBranchInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public UpdateDefaultBranchInput(@JsonProperty("defaultBranchName") String defaultBranchName, @JsonProperty("repositoryName") String repositoryName) {
+        this.defaultBranchName = defaultBranchName;
+        this.repositoryName = repositoryName;
+  }
 }

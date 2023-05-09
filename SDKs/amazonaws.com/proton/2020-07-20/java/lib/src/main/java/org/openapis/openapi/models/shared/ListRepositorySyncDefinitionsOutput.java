@@ -15,6 +15,7 @@ public class ListRepositorySyncDefinitionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRepositorySyncDefinitionsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListRepositorySyncDefinitionsOutput {
     
     @JsonProperty("syncDefinitions")
     public RepositorySyncDefinition[] syncDefinitions;
+
     public ListRepositorySyncDefinitionsOutput withSyncDefinitions(RepositorySyncDefinition[] syncDefinitions) {
         this.syncDefinitions = syncDefinitions;
         return this;
     }
     
+    public ListRepositorySyncDefinitionsOutput(@JsonProperty("syncDefinitions") RepositorySyncDefinition[] syncDefinitions) {
+        this.syncDefinitions = syncDefinitions;
+  }
 }

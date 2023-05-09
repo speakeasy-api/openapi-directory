@@ -66,11 +66,9 @@ public class RegistrationWithMobileNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOST1Response res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOST1Response() {{
+        org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOST1Response res = new org.openapis.openapi.models.operations.GenerateMobileOTPUsingPOST1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class RegistrationWithMobileNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResentOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResentOtpUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ResentOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResentOtpUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class RegistrationWithMobileNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyMobileOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyMobileOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +224,9 @@ public class RegistrationWithMobileNumber {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyUserViaMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyUserViaMobileUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyUserViaMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyUserViaMobileUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

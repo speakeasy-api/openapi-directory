@@ -15,6 +15,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Artifact withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extension")
     public String extension;
+
     public Artifact withExtension(String extension) {
         this.extension = extension;
         return this;
@@ -31,6 +33,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Artifact withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ArtifactTypeEnum type;
+
     public Artifact withType(ArtifactTypeEnum type) {
         this.type = type;
         return this;
@@ -47,9 +51,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Artifact withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Artifact(){}
 }

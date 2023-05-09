@@ -12,6 +12,7 @@ public class GETUserContentByDateJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GETUserContentByDateJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -20,6 +21,7 @@ public class GETUserContentByDateJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debug")
     public GETUserContentByDateJSON200ApplicationJSONDebug debug;
+
     public GETUserContentByDateJSON200ApplicationJSON withDebug(GETUserContentByDateJSON200ApplicationJSONDebug debug) {
         this.debug = debug;
         return this;
@@ -28,6 +30,7 @@ public class GETUserContentByDateJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public GETUserContentByDateJSON200ApplicationJSONResults results;
+
     public GETUserContentByDateJSON200ApplicationJSON withResults(GETUserContentByDateJSON200ApplicationJSONResults results) {
         this.results = results;
         return this;
@@ -36,9 +39,11 @@ public class GETUserContentByDateJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GETUserContentByDateJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETUserContentByDateJSON200ApplicationJSON(){}
 }

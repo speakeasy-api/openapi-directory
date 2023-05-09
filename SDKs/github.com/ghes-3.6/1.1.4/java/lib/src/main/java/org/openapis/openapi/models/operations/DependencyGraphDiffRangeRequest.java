@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DependencyGraphDiffRangeRequest {
@@ -12,6 +13,7 @@ public class DependencyGraphDiffRangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basehead")
     public String basehead;
+
     public DependencyGraphDiffRangeRequest withBasehead(String basehead) {
         this.basehead = basehead;
         return this;
@@ -22,6 +24,7 @@ public class DependencyGraphDiffRangeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DependencyGraphDiffRangeRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +35,7 @@ public class DependencyGraphDiffRangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public DependencyGraphDiffRangeRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -42,9 +46,15 @@ public class DependencyGraphDiffRangeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public DependencyGraphDiffRangeRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public DependencyGraphDiffRangeRequest(@JsonProperty("basehead") String basehead, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.basehead = basehead;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

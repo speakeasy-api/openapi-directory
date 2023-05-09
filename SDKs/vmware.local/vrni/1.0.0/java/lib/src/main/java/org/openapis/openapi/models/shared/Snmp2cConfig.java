@@ -12,9 +12,11 @@ public class Snmp2cConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("community_string")
     public String communityString;
+
     public Snmp2cConfig withCommunityString(String communityString) {
         this.communityString = communityString;
         return this;
     }
     
+    public Snmp2cConfig(){}
 }

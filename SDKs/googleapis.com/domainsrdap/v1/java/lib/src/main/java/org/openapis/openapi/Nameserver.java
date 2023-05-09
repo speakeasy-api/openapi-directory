@@ -56,11 +56,9 @@ public class Nameserver {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapNameserverGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapNameserverGetResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapNameserverGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapNameserverGetResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

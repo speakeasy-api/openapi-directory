@@ -203,6 +203,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -241,11 +246,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteAlarmsResponse res = new org.openapis.openapi.models.operations.GETDeleteAlarmsResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteAlarmsResponse res = new org.openapis.openapi.models.operations.GETDeleteAlarmsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +298,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteDashboardsResponse res = new org.openapis.openapi.models.operations.GETDeleteDashboardsResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteDashboardsResponse res = new org.openapis.openapi.models.operations.GETDeleteDashboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -347,11 +348,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDeleteInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDeleteInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -399,11 +398,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDeleteMetricStreamResponse res = new org.openapis.openapi.models.operations.GETDeleteMetricStreamResponse() {{
+        org.openapis.openapi.models.operations.GETDeleteMetricStreamResponse res = new org.openapis.openapi.models.operations.GETDeleteMetricStreamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -451,11 +448,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAlarmHistoryResponse res = new org.openapis.openapi.models.operations.GETDescribeAlarmHistoryResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAlarmHistoryResponse res = new org.openapis.openapi.models.operations.GETDescribeAlarmHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -503,11 +498,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeAlarmsResponse res = new org.openapis.openapi.models.operations.GETDescribeAlarmsResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeAlarmsResponse res = new org.openapis.openapi.models.operations.GETDescribeAlarmsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -555,11 +548,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDescribeInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDescribeInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.GETDescribeInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDescribeInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -607,10 +598,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDisableAlarmActionsResponse res = new org.openapis.openapi.models.operations.GETDisableAlarmActionsResponse() {{
+        org.openapis.openapi.models.operations.GETDisableAlarmActionsResponse res = new org.openapis.openapi.models.operations.GETDisableAlarmActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -654,11 +643,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETDisableInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDisableInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.GETDisableInsightRulesResponse res = new org.openapis.openapi.models.operations.GETDisableInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -706,10 +693,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnableAlarmActionsResponse res = new org.openapis.openapi.models.operations.GETEnableAlarmActionsResponse() {{
+        org.openapis.openapi.models.operations.GETEnableAlarmActionsResponse res = new org.openapis.openapi.models.operations.GETEnableAlarmActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -753,11 +738,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETEnableInsightRulesResponse res = new org.openapis.openapi.models.operations.GETEnableInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.GETEnableInsightRulesResponse res = new org.openapis.openapi.models.operations.GETEnableInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -805,11 +788,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGETDashboardResponse res = new org.openapis.openapi.models.operations.GETGETDashboardResponse() {{
+        org.openapis.openapi.models.operations.GETGETDashboardResponse res = new org.openapis.openapi.models.operations.GETGETDashboardResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -857,11 +838,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGETInsightRuleReportResponse res = new org.openapis.openapi.models.operations.GETGETInsightRuleReportResponse() {{
+        org.openapis.openapi.models.operations.GETGETInsightRuleReportResponse res = new org.openapis.openapi.models.operations.GETGETInsightRuleReportResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -909,11 +888,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGETMetricStreamResponse res = new org.openapis.openapi.models.operations.GETGETMetricStreamResponse() {{
+        org.openapis.openapi.models.operations.GETGETMetricStreamResponse res = new org.openapis.openapi.models.operations.GETGETMetricStreamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483 || httpRes.statusCode() == 484) {
@@ -961,11 +938,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGETMetricWidgetImageResponse res = new org.openapis.openapi.models.operations.GETGETMetricWidgetImageResponse() {{
+        org.openapis.openapi.models.operations.GETGETMetricWidgetImageResponse res = new org.openapis.openapi.models.operations.GETGETMetricWidgetImageResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1013,11 +988,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListDashboardsResponse res = new org.openapis.openapi.models.operations.GETListDashboardsResponse() {{
+        org.openapis.openapi.models.operations.GETListDashboardsResponse res = new org.openapis.openapi.models.operations.GETListDashboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1065,11 +1038,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.GETListManagedInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.GETListManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.GETListManagedInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1117,11 +1088,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETListMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.GETListMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETListMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -1169,11 +1138,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETListTagsForResourceResponse res = new org.openapis.openapi.models.operations.GETListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.GETListTagsForResourceResponse res = new org.openapis.openapi.models.operations.GETListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1221,11 +1188,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETPutDashboardResponse res = new org.openapis.openapi.models.operations.GETPutDashboardResponse() {{
+        org.openapis.openapi.models.operations.GETPutDashboardResponse res = new org.openapis.openapi.models.operations.GETPutDashboardResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1273,11 +1238,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETSetAlarmStateResponse res = new org.openapis.openapi.models.operations.GETSetAlarmStateResponse() {{
+        org.openapis.openapi.models.operations.GETSetAlarmStateResponse res = new org.openapis.openapi.models.operations.GETSetAlarmStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1327,11 +1290,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETStartMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETStartMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.GETStartMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETStartMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1379,11 +1340,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETStopMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETStopMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.GETStopMetricStreamsResponse res = new org.openapis.openapi.models.operations.GETStopMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1431,11 +1390,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETUntagResourceResponse res = new org.openapis.openapi.models.operations.GETUntagResourceResponse() {{
+        org.openapis.openapi.models.operations.GETUntagResourceResponse res = new org.openapis.openapi.models.operations.GETUntagResourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -1485,11 +1442,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteAlarmsResponse res = new org.openapis.openapi.models.operations.POSTDeleteAlarmsResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteAlarmsResponse res = new org.openapis.openapi.models.operations.POSTDeleteAlarmsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1541,11 +1496,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteAnomalyDetectorResponse res = new org.openapis.openapi.models.operations.POSTDeleteAnomalyDetectorResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteAnomalyDetectorResponse res = new org.openapis.openapi.models.operations.POSTDeleteAnomalyDetectorResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483 || httpRes.statusCode() == 484) {
@@ -1595,11 +1548,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteDashboardsResponse res = new org.openapis.openapi.models.operations.POSTDeleteDashboardsResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteDashboardsResponse res = new org.openapis.openapi.models.operations.POSTDeleteDashboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1649,11 +1600,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDeleteInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDeleteInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -1703,11 +1652,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDeleteMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTDeleteMetricStreamResponse() {{
+        org.openapis.openapi.models.operations.POSTDeleteMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTDeleteMetricStreamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -1757,11 +1704,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAlarmHistoryResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmHistoryResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAlarmHistoryResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1811,11 +1756,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAlarmsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAlarmsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -1865,11 +1808,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAlarmsForMetricResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmsForMetricResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAlarmsForMetricResponse res = new org.openapis.openapi.models.operations.POSTDescribeAlarmsForMetricResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1919,11 +1860,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeAnomalyDetectorsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAnomalyDetectorsResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeAnomalyDetectorsResponse res = new org.openapis.openapi.models.operations.POSTDescribeAnomalyDetectorsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -1973,11 +1912,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDescribeInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDescribeInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTDescribeInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDescribeInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2027,10 +1964,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDisableAlarmActionsResponse res = new org.openapis.openapi.models.operations.POSTDisableAlarmActionsResponse() {{
+        org.openapis.openapi.models.operations.POSTDisableAlarmActionsResponse res = new org.openapis.openapi.models.operations.POSTDisableAlarmActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2076,11 +2011,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTDisableInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDisableInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTDisableInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTDisableInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2130,10 +2063,8 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTEnableAlarmActionsResponse res = new org.openapis.openapi.models.operations.POSTEnableAlarmActionsResponse() {{
+        org.openapis.openapi.models.operations.POSTEnableAlarmActionsResponse res = new org.openapis.openapi.models.operations.POSTEnableAlarmActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2179,11 +2110,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTEnableInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTEnableInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTEnableInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTEnableInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -2233,11 +2162,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetDashboardResponse res = new org.openapis.openapi.models.operations.POSTGetDashboardResponse() {{
+        org.openapis.openapi.models.operations.POSTGetDashboardResponse res = new org.openapis.openapi.models.operations.POSTGetDashboardResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -2287,11 +2214,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetInsightRuleReportResponse res = new org.openapis.openapi.models.operations.POSTGetInsightRuleReportResponse() {{
+        org.openapis.openapi.models.operations.POSTGetInsightRuleReportResponse res = new org.openapis.openapi.models.operations.POSTGetInsightRuleReportResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -2341,11 +2266,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetMetricDataResponse res = new org.openapis.openapi.models.operations.POSTGetMetricDataResponse() {{
+        org.openapis.openapi.models.operations.POSTGetMetricDataResponse res = new org.openapis.openapi.models.operations.POSTGetMetricDataResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480) {
@@ -2395,11 +2318,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetMetricStatisticsResponse res = new org.openapis.openapi.models.operations.POSTGetMetricStatisticsResponse() {{
+        org.openapis.openapi.models.operations.POSTGetMetricStatisticsResponse res = new org.openapis.openapi.models.operations.POSTGetMetricStatisticsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -2449,11 +2370,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTGetMetricStreamResponse() {{
+        org.openapis.openapi.models.operations.POSTGetMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTGetMetricStreamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483 || httpRes.statusCode() == 484) {
@@ -2503,11 +2422,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTGetMetricWidgetImageResponse res = new org.openapis.openapi.models.operations.POSTGetMetricWidgetImageResponse() {{
+        org.openapis.openapi.models.operations.POSTGetMetricWidgetImageResponse res = new org.openapis.openapi.models.operations.POSTGetMetricWidgetImageResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2557,11 +2474,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTListDashboardsResponse res = new org.openapis.openapi.models.operations.POSTListDashboardsResponse() {{
+        org.openapis.openapi.models.operations.POSTListDashboardsResponse res = new org.openapis.openapi.models.operations.POSTListDashboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2611,11 +2526,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTListManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTListManagedInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTListManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTListManagedInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -2665,11 +2578,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTListMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTListMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.POSTListMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTListMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -2719,11 +2630,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTListMetricsResponse res = new org.openapis.openapi.models.operations.POSTListMetricsResponse() {{
+        org.openapis.openapi.models.operations.POSTListMetricsResponse res = new org.openapis.openapi.models.operations.POSTListMetricsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2773,11 +2682,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTListTagsForResourceResponse res = new org.openapis.openapi.models.operations.POSTListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.POSTListTagsForResourceResponse res = new org.openapis.openapi.models.operations.POSTListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -2827,11 +2734,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutAnomalyDetectorResponse res = new org.openapis.openapi.models.operations.POSTPutAnomalyDetectorResponse() {{
+        org.openapis.openapi.models.operations.POSTPutAnomalyDetectorResponse res = new org.openapis.openapi.models.operations.POSTPutAnomalyDetectorResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483 || httpRes.statusCode() == 484) {
@@ -2881,11 +2786,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutCompositeAlarmResponse res = new org.openapis.openapi.models.operations.POSTPutCompositeAlarmResponse() {{
+        org.openapis.openapi.models.operations.POSTPutCompositeAlarmResponse res = new org.openapis.openapi.models.operations.POSTPutCompositeAlarmResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2937,11 +2840,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutDashboardResponse res = new org.openapis.openapi.models.operations.POSTPutDashboardResponse() {{
+        org.openapis.openapi.models.operations.POSTPutDashboardResponse res = new org.openapis.openapi.models.operations.POSTPutDashboardResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -2991,11 +2892,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutInsightRuleResponse res = new org.openapis.openapi.models.operations.POSTPutInsightRuleResponse() {{
+        org.openapis.openapi.models.operations.POSTPutInsightRuleResponse res = new org.openapis.openapi.models.operations.POSTPutInsightRuleResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -3045,11 +2944,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTPutManagedInsightRulesResponse() {{
+        org.openapis.openapi.models.operations.POSTPutManagedInsightRulesResponse res = new org.openapis.openapi.models.operations.POSTPutManagedInsightRulesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481) {
@@ -3099,11 +2996,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutMetricAlarmResponse res = new org.openapis.openapi.models.operations.POSTPutMetricAlarmResponse() {{
+        org.openapis.openapi.models.operations.POSTPutMetricAlarmResponse res = new org.openapis.openapi.models.operations.POSTPutMetricAlarmResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3155,11 +3050,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutMetricDataResponse res = new org.openapis.openapi.models.operations.POSTPutMetricDataResponse() {{
+        org.openapis.openapi.models.operations.POSTPutMetricDataResponse res = new org.openapis.openapi.models.operations.POSTPutMetricDataResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3211,11 +3104,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTPutMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTPutMetricStreamResponse() {{
+        org.openapis.openapi.models.operations.POSTPutMetricStreamResponse res = new org.openapis.openapi.models.operations.POSTPutMetricStreamResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483 || httpRes.statusCode() == 484) {
@@ -3265,11 +3156,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTSetAlarmStateResponse res = new org.openapis.openapi.models.operations.POSTSetAlarmStateResponse() {{
+        org.openapis.openapi.models.operations.POSTSetAlarmStateResponse res = new org.openapis.openapi.models.operations.POSTSetAlarmStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3321,11 +3210,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTStartMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTStartMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.POSTStartMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTStartMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -3375,11 +3262,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTStopMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTStopMetricStreamsResponse() {{
+        org.openapis.openapi.models.operations.POSTStopMetricStreamsResponse res = new org.openapis.openapi.models.operations.POSTStopMetricStreamsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482) {
@@ -3429,11 +3314,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTTagResourceResponse res = new org.openapis.openapi.models.operations.POSTTagResourceResponse() {{
+        org.openapis.openapi.models.operations.POSTTagResourceResponse res = new org.openapis.openapi.models.operations.POSTTagResourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {
@@ -3483,11 +3366,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.POSTUntagResourceResponse res = new org.openapis.openapi.models.operations.POSTUntagResourceResponse() {{
+        org.openapis.openapi.models.operations.POSTUntagResourceResponse res = new org.openapis.openapi.models.operations.POSTUntagResourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 480 || httpRes.statusCode() == 481 || httpRes.statusCode() == 482 || httpRes.statusCode() == 483) {

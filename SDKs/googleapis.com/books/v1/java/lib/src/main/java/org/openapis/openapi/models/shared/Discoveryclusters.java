@@ -15,6 +15,7 @@ public class Discoveryclusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public DiscoveryclustersClusters[] clusters;
+
     public Discoveryclusters withClusters(DiscoveryclustersClusters[] clusters) {
         this.clusters = clusters;
         return this;
@@ -26,6 +27,7 @@ public class Discoveryclusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Discoveryclusters withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,9 +36,11 @@ public class Discoveryclusters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalClusters")
     public Integer totalClusters;
+
     public Discoveryclusters withTotalClusters(Integer totalClusters) {
         this.totalClusters = totalClusters;
         return this;
     }
     
+    public Discoveryclusters(){}
 }

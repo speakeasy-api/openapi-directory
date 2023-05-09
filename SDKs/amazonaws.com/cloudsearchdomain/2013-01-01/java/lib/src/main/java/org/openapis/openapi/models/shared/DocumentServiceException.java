@@ -15,6 +15,7 @@ public class DocumentServiceException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DocumentServiceException withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class DocumentServiceException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public DocumentServiceException withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DocumentServiceException(){}
 }

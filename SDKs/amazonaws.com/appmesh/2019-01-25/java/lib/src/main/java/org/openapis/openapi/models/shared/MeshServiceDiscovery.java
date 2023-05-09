@@ -15,9 +15,11 @@ public class MeshServiceDiscovery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPreference")
     public IpPreferenceEnum ipPreference;
+
     public MeshServiceDiscovery withIpPreference(IpPreferenceEnum ipPreference) {
         this.ipPreference = ipPreference;
         return this;
     }
     
+    public MeshServiceDiscovery(){}
 }

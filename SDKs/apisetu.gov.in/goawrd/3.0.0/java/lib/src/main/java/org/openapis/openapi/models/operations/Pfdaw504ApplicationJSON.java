@@ -15,6 +15,7 @@ public class Pfdaw504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Pfdaw504ApplicationJSONErrorEnum error;
+
     public Pfdaw504ApplicationJSON withError(Pfdaw504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Pfdaw504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Pfdaw504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Pfdaw504ApplicationJSON withErrorDescription(Pfdaw504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Pfdaw504ApplicationJSON(){}
 }

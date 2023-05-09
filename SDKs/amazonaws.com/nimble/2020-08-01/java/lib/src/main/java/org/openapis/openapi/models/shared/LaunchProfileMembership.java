@@ -15,6 +15,7 @@ public class LaunchProfileMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityStoreId")
     public String identityStoreId;
+
     public LaunchProfileMembership withIdentityStoreId(String identityStoreId) {
         this.identityStoreId = identityStoreId;
         return this;
@@ -23,6 +24,7 @@ public class LaunchProfileMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persona")
     public LaunchProfilePersonaEnum persona;
+
     public LaunchProfileMembership withPersona(LaunchProfilePersonaEnum persona) {
         this.persona = persona;
         return this;
@@ -31,6 +33,7 @@ public class LaunchProfileMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("principalId")
     public String principalId;
+
     public LaunchProfileMembership withPrincipalId(String principalId) {
         this.principalId = principalId;
         return this;
@@ -39,9 +42,11 @@ public class LaunchProfileMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sid")
     public String sid;
+
     public LaunchProfileMembership withSid(String sid) {
         this.sid = sid;
         return this;
     }
     
+    public LaunchProfileMembership(){}
 }

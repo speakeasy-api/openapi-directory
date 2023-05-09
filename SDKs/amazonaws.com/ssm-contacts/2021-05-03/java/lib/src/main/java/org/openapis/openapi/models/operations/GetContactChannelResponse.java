@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContactChannelResponse {
@@ -12,6 +13,7 @@ public class GetContactChannelResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContactChannelResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContactChannelResponse {
     
     
     public String contentType;
+
     public GetContactChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContactChannelResponse {
      */
     
     public Object dataEncryptionException;
+
     public GetContactChannelResponse withDataEncryptionException(Object dataEncryptionException) {
         this.dataEncryptionException = dataEncryptionException;
         return this;
@@ -39,6 +43,7 @@ public class GetContactChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContactChannelResult getContactChannelResult;
+
     public GetContactChannelResponse withGetContactChannelResult(org.openapis.openapi.models.shared.GetContactChannelResult getContactChannelResult) {
         this.getContactChannelResult = getContactChannelResult;
         return this;
@@ -49,6 +54,7 @@ public class GetContactChannelResponse {
      */
     
     public Object internalServerException;
+
     public GetContactChannelResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class GetContactChannelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetContactChannelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetContactChannelResponse {
     
     
     public Integer statusCode;
+
     public GetContactChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetContactChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContactChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetContactChannelResponse {
      */
     
     public Object throttlingException;
+
     public GetContactChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class GetContactChannelResponse {
      */
     
     public Object validationException;
+
     public GetContactChannelResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetContactChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

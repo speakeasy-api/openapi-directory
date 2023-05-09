@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEditorialVideoResponse {
     
     public String contentType;
+
     public GetEditorialVideoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEditorialVideoResponse {
      */
     
     public org.openapis.openapi.models.shared.EditorialVideoContent editorialVideoContent;
+
     public GetEditorialVideoResponse withEditorialVideoContent(org.openapis.openapi.models.shared.EditorialVideoContent editorialVideoContent) {
         this.editorialVideoContent = editorialVideoContent;
         return this;
@@ -26,6 +29,7 @@ public class GetEditorialVideoResponse {
     
     
     public Integer statusCode;
+
     public GetEditorialVideoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetEditorialVideoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEditorialVideoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEditorialVideoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

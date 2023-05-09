@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRelationalDatabaseResponse {
@@ -12,6 +13,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRelationalDatabaseResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteRelationalDatabaseResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRelationalDatabaseResponse {
     
     
     public String contentType;
+
     public DeleteRelationalDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRelationalDatabaseResult deleteRelationalDatabaseResult;
+
     public DeleteRelationalDatabaseResponse withDeleteRelationalDatabaseResult(org.openapis.openapi.models.shared.DeleteRelationalDatabaseResult deleteRelationalDatabaseResult) {
         this.deleteRelationalDatabaseResult = deleteRelationalDatabaseResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteRelationalDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object notFoundException;
+
     public DeleteRelationalDatabaseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteRelationalDatabaseResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object serviceException;
+
     public DeleteRelationalDatabaseResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteRelationalDatabaseResponse {
     
     
     public Integer statusCode;
+
     public DeleteRelationalDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteRelationalDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRelationalDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteRelationalDatabaseResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteRelationalDatabaseResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteRelationalDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

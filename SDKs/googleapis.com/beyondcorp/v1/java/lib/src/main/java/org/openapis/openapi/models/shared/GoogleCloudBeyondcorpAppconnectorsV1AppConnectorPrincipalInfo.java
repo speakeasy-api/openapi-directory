@@ -18,9 +18,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount serviceAccount;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo withServiceAccount(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo(){}
 }

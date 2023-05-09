@@ -15,9 +15,11 @@ public class NetworksRemovePeeringRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworksRemovePeeringRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NetworksRemovePeeringRequest(){}
 }

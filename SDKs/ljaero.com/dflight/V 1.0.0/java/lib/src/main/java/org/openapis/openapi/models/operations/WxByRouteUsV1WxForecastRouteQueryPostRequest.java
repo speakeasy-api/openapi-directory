@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByRouteUsV1WxForecastRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WxByRoute wxByRoute;
+
     public WxByRouteUsV1WxForecastRouteQueryPostRequest withWxByRoute(org.openapis.openapi.models.shared.WxByRoute wxByRoute) {
         this.wxByRoute = wxByRoute;
         return this;
@@ -16,9 +18,13 @@ public class WxByRouteUsV1WxForecastRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public WxByRouteUsV1WxForecastRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public WxByRouteUsV1WxForecastRouteQueryPostRequest(@JsonProperty("WxByRoute") org.openapis.openapi.models.shared.WxByRoute wxByRoute) {
+        this.wxByRoute = wxByRoute;
+  }
 }

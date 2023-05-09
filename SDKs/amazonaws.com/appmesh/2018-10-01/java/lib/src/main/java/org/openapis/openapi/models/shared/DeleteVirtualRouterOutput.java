@@ -15,9 +15,11 @@ public class DeleteVirtualRouterOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualRouter")
     public VirtualRouterData virtualRouter;
+
     public DeleteVirtualRouterOutput withVirtualRouter(VirtualRouterData virtualRouter) {
         this.virtualRouter = virtualRouter;
         return this;
     }
     
+    public DeleteVirtualRouterOutput(){}
 }

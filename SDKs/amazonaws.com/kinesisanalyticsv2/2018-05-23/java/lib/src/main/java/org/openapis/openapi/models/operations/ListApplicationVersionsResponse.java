@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationVersionsResponse {
     
     public String contentType;
+
     public ListApplicationVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationVersionsResponse {
      */
     
     public Object invalidArgumentException;
+
     public ListApplicationVersionsResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationVersionsResponse listApplicationVersionsResponse;
+
     public ListApplicationVersionsResponse withListApplicationVersionsResponse(org.openapis.openapi.models.shared.ListApplicationVersionsResponse listApplicationVersionsResponse) {
         this.listApplicationVersionsResponse = listApplicationVersionsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListApplicationVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListApplicationVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListApplicationVersionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListApplicationVersionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class ListApplicationVersionsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListApplicationVersionsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListApplicationVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

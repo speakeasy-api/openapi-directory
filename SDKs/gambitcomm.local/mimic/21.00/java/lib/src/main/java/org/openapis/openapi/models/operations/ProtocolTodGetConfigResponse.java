@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolTodGetConfigResponse {
@@ -12,6 +13,7 @@ public class ProtocolTodGetConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigTOD configTOD;
+
     public ProtocolTodGetConfigResponse withConfigTOD(org.openapis.openapi.models.shared.ConfigTOD configTOD) {
         this.configTOD = configTOD;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolTodGetConfigResponse {
     
     
     public String contentType;
+
     public ProtocolTodGetConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolTodGetConfigResponse {
     
     
     public Integer statusCode;
+
     public ProtocolTodGetConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolTodGetConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolTodGetConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolTodGetConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

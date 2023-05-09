@@ -18,6 +18,7 @@ public class ImportMappingRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCommit")
     public Boolean autoCommit;
+
     public ImportMappingRulesRequest withAutoCommit(Boolean autoCommit) {
         this.autoCommit = autoCommit;
         return this;
@@ -29,6 +30,7 @@ public class ImportMappingRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesFiles")
     public RulesFile[] rulesFiles;
+
     public ImportMappingRulesRequest withRulesFiles(RulesFile[] rulesFiles) {
         this.rulesFiles = rulesFiles;
         return this;
@@ -40,9 +42,11 @@ public class ImportMappingRulesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rulesFormat")
     public ImportMappingRulesRequestRulesFormatEnum rulesFormat;
+
     public ImportMappingRulesRequest withRulesFormat(ImportMappingRulesRequestRulesFormatEnum rulesFormat) {
         this.rulesFormat = rulesFormat;
         return this;
     }
     
+    public ImportMappingRulesRequest(){}
 }

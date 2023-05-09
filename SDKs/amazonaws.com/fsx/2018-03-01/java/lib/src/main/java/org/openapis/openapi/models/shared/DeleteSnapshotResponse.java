@@ -15,6 +15,7 @@ public class DeleteSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lifecycle")
     public SnapshotLifecycleEnum lifecycle;
+
     public DeleteSnapshotResponse withLifecycle(SnapshotLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -23,9 +24,11 @@ public class DeleteSnapshotResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public DeleteSnapshotResponse withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public DeleteSnapshotResponse(){}
 }

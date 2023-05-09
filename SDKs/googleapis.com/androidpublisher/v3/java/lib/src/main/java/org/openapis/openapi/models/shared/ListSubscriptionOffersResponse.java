@@ -18,6 +18,7 @@ public class ListSubscriptionOffersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSubscriptionOffersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListSubscriptionOffersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionOffers")
     public SubscriptionOffer[] subscriptionOffers;
+
     public ListSubscriptionOffersResponse withSubscriptionOffers(SubscriptionOffer[] subscriptionOffers) {
         this.subscriptionOffers = subscriptionOffers;
         return this;
     }
     
+    public ListSubscriptionOffersResponse(){}
 }

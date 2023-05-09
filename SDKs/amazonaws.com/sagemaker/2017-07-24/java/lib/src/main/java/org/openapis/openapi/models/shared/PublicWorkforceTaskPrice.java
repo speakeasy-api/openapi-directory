@@ -15,9 +15,11 @@ public class PublicWorkforceTaskPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmountInUsd")
     public Usd amountInUsd;
+
     public PublicWorkforceTaskPrice withAmountInUsd(Usd amountInUsd) {
         this.amountInUsd = amountInUsd;
         return this;
     }
     
+    public PublicWorkforceTaskPrice(){}
 }

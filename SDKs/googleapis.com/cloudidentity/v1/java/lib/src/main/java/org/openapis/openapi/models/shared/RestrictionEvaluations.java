@@ -18,9 +18,11 @@ public class RestrictionEvaluations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberRestrictionEvaluation")
     public MembershipRoleRestrictionEvaluation memberRestrictionEvaluation;
+
     public RestrictionEvaluations withMemberRestrictionEvaluation(MembershipRoleRestrictionEvaluation memberRestrictionEvaluation) {
         this.memberRestrictionEvaluation = memberRestrictionEvaluation;
         return this;
     }
     
+    public RestrictionEvaluations(){}
 }

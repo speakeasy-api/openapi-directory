@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendCommandResponse {
@@ -12,6 +13,7 @@ public class SendCommandResponse {
      */
     
     public Object badRequestException;
+
     public SendCommandResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class SendCommandResponse {
      */
     
     public Object capacityExceededException;
+
     public SendCommandResponse withCapacityExceededException(Object capacityExceededException) {
         this.capacityExceededException = capacityExceededException;
         return this;
@@ -29,6 +32,7 @@ public class SendCommandResponse {
     
     
     public String contentType;
+
     public SendCommandResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendCommandResponse {
      */
     
     public Object invalidSessionException;
+
     public SendCommandResponse withInvalidSessionException(Object invalidSessionException) {
         this.invalidSessionException = invalidSessionException;
         return this;
@@ -49,6 +54,7 @@ public class SendCommandResponse {
      */
     
     public Object limitExceededException;
+
     public SendCommandResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class SendCommandResponse {
      */
     
     public Object occConflictException;
+
     public SendCommandResponse withOccConflictException(Object occConflictException) {
         this.occConflictException = occConflictException;
         return this;
@@ -69,6 +76,7 @@ public class SendCommandResponse {
      */
     
     public Object rateExceededException;
+
     public SendCommandResponse withRateExceededException(Object rateExceededException) {
         this.rateExceededException = rateExceededException;
         return this;
@@ -79,6 +87,7 @@ public class SendCommandResponse {
      */
     
     public org.openapis.openapi.models.shared.SendCommandResult sendCommandResult;
+
     public SendCommandResponse withSendCommandResult(org.openapis.openapi.models.shared.SendCommandResult sendCommandResult) {
         this.sendCommandResult = sendCommandResult;
         return this;
@@ -86,6 +95,7 @@ public class SendCommandResponse {
     
     
     public Integer statusCode;
+
     public SendCommandResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class SendCommandResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendCommandResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendCommandResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

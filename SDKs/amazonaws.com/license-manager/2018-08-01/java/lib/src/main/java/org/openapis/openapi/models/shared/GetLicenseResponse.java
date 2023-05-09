@@ -15,9 +15,11 @@ public class GetLicenseResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("License")
     public License license;
+
     public GetLicenseResponse withLicense(License license) {
         this.license = license;
         return this;
     }
     
+    public GetLicenseResponse(){}
 }

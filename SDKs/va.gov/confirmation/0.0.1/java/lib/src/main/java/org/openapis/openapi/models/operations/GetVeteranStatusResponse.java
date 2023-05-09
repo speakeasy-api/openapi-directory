@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVeteranStatusResponse {
@@ -12,6 +13,7 @@ public class GetVeteranStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.APIError apiError;
+
     public GetVeteranStatusResponse withAPIError(org.openapis.openapi.models.shared.APIError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetVeteranStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.AuthorizationError authorizationError;
+
     public GetVeteranStatusResponse withAuthorizationError(org.openapis.openapi.models.shared.AuthorizationError authorizationError) {
         this.authorizationError = authorizationError;
         return this;
@@ -29,6 +32,7 @@ public class GetVeteranStatusResponse {
     
     
     public String contentType;
+
     public GetVeteranStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetVeteranStatusResponse {
     
     
     public Integer statusCode;
+
     public GetVeteranStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetVeteranStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVeteranStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetVeteranStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.VeteranStatusConfirmation veteranStatusConfirmation;
+
     public GetVeteranStatusResponse withVeteranStatusConfirmation(org.openapis.openapi.models.shared.VeteranStatusConfirmation veteranStatusConfirmation) {
         this.veteranStatusConfirmation = veteranStatusConfirmation;
         return this;
     }
     
+    public GetVeteranStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

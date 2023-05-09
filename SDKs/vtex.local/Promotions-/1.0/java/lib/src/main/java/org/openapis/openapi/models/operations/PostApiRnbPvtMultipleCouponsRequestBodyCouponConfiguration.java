@@ -17,6 +17,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
      */
     @JsonProperty("couponCode")
     public String couponCode;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -27,6 +28,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
      */
     @JsonProperty("expirationIntervalPerUse")
     public String expirationIntervalPerUse;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withExpirationIntervalPerUse(String expirationIntervalPerUse) {
         this.expirationIntervalPerUse = expirationIntervalPerUse;
         return this;
@@ -38,6 +40,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -48,6 +51,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
      */
     @JsonProperty("maxItemsPerClient")
     public Long maxItemsPerClient;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withMaxItemsPerClient(Long maxItemsPerClient) {
         this.maxItemsPerClient = maxItemsPerClient;
         return this;
@@ -58,6 +62,7 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
      */
     @JsonProperty("utmCampaign")
     public String utmCampaign;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -68,9 +73,17 @@ public class PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration {
      */
     @JsonProperty("utmSource")
     public String utmSource;
+
     public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
     }
     
+    public PostApiRnbPvtMultipleCouponsRequestBodyCouponConfiguration(@JsonProperty("couponCode") String couponCode, @JsonProperty("expirationIntervalPerUse") String expirationIntervalPerUse, @JsonProperty("maxItemsPerClient") Long maxItemsPerClient, @JsonProperty("utmCampaign") String utmCampaign, @JsonProperty("utmSource") String utmSource) {
+        this.couponCode = couponCode;
+        this.expirationIntervalPerUse = expirationIntervalPerUse;
+        this.maxItemsPerClient = maxItemsPerClient;
+        this.utmCampaign = utmCampaign;
+        this.utmSource = utmSource;
+  }
 }

@@ -57,12 +57,10 @@ public class OrgSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV2OrgsNameSettingsResponse res = new org.openapis.openapi.models.operations.GetV2OrgsNameSettingsResponse() {{
+        org.openapis.openapi.models.operations.GetV2OrgsNameSettingsResponse res = new org.openapis.openapi.models.operations.GetV2OrgsNameSettingsResponse(contentType, httpRes.statusCode()) {{
             orgSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class OrgSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutV2OrgsNameSettingsResponse res = new org.openapis.openapi.models.operations.PutV2OrgsNameSettingsResponse() {{
+        org.openapis.openapi.models.operations.PutV2OrgsNameSettingsResponse res = new org.openapis.openapi.models.operations.PutV2OrgsNameSettingsResponse(contentType, httpRes.statusCode()) {{
             orgSettings = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow")
     public java.util.Map<String, Object> allow;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallAction withAllow(java.util.Map<String, Object> allow) {
         this.allow = allow;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("block")
     public java.util.Map<String, Object> block;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallAction withBlock(java.util.Map<String, Object> block) {
         this.block = block;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect")
     public java.util.Map<String, Object> redirect;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallAction withRedirect(java.util.Map<String, Object> redirect) {
         this.redirect = redirect;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setHeader")
     public GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction setHeader;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallAction withSetHeader(GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction setHeader) {
         this.setHeader = setHeader;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecaptchaenterpriseV1FirewallAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("substitute")
     public GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction substitute;
+
     public GoogleCloudRecaptchaenterpriseV1FirewallAction withSubstitute(GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction substitute) {
         this.substitute = substitute;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1FirewallAction(){}
 }

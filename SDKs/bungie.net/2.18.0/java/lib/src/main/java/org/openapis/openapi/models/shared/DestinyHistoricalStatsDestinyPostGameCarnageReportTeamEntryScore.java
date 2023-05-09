@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore {
      */
     
     public Long activityId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore withActivityId(Long activityId) {
         this.activityId = activityId;
         return this;
@@ -25,6 +26,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScoreBasic basic;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore withBasic(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScoreBasic basic) {
         this.basic = basic;
         return this;
@@ -35,6 +37,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga pga;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore withPga(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScorePga pga) {
         this.pga = pga;
         return this;
@@ -45,6 +48,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore {
      */
     
     public String statId;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore withStatId(String statId) {
         this.statId = statId;
         return this;
@@ -55,9 +59,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore {
      */
     
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScoreWeighted weighted;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore withWeighted(DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScoreWeighted weighted) {
         this.weighted = weighted;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportTeamEntryScore(){}
 }

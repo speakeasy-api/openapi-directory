@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOperationsForConnectionResponse {
     
     public String contentType;
+
     public ListOperationsForConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOperationsForConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public ListOperationsForConnectionResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class ListOperationsForConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public ListOperationsForConnectionResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class ListOperationsForConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.OperationReadList operationReadList;
+
     public ListOperationsForConnectionResponse withOperationReadList(org.openapis.openapi.models.shared.OperationReadList operationReadList) {
         this.operationReadList = operationReadList;
         return this;
@@ -46,6 +51,7 @@ public class ListOperationsForConnectionResponse {
     
     
     public Integer statusCode;
+
     public ListOperationsForConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListOperationsForConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOperationsForConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListOperationsForConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent withId(Integer id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent withIndex(Integer index) {
         this.index = index;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentProvenanceParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revision")
     public Integer revision;
+
     public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent withRevision(Integer revision) {
         this.revision = revision;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentProvenanceParent(){}
 }

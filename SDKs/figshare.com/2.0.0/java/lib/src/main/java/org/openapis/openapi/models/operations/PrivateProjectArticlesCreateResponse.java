@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivateProjectArticlesCreateResponse {
     
     public String contentType;
+
     public PrivateProjectArticlesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivateProjectArticlesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorMessage errorMessage;
+
     public PrivateProjectArticlesCreateResponse withErrorMessage(org.openapis.openapi.models.shared.ErrorMessage errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,6 +29,7 @@ public class PrivateProjectArticlesCreateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PrivateProjectArticlesCreateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class PrivateProjectArticlesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.LocationWarnings locationWarnings;
+
     public PrivateProjectArticlesCreateResponse withLocationWarnings(org.openapis.openapi.models.shared.LocationWarnings locationWarnings) {
         this.locationWarnings = locationWarnings;
         return this;
@@ -43,6 +48,7 @@ public class PrivateProjectArticlesCreateResponse {
     
     
     public Integer statusCode;
+
     public PrivateProjectArticlesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class PrivateProjectArticlesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivateProjectArticlesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivateProjectArticlesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

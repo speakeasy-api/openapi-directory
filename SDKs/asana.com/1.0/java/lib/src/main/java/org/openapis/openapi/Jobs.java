@@ -65,12 +65,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJobResponse res = new org.openapis.openapi.models.operations.GetJobResponse() {{
+        org.openapis.openapi.models.operations.GetJobResponse res = new org.openapis.openapi.models.operations.GetJobResponse(contentType, httpRes.statusCode()) {{
             getJob200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

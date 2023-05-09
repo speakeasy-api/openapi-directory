@@ -70,12 +70,10 @@ public class ClassificationInclusion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationInclusionsResponse res = new org.openapis.openapi.models.operations.GetClassificationInclusionsResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationInclusionsResponse res = new org.openapis.openapi.models.operations.GetClassificationInclusionsResponse(contentType, httpRes.statusCode()) {{
             getClassificationInclusions200ApplicationVndApiPlusJsonObject = null;
             getClassificationInclusions400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class ClassificationInclusion {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse res = new org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse res = new org.openapis.openapi.models.operations.GetClassificationInclusionsIdResponse(contentType, httpRes.statusCode()) {{
             getClassificationInclusionsId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

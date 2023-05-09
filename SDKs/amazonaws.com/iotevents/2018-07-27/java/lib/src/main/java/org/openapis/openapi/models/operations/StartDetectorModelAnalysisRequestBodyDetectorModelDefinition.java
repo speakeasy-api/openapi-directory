@@ -15,6 +15,7 @@ public class StartDetectorModelAnalysisRequestBodyDetectorModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialStateName")
     public String initialStateName;
+
     public StartDetectorModelAnalysisRequestBodyDetectorModelDefinition withInitialStateName(String initialStateName) {
         this.initialStateName = initialStateName;
         return this;
@@ -23,9 +24,11 @@ public class StartDetectorModelAnalysisRequestBodyDetectorModelDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public org.openapis.openapi.models.shared.State[] states;
+
     public StartDetectorModelAnalysisRequestBodyDetectorModelDefinition withStates(org.openapis.openapi.models.shared.State[] states) {
         this.states = states;
         return this;
     }
     
+    public StartDetectorModelAnalysisRequestBodyDetectorModelDefinition(){}
 }

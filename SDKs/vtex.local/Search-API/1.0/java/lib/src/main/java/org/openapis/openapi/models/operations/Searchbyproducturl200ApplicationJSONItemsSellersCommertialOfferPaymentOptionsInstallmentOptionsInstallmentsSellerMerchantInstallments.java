@@ -12,6 +12,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("count")
     public Long count;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("hasInterestRate")
     public Boolean hasInterestRate;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withHasInterestRate(Boolean hasInterestRate) {
         this.hasInterestRate = hasInterestRate;
         return this;
@@ -32,6 +34,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("id")
     public String id;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("interestRate")
     public Long interestRate;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withInterestRate(Long interestRate) {
         this.interestRate = interestRate;
         return this;
@@ -52,6 +56,7 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("total")
     public Long total;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withTotal(Long total) {
         this.total = total;
         return this;
@@ -62,9 +67,18 @@ public class Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaym
      */
     @JsonProperty("value")
     public Long value;
+
     public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Searchbyproducturl200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments(@JsonProperty("count") Long count, @JsonProperty("hasInterestRate") Boolean hasInterestRate, @JsonProperty("id") String id, @JsonProperty("interestRate") Long interestRate, @JsonProperty("total") Long total, @JsonProperty("value") Long value) {
+        this.count = count;
+        this.hasInterestRate = hasInterestRate;
+        this.id = id;
+        this.interestRate = interestRate;
+        this.total = total;
+        this.value = value;
+  }
 }

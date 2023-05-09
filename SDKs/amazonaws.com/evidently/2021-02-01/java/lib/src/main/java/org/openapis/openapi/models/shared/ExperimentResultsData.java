@@ -15,6 +15,7 @@ public class ExperimentResultsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public ExperimentResultsData withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class ExperimentResultsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultStat")
     public ExperimentResultResponseTypeEnum resultStat;
+
     public ExperimentResultsData withResultStat(ExperimentResultResponseTypeEnum resultStat) {
         this.resultStat = resultStat;
         return this;
@@ -31,6 +33,7 @@ public class ExperimentResultsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treatmentName")
     public String treatmentName;
+
     public ExperimentResultsData withTreatmentName(String treatmentName) {
         this.treatmentName = treatmentName;
         return this;
@@ -39,9 +42,11 @@ public class ExperimentResultsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Double[] values;
+
     public ExperimentResultsData withValues(Double[] values) {
         this.values = values;
         return this;
     }
     
+    public ExperimentResultsData(){}
 }

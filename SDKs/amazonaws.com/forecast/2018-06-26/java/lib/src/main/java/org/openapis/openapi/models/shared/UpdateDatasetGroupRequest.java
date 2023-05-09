@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDatasetGroupRequest {
     @JsonProperty("DatasetArns")
     public String[] datasetArns;
+
     public UpdateDatasetGroupRequest withDatasetArns(String[] datasetArns) {
         this.datasetArns = datasetArns;
         return this;
@@ -16,9 +17,14 @@ public class UpdateDatasetGroupRequest {
     
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public UpdateDatasetGroupRequest withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
     }
     
+    public UpdateDatasetGroupRequest(@JsonProperty("DatasetArns") String[] datasetArns, @JsonProperty("DatasetGroupArn") String datasetGroupArn) {
+        this.datasetArns = datasetArns;
+        this.datasetGroupArn = datasetGroupArn;
+  }
 }

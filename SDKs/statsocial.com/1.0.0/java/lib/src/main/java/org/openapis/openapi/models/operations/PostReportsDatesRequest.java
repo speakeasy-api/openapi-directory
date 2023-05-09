@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostReportsDatesRequest {
@@ -12,9 +13,13 @@ public class PostReportsDatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_hash")
     public String reportHash;
+
     public PostReportsDatesRequest withReportHash(String reportHash) {
         this.reportHash = reportHash;
         return this;
     }
     
+    public PostReportsDatesRequest(@JsonProperty("report_hash") String reportHash) {
+        this.reportHash = reportHash;
+  }
 }

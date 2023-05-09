@@ -18,6 +18,7 @@ public class ListEffectiveTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveTags")
     public EffectiveTag[] effectiveTags;
+
     public ListEffectiveTagsResponse withEffectiveTags(EffectiveTag[] effectiveTags) {
         this.effectiveTags = effectiveTags;
         return this;
@@ -29,9 +30,11 @@ public class ListEffectiveTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEffectiveTagsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEffectiveTagsResponse(){}
 }

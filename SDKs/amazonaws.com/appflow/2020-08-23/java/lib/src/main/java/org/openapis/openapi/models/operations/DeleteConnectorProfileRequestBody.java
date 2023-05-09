@@ -14,6 +14,7 @@ public class DeleteConnectorProfileRequestBody {
      */
     @JsonProperty("connectorProfileName")
     public String connectorProfileName;
+
     public DeleteConnectorProfileRequestBody withConnectorProfileName(String connectorProfileName) {
         this.connectorProfileName = connectorProfileName;
         return this;
@@ -25,9 +26,13 @@ public class DeleteConnectorProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDelete")
     public Boolean forceDelete;
+
     public DeleteConnectorProfileRequestBody withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public DeleteConnectorProfileRequestBody(@JsonProperty("connectorProfileName") String connectorProfileName) {
+        this.connectorProfileName = connectorProfileName;
+  }
 }

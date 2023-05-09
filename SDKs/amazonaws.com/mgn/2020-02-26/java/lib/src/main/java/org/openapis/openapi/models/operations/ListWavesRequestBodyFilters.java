@@ -15,6 +15,7 @@ public class ListWavesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public ListWavesRequestBodyFilters withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -23,9 +24,11 @@ public class ListWavesRequestBodyFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveIDs")
     public String[] waveIDs;
+
     public ListWavesRequestBodyFilters withWaveIDs(String[] waveIDs) {
         this.waveIDs = waveIDs;
         return this;
     }
     
+    public ListWavesRequestBodyFilters(){}
 }

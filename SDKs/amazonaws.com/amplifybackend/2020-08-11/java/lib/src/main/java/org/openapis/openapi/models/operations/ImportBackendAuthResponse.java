@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportBackendAuthResponse {
@@ -12,6 +13,7 @@ public class ImportBackendAuthResponse {
      */
     
     public Object badRequestException;
+
     public ImportBackendAuthResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ImportBackendAuthResponse {
     
     
     public String contentType;
+
     public ImportBackendAuthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportBackendAuthResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public ImportBackendAuthResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class ImportBackendAuthResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportBackendAuthResponse importBackendAuthResponse;
+
     public ImportBackendAuthResponse withImportBackendAuthResponse(org.openapis.openapi.models.shared.ImportBackendAuthResponse importBackendAuthResponse) {
         this.importBackendAuthResponse = importBackendAuthResponse;
         return this;
@@ -49,6 +54,7 @@ public class ImportBackendAuthResponse {
      */
     
     public Object notFoundException;
+
     public ImportBackendAuthResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ImportBackendAuthResponse {
     
     
     public Integer statusCode;
+
     public ImportBackendAuthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportBackendAuthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportBackendAuthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ImportBackendAuthResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ImportBackendAuthResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ImportBackendAuthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

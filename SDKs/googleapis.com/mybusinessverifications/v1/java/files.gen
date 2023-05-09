@@ -70,4 +70,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/VerificationToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/GenerateVerificationTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GenerateVerificationTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
+docs/sdk/README.md
+docs/locations/README.md
+docs/verificationtokens/README.md
 USAGE.md

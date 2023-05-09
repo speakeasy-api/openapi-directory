@@ -17,9 +17,13 @@ public class CancelInvoiceRequest {
      */
     @JsonProperty("version")
     public Long version;
+
     public CancelInvoiceRequest withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public CancelInvoiceRequest(@JsonProperty("version") Long version) {
+        this.version = version;
+  }
 }

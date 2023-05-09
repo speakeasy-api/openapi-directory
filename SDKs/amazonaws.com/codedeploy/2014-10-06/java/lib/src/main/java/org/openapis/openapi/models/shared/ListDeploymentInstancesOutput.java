@@ -15,6 +15,7 @@ public class ListDeploymentInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instancesList")
     public String[] instancesList;
+
     public ListDeploymentInstancesOutput withInstancesList(String[] instancesList) {
         this.instancesList = instancesList;
         return this;
@@ -23,9 +24,11 @@ public class ListDeploymentInstancesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDeploymentInstancesOutput(){}
 }

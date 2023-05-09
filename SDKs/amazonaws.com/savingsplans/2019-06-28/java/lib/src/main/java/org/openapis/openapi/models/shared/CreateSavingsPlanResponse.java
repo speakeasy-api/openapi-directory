@@ -15,9 +15,11 @@ public class CreateSavingsPlanResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanId")
     public String savingsPlanId;
+
     public CreateSavingsPlanResponse withSavingsPlanId(String savingsPlanId) {
         this.savingsPlanId = savingsPlanId;
         return this;
     }
     
+    public CreateSavingsPlanResponse(){}
 }

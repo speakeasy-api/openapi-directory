@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AutoAdjustData {
     @JsonProperty("AutoAdjustType")
     public AutoAdjustTypeEnum autoAdjustType;
+
     public AutoAdjustData withAutoAdjustType(AutoAdjustTypeEnum autoAdjustType) {
         this.autoAdjustType = autoAdjustType;
         return this;
@@ -27,6 +28,7 @@ public class AutoAdjustData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HistoricalOptions")
     public HistoricalOptions historicalOptions;
+
     public AutoAdjustData withHistoricalOptions(HistoricalOptions historicalOptions) {
         this.historicalOptions = historicalOptions;
         return this;
@@ -37,9 +39,13 @@ public class AutoAdjustData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAutoAdjustTime")
     public OffsetDateTime lastAutoAdjustTime;
+
     public AutoAdjustData withLastAutoAdjustTime(OffsetDateTime lastAutoAdjustTime) {
         this.lastAutoAdjustTime = lastAutoAdjustTime;
         return this;
     }
     
+    public AutoAdjustData(@JsonProperty("AutoAdjustType") AutoAdjustTypeEnum autoAdjustType) {
+        this.autoAdjustType = autoAdjustType;
+  }
 }

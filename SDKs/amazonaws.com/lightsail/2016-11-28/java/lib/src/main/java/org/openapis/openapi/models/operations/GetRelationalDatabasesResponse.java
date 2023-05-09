@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabasesResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabasesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabasesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabasesResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabasesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabasesResult getRelationalDatabasesResult;
+
     public GetRelationalDatabasesResponse withGetRelationalDatabasesResult(org.openapis.openapi.models.shared.GetRelationalDatabasesResult getRelationalDatabasesResult) {
         this.getRelationalDatabasesResult = getRelationalDatabasesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabasesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabasesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabasesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabasesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabasesResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabasesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabasesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabasesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabasesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabasesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabasesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

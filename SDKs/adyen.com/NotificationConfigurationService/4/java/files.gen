@@ -47,6 +47,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetNotificationConfiguratio
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationConfigurationDetailsMessageFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationConfigurationDetailsSslProtocolEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationConfigurationDetails.java
+lib/src/main/java/org/openapis/openapi/models/shared/NotificationEventConfigurationWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationEventConfigurationEventTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationEventConfigurationIncludeModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/NotificationEventConfiguration.java
@@ -56,10 +57,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/GenericResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/DeleteNotificationConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetNotificationConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetNotificationConfigurationListResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/NotificationConfigurationDetailsWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationResponseEventTypesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/ExchangeMessageWrapper.java
 lib/src/main/java/org/openapis/openapi/models/shared/ExchangeMessage.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationRequestEventTypesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestNotificationConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateNotificationConfigurationRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

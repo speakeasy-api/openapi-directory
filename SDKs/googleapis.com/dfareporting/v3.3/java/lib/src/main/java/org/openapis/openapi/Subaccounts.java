@@ -59,11 +59,9 @@ public class Subaccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingSubaccountsGetResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingSubaccountsGetResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsGetResponse(contentType, httpRes.statusCode()) {{
             subaccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Subaccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingSubaccountsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingSubaccountsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsInsertResponse(contentType, httpRes.statusCode()) {{
             subaccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Subaccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingSubaccountsListResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingSubaccountsListResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsListResponse(contentType, httpRes.statusCode()) {{
             subaccountsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Subaccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingSubaccountsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingSubaccountsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsPatchResponse(contentType, httpRes.statusCode()) {{
             subaccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -249,11 +241,9 @@ public class Subaccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingSubaccountsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingSubaccountsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingSubaccountsUpdateResponse(contentType, httpRes.statusCode()) {{
             subaccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

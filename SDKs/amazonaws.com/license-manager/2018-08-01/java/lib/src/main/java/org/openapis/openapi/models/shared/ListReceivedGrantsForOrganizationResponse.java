@@ -15,6 +15,7 @@ public class ListReceivedGrantsForOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Grants")
     public Grant[] grants;
+
     public ListReceivedGrantsForOrganizationResponse withGrants(Grant[] grants) {
         this.grants = grants;
         return this;
@@ -23,9 +24,11 @@ public class ListReceivedGrantsForOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReceivedGrantsForOrganizationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReceivedGrantsForOrganizationResponse(){}
 }

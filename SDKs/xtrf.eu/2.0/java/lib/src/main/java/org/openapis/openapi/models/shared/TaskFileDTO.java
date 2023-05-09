@@ -18,6 +18,7 @@ public class TaskFileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public TaskFileDTOCategoryEnum category;
+
     public TaskFileDTO withCategory(TaskFileDTOCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,6 +27,7 @@ public class TaskFileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public TaskFileDTO withContent(String content) {
         this.content = content;
         return this;
@@ -34,6 +36,7 @@ public class TaskFileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskFileDTO withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class TaskFileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public TaskFileDTO withToken(String token) {
         this.token = token;
         return this;
@@ -50,9 +54,11 @@ public class TaskFileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TaskFileDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TaskFileDTO(){}
 }

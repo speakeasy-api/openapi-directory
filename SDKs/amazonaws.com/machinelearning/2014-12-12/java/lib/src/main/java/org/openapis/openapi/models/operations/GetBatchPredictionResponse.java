@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBatchPredictionResponse {
     
     public String contentType;
+
     public GetBatchPredictionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetBatchPredictionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBatchPredictionOutput getBatchPredictionOutput;
+
     public GetBatchPredictionResponse withGetBatchPredictionOutput(org.openapis.openapi.models.shared.GetBatchPredictionOutput getBatchPredictionOutput) {
         this.getBatchPredictionOutput = getBatchPredictionOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetBatchPredictionResponse {
      */
     
     public Object internalServerException;
+
     public GetBatchPredictionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetBatchPredictionResponse {
      */
     
     public Object invalidInputException;
+
     public GetBatchPredictionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class GetBatchPredictionResponse {
     
     
     public Integer statusCode;
+
     public GetBatchPredictionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetBatchPredictionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBatchPredictionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetBatchPredictionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetBatchPredictionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetBatchPredictionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

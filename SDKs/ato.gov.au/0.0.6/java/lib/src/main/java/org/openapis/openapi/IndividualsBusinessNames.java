@@ -67,12 +67,10 @@ public class IndividualsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -123,13 +121,11 @@ public class IndividualsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesResponse(contentType, httpRes.statusCode()) {{
             businessNames = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,13 +185,11 @@ public class IndividualsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,13 +252,11 @@ public class IndividualsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostIndividualsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdBusinessNamesResponse() {{
+        org.openapis.openapi.models.operations.PostIndividualsPartyIdBusinessNamesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdBusinessNamesResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -329,14 +321,12 @@ public class IndividualsBusinessNames {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdBusinessNamesProductIdResponse() {{
+        org.openapis.openapi.models.operations.PutIndividualsPartyIdBusinessNamesProductIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdBusinessNamesProductIdResponse(contentType, httpRes.statusCode()) {{
             businessName = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

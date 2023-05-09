@@ -12,9 +12,11 @@ public class GetFactFodRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public String category;
+
     public GetFactFodRequest withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public GetFactFodRequest(){}
 }

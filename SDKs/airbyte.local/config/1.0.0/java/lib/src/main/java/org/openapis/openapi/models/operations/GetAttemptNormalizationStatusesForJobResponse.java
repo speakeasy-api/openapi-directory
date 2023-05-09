@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAttemptNormalizationStatusesForJobResponse {
@@ -12,6 +13,7 @@ public class GetAttemptNormalizationStatusesForJobResponse {
      */
     
     public org.openapis.openapi.models.shared.AttemptNormalizationStatusReadList attemptNormalizationStatusReadList;
+
     public GetAttemptNormalizationStatusesForJobResponse withAttemptNormalizationStatusReadList(org.openapis.openapi.models.shared.AttemptNormalizationStatusReadList attemptNormalizationStatusReadList) {
         this.attemptNormalizationStatusReadList = attemptNormalizationStatusReadList;
         return this;
@@ -19,6 +21,7 @@ public class GetAttemptNormalizationStatusesForJobResponse {
     
     
     public String contentType;
+
     public GetAttemptNormalizationStatusesForJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetAttemptNormalizationStatusesForJobResponse {
     
     
     public Integer statusCode;
+
     public GetAttemptNormalizationStatusesForJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetAttemptNormalizationStatusesForJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAttemptNormalizationStatusesForJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetAttemptNormalizationStatusesForJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

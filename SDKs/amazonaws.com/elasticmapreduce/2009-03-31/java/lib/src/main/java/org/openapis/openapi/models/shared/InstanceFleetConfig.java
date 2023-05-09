@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstanceFleetConfig {
     @JsonProperty("InstanceFleetType")
     public InstanceFleetTypeEnum instanceFleetType;
+
     public InstanceFleetConfig withInstanceFleetType(InstanceFleetTypeEnum instanceFleetType) {
         this.instanceFleetType = instanceFleetType;
         return this;
@@ -22,6 +23,7 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceTypeConfigs")
     public InstanceTypeConfig[] instanceTypeConfigs;
+
     public InstanceFleetConfig withInstanceTypeConfigs(InstanceTypeConfig[] instanceTypeConfigs) {
         this.instanceTypeConfigs = instanceTypeConfigs;
         return this;
@@ -30,6 +32,7 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchSpecifications")
     public InstanceFleetProvisioningSpecifications launchSpecifications;
+
     public InstanceFleetConfig withLaunchSpecifications(InstanceFleetProvisioningSpecifications launchSpecifications) {
         this.launchSpecifications = launchSpecifications;
         return this;
@@ -38,6 +41,7 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public InstanceFleetConfig withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +50,7 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResizeSpecifications")
     public InstanceFleetResizingSpecifications resizeSpecifications;
+
     public InstanceFleetConfig withResizeSpecifications(InstanceFleetResizingSpecifications resizeSpecifications) {
         this.resizeSpecifications = resizeSpecifications;
         return this;
@@ -54,6 +59,7 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetOnDemandCapacity")
     public Long targetOnDemandCapacity;
+
     public InstanceFleetConfig withTargetOnDemandCapacity(Long targetOnDemandCapacity) {
         this.targetOnDemandCapacity = targetOnDemandCapacity;
         return this;
@@ -62,9 +68,13 @@ public class InstanceFleetConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetSpotCapacity")
     public Long targetSpotCapacity;
+
     public InstanceFleetConfig withTargetSpotCapacity(Long targetSpotCapacity) {
         this.targetSpotCapacity = targetSpotCapacity;
         return this;
     }
     
+    public InstanceFleetConfig(@JsonProperty("InstanceFleetType") InstanceFleetTypeEnum instanceFleetType) {
+        this.instanceFleetType = instanceFleetType;
+  }
 }

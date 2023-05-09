@@ -15,9 +15,11 @@ public class StartSNOMEDCTInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StartSNOMEDCTInferenceJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StartSNOMEDCTInferenceJobResponse(){}
 }

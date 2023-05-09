@@ -12,9 +12,13 @@ public class DeleteResponsePlanRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public DeleteResponsePlanRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteResponsePlanRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

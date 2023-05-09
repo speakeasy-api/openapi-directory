@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Sku {
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public Sku withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -16,6 +17,7 @@ public class Sku {
     
     @JsonProperty("id")
     public String id;
+
     public Sku withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +25,7 @@ public class Sku {
     
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Sku withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -30,6 +33,7 @@ public class Sku {
     
     @JsonProperty("name")
     public String name;
+
     public Sku withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class Sku {
     
     @JsonProperty("nameComplete")
     public String nameComplete;
+
     public Sku withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -44,9 +49,18 @@ public class Sku {
     
     @JsonProperty("productName")
     public String productName;
+
     public Sku withProductName(String productName) {
         this.productName = productName;
         return this;
     }
     
+    public Sku(@JsonProperty("detailUrl") String detailUrl, @JsonProperty("id") String id, @JsonProperty("imageUrl") String imageUrl, @JsonProperty("name") String name, @JsonProperty("nameComplete") String nameComplete, @JsonProperty("productName") String productName) {
+        this.detailUrl = detailUrl;
+        this.id = id;
+        this.imageUrl = imageUrl;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.productName = productName;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public GoogleAppsCardV1Icon withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public GoogleAppsCardV1Icon withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageType")
     public GoogleAppsCardV1IconImageTypeEnum imageType;
+
     public GoogleAppsCardV1Icon withImageType(GoogleAppsCardV1IconImageTypeEnum imageType) {
         this.imageType = imageType;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsCardV1Icon {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knownIcon")
     public String knownIcon;
+
     public GoogleAppsCardV1Icon withKnownIcon(String knownIcon) {
         this.knownIcon = knownIcon;
         return this;
     }
     
+    public GoogleAppsCardV1Icon(){}
 }

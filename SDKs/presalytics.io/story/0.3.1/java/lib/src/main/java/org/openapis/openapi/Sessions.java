@@ -53,11 +53,9 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionIdDeleteResponse res = new org.openapis.openapi.models.operations.SessionIdDeleteResponse() {{
+        org.openapis.openapi.models.operations.SessionIdDeleteResponse res = new org.openapis.openapi.models.operations.SessionIdDeleteResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -100,12 +98,10 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionIdGetResponse res = new org.openapis.openapi.models.operations.SessionIdGetResponse() {{
+        org.openapis.openapi.models.operations.SessionIdGetResponse res = new org.openapis.openapi.models.operations.SessionIdGetResponse(contentType, httpRes.statusCode()) {{
             session = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdSessionPostResponse res = new org.openapis.openapi.models.operations.StoryIdSessionPostResponse() {{
+        org.openapis.openapi.models.operations.StoryIdSessionPostResponse res = new org.openapis.openapi.models.operations.StoryIdSessionPostResponse(contentType, httpRes.statusCode()) {{
             session = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,12 +199,10 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdSessionsGetResponse res = new org.openapis.openapi.models.operations.StoryIdSessionsGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdSessionsGetResponse res = new org.openapis.openapi.models.operations.StoryIdSessionsGetResponse(contentType, httpRes.statusCode()) {{
             sessions = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

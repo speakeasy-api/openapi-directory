@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteDBSnapshotResult {
     
     public DBSnapshot dbSnapshot;
+
     public DeleteDBSnapshotResult withDBSnapshot(DBSnapshot dbSnapshot) {
         this.dbSnapshot = dbSnapshot;
         return this;
     }
     
+    public DeleteDBSnapshotResult(){}
 }

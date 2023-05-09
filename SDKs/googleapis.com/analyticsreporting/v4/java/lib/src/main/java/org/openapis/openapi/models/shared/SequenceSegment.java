@@ -18,6 +18,7 @@ public class SequenceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstStepShouldMatchFirstHit")
     public Boolean firstStepShouldMatchFirstHit;
+
     public SequenceSegment withFirstStepShouldMatchFirstHit(Boolean firstStepShouldMatchFirstHit) {
         this.firstStepShouldMatchFirstHit = firstStepShouldMatchFirstHit;
         return this;
@@ -29,9 +30,11 @@ public class SequenceSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentSequenceSteps")
     public SegmentSequenceStep[] segmentSequenceSteps;
+
     public SequenceSegment withSegmentSequenceSteps(SegmentSequenceStep[] segmentSequenceSteps) {
         this.segmentSequenceSteps = segmentSequenceSteps;
         return this;
     }
     
+    public SequenceSegment(){}
 }

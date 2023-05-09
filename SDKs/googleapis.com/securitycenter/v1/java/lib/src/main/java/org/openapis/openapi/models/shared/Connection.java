@@ -18,6 +18,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationIp")
     public String destinationIp;
+
     public Connection withDestinationIp(String destinationIp) {
         this.destinationIp = destinationIp;
         return this;
@@ -29,6 +30,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationPort")
     public Integer destinationPort;
+
     public Connection withDestinationPort(Integer destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -40,6 +42,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public ConnectionProtocolEnum protocol;
+
     public Connection withProtocol(ConnectionProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -51,6 +54,7 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIp")
     public String sourceIp;
+
     public Connection withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -62,9 +66,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourcePort")
     public Integer sourcePort;
+
     public Connection withSourcePort(Integer sourcePort) {
         this.sourcePort = sourcePort;
         return this;
     }
     
+    public Connection(){}
 }

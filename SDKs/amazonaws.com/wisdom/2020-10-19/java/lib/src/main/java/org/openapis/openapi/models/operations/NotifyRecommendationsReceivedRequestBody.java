@@ -12,9 +12,13 @@ public class NotifyRecommendationsReceivedRequestBody {
      */
     @JsonProperty("recommendationIds")
     public String[] recommendationIds;
+
     public NotifyRecommendationsReceivedRequestBody withRecommendationIds(String[] recommendationIds) {
         this.recommendationIds = recommendationIds;
         return this;
     }
     
+    public NotifyRecommendationsReceivedRequestBody(@JsonProperty("recommendationIds") String[] recommendationIds) {
+        this.recommendationIds = recommendationIds;
+  }
 }

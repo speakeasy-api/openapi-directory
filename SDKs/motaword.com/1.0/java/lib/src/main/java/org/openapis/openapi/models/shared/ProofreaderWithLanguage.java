@@ -15,6 +15,7 @@ public class ProofreaderWithLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("full_name")
     public String fullName;
+
     public ProofreaderWithLanguage withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -26,6 +27,7 @@ public class ProofreaderWithLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public ProofreaderWithLanguage withId(Double id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ProofreaderWithLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public ProofreaderWithLanguage withLanguage(String language) {
         this.language = language;
         return this;
@@ -48,9 +51,11 @@ public class ProofreaderWithLanguage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendor_link")
     public String vendorLink;
+
     public ProofreaderWithLanguage withVendorLink(String vendorLink) {
         this.vendorLink = vendorLink;
         return this;
     }
     
+    public ProofreaderWithLanguage(){}
 }

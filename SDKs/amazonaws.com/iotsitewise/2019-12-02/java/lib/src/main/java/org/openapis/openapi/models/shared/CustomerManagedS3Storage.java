@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerManagedS3Storage {
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CustomerManagedS3Storage withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -19,9 +20,14 @@ public class CustomerManagedS3Storage {
     
     @JsonProperty("s3ResourceArn")
     public String s3ResourceArn;
+
     public CustomerManagedS3Storage withS3ResourceArn(String s3ResourceArn) {
         this.s3ResourceArn = s3ResourceArn;
         return this;
     }
     
+    public CustomerManagedS3Storage(@JsonProperty("roleArn") String roleArn, @JsonProperty("s3ResourceArn") String s3ResourceArn) {
+        this.roleArn = roleArn;
+        this.s3ResourceArn = s3ResourceArn;
+  }
 }

@@ -16,6 +16,7 @@ public class GetCostEstimateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetCostEstimateRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class GetCostEstimateRequest {
     
     @JsonProperty("resourceName")
     public String resourceName;
+
     public GetCostEstimateRequest withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -32,9 +34,15 @@ public class GetCostEstimateRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetCostEstimateRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GetCostEstimateRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("resourceName") String resourceName, @JsonProperty("startTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.resourceName = resourceName;
+        this.startTime = startTime;
+  }
 }

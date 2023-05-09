@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AcceptReservedInstancesExchangeQuoteResult {
     
     public String exchangeId;
+
     public AcceptReservedInstancesExchangeQuoteResult withExchangeId(String exchangeId) {
         this.exchangeId = exchangeId;
         return this;
     }
     
+    public AcceptReservedInstancesExchangeQuoteResult(){}
 }

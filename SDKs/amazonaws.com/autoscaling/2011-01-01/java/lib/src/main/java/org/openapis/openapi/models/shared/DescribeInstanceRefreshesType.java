@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeInstanceRefreshesType {
     
     public String autoScalingGroupName;
+
     public DescribeInstanceRefreshesType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeInstanceRefreshesType {
     
     
     public String[] instanceRefreshIds;
+
     public DescribeInstanceRefreshesType withInstanceRefreshIds(String[] instanceRefreshIds) {
         this.instanceRefreshIds = instanceRefreshIds;
         return this;
@@ -23,6 +25,7 @@ public class DescribeInstanceRefreshesType {
     
     
     public Long maxRecords;
+
     public DescribeInstanceRefreshesType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,13 @@ public class DescribeInstanceRefreshesType {
     
     
     public String nextToken;
+
     public DescribeInstanceRefreshesType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceRefreshesType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

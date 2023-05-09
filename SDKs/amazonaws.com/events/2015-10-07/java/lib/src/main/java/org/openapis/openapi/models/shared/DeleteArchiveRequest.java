@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteArchiveRequest {
     @JsonProperty("ArchiveName")
     public String archiveName;
+
     public DeleteArchiveRequest withArchiveName(String archiveName) {
         this.archiveName = archiveName;
         return this;
     }
     
+    public DeleteArchiveRequest(@JsonProperty("ArchiveName") String archiveName) {
+        this.archiveName = archiveName;
+  }
 }

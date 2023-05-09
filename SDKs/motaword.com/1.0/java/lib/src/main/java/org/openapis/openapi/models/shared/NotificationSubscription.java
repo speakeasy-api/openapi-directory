@@ -12,6 +12,7 @@ public class NotificationSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device")
     public NotificationSubscriptionDeviceEnum device;
+
     public NotificationSubscription withDevice(NotificationSubscriptionDeviceEnum device) {
         this.device = device;
         return this;
@@ -23,6 +24,7 @@ public class NotificationSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public NotificationSubscription withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -31,9 +33,11 @@ public class NotificationSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NotificationSubscriptionTypeEnum type;
+
     public NotificationSubscription withType(NotificationSubscriptionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NotificationSubscription(){}
 }

@@ -15,6 +15,7 @@ public class ReportWithRawData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public ReportWithRawData withData(String data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ReportWithRawData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportArn")
     public String reportArn;
+
     public ReportWithRawData withReportArn(String reportArn) {
         this.reportArn = reportArn;
         return this;
     }
     
+    public ReportWithRawData(){}
 }

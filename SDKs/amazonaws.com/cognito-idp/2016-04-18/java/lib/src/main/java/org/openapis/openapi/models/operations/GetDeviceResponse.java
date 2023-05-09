@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeviceResponse {
     
     public String contentType;
+
     public GetDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeviceResponse {
      */
     
     public Object forbiddenException;
+
     public GetDeviceResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -29,6 +32,7 @@ public class GetDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeviceResponse getDeviceResponse;
+
     public GetDeviceResponse withGetDeviceResponse(org.openapis.openapi.models.shared.GetDeviceResponse getDeviceResponse) {
         this.getDeviceResponse = getDeviceResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDeviceResponse {
      */
     
     public Object internalErrorException;
+
     public GetDeviceResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class GetDeviceResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDeviceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class GetDeviceResponse {
      */
     
     public Object invalidUserPoolConfigurationException;
+
     public GetDeviceResponse withInvalidUserPoolConfigurationException(Object invalidUserPoolConfigurationException) {
         this.invalidUserPoolConfigurationException = invalidUserPoolConfigurationException;
         return this;
@@ -69,6 +76,7 @@ public class GetDeviceResponse {
      */
     
     public Object notAuthorizedException;
+
     public GetDeviceResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -79,6 +87,7 @@ public class GetDeviceResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public GetDeviceResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -89,6 +98,7 @@ public class GetDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -96,6 +106,7 @@ public class GetDeviceResponse {
     
     
     public Integer statusCode;
+
     public GetDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class GetDeviceResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDeviceResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,6 +136,7 @@ public class GetDeviceResponse {
      */
     
     public Object userNotConfirmedException;
+
     public GetDeviceResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -133,9 +147,14 @@ public class GetDeviceResponse {
      */
     
     public Object userNotFoundException;
+
     public GetDeviceResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public GetDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

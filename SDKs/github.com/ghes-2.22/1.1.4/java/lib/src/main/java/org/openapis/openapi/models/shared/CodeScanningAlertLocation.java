@@ -15,6 +15,7 @@ public class CodeScanningAlertLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_column")
     public Long endColumn;
+
     public CodeScanningAlertLocation withEndColumn(Long endColumn) {
         this.endColumn = endColumn;
         return this;
@@ -23,6 +24,7 @@ public class CodeScanningAlertLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_line")
     public Long endLine;
+
     public CodeScanningAlertLocation withEndLine(Long endLine) {
         this.endLine = endLine;
         return this;
@@ -31,6 +33,7 @@ public class CodeScanningAlertLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public CodeScanningAlertLocation withPath(String path) {
         this.path = path;
         return this;
@@ -39,6 +42,7 @@ public class CodeScanningAlertLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_column")
     public Long startColumn;
+
     public CodeScanningAlertLocation withStartColumn(Long startColumn) {
         this.startColumn = startColumn;
         return this;
@@ -47,9 +51,11 @@ public class CodeScanningAlertLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_line")
     public Long startLine;
+
     public CodeScanningAlertLocation withStartLine(Long startLine) {
         this.startLine = startLine;
         return this;
     }
     
+    public CodeScanningAlertLocation(){}
 }

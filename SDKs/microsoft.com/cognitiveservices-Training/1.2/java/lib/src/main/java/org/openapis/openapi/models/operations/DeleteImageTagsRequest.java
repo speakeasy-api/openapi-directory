@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteImageTagsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Training-Key")
     public String trainingKey;
+
     public DeleteImageTagsRequest withTrainingKey(String trainingKey) {
         this.trainingKey = trainingKey;
         return this;
@@ -19,6 +21,7 @@ public class DeleteImageTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
     public String[] imageIds;
+
     public DeleteImageTagsRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImageTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DeleteImageTagsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +43,16 @@ public class DeleteImageTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
     public String[] tagIds;
+
     public DeleteImageTagsRequest withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public DeleteImageTagsRequest(@JsonProperty("Training-Key") String trainingKey, @JsonProperty("imageIds") String[] imageIds, @JsonProperty("projectId") String projectId, @JsonProperty("tagIds") String[] tagIds) {
+        this.trainingKey = trainingKey;
+        this.imageIds = imageIds;
+        this.projectId = projectId;
+        this.tagIds = tagIds;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IdentityProvider {
     @JsonProperty("identityProviderArn")
     public String identityProviderArn;
+
     public IdentityProvider withIdentityProviderArn(String identityProviderArn) {
         this.identityProviderArn = identityProviderArn;
         return this;
@@ -22,6 +23,7 @@ public class IdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderDetails")
     public java.util.Map<String, String> identityProviderDetails;
+
     public IdentityProvider withIdentityProviderDetails(java.util.Map<String, String> identityProviderDetails) {
         this.identityProviderDetails = identityProviderDetails;
         return this;
@@ -30,6 +32,7 @@ public class IdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderName")
     public String identityProviderName;
+
     public IdentityProvider withIdentityProviderName(String identityProviderName) {
         this.identityProviderName = identityProviderName;
         return this;
@@ -38,9 +41,13 @@ public class IdentityProvider {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identityProviderType")
     public IdentityProviderTypeEnum identityProviderType;
+
     public IdentityProvider withIdentityProviderType(IdentityProviderTypeEnum identityProviderType) {
         this.identityProviderType = identityProviderType;
         return this;
     }
     
+    public IdentityProvider(@JsonProperty("identityProviderArn") String identityProviderArn) {
+        this.identityProviderArn = identityProviderArn;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeExclusionsRequest {
     @JsonProperty("exclusionArns")
     public String[] exclusionArns;
+
     public DescribeExclusionsRequest withExclusionArns(String[] exclusionArns) {
         this.exclusionArns = exclusionArns;
         return this;
@@ -19,9 +20,13 @@ public class DescribeExclusionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public LocaleEnum locale;
+
     public DescribeExclusionsRequest withLocale(LocaleEnum locale) {
         this.locale = locale;
         return this;
     }
     
+    public DescribeExclusionsRequest(@JsonProperty("exclusionArns") String[] exclusionArns) {
+        this.exclusionArns = exclusionArns;
+  }
 }

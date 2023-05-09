@@ -18,9 +18,11 @@ public class RoutersPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Router resource;
+
     public RoutersPreviewResponse withResource(Router resource) {
         this.resource = resource;
         return this;
     }
     
+    public RoutersPreviewResponse(){}
 }

@@ -15,6 +15,7 @@ public class CreateParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateParallelDataResponse withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CreateParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ParallelDataStatusEnum status;
+
     public CreateParallelDataResponse withStatus(ParallelDataStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateParallelDataResponse(){}
 }

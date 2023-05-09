@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VenByRouteUsV1VenuesRouteQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VenuesByRoute venuesByRoute;
+
     public VenByRouteUsV1VenuesRouteQueryPostRequest withVenuesByRoute(org.openapis.openapi.models.shared.VenuesByRoute venuesByRoute) {
         this.venuesByRoute = venuesByRoute;
         return this;
@@ -16,9 +18,13 @@ public class VenByRouteUsV1VenuesRouteQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public VenByRouteUsV1VenuesRouteQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public VenByRouteUsV1VenuesRouteQueryPostRequest(@JsonProperty("VenuesByRoute") org.openapis.openapi.models.shared.VenuesByRoute venuesByRoute) {
+        this.venuesByRoute = venuesByRoute;
+  }
 }

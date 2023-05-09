@@ -18,6 +18,7 @@ public class GoogleTypeExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleTypeExpr withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public GoogleTypeExpr withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,6 +42,7 @@ public class GoogleTypeExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GoogleTypeExpr withLocation(String location) {
         this.location = location;
         return this;
@@ -51,9 +54,11 @@ public class GoogleTypeExpr {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleTypeExpr withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GoogleTypeExpr(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePrimaryRegionResponse {
     
     public String contentType;
+
     public UpdatePrimaryRegionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object disabledException;
+
     public UpdatePrimaryRegionResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object invalidArnException;
+
     public UpdatePrimaryRegionResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object kmsInternalException;
+
     public UpdatePrimaryRegionResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public UpdatePrimaryRegionResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -59,6 +65,7 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object notFoundException;
+
     public UpdatePrimaryRegionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdatePrimaryRegionResponse {
     
     
     public Integer statusCode;
+
     public UpdatePrimaryRegionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePrimaryRegionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePrimaryRegionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePrimaryRegionResponse {
      */
     
     public Object unsupportedOperationException;
+
     public UpdatePrimaryRegionResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public UpdatePrimaryRegionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

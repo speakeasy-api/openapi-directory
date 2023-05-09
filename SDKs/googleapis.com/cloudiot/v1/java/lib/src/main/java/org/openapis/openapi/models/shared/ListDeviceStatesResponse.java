@@ -18,9 +18,11 @@ public class ListDeviceStatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceStates")
     public DeviceState[] deviceStates;
+
     public ListDeviceStatesResponse withDeviceStates(DeviceState[] deviceStates) {
         this.deviceStates = deviceStates;
         return this;
     }
     
+    public ListDeviceStatesResponse(){}
 }

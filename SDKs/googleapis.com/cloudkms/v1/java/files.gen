@@ -40,6 +40,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocatio
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurityOption1.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurityOption2.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivitySecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsEkmConnectionsVerifyConnectivityResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsGenerateRandomBytesSecurityOption1.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsGenerateRandomBytesSecurityOption2.java
 lib/src/main/java/org/openapis/openapi/models/operations/CloudkmsProjectsLocationsGenerateRandomBytesSecurity.java
@@ -248,4 +253,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/ListKeyRingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

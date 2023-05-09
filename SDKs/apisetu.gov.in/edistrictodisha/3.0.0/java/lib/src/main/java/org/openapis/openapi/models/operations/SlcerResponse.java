@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SlcerResponse {
     
     public String contentType;
+
     public SlcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SlcerResponse {
     
     
     public Integer statusCode;
+
     public SlcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SlcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SlcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SlcerResponse {
      */
     
     public Slcer400ApplicationJSON slcer400ApplicationJSONObject;
+
     public SlcerResponse withSlcer400ApplicationJSONObject(Slcer400ApplicationJSON slcer400ApplicationJSONObject) {
         this.slcer400ApplicationJSONObject = slcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SlcerResponse {
      */
     
     public Slcer401ApplicationJSON slcer401ApplicationJSONObject;
+
     public SlcerResponse withSlcer401ApplicationJSONObject(Slcer401ApplicationJSON slcer401ApplicationJSONObject) {
         this.slcer401ApplicationJSONObject = slcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SlcerResponse {
      */
     
     public Slcer404ApplicationJSON slcer404ApplicationJSONObject;
+
     public SlcerResponse withSlcer404ApplicationJSONObject(Slcer404ApplicationJSON slcer404ApplicationJSONObject) {
         this.slcer404ApplicationJSONObject = slcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class SlcerResponse {
      */
     
     public Slcer500ApplicationJSON slcer500ApplicationJSONObject;
+
     public SlcerResponse withSlcer500ApplicationJSONObject(Slcer500ApplicationJSON slcer500ApplicationJSONObject) {
         this.slcer500ApplicationJSONObject = slcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class SlcerResponse {
      */
     
     public Slcer502ApplicationJSON slcer502ApplicationJSONObject;
+
     public SlcerResponse withSlcer502ApplicationJSONObject(Slcer502ApplicationJSON slcer502ApplicationJSONObject) {
         this.slcer502ApplicationJSONObject = slcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class SlcerResponse {
      */
     
     public Slcer503ApplicationJSON slcer503ApplicationJSONObject;
+
     public SlcerResponse withSlcer503ApplicationJSONObject(Slcer503ApplicationJSON slcer503ApplicationJSONObject) {
         this.slcer503ApplicationJSONObject = slcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class SlcerResponse {
      */
     
     public Slcer504ApplicationJSON slcer504ApplicationJSONObject;
+
     public SlcerResponse withSlcer504ApplicationJSONObject(Slcer504ApplicationJSON slcer504ApplicationJSONObject) {
         this.slcer504ApplicationJSONObject = slcer504ApplicationJSONObject;
         return this;
     }
     
+    public SlcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

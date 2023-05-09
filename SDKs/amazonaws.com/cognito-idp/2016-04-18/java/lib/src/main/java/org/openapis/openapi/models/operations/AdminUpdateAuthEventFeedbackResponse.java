@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminUpdateAuthEventFeedbackResponse {
@@ -12,6 +13,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public java.util.Map<String, Object> adminUpdateAuthEventFeedbackResponse;
+
     public AdminUpdateAuthEventFeedbackResponse withAdminUpdateAuthEventFeedbackResponse(java.util.Map<String, Object> adminUpdateAuthEventFeedbackResponse) {
         this.adminUpdateAuthEventFeedbackResponse = adminUpdateAuthEventFeedbackResponse;
         return this;
@@ -19,6 +21,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
     
     
     public String contentType;
+
     public AdminUpdateAuthEventFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object internalErrorException;
+
     public AdminUpdateAuthEventFeedbackResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminUpdateAuthEventFeedbackResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminUpdateAuthEventFeedbackResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
     
     
     public Integer statusCode;
+
     public AdminUpdateAuthEventFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminUpdateAuthEventFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminUpdateAuthEventFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminUpdateAuthEventFeedbackResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,6 +103,7 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminUpdateAuthEventFeedbackResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class AdminUpdateAuthEventFeedbackResponse {
      */
     
     public Object userPoolAddOnNotEnabledException;
+
     public AdminUpdateAuthEventFeedbackResponse withUserPoolAddOnNotEnabledException(Object userPoolAddOnNotEnabledException) {
         this.userPoolAddOnNotEnabledException = userPoolAddOnNotEnabledException;
         return this;
     }
     
+    public AdminUpdateAuthEventFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

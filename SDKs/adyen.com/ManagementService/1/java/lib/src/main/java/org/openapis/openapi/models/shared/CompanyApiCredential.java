@@ -15,6 +15,7 @@ public class CompanyApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ApiCredentialLinks links;
+
     public CompanyApiCredential withLinks(ApiCredentialLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class CompanyApiCredential {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public CompanyApiCredential withActive(Boolean active) {
         this.active = active;
         return this;
@@ -38,6 +40,7 @@ public class CompanyApiCredential {
      */
     @JsonProperty("allowedIpAddresses")
     public String[] allowedIpAddresses;
+
     public CompanyApiCredential withAllowedIpAddresses(String[] allowedIpAddresses) {
         this.allowedIpAddresses = allowedIpAddresses;
         return this;
@@ -49,6 +52,7 @@ public class CompanyApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public AllowedOrigin[] allowedOrigins;
+
     public CompanyApiCredential withAllowedOrigins(AllowedOrigin[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -61,6 +65,7 @@ public class CompanyApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedMerchantAccounts")
     public String[] associatedMerchantAccounts;
+
     public CompanyApiCredential withAssociatedMerchantAccounts(String[] associatedMerchantAccounts) {
         this.associatedMerchantAccounts = associatedMerchantAccounts;
         return this;
@@ -71,6 +76,7 @@ public class CompanyApiCredential {
      */
     @JsonProperty("clientKey")
     public String clientKey;
+
     public CompanyApiCredential withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -82,6 +88,7 @@ public class CompanyApiCredential {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CompanyApiCredential withDescription(String description) {
         this.description = description;
         return this;
@@ -92,6 +99,7 @@ public class CompanyApiCredential {
      */
     @JsonProperty("id")
     public String id;
+
     public CompanyApiCredential withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +110,7 @@ public class CompanyApiCredential {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public CompanyApiCredential withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -112,9 +121,18 @@ public class CompanyApiCredential {
      */
     @JsonProperty("username")
     public String username;
+
     public CompanyApiCredential withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CompanyApiCredential(@JsonProperty("active") Boolean active, @JsonProperty("allowedIpAddresses") String[] allowedIpAddresses, @JsonProperty("clientKey") String clientKey, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles, @JsonProperty("username") String username) {
+        this.active = active;
+        this.allowedIpAddresses = allowedIpAddresses;
+        this.clientKey = clientKey;
+        this.id = id;
+        this.roles = roles;
+        this.username = username;
+  }
 }

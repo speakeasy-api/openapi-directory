@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDashboardResponse {
     
     public String contentType;
+
     public UpdateDashboardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDashboardResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDashboardResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDashboardResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDashboardResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDashboardResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDashboardResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDashboardResponse {
     
     
     public Integer statusCode;
+
     public UpdateDashboardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDashboardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDashboardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDashboardResponse {
      */
     
     public Object throttlingException;
+
     public UpdateDashboardResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateDashboardResponse {
      */
     
     public java.util.Map<String, Object> updateDashboardResponse;
+
     public UpdateDashboardResponse withUpdateDashboardResponse(java.util.Map<String, Object> updateDashboardResponse) {
         this.updateDashboardResponse = updateDashboardResponse;
         return this;
     }
     
+    public UpdateDashboardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

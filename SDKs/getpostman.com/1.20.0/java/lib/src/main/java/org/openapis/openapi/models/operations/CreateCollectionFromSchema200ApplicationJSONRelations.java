@@ -12,6 +12,7 @@ public class CreateCollectionFromSchema200ApplicationJSONRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateCollectionFromSchema200ApplicationJSONRelations withId(String id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class CreateCollectionFromSchema200ApplicationJSONRelations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public CreateCollectionFromSchema200ApplicationJSONRelations withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CreateCollectionFromSchema200ApplicationJSONRelations(){}
 }

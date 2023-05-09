@@ -15,9 +15,11 @@ public class CreateEventBusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusArn")
     public String eventBusArn;
+
     public CreateEventBusResponse withEventBusArn(String eventBusArn) {
         this.eventBusArn = eventBusArn;
         return this;
     }
     
+    public CreateEventBusResponse(){}
 }

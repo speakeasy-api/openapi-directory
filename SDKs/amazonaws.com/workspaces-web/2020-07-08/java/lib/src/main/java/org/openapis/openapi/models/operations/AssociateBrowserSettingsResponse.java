@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateBrowserSettingsResponse {
@@ -12,6 +13,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public AssociateBrowserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateBrowserSettingsResponse associateBrowserSettingsResponse;
+
     public AssociateBrowserSettingsResponse withAssociateBrowserSettingsResponse(org.openapis.openapi.models.shared.AssociateBrowserSettingsResponse associateBrowserSettingsResponse) {
         this.associateBrowserSettingsResponse = associateBrowserSettingsResponse;
         return this;
@@ -32,6 +35,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object conflictException;
+
     public AssociateBrowserSettingsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateBrowserSettingsResponse {
     
     
     public String contentType;
+
     public AssociateBrowserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public AssociateBrowserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateBrowserSettingsResponse {
     
     
     public Integer statusCode;
+
     public AssociateBrowserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateBrowserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateBrowserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateBrowserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public AssociateBrowserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AssociateBrowserSettingsResponse {
      */
     
     public Object validationException;
+
     public AssociateBrowserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AssociateBrowserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

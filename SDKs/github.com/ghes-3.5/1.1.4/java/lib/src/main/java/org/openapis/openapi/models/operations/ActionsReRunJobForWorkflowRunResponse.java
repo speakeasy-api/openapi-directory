@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsReRunJobForWorkflowRunResponse {
     
     public String contentType;
+
     public ActionsReRunJobForWorkflowRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsReRunJobForWorkflowRunResponse {
     
     
     public Integer statusCode;
+
     public ActionsReRunJobForWorkflowRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsReRunJobForWorkflowRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsReRunJobForWorkflowRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsReRunJobForWorkflowRunResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsReRunJobForWorkflowRunResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ActionsReRunJobForWorkflowRunResponse {
      */
     
     public java.util.Map<String, Object> emptyObject;
+
     public ActionsReRunJobForWorkflowRunResponse withEmptyObject(java.util.Map<String, Object> emptyObject) {
         this.emptyObject = emptyObject;
         return this;
     }
     
+    public ActionsReRunJobForWorkflowRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

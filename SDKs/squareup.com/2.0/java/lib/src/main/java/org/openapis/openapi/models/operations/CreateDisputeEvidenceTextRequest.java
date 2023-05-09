@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateDisputeEvidenceTextRequest {
@@ -14,6 +15,7 @@ public class CreateDisputeEvidenceTextRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest createDisputeEvidenceTextRequest;
+
     public CreateDisputeEvidenceTextRequest withCreateDisputeEvidenceTextRequest(org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest createDisputeEvidenceTextRequest) {
         this.createDisputeEvidenceTextRequest = createDisputeEvidenceTextRequest;
         return this;
@@ -24,9 +26,14 @@ public class CreateDisputeEvidenceTextRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dispute_id")
     public String disputeId;
+
     public CreateDisputeEvidenceTextRequest withDisputeId(String disputeId) {
         this.disputeId = disputeId;
         return this;
     }
     
+    public CreateDisputeEvidenceTextRequest(@JsonProperty("CreateDisputeEvidenceTextRequest") org.openapis.openapi.models.shared.CreateDisputeEvidenceTextRequest createDisputeEvidenceTextRequest, @JsonProperty("dispute_id") String disputeId) {
+        this.createDisputeEvidenceTextRequest = createDisputeEvidenceTextRequest;
+        this.disputeId = disputeId;
+  }
 }

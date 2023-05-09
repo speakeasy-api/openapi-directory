@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTagsResponse {
     
     public String contentType;
+
     public ListTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTagsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListTagsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse;
+
     public ListTagsResponse withListTagsResponse(org.openapis.openapi.models.shared.ListTagsResponse listTagsResponse) {
         this.listTagsResponse = listTagsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListTagsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListTagsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListTagsResponse {
      */
     
     public Object serviceException;
+
     public ListTagsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class ListTagsResponse {
     
     
     public Integer statusCode;
+
     public ListTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListTagsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListTagsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

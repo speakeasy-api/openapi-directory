@@ -15,6 +15,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineItemId")
     public String lineItemId;
+
     public OrdersInStoreRefundLineItemRequest withLineItemId(String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
@@ -26,6 +27,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public OrdersInStoreRefundLineItemRequest withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -34,6 +36,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceAmount")
     public Price priceAmount;
+
     public OrdersInStoreRefundLineItemRequest withPriceAmount(Price priceAmount) {
         this.priceAmount = priceAmount;
         return this;
@@ -45,6 +48,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public OrdersInStoreRefundLineItemRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -56,6 +60,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public OrdersInStoreRefundLineItemRequest withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -67,6 +72,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public OrdersInStoreRefundLineItemRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -78,6 +84,7 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonText")
     public String reasonText;
+
     public OrdersInStoreRefundLineItemRequest withReasonText(String reasonText) {
         this.reasonText = reasonText;
         return this;
@@ -86,9 +93,11 @@ public class OrdersInStoreRefundLineItemRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxAmount")
     public Price taxAmount;
+
     public OrdersInStoreRefundLineItemRequest withTaxAmount(Price taxAmount) {
         this.taxAmount = taxAmount;
         return this;
     }
     
+    public OrdersInStoreRefundLineItemRequest(){}
 }

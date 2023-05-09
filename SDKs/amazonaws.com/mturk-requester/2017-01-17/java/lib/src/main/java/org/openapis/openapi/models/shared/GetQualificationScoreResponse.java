@@ -15,9 +15,11 @@ public class GetQualificationScoreResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Qualification")
     public Qualification qualification;
+
     public GetQualificationScoreResponse withQualification(Qualification qualification) {
         this.qualification = qualification;
         return this;
     }
     
+    public GetQualificationScoreResponse(){}
 }

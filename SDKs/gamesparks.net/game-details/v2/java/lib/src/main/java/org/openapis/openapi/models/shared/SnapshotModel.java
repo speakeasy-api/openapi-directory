@@ -22,6 +22,7 @@ public class SnapshotModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public SnapshotModel withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdBy")
     public String createdBy;
+
     public SnapshotModel withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -38,6 +40,7 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SnapshotModel withDescription(String description) {
         this.description = description;
         return this;
@@ -46,6 +49,7 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SnapshotModel withId(String id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexProgress")
     public java.util.Map<String, Long> indexProgress;
+
     public SnapshotModel withIndexProgress(java.util.Map<String, Long> indexProgress) {
         this.indexProgress = indexProgress;
         return this;
@@ -62,6 +67,7 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public SnapshotModel withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -70,9 +76,11 @@ public class SnapshotModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public SnapshotModel withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public SnapshotModel(){}
 }

@@ -12,6 +12,7 @@ public class ListDominantLanguageDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public DominantLanguageDetectionJobFilter filter;
+
     public ListDominantLanguageDetectionJobsRequest withFilter(DominantLanguageDetectionJobFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class ListDominantLanguageDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDominantLanguageDetectionJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListDominantLanguageDetectionJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDominantLanguageDetectionJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDominantLanguageDetectionJobsRequest(){}
 }

@@ -12,6 +12,7 @@ public class SubscriptionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activate")
     public Link3 activate;
+
     public SubscriptionLinks withActivate(Link3 activate) {
         this.activate = activate;
         return this;
@@ -20,6 +21,7 @@ public class SubscriptionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivate")
     public Link3 deactivate;
+
     public SubscriptionLinks withDeactivate(Link3 deactivate) {
         this.deactivate = deactivate;
         return this;
@@ -28,6 +30,7 @@ public class SubscriptionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Link3 delete;
+
     public SubscriptionLinks withDelete(Link3 delete) {
         this.delete = delete;
         return this;
@@ -36,6 +39,7 @@ public class SubscriptionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reporting")
     public Link3 reporting;
+
     public SubscriptionLinks withReporting(Link3 reporting) {
         this.reporting = reporting;
         return this;
@@ -44,9 +48,11 @@ public class SubscriptionLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry")
     public Link3 retry;
+
     public SubscriptionLinks withRetry(Link3 retry) {
         this.retry = retry;
         return this;
     }
     
+    public SubscriptionLinks(){}
 }

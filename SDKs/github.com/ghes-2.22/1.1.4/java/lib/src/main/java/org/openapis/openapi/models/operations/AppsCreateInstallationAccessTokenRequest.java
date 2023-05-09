@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsCreateInstallationAccessTokenRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AppsCreateInstallationAccessTokenRequestBody requestBody;
+
     public AppsCreateInstallationAccessTokenRequest withRequestBody(AppsCreateInstallationAccessTokenRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class AppsCreateInstallationAccessTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=installation_id")
     public Long installationId;
+
     public AppsCreateInstallationAccessTokenRequest withInstallationId(Long installationId) {
         this.installationId = installationId;
         return this;
     }
     
+    public AppsCreateInstallationAccessTokenRequest(@JsonProperty("installation_id") Long installationId) {
+        this.installationId = installationId;
+  }
 }

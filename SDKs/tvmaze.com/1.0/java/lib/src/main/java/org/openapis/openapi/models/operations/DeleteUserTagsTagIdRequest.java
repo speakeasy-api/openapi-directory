@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteUserTagsTagIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
     public Long tagId;
+
     public DeleteUserTagsTagIdRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public DeleteUserTagsTagIdRequest(@JsonProperty("tag_id") Long tagId) {
+        this.tagId = tagId;
+  }
 }

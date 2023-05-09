@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON {
     @JsonProperty("code")
     public DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum code;
+
     public DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON withCode(DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -20,9 +21,14 @@ public class DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DevicesGetReleaseUpdateDevicesStatus404ApplicationJSON(@JsonProperty("code") DevicesGetReleaseUpdateDevicesStatus404ApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeIdentityProviderResponse {
     
     public String contentType;
+
     public DescribeIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeIdentityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeIdentityProviderResponse describeIdentityProviderResponse;
+
     public DescribeIdentityProviderResponse withDescribeIdentityProviderResponse(org.openapis.openapi.models.shared.DescribeIdentityProviderResponse describeIdentityProviderResponse) {
         this.describeIdentityProviderResponse = describeIdentityProviderResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeIdentityProviderResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeIdentityProviderResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeIdentityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeIdentityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeIdentityProviderResponse {
      */
     
     public Object notAuthorizedException;
+
     public DescribeIdentityProviderResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public DescribeIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeIdentityProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeIdentityProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

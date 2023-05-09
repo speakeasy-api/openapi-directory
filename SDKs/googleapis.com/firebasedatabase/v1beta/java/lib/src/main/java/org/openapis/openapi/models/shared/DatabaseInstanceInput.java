@@ -18,6 +18,7 @@ public class DatabaseInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DatabaseInstanceInput withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class DatabaseInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DatabaseInstanceTypeEnum type;
+
     public DatabaseInstanceInput withType(DatabaseInstanceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DatabaseInstanceInput(){}
 }

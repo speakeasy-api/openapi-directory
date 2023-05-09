@@ -28,6 +28,7 @@ public class EnumOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public EnumOptionInput withColor(String color) {
         this.color = color;
         return this;
@@ -39,6 +40,7 @@ public class EnumOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public EnumOptionInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -50,9 +52,11 @@ public class EnumOptionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnumOptionInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EnumOptionInput(){}
 }

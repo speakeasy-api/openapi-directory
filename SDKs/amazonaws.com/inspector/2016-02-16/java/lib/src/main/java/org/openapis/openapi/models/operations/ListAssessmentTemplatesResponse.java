@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssessmentTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListAssessmentTemplatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAssessmentTemplatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAssessmentTemplatesResponse {
     
     
     public String contentType;
+
     public ListAssessmentTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAssessmentTemplatesResponse {
      */
     
     public Object internalException;
+
     public ListAssessmentTemplatesResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssessmentTemplatesResponse {
      */
     
     public Object invalidInputException;
+
     public ListAssessmentTemplatesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListAssessmentTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssessmentTemplatesResponse listAssessmentTemplatesResponse;
+
     public ListAssessmentTemplatesResponse withListAssessmentTemplatesResponse(org.openapis.openapi.models.shared.ListAssessmentTemplatesResponse listAssessmentTemplatesResponse) {
         this.listAssessmentTemplatesResponse = listAssessmentTemplatesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListAssessmentTemplatesResponse {
      */
     
     public Object noSuchEntityException;
+
     public ListAssessmentTemplatesResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -66,6 +73,7 @@ public class ListAssessmentTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListAssessmentTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListAssessmentTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssessmentTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAssessmentTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

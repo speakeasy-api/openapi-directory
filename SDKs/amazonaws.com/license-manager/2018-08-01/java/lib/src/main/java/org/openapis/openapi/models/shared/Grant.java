@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Grant {
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public Grant withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -21,6 +22,7 @@ public class Grant {
     
     @JsonProperty("GrantName")
     public String grantName;
+
     public Grant withGrantName(String grantName) {
         this.grantName = grantName;
         return this;
@@ -28,6 +30,7 @@ public class Grant {
     
     @JsonProperty("GrantStatus")
     public GrantStatusEnum grantStatus;
+
     public Grant withGrantStatus(GrantStatusEnum grantStatus) {
         this.grantStatus = grantStatus;
         return this;
@@ -35,6 +38,7 @@ public class Grant {
     
     @JsonProperty("GrantedOperations")
     public AllowedOperationEnum[] grantedOperations;
+
     public Grant withGrantedOperations(AllowedOperationEnum[] grantedOperations) {
         this.grantedOperations = grantedOperations;
         return this;
@@ -42,6 +46,7 @@ public class Grant {
     
     @JsonProperty("GranteePrincipalArn")
     public String granteePrincipalArn;
+
     public Grant withGranteePrincipalArn(String granteePrincipalArn) {
         this.granteePrincipalArn = granteePrincipalArn;
         return this;
@@ -49,6 +54,7 @@ public class Grant {
     
     @JsonProperty("HomeRegion")
     public String homeRegion;
+
     public Grant withHomeRegion(String homeRegion) {
         this.homeRegion = homeRegion;
         return this;
@@ -56,13 +62,24 @@ public class Grant {
     
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public Grant withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Options")
+    public Options options;
+
+    public Grant withOptions(Options options) {
+        this.options = options;
+        return this;
+    }
+    
     @JsonProperty("ParentArn")
     public String parentArn;
+
     public Grant withParentArn(String parentArn) {
         this.parentArn = parentArn;
         return this;
@@ -71,6 +88,7 @@ public class Grant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public Grant withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -78,9 +96,21 @@ public class Grant {
     
     @JsonProperty("Version")
     public String version;
+
     public Grant withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public Grant(@JsonProperty("GrantArn") String grantArn, @JsonProperty("GrantName") String grantName, @JsonProperty("GrantStatus") GrantStatusEnum grantStatus, @JsonProperty("GrantedOperations") AllowedOperationEnum[] grantedOperations, @JsonProperty("GranteePrincipalArn") String granteePrincipalArn, @JsonProperty("HomeRegion") String homeRegion, @JsonProperty("LicenseArn") String licenseArn, @JsonProperty("ParentArn") String parentArn, @JsonProperty("Version") String version) {
+        this.grantArn = grantArn;
+        this.grantName = grantName;
+        this.grantStatus = grantStatus;
+        this.grantedOperations = grantedOperations;
+        this.granteePrincipalArn = granteePrincipalArn;
+        this.homeRegion = homeRegion;
+        this.licenseArn = licenseArn;
+        this.parentArn = parentArn;
+        this.version = version;
+  }
 }

@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class SnapshotScriptVersionModel {
     
     public Long cloudCodeVersion;
+
     public SnapshotScriptVersionModel withCloudCodeVersion(Long cloudCodeVersion) {
         this.cloudCodeVersion = cloudCodeVersion;
         return this;
@@ -16,6 +17,7 @@ public class SnapshotScriptVersionModel {
     
     
     public OffsetDateTime createdDate;
+
     public SnapshotScriptVersionModel withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -23,6 +25,7 @@ public class SnapshotScriptVersionModel {
     
     
     public String description;
+
     public SnapshotScriptVersionModel withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class SnapshotScriptVersionModel {
     
     
     public String id;
+
     public SnapshotScriptVersionModel withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +41,11 @@ public class SnapshotScriptVersionModel {
     
     
     public Boolean live;
+
     public SnapshotScriptVersionModel withLive(Boolean live) {
         this.live = live;
         return this;
     }
     
+    public SnapshotScriptVersionModel(){}
 }

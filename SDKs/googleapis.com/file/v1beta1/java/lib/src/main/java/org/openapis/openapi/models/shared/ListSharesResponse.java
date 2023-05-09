@@ -18,6 +18,7 @@ public class ListSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListSharesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shares")
     public Share[] shares;
+
     public ListSharesResponse withShares(Share[] shares) {
         this.shares = shares;
         return this;
@@ -40,9 +42,11 @@ public class ListSharesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListSharesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListSharesResponse(){}
 }

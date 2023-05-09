@@ -58,11 +58,9 @@ public class I18nRegions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeI18nRegionsListResponse res = new org.openapis.openapi.models.operations.YoutubeI18nRegionsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeI18nRegionsListResponse res = new org.openapis.openapi.models.operations.YoutubeI18nRegionsListResponse(contentType, httpRes.statusCode()) {{
             i18nRegionListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

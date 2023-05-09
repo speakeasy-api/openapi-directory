@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataScanExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public GoogleCloudDataplexV1DataScanExecutionSpec withField(String field) {
         this.field = field;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1DataScanExecutionSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public GoogleCloudDataplexV1Trigger trigger;
+
     public GoogleCloudDataplexV1DataScanExecutionSpec withTrigger(GoogleCloudDataplexV1Trigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataScanExecutionSpec(){}
 }

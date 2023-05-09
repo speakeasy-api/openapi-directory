@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetValueRequest {
@@ -12,6 +13,7 @@ public class SetValueRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public SetValueRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class SetValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetValueRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -32,6 +35,7 @@ public class SetValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=instance")
     public String instance;
+
     public SetValueRequest withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -42,6 +46,7 @@ public class SetValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object")
     public String object;
+
     public SetValueRequest withObject(String object) {
         this.object = object;
         return this;
@@ -52,9 +57,16 @@ public class SetValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variable")
     public String variable;
+
     public SetValueRequest withVariable(String variable) {
         this.variable = variable;
         return this;
     }
     
+    public SetValueRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("instance") String instance, @JsonProperty("object") String object, @JsonProperty("variable") String variable) {
+        this.agentNum = agentNum;
+        this.instance = instance;
+        this.object = object;
+        this.variable = variable;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlBackupRunsListResponse {
@@ -12,6 +13,7 @@ public class SqlBackupRunsListResponse {
      */
     
     public org.openapis.openapi.models.shared.BackupRunsListResponse backupRunsListResponse;
+
     public SqlBackupRunsListResponse withBackupRunsListResponse(org.openapis.openapi.models.shared.BackupRunsListResponse backupRunsListResponse) {
         this.backupRunsListResponse = backupRunsListResponse;
         return this;
@@ -19,6 +21,7 @@ public class SqlBackupRunsListResponse {
     
     
     public String contentType;
+
     public SqlBackupRunsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SqlBackupRunsListResponse {
     
     
     public Integer statusCode;
+
     public SqlBackupRunsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlBackupRunsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlBackupRunsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlBackupRunsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

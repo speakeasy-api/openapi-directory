@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTargetedSentimentDetectionJobsResponse {
     
     public String contentType;
+
     public ListTargetedSentimentDetectionJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
      */
     
     public Object internalServerException;
+
     public ListTargetedSentimentDetectionJobsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
      */
     
     public Object invalidFilterException;
+
     public ListTargetedSentimentDetectionJobsResponse withInvalidFilterException(Object invalidFilterException) {
         this.invalidFilterException = invalidFilterException;
         return this;
@@ -39,6 +43,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListTargetedSentimentDetectionJobsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTargetedSentimentDetectionJobsResponse listTargetedSentimentDetectionJobsResponse;
+
     public ListTargetedSentimentDetectionJobsResponse withListTargetedSentimentDetectionJobsResponse(org.openapis.openapi.models.shared.ListTargetedSentimentDetectionJobsResponse listTargetedSentimentDetectionJobsResponse) {
         this.listTargetedSentimentDetectionJobsResponse = listTargetedSentimentDetectionJobsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
     
     
     public Integer statusCode;
+
     public ListTargetedSentimentDetectionJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTargetedSentimentDetectionJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListTargetedSentimentDetectionJobsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListTargetedSentimentDetectionJobsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListTargetedSentimentDetectionJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

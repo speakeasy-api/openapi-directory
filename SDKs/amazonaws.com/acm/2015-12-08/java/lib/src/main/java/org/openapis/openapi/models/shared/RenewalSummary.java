@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RenewalSummary {
     @JsonProperty("DomainValidationOptions")
     public DomainValidation[] domainValidationOptions;
+
     public RenewalSummary withDomainValidationOptions(DomainValidation[] domainValidationOptions) {
         this.domainValidationOptions = domainValidationOptions;
         return this;
@@ -26,6 +27,7 @@ public class RenewalSummary {
     
     @JsonProperty("RenewalStatus")
     public RenewalStatusEnum renewalStatus;
+
     public RenewalSummary withRenewalStatus(RenewalStatusEnum renewalStatus) {
         this.renewalStatus = renewalStatus;
         return this;
@@ -34,6 +36,7 @@ public class RenewalSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalStatusReason")
     public FailureReasonEnum renewalStatusReason;
+
     public RenewalSummary withRenewalStatusReason(FailureReasonEnum renewalStatusReason) {
         this.renewalStatusReason = renewalStatusReason;
         return this;
@@ -43,9 +46,15 @@ public class RenewalSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public RenewalSummary withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public RenewalSummary(@JsonProperty("DomainValidationOptions") DomainValidation[] domainValidationOptions, @JsonProperty("RenewalStatus") RenewalStatusEnum renewalStatus, @JsonProperty("UpdatedAt") OffsetDateTime updatedAt) {
+        this.domainValidationOptions = domainValidationOptions;
+        this.renewalStatus = renewalStatus;
+        this.updatedAt = updatedAt;
+  }
 }

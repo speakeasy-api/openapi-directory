@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     public String applicationDomain;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withApplicationDomain(String applicationDomain) {
         this.applicationDomain = applicationDomain;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsAttachmentTypeEnum attachmentType;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withAttachmentType(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsAttachmentTypeEnum attachmentType) {
         this.attachmentType = attachmentType;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String creationTime;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String deletionTime;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withDeletionTime(String deletionTime) {
         this.deletionTime = deletionTime;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String description;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String deviceValidationDomain;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withDeviceValidationDomain(String deviceValidationDomain) {
         this.deviceValidationDomain = deviceValidationDomain;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String domainCertificateArn;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withDomainCertificateArn(String domainCertificateArn) {
         this.domainCertificateArn = domainCertificateArn;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String endpointDomain;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withEndpointDomain(String endpointDomain) {
         this.endpointDomain = endpointDomain;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsEndpointTypeEnum endpointType;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withEndpointType(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsEndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String lastUpdatedTime;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsLoadBalancerOptions loadBalancerOptions;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withLoadBalancerOptions(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsLoadBalancerOptions loadBalancerOptions) {
         this.loadBalancerOptions = loadBalancerOptions;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsNetworkInterfaceOptions networkInterfaceOptions;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withNetworkInterfaceOptions(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsNetworkInterfaceOptions networkInterfaceOptions) {
         this.networkInterfaceOptions = networkInterfaceOptions;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String[] securityGroupIds;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus status;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withStatus(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsStatus status) {
         this.status = status;
         return this;
@@ -110,6 +124,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags[] tags;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withTags(DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpointsTags[] tags) {
         this.tags = tags;
         return this;
@@ -117,6 +132,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String verifiedAccessEndpointId;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -124,6 +140,7 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String verifiedAccessGroupId;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withVerifiedAccessGroupId(String verifiedAccessGroupId) {
         this.verifiedAccessGroupId = verifiedAccessGroupId;
         return this;
@@ -131,9 +148,11 @@ public class DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints {
     
     
     public String verifiedAccessInstanceId;
+
     public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
     }
     
+    public DescribeVerifiedAccessEndpointsResultVerifiedAccessEndpoints(){}
 }

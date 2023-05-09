@@ -18,6 +18,7 @@ public class GetJSONWebKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHeader")
     public HttpCacheControlResponseHeader cacheHeader;
+
     public GetJSONWebKeysResponse withCacheHeader(HttpCacheControlResponseHeader cacheHeader) {
         this.cacheHeader = cacheHeader;
         return this;
@@ -29,9 +30,11 @@ public class GetJSONWebKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Jwk[] keys;
+
     public GetJSONWebKeysResponse withKeys(Jwk[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public GetJSONWebKeysResponse(){}
 }

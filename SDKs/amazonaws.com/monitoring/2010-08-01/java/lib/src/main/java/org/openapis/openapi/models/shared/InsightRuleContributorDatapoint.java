@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class InsightRuleContributorDatapoint {
     
     public Double approximateValue;
+
     public InsightRuleContributorDatapoint withApproximateValue(Double approximateValue) {
         this.approximateValue = approximateValue;
         return this;
@@ -19,9 +21,14 @@ public class InsightRuleContributorDatapoint {
     
     
     public OffsetDateTime timestamp;
+
     public InsightRuleContributorDatapoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public InsightRuleContributorDatapoint(@JsonProperty("ApproximateValue") Double approximateValue, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.approximateValue = approximateValue;
+        this.timestamp = timestamp;
+  }
 }

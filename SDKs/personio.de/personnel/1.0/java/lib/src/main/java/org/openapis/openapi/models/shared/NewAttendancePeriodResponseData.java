@@ -12,6 +12,7 @@ public class NewAttendancePeriodResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long[] id;
+
     public NewAttendancePeriodResponseData withId(Long[] id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class NewAttendancePeriodResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NewAttendancePeriodResponseData withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public NewAttendancePeriodResponseData(){}
 }

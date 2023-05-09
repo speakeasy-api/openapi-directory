@@ -18,9 +18,11 @@ public class SubmitProvisioningConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningConfig")
     public ProvisioningConfig provisioningConfig;
+
     public SubmitProvisioningConfigResponse withProvisioningConfig(ProvisioningConfig provisioningConfig) {
         this.provisioningConfig = provisioningConfig;
         return this;
     }
     
+    public SubmitProvisioningConfigResponse(){}
 }

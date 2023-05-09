@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseMasterUserPasswordResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseMasterUserPasswordResult getRelationalDatabaseMasterUserPasswordResult;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withGetRelationalDatabaseMasterUserPasswordResult(org.openapis.openapi.models.shared.GetRelationalDatabaseMasterUserPasswordResult getRelationalDatabaseMasterUserPasswordResult) {
         this.getRelationalDatabaseMasterUserPasswordResult = getRelationalDatabaseMasterUserPasswordResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseMasterUserPasswordResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseMasterUserPasswordResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseMasterUserPasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

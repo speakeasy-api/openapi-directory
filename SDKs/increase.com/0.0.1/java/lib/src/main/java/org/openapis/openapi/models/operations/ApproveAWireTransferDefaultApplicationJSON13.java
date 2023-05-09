@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApproveAWireTransferDefaultApplicationJSON13 {
     @JsonProperty("detail")
     public String detail;
+
     public ApproveAWireTransferDefaultApplicationJSON13 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class ApproveAWireTransferDefaultApplicationJSON13 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_after")
     public Long retryAfter;
+
     public ApproveAWireTransferDefaultApplicationJSON13 withRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -26,6 +28,7 @@ public class ApproveAWireTransferDefaultApplicationJSON13 {
     
     @JsonProperty("status")
     public ApproveAWireTransferDefaultApplicationJSON13StatusEnum status;
+
     public ApproveAWireTransferDefaultApplicationJSON13 withStatus(ApproveAWireTransferDefaultApplicationJSON13StatusEnum status) {
         this.status = status;
         return this;
@@ -33,6 +36,7 @@ public class ApproveAWireTransferDefaultApplicationJSON13 {
     
     @JsonProperty("title")
     public String title;
+
     public ApproveAWireTransferDefaultApplicationJSON13 withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class ApproveAWireTransferDefaultApplicationJSON13 {
     
     @JsonProperty("type")
     public ApproveAWireTransferDefaultApplicationJSON13TypeEnum type;
+
     public ApproveAWireTransferDefaultApplicationJSON13 withType(ApproveAWireTransferDefaultApplicationJSON13TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ApproveAWireTransferDefaultApplicationJSON13(@JsonProperty("detail") String detail, @JsonProperty("status") ApproveAWireTransferDefaultApplicationJSON13StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") ApproveAWireTransferDefaultApplicationJSON13TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeReservedCacheNodesOfferingsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeReservedCacheNodesOfferingsActionEnum action;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withAction(GETDescribeReservedCacheNodesOfferingsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CacheNodeType")
     public String cacheNodeType;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withCacheNodeType(String cacheNodeType) {
         this.cacheNodeType = cacheNodeType;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Duration")
     public String duration;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -39,6 +43,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -49,6 +54,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxRecords")
     public Long maxRecords;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -59,6 +65,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OfferingType")
     public String offeringType;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withOfferingType(String offeringType) {
         this.offeringType = offeringType;
         return this;
@@ -69,6 +76,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ProductDescription")
     public String productDescription;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -79,6 +87,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ReservedCacheNodesOfferingId")
     public String reservedCacheNodesOfferingId;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withReservedCacheNodesOfferingId(String reservedCacheNodesOfferingId) {
         this.reservedCacheNodesOfferingId = reservedCacheNodesOfferingId;
         return this;
@@ -86,6 +95,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeReservedCacheNodesOfferingsVersionEnum version;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withVersion(GETDescribeReservedCacheNodesOfferingsVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,14 @@ public class GETDescribeReservedCacheNodesOfferingsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeReservedCacheNodesOfferingsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeReservedCacheNodesOfferingsRequest(@JsonProperty("Action") GETDescribeReservedCacheNodesOfferingsActionEnum action, @JsonProperty("Version") GETDescribeReservedCacheNodesOfferingsVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

@@ -12,6 +12,7 @@ public class PersonalNameSubdivisionIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PersonalNameSubdivisionIn withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class PersonalNameSubdivisionIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PersonalNameSubdivisionIn withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class PersonalNameSubdivisionIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdivisionIso")
     public String subdivisionIso;
+
     public PersonalNameSubdivisionIn withSubdivisionIso(String subdivisionIso) {
         this.subdivisionIso = subdivisionIso;
         return this;
     }
     
+    public PersonalNameSubdivisionIn(){}
 }

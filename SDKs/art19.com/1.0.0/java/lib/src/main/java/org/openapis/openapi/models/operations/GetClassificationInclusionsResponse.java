@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetClassificationInclusionsResponse {
     
     public String contentType;
+
     public GetClassificationInclusionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetClassificationInclusionsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetClassificationInclusionsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetClassificationInclusionsResponse {
     
     
     public Integer statusCode;
+
     public GetClassificationInclusionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetClassificationInclusionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetClassificationInclusionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetClassificationInclusionsResponse {
      */
     
     public GetClassificationInclusions200ApplicationVndApiPlusJson getClassificationInclusions200ApplicationVndApiPlusJsonObject;
+
     public GetClassificationInclusionsResponse withGetClassificationInclusions200ApplicationVndApiPlusJsonObject(GetClassificationInclusions200ApplicationVndApiPlusJson getClassificationInclusions200ApplicationVndApiPlusJsonObject) {
         this.getClassificationInclusions200ApplicationVndApiPlusJsonObject = getClassificationInclusions200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetClassificationInclusionsResponse {
      */
     
     public GetClassificationInclusions400ApplicationVndApiPlusJson getClassificationInclusions400ApplicationVndApiPlusJsonObject;
+
     public GetClassificationInclusionsResponse withGetClassificationInclusions400ApplicationVndApiPlusJsonObject(GetClassificationInclusions400ApplicationVndApiPlusJson getClassificationInclusions400ApplicationVndApiPlusJsonObject) {
         this.getClassificationInclusions400ApplicationVndApiPlusJsonObject = getClassificationInclusions400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetClassificationInclusionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

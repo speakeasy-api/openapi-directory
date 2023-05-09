@@ -15,6 +15,7 @@ public class UpdateAlertRequestBodyAlertFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionFilterList")
     public org.openapis.openapi.models.shared.DimensionFilter[] dimensionFilterList;
+
     public UpdateAlertRequestBodyAlertFilters withDimensionFilterList(org.openapis.openapi.models.shared.DimensionFilter[] dimensionFilterList) {
         this.dimensionFilterList = dimensionFilterList;
         return this;
@@ -23,9 +24,11 @@ public class UpdateAlertRequestBodyAlertFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricList")
     public String[] metricList;
+
     public UpdateAlertRequestBodyAlertFilters withMetricList(String[] metricList) {
         this.metricList = metricList;
         return this;
     }
     
+    public UpdateAlertRequestBodyAlertFilters(){}
 }

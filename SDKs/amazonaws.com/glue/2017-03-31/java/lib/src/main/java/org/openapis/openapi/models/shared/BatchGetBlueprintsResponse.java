@@ -15,6 +15,7 @@ public class BatchGetBlueprintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blueprints")
     public Blueprint[] blueprints;
+
     public BatchGetBlueprintsResponse withBlueprints(Blueprint[] blueprints) {
         this.blueprints = blueprints;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetBlueprintsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MissingBlueprints")
     public String[] missingBlueprints;
+
     public BatchGetBlueprintsResponse withMissingBlueprints(String[] missingBlueprints) {
         this.missingBlueprints = missingBlueprints;
         return this;
     }
     
+    public BatchGetBlueprintsResponse(){}
 }

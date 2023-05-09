@@ -15,6 +15,7 @@ public class ReasonCodeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public FindingReasonCodeEnum name;
+
     public ReasonCodeSummary withName(FindingReasonCodeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class ReasonCodeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public ReasonCodeSummary withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ReasonCodeSummary(){}
 }

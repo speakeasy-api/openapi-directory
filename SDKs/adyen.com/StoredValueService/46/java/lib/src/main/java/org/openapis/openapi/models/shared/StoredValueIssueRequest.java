@@ -12,6 +12,7 @@ public class StoredValueIssueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public StoredValueIssueRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class StoredValueIssueRequest {
      */
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public StoredValueIssueRequest withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -32,6 +34,7 @@ public class StoredValueIssueRequest {
      */
     @JsonProperty("paymentMethod")
     public java.util.Map<String, String> paymentMethod;
+
     public StoredValueIssueRequest withPaymentMethod(java.util.Map<String, String> paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -40,6 +43,7 @@ public class StoredValueIssueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringDetailReference")
     public String recurringDetailReference;
+
     public StoredValueIssueRequest withRecurringDetailReference(String recurringDetailReference) {
         this.recurringDetailReference = recurringDetailReference;
         return this;
@@ -52,6 +56,7 @@ public class StoredValueIssueRequest {
      */
     @JsonProperty("reference")
     public String reference;
+
     public StoredValueIssueRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -70,6 +75,7 @@ public class StoredValueIssueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public StoredValueIssueRequestShopperInteractionEnum shopperInteraction;
+
     public StoredValueIssueRequest withShopperInteraction(StoredValueIssueRequestShopperInteractionEnum shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -78,6 +84,7 @@ public class StoredValueIssueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperReference")
     public String shopperReference;
+
     public StoredValueIssueRequest withShopperReference(String shopperReference) {
         this.shopperReference = shopperReference;
         return this;
@@ -89,9 +96,15 @@ public class StoredValueIssueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public StoredValueIssueRequest withStore(String store) {
         this.store = store;
         return this;
     }
     
+    public StoredValueIssueRequest(@JsonProperty("merchantAccount") String merchantAccount, @JsonProperty("paymentMethod") java.util.Map<String, String> paymentMethod, @JsonProperty("reference") String reference) {
+        this.merchantAccount = merchantAccount;
+        this.paymentMethod = paymentMethod;
+        this.reference = reference;
+  }
 }

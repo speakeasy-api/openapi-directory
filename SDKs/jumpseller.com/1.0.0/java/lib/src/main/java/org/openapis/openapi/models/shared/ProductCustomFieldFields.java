@@ -15,6 +15,7 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_field_id")
     public Integer customFieldId;
+
     public ProductCustomFieldFields withCustomFieldId(Integer customFieldId) {
         this.customFieldId = customFieldId;
         return this;
@@ -26,6 +27,7 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public ProductCustomFieldFields withId(Integer id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ProductCustomFieldFields withLabel(String label) {
         this.label = label;
         return this;
@@ -48,6 +51,7 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ProductCustomFieldFields withType(String type) {
         this.type = type;
         return this;
@@ -59,6 +63,7 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ProductCustomFieldFields withValue(String value) {
         this.value = value;
         return this;
@@ -70,9 +75,11 @@ public class ProductCustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value_id")
     public String valueId;
+
     public ProductCustomFieldFields withValueId(String valueId) {
         this.valueId = valueId;
         return this;
     }
     
+    public ProductCustomFieldFields(){}
 }

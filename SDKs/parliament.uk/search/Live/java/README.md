@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetDescriptionResponse;
 
 public class Application {
@@ -33,6 +32,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -40,14 +41,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### description
+### [description](docs/description/README.md)
 
-* `getDescription` - OpenSearch description document
+* [getDescription](docs/description/README.md#getdescription) - OpenSearch description document
 
-### query
+### [query](docs/query/README.md)
 
-* `getQuery` - Search results
-* `getQueryExtension` - Search results
+* [getQuery](docs/query/README.md#getquery) - Search results
+* [getQueryExtension](docs/query/README.md#getqueryextension) - Search results
 <!-- End SDK Available Operations -->
 
 ### Maturity

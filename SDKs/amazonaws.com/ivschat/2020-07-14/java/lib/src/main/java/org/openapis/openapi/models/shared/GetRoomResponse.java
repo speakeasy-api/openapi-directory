@@ -20,6 +20,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public GetRoomResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetRoomResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createTime")
     public OffsetDateTime createTime;
+
     public GetRoomResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -38,6 +40,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetRoomResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfigurationIdentifiers")
     public String[] loggingConfigurationIdentifiers;
+
     public GetRoomResponse withLoggingConfigurationIdentifiers(String[] loggingConfigurationIdentifiers) {
         this.loggingConfigurationIdentifiers = loggingConfigurationIdentifiers;
         return this;
@@ -54,6 +58,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageLength")
     public Long maximumMessageLength;
+
     public GetRoomResponse withMaximumMessageLength(Long maximumMessageLength) {
         this.maximumMessageLength = maximumMessageLength;
         return this;
@@ -62,6 +67,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumMessageRatePerSecond")
     public Long maximumMessageRatePerSecond;
+
     public GetRoomResponse withMaximumMessageRatePerSecond(Long maximumMessageRatePerSecond) {
         this.maximumMessageRatePerSecond = maximumMessageRatePerSecond;
         return this;
@@ -70,6 +76,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageReviewHandler")
     public MessageReviewHandler messageReviewHandler;
+
     public GetRoomResponse withMessageReviewHandler(MessageReviewHandler messageReviewHandler) {
         this.messageReviewHandler = messageReviewHandler;
         return this;
@@ -78,6 +85,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetRoomResponse withName(String name) {
         this.name = name;
         return this;
@@ -86,6 +94,7 @@ public class GetRoomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetRoomResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -96,9 +105,11 @@ public class GetRoomResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetRoomResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetRoomResponse(){}
 }

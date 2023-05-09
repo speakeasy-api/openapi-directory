@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExecuteBuyTrasactionResponse {
     
     public String contentType;
+
     public ExecuteBuyTrasactionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExecuteBuyTrasactionResponse {
     
     
     public Integer statusCode;
+
     public ExecuteBuyTrasactionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExecuteBuyTrasactionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExecuteBuyTrasactionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction200ApplicationJSON executeBuyTrasaction200ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction200ApplicationJSONObject(ExecuteBuyTrasaction200ApplicationJSON executeBuyTrasaction200ApplicationJSONObject) {
         this.executeBuyTrasaction200ApplicationJSONObject = executeBuyTrasaction200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction400ApplicationJSON executeBuyTrasaction400ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction400ApplicationJSONObject(ExecuteBuyTrasaction400ApplicationJSON executeBuyTrasaction400ApplicationJSONObject) {
         this.executeBuyTrasaction400ApplicationJSONObject = executeBuyTrasaction400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction401ApplicationJSON executeBuyTrasaction401ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction401ApplicationJSONObject(ExecuteBuyTrasaction401ApplicationJSON executeBuyTrasaction401ApplicationJSONObject) {
         this.executeBuyTrasaction401ApplicationJSONObject = executeBuyTrasaction401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction403ApplicationJSON executeBuyTrasaction403ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction403ApplicationJSONObject(ExecuteBuyTrasaction403ApplicationJSON executeBuyTrasaction403ApplicationJSONObject) {
         this.executeBuyTrasaction403ApplicationJSONObject = executeBuyTrasaction403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction404ApplicationJSON executeBuyTrasaction404ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction404ApplicationJSONObject(ExecuteBuyTrasaction404ApplicationJSON executeBuyTrasaction404ApplicationJSONObject) {
         this.executeBuyTrasaction404ApplicationJSONObject = executeBuyTrasaction404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction409ApplicationJSON executeBuyTrasaction409ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction409ApplicationJSONObject(ExecuteBuyTrasaction409ApplicationJSON executeBuyTrasaction409ApplicationJSONObject) {
         this.executeBuyTrasaction409ApplicationJSONObject = executeBuyTrasaction409ApplicationJSONObject;
         return this;
@@ -93,6 +103,7 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction429ApplicationJSON executeBuyTrasaction429ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction429ApplicationJSONObject(ExecuteBuyTrasaction429ApplicationJSON executeBuyTrasaction429ApplicationJSONObject) {
         this.executeBuyTrasaction429ApplicationJSONObject = executeBuyTrasaction429ApplicationJSONObject;
         return this;
@@ -103,9 +114,14 @@ public class ExecuteBuyTrasactionResponse {
      */
     
     public ExecuteBuyTrasaction500ApplicationJSON executeBuyTrasaction500ApplicationJSONObject;
+
     public ExecuteBuyTrasactionResponse withExecuteBuyTrasaction500ApplicationJSONObject(ExecuteBuyTrasaction500ApplicationJSON executeBuyTrasaction500ApplicationJSONObject) {
         this.executeBuyTrasaction500ApplicationJSONObject = executeBuyTrasaction500ApplicationJSONObject;
         return this;
     }
     
+    public ExecuteBuyTrasactionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -59,10 +59,8 @@ public class FactOfTheDay {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactFodResponse res = new org.openapis.openapi.models.operations.GetFactFodResponse() {{
+        org.openapis.openapi.models.operations.GetFactFodResponse res = new org.openapis.openapi.models.operations.GetFactFodResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
@@ -73,10 +71,11 @@ public class FactOfTheDay {
 
     /**
      * Get the list of supported fact of the day categories.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetFactFodCategoriesResponse getFactFodCategories() throws Exception {
+    public org.openapis.openapi.models.operations.GetFactFodCategoriesResponse getFactFodCategories(org.openapis.openapi.models.operations.GetFactFodCategoriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/fact/fod/categories");
         
@@ -85,15 +84,14 @@ public class FactOfTheDay {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFactFodCategoriesResponse res = new org.openapis.openapi.models.operations.GetFactFodCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetFactFodCategoriesResponse res = new org.openapis.openapi.models.operations.GetFactFodCategoriesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {

@@ -18,6 +18,7 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedDeviceManagementLevels")
     public DevicePolicyAllowedDeviceManagementLevelsEnum[] allowedDeviceManagementLevels;
+
     public DevicePolicy withAllowedDeviceManagementLevels(DevicePolicyAllowedDeviceManagementLevelsEnum[] allowedDeviceManagementLevels) {
         this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
         return this;
@@ -29,6 +30,7 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedEncryptionStatuses")
     public DevicePolicyAllowedEncryptionStatusesEnum[] allowedEncryptionStatuses;
+
     public DevicePolicy withAllowedEncryptionStatuses(DevicePolicyAllowedEncryptionStatusesEnum[] allowedEncryptionStatuses) {
         this.allowedEncryptionStatuses = allowedEncryptionStatuses;
         return this;
@@ -40,6 +42,7 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osConstraints")
     public OsConstraint[] osConstraints;
+
     public DevicePolicy withOsConstraints(OsConstraint[] osConstraints) {
         this.osConstraints = osConstraints;
         return this;
@@ -51,6 +54,7 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireAdminApproval")
     public Boolean requireAdminApproval;
+
     public DevicePolicy withRequireAdminApproval(Boolean requireAdminApproval) {
         this.requireAdminApproval = requireAdminApproval;
         return this;
@@ -62,6 +66,7 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireCorpOwned")
     public Boolean requireCorpOwned;
+
     public DevicePolicy withRequireCorpOwned(Boolean requireCorpOwned) {
         this.requireCorpOwned = requireCorpOwned;
         return this;
@@ -73,9 +78,11 @@ public class DevicePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requireScreenlock")
     public Boolean requireScreenlock;
+
     public DevicePolicy withRequireScreenlock(Boolean requireScreenlock) {
         this.requireScreenlock = requireScreenlock;
         return this;
     }
     
+    public DevicePolicy(){}
 }

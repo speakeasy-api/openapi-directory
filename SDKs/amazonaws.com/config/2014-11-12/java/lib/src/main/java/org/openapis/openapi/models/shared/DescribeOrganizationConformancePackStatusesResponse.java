@@ -15,6 +15,7 @@ public class DescribeOrganizationConformancePackStatusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOrganizationConformancePackStatusesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOrganizationConformancePackStatusesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConformancePackStatuses")
     public OrganizationConformancePackStatus[] organizationConformancePackStatuses;
+
     public DescribeOrganizationConformancePackStatusesResponse withOrganizationConformancePackStatuses(OrganizationConformancePackStatus[] organizationConformancePackStatuses) {
         this.organizationConformancePackStatuses = organizationConformancePackStatuses;
         return this;
     }
     
+    public DescribeOrganizationConformancePackStatusesResponse(){}
 }

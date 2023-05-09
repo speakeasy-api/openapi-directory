@@ -18,6 +18,7 @@ public class ReserveIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseId")
     public String databaseId;
+
     public ReserveIdsRequest withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -29,9 +30,11 @@ public class ReserveIdsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public Key[] keys;
+
     public ReserveIdsRequest withKeys(Key[] keys) {
         this.keys = keys;
         return this;
     }
     
+    public ReserveIdsRequest(){}
 }

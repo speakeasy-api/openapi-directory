@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AbortCriteria {
     @JsonProperty("action")
     public AbortActionEnum action;
+
     public AbortCriteria withAction(AbortActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class AbortCriteria {
     
     @JsonProperty("failureType")
     public JobExecutionFailureTypeEnum failureType;
+
     public AbortCriteria withFailureType(JobExecutionFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -26,6 +28,7 @@ public class AbortCriteria {
     
     @JsonProperty("minNumberOfExecutedThings")
     public Long minNumberOfExecutedThings;
+
     public AbortCriteria withMinNumberOfExecutedThings(Long minNumberOfExecutedThings) {
         this.minNumberOfExecutedThings = minNumberOfExecutedThings;
         return this;
@@ -33,9 +36,16 @@ public class AbortCriteria {
     
     @JsonProperty("thresholdPercentage")
     public Double thresholdPercentage;
+
     public AbortCriteria withThresholdPercentage(Double thresholdPercentage) {
         this.thresholdPercentage = thresholdPercentage;
         return this;
     }
     
+    public AbortCriteria(@JsonProperty("action") AbortActionEnum action, @JsonProperty("failureType") JobExecutionFailureTypeEnum failureType, @JsonProperty("minNumberOfExecutedThings") Long minNumberOfExecutedThings, @JsonProperty("thresholdPercentage") Double thresholdPercentage) {
+        this.action = action;
+        this.failureType = failureType;
+        this.minNumberOfExecutedThings = minNumberOfExecutedThings;
+        this.thresholdPercentage = thresholdPercentage;
+  }
 }

@@ -18,6 +18,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glob")
     public String glob;
+
     public Header withGlob(String glob) {
         this.glob = glob;
         return this;
@@ -29,6 +30,7 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public Header withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -40,9 +42,11 @@ public class Header {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public Header withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public Header(){}
 }

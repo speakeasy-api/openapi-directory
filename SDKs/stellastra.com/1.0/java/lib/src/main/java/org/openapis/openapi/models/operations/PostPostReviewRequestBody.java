@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostPostReviewRequestBody {
     @JsonProperty("rating")
     public Long rating;
+
     public PostPostReviewRequestBody withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -21,6 +22,7 @@ public class PostPostReviewRequestBody {
     
     @JsonProperty("user_email")
     public String userEmail;
+
     public PostPostReviewRequestBody withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -29,9 +31,14 @@ public class PostPostReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_name")
     public String userName;
+
     public PostPostReviewRequestBody withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public PostPostReviewRequestBody(@JsonProperty("rating") Long rating, @JsonProperty("user_email") String userEmail) {
+        this.rating = rating;
+        this.userEmail = userEmail;
+  }
 }

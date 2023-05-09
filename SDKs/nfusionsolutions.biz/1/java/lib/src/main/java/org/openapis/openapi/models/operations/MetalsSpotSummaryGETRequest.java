@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetalsSpotSummaryGETRequest {
@@ -12,6 +13,7 @@ public class MetalsSpotSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public MetalsSpotSummaryGETRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -22,6 +24,7 @@ public class MetalsSpotSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public MetalsSpotSummaryGETFormatEnum format;
+
     public MetalsSpotSummaryGETRequest withFormat(MetalsSpotSummaryGETFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +35,7 @@ public class MetalsSpotSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
     public String metals;
+
     public MetalsSpotSummaryGETRequest withMetals(String metals) {
         this.metals = metals;
         return this;
@@ -50,9 +54,13 @@ public class MetalsSpotSummaryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
     public MetalsSpotSummaryGETUnitofmeasureEnum unitofmeasure;
+
     public MetalsSpotSummaryGETRequest withUnitofmeasure(MetalsSpotSummaryGETUnitofmeasureEnum unitofmeasure) {
         this.unitofmeasure = unitofmeasure;
         return this;
     }
     
+    public MetalsSpotSummaryGETRequest(@JsonProperty("metals") String metals) {
+        this.metals = metals;
+  }
 }

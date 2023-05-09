@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUpdateTableRowsResponse {
@@ -12,6 +13,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchUpdateTableRowsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateTableRowsResult batchUpdateTableRowsResult;
+
     public BatchUpdateTableRowsResponse withBatchUpdateTableRowsResult(org.openapis.openapi.models.shared.BatchUpdateTableRowsResult batchUpdateTableRowsResult) {
         this.batchUpdateTableRowsResult = batchUpdateTableRowsResult;
         return this;
@@ -29,6 +32,7 @@ public class BatchUpdateTableRowsResponse {
     
     
     public String contentType;
+
     public BatchUpdateTableRowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object internalServerException;
+
     public BatchUpdateTableRowsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object requestTimeoutException;
+
     public BatchUpdateTableRowsResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class BatchUpdateTableRowsResponse {
     
     
     public Integer statusCode;
+
     public BatchUpdateTableRowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchUpdateTableRowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUpdateTableRowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchUpdateTableRowsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchUpdateTableRowsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object throttlingException;
+
     public BatchUpdateTableRowsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class BatchUpdateTableRowsResponse {
      */
     
     public Object validationException;
+
     public BatchUpdateTableRowsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchUpdateTableRowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

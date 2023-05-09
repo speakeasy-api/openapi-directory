@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListLakesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lakes")
     public GoogleCloudDataplexV1Lake[] lakes;
+
     public GoogleCloudDataplexV1ListLakesResponse withLakes(GoogleCloudDataplexV1Lake[] lakes) {
         this.lakes = lakes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ListLakesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListLakesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ListLakesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public GoogleCloudDataplexV1ListLakesResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListLakesResponse(){}
 }

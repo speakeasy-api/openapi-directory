@@ -17,6 +17,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public GetSearch200ApplicationJSON withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -25,6 +26,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment_score")
     public Double environmentScore;
+
     public GetSearch200ApplicationJSON withEnvironmentScore(Double environmentScore) {
         this.environmentScore = environmentScore;
         return this;
@@ -33,6 +35,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("governance_score")
     public Double governanceScore;
+
     public GetSearch200ApplicationJSON withGovernanceScore(Double governanceScore) {
         this.governanceScore = governanceScore;
         return this;
@@ -42,6 +45,7 @@ public class GetSearch200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_processing_date")
     public LocalDate lastProcessingDate;
+
     public GetSearch200ApplicationJSON withLastProcessingDate(LocalDate lastProcessingDate) {
         this.lastProcessingDate = lastProcessingDate;
         return this;
@@ -50,6 +54,7 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("social_score")
     public Double socialScore;
+
     public GetSearch200ApplicationJSON withSocialScore(Double socialScore) {
         this.socialScore = socialScore;
         return this;
@@ -58,9 +63,11 @@ public class GetSearch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetSearch200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetSearch200ApplicationJSON(){}
 }

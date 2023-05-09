@@ -12,6 +12,7 @@ public class IErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public IErrorInfo withCode(String code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class IErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultMessage")
     public String faultMessage;
+
     public IErrorInfo withFaultMessage(String faultMessage) {
         this.faultMessage = faultMessage;
         return this;
@@ -28,6 +30,7 @@ public class IErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Group")
     public String group;
+
     public IErrorInfo withGroup(String group) {
         this.group = group;
         return this;
@@ -36,9 +39,11 @@ public class IErrorInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserVisibleMessage")
     public String userVisibleMessage;
+
     public IErrorInfo withUserVisibleMessage(String userVisibleMessage) {
         this.userVisibleMessage = userVisibleMessage;
         return this;
     }
     
+    public IErrorInfo(){}
 }

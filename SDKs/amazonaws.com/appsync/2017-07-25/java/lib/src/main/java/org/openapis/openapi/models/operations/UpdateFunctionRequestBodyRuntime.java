@@ -15,6 +15,7 @@ public class UpdateFunctionRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.RuntimeNameEnum name;
+
     public UpdateFunctionRequestBodyRuntime withName(org.openapis.openapi.models.shared.RuntimeNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class UpdateFunctionRequestBodyRuntime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeVersion")
     public String runtimeVersion;
+
     public UpdateFunctionRequestBodyRuntime withRuntimeVersion(String runtimeVersion) {
         this.runtimeVersion = runtimeVersion;
         return this;
     }
     
+    public UpdateFunctionRequestBodyRuntime(){}
 }

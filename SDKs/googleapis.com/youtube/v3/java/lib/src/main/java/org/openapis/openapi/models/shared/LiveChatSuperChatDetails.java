@@ -15,6 +15,7 @@ public class LiveChatSuperChatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountDisplayString")
     public String amountDisplayString;
+
     public LiveChatSuperChatDetails withAmountDisplayString(String amountDisplayString) {
         this.amountDisplayString = amountDisplayString;
         return this;
@@ -26,6 +27,7 @@ public class LiveChatSuperChatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amountMicros")
     public String amountMicros;
+
     public LiveChatSuperChatDetails withAmountMicros(String amountMicros) {
         this.amountMicros = amountMicros;
         return this;
@@ -37,6 +39,7 @@ public class LiveChatSuperChatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public LiveChatSuperChatDetails withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -48,6 +51,7 @@ public class LiveChatSuperChatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tier")
     public Long tier;
+
     public LiveChatSuperChatDetails withTier(Long tier) {
         this.tier = tier;
         return this;
@@ -59,9 +63,11 @@ public class LiveChatSuperChatDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userComment")
     public String userComment;
+
     public LiveChatSuperChatDetails withUserComment(String userComment) {
         this.userComment = userComment;
         return this;
     }
     
+    public LiveChatSuperChatDetails(){}
 }

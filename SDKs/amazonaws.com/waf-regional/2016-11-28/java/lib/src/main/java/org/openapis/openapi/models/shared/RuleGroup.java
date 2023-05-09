@@ -15,6 +15,7 @@ public class RuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public RuleGroup withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RuleGroup withName(String name) {
         this.name = name;
         return this;
@@ -30,9 +32,13 @@ public class RuleGroup {
     
     @JsonProperty("RuleGroupId")
     public String ruleGroupId;
+
     public RuleGroup withRuleGroupId(String ruleGroupId) {
         this.ruleGroupId = ruleGroupId;
         return this;
     }
     
+    public RuleGroup(@JsonProperty("RuleGroupId") String ruleGroupId) {
+        this.ruleGroupId = ruleGroupId;
+  }
 }

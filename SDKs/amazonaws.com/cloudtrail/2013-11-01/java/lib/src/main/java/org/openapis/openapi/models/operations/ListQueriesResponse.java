@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListQueriesResponse {
     
     public String contentType;
+
     public ListQueriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListQueriesResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public ListQueriesResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -29,6 +32,7 @@ public class ListQueriesResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public ListQueriesResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class ListQueriesResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public ListQueriesResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -49,6 +54,7 @@ public class ListQueriesResponse {
      */
     
     public Object invalidDateRangeException;
+
     public ListQueriesResponse withInvalidDateRangeException(Object invalidDateRangeException) {
         this.invalidDateRangeException = invalidDateRangeException;
         return this;
@@ -59,6 +65,7 @@ public class ListQueriesResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListQueriesResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -69,6 +76,7 @@ public class ListQueriesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListQueriesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListQueriesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListQueriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class ListQueriesResponse {
      */
     
     public Object invalidQueryStatusException;
+
     public ListQueriesResponse withInvalidQueryStatusException(Object invalidQueryStatusException) {
         this.invalidQueryStatusException = invalidQueryStatusException;
         return this;
@@ -99,6 +109,7 @@ public class ListQueriesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListQueriesResponse listQueriesResponse;
+
     public ListQueriesResponse withListQueriesResponse(org.openapis.openapi.models.shared.ListQueriesResponse listQueriesResponse) {
         this.listQueriesResponse = listQueriesResponse;
         return this;
@@ -109,6 +120,7 @@ public class ListQueriesResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public ListQueriesResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -119,6 +131,7 @@ public class ListQueriesResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ListQueriesResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -126,6 +139,7 @@ public class ListQueriesResponse {
     
     
     public Integer statusCode;
+
     public ListQueriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class ListQueriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListQueriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class ListQueriesResponse {
      */
     
     public Object unsupportedOperationException;
+
     public ListQueriesResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public ListQueriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class JupyterServerAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeRepositories")
     public CodeRepository[] codeRepositories;
+
     public JupyterServerAppSettings withCodeRepositories(CodeRepository[] codeRepositories) {
         this.codeRepositories = codeRepositories;
         return this;
@@ -23,6 +24,7 @@ public class JupyterServerAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultResourceSpec")
     public ResourceSpec defaultResourceSpec;
+
     public JupyterServerAppSettings withDefaultResourceSpec(ResourceSpec defaultResourceSpec) {
         this.defaultResourceSpec = defaultResourceSpec;
         return this;
@@ -31,9 +33,11 @@ public class JupyterServerAppSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleConfigArns")
     public String[] lifecycleConfigArns;
+
     public JupyterServerAppSettings withLifecycleConfigArns(String[] lifecycleConfigArns) {
         this.lifecycleConfigArns = lifecycleConfigArns;
         return this;
     }
     
+    public JupyterServerAppSettings(){}
 }

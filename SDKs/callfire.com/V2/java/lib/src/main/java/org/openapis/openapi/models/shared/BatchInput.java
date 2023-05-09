@@ -18,6 +18,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadcastId")
     public Long broadcastId;
+
     public BatchInput withBroadcastId(Long broadcastId) {
         this.broadcastId = broadcastId;
         return this;
@@ -29,6 +30,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BatchInput withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -40,6 +42,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public BatchInput withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BatchInput withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class BatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public BatchStatusEnum status;
+
     public BatchInput withStatus(BatchStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchInput(){}
 }

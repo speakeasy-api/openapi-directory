@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitAdminV2ListTenantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudIdentitytoolkitAdminV2ListTenantsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitAdminV2ListTenantsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenants")
     public GoogleCloudIdentitytoolkitAdminV2Tenant[] tenants;
+
     public GoogleCloudIdentitytoolkitAdminV2ListTenantsResponse withTenants(GoogleCloudIdentitytoolkitAdminV2Tenant[] tenants) {
         this.tenants = tenants;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2ListTenantsResponse(){}
 }

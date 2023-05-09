@@ -18,6 +18,7 @@ public class UpdatePagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdatePagePropertiesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdatePagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public UpdatePagePropertiesRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -40,9 +42,11 @@ public class UpdatePagePropertiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageProperties")
     public PageProperties pageProperties;
+
     public UpdatePagePropertiesRequest withPageProperties(PageProperties pageProperties) {
         this.pageProperties = pageProperties;
         return this;
     }
     
+    public UpdatePagePropertiesRequest(){}
 }

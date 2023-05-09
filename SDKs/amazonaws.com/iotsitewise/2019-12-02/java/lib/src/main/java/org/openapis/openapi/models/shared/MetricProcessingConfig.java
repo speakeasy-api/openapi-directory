@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MetricProcessingConfig {
     @JsonProperty("computeLocation")
     public ComputeLocationEnum computeLocation;
+
     public MetricProcessingConfig withComputeLocation(ComputeLocationEnum computeLocation) {
         this.computeLocation = computeLocation;
         return this;
     }
     
+    public MetricProcessingConfig(@JsonProperty("computeLocation") ComputeLocationEnum computeLocation) {
+        this.computeLocation = computeLocation;
+  }
 }

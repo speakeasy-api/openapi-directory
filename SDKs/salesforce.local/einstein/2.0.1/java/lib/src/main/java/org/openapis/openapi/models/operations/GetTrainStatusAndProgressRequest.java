@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrainStatusAndProgressRequest {
@@ -12,9 +13,13 @@ public class GetTrainStatusAndProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=modelId")
     public String modelId;
+
     public GetTrainStatusAndProgressRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
     }
     
+    public GetTrainStatusAndProgressRequest(@JsonProperty("modelId") String modelId) {
+        this.modelId = modelId;
+  }
 }

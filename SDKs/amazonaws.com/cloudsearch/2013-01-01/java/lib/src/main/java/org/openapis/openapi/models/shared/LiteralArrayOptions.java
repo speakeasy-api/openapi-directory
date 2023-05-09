@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class LiteralArrayOptions {
     
     public String defaultValue;
+
     public LiteralArrayOptions withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -19,6 +20,7 @@ public class LiteralArrayOptions {
     
     
     public Boolean facetEnabled;
+
     public LiteralArrayOptions withFacetEnabled(Boolean facetEnabled) {
         this.facetEnabled = facetEnabled;
         return this;
@@ -26,6 +28,7 @@ public class LiteralArrayOptions {
     
     
     public Boolean returnEnabled;
+
     public LiteralArrayOptions withReturnEnabled(Boolean returnEnabled) {
         this.returnEnabled = returnEnabled;
         return this;
@@ -33,6 +36,7 @@ public class LiteralArrayOptions {
     
     
     public Boolean searchEnabled;
+
     public LiteralArrayOptions withSearchEnabled(Boolean searchEnabled) {
         this.searchEnabled = searchEnabled;
         return this;
@@ -40,9 +44,11 @@ public class LiteralArrayOptions {
     
     
     public String sourceFields;
+
     public LiteralArrayOptions withSourceFields(String sourceFields) {
         this.sourceFields = sourceFields;
         return this;
     }
     
+    public LiteralArrayOptions(){}
 }

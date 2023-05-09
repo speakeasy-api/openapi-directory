@@ -18,6 +18,7 @@ public class SFXAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_mp3")
     public SFXAssetDetails previewMp3;
+
     public SFXAssets withPreviewMp3(SFXAssetDetails previewMp3) {
         this.previewMp3 = previewMp3;
         return this;
@@ -29,9 +30,11 @@ public class SFXAssets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveform")
     public SFXAssetDetails waveform;
+
     public SFXAssets withWaveform(SFXAssetDetails waveform) {
         this.waveform = waveform;
         return this;
     }
     
+    public SFXAssets(){}
 }

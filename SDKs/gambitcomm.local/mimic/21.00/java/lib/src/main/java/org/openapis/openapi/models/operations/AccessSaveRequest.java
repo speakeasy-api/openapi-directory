@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccessSaveRequest {
@@ -12,9 +13,13 @@ public class AccessSaveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=filename")
     public String filename;
+
     public AccessSaveRequest withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public AccessSaveRequest(@JsonProperty("filename") String filename) {
+        this.filename = filename;
+  }
 }

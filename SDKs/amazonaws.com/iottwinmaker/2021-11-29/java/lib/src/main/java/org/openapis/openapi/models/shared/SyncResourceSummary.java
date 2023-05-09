@@ -20,6 +20,7 @@ public class SyncResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public String externalId;
+
     public SyncResourceSummary withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -28,6 +29,7 @@ public class SyncResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public SyncResourceSummary withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -36,6 +38,7 @@ public class SyncResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public SyncResourceTypeEnum resourceType;
+
     public SyncResourceSummary withResourceType(SyncResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -44,6 +47,7 @@ public class SyncResourceSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SyncResourceStatus status;
+
     public SyncResourceSummary withStatus(SyncResourceStatus status) {
         this.status = status;
         return this;
@@ -54,9 +58,11 @@ public class SyncResourceSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public SyncResourceSummary withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
     }
     
+    public SyncResourceSummary(){}
 }

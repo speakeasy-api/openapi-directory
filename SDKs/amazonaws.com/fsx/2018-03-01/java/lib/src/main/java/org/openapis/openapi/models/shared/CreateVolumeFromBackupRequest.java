@@ -14,17 +14,19 @@ public class CreateVolumeFromBackupRequest {
      */
     @JsonProperty("BackupId")
     public String backupId;
+
     public CreateVolumeFromBackupRequest withBackupId(String backupId) {
         this.backupId = backupId;
         return this;
     }
     
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateVolumeFromBackupRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -32,6 +34,7 @@ public class CreateVolumeFromBackupRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateVolumeFromBackupRequest withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +43,7 @@ public class CreateVolumeFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OntapConfiguration")
     public CreateOntapVolumeConfiguration ontapConfiguration;
+
     public CreateVolumeFromBackupRequest withOntapConfiguration(CreateOntapVolumeConfiguration ontapConfiguration) {
         this.ontapConfiguration = ontapConfiguration;
         return this;
@@ -51,9 +55,14 @@ public class CreateVolumeFromBackupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVolumeFromBackupRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVolumeFromBackupRequest(@JsonProperty("BackupId") String backupId, @JsonProperty("Name") String name) {
+        this.backupId = backupId;
+        this.name = name;
+  }
 }

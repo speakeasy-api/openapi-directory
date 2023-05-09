@@ -15,9 +15,11 @@ public class ActionResponse {
      */
     
     public String pslOutput;
+
     public ActionResponse withPslOutput(String pslOutput) {
         this.pslOutput = pslOutput;
         return this;
     }
     
+    public ActionResponse(){}
 }

@@ -15,9 +15,11 @@ public class DescribeDeploymentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deployments")
     public Deployment[] deployments;
+
     public DescribeDeploymentsResult withDeployments(Deployment[] deployments) {
         this.deployments = deployments;
         return this;
     }
     
+    public DescribeDeploymentsResult(){}
 }

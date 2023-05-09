@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddRoleToDBClusterMessage {
     
     public String dbClusterIdentifier;
+
     public AddRoleToDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class AddRoleToDBClusterMessage {
     
     
     public String featureName;
+
     public AddRoleToDBClusterMessage withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -23,9 +25,14 @@ public class AddRoleToDBClusterMessage {
     
     
     public String roleArn;
+
     public AddRoleToDBClusterMessage withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public AddRoleToDBClusterMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("RoleArn") String roleArn) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.roleArn = roleArn;
+  }
 }

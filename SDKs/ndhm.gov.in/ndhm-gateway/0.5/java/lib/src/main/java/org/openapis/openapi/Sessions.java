@@ -49,14 +49,12 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse res = new org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse res = new org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse(contentType, httpRes.statusCode()) {{
             openIdConfiguration = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,14 +102,12 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV05CertsResponse res = new org.openapis.openapi.models.operations.GetV05CertsResponse() {{
+        org.openapis.openapi.models.operations.GetV05CertsResponse res = new org.openapis.openapi.models.operations.GetV05CertsResponse(contentType, httpRes.statusCode()) {{
             certs = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,14 +161,12 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SessionsJsonResponse res = new org.openapis.openapi.models.operations.PostV05SessionsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SessionsJsonResponse res = new org.openapis.openapi.models.operations.PostV05SessionsJsonResponse(contentType, httpRes.statusCode()) {{
             sessionResponse = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -226,14 +220,12 @@ public class Sessions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SessionsRawResponse res = new org.openapis.openapi.models.operations.PostV05SessionsRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SessionsRawResponse res = new org.openapis.openapi.models.operations.PostV05SessionsRawResponse(contentType, httpRes.statusCode()) {{
             sessionResponse = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appCategory")
     public AppCategoryEnum appCategory;
+
     public Blueprint withAppCategory(AppCategoryEnum appCategory) {
         this.appCategory = appCategory;
         return this;
@@ -23,6 +24,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blueprintId")
     public String blueprintId;
+
     public Blueprint withBlueprintId(String blueprintId) {
         this.blueprintId = blueprintId;
         return this;
@@ -31,6 +33,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Blueprint withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group")
     public String group;
+
     public Blueprint withGroup(String group) {
         this.group = group;
         return this;
@@ -47,6 +51,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public Blueprint withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -55,6 +60,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseUrl")
     public String licenseUrl;
+
     public Blueprint withLicenseUrl(String licenseUrl) {
         this.licenseUrl = licenseUrl;
         return this;
@@ -63,6 +69,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minPower")
     public Long minPower;
+
     public Blueprint withMinPower(Long minPower) {
         this.minPower = minPower;
         return this;
@@ -71,6 +78,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Blueprint withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public InstancePlatformEnum platform;
+
     public Blueprint withPlatform(InstancePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -87,6 +96,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productUrl")
     public String productUrl;
+
     public Blueprint withProductUrl(String productUrl) {
         this.productUrl = productUrl;
         return this;
@@ -95,6 +105,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public BlueprintTypeEnum type;
+
     public Blueprint withType(BlueprintTypeEnum type) {
         this.type = type;
         return this;
@@ -103,6 +114,7 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public Blueprint withVersion(String version) {
         this.version = version;
         return this;
@@ -111,9 +123,11 @@ public class Blueprint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versionCode")
     public String versionCode;
+
     public Blueprint withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public Blueprint(){}
 }

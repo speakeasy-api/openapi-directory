@@ -19,6 +19,7 @@ public class V1CreateRefundRequest {
      */
     @JsonProperty("payment_id")
     public String paymentId;
+
     public V1CreateRefundRequest withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -29,6 +30,7 @@ public class V1CreateRefundRequest {
      */
     @JsonProperty("reason")
     public String reason;
+
     public V1CreateRefundRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -37,6 +39,7 @@ public class V1CreateRefundRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refunded_money")
     public V1Money refundedMoney;
+
     public V1CreateRefundRequest withRefundedMoney(V1Money refundedMoney) {
         this.refundedMoney = refundedMoney;
         return this;
@@ -48,6 +51,7 @@ public class V1CreateRefundRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_idempotence_key")
     public String requestIdempotenceKey;
+
     public V1CreateRefundRequest withRequestIdempotenceKey(String requestIdempotenceKey) {
         this.requestIdempotenceKey = requestIdempotenceKey;
         return this;
@@ -58,9 +62,15 @@ public class V1CreateRefundRequest {
      */
     @JsonProperty("type")
     public String type;
+
     public V1CreateRefundRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public V1CreateRefundRequest(@JsonProperty("payment_id") String paymentId, @JsonProperty("reason") String reason, @JsonProperty("type") String type) {
+        this.paymentId = paymentId;
+        this.reason = reason;
+        this.type = type;
+  }
 }

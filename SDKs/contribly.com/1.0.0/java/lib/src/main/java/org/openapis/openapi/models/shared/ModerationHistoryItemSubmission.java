@@ -15,6 +15,7 @@ public class ModerationHistoryItemSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public ModerationAction action;
+
     public ModerationHistoryItemSubmission withAction(ModerationAction action) {
         this.action = action;
         return this;
@@ -23,9 +24,11 @@ public class ModerationHistoryItemSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ModerationHistoryItemSubmission withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public ModerationHistoryItemSubmission(){}
 }

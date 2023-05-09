@@ -12,6 +12,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=data source")
     public String dataSource;
+
     public GetEvidenceFilterRequest withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -22,6 +23,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datastructure")
     public String datastructure;
+
     public GetEvidenceFilterRequest withDatastructure(String datastructure) {
         this.datastructure = datastructure;
         return this;
@@ -32,6 +34,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=datatype")
     public String datatype;
+
     public GetEvidenceFilterRequest withDatatype(String datatype) {
         this.datatype = datatype;
         return this;
@@ -42,6 +45,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=disease")
     public String disease;
+
     public GetEvidenceFilterRequest withDisease(String disease) {
         this.disease = disease;
         return this;
@@ -52,6 +56,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetEvidenceFilterRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +67,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public GetEvidenceFilterRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -72,6 +78,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Double from;
+
     public GetEvidenceFilterRequest withFrom(Double from) {
         this.from = from;
         return this;
@@ -82,6 +89,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pathway")
     public String pathway;
+
     public GetEvidenceFilterRequest withPathway(String pathway) {
         this.pathway = pathway;
         return this;
@@ -92,6 +100,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_max")
     public Float scorevalueMax;
+
     public GetEvidenceFilterRequest withScorevalueMax(Float scorevalueMax) {
         this.scorevalueMax = scorevalueMax;
         return this;
@@ -102,6 +111,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scorevalue_min")
     public Float scorevalueMin;
+
     public GetEvidenceFilterRequest withScorevalueMin(Float scorevalueMin) {
         this.scorevalueMin = scorevalueMin;
         return this;
@@ -112,6 +122,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public GetEvidenceFilterRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -124,6 +135,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetEvidenceFilterRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -134,6 +146,7 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public GetEvidenceFilterRequest withTarget(String target) {
         this.target = target;
         return this;
@@ -144,9 +157,11 @@ public class GetEvidenceFilterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uniprotkw")
     public String uniprotkw;
+
     public GetEvidenceFilterRequest withUniprotkw(String uniprotkw) {
         this.uniprotkw = uniprotkw;
         return this;
     }
     
+    public GetEvidenceFilterRequest(){}
 }

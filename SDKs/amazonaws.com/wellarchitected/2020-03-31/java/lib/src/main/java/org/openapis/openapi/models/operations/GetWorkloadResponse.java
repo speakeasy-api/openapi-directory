@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkloadResponse {
@@ -12,6 +13,7 @@ public class GetWorkloadResponse {
      */
     
     public Object accessDeniedException;
+
     public GetWorkloadResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkloadResponse {
     
     
     public String contentType;
+
     public GetWorkloadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkloadResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkloadOutput getWorkloadOutput;
+
     public GetWorkloadResponse withGetWorkloadOutput(org.openapis.openapi.models.shared.GetWorkloadOutput getWorkloadOutput) {
         this.getWorkloadOutput = getWorkloadOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkloadResponse {
      */
     
     public Object internalServerException;
+
     public GetWorkloadResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkloadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetWorkloadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetWorkloadResponse {
     
     
     public Integer statusCode;
+
     public GetWorkloadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetWorkloadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkloadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkloadResponse {
      */
     
     public Object throttlingException;
+
     public GetWorkloadResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetWorkloadResponse {
      */
     
     public Object validationException;
+
     public GetWorkloadResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetWorkloadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

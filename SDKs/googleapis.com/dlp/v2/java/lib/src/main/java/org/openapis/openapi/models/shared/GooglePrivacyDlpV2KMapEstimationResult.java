@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2KMapEstimationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kMapEstimationHistogram")
     public GooglePrivacyDlpV2KMapEstimationHistogramBucket[] kMapEstimationHistogram;
+
     public GooglePrivacyDlpV2KMapEstimationResult withKMapEstimationHistogram(GooglePrivacyDlpV2KMapEstimationHistogramBucket[] kMapEstimationHistogram) {
         this.kMapEstimationHistogram = kMapEstimationHistogram;
         return this;
     }
     
+    public GooglePrivacyDlpV2KMapEstimationResult(){}
 }

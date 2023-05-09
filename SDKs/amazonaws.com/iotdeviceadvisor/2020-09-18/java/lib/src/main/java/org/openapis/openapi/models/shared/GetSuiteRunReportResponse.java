@@ -15,9 +15,11 @@ public class GetSuiteRunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualificationReportDownloadUrl")
     public String qualificationReportDownloadUrl;
+
     public GetSuiteRunReportResponse withQualificationReportDownloadUrl(String qualificationReportDownloadUrl) {
         this.qualificationReportDownloadUrl = qualificationReportDownloadUrl;
         return this;
     }
     
+    public GetSuiteRunReportResponse(){}
 }

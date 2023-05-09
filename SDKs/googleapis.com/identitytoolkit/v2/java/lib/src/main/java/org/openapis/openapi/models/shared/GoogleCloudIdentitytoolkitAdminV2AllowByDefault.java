@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2AllowByDefault {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disallowedRegions")
     public String[] disallowedRegions;
+
     public GoogleCloudIdentitytoolkitAdminV2AllowByDefault withDisallowedRegions(String[] disallowedRegions) {
         this.disallowedRegions = disallowedRegions;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2AllowByDefault(){}
 }

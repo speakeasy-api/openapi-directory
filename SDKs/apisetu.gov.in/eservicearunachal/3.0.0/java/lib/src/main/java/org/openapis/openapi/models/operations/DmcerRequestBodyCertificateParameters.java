@@ -12,6 +12,7 @@ public class DmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DmcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class DmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RefNo")
     public String refNo;
+
     public DmcerRequestBodyCertificateParameters withRefNo(String refNo) {
         this.refNo = refNo;
         return this;
@@ -32,9 +34,15 @@ public class DmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("TokenNo")
     public String tokenNo;
+
     public DmcerRequestBodyCertificateParameters withTokenNo(String tokenNo) {
         this.tokenNo = tokenNo;
         return this;
     }
     
+    public DmcerRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RefNo") String refNo, @JsonProperty("TokenNo") String tokenNo) {
+        this.fullName = fullName;
+        this.refNo = refNo;
+        this.tokenNo = tokenNo;
+  }
 }

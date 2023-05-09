@@ -15,6 +15,7 @@ public class MerchantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mcc")
     public String mcc;
+
     public MerchantData withMcc(String mcc) {
         this.mcc = mcc;
         return this;
@@ -26,6 +27,7 @@ public class MerchantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public MerchantData withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -34,6 +36,7 @@ public class MerchantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameLocation")
     public NameLocation nameLocation;
+
     public MerchantData withNameLocation(NameLocation nameLocation) {
         this.nameLocation = nameLocation;
         return this;
@@ -45,9 +48,11 @@ public class MerchantData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public MerchantData withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public MerchantData(){}
 }

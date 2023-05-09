@@ -18,6 +18,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aff")
     public String aff;
+
     public PartnerStoreCreate withAff(String aff) {
         this.aff = aff;
         return this;
@@ -29,6 +30,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PartnerStoreCreate withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public PartnerStoreCreate withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -51,6 +54,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public PartnerStoreCreate withPassword(String password) {
         this.password = password;
         return this;
@@ -62,6 +66,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan_name")
     public PartnerStoreCreatePlanNameEnum planName;
+
     public PartnerStoreCreate withPlanName(PartnerStoreCreatePlanNameEnum planName) {
         this.planName = planName;
         return this;
@@ -73,6 +78,7 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reject_duplicates")
     public Boolean rejectDuplicates;
+
     public PartnerStoreCreate withRejectDuplicates(Boolean rejectDuplicates) {
         this.rejectDuplicates = rejectDuplicates;
         return this;
@@ -84,9 +90,11 @@ public class PartnerStoreCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store_name")
     public String storeName;
+
     public PartnerStoreCreate withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public PartnerStoreCreate(){}
 }

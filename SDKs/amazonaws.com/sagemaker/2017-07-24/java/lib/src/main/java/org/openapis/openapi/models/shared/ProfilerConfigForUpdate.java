@@ -15,6 +15,7 @@ public class ProfilerConfigForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisableProfiler")
     public Boolean disableProfiler;
+
     public ProfilerConfigForUpdate withDisableProfiler(Boolean disableProfiler) {
         this.disableProfiler = disableProfiler;
         return this;
@@ -23,6 +24,7 @@ public class ProfilerConfigForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilingIntervalInMilliseconds")
     public Long profilingIntervalInMilliseconds;
+
     public ProfilerConfigForUpdate withProfilingIntervalInMilliseconds(Long profilingIntervalInMilliseconds) {
         this.profilingIntervalInMilliseconds = profilingIntervalInMilliseconds;
         return this;
@@ -31,6 +33,7 @@ public class ProfilerConfigForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProfilingParameters")
     public java.util.Map<String, String> profilingParameters;
+
     public ProfilerConfigForUpdate withProfilingParameters(java.util.Map<String, String> profilingParameters) {
         this.profilingParameters = profilingParameters;
         return this;
@@ -39,9 +42,11 @@ public class ProfilerConfigForUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public ProfilerConfigForUpdate withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public ProfilerConfigForUpdate(){}
 }

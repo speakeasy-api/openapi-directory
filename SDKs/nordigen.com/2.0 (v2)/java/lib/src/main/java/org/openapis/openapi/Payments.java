@@ -59,14 +59,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePaymentFormResponse res = new org.openapis.openapi.models.operations.CreatePaymentFormResponse() {{
+        org.openapis.openapi.models.operations.CreatePaymentFormResponse res = new org.openapis.openapi.models.operations.CreatePaymentFormResponse(contentType, httpRes.statusCode()) {{
             paymentWrite = null;
             createPaymentForm400ApplicationJSONObject = null;
             createPaymentForm401ApplicationJSONObject = null;
             createPaymentForm403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -127,14 +125,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePaymentJsonResponse res = new org.openapis.openapi.models.operations.CreatePaymentJsonResponse() {{
+        org.openapis.openapi.models.operations.CreatePaymentJsonResponse res = new org.openapis.openapi.models.operations.CreatePaymentJsonResponse(contentType, httpRes.statusCode()) {{
             paymentWrite = null;
             createPaymentJSON400ApplicationJSONObject = null;
             createPaymentJSON401ApplicationJSONObject = null;
             createPaymentJSON403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -195,14 +191,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatePaymentMultipartResponse res = new org.openapis.openapi.models.operations.CreatePaymentMultipartResponse() {{
+        org.openapis.openapi.models.operations.CreatePaymentMultipartResponse res = new org.openapis.openapi.models.operations.CreatePaymentMultipartResponse(contentType, httpRes.statusCode()) {{
             paymentWrite = null;
             createPaymentMultipart400ApplicationJSONObject = null;
             createPaymentMultipart401ApplicationJSONObject = null;
             createPaymentMultipart403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -258,7 +252,7 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePeriodicPaymentResponse res = new org.openapis.openapi.models.operations.DeletePeriodicPaymentResponse() {{
+        org.openapis.openapi.models.operations.DeletePeriodicPaymentResponse res = new org.openapis.openapi.models.operations.DeletePeriodicPaymentResponse(contentType, httpRes.statusCode()) {{
             deletePeriodicPayment200ApplicationJSONObject = null;
             deletePeriodicPayment400ApplicationJSONObject = null;
             deletePeriodicPayment401ApplicationJSONObject = null;
@@ -266,8 +260,6 @@ public class Payments {
             deletePeriodicPayment404ApplicationJSONObject = null;
             deletePeriodicPayment409ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -337,14 +329,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionResponse res = new org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionResponse() {{
+        org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionResponse res = new org.openapis.openapi.models.operations.ListMinimumRequiredFieldsForInstitutionResponse(contentType, httpRes.statusCode()) {{
             listMinimumRequiredFieldsForInstitution200ApplicationJSONObject = null;
             listMinimumRequiredFieldsForInstitution400ApplicationJSONObject = null;
             listMinimumRequiredFieldsForInstitution401ApplicationJSONObject = null;
             listMinimumRequiredFieldsForInstitution403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,14 +396,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPaymentsResponse res = new org.openapis.openapi.models.operations.ListPaymentsResponse() {{
+        org.openapis.openapi.models.operations.ListPaymentsResponse res = new org.openapis.openapi.models.operations.ListPaymentsResponse(contentType, httpRes.statusCode()) {{
             paginatedPaymentReadList = null;
             listPayments400ApplicationJSONObject = null;
             listPayments401ApplicationJSONObject = null;
             listPayments403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -474,11 +462,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateFormResponse(contentType, httpRes.statusCode()) {{
             creditorAccountWrite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -518,11 +504,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateJsonResponse(contentType, httpRes.statusCode()) {{
             creditorAccountWrite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -562,11 +546,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsCreateMultipartResponse(contentType, httpRes.statusCode()) {{
             creditorAccountWrite = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -601,10 +583,8 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsDestroyResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsDestroyResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsDestroyResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsDestroyResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -640,11 +620,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsListResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsListResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsListResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsListResponse(contentType, httpRes.statusCode()) {{
             paginatedCreditorAccountList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,11 +657,9 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveResponse() {{
+        org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveResponse res = new org.openapis.openapi.models.operations.PaymentsCreditorsRetrieveResponse(contentType, httpRes.statusCode()) {{
             creditorAccount = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -691,6 +667,132 @@ public class Payments {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.CreditorAccount out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CreditorAccount.class);
                 res.creditorAccount = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Initiate the payment on bank's side. -  - Complete the payment and return payment details as a response.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PaymentsSubmitCreateFormResponse paymentsSubmitCreateForm(org.openapis.openapi.models.operations.PaymentsSubmitCreateFormRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsSubmitCreateFormRequest.class, baseUrl, "/api/v2/payments/{id}/submit/", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentReadRequest1", "form");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PaymentsSubmitCreateFormResponse res = new org.openapis.openapi.models.operations.PaymentsSubmitCreateFormResponse(contentType, httpRes.statusCode()) {{
+            paymentRead = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PaymentRead out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaymentRead.class);
+                res.paymentRead = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Initiate the payment on bank's side. -  - Complete the payment and return payment details as a response.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PaymentsSubmitCreateJsonResponse paymentsSubmitCreateJson(org.openapis.openapi.models.operations.PaymentsSubmitCreateJsonRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsSubmitCreateJsonRequest.class, baseUrl, "/api/v2/payments/{id}/submit/", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentReadRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PaymentsSubmitCreateJsonResponse res = new org.openapis.openapi.models.operations.PaymentsSubmitCreateJsonResponse(contentType, httpRes.statusCode()) {{
+            paymentRead = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PaymentRead out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaymentRead.class);
+                res.paymentRead = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Initiate the payment on bank's side. -  - Complete the payment and return payment details as a response.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.PaymentsSubmitCreateMultipartResponse paymentsSubmitCreateMultipart(org.openapis.openapi.models.operations.PaymentsSubmitCreateMultipartRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.PaymentsSubmitCreateMultipartRequest.class, baseUrl, "/api/v2/payments/{id}/submit/", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "paymentReadRequest1", "multipart");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.PaymentsSubmitCreateMultipartResponse res = new org.openapis.openapi.models.operations.PaymentsSubmitCreateMultipartResponse(contentType, httpRes.statusCode()) {{
+            paymentRead = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.PaymentRead out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.PaymentRead.class);
+                res.paymentRead = out;
             }
         }
 
@@ -717,14 +819,12 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveAllPaymentCreditorAccountsResponse res = new org.openapis.openapi.models.operations.RetrieveAllPaymentCreditorAccountsResponse() {{
+        org.openapis.openapi.models.operations.RetrieveAllPaymentCreditorAccountsResponse res = new org.openapis.openapi.models.operations.RetrieveAllPaymentCreditorAccountsResponse(contentType, httpRes.statusCode()) {{
             creditorAccounts = null;
             retrieveAllPaymentCreditorAccounts400ApplicationJSONObject = null;
             retrieveAllPaymentCreditorAccounts401ApplicationJSONObject = null;
             retrieveAllPaymentCreditorAccounts403ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -780,15 +880,13 @@ public class Payments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrievePaymentResponse res = new org.openapis.openapi.models.operations.RetrievePaymentResponse() {{
+        org.openapis.openapi.models.operations.RetrievePaymentResponse res = new org.openapis.openapi.models.operations.RetrievePaymentResponse(contentType, httpRes.statusCode()) {{
             paymentRead = null;
             retrievePayment400ApplicationJSONObject = null;
             retrievePayment401ApplicationJSONObject = null;
             retrievePayment403ApplicationJSONObject = null;
             retrievePayment404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

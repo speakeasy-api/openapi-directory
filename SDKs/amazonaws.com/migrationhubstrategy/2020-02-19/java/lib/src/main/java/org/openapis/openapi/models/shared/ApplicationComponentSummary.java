@@ -15,6 +15,7 @@ public class ApplicationComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appType")
     public AppTypeEnum appType;
+
     public ApplicationComponentSummary withAppType(AppTypeEnum appType) {
         this.appType = appType;
         return this;
@@ -23,9 +24,11 @@ public class ApplicationComponentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ApplicationComponentSummary withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public ApplicationComponentSummary(){}
 }

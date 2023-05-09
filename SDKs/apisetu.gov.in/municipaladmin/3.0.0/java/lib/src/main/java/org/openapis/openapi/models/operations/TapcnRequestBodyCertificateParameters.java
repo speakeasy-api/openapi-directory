@@ -12,9 +12,13 @@ public class TapcnRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public TapcnRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
     
+    public TapcnRequestBodyCertificateParameters(@JsonProperty("DocumentNumber") String documentNumber) {
+        this.documentNumber = documentNumber;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BillingGetGithubAdvancedSecurityBillingOrgResponse {
     
     public String contentType;
+
     public BillingGetGithubAdvancedSecurityBillingOrgResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BillingGetGithubAdvancedSecurityBillingOrgResponse {
     
     
     public Integer statusCode;
+
     public BillingGetGithubAdvancedSecurityBillingOrgResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BillingGetGithubAdvancedSecurityBillingOrgResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BillingGetGithubAdvancedSecurityBillingOrgResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class BillingGetGithubAdvancedSecurityBillingOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.AdvancedSecurityActiveCommitters advancedSecurityActiveCommitters;
+
     public BillingGetGithubAdvancedSecurityBillingOrgResponse withAdvancedSecurityActiveCommitters(org.openapis.openapi.models.shared.AdvancedSecurityActiveCommitters advancedSecurityActiveCommitters) {
         this.advancedSecurityActiveCommitters = advancedSecurityActiveCommitters;
         return this;
@@ -43,9 +48,14 @@ public class BillingGetGithubAdvancedSecurityBillingOrgResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public BillingGetGithubAdvancedSecurityBillingOrgResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public BillingGetGithubAdvancedSecurityBillingOrgResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

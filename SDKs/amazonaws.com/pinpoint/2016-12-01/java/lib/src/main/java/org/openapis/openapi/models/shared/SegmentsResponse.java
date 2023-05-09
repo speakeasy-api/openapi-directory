@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SegmentsResponse {
     @JsonProperty("Item")
     public SegmentResponse[] item;
+
     public SegmentsResponse withItem(SegmentResponse[] item) {
         this.item = item;
         return this;
@@ -22,9 +23,13 @@ public class SegmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SegmentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SegmentsResponse(@JsonProperty("Item") SegmentResponse[] item) {
+        this.item = item;
+  }
 }

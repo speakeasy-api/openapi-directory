@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceCreditSpecificationsRequestFilters {
     
     public String name;
+
     public DescribeInstanceCreditSpecificationsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceCreditSpecificationsRequestFilters {
     
     
     public String[] values;
+
     public DescribeInstanceCreditSpecificationsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeInstanceCreditSpecificationsRequestFilters(){}
 }

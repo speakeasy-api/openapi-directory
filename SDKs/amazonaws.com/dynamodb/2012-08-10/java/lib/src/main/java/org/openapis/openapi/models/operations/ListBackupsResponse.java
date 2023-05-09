@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBackupsResponse {
     
     public String contentType;
+
     public ListBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBackupsResponse {
      */
     
     public Object internalServerError;
+
     public ListBackupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBackupsOutput listBackupsOutput;
+
     public ListBackupsResponse withListBackupsOutput(org.openapis.openapi.models.shared.ListBackupsOutput listBackupsOutput) {
         this.listBackupsOutput = listBackupsOutput;
         return this;
@@ -36,6 +40,7 @@ public class ListBackupsResponse {
     
     
     public Integer statusCode;
+
     public ListBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

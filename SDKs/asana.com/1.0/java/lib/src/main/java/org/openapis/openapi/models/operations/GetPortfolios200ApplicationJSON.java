@@ -15,9 +15,11 @@ public class GetPortfolios200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.PortfolioCompact[] data;
+
     public GetPortfolios200ApplicationJSON withData(org.openapis.openapi.models.shared.PortfolioCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetPortfolios200ApplicationJSON(){}
 }

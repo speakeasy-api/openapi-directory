@@ -18,6 +18,7 @@ public class PublisherReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherName")
     public String publisherName;
+
     public PublisherReviewStatus withPublisherName(String publisherName) {
         this.publisherName = publisherName;
         return this;
@@ -29,9 +30,11 @@ public class PublisherReviewStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PublisherReviewStatusStatusEnum status;
+
     public PublisherReviewStatus withStatus(PublisherReviewStatusStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PublisherReviewStatus(){}
 }

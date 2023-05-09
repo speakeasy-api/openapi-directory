@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails {
     
     public Long count;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails withCount(Long count) {
         this.count = count;
         return this;
@@ -19,9 +20,11 @@ public class DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsP
     
     
     public Double price;
+
     public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails withPrice(Double price) {
         this.price = price;
         return this;
     }
     
+    public DescribeReservedInstancesOfferingsResultReservedInstancesOfferingsPricingDetails(){}
 }

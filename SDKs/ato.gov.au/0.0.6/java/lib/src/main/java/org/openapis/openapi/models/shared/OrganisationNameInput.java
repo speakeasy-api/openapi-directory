@@ -18,9 +18,11 @@ public class OrganisationNameInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrganisationNameInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrganisationNameInput(){}
 }

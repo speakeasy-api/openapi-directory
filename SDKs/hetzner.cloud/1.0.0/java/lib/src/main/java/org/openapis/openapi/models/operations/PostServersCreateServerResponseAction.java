@@ -12,6 +12,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostServersCreateServerResponseAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("error")
     public PostServersCreateServerResponseActionError error;
+
     public PostServersCreateServerResponseAction withError(PostServersCreateServerResponseActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostServersCreateServerResponseAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostServersCreateServerResponseAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("resources")
     public PostServersCreateServerResponseActionResources[] resources;
+
     public PostServersCreateServerResponseAction withResources(PostServersCreateServerResponseActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostServersCreateServerResponseAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostServersCreateServerResponseAction {
      */
     @JsonProperty("status")
     public PostServersCreateServerResponseActionStatusEnum status;
+
     public PostServersCreateServerResponseAction withStatus(PostServersCreateServerResponseActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostServersCreateServerResponseAction(@JsonProperty("command") String command, @JsonProperty("error") PostServersCreateServerResponseActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostServersCreateServerResponseActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostServersCreateServerResponseActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

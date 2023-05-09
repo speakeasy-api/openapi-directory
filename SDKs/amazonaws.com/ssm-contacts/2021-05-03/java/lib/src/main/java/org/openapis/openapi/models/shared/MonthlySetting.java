@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonthlySetting {
     @JsonProperty("DayOfMonth")
     public Long dayOfMonth;
+
     public MonthlySetting withDayOfMonth(Long dayOfMonth) {
         this.dayOfMonth = dayOfMonth;
         return this;
@@ -19,9 +20,14 @@ public class MonthlySetting {
     
     @JsonProperty("HandOffTime")
     public HandOffTime handOffTime;
+
     public MonthlySetting withHandOffTime(HandOffTime handOffTime) {
         this.handOffTime = handOffTime;
         return this;
     }
     
+    public MonthlySetting(@JsonProperty("DayOfMonth") Long dayOfMonth, @JsonProperty("HandOffTime") HandOffTime handOffTime) {
+        this.dayOfMonth = dayOfMonth;
+        this.handOffTime = handOffTime;
+  }
 }

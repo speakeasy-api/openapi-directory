@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherSystemapksVariantsCreateRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VariantInput variantInput;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withVariantInput(org.openapis.openapi.models.shared.VariantInput variantInput) {
         this.variantInput = variantInput;
         return this;
@@ -29,6 +32,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -99,6 +109,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,6 +142,7 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -139,9 +153,14 @@ public class AndroidpublisherSystemapksVariantsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionCode")
     public String versionCode;
+
     public AndroidpublisherSystemapksVariantsCreateRequest withVersionCode(String versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public AndroidpublisherSystemapksVariantsCreateRequest(@JsonProperty("packageName") String packageName, @JsonProperty("versionCode") String versionCode) {
+        this.packageName = packageName;
+        this.versionCode = versionCode;
+  }
 }

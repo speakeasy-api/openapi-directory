@@ -18,6 +18,7 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugMessages")
     public String[] debugMessages;
+
     public TestResult withDebugMessages(String[] debugMessages) {
         this.debugMessages = debugMessages;
         return this;
@@ -29,6 +30,7 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorPosition")
     public SourcePosition errorPosition;
+
     public TestResult withErrorPosition(SourcePosition errorPosition) {
         this.errorPosition = errorPosition;
         return this;
@@ -40,6 +42,7 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expressionReports")
     public ExpressionReport[] expressionReports;
+
     public TestResult withExpressionReports(ExpressionReport[] expressionReports) {
         this.expressionReports = expressionReports;
         return this;
@@ -51,6 +54,7 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionCalls")
     public FunctionCall[] functionCalls;
+
     public TestResult withFunctionCalls(FunctionCall[] functionCalls) {
         this.functionCalls = functionCalls;
         return this;
@@ -62,6 +66,7 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public TestResultStateEnum state;
+
     public TestResult withState(TestResultStateEnum state) {
         this.state = state;
         return this;
@@ -73,9 +78,11 @@ public class TestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visitedExpressions")
     public VisitedExpression[] visitedExpressions;
+
     public TestResult withVisitedExpressions(VisitedExpression[] visitedExpressions) {
         this.visitedExpressions = visitedExpressions;
         return this;
     }
     
+    public TestResult(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RetryCriteria {
     @JsonProperty("failureType")
     public RetryableFailureTypeEnum failureType;
+
     public RetryCriteria withFailureType(RetryableFailureTypeEnum failureType) {
         this.failureType = failureType;
         return this;
@@ -19,9 +20,14 @@ public class RetryCriteria {
     
     @JsonProperty("numberOfRetries")
     public Long numberOfRetries;
+
     public RetryCriteria withNumberOfRetries(Long numberOfRetries) {
         this.numberOfRetries = numberOfRetries;
         return this;
     }
     
+    public RetryCriteria(@JsonProperty("failureType") RetryableFailureTypeEnum failureType, @JsonProperty("numberOfRetries") Long numberOfRetries) {
+        this.failureType = failureType;
+        this.numberOfRetries = numberOfRetries;
+  }
 }

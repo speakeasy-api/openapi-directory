@@ -18,6 +18,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public ProductSearchResponse withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ProductSearchResponse withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ProductSearchResponse withNext(String next) {
         this.next = next;
         return this;
@@ -51,6 +54,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public ProductSearchResponse withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -62,6 +66,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public String prev;
+
     public ProductSearchResponse withPrev(String prev) {
         this.prev = prev;
         return this;
@@ -73,6 +78,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSummaries")
     public ProductSummary[] productSummaries;
+
     public ProductSearchResponse withProductSummaries(ProductSummary[] productSummaries) {
         this.productSummaries = productSummaries;
         return this;
@@ -84,6 +90,7 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refinement")
     public Refinement refinement;
+
     public ProductSearchResponse withRefinement(Refinement refinement) {
         this.refinement = refinement;
         return this;
@@ -95,9 +102,11 @@ public class ProductSearchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public ProductSearchResponse withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public ProductSearchResponse(){}
 }

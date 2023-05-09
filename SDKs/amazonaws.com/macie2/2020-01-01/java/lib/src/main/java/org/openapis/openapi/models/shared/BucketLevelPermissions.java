@@ -15,6 +15,7 @@ public class BucketLevelPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessControlList")
     public AccessControlList accessControlList;
+
     public BucketLevelPermissions withAccessControlList(AccessControlList accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -23,6 +24,7 @@ public class BucketLevelPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockPublicAccess")
     public BlockPublicAccess blockPublicAccess;
+
     public BucketLevelPermissions withBlockPublicAccess(BlockPublicAccess blockPublicAccess) {
         this.blockPublicAccess = blockPublicAccess;
         return this;
@@ -31,9 +33,11 @@ public class BucketLevelPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketPolicy")
     public BucketPolicy bucketPolicy;
+
     public BucketLevelPermissions withBucketPolicy(BucketPolicy bucketPolicy) {
         this.bucketPolicy = bucketPolicy;
         return this;
     }
     
+    public BucketLevelPermissions(){}
 }

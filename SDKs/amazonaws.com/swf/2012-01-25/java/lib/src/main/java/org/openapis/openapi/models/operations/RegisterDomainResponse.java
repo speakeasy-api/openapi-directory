@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterDomainResponse {
     
     public String contentType;
+
     public RegisterDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterDomainResponse {
      */
     
     public Object domainAlreadyExistsFault;
+
     public RegisterDomainResponse withDomainAlreadyExistsFault(Object domainAlreadyExistsFault) {
         this.domainAlreadyExistsFault = domainAlreadyExistsFault;
         return this;
@@ -29,6 +32,7 @@ public class RegisterDomainResponse {
      */
     
     public Object limitExceededFault;
+
     public RegisterDomainResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -39,6 +43,7 @@ public class RegisterDomainResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RegisterDomainResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -46,6 +51,7 @@ public class RegisterDomainResponse {
     
     
     public Integer statusCode;
+
     public RegisterDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class RegisterDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class RegisterDomainResponse {
      */
     
     public Object tooManyTagsFault;
+
     public RegisterDomainResponse withTooManyTagsFault(Object tooManyTagsFault) {
         this.tooManyTagsFault = tooManyTagsFault;
         return this;
     }
     
+    public RegisterDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class IdentitytoolkitRelyingpartyUploadAccountSecurity {
     @SpeakeasyMetadata("security:option=true")
     public IdentitytoolkitRelyingpartyUploadAccountSecurityOption1 option1;
+
     public IdentitytoolkitRelyingpartyUploadAccountSecurity withOption1(IdentitytoolkitRelyingpartyUploadAccountSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class IdentitytoolkitRelyingpartyUploadAccountSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public IdentitytoolkitRelyingpartyUploadAccountSecurityOption2 option2;
+
     public IdentitytoolkitRelyingpartyUploadAccountSecurity withOption2(IdentitytoolkitRelyingpartyUploadAccountSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyUploadAccountSecurity(){}
 }

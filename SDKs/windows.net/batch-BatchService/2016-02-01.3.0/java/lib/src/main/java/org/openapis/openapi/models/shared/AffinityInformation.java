@@ -18,9 +18,11 @@ public class AffinityInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affinityId")
     public String affinityId;
+
     public AffinityInformation withAffinityId(String affinityId) {
         this.affinityId = affinityId;
         return this;
     }
     
+    public AffinityInformation(){}
 }

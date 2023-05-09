@@ -17,6 +17,7 @@ public class Label {
      */
     @JsonProperty("datasetId")
     public Long datasetId;
+
     public Label withDatasetId(Long datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -28,6 +29,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Label withId(Long id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class Label {
      */
     @JsonProperty("name")
     public String name;
+
     public Label withName(String name) {
         this.name = name;
         return this;
@@ -49,9 +52,14 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numExamples")
     public Long numExamples;
+
     public Label withNumExamples(Long numExamples) {
         this.numExamples = numExamples;
         return this;
     }
     
+    public Label(@JsonProperty("datasetId") Long datasetId, @JsonProperty("name") String name) {
+        this.datasetId = datasetId;
+        this.name = name;
+  }
 }

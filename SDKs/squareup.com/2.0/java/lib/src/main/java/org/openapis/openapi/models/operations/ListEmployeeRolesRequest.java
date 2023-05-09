@@ -13,6 +13,7 @@ public class ListEmployeeRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batch_token")
     public String batchToken;
+
     public ListEmployeeRolesRequest withBatchToken(String batchToken) {
         this.batchToken = batchToken;
         return this;
@@ -23,6 +24,7 @@ public class ListEmployeeRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListEmployeeRolesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -33,9 +35,11 @@ public class ListEmployeeRolesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public ListEmployeeRolesRequest withOrder(String order) {
         this.order = order;
         return this;
     }
     
+    public ListEmployeeRolesRequest(){}
 }

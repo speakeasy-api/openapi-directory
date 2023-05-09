@@ -18,6 +18,7 @@ public class EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public Field[] fields;
+
     public EntityType withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -29,9 +30,11 @@ public class EntityType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EntityType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EntityType(){}
 }

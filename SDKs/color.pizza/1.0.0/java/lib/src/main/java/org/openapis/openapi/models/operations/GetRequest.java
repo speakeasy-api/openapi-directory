@@ -12,6 +12,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=list")
     public org.openapis.openapi.models.shared.PossibleListsEnum list;
+
     public GetRequest withList(org.openapis.openapi.models.shared.PossibleListsEnum list) {
         this.list = list;
         return this;
@@ -22,6 +23,7 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=noduplicates")
     public Boolean noduplicates;
+
     public GetRequest withNoduplicates(Boolean noduplicates) {
         this.noduplicates = noduplicates;
         return this;
@@ -32,9 +34,11 @@ public class GetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=values")
     public String values;
+
     public GetRequest withValues(String values) {
         this.values = values;
         return this;
     }
     
+    public GetRequest(){}
 }

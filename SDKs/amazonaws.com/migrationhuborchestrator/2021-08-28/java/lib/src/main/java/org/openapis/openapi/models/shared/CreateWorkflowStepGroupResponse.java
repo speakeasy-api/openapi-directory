@@ -22,6 +22,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CreateWorkflowStepGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkflowStepGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkflowStepGroupResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowStepGroupResponse withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public CreateWorkflowStepGroupResponse withNext(String[] next) {
         this.next = next;
         return this;
@@ -62,6 +67,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public CreateWorkflowStepGroupResponse withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -70,6 +76,7 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tools")
     public Tool[] tools;
+
     public CreateWorkflowStepGroupResponse withTools(Tool[] tools) {
         this.tools = tools;
         return this;
@@ -78,9 +85,11 @@ public class CreateWorkflowStepGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public CreateWorkflowStepGroupResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public CreateWorkflowStepGroupResponse(){}
 }

@@ -18,8 +18,21 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configMap")
     public ConfigMapVolumeSource configMap;
+
     public Volume withConfigMap(ConfigMapVolumeSource configMap) {
         this.configMap = configMap;
+        return this;
+    }
+    
+    /**
+     * Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emptyDir")
+    public EmptyDirVolumeSource emptyDir;
+
+    public Volume withEmptyDir(EmptyDirVolumeSource emptyDir) {
+        this.emptyDir = emptyDir;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Volume withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +54,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public SecretVolumeSource secret;
+
     public Volume withSecret(SecretVolumeSource secret) {
         this.secret = secret;
         return this;
     }
     
+    public Volume(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartFleetActionsInput {
     @JsonProperty("Actions")
     public FleetActionEnum[] actions;
+
     public StartFleetActionsInput withActions(FleetActionEnum[] actions) {
         this.actions = actions;
         return this;
@@ -18,6 +19,7 @@ public class StartFleetActionsInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public StartFleetActionsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -26,9 +28,14 @@ public class StartFleetActionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public StartFleetActionsInput withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public StartFleetActionsInput(@JsonProperty("Actions") FleetActionEnum[] actions, @JsonProperty("FleetId") String fleetId) {
+        this.actions = actions;
+        this.fleetId = fleetId;
+  }
 }

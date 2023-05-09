@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrustStoresResponse {
@@ -12,6 +13,7 @@ public class ListTrustStoresResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTrustStoresResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTrustStoresResponse {
     
     
     public String contentType;
+
     public ListTrustStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTrustStoresResponse {
      */
     
     public Object internalServerException;
+
     public ListTrustStoresResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTrustStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrustStoresResponse listTrustStoresResponse;
+
     public ListTrustStoresResponse withListTrustStoresResponse(org.openapis.openapi.models.shared.ListTrustStoresResponse listTrustStoresResponse) {
         this.listTrustStoresResponse = listTrustStoresResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTrustStoresResponse {
     
     
     public Integer statusCode;
+
     public ListTrustStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTrustStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrustStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTrustStoresResponse {
      */
     
     public Object throttlingException;
+
     public ListTrustStoresResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListTrustStoresResponse {
      */
     
     public Object validationException;
+
     public ListTrustStoresResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTrustStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

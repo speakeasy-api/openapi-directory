@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateCommitStatusRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposCreateCommitStatusRequestBody requestBody;
+
     public ReposCreateCommitStatusRequest withRequestBody(ReposCreateCommitStatusRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateCommitStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCreateCommitStatusRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateCommitStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCreateCommitStatusRequest withRepo(String repo) {
         this.repo = repo;
         return this;
@@ -30,9 +34,16 @@ public class ReposCreateCommitStatusRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sha")
     public String sha;
+
     public ReposCreateCommitStatusRequest withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public ReposCreateCommitStatusRequest(@JsonProperty("RequestBody") ReposCreateCommitStatusRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo, @JsonProperty("sha") String sha) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+        this.sha = sha;
+  }
 }

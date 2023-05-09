@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMLModelInput {
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public GetMLModelInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -19,9 +20,13 @@ public class GetMLModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Verbose")
     public Boolean verbose;
+
     public GetMLModelInput withVerbose(Boolean verbose) {
         this.verbose = verbose;
         return this;
     }
     
+    public GetMLModelInput(@JsonProperty("MLModelId") String mlModelId) {
+        this.mlModelId = mlModelId;
+  }
 }

@@ -18,6 +18,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateDocument")
     public String corporateDocument;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withCorporateDocument(String corporateDocument) {
         this.corporateDocument = corporateDocument;
         return this;
@@ -29,6 +30,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporateName")
     public String corporateName;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withCorporateName(String corporateName) {
         this.corporateName = corporateName;
         return this;
@@ -40,6 +42,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporatePhone")
     public String corporatePhone;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withCorporatePhone(String corporatePhone) {
         this.corporatePhone = corporatePhone;
         return this;
@@ -51,6 +54,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerClass")
     public String customerClass;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withCustomerClass(String customerClass) {
         this.customerClass = customerClass;
         return this;
@@ -62,6 +66,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withDocument(String document) {
         this.document = document;
         return this;
@@ -73,6 +78,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -84,6 +90,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withEmail(String email) {
         this.email = email;
         return this;
@@ -95,6 +102,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -106,6 +114,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -117,6 +126,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -128,6 +138,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -139,6 +150,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileCompleteOnLoading")
     public String profileCompleteOnLoading;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withProfileCompleteOnLoading(String profileCompleteOnLoading) {
         this.profileCompleteOnLoading = profileCompleteOnLoading;
         return this;
@@ -150,6 +162,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileErrorOnLoading")
     public String profileErrorOnLoading;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withProfileErrorOnLoading(String profileErrorOnLoading) {
         this.profileErrorOnLoading = profileErrorOnLoading;
         return this;
@@ -161,6 +174,7 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateInscription")
     public String stateInscription;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withStateInscription(String stateInscription) {
         this.stateInscription = stateInscription;
         return this;
@@ -172,9 +186,11 @@ public class GetClientProfileByEmail200ApplicationJSONUserProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradeName")
     public String tradeName;
+
     public GetClientProfileByEmail200ApplicationJSONUserProfile withTradeName(String tradeName) {
         this.tradeName = tradeName;
         return this;
     }
     
+    public GetClientProfileByEmail200ApplicationJSONUserProfile(){}
 }

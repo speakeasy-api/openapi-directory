@@ -20,6 +20,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeProjectResult withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public DescribeProjectResult withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class DescribeProjectResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTimeStamp")
     public OffsetDateTime createdTimeStamp;
+
     public DescribeProjectResult withCreatedTimeStamp(OffsetDateTime createdTimeStamp) {
         this.createdTimeStamp = createdTimeStamp;
         return this;
@@ -46,6 +49,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeProjectResult withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DescribeProjectResult withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DescribeProjectResult withName(String name) {
         this.name = name;
         return this;
@@ -70,6 +76,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectTemplateId")
     public String projectTemplateId;
+
     public DescribeProjectResult withProjectTemplateId(String projectTemplateId) {
         this.projectTemplateId = projectTemplateId;
         return this;
@@ -78,6 +85,7 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackId")
     public String stackId;
+
     public DescribeProjectResult withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -86,9 +94,11 @@ public class DescribeProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProjectStatus status;
+
     public DescribeProjectResult withStatus(ProjectStatus status) {
         this.status = status;
         return this;
     }
     
+    public DescribeProjectResult(){}
 }

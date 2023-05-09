@@ -12,9 +12,11 @@ public class GetFeaturedVideoCollectionListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetFeaturedVideoCollectionListEmbedEnum embed;
+
     public GetFeaturedVideoCollectionListRequest withEmbed(GetFeaturedVideoCollectionListEmbedEnum embed) {
         this.embed = embed;
         return this;
     }
     
+    public GetFeaturedVideoCollectionListRequest(){}
 }

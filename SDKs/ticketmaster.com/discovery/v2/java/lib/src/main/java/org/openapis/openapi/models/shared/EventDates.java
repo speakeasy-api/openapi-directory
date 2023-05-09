@@ -15,6 +15,7 @@ public class EventDates {
      */
     
     public AccessDates access;
+
     public EventDates withAccess(AccessDates access) {
         this.access = access;
         return this;
@@ -25,6 +26,7 @@ public class EventDates {
      */
     
     public EndDates end;
+
     public EventDates withEnd(EndDates end) {
         this.end = end;
         return this;
@@ -35,6 +37,7 @@ public class EventDates {
      */
     
     public Boolean spanMultipleDays;
+
     public EventDates withSpanMultipleDays(Boolean spanMultipleDays) {
         this.spanMultipleDays = spanMultipleDays;
         return this;
@@ -45,6 +48,7 @@ public class EventDates {
      */
     
     public StartDates start;
+
     public EventDates withStart(StartDates start) {
         this.start = start;
         return this;
@@ -55,6 +59,7 @@ public class EventDates {
      */
     
     public EventStatus status;
+
     public EventDates withStatus(EventStatus status) {
         this.status = status;
         return this;
@@ -65,9 +70,11 @@ public class EventDates {
      */
     
     public String timezone;
+
     public EventDates withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public EventDates(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProfileObjectTypeTemplatesResponse {
@@ -12,6 +13,7 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListProfileObjectTypeTemplatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public Object badRequestException;
+
     public ListProfileObjectTypeTemplatesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListProfileObjectTypeTemplatesResponse {
     
     
     public String contentType;
+
     public ListProfileObjectTypeTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public Object internalServerException;
+
     public ListProfileObjectTypeTemplatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProfileObjectTypeTemplatesResponse listProfileObjectTypeTemplatesResponse;
+
     public ListProfileObjectTypeTemplatesResponse withListProfileObjectTypeTemplatesResponse(org.openapis.openapi.models.shared.ListProfileObjectTypeTemplatesResponse listProfileObjectTypeTemplatesResponse) {
         this.listProfileObjectTypeTemplatesResponse = listProfileObjectTypeTemplatesResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListProfileObjectTypeTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListProfileObjectTypeTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListProfileObjectTypeTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProfileObjectTypeTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProfileObjectTypeTemplatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListProfileObjectTypeTemplatesResponse {
      */
     
     public Object throttlingException;
+
     public ListProfileObjectTypeTemplatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListProfileObjectTypeTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

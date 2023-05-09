@@ -15,11 +15,11 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 ```java
 package hello.world;
 
+import java.time.OffsetDateTime;
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetTransactionsSecurity;
 import org.openapis.openapi.models.operations.GetTransactionsRequest;
 import org.openapis.openapi.models.operations.GetTransactionsResponse;
+import org.openapis.openapi.models.operations.GetTransactionsSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -27,27 +27,27 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetTransactionsRequest req = new GetTransactionsRequest() {{
-                accountHolderId = "corrupti";
-                balanceAccountId = "provident";
-                balancePlatform = "distinctio";
-                createdSince = "2021-03-11T23:22:42.658Z";
-                createdUntil = "2021-05-14T08:28:11.899Z";
+            GetTransactionsRequest req = new GetTransactionsRequest(OffsetDateTime.parse("2021-10-25T05:21:43.948Z"), OffsetDateTime.parse("2021-04-24T16:27:50.833Z")) {{
+                accountHolderId = "unde";
+                balanceAccountId = "nulla";
+                balancePlatform = "corrupti";
                 cursor = "illum";
                 limit = 423655;
                 paymentInstrumentId = "error";
-            }}            
+            }};            
 
-            GetTransactionsResponse res = sdk.transactions.getTransactions(req, new GetTransactionsSecurity() {{
+            GetTransactionsResponse res = sdk.transactions.getTransactions(req, new GetTransactionsSecurity("deserunt") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.transactionSearchResponse.isPresent()) {
+            if (res.transactionSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -55,14 +55,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### transactions
+### [transactions](docs/transactions/README.md)
 
-* `getTransactions` - Get all transactions
-* `getTransactionsId` - Get a transaction
+* [getTransactions](docs/transactions/README.md#gettransactions) - Get all transactions
+* [getTransactionsId](docs/transactions/README.md#gettransactionsid) - Get a transaction
 
-### transfers
+### [transfers](docs/transfers/README.md)
 
-* `postTransfers` - Transfer funds
+* [postTransfers](docs/transfers/README.md#posttransfers) - Transfer funds
 <!-- End SDK Available Operations -->
 
 ### Maturity

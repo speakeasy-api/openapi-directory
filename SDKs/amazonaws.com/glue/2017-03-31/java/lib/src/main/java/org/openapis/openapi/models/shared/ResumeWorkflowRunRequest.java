@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResumeWorkflowRunRequest {
     @JsonProperty("Name")
     public String name;
+
     public ResumeWorkflowRunRequest withName(String name) {
         this.name = name;
         return this;
@@ -16,6 +17,7 @@ public class ResumeWorkflowRunRequest {
     
     @JsonProperty("NodeIds")
     public String[] nodeIds;
+
     public ResumeWorkflowRunRequest withNodeIds(String[] nodeIds) {
         this.nodeIds = nodeIds;
         return this;
@@ -23,9 +25,15 @@ public class ResumeWorkflowRunRequest {
     
     @JsonProperty("RunId")
     public String runId;
+
     public ResumeWorkflowRunRequest withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public ResumeWorkflowRunRequest(@JsonProperty("Name") String name, @JsonProperty("NodeIds") String[] nodeIds, @JsonProperty("RunId") String runId) {
+        this.name = name;
+        this.nodeIds = nodeIds;
+        this.runId = runId;
+  }
 }

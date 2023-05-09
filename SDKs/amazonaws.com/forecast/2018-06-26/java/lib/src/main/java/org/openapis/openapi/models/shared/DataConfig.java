@@ -15,6 +15,7 @@ public class DataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalDatasets")
     public AdditionalDataset[] additionalDatasets;
+
     public DataConfig withAdditionalDatasets(AdditionalDataset[] additionalDatasets) {
         this.additionalDatasets = additionalDatasets;
         return this;
@@ -23,6 +24,7 @@ public class DataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeConfigs")
     public AttributeConfig[] attributeConfigs;
+
     public DataConfig withAttributeConfigs(AttributeConfig[] attributeConfigs) {
         this.attributeConfigs = attributeConfigs;
         return this;
@@ -30,9 +32,13 @@ public class DataConfig {
     
     @JsonProperty("DatasetGroupArn")
     public String datasetGroupArn;
+
     public DataConfig withDatasetGroupArn(String datasetGroupArn) {
         this.datasetGroupArn = datasetGroupArn;
         return this;
     }
     
+    public DataConfig(@JsonProperty("DatasetGroupArn") String datasetGroupArn) {
+        this.datasetGroupArn = datasetGroupArn;
+  }
 }

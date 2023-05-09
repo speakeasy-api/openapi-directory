@@ -15,6 +15,7 @@ public class CreateConnectorProfileRequestBodyConnectorProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileCredentials")
     public org.openapis.openapi.models.shared.ConnectorProfileCredentials connectorProfileCredentials;
+
     public CreateConnectorProfileRequestBodyConnectorProfileConfig withConnectorProfileCredentials(org.openapis.openapi.models.shared.ConnectorProfileCredentials connectorProfileCredentials) {
         this.connectorProfileCredentials = connectorProfileCredentials;
         return this;
@@ -23,9 +24,11 @@ public class CreateConnectorProfileRequestBodyConnectorProfileConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProfileProperties")
     public org.openapis.openapi.models.shared.ConnectorProfileProperties connectorProfileProperties;
+
     public CreateConnectorProfileRequestBodyConnectorProfileConfig withConnectorProfileProperties(org.openapis.openapi.models.shared.ConnectorProfileProperties connectorProfileProperties) {
         this.connectorProfileProperties = connectorProfileProperties;
         return this;
     }
     
+    public CreateConnectorProfileRequestBodyConnectorProfileConfig(){}
 }

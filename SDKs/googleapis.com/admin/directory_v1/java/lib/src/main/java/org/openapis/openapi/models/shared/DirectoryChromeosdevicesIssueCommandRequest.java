@@ -18,6 +18,7 @@ public class DirectoryChromeosdevicesIssueCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandType")
     public DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum commandType;
+
     public DirectoryChromeosdevicesIssueCommandRequest withCommandType(DirectoryChromeosdevicesIssueCommandRequestCommandTypeEnum commandType) {
         this.commandType = commandType;
         return this;
@@ -29,9 +30,11 @@ public class DirectoryChromeosdevicesIssueCommandRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public String payload;
+
     public DirectoryChromeosdevicesIssueCommandRequest withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public DirectoryChromeosdevicesIssueCommandRequest(){}
 }

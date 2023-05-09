@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDomainResponse {
@@ -12,6 +13,7 @@ public class GetDomainResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDomainResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDomainResponse {
      */
     
     public Object badRequestException;
+
     public GetDomainResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetDomainResponse {
     
     
     public String contentType;
+
     public GetDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDomainResponse getDomainResponse;
+
     public GetDomainResponse withGetDomainResponse(org.openapis.openapi.models.shared.GetDomainResponse getDomainResponse) {
         this.getDomainResponse = getDomainResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDomainResponse {
      */
     
     public Object internalServerException;
+
     public GetDomainResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetDomainResponse {
     
     
     public Integer statusCode;
+
     public GetDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class GetDomainResponse {
      */
     
     public Object throttlingException;
+
     public GetDomainResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class IntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public IntentClosingSetting withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class IntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closingResponse")
     public ResponseSpecification closingResponse;
+
     public IntentClosingSetting withClosingResponse(ResponseSpecification closingResponse) {
         this.closingResponse = closingResponse;
         return this;
@@ -31,6 +33,7 @@ public class IntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditional")
     public ConditionalSpecification conditional;
+
     public IntentClosingSetting withConditional(ConditionalSpecification conditional) {
         this.conditional = conditional;
         return this;
@@ -39,9 +42,11 @@ public class IntentClosingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStep")
     public DialogState nextStep;
+
     public IntentClosingSetting withNextStep(DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
     }
     
+    public IntentClosingSetting(){}
 }

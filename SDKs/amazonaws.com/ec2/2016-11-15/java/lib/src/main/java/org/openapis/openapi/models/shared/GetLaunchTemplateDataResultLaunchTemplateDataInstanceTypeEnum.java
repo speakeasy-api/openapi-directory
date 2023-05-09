@@ -647,7 +647,12 @@ public enum GetLaunchTemplateDataResultLaunchTemplateDataInstanceTypeEnum {
     R7G8XLARGE("r7g.8xlarge"),
     R7G12XLARGE("r7g.12xlarge"),
     R7G16XLARGE("r7g.16xlarge"),
-    R7G_METAL("r7g.metal");
+    R7G_METAL("r7g.metal"),
+    C6IN_METAL("c6in.metal"),
+    M6IN_METAL("m6in.metal"),
+    M6IDN_METAL("m6idn.metal"),
+    R6IN_METAL("r6in.metal"),
+    R6IDN_METAL("r6idn.metal");
 
     @JsonValue
     public final String value;

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCriticsResourceTypeJsonRequest {
@@ -15,9 +16,13 @@ public class GetCriticsResourceTypeJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource-type")
     public String resourceType;
+
     public GetCriticsResourceTypeJsonRequest withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public GetCriticsResourceTypeJsonRequest(@JsonProperty("resource-type") String resourceType) {
+        this.resourceType = resourceType;
+  }
 }

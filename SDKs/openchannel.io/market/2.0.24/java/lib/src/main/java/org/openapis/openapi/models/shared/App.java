@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * App - An app
@@ -15,6 +15,7 @@ public class App {
      */
     
     public String[] access;
+
     public App withAccess(String[] access) {
         this.access = access;
         return this;
@@ -25,6 +26,7 @@ public class App {
      */
     
     public Restrictions allow;
+
     public App withAllow(Restrictions allow) {
         this.allow = allow;
         return this;
@@ -35,6 +37,7 @@ public class App {
      */
     
     public String appId;
+
     public App withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -45,6 +48,7 @@ public class App {
      */
     
     public java.util.Map<String, Object> attributes;
+
     public App withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -55,6 +59,7 @@ public class App {
      */
     
     public Long created;
+
     public App withCreated(Long created) {
         this.created = created;
         return this;
@@ -65,6 +70,7 @@ public class App {
      */
     
     public java.util.Map<String, Object> customData;
+
     public App withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -75,6 +81,7 @@ public class App {
      */
     
     public String developerId;
+
     public App withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -85,6 +92,7 @@ public class App {
      */
     
     public Boolean isLive;
+
     public App withIsLive(Boolean isLive) {
         this.isLive = isLive;
         return this;
@@ -95,6 +103,7 @@ public class App {
      */
     
     public Long lastUpdated;
+
     public App withLastUpdated(Long lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -105,6 +114,7 @@ public class App {
      */
     
     public Model[] model;
+
     public App withModel(Model[] model) {
         this.model = model;
         return this;
@@ -115,6 +125,7 @@ public class App {
      */
     
     public String name;
+
     public App withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class App {
     
     
     public Ownership ownership;
+
     public App withOwnership(Ownership ownership) {
         this.ownership = ownership;
         return this;
@@ -132,6 +144,7 @@ public class App {
      */
     
     public Long randomize;
+
     public App withRandomize(Long randomize) {
         this.randomize = randomize;
         return this;
@@ -142,6 +155,7 @@ public class App {
      */
     
     public Long rating;
+
     public App withRating(Long rating) {
         this.rating = rating;
         return this;
@@ -152,6 +166,7 @@ public class App {
      */
     
     public Restrictions restrict;
+
     public App withRestrict(Restrictions restrict) {
         this.restrict = restrict;
         return this;
@@ -162,6 +177,7 @@ public class App {
      */
     
     public Long reviewCount;
+
     public App withReviewCount(Long reviewCount) {
         this.reviewCount = reviewCount;
         return this;
@@ -172,6 +188,7 @@ public class App {
      */
     
     public String[] safeName;
+
     public App withSafeName(String[] safeName) {
         this.safeName = safeName;
         return this;
@@ -182,6 +199,7 @@ public class App {
      */
     
     public java.util.Map<String, Object> statistics;
+
     public App withStatistics(java.util.Map<String, Object> statistics) {
         this.statistics = statistics;
         return this;
@@ -192,6 +210,7 @@ public class App {
      */
     
     public Status status;
+
     public App withStatus(Status status) {
         this.status = status;
         return this;
@@ -202,6 +221,7 @@ public class App {
      */
     
     public Long submittedDate;
+
     public App withSubmittedDate(Long submittedDate) {
         this.submittedDate = submittedDate;
         return this;
@@ -212,6 +232,7 @@ public class App {
      */
     
     public String type;
+
     public App withType(String type) {
         this.type = type;
         return this;
@@ -222,9 +243,28 @@ public class App {
      */
     
     public Long version;
+
     public App withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public App(@JsonProperty("allow") Restrictions allow, @JsonProperty("appId") String appId, @JsonProperty("attributes") java.util.Map<String, Object> attributes, @JsonProperty("created") Long created, @JsonProperty("customData") java.util.Map<String, Object> customData, @JsonProperty("developerId") String developerId, @JsonProperty("isLive") Boolean isLive, @JsonProperty("lastUpdated") Long lastUpdated, @JsonProperty("model") Model[] model, @JsonProperty("name") String name, @JsonProperty("randomize") Long randomize, @JsonProperty("rating") Long rating, @JsonProperty("restrict") Restrictions restrict, @JsonProperty("safeName") String[] safeName, @JsonProperty("status") Status status, @JsonProperty("version") Long version) {
+        this.allow = allow;
+        this.appId = appId;
+        this.attributes = attributes;
+        this.created = created;
+        this.customData = customData;
+        this.developerId = developerId;
+        this.isLive = isLive;
+        this.lastUpdated = lastUpdated;
+        this.model = model;
+        this.name = name;
+        this.randomize = randomize;
+        this.rating = rating;
+        this.restrict = restrict;
+        this.safeName = safeName;
+        this.status = status;
+        this.version = version;
+  }
 }

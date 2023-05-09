@@ -15,6 +15,7 @@ public class ListSimulationApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSimulationApplicationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListSimulationApplicationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationApplicationSummaries")
     public SimulationApplicationSummary[] simulationApplicationSummaries;
+
     public ListSimulationApplicationsResponse withSimulationApplicationSummaries(SimulationApplicationSummary[] simulationApplicationSummaries) {
         this.simulationApplicationSummaries = simulationApplicationSummaries;
         return this;
     }
     
+    public ListSimulationApplicationsResponse(){}
 }

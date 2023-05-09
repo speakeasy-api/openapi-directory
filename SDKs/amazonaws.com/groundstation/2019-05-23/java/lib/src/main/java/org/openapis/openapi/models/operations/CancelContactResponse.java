@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelContactResponse {
@@ -12,6 +13,7 @@ public class CancelContactResponse {
      */
     
     public org.openapis.openapi.models.shared.ContactIdResponse contactIdResponse;
+
     public CancelContactResponse withContactIdResponse(org.openapis.openapi.models.shared.ContactIdResponse contactIdResponse) {
         this.contactIdResponse = contactIdResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelContactResponse {
     
     
     public String contentType;
+
     public CancelContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelContactResponse {
      */
     
     public Object dependencyException;
+
     public CancelContactResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class CancelContactResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelContactResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class CancelContactResponse {
     
     
     public Integer statusCode;
+
     public CancelContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CancelContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CancelContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CancelContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

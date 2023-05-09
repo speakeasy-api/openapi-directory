@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationAggregatorsResponse {
     
     public String contentType;
+
     public DescribeConfigurationAggregatorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationAggregatorsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationAggregatorsResponse describeConfigurationAggregatorsResponse;
+
     public DescribeConfigurationAggregatorsResponse withDescribeConfigurationAggregatorsResponse(org.openapis.openapi.models.shared.DescribeConfigurationAggregatorsResponse describeConfigurationAggregatorsResponse) {
         this.describeConfigurationAggregatorsResponse = describeConfigurationAggregatorsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationAggregatorsResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeConfigurationAggregatorsResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConfigurationAggregatorsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeConfigurationAggregatorsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConfigurationAggregatorsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeConfigurationAggregatorsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeConfigurationAggregatorsResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public DescribeConfigurationAggregatorsResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeConfigurationAggregatorsResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationAggregatorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeConfigurationAggregatorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationAggregatorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigurationAggregatorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

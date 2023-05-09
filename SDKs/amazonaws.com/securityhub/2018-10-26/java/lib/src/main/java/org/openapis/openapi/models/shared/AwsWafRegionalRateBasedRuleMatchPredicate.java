@@ -15,6 +15,7 @@ public class AwsWafRegionalRateBasedRuleMatchPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataId")
     public String dataId;
+
     public AwsWafRegionalRateBasedRuleMatchPredicate withDataId(String dataId) {
         this.dataId = dataId;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRegionalRateBasedRuleMatchPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Negated")
     public Boolean negated;
+
     public AwsWafRegionalRateBasedRuleMatchPredicate withNegated(Boolean negated) {
         this.negated = negated;
         return this;
@@ -31,9 +33,11 @@ public class AwsWafRegionalRateBasedRuleMatchPredicate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsWafRegionalRateBasedRuleMatchPredicate withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsWafRegionalRateBasedRuleMatchPredicate(){}
 }

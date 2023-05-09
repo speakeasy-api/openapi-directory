@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetcitymatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getcitymatch200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetcitymatchResponse.java
+docs/sdk/README.md
+docs/citynamesimilaritykey/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class ValidateConsumerConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkServiceNetworkingUsePermission")
     public Boolean checkServiceNetworkingUsePermission;
+
     public ValidateConsumerConfigRequest withCheckServiceNetworkingUsePermission(Boolean checkServiceNetworkingUsePermission) {
         this.checkServiceNetworkingUsePermission = checkServiceNetworkingUsePermission;
         return this;
@@ -26,6 +27,7 @@ public class ValidateConsumerConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public ValidateConsumerConfigRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -37,6 +39,7 @@ public class ValidateConsumerConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerProject")
     public ConsumerProject consumerProject;
+
     public ValidateConsumerConfigRequest withConsumerProject(ConsumerProject consumerProject) {
         this.consumerProject = consumerProject;
         return this;
@@ -48,6 +51,7 @@ public class ValidateConsumerConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeReservation")
     public RangeReservation rangeReservation;
+
     public ValidateConsumerConfigRequest withRangeReservation(RangeReservation rangeReservation) {
         this.rangeReservation = rangeReservation;
         return this;
@@ -59,9 +63,11 @@ public class ValidateConsumerConfigRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validateNetwork")
     public Boolean validateNetwork;
+
     public ValidateConsumerConfigRequest withValidateNetwork(Boolean validateNetwork) {
         this.validateNetwork = validateNetwork;
         return this;
     }
     
+    public ValidateConsumerConfigRequest(){}
 }

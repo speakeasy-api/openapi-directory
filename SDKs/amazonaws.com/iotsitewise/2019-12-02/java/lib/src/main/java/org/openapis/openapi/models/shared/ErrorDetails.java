@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorDetails {
     @JsonProperty("code")
     public ErrorCodeEnum code;
+
     public ErrorDetails withCode(ErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class ErrorDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public DetailedError[] details;
+
     public ErrorDetails withDetails(DetailedError[] details) {
         this.details = details;
         return this;
@@ -29,9 +31,14 @@ public class ErrorDetails {
     
     @JsonProperty("message")
     public String message;
+
     public ErrorDetails withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorDetails(@JsonProperty("code") ErrorCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

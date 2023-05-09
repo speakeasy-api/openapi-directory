@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrackerResponse {
@@ -12,6 +13,7 @@ public class DescribeTrackerResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeTrackerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrackerResponse {
     
     
     public String contentType;
+
     public DescribeTrackerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrackerResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrackerResponse describeTrackerResponse;
+
     public DescribeTrackerResponse withDescribeTrackerResponse(org.openapis.openapi.models.shared.DescribeTrackerResponse describeTrackerResponse) {
         this.describeTrackerResponse = describeTrackerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTrackerResponse {
      */
     
     public Object internalServerException;
+
     public DescribeTrackerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTrackerResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrackerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeTrackerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrackerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeTrackerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTrackerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeTrackerResponse {
      */
     
     public Object throttlingException;
+
     public DescribeTrackerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeTrackerResponse {
      */
     
     public Object validationException;
+
     public DescribeTrackerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeTrackerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

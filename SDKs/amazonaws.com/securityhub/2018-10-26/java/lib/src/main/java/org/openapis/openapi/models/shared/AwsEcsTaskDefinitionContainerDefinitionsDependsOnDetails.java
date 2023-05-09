@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Condition")
     public String condition;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerName")
     public String containerName;
+
     public AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsDependsOnDetails(){}
 }

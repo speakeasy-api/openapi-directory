@@ -20,6 +20,7 @@ public class PurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public PurchaseRequest withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -33,6 +34,7 @@ public class PurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offerId")
     public String offerId;
+
     public PurchaseRequest withOfferId(String offerId) {
         this.offerId = offerId;
         return this;
@@ -46,6 +48,7 @@ public class PurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public String paymentMethodId;
+
     public PurchaseRequest withPaymentMethodId(String paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -57,9 +60,11 @@ public class PurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planId")
     public String planId;
+
     public PurchaseRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public PurchaseRequest(){}
 }

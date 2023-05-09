@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsLocationsBatchesListResponse(contentType, httpRes.statusCode()) {{
             listBatchesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesCreateResponse(contentType, httpRes.statusCode()) {{
             autoscalingPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsAutoscalingPoliciesListResponse(contentType, httpRes.statusCode()) {{
             listAutoscalingPoliciesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersDiagnoseResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersGetResponse(contentType, httpRes.statusCode()) {{
             cluster = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersInjectCredentialsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersListResponse(contentType, httpRes.statusCode()) {{
             listClustersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersNodeGroupsResizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,11 +650,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersRepairResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -724,11 +696,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStartResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -772,11 +742,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsClustersStopResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +788,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsCancelResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,11 +832,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +876,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsGetResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -958,11 +920,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsListResponse(contentType, httpRes.statusCode()) {{
             listJobsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsPatchResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1012,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitResponse(contentType, httpRes.statusCode()) {{
             job = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1102,11 +1058,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsJobsSubmitAsOperationResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1102,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1196,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesCreateResponse(contentType, httpRes.statusCode()) {{
             workflowTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1242,11 +1192,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1288,11 +1236,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetResponse(contentType, httpRes.statusCode()) {{
             workflowTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1336,11 +1282,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1384,11 +1328,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1432,11 +1374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesInstantiateInlineResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1478,11 +1418,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesListResponse(contentType, httpRes.statusCode()) {{
             listWorkflowTemplatesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1526,11 +1464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1574,11 +1510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1622,11 +1556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse res = new org.openapis.openapi.models.operations.DataprocProjectsRegionsWorkflowTemplatesUpdateResponse(contentType, httpRes.statusCode()) {{
             workflowTemplate = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

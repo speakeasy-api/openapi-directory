@@ -15,6 +15,7 @@ public class DocumentDefaultVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultVersion")
     public String defaultVersion;
+
     public DocumentDefaultVersionDescription withDefaultVersion(String defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -23,6 +24,7 @@ public class DocumentDefaultVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultVersionName")
     public String defaultVersionName;
+
     public DocumentDefaultVersionDescription withDefaultVersionName(String defaultVersionName) {
         this.defaultVersionName = defaultVersionName;
         return this;
@@ -31,9 +33,11 @@ public class DocumentDefaultVersionDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DocumentDefaultVersionDescription withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DocumentDefaultVersionDescription(){}
 }

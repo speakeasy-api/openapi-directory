@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTransitGatewayMulticastDomainsRequestFilters {
     
     public String name;
+
     public DescribeTransitGatewayMulticastDomainsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTransitGatewayMulticastDomainsRequestFilters {
     
     
     public String[] values;
+
     public DescribeTransitGatewayMulticastDomainsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeTransitGatewayMulticastDomainsRequestFilters(){}
 }

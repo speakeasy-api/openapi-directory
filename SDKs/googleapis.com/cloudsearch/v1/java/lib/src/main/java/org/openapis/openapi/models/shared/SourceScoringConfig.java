@@ -18,9 +18,11 @@ public class SourceScoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImportance")
     public SourceScoringConfigSourceImportanceEnum sourceImportance;
+
     public SourceScoringConfig withSourceImportance(SourceScoringConfigSourceImportanceEnum sourceImportance) {
         this.sourceImportance = sourceImportance;
         return this;
     }
     
+    public SourceScoringConfig(){}
 }

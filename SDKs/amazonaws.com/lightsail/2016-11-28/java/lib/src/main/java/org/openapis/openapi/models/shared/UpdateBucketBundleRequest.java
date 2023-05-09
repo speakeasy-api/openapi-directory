@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateBucketBundleRequest {
     @JsonProperty("bucketName")
     public String bucketName;
+
     public UpdateBucketBundleRequest withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateBucketBundleRequest {
     
     @JsonProperty("bundleId")
     public String bundleId;
+
     public UpdateBucketBundleRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
     }
     
+    public UpdateBucketBundleRequest(@JsonProperty("bucketName") String bucketName, @JsonProperty("bundleId") String bundleId) {
+        this.bucketName = bucketName;
+        this.bundleId = bundleId;
+  }
 }

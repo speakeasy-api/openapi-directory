@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiV1AccountsIdUnblockRequest {
@@ -12,9 +13,13 @@ public class PostApiV1AccountsIdUnblockRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostApiV1AccountsIdUnblockRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostApiV1AccountsIdUnblockRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

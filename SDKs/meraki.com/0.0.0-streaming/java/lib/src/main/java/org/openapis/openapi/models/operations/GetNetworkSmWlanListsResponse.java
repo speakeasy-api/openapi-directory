@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkSmWlanListsResponse {
     
     public String contentType;
+
     public GetNetworkSmWlanListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkSmWlanListsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkSmWlanListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkSmWlanListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkSmWlanListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkSmWlanListsResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkSmWlanLists200ApplicationJSONObjects;
+
     public GetNetworkSmWlanListsResponse withGetNetworkSmWlanLists200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkSmWlanLists200ApplicationJSONObjects) {
         this.getNetworkSmWlanLists200ApplicationJSONObjects = getNetworkSmWlanLists200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkSmWlanListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

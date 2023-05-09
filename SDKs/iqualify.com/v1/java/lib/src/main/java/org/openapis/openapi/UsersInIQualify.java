@@ -53,12 +53,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserEmailResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserEmailResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailResponse(contentType, httpRes.statusCode()) {{
             userResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,12 +99,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,12 +147,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchUsersUserEmailResponse res = new org.openapis.openapi.models.operations.PatchUsersUserEmailResponse() {{
+        org.openapis.openapi.models.operations.PatchUsersUserEmailResponse res = new org.openapis.openapi.models.operations.PatchUsersUserEmailResponse(contentType, httpRes.statusCode()) {{
             userResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,12 +198,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersResponse res = new org.openapis.openapi.models.operations.PostUsersResponse() {{
+        org.openapis.openapi.models.operations.PostUsersResponse res = new org.openapis.openapi.models.operations.PostUsersResponse(contentType, httpRes.statusCode()) {{
             userResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -252,11 +244,9 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailResponse() {{
+        org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailInviteEmailResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -299,12 +289,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsResponse() {{
+        org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailOfferingsResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -347,12 +335,10 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameResponse() {{
+        org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameResponse res = new org.openapis.openapi.models.operations.PostUsersUserEmailPermissionsPermissionNameResponse(contentType, httpRes.statusCode()) {{
             userResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,11 +386,9 @@ public class UsersInIQualify {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutUsersUserEmailSuspendResponse res = new org.openapis.openapi.models.operations.PutUsersUserEmailSuspendResponse() {{
+        org.openapis.openapi.models.operations.PutUsersUserEmailSuspendResponse res = new org.openapis.openapi.models.operations.PutUsersUserEmailSuspendResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

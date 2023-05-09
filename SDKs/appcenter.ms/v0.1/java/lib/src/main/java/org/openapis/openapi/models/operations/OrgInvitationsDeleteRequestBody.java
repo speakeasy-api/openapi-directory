@@ -15,9 +15,13 @@ public class OrgInvitationsDeleteRequestBody {
      */
     @JsonProperty("user_email")
     public String userEmail;
+
     public OrgInvitationsDeleteRequestBody withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public OrgInvitationsDeleteRequestBody(@JsonProperty("user_email") String userEmail) {
+        this.userEmail = userEmail;
+  }
 }

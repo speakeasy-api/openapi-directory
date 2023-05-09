@@ -12,9 +12,11 @@ public class DescribeVpcPeeringConnectionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public DescribeVpcPeeringConnectionsInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsInput(){}
 }

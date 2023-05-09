@@ -18,6 +18,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncOptions")
     public AsyncOptions[] asyncOptions;
+
     public Options withAsyncOptions(AsyncOptions[] asyncOptions) {
         this.asyncOptions = asyncOptions;
         return this;
@@ -29,6 +30,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputMappings")
     public InputMapping[] inputMappings;
+
     public Options withInputMappings(InputMapping[] inputMappings) {
         this.inputMappings = inputMappings;
         return this;
@@ -40,6 +42,7 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationOptions")
     public ValidationOptions validationOptions;
+
     public Options withValidationOptions(ValidationOptions validationOptions) {
         this.validationOptions = validationOptions;
         return this;
@@ -51,9 +54,11 @@ public class Options {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualProperties")
     public String virtualProperties;
+
     public Options withVirtualProperties(String virtualProperties) {
         this.virtualProperties = virtualProperties;
         return this;
     }
     
+    public Options(){}
 }

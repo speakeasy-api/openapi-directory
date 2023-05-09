@@ -15,6 +15,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MFAMode")
     public org.openapis.openapi.models.shared.MFAModeEnum mfaMode;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa withMFAMode(org.openapis.openapi.models.shared.MFAModeEnum mfaMode) {
         this.mfaMode = mfaMode;
         return this;
@@ -23,9 +24,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings settings;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa withSettings(UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfaSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsMfa(){}
 }

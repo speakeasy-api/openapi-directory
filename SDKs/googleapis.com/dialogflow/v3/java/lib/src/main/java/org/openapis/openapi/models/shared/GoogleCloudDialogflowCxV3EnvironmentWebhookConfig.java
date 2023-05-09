@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3EnvironmentWebhookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhookOverrides")
     public GoogleCloudDialogflowCxV3Webhook[] webhookOverrides;
+
     public GoogleCloudDialogflowCxV3EnvironmentWebhookConfig withWebhookOverrides(GoogleCloudDialogflowCxV3Webhook[] webhookOverrides) {
         this.webhookOverrides = webhookOverrides;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3EnvironmentWebhookConfig(){}
 }

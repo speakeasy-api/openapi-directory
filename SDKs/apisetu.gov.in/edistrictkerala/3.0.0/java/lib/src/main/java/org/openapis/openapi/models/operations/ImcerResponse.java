@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImcerResponse {
     
     public String contentType;
+
     public ImcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ImcerResponse {
     
     
     public Integer statusCode;
+
     public ImcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ImcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ImcerResponse {
      */
     
     public Imcer400ApplicationJSON imcer400ApplicationJSONObject;
+
     public ImcerResponse withImcer400ApplicationJSONObject(Imcer400ApplicationJSON imcer400ApplicationJSONObject) {
         this.imcer400ApplicationJSONObject = imcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ImcerResponse {
      */
     
     public Imcer401ApplicationJSON imcer401ApplicationJSONObject;
+
     public ImcerResponse withImcer401ApplicationJSONObject(Imcer401ApplicationJSON imcer401ApplicationJSONObject) {
         this.imcer401ApplicationJSONObject = imcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ImcerResponse {
      */
     
     public Imcer404ApplicationJSON imcer404ApplicationJSONObject;
+
     public ImcerResponse withImcer404ApplicationJSONObject(Imcer404ApplicationJSON imcer404ApplicationJSONObject) {
         this.imcer404ApplicationJSONObject = imcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ImcerResponse {
      */
     
     public Imcer500ApplicationJSON imcer500ApplicationJSONObject;
+
     public ImcerResponse withImcer500ApplicationJSONObject(Imcer500ApplicationJSON imcer500ApplicationJSONObject) {
         this.imcer500ApplicationJSONObject = imcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class ImcerResponse {
      */
     
     public Imcer502ApplicationJSON imcer502ApplicationJSONObject;
+
     public ImcerResponse withImcer502ApplicationJSONObject(Imcer502ApplicationJSON imcer502ApplicationJSONObject) {
         this.imcer502ApplicationJSONObject = imcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class ImcerResponse {
      */
     
     public Imcer503ApplicationJSON imcer503ApplicationJSONObject;
+
     public ImcerResponse withImcer503ApplicationJSONObject(Imcer503ApplicationJSON imcer503ApplicationJSONObject) {
         this.imcer503ApplicationJSONObject = imcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class ImcerResponse {
      */
     
     public Imcer504ApplicationJSON imcer504ApplicationJSONObject;
+
     public ImcerResponse withImcer504ApplicationJSONObject(Imcer504ApplicationJSON imcer504ApplicationJSONObject) {
         this.imcer504ApplicationJSONObject = imcer504ApplicationJSONObject;
         return this;
     }
     
+    public ImcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

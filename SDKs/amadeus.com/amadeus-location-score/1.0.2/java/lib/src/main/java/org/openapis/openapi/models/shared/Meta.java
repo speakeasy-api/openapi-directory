@@ -18,6 +18,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public Meta withCount(Long count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public MetaLinks links;
+
     public Meta withLinks(MetaLinks links) {
         this.links = links;
         return this;
     }
     
+    public Meta(){}
 }

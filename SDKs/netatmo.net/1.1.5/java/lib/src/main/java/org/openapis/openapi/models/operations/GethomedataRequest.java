@@ -12,6 +12,7 @@ public class GethomedataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=home_id")
     public String homeId;
+
     public GethomedataRequest withHomeId(String homeId) {
         this.homeId = homeId;
         return this;
@@ -22,9 +23,11 @@ public class GethomedataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GethomedataRequest withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public GethomedataRequest(){}
 }

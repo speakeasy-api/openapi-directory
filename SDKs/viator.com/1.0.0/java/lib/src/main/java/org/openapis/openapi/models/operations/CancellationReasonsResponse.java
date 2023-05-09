@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancellationReasonsResponse {
@@ -12,6 +13,7 @@ public class CancellationReasonsResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED;
+
     public CancellationReasonsResponse withFourHundredAndOneUNAUTHORIZED(org.openapis.openapi.models.shared.FourHundredAndOneUNAUTHORIZED fourHundredAndOneUNAUTHORIZED) {
         this.fourHundredAndOneUNAUTHORIZED = fourHundredAndOneUNAUTHORIZED;
         return this;
@@ -22,6 +24,7 @@ public class CancellationReasonsResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE;
+
     public CancellationReasonsResponse withFourHundredAndSixNOTACCEPTABLE(org.openapis.openapi.models.shared.FourHundredAndSixNOTACCEPTABLE fourHundredAndSixNOTACCEPTABLE) {
         this.fourHundredAndSixNOTACCEPTABLE = fourHundredAndSixNOTACCEPTABLE;
         return this;
@@ -32,6 +35,7 @@ public class CancellationReasonsResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR;
+
     public CancellationReasonsResponse withFiveHundredINTERNALSERVERERROR(org.openapis.openapi.models.shared.FiveHundredINTERNALSERVERERROR fiveHundredINTERNALSERVERERROR) {
         this.fiveHundredINTERNALSERVERERROR = fiveHundredINTERNALSERVERERROR;
         return this;
@@ -42,6 +46,7 @@ public class CancellationReasonsResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE;
+
     public CancellationReasonsResponse withFiveHundredAndThreeSERVICEUNAVAILABLE(org.openapis.openapi.models.shared.FiveHundredAndThreeSERVICEUNAVAILABLE fiveHundredAndThreeSERVICEUNAVAILABLE) {
         this.fiveHundredAndThreeSERVICEUNAVAILABLE = fiveHundredAndThreeSERVICEUNAVAILABLE;
         return this;
@@ -52,6 +57,7 @@ public class CancellationReasonsResponse {
      */
     
     public org.openapis.openapi.models.shared.CancellationReasonsResponse[] cancellationReasonsResponses;
+
     public CancellationReasonsResponse withCancellationReasonsResponses(org.openapis.openapi.models.shared.CancellationReasonsResponse[] cancellationReasonsResponses) {
         this.cancellationReasonsResponses = cancellationReasonsResponses;
         return this;
@@ -59,6 +65,7 @@ public class CancellationReasonsResponse {
     
     
     public String contentType;
+
     public CancellationReasonsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -66,6 +73,7 @@ public class CancellationReasonsResponse {
     
     
     public Integer statusCode;
+
     public CancellationReasonsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancellationReasonsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancellationReasonsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancellationReasonsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

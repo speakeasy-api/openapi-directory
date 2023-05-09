@@ -57,12 +57,10 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsRevisionIdGetByIdResponse(contentType, httpRes.statusCode()) {{
             actionRevision = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class Revisions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse() {{
+        org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse res = new org.openapis.openapi.models.operations.GetAutomationV4ActionsAppIdDefinitionIdRevisionsGetPageResponse(contentType, httpRes.statusCode()) {{
             collectionResponseActionRevisionForwardPaging = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

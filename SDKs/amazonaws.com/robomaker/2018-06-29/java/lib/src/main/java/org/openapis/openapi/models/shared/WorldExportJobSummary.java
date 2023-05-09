@@ -20,6 +20,7 @@ public class WorldExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public WorldExportJobSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class WorldExportJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public WorldExportJobSummary withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class WorldExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputLocation")
     public OutputLocation outputLocation;
+
     public WorldExportJobSummary withOutputLocation(OutputLocation outputLocation) {
         this.outputLocation = outputLocation;
         return this;
@@ -49,6 +52,7 @@ public class WorldExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorldExportJobStatusEnum status;
+
     public WorldExportJobSummary withStatus(WorldExportJobStatusEnum status) {
         this.status = status;
         return this;
@@ -57,9 +61,11 @@ public class WorldExportJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worlds")
     public String[] worlds;
+
     public WorldExportJobSummary withWorlds(String[] worlds) {
         this.worlds = worlds;
         return this;
     }
     
+    public WorldExportJobSummary(){}
 }

@@ -15,6 +15,7 @@ public class SavingsPlansPurchaseRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalMetadata")
     public String additionalMetadata;
+
     public SavingsPlansPurchaseRecommendationMetadata withAdditionalMetadata(String additionalMetadata) {
         this.additionalMetadata = additionalMetadata;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansPurchaseRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerationTimestamp")
     public String generationTimestamp;
+
     public SavingsPlansPurchaseRecommendationMetadata withGenerationTimestamp(String generationTimestamp) {
         this.generationTimestamp = generationTimestamp;
         return this;
@@ -31,9 +33,11 @@ public class SavingsPlansPurchaseRecommendationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommendationId")
     public String recommendationId;
+
     public SavingsPlansPurchaseRecommendationMetadata withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public SavingsPlansPurchaseRecommendationMetadata(){}
 }

@@ -15,9 +15,11 @@ public class StatefulRuleGroupOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public OverrideActionEnum action;
+
     public StatefulRuleGroupOverride withAction(OverrideActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public StatefulRuleGroupOverride(){}
 }

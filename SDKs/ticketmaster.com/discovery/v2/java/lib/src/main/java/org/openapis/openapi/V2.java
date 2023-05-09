@@ -55,12 +55,10 @@ public class V2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiscoveryV2SuggestResponse res = new org.openapis.openapi.models.operations.GetDiscoveryV2SuggestResponse() {{
+        org.openapis.openapi.models.operations.GetDiscoveryV2SuggestResponse res = new org.openapis.openapi.models.operations.GetDiscoveryV2SuggestResponse(contentType, httpRes.statusCode()) {{
             getDiscoveryV2Suggest200ApplicationHalPlusJsonString = null;
             getDiscoveryV2Suggest200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

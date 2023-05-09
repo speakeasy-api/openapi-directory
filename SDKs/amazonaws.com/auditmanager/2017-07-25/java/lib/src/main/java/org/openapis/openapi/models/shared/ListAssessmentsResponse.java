@@ -15,6 +15,7 @@ public class ListAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentMetadata")
     public AssessmentMetadataItem[] assessmentMetadata;
+
     public ListAssessmentsResponse withAssessmentMetadata(AssessmentMetadataItem[] assessmentMetadata) {
         this.assessmentMetadata = assessmentMetadata;
         return this;
@@ -23,9 +24,11 @@ public class ListAssessmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssessmentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAssessmentsResponse(){}
 }

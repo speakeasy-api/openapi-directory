@@ -99,12 +99,10 @@ public class Image {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse() {{
+        org.openapis.openapi.models.operations.GetImagesResponse res = new org.openapis.openapi.models.operations.GetImagesResponse(contentType, httpRes.statusCode()) {{
             getImages200ApplicationVndApiPlusJsonObject = null;
             getImages400ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +190,9 @@ public class Image {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetImagesIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdResponse() {{
+        org.openapis.openapi.models.operations.GetImagesIdResponse res = new org.openapis.openapi.models.operations.GetImagesIdResponse(contentType, httpRes.statusCode()) {{
             getImagesId200ApplicationVndApiPlusJsonObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

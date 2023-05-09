@@ -12,9 +12,13 @@ public class GetTypedLinkFacetInformationRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public GetTypedLinkFacetInformationRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetTypedLinkFacetInformationRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

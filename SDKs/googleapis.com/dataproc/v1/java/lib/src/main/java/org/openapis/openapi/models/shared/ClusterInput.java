@@ -18,6 +18,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ClusterInput withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -29,6 +30,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public ClusterConfigInput config;
+
     public ClusterInput withConfig(ClusterConfigInput config) {
         this.config = config;
         return this;
@@ -40,6 +42,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ClusterInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ClusterMetrics metrics;
+
     public ClusterInput withMetrics(ClusterMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -62,6 +66,7 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ClusterInput withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -73,9 +78,11 @@ public class ClusterInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusterConfig")
     public VirtualClusterConfig virtualClusterConfig;
+
     public ClusterInput withVirtualClusterConfig(VirtualClusterConfig virtualClusterConfig) {
         this.virtualClusterConfig = virtualClusterConfig;
         return this;
     }
     
+    public ClusterInput(){}
 }

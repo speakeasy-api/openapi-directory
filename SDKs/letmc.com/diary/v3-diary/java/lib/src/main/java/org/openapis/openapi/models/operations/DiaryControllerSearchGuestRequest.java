@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerSearchGuestRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=branchID")
     public String branchID;
+
     public DiaryControllerSearchGuestRequest withBranchID(String branchID) {
         this.branchID = branchID;
         return this;
@@ -16,6 +18,7 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public DiaryControllerSearchGuestRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -23,6 +26,7 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailaddress")
     public String emailaddress;
+
     public DiaryControllerSearchGuestRequest withEmailaddress(String emailaddress) {
         this.emailaddress = emailaddress;
         return this;
@@ -30,6 +34,7 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forename")
     public String forename;
+
     public DiaryControllerSearchGuestRequest withForename(String forename) {
         this.forename = forename;
         return this;
@@ -37,6 +42,7 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DiaryControllerSearchGuestRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -44,6 +50,7 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortname")
     public String shortname;
+
     public DiaryControllerSearchGuestRequest withShortname(String shortname) {
         this.shortname = shortname;
         return this;
@@ -51,9 +58,19 @@ public class DiaryControllerSearchGuestRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=surname")
     public String surname;
+
     public DiaryControllerSearchGuestRequest withSurname(String surname) {
         this.surname = surname;
         return this;
     }
     
+    public DiaryControllerSearchGuestRequest(@JsonProperty("branchID") String branchID, @JsonProperty("count") Integer count, @JsonProperty("emailaddress") String emailaddress, @JsonProperty("forename") String forename, @JsonProperty("offset") Integer offset, @JsonProperty("shortname") String shortname, @JsonProperty("surname") String surname) {
+        this.branchID = branchID;
+        this.count = count;
+        this.emailaddress = emailaddress;
+        this.forename = forename;
+        this.offset = offset;
+        this.shortname = shortname;
+        this.surname = surname;
+  }
 }

@@ -23,6 +23,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anchor")
     public String anchor;
+
     public Comment withAnchor(String anchor) {
         this.anchor = anchor;
         return this;
@@ -34,6 +35,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public User author;
+
     public Comment withAuthor(User author) {
         this.author = author;
         return this;
@@ -45,6 +47,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentId")
     public String commentId;
+
     public Comment withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
@@ -56,6 +59,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Comment withContent(String content) {
         this.content = content;
         return this;
@@ -67,6 +71,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public CommentContext context;
+
     public Comment withContext(CommentContext context) {
         this.context = context;
         return this;
@@ -80,6 +85,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Comment withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -91,6 +97,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Comment withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -102,6 +109,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileId")
     public String fileId;
+
     public Comment withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -113,6 +121,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileTitle")
     public String fileTitle;
+
     public Comment withFileTitle(String fileTitle) {
         this.fileTitle = fileTitle;
         return this;
@@ -124,6 +133,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("htmlContent")
     public String htmlContent;
+
     public Comment withHtmlContent(String htmlContent) {
         this.htmlContent = htmlContent;
         return this;
@@ -135,6 +145,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Comment withKind(String kind) {
         this.kind = kind;
         return this;
@@ -148,6 +159,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedDate")
     public OffsetDateTime modifiedDate;
+
     public Comment withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -159,6 +171,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies")
     public CommentReply[] replies;
+
     public Comment withReplies(CommentReply[] replies) {
         this.replies = replies;
         return this;
@@ -170,6 +183,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Comment withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -183,9 +197,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Comment withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Comment(){}
 }

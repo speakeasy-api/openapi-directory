@@ -54,10 +54,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesChangesResponse res = new org.openapis.openapi.models.operations.GetNamesChangesResponse() {{
+        org.openapis.openapi.models.operations.GetNamesChangesResponse res = new org.openapis.openapi.models.operations.GetNamesChangesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -93,10 +91,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesDecisionsRecentResponse res = new org.openapis.openapi.models.operations.GetNamesDecisionsRecentResponse() {{
+        org.openapis.openapi.models.operations.GetNamesDecisionsRecentResponse res = new org.openapis.openapi.models.operations.GetNamesDecisionsRecentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -132,10 +128,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesDecisionsYearResponse res = new org.openapis.openapi.models.operations.GetNamesDecisionsYearResponse() {{
+        org.openapis.openapi.models.operations.GetNamesDecisionsYearResponse res = new org.openapis.openapi.models.operations.GetNamesDecisionsYearResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -171,10 +165,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesInsideResponse res = new org.openapis.openapi.models.operations.GetNamesInsideResponse() {{
+        org.openapis.openapi.models.operations.GetNamesInsideResponse res = new org.openapis.openapi.models.operations.GetNamesInsideResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -210,10 +202,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesNearResponse res = new org.openapis.openapi.models.operations.GetNamesNearResponse() {{
+        org.openapis.openapi.models.operations.GetNamesNearResponse res = new org.openapis.openapi.models.operations.GetNamesNearResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -249,10 +239,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesNotOfficialSearchResponse res = new org.openapis.openapi.models.operations.GetNamesNotOfficialSearchResponse() {{
+        org.openapis.openapi.models.operations.GetNamesNotOfficialSearchResponse res = new org.openapis.openapi.models.operations.GetNamesNotOfficialSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -288,10 +276,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesOfficialSearchResponse res = new org.openapis.openapi.models.operations.GetNamesOfficialSearchResponse() {{
+        org.openapis.openapi.models.operations.GetNamesOfficialSearchResponse res = new org.openapis.openapi.models.operations.GetNamesOfficialSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -327,10 +313,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesSearchResponse res = new org.openapis.openapi.models.operations.GetNamesSearchResponse() {{
+        org.openapis.openapi.models.operations.GetNamesSearchResponse res = new org.openapis.openapi.models.operations.GetNamesSearchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -360,10 +344,8 @@ public class Name {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNamesNameIdOutputFormatResponse res = new org.openapis.openapi.models.operations.GetNamesNameIdOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetNamesNameIdOutputFormatResponse res = new org.openapis.openapi.models.operations.GetNamesNameIdOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {

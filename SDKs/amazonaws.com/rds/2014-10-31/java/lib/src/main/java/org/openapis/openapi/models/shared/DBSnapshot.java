@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBSnapshot {
     
     public Long allocatedStorage;
+
     public DBSnapshot withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class DBSnapshot {
     
     
     public String availabilityZone;
+
     public DBSnapshot withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class DBSnapshot {
     
     
     public String dbInstanceIdentifier;
+
     public DBSnapshot withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class DBSnapshot {
     
     
     public String dbSnapshotArn;
+
     public DBSnapshot withDBSnapshotArn(String dbSnapshotArn) {
         this.dbSnapshotArn = dbSnapshotArn;
         return this;
@@ -40,6 +44,7 @@ public class DBSnapshot {
     
     
     public String dbSnapshotIdentifier;
+
     public DBSnapshot withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class DBSnapshot {
     
     
     public String dbiResourceId;
+
     public DBSnapshot withDbiResourceId(String dbiResourceId) {
         this.dbiResourceId = dbiResourceId;
         return this;
@@ -54,6 +60,7 @@ public class DBSnapshot {
     
     
     public Boolean encrypted;
+
     public DBSnapshot withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -61,6 +68,7 @@ public class DBSnapshot {
     
     
     public String engine;
+
     public DBSnapshot withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -68,6 +76,7 @@ public class DBSnapshot {
     
     
     public String engineVersion;
+
     public DBSnapshot withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -75,6 +84,7 @@ public class DBSnapshot {
     
     
     public Boolean iamDatabaseAuthenticationEnabled;
+
     public DBSnapshot withIAMDatabaseAuthenticationEnabled(Boolean iamDatabaseAuthenticationEnabled) {
         this.iamDatabaseAuthenticationEnabled = iamDatabaseAuthenticationEnabled;
         return this;
@@ -82,6 +92,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBSnapshot withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -89,6 +100,7 @@ public class DBSnapshot {
     
     
     public Long iops;
+
     public DBSnapshot withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -96,6 +108,7 @@ public class DBSnapshot {
     
     
     public String kmsKeyId;
+
     public DBSnapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -103,6 +116,7 @@ public class DBSnapshot {
     
     
     public String licenseModel;
+
     public DBSnapshot withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -110,6 +124,7 @@ public class DBSnapshot {
     
     
     public String masterUsername;
+
     public DBSnapshot withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -117,6 +132,7 @@ public class DBSnapshot {
     
     
     public String optionGroupName;
+
     public DBSnapshot withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -124,6 +140,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime originalSnapshotCreateTime;
+
     public DBSnapshot withOriginalSnapshotCreateTime(OffsetDateTime originalSnapshotCreateTime) {
         this.originalSnapshotCreateTime = originalSnapshotCreateTime;
         return this;
@@ -131,6 +148,7 @@ public class DBSnapshot {
     
     
     public Long percentProgress;
+
     public DBSnapshot withPercentProgress(Long percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -138,6 +156,7 @@ public class DBSnapshot {
     
     
     public Long port;
+
     public DBSnapshot withPort(Long port) {
         this.port = port;
         return this;
@@ -145,6 +164,7 @@ public class DBSnapshot {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public DBSnapshot withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -152,6 +172,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime snapshotCreateTime;
+
     public DBSnapshot withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -159,6 +180,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime snapshotDatabaseTime;
+
     public DBSnapshot withSnapshotDatabaseTime(OffsetDateTime snapshotDatabaseTime) {
         this.snapshotDatabaseTime = snapshotDatabaseTime;
         return this;
@@ -166,6 +188,7 @@ public class DBSnapshot {
     
     
     public String snapshotTarget;
+
     public DBSnapshot withSnapshotTarget(String snapshotTarget) {
         this.snapshotTarget = snapshotTarget;
         return this;
@@ -173,6 +196,7 @@ public class DBSnapshot {
     
     
     public String snapshotType;
+
     public DBSnapshot withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -180,6 +204,7 @@ public class DBSnapshot {
     
     
     public String sourceDBSnapshotIdentifier;
+
     public DBSnapshot withSourceDBSnapshotIdentifier(String sourceDBSnapshotIdentifier) {
         this.sourceDBSnapshotIdentifier = sourceDBSnapshotIdentifier;
         return this;
@@ -187,6 +212,7 @@ public class DBSnapshot {
     
     
     public String sourceRegion;
+
     public DBSnapshot withSourceRegion(String sourceRegion) {
         this.sourceRegion = sourceRegion;
         return this;
@@ -194,6 +220,7 @@ public class DBSnapshot {
     
     
     public String status;
+
     public DBSnapshot withStatus(String status) {
         this.status = status;
         return this;
@@ -201,6 +228,7 @@ public class DBSnapshot {
     
     
     public Long storageThroughput;
+
     public DBSnapshot withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -208,6 +236,7 @@ public class DBSnapshot {
     
     
     public String storageType;
+
     public DBSnapshot withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -218,6 +247,7 @@ public class DBSnapshot {
      */
     
     public TagList[] tagList;
+
     public DBSnapshot withTagList(TagList[] tagList) {
         this.tagList = tagList;
         return this;
@@ -225,6 +255,7 @@ public class DBSnapshot {
     
     
     public String tdeCredentialArn;
+
     public DBSnapshot withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -232,6 +263,7 @@ public class DBSnapshot {
     
     
     public String timezone;
+
     public DBSnapshot withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -239,9 +271,11 @@ public class DBSnapshot {
     
     
     public String vpcId;
+
     public DBSnapshot withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSnapshot(){}
 }

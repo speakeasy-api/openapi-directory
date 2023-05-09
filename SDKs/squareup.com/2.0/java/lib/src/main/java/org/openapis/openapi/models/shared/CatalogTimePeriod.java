@@ -32,9 +32,11 @@ public class CatalogTimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public CatalogTimePeriod withEvent(String event) {
         this.event = event;
         return this;
     }
     
+    public CatalogTimePeriod(){}
 }

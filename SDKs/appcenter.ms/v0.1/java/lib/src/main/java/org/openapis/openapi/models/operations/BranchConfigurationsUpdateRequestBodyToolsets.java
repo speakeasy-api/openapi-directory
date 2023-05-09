@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("android")
     public BranchConfigurationsUpdateRequestBodyToolsetsAndroid android;
+
     public BranchConfigurationsUpdateRequestBodyToolsets withAndroid(BranchConfigurationsUpdateRequestBodyToolsetsAndroid android) {
         this.android = android;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javascript")
     public BranchConfigurationsUpdateRequestBodyToolsetsJavascript javascript;
+
     public BranchConfigurationsUpdateRequestBodyToolsets withJavascript(BranchConfigurationsUpdateRequestBodyToolsetsJavascript javascript) {
         this.javascript = javascript;
         return this;
@@ -40,6 +42,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xamarin")
     public BranchConfigurationsUpdateRequestBodyToolsetsXamarin xamarin;
+
     public BranchConfigurationsUpdateRequestBodyToolsets withXamarin(BranchConfigurationsUpdateRequestBodyToolsetsXamarin xamarin) {
         this.xamarin = xamarin;
         return this;
@@ -51,9 +54,11 @@ public class BranchConfigurationsUpdateRequestBodyToolsets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcode")
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode xcode;
+
     public BranchConfigurationsUpdateRequestBodyToolsets withXcode(BranchConfigurationsUpdateRequestBodyToolsetsXcode xcode) {
         this.xcode = xcode;
         return this;
     }
     
+    public BranchConfigurationsUpdateRequestBodyToolsets(){}
 }

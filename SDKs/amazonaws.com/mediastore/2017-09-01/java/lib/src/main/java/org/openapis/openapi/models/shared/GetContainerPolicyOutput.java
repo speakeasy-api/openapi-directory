@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetContainerPolicyOutput {
     @JsonProperty("Policy")
     public String policy;
+
     public GetContainerPolicyOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetContainerPolicyOutput(@JsonProperty("Policy") String policy) {
+        this.policy = policy;
+  }
 }

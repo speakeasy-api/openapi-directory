@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3DocumentPageAnchor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageRefs")
     public GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef[] pageRefs;
+
     public GoogleCloudDocumentaiV1beta3DocumentPageAnchor withPageRefs(GoogleCloudDocumentaiV1beta3DocumentPageAnchorPageRef[] pageRefs) {
         this.pageRefs = pageRefs;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3DocumentPageAnchor(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBuildResponse {
     
     public String contentType;
+
     public DeleteBuildResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBuildResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteBuildResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBuildResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteBuildResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBuildResponse {
      */
     
     public Object notFoundException;
+
     public DeleteBuildResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteBuildResponse {
     
     
     public Integer statusCode;
+
     public DeleteBuildResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteBuildResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBuildResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteBuildResponse {
      */
     
     public Object taggingFailedException;
+
     public DeleteBuildResponse withTaggingFailedException(Object taggingFailedException) {
         this.taggingFailedException = taggingFailedException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteBuildResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteBuildResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteBuildResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

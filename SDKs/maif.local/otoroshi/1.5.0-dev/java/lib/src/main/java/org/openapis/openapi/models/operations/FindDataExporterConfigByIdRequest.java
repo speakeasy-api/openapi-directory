@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindDataExporterConfigByIdRequest {
@@ -12,9 +13,13 @@ public class FindDataExporterConfigByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataExporterConfigId")
     public String dataExporterConfigId;
+
     public FindDataExporterConfigByIdRequest withDataExporterConfigId(String dataExporterConfigId) {
         this.dataExporterConfigId = dataExporterConfigId;
         return this;
     }
     
+    public FindDataExporterConfigByIdRequest(@JsonProperty("dataExporterConfigId") String dataExporterConfigId) {
+        this.dataExporterConfigId = dataExporterConfigId;
+  }
 }

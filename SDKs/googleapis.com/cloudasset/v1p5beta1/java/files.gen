@@ -75,4 +75,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityAccesscontext
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleIdentityAccesscontextmanagerV1OsConstraint.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
+docs/sdk/README.md
+docs/assets/README.md
 USAGE.md

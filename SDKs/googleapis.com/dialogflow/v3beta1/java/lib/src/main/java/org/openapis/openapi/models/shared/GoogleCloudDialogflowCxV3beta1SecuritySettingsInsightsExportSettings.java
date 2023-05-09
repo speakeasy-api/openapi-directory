@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSetting
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableInsightsExport")
     public Boolean enableInsightsExport;
+
     public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettings withEnableInsightsExport(Boolean enableInsightsExport) {
         this.enableInsightsExport = enableInsightsExport;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1SecuritySettingsInsightsExportSettings(){}
 }

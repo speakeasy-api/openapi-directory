@@ -12,6 +12,7 @@ public class FirstLastNamePhoneNumberIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public FirstLastNamePhoneNumberIn withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -20,6 +21,7 @@ public class FirstLastNamePhoneNumberIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirstLastNamePhoneNumberIn withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class FirstLastNamePhoneNumberIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public FirstLastNamePhoneNumberIn withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -36,9 +39,11 @@ public class FirstLastNamePhoneNumberIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public FirstLastNamePhoneNumberIn withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public FirstLastNamePhoneNumberIn(){}
 }

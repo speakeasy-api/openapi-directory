@@ -22,6 +22,7 @@ public class VpcPeeringAuthorization {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public VpcPeeringAuthorization withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -32,6 +33,7 @@ public class VpcPeeringAuthorization {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationTime")
     public OffsetDateTime expirationTime;
+
     public VpcPeeringAuthorization withExpirationTime(OffsetDateTime expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -40,6 +42,7 @@ public class VpcPeeringAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameLiftAwsAccountId")
     public String gameLiftAwsAccountId;
+
     public VpcPeeringAuthorization withGameLiftAwsAccountId(String gameLiftAwsAccountId) {
         this.gameLiftAwsAccountId = gameLiftAwsAccountId;
         return this;
@@ -48,6 +51,7 @@ public class VpcPeeringAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeerVpcAwsAccountId")
     public String peerVpcAwsAccountId;
+
     public VpcPeeringAuthorization withPeerVpcAwsAccountId(String peerVpcAwsAccountId) {
         this.peerVpcAwsAccountId = peerVpcAwsAccountId;
         return this;
@@ -56,9 +60,11 @@ public class VpcPeeringAuthorization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeerVpcId")
     public String peerVpcId;
+
     public VpcPeeringAuthorization withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
     }
     
+    public VpcPeeringAuthorization(){}
 }

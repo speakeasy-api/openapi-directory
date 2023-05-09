@@ -15,6 +15,7 @@ public class AutoRollbackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public AutoRollbackConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class AutoRollbackConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public AutoRollbackEventEnum[] events;
+
     public AutoRollbackConfiguration withEvents(AutoRollbackEventEnum[] events) {
         this.events = events;
         return this;
     }
     
+    public AutoRollbackConfiguration(){}
 }

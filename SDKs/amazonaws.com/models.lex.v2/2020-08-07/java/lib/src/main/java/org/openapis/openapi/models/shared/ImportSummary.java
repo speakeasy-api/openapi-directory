@@ -22,6 +22,7 @@ public class ImportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public ImportSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importId")
     public String importId;
+
     public ImportSummary withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -38,6 +40,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStatus")
     public ImportStatusEnum importStatus;
+
     public ImportSummary withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -46,6 +49,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedResourceId")
     public String importedResourceId;
+
     public ImportSummary withImportedResourceId(String importedResourceId) {
         this.importedResourceId = importedResourceId;
         return this;
@@ -54,6 +58,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedResourceName")
     public String importedResourceName;
+
     public ImportSummary withImportedResourceName(String importedResourceName) {
         this.importedResourceName = importedResourceName;
         return this;
@@ -62,6 +67,7 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importedResourceType")
     public ImportResourceTypeEnum importedResourceType;
+
     public ImportSummary withImportedResourceType(ImportResourceTypeEnum importedResourceType) {
         this.importedResourceType = importedResourceType;
         return this;
@@ -72,6 +78,7 @@ public class ImportSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public ImportSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -80,9 +87,11 @@ public class ImportSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mergeStrategy")
     public MergeStrategyEnum mergeStrategy;
+
     public ImportSummary withMergeStrategy(MergeStrategyEnum mergeStrategy) {
         this.mergeStrategy = mergeStrategy;
         return this;
     }
     
+    public ImportSummary(){}
 }

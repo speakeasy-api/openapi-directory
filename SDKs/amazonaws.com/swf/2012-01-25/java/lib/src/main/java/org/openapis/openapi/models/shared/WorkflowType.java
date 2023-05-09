@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowType {
     @JsonProperty("name")
     public String name;
+
     public WorkflowType withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class WorkflowType {
     
     @JsonProperty("version")
     public String version;
+
     public WorkflowType withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public WorkflowType(@JsonProperty("name") String name, @JsonProperty("version") String version) {
+        this.name = name;
+        this.version = version;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Event - Event
@@ -15,6 +15,7 @@ public class Event {
      */
     
     public Accessibility accessibility;
+
     public Event withAccessibility(Accessibility accessibility) {
         this.accessibility = accessibility;
         return this;
@@ -25,6 +26,7 @@ public class Event {
      */
     
     public String additionalInfo;
+
     public Event withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -35,6 +37,7 @@ public class Event {
      */
     
     public Classification[] classifications;
+
     public Event withClassifications(Classification[] classifications) {
         this.classifications = classifications;
         return this;
@@ -45,6 +48,7 @@ public class Event {
      */
     
     public EventDates dates;
+
     public Event withDates(EventDates dates) {
         this.dates = dates;
         return this;
@@ -55,6 +59,7 @@ public class Event {
      */
     
     public String description;
+
     public Event withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class Event {
     
     
     public Double distance;
+
     public Event withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -72,6 +78,7 @@ public class Event {
      */
     
     public java.util.Map<String, ExternalLink[]> externalLinks;
+
     public Event withExternalLinks(java.util.Map<String, ExternalLink[]> externalLinks) {
         this.externalLinks = externalLinks;
         return this;
@@ -82,6 +89,7 @@ public class Event {
      */
     
     public String id;
+
     public Event withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +100,7 @@ public class Event {
      */
     
     public Image[] images;
+
     public Event withImages(Image[] images) {
         this.images = images;
         return this;
@@ -102,6 +111,7 @@ public class Event {
      */
     
     public String info;
+
     public Event withInfo(String info) {
         this.info = info;
         return this;
@@ -112,6 +122,7 @@ public class Event {
      */
     
     public String locale;
+
     public Event withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -122,6 +133,7 @@ public class Event {
      */
     
     public Location location;
+
     public Event withLocation(Location location) {
         this.location = location;
         return this;
@@ -132,6 +144,7 @@ public class Event {
      */
     
     public String name;
+
     public Event withName(String name) {
         this.name = name;
         return this;
@@ -142,6 +155,7 @@ public class Event {
      */
     
     public Outlet[] outlets;
+
     public Event withOutlets(Outlet[] outlets) {
         this.outlets = outlets;
         return this;
@@ -152,6 +166,7 @@ public class Event {
      */
     
     public Place place;
+
     public Event withPlace(Place place) {
         this.place = place;
         return this;
@@ -162,6 +177,7 @@ public class Event {
      */
     
     public String pleaseNote;
+
     public Event withPleaseNote(String pleaseNote) {
         this.pleaseNote = pleaseNote;
         return this;
@@ -172,6 +188,7 @@ public class Event {
      */
     
     public PriceRange[] priceRanges;
+
     public Event withPriceRanges(PriceRange[] priceRanges) {
         this.priceRanges = priceRanges;
         return this;
@@ -182,6 +199,7 @@ public class Event {
      */
     
     public Product[] products;
+
     public Event withProducts(Product[] products) {
         this.products = products;
         return this;
@@ -192,6 +210,7 @@ public class Event {
      */
     
     public Promoter promoter;
+
     public Event withPromoter(Promoter promoter) {
         this.promoter = promoter;
         return this;
@@ -202,6 +221,7 @@ public class Event {
      */
     
     public Promoter[] promoters;
+
     public Event withPromoters(Promoter[] promoters) {
         this.promoters = promoters;
         return this;
@@ -212,6 +232,7 @@ public class Event {
      */
     
     public EventSalesDates sales;
+
     public Event withSales(EventSalesDates sales) {
         this.sales = sales;
         return this;
@@ -222,6 +243,7 @@ public class Event {
      */
     
     public SeatMap seatmap;
+
     public Event withSeatmap(SeatMap seatmap) {
         this.seatmap = seatmap;
         return this;
@@ -232,6 +254,7 @@ public class Event {
      */
     
     public Boolean test;
+
     public Event withTest(Boolean test) {
         this.test = test;
         return this;
@@ -242,6 +265,7 @@ public class Event {
      */
     
     public EventTypeEnum type;
+
     public Event withType(EventTypeEnum type) {
         this.type = type;
         return this;
@@ -249,6 +273,7 @@ public class Event {
     
     
     public String units;
+
     public Event withUnits(String units) {
         this.units = units;
         return this;
@@ -259,9 +284,14 @@ public class Event {
      */
     
     public String url;
+
     public Event withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Event(@JsonProperty("id") String id, @JsonProperty("type") EventTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

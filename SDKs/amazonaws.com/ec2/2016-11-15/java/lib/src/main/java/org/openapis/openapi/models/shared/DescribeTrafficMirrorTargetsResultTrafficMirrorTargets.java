@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     public String description;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public String gatewayLoadBalancerEndpointId;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withGatewayLoadBalancerEndpointId(String gatewayLoadBalancerEndpointId) {
         this.gatewayLoadBalancerEndpointId = gatewayLoadBalancerEndpointId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public String networkInterfaceId;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public String networkLoadBalancerArn;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withNetworkLoadBalancerArn(String networkLoadBalancerArn) {
         this.networkLoadBalancerArn = networkLoadBalancerArn;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public String ownerId;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTags[] tags;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withTags(DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public String trafficMirrorTargetId;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withTrafficMirrorTargetId(String trafficMirrorTargetId) {
         this.trafficMirrorTargetId = trafficMirrorTargetId;
         return this;
@@ -61,9 +68,11 @@ public class DescribeTrafficMirrorTargetsResultTrafficMirrorTargets {
     
     
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum type;
+
     public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets withType(DescribeTrafficMirrorTargetsResultTrafficMirrorTargetsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DescribeTrafficMirrorTargetsResultTrafficMirrorTargets(){}
 }

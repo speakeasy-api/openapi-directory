@@ -15,6 +15,7 @@ public class FoundVirus {
      */
     
     public String fileName;
+
     public FoundVirus withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -25,9 +26,11 @@ public class FoundVirus {
      */
     
     public String virusName;
+
     public FoundVirus withVirusName(String virusName) {
         this.virusName = virusName;
         return this;
     }
     
+    public FoundVirus(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeployablePatchSnapshotForInstanceResponse {
     
     public String contentType;
+
     public GetDeployablePatchSnapshotForInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeployablePatchSnapshotForInstanceResult getDeployablePatchSnapshotForInstanceResult;
+
     public GetDeployablePatchSnapshotForInstanceResponse withGetDeployablePatchSnapshotForInstanceResult(org.openapis.openapi.models.shared.GetDeployablePatchSnapshotForInstanceResult getDeployablePatchSnapshotForInstanceResult) {
         this.getDeployablePatchSnapshotForInstanceResult = getDeployablePatchSnapshotForInstanceResult;
         return this;
@@ -29,6 +32,7 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
      */
     
     public Object internalServerError;
+
     public GetDeployablePatchSnapshotForInstanceResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
     
     
     public Integer statusCode;
+
     public GetDeployablePatchSnapshotForInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeployablePatchSnapshotForInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
      */
     
     public Object unsupportedFeatureRequiredException;
+
     public GetDeployablePatchSnapshotForInstanceResponse withUnsupportedFeatureRequiredException(Object unsupportedFeatureRequiredException) {
         this.unsupportedFeatureRequiredException = unsupportedFeatureRequiredException;
         return this;
@@ -63,9 +70,14 @@ public class GetDeployablePatchSnapshotForInstanceResponse {
      */
     
     public Object unsupportedOperatingSystem;
+
     public GetDeployablePatchSnapshotForInstanceResponse withUnsupportedOperatingSystem(Object unsupportedOperatingSystem) {
         this.unsupportedOperatingSystem = unsupportedOperatingSystem;
         return this;
     }
     
+    public GetDeployablePatchSnapshotForInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

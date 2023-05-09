@@ -15,9 +15,11 @@ public class OrderHistoryEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_history")
     public OrderHistoryEditFields orderHistory;
+
     public OrderHistoryEdit withOrderHistory(OrderHistoryEditFields orderHistory) {
         this.orderHistory = orderHistory;
         return this;
     }
     
+    public OrderHistoryEdit(){}
 }

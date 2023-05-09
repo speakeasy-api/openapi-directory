@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdatePickupPointCreateUpdate {
     @JsonProperty("address")
     public CreateUpdatePickupPointCreateUpdateAddress2 address;
+
     public CreateUpdatePickupPointCreateUpdate withAddress(CreateUpdatePickupPointCreateUpdateAddress2 address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("businessHours")
     public CreateUpdatePickupPointCreateUpdateBusinessHour[] businessHours;
+
     public CreateUpdatePickupPointCreateUpdate withBusinessHours(CreateUpdatePickupPointCreateUpdateBusinessHour[] businessHours) {
         this.businessHours = businessHours;
         return this;
@@ -23,6 +25,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("description")
     public String description;
+
     public CreateUpdatePickupPointCreateUpdate withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("formatted_address")
     public String formattedAddress;
+
     public CreateUpdatePickupPointCreateUpdate withFormattedAddress(String formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -37,6 +41,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("id")
     public String id;
+
     public CreateUpdatePickupPointCreateUpdate withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("instructions")
     public String instructions;
+
     public CreateUpdatePickupPointCreateUpdate withInstructions(String instructions) {
         this.instructions = instructions;
         return this;
@@ -51,6 +57,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public CreateUpdatePickupPointCreateUpdate withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -58,6 +65,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdatePickupPointCreateUpdate withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +73,7 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("pickupHolidays")
     public String[] pickupHolidays;
+
     public CreateUpdatePickupPointCreateUpdate withPickupHolidays(String[] pickupHolidays) {
         this.pickupHolidays = pickupHolidays;
         return this;
@@ -72,9 +81,22 @@ public class CreateUpdatePickupPointCreateUpdate {
     
     @JsonProperty("tagsLabel")
     public String[] tagsLabel;
+
     public CreateUpdatePickupPointCreateUpdate withTagsLabel(String[] tagsLabel) {
         this.tagsLabel = tagsLabel;
         return this;
     }
     
+    public CreateUpdatePickupPointCreateUpdate(@JsonProperty("address") CreateUpdatePickupPointCreateUpdateAddress2 address, @JsonProperty("businessHours") CreateUpdatePickupPointCreateUpdateBusinessHour[] businessHours, @JsonProperty("description") String description, @JsonProperty("formatted_address") String formattedAddress, @JsonProperty("id") String id, @JsonProperty("instructions") String instructions, @JsonProperty("isActive") Boolean isActive, @JsonProperty("name") String name, @JsonProperty("pickupHolidays") String[] pickupHolidays, @JsonProperty("tagsLabel") String[] tagsLabel) {
+        this.address = address;
+        this.businessHours = businessHours;
+        this.description = description;
+        this.formattedAddress = formattedAddress;
+        this.id = id;
+        this.instructions = instructions;
+        this.isActive = isActive;
+        this.name = name;
+        this.pickupHolidays = pickupHolidays;
+        this.tagsLabel = tagsLabel;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDestinationsForWorkspaceResponse {
     
     public String contentType;
+
     public ListDestinationsForWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDestinationsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.DestinationReadList destinationReadList;
+
     public ListDestinationsForWorkspaceResponse withDestinationReadList(org.openapis.openapi.models.shared.DestinationReadList destinationReadList) {
         this.destinationReadList = destinationReadList;
         return this;
@@ -29,6 +32,7 @@ public class ListDestinationsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public ListDestinationsForWorkspaceResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -39,6 +43,7 @@ public class ListDestinationsForWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public ListDestinationsForWorkspaceResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class ListDestinationsForWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public ListDestinationsForWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListDestinationsForWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDestinationsForWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDestinationsForWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

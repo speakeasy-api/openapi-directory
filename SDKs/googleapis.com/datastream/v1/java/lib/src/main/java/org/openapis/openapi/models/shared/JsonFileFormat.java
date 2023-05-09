@@ -18,6 +18,7 @@ public class JsonFileFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compression")
     public JsonFileFormatCompressionEnum compression;
+
     public JsonFileFormat withCompression(JsonFileFormatCompressionEnum compression) {
         this.compression = compression;
         return this;
@@ -29,9 +30,11 @@ public class JsonFileFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaFileFormat")
     public JsonFileFormatSchemaFileFormatEnum schemaFileFormat;
+
     public JsonFileFormat withSchemaFileFormat(JsonFileFormatSchemaFileFormatEnum schemaFileFormat) {
         this.schemaFileFormat = schemaFileFormat;
         return this;
     }
     
+    public JsonFileFormat(){}
 }

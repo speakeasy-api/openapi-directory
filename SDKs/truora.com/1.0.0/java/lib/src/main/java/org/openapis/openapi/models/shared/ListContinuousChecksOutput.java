@@ -20,6 +20,7 @@ public class ListContinuousChecksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continuous_checks")
     public Check[] continuousChecks;
+
     public ListContinuousChecksOutput withContinuousChecks(Check[] continuousChecks) {
         this.continuousChecks = continuousChecks;
         return this;
@@ -31,6 +32,7 @@ public class ListContinuousChecksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ListContinuousChecksOutput withNext(String next) {
         this.next = next;
         return this;
@@ -42,9 +44,11 @@ public class ListContinuousChecksOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public ListContinuousChecksOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ListContinuousChecksOutput(){}
 }

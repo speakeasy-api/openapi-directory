@@ -15,9 +15,11 @@ public class CreateUsageLimitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageLimit")
     public UsageLimit usageLimit;
+
     public CreateUsageLimitResponse withUsageLimit(UsageLimit usageLimit) {
         this.usageLimit = usageLimit;
         return this;
     }
     
+    public CreateUsageLimitResponse(){}
 }

@@ -15,6 +15,7 @@ public class WebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Webhook[] data;
+
     public WebhooksResponse withData(Webhook[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class WebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public WebhooksResponseError error;
+
     public WebhooksResponse withError(WebhooksResponseError error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class WebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public WebhooksResponsePagination pagination;
+
     public WebhooksResponse withPagination(WebhooksResponsePagination pagination) {
         this.pagination = pagination;
         return this;
@@ -39,9 +42,11 @@ public class WebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public WebhooksResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public WebhooksResponse(){}
 }

@@ -18,6 +18,7 @@ public class PlacementAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public PlacementAssignment withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class PlacementAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementId")
     public String placementId;
+
     public PlacementAssignment withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
@@ -40,6 +42,7 @@ public class PlacementAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementIdDimensionValue")
     public DimensionValue placementIdDimensionValue;
+
     public PlacementAssignment withPlacementIdDimensionValue(DimensionValue placementIdDimensionValue) {
         this.placementIdDimensionValue = placementIdDimensionValue;
         return this;
@@ -51,9 +54,11 @@ public class PlacementAssignment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslRequired")
     public Boolean sslRequired;
+
     public PlacementAssignment withSslRequired(Boolean sslRequired) {
         this.sslRequired = sslRequired;
         return this;
     }
     
+    public PlacementAssignment(){}
 }

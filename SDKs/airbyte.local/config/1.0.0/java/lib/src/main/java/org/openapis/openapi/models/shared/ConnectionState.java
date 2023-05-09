@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionState {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionState withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -22,6 +23,7 @@ public class ConnectionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalState")
     public GlobalState globalState;
+
     public ConnectionState withGlobalState(GlobalState globalState) {
         this.globalState = globalState;
         return this;
@@ -30,6 +32,7 @@ public class ConnectionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public java.util.Map<String, Object> state;
+
     public ConnectionState withState(java.util.Map<String, Object> state) {
         this.state = state;
         return this;
@@ -37,6 +40,7 @@ public class ConnectionState {
     
     @JsonProperty("stateType")
     public ConnectionStateTypeEnum stateType;
+
     public ConnectionState withStateType(ConnectionStateTypeEnum stateType) {
         this.stateType = stateType;
         return this;
@@ -45,9 +49,14 @@ public class ConnectionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamState")
     public StreamState[] streamState;
+
     public ConnectionState withStreamState(StreamState[] streamState) {
         this.streamState = streamState;
         return this;
     }
     
+    public ConnectionState(@JsonProperty("connectionId") String connectionId, @JsonProperty("stateType") ConnectionStateTypeEnum stateType) {
+        this.connectionId = connectionId;
+        this.stateType = stateType;
+  }
 }

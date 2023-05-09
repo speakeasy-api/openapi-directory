@@ -12,6 +12,7 @@ public class ListReviewableHITsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITTypeId")
     public String hitTypeId;
+
     public ListReviewableHITsRequest withHITTypeId(String hitTypeId) {
         this.hitTypeId = hitTypeId;
         return this;
@@ -20,6 +21,7 @@ public class ListReviewableHITsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListReviewableHITsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class ListReviewableHITsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListReviewableHITsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class ListReviewableHITsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ReviewableHITStatusEnum status;
+
     public ListReviewableHITsRequest withStatus(ReviewableHITStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ListReviewableHITsRequest(){}
 }

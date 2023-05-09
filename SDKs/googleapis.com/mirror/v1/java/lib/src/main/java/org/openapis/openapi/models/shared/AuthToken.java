@@ -12,6 +12,7 @@ public class AuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authToken")
     public String authToken;
+
     public AuthToken withAuthToken(String authToken) {
         this.authToken = authToken;
         return this;
@@ -20,9 +21,11 @@ public class AuthToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AuthToken withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AuthToken(){}
 }

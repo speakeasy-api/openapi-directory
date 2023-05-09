@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAssociationForServiceQuotaTemplateResponse {
@@ -12,6 +13,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object awsServiceAccessNotEnabledException;
+
     public GetAssociationForServiceQuotaTemplateResponse withAWSServiceAccessNotEnabledException(Object awsServiceAccessNotEnabledException) {
         this.awsServiceAccessNotEnabledException = awsServiceAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAssociationForServiceQuotaTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
     
     
     public String contentType;
+
     public GetAssociationForServiceQuotaTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public GetAssociationForServiceQuotaTemplateResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAssociationForServiceQuotaTemplateResponse getAssociationForServiceQuotaTemplateResponse;
+
     public GetAssociationForServiceQuotaTemplateResponse withGetAssociationForServiceQuotaTemplateResponse(org.openapis.openapi.models.shared.GetAssociationForServiceQuotaTemplateResponse getAssociationForServiceQuotaTemplateResponse) {
         this.getAssociationForServiceQuotaTemplateResponse = getAssociationForServiceQuotaTemplateResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public GetAssociationForServiceQuotaTemplateResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -66,6 +73,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetAssociationForServiceQuotaTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAssociationForServiceQuotaTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object serviceException;
+
     public GetAssociationForServiceQuotaTemplateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object serviceQuotaTemplateNotInUseException;
+
     public GetAssociationForServiceQuotaTemplateResponse withServiceQuotaTemplateNotInUseException(Object serviceQuotaTemplateNotInUseException) {
         this.serviceQuotaTemplateNotInUseException = serviceQuotaTemplateNotInUseException;
         return this;
@@ -103,6 +114,7 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object templatesNotAvailableInRegionException;
+
     public GetAssociationForServiceQuotaTemplateResponse withTemplatesNotAvailableInRegionException(Object templatesNotAvailableInRegionException) {
         this.templatesNotAvailableInRegionException = templatesNotAvailableInRegionException;
         return this;
@@ -113,9 +125,14 @@ public class GetAssociationForServiceQuotaTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAssociationForServiceQuotaTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetAssociationForServiceQuotaTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

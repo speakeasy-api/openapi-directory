@@ -15,6 +15,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfillmentState")
     public FulfillmentStateEnum fulfillmentState;
+
     public DialogAction withFulfillmentState(FulfillmentStateEnum fulfillmentState) {
         this.fulfillmentState = fulfillmentState;
         return this;
@@ -23,6 +24,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentName")
     public String intentName;
+
     public DialogAction withIntentName(String intentName) {
         this.intentName = intentName;
         return this;
@@ -31,6 +33,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public DialogAction withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public MessageFormatTypeEnum messageFormat;
+
     public DialogAction withMessageFormat(MessageFormatTypeEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -47,6 +51,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotToElicit")
     public String slotToElicit;
+
     public DialogAction withSlotToElicit(String slotToElicit) {
         this.slotToElicit = slotToElicit;
         return this;
@@ -55,6 +60,7 @@ public class DialogAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slots")
     public java.util.Map<String, String> slots;
+
     public DialogAction withSlots(java.util.Map<String, String> slots) {
         this.slots = slots;
         return this;
@@ -62,9 +68,13 @@ public class DialogAction {
     
     @JsonProperty("type")
     public DialogActionTypeEnum type;
+
     public DialogAction withType(DialogActionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DialogAction(@JsonProperty("type") DialogActionTypeEnum type) {
+        this.type = type;
+  }
 }

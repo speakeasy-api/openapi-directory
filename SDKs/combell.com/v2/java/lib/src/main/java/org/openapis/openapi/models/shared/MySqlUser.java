@@ -15,6 +15,7 @@ public class MySqlUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public MySqlUser withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,6 +27,7 @@ public class MySqlUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MySqlUser withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class MySqlUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rights")
     public UserRightsEnum rights;
+
     public MySqlUser withRights(UserRightsEnum rights) {
         this.rights = rights;
         return this;
     }
     
+    public MySqlUser(){}
 }

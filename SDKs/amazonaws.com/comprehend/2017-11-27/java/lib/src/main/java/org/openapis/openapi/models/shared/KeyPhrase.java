@@ -15,6 +15,7 @@ public class KeyPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public KeyPhrase withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class KeyPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public KeyPhrase withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -31,6 +33,7 @@ public class KeyPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public KeyPhrase withScore(Float score) {
         this.score = score;
         return this;
@@ -39,9 +42,11 @@ public class KeyPhrase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public KeyPhrase withText(String text) {
         this.text = text;
         return this;
     }
     
+    public KeyPhrase(){}
 }

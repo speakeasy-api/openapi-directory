@@ -15,6 +15,7 @@ public class GetBusinessCurrentAccountsErrorObject {
      */
     @JsonProperty("description")
     public String description;
+
     public GetBusinessCurrentAccountsErrorObject withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetBusinessCurrentAccountsErrorObject {
      */
     @JsonProperty("status")
     public String status;
+
     public GetBusinessCurrentAccountsErrorObject withStatus(String status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class GetBusinessCurrentAccountsErrorObject {
      */
     @JsonProperty("title")
     public String title;
+
     public GetBusinessCurrentAccountsErrorObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetBusinessCurrentAccountsErrorObject(@JsonProperty("description") String description, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

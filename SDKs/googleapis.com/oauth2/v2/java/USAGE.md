@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.Oauth2TokeninfoRequest;
 import org.openapis.openapi.models.operations.Oauth2TokeninfoResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -16,7 +15,7 @@ public class Application {
 
             Oauth2TokeninfoRequest req = new Oauth2TokeninfoRequest() {{
                 accessToken = "corrupti";
-                alt = "json";
+                alt = AltEnum.JSON;
                 fields = "provident";
                 idToken = "distinctio";
                 key = "quibusdam";
@@ -24,15 +23,17 @@ public class Application {
                 prettyPrint = false;
                 quotaUser = "nulla";
                 userIp = "corrupti";
-            }}            
+            }};            
 
             Oauth2TokeninfoResponse res = sdk.oauth2Tokeninfo(req);
 
-            if (res.tokeninfo.isPresent()) {
+            if (res.tokeninfo != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

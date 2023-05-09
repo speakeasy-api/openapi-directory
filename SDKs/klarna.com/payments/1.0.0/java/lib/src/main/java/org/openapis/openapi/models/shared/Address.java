@@ -15,6 +15,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attention")
     public String attention;
+
     public Address withAttention(String attention) {
         this.attention = attention;
         return this;
@@ -26,6 +27,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Address withCity(String city) {
         this.city = city;
         return this;
@@ -37,6 +39,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public Address withCountry(String country) {
         this.country = country;
         return this;
@@ -48,6 +51,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Address withEmail(String email) {
         this.email = email;
         return this;
@@ -62,6 +66,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public Address withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -76,6 +81,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public Address withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -87,6 +93,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_name")
     public String organizationName;
+
     public Address withOrganizationName(String organizationName) {
         this.organizationName = organizationName;
         return this;
@@ -98,6 +105,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public Address withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -110,6 +118,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postal_code")
     public String postalCode;
+
     public Address withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -121,6 +130,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Address withRegion(String region) {
         this.region = region;
         return this;
@@ -134,6 +144,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_address")
     public String streetAddress;
+
     public Address withStreetAddress(String streetAddress) {
         this.streetAddress = streetAddress;
         return this;
@@ -145,6 +156,7 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_address2")
     public String streetAddress2;
+
     public Address withStreetAddress2(String streetAddress2) {
         this.streetAddress2 = streetAddress2;
         return this;
@@ -162,9 +174,11 @@ public class Address {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Address withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Address(){}
 }

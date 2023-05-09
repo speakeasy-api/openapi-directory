@@ -15,9 +15,11 @@ public class GetSearchApplicationUserStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public SearchApplicationUserStats[] stats;
+
     public GetSearchApplicationUserStatsResponse withStats(SearchApplicationUserStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetSearchApplicationUserStatsResponse(){}
 }

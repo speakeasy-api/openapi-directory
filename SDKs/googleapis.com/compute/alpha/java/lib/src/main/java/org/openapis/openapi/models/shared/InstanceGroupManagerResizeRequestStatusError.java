@@ -18,9 +18,11 @@ public class InstanceGroupManagerResizeRequestStatusError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public InstanceGroupManagerResizeRequestStatusErrorErrors[] errors;
+
     public InstanceGroupManagerResizeRequestStatusError withErrors(InstanceGroupManagerResizeRequestStatusErrorErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public InstanceGroupManagerResizeRequestStatusError(){}
 }

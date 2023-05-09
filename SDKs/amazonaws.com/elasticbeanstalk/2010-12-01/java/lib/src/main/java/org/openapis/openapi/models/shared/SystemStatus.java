@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SystemStatus {
     
     public CPUUtilization cpuUtilization;
+
     public SystemStatus withCPUUtilization(CPUUtilization cpuUtilization) {
         this.cpuUtilization = cpuUtilization;
         return this;
@@ -19,9 +20,11 @@ public class SystemStatus {
     
     
     public Double[] loadAverage;
+
     public SystemStatus withLoadAverage(Double[] loadAverage) {
         this.loadAverage = loadAverage;
         return this;
     }
     
+    public SystemStatus(){}
 }

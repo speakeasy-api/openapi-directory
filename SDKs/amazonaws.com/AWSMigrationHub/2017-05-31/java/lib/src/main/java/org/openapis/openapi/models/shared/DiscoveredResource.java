@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DiscoveredResource {
     @JsonProperty("ConfigurationId")
     public String configurationId;
+
     public DiscoveredResource withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -22,9 +23,13 @@ public class DiscoveredResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DiscoveredResource withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public DiscoveredResource(@JsonProperty("ConfigurationId") String configurationId) {
+        this.configurationId = configurationId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterPatchBaselineForPatchGroupResponse {
@@ -12,6 +13,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object alreadyExistsException;
+
     public RegisterPatchBaselineForPatchGroupResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
     
     
     public String contentType;
+
     public RegisterPatchBaselineForPatchGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object doesNotExistException;
+
     public RegisterPatchBaselineForPatchGroupResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object internalServerError;
+
     public RegisterPatchBaselineForPatchGroupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object invalidResourceId;
+
     public RegisterPatchBaselineForPatchGroupResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -59,6 +65,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterPatchBaselineForPatchGroupResult registerPatchBaselineForPatchGroupResult;
+
     public RegisterPatchBaselineForPatchGroupResponse withRegisterPatchBaselineForPatchGroupResult(org.openapis.openapi.models.shared.RegisterPatchBaselineForPatchGroupResult registerPatchBaselineForPatchGroupResult) {
         this.registerPatchBaselineForPatchGroupResult = registerPatchBaselineForPatchGroupResult;
         return this;
@@ -69,6 +76,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RegisterPatchBaselineForPatchGroupResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class RegisterPatchBaselineForPatchGroupResponse {
     
     
     public Integer statusCode;
+
     public RegisterPatchBaselineForPatchGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class RegisterPatchBaselineForPatchGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterPatchBaselineForPatchGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RegisterPatchBaselineForPatchGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

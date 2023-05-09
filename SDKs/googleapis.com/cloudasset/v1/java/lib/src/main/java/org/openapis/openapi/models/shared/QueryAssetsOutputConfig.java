@@ -18,9 +18,11 @@ public class QueryAssetsOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bigqueryDestination")
     public GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination bigqueryDestination;
+
     public QueryAssetsOutputConfig withBigqueryDestination(GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
         return this;
     }
     
+    public QueryAssetsOutputConfig(){}
 }

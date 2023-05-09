@@ -12,6 +12,7 @@ public class Functionality {
      */
     @JsonProperty("code")
     public String code;
+
     public Functionality withCode(String code) {
         this.code = code;
         return this;
@@ -22,9 +23,14 @@ public class Functionality {
      */
     @JsonProperty("order")
     public Integer order;
+
     public Functionality withOrder(Integer order) {
         this.order = order;
         return this;
     }
     
+    public Functionality(@JsonProperty("code") String code, @JsonProperty("order") Integer order) {
+        this.code = code;
+        this.order = order;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageRequest {
@@ -12,6 +13,7 @@ public class PackageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async")
     public Long async;
+
     public PackageRequest withAsync(Long async) {
         this.async = async;
         return this;
@@ -22,9 +24,13 @@ public class PackageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PackageRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PackageRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

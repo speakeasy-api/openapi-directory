@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTemplateVersionsResponse {
@@ -12,6 +13,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object badRequestException;
+
     public ListTemplateVersionsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListTemplateVersionsResponse {
     
     
     public String contentType;
+
     public ListTemplateVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object forbiddenException;
+
     public ListTemplateVersionsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListTemplateVersionsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTemplateVersionsResponse listTemplateVersionsResponse;
+
     public ListTemplateVersionsResponse withListTemplateVersionsResponse(org.openapis.openapi.models.shared.ListTemplateVersionsResponse listTemplateVersionsResponse) {
         this.listTemplateVersionsResponse = listTemplateVersionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public ListTemplateVersionsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object notFoundException;
+
     public ListTemplateVersionsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public ListTemplateVersionsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class ListTemplateVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListTemplateVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListTemplateVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTemplateVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListTemplateVersionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListTemplateVersionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListTemplateVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

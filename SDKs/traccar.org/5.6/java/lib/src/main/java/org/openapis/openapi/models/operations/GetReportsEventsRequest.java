@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReportsEventsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public Long[] deviceId;
+
     public GetReportsEventsRequest withDeviceId(Long[] deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -20,6 +22,7 @@ public class GetReportsEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public OffsetDateTime from;
+
     public GetReportsEventsRequest withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -27,6 +30,7 @@ public class GetReportsEventsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public Long[] groupId;
+
     public GetReportsEventsRequest withGroupId(Long[] groupId) {
         this.groupId = groupId;
         return this;
@@ -37,6 +41,7 @@ public class GetReportsEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public OffsetDateTime to;
+
     public GetReportsEventsRequest withTo(OffsetDateTime to) {
         this.to = to;
         return this;
@@ -47,9 +52,14 @@ public class GetReportsEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=type")
     public String[] type;
+
     public GetReportsEventsRequest withType(String[] type) {
         this.type = type;
         return this;
     }
     
+    public GetReportsEventsRequest(@JsonProperty("from") OffsetDateTime from, @JsonProperty("to") OffsetDateTime to) {
+        this.from = from;
+        this.to = to;
+  }
 }

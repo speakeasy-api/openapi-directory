@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OnDemandOptionsRequest {
     
     public FleetOnDemandAllocationStrategyEnum allocationStrategy;
+
     public OnDemandOptionsRequest withAllocationStrategy(FleetOnDemandAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -19,6 +20,7 @@ public class OnDemandOptionsRequest {
     
     
     public CapacityReservationOptionsRequest capacityReservationOptions;
+
     public OnDemandOptionsRequest withCapacityReservationOptions(CapacityReservationOptionsRequest capacityReservationOptions) {
         this.capacityReservationOptions = capacityReservationOptions;
         return this;
@@ -26,6 +28,7 @@ public class OnDemandOptionsRequest {
     
     
     public String maxTotalPrice;
+
     public OnDemandOptionsRequest withMaxTotalPrice(String maxTotalPrice) {
         this.maxTotalPrice = maxTotalPrice;
         return this;
@@ -33,6 +36,7 @@ public class OnDemandOptionsRequest {
     
     
     public Long minTargetCapacity;
+
     public OnDemandOptionsRequest withMinTargetCapacity(Long minTargetCapacity) {
         this.minTargetCapacity = minTargetCapacity;
         return this;
@@ -40,6 +44,7 @@ public class OnDemandOptionsRequest {
     
     
     public Boolean singleAvailabilityZone;
+
     public OnDemandOptionsRequest withSingleAvailabilityZone(Boolean singleAvailabilityZone) {
         this.singleAvailabilityZone = singleAvailabilityZone;
         return this;
@@ -47,9 +52,11 @@ public class OnDemandOptionsRequest {
     
     
     public Boolean singleInstanceType;
+
     public OnDemandOptionsRequest withSingleInstanceType(Boolean singleInstanceType) {
         this.singleInstanceType = singleInstanceType;
         return this;
     }
     
+    public OnDemandOptionsRequest(){}
 }

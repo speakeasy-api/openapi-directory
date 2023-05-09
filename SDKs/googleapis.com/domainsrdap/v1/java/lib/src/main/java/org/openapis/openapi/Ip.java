@@ -56,11 +56,9 @@ public class Ip {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapIpGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapIpGetResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapIpGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapIpGetResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_validated")
     public Boolean autoValidated;
+
     public SslCertificateRequestValidation withAutoValidated(Boolean autoValidated) {
         this.autoValidated = autoValidated;
         return this;
@@ -26,6 +27,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cname_validation_content")
     public String cnameValidationContent;
+
     public SslCertificateRequestValidation withCnameValidationContent(String cnameValidationContent) {
         this.cnameValidationContent = cnameValidationContent;
         return this;
@@ -37,6 +39,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cname_validation_name")
     public String cnameValidationName;
+
     public SslCertificateRequestValidation withCnameValidationName(String cnameValidationName) {
         this.cnameValidationName = cnameValidationName;
         return this;
@@ -48,6 +51,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dns_name")
     public String dnsName;
+
     public SslCertificateRequestValidation withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -59,6 +63,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_addresses")
     public String[] emailAddresses;
+
     public SslCertificateRequestValidation withEmailAddresses(String[] emailAddresses) {
         this.emailAddresses = emailAddresses;
         return this;
@@ -70,6 +75,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_validation_content")
     public String[] fileValidationContent;
+
     public SslCertificateRequestValidation withFileValidationContent(String[] fileValidationContent) {
         this.fileValidationContent = fileValidationContent;
         return this;
@@ -81,6 +87,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_validation_url_http")
     public String fileValidationUrlHttp;
+
     public SslCertificateRequestValidation withFileValidationUrlHttp(String fileValidationUrlHttp) {
         this.fileValidationUrlHttp = fileValidationUrlHttp;
         return this;
@@ -92,6 +99,7 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file_validation_url_https")
     public String fileValidationUrlHttps;
+
     public SslCertificateRequestValidation withFileValidationUrlHttps(String fileValidationUrlHttps) {
         this.fileValidationUrlHttps = fileValidationUrlHttps;
         return this;
@@ -103,9 +111,11 @@ public class SslCertificateRequestValidation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SslCertificateRequestValidationTypeEnum type;
+
     public SslCertificateRequestValidation withType(SslCertificateRequestValidationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SslCertificateRequestValidation(){}
 }

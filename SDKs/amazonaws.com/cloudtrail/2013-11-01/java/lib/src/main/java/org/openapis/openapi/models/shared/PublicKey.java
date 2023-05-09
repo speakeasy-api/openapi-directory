@@ -20,6 +20,7 @@ public class PublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fingerprint")
     public String fingerprint;
+
     public PublicKey withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -30,6 +31,7 @@ public class PublicKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidityEndTime")
     public OffsetDateTime validityEndTime;
+
     public PublicKey withValidityEndTime(OffsetDateTime validityEndTime) {
         this.validityEndTime = validityEndTime;
         return this;
@@ -40,6 +42,7 @@ public class PublicKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValidityStartTime")
     public OffsetDateTime validityStartTime;
+
     public PublicKey withValidityStartTime(OffsetDateTime validityStartTime) {
         this.validityStartTime = validityStartTime;
         return this;
@@ -48,9 +51,11 @@ public class PublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public PublicKey withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PublicKey(){}
 }

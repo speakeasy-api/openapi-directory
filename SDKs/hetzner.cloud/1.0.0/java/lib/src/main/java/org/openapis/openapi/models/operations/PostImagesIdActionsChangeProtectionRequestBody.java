@@ -15,9 +15,11 @@ public class PostImagesIdActionsChangeProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostImagesIdActionsChangeProtectionRequestBody withDelete(Boolean delete) {
         this.delete = delete;
         return this;
     }
     
+    public PostImagesIdActionsChangeProtectionRequestBody(){}
 }

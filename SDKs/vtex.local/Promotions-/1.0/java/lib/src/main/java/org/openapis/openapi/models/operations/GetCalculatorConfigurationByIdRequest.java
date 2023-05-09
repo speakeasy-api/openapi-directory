@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCalculatorConfigurationByIdRequest {
@@ -12,6 +13,7 @@ public class GetCalculatorConfigurationByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetCalculatorConfigurationByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetCalculatorConfigurationByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetCalculatorConfigurationByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class GetCalculatorConfigurationByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=idCalculatorConfiguration")
     public String idCalculatorConfiguration;
+
     public GetCalculatorConfigurationByIdRequest withIdCalculatorConfiguration(String idCalculatorConfiguration) {
         this.idCalculatorConfiguration = idCalculatorConfiguration;
         return this;
     }
     
+    public GetCalculatorConfigurationByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("idCalculatorConfiguration") String idCalculatorConfiguration) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.idCalculatorConfiguration = idCalculatorConfiguration;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClustersMessage {
     
     public String clusterIdentifier;
+
     public DescribeClustersMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeClustersMessage {
     
     
     public String marker;
+
     public DescribeClustersMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -26,6 +28,7 @@ public class DescribeClustersMessage {
     
     
     public Long maxRecords;
+
     public DescribeClustersMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -33,6 +36,7 @@ public class DescribeClustersMessage {
     
     
     public String[] tagKeys;
+
     public DescribeClustersMessage withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
@@ -40,9 +44,11 @@ public class DescribeClustersMessage {
     
     
     public String[] tagValues;
+
     public DescribeClustersMessage withTagValues(String[] tagValues) {
         this.tagValues = tagValues;
         return this;
     }
     
+    public DescribeClustersMessage(){}
 }

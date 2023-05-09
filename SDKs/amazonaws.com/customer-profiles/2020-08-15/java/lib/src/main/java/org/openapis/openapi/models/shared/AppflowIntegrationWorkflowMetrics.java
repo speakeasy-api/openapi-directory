@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppflowIntegrationWorkflowMetrics {
     @JsonProperty("RecordsProcessed")
     public Long recordsProcessed;
+
     public AppflowIntegrationWorkflowMetrics withRecordsProcessed(Long recordsProcessed) {
         this.recordsProcessed = recordsProcessed;
         return this;
@@ -19,6 +20,7 @@ public class AppflowIntegrationWorkflowMetrics {
     
     @JsonProperty("StepsCompleted")
     public Long stepsCompleted;
+
     public AppflowIntegrationWorkflowMetrics withStepsCompleted(Long stepsCompleted) {
         this.stepsCompleted = stepsCompleted;
         return this;
@@ -26,9 +28,15 @@ public class AppflowIntegrationWorkflowMetrics {
     
     @JsonProperty("TotalSteps")
     public Long totalSteps;
+
     public AppflowIntegrationWorkflowMetrics withTotalSteps(Long totalSteps) {
         this.totalSteps = totalSteps;
         return this;
     }
     
+    public AppflowIntegrationWorkflowMetrics(@JsonProperty("RecordsProcessed") Long recordsProcessed, @JsonProperty("StepsCompleted") Long stepsCompleted, @JsonProperty("TotalSteps") Long totalSteps) {
+        this.recordsProcessed = recordsProcessed;
+        this.stepsCompleted = stepsCompleted;
+        this.totalSteps = totalSteps;
+  }
 }

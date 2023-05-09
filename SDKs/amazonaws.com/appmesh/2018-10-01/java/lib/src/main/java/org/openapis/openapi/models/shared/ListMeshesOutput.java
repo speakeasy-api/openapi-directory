@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMeshesOutput {
     @JsonProperty("meshes")
     public MeshRef[] meshes;
+
     public ListMeshesOutput withMeshes(MeshRef[] meshes) {
         this.meshes = meshes;
         return this;
@@ -22,9 +23,13 @@ public class ListMeshesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMeshesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMeshesOutput(@JsonProperty("meshes") MeshRef[] meshes) {
+        this.meshes = meshes;
+  }
 }

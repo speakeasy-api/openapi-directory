@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindByHealthIdUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public FindByHealthIdUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class FindByHealthIdUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HidBenefitNameSearchRequest hidBenefitNameSearchRequest;
+
     public FindByHealthIdUsingPOSTRequest withHidBenefitNameSearchRequest(org.openapis.openapi.models.shared.HidBenefitNameSearchRequest hidBenefitNameSearchRequest) {
         this.hidBenefitNameSearchRequest = hidBenefitNameSearchRequest;
         return this;
     }
     
+    public FindByHealthIdUsingPOSTRequest(@JsonProperty("HidBenefitNameSearchRequest") org.openapis.openapi.models.shared.HidBenefitNameSearchRequest hidBenefitNameSearchRequest) {
+        this.hidBenefitNameSearchRequest = hidBenefitNameSearchRequest;
+  }
 }

@@ -12,6 +12,7 @@ public class GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b71
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b71
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b71
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSONRelationsIntegrationtestA236b715E682460b97b6C1db24f7612e(){}
 }

@@ -179,6 +179,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -187,7 +192,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AssociateDomainResponse associateDomain(org.openapis.openapi.models.operations.AssociateDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/associateDomain");
@@ -216,7 +223,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateDomainResponse res = new org.openapis.openapi.models.operations.AssociateDomainResponse() {{
+        org.openapis.openapi.models.operations.AssociateDomainResponse res = new org.openapis.openapi.models.operations.AssociateDomainResponse(contentType, httpRes.statusCode()) {{
             associateDomainResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -225,8 +232,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,7 +292,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderResponse associateWebsiteAuthorizationProvider(org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/associateWebsiteAuthorizationProvider");
@@ -316,7 +323,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderResponse res = new org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderResponse() {{
+        org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderResponse res = new org.openapis.openapi.models.operations.AssociateWebsiteAuthorizationProviderResponse(contentType, httpRes.statusCode()) {{
             associateWebsiteAuthorizationProviderResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -325,8 +332,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,7 +392,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityResponse associateWebsiteCertificateAuthority(org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/associateWebsiteCertificateAuthority");
@@ -416,7 +423,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityResponse() {{
+        org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.AssociateWebsiteCertificateAuthorityResponse(contentType, httpRes.statusCode()) {{
             associateWebsiteCertificateAuthorityResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -425,8 +432,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -487,7 +492,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.CreateFleetResponse createFleet(org.openapis.openapi.models.operations.CreateFleetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/createFleet");
@@ -516,7 +523,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse() {{
+        org.openapis.openapi.models.operations.CreateFleetResponse res = new org.openapis.openapi.models.operations.CreateFleetResponse(contentType, httpRes.statusCode()) {{
             createFleetResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -525,8 +532,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -587,7 +592,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DeleteFleetResponse deleteFleet(org.openapis.openapi.models.operations.DeleteFleetRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/deleteFleet");
@@ -616,7 +623,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse() {{
+        org.openapis.openapi.models.operations.DeleteFleetResponse res = new org.openapis.openapi.models.operations.DeleteFleetResponse(contentType, httpRes.statusCode()) {{
             deleteFleetResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -624,8 +631,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -679,7 +684,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationResponse describeAuditStreamConfiguration(org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeAuditStreamConfiguration");
@@ -708,7 +715,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeAuditStreamConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeAuditStreamConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -716,8 +723,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -771,7 +776,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationResponse describeCompanyNetworkConfiguration(org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeCompanyNetworkConfiguration");
@@ -800,7 +807,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeCompanyNetworkConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeCompanyNetworkConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -808,8 +815,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -863,7 +868,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeDeviceResponse describeDevice(org.openapis.openapi.models.operations.DescribeDeviceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeDevice");
@@ -892,7 +899,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDeviceResponse res = new org.openapis.openapi.models.operations.DescribeDeviceResponse() {{
+        org.openapis.openapi.models.operations.DescribeDeviceResponse res = new org.openapis.openapi.models.operations.DescribeDeviceResponse(contentType, httpRes.statusCode()) {{
             describeDeviceResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -900,8 +907,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -955,7 +960,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationResponse describeDevicePolicyConfiguration(org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeDevicePolicyConfiguration");
@@ -984,7 +991,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeDevicePolicyConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeDevicePolicyConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -992,8 +999,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1047,7 +1052,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeDomainResponse describeDomain(org.openapis.openapi.models.operations.DescribeDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeDomain");
@@ -1076,7 +1083,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeDomainResponse res = new org.openapis.openapi.models.operations.DescribeDomainResponse() {{
+        org.openapis.openapi.models.operations.DescribeDomainResponse res = new org.openapis.openapi.models.operations.DescribeDomainResponse(contentType, httpRes.statusCode()) {{
             describeDomainResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1084,8 +1091,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1139,7 +1144,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeFleetMetadataResponse describeFleetMetadata(org.openapis.openapi.models.operations.DescribeFleetMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeFleetMetadata");
@@ -1168,7 +1175,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFleetMetadataResponse res = new org.openapis.openapi.models.operations.DescribeFleetMetadataResponse() {{
+        org.openapis.openapi.models.operations.DescribeFleetMetadataResponse res = new org.openapis.openapi.models.operations.DescribeFleetMetadataResponse(contentType, httpRes.statusCode()) {{
             describeFleetMetadataResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1176,8 +1183,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1231,7 +1236,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationResponse describeIdentityProviderConfiguration(org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeIdentityProviderConfiguration");
@@ -1260,7 +1267,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeIdentityProviderConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeIdentityProviderConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1268,8 +1275,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1323,7 +1328,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityResponse describeWebsiteCertificateAuthority(org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/describeWebsiteCertificateAuthority");
@@ -1352,7 +1359,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityResponse() {{
+        org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.DescribeWebsiteCertificateAuthorityResponse(contentType, httpRes.statusCode()) {{
             describeWebsiteCertificateAuthorityResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1360,8 +1367,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1415,7 +1420,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DisassociateDomainResponse disassociateDomain(org.openapis.openapi.models.operations.DisassociateDomainRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/disassociateDomain");
@@ -1444,7 +1451,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateDomainResponse res = new org.openapis.openapi.models.operations.DisassociateDomainResponse() {{
+        org.openapis.openapi.models.operations.DisassociateDomainResponse res = new org.openapis.openapi.models.operations.DisassociateDomainResponse(contentType, httpRes.statusCode()) {{
             disassociateDomainResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1452,8 +1459,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1507,7 +1512,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderResponse disassociateWebsiteAuthorizationProvider(org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/disassociateWebsiteAuthorizationProvider");
@@ -1536,7 +1543,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderResponse res = new org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderResponse() {{
+        org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderResponse res = new org.openapis.openapi.models.operations.DisassociateWebsiteAuthorizationProviderResponse(contentType, httpRes.statusCode()) {{
             disassociateWebsiteAuthorizationProviderResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1545,8 +1552,6 @@ public class SDK {
             resourceAlreadyExistsException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1607,7 +1612,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityResponse disassociateWebsiteCertificateAuthority(org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/disassociateWebsiteCertificateAuthority");
@@ -1636,7 +1643,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityResponse() {{
+        org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityResponse res = new org.openapis.openapi.models.operations.DisassociateWebsiteCertificateAuthorityResponse(contentType, httpRes.statusCode()) {{
             disassociateWebsiteCertificateAuthorityResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1644,8 +1651,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1699,7 +1704,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListDevicesResponse listDevices(org.openapis.openapi.models.operations.ListDevicesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listDevices");
@@ -1734,7 +1741,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDevicesResponse res = new org.openapis.openapi.models.operations.ListDevicesResponse() {{
+        org.openapis.openapi.models.operations.ListDevicesResponse res = new org.openapis.openapi.models.operations.ListDevicesResponse(contentType, httpRes.statusCode()) {{
             listDevicesResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1742,8 +1749,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1797,7 +1802,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListDomainsResponse listDomains(org.openapis.openapi.models.operations.ListDomainsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listDomains");
@@ -1832,7 +1839,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse() {{
+        org.openapis.openapi.models.operations.ListDomainsResponse res = new org.openapis.openapi.models.operations.ListDomainsResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -1840,8 +1847,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1895,7 +1900,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListFleetsResponse listFleets(org.openapis.openapi.models.operations.ListFleetsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listFleets");
@@ -1930,15 +1937,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse() {{
+        org.openapis.openapi.models.operations.ListFleetsResponse res = new org.openapis.openapi.models.operations.ListFleetsResponse(contentType, httpRes.statusCode()) {{
             listFleetsResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1985,7 +1990,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListTagsForResourceResponse listTagsForResource(org.openapis.openapi.models.operations.ListTagsForResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ListTagsForResourceRequest.class, baseUrl, "/tags/{ResourceArn}", request, null);
@@ -2009,12 +2016,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2040,7 +2045,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersResponse listWebsiteAuthorizationProviders(org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listWebsiteAuthorizationProviders");
@@ -2075,7 +2082,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersResponse res = new org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersResponse() {{
+        org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersResponse res = new org.openapis.openapi.models.operations.ListWebsiteAuthorizationProvidersResponse(contentType, httpRes.statusCode()) {{
             listWebsiteAuthorizationProvidersResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2083,8 +2090,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2138,7 +2143,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesResponse listWebsiteCertificateAuthorities(org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/listWebsiteCertificateAuthorities");
@@ -2173,15 +2180,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesResponse res = new org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesResponse() {{
+        org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesResponse res = new org.openapis.openapi.models.operations.ListWebsiteCertificateAuthoritiesResponse(contentType, httpRes.statusCode()) {{
             listWebsiteCertificateAuthoritiesResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
             invalidRequestException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2228,7 +2233,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.RestoreDomainAccessResponse restoreDomainAccess(org.openapis.openapi.models.operations.RestoreDomainAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/restoreDomainAccess");
@@ -2257,7 +2264,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreDomainAccessResponse res = new org.openapis.openapi.models.operations.RestoreDomainAccessResponse() {{
+        org.openapis.openapi.models.operations.RestoreDomainAccessResponse res = new org.openapis.openapi.models.operations.RestoreDomainAccessResponse(contentType, httpRes.statusCode()) {{
             restoreDomainAccessResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2265,8 +2272,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2320,7 +2325,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.RevokeDomainAccessResponse revokeDomainAccess(org.openapis.openapi.models.operations.RevokeDomainAccessRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/revokeDomainAccess");
@@ -2349,7 +2356,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RevokeDomainAccessResponse res = new org.openapis.openapi.models.operations.RevokeDomainAccessResponse() {{
+        org.openapis.openapi.models.operations.RevokeDomainAccessResponse res = new org.openapis.openapi.models.operations.RevokeDomainAccessResponse(contentType, httpRes.statusCode()) {{
             revokeDomainAccessResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2357,8 +2364,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2412,7 +2417,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.SignOutUserResponse signOutUser(org.openapis.openapi.models.operations.SignOutUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/signOutUser");
@@ -2441,7 +2448,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignOutUserResponse res = new org.openapis.openapi.models.operations.SignOutUserResponse() {{
+        org.openapis.openapi.models.operations.SignOutUserResponse res = new org.openapis.openapi.models.operations.SignOutUserResponse(contentType, httpRes.statusCode()) {{
             signOutUserResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2449,8 +2456,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2504,7 +2509,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.TagResourceResponse tagResource(org.openapis.openapi.models.operations.TagResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.TagResourceRequest.class, baseUrl, "/tags/{ResourceArn}", request, null);
@@ -2533,12 +2540,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2564,7 +2569,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UntagResourceResponse untagResource(org.openapis.openapi.models.operations.UntagResourceRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.UntagResourceRequest.class, baseUrl, "/tags/{ResourceArn}#tagKeys", request, null);
@@ -2594,12 +2601,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2625,7 +2630,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationResponse updateAuditStreamConfiguration(org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateAuditStreamConfiguration");
@@ -2654,7 +2661,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateAuditStreamConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateAuditStreamConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2662,8 +2669,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2717,7 +2722,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationResponse updateCompanyNetworkConfiguration(org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateCompanyNetworkConfiguration");
@@ -2746,7 +2753,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateCompanyNetworkConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateCompanyNetworkConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2754,8 +2761,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2809,7 +2814,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationResponse updateDevicePolicyConfiguration(org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateDevicePolicyConfiguration");
@@ -2838,7 +2845,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateDevicePolicyConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateDevicePolicyConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2846,8 +2853,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2901,7 +2906,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateDomainMetadataResponse updateDomainMetadata(org.openapis.openapi.models.operations.UpdateDomainMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateDomainMetadata");
@@ -2930,7 +2937,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDomainMetadataResponse res = new org.openapis.openapi.models.operations.UpdateDomainMetadataResponse() {{
+        org.openapis.openapi.models.operations.UpdateDomainMetadataResponse res = new org.openapis.openapi.models.operations.UpdateDomainMetadataResponse(contentType, httpRes.statusCode()) {{
             updateDomainMetadataResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -2938,8 +2945,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2993,7 +2998,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateFleetMetadataResponse updateFleetMetadata(org.openapis.openapi.models.operations.UpdateFleetMetadataRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/UpdateFleetMetadata");
@@ -3022,7 +3029,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFleetMetadataResponse res = new org.openapis.openapi.models.operations.UpdateFleetMetadataResponse() {{
+        org.openapis.openapi.models.operations.UpdateFleetMetadataResponse res = new org.openapis.openapi.models.operations.UpdateFleetMetadataResponse(contentType, httpRes.statusCode()) {{
             updateFleetMetadataResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -3030,8 +3037,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3085,7 +3090,9 @@ public class SDK {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationResponse updateIdentityProviderConfiguration(org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/updateIdentityProviderConfiguration");
@@ -3114,7 +3121,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateIdentityProviderConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateIdentityProviderConfigurationResponse = null;
             unauthorizedException = null;
             internalServerErrorException = null;
@@ -3122,8 +3129,6 @@ public class SDK {
             resourceNotFoundException = null;
             tooManyRequestsException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

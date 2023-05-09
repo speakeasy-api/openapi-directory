@@ -15,6 +15,7 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange dateRange;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody withDateRange(CreateorupdatefixedpricesonpricetableortradepolicyRequestBodyDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -26,6 +27,7 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -36,6 +38,7 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBody {
      */
     @JsonProperty("minQuantity")
     public Long minQuantity;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody withMinQuantity(Long minQuantity) {
         this.minQuantity = minQuantity;
         return this;
@@ -46,9 +49,14 @@ public class CreateorupdatefixedpricesonpricetableortradepolicyRequestBody {
      */
     @JsonProperty("value")
     public Double value;
+
     public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public CreateorupdatefixedpricesonpricetableortradepolicyRequestBody(@JsonProperty("minQuantity") Long minQuantity, @JsonProperty("value") Double value) {
+        this.minQuantity = minQuantity;
+        this.value = value;
+  }
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CinemaSearchReadRequest;
 import org.openapis.openapi.models.operations.CinemaSearchReadResponse;
 
@@ -13,9 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CinemaSearchReadRequest req = new CinemaSearchReadRequest() {{
-                id = "corrupti";
-            }}            
+            CinemaSearchReadRequest req = new CinemaSearchReadRequest("corrupti");            
 
             CinemaSearchReadResponse res = sdk.cinema.cinemaSearchRead(req);
 
@@ -25,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

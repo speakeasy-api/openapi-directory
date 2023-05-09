@@ -15,6 +15,7 @@ public class BatchGetPartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Partitions")
     public Partition[] partitions;
+
     public BatchGetPartitionResponse withPartitions(Partition[] partitions) {
         this.partitions = partitions;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetPartitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedKeys")
     public PartitionValueList[] unprocessedKeys;
+
     public BatchGetPartitionResponse withUnprocessedKeys(PartitionValueList[] unprocessedKeys) {
         this.unprocessedKeys = unprocessedKeys;
         return this;
     }
     
+    public BatchGetPartitionResponse(){}
 }

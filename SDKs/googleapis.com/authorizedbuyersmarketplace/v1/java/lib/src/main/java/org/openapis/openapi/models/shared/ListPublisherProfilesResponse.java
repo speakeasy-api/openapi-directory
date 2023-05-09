@@ -18,6 +18,7 @@ public class ListPublisherProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPublisherProfilesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPublisherProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherProfiles")
     public PublisherProfile[] publisherProfiles;
+
     public ListPublisherProfilesResponse withPublisherProfiles(PublisherProfile[] publisherProfiles) {
         this.publisherProfiles = publisherProfiles;
         return this;
     }
     
+    public ListPublisherProfilesResponse(){}
 }

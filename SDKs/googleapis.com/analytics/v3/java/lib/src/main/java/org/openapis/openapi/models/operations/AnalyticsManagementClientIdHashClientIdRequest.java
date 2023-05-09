@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AnalyticsManagementClientIdHashClientIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HashClientIdRequest hashClientIdRequest;
+
     public AnalyticsManagementClientIdHashClientIdRequest withHashClientIdRequest(org.openapis.openapi.models.shared.HashClientIdRequest hashClientIdRequest) {
         this.hashClientIdRequest = hashClientIdRequest;
         return this;
@@ -19,6 +20,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsManagementClientIdHashClientIdRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsManagementClientIdHashClientIdRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsManagementClientIdHashClientIdRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +53,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsManagementClientIdHashClientIdRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +64,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsManagementClientIdHashClientIdRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +75,7 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsManagementClientIdHashClientIdRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,9 +86,11 @@ public class AnalyticsManagementClientIdHashClientIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public AnalyticsManagementClientIdHashClientIdRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public AnalyticsManagementClientIdHashClientIdRequest(){}
 }

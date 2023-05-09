@@ -15,9 +15,11 @@ public class Groundhog400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Groundhog400ApplicationJSONError error;
+
     public Groundhog400ApplicationJSON withError(Groundhog400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public Groundhog400ApplicationJSON(){}
 }

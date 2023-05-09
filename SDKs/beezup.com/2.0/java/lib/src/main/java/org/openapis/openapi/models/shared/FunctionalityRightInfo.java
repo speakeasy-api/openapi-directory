@@ -17,6 +17,7 @@ public class FunctionalityRightInfo {
      */
     @JsonProperty("functionalityCode")
     public String functionalityCode;
+
     public FunctionalityRightInfo withFunctionalityCode(String functionalityCode) {
         this.functionalityCode = functionalityCode;
         return this;
@@ -28,6 +29,7 @@ public class FunctionalityRightInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxValueInterger")
     public Long maxValueInterger;
+
     public FunctionalityRightInfo withMaxValueInterger(Long maxValueInterger) {
         this.maxValueInterger = maxValueInterger;
         return this;
@@ -39,9 +41,13 @@ public class FunctionalityRightInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unlimited")
     public Boolean unlimited;
+
     public FunctionalityRightInfo withUnlimited(Boolean unlimited) {
         this.unlimited = unlimited;
         return this;
     }
     
+    public FunctionalityRightInfo(@JsonProperty("functionalityCode") String functionalityCode) {
+        this.functionalityCode = functionalityCode;
+  }
 }

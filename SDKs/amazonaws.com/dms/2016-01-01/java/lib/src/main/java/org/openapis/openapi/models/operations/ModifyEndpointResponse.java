@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyEndpointResponse {
@@ -12,6 +13,7 @@ public class ModifyEndpointResponse {
      */
     
     public Object accessDeniedFault;
+
     public ModifyEndpointResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class ModifyEndpointResponse {
     
     
     public String contentType;
+
     public ModifyEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyEndpointResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public ModifyEndpointResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class ModifyEndpointResponse {
      */
     
     public Object kmsKeyNotAccessibleFault;
+
     public ModifyEndpointResponse withKMSKeyNotAccessibleFault(Object kmsKeyNotAccessibleFault) {
         this.kmsKeyNotAccessibleFault = kmsKeyNotAccessibleFault;
         return this;
@@ -49,6 +54,7 @@ public class ModifyEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyEndpointResponse modifyEndpointResponse;
+
     public ModifyEndpointResponse withModifyEndpointResponse(org.openapis.openapi.models.shared.ModifyEndpointResponse modifyEndpointResponse) {
         this.modifyEndpointResponse = modifyEndpointResponse;
         return this;
@@ -59,6 +65,7 @@ public class ModifyEndpointResponse {
      */
     
     public Object resourceAlreadyExistsFault;
+
     public ModifyEndpointResponse withResourceAlreadyExistsFault(Object resourceAlreadyExistsFault) {
         this.resourceAlreadyExistsFault = resourceAlreadyExistsFault;
         return this;
@@ -66,6 +73,7 @@ public class ModifyEndpointResponse {
     
     
     public Integer statusCode;
+
     public ModifyEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ModifyEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ModifyEndpointResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public ModifyEndpointResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public ModifyEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choice")
     public GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput choice;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput withChoice(GoogleAppsDriveLabelsV2betaFieldSelectionOptionsChoiceInput choice) {
         this.choice = choice;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionCh
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaDeltaUpdateLabelRequestCreateSelectionChoiceRequestInput(){}
 }

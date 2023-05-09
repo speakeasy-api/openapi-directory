@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class App {
     @JsonProperty("appArn")
     public String appArn;
+
     public App withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -27,6 +28,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentSchedule")
     public AppAssessmentScheduleTypeEnum assessmentSchedule;
+
     public App withAssessmentSchedule(AppAssessmentScheduleTypeEnum assessmentSchedule) {
         this.assessmentSchedule = assessmentSchedule;
         return this;
@@ -35,6 +37,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceStatus")
     public AppComplianceStatusTypeEnum complianceStatus;
+
     public App withComplianceStatus(AppComplianceStatusTypeEnum complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -44,6 +47,7 @@ public class App {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public App withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -52,6 +56,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public App withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +67,7 @@ public class App {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastAppComplianceEvaluationTime")
     public OffsetDateTime lastAppComplianceEvaluationTime;
+
     public App withLastAppComplianceEvaluationTime(OffsetDateTime lastAppComplianceEvaluationTime) {
         this.lastAppComplianceEvaluationTime = lastAppComplianceEvaluationTime;
         return this;
@@ -72,6 +78,7 @@ public class App {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastResiliencyScoreEvaluationTime")
     public OffsetDateTime lastResiliencyScoreEvaluationTime;
+
     public App withLastResiliencyScoreEvaluationTime(OffsetDateTime lastResiliencyScoreEvaluationTime) {
         this.lastResiliencyScoreEvaluationTime = lastResiliencyScoreEvaluationTime;
         return this;
@@ -79,6 +86,7 @@ public class App {
     
     @JsonProperty("name")
     public String name;
+
     public App withName(String name) {
         this.name = name;
         return this;
@@ -87,6 +95,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public App withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -95,6 +104,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resiliencyScore")
     public Double resiliencyScore;
+
     public App withResiliencyScore(Double resiliencyScore) {
         this.resiliencyScore = resiliencyScore;
         return this;
@@ -103,6 +113,7 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AppStatusTypeEnum status;
+
     public App withStatus(AppStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -111,9 +122,15 @@ public class App {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public App withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public App(@JsonProperty("appArn") String appArn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("name") String name) {
+        this.appArn = appArn;
+        this.creationTime = creationTime;
+        this.name = name;
+  }
 }

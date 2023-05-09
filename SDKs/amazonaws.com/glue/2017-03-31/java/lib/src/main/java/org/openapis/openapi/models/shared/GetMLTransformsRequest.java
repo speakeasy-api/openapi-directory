@@ -12,6 +12,7 @@ public class GetMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public TransformFilterCriteria filter;
+
     public GetMLTransformsRequest withFilter(TransformFilterCriteria filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetMLTransformsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class GetMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetMLTransformsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class GetMLTransformsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public TransformSortCriteria sort;
+
     public GetMLTransformsRequest withSort(TransformSortCriteria sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetMLTransformsRequest(){}
 }

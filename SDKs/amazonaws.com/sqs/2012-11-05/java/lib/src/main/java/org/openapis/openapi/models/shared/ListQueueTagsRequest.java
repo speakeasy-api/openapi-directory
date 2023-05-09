@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListQueueTagsRequest {
     
     public String queueUrl;
+
     public ListQueueTagsRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
     }
     
+    public ListQueueTagsRequest(@JsonProperty("QueueUrl") String queueUrl) {
+        this.queueUrl = queueUrl;
+  }
 }

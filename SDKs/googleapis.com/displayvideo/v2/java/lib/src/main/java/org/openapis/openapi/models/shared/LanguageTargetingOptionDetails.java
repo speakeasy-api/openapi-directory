@@ -18,9 +18,11 @@ public class LanguageTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public LanguageTargetingOptionDetails withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public LanguageTargetingOptionDetails(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfigurationSetEventDestinationRequest {
@@ -12,6 +13,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ConfigurationSetName")
     public String configurationSetName;
+
     public UpdateConfigurationSetEventDestinationRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -22,6 +24,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=EventDestinationName")
     public String eventDestinationName;
+
     public UpdateConfigurationSetEventDestinationRequest withEventDestinationName(String eventDestinationName) {
         this.eventDestinationName = eventDestinationName;
         return this;
@@ -29,6 +32,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateConfigurationSetEventDestinationRequestBody requestBody;
+
     public UpdateConfigurationSetEventDestinationRequest withRequestBody(UpdateConfigurationSetEventDestinationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -36,6 +40,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,9 +88,15 @@ public class UpdateConfigurationSetEventDestinationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateConfigurationSetEventDestinationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateConfigurationSetEventDestinationRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("EventDestinationName") String eventDestinationName, @JsonProperty("RequestBody") UpdateConfigurationSetEventDestinationRequestBody requestBody) {
+        this.configurationSetName = configurationSetName;
+        this.eventDestinationName = eventDestinationName;
+        this.requestBody = requestBody;
+  }
 }

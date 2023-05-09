@@ -22,6 +22,7 @@ public class DescribeExplainabilityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeExplainabilityResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +34,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSource")
     public DataSource dataSource;
+
     public DescribeExplainabilityResponse withDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -41,6 +43,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableVisualization")
     public Boolean enableVisualization;
+
     public DescribeExplainabilityResponse withEnableVisualization(Boolean enableVisualization) {
         this.enableVisualization = enableVisualization;
         return this;
@@ -49,6 +52,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDateTime")
     public String endDateTime;
+
     public DescribeExplainabilityResponse withEndDateTime(String endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -57,6 +61,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedTimeRemainingInMinutes")
     public Long estimatedTimeRemainingInMinutes;
+
     public DescribeExplainabilityResponse withEstimatedTimeRemainingInMinutes(Long estimatedTimeRemainingInMinutes) {
         this.estimatedTimeRemainingInMinutes = estimatedTimeRemainingInMinutes;
         return this;
@@ -65,6 +70,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityArn")
     public String explainabilityArn;
+
     public DescribeExplainabilityResponse withExplainabilityArn(String explainabilityArn) {
         this.explainabilityArn = explainabilityArn;
         return this;
@@ -73,6 +79,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityConfig")
     public ExplainabilityConfig explainabilityConfig;
+
     public DescribeExplainabilityResponse withExplainabilityConfig(ExplainabilityConfig explainabilityConfig) {
         this.explainabilityConfig = explainabilityConfig;
         return this;
@@ -81,6 +88,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExplainabilityName")
     public String explainabilityName;
+
     public DescribeExplainabilityResponse withExplainabilityName(String explainabilityName) {
         this.explainabilityName = explainabilityName;
         return this;
@@ -91,6 +99,7 @@ public class DescribeExplainabilityResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModificationTime")
     public OffsetDateTime lastModificationTime;
+
     public DescribeExplainabilityResponse withLastModificationTime(OffsetDateTime lastModificationTime) {
         this.lastModificationTime = lastModificationTime;
         return this;
@@ -99,6 +108,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public DescribeExplainabilityResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -107,6 +117,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DescribeExplainabilityResponse withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -118,6 +129,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schema")
     public Schema schema;
+
     public DescribeExplainabilityResponse withSchema(Schema schema) {
         this.schema = schema;
         return this;
@@ -126,6 +138,7 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDateTime")
     public String startDateTime;
+
     public DescribeExplainabilityResponse withStartDateTime(String startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -134,9 +147,11 @@ public class DescribeExplainabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public DescribeExplainabilityResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DescribeExplainabilityResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCustomersIdFieldsRequest {
@@ -12,6 +13,7 @@ public class PostCustomersIdFieldsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit;
+
     public PostCustomersIdFieldsRequest withCustomerAdditionalFieldEdit(org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit) {
         this.customerAdditionalFieldEdit = customerAdditionalFieldEdit;
         return this;
@@ -22,6 +24,7 @@ public class PostCustomersIdFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PostCustomersIdFieldsRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PostCustomersIdFieldsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PostCustomersIdFieldsRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,9 +46,16 @@ public class PostCustomersIdFieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PostCustomersIdFieldsRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public PostCustomersIdFieldsRequest(@JsonProperty("CustomerAdditionalFieldEdit") org.openapis.openapi.models.shared.CustomerAdditionalFieldEdit customerAdditionalFieldEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login) {
+        this.customerAdditionalFieldEdit = customerAdditionalFieldEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+  }
 }

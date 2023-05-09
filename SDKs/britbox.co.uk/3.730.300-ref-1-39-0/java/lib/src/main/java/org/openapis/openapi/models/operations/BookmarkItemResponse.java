@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BookmarkItemResponse {
@@ -12,6 +13,7 @@ public class BookmarkItemResponse {
      */
     
     public org.openapis.openapi.models.shared.Bookmark bookmark;
+
     public BookmarkItemResponse withBookmark(org.openapis.openapi.models.shared.Bookmark bookmark) {
         this.bookmark = bookmark;
         return this;
@@ -19,6 +21,7 @@ public class BookmarkItemResponse {
     
     
     public String contentType;
+
     public BookmarkItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BookmarkItemResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public BookmarkItemResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class BookmarkItemResponse {
     
     
     public Integer statusCode;
+
     public BookmarkItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class BookmarkItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BookmarkItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BookmarkItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

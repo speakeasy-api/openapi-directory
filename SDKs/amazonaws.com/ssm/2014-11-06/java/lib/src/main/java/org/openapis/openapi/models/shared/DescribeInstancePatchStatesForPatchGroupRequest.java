@@ -12,6 +12,7 @@ public class DescribeInstancePatchStatesForPatchGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public InstancePatchStateFilter[] filters;
+
     public DescribeInstancePatchStatesForPatchGroupRequest withFilters(InstancePatchStateFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeInstancePatchStatesForPatchGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInstancePatchStatesForPatchGroupRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeInstancePatchStatesForPatchGroupRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstancePatchStatesForPatchGroupRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeInstancePatchStatesForPatchGroupRequest {
     
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public DescribeInstancePatchStatesForPatchGroupRequest withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public DescribeInstancePatchStatesForPatchGroupRequest(@JsonProperty("PatchGroup") String patchGroup) {
+        this.patchGroup = patchGroup;
+  }
 }

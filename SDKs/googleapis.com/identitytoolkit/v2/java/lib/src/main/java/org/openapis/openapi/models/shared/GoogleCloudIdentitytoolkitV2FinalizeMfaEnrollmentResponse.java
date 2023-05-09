@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneAuthInfo")
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneResponseInfo phoneAuthInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse withPhoneAuthInfo(GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneResponseInfo phoneAuthInfo) {
         this.phoneAuthInfo = phoneAuthInfo;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totpAuthInfo")
     public java.util.Map<String, Object> totpAuthInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse withTotpAuthInfo(java.util.Map<String, Object> totpAuthInfo) {
         this.totpAuthInfo = totpAuthInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2FinalizeMfaEnrollmentResponse(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRunV2ListTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRunV2ListTasksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2ListTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public GoogleCloudRunV2Task[] tasks;
+
     public GoogleCloudRunV2ListTasksResponse withTasks(GoogleCloudRunV2Task[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public GoogleCloudRunV2ListTasksResponse(){}
 }

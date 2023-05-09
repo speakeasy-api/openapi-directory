@@ -9,6 +9,7 @@ package org.openapis.openapi.models.operations;
 public class GetAccount200WildcardDataAttributesApi {
     
     public Long freeCalls;
+
     public GetAccount200WildcardDataAttributesApi withFreeCalls(Long freeCalls) {
         this.freeCalls = freeCalls;
         return this;
@@ -16,9 +17,11 @@ public class GetAccount200WildcardDataAttributesApi {
     
     
     public String sizes;
+
     public GetAccount200WildcardDataAttributesApi withSizes(String sizes) {
         this.sizes = sizes;
         return this;
     }
     
+    public GetAccount200WildcardDataAttributesApi(){}
 }

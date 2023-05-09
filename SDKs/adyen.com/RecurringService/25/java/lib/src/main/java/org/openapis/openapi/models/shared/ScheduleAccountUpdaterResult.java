@@ -15,6 +15,7 @@ public class ScheduleAccountUpdaterResult {
      */
     @JsonProperty("pspReference")
     public String pspReference;
+
     public ScheduleAccountUpdaterResult withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -25,9 +26,14 @@ public class ScheduleAccountUpdaterResult {
      */
     @JsonProperty("result")
     public String result;
+
     public ScheduleAccountUpdaterResult withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public ScheduleAccountUpdaterResult(@JsonProperty("pspReference") String pspReference, @JsonProperty("result") String result) {
+        this.pspReference = pspReference;
+        this.result = result;
+  }
 }

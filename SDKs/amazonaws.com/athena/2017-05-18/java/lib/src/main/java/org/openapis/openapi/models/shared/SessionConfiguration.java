@@ -18,6 +18,7 @@ public class SessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public SessionConfiguration withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class SessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRole")
     public String executionRole;
+
     public SessionConfiguration withExecutionRole(String executionRole) {
         this.executionRole = executionRole;
         return this;
@@ -34,6 +36,7 @@ public class SessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleTimeoutSeconds")
     public Long idleTimeoutSeconds;
+
     public SessionConfiguration withIdleTimeoutSeconds(Long idleTimeoutSeconds) {
         this.idleTimeoutSeconds = idleTimeoutSeconds;
         return this;
@@ -42,9 +45,11 @@ public class SessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public SessionConfiguration withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public SessionConfiguration(){}
 }

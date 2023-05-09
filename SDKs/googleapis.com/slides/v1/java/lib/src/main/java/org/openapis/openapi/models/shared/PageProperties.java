@@ -18,6 +18,7 @@ public class PageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorScheme")
     public ColorScheme colorScheme;
+
     public PageProperties withColorScheme(ColorScheme colorScheme) {
         this.colorScheme = colorScheme;
         return this;
@@ -29,9 +30,11 @@ public class PageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageBackgroundFill")
     public PageBackgroundFill pageBackgroundFill;
+
     public PageProperties withPageBackgroundFill(PageBackgroundFill pageBackgroundFill) {
         this.pageBackgroundFill = pageBackgroundFill;
         return this;
     }
     
+    public PageProperties(){}
 }

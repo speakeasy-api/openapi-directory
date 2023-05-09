@@ -18,6 +18,7 @@ public class SourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRepo")
     public CloudRepoSourceContext cloudRepo;
+
     public SourceContext withCloudRepo(CloudRepoSourceContext cloudRepo) {
         this.cloudRepo = cloudRepo;
         return this;
@@ -29,6 +30,7 @@ public class SourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWorkspace")
     public CloudWorkspaceSourceContext cloudWorkspace;
+
     public SourceContext withCloudWorkspace(CloudWorkspaceSourceContext cloudWorkspace) {
         this.cloudWorkspace = cloudWorkspace;
         return this;
@@ -40,6 +42,7 @@ public class SourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gerrit")
     public GerritSourceContext gerrit;
+
     public SourceContext withGerrit(GerritSourceContext gerrit) {
         this.gerrit = gerrit;
         return this;
@@ -51,9 +54,11 @@ public class SourceContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git")
     public GitSourceContext git;
+
     public SourceContext withGit(GitSourceContext git) {
         this.git = git;
         return this;
     }
     
+    public SourceContext(){}
 }

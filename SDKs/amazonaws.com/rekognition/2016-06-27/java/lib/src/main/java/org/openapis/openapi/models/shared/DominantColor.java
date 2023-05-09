@@ -15,6 +15,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Blue")
     public Long blue;
+
     public DominantColor withBlue(Long blue) {
         this.blue = blue;
         return this;
@@ -23,6 +24,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSSColor")
     public String cssColor;
+
     public DominantColor withCSSColor(String cssColor) {
         this.cssColor = cssColor;
         return this;
@@ -31,6 +33,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Green")
     public Long green;
+
     public DominantColor withGreen(Long green) {
         this.green = green;
         return this;
@@ -39,6 +42,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HexCode")
     public String hexCode;
+
     public DominantColor withHexCode(String hexCode) {
         this.hexCode = hexCode;
         return this;
@@ -47,6 +51,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PixelPercent")
     public Float pixelPercent;
+
     public DominantColor withPixelPercent(Float pixelPercent) {
         this.pixelPercent = pixelPercent;
         return this;
@@ -55,6 +60,7 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Red")
     public Long red;
+
     public DominantColor withRed(Long red) {
         this.red = red;
         return this;
@@ -63,9 +69,11 @@ public class DominantColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimplifiedColor")
     public String simplifiedColor;
+
     public DominantColor withSimplifiedColor(String simplifiedColor) {
         this.simplifiedColor = simplifiedColor;
         return this;
     }
     
+    public DominantColor(){}
 }

@@ -18,9 +18,11 @@ public class AddChartResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chart")
     public EmbeddedChart chart;
+
     public AddChartResponse withChart(EmbeddedChart chart) {
         this.chart = chart;
         return this;
     }
     
+    public AddChartResponse(){}
 }

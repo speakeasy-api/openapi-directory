@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSchemaResponse {
@@ -12,6 +13,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public CreateSchemaResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSchemaResponse {
     
     
     public String contentType;
+
     public CreateSchemaResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse;
+
     public CreateSchemaResponse withCreateSchemaResponse(org.openapis.openapi.models.shared.CreateSchemaResponse createSchemaResponse) {
         this.createSchemaResponse = createSchemaResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public CreateSchemaResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public CreateSchemaResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public CreateSchemaResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSchemaResponse {
     
     
     public Integer statusCode;
+
     public CreateSchemaResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSchemaResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSchemaResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public CreateSchemaResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -93,6 +103,7 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.SchemaAlreadyExistsException schemaAlreadyExistsException;
+
     public CreateSchemaResponse withSchemaAlreadyExistsException(org.openapis.openapi.models.shared.SchemaAlreadyExistsException schemaAlreadyExistsException) {
         this.schemaAlreadyExistsException = schemaAlreadyExistsException;
         return this;
@@ -103,9 +114,14 @@ public class CreateSchemaResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public CreateSchemaResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSchemaResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

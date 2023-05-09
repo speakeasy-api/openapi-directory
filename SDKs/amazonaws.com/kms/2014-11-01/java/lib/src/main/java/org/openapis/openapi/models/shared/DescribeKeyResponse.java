@@ -15,9 +15,11 @@ public class DescribeKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyMetadata")
     public KeyMetadata keyMetadata;
+
     public DescribeKeyResponse withKeyMetadata(KeyMetadata keyMetadata) {
         this.keyMetadata = keyMetadata;
         return this;
     }
     
+    public DescribeKeyResponse(){}
 }

@@ -12,6 +12,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationArn")
     public String autoScalingConfigurationArn;
+
     public CreateServiceRequest withAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
         this.autoScalingConfigurationArn = autoScalingConfigurationArn;
         return this;
@@ -20,6 +21,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public CreateServiceRequest withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckConfiguration")
     public HealthCheckConfiguration healthCheckConfiguration;
+
     public CreateServiceRequest withHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceConfiguration")
     public InstanceConfiguration instanceConfiguration;
+
     public CreateServiceRequest withInstanceConfiguration(InstanceConfiguration instanceConfiguration) {
         this.instanceConfiguration = instanceConfiguration;
         return this;
@@ -44,6 +48,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public CreateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -52,6 +57,7 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfiguration")
     public ServiceObservabilityConfiguration observabilityConfiguration;
+
     public CreateServiceRequest withObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
         this.observabilityConfiguration = observabilityConfiguration;
         return this;
@@ -59,6 +65,7 @@ public class CreateServiceRequest {
     
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public CreateServiceRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -66,6 +73,7 @@ public class CreateServiceRequest {
     
     @JsonProperty("SourceConfiguration")
     public SourceConfiguration sourceConfiguration;
+
     public CreateServiceRequest withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -74,9 +82,14 @@ public class CreateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateServiceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateServiceRequest(@JsonProperty("ServiceName") String serviceName, @JsonProperty("SourceConfiguration") SourceConfiguration sourceConfiguration) {
+        this.serviceName = serviceName;
+        this.sourceConfiguration = sourceConfiguration;
+  }
 }

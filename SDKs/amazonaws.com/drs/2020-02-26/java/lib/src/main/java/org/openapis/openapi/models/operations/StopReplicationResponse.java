@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopReplicationResponse {
@@ -12,6 +13,7 @@ public class StopReplicationResponse {
      */
     
     public Object conflictException;
+
     public StopReplicationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StopReplicationResponse {
     
     
     public String contentType;
+
     public StopReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StopReplicationResponse {
      */
     
     public Object internalServerException;
+
     public StopReplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class StopReplicationResponse {
     
     
     public Integer statusCode;
+
     public StopReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopReplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopReplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopReplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.StopReplicationResponse stopReplicationResponse;
+
     public StopReplicationResponse withStopReplicationResponse(org.openapis.openapi.models.shared.StopReplicationResponse stopReplicationResponse) {
         this.stopReplicationResponse = stopReplicationResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopReplicationResponse {
      */
     
     public Object throttlingException;
+
     public StopReplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StopReplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StopReplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public StopReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

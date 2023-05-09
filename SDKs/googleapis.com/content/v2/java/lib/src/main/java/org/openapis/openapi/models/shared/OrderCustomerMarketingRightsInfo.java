@@ -15,6 +15,7 @@ public class OrderCustomerMarketingRightsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitMarketingPreference")
     public String explicitMarketingPreference;
+
     public OrderCustomerMarketingRightsInfo withExplicitMarketingPreference(String explicitMarketingPreference) {
         this.explicitMarketingPreference = explicitMarketingPreference;
         return this;
@@ -26,6 +27,7 @@ public class OrderCustomerMarketingRightsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdatedTimestamp")
     public String lastUpdatedTimestamp;
+
     public OrderCustomerMarketingRightsInfo withLastUpdatedTimestamp(String lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -37,9 +39,11 @@ public class OrderCustomerMarketingRightsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingEmailAddress")
     public String marketingEmailAddress;
+
     public OrderCustomerMarketingRightsInfo withMarketingEmailAddress(String marketingEmailAddress) {
         this.marketingEmailAddress = marketingEmailAddress;
         return this;
     }
     
+    public OrderCustomerMarketingRightsInfo(){}
 }

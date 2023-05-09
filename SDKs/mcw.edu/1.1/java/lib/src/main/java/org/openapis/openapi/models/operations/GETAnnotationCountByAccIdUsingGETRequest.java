@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationCountByAccIdUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETAnnotationCountByAccIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETAnnotationCountByAccIdUsingGETRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -22,9 +24,14 @@ public class GETAnnotationCountByAccIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=includeChildren")
     public Boolean includeChildren;
+
     public GETAnnotationCountByAccIdUsingGETRequest withIncludeChildren(Boolean includeChildren) {
         this.includeChildren = includeChildren;
         return this;
     }
     
+    public GETAnnotationCountByAccIdUsingGETRequest(@JsonProperty("accId") String accId, @JsonProperty("includeChildren") Boolean includeChildren) {
+        this.accId = accId;
+        this.includeChildren = includeChildren;
+  }
 }

@@ -19,6 +19,7 @@ public class SubscriptionPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CancellatedOn")
     public OffsetDateTime cancellatedOn;
+
     public SubscriptionPlan withCancellatedOn(OffsetDateTime cancellatedOn) {
         this.cancellatedOn = cancellatedOn;
         return this;
@@ -27,6 +28,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CouponCode")
     public String couponCode;
+
     public SubscriptionPlan withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -35,6 +37,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrencyCode")
     public String currencyCode;
+
     public SubscriptionPlan withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -43,6 +46,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalIdentifier")
     public String externalIdentifier;
+
     public SubscriptionPlan withExternalIdentifier(String externalIdentifier) {
         this.externalIdentifier = externalIdentifier;
         return this;
@@ -51,6 +55,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Features")
     public SubscriptionPlanFeaturesEnum[] features;
+
     public SubscriptionPlan withFeatures(SubscriptionPlanFeaturesEnum[] features) {
         this.features = features;
         return this;
@@ -59,6 +64,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasDuePayment")
     public Boolean hasDuePayment;
+
     public SubscriptionPlan withHasDuePayment(Boolean hasDuePayment) {
         this.hasDuePayment = hasDuePayment;
         return this;
@@ -69,6 +75,7 @@ public class SubscriptionPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("HasDuePaymentSince")
     public OffsetDateTime hasDuePaymentSince;
+
     public SubscriptionPlan withHasDuePaymentSince(OffsetDateTime hasDuePaymentSince) {
         this.hasDuePaymentSince = hasDuePaymentSince;
         return this;
@@ -77,6 +84,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public SubscriptionPlan withId(Integer id) {
         this.id = id;
         return this;
@@ -85,6 +93,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identifier")
     public String identifier;
+
     public SubscriptionPlan withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -93,6 +102,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public SubscriptionPlan withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -101,6 +111,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLifetime")
     public Boolean isLifetime;
+
     public SubscriptionPlan withIsLifetime(Boolean isLifetime) {
         this.isLifetime = isLifetime;
         return this;
@@ -111,6 +122,7 @@ public class SubscriptionPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastPaymentOn")
     public OffsetDateTime lastPaymentOn;
+
     public SubscriptionPlan withLastPaymentOn(OffsetDateTime lastPaymentOn) {
         this.lastPaymentOn = lastPaymentOn;
         return this;
@@ -119,6 +131,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxClients")
     public Integer maxClients;
+
     public SubscriptionPlan withMaxClients(Integer maxClients) {
         this.maxClients = maxClients;
         return this;
@@ -127,6 +140,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SubscriptionPlan withName(String name) {
         this.name = name;
         return this;
@@ -135,6 +149,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnHold")
     public Boolean onHold;
+
     public SubscriptionPlan withOnHold(Boolean onHold) {
         this.onHold = onHold;
         return this;
@@ -143,6 +158,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrderIdentifier")
     public String orderIdentifier;
+
     public SubscriptionPlan withOrderIdentifier(String orderIdentifier) {
         this.orderIdentifier = orderIdentifier;
         return this;
@@ -151,6 +167,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Price")
     public Double price;
+
     public SubscriptionPlan withPrice(Double price) {
         this.price = price;
         return this;
@@ -159,6 +176,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Recurrence")
     public SubscriptionPlanRecurrenceEnum recurrence;
+
     public SubscriptionPlan withRecurrence(SubscriptionPlanRecurrenceEnum recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -167,6 +185,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaleId")
     public Long saleId;
+
     public SubscriptionPlan withSaleId(Long saleId) {
         this.saleId = saleId;
         return this;
@@ -175,6 +194,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SubscriptionPlanStatusEnum status;
+
     public SubscriptionPlan withStatus(SubscriptionPlanStatusEnum status) {
         this.status = status;
         return this;
@@ -183,6 +203,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SystemCancelationReason")
     public SubscriptionPlanSystemCancelationReasonEnum systemCancelationReason;
+
     public SubscriptionPlan withSystemCancelationReason(SubscriptionPlanSystemCancelationReasonEnum systemCancelationReason) {
         this.systemCancelationReason = systemCancelationReason;
         return this;
@@ -193,6 +214,7 @@ public class SubscriptionPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrialEndsOn")
     public OffsetDateTime trialEndsOn;
+
     public SubscriptionPlan withTrialEndsOn(OffsetDateTime trialEndsOn) {
         this.trialEndsOn = trialEndsOn;
         return this;
@@ -201,6 +223,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrialNumberOfDays")
     public Integer trialNumberOfDays;
+
     public SubscriptionPlan withTrialNumberOfDays(Integer trialNumberOfDays) {
         this.trialNumberOfDays = trialNumberOfDays;
         return this;
@@ -211,6 +234,7 @@ public class SubscriptionPlan {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TrialStartsOn")
     public OffsetDateTime trialStartsOn;
+
     public SubscriptionPlan withTrialStartsOn(OffsetDateTime trialStartsOn) {
         this.trialStartsOn = trialStartsOn;
         return this;
@@ -219,6 +243,7 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public SubscriptionPlan withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -227,9 +252,11 @@ public class SubscriptionPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Integer version;
+
     public SubscriptionPlan withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public SubscriptionPlan(){}
 }

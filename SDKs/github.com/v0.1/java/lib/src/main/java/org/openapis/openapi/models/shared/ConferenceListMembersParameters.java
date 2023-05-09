@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class ConferenceListMembersParameters {
      */
     @SpeakeasyMetadata("form:name=CallUUIDFilter")
     public String callUUIDFilter;
+
     public ConferenceListMembersParameters withCallUUIDFilter(String callUUIDFilter) {
         this.callUUIDFilter = callUUIDFilter;
         return this;
@@ -25,6 +27,7 @@ public class ConferenceListMembersParameters {
      */
     @SpeakeasyMetadata("form:name=ConferenceName")
     public String conferenceName;
+
     public ConferenceListMembersParameters withConferenceName(String conferenceName) {
         this.conferenceName = conferenceName;
         return this;
@@ -35,6 +38,7 @@ public class ConferenceListMembersParameters {
      */
     @SpeakeasyMetadata("form:name=DeafFilter")
     public Boolean deafFilter;
+
     public ConferenceListMembersParameters withDeafFilter(Boolean deafFilter) {
         this.deafFilter = deafFilter;
         return this;
@@ -45,6 +49,7 @@ public class ConferenceListMembersParameters {
      */
     @SpeakeasyMetadata("form:name=MemberFilter")
     public String memberFilter;
+
     public ConferenceListMembersParameters withMemberFilter(String memberFilter) {
         this.memberFilter = memberFilter;
         return this;
@@ -55,9 +60,13 @@ public class ConferenceListMembersParameters {
      */
     @SpeakeasyMetadata("form:name=MutedFilter")
     public Boolean mutedFilter;
+
     public ConferenceListMembersParameters withMutedFilter(Boolean mutedFilter) {
         this.mutedFilter = mutedFilter;
         return this;
     }
     
+    public ConferenceListMembersParameters(@JsonProperty("ConferenceName") String conferenceName) {
+        this.conferenceName = conferenceName;
+  }
 }

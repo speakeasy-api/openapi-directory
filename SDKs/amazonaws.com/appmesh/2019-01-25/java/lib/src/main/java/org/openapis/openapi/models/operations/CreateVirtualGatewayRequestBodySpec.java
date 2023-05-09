@@ -15,6 +15,7 @@ public class CreateVirtualGatewayRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendDefaults")
     public org.openapis.openapi.models.shared.VirtualGatewayBackendDefaults backendDefaults;
+
     public CreateVirtualGatewayRequestBodySpec withBackendDefaults(org.openapis.openapi.models.shared.VirtualGatewayBackendDefaults backendDefaults) {
         this.backendDefaults = backendDefaults;
         return this;
@@ -23,6 +24,7 @@ public class CreateVirtualGatewayRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public org.openapis.openapi.models.shared.VirtualGatewayListener[] listeners;
+
     public CreateVirtualGatewayRequestBodySpec withListeners(org.openapis.openapi.models.shared.VirtualGatewayListener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -34,9 +36,11 @@ public class CreateVirtualGatewayRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public org.openapis.openapi.models.shared.VirtualGatewayLogging logging;
+
     public CreateVirtualGatewayRequestBodySpec withLogging(org.openapis.openapi.models.shared.VirtualGatewayLogging logging) {
         this.logging = logging;
         return this;
     }
     
+    public CreateVirtualGatewayRequestBodySpec(){}
 }

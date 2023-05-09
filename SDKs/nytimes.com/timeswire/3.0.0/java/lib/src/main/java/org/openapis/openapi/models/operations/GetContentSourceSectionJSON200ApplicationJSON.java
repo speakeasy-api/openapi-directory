@@ -15,6 +15,7 @@ public class GetContentSourceSectionJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyright")
     public String copyright;
+
     public GetContentSourceSectionJSON200ApplicationJSON withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -23,6 +24,7 @@ public class GetContentSourceSectionJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_results")
     public Long numResults;
+
     public GetContentSourceSectionJSON200ApplicationJSON withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -31,6 +33,7 @@ public class GetContentSourceSectionJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Article[] results;
+
     public GetContentSourceSectionJSON200ApplicationJSON withResults(org.openapis.openapi.models.shared.Article[] results) {
         this.results = results;
         return this;
@@ -39,9 +42,11 @@ public class GetContentSourceSectionJSON200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GetContentSourceSectionJSON200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetContentSourceSectionJSON200ApplicationJSON(){}
 }

@@ -18,6 +18,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChildUsers")
     public User[] childUsers;
+
     public User withChildUsers(User[] childUsers) {
         this.childUsers = childUsers;
         return this;
@@ -29,6 +30,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public User withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdAsString")
     public String idAsString;
+
     public User withIdAsString(String idAsString) {
         this.idAsString = idAsString;
         return this;
@@ -62,6 +66,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsAdmin")
     public Boolean isAdmin;
+
     public User withIsAdmin(Boolean isAdmin) {
         this.isAdmin = isAdmin;
         return this;
@@ -73,6 +78,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public String[] permissions;
+
     public User withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
@@ -84,9 +90,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     public Long fromPort;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -19,6 +20,7 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public String ipProtocol;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -26,6 +28,7 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public RevokeSecurityGroupEgressRequestIpPermissionsIpRanges[] ipRanges;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withIpRanges(RevokeSecurityGroupEgressRequestIpPermissionsIpRanges[] ipRanges) {
         this.ipRanges = ipRanges;
         return this;
@@ -33,6 +36,7 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public RevokeSecurityGroupEgressRequestIpPermissionsIpv6Ranges[] ipv6Ranges;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withIpv6Ranges(RevokeSecurityGroupEgressRequestIpPermissionsIpv6Ranges[] ipv6Ranges) {
         this.ipv6Ranges = ipv6Ranges;
         return this;
@@ -40,6 +44,7 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public RevokeSecurityGroupEgressRequestIpPermissionsPrefixListIds[] prefixListIds;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withPrefixListIds(RevokeSecurityGroupEgressRequestIpPermissionsPrefixListIds[] prefixListIds) {
         this.prefixListIds = prefixListIds;
         return this;
@@ -47,6 +52,7 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public Long toPort;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
@@ -54,9 +60,11 @@ public class RevokeSecurityGroupEgressRequestIpPermissions {
     
     
     public RevokeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs[] userIdGroupPairs;
+
     public RevokeSecurityGroupEgressRequestIpPermissions withUserIdGroupPairs(RevokeSecurityGroupEgressRequestIpPermissionsUserIdGroupPairs[] userIdGroupPairs) {
         this.userIdGroupPairs = userIdGroupPairs;
         return this;
     }
     
+    public RevokeSecurityGroupEgressRequestIpPermissions(){}
 }

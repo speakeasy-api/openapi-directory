@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TerminologyDataLocation {
     @JsonProperty("Location")
     public String location;
+
     public TerminologyDataLocation withLocation(String location) {
         this.location = location;
         return this;
@@ -19,9 +20,14 @@ public class TerminologyDataLocation {
     
     @JsonProperty("RepositoryType")
     public String repositoryType;
+
     public TerminologyDataLocation withRepositoryType(String repositoryType) {
         this.repositoryType = repositoryType;
         return this;
     }
     
+    public TerminologyDataLocation(@JsonProperty("Location") String location, @JsonProperty("RepositoryType") String repositoryType) {
+        this.location = location;
+        this.repositoryType = repositoryType;
+  }
 }

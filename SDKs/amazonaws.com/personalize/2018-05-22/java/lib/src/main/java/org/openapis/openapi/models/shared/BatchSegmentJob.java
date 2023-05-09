@@ -20,6 +20,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSegmentJobArn")
     public String batchSegmentJobArn;
+
     public BatchSegmentJob withBatchSegmentJobArn(String batchSegmentJobArn) {
         this.batchSegmentJobArn = batchSegmentJobArn;
         return this;
@@ -30,6 +31,7 @@ public class BatchSegmentJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public BatchSegmentJob withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public BatchSegmentJob withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public BatchSegmentJob withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -54,6 +58,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobInput")
     public BatchSegmentJobInput jobInput;
+
     public BatchSegmentJob withJobInput(BatchSegmentJobInput jobInput) {
         this.jobInput = jobInput;
         return this;
@@ -62,6 +67,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public BatchSegmentJob withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobOutput")
     public BatchSegmentJobOutput jobOutput;
+
     public BatchSegmentJob withJobOutput(BatchSegmentJobOutput jobOutput) {
         this.jobOutput = jobOutput;
         return this;
@@ -80,6 +87,7 @@ public class BatchSegmentJob {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BatchSegmentJob withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -88,6 +96,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public BatchSegmentJob withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -96,6 +105,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public BatchSegmentJob withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -104,6 +114,7 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public BatchSegmentJob withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -112,9 +123,11 @@ public class BatchSegmentJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BatchSegmentJob withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BatchSegmentJob(){}
 }

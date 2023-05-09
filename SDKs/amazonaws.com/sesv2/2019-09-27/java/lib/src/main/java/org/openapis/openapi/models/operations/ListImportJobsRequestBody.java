@@ -15,9 +15,11 @@ public class ListImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportDestinationType")
     public ListImportJobsRequestBodyImportDestinationTypeEnum importDestinationType;
+
     public ListImportJobsRequestBody withImportDestinationType(ListImportJobsRequestBodyImportDestinationTypeEnum importDestinationType) {
         this.importDestinationType = importDestinationType;
         return this;
     }
     
+    public ListImportJobsRequestBody(){}
 }

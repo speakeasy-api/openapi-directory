@@ -15,6 +15,7 @@ public class ReportSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ReportResponse data;
+
     public ReportSuccess withData(ReportResponse data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ReportSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public ReportSuccess withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -31,9 +33,11 @@ public class ReportSuccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public String success;
+
     public ReportSuccess withSuccess(String success) {
         this.success = success;
         return this;
     }
     
+    public ReportSuccess(){}
 }

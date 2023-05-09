@@ -15,6 +15,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeDefinitions")
     public AttributeDefinition[] attributeDefinitions;
+
     public UpdateTableInput withAttributeDefinitions(AttributeDefinition[] attributeDefinitions) {
         this.attributeDefinitions = attributeDefinitions;
         return this;
@@ -23,6 +24,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public BillingModeEnum billingMode;
+
     public UpdateTableInput withBillingMode(BillingModeEnum billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -31,6 +33,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public UpdateTableInput withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -39,6 +42,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexUpdates")
     public GlobalSecondaryIndexUpdate[] globalSecondaryIndexUpdates;
+
     public UpdateTableInput withGlobalSecondaryIndexUpdates(GlobalSecondaryIndexUpdate[] globalSecondaryIndexUpdates) {
         this.globalSecondaryIndexUpdates = globalSecondaryIndexUpdates;
         return this;
@@ -47,6 +51,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughput")
     public ProvisionedThroughput provisionedThroughput;
+
     public UpdateTableInput withProvisionedThroughput(ProvisionedThroughput provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -55,6 +60,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicaUpdates")
     public ReplicationGroupUpdate[] replicaUpdates;
+
     public UpdateTableInput withReplicaUpdates(ReplicationGroupUpdate[] replicaUpdates) {
         this.replicaUpdates = replicaUpdates;
         return this;
@@ -63,6 +69,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecification")
     public SSESpecification sseSpecification;
+
     public UpdateTableInput withSSESpecification(SSESpecification sseSpecification) {
         this.sseSpecification = sseSpecification;
         return this;
@@ -71,6 +78,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamSpecification")
     public StreamSpecification streamSpecification;
+
     public UpdateTableInput withStreamSpecification(StreamSpecification streamSpecification) {
         this.streamSpecification = streamSpecification;
         return this;
@@ -79,6 +87,7 @@ public class UpdateTableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableClass")
     public TableClassEnum tableClass;
+
     public UpdateTableInput withTableClass(TableClassEnum tableClass) {
         this.tableClass = tableClass;
         return this;
@@ -86,9 +95,13 @@ public class UpdateTableInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTableInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateTableInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TerminateProvisionedProductResponse {
     
     public String contentType;
+
     public TerminateProvisionedProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TerminateProvisionedProductResponse {
     
     
     public Integer statusCode;
+
     public TerminateProvisionedProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TerminateProvisionedProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TerminateProvisionedProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TerminateProvisionedProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public TerminateProvisionedProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class TerminateProvisionedProductResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminateProvisionedProductOutput terminateProvisionedProductOutput;
+
     public TerminateProvisionedProductResponse withTerminateProvisionedProductOutput(org.openapis.openapi.models.shared.TerminateProvisionedProductOutput terminateProvisionedProductOutput) {
         this.terminateProvisionedProductOutput = terminateProvisionedProductOutput;
         return this;
     }
     
+    public TerminateProvisionedProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

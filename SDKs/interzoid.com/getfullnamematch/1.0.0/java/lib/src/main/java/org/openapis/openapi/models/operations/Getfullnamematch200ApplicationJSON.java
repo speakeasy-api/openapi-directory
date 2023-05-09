@@ -15,6 +15,7 @@ public class Getfullnamematch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getfullnamematch200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getfullnamematch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getfullnamematch200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -31,9 +33,11 @@ public class Getfullnamematch200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Simkey")
     public String simkey;
+
     public Getfullnamematch200ApplicationJSON withSimkey(String simkey) {
         this.simkey = simkey;
         return this;
     }
     
+    public Getfullnamematch200ApplicationJSON(){}
 }

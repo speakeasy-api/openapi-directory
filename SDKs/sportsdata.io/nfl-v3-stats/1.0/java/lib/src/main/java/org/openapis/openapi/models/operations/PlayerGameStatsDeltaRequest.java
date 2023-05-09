@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PlayerGameStatsDeltaRequest {
@@ -12,6 +13,7 @@ public class PlayerGameStatsDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public PlayerGameStatsDeltaFormatEnum format;
+
     public PlayerGameStatsDeltaRequest withFormat(PlayerGameStatsDeltaFormatEnum format) {
         this.format = format;
         return this;
@@ -24,9 +26,14 @@ public class PlayerGameStatsDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public PlayerGameStatsDeltaRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public PlayerGameStatsDeltaRequest(@JsonProperty("format") PlayerGameStatsDeltaFormatEnum format, @JsonProperty("minutes") String minutes) {
+        this.format = format;
+        this.minutes = minutes;
+  }
 }

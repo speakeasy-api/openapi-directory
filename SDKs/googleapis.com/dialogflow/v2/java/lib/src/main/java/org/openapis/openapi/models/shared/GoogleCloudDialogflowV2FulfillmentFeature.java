@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2FulfillmentFeature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDialogflowV2FulfillmentFeatureTypeEnum type;
+
     public GoogleCloudDialogflowV2FulfillmentFeature withType(GoogleCloudDialogflowV2FulfillmentFeatureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDialogflowV2FulfillmentFeature(){}
 }

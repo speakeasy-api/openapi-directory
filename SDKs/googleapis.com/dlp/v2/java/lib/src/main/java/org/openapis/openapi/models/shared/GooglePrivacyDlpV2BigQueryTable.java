@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2BigQueryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetId")
     public String datasetId;
+
     public GooglePrivacyDlpV2BigQueryTable withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2BigQueryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public GooglePrivacyDlpV2BigQueryTable withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2BigQueryTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public GooglePrivacyDlpV2BigQueryTable withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public GooglePrivacyDlpV2BigQueryTable(){}
 }

@@ -18,6 +18,7 @@ public class RegressionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAbsoluteError")
     public Float meanAbsoluteError;
+
     public RegressionEvaluationMetrics withMeanAbsoluteError(Float meanAbsoluteError) {
         this.meanAbsoluteError = meanAbsoluteError;
         return this;
@@ -29,6 +30,7 @@ public class RegressionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meanAbsolutePercentageError")
     public Float meanAbsolutePercentageError;
+
     public RegressionEvaluationMetrics withMeanAbsolutePercentageError(Float meanAbsolutePercentageError) {
         this.meanAbsolutePercentageError = meanAbsolutePercentageError;
         return this;
@@ -40,6 +42,7 @@ public class RegressionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rSquared")
     public Float rSquared;
+
     public RegressionEvaluationMetrics withRSquared(Float rSquared) {
         this.rSquared = rSquared;
         return this;
@@ -51,6 +54,7 @@ public class RegressionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootMeanSquaredError")
     public Float rootMeanSquaredError;
+
     public RegressionEvaluationMetrics withRootMeanSquaredError(Float rootMeanSquaredError) {
         this.rootMeanSquaredError = rootMeanSquaredError;
         return this;
@@ -62,9 +66,11 @@ public class RegressionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootMeanSquaredLogError")
     public Float rootMeanSquaredLogError;
+
     public RegressionEvaluationMetrics withRootMeanSquaredLogError(Float rootMeanSquaredLogError) {
         this.rootMeanSquaredLogError = rootMeanSquaredLogError;
         return this;
     }
     
+    public RegressionEvaluationMetrics(){}
 }

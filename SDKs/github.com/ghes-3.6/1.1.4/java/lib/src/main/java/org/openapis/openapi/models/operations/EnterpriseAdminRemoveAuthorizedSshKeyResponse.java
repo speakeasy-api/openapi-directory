@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminRemoveAuthorizedSshKeyResponse {
     
     public String contentType;
+
     public EnterpriseAdminRemoveAuthorizedSshKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminRemoveAuthorizedSshKeyResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminRemoveAuthorizedSshKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminRemoveAuthorizedSshKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminRemoveAuthorizedSshKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminRemoveAuthorizedSshKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.SshKey[] sshKeys;
+
     public EnterpriseAdminRemoveAuthorizedSshKeyResponse withSshKeys(org.openapis.openapi.models.shared.SshKey[] sshKeys) {
         this.sshKeys = sshKeys;
         return this;
     }
     
+    public EnterpriseAdminRemoveAuthorizedSshKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

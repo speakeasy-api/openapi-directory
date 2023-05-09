@@ -17,6 +17,7 @@ public class Word {
      */
     @JsonProperty("boundingBox")
     public Double[] boundingBox;
+
     public Word withBoundingBox(Double[] boundingBox) {
         this.boundingBox = boundingBox;
         return this;
@@ -28,6 +29,7 @@ public class Word {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public WordConfidenceEnum confidence;
+
     public Word withConfidence(WordConfidenceEnum confidence) {
         this.confidence = confidence;
         return this;
@@ -38,9 +40,14 @@ public class Word {
      */
     @JsonProperty("text")
     public String text;
+
     public Word withText(String text) {
         this.text = text;
         return this;
     }
     
+    public Word(@JsonProperty("boundingBox") Double[] boundingBox, @JsonProperty("text") String text) {
+        this.boundingBox = boundingBox;
+        this.text = text;
+  }
 }

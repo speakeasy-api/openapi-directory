@@ -12,9 +12,13 @@ public class LogsRequestBody {
      */
     @JsonProperty("logType")
     public LogTypeEnum logType;
+
     public LogsRequestBody withLogType(LogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public LogsRequestBody(@JsonProperty("logType") LogTypeEnum logType) {
+        this.logType = logType;
+  }
 }

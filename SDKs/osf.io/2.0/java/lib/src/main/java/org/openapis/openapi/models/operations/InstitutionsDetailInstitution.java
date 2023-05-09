@@ -12,6 +12,7 @@ public class InstitutionsDetailInstitution {
      */
     
     public InstitutionsDetailInstitutionAttributes attributes;
+
     public InstitutionsDetailInstitution withAttributes(InstitutionsDetailInstitutionAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class InstitutionsDetailInstitution {
      */
     
     public String id;
+
     public InstitutionsDetailInstitution withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class InstitutionsDetailInstitution {
      */
     
     public InstitutionsDetailInstitutionLinks links;
+
     public InstitutionsDetailInstitution withLinks(InstitutionsDetailInstitutionLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class InstitutionsDetailInstitution {
      */
     
     public InstitutionsDetailInstitutionRelationships relationships;
+
     public InstitutionsDetailInstitution withRelationships(InstitutionsDetailInstitutionRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class InstitutionsDetailInstitution {
      */
     
     public String type;
+
     public InstitutionsDetailInstitution withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InstitutionsDetailInstitution(){}
 }

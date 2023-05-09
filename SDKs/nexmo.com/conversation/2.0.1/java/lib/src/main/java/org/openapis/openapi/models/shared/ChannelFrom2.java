@@ -15,6 +15,7 @@ public class ChannelFrom2 {
      */
     @JsonProperty("number")
     public String number;
+
     public ChannelFrom2 withNumber(String number) {
         this.number = number;
         return this;
@@ -25,9 +26,14 @@ public class ChannelFrom2 {
      */
     @JsonProperty("type")
     public String type;
+
     public ChannelFrom2 withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ChannelFrom2(@JsonProperty("number") String number, @JsonProperty("type") String type) {
+        this.number = number;
+        this.type = type;
+  }
 }

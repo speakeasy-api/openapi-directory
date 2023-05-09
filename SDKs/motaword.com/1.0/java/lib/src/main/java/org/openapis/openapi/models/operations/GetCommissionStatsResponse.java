@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCommissionStatsResponse {
@@ -12,6 +13,7 @@ public class GetCommissionStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.CommissionStats commissionStats;
+
     public GetCommissionStatsResponse withCommissionStats(org.openapis.openapi.models.shared.CommissionStats commissionStats) {
         this.commissionStats = commissionStats;
         return this;
@@ -19,6 +21,7 @@ public class GetCommissionStatsResponse {
     
     
     public String contentType;
+
     public GetCommissionStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCommissionStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetCommissionStatsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetCommissionStatsResponse {
     
     
     public Integer statusCode;
+
     public GetCommissionStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCommissionStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCommissionStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCommissionStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

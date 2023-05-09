@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceDetails {
     @JsonProperty("ResourceConfiguration")
     public String resourceConfiguration;
+
     public ResourceDetails withResourceConfiguration(String resourceConfiguration) {
         this.resourceConfiguration = resourceConfiguration;
         return this;
@@ -22,6 +23,7 @@ public class ResourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfigurationSchemaType")
     public ResourceConfigurationSchemaTypeEnum resourceConfigurationSchemaType;
+
     public ResourceDetails withResourceConfigurationSchemaType(ResourceConfigurationSchemaTypeEnum resourceConfigurationSchemaType) {
         this.resourceConfigurationSchemaType = resourceConfigurationSchemaType;
         return this;
@@ -29,6 +31,7 @@ public class ResourceDetails {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResourceDetails withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -36,9 +39,15 @@ public class ResourceDetails {
     
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ResourceDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceDetails(@JsonProperty("ResourceConfiguration") String resourceConfiguration, @JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") String resourceType) {
+        this.resourceConfiguration = resourceConfiguration;
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+  }
 }

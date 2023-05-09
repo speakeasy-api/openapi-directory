@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateScreenUsingPUTResponse {
     
     public String contentType;
+
     public UpdateScreenUsingPUTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateScreenUsingPUTResponse {
      */
     
     public org.openapis.openapi.models.shared.ManageScreen manageScreen;
+
     public UpdateScreenUsingPUTResponse withManageScreen(org.openapis.openapi.models.shared.ManageScreen manageScreen) {
         this.manageScreen = manageScreen;
         return this;
@@ -29,6 +32,7 @@ public class UpdateScreenUsingPUTResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public UpdateScreenUsingPUTResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class UpdateScreenUsingPUTResponse {
     
     
     public Integer statusCode;
+
     public UpdateScreenUsingPUTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateScreenUsingPUTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateScreenUsingPUTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateScreenUsingPUTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

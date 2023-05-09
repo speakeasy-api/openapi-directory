@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWorkspaceImageResponse {
@@ -12,6 +13,7 @@ public class DeleteWorkspaceImageResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWorkspaceImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteWorkspaceImageResponse {
     
     
     public String contentType;
+
     public DeleteWorkspaceImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWorkspaceImageResponse {
      */
     
     public java.util.Map<String, Object> deleteWorkspaceImageResult;
+
     public DeleteWorkspaceImageResponse withDeleteWorkspaceImageResult(java.util.Map<String, Object> deleteWorkspaceImageResult) {
         this.deleteWorkspaceImageResult = deleteWorkspaceImageResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWorkspaceImageResponse {
      */
     
     public Object invalidResourceStateException;
+
     public DeleteWorkspaceImageResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWorkspaceImageResponse {
      */
     
     public Object resourceAssociatedException;
+
     public DeleteWorkspaceImageResponse withResourceAssociatedException(Object resourceAssociatedException) {
         this.resourceAssociatedException = resourceAssociatedException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteWorkspaceImageResponse {
     
     
     public Integer statusCode;
+
     public DeleteWorkspaceImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteWorkspaceImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWorkspaceImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteWorkspaceImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

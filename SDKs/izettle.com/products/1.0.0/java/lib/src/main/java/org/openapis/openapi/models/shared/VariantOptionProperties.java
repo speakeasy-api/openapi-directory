@@ -12,6 +12,7 @@ public class VariantOptionProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public VariantOptionProperties withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -19,9 +20,13 @@ public class VariantOptionProperties {
     
     @JsonProperty("value")
     public String value;
+
     public VariantOptionProperties withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public VariantOptionProperties(@JsonProperty("value") String value) {
+        this.value = value;
+  }
 }

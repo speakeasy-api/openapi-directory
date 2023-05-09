@@ -15,9 +15,13 @@ public class PutEventsResponse {
      */
     @JsonProperty("EventsResponse")
     public EventsResponse eventsResponse;
+
     public PutEventsResponse withEventsResponse(EventsResponse eventsResponse) {
         this.eventsResponse = eventsResponse;
         return this;
     }
     
+    public PutEventsResponse(@JsonProperty("EventsResponse") EventsResponse eventsResponse) {
+        this.eventsResponse = eventsResponse;
+  }
 }

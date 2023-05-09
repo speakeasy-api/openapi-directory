@@ -15,6 +15,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedPattern")
     public String allowedPattern;
+
     public ParameterConstraints withAllowedPattern(String allowedPattern) {
         this.allowedPattern = allowedPattern;
         return this;
@@ -23,6 +24,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedValues")
     public String[] allowedValues;
+
     public ParameterConstraints withAllowedValues(String[] allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -31,6 +33,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintDescription")
     public String constraintDescription;
+
     public ParameterConstraints withConstraintDescription(String constraintDescription) {
         this.constraintDescription = constraintDescription;
         return this;
@@ -39,6 +42,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLength")
     public String maxLength;
+
     public ParameterConstraints withMaxLength(String maxLength) {
         this.maxLength = maxLength;
         return this;
@@ -47,6 +51,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxValue")
     public String maxValue;
+
     public ParameterConstraints withMaxValue(String maxValue) {
         this.maxValue = maxValue;
         return this;
@@ -55,6 +60,7 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinLength")
     public String minLength;
+
     public ParameterConstraints withMinLength(String minLength) {
         this.minLength = minLength;
         return this;
@@ -63,9 +69,11 @@ public class ParameterConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinValue")
     public String minValue;
+
     public ParameterConstraints withMinValue(String minValue) {
         this.minValue = minValue;
         return this;
     }
     
+    public ParameterConstraints(){}
 }

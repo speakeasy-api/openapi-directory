@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRevokeDBSecurityGroupIngressResponse {
     
     public byte[] body;
+
     public GETRevokeDBSecurityGroupIngressResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETRevokeDBSecurityGroupIngressResponse {
     
     
     public String contentType;
+
     public GETRevokeDBSecurityGroupIngressResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETRevokeDBSecurityGroupIngressResponse {
     
     
     public Integer statusCode;
+
     public GETRevokeDBSecurityGroupIngressResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETRevokeDBSecurityGroupIngressResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRevokeDBSecurityGroupIngressResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRevokeDBSecurityGroupIngressResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

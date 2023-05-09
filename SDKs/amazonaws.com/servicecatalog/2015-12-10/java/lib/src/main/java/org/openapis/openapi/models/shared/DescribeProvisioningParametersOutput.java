@@ -15,6 +15,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintSummaries")
     public ConstraintSummary[] constraintSummaries;
+
     public DescribeProvisioningParametersOutput withConstraintSummaries(ConstraintSummary[] constraintSummaries) {
         this.constraintSummaries = constraintSummaries;
         return this;
@@ -23,6 +24,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactOutputKeys")
     public ProvisioningArtifactOutput[] provisioningArtifactOutputKeys;
+
     public DescribeProvisioningParametersOutput withProvisioningArtifactOutputKeys(ProvisioningArtifactOutput[] provisioningArtifactOutputKeys) {
         this.provisioningArtifactOutputKeys = provisioningArtifactOutputKeys;
         return this;
@@ -31,6 +33,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactOutputs")
     public ProvisioningArtifactOutput[] provisioningArtifactOutputs;
+
     public DescribeProvisioningParametersOutput withProvisioningArtifactOutputs(ProvisioningArtifactOutput[] provisioningArtifactOutputs) {
         this.provisioningArtifactOutputs = provisioningArtifactOutputs;
         return this;
@@ -39,6 +42,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactParameters")
     public ProvisioningArtifactParameter[] provisioningArtifactParameters;
+
     public DescribeProvisioningParametersOutput withProvisioningArtifactParameters(ProvisioningArtifactParameter[] provisioningArtifactParameters) {
         this.provisioningArtifactParameters = provisioningArtifactParameters;
         return this;
@@ -47,6 +51,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactPreferences")
     public ProvisioningArtifactPreferences provisioningArtifactPreferences;
+
     public DescribeProvisioningParametersOutput withProvisioningArtifactPreferences(ProvisioningArtifactPreferences provisioningArtifactPreferences) {
         this.provisioningArtifactPreferences = provisioningArtifactPreferences;
         return this;
@@ -55,6 +60,7 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagOptions")
     public TagOptionSummary[] tagOptions;
+
     public DescribeProvisioningParametersOutput withTagOptions(TagOptionSummary[] tagOptions) {
         this.tagOptions = tagOptions;
         return this;
@@ -63,9 +69,11 @@ public class DescribeProvisioningParametersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageInstructions")
     public UsageInstruction[] usageInstructions;
+
     public DescribeProvisioningParametersOutput withUsageInstructions(UsageInstruction[] usageInstructions) {
         this.usageInstructions = usageInstructions;
         return this;
     }
     
+    public DescribeProvisioningParametersOutput(){}
 }

@@ -15,6 +15,7 @@ public class UpdateMultiNodeInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public UpdateMultiNodeInventory200ApplicationJSONNodes[] nodes;
+
     public UpdateMultiNodeInventory200ApplicationJSON withNodes(UpdateMultiNodeInventory200ApplicationJSONNodes[] nodes) {
         this.nodes = nodes;
         return this;
@@ -26,9 +27,11 @@ public class UpdateMultiNodeInventory200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public UpdateMultiNodeInventory200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public UpdateMultiNodeInventory200ApplicationJSON(){}
 }

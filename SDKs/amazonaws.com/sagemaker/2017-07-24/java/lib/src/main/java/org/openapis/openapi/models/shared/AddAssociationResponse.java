@@ -15,6 +15,7 @@ public class AddAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public AddAssociationResponse withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -23,9 +24,11 @@ public class AddAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public AddAssociationResponse withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public AddAssociationResponse(){}
 }

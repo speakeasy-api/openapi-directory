@@ -12,6 +12,7 @@ public class GetActionResourceShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionResourceShowRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,11 @@ public class GetActionResourceShowRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_tracking")
     public Boolean includeTracking;
+
     public GetActionResourceShowRequest withIncludeTracking(Boolean includeTracking) {
         this.includeTracking = includeTracking;
         return this;
     }
     
+    public GetActionResourceShowRequest(){}
 }

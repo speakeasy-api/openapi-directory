@@ -15,6 +15,7 @@ public class CachingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachingKeys")
     public String[] cachingKeys;
+
     public CachingConfig withCachingKeys(String[] cachingKeys) {
         this.cachingKeys = cachingKeys;
         return this;
@@ -22,9 +23,13 @@ public class CachingConfig {
     
     @JsonProperty("ttl")
     public Long ttl;
+
     public CachingConfig withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public CachingConfig(@JsonProperty("ttl") Long ttl) {
+        this.ttl = ttl;
+  }
 }

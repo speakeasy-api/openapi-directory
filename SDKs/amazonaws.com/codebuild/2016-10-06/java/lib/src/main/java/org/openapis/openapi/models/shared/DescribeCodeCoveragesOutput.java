@@ -15,6 +15,7 @@ public class DescribeCodeCoveragesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeCoverages")
     public CodeCoverage[] codeCoverages;
+
     public DescribeCodeCoveragesOutput withCodeCoverages(CodeCoverage[] codeCoverages) {
         this.codeCoverages = codeCoverages;
         return this;
@@ -23,9 +24,11 @@ public class DescribeCodeCoveragesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeCodeCoveragesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCodeCoveragesOutput(){}
 }

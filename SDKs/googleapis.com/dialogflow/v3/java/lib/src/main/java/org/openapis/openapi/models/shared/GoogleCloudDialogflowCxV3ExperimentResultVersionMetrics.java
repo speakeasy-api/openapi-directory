@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleCloudDialogflowCxV3ExperimentResultMetric[] metrics;
+
     public GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics withMetrics(GoogleCloudDialogflowCxV3ExperimentResultMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionCount")
     public Integer sessionCount;
+
     public GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics withSessionCount(Integer sessionCount) {
         this.sessionCount = sessionCount;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics(){}
 }

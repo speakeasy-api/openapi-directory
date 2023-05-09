@@ -15,6 +15,7 @@ public class ControllersPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ControllersPackageItem[] data;
+
     public ControllersPackagesResponse withData(ControllersPackageItem[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class ControllersPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ControllersLinks links;
+
     public ControllersPackagesResponse withLinks(ControllersLinks links) {
         this.links = links;
         return this;
@@ -31,9 +33,11 @@ public class ControllersPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public ControllersListMeta meta;
+
     public ControllersPackagesResponse withMeta(ControllersListMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public ControllersPackagesResponse(){}
 }

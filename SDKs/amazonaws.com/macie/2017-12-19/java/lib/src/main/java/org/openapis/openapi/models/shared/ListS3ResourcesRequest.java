@@ -12,6 +12,7 @@ public class ListS3ResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListS3ResourcesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListS3ResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberAccountId")
     public String memberAccountId;
+
     public ListS3ResourcesRequest withMemberAccountId(String memberAccountId) {
         this.memberAccountId = memberAccountId;
         return this;
@@ -28,9 +30,11 @@ public class ListS3ResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListS3ResourcesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListS3ResourcesRequest(){}
 }

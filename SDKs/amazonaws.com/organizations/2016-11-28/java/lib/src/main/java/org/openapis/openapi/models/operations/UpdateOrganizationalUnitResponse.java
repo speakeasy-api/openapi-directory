@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateOrganizationalUnitResponse {
@@ -12,6 +13,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public UpdateOrganizationalUnitResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateOrganizationalUnitResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateOrganizationalUnitResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateOrganizationalUnitResponse {
     
     
     public String contentType;
+
     public UpdateOrganizationalUnitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object duplicateOrganizationalUnitException;
+
     public UpdateOrganizationalUnitResponse withDuplicateOrganizationalUnitException(Object duplicateOrganizationalUnitException) {
         this.duplicateOrganizationalUnitException = duplicateOrganizationalUnitException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateOrganizationalUnitResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object organizationalUnitNotFoundException;
+
     public UpdateOrganizationalUnitResponse withOrganizationalUnitNotFoundException(Object organizationalUnitNotFoundException) {
         this.organizationalUnitNotFoundException = organizationalUnitNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateOrganizationalUnitResponse {
     
     
     public Integer statusCode;
+
     public UpdateOrganizationalUnitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateOrganizationalUnitResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateOrganizationalUnitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object serviceException;
+
     public UpdateOrganizationalUnitResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateOrganizationalUnitResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateOrganizationalUnitResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateOrganizationalUnitResponse updateOrganizationalUnitResponse;
+
     public UpdateOrganizationalUnitResponse withUpdateOrganizationalUnitResponse(org.openapis.openapi.models.shared.UpdateOrganizationalUnitResponse updateOrganizationalUnitResponse) {
         this.updateOrganizationalUnitResponse = updateOrganizationalUnitResponse;
         return this;
     }
     
+    public UpdateOrganizationalUnitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

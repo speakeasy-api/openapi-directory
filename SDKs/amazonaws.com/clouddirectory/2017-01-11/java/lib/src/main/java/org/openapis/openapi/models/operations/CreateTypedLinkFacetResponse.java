@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTypedLinkFacetResponse {
@@ -12,6 +13,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTypedLinkFacetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTypedLinkFacetResponse {
     
     
     public String contentType;
+
     public CreateTypedLinkFacetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public java.util.Map<String, Object> createTypedLinkFacetResponse;
+
     public CreateTypedLinkFacetResponse withCreateTypedLinkFacetResponse(java.util.Map<String, Object> createTypedLinkFacetResponse) {
         this.createTypedLinkFacetResponse = createTypedLinkFacetResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object facetAlreadyExistsException;
+
     public CreateTypedLinkFacetResponse withFacetAlreadyExistsException(Object facetAlreadyExistsException) {
         this.facetAlreadyExistsException = facetAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object facetValidationException;
+
     public CreateTypedLinkFacetResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object internalServiceException;
+
     public CreateTypedLinkFacetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object invalidArnException;
+
     public CreateTypedLinkFacetResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object invalidRuleException;
+
     public CreateTypedLinkFacetResponse withInvalidRuleException(Object invalidRuleException) {
         this.invalidRuleException = invalidRuleException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object limitExceededException;
+
     public CreateTypedLinkFacetResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -96,6 +106,7 @@ public class CreateTypedLinkFacetResponse {
     
     
     public Integer statusCode;
+
     public CreateTypedLinkFacetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateTypedLinkFacetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTypedLinkFacetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateTypedLinkFacetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object retryableConflictException;
+
     public CreateTypedLinkFacetResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -133,9 +147,14 @@ public class CreateTypedLinkFacetResponse {
      */
     
     public Object validationException;
+
     public CreateTypedLinkFacetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateTypedLinkFacetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

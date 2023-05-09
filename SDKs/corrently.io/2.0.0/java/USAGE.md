@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GsiDispatchRequest;
 import org.openapis.openapi.models.operations.GsiDispatchResponse;
 
@@ -16,15 +15,17 @@ public class Application {
             GsiDispatchRequest req = new GsiDispatchRequest() {{
                 key = "corrupti";
                 zip = "provident";
-            }}            
+            }};            
 
             GsiDispatchResponse res = sdk.dispatchGreenEnergyDistributionAPI.gsiDispatch(req);
 
-            if (res.gsiDispatch200ApplicationJSONObject.isPresent()) {
+            if (res.gsiDispatch200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billable")
     public Boolean isBillable;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withIsBillable(Boolean isBillable) {
         this.isBillable = isBillable;
         return this;
@@ -26,6 +27,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_billing")
     public Boolean isBilling;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withIsBilling(Boolean isBilling) {
         this.isBilling = isBilling;
         return this;
@@ -37,6 +39,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_microsoft_internal")
     public Boolean isMicrosoftInternal;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withIsMicrosoftInternal(Boolean isMicrosoftInternal) {
         this.isMicrosoftInternal = isMicrosoftInternal;
         return this;
@@ -47,6 +50,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
@@ -57,6 +61,7 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
      */
     @JsonProperty("subscription_name")
     public String subscriptionName;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withSubscriptionName(String subscriptionName) {
         this.subscriptionName = subscriptionName;
         return this;
@@ -67,9 +72,15 @@ public class DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscript
      */
     @JsonProperty("tenant_id")
     public String tenantId;
+
     public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public DistributionGroupsDetailsForOrg200ApplicationJSONAppsAzureSubscription(@JsonProperty("subscription_id") String subscriptionId, @JsonProperty("subscription_name") String subscriptionName, @JsonProperty("tenant_id") String tenantId) {
+        this.subscriptionId = subscriptionId;
+        this.subscriptionName = subscriptionName;
+        this.tenantId = tenantId;
+  }
 }

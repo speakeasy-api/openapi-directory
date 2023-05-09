@@ -15,9 +15,11 @@ public class SessionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionId")
     public String sessionId;
+
     public SessionInfo withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public SessionInfo(){}
 }

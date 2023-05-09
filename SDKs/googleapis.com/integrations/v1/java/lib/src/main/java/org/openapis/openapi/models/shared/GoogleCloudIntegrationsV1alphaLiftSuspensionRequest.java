@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaLiftSuspensionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionResult")
     public String suspensionResult;
+
     public GoogleCloudIntegrationsV1alphaLiftSuspensionRequest withSuspensionResult(String suspensionResult) {
         this.suspensionResult = suspensionResult;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaLiftSuspensionRequest(){}
 }

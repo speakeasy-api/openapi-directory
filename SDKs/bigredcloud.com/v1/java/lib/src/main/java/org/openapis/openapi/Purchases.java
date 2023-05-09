@@ -59,11 +59,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PurchasesDeleteResponse res = new org.openapis.openapi.models.operations.PurchasesDeleteResponse() {{
+        org.openapis.openapi.models.operations.PurchasesDeleteResponse res = new org.openapis.openapi.models.operations.PurchasesDeleteResponse(contentType, httpRes.statusCode()) {{
             purchasesDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PurchasesGetResponse res = new org.openapis.openapi.models.operations.PurchasesGetResponse() {{
+        org.openapis.openapi.models.operations.PurchasesGetResponse res = new org.openapis.openapi.models.operations.PurchasesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultPurchaseQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PurchasesPostResponse res = new org.openapis.openapi.models.operations.PurchasesPostResponse() {{
+        org.openapis.openapi.models.operations.PurchasesPostResponse res = new org.openapis.openapi.models.operations.PurchasesPostResponse(contentType, httpRes.statusCode()) {{
             purchasesPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PurchasesProcessBatchResponse res = new org.openapis.openapi.models.operations.PurchasesProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.PurchasesProcessBatchResponse res = new org.openapis.openapi.models.operations.PurchasesProcessBatchResponse(contentType, httpRes.statusCode()) {{
             purchasesProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PurchasesPutResponse res = new org.openapis.openapi.models.operations.PurchasesPutResponse() {{
+        org.openapis.openapi.models.operations.PurchasesPutResponse res = new org.openapis.openapi.models.operations.PurchasesPutResponse(contentType, httpRes.statusCode()) {{
             purchasesPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class Purchases {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1PurchasesIdResponse res = new org.openapis.openapi.models.operations.GetV1PurchasesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1PurchasesIdResponse res = new org.openapis.openapi.models.operations.GetV1PurchasesIdResponse(contentType, httpRes.statusCode()) {{
             purchaseDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

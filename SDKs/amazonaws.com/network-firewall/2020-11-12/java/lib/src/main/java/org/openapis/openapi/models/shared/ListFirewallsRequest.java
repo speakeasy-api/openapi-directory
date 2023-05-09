@@ -12,6 +12,7 @@ public class ListFirewallsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFirewallsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListFirewallsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListFirewallsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcIds")
     public String[] vpcIds;
+
     public ListFirewallsRequest withVpcIds(String[] vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }
     
+    public ListFirewallsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateConfigResponse {
@@ -12,6 +13,7 @@ public class CreateConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse;
+
     public CreateConfigResponse withConfigIdResponse(org.openapis.openapi.models.shared.ConfigIdResponse configIdResponse) {
         this.configIdResponse = configIdResponse;
         return this;
@@ -19,6 +21,7 @@ public class CreateConfigResponse {
     
     
     public String contentType;
+
     public CreateConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateConfigResponse {
      */
     
     public Object dependencyException;
+
     public CreateConfigResponse withDependencyException(Object dependencyException) {
         this.dependencyException = dependencyException;
         return this;
@@ -39,6 +43,7 @@ public class CreateConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class CreateConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateConfigResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateConfigResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -73,9 +81,14 @@ public class CreateConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

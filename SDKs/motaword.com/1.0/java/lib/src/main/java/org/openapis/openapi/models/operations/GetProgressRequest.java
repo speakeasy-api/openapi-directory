@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProgressRequest {
@@ -12,6 +13,7 @@ public class GetProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetProgressRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=raw")
     public Boolean raw;
+
     public GetProgressRequest withRaw(Boolean raw) {
         this.raw = raw;
         return this;
     }
     
+    public GetProgressRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

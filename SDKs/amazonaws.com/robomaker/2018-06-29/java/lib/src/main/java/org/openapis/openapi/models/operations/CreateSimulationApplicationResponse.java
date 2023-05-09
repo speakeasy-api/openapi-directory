@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSimulationApplicationResponse {
     
     public String contentType;
+
     public CreateSimulationApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSimulationApplicationResponse createSimulationApplicationResponse;
+
     public CreateSimulationApplicationResponse withCreateSimulationApplicationResponse(org.openapis.openapi.models.shared.CreateSimulationApplicationResponse createSimulationApplicationResponse) {
         this.createSimulationApplicationResponse = createSimulationApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateSimulationApplicationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object internalServerException;
+
     public CreateSimulationApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateSimulationApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateSimulationApplicationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateSimulationApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateSimulationApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateSimulationApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSimulationApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateSimulationApplicationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSimulationApplicationResponse {
      */
     
     public Object throttlingException;
+
     public CreateSimulationApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateSimulationApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostBenefitsDocumentUploadValidateDocumentResponse {
     
     public String contentType;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
     
     
     public Integer statusCode;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument200ApplicationJSON postBenefitsDocumentUploadValidateDocument200ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument200ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument200ApplicationJSON postBenefitsDocumentUploadValidateDocument200ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument200ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument401ApplicationJSON postBenefitsDocumentUploadValidateDocument401ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument401ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument401ApplicationJSON postBenefitsDocumentUploadValidateDocument401ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument401ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument403ApplicationJSON postBenefitsDocumentUploadValidateDocument403ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument403ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument403ApplicationJSON postBenefitsDocumentUploadValidateDocument403ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument403ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument422ApplicationJSON postBenefitsDocumentUploadValidateDocument422ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument422ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument422ApplicationJSON postBenefitsDocumentUploadValidateDocument422ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument422ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument422ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument429ApplicationJSON postBenefitsDocumentUploadValidateDocument429ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument429ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument429ApplicationJSON postBenefitsDocumentUploadValidateDocument429ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument429ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class PostBenefitsDocumentUploadValidateDocumentResponse {
      */
     
     public PostBenefitsDocumentUploadValidateDocument500ApplicationJSON postBenefitsDocumentUploadValidateDocument500ApplicationJSONObject;
+
     public PostBenefitsDocumentUploadValidateDocumentResponse withPostBenefitsDocumentUploadValidateDocument500ApplicationJSONObject(PostBenefitsDocumentUploadValidateDocument500ApplicationJSON postBenefitsDocumentUploadValidateDocument500ApplicationJSONObject) {
         this.postBenefitsDocumentUploadValidateDocument500ApplicationJSONObject = postBenefitsDocumentUploadValidateDocument500ApplicationJSONObject;
         return this;
     }
     
+    public PostBenefitsDocumentUploadValidateDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddBankTransferBatchPaymentRequest {
@@ -12,6 +13,7 @@ public class AddBankTransferBatchPaymentRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public AddBankTransferBatchPaymentRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class AddBankTransferBatchPaymentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=batchUuid")
     public String batchUuid;
+
     public AddBankTransferBatchPaymentRequest withBatchUuid(String batchUuid) {
         this.batchUuid = batchUuid;
         return this;
     }
     
+    public AddBankTransferBatchPaymentRequest(@JsonProperty("RequestBody") Object requestBody, @JsonProperty("batchUuid") String batchUuid) {
+        this.requestBody = requestBody;
+        this.batchUuid = batchUuid;
+  }
 }

@@ -18,6 +18,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowSubnetCidrRoutesOverlap")
     public Boolean allowSubnetCidrRoutesOverlap;
+
     public AddSubnetworkRequest withAllowSubnetCidrRoutesOverlap(Boolean allowSubnetCidrRoutesOverlap) {
         this.allowSubnetCidrRoutesOverlap = allowSubnetCidrRoutesOverlap;
         return this;
@@ -29,6 +30,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkServiceNetworkingUsePermission")
     public Boolean checkServiceNetworkingUsePermission;
+
     public AddSubnetworkRequest withCheckServiceNetworkingUsePermission(Boolean checkServiceNetworkingUsePermission) {
         this.checkServiceNetworkingUsePermission = checkServiceNetworkingUsePermission;
         return this;
@@ -40,6 +42,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeIdempotencyWindow")
     public String computeIdempotencyWindow;
+
     public AddSubnetworkRequest withComputeIdempotencyWindow(String computeIdempotencyWindow) {
         this.computeIdempotencyWindow = computeIdempotencyWindow;
         return this;
@@ -51,6 +54,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumer")
     public String consumer;
+
     public AddSubnetworkRequest withConsumer(String consumer) {
         this.consumer = consumer;
         return this;
@@ -62,6 +66,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public AddSubnetworkRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -73,6 +78,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AddSubnetworkRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipPrefixLength")
     public Integer ipPrefixLength;
+
     public AddSubnetworkRequest withIpPrefixLength(Integer ipPrefixLength) {
         this.ipPrefixLength = ipPrefixLength;
         return this;
@@ -95,6 +102,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outsideAllocationPublicIpRange")
     public String outsideAllocationPublicIpRange;
+
     public AddSubnetworkRequest withOutsideAllocationPublicIpRange(String outsideAllocationPublicIpRange) {
         this.outsideAllocationPublicIpRange = outsideAllocationPublicIpRange;
         return this;
@@ -106,6 +114,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateIpv6GoogleAccess")
     public String privateIpv6GoogleAccess;
+
     public AddSubnetworkRequest withPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
         this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
         return this;
@@ -117,6 +126,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public String purpose;
+
     public AddSubnetworkRequest withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -128,6 +138,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public AddSubnetworkRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +150,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedAddress")
     public String requestedAddress;
+
     public AddSubnetworkRequest withRequestedAddress(String requestedAddress) {
         this.requestedAddress = requestedAddress;
         return this;
@@ -150,6 +162,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedRanges")
     public String[] requestedRanges;
+
     public AddSubnetworkRequest withRequestedRanges(String[] requestedRanges) {
         this.requestedRanges = requestedRanges;
         return this;
@@ -161,6 +174,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public AddSubnetworkRequest withRole(String role) {
         this.role = role;
         return this;
@@ -172,6 +186,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryIpRangeSpecs")
     public SecondaryIpRangeSpec[] secondaryIpRangeSpecs;
+
     public AddSubnetworkRequest withSecondaryIpRangeSpecs(SecondaryIpRangeSpec[] secondaryIpRangeSpecs) {
         this.secondaryIpRangeSpecs = secondaryIpRangeSpecs;
         return this;
@@ -183,6 +198,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public AddSubnetworkRequest withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -194,6 +210,7 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkUsers")
     public String[] subnetworkUsers;
+
     public AddSubnetworkRequest withSubnetworkUsers(String[] subnetworkUsers) {
         this.subnetworkUsers = subnetworkUsers;
         return this;
@@ -205,9 +222,11 @@ public class AddSubnetworkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCustomComputeIdempotencyWindow")
     public Boolean useCustomComputeIdempotencyWindow;
+
     public AddSubnetworkRequest withUseCustomComputeIdempotencyWindow(Boolean useCustomComputeIdempotencyWindow) {
         this.useCustomComputeIdempotencyWindow = useCustomComputeIdempotencyWindow;
         return this;
     }
     
+    public AddSubnetworkRequest(){}
 }

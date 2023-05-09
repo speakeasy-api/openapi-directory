@@ -22,6 +22,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomesticScheduledConsentResponse5DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withCreditorAccount(OBWriteDomesticScheduledConsentResponse5DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -33,6 +34,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorPostalAddress")
     public OBPostalAddress6 creditorPostalAddress;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withCreditorPostalAddress(OBPostalAddress6 creditorPostalAddress) {
         this.creditorPostalAddress = creditorPostalAddress;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomesticScheduledConsentResponse5DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withDebtorAccount(OBWriteDomesticScheduledConsentResponse5DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -57,6 +60,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -68,6 +72,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteDomesticScheduledConsentResponse5DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withInstructedAmount(OBWriteDomesticScheduledConsentResponse5DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -79,6 +84,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -91,6 +97,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -102,6 +109,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteDomesticScheduledConsentResponse5DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withRemittanceInformation(OBWriteDomesticScheduledConsentResponse5DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -117,6 +125,7 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedExecutionDateTime")
     public OffsetDateTime requestedExecutionDateTime;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withRequestedExecutionDateTime(OffsetDateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
@@ -128,9 +137,16 @@ public class OBWriteDomesticScheduledConsentResponse5DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomesticScheduledConsentResponse5DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomesticScheduledConsentResponse5DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomesticScheduledConsentResponse5DataInitiationCreditorAccount creditorAccount, @JsonProperty("InstructedAmount") OBWriteDomesticScheduledConsentResponse5DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification, @JsonProperty("RequestedExecutionDateTime") OffsetDateTime requestedExecutionDateTime) {
+        this.creditorAccount = creditorAccount;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+        this.requestedExecutionDateTime = requestedExecutionDateTime;
+  }
 }

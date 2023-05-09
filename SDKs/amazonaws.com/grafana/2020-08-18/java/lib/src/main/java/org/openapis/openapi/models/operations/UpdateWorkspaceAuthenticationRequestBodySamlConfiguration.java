@@ -15,6 +15,7 @@ public class UpdateWorkspaceAuthenticationRequestBodySamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrganizations")
     public String[] allowedOrganizations;
+
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration withAllowedOrganizations(String[] allowedOrganizations) {
         this.allowedOrganizations = allowedOrganizations;
         return this;
@@ -23,6 +24,7 @@ public class UpdateWorkspaceAuthenticationRequestBodySamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assertionAttributes")
     public org.openapis.openapi.models.shared.AssertionAttributes assertionAttributes;
+
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration withAssertionAttributes(org.openapis.openapi.models.shared.AssertionAttributes assertionAttributes) {
         this.assertionAttributes = assertionAttributes;
         return this;
@@ -31,6 +33,7 @@ public class UpdateWorkspaceAuthenticationRequestBodySamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpMetadata")
     public org.openapis.openapi.models.shared.IdpMetadata idpMetadata;
+
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration withIdpMetadata(org.openapis.openapi.models.shared.IdpMetadata idpMetadata) {
         this.idpMetadata = idpMetadata;
         return this;
@@ -39,6 +42,7 @@ public class UpdateWorkspaceAuthenticationRequestBodySamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loginValidityDuration")
     public Long loginValidityDuration;
+
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration withLoginValidityDuration(Long loginValidityDuration) {
         this.loginValidityDuration = loginValidityDuration;
         return this;
@@ -47,9 +51,11 @@ public class UpdateWorkspaceAuthenticationRequestBodySamlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleValues")
     public org.openapis.openapi.models.shared.RoleValues roleValues;
+
     public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration withRoleValues(org.openapis.openapi.models.shared.RoleValues roleValues) {
         this.roleValues = roleValues;
         return this;
     }
     
+    public UpdateWorkspaceAuthenticationRequestBodySamlConfiguration(){}
 }

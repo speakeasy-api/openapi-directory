@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImporterExporterCodeVerificationAPIRequest {
@@ -12,9 +13,13 @@ public class ImporterExporterCodeVerificationAPIRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=iec")
     public String iec;
+
     public ImporterExporterCodeVerificationAPIRequest withIec(String iec) {
         this.iec = iec;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPIRequest(@JsonProperty("iec") String iec) {
+        this.iec = iec;
+  }
 }

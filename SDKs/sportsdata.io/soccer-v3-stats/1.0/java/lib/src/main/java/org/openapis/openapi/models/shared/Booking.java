@@ -12,6 +12,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BookingId")
     public Long bookingId;
+
     public Booking withBookingId(Long bookingId) {
         this.bookingId = bookingId;
         return this;
@@ -20,6 +21,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameId")
     public Long gameId;
+
     public Booking withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -28,6 +30,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinute")
     public Long gameMinute;
+
     public Booking withGameMinute(Long gameMinute) {
         this.gameMinute = gameMinute;
         return this;
@@ -36,6 +39,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameMinuteExtra")
     public Long gameMinuteExtra;
+
     public Booking withGameMinuteExtra(Long gameMinuteExtra) {
         this.gameMinuteExtra = gameMinuteExtra;
         return this;
@@ -44,6 +48,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Booking withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public Booking withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -60,6 +66,7 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Booking withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -68,9 +75,11 @@ public class Booking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Booking withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Booking(){}
 }

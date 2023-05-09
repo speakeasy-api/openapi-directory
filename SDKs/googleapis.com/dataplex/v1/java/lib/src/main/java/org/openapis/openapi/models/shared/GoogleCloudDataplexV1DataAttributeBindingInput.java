@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public String[] attributes;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withAttributes(String[] attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public GoogleCloudDataplexV1DataAttributeBindingPath[] paths;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withPaths(GoogleCloudDataplexV1DataAttributeBindingPath[] paths) {
         this.paths = paths;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDataplexV1DataAttributeBindingInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudDataplexV1DataAttributeBindingInput withResource(String resource) {
         this.resource = resource;
         return this;
     }
     
+    public GoogleCloudDataplexV1DataAttributeBindingInput(){}
 }

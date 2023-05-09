@@ -15,9 +15,13 @@ public class JobDisableParameter {
      */
     @JsonProperty("disableTasks")
     public JobDisableParameterDisableTasksEnum disableTasks;
+
     public JobDisableParameter withDisableTasks(JobDisableParameterDisableTasksEnum disableTasks) {
         this.disableTasks = disableTasks;
         return this;
     }
     
+    public JobDisableParameter(@JsonProperty("disableTasks") JobDisableParameterDisableTasksEnum disableTasks) {
+        this.disableTasks = disableTasks;
+  }
 }

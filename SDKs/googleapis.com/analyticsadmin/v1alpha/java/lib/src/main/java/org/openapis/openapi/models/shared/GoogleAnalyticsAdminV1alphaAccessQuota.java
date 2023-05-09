@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAccessQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentRequests")
     public GoogleAnalyticsAdminV1alphaAccessQuotaStatus concurrentRequests;
+
     public GoogleAnalyticsAdminV1alphaAccessQuota withConcurrentRequests(GoogleAnalyticsAdminV1alphaAccessQuotaStatus concurrentRequests) {
         this.concurrentRequests = concurrentRequests;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1alphaAccessQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverErrorsPerProjectPerHour")
     public GoogleAnalyticsAdminV1alphaAccessQuotaStatus serverErrorsPerProjectPerHour;
+
     public GoogleAnalyticsAdminV1alphaAccessQuota withServerErrorsPerProjectPerHour(GoogleAnalyticsAdminV1alphaAccessQuotaStatus serverErrorsPerProjectPerHour) {
         this.serverErrorsPerProjectPerHour = serverErrorsPerProjectPerHour;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAnalyticsAdminV1alphaAccessQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerDay")
     public GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerDay;
+
     public GoogleAnalyticsAdminV1alphaAccessQuota withTokensPerDay(GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerDay) {
         this.tokensPerDay = tokensPerDay;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAnalyticsAdminV1alphaAccessQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerHour")
     public GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerHour;
+
     public GoogleAnalyticsAdminV1alphaAccessQuota withTokensPerHour(GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerHour) {
         this.tokensPerHour = tokensPerHour;
         return this;
@@ -62,9 +66,11 @@ public class GoogleAnalyticsAdminV1alphaAccessQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokensPerProjectPerHour")
     public GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerProjectPerHour;
+
     public GoogleAnalyticsAdminV1alphaAccessQuota withTokensPerProjectPerHour(GoogleAnalyticsAdminV1alphaAccessQuotaStatus tokensPerProjectPerHour) {
         this.tokensPerProjectPerHour = tokensPerProjectPerHour;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAccessQuota(){}
 }

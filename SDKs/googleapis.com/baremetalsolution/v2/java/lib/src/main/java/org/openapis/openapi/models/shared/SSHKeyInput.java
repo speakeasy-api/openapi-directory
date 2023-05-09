@@ -18,9 +18,11 @@ public class SSHKeyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public String publicKey;
+
     public SSHKeyInput withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public SSHKeyInput(){}
 }

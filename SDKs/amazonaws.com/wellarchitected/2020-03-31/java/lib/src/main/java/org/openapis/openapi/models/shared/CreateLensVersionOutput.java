@@ -15,6 +15,7 @@ public class CreateLensVersionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensArn")
     public String lensArn;
+
     public CreateLensVersionOutput withLensArn(String lensArn) {
         this.lensArn = lensArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateLensVersionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LensVersion")
     public String lensVersion;
+
     public CreateLensVersionOutput withLensVersion(String lensVersion) {
         this.lensVersion = lensVersion;
         return this;
     }
     
+    public CreateLensVersionOutput(){}
 }

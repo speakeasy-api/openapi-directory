@@ -18,6 +18,7 @@ public class AttributePropagationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public AttributePropagationSettings withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -29,6 +30,7 @@ public class AttributePropagationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public AttributePropagationSettings withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -40,9 +42,11 @@ public class AttributePropagationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputCredentials")
     public AttributePropagationSettingsOutputCredentialsEnum[] outputCredentials;
+
     public AttributePropagationSettings withOutputCredentials(AttributePropagationSettingsOutputCredentialsEnum[] outputCredentials) {
         this.outputCredentials = outputCredentials;
         return this;
     }
     
+    public AttributePropagationSettings(){}
 }

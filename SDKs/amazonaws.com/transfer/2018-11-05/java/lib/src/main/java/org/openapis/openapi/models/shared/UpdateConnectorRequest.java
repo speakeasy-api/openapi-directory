@@ -12,6 +12,7 @@ public class UpdateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessRole")
     public String accessRole;
+
     public UpdateConnectorRequest withAccessRole(String accessRole) {
         this.accessRole = accessRole;
         return this;
@@ -20,6 +21,7 @@ public class UpdateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("As2Config")
     public As2ConnectorConfig as2Config;
+
     public UpdateConnectorRequest withAs2Config(As2ConnectorConfig as2Config) {
         this.as2Config = as2Config;
         return this;
@@ -27,6 +29,7 @@ public class UpdateConnectorRequest {
     
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public UpdateConnectorRequest withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -35,6 +38,7 @@ public class UpdateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoggingRole")
     public String loggingRole;
+
     public UpdateConnectorRequest withLoggingRole(String loggingRole) {
         this.loggingRole = loggingRole;
         return this;
@@ -43,9 +47,13 @@ public class UpdateConnectorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Url")
     public String url;
+
     public UpdateConnectorRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UpdateConnectorRequest(@JsonProperty("ConnectorId") String connectorId) {
+        this.connectorId = connectorId;
+  }
 }

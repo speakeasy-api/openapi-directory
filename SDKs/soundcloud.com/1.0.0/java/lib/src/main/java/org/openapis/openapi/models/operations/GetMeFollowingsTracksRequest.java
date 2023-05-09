@@ -13,6 +13,7 @@ public class GetMeFollowingsTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetMeFollowingsTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +24,7 @@ public class GetMeFollowingsTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeFollowingsTracksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -30,12 +32,17 @@ public class GetMeFollowingsTracksRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetMeFollowingsTracksRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetMeFollowingsTracksRequest(){}
 }

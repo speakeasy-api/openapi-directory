@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetGroupByNameRequest {
@@ -12,6 +13,7 @@ public class GroupV2GetGroupByNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupName")
     public String groupName;
+
     public GroupV2GetGroupByNameRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -22,9 +24,14 @@ public class GroupV2GetGroupByNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupType")
     public Integer groupType;
+
     public GroupV2GetGroupByNameRequest withGroupType(Integer groupType) {
         this.groupType = groupType;
         return this;
     }
     
+    public GroupV2GetGroupByNameRequest(@JsonProperty("groupName") String groupName, @JsonProperty("groupType") Integer groupType) {
+        this.groupName = groupName;
+        this.groupType = groupType;
+  }
 }

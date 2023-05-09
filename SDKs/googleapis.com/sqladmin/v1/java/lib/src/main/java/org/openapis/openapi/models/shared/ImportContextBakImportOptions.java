@@ -15,6 +15,7 @@ public class ImportContextBakImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionOptions")
     public ImportContextBakImportOptionsEncryptionOptions encryptionOptions;
+
     public ImportContextBakImportOptions withEncryptionOptions(ImportContextBakImportOptionsEncryptionOptions encryptionOptions) {
         this.encryptionOptions = encryptionOptions;
         return this;
@@ -26,9 +27,11 @@ public class ImportContextBakImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("striped")
     public Boolean striped;
+
     public ImportContextBakImportOptions withStriped(Boolean striped) {
         this.striped = striped;
         return this;
     }
     
+    public ImportContextBakImportOptions(){}
 }

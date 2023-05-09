@@ -12,9 +12,11 @@ public class GetConsumerV1AppointmentsBookingfieldsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationId")
     public String locationId;
+
     public GetConsumerV1AppointmentsBookingfieldsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public GetConsumerV1AppointmentsBookingfieldsRequest(){}
 }

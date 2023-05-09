@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateMultipartUploadResponse {
     
     public String contentType;
+
     public InitiateMultipartUploadResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateMultipartUploadResponse {
      */
     
     public java.util.Map<String, Object> initiateMultipartUploadOutput;
+
     public InitiateMultipartUploadResponse withInitiateMultipartUploadOutput(java.util.Map<String, Object> initiateMultipartUploadOutput) {
         this.initiateMultipartUploadOutput = initiateMultipartUploadOutput;
         return this;
@@ -29,6 +32,7 @@ public class InitiateMultipartUploadResponse {
      */
     
     public Object invalidParameterValueException;
+
     public InitiateMultipartUploadResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class InitiateMultipartUploadResponse {
      */
     
     public Object missingParameterValueException;
+
     public InitiateMultipartUploadResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateMultipartUploadResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InitiateMultipartUploadResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateMultipartUploadResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InitiateMultipartUploadResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class InitiateMultipartUploadResponse {
     
     
     public Integer statusCode;
+
     public InitiateMultipartUploadResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class InitiateMultipartUploadResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateMultipartUploadResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InitiateMultipartUploadResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

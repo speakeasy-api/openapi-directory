@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RotatePagesV1RequestBody {
@@ -12,6 +13,7 @@ public class RotatePagesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=angle")
     public RotatePagesV1RequestBodyAngleEnum angle;
+
     public RotatePagesV1RequestBody withAngle(RotatePagesV1RequestBodyAngleEnum angle) {
         this.angle = angle;
         return this;
@@ -22,6 +24,7 @@ public class RotatePagesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public RotatePagesV1RequestBodyFile file;
+
     public RotatePagesV1RequestBody withFile(RotatePagesV1RequestBodyFile file) {
         this.file = file;
         return this;
@@ -32,6 +35,7 @@ public class RotatePagesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=first_page")
     public Integer firstPage;
+
     public RotatePagesV1RequestBody withFirstPage(Integer firstPage) {
         this.firstPage = firstPage;
         return this;
@@ -42,9 +46,14 @@ public class RotatePagesV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=last_page")
     public Integer lastPage;
+
     public RotatePagesV1RequestBody withLastPage(Integer lastPage) {
         this.lastPage = lastPage;
         return this;
     }
     
+    public RotatePagesV1RequestBody(@JsonProperty("angle") RotatePagesV1RequestBodyAngleEnum angle, @JsonProperty("file") RotatePagesV1RequestBodyFile file) {
+        this.angle = angle;
+        this.file = file;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SmartdevicemanagementEnterprisesStructuresRoomsListResponse {
     
     public String contentType;
+
     public SmartdevicemanagementEnterprisesStructuresRoomsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SmartdevicemanagementEnterprisesStructuresRoomsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleHomeEnterpriseSdmV1ListRoomsResponse googleHomeEnterpriseSdmV1ListRoomsResponse;
+
     public SmartdevicemanagementEnterprisesStructuresRoomsListResponse withGoogleHomeEnterpriseSdmV1ListRoomsResponse(org.openapis.openapi.models.shared.GoogleHomeEnterpriseSdmV1ListRoomsResponse googleHomeEnterpriseSdmV1ListRoomsResponse) {
         this.googleHomeEnterpriseSdmV1ListRoomsResponse = googleHomeEnterpriseSdmV1ListRoomsResponse;
         return this;
@@ -26,6 +29,7 @@ public class SmartdevicemanagementEnterprisesStructuresRoomsListResponse {
     
     
     public Integer statusCode;
+
     public SmartdevicemanagementEnterprisesStructuresRoomsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SmartdevicemanagementEnterprisesStructuresRoomsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SmartdevicemanagementEnterprisesStructuresRoomsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SmartdevicemanagementEnterprisesStructuresRoomsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -64,11 +64,9 @@ public class Bt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssignTokenResponse res = new org.openapis.openapi.models.operations.AssignTokenResponse() {{
+        org.openapis.openapi.models.operations.AssignTokenResponse res = new org.openapis.openapi.models.operations.AssignTokenResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 401) {
@@ -112,11 +110,9 @@ public class Bt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse res = new org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse() {{
+        org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse res = new org.openapis.openapi.models.operations.CheckEeBtEligibilityResponse(contentType, httpRes.statusCode()) {{
             eeBtEligibility = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Bt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CheckUserTokenResponse res = new org.openapis.openapi.models.operations.CheckUserTokenResponse() {{
+        org.openapis.openapi.models.operations.CheckUserTokenResponse res = new org.openapis.openapi.models.operations.CheckUserTokenResponse(contentType, httpRes.statusCode()) {{
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,12 +198,10 @@ public class Bt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlanByTokenResponse res = new org.openapis.openapi.models.operations.GetPlanByTokenResponse() {{
+        org.openapis.openapi.models.operations.GetPlanByTokenResponse res = new org.openapis.openapi.models.operations.GetPlanByTokenResponse(contentType, httpRes.statusCode()) {{
             btPlanListItem = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -256,12 +248,10 @@ public class Bt {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlansResponse res = new org.openapis.openapi.models.operations.GetPlansResponse() {{
+        org.openapis.openapi.models.operations.GetPlansResponse res = new org.openapis.openapi.models.operations.GetPlansResponse(contentType, httpRes.statusCode()) {{
             btPlans = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

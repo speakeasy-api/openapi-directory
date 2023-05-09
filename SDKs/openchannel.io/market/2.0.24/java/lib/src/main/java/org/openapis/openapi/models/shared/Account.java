@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Account - The connected Stripe account for a developer
@@ -15,6 +15,7 @@ public class Account {
      */
     
     public String accountName;
+
     public Account withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -25,6 +26,7 @@ public class Account {
      */
     
     public String country;
+
     public Account withCountry(String country) {
         this.country = country;
         return this;
@@ -35,6 +37,7 @@ public class Account {
      */
     
     public String defaultCurrency;
+
     public Account withDefaultCurrency(String defaultCurrency) {
         this.defaultCurrency = defaultCurrency;
         return this;
@@ -45,9 +48,16 @@ public class Account {
      */
     
     public String stripeId;
+
     public Account withStripeId(String stripeId) {
         this.stripeId = stripeId;
         return this;
     }
     
+    public Account(@JsonProperty("accountName") String accountName, @JsonProperty("country") String country, @JsonProperty("defaultCurrency") String defaultCurrency, @JsonProperty("stripeId") String stripeId) {
+        this.accountName = accountName;
+        this.country = country;
+        this.defaultCurrency = defaultCurrency;
+        this.stripeId = stripeId;
+  }
 }

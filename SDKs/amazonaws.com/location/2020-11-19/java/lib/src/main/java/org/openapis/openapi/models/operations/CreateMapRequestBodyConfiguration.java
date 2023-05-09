@@ -15,9 +15,11 @@ public class CreateMapRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Style")
     public String style;
+
     public CreateMapRequestBodyConfiguration withStyle(String style) {
         this.style = style;
         return this;
     }
     
+    public CreateMapRequestBodyConfiguration(){}
 }

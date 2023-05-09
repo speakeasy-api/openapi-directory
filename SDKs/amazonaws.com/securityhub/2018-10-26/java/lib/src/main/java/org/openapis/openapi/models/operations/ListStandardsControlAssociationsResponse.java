@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStandardsControlAssociationsResponse {
     
     public String contentType;
+
     public ListStandardsControlAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStandardsControlAssociationsResponse {
      */
     
     public Object internalException;
+
     public ListStandardsControlAssociationsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -29,6 +32,7 @@ public class ListStandardsControlAssociationsResponse {
      */
     
     public Object invalidAccessException;
+
     public ListStandardsControlAssociationsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -39,6 +43,7 @@ public class ListStandardsControlAssociationsResponse {
      */
     
     public Object invalidInputException;
+
     public ListStandardsControlAssociationsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListStandardsControlAssociationsResponse {
      */
     
     public Object limitExceededException;
+
     public ListStandardsControlAssociationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class ListStandardsControlAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStandardsControlAssociationsResponse listStandardsControlAssociationsResponse;
+
     public ListStandardsControlAssociationsResponse withListStandardsControlAssociationsResponse(org.openapis.openapi.models.shared.ListStandardsControlAssociationsResponse listStandardsControlAssociationsResponse) {
         this.listStandardsControlAssociationsResponse = listStandardsControlAssociationsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListStandardsControlAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListStandardsControlAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListStandardsControlAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStandardsControlAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStandardsControlAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

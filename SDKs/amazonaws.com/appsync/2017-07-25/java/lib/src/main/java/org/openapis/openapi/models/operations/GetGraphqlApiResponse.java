@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGraphqlApiResponse {
@@ -12,6 +13,7 @@ public class GetGraphqlApiResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGraphqlApiResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetGraphqlApiResponse {
      */
     
     public Object badRequestException;
+
     public GetGraphqlApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class GetGraphqlApiResponse {
     
     
     public String contentType;
+
     public GetGraphqlApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetGraphqlApiResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGraphqlApiResponse getGraphqlApiResponse;
+
     public GetGraphqlApiResponse withGetGraphqlApiResponse(org.openapis.openapi.models.shared.GetGraphqlApiResponse getGraphqlApiResponse) {
         this.getGraphqlApiResponse = getGraphqlApiResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetGraphqlApiResponse {
      */
     
     public Object internalFailureException;
+
     public GetGraphqlApiResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class GetGraphqlApiResponse {
      */
     
     public Object notFoundException;
+
     public GetGraphqlApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetGraphqlApiResponse {
     
     
     public Integer statusCode;
+
     public GetGraphqlApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetGraphqlApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGraphqlApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetGraphqlApiResponse {
      */
     
     public Object unauthorizedException;
+
     public GetGraphqlApiResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetGraphqlApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

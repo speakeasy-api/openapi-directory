@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClassificationScopeResponse {
@@ -12,6 +13,7 @@ public class UpdateClassificationScopeResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateClassificationScopeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClassificationScopeResponse {
     
     
     public String contentType;
+
     public UpdateClassificationScopeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClassificationScopeResponse {
      */
     
     public Object internalServerException;
+
     public UpdateClassificationScopeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateClassificationScopeResponse {
     
     
     public Integer statusCode;
+
     public UpdateClassificationScopeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateClassificationScopeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClassificationScopeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateClassificationScopeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateClassificationScopeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateClassificationScopeResponse {
      */
     
     public Object throttlingException;
+
     public UpdateClassificationScopeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateClassificationScopeResponse {
      */
     
     public java.util.Map<String, Object> updateClassificationScopeResponse;
+
     public UpdateClassificationScopeResponse withUpdateClassificationScopeResponse(java.util.Map<String, Object> updateClassificationScopeResponse) {
         this.updateClassificationScopeResponse = updateClassificationScopeResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateClassificationScopeResponse {
      */
     
     public Object validationException;
+
     public UpdateClassificationScopeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateClassificationScopeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

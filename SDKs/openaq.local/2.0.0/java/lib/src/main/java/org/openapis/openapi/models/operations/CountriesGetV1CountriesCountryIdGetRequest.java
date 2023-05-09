@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CountriesGetV1CountriesCountryIdGetRequest {
@@ -14,6 +15,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public CountriesGetV1CountriesCountryIdGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -21,6 +23,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country_id")
     public String countryId;
+
     public CountriesGetV1CountriesCountryIdGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -28,6 +31,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CountriesGetV1CountriesCountryIdGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -35,6 +39,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public CountriesGetV1CountriesCountryIdGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -45,6 +50,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public CountriesGetV1CountriesCountryIdGetOrderByCountriesOrderEnum orderBy;
+
     public CountriesGetV1CountriesCountryIdGetRequest withOrderBy(CountriesGetV1CountriesCountryIdGetOrderByCountriesOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -55,6 +61,7 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CountriesGetV1CountriesCountryIdGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -65,9 +72,13 @@ public class CountriesGetV1CountriesCountryIdGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public CountriesGetV1CountriesCountryIdGetSortSortEnum sort;
+
     public CountriesGetV1CountriesCountryIdGetRequest withSort(CountriesGetV1CountriesCountryIdGetSortSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public CountriesGetV1CountriesCountryIdGetRequest(@JsonProperty("country_id") String countryId) {
+        this.countryId = countryId;
+  }
 }

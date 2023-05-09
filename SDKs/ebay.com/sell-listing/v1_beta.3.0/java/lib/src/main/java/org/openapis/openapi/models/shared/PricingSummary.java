@@ -18,6 +18,7 @@ public class PricingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionReservePrice")
     public Amount auctionReservePrice;
+
     public PricingSummary withAuctionReservePrice(Amount auctionReservePrice) {
         this.auctionReservePrice = auctionReservePrice;
         return this;
@@ -29,6 +30,7 @@ public class PricingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auctionStartPrice")
     public Amount auctionStartPrice;
+
     public PricingSummary withAuctionStartPrice(Amount auctionStartPrice) {
         this.auctionStartPrice = auctionStartPrice;
         return this;
@@ -40,9 +42,11 @@ public class PricingSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Amount price;
+
     public PricingSummary withPrice(Amount price) {
         this.price = price;
         return this;
     }
     
+    public PricingSummary(){}
 }

@@ -15,6 +15,7 @@ public class GetActivityTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public GetActivityTaskOutput withInput(String input) {
         this.input = input;
         return this;
@@ -23,9 +24,11 @@ public class GetActivityTaskOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskToken")
     public String taskToken;
+
     public GetActivityTaskOutput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public GetActivityTaskOutput(){}
 }

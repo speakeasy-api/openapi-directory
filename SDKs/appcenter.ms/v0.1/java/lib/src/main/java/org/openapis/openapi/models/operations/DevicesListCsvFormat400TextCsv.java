@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DevicesListCsvFormat400TextCsv - &lt;b&gt;bad_request&lt;/b&gt;: Devices information can only be requested for iOS apps.
@@ -13,6 +13,7 @@ package org.openapis.openapi.models.operations;
 public class DevicesListCsvFormat400TextCsv {
     
     public DevicesListCsvFormat400TextCsvCodeEnum code;
+
     public DevicesListCsvFormat400TextCsv withCode(DevicesListCsvFormat400TextCsvCodeEnum code) {
         this.code = code;
         return this;
@@ -20,9 +21,14 @@ public class DevicesListCsvFormat400TextCsv {
     
     
     public String message;
+
     public DevicesListCsvFormat400TextCsv withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DevicesListCsvFormat400TextCsv(@JsonProperty("code") DevicesListCsvFormat400TextCsvCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

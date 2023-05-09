@@ -15,6 +15,7 @@ public class PublicDelegatedPrefixesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PublicDelegatedPrefixesScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class PublicDelegatedPrefixesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PublicDelegatedPrefixesScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PublicDelegatedPrefixesScopedListWarningData(){}
 }

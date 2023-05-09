@@ -15,6 +15,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public CreateStudioComponentRequestBodyConfiguration configuration;
+
     public CreateStudioComponentRequestBody withConfiguration(CreateStudioComponentRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -26,6 +27,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateStudioComponentRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SecurityGroupIds")
     public String[] ec2SecurityGroupIds;
+
     public CreateStudioComponentRequestBody withEc2SecurityGroupIds(String[] ec2SecurityGroupIds) {
         this.ec2SecurityGroupIds = ec2SecurityGroupIds;
         return this;
@@ -48,6 +51,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializationScripts")
     public org.openapis.openapi.models.shared.StudioComponentInitializationScript[] initializationScripts;
+
     public CreateStudioComponentRequestBody withInitializationScripts(org.openapis.openapi.models.shared.StudioComponentInitializationScript[] initializationScripts) {
         this.initializationScripts = initializationScripts;
         return this;
@@ -58,6 +62,7 @@ public class CreateStudioComponentRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateStudioComponentRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeRoleArn")
     public String runtimeRoleArn;
+
     public CreateStudioComponentRequestBody withRuntimeRoleArn(String runtimeRoleArn) {
         this.runtimeRoleArn = runtimeRoleArn;
         return this;
@@ -80,6 +86,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptParameters")
     public org.openapis.openapi.models.shared.ScriptParameterKeyValue[] scriptParameters;
+
     public CreateStudioComponentRequestBody withScriptParameters(org.openapis.openapi.models.shared.ScriptParameterKeyValue[] scriptParameters) {
         this.scriptParameters = scriptParameters;
         return this;
@@ -91,6 +98,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secureInitializationRoleArn")
     public String secureInitializationRoleArn;
+
     public CreateStudioComponentRequestBody withSecureInitializationRoleArn(String secureInitializationRoleArn) {
         this.secureInitializationRoleArn = secureInitializationRoleArn;
         return this;
@@ -102,6 +110,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public CreateStudioComponentRequestBodySubtypeEnum subtype;
+
     public CreateStudioComponentRequestBody withSubtype(CreateStudioComponentRequestBodySubtypeEnum subtype) {
         this.subtype = subtype;
         return this;
@@ -113,6 +122,7 @@ public class CreateStudioComponentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateStudioComponentRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -123,9 +133,14 @@ public class CreateStudioComponentRequestBody {
      */
     @JsonProperty("type")
     public CreateStudioComponentRequestBodyTypeEnum type;
+
     public CreateStudioComponentRequestBody withType(CreateStudioComponentRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateStudioComponentRequestBody(@JsonProperty("name") String name, @JsonProperty("type") CreateStudioComponentRequestBodyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

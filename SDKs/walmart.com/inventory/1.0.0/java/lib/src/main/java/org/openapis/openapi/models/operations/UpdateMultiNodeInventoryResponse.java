@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMultiNodeInventoryResponse {
     
     public String contentType;
+
     public UpdateMultiNodeInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateMultiNodeInventoryResponse {
     
     
     public Integer statusCode;
+
     public UpdateMultiNodeInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateMultiNodeInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMultiNodeInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class UpdateMultiNodeInventoryResponse {
      */
     
     public UpdateMultiNodeInventory200ApplicationJSON updateMultiNodeInventory200ApplicationJSONObject;
+
     public UpdateMultiNodeInventoryResponse withUpdateMultiNodeInventory200ApplicationJSONObject(UpdateMultiNodeInventory200ApplicationJSON updateMultiNodeInventory200ApplicationJSONObject) {
         this.updateMultiNodeInventory200ApplicationJSONObject = updateMultiNodeInventory200ApplicationJSONObject;
         return this;
     }
     
+    public UpdateMultiNodeInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

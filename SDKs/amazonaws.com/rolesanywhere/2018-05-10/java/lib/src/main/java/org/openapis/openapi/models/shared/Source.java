@@ -15,6 +15,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceData")
     public SourceData sourceData;
+
     public Source withSourceData(SourceData sourceData) {
         this.sourceData = sourceData;
         return this;
@@ -23,9 +24,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public TrustAnchorTypeEnum sourceType;
+
     public Source withSourceType(TrustAnchorTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public Source(){}
 }

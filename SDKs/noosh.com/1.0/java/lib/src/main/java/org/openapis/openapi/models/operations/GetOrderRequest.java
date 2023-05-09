@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrderRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=order_id")
     public String orderId;
+
     public GetOrderRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -16,6 +18,7 @@ public class GetOrderRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_id")
     public String projectId;
+
     public GetOrderRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -23,9 +26,15 @@ public class GetOrderRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workgroup_id")
     public String workgroupId;
+
     public GetOrderRequest withWorkgroupId(String workgroupId) {
         this.workgroupId = workgroupId;
         return this;
     }
     
+    public GetOrderRequest(@JsonProperty("order_id") String orderId, @JsonProperty("project_id") String projectId, @JsonProperty("workgroup_id") String workgroupId) {
+        this.orderId = orderId;
+        this.projectId = projectId;
+        this.workgroupId = workgroupId;
+  }
 }

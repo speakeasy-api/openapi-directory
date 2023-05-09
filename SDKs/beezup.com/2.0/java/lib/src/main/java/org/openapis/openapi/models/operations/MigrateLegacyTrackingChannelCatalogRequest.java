@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MigrateLegacyTrackingChannelCatalogRequest {
@@ -12,9 +13,13 @@ public class MigrateLegacyTrackingChannelCatalogRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=channelCatalogId")
     public String channelCatalogId;
+
     public MigrateLegacyTrackingChannelCatalogRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
     }
     
+    public MigrateLegacyTrackingChannelCatalogRequest(@JsonProperty("channelCatalogId") String channelCatalogId) {
+        this.channelCatalogId = channelCatalogId;
+  }
 }

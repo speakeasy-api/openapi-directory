@@ -15,6 +15,7 @@ public class ConnectivityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostAddress")
     public String hostAddress;
+
     public ConnectivityInfo withHostAddress(String hostAddress) {
         this.hostAddress = hostAddress;
         return this;
@@ -23,6 +24,7 @@ public class ConnectivityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ConnectivityInfo withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ConnectivityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public String metadata;
+
     public ConnectivityInfo withMetadata(String metadata) {
         this.metadata = metadata;
         return this;
@@ -39,9 +42,11 @@ public class ConnectivityInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portNumber")
     public Long portNumber;
+
     public ConnectivityInfo withPortNumber(Long portNumber) {
         this.portNumber = portNumber;
         return this;
     }
     
+    public ConnectivityInfo(){}
 }

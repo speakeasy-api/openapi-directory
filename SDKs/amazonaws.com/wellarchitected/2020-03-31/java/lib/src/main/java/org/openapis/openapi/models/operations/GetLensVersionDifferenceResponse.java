@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLensVersionDifferenceResponse {
@@ -12,6 +13,7 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLensVersionDifferenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLensVersionDifferenceResponse {
     
     
     public String contentType;
+
     public GetLensVersionDifferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLensVersionDifferenceOutput getLensVersionDifferenceOutput;
+
     public GetLensVersionDifferenceResponse withGetLensVersionDifferenceOutput(org.openapis.openapi.models.shared.GetLensVersionDifferenceOutput getLensVersionDifferenceOutput) {
         this.getLensVersionDifferenceOutput = getLensVersionDifferenceOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public Object internalServerException;
+
     public GetLensVersionDifferenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLensVersionDifferenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetLensVersionDifferenceResponse {
     
     
     public Integer statusCode;
+
     public GetLensVersionDifferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetLensVersionDifferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLensVersionDifferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public Object throttlingException;
+
     public GetLensVersionDifferenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetLensVersionDifferenceResponse {
      */
     
     public Object validationException;
+
     public GetLensVersionDifferenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLensVersionDifferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class TrendingStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.Gif[] data;
+
     public TrendingStickers200ApplicationJSON withData(org.openapis.openapi.models.shared.Gif[] data) {
         this.data = data;
         return this;
@@ -24,6 +25,7 @@ public class TrendingStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public org.openapis.openapi.models.shared.Meta meta;
+
     public TrendingStickers200ApplicationJSON withMeta(org.openapis.openapi.models.shared.Meta meta) {
         this.meta = meta;
         return this;
@@ -36,9 +38,11 @@ public class TrendingStickers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public org.openapis.openapi.models.shared.Pagination pagination;
+
     public TrendingStickers200ApplicationJSON withPagination(org.openapis.openapi.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public TrendingStickers200ApplicationJSON(){}
 }

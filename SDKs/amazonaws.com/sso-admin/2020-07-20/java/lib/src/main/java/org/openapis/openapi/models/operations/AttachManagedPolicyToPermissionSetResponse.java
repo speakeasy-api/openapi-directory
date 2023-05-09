@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachManagedPolicyToPermissionSetResponse {
@@ -12,6 +13,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachManagedPolicyToPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> attachManagedPolicyToPermissionSetResponse;
+
     public AttachManagedPolicyToPermissionSetResponse withAttachManagedPolicyToPermissionSetResponse(java.util.Map<String, Object> attachManagedPolicyToPermissionSetResponse) {
         this.attachManagedPolicyToPermissionSetResponse = attachManagedPolicyToPermissionSetResponse;
         return this;
@@ -32,6 +35,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public AttachManagedPolicyToPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
     
     
     public String contentType;
+
     public AttachManagedPolicyToPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public AttachManagedPolicyToPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachManagedPolicyToPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public AttachManagedPolicyToPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachManagedPolicyToPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public AttachManagedPolicyToPermissionSetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public AttachManagedPolicyToPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class AttachManagedPolicyToPermissionSetResponse {
      */
     
     public Object validationException;
+
     public AttachManagedPolicyToPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachManagedPolicyToPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

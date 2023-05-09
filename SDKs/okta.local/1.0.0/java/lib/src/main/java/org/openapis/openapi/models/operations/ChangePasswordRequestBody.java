@@ -12,6 +12,7 @@ public class ChangePasswordRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPassword")
     public ChangePasswordRequestBodyNewPassword newPassword;
+
     public ChangePasswordRequestBody withNewPassword(ChangePasswordRequestBodyNewPassword newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -20,9 +21,11 @@ public class ChangePasswordRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldPassword")
     public ChangePasswordRequestBodyOldPassword oldPassword;
+
     public ChangePasswordRequestBody withOldPassword(ChangePasswordRequestBodyOldPassword oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public ChangePasswordRequestBody(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateApplicationVersionMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateApplicationVersionMessage {
     
     public String applicationName;
+
     public UpdateApplicationVersionMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateApplicationVersionMessage {
     
     
     public String description;
+
     public UpdateApplicationVersionMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,14 @@ public class UpdateApplicationVersionMessage {
     
     
     public String versionLabel;
+
     public UpdateApplicationVersionMessage withVersionLabel(String versionLabel) {
         this.versionLabel = versionLabel;
         return this;
     }
     
+    public UpdateApplicationVersionMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("VersionLabel") String versionLabel) {
+        this.applicationName = applicationName;
+        this.versionLabel = versionLabel;
+  }
 }

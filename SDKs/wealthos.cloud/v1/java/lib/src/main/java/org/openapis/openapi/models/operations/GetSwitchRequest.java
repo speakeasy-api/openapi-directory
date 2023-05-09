@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSwitchRequest {
@@ -12,6 +13,7 @@ public class GetSwitchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_details")
     public Boolean includeDetails;
+
     public GetSwitchRequest withIncludeDetails(Boolean includeDetails) {
         this.includeDetails = includeDetails;
         return this;
@@ -22,6 +24,7 @@ public class GetSwitchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=switch_transaction_id")
     public String switchTransactionId;
+
     public GetSwitchRequest withSwitchTransactionId(String switchTransactionId) {
         this.switchTransactionId = switchTransactionId;
         return this;
@@ -32,9 +35,14 @@ public class GetSwitchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetSwitchRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetSwitchRequest(@JsonProperty("switch_transaction_id") String switchTransactionId, @JsonProperty("x-api-key") String xApiKey) {
+        this.switchTransactionId = switchTransactionId;
+        this.xApiKey = xApiKey;
+  }
 }

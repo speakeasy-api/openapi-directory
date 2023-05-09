@@ -15,6 +15,7 @@ public class GetAccountProperties400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public java.util.Map<String, String> header;
+
     public GetAccountProperties400ApplicationJSONErrorsParameters withHeader(java.util.Map<String, String> header) {
         this.header = header;
         return this;
@@ -23,6 +24,7 @@ public class GetAccountProperties400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public java.util.Map<String, String> path;
+
     public GetAccountProperties400ApplicationJSONErrorsParameters withPath(java.util.Map<String, String> path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class GetAccountProperties400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public java.util.Map<String, String> query;
+
     public GetAccountProperties400ApplicationJSONErrorsParameters withQuery(java.util.Map<String, String> query) {
         this.query = query;
         return this;
     }
     
+    public GetAccountProperties400ApplicationJSONErrorsParameters(){}
 }

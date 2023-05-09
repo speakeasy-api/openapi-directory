@@ -18,9 +18,11 @@ public class JobTerminateParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminateReason")
     public String terminateReason;
+
     public JobTerminateParameter withTerminateReason(String terminateReason) {
         this.terminateReason = terminateReason;
         return this;
     }
     
+    public JobTerminateParameter(){}
 }

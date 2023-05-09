@@ -15,6 +15,7 @@ public class RecordsIngested {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MagneticStore")
     public Long magneticStore;
+
     public RecordsIngested withMagneticStore(Long magneticStore) {
         this.magneticStore = magneticStore;
         return this;
@@ -23,6 +24,7 @@ public class RecordsIngested {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MemoryStore")
     public Long memoryStore;
+
     public RecordsIngested withMemoryStore(Long memoryStore) {
         this.memoryStore = memoryStore;
         return this;
@@ -31,9 +33,11 @@ public class RecordsIngested {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public Long total;
+
     public RecordsIngested withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public RecordsIngested(){}
 }

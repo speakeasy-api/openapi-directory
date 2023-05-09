@@ -64,12 +64,10 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchOperationsResponse res = new org.openapis.openapi.models.operations.FetchOperationsResponse() {{
+        org.openapis.openapi.models.operations.FetchOperationsResponse res = new org.openapis.openapi.models.operations.FetchOperationsResponse(contentType, httpRes.statusCode()) {{
             operations = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

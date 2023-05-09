@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$top")
     public Long dollarTop;
+
     public ErrorsListForGroupRequest withDollarTop(Long dollarTop) {
         this.dollarTop = dollarTop;
         return this;
@@ -23,6 +25,7 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsListForGroupRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -33,6 +36,7 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public ErrorsListForGroupRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -43,6 +47,7 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsListForGroupRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -50,6 +55,7 @@ public class ErrorsListForGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=model")
     public String model;
+
     public ErrorsListForGroupRequest withModel(String model) {
         this.model = model;
         return this;
@@ -57,6 +63,7 @@ public class ErrorsListForGroupRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=os")
     public String os;
+
     public ErrorsListForGroupRequest withOs(String os) {
         this.os = os;
         return this;
@@ -67,6 +74,7 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsListForGroupRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -77,9 +85,16 @@ public class ErrorsListForGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public ErrorsListForGroupRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public ErrorsListForGroupRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("owner_name") String ownerName, @JsonProperty("start") OffsetDateTime start) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.ownerName = ownerName;
+        this.start = start;
+  }
 }

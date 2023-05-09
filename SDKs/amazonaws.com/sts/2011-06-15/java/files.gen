@@ -98,4 +98,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/FederatedUser.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetFederationTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetSessionTokenRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

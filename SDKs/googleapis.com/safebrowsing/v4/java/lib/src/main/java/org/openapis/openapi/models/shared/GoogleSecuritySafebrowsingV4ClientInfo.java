@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleSecuritySafebrowsingV4ClientInfo withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4ClientInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientVersion")
     public String clientVersion;
+
     public GoogleSecuritySafebrowsingV4ClientInfo withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ClientInfo(){}
 }

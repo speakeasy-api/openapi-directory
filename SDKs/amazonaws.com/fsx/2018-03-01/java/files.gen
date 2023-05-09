@@ -180,9 +180,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/OntapVolumeTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FlexCacheEndpointTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/LifecycleTransitionReason.java
 lib/src/main/java/org/openapis/openapi/models/shared/VolumeLifecycleEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/BackupTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/ResourceTypeEnum.java
-lib/src/main/java/org/openapis/openapi/models/shared/BackupLifecycleEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/AdministrativeAction.java
+lib/src/main/java/org/openapis/openapi/models/shared/Snapshot.java
+lib/src/main/java/org/openapis/openapi/models/shared/SnapshotLifecycleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileSystem.java
 lib/src/main/java/org/openapis/openapi/models/shared/WindowsFileSystemConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/SelfManagedActiveDirectoryAttributes.java
@@ -213,12 +213,12 @@ lib/src/main/java/org/openapis/openapi/models/shared/DataCompressionTypeEnum.jav
 lib/src/main/java/org/openapis/openapi/models/shared/FileSystemLifecycleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileSystemTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/FileSystemFailureDetails.java
-lib/src/main/java/org/openapis/openapi/models/shared/AdministrativeAction.java
-lib/src/main/java/org/openapis/openapi/models/shared/Snapshot.java
-lib/src/main/java/org/openapis/openapi/models/shared/SnapshotLifecycleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/StatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdministrativeActionFailureDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/AdministrativeActionTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/BackupTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/ResourceTypeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/BackupLifecycleEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/BackupFailureDetails.java
 lib/src/main/java/org/openapis/openapi/models/shared/ActiveDirectoryBackupAttributes.java
 lib/src/main/java/org/openapis/openapi/models/shared/CopyBackupRequest.java
@@ -373,4 +373,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateVolumeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateOpenZFSVolumeConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateOntapVolumeConfiguration.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

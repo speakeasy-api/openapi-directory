@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourcePolicyStatementResponse {
@@ -12,6 +13,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object conflictException;
+
     public CreateResourcePolicyStatementResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourcePolicyStatementResponse {
     
     
     public String contentType;
+
     public CreateResourcePolicyStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourcePolicyStatementResponse createResourcePolicyStatementResponse;
+
     public CreateResourcePolicyStatementResponse withCreateResourcePolicyStatementResponse(org.openapis.openapi.models.shared.CreateResourcePolicyStatementResponse createResourcePolicyStatementResponse) {
         this.createResourcePolicyStatementResponse = createResourcePolicyStatementResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object internalServerException;
+
     public CreateResourcePolicyStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object preconditionFailedException;
+
     public CreateResourcePolicyStatementResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResourcePolicyStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateResourcePolicyStatementResponse {
     
     
     public Integer statusCode;
+
     public CreateResourcePolicyStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateResourcePolicyStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourcePolicyStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateResourcePolicyStatementResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object throttlingException;
+
     public CreateResourcePolicyStatementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateResourcePolicyStatementResponse {
      */
     
     public Object validationException;
+
     public CreateResourcePolicyStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateResourcePolicyStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

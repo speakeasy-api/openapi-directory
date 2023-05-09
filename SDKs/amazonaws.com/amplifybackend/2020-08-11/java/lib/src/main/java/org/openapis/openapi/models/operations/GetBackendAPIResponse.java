@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBackendAPIResponse {
@@ -12,6 +13,7 @@ public class GetBackendAPIResponse {
      */
     
     public Object badRequestException;
+
     public GetBackendAPIResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBackendAPIResponse {
     
     
     public String contentType;
+
     public GetBackendAPIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBackendAPIResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public GetBackendAPIResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class GetBackendAPIResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBackendAPIResponse getBackendAPIResponse;
+
     public GetBackendAPIResponse withGetBackendAPIResponse(org.openapis.openapi.models.shared.GetBackendAPIResponse getBackendAPIResponse) {
         this.getBackendAPIResponse = getBackendAPIResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetBackendAPIResponse {
      */
     
     public Object notFoundException;
+
     public GetBackendAPIResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetBackendAPIResponse {
     
     
     public Integer statusCode;
+
     public GetBackendAPIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetBackendAPIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBackendAPIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetBackendAPIResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetBackendAPIResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetBackendAPIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

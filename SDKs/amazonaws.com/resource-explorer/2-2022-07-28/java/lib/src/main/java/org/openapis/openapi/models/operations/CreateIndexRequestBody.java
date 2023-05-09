@@ -15,6 +15,7 @@ public class CreateIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateIndexRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,11 @@ public class CreateIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateIndexRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateIndexRequestBody(){}
 }

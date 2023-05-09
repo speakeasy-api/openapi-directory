@@ -12,6 +12,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Market-Id")
     public String xMarketId;
+
     public ListRequest withXMarketId(String xMarketId) {
         this.xMarketId = xMarketId;
         return this;
@@ -22,6 +23,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Shopper-Id")
     public String xShopperId;
+
     public ListRequest withXShopperId(String xShopperId) {
         this.xShopperId = xShopperId;
         return this;
@@ -32,6 +34,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public ListRequest withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -42,6 +45,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public ListRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -62,6 +67,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentOrderId")
     public String parentOrderId;
+
     public ListRequest withParentOrderId(String parentOrderId) {
         this.parentOrderId = parentOrderId;
         return this;
@@ -72,6 +78,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paymentProfileId")
     public Long paymentProfileId;
+
     public ListRequest withPaymentProfileId(Long paymentProfileId) {
         this.paymentProfileId = paymentProfileId;
         return this;
@@ -82,6 +89,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodEnd")
     public String periodEnd;
+
     public ListRequest withPeriodEnd(String periodEnd) {
         this.periodEnd = periodEnd;
         return this;
@@ -92,6 +100,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodStart")
     public String periodStart;
+
     public ListRequest withPeriodStart(String periodStart) {
         this.periodStart = periodStart;
         return this;
@@ -102,6 +111,7 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=productGroupId")
     public Long productGroupId;
+
     public ListRequest withProductGroupId(Long productGroupId) {
         this.productGroupId = productGroupId;
         return this;
@@ -112,9 +122,11 @@ public class ListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public ListSortEnum sort;
+
     public ListRequest withSort(ListSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListRequest(){}
 }

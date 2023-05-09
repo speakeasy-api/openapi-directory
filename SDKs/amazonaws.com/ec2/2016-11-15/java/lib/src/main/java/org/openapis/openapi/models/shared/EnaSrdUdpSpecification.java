@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnaSrdUdpSpecification {
     
     public Boolean enaSrdUdpEnabled;
+
     public EnaSrdUdpSpecification withEnaSrdUdpEnabled(Boolean enaSrdUdpEnabled) {
         this.enaSrdUdpEnabled = enaSrdUdpEnabled;
         return this;
     }
     
+    public EnaSrdUdpSpecification(){}
 }

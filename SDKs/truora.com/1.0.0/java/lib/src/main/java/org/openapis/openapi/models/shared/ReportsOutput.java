@@ -18,6 +18,7 @@ public class ReportsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ReportsOutput withNext(String next) {
         this.next = next;
         return this;
@@ -28,6 +29,7 @@ public class ReportsOutput {
      */
     @JsonProperty("reports")
     public Report[] reports;
+
     public ReportsOutput withReports(Report[] reports) {
         this.reports = reports;
         return this;
@@ -38,9 +40,14 @@ public class ReportsOutput {
      */
     @JsonProperty("self")
     public String self;
+
     public ReportsOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ReportsOutput(@JsonProperty("reports") Report[] reports, @JsonProperty("self") String self) {
+        this.reports = reports;
+        this.self = self;
+  }
 }

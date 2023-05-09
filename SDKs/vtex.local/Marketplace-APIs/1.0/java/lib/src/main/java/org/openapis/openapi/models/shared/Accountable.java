@@ -12,6 +12,7 @@ public class Accountable {
      */
     @JsonProperty("email")
     public String email;
+
     public Accountable withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class Accountable {
      */
     @JsonProperty("name")
     public String name;
+
     public Accountable withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class Accountable {
      */
     @JsonProperty("phone")
     public String phone;
+
     public Accountable withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public Accountable(@JsonProperty("email") String email, @JsonProperty("name") String name, @JsonProperty("phone") String phone) {
+        this.email = email;
+        this.name = name;
+        this.phone = phone;
+  }
 }

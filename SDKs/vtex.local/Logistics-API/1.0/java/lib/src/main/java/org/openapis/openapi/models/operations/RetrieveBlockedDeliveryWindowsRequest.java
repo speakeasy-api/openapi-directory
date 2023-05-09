@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveBlockedDeliveryWindowsRequest {
@@ -12,6 +13,7 @@ public class RetrieveBlockedDeliveryWindowsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RetrieveBlockedDeliveryWindowsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RetrieveBlockedDeliveryWindowsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RetrieveBlockedDeliveryWindowsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class RetrieveBlockedDeliveryWindowsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrierId")
     public String carrierId;
+
     public RetrieveBlockedDeliveryWindowsRequest withCarrierId(String carrierId) {
         this.carrierId = carrierId;
         return this;
     }
     
+    public RetrieveBlockedDeliveryWindowsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("carrierId") String carrierId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.carrierId = carrierId;
+  }
 }

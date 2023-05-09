@@ -15,6 +15,7 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public PostCompile200ApplicationJSONExplanationLocals[] locals;
+
     public PostCompile200ApplicationJSONExplanation withLocals(PostCompile200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public PostCompile200ApplicationJSONExplanationNode node;
+
     public PostCompile200ApplicationJSONExplanation withNode(PostCompile200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public PostCompile200ApplicationJSONExplanationOpEnum op;
+
     public PostCompile200ApplicationJSONExplanation withOp(PostCompile200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public PostCompile200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public PostCompile200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class PostCompile200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public PostCompile200ApplicationJSONExplanationTypeEnum type;
+
     public PostCompile200ApplicationJSONExplanation withType(PostCompile200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostCompile200ApplicationJSONExplanation(){}
 }

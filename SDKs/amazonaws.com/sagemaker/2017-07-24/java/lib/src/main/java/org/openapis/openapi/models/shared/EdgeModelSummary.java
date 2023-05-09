@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EdgeModelSummary {
     @JsonProperty("ModelName")
     public String modelName;
+
     public EdgeModelSummary withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -19,9 +20,14 @@ public class EdgeModelSummary {
     
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public EdgeModelSummary withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public EdgeModelSummary(@JsonProperty("ModelName") String modelName, @JsonProperty("ModelVersion") String modelVersion) {
+        this.modelName = modelName;
+        this.modelVersion = modelVersion;
+  }
 }

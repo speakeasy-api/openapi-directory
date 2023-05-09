@@ -12,6 +12,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaId")
     public Long areaId;
+
     public CompetitionDetail withAreaId(Long areaId) {
         this.areaId = areaId;
         return this;
@@ -20,6 +21,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaName")
     public String areaName;
+
     public CompetitionDetail withAreaName(String areaName) {
         this.areaName = areaName;
         return this;
@@ -28,6 +30,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompetitionId")
     public Long competitionId;
+
     public CompetitionDetail withCompetitionId(Long competitionId) {
         this.competitionId = competitionId;
         return this;
@@ -36,6 +39,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentSeason")
     public Season currentSeason;
+
     public CompetitionDetail withCurrentSeason(Season currentSeason) {
         this.currentSeason = currentSeason;
         return this;
@@ -44,6 +48,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Format")
     public String format;
+
     public CompetitionDetail withFormat(String format) {
         this.format = format;
         return this;
@@ -52,6 +57,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Games")
     public Game[] games;
+
     public CompetitionDetail withGames(Game[] games) {
         this.games = games;
         return this;
@@ -60,6 +66,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public String gender;
+
     public CompetitionDetail withGender(String gender) {
         this.gender = gender;
         return this;
@@ -68,6 +75,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CompetitionDetail withKey(String key) {
         this.key = key;
         return this;
@@ -76,6 +84,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CompetitionDetail withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Seasons")
     public Season[] seasons;
+
     public CompetitionDetail withSeasons(Season[] seasons) {
         this.seasons = seasons;
         return this;
@@ -92,6 +102,7 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Teams")
     public TeamDetail[] teams;
+
     public CompetitionDetail withTeams(TeamDetail[] teams) {
         this.teams = teams;
         return this;
@@ -100,9 +111,11 @@ public class CompetitionDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public CompetitionDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CompetitionDetail(){}
 }

@@ -18,6 +18,7 @@ public class ViewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public ConstraintEntity[] constraints;
+
     public ViewEntity withConstraints(ConstraintEntity[] constraints) {
         this.constraints = constraints;
         return this;
@@ -29,6 +30,7 @@ public class ViewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFeatures")
     public java.util.Map<String, Object> customFeatures;
+
     public ViewEntity withCustomFeatures(java.util.Map<String, Object> customFeatures) {
         this.customFeatures = customFeatures;
         return this;
@@ -40,9 +42,11 @@ public class ViewEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sqlCode")
     public String sqlCode;
+
     public ViewEntity withSqlCode(String sqlCode) {
         this.sqlCode = sqlCode;
         return this;
     }
     
+    public ViewEntity(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class FhirObservationPage {
     
     public EntryLongMapStringListFhirObservation[] data;
+
     public FhirObservationPage withData(EntryLongMapStringListFhirObservation[] data) {
         this.data = data;
         return this;
@@ -19,6 +20,7 @@ public class FhirObservationPage {
     
     
     public Long totalElements;
+
     public FhirObservationPage withTotalElements(Long totalElements) {
         this.totalElements = totalElements;
         return this;
@@ -26,9 +28,11 @@ public class FhirObservationPage {
     
     
     public Long totalPages;
+
     public FhirObservationPage withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public FhirObservationPage(){}
 }

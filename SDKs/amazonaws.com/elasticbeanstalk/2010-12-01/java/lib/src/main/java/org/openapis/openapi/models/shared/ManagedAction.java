@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ManagedAction {
     
     public String actionDescription;
+
     public ManagedAction withActionDescription(String actionDescription) {
         this.actionDescription = actionDescription;
         return this;
@@ -19,6 +20,7 @@ public class ManagedAction {
     
     
     public String actionId;
+
     public ManagedAction withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -26,6 +28,7 @@ public class ManagedAction {
     
     
     public ActionTypeEnum actionType;
+
     public ManagedAction withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -33,6 +36,7 @@ public class ManagedAction {
     
     
     public ActionStatusEnum status;
+
     public ManagedAction withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
@@ -40,9 +44,11 @@ public class ManagedAction {
     
     
     public OffsetDateTime windowStartTime;
+
     public ManagedAction withWindowStartTime(OffsetDateTime windowStartTime) {
         this.windowStartTime = windowStartTime;
         return this;
     }
     
+    public ManagedAction(){}
 }

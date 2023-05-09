@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifyTransitGatewayOptions {
     @SpeakeasyMetadata("queryParam:name=AddTransitGatewayCidrBlocks")
     public String[] addTransitGatewayCidrBlocks;
+
     public GETModifyTransitGatewayOptions withAddTransitGatewayCidrBlocks(String[] addTransitGatewayCidrBlocks) {
         this.addTransitGatewayCidrBlocks = addTransitGatewayCidrBlocks;
         return this;
@@ -19,6 +20,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=AmazonSideAsn")
     public Long amazonSideAsn;
+
     public GETModifyTransitGatewayOptions withAmazonSideAsn(Long amazonSideAsn) {
         this.amazonSideAsn = amazonSideAsn;
         return this;
@@ -26,6 +28,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=AssociationDefaultRouteTableId")
     public String associationDefaultRouteTableId;
+
     public GETModifyTransitGatewayOptions withAssociationDefaultRouteTableId(String associationDefaultRouteTableId) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         return this;
@@ -33,6 +36,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=AutoAcceptSharedAttachments")
     public org.openapis.openapi.models.shared.AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments;
+
     public GETModifyTransitGatewayOptions withAutoAcceptSharedAttachments(org.openapis.openapi.models.shared.AutoAcceptSharedAttachmentsValueEnum autoAcceptSharedAttachments) {
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         return this;
@@ -40,6 +44,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=DefaultRouteTableAssociation")
     public org.openapis.openapi.models.shared.DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation;
+
     public GETModifyTransitGatewayOptions withDefaultRouteTableAssociation(org.openapis.openapi.models.shared.DefaultRouteTableAssociationValueEnum defaultRouteTableAssociation) {
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
         return this;
@@ -47,6 +52,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=DefaultRouteTablePropagation")
     public org.openapis.openapi.models.shared.DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation;
+
     public GETModifyTransitGatewayOptions withDefaultRouteTablePropagation(org.openapis.openapi.models.shared.DefaultRouteTablePropagationValueEnum defaultRouteTablePropagation) {
         this.defaultRouteTablePropagation = defaultRouteTablePropagation;
         return this;
@@ -54,6 +60,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=DnsSupport")
     public org.openapis.openapi.models.shared.DnsSupportValueEnum dnsSupport;
+
     public GETModifyTransitGatewayOptions withDnsSupport(org.openapis.openapi.models.shared.DnsSupportValueEnum dnsSupport) {
         this.dnsSupport = dnsSupport;
         return this;
@@ -61,6 +68,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=PropagationDefaultRouteTableId")
     public String propagationDefaultRouteTableId;
+
     public GETModifyTransitGatewayOptions withPropagationDefaultRouteTableId(String propagationDefaultRouteTableId) {
         this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
         return this;
@@ -68,6 +76,7 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=RemoveTransitGatewayCidrBlocks")
     public String[] removeTransitGatewayCidrBlocks;
+
     public GETModifyTransitGatewayOptions withRemoveTransitGatewayCidrBlocks(String[] removeTransitGatewayCidrBlocks) {
         this.removeTransitGatewayCidrBlocks = removeTransitGatewayCidrBlocks;
         return this;
@@ -75,9 +84,11 @@ public class GETModifyTransitGatewayOptions {
     
     @SpeakeasyMetadata("queryParam:name=VpnEcmpSupport")
     public org.openapis.openapi.models.shared.VpnEcmpSupportValueEnum vpnEcmpSupport;
+
     public GETModifyTransitGatewayOptions withVpnEcmpSupport(org.openapis.openapi.models.shared.VpnEcmpSupportValueEnum vpnEcmpSupport) {
         this.vpnEcmpSupport = vpnEcmpSupport;
         return this;
     }
     
+    public GETModifyTransitGatewayOptions(){}
 }

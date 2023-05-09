@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCoverageResponse {
     
     public String contentType;
+
     public ListCoverageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCoverageResponse {
      */
     
     public Object internalServerException;
+
     public ListCoverageResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListCoverageResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCoverageResponse listCoverageResponse;
+
     public ListCoverageResponse withListCoverageResponse(org.openapis.openapi.models.shared.ListCoverageResponse listCoverageResponse) {
         this.listCoverageResponse = listCoverageResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListCoverageResponse {
     
     
     public Integer statusCode;
+
     public ListCoverageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListCoverageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCoverageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListCoverageResponse {
      */
     
     public Object throttlingException;
+
     public ListCoverageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListCoverageResponse {
      */
     
     public Object validationException;
+
     public ListCoverageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCoverageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

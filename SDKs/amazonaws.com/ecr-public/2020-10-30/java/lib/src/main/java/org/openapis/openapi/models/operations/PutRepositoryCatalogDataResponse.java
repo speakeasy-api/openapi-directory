@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoryCatalogDataResponse {
     
     public String contentType;
+
     public PutRepositoryCatalogDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRepositoryCatalogDataResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRepositoryCatalogDataResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRepositoryCatalogDataResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRepositoryCatalogDataResponse putRepositoryCatalogDataResponse;
+
     public PutRepositoryCatalogDataResponse withPutRepositoryCatalogDataResponse(org.openapis.openapi.models.shared.PutRepositoryCatalogDataResponse putRepositoryCatalogDataResponse) {
         this.putRepositoryCatalogDataResponse = putRepositoryCatalogDataResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutRepositoryCatalogDataResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public PutRepositoryCatalogDataResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class PutRepositoryCatalogDataResponse {
      */
     
     public Object serverException;
+
     public PutRepositoryCatalogDataResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -56,6 +62,7 @@ public class PutRepositoryCatalogDataResponse {
     
     
     public Integer statusCode;
+
     public PutRepositoryCatalogDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutRepositoryCatalogDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoryCatalogDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class PutRepositoryCatalogDataResponse {
      */
     
     public Object unsupportedCommandException;
+
     public PutRepositoryCatalogDataResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public PutRepositoryCatalogDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2Inheritance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailSendingConfig")
     public Boolean emailSendingConfig;
+
     public GoogleCloudIdentitytoolkitAdminV2Inheritance withEmailSendingConfig(Boolean emailSendingConfig) {
         this.emailSendingConfig = emailSendingConfig;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2Inheritance(){}
 }

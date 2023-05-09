@@ -18,6 +18,7 @@ public class CustomDeviceValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CustomDeviceValues withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class CustomDeviceValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public CustomDeviceValues withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public CustomDeviceValues(){}
 }

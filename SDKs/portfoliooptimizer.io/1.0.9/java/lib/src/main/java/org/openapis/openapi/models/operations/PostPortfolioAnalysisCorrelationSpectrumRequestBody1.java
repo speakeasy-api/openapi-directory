@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisCorrelationSpectrumRequestBody1 {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody1 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioAnalysisCorrelationSpectrumRequestBody1 {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody1 withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -29,9 +31,15 @@ public class PostPortfolioAnalysisCorrelationSpectrumRequestBody1 {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody1Portfolios[] portfolios;
+
     public PostPortfolioAnalysisCorrelationSpectrumRequestBody1 withPortfolios(PostPortfolioAnalysisCorrelationSpectrumRequestBody1Portfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
     }
     
+    public PostPortfolioAnalysisCorrelationSpectrumRequestBody1(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("portfolios") PostPortfolioAnalysisCorrelationSpectrumRequestBody1Portfolios[] portfolios) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.portfolios = portfolios;
+  }
 }

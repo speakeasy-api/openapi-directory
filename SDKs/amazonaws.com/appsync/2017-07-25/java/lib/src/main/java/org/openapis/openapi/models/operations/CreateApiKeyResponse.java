@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApiKeyResponse {
@@ -12,6 +13,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object apiKeyLimitExceededException;
+
     public CreateApiKeyResponse withApiKeyLimitExceededException(Object apiKeyLimitExceededException) {
         this.apiKeyLimitExceededException = apiKeyLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object apiKeyValidityOutOfBoundsException;
+
     public CreateApiKeyResponse withApiKeyValidityOutOfBoundsException(Object apiKeyValidityOutOfBoundsException) {
         this.apiKeyValidityOutOfBoundsException = apiKeyValidityOutOfBoundsException;
         return this;
@@ -32,6 +35,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object badRequestException;
+
     public CreateApiKeyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApiKeyResponse {
     
     
     public String contentType;
+
     public CreateApiKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateApiKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApiKeyResponse createApiKeyResponse;
+
     public CreateApiKeyResponse withCreateApiKeyResponse(org.openapis.openapi.models.shared.CreateApiKeyResponse createApiKeyResponse) {
         this.createApiKeyResponse = createApiKeyResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object internalFailureException;
+
     public CreateApiKeyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -69,6 +76,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateApiKeyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class CreateApiKeyResponse {
      */
     
     public Object notFoundException;
+
     public CreateApiKeyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class CreateApiKeyResponse {
     
     
     public Integer statusCode;
+
     public CreateApiKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateApiKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApiKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateApiKeyResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateApiKeyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateApiKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

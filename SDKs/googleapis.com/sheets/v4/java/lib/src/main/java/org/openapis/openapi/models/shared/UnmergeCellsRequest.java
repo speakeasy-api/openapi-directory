@@ -18,9 +18,11 @@ public class UnmergeCellsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public UnmergeCellsRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public UnmergeCellsRequest(){}
 }

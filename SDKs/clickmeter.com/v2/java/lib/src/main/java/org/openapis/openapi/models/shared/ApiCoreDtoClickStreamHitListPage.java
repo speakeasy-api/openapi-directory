@@ -12,6 +12,7 @@ public class ApiCoreDtoClickStreamHitListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hits")
     public ApiCoreDtoClickStreamHit[] hits;
+
     public ApiCoreDtoClickStreamHitListPage withHits(ApiCoreDtoClickStreamHit[] hits) {
         this.hits = hits;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreDtoClickStreamHitListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastKey")
     public String lastKey;
+
     public ApiCoreDtoClickStreamHitListPage withLastKey(String lastKey) {
         this.lastKey = lastKey;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitListPage(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NamedRankExpression - A named expression that can be evaluated at search time and used for ranking or thresholding in a search query. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NamedRankExpression {
     
     public String rankExpression;
+
     public NamedRankExpression withRankExpression(String rankExpression) {
         this.rankExpression = rankExpression;
         return this;
@@ -19,9 +20,14 @@ public class NamedRankExpression {
     
     
     public String rankName;
+
     public NamedRankExpression withRankName(String rankName) {
         this.rankName = rankName;
         return this;
     }
     
+    public NamedRankExpression(@JsonProperty("RankExpression") String rankExpression, @JsonProperty("RankName") String rankName) {
+        this.rankExpression = rankExpression;
+        this.rankName = rankName;
+  }
 }

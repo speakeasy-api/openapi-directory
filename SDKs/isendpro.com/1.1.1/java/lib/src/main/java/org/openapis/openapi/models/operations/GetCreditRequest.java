@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCreditRequest {
@@ -12,6 +13,7 @@ public class GetCreditRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=credit")
     public GetCreditCreditEnum credit;
+
     public GetCreditRequest withCredit(GetCreditCreditEnum credit) {
         this.credit = credit;
         return this;
@@ -22,9 +24,14 @@ public class GetCreditRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyid")
     public String keyid;
+
     public GetCreditRequest withKeyid(String keyid) {
         this.keyid = keyid;
         return this;
     }
     
+    public GetCreditRequest(@JsonProperty("credit") GetCreditCreditEnum credit, @JsonProperty("keyid") String keyid) {
+        this.credit = credit;
+        this.keyid = keyid;
+  }
 }

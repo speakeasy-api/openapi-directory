@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartApplicationRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public StartApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,13 @@ public class StartApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunConfiguration")
     public RunConfiguration runConfiguration;
+
     public StartApplicationRequest withRunConfiguration(RunConfiguration runConfiguration) {
         this.runConfiguration = runConfiguration;
         return this;
     }
     
+    public StartApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

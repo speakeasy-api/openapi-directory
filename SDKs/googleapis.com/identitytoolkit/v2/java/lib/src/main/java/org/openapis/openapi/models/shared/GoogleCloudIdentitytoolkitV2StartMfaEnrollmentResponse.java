@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneSessionInfo")
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneSessionInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse withPhoneSessionInfo(GoogleCloudIdentitytoolkitV2StartMfaPhoneResponseInfo phoneSessionInfo) {
         this.phoneSessionInfo = phoneSessionInfo;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totpSessionInfo")
     public GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo totpSessionInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse withTotpSessionInfo(GoogleCloudIdentitytoolkitV2StartMfaTotpEnrollmentResponseInfo totpSessionInfo) {
         this.totpSessionInfo = totpSessionInfo;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaEnrollmentResponse(){}
 }

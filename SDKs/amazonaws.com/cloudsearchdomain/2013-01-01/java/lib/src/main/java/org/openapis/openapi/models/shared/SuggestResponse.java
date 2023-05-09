@@ -15,6 +15,7 @@ public class SuggestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SuggestStatus status;
+
     public SuggestResponse withStatus(SuggestStatus status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class SuggestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggest")
     public SuggestModel suggest;
+
     public SuggestResponse withSuggest(SuggestModel suggest) {
         this.suggest = suggest;
         return this;
     }
     
+    public SuggestResponse(){}
 }

@@ -12,6 +12,7 @@ public class VochseRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public VochseRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class VochseRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public VochseRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class VochseRequestBodyCertificateParameters {
      */
     @JsonProperty("Regno")
     public String regno;
+
     public VochseRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
@@ -42,6 +45,7 @@ public class VochseRequestBodyCertificateParameters {
      */
     @JsonProperty("Year")
     public String year;
+
     public VochseRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
@@ -52,9 +56,17 @@ public class VochseRequestBodyCertificateParameters {
      */
     @JsonProperty("type")
     public String type;
+
     public VochseRequestBodyCertificateParameters withType(String type) {
         this.type = type;
         return this;
     }
     
+    public VochseRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("Regno") String regno, @JsonProperty("Year") String year, @JsonProperty("type") String type) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regno = regno;
+        this.year = year;
+        this.type = type;
+  }
 }

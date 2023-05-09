@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindInteractionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetFindInteractionsFormatEnum format;
+
     public GetFindInteractionsRequest withFormat(GetFindInteractionsFormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,13 @@ public class GetFindInteractionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetFindInteractionsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GetFindInteractionsRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

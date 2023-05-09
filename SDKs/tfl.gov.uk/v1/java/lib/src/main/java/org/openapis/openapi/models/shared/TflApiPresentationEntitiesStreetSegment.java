@@ -15,6 +15,7 @@ public class TflApiPresentationEntitiesStreetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineString")
     public String lineString;
+
     public TflApiPresentationEntitiesStreetSegment withLineString(String lineString) {
         this.lineString = lineString;
         return this;
@@ -26,6 +27,7 @@ public class TflApiPresentationEntitiesStreetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemId")
     public Long sourceSystemId;
+
     public TflApiPresentationEntitiesStreetSegment withSourceSystemId(Long sourceSystemId) {
         this.sourceSystemId = sourceSystemId;
         return this;
@@ -37,6 +39,7 @@ public class TflApiPresentationEntitiesStreetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSystemKey")
     public String sourceSystemKey;
+
     public TflApiPresentationEntitiesStreetSegment withSourceSystemKey(String sourceSystemKey) {
         this.sourceSystemKey = sourceSystemKey;
         return this;
@@ -48,9 +51,11 @@ public class TflApiPresentationEntitiesStreetSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toid")
     public String toid;
+
     public TflApiPresentationEntitiesStreetSegment withToid(String toid) {
         this.toid = toid;
         return this;
     }
     
+    public TflApiPresentationEntitiesStreetSegment(){}
 }

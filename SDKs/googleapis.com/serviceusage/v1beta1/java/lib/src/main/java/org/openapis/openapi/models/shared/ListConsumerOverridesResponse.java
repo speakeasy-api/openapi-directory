@@ -18,6 +18,7 @@ public class ListConsumerOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConsumerOverridesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListConsumerOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overrides")
     public QuotaOverride[] overrides;
+
     public ListConsumerOverridesResponse withOverrides(QuotaOverride[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public ListConsumerOverridesResponse(){}
 }

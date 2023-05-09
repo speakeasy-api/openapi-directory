@@ -18,9 +18,11 @@ public class MachineSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public MachineSeries withCode(String code) {
         this.code = code;
         return this;
     }
     
+    public MachineSeries(){}
 }

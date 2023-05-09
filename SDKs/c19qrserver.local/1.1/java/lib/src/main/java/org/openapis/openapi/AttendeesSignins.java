@@ -57,11 +57,9 @@ public class AttendeesSignins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse res = new org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse res = new org.openapis.openapi.models.operations.DeleteSigninSigninIdResponse(contentType, httpRes.statusCode()) {{
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class AttendeesSignins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigninSigninIdResponse res = new org.openapis.openapi.models.operations.GetSigninSigninIdResponse() {{
+        org.openapis.openapi.models.operations.GetSigninSigninIdResponse res = new org.openapis.openapi.models.operations.GetSigninSigninIdResponse(contentType, httpRes.statusCode()) {{
             signin = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,13 +150,11 @@ public class AttendeesSignins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSigninsResponse res = new org.openapis.openapi.models.operations.GetSigninsResponse() {{
+        org.openapis.openapi.models.operations.GetSigninsResponse res = new org.openapis.openapi.models.operations.GetSigninsResponse(contentType, httpRes.statusCode()) {{
             signins = null;
             invalidToken = null;
             keyFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -211,13 +205,11 @@ public class AttendeesSignins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSigninResponse res = new org.openapis.openapi.models.operations.PostSigninResponse() {{
+        org.openapis.openapi.models.operations.PostSigninResponse res = new org.openapis.openapi.models.operations.PostSigninResponse(contentType, httpRes.statusCode()) {{
             signinResponse = null;
             invalidToken = null;
             keyFailure = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,12 +262,10 @@ public class AttendeesSignins {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSigninSigninIdResponse res = new org.openapis.openapi.models.operations.PutSigninSigninIdResponse() {{
+        org.openapis.openapi.models.operations.PutSigninSigninIdResponse res = new org.openapis.openapi.models.operations.PutSigninSigninIdResponse(contentType, httpRes.statusCode()) {{
             userRecord = null;
             invalidToken = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

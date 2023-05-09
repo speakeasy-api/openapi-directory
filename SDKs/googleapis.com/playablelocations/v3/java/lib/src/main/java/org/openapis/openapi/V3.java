@@ -60,11 +60,9 @@ public class V3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse() {{
+        org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsLogImpressionsResponse(contentType, httpRes.statusCode()) {{
             googleMapsPlayablelocationsV3LogImpressionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class V3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayablelocationsLogPlayerReportsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsLogPlayerReportsResponse() {{
+        org.openapis.openapi.models.operations.PlayablelocationsLogPlayerReportsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsLogPlayerReportsResponse(contentType, httpRes.statusCode()) {{
             googleMapsPlayablelocationsV3LogPlayerReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,11 +148,9 @@ public class V3 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayablelocationsSamplePlayableLocationsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsSamplePlayableLocationsResponse() {{
+        org.openapis.openapi.models.operations.PlayablelocationsSamplePlayableLocationsResponse res = new org.openapis.openapi.models.operations.PlayablelocationsSamplePlayableLocationsResponse(contentType, httpRes.statusCode()) {{
             googleMapsPlayablelocationsV3SamplePlayableLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

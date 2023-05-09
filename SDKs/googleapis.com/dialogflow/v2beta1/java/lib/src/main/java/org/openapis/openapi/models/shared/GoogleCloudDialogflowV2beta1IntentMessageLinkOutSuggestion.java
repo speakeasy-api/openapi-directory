@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion(){}
 }

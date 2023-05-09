@@ -39,4 +39,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/MarketingRecommendation.jav
 lib/src/main/java/org/openapis/openapi/models/shared/Ad.java
 lib/src/main/java/org/openapis/openapi/models/shared/BidPercentages.java
 lib/src/main/java/org/openapis/openapi/models/shared/FindListingRecommendationRequest.java
+docs/sdk/README.md
+docs/listingrecommendation/README.md
 USAGE.md

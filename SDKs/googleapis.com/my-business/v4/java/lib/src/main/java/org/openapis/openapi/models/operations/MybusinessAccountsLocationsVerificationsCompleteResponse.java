@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessAccountsLocationsVerificationsCompleteResponse {
@@ -12,6 +13,7 @@ public class MybusinessAccountsLocationsVerificationsCompleteResponse {
      */
     
     public org.openapis.openapi.models.shared.CompleteVerificationResponse completeVerificationResponse;
+
     public MybusinessAccountsLocationsVerificationsCompleteResponse withCompleteVerificationResponse(org.openapis.openapi.models.shared.CompleteVerificationResponse completeVerificationResponse) {
         this.completeVerificationResponse = completeVerificationResponse;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessAccountsLocationsVerificationsCompleteResponse {
     
     
     public String contentType;
+
     public MybusinessAccountsLocationsVerificationsCompleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessAccountsLocationsVerificationsCompleteResponse {
     
     
     public Integer statusCode;
+
     public MybusinessAccountsLocationsVerificationsCompleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessAccountsLocationsVerificationsCompleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessAccountsLocationsVerificationsCompleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessAccountsLocationsVerificationsCompleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

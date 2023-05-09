@@ -18,9 +18,11 @@ public class NegativeKeywordListInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public NegativeKeywordListInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public NegativeKeywordListInput(){}
 }

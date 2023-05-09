@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetTransitGatewayAttachmentPropagationsRequest {
     
     public Boolean dryRun;
+
     public GetTransitGatewayAttachmentPropagationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetTransitGatewayAttachmentPropagationsRequest {
     
     
     public GetTransitGatewayAttachmentPropagationsRequestFilters[] filters;
+
     public GetTransitGatewayAttachmentPropagationsRequest withFilters(GetTransitGatewayAttachmentPropagationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetTransitGatewayAttachmentPropagationsRequest {
     
     
     public Long maxResults;
+
     public GetTransitGatewayAttachmentPropagationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class GetTransitGatewayAttachmentPropagationsRequest {
     
     
     public String nextToken;
+
     public GetTransitGatewayAttachmentPropagationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,13 @@ public class GetTransitGatewayAttachmentPropagationsRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public GetTransitGatewayAttachmentPropagationsRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public GetTransitGatewayAttachmentPropagationsRequest(@JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+  }
 }

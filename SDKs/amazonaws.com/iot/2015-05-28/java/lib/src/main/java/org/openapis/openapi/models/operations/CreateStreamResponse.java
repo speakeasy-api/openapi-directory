@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateStreamResponse {
     
     public String contentType;
+
     public CreateStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateStreamResponse createStreamResponse;
+
     public CreateStreamResponse withCreateStreamResponse(org.openapis.openapi.models.shared.CreateStreamResponse createStreamResponse) {
         this.createStreamResponse = createStreamResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateStreamResponse {
      */
     
     public Object internalFailureException;
+
     public CreateStreamResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateStreamResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateStreamResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateStreamResponse {
      */
     
     public Object limitExceededException;
+
     public CreateStreamResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateStreamResponse {
     
     
     public Integer statusCode;
+
     public CreateStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateStreamResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateStreamResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class CreateStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class CreateStreamResponse {
      */
     
     public Object throttlingException;
+
     public CreateStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,9 +125,14 @@ public class CreateStreamResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateStreamResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

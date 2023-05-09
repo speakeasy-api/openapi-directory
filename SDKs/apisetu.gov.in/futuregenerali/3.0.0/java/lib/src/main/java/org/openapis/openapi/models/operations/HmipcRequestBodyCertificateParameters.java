@@ -12,6 +12,7 @@ public class HmipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HmipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class HmipcRequestBodyCertificateParameters {
      */
     @JsonProperty("policyno")
     public String policyno;
+
     public HmipcRequestBodyCertificateParameters withPolicyno(String policyno) {
         this.policyno = policyno;
         return this;
     }
     
+    public HmipcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("policyno") String policyno) {
+        this.fullName = fullName;
+        this.policyno = policyno;
+  }
 }

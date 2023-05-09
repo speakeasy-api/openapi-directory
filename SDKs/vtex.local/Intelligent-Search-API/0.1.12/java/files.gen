@@ -69,4 +69,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ProductSearchOperatorEnum.j
 lib/src/main/java/org/openapis/openapi/models/shared/ProductSearch.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchSuggestionsSearches.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchSuggestions.java
+docs/sdk/README.md
+docs/autocomplete/README.md
+docs/productlistpage/README.md
 USAGE.md

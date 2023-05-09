@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/GetstateabbreviationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Getstateabbreviation200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetstateabbreviationResponse.java
+docs/sdk/README.md
+docs/statedatastandardization/README.md
 USAGE.md

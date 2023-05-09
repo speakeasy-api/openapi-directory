@@ -15,6 +15,7 @@ public class Phone {
      */
     @JsonProperty("number")
     public String number;
+
     public Phone withNumber(String number) {
         this.number = number;
         return this;
@@ -28,9 +29,14 @@ public class Phone {
      */
     @JsonProperty("type")
     public PhoneTypeEnum type;
+
     public Phone withType(PhoneTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Phone(@JsonProperty("number") String number, @JsonProperty("type") PhoneTypeEnum type) {
+        this.number = number;
+        this.type = type;
+  }
 }

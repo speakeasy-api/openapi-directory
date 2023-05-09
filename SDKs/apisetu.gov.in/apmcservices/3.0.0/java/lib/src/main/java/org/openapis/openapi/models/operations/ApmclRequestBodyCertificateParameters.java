@@ -12,9 +12,13 @@ public class ApmclRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public ApmclRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
     
+    public ApmclRequestBodyCertificateParameters(@JsonProperty("DocumentNumber") String documentNumber) {
+        this.documentNumber = documentNumber;
+  }
 }

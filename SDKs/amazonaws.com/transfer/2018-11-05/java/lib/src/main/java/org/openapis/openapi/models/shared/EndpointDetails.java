@@ -15,6 +15,7 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressAllocationIds")
     public String[] addressAllocationIds;
+
     public EndpointDetails withAddressAllocationIds(String[] addressAllocationIds) {
         this.addressAllocationIds = addressAllocationIds;
         return this;
@@ -23,6 +24,7 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupIds")
     public String[] securityGroupIds;
+
     public EndpointDetails withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -31,6 +33,7 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public EndpointDetails withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,6 +42,7 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public EndpointDetails withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -47,9 +51,11 @@ public class EndpointDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public EndpointDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public EndpointDetails(){}
 }

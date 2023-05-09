@@ -15,6 +15,7 @@ public class CreateNodegroupRequestBodyRemoteAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2SshKey")
     public String ec2SshKey;
+
     public CreateNodegroupRequestBodyRemoteAccess withEc2SshKey(String ec2SshKey) {
         this.ec2SshKey = ec2SshKey;
         return this;
@@ -23,9 +24,11 @@ public class CreateNodegroupRequestBodyRemoteAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSecurityGroups")
     public String[] sourceSecurityGroups;
+
     public CreateNodegroupRequestBodyRemoteAccess withSourceSecurityGroups(String[] sourceSecurityGroups) {
         this.sourceSecurityGroups = sourceSecurityGroups;
         return this;
     }
     
+    public CreateNodegroupRequestBodyRemoteAccess(){}
 }

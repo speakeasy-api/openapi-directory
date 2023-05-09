@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomerProfileRequest {
@@ -12,6 +13,7 @@ public class UpdateCustomerProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdateCustomerProfileRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomerProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public UpdateCustomerProfileRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class UpdateCustomerProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public UpdateCustomerProfileRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,6 +43,7 @@ public class UpdateCustomerProfileRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests;
+
     public UpdateCustomerProfileRequest withCreateUpdateProfileRequests(org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests) {
         this.createUpdateProfileRequests = createUpdateProfileRequests;
         return this;
@@ -49,9 +54,16 @@ public class UpdateCustomerProfileRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateCustomerProfileRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCustomerProfileRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("createUpdateProfileRequests") org.openapis.openapi.models.shared.CreateUpdateProfileRequests createUpdateProfileRequests, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createUpdateProfileRequests = createUpdateProfileRequests;
+        this.id = id;
+  }
 }

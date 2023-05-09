@@ -48,11 +48,9 @@ public class VatAnalysisTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VatAnalysisTypesGetResponse res = new org.openapis.openapi.models.operations.VatAnalysisTypesGetResponse() {{
+        org.openapis.openapi.models.operations.VatAnalysisTypesGetResponse res = new org.openapis.openapi.models.operations.VatAnalysisTypesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultVatAnalysisTypeDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

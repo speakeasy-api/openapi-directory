@@ -15,6 +15,7 @@ public class SavingsPlansAmortizedCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedRecurringCommitment")
     public String amortizedRecurringCommitment;
+
     public SavingsPlansAmortizedCommitment withAmortizedRecurringCommitment(String amortizedRecurringCommitment) {
         this.amortizedRecurringCommitment = amortizedRecurringCommitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlansAmortizedCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedUpfrontCommitment")
     public String amortizedUpfrontCommitment;
+
     public SavingsPlansAmortizedCommitment withAmortizedUpfrontCommitment(String amortizedUpfrontCommitment) {
         this.amortizedUpfrontCommitment = amortizedUpfrontCommitment;
         return this;
@@ -31,9 +33,11 @@ public class SavingsPlansAmortizedCommitment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmortizedCommitment")
     public String totalAmortizedCommitment;
+
     public SavingsPlansAmortizedCommitment withTotalAmortizedCommitment(String totalAmortizedCommitment) {
         this.totalAmortizedCommitment = totalAmortizedCommitment;
         return this;
     }
     
+    public SavingsPlansAmortizedCommitment(){}
 }

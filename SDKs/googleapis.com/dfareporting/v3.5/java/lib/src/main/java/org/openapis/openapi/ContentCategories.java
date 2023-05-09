@@ -59,10 +59,8 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesDeleteResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesGetResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesGetResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesGetResponse(contentType, httpRes.statusCode()) {{
             contentCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesInsertResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesInsertResponse(contentType, httpRes.statusCode()) {{
             contentCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesListResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesListResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesListResponse(contentType, httpRes.statusCode()) {{
             contentCategoriesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesPatchResponse(contentType, httpRes.statusCode()) {{
             contentCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class ContentCategories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingContentCategoriesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingContentCategoriesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingContentCategoriesUpdateResponse(contentType, httpRes.statusCode()) {{
             contentCategory = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

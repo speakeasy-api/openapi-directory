@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2EntityExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudDocumentaiV1beta2EntityExtractionParams withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2EntityExtractionParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelVersion")
     public String modelVersion;
+
     public GoogleCloudDocumentaiV1beta2EntityExtractionParams withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2EntityExtractionParams(){}
 }

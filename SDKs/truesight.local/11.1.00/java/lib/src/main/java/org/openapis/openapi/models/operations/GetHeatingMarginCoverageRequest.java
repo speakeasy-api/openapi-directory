@@ -12,6 +12,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
     public String applicationId;
+
     public GetHeatingMarginCoverageRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=covered")
     public Boolean covered;
+
     public GetHeatingMarginCoverageRequest withCovered(Boolean covered) {
         this.covered = covered;
         return this;
@@ -32,6 +34,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetHeatingMarginCoverageDirectionEnum direction;
+
     public GetHeatingMarginCoverageRequest withDirection(GetHeatingMarginCoverageDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -42,6 +45,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public GetHeatingMarginCoverageRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -52,6 +56,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetHeatingMarginCoverageRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -62,6 +67,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetHeatingMarginCoverageRequest withPage(String page) {
         this.page = page;
         return this;
@@ -72,6 +78,7 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetHeatingMarginCoverageRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -82,9 +89,11 @@ public class GetHeatingMarginCoverageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetHeatingMarginCoverageRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetHeatingMarginCoverageRequest(){}
 }

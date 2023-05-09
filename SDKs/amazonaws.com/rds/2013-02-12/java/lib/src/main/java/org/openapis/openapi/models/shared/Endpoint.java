@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Endpoint {
     
     public String address;
+
     public Endpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -16,9 +17,11 @@ public class Endpoint {
     
     
     public Long port;
+
     public Endpoint withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public Endpoint(){}
 }

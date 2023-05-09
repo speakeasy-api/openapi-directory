@@ -20,6 +20,7 @@ public class StartQueryPlanningRequestBodyQueryPlanningContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public StartQueryPlanningRequestBodyQueryPlanningContext withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -28,6 +29,7 @@ public class StartQueryPlanningRequestBodyQueryPlanningContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public StartQueryPlanningRequestBodyQueryPlanningContext withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -38,6 +40,7 @@ public class StartQueryPlanningRequestBodyQueryPlanningContext {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("QueryAsOfTime")
     public OffsetDateTime queryAsOfTime;
+
     public StartQueryPlanningRequestBodyQueryPlanningContext withQueryAsOfTime(OffsetDateTime queryAsOfTime) {
         this.queryAsOfTime = queryAsOfTime;
         return this;
@@ -46,6 +49,7 @@ public class StartQueryPlanningRequestBodyQueryPlanningContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryParameters")
     public java.util.Map<String, String> queryParameters;
+
     public StartQueryPlanningRequestBodyQueryPlanningContext withQueryParameters(java.util.Map<String, String> queryParameters) {
         this.queryParameters = queryParameters;
         return this;
@@ -54,9 +58,11 @@ public class StartQueryPlanningRequestBodyQueryPlanningContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public StartQueryPlanningRequestBodyQueryPlanningContext withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public StartQueryPlanningRequestBodyQueryPlanningContext(){}
 }

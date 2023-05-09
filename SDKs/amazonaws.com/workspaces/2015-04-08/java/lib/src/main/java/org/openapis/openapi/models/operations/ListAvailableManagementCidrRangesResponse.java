@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAvailableManagementCidrRangesResponse {
@@ -12,6 +13,7 @@ public class ListAvailableManagementCidrRangesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAvailableManagementCidrRangesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAvailableManagementCidrRangesResponse {
     
     
     public String contentType;
+
     public ListAvailableManagementCidrRangesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAvailableManagementCidrRangesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ListAvailableManagementCidrRangesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ListAvailableManagementCidrRangesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAvailableManagementCidrRangesResult listAvailableManagementCidrRangesResult;
+
     public ListAvailableManagementCidrRangesResponse withListAvailableManagementCidrRangesResult(org.openapis.openapi.models.shared.ListAvailableManagementCidrRangesResult listAvailableManagementCidrRangesResult) {
         this.listAvailableManagementCidrRangesResult = listAvailableManagementCidrRangesResult;
         return this;
@@ -46,6 +51,7 @@ public class ListAvailableManagementCidrRangesResponse {
     
     
     public Integer statusCode;
+
     public ListAvailableManagementCidrRangesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListAvailableManagementCidrRangesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAvailableManagementCidrRangesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListAvailableManagementCidrRangesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

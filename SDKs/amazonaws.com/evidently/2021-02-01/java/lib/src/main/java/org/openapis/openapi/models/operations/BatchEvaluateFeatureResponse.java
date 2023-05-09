@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchEvaluateFeatureResponse {
@@ -12,6 +13,7 @@ public class BatchEvaluateFeatureResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchEvaluateFeatureResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchEvaluateFeatureResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchEvaluateFeatureResponse batchEvaluateFeatureResponse;
+
     public BatchEvaluateFeatureResponse withBatchEvaluateFeatureResponse(org.openapis.openapi.models.shared.BatchEvaluateFeatureResponse batchEvaluateFeatureResponse) {
         this.batchEvaluateFeatureResponse = batchEvaluateFeatureResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchEvaluateFeatureResponse {
     
     
     public String contentType;
+
     public BatchEvaluateFeatureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class BatchEvaluateFeatureResponse {
     
     
     public Integer statusCode;
+
     public BatchEvaluateFeatureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class BatchEvaluateFeatureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchEvaluateFeatureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class BatchEvaluateFeatureResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchEvaluateFeatureResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class BatchEvaluateFeatureResponse {
      */
     
     public Object throttlingException;
+
     public BatchEvaluateFeatureResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class BatchEvaluateFeatureResponse {
      */
     
     public Object validationException;
+
     public BatchEvaluateFeatureResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchEvaluateFeatureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

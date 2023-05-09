@@ -15,6 +15,7 @@ public class NotificationPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public NotificationPreview withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class NotificationPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html")
     public String html;
+
     public NotificationPreview withHtml(String html) {
         this.html = html;
         return this;
@@ -31,9 +33,11 @@ public class NotificationPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public NotificationPreview withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public NotificationPreview(){}
 }

@@ -15,6 +15,7 @@ public class HttpEndpointBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalInSeconds")
     public Long intervalInSeconds;
+
     public HttpEndpointBufferingHints withIntervalInSeconds(Long intervalInSeconds) {
         this.intervalInSeconds = intervalInSeconds;
         return this;
@@ -23,9 +24,11 @@ public class HttpEndpointBufferingHints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInMBs")
     public Long sizeInMBs;
+
     public HttpEndpointBufferingHints withSizeInMBs(Long sizeInMBs) {
         this.sizeInMBs = sizeInMBs;
         return this;
     }
     
+    public HttpEndpointBufferingHints(){}
 }

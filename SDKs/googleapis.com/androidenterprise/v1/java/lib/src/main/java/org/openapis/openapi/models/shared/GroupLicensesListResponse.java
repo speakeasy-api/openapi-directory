@@ -18,9 +18,11 @@ public class GroupLicensesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupLicense")
     public GroupLicense[] groupLicense;
+
     public GroupLicensesListResponse withGroupLicense(GroupLicense[] groupLicense) {
         this.groupLicense = groupLicense;
         return this;
     }
     
+    public GroupLicensesListResponse(){}
 }

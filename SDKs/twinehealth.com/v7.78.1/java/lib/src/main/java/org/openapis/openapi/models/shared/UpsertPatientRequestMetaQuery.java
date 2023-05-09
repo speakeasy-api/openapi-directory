@@ -12,6 +12,7 @@ public class UpsertPatientRequestMetaQuery {
      */
     @JsonProperty("groups")
     public String[] groups;
+
     public UpsertPatientRequestMetaQuery withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -22,9 +23,14 @@ public class UpsertPatientRequestMetaQuery {
      */
     @JsonProperty("identifier")
     public UpsertPatientRequestMetaQueryIdentifier identifier;
+
     public UpsertPatientRequestMetaQuery withIdentifier(UpsertPatientRequestMetaQueryIdentifier identifier) {
         this.identifier = identifier;
         return this;
     }
     
+    public UpsertPatientRequestMetaQuery(@JsonProperty("groups") String[] groups, @JsonProperty("identifier") UpsertPatientRequestMetaQueryIdentifier identifier) {
+        this.groups = groups;
+        this.identifier = identifier;
+  }
 }

@@ -15,6 +15,7 @@ public class StreamProcessorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisDataStream")
     public KinesisDataStream kinesisDataStream;
+
     public StreamProcessorOutput withKinesisDataStream(KinesisDataStream kinesisDataStream) {
         this.kinesisDataStream = kinesisDataStream;
         return this;
@@ -23,9 +24,11 @@ public class StreamProcessorOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Destination")
     public S3Destination s3Destination;
+
     public StreamProcessorOutput withS3Destination(S3Destination s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public StreamProcessorOutput(){}
 }

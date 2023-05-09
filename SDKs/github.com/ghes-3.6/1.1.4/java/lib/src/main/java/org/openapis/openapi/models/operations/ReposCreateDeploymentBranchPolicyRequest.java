@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposCreateDeploymentBranchPolicyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern;
+
     public ReposCreateDeploymentBranchPolicyRequest withDeploymentBranchPolicyNamePattern(org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern) {
         this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
         return this;
@@ -19,6 +21,7 @@ public class ReposCreateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environment_name")
     public String environmentName;
+
     public ReposCreateDeploymentBranchPolicyRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -29,6 +32,7 @@ public class ReposCreateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposCreateDeploymentBranchPolicyRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -39,9 +43,16 @@ public class ReposCreateDeploymentBranchPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposCreateDeploymentBranchPolicyRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposCreateDeploymentBranchPolicyRequest(@JsonProperty("deployment-branch-policy-name-pattern") org.openapis.openapi.models.shared.DeploymentBranchPolicyNamePattern deploymentBranchPolicyNamePattern, @JsonProperty("environment_name") String environmentName, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.deploymentBranchPolicyNamePattern = deploymentBranchPolicyNamePattern;
+        this.environmentName = environmentName;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

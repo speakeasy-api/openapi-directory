@@ -23,6 +23,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("CarrierId")
     @SpeakeasyMetadata("form:name=CarrierId")
     public Integer carrierId;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withCarrierId(Integer carrierId) {
         this.carrierId = carrierId;
         return this;
@@ -35,6 +36,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("Comment")
     @SpeakeasyMetadata("form:name=Comment")
     public String comment;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withComment(String comment) {
         this.comment = comment;
         return this;
@@ -47,6 +49,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("OrderId")
     @SpeakeasyMetadata("form:name=OrderId")
     public String orderId;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -60,6 +63,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("ShipmentType")
     @SpeakeasyMetadata("form:name=ShipmentType")
     public Integer shipmentType;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withShipmentType(Integer shipmentType) {
         this.shipmentType = shipmentType;
         return this;
@@ -72,6 +76,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("ShippingId")
     @SpeakeasyMetadata("form:name=ShippingId")
     public String shippingId;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withShippingId(String shippingId) {
         this.shippingId = shippingId;
         return this;
@@ -84,6 +89,7 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("ShippingProviderId")
     @SpeakeasyMetadata("form:name=ShippingProviderId")
     public Long shippingProviderId;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withShippingProviderId(Long shippingProviderId) {
         this.shippingProviderId = shippingProviderId;
         return this;
@@ -96,9 +102,11 @@ public class RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel {
     @JsonProperty("ShippingProviderProductId")
     @SpeakeasyMetadata("form:name=ShippingProviderProductId")
     public Long shippingProviderProductId;
+
     public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel withShippingProviderProductId(Long shippingProviderProductId) {
         this.shippingProviderProductId = shippingProviderProductId;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiApiAddShipmentToOrderModel(){}
 }

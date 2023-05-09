@@ -15,9 +15,11 @@ public class MatchingResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingBucket")
     public MatchingBucket matchingBucket;
+
     public MatchingResource withMatchingBucket(MatchingBucket matchingBucket) {
         this.matchingBucket = matchingBucket;
         return this;
     }
     
+    public MatchingResource(){}
 }

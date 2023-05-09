@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesCreateMilestoneResponse {
     
     public String contentType;
+
     public IssuesCreateMilestoneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesCreateMilestoneResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesCreateMilestoneResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesCreateMilestoneResponse {
     
     
     public Integer statusCode;
+
     public IssuesCreateMilestoneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesCreateMilestoneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesCreateMilestoneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesCreateMilestoneResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesCreateMilestoneResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class IssuesCreateMilestoneResponse {
      */
     
     public org.openapis.openapi.models.shared.Milestone milestone;
+
     public IssuesCreateMilestoneResponse withMilestone(org.openapis.openapi.models.shared.Milestone milestone) {
         this.milestone = milestone;
         return this;
@@ -60,9 +67,14 @@ public class IssuesCreateMilestoneResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesCreateMilestoneResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesCreateMilestoneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

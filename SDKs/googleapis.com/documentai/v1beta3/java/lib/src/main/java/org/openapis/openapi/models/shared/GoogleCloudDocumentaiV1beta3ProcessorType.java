@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCreation")
     public Boolean allowCreation;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withAllowCreation(Boolean allowCreation) {
         this.allowCreation = allowCreation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableLocations")
     public GoogleCloudDocumentaiV1beta3ProcessorTypeLocationInfo[] availableLocations;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withAvailableLocations(GoogleCloudDocumentaiV1beta3ProcessorTypeLocationInfo[] availableLocations) {
         this.availableLocations = availableLocations;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withCategory(String category) {
         this.category = category;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public GoogleCloudDocumentaiV1beta3ProcessorTypeLaunchStageEnum launchStage;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withLaunchStage(GoogleCloudDocumentaiV1beta3ProcessorTypeLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withName(String name) {
         this.name = name;
         return this;
@@ -73,20 +78,23 @@ public class GoogleCloudDocumentaiV1beta3ProcessorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleDocumentUris")
     public String[] sampleDocumentUris;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withSampleDocumentUris(String[] sampleDocumentUris) {
         this.sampleDocumentUris = sampleDocumentUris;
         return this;
     }
     
     /**
-     * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc.
+     * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta3ProcessorType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ProcessorType(){}
 }

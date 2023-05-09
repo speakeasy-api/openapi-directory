@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
@@ -12,6 +13,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.InjectCredentialsRequest injectCredentialsRequest;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withInjectCredentialsRequest(org.openapis.openapi.models.shared.InjectCredentialsRequest injectCredentialsRequest) {
         this.injectCredentialsRequest = injectCredentialsRequest;
         return this;
@@ -29,6 +32,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cluster")
     public String cluster;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -69,6 +76,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withProject(String project) {
         this.project = project;
         return this;
@@ -119,6 +131,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -139,6 +153,7 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,15 @@ public class DataprocProjectsRegionsClustersInjectCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataprocProjectsRegionsClustersInjectCredentialsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DataprocProjectsRegionsClustersInjectCredentialsRequest(@JsonProperty("cluster") String cluster, @JsonProperty("project") String project, @JsonProperty("region") String region) {
+        this.cluster = cluster;
+        this.project = project;
+        this.region = region;
+  }
 }

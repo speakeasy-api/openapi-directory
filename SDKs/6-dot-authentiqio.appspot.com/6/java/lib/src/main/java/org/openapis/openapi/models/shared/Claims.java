@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Claims - Claim in JWT format, self- or issuer-signed. 
@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class Claims {
     
     public String email;
+
     public Claims withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class Claims {
     
     
     public String phone;
+
     public Claims withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -30,6 +32,7 @@ public class Claims {
      */
     
     public String scope;
+
     public Claims withScope(String scope) {
         this.scope = scope;
         return this;
@@ -40,6 +43,7 @@ public class Claims {
      */
     
     public String sub;
+
     public Claims withSub(String sub) {
         this.sub = sub;
         return this;
@@ -47,9 +51,14 @@ public class Claims {
     
     
     public String type;
+
     public Claims withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Claims(@JsonProperty("scope") String scope, @JsonProperty("sub") String sub) {
+        this.scope = scope;
+        this.sub = sub;
+  }
 }

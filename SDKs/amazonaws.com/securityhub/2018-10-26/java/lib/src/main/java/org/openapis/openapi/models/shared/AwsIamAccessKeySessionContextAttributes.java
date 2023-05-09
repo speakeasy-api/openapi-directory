@@ -15,6 +15,7 @@ public class AwsIamAccessKeySessionContextAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public AwsIamAccessKeySessionContextAttributes withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,9 +24,11 @@ public class AwsIamAccessKeySessionContextAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MfaAuthenticated")
     public Boolean mfaAuthenticated;
+
     public AwsIamAccessKeySessionContextAttributes withMfaAuthenticated(Boolean mfaAuthenticated) {
         this.mfaAuthenticated = mfaAuthenticated;
         return this;
     }
     
+    public AwsIamAccessKeySessionContextAttributes(){}
 }

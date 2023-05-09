@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecaptchaenterpriseProjectsKeysPatchResponse {
     
     public String contentType;
+
     public RecaptchaenterpriseProjectsKeysPatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecaptchaenterpriseProjectsKeysPatchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1Key googleCloudRecaptchaenterpriseV1Key;
+
     public RecaptchaenterpriseProjectsKeysPatchResponse withGoogleCloudRecaptchaenterpriseV1Key(org.openapis.openapi.models.shared.GoogleCloudRecaptchaenterpriseV1Key googleCloudRecaptchaenterpriseV1Key) {
         this.googleCloudRecaptchaenterpriseV1Key = googleCloudRecaptchaenterpriseV1Key;
         return this;
@@ -26,6 +29,7 @@ public class RecaptchaenterpriseProjectsKeysPatchResponse {
     
     
     public Integer statusCode;
+
     public RecaptchaenterpriseProjectsKeysPatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecaptchaenterpriseProjectsKeysPatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecaptchaenterpriseProjectsKeysPatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecaptchaenterpriseProjectsKeysPatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

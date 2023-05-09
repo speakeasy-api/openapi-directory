@@ -15,6 +15,7 @@ public class FiveHundredINTERNALSERVERERROR {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FiveHundredINTERNALSERVERERRORCodeEnum code;
+
     public FiveHundredINTERNALSERVERERROR withCode(FiveHundredINTERNALSERVERERRORCodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class FiveHundredINTERNALSERVERERROR {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public FiveHundredINTERNALSERVERERRORMessageEnum message;
+
     public FiveHundredINTERNALSERVERERROR withMessage(FiveHundredINTERNALSERVERERRORMessageEnum message) {
         this.message = message;
         return this;
@@ -37,6 +39,7 @@ public class FiveHundredINTERNALSERVERERROR {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public FiveHundredINTERNALSERVERERROR withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -48,9 +51,11 @@ public class FiveHundredINTERNALSERVERERROR {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingId")
     public String trackingId;
+
     public FiveHundredINTERNALSERVERERROR withTrackingId(String trackingId) {
         this.trackingId = trackingId;
         return this;
     }
     
+    public FiveHundredINTERNALSERVERERROR(){}
 }

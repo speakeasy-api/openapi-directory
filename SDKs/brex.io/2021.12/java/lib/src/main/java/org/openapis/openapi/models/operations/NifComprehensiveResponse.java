@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class NifComprehensiveResponse {
     
     public String contentType;
+
     public NifComprehensiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class NifComprehensiveResponse {
      */
     
     public NifComprehensive200ApplicationJSON nifComprehensive200ApplicationJSONObject;
+
     public NifComprehensiveResponse withNifComprehensive200ApplicationJSONObject(NifComprehensive200ApplicationJSON nifComprehensive200ApplicationJSONObject) {
         this.nifComprehensive200ApplicationJSONObject = nifComprehensive200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class NifComprehensiveResponse {
      */
     
     public NifComprehensiveDefaultApplicationJSON nifComprehensiveDefaultApplicationJSONObject;
+
     public NifComprehensiveResponse withNifComprehensiveDefaultApplicationJSONObject(NifComprehensiveDefaultApplicationJSON nifComprehensiveDefaultApplicationJSONObject) {
         this.nifComprehensiveDefaultApplicationJSONObject = nifComprehensiveDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class NifComprehensiveResponse {
     
     
     public Integer statusCode;
+
     public NifComprehensiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class NifComprehensiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public NifComprehensiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public NifComprehensiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ChannelCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryChannelCode")
     public String channelCategoryChannelCode;
+
     public ChannelCategory withChannelCategoryChannelCode(String channelCategoryChannelCode) {
         this.channelCategoryChannelCode = channelCategoryChannelCode;
         return this;
@@ -29,6 +30,7 @@ public class ChannelCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryColumnOverrides")
     public java.util.Map<String, ChannelCategoryColumnOverride> channelCategoryColumnOverrides;
+
     public ChannelCategory withChannelCategoryColumnOverrides(java.util.Map<String, ChannelCategoryColumnOverride> channelCategoryColumnOverrides) {
         this.channelCategoryColumnOverrides = channelCategoryColumnOverrides;
         return this;
@@ -40,6 +42,7 @@ public class ChannelCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryDefaultCost")
     public Double channelCategoryDefaultCost;
+
     public ChannelCategory withChannelCategoryDefaultCost(Double channelCategoryDefaultCost) {
         this.channelCategoryDefaultCost = channelCategoryDefaultCost;
         return this;
@@ -47,6 +50,7 @@ public class ChannelCategory {
     
     @JsonProperty("channelCategoryId")
     public String channelCategoryId;
+
     public ChannelCategory withChannelCategoryId(String channelCategoryId) {
         this.channelCategoryId = channelCategoryId;
         return this;
@@ -57,6 +61,7 @@ public class ChannelCategory {
      */
     @JsonProperty("channelCategoryLevel")
     public Integer channelCategoryLevel;
+
     public ChannelCategory withChannelCategoryLevel(Integer channelCategoryLevel) {
         this.channelCategoryLevel = channelCategoryLevel;
         return this;
@@ -67,9 +72,15 @@ public class ChannelCategory {
      */
     @JsonProperty("channelCategoryPath")
     public String[] channelCategoryPath;
+
     public ChannelCategory withChannelCategoryPath(String[] channelCategoryPath) {
         this.channelCategoryPath = channelCategoryPath;
         return this;
     }
     
+    public ChannelCategory(@JsonProperty("channelCategoryId") String channelCategoryId, @JsonProperty("channelCategoryLevel") Integer channelCategoryLevel, @JsonProperty("channelCategoryPath") String[] channelCategoryPath) {
+        this.channelCategoryId = channelCategoryId;
+        this.channelCategoryLevel = channelCategoryLevel;
+        this.channelCategoryPath = channelCategoryPath;
+  }
 }

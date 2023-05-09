@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ReplaceDictionaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wordList")
     public GooglePrivacyDlpV2WordList wordList;
+
     public GooglePrivacyDlpV2ReplaceDictionaryConfig withWordList(GooglePrivacyDlpV2WordList wordList) {
         this.wordList = wordList;
         return this;
     }
     
+    public GooglePrivacyDlpV2ReplaceDictionaryConfig(){}
 }

@@ -22,6 +22,7 @@ public class PatientAuthNotificationAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public PatientAuthNotificationAuth withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -30,6 +31,7 @@ public class PatientAuthNotificationAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientDemographicResponse patient;
+
     public PatientAuthNotificationAuth withPatient(PatientDemographicResponse patient) {
         this.patient = patient;
         return this;
@@ -37,6 +39,7 @@ public class PatientAuthNotificationAuth {
     
     @JsonProperty("status")
     public PatientAuthNotificationAuthStatusEnum status;
+
     public PatientAuthNotificationAuth withStatus(PatientAuthNotificationAuthStatusEnum status) {
         this.status = status;
         return this;
@@ -47,6 +50,7 @@ public class PatientAuthNotificationAuth {
      */
     @JsonProperty("transactionId")
     public String transactionId;
+
     public PatientAuthNotificationAuth withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -55,9 +59,14 @@ public class PatientAuthNotificationAuth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validity")
     public AccessTokenValidity validity;
+
     public PatientAuthNotificationAuth withValidity(AccessTokenValidity validity) {
         this.validity = validity;
         return this;
     }
     
+    public PatientAuthNotificationAuth(@JsonProperty("status") PatientAuthNotificationAuthStatusEnum status, @JsonProperty("transactionId") String transactionId) {
+        this.status = status;
+        this.transactionId = transactionId;
+  }
 }

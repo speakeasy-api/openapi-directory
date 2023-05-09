@@ -15,6 +15,7 @@ public class EcKeyboardSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("char")
     public String char_;
+
     public EcKeyboardSequence withChar(String char_) {
         this.char_ = char_;
         return this;
@@ -26,6 +27,7 @@ public class EcKeyboardSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("l33tchar")
     public String l33tchar;
+
     public EcKeyboardSequence withL33tchar(String l33tchar) {
         this.l33tchar = l33tchar;
         return this;
@@ -40,9 +42,11 @@ public class EcKeyboardSequence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("penalty")
     public Double penalty;
+
     public EcKeyboardSequence withPenalty(Double penalty) {
         this.penalty = penalty;
         return this;
     }
     
+    public EcKeyboardSequence(){}
 }

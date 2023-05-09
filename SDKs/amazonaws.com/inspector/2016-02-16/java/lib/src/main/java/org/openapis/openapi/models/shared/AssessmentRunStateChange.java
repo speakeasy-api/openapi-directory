@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class AssessmentRunStateChange {
     @JsonProperty("state")
     public AssessmentRunStateEnum state;
+
     public AssessmentRunStateChange withState(AssessmentRunStateEnum state) {
         this.state = state;
         return this;
@@ -26,9 +27,14 @@ public class AssessmentRunStateChange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stateChangedAt")
     public OffsetDateTime stateChangedAt;
+
     public AssessmentRunStateChange withStateChangedAt(OffsetDateTime stateChangedAt) {
         this.stateChangedAt = stateChangedAt;
         return this;
     }
     
+    public AssessmentRunStateChange(@JsonProperty("state") AssessmentRunStateEnum state, @JsonProperty("stateChangedAt") OffsetDateTime stateChangedAt) {
+        this.state = state;
+        this.stateChangedAt = stateChangedAt;
+  }
 }

@@ -12,6 +12,7 @@ public class CompleteAttachmentUploadRequestBody {
      */
     @JsonProperty("AttachmentIds")
     public String[] attachmentIds;
+
     public CompleteAttachmentUploadRequestBody withAttachmentIds(String[] attachmentIds) {
         this.attachmentIds = attachmentIds;
         return this;
@@ -22,9 +23,14 @@ public class CompleteAttachmentUploadRequestBody {
      */
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CompleteAttachmentUploadRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public CompleteAttachmentUploadRequestBody(@JsonProperty("AttachmentIds") String[] attachmentIds, @JsonProperty("ClientToken") String clientToken) {
+        this.attachmentIds = attachmentIds;
+        this.clientToken = clientToken;
+  }
 }

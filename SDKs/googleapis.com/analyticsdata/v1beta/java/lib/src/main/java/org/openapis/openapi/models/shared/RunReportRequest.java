@@ -18,6 +18,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cohortSpec")
     public CohortSpec cohortSpec;
+
     public RunReportRequest withCohortSpec(CohortSpec cohortSpec) {
         this.cohortSpec = cohortSpec;
         return this;
@@ -29,6 +30,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public RunReportRequest withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -40,6 +42,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRanges")
     public DateRange[] dateRanges;
+
     public RunReportRequest withDateRanges(DateRange[] dateRanges) {
         this.dateRanges = dateRanges;
         return this;
@@ -51,6 +54,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public FilterExpression dimensionFilter;
+
     public RunReportRequest withDimensionFilter(FilterExpression dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -62,6 +66,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public RunReportRequest withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -73,17 +78,19 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyRows")
     public Boolean keepEmptyRows;
+
     public RunReportRequest withKeepEmptyRows(Boolean keepEmptyRows) {
         this.keepEmptyRows = keepEmptyRows;
         return this;
     }
     
     /**
-     * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 100,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value. To learn more about this pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
+     * The number of rows to return. If unspecified, 10,000 rows are returned. The API returns a maximum of 250,000 rows per request, no matter how many you ask for. `limit` must be positive. The API can also return fewer rows than the requested `limit`, if there aren't as many dimension values as the `limit`. For instance, there are fewer than 300 possible values for the dimension `country`, so when reporting on only `country`, you can't get more than 300 rows, even if you set `limit` to a higher value. To learn more about this pagination parameter, see [Pagination](https://developers.google.com/analytics/devguides/reporting/data/v1/basics#pagination).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public String limit;
+
     public RunReportRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -95,6 +102,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricAggregations")
     public RunReportRequestMetricAggregationsEnum[] metricAggregations;
+
     public RunReportRequest withMetricAggregations(RunReportRequestMetricAggregationsEnum[] metricAggregations) {
         this.metricAggregations = metricAggregations;
         return this;
@@ -106,6 +114,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public FilterExpression metricFilter;
+
     public RunReportRequest withMetricFilter(FilterExpression metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -117,6 +126,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public RunReportRequest withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -128,6 +138,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public String offset;
+
     public RunReportRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -139,6 +150,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBys")
     public OrderBy[] orderBys;
+
     public RunReportRequest withOrderBys(OrderBy[] orderBys) {
         this.orderBys = orderBys;
         return this;
@@ -150,6 +162,7 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public RunReportRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -161,9 +174,11 @@ public class RunReportRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPropertyQuota")
     public Boolean returnPropertyQuota;
+
     public RunReportRequest withReturnPropertyQuota(Boolean returnPropertyQuota) {
         this.returnPropertyQuota = returnPropertyQuota;
         return this;
     }
     
+    public RunReportRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindContactListsResponse {
@@ -12,6 +13,7 @@ public class FindContactListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ContactListPage contactListPage;
+
     public FindContactListsResponse withContactListPage(org.openapis.openapi.models.shared.ContactListPage contactListPage) {
         this.contactListPage = contactListPage;
         return this;
@@ -19,6 +21,7 @@ public class FindContactListsResponse {
     
     
     public String contentType;
+
     public FindContactListsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class FindContactListsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public FindContactListsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class FindContactListsResponse {
     
     
     public Integer statusCode;
+
     public FindContactListsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FindContactListsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindContactListsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindContactListsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

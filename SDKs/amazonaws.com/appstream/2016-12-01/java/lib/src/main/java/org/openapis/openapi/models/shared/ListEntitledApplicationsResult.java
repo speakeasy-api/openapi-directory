@@ -15,6 +15,7 @@ public class ListEntitledApplicationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitledApplications")
     public EntitledApplication[] entitledApplications;
+
     public ListEntitledApplicationsResult withEntitledApplications(EntitledApplication[] entitledApplications) {
         this.entitledApplications = entitledApplications;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitledApplicationsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitledApplicationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitledApplicationsResult(){}
 }

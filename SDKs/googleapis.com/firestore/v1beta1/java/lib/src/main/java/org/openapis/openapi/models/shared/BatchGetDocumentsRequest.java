@@ -18,6 +18,7 @@ public class BatchGetDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public String[] documents;
+
     public BatchGetDocumentsRequest withDocuments(String[] documents) {
         this.documents = documents;
         return this;
@@ -29,6 +30,7 @@ public class BatchGetDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mask")
     public DocumentMask mask;
+
     public BatchGetDocumentsRequest withMask(DocumentMask mask) {
         this.mask = mask;
         return this;
@@ -40,6 +42,7 @@ public class BatchGetDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newTransaction")
     public TransactionOptions newTransaction;
+
     public BatchGetDocumentsRequest withNewTransaction(TransactionOptions newTransaction) {
         this.newTransaction = newTransaction;
         return this;
@@ -51,6 +54,7 @@ public class BatchGetDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public BatchGetDocumentsRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -62,9 +66,11 @@ public class BatchGetDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public BatchGetDocumentsRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public BatchGetDocumentsRequest(){}
 }

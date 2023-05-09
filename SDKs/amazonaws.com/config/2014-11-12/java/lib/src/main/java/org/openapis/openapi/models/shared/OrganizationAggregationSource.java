@@ -15,6 +15,7 @@ public class OrganizationAggregationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllAwsRegions")
     public Boolean allAwsRegions;
+
     public OrganizationAggregationSource withAllAwsRegions(Boolean allAwsRegions) {
         this.allAwsRegions = allAwsRegions;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationAggregationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegions")
     public String[] awsRegions;
+
     public OrganizationAggregationSource withAwsRegions(String[] awsRegions) {
         this.awsRegions = awsRegions;
         return this;
@@ -30,9 +32,13 @@ public class OrganizationAggregationSource {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public OrganizationAggregationSource withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public OrganizationAggregationSource(@JsonProperty("RoleArn") String roleArn) {
+        this.roleArn = roleArn;
+  }
 }

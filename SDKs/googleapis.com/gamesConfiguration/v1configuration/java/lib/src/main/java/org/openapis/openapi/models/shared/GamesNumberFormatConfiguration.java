@@ -18,6 +18,7 @@ public class GamesNumberFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GamesNumberFormatConfiguration withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class GamesNumberFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numDecimalPlaces")
     public Integer numDecimalPlaces;
+
     public GamesNumberFormatConfiguration withNumDecimalPlaces(Integer numDecimalPlaces) {
         this.numDecimalPlaces = numDecimalPlaces;
         return this;
@@ -40,6 +42,7 @@ public class GamesNumberFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberFormatType")
     public GamesNumberFormatConfigurationNumberFormatTypeEnum numberFormatType;
+
     public GamesNumberFormatConfiguration withNumberFormatType(GamesNumberFormatConfigurationNumberFormatTypeEnum numberFormatType) {
         this.numberFormatType = numberFormatType;
         return this;
@@ -51,9 +54,11 @@ public class GamesNumberFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffix")
     public GamesNumberAffixConfiguration suffix;
+
     public GamesNumberFormatConfiguration withSuffix(GamesNumberAffixConfiguration suffix) {
         this.suffix = suffix;
         return this;
     }
     
+    public GamesNumberFormatConfiguration(){}
 }

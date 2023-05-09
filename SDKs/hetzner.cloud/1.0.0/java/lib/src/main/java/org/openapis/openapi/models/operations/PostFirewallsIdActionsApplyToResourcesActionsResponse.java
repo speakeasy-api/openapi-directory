@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostFirewallsIdActionsApplyToResourcesActionsResponse {
     @JsonProperty("actions")
     public PostFirewallsIdActionsApplyToResourcesActionsResponseAction[] actions;
+
     public PostFirewallsIdActionsApplyToResourcesActionsResponse withActions(PostFirewallsIdActionsApplyToResourcesActionsResponseAction[] actions) {
         this.actions = actions;
         return this;
@@ -22,9 +23,13 @@ public class PostFirewallsIdActionsApplyToResourcesActionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PostFirewallsIdActionsApplyToResourcesActionsResponseMeta meta;
+
     public PostFirewallsIdActionsApplyToResourcesActionsResponse withMeta(PostFirewallsIdActionsApplyToResourcesActionsResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public PostFirewallsIdActionsApplyToResourcesActionsResponse(@JsonProperty("actions") PostFirewallsIdActionsApplyToResourcesActionsResponseAction[] actions) {
+        this.actions = actions;
+  }
 }

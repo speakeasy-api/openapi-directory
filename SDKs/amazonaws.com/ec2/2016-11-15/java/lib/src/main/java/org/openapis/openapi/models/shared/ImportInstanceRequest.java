@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImportInstanceRequest {
     
     public String description;
+
     public ImportInstanceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -16,6 +17,7 @@ public class ImportInstanceRequest {
     
     
     public DiskImage[] diskImages;
+
     public ImportInstanceRequest withDiskImages(DiskImage[] diskImages) {
         this.diskImages = diskImages;
         return this;
@@ -23,6 +25,7 @@ public class ImportInstanceRequest {
     
     
     public Boolean dryRun;
+
     public ImportInstanceRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ImportInstanceRequest {
     
     
     public ImportInstanceRequestLaunchSpecification launchSpecification;
+
     public ImportInstanceRequest withLaunchSpecification(ImportInstanceRequestLaunchSpecification launchSpecification) {
         this.launchSpecification = launchSpecification;
         return this;
@@ -37,9 +41,13 @@ public class ImportInstanceRequest {
     
     
     public ImportInstanceRequestPlatformEnum platform;
+
     public ImportInstanceRequest withPlatform(ImportInstanceRequestPlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public ImportInstanceRequest(@JsonProperty("Platform") ImportInstanceRequestPlatformEnum platform) {
+        this.platform = platform;
+  }
 }

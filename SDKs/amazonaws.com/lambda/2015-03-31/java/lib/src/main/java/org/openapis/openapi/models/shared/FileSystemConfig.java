@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FileSystemConfig {
     @JsonProperty("Arn")
     public String arn;
+
     public FileSystemConfig withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,14 @@ public class FileSystemConfig {
     
     @JsonProperty("LocalMountPath")
     public String localMountPath;
+
     public FileSystemConfig withLocalMountPath(String localMountPath) {
         this.localMountPath = localMountPath;
         return this;
     }
     
+    public FileSystemConfig(@JsonProperty("Arn") String arn, @JsonProperty("LocalMountPath") String localMountPath) {
+        this.arn = arn;
+        this.localMountPath = localMountPath;
+  }
 }

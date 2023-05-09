@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity;
 import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateRequest;
 import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateResponse;
+import org.openapis.openapi.models.operations.ApigeeregistryProjectsLocationsApisCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.ApiInput;
 import org.openapis.openapi.models.shared.XgafvEnum;
@@ -30,50 +29,51 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ApigeeregistryProjectsLocationsApisCreateRequest req = new ApigeeregistryProjectsLocationsApisCreateRequest() {{
-                dollarXgafv = "2";
+            ApigeeregistryProjectsLocationsApisCreateRequest req = new ApigeeregistryProjectsLocationsApisCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 apiInput = new ApiInput() {{
                     annotations = new java.util.HashMap<String, String>() {{
-                        put("distinctio", "quibusdam");
-                        put("unde", "nulla");
-                        put("corrupti", "illum");
+                        put("quibusdam", "unde");
+                        put("nulla", "corrupti");
+                        put("illum", "vel");
                     }};
-                    availability = "vel";
-                    description = "error";
-                    displayName = "deserunt";
+                    availability = "error";
+                    description = "deserunt";
+                    displayName = "suscipit";
                     labels = new java.util.HashMap<String, String>() {{
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("magnam", "debitis");
+                        put("ipsa", "delectus");
                     }};
-                    name = "delectus";
-                    recommendedDeployment = "tempora";
-                    recommendedVersion = "suscipit";
-                }};
-                accessToken = "molestiae";
-                alt = "proto";
-                apiId = "placeat";
-                callback = "voluptatum";
-                fields = "iusto";
-                key = "excepturi";
-                oauthToken = "nisi";
-                parent = "recusandae";
+                    name = "Laurie Kreiger";
+                    recommendedDeployment = "voluptatum";
+                    recommendedVersion = "iusto";
+                }};;
+                accessToken = "excepturi";
+                alt = AltEnum.MEDIA;
+                apiId = "recusandae";
+                callback = "temporibus";
+                fields = "ab";
+                key = "quis";
+                oauthToken = "veritatis";
                 prettyPrint = false;
-                quotaUser = "temporibus";
-                uploadType = "ab";
-                uploadProtocol = "quis";
-            }}            
+                quotaUser = "deserunt";
+                uploadType = "perferendis";
+                uploadProtocol = "ipsam";
+            }};            
 
-            ApigeeregistryProjectsLocationsApisCreateResponse res = sdk.projects.apigeeregistryProjectsLocationsApisCreate(req, new ApigeeregistryProjectsLocationsApisCreateSecurity() {{
+            ApigeeregistryProjectsLocationsApisCreateResponse res = sdk.projects.apigeeregistryProjectsLocationsApisCreate(req, new ApigeeregistryProjectsLocationsApisCreateSecurity("repellendus", "sapiente") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.api.isPresent()) {
+            if (res.api != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,34 +81,34 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `apigeeregistryProjectsLocationsApisCreate` - Creates a specified API.
-* `apigeeregistryProjectsLocationsApisDeploymentsCreate` - Creates a specified deployment.
-* `apigeeregistryProjectsLocationsApisDeploymentsList` - Returns matching deployments.
-* `apigeeregistryProjectsLocationsApisList` - Returns matching APIs.
-* `apigeeregistryProjectsLocationsApisVersionsCreate` - Creates a specified version.
-* `apigeeregistryProjectsLocationsApisVersionsList` - Returns matching versions.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsCreate` - Creates a specified spec.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision` - Deletes a revision of a spec.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsList` - Returns matching specs.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsListRevisions` - Lists all revisions of a spec. Revisions are returned in descending order of revision creation time.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsPatch` - Used to modify a specified spec.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsRollback` - Sets the current revision to a specified prior revision. Note that this creates a new revision with a new revision ID.
-* `apigeeregistryProjectsLocationsApisVersionsSpecsTagRevision` - Adds a tag to a specified revision of a spec.
-* `apigeeregistryProjectsLocationsArtifactsCreate` - Creates a specified artifact.
-* `apigeeregistryProjectsLocationsArtifactsGetContents` - Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the default behavior is to return the artifact uncompressed (the mime_type response field indicates the exact format returned).
-* `apigeeregistryProjectsLocationsArtifactsList` - Returns matching artifacts.
-* `apigeeregistryProjectsLocationsArtifactsReplaceArtifact` - Used to replace a specified artifact.
-* `apigeeregistryProjectsLocationsInstancesCreate` - Provisions instance resources for the Registry.
-* `apigeeregistryProjectsLocationsList` - Lists information about the supported locations for this service.
-* `apigeeregistryProjectsLocationsOperationsCancel` - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
-* `apigeeregistryProjectsLocationsOperationsDelete` - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-* `apigeeregistryProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `apigeeregistryProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
-* `apigeeregistryProjectsLocationsRuntimeGetIamPolicy` - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
-* `apigeeregistryProjectsLocationsRuntimeSetIamPolicy` - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
-* `apigeeregistryProjectsLocationsRuntimeTestIamPermissions` - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
+* [apigeeregistryProjectsLocationsApisCreate](docs/projects/README.md#apigeeregistryprojectslocationsapiscreate) - Creates a specified API.
+* [apigeeregistryProjectsLocationsApisDeploymentsCreate](docs/projects/README.md#apigeeregistryprojectslocationsapisdeploymentscreate) - Creates a specified deployment.
+* [apigeeregistryProjectsLocationsApisDeploymentsList](docs/projects/README.md#apigeeregistryprojectslocationsapisdeploymentslist) - Returns matching deployments.
+* [apigeeregistryProjectsLocationsApisList](docs/projects/README.md#apigeeregistryprojectslocationsapislist) - Returns matching APIs.
+* [apigeeregistryProjectsLocationsApisVersionsCreate](docs/projects/README.md#apigeeregistryprojectslocationsapisversionscreate) - Creates a specified version.
+* [apigeeregistryProjectsLocationsApisVersionsList](docs/projects/README.md#apigeeregistryprojectslocationsapisversionslist) - Returns matching versions.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsCreate](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecscreate) - Creates a specified spec.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevision](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecsdeleterevision) - Deletes a revision of a spec.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsList](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecslist) - Returns matching specs.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsListRevisions](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecslistrevisions) - Lists all revisions of a spec. Revisions are returned in descending order of revision creation time.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsPatch](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecspatch) - Used to modify a specified spec.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsRollback](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecsrollback) - Sets the current revision to a specified prior revision. Note that this creates a new revision with a new revision ID.
+* [apigeeregistryProjectsLocationsApisVersionsSpecsTagRevision](docs/projects/README.md#apigeeregistryprojectslocationsapisversionsspecstagrevision) - Adds a tag to a specified revision of a spec.
+* [apigeeregistryProjectsLocationsArtifactsCreate](docs/projects/README.md#apigeeregistryprojectslocationsartifactscreate) - Creates a specified artifact.
+* [apigeeregistryProjectsLocationsArtifactsGetContents](docs/projects/README.md#apigeeregistryprojectslocationsartifactsgetcontents) - Returns the contents of a specified artifact. If artifacts are stored with GZip compression, the default behavior is to return the artifact uncompressed (the mime_type response field indicates the exact format returned).
+* [apigeeregistryProjectsLocationsArtifactsList](docs/projects/README.md#apigeeregistryprojectslocationsartifactslist) - Returns matching artifacts.
+* [apigeeregistryProjectsLocationsArtifactsReplaceArtifact](docs/projects/README.md#apigeeregistryprojectslocationsartifactsreplaceartifact) - Used to replace a specified artifact.
+* [apigeeregistryProjectsLocationsInstancesCreate](docs/projects/README.md#apigeeregistryprojectslocationsinstancescreate) - Provisions instance resources for the Registry.
+* [apigeeregistryProjectsLocationsList](docs/projects/README.md#apigeeregistryprojectslocationslist) - Lists information about the supported locations for this service.
+* [apigeeregistryProjectsLocationsOperationsCancel](docs/projects/README.md#apigeeregistryprojectslocationsoperationscancel) - Starts asynchronous cancellation on a long-running operation. The server makes a best effort to cancel the operation, but success is not guaranteed. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other methods to check whether the cancellation succeeded or whether the operation completed despite cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an operation with an Operation.error value with a google.rpc.Status.code of 1, corresponding to `Code.CANCELLED`.
+* [apigeeregistryProjectsLocationsOperationsDelete](docs/projects/README.md#apigeeregistryprojectslocationsoperationsdelete) - Deletes a long-running operation. This method indicates that the client is no longer interested in the operation result. It does not cancel the operation. If the server doesn't support this method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+* [apigeeregistryProjectsLocationsOperationsGet](docs/projects/README.md#apigeeregistryprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [apigeeregistryProjectsLocationsOperationsList](docs/projects/README.md#apigeeregistryprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`. NOTE: the `name` binding allows API services to override the binding to use different resource name schemes, such as `users/*/operations`. To override the binding, API services can add a binding such as `"/v1/{name=users/*}/operations"` to their service configuration. For backwards compatibility, the default name includes the operations collection id, however overriding users must ensure the name binding is the parent resource, without the operations collection id.
+* [apigeeregistryProjectsLocationsRuntimeGetIamPolicy](docs/projects/README.md#apigeeregistryprojectslocationsruntimegetiampolicy) - Gets the access control policy for a resource. Returns an empty policy if the resource exists and does not have a policy set.
+* [apigeeregistryProjectsLocationsRuntimeSetIamPolicy](docs/projects/README.md#apigeeregistryprojectslocationsruntimesetiampolicy) - Sets the access control policy on the specified resource. Replaces any existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+* [apigeeregistryProjectsLocationsRuntimeTestIamPermissions](docs/projects/README.md#apigeeregistryprojectslocationsruntimetestiampermissions) - Returns permissions that a caller has on the specified resource. If the resource does not exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is designed to be used for building permission-aware UIs and command-line tools, not for authorization checking. This operation may "fail open" without warning.
 <!-- End SDK Available Operations -->
 
 ### Maturity

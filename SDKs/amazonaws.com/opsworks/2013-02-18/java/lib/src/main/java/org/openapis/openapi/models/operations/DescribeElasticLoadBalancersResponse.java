@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeElasticLoadBalancersResponse {
     
     public String contentType;
+
     public DescribeElasticLoadBalancersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeElasticLoadBalancersResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeElasticLoadBalancersResult describeElasticLoadBalancersResult;
+
     public DescribeElasticLoadBalancersResponse withDescribeElasticLoadBalancersResult(org.openapis.openapi.models.shared.DescribeElasticLoadBalancersResult describeElasticLoadBalancersResult) {
         this.describeElasticLoadBalancersResult = describeElasticLoadBalancersResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeElasticLoadBalancersResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeElasticLoadBalancersResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeElasticLoadBalancersResponse {
     
     
     public Integer statusCode;
+
     public DescribeElasticLoadBalancersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeElasticLoadBalancersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeElasticLoadBalancersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeElasticLoadBalancersResponse {
      */
     
     public Object validationException;
+
     public DescribeElasticLoadBalancersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeElasticLoadBalancersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

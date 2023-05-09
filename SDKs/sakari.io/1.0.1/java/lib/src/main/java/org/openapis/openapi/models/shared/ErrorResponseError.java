@@ -12,6 +12,7 @@ public class ErrorResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public ErrorResponseError withCode(String code) {
         this.code = code;
         return this;
@@ -20,9 +21,11 @@ public class ErrorResponseError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ErrorResponseError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ErrorResponseError(){}
 }

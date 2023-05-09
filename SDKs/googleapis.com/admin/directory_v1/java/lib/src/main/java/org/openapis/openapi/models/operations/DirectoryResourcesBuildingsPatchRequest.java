@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryResourcesBuildingsPatchRequest {
@@ -12,6 +13,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryResourcesBuildingsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Building building;
+
     public DirectoryResourcesBuildingsPatchRequest withBuilding(org.openapis.openapi.models.shared.Building building) {
         this.building = building;
         return this;
@@ -29,6 +32,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryResourcesBuildingsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryResourcesBuildingsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=buildingId")
     public String buildingId;
+
     public DirectoryResourcesBuildingsPatchRequest withBuildingId(String buildingId) {
         this.buildingId = buildingId;
         return this;
@@ -59,6 +65,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryResourcesBuildingsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=coordinatesSource")
     public DirectoryResourcesBuildingsPatchCoordinatesSourceEnum coordinatesSource;
+
     public DirectoryResourcesBuildingsPatchRequest withCoordinatesSource(DirectoryResourcesBuildingsPatchCoordinatesSourceEnum coordinatesSource) {
         this.coordinatesSource = coordinatesSource;
         return this;
@@ -79,6 +87,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer")
     public String customer;
+
     public DirectoryResourcesBuildingsPatchRequest withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -89,6 +98,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryResourcesBuildingsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -99,6 +109,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryResourcesBuildingsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryResourcesBuildingsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryResourcesBuildingsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryResourcesBuildingsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryResourcesBuildingsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,14 @@ public class DirectoryResourcesBuildingsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryResourcesBuildingsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DirectoryResourcesBuildingsPatchRequest(@JsonProperty("buildingId") String buildingId, @JsonProperty("customer") String customer) {
+        this.buildingId = buildingId;
+        this.customer = customer;
+  }
 }

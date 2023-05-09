@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AccountListNodeAgentSkusRequest {
@@ -12,6 +13,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$filter")
     public String dollarFilter;
+
     public AccountListNodeAgentSkusRequest withDollarFilter(String dollarFilter) {
         this.dollarFilter = dollarFilter;
         return this;
@@ -22,6 +24,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public AccountListNodeAgentSkusRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public AccountListNodeAgentSkusRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxresults")
     public Integer maxresults;
+
     public AccountListNodeAgentSkusRequest withMaxresults(Integer maxresults) {
         this.maxresults = maxresults;
         return this;
@@ -52,6 +57,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public AccountListNodeAgentSkusRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -62,6 +68,7 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public AccountListNodeAgentSkusRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -72,9 +79,13 @@ public class AccountListNodeAgentSkusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public AccountListNodeAgentSkusRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public AccountListNodeAgentSkusRequest(@JsonProperty("api-version") String apiVersion) {
+        this.apiVersion = apiVersion;
+  }
 }

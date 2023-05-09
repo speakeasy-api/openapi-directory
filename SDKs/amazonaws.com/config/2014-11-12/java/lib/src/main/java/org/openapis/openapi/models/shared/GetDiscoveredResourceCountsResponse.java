@@ -15,6 +15,7 @@ public class GetDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDiscoveredResourceCountsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class GetDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceCounts")
     public ResourceCount[] resourceCounts;
+
     public GetDiscoveredResourceCountsResponse withResourceCounts(ResourceCount[] resourceCounts) {
         this.resourceCounts = resourceCounts;
         return this;
@@ -31,9 +33,11 @@ public class GetDiscoveredResourceCountsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDiscoveredResources")
     public Long totalDiscoveredResources;
+
     public GetDiscoveredResourceCountsResponse withTotalDiscoveredResources(Long totalDiscoveredResources) {
         this.totalDiscoveredResources = totalDiscoveredResources;
         return this;
     }
     
+    public GetDiscoveredResourceCountsResponse(){}
 }

@@ -18,6 +18,7 @@ public class TfLiteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automlModel")
     public String automlModel;
+
     public TfLiteModel withAutomlModel(String automlModel) {
         this.automlModel = automlModel;
         return this;
@@ -29,6 +30,7 @@ public class TfLiteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsTfliteUri")
     public String gcsTfliteUri;
+
     public TfLiteModel withGcsTfliteUri(String gcsTfliteUri) {
         this.gcsTfliteUri = gcsTfliteUri;
         return this;
@@ -40,9 +42,11 @@ public class TfLiteModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public TfLiteModel withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
     }
     
+    public TfLiteModel(){}
 }

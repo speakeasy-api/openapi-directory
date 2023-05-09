@@ -12,6 +12,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth {
      */
     @JsonProperty("day")
     public String day;
+
     public CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth withDay(String day) {
         this.day = day;
         return this;
@@ -22,6 +23,7 @@ public class CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth {
      */
     @JsonProperty("month")
     public String month;
+
     public CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth withMonth(String month) {
         this.month = month;
         return this;
@@ -32,9 +34,15 @@ public class CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth {
      */
     @JsonProperty("year")
     public String year;
+
     public CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationRequestDateOfBirth(@JsonProperty("day") String day, @JsonProperty("month") String month, @JsonProperty("year") String year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+  }
 }

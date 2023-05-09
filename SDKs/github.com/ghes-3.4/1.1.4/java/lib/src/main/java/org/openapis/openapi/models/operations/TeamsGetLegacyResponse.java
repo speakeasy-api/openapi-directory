@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsGetLegacyResponse {
     
     public String contentType;
+
     public TeamsGetLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsGetLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsGetLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsGetLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsGetLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsGetLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsGetLegacyResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class TeamsGetLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamFull teamFull;
+
     public TeamsGetLegacyResponse withTeamFull(org.openapis.openapi.models.shared.TeamFull teamFull) {
         this.teamFull = teamFull;
         return this;
     }
     
+    public TeamsGetLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

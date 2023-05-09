@@ -61,6 +61,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaOAuth")
     public HrefType scaOAuth;
+
     public LinksSigningBasket withScaOAuth(HrefType scaOAuth) {
         this.scaOAuth = scaOAuth;
         return this;
@@ -72,6 +73,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaRedirect")
     public HrefType scaRedirect;
+
     public LinksSigningBasket withScaRedirect(HrefType scaRedirect) {
         this.scaRedirect = scaRedirect;
         return this;
@@ -83,6 +85,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaStatus")
     public HrefType scaStatus;
+
     public LinksSigningBasket withScaStatus(HrefType scaStatus) {
         this.scaStatus = scaStatus;
         return this;
@@ -94,6 +97,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public HrefType self;
+
     public LinksSigningBasket withSelf(HrefType self) {
         this.self = self;
         return this;
@@ -105,6 +109,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisation")
     public HrefType startAuthorisation;
+
     public LinksSigningBasket withStartAuthorisation(HrefType startAuthorisation) {
         this.startAuthorisation = startAuthorisation;
         return this;
@@ -116,6 +121,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisationWithAuthenticationMethodSelection")
     public HrefType startAuthorisationWithAuthenticationMethodSelection;
+
     public LinksSigningBasket withStartAuthorisationWithAuthenticationMethodSelection(HrefType startAuthorisationWithAuthenticationMethodSelection) {
         this.startAuthorisationWithAuthenticationMethodSelection = startAuthorisationWithAuthenticationMethodSelection;
         return this;
@@ -127,6 +133,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisationWithEncryptedPsuAuthentication")
     public HrefType startAuthorisationWithEncryptedPsuAuthentication;
+
     public LinksSigningBasket withStartAuthorisationWithEncryptedPsuAuthentication(HrefType startAuthorisationWithEncryptedPsuAuthentication) {
         this.startAuthorisationWithEncryptedPsuAuthentication = startAuthorisationWithEncryptedPsuAuthentication;
         return this;
@@ -138,6 +145,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisationWithPsuAuthentication")
     public HrefType startAuthorisationWithPsuAuthentication;
+
     public LinksSigningBasket withStartAuthorisationWithPsuAuthentication(HrefType startAuthorisationWithPsuAuthentication) {
         this.startAuthorisationWithPsuAuthentication = startAuthorisationWithPsuAuthentication;
         return this;
@@ -149,6 +157,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisationWithPsuIdentification")
     public HrefType startAuthorisationWithPsuIdentification;
+
     public LinksSigningBasket withStartAuthorisationWithPsuIdentification(HrefType startAuthorisationWithPsuIdentification) {
         this.startAuthorisationWithPsuIdentification = startAuthorisationWithPsuIdentification;
         return this;
@@ -160,6 +169,7 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAuthorisationWithTransactionAuthorisation")
     public HrefType startAuthorisationWithTransactionAuthorisation;
+
     public LinksSigningBasket withStartAuthorisationWithTransactionAuthorisation(HrefType startAuthorisationWithTransactionAuthorisation) {
         this.startAuthorisationWithTransactionAuthorisation = startAuthorisationWithTransactionAuthorisation;
         return this;
@@ -171,9 +181,11 @@ public class LinksSigningBasket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public HrefType status;
+
     public LinksSigningBasket withStatus(HrefType status) {
         this.status = status;
         return this;
     }
     
+    public LinksSigningBasket(){}
 }

@@ -15,6 +15,7 @@ public class InstanceTemplatesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public InstanceTemplatesScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class InstanceTemplatesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InstanceTemplatesScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceTemplatesScopedListWarningData(){}
 }

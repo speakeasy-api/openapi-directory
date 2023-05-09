@@ -18,6 +18,7 @@ public class MonitoringQueryLanguageCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public MonitoringQueryLanguageCondition withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,6 +30,7 @@ public class MonitoringQueryLanguageCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMissingData")
     public MonitoringQueryLanguageConditionEvaluationMissingDataEnum evaluationMissingData;
+
     public MonitoringQueryLanguageCondition withEvaluationMissingData(MonitoringQueryLanguageConditionEvaluationMissingDataEnum evaluationMissingData) {
         this.evaluationMissingData = evaluationMissingData;
         return this;
@@ -40,6 +42,7 @@ public class MonitoringQueryLanguageCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public MonitoringQueryLanguageCondition withQuery(String query) {
         this.query = query;
         return this;
@@ -51,9 +54,11 @@ public class MonitoringQueryLanguageCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public Trigger trigger;
+
     public MonitoringQueryLanguageCondition withTrigger(Trigger trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public MonitoringQueryLanguageCondition(){}
 }

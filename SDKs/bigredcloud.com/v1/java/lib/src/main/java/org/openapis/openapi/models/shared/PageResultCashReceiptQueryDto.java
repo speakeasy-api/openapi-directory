@@ -15,6 +15,7 @@ public class PageResultCashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultCashReceiptQueryDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultCashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public CashReceiptQueryDto[] items;
+
     public PageResultCashReceiptQueryDto withItems(CashReceiptQueryDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultCashReceiptQueryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultCashReceiptQueryDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultCashReceiptQueryDto(){}
 }

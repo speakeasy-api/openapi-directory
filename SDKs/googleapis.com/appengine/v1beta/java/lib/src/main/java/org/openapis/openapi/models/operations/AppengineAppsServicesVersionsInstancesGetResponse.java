@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppengineAppsServicesVersionsInstancesGetResponse {
     
     public String contentType;
+
     public AppengineAppsServicesVersionsInstancesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AppengineAppsServicesVersionsInstancesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Instance instance;
+
     public AppengineAppsServicesVersionsInstancesGetResponse withInstance(org.openapis.openapi.models.shared.Instance instance) {
         this.instance = instance;
         return this;
@@ -26,6 +29,7 @@ public class AppengineAppsServicesVersionsInstancesGetResponse {
     
     
     public Integer statusCode;
+
     public AppengineAppsServicesVersionsInstancesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AppengineAppsServicesVersionsInstancesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppengineAppsServicesVersionsInstancesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AppengineAppsServicesVersionsInstancesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

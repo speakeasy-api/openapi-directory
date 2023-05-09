@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ClusterList {
     
     public Boolean allowVersionUpgrade;
+
     public ClusterList withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -19,6 +20,7 @@ public class ClusterList {
     
     
     public AquaConfiguration aquaConfiguration;
+
     public ClusterList withAquaConfiguration(AquaConfiguration aquaConfiguration) {
         this.aquaConfiguration = aquaConfiguration;
         return this;
@@ -26,6 +28,7 @@ public class ClusterList {
     
     
     public Long automatedSnapshotRetentionPeriod;
+
     public ClusterList withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -33,6 +36,7 @@ public class ClusterList {
     
     
     public String availabilityZone;
+
     public ClusterList withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -40,6 +44,7 @@ public class ClusterList {
     
     
     public String availabilityZoneRelocationStatus;
+
     public ClusterList withAvailabilityZoneRelocationStatus(String availabilityZoneRelocationStatus) {
         this.availabilityZoneRelocationStatus = availabilityZoneRelocationStatus;
         return this;
@@ -47,6 +52,7 @@ public class ClusterList {
     
     
     public String clusterAvailabilityStatus;
+
     public ClusterList withClusterAvailabilityStatus(String clusterAvailabilityStatus) {
         this.clusterAvailabilityStatus = clusterAvailabilityStatus;
         return this;
@@ -54,6 +60,7 @@ public class ClusterList {
     
     
     public OffsetDateTime clusterCreateTime;
+
     public ClusterList withClusterCreateTime(OffsetDateTime clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -61,6 +68,7 @@ public class ClusterList {
     
     
     public String clusterIdentifier;
+
     public ClusterList withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -68,6 +76,7 @@ public class ClusterList {
     
     
     public String clusterNamespaceArn;
+
     public ClusterList withClusterNamespaceArn(String clusterNamespaceArn) {
         this.clusterNamespaceArn = clusterNamespaceArn;
         return this;
@@ -75,6 +84,7 @@ public class ClusterList {
     
     
     public ClusterNode[] clusterNodes;
+
     public ClusterList withClusterNodes(ClusterNode[] clusterNodes) {
         this.clusterNodes = clusterNodes;
         return this;
@@ -82,6 +92,7 @@ public class ClusterList {
     
     
     public ClusterParameterGroupStatusList[] clusterParameterGroups;
+
     public ClusterList withClusterParameterGroups(ClusterParameterGroupStatusList[] clusterParameterGroups) {
         this.clusterParameterGroups = clusterParameterGroups;
         return this;
@@ -89,6 +100,7 @@ public class ClusterList {
     
     
     public String clusterPublicKey;
+
     public ClusterList withClusterPublicKey(String clusterPublicKey) {
         this.clusterPublicKey = clusterPublicKey;
         return this;
@@ -96,6 +108,7 @@ public class ClusterList {
     
     
     public String clusterRevisionNumber;
+
     public ClusterList withClusterRevisionNumber(String clusterRevisionNumber) {
         this.clusterRevisionNumber = clusterRevisionNumber;
         return this;
@@ -103,6 +116,7 @@ public class ClusterList {
     
     
     public ClusterSecurityGroupMembershipList[] clusterSecurityGroups;
+
     public ClusterList withClusterSecurityGroups(ClusterSecurityGroupMembershipList[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -110,6 +124,7 @@ public class ClusterList {
     
     
     public ClusterSnapshotCopyStatus clusterSnapshotCopyStatus;
+
     public ClusterList withClusterSnapshotCopyStatus(ClusterSnapshotCopyStatus clusterSnapshotCopyStatus) {
         this.clusterSnapshotCopyStatus = clusterSnapshotCopyStatus;
         return this;
@@ -117,6 +132,7 @@ public class ClusterList {
     
     
     public String clusterStatus;
+
     public ClusterList withClusterStatus(String clusterStatus) {
         this.clusterStatus = clusterStatus;
         return this;
@@ -124,6 +140,7 @@ public class ClusterList {
     
     
     public String clusterSubnetGroupName;
+
     public ClusterList withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -131,6 +148,7 @@ public class ClusterList {
     
     
     public String clusterVersion;
+
     public ClusterList withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -138,6 +156,7 @@ public class ClusterList {
     
     
     public String dbName;
+
     public ClusterList withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -145,6 +164,7 @@ public class ClusterList {
     
     
     public DataTransferProgress dataTransferProgress;
+
     public ClusterList withDataTransferProgress(DataTransferProgress dataTransferProgress) {
         this.dataTransferProgress = dataTransferProgress;
         return this;
@@ -152,6 +172,7 @@ public class ClusterList {
     
     
     public String defaultIamRoleArn;
+
     public ClusterList withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -159,6 +180,7 @@ public class ClusterList {
     
     
     public DeferredMaintenanceWindowsList[] deferredMaintenanceWindows;
+
     public ClusterList withDeferredMaintenanceWindows(DeferredMaintenanceWindowsList[] deferredMaintenanceWindows) {
         this.deferredMaintenanceWindows = deferredMaintenanceWindows;
         return this;
@@ -166,6 +188,7 @@ public class ClusterList {
     
     
     public ElasticIpStatus elasticIpStatus;
+
     public ClusterList withElasticIpStatus(ElasticIpStatus elasticIpStatus) {
         this.elasticIpStatus = elasticIpStatus;
         return this;
@@ -173,6 +196,7 @@ public class ClusterList {
     
     
     public String elasticResizeNumberOfNodeOptions;
+
     public ClusterList withElasticResizeNumberOfNodeOptions(String elasticResizeNumberOfNodeOptions) {
         this.elasticResizeNumberOfNodeOptions = elasticResizeNumberOfNodeOptions;
         return this;
@@ -180,6 +204,7 @@ public class ClusterList {
     
     
     public Boolean encrypted;
+
     public ClusterList withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -187,6 +212,7 @@ public class ClusterList {
     
     
     public Endpoint endpoint;
+
     public ClusterList withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -194,6 +220,7 @@ public class ClusterList {
     
     
     public Boolean enhancedVpcRouting;
+
     public ClusterList withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -201,6 +228,7 @@ public class ClusterList {
     
     
     public OffsetDateTime expectedNextSnapshotScheduleTime;
+
     public ClusterList withExpectedNextSnapshotScheduleTime(OffsetDateTime expectedNextSnapshotScheduleTime) {
         this.expectedNextSnapshotScheduleTime = expectedNextSnapshotScheduleTime;
         return this;
@@ -208,6 +236,7 @@ public class ClusterList {
     
     
     public String expectedNextSnapshotScheduleTimeStatus;
+
     public ClusterList withExpectedNextSnapshotScheduleTimeStatus(String expectedNextSnapshotScheduleTimeStatus) {
         this.expectedNextSnapshotScheduleTimeStatus = expectedNextSnapshotScheduleTimeStatus;
         return this;
@@ -215,6 +244,7 @@ public class ClusterList {
     
     
     public HsmStatus hsmStatus;
+
     public ClusterList withHsmStatus(HsmStatus hsmStatus) {
         this.hsmStatus = hsmStatus;
         return this;
@@ -222,6 +252,7 @@ public class ClusterList {
     
     
     public ClusterIamRoleList[] iamRoles;
+
     public ClusterList withIamRoles(ClusterIamRoleList[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -229,6 +260,7 @@ public class ClusterList {
     
     
     public String kmsKeyId;
+
     public ClusterList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -236,6 +268,7 @@ public class ClusterList {
     
     
     public String maintenanceTrackName;
+
     public ClusterList withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -243,6 +276,7 @@ public class ClusterList {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public ClusterList withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -250,6 +284,7 @@ public class ClusterList {
     
     
     public String masterUsername;
+
     public ClusterList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -257,6 +292,7 @@ public class ClusterList {
     
     
     public String modifyStatus;
+
     public ClusterList withModifyStatus(String modifyStatus) {
         this.modifyStatus = modifyStatus;
         return this;
@@ -264,6 +300,7 @@ public class ClusterList {
     
     
     public OffsetDateTime nextMaintenanceWindowStartTime;
+
     public ClusterList withNextMaintenanceWindowStartTime(OffsetDateTime nextMaintenanceWindowStartTime) {
         this.nextMaintenanceWindowStartTime = nextMaintenanceWindowStartTime;
         return this;
@@ -271,6 +308,7 @@ public class ClusterList {
     
     
     public String nodeType;
+
     public ClusterList withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -278,6 +316,7 @@ public class ClusterList {
     
     
     public Long numberOfNodes;
+
     public ClusterList withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -285,6 +324,7 @@ public class ClusterList {
     
     
     public String[] pendingActions;
+
     public ClusterList withPendingActions(String[] pendingActions) {
         this.pendingActions = pendingActions;
         return this;
@@ -292,6 +332,7 @@ public class ClusterList {
     
     
     public PendingModifiedValues pendingModifiedValues;
+
     public ClusterList withPendingModifiedValues(PendingModifiedValues pendingModifiedValues) {
         this.pendingModifiedValues = pendingModifiedValues;
         return this;
@@ -299,6 +340,7 @@ public class ClusterList {
     
     
     public String preferredMaintenanceWindow;
+
     public ClusterList withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -306,6 +348,7 @@ public class ClusterList {
     
     
     public Boolean publiclyAccessible;
+
     public ClusterList withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -313,6 +356,7 @@ public class ClusterList {
     
     
     public ReservedNodeExchangeStatus reservedNodeExchangeStatus;
+
     public ClusterList withReservedNodeExchangeStatus(ReservedNodeExchangeStatus reservedNodeExchangeStatus) {
         this.reservedNodeExchangeStatus = reservedNodeExchangeStatus;
         return this;
@@ -320,6 +364,7 @@ public class ClusterList {
     
     
     public ResizeInfo resizeInfo;
+
     public ClusterList withResizeInfo(ResizeInfo resizeInfo) {
         this.resizeInfo = resizeInfo;
         return this;
@@ -327,6 +372,7 @@ public class ClusterList {
     
     
     public RestoreStatus restoreStatus;
+
     public ClusterList withRestoreStatus(RestoreStatus restoreStatus) {
         this.restoreStatus = restoreStatus;
         return this;
@@ -334,6 +380,7 @@ public class ClusterList {
     
     
     public String snapshotScheduleIdentifier;
+
     public ClusterList withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
         this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
         return this;
@@ -341,6 +388,7 @@ public class ClusterList {
     
     
     public ScheduleStateEnum snapshotScheduleState;
+
     public ClusterList withSnapshotScheduleState(ScheduleStateEnum snapshotScheduleState) {
         this.snapshotScheduleState = snapshotScheduleState;
         return this;
@@ -348,6 +396,7 @@ public class ClusterList {
     
     
     public TagList[] tags;
+
     public ClusterList withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -355,6 +404,7 @@ public class ClusterList {
     
     
     public Long totalStorageCapacityInMegaBytes;
+
     public ClusterList withTotalStorageCapacityInMegaBytes(Long totalStorageCapacityInMegaBytes) {
         this.totalStorageCapacityInMegaBytes = totalStorageCapacityInMegaBytes;
         return this;
@@ -362,6 +412,7 @@ public class ClusterList {
     
     
     public String vpcId;
+
     public ClusterList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -369,9 +420,11 @@ public class ClusterList {
     
     
     public VpcSecurityGroupMembershipList[] vpcSecurityGroups;
+
     public ClusterList withVpcSecurityGroups(VpcSecurityGroupMembershipList[] vpcSecurityGroups) {
         this.vpcSecurityGroups = vpcSecurityGroups;
         return this;
     }
     
+    public ClusterList(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFlowLogsResultUnsuccessfulError {
     
     public String code;
+
     public CreateFlowLogsResultUnsuccessfulError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CreateFlowLogsResultUnsuccessfulError {
     
     
     public String message;
+
     public CreateFlowLogsResultUnsuccessfulError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateFlowLogsResultUnsuccessfulError(){}
 }

@@ -15,6 +15,7 @@ public class ZebraAlliances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blue")
     public ZebraTeam[] blue;
+
     public ZebraAlliances withBlue(ZebraTeam[] blue) {
         this.blue = blue;
         return this;
@@ -26,9 +27,11 @@ public class ZebraAlliances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("red")
     public ZebraTeam[] red;
+
     public ZebraAlliances withRed(ZebraTeam[] red) {
         this.red = red;
         return this;
     }
     
+    public ZebraAlliances(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NifComprehensiveRequest {
@@ -12,6 +13,7 @@ public class NifComprehensiveRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public NifComprehensiveRequestBody requestBody;
+
     public NifComprehensiveRequest withRequestBody(NifComprehensiveRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class NifComprehensiveRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
     public String country;
+
     public NifComprehensiveRequest withCountry(String country) {
         this.country = country;
         return this;
     }
     
+    public NifComprehensiveRequest(@JsonProperty("RequestBody") NifComprehensiveRequestBody requestBody, @JsonProperty("country") String country) {
+        this.requestBody = requestBody;
+        this.country = country;
+  }
 }

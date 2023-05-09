@@ -15,6 +15,7 @@ public class TrackEvent400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header")
     public java.util.Map<String, String> header;
+
     public TrackEvent400ApplicationJSONErrorsParameters withHeader(java.util.Map<String, String> header) {
         this.header = header;
         return this;
@@ -23,6 +24,7 @@ public class TrackEvent400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public java.util.Map<String, String> path;
+
     public TrackEvent400ApplicationJSONErrorsParameters withPath(java.util.Map<String, String> path) {
         this.path = path;
         return this;
@@ -31,9 +33,11 @@ public class TrackEvent400ApplicationJSONErrorsParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public java.util.Map<String, String> query;
+
     public TrackEvent400ApplicationJSONErrorsParameters withQuery(java.util.Map<String, String> query) {
         this.query = query;
         return this;
     }
     
+    public TrackEvent400ApplicationJSONErrorsParameters(){}
 }

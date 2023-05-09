@@ -15,6 +15,7 @@ public class LastReportGenerationExecutionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public UsageReportExecutionErrorCodeEnum errorCode;
+
     public LastReportGenerationExecutionError withErrorCode(UsageReportExecutionErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class LastReportGenerationExecutionError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public LastReportGenerationExecutionError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public LastReportGenerationExecutionError(){}
 }

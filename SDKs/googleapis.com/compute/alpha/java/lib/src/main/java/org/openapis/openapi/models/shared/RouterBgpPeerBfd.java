@@ -15,6 +15,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minReceiveInterval")
     public Long minReceiveInterval;
+
     public RouterBgpPeerBfd withMinReceiveInterval(Long minReceiveInterval) {
         this.minReceiveInterval = minReceiveInterval;
         return this;
@@ -26,6 +27,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minTransmitInterval")
     public Long minTransmitInterval;
+
     public RouterBgpPeerBfd withMinTransmitInterval(Long minTransmitInterval) {
         this.minTransmitInterval = minTransmitInterval;
         return this;
@@ -37,6 +39,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public RouterBgpPeerBfdModeEnum mode;
+
     public RouterBgpPeerBfd withMode(RouterBgpPeerBfdModeEnum mode) {
         this.mode = mode;
         return this;
@@ -48,6 +51,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiplier")
     public Long multiplier;
+
     public RouterBgpPeerBfd withMultiplier(Long multiplier) {
         this.multiplier = multiplier;
         return this;
@@ -59,6 +63,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packetMode")
     public RouterBgpPeerBfdPacketModeEnum packetMode;
+
     public RouterBgpPeerBfd withPacketMode(RouterBgpPeerBfdPacketModeEnum packetMode) {
         this.packetMode = packetMode;
         return this;
@@ -70,6 +75,7 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionInitializationMode")
     public RouterBgpPeerBfdSessionInitializationModeEnum sessionInitializationMode;
+
     public RouterBgpPeerBfd withSessionInitializationMode(RouterBgpPeerBfdSessionInitializationModeEnum sessionInitializationMode) {
         this.sessionInitializationMode = sessionInitializationMode;
         return this;
@@ -81,9 +87,11 @@ public class RouterBgpPeerBfd {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slowTimerInterval")
     public Long slowTimerInterval;
+
     public RouterBgpPeerBfd withSlowTimerInterval(Long slowTimerInterval) {
         this.slowTimerInterval = slowTimerInterval;
         return this;
     }
     
+    public RouterBgpPeerBfd(){}
 }

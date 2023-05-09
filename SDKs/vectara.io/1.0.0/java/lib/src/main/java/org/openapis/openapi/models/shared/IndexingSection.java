@@ -19,6 +19,7 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customDims")
     public VectaraindexingCustomDimension[] customDims;
+
     public IndexingSection withCustomDims(VectaraindexingCustomDimension[] customDims) {
         this.customDims = customDims;
         return this;
@@ -31,6 +32,7 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public IndexingSection withId(Integer id) {
         this.id = id;
         return this;
@@ -44,6 +46,7 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataJson")
     public String metadataJson;
+
     public IndexingSection withMetadataJson(String metadataJson) {
         this.metadataJson = metadataJson;
         return this;
@@ -55,6 +58,7 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("section")
     public IndexingSection[] section;
+
     public IndexingSection withSection(IndexingSection[] section) {
         this.section = section;
         return this;
@@ -66,6 +70,7 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public IndexingSection withText(String text) {
         this.text = text;
         return this;
@@ -77,9 +82,11 @@ public class IndexingSection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public IndexingSection withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public IndexingSection(){}
 }

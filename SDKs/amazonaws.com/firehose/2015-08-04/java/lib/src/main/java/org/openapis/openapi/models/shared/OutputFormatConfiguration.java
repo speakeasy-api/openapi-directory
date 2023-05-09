@@ -15,9 +15,11 @@ public class OutputFormatConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serializer")
     public Serializer serializer;
+
     public OutputFormatConfiguration withSerializer(Serializer serializer) {
         this.serializer = serializer;
         return this;
     }
     
+    public OutputFormatConfiguration(){}
 }

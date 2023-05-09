@@ -18,6 +18,7 @@ public class QueuingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntilDuration")
     public Duration validUntilDuration;
+
     public QueuingPolicy withValidUntilDuration(Duration validUntilDuration) {
         this.validUntilDuration = validUntilDuration;
         return this;
@@ -29,9 +30,11 @@ public class QueuingPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validUntilTime")
     public String validUntilTime;
+
     public QueuingPolicy withValidUntilTime(String validUntilTime) {
         this.validUntilTime = validUntilTime;
         return this;
     }
     
+    public QueuingPolicy(){}
 }

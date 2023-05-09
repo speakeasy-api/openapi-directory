@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribedHostKey {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedHostKey withArn(String arn) {
         this.arn = arn;
         return this;
@@ -29,6 +30,7 @@ public class DescribedHostKey {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DateImported")
     public OffsetDateTime dateImported;
+
     public DescribedHostKey withDateImported(OffsetDateTime dateImported) {
         this.dateImported = dateImported;
         return this;
@@ -37,6 +39,7 @@ public class DescribedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribedHostKey withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class DescribedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostKeyFingerprint")
     public String hostKeyFingerprint;
+
     public DescribedHostKey withHostKeyFingerprint(String hostKeyFingerprint) {
         this.hostKeyFingerprint = hostKeyFingerprint;
         return this;
@@ -53,6 +57,7 @@ public class DescribedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostKeyId")
     public String hostKeyId;
+
     public DescribedHostKey withHostKeyId(String hostKeyId) {
         this.hostKeyId = hostKeyId;
         return this;
@@ -61,6 +66,7 @@ public class DescribedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedHostKey withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -69,9 +75,13 @@ public class DescribedHostKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public DescribedHostKey withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DescribedHostKey(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

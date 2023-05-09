@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSizeConstraintSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateSizeConstraintSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,9 +17,14 @@ public class CreateSizeConstraintSetRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateSizeConstraintSetRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSizeConstraintSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("Name") String name) {
+        this.changeToken = changeToken;
+        this.name = name;
+  }
 }

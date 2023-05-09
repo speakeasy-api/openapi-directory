@@ -12,9 +12,11 @@ public class NetworkConfigurationCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurations")
     public NetworkConfiguration[] configurations;
+
     public NetworkConfigurationCatalog withConfigurations(NetworkConfiguration[] configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public NetworkConfigurationCatalog(){}
 }

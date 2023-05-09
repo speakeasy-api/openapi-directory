@@ -17,6 +17,7 @@ public class ApiCoreRequestsPermissionPatchRequest {
     @JsonProperty("Action")
     @SpeakeasyMetadata("form:name=Action")
     public String action;
+
     public ApiCoreRequestsPermissionPatchRequest withAction(String action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class ApiCoreRequestsPermissionPatchRequest {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public ApiCoreRequestsPermissionPatchRequest withId(Long id) {
         this.id = id;
         return this;
@@ -35,9 +37,11 @@ public class ApiCoreRequestsPermissionPatchRequest {
     @JsonProperty("Verb")
     @SpeakeasyMetadata("form:name=Verb")
     public String verb;
+
     public ApiCoreRequestsPermissionPatchRequest withVerb(String verb) {
         this.verb = verb;
         return this;
     }
     
+    public ApiCoreRequestsPermissionPatchRequest(){}
 }

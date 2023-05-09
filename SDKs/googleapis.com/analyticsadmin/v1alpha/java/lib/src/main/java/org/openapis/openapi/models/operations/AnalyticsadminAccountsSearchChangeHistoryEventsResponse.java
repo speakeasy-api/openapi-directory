@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsadminAccountsSearchChangeHistoryEventsResponse {
     
     public String contentType;
+
     public AnalyticsadminAccountsSearchChangeHistoryEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminAccountsSearchChangeHistoryEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse googleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse;
+
     public AnalyticsadminAccountsSearchChangeHistoryEventsResponse withGoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse googleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse) {
         this.googleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse = googleAnalyticsAdminV1alphaSearchChangeHistoryEventsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsadminAccountsSearchChangeHistoryEventsResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsadminAccountsSearchChangeHistoryEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsadminAccountsSearchChangeHistoryEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsadminAccountsSearchChangeHistoryEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsadminAccountsSearchChangeHistoryEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EnvironmentTemplate {
     @JsonProperty("arn")
     public String arn;
+
     public EnvironmentTemplate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class EnvironmentTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public EnvironmentTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class EnvironmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EnvironmentTemplate withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class EnvironmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public EnvironmentTemplate withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -52,6 +56,7 @@ public class EnvironmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public EnvironmentTemplate withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -61,6 +66,7 @@ public class EnvironmentTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedAt")
     public OffsetDateTime lastModifiedAt;
+
     public EnvironmentTemplate withLastModifiedAt(OffsetDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
@@ -68,6 +74,7 @@ public class EnvironmentTemplate {
     
     @JsonProperty("name")
     public String name;
+
     public EnvironmentTemplate withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +83,7 @@ public class EnvironmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioning")
     public ProvisioningEnum provisioning;
+
     public EnvironmentTemplate withProvisioning(ProvisioningEnum provisioning) {
         this.provisioning = provisioning;
         return this;
@@ -84,9 +92,16 @@ public class EnvironmentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedVersion")
     public String recommendedVersion;
+
     public EnvironmentTemplate withRecommendedVersion(String recommendedVersion) {
         this.recommendedVersion = recommendedVersion;
         return this;
     }
     
+    public EnvironmentTemplate(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("lastModifiedAt") OffsetDateTime lastModifiedAt, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.lastModifiedAt = lastModifiedAt;
+        this.name = name;
+  }
 }

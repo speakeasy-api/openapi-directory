@@ -18,6 +18,7 @@ public class RetrieveCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public RetrieveCatalogObjectResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -51,6 +52,7 @@ public class RetrieveCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public CatalogObject object;
+
     public RetrieveCatalogObjectResponse withObject(CatalogObject object) {
         this.object = object;
         return this;
@@ -62,9 +64,11 @@ public class RetrieveCatalogObjectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("related_objects")
     public CatalogObject[] relatedObjects;
+
     public RetrieveCatalogObjectResponse withRelatedObjects(CatalogObject[] relatedObjects) {
         this.relatedObjects = relatedObjects;
         return this;
     }
     
+    public RetrieveCatalogObjectResponse(){}
 }

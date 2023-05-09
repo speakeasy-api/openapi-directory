@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeStemmingOptionsResponse - A response message that contains the stemming options for a search domain.
@@ -15,9 +15,13 @@ public class DescribeStemmingOptionsResponse {
      */
     
     public StemmingOptionsStatus stems;
+
     public DescribeStemmingOptionsResponse withStems(StemmingOptionsStatus stems) {
         this.stems = stems;
         return this;
     }
     
+    public DescribeStemmingOptionsResponse(@JsonProperty("Stems") StemmingOptionsStatus stems) {
+        this.stems = stems;
+  }
 }

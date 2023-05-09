@@ -13,9 +13,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PingResponse {
     @JsonProperty("meta")
     public PingResponseMeta meta;
+
     public PingResponse withMeta(PingResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public PingResponse(@JsonProperty("meta") PingResponseMeta meta) {
+        this.meta = meta;
+  }
 }

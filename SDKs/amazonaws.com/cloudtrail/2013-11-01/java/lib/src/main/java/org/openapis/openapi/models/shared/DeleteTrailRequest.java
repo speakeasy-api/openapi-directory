@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTrailRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteTrailRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteTrailRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

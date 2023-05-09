@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UoaByRouteUsV1UoaRouteQueryPostResponse {
     
     public String contentType;
+
     public UoaByRouteUsV1UoaRouteQueryPostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UoaByRouteUsV1UoaRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public UoaByRouteUsV1UoaRouteQueryPostResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class UoaByRouteUsV1UoaRouteQueryPostResponse {
     
     
     public Integer statusCode;
+
     public UoaByRouteUsV1UoaRouteQueryPostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class UoaByRouteUsV1UoaRouteQueryPostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UoaByRouteUsV1UoaRouteQueryPostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class UoaByRouteUsV1UoaRouteQueryPostResponse {
      */
     
     public org.openapis.openapi.models.shared.UOAsRouteResponse uoAsRouteResponse;
+
     public UoaByRouteUsV1UoaRouteQueryPostResponse withUOAsRouteResponse(org.openapis.openapi.models.shared.UOAsRouteResponse uoAsRouteResponse) {
         this.uoAsRouteResponse = uoAsRouteResponse;
         return this;
     }
     
+    public UoaByRouteUsV1UoaRouteQueryPostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

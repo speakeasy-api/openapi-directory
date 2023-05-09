@@ -18,6 +18,7 @@ public class GoogleCloudRunV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTransitionTime")
     public String lastTransitionTime;
+
     public GoogleCloudRunV1Condition withLastTransitionTime(String lastTransitionTime) {
         this.lastTransitionTime = lastTransitionTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GoogleCloudRunV1Condition withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public GoogleCloudRunV1Condition withReason(String reason) {
         this.reason = reason;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public GoogleCloudRunV1Condition withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -62,20 +66,23 @@ public class GoogleCloudRunV1Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GoogleCloudRunV1Condition withStatus(String status) {
         this.status = status;
         return this;
     }
     
     /**
-     * type is used to communicate the status of the reconciliation process. See also: https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting Types common to all resources include: * "Ready" or "Completed": True when the Resource is ready.
+     * type is used to communicate the status of the reconciliation process. Types common to all resources include: * "Ready" or "Completed": True when the Resource is ready.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRunV1Condition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRunV1Condition(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAppAssessmentResponse {
@@ -12,6 +13,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public StartAppAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object conflictException;
+
     public StartAppAssessmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartAppAssessmentResponse {
     
     
     public String contentType;
+
     public StartAppAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public StartAppAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartAppAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartAppAssessmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartAppAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAppAssessmentResponse startAppAssessmentResponse;
+
     public StartAppAssessmentResponse withStartAppAssessmentResponse(org.openapis.openapi.models.shared.StartAppAssessmentResponse startAppAssessmentResponse) {
         this.startAppAssessmentResponse = startAppAssessmentResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartAppAssessmentResponse {
     
     
     public Integer statusCode;
+
     public StartAppAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartAppAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAppAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartAppAssessmentResponse {
      */
     
     public Object throttlingException;
+
     public StartAppAssessmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartAppAssessmentResponse {
      */
     
     public Object validationException;
+
     public StartAppAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartAppAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

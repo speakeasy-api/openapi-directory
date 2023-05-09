@@ -476,4 +476,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchUpdateValuesByDataFilt
 lib/src/main/java/org/openapis/openapi/models/shared/DataFilterValueRangeMajorDimensionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/DataFilterValueRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/ClearValuesResponse.java
+docs/sdk/README.md
+docs/spreadsheets/README.md
 USAGE.md

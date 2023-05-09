@@ -15,6 +15,7 @@ public class NetworkRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_image")
     public NetworkRelationshipsCoverImage coverImage;
+
     public NetworkRelationships withCoverImage(NetworkRelationshipsCoverImage coverImage) {
         this.coverImage = coverImage;
         return this;
@@ -28,6 +29,7 @@ public class NetworkRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public NetworkRelationshipsImages images;
+
     public NetworkRelationships withImages(NetworkRelationshipsImages images) {
         this.images = images;
         return this;
@@ -39,6 +41,7 @@ public class NetworkRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public NetworkRelationshipsParent parent;
+
     public NetworkRelationships withParent(NetworkRelationshipsParent parent) {
         this.parent = parent;
         return this;
@@ -50,9 +53,11 @@ public class NetworkRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public NetworkRelationshipsSeries series;
+
     public NetworkRelationships withSeries(NetworkRelationshipsSeries series) {
         this.series = series;
         return this;
     }
     
+    public NetworkRelationships(){}
 }

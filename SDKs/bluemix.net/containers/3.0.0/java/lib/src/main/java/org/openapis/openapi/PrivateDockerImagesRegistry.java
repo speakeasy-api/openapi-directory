@@ -58,11 +58,9 @@ public class PrivateDockerImagesRegistry {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegistryNamespacesResponse res = new org.openapis.openapi.models.operations.GetRegistryNamespacesResponse() {{
+        org.openapis.openapi.models.operations.GetRegistryNamespacesResponse res = new org.openapis.openapi.models.operations.GetRegistryNamespacesResponse(contentType, httpRes.statusCode()) {{
             namespace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,11 +113,9 @@ public class PrivateDockerImagesRegistry {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceResponse res = new org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceResponse() {{
+        org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceResponse res = new org.openapis.openapi.models.operations.GetRegistryNamespacesNamespaceResponse(contentType, httpRes.statusCode()) {{
             namespace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +168,9 @@ public class PrivateDockerImagesRegistry {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceResponse res = new org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceResponse() {{
+        org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceResponse res = new org.openapis.openapi.models.operations.PutRegistryNamespacesNamespaceResponse(contentType, httpRes.statusCode()) {{
             namespace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

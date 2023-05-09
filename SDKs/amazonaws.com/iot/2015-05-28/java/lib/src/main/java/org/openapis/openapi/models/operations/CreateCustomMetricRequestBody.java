@@ -14,6 +14,7 @@ public class CreateCustomMetricRequestBody {
      */
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateCustomMetricRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateCustomMetricRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public CreateCustomMetricRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -35,6 +37,7 @@ public class CreateCustomMetricRequestBody {
      */
     @JsonProperty("metricType")
     public CreateCustomMetricRequestBodyMetricTypeEnum metricType;
+
     public CreateCustomMetricRequestBody withMetricType(CreateCustomMetricRequestBodyMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -46,9 +49,14 @@ public class CreateCustomMetricRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateCustomMetricRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomMetricRequestBody(@JsonProperty("clientRequestToken") String clientRequestToken, @JsonProperty("metricType") CreateCustomMetricRequestBodyMetricTypeEnum metricType) {
+        this.clientRequestToken = clientRequestToken;
+        this.metricType = metricType;
+  }
 }

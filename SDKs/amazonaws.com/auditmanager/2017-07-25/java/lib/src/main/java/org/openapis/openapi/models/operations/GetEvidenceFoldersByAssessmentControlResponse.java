@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEvidenceFoldersByAssessmentControlResponse {
@@ -12,6 +13,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
      */
     
     public Object accessDeniedException;
+
     public GetEvidenceFoldersByAssessmentControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
     
     
     public String contentType;
+
     public GetEvidenceFoldersByAssessmentControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEvidenceFoldersByAssessmentControlResponse getEvidenceFoldersByAssessmentControlResponse;
+
     public GetEvidenceFoldersByAssessmentControlResponse withGetEvidenceFoldersByAssessmentControlResponse(org.openapis.openapi.models.shared.GetEvidenceFoldersByAssessmentControlResponse getEvidenceFoldersByAssessmentControlResponse) {
         this.getEvidenceFoldersByAssessmentControlResponse = getEvidenceFoldersByAssessmentControlResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
      */
     
     public Object internalServerException;
+
     public GetEvidenceFoldersByAssessmentControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetEvidenceFoldersByAssessmentControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
     
     
     public Integer statusCode;
+
     public GetEvidenceFoldersByAssessmentControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEvidenceFoldersByAssessmentControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetEvidenceFoldersByAssessmentControlResponse {
      */
     
     public Object validationException;
+
     public GetEvidenceFoldersByAssessmentControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetEvidenceFoldersByAssessmentControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

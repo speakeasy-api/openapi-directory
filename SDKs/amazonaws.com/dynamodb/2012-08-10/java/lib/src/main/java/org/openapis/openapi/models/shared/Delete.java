@@ -15,6 +15,7 @@ public class Delete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionExpression")
     public String conditionExpression;
+
     public Delete withConditionExpression(String conditionExpression) {
         this.conditionExpression = conditionExpression;
         return this;
@@ -23,6 +24,7 @@ public class Delete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public Delete withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -31,6 +33,7 @@ public class Delete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public Delete withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -38,6 +41,7 @@ public class Delete {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public Delete withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -46,6 +50,7 @@ public class Delete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValuesOnConditionCheckFailure")
     public ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure;
+
     public Delete withReturnValuesOnConditionCheckFailure(ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure) {
         this.returnValuesOnConditionCheckFailure = returnValuesOnConditionCheckFailure;
         return this;
@@ -53,9 +58,14 @@ public class Delete {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public Delete withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public Delete(@JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName) {
+        this.key = key;
+        this.tableName = tableName;
+  }
 }

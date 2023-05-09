@@ -20,6 +20,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("area_unit")
     public String areaUnit;
+
     public MeasurementUnit withAreaUnit(String areaUnit) {
         this.areaUnit = areaUnit;
         return this;
@@ -31,6 +32,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_unit")
     public MeasurementUnitCustom customUnit;
+
     public MeasurementUnit withCustomUnit(MeasurementUnitCustom customUnit) {
         this.customUnit = customUnit;
         return this;
@@ -42,6 +44,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generic_unit")
     public String genericUnit;
+
     public MeasurementUnit withGenericUnit(String genericUnit) {
         this.genericUnit = genericUnit;
         return this;
@@ -53,6 +56,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length_unit")
     public String lengthUnit;
+
     public MeasurementUnit withLengthUnit(String lengthUnit) {
         this.lengthUnit = lengthUnit;
         return this;
@@ -64,6 +68,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_unit")
     public String timeUnit;
+
     public MeasurementUnit withTimeUnit(String timeUnit) {
         this.timeUnit = timeUnit;
         return this;
@@ -75,6 +80,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public MeasurementUnit withType(String type) {
         this.type = type;
         return this;
@@ -86,6 +92,7 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volume_unit")
     public String volumeUnit;
+
     public MeasurementUnit withVolumeUnit(String volumeUnit) {
         this.volumeUnit = volumeUnit;
         return this;
@@ -97,9 +104,11 @@ public class MeasurementUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight_unit")
     public String weightUnit;
+
     public MeasurementUnit withWeightUnit(String weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
     
+    public MeasurementUnit(){}
 }

@@ -15,9 +15,13 @@ public class SearchOrdersStateFilter {
      */
     @JsonProperty("states")
     public String[] states;
+
     public SearchOrdersStateFilter withStates(String[] states) {
         this.states = states;
         return this;
     }
     
+    public SearchOrdersStateFilter(@JsonProperty("states") String[] states) {
+        this.states = states;
+  }
 }

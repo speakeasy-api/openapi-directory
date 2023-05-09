@@ -17,6 +17,7 @@ public class ProjectInput {
     @JsonProperty("description")
     @SpeakeasyMetadata("form:name=description")
     public String description;
+
     public ProjectInput withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class ProjectInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public ProjectInput withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +41,15 @@ public class ProjectInput {
     @JsonProperty("settings")
     @SpeakeasyMetadata("form:name=settings,json")
     public ProjectSettings settings;
+
     public ProjectInput withSettings(ProjectSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public ProjectInput(@JsonProperty("description") String description, @JsonProperty("name") String name, @JsonProperty("settings") ProjectSettings settings) {
+        this.description = description;
+        this.name = name;
+        this.settings = settings;
+  }
 }

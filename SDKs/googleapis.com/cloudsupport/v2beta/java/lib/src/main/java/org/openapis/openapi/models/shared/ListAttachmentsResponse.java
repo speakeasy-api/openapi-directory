@@ -18,6 +18,7 @@ public class ListAttachmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public ListAttachmentsResponse withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -29,9 +30,11 @@ public class ListAttachmentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAttachmentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAttachmentsResponse(){}
 }

@@ -15,6 +15,7 @@ public class Ec2TagFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Ec2TagFilter withKey(String key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class Ec2TagFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public Ec2TagFilterTypeEnum type;
+
     public Ec2TagFilter withType(Ec2TagFilterTypeEnum type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class Ec2TagFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public Ec2TagFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Ec2TagFilter(){}
 }

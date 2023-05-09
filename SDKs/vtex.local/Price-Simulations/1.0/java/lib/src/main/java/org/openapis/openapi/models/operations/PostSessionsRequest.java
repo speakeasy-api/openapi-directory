@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSessionsRequest {
@@ -12,6 +13,7 @@ public class PostSessionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PostSessionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PostSessionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PostSessionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class PostSessionsRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PostSessionsRequestBody requestBody;
+
     public PostSessionsRequest withRequestBody(PostSessionsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
     }
     
+    public PostSessionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

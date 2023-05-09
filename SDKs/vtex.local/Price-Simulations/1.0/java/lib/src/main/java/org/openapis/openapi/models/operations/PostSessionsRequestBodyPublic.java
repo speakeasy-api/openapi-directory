@@ -15,9 +15,13 @@ public class PostSessionsRequestBodyPublic {
      */
     @JsonProperty("customSessionKeys")
     public PostSessionsRequestBodyPublicCustomSessionKeys customSessionKeys;
+
     public PostSessionsRequestBodyPublic withCustomSessionKeys(PostSessionsRequestBodyPublicCustomSessionKeys customSessionKeys) {
         this.customSessionKeys = customSessionKeys;
         return this;
     }
     
+    public PostSessionsRequestBodyPublic(@JsonProperty("customSessionKeys") PostSessionsRequestBodyPublicCustomSessionKeys customSessionKeys) {
+        this.customSessionKeys = customSessionKeys;
+  }
 }

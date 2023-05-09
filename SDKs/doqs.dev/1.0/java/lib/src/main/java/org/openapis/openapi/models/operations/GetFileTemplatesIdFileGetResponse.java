@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFileTemplatesIdFileGetResponse {
     
     public String contentType;
+
     public GetFileTemplatesIdFileGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetFileTemplatesIdFileGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public GetFileTemplatesIdFileGetResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -29,6 +32,7 @@ public class GetFileTemplatesIdFileGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseOkHttpUrl responseOkHttpUrl;
+
     public GetFileTemplatesIdFileGetResponse withResponseOkHttpUrl(org.openapis.openapi.models.shared.ResponseOkHttpUrl responseOkHttpUrl) {
         this.responseOkHttpUrl = responseOkHttpUrl;
         return this;
@@ -36,6 +40,7 @@ public class GetFileTemplatesIdFileGetResponse {
     
     
     public Integer statusCode;
+
     public GetFileTemplatesIdFileGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetFileTemplatesIdFileGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFileTemplatesIdFileGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetFileTemplatesIdFileGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

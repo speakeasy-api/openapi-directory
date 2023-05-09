@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationPreference")
     public String capacityReservationPreference;
+
     public AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails withCapacityReservationPreference(String capacityReservationPreference) {
         this.capacityReservationPreference = capacityReservationPreference;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityReservationTarget")
     public AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails capacityReservationTarget;
+
     public AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails withCapacityReservationTarget(AwsEc2LaunchTemplateDataCapacityReservationSpecificationCapacityReservationTargetDetails capacityReservationTarget) {
         this.capacityReservationTarget = capacityReservationTarget;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataCapacityReservationSpecificationDetails(){}
 }

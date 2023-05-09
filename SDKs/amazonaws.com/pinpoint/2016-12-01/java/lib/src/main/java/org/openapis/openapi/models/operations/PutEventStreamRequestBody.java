@@ -12,9 +12,13 @@ public class PutEventStreamRequestBody {
      */
     @JsonProperty("WriteEventStream")
     public PutEventStreamRequestBodyWriteEventStream writeEventStream;
+
     public PutEventStreamRequestBody withWriteEventStream(PutEventStreamRequestBodyWriteEventStream writeEventStream) {
         this.writeEventStream = writeEventStream;
         return this;
     }
     
+    public PutEventStreamRequestBody(@JsonProperty("WriteEventStream") PutEventStreamRequestBodyWriteEventStream writeEventStream) {
+        this.writeEventStream = writeEventStream;
+  }
 }

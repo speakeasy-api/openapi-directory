@@ -12,6 +12,7 @@ public class ListServicesByNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListServicesByNamespaceRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -19,6 +20,7 @@ public class ListServicesByNamespaceRequest {
     
     @JsonProperty("namespace")
     public String namespace;
+
     public ListServicesByNamespaceRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -27,9 +29,13 @@ public class ListServicesByNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServicesByNamespaceRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListServicesByNamespaceRequest(@JsonProperty("namespace") String namespace) {
+        this.namespace = namespace;
+  }
 }

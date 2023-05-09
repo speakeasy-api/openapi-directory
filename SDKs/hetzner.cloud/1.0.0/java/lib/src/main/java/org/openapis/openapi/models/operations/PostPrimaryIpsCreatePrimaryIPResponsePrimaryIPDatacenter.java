@@ -15,6 +15,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("description")
     public String description;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter {
     
     @JsonProperty("location")
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation location;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter withLocation(PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation location) {
         this.location = location;
         return this;
@@ -42,6 +45,7 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("name")
     public String name;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +56,17 @@ public class PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter {
      */
     @JsonProperty("server_types")
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes;
+
     public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter withServerTypes(PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes) {
         this.serverTypes = serverTypes;
         return this;
     }
     
+    public PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenter(@JsonProperty("description") String description, @JsonProperty("id") Long id, @JsonProperty("location") PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterLocation location, @JsonProperty("name") String name, @JsonProperty("server_types") PostPrimaryIpsCreatePrimaryIPResponsePrimaryIPDatacenterServerTypes serverTypes) {
+        this.description = description;
+        this.id = id;
+        this.location = location;
+        this.name = name;
+        this.serverTypes = serverTypes;
+  }
 }

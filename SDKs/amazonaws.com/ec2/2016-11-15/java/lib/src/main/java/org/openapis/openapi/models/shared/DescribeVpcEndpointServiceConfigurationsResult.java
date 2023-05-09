@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServiceConfigurationsResult {
     
     public String nextToken;
+
     public DescribeVpcEndpointServiceConfigurationsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServiceConfigurationsResult {
     
     
     public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurations[] serviceConfigurations;
+
     public DescribeVpcEndpointServiceConfigurationsResult withServiceConfigurations(DescribeVpcEndpointServiceConfigurationsResultServiceConfigurations[] serviceConfigurations) {
         this.serviceConfigurations = serviceConfigurations;
         return this;
     }
     
+    public DescribeVpcEndpointServiceConfigurationsResult(){}
 }

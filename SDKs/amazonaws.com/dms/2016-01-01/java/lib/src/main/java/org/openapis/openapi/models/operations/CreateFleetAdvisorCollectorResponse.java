@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateFleetAdvisorCollectorResponse {
@@ -12,6 +13,7 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public Object accessDeniedFault;
+
     public CreateFleetAdvisorCollectorResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class CreateFleetAdvisorCollectorResponse {
     
     
     public String contentType;
+
     public CreateFleetAdvisorCollectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateFleetAdvisorCollectorResponse createFleetAdvisorCollectorResponse;
+
     public CreateFleetAdvisorCollectorResponse withCreateFleetAdvisorCollectorResponse(org.openapis.openapi.models.shared.CreateFleetAdvisorCollectorResponse createFleetAdvisorCollectorResponse) {
         this.createFleetAdvisorCollectorResponse = createFleetAdvisorCollectorResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public CreateFleetAdvisorCollectorResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -49,6 +54,7 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public Object resourceQuotaExceededFault;
+
     public CreateFleetAdvisorCollectorResponse withResourceQuotaExceededFault(Object resourceQuotaExceededFault) {
         this.resourceQuotaExceededFault = resourceQuotaExceededFault;
         return this;
@@ -56,6 +62,7 @@ public class CreateFleetAdvisorCollectorResponse {
     
     
     public Integer statusCode;
+
     public CreateFleetAdvisorCollectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateFleetAdvisorCollectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateFleetAdvisorCollectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public Object s3AccessDeniedFault;
+
     public CreateFleetAdvisorCollectorResponse withS3AccessDeniedFault(Object s3AccessDeniedFault) {
         this.s3AccessDeniedFault = s3AccessDeniedFault;
         return this;
@@ -83,9 +92,14 @@ public class CreateFleetAdvisorCollectorResponse {
      */
     
     public Object s3ResourceNotFoundFault;
+
     public CreateFleetAdvisorCollectorResponse withS3ResourceNotFoundFault(Object s3ResourceNotFoundFault) {
         this.s3ResourceNotFoundFault = s3ResourceNotFoundFault;
         return this;
     }
     
+    public CreateFleetAdvisorCollectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

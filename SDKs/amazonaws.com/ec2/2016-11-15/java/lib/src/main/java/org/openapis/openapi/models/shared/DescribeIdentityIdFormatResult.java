@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeIdentityIdFormatResult {
     
     public DescribeIdentityIdFormatResultStatuses[] statuses;
+
     public DescribeIdentityIdFormatResult withStatuses(DescribeIdentityIdFormatResultStatuses[] statuses) {
         this.statuses = statuses;
         return this;
     }
     
+    public DescribeIdentityIdFormatResult(){}
 }

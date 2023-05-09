@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RevokePermissionsResponse {
@@ -12,6 +13,7 @@ public class RevokePermissionsResponse {
      */
     
     public Object concurrentModificationException;
+
     public RevokePermissionsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class RevokePermissionsResponse {
     
     
     public String contentType;
+
     public RevokePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RevokePermissionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public RevokePermissionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class RevokePermissionsResponse {
      */
     
     public Object invalidInputException;
+
     public RevokePermissionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class RevokePermissionsResponse {
      */
     
     public java.util.Map<String, Object> revokePermissionsResponse;
+
     public RevokePermissionsResponse withRevokePermissionsResponse(java.util.Map<String, Object> revokePermissionsResponse) {
         this.revokePermissionsResponse = revokePermissionsResponse;
         return this;
@@ -56,6 +62,7 @@ public class RevokePermissionsResponse {
     
     
     public Integer statusCode;
+
     public RevokePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class RevokePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RevokePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RevokePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

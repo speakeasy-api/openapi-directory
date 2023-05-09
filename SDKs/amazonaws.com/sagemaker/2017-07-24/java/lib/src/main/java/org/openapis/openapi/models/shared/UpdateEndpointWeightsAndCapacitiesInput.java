@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateEndpointWeightsAndCapacitiesInput {
     @JsonProperty("DesiredWeightsAndCapacities")
     public DesiredWeightAndCapacity[] desiredWeightsAndCapacities;
+
     public UpdateEndpointWeightsAndCapacitiesInput withDesiredWeightsAndCapacities(DesiredWeightAndCapacity[] desiredWeightsAndCapacities) {
         this.desiredWeightsAndCapacities = desiredWeightsAndCapacities;
         return this;
@@ -16,9 +17,14 @@ public class UpdateEndpointWeightsAndCapacitiesInput {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public UpdateEndpointWeightsAndCapacitiesInput withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
     
+    public UpdateEndpointWeightsAndCapacitiesInput(@JsonProperty("DesiredWeightsAndCapacities") DesiredWeightAndCapacity[] desiredWeightsAndCapacities, @JsonProperty("EndpointName") String endpointName) {
+        this.desiredWeightsAndCapacities = desiredWeightsAndCapacities;
+        this.endpointName = endpointName;
+  }
 }

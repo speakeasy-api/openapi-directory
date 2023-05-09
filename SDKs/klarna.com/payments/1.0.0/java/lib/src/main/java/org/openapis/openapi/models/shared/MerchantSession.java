@@ -17,6 +17,7 @@ public class MerchantSession {
      */
     @JsonProperty("client_token")
     public String clientToken;
+
     public MerchantSession withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -28,6 +29,7 @@ public class MerchantSession {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method_categories")
     public PaymentMethodCategory[] paymentMethodCategories;
+
     public MerchantSession withPaymentMethodCategories(PaymentMethodCategory[] paymentMethodCategories) {
         this.paymentMethodCategories = paymentMethodCategories;
         return this;
@@ -38,9 +40,14 @@ public class MerchantSession {
      */
     @JsonProperty("session_id")
     public String sessionId;
+
     public MerchantSession withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public MerchantSession(@JsonProperty("client_token") String clientToken, @JsonProperty("session_id") String sessionId) {
+        this.clientToken = clientToken;
+        this.sessionId = sessionId;
+  }
 }

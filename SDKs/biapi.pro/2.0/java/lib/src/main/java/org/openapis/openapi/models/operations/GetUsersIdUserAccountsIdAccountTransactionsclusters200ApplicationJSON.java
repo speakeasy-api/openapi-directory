@@ -18,6 +18,7 @@ public class GetUsersIdUserAccountsIdAccountTransactionsclusters200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserAccountsIdAccountTransactionsclusters200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserAccountsIdAccountTransactionsclusters200ApplicationJS
     
     @JsonProperty("transactionsclusters")
     public org.openapis.openapi.models.shared.TransactionsCluster[] transactionsclusters;
+
     public GetUsersIdUserAccountsIdAccountTransactionsclusters200ApplicationJSON withTransactionsclusters(org.openapis.openapi.models.shared.TransactionsCluster[] transactionsclusters) {
         this.transactionsclusters = transactionsclusters;
         return this;
     }
     
+    public GetUsersIdUserAccountsIdAccountTransactionsclusters200ApplicationJSON(@JsonProperty("transactionsclusters") org.openapis.openapi.models.shared.TransactionsCluster[] transactionsclusters) {
+        this.transactionsclusters = transactionsclusters;
+  }
 }

@@ -15,9 +15,11 @@ public class TrustedAdvisorCategorySpecificSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costOptimizing")
     public TrustedAdvisorCostOptimizingSummary costOptimizing;
+
     public TrustedAdvisorCategorySpecificSummary withCostOptimizing(TrustedAdvisorCostOptimizingSummary costOptimizing) {
         this.costOptimizing = costOptimizing;
         return this;
     }
     
+    public TrustedAdvisorCategorySpecificSummary(){}
 }

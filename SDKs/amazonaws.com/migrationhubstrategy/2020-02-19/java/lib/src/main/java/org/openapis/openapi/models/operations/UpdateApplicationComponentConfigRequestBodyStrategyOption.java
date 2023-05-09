@@ -15,6 +15,7 @@ public class UpdateApplicationComponentConfigRequestBodyStrategyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPreferred")
     public Boolean isPreferred;
+
     public UpdateApplicationComponentConfigRequestBodyStrategyOption withIsPreferred(Boolean isPreferred) {
         this.isPreferred = isPreferred;
         return this;
@@ -23,6 +24,7 @@ public class UpdateApplicationComponentConfigRequestBodyStrategyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strategy")
     public org.openapis.openapi.models.shared.StrategyEnum strategy;
+
     public UpdateApplicationComponentConfigRequestBodyStrategyOption withStrategy(org.openapis.openapi.models.shared.StrategyEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -31,6 +33,7 @@ public class UpdateApplicationComponentConfigRequestBodyStrategyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetDestination")
     public org.openapis.openapi.models.shared.TargetDestinationEnum targetDestination;
+
     public UpdateApplicationComponentConfigRequestBodyStrategyOption withTargetDestination(org.openapis.openapi.models.shared.TargetDestinationEnum targetDestination) {
         this.targetDestination = targetDestination;
         return this;
@@ -39,9 +42,11 @@ public class UpdateApplicationComponentConfigRequestBodyStrategyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolName")
     public org.openapis.openapi.models.shared.TransformationToolNameEnum toolName;
+
     public UpdateApplicationComponentConfigRequestBodyStrategyOption withToolName(org.openapis.openapi.models.shared.TransformationToolNameEnum toolName) {
         this.toolName = toolName;
         return this;
     }
     
+    public UpdateApplicationComponentConfigRequestBodyStrategyOption(){}
 }

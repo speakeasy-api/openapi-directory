@@ -12,9 +12,13 @@ public class TaskAddTagRequest {
      */
     @JsonProperty("tag")
     public String tag;
+
     public TaskAddTagRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public TaskAddTagRequest(@JsonProperty("tag") String tag) {
+        this.tag = tag;
+  }
 }

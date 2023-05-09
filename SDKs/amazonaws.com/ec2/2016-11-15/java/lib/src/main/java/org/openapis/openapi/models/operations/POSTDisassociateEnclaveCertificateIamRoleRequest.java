@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public POSTDisassociateEnclaveCertificateIamRoleActionEnum action;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withAction(POSTDisassociateEnclaveCertificateIamRoleActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("request:mediaType=text/xml")
     public byte[] requestBody;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -23,6 +26,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public POSTDisassociateEnclaveCertificateIamRoleVersionEnum version;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withVersion(POSTDisassociateEnclaveCertificateIamRoleVersionEnum version) {
         this.version = version;
         return this;
@@ -30,6 +34,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -37,6 +42,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -44,6 +50,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -51,6 +58,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -58,6 +66,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -65,6 +74,7 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -72,9 +82,14 @@ public class POSTDisassociateEnclaveCertificateIamRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public POSTDisassociateEnclaveCertificateIamRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public POSTDisassociateEnclaveCertificateIamRoleRequest(@JsonProperty("Action") POSTDisassociateEnclaveCertificateIamRoleActionEnum action, @JsonProperty("Version") POSTDisassociateEnclaveCertificateIamRoleVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

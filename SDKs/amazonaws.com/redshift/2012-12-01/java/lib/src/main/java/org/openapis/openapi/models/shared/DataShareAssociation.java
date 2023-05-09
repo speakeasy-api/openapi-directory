@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DataShareAssociation {
     
     public String consumerIdentifier;
+
     public DataShareAssociation withConsumerIdentifier(String consumerIdentifier) {
         this.consumerIdentifier = consumerIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DataShareAssociation {
     
     
     public String consumerRegion;
+
     public DataShareAssociation withConsumerRegion(String consumerRegion) {
         this.consumerRegion = consumerRegion;
         return this;
@@ -26,6 +28,7 @@ public class DataShareAssociation {
     
     
     public OffsetDateTime createdDate;
+
     public DataShareAssociation withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -33,6 +36,7 @@ public class DataShareAssociation {
     
     
     public DataShareStatusEnum status;
+
     public DataShareAssociation withStatus(DataShareStatusEnum status) {
         this.status = status;
         return this;
@@ -40,9 +44,11 @@ public class DataShareAssociation {
     
     
     public OffsetDateTime statusChangeDate;
+
     public DataShareAssociation withStatusChangeDate(OffsetDateTime statusChangeDate) {
         this.statusChangeDate = statusChangeDate;
         return this;
     }
     
+    public DataShareAssociation(){}
 }

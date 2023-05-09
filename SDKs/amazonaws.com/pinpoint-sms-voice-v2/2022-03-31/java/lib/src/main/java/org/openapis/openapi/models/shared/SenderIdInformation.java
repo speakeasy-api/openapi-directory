@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SenderIdInformation {
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public SenderIdInformation withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -19,6 +20,7 @@ public class SenderIdInformation {
     
     @JsonProperty("MessageTypes")
     public MessageTypeEnum[] messageTypes;
+
     public SenderIdInformation withMessageTypes(MessageTypeEnum[] messageTypes) {
         this.messageTypes = messageTypes;
         return this;
@@ -26,6 +28,7 @@ public class SenderIdInformation {
     
     @JsonProperty("MonthlyLeasingPrice")
     public String monthlyLeasingPrice;
+
     public SenderIdInformation withMonthlyLeasingPrice(String monthlyLeasingPrice) {
         this.monthlyLeasingPrice = monthlyLeasingPrice;
         return this;
@@ -33,6 +36,7 @@ public class SenderIdInformation {
     
     @JsonProperty("SenderId")
     public String senderId;
+
     public SenderIdInformation withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
@@ -40,9 +44,17 @@ public class SenderIdInformation {
     
     @JsonProperty("SenderIdArn")
     public String senderIdArn;
+
     public SenderIdInformation withSenderIdArn(String senderIdArn) {
         this.senderIdArn = senderIdArn;
         return this;
     }
     
+    public SenderIdInformation(@JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("MessageTypes") MessageTypeEnum[] messageTypes, @JsonProperty("MonthlyLeasingPrice") String monthlyLeasingPrice, @JsonProperty("SenderId") String senderId, @JsonProperty("SenderIdArn") String senderIdArn) {
+        this.isoCountryCode = isoCountryCode;
+        this.messageTypes = messageTypes;
+        this.monthlyLeasingPrice = monthlyLeasingPrice;
+        this.senderId = senderId;
+        this.senderIdArn = senderIdArn;
+  }
 }

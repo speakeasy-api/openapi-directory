@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05LinksLinkOnInitJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05LinksLinkOnInitJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05LinksLinkOnInitJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class PostV05LinksLinkOnInitJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientLinkReferenceResult patientLinkReferenceResult;
+
     public PostV05LinksLinkOnInitJsonRequest withPatientLinkReferenceResult(org.openapis.openapi.models.shared.PatientLinkReferenceResult patientLinkReferenceResult) {
         this.patientLinkReferenceResult = patientLinkReferenceResult;
         return this;
     }
     
+    public PostV05LinksLinkOnInitJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientLinkReferenceResult") org.openapis.openapi.models.shared.PatientLinkReferenceResult patientLinkReferenceResult) {
+        this.authorization = authorization;
+        this.patientLinkReferenceResult = patientLinkReferenceResult;
+  }
 }

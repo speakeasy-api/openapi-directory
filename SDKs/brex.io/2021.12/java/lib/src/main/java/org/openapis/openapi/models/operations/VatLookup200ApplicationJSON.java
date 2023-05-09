@@ -15,6 +15,7 @@ public class VatLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public VatLookup200ApplicationJSONMatches[] matches;
+
     public VatLookup200ApplicationJSON withMatches(VatLookup200ApplicationJSONMatches[] matches) {
         this.matches = matches;
         return this;
@@ -23,6 +24,7 @@ public class VatLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchterm_address")
     public String searchtermAddress;
+
     public VatLookup200ApplicationJSON withSearchtermAddress(String searchtermAddress) {
         this.searchtermAddress = searchtermAddress;
         return this;
@@ -31,6 +33,7 @@ public class VatLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchterm_country")
     public String searchtermCountry;
+
     public VatLookup200ApplicationJSON withSearchtermCountry(String searchtermCountry) {
         this.searchtermCountry = searchtermCountry;
         return this;
@@ -39,6 +42,7 @@ public class VatLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchterm_name")
     public String searchtermName;
+
     public VatLookup200ApplicationJSON withSearchtermName(String searchtermName) {
         this.searchtermName = searchtermName;
         return this;
@@ -47,9 +51,11 @@ public class VatLookup200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Integer timestamp;
+
     public VatLookup200ApplicationJSON withTimestamp(Integer timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public VatLookup200ApplicationJSON(){}
 }

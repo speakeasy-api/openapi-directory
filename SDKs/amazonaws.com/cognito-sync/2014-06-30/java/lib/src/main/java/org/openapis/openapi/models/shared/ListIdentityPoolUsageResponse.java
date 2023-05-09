@@ -15,6 +15,7 @@ public class ListIdentityPoolUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public ListIdentityPoolUsageResponse withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class ListIdentityPoolUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolUsages")
     public IdentityPoolUsage[] identityPoolUsages;
+
     public ListIdentityPoolUsageResponse withIdentityPoolUsages(IdentityPoolUsage[] identityPoolUsages) {
         this.identityPoolUsages = identityPoolUsages;
         return this;
@@ -31,6 +33,7 @@ public class ListIdentityPoolUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIdentityPoolUsageResponse withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -39,9 +42,11 @@ public class ListIdentityPoolUsageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIdentityPoolUsageResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIdentityPoolUsageResponse(){}
 }

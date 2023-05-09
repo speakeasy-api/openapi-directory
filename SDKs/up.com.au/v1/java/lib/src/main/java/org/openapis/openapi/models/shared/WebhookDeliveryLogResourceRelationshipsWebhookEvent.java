@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookDeliveryLogResourceRelationshipsWebhookEvent {
     @JsonProperty("data")
     public WebhookDeliveryLogResourceRelationshipsWebhookEventData data;
+
     public WebhookDeliveryLogResourceRelationshipsWebhookEvent withData(WebhookDeliveryLogResourceRelationshipsWebhookEventData data) {
         this.data = data;
         return this;
     }
     
+    public WebhookDeliveryLogResourceRelationshipsWebhookEvent(@JsonProperty("data") WebhookDeliveryLogResourceRelationshipsWebhookEventData data) {
+        this.data = data;
+  }
 }

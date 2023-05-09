@@ -15,9 +15,11 @@ public class CreateMobileDeviceAccessRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MobileDeviceAccessRuleId")
     public String mobileDeviceAccessRuleId;
+
     public CreateMobileDeviceAccessRuleResponse withMobileDeviceAccessRuleId(String mobileDeviceAccessRuleId) {
         this.mobileDeviceAccessRuleId = mobileDeviceAccessRuleId;
         return this;
     }
     
+    public CreateMobileDeviceAccessRuleResponse(){}
 }

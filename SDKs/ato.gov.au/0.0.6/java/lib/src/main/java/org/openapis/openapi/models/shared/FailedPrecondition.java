@@ -18,6 +18,7 @@ public class FailedPrecondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public FailedPrecondition withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class FailedPrecondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ErrorDetails[] details;
+
     public FailedPrecondition withDetails(ErrorDetails[] details) {
         this.details = details;
         return this;
@@ -37,6 +39,7 @@ public class FailedPrecondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FailedPrecondition withMessage(String message) {
         this.message = message;
         return this;
@@ -48,9 +51,11 @@ public class FailedPrecondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public FailedPrecondition withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public FailedPrecondition(){}
 }

@@ -32,6 +32,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetDevicesRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -52,9 +53,11 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetDevicesRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetDevicesRequest(){}
 }

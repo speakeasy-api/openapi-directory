@@ -17,6 +17,7 @@ public class CreditorAccount {
      */
     @JsonProperty("account")
     public String account;
+
     public CreditorAccount withAccount(String account) {
         this.account = account;
         return this;
@@ -28,6 +29,7 @@ public class CreditorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address_country")
     public String addressCountry;
+
     public CreditorAccount withAddressCountry(String addressCountry) {
         this.addressCountry = addressCountry;
         return this;
@@ -38,6 +40,7 @@ public class CreditorAccount {
      */
     @JsonProperty("currency")
     public String currency;
+
     public CreditorAccount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -49,6 +52,7 @@ public class CreditorAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreditorAccount withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class CreditorAccount {
      */
     @JsonProperty("name")
     public String name;
+
     public CreditorAccount withName(String name) {
         this.name = name;
         return this;
@@ -66,13 +71,22 @@ public class CreditorAccount {
     
     /**
      * Creditor account type
+     * 
+     * * `IBAN` - IBAN
+     * * `SCAN` - SortCodeAccountNumber
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreditorAccountTypeEnum type;
+
     public CreditorAccount withType(CreditorAccountTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreditorAccount(@JsonProperty("account") String account, @JsonProperty("currency") String currency, @JsonProperty("name") String name) {
+        this.account = account;
+        this.currency = currency;
+        this.name = name;
+  }
 }

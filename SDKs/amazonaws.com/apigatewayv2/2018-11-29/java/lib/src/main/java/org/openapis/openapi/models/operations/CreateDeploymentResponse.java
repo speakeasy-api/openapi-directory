@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDeploymentResponse {
@@ -12,6 +13,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object badRequestException;
+
     public CreateDeploymentResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object conflictException;
+
     public CreateDeploymentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDeploymentResponse {
     
     
     public String contentType;
+
     public CreateDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDeploymentResponse createDeploymentResponse;
+
     public CreateDeploymentResponse withCreateDeploymentResponse(org.openapis.openapi.models.shared.CreateDeploymentResponse createDeploymentResponse) {
         this.createDeploymentResponse = createDeploymentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDeploymentResponse {
      */
     
     public Object notFoundException;
+
     public CreateDeploymentResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDeploymentResponse {
     
     
     public Integer statusCode;
+
     public CreateDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateDeploymentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateDeploymentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

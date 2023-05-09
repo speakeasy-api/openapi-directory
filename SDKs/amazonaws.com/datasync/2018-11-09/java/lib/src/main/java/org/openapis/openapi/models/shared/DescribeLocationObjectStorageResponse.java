@@ -20,6 +20,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessKey")
     public String accessKey;
+
     public DescribeLocationObjectStorageResponse withAccessKey(String accessKey) {
         this.accessKey = accessKey;
         return this;
@@ -28,6 +29,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentArns")
     public String[] agentArns;
+
     public DescribeLocationObjectStorageResponse withAgentArns(String[] agentArns) {
         this.agentArns = agentArns;
         return this;
@@ -38,6 +40,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLocationObjectStorageResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationArn")
     public String locationArn;
+
     public DescribeLocationObjectStorageResponse withLocationArn(String locationArn) {
         this.locationArn = locationArn;
         return this;
@@ -54,6 +58,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocationUri")
     public String locationUri;
+
     public DescribeLocationObjectStorageResponse withLocationUri(String locationUri) {
         this.locationUri = locationUri;
         return this;
@@ -62,6 +67,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerCertificate")
     public String serverCertificate;
+
     public DescribeLocationObjectStorageResponse withServerCertificate(String serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
@@ -70,6 +76,7 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerPort")
     public Long serverPort;
+
     public DescribeLocationObjectStorageResponse withServerPort(Long serverPort) {
         this.serverPort = serverPort;
         return this;
@@ -78,9 +85,11 @@ public class DescribeLocationObjectStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerProtocol")
     public ObjectStorageServerProtocolEnum serverProtocol;
+
     public DescribeLocationObjectStorageResponse withServerProtocol(ObjectStorageServerProtocolEnum serverProtocol) {
         this.serverProtocol = serverProtocol;
         return this;
     }
     
+    public DescribeLocationObjectStorageResponse(){}
 }

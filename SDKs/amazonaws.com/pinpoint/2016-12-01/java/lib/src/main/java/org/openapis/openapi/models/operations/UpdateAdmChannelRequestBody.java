@@ -12,9 +12,13 @@ public class UpdateAdmChannelRequestBody {
      */
     @JsonProperty("ADMChannelRequest")
     public UpdateADMChannelRequestBodyADMChannelRequest admChannelRequest;
+
     public UpdateAdmChannelRequestBody withADMChannelRequest(UpdateADMChannelRequestBodyADMChannelRequest admChannelRequest) {
         this.admChannelRequest = admChannelRequest;
         return this;
     }
     
+    public UpdateAdmChannelRequestBody(@JsonProperty("ADMChannelRequest") UpdateADMChannelRequestBodyADMChannelRequest admChannelRequest) {
+        this.admChannelRequest = admChannelRequest;
+  }
 }

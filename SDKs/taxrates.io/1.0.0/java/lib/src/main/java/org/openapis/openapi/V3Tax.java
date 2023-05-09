@@ -126,12 +126,10 @@ public class V3Tax {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllTaxRatesResponse res = new org.openapis.openapi.models.operations.AllTaxRatesResponse() {{
+        org.openapis.openapi.models.operations.AllTaxRatesResponse res = new org.openapis.openapi.models.operations.AllTaxRatesResponse(contentType, httpRes.statusCode()) {{
             allTaxRates200ApplicationJSONObjects = null;
             allTaxRates500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

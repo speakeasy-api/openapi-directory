@@ -23,6 +23,7 @@ public class EditorialLivefeed {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cover_item")
     public EditorialCoverItem coverItem;
+
     public EditorialLivefeed withCoverItem(EditorialCoverItem coverItem) {
         this.coverItem = coverItem;
         return this;
@@ -36,6 +37,7 @@ public class EditorialLivefeed {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public EditorialLivefeed withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -46,6 +48,7 @@ public class EditorialLivefeed {
      */
     @JsonProperty("id")
     public String id;
+
     public EditorialLivefeed withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +59,7 @@ public class EditorialLivefeed {
      */
     @JsonProperty("name")
     public String name;
+
     public EditorialLivefeed withName(String name) {
         this.name = name;
         return this;
@@ -66,9 +70,15 @@ public class EditorialLivefeed {
      */
     @JsonProperty("total_item_count")
     public Long totalItemCount;
+
     public EditorialLivefeed withTotalItemCount(Long totalItemCount) {
         this.totalItemCount = totalItemCount;
         return this;
     }
     
+    public EditorialLivefeed(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("total_item_count") Long totalItemCount) {
+        this.id = id;
+        this.name = name;
+        this.totalItemCount = totalItemCount;
+  }
 }

@@ -15,6 +15,7 @@ public class GroupCertificateAuthorityProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupCertificateAuthorityArn")
     public String groupCertificateAuthorityArn;
+
     public GroupCertificateAuthorityProperties withGroupCertificateAuthorityArn(String groupCertificateAuthorityArn) {
         this.groupCertificateAuthorityArn = groupCertificateAuthorityArn;
         return this;
@@ -23,9 +24,11 @@ public class GroupCertificateAuthorityProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupCertificateAuthorityId")
     public String groupCertificateAuthorityId;
+
     public GroupCertificateAuthorityProperties withGroupCertificateAuthorityId(String groupCertificateAuthorityId) {
         this.groupCertificateAuthorityId = groupCertificateAuthorityId;
         return this;
     }
     
+    public GroupCertificateAuthorityProperties(){}
 }

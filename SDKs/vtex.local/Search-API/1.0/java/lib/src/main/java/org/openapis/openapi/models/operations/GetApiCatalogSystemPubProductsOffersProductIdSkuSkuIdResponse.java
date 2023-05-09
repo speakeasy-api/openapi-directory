@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse {
     
     public String contentType;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse {
      */
     
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON[] getApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects;
+
     public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse withGetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects(GetApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSON[] getApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects) {
         this.getApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects = getApiCatalogSystemPubProductsOffersProductIdSkuSkuId200ApplicationJSONObjects;
         return this;
     }
     
+    public GetApiCatalogSystemPubProductsOffersProductIdSkuSkuIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

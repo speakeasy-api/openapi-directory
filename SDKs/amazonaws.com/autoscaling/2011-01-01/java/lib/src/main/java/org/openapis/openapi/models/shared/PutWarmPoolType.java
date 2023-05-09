@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutWarmPoolType {
     
     public String autoScalingGroupName;
+
     public PutWarmPoolType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class PutWarmPoolType {
     
     
     public InstanceReusePolicy instanceReusePolicy;
+
     public PutWarmPoolType withInstanceReusePolicy(InstanceReusePolicy instanceReusePolicy) {
         this.instanceReusePolicy = instanceReusePolicy;
         return this;
@@ -23,6 +25,7 @@ public class PutWarmPoolType {
     
     
     public Long maxGroupPreparedCapacity;
+
     public PutWarmPoolType withMaxGroupPreparedCapacity(Long maxGroupPreparedCapacity) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         return this;
@@ -30,6 +33,7 @@ public class PutWarmPoolType {
     
     
     public Long minSize;
+
     public PutWarmPoolType withMinSize(Long minSize) {
         this.minSize = minSize;
         return this;
@@ -37,9 +41,13 @@ public class PutWarmPoolType {
     
     
     public WarmPoolStateEnum poolState;
+
     public PutWarmPoolType withPoolState(WarmPoolStateEnum poolState) {
         this.poolState = poolState;
         return this;
     }
     
+    public PutWarmPoolType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

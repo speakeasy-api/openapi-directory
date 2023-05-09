@@ -18,9 +18,11 @@ public class FloatingPointList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elements")
     public Double[] elements;
+
     public FloatingPointList withElements(Double[] elements) {
         this.elements = elements;
         return this;
     }
     
+    public FloatingPointList(){}
 }

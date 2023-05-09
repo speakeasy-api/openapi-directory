@@ -22,6 +22,7 @@ public class RoleAliasDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public RoleAliasDescription withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class RoleAliasDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credentialDurationSeconds")
     public Long credentialDurationSeconds;
+
     public RoleAliasDescription withCredentialDurationSeconds(Long credentialDurationSeconds) {
         this.credentialDurationSeconds = credentialDurationSeconds;
         return this;
@@ -40,6 +42,7 @@ public class RoleAliasDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public RoleAliasDescription withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -48,6 +51,7 @@ public class RoleAliasDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public RoleAliasDescription withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -56,6 +60,7 @@ public class RoleAliasDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAlias")
     public String roleAlias;
+
     public RoleAliasDescription withRoleAlias(String roleAlias) {
         this.roleAlias = roleAlias;
         return this;
@@ -64,6 +69,7 @@ public class RoleAliasDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAliasArn")
     public String roleAliasArn;
+
     public RoleAliasDescription withRoleAliasArn(String roleAliasArn) {
         this.roleAliasArn = roleAliasArn;
         return this;
@@ -72,9 +78,11 @@ public class RoleAliasDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RoleAliasDescription withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public RoleAliasDescription(){}
 }

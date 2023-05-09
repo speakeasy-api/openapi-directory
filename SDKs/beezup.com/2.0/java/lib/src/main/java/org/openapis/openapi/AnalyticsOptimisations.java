@@ -55,12 +55,10 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopyOptimisationResponse res = new org.openapis.openapi.models.operations.CopyOptimisationResponse() {{
+        org.openapis.openapi.models.operations.CopyOptimisationResponse res = new org.openapis.openapi.models.operations.CopyOptimisationResponse(contentType, httpRes.statusCode()) {{
             copyOptimisationResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptimiseResponse res = new org.openapis.openapi.models.operations.OptimiseResponse() {{
+        org.openapis.openapi.models.operations.OptimiseResponse res = new org.openapis.openapi.models.operations.OptimiseResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -159,11 +155,9 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptimiseAllResponse res = new org.openapis.openapi.models.operations.OptimiseAllResponse() {{
+        org.openapis.openapi.models.operations.OptimiseAllResponse res = new org.openapis.openapi.models.operations.OptimiseAllResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -204,11 +198,9 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptimiseByCategoryResponse res = new org.openapis.openapi.models.operations.OptimiseByCategoryResponse() {{
+        org.openapis.openapi.models.operations.OptimiseByCategoryResponse res = new org.openapis.openapi.models.operations.OptimiseByCategoryResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -247,11 +239,9 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptimiseByChannelResponse res = new org.openapis.openapi.models.operations.OptimiseByChannelResponse() {{
+        org.openapis.openapi.models.operations.OptimiseByChannelResponse res = new org.openapis.openapi.models.operations.OptimiseByChannelResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -292,11 +282,9 @@ public class AnalyticsOptimisations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OptimiseByProductResponse res = new org.openapis.openapi.models.operations.OptimiseByProductResponse() {{
+        org.openapis.openapi.models.operations.OptimiseByProductResponse res = new org.openapis.openapi.models.operations.OptimiseByProductResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

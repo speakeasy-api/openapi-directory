@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateSynonymOptionsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateSynonymOptionsActionEnum action;
+
     public GETUpdateSynonymOptionsRequest withAction(GETUpdateSynonymOptionsActionEnum action) {
         this.action = action;
         return this;
@@ -16,6 +18,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETUpdateSynonymOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +26,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Synonyms")
     public String synonyms;
+
     public GETUpdateSynonymOptionsRequest withSynonyms(String synonyms) {
         this.synonyms = synonyms;
         return this;
@@ -30,6 +34,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateSynonymOptionsVersionEnum version;
+
     public GETUpdateSynonymOptionsRequest withVersion(GETUpdateSynonymOptionsVersionEnum version) {
         this.version = version;
         return this;
@@ -37,6 +42,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateSynonymOptionsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateSynonymOptionsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateSynonymOptionsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateSynonymOptionsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateSynonymOptionsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateSynonymOptionsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,16 @@ public class GETUpdateSynonymOptionsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateSynonymOptionsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateSynonymOptionsRequest(@JsonProperty("Action") GETUpdateSynonymOptionsActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("Synonyms") String synonyms, @JsonProperty("Version") GETUpdateSynonymOptionsVersionEnum version) {
+        this.action = action;
+        this.domainName = domainName;
+        this.synonyms = synonyms;
+        this.version = version;
+  }
 }

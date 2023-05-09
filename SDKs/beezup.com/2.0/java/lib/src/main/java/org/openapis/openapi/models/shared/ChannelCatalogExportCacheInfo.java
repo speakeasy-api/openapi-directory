@@ -19,6 +19,7 @@ public class ChannelCatalogExportCacheInfo {
      */
     @JsonProperty("cacheStatus")
     public String cacheStatus;
+
     public ChannelCatalogExportCacheInfo withCacheStatus(String cacheStatus) {
         this.cacheStatus = cacheStatus;
         return this;
@@ -32,6 +33,7 @@ public class ChannelCatalogExportCacheInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationUtcDate")
     public OffsetDateTime expirationUtcDate;
+
     public ChannelCatalogExportCacheInfo withExpirationUtcDate(OffsetDateTime expirationUtcDate) {
         this.expirationUtcDate = expirationUtcDate;
         return this;
@@ -43,6 +45,7 @@ public class ChannelCatalogExportCacheInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedUrl")
     public String feedUrl;
+
     public ChannelCatalogExportCacheInfo withFeedUrl(String feedUrl) {
         this.feedUrl = feedUrl;
         return this;
@@ -56,6 +59,7 @@ public class ChannelCatalogExportCacheInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastContentChangeUtcDate")
     public OffsetDateTime lastContentChangeUtcDate;
+
     public ChannelCatalogExportCacheInfo withLastContentChangeUtcDate(OffsetDateTime lastContentChangeUtcDate) {
         this.lastContentChangeUtcDate = lastContentChangeUtcDate;
         return this;
@@ -69,9 +73,13 @@ public class ChannelCatalogExportCacheInfo {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateUtcDate")
     public OffsetDateTime lastUpdateUtcDate;
+
     public ChannelCatalogExportCacheInfo withLastUpdateUtcDate(OffsetDateTime lastUpdateUtcDate) {
         this.lastUpdateUtcDate = lastUpdateUtcDate;
         return this;
     }
     
+    public ChannelCatalogExportCacheInfo(@JsonProperty("cacheStatus") String cacheStatus) {
+        this.cacheStatus = cacheStatus;
+  }
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConfigurationSetInformation {
     @JsonProperty("ConfigurationSetArn")
     public String configurationSetArn;
+
     public ConfigurationSetInformation withConfigurationSetArn(String configurationSetArn) {
         this.configurationSetArn = configurationSetArn;
         return this;
@@ -26,6 +27,7 @@ public class ConfigurationSetInformation {
     
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public ConfigurationSetInformation withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -35,6 +37,7 @@ public class ConfigurationSetInformation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public ConfigurationSetInformation withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -43,6 +46,7 @@ public class ConfigurationSetInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMessageType")
     public MessageTypeEnum defaultMessageType;
+
     public ConfigurationSetInformation withDefaultMessageType(MessageTypeEnum defaultMessageType) {
         this.defaultMessageType = defaultMessageType;
         return this;
@@ -51,6 +55,7 @@ public class ConfigurationSetInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSenderId")
     public String defaultSenderId;
+
     public ConfigurationSetInformation withDefaultSenderId(String defaultSenderId) {
         this.defaultSenderId = defaultSenderId;
         return this;
@@ -58,9 +63,16 @@ public class ConfigurationSetInformation {
     
     @JsonProperty("EventDestinations")
     public EventDestination[] eventDestinations;
+
     public ConfigurationSetInformation withEventDestinations(EventDestination[] eventDestinations) {
         this.eventDestinations = eventDestinations;
         return this;
     }
     
+    public ConfigurationSetInformation(@JsonProperty("ConfigurationSetArn") String configurationSetArn, @JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("CreatedTimestamp") OffsetDateTime createdTimestamp, @JsonProperty("EventDestinations") EventDestination[] eventDestinations) {
+        this.configurationSetArn = configurationSetArn;
+        this.configurationSetName = configurationSetName;
+        this.createdTimestamp = createdTimestamp;
+        this.eventDestinations = eventDestinations;
+  }
 }

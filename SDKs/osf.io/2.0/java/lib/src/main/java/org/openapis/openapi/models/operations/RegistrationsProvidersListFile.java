@@ -12,6 +12,7 @@ public class RegistrationsProvidersListFile {
      */
     
     public RegistrationsProvidersListFileAttributes attributes;
+
     public RegistrationsProvidersListFile withAttributes(RegistrationsProvidersListFileAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsProvidersListFile {
      */
     
     public String id;
+
     public RegistrationsProvidersListFile withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsProvidersListFile {
      */
     
     public RegistrationsProvidersListFileLinks links;
+
     public RegistrationsProvidersListFile withLinks(RegistrationsProvidersListFileLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsProvidersListFile {
      */
     
     public RegistrationsProvidersListFileRelationships relationships;
+
     public RegistrationsProvidersListFile withRelationships(RegistrationsProvidersListFileRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class RegistrationsProvidersListFile {
      */
     
     public String type;
+
     public RegistrationsProvidersListFile withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsProvidersListFile(){}
 }

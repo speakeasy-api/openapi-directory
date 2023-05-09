@@ -15,6 +15,7 @@ public class Tetcr502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Tetcr502ApplicationJSONErrorEnum error;
+
     public Tetcr502ApplicationJSON withError(Tetcr502ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Tetcr502ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Tetcr502ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Tetcr502ApplicationJSON withErrorDescription(Tetcr502ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Tetcr502ApplicationJSON(){}
 }

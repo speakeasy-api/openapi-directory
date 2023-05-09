@@ -12,9 +12,11 @@ public class ListMerchantsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public Long cursor;
+
     public ListMerchantsRequest withCursor(Long cursor) {
         this.cursor = cursor;
         return this;
     }
     
+    public ListMerchantsRequest(){}
 }

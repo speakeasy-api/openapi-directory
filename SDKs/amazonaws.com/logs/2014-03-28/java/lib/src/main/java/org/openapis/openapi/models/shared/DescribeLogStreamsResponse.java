@@ -15,6 +15,7 @@ public class DescribeLogStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logStreams")
     public LogStream[] logStreams;
+
     public DescribeLogStreamsResponse withLogStreams(LogStream[] logStreams) {
         this.logStreams = logStreams;
         return this;
@@ -26,9 +27,11 @@ public class DescribeLogStreamsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeLogStreamsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLogStreamsResponse(){}
 }

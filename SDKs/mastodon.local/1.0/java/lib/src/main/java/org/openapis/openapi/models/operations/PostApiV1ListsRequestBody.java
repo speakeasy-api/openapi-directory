@@ -15,6 +15,7 @@ public class PostApiV1ListsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replies_policy")
     public PostApiV1ListsRequestBodyRepliesPolicyEnum repliesPolicy;
+
     public PostApiV1ListsRequestBody withRepliesPolicy(PostApiV1ListsRequestBodyRepliesPolicyEnum repliesPolicy) {
         this.repliesPolicy = repliesPolicy;
         return this;
@@ -25,9 +26,13 @@ public class PostApiV1ListsRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public PostApiV1ListsRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PostApiV1ListsRequestBody(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

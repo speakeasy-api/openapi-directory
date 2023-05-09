@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersReportsFindInstalledAppDevicesResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1FindInstalledAppDevicesResponse googleChromeManagementV1FindInstalledAppDevicesResponse;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesResponse withGoogleChromeManagementV1FindInstalledAppDevicesResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1FindInstalledAppDevicesResponse googleChromeManagementV1FindInstalledAppDevicesResponse) {
         this.googleChromeManagementV1FindInstalledAppDevicesResponse = googleChromeManagementV1FindInstalledAppDevicesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesResponse {
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersReportsFindInstalledAppDevicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersReportsFindInstalledAppDevicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersReportsFindInstalledAppDevicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

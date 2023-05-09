@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowStateRead {
     @JsonProperty("running")
     public Boolean running;
+
     public WorkflowStateRead withRunning(Boolean running) {
         this.running = running;
         return this;
     }
     
+    public WorkflowStateRead(@JsonProperty("running") Boolean running) {
+        this.running = running;
+  }
 }

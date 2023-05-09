@@ -14,6 +14,7 @@ public class ListUserSSubscriptionGroupSmsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
     public String externalId;
+
     public ListUserSSubscriptionGroupSmsRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -26,6 +27,7 @@ public class ListUserSSubscriptionGroupSmsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public ListUserSSubscriptionGroupSmsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -38,6 +40,7 @@ public class ListUserSSubscriptionGroupSmsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public ListUserSSubscriptionGroupSmsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -51,9 +54,11 @@ public class ListUserSSubscriptionGroupSmsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone")
     public String phone;
+
     public ListUserSSubscriptionGroupSmsRequest withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public ListUserSSubscriptionGroupSmsRequest(){}
 }

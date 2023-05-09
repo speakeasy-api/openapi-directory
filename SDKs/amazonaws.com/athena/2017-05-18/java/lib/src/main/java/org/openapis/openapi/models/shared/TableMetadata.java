@@ -20,6 +20,7 @@ public class TableMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Columns")
     public Column[] columns;
+
     public TableMetadata withColumns(Column[] columns) {
         this.columns = columns;
         return this;
@@ -30,6 +31,7 @@ public class TableMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public TableMetadata withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class TableMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastAccessTime")
     public OffsetDateTime lastAccessTime;
+
     public TableMetadata withLastAccessTime(OffsetDateTime lastAccessTime) {
         this.lastAccessTime = lastAccessTime;
         return this;
@@ -47,6 +50,7 @@ public class TableMetadata {
     
     @JsonProperty("Name")
     public String name;
+
     public TableMetadata withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +59,7 @@ public class TableMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public TableMetadata withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -63,6 +68,7 @@ public class TableMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public Column[] partitionKeys;
+
     public TableMetadata withPartitionKeys(Column[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
@@ -71,9 +77,13 @@ public class TableMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableType")
     public String tableType;
+
     public TableMetadata withTableType(String tableType) {
         this.tableType = tableType;
         return this;
     }
     
+    public TableMetadata(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

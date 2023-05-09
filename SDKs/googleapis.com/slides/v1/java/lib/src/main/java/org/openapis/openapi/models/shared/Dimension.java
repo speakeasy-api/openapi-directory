@@ -18,6 +18,7 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("magnitude")
     public Double magnitude;
+
     public Dimension withMagnitude(Double magnitude) {
         this.magnitude = magnitude;
         return this;
@@ -29,9 +30,11 @@ public class Dimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public DimensionUnitEnum unit;
+
     public Dimension withUnit(DimensionUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public Dimension(){}
 }

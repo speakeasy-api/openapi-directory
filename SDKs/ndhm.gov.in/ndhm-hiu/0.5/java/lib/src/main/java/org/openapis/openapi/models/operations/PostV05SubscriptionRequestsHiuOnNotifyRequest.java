@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05SubscriptionRequestsHiuOnNotifyRequest {
@@ -12,6 +13,7 @@ public class PostV05SubscriptionRequestsHiuOnNotifyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05SubscriptionRequestsHiuOnNotifyRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05SubscriptionRequestsHiuOnNotifyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement hiuSubscriptionRequestNotificationAcknowledgement;
+
     public PostV05SubscriptionRequestsHiuOnNotifyRequest withHIUSubscriptionRequestNotificationAcknowledgement(org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement hiuSubscriptionRequestNotificationAcknowledgement) {
         this.hiuSubscriptionRequestNotificationAcknowledgement = hiuSubscriptionRequestNotificationAcknowledgement;
         return this;
@@ -29,9 +32,15 @@ public class PostV05SubscriptionRequestsHiuOnNotifyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CM-ID")
     public String xCmId;
+
     public PostV05SubscriptionRequestsHiuOnNotifyRequest withXCmId(String xCmId) {
         this.xCmId = xCmId;
         return this;
     }
     
+    public PostV05SubscriptionRequestsHiuOnNotifyRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("HIUSubscriptionRequestNotificationAcknowledgement") org.openapis.openapi.models.shared.HIUSubscriptionRequestNotificationAcknowledgement hiuSubscriptionRequestNotificationAcknowledgement, @JsonProperty("X-CM-ID") String xCmId) {
+        this.authorization = authorization;
+        this.hiuSubscriptionRequestNotificationAcknowledgement = hiuSubscriptionRequestNotificationAcknowledgement;
+        this.xCmId = xCmId;
+  }
 }

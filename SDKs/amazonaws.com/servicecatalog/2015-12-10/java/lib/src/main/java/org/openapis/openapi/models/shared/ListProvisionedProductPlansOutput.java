@@ -15,6 +15,7 @@ public class ListProvisionedProductPlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public ListProvisionedProductPlansOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,9 +24,11 @@ public class ListProvisionedProductPlansOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProductPlans")
     public ProvisionedProductPlanSummary[] provisionedProductPlans;
+
     public ListProvisionedProductPlansOutput withProvisionedProductPlans(ProvisionedProductPlanSummary[] provisionedProductPlans) {
         this.provisionedProductPlans = provisionedProductPlans;
         return this;
     }
     
+    public ListProvisionedProductPlansOutput(){}
 }

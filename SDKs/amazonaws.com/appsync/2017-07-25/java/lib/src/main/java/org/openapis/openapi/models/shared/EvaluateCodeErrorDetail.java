@@ -15,6 +15,7 @@ public class EvaluateCodeErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeErrors")
     public CodeError[] codeErrors;
+
     public EvaluateCodeErrorDetail withCodeErrors(CodeError[] codeErrors) {
         this.codeErrors = codeErrors;
         return this;
@@ -23,9 +24,11 @@ public class EvaluateCodeErrorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public EvaluateCodeErrorDetail withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public EvaluateCodeErrorDetail(){}
 }

@@ -18,6 +18,7 @@ public class GoogleTypeLatLng {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public GoogleTypeLatLng withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class GoogleTypeLatLng {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public GoogleTypeLatLng withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GoogleTypeLatLng(){}
 }

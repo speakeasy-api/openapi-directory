@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeRegionsRequestFilters {
     
     public String name;
+
     public DescribeRegionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeRegionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeRegionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeRegionsRequestFilters(){}
 }

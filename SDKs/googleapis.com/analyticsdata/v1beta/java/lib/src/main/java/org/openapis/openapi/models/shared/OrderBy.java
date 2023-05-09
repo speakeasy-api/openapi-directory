@@ -18,6 +18,7 @@ public class OrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desc")
     public Boolean desc;
+
     public OrderBy withDesc(Boolean desc) {
         this.desc = desc;
         return this;
@@ -29,6 +30,7 @@ public class OrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimension")
     public DimensionOrderBy dimension;
+
     public OrderBy withDimension(DimensionOrderBy dimension) {
         this.dimension = dimension;
         return this;
@@ -40,6 +42,7 @@ public class OrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public MetricOrderBy metric;
+
     public OrderBy withMetric(MetricOrderBy metric) {
         this.metric = metric;
         return this;
@@ -51,9 +54,11 @@ public class OrderBy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pivot")
     public PivotOrderBy pivot;
+
     public OrderBy withPivot(PivotOrderBy pivot) {
         this.pivot = pivot;
         return this;
     }
     
+    public OrderBy(){}
 }

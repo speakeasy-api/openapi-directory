@@ -15,9 +15,11 @@ public class CreateLicenseManagerReportGeneratorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseManagerReportGeneratorArn")
     public String licenseManagerReportGeneratorArn;
+
     public CreateLicenseManagerReportGeneratorResponse withLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
         this.licenseManagerReportGeneratorArn = licenseManagerReportGeneratorArn;
         return this;
     }
     
+    public CreateLicenseManagerReportGeneratorResponse(){}
 }

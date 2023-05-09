@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomRoutingEndpointGroupResponse {
     
     public String contentType;
+
     public DeleteCustomRoutingEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomRoutingEndpointGroupResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public DeleteCustomRoutingEndpointGroupResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomRoutingEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteCustomRoutingEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomRoutingEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteCustomRoutingEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCustomRoutingEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomRoutingEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteCustomRoutingEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomRoutingEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCustomRoutingEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

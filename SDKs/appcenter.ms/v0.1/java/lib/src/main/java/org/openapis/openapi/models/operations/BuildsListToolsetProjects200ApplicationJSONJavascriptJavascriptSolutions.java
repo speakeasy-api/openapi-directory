@@ -14,6 +14,7 @@ public class BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolu
      */
     @JsonProperty("packageJsonPath")
     public String packageJsonPath;
+
     public BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolutions withPackageJsonPath(String packageJsonPath) {
         this.packageJsonPath = packageJsonPath;
         return this;
@@ -25,9 +26,13 @@ public class BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolu
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactNativeVersion")
     public String reactNativeVersion;
+
     public BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolutions withReactNativeVersion(String reactNativeVersion) {
         this.reactNativeVersion = reactNativeVersion;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolutions(@JsonProperty("packageJsonPath") String packageJsonPath) {
+        this.packageJsonPath = packageJsonPath;
+  }
 }

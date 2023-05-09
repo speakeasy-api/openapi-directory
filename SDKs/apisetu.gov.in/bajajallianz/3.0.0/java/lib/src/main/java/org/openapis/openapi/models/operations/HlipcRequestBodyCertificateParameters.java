@@ -12,6 +12,7 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public HlipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class HlipcRequestBodyCertificateParameters {
      */
     @JsonProperty("policy_number")
     public String policyNumber;
+
     public HlipcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
     }
     
+    public HlipcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("policy_number") String policyNumber) {
+        this.fullName = fullName;
+        this.policyNumber = policyNumber;
+  }
 }

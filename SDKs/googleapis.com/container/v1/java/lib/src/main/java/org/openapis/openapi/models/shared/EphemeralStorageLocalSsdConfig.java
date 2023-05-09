@@ -18,9 +18,11 @@ public class EphemeralStorageLocalSsdConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsdCount")
     public Integer localSsdCount;
+
     public EphemeralStorageLocalSsdConfig withLocalSsdCount(Integer localSsdCount) {
         this.localSsdCount = localSsdCount;
         return this;
     }
     
+    public EphemeralStorageLocalSsdConfig(){}
 }

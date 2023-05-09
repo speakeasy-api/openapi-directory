@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModifySelfservicePermissionsRequest {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ModifySelfservicePermissionsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,9 +17,14 @@ public class ModifySelfservicePermissionsRequest {
     
     @JsonProperty("SelfservicePermissions")
     public SelfservicePermissions selfservicePermissions;
+
     public ModifySelfservicePermissionsRequest withSelfservicePermissions(SelfservicePermissions selfservicePermissions) {
         this.selfservicePermissions = selfservicePermissions;
         return this;
     }
     
+    public ModifySelfservicePermissionsRequest(@JsonProperty("ResourceId") String resourceId, @JsonProperty("SelfservicePermissions") SelfservicePermissions selfservicePermissions) {
+        this.resourceId = resourceId;
+        this.selfservicePermissions = selfservicePermissions;
+  }
 }

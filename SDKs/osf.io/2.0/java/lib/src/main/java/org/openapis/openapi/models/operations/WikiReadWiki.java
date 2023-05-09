@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * WikiReadWiki - OK
@@ -15,6 +15,7 @@ public class WikiReadWiki {
      */
     
     public WikiReadWikiAttributes attributes;
+
     public WikiReadWiki withAttributes(WikiReadWikiAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class WikiReadWiki {
      */
     
     public String id;
+
     public WikiReadWiki withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class WikiReadWiki {
      */
     
     public WikiReadWikiLinks links;
+
     public WikiReadWiki withLinks(WikiReadWikiLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class WikiReadWiki {
      */
     
     public WikiReadWikiRelationships relationships;
+
     public WikiReadWiki withRelationships(WikiReadWikiRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,14 @@ public class WikiReadWiki {
      */
     
     public String type;
+
     public WikiReadWiki withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WikiReadWiki(@JsonProperty("relationships") WikiReadWikiRelationships relationships, @JsonProperty("type") String type) {
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

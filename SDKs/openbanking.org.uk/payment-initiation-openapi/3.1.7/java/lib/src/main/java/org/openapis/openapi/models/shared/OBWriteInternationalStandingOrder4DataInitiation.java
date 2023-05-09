@@ -23,6 +23,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChargeBearer")
     public OBChargeBearerType1CodeEnum chargeBearer;
+
     public OBWriteInternationalStandingOrder4DataInitiation withChargeBearer(OBChargeBearerType1CodeEnum chargeBearer) {
         this.chargeBearer = chargeBearer;
         return this;
@@ -34,6 +35,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creditor")
     public OBWriteInternationalStandingOrder4DataInitiationCreditor creditor;
+
     public OBWriteInternationalStandingOrder4DataInitiation withCreditor(OBWriteInternationalStandingOrder4DataInitiationCreditor creditor) {
         this.creditor = creditor;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteInternationalStandingOrder4DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteInternationalStandingOrder4DataInitiation withCreditorAccount(OBWriteInternationalStandingOrder4DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -56,6 +59,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorAgent")
     public OBWriteInternationalStandingOrder4DataInitiationCreditorAgent creditorAgent;
+
     public OBWriteInternationalStandingOrder4DataInitiation withCreditorAgent(OBWriteInternationalStandingOrder4DataInitiationCreditorAgent creditorAgent) {
         this.creditorAgent = creditorAgent;
         return this;
@@ -66,6 +70,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
      */
     @JsonProperty("CurrencyOfTransfer")
     public String currencyOfTransfer;
+
     public OBWriteInternationalStandingOrder4DataInitiation withCurrencyOfTransfer(String currencyOfTransfer) {
         this.currencyOfTransfer = currencyOfTransfer;
         return this;
@@ -77,6 +82,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteInternationalStandingOrder4DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteInternationalStandingOrder4DataInitiation withDebtorAccount(OBWriteInternationalStandingOrder4DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationCountryCode")
     public String destinationCountryCode;
+
     public OBWriteInternationalStandingOrder4DataInitiation withDestinationCountryCode(String destinationCountryCode) {
         this.destinationCountryCode = destinationCountryCode;
         return this;
@@ -99,6 +106,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedPurpose")
     public String extendedPurpose;
+
     public OBWriteInternationalStandingOrder4DataInitiation withExtendedPurpose(String extendedPurpose) {
         this.extendedPurpose = extendedPurpose;
         return this;
@@ -114,6 +122,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FinalPaymentDateTime")
     public OffsetDateTime finalPaymentDateTime;
+
     public OBWriteInternationalStandingOrder4DataInitiation withFinalPaymentDateTime(OffsetDateTime finalPaymentDateTime) {
         this.finalPaymentDateTime = finalPaymentDateTime;
         return this;
@@ -128,6 +137,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstPaymentDateTime")
     public OffsetDateTime firstPaymentDateTime;
+
     public OBWriteInternationalStandingOrder4DataInitiation withFirstPaymentDateTime(OffsetDateTime firstPaymentDateTime) {
         this.firstPaymentDateTime = firstPaymentDateTime;
         return this;
@@ -163,6 +173,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
      */
     @JsonProperty("Frequency")
     public String frequency;
+
     public OBWriteInternationalStandingOrder4DataInitiation withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -174,6 +185,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteInternationalStandingOrder4DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteInternationalStandingOrder4DataInitiation withInstructedAmount(OBWriteInternationalStandingOrder4DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -185,6 +197,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfPayments")
     public String numberOfPayments;
+
     public OBWriteInternationalStandingOrder4DataInitiation withNumberOfPayments(String numberOfPayments) {
         this.numberOfPayments = numberOfPayments;
         return this;
@@ -198,6 +211,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Purpose")
     public String purpose;
+
     public OBWriteInternationalStandingOrder4DataInitiation withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -211,6 +225,7 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reference")
     public String reference;
+
     public OBWriteInternationalStandingOrder4DataInitiation withReference(String reference) {
         this.reference = reference;
         return this;
@@ -222,9 +237,17 @@ public class OBWriteInternationalStandingOrder4DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteInternationalStandingOrder4DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteInternationalStandingOrder4DataInitiation(@JsonProperty("CreditorAccount") OBWriteInternationalStandingOrder4DataInitiationCreditorAccount creditorAccount, @JsonProperty("CurrencyOfTransfer") String currencyOfTransfer, @JsonProperty("FirstPaymentDateTime") OffsetDateTime firstPaymentDateTime, @JsonProperty("Frequency") String frequency, @JsonProperty("InstructedAmount") OBWriteInternationalStandingOrder4DataInitiationInstructedAmount instructedAmount) {
+        this.creditorAccount = creditorAccount;
+        this.currencyOfTransfer = currencyOfTransfer;
+        this.firstPaymentDateTime = firstPaymentDateTime;
+        this.frequency = frequency;
+        this.instructedAmount = instructedAmount;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherId")
     public String errorCatcherId;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withErrorCatcherId(String errorCatcherId) {
         this.errorCatcherId = errorCatcherId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCatcherNumber")
     public String errorCatcherNumber;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withErrorCatcherNumber(String errorCatcherNumber) {
         this.errorCatcherNumber = errorCatcherNumber;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withLabel(String label) {
         this.label = label;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public GoogleCloudIntegrationsV1alphaCoordinate position;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withPosition(GoogleCloudIntegrationsV1alphaCoordinate position) {
         this.position = position;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudIntegrationsV1alphaErrorCatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startErrorTasks")
     public GoogleCloudIntegrationsV1alphaNextTask[] startErrorTasks;
+
     public GoogleCloudIntegrationsV1alphaErrorCatcherConfig withStartErrorTasks(GoogleCloudIntegrationsV1alphaNextTask[] startErrorTasks) {
         this.startErrorTasks = startErrorTasks;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaErrorCatcherConfig(){}
 }

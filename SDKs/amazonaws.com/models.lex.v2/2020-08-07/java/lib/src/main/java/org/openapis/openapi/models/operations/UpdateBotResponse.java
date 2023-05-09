@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBotResponse {
@@ -12,6 +13,7 @@ public class UpdateBotResponse {
      */
     
     public Object conflictException;
+
     public UpdateBotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateBotResponse {
     
     
     public String contentType;
+
     public UpdateBotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBotResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBotResponse {
      */
     
     public Object preconditionFailedException;
+
     public UpdateBotResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateBotResponse {
     
     
     public Integer statusCode;
+
     public UpdateBotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateBotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBotResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateBotResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBotResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBotResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBotResponse updateBotResponse;
+
     public UpdateBotResponse withUpdateBotResponse(org.openapis.openapi.models.shared.UpdateBotResponse updateBotResponse) {
         this.updateBotResponse = updateBotResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateBotResponse {
      */
     
     public Object validationException;
+
     public UpdateBotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateBotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

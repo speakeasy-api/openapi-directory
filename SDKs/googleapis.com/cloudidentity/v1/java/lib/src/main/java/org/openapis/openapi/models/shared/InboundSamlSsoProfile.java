@@ -18,6 +18,7 @@ public class InboundSamlSsoProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public InboundSamlSsoProfile withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -29,6 +30,7 @@ public class InboundSamlSsoProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public InboundSamlSsoProfile withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class InboundSamlSsoProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idpConfig")
     public SamlIdpConfig idpConfig;
+
     public InboundSamlSsoProfile withIdpConfig(SamlIdpConfig idpConfig) {
         this.idpConfig = idpConfig;
         return this;
@@ -51,6 +54,7 @@ public class InboundSamlSsoProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InboundSamlSsoProfile withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class InboundSamlSsoProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spConfig")
     public SamlSpConfig spConfig;
+
     public InboundSamlSsoProfile withSpConfig(SamlSpConfig spConfig) {
         this.spConfig = spConfig;
         return this;
     }
     
+    public InboundSamlSsoProfile(){}
 }

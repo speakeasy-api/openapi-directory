@@ -15,6 +15,7 @@ public class ImportFirewallDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ImportFirewallDomainsResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class ImportFirewallDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ImportFirewallDomainsResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ImportFirewallDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FirewallDomainListStatusEnum status;
+
     public ImportFirewallDomainsResponse withStatus(FirewallDomainListStatusEnum status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class ImportFirewallDomainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public ImportFirewallDomainsResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ImportFirewallDomainsResponse(){}
 }

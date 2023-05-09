@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErrorsGroupCountsPerDayResponse {
     
     public String contentType;
+
     public ErrorsGroupCountsPerDayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ErrorsGroupCountsPerDayResponse {
      */
     
     public ErrorsGroupCountsPerDay200ApplicationJSON errorsGroupCountsPerDay200ApplicationJSONObject;
+
     public ErrorsGroupCountsPerDayResponse withErrorsGroupCountsPerDay200ApplicationJSONObject(ErrorsGroupCountsPerDay200ApplicationJSON errorsGroupCountsPerDay200ApplicationJSONObject) {
         this.errorsGroupCountsPerDay200ApplicationJSONObject = errorsGroupCountsPerDay200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ErrorsGroupCountsPerDayResponse {
      */
     
     public ErrorsGroupCountsPerDayDefaultApplicationJSON errorsGroupCountsPerDayDefaultApplicationJSONObject;
+
     public ErrorsGroupCountsPerDayResponse withErrorsGroupCountsPerDayDefaultApplicationJSONObject(ErrorsGroupCountsPerDayDefaultApplicationJSON errorsGroupCountsPerDayDefaultApplicationJSONObject) {
         this.errorsGroupCountsPerDayDefaultApplicationJSONObject = errorsGroupCountsPerDayDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ErrorsGroupCountsPerDayResponse {
     
     
     public Integer statusCode;
+
     public ErrorsGroupCountsPerDayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ErrorsGroupCountsPerDayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErrorsGroupCountsPerDayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ErrorsGroupCountsPerDayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

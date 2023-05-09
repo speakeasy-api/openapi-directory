@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveRestrictionsV1RequestBody {
@@ -12,9 +13,13 @@ public class RemoveRestrictionsV1RequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public RemoveRestrictionsV1RequestBodyFile file;
+
     public RemoveRestrictionsV1RequestBody withFile(RemoveRestrictionsV1RequestBodyFile file) {
         this.file = file;
         return this;
     }
     
+    public RemoveRestrictionsV1RequestBody(@JsonProperty("file") RemoveRestrictionsV1RequestBodyFile file) {
+        this.file = file;
+  }
 }

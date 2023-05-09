@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetPublicHistoryRequest;
 import org.openapis.openapi.models.operations.GetPublicHistoryResponse;
 
@@ -17,15 +16,17 @@ public class Application {
                 from = "corrupti";
                 q = "provident";
                 to = "distinctio";
-            }}            
+            }};            
 
             GetPublicHistoryResponse res = sdk.default_.getPublicHistory(req);
 
-            if (res.getPublicHistory200ApplicationJSONObject.isPresent()) {
+            if (res.getPublicHistory200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

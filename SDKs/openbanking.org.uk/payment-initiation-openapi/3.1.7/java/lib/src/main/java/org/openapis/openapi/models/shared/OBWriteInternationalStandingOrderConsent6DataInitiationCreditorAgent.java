@@ -19,6 +19,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgen
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgent withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -30,6 +31,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgen
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgent withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgen
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalAddress")
     public OBPostalAddress6 postalAddress;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgent withPostalAddress(OBPostalAddress6 postalAddress) {
         this.postalAddress = postalAddress;
         return this;
@@ -52,9 +55,11 @@ public class OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgen
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgent withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderConsent6DataInitiationCreditorAgent(){}
 }

@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -39,9 +42,16 @@ public class PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBod
     
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody withConstraints(PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("constraints") PostPortfolioOptimizationMeanVarianceEfficientDiversifiedRequestBodyConstraints constraints) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.constraints = constraints;
+  }
 }

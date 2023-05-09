@@ -49,7 +49,7 @@ public class Country {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCountryListResponse res = new org.openapis.openapi.models.operations.GetCountryListResponse() {{
+        org.openapis.openapi.models.operations.GetCountryListResponse res = new org.openapis.openapi.models.operations.GetCountryListResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
             body = null;
@@ -67,8 +67,6 @@ public class Country {
             httpStatusVO = null;
             httpStatusVO = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

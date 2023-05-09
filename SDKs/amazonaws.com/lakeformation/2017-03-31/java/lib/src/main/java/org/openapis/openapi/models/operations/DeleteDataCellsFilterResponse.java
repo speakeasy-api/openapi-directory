@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDataCellsFilterResponse {
@@ -12,6 +13,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteDataCellsFilterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteDataCellsFilterResponse {
     
     
     public String contentType;
+
     public DeleteDataCellsFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public java.util.Map<String, Object> deleteDataCellsFilterResponse;
+
     public DeleteDataCellsFilterResponse withDeleteDataCellsFilterResponse(java.util.Map<String, Object> deleteDataCellsFilterResponse) {
         this.deleteDataCellsFilterResponse = deleteDataCellsFilterResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteDataCellsFilterResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteDataCellsFilterResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteDataCellsFilterResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteDataCellsFilterResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteDataCellsFilterResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteDataCellsFilterResponse {
     
     
     public Integer statusCode;
+
     public DeleteDataCellsFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteDataCellsFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDataCellsFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteDataCellsFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

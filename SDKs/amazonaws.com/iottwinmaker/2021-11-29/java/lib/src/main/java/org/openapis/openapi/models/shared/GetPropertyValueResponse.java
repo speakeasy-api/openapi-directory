@@ -15,6 +15,7 @@ public class GetPropertyValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetPropertyValueResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class GetPropertyValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValues")
     public java.util.Map<String, PropertyLatestValue> propertyValues;
+
     public GetPropertyValueResponse withPropertyValues(java.util.Map<String, PropertyLatestValue> propertyValues) {
         this.propertyValues = propertyValues;
         return this;
@@ -31,9 +33,11 @@ public class GetPropertyValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tabularPropertyValues")
     public java.util.Map<String, DataValue>[][] tabularPropertyValues;
+
     public GetPropertyValueResponse withTabularPropertyValues(java.util.Map<String, DataValue>[][] tabularPropertyValues) {
         this.tabularPropertyValues = tabularPropertyValues;
         return this;
     }
     
+    public GetPropertyValueResponse(){}
 }

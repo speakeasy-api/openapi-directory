@@ -18,9 +18,11 @@ public class GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptId")
     public String scriptId;
+
     public GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest withScriptId(String scriptId) {
         this.scriptId = scriptId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaLinkAppsScriptProjectRequest(){}
 }

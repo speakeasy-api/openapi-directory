@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAssessmentStatusResponse {
@@ -12,6 +13,7 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAssessmentStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAssessmentStatusResponse {
     
     
     public String contentType;
+
     public UpdateAssessmentStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAssessmentStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAssessmentStatusResponse {
     
     
     public Integer statusCode;
+
     public UpdateAssessmentStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAssessmentStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAssessmentStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAssessmentStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateAssessmentStatusResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAssessmentStatusResponse updateAssessmentStatusResponse;
+
     public UpdateAssessmentStatusResponse withUpdateAssessmentStatusResponse(org.openapis.openapi.models.shared.UpdateAssessmentStatusResponse updateAssessmentStatusResponse) {
         this.updateAssessmentStatusResponse = updateAssessmentStatusResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAssessmentStatusResponse {
      */
     
     public Object validationException;
+
     public UpdateAssessmentStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAssessmentStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

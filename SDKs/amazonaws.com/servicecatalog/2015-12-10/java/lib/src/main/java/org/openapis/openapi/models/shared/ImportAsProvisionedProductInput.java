@@ -12,6 +12,7 @@ public class ImportAsProvisionedProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ImportAsProvisionedProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class ImportAsProvisionedProductInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public ImportAsProvisionedProductInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -26,6 +28,7 @@ public class ImportAsProvisionedProductInput {
     
     @JsonProperty("PhysicalId")
     public String physicalId;
+
     public ImportAsProvisionedProductInput withPhysicalId(String physicalId) {
         this.physicalId = physicalId;
         return this;
@@ -33,6 +36,7 @@ public class ImportAsProvisionedProductInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public ImportAsProvisionedProductInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -40,6 +44,7 @@ public class ImportAsProvisionedProductInput {
     
     @JsonProperty("ProvisionedProductName")
     public String provisionedProductName;
+
     public ImportAsProvisionedProductInput withProvisionedProductName(String provisionedProductName) {
         this.provisionedProductName = provisionedProductName;
         return this;
@@ -47,9 +52,17 @@ public class ImportAsProvisionedProductInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ImportAsProvisionedProductInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
     }
     
+    public ImportAsProvisionedProductInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("PhysicalId") String physicalId, @JsonProperty("ProductId") String productId, @JsonProperty("ProvisionedProductName") String provisionedProductName, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId) {
+        this.idempotencyToken = idempotencyToken;
+        this.physicalId = physicalId;
+        this.productId = productId;
+        this.provisionedProductName = provisionedProductName;
+        this.provisioningArtifactId = provisioningArtifactId;
+  }
 }

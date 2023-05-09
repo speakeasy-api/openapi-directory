@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DashboardEntry {
     
     public String dashboardArn;
+
     public DashboardEntry withDashboardArn(String dashboardArn) {
         this.dashboardArn = dashboardArn;
         return this;
@@ -19,6 +20,7 @@ public class DashboardEntry {
     
     
     public String dashboardName;
+
     public DashboardEntry withDashboardName(String dashboardName) {
         this.dashboardName = dashboardName;
         return this;
@@ -26,6 +28,7 @@ public class DashboardEntry {
     
     
     public OffsetDateTime lastModified;
+
     public DashboardEntry withLastModified(OffsetDateTime lastModified) {
         this.lastModified = lastModified;
         return this;
@@ -33,9 +36,11 @@ public class DashboardEntry {
     
     
     public Long size;
+
     public DashboardEntry withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public DashboardEntry(){}
 }

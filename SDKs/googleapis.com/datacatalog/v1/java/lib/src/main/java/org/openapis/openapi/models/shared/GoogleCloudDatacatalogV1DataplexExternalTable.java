@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DataplexExternalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCatalogEntry")
     public String dataCatalogEntry;
+
     public GoogleCloudDatacatalogV1DataplexExternalTable withDataCatalogEntry(String dataCatalogEntry) {
         this.dataCatalogEntry = dataCatalogEntry;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DataplexExternalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullyQualifiedName")
     public String fullyQualifiedName;
+
     public GoogleCloudDatacatalogV1DataplexExternalTable withFullyQualifiedName(String fullyQualifiedName) {
         this.fullyQualifiedName = fullyQualifiedName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1DataplexExternalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleCloudResource")
     public String googleCloudResource;
+
     public GoogleCloudDatacatalogV1DataplexExternalTable withGoogleCloudResource(String googleCloudResource) {
         this.googleCloudResource = googleCloudResource;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1DataplexExternalTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum system;
+
     public GoogleCloudDatacatalogV1DataplexExternalTable withSystem(GoogleCloudDatacatalogV1DataplexExternalTableSystemEnum system) {
         this.system = system;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DataplexExternalTable(){}
 }

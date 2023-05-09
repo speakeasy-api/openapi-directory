@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GatingRule {
     @JsonProperty("ControlPanelArn")
     public String controlPanelArn;
+
     public GatingRule withControlPanelArn(String controlPanelArn) {
         this.controlPanelArn = controlPanelArn;
         return this;
@@ -19,6 +20,7 @@ public class GatingRule {
     
     @JsonProperty("GatingControls")
     public String[] gatingControls;
+
     public GatingRule withGatingControls(String[] gatingControls) {
         this.gatingControls = gatingControls;
         return this;
@@ -26,6 +28,7 @@ public class GatingRule {
     
     @JsonProperty("Name")
     public String name;
+
     public GatingRule withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class GatingRule {
     
     @JsonProperty("RuleConfig")
     public RuleConfig ruleConfig;
+
     public GatingRule withRuleConfig(RuleConfig ruleConfig) {
         this.ruleConfig = ruleConfig;
         return this;
@@ -40,6 +44,7 @@ public class GatingRule {
     
     @JsonProperty("SafetyRuleArn")
     public String safetyRuleArn;
+
     public GatingRule withSafetyRuleArn(String safetyRuleArn) {
         this.safetyRuleArn = safetyRuleArn;
         return this;
@@ -47,6 +52,7 @@ public class GatingRule {
     
     @JsonProperty("Status")
     public StatusEnum status;
+
     public GatingRule withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class GatingRule {
     
     @JsonProperty("TargetControls")
     public String[] targetControls;
+
     public GatingRule withTargetControls(String[] targetControls) {
         this.targetControls = targetControls;
         return this;
@@ -61,9 +68,20 @@ public class GatingRule {
     
     @JsonProperty("WaitPeriodMs")
     public Long waitPeriodMs;
+
     public GatingRule withWaitPeriodMs(Long waitPeriodMs) {
         this.waitPeriodMs = waitPeriodMs;
         return this;
     }
     
+    public GatingRule(@JsonProperty("ControlPanelArn") String controlPanelArn, @JsonProperty("GatingControls") String[] gatingControls, @JsonProperty("Name") String name, @JsonProperty("RuleConfig") RuleConfig ruleConfig, @JsonProperty("SafetyRuleArn") String safetyRuleArn, @JsonProperty("Status") StatusEnum status, @JsonProperty("TargetControls") String[] targetControls, @JsonProperty("WaitPeriodMs") Long waitPeriodMs) {
+        this.controlPanelArn = controlPanelArn;
+        this.gatingControls = gatingControls;
+        this.name = name;
+        this.ruleConfig = ruleConfig;
+        this.safetyRuleArn = safetyRuleArn;
+        this.status = status;
+        this.targetControls = targetControls;
+        this.waitPeriodMs = waitPeriodMs;
+  }
 }

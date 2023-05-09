@@ -18,6 +18,7 @@ public class GetPricingv2Status200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasMigrated")
     public Boolean hasMigrated;
+
     public GetPricingv2Status200ApplicationJSON withHasMigrated(Boolean hasMigrated) {
         this.hasMigrated = hasMigrated;
         return this;
@@ -29,9 +30,11 @@ public class GetPricingv2Status200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isActive")
     public Boolean isActive;
+
     public GetPricingv2Status200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public GetPricingv2Status200ApplicationJSON(){}
 }

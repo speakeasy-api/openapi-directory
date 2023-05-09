@@ -15,9 +15,11 @@ public class CreateViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("View")
     public View view;
+
     public CreateViewOutput withView(View view) {
         this.view = view;
         return this;
     }
     
+    public CreateViewOutput(){}
 }

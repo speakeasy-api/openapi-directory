@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2ConversationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationProfile")
     public String conversationProfile;
+
     public GoogleCloudDialogflowV2ConversationInput withConversationProfile(String conversationProfile) {
         this.conversationProfile = conversationProfile;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2ConversationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversationStage")
     public GoogleCloudDialogflowV2ConversationConversationStageEnum conversationStage;
+
     public GoogleCloudDialogflowV2ConversationInput withConversationStage(GoogleCloudDialogflowV2ConversationConversationStageEnum conversationStage) {
         this.conversationStage = conversationStage;
         return this;
     }
     
+    public GoogleCloudDialogflowV2ConversationInput(){}
 }

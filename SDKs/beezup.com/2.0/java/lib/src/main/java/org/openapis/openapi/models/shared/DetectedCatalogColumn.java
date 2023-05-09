@@ -17,6 +17,7 @@ public class DetectedCatalogColumn {
      */
     @JsonProperty("catalogColumnName")
     public String catalogColumnName;
+
     public DetectedCatalogColumn withCatalogColumnName(String catalogColumnName) {
         this.catalogColumnName = catalogColumnName;
         return this;
@@ -27,6 +28,7 @@ public class DetectedCatalogColumn {
      */
     @JsonProperty("configuration")
     public ColumnConfiguration configuration;
+
     public DetectedCatalogColumn withConfiguration(ColumnConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -38,6 +40,7 @@ public class DetectedCatalogColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duplicateProductValueConfiguration")
     public DuplicateProductValueConfiguration duplicateProductValueConfiguration;
+
     public DetectedCatalogColumn withDuplicateProductValueConfiguration(DuplicateProductValueConfiguration duplicateProductValueConfiguration) {
         this.duplicateProductValueConfiguration = duplicateProductValueConfiguration;
         return this;
@@ -48,6 +51,7 @@ public class DetectedCatalogColumn {
      */
     @JsonProperty("id")
     public String id;
+
     public DetectedCatalogColumn withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class DetectedCatalogColumn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public DetectedCatalogColumn withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
@@ -66,6 +71,7 @@ public class DetectedCatalogColumn {
     
     @JsonProperty("links")
     public DetectedCatalogColumnLinks links;
+
     public DetectedCatalogColumn withLinks(DetectedCatalogColumnLinks links) {
         this.links = links;
         return this;
@@ -76,9 +82,17 @@ public class DetectedCatalogColumn {
      */
     @JsonProperty("userColumName")
     public String userColumName;
+
     public DetectedCatalogColumn withUserColumName(String userColumName) {
         this.userColumName = userColumName;
         return this;
     }
     
+    public DetectedCatalogColumn(@JsonProperty("catalogColumnName") String catalogColumnName, @JsonProperty("configuration") ColumnConfiguration configuration, @JsonProperty("id") String id, @JsonProperty("links") DetectedCatalogColumnLinks links, @JsonProperty("userColumName") String userColumName) {
+        this.catalogColumnName = catalogColumnName;
+        this.configuration = configuration;
+        this.id = id;
+        this.links = links;
+        this.userColumName = userColumName;
+  }
 }

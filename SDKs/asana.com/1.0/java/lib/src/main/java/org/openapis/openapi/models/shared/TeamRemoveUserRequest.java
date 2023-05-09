@@ -18,9 +18,11 @@ public class TeamRemoveUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public TeamRemoveUserRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public TeamRemoveUserRequest(){}
 }

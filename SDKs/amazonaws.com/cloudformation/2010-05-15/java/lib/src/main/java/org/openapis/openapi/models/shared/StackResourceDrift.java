@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class StackResourceDrift {
     
     public String actualProperties;
+
     public StackResourceDrift withActualProperties(String actualProperties) {
         this.actualProperties = actualProperties;
         return this;
@@ -19,6 +21,7 @@ public class StackResourceDrift {
     
     
     public String expectedProperties;
+
     public StackResourceDrift withExpectedProperties(String expectedProperties) {
         this.expectedProperties = expectedProperties;
         return this;
@@ -26,6 +29,7 @@ public class StackResourceDrift {
     
     
     public String logicalResourceId;
+
     public StackResourceDrift withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -33,6 +37,7 @@ public class StackResourceDrift {
     
     
     public ModuleInfo moduleInfo;
+
     public StackResourceDrift withModuleInfo(ModuleInfo moduleInfo) {
         this.moduleInfo = moduleInfo;
         return this;
@@ -40,6 +45,7 @@ public class StackResourceDrift {
     
     
     public String physicalResourceId;
+
     public StackResourceDrift withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -47,6 +53,7 @@ public class StackResourceDrift {
     
     
     public PhysicalResourceIdContextKeyValuePair[] physicalResourceIdContext;
+
     public StackResourceDrift withPhysicalResourceIdContext(PhysicalResourceIdContextKeyValuePair[] physicalResourceIdContext) {
         this.physicalResourceIdContext = physicalResourceIdContext;
         return this;
@@ -54,6 +61,7 @@ public class StackResourceDrift {
     
     
     public PropertyDifference[] propertyDifferences;
+
     public StackResourceDrift withPropertyDifferences(PropertyDifference[] propertyDifferences) {
         this.propertyDifferences = propertyDifferences;
         return this;
@@ -61,6 +69,7 @@ public class StackResourceDrift {
     
     
     public String resourceType;
+
     public StackResourceDrift withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -68,6 +77,7 @@ public class StackResourceDrift {
     
     
     public String stackId;
+
     public StackResourceDrift withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -75,6 +85,7 @@ public class StackResourceDrift {
     
     
     public StackResourceDriftStatusEnum stackResourceDriftStatus;
+
     public StackResourceDrift withStackResourceDriftStatus(StackResourceDriftStatusEnum stackResourceDriftStatus) {
         this.stackResourceDriftStatus = stackResourceDriftStatus;
         return this;
@@ -82,9 +93,17 @@ public class StackResourceDrift {
     
     
     public OffsetDateTime timestamp;
+
     public StackResourceDrift withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public StackResourceDrift(@JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("ResourceType") String resourceType, @JsonProperty("StackId") String stackId, @JsonProperty("StackResourceDriftStatus") StackResourceDriftStatusEnum stackResourceDriftStatus, @JsonProperty("Timestamp") OffsetDateTime timestamp) {
+        this.logicalResourceId = logicalResourceId;
+        this.resourceType = resourceType;
+        this.stackId = stackId;
+        this.stackResourceDriftStatus = stackResourceDriftStatus;
+        this.timestamp = timestamp;
+  }
 }

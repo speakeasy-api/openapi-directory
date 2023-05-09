@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateKeyPairRequestTagSpecifications {
     
     public CreateKeyPairRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateKeyPairRequestTagSpecifications withResourceType(CreateKeyPairRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateKeyPairRequestTagSpecifications {
     
     
     public CreateKeyPairRequestTagSpecificationsTags[] tags;
+
     public CreateKeyPairRequestTagSpecifications withTags(CreateKeyPairRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateKeyPairRequestTagSpecifications(){}
 }

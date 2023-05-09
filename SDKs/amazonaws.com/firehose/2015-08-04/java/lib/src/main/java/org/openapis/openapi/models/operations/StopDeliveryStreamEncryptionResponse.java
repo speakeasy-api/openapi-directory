@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopDeliveryStreamEncryptionResponse {
     
     public String contentType;
+
     public StopDeliveryStreamEncryptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopDeliveryStreamEncryptionResponse {
      */
     
     public Object invalidArgumentException;
+
     public StopDeliveryStreamEncryptionResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -29,6 +32,7 @@ public class StopDeliveryStreamEncryptionResponse {
      */
     
     public Object limitExceededException;
+
     public StopDeliveryStreamEncryptionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class StopDeliveryStreamEncryptionResponse {
     
     
     public Integer statusCode;
+
     public StopDeliveryStreamEncryptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopDeliveryStreamEncryptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopDeliveryStreamEncryptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopDeliveryStreamEncryptionResponse {
      */
     
     public Object resourceInUseException;
+
     public StopDeliveryStreamEncryptionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class StopDeliveryStreamEncryptionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopDeliveryStreamEncryptionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class StopDeliveryStreamEncryptionResponse {
      */
     
     public java.util.Map<String, Object> stopDeliveryStreamEncryptionOutput;
+
     public StopDeliveryStreamEncryptionResponse withStopDeliveryStreamEncryptionOutput(java.util.Map<String, Object> stopDeliveryStreamEncryptionOutput) {
         this.stopDeliveryStreamEncryptionOutput = stopDeliveryStreamEncryptionOutput;
         return this;
     }
     
+    public StopDeliveryStreamEncryptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

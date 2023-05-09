@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TravelimpactmodelFlightsComputeFlightEmissionsResponse {
@@ -12,6 +13,7 @@ public class TravelimpactmodelFlightsComputeFlightEmissionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ComputeFlightEmissionsResponse computeFlightEmissionsResponse;
+
     public TravelimpactmodelFlightsComputeFlightEmissionsResponse withComputeFlightEmissionsResponse(org.openapis.openapi.models.shared.ComputeFlightEmissionsResponse computeFlightEmissionsResponse) {
         this.computeFlightEmissionsResponse = computeFlightEmissionsResponse;
         return this;
@@ -19,6 +21,7 @@ public class TravelimpactmodelFlightsComputeFlightEmissionsResponse {
     
     
     public String contentType;
+
     public TravelimpactmodelFlightsComputeFlightEmissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class TravelimpactmodelFlightsComputeFlightEmissionsResponse {
     
     
     public Integer statusCode;
+
     public TravelimpactmodelFlightsComputeFlightEmissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TravelimpactmodelFlightsComputeFlightEmissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TravelimpactmodelFlightsComputeFlightEmissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TravelimpactmodelFlightsComputeFlightEmissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

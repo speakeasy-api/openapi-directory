@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateLocalSettingsRequest {
@@ -12,6 +13,7 @@ public class UpdateLocalSettingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO;
+
     public UpdateLocalSettingsRequest withLocalSettingsDTO(org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO) {
         this.localSettingsDTO = localSettingsDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdateLocalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=viewId")
     public Long viewId;
+
     public UpdateLocalSettingsRequest withViewId(Long viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public UpdateLocalSettingsRequest(@JsonProperty("LocalSettingsDTO") org.openapis.openapi.models.shared.LocalSettingsDTO localSettingsDTO, @JsonProperty("viewId") Long viewId) {
+        this.localSettingsDTO = localSettingsDTO;
+        this.viewId = viewId;
+  }
 }

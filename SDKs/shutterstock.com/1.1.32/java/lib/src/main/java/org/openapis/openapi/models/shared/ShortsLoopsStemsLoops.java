@@ -12,9 +12,11 @@ public class ShortsLoopsStemsLoops {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ShortsLoopsStemsLoops withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ShortsLoopsStemsLoops(){}
 }

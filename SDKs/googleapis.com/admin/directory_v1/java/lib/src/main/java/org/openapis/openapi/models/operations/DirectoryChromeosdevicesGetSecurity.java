@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryChromeosdevicesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryChromeosdevicesGetSecurityOption1 option1;
+
     public DirectoryChromeosdevicesGetSecurity withOption1(DirectoryChromeosdevicesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DirectoryChromeosdevicesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryChromeosdevicesGetSecurityOption2 option2;
+
     public DirectoryChromeosdevicesGetSecurity withOption2(DirectoryChromeosdevicesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DirectoryChromeosdevicesGetSecurity(){}
 }

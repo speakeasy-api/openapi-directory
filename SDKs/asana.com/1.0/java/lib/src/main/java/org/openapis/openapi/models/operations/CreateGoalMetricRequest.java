@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGoalMetricRequest {
@@ -12,6 +13,7 @@ public class CreateGoalMetricRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateGoalMetricRequestBodyInput requestBody;
+
     public CreateGoalMetricRequest withRequestBody(CreateGoalMetricRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreateGoalMetricRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=goal_gid")
     public String goalGid;
+
     public CreateGoalMetricRequest withGoalGid(String goalGid) {
         this.goalGid = goalGid;
         return this;
@@ -34,6 +37,7 @@ public class CreateGoalMetricRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateGoalMetricRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,14 @@ public class CreateGoalMetricRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateGoalMetricRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public CreateGoalMetricRequest(@JsonProperty("RequestBody") CreateGoalMetricRequestBodyInput requestBody, @JsonProperty("goal_gid") String goalGid) {
+        this.requestBody = requestBody;
+        this.goalGid = goalGid;
+  }
 }

@@ -51,14 +51,12 @@ public class MeterFolderInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterFolderInformationGetResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationGetResponse() {{
+        org.openapis.openapi.models.operations.MeterFolderInformationGetResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationGetResponse(contentType, httpRes.statusCode()) {{
             meterFolderInformation = null;
             meterFolderInformation = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +109,8 @@ public class MeterFolderInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse() {{
+        org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -149,10 +145,8 @@ public class MeterFolderInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse() {{
+        org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -187,10 +181,8 @@ public class MeterFolderInformation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse() {{
+        org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse res = new org.openapis.openapi.models.operations.MeterFolderInformationPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

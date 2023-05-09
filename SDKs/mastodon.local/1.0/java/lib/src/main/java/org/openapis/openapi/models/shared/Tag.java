@@ -19,6 +19,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("history")
     public History[] history;
+
     public Tag withHistory(History[] history) {
         this.history = history;
         return this;
@@ -29,6 +30,7 @@ public class Tag {
      */
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +41,14 @@ public class Tag {
      */
     @JsonProperty("url")
     public String url;
+
     public Tag withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Tag(@JsonProperty("name") String name, @JsonProperty("url") String url) {
+        this.name = name;
+        this.url = url;
+  }
 }

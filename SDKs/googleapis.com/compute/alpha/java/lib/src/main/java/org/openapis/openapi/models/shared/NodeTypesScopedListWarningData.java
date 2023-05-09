@@ -15,6 +15,7 @@ public class NodeTypesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public NodeTypesScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class NodeTypesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NodeTypesScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NodeTypesScopedListWarningData(){}
 }

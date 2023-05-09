@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryCapacity")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity[] deliveryCapacity;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withDeliveryCapacity(PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity[] deliveryCapacity) {
         this.deliveryCapacity = deliveryCapacity;
         return this;
@@ -25,6 +26,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
      */
     @JsonProperty("endTime")
     public String endTime;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
      */
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -45,9 +48,15 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSetti
      */
     @JsonProperty("startTime")
     public String startTime;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges(@JsonProperty("endTime") String endTime, @JsonProperty("listPrice") Double listPrice, @JsonProperty("startTime") String startTime) {
+        this.endTime = endTime;
+        this.listPrice = listPrice;
+        this.startTime = startTime;
+  }
 }

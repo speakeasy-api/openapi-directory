@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostMarketingV3MarketingEventsAppIdSettingsCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EventDetailSettingsUrl eventDetailSettingsUrl;
+
     public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withEventDetailSettingsUrl(org.openapis.openapi.models.shared.EventDetailSettingsUrl eventDetailSettingsUrl) {
         this.eventDetailSettingsUrl = eventDetailSettingsUrl;
         return this;
@@ -16,9 +18,14 @@ public class PostMarketingV3MarketingEventsAppIdSettingsCreateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PostMarketingV3MarketingEventsAppIdSettingsCreateRequest(@JsonProperty("EventDetailSettingsUrl") org.openapis.openapi.models.shared.EventDetailSettingsUrl eventDetailSettingsUrl, @JsonProperty("appId") Integer appId) {
+        this.eventDetailSettingsUrl = eventDetailSettingsUrl;
+        this.appId = appId;
+  }
 }

@@ -15,9 +15,11 @@ public class LabelingJobDataAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentClassifiers")
     public ContentClassifierEnum[] contentClassifiers;
+
     public LabelingJobDataAttributes withContentClassifiers(ContentClassifierEnum[] contentClassifiers) {
         this.contentClassifiers = contentClassifiers;
         return this;
     }
     
+    public LabelingJobDataAttributes(){}
 }

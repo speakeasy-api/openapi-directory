@@ -15,6 +15,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmplifyFeatureFlags")
     public String amplifyFeatureFlags;
+
     public GetBackendResponse withAmplifyFeatureFlags(String amplifyFeatureFlags) {
         this.amplifyFeatureFlags = amplifyFeatureFlags;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmplifyMetaConfig")
     public String amplifyMetaConfig;
+
     public GetBackendResponse withAmplifyMetaConfig(String amplifyMetaConfig) {
         this.amplifyMetaConfig = amplifyMetaConfig;
         return this;
@@ -31,6 +33,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public GetBackendResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -39,6 +42,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppName")
     public String appName;
+
     public GetBackendResponse withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -47,6 +51,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentList")
     public String[] backendEnvironmentList;
+
     public GetBackendResponse withBackendEnvironmentList(String[] backendEnvironmentList) {
         this.backendEnvironmentList = backendEnvironmentList;
         return this;
@@ -55,6 +60,7 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public GetBackendResponse withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -63,9 +69,11 @@ public class GetBackendResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public String error;
+
     public GetBackendResponse withError(String error) {
         this.error = error;
         return this;
     }
     
+    public GetBackendResponse(){}
 }

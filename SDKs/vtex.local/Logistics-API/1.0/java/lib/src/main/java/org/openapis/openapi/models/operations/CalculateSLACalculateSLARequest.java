@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateSLACalculateSLARequest {
     @JsonProperty("items")
     public CalculateSLACalculateSLARequestItem3[] items;
+
     public CalculateSLACalculateSLARequest withItems(CalculateSLACalculateSLARequestItem3[] items) {
         this.items = items;
         return this;
@@ -16,6 +17,7 @@ public class CalculateSLACalculateSLARequest {
     
     @JsonProperty("location")
     public CalculateSLACalculateSLARequestLocation3 location;
+
     public CalculateSLACalculateSLARequest withLocation(CalculateSLACalculateSLARequestLocation3 location) {
         this.location = location;
         return this;
@@ -23,9 +25,15 @@ public class CalculateSLACalculateSLARequest {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CalculateSLACalculateSLARequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
     }
     
+    public CalculateSLACalculateSLARequest(@JsonProperty("items") CalculateSLACalculateSLARequestItem3[] items, @JsonProperty("location") CalculateSLACalculateSLARequestLocation3 location, @JsonProperty("salesChannel") String salesChannel) {
+        this.items = items;
+        this.location = location;
+        this.salesChannel = salesChannel;
+  }
 }

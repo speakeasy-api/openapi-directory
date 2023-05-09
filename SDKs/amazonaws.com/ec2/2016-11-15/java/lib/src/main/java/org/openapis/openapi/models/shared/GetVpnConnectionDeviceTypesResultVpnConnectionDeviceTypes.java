@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes {
     
     public String platform;
+
     public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -19,6 +20,7 @@ public class GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes {
     
     
     public String software;
+
     public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes withSoftware(String software) {
         this.software = software;
         return this;
@@ -26,6 +28,7 @@ public class GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes {
     
     
     public String vendor;
+
     public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes withVendor(String vendor) {
         this.vendor = vendor;
         return this;
@@ -33,9 +36,11 @@ public class GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes {
     
     
     public String vpnConnectionDeviceTypeId;
+
     public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes withVpnConnectionDeviceTypeId(String vpnConnectionDeviceTypeId) {
         this.vpnConnectionDeviceTypeId = vpnConnectionDeviceTypeId;
         return this;
     }
     
+    public GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes(){}
 }

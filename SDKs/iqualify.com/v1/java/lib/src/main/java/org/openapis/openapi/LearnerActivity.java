@@ -51,12 +51,10 @@ public class LearnerActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsLearnersProgressResponse(contentType, httpRes.statusCode()) {{
             learnerProgressResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class LearnerActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsSocialNotesResponse(contentType, httpRes.statusCode()) {{
             socialNotesResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class LearnerActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdAnalyticsUnitReactionsResponse(contentType, httpRes.statusCode()) {{
             unitReactionsAnalyticsResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class LearnerActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailOfferingsOfferingIdProgressResponse(contentType, httpRes.statusCode()) {{
             getUsersUserEmailOfferingsOfferingIdProgress200ApplicationJSONObject = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class LearnerActivity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersUserEmailProgressResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailProgressResponse() {{
+        org.openapis.openapi.models.operations.GetUsersUserEmailProgressResponse res = new org.openapis.openapi.models.operations.GetUsersUserEmailProgressResponse(contentType, httpRes.statusCode()) {{
             learnerResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

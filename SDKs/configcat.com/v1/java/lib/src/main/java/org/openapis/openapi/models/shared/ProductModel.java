@@ -15,6 +15,7 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ProductModel withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductModel withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public ProductModel withOrder(Integer order) {
         this.order = order;
         return this;
@@ -39,6 +42,7 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public OrganizationModel organization;
+
     public ProductModel withOrganization(OrganizationModel organization) {
         this.organization = organization;
         return this;
@@ -47,6 +51,7 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public ProductModel withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -55,9 +60,11 @@ public class ProductModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public ProductModel withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public ProductModel(){}
 }

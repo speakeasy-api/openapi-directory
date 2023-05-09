@@ -18,6 +18,7 @@ public class PolicyDelegationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamPermission")
     public String iamPermission;
+
     public PolicyDelegationSettings withIamPermission(String iamPermission) {
         this.iamPermission = iamPermission;
         return this;
@@ -29,6 +30,7 @@ public class PolicyDelegationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamServiceName")
     public String iamServiceName;
+
     public PolicyDelegationSettings withIamServiceName(String iamServiceName) {
         this.iamServiceName = iamServiceName;
         return this;
@@ -40,6 +42,7 @@ public class PolicyDelegationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public PolicyName policyName;
+
     public PolicyDelegationSettings withPolicyName(PolicyName policyName) {
         this.policyName = policyName;
         return this;
@@ -48,9 +51,11 @@ public class PolicyDelegationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public Resource resource;
+
     public PolicyDelegationSettings withResource(Resource resource) {
         this.resource = resource;
         return this;
     }
     
+    public PolicyDelegationSettings(){}
 }

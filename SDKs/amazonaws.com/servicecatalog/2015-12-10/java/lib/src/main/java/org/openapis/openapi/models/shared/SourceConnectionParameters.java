@@ -15,9 +15,11 @@ public class SourceConnectionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeStar")
     public CodeStarParameters codeStar;
+
     public SourceConnectionParameters withCodeStar(CodeStarParameters codeStar) {
         this.codeStar = codeStar;
         return this;
     }
     
+    public SourceConnectionParameters(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConversionsConversionIdRequest {
@@ -12,9 +13,13 @@ public class GetConversionsConversionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=conversionId")
     public Long conversionId;
+
     public GetConversionsConversionIdRequest withConversionId(Long conversionId) {
         this.conversionId = conversionId;
         return this;
     }
     
+    public GetConversionsConversionIdRequest(@JsonProperty("conversionId") Long conversionId) {
+        this.conversionId = conversionId;
+  }
 }

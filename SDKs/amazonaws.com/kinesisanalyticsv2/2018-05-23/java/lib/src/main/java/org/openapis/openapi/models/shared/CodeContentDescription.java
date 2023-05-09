@@ -15,6 +15,7 @@ public class CodeContentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeMD5")
     public String codeMd5;
+
     public CodeContentDescription withCodeMd5(String codeMd5) {
         this.codeMd5 = codeMd5;
         return this;
@@ -23,6 +24,7 @@ public class CodeContentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public CodeContentDescription withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
@@ -31,6 +33,7 @@ public class CodeContentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3ApplicationCodeLocationDescription")
     public S3ApplicationCodeLocationDescription s3ApplicationCodeLocationDescription;
+
     public CodeContentDescription withS3ApplicationCodeLocationDescription(S3ApplicationCodeLocationDescription s3ApplicationCodeLocationDescription) {
         this.s3ApplicationCodeLocationDescription = s3ApplicationCodeLocationDescription;
         return this;
@@ -39,9 +42,11 @@ public class CodeContentDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextContent")
     public String textContent;
+
     public CodeContentDescription withTextContent(String textContent) {
         this.textContent = textContent;
         return this;
     }
     
+    public CodeContentDescription(){}
 }

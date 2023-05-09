@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAccountsAccountIdBalancesRequest {
@@ -12,6 +13,7 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public GetAccountsAccountIdBalancesRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=sandbox-id")
     public String sandboxId;
+
     public GetAccountsAccountIdBalancesRequest withSandboxId(String sandboxId) {
         this.sandboxId = sandboxId;
         return this;
@@ -32,6 +35,7 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-customer-user-agent")
     public String xCustomerUserAgent;
+
     public GetAccountsAccountIdBalancesRequest withXCustomerUserAgent(String xCustomerUserAgent) {
         this.xCustomerUserAgent = xCustomerUserAgent;
         return this;
@@ -44,6 +48,7 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-auth-date")
     public String xFapiAuthDate;
+
     public GetAccountsAccountIdBalancesRequest withXFapiAuthDate(String xFapiAuthDate) {
         this.xFapiAuthDate = xFapiAuthDate;
         return this;
@@ -54,6 +59,7 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-customer-ip-address")
     public String xFapiCustomerIpAddress;
+
     public GetAccountsAccountIdBalancesRequest withXFapiCustomerIpAddress(String xFapiCustomerIpAddress) {
         this.xFapiCustomerIpAddress = xFapiCustomerIpAddress;
         return this;
@@ -64,9 +70,14 @@ public class GetAccountsAccountIdBalancesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-fapi-interaction-id")
     public String xFapiInteractionId;
+
     public GetAccountsAccountIdBalancesRequest withXFapiInteractionId(String xFapiInteractionId) {
         this.xFapiInteractionId = xFapiInteractionId;
         return this;
     }
     
+    public GetAccountsAccountIdBalancesRequest(@JsonProperty("accountId") String accountId, @JsonProperty("sandbox-id") String sandboxId) {
+        this.accountId = accountId;
+        this.sandboxId = sandboxId;
+  }
 }

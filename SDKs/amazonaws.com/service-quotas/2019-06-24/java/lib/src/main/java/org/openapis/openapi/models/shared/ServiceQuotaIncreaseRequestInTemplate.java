@@ -15,6 +15,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegion")
     public String awsRegion;
+
     public ServiceQuotaIncreaseRequestInTemplate withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -23,6 +24,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredValue")
     public Double desiredValue;
+
     public ServiceQuotaIncreaseRequestInTemplate withDesiredValue(Double desiredValue) {
         this.desiredValue = desiredValue;
         return this;
@@ -31,6 +33,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalQuota")
     public Boolean globalQuota;
+
     public ServiceQuotaIncreaseRequestInTemplate withGlobalQuota(Boolean globalQuota) {
         this.globalQuota = globalQuota;
         return this;
@@ -39,6 +42,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuotaCode")
     public String quotaCode;
+
     public ServiceQuotaIncreaseRequestInTemplate withQuotaCode(String quotaCode) {
         this.quotaCode = quotaCode;
         return this;
@@ -47,6 +51,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuotaName")
     public String quotaName;
+
     public ServiceQuotaIncreaseRequestInTemplate withQuotaName(String quotaName) {
         this.quotaName = quotaName;
         return this;
@@ -55,6 +60,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ServiceQuotaIncreaseRequestInTemplate withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
@@ -63,6 +69,7 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public ServiceQuotaIncreaseRequestInTemplate withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -71,9 +78,11 @@ public class ServiceQuotaIncreaseRequestInTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Unit")
     public String unit;
+
     public ServiceQuotaIncreaseRequestInTemplate withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public ServiceQuotaIncreaseRequestInTemplate(){}
 }

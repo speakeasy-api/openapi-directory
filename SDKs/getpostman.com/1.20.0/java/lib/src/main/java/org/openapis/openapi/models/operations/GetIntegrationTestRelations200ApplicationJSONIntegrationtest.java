@@ -12,6 +12,7 @@ public class GetIntegrationTestRelations200ApplicationJSONIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionId")
     public String collectionId;
+
     public GetIntegrationTestRelations200ApplicationJSONIntegrationtest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -20,6 +21,7 @@ public class GetIntegrationTestRelations200ApplicationJSONIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetIntegrationTestRelations200ApplicationJSONIntegrationtest withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class GetIntegrationTestRelations200ApplicationJSONIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetIntegrationTestRelations200ApplicationJSONIntegrationtest withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class GetIntegrationTestRelations200ApplicationJSONIntegrationtest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updatedAt")
     public String updatedAt;
+
     public GetIntegrationTestRelations200ApplicationJSONIntegrationtest withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetIntegrationTestRelations200ApplicationJSONIntegrationtest(){}
 }

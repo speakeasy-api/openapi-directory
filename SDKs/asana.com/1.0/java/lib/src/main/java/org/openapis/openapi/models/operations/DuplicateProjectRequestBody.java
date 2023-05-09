@@ -15,9 +15,11 @@ public class DuplicateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectDuplicateRequest data;
+
     public DuplicateProjectRequestBody withData(org.openapis.openapi.models.shared.ProjectDuplicateRequest data) {
         this.data = data;
         return this;
     }
     
+    public DuplicateProjectRequestBody(){}
 }

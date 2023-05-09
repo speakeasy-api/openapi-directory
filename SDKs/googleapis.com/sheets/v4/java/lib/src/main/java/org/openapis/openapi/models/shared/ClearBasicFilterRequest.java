@@ -18,9 +18,11 @@ public class ClearBasicFilterRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheetId")
     public Integer sheetId;
+
     public ClearBasicFilterRequest withSheetId(Integer sheetId) {
         this.sheetId = sheetId;
         return this;
     }
     
+    public ClearBasicFilterRequest(){}
 }

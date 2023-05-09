@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryResourcesCalendarsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryResourcesCalendarsGetSecurityOption1 option1;
+
     public DirectoryResourcesCalendarsGetSecurity withOption1(DirectoryResourcesCalendarsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DirectoryResourcesCalendarsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryResourcesCalendarsGetSecurityOption2 option2;
+
     public DirectoryResourcesCalendarsGetSecurity withOption2(DirectoryResourcesCalendarsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DirectoryResourcesCalendarsGetSecurity(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBProxiesRequest {
     
     public String dbProxyName;
+
     public DescribeDBProxiesRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBProxiesRequest {
     
     
     public FilterList[] filters;
+
     public DescribeDBProxiesRequest withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBProxiesRequest {
     
     
     public String marker;
+
     public DescribeDBProxiesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,11 @@ public class DescribeDBProxiesRequest {
     
     
     public Long maxRecords;
+
     public DescribeDBProxiesRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBProxiesRequest(){}
 }

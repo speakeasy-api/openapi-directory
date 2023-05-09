@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDisableFastSnapshotRestoresRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDisableFastSnapshotRestoresActionEnum action;
+
     public GETDisableFastSnapshotRestoresRequest withAction(GETDisableFastSnapshotRestoresActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDisableFastSnapshotRestoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AvailabilityZone")
     public String[] availabilityZone;
+
     public GETDisableFastSnapshotRestoresRequest withAvailabilityZone(String[] availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -29,6 +32,7 @@ public class GETDisableFastSnapshotRestoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETDisableFastSnapshotRestoresRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETDisableFastSnapshotRestoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SourceSnapshotId")
     public String[] sourceSnapshotId;
+
     public GETDisableFastSnapshotRestoresRequest withSourceSnapshotId(String[] sourceSnapshotId) {
         this.sourceSnapshotId = sourceSnapshotId;
         return this;
@@ -46,6 +51,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDisableFastSnapshotRestoresVersionEnum version;
+
     public GETDisableFastSnapshotRestoresRequest withVersion(GETDisableFastSnapshotRestoresVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETDisableFastSnapshotRestoresRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDisableFastSnapshotRestoresRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDisableFastSnapshotRestoresRequest(@JsonProperty("Action") GETDisableFastSnapshotRestoresActionEnum action, @JsonProperty("AvailabilityZone") String[] availabilityZone, @JsonProperty("SourceSnapshotId") String[] sourceSnapshotId, @JsonProperty("Version") GETDisableFastSnapshotRestoresVersionEnum version) {
+        this.action = action;
+        this.availabilityZone = availabilityZone;
+        this.sourceSnapshotId = sourceSnapshotId;
+        this.version = version;
+  }
 }

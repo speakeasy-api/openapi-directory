@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1ListWebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3beta1ListWebhooksResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1ListWebhooksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhooks")
     public GoogleCloudDialogflowCxV3beta1Webhook[] webhooks;
+
     public GoogleCloudDialogflowCxV3beta1ListWebhooksResponse withWebhooks(GoogleCloudDialogflowCxV3beta1Webhook[] webhooks) {
         this.webhooks = webhooks;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ListWebhooksResponse(){}
 }

@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ConvertRequestBody;
 import org.openapis.openapi.models.operations.ConvertResponse;
 
@@ -30,7 +29,7 @@ public class Application {
                 hundredsForm = "مائة";
                 theNumber = "2519.50";
                 unit = " ريال سعودي";
-            }}            
+            }};            
 
             ConvertResponse res = sdk.convert(req);
 
@@ -40,15 +39,17 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `convert` - Convert the number into its Arabic text representation
+* [convert](docs/sdk/README.md#convert) - Convert the number into its Arabic text representation
 حول العدد إلى ما يقابله كتابة
 <!-- End SDK Available Operations -->
 

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserGetSanitizedPlatformDisplayNamesRequest {
@@ -12,9 +13,13 @@ public class UserGetSanitizedPlatformDisplayNamesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipId")
     public Long membershipId;
+
     public UserGetSanitizedPlatformDisplayNamesRequest withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
     }
     
+    public UserGetSanitizedPlatformDisplayNamesRequest(@JsonProperty("membershipId") Long membershipId) {
+        this.membershipId = membershipId;
+  }
 }

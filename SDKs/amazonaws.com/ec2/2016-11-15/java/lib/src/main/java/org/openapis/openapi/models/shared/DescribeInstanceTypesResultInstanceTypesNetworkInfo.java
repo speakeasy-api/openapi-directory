@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     public Long defaultNetworkCardIndex;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withDefaultNetworkCardIndex(Long defaultNetworkCardIndex) {
         this.defaultNetworkCardIndex = defaultNetworkCardIndex;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoEfaInfo efaInfo;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withEfaInfo(DescribeInstanceTypesResultInstanceTypesNetworkInfoEfaInfo efaInfo) {
         this.efaInfo = efaInfo;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Boolean efaSupported;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withEfaSupported(Boolean efaSupported) {
         this.efaSupported = efaSupported;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Boolean enaSrdSupported;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withEnaSrdSupported(Boolean enaSrdSupported) {
         this.enaSrdSupported = enaSrdSupported;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum enaSupport;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withEnaSupport(DescribeInstanceTypesResultInstanceTypesNetworkInfoEnaSupportEnum enaSupport) {
         this.enaSupport = enaSupport;
         return this;
@@ -47,6 +52,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Boolean encryptionInTransitSupported;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withEncryptionInTransitSupported(Boolean encryptionInTransitSupported) {
         this.encryptionInTransitSupported = encryptionInTransitSupported;
         return this;
@@ -54,6 +60,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Long ipv4AddressesPerInterface;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withIpv4AddressesPerInterface(Long ipv4AddressesPerInterface) {
         this.ipv4AddressesPerInterface = ipv4AddressesPerInterface;
         return this;
@@ -61,6 +68,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Long ipv6AddressesPerInterface;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withIpv6AddressesPerInterface(Long ipv6AddressesPerInterface) {
         this.ipv6AddressesPerInterface = ipv6AddressesPerInterface;
         return this;
@@ -68,6 +76,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Boolean ipv6Supported;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withIpv6Supported(Boolean ipv6Supported) {
         this.ipv6Supported = ipv6Supported;
         return this;
@@ -75,6 +84,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Long maximumNetworkCards;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withMaximumNetworkCards(Long maximumNetworkCards) {
         this.maximumNetworkCards = maximumNetworkCards;
         return this;
@@ -82,6 +92,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public Long maximumNetworkInterfaces;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withMaximumNetworkInterfaces(Long maximumNetworkInterfaces) {
         this.maximumNetworkInterfaces = maximumNetworkInterfaces;
         return this;
@@ -89,6 +100,7 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards[] networkCards;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withNetworkCards(DescribeInstanceTypesResultInstanceTypesNetworkInfoNetworkCards[] networkCards) {
         this.networkCards = networkCards;
         return this;
@@ -96,9 +108,11 @@ public class DescribeInstanceTypesResultInstanceTypesNetworkInfo {
     
     
     public String networkPerformance;
+
     public DescribeInstanceTypesResultInstanceTypesNetworkInfo withNetworkPerformance(String networkPerformance) {
         this.networkPerformance = networkPerformance;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesNetworkInfo(){}
 }

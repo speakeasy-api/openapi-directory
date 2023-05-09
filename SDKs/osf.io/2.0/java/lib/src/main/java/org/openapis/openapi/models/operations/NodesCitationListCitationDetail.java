@@ -15,6 +15,7 @@ public class NodesCitationListCitationDetail {
      */
     
     public NodesCitationListCitationDetailAttributes attributes;
+
     public NodesCitationListCitationDetail withAttributes(NodesCitationListCitationDetailAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class NodesCitationListCitationDetail {
      */
     
     public String id;
+
     public NodesCitationListCitationDetail withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class NodesCitationListCitationDetail {
      */
     
     public NodesCitationListCitationDetailLinks links;
+
     public NodesCitationListCitationDetail withLinks(NodesCitationListCitationDetailLinks links) {
         this.links = links;
         return this;
@@ -45,9 +48,11 @@ public class NodesCitationListCitationDetail {
      */
     
     public String type;
+
     public NodesCitationListCitationDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public NodesCitationListCitationDetail(){}
 }

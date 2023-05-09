@@ -15,9 +15,11 @@ public class CreateForecastExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastExportJobArn")
     public String forecastExportJobArn;
+
     public CreateForecastExportJobResponse withForecastExportJobArn(String forecastExportJobArn) {
         this.forecastExportJobArn = forecastExportJobArn;
         return this;
     }
     
+    public CreateForecastExportJobResponse(){}
 }

@@ -12,6 +12,7 @@ public class ListAgreementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAgreementsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAgreementsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAgreementsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListAgreementsRequest {
     
     @JsonProperty("ServerId")
     public String serverId;
+
     public ListAgreementsRequest withServerId(String serverId) {
         this.serverId = serverId;
         return this;
     }
     
+    public ListAgreementsRequest(@JsonProperty("ServerId") String serverId) {
+        this.serverId = serverId;
+  }
 }

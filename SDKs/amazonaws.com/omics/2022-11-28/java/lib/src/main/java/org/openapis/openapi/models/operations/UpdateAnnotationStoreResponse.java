@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAnnotationStoreResponse {
@@ -12,6 +13,7 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAnnotationStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAnnotationStoreResponse {
     
     
     public String contentType;
+
     public UpdateAnnotationStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAnnotationStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAnnotationStoreResponse {
     
     
     public Integer statusCode;
+
     public UpdateAnnotationStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAnnotationStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAnnotationStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAnnotationStoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAnnotationStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAnnotationStoreResponse updateAnnotationStoreResponse;
+
     public UpdateAnnotationStoreResponse withUpdateAnnotationStoreResponse(org.openapis.openapi.models.shared.UpdateAnnotationStoreResponse updateAnnotationStoreResponse) {
         this.updateAnnotationStoreResponse = updateAnnotationStoreResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAnnotationStoreResponse {
      */
     
     public Object validationException;
+
     public UpdateAnnotationStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAnnotationStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

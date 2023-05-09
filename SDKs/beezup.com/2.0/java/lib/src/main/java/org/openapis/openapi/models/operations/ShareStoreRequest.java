@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShareStoreRequest {
@@ -12,6 +13,7 @@ public class ShareStoreRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public ShareStoreRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class ShareStoreRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public ShareStoreRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ShareStoreRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("storeId") String storeId) {
+        this.requestBody = requestBody;
+        this.storeId = storeId;
+  }
 }

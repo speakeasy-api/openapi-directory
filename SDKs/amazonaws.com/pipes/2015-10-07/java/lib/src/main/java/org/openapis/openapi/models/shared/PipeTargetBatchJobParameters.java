@@ -15,6 +15,7 @@ public class PipeTargetBatchJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArrayProperties")
     public BatchArrayProperties arrayProperties;
+
     public PipeTargetBatchJobParameters withArrayProperties(BatchArrayProperties arrayProperties) {
         this.arrayProperties = arrayProperties;
         return this;
@@ -23,6 +24,7 @@ public class PipeTargetBatchJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerOverrides")
     public BatchContainerOverrides containerOverrides;
+
     public PipeTargetBatchJobParameters withContainerOverrides(BatchContainerOverrides containerOverrides) {
         this.containerOverrides = containerOverrides;
         return this;
@@ -31,6 +33,7 @@ public class PipeTargetBatchJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DependsOn")
     public BatchJobDependency[] dependsOn;
+
     public PipeTargetBatchJobParameters withDependsOn(BatchJobDependency[] dependsOn) {
         this.dependsOn = dependsOn;
         return this;
@@ -38,6 +41,7 @@ public class PipeTargetBatchJobParameters {
     
     @JsonProperty("JobDefinition")
     public String jobDefinition;
+
     public PipeTargetBatchJobParameters withJobDefinition(String jobDefinition) {
         this.jobDefinition = jobDefinition;
         return this;
@@ -45,6 +49,7 @@ public class PipeTargetBatchJobParameters {
     
     @JsonProperty("JobName")
     public String jobName;
+
     public PipeTargetBatchJobParameters withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -53,6 +58,7 @@ public class PipeTargetBatchJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public java.util.Map<String, String> parameters;
+
     public PipeTargetBatchJobParameters withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -61,9 +67,14 @@ public class PipeTargetBatchJobParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryStrategy")
     public BatchRetryStrategy retryStrategy;
+
     public PipeTargetBatchJobParameters withRetryStrategy(BatchRetryStrategy retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
     }
     
+    public PipeTargetBatchJobParameters(@JsonProperty("JobDefinition") String jobDefinition, @JsonProperty("JobName") String jobName) {
+        this.jobDefinition = jobDefinition;
+        this.jobName = jobName;
+  }
 }

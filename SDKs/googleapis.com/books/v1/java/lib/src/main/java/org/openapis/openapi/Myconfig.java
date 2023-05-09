@@ -59,11 +59,9 @@ public class Myconfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse res = new org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse() {{
+        org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse res = new org.openapis.openapi.models.operations.BooksMyconfigGetUserSettingsResponse(contentType, httpRes.statusCode()) {{
             usersettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Myconfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse res = new org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse() {{
+        org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse res = new org.openapis.openapi.models.operations.BooksMyconfigReleaseDownloadAccessResponse(contentType, httpRes.statusCode()) {{
             downloadAccesses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Myconfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse res = new org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse() {{
+        org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse res = new org.openapis.openapi.models.operations.BooksMyconfigRequestAccessResponse(contentType, httpRes.statusCode()) {{
             requestAccessData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Myconfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse res = new org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse() {{
+        org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse res = new org.openapis.openapi.models.operations.BooksMyconfigSyncVolumeLicensesResponse(contentType, httpRes.statusCode()) {{
             volumes = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Myconfig {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse res = new org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse() {{
+        org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse res = new org.openapis.openapi.models.operations.BooksMyconfigUpdateUserSettingsResponse(contentType, httpRes.statusCode()) {{
             usersettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateShardCountResponse {
@@ -12,6 +13,7 @@ public class UpdateShardCountResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateShardCountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateShardCountResponse {
     
     
     public String contentType;
+
     public UpdateShardCountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateShardCountResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateShardCountResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateShardCountResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateShardCountResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateShardCountResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateShardCountResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateShardCountResponse {
     
     
     public Integer statusCode;
+
     public UpdateShardCountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateShardCountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateShardCountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateShardCountResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateShardCountResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateShardCountResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateShardCountOutput updateShardCountOutput;
+
     public UpdateShardCountResponse withUpdateShardCountOutput(org.openapis.openapi.models.shared.UpdateShardCountOutput updateShardCountOutput) {
         this.updateShardCountOutput = updateShardCountOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateShardCountResponse {
      */
     
     public Object validationException;
+
     public UpdateShardCountResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateShardCountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

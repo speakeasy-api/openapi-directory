@@ -12,9 +12,11 @@ public class FetchOperationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceOwnerId")
     public String resourceOwnerId;
+
     public FetchOperationsRequest withResourceOwnerId(String resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     
+    public FetchOperationsRequest(){}
 }

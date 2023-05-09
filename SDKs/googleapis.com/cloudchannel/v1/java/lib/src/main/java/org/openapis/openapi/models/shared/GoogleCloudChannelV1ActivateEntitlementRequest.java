@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1ActivateEntitlementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleCloudChannelV1ActivateEntitlementRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public GoogleCloudChannelV1ActivateEntitlementRequest(){}
 }

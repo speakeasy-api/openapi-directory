@@ -20,6 +20,7 @@ public class SubscriptionCancelSurveyResult {
      */
     
     public Integer cancelSurveyReason;
+
     public SubscriptionCancelSurveyResult withCancelSurveyReason(Integer cancelSurveyReason) {
         this.cancelSurveyReason = cancelSurveyReason;
         return this;
@@ -30,9 +31,11 @@ public class SubscriptionCancelSurveyResult {
      */
     
     public String userInputCancelReason;
+
     public SubscriptionCancelSurveyResult withUserInputCancelReason(String userInputCancelReason) {
         this.userInputCancelReason = userInputCancelReason;
         return this;
     }
     
+    public SubscriptionCancelSurveyResult(){}
 }

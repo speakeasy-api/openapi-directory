@@ -15,9 +15,11 @@ public class BatchUpdateFindingsRequestBodyWorkflow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public org.openapis.openapi.models.shared.WorkflowStatusEnum status;
+
     public BatchUpdateFindingsRequestBodyWorkflow withStatus(org.openapis.openapi.models.shared.WorkflowStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchUpdateFindingsRequestBodyWorkflow(){}
 }

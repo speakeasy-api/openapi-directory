@@ -15,9 +15,11 @@ public class CacheHitResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePipelineExecutionArn")
     public String sourcePipelineExecutionArn;
+
     public CacheHitResult withSourcePipelineExecutionArn(String sourcePipelineExecutionArn) {
         this.sourcePipelineExecutionArn = sourcePipelineExecutionArn;
         return this;
     }
     
+    public CacheHitResult(){}
 }

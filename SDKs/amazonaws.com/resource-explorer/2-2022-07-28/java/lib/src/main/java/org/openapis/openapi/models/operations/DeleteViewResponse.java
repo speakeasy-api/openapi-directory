@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteViewResponse {
@@ -12,6 +13,7 @@ public class DeleteViewResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteViewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteViewResponse {
     
     
     public String contentType;
+
     public DeleteViewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteViewResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteViewOutput deleteViewOutput;
+
     public DeleteViewResponse withDeleteViewOutput(org.openapis.openapi.models.shared.DeleteViewOutput deleteViewOutput) {
         this.deleteViewOutput = deleteViewOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteViewResponse {
      */
     
     public Object internalServerException;
+
     public DeleteViewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteViewResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteViewResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteViewResponse {
     
     
     public Integer statusCode;
+
     public DeleteViewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteViewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteViewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteViewResponse {
      */
     
     public Object throttlingException;
+
     public DeleteViewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteViewResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteViewResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteViewResponse {
      */
     
     public Object validationException;
+
     public DeleteViewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteViewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

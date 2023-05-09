@@ -18,6 +18,7 @@ public class ListDockerImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockerImages")
     public DockerImage[] dockerImages;
+
     public ListDockerImagesResponse withDockerImages(DockerImage[] dockerImages) {
         this.dockerImages = dockerImages;
         return this;
@@ -29,9 +30,11 @@ public class ListDockerImagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDockerImagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDockerImagesResponse(){}
 }

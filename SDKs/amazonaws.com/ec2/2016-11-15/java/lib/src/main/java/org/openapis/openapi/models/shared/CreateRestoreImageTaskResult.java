@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateRestoreImageTaskResult {
     
     public String imageId;
+
     public CreateRestoreImageTaskResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CreateRestoreImageTaskResult(){}
 }

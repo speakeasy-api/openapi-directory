@@ -18,6 +18,7 @@ public class CheckCompatibilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionCompatibilities")
     public DimensionCompatibility[] dimensionCompatibilities;
+
     public CheckCompatibilityResponse withDimensionCompatibilities(DimensionCompatibility[] dimensionCompatibilities) {
         this.dimensionCompatibilities = dimensionCompatibilities;
         return this;
@@ -29,9 +30,11 @@ public class CheckCompatibilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricCompatibilities")
     public MetricCompatibility[] metricCompatibilities;
+
     public CheckCompatibilityResponse withMetricCompatibilities(MetricCompatibility[] metricCompatibilities) {
         this.metricCompatibilities = metricCompatibilities;
         return this;
     }
     
+    public CheckCompatibilityResponse(){}
 }

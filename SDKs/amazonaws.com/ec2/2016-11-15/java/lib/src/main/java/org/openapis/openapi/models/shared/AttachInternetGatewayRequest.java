@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachInternetGatewayRequest {
     
     public Boolean dryRun;
+
     public AttachInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class AttachInternetGatewayRequest {
     
     
     public String internetGatewayId;
+
     public AttachInternetGatewayRequest withInternetGatewayId(String internetGatewayId) {
         this.internetGatewayId = internetGatewayId;
         return this;
@@ -23,9 +25,14 @@ public class AttachInternetGatewayRequest {
     
     
     public String vpcId;
+
     public AttachInternetGatewayRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AttachInternetGatewayRequest(@JsonProperty("InternetGatewayId") String internetGatewayId, @JsonProperty("VpcId") String vpcId) {
+        this.internetGatewayId = internetGatewayId;
+        this.vpcId = vpcId;
+  }
 }

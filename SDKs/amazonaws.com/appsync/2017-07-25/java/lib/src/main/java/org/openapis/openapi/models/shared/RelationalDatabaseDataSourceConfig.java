@@ -15,6 +15,7 @@ public class RelationalDatabaseDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rdsHttpEndpointConfig")
     public RdsHttpEndpointConfig rdsHttpEndpointConfig;
+
     public RelationalDatabaseDataSourceConfig withRdsHttpEndpointConfig(RdsHttpEndpointConfig rdsHttpEndpointConfig) {
         this.rdsHttpEndpointConfig = rdsHttpEndpointConfig;
         return this;
@@ -23,9 +24,11 @@ public class RelationalDatabaseDataSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationalDatabaseSourceType")
     public RelationalDatabaseSourceTypeEnum relationalDatabaseSourceType;
+
     public RelationalDatabaseDataSourceConfig withRelationalDatabaseSourceType(RelationalDatabaseSourceTypeEnum relationalDatabaseSourceType) {
         this.relationalDatabaseSourceType = relationalDatabaseSourceType;
         return this;
     }
     
+    public RelationalDatabaseDataSourceConfig(){}
 }

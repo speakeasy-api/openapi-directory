@@ -18,6 +18,7 @@ public class ApiOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodSelectors")
     public MethodSelector[] methodSelectors;
+
     public ApiOperation withMethodSelectors(MethodSelector[] methodSelectors) {
         this.methodSelectors = methodSelectors;
         return this;
@@ -29,9 +30,11 @@ public class ApiOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ApiOperation withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ApiOperation(){}
 }

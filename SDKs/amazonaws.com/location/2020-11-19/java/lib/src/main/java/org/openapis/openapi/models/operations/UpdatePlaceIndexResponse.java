@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePlaceIndexResponse {
@@ -12,6 +13,7 @@ public class UpdatePlaceIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePlaceIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdatePlaceIndexResponse {
     
     
     public String contentType;
+
     public UpdatePlaceIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePlaceIndexResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePlaceIndexResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePlaceIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePlaceIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdatePlaceIndexResponse {
     
     
     public Integer statusCode;
+
     public UpdatePlaceIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdatePlaceIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePlaceIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePlaceIndexResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePlaceIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePlaceIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePlaceIndexResponse updatePlaceIndexResponse;
+
     public UpdatePlaceIndexResponse withUpdatePlaceIndexResponse(org.openapis.openapi.models.shared.UpdatePlaceIndexResponse updatePlaceIndexResponse) {
         this.updatePlaceIndexResponse = updatePlaceIndexResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdatePlaceIndexResponse {
      */
     
     public Object validationException;
+
     public UpdatePlaceIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePlaceIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

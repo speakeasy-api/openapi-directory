@@ -18,6 +18,7 @@ public class PlayerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionId")
     public String definitionId;
+
     public PlayerEvent withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,6 +30,7 @@ public class PlayerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedNumEvents")
     public String formattedNumEvents;
+
     public PlayerEvent withFormattedNumEvents(String formattedNumEvents) {
         this.formattedNumEvents = formattedNumEvents;
         return this;
@@ -40,6 +42,7 @@ public class PlayerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerEvent withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class PlayerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numEvents")
     public String numEvents;
+
     public PlayerEvent withNumEvents(String numEvents) {
         this.numEvents = numEvents;
         return this;
@@ -62,9 +66,11 @@ public class PlayerEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playerId")
     public String playerId;
+
     public PlayerEvent withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
     }
     
+    public PlayerEvent(){}
 }

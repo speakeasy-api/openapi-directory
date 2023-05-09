@@ -15,6 +15,7 @@ public class CreateDeviceCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_code")
     public DeviceCode deviceCode;
+
     public CreateDeviceCodeResponse withDeviceCode(DeviceCode deviceCode) {
         this.deviceCode = deviceCode;
         return this;
@@ -26,9 +27,11 @@ public class CreateDeviceCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public CreateDeviceCodeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public CreateDeviceCodeResponse(){}
 }

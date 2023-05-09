@@ -15,6 +15,7 @@ public class EditReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public EditReviewRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -25,6 +26,7 @@ public class EditReviewRequestBody {
      */
     @JsonProperty("productId")
     public String productId;
+
     public EditReviewRequestBody withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -35,6 +37,7 @@ public class EditReviewRequestBody {
      */
     @JsonProperty("rating")
     public Double rating;
+
     public EditReviewRequestBody withRating(Double rating) {
         this.rating = rating;
         return this;
@@ -45,6 +48,7 @@ public class EditReviewRequestBody {
      */
     @JsonProperty("reviewerName")
     public String reviewerName;
+
     public EditReviewRequestBody withReviewerName(String reviewerName) {
         this.reviewerName = reviewerName;
         return this;
@@ -56,6 +60,7 @@ public class EditReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperId")
     public String shopperId;
+
     public EditReviewRequestBody withShopperId(String shopperId) {
         this.shopperId = shopperId;
         return this;
@@ -66,6 +71,7 @@ public class EditReviewRequestBody {
      */
     @JsonProperty("text")
     public String text;
+
     public EditReviewRequestBody withText(String text) {
         this.text = text;
         return this;
@@ -76,6 +82,7 @@ public class EditReviewRequestBody {
      */
     @JsonProperty("title")
     public String title;
+
     public EditReviewRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -87,9 +94,17 @@ public class EditReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verifiedPurchaser")
     public Boolean verifiedPurchaser;
+
     public EditReviewRequestBody withVerifiedPurchaser(Boolean verifiedPurchaser) {
         this.verifiedPurchaser = verifiedPurchaser;
         return this;
     }
     
+    public EditReviewRequestBody(@JsonProperty("productId") String productId, @JsonProperty("rating") Double rating, @JsonProperty("reviewerName") String reviewerName, @JsonProperty("text") String text, @JsonProperty("title") String title) {
+        this.productId = productId;
+        this.rating = rating;
+        this.reviewerName = reviewerName;
+        this.text = text;
+        this.title = title;
+  }
 }

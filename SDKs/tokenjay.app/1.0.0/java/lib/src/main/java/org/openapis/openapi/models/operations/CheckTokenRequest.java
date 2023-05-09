@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CheckTokenRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenId")
     public String tokenId;
+
     public CheckTokenRequest withTokenId(String tokenId) {
         this.tokenId = tokenId;
         return this;
@@ -16,9 +18,14 @@ public class CheckTokenRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokenName")
     public String tokenName;
+
     public CheckTokenRequest withTokenName(String tokenName) {
         this.tokenName = tokenName;
         return this;
     }
     
+    public CheckTokenRequest(@JsonProperty("tokenId") String tokenId, @JsonProperty("tokenName") String tokenName) {
+        this.tokenId = tokenId;
+        this.tokenName = tokenName;
+  }
 }

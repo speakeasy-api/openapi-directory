@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebmastersSitemapsGetResponse {
     
     public String contentType;
+
     public WebmastersSitemapsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WebmastersSitemapsGetResponse {
     
     
     public Integer statusCode;
+
     public WebmastersSitemapsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WebmastersSitemapsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebmastersSitemapsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class WebmastersSitemapsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.WmxSitemap wmxSitemap;
+
     public WebmastersSitemapsGetResponse withWmxSitemap(org.openapis.openapi.models.shared.WmxSitemap wmxSitemap) {
         this.wmxSitemap = wmxSitemap;
         return this;
     }
     
+    public WebmastersSitemapsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

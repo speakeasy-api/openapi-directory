@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociateResolverEndpointIpAddressRequest {
     @JsonProperty("IpAddress")
     public IpAddressUpdate ipAddress;
+
     public AssociateResolverEndpointIpAddressRequest withIpAddress(IpAddressUpdate ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -16,9 +17,14 @@ public class AssociateResolverEndpointIpAddressRequest {
     
     @JsonProperty("ResolverEndpointId")
     public String resolverEndpointId;
+
     public AssociateResolverEndpointIpAddressRequest withResolverEndpointId(String resolverEndpointId) {
         this.resolverEndpointId = resolverEndpointId;
         return this;
     }
     
+    public AssociateResolverEndpointIpAddressRequest(@JsonProperty("IpAddress") IpAddressUpdate ipAddress, @JsonProperty("ResolverEndpointId") String resolverEndpointId) {
+        this.ipAddress = ipAddress;
+        this.resolverEndpointId = resolverEndpointId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalOrdersRequest {
@@ -12,6 +13,7 @@ public class GetCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdTerminalOrdersRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customerOrderReference")
     public String customerOrderReference;
+
     public GetCompaniesCompanyIdTerminalOrdersRequest withCustomerOrderReference(String customerOrderReference) {
         this.customerOrderReference = customerOrderReference;
         return this;
@@ -32,6 +35,7 @@ public class GetCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetCompaniesCompanyIdTerminalOrdersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +46,7 @@ public class GetCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetCompaniesCompanyIdTerminalOrdersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,9 +57,13 @@ public class GetCompaniesCompanyIdTerminalOrdersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public String status;
+
     public GetCompaniesCompanyIdTerminalOrdersRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GetCompaniesCompanyIdTerminalOrdersRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV1EmailDisposableRequest {
@@ -12,6 +13,7 @@ public class GetV1EmailDisposableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetV1EmailDisposableRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +24,7 @@ public class GetV1EmailDisposableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetV1EmailDisposableFormatEnum format;
+
     public GetV1EmailDisposableRequest withFormat(GetV1EmailDisposableFormatEnum format) {
         this.format = format;
         return this;
@@ -32,9 +35,14 @@ public class GetV1EmailDisposableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public GetV1EmailDisposableRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public GetV1EmailDisposableRequest(@JsonProperty("email") String email, @JsonProperty("key") String key) {
+        this.email = email;
+        this.key = key;
+  }
 }

@@ -18,6 +18,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public NetworkEdgeSecurityService withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NetworkEdgeSecurityService withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public NetworkEdgeSecurityService withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkEdgeSecurityService withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public NetworkEdgeSecurityService withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkEdgeSecurityService withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public NetworkEdgeSecurityService withRegion(String region) {
         this.region = region;
         return this;
@@ -95,6 +102,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public String securityPolicy;
+
     public NetworkEdgeSecurityService withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
@@ -106,6 +114,7 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public NetworkEdgeSecurityService withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -117,9 +126,11 @@ public class NetworkEdgeSecurityService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public NetworkEdgeSecurityService withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
     }
     
+    public NetworkEdgeSecurityService(){}
 }

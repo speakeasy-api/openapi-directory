@@ -18,6 +18,7 @@ public class StageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StageSource withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class StageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalTransformOrCollection")
     public String originalTransformOrCollection;
+
     public StageSource withOriginalTransformOrCollection(String originalTransformOrCollection) {
         this.originalTransformOrCollection = originalTransformOrCollection;
         return this;
@@ -40,6 +42,7 @@ public class StageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public String sizeBytes;
+
     public StageSource withSizeBytes(String sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -51,9 +54,11 @@ public class StageSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public StageSource withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public StageSource(){}
 }

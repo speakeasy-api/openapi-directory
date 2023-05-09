@@ -17,6 +17,7 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public EstimatePO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -25,6 +26,7 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EstimatePO withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +35,7 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_items")
     public EstimateItemPO[] estimateItems;
+
     public EstimatePO withEstimateItems(EstimateItemPO[] estimateItems) {
         this.estimateItems = estimateItems;
         return this;
@@ -41,6 +44,7 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_title")
     public String estimateTitle;
+
     public EstimatePO withEstimateTitle(String estimateTitle) {
         this.estimateTitle = estimateTitle;
         return this;
@@ -50,6 +54,7 @@ public class EstimatePO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("expiration_date")
     public LocalDate expirationDate;
+
     public EstimatePO withExpirationDate(LocalDate expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -58,6 +63,7 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner_reference")
     public String ownerReference;
+
     public EstimatePO withOwnerReference(String ownerReference) {
         this.ownerReference = ownerReference;
         return this;
@@ -66,9 +72,11 @@ public class EstimatePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_id")
     public Long rfeId;
+
     public EstimatePO withRfeId(Long rfeId) {
         this.rfeId = rfeId;
         return this;
     }
     
+    public EstimatePO(){}
 }

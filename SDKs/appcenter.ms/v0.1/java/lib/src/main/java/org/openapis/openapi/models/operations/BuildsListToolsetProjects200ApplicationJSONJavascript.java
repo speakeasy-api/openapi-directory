@@ -15,6 +15,7 @@ public class BuildsListToolsetProjects200ApplicationJSONJavascript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("javascriptSolutions")
     public BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolutions[] javascriptSolutions;
+
     public BuildsListToolsetProjects200ApplicationJSONJavascript withJavascriptSolutions(BuildsListToolsetProjects200ApplicationJSONJavascriptJavascriptSolutions[] javascriptSolutions) {
         this.javascriptSolutions = javascriptSolutions;
         return this;
@@ -25,9 +26,13 @@ public class BuildsListToolsetProjects200ApplicationJSONJavascript {
      */
     @JsonProperty("packageJsonPaths")
     public String[] packageJsonPaths;
+
     public BuildsListToolsetProjects200ApplicationJSONJavascript withPackageJsonPaths(String[] packageJsonPaths) {
         this.packageJsonPaths = packageJsonPaths;
         return this;
     }
     
+    public BuildsListToolsetProjects200ApplicationJSONJavascript(@JsonProperty("packageJsonPaths") String[] packageJsonPaths) {
+        this.packageJsonPaths = packageJsonPaths;
+  }
 }

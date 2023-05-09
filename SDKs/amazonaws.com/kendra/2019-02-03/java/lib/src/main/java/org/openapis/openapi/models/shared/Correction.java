@@ -15,6 +15,7 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public Correction withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CorrectedTerm")
     public String correctedTerm;
+
     public Correction withCorrectedTerm(String correctedTerm) {
         this.correctedTerm = correctedTerm;
         return this;
@@ -31,6 +33,7 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public Correction withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -39,9 +42,11 @@ public class Correction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Term")
     public String term;
+
     public Correction withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public Correction(){}
 }

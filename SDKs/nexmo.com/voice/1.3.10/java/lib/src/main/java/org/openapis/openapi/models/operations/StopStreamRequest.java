@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StopStreamRequest {
@@ -12,9 +13,13 @@ public class StopStreamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
     public String uuid;
+
     public StopStreamRequest withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public StopStreamRequest(@JsonProperty("uuid") String uuid) {
+        this.uuid = uuid;
+  }
 }

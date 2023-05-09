@@ -15,6 +15,7 @@ public class ACLPendingChanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNamesToAdd")
     public String[] userNamesToAdd;
+
     public ACLPendingChanges withUserNamesToAdd(String[] userNamesToAdd) {
         this.userNamesToAdd = userNamesToAdd;
         return this;
@@ -23,9 +24,11 @@ public class ACLPendingChanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserNamesToRemove")
     public String[] userNamesToRemove;
+
     public ACLPendingChanges withUserNamesToRemove(String[] userNamesToRemove) {
         this.userNamesToRemove = userNamesToRemove;
         return this;
     }
     
+    public ACLPendingChanges(){}
 }

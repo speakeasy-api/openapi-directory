@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse {
     
     public String contentType;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -26,6 +29,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse {
     
     
     public Integer statusCode;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

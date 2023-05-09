@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     public String contentType;
+
     public GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     
     public Integer statusCode;
+
     public GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse {
      */
     
     public GetBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSON getBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject;
+
     public GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse withGetBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject(GetBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSON getBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject) {
         this.getBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject = getBanksIdConnectorSourcesIdConnectorSourceFields200ApplicationJSONObject;
         return this;
     }
     
+    public GetBanksIdConnectorSourcesIdConnectorSourceFieldsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListChildrenRequest {
     @JsonProperty("ChildType")
     public ChildTypeEnum childType;
+
     public ListChildrenRequest withChildType(ChildTypeEnum childType) {
         this.childType = childType;
         return this;
@@ -19,6 +20,7 @@ public class ListChildrenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListChildrenRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class ListChildrenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListChildrenRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -34,9 +37,14 @@ public class ListChildrenRequest {
     
     @JsonProperty("ParentId")
     public String parentId;
+
     public ListChildrenRequest withParentId(String parentId) {
         this.parentId = parentId;
         return this;
     }
     
+    public ListChildrenRequest(@JsonProperty("ChildType") ChildTypeEnum childType, @JsonProperty("ParentId") String parentId) {
+        this.childType = childType;
+        this.parentId = parentId;
+  }
 }

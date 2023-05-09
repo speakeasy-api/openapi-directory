@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * MetricDataQuery - &lt;p&gt;This structure is used in both &lt;code&gt;GetMetricData&lt;/code&gt; and &lt;code&gt;PutMetricAlarm&lt;/code&gt;. The supported use of this structure is different for those two operations.&lt;/p&gt; &lt;p&gt;When used in &lt;code&gt;GetMetricData&lt;/code&gt;, it indicates the metric data to return, and whether this call is just retrieving a batch set of data for one metric, or is performing a Metrics Insights query or a math expression. A single &lt;code&gt;GetMetricData&lt;/code&gt; call can include up to 500 &lt;code&gt;MetricDataQuery&lt;/code&gt; structures.&lt;/p&gt; &lt;p&gt;When used in &lt;code&gt;PutMetricAlarm&lt;/code&gt;, it enables you to create an alarm based on a metric math expression. Each &lt;code&gt;MetricDataQuery&lt;/code&gt; in the array specifies either a metric to retrieve, or a math expression to be performed on retrieved metrics. A single &lt;code&gt;PutMetricAlarm&lt;/code&gt; call can include up to 20 &lt;code&gt;MetricDataQuery&lt;/code&gt; structures in the array. The 20 structures can include as many as 10 structures that contain a &lt;code&gt;MetricStat&lt;/code&gt; parameter to retrieve a metric, and as many as 10 structures that contain the &lt;code&gt;Expression&lt;/code&gt; parameter to perform a math expression. Of those &lt;code&gt;Expression&lt;/code&gt; structures, one must have &lt;code&gt;true&lt;/code&gt; as the value for &lt;code&gt;ReturnData&lt;/code&gt;. The result of this expression is the value the alarm watches.&lt;/p&gt; &lt;p&gt;Any expression used in a &lt;code&gt;PutMetricAlarm&lt;/code&gt; operation must return a single time series. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax"&gt;Metric Math Syntax and Functions&lt;/a&gt; in the &lt;i&gt;Amazon CloudWatch User Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Some of the parameters of this structure also have different uses whether you are using this structure in a &lt;code&gt;GetMetricData&lt;/code&gt; operation or a &lt;code&gt;PutMetricAlarm&lt;/code&gt; operation. These differences are explained in the following parameter list.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class MetricDataQuery {
     
     public String accountId;
+
     public MetricDataQuery withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class MetricDataQuery {
     
     
     public String expression;
+
     public MetricDataQuery withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -26,6 +28,7 @@ public class MetricDataQuery {
     
     
     public String id;
+
     public MetricDataQuery withId(String id) {
         this.id = id;
         return this;
@@ -33,6 +36,7 @@ public class MetricDataQuery {
     
     
     public String label;
+
     public MetricDataQuery withLabel(String label) {
         this.label = label;
         return this;
@@ -40,6 +44,7 @@ public class MetricDataQuery {
     
     
     public MetricStat metricStat;
+
     public MetricDataQuery withMetricStat(MetricStat metricStat) {
         this.metricStat = metricStat;
         return this;
@@ -47,6 +52,7 @@ public class MetricDataQuery {
     
     
     public Long period;
+
     public MetricDataQuery withPeriod(Long period) {
         this.period = period;
         return this;
@@ -54,9 +60,13 @@ public class MetricDataQuery {
     
     
     public Boolean returnData;
+
     public MetricDataQuery withReturnData(Boolean returnData) {
         this.returnData = returnData;
         return this;
     }
     
+    public MetricDataQuery(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

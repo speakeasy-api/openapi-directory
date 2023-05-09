@@ -15,6 +15,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionArn")
     public String functionArn;
+
     public Function withFunctionArn(String functionArn) {
         this.functionArn = functionArn;
         return this;
@@ -23,6 +24,7 @@ public class Function {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionConfiguration")
     public FunctionConfiguration functionConfiguration;
+
     public Function withFunctionConfiguration(FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -30,9 +32,13 @@ public class Function {
     
     @JsonProperty("Id")
     public String id;
+
     public Function withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Function(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

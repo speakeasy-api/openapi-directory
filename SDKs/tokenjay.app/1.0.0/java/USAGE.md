@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CalcSigmaRsvExchangeRequest;
 import org.openapis.openapi.models.operations.CalcSigmaRsvExchangeResponse;
 
@@ -13,17 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CalcSigmaRsvExchangeRequest req = new CalcSigmaRsvExchangeRequest() {{
-                amount = 548814;
-            }}            
+            CalcSigmaRsvExchangeRequest req = new CalcSigmaRsvExchangeRequest(548814L);            
 
             CalcSigmaRsvExchangeResponse res = sdk.ageUsd.calcSigmaRsvExchange(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

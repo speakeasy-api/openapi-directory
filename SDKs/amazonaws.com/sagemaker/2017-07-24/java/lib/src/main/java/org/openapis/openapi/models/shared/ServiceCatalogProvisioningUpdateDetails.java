@@ -15,6 +15,7 @@ public class ServiceCatalogProvisioningUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public ServiceCatalogProvisioningUpdateDetails withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -23,9 +24,11 @@ public class ServiceCatalogProvisioningUpdateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningParameters")
     public ProvisioningParameter[] provisioningParameters;
+
     public ServiceCatalogProvisioningUpdateDetails withProvisioningParameters(ProvisioningParameter[] provisioningParameters) {
         this.provisioningParameters = provisioningParameters;
         return this;
     }
     
+    public ServiceCatalogProvisioningUpdateDetails(){}
 }

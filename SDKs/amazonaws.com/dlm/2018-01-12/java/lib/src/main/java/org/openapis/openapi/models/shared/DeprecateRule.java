@@ -15,6 +15,7 @@ public class DeprecateRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public DeprecateRule withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class DeprecateRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public DeprecateRule withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -31,9 +33,11 @@ public class DeprecateRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalUnit")
     public RetentionIntervalUnitValuesEnum intervalUnit;
+
     public DeprecateRule withIntervalUnit(RetentionIntervalUnitValuesEnum intervalUnit) {
         this.intervalUnit = intervalUnit;
         return this;
     }
     
+    public DeprecateRule(){}
 }

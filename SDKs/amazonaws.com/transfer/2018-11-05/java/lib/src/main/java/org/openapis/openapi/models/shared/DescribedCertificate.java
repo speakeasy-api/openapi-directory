@@ -22,6 +22,7 @@ public class DescribedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ActiveDate")
     public OffsetDateTime activeDate;
+
     public DescribedCertificate withActiveDate(OffsetDateTime activeDate) {
         this.activeDate = activeDate;
         return this;
@@ -29,6 +30,7 @@ public class DescribedCertificate {
     
     @JsonProperty("Arn")
     public String arn;
+
     public DescribedCertificate withArn(String arn) {
         this.arn = arn;
         return this;
@@ -37,6 +39,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Certificate")
     public String certificate;
+
     public DescribedCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -45,6 +48,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateChain")
     public String certificateChain;
+
     public DescribedCertificate withCertificateChain(String certificateChain) {
         this.certificateChain = certificateChain;
         return this;
@@ -53,6 +57,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public DescribedCertificate withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
@@ -61,6 +66,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribedCertificate withDescription(String description) {
         this.description = description;
         return this;
@@ -71,6 +77,7 @@ public class DescribedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("InactiveDate")
     public OffsetDateTime inactiveDate;
+
     public DescribedCertificate withInactiveDate(OffsetDateTime inactiveDate) {
         this.inactiveDate = inactiveDate;
         return this;
@@ -81,6 +88,7 @@ public class DescribedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotAfterDate")
     public OffsetDateTime notAfterDate;
+
     public DescribedCertificate withNotAfterDate(OffsetDateTime notAfterDate) {
         this.notAfterDate = notAfterDate;
         return this;
@@ -91,6 +99,7 @@ public class DescribedCertificate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NotBeforeDate")
     public OffsetDateTime notBeforeDate;
+
     public DescribedCertificate withNotBeforeDate(OffsetDateTime notBeforeDate) {
         this.notBeforeDate = notBeforeDate;
         return this;
@@ -99,6 +108,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serial")
     public String serial;
+
     public DescribedCertificate withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -107,6 +117,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public CertificateStatusTypeEnum status;
+
     public DescribedCertificate withStatus(CertificateStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -115,6 +126,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public DescribedCertificate withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -123,6 +135,7 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public CertificateTypeEnum type;
+
     public DescribedCertificate withType(CertificateTypeEnum type) {
         this.type = type;
         return this;
@@ -131,9 +144,13 @@ public class DescribedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Usage")
     public CertificateUsageTypeEnum usage;
+
     public DescribedCertificate withUsage(CertificateUsageTypeEnum usage) {
         this.usage = usage;
         return this;
     }
     
+    public DescribedCertificate(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

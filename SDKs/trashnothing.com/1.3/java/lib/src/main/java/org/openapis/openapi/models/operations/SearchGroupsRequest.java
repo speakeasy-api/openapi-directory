@@ -13,6 +13,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public SearchGroupsRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -24,6 +25,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance")
     public Double distance;
+
     public SearchGroupsRequest withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -34,6 +36,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Double latitude;
+
     public SearchGroupsRequest withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -44,6 +47,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Double longitude;
+
     public SearchGroupsRequest withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -54,6 +58,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchGroupsRequest withName(String name) {
         this.name = name;
         return this;
@@ -64,6 +69,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public SearchGroupsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -74,6 +80,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public SearchGroupsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -85,6 +92,7 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postal_code")
     public String postalCode;
+
     public SearchGroupsRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -96,9 +104,11 @@ public class SearchGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=region")
     public String region;
+
     public SearchGroupsRequest withRegion(String region) {
         this.region = region;
         return this;
     }
     
+    public SearchGroupsRequest(){}
 }

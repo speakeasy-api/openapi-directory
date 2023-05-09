@@ -12,6 +12,7 @@ public class ProvincesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=optional")
     public ProvincesOptionalEnum optional;
+
     public ProvincesRequest withOptional(ProvincesOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -22,9 +23,11 @@ public class ProvincesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public ProvincesRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public ProvincesRequest(){}
 }

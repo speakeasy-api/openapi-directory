@@ -15,6 +15,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public KeyValuePair[] details;
+
     public Attachment withDetails(KeyValuePair[] details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Attachment withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Attachment withStatus(String status) {
         this.status = status;
         return this;
@@ -39,9 +42,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Attachment withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Attachment(){}
 }

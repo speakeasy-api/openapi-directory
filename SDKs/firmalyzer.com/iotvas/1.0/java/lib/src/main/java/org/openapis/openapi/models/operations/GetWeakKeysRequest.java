@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWeakKeysRequest {
@@ -12,9 +13,13 @@ public class GetWeakKeysRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=firmware_hash")
     public String firmwareHash;
+
     public GetWeakKeysRequest withFirmwareHash(String firmwareHash) {
         this.firmwareHash = firmwareHash;
         return this;
     }
     
+    public GetWeakKeysRequest(@JsonProperty("firmware_hash") String firmwareHash) {
+        this.firmwareHash = firmwareHash;
+  }
 }

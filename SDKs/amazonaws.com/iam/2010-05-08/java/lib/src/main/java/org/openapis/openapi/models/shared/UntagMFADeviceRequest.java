@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UntagMFADeviceRequest {
     
     public String serialNumber;
+
     public UntagMFADeviceRequest withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -16,9 +17,14 @@ public class UntagMFADeviceRequest {
     
     
     public String[] tagKeys;
+
     public UntagMFADeviceRequest withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagMFADeviceRequest(@JsonProperty("SerialNumber") String serialNumber, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.serialNumber = serialNumber;
+        this.tagKeys = tagKeys;
+  }
 }

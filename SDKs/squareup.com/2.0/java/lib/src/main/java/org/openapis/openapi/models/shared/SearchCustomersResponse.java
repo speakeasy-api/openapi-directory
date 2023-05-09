@@ -26,6 +26,7 @@ public class SearchCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchCustomersResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +38,7 @@ public class SearchCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public Customer[] customers;
+
     public SearchCustomersResponse withCustomers(Customer[] customers) {
         this.customers = customers;
         return this;
@@ -48,9 +50,11 @@ public class SearchCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchCustomersResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public SearchCustomersResponse(){}
 }

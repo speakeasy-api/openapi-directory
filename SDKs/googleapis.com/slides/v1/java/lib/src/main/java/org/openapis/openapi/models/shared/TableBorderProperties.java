@@ -18,6 +18,7 @@ public class TableBorderProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public TableBorderPropertiesDashStyleEnum dashStyle;
+
     public TableBorderProperties withDashStyle(TableBorderPropertiesDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -29,6 +30,7 @@ public class TableBorderProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableBorderFill")
     public TableBorderFill tableBorderFill;
+
     public TableBorderProperties withTableBorderFill(TableBorderFill tableBorderFill) {
         this.tableBorderFill = tableBorderFill;
         return this;
@@ -40,9 +42,11 @@ public class TableBorderProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Dimension weight;
+
     public TableBorderProperties withWeight(Dimension weight) {
         this.weight = weight;
         return this;
     }
     
+    public TableBorderProperties(){}
 }

@@ -18,6 +18,7 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RuntimeConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public RuntimeConfig withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RuntimeConfig(){}
 }

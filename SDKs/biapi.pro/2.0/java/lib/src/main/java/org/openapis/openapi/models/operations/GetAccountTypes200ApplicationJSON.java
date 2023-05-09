@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAccountTypes200ApplicationJSON {
     @JsonProperty("accounttypes")
     public org.openapis.openapi.models.shared.AccountType[] accounttypes;
+
     public GetAccountTypes200ApplicationJSON withAccounttypes(org.openapis.openapi.models.shared.AccountType[] accounttypes) {
         this.accounttypes = accounttypes;
         return this;
@@ -25,9 +26,13 @@ public class GetAccountTypes200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetAccountTypes200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetAccountTypes200ApplicationJSON(@JsonProperty("accounttypes") org.openapis.openapi.models.shared.AccountType[] accounttypes) {
+        this.accounttypes = accounttypes;
+  }
 }

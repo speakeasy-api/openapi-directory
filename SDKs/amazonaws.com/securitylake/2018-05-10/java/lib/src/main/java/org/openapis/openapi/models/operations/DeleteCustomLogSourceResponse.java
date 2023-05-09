@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomLogSourceResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCustomLogSourceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object accountNotFoundException;
+
     public DeleteCustomLogSourceResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object bucketNotFoundException;
+
     public DeleteCustomLogSourceResponse withBucketNotFoundException(Object bucketNotFoundException) {
         this.bucketNotFoundException = bucketNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object conflictSourceNamesException;
+
     public DeleteCustomLogSourceResponse withConflictSourceNamesException(Object conflictSourceNamesException) {
         this.conflictSourceNamesException = conflictSourceNamesException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomLogSourceResponse {
     
     
     public String contentType;
+
     public DeleteCustomLogSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCustomLogSourceResponse deleteCustomLogSourceResponse;
+
     public DeleteCustomLogSourceResponse withDeleteCustomLogSourceResponse(org.openapis.openapi.models.shared.DeleteCustomLogSourceResponse deleteCustomLogSourceResponse) {
         this.deleteCustomLogSourceResponse = deleteCustomLogSourceResponse;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteCustomLogSourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCustomLogSourceResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomLogSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCustomLogSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomLogSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCustomLogSourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCustomLogSourceResponse {
      */
     
     public Object validationException;
+
     public DeleteCustomLogSourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteCustomLogSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

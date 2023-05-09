@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersUserIdLikesTracksRequest {
@@ -13,6 +14,7 @@ public class GetUsersUserIdLikesTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=access")
     public org.openapis.openapi.models.shared.AccessEnum[] access;
+
     public GetUsersUserIdLikesTracksRequest withAccess(org.openapis.openapi.models.shared.AccessEnum[] access) {
         this.access = access;
         return this;
@@ -23,6 +25,7 @@ public class GetUsersUserIdLikesTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetUsersUserIdLikesTracksRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -33,6 +36,7 @@ public class GetUsersUserIdLikesTracksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linked_partitioning")
     public Boolean linkedPartitioning;
+
     public GetUsersUserIdLikesTracksRequest withLinkedPartitioning(Boolean linkedPartitioning) {
         this.linkedPartitioning = linkedPartitioning;
         return this;
@@ -43,9 +47,13 @@ public class GetUsersUserIdLikesTracksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_id")
     public Long userId;
+
     public GetUsersUserIdLikesTracksRequest withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetUsersUserIdLikesTracksRequest(@JsonProperty("user_id") Long userId) {
+        this.userId = userId;
+  }
 }

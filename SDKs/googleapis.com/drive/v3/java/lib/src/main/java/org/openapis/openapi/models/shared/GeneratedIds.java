@@ -18,6 +18,7 @@ public class GeneratedIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public GeneratedIds withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -29,6 +30,7 @@ public class GeneratedIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GeneratedIds withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class GeneratedIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("space")
     public String space;
+
     public GeneratedIds withSpace(String space) {
         this.space = space;
         return this;
     }
     
+    public GeneratedIds(){}
 }

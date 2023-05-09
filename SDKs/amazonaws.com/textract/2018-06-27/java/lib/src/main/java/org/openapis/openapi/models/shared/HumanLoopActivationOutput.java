@@ -15,6 +15,7 @@ public class HumanLoopActivationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopActivationConditionsEvaluationResults")
     public String humanLoopActivationConditionsEvaluationResults;
+
     public HumanLoopActivationOutput withHumanLoopActivationConditionsEvaluationResults(String humanLoopActivationConditionsEvaluationResults) {
         this.humanLoopActivationConditionsEvaluationResults = humanLoopActivationConditionsEvaluationResults;
         return this;
@@ -23,6 +24,7 @@ public class HumanLoopActivationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopActivationReasons")
     public String[] humanLoopActivationReasons;
+
     public HumanLoopActivationOutput withHumanLoopActivationReasons(String[] humanLoopActivationReasons) {
         this.humanLoopActivationReasons = humanLoopActivationReasons;
         return this;
@@ -31,9 +33,11 @@ public class HumanLoopActivationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HumanLoopArn")
     public String humanLoopArn;
+
     public HumanLoopActivationOutput withHumanLoopArn(String humanLoopArn) {
         this.humanLoopArn = humanLoopArn;
         return this;
     }
     
+    public HumanLoopActivationOutput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcAttributeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcAttributeActionEnum action;
+
     public GETModifyVpcAttributeRequest withAction(GETModifyVpcAttributeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableDnsHostnames")
     public GETModifyVpcAttributeEnableDNSHostnames enableDnsHostnames;
+
     public GETModifyVpcAttributeRequest withEnableDnsHostnames(GETModifyVpcAttributeEnableDNSHostnames enableDnsHostnames) {
         this.enableDnsHostnames = enableDnsHostnames;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableDnsSupport")
     public GETModifyVpcAttributeEnableDNSSupport enableDnsSupport;
+
     public GETModifyVpcAttributeRequest withEnableDnsSupport(GETModifyVpcAttributeEnableDNSSupport enableDnsSupport) {
         this.enableDnsSupport = enableDnsSupport;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnableNetworkAddressUsageMetrics")
     public GETModifyVpcAttributeEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics;
+
     public GETModifyVpcAttributeRequest withEnableNetworkAddressUsageMetrics(GETModifyVpcAttributeEnableNetworkAddressUsageMetrics enableNetworkAddressUsageMetrics) {
         this.enableNetworkAddressUsageMetrics = enableNetworkAddressUsageMetrics;
         return this;
@@ -46,6 +51,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcAttributeVersionEnum version;
+
     public GETModifyVpcAttributeRequest withVersion(GETModifyVpcAttributeVersionEnum version) {
         this.version = version;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyVpcAttributeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpcId")
     public String vpcId;
+
     public GETModifyVpcAttributeRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcAttributeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcAttributeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcAttributeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcAttributeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcAttributeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcAttributeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyVpcAttributeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcAttributeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcAttributeRequest(@JsonProperty("Action") GETModifyVpcAttributeActionEnum action, @JsonProperty("Version") GETModifyVpcAttributeVersionEnum version, @JsonProperty("VpcId") String vpcId) {
+        this.action = action;
+        this.version = version;
+        this.vpcId = vpcId;
+  }
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreSnapshotTierRequest {
     
     public Boolean dryRun;
+
     public RestoreSnapshotTierRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class RestoreSnapshotTierRequest {
     
     
     public Boolean permanentRestore;
+
     public RestoreSnapshotTierRequest withPermanentRestore(Boolean permanentRestore) {
         this.permanentRestore = permanentRestore;
         return this;
@@ -23,6 +25,7 @@ public class RestoreSnapshotTierRequest {
     
     
     public String snapshotId;
+
     public RestoreSnapshotTierRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -30,9 +33,13 @@ public class RestoreSnapshotTierRequest {
     
     
     public Long temporaryRestoreDays;
+
     public RestoreSnapshotTierRequest withTemporaryRestoreDays(Long temporaryRestoreDays) {
         this.temporaryRestoreDays = temporaryRestoreDays;
         return this;
     }
     
+    public RestoreSnapshotTierRequest(@JsonProperty("SnapshotId") String snapshotId) {
+        this.snapshotId = snapshotId;
+  }
 }

@@ -14,6 +14,7 @@ public class UsersCreateGpgKeyForAuthenticatedUserRequestBody {
      */
     @JsonProperty("armored_public_key")
     public String armoredPublicKey;
+
     public UsersCreateGpgKeyForAuthenticatedUserRequestBody withArmoredPublicKey(String armoredPublicKey) {
         this.armoredPublicKey = armoredPublicKey;
         return this;
@@ -25,9 +26,13 @@ public class UsersCreateGpgKeyForAuthenticatedUserRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UsersCreateGpgKeyForAuthenticatedUserRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UsersCreateGpgKeyForAuthenticatedUserRequestBody(@JsonProperty("armored_public_key") String armoredPublicKey) {
+        this.armoredPublicKey = armoredPublicKey;
+  }
 }

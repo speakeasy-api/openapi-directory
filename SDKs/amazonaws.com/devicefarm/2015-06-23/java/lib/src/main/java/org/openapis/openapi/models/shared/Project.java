@@ -20,6 +20,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Project withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Project {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Project withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -38,6 +40,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultJobTimeoutMinutes")
     public Long defaultJobTimeoutMinutes;
+
     public Project withDefaultJobTimeoutMinutes(Long defaultJobTimeoutMinutes) {
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         return this;
@@ -46,6 +49,7 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Project withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class Project {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConfig")
     public VpcConfig vpcConfig;
+
     public Project withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public Project(){}
 }

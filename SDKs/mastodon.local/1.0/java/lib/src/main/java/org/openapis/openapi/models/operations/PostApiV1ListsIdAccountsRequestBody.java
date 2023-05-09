@@ -12,9 +12,13 @@ public class PostApiV1ListsIdAccountsRequestBody {
      */
     @JsonProperty("account_ids")
     public String[] accountIds;
+
     public PostApiV1ListsIdAccountsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
     }
     
+    public PostApiV1ListsIdAccountsRequestBody(@JsonProperty("account_ids") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

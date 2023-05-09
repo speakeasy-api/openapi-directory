@@ -12,6 +12,7 @@ public class UpdateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentTemplateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEnvironmentTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateEnvironmentTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateEnvironmentTemplateInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateEnvironmentTemplateInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateEnvironmentTemplateInput(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

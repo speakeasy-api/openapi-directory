@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption1(BigtableadminProjectsInstancesCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption2(BigtableadminProjectsInstancesCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption3(BigtableadminProjectsInstancesCreateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption4(BigtableadminProjectsInstancesCreateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption5(BigtableadminProjectsInstancesCreateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesCreateSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesCreateSecurity withOption6(BigtableadminProjectsInstancesCreateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesCreateSecurity(){}
 }

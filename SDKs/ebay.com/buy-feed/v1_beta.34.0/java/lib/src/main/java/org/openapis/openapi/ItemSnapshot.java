@@ -68,12 +68,10 @@ public class ItemSnapshot {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse res = new org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse() {{
+        org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse res = new org.openapis.openapi.models.operations.GetItemSnapshotFeedResponse(contentType, httpRes.statusCode()) {{
             itemSnapshotResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 206) {

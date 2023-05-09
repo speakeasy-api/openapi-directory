@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCustomRoutingAcceleratorAttributesRequest {
     @JsonProperty("AcceleratorArn")
     public String acceleratorArn;
+
     public UpdateCustomRoutingAcceleratorAttributesRequest withAcceleratorArn(String acceleratorArn) {
         this.acceleratorArn = acceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class UpdateCustomRoutingAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsEnabled")
     public Boolean flowLogsEnabled;
+
     public UpdateCustomRoutingAcceleratorAttributesRequest withFlowLogsEnabled(Boolean flowLogsEnabled) {
         this.flowLogsEnabled = flowLogsEnabled;
         return this;
@@ -27,6 +29,7 @@ public class UpdateCustomRoutingAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Bucket")
     public String flowLogsS3Bucket;
+
     public UpdateCustomRoutingAcceleratorAttributesRequest withFlowLogsS3Bucket(String flowLogsS3Bucket) {
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         return this;
@@ -35,9 +38,13 @@ public class UpdateCustomRoutingAcceleratorAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlowLogsS3Prefix")
     public String flowLogsS3Prefix;
+
     public UpdateCustomRoutingAcceleratorAttributesRequest withFlowLogsS3Prefix(String flowLogsS3Prefix) {
         this.flowLogsS3Prefix = flowLogsS3Prefix;
         return this;
     }
     
+    public UpdateCustomRoutingAcceleratorAttributesRequest(@JsonProperty("AcceleratorArn") String acceleratorArn) {
+        this.acceleratorArn = acceleratorArn;
+  }
 }

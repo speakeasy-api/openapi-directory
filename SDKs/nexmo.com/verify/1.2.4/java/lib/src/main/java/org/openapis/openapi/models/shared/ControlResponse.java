@@ -18,6 +18,7 @@ public class ControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public ControlResponseCommandEnum command;
+
     public ControlResponse withCommand(ControlResponseCommandEnum command) {
         this.command = command;
         return this;
@@ -32,9 +33,11 @@ public class ControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ControlResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ControlResponse(){}
 }

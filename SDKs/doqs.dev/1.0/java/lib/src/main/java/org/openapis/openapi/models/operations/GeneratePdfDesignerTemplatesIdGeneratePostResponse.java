@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GeneratePdfDesignerTemplatesIdGeneratePostResponse {
     
     public String contentType;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GeneratePdfDesignerTemplatesIdGeneratePostResponse {
     
     
     public Integer statusCode;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GeneratePdfDesignerTemplatesIdGeneratePostResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GeneratePdfDesignerTemplatesIdGeneratePostResponse {
      */
     
     public org.openapis.openapi.models.shared.ResponseError responseError;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostResponse withResponseError(org.openapis.openapi.models.shared.ResponseError responseError) {
         this.responseError = responseError;
         return this;
@@ -43,9 +48,14 @@ public class GeneratePdfDesignerTemplatesIdGeneratePostResponse {
      */
     
     public Object generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny;
+
     public GeneratePdfDesignerTemplatesIdGeneratePostResponse withGeneratePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny(Object generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny) {
         this.generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny = generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny;
         return this;
     }
     
+    public GeneratePdfDesignerTemplatesIdGeneratePostResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

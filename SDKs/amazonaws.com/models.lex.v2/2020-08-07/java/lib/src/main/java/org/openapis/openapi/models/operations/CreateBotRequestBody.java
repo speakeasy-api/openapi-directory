@@ -15,6 +15,7 @@ public class CreateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botMembers")
     public org.openapis.openapi.models.shared.BotMember[] botMembers;
+
     public CreateBotRequestBody withBotMembers(org.openapis.openapi.models.shared.BotMember[] botMembers) {
         this.botMembers = botMembers;
         return this;
@@ -25,6 +26,7 @@ public class CreateBotRequestBody {
      */
     @JsonProperty("botName")
     public String botName;
+
     public CreateBotRequestBody withBotName(String botName) {
         this.botName = botName;
         return this;
@@ -36,6 +38,7 @@ public class CreateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botTags")
     public java.util.Map<String, String> botTags;
+
     public CreateBotRequestBody withBotTags(java.util.Map<String, String> botTags) {
         this.botTags = botTags;
         return this;
@@ -47,6 +50,7 @@ public class CreateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botType")
     public CreateBotRequestBodyBotTypeEnum botType;
+
     public CreateBotRequestBody withBotType(CreateBotRequestBodyBotTypeEnum botType) {
         this.botType = botType;
         return this;
@@ -57,6 +61,7 @@ public class CreateBotRequestBody {
      */
     @JsonProperty("dataPrivacy")
     public CreateBotRequestBodyDataPrivacy dataPrivacy;
+
     public CreateBotRequestBody withDataPrivacy(CreateBotRequestBodyDataPrivacy dataPrivacy) {
         this.dataPrivacy = dataPrivacy;
         return this;
@@ -68,6 +73,7 @@ public class CreateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateBotRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +84,7 @@ public class CreateBotRequestBody {
      */
     @JsonProperty("idleSessionTTLInSeconds")
     public Long idleSessionTTLInSeconds;
+
     public CreateBotRequestBody withIdleSessionTTLInSeconds(Long idleSessionTTLInSeconds) {
         this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
         return this;
@@ -88,6 +95,7 @@ public class CreateBotRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateBotRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -99,9 +107,16 @@ public class CreateBotRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testBotAliasTags")
     public java.util.Map<String, String> testBotAliasTags;
+
     public CreateBotRequestBody withTestBotAliasTags(java.util.Map<String, String> testBotAliasTags) {
         this.testBotAliasTags = testBotAliasTags;
         return this;
     }
     
+    public CreateBotRequestBody(@JsonProperty("botName") String botName, @JsonProperty("dataPrivacy") CreateBotRequestBodyDataPrivacy dataPrivacy, @JsonProperty("idleSessionTTLInSeconds") Long idleSessionTTLInSeconds, @JsonProperty("roleArn") String roleArn) {
+        this.botName = botName;
+        this.dataPrivacy = dataPrivacy;
+        this.idleSessionTTLInSeconds = idleSessionTTLInSeconds;
+        this.roleArn = roleArn;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDocumentaiV1beta3ProcessOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ocrConfig")
     public GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig;
+
     public GoogleCloudDocumentaiV1beta3ProcessOptions withOcrConfig(GoogleCloudDocumentaiV1beta3OcrConfig ocrConfig) {
         this.ocrConfig = ocrConfig;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ProcessOptions(){}
 }

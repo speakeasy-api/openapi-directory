@@ -12,6 +12,7 @@ public class UpdateMultiNodeInventoryRequestBodyInventoriesNodes {
      */
     @JsonProperty("inputQty")
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty inputQty;
+
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodes withInputQty(UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty inputQty) {
         this.inputQty = inputQty;
         return this;
@@ -22,9 +23,14 @@ public class UpdateMultiNodeInventoryRequestBodyInventoriesNodes {
      */
     @JsonProperty("shipNode")
     public String shipNode;
+
     public UpdateMultiNodeInventoryRequestBodyInventoriesNodes withShipNode(String shipNode) {
         this.shipNode = shipNode;
         return this;
     }
     
+    public UpdateMultiNodeInventoryRequestBodyInventoriesNodes(@JsonProperty("inputQty") UpdateMultiNodeInventoryRequestBodyInventoriesNodesInputQty inputQty, @JsonProperty("shipNode") String shipNode) {
+        this.inputQty = inputQty;
+        this.shipNode = shipNode;
+  }
 }

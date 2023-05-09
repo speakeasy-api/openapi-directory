@@ -12,6 +12,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppBlockArn")
     public String appBlockArn;
+
     public UpdateApplicationRequest withAppBlockArn(String appBlockArn) {
         this.appBlockArn = appBlockArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToDelete")
     public ApplicationAttributeEnum[] attributesToDelete;
+
     public UpdateApplicationRequest withAttributesToDelete(ApplicationAttributeEnum[] attributesToDelete) {
         this.attributesToDelete = attributesToDelete;
         return this;
@@ -28,6 +30,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateApplicationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateApplicationRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IconS3Location")
     public S3Location iconS3Location;
+
     public UpdateApplicationRequest withIconS3Location(S3Location iconS3Location) {
         this.iconS3Location = iconS3Location;
         return this;
@@ -52,6 +57,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchParameters")
     public String launchParameters;
+
     public UpdateApplicationRequest withLaunchParameters(String launchParameters) {
         this.launchParameters = launchParameters;
         return this;
@@ -60,6 +66,7 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchPath")
     public String launchPath;
+
     public UpdateApplicationRequest withLaunchPath(String launchPath) {
         this.launchPath = launchPath;
         return this;
@@ -67,6 +74,7 @@ public class UpdateApplicationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateApplicationRequest withName(String name) {
         this.name = name;
         return this;
@@ -75,9 +83,13 @@ public class UpdateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public UpdateApplicationRequest withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public UpdateApplicationRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

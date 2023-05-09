@@ -15,6 +15,7 @@ public class TransactWriteItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedCapacity")
     public ConsumedCapacity[] consumedCapacity;
+
     public TransactWriteItemsOutput withConsumedCapacity(ConsumedCapacity[] consumedCapacity) {
         this.consumedCapacity = consumedCapacity;
         return this;
@@ -23,9 +24,11 @@ public class TransactWriteItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCollectionMetrics")
     public java.util.Map<String, ItemCollectionMetrics[]> itemCollectionMetrics;
+
     public TransactWriteItemsOutput withItemCollectionMetrics(java.util.Map<String, ItemCollectionMetrics[]> itemCollectionMetrics) {
         this.itemCollectionMetrics = itemCollectionMetrics;
         return this;
     }
     
+    public TransactWriteItemsOutput(){}
 }

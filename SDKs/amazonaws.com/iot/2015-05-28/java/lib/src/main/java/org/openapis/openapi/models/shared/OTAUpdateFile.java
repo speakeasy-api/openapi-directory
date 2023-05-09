@@ -15,6 +15,7 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public OTAUpdateFile withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeSigning")
     public CodeSigning codeSigning;
+
     public OTAUpdateFile withCodeSigning(CodeSigning codeSigning) {
         this.codeSigning = codeSigning;
         return this;
@@ -31,6 +33,7 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileLocation")
     public FileLocation fileLocation;
+
     public OTAUpdateFile withFileLocation(FileLocation fileLocation) {
         this.fileLocation = fileLocation;
         return this;
@@ -39,6 +42,7 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public OTAUpdateFile withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -47,6 +51,7 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public Long fileType;
+
     public OTAUpdateFile withFileType(Long fileType) {
         this.fileType = fileType;
         return this;
@@ -55,9 +60,11 @@ public class OTAUpdateFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileVersion")
     public String fileVersion;
+
     public OTAUpdateFile withFileVersion(String fileVersion) {
         this.fileVersion = fileVersion;
         return this;
     }
     
+    public OTAUpdateFile(){}
 }

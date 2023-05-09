@@ -18,9 +18,11 @@ public class MultiTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetIds")
     public String[] targetIds;
+
     public MultiTarget withTargetIds(String[] targetIds) {
         this.targetIds = targetIds;
         return this;
     }
     
+    public MultiTarget(){}
 }

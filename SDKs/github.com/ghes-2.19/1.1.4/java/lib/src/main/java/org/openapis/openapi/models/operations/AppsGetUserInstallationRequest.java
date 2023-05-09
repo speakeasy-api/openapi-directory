@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppsGetUserInstallationRequest {
@@ -12,6 +13,7 @@ public class AppsGetUserInstallationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=accept")
     public String accept;
+
     public AppsGetUserInstallationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,9 +21,14 @@ public class AppsGetUserInstallationRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public AppsGetUserInstallationRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AppsGetUserInstallationRequest(@JsonProperty("accept") String accept, @JsonProperty("username") String username) {
+        this.accept = accept;
+        this.username = username;
+  }
 }

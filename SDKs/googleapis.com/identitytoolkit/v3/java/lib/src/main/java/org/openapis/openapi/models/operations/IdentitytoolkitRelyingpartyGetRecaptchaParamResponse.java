@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitRelyingpartyGetRecaptchaParamResponse {
     
     public String contentType;
+
     public IdentitytoolkitRelyingpartyGetRecaptchaParamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitRelyingpartyGetRecaptchaParamResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRecaptchaParamResponse getRecaptchaParamResponse;
+
     public IdentitytoolkitRelyingpartyGetRecaptchaParamResponse withGetRecaptchaParamResponse(org.openapis.openapi.models.shared.GetRecaptchaParamResponse getRecaptchaParamResponse) {
         this.getRecaptchaParamResponse = getRecaptchaParamResponse;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitRelyingpartyGetRecaptchaParamResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitRelyingpartyGetRecaptchaParamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitRelyingpartyGetRecaptchaParamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitRelyingpartyGetRecaptchaParamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyGetRecaptchaParamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

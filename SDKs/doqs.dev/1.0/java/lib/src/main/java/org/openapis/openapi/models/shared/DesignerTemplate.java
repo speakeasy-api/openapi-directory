@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DesignerTemplate {
     @JsonProperty("components")
     public java.util.Map<String, Object>[] components;
+
     public DesignerTemplate withComponents(java.util.Map<String, Object>[] components) {
         this.components = components;
         return this;
@@ -26,6 +27,7 @@ public class DesignerTemplate {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public DesignerTemplate withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +35,7 @@ public class DesignerTemplate {
     
     @JsonProperty("css")
     public String css;
+
     public DesignerTemplate withCss(String css) {
         this.css = css;
         return this;
@@ -41,6 +44,7 @@ public class DesignerTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footer_html")
     public String footerHtml;
+
     public DesignerTemplate withFooterHtml(String footerHtml) {
         this.footerHtml = footerHtml;
         return this;
@@ -51,6 +55,7 @@ public class DesignerTemplate {
      */
     @JsonProperty("format")
     public FormatEnum format;
+
     public DesignerTemplate withFormat(FormatEnum format) {
         this.format = format;
         return this;
@@ -59,6 +64,7 @@ public class DesignerTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("header_html")
     public String headerHtml;
+
     public DesignerTemplate withHeaderHtml(String headerHtml) {
         this.headerHtml = headerHtml;
         return this;
@@ -67,13 +73,23 @@ public class DesignerTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DesignerTemplate withId(String id) {
         this.id = id;
         return this;
     }
     
+    @JsonProperty("margin")
+    public Margin margin;
+
+    public DesignerTemplate withMargin(Margin margin) {
+        this.margin = margin;
+        return this;
+    }
+    
     @JsonProperty("name")
     public String name;
+
     public DesignerTemplate withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +100,7 @@ public class DesignerTemplate {
      */
     @JsonProperty("orientation")
     public OrientationEnum orientation;
+
     public DesignerTemplate withOrientation(OrientationEnum orientation) {
         this.orientation = orientation;
         return this;
@@ -91,6 +108,7 @@ public class DesignerTemplate {
     
     @JsonProperty("preview_payload")
     public java.util.Map<String, Object> previewPayload;
+
     public DesignerTemplate withPreviewPayload(java.util.Map<String, Object> previewPayload) {
         this.previewPayload = previewPayload;
         return this;
@@ -98,9 +116,20 @@ public class DesignerTemplate {
     
     @JsonProperty("template_html")
     public String templateHtml;
+
     public DesignerTemplate withTemplateHtml(String templateHtml) {
         this.templateHtml = templateHtml;
         return this;
     }
     
+    public DesignerTemplate(@JsonProperty("components") java.util.Map<String, Object>[] components, @JsonProperty("css") String css, @JsonProperty("format") FormatEnum format, @JsonProperty("margin") Margin margin, @JsonProperty("name") String name, @JsonProperty("orientation") OrientationEnum orientation, @JsonProperty("preview_payload") java.util.Map<String, Object> previewPayload, @JsonProperty("template_html") String templateHtml) {
+        this.components = components;
+        this.css = css;
+        this.format = format;
+        this.margin = margin;
+        this.name = name;
+        this.orientation = orientation;
+        this.previewPayload = previewPayload;
+        this.templateHtml = templateHtml;
+  }
 }

@@ -15,6 +15,7 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desc")
     public String desc;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestDestination withDesc(String desc) {
         this.desc = desc;
         return this;
@@ -23,9 +24,11 @@ public class GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedRe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestDestination withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResources200ApplicationJSONRequestedResourceRequestDestination(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteSecurityGroupRequest {
     
     public Boolean dryRun;
+
     public DeleteSecurityGroupRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteSecurityGroupRequest {
     
     
     public String groupId;
+
     public DeleteSecurityGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,9 +25,11 @@ public class DeleteSecurityGroupRequest {
     
     
     public String groupName;
+
     public DeleteSecurityGroupRequest withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public DeleteSecurityGroupRequest(){}
 }

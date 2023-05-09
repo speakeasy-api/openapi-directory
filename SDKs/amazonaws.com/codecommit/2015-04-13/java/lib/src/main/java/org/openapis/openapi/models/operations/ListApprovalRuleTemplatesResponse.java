@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApprovalRuleTemplatesResponse {
     
     public String contentType;
+
     public ListApprovalRuleTemplatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApprovalRuleTemplatesResponse {
      */
     
     public Object invalidContinuationTokenException;
+
     public ListApprovalRuleTemplatesResponse withInvalidContinuationTokenException(Object invalidContinuationTokenException) {
         this.invalidContinuationTokenException = invalidContinuationTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListApprovalRuleTemplatesResponse {
      */
     
     public Object invalidMaxResultsException;
+
     public ListApprovalRuleTemplatesResponse withInvalidMaxResultsException(Object invalidMaxResultsException) {
         this.invalidMaxResultsException = invalidMaxResultsException;
         return this;
@@ -39,6 +43,7 @@ public class ListApprovalRuleTemplatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApprovalRuleTemplatesOutput listApprovalRuleTemplatesOutput;
+
     public ListApprovalRuleTemplatesResponse withListApprovalRuleTemplatesOutput(org.openapis.openapi.models.shared.ListApprovalRuleTemplatesOutput listApprovalRuleTemplatesOutput) {
         this.listApprovalRuleTemplatesOutput = listApprovalRuleTemplatesOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListApprovalRuleTemplatesResponse {
     
     
     public Integer statusCode;
+
     public ListApprovalRuleTemplatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListApprovalRuleTemplatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApprovalRuleTemplatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListApprovalRuleTemplatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeResourcePoliciesResponse {
     
     public String contentType;
+
     public DescribeResourcePoliciesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeResourcePoliciesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeResourcePoliciesResponse describeResourcePoliciesResponse;
+
     public DescribeResourcePoliciesResponse withDescribeResourcePoliciesResponse(org.openapis.openapi.models.shared.DescribeResourcePoliciesResponse describeResourcePoliciesResponse) {
         this.describeResourcePoliciesResponse = describeResourcePoliciesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeResourcePoliciesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeResourcePoliciesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeResourcePoliciesResponse {
     
     
     public Integer statusCode;
+
     public DescribeResourcePoliciesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeResourcePoliciesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeResourcePoliciesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeResourcePoliciesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeResourcePoliciesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DescribeResourcePoliciesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

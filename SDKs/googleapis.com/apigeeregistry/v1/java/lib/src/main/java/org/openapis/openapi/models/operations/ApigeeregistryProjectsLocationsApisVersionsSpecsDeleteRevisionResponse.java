@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse {
@@ -12,6 +13,7 @@ public class ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRespo
      */
     
     public org.openapis.openapi.models.shared.ApiSpec apiSpec;
+
     public ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse withApiSpec(org.openapis.openapi.models.shared.ApiSpec apiSpec) {
         this.apiSpec = apiSpec;
         return this;
@@ -19,6 +21,7 @@ public class ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRespo
     
     
     public String contentType;
+
     public ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRespo
     
     
     public Integer statusCode;
+
     public ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigeeregistryProjectsLocationsApisVersionsSpecsDeleteRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,7 +12,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum GoogleAppsDriveLabelsV2LabelLabelTypeEnum {
     LABEL_TYPE_UNSPECIFIED("LABEL_TYPE_UNSPECIFIED"),
     SHARED("SHARED"),
-    ADMIN("ADMIN");
+    ADMIN("ADMIN"),
+    GOOGLE_APP("GOOGLE_APP");
 
     @JsonValue
     public final String value;

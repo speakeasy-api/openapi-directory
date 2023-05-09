@@ -18,9 +18,11 @@ public class DeleteFilterViewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterId")
     public Integer filterId;
+
     public DeleteFilterViewRequest withFilterId(Integer filterId) {
         this.filterId = filterId;
         return this;
     }
     
+    public DeleteFilterViewRequest(){}
 }

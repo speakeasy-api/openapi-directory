@@ -15,6 +15,7 @@ public class CreateCodeReviewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateCodeReviewRequestBody withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateCodeReviewRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public CreateCodeReviewRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,6 +37,7 @@ public class CreateCodeReviewRequestBody {
      */
     @JsonProperty("RepositoryAssociationArn")
     public String repositoryAssociationArn;
+
     public CreateCodeReviewRequestBody withRepositoryAssociationArn(String repositoryAssociationArn) {
         this.repositoryAssociationArn = repositoryAssociationArn;
         return this;
@@ -45,9 +48,15 @@ public class CreateCodeReviewRequestBody {
      */
     @JsonProperty("Type")
     public CreateCodeReviewRequestBodyType type;
+
     public CreateCodeReviewRequestBody withType(CreateCodeReviewRequestBodyType type) {
         this.type = type;
         return this;
     }
     
+    public CreateCodeReviewRequestBody(@JsonProperty("Name") String name, @JsonProperty("RepositoryAssociationArn") String repositoryAssociationArn, @JsonProperty("Type") CreateCodeReviewRequestBodyType type) {
+        this.name = name;
+        this.repositoryAssociationArn = repositoryAssociationArn;
+        this.type = type;
+  }
 }

@@ -15,6 +15,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advisoryText")
     public String advisoryText;
+
     public ItemSummary withAdvisoryText(String advisoryText) {
         this.advisoryText = advisoryText;
         return this;
@@ -26,6 +27,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableEpisodeCount")
     public Integer availableEpisodeCount;
+
     public ItemSummary withAvailableEpisodeCount(Integer availableEpisodeCount) {
         this.availableEpisodeCount = availableEpisodeCount;
         return this;
@@ -37,6 +39,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableSeasonCount")
     public Integer availableSeasonCount;
+
     public ItemSummary withAvailableSeasonCount(Integer availableSeasonCount) {
         this.availableSeasonCount = availableSeasonCount;
         return this;
@@ -50,6 +53,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageUserRating")
     public Double averageUserRating;
+
     public ItemSummary withAverageUserRating(Double averageUserRating) {
         this.averageUserRating = averageUserRating;
         return this;
@@ -61,6 +65,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badge")
     public String badge;
+
     public ItemSummary withBadge(String badge) {
         this.badge = badge;
         return this;
@@ -72,6 +77,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelShortCode")
     public String channelShortCode;
+
     public ItemSummary withChannelShortCode(String channelShortCode) {
         this.channelShortCode = channelShortCode;
         return this;
@@ -80,6 +86,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classification")
     public ClassificationSummary classification;
+
     public ItemSummary withClassification(ClassificationSummary classification) {
         this.classification = classification;
         return this;
@@ -93,6 +100,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextualTitle")
     public String contextualTitle;
+
     public ItemSummary withContextualTitle(String contextualTitle) {
         this.contextualTitle = contextualTitle;
         return this;
@@ -104,6 +112,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customFields")
     public java.util.Map<String, Object> customFields;
+
     public ItemSummary withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -117,6 +126,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customId")
     public String customId;
+
     public ItemSummary withCustomId(String customId) {
         this.customId = customId;
         return this;
@@ -128,6 +138,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public ItemSummary withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -139,6 +150,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeCount")
     public Integer episodeCount;
+
     public ItemSummary withEpisodeCount(Integer episodeCount) {
         this.episodeCount = episodeCount;
         return this;
@@ -150,6 +162,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeName")
     public String episodeName;
+
     public ItemSummary withEpisodeName(String episodeName) {
         this.episodeName = episodeName;
         return this;
@@ -161,6 +174,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("episodeNumber")
     public Integer episodeNumber;
+
     public ItemSummary withEpisodeNumber(Integer episodeNumber) {
         this.episodeNumber = episodeNumber;
         return this;
@@ -172,6 +186,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genres")
     public String[] genres;
+
     public ItemSummary withGenres(String[] genres) {
         this.genres = genres;
         return this;
@@ -183,6 +198,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasClosedCaptions")
     public Boolean hasClosedCaptions;
+
     public ItemSummary withHasClosedCaptions(Boolean hasClosedCaptions) {
         this.hasClosedCaptions = hasClosedCaptions;
         return this;
@@ -193,6 +209,7 @@ public class ItemSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public ItemSummary withId(String id) {
         this.id = id;
         return this;
@@ -201,6 +218,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public java.util.Map<String, String> images;
+
     public ItemSummary withImages(java.util.Map<String, String> images) {
         this.images = images;
         return this;
@@ -212,6 +230,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offers")
     public Offer[] offers;
+
     public ItemSummary withOffers(Offer[] offers) {
         this.offers = offers;
         return this;
@@ -222,6 +241,7 @@ public class ItemSummary {
      */
     @JsonProperty("path")
     public String path;
+
     public ItemSummary withPath(String path) {
         this.path = path;
         return this;
@@ -233,6 +253,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releaseYear")
     public Integer releaseYear;
+
     public ItemSummary withReleaseYear(Integer releaseYear) {
         this.releaseYear = releaseYear;
         return this;
@@ -244,6 +265,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scopes")
     public String[] scopes;
+
     public ItemSummary withScopes(String[] scopes) {
         this.scopes = scopes;
         return this;
@@ -255,6 +277,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonId")
     public String seasonId;
+
     public ItemSummary withSeasonId(String seasonId) {
         this.seasonId = seasonId;
         return this;
@@ -266,6 +289,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonNumber")
     public Integer seasonNumber;
+
     public ItemSummary withSeasonNumber(Integer seasonNumber) {
         this.seasonNumber = seasonNumber;
         return this;
@@ -277,6 +301,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortDescription")
     public String shortDescription;
+
     public ItemSummary withShortDescription(String shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -288,6 +313,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showId")
     public String showId;
+
     public ItemSummary withShowId(String showId) {
         this.showId = showId;
         return this;
@@ -296,6 +322,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showTitle")
     public String showTitle;
+
     public ItemSummary withShowTitle(String showTitle) {
         this.showTitle = showTitle;
         return this;
@@ -309,6 +336,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subtype")
     public String subtype;
+
     public ItemSummary withSubtype(String subtype) {
         this.subtype = subtype;
         return this;
@@ -320,6 +348,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagline")
     public String tagline;
+
     public ItemSummary withTagline(String tagline) {
         this.tagline = tagline;
         return this;
@@ -331,6 +360,7 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("themes")
     public Theme[] themes;
+
     public ItemSummary withThemes(Theme[] themes) {
         this.themes = themes;
         return this;
@@ -341,6 +371,7 @@ public class ItemSummary {
      */
     @JsonProperty("title")
     public String title;
+
     public ItemSummary withTitle(String title) {
         this.title = title;
         return this;
@@ -351,6 +382,7 @@ public class ItemSummary {
      */
     @JsonProperty("type")
     public ItemSummaryTypeEnum type;
+
     public ItemSummary withType(ItemSummaryTypeEnum type) {
         this.type = type;
         return this;
@@ -362,9 +394,16 @@ public class ItemSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watchPath")
     public String watchPath;
+
     public ItemSummary withWatchPath(String watchPath) {
         this.watchPath = watchPath;
         return this;
     }
     
+    public ItemSummary(@JsonProperty("id") String id, @JsonProperty("path") String path, @JsonProperty("title") String title, @JsonProperty("type") ItemSummaryTypeEnum type) {
+        this.id = id;
+        this.path = path;
+        this.title = title;
+        this.type = type;
+  }
 }

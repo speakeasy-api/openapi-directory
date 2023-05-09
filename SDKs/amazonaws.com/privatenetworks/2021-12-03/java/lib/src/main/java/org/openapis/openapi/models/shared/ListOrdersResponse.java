@@ -15,6 +15,7 @@ public class ListOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListOrdersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListOrdersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public Order[] orders;
+
     public ListOrdersResponse withOrders(Order[] orders) {
         this.orders = orders;
         return this;
     }
     
+    public ListOrdersResponse(){}
 }

@@ -15,6 +15,7 @@ public class ClusterCustomerAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lat")
     public Double lat;
+
     public ClusterCustomerAddress withLat(Double lat) {
         this.lat = lat;
         return this;
@@ -26,6 +27,7 @@ public class ClusterCustomerAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lon")
     public Double lon;
+
     public ClusterCustomerAddress withLon(Double lon) {
         this.lon = lon;
         return this;
@@ -37,9 +39,11 @@ public class ClusterCustomerAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street_hint")
     public String streetHint;
+
     public ClusterCustomerAddress withStreetHint(String streetHint) {
         this.streetHint = streetHint;
         return this;
     }
     
+    public ClusterCustomerAddress(){}
 }

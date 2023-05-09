@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1IndexInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ancestor")
     public GoogleDatastoreAdminV1IndexAncestorEnum ancestor;
+
     public GoogleDatastoreAdminV1IndexInput withAncestor(GoogleDatastoreAdminV1IndexAncestorEnum ancestor) {
         this.ancestor = ancestor;
         return this;
@@ -29,6 +30,7 @@ public class GoogleDatastoreAdminV1IndexInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public GoogleDatastoreAdminV1IndexInput withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class GoogleDatastoreAdminV1IndexInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleDatastoreAdminV1IndexedProperty[] properties;
+
     public GoogleDatastoreAdminV1IndexInput withProperties(GoogleDatastoreAdminV1IndexedProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public GoogleDatastoreAdminV1IndexInput(){}
 }

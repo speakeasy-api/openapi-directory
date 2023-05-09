@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFlowTemplateRevisionsRequest {
     @JsonProperty("id")
     public String id;
+
     public GetFlowTemplateRevisionsRequest withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class GetFlowTemplateRevisionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetFlowTemplateRevisionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class GetFlowTemplateRevisionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetFlowTemplateRevisionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetFlowTemplateRevisionsRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

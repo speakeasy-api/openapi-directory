@@ -15,9 +15,11 @@ public class TranscriptSourceSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3BucketTranscriptSource")
     public S3BucketTranscriptSource s3BucketTranscriptSource;
+
     public TranscriptSourceSetting withS3BucketTranscriptSource(S3BucketTranscriptSource s3BucketTranscriptSource) {
         this.s3BucketTranscriptSource = s3BucketTranscriptSource;
         return this;
     }
     
+    public TranscriptSourceSetting(){}
 }

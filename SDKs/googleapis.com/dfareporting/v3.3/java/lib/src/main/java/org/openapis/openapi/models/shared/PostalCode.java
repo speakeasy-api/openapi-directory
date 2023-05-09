@@ -18,6 +18,7 @@ public class PostalCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public PostalCode withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PostalCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public PostalCode withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -40,6 +42,7 @@ public class PostalCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryDartId")
     public String countryDartId;
+
     public PostalCode withCountryDartId(String countryDartId) {
         this.countryDartId = countryDartId;
         return this;
@@ -51,6 +54,7 @@ public class PostalCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostalCode withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +66,11 @@ public class PostalCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PostalCode withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public PostalCode(){}
 }

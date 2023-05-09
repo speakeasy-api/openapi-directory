@@ -12,6 +12,7 @@ public class StartImageBuilderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppstreamAgentVersion")
     public String appstreamAgentVersion;
+
     public StartImageBuilderRequest withAppstreamAgentVersion(String appstreamAgentVersion) {
         this.appstreamAgentVersion = appstreamAgentVersion;
         return this;
@@ -19,9 +20,13 @@ public class StartImageBuilderRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public StartImageBuilderRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartImageBuilderRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

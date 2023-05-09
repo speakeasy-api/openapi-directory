@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateRouteCalculatorResponse {
     @JsonProperty("CalculatorArn")
     public String calculatorArn;
+
     public CreateRouteCalculatorResponse withCalculatorArn(String calculatorArn) {
         this.calculatorArn = calculatorArn;
         return this;
@@ -24,6 +25,7 @@ public class CreateRouteCalculatorResponse {
     
     @JsonProperty("CalculatorName")
     public String calculatorName;
+
     public CreateRouteCalculatorResponse withCalculatorName(String calculatorName) {
         this.calculatorName = calculatorName;
         return this;
@@ -33,9 +35,15 @@ public class CreateRouteCalculatorResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public CreateRouteCalculatorResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
     }
     
+    public CreateRouteCalculatorResponse(@JsonProperty("CalculatorArn") String calculatorArn, @JsonProperty("CalculatorName") String calculatorName, @JsonProperty("CreateTime") OffsetDateTime createTime) {
+        this.calculatorArn = calculatorArn;
+        this.calculatorName = calculatorName;
+        this.createTime = createTime;
+  }
 }

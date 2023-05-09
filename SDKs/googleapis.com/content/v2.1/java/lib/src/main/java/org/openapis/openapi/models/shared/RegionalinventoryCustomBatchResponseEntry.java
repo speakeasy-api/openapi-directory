@@ -18,6 +18,7 @@ public class RegionalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchId")
     public Long batchId;
+
     public RegionalinventoryCustomBatchResponseEntry withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -29,6 +30,7 @@ public class RegionalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Errors errors;
+
     public RegionalinventoryCustomBatchResponseEntry withErrors(Errors errors) {
         this.errors = errors;
         return this;
@@ -40,6 +42,7 @@ public class RegionalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RegionalinventoryCustomBatchResponseEntry withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,9 +54,11 @@ public class RegionalinventoryCustomBatchResponseEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionalInventory")
     public RegionalInventory regionalInventory;
+
     public RegionalinventoryCustomBatchResponseEntry withRegionalInventory(RegionalInventory regionalInventory) {
         this.regionalInventory = regionalInventory;
         return this;
     }
     
+    public RegionalinventoryCustomBatchResponseEntry(){}
 }

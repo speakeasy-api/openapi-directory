@@ -12,6 +12,7 @@ public class SurveyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer")
     public String answer;
+
     public SurveyAnswer withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -20,6 +21,7 @@ public class SurveyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project_id")
     public Long projectId;
+
     public SurveyAnswer withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
@@ -28,6 +30,7 @@ public class SurveyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question_answer_id")
     public Long questionAnswerId;
+
     public SurveyAnswer withQuestionAnswerId(Long questionAnswerId) {
         this.questionAnswerId = questionAnswerId;
         return this;
@@ -36,6 +39,7 @@ public class SurveyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question_id")
     public Long questionId;
+
     public SurveyAnswer withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
@@ -44,9 +48,11 @@ public class SurveyAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Long userId;
+
     public SurveyAnswer withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public SurveyAnswer(){}
 }

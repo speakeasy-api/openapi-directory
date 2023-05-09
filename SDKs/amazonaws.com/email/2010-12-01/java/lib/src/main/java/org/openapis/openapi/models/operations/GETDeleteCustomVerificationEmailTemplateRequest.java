@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteCustomVerificationEmailTemplateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteCustomVerificationEmailTemplateActionEnum action;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withAction(GETDeleteCustomVerificationEmailTemplateActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -26,6 +29,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteCustomVerificationEmailTemplateVersionEnum version;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withVersion(GETDeleteCustomVerificationEmailTemplateVersionEnum version) {
         this.version = version;
         return this;
@@ -33,6 +37,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -40,6 +45,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -47,6 +53,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -54,6 +61,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -61,6 +69,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -68,6 +77,7 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -75,9 +85,15 @@ public class GETDeleteCustomVerificationEmailTemplateRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteCustomVerificationEmailTemplateRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteCustomVerificationEmailTemplateRequest(@JsonProperty("Action") GETDeleteCustomVerificationEmailTemplateActionEnum action, @JsonProperty("TemplateName") String templateName, @JsonProperty("Version") GETDeleteCustomVerificationEmailTemplateVersionEnum version) {
+        this.action = action;
+        this.templateName = templateName;
+        this.version = version;
+  }
 }

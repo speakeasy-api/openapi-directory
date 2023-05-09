@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.FirebasehostingOperationsCancelRequest;
 import org.openapis.openapi.models.operations.FirebasehostingOperationsCancelResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -15,33 +14,34 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            FirebasehostingOperationsCancelRequest req = new FirebasehostingOperationsCancelRequest() {{
-                dollarXgafv = "2";
+            FirebasehostingOperationsCancelRequest req = new FirebasehostingOperationsCancelRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
                 }};
-                accessToken = "vel";
-                alt = "media";
-                callback = "deserunt";
-                fields = "suscipit";
-                key = "iure";
-                name = "magnam";
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
                 oauthToken = "debitis";
                 prettyPrint = false;
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
             FirebasehostingOperationsCancelResponse res = sdk.operations.firebasehostingOperationsCancel(req);
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

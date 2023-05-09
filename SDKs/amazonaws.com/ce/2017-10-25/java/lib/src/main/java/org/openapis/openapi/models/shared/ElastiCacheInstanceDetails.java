@@ -15,6 +15,7 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentGeneration")
     public Boolean currentGeneration;
+
     public ElastiCacheInstanceDetails withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -23,6 +24,7 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public ElastiCacheInstanceDetails withFamily(String family) {
         this.family = family;
         return this;
@@ -31,6 +33,7 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeType")
     public String nodeType;
+
     public ElastiCacheInstanceDetails withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -39,6 +42,7 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductDescription")
     public String productDescription;
+
     public ElastiCacheInstanceDetails withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -47,6 +51,7 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public ElastiCacheInstanceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -55,9 +60,11 @@ public class ElastiCacheInstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeFlexEligible")
     public Boolean sizeFlexEligible;
+
     public ElastiCacheInstanceDetails withSizeFlexEligible(Boolean sizeFlexEligible) {
         this.sizeFlexEligible = sizeFlexEligible;
         return this;
     }
     
+    public ElastiCacheInstanceDetails(){}
 }

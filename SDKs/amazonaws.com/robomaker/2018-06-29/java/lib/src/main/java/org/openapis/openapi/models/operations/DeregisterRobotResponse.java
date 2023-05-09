@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeregisterRobotResponse {
     
     public String contentType;
+
     public DeregisterRobotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeregisterRobotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeregisterRobotResponse deregisterRobotResponse;
+
     public DeregisterRobotResponse withDeregisterRobotResponse(org.openapis.openapi.models.shared.DeregisterRobotResponse deregisterRobotResponse) {
         this.deregisterRobotResponse = deregisterRobotResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeregisterRobotResponse {
      */
     
     public Object internalServerException;
+
     public DeregisterRobotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeregisterRobotResponse {
      */
     
     public Object invalidParameterException;
+
     public DeregisterRobotResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DeregisterRobotResponse {
     
     
     public Integer statusCode;
+
     public DeregisterRobotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeregisterRobotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeregisterRobotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeregisterRobotResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeregisterRobotResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeregisterRobotResponse {
      */
     
     public Object throttlingException;
+
     public DeregisterRobotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeregisterRobotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

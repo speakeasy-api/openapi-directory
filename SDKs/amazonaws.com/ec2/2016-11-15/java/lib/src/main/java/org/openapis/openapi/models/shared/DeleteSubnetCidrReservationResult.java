@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteSubnetCidrReservationResult {
     
     public DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation deletedSubnetCidrReservation;
+
     public DeleteSubnetCidrReservationResult withDeletedSubnetCidrReservation(DeleteSubnetCidrReservationResultDeletedSubnetCidrReservation deletedSubnetCidrReservation) {
         this.deletedSubnetCidrReservation = deletedSubnetCidrReservation;
         return this;
     }
     
+    public DeleteSubnetCidrReservationResult(){}
 }

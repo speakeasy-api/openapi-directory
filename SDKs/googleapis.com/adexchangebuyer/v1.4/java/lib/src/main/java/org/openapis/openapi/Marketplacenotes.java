@@ -61,11 +61,9 @@ public class Marketplacenotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesInsertResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesInsertResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesInsertResponse(contentType, httpRes.statusCode()) {{
             addOrderNotesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Marketplacenotes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesListResponse() {{
+        org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesListResponse res = new org.openapis.openapi.models.operations.AdexchangebuyerMarketplacenotesListResponse(contentType, httpRes.statusCode()) {{
             getOrderNotesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

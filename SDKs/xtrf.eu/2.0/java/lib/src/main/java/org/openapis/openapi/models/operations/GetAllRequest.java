@@ -12,9 +12,11 @@ public class GetAllRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
     public Long updatedSince;
+
     public GetAllRequest withUpdatedSince(Long updatedSince) {
         this.updatedSince = updatedSince;
         return this;
     }
     
+    public GetAllRequest(){}
 }

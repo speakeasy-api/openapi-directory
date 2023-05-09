@@ -22,6 +22,7 @@ public class GetPipelineStateOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public GetPipelineStateOutput withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class GetPipelineStateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineName")
     public String pipelineName;
+
     public GetPipelineStateOutput withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -38,6 +40,7 @@ public class GetPipelineStateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineVersion")
     public Long pipelineVersion;
+
     public GetPipelineStateOutput withPipelineVersion(Long pipelineVersion) {
         this.pipelineVersion = pipelineVersion;
         return this;
@@ -46,6 +49,7 @@ public class GetPipelineStateOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stageStates")
     public StageState[] stageStates;
+
     public GetPipelineStateOutput withStageStates(StageState[] stageStates) {
         this.stageStates = stageStates;
         return this;
@@ -56,9 +60,11 @@ public class GetPipelineStateOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public GetPipelineStateOutput withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public GetPipelineStateOutput(){}
 }

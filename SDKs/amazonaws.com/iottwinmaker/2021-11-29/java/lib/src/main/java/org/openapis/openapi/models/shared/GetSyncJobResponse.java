@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetSyncJobResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetSyncJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class GetSyncJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public GetSyncJobResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -33,6 +35,7 @@ public class GetSyncJobResponse {
     
     @JsonProperty("status")
     public SyncJobStatus status;
+
     public GetSyncJobResponse withStatus(SyncJobStatus status) {
         this.status = status;
         return this;
@@ -40,6 +43,7 @@ public class GetSyncJobResponse {
     
     @JsonProperty("syncRole")
     public String syncRole;
+
     public GetSyncJobResponse withSyncRole(String syncRole) {
         this.syncRole = syncRole;
         return this;
@@ -47,6 +51,7 @@ public class GetSyncJobResponse {
     
     @JsonProperty("syncSource")
     public String syncSource;
+
     public GetSyncJobResponse withSyncSource(String syncSource) {
         this.syncSource = syncSource;
         return this;
@@ -56,6 +61,7 @@ public class GetSyncJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateDateTime")
     public OffsetDateTime updateDateTime;
+
     public GetSyncJobResponse withUpdateDateTime(OffsetDateTime updateDateTime) {
         this.updateDateTime = updateDateTime;
         return this;
@@ -63,9 +69,19 @@ public class GetSyncJobResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public GetSyncJobResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public GetSyncJobResponse(@JsonProperty("arn") String arn, @JsonProperty("creationDateTime") OffsetDateTime creationDateTime, @JsonProperty("status") SyncJobStatus status, @JsonProperty("syncRole") String syncRole, @JsonProperty("syncSource") String syncSource, @JsonProperty("updateDateTime") OffsetDateTime updateDateTime, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.creationDateTime = creationDateTime;
+        this.status = status;
+        this.syncRole = syncRole;
+        this.syncSource = syncSource;
+        this.updateDateTime = updateDateTime;
+        this.workspaceId = workspaceId;
+  }
 }

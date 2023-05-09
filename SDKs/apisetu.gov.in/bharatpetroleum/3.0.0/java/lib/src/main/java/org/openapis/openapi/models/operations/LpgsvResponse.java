@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LpgsvResponse {
     
     public String contentType;
+
     public LpgsvResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LpgsvResponse {
     
     
     public Integer statusCode;
+
     public LpgsvResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LpgsvResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LpgsvResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv400ApplicationJSON lpgsv400ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv400ApplicationJSONObject(Lpgsv400ApplicationJSON lpgsv400ApplicationJSONObject) {
         this.lpgsv400ApplicationJSONObject = lpgsv400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv401ApplicationJSON lpgsv401ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv401ApplicationJSONObject(Lpgsv401ApplicationJSON lpgsv401ApplicationJSONObject) {
         this.lpgsv401ApplicationJSONObject = lpgsv401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv404ApplicationJSON lpgsv404ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv404ApplicationJSONObject(Lpgsv404ApplicationJSON lpgsv404ApplicationJSONObject) {
         this.lpgsv404ApplicationJSONObject = lpgsv404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv500ApplicationJSON lpgsv500ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv500ApplicationJSONObject(Lpgsv500ApplicationJSON lpgsv500ApplicationJSONObject) {
         this.lpgsv500ApplicationJSONObject = lpgsv500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv502ApplicationJSON lpgsv502ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv502ApplicationJSONObject(Lpgsv502ApplicationJSON lpgsv502ApplicationJSONObject) {
         this.lpgsv502ApplicationJSONObject = lpgsv502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LpgsvResponse {
      */
     
     public Lpgsv503ApplicationJSON lpgsv503ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv503ApplicationJSONObject(Lpgsv503ApplicationJSON lpgsv503ApplicationJSONObject) {
         this.lpgsv503ApplicationJSONObject = lpgsv503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LpgsvResponse {
      */
     
     public Lpgsv504ApplicationJSON lpgsv504ApplicationJSONObject;
+
     public LpgsvResponse withLpgsv504ApplicationJSONObject(Lpgsv504ApplicationJSON lpgsv504ApplicationJSONObject) {
         this.lpgsv504ApplicationJSONObject = lpgsv504ApplicationJSONObject;
         return this;
     }
     
+    public LpgsvResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

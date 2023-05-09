@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DisassociateEnvironmentOperationsRoleMessage - Request to disassociate the operations role from an environment.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DisassociateEnvironmentOperationsRoleMessage {
     
     public String environmentName;
+
     public DisassociateEnvironmentOperationsRoleMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public DisassociateEnvironmentOperationsRoleMessage(@JsonProperty("EnvironmentName") String environmentName) {
+        this.environmentName = environmentName;
+  }
 }

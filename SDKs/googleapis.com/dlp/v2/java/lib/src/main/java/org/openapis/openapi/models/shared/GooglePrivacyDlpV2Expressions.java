@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2Expressions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GooglePrivacyDlpV2Conditions conditions;
+
     public GooglePrivacyDlpV2Expressions withConditions(GooglePrivacyDlpV2Conditions conditions) {
         this.conditions = conditions;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2Expressions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalOperator")
     public GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum logicalOperator;
+
     public GooglePrivacyDlpV2Expressions withLogicalOperator(GooglePrivacyDlpV2ExpressionsLogicalOperatorEnum logicalOperator) {
         this.logicalOperator = logicalOperator;
         return this;
     }
     
+    public GooglePrivacyDlpV2Expressions(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBClusterSnapshotList {
     
     public String[] availabilityZones;
+
     public DBClusterSnapshotList withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class DBClusterSnapshotList {
     
     
     public OffsetDateTime clusterCreateTime;
+
     public DBClusterSnapshotList withClusterCreateTime(OffsetDateTime clusterCreateTime) {
         this.clusterCreateTime = clusterCreateTime;
         return this;
@@ -26,6 +28,7 @@ public class DBClusterSnapshotList {
     
     
     public String dbClusterIdentifier;
+
     public DBClusterSnapshotList withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -33,6 +36,7 @@ public class DBClusterSnapshotList {
     
     
     public String dbClusterSnapshotArn;
+
     public DBClusterSnapshotList withDBClusterSnapshotArn(String dbClusterSnapshotArn) {
         this.dbClusterSnapshotArn = dbClusterSnapshotArn;
         return this;
@@ -40,6 +44,7 @@ public class DBClusterSnapshotList {
     
     
     public String dbClusterSnapshotIdentifier;
+
     public DBClusterSnapshotList withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
@@ -47,6 +52,7 @@ public class DBClusterSnapshotList {
     
     
     public String engine;
+
     public DBClusterSnapshotList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -54,6 +60,7 @@ public class DBClusterSnapshotList {
     
     
     public String engineVersion;
+
     public DBClusterSnapshotList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -61,6 +68,7 @@ public class DBClusterSnapshotList {
     
     
     public String kmsKeyId;
+
     public DBClusterSnapshotList withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -68,6 +76,7 @@ public class DBClusterSnapshotList {
     
     
     public String masterUsername;
+
     public DBClusterSnapshotList withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -75,6 +84,7 @@ public class DBClusterSnapshotList {
     
     
     public Long percentProgress;
+
     public DBClusterSnapshotList withPercentProgress(Long percentProgress) {
         this.percentProgress = percentProgress;
         return this;
@@ -82,6 +92,7 @@ public class DBClusterSnapshotList {
     
     
     public Long port;
+
     public DBClusterSnapshotList withPort(Long port) {
         this.port = port;
         return this;
@@ -89,6 +100,7 @@ public class DBClusterSnapshotList {
     
     
     public OffsetDateTime snapshotCreateTime;
+
     public DBClusterSnapshotList withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -96,6 +108,7 @@ public class DBClusterSnapshotList {
     
     
     public String snapshotType;
+
     public DBClusterSnapshotList withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -103,6 +116,7 @@ public class DBClusterSnapshotList {
     
     
     public String sourceDBClusterSnapshotArn;
+
     public DBClusterSnapshotList withSourceDBClusterSnapshotArn(String sourceDBClusterSnapshotArn) {
         this.sourceDBClusterSnapshotArn = sourceDBClusterSnapshotArn;
         return this;
@@ -110,6 +124,7 @@ public class DBClusterSnapshotList {
     
     
     public String status;
+
     public DBClusterSnapshotList withStatus(String status) {
         this.status = status;
         return this;
@@ -117,6 +132,7 @@ public class DBClusterSnapshotList {
     
     
     public Boolean storageEncrypted;
+
     public DBClusterSnapshotList withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -124,9 +140,11 @@ public class DBClusterSnapshotList {
     
     
     public String vpcId;
+
     public DBClusterSnapshotList withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBClusterSnapshotList(){}
 }

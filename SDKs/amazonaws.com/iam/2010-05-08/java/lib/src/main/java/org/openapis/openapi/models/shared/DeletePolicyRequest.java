@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeletePolicyRequest {
     
     public String policyArn;
+
     public DeletePolicyRequest withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
     }
     
+    public DeletePolicyRequest(@JsonProperty("PolicyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

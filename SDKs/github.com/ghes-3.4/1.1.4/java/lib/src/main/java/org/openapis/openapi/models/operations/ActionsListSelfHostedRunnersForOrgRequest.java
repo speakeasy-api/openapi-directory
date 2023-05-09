@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelfHostedRunnersForOrgRequest {
@@ -12,6 +13,7 @@ public class ActionsListSelfHostedRunnersForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsListSelfHostedRunnersForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class ActionsListSelfHostedRunnersForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListSelfHostedRunnersForOrgRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class ActionsListSelfHostedRunnersForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListSelfHostedRunnersForOrgRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public ActionsListSelfHostedRunnersForOrgRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

@@ -18,6 +18,7 @@ public class CampaignCreativeAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public CampaignCreativeAssociation withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -29,9 +30,11 @@ public class CampaignCreativeAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CampaignCreativeAssociation withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public CampaignCreativeAssociation(){}
 }

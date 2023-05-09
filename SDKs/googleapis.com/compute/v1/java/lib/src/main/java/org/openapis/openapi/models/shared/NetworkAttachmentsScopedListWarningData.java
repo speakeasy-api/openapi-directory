@@ -15,6 +15,7 @@ public class NetworkAttachmentsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public NetworkAttachmentsScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class NetworkAttachmentsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public NetworkAttachmentsScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public NetworkAttachmentsScopedListWarningData(){}
 }

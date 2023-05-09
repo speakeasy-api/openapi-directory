@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCelebrityRecognitionResponse {
@@ -12,6 +13,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCelebrityRecognitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCelebrityRecognitionResponse {
     
     
     public String contentType;
+
     public GetCelebrityRecognitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCelebrityRecognitionResponse getCelebrityRecognitionResponse;
+
     public GetCelebrityRecognitionResponse withGetCelebrityRecognitionResponse(org.openapis.openapi.models.shared.GetCelebrityRecognitionResponse getCelebrityRecognitionResponse) {
         this.getCelebrityRecognitionResponse = getCelebrityRecognitionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object internalServerError;
+
     public GetCelebrityRecognitionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public GetCelebrityRecognitionResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetCelebrityRecognitionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetCelebrityRecognitionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -79,6 +87,7 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCelebrityRecognitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -86,6 +95,7 @@ public class GetCelebrityRecognitionResponse {
     
     
     public Integer statusCode;
+
     public GetCelebrityRecognitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetCelebrityRecognitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCelebrityRecognitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetCelebrityRecognitionResponse {
      */
     
     public Object throttlingException;
+
     public GetCelebrityRecognitionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetCelebrityRecognitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

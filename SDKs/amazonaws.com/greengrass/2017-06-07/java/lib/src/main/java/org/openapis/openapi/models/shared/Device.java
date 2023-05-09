@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Device {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public Device withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -21,6 +22,7 @@ public class Device {
     
     @JsonProperty("Id")
     public String id;
+
     public Device withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +31,7 @@ public class Device {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SyncShadow")
     public Boolean syncShadow;
+
     public Device withSyncShadow(Boolean syncShadow) {
         this.syncShadow = syncShadow;
         return this;
@@ -36,9 +39,15 @@ public class Device {
     
     @JsonProperty("ThingArn")
     public String thingArn;
+
     public Device withThingArn(String thingArn) {
         this.thingArn = thingArn;
         return this;
     }
     
+    public Device(@JsonProperty("CertificateArn") String certificateArn, @JsonProperty("Id") String id, @JsonProperty("ThingArn") String thingArn) {
+        this.certificateArn = certificateArn;
+        this.id = id;
+        this.thingArn = thingArn;
+  }
 }

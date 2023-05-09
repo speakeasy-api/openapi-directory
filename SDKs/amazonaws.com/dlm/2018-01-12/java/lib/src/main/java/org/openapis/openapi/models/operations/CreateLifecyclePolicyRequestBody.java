@@ -14,6 +14,7 @@ public class CreateLifecyclePolicyRequestBody {
      */
     @JsonProperty("Description")
     public String description;
+
     public CreateLifecyclePolicyRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -24,6 +25,7 @@ public class CreateLifecyclePolicyRequestBody {
      */
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public CreateLifecyclePolicyRequestBody withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -34,6 +36,7 @@ public class CreateLifecyclePolicyRequestBody {
      */
     @JsonProperty("PolicyDetails")
     public CreateLifecyclePolicyRequestBodyPolicyDetails policyDetails;
+
     public CreateLifecyclePolicyRequestBody withPolicyDetails(CreateLifecyclePolicyRequestBodyPolicyDetails policyDetails) {
         this.policyDetails = policyDetails;
         return this;
@@ -44,6 +47,7 @@ public class CreateLifecyclePolicyRequestBody {
      */
     @JsonProperty("State")
     public CreateLifecyclePolicyRequestBodyStateEnum state;
+
     public CreateLifecyclePolicyRequestBody withState(CreateLifecyclePolicyRequestBodyStateEnum state) {
         this.state = state;
         return this;
@@ -55,9 +59,16 @@ public class CreateLifecyclePolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateLifecyclePolicyRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLifecyclePolicyRequestBody(@JsonProperty("Description") String description, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("PolicyDetails") CreateLifecyclePolicyRequestBodyPolicyDetails policyDetails, @JsonProperty("State") CreateLifecyclePolicyRequestBodyStateEnum state) {
+        this.description = description;
+        this.executionRoleArn = executionRoleArn;
+        this.policyDetails = policyDetails;
+        this.state = state;
+  }
 }

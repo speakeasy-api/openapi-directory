@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETMostemailedSectionTimePeriodJsonResponse {
     
     public byte[] body;
+
     public GETMostemailedSectionTimePeriodJsonResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
     
     
     public String contentType;
+
     public GETMostemailedSectionTimePeriodJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
      */
     
     public GETMostemailedSectionTimePeriodJSON200ApplicationJSON getMostemailedSectionTimePeriodJSON200ApplicationJSONObject;
+
     public GETMostemailedSectionTimePeriodJsonResponse withGETMostemailedSectionTimePeriodJSON200ApplicationJSONObject(GETMostemailedSectionTimePeriodJSON200ApplicationJSON getMostemailedSectionTimePeriodJSON200ApplicationJSONObject) {
         this.getMostemailedSectionTimePeriodJSON200ApplicationJSONObject = getMostemailedSectionTimePeriodJSON200ApplicationJSONObject;
         return this;
@@ -33,6 +37,7 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
     
     
     public GETMostemailedSectionTimePeriodJSON400ApplicationJSON getMostemailedSectionTimePeriodJSON400ApplicationJSONObject;
+
     public GETMostemailedSectionTimePeriodJsonResponse withGETMostemailedSectionTimePeriodJSON400ApplicationJSONObject(GETMostemailedSectionTimePeriodJSON400ApplicationJSON getMostemailedSectionTimePeriodJSON400ApplicationJSONObject) {
         this.getMostemailedSectionTimePeriodJSON400ApplicationJSONObject = getMostemailedSectionTimePeriodJSON400ApplicationJSONObject;
         return this;
@@ -40,6 +45,7 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
     
     
     public java.util.Map<String, Object> getMostemailedSectionTimePeriodJSON403ApplicationJSONObject;
+
     public GETMostemailedSectionTimePeriodJsonResponse withGETMostemailedSectionTimePeriodJSON403ApplicationJSONObject(java.util.Map<String, Object> getMostemailedSectionTimePeriodJSON403ApplicationJSONObject) {
         this.getMostemailedSectionTimePeriodJSON403ApplicationJSONObject = getMostemailedSectionTimePeriodJSON403ApplicationJSONObject;
         return this;
@@ -47,6 +53,7 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
     
     
     public Integer statusCode;
+
     public GETMostemailedSectionTimePeriodJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -54,9 +61,14 @@ public class GETMostemailedSectionTimePeriodJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETMostemailedSectionTimePeriodJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETMostemailedSectionTimePeriodJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

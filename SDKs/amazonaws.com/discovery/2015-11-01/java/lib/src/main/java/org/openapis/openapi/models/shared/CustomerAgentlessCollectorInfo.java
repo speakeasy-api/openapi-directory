@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomerAgentlessCollectorInfo {
     @JsonProperty("activeAgentlessCollectors")
     public Long activeAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withActiveAgentlessCollectors(Long activeAgentlessCollectors) {
         this.activeAgentlessCollectors = activeAgentlessCollectors;
         return this;
@@ -16,6 +17,7 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("denyListedAgentlessCollectors")
     public Long denyListedAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withDenyListedAgentlessCollectors(Long denyListedAgentlessCollectors) {
         this.denyListedAgentlessCollectors = denyListedAgentlessCollectors;
         return this;
@@ -23,6 +25,7 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("healthyAgentlessCollectors")
     public Long healthyAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withHealthyAgentlessCollectors(Long healthyAgentlessCollectors) {
         this.healthyAgentlessCollectors = healthyAgentlessCollectors;
         return this;
@@ -30,6 +33,7 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("shutdownAgentlessCollectors")
     public Long shutdownAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withShutdownAgentlessCollectors(Long shutdownAgentlessCollectors) {
         this.shutdownAgentlessCollectors = shutdownAgentlessCollectors;
         return this;
@@ -37,6 +41,7 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("totalAgentlessCollectors")
     public Long totalAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withTotalAgentlessCollectors(Long totalAgentlessCollectors) {
         this.totalAgentlessCollectors = totalAgentlessCollectors;
         return this;
@@ -44,6 +49,7 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("unhealthyAgentlessCollectors")
     public Long unhealthyAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withUnhealthyAgentlessCollectors(Long unhealthyAgentlessCollectors) {
         this.unhealthyAgentlessCollectors = unhealthyAgentlessCollectors;
         return this;
@@ -51,9 +57,19 @@ public class CustomerAgentlessCollectorInfo {
     
     @JsonProperty("unknownAgentlessCollectors")
     public Long unknownAgentlessCollectors;
+
     public CustomerAgentlessCollectorInfo withUnknownAgentlessCollectors(Long unknownAgentlessCollectors) {
         this.unknownAgentlessCollectors = unknownAgentlessCollectors;
         return this;
     }
     
+    public CustomerAgentlessCollectorInfo(@JsonProperty("activeAgentlessCollectors") Long activeAgentlessCollectors, @JsonProperty("denyListedAgentlessCollectors") Long denyListedAgentlessCollectors, @JsonProperty("healthyAgentlessCollectors") Long healthyAgentlessCollectors, @JsonProperty("shutdownAgentlessCollectors") Long shutdownAgentlessCollectors, @JsonProperty("totalAgentlessCollectors") Long totalAgentlessCollectors, @JsonProperty("unhealthyAgentlessCollectors") Long unhealthyAgentlessCollectors, @JsonProperty("unknownAgentlessCollectors") Long unknownAgentlessCollectors) {
+        this.activeAgentlessCollectors = activeAgentlessCollectors;
+        this.denyListedAgentlessCollectors = denyListedAgentlessCollectors;
+        this.healthyAgentlessCollectors = healthyAgentlessCollectors;
+        this.shutdownAgentlessCollectors = shutdownAgentlessCollectors;
+        this.totalAgentlessCollectors = totalAgentlessCollectors;
+        this.unhealthyAgentlessCollectors = unhealthyAgentlessCollectors;
+        this.unknownAgentlessCollectors = unknownAgentlessCollectors;
+  }
 }

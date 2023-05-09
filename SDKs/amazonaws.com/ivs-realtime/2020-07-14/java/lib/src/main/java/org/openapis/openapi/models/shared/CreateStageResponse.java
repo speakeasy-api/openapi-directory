@@ -15,6 +15,7 @@ public class CreateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("participantTokens")
     public ParticipantToken[] participantTokens;
+
     public CreateStageResponse withParticipantTokens(ParticipantToken[] participantTokens) {
         this.participantTokens = participantTokens;
         return this;
@@ -23,9 +24,11 @@ public class CreateStageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stage")
     public Stage stage;
+
     public CreateStageResponse withStage(Stage stage) {
         this.stage = stage;
         return this;
     }
     
+    public CreateStageResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRealtimeEndpointResponse {
     
     public String contentType;
+
     public DeleteRealtimeEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRealtimeEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteRealtimeEndpointOutput deleteRealtimeEndpointOutput;
+
     public DeleteRealtimeEndpointResponse withDeleteRealtimeEndpointOutput(org.openapis.openapi.models.shared.DeleteRealtimeEndpointOutput deleteRealtimeEndpointOutput) {
         this.deleteRealtimeEndpointOutput = deleteRealtimeEndpointOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRealtimeEndpointResponse {
      */
     
     public Object internalServerException;
+
     public DeleteRealtimeEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRealtimeEndpointResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteRealtimeEndpointResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRealtimeEndpointResponse {
     
     
     public Integer statusCode;
+
     public DeleteRealtimeEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRealtimeEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRealtimeEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteRealtimeEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRealtimeEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteRealtimeEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

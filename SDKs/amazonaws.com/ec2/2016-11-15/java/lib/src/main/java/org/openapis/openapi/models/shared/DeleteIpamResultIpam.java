@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteIpamResultIpam {
     
     public String defaultResourceDiscoveryAssociationId;
+
     public DeleteIpamResultIpam withDefaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
         this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
         return this;
@@ -19,6 +20,7 @@ public class DeleteIpamResultIpam {
     
     
     public String defaultResourceDiscoveryId;
+
     public DeleteIpamResultIpam withDefaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
         this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
         return this;
@@ -26,6 +28,7 @@ public class DeleteIpamResultIpam {
     
     
     public String description;
+
     public DeleteIpamResultIpam withDescription(String description) {
         this.description = description;
         return this;
@@ -33,6 +36,7 @@ public class DeleteIpamResultIpam {
     
     
     public String ipamArn;
+
     public DeleteIpamResultIpam withIpamArn(String ipamArn) {
         this.ipamArn = ipamArn;
         return this;
@@ -40,6 +44,7 @@ public class DeleteIpamResultIpam {
     
     
     public String ipamId;
+
     public DeleteIpamResultIpam withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -47,6 +52,7 @@ public class DeleteIpamResultIpam {
     
     
     public String ipamRegion;
+
     public DeleteIpamResultIpam withIpamRegion(String ipamRegion) {
         this.ipamRegion = ipamRegion;
         return this;
@@ -54,6 +60,7 @@ public class DeleteIpamResultIpam {
     
     
     public DeleteIpamResultIpamOperatingRegions[] operatingRegions;
+
     public DeleteIpamResultIpam withOperatingRegions(DeleteIpamResultIpamOperatingRegions[] operatingRegions) {
         this.operatingRegions = operatingRegions;
         return this;
@@ -61,6 +68,7 @@ public class DeleteIpamResultIpam {
     
     
     public String ownerId;
+
     public DeleteIpamResultIpam withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class DeleteIpamResultIpam {
     
     
     public String privateDefaultScopeId;
+
     public DeleteIpamResultIpam withPrivateDefaultScopeId(String privateDefaultScopeId) {
         this.privateDefaultScopeId = privateDefaultScopeId;
         return this;
@@ -75,6 +84,7 @@ public class DeleteIpamResultIpam {
     
     
     public String publicDefaultScopeId;
+
     public DeleteIpamResultIpam withPublicDefaultScopeId(String publicDefaultScopeId) {
         this.publicDefaultScopeId = publicDefaultScopeId;
         return this;
@@ -82,6 +92,7 @@ public class DeleteIpamResultIpam {
     
     
     public Long resourceDiscoveryAssociationCount;
+
     public DeleteIpamResultIpam withResourceDiscoveryAssociationCount(Long resourceDiscoveryAssociationCount) {
         this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
         return this;
@@ -89,6 +100,7 @@ public class DeleteIpamResultIpam {
     
     
     public Long scopeCount;
+
     public DeleteIpamResultIpam withScopeCount(Long scopeCount) {
         this.scopeCount = scopeCount;
         return this;
@@ -96,6 +108,7 @@ public class DeleteIpamResultIpam {
     
     
     public DeleteIpamResultIpamStateEnum state;
+
     public DeleteIpamResultIpam withState(DeleteIpamResultIpamStateEnum state) {
         this.state = state;
         return this;
@@ -103,9 +116,11 @@ public class DeleteIpamResultIpam {
     
     
     public DeleteIpamResultIpamTags[] tags;
+
     public DeleteIpamResultIpam withTags(DeleteIpamResultIpamTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DeleteIpamResultIpam(){}
 }

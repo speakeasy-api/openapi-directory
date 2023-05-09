@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetNumbersAreacodes200ApplicationJSON {
     @JsonProperty("id")
     public Long id;
+
     public GetNumbersAreacodes200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class GetNumbersAreacodes200ApplicationJSON {
     
     @JsonProperty("name")
     public String name;
+
     public GetNumbersAreacodes200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetNumbersAreacodes200ApplicationJSON(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

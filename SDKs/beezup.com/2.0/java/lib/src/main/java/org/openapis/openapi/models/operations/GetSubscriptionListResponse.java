@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSubscriptionListResponse {
@@ -12,6 +13,7 @@ public class GetSubscriptionListResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetSubscriptionListResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetSubscriptionListResponse {
     
     
     public String contentType;
+
     public GetSubscriptionListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSubscriptionListResponse {
     
     
     public Integer statusCode;
+
     public GetSubscriptionListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSubscriptionListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSubscriptionListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetSubscriptionListResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscriptionIndex[] subscriptionIndices;
+
     public GetSubscriptionListResponse withSubscriptionIndices(org.openapis.openapi.models.shared.SubscriptionIndex[] subscriptionIndices) {
         this.subscriptionIndices = subscriptionIndices;
         return this;
     }
     
+    public GetSubscriptionListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

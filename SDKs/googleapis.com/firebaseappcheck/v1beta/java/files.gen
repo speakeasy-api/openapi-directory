@@ -160,6 +160,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProject
 lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsServicesPatchSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsServicesPatchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsServicesPatchResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurityOption1.java
+lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurityOption2.java
+lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsVerifyAppCheckTokenSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsVerifyAppCheckTokenRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/FirebaseappcheckProjectsVerifyAppCheckTokenResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaBatchGetAppAttestConfigsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaAppAttestConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
@@ -199,4 +204,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1bet
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaBatchUpdateServicesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaUpdateServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaListServicesResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirebaseAppcheckV1betaVerifyAppCheckTokenRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             profile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateOfflineResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateOfflineResponse() {{
+        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateOfflineResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesCreateOfflineResponse(contentType, httpRes.statusCode()) {{
             profile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,11 +153,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesPatchResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesPatchResponse() {{
+        org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesPatchResponse res = new org.openapis.openapi.models.operations.CloudprofilerProjectsProfilesPatchResponse(contentType, httpRes.statusCode()) {{
             profile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

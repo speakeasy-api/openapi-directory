@@ -15,6 +15,7 @@ public class AwsRedshiftClusterEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public AwsRedshiftClusterEndpoint withAddress(String address) {
         this.address = address;
         return this;
@@ -23,9 +24,11 @@ public class AwsRedshiftClusterEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public AwsRedshiftClusterEndpoint withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public AwsRedshiftClusterEndpoint(){}
 }

@@ -17,6 +17,7 @@ public class PatchesSchema {
      */
     @JsonProperty("op")
     public PatchesSchemaOpEnum op;
+
     public PatchesSchema withOp(PatchesSchemaOpEnum op) {
         this.op = op;
         return this;
@@ -34,6 +35,7 @@ public class PatchesSchema {
      */
     @JsonProperty("path")
     public String path;
+
     public PatchesSchema withPath(String path) {
         this.path = path;
         return this;
@@ -45,9 +47,14 @@ public class PatchesSchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public PatchesSchema withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public PatchesSchema(@JsonProperty("op") PatchesSchemaOpEnum op, @JsonProperty("path") String path) {
+        this.op = op;
+        this.path = path;
+  }
 }

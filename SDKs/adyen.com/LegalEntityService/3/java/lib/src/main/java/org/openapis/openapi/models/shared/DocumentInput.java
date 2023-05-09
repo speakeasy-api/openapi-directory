@@ -12,6 +12,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public DocumentInput withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -22,6 +23,7 @@ public class DocumentInput {
      */
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public DocumentInput withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -32,6 +34,7 @@ public class DocumentInput {
      */
     @JsonProperty("description")
     public String description;
+
     public DocumentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiryDate")
     public String expiryDate;
+
     public DocumentInput withExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
         return this;
@@ -54,6 +58,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public DocumentInput withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -65,6 +70,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerCountry")
     public String issuerCountry;
+
     public DocumentInput withIssuerCountry(String issuerCountry) {
         this.issuerCountry = issuerCountry;
         return this;
@@ -76,6 +82,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuerState")
     public String issuerState;
+
     public DocumentInput withIssuerState(String issuerState) {
         this.issuerState = issuerState;
         return this;
@@ -87,6 +94,7 @@ public class DocumentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public DocumentInput withNumber(String number) {
         this.number = number;
         return this;
@@ -94,6 +102,7 @@ public class DocumentInput {
     
     @JsonProperty("owner")
     public OwnerEntity owner;
+
     public DocumentInput withOwner(OwnerEntity owner) {
         this.owner = owner;
         return this;
@@ -119,9 +128,16 @@ public class DocumentInput {
      */
     @JsonProperty("type")
     public DocumentTypeEnum type;
+
     public DocumentInput withType(DocumentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DocumentInput(@JsonProperty("attachments") Attachment[] attachments, @JsonProperty("description") String description, @JsonProperty("owner") OwnerEntity owner, @JsonProperty("type") DocumentTypeEnum type) {
+        this.attachments = attachments;
+        this.description = description;
+        this.owner = owner;
+        this.type = type;
+  }
 }

@@ -15,9 +15,11 @@ public class InitiateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobParameters")
     public InitiateJobRequestBodyJobParameters jobParameters;
+
     public InitiateJobRequestBody withJobParameters(InitiateJobRequestBodyJobParameters jobParameters) {
         this.jobParameters = jobParameters;
         return this;
     }
     
+    public InitiateJobRequestBody(){}
 }

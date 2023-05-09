@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DestinationDefinitionCreate {
     @JsonProperty("dockerImageTag")
     public String dockerImageTag;
+
     public DestinationDefinitionCreate withDockerImageTag(String dockerImageTag) {
         this.dockerImageTag = dockerImageTag;
         return this;
@@ -18,6 +19,7 @@ public class DestinationDefinitionCreate {
     
     @JsonProperty("dockerRepository")
     public String dockerRepository;
+
     public DestinationDefinitionCreate withDockerRepository(String dockerRepository) {
         this.dockerRepository = dockerRepository;
         return this;
@@ -25,6 +27,7 @@ public class DestinationDefinitionCreate {
     
     @JsonProperty("documentationUrl")
     public String documentationUrl;
+
     public DestinationDefinitionCreate withDocumentationUrl(String documentationUrl) {
         this.documentationUrl = documentationUrl;
         return this;
@@ -33,6 +36,7 @@ public class DestinationDefinitionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public DestinationDefinitionCreate withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -40,6 +44,7 @@ public class DestinationDefinitionCreate {
     
     @JsonProperty("name")
     public String name;
+
     public DestinationDefinitionCreate withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,16 @@ public class DestinationDefinitionCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ActorDefinitionResourceRequirements resourceRequirements;
+
     public DestinationDefinitionCreate withResourceRequirements(ActorDefinitionResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public DestinationDefinitionCreate(@JsonProperty("dockerImageTag") String dockerImageTag, @JsonProperty("dockerRepository") String dockerRepository, @JsonProperty("documentationUrl") String documentationUrl, @JsonProperty("name") String name) {
+        this.dockerImageTag = dockerImageTag;
+        this.dockerRepository = dockerRepository;
+        this.documentationUrl = documentationUrl;
+        this.name = name;
+  }
 }

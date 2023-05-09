@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2Job {
     /**
-     * KRM-style annotations for the resource. Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected on new resources. All system annotations in v1 now have a corresponding field in v2 Job. This field follows Kubernetes annotations' namespacing, limits, and rules.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public GoogleCloudRunV2Job withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryAuthorization")
     public GoogleCloudRunV2BinaryAuthorization binaryAuthorization;
+
     public GoogleCloudRunV2Job withBinaryAuthorization(GoogleCloudRunV2BinaryAuthorization binaryAuthorization) {
         this.binaryAuthorization = binaryAuthorization;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public GoogleCloudRunV2Job withClient(String client) {
         this.client = client;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientVersion")
     public String clientVersion;
+
     public GoogleCloudRunV2Job withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public GoogleCloudRunV2Condition[] conditions;
+
     public GoogleCloudRunV2Job withConditions(GoogleCloudRunV2Condition[] conditions) {
         this.conditions = conditions;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudRunV2Job withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public String creator;
+
     public GoogleCloudRunV2Job withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteTime")
     public String deleteTime;
+
     public GoogleCloudRunV2Job withDeleteTime(String deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudRunV2Job withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionCount")
     public Integer executionCount;
+
     public GoogleCloudRunV2Job withExecutionCount(Integer executionCount) {
         this.executionCount = executionCount;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public GoogleCloudRunV2Job withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -139,17 +150,19 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public GoogleCloudRunV2Job withGeneration(String generation) {
         this.generation = generation;
         return this;
     }
     
     /**
-     * KRM-style labels for the resource. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
+     * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Job.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRunV2Job withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -161,6 +174,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifier")
     public String lastModifier;
+
     public GoogleCloudRunV2Job withLastModifier(String lastModifier) {
         this.lastModifier = lastModifier;
         return this;
@@ -172,6 +186,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestCreatedExecution")
     public GoogleCloudRunV2ExecutionReference latestCreatedExecution;
+
     public GoogleCloudRunV2Job withLatestCreatedExecution(GoogleCloudRunV2ExecutionReference latestCreatedExecution) {
         this.latestCreatedExecution = latestCreatedExecution;
         return this;
@@ -183,6 +198,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public GoogleCloudRunV2JobLaunchStageEnum launchStage;
+
     public GoogleCloudRunV2Job withLaunchStage(GoogleCloudRunV2JobLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -194,6 +210,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2Job withName(String name) {
         this.name = name;
         return this;
@@ -205,6 +222,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("observedGeneration")
     public String observedGeneration;
+
     public GoogleCloudRunV2Job withObservedGeneration(String observedGeneration) {
         this.observedGeneration = observedGeneration;
         return this;
@@ -216,6 +234,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reconciling")
     public Boolean reconciling;
+
     public GoogleCloudRunV2Job withReconciling(Boolean reconciling) {
         this.reconciling = reconciling;
         return this;
@@ -227,6 +246,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public GoogleCloudRunV2Job withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -238,6 +258,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public GoogleCloudRunV2ExecutionTemplate template;
+
     public GoogleCloudRunV2Job withTemplate(GoogleCloudRunV2ExecutionTemplate template) {
         this.template = template;
         return this;
@@ -249,6 +270,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalCondition")
     public GoogleCloudRunV2Condition terminalCondition;
+
     public GoogleCloudRunV2Job withTerminalCondition(GoogleCloudRunV2Condition terminalCondition) {
         this.terminalCondition = terminalCondition;
         return this;
@@ -260,6 +282,7 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public GoogleCloudRunV2Job withUid(String uid) {
         this.uid = uid;
         return this;
@@ -271,9 +294,11 @@ public class GoogleCloudRunV2Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudRunV2Job withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudRunV2Job(){}
 }

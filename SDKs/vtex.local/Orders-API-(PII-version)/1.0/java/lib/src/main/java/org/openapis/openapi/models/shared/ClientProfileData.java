@@ -12,6 +12,7 @@ public class ClientProfileData {
      */
     @JsonProperty("corporateDocument")
     public String corporateDocument;
+
     public ClientProfileData withCorporateDocument(String corporateDocument) {
         this.corporateDocument = corporateDocument;
         return this;
@@ -22,6 +23,7 @@ public class ClientProfileData {
      */
     @JsonProperty("corporateName")
     public String corporateName;
+
     public ClientProfileData withCorporateName(String corporateName) {
         this.corporateName = corporateName;
         return this;
@@ -32,6 +34,7 @@ public class ClientProfileData {
      */
     @JsonProperty("corporatePhone")
     public String corporatePhone;
+
     public ClientProfileData withCorporatePhone(String corporatePhone) {
         this.corporatePhone = corporatePhone;
         return this;
@@ -42,6 +45,7 @@ public class ClientProfileData {
      */
     @JsonProperty("customerClass")
     public String customerClass;
+
     public ClientProfileData withCustomerClass(String customerClass) {
         this.customerClass = customerClass;
         return this;
@@ -52,6 +56,7 @@ public class ClientProfileData {
      */
     @JsonProperty("document")
     public String document;
+
     public ClientProfileData withDocument(String document) {
         this.document = document;
         return this;
@@ -62,6 +67,7 @@ public class ClientProfileData {
      */
     @JsonProperty("documentType")
     public String documentType;
+
     public ClientProfileData withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -72,6 +78,7 @@ public class ClientProfileData {
      */
     @JsonProperty("email")
     public String email;
+
     public ClientProfileData withEmail(String email) {
         this.email = email;
         return this;
@@ -82,6 +89,7 @@ public class ClientProfileData {
      */
     @JsonProperty("firstName")
     public String firstName;
+
     public ClientProfileData withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -92,6 +100,7 @@ public class ClientProfileData {
      */
     @JsonProperty("id")
     public String id;
+
     public ClientProfileData withId(String id) {
         this.id = id;
         return this;
@@ -102,6 +111,7 @@ public class ClientProfileData {
      */
     @JsonProperty("isCorporate")
     public Boolean isCorporate;
+
     public ClientProfileData withIsCorporate(Boolean isCorporate) {
         this.isCorporate = isCorporate;
         return this;
@@ -112,6 +122,7 @@ public class ClientProfileData {
      */
     @JsonProperty("lastName")
     public String lastName;
+
     public ClientProfileData withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -122,6 +133,7 @@ public class ClientProfileData {
      */
     @JsonProperty("phone")
     public String phone;
+
     public ClientProfileData withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -132,6 +144,7 @@ public class ClientProfileData {
      */
     @JsonProperty("stateInscription")
     public String stateInscription;
+
     public ClientProfileData withStateInscription(String stateInscription) {
         this.stateInscription = stateInscription;
         return this;
@@ -142,6 +155,7 @@ public class ClientProfileData {
      */
     @JsonProperty("tradeName")
     public String tradeName;
+
     public ClientProfileData withTradeName(String tradeName) {
         this.tradeName = tradeName;
         return this;
@@ -152,9 +166,27 @@ public class ClientProfileData {
      */
     @JsonProperty("userProfileId")
     public String userProfileId;
+
     public ClientProfileData withUserProfileId(String userProfileId) {
         this.userProfileId = userProfileId;
         return this;
     }
     
+    public ClientProfileData(@JsonProperty("corporateDocument") String corporateDocument, @JsonProperty("corporateName") String corporateName, @JsonProperty("corporatePhone") String corporatePhone, @JsonProperty("customerClass") String customerClass, @JsonProperty("document") String document, @JsonProperty("documentType") String documentType, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("id") String id, @JsonProperty("isCorporate") Boolean isCorporate, @JsonProperty("lastName") String lastName, @JsonProperty("phone") String phone, @JsonProperty("stateInscription") String stateInscription, @JsonProperty("tradeName") String tradeName, @JsonProperty("userProfileId") String userProfileId) {
+        this.corporateDocument = corporateDocument;
+        this.corporateName = corporateName;
+        this.corporatePhone = corporatePhone;
+        this.customerClass = customerClass;
+        this.document = document;
+        this.documentType = documentType;
+        this.email = email;
+        this.firstName = firstName;
+        this.id = id;
+        this.isCorporate = isCorporate;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.stateInscription = stateInscription;
+        this.tradeName = tradeName;
+        this.userProfileId = userProfileId;
+  }
 }

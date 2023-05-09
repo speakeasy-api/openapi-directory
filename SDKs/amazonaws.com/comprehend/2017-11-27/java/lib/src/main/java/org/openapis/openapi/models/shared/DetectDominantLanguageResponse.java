@@ -15,9 +15,11 @@ public class DetectDominantLanguageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Languages")
     public DominantLanguage[] languages;
+
     public DetectDominantLanguageResponse withLanguages(DominantLanguage[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public DetectDominantLanguageResponse(){}
 }

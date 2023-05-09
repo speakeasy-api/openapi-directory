@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ascending")
     public Boolean ascending;
+
     public ItemsUpdate200ApplicationJSONItemsOrdination withAscending(Boolean ascending) {
         this.ascending = ascending;
         return this;
@@ -29,9 +30,11 @@ public class ItemsUpdate200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public String criteria;
+
     public ItemsUpdate200ApplicationJSONItemsOrdination withCriteria(String criteria) {
         this.criteria = criteria;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONItemsOrdination(){}
 }

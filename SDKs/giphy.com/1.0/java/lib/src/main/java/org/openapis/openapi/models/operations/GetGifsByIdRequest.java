@@ -12,9 +12,11 @@ public class GetGifsByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String ids;
+
     public GetGifsByIdRequest withIds(String ids) {
         this.ids = ids;
         return this;
     }
     
+    public GetGifsByIdRequest(){}
 }

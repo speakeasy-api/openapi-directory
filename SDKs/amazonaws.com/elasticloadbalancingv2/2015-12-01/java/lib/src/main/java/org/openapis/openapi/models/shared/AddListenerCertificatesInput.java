@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AddListenerCertificatesInput {
     
     public Certificate[] certificates;
+
     public AddListenerCertificatesInput withCertificates(Certificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -16,9 +17,14 @@ public class AddListenerCertificatesInput {
     
     
     public String listenerArn;
+
     public AddListenerCertificatesInput withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
     }
     
+    public AddListenerCertificatesInput(@JsonProperty("Certificates") Certificate[] certificates, @JsonProperty("ListenerArn") String listenerArn) {
+        this.certificates = certificates;
+        this.listenerArn = listenerArn;
+  }
 }

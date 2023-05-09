@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAssetsRequest {
@@ -12,6 +13,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filterBy")
     public String filterBy;
+
     public GetAssetsRequest withFilterBy(String filterBy) {
         this.filterBy = filterBy;
         return this;
@@ -22,6 +24,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public GetAssetsOrderByEnum orderBy;
+
     public GetAssetsRequest withOrderBy(GetAssetsOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -32,6 +35,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetAssetsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public GetAssetsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,6 +57,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public GetAssetsSortDirectionEnum sortDirection;
+
     public GetAssetsRequest withSortDirection(GetAssetsSortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -62,6 +68,7 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public org.openapis.openapi.models.shared.AssetStatusQueryParamEnum status;
+
     public GetAssetsRequest withStatus(org.openapis.openapi.models.shared.AssetStatusQueryParamEnum status) {
         this.status = status;
         return this;
@@ -72,9 +79,14 @@ public class GetAssetsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetAssetsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetAssetsRequest(@JsonProperty("status") org.openapis.openapi.models.shared.AssetStatusQueryParamEnum status, @JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.status = status;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

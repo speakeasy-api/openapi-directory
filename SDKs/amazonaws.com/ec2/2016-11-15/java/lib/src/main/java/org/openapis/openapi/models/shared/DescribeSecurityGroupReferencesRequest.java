@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeSecurityGroupReferencesRequest {
     
     public Boolean dryRun;
+
     public DescribeSecurityGroupReferencesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DescribeSecurityGroupReferencesRequest {
     
     
     public String[] groupId;
+
     public DescribeSecurityGroupReferencesRequest withGroupId(String[] groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public DescribeSecurityGroupReferencesRequest(@JsonProperty("GroupId") String[] groupId) {
+        this.groupId = groupId;
+  }
 }

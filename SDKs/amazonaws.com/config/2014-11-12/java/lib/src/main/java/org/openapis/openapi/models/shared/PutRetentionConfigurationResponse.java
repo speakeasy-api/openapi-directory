@@ -15,9 +15,11 @@ public class PutRetentionConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetentionConfiguration")
     public RetentionConfiguration retentionConfiguration;
+
     public PutRetentionConfigurationResponse withRetentionConfiguration(RetentionConfiguration retentionConfiguration) {
         this.retentionConfiguration = retentionConfiguration;
         return this;
     }
     
+    public PutRetentionConfigurationResponse(){}
 }

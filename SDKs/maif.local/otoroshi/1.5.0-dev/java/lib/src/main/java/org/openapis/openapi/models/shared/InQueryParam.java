@@ -15,6 +15,7 @@ public class InQueryParam {
      */
     @JsonProperty("name")
     public String name;
+
     public InQueryParam withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,14 @@ public class InQueryParam {
      */
     @JsonProperty("type")
     public String type;
+
     public InQueryParam withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InQueryParam(@JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.name = name;
+        this.type = type;
+  }
 }

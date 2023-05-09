@@ -15,6 +15,7 @@ public class CreateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultVariation")
     public String defaultVariation;
+
     public CreateFeatureRequestBody withDefaultVariation(String defaultVariation) {
         this.defaultVariation = defaultVariation;
         return this;
@@ -26,6 +27,7 @@ public class CreateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFeatureRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class CreateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityOverrides")
     public java.util.Map<String, String> entityOverrides;
+
     public CreateFeatureRequestBody withEntityOverrides(java.util.Map<String, String> entityOverrides) {
         this.entityOverrides = entityOverrides;
         return this;
@@ -48,6 +51,7 @@ public class CreateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationStrategy")
     public CreateFeatureRequestBodyEvaluationStrategyEnum evaluationStrategy;
+
     public CreateFeatureRequestBody withEvaluationStrategy(CreateFeatureRequestBodyEvaluationStrategyEnum evaluationStrategy) {
         this.evaluationStrategy = evaluationStrategy;
         return this;
@@ -58,6 +62,7 @@ public class CreateFeatureRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFeatureRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -69,6 +74,7 @@ public class CreateFeatureRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFeatureRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -79,9 +85,14 @@ public class CreateFeatureRequestBody {
      */
     @JsonProperty("variations")
     public org.openapis.openapi.models.shared.VariationConfig[] variations;
+
     public CreateFeatureRequestBody withVariations(org.openapis.openapi.models.shared.VariationConfig[] variations) {
         this.variations = variations;
         return this;
     }
     
+    public CreateFeatureRequestBody(@JsonProperty("name") String name, @JsonProperty("variations") org.openapis.openapi.models.shared.VariationConfig[] variations) {
+        this.name = name;
+        this.variations = variations;
+  }
 }

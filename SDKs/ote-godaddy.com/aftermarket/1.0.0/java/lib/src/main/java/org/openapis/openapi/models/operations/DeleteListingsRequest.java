@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteListingsRequest {
@@ -12,9 +13,13 @@ public class DeleteListingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=domains")
     public String[] domains;
+
     public DeleteListingsRequest withDomains(String[] domains) {
         this.domains = domains;
         return this;
     }
     
+    public DeleteListingsRequest(@JsonProperty("domains") String[] domains) {
+        this.domains = domains;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChatHeadUsingPOSTResponse {
     
     public String contentType;
+
     public GetChatHeadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetChatHeadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetChatHeadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetChatHeadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChatHeadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetChatHeadUsingPOSTResponse {
      */
     
     public GetChatHeadUsingPOST200ApplicationJSON getChatHeadUsingPOST200ApplicationJSONObject;
+
     public GetChatHeadUsingPOSTResponse withGetChatHeadUsingPOST200ApplicationJSONObject(GetChatHeadUsingPOST200ApplicationJSON getChatHeadUsingPOST200ApplicationJSONObject) {
         this.getChatHeadUsingPOST200ApplicationJSONObject = getChatHeadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetChatHeadUsingPOSTResponse {
      */
     
     public GetChatHeadUsingPOST400ApplicationJSON getChatHeadUsingPOST400ApplicationJSONObject;
+
     public GetChatHeadUsingPOSTResponse withGetChatHeadUsingPOST400ApplicationJSONObject(GetChatHeadUsingPOST400ApplicationJSON getChatHeadUsingPOST400ApplicationJSONObject) {
         this.getChatHeadUsingPOST400ApplicationJSONObject = getChatHeadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetChatHeadUsingPOSTResponse {
      */
     
     public GetChatHeadUsingPOST401ApplicationJSON getChatHeadUsingPOST401ApplicationJSONObject;
+
     public GetChatHeadUsingPOSTResponse withGetChatHeadUsingPOST401ApplicationJSONObject(GetChatHeadUsingPOST401ApplicationJSON getChatHeadUsingPOST401ApplicationJSONObject) {
         this.getChatHeadUsingPOST401ApplicationJSONObject = getChatHeadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetChatHeadUsingPOSTResponse {
      */
     
     public GetChatHeadUsingPOST500ApplicationJSON getChatHeadUsingPOST500ApplicationJSONObject;
+
     public GetChatHeadUsingPOSTResponse withGetChatHeadUsingPOST500ApplicationJSONObject(GetChatHeadUsingPOST500ApplicationJSON getChatHeadUsingPOST500ApplicationJSONObject) {
         this.getChatHeadUsingPOST500ApplicationJSONObject = getChatHeadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetChatHeadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

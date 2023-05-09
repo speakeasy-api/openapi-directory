@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessTrustProvidersRequest {
     
     public Boolean dryRun;
+
     public DescribeVerifiedAccessTrustProvidersRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVerifiedAccessTrustProvidersRequest {
     
     
     public DescribeVerifiedAccessTrustProvidersRequestFilters[] filters;
+
     public DescribeVerifiedAccessTrustProvidersRequest withFilters(DescribeVerifiedAccessTrustProvidersRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVerifiedAccessTrustProvidersRequest {
     
     
     public Long maxResults;
+
     public DescribeVerifiedAccessTrustProvidersRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVerifiedAccessTrustProvidersRequest {
     
     
     public String nextToken;
+
     public DescribeVerifiedAccessTrustProvidersRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVerifiedAccessTrustProvidersRequest {
     
     
     public String[] verifiedAccessTrustProviderIds;
+
     public DescribeVerifiedAccessTrustProvidersRequest withVerifiedAccessTrustProviderIds(String[] verifiedAccessTrustProviderIds) {
         this.verifiedAccessTrustProviderIds = verifiedAccessTrustProviderIds;
         return this;
     }
     
+    public DescribeVerifiedAccessTrustProvidersRequest(){}
 }

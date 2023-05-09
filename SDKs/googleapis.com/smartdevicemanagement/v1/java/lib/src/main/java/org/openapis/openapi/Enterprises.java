@@ -61,11 +61,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse() {{
+        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesExecuteCommandResponse(contentType, httpRes.statusCode()) {{
             googleHomeEnterpriseSdmV1ExecuteDeviceCommandResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse() {{
+        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesDevicesListResponse(contentType, httpRes.statusCode()) {{
             googleHomeEnterpriseSdmV1ListDevicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse() {{
+        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresListResponse(contentType, httpRes.statusCode()) {{
             googleHomeEnterpriseSdmV1ListStructuresResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse() {{
+        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsGetResponse(contentType, httpRes.statusCode()) {{
             googleHomeEnterpriseSdmV1Room = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Enterprises {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse() {{
+        org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse res = new org.openapis.openapi.models.operations.SmartdevicemanagementEnterprisesStructuresRoomsListResponse(contentType, httpRes.statusCode()) {{
             googleHomeEnterpriseSdmV1ListRoomsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

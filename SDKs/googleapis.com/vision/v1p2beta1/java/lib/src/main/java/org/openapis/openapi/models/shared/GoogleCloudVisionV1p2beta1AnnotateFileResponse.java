@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1AnnotateFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public GoogleCloudVisionV1p2beta1AnnotateFileResponse withError(Status error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1AnnotateFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputConfig")
     public GoogleCloudVisionV1p2beta1InputConfig inputConfig;
+
     public GoogleCloudVisionV1p2beta1AnnotateFileResponse withInputConfig(GoogleCloudVisionV1p2beta1InputConfig inputConfig) {
         this.inputConfig = inputConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudVisionV1p2beta1AnnotateFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public GoogleCloudVisionV1p2beta1AnnotateImageResponse[] responses;
+
     public GoogleCloudVisionV1p2beta1AnnotateFileResponse withResponses(GoogleCloudVisionV1p2beta1AnnotateImageResponse[] responses) {
         this.responses = responses;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudVisionV1p2beta1AnnotateFileResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPages")
     public Integer totalPages;
+
     public GoogleCloudVisionV1p2beta1AnnotateFileResponse withTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1AnnotateFileResponse(){}
 }

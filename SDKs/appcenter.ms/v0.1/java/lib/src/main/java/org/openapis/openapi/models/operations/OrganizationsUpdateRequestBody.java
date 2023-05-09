@@ -18,6 +18,7 @@ public class OrganizationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public OrganizationsUpdateRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class OrganizationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrganizationsUpdateRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public OrganizationsUpdateRequestBody(){}
 }

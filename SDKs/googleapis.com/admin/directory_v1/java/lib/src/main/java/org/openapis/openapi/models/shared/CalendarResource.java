@@ -18,6 +18,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildingId")
     public String buildingId;
+
     public CalendarResource withBuildingId(String buildingId) {
         this.buildingId = buildingId;
         return this;
@@ -29,6 +30,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public Integer capacity;
+
     public CalendarResource withCapacity(Integer capacity) {
         this.capacity = capacity;
         return this;
@@ -40,6 +42,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etags")
     public String etags;
+
     public CalendarResource withEtags(String etags) {
         this.etags = etags;
         return this;
@@ -51,6 +54,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("featureInstances")
     public Object featureInstances;
+
     public CalendarResource withFeatureInstances(Object featureInstances) {
         this.featureInstances = featureInstances;
         return this;
@@ -62,6 +66,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorName")
     public String floorName;
+
     public CalendarResource withFloorName(String floorName) {
         this.floorName = floorName;
         return this;
@@ -73,6 +78,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floorSection")
     public String floorSection;
+
     public CalendarResource withFloorSection(String floorSection) {
         this.floorSection = floorSection;
         return this;
@@ -84,6 +90,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generatedResourceName")
     public String generatedResourceName;
+
     public CalendarResource withGeneratedResourceName(String generatedResourceName) {
         this.generatedResourceName = generatedResourceName;
         return this;
@@ -95,6 +102,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CalendarResource withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceCategory")
     public String resourceCategory;
+
     public CalendarResource withResourceCategory(String resourceCategory) {
         this.resourceCategory = resourceCategory;
         return this;
@@ -117,6 +126,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceDescription")
     public String resourceDescription;
+
     public CalendarResource withResourceDescription(String resourceDescription) {
         this.resourceDescription = resourceDescription;
         return this;
@@ -128,6 +138,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceEmail")
     public String resourceEmail;
+
     public CalendarResource withResourceEmail(String resourceEmail) {
         this.resourceEmail = resourceEmail;
         return this;
@@ -139,6 +150,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceId")
     public String resourceId;
+
     public CalendarResource withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -150,6 +162,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public CalendarResource withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -161,6 +174,7 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public String resourceType;
+
     public CalendarResource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -172,9 +186,11 @@ public class CalendarResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userVisibleDescription")
     public String userVisibleDescription;
+
     public CalendarResource withUserVisibleDescription(String userVisibleDescription) {
         this.userVisibleDescription = userVisibleDescription;
         return this;
     }
     
+    public CalendarResource(){}
 }

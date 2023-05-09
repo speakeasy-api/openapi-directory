@@ -12,9 +12,13 @@ public class UploadFunctionRequestBody {
      */
     @JsonProperty("FunctionZip")
     public String functionZip;
+
     public UploadFunctionRequestBody withFunctionZip(String functionZip) {
         this.functionZip = functionZip;
         return this;
     }
     
+    public UploadFunctionRequestBody(@JsonProperty("FunctionZip") String functionZip) {
+        this.functionZip = functionZip;
+  }
 }

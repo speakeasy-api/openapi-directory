@@ -15,6 +15,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Activities")
     public java.util.Map<String, org.openapis.openapi.models.shared.Activity> activities;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withActivities(java.util.Map<String, org.openapis.openapi.models.shared.Activity> activities) {
         this.activities = activities;
         return this;
@@ -23,6 +24,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClosedDays")
     public org.openapis.openapi.models.shared.ClosedDays closedDays;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withClosedDays(org.openapis.openapi.models.shared.ClosedDays closedDays) {
         this.closedDays = closedDays;
         return this;
@@ -31,6 +33,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -39,6 +42,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JourneyChannelSettings")
     public org.openapis.openapi.models.shared.JourneyChannelSettings journeyChannelSettings;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withJourneyChannelSettings(org.openapis.openapi.models.shared.JourneyChannelSettings journeyChannelSettings) {
         this.journeyChannelSettings = journeyChannelSettings;
         return this;
@@ -47,6 +51,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -55,6 +60,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limits")
     public org.openapis.openapi.models.shared.JourneyLimits limits;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withLimits(org.openapis.openapi.models.shared.JourneyLimits limits) {
         this.limits = limits;
         return this;
@@ -63,6 +69,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalTime")
     public Boolean localTime;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withLocalTime(Boolean localTime) {
         this.localTime = localTime;
         return this;
@@ -71,6 +78,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenHours")
     public org.openapis.openapi.models.shared.OpenHours openHours;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withOpenHours(org.openapis.openapi.models.shared.OpenHours openHours) {
         this.openHours = openHours;
         return this;
@@ -87,6 +96,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuietTime")
     public org.openapis.openapi.models.shared.QuietTime quietTime;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withQuietTime(org.openapis.openapi.models.shared.QuietTime quietTime) {
         this.quietTime = quietTime;
         return this;
@@ -95,6 +105,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshFrequency")
     public String refreshFrequency;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withRefreshFrequency(String refreshFrequency) {
         this.refreshFrequency = refreshFrequency;
         return this;
@@ -103,6 +114,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefreshOnSegmentUpdate")
     public Boolean refreshOnSegmentUpdate;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withRefreshOnSegmentUpdate(Boolean refreshOnSegmentUpdate) {
         this.refreshOnSegmentUpdate = refreshOnSegmentUpdate;
         return this;
@@ -111,6 +123,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public org.openapis.openapi.models.shared.JourneySchedule schedule;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withSchedule(org.openapis.openapi.models.shared.JourneySchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -119,6 +132,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingSchedule")
     public Boolean sendingSchedule;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withSendingSchedule(Boolean sendingSchedule) {
         this.sendingSchedule = sendingSchedule;
         return this;
@@ -127,6 +141,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartActivity")
     public String startActivity;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withStartActivity(String startActivity) {
         this.startActivity = startActivity;
         return this;
@@ -135,6 +150,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartCondition")
     public org.openapis.openapi.models.shared.StartCondition startCondition;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withStartCondition(org.openapis.openapi.models.shared.StartCondition startCondition) {
         this.startCondition = startCondition;
         return this;
@@ -143,6 +159,7 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public org.openapis.openapi.models.shared.StateEnum state;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withState(org.openapis.openapi.models.shared.StateEnum state) {
         this.state = state;
         return this;
@@ -151,9 +168,11 @@ public class CreateJourneyRequestBodyWriteJourneyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WaitForQuietTime")
     public Boolean waitForQuietTime;
+
     public CreateJourneyRequestBodyWriteJourneyRequest withWaitForQuietTime(Boolean waitForQuietTime) {
         this.waitForQuietTime = waitForQuietTime;
         return this;
     }
     
+    public CreateJourneyRequestBodyWriteJourneyRequest(){}
 }

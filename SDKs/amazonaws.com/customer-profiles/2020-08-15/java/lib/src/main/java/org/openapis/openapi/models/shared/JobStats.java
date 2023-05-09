@@ -15,6 +15,7 @@ public class JobStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfMatchesFound")
     public Long numberOfMatchesFound;
+
     public JobStats withNumberOfMatchesFound(Long numberOfMatchesFound) {
         this.numberOfMatchesFound = numberOfMatchesFound;
         return this;
@@ -23,6 +24,7 @@ public class JobStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfMergesDone")
     public Long numberOfMergesDone;
+
     public JobStats withNumberOfMergesDone(Long numberOfMergesDone) {
         this.numberOfMergesDone = numberOfMergesDone;
         return this;
@@ -31,9 +33,11 @@ public class JobStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfProfilesReviewed")
     public Long numberOfProfilesReviewed;
+
     public JobStats withNumberOfProfilesReviewed(Long numberOfProfilesReviewed) {
         this.numberOfProfilesReviewed = numberOfProfilesReviewed;
         return this;
     }
     
+    public JobStats(){}
 }

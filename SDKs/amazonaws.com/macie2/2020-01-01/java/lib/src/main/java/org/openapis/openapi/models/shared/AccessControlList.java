@@ -15,6 +15,7 @@ public class AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsPublicReadAccess")
     public Boolean allowsPublicReadAccess;
+
     public AccessControlList withAllowsPublicReadAccess(Boolean allowsPublicReadAccess) {
         this.allowsPublicReadAccess = allowsPublicReadAccess;
         return this;
@@ -23,9 +24,11 @@ public class AccessControlList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsPublicWriteAccess")
     public Boolean allowsPublicWriteAccess;
+
     public AccessControlList withAllowsPublicWriteAccess(Boolean allowsPublicWriteAccess) {
         this.allowsPublicWriteAccess = allowsPublicWriteAccess;
         return this;
     }
     
+    public AccessControlList(){}
 }

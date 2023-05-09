@@ -15,9 +15,11 @@ public class SecurityPolicyRulePreconfiguredWafConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusions")
     public SecurityPolicyRulePreconfiguredWafConfigExclusion[] exclusions;
+
     public SecurityPolicyRulePreconfiguredWafConfig withExclusions(SecurityPolicyRulePreconfiguredWafConfigExclusion[] exclusions) {
         this.exclusions = exclusions;
         return this;
     }
     
+    public SecurityPolicyRulePreconfiguredWafConfig(){}
 }

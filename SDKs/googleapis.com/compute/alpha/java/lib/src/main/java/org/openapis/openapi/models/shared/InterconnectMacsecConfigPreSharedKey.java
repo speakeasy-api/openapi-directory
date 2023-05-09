@@ -18,6 +18,7 @@ public class InterconnectMacsecConfigPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cak")
     public String cak;
+
     public InterconnectMacsecConfigPreSharedKey withCak(String cak) {
         this.cak = cak;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectMacsecConfigPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ckn")
     public String ckn;
+
     public InterconnectMacsecConfigPreSharedKey withCkn(String ckn) {
         this.ckn = ckn;
         return this;
@@ -40,6 +42,7 @@ public class InterconnectMacsecConfigPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InterconnectMacsecConfigPreSharedKey withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class InterconnectMacsecConfigPreSharedKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public InterconnectMacsecConfigPreSharedKey withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public InterconnectMacsecConfigPreSharedKey(){}
 }

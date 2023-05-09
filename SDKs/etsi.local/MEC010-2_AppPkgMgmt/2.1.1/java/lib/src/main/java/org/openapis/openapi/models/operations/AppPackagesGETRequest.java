@@ -12,6 +12,7 @@ public class AppPackagesGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=all_fields")
     public String allFields;
+
     public AppPackagesGETRequest withAllFields(String allFields) {
         this.allFields = allFields;
         return this;
@@ -22,6 +23,7 @@ public class AppPackagesGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_default")
     public String excludeDefault;
+
     public AppPackagesGETRequest withExcludeDefault(String excludeDefault) {
         this.excludeDefault = excludeDefault;
         return this;
@@ -32,6 +34,7 @@ public class AppPackagesGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_fields")
     public String excludeFields;
+
     public AppPackagesGETRequest withExcludeFields(String excludeFields) {
         this.excludeFields = excludeFields;
         return this;
@@ -42,6 +45,7 @@ public class AppPackagesGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppPackagesGETRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -52,9 +56,11 @@ public class AppPackagesGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public AppPackagesGETRequest withFilter(String filter) {
         this.filter = filter;
         return this;
     }
     
+    public AppPackagesGETRequest(){}
 }

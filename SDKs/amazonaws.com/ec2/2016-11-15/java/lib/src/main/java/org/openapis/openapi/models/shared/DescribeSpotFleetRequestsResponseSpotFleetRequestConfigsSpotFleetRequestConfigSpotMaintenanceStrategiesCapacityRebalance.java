@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum replacementStrategy;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance withReplacementStrategy(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalanceReplacementStrategyEnum replacementStrategy) {
         this.replacementStrategy = replacementStrategy;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRe
     
     
     public Long terminationDelay;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance withTerminationDelay(Long terminationDelay) {
         this.terminationDelay = terminationDelay;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance(){}
 }

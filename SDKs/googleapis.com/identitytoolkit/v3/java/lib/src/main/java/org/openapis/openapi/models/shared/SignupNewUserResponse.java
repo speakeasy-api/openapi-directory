@@ -18,6 +18,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SignupNewUserResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SignupNewUserResponse withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public String expiresIn;
+
     public SignupNewUserResponse withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -51,6 +54,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public SignupNewUserResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -62,6 +66,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SignupNewUserResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public SignupNewUserResponse withLocalId(String localId) {
         this.localId = localId;
         return this;
@@ -84,9 +90,11 @@ public class SignupNewUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public SignupNewUserResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public SignupNewUserResponse(){}
 }

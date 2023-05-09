@@ -15,9 +15,13 @@ public class AzureSubscriptionLinkForAppRequestBody {
      */
     @JsonProperty("subscription_id")
     public String subscriptionId;
+
     public AzureSubscriptionLinkForAppRequestBody withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public AzureSubscriptionLinkForAppRequestBody(@JsonProperty("subscription_id") String subscriptionId) {
+        this.subscriptionId = subscriptionId;
+  }
 }

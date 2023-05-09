@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
@@ -12,6 +13,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleIamV1SetIamPolicyRequest googleIamV1SetIamPolicyRequest;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withGoogleIamV1SetIamPolicyRequest(org.openapis.openapi.models.shared.GoogleIamV1SetIamPolicyRequest googleIamV1SetIamPolicyRequest) {
         this.googleIamV1SetIamPolicyRequest = googleIamV1SetIamPolicyRequest;
         return this;
@@ -29,6 +32,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -110,6 +121,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -120,6 +132,7 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -130,9 +143,13 @@ public class CloudprivatecatalogproducerCatalogsSetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudprivatecatalogproducerCatalogsSetIamPolicyRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

@@ -53,11 +53,9 @@ public class SyslogServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworkSyslogServersResponse res = new org.openapis.openapi.models.operations.GetNetworkSyslogServersResponse() {{
+        org.openapis.openapi.models.operations.GetNetworkSyslogServersResponse res = new org.openapis.openapi.models.operations.GetNetworkSyslogServersResponse(contentType, httpRes.statusCode()) {{
             getNetworkSyslogServers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class SyslogServers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNetworkSyslogServersResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSyslogServersResponse() {{
+        org.openapis.openapi.models.operations.UpdateNetworkSyslogServersResponse res = new org.openapis.openapi.models.operations.UpdateNetworkSyslogServersResponse(contentType, httpRes.statusCode()) {{
             updateNetworkSyslogServers200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

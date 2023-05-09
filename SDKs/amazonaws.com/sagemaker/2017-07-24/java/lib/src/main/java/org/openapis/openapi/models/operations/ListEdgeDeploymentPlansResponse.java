@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListEdgeDeploymentPlansResponse {
     
     public String contentType;
+
     public ListEdgeDeploymentPlansResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListEdgeDeploymentPlansResponse {
      */
     
     public org.openapis.openapi.models.shared.ListEdgeDeploymentPlansResponse listEdgeDeploymentPlansResponse;
+
     public ListEdgeDeploymentPlansResponse withListEdgeDeploymentPlansResponse(org.openapis.openapi.models.shared.ListEdgeDeploymentPlansResponse listEdgeDeploymentPlansResponse) {
         this.listEdgeDeploymentPlansResponse = listEdgeDeploymentPlansResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListEdgeDeploymentPlansResponse {
     
     
     public Integer statusCode;
+
     public ListEdgeDeploymentPlansResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListEdgeDeploymentPlansResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListEdgeDeploymentPlansResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListEdgeDeploymentPlansResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

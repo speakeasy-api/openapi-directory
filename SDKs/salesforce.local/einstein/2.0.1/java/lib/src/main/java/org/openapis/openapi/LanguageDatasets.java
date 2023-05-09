@@ -58,11 +58,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDatasetResponse res = new org.openapis.openapi.models.operations.DeleteDatasetResponse() {{
+        org.openapis.openapi.models.operations.DeleteDatasetResponse res = new org.openapis.openapi.models.operations.DeleteDatasetResponse(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse() {{
+        org.openapis.openapi.models.operations.GetResponse res = new org.openapis.openapi.models.operations.GetResponse(contentType, httpRes.statusCode()) {{
             deletionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,11 +136,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDatasetResponse res = new org.openapis.openapi.models.operations.GetDatasetResponse() {{
+        org.openapis.openapi.models.operations.GetDatasetResponse res = new org.openapis.openapi.models.operations.GetDatasetResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDatasetsResponse res = new org.openapis.openapi.models.operations.ListDatasetsResponse() {{
+        org.openapis.openapi.models.operations.ListDatasetsResponse res = new org.openapis.openapi.models.operations.ListDatasetsResponse(contentType, httpRes.statusCode()) {{
             datasetList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +222,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadDatasetAsyncResponse res = new org.openapis.openapi.models.operations.UploadDatasetAsyncResponse() {{
+        org.openapis.openapi.models.operations.UploadDatasetAsyncResponse res = new org.openapis.openapi.models.operations.UploadDatasetAsyncResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -273,11 +263,9 @@ public class LanguageDatasets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UploadDatasetSyncResponse res = new org.openapis.openapi.models.operations.UploadDatasetSyncResponse() {{
+        org.openapis.openapi.models.operations.UploadDatasetSyncResponse res = new org.openapis.openapi.models.operations.UploadDatasetSyncResponse(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

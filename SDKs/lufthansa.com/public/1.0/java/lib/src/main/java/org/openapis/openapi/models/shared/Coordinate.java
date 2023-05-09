@@ -18,6 +18,7 @@ public class Coordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Latitude")
     public Float latitude;
+
     public Coordinate withLatitude(Float latitude) {
         this.latitude = latitude;
         return this;
@@ -29,9 +30,11 @@ public class Coordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Longitude")
     public Float longitude;
+
     public Coordinate withLongitude(Float longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public Coordinate(){}
 }

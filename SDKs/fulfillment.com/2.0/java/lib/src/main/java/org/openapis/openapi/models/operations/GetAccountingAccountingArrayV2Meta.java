@@ -12,9 +12,11 @@ public class GetAccountingAccountingArrayV2Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public GetAccountingAccountingArrayV2MetaPaginationV2 pagination;
+
     public GetAccountingAccountingArrayV2Meta withPagination(GetAccountingAccountingArrayV2MetaPaginationV2 pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2Meta(){}
 }

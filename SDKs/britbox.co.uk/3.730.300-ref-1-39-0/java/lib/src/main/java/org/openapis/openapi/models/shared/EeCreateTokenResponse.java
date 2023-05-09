@@ -18,6 +18,7 @@ public class EeCreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public EeCreateTokenResponse withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -26,6 +27,7 @@ public class EeCreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expiresIn")
     public Double expiresIn;
+
     public EeCreateTokenResponse withExpiresIn(Double expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -34,9 +36,11 @@ public class EeCreateTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenType")
     public String tokenType;
+
     public EeCreateTokenResponse withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public EeCreateTokenResponse(){}
 }

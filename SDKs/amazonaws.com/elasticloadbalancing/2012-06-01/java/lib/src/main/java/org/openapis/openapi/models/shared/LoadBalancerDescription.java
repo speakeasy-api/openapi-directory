@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class LoadBalancerDescription {
     
     public String[] availabilityZones;
+
     public LoadBalancerDescription withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -19,6 +20,7 @@ public class LoadBalancerDescription {
     
     
     public BackendServerDescription[] backendServerDescriptions;
+
     public LoadBalancerDescription withBackendServerDescriptions(BackendServerDescription[] backendServerDescriptions) {
         this.backendServerDescriptions = backendServerDescriptions;
         return this;
@@ -26,6 +28,7 @@ public class LoadBalancerDescription {
     
     
     public String canonicalHostedZoneName;
+
     public LoadBalancerDescription withCanonicalHostedZoneName(String canonicalHostedZoneName) {
         this.canonicalHostedZoneName = canonicalHostedZoneName;
         return this;
@@ -33,6 +36,7 @@ public class LoadBalancerDescription {
     
     
     public String canonicalHostedZoneNameID;
+
     public LoadBalancerDescription withCanonicalHostedZoneNameID(String canonicalHostedZoneNameID) {
         this.canonicalHostedZoneNameID = canonicalHostedZoneNameID;
         return this;
@@ -40,6 +44,7 @@ public class LoadBalancerDescription {
     
     
     public OffsetDateTime createdTime;
+
     public LoadBalancerDescription withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -47,6 +52,7 @@ public class LoadBalancerDescription {
     
     
     public String dnsName;
+
     public LoadBalancerDescription withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -54,6 +60,7 @@ public class LoadBalancerDescription {
     
     
     public HealthCheck healthCheck;
+
     public LoadBalancerDescription withHealthCheck(HealthCheck healthCheck) {
         this.healthCheck = healthCheck;
         return this;
@@ -61,6 +68,7 @@ public class LoadBalancerDescription {
     
     
     public Instance[] instances;
+
     public LoadBalancerDescription withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -68,6 +76,7 @@ public class LoadBalancerDescription {
     
     
     public ListenerDescription[] listenerDescriptions;
+
     public LoadBalancerDescription withListenerDescriptions(ListenerDescription[] listenerDescriptions) {
         this.listenerDescriptions = listenerDescriptions;
         return this;
@@ -75,6 +84,7 @@ public class LoadBalancerDescription {
     
     
     public String loadBalancerName;
+
     public LoadBalancerDescription withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -82,6 +92,7 @@ public class LoadBalancerDescription {
     
     
     public Policies policies;
+
     public LoadBalancerDescription withPolicies(Policies policies) {
         this.policies = policies;
         return this;
@@ -89,6 +100,7 @@ public class LoadBalancerDescription {
     
     
     public String scheme;
+
     public LoadBalancerDescription withScheme(String scheme) {
         this.scheme = scheme;
         return this;
@@ -96,6 +108,7 @@ public class LoadBalancerDescription {
     
     
     public String[] securityGroups;
+
     public LoadBalancerDescription withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -103,6 +116,7 @@ public class LoadBalancerDescription {
     
     
     public SourceSecurityGroup sourceSecurityGroup;
+
     public LoadBalancerDescription withSourceSecurityGroup(SourceSecurityGroup sourceSecurityGroup) {
         this.sourceSecurityGroup = sourceSecurityGroup;
         return this;
@@ -110,6 +124,7 @@ public class LoadBalancerDescription {
     
     
     public String[] subnets;
+
     public LoadBalancerDescription withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -117,9 +132,11 @@ public class LoadBalancerDescription {
     
     
     public String vpcId;
+
     public LoadBalancerDescription withVPCId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public LoadBalancerDescription(){}
 }

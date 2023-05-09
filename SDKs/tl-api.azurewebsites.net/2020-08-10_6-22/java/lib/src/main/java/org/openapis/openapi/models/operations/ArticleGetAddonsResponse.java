@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArticleGetAddonsResponse {
     
     public org.openapis.openapi.models.shared.ApiResponse apiResponse;
+
     public ArticleGetAddonsResponse withApiResponse(org.openapis.openapi.models.shared.ApiResponse apiResponse) {
         this.apiResponse = apiResponse;
         return this;
@@ -16,6 +18,7 @@ public class ArticleGetAddonsResponse {
     
     
     public String contentType;
+
     public ArticleGetAddonsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ArticleGetAddonsResponse {
     
     
     public org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfArticleSearchDTO defaultResponseDTOOfListOfArticleSearchDTO;
+
     public ArticleGetAddonsResponse withDefaultResponseDTOOfListOfArticleSearchDTO(org.openapis.openapi.models.shared.DefaultResponseDTOOfListOfArticleSearchDTO defaultResponseDTOOfListOfArticleSearchDTO) {
         this.defaultResponseDTOOfListOfArticleSearchDTO = defaultResponseDTOOfListOfArticleSearchDTO;
         return this;
@@ -30,6 +34,7 @@ public class ArticleGetAddonsResponse {
     
     
     public Integer statusCode;
+
     public ArticleGetAddonsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class ArticleGetAddonsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArticleGetAddonsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ArticleGetAddonsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
@@ -12,6 +13,7 @@ public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=after")
     public String after;
+
     public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withAfter(String after) {
         this.after = after;
         return this;
@@ -22,6 +24,7 @@ public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=before")
     public String before;
+
     public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withBefore(String before) {
         this.before = before;
         return this;
@@ -32,6 +35,7 @@ public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=posten")
     public Boolean posten;
+
     public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withPosten(Boolean posten) {
         this.posten = posten;
         return this;
@@ -42,9 +46,13 @@ public class GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=registrierkasseUuid")
     public String registrierkasseUuid;
+
     public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest withRegistrierkasseUuid(String registrierkasseUuid) {
         this.registrierkasseUuid = registrierkasseUuid;
         return this;
     }
     
+    public GetExportCsvRegistrierkassenRegistrierkasseUuidBelegeRequest(@JsonProperty("registrierkasseUuid") String registrierkasseUuid) {
+        this.registrierkasseUuid = registrierkasseUuid;
+  }
 }

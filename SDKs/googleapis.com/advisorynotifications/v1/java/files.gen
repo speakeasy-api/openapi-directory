@@ -37,6 +37,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOr
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListViewEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/AdvisorynotificationsOrganizationsLocationsNotificationsListResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1NotificationNotificationTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1Notification.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1Subject.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1TextLocalizationStateEnum.java
@@ -49,4 +50,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotifica
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudAdvisorynotificationsV1ListNotificationsResponse.java
+docs/sdk/README.md
+docs/organizations/README.md
 USAGE.md

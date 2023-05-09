@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateProvisioningArtifactResponse {
     
     public String contentType;
+
     public CreateProvisioningArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateProvisioningArtifactResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateProvisioningArtifactOutput createProvisioningArtifactOutput;
+
     public CreateProvisioningArtifactResponse withCreateProvisioningArtifactOutput(org.openapis.openapi.models.shared.CreateProvisioningArtifactOutput createProvisioningArtifactOutput) {
         this.createProvisioningArtifactOutput = createProvisioningArtifactOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateProvisioningArtifactResponse {
      */
     
     public Object invalidParametersException;
+
     public CreateProvisioningArtifactResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -39,6 +43,7 @@ public class CreateProvisioningArtifactResponse {
      */
     
     public Object limitExceededException;
+
     public CreateProvisioningArtifactResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateProvisioningArtifactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateProvisioningArtifactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateProvisioningArtifactResponse {
     
     
     public Integer statusCode;
+
     public CreateProvisioningArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateProvisioningArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateProvisioningArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateProvisioningArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

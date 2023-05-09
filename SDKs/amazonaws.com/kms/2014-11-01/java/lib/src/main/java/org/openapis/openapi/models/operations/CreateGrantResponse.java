@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGrantResponse {
     
     public String contentType;
+
     public CreateGrantResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateGrantResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateGrantResponse createGrantResponse;
+
     public CreateGrantResponse withCreateGrantResponse(org.openapis.openapi.models.shared.CreateGrantResponse createGrantResponse) {
         this.createGrantResponse = createGrantResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateGrantResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public CreateGrantResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -39,6 +43,7 @@ public class CreateGrantResponse {
      */
     
     public Object disabledException;
+
     public CreateGrantResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -49,6 +54,7 @@ public class CreateGrantResponse {
      */
     
     public Object invalidArnException;
+
     public CreateGrantResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class CreateGrantResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public CreateGrantResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -69,6 +76,7 @@ public class CreateGrantResponse {
      */
     
     public Object kmsInternalException;
+
     public CreateGrantResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class CreateGrantResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public CreateGrantResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class CreateGrantResponse {
      */
     
     public Object limitExceededException;
+
     public CreateGrantResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class CreateGrantResponse {
      */
     
     public Object notFoundException;
+
     public CreateGrantResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class CreateGrantResponse {
     
     
     public Integer statusCode;
+
     public CreateGrantResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class CreateGrantResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGrantResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateGrantResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class VerifyCapabilityWebhooks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_url")
     public VerifyCapabilityWebhooksStatusUrl statusUrl;
+
     public VerifyCapabilityWebhooks withStatusUrl(VerifyCapabilityWebhooksStatusUrl statusUrl) {
         this.statusUrl = statusUrl;
         return this;
     }
     
+    public VerifyCapabilityWebhooks(){}
 }

@@ -18,6 +18,7 @@ public class RolloutPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultRolloutTime")
     public String defaultRolloutTime;
+
     public RolloutPolicy withDefaultRolloutTime(String defaultRolloutTime) {
         this.defaultRolloutTime = defaultRolloutTime;
         return this;
@@ -29,9 +30,11 @@ public class RolloutPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationRolloutPolicies")
     public java.util.Map<String, String> locationRolloutPolicies;
+
     public RolloutPolicy withLocationRolloutPolicies(java.util.Map<String, String> locationRolloutPolicies) {
         this.locationRolloutPolicies = locationRolloutPolicies;
         return this;
     }
     
+    public RolloutPolicy(){}
 }

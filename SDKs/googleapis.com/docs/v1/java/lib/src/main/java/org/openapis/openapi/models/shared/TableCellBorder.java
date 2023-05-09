@@ -18,6 +18,7 @@ public class TableCellBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public OptionalColor color;
+
     public TableCellBorder withColor(OptionalColor color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class TableCellBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dashStyle")
     public TableCellBorderDashStyleEnum dashStyle;
+
     public TableCellBorder withDashStyle(TableCellBorderDashStyleEnum dashStyle) {
         this.dashStyle = dashStyle;
         return this;
@@ -40,9 +42,11 @@ public class TableCellBorder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Dimension width;
+
     public TableCellBorder withWidth(Dimension width) {
         this.width = width;
         return this;
     }
     
+    public TableCellBorder(){}
 }

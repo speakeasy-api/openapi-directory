@@ -15,6 +15,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public TextEventLinks links;
+
     public TextEvent withLinks(TextEventLinks links) {
         this.links = links;
         return this;
@@ -26,6 +27,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public TextEventBody body;
+
     public TextEvent withBody(TextEventBody body) {
         this.body = body;
         return this;
@@ -37,6 +39,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversation_id")
     public String conversationId;
+
     public TextEvent withConversationId(String conversationId) {
         this.conversationId = conversationId;
         return this;
@@ -48,6 +51,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public TextEvent withFrom(String from) {
         this.from = from;
         return this;
@@ -59,6 +63,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public TextEvent withId(Long id) {
         this.id = id;
         return this;
@@ -70,6 +75,7 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public TextEvent withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -81,9 +87,11 @@ public class TextEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public TextEvent withType(String type) {
         this.type = type;
         return this;
     }
     
+    public TextEvent(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OidcConfig {
     @JsonProperty("AuthorizationEndpoint")
     public String authorizationEndpoint;
+
     public OidcConfig withAuthorizationEndpoint(String authorizationEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class OidcConfig {
     
     @JsonProperty("ClientId")
     public String clientId;
+
     public OidcConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -26,6 +28,7 @@ public class OidcConfig {
     
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public OidcConfig withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -33,6 +36,7 @@ public class OidcConfig {
     
     @JsonProperty("Issuer")
     public String issuer;
+
     public OidcConfig withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -40,6 +44,7 @@ public class OidcConfig {
     
     @JsonProperty("JwksUri")
     public String jwksUri;
+
     public OidcConfig withJwksUri(String jwksUri) {
         this.jwksUri = jwksUri;
         return this;
@@ -47,6 +52,7 @@ public class OidcConfig {
     
     @JsonProperty("LogoutEndpoint")
     public String logoutEndpoint;
+
     public OidcConfig withLogoutEndpoint(String logoutEndpoint) {
         this.logoutEndpoint = logoutEndpoint;
         return this;
@@ -54,6 +60,7 @@ public class OidcConfig {
     
     @JsonProperty("TokenEndpoint")
     public String tokenEndpoint;
+
     public OidcConfig withTokenEndpoint(String tokenEndpoint) {
         this.tokenEndpoint = tokenEndpoint;
         return this;
@@ -61,9 +68,20 @@ public class OidcConfig {
     
     @JsonProperty("UserInfoEndpoint")
     public String userInfoEndpoint;
+
     public OidcConfig withUserInfoEndpoint(String userInfoEndpoint) {
         this.userInfoEndpoint = userInfoEndpoint;
         return this;
     }
     
+    public OidcConfig(@JsonProperty("AuthorizationEndpoint") String authorizationEndpoint, @JsonProperty("ClientId") String clientId, @JsonProperty("ClientSecret") String clientSecret, @JsonProperty("Issuer") String issuer, @JsonProperty("JwksUri") String jwksUri, @JsonProperty("LogoutEndpoint") String logoutEndpoint, @JsonProperty("TokenEndpoint") String tokenEndpoint, @JsonProperty("UserInfoEndpoint") String userInfoEndpoint) {
+        this.authorizationEndpoint = authorizationEndpoint;
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.issuer = issuer;
+        this.jwksUri = jwksUri;
+        this.logoutEndpoint = logoutEndpoint;
+        this.tokenEndpoint = tokenEndpoint;
+        this.userInfoEndpoint = userInfoEndpoint;
+  }
 }

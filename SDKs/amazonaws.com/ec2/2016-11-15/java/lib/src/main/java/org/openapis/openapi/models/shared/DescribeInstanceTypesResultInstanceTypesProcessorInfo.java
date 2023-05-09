@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesProcessorInfo {
     
     public DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum[] supportedArchitectures;
+
     public DescribeInstanceTypesResultInstanceTypesProcessorInfo withSupportedArchitectures(DescribeInstanceTypesResultInstanceTypesProcessorInfoSupportedArchitecturesEnum[] supportedArchitectures) {
         this.supportedArchitectures = supportedArchitectures;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceTypesResultInstanceTypesProcessorInfo {
     
     
     public Double sustainedClockSpeedInGhz;
+
     public DescribeInstanceTypesResultInstanceTypesProcessorInfo withSustainedClockSpeedInGhz(Double sustainedClockSpeedInGhz) {
         this.sustainedClockSpeedInGhz = sustainedClockSpeedInGhz;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesProcessorInfo(){}
 }

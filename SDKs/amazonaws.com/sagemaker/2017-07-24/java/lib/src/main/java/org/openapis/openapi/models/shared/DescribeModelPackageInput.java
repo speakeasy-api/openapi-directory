@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeModelPackageInput {
     @JsonProperty("ModelPackageName")
     public String modelPackageName;
+
     public DescribeModelPackageInput withModelPackageName(String modelPackageName) {
         this.modelPackageName = modelPackageName;
         return this;
     }
     
+    public DescribeModelPackageInput(@JsonProperty("ModelPackageName") String modelPackageName) {
+        this.modelPackageName = modelPackageName;
+  }
 }

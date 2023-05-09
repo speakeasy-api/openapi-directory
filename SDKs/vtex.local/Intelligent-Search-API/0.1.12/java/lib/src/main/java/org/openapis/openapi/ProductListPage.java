@@ -57,11 +57,9 @@ public class ProductListPage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBannersFacetsResponse res = new org.openapis.openapi.models.operations.GetBannersFacetsResponse() {{
+        org.openapis.openapi.models.operations.GetBannersFacetsResponse res = new org.openapis.openapi.models.operations.GetBannersFacetsResponse(contentType, httpRes.statusCode()) {{
             banners = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class ProductListPage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCorrectionSearchResponse res = new org.openapis.openapi.models.operations.GetCorrectionSearchResponse() {{
+        org.openapis.openapi.models.operations.GetCorrectionSearchResponse res = new org.openapis.openapi.models.operations.GetCorrectionSearchResponse(contentType, httpRes.statusCode()) {{
             correction = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ProductListPage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFacetsFacetsResponse res = new org.openapis.openapi.models.operations.GetFacetsFacetsResponse() {{
+        org.openapis.openapi.models.operations.GetFacetsFacetsResponse res = new org.openapis.openapi.models.operations.GetFacetsFacetsResponse(contentType, httpRes.statusCode()) {{
             facets = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,11 +186,9 @@ public class ProductListPage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProductSearchFacetsResponse res = new org.openapis.openapi.models.operations.GetProductSearchFacetsResponse() {{
+        org.openapis.openapi.models.operations.GetProductSearchFacetsResponse res = new org.openapis.openapi.models.operations.GetProductSearchFacetsResponse(contentType, httpRes.statusCode()) {{
             productSearch = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -237,12 +229,10 @@ public class ProductListPage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSearchSuggestionsResponse() {{
+        org.openapis.openapi.models.operations.GetSearchSuggestionsResponse res = new org.openapis.openapi.models.operations.GetSearchSuggestionsResponse(contentType, httpRes.statusCode()) {{
             searchSuggestions = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

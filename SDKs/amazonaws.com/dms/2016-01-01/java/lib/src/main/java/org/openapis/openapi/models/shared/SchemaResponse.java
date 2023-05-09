@@ -15,6 +15,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeLineCount")
     public Long codeLineCount;
+
     public SchemaResponse withCodeLineCount(Long codeLineCount) {
         this.codeLineCount = codeLineCount;
         return this;
@@ -23,6 +24,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeSize")
     public Long codeSize;
+
     public SchemaResponse withCodeSize(Long codeSize) {
         this.codeSize = codeSize;
         return this;
@@ -31,6 +33,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Complexity")
     public String complexity;
+
     public SchemaResponse withComplexity(String complexity) {
         this.complexity = complexity;
         return this;
@@ -39,6 +42,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseInstance")
     public DatabaseShortInfoResponse databaseInstance;
+
     public SchemaResponse withDatabaseInstance(DatabaseShortInfoResponse databaseInstance) {
         this.databaseInstance = databaseInstance;
         return this;
@@ -50,6 +54,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalSchema")
     public SchemaShortInfoResponse originalSchema;
+
     public SchemaResponse withOriginalSchema(SchemaShortInfoResponse originalSchema) {
         this.originalSchema = originalSchema;
         return this;
@@ -58,6 +63,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaId")
     public String schemaId;
+
     public SchemaResponse withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -66,6 +72,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public SchemaResponse withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -74,6 +81,7 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Server")
     public ServerShortInfoResponse server;
+
     public SchemaResponse withServer(ServerShortInfoResponse server) {
         this.server = server;
         return this;
@@ -82,9 +90,11 @@ public class SchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Similarity")
     public Double similarity;
+
     public SchemaResponse withSimilarity(Double similarity) {
         this.similarity = similarity;
         return this;
     }
     
+    public SchemaResponse(){}
 }

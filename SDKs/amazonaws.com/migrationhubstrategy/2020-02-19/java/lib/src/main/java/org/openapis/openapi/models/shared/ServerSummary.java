@@ -15,6 +15,7 @@ public class ServerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerOsType")
     public ServerOsTypeEnum serverOsType;
+
     public ServerSummary withServerOsType(ServerOsTypeEnum serverOsType) {
         this.serverOsType = serverOsType;
         return this;
@@ -23,9 +24,11 @@ public class ServerSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ServerSummary withCount(Long count) {
         this.count = count;
         return this;
     }
     
+    public ServerSummary(){}
 }

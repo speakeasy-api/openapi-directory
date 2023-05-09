@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetReisezentrenLocLatLonDistRequest {
@@ -12,6 +13,7 @@ public class GetReisezentrenLocLatLonDistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dist")
     public Float dist;
+
     public GetReisezentrenLocLatLonDistRequest withDist(Float dist) {
         this.dist = dist;
         return this;
@@ -22,6 +24,7 @@ public class GetReisezentrenLocLatLonDistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lat")
     public Float lat;
+
     public GetReisezentrenLocLatLonDistRequest withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -32,9 +35,15 @@ public class GetReisezentrenLocLatLonDistRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=lon")
     public Float lon;
+
     public GetReisezentrenLocLatLonDistRequest withLon(Float lon) {
         this.lon = lon;
         return this;
     }
     
+    public GetReisezentrenLocLatLonDistRequest(@JsonProperty("dist") Float dist, @JsonProperty("lat") Float lat, @JsonProperty("lon") Float lon) {
+        this.dist = dist;
+        this.lat = lat;
+        this.lon = lon;
+  }
 }

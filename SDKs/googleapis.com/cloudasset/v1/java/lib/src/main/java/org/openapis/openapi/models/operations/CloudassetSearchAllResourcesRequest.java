@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudassetSearchAllResourcesRequest {
@@ -12,6 +13,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudassetSearchAllResourcesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudassetSearchAllResourcesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudassetSearchAllResourcesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assetTypes")
     public String[] assetTypes;
+
     public CloudassetSearchAllResourcesRequest withAssetTypes(String[] assetTypes) {
         this.assetTypes = assetTypes;
         return this;
@@ -52,6 +57,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudassetSearchAllResourcesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudassetSearchAllResourcesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudassetSearchAllResourcesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudassetSearchAllResourcesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,16 +101,18 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public CloudassetSearchAllResourcesRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
     /**
-     * Optional. The page size for search result pagination. Page size is capped at 500 even if a larger value is given. If set to zero, server will pick an appropriate default. Returned results may be fewer than requested. When this happens, there could be more results as long as `next_page_token` is returned.
+     * Optional. The page size for search result pagination. Page size is capped at 500 even if a larger value is given. If set to zero or a negative value, server will pick an appropriate default. Returned results may be fewer than requested. When this happens, there could be more results as long as `next_page_token` is returned.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public CloudassetSearchAllResourcesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -112,6 +123,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CloudassetSearchAllResourcesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudassetSearchAllResourcesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public CloudassetSearchAllResourcesRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -142,6 +156,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudassetSearchAllResourcesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=readMask")
     public String readMask;
+
     public CloudassetSearchAllResourcesRequest withReadMask(String readMask) {
         this.readMask = readMask;
         return this;
@@ -162,6 +178,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scope")
     public String scope;
+
     public CloudassetSearchAllResourcesRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -172,6 +189,7 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudassetSearchAllResourcesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class CloudassetSearchAllResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudassetSearchAllResourcesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudassetSearchAllResourcesRequest(@JsonProperty("scope") String scope) {
+        this.scope = scope;
+  }
 }

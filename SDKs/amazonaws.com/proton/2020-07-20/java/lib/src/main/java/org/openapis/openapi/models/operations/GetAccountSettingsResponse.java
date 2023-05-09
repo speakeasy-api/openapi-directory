@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountSettingsResponse {
@@ -12,6 +13,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAccountSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAccountSettingsResponse {
     
     
     public String contentType;
+
     public GetAccountSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAccountSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccountSettingsOutput getAccountSettingsOutput;
+
     public GetAccountSettingsResponse withGetAccountSettingsOutput(org.openapis.openapi.models.shared.GetAccountSettingsOutput getAccountSettingsOutput) {
         this.getAccountSettingsOutput = getAccountSettingsOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object internalServerException;
+
     public GetAccountSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAccountSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAccountSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetAccountSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAccountSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAccountSettingsResponse {
      */
     
     public Object throttlingException;
+
     public GetAccountSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetAccountSettingsResponse {
      */
     
     public Object validationException;
+
     public GetAccountSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAccountSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

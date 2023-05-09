@@ -16,6 +16,7 @@ public class GetMarketplaceAccountsSynchronizationV3Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetMarketplaceAccountsSynchronizationV3Request withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -26,9 +27,11 @@ public class GetMarketplaceAccountsSynchronizationV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=storeIds")
     public String[] storeIds;
+
     public GetMarketplaceAccountsSynchronizationV3Request withStoreIds(String[] storeIds) {
         this.storeIds = storeIds;
         return this;
     }
     
+    public GetMarketplaceAccountsSynchronizationV3Request(){}
 }

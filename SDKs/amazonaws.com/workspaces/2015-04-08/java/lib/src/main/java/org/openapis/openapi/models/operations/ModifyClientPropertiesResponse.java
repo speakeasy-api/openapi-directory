@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyClientPropertiesResponse {
@@ -12,6 +13,7 @@ public class ModifyClientPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifyClientPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifyClientPropertiesResponse {
     
     
     public String contentType;
+
     public ModifyClientPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyClientPropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifyClientPropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyClientPropertiesResponse {
      */
     
     public java.util.Map<String, Object> modifyClientPropertiesResult;
+
     public ModifyClientPropertiesResponse withModifyClientPropertiesResult(java.util.Map<String, Object> modifyClientPropertiesResult) {
         this.modifyClientPropertiesResult = modifyClientPropertiesResult;
         return this;
@@ -46,6 +51,7 @@ public class ModifyClientPropertiesResponse {
     
     
     public Integer statusCode;
+
     public ModifyClientPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ModifyClientPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyClientPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ModifyClientPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifyClientPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public ModifyClientPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

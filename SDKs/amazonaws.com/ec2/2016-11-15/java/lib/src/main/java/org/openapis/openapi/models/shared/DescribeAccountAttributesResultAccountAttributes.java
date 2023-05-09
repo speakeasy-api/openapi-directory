@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeAccountAttributesResultAccountAttributes {
     
     public String attributeName;
+
     public DescribeAccountAttributesResultAccountAttributes withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,9 +20,11 @@ public class DescribeAccountAttributesResultAccountAttributes {
     
     
     public DescribeAccountAttributesResultAccountAttributesAttributeValues[] attributeValues;
+
     public DescribeAccountAttributesResultAccountAttributes withAttributeValues(DescribeAccountAttributesResultAccountAttributesAttributeValues[] attributeValues) {
         this.attributeValues = attributeValues;
         return this;
     }
     
+    public DescribeAccountAttributesResultAccountAttributes(){}
 }

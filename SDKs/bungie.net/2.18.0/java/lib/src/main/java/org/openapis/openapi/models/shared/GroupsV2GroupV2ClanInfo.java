@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GroupsV2GroupV2ClanInfo {
     
     public GroupsV2ClanBanner clanBannerData;
+
     public GroupsV2GroupV2ClanInfo withClanBannerData(GroupsV2ClanBanner clanBannerData) {
         this.clanBannerData = clanBannerData;
         return this;
@@ -19,9 +20,11 @@ public class GroupsV2GroupV2ClanInfo {
     
     
     public String clanCallsign;
+
     public GroupsV2GroupV2ClanInfo withClanCallsign(String clanCallsign) {
         this.clanCallsign = clanCallsign;
         return this;
     }
     
+    public GroupsV2GroupV2ClanInfo(){}
 }

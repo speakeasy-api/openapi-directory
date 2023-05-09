@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteLegacyRequest {
@@ -12,9 +13,13 @@ public class ReactionsDeleteLegacyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteLegacyRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
     }
     
+    public ReactionsDeleteLegacyRequest(@JsonProperty("reaction_id") Long reactionId) {
+        this.reactionId = reactionId;
+  }
 }

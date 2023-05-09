@@ -18,9 +18,11 @@ public class SpecialHours {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specialHourPeriods")
     public SpecialHourPeriod[] specialHourPeriods;
+
     public SpecialHours withSpecialHourPeriods(SpecialHourPeriod[] specialHourPeriods) {
         this.specialHourPeriods = specialHourPeriods;
         return this;
     }
     
+    public SpecialHours(){}
 }

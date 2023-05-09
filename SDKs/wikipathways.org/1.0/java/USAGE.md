@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetFindInteractionsFormatEnum;
 import org.openapis.openapi.models.operations.GetFindInteractionsRequest;
 import org.openapis.openapi.models.operations.GetFindInteractionsResponse;
@@ -14,10 +13,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetFindInteractionsRequest req = new GetFindInteractionsRequest() {{
-                format = "dump";
-                query = "provident";
-            }}            
+            GetFindInteractionsRequest req = new GetFindInteractionsRequest("corrupti") {{
+                format = GetFindInteractionsFormatEnum.DUMP;
+            }};            
 
             GetFindInteractionsResponse res = sdk.allFunctions.getFindInteractions(req);
 
@@ -27,5 +25,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

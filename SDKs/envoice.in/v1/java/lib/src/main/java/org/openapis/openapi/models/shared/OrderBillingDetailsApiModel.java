@@ -15,6 +15,7 @@ public class OrderBillingDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public OrderBillingDetailsApiModel withAddress(String address) {
         this.address = address;
         return this;
@@ -26,6 +27,7 @@ public class OrderBillingDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryId")
     public Integer countryId;
+
     public OrderBillingDetailsApiModel withCountryId(Integer countryId) {
         this.countryId = countryId;
         return this;
@@ -37,6 +39,7 @@ public class OrderBillingDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public OrderBillingDetailsApiModel withEmail(String email) {
         this.email = email;
         return this;
@@ -48,6 +51,7 @@ public class OrderBillingDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OrderBillingDetailsApiModel withName(String name) {
         this.name = name;
         return this;
@@ -59,9 +63,11 @@ public class OrderBillingDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public OrderBillingDetailsApiModel withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public OrderBillingDetailsApiModel(){}
 }

@@ -12,9 +12,11 @@ public class GetProducersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=external_id")
     public String externalId;
+
     public GetProducersRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
     
+    public GetProducersRequest(){}
 }

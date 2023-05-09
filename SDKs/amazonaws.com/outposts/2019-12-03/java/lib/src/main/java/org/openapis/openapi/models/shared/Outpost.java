@@ -18,6 +18,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Outpost withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -29,6 +30,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneId")
     public String availabilityZoneId;
+
     public Outpost withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -40,6 +42,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Outpost withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifeCycleStatus")
     public String lifeCycleStatus;
+
     public Outpost withLifeCycleStatus(String lifeCycleStatus) {
         this.lifeCycleStatus = lifeCycleStatus;
         return this;
@@ -62,6 +66,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Outpost withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostArn")
     public String outpostArn;
+
     public Outpost withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -81,6 +87,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutpostId")
     public String outpostId;
+
     public Outpost withOutpostId(String outpostId) {
         this.outpostId = outpostId;
         return this;
@@ -92,6 +99,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public Outpost withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -103,6 +111,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteArn")
     public String siteArn;
+
     public Outpost withSiteArn(String siteArn) {
         this.siteArn = siteArn;
         return this;
@@ -114,6 +123,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SiteId")
     public String siteId;
+
     public Outpost withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
@@ -122,6 +132,7 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedHardwareType")
     public SupportedHardwareTypeEnum supportedHardwareType;
+
     public Outpost withSupportedHardwareType(SupportedHardwareTypeEnum supportedHardwareType) {
         this.supportedHardwareType = supportedHardwareType;
         return this;
@@ -130,9 +141,11 @@ public class Outpost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public Outpost withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Outpost(){}
 }

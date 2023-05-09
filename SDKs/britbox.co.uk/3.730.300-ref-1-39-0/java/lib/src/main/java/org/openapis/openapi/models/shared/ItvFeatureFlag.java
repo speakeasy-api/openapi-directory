@@ -17,6 +17,7 @@ public class ItvFeatureFlag {
      */
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ItvFeatureFlag withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,9 +29,13 @@ public class ItvFeatureFlag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flag")
     public String flag;
+
     public ItvFeatureFlag withFlag(String flag) {
         this.flag = flag;
         return this;
     }
     
+    public ItvFeatureFlag(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

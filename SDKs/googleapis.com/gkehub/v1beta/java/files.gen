@@ -36,6 +36,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocations
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFeaturesListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFeaturesListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFeaturesListResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsCreateSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsCreateRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsCreateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsListSecurity.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsListRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsFleetsListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsListRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GkehubProjectsLocationsListResponse.java
@@ -101,6 +107,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/CommonFeatureSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/MultiClusterIngressFeatureSpecBillingEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/MultiClusterIngressFeatureSpec.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetObservabilityFeatureSpec.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetObservabilityLoggingConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetObservabilityRoutingConfigModeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetObservabilityRoutingConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnthosObservabilityFeatureSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/AnthosObservabilityMembershipSpec.java
 lib/src/main/java/org/openapis/openapi/models/shared/FeatureResourceStateStateEnum.java
@@ -140,6 +150,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementPolicyContr
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementHierarchyControllerConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementConfigSync.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementOciConfig.java
+lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementManaged.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementGitConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementBinauthzConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipSpecSecurityPolicyEnum.java
@@ -199,6 +210,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementConfigSyncD
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementBinauthzStateWebhookEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementBinauthzState.java
 lib/src/main/java/org/openapis/openapi/models/shared/ConfigManagementBinauthzVersion.java
+lib/src/main/java/org/openapis/openapi/models/shared/Fleet.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetInput.java
+lib/src/main/java/org/openapis/openapi/models/shared/ListFleetsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetLifecycleStateCodeEnum.java
+lib/src/main/java/org/openapis/openapi/models/shared/FleetLifecycleState.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListLocationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Location.java
 lib/src/main/java/org/openapis/openapi/models/shared/MembershipBinding.java
@@ -233,4 +249,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Scope.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScopeLifecycleStateCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScopeLifecycleState.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListScopesResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -17,6 +17,7 @@ public class Changelog {
      */
     @JsonProperty("body")
     public String body;
+
     public Changelog withBody(String body) {
         this.body = body;
         return this;
@@ -28,6 +29,7 @@ public class Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hidden")
     public Boolean hidden;
+
     public Changelog withHidden(Boolean hidden) {
         this.hidden = hidden;
         return this;
@@ -38,6 +40,7 @@ public class Changelog {
      */
     @JsonProperty("title")
     public String title;
+
     public Changelog withTitle(String title) {
         this.title = title;
         return this;
@@ -46,9 +49,14 @@ public class Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ChangelogTypeEnum type;
+
     public Changelog withType(ChangelogTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Changelog(@JsonProperty("body") String body, @JsonProperty("title") String title) {
+        this.body = body;
+        this.title = title;
+  }
 }

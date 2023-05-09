@@ -11,10 +11,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class PaymentInstrumentRevealInfo {
     /**
-     * The cvc of the card.
+     * The CVC2 value of the card.
      */
     @JsonProperty("cvc")
     public String cvc;
+
     public PaymentInstrumentRevealInfo withCvc(String cvc) {
         this.cvc = cvc;
         return this;
@@ -22,19 +23,26 @@ public class PaymentInstrumentRevealInfo {
     
     @JsonProperty("expiration")
     public Expiry expiration;
+
     public PaymentInstrumentRevealInfo withExpiration(Expiry expiration) {
         this.expiration = expiration;
         return this;
     }
     
     /**
-     * The pan number of the card.
+     * The primary account number (PAN) of the card.
      */
     @JsonProperty("pan")
     public String pan;
+
     public PaymentInstrumentRevealInfo withPan(String pan) {
         this.pan = pan;
         return this;
     }
     
+    public PaymentInstrumentRevealInfo(@JsonProperty("cvc") String cvc, @JsonProperty("expiration") Expiry expiration, @JsonProperty("pan") String pan) {
+        this.cvc = cvc;
+        this.expiration = expiration;
+        this.pan = pan;
+  }
 }

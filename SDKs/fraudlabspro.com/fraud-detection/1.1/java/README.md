@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackActionEnum;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackFormatEnum;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackRequest;
@@ -28,32 +27,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest() {{
-                action = "REJECT";
-                format = "xml";
-                id = "distinctio";
-                key = "quibusdam";
+            PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest(PostV1OrderFeedbackActionEnum.REJECT, "provident", "distinctio") {{
+                format = PostV1OrderFeedbackFormatEnum.XML;
                 notes = "unde";
-            }}            
+            }};            
 
             PostV1OrderFeedbackResponse res = sdk.postV1OrderFeedback(req);
 
-            if (res.postV1OrderFeedback200ApplicationJSONString.isPresent()) {
+            if (res.postV1OrderFeedback200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `postV1OrderFeedback` - Feedback the status of an order transaction.
-* `postV1OrderScreen` - Screen order for payment fraud.
+* [postV1OrderFeedback](docs/sdk/README.md#postv1orderfeedback) - Feedback the status of an order transaction.
+* [postV1OrderScreen](docs/sdk/README.md#postv1orderscreen) - Screen order for payment fraud.
 <!-- End SDK Available Operations -->
 
 ### Maturity

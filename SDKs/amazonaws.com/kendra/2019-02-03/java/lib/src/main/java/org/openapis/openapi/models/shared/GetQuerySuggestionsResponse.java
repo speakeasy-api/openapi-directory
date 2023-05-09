@@ -15,6 +15,7 @@ public class GetQuerySuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuerySuggestionsId")
     public String querySuggestionsId;
+
     public GetQuerySuggestionsResponse withQuerySuggestionsId(String querySuggestionsId) {
         this.querySuggestionsId = querySuggestionsId;
         return this;
@@ -23,9 +24,11 @@ public class GetQuerySuggestionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Suggestions")
     public Suggestion[] suggestions;
+
     public GetQuerySuggestionsResponse withSuggestions(Suggestion[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public GetQuerySuggestionsResponse(){}
 }

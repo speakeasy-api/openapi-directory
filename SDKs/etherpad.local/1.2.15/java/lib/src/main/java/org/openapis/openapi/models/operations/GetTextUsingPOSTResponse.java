@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTextUsingPOSTResponse {
     
     public String contentType;
+
     public GetTextUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTextUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetTextUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTextUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTextUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetTextUsingPOSTResponse {
      */
     
     public GetTextUsingPOST200ApplicationJSON getTextUsingPOST200ApplicationJSONObject;
+
     public GetTextUsingPOSTResponse withGetTextUsingPOST200ApplicationJSONObject(GetTextUsingPOST200ApplicationJSON getTextUsingPOST200ApplicationJSONObject) {
         this.getTextUsingPOST200ApplicationJSONObject = getTextUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetTextUsingPOSTResponse {
      */
     
     public GetTextUsingPOST400ApplicationJSON getTextUsingPOST400ApplicationJSONObject;
+
     public GetTextUsingPOSTResponse withGetTextUsingPOST400ApplicationJSONObject(GetTextUsingPOST400ApplicationJSON getTextUsingPOST400ApplicationJSONObject) {
         this.getTextUsingPOST400ApplicationJSONObject = getTextUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetTextUsingPOSTResponse {
      */
     
     public GetTextUsingPOST401ApplicationJSON getTextUsingPOST401ApplicationJSONObject;
+
     public GetTextUsingPOSTResponse withGetTextUsingPOST401ApplicationJSONObject(GetTextUsingPOST401ApplicationJSON getTextUsingPOST401ApplicationJSONObject) {
         this.getTextUsingPOST401ApplicationJSONObject = getTextUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetTextUsingPOSTResponse {
      */
     
     public GetTextUsingPOST500ApplicationJSON getTextUsingPOST500ApplicationJSONObject;
+
     public GetTextUsingPOSTResponse withGetTextUsingPOST500ApplicationJSONObject(GetTextUsingPOST500ApplicationJSON getTextUsingPOST500ApplicationJSONObject) {
         this.getTextUsingPOST500ApplicationJSONObject = getTextUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public GetTextUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

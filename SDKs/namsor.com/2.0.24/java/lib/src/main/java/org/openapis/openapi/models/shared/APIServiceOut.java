@@ -18,6 +18,7 @@ public class APIServiceOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("costInUnits")
     public Integer costInUnits;
+
     public APIServiceOut withCostInUnits(Integer costInUnits) {
         this.costInUnits = costInUnits;
         return this;
@@ -29,6 +30,7 @@ public class APIServiceOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceGroup")
     public String serviceGroup;
+
     public APIServiceOut withServiceGroup(String serviceGroup) {
         this.serviceGroup = serviceGroup;
         return this;
@@ -40,9 +42,11 @@ public class APIServiceOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public APIServiceOut withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public APIServiceOut(){}
 }

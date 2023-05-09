@@ -18,6 +18,7 @@ public class RepeatCellRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell")
     public CellData cell;
+
     public RepeatCellRequest withCell(CellData cell) {
         this.cell = cell;
         return this;
@@ -29,6 +30,7 @@ public class RepeatCellRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public RepeatCellRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -40,9 +42,11 @@ public class RepeatCellRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public RepeatCellRequest withRange(GridRange range) {
         this.range = range;
         return this;
     }
     
+    public RepeatCellRequest(){}
 }

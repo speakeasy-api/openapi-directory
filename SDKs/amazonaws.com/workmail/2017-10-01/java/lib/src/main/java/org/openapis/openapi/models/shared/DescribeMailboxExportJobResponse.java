@@ -20,6 +20,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeMailboxExportJobResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeMailboxExportJobResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -38,6 +40,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntityId")
     public String entityId;
+
     public DescribeMailboxExportJobResponse withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -46,6 +49,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorInfo")
     public String errorInfo;
+
     public DescribeMailboxExportJobResponse withErrorInfo(String errorInfo) {
         this.errorInfo = errorInfo;
         return this;
@@ -54,6 +58,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedProgress")
     public Long estimatedProgress;
+
     public DescribeMailboxExportJobResponse withEstimatedProgress(Long estimatedProgress) {
         this.estimatedProgress = estimatedProgress;
         return this;
@@ -62,6 +67,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyArn")
     public String kmsKeyArn;
+
     public DescribeMailboxExportJobResponse withKmsKeyArn(String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
         return this;
@@ -70,6 +76,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeMailboxExportJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -78,6 +85,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public DescribeMailboxExportJobResponse withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -86,6 +94,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Path")
     public String s3Path;
+
     public DescribeMailboxExportJobResponse withS3Path(String s3Path) {
         this.s3Path = s3Path;
         return this;
@@ -94,6 +103,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Prefix")
     public String s3Prefix;
+
     public DescribeMailboxExportJobResponse withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -104,6 +114,7 @@ public class DescribeMailboxExportJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeMailboxExportJobResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -112,9 +123,11 @@ public class DescribeMailboxExportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public MailboxExportJobStateEnum state;
+
     public DescribeMailboxExportJobResponse withState(MailboxExportJobStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeMailboxExportJobResponse(){}
 }

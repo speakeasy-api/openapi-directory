@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.KeywordSearchRequest;
 import org.openapis.openapi.models.operations.KeywordSearchResponse;
 
@@ -26,21 +25,21 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            KeywordSearchRequest req = new KeywordSearchRequest() {{
-                domainCode = "corrupti";
-                keyword = "provident";
-                numberOfProducts = 715190;
+            KeywordSearchRequest req = new KeywordSearchRequest("corrupti", "provident") {{
+                numberOfProducts = 715190L;
                 sortBy = "quibusdam";
-            }}            
+            }};            
 
             KeywordSearchResponse res = sdk.amz.keywordSearch(req);
 
-            if (res.keywordSearchResponse.isPresent()) {
+            if (res.keywordSearchResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,12 +47,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### amz
+### [amz](docs/amz/README.md)
 
-* `keywordSearch` - fetch results auf a keyword search on Amazon
-* `requestBuyRecommendation` - request buy recommendations to a given product
-* `requestProduct` - lookup product information
-* `sortOptions` - request available sort options to use in keyword search
+* [keywordSearch](docs/amz/README.md#keywordsearch) - fetch results auf a keyword search on Amazon
+* [requestBuyRecommendation](docs/amz/README.md#requestbuyrecommendation) - request buy recommendations to a given product
+* [requestProduct](docs/amz/README.md#requestproduct) - lookup product information
+* [sortOptions](docs/amz/README.md#sortoptions) - request available sort options to use in keyword search
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -31,6 +31,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discount_money")
     public V1Money discountMoney;
+
     public V1PaymentItemization withDiscountMoney(V1Money discountMoney) {
         this.discountMoney = discountMoney;
         return this;
@@ -42,6 +43,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discounts")
     public V1PaymentDiscount[] discounts;
+
     public V1PaymentItemization withDiscounts(V1PaymentDiscount[] discounts) {
         this.discounts = discounts;
         return this;
@@ -50,6 +52,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gross_sales_money")
     public V1Money grossSalesMoney;
+
     public V1PaymentItemization withGrossSalesMoney(V1Money grossSalesMoney) {
         this.grossSalesMoney = grossSalesMoney;
         return this;
@@ -61,6 +64,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_detail")
     public V1PaymentItemDetail itemDetail;
+
     public V1PaymentItemization withItemDetail(V1PaymentItemDetail itemDetail) {
         this.itemDetail = itemDetail;
         return this;
@@ -72,6 +76,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_variation_name")
     public String itemVariationName;
+
     public V1PaymentItemization withItemVariationName(String itemVariationName) {
         this.itemVariationName = itemVariationName;
         return this;
@@ -83,6 +88,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemization_type")
     public String itemizationType;
+
     public V1PaymentItemization withItemizationType(String itemizationType) {
         this.itemizationType = itemizationType;
         return this;
@@ -94,6 +100,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiers")
     public V1PaymentModifier[] modifiers;
+
     public V1PaymentItemization withModifiers(V1PaymentModifier[] modifiers) {
         this.modifiers = modifiers;
         return this;
@@ -105,6 +112,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public V1PaymentItemization withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +121,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("net_sales_money")
     public V1Money netSalesMoney;
+
     public V1PaymentItemization withNetSalesMoney(V1Money netSalesMoney) {
         this.netSalesMoney = netSalesMoney;
         return this;
@@ -124,6 +133,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public V1PaymentItemization withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -135,6 +145,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Double quantity;
+
     public V1PaymentItemization withQuantity(Double quantity) {
         this.quantity = quantity;
         return this;
@@ -143,6 +154,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("single_quantity_money")
     public V1Money singleQuantityMoney;
+
     public V1PaymentItemization withSingleQuantityMoney(V1Money singleQuantityMoney) {
         this.singleQuantityMoney = singleQuantityMoney;
         return this;
@@ -154,6 +166,7 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxes")
     public V1PaymentTax[] taxes;
+
     public V1PaymentItemization withTaxes(V1PaymentTax[] taxes) {
         this.taxes = taxes;
         return this;
@@ -162,9 +175,11 @@ public class V1PaymentItemization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_money")
     public V1Money totalMoney;
+
     public V1PaymentItemization withTotalMoney(V1Money totalMoney) {
         this.totalMoney = totalMoney;
         return this;
     }
     
+    public V1PaymentItemization(){}
 }

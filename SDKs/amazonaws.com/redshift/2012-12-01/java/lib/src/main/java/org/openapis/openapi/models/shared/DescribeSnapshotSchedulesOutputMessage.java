@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSnapshotSchedulesOutputMessage {
     
     public String marker;
+
     public DescribeSnapshotSchedulesOutputMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSnapshotSchedulesOutputMessage {
     
     
     public SnapshotScheduleList[] snapshotSchedules;
+
     public DescribeSnapshotSchedulesOutputMessage withSnapshotSchedules(SnapshotScheduleList[] snapshotSchedules) {
         this.snapshotSchedules = snapshotSchedules;
         return this;
     }
     
+    public DescribeSnapshotSchedulesOutputMessage(){}
 }

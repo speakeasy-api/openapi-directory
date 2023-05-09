@@ -14,6 +14,7 @@ import java.time.LocalDate;
 public class ProductOrderConcierge200ApplicationJSON {
     @JsonProperty("identity")
     public String identity;
+
     public ProductOrderConcierge200ApplicationJSON withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -21,6 +22,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("option")
     public String option;
+
     public ProductOrderConcierge200ApplicationJSON withOption(String option) {
         this.option = option;
         return this;
@@ -29,6 +31,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("ordered")
     public LocalDate ordered;
+
     public ProductOrderConcierge200ApplicationJSON withOrdered(LocalDate ordered) {
         this.ordered = ordered;
         return this;
@@ -36,6 +39,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("owner")
     public String owner;
+
     public ProductOrderConcierge200ApplicationJSON withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -43,6 +47,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("price")
     public Float price;
+
     public ProductOrderConcierge200ApplicationJSON withPrice(Float price) {
         this.price = price;
         return this;
@@ -50,6 +55,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("sku")
     public String sku;
+
     public ProductOrderConcierge200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -57,6 +63,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("status")
     public String status;
+
     public ProductOrderConcierge200ApplicationJSON withStatus(String status) {
         this.status = status;
         return this;
@@ -64,6 +71,7 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("subjectId")
     public String subjectId;
+
     public ProductOrderConcierge200ApplicationJSON withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
@@ -71,9 +79,21 @@ public class ProductOrderConcierge200ApplicationJSON {
     
     @JsonProperty("subjectValue")
     public String subjectValue;
+
     public ProductOrderConcierge200ApplicationJSON withSubjectValue(String subjectValue) {
         this.subjectValue = subjectValue;
         return this;
     }
     
+    public ProductOrderConcierge200ApplicationJSON(@JsonProperty("identity") String identity, @JsonProperty("option") String option, @JsonProperty("ordered") LocalDate ordered, @JsonProperty("owner") String owner, @JsonProperty("price") Float price, @JsonProperty("sku") String sku, @JsonProperty("status") String status, @JsonProperty("subjectId") String subjectId, @JsonProperty("subjectValue") String subjectValue) {
+        this.identity = identity;
+        this.option = option;
+        this.ordered = ordered;
+        this.owner = owner;
+        this.price = price;
+        this.sku = sku;
+        this.status = status;
+        this.subjectId = subjectId;
+        this.subjectValue = subjectValue;
+  }
 }

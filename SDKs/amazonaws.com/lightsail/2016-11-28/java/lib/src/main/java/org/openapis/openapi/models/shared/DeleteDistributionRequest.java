@@ -12,9 +12,11 @@ public class DeleteDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionName")
     public String distributionName;
+
     public DeleteDistributionRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
     }
     
+    public DeleteDistributionRequest(){}
 }

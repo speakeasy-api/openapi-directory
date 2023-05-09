@@ -15,6 +15,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public ScanInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -23,6 +24,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionalOperator")
     public ConditionalOperatorEnum conditionalOperator;
+
     public ScanInput withConditionalOperator(ConditionalOperatorEnum conditionalOperator) {
         this.conditionalOperator = conditionalOperator;
         return this;
@@ -31,6 +33,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsistentRead")
     public Boolean consistentRead;
+
     public ScanInput withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -39,6 +42,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartKey")
     public java.util.Map<String, AttributeValue> exclusiveStartKey;
+
     public ScanInput withExclusiveStartKey(java.util.Map<String, AttributeValue> exclusiveStartKey) {
         this.exclusiveStartKey = exclusiveStartKey;
         return this;
@@ -47,6 +51,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public ScanInput withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -55,6 +60,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public ScanInput withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -63,6 +69,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterExpression")
     public String filterExpression;
+
     public ScanInput withFilterExpression(String filterExpression) {
         this.filterExpression = filterExpression;
         return this;
@@ -71,6 +78,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public ScanInput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -79,6 +87,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ScanInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -87,6 +96,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectionExpression")
     public String projectionExpression;
+
     public ScanInput withProjectionExpression(String projectionExpression) {
         this.projectionExpression = projectionExpression;
         return this;
@@ -98,6 +108,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public ScanInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -106,6 +117,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanFilter")
     public java.util.Map<String, Condition> scanFilter;
+
     public ScanInput withScanFilter(java.util.Map<String, Condition> scanFilter) {
         this.scanFilter = scanFilter;
         return this;
@@ -114,6 +126,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Segment")
     public Long segment;
+
     public ScanInput withSegment(Long segment) {
         this.segment = segment;
         return this;
@@ -122,6 +135,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Select")
     public SelectEnum select;
+
     public ScanInput withSelect(SelectEnum select) {
         this.select = select;
         return this;
@@ -129,6 +143,7 @@ public class ScanInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public ScanInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -137,9 +152,13 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalSegments")
     public Long totalSegments;
+
     public ScanInput withTotalSegments(Long totalSegments) {
         this.totalSegments = totalSegments;
         return this;
     }
     
+    public ScanInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

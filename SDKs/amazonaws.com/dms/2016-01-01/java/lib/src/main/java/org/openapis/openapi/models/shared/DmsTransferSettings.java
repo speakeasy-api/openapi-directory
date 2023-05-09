@@ -15,6 +15,7 @@ public class DmsTransferSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BucketName")
     public String bucketName;
+
     public DmsTransferSettings withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -23,9 +24,11 @@ public class DmsTransferSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public DmsTransferSettings withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
     }
     
+    public DmsTransferSettings(){}
 }

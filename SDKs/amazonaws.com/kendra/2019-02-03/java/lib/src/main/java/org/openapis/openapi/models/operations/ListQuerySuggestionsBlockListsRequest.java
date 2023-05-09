@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListQuerySuggestionsBlockListsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ListQuerySuggestionsBlockListsRequest listQuerySuggestionsBlockListsRequest;
+
     public ListQuerySuggestionsBlockListsRequest withListQuerySuggestionsBlockListsRequest(org.openapis.openapi.models.shared.ListQuerySuggestionsBlockListsRequest listQuerySuggestionsBlockListsRequest) {
         this.listQuerySuggestionsBlockListsRequest = listQuerySuggestionsBlockListsRequest;
         return this;
@@ -19,6 +21,7 @@ public class ListQuerySuggestionsBlockListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public String maxResults;
+
     public ListQuerySuggestionsBlockListsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListQuerySuggestionsBlockListsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListQuerySuggestionsBlockListsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -43,6 +48,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -50,6 +56,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -57,6 +64,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -64,6 +72,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -71,6 +80,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -78,6 +88,7 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -85,9 +96,14 @@ public class ListQuerySuggestionsBlockListsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public ListQuerySuggestionsBlockListsXAmzTargetEnum xAmzTarget;
+
     public ListQuerySuggestionsBlockListsRequest withXAmzTarget(ListQuerySuggestionsBlockListsXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public ListQuerySuggestionsBlockListsRequest(@JsonProperty("ListQuerySuggestionsBlockListsRequest") org.openapis.openapi.models.shared.ListQuerySuggestionsBlockListsRequest listQuerySuggestionsBlockListsRequest, @JsonProperty("X-Amz-Target") ListQuerySuggestionsBlockListsXAmzTargetEnum xAmzTarget) {
+        this.listQuerySuggestionsBlockListsRequest = listQuerySuggestionsBlockListsRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

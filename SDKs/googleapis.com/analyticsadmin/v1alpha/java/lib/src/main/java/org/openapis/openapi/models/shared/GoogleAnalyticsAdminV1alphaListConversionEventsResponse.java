@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaListConversionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionEvents")
     public GoogleAnalyticsAdminV1alphaConversionEvent[] conversionEvents;
+
     public GoogleAnalyticsAdminV1alphaListConversionEventsResponse withConversionEvents(GoogleAnalyticsAdminV1alphaConversionEvent[] conversionEvents) {
         this.conversionEvents = conversionEvents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaListConversionEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleAnalyticsAdminV1alphaListConversionEventsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaListConversionEventsResponse(){}
 }

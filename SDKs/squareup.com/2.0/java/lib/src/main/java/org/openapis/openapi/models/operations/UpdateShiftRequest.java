@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateShiftRequest {
@@ -14,6 +15,7 @@ public class UpdateShiftRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateShiftRequest updateShiftRequest;
+
     public UpdateShiftRequest withUpdateShiftRequest(org.openapis.openapi.models.shared.UpdateShiftRequest updateShiftRequest) {
         this.updateShiftRequest = updateShiftRequest;
         return this;
@@ -24,9 +26,14 @@ public class UpdateShiftRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdateShiftRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateShiftRequest(@JsonProperty("UpdateShiftRequest") org.openapis.openapi.models.shared.UpdateShiftRequest updateShiftRequest, @JsonProperty("id") String id) {
+        this.updateShiftRequest = updateShiftRequest;
+        this.id = id;
+  }
 }

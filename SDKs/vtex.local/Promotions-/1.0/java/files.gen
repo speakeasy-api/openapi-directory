@@ -203,4 +203,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetPromotions.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTaxesScope.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTaxes.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/bundles/README.md
+docs/campaignaudiences/README.md
+docs/coupons/README.md
+docs/notifications/README.md
+docs/priceslegacyv1/README.md
+docs/promotionsandtaxes/README.md
 USAGE.md

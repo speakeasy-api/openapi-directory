@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAssociatedAssetsResponse {
     
     public String contentType;
+
     public ListAssociatedAssetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAssociatedAssetsResponse {
      */
     
     public Object internalFailureException;
+
     public ListAssociatedAssetsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListAssociatedAssetsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListAssociatedAssetsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListAssociatedAssetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAssociatedAssetsResponse listAssociatedAssetsResponse;
+
     public ListAssociatedAssetsResponse withListAssociatedAssetsResponse(org.openapis.openapi.models.shared.ListAssociatedAssetsResponse listAssociatedAssetsResponse) {
         this.listAssociatedAssetsResponse = listAssociatedAssetsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAssociatedAssetsResponse {
     
     
     public Integer statusCode;
+
     public ListAssociatedAssetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAssociatedAssetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAssociatedAssetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAssociatedAssetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAssociatedAssetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListAssociatedAssetsResponse {
      */
     
     public Object throttlingException;
+
     public ListAssociatedAssetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAssociatedAssetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

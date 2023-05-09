@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListServiceOfferingServiceOfferingNodesResponse {
     
     public String contentType;
+
     public ListServiceOfferingServiceOfferingNodesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListServiceOfferingServiceOfferingNodesResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorNotFound errorNotFound;
+
     public ListServiceOfferingServiceOfferingNodesResponse withErrorNotFound(org.openapis.openapi.models.shared.ErrorNotFound errorNotFound) {
         this.errorNotFound = errorNotFound;
         return this;
@@ -29,6 +32,7 @@ public class ListServiceOfferingServiceOfferingNodesResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceOfferingNodesCollection serviceOfferingNodesCollection;
+
     public ListServiceOfferingServiceOfferingNodesResponse withServiceOfferingNodesCollection(org.openapis.openapi.models.shared.ServiceOfferingNodesCollection serviceOfferingNodesCollection) {
         this.serviceOfferingNodesCollection = serviceOfferingNodesCollection;
         return this;
@@ -36,6 +40,7 @@ public class ListServiceOfferingServiceOfferingNodesResponse {
     
     
     public Integer statusCode;
+
     public ListServiceOfferingServiceOfferingNodesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ListServiceOfferingServiceOfferingNodesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListServiceOfferingServiceOfferingNodesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListServiceOfferingServiceOfferingNodesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

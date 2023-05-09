@@ -96,4 +96,9 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetOneRecurringPaymentR
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePlanRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePlanRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/UpdatePlanResponse.java
+docs/sdk/README.md
+docs/billingsubpartnerapi/README.md
+docs/paymentsapi/README.md
+docs/payoutsapi/README.md
+docs/recurringpaymentsapiemailsubscriptionsfeature/README.md
 USAGE.md

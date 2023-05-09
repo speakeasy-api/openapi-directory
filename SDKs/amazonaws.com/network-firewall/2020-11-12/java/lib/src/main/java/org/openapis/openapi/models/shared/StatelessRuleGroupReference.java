@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StatelessRuleGroupReference {
     @JsonProperty("Priority")
     public Long priority;
+
     public StatelessRuleGroupReference withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -19,9 +20,14 @@ public class StatelessRuleGroupReference {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public StatelessRuleGroupReference withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public StatelessRuleGroupReference(@JsonProperty("Priority") Long priority, @JsonProperty("ResourceArn") String resourceArn) {
+        this.priority = priority;
+        this.resourceArn = resourceArn;
+  }
 }

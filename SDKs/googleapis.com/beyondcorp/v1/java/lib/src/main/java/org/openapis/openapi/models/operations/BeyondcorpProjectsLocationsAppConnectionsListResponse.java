@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BeyondcorpProjectsLocationsAppConnectionsListResponse {
     
     public String contentType;
+
     public BeyondcorpProjectsLocationsAppConnectionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BeyondcorpProjectsLocationsAppConnectionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse googleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse;
+
     public BeyondcorpProjectsLocationsAppConnectionsListResponse withGoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse(org.openapis.openapi.models.shared.GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse googleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse) {
         this.googleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse = googleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class BeyondcorpProjectsLocationsAppConnectionsListResponse {
     
     
     public Integer statusCode;
+
     public BeyondcorpProjectsLocationsAppConnectionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BeyondcorpProjectsLocationsAppConnectionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BeyondcorpProjectsLocationsAppConnectionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BeyondcorpProjectsLocationsAppConnectionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

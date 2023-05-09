@@ -15,9 +15,11 @@ public class ListReferenceImportJobsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListReferenceImportJobsRequestBodyFilter filter;
+
     public ListReferenceImportJobsRequestBody withFilter(ListReferenceImportJobsRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListReferenceImportJobsRequestBody(){}
 }

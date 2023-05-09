@@ -18,9 +18,11 @@ public class BatchProperNounCategorizedOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properNouns")
     public ProperNounCategorizedOut[] properNouns;
+
     public BatchProperNounCategorizedOut withProperNouns(ProperNounCategorizedOut[] properNouns) {
         this.properNouns = properNouns;
         return this;
     }
     
+    public BatchProperNounCategorizedOut(){}
 }

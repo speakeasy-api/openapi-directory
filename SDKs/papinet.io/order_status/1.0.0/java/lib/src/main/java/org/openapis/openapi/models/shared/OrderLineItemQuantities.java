@@ -12,6 +12,7 @@ public class OrderLineItemQuantities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityContext")
     public OrderLineItemQuantitiesQuantityContextEnum quantityContext;
+
     public OrderLineItemQuantities withQuantityContext(OrderLineItemQuantitiesQuantityContextEnum quantityContext) {
         this.quantityContext = quantityContext;
         return this;
@@ -20,6 +21,7 @@ public class OrderLineItemQuantities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityType")
     public OrderLineItemQuantitiesQuantityTypeEnum quantityType;
+
     public OrderLineItemQuantities withQuantityType(OrderLineItemQuantitiesQuantityTypeEnum quantityType) {
         this.quantityType = quantityType;
         return this;
@@ -28,6 +30,7 @@ public class OrderLineItemQuantities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityUOM")
     public OrderLineItemQuantitiesQuantityUOMEnum quantityUOM;
+
     public OrderLineItemQuantities withQuantityUOM(OrderLineItemQuantitiesQuantityUOMEnum quantityUOM) {
         this.quantityUOM = quantityUOM;
         return this;
@@ -36,9 +39,11 @@ public class OrderLineItemQuantities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityValue")
     public Double quantityValue;
+
     public OrderLineItemQuantities withQuantityValue(Double quantityValue) {
         this.quantityValue = quantityValue;
         return this;
     }
     
+    public OrderLineItemQuantities(){}
 }

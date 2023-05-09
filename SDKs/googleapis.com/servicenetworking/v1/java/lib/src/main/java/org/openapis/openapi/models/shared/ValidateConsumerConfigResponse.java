@@ -18,6 +18,7 @@ public class ValidateConsumerConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingSubnetworkCandidates")
     public Subnetwork[] existingSubnetworkCandidates;
+
     public ValidateConsumerConfigResponse withExistingSubnetworkCandidates(Subnetwork[] existingSubnetworkCandidates) {
         this.existingSubnetworkCandidates = existingSubnetworkCandidates;
         return this;
@@ -29,6 +30,7 @@ public class ValidateConsumerConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isValid")
     public Boolean isValid;
+
     public ValidateConsumerConfigResponse withIsValid(Boolean isValid) {
         this.isValid = isValid;
         return this;
@@ -40,9 +42,11 @@ public class ValidateConsumerConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationError")
     public ValidateConsumerConfigResponseValidationErrorEnum validationError;
+
     public ValidateConsumerConfigResponse withValidationError(ValidateConsumerConfigResponseValidationErrorEnum validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ValidateConsumerConfigResponse(){}
 }

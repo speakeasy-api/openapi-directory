@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchDestinationsResponse {
     
     public String contentType;
+
     public SearchDestinationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchDestinationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DestinationReadList destinationReadList;
+
     public SearchDestinationsResponse withDestinationReadList(org.openapis.openapi.models.shared.DestinationReadList destinationReadList) {
         this.destinationReadList = destinationReadList;
         return this;
@@ -29,6 +32,7 @@ public class SearchDestinationsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public SearchDestinationsResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -36,6 +40,7 @@ public class SearchDestinationsResponse {
     
     
     public Integer statusCode;
+
     public SearchDestinationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class SearchDestinationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchDestinationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchDestinationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

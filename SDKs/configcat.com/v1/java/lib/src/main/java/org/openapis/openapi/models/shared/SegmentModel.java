@@ -20,6 +20,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public RolloutRuleComparatorEnum comparator;
+
     public SegmentModel withComparator(RolloutRuleComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -28,6 +29,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonAttribute")
     public String comparisonAttribute;
+
     public SegmentModel withComparisonAttribute(String comparisonAttribute) {
         this.comparisonAttribute = comparisonAttribute;
         return this;
@@ -36,6 +38,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparisonValue")
     public String comparisonValue;
+
     public SegmentModel withComparisonValue(String comparisonValue) {
         this.comparisonValue = comparisonValue;
         return this;
@@ -46,6 +49,7 @@ public class SegmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public SegmentModel withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -54,6 +58,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorEmail")
     public String creatorEmail;
+
     public SegmentModel withCreatorEmail(String creatorEmail) {
         this.creatorEmail = creatorEmail;
         return this;
@@ -62,6 +67,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creatorFullName")
     public String creatorFullName;
+
     public SegmentModel withCreatorFullName(String creatorFullName) {
         this.creatorFullName = creatorFullName;
         return this;
@@ -70,6 +76,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SegmentModel withDescription(String description) {
         this.description = description;
         return this;
@@ -78,6 +85,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterEmail")
     public String lastUpdaterEmail;
+
     public SegmentModel withLastUpdaterEmail(String lastUpdaterEmail) {
         this.lastUpdaterEmail = lastUpdaterEmail;
         return this;
@@ -86,6 +94,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterFullName")
     public String lastUpdaterFullName;
+
     public SegmentModel withLastUpdaterFullName(String lastUpdaterFullName) {
         this.lastUpdaterFullName = lastUpdaterFullName;
         return this;
@@ -94,6 +103,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentModel withName(String name) {
         this.name = name;
         return this;
@@ -102,6 +112,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product")
     public ProductModel product;
+
     public SegmentModel withProduct(ProductModel product) {
         this.product = product;
         return this;
@@ -110,6 +121,7 @@ public class SegmentModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentId")
     public String segmentId;
+
     public SegmentModel withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -120,9 +132,11 @@ public class SegmentModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public SegmentModel withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public SegmentModel(){}
 }

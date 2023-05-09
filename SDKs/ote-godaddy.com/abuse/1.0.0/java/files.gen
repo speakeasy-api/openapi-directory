@@ -43,4 +43,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/AbuseTicketTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/AbuseTicket.java
 lib/src/main/java/org/openapis/openapi/models/shared/AbuseTicketList.java
 lib/src/main/java/org/openapis/openapi/models/shared/Pagination.java
+docs/sdk/README.md
+docs/v1/README.md
 USAGE.md

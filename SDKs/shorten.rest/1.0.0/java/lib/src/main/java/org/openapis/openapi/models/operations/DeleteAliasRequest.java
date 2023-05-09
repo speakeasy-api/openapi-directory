@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAliasRequest {
@@ -12,6 +13,7 @@ public class DeleteAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasName")
     public String aliasName;
+
     public DeleteAliasRequest withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -22,9 +24,13 @@ public class DeleteAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
     public String domainName;
+
     public DeleteAliasRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DeleteAliasRequest(@JsonProperty("aliasName") String aliasName) {
+        this.aliasName = aliasName;
+  }
 }

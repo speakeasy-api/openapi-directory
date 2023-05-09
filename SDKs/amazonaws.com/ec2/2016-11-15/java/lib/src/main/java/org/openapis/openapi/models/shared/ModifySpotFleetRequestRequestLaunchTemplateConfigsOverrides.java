@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     public String availabilityZone;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements instanceRequirements;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withInstanceRequirements(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceRequirements instanceRequirements) {
         this.instanceRequirements = instanceRequirements;
         return this;
@@ -26,6 +28,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum instanceType;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withInstanceType(ModifySpotFleetRequestRequestLaunchTemplateConfigsOverridesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,6 +36,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public Double priority;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withPriority(Double priority) {
         this.priority = priority;
         return this;
@@ -40,6 +44,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public String spotPrice;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withSpotPrice(String spotPrice) {
         this.spotPrice = spotPrice;
         return this;
@@ -47,6 +52,7 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public String subnetId;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -54,9 +60,11 @@ public class ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides {
     
     
     public Double weightedCapacity;
+
     public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides withWeightedCapacity(Double weightedCapacity) {
         this.weightedCapacity = weightedCapacity;
         return this;
     }
     
+    public ModifySpotFleetRequestRequestLaunchTemplateConfigsOverrides(){}
 }

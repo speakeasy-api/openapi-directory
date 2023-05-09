@@ -15,9 +15,11 @@ public class Predictions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictions")
     public org.openapis.openapi.models.shared.Prediction[] predictions;
+
     public Predictions200ApplicationJSON withPredictions(org.openapis.openapi.models.shared.Prediction[] predictions) {
         this.predictions = predictions;
         return this;
     }
     
+    public Predictions200ApplicationJSON(){}
 }

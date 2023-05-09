@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SNMPv2CommunitiesCredentialFields {
     @JsonProperty("community")
     public String community;
+
     public SNMPv2CommunitiesCredentialFields withCommunity(String community) {
         this.community = community;
         return this;
     }
     
+    public SNMPv2CommunitiesCredentialFields(@JsonProperty("community") String community) {
+        this.community = community;
+  }
 }

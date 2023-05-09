@@ -18,6 +18,7 @@ public class PlacementGroupsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlacementGroupsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class PlacementGroupsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public PlacementGroupsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class PlacementGroupsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementGroups")
     public PlacementGroup[] placementGroups;
+
     public PlacementGroupsListResponse withPlacementGroups(PlacementGroup[] placementGroups) {
         this.placementGroups = placementGroups;
         return this;
     }
     
+    public PlacementGroupsListResponse(){}
 }

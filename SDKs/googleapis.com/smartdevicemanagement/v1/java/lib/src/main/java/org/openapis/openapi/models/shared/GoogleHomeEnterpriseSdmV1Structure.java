@@ -18,6 +18,7 @@ public class GoogleHomeEnterpriseSdmV1Structure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleHomeEnterpriseSdmV1Structure withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class GoogleHomeEnterpriseSdmV1Structure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traits")
     public java.util.Map<String, Object> traits;
+
     public GoogleHomeEnterpriseSdmV1Structure withTraits(java.util.Map<String, Object> traits) {
         this.traits = traits;
         return this;
     }
     
+    public GoogleHomeEnterpriseSdmV1Structure(){}
 }

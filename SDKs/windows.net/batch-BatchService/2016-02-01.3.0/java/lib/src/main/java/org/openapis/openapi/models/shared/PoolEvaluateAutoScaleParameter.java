@@ -15,9 +15,13 @@ public class PoolEvaluateAutoScaleParameter {
      */
     @JsonProperty("autoScaleFormula")
     public String autoScaleFormula;
+
     public PoolEvaluateAutoScaleParameter withAutoScaleFormula(String autoScaleFormula) {
         this.autoScaleFormula = autoScaleFormula;
         return this;
     }
     
+    public PoolEvaluateAutoScaleParameter(@JsonProperty("autoScaleFormula") String autoScaleFormula) {
+        this.autoScaleFormula = autoScaleFormula;
+  }
 }

@@ -15,6 +15,7 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PasswordCount")
     public Long passwordCount;
+
     public Authentication withPasswordCount(Long passwordCount) {
         this.passwordCount = passwordCount;
         return this;
@@ -23,9 +24,11 @@ public class Authentication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public AuthenticationTypeEnum type;
+
     public Authentication withType(AuthenticationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Authentication(){}
 }

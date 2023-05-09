@@ -11,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public enum CreateBatchPaymentNewBatchTypeEnum {
     BANK_TRANSFER("BANK_TRANSFER"),
-    INTERNAL_TRANSFER("INTERNAL_TRANSFER");
+    INTERNAL_TRANSFER("INTERNAL_TRANSFER"),
+    INTERNATIONAL_TRANSFER("INTERNATIONAL_TRANSFER");
 
     @JsonValue
     public final String value;

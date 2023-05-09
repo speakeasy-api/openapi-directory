@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ClientApiAllRequest;
 import org.openapis.openapi.models.operations.ClientApiAllResponse;
 
@@ -26,19 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ClientApiAllRequest req = new ClientApiAllRequest() {{
-                xAuthKey = "corrupti";
-                xAuthSecret = "provident";
-            }}            
+            ClientApiAllRequest req = new ClientApiAllRequest("corrupti", "provident");            
 
             ClientApiAllResponse res = sdk.client.clientApiAll(req);
 
-            if (res.clientDetailsApiModels.isPresent()) {
+            if (res.clientDetailsApiModels != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,159 +44,159 @@ public class Application {
 ## Available Resources and Operations
 
 
-### client
+### [client](docs/client/README.md)
 
-* `clientApiAll` - Return all clients for the account
-* `clientApiCanDelete` - Check if the provided client can be deleted
-* `clientApiDeleteForm` - Delete an existing client
-* `clientApiDeleteJson` - Delete an existing client
-* `clientApiDeleteRaw` - Delete an existing client
-* `clientApiDetails` - Return client details. Activities and invoices included.
-* `clientApiNewForm` - Create a client
-* `clientApiNewJson` - Create a client
-* `clientApiNewRaw` - Create a client
-* `clientApiUpdateForm` - Update an existing client
-* `clientApiUpdateJson` - Update an existing client
-* `clientApiUpdateRaw` - Update an existing client
+* [clientApiAll](docs/client/README.md#clientapiall) - Return all clients for the account
+* [clientApiCanDelete](docs/client/README.md#clientapicandelete) - Check if the provided client can be deleted
+* [clientApiDeleteForm](docs/client/README.md#clientapideleteform) - Delete an existing client
+* [clientApiDeleteJson](docs/client/README.md#clientapideletejson) - Delete an existing client
+* [clientApiDeleteRaw](docs/client/README.md#clientapideleteraw) - Delete an existing client
+* [clientApiDetails](docs/client/README.md#clientapidetails) - Return client details. Activities and invoices included.
+* [clientApiNewForm](docs/client/README.md#clientapinewform) - Create a client
+* [clientApiNewJson](docs/client/README.md#clientapinewjson) - Create a client
+* [clientApiNewRaw](docs/client/README.md#clientapinewraw) - Create a client
+* [clientApiUpdateForm](docs/client/README.md#clientapiupdateform) - Update an existing client
+* [clientApiUpdateJson](docs/client/README.md#clientapiupdatejson) - Update an existing client
+* [clientApiUpdateRaw](docs/client/README.md#clientapiupdateraw) - Update an existing client
 
-### estimation
+### [estimation](docs/estimation/README.md)
 
-* `estimationApiAll` - Return all estimation for the account
-* `estimationApiChangeStatusForm` - Change estimation status
-* `estimationApiChangeStatusJson` - Change estimation status
-* `estimationApiChangeStatusRaw` - Change estimation status
-* `estimationApiDeleteForm` - Delete an existing estimation
-* `estimationApiDeleteJson` - Delete an existing estimation
-* `estimationApiDeleteRaw` - Delete an existing estimation
-* `estimationApiDetails` - Return estimation data
-* `estimationApiNewForm` - Create an estimation
-* `estimationApiNewJson` - Create an estimation
-* `estimationApiNewRaw` - Create an estimation
-* `estimationApiSendToClientForm` - Send the provided estimation to the client
-* `estimationApiSendToClientJson` - Send the provided estimation to the client
-* `estimationApiSendToClientRaw` - Send the provided estimation to the client
-* `estimationApiStatus` - Retrieve the status of the estimation
-* `estimationApiUpdateForm` - Update an existing estimation
-* `estimationApiUpdateJson` - Update an existing estimation
-* `estimationApiUpdateRaw` - Update an existing estimation
-* `estimationApiUri` - Return the unique url to the client's invoice
+* [estimationApiAll](docs/estimation/README.md#estimationapiall) - Return all estimation for the account
+* [estimationApiChangeStatusForm](docs/estimation/README.md#estimationapichangestatusform) - Change estimation status
+* [estimationApiChangeStatusJson](docs/estimation/README.md#estimationapichangestatusjson) - Change estimation status
+* [estimationApiChangeStatusRaw](docs/estimation/README.md#estimationapichangestatusraw) - Change estimation status
+* [estimationApiDeleteForm](docs/estimation/README.md#estimationapideleteform) - Delete an existing estimation
+* [estimationApiDeleteJson](docs/estimation/README.md#estimationapideletejson) - Delete an existing estimation
+* [estimationApiDeleteRaw](docs/estimation/README.md#estimationapideleteraw) - Delete an existing estimation
+* [estimationApiDetails](docs/estimation/README.md#estimationapidetails) - Return estimation data
+* [estimationApiNewForm](docs/estimation/README.md#estimationapinewform) - Create an estimation
+* [estimationApiNewJson](docs/estimation/README.md#estimationapinewjson) - Create an estimation
+* [estimationApiNewRaw](docs/estimation/README.md#estimationapinewraw) - Create an estimation
+* [estimationApiSendToClientForm](docs/estimation/README.md#estimationapisendtoclientform) - Send the provided estimation to the client
+* [estimationApiSendToClientJson](docs/estimation/README.md#estimationapisendtoclientjson) - Send the provided estimation to the client
+* [estimationApiSendToClientRaw](docs/estimation/README.md#estimationapisendtoclientraw) - Send the provided estimation to the client
+* [estimationApiStatus](docs/estimation/README.md#estimationapistatus) - Retrieve the status of the estimation
+* [estimationApiUpdateForm](docs/estimation/README.md#estimationapiupdateform) - Update an existing estimation
+* [estimationApiUpdateJson](docs/estimation/README.md#estimationapiupdatejson) - Update an existing estimation
+* [estimationApiUpdateRaw](docs/estimation/README.md#estimationapiupdateraw) - Update an existing estimation
+* [estimationApiUri](docs/estimation/README.md#estimationapiuri) - Return the unique url to the client's invoice
 
-### general
+### [general](docs/general/README.md)
 
-* `generalApiCountries` - Return all of the platform supported countries
-* `generalApiCurrencies` - Return all of the platform supported currencies
-* `generalApiDateFormats` - Return all of the platform supported Date Formats
-* `generalApiUiLanguages` - Return all of the platform supported UI languages
+* [generalApiCountries](docs/general/README.md#generalapicountries) - Return all of the platform supported countries
+* [generalApiCurrencies](docs/general/README.md#generalapicurrencies) - Return all of the platform supported currencies
+* [generalApiDateFormats](docs/general/README.md#generalapidateformats) - Return all of the platform supported Date Formats
+* [generalApiUiLanguages](docs/general/README.md#generalapiuilanguages) - Return all of the platform supported UI languages
 
-### invoice
+### [invoice](docs/invoice/README.md)
 
-* `invoiceApiAll` - Return all invoices for the account
-* `invoiceApiChangeStatusForm` - Change invoice status
-* `invoiceApiChangeStatusJson` - Change invoice status
-* `invoiceApiChangeStatusRaw` - Change invoice status
-* `invoiceApiDeleteForm` - Delete an existing invoice
-* `invoiceApiDeleteJson` - Delete an existing invoice
-* `invoiceApiDeleteRaw` - Delete an existing invoice
-* `invoiceApiDetails` - Return invoice data
-* `invoiceApiNewForm` - Create an invoice
-* `invoiceApiNewJson` - Create an invoice
-* `invoiceApiNewRaw` - Create an invoice
-* `invoiceApiPdf` - Return the PDF for the invoice
-* `invoiceApiSendToAccountantForm` - Send the provided invoice to the accountant
-* `invoiceApiSendToAccountantJson` - Send the provided invoice to the accountant
-* `invoiceApiSendToAccountantRaw` - Send the provided invoice to the accountant
-* `invoiceApiSendToClientForm` - Send the provided invoice to the client
-* `invoiceApiSendToClientJson` - Send the provided invoice to the client
-* `invoiceApiSendToClientRaw` - Send the provided invoice to the client
-* `invoiceApiStatus` - Retrieve the status of the invoice
-* `invoiceApiUpdateForm` - Update an existing invoice
-* `invoiceApiUpdateJson` - Update an existing invoice
-* `invoiceApiUpdateRaw` - Update an existing invoice
-* `invoiceApiUri` - Return the unique url to the client's invoice
-* `getApiInvoiceAllcategories` - Return all invoice categories for the account
-* `postApiInvoiceDeletecategoryForm` - Delete an existing invoice category
-* `postApiInvoiceDeletecategoryJson` - Delete an existing invoice category
-* `postApiInvoiceDeletecategoryRaw` - Delete an existing invoice category
-* `postApiInvoiceNewcategoryForm` - Create an invoice category
-* `postApiInvoiceNewcategoryJson` - Create an invoice category
-* `postApiInvoiceNewcategoryRaw` - Create an invoice category
-* `postApiInvoiceUpdatecategoryForm` - Update an existing invoice category
-* `postApiInvoiceUpdatecategoryJson` - Update an existing invoice category
-* `postApiInvoiceUpdatecategoryRaw` - Update an existing invoice category
+* [invoiceApiAll](docs/invoice/README.md#invoiceapiall) - Return all invoices for the account
+* [invoiceApiChangeStatusForm](docs/invoice/README.md#invoiceapichangestatusform) - Change invoice status
+* [invoiceApiChangeStatusJson](docs/invoice/README.md#invoiceapichangestatusjson) - Change invoice status
+* [invoiceApiChangeStatusRaw](docs/invoice/README.md#invoiceapichangestatusraw) - Change invoice status
+* [invoiceApiDeleteForm](docs/invoice/README.md#invoiceapideleteform) - Delete an existing invoice
+* [invoiceApiDeleteJson](docs/invoice/README.md#invoiceapideletejson) - Delete an existing invoice
+* [invoiceApiDeleteRaw](docs/invoice/README.md#invoiceapideleteraw) - Delete an existing invoice
+* [invoiceApiDetails](docs/invoice/README.md#invoiceapidetails) - Return invoice data
+* [invoiceApiNewForm](docs/invoice/README.md#invoiceapinewform) - Create an invoice
+* [invoiceApiNewJson](docs/invoice/README.md#invoiceapinewjson) - Create an invoice
+* [invoiceApiNewRaw](docs/invoice/README.md#invoiceapinewraw) - Create an invoice
+* [invoiceApiPdf](docs/invoice/README.md#invoiceapipdf) - Return the PDF for the invoice
+* [invoiceApiSendToAccountantForm](docs/invoice/README.md#invoiceapisendtoaccountantform) - Send the provided invoice to the accountant
+* [invoiceApiSendToAccountantJson](docs/invoice/README.md#invoiceapisendtoaccountantjson) - Send the provided invoice to the accountant
+* [invoiceApiSendToAccountantRaw](docs/invoice/README.md#invoiceapisendtoaccountantraw) - Send the provided invoice to the accountant
+* [invoiceApiSendToClientForm](docs/invoice/README.md#invoiceapisendtoclientform) - Send the provided invoice to the client
+* [invoiceApiSendToClientJson](docs/invoice/README.md#invoiceapisendtoclientjson) - Send the provided invoice to the client
+* [invoiceApiSendToClientRaw](docs/invoice/README.md#invoiceapisendtoclientraw) - Send the provided invoice to the client
+* [invoiceApiStatus](docs/invoice/README.md#invoiceapistatus) - Retrieve the status of the invoice
+* [invoiceApiUpdateForm](docs/invoice/README.md#invoiceapiupdateform) - Update an existing invoice
+* [invoiceApiUpdateJson](docs/invoice/README.md#invoiceapiupdatejson) - Update an existing invoice
+* [invoiceApiUpdateRaw](docs/invoice/README.md#invoiceapiupdateraw) - Update an existing invoice
+* [invoiceApiUri](docs/invoice/README.md#invoiceapiuri) - Return the unique url to the client's invoice
+* [getApiInvoiceAllcategories](docs/invoice/README.md#getapiinvoiceallcategories) - Return all invoice categories for the account
+* [postApiInvoiceDeletecategoryForm](docs/invoice/README.md#postapiinvoicedeletecategoryform) - Delete an existing invoice category
+* [postApiInvoiceDeletecategoryJson](docs/invoice/README.md#postapiinvoicedeletecategoryjson) - Delete an existing invoice category
+* [postApiInvoiceDeletecategoryRaw](docs/invoice/README.md#postapiinvoicedeletecategoryraw) - Delete an existing invoice category
+* [postApiInvoiceNewcategoryForm](docs/invoice/README.md#postapiinvoicenewcategoryform) - Create an invoice category
+* [postApiInvoiceNewcategoryJson](docs/invoice/README.md#postapiinvoicenewcategoryjson) - Create an invoice category
+* [postApiInvoiceNewcategoryRaw](docs/invoice/README.md#postapiinvoicenewcategoryraw) - Create an invoice category
+* [postApiInvoiceUpdatecategoryForm](docs/invoice/README.md#postapiinvoiceupdatecategoryform) - Update an existing invoice category
+* [postApiInvoiceUpdatecategoryJson](docs/invoice/README.md#postapiinvoiceupdatecategoryjson) - Update an existing invoice category
+* [postApiInvoiceUpdatecategoryRaw](docs/invoice/README.md#postapiinvoiceupdatecategoryraw) - Update an existing invoice category
 
-### order
+### [order](docs/order/README.md)
 
-* `orderApiAll` - Return all orders for the account
-* `orderApiChangeShippingDetailsForm` - Change order shipping details
-* `orderApiChangeShippingDetailsJson` - Change order shipping details
-* `orderApiChangeShippingDetailsRaw` - Change order shipping details
-* `orderApiChangeStatusForm` - Change order status
-* `orderApiChangeStatusJson` - Change order status
-* `orderApiChangeStatusRaw` - Change order status
-* `orderApiDeleteForm` - Delete an existing order
-* `orderApiDeleteJson` - Delete an existing order
-* `orderApiDeleteRaw` - Delete an existing order
-* `orderApiDetails` - Return order details
-* `orderApiNewForm` - Create an order
-* `orderApiNewJson` - Create an order
-* `orderApiNewRaw` - Create an order
+* [orderApiAll](docs/order/README.md#orderapiall) - Return all orders for the account
+* [orderApiChangeShippingDetailsForm](docs/order/README.md#orderapichangeshippingdetailsform) - Change order shipping details
+* [orderApiChangeShippingDetailsJson](docs/order/README.md#orderapichangeshippingdetailsjson) - Change order shipping details
+* [orderApiChangeShippingDetailsRaw](docs/order/README.md#orderapichangeshippingdetailsraw) - Change order shipping details
+* [orderApiChangeStatusForm](docs/order/README.md#orderapichangestatusform) - Change order status
+* [orderApiChangeStatusJson](docs/order/README.md#orderapichangestatusjson) - Change order status
+* [orderApiChangeStatusRaw](docs/order/README.md#orderapichangestatusraw) - Change order status
+* [orderApiDeleteForm](docs/order/README.md#orderapideleteform) - Delete an existing order
+* [orderApiDeleteJson](docs/order/README.md#orderapideletejson) - Delete an existing order
+* [orderApiDeleteRaw](docs/order/README.md#orderapideleteraw) - Delete an existing order
+* [orderApiDetails](docs/order/README.md#orderapidetails) - Return order details
+* [orderApiNewForm](docs/order/README.md#orderapinewform) - Create an order
+* [orderApiNewJson](docs/order/README.md#orderapinewjson) - Create an order
+* [orderApiNewRaw](docs/order/README.md#orderapinewraw) - Create an order
 
-### payment
+### [payment](docs/payment/README.md)
 
-* `paymentApiSupported` - Return all supported payment gateways (no currencies means all are supported)
+* [paymentApiSupported](docs/payment/README.md#paymentapisupported) - Return all supported payment gateways (no currencies means all are supported)
 
-### paymentLink
+### [paymentLink](docs/paymentlink/README.md)
 
-* `paymentLinkApiAll` - Create a payment link
-* `paymentLinkApiDeleteForm` - Delete an existing payment link
-* `paymentLinkApiDeleteJson` - Delete an existing payment link
-* `paymentLinkApiDeleteRaw` - Delete an existing payment link
-* `paymentLinkApiNewForm` - Create a payment link
-* `paymentLinkApiNewJson` - Create a payment link
-* `paymentLinkApiNewRaw` - Create a payment link
-* `paymentLinkApiUri` - Return the unique url to the client's payment link
+* [paymentLinkApiAll](docs/paymentlink/README.md#paymentlinkapiall) - Create a payment link
+* [paymentLinkApiDeleteForm](docs/paymentlink/README.md#paymentlinkapideleteform) - Delete an existing payment link
+* [paymentLinkApiDeleteJson](docs/paymentlink/README.md#paymentlinkapideletejson) - Delete an existing payment link
+* [paymentLinkApiDeleteRaw](docs/paymentlink/README.md#paymentlinkapideleteraw) - Delete an existing payment link
+* [paymentLinkApiNewForm](docs/paymentlink/README.md#paymentlinkapinewform) - Create a payment link
+* [paymentLinkApiNewJson](docs/paymentlink/README.md#paymentlinkapinewjson) - Create a payment link
+* [paymentLinkApiNewRaw](docs/paymentlink/README.md#paymentlinkapinewraw) - Create a payment link
+* [paymentLinkApiUri](docs/paymentlink/README.md#paymentlinkapiuri) - Return the unique url to the client's payment link
 
-### product
+### [product](docs/product/README.md)
 
-* `productApiAll` - Return all products for the account
-* `productApiDeleteForm` - Delete an existing product
-* `productApiDeleteJson` - Delete an existing product
-* `productApiDeleteRaw` - Delete an existing product
-* `productApiDetails` - Return product details
-* `productApiNewForm` - Create a product
-* `productApiNewJson` - Create a product
-* `productApiNewRaw` - Create a product
-* `productApiUpdateForm` - Update an existing product
-* `productApiUpdateJson` - Update an existing product
-* `productApiUpdateRaw` - Update an existing product
+* [productApiAll](docs/product/README.md#productapiall) - Return all products for the account
+* [productApiDeleteForm](docs/product/README.md#productapideleteform) - Delete an existing product
+* [productApiDeleteJson](docs/product/README.md#productapideletejson) - Delete an existing product
+* [productApiDeleteRaw](docs/product/README.md#productapideleteraw) - Delete an existing product
+* [productApiDetails](docs/product/README.md#productapidetails) - Return product details
+* [productApiNewForm](docs/product/README.md#productapinewform) - Create a product
+* [productApiNewJson](docs/product/README.md#productapinewjson) - Create a product
+* [productApiNewRaw](docs/product/README.md#productapinewraw) - Create a product
+* [productApiUpdateForm](docs/product/README.md#productapiupdateform) - Update an existing product
+* [productApiUpdateJson](docs/product/README.md#productapiupdatejson) - Update an existing product
+* [productApiUpdateRaw](docs/product/README.md#productapiupdateraw) - Update an existing product
 
-### tax
+### [tax](docs/tax/README.md)
 
-* `taxApiAll` - Return all taxes for the account
-* `taxApiDeleteForm` - Delete an existing tax
-* `taxApiDeleteJson` - Delete an existing tax
-* `taxApiDeleteRaw` - Delete an existing tax
-* `taxApiNewForm` - Create a tax
-* `taxApiNewJson` - Create a tax
-* `taxApiNewRaw` - Create a tax
-* `taxApiUpdateForm` - Update an existing tax
-* `taxApiUpdateJson` - Update an existing tax
-* `taxApiUpdateRaw` - Update an existing tax
+* [taxApiAll](docs/tax/README.md#taxapiall) - Return all taxes for the account
+* [taxApiDeleteForm](docs/tax/README.md#taxapideleteform) - Delete an existing tax
+* [taxApiDeleteJson](docs/tax/README.md#taxapideletejson) - Delete an existing tax
+* [taxApiDeleteRaw](docs/tax/README.md#taxapideleteraw) - Delete an existing tax
+* [taxApiNewForm](docs/tax/README.md#taxapinewform) - Create a tax
+* [taxApiNewJson](docs/tax/README.md#taxapinewjson) - Create a tax
+* [taxApiNewRaw](docs/tax/README.md#taxapinewraw) - Create a tax
+* [taxApiUpdateForm](docs/tax/README.md#taxapiupdateform) - Update an existing tax
+* [taxApiUpdateJson](docs/tax/README.md#taxapiupdatejson) - Update an existing tax
+* [taxApiUpdateRaw](docs/tax/README.md#taxapiupdateraw) - Update an existing tax
 
-### workType
+### [workType](docs/worktype/README.md)
 
-* `workTypeApiAll` - Return all work types for the account
-* `workTypeApiDeleteForm` - Delete an existing work type
-* `workTypeApiDeleteJson` - Delete an existing work type
-* `workTypeApiDeleteRaw` - Delete an existing work type
-* `workTypeApiDetails` - Return work type details
-* `workTypeApiNewForm` - Create a work type
-* `workTypeApiNewJson` - Create a work type
-* `workTypeApiNewRaw` - Create a work type
-* `workTypeApiSearch` - Return all work types for the account that match the query param
-* `workTypeApiUpdateForm` - Update an existing work type
-* `workTypeApiUpdateJson` - Update an existing work type
-* `workTypeApiUpdateRaw` - Update an existing work type
+* [workTypeApiAll](docs/worktype/README.md#worktypeapiall) - Return all work types for the account
+* [workTypeApiDeleteForm](docs/worktype/README.md#worktypeapideleteform) - Delete an existing work type
+* [workTypeApiDeleteJson](docs/worktype/README.md#worktypeapideletejson) - Delete an existing work type
+* [workTypeApiDeleteRaw](docs/worktype/README.md#worktypeapideleteraw) - Delete an existing work type
+* [workTypeApiDetails](docs/worktype/README.md#worktypeapidetails) - Return work type details
+* [workTypeApiNewForm](docs/worktype/README.md#worktypeapinewform) - Create a work type
+* [workTypeApiNewJson](docs/worktype/README.md#worktypeapinewjson) - Create a work type
+* [workTypeApiNewRaw](docs/worktype/README.md#worktypeapinewraw) - Create a work type
+* [workTypeApiSearch](docs/worktype/README.md#worktypeapisearch) - Return all work types for the account that match the query param
+* [workTypeApiUpdateForm](docs/worktype/README.md#worktypeapiupdateform) - Update an existing work type
+* [workTypeApiUpdateJson](docs/worktype/README.md#worktypeapiupdatejson) - Update an existing work type
+* [workTypeApiUpdateRaw](docs/worktype/README.md#worktypeapiupdateraw) - Update an existing work type
 <!-- End SDK Available Operations -->
 
 ### Maturity

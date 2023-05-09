@@ -18,6 +18,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acquiring_channel")
     public SessionAcquiringChannelEnum acquiringChannel;
+
     public SessionInput withAcquiringChannel(SessionAcquiringChannelEnum acquiringChannel) {
         this.acquiringChannel = acquiringChannel;
         return this;
@@ -26,6 +27,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public Attachment attachment;
+
     public SessionInput withAttachment(Attachment attachment) {
         this.attachment = attachment;
         return this;
@@ -34,6 +36,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public Address billingAddress;
+
     public SessionInput withBillingAddress(Address billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -45,6 +48,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_method_ids")
     public String[] customPaymentMethodIds;
+
     public SessionInput withCustomPaymentMethodIds(String[] customPaymentMethodIds) {
         this.customPaymentMethodIds = customPaymentMethodIds;
         return this;
@@ -53,6 +57,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public Customer customer;
+
     public SessionInput withCustomer(Customer customer) {
         this.customer = customer;
         return this;
@@ -64,6 +69,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("design")
     public String design;
+
     public SessionInput withDesign(String design) {
         this.design = design;
         return this;
@@ -75,6 +81,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public SessionIntentEnum intent;
+
     public SessionInput withIntent(SessionIntentEnum intent) {
         this.intent = intent;
         return this;
@@ -102,6 +109,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public SessionInput withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -113,6 +121,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_data")
     public String merchantData;
+
     public SessionInput withMerchantData(String merchantData) {
         this.merchantData = merchantData;
         return this;
@@ -124,6 +133,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference1")
     public String merchantReference1;
+
     public SessionInput withMerchantReference1(String merchantReference1) {
         this.merchantReference1 = merchantReference1;
         return this;
@@ -135,6 +145,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_reference2")
     public String merchantReference2;
+
     public SessionInput withMerchantReference2(String merchantReference2) {
         this.merchantReference2 = merchantReference2;
         return this;
@@ -143,6 +154,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchant_urls")
     public MerchantUrls merchantUrls;
+
     public SessionInput withMerchantUrls(MerchantUrls merchantUrls) {
         this.merchantUrls = merchantUrls;
         return this;
@@ -151,6 +163,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public Options options;
+
     public SessionInput withOptions(Options options) {
         this.options = options;
         return this;
@@ -162,6 +175,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_amount")
     public Long orderAmount;
+
     public SessionInput withOrderAmount(Long orderAmount) {
         this.orderAmount = orderAmount;
         return this;
@@ -173,6 +187,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_lines")
     public OrderLine[] orderLines;
+
     public SessionInput withOrderLines(OrderLine[] orderLines) {
         this.orderLines = orderLines;
         return this;
@@ -184,6 +199,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_tax_amount")
     public Long orderTaxAmount;
+
     public SessionInput withOrderTaxAmount(Long orderTaxAmount) {
         this.orderTaxAmount = orderTaxAmount;
         return this;
@@ -195,6 +211,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_country")
     public String purchaseCountry;
+
     public SessionInput withPurchaseCountry(String purchaseCountry) {
         this.purchaseCountry = purchaseCountry;
         return this;
@@ -206,6 +223,7 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchase_currency")
     public String purchaseCurrency;
+
     public SessionInput withPurchaseCurrency(String purchaseCurrency) {
         this.purchaseCurrency = purchaseCurrency;
         return this;
@@ -214,9 +232,11 @@ public class SessionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public Address shippingAddress;
+
     public SessionInput withShippingAddress(Address shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public SessionInput(){}
 }

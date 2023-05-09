@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RegistrationsLogsListLogRelationships - URLs to other entities or entity collections that have a relationship to the log.
@@ -15,6 +15,7 @@ public class RegistrationsLogsListLogRelationships {
      */
     
     public String linkedNode;
+
     public RegistrationsLogsListLogRelationships withLinkedNode(String linkedNode) {
         this.linkedNode = linkedNode;
         return this;
@@ -25,6 +26,7 @@ public class RegistrationsLogsListLogRelationships {
      */
     
     public String node;
+
     public RegistrationsLogsListLogRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -35,6 +37,7 @@ public class RegistrationsLogsListLogRelationships {
      */
     
     public String originalNode;
+
     public RegistrationsLogsListLogRelationships withOriginalNode(String originalNode) {
         this.originalNode = originalNode;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationsLogsListLogRelationships {
      */
     
     public String templateNode;
+
     public RegistrationsLogsListLogRelationships withTemplateNode(String templateNode) {
         this.templateNode = templateNode;
         return this;
@@ -55,9 +59,13 @@ public class RegistrationsLogsListLogRelationships {
      */
     
     public String user;
+
     public RegistrationsLogsListLogRelationships withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public RegistrationsLogsListLogRelationships(@JsonProperty("node") String node) {
+        this.node = node;
+  }
 }

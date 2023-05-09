@@ -14,6 +14,7 @@ public class StartAnnotationImportJobRequestBody {
      */
     @JsonProperty("destinationName")
     public String destinationName;
+
     public StartAnnotationImportJobRequestBody withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -25,6 +26,7 @@ public class StartAnnotationImportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatOptions")
     public StartAnnotationImportJobRequestBodyFormatOptions formatOptions;
+
     public StartAnnotationImportJobRequestBody withFormatOptions(StartAnnotationImportJobRequestBodyFormatOptions formatOptions) {
         this.formatOptions = formatOptions;
         return this;
@@ -35,6 +37,7 @@ public class StartAnnotationImportJobRequestBody {
      */
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.AnnotationImportItemSource[] items;
+
     public StartAnnotationImportJobRequestBody withItems(org.openapis.openapi.models.shared.AnnotationImportItemSource[] items) {
         this.items = items;
         return this;
@@ -45,6 +48,7 @@ public class StartAnnotationImportJobRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartAnnotationImportJobRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -56,9 +60,15 @@ public class StartAnnotationImportJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runLeftNormalization")
     public Boolean runLeftNormalization;
+
     public StartAnnotationImportJobRequestBody withRunLeftNormalization(Boolean runLeftNormalization) {
         this.runLeftNormalization = runLeftNormalization;
         return this;
     }
     
+    public StartAnnotationImportJobRequestBody(@JsonProperty("destinationName") String destinationName, @JsonProperty("items") org.openapis.openapi.models.shared.AnnotationImportItemSource[] items, @JsonProperty("roleArn") String roleArn) {
+        this.destinationName = destinationName;
+        this.items = items;
+        this.roleArn = roleArn;
+  }
 }

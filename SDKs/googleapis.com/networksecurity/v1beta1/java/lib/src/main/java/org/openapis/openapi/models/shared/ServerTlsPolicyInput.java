@@ -9,15 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ServerTlsPolicyInput - ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests. This resource itself does not affect configuration unless it is attached to a target HTTPS proxy or endpoint config selector resource.
+ * ServerTlsPolicyInput - ServerTlsPolicy is a resource that specifies how a server should authenticate incoming requests. This resource itself does not affect configuration unless it is attached to a target HTTPS proxy or endpoint config selector resource. ServerTlsPolicy in the form accepted by external HTTPS load balancers can be attached only to TargetHttpsProxy with an `EXTERNAL` or `EXTERNAL_MANAGED` load balancing scheme. Traffic Director compatible ServerTlsPolicies can be attached to EndpointPolicy and TargetHttpsProxy with Traffic Director `INTERNAL_SELF_MANAGED` load balancing scheme.
  */
 public class ServerTlsPolicyInput {
     /**
-     *  Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS and non-TLS traffic reaching port :80.
+     * This field applies only for Traffic Director policies. It is must be set to false for external HTTPS load balancer policies. Determines if server allows plaintext connections. If set to true, server allows plain text connections. By default, it is set to false. This setting is not exclusive of other encryption modes. For example, if `allow_open` and `mtls_policy` are set, server allows both plain text and mTLS connections. See documentation of other encryption modes to confirm compatibility. Consider using it if you wish to upgrade in place your deployment to TLS while having mixed TLS and non-TLS traffic reaching port :80.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowOpen")
     public Boolean allowOpen;
+
     public ServerTlsPolicyInput withAllowOpen(Boolean allowOpen) {
         this.allowOpen = allowOpen;
         return this;
@@ -29,6 +30,7 @@ public class ServerTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ServerTlsPolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ServerTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ServerTlsPolicyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class ServerTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mtlsPolicy")
     public MTLSPolicy mtlsPolicy;
+
     public ServerTlsPolicyInput withMtlsPolicy(MTLSPolicy mtlsPolicy) {
         this.mtlsPolicy = mtlsPolicy;
         return this;
@@ -62,6 +66,7 @@ public class ServerTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServerTlsPolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class ServerTlsPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverCertificate")
     public GoogleCloudNetworksecurityV1beta1CertificateProvider serverCertificate;
+
     public ServerTlsPolicyInput withServerCertificate(GoogleCloudNetworksecurityV1beta1CertificateProvider serverCertificate) {
         this.serverCertificate = serverCertificate;
         return this;
     }
     
+    public ServerTlsPolicyInput(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AndroidenterpriseEnterprisesSendTestPushNotificationResponse {
     
     public String contentType;
+
     public AndroidenterpriseEnterprisesSendTestPushNotificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AndroidenterpriseEnterprisesSendTestPushNotificationResponse {
      */
     
     public org.openapis.openapi.models.shared.EnterprisesSendTestPushNotificationResponse enterprisesSendTestPushNotificationResponse;
+
     public AndroidenterpriseEnterprisesSendTestPushNotificationResponse withEnterprisesSendTestPushNotificationResponse(org.openapis.openapi.models.shared.EnterprisesSendTestPushNotificationResponse enterprisesSendTestPushNotificationResponse) {
         this.enterprisesSendTestPushNotificationResponse = enterprisesSendTestPushNotificationResponse;
         return this;
@@ -26,6 +29,7 @@ public class AndroidenterpriseEnterprisesSendTestPushNotificationResponse {
     
     
     public Integer statusCode;
+
     public AndroidenterpriseEnterprisesSendTestPushNotificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AndroidenterpriseEnterprisesSendTestPushNotificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AndroidenterpriseEnterprisesSendTestPushNotificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AndroidenterpriseEnterprisesSendTestPushNotificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

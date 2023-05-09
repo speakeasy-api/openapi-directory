@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FactchecktoolsPagesGetResponse {
     
     public String contentType;
+
     public FactchecktoolsPagesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FactchecktoolsPagesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage;
+
     public FactchecktoolsPagesGetResponse withGoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage(org.openapis.openapi.models.shared.GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage) {
         this.googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage;
         return this;
@@ -26,6 +29,7 @@ public class FactchecktoolsPagesGetResponse {
     
     
     public Integer statusCode;
+
     public FactchecktoolsPagesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FactchecktoolsPagesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FactchecktoolsPagesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FactchecktoolsPagesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

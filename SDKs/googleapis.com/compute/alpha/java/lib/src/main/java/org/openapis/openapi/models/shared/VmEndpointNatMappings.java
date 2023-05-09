@@ -18,6 +18,7 @@ public class VmEndpointNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public VmEndpointNatMappings withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
@@ -26,9 +27,11 @@ public class VmEndpointNatMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaceNatMappings")
     public VmEndpointNatMappingsInterfaceNatMappings[] interfaceNatMappings;
+
     public VmEndpointNatMappings withInterfaceNatMappings(VmEndpointNatMappingsInterfaceNatMappings[] interfaceNatMappings) {
         this.interfaceNatMappings = interfaceNatMappings;
         return this;
     }
     
+    public VmEndpointNatMappings(){}
 }

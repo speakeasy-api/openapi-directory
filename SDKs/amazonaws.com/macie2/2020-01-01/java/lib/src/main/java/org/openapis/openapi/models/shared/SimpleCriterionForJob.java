@@ -15,6 +15,7 @@ public class SimpleCriterionForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public JobComparatorEnum comparator;
+
     public SimpleCriterionForJob withComparator(JobComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class SimpleCriterionForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public SimpleCriterionKeyForJobEnum key;
+
     public SimpleCriterionForJob withKey(SimpleCriterionKeyForJobEnum key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class SimpleCriterionForJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SimpleCriterionForJob withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SimpleCriterionForJob(){}
 }

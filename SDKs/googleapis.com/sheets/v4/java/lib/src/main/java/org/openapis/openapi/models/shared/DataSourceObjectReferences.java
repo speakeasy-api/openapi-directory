@@ -18,9 +18,11 @@ public class DataSourceObjectReferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("references")
     public DataSourceObjectReference[] references;
+
     public DataSourceObjectReferences withReferences(DataSourceObjectReference[] references) {
         this.references = references;
         return this;
     }
     
+    public DataSourceObjectReferences(){}
 }

@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Resource withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceCheck")
     public String complianceCheck;
+
     public Resource withComplianceCheck(String complianceCheck) {
         this.complianceCheck = complianceCheck;
         return this;
@@ -31,9 +33,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Resource withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Resource(){}
 }

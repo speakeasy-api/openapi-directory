@@ -15,6 +15,7 @@ public class Interpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public Intent intent;
+
     public Interpretation withIntent(Intent intent) {
         this.intent = intent;
         return this;
@@ -23,6 +24,7 @@ public class Interpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluConfidence")
     public ConfidenceScore nluConfidence;
+
     public Interpretation withNluConfidence(ConfidenceScore nluConfidence) {
         this.nluConfidence = nluConfidence;
         return this;
@@ -31,9 +33,11 @@ public class Interpretation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentimentResponse")
     public SentimentResponse sentimentResponse;
+
     public Interpretation withSentimentResponse(SentimentResponse sentimentResponse) {
         this.sentimentResponse = sentimentResponse;
         return this;
     }
     
+    public Interpretation(){}
 }

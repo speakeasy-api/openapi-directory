@@ -20,6 +20,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public VpcIngressConnection withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +31,7 @@ public class VpcIngressConnection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public VpcIngressConnection withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class VpcIngressConnection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedAt")
     public OffsetDateTime deletedAt;
+
     public VpcIngressConnection withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -48,6 +51,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public VpcIngressConnection withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -56,6 +60,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IngressVpcConfiguration")
     public IngressVpcConfiguration ingressVpcConfiguration;
+
     public VpcIngressConnection withIngressVpcConfiguration(IngressVpcConfiguration ingressVpcConfiguration) {
         this.ingressVpcConfiguration = ingressVpcConfiguration;
         return this;
@@ -64,6 +69,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public VpcIngressConnection withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -72,6 +78,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public VpcIngressConnectionStatusEnum status;
+
     public VpcIngressConnection withStatus(VpcIngressConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -80,6 +87,7 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcIngressConnectionArn")
     public String vpcIngressConnectionArn;
+
     public VpcIngressConnection withVpcIngressConnectionArn(String vpcIngressConnectionArn) {
         this.vpcIngressConnectionArn = vpcIngressConnectionArn;
         return this;
@@ -88,9 +96,11 @@ public class VpcIngressConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcIngressConnectionName")
     public String vpcIngressConnectionName;
+
     public VpcIngressConnection withVpcIngressConnectionName(String vpcIngressConnectionName) {
         this.vpcIngressConnectionName = vpcIngressConnectionName;
         return this;
     }
     
+    public VpcIngressConnection(){}
 }

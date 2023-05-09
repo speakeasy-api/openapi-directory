@@ -15,6 +15,7 @@ public class Diagnostic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public Diagnostic withField(String field) {
         this.field = field;
         return this;
@@ -26,9 +27,11 @@ public class Diagnostic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("level")
     public DiagnosticLevelEnum level;
+
     public Diagnostic withLevel(DiagnosticLevelEnum level) {
         this.level = level;
         return this;
     }
     
+    public Diagnostic(){}
 }

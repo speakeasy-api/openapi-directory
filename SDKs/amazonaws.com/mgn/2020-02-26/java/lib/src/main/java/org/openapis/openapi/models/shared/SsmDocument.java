@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SsmDocument {
     @JsonProperty("actionName")
     public String actionName;
+
     public SsmDocument withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -22,6 +23,7 @@ public class SsmDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalParameters")
     public java.util.Map<String, SsmExternalParameter> externalParameters;
+
     public SsmDocument withExternalParameters(java.util.Map<String, SsmExternalParameter> externalParameters) {
         this.externalParameters = externalParameters;
         return this;
@@ -30,6 +32,7 @@ public class SsmDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mustSucceedForCutover")
     public Boolean mustSucceedForCutover;
+
     public SsmDocument withMustSucceedForCutover(Boolean mustSucceedForCutover) {
         this.mustSucceedForCutover = mustSucceedForCutover;
         return this;
@@ -38,6 +41,7 @@ public class SsmDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, SsmParameterStoreParameter[]> parameters;
+
     public SsmDocument withParameters(java.util.Map<String, SsmParameterStoreParameter[]> parameters) {
         this.parameters = parameters;
         return this;
@@ -45,6 +49,7 @@ public class SsmDocument {
     
     @JsonProperty("ssmDocumentName")
     public String ssmDocumentName;
+
     public SsmDocument withSsmDocumentName(String ssmDocumentName) {
         this.ssmDocumentName = ssmDocumentName;
         return this;
@@ -53,9 +58,14 @@ public class SsmDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutSeconds")
     public Long timeoutSeconds;
+
     public SsmDocument withTimeoutSeconds(Long timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
         return this;
     }
     
+    public SsmDocument(@JsonProperty("actionName") String actionName, @JsonProperty("ssmDocumentName") String ssmDocumentName) {
+        this.actionName = actionName;
+        this.ssmDocumentName = ssmDocumentName;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TerminateRequest {
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public TerminateRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public TerminateRequest(@JsonProperty("WorkspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

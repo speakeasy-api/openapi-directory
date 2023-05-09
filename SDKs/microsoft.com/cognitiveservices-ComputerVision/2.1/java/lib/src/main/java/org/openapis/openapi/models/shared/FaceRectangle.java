@@ -18,6 +18,7 @@ public class FaceRectangle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public FaceRectangle withHeight(Integer height) {
         this.height = height;
         return this;
@@ -29,6 +30,7 @@ public class FaceRectangle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Integer left;
+
     public FaceRectangle withLeft(Integer left) {
         this.left = left;
         return this;
@@ -40,6 +42,7 @@ public class FaceRectangle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Integer top;
+
     public FaceRectangle withTop(Integer top) {
         this.top = top;
         return this;
@@ -51,9 +54,11 @@ public class FaceRectangle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public FaceRectangle withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public FaceRectangle(){}
 }

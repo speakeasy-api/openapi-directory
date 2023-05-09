@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsListColumnsResponse {
     
     public String contentType;
+
     public ProjectsListColumnsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsListColumnsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ProjectsListColumnsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsListColumnsResponse {
     
     
     public Integer statusCode;
+
     public ProjectsListColumnsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ProjectsListColumnsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsListColumnsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ProjectsListColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsListColumnsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ProjectsListColumnsResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectColumn[] projectColumns;
+
     public ProjectsListColumnsResponse withProjectColumns(org.openapis.openapi.models.shared.ProjectColumn[] projectColumns) {
         this.projectColumns = projectColumns;
         return this;
     }
     
+    public ProjectsListColumnsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

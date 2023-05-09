@@ -15,6 +15,7 @@ public class CreateAllowListRequestBodyCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public CreateAllowListRequestBodyCriteria withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -23,9 +24,11 @@ public class CreateAllowListRequestBodyCriteria {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3WordsList")
     public org.openapis.openapi.models.shared.S3WordsList s3WordsList;
+
     public CreateAllowListRequestBodyCriteria withS3WordsList(org.openapis.openapi.models.shared.S3WordsList s3WordsList) {
         this.s3WordsList = s3WordsList;
         return this;
     }
     
+    public CreateAllowListRequestBodyCriteria(){}
 }

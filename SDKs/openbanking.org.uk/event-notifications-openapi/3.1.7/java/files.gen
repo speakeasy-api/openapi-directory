@@ -32,4 +32,6 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateEventNotificationRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateEventNotificationResponse.java
+docs/sdk/README.md
+docs/eventnotification/README.md
 USAGE.md

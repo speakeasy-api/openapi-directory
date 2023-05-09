@@ -15,6 +15,7 @@ public class UpdateResourceCollectionRequestBodyResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormation")
     public org.openapis.openapi.models.shared.UpdateCloudFormationCollectionFilter cloudFormation;
+
     public UpdateResourceCollectionRequestBodyResourceCollection withCloudFormation(org.openapis.openapi.models.shared.UpdateCloudFormationCollectionFilter cloudFormation) {
         this.cloudFormation = cloudFormation;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResourceCollectionRequestBodyResourceCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public org.openapis.openapi.models.shared.UpdateTagCollectionFilter[] tags;
+
     public UpdateResourceCollectionRequestBodyResourceCollection withTags(org.openapis.openapi.models.shared.UpdateTagCollectionFilter[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UpdateResourceCollectionRequestBodyResourceCollection(){}
 }

@@ -57,12 +57,10 @@ public class DeliveryNote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse res = new org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse() {{
+        org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse res = new org.openapis.openapi.models.operations.OrderApiCreateDeliveryNoteResponse(contentType, httpRes.statusCode()) {{
             orderApiCreateDeliveryNote200ApplicationJSONObject = null;
             orderApiCreateDeliveryNote200TextJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

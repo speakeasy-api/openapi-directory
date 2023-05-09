@@ -57,4 +57,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Application.java
 lib/src/main/java/org/openapis/openapi/models/shared/Keys.java
 lib/src/main/java/org/openapis/openapi/models/shared/Applications.java
 lib/src/main/java/org/openapis/openapi/models/shared/Embedded.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class ConfigIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config_file")
     public String configFile;
+
     public ConfigIssue withConfigFile(String configFile) {
         this.configFile = configFile;
         return this;
@@ -20,6 +21,7 @@ public class ConfigIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public String[] issues;
+
     public ConfigIssue withIssues(String[] issues) {
         this.issues = issues;
         return this;
@@ -28,6 +30,7 @@ public class ConfigIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_name")
     public String serviceName;
+
     public ConfigIssue withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -36,9 +39,11 @@ public class ConfigIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestions")
     public String[] suggestions;
+
     public ConfigIssue withSuggestions(String[] suggestions) {
         this.suggestions = suggestions;
         return this;
     }
     
+    public ConfigIssue(){}
 }

@@ -15,6 +15,7 @@ public class Imcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Imcer503ApplicationJSONErrorEnum error;
+
     public Imcer503ApplicationJSON withError(Imcer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Imcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Imcer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Imcer503ApplicationJSON withErrorDescription(Imcer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Imcer503ApplicationJSON(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Artifact {
     @JsonProperty("artifactFileName")
     public String artifactFileName;
+
     public Artifact withArtifactFileName(String artifactFileName) {
         this.artifactFileName = artifactFileName;
         return this;
@@ -19,9 +20,14 @@ public class Artifact {
     
     @JsonProperty("artifactId")
     public String artifactId;
+
     public Artifact withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
     }
     
+    public Artifact(@JsonProperty("artifactFileName") String artifactFileName, @JsonProperty("artifactId") String artifactId) {
+        this.artifactFileName = artifactFileName;
+        this.artifactId = artifactId;
+  }
 }

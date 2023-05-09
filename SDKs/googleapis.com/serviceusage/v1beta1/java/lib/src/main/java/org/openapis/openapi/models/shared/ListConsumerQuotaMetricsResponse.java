@@ -18,6 +18,7 @@ public class ListConsumerQuotaMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public ConsumerQuotaMetric[] metrics;
+
     public ListConsumerQuotaMetricsResponse withMetrics(ConsumerQuotaMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -29,9 +30,11 @@ public class ListConsumerQuotaMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConsumerQuotaMetricsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListConsumerQuotaMetricsResponse(){}
 }

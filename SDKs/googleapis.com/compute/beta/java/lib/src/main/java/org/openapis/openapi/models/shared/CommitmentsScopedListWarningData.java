@@ -15,6 +15,7 @@ public class CommitmentsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CommitmentsScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class CommitmentsScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CommitmentsScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CommitmentsScopedListWarningData(){}
 }

@@ -18,6 +18,7 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public OwnerReference withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockOwnerDeletion")
     public Boolean blockOwnerDeletion;
+
     public OwnerReference withBlockOwnerDeletion(Boolean blockOwnerDeletion) {
         this.blockOwnerDeletion = blockOwnerDeletion;
         return this;
@@ -40,6 +42,7 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controller")
     public Boolean controller;
+
     public OwnerReference withController(Boolean controller) {
         this.controller = controller;
         return this;
@@ -51,6 +54,7 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OwnerReference withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OwnerReference withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class OwnerReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OwnerReference withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OwnerReference(){}
 }

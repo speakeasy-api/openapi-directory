@@ -20,6 +20,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstAvailableDateTime")
     public String firstAvailableDateTime;
+
     public Meta withFirstAvailableDateTime(String firstAvailableDateTime) {
         this.firstAvailableDateTime = firstAvailableDateTime;
         return this;
@@ -33,6 +34,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastAvailableDateTime")
     public String lastAvailableDateTime;
+
     public Meta withLastAvailableDateTime(String lastAvailableDateTime) {
         this.lastAvailableDateTime = lastAvailableDateTime;
         return this;
@@ -41,9 +43,11 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPages")
     public Integer totalPages;
+
     public Meta withTotalPages(Integer totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public Meta(){}
 }

@@ -15,6 +15,7 @@ public class JobTypeResourceLimit {
      */
     @JsonProperty("jobType")
     public JobTypeEnum jobType;
+
     public JobTypeResourceLimit withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -25,9 +26,14 @@ public class JobTypeResourceLimit {
      */
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public JobTypeResourceLimit withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
     }
     
+    public JobTypeResourceLimit(@JsonProperty("jobType") JobTypeEnum jobType, @JsonProperty("resourceRequirements") ResourceRequirements resourceRequirements) {
+        this.jobType = jobType;
+        this.resourceRequirements = resourceRequirements;
+  }
 }

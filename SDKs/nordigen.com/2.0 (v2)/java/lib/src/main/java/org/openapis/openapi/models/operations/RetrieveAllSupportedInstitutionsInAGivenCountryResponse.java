@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
     
     public String contentType;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
      */
     
     public org.openapis.openapi.models.shared.Integration[] integrations;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withIntegrations(org.openapis.openapi.models.shared.Integration[] integrations) {
         this.integrations = integrations;
         return this;
@@ -26,6 +29,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
     
     
     public Integer statusCode;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRetrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject(java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject) {
         this.retrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject = retrieveAllSupportedInstitutionsInAGivenCountry400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRetrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject(java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject) {
         this.retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject = retrieveAllSupportedInstitutionsInAGivenCountry401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRetrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject(java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject) {
         this.retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject = retrieveAllSupportedInstitutionsInAGivenCountry403ApplicationJSONObject;
         return this;
@@ -73,9 +81,25 @@ public class RetrieveAllSupportedInstitutionsInAGivenCountryResponse {
      */
     
     public java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject;
+
     public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRetrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject(java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject) {
         this.retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject = retrieveAllSupportedInstitutionsInAGivenCountry404ApplicationJSONObject;
         return this;
     }
     
+    /**
+     * Nordigen rate limit exceeded
+     */
+    
+    public java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject;
+
+    public RetrieveAllSupportedInstitutionsInAGivenCountryResponse withRetrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject(java.util.Map<String, Object> retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject) {
+        this.retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject = retrieveAllSupportedInstitutionsInAGivenCountry429ApplicationJSONObject;
+        return this;
+    }
+    
+    public RetrieveAllSupportedInstitutionsInAGivenCountryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

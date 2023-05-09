@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications {
     
     public String cpuCredits;
+
     public DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
@@ -19,9 +20,11 @@ public class DescribeInstanceCreditSpecificationsResultInstanceCreditSpecificati
     
     
     public String instanceId;
+
     public DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public DescribeInstanceCreditSpecificationsResultInstanceCreditSpecifications(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBEngineVersionList {
     
     public String dbEngineDescription;
+
     public DBEngineVersionList withDBEngineDescription(String dbEngineDescription) {
         this.dbEngineDescription = dbEngineDescription;
         return this;
@@ -19,6 +20,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineVersionDescription;
+
     public DBEngineVersionList withDBEngineVersionDescription(String dbEngineVersionDescription) {
         this.dbEngineVersionDescription = dbEngineVersionDescription;
         return this;
@@ -26,6 +28,7 @@ public class DBEngineVersionList {
     
     
     public String dbParameterGroupFamily;
+
     public DBEngineVersionList withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -33,6 +36,7 @@ public class DBEngineVersionList {
     
     
     public String engine;
+
     public DBEngineVersionList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -40,6 +44,7 @@ public class DBEngineVersionList {
     
     
     public String engineVersion;
+
     public DBEngineVersionList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -47,6 +52,7 @@ public class DBEngineVersionList {
     
     
     public String[] exportableLogTypes;
+
     public DBEngineVersionList withExportableLogTypes(String[] exportableLogTypes) {
         this.exportableLogTypes = exportableLogTypes;
         return this;
@@ -54,6 +60,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsLogExportsToCloudwatchLogs;
+
     public DBEngineVersionList withSupportsLogExportsToCloudwatchLogs(Boolean supportsLogExportsToCloudwatchLogs) {
         this.supportsLogExportsToCloudwatchLogs = supportsLogExportsToCloudwatchLogs;
         return this;
@@ -61,9 +68,11 @@ public class DBEngineVersionList {
     
     
     public ValidUpgradeTargetList[] validUpgradeTarget;
+
     public DBEngineVersionList withValidUpgradeTarget(ValidUpgradeTargetList[] validUpgradeTarget) {
         this.validUpgradeTarget = validUpgradeTarget;
         return this;
     }
     
+    public DBEngineVersionList(){}
 }

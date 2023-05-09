@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterSlackWorkspaceForOrganizationResponse {
@@ -12,6 +13,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public RegisterSlackWorkspaceForOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public Object conflictException;
+
     public RegisterSlackWorkspaceForOrganizationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
     
     
     public String contentType;
+
     public RegisterSlackWorkspaceForOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public Object internalServerException;
+
     public RegisterSlackWorkspaceForOrganizationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterSlackWorkspaceForOrganizationResult registerSlackWorkspaceForOrganizationResult;
+
     public RegisterSlackWorkspaceForOrganizationResponse withRegisterSlackWorkspaceForOrganizationResult(org.openapis.openapi.models.shared.RegisterSlackWorkspaceForOrganizationResult registerSlackWorkspaceForOrganizationResult) {
         this.registerSlackWorkspaceForOrganizationResult = registerSlackWorkspaceForOrganizationResult;
         return this;
@@ -56,6 +62,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
     
     
     public Integer statusCode;
+
     public RegisterSlackWorkspaceForOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterSlackWorkspaceForOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RegisterSlackWorkspaceForOrganizationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class RegisterSlackWorkspaceForOrganizationResponse {
      */
     
     public Object validationException;
+
     public RegisterSlackWorkspaceForOrganizationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RegisterSlackWorkspaceForOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

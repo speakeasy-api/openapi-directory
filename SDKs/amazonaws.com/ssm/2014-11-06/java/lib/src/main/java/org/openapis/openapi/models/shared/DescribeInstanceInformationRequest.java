@@ -12,6 +12,7 @@ public class DescribeInstanceInformationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public InstanceInformationStringFilter[] filters;
+
     public DescribeInstanceInformationRequest withFilters(InstanceInformationStringFilter[] filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class DescribeInstanceInformationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceInformationFilterList")
     public InstanceInformationFilter[] instanceInformationFilterList;
+
     public DescribeInstanceInformationRequest withInstanceInformationFilterList(InstanceInformationFilter[] instanceInformationFilterList) {
         this.instanceInformationFilterList = instanceInformationFilterList;
         return this;
@@ -28,6 +30,7 @@ public class DescribeInstanceInformationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeInstanceInformationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class DescribeInstanceInformationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstanceInformationRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceInformationRequest(){}
 }

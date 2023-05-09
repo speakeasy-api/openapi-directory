@@ -18,6 +18,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public Artifact withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public Artifact withContents(String contents) {
         this.contents = contents;
         return this;
@@ -40,6 +42,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Artifact withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,6 +54,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hash")
     public String hash;
+
     public Artifact withHash(String hash) {
         this.hash = hash;
         return this;
@@ -62,6 +66,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Artifact withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -73,6 +78,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimeType")
     public String mimeType;
+
     public Artifact withMimeType(String mimeType) {
         this.mimeType = mimeType;
         return this;
@@ -84,6 +90,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Artifact withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +102,7 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeBytes")
     public Integer sizeBytes;
+
     public Artifact withSizeBytes(Integer sizeBytes) {
         this.sizeBytes = sizeBytes;
         return this;
@@ -106,9 +114,11 @@ public class Artifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Artifact withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Artifact(){}
 }

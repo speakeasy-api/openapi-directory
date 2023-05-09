@@ -20,6 +20,7 @@ public class CreateVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public CreateVocabularyResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -28,6 +29,7 @@ public class CreateVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CreateVocabularyResponse withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -38,6 +40,7 @@ public class CreateVocabularyResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public CreateVocabularyResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -46,6 +49,7 @@ public class CreateVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public CreateVocabularyResponse withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
@@ -54,9 +58,11 @@ public class CreateVocabularyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyState")
     public VocabularyStateEnum vocabularyState;
+
     public CreateVocabularyResponse withVocabularyState(VocabularyStateEnum vocabularyState) {
         this.vocabularyState = vocabularyState;
         return this;
     }
     
+    public CreateVocabularyResponse(){}
 }

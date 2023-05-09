@@ -15,6 +15,7 @@ public class CustomPluginFileDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMd5")
     public String fileMd5;
+
     public CustomPluginFileDescription withFileMd5(String fileMd5) {
         this.fileMd5 = fileMd5;
         return this;
@@ -23,9 +24,11 @@ public class CustomPluginFileDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSize")
     public Long fileSize;
+
     public CustomPluginFileDescription withFileSize(Long fileSize) {
         this.fileSize = fileSize;
         return this;
     }
     
+    public CustomPluginFileDescription(){}
 }

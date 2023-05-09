@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProjectResponse {
     
     public String contentType;
+
     public UpdateProjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProjectResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateProjectResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProjectResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateProjectResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateProjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateProjectResponse {
     
     
     public Integer statusCode;
+
     public UpdateProjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateProjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateProjectResponse {
      */
     
     public Object throttlingException;
+
     public UpdateProjectResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateProjectResponse {
      */
     
     public java.util.Map<String, Object> updateProjectResponse;
+
     public UpdateProjectResponse withUpdateProjectResponse(java.util.Map<String, Object> updateProjectResponse) {
         this.updateProjectResponse = updateProjectResponse;
         return this;
     }
     
+    public UpdateProjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

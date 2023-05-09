@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelPackageResponse {
@@ -12,6 +13,7 @@ public class CreateModelPackageResponse {
      */
     
     public Object conflictException;
+
     public CreateModelPackageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelPackageResponse {
     
     
     public String contentType;
+
     public CreateModelPackageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelPackageResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelPackageOutput createModelPackageOutput;
+
     public CreateModelPackageResponse withCreateModelPackageOutput(org.openapis.openapi.models.shared.CreateModelPackageOutput createModelPackageOutput) {
         this.createModelPackageOutput = createModelPackageOutput;
         return this;
@@ -36,6 +40,7 @@ public class CreateModelPackageResponse {
     
     
     public Integer statusCode;
+
     public CreateModelPackageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateModelPackageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelPackageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateModelPackageResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelPackageResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
     }
     
+    public CreateModelPackageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

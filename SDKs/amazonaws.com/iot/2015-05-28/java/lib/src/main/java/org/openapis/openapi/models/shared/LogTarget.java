@@ -15,6 +15,7 @@ public class LogTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetName")
     public String targetName;
+
     public LogTarget withTargetName(String targetName) {
         this.targetName = targetName;
         return this;
@@ -22,9 +23,13 @@ public class LogTarget {
     
     @JsonProperty("targetType")
     public LogTargetTypeEnum targetType;
+
     public LogTarget withTargetType(LogTargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public LogTarget(@JsonProperty("targetType") LogTargetTypeEnum targetType) {
+        this.targetType = targetType;
+  }
 }

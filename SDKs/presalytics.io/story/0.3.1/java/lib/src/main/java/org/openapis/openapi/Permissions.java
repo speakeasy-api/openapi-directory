@@ -53,11 +53,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetResponse() {{
+        org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetResponse res = new org.openapis.openapi.models.operations.StoryIdCollaboratorsUseridPermissiontypeGetResponse(contentType, httpRes.statusCode()) {{
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -93,12 +91,10 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StoryPermissionTypesGetResponse res = new org.openapis.openapi.models.operations.StoryPermissionTypesGetResponse() {{
+        org.openapis.openapi.models.operations.StoryPermissionTypesGetResponse res = new org.openapis.openapi.models.operations.StoryPermissionTypesGetResponse(contentType, httpRes.statusCode()) {{
             permissionTypes = null;
             problemDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

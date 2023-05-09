@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RecognizeTextRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public RecognizeTextRequestBody requestBody;
+
     public RecognizeTextRequest withRequestBody(RecognizeTextRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public RecognizeTextRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public RecognizeTextRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public RecognizeTextRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public RecognizeTextRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public RecognizeTextRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public RecognizeTextRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class RecognizeTextRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public RecognizeTextRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botAliasId")
     public String botAliasId;
+
     public RecognizeTextRequest withBotAliasId(String botAliasId) {
         this.botAliasId = botAliasId;
         return this;
@@ -78,6 +88,7 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=botId")
     public String botId;
+
     public RecognizeTextRequest withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -88,6 +99,7 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=localeId")
     public String localeId;
+
     public RecognizeTextRequest withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -98,9 +110,17 @@ public class RecognizeTextRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sessionId")
     public String sessionId;
+
     public RecognizeTextRequest withSessionId(String sessionId) {
         this.sessionId = sessionId;
         return this;
     }
     
+    public RecognizeTextRequest(@JsonProperty("RequestBody") RecognizeTextRequestBody requestBody, @JsonProperty("botAliasId") String botAliasId, @JsonProperty("botId") String botId, @JsonProperty("localeId") String localeId, @JsonProperty("sessionId") String sessionId) {
+        this.requestBody = requestBody;
+        this.botAliasId = botAliasId;
+        this.botId = botId;
+        this.localeId = localeId;
+        this.sessionId = sessionId;
+  }
 }

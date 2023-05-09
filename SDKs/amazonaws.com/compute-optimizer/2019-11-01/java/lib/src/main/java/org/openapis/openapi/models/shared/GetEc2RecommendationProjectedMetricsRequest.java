@@ -18,6 +18,7 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public GetEc2RecommendationProjectedMetricsRequest withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -25,6 +26,7 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     
     @JsonProperty("instanceArn")
     public String instanceArn;
+
     public GetEc2RecommendationProjectedMetricsRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -32,6 +34,7 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     
     @JsonProperty("period")
     public Long period;
+
     public GetEc2RecommendationProjectedMetricsRequest withPeriod(Long period) {
         this.period = period;
         return this;
@@ -40,6 +43,7 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationPreferences")
     public RecommendationPreferences recommendationPreferences;
+
     public GetEc2RecommendationProjectedMetricsRequest withRecommendationPreferences(RecommendationPreferences recommendationPreferences) {
         this.recommendationPreferences = recommendationPreferences;
         return this;
@@ -49,6 +53,7 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public GetEc2RecommendationProjectedMetricsRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,9 +61,17 @@ public class GetEc2RecommendationProjectedMetricsRequest {
     
     @JsonProperty("stat")
     public MetricStatisticEnum stat;
+
     public GetEc2RecommendationProjectedMetricsRequest withStat(MetricStatisticEnum stat) {
         this.stat = stat;
         return this;
     }
     
+    public GetEc2RecommendationProjectedMetricsRequest(@JsonProperty("endTime") OffsetDateTime endTime, @JsonProperty("instanceArn") String instanceArn, @JsonProperty("period") Long period, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("stat") MetricStatisticEnum stat) {
+        this.endTime = endTime;
+        this.instanceArn = instanceArn;
+        this.period = period;
+        this.startTime = startTime;
+        this.stat = stat;
+  }
 }

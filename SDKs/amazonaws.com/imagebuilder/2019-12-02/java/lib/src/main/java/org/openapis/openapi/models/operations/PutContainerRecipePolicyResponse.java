@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutContainerRecipePolicyResponse {
@@ -12,6 +13,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public PutContainerRecipePolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object clientException;
+
     public PutContainerRecipePolicyResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class PutContainerRecipePolicyResponse {
     
     
     public String contentType;
+
     public PutContainerRecipePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object forbiddenException;
+
     public PutContainerRecipePolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutContainerRecipePolicyResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutContainerRecipePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutContainerRecipePolicyResponse putContainerRecipePolicyResponse;
+
     public PutContainerRecipePolicyResponse withPutContainerRecipePolicyResponse(org.openapis.openapi.models.shared.PutContainerRecipePolicyResponse putContainerRecipePolicyResponse) {
         this.putContainerRecipePolicyResponse = putContainerRecipePolicyResponse;
         return this;
@@ -79,6 +87,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object serviceException;
+
     public PutContainerRecipePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class PutContainerRecipePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutContainerRecipePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PutContainerRecipePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutContainerRecipePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutContainerRecipePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,9 +125,14 @@ public class PutContainerRecipePolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutContainerRecipePolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public PutContainerRecipePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -59,11 +59,9 @@ public class Vitals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse() {{
+        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsIssuesSearchResponse(contentType, httpRes.statusCode()) {{
             googlePlayDeveloperReportingV1alpha1SearchErrorIssuesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Vitals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse() {{
+        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsErrorsReportsSearchResponse(contentType, httpRes.statusCode()) {{
             googlePlayDeveloperReportingV1alpha1SearchErrorReportsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Vitals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse() {{
+        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateGetResponse(contentType, httpRes.statusCode()) {{
             googlePlayDeveloperReportingV1alpha1StuckBackgroundWakelockRateMetricSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Vitals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse() {{
+        org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse res = new org.openapis.openapi.models.operations.PlaydeveloperreportingVitalsStuckbackgroundwakelockrateQueryResponse(contentType, httpRes.statusCode()) {{
             googlePlayDeveloperReportingV1alpha1QueryStuckBackgroundWakelockRateMetricSetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -19,6 +19,7 @@ public class Qualities {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public Qualities withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -27,9 +28,11 @@ public class Qualities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quality")
     public Integer quality;
+
     public Qualities withQuality(Integer quality) {
         this.quality = quality;
         return this;
     }
     
+    public Qualities(){}
 }

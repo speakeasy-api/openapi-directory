@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2Scim20ServiceProviderConfigResponse {
     
     public String contentType;
+
     public GetV2Scim20ServiceProviderConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV2Scim20ServiceProviderConfigResponse {
     
     
     public Integer statusCode;
+
     public GetV2Scim20ServiceProviderConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV2Scim20ServiceProviderConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2Scim20ServiceProviderConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetV2Scim20ServiceProviderConfigResponse {
      */
     
     public GetV2Scim20ServiceProviderConfig401ApplicationScimPlusJson getV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject;
+
     public GetV2Scim20ServiceProviderConfigResponse withGetV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject(GetV2Scim20ServiceProviderConfig401ApplicationScimPlusJson getV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject) {
         this.getV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject = getV2Scim20ServiceProviderConfig401ApplicationScimPlusJsonObject;
         return this;
@@ -43,6 +48,7 @@ public class GetV2Scim20ServiceProviderConfigResponse {
      */
     
     public GetV2Scim20ServiceProviderConfig500ApplicationScimPlusJson getV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject;
+
     public GetV2Scim20ServiceProviderConfigResponse withGetV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject(GetV2Scim20ServiceProviderConfig500ApplicationScimPlusJson getV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject) {
         this.getV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject = getV2Scim20ServiceProviderConfig500ApplicationScimPlusJsonObject;
         return this;
@@ -50,9 +56,14 @@ public class GetV2Scim20ServiceProviderConfigResponse {
     
     
     public org.openapis.openapi.models.shared.ScimServiceProviderConfig scimServiceProviderConfig;
+
     public GetV2Scim20ServiceProviderConfigResponse withScimServiceProviderConfig(org.openapis.openapi.models.shared.ScimServiceProviderConfig scimServiceProviderConfig) {
         this.scimServiceProviderConfig = scimServiceProviderConfig;
         return this;
     }
     
+    public GetV2Scim20ServiceProviderConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

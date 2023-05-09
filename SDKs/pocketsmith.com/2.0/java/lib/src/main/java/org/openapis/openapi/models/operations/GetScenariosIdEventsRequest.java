@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetScenariosIdEventsRequest {
@@ -12,6 +13,7 @@ public class GetScenariosIdEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public GetScenariosIdEventsRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -22,6 +24,7 @@ public class GetScenariosIdEventsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetScenariosIdEventsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -32,9 +35,15 @@ public class GetScenariosIdEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public GetScenariosIdEventsRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public GetScenariosIdEventsRequest(@JsonProperty("end_date") String endDate, @JsonProperty("id") Long id, @JsonProperty("start_date") String startDate) {
+        this.endDate = endDate;
+        this.id = id;
+        this.startDate = startDate;
+  }
 }

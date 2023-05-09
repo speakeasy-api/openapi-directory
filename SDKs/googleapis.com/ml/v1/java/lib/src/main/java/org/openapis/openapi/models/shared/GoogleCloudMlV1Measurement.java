@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Measurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elapsedTime")
     public String elapsedTime;
+
     public GoogleCloudMlV1Measurement withElapsedTime(String elapsedTime) {
         this.elapsedTime = elapsedTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Measurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleCloudMlV1MeasurementMetric[] metrics;
+
     public GoogleCloudMlV1Measurement withMetrics(GoogleCloudMlV1MeasurementMetric[] metrics) {
         this.metrics = metrics;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudMlV1Measurement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepCount")
     public String stepCount;
+
     public GoogleCloudMlV1Measurement withStepCount(String stepCount) {
         this.stepCount = stepCount;
         return this;
     }
     
+    public GoogleCloudMlV1Measurement(){}
 }

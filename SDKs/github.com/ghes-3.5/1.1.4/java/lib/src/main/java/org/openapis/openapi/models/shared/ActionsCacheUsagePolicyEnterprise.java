@@ -18,6 +18,7 @@ public class ActionsCacheUsagePolicyEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_repo_cache_size_limit_in_gb")
     public Long maxRepoCacheSizeLimitInGb;
+
     public ActionsCacheUsagePolicyEnterprise withMaxRepoCacheSizeLimitInGb(Long maxRepoCacheSizeLimitInGb) {
         this.maxRepoCacheSizeLimitInGb = maxRepoCacheSizeLimitInGb;
         return this;
@@ -29,9 +30,11 @@ public class ActionsCacheUsagePolicyEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repo_cache_size_limit_in_gb")
     public Long repoCacheSizeLimitInGb;
+
     public ActionsCacheUsagePolicyEnterprise withRepoCacheSizeLimitInGb(Long repoCacheSizeLimitInGb) {
         this.repoCacheSizeLimitInGb = repoCacheSizeLimitInGb;
         return this;
     }
     
+    public ActionsCacheUsagePolicyEnterprise(){}
 }

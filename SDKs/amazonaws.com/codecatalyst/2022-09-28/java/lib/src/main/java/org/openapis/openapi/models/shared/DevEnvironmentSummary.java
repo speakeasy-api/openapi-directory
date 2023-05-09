@@ -20,6 +20,7 @@ public class DevEnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public DevEnvironmentSummary withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -27,6 +28,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("creatorId")
     public String creatorId;
+
     public DevEnvironmentSummary withCreatorId(String creatorId) {
         this.creatorId = creatorId;
         return this;
@@ -34,6 +36,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("id")
     public String id;
+
     public DevEnvironmentSummary withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class DevEnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ides")
     public Ide[] ides;
+
     public DevEnvironmentSummary withIdes(Ide[] ides) {
         this.ides = ides;
         return this;
@@ -49,6 +53,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("inactivityTimeoutMinutes")
     public Long inactivityTimeoutMinutes;
+
     public DevEnvironmentSummary withInactivityTimeoutMinutes(Long inactivityTimeoutMinutes) {
         this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
         return this;
@@ -56,6 +61,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("instanceType")
     public InstanceTypeEnum instanceType;
+
     public DevEnvironmentSummary withInstanceType(InstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -65,6 +71,7 @@ public class DevEnvironmentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public DevEnvironmentSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -72,6 +79,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("persistentStorage")
     public PersistentStorage persistentStorage;
+
     public DevEnvironmentSummary withPersistentStorage(PersistentStorage persistentStorage) {
         this.persistentStorage = persistentStorage;
         return this;
@@ -80,6 +88,7 @@ public class DevEnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public DevEnvironmentSummary withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -87,6 +96,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("repositories")
     public DevEnvironmentRepositorySummary[] repositories;
+
     public DevEnvironmentSummary withRepositories(DevEnvironmentRepositorySummary[] repositories) {
         this.repositories = repositories;
         return this;
@@ -95,6 +105,7 @@ public class DevEnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceName")
     public String spaceName;
+
     public DevEnvironmentSummary withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -102,6 +113,7 @@ public class DevEnvironmentSummary {
     
     @JsonProperty("status")
     public DevEnvironmentStatusEnum status;
+
     public DevEnvironmentSummary withStatus(DevEnvironmentStatusEnum status) {
         this.status = status;
         return this;
@@ -110,9 +122,20 @@ public class DevEnvironmentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusReason")
     public String statusReason;
+
     public DevEnvironmentSummary withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public DevEnvironmentSummary(@JsonProperty("creatorId") String creatorId, @JsonProperty("id") String id, @JsonProperty("inactivityTimeoutMinutes") Long inactivityTimeoutMinutes, @JsonProperty("instanceType") InstanceTypeEnum instanceType, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("persistentStorage") PersistentStorage persistentStorage, @JsonProperty("repositories") DevEnvironmentRepositorySummary[] repositories, @JsonProperty("status") DevEnvironmentStatusEnum status) {
+        this.creatorId = creatorId;
+        this.id = id;
+        this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
+        this.instanceType = instanceType;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.persistentStorage = persistentStorage;
+        this.repositories = repositories;
+        this.status = status;
+  }
 }

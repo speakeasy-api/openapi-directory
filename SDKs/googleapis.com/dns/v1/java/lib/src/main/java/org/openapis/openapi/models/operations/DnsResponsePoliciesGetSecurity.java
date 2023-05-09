@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DnsResponsePoliciesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DnsResponsePoliciesGetSecurityOption1 option1;
+
     public DnsResponsePoliciesGetSecurity withOption1(DnsResponsePoliciesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DnsResponsePoliciesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsResponsePoliciesGetSecurityOption2 option2;
+
     public DnsResponsePoliciesGetSecurity withOption2(DnsResponsePoliciesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DnsResponsePoliciesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsResponsePoliciesGetSecurityOption3 option3;
+
     public DnsResponsePoliciesGetSecurity withOption3(DnsResponsePoliciesGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DnsResponsePoliciesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DnsResponsePoliciesGetSecurityOption4 option4;
+
     public DnsResponsePoliciesGetSecurity withOption4(DnsResponsePoliciesGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DnsResponsePoliciesGetSecurity(){}
 }

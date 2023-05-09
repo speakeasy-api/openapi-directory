@@ -13,6 +13,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=audio_id")
     public String audioId;
+
     public GetTrackLicenseListRequest withAudioId(String audioId) {
         this.audioId = audioId;
         return this;
@@ -23,6 +24,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=download_availability")
     public GetTrackLicenseListDownloadAvailabilityEnum downloadAvailability;
+
     public GetTrackLicenseListRequest withDownloadAvailability(GetTrackLicenseListDownloadAvailabilityEnum downloadAvailability) {
         this.downloadAvailability = downloadAvailability;
         return this;
@@ -33,6 +35,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public OffsetDateTime endDate;
+
     public GetTrackLicenseListRequest withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -43,6 +46,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetTrackLicenseListRequest withLicense(String license) {
         this.license = license;
         return this;
@@ -53,6 +57,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTrackLicenseListRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -63,6 +68,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetTrackLicenseListRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -73,6 +79,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetTrackLicenseListSortEnum sort;
+
     public GetTrackLicenseListRequest withSort(GetTrackLicenseListSortEnum sort) {
         this.sort = sort;
         return this;
@@ -83,6 +90,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public OffsetDateTime startDate;
+
     public GetTrackLicenseListRequest withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -93,6 +101,7 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_history")
     public Boolean teamHistory;
+
     public GetTrackLicenseListRequest withTeamHistory(Boolean teamHistory) {
         this.teamHistory = teamHistory;
         return this;
@@ -103,9 +112,11 @@ public class GetTrackLicenseListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public GetTrackLicenseListRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetTrackLicenseListRequest(){}
 }

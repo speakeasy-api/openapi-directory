@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsTestAudienceResponse {
@@ -12,6 +13,7 @@ public class AnalyticsTestAudienceResponse {
      */
     
     public AnalyticsTestAudience200ApplicationJSON analyticsTestAudience200ApplicationJSONObject;
+
     public AnalyticsTestAudienceResponse withAnalyticsTestAudience200ApplicationJSONObject(AnalyticsTestAudience200ApplicationJSON analyticsTestAudience200ApplicationJSONObject) {
         this.analyticsTestAudience200ApplicationJSONObject = analyticsTestAudience200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class AnalyticsTestAudienceResponse {
      */
     
     public AnalyticsTestAudienceDefaultApplicationJSON analyticsTestAudienceDefaultApplicationJSONObject;
+
     public AnalyticsTestAudienceResponse withAnalyticsTestAudienceDefaultApplicationJSONObject(AnalyticsTestAudienceDefaultApplicationJSON analyticsTestAudienceDefaultApplicationJSONObject) {
         this.analyticsTestAudienceDefaultApplicationJSONObject = analyticsTestAudienceDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsTestAudienceResponse {
     
     
     public String contentType;
+
     public AnalyticsTestAudienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class AnalyticsTestAudienceResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsTestAudienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class AnalyticsTestAudienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsTestAudienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsTestAudienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -55,10 +55,8 @@ public class MessageCommentReactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMessageCommentReactionsIdResponse res = new org.openapis.openapi.models.operations.DeleteMessageCommentReactionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteMessageCommentReactionsIdResponse res = new org.openapis.openapi.models.operations.DeleteMessageCommentReactionsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class MessageCommentReactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessageCommentReactionsResponse res = new org.openapis.openapi.models.operations.GetMessageCommentReactionsResponse() {{
+        org.openapis.openapi.models.operations.GetMessageCommentReactionsResponse res = new org.openapis.openapi.models.operations.GetMessageCommentReactionsResponse(contentType, httpRes.statusCode()) {{
             messageCommentReactionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class MessageCommentReactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessageCommentReactionsIdResponse res = new org.openapis.openapi.models.operations.GetMessageCommentReactionsIdResponse() {{
+        org.openapis.openapi.models.operations.GetMessageCommentReactionsIdResponse res = new org.openapis.openapi.models.operations.GetMessageCommentReactionsIdResponse(contentType, httpRes.statusCode()) {{
             messageCommentReactionEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class MessageCommentReactions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMessageCommentReactionsResponse res = new org.openapis.openapi.models.operations.PostMessageCommentReactionsResponse() {{
+        org.openapis.openapi.models.operations.PostMessageCommentReactionsResponse res = new org.openapis.openapi.models.operations.PostMessageCommentReactionsResponse(contentType, httpRes.statusCode()) {{
             messageCommentReactionEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

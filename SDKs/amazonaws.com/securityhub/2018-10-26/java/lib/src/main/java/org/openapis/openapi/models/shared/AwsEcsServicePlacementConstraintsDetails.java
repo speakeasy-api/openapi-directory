@@ -15,6 +15,7 @@ public class AwsEcsServicePlacementConstraintsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public AwsEcsServicePlacementConstraintsDetails withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsServicePlacementConstraintsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsEcsServicePlacementConstraintsDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsEcsServicePlacementConstraintsDetails(){}
 }

@@ -18,6 +18,7 @@ public class PayloadFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public PayloadFile withData(String data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class PayloadFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PayloadFile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PayloadFile(){}
 }

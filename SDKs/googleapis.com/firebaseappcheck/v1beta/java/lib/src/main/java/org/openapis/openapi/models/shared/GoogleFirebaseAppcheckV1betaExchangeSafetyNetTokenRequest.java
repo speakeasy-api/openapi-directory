@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("safetyNetToken")
     public String safetyNetToken;
+
     public GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest withSafetyNetToken(String safetyNetToken) {
         this.safetyNetToken = safetyNetToken;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeSafetyNetTokenRequest(){}
 }

@@ -12,6 +12,7 @@ public class CadenceCounts {
      */
     
     public Long cadencePeople;
+
     public CadenceCounts withCadencePeople(Long cadencePeople) {
         this.cadencePeople = cadencePeople;
         return this;
@@ -22,6 +23,7 @@ public class CadenceCounts {
      */
     
     public Long meetingsBooked;
+
     public CadenceCounts withMeetingsBooked(Long meetingsBooked) {
         this.meetingsBooked = meetingsBooked;
         return this;
@@ -32,6 +34,7 @@ public class CadenceCounts {
      */
     
     public Long opportunitiesCreated;
+
     public CadenceCounts withOpportunitiesCreated(Long opportunitiesCreated) {
         this.opportunitiesCreated = opportunitiesCreated;
         return this;
@@ -42,6 +45,7 @@ public class CadenceCounts {
      */
     
     public Long peopleActedOnCount;
+
     public CadenceCounts withPeopleActedOnCount(Long peopleActedOnCount) {
         this.peopleActedOnCount = peopleActedOnCount;
         return this;
@@ -52,9 +56,11 @@ public class CadenceCounts {
      */
     
     public Long targetDailyPeople;
+
     public CadenceCounts withTargetDailyPeople(Long targetDailyPeople) {
         this.targetDailyPeople = targetDailyPeople;
         return this;
     }
     
+    public CadenceCounts(){}
 }

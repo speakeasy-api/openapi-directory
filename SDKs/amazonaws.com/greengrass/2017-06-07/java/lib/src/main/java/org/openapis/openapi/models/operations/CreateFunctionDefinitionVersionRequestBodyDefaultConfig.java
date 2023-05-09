@@ -18,9 +18,11 @@ public class CreateFunctionDefinitionVersionRequestBodyDefaultConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Execution")
     public org.openapis.openapi.models.shared.FunctionDefaultExecutionConfig execution;
+
     public CreateFunctionDefinitionVersionRequestBodyDefaultConfig withExecution(org.openapis.openapi.models.shared.FunctionDefaultExecutionConfig execution) {
         this.execution = execution;
         return this;
     }
     
+    public CreateFunctionDefinitionVersionRequestBodyDefaultConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutWebhooksV3AppIdSettingsConfigureRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SettingsChangeRequest settingsChangeRequest;
+
     public PutWebhooksV3AppIdSettingsConfigureRequest withSettingsChangeRequest(org.openapis.openapi.models.shared.SettingsChangeRequest settingsChangeRequest) {
         this.settingsChangeRequest = settingsChangeRequest;
         return this;
@@ -16,9 +18,14 @@ public class PutWebhooksV3AppIdSettingsConfigureRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appId")
     public Integer appId;
+
     public PutWebhooksV3AppIdSettingsConfigureRequest withAppId(Integer appId) {
         this.appId = appId;
         return this;
     }
     
+    public PutWebhooksV3AppIdSettingsConfigureRequest(@JsonProperty("SettingsChangeRequest") org.openapis.openapi.models.shared.SettingsChangeRequest settingsChangeRequest, @JsonProperty("appId") Integer appId) {
+        this.settingsChangeRequest = settingsChangeRequest;
+        this.appId = appId;
+  }
 }

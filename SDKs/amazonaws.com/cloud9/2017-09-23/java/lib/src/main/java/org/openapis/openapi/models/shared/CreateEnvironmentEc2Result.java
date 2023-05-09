@@ -15,9 +15,11 @@ public class CreateEnvironmentEc2Result {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public CreateEnvironmentEc2Result withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     
+    public CreateEnvironmentEc2Result(){}
 }

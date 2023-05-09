@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBSecurityGroupMessage {
     
     public String dbSecurityGroupDescription;
+
     public CreateDBSecurityGroupMessage withDBSecurityGroupDescription(String dbSecurityGroupDescription) {
         this.dbSecurityGroupDescription = dbSecurityGroupDescription;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBSecurityGroupMessage {
     
     
     public String dbSecurityGroupName;
+
     public CreateDBSecurityGroupMessage withDBSecurityGroupName(String dbSecurityGroupName) {
         this.dbSecurityGroupName = dbSecurityGroupName;
         return this;
@@ -23,9 +25,14 @@ public class CreateDBSecurityGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateDBSecurityGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBSecurityGroupMessage(@JsonProperty("DBSecurityGroupDescription") String dbSecurityGroupDescription, @JsonProperty("DBSecurityGroupName") String dbSecurityGroupName) {
+        this.dbSecurityGroupDescription = dbSecurityGroupDescription;
+        this.dbSecurityGroupName = dbSecurityGroupName;
+  }
 }

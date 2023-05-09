@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
@@ -12,6 +13,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudPrivatecatalogproducerV1beta1Version googleCloudPrivatecatalogproducerV1beta1Version;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withGoogleCloudPrivatecatalogproducerV1beta1Version(org.openapis.openapi.models.shared.GoogleCloudPrivatecatalogproducerV1beta1Version googleCloudPrivatecatalogproducerV1beta1Version) {
         this.googleCloudPrivatecatalogproducerV1beta1Version = googleCloudPrivatecatalogproducerV1beta1Version;
         return this;
@@ -29,6 +32,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -84,6 +92,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -104,6 +114,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -114,6 +125,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -124,6 +136,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -134,6 +147,7 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -144,9 +158,13 @@ public class CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public CloudprivatecatalogproducerCatalogsProductsVersionsPatchRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

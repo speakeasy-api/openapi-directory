@@ -15,9 +15,11 @@ public class UpdateStageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Stage")
     public StageDetails stage;
+
     public UpdateStageResult withStage(StageDetails stage) {
         this.stage = stage;
         return this;
     }
     
+    public UpdateStageResult(){}
 }

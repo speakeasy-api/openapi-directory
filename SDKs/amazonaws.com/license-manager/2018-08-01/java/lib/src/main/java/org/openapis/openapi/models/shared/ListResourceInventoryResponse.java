@@ -15,6 +15,7 @@ public class ListResourceInventoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceInventoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListResourceInventoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceInventoryList")
     public ResourceInventory[] resourceInventoryList;
+
     public ListResourceInventoryResponse withResourceInventoryList(ResourceInventory[] resourceInventoryList) {
         this.resourceInventoryList = resourceInventoryList;
         return this;
     }
     
+    public ListResourceInventoryResponse(){}
 }

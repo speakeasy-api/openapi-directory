@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceTargetDefinition {
     
     public ResourceAttributeEnum attribute;
+
     public ResourceTargetDefinition withAttribute(ResourceAttributeEnum attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class ResourceTargetDefinition {
     
     
     public String name;
+
     public ResourceTargetDefinition withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,11 @@ public class ResourceTargetDefinition {
     
     
     public RequiresRecreationEnum requiresRecreation;
+
     public ResourceTargetDefinition withRequiresRecreation(RequiresRecreationEnum requiresRecreation) {
         this.requiresRecreation = requiresRecreation;
         return this;
     }
     
+    public ResourceTargetDefinition(){}
 }

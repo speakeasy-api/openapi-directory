@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class RestoreSnapshotTierResult {
     
     public Boolean isPermanentRestore;
+
     public RestoreSnapshotTierResult withIsPermanentRestore(Boolean isPermanentRestore) {
         this.isPermanentRestore = isPermanentRestore;
         return this;
@@ -19,6 +20,7 @@ public class RestoreSnapshotTierResult {
     
     
     public Long restoreDuration;
+
     public RestoreSnapshotTierResult withRestoreDuration(Long restoreDuration) {
         this.restoreDuration = restoreDuration;
         return this;
@@ -26,6 +28,7 @@ public class RestoreSnapshotTierResult {
     
     
     public OffsetDateTime restoreStartTime;
+
     public RestoreSnapshotTierResult withRestoreStartTime(OffsetDateTime restoreStartTime) {
         this.restoreStartTime = restoreStartTime;
         return this;
@@ -33,9 +36,11 @@ public class RestoreSnapshotTierResult {
     
     
     public String snapshotId;
+
     public RestoreSnapshotTierResult withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public RestoreSnapshotTierResult(){}
 }

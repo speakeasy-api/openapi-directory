@@ -15,6 +15,7 @@ public class ListLaunchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launches")
     public Launch[] launches;
+
     public ListLaunchesResponse withLaunches(Launch[] launches) {
         this.launches = launches;
         return this;
@@ -23,9 +24,11 @@ public class ListLaunchesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListLaunchesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLaunchesResponse(){}
 }

@@ -18,6 +18,7 @@ public class CertificateExtensionConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalExtensions")
     public ObjectId[] additionalExtensions;
+
     public CertificateExtensionConstraints withAdditionalExtensions(ObjectId[] additionalExtensions) {
         this.additionalExtensions = additionalExtensions;
         return this;
@@ -29,9 +30,11 @@ public class CertificateExtensionConstraints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knownExtensions")
     public CertificateExtensionConstraintsKnownExtensionsEnum[] knownExtensions;
+
     public CertificateExtensionConstraints withKnownExtensions(CertificateExtensionConstraintsKnownExtensionsEnum[] knownExtensions) {
         this.knownExtensions = knownExtensions;
         return this;
     }
     
+    public CertificateExtensionConstraints(){}
 }

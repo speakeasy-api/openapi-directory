@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse {
     
     public String contentType;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateHmacKeyResponse generateHmacKeyResponse;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse withGenerateHmacKeyResponse(org.openapis.openapi.models.shared.GenerateHmacKeyResponse generateHmacKeyResponse) {
         this.generateHmacKeyResponse = generateHmacKeyResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse {
     
     
     public Integer statusCode;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCompaniesCompanyIdWebhooksWebhookIdGenerateHmacResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

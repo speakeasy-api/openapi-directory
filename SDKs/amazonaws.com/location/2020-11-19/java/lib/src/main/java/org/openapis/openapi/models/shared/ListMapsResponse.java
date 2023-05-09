@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMapsResponse {
     @JsonProperty("Entries")
     public ListMapsResponseEntry[] entries;
+
     public ListMapsResponse withEntries(ListMapsResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -22,9 +23,13 @@ public class ListMapsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMapsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMapsResponse(@JsonProperty("Entries") ListMapsResponseEntry[] entries) {
+        this.entries = entries;
+  }
 }

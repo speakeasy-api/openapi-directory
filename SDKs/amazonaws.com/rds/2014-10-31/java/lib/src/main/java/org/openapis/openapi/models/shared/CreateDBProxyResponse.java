@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateDBProxyResponse {
     
     public DBProxy dbProxy;
+
     public CreateDBProxyResponse withDBProxy(DBProxy dbProxy) {
         this.dbProxy = dbProxy;
         return this;
     }
     
+    public CreateDBProxyResponse(){}
 }

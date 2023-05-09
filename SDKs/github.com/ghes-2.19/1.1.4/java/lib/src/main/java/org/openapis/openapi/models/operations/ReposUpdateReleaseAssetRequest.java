@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposUpdateReleaseAssetRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReposUpdateReleaseAssetRequestBody requestBody;
+
     public ReposUpdateReleaseAssetRequest withRequestBody(ReposUpdateReleaseAssetRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReposUpdateReleaseAssetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=asset_id")
     public Long assetId;
+
     public ReposUpdateReleaseAssetRequest withAssetId(Long assetId) {
         this.assetId = assetId;
         return this;
@@ -26,6 +29,7 @@ public class ReposUpdateReleaseAssetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposUpdateReleaseAssetRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,15 @@ public class ReposUpdateReleaseAssetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposUpdateReleaseAssetRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposUpdateReleaseAssetRequest(@JsonProperty("asset_id") Long assetId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.assetId = assetId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

@@ -12,6 +12,7 @@ public class PutConnectorsIdConnectorSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=auth_mechanism")
     public String authMechanism;
+
     public PutConnectorsIdConnectorSourcesIdSourceRequestBody withAuthMechanism(String authMechanism) {
         this.authMechanism = authMechanism;
         return this;
@@ -22,6 +23,7 @@ public class PutConnectorsIdConnectorSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled")
     public Boolean disabled;
+
     public PutConnectorsIdConnectorSourcesIdSourceRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -32,6 +34,7 @@ public class PutConnectorsIdConnectorSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled_capabilities")
     public String disabledCapabilities;
+
     public PutConnectorsIdConnectorSourcesIdSourceRequestBody withDisabledCapabilities(String disabledCapabilities) {
         this.disabledCapabilities = disabledCapabilities;
         return this;
@@ -42,6 +45,7 @@ public class PutConnectorsIdConnectorSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=unavailable")
     public Boolean unavailable;
+
     public PutConnectorsIdConnectorSourcesIdSourceRequestBody withUnavailable(Boolean unavailable) {
         this.unavailable = unavailable;
         return this;
@@ -52,9 +56,11 @@ public class PutConnectorsIdConnectorSourcesIdSourceRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=unavailable_capabilities")
     public String unavailableCapabilities;
+
     public PutConnectorsIdConnectorSourcesIdSourceRequestBody withUnavailableCapabilities(String unavailableCapabilities) {
         this.unavailableCapabilities = unavailableCapabilities;
         return this;
     }
     
+    public PutConnectorsIdConnectorSourcesIdSourceRequestBody(){}
 }

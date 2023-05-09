@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupUsingGETResponse {
     
     public String contentType;
+
     public CreateGroupUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupUsingGETResponse {
      */
     
     public CreateGroupUsingGET200ApplicationJSON createGroupUsingGET200ApplicationJSONObject;
+
     public CreateGroupUsingGETResponse withCreateGroupUsingGET200ApplicationJSONObject(CreateGroupUsingGET200ApplicationJSON createGroupUsingGET200ApplicationJSONObject) {
         this.createGroupUsingGET200ApplicationJSONObject = createGroupUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupUsingGETResponse {
      */
     
     public CreateGroupUsingGET400ApplicationJSON createGroupUsingGET400ApplicationJSONObject;
+
     public CreateGroupUsingGETResponse withCreateGroupUsingGET400ApplicationJSONObject(CreateGroupUsingGET400ApplicationJSON createGroupUsingGET400ApplicationJSONObject) {
         this.createGroupUsingGET400ApplicationJSONObject = createGroupUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupUsingGETResponse {
      */
     
     public CreateGroupUsingGET401ApplicationJSON createGroupUsingGET401ApplicationJSONObject;
+
     public CreateGroupUsingGETResponse withCreateGroupUsingGET401ApplicationJSONObject(CreateGroupUsingGET401ApplicationJSON createGroupUsingGET401ApplicationJSONObject) {
         this.createGroupUsingGET401ApplicationJSONObject = createGroupUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupUsingGETResponse {
      */
     
     public CreateGroupUsingGET500ApplicationJSON createGroupUsingGET500ApplicationJSONObject;
+
     public CreateGroupUsingGETResponse withCreateGroupUsingGET500ApplicationJSONObject(CreateGroupUsingGET500ApplicationJSON createGroupUsingGET500ApplicationJSONObject) {
         this.createGroupUsingGET500ApplicationJSONObject = createGroupUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

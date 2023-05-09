@@ -12,6 +12,7 @@ public class UpdateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSharingPreferenceForUpdate")
     public StreamProcessorDataSharingPreference dataSharingPreferenceForUpdate;
+
     public UpdateStreamProcessorRequest withDataSharingPreferenceForUpdate(StreamProcessorDataSharingPreference dataSharingPreferenceForUpdate) {
         this.dataSharingPreferenceForUpdate = dataSharingPreferenceForUpdate;
         return this;
@@ -19,6 +20,7 @@ public class UpdateStreamProcessorRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateStreamProcessorRequest withName(String name) {
         this.name = name;
         return this;
@@ -27,6 +29,7 @@ public class UpdateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParametersToDelete")
     public StreamProcessorParameterToDeleteEnum[] parametersToDelete;
+
     public UpdateStreamProcessorRequest withParametersToDelete(StreamProcessorParameterToDeleteEnum[] parametersToDelete) {
         this.parametersToDelete = parametersToDelete;
         return this;
@@ -35,6 +38,7 @@ public class UpdateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionsOfInterestForUpdate")
     public RegionOfInterest[] regionsOfInterestForUpdate;
+
     public UpdateStreamProcessorRequest withRegionsOfInterestForUpdate(RegionOfInterest[] regionsOfInterestForUpdate) {
         this.regionsOfInterestForUpdate = regionsOfInterestForUpdate;
         return this;
@@ -43,9 +47,13 @@ public class UpdateStreamProcessorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SettingsForUpdate")
     public StreamProcessorSettingsForUpdate settingsForUpdate;
+
     public UpdateStreamProcessorRequest withSettingsForUpdate(StreamProcessorSettingsForUpdate settingsForUpdate) {
         this.settingsForUpdate = settingsForUpdate;
         return this;
     }
     
+    public UpdateStreamProcessorRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

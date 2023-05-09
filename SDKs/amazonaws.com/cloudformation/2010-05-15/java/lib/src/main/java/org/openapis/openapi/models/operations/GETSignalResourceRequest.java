@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSignalResourceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSignalResourceActionEnum action;
+
     public GETSignalResourceRequest withAction(GETSignalResourceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSignalResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LogicalResourceId")
     public String logicalResourceId;
+
     public GETSignalResourceRequest withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -29,6 +32,7 @@ public class GETSignalResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StackName")
     public String stackName;
+
     public GETSignalResourceRequest withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -39,6 +43,7 @@ public class GETSignalResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Status")
     public GETSignalResourceStatusEnum status;
+
     public GETSignalResourceRequest withStatus(GETSignalResourceStatusEnum status) {
         this.status = status;
         return this;
@@ -49,6 +54,7 @@ public class GETSignalResourceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UniqueId")
     public String uniqueId;
+
     public GETSignalResourceRequest withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -56,6 +62,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSignalResourceVersionEnum version;
+
     public GETSignalResourceRequest withVersion(GETSignalResourceVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSignalResourceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSignalResourceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSignalResourceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSignalResourceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSignalResourceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSignalResourceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,18 @@ public class GETSignalResourceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSignalResourceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSignalResourceRequest(@JsonProperty("Action") GETSignalResourceActionEnum action, @JsonProperty("LogicalResourceId") String logicalResourceId, @JsonProperty("StackName") String stackName, @JsonProperty("Status") GETSignalResourceStatusEnum status, @JsonProperty("UniqueId") String uniqueId, @JsonProperty("Version") GETSignalResourceVersionEnum version) {
+        this.action = action;
+        this.logicalResourceId = logicalResourceId;
+        this.stackName = stackName;
+        this.status = status;
+        this.uniqueId = uniqueId;
+        this.version = version;
+  }
 }

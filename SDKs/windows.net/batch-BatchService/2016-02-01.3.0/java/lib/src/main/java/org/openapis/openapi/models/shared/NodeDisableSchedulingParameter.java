@@ -18,9 +18,11 @@ public class NodeDisableSchedulingParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeDisableSchedulingOption")
     public NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum nodeDisableSchedulingOption;
+
     public NodeDisableSchedulingParameter withNodeDisableSchedulingOption(NodeDisableSchedulingParameterNodeDisableSchedulingOptionEnum nodeDisableSchedulingOption) {
         this.nodeDisableSchedulingOption = nodeDisableSchedulingOption;
         return this;
     }
     
+    public NodeDisableSchedulingParameter(){}
 }

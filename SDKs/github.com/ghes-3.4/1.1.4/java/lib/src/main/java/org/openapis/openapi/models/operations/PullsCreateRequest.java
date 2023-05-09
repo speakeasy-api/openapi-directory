@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PullsCreateRequestBody requestBody;
+
     public PullsCreateRequest withRequestBody(PullsCreateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PullsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsCreateRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -29,9 +32,15 @@ public class PullsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsCreateRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public PullsCreateRequest(@JsonProperty("RequestBody") PullsCreateRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

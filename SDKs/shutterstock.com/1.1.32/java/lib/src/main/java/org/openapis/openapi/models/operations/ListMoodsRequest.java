@@ -12,9 +12,11 @@ public class ListMoodsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public ListMoodsRequest withLanguage(String language) {
         this.language = language;
         return this;
     }
     
+    public ListMoodsRequest(){}
 }

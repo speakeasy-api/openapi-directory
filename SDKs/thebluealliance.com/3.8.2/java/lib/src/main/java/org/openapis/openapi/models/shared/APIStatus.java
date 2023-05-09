@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class APIStatus {
     @JsonProperty("android")
     public APIStatusAppVersion android;
+
     public APIStatus withAndroid(APIStatusAppVersion android) {
         this.android = android;
         return this;
@@ -22,6 +23,7 @@ public class APIStatus {
      */
     @JsonProperty("current_season")
     public Long currentSeason;
+
     public APIStatus withCurrentSeason(Long currentSeason) {
         this.currentSeason = currentSeason;
         return this;
@@ -32,6 +34,7 @@ public class APIStatus {
      */
     @JsonProperty("down_events")
     public String[] downEvents;
+
     public APIStatus withDownEvents(String[] downEvents) {
         this.downEvents = downEvents;
         return this;
@@ -39,6 +42,7 @@ public class APIStatus {
     
     @JsonProperty("ios")
     public APIStatusAppVersion ios;
+
     public APIStatus withIos(APIStatusAppVersion ios) {
         this.ios = ios;
         return this;
@@ -49,6 +53,7 @@ public class APIStatus {
      */
     @JsonProperty("is_datafeed_down")
     public Boolean isDatafeedDown;
+
     public APIStatus withIsDatafeedDown(Boolean isDatafeedDown) {
         this.isDatafeedDown = isDatafeedDown;
         return this;
@@ -59,9 +64,18 @@ public class APIStatus {
      */
     @JsonProperty("max_season")
     public Long maxSeason;
+
     public APIStatus withMaxSeason(Long maxSeason) {
         this.maxSeason = maxSeason;
         return this;
     }
     
+    public APIStatus(@JsonProperty("android") APIStatusAppVersion android, @JsonProperty("current_season") Long currentSeason, @JsonProperty("down_events") String[] downEvents, @JsonProperty("ios") APIStatusAppVersion ios, @JsonProperty("is_datafeed_down") Boolean isDatafeedDown, @JsonProperty("max_season") Long maxSeason) {
+        this.android = android;
+        this.currentSeason = currentSeason;
+        this.downEvents = downEvents;
+        this.ios = ios;
+        this.isDatafeedDown = isDatafeedDown;
+        this.maxSeason = maxSeason;
+  }
 }

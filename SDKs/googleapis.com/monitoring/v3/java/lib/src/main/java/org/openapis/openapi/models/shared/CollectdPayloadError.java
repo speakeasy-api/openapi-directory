@@ -18,6 +18,7 @@ public class CollectdPayloadError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public CollectdPayloadError withError(Status error) {
         this.error = error;
         return this;
@@ -29,6 +30,7 @@ public class CollectdPayloadError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public CollectdPayloadError withIndex(Integer index) {
         this.index = index;
         return this;
@@ -40,9 +42,11 @@ public class CollectdPayloadError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueErrors")
     public CollectdValueError[] valueErrors;
+
     public CollectdPayloadError withValueErrors(CollectdValueError[] valueErrors) {
         this.valueErrors = valueErrors;
         return this;
     }
     
+    public CollectdPayloadError(){}
 }

@@ -17,6 +17,7 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
      */
     @JsonProperty("Benefit")
     public Boolean benefit;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefit(Boolean benefit) {
         this.benefit = benefit;
         return this;
@@ -25,9 +26,13 @@ public class GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13Plus
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BenefitGroup")
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup;
+
     public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits withBenefitGroup(GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefitsBenefitGroup[] benefitGroup) {
         this.benefitGroup = benefitGroup;
         return this;
     }
     
+    public GetCommercialCreditCards200ApplicationPrsOpenbankingOpendataV13PlusJsonDataBenefits(@JsonProperty("Benefit") Boolean benefit) {
+        this.benefit = benefit;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceResponse {
     
     public String contentType;
+
     public GetWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkspaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetWorkspaceResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace200ApplicationJSON getWorkspace200ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace200ApplicationJSONObject(GetWorkspace200ApplicationJSON getWorkspace200ApplicationJSONObject) {
         this.getWorkspace200ApplicationJSONObject = getWorkspace200ApplicationJSONObject;
         return this;
     }
     
+    public GetWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

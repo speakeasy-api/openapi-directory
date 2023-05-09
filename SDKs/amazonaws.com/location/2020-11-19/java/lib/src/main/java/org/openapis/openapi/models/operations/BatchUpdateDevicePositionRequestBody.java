@@ -12,9 +12,13 @@ public class BatchUpdateDevicePositionRequestBody {
      */
     @JsonProperty("Updates")
     public org.openapis.openapi.models.shared.DevicePositionUpdate[] updates;
+
     public BatchUpdateDevicePositionRequestBody withUpdates(org.openapis.openapi.models.shared.DevicePositionUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public BatchUpdateDevicePositionRequestBody(@JsonProperty("Updates") org.openapis.openapi.models.shared.DevicePositionUpdate[] updates) {
+        this.updates = updates;
+  }
 }

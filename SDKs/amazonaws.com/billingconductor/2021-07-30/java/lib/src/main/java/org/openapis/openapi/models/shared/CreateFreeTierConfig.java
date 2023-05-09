@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateFreeTierConfig {
     @JsonProperty("Activated")
     public Boolean activated;
+
     public CreateFreeTierConfig withActivated(Boolean activated) {
         this.activated = activated;
         return this;
     }
     
+    public CreateFreeTierConfig(@JsonProperty("Activated") Boolean activated) {
+        this.activated = activated;
+  }
 }

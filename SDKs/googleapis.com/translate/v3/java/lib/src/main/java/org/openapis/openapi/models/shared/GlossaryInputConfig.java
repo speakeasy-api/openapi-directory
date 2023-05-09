@@ -18,9 +18,11 @@ public class GlossaryInputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsSource")
     public GcsSource gcsSource;
+
     public GlossaryInputConfig withGcsSource(GcsSource gcsSource) {
         this.gcsSource = gcsSource;
         return this;
     }
     
+    public GlossaryInputConfig(){}
 }

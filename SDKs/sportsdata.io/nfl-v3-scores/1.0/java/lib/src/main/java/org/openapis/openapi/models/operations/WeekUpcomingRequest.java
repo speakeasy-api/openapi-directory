@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WeekUpcomingRequest {
@@ -12,9 +13,13 @@ public class WeekUpcomingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public WeekUpcomingFormatEnum format;
+
     public WeekUpcomingRequest withFormat(WeekUpcomingFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public WeekUpcomingRequest(@JsonProperty("format") WeekUpcomingFormatEnum format) {
+        this.format = format;
+  }
 }

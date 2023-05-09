@@ -23,6 +23,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_price_money")
     public Money basePriceMoney;
+
     public OrderReturnLineItemModifier withBasePriceMoney(Money basePriceMoney) {
         this.basePriceMoney = basePriceMoney;
         return this;
@@ -34,6 +35,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public OrderReturnLineItemModifier withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -45,6 +47,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_version")
     public Long catalogVersion;
+
     public OrderReturnLineItemModifier withCatalogVersion(Long catalogVersion) {
         this.catalogVersion = catalogVersion;
         return this;
@@ -56,6 +59,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OrderReturnLineItemModifier withName(String name) {
         this.name = name;
         return this;
@@ -68,6 +72,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_modifier_uid")
     public String sourceModifierUid;
+
     public OrderReturnLineItemModifier withSourceModifierUid(String sourceModifierUid) {
         this.sourceModifierUid = sourceModifierUid;
         return this;
@@ -84,6 +89,7 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_price_money")
     public Money totalPriceMoney;
+
     public OrderReturnLineItemModifier withTotalPriceMoney(Money totalPriceMoney) {
         this.totalPriceMoney = totalPriceMoney;
         return this;
@@ -95,9 +101,11 @@ public class OrderReturnLineItemModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderReturnLineItemModifier withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderReturnLineItemModifier(){}
 }

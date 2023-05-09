@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventSelectorsResponse {
@@ -12,6 +13,7 @@ public class GetEventSelectorsResponse {
      */
     
     public Object cloudTrailARNInvalidException;
+
     public GetEventSelectorsResponse withCloudTrailARNInvalidException(Object cloudTrailARNInvalidException) {
         this.cloudTrailARNInvalidException = cloudTrailARNInvalidException;
         return this;
@@ -19,6 +21,7 @@ public class GetEventSelectorsResponse {
     
     
     public String contentType;
+
     public GetEventSelectorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetEventSelectorsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetEventSelectorsResponse getEventSelectorsResponse;
+
     public GetEventSelectorsResponse withGetEventSelectorsResponse(org.openapis.openapi.models.shared.GetEventSelectorsResponse getEventSelectorsResponse) {
         this.getEventSelectorsResponse = getEventSelectorsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetEventSelectorsResponse {
      */
     
     public Object invalidTrailNameException;
+
     public GetEventSelectorsResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -49,6 +54,7 @@ public class GetEventSelectorsResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public GetEventSelectorsResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -59,6 +65,7 @@ public class GetEventSelectorsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public GetEventSelectorsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class GetEventSelectorsResponse {
     
     
     public Integer statusCode;
+
     public GetEventSelectorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetEventSelectorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventSelectorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class GetEventSelectorsResponse {
      */
     
     public Object trailNotFoundException;
+
     public GetEventSelectorsResponse withTrailNotFoundException(Object trailNotFoundException) {
         this.trailNotFoundException = trailNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class GetEventSelectorsResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetEventSelectorsResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetEventSelectorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

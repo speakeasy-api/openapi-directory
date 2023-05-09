@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SenderIdAndCountry {
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public SenderIdAndCountry withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -19,9 +20,14 @@ public class SenderIdAndCountry {
     
     @JsonProperty("SenderId")
     public String senderId;
+
     public SenderIdAndCountry withSenderId(String senderId) {
         this.senderId = senderId;
         return this;
     }
     
+    public SenderIdAndCountry(@JsonProperty("IsoCountryCode") String isoCountryCode, @JsonProperty("SenderId") String senderId) {
+        this.isoCountryCode = isoCountryCode;
+        this.senderId = senderId;
+  }
 }

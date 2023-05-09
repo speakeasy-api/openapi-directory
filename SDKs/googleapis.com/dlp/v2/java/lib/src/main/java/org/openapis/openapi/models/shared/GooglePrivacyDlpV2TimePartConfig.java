@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TimePartConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partToExtract")
     public GooglePrivacyDlpV2TimePartConfigPartToExtractEnum partToExtract;
+
     public GooglePrivacyDlpV2TimePartConfig withPartToExtract(GooglePrivacyDlpV2TimePartConfigPartToExtractEnum partToExtract) {
         this.partToExtract = partToExtract;
         return this;
     }
     
+    public GooglePrivacyDlpV2TimePartConfig(){}
 }

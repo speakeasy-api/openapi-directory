@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterTargetWithMaintenanceWindowResponse {
     
     public String contentType;
+
     public RegisterTargetWithMaintenanceWindowResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
      */
     
     public Object doesNotExistException;
+
     public RegisterTargetWithMaintenanceWindowResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public RegisterTargetWithMaintenanceWindowResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -39,6 +43,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
      */
     
     public Object internalServerError;
+
     public RegisterTargetWithMaintenanceWindowResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterTargetWithMaintenanceWindowResult registerTargetWithMaintenanceWindowResult;
+
     public RegisterTargetWithMaintenanceWindowResponse withRegisterTargetWithMaintenanceWindowResult(org.openapis.openapi.models.shared.RegisterTargetWithMaintenanceWindowResult registerTargetWithMaintenanceWindowResult) {
         this.registerTargetWithMaintenanceWindowResult = registerTargetWithMaintenanceWindowResult;
         return this;
@@ -56,6 +62,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
     
     
     public Integer statusCode;
+
     public RegisterTargetWithMaintenanceWindowResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RegisterTargetWithMaintenanceWindowResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterTargetWithMaintenanceWindowResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RegisterTargetWithMaintenanceWindowResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public RegisterTargetWithMaintenanceWindowResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public RegisterTargetWithMaintenanceWindowResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

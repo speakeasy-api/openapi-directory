@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplaceNetworkAclEntryRequestPortRange {
     
     public Long from;
+
     public ReplaceNetworkAclEntryRequestPortRange withFrom(Long from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class ReplaceNetworkAclEntryRequestPortRange {
     
     
     public Long to;
+
     public ReplaceNetworkAclEntryRequestPortRange withTo(Long to) {
         this.to = to;
         return this;
     }
     
+    public ReplaceNetworkAclEntryRequestPortRange(){}
 }

@@ -15,6 +15,7 @@ public class CopyOptimisationResponse {
      */
     @JsonProperty("catalogProductCount")
     public Long catalogProductCount;
+
     public CopyOptimisationResponse withCatalogProductCount(Long catalogProductCount) {
         this.catalogProductCount = catalogProductCount;
         return this;
@@ -25,6 +26,7 @@ public class CopyOptimisationResponse {
      */
     @JsonProperty("channel")
     public BeezUPCommonChannelBasicInfo channel;
+
     public CopyOptimisationResponse withChannel(BeezUPCommonChannelBasicInfo channel) {
         this.channel = channel;
         return this;
@@ -35,9 +37,15 @@ public class CopyOptimisationResponse {
      */
     @JsonProperty("enabledProductCount")
     public Long enabledProductCount;
+
     public CopyOptimisationResponse withEnabledProductCount(Long enabledProductCount) {
         this.enabledProductCount = enabledProductCount;
         return this;
     }
     
+    public CopyOptimisationResponse(@JsonProperty("catalogProductCount") Long catalogProductCount, @JsonProperty("channel") BeezUPCommonChannelBasicInfo channel, @JsonProperty("enabledProductCount") Long enabledProductCount) {
+        this.catalogProductCount = catalogProductCount;
+        this.channel = channel;
+        this.enabledProductCount = enabledProductCount;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssignInstanceRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public AssignInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -16,9 +17,14 @@ public class AssignInstanceRequest {
     
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public AssignInstanceRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
     }
     
+    public AssignInstanceRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("LayerIds") String[] layerIds) {
+        this.instanceId = instanceId;
+        this.layerIds = layerIds;
+  }
 }

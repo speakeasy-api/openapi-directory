@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DriveTeamdrivesDeleteRequest {
@@ -12,6 +13,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DriveTeamdrivesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DriveTeamdrivesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DriveTeamdrivesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DriveTeamdrivesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DriveTeamdrivesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -62,6 +68,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DriveTeamdrivesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -72,6 +79,7 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamDriveId")
     public String teamDriveId;
+
     public DriveTeamdrivesDeleteRequest withTeamDriveId(String teamDriveId) {
         this.teamDriveId = teamDriveId;
         return this;
@@ -82,9 +90,13 @@ public class DriveTeamdrivesDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DriveTeamdrivesDeleteRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DriveTeamdrivesDeleteRequest(@JsonProperty("teamDriveId") String teamDriveId) {
+        this.teamDriveId = teamDriveId;
+  }
 }

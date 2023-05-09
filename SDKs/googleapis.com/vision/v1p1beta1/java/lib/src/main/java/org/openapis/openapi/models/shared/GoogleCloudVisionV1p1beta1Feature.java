@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p1beta1Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Integer maxResults;
+
     public GoogleCloudVisionV1p1beta1Feature withMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p1beta1Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudVisionV1p1beta1Feature withModel(String model) {
         this.model = model;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p1beta1Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudVisionV1p1beta1FeatureTypeEnum type;
+
     public GoogleCloudVisionV1p1beta1Feature withType(GoogleCloudVisionV1p1beta1FeatureTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudVisionV1p1beta1Feature(){}
 }

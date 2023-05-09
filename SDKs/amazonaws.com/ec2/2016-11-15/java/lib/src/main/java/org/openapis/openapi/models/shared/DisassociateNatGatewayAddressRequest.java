@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisassociateNatGatewayAddressRequest {
     
     public String[] associationIds;
+
     public DisassociateNatGatewayAddressRequest withAssociationIds(String[] associationIds) {
         this.associationIds = associationIds;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateNatGatewayAddressRequest {
     
     
     public Boolean dryRun;
+
     public DisassociateNatGatewayAddressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class DisassociateNatGatewayAddressRequest {
     
     
     public Long maxDrainDurationSeconds;
+
     public DisassociateNatGatewayAddressRequest withMaxDrainDurationSeconds(Long maxDrainDurationSeconds) {
         this.maxDrainDurationSeconds = maxDrainDurationSeconds;
         return this;
@@ -30,9 +33,14 @@ public class DisassociateNatGatewayAddressRequest {
     
     
     public String natGatewayId;
+
     public DisassociateNatGatewayAddressRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
     }
     
+    public DisassociateNatGatewayAddressRequest(@JsonProperty("AssociationIds") String[] associationIds, @JsonProperty("NatGatewayId") String natGatewayId) {
+        this.associationIds = associationIds;
+        this.natGatewayId = natGatewayId;
+  }
 }

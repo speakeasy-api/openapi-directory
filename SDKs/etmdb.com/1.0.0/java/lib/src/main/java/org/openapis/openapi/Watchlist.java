@@ -55,10 +55,8 @@ public class Watchlist {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WatchlistSearchReadResponse res = new org.openapis.openapi.models.operations.WatchlistSearchReadResponse() {{
+        org.openapis.openapi.models.operations.WatchlistSearchReadResponse res = new org.openapis.openapi.models.operations.WatchlistSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,10 +96,8 @@ public class Watchlist {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WatchlistSearchallReadResponse res = new org.openapis.openapi.models.operations.WatchlistSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.WatchlistSearchallReadResponse res = new org.openapis.openapi.models.operations.WatchlistSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

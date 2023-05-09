@@ -15,6 +15,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("digest")
     public String digest;
+
     public Layer withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -26,6 +27,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instruction")
     public String instruction;
+
     public Layer withInstruction(String instruction) {
         this.instruction = instruction;
         return this;
@@ -37,9 +39,11 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public Layer withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public Layer(){}
 }

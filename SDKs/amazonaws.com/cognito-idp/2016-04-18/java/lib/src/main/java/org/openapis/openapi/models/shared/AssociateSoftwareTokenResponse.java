@@ -15,6 +15,7 @@ public class AssociateSoftwareTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretCode")
     public String secretCode;
+
     public AssociateSoftwareTokenResponse withSecretCode(String secretCode) {
         this.secretCode = secretCode;
         return this;
@@ -23,9 +24,11 @@ public class AssociateSoftwareTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Session")
     public String session;
+
     public AssociateSoftwareTokenResponse withSession(String session) {
         this.session = session;
         return this;
     }
     
+    public AssociateSoftwareTokenResponse(){}
 }

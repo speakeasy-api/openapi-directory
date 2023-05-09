@@ -12,6 +12,7 @@ public class RdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public RdcerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class RdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public RdcerRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class RdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("REGDNO")
     public String regdno;
+
     public RdcerRequestBodyCertificateParameters withRegdno(String regdno) {
         this.regdno = regdno;
         return this;
@@ -42,9 +45,16 @@ public class RdcerRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public RdcerRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public RdcerRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("REGDNO") String regdno, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regdno = regdno;
+        this.uid = uid;
+  }
 }

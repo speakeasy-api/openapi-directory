@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SalesCreditNotesPutRequest {
@@ -12,6 +13,7 @@ public class SalesCreditNotesPutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto salesInvoiceCreditNoteDto;
+
     public SalesCreditNotesPutRequest withSalesInvoiceCreditNoteDto(org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto salesInvoiceCreditNoteDto) {
         this.salesInvoiceCreditNoteDto = salesInvoiceCreditNoteDto;
         return this;
@@ -22,9 +24,14 @@ public class SalesCreditNotesPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public SalesCreditNotesPutRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public SalesCreditNotesPutRequest(@JsonProperty("SalesInvoiceCreditNoteDto") org.openapis.openapi.models.shared.SalesInvoiceCreditNoteDto salesInvoiceCreditNoteDto, @JsonProperty("id") Long id) {
+        this.salesInvoiceCreditNoteDto = salesInvoiceCreditNoteDto;
+        this.id = id;
+  }
 }

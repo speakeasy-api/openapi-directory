@@ -18,6 +18,7 @@ public class HttpRouteHeaderModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("add")
     public java.util.Map<String, String> add;
+
     public HttpRouteHeaderModifier withAdd(java.util.Map<String, String> add) {
         this.add = add;
         return this;
@@ -29,6 +30,7 @@ public class HttpRouteHeaderModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remove")
     public String[] remove;
+
     public HttpRouteHeaderModifier withRemove(String[] remove) {
         this.remove = remove;
         return this;
@@ -40,9 +42,11 @@ public class HttpRouteHeaderModifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("set")
     public java.util.Map<String, String> set;
+
     public HttpRouteHeaderModifier withSet(java.util.Map<String, String> set) {
         this.set = set;
         return this;
     }
     
+    public HttpRouteHeaderModifier(){}
 }

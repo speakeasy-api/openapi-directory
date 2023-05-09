@@ -15,6 +15,7 @@ public class InputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentReaderConfig")
     public DocumentReaderConfig documentReaderConfig;
+
     public InputDataConfig withDocumentReaderConfig(DocumentReaderConfig documentReaderConfig) {
         this.documentReaderConfig = documentReaderConfig;
         return this;
@@ -23,6 +24,7 @@ public class InputDataConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public InputDataConfig withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -30,9 +32,13 @@ public class InputDataConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public InputDataConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public InputDataConfig(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

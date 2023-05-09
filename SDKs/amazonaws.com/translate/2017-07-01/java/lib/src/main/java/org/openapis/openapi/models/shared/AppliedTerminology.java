@@ -15,6 +15,7 @@ public class AppliedTerminology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AppliedTerminology withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class AppliedTerminology {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Terms")
     public Term[] terms;
+
     public AppliedTerminology withTerms(Term[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public AppliedTerminology(){}
 }

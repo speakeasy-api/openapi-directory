@@ -18,6 +18,7 @@ public class BasicLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combiningFunction")
     public BasicLevelCombiningFunctionEnum combiningFunction;
+
     public BasicLevel withCombiningFunction(BasicLevelCombiningFunctionEnum combiningFunction) {
         this.combiningFunction = combiningFunction;
         return this;
@@ -29,9 +30,11 @@ public class BasicLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditions")
     public Condition[] conditions;
+
     public BasicLevel withConditions(Condition[] conditions) {
         this.conditions = conditions;
         return this;
     }
     
+    public BasicLevel(){}
 }

@@ -15,6 +15,7 @@ public class BatchPutMessageErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public BatchPutMessageErrorEntry withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class BatchPutMessageErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchPutMessageErrorEntry withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchPutMessageErrorEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public BatchPutMessageErrorEntry withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public BatchPutMessageErrorEntry(){}
 }

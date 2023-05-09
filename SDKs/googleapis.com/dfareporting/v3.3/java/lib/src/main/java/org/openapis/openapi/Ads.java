@@ -60,11 +60,9 @@ public class Ads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAdsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdsGetResponse res = new org.openapis.openapi.models.operations.DfareportingAdsGetResponse(contentType, httpRes.statusCode()) {{
             ad = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Ads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAdsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingAdsInsertResponse(contentType, httpRes.statusCode()) {{
             ad = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Ads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdsListResponse res = new org.openapis.openapi.models.operations.DfareportingAdsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdsListResponse res = new org.openapis.openapi.models.operations.DfareportingAdsListResponse(contentType, httpRes.statusCode()) {{
             adsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Ads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAdsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingAdsPatchResponse(contentType, httpRes.statusCode()) {{
             ad = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Ads {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingAdsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAdsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingAdsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingAdsUpdateResponse(contentType, httpRes.statusCode()) {{
             ad = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

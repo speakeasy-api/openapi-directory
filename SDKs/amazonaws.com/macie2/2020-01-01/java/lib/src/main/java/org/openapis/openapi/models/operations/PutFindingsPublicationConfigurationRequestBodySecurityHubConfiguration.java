@@ -15,6 +15,7 @@ public class PutFindingsPublicationConfigurationRequestBodySecurityHubConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishClassificationFindings")
     public Boolean publishClassificationFindings;
+
     public PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration withPublishClassificationFindings(Boolean publishClassificationFindings) {
         this.publishClassificationFindings = publishClassificationFindings;
         return this;
@@ -23,9 +24,11 @@ public class PutFindingsPublicationConfigurationRequestBodySecurityHubConfigurat
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishPolicyFindings")
     public Boolean publishPolicyFindings;
+
     public PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration withPublishPolicyFindings(Boolean publishPolicyFindings) {
         this.publishPolicyFindings = publishPolicyFindings;
         return this;
     }
     
+    public PutFindingsPublicationConfigurationRequestBodySecurityHubConfiguration(){}
 }

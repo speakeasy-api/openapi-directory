@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergePullRequestByThreeWayResponse {
@@ -12,6 +13,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object commitMessageLengthExceededException;
+
     public MergePullRequestByThreeWayResponse withCommitMessageLengthExceededException(Object commitMessageLengthExceededException) {
         this.commitMessageLengthExceededException = commitMessageLengthExceededException;
         return this;
@@ -22,6 +24,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object concurrentReferenceUpdateException;
+
     public MergePullRequestByThreeWayResponse withConcurrentReferenceUpdateException(Object concurrentReferenceUpdateException) {
         this.concurrentReferenceUpdateException = concurrentReferenceUpdateException;
         return this;
@@ -29,6 +32,7 @@ public class MergePullRequestByThreeWayResponse {
     
     
     public String contentType;
+
     public MergePullRequestByThreeWayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object encryptionIntegrityChecksFailedException;
+
     public MergePullRequestByThreeWayResponse withEncryptionIntegrityChecksFailedException(Object encryptionIntegrityChecksFailedException) {
         this.encryptionIntegrityChecksFailedException = encryptionIntegrityChecksFailedException;
         return this;
@@ -49,6 +54,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object encryptionKeyAccessDeniedException;
+
     public MergePullRequestByThreeWayResponse withEncryptionKeyAccessDeniedException(Object encryptionKeyAccessDeniedException) {
         this.encryptionKeyAccessDeniedException = encryptionKeyAccessDeniedException;
         return this;
@@ -59,6 +65,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object encryptionKeyDisabledException;
+
     public MergePullRequestByThreeWayResponse withEncryptionKeyDisabledException(Object encryptionKeyDisabledException) {
         this.encryptionKeyDisabledException = encryptionKeyDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object encryptionKeyNotFoundException;
+
     public MergePullRequestByThreeWayResponse withEncryptionKeyNotFoundException(Object encryptionKeyNotFoundException) {
         this.encryptionKeyNotFoundException = encryptionKeyNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object encryptionKeyUnavailableException;
+
     public MergePullRequestByThreeWayResponse withEncryptionKeyUnavailableException(Object encryptionKeyUnavailableException) {
         this.encryptionKeyUnavailableException = encryptionKeyUnavailableException;
         return this;
@@ -89,6 +98,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object fileContentSizeLimitExceededException;
+
     public MergePullRequestByThreeWayResponse withFileContentSizeLimitExceededException(Object fileContentSizeLimitExceededException) {
         this.fileContentSizeLimitExceededException = fileContentSizeLimitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object folderContentSizeLimitExceededException;
+
     public MergePullRequestByThreeWayResponse withFolderContentSizeLimitExceededException(Object folderContentSizeLimitExceededException) {
         this.folderContentSizeLimitExceededException = folderContentSizeLimitExceededException;
         return this;
@@ -109,6 +120,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidCommitIdException;
+
     public MergePullRequestByThreeWayResponse withInvalidCommitIdException(Object invalidCommitIdException) {
         this.invalidCommitIdException = invalidCommitIdException;
         return this;
@@ -119,6 +131,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidConflictDetailLevelException;
+
     public MergePullRequestByThreeWayResponse withInvalidConflictDetailLevelException(Object invalidConflictDetailLevelException) {
         this.invalidConflictDetailLevelException = invalidConflictDetailLevelException;
         return this;
@@ -129,6 +142,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidConflictResolutionException;
+
     public MergePullRequestByThreeWayResponse withInvalidConflictResolutionException(Object invalidConflictResolutionException) {
         this.invalidConflictResolutionException = invalidConflictResolutionException;
         return this;
@@ -139,6 +153,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidConflictResolutionStrategyException;
+
     public MergePullRequestByThreeWayResponse withInvalidConflictResolutionStrategyException(Object invalidConflictResolutionStrategyException) {
         this.invalidConflictResolutionStrategyException = invalidConflictResolutionStrategyException;
         return this;
@@ -149,6 +164,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidEmailException;
+
     public MergePullRequestByThreeWayResponse withInvalidEmailException(Object invalidEmailException) {
         this.invalidEmailException = invalidEmailException;
         return this;
@@ -159,6 +175,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidFileModeException;
+
     public MergePullRequestByThreeWayResponse withInvalidFileModeException(Object invalidFileModeException) {
         this.invalidFileModeException = invalidFileModeException;
         return this;
@@ -169,6 +186,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidPathException;
+
     public MergePullRequestByThreeWayResponse withInvalidPathException(Object invalidPathException) {
         this.invalidPathException = invalidPathException;
         return this;
@@ -179,6 +197,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidPullRequestIdException;
+
     public MergePullRequestByThreeWayResponse withInvalidPullRequestIdException(Object invalidPullRequestIdException) {
         this.invalidPullRequestIdException = invalidPullRequestIdException;
         return this;
@@ -189,6 +208,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidReplacementContentException;
+
     public MergePullRequestByThreeWayResponse withInvalidReplacementContentException(Object invalidReplacementContentException) {
         this.invalidReplacementContentException = invalidReplacementContentException;
         return this;
@@ -199,6 +219,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidReplacementTypeException;
+
     public MergePullRequestByThreeWayResponse withInvalidReplacementTypeException(Object invalidReplacementTypeException) {
         this.invalidReplacementTypeException = invalidReplacementTypeException;
         return this;
@@ -209,6 +230,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object invalidRepositoryNameException;
+
     public MergePullRequestByThreeWayResponse withInvalidRepositoryNameException(Object invalidRepositoryNameException) {
         this.invalidRepositoryNameException = invalidRepositoryNameException;
         return this;
@@ -219,6 +241,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object manualMergeRequiredException;
+
     public MergePullRequestByThreeWayResponse withManualMergeRequiredException(Object manualMergeRequiredException) {
         this.manualMergeRequiredException = manualMergeRequiredException;
         return this;
@@ -229,6 +252,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object maximumConflictResolutionEntriesExceededException;
+
     public MergePullRequestByThreeWayResponse withMaximumConflictResolutionEntriesExceededException(Object maximumConflictResolutionEntriesExceededException) {
         this.maximumConflictResolutionEntriesExceededException = maximumConflictResolutionEntriesExceededException;
         return this;
@@ -239,6 +263,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object maximumFileContentToLoadExceededException;
+
     public MergePullRequestByThreeWayResponse withMaximumFileContentToLoadExceededException(Object maximumFileContentToLoadExceededException) {
         this.maximumFileContentToLoadExceededException = maximumFileContentToLoadExceededException;
         return this;
@@ -249,6 +274,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object maximumItemsToCompareExceededException;
+
     public MergePullRequestByThreeWayResponse withMaximumItemsToCompareExceededException(Object maximumItemsToCompareExceededException) {
         this.maximumItemsToCompareExceededException = maximumItemsToCompareExceededException;
         return this;
@@ -259,6 +285,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public org.openapis.openapi.models.shared.MergePullRequestByThreeWayOutput mergePullRequestByThreeWayOutput;
+
     public MergePullRequestByThreeWayResponse withMergePullRequestByThreeWayOutput(org.openapis.openapi.models.shared.MergePullRequestByThreeWayOutput mergePullRequestByThreeWayOutput) {
         this.mergePullRequestByThreeWayOutput = mergePullRequestByThreeWayOutput;
         return this;
@@ -269,6 +296,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object multipleConflictResolutionEntriesException;
+
     public MergePullRequestByThreeWayResponse withMultipleConflictResolutionEntriesException(Object multipleConflictResolutionEntriesException) {
         this.multipleConflictResolutionEntriesException = multipleConflictResolutionEntriesException;
         return this;
@@ -279,6 +307,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object nameLengthExceededException;
+
     public MergePullRequestByThreeWayResponse withNameLengthExceededException(Object nameLengthExceededException) {
         this.nameLengthExceededException = nameLengthExceededException;
         return this;
@@ -289,6 +318,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object pathRequiredException;
+
     public MergePullRequestByThreeWayResponse withPathRequiredException(Object pathRequiredException) {
         this.pathRequiredException = pathRequiredException;
         return this;
@@ -299,6 +329,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object pullRequestAlreadyClosedException;
+
     public MergePullRequestByThreeWayResponse withPullRequestAlreadyClosedException(Object pullRequestAlreadyClosedException) {
         this.pullRequestAlreadyClosedException = pullRequestAlreadyClosedException;
         return this;
@@ -309,6 +340,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object pullRequestApprovalRulesNotSatisfiedException;
+
     public MergePullRequestByThreeWayResponse withPullRequestApprovalRulesNotSatisfiedException(Object pullRequestApprovalRulesNotSatisfiedException) {
         this.pullRequestApprovalRulesNotSatisfiedException = pullRequestApprovalRulesNotSatisfiedException;
         return this;
@@ -319,6 +351,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object pullRequestDoesNotExistException;
+
     public MergePullRequestByThreeWayResponse withPullRequestDoesNotExistException(Object pullRequestDoesNotExistException) {
         this.pullRequestDoesNotExistException = pullRequestDoesNotExistException;
         return this;
@@ -329,6 +362,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object pullRequestIdRequiredException;
+
     public MergePullRequestByThreeWayResponse withPullRequestIdRequiredException(Object pullRequestIdRequiredException) {
         this.pullRequestIdRequiredException = pullRequestIdRequiredException;
         return this;
@@ -339,6 +373,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object replacementContentRequiredException;
+
     public MergePullRequestByThreeWayResponse withReplacementContentRequiredException(Object replacementContentRequiredException) {
         this.replacementContentRequiredException = replacementContentRequiredException;
         return this;
@@ -349,6 +384,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object replacementTypeRequiredException;
+
     public MergePullRequestByThreeWayResponse withReplacementTypeRequiredException(Object replacementTypeRequiredException) {
         this.replacementTypeRequiredException = replacementTypeRequiredException;
         return this;
@@ -359,6 +395,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object repositoryDoesNotExistException;
+
     public MergePullRequestByThreeWayResponse withRepositoryDoesNotExistException(Object repositoryDoesNotExistException) {
         this.repositoryDoesNotExistException = repositoryDoesNotExistException;
         return this;
@@ -369,6 +406,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object repositoryNameRequiredException;
+
     public MergePullRequestByThreeWayResponse withRepositoryNameRequiredException(Object repositoryNameRequiredException) {
         this.repositoryNameRequiredException = repositoryNameRequiredException;
         return this;
@@ -379,6 +417,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object repositoryNotAssociatedWithPullRequestException;
+
     public MergePullRequestByThreeWayResponse withRepositoryNotAssociatedWithPullRequestException(Object repositoryNotAssociatedWithPullRequestException) {
         this.repositoryNotAssociatedWithPullRequestException = repositoryNotAssociatedWithPullRequestException;
         return this;
@@ -386,6 +425,7 @@ public class MergePullRequestByThreeWayResponse {
     
     
     public Integer statusCode;
+
     public MergePullRequestByThreeWayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -393,6 +433,7 @@ public class MergePullRequestByThreeWayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergePullRequestByThreeWayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -403,6 +444,7 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object tipOfSourceReferenceIsDifferentException;
+
     public MergePullRequestByThreeWayResponse withTipOfSourceReferenceIsDifferentException(Object tipOfSourceReferenceIsDifferentException) {
         this.tipOfSourceReferenceIsDifferentException = tipOfSourceReferenceIsDifferentException;
         return this;
@@ -413,9 +455,14 @@ public class MergePullRequestByThreeWayResponse {
      */
     
     public Object tipsDivergenceExceededException;
+
     public MergePullRequestByThreeWayResponse withTipsDivergenceExceededException(Object tipsDivergenceExceededException) {
         this.tipsDivergenceExceededException = tipsDivergenceExceededException;
         return this;
     }
     
+    public MergePullRequestByThreeWayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

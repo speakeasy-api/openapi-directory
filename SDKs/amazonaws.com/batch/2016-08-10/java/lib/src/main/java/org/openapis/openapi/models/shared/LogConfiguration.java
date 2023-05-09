@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LogConfiguration {
     @JsonProperty("logDriver")
     public LogDriverEnum logDriver;
+
     public LogConfiguration withLogDriver(LogDriverEnum logDriver) {
         this.logDriver = logDriver;
         return this;
@@ -22,6 +23,7 @@ public class LogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, String> options;
+
     public LogConfiguration withOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
@@ -30,9 +32,13 @@ public class LogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretOptions")
     public Secret[] secretOptions;
+
     public LogConfiguration withSecretOptions(Secret[] secretOptions) {
         this.secretOptions = secretOptions;
         return this;
     }
     
+    public LogConfiguration(@JsonProperty("logDriver") LogDriverEnum logDriver) {
+        this.logDriver = logDriver;
+  }
 }

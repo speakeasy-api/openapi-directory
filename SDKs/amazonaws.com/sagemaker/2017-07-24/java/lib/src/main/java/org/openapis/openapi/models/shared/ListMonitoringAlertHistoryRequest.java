@@ -19,6 +19,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListMonitoringAlertHistoryRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListMonitoringAlertHistoryRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -37,6 +39,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListMonitoringAlertHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -45,6 +48,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringAlertName")
     public String monitoringAlertName;
+
     public ListMonitoringAlertHistoryRequest withMonitoringAlertName(String monitoringAlertName) {
         this.monitoringAlertName = monitoringAlertName;
         return this;
@@ -53,6 +57,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonitoringScheduleName")
     public String monitoringScheduleName;
+
     public ListMonitoringAlertHistoryRequest withMonitoringScheduleName(String monitoringScheduleName) {
         this.monitoringScheduleName = monitoringScheduleName;
         return this;
@@ -61,6 +66,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMonitoringAlertHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -69,6 +75,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public MonitoringAlertHistorySortKeyEnum sortBy;
+
     public ListMonitoringAlertHistoryRequest withSortBy(MonitoringAlertHistorySortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -77,6 +84,7 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListMonitoringAlertHistoryRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -85,9 +93,11 @@ public class ListMonitoringAlertHistoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public MonitoringAlertStatusEnum statusEquals;
+
     public ListMonitoringAlertHistoryRequest withStatusEquals(MonitoringAlertStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListMonitoringAlertHistoryRequest(){}
 }

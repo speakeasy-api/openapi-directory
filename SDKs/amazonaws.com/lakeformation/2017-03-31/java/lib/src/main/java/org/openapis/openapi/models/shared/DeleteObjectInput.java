@@ -15,6 +15,7 @@ public class DeleteObjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public DeleteObjectInput withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -23,6 +24,7 @@ public class DeleteObjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public DeleteObjectInput withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -30,9 +32,13 @@ public class DeleteObjectInput {
     
     @JsonProperty("Uri")
     public String uri;
+
     public DeleteObjectInput withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public DeleteObjectInput(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

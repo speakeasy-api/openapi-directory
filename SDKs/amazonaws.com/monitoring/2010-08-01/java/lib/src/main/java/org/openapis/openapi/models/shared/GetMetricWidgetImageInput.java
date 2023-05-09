@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetMetricWidgetImageInput {
     
     public String metricWidget;
+
     public GetMetricWidgetImageInput withMetricWidget(String metricWidget) {
         this.metricWidget = metricWidget;
         return this;
@@ -16,9 +17,13 @@ public class GetMetricWidgetImageInput {
     
     
     public String outputFormat;
+
     public GetMetricWidgetImageInput withOutputFormat(String outputFormat) {
         this.outputFormat = outputFormat;
         return this;
     }
     
+    public GetMetricWidgetImageInput(@JsonProperty("MetricWidget") String metricWidget) {
+        this.metricWidget = metricWidget;
+  }
 }

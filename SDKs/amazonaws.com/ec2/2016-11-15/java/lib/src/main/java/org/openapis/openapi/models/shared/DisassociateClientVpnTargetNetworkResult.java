@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateClientVpnTargetNetworkResult {
     
     public String associationId;
+
     public DisassociateClientVpnTargetNetworkResult withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateClientVpnTargetNetworkResult {
     
     
     public DisassociateClientVpnTargetNetworkResultStatus status;
+
     public DisassociateClientVpnTargetNetworkResult withStatus(DisassociateClientVpnTargetNetworkResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public DisassociateClientVpnTargetNetworkResult(){}
 }

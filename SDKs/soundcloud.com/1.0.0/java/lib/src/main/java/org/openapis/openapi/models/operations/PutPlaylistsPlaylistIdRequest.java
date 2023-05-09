@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPlaylistsPlaylistIdRequest {
@@ -12,6 +13,7 @@ public class PutPlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest createUpdatePlaylistRequest;
+
     public PutPlaylistsPlaylistIdRequest withCreateUpdatePlaylistRequest(org.openapis.openapi.models.shared.CreateUpdatePlaylistRequest createUpdatePlaylistRequest) {
         this.createUpdatePlaylistRequest = createUpdatePlaylistRequest;
         return this;
@@ -22,9 +24,13 @@ public class PutPlaylistsPlaylistIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=playlist_id")
     public Long playlistId;
+
     public PutPlaylistsPlaylistIdRequest withPlaylistId(Long playlistId) {
         this.playlistId = playlistId;
         return this;
     }
     
+    public PutPlaylistsPlaylistIdRequest(@JsonProperty("playlist_id") Long playlistId) {
+        this.playlistId = playlistId;
+  }
 }

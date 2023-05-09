@@ -15,6 +15,7 @@ public class StatefulEngineOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleOrder")
     public RuleOrderEnum ruleOrder;
+
     public StatefulEngineOptions withRuleOrder(RuleOrderEnum ruleOrder) {
         this.ruleOrder = ruleOrder;
         return this;
@@ -23,9 +24,11 @@ public class StatefulEngineOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamExceptionPolicy")
     public StreamExceptionPolicyEnum streamExceptionPolicy;
+
     public StatefulEngineOptions withStreamExceptionPolicy(StreamExceptionPolicyEnum streamExceptionPolicy) {
         this.streamExceptionPolicy = streamExceptionPolicy;
         return this;
     }
     
+    public StatefulEngineOptions(){}
 }

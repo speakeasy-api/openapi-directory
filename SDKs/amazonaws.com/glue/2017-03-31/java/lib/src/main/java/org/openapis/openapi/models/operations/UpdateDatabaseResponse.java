@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDatabaseResponse {
@@ -12,6 +13,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateDatabaseResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDatabaseResponse {
     
     
     public String contentType;
+
     public UpdateDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateDatabaseResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateDatabaseResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateDatabaseResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateDatabaseResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateDatabaseResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateDatabaseResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateDatabaseResponse {
     
     
     public Integer statusCode;
+
     public UpdateDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateDatabaseResponse {
      */
     
     public java.util.Map<String, Object> updateDatabaseResponse;
+
     public UpdateDatabaseResponse withUpdateDatabaseResponse(java.util.Map<String, Object> updateDatabaseResponse) {
         this.updateDatabaseResponse = updateDatabaseResponse;
         return this;
     }
     
+    public UpdateDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

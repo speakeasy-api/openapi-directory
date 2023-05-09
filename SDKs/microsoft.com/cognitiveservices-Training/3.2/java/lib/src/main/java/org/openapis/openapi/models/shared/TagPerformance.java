@@ -18,6 +18,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averagePrecision")
     public Float averagePrecision;
+
     public TagPerformance withAveragePrecision(Float averagePrecision) {
         this.averagePrecision = averagePrecision;
         return this;
@@ -26,6 +27,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TagPerformance withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagPerformance withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precision")
     public Float precision;
+
     public TagPerformance withPrecision(Float precision) {
         this.precision = precision;
         return this;
@@ -56,6 +60,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("precisionStdDeviation")
     public Float precisionStdDeviation;
+
     public TagPerformance withPrecisionStdDeviation(Float precisionStdDeviation) {
         this.precisionStdDeviation = precisionStdDeviation;
         return this;
@@ -67,6 +72,7 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public TagPerformance withRecall(Float recall) {
         this.recall = recall;
         return this;
@@ -78,9 +84,11 @@ public class TagPerformance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recallStdDeviation")
     public Float recallStdDeviation;
+
     public TagPerformance withRecallStdDeviation(Float recallStdDeviation) {
         this.recallStdDeviation = recallStdDeviation;
         return this;
     }
     
+    public TagPerformance(){}
 }

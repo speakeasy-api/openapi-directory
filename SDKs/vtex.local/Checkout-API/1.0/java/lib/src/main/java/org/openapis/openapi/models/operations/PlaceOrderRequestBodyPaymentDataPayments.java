@@ -15,6 +15,7 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public PlaceOrderRequestBodyPaymentDataPayments withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public PlaceOrderRequestBodyPaymentDataPayments withBin(String bin) {
         this.bin = bin;
         return this;
@@ -36,6 +38,7 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
      */
     @JsonProperty("installments")
     public Long installments;
+
     public PlaceOrderRequestBodyPaymentDataPayments withInstallments(Long installments) {
         this.installments = installments;
         return this;
@@ -46,6 +49,7 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
      */
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public PlaceOrderRequestBodyPaymentDataPayments withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -56,6 +60,7 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
      */
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public PlaceOrderRequestBodyPaymentDataPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -66,9 +71,16 @@ public class PlaceOrderRequestBodyPaymentDataPayments {
      */
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrderRequestBodyPaymentDataPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrderRequestBodyPaymentDataPayments(@JsonProperty("installments") Long installments, @JsonProperty("paymentSystem") String paymentSystem, @JsonProperty("referenceValue") Long referenceValue, @JsonProperty("value") Long value) {
+        this.installments = installments;
+        this.paymentSystem = paymentSystem;
+        this.referenceValue = referenceValue;
+        this.value = value;
+  }
 }

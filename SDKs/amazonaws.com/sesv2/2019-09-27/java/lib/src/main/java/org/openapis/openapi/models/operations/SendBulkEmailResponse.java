@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendBulkEmailResponse {
@@ -12,6 +13,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object accountSuspendedException;
+
     public SendBulkEmailResponse withAccountSuspendedException(Object accountSuspendedException) {
         this.accountSuspendedException = accountSuspendedException;
         return this;
@@ -22,6 +24,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object badRequestException;
+
     public SendBulkEmailResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class SendBulkEmailResponse {
     
     
     public String contentType;
+
     public SendBulkEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object limitExceededException;
+
     public SendBulkEmailResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object mailFromDomainNotVerifiedException;
+
     public SendBulkEmailResponse withMailFromDomainNotVerifiedException(Object mailFromDomainNotVerifiedException) {
         this.mailFromDomainNotVerifiedException = mailFromDomainNotVerifiedException;
         return this;
@@ -59,6 +65,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object messageRejected;
+
     public SendBulkEmailResponse withMessageRejected(Object messageRejected) {
         this.messageRejected = messageRejected;
         return this;
@@ -69,6 +76,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object notFoundException;
+
     public SendBulkEmailResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class SendBulkEmailResponse {
      */
     
     public org.openapis.openapi.models.shared.SendBulkEmailResponse sendBulkEmailResponse;
+
     public SendBulkEmailResponse withSendBulkEmailResponse(org.openapis.openapi.models.shared.SendBulkEmailResponse sendBulkEmailResponse) {
         this.sendBulkEmailResponse = sendBulkEmailResponse;
         return this;
@@ -86,6 +95,7 @@ public class SendBulkEmailResponse {
     
     
     public Integer statusCode;
+
     public SendBulkEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class SendBulkEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendBulkEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class SendBulkEmailResponse {
      */
     
     public Object sendingPausedException;
+
     public SendBulkEmailResponse withSendingPausedException(Object sendingPausedException) {
         this.sendingPausedException = sendingPausedException;
         return this;
@@ -113,9 +125,14 @@ public class SendBulkEmailResponse {
      */
     
     public Object tooManyRequestsException;
+
     public SendBulkEmailResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public SendBulkEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

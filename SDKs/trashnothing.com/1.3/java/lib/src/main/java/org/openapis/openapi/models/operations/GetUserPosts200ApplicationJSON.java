@@ -23,6 +23,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_index")
     public Long endIndex;
+
     public GetUserPosts200ApplicationJSON withEndIndex(Long endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -35,6 +36,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_ids")
     public String[] groupIds;
+
     public GetUserPosts200ApplicationJSON withGroupIds(String[] groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -49,6 +51,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("last_listings_view")
     public OffsetDateTime lastListingsView;
+
     public GetUserPosts200ApplicationJSON withLastListingsView(OffsetDateTime lastListingsView) {
         this.lastListingsView = lastListingsView;
         return this;
@@ -60,6 +63,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_pages")
     public Long numPages;
+
     public GetUserPosts200ApplicationJSON withNumPages(Long numPages) {
         this.numPages = numPages;
         return this;
@@ -71,6 +75,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_posts")
     public Long numPosts;
+
     public GetUserPosts200ApplicationJSON withNumPosts(Long numPosts) {
         this.numPosts = numPosts;
         return this;
@@ -82,6 +87,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public GetUserPosts200ApplicationJSON withPage(Long page) {
         this.page = page;
         return this;
@@ -93,6 +99,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public GetUserPosts200ApplicationJSON withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -101,6 +108,7 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posts")
     public org.openapis.openapi.models.shared.Post[] posts;
+
     public GetUserPosts200ApplicationJSON withPosts(org.openapis.openapi.models.shared.Post[] posts) {
         this.posts = posts;
         return this;
@@ -112,9 +120,11 @@ public class GetUserPosts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_index")
     public Long startIndex;
+
     public GetUserPosts200ApplicationJSON withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetUserPosts200ApplicationJSON(){}
 }

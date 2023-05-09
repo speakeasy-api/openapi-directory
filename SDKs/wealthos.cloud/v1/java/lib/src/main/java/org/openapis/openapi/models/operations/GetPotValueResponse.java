@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPotValueResponse {
     
     public String contentType;
+
     public GetPotValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPotValueResponse {
     
     
     public Integer statusCode;
+
     public GetPotValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPotValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPotValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue200ApplicationJSON getPotValue200ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue200ApplicationJSONObject(GetPotValue200ApplicationJSON getPotValue200ApplicationJSONObject) {
         this.getPotValue200ApplicationJSONObject = getPotValue200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue400ApplicationJSON getPotValue400ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue400ApplicationJSONObject(GetPotValue400ApplicationJSON getPotValue400ApplicationJSONObject) {
         this.getPotValue400ApplicationJSONObject = getPotValue400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue401ApplicationJSON getPotValue401ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue401ApplicationJSONObject(GetPotValue401ApplicationJSON getPotValue401ApplicationJSONObject) {
         this.getPotValue401ApplicationJSONObject = getPotValue401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue403ApplicationJSON getPotValue403ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue403ApplicationJSONObject(GetPotValue403ApplicationJSON getPotValue403ApplicationJSONObject) {
         this.getPotValue403ApplicationJSONObject = getPotValue403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue404ApplicationJSON getPotValue404ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue404ApplicationJSONObject(GetPotValue404ApplicationJSON getPotValue404ApplicationJSONObject) {
         this.getPotValue404ApplicationJSONObject = getPotValue404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue429ApplicationJSON getPotValue429ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue429ApplicationJSONObject(GetPotValue429ApplicationJSON getPotValue429ApplicationJSONObject) {
         this.getPotValue429ApplicationJSONObject = getPotValue429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetPotValueResponse {
      */
     
     public GetPotValue500ApplicationJSON getPotValue500ApplicationJSONObject;
+
     public GetPotValueResponse withGetPotValue500ApplicationJSONObject(GetPotValue500ApplicationJSON getPotValue500ApplicationJSONObject) {
         this.getPotValue500ApplicationJSONObject = getPotValue500ApplicationJSONObject;
         return this;
     }
     
+    public GetPotValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

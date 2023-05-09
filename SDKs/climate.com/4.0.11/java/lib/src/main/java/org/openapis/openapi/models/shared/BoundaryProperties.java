@@ -15,6 +15,7 @@ public class BoundaryProperties {
      */
     @JsonProperty("area")
     public Area area;
+
     public BoundaryProperties withArea(Area area) {
         this.area = area;
         return this;
@@ -22,9 +23,14 @@ public class BoundaryProperties {
     
     @JsonProperty("centroid")
     public Point centroid;
+
     public BoundaryProperties withCentroid(Point centroid) {
         this.centroid = centroid;
         return this;
     }
     
+    public BoundaryProperties(@JsonProperty("area") Area area, @JsonProperty("centroid") Point centroid) {
+        this.area = area;
+        this.centroid = centroid;
+  }
 }

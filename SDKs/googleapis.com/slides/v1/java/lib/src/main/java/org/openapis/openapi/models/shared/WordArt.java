@@ -18,9 +18,11 @@ public class WordArt {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderedText")
     public String renderedText;
+
     public WordArt withRenderedText(String renderedText) {
         this.renderedText = renderedText;
         return this;
     }
     
+    public WordArt(){}
 }

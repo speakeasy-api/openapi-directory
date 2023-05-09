@@ -15,6 +15,7 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryDisplayName")
     public String countryDisplayName;
+
     public CountryObject withCountryDisplayName(String countryDisplayName) {
         this.countryDisplayName = countryDisplayName;
         return this;
@@ -26,6 +27,7 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryName")
     public String countryName;
+
     public CountryObject withCountryName(String countryName) {
         this.countryName = countryName;
         return this;
@@ -37,6 +39,7 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public CountryObject withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -48,6 +51,7 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultPrice")
     public String defaultPrice;
+
     public CountryObject withDefaultPrice(String defaultPrice) {
         this.defaultPrice = defaultPrice;
         return this;
@@ -59,6 +63,7 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dialingPrefix")
     public String dialingPrefix;
+
     public CountryObject withDialingPrefix(String dialingPrefix) {
         this.dialingPrefix = dialingPrefix;
         return this;
@@ -70,9 +75,11 @@ public class CountryObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public NetworkObject[] networks;
+
     public CountryObject withNetworks(NetworkObject[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public CountryObject(){}
 }

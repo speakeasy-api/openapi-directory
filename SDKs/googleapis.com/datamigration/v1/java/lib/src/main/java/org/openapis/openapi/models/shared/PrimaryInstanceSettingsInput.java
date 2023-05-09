@@ -18,6 +18,7 @@ public class PrimaryInstanceSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseFlags")
     public java.util.Map<String, String> databaseFlags;
+
     public PrimaryInstanceSettingsInput withDatabaseFlags(java.util.Map<String, String> databaseFlags) {
         this.databaseFlags = databaseFlags;
         return this;
@@ -29,6 +30,7 @@ public class PrimaryInstanceSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PrimaryInstanceSettingsInput withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class PrimaryInstanceSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PrimaryInstanceSettingsInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,9 +54,11 @@ public class PrimaryInstanceSettingsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineConfig")
     public MachineConfig machineConfig;
+
     public PrimaryInstanceSettingsInput withMachineConfig(MachineConfig machineConfig) {
         this.machineConfig = machineConfig;
         return this;
     }
     
+    public PrimaryInstanceSettingsInput(){}
 }

@@ -18,6 +18,7 @@ public class InapplicabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inapplicableCount")
     public String inapplicableCount;
+
     public InapplicabilityDetails withInapplicableCount(String inapplicableCount) {
         this.inapplicableCount = inapplicableCount;
         return this;
@@ -29,9 +30,11 @@ public class InapplicabilityDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inapplicableReason")
     public InapplicabilityDetailsInapplicableReasonEnum inapplicableReason;
+
     public InapplicabilityDetails withInapplicableReason(InapplicabilityDetailsInapplicableReasonEnum inapplicableReason) {
         this.inapplicableReason = inapplicableReason;
         return this;
     }
     
+    public InapplicabilityDetails(){}
 }

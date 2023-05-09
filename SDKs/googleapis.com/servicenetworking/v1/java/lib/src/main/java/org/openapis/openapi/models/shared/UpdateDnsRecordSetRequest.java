@@ -18,6 +18,7 @@ public class UpdateDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerNetwork")
     public String consumerNetwork;
+
     public UpdateDnsRecordSetRequest withConsumerNetwork(String consumerNetwork) {
         this.consumerNetwork = consumerNetwork;
         return this;
@@ -29,6 +30,7 @@ public class UpdateDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("existingDnsRecordSet")
     public DnsRecordSet existingDnsRecordSet;
+
     public UpdateDnsRecordSetRequest withExistingDnsRecordSet(DnsRecordSet existingDnsRecordSet) {
         this.existingDnsRecordSet = existingDnsRecordSet;
         return this;
@@ -40,6 +42,7 @@ public class UpdateDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDnsRecordSet")
     public DnsRecordSet newDnsRecordSet;
+
     public UpdateDnsRecordSetRequest withNewDnsRecordSet(DnsRecordSet newDnsRecordSet) {
         this.newDnsRecordSet = newDnsRecordSet;
         return this;
@@ -51,9 +54,11 @@ public class UpdateDnsRecordSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zone")
     public String zone;
+
     public UpdateDnsRecordSetRequest withZone(String zone) {
         this.zone = zone;
         return this;
     }
     
+    public UpdateDnsRecordSetRequest(){}
 }

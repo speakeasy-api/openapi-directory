@@ -18,9 +18,11 @@ public class RegionInstanceGroupManagerDeleteInstanceConfigReq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("names")
     public String[] names;
+
     public RegionInstanceGroupManagerDeleteInstanceConfigReq withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public RegionInstanceGroupManagerDeleteInstanceConfigReq(){}
 }

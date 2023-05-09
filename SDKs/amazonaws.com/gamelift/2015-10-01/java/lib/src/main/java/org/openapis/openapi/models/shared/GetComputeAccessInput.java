@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetComputeAccessInput {
     @JsonProperty("ComputeName")
     public String computeName;
+
     public GetComputeAccessInput withComputeName(String computeName) {
         this.computeName = computeName;
         return this;
@@ -16,9 +17,14 @@ public class GetComputeAccessInput {
     
     @JsonProperty("FleetId")
     public String fleetId;
+
     public GetComputeAccessInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
     }
     
+    public GetComputeAccessInput(@JsonProperty("ComputeName") String computeName, @JsonProperty("FleetId") String fleetId) {
+        this.computeName = computeName;
+        this.fleetId = fleetId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMountTargetsResponse {
@@ -12,6 +13,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public Object accessPointNotFound;
+
     public DescribeMountTargetsResponse withAccessPointNotFound(Object accessPointNotFound) {
         this.accessPointNotFound = accessPointNotFound;
         return this;
@@ -22,6 +24,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public Object badRequest;
+
     public DescribeMountTargetsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMountTargetsResponse {
     
     
     public String contentType;
+
     public DescribeMountTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMountTargetsResponse describeMountTargetsResponse;
+
     public DescribeMountTargetsResponse withDescribeMountTargetsResponse(org.openapis.openapi.models.shared.DescribeMountTargetsResponse describeMountTargetsResponse) {
         this.describeMountTargetsResponse = describeMountTargetsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeMountTargetsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMountTargetsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DescribeMountTargetsResponse {
      */
     
     public Object mountTargetNotFound;
+
     public DescribeMountTargetsResponse withMountTargetNotFound(Object mountTargetNotFound) {
         this.mountTargetNotFound = mountTargetNotFound;
         return this;
@@ -76,6 +84,7 @@ public class DescribeMountTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeMountTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeMountTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMountTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeMountTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

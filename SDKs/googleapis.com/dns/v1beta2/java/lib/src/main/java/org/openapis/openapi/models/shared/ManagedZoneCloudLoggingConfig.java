@@ -18,6 +18,7 @@ public class ManagedZoneCloudLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLogging")
     public Boolean enableLogging;
+
     public ManagedZoneCloudLoggingConfig withEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -26,9 +27,11 @@ public class ManagedZoneCloudLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZoneCloudLoggingConfig withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public ManagedZoneCloudLoggingConfig(){}
 }

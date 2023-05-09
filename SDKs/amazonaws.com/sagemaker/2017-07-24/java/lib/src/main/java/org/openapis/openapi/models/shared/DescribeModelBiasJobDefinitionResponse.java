@@ -21,6 +21,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeModelBiasJobDefinitionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionArn")
     public String jobDefinitionArn;
+
     public DescribeModelBiasJobDefinitionResponse withJobDefinitionArn(String jobDefinitionArn) {
         this.jobDefinitionArn = jobDefinitionArn;
         return this;
@@ -35,6 +37,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     
     @JsonProperty("JobDefinitionName")
     public String jobDefinitionName;
+
     public DescribeModelBiasJobDefinitionResponse withJobDefinitionName(String jobDefinitionName) {
         this.jobDefinitionName = jobDefinitionName;
         return this;
@@ -45,6 +48,7 @@ public class DescribeModelBiasJobDefinitionResponse {
      */
     @JsonProperty("JobResources")
     public MonitoringResources jobResources;
+
     public DescribeModelBiasJobDefinitionResponse withJobResources(MonitoringResources jobResources) {
         this.jobResources = jobResources;
         return this;
@@ -52,6 +56,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     
     @JsonProperty("ModelBiasAppSpecification")
     public ModelBiasAppSpecification modelBiasAppSpecification;
+
     public DescribeModelBiasJobDefinitionResponse withModelBiasAppSpecification(ModelBiasAppSpecification modelBiasAppSpecification) {
         this.modelBiasAppSpecification = modelBiasAppSpecification;
         return this;
@@ -60,6 +65,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelBiasBaselineConfig")
     public ModelBiasBaselineConfig modelBiasBaselineConfig;
+
     public DescribeModelBiasJobDefinitionResponse withModelBiasBaselineConfig(ModelBiasBaselineConfig modelBiasBaselineConfig) {
         this.modelBiasBaselineConfig = modelBiasBaselineConfig;
         return this;
@@ -67,6 +73,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     
     @JsonProperty("ModelBiasJobInput")
     public ModelBiasJobInput modelBiasJobInput;
+
     public DescribeModelBiasJobDefinitionResponse withModelBiasJobInput(ModelBiasJobInput modelBiasJobInput) {
         this.modelBiasJobInput = modelBiasJobInput;
         return this;
@@ -77,6 +84,7 @@ public class DescribeModelBiasJobDefinitionResponse {
      */
     @JsonProperty("ModelBiasJobOutputConfig")
     public MonitoringOutputConfig modelBiasJobOutputConfig;
+
     public DescribeModelBiasJobDefinitionResponse withModelBiasJobOutputConfig(MonitoringOutputConfig modelBiasJobOutputConfig) {
         this.modelBiasJobOutputConfig = modelBiasJobOutputConfig;
         return this;
@@ -85,6 +93,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfig")
     public MonitoringNetworkConfig networkConfig;
+
     public DescribeModelBiasJobDefinitionResponse withNetworkConfig(MonitoringNetworkConfig networkConfig) {
         this.networkConfig = networkConfig;
         return this;
@@ -92,6 +101,7 @@ public class DescribeModelBiasJobDefinitionResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeModelBiasJobDefinitionResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -103,9 +113,20 @@ public class DescribeModelBiasJobDefinitionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StoppingCondition")
     public MonitoringStoppingCondition stoppingCondition;
+
     public DescribeModelBiasJobDefinitionResponse withStoppingCondition(MonitoringStoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
     }
     
+    public DescribeModelBiasJobDefinitionResponse(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("JobDefinitionArn") String jobDefinitionArn, @JsonProperty("JobDefinitionName") String jobDefinitionName, @JsonProperty("JobResources") MonitoringResources jobResources, @JsonProperty("ModelBiasAppSpecification") ModelBiasAppSpecification modelBiasAppSpecification, @JsonProperty("ModelBiasJobInput") ModelBiasJobInput modelBiasJobInput, @JsonProperty("ModelBiasJobOutputConfig") MonitoringOutputConfig modelBiasJobOutputConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.creationTime = creationTime;
+        this.jobDefinitionArn = jobDefinitionArn;
+        this.jobDefinitionName = jobDefinitionName;
+        this.jobResources = jobResources;
+        this.modelBiasAppSpecification = modelBiasAppSpecification;
+        this.modelBiasJobInput = modelBiasJobInput;
+        this.modelBiasJobOutputConfig = modelBiasJobOutputConfig;
+        this.roleArn = roleArn;
+  }
 }

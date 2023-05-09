@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedServingConfigIds")
     public String[] associatedServingConfigIds;
+
     public GoogleCloudRetailV2alphaControl withAssociatedServingConfigIds(String[] associatedServingConfigIds) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2alphaControl withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetSpec")
     public GoogleCloudRetailV2alphaSearchRequestFacetSpec facetSpec;
+
     public GoogleCloudRetailV2alphaControl withFacetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpec facetSpec) {
         this.facetSpec = facetSpec;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2alphaControl withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudRetailV2alphaRule rule;
+
     public GoogleCloudRetailV2alphaControl withRule(GoogleCloudRetailV2alphaRule rule) {
         this.rule = rule;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSolutionUseCase")
     public GoogleCloudRetailV2alphaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase;
+
     public GoogleCloudRetailV2alphaControl withSearchSolutionUseCase(GoogleCloudRetailV2alphaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase) {
         this.searchSolutionUseCase = searchSolutionUseCase;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudRetailV2alphaControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2alphaControlSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2alphaControl withSolutionTypes(GoogleCloudRetailV2alphaControlSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaControl(){}
 }

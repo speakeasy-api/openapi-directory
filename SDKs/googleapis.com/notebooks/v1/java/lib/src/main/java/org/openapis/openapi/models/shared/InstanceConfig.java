@@ -18,6 +18,7 @@ public class InstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableHealthMonitoring")
     public Boolean enableHealthMonitoring;
+
     public InstanceConfig withEnableHealthMonitoring(Boolean enableHealthMonitoring) {
         this.enableHealthMonitoring = enableHealthMonitoring;
         return this;
@@ -29,9 +30,11 @@ public class InstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notebookUpgradeSchedule")
     public String notebookUpgradeSchedule;
+
     public InstanceConfig withNotebookUpgradeSchedule(String notebookUpgradeSchedule) {
         this.notebookUpgradeSchedule = notebookUpgradeSchedule;
         return this;
     }
     
+    public InstanceConfig(){}
 }

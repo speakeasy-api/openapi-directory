@@ -15,9 +15,11 @@ public class DescribeInterconnectLoaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loa")
     public Loa loa;
+
     public DescribeInterconnectLoaResponse withLoa(Loa loa) {
         this.loa = loa;
         return this;
     }
     
+    public DescribeInterconnectLoaResponse(){}
 }

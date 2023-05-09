@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomEntityTypesResponse {
     
     public String contentType;
+
     public ListCustomEntityTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomEntityTypesResponse {
      */
     
     public Object internalServiceException;
+
     public ListCustomEntityTypesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomEntityTypesResponse {
      */
     
     public Object invalidInputException;
+
     public ListCustomEntityTypesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomEntityTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomEntityTypesResponse listCustomEntityTypesResponse;
+
     public ListCustomEntityTypesResponse withListCustomEntityTypesResponse(org.openapis.openapi.models.shared.ListCustomEntityTypesResponse listCustomEntityTypesResponse) {
         this.listCustomEntityTypesResponse = listCustomEntityTypesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomEntityTypesResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListCustomEntityTypesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListCustomEntityTypesResponse {
     
     
     public Integer statusCode;
+
     public ListCustomEntityTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListCustomEntityTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomEntityTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCustomEntityTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

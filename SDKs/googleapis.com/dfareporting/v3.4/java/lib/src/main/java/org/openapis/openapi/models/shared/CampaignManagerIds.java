@@ -18,6 +18,7 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adId")
     public String adId;
+
     public CampaignManagerIds withAdId(String adId) {
         this.adId = adId;
         return this;
@@ -29,6 +30,7 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignId")
     public String campaignId;
+
     public CampaignManagerIds withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -40,6 +42,7 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public CampaignManagerIds withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -51,6 +54,7 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public CampaignManagerIds withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementId")
     public String placementId;
+
     public CampaignManagerIds withPlacementId(String placementId) {
         this.placementId = placementId;
         return this;
@@ -73,9 +78,11 @@ public class CampaignManagerIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteId")
     public String siteId;
+
     public CampaignManagerIds withSiteId(String siteId) {
         this.siteId = siteId;
         return this;
     }
     
+    public CampaignManagerIds(){}
 }

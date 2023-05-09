@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListPoliciesRequest {
     
     public String marker;
+
     public ListPoliciesRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -16,6 +17,7 @@ public class ListPoliciesRequest {
     
     
     public Long maxItems;
+
     public ListPoliciesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -23,6 +25,7 @@ public class ListPoliciesRequest {
     
     
     public Boolean onlyAttached;
+
     public ListPoliciesRequest withOnlyAttached(Boolean onlyAttached) {
         this.onlyAttached = onlyAttached;
         return this;
@@ -30,6 +33,7 @@ public class ListPoliciesRequest {
     
     
     public String pathPrefix;
+
     public ListPoliciesRequest withPathPrefix(String pathPrefix) {
         this.pathPrefix = pathPrefix;
         return this;
@@ -37,6 +41,7 @@ public class ListPoliciesRequest {
     
     
     public PolicyUsageTypeEnum policyUsageFilter;
+
     public ListPoliciesRequest withPolicyUsageFilter(PolicyUsageTypeEnum policyUsageFilter) {
         this.policyUsageFilter = policyUsageFilter;
         return this;
@@ -44,9 +49,11 @@ public class ListPoliciesRequest {
     
     
     public PolicyScopeTypeEnum scope;
+
     public ListPoliciesRequest withScope(PolicyScopeTypeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public ListPoliciesRequest(){}
 }

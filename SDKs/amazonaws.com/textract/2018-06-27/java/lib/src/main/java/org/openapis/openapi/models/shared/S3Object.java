@@ -15,6 +15,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bucket")
     public String bucket;
+
     public S3Object withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -23,6 +24,7 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public S3Object withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class S3Object {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public S3Object withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public S3Object(){}
 }

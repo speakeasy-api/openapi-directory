@@ -15,6 +15,7 @@ public class CreateRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRuleResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public Rule rule;
+
     public CreateRuleResponse withRule(Rule rule) {
         this.rule = rule;
         return this;
     }
     
+    public CreateRuleResponse(){}
 }

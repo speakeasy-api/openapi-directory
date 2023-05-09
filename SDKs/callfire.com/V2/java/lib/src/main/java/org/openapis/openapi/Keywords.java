@@ -60,12 +60,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse res = new org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse() {{
+        org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse res = new org.openapis.openapi.models.operations.FindKeywordLeaseConfigsResponse(contentType, httpRes.statusCode()) {{
             page = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindKeywordLeasesResponse res = new org.openapis.openapi.models.operations.FindKeywordLeasesResponse() {{
+        org.openapis.openapi.models.operations.FindKeywordLeasesResponse res = new org.openapis.openapi.models.operations.FindKeywordLeasesResponse(contentType, httpRes.statusCode()) {{
             keywordLeasePage = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -170,12 +166,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FindKeywordsResponse res = new org.openapis.openapi.models.operations.FindKeywordsResponse() {{
+        org.openapis.openapi.models.operations.FindKeywordsResponse res = new org.openapis.openapi.models.operations.FindKeywordsResponse(contentType, httpRes.statusCode()) {{
             keywordList = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,12 +219,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeywordLeaseResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseResponse() {{
+        org.openapis.openapi.models.operations.GetKeywordLeaseResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseResponse(contentType, httpRes.statusCode()) {{
             keywordLease = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -280,12 +272,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse() {{
+        org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseByIdResponse(contentType, httpRes.statusCode()) {{
             keywordLease = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,12 +325,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse() {{
+        org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse res = new org.openapis.openapi.models.operations.GetKeywordLeaseConfigResponse(contentType, httpRes.statusCode()) {{
             keywordConfig = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,12 +372,10 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IsKeywordAvailableResponse res = new org.openapis.openapi.models.operations.IsKeywordAvailableResponse() {{
+        org.openapis.openapi.models.operations.IsKeywordAvailableResponse res = new org.openapis.openapi.models.operations.IsKeywordAvailableResponse(contentType, httpRes.statusCode()) {{
             isKeywordAvailable200ApplicationJSONBoolean = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +421,9 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse res = new org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse() {{
+        org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse res = new org.openapis.openapi.models.operations.UpdateKeywordLeaseResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -478,11 +462,9 @@ public class Keywords {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse res = new org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse res = new org.openapis.openapi.models.operations.UpdateKeywordLeaseConfigResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {

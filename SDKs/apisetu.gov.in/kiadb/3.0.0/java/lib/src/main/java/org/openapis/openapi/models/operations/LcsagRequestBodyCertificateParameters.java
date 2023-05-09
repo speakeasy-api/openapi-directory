@@ -12,6 +12,7 @@ public class LcsagRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public LcsagRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class LcsagRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public LcsagRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class LcsagRequestBodyCertificateParameters {
      */
     @JsonProperty("RegNum")
     public String regNum;
+
     public LcsagRequestBodyCertificateParameters withRegNum(String regNum) {
         this.regNum = regNum;
         return this;
@@ -42,9 +45,16 @@ public class LcsagRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public LcsagRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public LcsagRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("RegNum") String regNum, @JsonProperty("UID") String uid) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.regNum = regNum;
+        this.uid = uid;
+  }
 }

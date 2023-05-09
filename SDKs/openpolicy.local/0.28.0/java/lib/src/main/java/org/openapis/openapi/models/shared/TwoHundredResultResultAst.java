@@ -16,6 +16,7 @@ public class TwoHundredResultResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package")
     public TwoHundredResultResultAstPackage package_;
+
     public TwoHundredResultResultAst withPackage(TwoHundredResultResultAstPackage package_) {
         this.package_ = package_;
         return this;
@@ -28,9 +29,11 @@ public class TwoHundredResultResultAst {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public TwoHundredResultResultAstRules[] rules;
+
     public TwoHundredResultResultAst withRules(TwoHundredResultResultAstRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public TwoHundredResultResultAst(){}
 }

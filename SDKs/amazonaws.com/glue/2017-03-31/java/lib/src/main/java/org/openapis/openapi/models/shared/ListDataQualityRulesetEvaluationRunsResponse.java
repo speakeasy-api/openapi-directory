@@ -15,6 +15,7 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDataQualityRulesetEvaluationRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListDataQualityRulesetEvaluationRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Runs")
     public DataQualityRulesetEvaluationRunDescription[] runs;
+
     public ListDataQualityRulesetEvaluationRunsResponse withRuns(DataQualityRulesetEvaluationRunDescription[] runs) {
         this.runs = runs;
         return this;
     }
     
+    public ListDataQualityRulesetEvaluationRunsResponse(){}
 }

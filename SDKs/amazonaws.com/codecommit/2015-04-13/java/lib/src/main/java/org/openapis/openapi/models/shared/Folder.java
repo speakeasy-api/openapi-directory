@@ -15,6 +15,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("absolutePath")
     public String absolutePath;
+
     public Folder withAbsolutePath(String absolutePath) {
         this.absolutePath = absolutePath;
         return this;
@@ -23,6 +24,7 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativePath")
     public String relativePath;
+
     public Folder withRelativePath(String relativePath) {
         this.relativePath = relativePath;
         return this;
@@ -31,9 +33,11 @@ public class Folder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treeId")
     public String treeId;
+
     public Folder withTreeId(String treeId) {
         this.treeId = treeId;
         return this;
     }
     
+    public Folder(){}
 }

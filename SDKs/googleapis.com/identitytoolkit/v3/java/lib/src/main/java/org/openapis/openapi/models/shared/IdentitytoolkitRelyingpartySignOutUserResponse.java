@@ -18,9 +18,11 @@ public class IdentitytoolkitRelyingpartySignOutUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localId")
     public String localId;
+
     public IdentitytoolkitRelyingpartySignOutUserResponse withLocalId(String localId) {
         this.localId = localId;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartySignOutUserResponse(){}
 }

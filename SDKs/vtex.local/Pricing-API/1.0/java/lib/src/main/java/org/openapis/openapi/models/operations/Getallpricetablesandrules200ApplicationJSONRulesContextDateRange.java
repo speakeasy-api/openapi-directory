@@ -18,6 +18,7 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContextDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContextDateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -29,9 +30,11 @@ public class Getallpricetablesandrules200ApplicationJSONRulesContextDateRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String to;
+
     public Getallpricetablesandrules200ApplicationJSONRulesContextDateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public Getallpricetablesandrules200ApplicationJSONRulesContextDateRange(){}
 }

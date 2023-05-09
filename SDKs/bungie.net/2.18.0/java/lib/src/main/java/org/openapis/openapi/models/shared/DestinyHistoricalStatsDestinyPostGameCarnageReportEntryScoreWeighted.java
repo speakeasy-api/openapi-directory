@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScoreWeighte
      */
     
     public String displayValue;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScoreWeighted withDisplayValue(String displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -25,9 +26,11 @@ public class DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScoreWeighte
      */
     
     public Double value;
+
     public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScoreWeighted withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyPostGameCarnageReportEntryScoreWeighted(){}
 }

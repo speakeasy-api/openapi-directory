@@ -18,9 +18,11 @@ public class RouteSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traffic")
     public TrafficTarget[] traffic;
+
     public RouteSpec withTraffic(TrafficTarget[] traffic) {
         this.traffic = traffic;
         return this;
     }
     
+    public RouteSpec(){}
 }

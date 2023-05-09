@@ -12,6 +12,7 @@ public class ExecuteProvisionedProductPlanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public ExecuteProvisionedProductPlanInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class ExecuteProvisionedProductPlanInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public ExecuteProvisionedProductPlanInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -26,9 +28,14 @@ public class ExecuteProvisionedProductPlanInput {
     
     @JsonProperty("PlanId")
     public String planId;
+
     public ExecuteProvisionedProductPlanInput withPlanId(String planId) {
         this.planId = planId;
         return this;
     }
     
+    public ExecuteProvisionedProductPlanInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("PlanId") String planId) {
+        this.idempotencyToken = idempotencyToken;
+        this.planId = planId;
+  }
 }

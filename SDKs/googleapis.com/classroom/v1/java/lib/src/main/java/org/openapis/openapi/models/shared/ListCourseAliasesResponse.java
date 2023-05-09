@@ -18,6 +18,7 @@ public class ListCourseAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aliases")
     public CourseAlias[] aliases;
+
     public ListCourseAliasesResponse withAliases(CourseAlias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -29,9 +30,11 @@ public class ListCourseAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListCourseAliasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListCourseAliasesResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApplicationResponse {
@@ -12,6 +13,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object authorizationErrorException;
+
     public UpdateApplicationResponse withAuthorizationErrorException(Object authorizationErrorException) {
         this.authorizationErrorException = authorizationErrorException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateApplicationResponse {
     
     
     public String contentType;
+
     public UpdateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public UpdateApplicationResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateApplicationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateApplicationResponse {
     
     
     public Integer statusCode;
+
     public UpdateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApplicationResponse {
      */
     
     public Object serverInternalErrorException;
+
     public UpdateApplicationResponse withServerInternalErrorException(Object serverInternalErrorException) {
         this.serverInternalErrorException = serverInternalErrorException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateApplicationResponse {
      */
     
     public java.util.Map<String, Object> updateApplicationResponse;
+
     public UpdateApplicationResponse withUpdateApplicationResponse(java.util.Map<String, Object> updateApplicationResponse) {
         this.updateApplicationResponse = updateApplicationResponse;
         return this;
     }
     
+    public UpdateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

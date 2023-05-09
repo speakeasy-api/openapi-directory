@@ -15,6 +15,7 @@ public class GetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MFAOptions")
     public MFAOptionType[] mfaOptions;
+
     public GetUserResponse withMFAOptions(MFAOptionType[] mfaOptions) {
         this.mfaOptions = mfaOptions;
         return this;
@@ -23,6 +24,7 @@ public class GetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreferredMfaSetting")
     public String preferredMfaSetting;
+
     public GetUserResponse withPreferredMfaSetting(String preferredMfaSetting) {
         this.preferredMfaSetting = preferredMfaSetting;
         return this;
@@ -30,6 +32,7 @@ public class GetUserResponse {
     
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public GetUserResponse withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -38,6 +41,7 @@ public class GetUserResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserMFASettingList")
     public String[] userMFASettingList;
+
     public GetUserResponse withUserMFASettingList(String[] userMFASettingList) {
         this.userMFASettingList = userMFASettingList;
         return this;
@@ -45,9 +49,14 @@ public class GetUserResponse {
     
     @JsonProperty("Username")
     public String username;
+
     public GetUserResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetUserResponse(@JsonProperty("UserAttributes") AttributeType[] userAttributes, @JsonProperty("Username") String username) {
+        this.userAttributes = userAttributes;
+        this.username = username;
+  }
 }

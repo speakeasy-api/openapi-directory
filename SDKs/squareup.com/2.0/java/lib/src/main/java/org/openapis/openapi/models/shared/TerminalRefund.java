@@ -19,6 +19,7 @@ public class TerminalRefund {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public TerminalRefund withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -30,6 +31,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_id")
     public String appId;
+
     public TerminalRefund withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -41,6 +43,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel_reason")
     public String cancelReason;
+
     public TerminalRefund withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -52,6 +55,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TerminalRefund withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline_duration")
     public String deadlineDuration;
+
     public TerminalRefund withDeadlineDuration(String deadlineDuration) {
         this.deadlineDuration = deadlineDuration;
         return this;
@@ -81,6 +86,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("device_id")
     public String deviceId;
+
     public TerminalRefund withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -92,6 +98,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TerminalRefund withId(String id) {
         this.id = id;
         return this;
@@ -103,6 +110,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public TerminalRefund withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -114,6 +122,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public TerminalRefund withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -124,6 +133,7 @@ public class TerminalRefund {
      */
     @JsonProperty("payment_id")
     public String paymentId;
+
     public TerminalRefund withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -136,6 +146,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public TerminalRefund withReason(String reason) {
         this.reason = reason;
         return this;
@@ -147,6 +158,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund_id")
     public String refundId;
+
     public TerminalRefund withRefundId(String refundId) {
         this.refundId = refundId;
         return this;
@@ -159,6 +171,7 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TerminalRefund withStatus(String status) {
         this.status = status;
         return this;
@@ -170,9 +183,14 @@ public class TerminalRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TerminalRefund withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TerminalRefund(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("payment_id") String paymentId) {
+        this.amountMoney = amountMoney;
+        this.paymentId = paymentId;
+  }
 }

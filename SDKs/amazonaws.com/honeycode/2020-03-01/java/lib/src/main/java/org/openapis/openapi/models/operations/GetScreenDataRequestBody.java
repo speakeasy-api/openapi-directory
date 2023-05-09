@@ -14,6 +14,7 @@ public class GetScreenDataRequestBody {
      */
     @JsonProperty("appId")
     public String appId;
+
     public GetScreenDataRequestBody withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +26,7 @@ public class GetScreenDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetScreenDataRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class GetScreenDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetScreenDataRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -46,6 +49,7 @@ public class GetScreenDataRequestBody {
      */
     @JsonProperty("screenId")
     public String screenId;
+
     public GetScreenDataRequestBody withScreenId(String screenId) {
         this.screenId = screenId;
         return this;
@@ -57,6 +61,7 @@ public class GetScreenDataRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variables")
     public java.util.Map<String, org.openapis.openapi.models.shared.VariableValue> variables;
+
     public GetScreenDataRequestBody withVariables(java.util.Map<String, org.openapis.openapi.models.shared.VariableValue> variables) {
         this.variables = variables;
         return this;
@@ -67,9 +72,15 @@ public class GetScreenDataRequestBody {
      */
     @JsonProperty("workbookId")
     public String workbookId;
+
     public GetScreenDataRequestBody withWorkbookId(String workbookId) {
         this.workbookId = workbookId;
         return this;
     }
     
+    public GetScreenDataRequestBody(@JsonProperty("appId") String appId, @JsonProperty("screenId") String screenId, @JsonProperty("workbookId") String workbookId) {
+        this.appId = appId;
+        this.screenId = screenId;
+        this.workbookId = workbookId;
+  }
 }

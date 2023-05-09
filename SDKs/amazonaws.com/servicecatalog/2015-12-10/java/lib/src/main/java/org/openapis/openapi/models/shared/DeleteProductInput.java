@@ -12,6 +12,7 @@ public class DeleteProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public DeleteProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class DeleteProductInput {
     
     @JsonProperty("Id")
     public String id;
+
     public DeleteProductInput withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteProductInput(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

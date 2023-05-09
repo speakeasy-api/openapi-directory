@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KeySchema {
     @JsonProperty("HashKeyElement")
     public KeySchemaElement hashKeyElement;
+
     public KeySchema withHashKeyElement(KeySchemaElement hashKeyElement) {
         this.hashKeyElement = hashKeyElement;
         return this;
@@ -22,9 +23,13 @@ public class KeySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangeKeyElement")
     public KeySchemaElement rangeKeyElement;
+
     public KeySchema withRangeKeyElement(KeySchemaElement rangeKeyElement) {
         this.rangeKeyElement = rangeKeyElement;
         return this;
     }
     
+    public KeySchema(@JsonProperty("HashKeyElement") KeySchemaElement hashKeyElement) {
+        this.hashKeyElement = hashKeyElement;
+  }
 }

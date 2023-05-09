@@ -12,6 +12,7 @@ public class DescribeFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyArn")
     public String firewallPolicyArn;
+
     public DescribeFirewallPolicyRequest withFirewallPolicyArn(String firewallPolicyArn) {
         this.firewallPolicyArn = firewallPolicyArn;
         return this;
@@ -20,9 +21,11 @@ public class DescribeFirewallPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirewallPolicyName")
     public String firewallPolicyName;
+
     public DescribeFirewallPolicyRequest withFirewallPolicyName(String firewallPolicyName) {
         this.firewallPolicyName = firewallPolicyName;
         return this;
     }
     
+    public DescribeFirewallPolicyRequest(){}
 }

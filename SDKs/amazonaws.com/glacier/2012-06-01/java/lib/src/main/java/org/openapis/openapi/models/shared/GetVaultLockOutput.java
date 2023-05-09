@@ -15,6 +15,7 @@ public class GetVaultLockOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public GetVaultLockOutput withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,6 +24,7 @@ public class GetVaultLockOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpirationDate")
     public String expirationDate;
+
     public GetVaultLockOutput withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -31,6 +33,7 @@ public class GetVaultLockOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetVaultLockOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -39,9 +42,11 @@ public class GetVaultLockOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public GetVaultLockOutput withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetVaultLockOutput(){}
 }

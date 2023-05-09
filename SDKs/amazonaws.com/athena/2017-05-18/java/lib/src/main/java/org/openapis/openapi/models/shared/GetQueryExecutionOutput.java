@@ -15,9 +15,11 @@ public class GetQueryExecutionOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryExecution")
     public QueryExecution queryExecution;
+
     public GetQueryExecutionOutput withQueryExecution(QueryExecution queryExecution) {
         this.queryExecution = queryExecution;
         return this;
     }
     
+    public GetQueryExecutionOutput(){}
 }

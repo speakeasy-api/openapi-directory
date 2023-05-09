@@ -18,6 +18,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public SnapshotArchitectureEnum architecture;
+
     public Snapshot withArchitecture(SnapshotArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCreated")
     public Boolean autoCreated;
+
     public Snapshot withAutoCreated(Boolean autoCreated) {
         this.autoCreated = autoCreated;
         return this;
@@ -40,6 +42,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chainName")
     public String chainName;
+
     public Snapshot withChainName(String chainName) {
         this.chainName = chainName;
         return this;
@@ -51,6 +54,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationSizeBytes")
     public String creationSizeBytes;
+
     public Snapshot withCreationSizeBytes(String creationSizeBytes) {
         this.creationSizeBytes = creationSizeBytes;
         return this;
@@ -62,6 +66,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Snapshot withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -73,6 +78,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Snapshot withDescription(String description) {
         this.description = description;
         return this;
@@ -84,6 +90,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public Snapshot withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -95,6 +102,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadBytes")
     public String downloadBytes;
+
     public Snapshot withDownloadBytes(String downloadBytes) {
         this.downloadBytes = downloadBytes;
         return this;
@@ -106,6 +114,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestFlush")
     public Boolean guestFlush;
+
     public Snapshot withGuestFlush(Boolean guestFlush) {
         this.guestFlush = guestFlush;
         return this;
@@ -117,6 +126,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Snapshot withId(String id) {
         this.id = id;
         return this;
@@ -128,6 +138,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Snapshot withKind(String kind) {
         this.kind = kind;
         return this;
@@ -139,6 +150,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Snapshot withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -150,6 +162,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Snapshot withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -161,6 +174,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCodes")
     public String[] licenseCodes;
+
     public Snapshot withLicenseCodes(String[] licenseCodes) {
         this.licenseCodes = licenseCodes;
         return this;
@@ -172,6 +186,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public Snapshot withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -183,6 +198,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationHint")
     public String locationHint;
+
     public Snapshot withLocationHint(String locationHint) {
         this.locationHint = locationHint;
         return this;
@@ -194,6 +210,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Snapshot withName(String name) {
         this.name = name;
         return this;
@@ -205,6 +222,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Snapshot withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -216,6 +234,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Snapshot withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -224,6 +243,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotEncryptionKey")
     public CustomerEncryptionKey snapshotEncryptionKey;
+
     public Snapshot withSnapshotEncryptionKey(CustomerEncryptionKey snapshotEncryptionKey) {
         this.snapshotEncryptionKey = snapshotEncryptionKey;
         return this;
@@ -235,6 +255,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotType")
     public SnapshotSnapshotTypeEnum snapshotType;
+
     public Snapshot withSnapshotType(SnapshotSnapshotTypeEnum snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -246,6 +267,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public Snapshot withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
@@ -254,6 +276,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskEncryptionKey")
     public CustomerEncryptionKey sourceDiskEncryptionKey;
+
     public Snapshot withSourceDiskEncryptionKey(CustomerEncryptionKey sourceDiskEncryptionKey) {
         this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
         return this;
@@ -265,6 +288,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskId")
     public String sourceDiskId;
+
     public Snapshot withSourceDiskId(String sourceDiskId) {
         this.sourceDiskId = sourceDiskId;
         return this;
@@ -276,6 +300,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotSchedulePolicy")
     public String sourceSnapshotSchedulePolicy;
+
     public Snapshot withSourceSnapshotSchedulePolicy(String sourceSnapshotSchedulePolicy) {
         this.sourceSnapshotSchedulePolicy = sourceSnapshotSchedulePolicy;
         return this;
@@ -287,6 +312,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotSchedulePolicyId")
     public String sourceSnapshotSchedulePolicyId;
+
     public Snapshot withSourceSnapshotSchedulePolicyId(String sourceSnapshotSchedulePolicyId) {
         this.sourceSnapshotSchedulePolicyId = sourceSnapshotSchedulePolicyId;
         return this;
@@ -298,6 +324,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SnapshotStatusEnum status;
+
     public Snapshot withStatus(SnapshotStatusEnum status) {
         this.status = status;
         return this;
@@ -309,6 +336,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytes")
     public String storageBytes;
+
     public Snapshot withStorageBytes(String storageBytes) {
         this.storageBytes = storageBytes;
         return this;
@@ -320,6 +348,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageBytesStatus")
     public SnapshotStorageBytesStatusEnum storageBytesStatus;
+
     public Snapshot withStorageBytesStatus(SnapshotStorageBytesStatusEnum storageBytesStatus) {
         this.storageBytesStatus = storageBytesStatus;
         return this;
@@ -331,6 +360,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageLocations")
     public String[] storageLocations;
+
     public Snapshot withStorageLocations(String[] storageLocations) {
         this.storageLocations = storageLocations;
         return this;
@@ -342,9 +372,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLicenses")
     public String[] userLicenses;
+
     public Snapshot withUserLicenses(String[] userLicenses) {
         this.userLicenses = userLicenses;
         return this;
     }
     
+    public Snapshot(){}
 }

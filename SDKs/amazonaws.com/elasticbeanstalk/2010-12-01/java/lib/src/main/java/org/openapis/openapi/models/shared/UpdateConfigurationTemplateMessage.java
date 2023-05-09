@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateConfigurationTemplateMessage - The result message containing the options for the specified solution stack.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateConfigurationTemplateMessage {
     
     public String applicationName;
+
     public UpdateConfigurationTemplateMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateConfigurationTemplateMessage {
     
     
     public String description;
+
     public UpdateConfigurationTemplateMessage withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class UpdateConfigurationTemplateMessage {
     
     
     public ConfigurationOptionSetting[] optionSettings;
+
     public UpdateConfigurationTemplateMessage withOptionSettings(ConfigurationOptionSetting[] optionSettings) {
         this.optionSettings = optionSettings;
         return this;
@@ -33,6 +36,7 @@ public class UpdateConfigurationTemplateMessage {
     
     
     public OptionSpecification[] optionsToRemove;
+
     public UpdateConfigurationTemplateMessage withOptionsToRemove(OptionSpecification[] optionsToRemove) {
         this.optionsToRemove = optionsToRemove;
         return this;
@@ -40,9 +44,14 @@ public class UpdateConfigurationTemplateMessage {
     
     
     public String templateName;
+
     public UpdateConfigurationTemplateMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public UpdateConfigurationTemplateMessage(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("TemplateName") String templateName) {
+        this.applicationName = applicationName;
+        this.templateName = templateName;
+  }
 }

@@ -15,6 +15,7 @@ public class OrderListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public OrderSimpleVO[] results;
+
     public OrderListVO withResults(OrderSimpleVO[] results) {
         this.results = results;
         return this;
@@ -23,6 +24,7 @@ public class OrderListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public OrderListVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class OrderListVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public OrderListVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public OrderListVO(){}
 }

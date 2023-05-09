@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ImportationCustomColumnList {
     @JsonProperty("customColumns")
     public ImportationCustomColumn[] customColumns;
+
     public ImportationCustomColumnList withCustomColumns(ImportationCustomColumn[] customColumns) {
         this.customColumns = customColumns;
         return this;
@@ -19,9 +20,14 @@ public class ImportationCustomColumnList {
     
     @JsonProperty("links")
     public CustomColumnListLinks links;
+
     public ImportationCustomColumnList withLinks(CustomColumnListLinks links) {
         this.links = links;
         return this;
     }
     
+    public ImportationCustomColumnList(@JsonProperty("customColumns") ImportationCustomColumn[] customColumns, @JsonProperty("links") CustomColumnListLinks links) {
+        this.customColumns = customColumns;
+        this.links = links;
+  }
 }

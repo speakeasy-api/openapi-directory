@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CopySnapshotToNewGameUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public CopySnapshotToNewGameUsingPOSTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeBinaries")
     public Boolean includeBinaries;
+
     public CopySnapshotToNewGameUsingPOSTRequest withIncludeBinaries(Boolean includeBinaries) {
         this.includeBinaries = includeBinaries;
         return this;
@@ -32,6 +35,7 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeCollaborators")
     public Boolean includeCollaborators;
+
     public CopySnapshotToNewGameUsingPOSTRequest withIncludeCollaborators(Boolean includeCollaborators) {
         this.includeCollaborators = includeCollaborators;
         return this;
@@ -42,6 +46,7 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeGameConfig")
     public Boolean includeGameConfig;
+
     public CopySnapshotToNewGameUsingPOSTRequest withIncludeGameConfig(Boolean includeGameConfig) {
         this.includeGameConfig = includeGameConfig;
         return this;
@@ -52,6 +57,7 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeMetadata")
     public Boolean includeMetadata;
+
     public CopySnapshotToNewGameUsingPOSTRequest withIncludeMetadata(Boolean includeMetadata) {
         this.includeMetadata = includeMetadata;
         return this;
@@ -62,9 +68,14 @@ public class CopySnapshotToNewGameUsingPOSTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=snapshotId")
     public String snapshotId;
+
     public CopySnapshotToNewGameUsingPOSTRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public CopySnapshotToNewGameUsingPOSTRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("snapshotId") String snapshotId) {
+        this.apiKey = apiKey;
+        this.snapshotId = snapshotId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartPiiEntitiesDetectionJobResponse {
     
     public String contentType;
+
     public StartPiiEntitiesDetectionJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public Object internalServerException;
+
     public StartPiiEntitiesDetectionJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartPiiEntitiesDetectionJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,8 +43,20 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public Object kmsKeyValidationException;
+
     public StartPiiEntitiesDetectionJobResponse withKmsKeyValidationException(Object kmsKeyValidationException) {
         this.kmsKeyValidationException = kmsKeyValidationException;
+        return this;
+    }
+    
+    /**
+     * ResourceInUseException
+     */
+    
+    public Object resourceInUseException;
+
+    public StartPiiEntitiesDetectionJobResponse withResourceInUseException(Object resourceInUseException) {
+        this.resourceInUseException = resourceInUseException;
         return this;
     }
     
@@ -49,6 +65,7 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartPiiEntitiesDetectionJobResponse startPiiEntitiesDetectionJobResponse;
+
     public StartPiiEntitiesDetectionJobResponse withStartPiiEntitiesDetectionJobResponse(org.openapis.openapi.models.shared.StartPiiEntitiesDetectionJobResponse startPiiEntitiesDetectionJobResponse) {
         this.startPiiEntitiesDetectionJobResponse = startPiiEntitiesDetectionJobResponse;
         return this;
@@ -56,6 +73,7 @@ public class StartPiiEntitiesDetectionJobResponse {
     
     
     public Integer statusCode;
+
     public StartPiiEntitiesDetectionJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +81,7 @@ public class StartPiiEntitiesDetectionJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartPiiEntitiesDetectionJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +92,7 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartPiiEntitiesDetectionJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +103,14 @@ public class StartPiiEntitiesDetectionJobResponse {
      */
     
     public Object tooManyTagsException;
+
     public StartPiiEntitiesDetectionJobResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public StartPiiEntitiesDetectionJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

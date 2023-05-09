@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVpcPeeringConnectionResponse {
     
     public String contentType;
+
     public DeleteVpcPeeringConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteVpcPeeringConnectionResponse {
      */
     
     public java.util.Map<String, Object> deleteVpcPeeringConnectionOutput;
+
     public DeleteVpcPeeringConnectionResponse withDeleteVpcPeeringConnectionOutput(java.util.Map<String, Object> deleteVpcPeeringConnectionOutput) {
         this.deleteVpcPeeringConnectionOutput = deleteVpcPeeringConnectionOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVpcPeeringConnectionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteVpcPeeringConnectionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVpcPeeringConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteVpcPeeringConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVpcPeeringConnectionResponse {
      */
     
     public Object notFoundException;
+
     public DeleteVpcPeeringConnectionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteVpcPeeringConnectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteVpcPeeringConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteVpcPeeringConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVpcPeeringConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteVpcPeeringConnectionResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteVpcPeeringConnectionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteVpcPeeringConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

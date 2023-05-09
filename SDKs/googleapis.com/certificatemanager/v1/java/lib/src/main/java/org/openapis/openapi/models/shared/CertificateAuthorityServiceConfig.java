@@ -18,9 +18,11 @@ public class CertificateAuthorityServiceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caPool")
     public String caPool;
+
     public CertificateAuthorityServiceConfig withCaPool(String caPool) {
         this.caPool = caPool;
         return this;
     }
     
+    public CertificateAuthorityServiceConfig(){}
 }

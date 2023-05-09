@@ -20,6 +20,7 @@ public class BatchSegmentJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchSegmentJobArn")
     public String batchSegmentJobArn;
+
     public BatchSegmentJobSummary withBatchSegmentJobArn(String batchSegmentJobArn) {
         this.batchSegmentJobArn = batchSegmentJobArn;
         return this;
@@ -30,6 +31,7 @@ public class BatchSegmentJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public BatchSegmentJobSummary withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -38,6 +40,7 @@ public class BatchSegmentJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public BatchSegmentJobSummary withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -46,6 +49,7 @@ public class BatchSegmentJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public BatchSegmentJobSummary withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -56,6 +60,7 @@ public class BatchSegmentJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public BatchSegmentJobSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -64,6 +69,7 @@ public class BatchSegmentJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public BatchSegmentJobSummary withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -72,9 +78,11 @@ public class BatchSegmentJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BatchSegmentJobSummary withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BatchSegmentJobSummary(){}
 }

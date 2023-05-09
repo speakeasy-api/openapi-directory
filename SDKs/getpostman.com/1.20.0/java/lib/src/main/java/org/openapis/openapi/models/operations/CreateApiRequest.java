@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateApiRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateApiRequestBody requestBody;
+
     public CreateApiRequest withRequestBody(CreateApiRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +17,11 @@ public class CreateApiRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workspace")
     public String workspace;
+
     public CreateApiRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public CreateApiRequest(){}
 }

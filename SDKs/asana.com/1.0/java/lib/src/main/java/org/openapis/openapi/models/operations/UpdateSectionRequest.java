@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSectionRequest {
@@ -12,6 +13,7 @@ public class UpdateSectionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateSectionRequestBody requestBody;
+
     public UpdateSectionRequest withRequestBody(UpdateSectionRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class UpdateSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateSectionRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class UpdateSectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateSectionRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class UpdateSectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=section_gid")
     public String sectionGid;
+
     public UpdateSectionRequest withSectionGid(String sectionGid) {
         this.sectionGid = sectionGid;
         return this;
     }
     
+    public UpdateSectionRequest(@JsonProperty("RequestBody") UpdateSectionRequestBody requestBody, @JsonProperty("section_gid") String sectionGid) {
+        this.requestBody = requestBody;
+        this.sectionGid = sectionGid;
+  }
 }

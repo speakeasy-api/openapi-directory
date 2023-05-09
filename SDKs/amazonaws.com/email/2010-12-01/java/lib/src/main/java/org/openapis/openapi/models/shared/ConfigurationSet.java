@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ConfigurationSet - &lt;p&gt;The name of the configuration set.&lt;/p&gt; &lt;p&gt;Configuration sets let you create groups of rules that you can apply to the emails you send using Amazon SES. For more information about using configuration sets, see &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/using-configuration-sets.html"&gt;Using Amazon SES Configuration Sets&lt;/a&gt; in the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/"&gt;Amazon SES Developer Guide&lt;/a&gt;.&lt;/p&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationSet {
     
     public String name;
+
     public ConfigurationSet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConfigurationSet(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

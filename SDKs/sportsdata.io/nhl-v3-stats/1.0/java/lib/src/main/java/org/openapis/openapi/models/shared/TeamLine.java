@@ -12,6 +12,7 @@ public class TeamLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvenStrengthLines")
     public PlayerLine[] evenStrengthLines;
+
     public TeamLine withEvenStrengthLines(PlayerLine[] evenStrengthLines) {
         this.evenStrengthLines = evenStrengthLines;
         return this;
@@ -20,6 +21,7 @@ public class TeamLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullName")
     public String fullName;
+
     public TeamLine withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -28,6 +30,7 @@ public class TeamLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public TeamLine withKey(String key) {
         this.key = key;
         return this;
@@ -36,6 +39,7 @@ public class TeamLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPlayLines")
     public PlayerLine[] powerPlayLines;
+
     public TeamLine withPowerPlayLines(PlayerLine[] powerPlayLines) {
         this.powerPlayLines = powerPlayLines;
         return this;
@@ -44,9 +48,11 @@ public class TeamLine {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamID")
     public Long teamID;
+
     public TeamLine withTeamID(Long teamID) {
         this.teamID = teamID;
         return this;
     }
     
+    public TeamLine(){}
 }

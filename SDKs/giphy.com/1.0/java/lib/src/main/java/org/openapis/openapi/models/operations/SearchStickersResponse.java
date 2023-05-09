@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchStickersResponse {
     
     public String contentType;
+
     public SearchStickersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchStickersResponse {
     
     
     public Integer statusCode;
+
     public SearchStickersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SearchStickersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchStickersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class SearchStickersResponse {
      */
     
     public SearchStickers200ApplicationJSON searchStickers200ApplicationJSONObject;
+
     public SearchStickersResponse withSearchStickers200ApplicationJSONObject(SearchStickers200ApplicationJSON searchStickers200ApplicationJSONObject) {
         this.searchStickers200ApplicationJSONObject = searchStickers200ApplicationJSONObject;
         return this;
     }
     
+    public SearchStickersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

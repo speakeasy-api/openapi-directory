@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemoveRoleFromDBInstanceRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemoveRoleFromDBInstanceActionEnum action;
+
     public GETRemoveRoleFromDBInstanceRequest withAction(GETRemoveRoleFromDBInstanceActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DBInstanceIdentifier")
     public String dbInstanceIdentifier;
+
     public GETRemoveRoleFromDBInstanceRequest withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -29,6 +32,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=FeatureName")
     public String featureName;
+
     public GETRemoveRoleFromDBInstanceRequest withFeatureName(String featureName) {
         this.featureName = featureName;
         return this;
@@ -39,6 +43,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=RoleArn")
     public String roleArn;
+
     public GETRemoveRoleFromDBInstanceRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -46,6 +51,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemoveRoleFromDBInstanceVersionEnum version;
+
     public GETRemoveRoleFromDBInstanceRequest withVersion(GETRemoveRoleFromDBInstanceVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETRemoveRoleFromDBInstanceRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemoveRoleFromDBInstanceRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemoveRoleFromDBInstanceRequest(@JsonProperty("Action") GETRemoveRoleFromDBInstanceActionEnum action, @JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("FeatureName") String featureName, @JsonProperty("RoleArn") String roleArn, @JsonProperty("Version") GETRemoveRoleFromDBInstanceVersionEnum version) {
+        this.action = action;
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.featureName = featureName;
+        this.roleArn = roleArn;
+        this.version = version;
+  }
 }

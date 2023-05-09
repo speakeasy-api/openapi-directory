@@ -18,6 +18,7 @@ public class TagCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TagCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class TagCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TagCompact withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class TagCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TagCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TagCompact(){}
 }

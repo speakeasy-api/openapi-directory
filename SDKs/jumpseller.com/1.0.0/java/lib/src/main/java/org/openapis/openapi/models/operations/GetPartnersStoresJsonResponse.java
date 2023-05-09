@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPartnersStoresJsonResponse {
     
     public String contentType;
+
     public GetPartnersStoresJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPartnersStoresJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.PartnerError partnerError;
+
     public GetPartnersStoresJsonResponse withPartnerError(org.openapis.openapi.models.shared.PartnerError partnerError) {
         this.partnerError = partnerError;
         return this;
@@ -26,6 +29,7 @@ public class GetPartnersStoresJsonResponse {
     
     
     public Integer statusCode;
+
     public GetPartnersStoresJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetPartnersStoresJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPartnersStoresJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetPartnersStoresJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Type[] types;
+
     public GetPartnersStoresJsonResponse withTypes(org.openapis.openapi.models.shared.Type[] types) {
         this.types = types;
         return this;
     }
     
+    public GetPartnersStoresJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

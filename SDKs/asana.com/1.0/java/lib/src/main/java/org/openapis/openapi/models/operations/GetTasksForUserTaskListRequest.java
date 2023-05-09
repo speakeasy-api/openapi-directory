@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTasksForUserTaskListRequest {
@@ -13,6 +14,7 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=completed_since")
     public String completedSince;
+
     public GetTasksForUserTaskListRequest withCompletedSince(String completedSince) {
         this.completedSince = completedSince;
         return this;
@@ -24,6 +26,7 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTasksForUserTaskListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -36,6 +39,7 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetTasksForUserTaskListRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -48,6 +52,7 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetTasksForUserTaskListRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -59,6 +64,7 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetTasksForUserTaskListRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -69,9 +75,13 @@ public class GetTasksForUserTaskListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=user_task_list_gid")
     public String userTaskListGid;
+
     public GetTasksForUserTaskListRequest withUserTaskListGid(String userTaskListGid) {
         this.userTaskListGid = userTaskListGid;
         return this;
     }
     
+    public GetTasksForUserTaskListRequest(@JsonProperty("user_task_list_gid") String userTaskListGid) {
+        this.userTaskListGid = userTaskListGid;
+  }
 }

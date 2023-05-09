@@ -18,6 +18,7 @@ public class AllocationSpecificSKUReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assuredCount")
     public String assuredCount;
+
     public AllocationSpecificSKUReservation withAssuredCount(String assuredCount) {
         this.assuredCount = assuredCount;
         return this;
@@ -29,6 +30,7 @@ public class AllocationSpecificSKUReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public AllocationSpecificSKUReservation withCount(String count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class AllocationSpecificSKUReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inUseCount")
     public String inUseCount;
+
     public AllocationSpecificSKUReservation withInUseCount(String inUseCount) {
         this.inUseCount = inUseCount;
         return this;
@@ -51,6 +54,7 @@ public class AllocationSpecificSKUReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProperties")
     public AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties;
+
     public AllocationSpecificSKUReservation withInstanceProperties(AllocationSpecificSKUAllocationReservedInstanceProperties instanceProperties) {
         this.instanceProperties = instanceProperties;
         return this;
@@ -62,9 +66,11 @@ public class AllocationSpecificSKUReservation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstanceTemplate")
     public String sourceInstanceTemplate;
+
     public AllocationSpecificSKUReservation withSourceInstanceTemplate(String sourceInstanceTemplate) {
         this.sourceInstanceTemplate = sourceInstanceTemplate;
         return this;
     }
     
+    public AllocationSpecificSKUReservation(){}
 }

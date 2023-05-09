@@ -15,9 +15,11 @@ public class CreateRepositoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Repository repository;
+
     public CreateRepositoryResponse withRepository(Repository repository) {
         this.repository = repository;
         return this;
     }
     
+    public CreateRepositoryResponse(){}
 }

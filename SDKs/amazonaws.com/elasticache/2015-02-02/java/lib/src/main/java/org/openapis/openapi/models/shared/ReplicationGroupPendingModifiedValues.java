@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReplicationGroupPendingModifiedValues {
     
     public AuthTokenUpdateStatusEnum authTokenStatus;
+
     public ReplicationGroupPendingModifiedValues withAuthTokenStatus(AuthTokenUpdateStatusEnum authTokenStatus) {
         this.authTokenStatus = authTokenStatus;
         return this;
@@ -19,6 +20,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public PendingAutomaticFailoverStatusEnum automaticFailoverStatus;
+
     public ReplicationGroupPendingModifiedValues withAutomaticFailoverStatus(PendingAutomaticFailoverStatusEnum automaticFailoverStatus) {
         this.automaticFailoverStatus = automaticFailoverStatus;
         return this;
@@ -26,6 +28,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public PendingLogDeliveryConfiguration[] logDeliveryConfigurations;
+
     public ReplicationGroupPendingModifiedValues withLogDeliveryConfigurations(PendingLogDeliveryConfiguration[] logDeliveryConfigurations) {
         this.logDeliveryConfigurations = logDeliveryConfigurations;
         return this;
@@ -33,6 +36,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public String primaryClusterId;
+
     public ReplicationGroupPendingModifiedValues withPrimaryClusterId(String primaryClusterId) {
         this.primaryClusterId = primaryClusterId;
         return this;
@@ -40,6 +44,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public ReshardingStatus resharding;
+
     public ReplicationGroupPendingModifiedValues withResharding(ReshardingStatus resharding) {
         this.resharding = resharding;
         return this;
@@ -47,6 +52,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public Boolean transitEncryptionEnabled;
+
     public ReplicationGroupPendingModifiedValues withTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
         this.transitEncryptionEnabled = transitEncryptionEnabled;
         return this;
@@ -54,6 +60,7 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public TransitEncryptionModeEnum transitEncryptionMode;
+
     public ReplicationGroupPendingModifiedValues withTransitEncryptionMode(TransitEncryptionModeEnum transitEncryptionMode) {
         this.transitEncryptionMode = transitEncryptionMode;
         return this;
@@ -61,9 +68,11 @@ public class ReplicationGroupPendingModifiedValues {
     
     
     public UserGroupsUpdateStatus userGroups;
+
     public ReplicationGroupPendingModifiedValues withUserGroups(UserGroupsUpdateStatus userGroups) {
         this.userGroups = userGroups;
         return this;
     }
     
+    public ReplicationGroupPendingModifiedValues(){}
 }

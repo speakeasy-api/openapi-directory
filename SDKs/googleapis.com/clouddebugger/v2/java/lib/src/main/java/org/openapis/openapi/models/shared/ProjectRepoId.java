@@ -18,6 +18,7 @@ public class ProjectRepoId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public ProjectRepoId withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -29,9 +30,11 @@ public class ProjectRepoId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repoName")
     public String repoName;
+
     public ProjectRepoId withRepoName(String repoName) {
         this.repoName = repoName;
         return this;
     }
     
+    public ProjectRepoId(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RotateSecretResponse {
     
     public String contentType;
+
     public RotateSecretResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RotateSecretResponse {
      */
     
     public Object internalServiceError;
+
     public RotateSecretResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class RotateSecretResponse {
      */
     
     public Object invalidParameterException;
+
     public RotateSecretResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class RotateSecretResponse {
      */
     
     public Object invalidRequestException;
+
     public RotateSecretResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RotateSecretResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RotateSecretResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class RotateSecretResponse {
      */
     
     public org.openapis.openapi.models.shared.RotateSecretResponse rotateSecretResponse;
+
     public RotateSecretResponse withRotateSecretResponse(org.openapis.openapi.models.shared.RotateSecretResponse rotateSecretResponse) {
         this.rotateSecretResponse = rotateSecretResponse;
         return this;
@@ -66,6 +73,7 @@ public class RotateSecretResponse {
     
     
     public Integer statusCode;
+
     public RotateSecretResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class RotateSecretResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RotateSecretResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RotateSecretResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -25,6 +25,7 @@ public class ReposUpdateRequestBodySecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advanced_security")
     public ReposUpdateRequestBodySecurityAndAnalysisAdvancedSecurity advancedSecurity;
+
     public ReposUpdateRequestBodySecurityAndAnalysis withAdvancedSecurity(ReposUpdateRequestBodySecurityAndAnalysisAdvancedSecurity advancedSecurity) {
         this.advancedSecurity = advancedSecurity;
         return this;
@@ -36,6 +37,7 @@ public class ReposUpdateRequestBodySecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_scanning")
     public ReposUpdateRequestBodySecurityAndAnalysisSecretScanning secretScanning;
+
     public ReposUpdateRequestBodySecurityAndAnalysis withSecretScanning(ReposUpdateRequestBodySecurityAndAnalysisSecretScanning secretScanning) {
         this.secretScanning = secretScanning;
         return this;
@@ -47,9 +49,11 @@ public class ReposUpdateRequestBodySecurityAndAnalysis {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_scanning_push_protection")
     public ReposUpdateRequestBodySecurityAndAnalysisSecretScanningPushProtection secretScanningPushProtection;
+
     public ReposUpdateRequestBodySecurityAndAnalysis withSecretScanningPushProtection(ReposUpdateRequestBodySecurityAndAnalysisSecretScanningPushProtection secretScanningPushProtection) {
         this.secretScanningPushProtection = secretScanningPushProtection;
         return this;
     }
     
+    public ReposUpdateRequestBodySecurityAndAnalysis(){}
 }

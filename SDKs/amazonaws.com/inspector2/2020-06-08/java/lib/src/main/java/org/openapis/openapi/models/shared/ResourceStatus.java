@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceStatus {
     @JsonProperty("ec2")
     public StatusEnum ec2;
+
     public ResourceStatus withEc2(StatusEnum ec2) {
         this.ec2 = ec2;
         return this;
@@ -21,6 +22,7 @@ public class ResourceStatus {
     
     @JsonProperty("ecr")
     public StatusEnum ecr;
+
     public ResourceStatus withEcr(StatusEnum ecr) {
         this.ecr = ecr;
         return this;
@@ -29,9 +31,14 @@ public class ResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public StatusEnum lambda;
+
     public ResourceStatus withLambda(StatusEnum lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public ResourceStatus(@JsonProperty("ec2") StatusEnum ec2, @JsonProperty("ecr") StatusEnum ecr) {
+        this.ec2 = ec2;
+        this.ecr = ecr;
+  }
 }

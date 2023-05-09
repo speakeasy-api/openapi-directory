@@ -15,9 +15,11 @@ public class GetCommentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public Comment comment;
+
     public GetCommentOutput withComment(Comment comment) {
         this.comment = comment;
         return this;
     }
     
+    public GetCommentOutput(){}
 }

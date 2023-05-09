@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JourneyExecutionActivityMetricsResponse {
     @JsonProperty("ActivityType")
     public String activityType;
+
     public JourneyExecutionActivityMetricsResponse withActivityType(String activityType) {
         this.activityType = activityType;
         return this;
@@ -19,6 +20,7 @@ public class JourneyExecutionActivityMetricsResponse {
     
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public JourneyExecutionActivityMetricsResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -26,6 +28,7 @@ public class JourneyExecutionActivityMetricsResponse {
     
     @JsonProperty("JourneyActivityId")
     public String journeyActivityId;
+
     public JourneyExecutionActivityMetricsResponse withJourneyActivityId(String journeyActivityId) {
         this.journeyActivityId = journeyActivityId;
         return this;
@@ -33,6 +36,7 @@ public class JourneyExecutionActivityMetricsResponse {
     
     @JsonProperty("JourneyId")
     public String journeyId;
+
     public JourneyExecutionActivityMetricsResponse withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
@@ -40,6 +44,7 @@ public class JourneyExecutionActivityMetricsResponse {
     
     @JsonProperty("LastEvaluatedTime")
     public String lastEvaluatedTime;
+
     public JourneyExecutionActivityMetricsResponse withLastEvaluatedTime(String lastEvaluatedTime) {
         this.lastEvaluatedTime = lastEvaluatedTime;
         return this;
@@ -47,9 +52,18 @@ public class JourneyExecutionActivityMetricsResponse {
     
     @JsonProperty("Metrics")
     public java.util.Map<String, String> metrics;
+
     public JourneyExecutionActivityMetricsResponse withMetrics(java.util.Map<String, String> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public JourneyExecutionActivityMetricsResponse(@JsonProperty("ActivityType") String activityType, @JsonProperty("ApplicationId") String applicationId, @JsonProperty("JourneyActivityId") String journeyActivityId, @JsonProperty("JourneyId") String journeyId, @JsonProperty("LastEvaluatedTime") String lastEvaluatedTime, @JsonProperty("Metrics") java.util.Map<String, String> metrics) {
+        this.activityType = activityType;
+        this.applicationId = applicationId;
+        this.journeyActivityId = journeyActivityId;
+        this.journeyId = journeyId;
+        this.lastEvaluatedTime = lastEvaluatedTime;
+        this.metrics = metrics;
+  }
 }

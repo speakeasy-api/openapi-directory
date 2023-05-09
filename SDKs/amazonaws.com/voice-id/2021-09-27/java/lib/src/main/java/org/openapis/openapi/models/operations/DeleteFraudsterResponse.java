@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFraudsterResponse {
@@ -12,6 +13,7 @@ public class DeleteFraudsterResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFraudsterResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFraudsterResponse {
      */
     
     public Object conflictException;
+
     public DeleteFraudsterResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFraudsterResponse {
     
     
     public String contentType;
+
     public DeleteFraudsterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFraudsterResponse {
      */
     
     public Object internalServerException;
+
     public DeleteFraudsterResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFraudsterResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFraudsterResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFraudsterResponse {
     
     
     public Integer statusCode;
+
     public DeleteFraudsterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFraudsterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFraudsterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFraudsterResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFraudsterResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFraudsterResponse {
      */
     
     public Object validationException;
+
     public DeleteFraudsterResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteFraudsterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

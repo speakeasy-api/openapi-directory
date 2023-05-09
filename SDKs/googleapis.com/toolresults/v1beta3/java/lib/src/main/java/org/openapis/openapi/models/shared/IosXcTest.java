@@ -18,6 +18,7 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public IosXcTest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -29,9 +30,11 @@ public class IosXcTest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersion")
     public String xcodeVersion;
+
     public IosXcTest withXcodeVersion(String xcodeVersion) {
         this.xcodeVersion = xcodeVersion;
         return this;
     }
     
+    public IosXcTest(){}
 }

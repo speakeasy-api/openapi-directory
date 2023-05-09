@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpEndpointEnum httpEndpoint;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withHttpEndpoint(ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withHttpProtocolIpv6(ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     
     public Long httpPutResponseHopLimit;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpTokensEnum httpTokens;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withHttpTokens(ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsHttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,6 +44,7 @@ public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withInstanceMetadataTags(ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -47,9 +52,11 @@ public class ModifyInstanceMetadataOptionsResultInstanceMetadataOptions {
     
     
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum state;
+
     public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions withState(ModifyInstanceMetadataOptionsResultInstanceMetadataOptionsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public ModifyInstanceMetadataOptionsResultInstanceMetadataOptions(){}
 }

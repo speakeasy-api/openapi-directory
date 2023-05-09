@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAccessKeyRequest {
     
     public String accessKeyId;
+
     public DeleteAccessKeyRequest withAccessKeyId(String accessKeyId) {
         this.accessKeyId = accessKeyId;
         return this;
@@ -16,9 +17,13 @@ public class DeleteAccessKeyRequest {
     
     
     public String userName;
+
     public DeleteAccessKeyRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteAccessKeyRequest(@JsonProperty("AccessKeyId") String accessKeyId) {
+        this.accessKeyId = accessKeyId;
+  }
 }

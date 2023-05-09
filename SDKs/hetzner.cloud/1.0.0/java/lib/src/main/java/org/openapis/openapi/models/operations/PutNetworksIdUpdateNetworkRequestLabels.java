@@ -15,9 +15,11 @@ public class PutNetworksIdUpdateNetworkRequestLabels {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelkey")
     public String labelkey;
+
     public PutNetworksIdUpdateNetworkRequestLabels withLabelkey(String labelkey) {
         this.labelkey = labelkey;
         return this;
     }
     
+    public PutNetworksIdUpdateNetworkRequestLabels(){}
 }

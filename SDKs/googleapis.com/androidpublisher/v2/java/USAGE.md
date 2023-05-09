@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteSecurity;
 import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteRequest;
 import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteResponse;
+import org.openapis.openapi.models.operations.AndroidpublisherEditsApklistingsDeleteSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -15,21 +14,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AndroidpublisherEditsApklistingsDeleteRequest req = new AndroidpublisherEditsApklistingsDeleteRequest() {{
-                alt = "json";
-                apkVersionCode = 548814;
-                editId = "provident";
-                fields = "distinctio";
-                key = "quibusdam";
-                language = "unde";
-                oauthToken = "nulla";
-                packageName = "corrupti";
+            AndroidpublisherEditsApklistingsDeleteRequest req = new AndroidpublisherEditsApklistingsDeleteRequest(548814L, "provident", "distinctio", "quibusdam") {{
+                alt = AltEnum.JSON;
+                fields = "unde";
+                key = "nulla";
+                oauthToken = "corrupti";
                 prettyPrint = false;
                 quotaUser = "illum";
                 userIp = "vel";
-            }}            
+            }};            
 
-            AndroidpublisherEditsApklistingsDeleteResponse res = sdk.edits.androidpublisherEditsApklistingsDelete(req, new AndroidpublisherEditsApklistingsDeleteSecurity() {{
+            AndroidpublisherEditsApklistingsDeleteResponse res = sdk.edits.androidpublisherEditsApklistingsDelete(req, new AndroidpublisherEditsApklistingsDeleteSecurity("error", "deserunt") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
@@ -40,5 +35,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

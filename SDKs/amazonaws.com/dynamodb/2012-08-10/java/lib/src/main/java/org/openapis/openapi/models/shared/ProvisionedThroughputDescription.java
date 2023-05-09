@@ -22,6 +22,7 @@ public class ProvisionedThroughputDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastDecreaseDateTime")
     public OffsetDateTime lastDecreaseDateTime;
+
     public ProvisionedThroughputDescription withLastDecreaseDateTime(OffsetDateTime lastDecreaseDateTime) {
         this.lastDecreaseDateTime = lastDecreaseDateTime;
         return this;
@@ -32,6 +33,7 @@ public class ProvisionedThroughputDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastIncreaseDateTime")
     public OffsetDateTime lastIncreaseDateTime;
+
     public ProvisionedThroughputDescription withLastIncreaseDateTime(OffsetDateTime lastIncreaseDateTime) {
         this.lastIncreaseDateTime = lastIncreaseDateTime;
         return this;
@@ -40,6 +42,7 @@ public class ProvisionedThroughputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberOfDecreasesToday")
     public Long numberOfDecreasesToday;
+
     public ProvisionedThroughputDescription withNumberOfDecreasesToday(Long numberOfDecreasesToday) {
         this.numberOfDecreasesToday = numberOfDecreasesToday;
         return this;
@@ -48,6 +51,7 @@ public class ProvisionedThroughputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Long readCapacityUnits;
+
     public ProvisionedThroughputDescription withReadCapacityUnits(Long readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -56,9 +60,11 @@ public class ProvisionedThroughputDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteCapacityUnits")
     public Long writeCapacityUnits;
+
     public ProvisionedThroughputDescription withWriteCapacityUnits(Long writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public ProvisionedThroughputDescription(){}
 }

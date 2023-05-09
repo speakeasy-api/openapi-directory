@@ -20,6 +20,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowUnassociatedTargets")
     public Boolean allowUnassociatedTargets;
+
     public GetMaintenanceWindowResult withAllowUnassociatedTargets(Boolean allowUnassociatedTargets) {
         this.allowUnassociatedTargets = allowUnassociatedTargets;
         return this;
@@ -30,6 +31,7 @@ public class GetMaintenanceWindowResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public GetMaintenanceWindowResult withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cutoff")
     public Long cutoff;
+
     public GetMaintenanceWindowResult withCutoff(Long cutoff) {
         this.cutoff = cutoff;
         return this;
@@ -46,6 +49,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetMaintenanceWindowResult withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Long duration;
+
     public GetMaintenanceWindowResult withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -62,6 +67,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public GetMaintenanceWindowResult withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -70,6 +76,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public GetMaintenanceWindowResult withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -80,6 +87,7 @@ public class GetMaintenanceWindowResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedDate")
     public OffsetDateTime modifiedDate;
+
     public GetMaintenanceWindowResult withModifiedDate(OffsetDateTime modifiedDate) {
         this.modifiedDate = modifiedDate;
         return this;
@@ -88,6 +96,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetMaintenanceWindowResult withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +105,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextExecutionTime")
     public String nextExecutionTime;
+
     public GetMaintenanceWindowResult withNextExecutionTime(String nextExecutionTime) {
         this.nextExecutionTime = nextExecutionTime;
         return this;
@@ -104,6 +114,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public GetMaintenanceWindowResult withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -112,6 +123,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public GetMaintenanceWindowResult withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -120,6 +132,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleTimezone")
     public String scheduleTimezone;
+
     public GetMaintenanceWindowResult withScheduleTimezone(String scheduleTimezone) {
         this.scheduleTimezone = scheduleTimezone;
         return this;
@@ -128,6 +141,7 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public GetMaintenanceWindowResult withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -136,9 +150,11 @@ public class GetMaintenanceWindowResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowId")
     public String windowId;
+
     public GetMaintenanceWindowResult withWindowId(String windowId) {
         this.windowId = windowId;
         return this;
     }
     
+    public GetMaintenanceWindowResult(){}
 }

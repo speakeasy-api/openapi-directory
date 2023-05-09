@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse {
@@ -12,6 +13,7 @@ public class ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.ApigatewayPolicy apigatewayPolicy;
+
     public ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse withApigatewayPolicy(org.openapis.openapi.models.shared.ApigatewayPolicy apigatewayPolicy) {
         this.apigatewayPolicy = apigatewayPolicy;
         return this;
@@ -19,6 +21,7 @@ public class ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse {
     
     
     public String contentType;
+
     public ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse {
     
     
     public Integer statusCode;
+
     public ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ApigatewayProjectsLocationsGatewaysSetIamPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class SchemaResponseActionReadSchemaResponseActionsLinks {
      */
     
     public String self;
+
     public SchemaResponseActionReadSchemaResponseActionsLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public SchemaResponseActionReadSchemaResponseActionsLinks(){}
 }

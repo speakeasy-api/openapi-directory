@@ -12,6 +12,7 @@ public class GetActionRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dataset")
     public String dataset;
+
     public GetActionRelatedListRequest withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -22,6 +23,7 @@ public class GetActionRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featured")
     public String featured;
+
     public GetActionRelatedListRequest withFeatured(String featured) {
         this.featured = featured;
         return this;
@@ -32,6 +34,7 @@ public class GetActionRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetActionRelatedListRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetActionRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetActionRelatedListRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -52,9 +56,11 @@ public class GetActionRelatedListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type_filter")
     public String typeFilter;
+
     public GetActionRelatedListRequest withTypeFilter(String typeFilter) {
         this.typeFilter = typeFilter;
         return this;
     }
     
+    public GetActionRelatedListRequest(){}
 }

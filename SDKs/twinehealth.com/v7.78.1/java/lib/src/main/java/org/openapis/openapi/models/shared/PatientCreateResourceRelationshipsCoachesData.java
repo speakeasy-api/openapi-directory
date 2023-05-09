@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PatientCreateResourceRelationshipsCoachesData {
     @JsonProperty("id")
     public String id;
+
     public PatientCreateResourceRelationshipsCoachesData withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class PatientCreateResourceRelationshipsCoachesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PatientCreateResourceRelationshipsCoachesDataMeta meta;
+
     public PatientCreateResourceRelationshipsCoachesData withMeta(PatientCreateResourceRelationshipsCoachesDataMeta meta) {
         this.meta = meta;
         return this;
@@ -26,9 +28,14 @@ public class PatientCreateResourceRelationshipsCoachesData {
     
     @JsonProperty("type")
     public PatientCreateResourceRelationshipsCoachesDataTypeEnum type;
+
     public PatientCreateResourceRelationshipsCoachesData withType(PatientCreateResourceRelationshipsCoachesDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PatientCreateResourceRelationshipsCoachesData(@JsonProperty("id") String id, @JsonProperty("type") PatientCreateResourceRelationshipsCoachesDataTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteDetectorResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteDetectorResponse batchDeleteDetectorResponse;
+
     public BatchDeleteDetectorResponse withBatchDeleteDetectorResponse(org.openapis.openapi.models.shared.BatchDeleteDetectorResponse batchDeleteDetectorResponse) {
         this.batchDeleteDetectorResponse = batchDeleteDetectorResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchDeleteDetectorResponse {
     
     
     public String contentType;
+
     public BatchDeleteDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteDetectorResponse {
      */
     
     public Object internalFailureException;
+
     public BatchDeleteDetectorResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteDetectorResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchDeleteDetectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchDeleteDetectorResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class BatchDeleteDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class BatchDeleteDetectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public BatchDeleteDetectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,9 +81,14 @@ public class BatchDeleteDetectorResponse {
      */
     
     public Object throttlingException;
+
     public BatchDeleteDetectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public BatchDeleteDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

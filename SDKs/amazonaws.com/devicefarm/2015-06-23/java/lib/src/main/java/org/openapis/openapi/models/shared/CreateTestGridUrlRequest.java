@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTestGridUrlRequest {
     @JsonProperty("expiresInSeconds")
     public Long expiresInSeconds;
+
     public CreateTestGridUrlRequest withExpiresInSeconds(Long expiresInSeconds) {
         this.expiresInSeconds = expiresInSeconds;
         return this;
@@ -16,9 +17,14 @@ public class CreateTestGridUrlRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateTestGridUrlRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
     }
     
+    public CreateTestGridUrlRequest(@JsonProperty("expiresInSeconds") Long expiresInSeconds, @JsonProperty("projectArn") String projectArn) {
+        this.expiresInSeconds = expiresInSeconds;
+        this.projectArn = projectArn;
+  }
 }

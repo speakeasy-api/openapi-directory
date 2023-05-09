@@ -12,6 +12,7 @@ public class GetTxsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=address")
     public String address;
+
     public GetTxsRequest withAddress(String address) {
         this.address = address;
         return this;
@@ -22,6 +23,7 @@ public class GetTxsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=block")
     public String block;
+
     public GetTxsRequest withBlock(String block) {
         this.block = block;
         return this;
@@ -32,9 +34,11 @@ public class GetTxsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNum")
     public Double pageNum;
+
     public GetTxsRequest withPageNum(Double pageNum) {
         this.pageNum = pageNum;
         return this;
     }
     
+    public GetTxsRequest(){}
 }

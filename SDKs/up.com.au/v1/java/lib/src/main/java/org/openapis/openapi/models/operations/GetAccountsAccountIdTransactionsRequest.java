@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -14,6 +15,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public String accountId;
+
     public GetAccountsAccountIdTransactionsRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +30,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[category]")
     public String filterCategory;
+
     public GetAccountsAccountIdTransactionsRequest withFilterCategory(String filterCategory) {
         this.filterCategory = filterCategory;
         return this;
@@ -41,6 +44,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[since]")
     public OffsetDateTime filterSince;
+
     public GetAccountsAccountIdTransactionsRequest withFilterSince(OffsetDateTime filterSince) {
         this.filterSince = filterSince;
         return this;
@@ -54,6 +58,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[status]")
     public org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus;
+
     public GetAccountsAccountIdTransactionsRequest withFilterStatus(org.openapis.openapi.models.shared.TransactionStatusEnumEnum filterStatus) {
         this.filterStatus = filterStatus;
         return this;
@@ -67,6 +72,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[tag]")
     public String filterTag;
+
     public GetAccountsAccountIdTransactionsRequest withFilterTag(String filterTag) {
         this.filterTag = filterTag;
         return this;
@@ -80,6 +86,7 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter[until]")
     public OffsetDateTime filterUntil;
+
     public GetAccountsAccountIdTransactionsRequest withFilterUntil(OffsetDateTime filterUntil) {
         this.filterUntil = filterUntil;
         return this;
@@ -91,9 +98,13 @@ public class GetAccountsAccountIdTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page[size]")
     public Long pageSize;
+
     public GetAccountsAccountIdTransactionsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetAccountsAccountIdTransactionsRequest(@JsonProperty("accountId") String accountId) {
+        this.accountId = accountId;
+  }
 }

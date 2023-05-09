@@ -12,6 +12,7 @@ public class GetBlueprintRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeBlueprint")
     public Boolean includeBlueprint;
+
     public GetBlueprintRequest withIncludeBlueprint(Boolean includeBlueprint) {
         this.includeBlueprint = includeBlueprint;
         return this;
@@ -20,6 +21,7 @@ public class GetBlueprintRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeParameterSpec")
     public Boolean includeParameterSpec;
+
     public GetBlueprintRequest withIncludeParameterSpec(Boolean includeParameterSpec) {
         this.includeParameterSpec = includeParameterSpec;
         return this;
@@ -27,9 +29,13 @@ public class GetBlueprintRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public GetBlueprintRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetBlueprintRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

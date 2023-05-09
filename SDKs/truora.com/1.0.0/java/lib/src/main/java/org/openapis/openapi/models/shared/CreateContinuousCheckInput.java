@@ -15,6 +15,7 @@ public class CreateContinuousCheckInput {
      */
     @SpeakeasyMetadata("form:name=check_id")
     public String checkId;
+
     public CreateContinuousCheckInput withCheckId(String checkId) {
         this.checkId = checkId;
         return this;
@@ -25,6 +26,7 @@ public class CreateContinuousCheckInput {
      */
     @SpeakeasyMetadata("form:name=frequency")
     public String frequency;
+
     public CreateContinuousCheckInput withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -35,9 +37,11 @@ public class CreateContinuousCheckInput {
      */
     @SpeakeasyMetadata("form:name=status")
     public String status;
+
     public CreateContinuousCheckInput withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public CreateContinuousCheckInput(){}
 }

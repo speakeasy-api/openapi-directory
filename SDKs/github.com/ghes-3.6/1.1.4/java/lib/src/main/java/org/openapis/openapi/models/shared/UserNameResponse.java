@@ -15,6 +15,7 @@ public class UserNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public UserNameResponse withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -26,6 +27,7 @@ public class UserNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formatted")
     public String formatted;
+
     public UserNameResponse withFormatted(String formatted) {
         this.formatted = formatted;
         return this;
@@ -37,6 +39,7 @@ public class UserNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("givenName")
     public String givenName;
+
     public UserNameResponse withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -48,9 +51,11 @@ public class UserNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public UserNameResponse withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
     }
     
+    public UserNameResponse(){}
 }

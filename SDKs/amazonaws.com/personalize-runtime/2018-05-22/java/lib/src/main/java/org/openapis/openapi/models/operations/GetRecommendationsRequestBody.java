@@ -15,6 +15,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("campaignArn")
     public String campaignArn;
+
     public GetRecommendationsRequestBody withCampaignArn(String campaignArn) {
         this.campaignArn = campaignArn;
         return this;
@@ -26,6 +27,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public java.util.Map<String, String> context;
+
     public GetRecommendationsRequestBody withContext(java.util.Map<String, String> context) {
         this.context = context;
         return this;
@@ -37,6 +39,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public GetRecommendationsRequestBody withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -48,6 +51,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterValues")
     public java.util.Map<String, String> filterValues;
+
     public GetRecommendationsRequestBody withFilterValues(java.util.Map<String, String> filterValues) {
         this.filterValues = filterValues;
         return this;
@@ -59,6 +63,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public GetRecommendationsRequestBody withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -70,6 +75,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public GetRecommendationsRequestBody withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -81,6 +87,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promotions")
     public org.openapis.openapi.models.shared.Promotion[] promotions;
+
     public GetRecommendationsRequestBody withPromotions(org.openapis.openapi.models.shared.Promotion[] promotions) {
         this.promotions = promotions;
         return this;
@@ -92,6 +99,7 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommenderArn")
     public String recommenderArn;
+
     public GetRecommendationsRequestBody withRecommenderArn(String recommenderArn) {
         this.recommenderArn = recommenderArn;
         return this;
@@ -103,9 +111,11 @@ public class GetRecommendationsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GetRecommendationsRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetRecommendationsRequestBody(){}
 }

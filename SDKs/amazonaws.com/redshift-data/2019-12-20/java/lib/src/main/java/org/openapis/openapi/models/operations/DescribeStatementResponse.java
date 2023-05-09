@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeStatementResponse {
     
     public String contentType;
+
     public DescribeStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeStatementResponse describeStatementResponse;
+
     public DescribeStatementResponse withDescribeStatementResponse(org.openapis.openapi.models.shared.DescribeStatementResponse describeStatementResponse) {
         this.describeStatementResponse = describeStatementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeStatementResponse {
      */
     
     public Object internalServerException;
+
     public DescribeStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeStatementResponse {
     
     
     public Integer statusCode;
+
     public DescribeStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeStatementResponse {
      */
     
     public Object validationException;
+
     public DescribeStatementResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

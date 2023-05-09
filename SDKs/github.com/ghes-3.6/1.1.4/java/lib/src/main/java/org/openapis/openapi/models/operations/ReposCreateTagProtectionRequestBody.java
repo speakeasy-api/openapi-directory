@@ -12,9 +12,13 @@ public class ReposCreateTagProtectionRequestBody {
      */
     @JsonProperty("pattern")
     public String pattern;
+
     public ReposCreateTagProtectionRequestBody withPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
     
+    public ReposCreateTagProtectionRequestBody(@JsonProperty("pattern") String pattern) {
+        this.pattern = pattern;
+  }
 }

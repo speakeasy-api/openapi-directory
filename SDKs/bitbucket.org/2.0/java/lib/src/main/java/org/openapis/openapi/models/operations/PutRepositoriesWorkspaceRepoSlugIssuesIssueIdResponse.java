@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse {
     
     public String contentType;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse {
     
     
     public Integer statusCode;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse {
      */
     
     public java.util.Map<String, Object> issue;
+
     public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse withIssue(java.util.Map<String, Object> issue) {
         this.issue = issue;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

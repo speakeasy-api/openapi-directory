@@ -15,6 +15,7 @@ public class TeamsUpdateDiscussionInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public TeamsUpdateDiscussionInOrgRequestBody withBody(String body) {
         this.body = body;
         return this;
@@ -26,9 +27,11 @@ public class TeamsUpdateDiscussionInOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public TeamsUpdateDiscussionInOrgRequestBody withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public TeamsUpdateDiscussionInOrgRequestBody(){}
 }

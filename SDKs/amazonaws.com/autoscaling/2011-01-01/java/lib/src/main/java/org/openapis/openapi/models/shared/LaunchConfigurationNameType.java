@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LaunchConfigurationNameType {
     
     public String launchConfigurationName;
+
     public LaunchConfigurationNameType withLaunchConfigurationName(String launchConfigurationName) {
         this.launchConfigurationName = launchConfigurationName;
         return this;
     }
     
+    public LaunchConfigurationNameType(@JsonProperty("LaunchConfigurationName") String launchConfigurationName) {
+        this.launchConfigurationName = launchConfigurationName;
+  }
 }

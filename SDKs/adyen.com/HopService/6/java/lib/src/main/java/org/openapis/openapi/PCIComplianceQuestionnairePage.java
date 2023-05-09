@@ -56,12 +56,10 @@ public class PCIComplianceQuestionnairePage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse res = new org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse() {{
+        org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse res = new org.openapis.openapi.models.operations.PostGetPciQuestionnaireUrlResponse(contentType, httpRes.statusCode()) {{
             getPciUrlResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

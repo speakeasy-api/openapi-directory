@@ -58,11 +58,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServersIdActionsResponse res = new org.openapis.openapi.models.operations.GetServersIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetServersIdActionsResponse res = new org.openapis.openapi.models.operations.GetServersIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetServersIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetServersIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetServersIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetServersIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAddToPlacementGroupResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -191,11 +185,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAttachIsoResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -246,11 +238,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsAttachToNetworkResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -287,11 +277,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeAliasIpsResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -331,11 +319,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeDnsPtrResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -372,11 +358,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -429,11 +413,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsChangeTypeResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -475,11 +457,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsCreateImageResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsCreateImageResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsCreateImageResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsCreateImageResponse(contentType, httpRes.statusCode()) {{
             postServersIdActionsCreateImage201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -516,11 +496,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDetachFromNetworkResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -555,11 +533,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDetachIsoResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -597,11 +573,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDisableBackupResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -641,11 +615,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsDisableRescueResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -683,11 +655,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsEnableBackupResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -731,11 +701,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsEnableRescueResponse(contentType, httpRes.statusCode()) {{
             postServersIdActionsEnableRescue201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -770,11 +738,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsPoweroffResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsPoweroffResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsPoweroffResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsPoweroffResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -809,11 +775,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsPoweronResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsPoweronResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsPoweronResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsPoweronResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -848,11 +812,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsRebootResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRebootResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsRebootResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRebootResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -894,11 +856,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsRebuildResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRebuildResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsRebuildResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRebuildResponse(contentType, httpRes.statusCode()) {{
             postServersIdActionsRebuild201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -934,11 +894,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRemoveFromPlacementGroupResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -973,11 +931,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsRequestConsoleResponse(contentType, httpRes.statusCode()) {{
             postServersIdActionsRequestConsole201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1012,11 +968,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsResetResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsResetResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsResetResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsResetResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1056,11 +1010,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsResetPasswordResponse(contentType, httpRes.statusCode()) {{
             postServersIdActionsResetPassword201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1095,11 +1047,9 @@ public class ServerActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostServersIdActionsShutdownResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsShutdownResponse() {{
+        org.openapis.openapi.models.operations.PostServersIdActionsShutdownResponse res = new org.openapis.openapi.models.operations.PostServersIdActionsShutdownResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

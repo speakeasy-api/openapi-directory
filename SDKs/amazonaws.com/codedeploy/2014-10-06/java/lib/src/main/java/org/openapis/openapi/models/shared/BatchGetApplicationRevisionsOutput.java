@@ -15,6 +15,7 @@ public class BatchGetApplicationRevisionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public BatchGetApplicationRevisionsOutput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -23,6 +24,7 @@ public class BatchGetApplicationRevisionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchGetApplicationRevisionsOutput withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class BatchGetApplicationRevisionsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revisions")
     public RevisionInfo[] revisions;
+
     public BatchGetApplicationRevisionsOutput withRevisions(RevisionInfo[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public BatchGetApplicationRevisionsOutput(){}
 }

@@ -15,6 +15,7 @@ public class CreateProjectRequestBodyDataDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogs")
     public org.openapis.openapi.models.shared.CloudWatchLogsDestinationConfig cloudWatchLogs;
+
     public CreateProjectRequestBodyDataDelivery withCloudWatchLogs(org.openapis.openapi.models.shared.CloudWatchLogsDestinationConfig cloudWatchLogs) {
         this.cloudWatchLogs = cloudWatchLogs;
         return this;
@@ -23,9 +24,11 @@ public class CreateProjectRequestBodyDataDelivery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Destination")
     public org.openapis.openapi.models.shared.S3DestinationConfig s3Destination;
+
     public CreateProjectRequestBodyDataDelivery withS3Destination(org.openapis.openapi.models.shared.S3DestinationConfig s3Destination) {
         this.s3Destination = s3Destination;
         return this;
     }
     
+    public CreateProjectRequestBodyDataDelivery(){}
 }

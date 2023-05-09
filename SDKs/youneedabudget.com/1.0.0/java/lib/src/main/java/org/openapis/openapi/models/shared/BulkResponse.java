@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BulkResponse {
     @JsonProperty("data")
     public BulkResponseData data;
+
     public BulkResponse withData(BulkResponseData data) {
         this.data = data;
         return this;
     }
     
+    public BulkResponse(@JsonProperty("data") BulkResponseData data) {
+        this.data = data;
+  }
 }

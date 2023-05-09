@@ -15,6 +15,7 @@ public class CreateSimulationJobRequestBodyCompute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeType")
     public org.openapis.openapi.models.shared.ComputeTypeEnum computeType;
+
     public CreateSimulationJobRequestBodyCompute withComputeType(org.openapis.openapi.models.shared.ComputeTypeEnum computeType) {
         this.computeType = computeType;
         return this;
@@ -23,6 +24,7 @@ public class CreateSimulationJobRequestBodyCompute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gpuUnitLimit")
     public Long gpuUnitLimit;
+
     public CreateSimulationJobRequestBodyCompute withGpuUnitLimit(Long gpuUnitLimit) {
         this.gpuUnitLimit = gpuUnitLimit;
         return this;
@@ -31,9 +33,11 @@ public class CreateSimulationJobRequestBodyCompute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("simulationUnitLimit")
     public Long simulationUnitLimit;
+
     public CreateSimulationJobRequestBodyCompute withSimulationUnitLimit(Long simulationUnitLimit) {
         this.simulationUnitLimit = simulationUnitLimit;
         return this;
     }
     
+    public CreateSimulationJobRequestBodyCompute(){}
 }

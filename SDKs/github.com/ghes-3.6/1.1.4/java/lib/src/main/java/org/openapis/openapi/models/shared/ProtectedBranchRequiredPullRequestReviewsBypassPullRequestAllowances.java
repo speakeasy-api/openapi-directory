@@ -12,6 +12,7 @@ public class ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowance
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apps")
     public Integration[] apps;
+
     public ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowances withApps(Integration[] apps) {
         this.apps = apps;
         return this;
@@ -19,6 +20,7 @@ public class ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowance
     
     @JsonProperty("teams")
     public Team[] teams;
+
     public ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowances withTeams(Team[] teams) {
         this.teams = teams;
         return this;
@@ -26,9 +28,14 @@ public class ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowance
     
     @JsonProperty("users")
     public SimpleUser[] users;
+
     public ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowances withUsers(SimpleUser[] users) {
         this.users = users;
         return this;
     }
     
+    public ProtectedBranchRequiredPullRequestReviewsBypassPullRequestAllowances(@JsonProperty("teams") Team[] teams, @JsonProperty("users") SimpleUser[] users) {
+        this.teams = teams;
+        this.users = users;
+  }
 }

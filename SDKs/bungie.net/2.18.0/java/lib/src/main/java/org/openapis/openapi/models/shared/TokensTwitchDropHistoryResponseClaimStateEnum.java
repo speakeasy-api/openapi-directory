@@ -7,14 +7,14 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum TokensTwitchDropHistoryResponseClaimStateEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private TokensTwitchDropHistoryResponseClaimStateEnum(String value) {
+    private TokensTwitchDropHistoryResponseClaimStateEnum(Long value) {
         this.value = value;
     }
 }

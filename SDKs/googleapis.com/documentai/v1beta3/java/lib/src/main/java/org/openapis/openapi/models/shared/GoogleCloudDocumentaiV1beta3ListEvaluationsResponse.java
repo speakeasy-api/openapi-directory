@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1beta3ListEvaluationsResponse - The response from ListEvaluations.
+ * GoogleCloudDocumentaiV1beta3ListEvaluationsResponse - The response from `ListEvaluations`.
  */
 public class GoogleCloudDocumentaiV1beta3ListEvaluationsResponse {
     /**
@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3ListEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluations")
     public GoogleCloudDocumentaiV1beta3Evaluation[] evaluations;
+
     public GoogleCloudDocumentaiV1beta3ListEvaluationsResponse withEvaluations(GoogleCloudDocumentaiV1beta3Evaluation[] evaluations) {
         this.evaluations = evaluations;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta3ListEvaluationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDocumentaiV1beta3ListEvaluationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ListEvaluationsResponse(){}
 }

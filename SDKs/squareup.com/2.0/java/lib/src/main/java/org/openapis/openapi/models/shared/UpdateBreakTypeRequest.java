@@ -16,9 +16,13 @@ public class UpdateBreakTypeRequest {
      */
     @JsonProperty("break_type")
     public BreakType breakType;
+
     public UpdateBreakTypeRequest withBreakType(BreakType breakType) {
         this.breakType = breakType;
         return this;
     }
     
+    public UpdateBreakTypeRequest(@JsonProperty("break_type") BreakType breakType) {
+        this.breakType = breakType;
+  }
 }

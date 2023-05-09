@@ -12,6 +12,7 @@ public class CreateApplication201ApplicationJSONKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key")
     public String privateKey;
+
     public CreateApplication201ApplicationJSONKeys withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -20,9 +21,11 @@ public class CreateApplication201ApplicationJSONKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public CreateApplication201ApplicationJSONKeys withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public CreateApplication201ApplicationJSONKeys(){}
 }

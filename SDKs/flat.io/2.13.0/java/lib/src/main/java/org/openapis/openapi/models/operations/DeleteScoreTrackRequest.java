@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteScoreTrackRequest {
@@ -13,6 +14,7 @@ public class DeleteScoreTrackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=score")
     public String score;
+
     public DeleteScoreTrackRequest withScore(String score) {
         this.score = score;
         return this;
@@ -24,9 +26,14 @@ public class DeleteScoreTrackRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=track")
     public String track;
+
     public DeleteScoreTrackRequest withTrack(String track) {
         this.track = track;
         return this;
     }
     
+    public DeleteScoreTrackRequest(@JsonProperty("score") String score, @JsonProperty("track") String track) {
+        this.score = score;
+        this.track = track;
+  }
 }

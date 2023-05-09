@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyVpcEndpointConnectionNotificationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyVpcEndpointConnectionNotificationActionEnum action;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withAction(GETModifyVpcEndpointConnectionNotificationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionEvents")
     public String[] connectionEvents;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withConnectionEvents(String[] connectionEvents) {
         this.connectionEvents = connectionEvents;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionNotificationArn")
     public String connectionNotificationArn;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withConnectionNotificationArn(String connectionNotificationArn) {
         this.connectionNotificationArn = connectionNotificationArn;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConnectionNotificationId")
     public String connectionNotificationId;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withConnectionNotificationId(String connectionNotificationId) {
         this.connectionNotificationId = connectionNotificationId;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -56,6 +62,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyVpcEndpointConnectionNotificationVersionEnum version;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withVersion(GETModifyVpcEndpointConnectionNotificationVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,15 @@ public class GETModifyVpcEndpointConnectionNotificationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyVpcEndpointConnectionNotificationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyVpcEndpointConnectionNotificationRequest(@JsonProperty("Action") GETModifyVpcEndpointConnectionNotificationActionEnum action, @JsonProperty("ConnectionNotificationId") String connectionNotificationId, @JsonProperty("Version") GETModifyVpcEndpointConnectionNotificationVersionEnum version) {
+        this.action = action;
+        this.connectionNotificationId = connectionNotificationId;
+        this.version = version;
+  }
 }

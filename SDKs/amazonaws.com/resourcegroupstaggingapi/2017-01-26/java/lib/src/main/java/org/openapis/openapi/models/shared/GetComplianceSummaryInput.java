@@ -12,6 +12,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupByAttributeEnum[] groupBy;
+
     public GetComplianceSummaryInput withGroupBy(GroupByAttributeEnum[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -20,6 +21,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetComplianceSummaryInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetComplianceSummaryInput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -36,6 +39,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionFilters")
     public String[] regionFilters;
+
     public GetComplianceSummaryInput withRegionFilters(String[] regionFilters) {
         this.regionFilters = regionFilters;
         return this;
@@ -44,6 +48,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceTypeFilters")
     public String[] resourceTypeFilters;
+
     public GetComplianceSummaryInput withResourceTypeFilters(String[] resourceTypeFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         return this;
@@ -52,6 +57,7 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagKeyFilters")
     public String[] tagKeyFilters;
+
     public GetComplianceSummaryInput withTagKeyFilters(String[] tagKeyFilters) {
         this.tagKeyFilters = tagKeyFilters;
         return this;
@@ -60,9 +66,11 @@ public class GetComplianceSummaryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetIdFilters")
     public String[] targetIdFilters;
+
     public GetComplianceSummaryInput withTargetIdFilters(String[] targetIdFilters) {
         this.targetIdFilters = targetIdFilters;
         return this;
     }
     
+    public GetComplianceSummaryInput(){}
 }

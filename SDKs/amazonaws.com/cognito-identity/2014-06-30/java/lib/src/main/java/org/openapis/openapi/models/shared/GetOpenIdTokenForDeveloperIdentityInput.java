@@ -15,6 +15,7 @@ public class GetOpenIdTokenForDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public GetOpenIdTokenForDeveloperIdentityInput withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -22,6 +23,7 @@ public class GetOpenIdTokenForDeveloperIdentityInput {
     
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public GetOpenIdTokenForDeveloperIdentityInput withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -29,6 +31,7 @@ public class GetOpenIdTokenForDeveloperIdentityInput {
     
     @JsonProperty("Logins")
     public java.util.Map<String, String> logins;
+
     public GetOpenIdTokenForDeveloperIdentityInput withLogins(java.util.Map<String, String> logins) {
         this.logins = logins;
         return this;
@@ -37,6 +40,7 @@ public class GetOpenIdTokenForDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrincipalTags")
     public java.util.Map<String, String> principalTags;
+
     public GetOpenIdTokenForDeveloperIdentityInput withPrincipalTags(java.util.Map<String, String> principalTags) {
         this.principalTags = principalTags;
         return this;
@@ -45,9 +49,14 @@ public class GetOpenIdTokenForDeveloperIdentityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TokenDuration")
     public Long tokenDuration;
+
     public GetOpenIdTokenForDeveloperIdentityInput withTokenDuration(Long tokenDuration) {
         this.tokenDuration = tokenDuration;
         return this;
     }
     
+    public GetOpenIdTokenForDeveloperIdentityInput(@JsonProperty("IdentityPoolId") String identityPoolId, @JsonProperty("Logins") java.util.Map<String, String> logins) {
+        this.identityPoolId = identityPoolId;
+        this.logins = logins;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSecurityTagResponse {
@@ -12,6 +13,7 @@ public class GetSecurityTagResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetSecurityTagResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -19,6 +21,7 @@ public class GetSecurityTagResponse {
     
     
     public String contentType;
+
     public GetSecurityTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSecurityTagResponse {
      */
     
     public org.openapis.openapi.models.shared.SecurityTag securityTag;
+
     public GetSecurityTagResponse withSecurityTag(org.openapis.openapi.models.shared.SecurityTag securityTag) {
         this.securityTag = securityTag;
         return this;
@@ -36,6 +40,7 @@ public class GetSecurityTagResponse {
     
     
     public Integer statusCode;
+
     public GetSecurityTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSecurityTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSecurityTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSecurityTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

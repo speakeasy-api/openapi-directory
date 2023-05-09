@@ -15,6 +15,7 @@ public class PutTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntries")
     public PutTargetsResultEntry[] failedEntries;
+
     public PutTargetsResponse withFailedEntries(PutTargetsResultEntry[] failedEntries) {
         this.failedEntries = failedEntries;
         return this;
@@ -23,9 +24,11 @@ public class PutTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntryCount")
     public Long failedEntryCount;
+
     public PutTargetsResponse withFailedEntryCount(Long failedEntryCount) {
         this.failedEntryCount = failedEntryCount;
         return this;
     }
     
+    public PutTargetsResponse(){}
 }

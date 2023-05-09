@@ -18,6 +18,7 @@ public class AppliedLabelChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldChanges")
     public FieldValueChange[] fieldChanges;
+
     public AppliedLabelChangeDetail withFieldChanges(FieldValueChange[] fieldChanges) {
         this.fieldChanges = fieldChanges;
         return this;
@@ -29,6 +30,7 @@ public class AppliedLabelChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public AppliedLabelChangeDetail withLabel(String label) {
         this.label = label;
         return this;
@@ -40,6 +42,7 @@ public class AppliedLabelChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AppliedLabelChangeDetail withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class AppliedLabelChangeDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public AppliedLabelChangeDetailTypesEnum[] types;
+
     public AppliedLabelChangeDetail withTypes(AppliedLabelChangeDetailTypesEnum[] types) {
         this.types = types;
         return this;
     }
     
+    public AppliedLabelChangeDetail(){}
 }

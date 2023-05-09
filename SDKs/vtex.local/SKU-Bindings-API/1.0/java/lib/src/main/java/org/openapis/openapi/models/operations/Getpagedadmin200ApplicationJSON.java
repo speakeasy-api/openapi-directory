@@ -18,6 +18,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsActive")
     public Boolean isActive;
+
     public Getpagedadmin200ApplicationJSON withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -29,6 +30,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsPersisted")
     public Boolean isPersisted;
+
     public Getpagedadmin200ApplicationJSON withIsPersisted(Boolean isPersisted) {
         this.isPersisted = isPersisted;
         return this;
@@ -40,6 +42,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsRemoved")
     public Boolean isRemoved;
+
     public Getpagedadmin200ApplicationJSON withIsRemoved(Boolean isRemoved) {
         this.isRemoved = isRemoved;
         return this;
@@ -51,6 +54,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedUpdateDate")
     public String requestedUpdateDate;
+
     public Getpagedadmin200ApplicationJSON withRequestedUpdateDate(String requestedUpdateDate) {
         this.requestedUpdateDate = requestedUpdateDate;
         return this;
@@ -62,6 +66,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerId")
     public String sellerId;
+
     public Getpagedadmin200ApplicationJSON withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -73,6 +78,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerStockKeepingUnitId")
     public String sellerStockKeepingUnitId;
+
     public Getpagedadmin200ApplicationJSON withSellerStockKeepingUnitId(String sellerStockKeepingUnitId) {
         this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
         return this;
@@ -84,6 +90,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkuSellerId")
     public Integer skuSellerId;
+
     public Getpagedadmin200ApplicationJSON withSkuSellerId(Integer skuSellerId) {
         this.skuSellerId = skuSellerId;
         return this;
@@ -95,6 +102,7 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockKeepingUnitId")
     public Integer stockKeepingUnitId;
+
     public Getpagedadmin200ApplicationJSON withStockKeepingUnitId(Integer stockKeepingUnitId) {
         this.stockKeepingUnitId = stockKeepingUnitId;
         return this;
@@ -106,9 +114,11 @@ public class Getpagedadmin200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateDate")
     public String updateDate;
+
     public Getpagedadmin200ApplicationJSON withUpdateDate(String updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public Getpagedadmin200ApplicationJSON(){}
 }

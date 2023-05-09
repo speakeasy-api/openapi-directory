@@ -18,6 +18,7 @@ public class TimeSeriesTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSettings")
     public ColumnSettings[] columnSettings;
+
     public TimeSeriesTable withColumnSettings(ColumnSettings[] columnSettings) {
         this.columnSettings = columnSettings;
         return this;
@@ -29,6 +30,7 @@ public class TimeSeriesTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSets")
     public TableDataSet[] dataSets;
+
     public TimeSeriesTable withDataSets(TableDataSet[] dataSets) {
         this.dataSets = dataSets;
         return this;
@@ -40,9 +42,11 @@ public class TimeSeriesTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricVisualization")
     public TimeSeriesTableMetricVisualizationEnum metricVisualization;
+
     public TimeSeriesTable withMetricVisualization(TimeSeriesTableMetricVisualizationEnum metricVisualization) {
         this.metricVisualization = metricVisualization;
         return this;
     }
     
+    public TimeSeriesTable(){}
 }

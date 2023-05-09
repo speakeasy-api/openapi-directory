@@ -18,6 +18,7 @@ public class SasPortalCreateSignedDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodedDevice")
     public String encodedDevice;
+
     public SasPortalCreateSignedDeviceRequest withEncodedDevice(String encodedDevice) {
         this.encodedDevice = encodedDevice;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalCreateSignedDeviceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installerId")
     public String installerId;
+
     public SasPortalCreateSignedDeviceRequest withInstallerId(String installerId) {
         this.installerId = installerId;
         return this;
     }
     
+    public SasPortalCreateSignedDeviceRequest(){}
 }

@@ -15,6 +15,7 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomSecurityGroupId")
     public String customSecurityGroupId;
+
     public DefaultWorkspaceCreationProperties withCustomSecurityGroupId(String customSecurityGroupId) {
         this.customSecurityGroupId = customSecurityGroupId;
         return this;
@@ -23,6 +24,7 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultOu")
     public String defaultOu;
+
     public DefaultWorkspaceCreationProperties withDefaultOu(String defaultOu) {
         this.defaultOu = defaultOu;
         return this;
@@ -31,6 +33,7 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableInternetAccess")
     public Boolean enableInternetAccess;
+
     public DefaultWorkspaceCreationProperties withEnableInternetAccess(Boolean enableInternetAccess) {
         this.enableInternetAccess = enableInternetAccess;
         return this;
@@ -39,6 +42,7 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableMaintenanceMode")
     public Boolean enableMaintenanceMode;
+
     public DefaultWorkspaceCreationProperties withEnableMaintenanceMode(Boolean enableMaintenanceMode) {
         this.enableMaintenanceMode = enableMaintenanceMode;
         return this;
@@ -47,6 +51,7 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableWorkDocs")
     public Boolean enableWorkDocs;
+
     public DefaultWorkspaceCreationProperties withEnableWorkDocs(Boolean enableWorkDocs) {
         this.enableWorkDocs = enableWorkDocs;
         return this;
@@ -55,9 +60,11 @@ public class DefaultWorkspaceCreationProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserEnabledAsLocalAdministrator")
     public Boolean userEnabledAsLocalAdministrator;
+
     public DefaultWorkspaceCreationProperties withUserEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
         this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
         return this;
     }
     
+    public DefaultWorkspaceCreationProperties(){}
 }

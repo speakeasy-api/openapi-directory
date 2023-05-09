@@ -12,9 +12,13 @@ public class StartGeneratedCodeJobRequestBody {
      */
     @JsonProperty("Generator")
     public StartGeneratedCodeJobRequestBodyGenerator generator;
+
     public StartGeneratedCodeJobRequestBody withGenerator(StartGeneratedCodeJobRequestBodyGenerator generator) {
         this.generator = generator;
         return this;
     }
     
+    public StartGeneratedCodeJobRequestBody(@JsonProperty("Generator") StartGeneratedCodeJobRequestBodyGenerator generator) {
+        this.generator = generator;
+  }
 }

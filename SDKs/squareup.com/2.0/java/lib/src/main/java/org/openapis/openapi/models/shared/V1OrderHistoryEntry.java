@@ -18,6 +18,7 @@ public class V1OrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public V1OrderHistoryEntry withAction(String action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class V1OrderHistoryEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public V1OrderHistoryEntry withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
+    public V1OrderHistoryEntry(){}
 }

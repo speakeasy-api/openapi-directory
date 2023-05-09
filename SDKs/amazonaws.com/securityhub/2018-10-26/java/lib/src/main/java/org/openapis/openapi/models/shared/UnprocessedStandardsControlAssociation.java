@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UnprocessedStandardsControlAssociation {
     @JsonProperty("ErrorCode")
     public UnprocessedErrorCodeEnum errorCode;
+
     public UnprocessedStandardsControlAssociation withErrorCode(UnprocessedErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -22,6 +23,7 @@ public class UnprocessedStandardsControlAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorReason")
     public String errorReason;
+
     public UnprocessedStandardsControlAssociation withErrorReason(String errorReason) {
         this.errorReason = errorReason;
         return this;
@@ -29,9 +31,14 @@ public class UnprocessedStandardsControlAssociation {
     
     @JsonProperty("StandardsControlAssociationId")
     public StandardsControlAssociationId standardsControlAssociationId;
+
     public UnprocessedStandardsControlAssociation withStandardsControlAssociationId(StandardsControlAssociationId standardsControlAssociationId) {
         this.standardsControlAssociationId = standardsControlAssociationId;
         return this;
     }
     
+    public UnprocessedStandardsControlAssociation(@JsonProperty("ErrorCode") UnprocessedErrorCodeEnum errorCode, @JsonProperty("StandardsControlAssociationId") StandardsControlAssociationId standardsControlAssociationId) {
+        this.errorCode = errorCode;
+        this.standardsControlAssociationId = standardsControlAssociationId;
+  }
 }

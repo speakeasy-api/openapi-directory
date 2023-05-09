@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RandomProductList {
     @JsonProperty("products")
     public Product[] products;
+
     public RandomProductList withProducts(Product[] products) {
         this.products = products;
         return this;
     }
     
+    public RandomProductList(@JsonProperty("products") Product[] products) {
+        this.products = products;
+  }
 }

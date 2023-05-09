@@ -12,6 +12,7 @@ public class RankingWeekPolls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poll")
     public String poll;
+
     public RankingWeekPolls withPoll(String poll) {
         this.poll = poll;
         return this;
@@ -20,9 +21,11 @@ public class RankingWeekPolls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranks")
     public RankingWeekPollsRanks[] ranks;
+
     public RankingWeekPolls withRanks(RankingWeekPollsRanks[] ranks) {
         this.ranks = ranks;
         return this;
     }
     
+    public RankingWeekPolls(){}
 }

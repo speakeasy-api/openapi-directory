@@ -14,6 +14,7 @@ public class GetStatisticsCharging200ApplicationJSON {
      */
     @JsonProperty("costSum")
     public Double costSum;
+
     public GetStatisticsCharging200ApplicationJSON withCostSum(Double costSum) {
         this.costSum = costSum;
         return this;
@@ -25,6 +26,7 @@ public class GetStatisticsCharging200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public GetStatisticsCharging200ApplicationJSON withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -35,6 +37,7 @@ public class GetStatisticsCharging200ApplicationJSON {
      */
     @JsonProperty("kw")
     public GetStatisticsCharging200ApplicationJSONKw kw;
+
     public GetStatisticsCharging200ApplicationJSON withKw(GetStatisticsCharging200ApplicationJSONKw kw) {
         this.kw = kw;
         return this;
@@ -45,6 +48,7 @@ public class GetStatisticsCharging200ApplicationJSON {
      */
     @JsonProperty("kwhSum")
     public Double kwhSum;
+
     public GetStatisticsCharging200ApplicationJSON withKwhSum(Double kwhSum) {
         this.kwhSum = kwhSum;
         return this;
@@ -55,9 +59,17 @@ public class GetStatisticsCharging200ApplicationJSON {
      */
     @JsonProperty("price")
     public GetStatisticsCharging200ApplicationJSONPrice price;
+
     public GetStatisticsCharging200ApplicationJSON withPrice(GetStatisticsCharging200ApplicationJSONPrice price) {
         this.price = price;
         return this;
     }
     
+    public GetStatisticsCharging200ApplicationJSON(@JsonProperty("costSum") Double costSum, @JsonProperty("date") LocalDate date, @JsonProperty("kw") GetStatisticsCharging200ApplicationJSONKw kw, @JsonProperty("kwhSum") Double kwhSum, @JsonProperty("price") GetStatisticsCharging200ApplicationJSONPrice price) {
+        this.costSum = costSum;
+        this.date = date;
+        this.kw = kw;
+        this.kwhSum = kwhSum;
+        this.price = price;
+  }
 }

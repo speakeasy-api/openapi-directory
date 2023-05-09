@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetAnalyzeIamPolicyResponse {
@@ -12,6 +13,7 @@ public class CloudassetAnalyzeIamPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeIamPolicyResponse analyzeIamPolicyResponse;
+
     public CloudassetAnalyzeIamPolicyResponse withAnalyzeIamPolicyResponse(org.openapis.openapi.models.shared.AnalyzeIamPolicyResponse analyzeIamPolicyResponse) {
         this.analyzeIamPolicyResponse = analyzeIamPolicyResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetAnalyzeIamPolicyResponse {
     
     
     public String contentType;
+
     public CloudassetAnalyzeIamPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetAnalyzeIamPolicyResponse {
     
     
     public Integer statusCode;
+
     public CloudassetAnalyzeIamPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetAnalyzeIamPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetAnalyzeIamPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetAnalyzeIamPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

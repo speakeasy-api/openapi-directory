@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedServingConfigIds")
     public String[] associatedServingConfigIds;
+
     public GoogleCloudRetailV2Control withAssociatedServingConfigIds(String[] associatedServingConfigIds) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2Control withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2Control withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudRetailV2Rule rule;
+
     public GoogleCloudRetailV2Control withRule(GoogleCloudRetailV2Rule rule) {
         this.rule = rule;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSolutionUseCase")
     public GoogleCloudRetailV2ControlSearchSolutionUseCaseEnum[] searchSolutionUseCase;
+
     public GoogleCloudRetailV2Control withSearchSolutionUseCase(GoogleCloudRetailV2ControlSearchSolutionUseCaseEnum[] searchSolutionUseCase) {
         this.searchSolutionUseCase = searchSolutionUseCase;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRetailV2Control {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2ControlSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2Control withSolutionTypes(GoogleCloudRetailV2ControlSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
     }
     
+    public GoogleCloudRetailV2Control(){}
 }

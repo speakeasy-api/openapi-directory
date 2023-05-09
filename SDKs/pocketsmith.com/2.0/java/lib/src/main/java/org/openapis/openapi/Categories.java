@@ -52,11 +52,9 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCategoriesIdResponse res = new org.openapis.openapi.models.operations.DeleteCategoriesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteCategoriesIdResponse res = new org.openapis.openapi.models.operations.DeleteCategoriesIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,12 +92,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCategoriesIdResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdResponse() {{
+        org.openapis.openapi.models.operations.GetCategoriesIdResponse res = new org.openapis.openapi.models.operations.GetCategoriesIdResponse(contentType, httpRes.statusCode()) {{
             category = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,12 +138,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUsersIdCategoriesResponse res = new org.openapis.openapi.models.operations.GetUsersIdCategoriesResponse() {{
+        org.openapis.openapi.models.operations.GetUsersIdCategoriesResponse res = new org.openapis.openapi.models.operations.GetUsersIdCategoriesResponse(contentType, httpRes.statusCode()) {{
             categories = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -192,12 +186,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUsersIdCategoriesResponse res = new org.openapis.openapi.models.operations.PostUsersIdCategoriesResponse() {{
+        org.openapis.openapi.models.operations.PostUsersIdCategoriesResponse res = new org.openapis.openapi.models.operations.PostUsersIdCategoriesResponse(contentType, httpRes.statusCode()) {{
             category = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -242,12 +234,10 @@ public class Categories {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutCategoriesIdResponse res = new org.openapis.openapi.models.operations.PutCategoriesIdResponse() {{
+        org.openapis.openapi.models.operations.PutCategoriesIdResponse res = new org.openapis.openapi.models.operations.PutCategoriesIdResponse(contentType, httpRes.statusCode()) {{
             category = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

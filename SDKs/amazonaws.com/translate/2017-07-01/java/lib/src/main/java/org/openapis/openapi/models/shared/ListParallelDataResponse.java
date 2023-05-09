@@ -15,6 +15,7 @@ public class ListParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListParallelDataResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListParallelDataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelDataPropertiesList")
     public ParallelDataProperties[] parallelDataPropertiesList;
+
     public ListParallelDataResponse withParallelDataPropertiesList(ParallelDataProperties[] parallelDataPropertiesList) {
         this.parallelDataPropertiesList = parallelDataPropertiesList;
         return this;
     }
     
+    public ListParallelDataResponse(){}
 }

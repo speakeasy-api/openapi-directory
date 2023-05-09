@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCustomersIdFieldsFieldIdResponse {
     
     public String contentType;
+
     public GetCustomersIdFieldsFieldIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomerAdditionalField customerAdditionalField;
+
     public GetCustomersIdFieldsFieldIdResponse withCustomerAdditionalField(org.openapis.openapi.models.shared.CustomerAdditionalField customerAdditionalField) {
         this.customerAdditionalField = customerAdditionalField;
         return this;
@@ -29,6 +32,7 @@ public class GetCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetCustomersIdFieldsFieldIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetCustomersIdFieldsFieldIdResponse {
     
     
     public Integer statusCode;
+
     public GetCustomersIdFieldsFieldIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCustomersIdFieldsFieldIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCustomersIdFieldsFieldIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCustomersIdFieldsFieldIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

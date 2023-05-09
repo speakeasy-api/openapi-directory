@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileByVersionRequest {
@@ -12,6 +13,7 @@ public class GetProfileByVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetProfileByVersionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetProfileByVersionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetProfileByVersionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetProfileByVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public GetProfileByVersionRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -42,9 +46,16 @@ public class GetProfileByVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileVersionId")
     public String profileVersionId;
+
     public GetProfileByVersionRequest withProfileVersionId(String profileVersionId) {
         this.profileVersionId = profileVersionId;
         return this;
     }
     
+    public GetProfileByVersionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("profileId") String profileId, @JsonProperty("profileVersionId") String profileVersionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.profileId = profileId;
+        this.profileVersionId = profileVersionId;
+  }
 }

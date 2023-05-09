@@ -15,6 +15,7 @@ public class GetFaceDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Faces")
     public FaceDetection[] faces;
+
     public GetFaceDetectionResponse withFaces(FaceDetection[] faces) {
         this.faces = faces;
         return this;
@@ -23,6 +24,7 @@ public class GetFaceDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public VideoJobStatusEnum jobStatus;
+
     public GetFaceDetectionResponse withJobStatus(VideoJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -31,6 +33,7 @@ public class GetFaceDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetFaceDetectionResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,6 +42,7 @@ public class GetFaceDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public GetFaceDetectionResponse withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -47,9 +51,11 @@ public class GetFaceDetectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VideoMetadata")
     public VideoMetadata videoMetadata;
+
     public GetFaceDetectionResponse withVideoMetadata(VideoMetadata videoMetadata) {
         this.videoMetadata = videoMetadata;
         return this;
     }
     
+    public GetFaceDetectionResponse(){}
 }

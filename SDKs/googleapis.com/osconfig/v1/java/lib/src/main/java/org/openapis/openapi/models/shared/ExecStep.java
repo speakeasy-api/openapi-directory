@@ -18,6 +18,7 @@ public class ExecStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linuxExecStepConfig")
     public ExecStepConfig linuxExecStepConfig;
+
     public ExecStep withLinuxExecStepConfig(ExecStepConfig linuxExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         return this;
@@ -29,9 +30,11 @@ public class ExecStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windowsExecStepConfig")
     public ExecStepConfig windowsExecStepConfig;
+
     public ExecStep withWindowsExecStepConfig(ExecStepConfig windowsExecStepConfig) {
         this.windowsExecStepConfig = windowsExecStepConfig;
         return this;
     }
     
+    public ExecStep(){}
 }

@@ -12,6 +12,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=account_id")
     public Long accountId;
+
     public PutV2PeopleIdJsonRequestBody withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +23,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=city")
     public String city;
+
     public PutV2PeopleIdJsonRequestBody withCity(String city) {
         this.city = city;
         return this;
@@ -32,6 +34,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=contact_restrictions")
     public String[] contactRestrictions;
+
     public PutV2PeopleIdJsonRequestBody withContactRestrictions(String[] contactRestrictions) {
         this.contactRestrictions = contactRestrictions;
         return this;
@@ -42,6 +45,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=country")
     public String country;
+
     public PutV2PeopleIdJsonRequestBody withCountry(String country) {
         this.country = country;
         return this;
@@ -60,6 +64,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id")
     public String crmId;
+
     public PutV2PeopleIdJsonRequestBody withCrmId(String crmId) {
         this.crmId = crmId;
         return this;
@@ -70,6 +75,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=crm_id_type")
     public String crmIdType;
+
     public PutV2PeopleIdJsonRequestBody withCrmIdType(String crmIdType) {
         this.crmIdType = crmIdType;
         return this;
@@ -80,6 +86,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=custom_fields,json")
     public java.util.Map<String, Object> customFields;
+
     public PutV2PeopleIdJsonRequestBody withCustomFields(java.util.Map<String, Object> customFields) {
         this.customFields = customFields;
         return this;
@@ -90,6 +97,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=do_not_contact")
     public Boolean doNotContact;
+
     public PutV2PeopleIdJsonRequestBody withDoNotContact(Boolean doNotContact) {
         this.doNotContact = doNotContact;
         return this;
@@ -100,6 +108,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=email_address")
     public String emailAddress;
+
     public PutV2PeopleIdJsonRequestBody withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -110,6 +119,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=first_name")
     public String firstName;
+
     public PutV2PeopleIdJsonRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -120,6 +130,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=home_phone")
     public String homePhone;
+
     public PutV2PeopleIdJsonRequestBody withHomePhone(String homePhone) {
         this.homePhone = homePhone;
         return this;
@@ -130,6 +141,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=import_id")
     public Long importId;
+
     public PutV2PeopleIdJsonRequestBody withImportId(Long importId) {
         this.importId = importId;
         return this;
@@ -140,6 +152,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=job_seniority")
     public String jobSeniority;
+
     public PutV2PeopleIdJsonRequestBody withJobSeniority(String jobSeniority) {
         this.jobSeniority = jobSeniority;
         return this;
@@ -150,6 +163,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=last_name")
     public String lastName;
+
     public PutV2PeopleIdJsonRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -160,6 +174,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=linkedin_url")
     public String linkedinUrl;
+
     public PutV2PeopleIdJsonRequestBody withLinkedinUrl(String linkedinUrl) {
         this.linkedinUrl = linkedinUrl;
         return this;
@@ -170,6 +185,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=locale")
     public String locale;
+
     public PutV2PeopleIdJsonRequestBody withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -180,6 +196,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=mobile_phone")
     public String mobilePhone;
+
     public PutV2PeopleIdJsonRequestBody withMobilePhone(String mobilePhone) {
         this.mobilePhone = mobilePhone;
         return this;
@@ -190,6 +207,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=owner_id")
     public Long ownerId;
+
     public PutV2PeopleIdJsonRequestBody withOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -200,6 +218,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_company_industry")
     public String personCompanyIndustry;
+
     public PutV2PeopleIdJsonRequestBody withPersonCompanyIndustry(String personCompanyIndustry) {
         this.personCompanyIndustry = personCompanyIndustry;
         return this;
@@ -210,6 +229,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_company_name")
     public String personCompanyName;
+
     public PutV2PeopleIdJsonRequestBody withPersonCompanyName(String personCompanyName) {
         this.personCompanyName = personCompanyName;
         return this;
@@ -220,6 +240,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_company_website")
     public String personCompanyWebsite;
+
     public PutV2PeopleIdJsonRequestBody withPersonCompanyWebsite(String personCompanyWebsite) {
         this.personCompanyWebsite = personCompanyWebsite;
         return this;
@@ -230,6 +251,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=person_stage_id")
     public Long personStageId;
+
     public PutV2PeopleIdJsonRequestBody withPersonStageId(Long personStageId) {
         this.personStageId = personStageId;
         return this;
@@ -240,6 +262,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=personal_email_address")
     public String personalEmailAddress;
+
     public PutV2PeopleIdJsonRequestBody withPersonalEmailAddress(String personalEmailAddress) {
         this.personalEmailAddress = personalEmailAddress;
         return this;
@@ -250,6 +273,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=personal_website")
     public String personalWebsite;
+
     public PutV2PeopleIdJsonRequestBody withPersonalWebsite(String personalWebsite) {
         this.personalWebsite = personalWebsite;
         return this;
@@ -260,6 +284,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=phone")
     public String phone;
+
     public PutV2PeopleIdJsonRequestBody withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -270,6 +295,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=phone_extension")
     public String phoneExtension;
+
     public PutV2PeopleIdJsonRequestBody withPhoneExtension(String phoneExtension) {
         this.phoneExtension = phoneExtension;
         return this;
@@ -280,6 +306,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=secondary_email_address")
     public String secondaryEmailAddress;
+
     public PutV2PeopleIdJsonRequestBody withSecondaryEmailAddress(String secondaryEmailAddress) {
         this.secondaryEmailAddress = secondaryEmailAddress;
         return this;
@@ -290,6 +317,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=state")
     public String state;
+
     public PutV2PeopleIdJsonRequestBody withState(String state) {
         this.state = state;
         return this;
@@ -300,6 +328,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=tags")
     public String[] tags;
+
     public PutV2PeopleIdJsonRequestBody withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -310,6 +339,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=title")
     public String title;
+
     public PutV2PeopleIdJsonRequestBody withTitle(String title) {
         this.title = title;
         return this;
@@ -320,6 +350,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=twitter_handle")
     public String twitterHandle;
+
     public PutV2PeopleIdJsonRequestBody withTwitterHandle(String twitterHandle) {
         this.twitterHandle = twitterHandle;
         return this;
@@ -330,6 +361,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=work_city")
     public String workCity;
+
     public PutV2PeopleIdJsonRequestBody withWorkCity(String workCity) {
         this.workCity = workCity;
         return this;
@@ -340,6 +372,7 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=work_country")
     public String workCountry;
+
     public PutV2PeopleIdJsonRequestBody withWorkCountry(String workCountry) {
         this.workCountry = workCountry;
         return this;
@@ -350,9 +383,11 @@ public class PutV2PeopleIdJsonRequestBody {
      */
     @SpeakeasyMetadata("form:name=work_state")
     public String workState;
+
     public PutV2PeopleIdJsonRequestBody withWorkState(String workState) {
         this.workState = workState;
         return this;
     }
     
+    public PutV2PeopleIdJsonRequestBody(){}
 }

@@ -14,6 +14,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("BasicAttributes")
     @SpeakeasyMetadata("form:name=BasicAttributes,json")
     public BillbeeInterfacesOrderMultiLanguageString[] basicAttributes;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withBasicAttributes(BillbeeInterfacesOrderMultiLanguageString[] basicAttributes) {
         this.basicAttributes = basicAttributes;
         return this;
@@ -23,6 +24,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("BillOfMaterial")
     @SpeakeasyMetadata("form:name=BillOfMaterial,json")
     public BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel[] billOfMaterial;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withBillOfMaterial(BillbeeInterfacesBillbeeAPIModelBomSubArticleAPIModel[] billOfMaterial) {
         this.billOfMaterial = billOfMaterial;
         return this;
@@ -32,6 +34,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Category1")
     @SpeakeasyMetadata("form:name=Category1,json")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category1;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCategory1(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category1) {
         this.category1 = category1;
         return this;
@@ -41,6 +44,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Category2")
     @SpeakeasyMetadata("form:name=Category2,json")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category2;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCategory2(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category2) {
         this.category2 = category2;
         return this;
@@ -50,6 +54,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Category3")
     @SpeakeasyMetadata("form:name=Category3,json")
     public BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category3;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCategory3(BillbeeInterfacesBillbeeAPIModelArticleCategoryAPIModel category3) {
         this.category3 = category3;
         return this;
@@ -59,6 +64,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Condition")
     @SpeakeasyMetadata("form:name=Condition")
     public Integer condition;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCondition(Integer condition) {
         this.condition = condition;
         return this;
@@ -68,6 +74,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("CostPrice")
     @SpeakeasyMetadata("form:name=CostPrice")
     public Double costPrice;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCostPrice(Double costPrice) {
         this.costPrice = costPrice;
         return this;
@@ -77,6 +84,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("CountryOfOrigin")
     @SpeakeasyMetadata("form:name=CountryOfOrigin")
     public String countryOfOrigin;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCountryOfOrigin(String countryOfOrigin) {
         this.countryOfOrigin = countryOfOrigin;
         return this;
@@ -86,6 +94,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("CustomFields")
     @SpeakeasyMetadata("form:name=CustomFields,json")
     public BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel[] customFields;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withCustomFields(BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldValueModel[] customFields) {
         this.customFields = customFields;
         return this;
@@ -95,6 +104,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("DeliveryTime")
     @SpeakeasyMetadata("form:name=DeliveryTime")
     public Integer deliveryTime;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withDeliveryTime(Integer deliveryTime) {
         this.deliveryTime = deliveryTime;
         return this;
@@ -104,6 +114,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Description")
     @SpeakeasyMetadata("form:name=Description,json")
     public BillbeeInterfacesOrderMultiLanguageString[] description;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withDescription(BillbeeInterfacesOrderMultiLanguageString[] description) {
         this.description = description;
         return this;
@@ -113,6 +124,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("EAN")
     @SpeakeasyMetadata("form:name=EAN")
     public String ean;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withEan(String ean) {
         this.ean = ean;
         return this;
@@ -122,6 +134,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("ExportDescription")
     @SpeakeasyMetadata("form:name=ExportDescription")
     public String exportDescription;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withExportDescription(String exportDescription) {
         this.exportDescription = exportDescription;
         return this;
@@ -131,6 +144,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("ExportDescriptionMultiLanguage")
     @SpeakeasyMetadata("form:name=ExportDescriptionMultiLanguage,json")
     public BillbeeInterfacesOrderMultiLanguageString[] exportDescriptionMultiLanguage;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withExportDescriptionMultiLanguage(BillbeeInterfacesOrderMultiLanguageString[] exportDescriptionMultiLanguage) {
         this.exportDescriptionMultiLanguage = exportDescriptionMultiLanguage;
         return this;
@@ -140,6 +154,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("HeightCm")
     @SpeakeasyMetadata("form:name=HeightCm")
     public Double heightCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withHeightCm(Double heightCm) {
         this.heightCm = heightCm;
         return this;
@@ -149,6 +164,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Long id;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withId(Long id) {
         this.id = id;
         return this;
@@ -158,6 +174,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Images")
     @SpeakeasyMetadata("form:name=Images,json")
     public BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel[] images;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withImages(BillbeeInterfacesBillbeeAPIModelArticleImageRelationAPIModel[] images) {
         this.images = images;
         return this;
@@ -167,6 +184,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("InvoiceText")
     @SpeakeasyMetadata("form:name=InvoiceText,json")
     public BillbeeInterfacesOrderMultiLanguageString[] invoiceText;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withInvoiceText(BillbeeInterfacesOrderMultiLanguageString[] invoiceText) {
         this.invoiceText = invoiceText;
         return this;
@@ -175,6 +193,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("IsCustomizable")
     @SpeakeasyMetadata("form:name=IsCustomizable")
     public Boolean isCustomizable;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withIsCustomizable(Boolean isCustomizable) {
         this.isCustomizable = isCustomizable;
         return this;
@@ -184,6 +203,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("IsDeactivated")
     @SpeakeasyMetadata("form:name=IsDeactivated")
     public Boolean isDeactivated;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withIsDeactivated(Boolean isDeactivated) {
         this.isDeactivated = isDeactivated;
         return this;
@@ -192,6 +212,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("IsDigital")
     @SpeakeasyMetadata("form:name=IsDigital")
     public Boolean isDigital;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withIsDigital(Boolean isDigital) {
         this.isDigital = isDigital;
         return this;
@@ -201,6 +222,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("LengthCm")
     @SpeakeasyMetadata("form:name=LengthCm")
     public Double lengthCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withLengthCm(Double lengthCm) {
         this.lengthCm = lengthCm;
         return this;
@@ -210,6 +232,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Manufacturer")
     @SpeakeasyMetadata("form:name=Manufacturer")
     public String manufacturer;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
         return this;
@@ -219,6 +242,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Materials")
     @SpeakeasyMetadata("form:name=Materials,json")
     public BillbeeInterfacesOrderMultiLanguageString[] materials;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withMaterials(BillbeeInterfacesOrderMultiLanguageString[] materials) {
         this.materials = materials;
         return this;
@@ -228,6 +252,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Occasion")
     @SpeakeasyMetadata("form:name=Occasion")
     public Integer occasion;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withOccasion(Integer occasion) {
         this.occasion = occasion;
         return this;
@@ -236,6 +261,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Price")
     @SpeakeasyMetadata("form:name=Price")
     public Double price;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withPrice(Double price) {
         this.price = price;
         return this;
@@ -245,6 +271,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Recipient")
     @SpeakeasyMetadata("form:name=Recipient")
     public Integer recipient;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withRecipient(Integer recipient) {
         this.recipient = recipient;
         return this;
@@ -254,6 +281,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SKU")
     @SpeakeasyMetadata("form:name=SKU")
     public String sku;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSku(String sku) {
         this.sku = sku;
         return this;
@@ -263,6 +291,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("ShippingProductId")
     @SpeakeasyMetadata("form:name=ShippingProductId")
     public Long shippingProductId;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withShippingProductId(Long shippingProductId) {
         this.shippingProductId = shippingProductId;
         return this;
@@ -272,6 +301,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("ShortDescription")
     @SpeakeasyMetadata("form:name=ShortDescription,json")
     public BillbeeInterfacesOrderMultiLanguageString[] shortDescription;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withShortDescription(BillbeeInterfacesOrderMultiLanguageString[] shortDescription) {
         this.shortDescription = shortDescription;
         return this;
@@ -281,6 +311,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldAmount")
     @SpeakeasyMetadata("form:name=SoldAmount")
     public Double soldAmount;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldAmount(Double soldAmount) {
         this.soldAmount = soldAmount;
         return this;
@@ -290,6 +321,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldAmountLast30Days")
     @SpeakeasyMetadata("form:name=SoldAmountLast30Days")
     public Double soldAmountLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldAmountLast30Days(Double soldAmountLast30Days) {
         this.soldAmountLast30Days = soldAmountLast30Days;
         return this;
@@ -299,6 +331,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldSumGross")
     @SpeakeasyMetadata("form:name=SoldSumGross")
     public Double soldSumGross;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldSumGross(Double soldSumGross) {
         this.soldSumGross = soldSumGross;
         return this;
@@ -308,6 +341,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldSumGrossLast30Days")
     @SpeakeasyMetadata("form:name=SoldSumGrossLast30Days")
     public Double soldSumGrossLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldSumGrossLast30Days(Double soldSumGrossLast30Days) {
         this.soldSumGrossLast30Days = soldSumGrossLast30Days;
         return this;
@@ -317,6 +351,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldSumNet")
     @SpeakeasyMetadata("form:name=SoldSumNet")
     public Double soldSumNet;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldSumNet(Double soldSumNet) {
         this.soldSumNet = soldSumNet;
         return this;
@@ -326,6 +361,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("SoldSumNetLast30Days")
     @SpeakeasyMetadata("form:name=SoldSumNetLast30Days")
     public Double soldSumNetLast30Days;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSoldSumNetLast30Days(Double soldSumNetLast30Days) {
         this.soldSumNetLast30Days = soldSumNetLast30Days;
         return this;
@@ -335,6 +371,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Sources")
     @SpeakeasyMetadata("form:name=Sources,json")
     public BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel[] sources;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withSources(BillbeeInterfacesBillbeeAPIModelArticleSourceAPIModel[] sources) {
         this.sources = sources;
         return this;
@@ -344,6 +381,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("StockCode")
     @SpeakeasyMetadata("form:name=StockCode")
     public String stockCode;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStockCode(String stockCode) {
         this.stockCode = stockCode;
         return this;
@@ -353,6 +391,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("StockCurrent")
     @SpeakeasyMetadata("form:name=StockCurrent")
     public Double stockCurrent;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStockCurrent(Double stockCurrent) {
         this.stockCurrent = stockCurrent;
         return this;
@@ -362,6 +401,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("StockDesired")
     @SpeakeasyMetadata("form:name=StockDesired")
     public Double stockDesired;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStockDesired(Double stockDesired) {
         this.stockDesired = stockDesired;
         return this;
@@ -371,6 +411,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("StockReduceItemsPerSale")
     @SpeakeasyMetadata("form:name=StockReduceItemsPerSale")
     public Double stockReduceItemsPerSale;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStockReduceItemsPerSale(Double stockReduceItemsPerSale) {
         this.stockReduceItemsPerSale = stockReduceItemsPerSale;
         return this;
@@ -380,6 +421,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("StockWarning")
     @SpeakeasyMetadata("form:name=StockWarning")
     public Double stockWarning;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStockWarning(Double stockWarning) {
         this.stockWarning = stockWarning;
         return this;
@@ -389,6 +431,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Stocks")
     @SpeakeasyMetadata("form:name=Stocks,json")
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel[] stocks;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withStocks(BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel[] stocks) {
         this.stocks = stocks;
         return this;
@@ -398,6 +441,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Tags")
     @SpeakeasyMetadata("form:name=Tags,json")
     public BillbeeInterfacesOrderMultiLanguageString[] tags;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withTags(BillbeeInterfacesOrderMultiLanguageString[] tags) {
         this.tags = tags;
         return this;
@@ -407,6 +451,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("TaricNumber")
     @SpeakeasyMetadata("form:name=TaricNumber")
     public String taricNumber;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withTaricNumber(String taricNumber) {
         this.taricNumber = taricNumber;
         return this;
@@ -416,6 +461,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Title")
     @SpeakeasyMetadata("form:name=Title,json")
     public BillbeeInterfacesOrderMultiLanguageString[] title;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withTitle(BillbeeInterfacesOrderMultiLanguageString[] title) {
         this.title = title;
         return this;
@@ -424,6 +470,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Type")
     @SpeakeasyMetadata("form:name=Type")
     public Integer type;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withType(Integer type) {
         this.type = type;
         return this;
@@ -433,6 +480,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Unit")
     @SpeakeasyMetadata("form:name=Unit")
     public Integer unit;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withUnit(Integer unit) {
         this.unit = unit;
         return this;
@@ -442,6 +490,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("UnitsPerItem")
     @SpeakeasyMetadata("form:name=UnitsPerItem")
     public Double unitsPerItem;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withUnitsPerItem(Double unitsPerItem) {
         this.unitsPerItem = unitsPerItem;
         return this;
@@ -450,6 +499,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Vat1Rate")
     @SpeakeasyMetadata("form:name=Vat1Rate")
     public Double vat1Rate;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withVat1Rate(Double vat1Rate) {
         this.vat1Rate = vat1Rate;
         return this;
@@ -458,6 +508,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Vat2Rate")
     @SpeakeasyMetadata("form:name=Vat2Rate")
     public Double vat2Rate;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withVat2Rate(Double vat2Rate) {
         this.vat2Rate = vat2Rate;
         return this;
@@ -466,6 +517,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("VatIndex")
     @SpeakeasyMetadata("form:name=VatIndex")
     public Integer vatIndex;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withVatIndex(Integer vatIndex) {
         this.vatIndex = vatIndex;
         return this;
@@ -475,6 +527,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("Weight")
     @SpeakeasyMetadata("form:name=Weight")
     public Integer weight;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -484,6 +537,7 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("WeightNet")
     @SpeakeasyMetadata("form:name=WeightNet")
     public Integer weightNet;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withWeightNet(Integer weightNet) {
         this.weightNet = weightNet;
         return this;
@@ -493,9 +547,19 @@ public class BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput {
     @JsonProperty("WidthCm")
     @SpeakeasyMetadata("form:name=WidthCm")
     public Double widthCm;
+
     public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput withWidthCm(Double widthCm) {
         this.widthCm = widthCm;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelArticleAPIModelInput(@JsonProperty("IsCustomizable") Boolean isCustomizable, @JsonProperty("IsDigital") Boolean isDigital, @JsonProperty("Price") Double price, @JsonProperty("Type") Integer type, @JsonProperty("Vat1Rate") Double vat1Rate, @JsonProperty("Vat2Rate") Double vat2Rate, @JsonProperty("VatIndex") Integer vatIndex) {
+        this.isCustomizable = isCustomizable;
+        this.isDigital = isDigital;
+        this.price = price;
+        this.type = type;
+        this.vat1Rate = vat1Rate;
+        this.vat2Rate = vat2Rate;
+        this.vatIndex = vatIndex;
+  }
 }

@@ -17,6 +17,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public Comment withContent(String content) {
         this.content = content;
         return this;
@@ -27,6 +28,7 @@ public class Comment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Comment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Comment withEmail(String email) {
         this.email = email;
         return this;
@@ -43,6 +46,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Comment withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFacilitatorPost")
     public Boolean isFacilitatorPost;
+
     public Comment withIsFacilitatorPost(Boolean isFacilitatorPost) {
         this.isFacilitatorPost = isFacilitatorPost;
         return this;
@@ -59,6 +64,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moderation")
     public Moderation moderation;
+
     public Comment withModeration(Moderation moderation) {
         this.moderation = moderation;
         return this;
@@ -67,6 +73,7 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentCommentId")
     public String parentCommentId;
+
     public Comment withParentCommentId(String parentCommentId) {
         this.parentCommentId = parentCommentId;
         return this;
@@ -75,9 +82,11 @@ public class Comment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postId")
     public String postId;
+
     public Comment withPostId(String postId) {
         this.postId = postId;
         return this;
     }
     
+    public Comment(){}
 }

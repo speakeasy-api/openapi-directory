@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataSetImportTaskResponse {
@@ -12,6 +13,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDataSetImportTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object conflictException;
+
     public CreateDataSetImportTaskResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataSetImportTaskResponse {
     
     
     public String contentType;
+
     public CreateDataSetImportTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataSetImportTaskResponse createDataSetImportTaskResponse;
+
     public CreateDataSetImportTaskResponse withCreateDataSetImportTaskResponse(org.openapis.openapi.models.shared.CreateDataSetImportTaskResponse createDataSetImportTaskResponse) {
         this.createDataSetImportTaskResponse = createDataSetImportTaskResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object internalServerException;
+
     public CreateDataSetImportTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDataSetImportTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDataSetImportTaskResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDataSetImportTaskResponse {
     
     
     public Integer statusCode;
+
     public CreateDataSetImportTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDataSetImportTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataSetImportTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object throttlingException;
+
     public CreateDataSetImportTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateDataSetImportTaskResponse {
      */
     
     public Object validationException;
+
     public CreateDataSetImportTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDataSetImportTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

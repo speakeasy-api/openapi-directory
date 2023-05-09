@@ -15,6 +15,7 @@ public class DecimalColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumValue")
     public DecimalNumber maximumValue;
+
     public DecimalColumnStatisticsData withMaximumValue(DecimalNumber maximumValue) {
         this.maximumValue = maximumValue;
         return this;
@@ -23,6 +24,7 @@ public class DecimalColumnStatisticsData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumValue")
     public DecimalNumber minimumValue;
+
     public DecimalColumnStatisticsData withMinimumValue(DecimalNumber minimumValue) {
         this.minimumValue = minimumValue;
         return this;
@@ -30,6 +32,7 @@ public class DecimalColumnStatisticsData {
     
     @JsonProperty("NumberOfDistinctValues")
     public Long numberOfDistinctValues;
+
     public DecimalColumnStatisticsData withNumberOfDistinctValues(Long numberOfDistinctValues) {
         this.numberOfDistinctValues = numberOfDistinctValues;
         return this;
@@ -37,9 +40,14 @@ public class DecimalColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public DecimalColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
     }
     
+    public DecimalColumnStatisticsData(@JsonProperty("NumberOfDistinctValues") Long numberOfDistinctValues, @JsonProperty("NumberOfNulls") Long numberOfNulls) {
+        this.numberOfDistinctValues = numberOfDistinctValues;
+        this.numberOfNulls = numberOfNulls;
+  }
 }

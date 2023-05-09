@@ -18,6 +18,7 @@ public class CustomDns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dsRecords")
     public DsRecord[] dsRecords;
+
     public CustomDns withDsRecords(DsRecord[] dsRecords) {
         this.dsRecords = dsRecords;
         return this;
@@ -29,9 +30,11 @@ public class CustomDns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nameServers")
     public String[] nameServers;
+
     public CustomDns withNameServers(String[] nameServers) {
         this.nameServers = nameServers;
         return this;
     }
     
+    public CustomDns(){}
 }

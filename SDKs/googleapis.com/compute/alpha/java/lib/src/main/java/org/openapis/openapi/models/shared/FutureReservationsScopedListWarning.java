@@ -18,6 +18,7 @@ public class FutureReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public FutureReservationsScopedListWarningCodeEnum code;
+
     public FutureReservationsScopedListWarning withCode(FutureReservationsScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class FutureReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public FutureReservationsScopedListWarningData[] data;
+
     public FutureReservationsScopedListWarning withData(FutureReservationsScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class FutureReservationsScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public FutureReservationsScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public FutureReservationsScopedListWarning(){}
 }

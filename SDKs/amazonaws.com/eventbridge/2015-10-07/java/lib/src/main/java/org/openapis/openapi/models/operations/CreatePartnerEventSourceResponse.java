@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreatePartnerEventSourceResponse {
@@ -12,6 +13,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreatePartnerEventSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreatePartnerEventSourceResponse {
     
     
     public String contentType;
+
     public CreatePartnerEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreatePartnerEventSourceResponse createPartnerEventSourceResponse;
+
     public CreatePartnerEventSourceResponse withCreatePartnerEventSourceResponse(org.openapis.openapi.models.shared.CreatePartnerEventSourceResponse createPartnerEventSourceResponse) {
         this.createPartnerEventSourceResponse = createPartnerEventSourceResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public Object internalException;
+
     public CreatePartnerEventSourceResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public Object limitExceededException;
+
     public CreatePartnerEventSourceResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public Object operationDisabledException;
+
     public CreatePartnerEventSourceResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -69,6 +76,7 @@ public class CreatePartnerEventSourceResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreatePartnerEventSourceResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -76,6 +84,7 @@ public class CreatePartnerEventSourceResponse {
     
     
     public Integer statusCode;
+
     public CreatePartnerEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreatePartnerEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreatePartnerEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreatePartnerEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

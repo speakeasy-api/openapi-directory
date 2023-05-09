@@ -12,6 +12,7 @@ public class SubjectAlternativeNameDetails {
      */
     @JsonProperty("status")
     public SubjectAlternativeNameDetailsStatusEnum status;
+
     public SubjectAlternativeNameDetails withStatus(SubjectAlternativeNameDetailsStatusEnum status) {
         this.status = status;
         return this;
@@ -22,9 +23,14 @@ public class SubjectAlternativeNameDetails {
      */
     @JsonProperty("subjectAlternativeName")
     public String subjectAlternativeName;
+
     public SubjectAlternativeNameDetails withSubjectAlternativeName(String subjectAlternativeName) {
         this.subjectAlternativeName = subjectAlternativeName;
         return this;
     }
     
+    public SubjectAlternativeNameDetails(@JsonProperty("status") SubjectAlternativeNameDetailsStatusEnum status, @JsonProperty("subjectAlternativeName") String subjectAlternativeName) {
+        this.status = status;
+        this.subjectAlternativeName = subjectAlternativeName;
+  }
 }

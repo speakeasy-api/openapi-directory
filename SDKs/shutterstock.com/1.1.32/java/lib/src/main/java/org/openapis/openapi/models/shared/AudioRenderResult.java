@@ -25,6 +25,7 @@ public class AudioRenderResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_date")
     public OffsetDateTime createdDate;
+
     public AudioRenderResult withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -36,6 +37,7 @@ public class AudioRenderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public AudioRendersFilesList[] files;
+
     public AudioRenderResult withFiles(AudioRendersFilesList[] files) {
         this.files = files;
         return this;
@@ -46,6 +48,7 @@ public class AudioRenderResult {
      */
     @JsonProperty("id")
     public String id;
+
     public AudioRenderResult withId(String id) {
         this.id = id;
         return this;
@@ -57,6 +60,7 @@ public class AudioRenderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preset")
     public AudioRenderResultPresetEnum preset;
+
     public AudioRenderResult withPreset(AudioRenderResultPresetEnum preset) {
         this.preset = preset;
         return this;
@@ -68,6 +72,7 @@ public class AudioRenderResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progress_percent")
     public Long progressPercent;
+
     public AudioRenderResult withProgressPercent(Long progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -78,6 +83,7 @@ public class AudioRenderResult {
      */
     @JsonProperty("status")
     public AudioRenderResultStatusEnum status;
+
     public AudioRenderResult withStatus(AudioRenderResultStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +94,7 @@ public class AudioRenderResult {
      */
     @JsonProperty("timeline")
     public AudioRenderTimeline timeline;
+
     public AudioRenderResult withTimeline(AudioRenderTimeline timeline) {
         this.timeline = timeline;
         return this;
@@ -101,9 +108,15 @@ public class AudioRenderResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_date")
     public OffsetDateTime updatedDate;
+
     public AudioRenderResult withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public AudioRenderResult(@JsonProperty("id") String id, @JsonProperty("status") AudioRenderResultStatusEnum status, @JsonProperty("timeline") AudioRenderTimeline timeline) {
+        this.id = id;
+        this.status = status;
+        this.timeline = timeline;
+  }
 }

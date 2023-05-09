@@ -22,6 +22,7 @@ public class Query {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public Query withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryId")
     public String queryId;
+
     public Query withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -38,9 +40,11 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryStatus")
     public QueryStatusEnum queryStatus;
+
     public Query withQueryStatus(QueryStatusEnum queryStatus) {
         this.queryStatus = queryStatus;
         return this;
     }
     
+    public Query(){}
 }

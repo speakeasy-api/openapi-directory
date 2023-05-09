@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AgentStoreSetRequest {
@@ -12,6 +13,7 @@ public class AgentStoreSetRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public AgentStoreSetRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class AgentStoreSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public AgentStoreSetRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -32,6 +35,7 @@ public class AgentStoreSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=persist")
     public Integer persist;
+
     public AgentStoreSetRequest withPersist(Integer persist) {
         this.persist = persist;
         return this;
@@ -42,9 +46,15 @@ public class AgentStoreSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=var")
     public String var;
+
     public AgentStoreSetRequest withVar(String var) {
         this.var = var;
         return this;
     }
     
+    public AgentStoreSetRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("persist") Integer persist, @JsonProperty("var") String var) {
+        this.agentNum = agentNum;
+        this.persist = persist;
+        this.var = var;
+  }
 }

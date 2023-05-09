@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeModelCardExportJobResponse {
     
     public String contentType;
+
     public DescribeModelCardExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeModelCardExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeModelCardExportJobResponse describeModelCardExportJobResponse;
+
     public DescribeModelCardExportJobResponse withDescribeModelCardExportJobResponse(org.openapis.openapi.models.shared.DescribeModelCardExportJobResponse describeModelCardExportJobResponse) {
         this.describeModelCardExportJobResponse = describeModelCardExportJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeModelCardExportJobResponse {
      */
     
     public Object resourceNotFound;
+
     public DescribeModelCardExportJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -36,6 +40,7 @@ public class DescribeModelCardExportJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeModelCardExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeModelCardExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeModelCardExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeModelCardExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

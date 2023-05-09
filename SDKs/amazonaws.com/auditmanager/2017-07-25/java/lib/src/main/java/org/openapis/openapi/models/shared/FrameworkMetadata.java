@@ -15,6 +15,7 @@ public class FrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complianceType")
     public String complianceType;
+
     public FrameworkMetadata withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class FrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FrameworkMetadata withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class FrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logo")
     public String logo;
+
     public FrameworkMetadata withLogo(String logo) {
         this.logo = logo;
         return this;
@@ -39,9 +42,11 @@ public class FrameworkMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FrameworkMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public FrameworkMetadata(){}
 }

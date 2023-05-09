@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DataflowProjectsLocationsJobsDebugSendCaptureSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption1 option1;
+
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurity withOption1(DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DataflowProjectsLocationsJobsDebugSendCaptureSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption2 option2;
+
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurity withOption2(DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DataflowProjectsLocationsJobsDebugSendCaptureSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption3 option3;
+
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurity withOption3(DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DataflowProjectsLocationsJobsDebugSendCaptureSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption4 option4;
+
     public DataflowProjectsLocationsJobsDebugSendCaptureSecurity withOption4(DataflowProjectsLocationsJobsDebugSendCaptureSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DataflowProjectsLocationsJobsDebugSendCaptureSecurity(){}
 }

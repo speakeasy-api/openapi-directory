@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEndpointResponse {
@@ -12,6 +13,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateEndpointResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEndpointResponse {
     
     
     public String contentType;
+
     public UpdateEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object internalException;
+
     public UpdateEndpointResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEndpointResponse {
     
     
     public Integer statusCode;
+
     public UpdateEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class UpdateEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEndpointResponse updateEndpointResponse;
+
     public UpdateEndpointResponse withUpdateEndpointResponse(org.openapis.openapi.models.shared.UpdateEndpointResponse updateEndpointResponse) {
         this.updateEndpointResponse = updateEndpointResponse;
         return this;
     }
     
+    public UpdateEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

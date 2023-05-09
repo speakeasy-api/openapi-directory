@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PatientMessagesCreateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public PatientMessagesCreateRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -16,6 +17,7 @@ public class PatientMessagesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public PatientMessagesCreateRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -23,9 +25,11 @@ public class PatientMessagesCreateRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public PatientMessagesCreateRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public PatientMessagesCreateRequest(){}
 }

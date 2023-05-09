@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureDomainRequest {
@@ -12,6 +13,7 @@ public class ConfigureDomainRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.EditDomainWillRenewRequest editDomainWillRenewRequest;
+
     public ConfigureDomainRequest withEditDomainWillRenewRequest(org.openapis.openapi.models.shared.EditDomainWillRenewRequest editDomainWillRenewRequest) {
         this.editDomainWillRenewRequest = editDomainWillRenewRequest;
         return this;
@@ -22,6 +24,7 @@ public class ConfigureDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ConfigureDomainRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class ConfigureDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ConfigureDomainRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
     }
     
+    public ConfigureDomainRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+  }
 }

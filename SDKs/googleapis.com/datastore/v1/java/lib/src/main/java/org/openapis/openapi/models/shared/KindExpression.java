@@ -18,9 +18,11 @@ public class KindExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public KindExpression withName(String name) {
         this.name = name;
         return this;
     }
     
+    public KindExpression(){}
 }

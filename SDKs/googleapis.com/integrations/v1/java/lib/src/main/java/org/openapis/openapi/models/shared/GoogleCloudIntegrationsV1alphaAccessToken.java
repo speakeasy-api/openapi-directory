@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaAccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public GoogleCloudIntegrationsV1alphaAccessToken withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaAccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTokenExpireTime")
     public String accessTokenExpireTime;
+
     public GoogleCloudIntegrationsV1alphaAccessToken withAccessTokenExpireTime(String accessTokenExpireTime) {
         this.accessTokenExpireTime = accessTokenExpireTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaAccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public GoogleCloudIntegrationsV1alphaAccessToken withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaAccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshTokenExpireTime")
     public String refreshTokenExpireTime;
+
     public GoogleCloudIntegrationsV1alphaAccessToken withRefreshTokenExpireTime(String refreshTokenExpireTime) {
         this.refreshTokenExpireTime = refreshTokenExpireTime;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaAccessToken {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenType")
     public String tokenType;
+
     public GoogleCloudIntegrationsV1alphaAccessToken withTokenType(String tokenType) {
         this.tokenType = tokenType;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaAccessToken(){}
 }

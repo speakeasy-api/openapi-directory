@@ -15,9 +15,11 @@ public class RepricingRuleEffectiveTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedTimePeriods")
     public RepricingRuleEffectiveTimeFixedTimePeriod[] fixedTimePeriods;
+
     public RepricingRuleEffectiveTime withFixedTimePeriods(RepricingRuleEffectiveTimeFixedTimePeriod[] fixedTimePeriods) {
         this.fixedTimePeriods = fixedTimePeriods;
         return this;
     }
     
+    public RepricingRuleEffectiveTime(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoresStoreIdTerminalSettingsResponse {
     
     public String contentType;
+
     public GetStoresStoreIdTerminalSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetStoresStoreIdTerminalSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetStoresStoreIdTerminalSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetStoresStoreIdTerminalSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoresStoreIdTerminalSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetStoresStoreIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetStoresStoreIdTerminalSettingsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class GetStoresStoreIdTerminalSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalSettings terminalSettings;
+
     public GetStoresStoreIdTerminalSettingsResponse withTerminalSettings(org.openapis.openapi.models.shared.TerminalSettings terminalSettings) {
         this.terminalSettings = terminalSettings;
         return this;
     }
     
+    public GetStoresStoreIdTerminalSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

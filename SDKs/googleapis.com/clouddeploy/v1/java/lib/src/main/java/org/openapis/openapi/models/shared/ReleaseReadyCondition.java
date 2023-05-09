@@ -18,9 +18,11 @@ public class ReleaseReadyCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public ReleaseReadyCondition withStatus(Boolean status) {
         this.status = status;
         return this;
     }
     
+    public ReleaseReadyCondition(){}
 }

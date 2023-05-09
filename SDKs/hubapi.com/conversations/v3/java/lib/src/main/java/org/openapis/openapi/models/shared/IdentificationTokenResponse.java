@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IdentificationTokenResponse {
     @JsonProperty("token")
     public String token;
+
     public IdentificationTokenResponse withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public IdentificationTokenResponse(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

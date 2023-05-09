@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HandshakeParty {
     @JsonProperty("Id")
     public String id;
+
     public HandshakeParty withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class HandshakeParty {
     
     @JsonProperty("Type")
     public HandshakePartyTypeEnum type;
+
     public HandshakeParty withType(HandshakePartyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public HandshakeParty(@JsonProperty("Id") String id, @JsonProperty("Type") HandshakePartyTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

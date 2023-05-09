@@ -60,11 +60,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddExampleResponse res = new org.openapis.openapi.models.operations.AddExampleResponse() {{
+        org.openapis.openapi.models.operations.AddExampleResponse res = new org.openapis.openapi.models.operations.AddExampleResponse(contentType, httpRes.statusCode()) {{
             example = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExamplesByLabel1Response res = new org.openapis.openapi.models.operations.GetExamplesByLabel1Response() {{
+        org.openapis.openapi.models.operations.GetExamplesByLabel1Response res = new org.openapis.openapi.models.operations.GetExamplesByLabel1Response(contentType, httpRes.statusCode()) {{
             exampleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExamples1Response res = new org.openapis.openapi.models.operations.GetExamples1Response() {{
+        org.openapis.openapi.models.operations.GetExamples1Response res = new org.openapis.openapi.models.operations.GetExamples1Response(contentType, httpRes.statusCode()) {{
             exampleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProvideFeedback1Response res = new org.openapis.openapi.models.operations.ProvideFeedback1Response() {{
+        org.openapis.openapi.models.operations.ProvideFeedback1Response res = new org.openapis.openapi.models.operations.ProvideFeedback1Response(contentType, httpRes.statusCode()) {{
             example = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +232,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatasetAsync1Response res = new org.openapis.openapi.models.operations.UpdateDatasetAsync1Response() {{
+        org.openapis.openapi.models.operations.UpdateDatasetAsync1Response res = new org.openapis.openapi.models.operations.UpdateDatasetAsync1Response(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +273,9 @@ public class VisionExamples {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDatasetAsync2Response res = new org.openapis.openapi.models.operations.UpdateDatasetAsync2Response() {{
+        org.openapis.openapi.models.operations.UpdateDatasetAsync2Response res = new org.openapis.openapi.models.operations.UpdateDatasetAsync2Response(contentType, httpRes.statusCode()) {{
             dataset = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

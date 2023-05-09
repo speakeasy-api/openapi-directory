@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupsGetStatisticsAggregatedSingleRequest {
@@ -12,6 +13,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=favourite")
     public Boolean favourite;
+
     public GroupsGetStatisticsAggregatedSingleRequest withFavourite(Boolean favourite) {
         this.favourite = favourite;
         return this;
@@ -22,6 +24,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDay")
     public String fromDay;
+
     public GroupsGetStatisticsAggregatedSingleRequest withFromDay(String fromDay) {
         this.fromDay = fromDay;
         return this;
@@ -32,6 +35,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hourly")
     public Boolean hourly;
+
     public GroupsGetStatisticsAggregatedSingleRequest withHourly(Boolean hourly) {
         this.hourly = hourly;
         return this;
@@ -42,6 +46,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public GroupsGetStatisticsAggregatedSingleStatusEnum status;
+
     public GroupsGetStatisticsAggregatedSingleRequest withStatus(GroupsGetStatisticsAggregatedSingleStatusEnum status) {
         this.status = status;
         return this;
@@ -52,6 +57,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public GroupsGetStatisticsAggregatedSingleRequest withTag(String tag) {
         this.tag = tag;
         return this;
@@ -62,6 +68,7 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeFrame")
     public GroupsGetStatisticsAggregatedSingleTimeFrameEnum timeFrame;
+
     public GroupsGetStatisticsAggregatedSingleRequest withTimeFrame(GroupsGetStatisticsAggregatedSingleTimeFrameEnum timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -72,9 +79,13 @@ public class GroupsGetStatisticsAggregatedSingleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDay")
     public String toDay;
+
     public GroupsGetStatisticsAggregatedSingleRequest withToDay(String toDay) {
         this.toDay = toDay;
         return this;
     }
     
+    public GroupsGetStatisticsAggregatedSingleRequest(@JsonProperty("timeFrame") GroupsGetStatisticsAggregatedSingleTimeFrameEnum timeFrame) {
+        this.timeFrame = timeFrame;
+  }
 }

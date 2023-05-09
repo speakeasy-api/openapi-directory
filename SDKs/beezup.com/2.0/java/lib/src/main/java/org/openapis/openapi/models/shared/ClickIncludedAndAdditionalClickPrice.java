@@ -15,6 +15,7 @@ public class ClickIncludedAndAdditionalClickPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalClickPrice")
     public Double additionalClickPrice;
+
     public ClickIncludedAndAdditionalClickPrice withAdditionalClickPrice(Double additionalClickPrice) {
         this.additionalClickPrice = additionalClickPrice;
         return this;
@@ -26,9 +27,11 @@ public class ClickIncludedAndAdditionalClickPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickIncluded")
     public Integer clickIncluded;
+
     public ClickIncludedAndAdditionalClickPrice withClickIncluded(Integer clickIncluded) {
         this.clickIncluded = clickIncluded;
         return this;
     }
     
+    public ClickIncludedAndAdditionalClickPrice(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StackSetSummary {
     
     public AutoDeployment autoDeployment;
+
     public StackSetSummary withAutoDeployment(AutoDeployment autoDeployment) {
         this.autoDeployment = autoDeployment;
         return this;
@@ -19,6 +20,7 @@ public class StackSetSummary {
     
     
     public String description;
+
     public StackSetSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class StackSetSummary {
     
     
     public StackDriftStatusEnum driftStatus;
+
     public StackSetSummary withDriftStatus(StackDriftStatusEnum driftStatus) {
         this.driftStatus = driftStatus;
         return this;
@@ -33,6 +36,7 @@ public class StackSetSummary {
     
     
     public OffsetDateTime lastDriftCheckTimestamp;
+
     public StackSetSummary withLastDriftCheckTimestamp(OffsetDateTime lastDriftCheckTimestamp) {
         this.lastDriftCheckTimestamp = lastDriftCheckTimestamp;
         return this;
@@ -40,6 +44,7 @@ public class StackSetSummary {
     
     
     public ManagedExecution managedExecution;
+
     public StackSetSummary withManagedExecution(ManagedExecution managedExecution) {
         this.managedExecution = managedExecution;
         return this;
@@ -47,6 +52,7 @@ public class StackSetSummary {
     
     
     public PermissionModelsEnum permissionModel;
+
     public StackSetSummary withPermissionModel(PermissionModelsEnum permissionModel) {
         this.permissionModel = permissionModel;
         return this;
@@ -54,6 +60,7 @@ public class StackSetSummary {
     
     
     public String stackSetId;
+
     public StackSetSummary withStackSetId(String stackSetId) {
         this.stackSetId = stackSetId;
         return this;
@@ -61,6 +68,7 @@ public class StackSetSummary {
     
     
     public String stackSetName;
+
     public StackSetSummary withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
@@ -68,9 +76,11 @@ public class StackSetSummary {
     
     
     public StackSetStatusEnum status;
+
     public StackSetSummary withStatus(StackSetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StackSetSummary(){}
 }

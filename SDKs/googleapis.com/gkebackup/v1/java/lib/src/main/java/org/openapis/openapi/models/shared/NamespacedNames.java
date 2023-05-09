@@ -18,9 +18,11 @@ public class NamespacedNames {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespacedNames")
     public NamespacedName[] namespacedNames;
+
     public NamespacedNames withNamespacedNames(NamespacedName[] namespacedNames) {
         this.namespacedNames = namespacedNames;
         return this;
     }
     
+    public NamespacedNames(){}
 }

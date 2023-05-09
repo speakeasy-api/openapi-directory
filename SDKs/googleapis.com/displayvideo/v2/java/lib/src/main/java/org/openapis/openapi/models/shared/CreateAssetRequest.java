@@ -15,9 +15,11 @@ public class CreateAssetRequest {
      */
     
     public String filename;
+
     public CreateAssetRequest withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public CreateAssetRequest(){}
 }

@@ -18,6 +18,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public Rule withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public Condition[] condition;
+
     public Rule withCondition(Condition[] condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerId")
     public String containerId;
+
     public Rule withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
@@ -51,6 +54,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public Rule withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -62,6 +66,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Rule withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public Rule withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -84,9 +90,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleId")
     public String ruleId;
+
     public Rule withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public Rule(){}
 }

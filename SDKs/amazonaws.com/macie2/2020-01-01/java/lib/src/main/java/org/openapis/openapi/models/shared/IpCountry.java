@@ -15,6 +15,7 @@ public class IpCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public IpCountry withCode(String code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class IpCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IpCountry withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IpCountry(){}
 }

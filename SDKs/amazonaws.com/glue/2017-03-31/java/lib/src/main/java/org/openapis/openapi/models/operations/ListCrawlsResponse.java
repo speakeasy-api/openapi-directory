@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCrawlsResponse {
     
     public String contentType;
+
     public ListCrawlsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCrawlsResponse {
      */
     
     public Object entityNotFoundException;
+
     public ListCrawlsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class ListCrawlsResponse {
      */
     
     public Object invalidInputException;
+
     public ListCrawlsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListCrawlsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCrawlsResponse listCrawlsResponse;
+
     public ListCrawlsResponse withListCrawlsResponse(org.openapis.openapi.models.shared.ListCrawlsResponse listCrawlsResponse) {
         this.listCrawlsResponse = listCrawlsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListCrawlsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListCrawlsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListCrawlsResponse {
     
     
     public Integer statusCode;
+
     public ListCrawlsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListCrawlsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCrawlsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListCrawlsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

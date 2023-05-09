@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSceneResponse {
@@ -12,6 +13,7 @@ public class CreateSceneResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateSceneResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateSceneResponse {
      */
     
     public Object conflictException;
+
     public CreateSceneResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateSceneResponse {
     
     
     public String contentType;
+
     public CreateSceneResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateSceneResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSceneResponse createSceneResponse;
+
     public CreateSceneResponse withCreateSceneResponse(org.openapis.openapi.models.shared.CreateSceneResponse createSceneResponse) {
         this.createSceneResponse = createSceneResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateSceneResponse {
      */
     
     public Object internalServerException;
+
     public CreateSceneResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateSceneResponse {
     
     
     public Integer statusCode;
+
     public CreateSceneResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateSceneResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSceneResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateSceneResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateSceneResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateSceneResponse {
      */
     
     public Object throttlingException;
+
     public CreateSceneResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateSceneResponse {
      */
     
     public Object validationException;
+
     public CreateSceneResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateSceneResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

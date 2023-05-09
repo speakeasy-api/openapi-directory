@@ -15,6 +15,7 @@ public class PreprintProviderTaxonomiesListTaxonomyAttributes {
      */
     
     public Long childCount;
+
     public PreprintProviderTaxonomiesListTaxonomyAttributes withChildCount(Long childCount) {
         this.childCount = childCount;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderTaxonomiesListTaxonomyAttributes {
      */
     
     public String[] parents;
+
     public PreprintProviderTaxonomiesListTaxonomyAttributes withParents(String[] parents) {
         this.parents = parents;
         return this;
@@ -35,9 +37,11 @@ public class PreprintProviderTaxonomiesListTaxonomyAttributes {
      */
     
     public String text;
+
     public PreprintProviderTaxonomiesListTaxonomyAttributes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public PreprintProviderTaxonomiesListTaxonomyAttributes(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TemplateVersionResponse {
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public TemplateVersionResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -22,6 +23,7 @@ public class TemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public TemplateVersionResponse withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -29,6 +31,7 @@ public class TemplateVersionResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public TemplateVersionResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -37,6 +40,7 @@ public class TemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public TemplateVersionResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -44,6 +48,7 @@ public class TemplateVersionResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public TemplateVersionResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -51,6 +56,7 @@ public class TemplateVersionResponse {
     
     @JsonProperty("TemplateType")
     public String templateType;
+
     public TemplateVersionResponse withTemplateType(String templateType) {
         this.templateType = templateType;
         return this;
@@ -59,9 +65,16 @@ public class TemplateVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public TemplateVersionResponse withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public TemplateVersionResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") String templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExecutionEngineConfig {
     @JsonProperty("Id")
     public String id;
+
     public ExecutionEngineConfig withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class ExecutionEngineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MasterInstanceSecurityGroupId")
     public String masterInstanceSecurityGroupId;
+
     public ExecutionEngineConfig withMasterInstanceSecurityGroupId(String masterInstanceSecurityGroupId) {
         this.masterInstanceSecurityGroupId = masterInstanceSecurityGroupId;
         return this;
@@ -30,9 +32,13 @@ public class ExecutionEngineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public ExecutionEngineTypeEnum type;
+
     public ExecutionEngineConfig withType(ExecutionEngineTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ExecutionEngineConfig(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

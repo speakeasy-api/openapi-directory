@@ -15,6 +15,7 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public ContextAppCreateCreated withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,6 +24,7 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("answer_url")
     public CallbackUrl answerUrl;
+
     public ContextAppCreateCreated withAnswerUrl(CallbackUrl answerUrl) {
         this.answerUrl = answerUrl;
         return this;
@@ -34,6 +36,7 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public ContextAppCreateCreated withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -42,6 +45,7 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event_url")
     public CallbackUrl eventUrl;
+
     public ContextAppCreateCreated withEventUrl(CallbackUrl eventUrl) {
         this.eventUrl = eventUrl;
         return this;
@@ -53,6 +57,7 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContextAppCreateCreated withName(String name) {
         this.name = name;
         return this;
@@ -64,9 +69,11 @@ public class ContextAppCreateCreated {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ContextAppCreateCreated withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ContextAppCreateCreated(){}
 }

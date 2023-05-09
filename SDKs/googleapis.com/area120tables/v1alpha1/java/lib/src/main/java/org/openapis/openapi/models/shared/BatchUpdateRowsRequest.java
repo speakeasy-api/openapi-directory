@@ -18,9 +18,11 @@ public class BatchUpdateRowsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public UpdateRowRequest[] requests;
+
     public BatchUpdateRowsRequest withRequests(UpdateRowRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchUpdateRowsRequest(){}
 }

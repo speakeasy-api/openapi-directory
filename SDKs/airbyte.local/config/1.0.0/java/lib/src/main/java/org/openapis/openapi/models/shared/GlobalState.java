@@ -12,6 +12,7 @@ public class GlobalState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shared_state")
     public java.util.Map<String, Object> sharedState;
+
     public GlobalState withSharedState(java.util.Map<String, Object> sharedState) {
         this.sharedState = sharedState;
         return this;
@@ -19,9 +20,13 @@ public class GlobalState {
     
     @JsonProperty("streamStates")
     public StreamState[] streamStates;
+
     public GlobalState withStreamStates(StreamState[] streamStates) {
         this.streamStates = streamStates;
         return this;
     }
     
+    public GlobalState(@JsonProperty("streamStates") StreamState[] streamStates) {
+        this.streamStates = streamStates;
+  }
 }

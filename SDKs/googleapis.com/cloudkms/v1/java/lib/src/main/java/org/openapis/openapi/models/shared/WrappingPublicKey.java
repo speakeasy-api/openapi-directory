@@ -18,9 +18,11 @@ public class WrappingPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pem")
     public String pem;
+
     public WrappingPublicKey withPem(String pem) {
         this.pem = pem;
         return this;
     }
     
+    public WrappingPublicKey(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WeekLastCompletedResponse {
     
     public String contentType;
+
     public WeekLastCompletedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WeekLastCompletedResponse {
     
     
     public Integer statusCode;
+
     public WeekLastCompletedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WeekLastCompletedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WeekLastCompletedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class WeekLastCompletedResponse {
     
     
     public Long weekLastCompleted200ApplicationJSONInteger;
+
     public WeekLastCompletedResponse withWeekLastCompleted200ApplicationJSONInteger(Long weekLastCompleted200ApplicationJSONInteger) {
         this.weekLastCompleted200ApplicationJSONInteger = weekLastCompleted200ApplicationJSONInteger;
         return this;
     }
     
+    public WeekLastCompletedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

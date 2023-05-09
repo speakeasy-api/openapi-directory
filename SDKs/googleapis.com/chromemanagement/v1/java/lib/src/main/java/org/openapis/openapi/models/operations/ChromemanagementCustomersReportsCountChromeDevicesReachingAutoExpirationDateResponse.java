@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse {
     
     public String contentType;
+
     public ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpir
      */
     
     public org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse googleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
+
     public ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse withGoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse(org.openapis.openapi.models.shared.GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse googleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse) {
         this.googleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse = googleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
         return this;
@@ -26,6 +29,7 @@ public class ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpir
     
     
     public Integer statusCode;
+
     public ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpir
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromemanagementCustomersReportsCountChromeDevicesReachingAutoExpirationDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -50,12 +50,10 @@ public class Folder {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FolderGetResponse res = new org.openapis.openapi.models.operations.FolderGetResponse() {{
+        org.openapis.openapi.models.operations.FolderGetResponse res = new org.openapis.openapi.models.operations.FolderGetResponse(contentType, httpRes.statusCode()) {{
             folderData = null;
             folderData = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

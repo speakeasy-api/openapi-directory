@@ -12,6 +12,7 @@ public class PostApiV1AccountsIdFollowRequestBody {
      */
     
     public Boolean notify;
+
     public PostApiV1AccountsIdFollowRequestBody withNotify(Boolean notify) {
         this.notify = notify;
         return this;
@@ -22,9 +23,11 @@ public class PostApiV1AccountsIdFollowRequestBody {
      */
     
     public Boolean reblogs;
+
     public PostApiV1AccountsIdFollowRequestBody withReblogs(Boolean reblogs) {
         this.reblogs = reblogs;
         return this;
     }
     
+    public PostApiV1AccountsIdFollowRequestBody(){}
 }

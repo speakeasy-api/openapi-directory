@@ -16,6 +16,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -26,6 +27,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public String bungieGlobalDisplayName;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -36,6 +38,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -46,6 +49,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Integer crossSaveOverride;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -56,6 +60,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public String displayName;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -66,6 +71,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public String iconPath;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -76,6 +82,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Boolean isPublic;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -86,6 +93,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Long membershipId;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -96,6 +104,7 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public Integer membershipType;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -106,9 +115,11 @@ public class DestinyResponsesDestinyLinkedProfilesResponseBnetMembership {
      */
     
     public String supplementalDisplayName;
+
     public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public DestinyResponsesDestinyLinkedProfilesResponseBnetMembership(){}
 }

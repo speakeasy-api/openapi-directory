@@ -18,6 +18,7 @@ public class Conversation {
      */
     @JsonProperty("accounts")
     public Account[] accounts;
+
     public Conversation withAccounts(Account[] accounts) {
         this.accounts = accounts;
         return this;
@@ -28,6 +29,7 @@ public class Conversation {
      */
     @JsonProperty("id")
     public String id;
+
     public Conversation withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Conversation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_status")
     public Status lastStatus;
+
     public Conversation withLastStatus(Status lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -50,9 +53,15 @@ public class Conversation {
      */
     @JsonProperty("unread")
     public Boolean unread;
+
     public Conversation withUnread(Boolean unread) {
         this.unread = unread;
         return this;
     }
     
+    public Conversation(@JsonProperty("accounts") Account[] accounts, @JsonProperty("id") String id, @JsonProperty("unread") Boolean unread) {
+        this.accounts = accounts;
+        this.id = id;
+        this.unread = unread;
+  }
 }

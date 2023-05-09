@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ManagedRuleState -  The status of a managed Contributor Insights rule. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ManagedRuleState {
     
     public String ruleName;
+
     public ManagedRuleState withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -19,9 +20,14 @@ public class ManagedRuleState {
     
     
     public String state;
+
     public ManagedRuleState withState(String state) {
         this.state = state;
         return this;
     }
     
+    public ManagedRuleState(@JsonProperty("RuleName") String ruleName, @JsonProperty("State") String state) {
+        this.ruleName = ruleName;
+        this.state = state;
+  }
 }

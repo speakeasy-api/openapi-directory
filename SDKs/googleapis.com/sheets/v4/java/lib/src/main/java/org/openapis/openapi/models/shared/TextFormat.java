@@ -18,6 +18,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bold")
     public Boolean bold;
+
     public TextFormat withBold(Boolean bold) {
         this.bold = bold;
         return this;
@@ -29,6 +30,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontFamily")
     public String fontFamily;
+
     public TextFormat withFontFamily(String fontFamily) {
         this.fontFamily = fontFamily;
         return this;
@@ -40,6 +42,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fontSize")
     public Integer fontSize;
+
     public TextFormat withFontSize(Integer fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -51,6 +54,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColor")
     public Color foregroundColor;
+
     public TextFormat withForegroundColor(Color foregroundColor) {
         this.foregroundColor = foregroundColor;
         return this;
@@ -62,6 +66,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("foregroundColorStyle")
     public ColorStyle foregroundColorStyle;
+
     public TextFormat withForegroundColorStyle(ColorStyle foregroundColorStyle) {
         this.foregroundColorStyle = foregroundColorStyle;
         return this;
@@ -73,6 +78,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("italic")
     public Boolean italic;
+
     public TextFormat withItalic(Boolean italic) {
         this.italic = italic;
         return this;
@@ -84,6 +90,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public Link link;
+
     public TextFormat withLink(Link link) {
         this.link = link;
         return this;
@@ -95,6 +102,7 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("strikethrough")
     public Boolean strikethrough;
+
     public TextFormat withStrikethrough(Boolean strikethrough) {
         this.strikethrough = strikethrough;
         return this;
@@ -106,9 +114,11 @@ public class TextFormat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("underline")
     public Boolean underline;
+
     public TextFormat withUnderline(Boolean underline) {
         this.underline = underline;
         return this;
     }
     
+    public TextFormat(){}
 }

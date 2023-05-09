@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDataSourceResponse {
@@ -12,6 +13,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object badRequestException;
+
     public UpdateDataSourceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateDataSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDataSourceResponse {
     
     
     public String contentType;
+
     public UpdateDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateDataSourceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object notFoundException;
+
     public UpdateDataSourceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateDataSourceResponse {
     
     
     public Integer statusCode;
+
     public UpdateDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDataSourceResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateDataSourceResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDataSourceResponse updateDataSourceResponse;
+
     public UpdateDataSourceResponse withUpdateDataSourceResponse(org.openapis.openapi.models.shared.UpdateDataSourceResponse updateDataSourceResponse) {
         this.updateDataSourceResponse = updateDataSourceResponse;
         return this;
     }
     
+    public UpdateDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBookingContactResponse {
     
     public String contentType;
+
     public UpdateBookingContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateBookingContactResponse {
     
     
     public Integer statusCode;
+
     public UpdateBookingContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateBookingContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBookingContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateBookingContactResponse {
      */
     
     public org.openapis.openapi.models.shared.Booking booking;
+
     public UpdateBookingContactResponse withBooking(org.openapis.openapi.models.shared.Booking booking) {
         this.booking = booking;
         return this;
@@ -43,6 +48,7 @@ public class UpdateBookingContactResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericError genericError;
+
     public UpdateBookingContactResponse withGenericError(org.openapis.openapi.models.shared.GenericError genericError) {
         this.genericError = genericError;
         return this;
@@ -53,9 +59,14 @@ public class UpdateBookingContactResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public UpdateBookingContactResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public UpdateBookingContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

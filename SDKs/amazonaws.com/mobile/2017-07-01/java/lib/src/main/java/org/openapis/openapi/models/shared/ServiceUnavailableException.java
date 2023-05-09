@@ -18,9 +18,11 @@ public class ServiceUnavailableException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ServiceUnavailableException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ServiceUnavailableException(){}
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class StackSetDriftDetectionDetails {
     
     public StackSetDriftDetectionStatusEnum driftDetectionStatus;
+
     public StackSetDriftDetectionDetails withDriftDetectionStatus(StackSetDriftDetectionStatusEnum driftDetectionStatus) {
         this.driftDetectionStatus = driftDetectionStatus;
         return this;
@@ -19,6 +20,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public StackSetDriftStatusEnum driftStatus;
+
     public StackSetDriftDetectionDetails withDriftStatus(StackSetDriftStatusEnum driftStatus) {
         this.driftStatus = driftStatus;
         return this;
@@ -26,6 +28,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public Long driftedStackInstancesCount;
+
     public StackSetDriftDetectionDetails withDriftedStackInstancesCount(Long driftedStackInstancesCount) {
         this.driftedStackInstancesCount = driftedStackInstancesCount;
         return this;
@@ -33,6 +36,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public Long failedStackInstancesCount;
+
     public StackSetDriftDetectionDetails withFailedStackInstancesCount(Long failedStackInstancesCount) {
         this.failedStackInstancesCount = failedStackInstancesCount;
         return this;
@@ -40,6 +44,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public Long inProgressStackInstancesCount;
+
     public StackSetDriftDetectionDetails withInProgressStackInstancesCount(Long inProgressStackInstancesCount) {
         this.inProgressStackInstancesCount = inProgressStackInstancesCount;
         return this;
@@ -47,6 +52,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public Long inSyncStackInstancesCount;
+
     public StackSetDriftDetectionDetails withInSyncStackInstancesCount(Long inSyncStackInstancesCount) {
         this.inSyncStackInstancesCount = inSyncStackInstancesCount;
         return this;
@@ -54,6 +60,7 @@ public class StackSetDriftDetectionDetails {
     
     
     public OffsetDateTime lastDriftCheckTimestamp;
+
     public StackSetDriftDetectionDetails withLastDriftCheckTimestamp(OffsetDateTime lastDriftCheckTimestamp) {
         this.lastDriftCheckTimestamp = lastDriftCheckTimestamp;
         return this;
@@ -61,9 +68,11 @@ public class StackSetDriftDetectionDetails {
     
     
     public Long totalStackInstancesCount;
+
     public StackSetDriftDetectionDetails withTotalStackInstancesCount(Long totalStackInstancesCount) {
         this.totalStackInstancesCount = totalStackInstancesCount;
         return this;
     }
     
+    public StackSetDriftDetectionDetails(){}
 }

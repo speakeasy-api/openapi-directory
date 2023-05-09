@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRobotApplicationResponse {
     
     public String contentType;
+
     public DescribeRobotApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRobotApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRobotApplicationResponse describeRobotApplicationResponse;
+
     public DescribeRobotApplicationResponse withDescribeRobotApplicationResponse(org.openapis.openapi.models.shared.DescribeRobotApplicationResponse describeRobotApplicationResponse) {
         this.describeRobotApplicationResponse = describeRobotApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRobotApplicationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRobotApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRobotApplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeRobotApplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeRobotApplicationResponse {
     
     
     public Integer statusCode;
+
     public DescribeRobotApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeRobotApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRobotApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRobotApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRobotApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeRobotApplicationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRobotApplicationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeRobotApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

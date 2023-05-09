@@ -14,6 +14,7 @@ public class AddCustomFieldSettingRequest {
      */
     @JsonProperty("custom_field")
     public String customField;
+
     public AddCustomFieldSettingRequest withCustomField(String customField) {
         this.customField = customField;
         return this;
@@ -25,6 +26,7 @@ public class AddCustomFieldSettingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public AddCustomFieldSettingRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -36,6 +38,7 @@ public class AddCustomFieldSettingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public AddCustomFieldSettingRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -47,9 +50,13 @@ public class AddCustomFieldSettingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_important")
     public Boolean isImportant;
+
     public AddCustomFieldSettingRequest withIsImportant(Boolean isImportant) {
         this.isImportant = isImportant;
         return this;
     }
     
+    public AddCustomFieldSettingRequest(@JsonProperty("custom_field") String customField) {
+        this.customField = customField;
+  }
 }

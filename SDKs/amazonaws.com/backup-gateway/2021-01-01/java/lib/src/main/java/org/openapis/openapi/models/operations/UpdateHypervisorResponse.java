@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateHypervisorResponse {
@@ -12,6 +13,7 @@ public class UpdateHypervisorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateHypervisorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateHypervisorResponse {
      */
     
     public Object conflictException;
+
     public UpdateHypervisorResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateHypervisorResponse {
     
     
     public String contentType;
+
     public UpdateHypervisorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateHypervisorResponse {
      */
     
     public Object internalServerException;
+
     public UpdateHypervisorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateHypervisorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateHypervisorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateHypervisorResponse {
     
     
     public Integer statusCode;
+
     public UpdateHypervisorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateHypervisorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateHypervisorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateHypervisorResponse {
      */
     
     public Object throttlingException;
+
     public UpdateHypervisorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateHypervisorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateHypervisorOutput updateHypervisorOutput;
+
     public UpdateHypervisorResponse withUpdateHypervisorOutput(org.openapis.openapi.models.shared.UpdateHypervisorOutput updateHypervisorOutput) {
         this.updateHypervisorOutput = updateHypervisorOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateHypervisorResponse {
      */
     
     public Object validationException;
+
     public UpdateHypervisorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateHypervisorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

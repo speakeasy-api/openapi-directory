@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2Scim20SchemasResponse {
     
     public String contentType;
+
     public GetV2Scim20SchemasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV2Scim20SchemasResponse {
     
     
     public Integer statusCode;
+
     public GetV2Scim20SchemasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV2Scim20SchemasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2Scim20SchemasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,6 +34,7 @@ public class GetV2Scim20SchemasResponse {
     
     
     public GetV2Scim20Schemas200ApplicationScimPlusJson getV2Scim20Schemas200ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasResponse withGetV2Scim20Schemas200ApplicationScimPlusJsonObject(GetV2Scim20Schemas200ApplicationScimPlusJson getV2Scim20Schemas200ApplicationScimPlusJsonObject) {
         this.getV2Scim20Schemas200ApplicationScimPlusJsonObject = getV2Scim20Schemas200ApplicationScimPlusJsonObject;
         return this;
@@ -40,6 +45,7 @@ public class GetV2Scim20SchemasResponse {
      */
     
     public GetV2Scim20Schemas401ApplicationScimPlusJson getV2Scim20Schemas401ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasResponse withGetV2Scim20Schemas401ApplicationScimPlusJsonObject(GetV2Scim20Schemas401ApplicationScimPlusJson getV2Scim20Schemas401ApplicationScimPlusJsonObject) {
         this.getV2Scim20Schemas401ApplicationScimPlusJsonObject = getV2Scim20Schemas401ApplicationScimPlusJsonObject;
         return this;
@@ -50,9 +56,14 @@ public class GetV2Scim20SchemasResponse {
      */
     
     public GetV2Scim20Schemas500ApplicationScimPlusJson getV2Scim20Schemas500ApplicationScimPlusJsonObject;
+
     public GetV2Scim20SchemasResponse withGetV2Scim20Schemas500ApplicationScimPlusJsonObject(GetV2Scim20Schemas500ApplicationScimPlusJson getV2Scim20Schemas500ApplicationScimPlusJsonObject) {
         this.getV2Scim20Schemas500ApplicationScimPlusJsonObject = getV2Scim20Schemas500ApplicationScimPlusJsonObject;
         return this;
     }
     
+    public GetV2Scim20SchemasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

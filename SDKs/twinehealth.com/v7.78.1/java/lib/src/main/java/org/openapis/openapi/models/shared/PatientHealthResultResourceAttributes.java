@@ -15,6 +15,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_thread")
     public String thread;
+
     public PatientHealthResultResourceAttributes withThread(String thread) {
         this.thread = thread;
         return this;
@@ -23,6 +24,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregation")
     public String aggregation;
+
     public PatientHealthResultResourceAttributes withAggregation(String aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -31,6 +33,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public PatientHealthResultResourceAttributesAnnotations[] annotations;
+
     public PatientHealthResultResourceAttributes withAnnotations(PatientHealthResultResourceAttributesAnnotations[] annotations) {
         this.annotations = annotations;
         return this;
@@ -39,6 +42,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public String channel;
+
     public PatientHealthResultResourceAttributes withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -47,6 +51,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PatientHealthResultResourceAttributesData data;
+
     public PatientHealthResultResourceAttributes withData(PatientHealthResultResourceAttributesData data) {
         this.data = data;
         return this;
@@ -55,6 +60,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public PatientHealthResultResourceAttributes withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -63,6 +69,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric_type")
     public PatientHealthResultResourceAttributesMetricTypeEnum metricType;
+
     public PatientHealthResultResourceAttributes withMetricType(PatientHealthResultResourceAttributesMetricTypeEnum metricType) {
         this.metricType = metricType;
         return this;
@@ -71,6 +78,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public PatientHealthResultResourceAttributes withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -79,6 +87,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at_time_zone")
     public String occurredAtTimeZone;
+
     public PatientHealthResultResourceAttributes withOccurredAtTimeZone(String occurredAtTimeZone) {
         this.occurredAtTimeZone = occurredAtTimeZone;
         return this;
@@ -87,6 +96,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Boolean skipped;
+
     public PatientHealthResultResourceAttributes withSkipped(Boolean skipped) {
         this.skipped = skipped;
         return this;
@@ -95,6 +105,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public PatientHealthResultResourceAttributesSource source;
+
     public PatientHealthResultResourceAttributes withSource(PatientHealthResultResourceAttributesSource source) {
         this.source = source;
         return this;
@@ -106,6 +117,7 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PatientHealthResultResourceAttributes withType(String type) {
         this.type = type;
         return this;
@@ -114,9 +126,11 @@ public class PatientHealthResultResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("window")
     public String window;
+
     public PatientHealthResultResourceAttributes withWindow(String window) {
         this.window = window;
         return this;
     }
     
+    public PatientHealthResultResourceAttributes(){}
 }

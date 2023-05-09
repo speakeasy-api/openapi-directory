@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeEdgeDeploymentPlanRequest {
     @JsonProperty("EdgeDeploymentPlanName")
     public String edgeDeploymentPlanName;
+
     public DescribeEdgeDeploymentPlanRequest withEdgeDeploymentPlanName(String edgeDeploymentPlanName) {
         this.edgeDeploymentPlanName = edgeDeploymentPlanName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeEdgeDeploymentPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeEdgeDeploymentPlanRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class DescribeEdgeDeploymentPlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeEdgeDeploymentPlanRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeEdgeDeploymentPlanRequest(@JsonProperty("EdgeDeploymentPlanName") String edgeDeploymentPlanName) {
+        this.edgeDeploymentPlanName = edgeDeploymentPlanName;
+  }
 }

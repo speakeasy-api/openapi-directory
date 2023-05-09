@@ -18,9 +18,11 @@ public class CreateEnrollmentTokenResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrollmentToken")
     public String enrollmentToken;
+
     public CreateEnrollmentTokenResponse withEnrollmentToken(String enrollmentToken) {
         this.enrollmentToken = enrollmentToken;
         return this;
     }
     
+    public CreateEnrollmentTokenResponse(){}
 }

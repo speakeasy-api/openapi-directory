@@ -15,9 +15,11 @@ public class VirtualGatewayClientPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public VirtualGatewayClientPolicyTls tls;
+
     public VirtualGatewayClientPolicy withTls(VirtualGatewayClientPolicyTls tls) {
         this.tls = tls;
         return this;
     }
     
+    public VirtualGatewayClientPolicy(){}
 }

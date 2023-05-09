@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWorkgroupResponse {
     @JsonProperty("workgroup")
     public Workgroup workgroup;
+
     public DeleteWorkgroupResponse withWorkgroup(Workgroup workgroup) {
         this.workgroup = workgroup;
         return this;
     }
     
+    public DeleteWorkgroupResponse(@JsonProperty("workgroup") Workgroup workgroup) {
+        this.workgroup = workgroup;
+  }
 }

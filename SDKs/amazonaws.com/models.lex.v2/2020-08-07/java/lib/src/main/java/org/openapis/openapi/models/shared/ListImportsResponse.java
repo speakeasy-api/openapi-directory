@@ -15,6 +15,7 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public ListImportsResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ListImportsResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -31,6 +33,7 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importSummaries")
     public ImportSummary[] importSummaries;
+
     public ListImportsResponse withImportSummaries(ImportSummary[] importSummaries) {
         this.importSummaries = importSummaries;
         return this;
@@ -39,6 +42,7 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public ListImportsResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -47,9 +51,11 @@ public class ListImportsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImportsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatalakeResponse {
@@ -12,6 +13,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDatalakeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object conflictException;
+
     public CreateDatalakeResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatalakeResponse {
     
     
     public String contentType;
+
     public CreateDatalakeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatalakeResponse {
      */
     
     public java.util.Map<String, Object> createDatalakeResponse;
+
     public CreateDatalakeResponse withCreateDatalakeResponse(java.util.Map<String, Object> createDatalakeResponse) {
         this.createDatalakeResponse = createDatalakeResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object internalServerException;
+
     public CreateDatalakeResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDatalakeResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDatalakeResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDatalakeResponse {
     
     
     public Integer statusCode;
+
     public CreateDatalakeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDatalakeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatalakeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDatalakeResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatalakeResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateDatalakeResponse {
      */
     
     public Object validationException;
+
     public CreateDatalakeResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDatalakeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

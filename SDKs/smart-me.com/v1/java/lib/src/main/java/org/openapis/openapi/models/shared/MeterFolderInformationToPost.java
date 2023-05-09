@@ -20,6 +20,7 @@ public class MeterFolderInformationToPost {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public String id;
+
     public MeterFolderInformationToPost withId(String id) {
         this.id = id;
         return this;
@@ -32,9 +33,11 @@ public class MeterFolderInformationToPost {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public MeterFolderInformationToPost withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MeterFolderInformationToPost(){}
 }

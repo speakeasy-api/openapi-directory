@@ -15,6 +15,7 @@ public class NetworkEndpointGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpointGroups")
     public NetworkEndpointGroup[] networkEndpointGroups;
+
     public NetworkEndpointGroupsScopedList withNetworkEndpointGroups(NetworkEndpointGroup[] networkEndpointGroups) {
         this.networkEndpointGroups = networkEndpointGroups;
         return this;
@@ -26,9 +27,11 @@ public class NetworkEndpointGroupsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NetworkEndpointGroupsScopedListWarning warning;
+
     public NetworkEndpointGroupsScopedList withWarning(NetworkEndpointGroupsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NetworkEndpointGroupsScopedList(){}
 }

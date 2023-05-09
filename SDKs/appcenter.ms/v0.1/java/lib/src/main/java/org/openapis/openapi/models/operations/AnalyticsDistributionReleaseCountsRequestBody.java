@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsDistributionReleaseCountsRequestBody {
     @JsonProperty("releases")
     public AnalyticsDistributionReleaseCountsRequestBodyReleases[] releases;
+
     public AnalyticsDistributionReleaseCountsRequestBody withReleases(AnalyticsDistributionReleaseCountsRequestBodyReleases[] releases) {
         this.releases = releases;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCountsRequestBody(@JsonProperty("releases") AnalyticsDistributionReleaseCountsRequestBodyReleases[] releases) {
+        this.releases = releases;
+  }
 }

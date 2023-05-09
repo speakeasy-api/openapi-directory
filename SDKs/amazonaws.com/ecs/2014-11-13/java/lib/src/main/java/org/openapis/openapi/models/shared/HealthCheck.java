@@ -9,11 +9,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * HealthCheck - &lt;p&gt;An object representing a container health check. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image (such as those specified in a parent image or from the image's Dockerfile).&lt;/p&gt; &lt;note&gt; &lt;p&gt;The Amazon ECS container agent only monitors and reports on the health checks specified in the task definition. Amazon ECS does not monitor Docker health checks that are embedded in a container image and not specified in the container definition. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;You can view the health status of both individual containers and a task with the DescribeTasks API operation or when viewing the task details in the console.&lt;/p&gt; &lt;p&gt;The following describes the possible &lt;code&gt;healthStatus&lt;/code&gt; values for a container:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;HEALTHY&lt;/code&gt;-The container health check has passed successfully.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNHEALTHY&lt;/code&gt;-The container health check has failed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNKNOWN&lt;/code&gt;-The container health check is being evaluated or there's no container health check defined.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The following describes the possible &lt;code&gt;healthStatus&lt;/code&gt; values for a task. The container health check status of nonessential containers only affects the health status of a task if no essential containers have health checks defined.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;HEALTHY&lt;/code&gt;-All essential containers within the task have passed their health checks.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNHEALTHY&lt;/code&gt;-One or more essential containers have failed their health check.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNKNOWN&lt;/code&gt;-The essential containers within the task are still having their health checks evaluated or there are only nonessential containers with health checks defined.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If a task is run manually, and not as part of a service, the task will continue its lifecycle regardless of its health status. For tasks that are part of a service, if the task reports as unhealthy then the task will be stopped and the service scheduler will replace it.&lt;/p&gt; &lt;important&gt; &lt;p&gt;For tasks that are a part of a service and the service uses the &lt;code&gt;ECS&lt;/code&gt; rolling deployment type, the deployment is paused while the new tasks have the &lt;code&gt;UNKNOWN&lt;/code&gt; task health check status. For example, tasks that define health checks for nonessential containers when no essential containers have health checks will have the &lt;code&gt;UNKNOWN&lt;/code&gt; health check status indefinitely which prevents the deployment from completing.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;The following are notes about container health check support:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Container health checks require version 1.17.0 or greater of the Amazon ECS container agent. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html"&gt;Updating the Amazon ECS container agent&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Container health checks are supported for Fargate tasks if you're using platform version &lt;code&gt;1.1.0&lt;/code&gt; or greater. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html"&gt;Fargate platform versions&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Container health checks aren't supported for tasks that are part of a service that's configured to use a Classic Load Balancer.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+ * HealthCheck - &lt;p&gt;An object representing a container health check. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image (such as those specified in a parent image or from the image's Dockerfile). This configuration maps to the &lt;code&gt;HEALTHCHECK&lt;/code&gt; parameter of &lt;a href="https://docs.docker.com/engine/reference/run/"&gt;docker run&lt;/a&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;The Amazon ECS container agent only monitors and reports on the health checks specified in the task definition. Amazon ECS does not monitor Docker health checks that are embedded in a container image and not specified in the container definition. Health check parameters that are specified in a container definition override any Docker health checks that exist in the container image.&lt;/p&gt; &lt;/note&gt; &lt;p&gt;You can view the health status of both individual containers and a task with the DescribeTasks API operation or when viewing the task details in the console.&lt;/p&gt; &lt;p&gt;The following describes the possible &lt;code&gt;healthStatus&lt;/code&gt; values for a container:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;HEALTHY&lt;/code&gt;-The container health check has passed successfully.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNHEALTHY&lt;/code&gt;-The container health check has failed.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNKNOWN&lt;/code&gt;-The container health check is being evaluated or there's no container health check defined.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;The following describes the possible &lt;code&gt;healthStatus&lt;/code&gt; values for a task. The container health check status of non-essential containers don't have an effect on the health status of a task.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;HEALTHY&lt;/code&gt;-All essential containers within the task have passed their health checks.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNHEALTHY&lt;/code&gt;-One or more essential containers have failed their health check.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;UNKNOWN&lt;/code&gt;-The essential containers within the task are still having their health checks evaluated, there are only nonessential containers with health checks defined, or there are no container health checks defined.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;If a task is run manually, and not as part of a service, the task will continue its lifecycle regardless of its health status. For tasks that are part of a service, if the task reports as unhealthy then the task will be stopped and the service scheduler will replace it.&lt;/p&gt; &lt;p&gt;The following are notes about container health check support:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Container health checks require version 1.17.0 or greater of the Amazon ECS container agent. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-update.html"&gt;Updating the Amazon ECS container agent&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Container health checks are supported for Fargate tasks if you're using platform version &lt;code&gt;1.1.0&lt;/code&gt; or greater. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html"&gt;Fargate platform versions&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Container health checks aren't supported for tasks that are part of a service that's configured to use a Classic Load Balancer.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
  */
 public class HealthCheck {
     @JsonProperty("command")
     public String[] command;
+
     public HealthCheck withCommand(String[] command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interval")
     public Long interval;
+
     public HealthCheck withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -30,6 +32,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retries")
     public Long retries;
+
     public HealthCheck withRetries(Long retries) {
         this.retries = retries;
         return this;
@@ -38,6 +41,7 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startPeriod")
     public Long startPeriod;
+
     public HealthCheck withStartPeriod(Long startPeriod) {
         this.startPeriod = startPeriod;
         return this;
@@ -46,9 +50,13 @@ public class HealthCheck {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Long timeout;
+
     public HealthCheck withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public HealthCheck(@JsonProperty("command") String[] command) {
+        this.command = command;
+  }
 }

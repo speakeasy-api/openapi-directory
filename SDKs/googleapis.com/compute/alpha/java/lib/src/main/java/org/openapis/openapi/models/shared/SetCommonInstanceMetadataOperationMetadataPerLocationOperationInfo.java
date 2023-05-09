@@ -15,6 +15,7 @@ public class SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo withError(Status error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfoStateEnum state;
+
     public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo withState(SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfoStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo(){}
 }

@@ -18,6 +18,7 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public LhrEntity withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homepage")
     public String homepage;
+
     public LhrEntity withHomepage(String homepage) {
         this.homepage = homepage;
         return this;
@@ -40,6 +42,7 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isFirstParty")
     public Boolean isFirstParty;
+
     public LhrEntity withIsFirstParty(Boolean isFirstParty) {
         this.isFirstParty = isFirstParty;
         return this;
@@ -51,6 +54,7 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUnrecognized")
     public Boolean isUnrecognized;
+
     public LhrEntity withIsUnrecognized(Boolean isUnrecognized) {
         this.isUnrecognized = isUnrecognized;
         return this;
@@ -62,6 +66,7 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LhrEntity withName(String name) {
         this.name = name;
         return this;
@@ -73,9 +78,11 @@ public class LhrEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origins")
     public String[] origins;
+
     public LhrEntity withOrigins(String[] origins) {
         this.origins = origins;
         return this;
     }
     
+    public LhrEntity(){}
 }

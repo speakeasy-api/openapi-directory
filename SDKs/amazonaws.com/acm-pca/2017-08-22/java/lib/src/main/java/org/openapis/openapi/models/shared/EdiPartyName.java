@@ -15,6 +15,7 @@ public class EdiPartyName {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameAssigner")
     public String nameAssigner;
+
     public EdiPartyName withNameAssigner(String nameAssigner) {
         this.nameAssigner = nameAssigner;
         return this;
@@ -22,9 +23,13 @@ public class EdiPartyName {
     
     @JsonProperty("PartyName")
     public String partyName;
+
     public EdiPartyName withPartyName(String partyName) {
         this.partyName = partyName;
         return this;
     }
     
+    public EdiPartyName(@JsonProperty("PartyName") String partyName) {
+        this.partyName = partyName;
+  }
 }

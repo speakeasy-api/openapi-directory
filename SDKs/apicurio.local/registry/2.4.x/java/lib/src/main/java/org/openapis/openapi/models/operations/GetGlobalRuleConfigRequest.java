@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGlobalRuleConfigRequest {
@@ -12,9 +13,13 @@ public class GetGlobalRuleConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rule")
     public org.openapis.openapi.models.shared.RuleTypeEnum rule;
+
     public GetGlobalRuleConfigRequest withRule(org.openapis.openapi.models.shared.RuleTypeEnum rule) {
         this.rule = rule;
         return this;
     }
     
+    public GetGlobalRuleConfigRequest(@JsonProperty("rule") org.openapis.openapi.models.shared.RuleTypeEnum rule) {
+        this.rule = rule;
+  }
 }

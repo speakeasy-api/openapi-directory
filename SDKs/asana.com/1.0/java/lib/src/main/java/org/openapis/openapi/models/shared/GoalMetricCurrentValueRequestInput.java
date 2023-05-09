@@ -18,9 +18,11 @@ public class GoalMetricCurrentValueRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_number_value")
     public Double currentNumberValue;
+
     public GoalMetricCurrentValueRequestInput withCurrentNumberValue(Double currentNumberValue) {
         this.currentNumberValue = currentNumberValue;
         return this;
     }
     
+    public GoalMetricCurrentValueRequestInput(){}
 }

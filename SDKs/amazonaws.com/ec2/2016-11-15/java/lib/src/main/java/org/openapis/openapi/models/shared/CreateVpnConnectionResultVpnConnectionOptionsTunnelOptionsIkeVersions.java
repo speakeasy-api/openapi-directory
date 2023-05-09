@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsIkeVersions {
     
     public String value;
+
     public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsIkeVersions withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpnConnectionResultVpnConnectionOptionsTunnelOptionsIkeVersions(){}
 }

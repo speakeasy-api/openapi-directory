@@ -18,6 +18,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentValue")
     public Object currentValue;
+
     public NonComplianceDetail withCurrentValue(Object currentValue) {
         this.currentValue = currentValue;
         return this;
@@ -29,6 +30,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String fieldPath;
+
     public NonComplianceDetail withFieldPath(String fieldPath) {
         this.fieldPath = fieldPath;
         return this;
@@ -40,6 +42,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installationFailureReason")
     public NonComplianceDetailInstallationFailureReasonEnum installationFailureReason;
+
     public NonComplianceDetail withInstallationFailureReason(NonComplianceDetailInstallationFailureReasonEnum installationFailureReason) {
         this.installationFailureReason = installationFailureReason;
         return this;
@@ -51,6 +54,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonComplianceReason")
     public NonComplianceDetailNonComplianceReasonEnum nonComplianceReason;
+
     public NonComplianceDetail withNonComplianceReason(NonComplianceDetailNonComplianceReasonEnum nonComplianceReason) {
         this.nonComplianceReason = nonComplianceReason;
         return this;
@@ -62,6 +66,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public NonComplianceDetail withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -73,6 +78,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingName")
     public String settingName;
+
     public NonComplianceDetail withSettingName(String settingName) {
         this.settingName = settingName;
         return this;
@@ -84,6 +90,7 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificNonComplianceContext")
     public SpecificNonComplianceContext specificNonComplianceContext;
+
     public NonComplianceDetail withSpecificNonComplianceContext(SpecificNonComplianceContext specificNonComplianceContext) {
         this.specificNonComplianceContext = specificNonComplianceContext;
         return this;
@@ -95,9 +102,11 @@ public class NonComplianceDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificNonComplianceReason")
     public NonComplianceDetailSpecificNonComplianceReasonEnum specificNonComplianceReason;
+
     public NonComplianceDetail withSpecificNonComplianceReason(NonComplianceDetailSpecificNonComplianceReasonEnum specificNonComplianceReason) {
         this.specificNonComplianceReason = specificNonComplianceReason;
         return this;
     }
     
+    public NonComplianceDetail(){}
 }

@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactVersioning")
     public BranchConfigurationsUpdateRequestBodyArtifactVersioning artifactVersioning;
+
     public BranchConfigurationsUpdateRequestBody withArtifactVersioning(BranchConfigurationsUpdateRequestBodyArtifactVersioning artifactVersioning) {
         this.artifactVersioning = artifactVersioning;
         return this;
@@ -26,6 +27,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeIsEnabled")
     public Boolean badgeIsEnabled;
+
     public BranchConfigurationsUpdateRequestBody withBadgeIsEnabled(Boolean badgeIsEnabled) {
         this.badgeIsEnabled = badgeIsEnabled;
         return this;
@@ -37,6 +39,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneFromBranch")
     public String cloneFromBranch;
+
     public BranchConfigurationsUpdateRequestBody withCloneFromBranch(String cloneFromBranch) {
         this.cloneFromBranch = cloneFromBranch;
         return this;
@@ -45,6 +48,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed")
     public Boolean signed;
+
     public BranchConfigurationsUpdateRequestBody withSigned(Boolean signed) {
         this.signed = signed;
         return this;
@@ -53,6 +57,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsEnabled")
     public Boolean testsEnabled;
+
     public BranchConfigurationsUpdateRequestBody withTestsEnabled(Boolean testsEnabled) {
         this.testsEnabled = testsEnabled;
         return this;
@@ -64,6 +69,7 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolsets")
     public BranchConfigurationsUpdateRequestBodyToolsets toolsets;
+
     public BranchConfigurationsUpdateRequestBody withToolsets(BranchConfigurationsUpdateRequestBodyToolsets toolsets) {
         this.toolsets = toolsets;
         return this;
@@ -72,9 +78,11 @@ public class BranchConfigurationsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public BranchConfigurationsUpdateRequestBodyTriggerEnum trigger;
+
     public BranchConfigurationsUpdateRequestBody withTrigger(BranchConfigurationsUpdateRequestBodyTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public BranchConfigurationsUpdateRequestBody(){}
 }

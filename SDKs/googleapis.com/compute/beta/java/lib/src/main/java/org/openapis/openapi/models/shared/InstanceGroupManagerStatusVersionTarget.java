@@ -15,9 +15,11 @@ public class InstanceGroupManagerStatusVersionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isReached")
     public Boolean isReached;
+
     public InstanceGroupManagerStatusVersionTarget withIsReached(Boolean isReached) {
         this.isReached = isReached;
         return this;
     }
     
+    public InstanceGroupManagerStatusVersionTarget(){}
 }

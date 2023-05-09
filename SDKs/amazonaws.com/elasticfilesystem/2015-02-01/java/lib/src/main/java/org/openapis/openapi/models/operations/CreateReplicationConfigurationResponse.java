@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReplicationConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object badRequest;
+
     public CreateReplicationConfigurationResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class CreateReplicationConfigurationResponse {
     
     
     public String contentType;
+
     public CreateReplicationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object fileSystemLimitExceeded;
+
     public CreateReplicationConfigurationResponse withFileSystemLimitExceeded(Object fileSystemLimitExceeded) {
         this.fileSystemLimitExceeded = fileSystemLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateReplicationConfigurationResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -49,6 +54,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public CreateReplicationConfigurationResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -59,6 +65,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object insufficientThroughputCapacity;
+
     public CreateReplicationConfigurationResponse withInsufficientThroughputCapacity(Object insufficientThroughputCapacity) {
         this.insufficientThroughputCapacity = insufficientThroughputCapacity;
         return this;
@@ -69,6 +76,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object internalServerError;
+
     public CreateReplicationConfigurationResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicationConfigurationDescription replicationConfigurationDescription;
+
     public CreateReplicationConfigurationResponse withReplicationConfigurationDescription(org.openapis.openapi.models.shared.ReplicationConfigurationDescription replicationConfigurationDescription) {
         this.replicationConfigurationDescription = replicationConfigurationDescription;
         return this;
@@ -86,6 +95,7 @@ public class CreateReplicationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateReplicationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateReplicationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReplicationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object replicationNotFound;
+
     public CreateReplicationConfigurationResponse withReplicationNotFound(Object replicationNotFound) {
         this.replicationNotFound = replicationNotFound;
         return this;
@@ -113,6 +125,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object throughputLimitExceeded;
+
     public CreateReplicationConfigurationResponse withThroughputLimitExceeded(Object throughputLimitExceeded) {
         this.throughputLimitExceeded = throughputLimitExceeded;
         return this;
@@ -123,6 +136,7 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object unsupportedAvailabilityZone;
+
     public CreateReplicationConfigurationResponse withUnsupportedAvailabilityZone(Object unsupportedAvailabilityZone) {
         this.unsupportedAvailabilityZone = unsupportedAvailabilityZone;
         return this;
@@ -133,9 +147,14 @@ public class CreateReplicationConfigurationResponse {
      */
     
     public Object validationException;
+
     public CreateReplicationConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateReplicationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

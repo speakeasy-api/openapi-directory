@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyHostsRequest {
     
     public ModifyHostsRequestAutoPlacementEnum autoPlacement;
+
     public ModifyHostsRequest withAutoPlacement(ModifyHostsRequestAutoPlacementEnum autoPlacement) {
         this.autoPlacement = autoPlacement;
         return this;
@@ -16,6 +17,7 @@ public class ModifyHostsRequest {
     
     
     public String[] hostIds;
+
     public ModifyHostsRequest withHostIds(String[] hostIds) {
         this.hostIds = hostIds;
         return this;
@@ -23,6 +25,7 @@ public class ModifyHostsRequest {
     
     
     public HostMaintenanceEnum hostMaintenance;
+
     public ModifyHostsRequest withHostMaintenance(HostMaintenanceEnum hostMaintenance) {
         this.hostMaintenance = hostMaintenance;
         return this;
@@ -30,6 +33,7 @@ public class ModifyHostsRequest {
     
     
     public HostRecoveryEnum hostRecovery;
+
     public ModifyHostsRequest withHostRecovery(HostRecoveryEnum hostRecovery) {
         this.hostRecovery = hostRecovery;
         return this;
@@ -37,6 +41,7 @@ public class ModifyHostsRequest {
     
     
     public String instanceFamily;
+
     public ModifyHostsRequest withInstanceFamily(String instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
@@ -44,9 +49,13 @@ public class ModifyHostsRequest {
     
     
     public String instanceType;
+
     public ModifyHostsRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public ModifyHostsRequest(@JsonProperty("HostIds") String[] hostIds) {
+        this.hostIds = hostIds;
+  }
 }

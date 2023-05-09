@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCallsResponse {
     
     public String contentType;
+
     public GetCallsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCallsResponse {
     
     
     public Integer statusCode;
+
     public GetCallsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetCallsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCallsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCallsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneGetResponses200ContentApplication1jsonSchema oneGetResponses200ContentApplication1jsonSchema;
+
     public GetCallsResponse withOneGetResponses200ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneGetResponses200ContentApplication1jsonSchema oneGetResponses200ContentApplication1jsonSchema) {
         this.oneGetResponses200ContentApplication1jsonSchema = oneGetResponses200ContentApplication1jsonSchema;
         return this;
@@ -43,6 +48,7 @@ public class GetCallsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses400ContentApplication1jsonSchema oneannouncementsPostResponses400ContentApplication1jsonSchema;
+
     public GetCallsResponse withOneannouncementsPostResponses400ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneannouncementsPostResponses400ContentApplication1jsonSchema oneannouncementsPostResponses400ContentApplication1jsonSchema) {
         this.oneannouncementsPostResponses400ContentApplication1jsonSchema = oneannouncementsPostResponses400ContentApplication1jsonSchema;
         return this;
@@ -53,9 +59,14 @@ public class GetCallsResponse {
      */
     
     public org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema;
+
     public GetCallsResponse withOneannouncementsPostResponses403ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneannouncementsPostResponses403ContentApplication1jsonSchema oneannouncementsPostResponses403ContentApplication1jsonSchema) {
         this.oneannouncementsPostResponses403ContentApplication1jsonSchema = oneannouncementsPostResponses403ContentApplication1jsonSchema;
         return this;
     }
     
+    public GetCallsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

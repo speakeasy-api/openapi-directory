@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAlmawsV1TaskListsRequestedResourcesRequest {
@@ -12,6 +13,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=circ_desk")
     public String circDesk;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withCircDesk(String circDesk) {
         this.circDesk = circDesk;
         return this;
@@ -22,6 +24,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public String direction;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -32,6 +35,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=library")
     public String library;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withLibrary(String library) {
         this.library = library;
         return this;
@@ -42,6 +46,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +57,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public String location;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -62,6 +68,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -72,6 +79,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public String orderBy;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -82,6 +90,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pickup_inst")
     public String pickupInst;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withPickupInst(String pickupInst) {
         this.pickupInst = pickupInst;
         return this;
@@ -92,6 +101,7 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=printed")
     public String printed;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withPrinted(String printed) {
         this.printed = printed;
         return this;
@@ -102,9 +112,14 @@ public class GetAlmawsV1TaskListsRequestedResourcesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reported")
     public String reported;
+
     public GetAlmawsV1TaskListsRequestedResourcesRequest withReported(String reported) {
         this.reported = reported;
         return this;
     }
     
+    public GetAlmawsV1TaskListsRequestedResourcesRequest(@JsonProperty("circ_desk") String circDesk, @JsonProperty("library") String library) {
+        this.circDesk = circDesk;
+        this.library = library;
+  }
 }

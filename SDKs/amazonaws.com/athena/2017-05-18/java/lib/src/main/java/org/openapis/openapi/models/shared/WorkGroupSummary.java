@@ -22,6 +22,7 @@ public class WorkGroupSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public WorkGroupSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class WorkGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public WorkGroupSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class WorkGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineVersion")
     public EngineVersion engineVersion;
+
     public WorkGroupSummary withEngineVersion(EngineVersion engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -46,6 +49,7 @@ public class WorkGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public WorkGroupSummary withName(String name) {
         this.name = name;
         return this;
@@ -54,9 +58,11 @@ public class WorkGroupSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkGroupStateEnum state;
+
     public WorkGroupSummary withState(WorkGroupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public WorkGroupSummary(){}
 }

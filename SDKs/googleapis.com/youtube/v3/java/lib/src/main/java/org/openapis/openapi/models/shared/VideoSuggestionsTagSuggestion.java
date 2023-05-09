@@ -18,6 +18,7 @@ public class VideoSuggestionsTagSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryRestricts")
     public String[] categoryRestricts;
+
     public VideoSuggestionsTagSuggestion withCategoryRestricts(String[] categoryRestricts) {
         this.categoryRestricts = categoryRestricts;
         return this;
@@ -29,9 +30,11 @@ public class VideoSuggestionsTagSuggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public VideoSuggestionsTagSuggestion withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public VideoSuggestionsTagSuggestion(){}
 }

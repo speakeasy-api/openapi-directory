@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaParameterMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public GoogleCloudIntegrationsV1alphaParameterMapEntry[] entries;
+
     public GoogleCloudIntegrationsV1alphaParameterMap withEntries(GoogleCloudIntegrationsV1alphaParameterMapEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaParameterMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyType")
     public GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum keyType;
+
     public GoogleCloudIntegrationsV1alphaParameterMap withKeyType(GoogleCloudIntegrationsV1alphaParameterMapKeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaParameterMap {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueType")
     public GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum valueType;
+
     public GoogleCloudIntegrationsV1alphaParameterMap withValueType(GoogleCloudIntegrationsV1alphaParameterMapValueTypeEnum valueType) {
         this.valueType = valueType;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaParameterMap(){}
 }

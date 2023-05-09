@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCheckCodeResponse {
     
     public String contentType;
+
     public PostCheckCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostCheckCodeResponse {
     
     
     public Integer statusCode;
+
     public PostCheckCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostCheckCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCheckCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -35,6 +39,7 @@ public class PostCheckCodeResponse {
      */
     
     public PostCheckCode200ApplicationJSON postCheckCode200ApplicationJSONObject;
+
     public PostCheckCodeResponse withPostCheckCode200ApplicationJSONObject(PostCheckCode200ApplicationJSON postCheckCode200ApplicationJSONObject) {
         this.postCheckCode200ApplicationJSONObject = postCheckCode200ApplicationJSONObject;
         return this;
@@ -46,6 +51,7 @@ public class PostCheckCodeResponse {
      */
     
     public PostCheckCode401ApplicationJSON postCheckCode401ApplicationJSONObject;
+
     public PostCheckCodeResponse withPostCheckCode401ApplicationJSONObject(PostCheckCode401ApplicationJSON postCheckCode401ApplicationJSONObject) {
         this.postCheckCode401ApplicationJSONObject = postCheckCode401ApplicationJSONObject;
         return this;
@@ -59,9 +65,14 @@ public class PostCheckCodeResponse {
      */
     
     public PostCheckCode403ApplicationJSON postCheckCode403ApplicationJSONObject;
+
     public PostCheckCodeResponse withPostCheckCode403ApplicationJSONObject(PostCheckCode403ApplicationJSON postCheckCode403ApplicationJSONObject) {
         this.postCheckCode403ApplicationJSONObject = postCheckCode403ApplicationJSONObject;
         return this;
     }
     
+    public PostCheckCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

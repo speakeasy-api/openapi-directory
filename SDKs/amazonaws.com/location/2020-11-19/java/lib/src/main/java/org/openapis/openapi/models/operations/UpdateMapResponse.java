@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMapResponse {
@@ -12,6 +13,7 @@ public class UpdateMapResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMapResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMapResponse {
     
     
     public String contentType;
+
     public UpdateMapResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMapResponse {
      */
     
     public Object internalServerException;
+
     public UpdateMapResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMapResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMapResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateMapResponse {
     
     
     public Integer statusCode;
+
     public UpdateMapResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateMapResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMapResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateMapResponse {
      */
     
     public Object throttlingException;
+
     public UpdateMapResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMapResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateMapResponse updateMapResponse;
+
     public UpdateMapResponse withUpdateMapResponse(org.openapis.openapi.models.shared.UpdateMapResponse updateMapResponse) {
         this.updateMapResponse = updateMapResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateMapResponse {
      */
     
     public Object validationException;
+
     public UpdateMapResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateMapResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

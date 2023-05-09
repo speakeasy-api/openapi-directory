@@ -15,6 +15,7 @@ public class VersionSearchResults {
      */
     @JsonProperty("count")
     public Long count;
+
     public VersionSearchResults withCount(Long count) {
         this.count = count;
         return this;
@@ -22,9 +23,14 @@ public class VersionSearchResults {
     
     @JsonProperty("versions")
     public SearchedVersion[] versions;
+
     public VersionSearchResults withVersions(SearchedVersion[] versions) {
         this.versions = versions;
         return this;
     }
     
+    public VersionSearchResults(@JsonProperty("count") Long count, @JsonProperty("versions") SearchedVersion[] versions) {
+        this.count = count;
+        this.versions = versions;
+  }
 }

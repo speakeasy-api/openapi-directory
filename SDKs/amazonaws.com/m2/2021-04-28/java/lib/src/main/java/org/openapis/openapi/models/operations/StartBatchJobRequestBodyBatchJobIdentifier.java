@@ -15,6 +15,7 @@ public class StartBatchJobRequestBodyBatchJobIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileBatchJobIdentifier")
     public org.openapis.openapi.models.shared.FileBatchJobIdentifier fileBatchJobIdentifier;
+
     public StartBatchJobRequestBodyBatchJobIdentifier withFileBatchJobIdentifier(org.openapis.openapi.models.shared.FileBatchJobIdentifier fileBatchJobIdentifier) {
         this.fileBatchJobIdentifier = fileBatchJobIdentifier;
         return this;
@@ -23,9 +24,11 @@ public class StartBatchJobRequestBodyBatchJobIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptBatchJobIdentifier")
     public org.openapis.openapi.models.shared.ScriptBatchJobIdentifier scriptBatchJobIdentifier;
+
     public StartBatchJobRequestBodyBatchJobIdentifier withScriptBatchJobIdentifier(org.openapis.openapi.models.shared.ScriptBatchJobIdentifier scriptBatchJobIdentifier) {
         this.scriptBatchJobIdentifier = scriptBatchJobIdentifier;
         return this;
     }
     
+    public StartBatchJobRequestBodyBatchJobIdentifier(){}
 }

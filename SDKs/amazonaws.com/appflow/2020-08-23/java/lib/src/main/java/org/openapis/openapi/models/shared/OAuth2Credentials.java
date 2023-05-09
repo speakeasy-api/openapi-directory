@@ -15,6 +15,7 @@ public class OAuth2Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessToken")
     public String accessToken;
+
     public OAuth2Credentials withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -23,6 +24,7 @@ public class OAuth2Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public OAuth2Credentials withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class OAuth2Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public OAuth2Credentials withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -42,6 +45,7 @@ public class OAuth2Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthRequest")
     public ConnectorOAuthRequest oAuthRequest;
+
     public OAuth2Credentials withOAuthRequest(ConnectorOAuthRequest oAuthRequest) {
         this.oAuthRequest = oAuthRequest;
         return this;
@@ -50,9 +54,11 @@ public class OAuth2Credentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public OAuth2Credentials withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public OAuth2Credentials(){}
 }

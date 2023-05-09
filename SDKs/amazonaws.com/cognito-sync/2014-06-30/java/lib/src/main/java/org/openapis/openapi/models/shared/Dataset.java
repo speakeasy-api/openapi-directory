@@ -22,6 +22,7 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDate")
     public OffsetDateTime creationDate;
+
     public Dataset withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataStorage")
     public Long dataStorage;
+
     public Dataset withDataStorage(Long dataStorage) {
         this.dataStorage = dataStorage;
         return this;
@@ -38,6 +40,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetName")
     public String datasetName;
+
     public Dataset withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -46,6 +49,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public Dataset withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -54,6 +58,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public Dataset withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -64,6 +69,7 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Dataset withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -72,9 +78,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumRecords")
     public Long numRecords;
+
     public Dataset withNumRecords(Long numRecords) {
         this.numRecords = numRecords;
         return this;
     }
     
+    public Dataset(){}
 }

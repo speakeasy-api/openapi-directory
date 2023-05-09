@@ -12,6 +12,7 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("created")
     public String created;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withCreated(String created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("id")
     public Long id;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -42,6 +45,7 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("name")
     public String name;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("servers")
     public Long[] servers;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withServers(Long[] servers) {
         this.servers = servers;
         return this;
@@ -62,9 +67,18 @@ public class PutPlacementGroupsIdPlacementGroupResponsePlacementGroup {
      */
     @JsonProperty("type")
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum type;
+
     public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup withType(PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutPlacementGroupsIdPlacementGroupResponsePlacementGroup(@JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("servers") Long[] servers, @JsonProperty("type") PutPlacementGroupsIdPlacementGroupResponsePlacementGroupTypeEnum type) {
+        this.created = created;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.servers = servers;
+        this.type = type;
+  }
 }

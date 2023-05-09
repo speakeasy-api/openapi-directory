@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInsightResponse {
     
     public String contentType;
+
     public GetInsightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInsightResponse {
      */
     
     public org.openapis.openapi.models.shared.GetInsightResult getInsightResult;
+
     public GetInsightResponse withGetInsightResult(org.openapis.openapi.models.shared.GetInsightResult getInsightResult) {
         this.getInsightResult = getInsightResult;
         return this;
@@ -29,6 +32,7 @@ public class GetInsightResponse {
      */
     
     public Object invalidRequestException;
+
     public GetInsightResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class GetInsightResponse {
     
     
     public Integer statusCode;
+
     public GetInsightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetInsightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInsightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetInsightResponse {
      */
     
     public Object throttledException;
+
     public GetInsightResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetInsightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

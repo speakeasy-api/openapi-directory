@@ -15,6 +15,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allOptionalParamsProvided")
     public Boolean allOptionalParamsProvided;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withAllOptionalParamsProvided(Boolean allOptionalParamsProvided) {
         this.allOptionalParamsProvided = allOptionalParamsProvided;
         return this;
@@ -26,6 +27,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allRequiredParamsProvided")
     public Boolean allRequiredParamsProvided;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withAllRequiredParamsProvided(Boolean allRequiredParamsProvided) {
         this.allRequiredParamsProvided = allRequiredParamsProvided;
         return this;
@@ -37,6 +39,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docUrl")
     public String docUrl;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withDocUrl(String docUrl) {
         this.docUrl = docUrl;
         return this;
@@ -58,6 +62,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
      */
     @JsonProperty("href")
     public String href;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withHref(String href) {
         this.href = href;
         return this;
@@ -66,6 +71,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -77,6 +83,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withLabel(String label) {
         this.label = label;
         return this;
@@ -88,6 +95,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public BeezUPCommonHttpMethodEnum method;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withMethod(BeezUPCommonHttpMethodEnum method) {
         this.method = method;
         return this;
@@ -99,6 +107,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationId")
     public String operationId;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -107,6 +116,7 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, BeezUPCommonLinkParameter3> parameters;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withParameters(java.util.Map<String, BeezUPCommonLinkParameter3> parameters) {
         this.parameters = parameters;
         return this;
@@ -118,9 +128,13 @@ public class ExternalLinksCatalogGetBeezUPColumnsLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlTemplated")
     public Boolean urlTemplated;
+
     public ExternalLinksCatalogGetBeezUPColumnsLink withUrlTemplated(Boolean urlTemplated) {
         this.urlTemplated = urlTemplated;
         return this;
     }
     
+    public ExternalLinksCatalogGetBeezUPColumnsLink(@JsonProperty("href") String href) {
+        this.href = href;
+  }
 }

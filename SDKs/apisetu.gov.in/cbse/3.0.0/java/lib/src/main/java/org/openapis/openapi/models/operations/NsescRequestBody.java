@@ -15,6 +15,7 @@ public class NsescRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public NsescRequestBodyCertificateParameters certificateParameters;
+
     public NsescRequestBody withCertificateParameters(NsescRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class NsescRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public NsescRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class NsescRequestBody {
      */
     @JsonProperty("format")
     public NsescRequestBodyFormatEnum format;
+
     public NsescRequestBody withFormat(NsescRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class NsescRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public NsescRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public NsescRequestBody(@JsonProperty("format") NsescRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

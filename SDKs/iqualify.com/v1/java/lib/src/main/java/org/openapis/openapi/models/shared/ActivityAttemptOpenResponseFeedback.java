@@ -12,6 +12,7 @@ public class ActivityAttemptOpenResponseFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facilitatorEmail")
     public String facilitatorEmail;
+
     public ActivityAttemptOpenResponseFeedback withFacilitatorEmail(String facilitatorEmail) {
         this.facilitatorEmail = facilitatorEmail;
         return this;
@@ -20,9 +21,11 @@ public class ActivityAttemptOpenResponseFeedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ActivityAttemptOpenResponseFeedback withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ActivityAttemptOpenResponseFeedback(){}
 }

@@ -15,6 +15,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public LabelAlias[] aliases;
+
     public Label withAliases(LabelAlias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -23,6 +24,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Categories")
     public LabelCategory[] categories;
+
     public Label withCategories(LabelCategory[] categories) {
         this.categories = categories;
         return this;
@@ -31,6 +33,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Float confidence;
+
     public Label withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -39,6 +42,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instances")
     public Instance[] instances;
+
     public Label withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -47,6 +51,7 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Label withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class Label {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parents")
     public Parent[] parents;
+
     public Label withParents(Parent[] parents) {
         this.parents = parents;
         return this;
     }
     
+    public Label(){}
 }

@@ -19,6 +19,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListEdgePackagingJobsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -29,6 +30,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListEdgePackagingJobsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -39,6 +41,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeAfter")
     public OffsetDateTime lastModifiedTimeAfter;
+
     public ListEdgePackagingJobsRequest withLastModifiedTimeAfter(OffsetDateTime lastModifiedTimeAfter) {
         this.lastModifiedTimeAfter = lastModifiedTimeAfter;
         return this;
@@ -49,6 +52,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimeBefore")
     public OffsetDateTime lastModifiedTimeBefore;
+
     public ListEdgePackagingJobsRequest withLastModifiedTimeBefore(OffsetDateTime lastModifiedTimeBefore) {
         this.lastModifiedTimeBefore = lastModifiedTimeBefore;
         return this;
@@ -57,6 +61,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEdgePackagingJobsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -65,6 +70,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelNameContains")
     public String modelNameContains;
+
     public ListEdgePackagingJobsRequest withModelNameContains(String modelNameContains) {
         this.modelNameContains = modelNameContains;
         return this;
@@ -73,6 +79,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListEdgePackagingJobsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -81,6 +88,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEdgePackagingJobsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -89,6 +97,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public ListEdgePackagingJobsSortByEnum sortBy;
+
     public ListEdgePackagingJobsRequest withSortBy(ListEdgePackagingJobsSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -97,6 +106,7 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListEdgePackagingJobsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -105,9 +115,11 @@ public class ListEdgePackagingJobsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public EdgePackagingJobStatusEnum statusEquals;
+
     public ListEdgePackagingJobsRequest withStatusEquals(EdgePackagingJobStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListEdgePackagingJobsRequest(){}
 }

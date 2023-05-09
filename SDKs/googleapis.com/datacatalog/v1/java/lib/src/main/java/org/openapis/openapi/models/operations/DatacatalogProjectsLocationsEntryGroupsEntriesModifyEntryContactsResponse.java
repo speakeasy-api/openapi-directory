@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsRe
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Contacts googleCloudDatacatalogV1Contacts;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse withGoogleCloudDatacatalogV1Contacts(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1Contacts googleCloudDatacatalogV1Contacts) {
         this.googleCloudDatacatalogV1Contacts = googleCloudDatacatalogV1Contacts;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsRe
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsRe
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsEntryGroupsEntriesModifyEntryContactsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class SendAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaign_id")
     public String campaignId;
+
     public SendAnalyticsRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -26,6 +27,7 @@ public class SendAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_at")
     public String endingAt;
+
     public SendAnalyticsRequest withEndingAt(String endingAt) {
         this.endingAt = endingAt;
         return this;
@@ -38,6 +40,7 @@ public class SendAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=length")
     public String length;
+
     public SendAnalyticsRequest withLength(String length) {
         this.length = length;
         return this;
@@ -50,9 +53,11 @@ public class SendAnalyticsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=send_id")
     public String sendId;
+
     public SendAnalyticsRequest withSendId(String sendId) {
         this.sendId = sendId;
         return this;
     }
     
+    public SendAnalyticsRequest(){}
 }

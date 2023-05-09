@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPermissionSetsRequest {
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListPermissionSetsRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -19,6 +20,7 @@ public class ListPermissionSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPermissionSetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListPermissionSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPermissionSetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListPermissionSetsRequest(@JsonProperty("InstanceArn") String instanceArn) {
+        this.instanceArn = instanceArn;
+  }
 }

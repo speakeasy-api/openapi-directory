@@ -18,9 +18,11 @@ public class BatchCreatePermissionsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public CreatePermissionRequestInput[] requests;
+
     public BatchCreatePermissionsRequestInput withRequests(CreatePermissionRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public BatchCreatePermissionsRequestInput(){}
 }

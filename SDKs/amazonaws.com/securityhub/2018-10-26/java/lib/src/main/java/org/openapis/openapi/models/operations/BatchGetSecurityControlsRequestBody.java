@@ -12,9 +12,13 @@ public class BatchGetSecurityControlsRequestBody {
      */
     @JsonProperty("SecurityControlIds")
     public String[] securityControlIds;
+
     public BatchGetSecurityControlsRequestBody withSecurityControlIds(String[] securityControlIds) {
         this.securityControlIds = securityControlIds;
         return this;
     }
     
+    public BatchGetSecurityControlsRequestBody(@JsonProperty("SecurityControlIds") String[] securityControlIds) {
+        this.securityControlIds = securityControlIds;
+  }
 }

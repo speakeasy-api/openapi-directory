@@ -18,9 +18,11 @@ public class StringHparamSearchSpace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidates")
     public String[] candidates;
+
     public StringHparamSearchSpace withCandidates(String[] candidates) {
         this.candidates = candidates;
         return this;
     }
     
+    public StringHparamSearchSpace(){}
 }

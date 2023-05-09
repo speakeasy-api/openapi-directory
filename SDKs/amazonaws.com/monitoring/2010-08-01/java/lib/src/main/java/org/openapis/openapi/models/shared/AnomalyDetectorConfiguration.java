@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AnomalyDetectorConfiguration {
     
     public Range[] excludedTimeRanges;
+
     public AnomalyDetectorConfiguration withExcludedTimeRanges(Range[] excludedTimeRanges) {
         this.excludedTimeRanges = excludedTimeRanges;
         return this;
@@ -19,9 +20,11 @@ public class AnomalyDetectorConfiguration {
     
     
     public String metricTimezone;
+
     public AnomalyDetectorConfiguration withMetricTimezone(String metricTimezone) {
         this.metricTimezone = metricTimezone;
         return this;
     }
     
+    public AnomalyDetectorConfiguration(){}
 }

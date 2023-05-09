@@ -18,9 +18,11 @@ public class Gcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remotePath")
     public String remotePath;
+
     public Gcs withRemotePath(String remotePath) {
         this.remotePath = remotePath;
         return this;
     }
     
+    public Gcs(){}
 }

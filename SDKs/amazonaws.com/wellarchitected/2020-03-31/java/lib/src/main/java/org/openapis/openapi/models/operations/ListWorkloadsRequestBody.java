@@ -15,6 +15,7 @@ public class ListWorkloadsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListWorkloadsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListWorkloadsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkloadsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListWorkloadsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadNamePrefix")
     public String workloadNamePrefix;
+
     public ListWorkloadsRequestBody withWorkloadNamePrefix(String workloadNamePrefix) {
         this.workloadNamePrefix = workloadNamePrefix;
         return this;
     }
     
+    public ListWorkloadsRequestBody(){}
 }

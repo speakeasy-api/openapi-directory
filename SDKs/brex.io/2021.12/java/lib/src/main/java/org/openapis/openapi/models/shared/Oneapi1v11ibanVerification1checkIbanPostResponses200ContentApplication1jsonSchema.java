@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema {
     @JsonProperty("valid")
     public Boolean valid;
+
     public Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema(@JsonProperty("valid") Boolean valid) {
+        this.valid = valid;
+  }
 }

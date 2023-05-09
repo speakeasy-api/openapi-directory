@@ -15,6 +15,7 @@ public class SubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SubnetGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class SubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetGroupName")
     public String subnetGroupName;
+
     public SubnetGroup withSubnetGroupName(String subnetGroupName) {
         this.subnetGroupName = subnetGroupName;
         return this;
@@ -31,6 +33,7 @@ public class SubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public Subnet[] subnets;
+
     public SubnetGroup withSubnets(Subnet[] subnets) {
         this.subnets = subnets;
         return this;
@@ -39,9 +42,11 @@ public class SubnetGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public SubnetGroup withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public SubnetGroup(){}
 }

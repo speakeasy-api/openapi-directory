@@ -15,6 +15,7 @@ public class DeleteApplication405ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public DeleteApplication405ApplicationJSON withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class DeleteApplication405ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public DeleteApplication405ApplicationJSON withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -34,6 +36,7 @@ public class DeleteApplication405ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DeleteApplication405ApplicationJSON withTitle(String title) {
         this.title = title;
         return this;
@@ -42,9 +45,11 @@ public class DeleteApplication405ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DeleteApplication405ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DeleteApplication405ApplicationJSON(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EditReviewRequest {
@@ -12,6 +13,7 @@ public class EditReviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public EditReviewRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class EditReviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public EditReviewRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class EditReviewRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EditReviewRequestBody requestBody;
+
     public EditReviewRequest withRequestBody(EditReviewRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,16 @@ public class EditReviewRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reviewId")
     public String reviewId;
+
     public EditReviewRequest withReviewId(String reviewId) {
         this.reviewId = reviewId;
         return this;
     }
     
+    public EditReviewRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") EditReviewRequestBody requestBody, @JsonProperty("reviewId") String reviewId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.reviewId = reviewId;
+  }
 }

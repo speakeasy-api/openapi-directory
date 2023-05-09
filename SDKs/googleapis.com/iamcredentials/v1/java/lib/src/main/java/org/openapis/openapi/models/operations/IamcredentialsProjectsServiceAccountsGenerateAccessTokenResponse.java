@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse {
     
     public String contentType;
+
     public IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateAccessTokenResponse generateAccessTokenResponse;
+
     public IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse withGenerateAccessTokenResponse(org.openapis.openapi.models.shared.GenerateAccessTokenResponse generateAccessTokenResponse) {
         this.generateAccessTokenResponse = generateAccessTokenResponse;
         return this;
@@ -26,6 +29,7 @@ public class IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse {
     
     
     public Integer statusCode;
+
     public IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IamcredentialsProjectsServiceAccountsGenerateAccessTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

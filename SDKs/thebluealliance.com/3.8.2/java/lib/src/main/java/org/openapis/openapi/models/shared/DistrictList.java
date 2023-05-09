@@ -12,6 +12,7 @@ public class DistrictList {
      */
     @JsonProperty("abbreviation")
     public String abbreviation;
+
     public DistrictList withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -22,6 +23,7 @@ public class DistrictList {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public DistrictList withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -32,6 +34,7 @@ public class DistrictList {
      */
     @JsonProperty("key")
     public String key;
+
     public DistrictList withKey(String key) {
         this.key = key;
         return this;
@@ -42,9 +45,16 @@ public class DistrictList {
      */
     @JsonProperty("year")
     public Long year;
+
     public DistrictList withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public DistrictList(@JsonProperty("abbreviation") String abbreviation, @JsonProperty("display_name") String displayName, @JsonProperty("key") String key, @JsonProperty("year") Long year) {
+        this.abbreviation = abbreviation;
+        this.displayName = displayName;
+        this.key = key;
+        this.year = year;
+  }
 }

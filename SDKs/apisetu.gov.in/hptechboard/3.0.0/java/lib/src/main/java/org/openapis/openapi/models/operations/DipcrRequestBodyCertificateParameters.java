@@ -12,6 +12,7 @@ public class DipcrRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public DipcrRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class DipcrRequestBodyCertificateParameters {
      */
     @JsonProperty("RollNo")
     public String rollNo;
+
     public DipcrRequestBodyCertificateParameters withRollNo(String rollNo) {
         this.rollNo = rollNo;
         return this;
     }
     
+    public DipcrRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("RollNo") String rollNo) {
+        this.fullName = fullName;
+        this.rollNo = rollNo;
+  }
 }

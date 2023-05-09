@@ -18,6 +18,7 @@ public class FormatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public FormatMessage withFormat(String format) {
         this.format = format;
         return this;
@@ -29,9 +30,11 @@ public class FormatMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public String[] parameters;
+
     public FormatMessage withParameters(String[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public FormatMessage(){}
 }

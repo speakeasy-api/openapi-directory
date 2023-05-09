@@ -15,6 +15,7 @@ public class AutoMLProblemTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageClassificationJobConfig")
     public ImageClassificationJobConfig imageClassificationJobConfig;
+
     public AutoMLProblemTypeConfig withImageClassificationJobConfig(ImageClassificationJobConfig imageClassificationJobConfig) {
         this.imageClassificationJobConfig = imageClassificationJobConfig;
         return this;
@@ -23,9 +24,11 @@ public class AutoMLProblemTypeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextClassificationJobConfig")
     public TextClassificationJobConfig textClassificationJobConfig;
+
     public AutoMLProblemTypeConfig withTextClassificationJobConfig(TextClassificationJobConfig textClassificationJobConfig) {
         this.textClassificationJobConfig = textClassificationJobConfig;
         return this;
     }
     
+    public AutoMLProblemTypeConfig(){}
 }

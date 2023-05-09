@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterprisePullRequestOverview {
     @JsonProperty("mergeable_pulls")
     public Long mergeablePulls;
+
     public EnterprisePullRequestOverview withMergeablePulls(Long mergeablePulls) {
         this.mergeablePulls = mergeablePulls;
         return this;
@@ -19,6 +20,7 @@ public class EnterprisePullRequestOverview {
     
     @JsonProperty("merged_pulls")
     public Long mergedPulls;
+
     public EnterprisePullRequestOverview withMergedPulls(Long mergedPulls) {
         this.mergedPulls = mergedPulls;
         return this;
@@ -26,6 +28,7 @@ public class EnterprisePullRequestOverview {
     
     @JsonProperty("total_pulls")
     public Long totalPulls;
+
     public EnterprisePullRequestOverview withTotalPulls(Long totalPulls) {
         this.totalPulls = totalPulls;
         return this;
@@ -33,9 +36,16 @@ public class EnterprisePullRequestOverview {
     
     @JsonProperty("unmergeable_pulls")
     public Long unmergeablePulls;
+
     public EnterprisePullRequestOverview withUnmergeablePulls(Long unmergeablePulls) {
         this.unmergeablePulls = unmergeablePulls;
         return this;
     }
     
+    public EnterprisePullRequestOverview(@JsonProperty("mergeable_pulls") Long mergeablePulls, @JsonProperty("merged_pulls") Long mergedPulls, @JsonProperty("total_pulls") Long totalPulls, @JsonProperty("unmergeable_pulls") Long unmergeablePulls) {
+        this.mergeablePulls = mergeablePulls;
+        this.mergedPulls = mergedPulls;
+        this.totalPulls = totalPulls;
+        this.unmergeablePulls = unmergeablePulls;
+  }
 }

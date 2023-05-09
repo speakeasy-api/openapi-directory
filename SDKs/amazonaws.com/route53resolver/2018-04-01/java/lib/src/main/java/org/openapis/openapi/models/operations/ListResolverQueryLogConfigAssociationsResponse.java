@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverQueryLogConfigAssociationsResponse {
@@ -12,6 +13,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResolverQueryLogConfigAssociationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     
     
     public String contentType;
+
     public ListResolverQueryLogConfigAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverQueryLogConfigAssociationsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverQueryLogConfigAssociationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverQueryLogConfigAssociationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object limitExceededException;
+
     public ListResolverQueryLogConfigAssociationsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsResponse listResolverQueryLogConfigAssociationsResponse;
+
     public ListResolverQueryLogConfigAssociationsResponse withListResolverQueryLogConfigAssociationsResponse(org.openapis.openapi.models.shared.ListResolverQueryLogConfigAssociationsResponse listResolverQueryLogConfigAssociationsResponse) {
         this.listResolverQueryLogConfigAssociationsResponse = listResolverQueryLogConfigAssociationsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListResolverQueryLogConfigAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListResolverQueryLogConfigAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverQueryLogConfigAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListResolverQueryLogConfigAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverQueryLogConfigAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverQueryLogConfigAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

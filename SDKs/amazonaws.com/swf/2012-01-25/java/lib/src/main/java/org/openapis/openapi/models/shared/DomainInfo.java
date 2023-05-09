@@ -15,6 +15,7 @@ public class DomainInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DomainInfo withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class DomainInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DomainInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +32,7 @@ public class DomainInfo {
     
     @JsonProperty("name")
     public String name;
+
     public DomainInfo withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class DomainInfo {
     
     @JsonProperty("status")
     public RegistrationStatusEnum status;
+
     public DomainInfo withStatus(RegistrationStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DomainInfo(@JsonProperty("name") String name, @JsonProperty("status") RegistrationStatusEnum status) {
+        this.name = name;
+        this.status = status;
+  }
 }

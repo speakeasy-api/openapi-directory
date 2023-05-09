@@ -15,6 +15,7 @@ public class WorkflowExecutionTerminatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public WorkflowExecutionTerminatedCauseEnum cause;
+
     public WorkflowExecutionTerminatedEventAttributes withCause(WorkflowExecutionTerminatedCauseEnum cause) {
         this.cause = cause;
         return this;
@@ -22,6 +23,7 @@ public class WorkflowExecutionTerminatedEventAttributes {
     
     @JsonProperty("childPolicy")
     public ChildPolicyEnum childPolicy;
+
     public WorkflowExecutionTerminatedEventAttributes withChildPolicy(ChildPolicyEnum childPolicy) {
         this.childPolicy = childPolicy;
         return this;
@@ -30,6 +32,7 @@ public class WorkflowExecutionTerminatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public WorkflowExecutionTerminatedEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -38,9 +41,13 @@ public class WorkflowExecutionTerminatedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public WorkflowExecutionTerminatedEventAttributes withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public WorkflowExecutionTerminatedEventAttributes(@JsonProperty("childPolicy") ChildPolicyEnum childPolicy) {
+        this.childPolicy = childPolicy;
+  }
 }

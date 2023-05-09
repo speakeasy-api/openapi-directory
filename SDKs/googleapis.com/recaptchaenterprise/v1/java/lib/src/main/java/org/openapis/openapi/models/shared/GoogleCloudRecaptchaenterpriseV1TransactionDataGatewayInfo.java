@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avsResponseCode")
     public String avsResponseCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo withAvsResponseCode(String avsResponseCode) {
         this.avsResponseCode = avsResponseCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cvvResponseCode")
     public String cvvResponseCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo withCvvResponseCode(String cvvResponseCode) {
         this.cvvResponseCode = cvvResponseCode;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayResponseCode")
     public String gatewayResponseCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo withGatewayResponseCode(String gatewayResponseCode) {
         this.gatewayResponseCode = gatewayResponseCode;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo(){}
 }

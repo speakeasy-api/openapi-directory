@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MicrosoftSQLServerCatalogSource {
     @JsonProperty("Database")
     public String database;
+
     public MicrosoftSQLServerCatalogSource withDatabase(String database) {
         this.database = database;
         return this;
@@ -19,6 +20,7 @@ public class MicrosoftSQLServerCatalogSource {
     
     @JsonProperty("Name")
     public String name;
+
     public MicrosoftSQLServerCatalogSource withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class MicrosoftSQLServerCatalogSource {
     
     @JsonProperty("Table")
     public String table;
+
     public MicrosoftSQLServerCatalogSource withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public MicrosoftSQLServerCatalogSource(@JsonProperty("Database") String database, @JsonProperty("Name") String name, @JsonProperty("Table") String table) {
+        this.database = database;
+        this.name = name;
+        this.table = table;
+  }
 }

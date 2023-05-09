@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSchemaByDefinitionResponse {
@@ -12,6 +13,7 @@ public class GetSchemaByDefinitionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetSchemaByDefinitionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetSchemaByDefinitionResponse {
     
     
     public String contentType;
+
     public GetSchemaByDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSchemaByDefinitionResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetSchemaByDefinitionResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetSchemaByDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSchemaByDefinitionResponse getSchemaByDefinitionResponse;
+
     public GetSchemaByDefinitionResponse withGetSchemaByDefinitionResponse(org.openapis.openapi.models.shared.GetSchemaByDefinitionResponse getSchemaByDefinitionResponse) {
         this.getSchemaByDefinitionResponse = getSchemaByDefinitionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetSchemaByDefinitionResponse {
      */
     
     public Object internalServiceException;
+
     public GetSchemaByDefinitionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetSchemaByDefinitionResponse {
      */
     
     public Object invalidInputException;
+
     public GetSchemaByDefinitionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetSchemaByDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetSchemaByDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSchemaByDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSchemaByDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSchemaByDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

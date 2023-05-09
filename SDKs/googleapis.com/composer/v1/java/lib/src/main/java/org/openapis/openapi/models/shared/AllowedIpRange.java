@@ -18,6 +18,7 @@ public class AllowedIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AllowedIpRange withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class AllowedIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AllowedIpRange withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AllowedIpRange(){}
 }

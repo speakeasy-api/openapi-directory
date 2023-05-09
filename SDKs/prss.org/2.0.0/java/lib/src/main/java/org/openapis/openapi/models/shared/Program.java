@@ -25,6 +25,7 @@ public class Program {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdDate")
     public OffsetDateTime createdDate;
+
     public Program withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -36,6 +37,7 @@ public class Program {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public Program withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -47,6 +49,7 @@ public class Program {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Program withId(Long id) {
         this.id = id;
         return this;
@@ -60,6 +63,7 @@ public class Program {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public Program withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -70,9 +74,13 @@ public class Program {
      */
     @JsonProperty("title")
     public String title;
+
     public Program withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Program(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

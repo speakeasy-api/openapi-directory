@@ -15,6 +15,7 @@ public class CollectionResponseActionRevisionForwardPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public ForwardPaging paging;
+
     public CollectionResponseActionRevisionForwardPaging withPaging(ForwardPaging paging) {
         this.paging = paging;
         return this;
@@ -22,9 +23,13 @@ public class CollectionResponseActionRevisionForwardPaging {
     
     @JsonProperty("results")
     public ActionRevision[] results;
+
     public CollectionResponseActionRevisionForwardPaging withResults(ActionRevision[] results) {
         this.results = results;
         return this;
     }
     
+    public CollectionResponseActionRevisionForwardPaging(@JsonProperty("results") ActionRevision[] results) {
+        this.results = results;
+  }
 }

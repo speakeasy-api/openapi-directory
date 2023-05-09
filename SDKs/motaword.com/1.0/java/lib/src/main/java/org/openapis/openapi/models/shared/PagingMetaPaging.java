@@ -12,6 +12,7 @@ public class PagingMetaPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public PagingMetaPaging withCount(Long count) {
         this.count = count;
         return this;
@@ -20,6 +21,7 @@ public class PagingMetaPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PagingLinksMeta links;
+
     public PagingMetaPaging withLinks(PagingLinksMeta links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class PagingMetaPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public PagingMetaPaging withPage(Long page) {
         this.page = page;
         return this;
@@ -36,6 +39,7 @@ public class PagingMetaPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public PagingMetaPaging withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -44,9 +48,11 @@ public class PagingMetaPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_count")
     public Long totalCount;
+
     public PagingMetaPaging withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public PagingMetaPaging(){}
 }

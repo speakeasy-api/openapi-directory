@@ -18,6 +18,7 @@ public class UpsertPatientRequestMetaQueryIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("system")
     public String system;
+
     public UpsertPatientRequestMetaQueryIdentifier withSystem(String system) {
         this.system = system;
         return this;
@@ -29,9 +30,11 @@ public class UpsertPatientRequestMetaQueryIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public UpsertPatientRequestMetaQueryIdentifier withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UpsertPatientRequestMetaQueryIdentifier(){}
 }

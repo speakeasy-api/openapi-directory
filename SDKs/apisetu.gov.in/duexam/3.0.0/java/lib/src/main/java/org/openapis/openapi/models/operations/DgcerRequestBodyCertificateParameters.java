@@ -12,6 +12,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("CNAME")
     public String cname;
+
     public DgcerRequestBodyCertificateParameters withCname(String cname) {
         this.cname = cname;
         return this;
@@ -22,6 +23,7 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RROLL")
     public String rroll;
+
     public DgcerRequestBodyCertificateParameters withRroll(String rroll) {
         this.rroll = rroll;
         return this;
@@ -32,9 +34,15 @@ public class DgcerRequestBodyCertificateParameters {
      */
     @JsonProperty("YEAR")
     public String year;
+
     public DgcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public DgcerRequestBodyCertificateParameters(@JsonProperty("CNAME") String cname, @JsonProperty("RROLL") String rroll, @JsonProperty("YEAR") String year) {
+        this.cname = cname;
+        this.rroll = rroll;
+        this.year = year;
+  }
 }

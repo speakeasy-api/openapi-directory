@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ContentOrderinvoicesCreaterefundinvoiceRequest {
@@ -12,6 +13,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.OrderinvoicesCreateRefundInvoiceRequest orderinvoicesCreateRefundInvoiceRequest;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withOrderinvoicesCreateRefundInvoiceRequest(org.openapis.openapi.models.shared.OrderinvoicesCreateRefundInvoiceRequest orderinvoicesCreateRefundInvoiceRequest) {
         this.orderinvoicesCreateRefundInvoiceRequest = orderinvoicesCreateRefundInvoiceRequest;
         return this;
@@ -29,6 +32,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=merchantId")
     public String merchantId;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -89,6 +98,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderId")
     public String orderId;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -109,6 +120,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class ContentOrderinvoicesCreaterefundinvoiceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ContentOrderinvoicesCreaterefundinvoiceRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ContentOrderinvoicesCreaterefundinvoiceRequest(@JsonProperty("merchantId") String merchantId, @JsonProperty("orderId") String orderId) {
+        this.merchantId = merchantId;
+        this.orderId = orderId;
+  }
 }

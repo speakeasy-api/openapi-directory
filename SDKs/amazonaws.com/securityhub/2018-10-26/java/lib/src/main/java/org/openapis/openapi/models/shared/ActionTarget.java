@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionTarget {
     @JsonProperty("ActionTargetArn")
     public String actionTargetArn;
+
     public ActionTarget withActionTargetArn(String actionTargetArn) {
         this.actionTargetArn = actionTargetArn;
         return this;
@@ -19,6 +20,7 @@ public class ActionTarget {
     
     @JsonProperty("Description")
     public String description;
+
     public ActionTarget withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +28,15 @@ public class ActionTarget {
     
     @JsonProperty("Name")
     public String name;
+
     public ActionTarget withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ActionTarget(@JsonProperty("ActionTargetArn") String actionTargetArn, @JsonProperty("Description") String description, @JsonProperty("Name") String name) {
+        this.actionTargetArn = actionTargetArn;
+        this.description = description;
+        this.name = name;
+  }
 }

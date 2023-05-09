@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateContactInMailinglistRequest;
 import org.openapis.openapi.models.operations.CreateContactInMailinglistResponse;
 import org.openapis.openapi.models.shared.CreateContactInMailingList;
@@ -14,16 +13,12 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest() {{
-                createContactInMailingList = new CreateContactInMailingList() {{
-                    email = "Larue_Rau85@yahoo.com";
-                    firstName = "Karley";
-                    lastName = "Stamm";
-                    unsubscribed = false;
-                }};
-                directoryId = "vel";
-                mailingListId = "error";
-            }}            
+            CreateContactInMailinglistRequest req = new CreateContactInMailinglistRequest(                new CreateContactInMailingList() {{
+                                email = "Larue_Rau85@yahoo.com";
+                                firstName = "Karley";
+                                lastName = "Stamm";
+                                unsubscribed = false;
+                            }};, "vel", "error");            
 
             CreateContactInMailinglistResponse res = sdk.createContactInMailinglist(req);
 
@@ -33,5 +28,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

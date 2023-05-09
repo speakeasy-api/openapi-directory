@@ -12,6 +12,7 @@ public class AssociateServiceActionWithProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public AssociateServiceActionWithProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class AssociateServiceActionWithProvisioningArtifactInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public AssociateServiceActionWithProvisioningArtifactInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -26,6 +28,7 @@ public class AssociateServiceActionWithProvisioningArtifactInput {
     
     @JsonProperty("ProvisioningArtifactId")
     public String provisioningArtifactId;
+
     public AssociateServiceActionWithProvisioningArtifactInput withProvisioningArtifactId(String provisioningArtifactId) {
         this.provisioningArtifactId = provisioningArtifactId;
         return this;
@@ -33,9 +36,15 @@ public class AssociateServiceActionWithProvisioningArtifactInput {
     
     @JsonProperty("ServiceActionId")
     public String serviceActionId;
+
     public AssociateServiceActionWithProvisioningArtifactInput withServiceActionId(String serviceActionId) {
         this.serviceActionId = serviceActionId;
         return this;
     }
     
+    public AssociateServiceActionWithProvisioningArtifactInput(@JsonProperty("ProductId") String productId, @JsonProperty("ProvisioningArtifactId") String provisioningArtifactId, @JsonProperty("ServiceActionId") String serviceActionId) {
+        this.productId = productId;
+        this.provisioningArtifactId = provisioningArtifactId;
+        this.serviceActionId = serviceActionId;
+  }
 }

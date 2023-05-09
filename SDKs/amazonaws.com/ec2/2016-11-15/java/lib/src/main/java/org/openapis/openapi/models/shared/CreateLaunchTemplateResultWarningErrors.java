@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateResultWarningErrors {
     
     public String code;
+
     public CreateLaunchTemplateResultWarningErrors withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class CreateLaunchTemplateResultWarningErrors {
     
     
     public String message;
+
     public CreateLaunchTemplateResultWarningErrors withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateLaunchTemplateResultWarningErrors(){}
 }

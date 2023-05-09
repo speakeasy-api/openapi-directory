@@ -15,9 +15,11 @@ public class ProjectsSetDefaultNetworkTierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTier")
     public ProjectsSetDefaultNetworkTierRequestNetworkTierEnum networkTier;
+
     public ProjectsSetDefaultNetworkTierRequest withNetworkTier(ProjectsSetDefaultNetworkTierRequestNetworkTierEnum networkTier) {
         this.networkTier = networkTier;
         return this;
     }
     
+    public ProjectsSetDefaultNetworkTierRequest(){}
 }

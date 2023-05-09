@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendStorageResponseResourceConfigPermissions {
     @JsonProperty("Authenticated")
     public AuthenticatedElementEnum[] authenticated;
+
     public GetBackendStorageResponseResourceConfigPermissions withAuthenticated(AuthenticatedElementEnum[] authenticated) {
         this.authenticated = authenticated;
         return this;
@@ -22,9 +23,13 @@ public class GetBackendStorageResponseResourceConfigPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnAuthenticated")
     public UnAuthenticatedElementEnum[] unAuthenticated;
+
     public GetBackendStorageResponseResourceConfigPermissions withUnAuthenticated(UnAuthenticatedElementEnum[] unAuthenticated) {
         this.unAuthenticated = unAuthenticated;
         return this;
     }
     
+    public GetBackendStorageResponseResourceConfigPermissions(@JsonProperty("Authenticated") AuthenticatedElementEnum[] authenticated) {
+        this.authenticated = authenticated;
+  }
 }

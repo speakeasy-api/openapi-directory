@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostOrganisationsResponse {
     
     public String contentType;
+
     public PostOrganisationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostOrganisationsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostOrganisationsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostOrganisationsResponse {
     
     
     public Integer statusCode;
+
     public PostOrganisationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostOrganisationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostOrganisationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArgument invalidArgument;
+
     public PostOrganisationsResponse withInvalidArgument(org.openapis.openapi.models.shared.InvalidArgument invalidArgument) {
         this.invalidArgument = invalidArgument;
         return this;
@@ -50,6 +56,7 @@ public class PostOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Organisation organisation;
+
     public PostOrganisationsResponse withOrganisation(org.openapis.openapi.models.shared.Organisation organisation) {
         this.organisation = organisation;
         return this;
@@ -60,9 +67,14 @@ public class PostOrganisationsResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public PostOrganisationsResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public PostOrganisationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

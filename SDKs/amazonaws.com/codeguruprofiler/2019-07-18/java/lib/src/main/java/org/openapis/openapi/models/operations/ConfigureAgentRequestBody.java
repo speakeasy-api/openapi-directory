@@ -15,6 +15,7 @@ public class ConfigureAgentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fleetInstanceId")
     public String fleetInstanceId;
+
     public ConfigureAgentRequestBody withFleetInstanceId(String fleetInstanceId) {
         this.fleetInstanceId = fleetInstanceId;
         return this;
@@ -26,9 +27,11 @@ public class ConfigureAgentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ConfigureAgentRequestBody withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
     }
     
+    public ConfigureAgentRequestBody(){}
 }

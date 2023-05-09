@@ -15,6 +15,7 @@ public class SectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_after")
     public String insertAfter;
+
     public SectionRequest withInsertAfter(String insertAfter) {
         this.insertAfter = insertAfter;
         return this;
@@ -26,6 +27,7 @@ public class SectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insert_before")
     public String insertBefore;
+
     public SectionRequest withInsertBefore(String insertBefore) {
         this.insertBefore = insertBefore;
         return this;
@@ -36,9 +38,13 @@ public class SectionRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public SectionRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SectionRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

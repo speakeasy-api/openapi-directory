@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetArtifactVersionMetaDataResponse {
     
     public String contentType;
+
     public GetArtifactVersionMetaDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetArtifactVersionMetaDataResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetArtifactVersionMetaDataResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetArtifactVersionMetaDataResponse {
     
     
     public Integer statusCode;
+
     public GetArtifactVersionMetaDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetArtifactVersionMetaDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetArtifactVersionMetaDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetArtifactVersionMetaDataResponse {
      */
     
     public org.openapis.openapi.models.shared.VersionMetaData versionMetaData;
+
     public GetArtifactVersionMetaDataResponse withVersionMetaData(org.openapis.openapi.models.shared.VersionMetaData versionMetaData) {
         this.versionMetaData = versionMetaData;
         return this;
     }
     
+    public GetArtifactVersionMetaDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

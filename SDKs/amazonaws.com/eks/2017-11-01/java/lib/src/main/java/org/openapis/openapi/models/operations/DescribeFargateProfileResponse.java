@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFargateProfileResponse {
@@ -12,6 +13,7 @@ public class DescribeFargateProfileResponse {
      */
     
     public Object clientException;
+
     public DescribeFargateProfileResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFargateProfileResponse {
     
     
     public String contentType;
+
     public DescribeFargateProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFargateProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFargateProfileResponse describeFargateProfileResponse;
+
     public DescribeFargateProfileResponse withDescribeFargateProfileResponse(org.openapis.openapi.models.shared.DescribeFargateProfileResponse describeFargateProfileResponse) {
         this.describeFargateProfileResponse = describeFargateProfileResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFargateProfileResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeFargateProfileResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeFargateProfileResponse {
     
     
     public Integer statusCode;
+
     public DescribeFargateProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeFargateProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFargateProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFargateProfileResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeFargateProfileResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFargateProfileResponse {
      */
     
     public Object serverException;
+
     public DescribeFargateProfileResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public DescribeFargateProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

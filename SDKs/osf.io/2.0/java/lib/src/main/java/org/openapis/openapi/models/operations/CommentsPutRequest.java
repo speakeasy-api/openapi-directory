@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CommentsPutRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public CommentsPutRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CommentsPutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public String commentId;
+
     public CommentsPutRequest withCommentId(String commentId) {
         this.commentId = commentId;
         return this;
     }
     
+    public CommentsPutRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("comment_id") String commentId) {
+        this.requestBody = requestBody;
+        this.commentId = commentId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifyTrustResponse {
@@ -12,6 +13,7 @@ public class VerifyTrustResponse {
      */
     
     public Object clientException;
+
     public VerifyTrustResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class VerifyTrustResponse {
     
     
     public String contentType;
+
     public VerifyTrustResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class VerifyTrustResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public VerifyTrustResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class VerifyTrustResponse {
      */
     
     public Object invalidParameterException;
+
     public VerifyTrustResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -46,6 +51,7 @@ public class VerifyTrustResponse {
     
     
     public Integer statusCode;
+
     public VerifyTrustResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class VerifyTrustResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifyTrustResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class VerifyTrustResponse {
      */
     
     public Object serviceException;
+
     public VerifyTrustResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -73,6 +81,7 @@ public class VerifyTrustResponse {
      */
     
     public Object unsupportedOperationException;
+
     public VerifyTrustResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
@@ -83,9 +92,14 @@ public class VerifyTrustResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifyTrustResult verifyTrustResult;
+
     public VerifyTrustResponse withVerifyTrustResult(org.openapis.openapi.models.shared.VerifyTrustResult verifyTrustResult) {
         this.verifyTrustResult = verifyTrustResult;
         return this;
     }
     
+    public VerifyTrustResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

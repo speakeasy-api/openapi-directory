@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppApiTokensListResponse {
     
     public String contentType;
+
     public AppApiTokensListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppApiTokensListResponse {
     
     
     public Integer statusCode;
+
     public AppApiTokensListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppApiTokensListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppApiTokensListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppApiTokensListResponse {
      */
     
     public AppApiTokensList200ApplicationJSON[] appApiTokensList200ApplicationJSONObjects;
+
     public AppApiTokensListResponse withAppApiTokensList200ApplicationJSONObjects(AppApiTokensList200ApplicationJSON[] appApiTokensList200ApplicationJSONObjects) {
         this.appApiTokensList200ApplicationJSONObjects = appApiTokensList200ApplicationJSONObjects;
         return this;
@@ -43,6 +48,7 @@ public class AppApiTokensListResponse {
      */
     
     public AppApiTokensList400ApplicationJSON appApiTokensList400ApplicationJSONObject;
+
     public AppApiTokensListResponse withAppApiTokensList400ApplicationJSONObject(AppApiTokensList400ApplicationJSON appApiTokensList400ApplicationJSONObject) {
         this.appApiTokensList400ApplicationJSONObject = appApiTokensList400ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class AppApiTokensListResponse {
      */
     
     public AppApiTokensList401ApplicationJSON appApiTokensList401ApplicationJSONObject;
+
     public AppApiTokensListResponse withAppApiTokensList401ApplicationJSONObject(AppApiTokensList401ApplicationJSON appApiTokensList401ApplicationJSONObject) {
         this.appApiTokensList401ApplicationJSONObject = appApiTokensList401ApplicationJSONObject;
         return this;
     }
     
+    public AppApiTokensListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

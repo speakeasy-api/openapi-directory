@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchUpdateFindingsResponse {
@@ -12,6 +13,7 @@ public class BatchUpdateFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchUpdateFindingsResponse batchUpdateFindingsResponse;
+
     public BatchUpdateFindingsResponse withBatchUpdateFindingsResponse(org.openapis.openapi.models.shared.BatchUpdateFindingsResponse batchUpdateFindingsResponse) {
         this.batchUpdateFindingsResponse = batchUpdateFindingsResponse;
         return this;
@@ -19,6 +21,7 @@ public class BatchUpdateFindingsResponse {
     
     
     public String contentType;
+
     public BatchUpdateFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchUpdateFindingsResponse {
      */
     
     public Object internalException;
+
     public BatchUpdateFindingsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class BatchUpdateFindingsResponse {
      */
     
     public Object invalidAccessException;
+
     public BatchUpdateFindingsResponse withInvalidAccessException(Object invalidAccessException) {
         this.invalidAccessException = invalidAccessException;
         return this;
@@ -49,6 +54,7 @@ public class BatchUpdateFindingsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchUpdateFindingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class BatchUpdateFindingsResponse {
      */
     
     public Object limitExceededException;
+
     public BatchUpdateFindingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class BatchUpdateFindingsResponse {
     
     
     public Integer statusCode;
+
     public BatchUpdateFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class BatchUpdateFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchUpdateFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchUpdateFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

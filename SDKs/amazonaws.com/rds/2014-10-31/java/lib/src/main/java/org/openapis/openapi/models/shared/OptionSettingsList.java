@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionSettingsList {
     
     public String allowedValues;
+
     public OptionSettingsList withAllowedValues(String allowedValues) {
         this.allowedValues = allowedValues;
         return this;
@@ -19,6 +20,7 @@ public class OptionSettingsList {
     
     
     public String applyType;
+
     public OptionSettingsList withApplyType(String applyType) {
         this.applyType = applyType;
         return this;
@@ -26,6 +28,7 @@ public class OptionSettingsList {
     
     
     public String dataType;
+
     public OptionSettingsList withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -33,6 +36,7 @@ public class OptionSettingsList {
     
     
     public String defaultValue;
+
     public OptionSettingsList withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -40,6 +44,7 @@ public class OptionSettingsList {
     
     
     public String description;
+
     public OptionSettingsList withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +52,7 @@ public class OptionSettingsList {
     
     
     public Boolean isCollection;
+
     public OptionSettingsList withIsCollection(Boolean isCollection) {
         this.isCollection = isCollection;
         return this;
@@ -54,6 +60,7 @@ public class OptionSettingsList {
     
     
     public Boolean isModifiable;
+
     public OptionSettingsList withIsModifiable(Boolean isModifiable) {
         this.isModifiable = isModifiable;
         return this;
@@ -61,6 +68,7 @@ public class OptionSettingsList {
     
     
     public String name;
+
     public OptionSettingsList withName(String name) {
         this.name = name;
         return this;
@@ -68,9 +76,11 @@ public class OptionSettingsList {
     
     
     public String value;
+
     public OptionSettingsList withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public OptionSettingsList(){}
 }

@@ -18,9 +18,11 @@ public class GetArchivedPromotions200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public org.openapis.openapi.models.shared.GetPromotions[] items;
+
     public GetArchivedPromotions200ApplicationJSON withItems(org.openapis.openapi.models.shared.GetPromotions[] items) {
         this.items = items;
         return this;
     }
     
+    public GetArchivedPromotions200ApplicationJSON(){}
 }

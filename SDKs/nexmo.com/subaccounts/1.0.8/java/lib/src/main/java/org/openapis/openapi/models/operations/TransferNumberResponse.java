@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransferNumberResponse {
     
     public String contentType;
+
     public TransferNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TransferNumberResponse {
     
     
     public Integer statusCode;
+
     public TransferNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TransferNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransferNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TransferNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.TransferNumberResponse transferNumberResponse;
+
     public TransferNumberResponse withTransferNumberResponse(org.openapis.openapi.models.shared.TransferNumberResponse transferNumberResponse) {
         this.transferNumberResponse = transferNumberResponse;
         return this;
@@ -43,6 +48,7 @@ public class TransferNumberResponse {
      */
     
     public TransferNumber401ApplicationJSON transferNumber401ApplicationJSONObject;
+
     public TransferNumberResponse withTransferNumber401ApplicationJSONObject(TransferNumber401ApplicationJSON transferNumber401ApplicationJSONObject) {
         this.transferNumber401ApplicationJSONObject = transferNumber401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TransferNumberResponse {
      */
     
     public Object transferNumber403ApplicationJSONOneOf;
+
     public TransferNumberResponse withTransferNumber403ApplicationJSONOneOf(Object transferNumber403ApplicationJSONOneOf) {
         this.transferNumber403ApplicationJSONOneOf = transferNumber403ApplicationJSONOneOf;
         return this;
@@ -63,6 +70,7 @@ public class TransferNumberResponse {
      */
     
     public Object transferNumber404ApplicationJSONOneOf;
+
     public TransferNumberResponse withTransferNumber404ApplicationJSONOneOf(Object transferNumber404ApplicationJSONOneOf) {
         this.transferNumber404ApplicationJSONOneOf = transferNumber404ApplicationJSONOneOf;
         return this;
@@ -73,6 +81,7 @@ public class TransferNumberResponse {
      */
     
     public TransferNumber409ApplicationJSON transferNumber409ApplicationJSONObject;
+
     public TransferNumberResponse withTransferNumber409ApplicationJSONObject(TransferNumber409ApplicationJSON transferNumber409ApplicationJSONObject) {
         this.transferNumber409ApplicationJSONObject = transferNumber409ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class TransferNumberResponse {
      */
     
     public TransferNumber422ApplicationJSON transferNumber422ApplicationJSONObject;
+
     public TransferNumberResponse withTransferNumber422ApplicationJSONObject(TransferNumber422ApplicationJSON transferNumber422ApplicationJSONObject) {
         this.transferNumber422ApplicationJSONObject = transferNumber422ApplicationJSONObject;
         return this;
     }
     
+    public TransferNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

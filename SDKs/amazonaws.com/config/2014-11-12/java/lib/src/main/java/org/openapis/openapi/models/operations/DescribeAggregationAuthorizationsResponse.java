@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAggregationAuthorizationsResponse {
     
     public String contentType;
+
     public DescribeAggregationAuthorizationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAggregationAuthorizationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAggregationAuthorizationsResponse describeAggregationAuthorizationsResponse;
+
     public DescribeAggregationAuthorizationsResponse withDescribeAggregationAuthorizationsResponse(org.openapis.openapi.models.shared.DescribeAggregationAuthorizationsResponse describeAggregationAuthorizationsResponse) {
         this.describeAggregationAuthorizationsResponse = describeAggregationAuthorizationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAggregationAuthorizationsResponse {
      */
     
     public Object invalidLimitException;
+
     public DescribeAggregationAuthorizationsResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAggregationAuthorizationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeAggregationAuthorizationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAggregationAuthorizationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeAggregationAuthorizationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAggregationAuthorizationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAggregationAuthorizationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeAggregationAuthorizationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAggregationAuthorizationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAggregationAuthorizationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

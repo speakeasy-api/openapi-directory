@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ReviewPages - Pages of review results
@@ -15,6 +15,7 @@ public class ReviewPages {
      */
     
     public Long count;
+
     public ReviewPages withCount(Long count) {
         this.count = count;
         return this;
@@ -25,6 +26,7 @@ public class ReviewPages {
      */
     
     public Review[] list;
+
     public ReviewPages withList(Review[] list) {
         this.list = list;
         return this;
@@ -35,6 +37,7 @@ public class ReviewPages {
      */
     
     public Long pageNumber;
+
     public ReviewPages withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -45,9 +48,14 @@ public class ReviewPages {
      */
     
     public Long pages;
+
     public ReviewPages withPages(Long pages) {
         this.pages = pages;
         return this;
     }
     
+    public ReviewPages(@JsonProperty("count") Long count, @JsonProperty("list") Review[] list) {
+        this.count = count;
+        this.list = list;
+  }
 }

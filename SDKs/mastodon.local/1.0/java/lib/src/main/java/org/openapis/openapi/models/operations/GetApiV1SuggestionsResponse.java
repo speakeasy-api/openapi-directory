@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV1SuggestionsResponse {
@@ -12,6 +13,7 @@ public class GetApiV1SuggestionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Account account;
+
     public GetApiV1SuggestionsResponse withAccount(org.openapis.openapi.models.shared.Account account) {
         this.account = account;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV1SuggestionsResponse {
     
     
     public String contentType;
+
     public GetApiV1SuggestionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetApiV1SuggestionsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetApiV1SuggestionsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetApiV1SuggestionsResponse {
     
     
     public Integer statusCode;
+
     public GetApiV1SuggestionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetApiV1SuggestionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV1SuggestionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV1SuggestionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

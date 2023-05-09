@@ -23,6 +23,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReading")
     public Double counterReading;
+
     public DeviceInPast withCounterReading(Double counterReading) {
         this.counterReading = counterReading;
         return this;
@@ -34,6 +35,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExport")
     public Double counterReadingExport;
+
     public DeviceInPast withCounterReadingExport(Double counterReadingExport) {
         this.counterReadingExport = counterReadingExport;
         return this;
@@ -45,6 +47,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExportT1")
     public Double counterReadingExportT1;
+
     public DeviceInPast withCounterReadingExportT1(Double counterReadingExportT1) {
         this.counterReadingExportT1 = counterReadingExportT1;
         return this;
@@ -56,6 +59,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExportT2")
     public Double counterReadingExportT2;
+
     public DeviceInPast withCounterReadingExportT2(Double counterReadingExportT2) {
         this.counterReadingExportT2 = counterReadingExportT2;
         return this;
@@ -67,6 +71,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExportT3")
     public Double counterReadingExportT3;
+
     public DeviceInPast withCounterReadingExportT3(Double counterReadingExportT3) {
         this.counterReadingExportT3 = counterReadingExportT3;
         return this;
@@ -78,6 +83,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingExportT4")
     public Double counterReadingExportT4;
+
     public DeviceInPast withCounterReadingExportT4(Double counterReadingExportT4) {
         this.counterReadingExportT4 = counterReadingExportT4;
         return this;
@@ -89,6 +95,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImport")
     public Double counterReadingImport;
+
     public DeviceInPast withCounterReadingImport(Double counterReadingImport) {
         this.counterReadingImport = counterReadingImport;
         return this;
@@ -100,6 +107,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImportT1")
     public Double counterReadingImportT1;
+
     public DeviceInPast withCounterReadingImportT1(Double counterReadingImportT1) {
         this.counterReadingImportT1 = counterReadingImportT1;
         return this;
@@ -111,6 +119,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImportT2")
     public Double counterReadingImportT2;
+
     public DeviceInPast withCounterReadingImportT2(Double counterReadingImportT2) {
         this.counterReadingImportT2 = counterReadingImportT2;
         return this;
@@ -122,6 +131,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImportT3")
     public Double counterReadingImportT3;
+
     public DeviceInPast withCounterReadingImportT3(Double counterReadingImportT3) {
         this.counterReadingImportT3 = counterReadingImportT3;
         return this;
@@ -133,6 +143,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingImportT4")
     public Double counterReadingImportT4;
+
     public DeviceInPast withCounterReadingImportT4(Double counterReadingImportT4) {
         this.counterReadingImportT4 = counterReadingImportT4;
         return this;
@@ -144,6 +155,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT1")
     public Double counterReadingT1;
+
     public DeviceInPast withCounterReadingT1(Double counterReadingT1) {
         this.counterReadingT1 = counterReadingT1;
         return this;
@@ -155,6 +167,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT2")
     public Double counterReadingT2;
+
     public DeviceInPast withCounterReadingT2(Double counterReadingT2) {
         this.counterReadingT2 = counterReadingT2;
         return this;
@@ -166,6 +179,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT3")
     public Double counterReadingT3;
+
     public DeviceInPast withCounterReadingT3(Double counterReadingT3) {
         this.counterReadingT3 = counterReadingT3;
         return this;
@@ -177,6 +191,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingT4")
     public Double counterReadingT4;
+
     public DeviceInPast withCounterReadingT4(Double counterReadingT4) {
         this.counterReadingT4 = counterReadingT4;
         return this;
@@ -188,6 +203,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CounterReadingUnit")
     public String counterReadingUnit;
+
     public DeviceInPast withCounterReadingUnit(String counterReadingUnit) {
         this.counterReadingUnit = counterReadingUnit;
         return this;
@@ -201,6 +217,7 @@ public class DeviceInPast {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Date")
     public OffsetDateTime date;
+
     public DeviceInPast withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -212,6 +229,7 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public DeviceInPast withId(String id) {
         this.id = id;
         return this;
@@ -223,9 +241,11 @@ public class DeviceInPast {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serial")
     public Long serial;
+
     public DeviceInPast withSerial(Long serial) {
         this.serial = serial;
         return this;
     }
     
+    public DeviceInPast(){}
 }

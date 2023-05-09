@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSubAccountRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NewSubaccountRequest newSubaccountRequest;
+
     public CreateSubAccountRequest withNewSubaccountRequest(org.openapis.openapi.models.shared.NewSubaccountRequest newSubaccountRequest) {
         this.newSubaccountRequest = newSubaccountRequest;
         return this;
@@ -19,9 +21,14 @@ public class CreateSubAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public CreateSubAccountRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public CreateSubAccountRequest(@JsonProperty("NewSubaccountRequest") org.openapis.openapi.models.shared.NewSubaccountRequest newSubaccountRequest, @JsonProperty("api_key") String apiKey) {
+        this.newSubaccountRequest = newSubaccountRequest;
+        this.apiKey = apiKey;
+  }
 }

@@ -18,6 +18,7 @@ public class UpdateMetadataArguments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public UpdateMetadataArguments withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -29,6 +30,7 @@ public class UpdateMetadataArguments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIdentifier")
     public DeviceIdentifier deviceIdentifier;
+
     public UpdateMetadataArguments withDeviceIdentifier(DeviceIdentifier deviceIdentifier) {
         this.deviceIdentifier = deviceIdentifier;
         return this;
@@ -40,9 +42,11 @@ public class UpdateMetadataArguments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMetadata")
     public DeviceMetadata deviceMetadata;
+
     public UpdateMetadataArguments withDeviceMetadata(DeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
     }
     
+    public UpdateMetadataArguments(){}
 }

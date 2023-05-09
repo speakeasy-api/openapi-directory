@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActivateDockRequest {
@@ -12,6 +13,7 @@ public class ActivateDockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ActivateDockRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ActivateDockRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ActivateDockRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class ActivateDockRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dockId")
     public String dockId;
+
     public ActivateDockRequest withDockId(String dockId) {
         this.dockId = dockId;
         return this;
     }
     
+    public ActivateDockRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("dockId") String dockId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.dockId = dockId;
+  }
 }

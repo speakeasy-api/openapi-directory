@@ -15,6 +15,7 @@ public class PadUsersCountUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public PadUsersCountUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class PadUsersCountUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PadUsersCountUsingGET200ApplicationJSONData data;
+
     public PadUsersCountUsingGET200ApplicationJSON withData(PadUsersCountUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class PadUsersCountUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PadUsersCountUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PadUsersCountUsingGET200ApplicationJSON(){}
 }

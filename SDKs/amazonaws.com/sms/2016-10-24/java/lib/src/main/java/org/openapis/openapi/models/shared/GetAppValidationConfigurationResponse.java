@@ -15,6 +15,7 @@ public class GetAppValidationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appValidationConfigurations")
     public AppValidationConfiguration[] appValidationConfigurations;
+
     public GetAppValidationConfigurationResponse withAppValidationConfigurations(AppValidationConfiguration[] appValidationConfigurations) {
         this.appValidationConfigurations = appValidationConfigurations;
         return this;
@@ -23,9 +24,11 @@ public class GetAppValidationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverGroupValidationConfigurations")
     public ServerGroupValidationConfiguration[] serverGroupValidationConfigurations;
+
     public GetAppValidationConfigurationResponse withServerGroupValidationConfigurations(ServerGroupValidationConfiguration[] serverGroupValidationConfigurations) {
         this.serverGroupValidationConfigurations = serverGroupValidationConfigurations;
         return this;
     }
     
+    public GetAppValidationConfigurationResponse(){}
 }

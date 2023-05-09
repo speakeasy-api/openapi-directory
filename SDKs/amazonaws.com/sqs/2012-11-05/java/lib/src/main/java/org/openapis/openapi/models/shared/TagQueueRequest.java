@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagQueueRequest {
     
     public String queueUrl;
+
     public TagQueueRequest withQueueUrl(String queueUrl) {
         this.queueUrl = queueUrl;
         return this;
@@ -16,9 +17,14 @@ public class TagQueueRequest {
     
     
     public java.util.Map<String, String> tags;
+
     public TagQueueRequest withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagQueueRequest(@JsonProperty("QueueUrl") String queueUrl, @JsonProperty("Tags") java.util.Map<String, String> tags) {
+        this.queueUrl = queueUrl;
+        this.tags = tags;
+  }
 }

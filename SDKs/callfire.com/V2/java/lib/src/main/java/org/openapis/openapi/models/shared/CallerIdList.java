@@ -15,9 +15,11 @@ public class CallerIdList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public CallerId[] items;
+
     public CallerIdList withItems(CallerId[] items) {
         this.items = items;
         return this;
     }
     
+    public CallerIdList(){}
 }

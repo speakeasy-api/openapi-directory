@@ -12,6 +12,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public String assignment;
+
     public Subscription withAssignment(String assignment) {
         this.assignment = assignment;
         return this;
@@ -20,6 +21,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Subscription withEmail(String email) {
         this.email = email;
         return this;
@@ -27,6 +29,7 @@ public class Subscription {
     
     @JsonProperty("id")
     public String id;
+
     public Subscription withId(String id) {
         this.id = id;
         return this;
@@ -34,6 +37,7 @@ public class Subscription {
     
     @JsonProperty("includeBody")
     public Boolean includeBody;
+
     public Subscription withIncludeBody(Boolean includeBody) {
         this.includeBody = includeBody;
         return this;
@@ -42,6 +46,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeThumbenail")
     public Boolean includeThumbenail;
+
     public Subscription withIncludeThumbenail(Boolean includeThumbenail) {
         this.includeThumbenail = includeThumbenail;
         return this;
@@ -50,6 +55,7 @@ public class Subscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slackChannel")
     public String slackChannel;
+
     public Subscription withSlackChannel(String slackChannel) {
         this.slackChannel = slackChannel;
         return this;
@@ -57,6 +63,7 @@ public class Subscription {
     
     @JsonProperty("token")
     public String token;
+
     public Subscription withToken(String token) {
         this.token = token;
         return this;
@@ -64,6 +71,7 @@ public class Subscription {
     
     @JsonProperty("types")
     public String[] types;
+
     public Subscription withTypes(String[] types) {
         this.types = types;
         return this;
@@ -71,9 +79,17 @@ public class Subscription {
     
     @JsonProperty("user")
     public String user;
+
     public Subscription withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public Subscription(@JsonProperty("id") String id, @JsonProperty("includeBody") Boolean includeBody, @JsonProperty("token") String token, @JsonProperty("types") String[] types, @JsonProperty("user") String user) {
+        this.id = id;
+        this.includeBody = includeBody;
+        this.token = token;
+        this.types = types;
+        this.user = user;
+  }
 }

@@ -198,6 +198,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -235,13 +240,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.BatchExecuteStatementResponse res = new org.openapis.openapi.models.operations.BatchExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             batchExecuteStatementOutput = null;
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,7 +273,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;The &lt;code&gt;BatchGetItem&lt;/code&gt; operation returns the attributes of one or more items from one or more tables. You identify requested items by primary key.&lt;/p&gt; &lt;p&gt;A single operation can retrieve up to 16 MB of data, which can contain as many as 100 items. &lt;code&gt;BatchGetItem&lt;/code&gt; returns a partial result if the response size limit is exceeded, the table's provisioned throughput is exceeded, or an internal processing failure occurs. If a partial result is returned, the operation returns a value for &lt;code&gt;UnprocessedKeys&lt;/code&gt;. You can use this value to retry the operation starting with the next item to get.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If you request more than 100 items, &lt;code&gt;BatchGetItem&lt;/code&gt; returns a &lt;code&gt;ValidationException&lt;/code&gt; with the message "Too many items requested for the BatchGetItem call."&lt;/p&gt; &lt;/important&gt; &lt;p&gt;For example, if you ask to retrieve 100 items, but each individual item is 300 KB in size, the system returns 52 items (so as not to exceed the 16 MB limit). It also returns an appropriate &lt;code&gt;UnprocessedKeys&lt;/code&gt; value so you can get the next page of results. If desired, your application can include its own logic to assemble the pages of results into one dataset.&lt;/p&gt; &lt;p&gt;If &lt;i&gt;none&lt;/i&gt; of the items can be processed due to insufficient provisioned throughput on all of the tables in the request, then &lt;code&gt;BatchGetItem&lt;/code&gt; returns a &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;. If &lt;i&gt;at least one&lt;/i&gt; of the items is successfully processed, then &lt;code&gt;BatchGetItem&lt;/code&gt; completes successfully, while returning the keys of the unread items in &lt;code&gt;UnprocessedKeys&lt;/code&gt;.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If DynamoDB returns any unprocessed items, you should retry the batch operation on those items. However, &lt;i&gt;we strongly recommend that you use an exponential backoff algorithm&lt;/i&gt;. If you retry the batch operation immediately, the underlying read or write requests can still fail due to throttling on the individual tables. If you delay the batch operation using exponential backoff, the individual requests in the batch are much more likely to succeed.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations"&gt;Batch Operations and Error Handling&lt;/a&gt; in the &lt;i&gt;Amazon DynamoDB Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;By default, &lt;code&gt;BatchGetItem&lt;/code&gt; performs eventually consistent reads on every table in the request. If you want strongly consistent reads instead, you can set &lt;code&gt;ConsistentRead&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; for any or all tables.&lt;/p&gt; &lt;p&gt;In order to minimize response latency, &lt;code&gt;BatchGetItem&lt;/code&gt; retrieves items in parallel.&lt;/p&gt; &lt;p&gt;When designing your application, keep in mind that DynamoDB does not return items in any particular order. To help parse the response by item, include the primary key values for the items in your request in the &lt;code&gt;ProjectionExpression&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;If a requested item does not exist, it is not returned in the result. Requests for nonexistent items consume the minimum read capacity units according to the type of read. For more information, see &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations"&gt;Working with Tables&lt;/a&gt; in the &lt;i&gt;Amazon DynamoDB Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;The &lt;code&gt;BatchGetItem&lt;/code&gt; operation returns the attributes of one or more items from one or more tables. You identify requested items by primary key.&lt;/p&gt; &lt;p&gt;A single operation can retrieve up to 16 MB of data, which can contain as many as 100 items. &lt;code&gt;BatchGetItem&lt;/code&gt; returns a partial result if the response size limit is exceeded, the table's provisioned throughput is exceeded, or an internal processing failure occurs. If a partial result is returned, the operation returns a value for &lt;code&gt;UnprocessedKeys&lt;/code&gt;. You can use this value to retry the operation starting with the next item to get.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If you request more than 100 items, &lt;code&gt;BatchGetItem&lt;/code&gt; returns a &lt;code&gt;ValidationException&lt;/code&gt; with the message "Too many items requested for the BatchGetItem call."&lt;/p&gt; &lt;/important&gt; &lt;p&gt;For example, if you ask to retrieve 100 items, but each individual item is 300 KB in size, the system returns 52 items (so as not to exceed the 16 MB limit). It also returns an appropriate &lt;code&gt;UnprocessedKeys&lt;/code&gt; value so you can get the next page of results. If desired, your application can include its own logic to assemble the pages of results into one dataset.&lt;/p&gt; &lt;p&gt;If &lt;i&gt;none&lt;/i&gt; of the items can be processed due to insufficient provisioned throughput on all of the tables in the request, then &lt;code&gt;BatchGetItem&lt;/code&gt; returns a &lt;code&gt;ProvisionedThroughputExceededException&lt;/code&gt;. If &lt;i&gt;at least one&lt;/i&gt; of the items is successfully processed, then &lt;code&gt;BatchGetItem&lt;/code&gt; completes successfully, while returning the keys of the unread items in &lt;code&gt;UnprocessedKeys&lt;/code&gt;.&lt;/p&gt; &lt;important&gt; &lt;p&gt;If DynamoDB returns any unprocessed items, you should retry the batch operation on those items. However, &lt;i&gt;we strongly recommend that you use an exponential backoff algorithm&lt;/i&gt;. If you retry the batch operation immediately, the underlying read or write requests can still fail due to throttling on the individual tables. If you delay the batch operation using exponential backoff, the individual requests in the batch are much more likely to succeed.&lt;/p&gt; &lt;p&gt;For more information, see &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/ErrorHandling.html#BatchOperations"&gt;Batch Operations and Error Handling&lt;/a&gt; in the &lt;i&gt;Amazon DynamoDB Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/important&gt; &lt;p&gt;By default, &lt;code&gt;BatchGetItem&lt;/code&gt; performs eventually consistent reads on every table in the request. If you want strongly consistent reads instead, you can set &lt;code&gt;ConsistentRead&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; for any or all tables.&lt;/p&gt; &lt;p&gt;In order to minimize response latency, &lt;code&gt;BatchGetItem&lt;/code&gt; may retrieve items in parallel.&lt;/p&gt; &lt;p&gt;When designing your application, keep in mind that DynamoDB does not return items in any particular order. To help parse the response by item, include the primary key values for the items in your request in the &lt;code&gt;ProjectionExpression&lt;/code&gt; parameter.&lt;/p&gt; &lt;p&gt;If a requested item does not exist, it is not returned in the result. Requests for nonexistent items consume the minimum read capacity units according to the type of read. For more information, see &lt;a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/WorkingWithTables.html#CapacityUnitCalculations"&gt;Working with Tables&lt;/a&gt; in the &lt;i&gt;Amazon DynamoDB Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -309,15 +312,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchGetItemResponse res = new org.openapis.openapi.models.operations.BatchGetItemResponse() {{
+        org.openapis.openapi.models.operations.BatchGetItemResponse res = new org.openapis.openapi.models.operations.BatchGetItemResponse(contentType, httpRes.statusCode()) {{
             batchGetItemOutput = null;
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -393,7 +394,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BatchWriteItemResponse res = new org.openapis.openapi.models.operations.BatchWriteItemResponse() {{
+        org.openapis.openapi.models.operations.BatchWriteItemResponse res = new org.openapis.openapi.models.operations.BatchWriteItemResponse(contentType, httpRes.statusCode()) {{
             batchWriteItemOutput = null;
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
@@ -401,8 +402,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,7 +484,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateBackupResponse res = new org.openapis.openapi.models.operations.CreateBackupResponse() {{
+        org.openapis.openapi.models.operations.CreateBackupResponse res = new org.openapis.openapi.models.operations.CreateBackupResponse(contentType, httpRes.statusCode()) {{
             createBackupOutput = null;
             tableNotFoundException = null;
             tableInUseException = null;
@@ -494,8 +493,6 @@ public class SDK {
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -585,15 +582,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlobalTableResponse res = new org.openapis.openapi.models.operations.CreateGlobalTableResponse() {{
+        org.openapis.openapi.models.operations.CreateGlobalTableResponse res = new org.openapis.openapi.models.operations.CreateGlobalTableResponse(contentType, httpRes.statusCode()) {{
             createGlobalTableOutput = null;
             limitExceededException = null;
             internalServerError = null;
             globalTableAlreadyExistsException = null;
             tableNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -669,14 +664,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTableResponse res = new org.openapis.openapi.models.operations.CreateTableResponse() {{
+        org.openapis.openapi.models.operations.CreateTableResponse res = new org.openapis.openapi.models.operations.CreateTableResponse(contentType, httpRes.statusCode()) {{
             createTableOutput = null;
             resourceInUseException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -745,15 +738,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse() {{
+        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse(contentType, httpRes.statusCode()) {{
             deleteBackupOutput = null;
             backupNotFoundException = null;
             backupInUseException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -829,7 +820,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteItemResponse res = new org.openapis.openapi.models.operations.DeleteItemResponse() {{
+        org.openapis.openapi.models.operations.DeleteItemResponse res = new org.openapis.openapi.models.operations.DeleteItemResponse(contentType, httpRes.statusCode()) {{
             deleteItemOutput = null;
             conditionalCheckFailedException = null;
             provisionedThroughputExceededException = null;
@@ -839,8 +830,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -937,15 +926,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTableResponse res = new org.openapis.openapi.models.operations.DeleteTableResponse() {{
+        org.openapis.openapi.models.operations.DeleteTableResponse res = new org.openapis.openapi.models.operations.DeleteTableResponse(contentType, httpRes.statusCode()) {{
             deleteTableOutput = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1021,13 +1008,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeBackupResponse res = new org.openapis.openapi.models.operations.DescribeBackupResponse() {{
+        org.openapis.openapi.models.operations.DescribeBackupResponse res = new org.openapis.openapi.models.operations.DescribeBackupResponse(contentType, httpRes.statusCode()) {{
             describeBackupOutput = null;
             backupNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1089,13 +1074,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeContinuousBackupsResponse res = new org.openapis.openapi.models.operations.DescribeContinuousBackupsResponse() {{
+        org.openapis.openapi.models.operations.DescribeContinuousBackupsResponse res = new org.openapis.openapi.models.operations.DescribeContinuousBackupsResponse(contentType, httpRes.statusCode()) {{
             describeContinuousBackupsOutput = null;
             tableNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1157,13 +1140,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeContributorInsightsResponse res = new org.openapis.openapi.models.operations.DescribeContributorInsightsResponse() {{
+        org.openapis.openapi.models.operations.DescribeContributorInsightsResponse res = new org.openapis.openapi.models.operations.DescribeContributorInsightsResponse(contentType, httpRes.statusCode()) {{
             describeContributorInsightsOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1225,11 +1206,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeEndpointsResponse res = new org.openapis.openapi.models.operations.DescribeEndpointsResponse() {{
+        org.openapis.openapi.models.operations.DescribeEndpointsResponse res = new org.openapis.openapi.models.operations.DescribeEndpointsResponse(contentType, httpRes.statusCode()) {{
             describeEndpointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1277,14 +1256,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeExportResponse res = new org.openapis.openapi.models.operations.DescribeExportResponse() {{
+        org.openapis.openapi.models.operations.DescribeExportResponse res = new org.openapis.openapi.models.operations.DescribeExportResponse(contentType, httpRes.statusCode()) {{
             describeExportOutput = null;
             exportNotFoundException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1353,13 +1330,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGlobalTableResponse res = new org.openapis.openapi.models.operations.DescribeGlobalTableResponse() {{
+        org.openapis.openapi.models.operations.DescribeGlobalTableResponse res = new org.openapis.openapi.models.operations.DescribeGlobalTableResponse(contentType, httpRes.statusCode()) {{
             describeGlobalTableOutput = null;
             internalServerError = null;
             globalTableNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1421,13 +1396,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeGlobalTableSettingsResponse res = new org.openapis.openapi.models.operations.DescribeGlobalTableSettingsResponse() {{
+        org.openapis.openapi.models.operations.DescribeGlobalTableSettingsResponse res = new org.openapis.openapi.models.operations.DescribeGlobalTableSettingsResponse(contentType, httpRes.statusCode()) {{
             describeGlobalTableSettingsOutput = null;
             globalTableNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1489,12 +1462,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeImportResponse res = new org.openapis.openapi.models.operations.DescribeImportResponse() {{
+        org.openapis.openapi.models.operations.DescribeImportResponse res = new org.openapis.openapi.models.operations.DescribeImportResponse(contentType, httpRes.statusCode()) {{
             describeImportOutput = null;
             importNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1549,13 +1520,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.DescribeKinesisStreamingDestinationResponse() {{
+        org.openapis.openapi.models.operations.DescribeKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.DescribeKinesisStreamingDestinationResponse(contentType, httpRes.statusCode()) {{
             describeKinesisStreamingDestinationOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1617,12 +1586,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLimitsResponse res = new org.openapis.openapi.models.operations.DescribeLimitsResponse() {{
+        org.openapis.openapi.models.operations.DescribeLimitsResponse res = new org.openapis.openapi.models.operations.DescribeLimitsResponse(contentType, httpRes.statusCode()) {{
             describeLimitsOutput = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1677,13 +1644,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTableResponse res = new org.openapis.openapi.models.operations.DescribeTableResponse() {{
+        org.openapis.openapi.models.operations.DescribeTableResponse res = new org.openapis.openapi.models.operations.DescribeTableResponse(contentType, httpRes.statusCode()) {{
             describeTableOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1745,13 +1710,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTableReplicaAutoScalingResponse res = new org.openapis.openapi.models.operations.DescribeTableReplicaAutoScalingResponse() {{
+        org.openapis.openapi.models.operations.DescribeTableReplicaAutoScalingResponse res = new org.openapis.openapi.models.operations.DescribeTableReplicaAutoScalingResponse(contentType, httpRes.statusCode()) {{
             describeTableReplicaAutoScalingOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1813,13 +1776,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTimeToLiveResponse res = new org.openapis.openapi.models.operations.DescribeTimeToLiveResponse() {{
+        org.openapis.openapi.models.operations.DescribeTimeToLiveResponse res = new org.openapis.openapi.models.operations.DescribeTimeToLiveResponse(contentType, httpRes.statusCode()) {{
             describeTimeToLiveOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1881,15 +1842,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.DisableKinesisStreamingDestinationResponse() {{
+        org.openapis.openapi.models.operations.DisableKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.DisableKinesisStreamingDestinationResponse(contentType, httpRes.statusCode()) {{
             kinesisStreamingDestinationOutput = null;
             internalServerError = null;
             limitExceededException = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1965,15 +1924,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.EnableKinesisStreamingDestinationResponse() {{
+        org.openapis.openapi.models.operations.EnableKinesisStreamingDestinationResponse res = new org.openapis.openapi.models.operations.EnableKinesisStreamingDestinationResponse(contentType, httpRes.statusCode()) {{
             kinesisStreamingDestinationOutput = null;
             internalServerError = null;
             limitExceededException = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2049,7 +2006,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse() {{
+        org.openapis.openapi.models.operations.ExecuteStatementResponse res = new org.openapis.openapi.models.operations.ExecuteStatementResponse(contentType, httpRes.statusCode()) {{
             executeStatementOutput = null;
             conditionalCheckFailedException = null;
             provisionedThroughputExceededException = null;
@@ -2060,8 +2017,6 @@ public class SDK {
             internalServerError = null;
             duplicateItemException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2165,7 +2120,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteTransactionResponse res = new org.openapis.openapi.models.operations.ExecuteTransactionResponse() {{
+        org.openapis.openapi.models.operations.ExecuteTransactionResponse res = new org.openapis.openapi.models.operations.ExecuteTransactionResponse(contentType, httpRes.statusCode()) {{
             executeTransactionOutput = null;
             resourceNotFoundException = null;
             transactionCanceledException = null;
@@ -2175,8 +2130,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2273,7 +2226,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportTableToPointInTimeResponse res = new org.openapis.openapi.models.operations.ExportTableToPointInTimeResponse() {{
+        org.openapis.openapi.models.operations.ExportTableToPointInTimeResponse res = new org.openapis.openapi.models.operations.ExportTableToPointInTimeResponse(contentType, httpRes.statusCode()) {{
             exportTableToPointInTimeOutput = null;
             tableNotFoundException = null;
             pointInTimeRecoveryUnavailableException = null;
@@ -2282,8 +2235,6 @@ public class SDK {
             exportConflictException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2373,15 +2324,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemResponse res = new org.openapis.openapi.models.operations.GetItemResponse() {{
+        org.openapis.openapi.models.operations.GetItemResponse res = new org.openapis.openapi.models.operations.GetItemResponse(contentType, httpRes.statusCode()) {{
             getItemOutput = null;
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2457,14 +2406,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportTableResponse res = new org.openapis.openapi.models.operations.ImportTableResponse() {{
+        org.openapis.openapi.models.operations.ImportTableResponse res = new org.openapis.openapi.models.operations.ImportTableResponse(contentType, httpRes.statusCode()) {{
             importTableOutput = null;
             resourceInUseException = null;
             limitExceededException = null;
             importConflictException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2533,12 +2480,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBackupsResponse res = new org.openapis.openapi.models.operations.ListBackupsResponse() {{
+        org.openapis.openapi.models.operations.ListBackupsResponse res = new org.openapis.openapi.models.operations.ListBackupsResponse(contentType, httpRes.statusCode()) {{
             listBackupsOutput = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2599,13 +2544,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContributorInsightsResponse res = new org.openapis.openapi.models.operations.ListContributorInsightsResponse() {{
+        org.openapis.openapi.models.operations.ListContributorInsightsResponse res = new org.openapis.openapi.models.operations.ListContributorInsightsResponse(contentType, httpRes.statusCode()) {{
             listContributorInsightsOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2673,13 +2616,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListExportsResponse res = new org.openapis.openapi.models.operations.ListExportsResponse() {{
+        org.openapis.openapi.models.operations.ListExportsResponse res = new org.openapis.openapi.models.operations.ListExportsResponse(contentType, httpRes.statusCode()) {{
             listExportsOutput = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2741,12 +2682,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListGlobalTablesResponse res = new org.openapis.openapi.models.operations.ListGlobalTablesResponse() {{
+        org.openapis.openapi.models.operations.ListGlobalTablesResponse res = new org.openapis.openapi.models.operations.ListGlobalTablesResponse(contentType, httpRes.statusCode()) {{
             listGlobalTablesOutput = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2807,12 +2746,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListImportsResponse res = new org.openapis.openapi.models.operations.ListImportsResponse() {{
+        org.openapis.openapi.models.operations.ListImportsResponse res = new org.openapis.openapi.models.operations.ListImportsResponse(contentType, httpRes.statusCode()) {{
             listImportsOutput = null;
             limitExceededException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2873,12 +2810,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTablesResponse res = new org.openapis.openapi.models.operations.ListTablesResponse() {{
+        org.openapis.openapi.models.operations.ListTablesResponse res = new org.openapis.openapi.models.operations.ListTablesResponse(contentType, httpRes.statusCode()) {{
             listTablesOutput = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2933,13 +2868,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsOfResourceResponse res = new org.openapis.openapi.models.operations.ListTagsOfResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsOfResourceResponse res = new org.openapis.openapi.models.operations.ListTagsOfResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsOfResourceOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3001,7 +2934,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutItemResponse res = new org.openapis.openapi.models.operations.PutItemResponse() {{
+        org.openapis.openapi.models.operations.PutItemResponse res = new org.openapis.openapi.models.operations.PutItemResponse(contentType, httpRes.statusCode()) {{
             putItemOutput = null;
             conditionalCheckFailedException = null;
             provisionedThroughputExceededException = null;
@@ -3011,8 +2944,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3115,15 +3046,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QueryResponse res = new org.openapis.openapi.models.operations.QueryResponse() {{
+        org.openapis.openapi.models.operations.QueryResponse res = new org.openapis.openapi.models.operations.QueryResponse(contentType, httpRes.statusCode()) {{
             queryOutput = null;
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3166,7 +3095,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Creates a new table from an existing backup. Any number of users can execute up to 4 concurrent restores (any type of restore) in a given account. &lt;/p&gt; &lt;p&gt;You can call &lt;code&gt;RestoreTableFromBackup&lt;/code&gt; at a maximum rate of 10 times per second.&lt;/p&gt; &lt;p&gt;You must manually set up the following on the restored table:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Auto scaling policies&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;IAM policies&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Amazon CloudWatch metrics and alarms&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Tags&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Stream settings&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Time to Live (TTL) settings&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Creates a new table from an existing backup. Any number of users can execute up to 50 concurrent restores (any type of restore) in a given account. &lt;/p&gt; &lt;p&gt;You can call &lt;code&gt;RestoreTableFromBackup&lt;/code&gt; at a maximum rate of 10 times per second.&lt;/p&gt; &lt;p&gt;You must manually set up the following on the restored table:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Auto scaling policies&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;IAM policies&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Amazon CloudWatch metrics and alarms&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Tags&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Stream settings&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Time to Live (TTL) settings&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3199,7 +3128,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreTableFromBackupResponse res = new org.openapis.openapi.models.operations.RestoreTableFromBackupResponse() {{
+        org.openapis.openapi.models.operations.RestoreTableFromBackupResponse res = new org.openapis.openapi.models.operations.RestoreTableFromBackupResponse(contentType, httpRes.statusCode()) {{
             restoreTableFromBackupOutput = null;
             tableAlreadyExistsException = null;
             tableInUseException = null;
@@ -3208,8 +3137,6 @@ public class SDK {
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3299,7 +3226,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreTableToPointInTimeResponse res = new org.openapis.openapi.models.operations.RestoreTableToPointInTimeResponse() {{
+        org.openapis.openapi.models.operations.RestoreTableToPointInTimeResponse res = new org.openapis.openapi.models.operations.RestoreTableToPointInTimeResponse(contentType, httpRes.statusCode()) {{
             restoreTableToPointInTimeOutput = null;
             tableAlreadyExistsException = null;
             tableNotFoundException = null;
@@ -3309,8 +3236,6 @@ public class SDK {
             pointInTimeRecoveryUnavailableException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3413,15 +3338,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScanResponse res = new org.openapis.openapi.models.operations.ScanResponse() {{
+        org.openapis.openapi.models.operations.ScanResponse res = new org.openapis.openapi.models.operations.ScanResponse(contentType, httpRes.statusCode()) {{
             scanOutput = null;
             provisionedThroughputExceededException = null;
             resourceNotFoundException = null;
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3497,14 +3420,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             limitExceededException = null;
             resourceNotFoundException = null;
             internalServerError = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3575,7 +3496,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactGetItemsResponse res = new org.openapis.openapi.models.operations.TransactGetItemsResponse() {{
+        org.openapis.openapi.models.operations.TransactGetItemsResponse res = new org.openapis.openapi.models.operations.TransactGetItemsResponse(contentType, httpRes.statusCode()) {{
             transactGetItemsOutput = null;
             resourceNotFoundException = null;
             transactionCanceledException = null;
@@ -3583,8 +3504,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3667,7 +3586,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TransactWriteItemsResponse res = new org.openapis.openapi.models.operations.TransactWriteItemsResponse() {{
+        org.openapis.openapi.models.operations.TransactWriteItemsResponse res = new org.openapis.openapi.models.operations.TransactWriteItemsResponse(contentType, httpRes.statusCode()) {{
             transactWriteItemsOutput = null;
             resourceNotFoundException = null;
             transactionCanceledException = null;
@@ -3677,8 +3596,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3775,14 +3692,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             limitExceededException = null;
             resourceNotFoundException = null;
             internalServerError = null;
             resourceInUseException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3853,14 +3768,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContinuousBackupsResponse res = new org.openapis.openapi.models.operations.UpdateContinuousBackupsResponse() {{
+        org.openapis.openapi.models.operations.UpdateContinuousBackupsResponse res = new org.openapis.openapi.models.operations.UpdateContinuousBackupsResponse(contentType, httpRes.statusCode()) {{
             updateContinuousBackupsOutput = null;
             tableNotFoundException = null;
             continuousBackupsUnavailableException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3929,13 +3842,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContributorInsightsResponse res = new org.openapis.openapi.models.operations.UpdateContributorInsightsResponse() {{
+        org.openapis.openapi.models.operations.UpdateContributorInsightsResponse res = new org.openapis.openapi.models.operations.UpdateContributorInsightsResponse(contentType, httpRes.statusCode()) {{
             updateContributorInsightsOutput = null;
             resourceNotFoundException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3997,7 +3908,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalTableResponse res = new org.openapis.openapi.models.operations.UpdateGlobalTableResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalTableResponse res = new org.openapis.openapi.models.operations.UpdateGlobalTableResponse(contentType, httpRes.statusCode()) {{
             updateGlobalTableOutput = null;
             internalServerError = null;
             globalTableNotFoundException = null;
@@ -4005,8 +3916,6 @@ public class SDK {
             replicaNotFoundException = null;
             tableNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4089,7 +3998,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalTableSettingsResponse res = new org.openapis.openapi.models.operations.UpdateGlobalTableSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalTableSettingsResponse res = new org.openapis.openapi.models.operations.UpdateGlobalTableSettingsResponse(contentType, httpRes.statusCode()) {{
             updateGlobalTableSettingsOutput = null;
             globalTableNotFoundException = null;
             replicaNotFoundException = null;
@@ -4098,8 +4007,6 @@ public class SDK {
             resourceInUseException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4189,7 +4096,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateItemResponse res = new org.openapis.openapi.models.operations.UpdateItemResponse() {{
+        org.openapis.openapi.models.operations.UpdateItemResponse res = new org.openapis.openapi.models.operations.UpdateItemResponse(contentType, httpRes.statusCode()) {{
             updateItemOutput = null;
             conditionalCheckFailedException = null;
             provisionedThroughputExceededException = null;
@@ -4199,8 +4106,6 @@ public class SDK {
             requestLimitExceeded = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4297,15 +4202,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTableResponse res = new org.openapis.openapi.models.operations.UpdateTableResponse() {{
+        org.openapis.openapi.models.operations.UpdateTableResponse res = new org.openapis.openapi.models.operations.UpdateTableResponse(contentType, httpRes.statusCode()) {{
             updateTableOutput = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4381,15 +4284,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTableReplicaAutoScalingResponse res = new org.openapis.openapi.models.operations.UpdateTableReplicaAutoScalingResponse() {{
+        org.openapis.openapi.models.operations.UpdateTableReplicaAutoScalingResponse res = new org.openapis.openapi.models.operations.UpdateTableReplicaAutoScalingResponse(contentType, httpRes.statusCode()) {{
             updateTableReplicaAutoScalingOutput = null;
             resourceNotFoundException = null;
             resourceInUseException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4465,15 +4366,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTimeToLiveResponse res = new org.openapis.openapi.models.operations.UpdateTimeToLiveResponse() {{
+        org.openapis.openapi.models.operations.UpdateTimeToLiveResponse res = new org.openapis.openapi.models.operations.UpdateTimeToLiveResponse(contentType, httpRes.statusCode()) {{
             updateTimeToLiveOutput = null;
             resourceInUseException = null;
             resourceNotFoundException = null;
             limitExceededException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

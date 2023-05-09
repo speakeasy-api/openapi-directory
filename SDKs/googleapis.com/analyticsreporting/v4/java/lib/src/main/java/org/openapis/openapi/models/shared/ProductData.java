@@ -18,6 +18,7 @@ public class ProductData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemRevenue")
     public Double itemRevenue;
+
     public ProductData withItemRevenue(Double itemRevenue) {
         this.itemRevenue = itemRevenue;
         return this;
@@ -29,6 +30,7 @@ public class ProductData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productName")
     public String productName;
+
     public ProductData withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -40,6 +42,7 @@ public class ProductData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productQuantity")
     public String productQuantity;
+
     public ProductData withProductQuantity(String productQuantity) {
         this.productQuantity = productQuantity;
         return this;
@@ -51,9 +54,11 @@ public class ProductData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productSku")
     public String productSku;
+
     public ProductData withProductSku(String productSku) {
         this.productSku = productSku;
         return this;
     }
     
+    public ProductData(){}
 }

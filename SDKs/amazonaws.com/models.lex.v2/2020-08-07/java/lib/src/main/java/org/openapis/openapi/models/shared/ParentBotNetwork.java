@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ParentBotNetwork {
     @JsonProperty("botId")
     public String botId;
+
     public ParentBotNetwork withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -19,9 +20,14 @@ public class ParentBotNetwork {
     
     @JsonProperty("botVersion")
     public String botVersion;
+
     public ParentBotNetwork withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
     }
     
+    public ParentBotNetwork(@JsonProperty("botId") String botId, @JsonProperty("botVersion") String botVersion) {
+        this.botId = botId;
+        this.botVersion = botVersion;
+  }
 }

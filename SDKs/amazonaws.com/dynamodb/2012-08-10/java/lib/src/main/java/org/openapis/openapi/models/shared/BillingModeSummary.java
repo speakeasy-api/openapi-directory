@@ -20,6 +20,7 @@ public class BillingModeSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingMode")
     public BillingModeEnum billingMode;
+
     public BillingModeSummary withBillingMode(BillingModeEnum billingMode) {
         this.billingMode = billingMode;
         return this;
@@ -30,9 +31,11 @@ public class BillingModeSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateToPayPerRequestDateTime")
     public OffsetDateTime lastUpdateToPayPerRequestDateTime;
+
     public BillingModeSummary withLastUpdateToPayPerRequestDateTime(OffsetDateTime lastUpdateToPayPerRequestDateTime) {
         this.lastUpdateToPayPerRequestDateTime = lastUpdateToPayPerRequestDateTime;
         return this;
     }
     
+    public BillingModeSummary(){}
 }

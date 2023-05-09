@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFleetFleetnameRequest {
@@ -13,9 +14,13 @@ public class GetFleetFleetnameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fleetname")
     public String fleetname;
+
     public GetFleetFleetnameRequest withFleetname(String fleetname) {
         this.fleetname = fleetname;
         return this;
     }
     
+    public GetFleetFleetnameRequest(@JsonProperty("fleetname") String fleetname) {
+        this.fleetname = fleetname;
+  }
 }

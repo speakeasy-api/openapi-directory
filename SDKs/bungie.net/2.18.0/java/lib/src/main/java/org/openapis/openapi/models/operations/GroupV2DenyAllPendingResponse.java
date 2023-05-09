@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GroupV2DenyAllPendingResponse {
     
     public byte[] body;
+
     public GroupV2DenyAllPendingResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GroupV2DenyAllPendingResponse {
     
     
     public String contentType;
+
     public GroupV2DenyAllPendingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GroupV2DenyAllPendingResponse {
     
     
     public Integer statusCode;
+
     public GroupV2DenyAllPendingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GroupV2DenyAllPendingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GroupV2DenyAllPendingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GroupV2DenyAllPendingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

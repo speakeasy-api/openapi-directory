@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyCurrentDBClusterCapacityMessage {
     
     public Long capacity;
+
     public ModifyCurrentDBClusterCapacityMessage withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -16,6 +17,7 @@ public class ModifyCurrentDBClusterCapacityMessage {
     
     
     public String dbClusterIdentifier;
+
     public ModifyCurrentDBClusterCapacityMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class ModifyCurrentDBClusterCapacityMessage {
     
     
     public Long secondsBeforeTimeout;
+
     public ModifyCurrentDBClusterCapacityMessage withSecondsBeforeTimeout(Long secondsBeforeTimeout) {
         this.secondsBeforeTimeout = secondsBeforeTimeout;
         return this;
@@ -30,9 +33,13 @@ public class ModifyCurrentDBClusterCapacityMessage {
     
     
     public String timeoutAction;
+
     public ModifyCurrentDBClusterCapacityMessage withTimeoutAction(String timeoutAction) {
         this.timeoutAction = timeoutAction;
         return this;
     }
     
+    public ModifyCurrentDBClusterCapacityMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

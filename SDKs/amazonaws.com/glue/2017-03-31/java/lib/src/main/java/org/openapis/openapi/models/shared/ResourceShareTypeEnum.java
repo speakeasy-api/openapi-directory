@@ -8,7 +8,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ResourceShareTypeEnum {
     FOREIGN("FOREIGN"),
-    ALL("ALL");
+    ALL("ALL"),
+    FEDERATED("FEDERATED");
 
     @JsonValue
     public final String value;

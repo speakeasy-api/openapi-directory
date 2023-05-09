@@ -18,6 +18,7 @@ public class QuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public QuerySource withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class QuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operators")
     public QueryOperator[] operators;
+
     public QuerySource withOperators(QueryOperator[] operators) {
         this.operators = operators;
         return this;
@@ -40,6 +42,7 @@ public class QuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public QuerySource withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -51,9 +54,11 @@ public class QuerySource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public QuerySource withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public QuerySource(){}
 }

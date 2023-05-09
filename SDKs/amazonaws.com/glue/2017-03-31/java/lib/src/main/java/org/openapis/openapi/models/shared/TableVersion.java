@@ -15,6 +15,7 @@ public class TableVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Table")
     public Table table;
+
     public TableVersion withTable(Table table) {
         this.table = table;
         return this;
@@ -23,9 +24,11 @@ public class TableVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public TableVersion withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public TableVersion(){}
 }

@@ -15,6 +15,7 @@ public class BatchDetectTargetedSentimentItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public TargetedSentimentEntity[] entities;
+
     public BatchDetectTargetedSentimentItemResult withEntities(TargetedSentimentEntity[] entities) {
         this.entities = entities;
         return this;
@@ -23,9 +24,11 @@ public class BatchDetectTargetedSentimentItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Index")
     public Long index;
+
     public BatchDetectTargetedSentimentItemResult withIndex(Long index) {
         this.index = index;
         return this;
     }
     
+    public BatchDetectTargetedSentimentItemResult(){}
 }

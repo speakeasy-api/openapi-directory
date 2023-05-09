@@ -18,6 +18,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulletAlignment")
     public NestingLevelBulletAlignmentEnum bulletAlignment;
+
     public NestingLevel withBulletAlignment(NestingLevelBulletAlignmentEnum bulletAlignment) {
         this.bulletAlignment = bulletAlignment;
         return this;
@@ -29,6 +30,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphFormat")
     public String glyphFormat;
+
     public NestingLevel withGlyphFormat(String glyphFormat) {
         this.glyphFormat = glyphFormat;
         return this;
@@ -40,6 +42,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphSymbol")
     public String glyphSymbol;
+
     public NestingLevel withGlyphSymbol(String glyphSymbol) {
         this.glyphSymbol = glyphSymbol;
         return this;
@@ -51,6 +54,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glyphType")
     public NestingLevelGlyphTypeEnum glyphType;
+
     public NestingLevel withGlyphType(NestingLevelGlyphTypeEnum glyphType) {
         this.glyphType = glyphType;
         return this;
@@ -62,6 +66,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentFirstLine")
     public Dimension indentFirstLine;
+
     public NestingLevel withIndentFirstLine(Dimension indentFirstLine) {
         this.indentFirstLine = indentFirstLine;
         return this;
@@ -73,6 +78,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indentStart")
     public Dimension indentStart;
+
     public NestingLevel withIndentStart(Dimension indentStart) {
         this.indentStart = indentStart;
         return this;
@@ -84,6 +90,7 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startNumber")
     public Integer startNumber;
+
     public NestingLevel withStartNumber(Integer startNumber) {
         this.startNumber = startNumber;
         return this;
@@ -95,9 +102,11 @@ public class NestingLevel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textStyle")
     public TextStyle textStyle;
+
     public NestingLevel withTextStyle(TextStyle textStyle) {
         this.textStyle = textStyle;
         return this;
     }
     
+    public NestingLevel(){}
 }

@@ -22,6 +22,7 @@ public class CatalogCustomAttributeDefinition {
      */
     @JsonProperty("allowed_object_types")
     public String[] allowedObjectTypes;
+
     public CatalogCustomAttributeDefinition withAllowedObjectTypes(String[] allowedObjectTypes) {
         this.allowedObjectTypes = allowedObjectTypes;
         return this;
@@ -34,6 +35,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_visibility")
     public String appVisibility;
+
     public CatalogCustomAttributeDefinition withAppVisibility(String appVisibility) {
         this.appVisibility = appVisibility;
         return this;
@@ -48,6 +50,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute_usage_count")
     public Long customAttributeUsageCount;
+
     public CatalogCustomAttributeDefinition withCustomAttributeUsageCount(Long customAttributeUsageCount) {
         this.customAttributeUsageCount = customAttributeUsageCount;
         return this;
@@ -60,6 +63,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CatalogCustomAttributeDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -74,6 +78,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CatalogCustomAttributeDefinition withKey(String key) {
         this.key = key;
         return this;
@@ -86,6 +91,7 @@ public class CatalogCustomAttributeDefinition {
      */
     @JsonProperty("name")
     public String name;
+
     public CatalogCustomAttributeDefinition withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +100,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number_config")
     public CatalogCustomAttributeDefinitionNumberConfig numberConfig;
+
     public CatalogCustomAttributeDefinition withNumberConfig(CatalogCustomAttributeDefinitionNumberConfig numberConfig) {
         this.numberConfig = numberConfig;
         return this;
@@ -105,6 +112,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selection_config")
     public CatalogCustomAttributeDefinitionSelectionConfig selectionConfig;
+
     public CatalogCustomAttributeDefinition withSelectionConfig(CatalogCustomAttributeDefinitionSelectionConfig selectionConfig) {
         this.selectionConfig = selectionConfig;
         return this;
@@ -117,6 +125,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller_visibility")
     public String sellerVisibility;
+
     public CatalogCustomAttributeDefinition withSellerVisibility(String sellerVisibility) {
         this.sellerVisibility = sellerVisibility;
         return this;
@@ -128,6 +137,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_application")
     public SourceApplication sourceApplication;
+
     public CatalogCustomAttributeDefinition withSourceApplication(SourceApplication sourceApplication) {
         this.sourceApplication = sourceApplication;
         return this;
@@ -139,6 +149,7 @@ public class CatalogCustomAttributeDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("string_config")
     public CatalogCustomAttributeDefinitionStringConfig stringConfig;
+
     public CatalogCustomAttributeDefinition withStringConfig(CatalogCustomAttributeDefinitionStringConfig stringConfig) {
         this.stringConfig = stringConfig;
         return this;
@@ -150,9 +161,15 @@ public class CatalogCustomAttributeDefinition {
      */
     @JsonProperty("type")
     public String type;
+
     public CatalogCustomAttributeDefinition withType(String type) {
         this.type = type;
         return this;
     }
     
+    public CatalogCustomAttributeDefinition(@JsonProperty("allowed_object_types") String[] allowedObjectTypes, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.allowedObjectTypes = allowedObjectTypes;
+        this.name = name;
+        this.type = type;
+  }
 }

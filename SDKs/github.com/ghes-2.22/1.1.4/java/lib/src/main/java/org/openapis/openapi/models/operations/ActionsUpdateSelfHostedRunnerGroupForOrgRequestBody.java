@@ -14,6 +14,7 @@ public class ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,9 +26,13 @@ public class ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum visibility;
+
     public ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody withVisibility(ActionsUpdateSelfHostedRunnerGroupForOrgRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ActionsUpdateSelfHostedRunnerGroupForOrgRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

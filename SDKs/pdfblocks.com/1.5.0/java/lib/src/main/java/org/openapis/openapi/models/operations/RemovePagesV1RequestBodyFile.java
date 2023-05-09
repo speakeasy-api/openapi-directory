@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemovePagesV1RequestBodyFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public RemovePagesV1RequestBodyFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class RemovePagesV1RequestBodyFile {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public RemovePagesV1RequestBodyFile withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public RemovePagesV1RequestBodyFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
+        this.content = content;
+        this.file = file;
+  }
 }

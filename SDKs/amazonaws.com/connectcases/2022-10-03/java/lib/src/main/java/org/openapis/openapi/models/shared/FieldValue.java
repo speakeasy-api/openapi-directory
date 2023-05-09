@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FieldValue {
     @JsonProperty("id")
     public String id;
+
     public FieldValue withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class FieldValue {
     
     @JsonProperty("value")
     public FieldValueUnion value;
+
     public FieldValue withValue(FieldValueUnion value) {
         this.value = value;
         return this;
     }
     
+    public FieldValue(@JsonProperty("id") String id, @JsonProperty("value") FieldValueUnion value) {
+        this.id = id;
+        this.value = value;
+  }
 }

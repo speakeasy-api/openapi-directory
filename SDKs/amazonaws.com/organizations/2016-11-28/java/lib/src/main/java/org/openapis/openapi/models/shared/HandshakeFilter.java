@@ -15,6 +15,7 @@ public class HandshakeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public ActionTypeEnum actionType;
+
     public HandshakeFilter withActionType(ActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -23,9 +24,11 @@ public class HandshakeFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentHandshakeId")
     public String parentHandshakeId;
+
     public HandshakeFilter withParentHandshakeId(String parentHandshakeId) {
         this.parentHandshakeId = parentHandshakeId;
         return this;
     }
     
+    public HandshakeFilter(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeEndPointStateInput - Contains the parameters for DescribeInstanceHealth.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEndPointStateInput {
     
     public Instance[] instances;
+
     public DescribeEndPointStateInput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -19,9 +20,13 @@ public class DescribeEndPointStateInput {
     
     
     public String loadBalancerName;
+
     public DescribeEndPointStateInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public DescribeEndPointStateInput(@JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+  }
 }

@@ -18,6 +18,7 @@ public class ChannelTo2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmfAnswer")
     public String dtmfAnswer;
+
     public ChannelTo2 withDtmfAnswer(String dtmfAnswer) {
         this.dtmfAnswer = dtmfAnswer;
         return this;
@@ -28,6 +29,7 @@ public class ChannelTo2 {
      */
     @JsonProperty("number")
     public String number;
+
     public ChannelTo2 withNumber(String number) {
         this.number = number;
         return this;
@@ -38,9 +40,14 @@ public class ChannelTo2 {
      */
     @JsonProperty("type")
     public String type;
+
     public ChannelTo2 withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ChannelTo2(@JsonProperty("number") String number, @JsonProperty("type") String type) {
+        this.number = number;
+        this.type = type;
+  }
 }

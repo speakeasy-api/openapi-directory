@@ -15,6 +15,7 @@ public class ShipmentLocationsPOSTVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public Long locationId;
+
     public ShipmentLocationsPOSTVO withLocationId(Long locationId) {
         this.locationId = locationId;
         return this;
@@ -23,6 +24,7 @@ public class ShipmentLocationsPOSTVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipment_id")
     public Long shipmentId;
+
     public ShipmentLocationsPOSTVO withShipmentId(Long shipmentId) {
         this.shipmentId = shipmentId;
         return this;
@@ -31,9 +33,11 @@ public class ShipmentLocationsPOSTVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public ShipmentLocationsPOSTVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
     }
     
+    public ShipmentLocationsPOSTVO(){}
 }

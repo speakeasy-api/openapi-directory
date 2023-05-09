@@ -15,6 +15,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appExtensionProvisioningProfileFiles")
     public BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles[] appExtensionProvisioningProfileFiles;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withAppExtensionProvisioningProfileFiles(BranchConfigurationsUpdateRequestBodyToolsetsXcodeAppExtensionProvisioningProfileFiles[] appExtensionProvisioningProfileFiles) {
         this.appExtensionProvisioningProfileFiles = appExtensionProvisioningProfileFiles;
         return this;
@@ -26,6 +27,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveConfiguration")
     public String archiveConfiguration;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withArchiveConfiguration(String archiveConfiguration) {
         this.archiveConfiguration = archiveConfiguration;
         return this;
@@ -34,6 +36,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticSigning")
     public Boolean automaticSigning;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withAutomaticSigning(Boolean automaticSigning) {
         this.automaticSigning = automaticSigning;
         return this;
@@ -45,6 +48,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartfilePath")
     public String cartfilePath;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCartfilePath(String cartfilePath) {
         this.cartfilePath = cartfilePath;
         return this;
@@ -53,6 +57,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateEncoded")
     public String certificateEncoded;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCertificateEncoded(String certificateEncoded) {
         this.certificateEncoded = certificateEncoded;
         return this;
@@ -61,6 +66,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateFileId")
     public String certificateFileId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCertificateFileId(String certificateFileId) {
         this.certificateFileId = certificateFileId;
         return this;
@@ -69,6 +75,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateFilename")
     public String certificateFilename;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCertificateFilename(String certificateFilename) {
         this.certificateFilename = certificateFilename;
         return this;
@@ -77,6 +84,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificatePassword")
     public String certificatePassword;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCertificatePassword(String certificatePassword) {
         this.certificatePassword = certificatePassword;
         return this;
@@ -85,6 +93,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateUploadId")
     public String certificateUploadId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withCertificateUploadId(String certificateUploadId) {
         this.certificateUploadId = certificateUploadId;
         return this;
@@ -98,6 +107,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceLegacyBuildSystem")
     public Boolean forceLegacyBuildSystem;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withForceLegacyBuildSystem(Boolean forceLegacyBuildSystem) {
         this.forceLegacyBuildSystem = forceLegacyBuildSystem;
         return this;
@@ -109,6 +119,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podfilePath")
     public String podfilePath;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withPodfilePath(String podfilePath) {
         this.podfilePath = podfilePath;
         return this;
@@ -120,6 +131,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectOrWorkspacePath")
     public String projectOrWorkspacePath;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withProjectOrWorkspacePath(String projectOrWorkspacePath) {
         this.projectOrWorkspacePath = projectOrWorkspacePath;
         return this;
@@ -128,6 +140,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningProfileEncoded")
     public String provisioningProfileEncoded;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withProvisioningProfileEncoded(String provisioningProfileEncoded) {
         this.provisioningProfileEncoded = provisioningProfileEncoded;
         return this;
@@ -136,6 +149,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningProfileFileId")
     public String provisioningProfileFileId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withProvisioningProfileFileId(String provisioningProfileFileId) {
         this.provisioningProfileFileId = provisioningProfileFileId;
         return this;
@@ -144,6 +158,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningProfileFilename")
     public String provisioningProfileFilename;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withProvisioningProfileFilename(String provisioningProfileFilename) {
         this.provisioningProfileFilename = provisioningProfileFilename;
         return this;
@@ -152,6 +167,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningProfileUploadId")
     public String provisioningProfileUploadId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withProvisioningProfileUploadId(String provisioningProfileUploadId) {
         this.provisioningProfileUploadId = provisioningProfileUploadId;
         return this;
@@ -160,6 +176,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public String scheme;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withScheme(String scheme) {
         this.scheme = scheme;
         return this;
@@ -171,6 +188,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetToArchive")
     public String targetToArchive;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withTargetToArchive(String targetToArchive) {
         this.targetToArchive = targetToArchive;
         return this;
@@ -179,6 +197,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -190,6 +209,7 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeProjectSha")
     public String xcodeProjectSha;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withXcodeProjectSha(String xcodeProjectSha) {
         this.xcodeProjectSha = xcodeProjectSha;
         return this;
@@ -201,9 +221,11 @@ public class BranchConfigurationsUpdateRequestBodyToolsetsXcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcodeVersion")
     public String xcodeVersion;
+
     public BranchConfigurationsUpdateRequestBodyToolsetsXcode withXcodeVersion(String xcodeVersion) {
         this.xcodeVersion = xcodeVersion;
         return this;
     }
     
+    public BranchConfigurationsUpdateRequestBodyToolsetsXcode(){}
 }

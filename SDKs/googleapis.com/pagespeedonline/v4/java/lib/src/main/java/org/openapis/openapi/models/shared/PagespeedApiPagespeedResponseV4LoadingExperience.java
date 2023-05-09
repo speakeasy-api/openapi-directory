@@ -15,6 +15,7 @@ public class PagespeedApiPagespeedResponseV4LoadingExperience {
      */
     
     public String id;
+
     public PagespeedApiPagespeedResponseV4LoadingExperience withId(String id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class PagespeedApiPagespeedResponseV4LoadingExperience {
     
     
     public String initialUrl;
+
     public PagespeedApiPagespeedResponseV4LoadingExperience withInitialUrl(String initialUrl) {
         this.initialUrl = initialUrl;
         return this;
@@ -29,6 +31,7 @@ public class PagespeedApiPagespeedResponseV4LoadingExperience {
     
     
     public java.util.Map<String, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics> metrics;
+
     public PagespeedApiPagespeedResponseV4LoadingExperience withMetrics(java.util.Map<String, PagespeedApiPagespeedResponseV4LoadingExperienceMetrics> metrics) {
         this.metrics = metrics;
         return this;
@@ -36,9 +39,11 @@ public class PagespeedApiPagespeedResponseV4LoadingExperience {
     
     
     public String overallCategory;
+
     public PagespeedApiPagespeedResponseV4LoadingExperience withOverallCategory(String overallCategory) {
         this.overallCategory = overallCategory;
         return this;
     }
     
+    public PagespeedApiPagespeedResponseV4LoadingExperience(){}
 }

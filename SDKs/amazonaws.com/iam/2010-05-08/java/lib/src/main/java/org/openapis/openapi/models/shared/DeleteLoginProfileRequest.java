@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteLoginProfileRequest {
     
     public String userName;
+
     public DeleteLoginProfileRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public DeleteLoginProfileRequest(@JsonProperty("UserName") String userName) {
+        this.userName = userName;
+  }
 }

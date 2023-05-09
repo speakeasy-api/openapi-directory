@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImportProjectRequest {
@@ -12,9 +13,13 @@ public class ImportProjectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public ImportProjectRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public ImportProjectRequest(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

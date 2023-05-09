@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGeoMatchSetsResponse {
     
     public String contentType;
+
     public ListGeoMatchSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGeoMatchSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGeoMatchSetsResponse listGeoMatchSetsResponse;
+
     public ListGeoMatchSetsResponse withListGeoMatchSetsResponse(org.openapis.openapi.models.shared.ListGeoMatchSetsResponse listGeoMatchSetsResponse) {
         this.listGeoMatchSetsResponse = listGeoMatchSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListGeoMatchSetsResponse {
     
     
     public Integer statusCode;
+
     public ListGeoMatchSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListGeoMatchSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGeoMatchSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListGeoMatchSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListGeoMatchSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListGeoMatchSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListGeoMatchSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListGeoMatchSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

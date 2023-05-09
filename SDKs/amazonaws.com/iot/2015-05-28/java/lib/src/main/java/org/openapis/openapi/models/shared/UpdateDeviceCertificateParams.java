@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateDeviceCertificateParams {
     @JsonProperty("action")
     public DeviceCertificateUpdateActionEnum action;
+
     public UpdateDeviceCertificateParams withAction(DeviceCertificateUpdateActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public UpdateDeviceCertificateParams(@JsonProperty("action") DeviceCertificateUpdateActionEnum action) {
+        this.action = action;
+  }
 }

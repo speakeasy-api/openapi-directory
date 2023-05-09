@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateGiftCardTransactionRequest {
     @JsonProperty("description")
     public String description;
+
     public CreateGiftCardTransactionRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -18,6 +19,7 @@ public class CreateGiftCardTransactionRequest {
     
     @JsonProperty("operation")
     public String operation;
+
     public CreateGiftCardTransactionRequest withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -26,6 +28,7 @@ public class CreateGiftCardTransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderInfo")
     public OrderInfo orderInfo;
+
     public CreateGiftCardTransactionRequest withOrderInfo(OrderInfo orderInfo) {
         this.orderInfo = orderInfo;
         return this;
@@ -33,6 +36,7 @@ public class CreateGiftCardTransactionRequest {
     
     @JsonProperty("redemptionCode")
     public String redemptionCode;
+
     public CreateGiftCardTransactionRequest withRedemptionCode(String redemptionCode) {
         this.redemptionCode = redemptionCode;
         return this;
@@ -40,6 +44,7 @@ public class CreateGiftCardTransactionRequest {
     
     @JsonProperty("redemptionToken")
     public String redemptionToken;
+
     public CreateGiftCardTransactionRequest withRedemptionToken(String redemptionToken) {
         this.redemptionToken = redemptionToken;
         return this;
@@ -47,6 +52,7 @@ public class CreateGiftCardTransactionRequest {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public CreateGiftCardTransactionRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -54,9 +60,18 @@ public class CreateGiftCardTransactionRequest {
     
     @JsonProperty("value")
     public Double value;
+
     public CreateGiftCardTransactionRequest withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public CreateGiftCardTransactionRequest(@JsonProperty("description") String description, @JsonProperty("operation") String operation, @JsonProperty("redemptionCode") String redemptionCode, @JsonProperty("redemptionToken") String redemptionToken, @JsonProperty("requestId") String requestId, @JsonProperty("value") Double value) {
+        this.description = description;
+        this.operation = operation;
+        this.redemptionCode = redemptionCode;
+        this.redemptionToken = redemptionToken;
+        this.requestId = requestId;
+        this.value = value;
+  }
 }

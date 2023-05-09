@@ -14,6 +14,7 @@ public class SeeContentBlockInformationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content_block_id")
     public String contentBlockId;
+
     public SeeContentBlockInformationRequest withContentBlockId(String contentBlockId) {
         this.contentBlockId = contentBlockId;
         return this;
@@ -26,9 +27,11 @@ public class SeeContentBlockInformationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_inclusion_data")
     public String includeInclusionData;
+
     public SeeContentBlockInformationRequest withIncludeInclusionData(String includeInclusionData) {
         this.includeInclusionData = includeInclusionData;
         return this;
     }
     
+    public SeeContentBlockInformationRequest(){}
 }

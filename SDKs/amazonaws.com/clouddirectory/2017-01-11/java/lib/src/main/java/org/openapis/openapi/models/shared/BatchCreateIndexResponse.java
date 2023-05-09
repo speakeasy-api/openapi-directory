@@ -15,9 +15,11 @@ public class BatchCreateIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectIdentifier")
     public String objectIdentifier;
+
     public BatchCreateIndexResponse withObjectIdentifier(String objectIdentifier) {
         this.objectIdentifier = objectIdentifier;
         return this;
     }
     
+    public BatchCreateIndexResponse(){}
 }

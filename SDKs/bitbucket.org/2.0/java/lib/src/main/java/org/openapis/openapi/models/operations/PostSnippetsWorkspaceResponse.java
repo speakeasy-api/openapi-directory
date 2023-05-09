@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSnippetsWorkspaceResponse {
     
     public String contentType;
+
     public PostSnippetsWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostSnippetsWorkspaceResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostSnippetsWorkspaceResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostSnippetsWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public PostSnippetsWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostSnippetsWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSnippetsWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostSnippetsWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostSnippetsWorkspaceResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PostSnippetsWorkspaceResponse {
      */
     
     public java.util.Map<String, Object> snippet;
+
     public PostSnippetsWorkspaceResponse withSnippet(java.util.Map<String, Object> snippet) {
         this.snippet = snippet;
         return this;
     }
     
+    public PostSnippetsWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

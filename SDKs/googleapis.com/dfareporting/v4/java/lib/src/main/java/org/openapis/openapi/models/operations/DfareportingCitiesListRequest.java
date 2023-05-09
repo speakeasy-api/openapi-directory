@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingCitiesListRequest {
@@ -12,6 +13,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingCitiesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingCitiesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingCitiesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingCitiesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryDartIds")
     public String[] countryDartIds;
+
     public DfareportingCitiesListRequest withCountryDartIds(String[] countryDartIds) {
         this.countryDartIds = countryDartIds;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dartIds")
     public String[] dartIds;
+
     public DfareportingCitiesListRequest withDartIds(String[] dartIds) {
         this.dartIds = dartIds;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingCitiesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingCitiesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=namePrefix")
     public String namePrefix;
+
     public DfareportingCitiesListRequest withNamePrefix(String namePrefix) {
         this.namePrefix = namePrefix;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingCitiesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingCitiesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingCitiesListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingCitiesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionDartIds")
     public String[] regionDartIds;
+
     public DfareportingCitiesListRequest withRegionDartIds(String[] regionDartIds) {
         this.regionDartIds = regionDartIds;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingCitiesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -162,9 +178,13 @@ public class DfareportingCitiesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingCitiesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingCitiesListRequest(@JsonProperty("profileId") String profileId) {
+        this.profileId = profileId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForIssueRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForIssueRequestBody requestBody;
+
     public ReactionsCreateForIssueRequest withRequestBody(ReactionsCreateForIssueRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForIssueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=issue_number")
     public Long issueNumber;
+
     public ReactionsCreateForIssueRequest withIssueNumber(Long issueNumber) {
         this.issueNumber = issueNumber;
         return this;
@@ -26,6 +29,7 @@ public class ReactionsCreateForIssueRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsCreateForIssueRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -33,9 +37,16 @@ public class ReactionsCreateForIssueRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsCreateForIssueRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsCreateForIssueRequest(@JsonProperty("RequestBody") ReactionsCreateForIssueRequestBody requestBody, @JsonProperty("issue_number") Long issueNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.issueNumber = issueNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

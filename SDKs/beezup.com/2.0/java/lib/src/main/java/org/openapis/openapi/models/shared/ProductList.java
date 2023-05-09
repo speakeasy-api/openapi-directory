@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProductList {
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public ProductList withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
@@ -19,9 +20,14 @@ public class ProductList {
     
     @JsonProperty("products")
     public Product[] products;
+
     public ProductList withProducts(Product[] products) {
         this.products = products;
         return this;
     }
     
+    public ProductList(@JsonProperty("paginationResult") BeezUPCommonPaginationResult paginationResult, @JsonProperty("products") Product[] products) {
+        this.paginationResult = paginationResult;
+        this.products = products;
+  }
 }

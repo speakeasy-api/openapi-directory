@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class CreateRotationRequest {
     @JsonProperty("ContactIds")
     public String[] contactIds;
+
     public CreateRotationRequest withContactIds(String[] contactIds) {
         this.contactIds = contactIds;
         return this;
@@ -24,6 +25,7 @@ public class CreateRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateRotationRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -31,6 +33,7 @@ public class CreateRotationRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateRotationRequest withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class CreateRotationRequest {
     
     @JsonProperty("Recurrence")
     public RecurrenceSettings recurrence;
+
     public CreateRotationRequest withRecurrence(RecurrenceSettings recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -48,6 +52,7 @@ public class CreateRotationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public CreateRotationRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -56,6 +61,7 @@ public class CreateRotationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateRotationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -63,9 +69,16 @@ public class CreateRotationRequest {
     
     @JsonProperty("TimeZoneId")
     public String timeZoneId;
+
     public CreateRotationRequest withTimeZoneId(String timeZoneId) {
         this.timeZoneId = timeZoneId;
         return this;
     }
     
+    public CreateRotationRequest(@JsonProperty("ContactIds") String[] contactIds, @JsonProperty("Name") String name, @JsonProperty("Recurrence") RecurrenceSettings recurrence, @JsonProperty("TimeZoneId") String timeZoneId) {
+        this.contactIds = contactIds;
+        this.name = name;
+        this.recurrence = recurrence;
+        this.timeZoneId = timeZoneId;
+  }
 }

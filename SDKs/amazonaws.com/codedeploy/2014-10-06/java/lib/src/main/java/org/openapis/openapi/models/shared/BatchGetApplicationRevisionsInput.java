@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetApplicationRevisionsInput {
     @JsonProperty("applicationName")
     public String applicationName;
+
     public BatchGetApplicationRevisionsInput withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,9 +20,14 @@ public class BatchGetApplicationRevisionsInput {
     
     @JsonProperty("revisions")
     public RevisionLocation[] revisions;
+
     public BatchGetApplicationRevisionsInput withRevisions(RevisionLocation[] revisions) {
         this.revisions = revisions;
         return this;
     }
     
+    public BatchGetApplicationRevisionsInput(@JsonProperty("applicationName") String applicationName, @JsonProperty("revisions") RevisionLocation[] revisions) {
+        this.applicationName = applicationName;
+        this.revisions = revisions;
+  }
 }

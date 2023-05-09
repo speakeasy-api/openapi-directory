@@ -15,6 +15,7 @@ public class ListRemoteAccessSessionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRemoteAccessSessionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRemoteAccessSessionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessSessions")
     public RemoteAccessSession[] remoteAccessSessions;
+
     public ListRemoteAccessSessionsResult withRemoteAccessSessions(RemoteAccessSession[] remoteAccessSessions) {
         this.remoteAccessSessions = remoteAccessSessions;
         return this;
     }
     
+    public ListRemoteAccessSessionsResult(){}
 }

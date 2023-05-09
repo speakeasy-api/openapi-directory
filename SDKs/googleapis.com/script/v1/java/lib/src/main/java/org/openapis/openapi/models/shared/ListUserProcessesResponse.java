@@ -18,6 +18,7 @@ public class ListUserProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListUserProcessesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListUserProcessesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processes")
     public GoogleAppsScriptTypeProcess[] processes;
+
     public ListUserProcessesResponse withProcesses(GoogleAppsScriptTypeProcess[] processes) {
         this.processes = processes;
         return this;
     }
     
+    public ListUserProcessesResponse(){}
 }

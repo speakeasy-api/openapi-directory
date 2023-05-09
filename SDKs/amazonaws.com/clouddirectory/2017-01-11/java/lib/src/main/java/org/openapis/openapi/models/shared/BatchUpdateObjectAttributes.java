@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchUpdateObjectAttributes {
     @JsonProperty("AttributeUpdates")
     public ObjectAttributeUpdate[] attributeUpdates;
+
     public BatchUpdateObjectAttributes withAttributeUpdates(ObjectAttributeUpdate[] attributeUpdates) {
         this.attributeUpdates = attributeUpdates;
         return this;
@@ -19,9 +20,14 @@ public class BatchUpdateObjectAttributes {
     
     @JsonProperty("ObjectReference")
     public ObjectReference objectReference;
+
     public BatchUpdateObjectAttributes withObjectReference(ObjectReference objectReference) {
         this.objectReference = objectReference;
         return this;
     }
     
+    public BatchUpdateObjectAttributes(@JsonProperty("AttributeUpdates") ObjectAttributeUpdate[] attributeUpdates, @JsonProperty("ObjectReference") ObjectReference objectReference) {
+        this.attributeUpdates = attributeUpdates;
+        this.objectReference = objectReference;
+  }
 }

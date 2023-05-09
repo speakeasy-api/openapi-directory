@@ -15,6 +15,7 @@ public class CheckOutput {
      */
     @JsonProperty("check")
     public Check check;
+
     public CheckOutput withCheck(Check check) {
         this.check = check;
         return this;
@@ -25,6 +26,7 @@ public class CheckOutput {
      */
     @JsonProperty("details")
     public String details;
+
     public CheckOutput withDetails(String details) {
         this.details = details;
         return this;
@@ -35,9 +37,15 @@ public class CheckOutput {
      */
     @JsonProperty("self")
     public String self;
+
     public CheckOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CheckOutput(@JsonProperty("check") Check check, @JsonProperty("details") String details, @JsonProperty("self") String self) {
+        this.check = check;
+        this.details = details;
+        this.self = self;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GitignoreTemplate {
     @JsonProperty("name")
     public String name;
+
     public GitignoreTemplate withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class GitignoreTemplate {
     
     @JsonProperty("source")
     public String source;
+
     public GitignoreTemplate withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public GitignoreTemplate(@JsonProperty("name") String name, @JsonProperty("source") String source) {
+        this.name = name;
+        this.source = source;
+  }
 }

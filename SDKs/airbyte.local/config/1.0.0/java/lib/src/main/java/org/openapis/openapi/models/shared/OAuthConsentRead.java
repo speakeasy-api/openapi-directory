@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OAuthConsentRead {
     @JsonProperty("consentUrl")
     public String consentUrl;
+
     public OAuthConsentRead withConsentUrl(String consentUrl) {
         this.consentUrl = consentUrl;
         return this;
     }
     
+    public OAuthConsentRead(@JsonProperty("consentUrl") String consentUrl) {
+        this.consentUrl = consentUrl;
+  }
 }

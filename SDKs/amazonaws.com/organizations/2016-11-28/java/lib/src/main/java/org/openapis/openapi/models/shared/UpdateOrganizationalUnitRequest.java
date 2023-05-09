@@ -12,6 +12,7 @@ public class UpdateOrganizationalUnitRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateOrganizationalUnitRequest withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,13 @@ public class UpdateOrganizationalUnitRequest {
     
     @JsonProperty("OrganizationalUnitId")
     public String organizationalUnitId;
+
     public UpdateOrganizationalUnitRequest withOrganizationalUnitId(String organizationalUnitId) {
         this.organizationalUnitId = organizationalUnitId;
         return this;
     }
     
+    public UpdateOrganizationalUnitRequest(@JsonProperty("OrganizationalUnitId") String organizationalUnitId) {
+        this.organizationalUnitId = organizationalUnitId;
+  }
 }

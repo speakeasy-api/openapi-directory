@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGamePPARequest {
@@ -12,6 +13,7 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=conference")
     public String conference;
+
     public GetGamePPARequest withConference(String conference) {
         this.conference = conference;
         return this;
@@ -22,6 +24,7 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=excludeGarbageTime")
     public Boolean excludeGarbageTime;
+
     public GetGamePPARequest withExcludeGarbageTime(Boolean excludeGarbageTime) {
         this.excludeGarbageTime = excludeGarbageTime;
         return this;
@@ -32,6 +35,7 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetGamePPARequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -42,6 +46,7 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetGamePPARequest withTeam(String team) {
         this.team = team;
         return this;
@@ -52,6 +57,7 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetGamePPARequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -62,9 +68,13 @@ public class GetGamePPARequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetGamePPARequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetGamePPARequest(@JsonProperty("year") Long year) {
+        this.year = year;
+  }
 }

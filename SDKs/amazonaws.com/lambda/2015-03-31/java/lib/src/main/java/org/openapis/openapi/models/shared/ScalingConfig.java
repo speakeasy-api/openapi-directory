@@ -15,9 +15,11 @@ public class ScalingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumConcurrency")
     public Long maximumConcurrency;
+
     public ScalingConfig withMaximumConcurrency(Long maximumConcurrency) {
         this.maximumConcurrency = maximumConcurrency;
         return this;
     }
     
+    public ScalingConfig(){}
 }

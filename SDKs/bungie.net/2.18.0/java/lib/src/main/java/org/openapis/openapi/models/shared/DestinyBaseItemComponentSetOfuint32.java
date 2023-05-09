@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyBaseItemComponentSetOfuint32 {
     
     public DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives;
+
     public DestinyBaseItemComponentSetOfuint32 withObjectives(DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -16,9 +17,11 @@ public class DestinyBaseItemComponentSetOfuint32 {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks;
+
     public DestinyBaseItemComponentSetOfuint32 withPerks(DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
     }
     
+    public DestinyBaseItemComponentSetOfuint32(){}
 }

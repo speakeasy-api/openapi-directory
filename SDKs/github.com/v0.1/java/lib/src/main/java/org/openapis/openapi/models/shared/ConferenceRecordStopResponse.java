@@ -15,6 +15,7 @@ public class ConferenceRecordStopResponse {
      */
     @JsonProperty("Message")
     public ConferenceRecordStopResponseMessageEnum message;
+
     public ConferenceRecordStopResponse withMessage(ConferenceRecordStopResponseMessageEnum message) {
         this.message = message;
         return this;
@@ -25,9 +26,14 @@ public class ConferenceRecordStopResponse {
      */
     @JsonProperty("Success")
     public Boolean success;
+
     public ConferenceRecordStopResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ConferenceRecordStopResponse(@JsonProperty("Message") ConferenceRecordStopResponseMessageEnum message, @JsonProperty("Success") Boolean success) {
+        this.message = message;
+        this.success = success;
+  }
 }

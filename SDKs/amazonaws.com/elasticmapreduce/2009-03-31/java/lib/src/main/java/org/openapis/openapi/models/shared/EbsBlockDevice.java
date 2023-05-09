@@ -15,6 +15,7 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Device")
     public String device;
+
     public EbsBlockDevice withDevice(String device) {
         this.device = device;
         return this;
@@ -23,9 +24,11 @@ public class EbsBlockDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSpecification")
     public VolumeSpecification volumeSpecification;
+
     public EbsBlockDevice withVolumeSpecification(VolumeSpecification volumeSpecification) {
         this.volumeSpecification = volumeSpecification;
         return this;
     }
     
+    public EbsBlockDevice(){}
 }

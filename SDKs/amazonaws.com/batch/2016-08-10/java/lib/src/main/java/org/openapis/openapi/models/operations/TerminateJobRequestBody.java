@@ -12,6 +12,7 @@ public class TerminateJobRequestBody {
      */
     @JsonProperty("jobId")
     public String jobId;
+
     public TerminateJobRequestBody withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -22,9 +23,14 @@ public class TerminateJobRequestBody {
      */
     @JsonProperty("reason")
     public String reason;
+
     public TerminateJobRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public TerminateJobRequestBody(@JsonProperty("jobId") String jobId, @JsonProperty("reason") String reason) {
+        this.jobId = jobId;
+        this.reason = reason;
+  }
 }

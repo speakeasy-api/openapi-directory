@@ -18,9 +18,11 @@ public class UpdateNodegroupVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update")
     public Update update;
+
     public UpdateNodegroupVersionResponse withUpdate(Update update) {
         this.update = update;
         return this;
     }
     
+    public UpdateNodegroupVersionResponse(){}
 }

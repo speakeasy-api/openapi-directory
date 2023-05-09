@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectoryResponse {
@@ -12,6 +13,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDirectoryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectoryResponse {
     
     
     public String contentType;
+
     public CreateDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectoryResponse createDirectoryResponse;
+
     public CreateDirectoryResponse withCreateDirectoryResponse(org.openapis.openapi.models.shared.CreateDirectoryResponse createDirectoryResponse) {
         this.createDirectoryResponse = createDirectoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object directoryAlreadyExistsException;
+
     public CreateDirectoryResponse withDirectoryAlreadyExistsException(Object directoryAlreadyExistsException) {
         this.directoryAlreadyExistsException = directoryAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object internalServiceException;
+
     public CreateDirectoryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object invalidArnException;
+
     public CreateDirectoryResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object limitExceededException;
+
     public CreateDirectoryResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDirectoryResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateDirectoryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateDirectoryResponse {
      */
     
     public Object retryableConflictException;
+
     public CreateDirectoryResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class CreateDirectoryResponse {
      */
     
     public Object validationException;
+
     public CreateDirectoryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

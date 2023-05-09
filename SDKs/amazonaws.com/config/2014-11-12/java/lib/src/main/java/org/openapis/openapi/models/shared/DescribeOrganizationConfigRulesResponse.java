@@ -15,6 +15,7 @@ public class DescribeOrganizationConfigRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeOrganizationConfigRulesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeOrganizationConfigRulesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationConfigRules")
     public OrganizationConfigRule[] organizationConfigRules;
+
     public DescribeOrganizationConfigRulesResponse withOrganizationConfigRules(OrganizationConfigRule[] organizationConfigRules) {
         this.organizationConfigRules = organizationConfigRules;
         return this;
     }
     
+    public DescribeOrganizationConfigRulesResponse(){}
 }

@@ -15,6 +15,7 @@ public class AutoScalingGroupProviderUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedScaling")
     public ManagedScaling managedScaling;
+
     public AutoScalingGroupProviderUpdate withManagedScaling(ManagedScaling managedScaling) {
         this.managedScaling = managedScaling;
         return this;
@@ -23,9 +24,11 @@ public class AutoScalingGroupProviderUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedTerminationProtection")
     public ManagedTerminationProtectionEnum managedTerminationProtection;
+
     public AutoScalingGroupProviderUpdate withManagedTerminationProtection(ManagedTerminationProtectionEnum managedTerminationProtection) {
         this.managedTerminationProtection = managedTerminationProtection;
         return this;
     }
     
+    public AutoScalingGroupProviderUpdate(){}
 }

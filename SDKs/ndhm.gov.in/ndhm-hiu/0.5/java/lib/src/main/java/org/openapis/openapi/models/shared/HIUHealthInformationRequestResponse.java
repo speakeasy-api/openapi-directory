@@ -17,6 +17,7 @@ public class HIUHealthInformationRequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public HIUHealthInformationRequestResponse withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class HIUHealthInformationRequestResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiRequest")
     public HIUHealthInformationRequestResponseHiRequest hiRequest;
+
     public HIUHealthInformationRequestResponse withHiRequest(HIUHealthInformationRequestResponseHiRequest hiRequest) {
         this.hiRequest = hiRequest;
         return this;
@@ -32,6 +34,7 @@ public class HIUHealthInformationRequestResponse {
     
     @JsonProperty("requestId")
     public String requestId;
+
     public HIUHealthInformationRequestResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -39,6 +42,7 @@ public class HIUHealthInformationRequestResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public HIUHealthInformationRequestResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -51,9 +55,15 @@ public class HIUHealthInformationRequestResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public HIUHealthInformationRequestResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public HIUHealthInformationRequestResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

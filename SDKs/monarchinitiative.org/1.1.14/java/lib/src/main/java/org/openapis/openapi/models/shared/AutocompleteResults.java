@@ -18,9 +18,11 @@ public class AutocompleteResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docs")
     public AutocompleteResult[] docs;
+
     public AutocompleteResults withDocs(AutocompleteResult[] docs) {
         this.docs = docs;
         return this;
     }
     
+    public AutocompleteResults(){}
 }

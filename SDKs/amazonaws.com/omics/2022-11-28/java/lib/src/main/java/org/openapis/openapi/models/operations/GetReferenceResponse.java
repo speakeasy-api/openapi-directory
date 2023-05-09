@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReferenceResponse {
@@ -12,6 +13,7 @@ public class GetReferenceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetReferenceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetReferenceResponse {
     
     
     public String contentType;
+
     public GetReferenceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetReferenceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReferenceResponse getReferenceResponse;
+
     public GetReferenceResponse withGetReferenceResponse(org.openapis.openapi.models.shared.GetReferenceResponse getReferenceResponse) {
         this.getReferenceResponse = getReferenceResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetReferenceResponse {
      */
     
     public Object internalServerException;
+
     public GetReferenceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetReferenceResponse {
      */
     
     public Object rangeNotSatisfiableException;
+
     public GetReferenceResponse withRangeNotSatisfiableException(Object rangeNotSatisfiableException) {
         this.rangeNotSatisfiableException = rangeNotSatisfiableException;
         return this;
@@ -59,6 +65,7 @@ public class GetReferenceResponse {
      */
     
     public Object requestTimeoutException;
+
     public GetReferenceResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class GetReferenceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReferenceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetReferenceResponse {
     
     
     public Integer statusCode;
+
     public GetReferenceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetReferenceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReferenceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetReferenceResponse {
      */
     
     public Object throttlingException;
+
     public GetReferenceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class GetReferenceResponse {
      */
     
     public Object validationException;
+
     public GetReferenceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetReferenceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

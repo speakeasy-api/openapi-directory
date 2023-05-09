@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Order {
     @JsonProperty("Column")
     public String column;
+
     public Order withColumn(String column) {
         this.column = column;
         return this;
@@ -19,9 +20,14 @@ public class Order {
     
     @JsonProperty("SortOrder")
     public Long sortOrder;
+
     public Order withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public Order(@JsonProperty("Column") String column, @JsonProperty("SortOrder") Long sortOrder) {
+        this.column = column;
+        this.sortOrder = sortOrder;
+  }
 }

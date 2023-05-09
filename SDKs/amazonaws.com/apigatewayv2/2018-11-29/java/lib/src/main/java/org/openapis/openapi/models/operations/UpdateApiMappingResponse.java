@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApiMappingResponse {
@@ -12,6 +13,7 @@ public class UpdateApiMappingResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApiMappingResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApiMappingResponse {
      */
     
     public Object conflictException;
+
     public UpdateApiMappingResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApiMappingResponse {
     
     
     public String contentType;
+
     public UpdateApiMappingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApiMappingResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApiMappingResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateApiMappingResponse {
     
     
     public Integer statusCode;
+
     public UpdateApiMappingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateApiMappingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApiMappingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApiMappingResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateApiMappingResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,9 +81,14 @@ public class UpdateApiMappingResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApiMappingResponse updateApiMappingResponse;
+
     public UpdateApiMappingResponse withUpdateApiMappingResponse(org.openapis.openapi.models.shared.UpdateApiMappingResponse updateApiMappingResponse) {
         this.updateApiMappingResponse = updateApiMappingResponse;
         return this;
     }
     
+    public UpdateApiMappingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

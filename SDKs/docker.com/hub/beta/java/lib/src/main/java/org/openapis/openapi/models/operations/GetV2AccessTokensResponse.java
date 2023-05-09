@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV2AccessTokensResponse {
     
     public String contentType;
+
     public GetV2AccessTokensResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetV2AccessTokensResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetV2AccessTokensResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -26,6 +29,7 @@ public class GetV2AccessTokensResponse {
     
     
     public Integer statusCode;
+
     public GetV2AccessTokensResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetV2AccessTokensResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV2AccessTokensResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetV2AccessTokensResponse {
      */
     
     public org.openapis.openapi.models.shared.ValueError valueError;
+
     public GetV2AccessTokensResponse withValueError(org.openapis.openapi.models.shared.ValueError valueError) {
         this.valueError = valueError;
         return this;
@@ -53,9 +59,14 @@ public class GetV2AccessTokensResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAccessTokensResponse getAccessTokensResponse;
+
     public GetV2AccessTokensResponse withGetAccessTokensResponse(org.openapis.openapi.models.shared.GetAccessTokensResponse getAccessTokensResponse) {
         this.getAccessTokensResponse = getAccessTokensResponse;
         return this;
     }
     
+    public GetV2AccessTokensResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

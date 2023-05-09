@@ -15,6 +15,7 @@ public class ECSService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public ECSService withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -23,9 +24,11 @@ public class ECSService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public ECSService withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public ECSService(){}
 }

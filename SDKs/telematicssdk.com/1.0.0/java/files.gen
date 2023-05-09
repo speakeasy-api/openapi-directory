@@ -70,4 +70,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/RootV1StatisticsConsoli
 lib/src/main/java/org/openapis/openapi/models/operations/RootV1StatisticsConsolidatedResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/RootV1StatisticsConsolidatedDailyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/RootV1StatisticsConsolidatedDailyResponse.java
+docs/sdk/README.md
+docs/twoformobileappoptional/README.md
+docs/two1userstatisticsoptional/README.md
+docs/two2usertripsoptional/README.md
+docs/two4usersafescoringoptional/README.md
+docs/threeforbackendoptional/README.md
+docs/consolidatedsafescoring/README.md
+docs/consolidatedstatistics/README.md
 USAGE.md

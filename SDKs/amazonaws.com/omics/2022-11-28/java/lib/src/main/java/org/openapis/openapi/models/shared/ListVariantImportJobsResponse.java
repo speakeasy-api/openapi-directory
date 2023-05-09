@@ -15,6 +15,7 @@ public class ListVariantImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVariantImportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVariantImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variantImportJobs")
     public VariantImportJobItem[] variantImportJobs;
+
     public ListVariantImportJobsResponse withVariantImportJobs(VariantImportJobItem[] variantImportJobs) {
         this.variantImportJobs = variantImportJobs;
         return this;
     }
     
+    public ListVariantImportJobsResponse(){}
 }

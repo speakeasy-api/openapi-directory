@@ -58,11 +58,9 @@ public class Tiers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SqlTiersListResponse res = new org.openapis.openapi.models.operations.SqlTiersListResponse() {{
+        org.openapis.openapi.models.operations.SqlTiersListResponse res = new org.openapis.openapi.models.operations.SqlTiersListResponse(contentType, httpRes.statusCode()) {{
             tiersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

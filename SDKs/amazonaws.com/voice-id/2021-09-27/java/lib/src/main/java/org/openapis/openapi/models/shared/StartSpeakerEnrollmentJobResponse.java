@@ -15,9 +15,11 @@ public class StartSpeakerEnrollmentJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Job")
     public SpeakerEnrollmentJob job;
+
     public StartSpeakerEnrollmentJobResponse withJob(SpeakerEnrollmentJob job) {
         this.job = job;
         return this;
     }
     
+    public StartSpeakerEnrollmentJobResponse(){}
 }

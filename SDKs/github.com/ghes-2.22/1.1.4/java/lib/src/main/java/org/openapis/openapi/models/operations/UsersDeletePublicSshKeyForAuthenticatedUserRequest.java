@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersDeletePublicSshKeyForAuthenticatedUserRequest {
@@ -12,9 +13,13 @@ public class UsersDeletePublicSshKeyForAuthenticatedUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=key_id")
     public Long keyId;
+
     public UsersDeletePublicSshKeyForAuthenticatedUserRequest withKeyId(Long keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public UsersDeletePublicSshKeyForAuthenticatedUserRequest(@JsonProperty("key_id") Long keyId) {
+        this.keyId = keyId;
+  }
 }

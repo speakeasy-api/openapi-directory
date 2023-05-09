@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteCoipPoolResult {
     
     public DeleteCoipPoolResultCoipPool coipPool;
+
     public DeleteCoipPoolResult withCoipPool(DeleteCoipPoolResultCoipPool coipPool) {
         this.coipPool = coipPool;
         return this;
     }
     
+    public DeleteCoipPoolResult(){}
 }

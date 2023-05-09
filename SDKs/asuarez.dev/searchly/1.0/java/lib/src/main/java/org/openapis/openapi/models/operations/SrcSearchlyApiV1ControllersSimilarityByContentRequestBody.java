@@ -18,9 +18,11 @@ public class SrcSearchlyApiV1ControllersSimilarityByContentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public SrcSearchlyApiV1ControllersSimilarityByContentRequestBody withContent(String content) {
         this.content = content;
         return this;
     }
     
+    public SrcSearchlyApiV1ControllersSimilarityByContentRequestBody(){}
 }

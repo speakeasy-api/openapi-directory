@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetRunRequest {
     @JsonProperty("arn")
     public String arn;
+
     public GetRunRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetRunRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

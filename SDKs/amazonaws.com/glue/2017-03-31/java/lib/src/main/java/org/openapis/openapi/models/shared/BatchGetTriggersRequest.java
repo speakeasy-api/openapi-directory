@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetTriggersRequest {
     @JsonProperty("TriggerNames")
     public String[] triggerNames;
+
     public BatchGetTriggersRequest withTriggerNames(String[] triggerNames) {
         this.triggerNames = triggerNames;
         return this;
     }
     
+    public BatchGetTriggersRequest(@JsonProperty("TriggerNames") String[] triggerNames) {
+        this.triggerNames = triggerNames;
+  }
 }

@@ -12,9 +12,11 @@ public class PagingMeta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public PagingMetaPaging paging;
+
     public PagingMeta withPaging(PagingMetaPaging paging) {
         this.paging = paging;
         return this;
     }
     
+    public PagingMeta(){}
 }

@@ -15,6 +15,7 @@ public class SMSMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageConfig")
     public JourneySMSMessage messageConfig;
+
     public SMSMessageActivity withMessageConfig(JourneySMSMessage messageConfig) {
         this.messageConfig = messageConfig;
         return this;
@@ -23,6 +24,7 @@ public class SMSMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextActivity")
     public String nextActivity;
+
     public SMSMessageActivity withNextActivity(String nextActivity) {
         this.nextActivity = nextActivity;
         return this;
@@ -31,6 +33,7 @@ public class SMSMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public SMSMessageActivity withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -39,9 +42,11 @@ public class SMSMessageActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateVersion")
     public String templateVersion;
+
     public SMSMessageActivity withTemplateVersion(String templateVersion) {
         this.templateVersion = templateVersion;
         return this;
     }
     
+    public SMSMessageActivity(){}
 }

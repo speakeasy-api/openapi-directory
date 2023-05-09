@@ -18,6 +18,7 @@ public class RegionalPriceMigrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldestAllowedPriceVersionTime")
     public String oldestAllowedPriceVersionTime;
+
     public RegionalPriceMigrationConfig withOldestAllowedPriceVersionTime(String oldestAllowedPriceVersionTime) {
         this.oldestAllowedPriceVersionTime = oldestAllowedPriceVersionTime;
         return this;
@@ -29,9 +30,11 @@ public class RegionalPriceMigrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public RegionalPriceMigrationConfig withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public RegionalPriceMigrationConfig(){}
 }

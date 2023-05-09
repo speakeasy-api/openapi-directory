@@ -12,6 +12,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowEntryOfGrossPriceInInvoicing")
     public Boolean allowEntryOfGrossPriceInInvoicing;
+
     public CompanyOptionViewModel withAllowEntryOfGrossPriceInInvoicing(Boolean allowEntryOfGrossPriceInInvoicing) {
         this.allowEntryOfGrossPriceInInvoicing = allowEntryOfGrossPriceInInvoicing;
         return this;
@@ -20,6 +21,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditInputForReverseChargeVAT")
     public Boolean creditInputForReverseChargeVAT;
+
     public CompanyOptionViewModel withCreditInputForReverseChargeVAT(Boolean creditInputForReverseChargeVAT) {
         this.creditInputForReverseChargeVAT = creditInputForReverseChargeVAT;
         return this;
@@ -28,6 +30,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditNoteJournalAgeingName")
     public String creditNoteJournalAgeingName;
+
     public CompanyOptionViewModel withCreditNoteJournalAgeingName(String creditNoteJournalAgeingName) {
         this.creditNoteJournalAgeingName = creditNoteJournalAgeingName;
         return this;
@@ -36,6 +39,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditNoteJournalAgeingValue")
     public Integer creditNoteJournalAgeingValue;
+
     public CompanyOptionViewModel withCreditNoteJournalAgeingValue(Integer creditNoteJournalAgeingValue) {
         this.creditNoteJournalAgeingValue = creditNoteJournalAgeingValue;
         return this;
@@ -44,6 +48,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discrepancyAllowed")
     public Double discrepancyAllowed;
+
     public CompanyOptionViewModel withDiscrepancyAllowed(Double discrepancyAllowed) {
         this.discrepancyAllowed = discrepancyAllowed;
         return this;
@@ -52,6 +57,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableVOCRReporting")
     public Boolean enableVOCRReporting;
+
     public CompanyOptionViewModel withEnableVOCRReporting(Boolean enableVOCRReporting) {
         this.enableVOCRReporting = enableVOCRReporting;
         return this;
@@ -60,6 +66,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginVatScheme")
     public Boolean marginVatScheme;
+
     public CompanyOptionViewModel withMarginVatScheme(Boolean marginVatScheme) {
         this.marginVatScheme = marginVatScheme;
         return this;
@@ -68,6 +75,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printOSItemsOnly")
     public Boolean printOSItemsOnly;
+
     public CompanyOptionViewModel withPrintOSItemsOnly(Boolean printOSItemsOnly) {
         this.printOSItemsOnly = printOSItemsOnly;
         return this;
@@ -76,6 +84,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchasesVatAnalysisType")
     public Long purchasesVatAnalysisType;
+
     public CompanyOptionViewModel withPurchasesVatAnalysisType(Long purchasesVatAnalysisType) {
         this.purchasesVatAnalysisType = purchasesVatAnalysisType;
         return this;
@@ -84,6 +93,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesVatAnalysisType")
     public Long salesVatAnalysisType;
+
     public CompanyOptionViewModel withSalesVatAnalysisType(Long salesVatAnalysisType) {
         this.salesVatAnalysisType = salesVatAnalysisType;
         return this;
@@ -92,6 +102,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useAllocations")
     public Boolean useAllocations;
+
     public CompanyOptionViewModel withUseAllocations(Boolean useAllocations) {
         this.useAllocations = useAllocations;
         return this;
@@ -100,6 +111,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNominal")
     public Boolean useNominal;
+
     public CompanyOptionViewModel withUseNominal(Boolean useNominal) {
         this.useNominal = useNominal;
         return this;
@@ -108,6 +120,7 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useNominalCode")
     public Boolean useNominalCode;
+
     public CompanyOptionViewModel withUseNominalCode(Boolean useNominalCode) {
         this.useNominalCode = useNominalCode;
         return this;
@@ -116,9 +129,11 @@ public class CompanyOptionViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vocrSettingValue")
     public Boolean vocrSettingValue;
+
     public CompanyOptionViewModel withVocrSettingValue(Boolean vocrSettingValue) {
         this.vocrSettingValue = vocrSettingValue;
         return this;
     }
     
+    public CompanyOptionViewModel(){}
 }

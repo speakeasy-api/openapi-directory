@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     public String completeTime;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withCompleteTime(String completeTime) {
         this.completeTime = completeTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public Boolean deleteReplacedRootVolume;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withDeleteReplacedRootVolume(Boolean deleteReplacedRootVolume) {
         this.deleteReplacedRootVolume = deleteReplacedRootVolume;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public String imageId;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public String instanceId;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public String replaceRootVolumeTaskId;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withReplaceRootVolumeTaskId(String replaceRootVolumeTaskId) {
         this.replaceRootVolumeTaskId = replaceRootVolumeTaskId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public String snapshotId;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public String startTime;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -61,6 +68,7 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasksTags[] tags;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withTags(DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasksTags[] tags) {
         this.tags = tags;
         return this;
@@ -68,9 +76,11 @@ public class DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks {
     
     
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasksTaskStateEnum taskState;
+
     public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks withTaskState(DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasksTaskStateEnum taskState) {
         this.taskState = taskState;
         return this;
     }
     
+    public DescribeReplaceRootVolumeTasksResultReplaceRootVolumeTasks(){}
 }

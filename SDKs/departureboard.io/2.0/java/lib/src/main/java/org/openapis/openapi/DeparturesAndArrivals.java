@@ -53,10 +53,8 @@ public class DeparturesAndArrivals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse res = new org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse() {{
+        org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse res = new org.openapis.openapi.models.operations.GetArrivalsAndDeparturesByCRSResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -91,10 +89,8 @@ public class DeparturesAndArrivals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArrivalsByCRSResponse res = new org.openapis.openapi.models.operations.GetArrivalsByCRSResponse() {{
+        org.openapis.openapi.models.operations.GetArrivalsByCRSResponse res = new org.openapis.openapi.models.operations.GetArrivalsByCRSResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -129,10 +125,8 @@ public class DeparturesAndArrivals {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDeparturesByCRSResponse res = new org.openapis.openapi.models.operations.GetDeparturesByCRSResponse() {{
+        org.openapis.openapi.models.operations.GetDeparturesByCRSResponse res = new org.openapis.openapi.models.operations.GetDeparturesByCRSResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {

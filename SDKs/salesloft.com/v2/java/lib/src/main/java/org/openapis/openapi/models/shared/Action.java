@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Action {
     
     public EmbeddedResource actionDetails;
+
     public Action withActionDetails(EmbeddedResource actionDetails) {
         this.actionDetails = actionDetails;
         return this;
@@ -19,6 +20,7 @@ public class Action {
     
     
     public EmbeddedResource cadence;
+
     public Action withCadence(EmbeddedResource cadence) {
         this.cadence = cadence;
         return this;
@@ -29,6 +31,7 @@ public class Action {
      */
     
     public OffsetDateTime createdAt;
+
     public Action withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -39,6 +42,7 @@ public class Action {
      */
     
     public Boolean due;
+
     public Action withDue(Boolean due) {
         this.due = due;
         return this;
@@ -49,6 +53,7 @@ public class Action {
      */
     
     public OffsetDateTime dueOn;
+
     public Action withDueOn(OffsetDateTime dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -59,6 +64,7 @@ public class Action {
      */
     
     public Long id;
+
     public Action withId(Long id) {
         this.id = id;
         return this;
@@ -69,6 +75,7 @@ public class Action {
      */
     
     public Long multitouchGroupId;
+
     public Action withMultitouchGroupId(Long multitouchGroupId) {
         this.multitouchGroupId = multitouchGroupId;
         return this;
@@ -76,6 +83,7 @@ public class Action {
     
     
     public EmbeddedResource person;
+
     public Action withPerson(EmbeddedResource person) {
         this.person = person;
         return this;
@@ -92,6 +100,7 @@ public class Action {
      */
     
     public String status;
+
     public Action withStatus(String status) {
         this.status = status;
         return this;
@@ -99,6 +108,7 @@ public class Action {
     
     
     public EmbeddedResource step;
+
     public Action withStep(EmbeddedResource step) {
         this.step = step;
         return this;
@@ -110,6 +120,7 @@ public class Action {
      */
     
     public String type;
+
     public Action withType(String type) {
         this.type = type;
         return this;
@@ -120,6 +131,7 @@ public class Action {
      */
     
     public OffsetDateTime updatedAt;
+
     public Action withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -127,9 +139,11 @@ public class Action {
     
     
     public EmbeddedResource user;
+
     public Action withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public Action(){}
 }

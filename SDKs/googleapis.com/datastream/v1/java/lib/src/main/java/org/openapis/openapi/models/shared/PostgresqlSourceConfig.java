@@ -18,6 +18,7 @@ public class PostgresqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeObjects")
     public PostgresqlRdbms excludeObjects;
+
     public PostgresqlSourceConfig withExcludeObjects(PostgresqlRdbms excludeObjects) {
         this.excludeObjects = excludeObjects;
         return this;
@@ -29,6 +30,7 @@ public class PostgresqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeObjects")
     public PostgresqlRdbms includeObjects;
+
     public PostgresqlSourceConfig withIncludeObjects(PostgresqlRdbms includeObjects) {
         this.includeObjects = includeObjects;
         return this;
@@ -40,6 +42,7 @@ public class PostgresqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxConcurrentBackfillTasks")
     public Integer maxConcurrentBackfillTasks;
+
     public PostgresqlSourceConfig withMaxConcurrentBackfillTasks(Integer maxConcurrentBackfillTasks) {
         this.maxConcurrentBackfillTasks = maxConcurrentBackfillTasks;
         return this;
@@ -51,6 +54,7 @@ public class PostgresqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publication")
     public String publication;
+
     public PostgresqlSourceConfig withPublication(String publication) {
         this.publication = publication;
         return this;
@@ -62,9 +66,11 @@ public class PostgresqlSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationSlot")
     public String replicationSlot;
+
     public PostgresqlSourceConfig withReplicationSlot(String replicationSlot) {
         this.replicationSlot = replicationSlot;
         return this;
     }
     
+    public PostgresqlSourceConfig(){}
 }

@@ -18,6 +18,7 @@ public class VariableSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placeholder")
     public String placeholder;
+
     public VariableSet withPlaceholder(String placeholder) {
         this.placeholder = placeholder;
         return this;
@@ -29,9 +30,11 @@ public class VariableSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userValue")
     public String userValue;
+
     public VariableSet withUserValue(String userValue) {
         this.userValue = userValue;
         return this;
     }
     
+    public VariableSet(){}
 }

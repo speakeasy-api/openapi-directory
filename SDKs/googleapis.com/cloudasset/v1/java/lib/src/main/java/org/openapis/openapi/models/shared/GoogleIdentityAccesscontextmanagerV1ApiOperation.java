@@ -18,6 +18,7 @@ public class GoogleIdentityAccesscontextmanagerV1ApiOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodSelectors")
     public GoogleIdentityAccesscontextmanagerV1MethodSelector[] methodSelectors;
+
     public GoogleIdentityAccesscontextmanagerV1ApiOperation withMethodSelectors(GoogleIdentityAccesscontextmanagerV1MethodSelector[] methodSelectors) {
         this.methodSelectors = methodSelectors;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityAccesscontextmanagerV1ApiOperation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceName")
     public String serviceName;
+
     public GoogleIdentityAccesscontextmanagerV1ApiOperation withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public GoogleIdentityAccesscontextmanagerV1ApiOperation(){}
 }

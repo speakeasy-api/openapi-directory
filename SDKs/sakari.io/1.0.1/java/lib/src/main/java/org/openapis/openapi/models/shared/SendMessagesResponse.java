@@ -15,9 +15,11 @@ public class SendMessagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SendMessagesResponseData data;
+
     public SendMessagesResponse withData(SendMessagesResponseData data) {
         this.data = data;
         return this;
     }
     
+    public SendMessagesResponse(){}
 }

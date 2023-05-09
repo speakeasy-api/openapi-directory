@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldLimits")
     public GoogleAppsDriveLabelsV2FieldLimits fieldLimits;
+
     public GoogleAppsDriveLabelsV2LabelLimits withFieldLimits(GoogleAppsDriveLabelsV2FieldLimits fieldLimits) {
         this.fieldLimits = fieldLimits;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDeletedFields")
     public Integer maxDeletedFields;
+
     public GoogleAppsDriveLabelsV2LabelLimits withMaxDeletedFields(Integer maxDeletedFields) {
         this.maxDeletedFields = maxDeletedFields;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDescriptionLength")
     public Integer maxDescriptionLength;
+
     public GoogleAppsDriveLabelsV2LabelLimits withMaxDescriptionLength(Integer maxDescriptionLength) {
         this.maxDescriptionLength = maxDescriptionLength;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxDraftRevisions")
     public Integer maxDraftRevisions;
+
     public GoogleAppsDriveLabelsV2LabelLimits withMaxDraftRevisions(Integer maxDraftRevisions) {
         this.maxDraftRevisions = maxDraftRevisions;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFields")
     public Integer maxFields;
+
     public GoogleAppsDriveLabelsV2LabelLimits withMaxFields(Integer maxFields) {
         this.maxFields = maxFields;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTitleLength")
     public Integer maxTitleLength;
+
     public GoogleAppsDriveLabelsV2LabelLimits withMaxTitleLength(Integer maxTitleLength) {
         this.maxTitleLength = maxTitleLength;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAppsDriveLabelsV2LabelLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAppsDriveLabelsV2LabelLimits withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelLimits(){}
 }

@@ -15,6 +15,7 @@ public class ListTargetedSentimentDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTargetedSentimentDetectionJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTargetedSentimentDetectionJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetedSentimentDetectionJobPropertiesList")
     public TargetedSentimentDetectionJobProperties[] targetedSentimentDetectionJobPropertiesList;
+
     public ListTargetedSentimentDetectionJobsResponse withTargetedSentimentDetectionJobPropertiesList(TargetedSentimentDetectionJobProperties[] targetedSentimentDetectionJobPropertiesList) {
         this.targetedSentimentDetectionJobPropertiesList = targetedSentimentDetectionJobPropertiesList;
         return this;
     }
     
+    public ListTargetedSentimentDetectionJobsResponse(){}
 }

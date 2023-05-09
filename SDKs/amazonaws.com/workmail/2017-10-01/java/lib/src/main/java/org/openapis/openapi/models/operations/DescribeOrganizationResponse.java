@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOrganizationResponse {
     
     public String contentType;
+
     public DescribeOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOrganizationResponse describeOrganizationResponse;
+
     public DescribeOrganizationResponse withDescribeOrganizationResponse(org.openapis.openapi.models.shared.DescribeOrganizationResponse describeOrganizationResponse) {
         this.describeOrganizationResponse = describeOrganizationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeOrganizationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOrganizationResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DescribeOrganizationResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeOrganizationResponse {
     
     
     public Integer statusCode;
+
     public DescribeOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

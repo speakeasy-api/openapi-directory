@@ -18,6 +18,7 @@ public class PostV2Scim20Users403ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public PostV2Scim20Users403ApplicationScimPlusJson withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -26,6 +27,7 @@ public class PostV2Scim20Users403ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemas")
     public String[] schemas;
+
     public PostV2Scim20Users403ApplicationScimPlusJson withSchemas(String[] schemas) {
         this.schemas = schemas;
         return this;
@@ -34,9 +36,11 @@ public class PostV2Scim20Users403ApplicationScimPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Object status;
+
     public PostV2Scim20Users403ApplicationScimPlusJson withStatus(Object status) {
         this.status = status;
         return this;
     }
     
+    public PostV2Scim20Users403ApplicationScimPlusJson(){}
 }

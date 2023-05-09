@@ -15,6 +15,7 @@ public class VisualReferenceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseCanaryRunId")
     public String baseCanaryRunId;
+
     public VisualReferenceOutput withBaseCanaryRunId(String baseCanaryRunId) {
         this.baseCanaryRunId = baseCanaryRunId;
         return this;
@@ -23,9 +24,11 @@ public class VisualReferenceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseScreenshots")
     public BaseScreenshot[] baseScreenshots;
+
     public VisualReferenceOutput withBaseScreenshots(BaseScreenshot[] baseScreenshots) {
         this.baseScreenshots = baseScreenshots;
         return this;
     }
     
+    public VisualReferenceOutput(){}
 }

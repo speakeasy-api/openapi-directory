@@ -20,6 +20,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoDeployed")
     public Boolean autoDeployed;
+
     public CreateDeploymentResponse withAutoDeployed(Boolean autoDeployed) {
         this.autoDeployed = autoDeployed;
         return this;
@@ -30,6 +31,7 @@ public class CreateDeploymentResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public CreateDeploymentResponse withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -38,6 +40,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public CreateDeploymentResponse withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -46,6 +49,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatus")
     public CreateDeploymentResponseDeploymentStatusEnum deploymentStatus;
+
     public CreateDeploymentResponse withDeploymentStatus(CreateDeploymentResponseDeploymentStatusEnum deploymentStatus) {
         this.deploymentStatus = deploymentStatus;
         return this;
@@ -54,6 +58,7 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentStatusMessage")
     public String deploymentStatusMessage;
+
     public CreateDeploymentResponse withDeploymentStatusMessage(String deploymentStatusMessage) {
         this.deploymentStatusMessage = deploymentStatusMessage;
         return this;
@@ -62,9 +67,11 @@ public class CreateDeploymentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDeploymentResponse withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public CreateDeploymentResponse(){}
 }

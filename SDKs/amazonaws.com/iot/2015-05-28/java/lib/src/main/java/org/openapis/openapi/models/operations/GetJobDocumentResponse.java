@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobDocumentResponse {
     
     public String contentType;
+
     public GetJobDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetJobDocumentResponse getJobDocumentResponse;
+
     public GetJobDocumentResponse withGetJobDocumentResponse(org.openapis.openapi.models.shared.GetJobDocumentResponse getJobDocumentResponse) {
         this.getJobDocumentResponse = getJobDocumentResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetJobDocumentResponse {
      */
     
     public Object invalidRequestException;
+
     public GetJobDocumentResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class GetJobDocumentResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetJobDocumentResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class GetJobDocumentResponse {
     
     
     public Integer statusCode;
+
     public GetJobDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetJobDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetJobDocumentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetJobDocumentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetJobDocumentResponse {
      */
     
     public Object throttlingException;
+
     public GetJobDocumentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetJobDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,12 +4,14 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_account")
     public Long idAccount;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withIdAccount(Long idAccount) {
         this.idAccount = idAccount;
         return this;
@@ -17,6 +19,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest 
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_connection")
     public Long idConnection;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withIdConnection(Long idConnection) {
         this.idConnection = idConnection;
         return this;
@@ -27,6 +30,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
@@ -37,6 +41,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_date")
     public LocalDate maxDate;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withMaxDate(LocalDate maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -47,6 +52,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_date")
     public LocalDate minDate;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withMinDate(LocalDate minDate) {
         this.minDate = minDate;
         return this;
@@ -57,9 +63,15 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=period")
     public String period;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest withPeriod(String period) {
         this.period = period;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountDeltaRequest(@JsonProperty("id_account") Long idAccount, @JsonProperty("id_connection") Long idConnection, @JsonProperty("id_user") String idUser) {
+        this.idAccount = idAccount;
+        this.idConnection = idConnection;
+        this.idUser = idUser;
+  }
 }

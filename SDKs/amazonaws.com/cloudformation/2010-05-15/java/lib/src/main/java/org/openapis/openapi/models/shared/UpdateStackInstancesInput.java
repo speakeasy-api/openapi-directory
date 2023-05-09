@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateStackInstancesInput {
     
     public String[] accounts;
+
     public UpdateStackInstancesInput withAccounts(String[] accounts) {
         this.accounts = accounts;
         return this;
@@ -16,6 +17,7 @@ public class UpdateStackInstancesInput {
     
     
     public CallAsEnum callAs;
+
     public UpdateStackInstancesInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -23,6 +25,7 @@ public class UpdateStackInstancesInput {
     
     
     public DeploymentTargets deploymentTargets;
+
     public UpdateStackInstancesInput withDeploymentTargets(DeploymentTargets deploymentTargets) {
         this.deploymentTargets = deploymentTargets;
         return this;
@@ -30,6 +33,7 @@ public class UpdateStackInstancesInput {
     
     
     public String operationId;
+
     public UpdateStackInstancesInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -37,6 +41,7 @@ public class UpdateStackInstancesInput {
     
     
     public StackSetOperationPreferences operationPreferences;
+
     public UpdateStackInstancesInput withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -44,6 +49,7 @@ public class UpdateStackInstancesInput {
     
     
     public Parameter[] parameterOverrides;
+
     public UpdateStackInstancesInput withParameterOverrides(Parameter[] parameterOverrides) {
         this.parameterOverrides = parameterOverrides;
         return this;
@@ -51,6 +57,7 @@ public class UpdateStackInstancesInput {
     
     
     public String[] regions;
+
     public UpdateStackInstancesInput withRegions(String[] regions) {
         this.regions = regions;
         return this;
@@ -58,9 +65,14 @@ public class UpdateStackInstancesInput {
     
     
     public String stackSetName;
+
     public UpdateStackInstancesInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public UpdateStackInstancesInput(@JsonProperty("Regions") String[] regions, @JsonProperty("StackSetName") String stackSetName) {
+        this.regions = regions;
+        this.stackSetName = stackSetName;
+  }
 }

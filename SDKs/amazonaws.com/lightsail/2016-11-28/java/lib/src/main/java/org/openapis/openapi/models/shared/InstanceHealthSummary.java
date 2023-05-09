@@ -15,6 +15,7 @@ public class InstanceHealthSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceHealth")
     public InstanceHealthStateEnum instanceHealth;
+
     public InstanceHealthSummary withInstanceHealth(InstanceHealthStateEnum instanceHealth) {
         this.instanceHealth = instanceHealth;
         return this;
@@ -23,6 +24,7 @@ public class InstanceHealthSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceHealthReason")
     public InstanceHealthReasonEnum instanceHealthReason;
+
     public InstanceHealthSummary withInstanceHealthReason(InstanceHealthReasonEnum instanceHealthReason) {
         this.instanceHealthReason = instanceHealthReason;
         return this;
@@ -31,9 +33,11 @@ public class InstanceHealthSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceName")
     public String instanceName;
+
     public InstanceHealthSummary withInstanceName(String instanceName) {
         this.instanceName = instanceName;
         return this;
     }
     
+    public InstanceHealthSummary(){}
 }

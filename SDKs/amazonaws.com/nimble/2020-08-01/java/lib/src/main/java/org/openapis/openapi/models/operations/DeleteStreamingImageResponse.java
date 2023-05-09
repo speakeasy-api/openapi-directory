@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStreamingImageResponse {
@@ -12,6 +13,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStreamingImageResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object conflictException;
+
     public DeleteStreamingImageResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStreamingImageResponse {
     
     
     public String contentType;
+
     public DeleteStreamingImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteStreamingImageResponse deleteStreamingImageResponse;
+
     public DeleteStreamingImageResponse withDeleteStreamingImageResponse(org.openapis.openapi.models.shared.DeleteStreamingImageResponse deleteStreamingImageResponse) {
         this.deleteStreamingImageResponse = deleteStreamingImageResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteStreamingImageResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStreamingImageResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteStreamingImageResponse {
     
     
     public Integer statusCode;
+
     public DeleteStreamingImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteStreamingImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStreamingImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteStreamingImageResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object throttlingException;
+
     public DeleteStreamingImageResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteStreamingImageResponse {
      */
     
     public Object validationException;
+
     public DeleteStreamingImageResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteStreamingImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameterTuningJobObjective")
     public HyperParameterTuningJobObjective hyperParameterTuningJobObjective;
+
     public HyperParameterTuningJobConfig withHyperParameterTuningJobObjective(HyperParameterTuningJobObjective hyperParameterTuningJobObjective) {
         this.hyperParameterTuningJobObjective = hyperParameterTuningJobObjective;
         return this;
@@ -23,6 +24,7 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterRanges")
     public ParameterRanges parameterRanges;
+
     public HyperParameterTuningJobConfig withParameterRanges(ParameterRanges parameterRanges) {
         this.parameterRanges = parameterRanges;
         return this;
@@ -31,6 +33,7 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RandomSeed")
     public Long randomSeed;
+
     public HyperParameterTuningJobConfig withRandomSeed(Long randomSeed) {
         this.randomSeed = randomSeed;
         return this;
@@ -38,6 +41,7 @@ public class HyperParameterTuningJobConfig {
     
     @JsonProperty("ResourceLimits")
     public ResourceLimits resourceLimits;
+
     public HyperParameterTuningJobConfig withResourceLimits(ResourceLimits resourceLimits) {
         this.resourceLimits = resourceLimits;
         return this;
@@ -45,6 +49,7 @@ public class HyperParameterTuningJobConfig {
     
     @JsonProperty("Strategy")
     public HyperParameterTuningJobStrategyTypeEnum strategy;
+
     public HyperParameterTuningJobConfig withStrategy(HyperParameterTuningJobStrategyTypeEnum strategy) {
         this.strategy = strategy;
         return this;
@@ -53,6 +58,7 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StrategyConfig")
     public HyperParameterTuningJobStrategyConfig strategyConfig;
+
     public HyperParameterTuningJobConfig withStrategyConfig(HyperParameterTuningJobStrategyConfig strategyConfig) {
         this.strategyConfig = strategyConfig;
         return this;
@@ -61,6 +67,7 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingJobEarlyStoppingType")
     public TrainingJobEarlyStoppingTypeEnum trainingJobEarlyStoppingType;
+
     public HyperParameterTuningJobConfig withTrainingJobEarlyStoppingType(TrainingJobEarlyStoppingTypeEnum trainingJobEarlyStoppingType) {
         this.trainingJobEarlyStoppingType = trainingJobEarlyStoppingType;
         return this;
@@ -69,9 +76,14 @@ public class HyperParameterTuningJobConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TuningJobCompletionCriteria")
     public TuningJobCompletionCriteria tuningJobCompletionCriteria;
+
     public HyperParameterTuningJobConfig withTuningJobCompletionCriteria(TuningJobCompletionCriteria tuningJobCompletionCriteria) {
         this.tuningJobCompletionCriteria = tuningJobCompletionCriteria;
         return this;
     }
     
+    public HyperParameterTuningJobConfig(@JsonProperty("ResourceLimits") ResourceLimits resourceLimits, @JsonProperty("Strategy") HyperParameterTuningJobStrategyTypeEnum strategy) {
+        this.resourceLimits = resourceLimits;
+        this.strategy = strategy;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse {
     
     public String contentType;
+
     public PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse {
     
     
     public Integer statusCode;
+
     public PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
     }
     
+    public PutRepositoriesWorkspaceRepoSlugOverrideSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

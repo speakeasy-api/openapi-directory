@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTaskProtectionResponse {
@@ -12,6 +13,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTaskProtectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object clientException;
+
     public UpdateTaskProtectionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object clusterNotFoundException;
+
     public UpdateTaskProtectionResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTaskProtectionResponse {
     
     
     public String contentType;
+
     public UpdateTaskProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateTaskProtectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateTaskProtectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateTaskProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateTaskProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTaskProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateTaskProtectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object serverException;
+
     public UpdateTaskProtectionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTaskProtectionResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public UpdateTaskProtectionResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateTaskProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTaskProtectionResponse updateTaskProtectionResponse;
+
     public UpdateTaskProtectionResponse withUpdateTaskProtectionResponse(org.openapis.openapi.models.shared.UpdateTaskProtectionResponse updateTaskProtectionResponse) {
         this.updateTaskProtectionResponse = updateTaskProtectionResponse;
         return this;
     }
     
+    public UpdateTaskProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

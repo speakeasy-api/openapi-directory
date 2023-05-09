@@ -18,9 +18,13 @@ public class ListCategoriesResponse {
      */
     @JsonProperty("data")
     public CategoryResource[] data;
+
     public ListCategoriesResponse withData(CategoryResource[] data) {
         this.data = data;
         return this;
     }
     
+    public ListCategoriesResponse(@JsonProperty("data") CategoryResource[] data) {
+        this.data = data;
+  }
 }

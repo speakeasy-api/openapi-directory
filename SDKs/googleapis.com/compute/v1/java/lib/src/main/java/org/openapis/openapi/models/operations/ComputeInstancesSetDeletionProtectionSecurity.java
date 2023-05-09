@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInstancesSetDeletionProtectionSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetDeletionProtectionSecurityOption1 option1;
+
     public ComputeInstancesSetDeletionProtectionSecurity withOption1(ComputeInstancesSetDeletionProtectionSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeInstancesSetDeletionProtectionSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInstancesSetDeletionProtectionSecurityOption2 option2;
+
     public ComputeInstancesSetDeletionProtectionSecurity withOption2(ComputeInstancesSetDeletionProtectionSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeInstancesSetDeletionProtectionSecurity(){}
 }

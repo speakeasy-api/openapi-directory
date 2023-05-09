@@ -22,6 +22,7 @@ public class Report {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Report withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -32,6 +33,7 @@ public class Report {
      */
     @JsonProperty("file_id")
     public String fileId;
+
     public Report withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -42,6 +44,7 @@ public class Report {
      */
     @JsonProperty("process_id")
     public Long processId;
+
     public Report withProcessId(Long processId) {
         this.processId = processId;
         return this;
@@ -52,6 +55,7 @@ public class Report {
      */
     @JsonProperty("report_number")
     public Long reportNumber;
+
     public Report withReportNumber(Long reportNumber) {
         this.reportNumber = reportNumber;
         return this;
@@ -60,6 +64,7 @@ public class Report {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Result result;
+
     public Report withResult(Result result) {
         this.result = result;
         return this;
@@ -70,9 +75,16 @@ public class Report {
      */
     @JsonProperty("result_id")
     public Long resultId;
+
     public Report withResultId(Long resultId) {
         this.resultId = resultId;
         return this;
     }
     
+    public Report(@JsonProperty("file_id") String fileId, @JsonProperty("process_id") Long processId, @JsonProperty("report_number") Long reportNumber, @JsonProperty("result_id") Long resultId) {
+        this.fileId = fileId;
+        this.processId = processId;
+        this.reportNumber = reportNumber;
+        this.resultId = resultId;
+  }
 }

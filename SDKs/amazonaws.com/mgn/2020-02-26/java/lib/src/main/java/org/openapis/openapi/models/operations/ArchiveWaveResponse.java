@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ArchiveWaveResponse {
@@ -12,6 +13,7 @@ public class ArchiveWaveResponse {
      */
     
     public Object conflictException;
+
     public ArchiveWaveResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class ArchiveWaveResponse {
     
     
     public String contentType;
+
     public ArchiveWaveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ArchiveWaveResponse {
     
     
     public Integer statusCode;
+
     public ArchiveWaveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ArchiveWaveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ArchiveWaveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ArchiveWaveResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ArchiveWaveResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class ArchiveWaveResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ArchiveWaveResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -63,6 +70,7 @@ public class ArchiveWaveResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ArchiveWaveResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -73,9 +81,14 @@ public class ArchiveWaveResponse {
      */
     
     public org.openapis.openapi.models.shared.Wave wave;
+
     public ArchiveWaveResponse withWave(org.openapis.openapi.models.shared.Wave wave) {
         this.wave = wave;
         return this;
     }
     
+    public ArchiveWaveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

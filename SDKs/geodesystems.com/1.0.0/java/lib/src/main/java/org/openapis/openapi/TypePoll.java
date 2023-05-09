@@ -57,10 +57,8 @@ public class TypePoll {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchPollResponse res = new org.openapis.openapi.models.operations.SearchPollResponse() {{
+        org.openapis.openapi.models.operations.SearchPollResponse res = new org.openapis.openapi.models.operations.SearchPollResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

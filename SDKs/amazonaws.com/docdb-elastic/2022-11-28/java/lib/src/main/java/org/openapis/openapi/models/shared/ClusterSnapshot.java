@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClusterSnapshot {
     @JsonProperty("adminUserName")
     public String adminUserName;
+
     public ClusterSnapshot withAdminUserName(String adminUserName) {
         this.adminUserName = adminUserName;
         return this;
@@ -19,6 +20,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("clusterArn")
     public String clusterArn;
+
     public ClusterSnapshot withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -26,6 +28,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("clusterCreationTime")
     public String clusterCreationTime;
+
     public ClusterSnapshot withClusterCreationTime(String clusterCreationTime) {
         this.clusterCreationTime = clusterCreationTime;
         return this;
@@ -33,6 +36,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public ClusterSnapshot withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("snapshotArn")
     public String snapshotArn;
+
     public ClusterSnapshot withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -47,6 +52,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("snapshotCreationTime")
     public String snapshotCreationTime;
+
     public ClusterSnapshot withSnapshotCreationTime(String snapshotCreationTime) {
         this.snapshotCreationTime = snapshotCreationTime;
         return this;
@@ -54,6 +60,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public ClusterSnapshot withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -61,6 +68,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public ClusterSnapshot withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -68,6 +76,7 @@ public class ClusterSnapshot {
     
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public ClusterSnapshot withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -75,9 +84,22 @@ public class ClusterSnapshot {
     
     @JsonProperty("vpcSecurityGroupIds")
     public String[] vpcSecurityGroupIds;
+
     public ClusterSnapshot withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public ClusterSnapshot(@JsonProperty("adminUserName") String adminUserName, @JsonProperty("clusterArn") String clusterArn, @JsonProperty("clusterCreationTime") String clusterCreationTime, @JsonProperty("kmsKeyId") String kmsKeyId, @JsonProperty("snapshotArn") String snapshotArn, @JsonProperty("snapshotCreationTime") String snapshotCreationTime, @JsonProperty("snapshotName") String snapshotName, @JsonProperty("status") StatusEnum status, @JsonProperty("subnetIds") String[] subnetIds, @JsonProperty("vpcSecurityGroupIds") String[] vpcSecurityGroupIds) {
+        this.adminUserName = adminUserName;
+        this.clusterArn = clusterArn;
+        this.clusterCreationTime = clusterCreationTime;
+        this.kmsKeyId = kmsKeyId;
+        this.snapshotArn = snapshotArn;
+        this.snapshotCreationTime = snapshotCreationTime;
+        this.snapshotName = snapshotName;
+        this.status = status;
+        this.subnetIds = subnetIds;
+        this.vpcSecurityGroupIds = vpcSecurityGroupIds;
+  }
 }

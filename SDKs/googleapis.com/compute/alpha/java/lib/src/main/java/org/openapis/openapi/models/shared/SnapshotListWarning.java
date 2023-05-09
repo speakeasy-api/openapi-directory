@@ -18,6 +18,7 @@ public class SnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public SnapshotListWarningCodeEnum code;
+
     public SnapshotListWarning withCode(SnapshotListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public SnapshotListWarningData[] data;
+
     public SnapshotListWarning withData(SnapshotListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class SnapshotListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SnapshotListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SnapshotListWarning(){}
 }

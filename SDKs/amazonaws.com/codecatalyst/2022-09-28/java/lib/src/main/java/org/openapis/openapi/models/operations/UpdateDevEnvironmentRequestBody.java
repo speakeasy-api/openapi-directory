@@ -15,6 +15,7 @@ public class UpdateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alias")
     public String alias;
+
     public UpdateDevEnvironmentRequestBody withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -26,6 +27,7 @@ public class UpdateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateDevEnvironmentRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -37,6 +39,7 @@ public class UpdateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ides")
     public org.openapis.openapi.models.shared.IdeConfiguration[] ides;
+
     public UpdateDevEnvironmentRequestBody withIdes(org.openapis.openapi.models.shared.IdeConfiguration[] ides) {
         this.ides = ides;
         return this;
@@ -48,6 +51,7 @@ public class UpdateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactivityTimeoutMinutes")
     public Long inactivityTimeoutMinutes;
+
     public UpdateDevEnvironmentRequestBody withInactivityTimeoutMinutes(Long inactivityTimeoutMinutes) {
         this.inactivityTimeoutMinutes = inactivityTimeoutMinutes;
         return this;
@@ -59,9 +63,11 @@ public class UpdateDevEnvironmentRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public UpdateDevEnvironmentRequestBodyInstanceTypeEnum instanceType;
+
     public UpdateDevEnvironmentRequestBody withInstanceType(UpdateDevEnvironmentRequestBodyInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
     }
     
+    public UpdateDevEnvironmentRequestBody(){}
 }

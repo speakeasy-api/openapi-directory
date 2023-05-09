@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AuditLogsGetAuditLogsResponse {
     
     public Object auditLogsGetAuditLogs429ApplicationJSONAny;
+
     public AuditLogsGetAuditLogsResponse withAuditLogsGetAuditLogs429ApplicationJSONAny(Object auditLogsGetAuditLogs429ApplicationJSONAny) {
         this.auditLogsGetAuditLogs429ApplicationJSONAny = auditLogsGetAuditLogs429ApplicationJSONAny;
         return this;
@@ -16,6 +18,7 @@ public class AuditLogsGetAuditLogsResponse {
     
     
     public Object auditLogsGetAuditLogs500ApplicationJSONAny;
+
     public AuditLogsGetAuditLogsResponse withAuditLogsGetAuditLogs500ApplicationJSONAny(Object auditLogsGetAuditLogs500ApplicationJSONAny) {
         this.auditLogsGetAuditLogs500ApplicationJSONAny = auditLogsGetAuditLogs500ApplicationJSONAny;
         return this;
@@ -23,6 +26,7 @@ public class AuditLogsGetAuditLogsResponse {
     
     
     public String contentType;
+
     public AuditLogsGetAuditLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -33,6 +37,7 @@ public class AuditLogsGetAuditLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAuditLogsResponse getAuditLogsResponse;
+
     public AuditLogsGetAuditLogsResponse withGetAuditLogsResponse(org.openapis.openapi.models.shared.GetAuditLogsResponse getAuditLogsResponse) {
         this.getAuditLogsResponse = getAuditLogsResponse;
         return this;
@@ -40,6 +45,7 @@ public class AuditLogsGetAuditLogsResponse {
     
     
     public Integer statusCode;
+
     public AuditLogsGetAuditLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +53,7 @@ public class AuditLogsGetAuditLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AuditLogsGetAuditLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +64,14 @@ public class AuditLogsGetAuditLogsResponse {
      */
     
     public org.openapis.openapi.models.shared.RpcStatus rpcStatus;
+
     public AuditLogsGetAuditLogsResponse withRpcStatus(org.openapis.openapi.models.shared.RpcStatus rpcStatus) {
         this.rpcStatus = rpcStatus;
         return this;
     }
     
+    public AuditLogsGetAuditLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

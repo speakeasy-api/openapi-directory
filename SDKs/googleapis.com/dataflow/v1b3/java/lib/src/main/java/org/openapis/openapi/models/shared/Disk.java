@@ -18,6 +18,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public Disk withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -29,6 +30,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mountPoint")
     public String mountPoint;
+
     public Disk withMountPoint(String mountPoint) {
         this.mountPoint = mountPoint;
         return this;
@@ -40,9 +42,11 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sizeGb")
     public Integer sizeGb;
+
     public Disk withSizeGb(Integer sizeGb) {
         this.sizeGb = sizeGb;
         return this;
     }
     
+    public Disk(){}
 }

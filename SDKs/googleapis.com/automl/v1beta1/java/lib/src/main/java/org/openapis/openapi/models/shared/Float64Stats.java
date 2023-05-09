@@ -18,6 +18,7 @@ public class Float64Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("histogramBuckets")
     public HistogramBucket[] histogramBuckets;
+
     public Float64Stats withHistogramBuckets(HistogramBucket[] histogramBuckets) {
         this.histogramBuckets = histogramBuckets;
         return this;
@@ -29,6 +30,7 @@ public class Float64Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mean")
     public Double mean;
+
     public Float64Stats withMean(Double mean) {
         this.mean = mean;
         return this;
@@ -40,6 +42,7 @@ public class Float64Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantiles")
     public Double[] quantiles;
+
     public Float64Stats withQuantiles(Double[] quantiles) {
         this.quantiles = quantiles;
         return this;
@@ -51,9 +54,11 @@ public class Float64Stats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardDeviation")
     public Double standardDeviation;
+
     public Float64Stats withStandardDeviation(Double standardDeviation) {
         this.standardDeviation = standardDeviation;
         return this;
     }
     
+    public Float64Stats(){}
 }

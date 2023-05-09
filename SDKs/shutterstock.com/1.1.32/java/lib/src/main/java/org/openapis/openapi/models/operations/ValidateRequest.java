@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateRequest {
@@ -12,6 +13,7 @@ public class ValidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public ValidateRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class ValidateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String[] tag;
+
     public ValidateRequest withTag(String[] tag) {
         this.tag = tag;
         return this;
@@ -32,9 +35,13 @@ public class ValidateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=user-agent")
     public String userAgent;
+
     public ValidateRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public ValidateRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

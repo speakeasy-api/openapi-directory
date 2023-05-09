@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListUserAssociationsResponse {
@@ -12,6 +13,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListUserAssociationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object conflictException;
+
     public ListUserAssociationsResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListUserAssociationsResponse {
     
     
     public String contentType;
+
     public ListUserAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object internalServerException;
+
     public ListUserAssociationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListUserAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListUserAssociationsResponse listUserAssociationsResponse;
+
     public ListUserAssociationsResponse withListUserAssociationsResponse(org.openapis.openapi.models.shared.ListUserAssociationsResponse listUserAssociationsResponse) {
         this.listUserAssociationsResponse = listUserAssociationsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListUserAssociationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListUserAssociationsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListUserAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListUserAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListUserAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListUserAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListUserAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListUserAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListUserAssociationsResponse {
      */
     
     public Object validationException;
+
     public ListUserAssociationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListUserAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

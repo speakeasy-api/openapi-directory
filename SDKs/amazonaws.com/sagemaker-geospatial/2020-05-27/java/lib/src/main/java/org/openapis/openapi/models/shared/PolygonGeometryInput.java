@@ -7,14 +7,18 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PolygonGeometryInput - &lt;p/&gt;
+ * PolygonGeometryInput - The structure representing Polygon Geometry based on the &lt;a href="https://www.rfc-editor.org/rfc/rfc7946#section-3.1.6"&gt;GeoJson spec&lt;/a&gt;.
  */
 public class PolygonGeometryInput {
     @JsonProperty("Coordinates")
     public Double[][][] coordinates;
+
     public PolygonGeometryInput withCoordinates(Double[][][] coordinates) {
         this.coordinates = coordinates;
         return this;
     }
     
+    public PolygonGeometryInput(@JsonProperty("Coordinates") Double[][][] coordinates) {
+        this.coordinates = coordinates;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("n")
     public Integer n;
+
     public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics withN(Integer n) {
         this.n = n;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recall")
     public Float recall;
+
     public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics withRecall(Float recall) {
         this.recall = recall;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SmartReplyMetricsTopNMetrics(){}
 }

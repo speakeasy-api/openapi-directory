@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterWorkflowTypeResponse {
     
     public String contentType;
+
     public RegisterWorkflowTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RegisterWorkflowTypeResponse {
      */
     
     public Object limitExceededFault;
+
     public RegisterWorkflowTypeResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -29,6 +32,7 @@ public class RegisterWorkflowTypeResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RegisterWorkflowTypeResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -36,6 +40,7 @@ public class RegisterWorkflowTypeResponse {
     
     
     public Integer statusCode;
+
     public RegisterWorkflowTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RegisterWorkflowTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterWorkflowTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class RegisterWorkflowTypeResponse {
      */
     
     public Object typeAlreadyExistsFault;
+
     public RegisterWorkflowTypeResponse withTypeAlreadyExistsFault(Object typeAlreadyExistsFault) {
         this.typeAlreadyExistsFault = typeAlreadyExistsFault;
         return this;
@@ -63,9 +70,14 @@ public class RegisterWorkflowTypeResponse {
      */
     
     public Object unknownResourceFault;
+
     public RegisterWorkflowTypeResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public RegisterWorkflowTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGameSummaryUsingGETResponse {
     
     public String contentType;
+
     public GETGameSummaryUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETGameSummaryUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.GameSummaryModel gameSummaryModel;
+
     public GETGameSummaryUsingGETResponse withGameSummaryModel(org.openapis.openapi.models.shared.GameSummaryModel gameSummaryModel) {
         this.gameSummaryModel = gameSummaryModel;
         return this;
@@ -29,6 +32,7 @@ public class GETGameSummaryUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETGameSummaryUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class GETGameSummaryUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETGameSummaryUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETGameSummaryUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGameSummaryUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGameSummaryUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

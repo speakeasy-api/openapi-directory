@@ -61,11 +61,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsCreateResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsCreateResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsCreateResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsDeleteResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsDeleteResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsDeleteResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsListResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsListResponse(contentType, httpRes.statusCode()) {{
             listConnectorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -201,11 +195,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsPatchResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsPatchResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsPatchResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsConnectorsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.VpcaccessProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

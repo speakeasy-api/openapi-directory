@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartStudioSSOConfigurationRepairResponse {
     @JsonProperty("studio")
     public Studio studio;
+
     public StartStudioSSOConfigurationRepairResponse withStudio(Studio studio) {
         this.studio = studio;
         return this;
     }
     
+    public StartStudioSSOConfigurationRepairResponse(@JsonProperty("studio") Studio studio) {
+        this.studio = studio;
+  }
 }

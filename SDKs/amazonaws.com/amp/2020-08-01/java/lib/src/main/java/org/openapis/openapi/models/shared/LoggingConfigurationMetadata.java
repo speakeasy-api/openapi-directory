@@ -19,6 +19,7 @@ public class LoggingConfigurationMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public LoggingConfigurationMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class LoggingConfigurationMetadata {
     
     @JsonProperty("logGroupArn")
     public String logGroupArn;
+
     public LoggingConfigurationMetadata withLogGroupArn(String logGroupArn) {
         this.logGroupArn = logGroupArn;
         return this;
@@ -35,6 +37,7 @@ public class LoggingConfigurationMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public LoggingConfigurationMetadata withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -42,6 +45,7 @@ public class LoggingConfigurationMetadata {
     
     @JsonProperty("status")
     public LoggingConfigurationStatus status;
+
     public LoggingConfigurationMetadata withStatus(LoggingConfigurationStatus status) {
         this.status = status;
         return this;
@@ -49,9 +53,17 @@ public class LoggingConfigurationMetadata {
     
     @JsonProperty("workspace")
     public String workspace;
+
     public LoggingConfigurationMetadata withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public LoggingConfigurationMetadata(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("logGroupArn") String logGroupArn, @JsonProperty("modifiedAt") OffsetDateTime modifiedAt, @JsonProperty("status") LoggingConfigurationStatus status, @JsonProperty("workspace") String workspace) {
+        this.createdAt = createdAt;
+        this.logGroupArn = logGroupArn;
+        this.modifiedAt = modifiedAt;
+        this.status = status;
+        this.workspace = workspace;
+  }
 }

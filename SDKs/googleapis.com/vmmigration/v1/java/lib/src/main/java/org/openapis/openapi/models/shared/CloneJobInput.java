@@ -18,6 +18,7 @@ public class CloneJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeEngineTargetDetails")
     public ComputeEngineTargetDetails computeEngineTargetDetails;
+
     public CloneJobInput withComputeEngineTargetDetails(ComputeEngineTargetDetails computeEngineTargetDetails) {
         this.computeEngineTargetDetails = computeEngineTargetDetails;
         return this;
@@ -29,9 +30,11 @@ public class CloneJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public CloneJobInput withError(Status error) {
         this.error = error;
         return this;
     }
     
+    public CloneJobInput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteColumnResponse {
@@ -12,6 +13,7 @@ public class DeleteColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.ColumnDTO[] columnDTOS;
+
     public DeleteColumnResponse withColumnDTOS(org.openapis.openapi.models.shared.ColumnDTO[] columnDTOS) {
         this.columnDTOS = columnDTOS;
         return this;
@@ -19,6 +21,7 @@ public class DeleteColumnResponse {
     
     
     public String contentType;
+
     public DeleteColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteColumnResponse {
     
     
     public Integer statusCode;
+
     public DeleteColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

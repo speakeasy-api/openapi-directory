@@ -15,6 +15,7 @@ public class S3DataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public S3DataInput withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -22,6 +23,7 @@ public class S3DataInput {
     
     @JsonProperty("MetadataProvider")
     public MetadataProviderEnum metadataProvider;
+
     public S3DataInput withMetadataProvider(MetadataProviderEnum metadataProvider) {
         this.metadataProvider = metadataProvider;
         return this;
@@ -29,9 +31,14 @@ public class S3DataInput {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public S3DataInput withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public S3DataInput(@JsonProperty("MetadataProvider") MetadataProviderEnum metadataProvider, @JsonProperty("S3Uri") String s3Uri) {
+        this.metadataProvider = metadataProvider;
+        this.s3Uri = s3Uri;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListReceiptRuleSetsRequest {
     
     public String nextToken;
+
     public ListReceiptRuleSetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReceiptRuleSetsRequest(){}
 }

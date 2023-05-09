@@ -18,9 +18,11 @@ public class DigitalContentLabelTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentRatingTier")
     public DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum contentRatingTier;
+
     public DigitalContentLabelTargetingOptionDetails withContentRatingTier(DigitalContentLabelTargetingOptionDetailsContentRatingTierEnum contentRatingTier) {
         this.contentRatingTier = contentRatingTier;
         return this;
     }
     
+    public DigitalContentLabelTargetingOptionDetails(){}
 }

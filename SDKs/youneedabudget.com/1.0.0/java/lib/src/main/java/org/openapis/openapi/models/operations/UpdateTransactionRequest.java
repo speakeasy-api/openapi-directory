@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTransactionRequest {
@@ -12,16 +13,18 @@ public class UpdateTransactionRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PutTransactionWrapper putTransactionWrapper;
+
     public UpdateTransactionRequest withPutTransactionWrapper(org.openapis.openapi.models.shared.PutTransactionWrapper putTransactionWrapper) {
         this.putTransactionWrapper = putTransactionWrapper;
         return this;
     }
     
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public UpdateTransactionRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -32,9 +35,15 @@ public class UpdateTransactionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
     public String transactionId;
+
     public UpdateTransactionRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public UpdateTransactionRequest(@JsonProperty("PutTransactionWrapper") org.openapis.openapi.models.shared.PutTransactionWrapper putTransactionWrapper, @JsonProperty("budget_id") String budgetId, @JsonProperty("transaction_id") String transactionId) {
+        this.putTransactionWrapper = putTransactionWrapper;
+        this.budgetId = budgetId;
+        this.transactionId = transactionId;
+  }
 }

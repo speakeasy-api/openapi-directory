@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CustomAmi {
     
     public String imageId;
+
     public CustomAmi withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -19,9 +20,11 @@ public class CustomAmi {
     
     
     public String virtualizationType;
+
     public CustomAmi withVirtualizationType(String virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
     }
     
+    public CustomAmi(){}
 }

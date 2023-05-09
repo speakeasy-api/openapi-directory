@@ -18,9 +18,11 @@ public class GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration(){}
 }

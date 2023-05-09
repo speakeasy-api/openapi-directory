@@ -18,6 +18,7 @@ public class InstanceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableMachineCount")
     public Integer availableMachineCount;
+
     public InstanceQuota withAvailableMachineCount(Integer availableMachineCount) {
         this.availableMachineCount = availableMachineCount;
         return this;
@@ -29,6 +30,7 @@ public class InstanceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcpService")
     public String gcpService;
+
     public InstanceQuota withGcpService(String gcpService) {
         this.gcpService = gcpService;
         return this;
@@ -40,6 +42,7 @@ public class InstanceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceType")
     public String instanceType;
+
     public InstanceQuota withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -51,6 +54,7 @@ public class InstanceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public InstanceQuota withLocation(String location) {
         this.location = location;
         return this;
@@ -62,9 +66,11 @@ public class InstanceQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InstanceQuota withName(String name) {
         this.name = name;
         return this;
     }
     
+    public InstanceQuota(){}
 }

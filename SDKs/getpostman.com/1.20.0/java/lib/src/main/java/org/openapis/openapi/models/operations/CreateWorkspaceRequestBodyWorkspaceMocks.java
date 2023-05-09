@@ -12,9 +12,11 @@ public class CreateWorkspaceRequestBodyWorkspaceMocks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkspaceRequestBodyWorkspaceMocks withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateWorkspaceRequestBodyWorkspaceMocks(){}
 }

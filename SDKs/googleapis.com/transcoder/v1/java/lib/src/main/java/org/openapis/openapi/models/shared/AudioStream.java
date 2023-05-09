@@ -18,6 +18,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitrateBps")
     public Integer bitrateBps;
+
     public AudioStream withBitrateBps(Integer bitrateBps) {
         this.bitrateBps = bitrateBps;
         return this;
@@ -29,6 +30,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCount")
     public Integer channelCount;
+
     public AudioStream withChannelCount(Integer channelCount) {
         this.channelCount = channelCount;
         return this;
@@ -40,6 +42,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelLayout")
     public String[] channelLayout;
+
     public AudioStream withChannelLayout(String[] channelLayout) {
         this.channelLayout = channelLayout;
         return this;
@@ -51,6 +54,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public AudioStream withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -62,6 +66,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AudioStream withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public AudioStream withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -84,6 +90,7 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping")
     public AudioMapping[] mapping;
+
     public AudioStream withMapping(AudioMapping[] mapping) {
         this.mapping = mapping;
         return this;
@@ -95,9 +102,11 @@ public class AudioStream {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRateHertz")
     public Integer sampleRateHertz;
+
     public AudioStream withSampleRateHertz(Integer sampleRateHertz) {
         this.sampleRateHertz = sampleRateHertz;
         return this;
     }
     
+    public AudioStream(){}
 }

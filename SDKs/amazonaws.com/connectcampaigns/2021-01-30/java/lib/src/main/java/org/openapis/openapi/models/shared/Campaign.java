@@ -17,6 +17,7 @@ public class Campaign {
      */
     @JsonProperty("arn")
     public String arn;
+
     public Campaign withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class Campaign {
      */
     @JsonProperty("connectInstanceId")
     public String connectInstanceId;
+
     public Campaign withConnectInstanceId(String connectInstanceId) {
         this.connectInstanceId = connectInstanceId;
         return this;
@@ -37,6 +39,7 @@ public class Campaign {
      */
     @JsonProperty("dialerConfig")
     public DialerConfig dialerConfig;
+
     public Campaign withDialerConfig(DialerConfig dialerConfig) {
         this.dialerConfig = dialerConfig;
         return this;
@@ -47,6 +50,7 @@ public class Campaign {
      */
     @JsonProperty("id")
     public String id;
+
     public Campaign withId(String id) {
         this.id = id;
         return this;
@@ -57,6 +61,7 @@ public class Campaign {
      */
     @JsonProperty("name")
     public String name;
+
     public Campaign withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +72,7 @@ public class Campaign {
      */
     @JsonProperty("outboundCallConfig")
     public OutboundCallConfig outboundCallConfig;
+
     public Campaign withOutboundCallConfig(OutboundCallConfig outboundCallConfig) {
         this.outboundCallConfig = outboundCallConfig;
         return this;
@@ -78,9 +84,18 @@ public class Campaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Campaign withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public Campaign(@JsonProperty("arn") String arn, @JsonProperty("connectInstanceId") String connectInstanceId, @JsonProperty("dialerConfig") DialerConfig dialerConfig, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("outboundCallConfig") OutboundCallConfig outboundCallConfig) {
+        this.arn = arn;
+        this.connectInstanceId = connectInstanceId;
+        this.dialerConfig = dialerConfig;
+        this.id = id;
+        this.name = name;
+        this.outboundCallConfig = outboundCallConfig;
+  }
 }

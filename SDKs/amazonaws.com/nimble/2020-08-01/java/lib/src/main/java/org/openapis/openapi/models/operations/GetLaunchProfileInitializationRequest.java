@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetLaunchProfileInitializationRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetLaunchProfileInitializationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetLaunchProfileInitializationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetLaunchProfileInitializationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetLaunchProfileInitializationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetLaunchProfileInitializationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetLaunchProfileInitializationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetLaunchProfileInitializationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetLaunchProfileInitializationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetLaunchProfileInitializationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=launchProfileId")
     public String launchProfileId;
+
     public GetLaunchProfileInitializationRequest withLaunchProfileId(String launchProfileId) {
         this.launchProfileId = launchProfileId;
         return this;
@@ -71,6 +80,7 @@ public class GetLaunchProfileInitializationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=launchProfileProtocolVersions")
     public String[] launchProfileProtocolVersions;
+
     public GetLaunchProfileInitializationRequest withLaunchProfileProtocolVersions(String[] launchProfileProtocolVersions) {
         this.launchProfileProtocolVersions = launchProfileProtocolVersions;
         return this;
@@ -81,6 +91,7 @@ public class GetLaunchProfileInitializationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=launchPurpose")
     public String launchPurpose;
+
     public GetLaunchProfileInitializationRequest withLaunchPurpose(String launchPurpose) {
         this.launchPurpose = launchPurpose;
         return this;
@@ -91,6 +102,7 @@ public class GetLaunchProfileInitializationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=platform")
     public String platform;
+
     public GetLaunchProfileInitializationRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -101,9 +113,17 @@ public class GetLaunchProfileInitializationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=studioId")
     public String studioId;
+
     public GetLaunchProfileInitializationRequest withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public GetLaunchProfileInitializationRequest(@JsonProperty("launchProfileId") String launchProfileId, @JsonProperty("launchProfileProtocolVersions") String[] launchProfileProtocolVersions, @JsonProperty("launchPurpose") String launchPurpose, @JsonProperty("platform") String platform, @JsonProperty("studioId") String studioId) {
+        this.launchProfileId = launchProfileId;
+        this.launchProfileProtocolVersions = launchProfileProtocolVersions;
+        this.launchPurpose = launchPurpose;
+        this.platform = platform;
+        this.studioId = studioId;
+  }
 }

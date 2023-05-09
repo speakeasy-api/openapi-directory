@@ -15,6 +15,7 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allRegions")
     public Boolean allRegions;
+
     public Trail withAllRegions(Boolean allRegions) {
         this.allRegions = allRegions;
         return this;
@@ -22,6 +23,7 @@ public class Trail {
     
     @JsonProperty("cloudTrailArn")
     public String cloudTrailArn;
+
     public Trail withCloudTrailArn(String cloudTrailArn) {
         this.cloudTrailArn = cloudTrailArn;
         return this;
@@ -30,9 +32,13 @@ public class Trail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regions")
     public String[] regions;
+
     public Trail withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public Trail(@JsonProperty("cloudTrailArn") String cloudTrailArn) {
+        this.cloudTrailArn = cloudTrailArn;
+  }
 }

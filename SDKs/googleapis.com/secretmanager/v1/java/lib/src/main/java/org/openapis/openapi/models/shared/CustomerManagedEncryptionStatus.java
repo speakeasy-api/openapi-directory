@@ -18,9 +18,11 @@ public class CustomerManagedEncryptionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyVersionName")
     public String kmsKeyVersionName;
+
     public CustomerManagedEncryptionStatus withKmsKeyVersionName(String kmsKeyVersionName) {
         this.kmsKeyVersionName = kmsKeyVersionName;
         return this;
     }
     
+    public CustomerManagedEncryptionStatus(){}
 }

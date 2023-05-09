@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMySqlDatabaseResponse {
     
     public String contentType;
+
     public GetMySqlDatabaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetMySqlDatabaseResponse {
      */
     
     public org.openapis.openapi.models.shared.MySqlDatabase mySqlDatabase;
+
     public GetMySqlDatabaseResponse withMySqlDatabase(org.openapis.openapi.models.shared.MySqlDatabase mySqlDatabase) {
         this.mySqlDatabase = mySqlDatabase;
         return this;
@@ -26,6 +29,7 @@ public class GetMySqlDatabaseResponse {
     
     
     public Integer statusCode;
+
     public GetMySqlDatabaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetMySqlDatabaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMySqlDatabaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMySqlDatabaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

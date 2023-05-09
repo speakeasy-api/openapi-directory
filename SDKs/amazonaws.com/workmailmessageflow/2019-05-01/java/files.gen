@@ -38,4 +38,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutRawMessageContentRes
 lib/src/main/java/org/openapis/openapi/models/shared/GetRawMessageContentResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/S3Reference.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

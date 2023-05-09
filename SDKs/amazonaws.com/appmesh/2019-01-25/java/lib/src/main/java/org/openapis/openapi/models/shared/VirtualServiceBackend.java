@@ -15,6 +15,7 @@ public class VirtualServiceBackend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientPolicy")
     public ClientPolicy clientPolicy;
+
     public VirtualServiceBackend withClientPolicy(ClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
         return this;
@@ -22,9 +23,13 @@ public class VirtualServiceBackend {
     
     @JsonProperty("virtualServiceName")
     public String virtualServiceName;
+
     public VirtualServiceBackend withVirtualServiceName(String virtualServiceName) {
         this.virtualServiceName = virtualServiceName;
         return this;
     }
     
+    public VirtualServiceBackend(@JsonProperty("virtualServiceName") String virtualServiceName) {
+        this.virtualServiceName = virtualServiceName;
+  }
 }

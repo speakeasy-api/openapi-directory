@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Channel {
     @JsonProperty("eventPublishers")
     public EventPublisherEnum[] eventPublishers;
+
     public Channel withEventPublishers(EventPublisherEnum[] eventPublishers) {
         this.eventPublishers = eventPublishers;
         return this;
@@ -22,6 +23,7 @@ public class Channel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Channel withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +31,14 @@ public class Channel {
     
     @JsonProperty("uri")
     public String uri;
+
     public Channel withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Channel(@JsonProperty("eventPublishers") EventPublisherEnum[] eventPublishers, @JsonProperty("uri") String uri) {
+        this.eventPublishers = eventPublishers;
+        this.uri = uri;
+  }
 }

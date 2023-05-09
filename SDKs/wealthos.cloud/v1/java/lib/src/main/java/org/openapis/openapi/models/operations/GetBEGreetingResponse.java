@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBEGreetingResponse {
     
     public String contentType;
+
     public GetBEGreetingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetBEGreetingResponse {
     
     
     public Integer statusCode;
+
     public GetBEGreetingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetBEGreetingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBEGreetingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetBEGreetingResponse {
      */
     
     public GetBEGreeting200ApplicationJSON getBEGreeting200ApplicationJSONObject;
+
     public GetBEGreetingResponse withGetBEGreeting200ApplicationJSONObject(GetBEGreeting200ApplicationJSON getBEGreeting200ApplicationJSONObject) {
         this.getBEGreeting200ApplicationJSONObject = getBEGreeting200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetBEGreetingResponse {
      */
     
     public GetBEGreeting403ApplicationJSON getBEGreeting403ApplicationJSONObject;
+
     public GetBEGreetingResponse withGetBEGreeting403ApplicationJSONObject(GetBEGreeting403ApplicationJSON getBEGreeting403ApplicationJSONObject) {
         this.getBEGreeting403ApplicationJSONObject = getBEGreeting403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetBEGreetingResponse {
      */
     
     public GetBEGreeting429ApplicationJSON getBEGreeting429ApplicationJSONObject;
+
     public GetBEGreetingResponse withGetBEGreeting429ApplicationJSONObject(GetBEGreeting429ApplicationJSON getBEGreeting429ApplicationJSONObject) {
         this.getBEGreeting429ApplicationJSONObject = getBEGreeting429ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class GetBEGreetingResponse {
      */
     
     public GetBEGreeting500ApplicationJSON getBEGreeting500ApplicationJSONObject;
+
     public GetBEGreetingResponse withGetBEGreeting500ApplicationJSONObject(GetBEGreeting500ApplicationJSON getBEGreeting500ApplicationJSONObject) {
         this.getBEGreeting500ApplicationJSONObject = getBEGreeting500ApplicationJSONObject;
         return this;
     }
     
+    public GetBEGreetingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

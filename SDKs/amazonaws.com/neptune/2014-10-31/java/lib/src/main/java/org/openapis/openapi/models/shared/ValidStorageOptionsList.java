@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ValidStorageOptionsList {
     
     public DoubleRangeList[] iopsToStorageRatio;
+
     public ValidStorageOptionsList withIopsToStorageRatio(DoubleRangeList[] iopsToStorageRatio) {
         this.iopsToStorageRatio = iopsToStorageRatio;
         return this;
@@ -19,6 +20,7 @@ public class ValidStorageOptionsList {
     
     
     public RangeList[] provisionedIops;
+
     public ValidStorageOptionsList withProvisionedIops(RangeList[] provisionedIops) {
         this.provisionedIops = provisionedIops;
         return this;
@@ -26,6 +28,7 @@ public class ValidStorageOptionsList {
     
     
     public RangeList[] storageSize;
+
     public ValidStorageOptionsList withStorageSize(RangeList[] storageSize) {
         this.storageSize = storageSize;
         return this;
@@ -33,9 +36,11 @@ public class ValidStorageOptionsList {
     
     
     public String storageType;
+
     public ValidStorageOptionsList withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public ValidStorageOptionsList(){}
 }

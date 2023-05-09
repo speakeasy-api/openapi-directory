@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionInstanceGroupManagersPatchSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceGroupManagersPatchSecurityOption1 option1;
+
     public ComputeRegionInstanceGroupManagersPatchSecurity withOption1(ComputeRegionInstanceGroupManagersPatchSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionInstanceGroupManagersPatchSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionInstanceGroupManagersPatchSecurityOption2 option2;
+
     public ComputeRegionInstanceGroupManagersPatchSecurity withOption2(ComputeRegionInstanceGroupManagersPatchSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionInstanceGroupManagersPatchSecurity(){}
 }

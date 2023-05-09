@@ -12,6 +12,7 @@ public class FindingsMetaVulnRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bid")
     public String[] bid;
+
     public FindingsMetaVulnRefs withBid(String[] bid) {
         this.bid = bid;
         return this;
@@ -20,6 +21,7 @@ public class FindingsMetaVulnRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpe")
     public String[] cpe;
+
     public FindingsMetaVulnRefs withCpe(String[] cpe) {
         this.cpe = cpe;
         return this;
@@ -28,6 +30,7 @@ public class FindingsMetaVulnRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cve")
     public String[] cve;
+
     public FindingsMetaVulnRefs withCve(String[] cve) {
         this.cve = cve;
         return this;
@@ -36,9 +39,11 @@ public class FindingsMetaVulnRefs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cwe")
     public String[] cwe;
+
     public FindingsMetaVulnRefs withCwe(String[] cwe) {
         this.cwe = cwe;
         return this;
     }
     
+    public FindingsMetaVulnRefs(){}
 }

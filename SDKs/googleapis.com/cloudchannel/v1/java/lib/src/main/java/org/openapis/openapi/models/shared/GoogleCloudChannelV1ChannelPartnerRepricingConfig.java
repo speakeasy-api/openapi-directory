@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ChannelPartnerRepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudChannelV1ChannelPartnerRepricingConfig withName(String name) {
         this.name = name;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1ChannelPartnerRepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repricingConfig")
     public GoogleCloudChannelV1RepricingConfig repricingConfig;
+
     public GoogleCloudChannelV1ChannelPartnerRepricingConfig withRepricingConfig(GoogleCloudChannelV1RepricingConfig repricingConfig) {
         this.repricingConfig = repricingConfig;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1ChannelPartnerRepricingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudChannelV1ChannelPartnerRepricingConfig withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudChannelV1ChannelPartnerRepricingConfig(){}
 }

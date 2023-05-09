@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomDomainConfigType {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public CustomDomainConfigType withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
     }
     
+    public CustomDomainConfigType(@JsonProperty("CertificateArn") String certificateArn) {
+        this.certificateArn = certificateArn;
+  }
 }

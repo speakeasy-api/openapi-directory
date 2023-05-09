@@ -12,6 +12,7 @@ public class RetrieveNearEarthObjectFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=detailed")
     public Boolean detailed;
+
     public RetrieveNearEarthObjectFeedRequest withDetailed(Boolean detailed) {
         this.detailed = detailed;
         return this;
@@ -22,6 +23,7 @@ public class RetrieveNearEarthObjectFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_date")
     public String endDate;
+
     public RetrieveNearEarthObjectFeedRequest withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -32,9 +34,11 @@ public class RetrieveNearEarthObjectFeedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_date")
     public String startDate;
+
     public RetrieveNearEarthObjectFeedRequest withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public RetrieveNearEarthObjectFeedRequest(){}
 }

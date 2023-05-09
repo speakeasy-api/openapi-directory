@@ -18,6 +18,7 @@ public class ConfigManagementBinauthzState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public ConfigManagementBinauthzVersion version;
+
     public ConfigManagementBinauthzState withVersion(ConfigManagementBinauthzVersion version) {
         this.version = version;
         return this;
@@ -29,9 +30,11 @@ public class ConfigManagementBinauthzState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webhook")
     public ConfigManagementBinauthzStateWebhookEnum webhook;
+
     public ConfigManagementBinauthzState withWebhook(ConfigManagementBinauthzStateWebhookEnum webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public ConfigManagementBinauthzState(){}
 }

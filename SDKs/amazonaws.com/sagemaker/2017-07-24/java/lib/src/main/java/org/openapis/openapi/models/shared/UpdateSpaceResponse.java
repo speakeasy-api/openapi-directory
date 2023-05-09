@@ -15,9 +15,11 @@ public class UpdateSpaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpaceArn")
     public String spaceArn;
+
     public UpdateSpaceResponse withSpaceArn(String spaceArn) {
         this.spaceArn = spaceArn;
         return this;
     }
     
+    public UpdateSpaceResponse(){}
 }

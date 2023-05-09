@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSpecResponse {
     
     public byte[] body;
+
     public GetSpecResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetSpecResponse {
     
     
     public String contentType;
+
     public GetSpecResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSpecResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO;
+
     public GetSpecResponse withHTTPStatusVO(org.openapis.openapi.models.shared.HTTPStatusVO httpStatusVO) {
         this.httpStatusVO = httpStatusVO;
         return this;
@@ -33,6 +37,7 @@ public class GetSpecResponse {
     
     
     public Integer statusCode;
+
     public GetSpecResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetSpecResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSpecResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetSpecResponse {
      */
     
     public org.openapis.openapi.models.shared.V1x1SpecExpandVO v1x1SpecExpandVO;
+
     public GetSpecResponse withV1x1SpecExpandVO(org.openapis.openapi.models.shared.V1x1SpecExpandVO v1x1SpecExpandVO) {
         this.v1x1SpecExpandVO = v1x1SpecExpandVO;
         return this;
     }
     
+    public GetSpecResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

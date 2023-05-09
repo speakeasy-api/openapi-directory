@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateStopwordOptionsRequest {
     /**
@@ -12,6 +12,7 @@ public class UpdateStopwordOptionsRequest {
      */
     
     public String domainName;
+
     public UpdateStopwordOptionsRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class UpdateStopwordOptionsRequest {
      */
     
     public String stopwords;
+
     public UpdateStopwordOptionsRequest withStopwords(String stopwords) {
         this.stopwords = stopwords;
         return this;
     }
     
+    public UpdateStopwordOptionsRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Stopwords") String stopwords) {
+        this.domainName = domainName;
+        this.stopwords = stopwords;
+  }
 }

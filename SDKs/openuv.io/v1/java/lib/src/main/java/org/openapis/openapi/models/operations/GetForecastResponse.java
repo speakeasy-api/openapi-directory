@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetForecastResponse {
     
     public String contentType;
+
     public GetForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetForecastResponse {
     
     
     public Integer statusCode;
+
     public GetForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class GetForecastResponse {
     
     
     public org.openapis.openapi.models.shared.Forecast[][] forecastResults;
+
     public GetForecastResponse withForecastResults(org.openapis.openapi.models.shared.Forecast[][] forecastResults) {
         this.forecastResults = forecastResults;
         return this;
     }
     
+    public GetForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -22,6 +22,7 @@ public class ProtectedTask {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public ProtectedTask withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -30,6 +31,7 @@ public class ProtectedTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectionEnabled")
     public Boolean protectionEnabled;
+
     public ProtectedTask withProtectionEnabled(Boolean protectionEnabled) {
         this.protectionEnabled = protectionEnabled;
         return this;
@@ -38,9 +40,11 @@ public class ProtectedTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskArn")
     public String taskArn;
+
     public ProtectedTask withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
     }
     
+    public ProtectedTask(){}
 }

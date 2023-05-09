@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class TrendingTrendingCategory {
     
     public String categoryId;
+
     public TrendingTrendingCategory withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -16,6 +17,7 @@ public class TrendingTrendingCategory {
     
     
     public String categoryName;
+
     public TrendingTrendingCategory withCategoryName(String categoryName) {
         this.categoryName = categoryName;
         return this;
@@ -23,9 +25,11 @@ public class TrendingTrendingCategory {
     
     
     public SearchResultOfTrendingEntry entries;
+
     public TrendingTrendingCategory withEntries(SearchResultOfTrendingEntry entries) {
         this.entries = entries;
         return this;
     }
     
+    public TrendingTrendingCategory(){}
 }

@@ -22,6 +22,7 @@ public class CanaryRunTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Completed")
     public OffsetDateTime completed;
+
     public CanaryRunTimeline withCompleted(OffsetDateTime completed) {
         this.completed = completed;
         return this;
@@ -32,9 +33,11 @@ public class CanaryRunTimeline {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Started")
     public OffsetDateTime started;
+
     public CanaryRunTimeline withStarted(OffsetDateTime started) {
         this.started = started;
         return this;
     }
     
+    public CanaryRunTimeline(){}
 }

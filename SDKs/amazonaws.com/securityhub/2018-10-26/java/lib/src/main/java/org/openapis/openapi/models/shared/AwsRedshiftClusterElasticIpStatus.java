@@ -15,6 +15,7 @@ public class AwsRedshiftClusterElasticIpStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticIp")
     public String elasticIp;
+
     public AwsRedshiftClusterElasticIpStatus withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -23,9 +24,11 @@ public class AwsRedshiftClusterElasticIpStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRedshiftClusterElasticIpStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRedshiftClusterElasticIpStatus(){}
 }

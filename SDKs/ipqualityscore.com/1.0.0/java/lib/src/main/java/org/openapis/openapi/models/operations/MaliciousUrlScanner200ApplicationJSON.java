@@ -15,6 +15,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adult")
     public Boolean adult;
+
     public MaliciousUrlScanner200ApplicationJSON withAdult(Boolean adult) {
         this.adult = adult;
         return this;
@@ -23,6 +24,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public MaliciousUrlScanner200ApplicationJSON withCategory(String category) {
         this.category = category;
         return this;
@@ -31,6 +33,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public MaliciousUrlScanner200ApplicationJSON withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +42,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dns_valid")
     public Boolean dnsValid;
+
     public MaliciousUrlScanner200ApplicationJSON withDnsValid(Boolean dnsValid) {
         this.dnsValid = dnsValid;
         return this;
@@ -47,6 +51,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public MaliciousUrlScanner200ApplicationJSON withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -55,6 +60,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_age")
     public MaliciousUrlScanner200ApplicationJSONDomainAge domainAge;
+
     public MaliciousUrlScanner200ApplicationJSON withDomainAge(MaliciousUrlScanner200ApplicationJSONDomainAge domainAge) {
         this.domainAge = domainAge;
         return this;
@@ -63,6 +69,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_rank")
     public Double domainRank;
+
     public MaliciousUrlScanner200ApplicationJSON withDomainRank(Double domainRank) {
         this.domainRank = domainRank;
         return this;
@@ -71,6 +78,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip_address")
     public String ipAddress;
+
     public MaliciousUrlScanner200ApplicationJSON withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -79,6 +87,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("malware")
     public Boolean malware;
+
     public MaliciousUrlScanner200ApplicationJSON withMalware(Boolean malware) {
         this.malware = malware;
         return this;
@@ -87,6 +96,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MaliciousUrlScanner200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -95,6 +105,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Double pageSize;
+
     public MaliciousUrlScanner200ApplicationJSON withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -103,6 +114,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parking")
     public Boolean parking;
+
     public MaliciousUrlScanner200ApplicationJSON withParking(Boolean parking) {
         this.parking = parking;
         return this;
@@ -111,6 +123,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phishing")
     public Boolean phishing;
+
     public MaliciousUrlScanner200ApplicationJSON withPhishing(Boolean phishing) {
         this.phishing = phishing;
         return this;
@@ -119,6 +132,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public MaliciousUrlScanner200ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -127,6 +141,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("risk_score")
     public Double riskScore;
+
     public MaliciousUrlScanner200ApplicationJSON withRiskScore(Double riskScore) {
         this.riskScore = riskScore;
         return this;
@@ -135,6 +150,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public MaliciousUrlScanner200ApplicationJSON withServer(String server) {
         this.server = server;
         return this;
@@ -143,6 +159,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spamming")
     public Boolean spamming;
+
     public MaliciousUrlScanner200ApplicationJSON withSpamming(Boolean spamming) {
         this.spamming = spamming;
         return this;
@@ -151,6 +168,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Double statusCode;
+
     public MaliciousUrlScanner200ApplicationJSON withStatusCode(Double statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -159,6 +177,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public MaliciousUrlScanner200ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
@@ -167,6 +186,7 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspicious")
     public Boolean suspicious;
+
     public MaliciousUrlScanner200ApplicationJSON withSuspicious(Boolean suspicious) {
         this.suspicious = suspicious;
         return this;
@@ -175,9 +195,11 @@ public class MaliciousUrlScanner200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unsafe")
     public Boolean unsafe;
+
     public MaliciousUrlScanner200ApplicationJSON withUnsafe(Boolean unsafe) {
         this.unsafe = unsafe;
         return this;
     }
     
+    public MaliciousUrlScanner200ApplicationJSON(){}
 }

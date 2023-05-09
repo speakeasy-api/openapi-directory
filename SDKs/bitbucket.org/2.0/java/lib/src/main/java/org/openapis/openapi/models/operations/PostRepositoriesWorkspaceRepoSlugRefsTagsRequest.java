@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostRepositoriesWorkspaceRepoSlugRefsTagsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -21,6 +23,7 @@ public class PostRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -33,9 +36,15 @@ public class PostRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugRefsTagsRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

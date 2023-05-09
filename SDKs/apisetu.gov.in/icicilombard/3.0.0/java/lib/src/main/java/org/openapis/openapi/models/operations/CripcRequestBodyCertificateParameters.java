@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("InsuredDob")
     public String insuredDob;
+
     public CripcRequestBodyCertificateParameters withInsuredDob(String insuredDob) {
         this.insuredDob = insuredDob;
         return this;
@@ -22,9 +23,14 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public CripcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("InsuredDob") String insuredDob, @JsonProperty("PolicyNo") String policyNo) {
+        this.insuredDob = insuredDob;
+        this.policyNo = policyNo;
+  }
 }

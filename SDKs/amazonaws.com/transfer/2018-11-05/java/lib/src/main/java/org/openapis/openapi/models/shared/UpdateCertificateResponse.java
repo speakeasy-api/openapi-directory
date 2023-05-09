@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCertificateResponse {
     @JsonProperty("CertificateId")
     public String certificateId;
+
     public UpdateCertificateResponse withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public UpdateCertificateResponse(@JsonProperty("CertificateId") String certificateId) {
+        this.certificateId = certificateId;
+  }
 }

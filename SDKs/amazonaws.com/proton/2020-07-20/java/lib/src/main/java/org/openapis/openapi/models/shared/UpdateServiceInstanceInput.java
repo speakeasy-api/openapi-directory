@@ -9,8 +9,18 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UpdateServiceInstanceInput {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("clientToken")
+    public String clientToken;
+
+    public UpdateServiceInstanceInput withClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    
     @JsonProperty("deploymentType")
     public DeploymentUpdateTypeEnum deploymentType;
+
     public UpdateServiceInstanceInput withDeploymentType(DeploymentUpdateTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -18,6 +28,7 @@ public class UpdateServiceInstanceInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateServiceInstanceInput withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +36,7 @@ public class UpdateServiceInstanceInput {
     
     @JsonProperty("serviceName")
     public String serviceName;
+
     public UpdateServiceInstanceInput withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -33,6 +45,7 @@ public class UpdateServiceInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public UpdateServiceInstanceInput withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -41,6 +54,7 @@ public class UpdateServiceInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public UpdateServiceInstanceInput withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -49,9 +63,15 @@ public class UpdateServiceInstanceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public UpdateServiceInstanceInput withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
     }
     
+    public UpdateServiceInstanceInput(@JsonProperty("deploymentType") DeploymentUpdateTypeEnum deploymentType, @JsonProperty("name") String name, @JsonProperty("serviceName") String serviceName) {
+        this.deploymentType = deploymentType;
+        this.name = name;
+        this.serviceName = serviceName;
+  }
 }

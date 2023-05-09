@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartInferenceExperimentRequest {
     @JsonProperty("Name")
     public String name;
+
     public StartInferenceExperimentRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StartInferenceExperimentRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

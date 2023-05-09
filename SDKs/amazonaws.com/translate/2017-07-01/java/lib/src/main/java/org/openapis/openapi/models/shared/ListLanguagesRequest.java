@@ -12,6 +12,7 @@ public class ListLanguagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayLanguageCode")
     public DisplayLanguageCodeEnum displayLanguageCode;
+
     public ListLanguagesRequest withDisplayLanguageCode(DisplayLanguageCodeEnum displayLanguageCode) {
         this.displayLanguageCode = displayLanguageCode;
         return this;
@@ -20,6 +21,7 @@ public class ListLanguagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListLanguagesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,9 +30,11 @@ public class ListLanguagesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLanguagesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLanguagesRequest(){}
 }

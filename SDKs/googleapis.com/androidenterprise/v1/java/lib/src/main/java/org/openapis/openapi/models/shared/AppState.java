@@ -18,6 +18,7 @@ public class AppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyedAppState")
     public KeyedAppState[] keyedAppState;
+
     public AppState withKeyedAppState(KeyedAppState[] keyedAppState) {
         this.keyedAppState = keyedAppState;
         return this;
@@ -29,9 +30,11 @@ public class AppState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AppState withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public AppState(){}
 }

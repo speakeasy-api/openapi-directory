@@ -18,9 +18,11 @@ public class GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessTuple")
     public GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple;
+
     public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest withAccessTuple(GoogleCloudPolicytroubleshooterV1betaAccessTuple accessTuple) {
         this.accessTuple = accessTuple;
         return this;
     }
     
+    public GoogleCloudPolicytroubleshooterV1betaTroubleshootIamPolicyRequest(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstitutionalIdentification2 {
     @JsonProperty("clearingSystemIdCode")
     public String clearingSystemIdCode;
+
     public InstitutionalIdentification2 withClearingSystemIdCode(String clearingSystemIdCode) {
         this.clearingSystemIdCode = clearingSystemIdCode;
         return this;
@@ -21,9 +22,14 @@ public class InstitutionalIdentification2 {
     
     @JsonProperty("clearingSystemMemberId")
     public String clearingSystemMemberId;
+
     public InstitutionalIdentification2 withClearingSystemMemberId(String clearingSystemMemberId) {
         this.clearingSystemMemberId = clearingSystemMemberId;
         return this;
     }
     
+    public InstitutionalIdentification2(@JsonProperty("clearingSystemIdCode") String clearingSystemIdCode, @JsonProperty("clearingSystemMemberId") String clearingSystemMemberId) {
+        this.clearingSystemIdCode = clearingSystemIdCode;
+        this.clearingSystemMemberId = clearingSystemMemberId;
+  }
 }

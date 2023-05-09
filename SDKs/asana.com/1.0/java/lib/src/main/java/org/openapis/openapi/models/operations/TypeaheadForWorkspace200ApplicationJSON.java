@@ -15,9 +15,11 @@ public class TypeaheadForWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AsanaNamedResource[] data;
+
     public TypeaheadForWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.AsanaNamedResource[] data) {
         this.data = data;
         return this;
     }
     
+    public TypeaheadForWorkspace200ApplicationJSON(){}
 }

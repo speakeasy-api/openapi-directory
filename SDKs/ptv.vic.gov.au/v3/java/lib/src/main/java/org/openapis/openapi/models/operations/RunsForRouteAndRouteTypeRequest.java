@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date_utc")
     public OffsetDateTime dateUtc;
+
     public RunsForRouteAndRouteTypeRequest withDateUtc(OffsetDateTime dateUtc) {
         this.dateUtc = dateUtc;
         return this;
@@ -23,6 +25,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public RunsForRouteAndRouteTypeRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -33,6 +36,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public RunsForRouteAndRouteTypeExpandEnum[] expand;
+
     public RunsForRouteAndRouteTypeRequest withExpand(RunsForRouteAndRouteTypeExpandEnum[] expand) {
         this.expand = expand;
         return this;
@@ -43,6 +47,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_id")
     public Integer routeId;
+
     public RunsForRouteAndRouteTypeRequest withRouteId(Integer routeId) {
         this.routeId = routeId;
         return this;
@@ -53,6 +58,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=route_type")
     public RunsForRouteAndRouteTypeRouteTypeEnum routeType;
+
     public RunsForRouteAndRouteTypeRequest withRouteType(RunsForRouteAndRouteTypeRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -63,6 +69,7 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public RunsForRouteAndRouteTypeRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -73,9 +80,15 @@ public class RunsForRouteAndRouteTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public RunsForRouteAndRouteTypeRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RunsForRouteAndRouteTypeRequest(@JsonProperty("expand") RunsForRouteAndRouteTypeExpandEnum[] expand, @JsonProperty("route_id") Integer routeId, @JsonProperty("route_type") RunsForRouteAndRouteTypeRouteTypeEnum routeType) {
+        this.expand = expand;
+        this.routeId = routeId;
+        this.routeType = routeType;
+  }
 }

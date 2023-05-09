@@ -15,9 +15,13 @@ public class GetCampaignDateRangeKpiResponse {
      */
     @JsonProperty("CampaignDateRangeKpiResponse")
     public CampaignDateRangeKpiResponse campaignDateRangeKpiResponse;
+
     public GetCampaignDateRangeKpiResponse withCampaignDateRangeKpiResponse(CampaignDateRangeKpiResponse campaignDateRangeKpiResponse) {
         this.campaignDateRangeKpiResponse = campaignDateRangeKpiResponse;
         return this;
     }
     
+    public GetCampaignDateRangeKpiResponse(@JsonProperty("CampaignDateRangeKpiResponse") CampaignDateRangeKpiResponse campaignDateRangeKpiResponse) {
+        this.campaignDateRangeKpiResponse = campaignDateRangeKpiResponse;
+  }
 }

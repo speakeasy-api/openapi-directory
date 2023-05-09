@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApiDestinationResponse {
     
     public String contentType;
+
     public CreateApiDestinationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateApiDestinationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApiDestinationResponse createApiDestinationResponse;
+
     public CreateApiDestinationResponse withCreateApiDestinationResponse(org.openapis.openapi.models.shared.CreateApiDestinationResponse createApiDestinationResponse) {
         this.createApiDestinationResponse = createApiDestinationResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateApiDestinationResponse {
      */
     
     public Object internalException;
+
     public CreateApiDestinationResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CreateApiDestinationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateApiDestinationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateApiDestinationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateApiDestinationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateApiDestinationResponse {
     
     
     public Integer statusCode;
+
     public CreateApiDestinationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateApiDestinationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApiDestinationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateApiDestinationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateApiDestinationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateApiDestinationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bidProtocol")
     public EndpointBidProtocolEnum bidProtocol;
+
     public Endpoint withBidProtocol(EndpointBidProtocolEnum bidProtocol) {
         this.bidProtocol = bidProtocol;
         return this;
@@ -29,6 +30,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumQps")
     public String maximumQps;
+
     public Endpoint withMaximumQps(String maximumQps) {
         this.maximumQps = maximumQps;
         return this;
@@ -40,6 +42,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Endpoint withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tradingLocation")
     public EndpointTradingLocationEnum tradingLocation;
+
     public Endpoint withTradingLocation(EndpointTradingLocationEnum tradingLocation) {
         this.tradingLocation = tradingLocation;
         return this;
@@ -62,9 +66,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Endpoint withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Endpoint(){}
 }

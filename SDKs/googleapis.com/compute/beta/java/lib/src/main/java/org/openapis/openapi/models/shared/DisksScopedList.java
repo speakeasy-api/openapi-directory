@@ -15,6 +15,7 @@ public class DisksScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disks")
     public Disk[] disks;
+
     public DisksScopedList withDisks(Disk[] disks) {
         this.disks = disks;
         return this;
@@ -26,9 +27,11 @@ public class DisksScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public DisksScopedListWarning warning;
+
     public DisksScopedList withWarning(DisksScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public DisksScopedList(){}
 }

@@ -18,6 +18,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyId")
     public String apiKeyId;
+
     public AndroidApp withApiKeyId(String apiKeyId) {
         this.apiKeyId = apiKeyId;
         return this;
@@ -29,6 +30,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public AndroidApp withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -40,6 +42,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AndroidApp withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public AndroidApp withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public AndroidApp withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -73,6 +78,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AndroidApp withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +90,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AndroidApp withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -95,6 +102,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public AndroidApp withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -106,6 +114,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1Hashes")
     public String[] sha1Hashes;
+
     public AndroidApp withSha1Hashes(String[] sha1Hashes) {
         this.sha1Hashes = sha1Hashes;
         return this;
@@ -117,6 +126,7 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256Hashes")
     public String[] sha256Hashes;
+
     public AndroidApp withSha256Hashes(String[] sha256Hashes) {
         this.sha256Hashes = sha256Hashes;
         return this;
@@ -128,9 +138,11 @@ public class AndroidApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AndroidAppStateEnum state;
+
     public AndroidApp withState(AndroidAppStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AndroidApp(){}
 }

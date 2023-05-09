@@ -15,9 +15,11 @@ public class CreateRemoteAccessSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessSession")
     public RemoteAccessSession remoteAccessSession;
+
     public CreateRemoteAccessSessionResult withRemoteAccessSession(RemoteAccessSession remoteAccessSession) {
         this.remoteAccessSession = remoteAccessSession;
         return this;
     }
     
+    public CreateRemoteAccessSessionResult(){}
 }

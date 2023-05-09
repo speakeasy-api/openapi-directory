@@ -12,9 +12,11 @@ public class UserLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public UserLinksSelf self;
+
     public UserLinks withSelf(UserLinksSelf self) {
         this.self = self;
         return this;
     }
     
+    public UserLinks(){}
 }

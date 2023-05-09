@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeploymentAlarms {
     @JsonProperty("alarmNames")
     public String[] alarmNames;
+
     public DeploymentAlarms withAlarmNames(String[] alarmNames) {
         this.alarmNames = alarmNames;
         return this;
@@ -19,6 +20,7 @@ public class DeploymentAlarms {
     
     @JsonProperty("enable")
     public Boolean enable;
+
     public DeploymentAlarms withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -26,9 +28,15 @@ public class DeploymentAlarms {
     
     @JsonProperty("rollback")
     public Boolean rollback;
+
     public DeploymentAlarms withRollback(Boolean rollback) {
         this.rollback = rollback;
         return this;
     }
     
+    public DeploymentAlarms(@JsonProperty("alarmNames") String[] alarmNames, @JsonProperty("enable") Boolean enable, @JsonProperty("rollback") Boolean rollback) {
+        this.alarmNames = alarmNames;
+        this.enable = enable;
+        this.rollback = rollback;
+  }
 }

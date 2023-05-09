@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FetchPatientResponse {
     @JsonProperty("data")
     public PatientResource data;
+
     public FetchPatientResponse withData(PatientResource data) {
         this.data = data;
         return this;
@@ -22,9 +23,13 @@ public class FetchPatientResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public FetchMetaResponse meta;
+
     public FetchPatientResponse withMeta(FetchMetaResponse meta) {
         this.meta = meta;
         return this;
     }
     
+    public FetchPatientResponse(@JsonProperty("data") PatientResource data) {
+        this.data = data;
+  }
 }

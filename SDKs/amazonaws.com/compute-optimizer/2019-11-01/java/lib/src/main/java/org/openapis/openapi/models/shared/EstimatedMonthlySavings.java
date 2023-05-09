@@ -15,6 +15,7 @@ public class EstimatedMonthlySavings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyEnum currency;
+
     public EstimatedMonthlySavings withCurrency(CurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -23,9 +24,11 @@ public class EstimatedMonthlySavings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public EstimatedMonthlySavings withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public EstimatedMonthlySavings(){}
 }

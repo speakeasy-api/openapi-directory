@@ -12,6 +12,7 @@ public class CreateTestCardRangesRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CreateTestCardRangesRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -27,6 +28,7 @@ public class CreateTestCardRangesRequest {
      */
     @JsonProperty("accountTypeCode")
     public String accountTypeCode;
+
     public CreateTestCardRangesRequest withAccountTypeCode(String accountTypeCode) {
         this.accountTypeCode = accountTypeCode;
         return this;
@@ -37,9 +39,15 @@ public class CreateTestCardRangesRequest {
      */
     @JsonProperty("testCardRanges")
     public TestCardRange[] testCardRanges;
+
     public CreateTestCardRangesRequest withTestCardRanges(TestCardRange[] testCardRanges) {
         this.testCardRanges = testCardRanges;
         return this;
     }
     
+    public CreateTestCardRangesRequest(@JsonProperty("accountCode") String accountCode, @JsonProperty("accountTypeCode") String accountTypeCode, @JsonProperty("testCardRanges") TestCardRange[] testCardRanges) {
+        this.accountCode = accountCode;
+        this.accountTypeCode = accountTypeCode;
+        this.testCardRanges = testCardRanges;
+  }
 }

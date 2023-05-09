@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyTransitGatewayVpcAttachmentRequest {
     
     public String[] addSubnetIds;
+
     public ModifyTransitGatewayVpcAttachmentRequest withAddSubnetIds(String[] addSubnetIds) {
         this.addSubnetIds = addSubnetIds;
         return this;
@@ -16,6 +17,7 @@ public class ModifyTransitGatewayVpcAttachmentRequest {
     
     
     public Boolean dryRun;
+
     public ModifyTransitGatewayVpcAttachmentRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyTransitGatewayVpcAttachmentRequest {
     
     
     public ModifyTransitGatewayVpcAttachmentRequestOptions options;
+
     public ModifyTransitGatewayVpcAttachmentRequest withOptions(ModifyTransitGatewayVpcAttachmentRequestOptions options) {
         this.options = options;
         return this;
@@ -30,6 +33,7 @@ public class ModifyTransitGatewayVpcAttachmentRequest {
     
     
     public String[] removeSubnetIds;
+
     public ModifyTransitGatewayVpcAttachmentRequest withRemoveSubnetIds(String[] removeSubnetIds) {
         this.removeSubnetIds = removeSubnetIds;
         return this;
@@ -37,9 +41,13 @@ public class ModifyTransitGatewayVpcAttachmentRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public ModifyTransitGatewayVpcAttachmentRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
     }
     
+    public ModifyTransitGatewayVpcAttachmentRequest(@JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId) {
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+  }
 }

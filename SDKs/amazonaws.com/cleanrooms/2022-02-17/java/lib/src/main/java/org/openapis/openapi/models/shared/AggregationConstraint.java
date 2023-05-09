@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregationConstraint {
     @JsonProperty("columnName")
     public String columnName;
+
     public AggregationConstraint withColumnName(String columnName) {
         this.columnName = columnName;
         return this;
@@ -19,6 +20,7 @@ public class AggregationConstraint {
     
     @JsonProperty("minimum")
     public Long minimum;
+
     public AggregationConstraint withMinimum(Long minimum) {
         this.minimum = minimum;
         return this;
@@ -26,9 +28,15 @@ public class AggregationConstraint {
     
     @JsonProperty("type")
     public AggregationTypeEnum type;
+
     public AggregationConstraint withType(AggregationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AggregationConstraint(@JsonProperty("columnName") String columnName, @JsonProperty("minimum") Long minimum, @JsonProperty("type") AggregationTypeEnum type) {
+        this.columnName = columnName;
+        this.minimum = minimum;
+        this.type = type;
+  }
 }

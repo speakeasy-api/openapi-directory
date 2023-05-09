@@ -15,6 +15,7 @@ public class ListRoleAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextMarker")
     public String nextMarker;
+
     public ListRoleAliasesResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListRoleAliasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleAliases")
     public String[] roleAliases;
+
     public ListRoleAliasesResponse withRoleAliases(String[] roleAliases) {
         this.roleAliases = roleAliases;
         return this;
     }
     
+    public ListRoleAliasesResponse(){}
 }

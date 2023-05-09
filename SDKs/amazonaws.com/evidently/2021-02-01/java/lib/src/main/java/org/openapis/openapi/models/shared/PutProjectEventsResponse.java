@@ -15,6 +15,7 @@ public class PutProjectEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventResults")
     public PutProjectEventsResultEntry[] eventResults;
+
     public PutProjectEventsResponse withEventResults(PutProjectEventsResultEntry[] eventResults) {
         this.eventResults = eventResults;
         return this;
@@ -23,9 +24,11 @@ public class PutProjectEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedEventCount")
     public Long failedEventCount;
+
     public PutProjectEventsResponse withFailedEventCount(Long failedEventCount) {
         this.failedEventCount = failedEventCount;
         return this;
     }
     
+    public PutProjectEventsResponse(){}
 }

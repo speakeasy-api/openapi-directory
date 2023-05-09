@@ -15,6 +15,7 @@ public class ListServerNeighborsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knownDependencyCount")
     public Long knownDependencyCount;
+
     public ListServerNeighborsResponse withKnownDependencyCount(Long knownDependencyCount) {
         this.knownDependencyCount = knownDependencyCount;
         return this;
@@ -22,6 +23,7 @@ public class ListServerNeighborsResponse {
     
     @JsonProperty("neighbors")
     public NeighborConnectionDetail[] neighbors;
+
     public ListServerNeighborsResponse withNeighbors(NeighborConnectionDetail[] neighbors) {
         this.neighbors = neighbors;
         return this;
@@ -30,9 +32,13 @@ public class ListServerNeighborsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListServerNeighborsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListServerNeighborsResponse(@JsonProperty("neighbors") NeighborConnectionDetail[] neighbors) {
+        this.neighbors = neighbors;
+  }
 }

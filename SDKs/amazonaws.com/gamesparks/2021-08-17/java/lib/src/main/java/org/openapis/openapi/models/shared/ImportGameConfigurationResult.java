@@ -15,9 +15,11 @@ public class ImportGameConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameConfiguration")
     public GameConfigurationDetails gameConfiguration;
+
     public ImportGameConfigurationResult withGameConfiguration(GameConfigurationDetails gameConfiguration) {
         this.gameConfiguration = gameConfiguration;
         return this;
     }
     
+    public ImportGameConfigurationResult(){}
 }

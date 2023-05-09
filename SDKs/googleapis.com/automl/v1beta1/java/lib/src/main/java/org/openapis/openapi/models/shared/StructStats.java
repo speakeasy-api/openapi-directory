@@ -18,9 +18,11 @@ public class StructStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldStats")
     public java.util.Map<String, DataStats> fieldStats;
+
     public StructStats withFieldStats(java.util.Map<String, DataStats> fieldStats) {
         this.fieldStats = fieldStats;
         return this;
     }
     
+    public StructStats(){}
 }

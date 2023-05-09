@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetWAAccountRequest {
@@ -12,9 +13,13 @@ public class GetWAAccountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=external_id")
     public String externalId;
+
     public GetWAAccountRequest withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
     }
     
+    public GetWAAccountRequest(@JsonProperty("external_id") String externalId) {
+        this.externalId = externalId;
+  }
 }

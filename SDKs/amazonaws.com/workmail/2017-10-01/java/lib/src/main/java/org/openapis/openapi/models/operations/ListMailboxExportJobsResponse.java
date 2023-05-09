@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListMailboxExportJobsResponse {
     
     public String contentType;
+
     public ListMailboxExportJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListMailboxExportJobsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListMailboxExportJobsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class ListMailboxExportJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListMailboxExportJobsResponse listMailboxExportJobsResponse;
+
     public ListMailboxExportJobsResponse withListMailboxExportJobsResponse(org.openapis.openapi.models.shared.ListMailboxExportJobsResponse listMailboxExportJobsResponse) {
         this.listMailboxExportJobsResponse = listMailboxExportJobsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListMailboxExportJobsResponse {
      */
     
     public Object organizationNotFoundException;
+
     public ListMailboxExportJobsResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListMailboxExportJobsResponse {
      */
     
     public Object organizationStateException;
+
     public ListMailboxExportJobsResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class ListMailboxExportJobsResponse {
     
     
     public Integer statusCode;
+
     public ListMailboxExportJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListMailboxExportJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListMailboxExportJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListMailboxExportJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

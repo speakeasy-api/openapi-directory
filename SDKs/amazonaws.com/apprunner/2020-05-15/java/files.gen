@@ -255,4 +255,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateServiceRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVpcIngressConnectionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateVpcIngressConnectionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

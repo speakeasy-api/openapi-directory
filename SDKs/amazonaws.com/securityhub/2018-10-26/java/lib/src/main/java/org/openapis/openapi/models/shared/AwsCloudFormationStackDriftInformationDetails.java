@@ -15,9 +15,11 @@ public class AwsCloudFormationStackDriftInformationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackDriftStatus")
     public String stackDriftStatus;
+
     public AwsCloudFormationStackDriftInformationDetails withStackDriftStatus(String stackDriftStatus) {
         this.stackDriftStatus = stackDriftStatus;
         return this;
     }
     
+    public AwsCloudFormationStackDriftInformationDetails(){}
 }

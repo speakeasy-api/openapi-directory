@@ -15,9 +15,11 @@ public class CopyWorkspaceImageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageId")
     public String imageId;
+
     public CopyWorkspaceImageResult withImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
     
+    public CopyWorkspaceImageResult(){}
 }

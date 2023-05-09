@@ -12,9 +12,11 @@ public class EventMeetingSetting {
      */
     
     public String emailAddress;
+
     public EventMeetingSetting withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
     }
     
+    public EventMeetingSetting(){}
 }

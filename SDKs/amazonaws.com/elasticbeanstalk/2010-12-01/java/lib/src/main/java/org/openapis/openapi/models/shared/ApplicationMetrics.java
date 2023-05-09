@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplicationMetrics {
     
     public Long duration;
+
     public ApplicationMetrics withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -19,6 +20,7 @@ public class ApplicationMetrics {
     
     
     public Latency latency;
+
     public ApplicationMetrics withLatency(Latency latency) {
         this.latency = latency;
         return this;
@@ -26,6 +28,7 @@ public class ApplicationMetrics {
     
     
     public Long requestCount;
+
     public ApplicationMetrics withRequestCount(Long requestCount) {
         this.requestCount = requestCount;
         return this;
@@ -33,9 +36,11 @@ public class ApplicationMetrics {
     
     
     public StatusCodes statusCodes;
+
     public ApplicationMetrics withStatusCodes(StatusCodes statusCodes) {
         this.statusCodes = statusCodes;
         return this;
     }
     
+    public ApplicationMetrics(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiaryControllerDeleteAppointmentResponse {
     
     public String contentType;
+
     public DiaryControllerDeleteAppointmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiaryControllerDeleteAppointmentResponse {
      */
     
     public String diaryControllerDeleteAppointment200ApplicationJSONString;
+
     public DiaryControllerDeleteAppointmentResponse withDiaryControllerDeleteAppointment200ApplicationJSONString(String diaryControllerDeleteAppointment200ApplicationJSONString) {
         this.diaryControllerDeleteAppointment200ApplicationJSONString = diaryControllerDeleteAppointment200ApplicationJSONString;
         return this;
@@ -29,6 +32,7 @@ public class DiaryControllerDeleteAppointmentResponse {
      */
     
     public String diaryControllerDeleteAppointment200ApplicationXMLString;
+
     public DiaryControllerDeleteAppointmentResponse withDiaryControllerDeleteAppointment200ApplicationXMLString(String diaryControllerDeleteAppointment200ApplicationXMLString) {
         this.diaryControllerDeleteAppointment200ApplicationXMLString = diaryControllerDeleteAppointment200ApplicationXMLString;
         return this;
@@ -39,6 +43,7 @@ public class DiaryControllerDeleteAppointmentResponse {
      */
     
     public String diaryControllerDeleteAppointment200TextJSONString;
+
     public DiaryControllerDeleteAppointmentResponse withDiaryControllerDeleteAppointment200TextJSONString(String diaryControllerDeleteAppointment200TextJSONString) {
         this.diaryControllerDeleteAppointment200TextJSONString = diaryControllerDeleteAppointment200TextJSONString;
         return this;
@@ -49,6 +54,7 @@ public class DiaryControllerDeleteAppointmentResponse {
      */
     
     public String diaryControllerDeleteAppointment200TextXMLString;
+
     public DiaryControllerDeleteAppointmentResponse withDiaryControllerDeleteAppointment200TextXMLString(String diaryControllerDeleteAppointment200TextXMLString) {
         this.diaryControllerDeleteAppointment200TextXMLString = diaryControllerDeleteAppointment200TextXMLString;
         return this;
@@ -56,6 +62,7 @@ public class DiaryControllerDeleteAppointmentResponse {
     
     
     public Integer statusCode;
+
     public DiaryControllerDeleteAppointmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DiaryControllerDeleteAppointmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiaryControllerDeleteAppointmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiaryControllerDeleteAppointmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

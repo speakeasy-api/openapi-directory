@@ -18,6 +18,7 @@ public class ImportError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public String errorDetails;
+
     public ImportError withErrorDetails(String errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -29,9 +30,11 @@ public class ImportError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public ImportErrorSeverityEnum severity;
+
     public ImportError withSeverity(ImportErrorSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public ImportError(){}
 }

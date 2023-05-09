@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEventsRequest {
@@ -12,6 +13,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetEventsRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -22,6 +24,7 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetEventsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -32,9 +35,13 @@ public class GetEventsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetEventsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetEventsRequest(@JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId) {
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeEventSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSubscriptionsList")
     public EventSubscription[] eventSubscriptionsList;
+
     public DescribeEventSubscriptionsResponse withEventSubscriptionsList(EventSubscription[] eventSubscriptionsList) {
         this.eventSubscriptionsList = eventSubscriptionsList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeEventSubscriptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeEventSubscriptionsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public DescribeEventSubscriptionsResponse(){}
 }

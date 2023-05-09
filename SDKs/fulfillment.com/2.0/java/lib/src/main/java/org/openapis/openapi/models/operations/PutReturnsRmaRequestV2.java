@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutReturnsRmaRequestV2 {
     @JsonProperty("items")
     public PutReturnsRmaRequestV2Items[] items;
+
     public PutReturnsRmaRequestV2 withItems(PutReturnsRmaRequestV2Items[] items) {
         this.items = items;
         return this;
@@ -22,6 +23,7 @@ public class PutReturnsRmaRequestV2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantOrderId")
     public String merchantOrderId;
+
     public PutReturnsRmaRequestV2 withMerchantOrderId(String merchantOrderId) {
         this.merchantOrderId = merchantOrderId;
         return this;
@@ -29,6 +31,7 @@ public class PutReturnsRmaRequestV2 {
     
     @JsonProperty("recipient")
     public org.openapis.openapi.models.shared.OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient recipient;
+
     public PutReturnsRmaRequestV2 withRecipient(org.openapis.openapi.models.shared.OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient recipient) {
         this.recipient = recipient;
         return this;
@@ -36,9 +39,15 @@ public class PutReturnsRmaRequestV2 {
     
     @JsonProperty("rmaNumber")
     public String rmaNumber;
+
     public PutReturnsRmaRequestV2 withRmaNumber(String rmaNumber) {
         this.rmaNumber = rmaNumber;
         return this;
     }
     
+    public PutReturnsRmaRequestV2(@JsonProperty("items") PutReturnsRmaRequestV2Items[] items, @JsonProperty("recipient") org.openapis.openapi.models.shared.OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient recipient, @JsonProperty("rmaNumber") String rmaNumber) {
+        this.items = items;
+        this.recipient = recipient;
+        this.rmaNumber = rmaNumber;
+  }
 }

@@ -15,6 +15,7 @@ public class CancelReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplayArn")
     public String replayArn;
+
     public CancelReplayResponse withReplayArn(String replayArn) {
         this.replayArn = replayArn;
         return this;
@@ -23,6 +24,7 @@ public class CancelReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ReplayStateEnum state;
+
     public CancelReplayResponse withState(ReplayStateEnum state) {
         this.state = state;
         return this;
@@ -31,9 +33,11 @@ public class CancelReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public CancelReplayResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public CancelReplayResponse(){}
 }

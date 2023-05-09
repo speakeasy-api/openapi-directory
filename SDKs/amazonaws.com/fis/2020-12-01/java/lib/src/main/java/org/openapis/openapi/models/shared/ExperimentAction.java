@@ -20,6 +20,7 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionId")
     public String actionId;
+
     public ExperimentAction withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -28,6 +29,7 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExperimentAction withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class ExperimentAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public ExperimentAction withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public ExperimentAction withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -54,6 +58,7 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAfter")
     public String[] startAfter;
+
     public ExperimentAction withStartAfter(String[] startAfter) {
         this.startAfter = startAfter;
         return this;
@@ -64,6 +69,7 @@ public class ExperimentAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ExperimentAction withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ExperimentActionState state;
+
     public ExperimentAction withState(ExperimentActionState state) {
         this.state = state;
         return this;
@@ -80,9 +87,11 @@ public class ExperimentAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targets")
     public java.util.Map<String, String> targets;
+
     public ExperimentAction withTargets(java.util.Map<String, String> targets) {
         this.targets = targets;
         return this;
     }
     
+    public ExperimentAction(){}
 }

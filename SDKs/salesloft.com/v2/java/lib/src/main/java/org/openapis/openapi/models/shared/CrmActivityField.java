@@ -12,6 +12,7 @@ public class CrmActivityField {
      */
     
     public OffsetDateTime createdAt;
+
     public CrmActivityField withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class CrmActivityField {
      */
     
     public String crmObjectType;
+
     public CrmActivityField withCrmObjectType(String crmObjectType) {
         this.crmObjectType = crmObjectType;
         return this;
@@ -33,6 +35,7 @@ public class CrmActivityField {
      */
     
     public String field;
+
     public CrmActivityField withField(String field) {
         this.field = field;
         return this;
@@ -43,6 +46,7 @@ public class CrmActivityField {
      */
     
     public String fieldType;
+
     public CrmActivityField withFieldType(String fieldType) {
         this.fieldType = fieldType;
         return this;
@@ -53,6 +57,7 @@ public class CrmActivityField {
      */
     
     public Long id;
+
     public CrmActivityField withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class CrmActivityField {
      */
     
     public java.util.Map<String, Object> picklistValues;
+
     public CrmActivityField withPicklistValues(java.util.Map<String, Object> picklistValues) {
         this.picklistValues = picklistValues;
         return this;
@@ -77,6 +83,7 @@ public class CrmActivityField {
      */
     
     public String salesforceObjectType;
+
     public CrmActivityField withSalesforceObjectType(String salesforceObjectType) {
         this.salesforceObjectType = salesforceObjectType;
         return this;
@@ -87,6 +94,7 @@ public class CrmActivityField {
      */
     
     public String source;
+
     public CrmActivityField withSource(String source) {
         this.source = source;
         return this;
@@ -97,6 +105,7 @@ public class CrmActivityField {
      */
     
     public String title;
+
     public CrmActivityField withTitle(String title) {
         this.title = title;
         return this;
@@ -107,6 +116,7 @@ public class CrmActivityField {
      */
     
     public OffsetDateTime updatedAt;
+
     public CrmActivityField withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -119,9 +129,11 @@ public class CrmActivityField {
      */
     
     public String value;
+
     public CrmActivityField withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CrmActivityField(){}
 }

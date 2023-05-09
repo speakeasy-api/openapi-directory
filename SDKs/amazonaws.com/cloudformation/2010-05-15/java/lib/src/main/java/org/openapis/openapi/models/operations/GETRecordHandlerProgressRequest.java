@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRecordHandlerProgressRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRecordHandlerProgressActionEnum action;
+
     public GETRecordHandlerProgressRequest withAction(GETRecordHandlerProgressActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BearerToken")
     public String bearerToken;
+
     public GETRecordHandlerProgressRequest withBearerToken(String bearerToken) {
         this.bearerToken = bearerToken;
         return this;
@@ -29,6 +32,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
     public String clientRequestToken;
+
     public GETRecordHandlerProgressRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -39,6 +43,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CurrentOperationStatus")
     public GETRecordHandlerProgressCurrentOperationStatusEnum currentOperationStatus;
+
     public GETRecordHandlerProgressRequest withCurrentOperationStatus(GETRecordHandlerProgressCurrentOperationStatusEnum currentOperationStatus) {
         this.currentOperationStatus = currentOperationStatus;
         return this;
@@ -49,6 +54,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ErrorCode")
     public GETRecordHandlerProgressErrorCodeEnum errorCode;
+
     public GETRecordHandlerProgressRequest withErrorCode(GETRecordHandlerProgressErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -59,6 +65,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationStatus")
     public GETRecordHandlerProgressOperationStatusEnum operationStatus;
+
     public GETRecordHandlerProgressRequest withOperationStatus(GETRecordHandlerProgressOperationStatusEnum operationStatus) {
         this.operationStatus = operationStatus;
         return this;
@@ -69,6 +76,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ResourceModel")
     public String resourceModel;
+
     public GETRecordHandlerProgressRequest withResourceModel(String resourceModel) {
         this.resourceModel = resourceModel;
         return this;
@@ -79,6 +87,7 @@ public class GETRecordHandlerProgressRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StatusMessage")
     public String statusMessage;
+
     public GETRecordHandlerProgressRequest withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -86,6 +95,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRecordHandlerProgressVersionEnum version;
+
     public GETRecordHandlerProgressRequest withVersion(GETRecordHandlerProgressVersionEnum version) {
         this.version = version;
         return this;
@@ -93,6 +103,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRecordHandlerProgressRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -100,6 +111,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRecordHandlerProgressRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -107,6 +119,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRecordHandlerProgressRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -114,6 +127,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRecordHandlerProgressRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -121,6 +135,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRecordHandlerProgressRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -128,6 +143,7 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRecordHandlerProgressRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -135,9 +151,16 @@ public class GETRecordHandlerProgressRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRecordHandlerProgressRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRecordHandlerProgressRequest(@JsonProperty("Action") GETRecordHandlerProgressActionEnum action, @JsonProperty("BearerToken") String bearerToken, @JsonProperty("OperationStatus") GETRecordHandlerProgressOperationStatusEnum operationStatus, @JsonProperty("Version") GETRecordHandlerProgressVersionEnum version) {
+        this.action = action;
+        this.bearerToken = bearerToken;
+        this.operationStatus = operationStatus;
+        this.version = version;
+  }
 }

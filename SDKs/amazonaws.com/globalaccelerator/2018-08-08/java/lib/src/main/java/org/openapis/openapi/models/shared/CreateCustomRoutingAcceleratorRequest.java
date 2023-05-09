@@ -12,6 +12,7 @@ public class CreateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CreateCustomRoutingAcceleratorRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -19,6 +20,7 @@ public class CreateCustomRoutingAcceleratorRequest {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateCustomRoutingAcceleratorRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -27,6 +29,7 @@ public class CreateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public CreateCustomRoutingAcceleratorRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -35,6 +38,7 @@ public class CreateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpAddresses")
     public String[] ipAddresses;
+
     public CreateCustomRoutingAcceleratorRequest withIpAddresses(String[] ipAddresses) {
         this.ipAddresses = ipAddresses;
         return this;
@@ -42,6 +46,7 @@ public class CreateCustomRoutingAcceleratorRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateCustomRoutingAcceleratorRequest withName(String name) {
         this.name = name;
         return this;
@@ -50,9 +55,14 @@ public class CreateCustomRoutingAcceleratorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateCustomRoutingAcceleratorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateCustomRoutingAcceleratorRequest(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("Name") String name) {
+        this.idempotencyToken = idempotencyToken;
+        this.name = name;
+  }
 }

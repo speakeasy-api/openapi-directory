@@ -12,9 +12,13 @@ public class GetFacetRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public GetFacetRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetFacetRequestBody(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

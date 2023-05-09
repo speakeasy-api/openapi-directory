@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteSuggesterRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DeleteSuggester&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to update and name of the suggester you want to delete.
@@ -15,6 +15,7 @@ public class DeleteSuggesterRequest {
      */
     
     public String domainName;
+
     public DeleteSuggesterRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class DeleteSuggesterRequest {
     
     
     public String suggesterName;
+
     public DeleteSuggesterRequest withSuggesterName(String suggesterName) {
         this.suggesterName = suggesterName;
         return this;
     }
     
+    public DeleteSuggesterRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("SuggesterName") String suggesterName) {
+        this.domainName = domainName;
+        this.suggesterName = suggesterName;
+  }
 }

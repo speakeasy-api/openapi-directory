@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListWatchlistsRequest {
     @JsonProperty("DomainId")
     public String domainId;
+
     public ListWatchlistsRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
@@ -19,6 +20,7 @@ public class ListWatchlistsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListWatchlistsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListWatchlistsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWatchlistsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListWatchlistsRequest(@JsonProperty("DomainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

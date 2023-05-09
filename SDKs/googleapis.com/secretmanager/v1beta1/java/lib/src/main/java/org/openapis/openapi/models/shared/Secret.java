@@ -18,6 +18,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Secret withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Secret withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Secret withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replication")
     public Replication replication;
+
     public Secret withReplication(Replication replication) {
         this.replication = replication;
         return this;
     }
     
+    public Secret(){}
 }

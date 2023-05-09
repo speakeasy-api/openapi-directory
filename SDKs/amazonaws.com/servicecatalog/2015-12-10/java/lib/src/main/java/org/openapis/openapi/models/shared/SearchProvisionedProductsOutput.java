@@ -15,6 +15,7 @@ public class SearchProvisionedProductsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public SearchProvisionedProductsOutput withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,6 +24,7 @@ public class SearchProvisionedProductsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedProducts")
     public ProvisionedProductAttribute[] provisionedProducts;
+
     public SearchProvisionedProductsOutput withProvisionedProducts(ProvisionedProductAttribute[] provisionedProducts) {
         this.provisionedProducts = provisionedProducts;
         return this;
@@ -31,9 +33,11 @@ public class SearchProvisionedProductsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalResultsCount")
     public Long totalResultsCount;
+
     public SearchProvisionedProductsOutput withTotalResultsCount(Long totalResultsCount) {
         this.totalResultsCount = totalResultsCount;
         return this;
     }
     
+    public SearchProvisionedProductsOutput(){}
 }

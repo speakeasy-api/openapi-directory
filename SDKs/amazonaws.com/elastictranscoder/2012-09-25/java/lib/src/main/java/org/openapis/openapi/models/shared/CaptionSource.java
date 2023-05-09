@@ -15,6 +15,7 @@ public class CaptionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public CaptionSource withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -23,6 +24,7 @@ public class CaptionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CaptionSource withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class CaptionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public CaptionSource withLabel(String label) {
         this.label = label;
         return this;
@@ -39,6 +42,7 @@ public class CaptionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public CaptionSource withLanguage(String language) {
         this.language = language;
         return this;
@@ -47,9 +51,11 @@ public class CaptionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeOffset")
     public String timeOffset;
+
     public CaptionSource withTimeOffset(String timeOffset) {
         this.timeOffset = timeOffset;
         return this;
     }
     
+    public CaptionSource(){}
 }

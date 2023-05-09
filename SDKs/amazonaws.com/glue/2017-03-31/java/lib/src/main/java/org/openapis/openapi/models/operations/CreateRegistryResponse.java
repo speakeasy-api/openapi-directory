@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRegistryResponse {
@@ -12,6 +13,7 @@ public class CreateRegistryResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRegistryResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRegistryResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateRegistryResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -32,6 +35,7 @@ public class CreateRegistryResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateRegistryResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -39,6 +43,7 @@ public class CreateRegistryResponse {
     
     
     public String contentType;
+
     public CreateRegistryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateRegistryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRegistryResponse createRegistryResponse;
+
     public CreateRegistryResponse withCreateRegistryResponse(org.openapis.openapi.models.shared.CreateRegistryResponse createRegistryResponse) {
         this.createRegistryResponse = createRegistryResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateRegistryResponse {
      */
     
     public Object internalServiceException;
+
     public CreateRegistryResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class CreateRegistryResponse {
      */
     
     public Object invalidInputException;
+
     public CreateRegistryResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class CreateRegistryResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateRegistryResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class CreateRegistryResponse {
     
     
     public Integer statusCode;
+
     public CreateRegistryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class CreateRegistryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRegistryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateRegistryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

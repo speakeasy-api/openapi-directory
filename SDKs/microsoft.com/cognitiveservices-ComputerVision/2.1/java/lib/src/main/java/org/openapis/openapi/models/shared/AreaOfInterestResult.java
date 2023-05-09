@@ -18,6 +18,7 @@ public class AreaOfInterestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("areaOfInterest")
     public BoundingRect areaOfInterest;
+
     public AreaOfInterestResult withAreaOfInterest(BoundingRect areaOfInterest) {
         this.areaOfInterest = areaOfInterest;
         return this;
@@ -29,6 +30,7 @@ public class AreaOfInterestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ImageMetadata metadata;
+
     public AreaOfInterestResult withMetadata(ImageMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -40,9 +42,11 @@ public class AreaOfInterestResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public AreaOfInterestResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public AreaOfInterestResult(){}
 }

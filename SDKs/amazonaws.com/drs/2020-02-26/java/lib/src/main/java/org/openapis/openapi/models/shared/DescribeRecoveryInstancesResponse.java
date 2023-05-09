@@ -15,6 +15,7 @@ public class DescribeRecoveryInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public RecoveryInstance[] items;
+
     public DescribeRecoveryInstancesResponse withItems(RecoveryInstance[] items) {
         this.items = items;
         return this;
@@ -23,9 +24,11 @@ public class DescribeRecoveryInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeRecoveryInstancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeRecoveryInstancesResponse(){}
 }

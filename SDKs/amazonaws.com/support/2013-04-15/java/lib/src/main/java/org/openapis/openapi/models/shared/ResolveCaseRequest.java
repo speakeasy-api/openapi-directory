@@ -12,9 +12,11 @@ public class ResolveCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseId")
     public String caseId;
+
     public ResolveCaseRequest withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
     }
     
+    public ResolveCaseRequest(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelJobResponse {
     @JsonProperty("cancellationStatus")
     public CancellationStatusEnum cancellationStatus;
+
     public CancelJobResponse withCancellationStatus(CancellationStatusEnum cancellationStatus) {
         this.cancellationStatus = cancellationStatus;
         return this;
@@ -19,9 +20,14 @@ public class CancelJobResponse {
     
     @JsonProperty("jobArn")
     public String jobArn;
+
     public CancelJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
     }
     
+    public CancelJobResponse(@JsonProperty("cancellationStatus") CancellationStatusEnum cancellationStatus, @JsonProperty("jobArn") String jobArn) {
+        this.cancellationStatus = cancellationStatus;
+        this.jobArn = jobArn;
+  }
 }

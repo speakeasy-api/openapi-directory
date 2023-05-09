@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListDataAttributeBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataAttributeBindings")
     public GoogleCloudDataplexV1DataAttributeBinding[] dataAttributeBindings;
+
     public GoogleCloudDataplexV1ListDataAttributeBindingsResponse withDataAttributeBindings(GoogleCloudDataplexV1DataAttributeBinding[] dataAttributeBindings) {
         this.dataAttributeBindings = dataAttributeBindings;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ListDataAttributeBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListDataAttributeBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ListDataAttributeBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public GoogleCloudDataplexV1ListDataAttributeBindingsResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListDataAttributeBindingsResponse(){}
 }

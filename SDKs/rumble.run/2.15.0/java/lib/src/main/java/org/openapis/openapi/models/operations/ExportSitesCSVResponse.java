@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportSitesCSVResponse {
     
     public String contentType;
+
     public ExportSitesCSVResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ExportSitesCSVResponse {
     
     
     public Integer statusCode;
+
     public ExportSitesCSVResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ExportSitesCSVResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportSitesCSVResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ExportSitesCSVResponse {
      */
     
     public byte[] exportSitesCSV200TextCSVBinaryString;
+
     public ExportSitesCSVResponse withExportSitesCSV200TextCSVBinaryString(byte[] exportSitesCSV200TextCSVBinaryString) {
         this.exportSitesCSV200TextCSVBinaryString = exportSitesCSV200TextCSVBinaryString;
         return this;
     }
     
+    public ExportSitesCSVResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLicenseTemplateResponse {
     
     public byte[] body;
+
     public DeleteLicenseTemplateResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DeleteLicenseTemplateResponse {
     
     
     public String contentType;
+
     public DeleteLicenseTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DeleteLicenseTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteLicenseTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class DeleteLicenseTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLicenseTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class DeleteLicenseTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.Netlicensing netlicensing;
+
     public DeleteLicenseTemplateResponse withNetlicensing(org.openapis.openapi.models.shared.Netlicensing netlicensing) {
         this.netlicensing = netlicensing;
         return this;
     }
     
+    public DeleteLicenseTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

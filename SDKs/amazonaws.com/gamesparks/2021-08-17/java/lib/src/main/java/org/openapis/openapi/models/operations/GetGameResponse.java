@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGameResponse {
@@ -12,6 +13,7 @@ public class GetGameResponse {
      */
     
     public Object accessDeniedException;
+
     public GetGameResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetGameResponse {
     
     
     public String contentType;
+
     public GetGameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetGameResponse {
      */
     
     public org.openapis.openapi.models.shared.GetGameResult getGameResult;
+
     public GetGameResponse withGetGameResult(org.openapis.openapi.models.shared.GetGameResult getGameResult) {
         this.getGameResult = getGameResult;
         return this;
@@ -39,6 +43,7 @@ public class GetGameResponse {
      */
     
     public Object internalServerException;
+
     public GetGameResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetGameResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetGameResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetGameResponse {
     
     
     public Integer statusCode;
+
     public GetGameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetGameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetGameResponse {
      */
     
     public Object throttlingException;
+
     public GetGameResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetGameResponse {
      */
     
     public Object validationException;
+
     public GetGameResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetGameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

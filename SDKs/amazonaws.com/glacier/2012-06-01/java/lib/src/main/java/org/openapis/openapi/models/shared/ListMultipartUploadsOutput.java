@@ -15,6 +15,7 @@ public class ListMultipartUploadsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListMultipartUploadsOutput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class ListMultipartUploadsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadsList")
     public UploadListElement[] uploadsList;
+
     public ListMultipartUploadsOutput withUploadsList(UploadListElement[] uploadsList) {
         this.uploadsList = uploadsList;
         return this;
     }
     
+    public ListMultipartUploadsOutput(){}
 }

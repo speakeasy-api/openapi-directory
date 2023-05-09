@@ -58,11 +58,9 @@ public class Settlementreports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentSettlementreportsGetResponse res = new org.openapis.openapi.models.operations.ContentSettlementreportsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentSettlementreportsGetResponse res = new org.openapis.openapi.models.operations.ContentSettlementreportsGetResponse(contentType, httpRes.statusCode()) {{
             settlementReport = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Settlementreports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentSettlementreportsListResponse res = new org.openapis.openapi.models.operations.ContentSettlementreportsListResponse() {{
+        org.openapis.openapi.models.operations.ContentSettlementreportsListResponse res = new org.openapis.openapi.models.operations.ContentSettlementreportsListResponse(contentType, httpRes.statusCode()) {{
             settlementreportsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

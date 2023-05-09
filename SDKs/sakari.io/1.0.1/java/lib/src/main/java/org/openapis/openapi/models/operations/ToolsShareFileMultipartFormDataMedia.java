@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ToolsShareFileMultipartFormDataMedia {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public ToolsShareFileMultipartFormDataMedia withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class ToolsShareFileMultipartFormDataMedia {
     
     @SpeakeasyMetadata("multipartForm:name=media")
     public String media;
+
     public ToolsShareFileMultipartFormDataMedia withMedia(String media) {
         this.media = media;
         return this;
     }
     
+    public ToolsShareFileMultipartFormDataMedia(@JsonProperty("content") byte[] content, @JsonProperty("media") String media) {
+        this.content = content;
+        this.media = media;
+  }
 }

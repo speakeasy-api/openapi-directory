@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SchedulingPolicyDetail {
     @JsonProperty("arn")
     public String arn;
+
     public SchedulingPolicyDetail withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class SchedulingPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fairsharePolicy")
     public FairsharePolicy fairsharePolicy;
+
     public SchedulingPolicyDetail withFairsharePolicy(FairsharePolicy fairsharePolicy) {
         this.fairsharePolicy = fairsharePolicy;
         return this;
@@ -29,6 +31,7 @@ public class SchedulingPolicyDetail {
     
     @JsonProperty("name")
     public String name;
+
     public SchedulingPolicyDetail withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +40,14 @@ public class SchedulingPolicyDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SchedulingPolicyDetail withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public SchedulingPolicyDetail(@JsonProperty("arn") String arn, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.name = name;
+  }
 }

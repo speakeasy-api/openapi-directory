@@ -18,6 +18,7 @@ public class GcsProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public GcsProfile withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,9 +30,11 @@ public class GcsProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootPath")
     public String rootPath;
+
     public GcsProfile withRootPath(String rootPath) {
         this.rootPath = rootPath;
         return this;
     }
     
+    public GcsProfile(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCapacityProviderResponse {
@@ -12,6 +13,7 @@ public class CreateCapacityProviderResponse {
      */
     
     public Object clientException;
+
     public CreateCapacityProviderResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCapacityProviderResponse {
     
     
     public String contentType;
+
     public CreateCapacityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCapacityProviderResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCapacityProviderResponse createCapacityProviderResponse;
+
     public CreateCapacityProviderResponse withCreateCapacityProviderResponse(org.openapis.openapi.models.shared.CreateCapacityProviderResponse createCapacityProviderResponse) {
         this.createCapacityProviderResponse = createCapacityProviderResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateCapacityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateCapacityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCapacityProviderResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCapacityProviderResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCapacityProviderResponse {
      */
     
     public Object serverException;
+
     public CreateCapacityProviderResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCapacityProviderResponse {
     
     
     public Integer statusCode;
+
     public CreateCapacityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateCapacityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCapacityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateCapacityProviderResponse {
      */
     
     public Object updateInProgressException;
+
     public CreateCapacityProviderResponse withUpdateInProgressException(Object updateInProgressException) {
         this.updateInProgressException = updateInProgressException;
         return this;
     }
     
+    public CreateCapacityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

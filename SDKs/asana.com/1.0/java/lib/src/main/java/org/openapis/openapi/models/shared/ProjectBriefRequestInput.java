@@ -18,6 +18,7 @@ public class ProjectBriefRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public ProjectBriefRequestInput withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -29,6 +30,7 @@ public class ProjectBriefRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public ProjectBriefRequestInput withText(String text) {
         this.text = text;
         return this;
@@ -40,9 +42,11 @@ public class ProjectBriefRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectBriefRequestInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectBriefRequestInput(){}
 }

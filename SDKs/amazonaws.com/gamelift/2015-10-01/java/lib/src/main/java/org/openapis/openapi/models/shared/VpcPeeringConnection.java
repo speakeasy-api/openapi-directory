@@ -15,6 +15,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public VpcPeeringConnection withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -23,6 +24,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetId")
     public String fleetId;
+
     public VpcPeeringConnection withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -31,6 +33,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameLiftVpcId")
     public String gameLiftVpcId;
+
     public VpcPeeringConnection withGameLiftVpcId(String gameLiftVpcId) {
         this.gameLiftVpcId = gameLiftVpcId;
         return this;
@@ -39,6 +42,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpV4CidrBlock")
     public String ipV4CidrBlock;
+
     public VpcPeeringConnection withIpV4CidrBlock(String ipV4CidrBlock) {
         this.ipV4CidrBlock = ipV4CidrBlock;
         return this;
@@ -47,6 +51,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeerVpcId")
     public String peerVpcId;
+
     public VpcPeeringConnection withPeerVpcId(String peerVpcId) {
         this.peerVpcId = peerVpcId;
         return this;
@@ -55,6 +60,7 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public VpcPeeringConnectionStatus status;
+
     public VpcPeeringConnection withStatus(VpcPeeringConnectionStatus status) {
         this.status = status;
         return this;
@@ -63,9 +69,11 @@ public class VpcPeeringConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcPeeringConnectionId")
     public String vpcPeeringConnectionId;
+
     public VpcPeeringConnection withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public VpcPeeringConnection(){}
 }

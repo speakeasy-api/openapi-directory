@@ -15,9 +15,11 @@ public class LoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordAllRosTopics")
     public Boolean recordAllRosTopics;
+
     public LoggingConfig withRecordAllRosTopics(Boolean recordAllRosTopics) {
         this.recordAllRosTopics = recordAllRosTopics;
         return this;
     }
     
+    public LoggingConfig(){}
 }

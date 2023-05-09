@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopDevEnvironmentResponse {
     @JsonProperty("id")
     public String id;
+
     public StopDevEnvironmentResponse withId(String id) {
         this.id = id;
         return this;
@@ -19,6 +20,7 @@ public class StopDevEnvironmentResponse {
     
     @JsonProperty("projectName")
     public String projectName;
+
     public StopDevEnvironmentResponse withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -26,6 +28,7 @@ public class StopDevEnvironmentResponse {
     
     @JsonProperty("spaceName")
     public String spaceName;
+
     public StopDevEnvironmentResponse withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
@@ -33,9 +36,16 @@ public class StopDevEnvironmentResponse {
     
     @JsonProperty("status")
     public DevEnvironmentStatusEnum status;
+
     public StopDevEnvironmentResponse withStatus(DevEnvironmentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public StopDevEnvironmentResponse(@JsonProperty("id") String id, @JsonProperty("projectName") String projectName, @JsonProperty("spaceName") String spaceName, @JsonProperty("status") DevEnvironmentStatusEnum status) {
+        this.id = id;
+        this.projectName = projectName;
+        this.spaceName = spaceName;
+        this.status = status;
+  }
 }

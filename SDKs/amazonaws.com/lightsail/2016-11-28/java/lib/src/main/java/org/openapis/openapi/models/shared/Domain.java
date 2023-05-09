@@ -20,6 +20,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Domain withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Domain withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainEntries")
     public DomainEntry[] domainEntries;
+
     public Domain withDomainEntries(DomainEntry[] domainEntries) {
         this.domainEntries = domainEntries;
         return this;
@@ -46,6 +49,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public Domain withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -54,6 +58,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Domain withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredDomainDelegationInfo")
     public RegisteredDomainDelegationInfo registeredDomainDelegationInfo;
+
     public Domain withRegisteredDomainDelegationInfo(RegisteredDomainDelegationInfo registeredDomainDelegationInfo) {
         this.registeredDomainDelegationInfo = registeredDomainDelegationInfo;
         return this;
@@ -70,6 +76,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public Domain withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -78,6 +85,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public Domain withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
@@ -86,9 +94,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Domain withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Domain(){}
 }

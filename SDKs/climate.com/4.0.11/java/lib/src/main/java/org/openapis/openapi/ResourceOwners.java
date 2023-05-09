@@ -57,12 +57,10 @@ public class ResourceOwners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetResourceOwnerResponse res = new org.openapis.openapi.models.operations.GetResourceOwnerResponse() {{
+        org.openapis.openapi.models.operations.GetResourceOwnerResponse res = new org.openapis.openapi.models.operations.GetResourceOwnerResponse(contentType, httpRes.statusCode()) {{
             resourceOwner = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

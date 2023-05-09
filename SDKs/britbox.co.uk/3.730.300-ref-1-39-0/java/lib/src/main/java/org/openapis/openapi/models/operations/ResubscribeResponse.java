@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResubscribeResponse {
     
     public String contentType;
+
     public ResubscribeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ResubscribeResponse {
     
     
     public Integer statusCode;
+
     public ResubscribeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ResubscribeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResubscribeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ResubscribeResponse {
      */
     
     public java.util.Map<String, Object> resubscribe200ApplicationJSONObject;
+
     public ResubscribeResponse withResubscribe200ApplicationJSONObject(java.util.Map<String, Object> resubscribe200ApplicationJSONObject) {
         this.resubscribe200ApplicationJSONObject = resubscribe200ApplicationJSONObject;
         return this;
     }
     
+    public ResubscribeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

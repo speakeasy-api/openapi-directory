@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksMyconfigGetUserSettingsResponse {
     
     public String contentType;
+
     public BooksMyconfigGetUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BooksMyconfigGetUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public BooksMyconfigGetUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BooksMyconfigGetUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksMyconfigGetUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BooksMyconfigGetUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.Usersettings usersettings;
+
     public BooksMyconfigGetUserSettingsResponse withUsersettings(org.openapis.openapi.models.shared.Usersettings usersettings) {
         this.usersettings = usersettings;
         return this;
     }
     
+    public BooksMyconfigGetUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

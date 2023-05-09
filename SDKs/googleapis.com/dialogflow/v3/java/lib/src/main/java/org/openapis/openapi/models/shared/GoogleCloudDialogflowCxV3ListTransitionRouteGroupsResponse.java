@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRouteGroups")
     public GoogleCloudDialogflowCxV3TransitionRouteGroup[] transitionRouteGroups;
+
     public GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse withTransitionRouteGroups(GoogleCloudDialogflowCxV3TransitionRouteGroup[] transitionRouteGroups) {
         this.transitionRouteGroups = transitionRouteGroups;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse(){}
 }

@@ -18,6 +18,7 @@ public class CategoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public CategoryCount withCategory(String category) {
         this.category = category;
         return this;
@@ -29,9 +30,11 @@ public class CategoryCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public CategoryCount withCount(String count) {
         this.count = count;
         return this;
     }
     
+    public CategoryCount(){}
 }

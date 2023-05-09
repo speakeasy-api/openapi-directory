@@ -18,6 +18,7 @@ public class SubscriptionContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityType")
     public SubscriptionContentDetailsActivityTypeEnum activityType;
+
     public SubscriptionContentDetails withActivityType(SubscriptionContentDetailsActivityTypeEnum activityType) {
         this.activityType = activityType;
         return this;
@@ -29,6 +30,7 @@ public class SubscriptionContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newItemCount")
     public Long newItemCount;
+
     public SubscriptionContentDetails withNewItemCount(Long newItemCount) {
         this.newItemCount = newItemCount;
         return this;
@@ -40,9 +42,11 @@ public class SubscriptionContentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalItemCount")
     public Long totalItemCount;
+
     public SubscriptionContentDetails withTotalItemCount(Long totalItemCount) {
         this.totalItemCount = totalItemCount;
         return this;
     }
     
+    public SubscriptionContentDetails(){}
 }

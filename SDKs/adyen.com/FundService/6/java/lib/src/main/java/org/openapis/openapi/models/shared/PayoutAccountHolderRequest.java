@@ -14,6 +14,7 @@ public class PayoutAccountHolderRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public PayoutAccountHolderRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -25,6 +26,7 @@ public class PayoutAccountHolderRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public PayoutAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -33,6 +35,7 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public PayoutAccountHolderRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -45,6 +48,7 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public PayoutAccountHolderRequest withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -57,6 +61,7 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PayoutAccountHolderRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +73,7 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public PayoutAccountHolderRequest withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -80,6 +86,7 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public PayoutAccountHolderRequest withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -91,9 +98,14 @@ public class PayoutAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public PayoutAccountHolderRequestPayoutSpeedEnum payoutSpeed;
+
     public PayoutAccountHolderRequest withPayoutSpeed(PayoutAccountHolderRequestPayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
     }
     
+    public PayoutAccountHolderRequest(@JsonProperty("accountCode") String accountCode, @JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountCode = accountCode;
+        this.accountHolderCode = accountHolderCode;
+  }
 }

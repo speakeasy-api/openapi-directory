@@ -15,9 +15,11 @@ public class CreateWhatIfAnalysisResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WhatIfAnalysisArn")
     public String whatIfAnalysisArn;
+
     public CreateWhatIfAnalysisResponse withWhatIfAnalysisArn(String whatIfAnalysisArn) {
         this.whatIfAnalysisArn = whatIfAnalysisArn;
         return this;
     }
     
+    public CreateWhatIfAnalysisResponse(){}
 }

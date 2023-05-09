@@ -51,12 +51,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountsResponse(contentType, httpRes.statusCode()) {{
             defaultAccounts = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConfigIssuesResponse res = new org.openapis.openapi.models.operations.GetConfigIssuesResponse() {{
+        org.openapis.openapi.models.operations.GetConfigIssuesResponse res = new org.openapis.openapi.models.operations.GetConfigIssuesResponse(contentType, httpRes.statusCode()) {{
             configIssues = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExpiredCertsResponse res = new org.openapis.openapi.models.operations.GetExpiredCertsResponse() {{
+        org.openapis.openapi.models.operations.GetExpiredCertsResponse res = new org.openapis.openapi.models.operations.GetExpiredCertsResponse(contentType, httpRes.statusCode()) {{
             expiredCerts = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,12 +189,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPrivateKeysResponse res = new org.openapis.openapi.models.operations.GetPrivateKeysResponse() {{
+        org.openapis.openapi.models.operations.GetPrivateKeysResponse res = new org.openapis.openapi.models.operations.GetPrivateKeysResponse(contentType, httpRes.statusCode()) {{
             cryptoKeys = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -243,12 +235,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRiskResponse res = new org.openapis.openapi.models.operations.GetRiskResponse() {{
+        org.openapis.openapi.models.operations.GetRiskResponse res = new org.openapis.openapi.models.operations.GetRiskResponse(contentType, httpRes.statusCode()) {{
             firmwareRisk = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,12 +281,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWeakCertsResponse res = new org.openapis.openapi.models.operations.GetWeakCertsResponse() {{
+        org.openapis.openapi.models.operations.GetWeakCertsResponse res = new org.openapis.openapi.models.operations.GetWeakCertsResponse(contentType, httpRes.statusCode()) {{
             weakCerts = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,12 +327,10 @@ public class Firmware {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetWeakKeysResponse res = new org.openapis.openapi.models.operations.GetWeakKeysResponse() {{
+        org.openapis.openapi.models.operations.GetWeakKeysResponse res = new org.openapis.openapi.models.operations.GetWeakKeysResponse(contentType, httpRes.statusCode()) {{
             cryptoKeys = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

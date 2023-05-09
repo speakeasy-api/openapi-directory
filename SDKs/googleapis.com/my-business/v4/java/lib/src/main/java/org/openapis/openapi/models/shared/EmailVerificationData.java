@@ -18,6 +18,7 @@ public class EmailVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public EmailVerificationData withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -29,6 +30,7 @@ public class EmailVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUserNameEditable")
     public Boolean isUserNameEditable;
+
     public EmailVerificationData withIsUserNameEditable(Boolean isUserNameEditable) {
         this.isUserNameEditable = isUserNameEditable;
         return this;
@@ -40,9 +42,11 @@ public class EmailVerificationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public EmailVerificationData withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public EmailVerificationData(){}
 }

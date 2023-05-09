@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchAspectIdFullsearchRequest {
@@ -12,6 +13,7 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=aspectId")
     public GetSearchAspectIDFullsearchAspectIDEnum aspectId;
+
     public GetSearchAspectIdFullsearchRequest withAspectId(GetSearchAspectIDFullsearchAspectIDEnum aspectId) {
         this.aspectId = aspectId;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=e")
     public Long e;
+
     public GetSearchAspectIdFullsearchRequest withE(Long e) {
         this.e = e;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lFrag")
     public Long lFrag;
+
     public GetSearchAspectIdFullsearchRequest withLFrag(Long lFrag) {
         this.lFrag = lFrag;
         return this;
@@ -42,6 +46,7 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nFrag")
     public Long nFrag;
+
     public GetSearchAspectIdFullsearchRequest withNFrag(Long nFrag) {
         this.nFrag = nFrag;
         return this;
@@ -52,6 +57,7 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetSearchAspectIdFullsearchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -62,9 +68,18 @@ public class GetSearchAspectIdFullsearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=s")
     public String s;
+
     public GetSearchAspectIdFullsearchRequest withS(String s) {
         this.s = s;
         return this;
     }
     
+    public GetSearchAspectIdFullsearchRequest(@JsonProperty("aspectId") GetSearchAspectIDFullsearchAspectIDEnum aspectId, @JsonProperty("e") Long e, @JsonProperty("lFrag") Long lFrag, @JsonProperty("nFrag") Long nFrag, @JsonProperty("q") String q, @JsonProperty("s") String s) {
+        this.aspectId = aspectId;
+        this.e = e;
+        this.lFrag = lFrag;
+        this.nFrag = nFrag;
+        this.q = q;
+        this.s = s;
+  }
 }

@@ -15,6 +15,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationProtocol")
     public RadiusAuthenticationProtocolEnum authenticationProtocol;
+
     public RadiusSettings withAuthenticationProtocol(RadiusAuthenticationProtocolEnum authenticationProtocol) {
         this.authenticationProtocol = authenticationProtocol;
         return this;
@@ -23,6 +24,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayLabel")
     public String displayLabel;
+
     public RadiusSettings withDisplayLabel(String displayLabel) {
         this.displayLabel = displayLabel;
         return this;
@@ -31,6 +33,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusPort")
     public Long radiusPort;
+
     public RadiusSettings withRadiusPort(Long radiusPort) {
         this.radiusPort = radiusPort;
         return this;
@@ -39,6 +42,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusRetries")
     public Long radiusRetries;
+
     public RadiusSettings withRadiusRetries(Long radiusRetries) {
         this.radiusRetries = radiusRetries;
         return this;
@@ -47,6 +51,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusServers")
     public String[] radiusServers;
+
     public RadiusSettings withRadiusServers(String[] radiusServers) {
         this.radiusServers = radiusServers;
         return this;
@@ -55,6 +60,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RadiusTimeout")
     public Long radiusTimeout;
+
     public RadiusSettings withRadiusTimeout(Long radiusTimeout) {
         this.radiusTimeout = radiusTimeout;
         return this;
@@ -63,6 +69,7 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedSecret")
     public String sharedSecret;
+
     public RadiusSettings withSharedSecret(String sharedSecret) {
         this.sharedSecret = sharedSecret;
         return this;
@@ -71,9 +78,11 @@ public class RadiusSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseSameUsername")
     public Boolean useSameUsername;
+
     public RadiusSettings withUseSameUsername(Boolean useSameUsername) {
         this.useSameUsername = useSameUsername;
         return this;
     }
     
+    public RadiusSettings(){}
 }

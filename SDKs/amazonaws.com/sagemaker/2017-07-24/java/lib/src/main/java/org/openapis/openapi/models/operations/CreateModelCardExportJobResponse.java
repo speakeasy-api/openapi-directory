@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelCardExportJobResponse {
@@ -12,6 +13,7 @@ public class CreateModelCardExportJobResponse {
      */
     
     public Object conflictException;
+
     public CreateModelCardExportJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelCardExportJobResponse {
     
     
     public String contentType;
+
     public CreateModelCardExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelCardExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelCardExportJobResponse createModelCardExportJobResponse;
+
     public CreateModelCardExportJobResponse withCreateModelCardExportJobResponse(org.openapis.openapi.models.shared.CreateModelCardExportJobResponse createModelCardExportJobResponse) {
         this.createModelCardExportJobResponse = createModelCardExportJobResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelCardExportJobResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelCardExportJobResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -49,6 +54,7 @@ public class CreateModelCardExportJobResponse {
      */
     
     public Object resourceNotFound;
+
     public CreateModelCardExportJobResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -56,6 +62,7 @@ public class CreateModelCardExportJobResponse {
     
     
     public Integer statusCode;
+
     public CreateModelCardExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateModelCardExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelCardExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelCardExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -58,10 +58,8 @@ public class Credits {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreditTransferResponse res = new org.openapis.openapi.models.operations.PostCreditTransferResponse() {{
+        org.openapis.openapi.models.operations.PostCreditTransferResponse res = new org.openapis.openapi.models.operations.PostCreditTransferResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403) {

@@ -17,6 +17,7 @@ public class NodesChildrenCreateNodeAttributesInput {
      */
     @JsonProperty("category")
     public NodesChildrenCreateNodeAttributesCategoryEnum category;
+
     public NodesChildrenCreateNodeAttributesInput withCategory(NodesChildrenCreateNodeAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -28,6 +29,7 @@ public class NodesChildrenCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NodesChildrenCreateNodeAttributesInput withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +41,7 @@ public class NodesChildrenCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_license")
     public String nodeLicense;
+
     public NodesChildrenCreateNodeAttributesInput withNodeLicense(String nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -50,6 +53,7 @@ public class NodesChildrenCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public")
     public Boolean public_;
+
     public NodesChildrenCreateNodeAttributesInput withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
@@ -61,6 +65,7 @@ public class NodesChildrenCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public NodesChildrenCreateNodeAttributesInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -72,6 +77,7 @@ public class NodesChildrenCreateNodeAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template_from")
     public String templateFrom;
+
     public NodesChildrenCreateNodeAttributesInput withTemplateFrom(String templateFrom) {
         this.templateFrom = templateFrom;
         return this;
@@ -82,9 +88,14 @@ public class NodesChildrenCreateNodeAttributesInput {
      */
     @JsonProperty("title")
     public String title;
+
     public NodesChildrenCreateNodeAttributesInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesChildrenCreateNodeAttributesInput(@JsonProperty("category") NodesChildrenCreateNodeAttributesCategoryEnum category, @JsonProperty("title") String title) {
+        this.category = category;
+        this.title = title;
+  }
 }

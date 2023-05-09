@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UntagResourceResponse {
@@ -12,6 +13,7 @@ public class UntagResourceResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public UntagResourceResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class UntagResourceResponse {
      */
     
     public Object arnNotSupportedException;
+
     public UntagResourceResponse withArnNotSupportedException(Object arnNotSupportedException) {
         this.arnNotSupportedException = arnNotSupportedException;
         return this;
@@ -29,6 +32,7 @@ public class UntagResourceResponse {
     
     
     public String contentType;
+
     public UntagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UntagResourceResponse {
      */
     
     public Object deploymentConfigDoesNotExistException;
+
     public UntagResourceResponse withDeploymentConfigDoesNotExistException(Object deploymentConfigDoesNotExistException) {
         this.deploymentConfigDoesNotExistException = deploymentConfigDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class UntagResourceResponse {
      */
     
     public Object deploymentGroupDoesNotExistException;
+
     public UntagResourceResponse withDeploymentGroupDoesNotExistException(Object deploymentGroupDoesNotExistException) {
         this.deploymentGroupDoesNotExistException = deploymentGroupDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class UntagResourceResponse {
      */
     
     public Object invalidArnException;
+
     public UntagResourceResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class UntagResourceResponse {
      */
     
     public Object invalidTagsToAddException;
+
     public UntagResourceResponse withInvalidTagsToAddException(Object invalidTagsToAddException) {
         this.invalidTagsToAddException = invalidTagsToAddException;
         return this;
@@ -76,6 +84,7 @@ public class UntagResourceResponse {
     
     
     public Integer statusCode;
+
     public UntagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UntagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UntagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UntagResourceResponse {
      */
     
     public Object resourceArnRequiredException;
+
     public UntagResourceResponse withResourceArnRequiredException(Object resourceArnRequiredException) {
         this.resourceArnRequiredException = resourceArnRequiredException;
         return this;
@@ -103,6 +114,7 @@ public class UntagResourceResponse {
      */
     
     public Object tagRequiredException;
+
     public UntagResourceResponse withTagRequiredException(Object tagRequiredException) {
         this.tagRequiredException = tagRequiredException;
         return this;
@@ -113,9 +125,14 @@ public class UntagResourceResponse {
      */
     
     public java.util.Map<String, Object> untagResourceOutput;
+
     public UntagResourceResponse withUntagResourceOutput(java.util.Map<String, Object> untagResourceOutput) {
         this.untagResourceOutput = untagResourceOutput;
         return this;
     }
     
+    public UntagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

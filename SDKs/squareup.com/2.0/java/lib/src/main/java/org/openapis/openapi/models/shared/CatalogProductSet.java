@@ -23,6 +23,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_products")
     public Boolean allProducts;
+
     public CatalogProductSet withAllProducts(Boolean allProducts) {
         this.allProducts = allProducts;
         return this;
@@ -35,6 +36,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogProductSet withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +53,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_ids_all")
     public String[] productIdsAll;
+
     public CatalogProductSet withProductIdsAll(String[] productIdsAll) {
         this.productIdsAll = productIdsAll;
         return this;
@@ -71,6 +74,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("product_ids_any")
     public String[] productIdsAny;
+
     public CatalogProductSet withProductIdsAny(String[] productIdsAny) {
         this.productIdsAny = productIdsAny;
         return this;
@@ -85,6 +89,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_exact")
     public Long quantityExact;
+
     public CatalogProductSet withQuantityExact(Long quantityExact) {
         this.quantityExact = quantityExact;
         return this;
@@ -97,6 +102,7 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_max")
     public Long quantityMax;
+
     public CatalogProductSet withQuantityMax(Long quantityMax) {
         this.quantityMax = quantityMax;
         return this;
@@ -110,9 +116,11 @@ public class CatalogProductSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_min")
     public Long quantityMin;
+
     public CatalogProductSet withQuantityMin(Long quantityMin) {
         this.quantityMin = quantityMin;
         return this;
     }
     
+    public CatalogProductSet(){}
 }

@@ -18,6 +18,7 @@ public class TargetTcpProxyAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public TargetTcpProxyAggregatedListWarningCodeEnum code;
+
     public TargetTcpProxyAggregatedListWarning withCode(TargetTcpProxyAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class TargetTcpProxyAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public TargetTcpProxyAggregatedListWarningData[] data;
+
     public TargetTcpProxyAggregatedListWarning withData(TargetTcpProxyAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class TargetTcpProxyAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TargetTcpProxyAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public TargetTcpProxyAggregatedListWarning(){}
 }

@@ -15,6 +15,7 @@ public class CreateApiCredentialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public ApiCredentialLinks links;
+
     public CreateApiCredentialResponse withLinks(ApiCredentialLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public CreateApiCredentialResponse withActive(Boolean active) {
         this.active = active;
         return this;
@@ -38,6 +40,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("allowedIpAddresses")
     public String[] allowedIpAddresses;
+
     public CreateApiCredentialResponse withAllowedIpAddresses(String[] allowedIpAddresses) {
         this.allowedIpAddresses = allowedIpAddresses;
         return this;
@@ -49,6 +52,7 @@ public class CreateApiCredentialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedOrigins")
     public AllowedOrigin[] allowedOrigins;
+
     public CreateApiCredentialResponse withAllowedOrigins(AllowedOrigin[] allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
         return this;
@@ -59,6 +63,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("apiKey")
     public String apiKey;
+
     public CreateApiCredentialResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -69,6 +74,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("clientKey")
     public String clientKey;
+
     public CreateApiCredentialResponse withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
@@ -80,6 +86,7 @@ public class CreateApiCredentialResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateApiCredentialResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -90,6 +97,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateApiCredentialResponse withId(String id) {
         this.id = id;
         return this;
@@ -100,6 +108,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("password")
     public String password;
+
     public CreateApiCredentialResponse withPassword(String password) {
         this.password = password;
         return this;
@@ -110,6 +119,7 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("roles")
     public String[] roles;
+
     public CreateApiCredentialResponse withRoles(String[] roles) {
         this.roles = roles;
         return this;
@@ -120,9 +130,20 @@ public class CreateApiCredentialResponse {
      */
     @JsonProperty("username")
     public String username;
+
     public CreateApiCredentialResponse withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateApiCredentialResponse(@JsonProperty("username") String username, @JsonProperty("password") String password, @JsonProperty("active") Boolean active, @JsonProperty("allowedIpAddresses") String[] allowedIpAddresses, @JsonProperty("apiKey") String apiKey, @JsonProperty("clientKey") String clientKey, @JsonProperty("id") String id, @JsonProperty("roles") String[] roles) {
+        this.username = username;
+        this.password = password;
+        this.active = active;
+        this.allowedIpAddresses = allowedIpAddresses;
+        this.apiKey = apiKey;
+        this.clientKey = clientKey;
+        this.id = id;
+        this.roles = roles;
+  }
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BalanceTransferRequest {
     @JsonProperty("amount")
     public Amount amount;
+
     public BalanceTransferRequest withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -22,6 +23,7 @@ public class BalanceTransferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BalanceTransferRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +34,7 @@ public class BalanceTransferRequest {
      */
     @JsonProperty("fromMerchant")
     public String fromMerchant;
+
     public BalanceTransferRequest withFromMerchant(String fromMerchant) {
         this.fromMerchant = fromMerchant;
         return this;
@@ -44,6 +47,7 @@ public class BalanceTransferRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public BalanceTransferRequest withReference(String reference) {
         this.reference = reference;
         return this;
@@ -54,6 +58,7 @@ public class BalanceTransferRequest {
      */
     @JsonProperty("toMerchant")
     public String toMerchant;
+
     public BalanceTransferRequest withToMerchant(String toMerchant) {
         this.toMerchant = toMerchant;
         return this;
@@ -64,9 +69,16 @@ public class BalanceTransferRequest {
      */
     @JsonProperty("type")
     public BalanceTransferRequestTypeEnum type;
+
     public BalanceTransferRequest withType(BalanceTransferRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public BalanceTransferRequest(@JsonProperty("amount") Amount amount, @JsonProperty("fromMerchant") String fromMerchant, @JsonProperty("toMerchant") String toMerchant, @JsonProperty("type") BalanceTransferRequestTypeEnum type) {
+        this.amount = amount;
+        this.fromMerchant = fromMerchant;
+        this.toMerchant = toMerchant;
+        this.type = type;
+  }
 }

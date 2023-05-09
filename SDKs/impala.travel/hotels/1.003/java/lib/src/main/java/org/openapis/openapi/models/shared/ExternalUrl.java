@@ -15,6 +15,7 @@ public class ExternalUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public ExternalUrlNameEnum name;
+
     public ExternalUrl withName(ExternalUrlNameEnum name) {
         this.name = name;
         return this;
@@ -26,9 +27,11 @@ public class ExternalUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ExternalUrl withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ExternalUrl(){}
 }

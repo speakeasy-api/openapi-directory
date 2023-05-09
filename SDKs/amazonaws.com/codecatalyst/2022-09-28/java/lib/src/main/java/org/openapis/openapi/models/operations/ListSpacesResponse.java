@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSpacesResponse {
@@ -12,6 +13,7 @@ public class ListSpacesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListSpacesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListSpacesResponse {
      */
     
     public Object conflictException;
+
     public ListSpacesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ListSpacesResponse {
     
     
     public String contentType;
+
     public ListSpacesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListSpacesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSpacesResponse listSpacesResponse;
+
     public ListSpacesResponse withListSpacesResponse(org.openapis.openapi.models.shared.ListSpacesResponse listSpacesResponse) {
         this.listSpacesResponse = listSpacesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListSpacesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSpacesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListSpacesResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListSpacesResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListSpacesResponse {
     
     
     public Integer statusCode;
+
     public ListSpacesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListSpacesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSpacesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListSpacesResponse {
      */
     
     public Object throttlingException;
+
     public ListSpacesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListSpacesResponse {
      */
     
     public Object validationException;
+
     public ListSpacesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSpacesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

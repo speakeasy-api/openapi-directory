@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall(){}
 }

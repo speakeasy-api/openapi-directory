@@ -15,9 +15,11 @@ public class MissionProfileIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missionProfileId")
     public String missionProfileId;
+
     public MissionProfileIdResponse withMissionProfileId(String missionProfileId) {
         this.missionProfileId = missionProfileId;
         return this;
     }
     
+    public MissionProfileIdResponse(){}
 }

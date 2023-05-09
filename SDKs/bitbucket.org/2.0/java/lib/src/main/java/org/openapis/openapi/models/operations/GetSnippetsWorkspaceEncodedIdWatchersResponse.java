@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSnippetsWorkspaceEncodedIdWatchersResponse {
     
     public String contentType;
+
     public GetSnippetsWorkspaceEncodedIdWatchersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSnippetsWorkspaceEncodedIdWatchersResponse {
     
     
     public Integer statusCode;
+
     public GetSnippetsWorkspaceEncodedIdWatchersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetSnippetsWorkspaceEncodedIdWatchersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSnippetsWorkspaceEncodedIdWatchersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetSnippetsWorkspaceEncodedIdWatchersResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetSnippetsWorkspaceEncodedIdWatchersResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetSnippetsWorkspaceEncodedIdWatchersResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedAccounts paginatedAccounts;
+
     public GetSnippetsWorkspaceEncodedIdWatchersResponse withPaginatedAccounts(org.openapis.openapi.models.shared.PaginatedAccounts paginatedAccounts) {
         this.paginatedAccounts = paginatedAccounts;
         return this;
     }
     
+    public GetSnippetsWorkspaceEncodedIdWatchersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

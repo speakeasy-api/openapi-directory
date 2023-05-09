@@ -18,6 +18,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public GoogleAppsScriptTypeProcess withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functionName")
     public String functionName;
+
     public GoogleAppsScriptTypeProcess withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processStatus")
     public GoogleAppsScriptTypeProcessProcessStatusEnum processStatus;
+
     public GoogleAppsScriptTypeProcess withProcessStatus(GoogleAppsScriptTypeProcessProcessStatusEnum processStatus) {
         this.processStatus = processStatus;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processType")
     public GoogleAppsScriptTypeProcessProcessTypeEnum processType;
+
     public GoogleAppsScriptTypeProcess withProcessType(GoogleAppsScriptTypeProcessProcessTypeEnum processType) {
         this.processType = processType;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectName")
     public String projectName;
+
     public GoogleAppsScriptTypeProcess withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleAppsScriptTypeProcess withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -84,9 +90,11 @@ public class GoogleAppsScriptTypeProcess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAccessLevel")
     public GoogleAppsScriptTypeProcessUserAccessLevelEnum userAccessLevel;
+
     public GoogleAppsScriptTypeProcess withUserAccessLevel(GoogleAppsScriptTypeProcessUserAccessLevelEnum userAccessLevel) {
         this.userAccessLevel = userAccessLevel;
         return this;
     }
     
+    public GoogleAppsScriptTypeProcess(){}
 }

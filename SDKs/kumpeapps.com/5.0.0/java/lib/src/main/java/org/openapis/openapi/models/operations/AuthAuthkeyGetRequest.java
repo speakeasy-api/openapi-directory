@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AuthAuthkeyGetRequest {
@@ -12,6 +13,7 @@ public class AuthAuthkeyGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceName")
     public String deviceName;
+
     public AuthAuthkeyGetRequest withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -22,6 +24,7 @@ public class AuthAuthkeyGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=identifierForVendor")
     public String identifierForVendor;
+
     public AuthAuthkeyGetRequest withIdentifierForVendor(String identifierForVendor) {
         this.identifierForVendor = identifierForVendor;
         return this;
@@ -32,6 +35,7 @@ public class AuthAuthkeyGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=otp")
     public String otp;
+
     public AuthAuthkeyGetRequest withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -42,6 +46,7 @@ public class AuthAuthkeyGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=password")
     public String password;
+
     public AuthAuthkeyGetRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -52,9 +57,14 @@ public class AuthAuthkeyGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=username")
     public String username;
+
     public AuthAuthkeyGetRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AuthAuthkeyGetRequest(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

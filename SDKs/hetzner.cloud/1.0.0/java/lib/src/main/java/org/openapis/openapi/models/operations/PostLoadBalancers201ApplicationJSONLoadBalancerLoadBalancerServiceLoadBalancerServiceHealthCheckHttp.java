@@ -17,6 +17,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceL
      */
     @JsonProperty("domain")
     public String domain;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -27,6 +28,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceL
      */
     @JsonProperty("path")
     public String path;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withPath(String path) {
         this.path = path;
         return this;
@@ -38,6 +40,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceL
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withResponse(String response) {
         this.response = response;
         return this;
@@ -49,6 +52,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceL
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_codes")
     public String[] statusCodes;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withStatusCodes(String[] statusCodes) {
         this.statusCodes = statusCodes;
         return this;
@@ -60,9 +64,14 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceL
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tls")
     public Boolean tls;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp withTls(Boolean tls) {
         this.tls = tls;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerServiceLoadBalancerServiceHealthCheckHttp(@JsonProperty("domain") String domain, @JsonProperty("path") String path) {
+        this.domain = domain;
+        this.path = path;
+  }
 }

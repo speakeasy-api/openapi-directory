@@ -18,9 +18,11 @@ public class PersonMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public SourceInput[] sources;
+
     public PersonMetadataInput withSources(SourceInput[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public PersonMetadataInput(){}
 }

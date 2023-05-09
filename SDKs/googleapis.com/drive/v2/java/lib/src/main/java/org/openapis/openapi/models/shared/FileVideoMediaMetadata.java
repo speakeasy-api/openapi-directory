@@ -18,6 +18,7 @@ public class FileVideoMediaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMillis")
     public String durationMillis;
+
     public FileVideoMediaMetadata withDurationMillis(String durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -29,6 +30,7 @@ public class FileVideoMediaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public FileVideoMediaMetadata withHeight(Integer height) {
         this.height = height;
         return this;
@@ -40,9 +42,11 @@ public class FileVideoMediaMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public FileVideoMediaMetadata withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public FileVideoMediaMetadata(){}
 }

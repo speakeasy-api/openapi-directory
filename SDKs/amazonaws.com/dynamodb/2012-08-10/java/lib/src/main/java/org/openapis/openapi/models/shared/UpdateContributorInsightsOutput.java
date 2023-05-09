@@ -15,6 +15,7 @@ public class UpdateContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributorInsightsStatus")
     public ContributorInsightsStatusEnum contributorInsightsStatus;
+
     public UpdateContributorInsightsOutput withContributorInsightsStatus(ContributorInsightsStatusEnum contributorInsightsStatus) {
         this.contributorInsightsStatus = contributorInsightsStatus;
         return this;
@@ -23,6 +24,7 @@ public class UpdateContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public UpdateContributorInsightsOutput withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -31,9 +33,11 @@ public class UpdateContributorInsightsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateContributorInsightsOutput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public UpdateContributorInsightsOutput(){}
 }

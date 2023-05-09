@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse {
     
     public String contentType;
+
     public DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbac
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse googleCloudDatalabelingV1beta1ListFeedbackMessagesResponse;
+
     public DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse withGoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse(org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse googleCloudDatalabelingV1beta1ListFeedbackMessagesResponse) {
         this.googleCloudDatalabelingV1beta1ListFeedbackMessagesResponse = googleCloudDatalabelingV1beta1ListFeedbackMessagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbac
     
     
     public Integer statusCode;
+
     public DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbac
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatalabelingProjectsDatasetsAnnotatedDatasetsFeedbackThreadsFeedbackMessagesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

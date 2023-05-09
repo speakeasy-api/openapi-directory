@@ -15,9 +15,11 @@ public class IoTJobTimeoutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inProgressTimeoutInMinutes")
     public Long inProgressTimeoutInMinutes;
+
     public IoTJobTimeoutConfig withInProgressTimeoutInMinutes(Long inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
         return this;
     }
     
+    public IoTJobTimeoutConfig(){}
 }

@@ -15,9 +15,11 @@ public class RestoreBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backup")
     public Backup backup;
+
     public RestoreBackupResponse withBackup(Backup backup) {
         this.backup = backup;
         return this;
     }
     
+    public RestoreBackupResponse(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class InstitutionsUsersListUser {
     /**
@@ -12,6 +12,7 @@ public class InstitutionsUsersListUser {
      */
     
     public InstitutionsUsersListUserAttributes attributes;
+
     public InstitutionsUsersListUser withAttributes(InstitutionsUsersListUserAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class InstitutionsUsersListUser {
      */
     
     public String id;
+
     public InstitutionsUsersListUser withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class InstitutionsUsersListUser {
      */
     
     public InstitutionsUsersListUserLinks links;
+
     public InstitutionsUsersListUser withLinks(InstitutionsUsersListUserLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class InstitutionsUsersListUser {
      */
     
     public InstitutionsUsersListUserRelationships relationships;
+
     public InstitutionsUsersListUser withRelationships(InstitutionsUsersListUserRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,17 @@ public class InstitutionsUsersListUser {
      */
     
     public String type;
+
     public InstitutionsUsersListUser withType(String type) {
         this.type = type;
         return this;
     }
     
+    public InstitutionsUsersListUser(@JsonProperty("attributes") InstitutionsUsersListUserAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") InstitutionsUsersListUserLinks links, @JsonProperty("relationships") InstitutionsUsersListUserRelationships relationships, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.relationships = relationships;
+        this.type = type;
+  }
 }

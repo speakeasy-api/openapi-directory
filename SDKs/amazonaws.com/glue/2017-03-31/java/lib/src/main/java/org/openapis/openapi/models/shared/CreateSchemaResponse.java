@@ -15,6 +15,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compatibility")
     public CompatibilityEnum compatibility;
+
     public CreateSchemaResponse withCompatibility(CompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -23,6 +24,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataFormat")
     public DataFormatEnum dataFormat;
+
     public CreateSchemaResponse withDataFormat(DataFormatEnum dataFormat) {
         this.dataFormat = dataFormat;
         return this;
@@ -31,6 +33,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateSchemaResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestSchemaVersion")
     public Long latestSchemaVersion;
+
     public CreateSchemaResponse withLatestSchemaVersion(Long latestSchemaVersion) {
         this.latestSchemaVersion = latestSchemaVersion;
         return this;
@@ -47,6 +51,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextSchemaVersion")
     public Long nextSchemaVersion;
+
     public CreateSchemaResponse withNextSchemaVersion(Long nextSchemaVersion) {
         this.nextSchemaVersion = nextSchemaVersion;
         return this;
@@ -55,6 +60,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryArn")
     public String registryArn;
+
     public CreateSchemaResponse withRegistryArn(String registryArn) {
         this.registryArn = registryArn;
         return this;
@@ -63,6 +69,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public CreateSchemaResponse withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -71,6 +78,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public CreateSchemaResponse withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -79,6 +87,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaCheckpoint")
     public Long schemaCheckpoint;
+
     public CreateSchemaResponse withSchemaCheckpoint(Long schemaCheckpoint) {
         this.schemaCheckpoint = schemaCheckpoint;
         return this;
@@ -87,6 +96,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public CreateSchemaResponse withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -95,6 +105,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaStatus")
     public SchemaStatusEnum schemaStatus;
+
     public CreateSchemaResponse withSchemaStatus(SchemaStatusEnum schemaStatus) {
         this.schemaStatus = schemaStatus;
         return this;
@@ -103,6 +114,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public CreateSchemaResponse withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -111,6 +123,7 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionStatus")
     public SchemaVersionStatusEnum schemaVersionStatus;
+
     public CreateSchemaResponse withSchemaVersionStatus(SchemaVersionStatusEnum schemaVersionStatus) {
         this.schemaVersionStatus = schemaVersionStatus;
         return this;
@@ -119,9 +132,11 @@ public class CreateSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateSchemaResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSchemaResponse(){}
 }

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user may take.
+ * FileCapabilities - Capabilities the current user has on this file. Each capability corresponds to a fine-grained action that a user can take.
  */
 public class FileCapabilities {
     /**
@@ -18,28 +18,31 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAcceptOwnership")
     public Boolean canAcceptOwnership;
+
     public FileCapabilities withCanAcceptOwnership(Boolean canAcceptOwnership) {
         this.canAcceptOwnership = canAcceptOwnership;
         return this;
     }
     
     /**
-     * Whether the current user can add children to this folder. This is always false when the item is not a folder.
+     * Whether the current user can add children to this folder. This is always false when the item isn't a folder.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAddChildren")
     public Boolean canAddChildren;
+
     public FileCapabilities withCanAddChildren(Boolean canAddChildren) {
         this.canAddChildren = canAddChildren;
         return this;
     }
     
     /**
-     * Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can add a folder from another drive (different shared drive or My Drive) to this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAddFolderFromAnotherDrive")
     public Boolean canAddFolderFromAnotherDrive;
+
     public FileCapabilities withCanAddFolderFromAnotherDrive(Boolean canAddFolderFromAnotherDrive) {
         this.canAddFolderFromAnotherDrive = canAddFolderFromAnotherDrive;
         return this;
@@ -51,6 +54,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canAddMyDriveParent")
     public Boolean canAddMyDriveParent;
+
     public FileCapabilities withCanAddMyDriveParent(Boolean canAddMyDriveParent) {
         this.canAddMyDriveParent = canAddMyDriveParent;
         return this;
@@ -62,6 +66,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeCopyRequiresWriterPermission")
     public Boolean canChangeCopyRequiresWriterPermission;
+
     public FileCapabilities withCanChangeCopyRequiresWriterPermission(Boolean canChangeCopyRequiresWriterPermission) {
         this.canChangeCopyRequiresWriterPermission = canChangeCopyRequiresWriterPermission;
         return this;
@@ -73,6 +78,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeSecurityUpdateEnabled")
     public Boolean canChangeSecurityUpdateEnabled;
+
     public FileCapabilities withCanChangeSecurityUpdateEnabled(Boolean canChangeSecurityUpdateEnabled) {
         this.canChangeSecurityUpdateEnabled = canChangeSecurityUpdateEnabled;
         return this;
@@ -84,6 +90,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canChangeViewersCanCopyContent")
     public Boolean canChangeViewersCanCopyContent;
+
     public FileCapabilities withCanChangeViewersCanCopyContent(Boolean canChangeViewersCanCopyContent) {
         this.canChangeViewersCanCopyContent = canChangeViewersCanCopyContent;
         return this;
@@ -95,17 +102,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canComment")
     public Boolean canComment;
+
     public FileCapabilities withCanComment(Boolean canComment) {
         this.canComment = canComment;
         return this;
     }
     
     /**
-     * Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it is not a folder.
+     * Whether the current user can copy this file. For an item in a shared drive, whether the current user can copy non-folder descendants of this item, or this item itself if it's not a folder.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canCopy")
     public Boolean canCopy;
+
     public FileCapabilities withCanCopy(Boolean canCopy) {
         this.canCopy = canCopy;
         return this;
@@ -117,17 +126,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDelete")
     public Boolean canDelete;
+
     public FileCapabilities withCanDelete(Boolean canDelete) {
         this.canDelete = canDelete;
         return this;
     }
     
     /**
-     * Whether the current user can delete children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can delete children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDeleteChildren")
     public Boolean canDeleteChildren;
+
     public FileCapabilities withCanDeleteChildren(Boolean canDeleteChildren) {
         this.canDeleteChildren = canDeleteChildren;
         return this;
@@ -139,28 +150,31 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canDownload")
     public Boolean canDownload;
+
     public FileCapabilities withCanDownload(Boolean canDownload) {
         this.canDownload = canDownload;
         return this;
     }
     
     /**
-     * Whether the current user can edit this file. Other factors may limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
+     * Whether the current user can edit this file. Other factors might limit the type of changes a user can make to a file. For example, see canChangeCopyRequiresWriterPermission or canModifyContent.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canEdit")
     public Boolean canEdit;
+
     public FileCapabilities withCanEdit(Boolean canEdit) {
         this.canEdit = canEdit;
         return this;
     }
     
     /**
-     * Whether the current user can list the children of this folder. This is always false when the item is not a folder.
+     * Whether the current user can list the children of this folder. This is always false when the item isn't a folder.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canListChildren")
     public Boolean canListChildren;
+
     public FileCapabilities withCanListChildren(Boolean canListChildren) {
         this.canListChildren = canListChildren;
         return this;
@@ -172,6 +186,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canModifyContent")
     public Boolean canModifyContent;
+
     public FileCapabilities withCanModifyContent(Boolean canModifyContent) {
         this.canModifyContent = canModifyContent;
         return this;
@@ -183,6 +198,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canModifyContentRestriction")
     public Boolean canModifyContentRestriction;
+
     public FileCapabilities withCanModifyContentRestriction(Boolean canModifyContentRestriction) {
         this.canModifyContentRestriction = canModifyContentRestriction;
         return this;
@@ -194,17 +210,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canModifyLabels")
     public Boolean canModifyLabels;
+
     public FileCapabilities withCanModifyLabels(Boolean canModifyLabels) {
         this.canModifyLabels = canModifyLabels;
         return this;
     }
     
     /**
-     * Whether the current user can move children of this folder outside of the shared drive. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can move children of this folder outside of the shared drive. This is false when the item isn't a folder. Only populated for items in shared drives.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveChildrenOutOfDrive")
     public Boolean canMoveChildrenOutOfDrive;
+
     public FileCapabilities withCanMoveChildrenOutOfDrive(Boolean canMoveChildrenOutOfDrive) {
         this.canMoveChildrenOutOfDrive = canMoveChildrenOutOfDrive;
         return this;
@@ -216,17 +234,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveChildrenOutOfTeamDrive")
     public Boolean canMoveChildrenOutOfTeamDrive;
+
     public FileCapabilities withCanMoveChildrenOutOfTeamDrive(Boolean canMoveChildrenOutOfTeamDrive) {
         this.canMoveChildrenOutOfTeamDrive = canMoveChildrenOutOfTeamDrive;
         return this;
     }
     
     /**
-     * Whether the current user can move children of this folder within this drive. This is false when the item is not a folder. Note that a request to move the child may still fail depending on the current user's access to the child and to the destination folder.
+     * Whether the current user can move children of this folder within this shared drive or My Drive. This is false when the item isn't a folder. Note that a request to move the child might still fail depending on the current user's access to the child and to the destination folder.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveChildrenWithinDrive")
     public Boolean canMoveChildrenWithinDrive;
+
     public FileCapabilities withCanMoveChildrenWithinDrive(Boolean canMoveChildrenWithinDrive) {
         this.canMoveChildrenWithinDrive = canMoveChildrenWithinDrive;
         return this;
@@ -238,6 +258,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveChildrenWithinTeamDrive")
     public Boolean canMoveChildrenWithinTeamDrive;
+
     public FileCapabilities withCanMoveChildrenWithinTeamDrive(Boolean canMoveChildrenWithinTeamDrive) {
         this.canMoveChildrenWithinTeamDrive = canMoveChildrenWithinTeamDrive;
         return this;
@@ -249,17 +270,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveItemIntoTeamDrive")
     public Boolean canMoveItemIntoTeamDrive;
+
     public FileCapabilities withCanMoveItemIntoTeamDrive(Boolean canMoveItemIntoTeamDrive) {
         this.canMoveItemIntoTeamDrive = canMoveItemIntoTeamDrive;
         return this;
     }
     
     /**
-     * Whether the current user can move this item outside of this drive by changing its parent. Note that a request to change the parent of the item may still fail depending on the new parent that is being added.
+     * Whether the current user can move this item outside of this shared drive or My Drive by changing its parent. Note that a request to change the parent of the item might still fail depending on the new parent that's being added.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveItemOutOfDrive")
     public Boolean canMoveItemOutOfDrive;
+
     public FileCapabilities withCanMoveItemOutOfDrive(Boolean canMoveItemOutOfDrive) {
         this.canMoveItemOutOfDrive = canMoveItemOutOfDrive;
         return this;
@@ -271,17 +294,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveItemOutOfTeamDrive")
     public Boolean canMoveItemOutOfTeamDrive;
+
     public FileCapabilities withCanMoveItemOutOfTeamDrive(Boolean canMoveItemOutOfTeamDrive) {
         this.canMoveItemOutOfTeamDrive = canMoveItemOutOfTeamDrive;
         return this;
     }
     
     /**
-     * Whether the current user can move this item within this drive. Note that a request to change the parent of the item may still fail depending on the new parent that is being added and the parent that is being removed.
+     * Whether the current user can move this item within this shared drive or My Drive. Note that a request to change the parent of the item might still fail depending on the new parent that's being added and the parent that's being removed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveItemWithinDrive")
     public Boolean canMoveItemWithinDrive;
+
     public FileCapabilities withCanMoveItemWithinDrive(Boolean canMoveItemWithinDrive) {
         this.canMoveItemWithinDrive = canMoveItemWithinDrive;
         return this;
@@ -293,6 +318,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveItemWithinTeamDrive")
     public Boolean canMoveItemWithinTeamDrive;
+
     public FileCapabilities withCanMoveItemWithinTeamDrive(Boolean canMoveItemWithinTeamDrive) {
         this.canMoveItemWithinTeamDrive = canMoveItemWithinTeamDrive;
         return this;
@@ -304,6 +330,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canMoveTeamDriveItem")
     public Boolean canMoveTeamDriveItem;
+
     public FileCapabilities withCanMoveTeamDriveItem(Boolean canMoveTeamDriveItem) {
         this.canMoveTeamDriveItem = canMoveTeamDriveItem;
         return this;
@@ -315,6 +342,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadDrive")
     public Boolean canReadDrive;
+
     public FileCapabilities withCanReadDrive(Boolean canReadDrive) {
         this.canReadDrive = canReadDrive;
         return this;
@@ -326,17 +354,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadLabels")
     public Boolean canReadLabels;
+
     public FileCapabilities withCanReadLabels(Boolean canReadLabels) {
         this.canReadLabels = canReadLabels;
         return this;
     }
     
     /**
-     * Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it isn't a folder, can be read.
+     * Whether the current user can read the revisions resource of this file. For a shared drive item, whether revisions of non-folder descendants of this item, or this item itself if it's not a folder, can be read.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadRevisions")
     public Boolean canReadRevisions;
+
     public FileCapabilities withCanReadRevisions(Boolean canReadRevisions) {
         this.canReadRevisions = canReadRevisions;
         return this;
@@ -348,17 +378,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canReadTeamDrive")
     public Boolean canReadTeamDrive;
+
     public FileCapabilities withCanReadTeamDrive(Boolean canReadTeamDrive) {
         this.canReadTeamDrive = canReadTeamDrive;
         return this;
     }
     
     /**
-     * Whether the current user can remove children from this folder. This is always false when the item is not a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
+     * Whether the current user can remove children from this folder. This is always false when the item isn't a folder. For a folder in a shared drive, use canDeleteChildren or canTrashChildren instead.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRemoveChildren")
     public Boolean canRemoveChildren;
+
     public FileCapabilities withCanRemoveChildren(Boolean canRemoveChildren) {
         this.canRemoveChildren = canRemoveChildren;
         return this;
@@ -370,6 +402,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRemoveMyDriveParent")
     public Boolean canRemoveMyDriveParent;
+
     public FileCapabilities withCanRemoveMyDriveParent(Boolean canRemoveMyDriveParent) {
         this.canRemoveMyDriveParent = canRemoveMyDriveParent;
         return this;
@@ -381,6 +414,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRename")
     public Boolean canRename;
+
     public FileCapabilities withCanRename(Boolean canRename) {
         this.canRename = canRename;
         return this;
@@ -392,6 +426,7 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canShare")
     public Boolean canShare;
+
     public FileCapabilities withCanShare(Boolean canShare) {
         this.canShare = canShare;
         return this;
@@ -403,17 +438,19 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canTrash")
     public Boolean canTrash;
+
     public FileCapabilities withCanTrash(Boolean canTrash) {
         this.canTrash = canTrash;
         return this;
     }
     
     /**
-     * Whether the current user can trash children of this folder. This is false when the item is not a folder. Only populated for items in shared drives.
+     * Whether the current user can trash children of this folder. This is false when the item isn't a folder. Only populated for items in shared drives.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canTrashChildren")
     public Boolean canTrashChildren;
+
     public FileCapabilities withCanTrashChildren(Boolean canTrashChildren) {
         this.canTrashChildren = canTrashChildren;
         return this;
@@ -425,9 +462,11 @@ public class FileCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canUntrash")
     public Boolean canUntrash;
+
     public FileCapabilities withCanUntrash(Boolean canUntrash) {
         this.canUntrash = canUntrash;
         return this;
     }
     
+    public FileCapabilities(){}
 }

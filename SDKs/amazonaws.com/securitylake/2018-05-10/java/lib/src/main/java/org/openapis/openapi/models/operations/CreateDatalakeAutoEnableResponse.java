@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatalakeAutoEnableResponse {
@@ -12,6 +13,7 @@ public class CreateDatalakeAutoEnableResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDatalakeAutoEnableResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDatalakeAutoEnableResponse {
      */
     
     public Object accountNotFoundException;
+
     public CreateDatalakeAutoEnableResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatalakeAutoEnableResponse {
     
     
     public String contentType;
+
     public CreateDatalakeAutoEnableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatalakeAutoEnableResponse {
      */
     
     public java.util.Map<String, Object> createDatalakeAutoEnableResponse;
+
     public CreateDatalakeAutoEnableResponse withCreateDatalakeAutoEnableResponse(java.util.Map<String, Object> createDatalakeAutoEnableResponse) {
         this.createDatalakeAutoEnableResponse = createDatalakeAutoEnableResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatalakeAutoEnableResponse {
      */
     
     public Object internalServerException;
+
     public CreateDatalakeAutoEnableResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDatalakeAutoEnableResponse {
     
     
     public Integer statusCode;
+
     public CreateDatalakeAutoEnableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateDatalakeAutoEnableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatalakeAutoEnableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateDatalakeAutoEnableResponse {
      */
     
     public Object validationException;
+
     public CreateDatalakeAutoEnableResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDatalakeAutoEnableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

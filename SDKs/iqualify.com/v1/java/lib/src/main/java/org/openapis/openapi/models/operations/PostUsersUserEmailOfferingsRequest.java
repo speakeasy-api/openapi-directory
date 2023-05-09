@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersUserEmailOfferingsRequest {
@@ -12,6 +13,7 @@ public class PostUsersUserEmailOfferingsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String[] requestBody;
+
     public PostUsersUserEmailOfferingsRequest withRequestBody(String[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PostUsersUserEmailOfferingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userEmail")
     public String userEmail;
+
     public PostUsersUserEmailOfferingsRequest withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public PostUsersUserEmailOfferingsRequest(@JsonProperty("RequestBody") String[] requestBody, @JsonProperty("userEmail") String userEmail) {
+        this.requestBody = requestBody;
+        this.userEmail = userEmail;
+  }
 }

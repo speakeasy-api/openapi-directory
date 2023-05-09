@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ReconcileTagsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDeleteMissing")
     public Boolean forceDeleteMissing;
+
     public GoogleCloudDatacatalogV1ReconcileTagsRequestInput withForceDeleteMissing(Boolean forceDeleteMissing) {
         this.forceDeleteMissing = forceDeleteMissing;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1ReconcileTagsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagTemplate")
     public String tagTemplate;
+
     public GoogleCloudDatacatalogV1ReconcileTagsRequestInput withTagTemplate(String tagTemplate) {
         this.tagTemplate = tagTemplate;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1ReconcileTagsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public GoogleCloudDatacatalogV1TagInput[] tags;
+
     public GoogleCloudDatacatalogV1ReconcileTagsRequestInput withTags(GoogleCloudDatacatalogV1TagInput[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ReconcileTagsRequestInput(){}
 }

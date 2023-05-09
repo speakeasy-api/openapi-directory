@@ -18,6 +18,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public CreateMember201ApplicationJSON withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -29,6 +30,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public CreateMember201ApplicationJSON withHref(String href) {
         this.href = href;
         return this;
@@ -40,6 +42,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateMember201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initiator")
     public org.openapis.openapi.models.shared.Initiator initiator;
+
     public CreateMember201ApplicationJSON withInitiator(org.openapis.openapi.models.shared.Initiator initiator) {
         this.initiator = initiator;
         return this;
@@ -59,6 +63,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.MemberStateEnum state;
+
     public CreateMember201ApplicationJSON withState(org.openapis.openapi.models.shared.MemberStateEnum state) {
         this.state = state;
         return this;
@@ -67,6 +72,7 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public org.openapis.openapi.models.shared.TimestampResMember timestamp;
+
     public CreateMember201ApplicationJSON withTimestamp(org.openapis.openapi.models.shared.TimestampResMember timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -78,9 +84,11 @@ public class CreateMember201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public CreateMember201ApplicationJSON withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateMember201ApplicationJSON(){}
 }

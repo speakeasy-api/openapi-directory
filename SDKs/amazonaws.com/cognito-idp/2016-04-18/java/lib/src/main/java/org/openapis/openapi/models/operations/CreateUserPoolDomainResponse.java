@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUserPoolDomainResponse {
     
     public String contentType;
+
     public CreateUserPoolDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateUserPoolDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUserPoolDomainResponse createUserPoolDomainResponse;
+
     public CreateUserPoolDomainResponse withCreateUserPoolDomainResponse(org.openapis.openapi.models.shared.CreateUserPoolDomainResponse createUserPoolDomainResponse) {
         this.createUserPoolDomainResponse = createUserPoolDomainResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateUserPoolDomainResponse {
      */
     
     public Object internalErrorException;
+
     public CreateUserPoolDomainResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateUserPoolDomainResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateUserPoolDomainResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateUserPoolDomainResponse {
      */
     
     public Object limitExceededException;
+
     public CreateUserPoolDomainResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class CreateUserPoolDomainResponse {
      */
     
     public Object notAuthorizedException;
+
     public CreateUserPoolDomainResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -66,6 +73,7 @@ public class CreateUserPoolDomainResponse {
     
     
     public Integer statusCode;
+
     public CreateUserPoolDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateUserPoolDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUserPoolDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateUserPoolDomainResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUserPoolDomainResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateUserPoolDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

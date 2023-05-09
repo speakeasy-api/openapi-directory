@@ -15,6 +15,7 @@ public class BatchGetViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public BatchGetViewError[] errors;
+
     public BatchGetViewOutput withErrors(BatchGetViewError[] errors) {
         this.errors = errors;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetViewOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Views")
     public View[] views;
+
     public BatchGetViewOutput withViews(View[] views) {
         this.views = views;
         return this;
     }
     
+    public BatchGetViewOutput(){}
 }

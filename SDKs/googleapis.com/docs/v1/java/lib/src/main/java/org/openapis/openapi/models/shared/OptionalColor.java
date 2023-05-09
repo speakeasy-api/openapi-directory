@@ -18,9 +18,11 @@ public class OptionalColor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public OptionalColor withColor(Color color) {
         this.color = color;
         return this;
     }
     
+    public OptionalColor(){}
 }

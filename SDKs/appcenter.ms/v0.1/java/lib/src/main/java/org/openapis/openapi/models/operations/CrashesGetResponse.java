@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetResponse {
     
     public String contentType;
+
     public CrashesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CrashesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.Crash crash;
+
     public CrashesGetResponse withCrash(org.openapis.openapi.models.shared.Crash crash) {
         this.crash = crash;
         return this;
@@ -26,6 +29,7 @@ public class CrashesGetResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetResponse {
      */
     
     public CrashesGetDefaultApplicationJSON crashesGetDefaultApplicationJSONObject;
+
     public CrashesGetResponse withCrashesGetDefaultApplicationJSONObject(CrashesGetDefaultApplicationJSON crashesGetDefaultApplicationJSONObject) {
         this.crashesGetDefaultApplicationJSONObject = crashesGetDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSecret")
     public String clientSecret;
+
     public ItvPurchaseStrongResponse withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -29,6 +30,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public ItvPurchaseStrongResponse withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -40,6 +42,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentId")
     public String intentId;
+
     public ItvPurchaseStrongResponse withIntentId(String intentId) {
         this.intentId = intentId;
         return this;
@@ -51,6 +54,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentType")
     public String intentType;
+
     public ItvPurchaseStrongResponse withIntentType(String intentType) {
         this.intentType = intentType;
         return this;
@@ -62,6 +66,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planId")
     public String planId;
+
     public ItvPurchaseStrongResponse withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -73,6 +78,7 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ItvPurchaseStrongResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -84,9 +90,11 @@ public class ItvPurchaseStrongResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionId")
     public String subscriptionId;
+
     public ItvPurchaseStrongResponse withSubscriptionId(String subscriptionId) {
         this.subscriptionId = subscriptionId;
         return this;
     }
     
+    public ItvPurchaseStrongResponse(){}
 }

@@ -18,6 +18,7 @@ public class DataTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public DataTypeFieldFormatEnum format;
+
     public DataTypeField withFormat(DataTypeFieldFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +30,7 @@ public class DataTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DataTypeField withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class DataTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public DataTypeField withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public DataTypeField(){}
 }

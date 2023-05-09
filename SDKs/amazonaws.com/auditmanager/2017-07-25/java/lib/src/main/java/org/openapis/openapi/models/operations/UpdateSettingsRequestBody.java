@@ -15,6 +15,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultAssessmentReportsDestination")
     public UpdateSettingsRequestBodyDefaultAssessmentReportsDestination defaultAssessmentReportsDestination;
+
     public UpdateSettingsRequestBody withDefaultAssessmentReportsDestination(UpdateSettingsRequestBodyDefaultAssessmentReportsDestination defaultAssessmentReportsDestination) {
         this.defaultAssessmentReportsDestination = defaultAssessmentReportsDestination;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultProcessOwners")
     public org.openapis.openapi.models.shared.Role[] defaultProcessOwners;
+
     public UpdateSettingsRequestBody withDefaultProcessOwners(org.openapis.openapi.models.shared.Role[] defaultProcessOwners) {
         this.defaultProcessOwners = defaultProcessOwners;
         return this;
@@ -37,6 +39,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deregistrationPolicy")
     public UpdateSettingsRequestBodyDeregistrationPolicy deregistrationPolicy;
+
     public UpdateSettingsRequestBody withDeregistrationPolicy(UpdateSettingsRequestBodyDeregistrationPolicy deregistrationPolicy) {
         this.deregistrationPolicy = deregistrationPolicy;
         return this;
@@ -48,6 +51,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceFinderEnabled")
     public Boolean evidenceFinderEnabled;
+
     public UpdateSettingsRequestBody withEvidenceFinderEnabled(Boolean evidenceFinderEnabled) {
         this.evidenceFinderEnabled = evidenceFinderEnabled;
         return this;
@@ -59,6 +63,7 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKey")
     public String kmsKey;
+
     public UpdateSettingsRequestBody withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -70,9 +75,11 @@ public class UpdateSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsTopic")
     public String snsTopic;
+
     public UpdateSettingsRequestBody withSnsTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
     }
     
+    public UpdateSettingsRequestBody(){}
 }

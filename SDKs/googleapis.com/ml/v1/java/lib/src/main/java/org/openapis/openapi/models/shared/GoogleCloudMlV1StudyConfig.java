@@ -18,6 +18,7 @@ public class GoogleCloudMlV1StudyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("algorithm")
     public GoogleCloudMlV1StudyConfigAlgorithmEnum algorithm;
+
     public GoogleCloudMlV1StudyConfig withAlgorithm(GoogleCloudMlV1StudyConfigAlgorithmEnum algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1StudyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedStoppingConfig")
     public GoogleCloudMlV1AutomatedStoppingConfig automatedStoppingConfig;
+
     public GoogleCloudMlV1StudyConfig withAutomatedStoppingConfig(GoogleCloudMlV1AutomatedStoppingConfig automatedStoppingConfig) {
         this.automatedStoppingConfig = automatedStoppingConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1StudyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GoogleCloudMlV1StudyConfigMetricSpec[] metrics;
+
     public GoogleCloudMlV1StudyConfig withMetrics(GoogleCloudMlV1StudyConfigMetricSpec[] metrics) {
         this.metrics = metrics;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudMlV1StudyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public GoogleCloudMlV1StudyConfigParameterSpec[] parameters;
+
     public GoogleCloudMlV1StudyConfig withParameters(GoogleCloudMlV1StudyConfigParameterSpec[] parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfig(){}
 }

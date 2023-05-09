@@ -54,11 +54,9 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllMonitorsResponse res = new org.openapis.openapi.models.operations.AllMonitorsResponse() {{
+        org.openapis.openapi.models.operations.AllMonitorsResponse res = new org.openapis.openapi.models.operations.AllMonitorsResponse(contentType, httpRes.statusCode()) {{
             allMonitors200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMonitorResponse res = new org.openapis.openapi.models.operations.CreateMonitorResponse() {{
+        org.openapis.openapi.models.operations.CreateMonitorResponse res = new org.openapis.openapi.models.operations.CreateMonitorResponse(contentType, httpRes.statusCode()) {{
             createMonitor200ApplicationJSONObject = null;
             createMonitor400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -165,12 +161,10 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMonitorResponse res = new org.openapis.openapi.models.operations.DeleteMonitorResponse() {{
+        org.openapis.openapi.models.operations.DeleteMonitorResponse res = new org.openapis.openapi.models.operations.DeleteMonitorResponse(contentType, httpRes.statusCode()) {{
             deleteMonitor200ApplicationJSONObject = null;
             deleteMonitor404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +208,9 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunAMonitorResponse res = new org.openapis.openapi.models.operations.RunAMonitorResponse() {{
+        org.openapis.openapi.models.operations.RunAMonitorResponse res = new org.openapis.openapi.models.operations.RunAMonitorResponse(contentType, httpRes.statusCode()) {{
             runAMonitor200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,12 +247,10 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SingleMonitorResponse res = new org.openapis.openapi.models.operations.SingleMonitorResponse() {{
+        org.openapis.openapi.models.operations.SingleMonitorResponse res = new org.openapis.openapi.models.operations.SingleMonitorResponse(contentType, httpRes.statusCode()) {{
             singleMonitor200ApplicationJSONObject = null;
             singleMonitor404ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +312,9 @@ public class Monitors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMonitorResponse res = new org.openapis.openapi.models.operations.UpdateMonitorResponse() {{
+        org.openapis.openapi.models.operations.UpdateMonitorResponse res = new org.openapis.openapi.models.operations.UpdateMonitorResponse(contentType, httpRes.statusCode()) {{
             updateMonitor200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class NetworkInterfaceCountRequest {
     
     public Long max;
+
     public NetworkInterfaceCountRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -19,9 +20,11 @@ public class NetworkInterfaceCountRequest {
     
     
     public Long min;
+
     public NetworkInterfaceCountRequest withMin(Long min) {
         this.min = min;
         return this;
     }
     
+    public NetworkInterfaceCountRequest(){}
 }

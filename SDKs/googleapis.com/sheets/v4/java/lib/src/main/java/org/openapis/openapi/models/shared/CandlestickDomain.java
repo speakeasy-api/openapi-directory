@@ -18,6 +18,7 @@ public class CandlestickDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ChartData data;
+
     public CandlestickDomain withData(ChartData data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class CandlestickDomain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reversed")
     public Boolean reversed;
+
     public CandlestickDomain withReversed(Boolean reversed) {
         this.reversed = reversed;
         return this;
     }
     
+    public CandlestickDomain(){}
 }

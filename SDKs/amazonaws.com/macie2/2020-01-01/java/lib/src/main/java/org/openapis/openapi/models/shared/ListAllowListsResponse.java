@@ -15,6 +15,7 @@ public class ListAllowListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowLists")
     public AllowListSummary[] allowLists;
+
     public ListAllowListsResponse withAllowLists(AllowListSummary[] allowLists) {
         this.allowLists = allowLists;
         return this;
@@ -23,9 +24,11 @@ public class ListAllowListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAllowListsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAllowListsResponse(){}
 }

@@ -15,9 +15,11 @@ public class GetSagemakerServicecatalogPortfolioStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SagemakerServicecatalogStatusEnum status;
+
     public GetSagemakerServicecatalogPortfolioStatusOutput withStatus(SagemakerServicecatalogStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetSagemakerServicecatalogPortfolioStatusOutput(){}
 }

@@ -18,6 +18,7 @@ public class NewDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachment")
     public DiskAttachment attachment;
+
     public NewDisk withAttachment(DiskAttachment attachment) {
         this.attachment = attachment;
         return this;
@@ -29,6 +30,7 @@ public class NewDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public Boolean autoDelete;
+
     public NewDisk withAutoDelete(Boolean autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -40,6 +42,7 @@ public class NewDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boot")
     public Boolean boot;
+
     public NewDisk withBoot(Boolean boot) {
         this.boot = boot;
         return this;
@@ -51,9 +54,11 @@ public class NewDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initializeParams")
     public NewDiskInitializeParams initializeParams;
+
     public NewDisk withInitializeParams(NewDiskInitializeParams initializeParams) {
         this.initializeParams = initializeParams;
         return this;
     }
     
+    public NewDisk(){}
 }

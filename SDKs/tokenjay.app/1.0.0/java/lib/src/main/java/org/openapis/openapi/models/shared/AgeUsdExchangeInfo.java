@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AgeUsdExchangeInfo - OK
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AgeUsdExchangeInfo {
     
     public Long bankFeeAmount;
+
     public AgeUsdExchangeInfo withBankFeeAmount(Long bankFeeAmount) {
         this.bankFeeAmount = bankFeeAmount;
         return this;
@@ -19,6 +20,7 @@ public class AgeUsdExchangeInfo {
     
     
     public String bankFeeDescription;
+
     public AgeUsdExchangeInfo withBankFeeDescription(String bankFeeDescription) {
         this.bankFeeDescription = bankFeeDescription;
         return this;
@@ -26,6 +28,7 @@ public class AgeUsdExchangeInfo {
     
     
     public Long ergAmount;
+
     public AgeUsdExchangeInfo withErgAmount(Long ergAmount) {
         this.ergAmount = ergAmount;
         return this;
@@ -33,6 +36,7 @@ public class AgeUsdExchangeInfo {
     
     
     public String ergAmountDescription;
+
     public AgeUsdExchangeInfo withErgAmountDescription(String ergAmountDescription) {
         this.ergAmountDescription = ergAmountDescription;
         return this;
@@ -40,6 +44,7 @@ public class AgeUsdExchangeInfo {
     
     
     public Long exchangeRate;
+
     public AgeUsdExchangeInfo withExchangeRate(Long exchangeRate) {
         this.exchangeRate = exchangeRate;
         return this;
@@ -47,6 +52,7 @@ public class AgeUsdExchangeInfo {
     
     
     public Long jayFeeAmount;
+
     public AgeUsdExchangeInfo withJayFeeAmount(Long jayFeeAmount) {
         this.jayFeeAmount = jayFeeAmount;
         return this;
@@ -54,6 +60,7 @@ public class AgeUsdExchangeInfo {
     
     
     public String jayFeeDescription;
+
     public AgeUsdExchangeInfo withJayFeeDescription(String jayFeeDescription) {
         this.jayFeeDescription = jayFeeDescription;
         return this;
@@ -61,9 +68,20 @@ public class AgeUsdExchangeInfo {
     
     
     public Long totalAmount;
+
     public AgeUsdExchangeInfo withTotalAmount(Long totalAmount) {
         this.totalAmount = totalAmount;
         return this;
     }
     
+    public AgeUsdExchangeInfo(@JsonProperty("bankFeeAmount") Long bankFeeAmount, @JsonProperty("bankFeeDescription") String bankFeeDescription, @JsonProperty("ergAmount") Long ergAmount, @JsonProperty("ergAmountDescription") String ergAmountDescription, @JsonProperty("exchangeRate") Long exchangeRate, @JsonProperty("jayFeeAmount") Long jayFeeAmount, @JsonProperty("jayFeeDescription") String jayFeeDescription, @JsonProperty("totalAmount") Long totalAmount) {
+        this.bankFeeAmount = bankFeeAmount;
+        this.bankFeeDescription = bankFeeDescription;
+        this.ergAmount = ergAmount;
+        this.ergAmountDescription = ergAmountDescription;
+        this.exchangeRate = exchangeRate;
+        this.jayFeeAmount = jayFeeAmount;
+        this.jayFeeDescription = jayFeeDescription;
+        this.totalAmount = totalAmount;
+  }
 }

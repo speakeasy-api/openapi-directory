@@ -23,6 +23,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveChargingEnergy")
     public Double activeChargingEnergy;
+
     public PicoChargingData withActiveChargingEnergy(Double activeChargingEnergy) {
         this.activeChargingEnergy = activeChargingEnergy;
         return this;
@@ -34,6 +35,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveChargingPower")
     public Double activeChargingPower;
+
     public PicoChargingData withActiveChargingPower(Double activeChargingPower) {
         this.activeChargingPower = activeChargingPower;
         return this;
@@ -45,6 +47,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionMode")
     public PicoChargingDataConnectionModeEnum connectionMode;
+
     public PicoChargingData withConnectionMode(PicoChargingDataConnectionModeEnum connectionMode) {
         this.connectionMode = connectionMode;
         return this;
@@ -56,6 +59,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Duration")
     public Integer duration;
+
     public PicoChargingData withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -67,6 +71,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastWarningOrError")
     public PicoChargingDataLastWarningOrErrorEnum lastWarningOrError;
+
     public PicoChargingData withLastWarningOrError(PicoChargingDataLastWarningOrErrorEnum lastWarningOrError) {
         this.lastWarningOrError = lastWarningOrError;
         return this;
@@ -78,6 +83,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastWarningOrErrorMessage")
     public String lastWarningOrErrorMessage;
+
     public PicoChargingData withLastWarningOrErrorMessage(String lastWarningOrErrorMessage) {
         this.lastWarningOrErrorMessage = lastWarningOrErrorMessage;
         return this;
@@ -91,6 +97,7 @@ public class PicoChargingData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastWarningOrErrorTime")
     public OffsetDateTime lastWarningOrErrorTime;
+
     public PicoChargingData withLastWarningOrErrorTime(OffsetDateTime lastWarningOrErrorTime) {
         this.lastWarningOrErrorTime = lastWarningOrErrorTime;
         return this;
@@ -102,6 +109,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadSheddingState")
     public PicoChargingDataLoadSheddingStateEnum loadSheddingState;
+
     public PicoChargingData withLoadSheddingState(PicoChargingDataLoadSheddingStateEnum loadSheddingState) {
         this.loadSheddingState = loadSheddingState;
         return this;
@@ -113,6 +121,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadmanagementGroupName")
     public String loadmanagementGroupName;
+
     public PicoChargingData withLoadmanagementGroupName(String loadmanagementGroupName) {
         this.loadmanagementGroupName = loadmanagementGroupName;
         return this;
@@ -124,6 +133,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAllowedChargingCurrent")
     public Integer maxAllowedChargingCurrent;
+
     public PicoChargingData withMaxAllowedChargingCurrent(Integer maxAllowedChargingCurrent) {
         this.maxAllowedChargingCurrent = maxAllowedChargingCurrent;
         return this;
@@ -135,6 +145,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxDynamicCurrent")
     public Integer maxDynamicCurrent;
+
     public PicoChargingData withMaxDynamicCurrent(Integer maxDynamicCurrent) {
         this.maxDynamicCurrent = maxDynamicCurrent;
         return this;
@@ -146,6 +157,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxLoadmanagementGroupCurrent")
     public Integer maxLoadmanagementGroupCurrent;
+
     public PicoChargingData withMaxLoadmanagementGroupCurrent(Integer maxLoadmanagementGroupCurrent) {
         this.maxLoadmanagementGroupCurrent = maxLoadmanagementGroupCurrent;
         return this;
@@ -157,6 +169,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxStationCurrent")
     public Integer maxStationCurrent;
+
     public PicoChargingData withMaxStationCurrent(Integer maxStationCurrent) {
         this.maxStationCurrent = maxStationCurrent;
         return this;
@@ -168,8 +181,22 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinStationCurrent")
     public Integer minStationCurrent;
+
     public PicoChargingData withMinStationCurrent(Integer minStationCurrent) {
         this.minStationCurrent = minStationCurrent;
+        return this;
+    }
+    
+    /**
+     * Received Signal Strength Indicator for the connection mode (wifi or mobile). 
+     *             -127 (min) to 0 (Max)
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("RSSI")
+    public Integer rssi;
+
+    public PicoChargingData withRssi(Integer rssi) {
+        this.rssi = rssi;
         return this;
     }
     
@@ -179,6 +206,7 @@ public class PicoChargingData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public PicoChargingDataStateEnum state;
+
     public PicoChargingData withState(PicoChargingDataStateEnum state) {
         this.state = state;
         return this;
@@ -192,9 +220,11 @@ public class PicoChargingData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ValueDate")
     public OffsetDateTime valueDate;
+
     public PicoChargingData withValueDate(OffsetDateTime valueDate) {
         this.valueDate = valueDate;
         return this;
     }
     
+    public PicoChargingData(){}
 }

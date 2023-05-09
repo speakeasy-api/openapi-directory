@@ -18,6 +18,7 @@ public class ChangeLogItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public ChangeLogItem withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -26,6 +27,7 @@ public class ChangeLogItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChangeLogItem withDescription(String description) {
         this.description = description;
         return this;
@@ -33,9 +35,14 @@ public class ChangeLogItem {
     
     @JsonProperty("title")
     public String title;
+
     public ChangeLogItem withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ChangeLogItem(@JsonProperty("date") OffsetDateTime date, @JsonProperty("title") String title) {
+        this.date = date;
+        this.title = title;
+  }
 }

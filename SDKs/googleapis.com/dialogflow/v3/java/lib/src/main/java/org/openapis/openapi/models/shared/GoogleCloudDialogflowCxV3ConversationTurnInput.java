@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3ConversationTurnInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userInput")
     public GoogleCloudDialogflowCxV3ConversationTurnUserInput userInput;
+
     public GoogleCloudDialogflowCxV3ConversationTurnInput withUserInput(GoogleCloudDialogflowCxV3ConversationTurnUserInput userInput) {
         this.userInput = userInput;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3ConversationTurnInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualAgentOutput")
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput virtualAgentOutput;
+
     public GoogleCloudDialogflowCxV3ConversationTurnInput withVirtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputInput virtualAgentOutput) {
         this.virtualAgentOutput = virtualAgentOutput;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3ConversationTurnInput(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendMessageRequestBody4AudioAudio {
     @JsonProperty("url")
     public String url;
+
     public SendMessageRequestBody4AudioAudio withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SendMessageRequestBody4AudioAudio(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

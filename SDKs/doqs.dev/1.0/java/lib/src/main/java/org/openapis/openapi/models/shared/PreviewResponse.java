@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PreviewResponse {
     @JsonProperty("html")
     public String html;
+
     public PreviewResponse withHtml(String html) {
         this.html = html;
         return this;
     }
     
+    public PreviewResponse(@JsonProperty("html") String html) {
+        this.html = html;
+  }
 }

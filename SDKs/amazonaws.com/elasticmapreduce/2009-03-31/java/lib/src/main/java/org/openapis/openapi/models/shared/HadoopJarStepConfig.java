@@ -15,6 +15,7 @@ public class HadoopJarStepConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Args")
     public String[] args;
+
     public HadoopJarStepConfig withArgs(String[] args) {
         this.args = args;
         return this;
@@ -22,6 +23,7 @@ public class HadoopJarStepConfig {
     
     @JsonProperty("Jar")
     public String jar;
+
     public HadoopJarStepConfig withJar(String jar) {
         this.jar = jar;
         return this;
@@ -30,6 +32,7 @@ public class HadoopJarStepConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MainClass")
     public String mainClass;
+
     public HadoopJarStepConfig withMainClass(String mainClass) {
         this.mainClass = mainClass;
         return this;
@@ -38,9 +41,13 @@ public class HadoopJarStepConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public KeyValue[] properties;
+
     public HadoopJarStepConfig withProperties(KeyValue[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public HadoopJarStepConfig(@JsonProperty("Jar") String jar) {
+        this.jar = jar;
+  }
 }

@@ -12,6 +12,7 @@ public class PostAdminMappingsRemoveByMetadataRequestBodyStringEquals {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseInsensitive")
     public Boolean caseInsensitive;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyStringEquals withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
@@ -19,9 +20,13 @@ public class PostAdminMappingsRemoveByMetadataRequestBodyStringEquals {
     
     @JsonProperty("equalTo")
     public Boolean equalTo;
+
     public PostAdminMappingsRemoveByMetadataRequestBodyStringEquals withEqualTo(Boolean equalTo) {
         this.equalTo = equalTo;
         return this;
     }
     
+    public PostAdminMappingsRemoveByMetadataRequestBodyStringEquals(@JsonProperty("equalTo") Boolean equalTo) {
+        this.equalTo = equalTo;
+  }
 }

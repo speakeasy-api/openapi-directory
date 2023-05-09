@@ -15,6 +15,7 @@ public class StartSuiteRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteDefinitionVersion")
     public String suiteDefinitionVersion;
+
     public StartSuiteRunRequestBody withSuiteDefinitionVersion(String suiteDefinitionVersion) {
         this.suiteDefinitionVersion = suiteDefinitionVersion;
         return this;
@@ -25,6 +26,7 @@ public class StartSuiteRunRequestBody {
      */
     @JsonProperty("suiteRunConfiguration")
     public StartSuiteRunRequestBodySuiteRunConfiguration suiteRunConfiguration;
+
     public StartSuiteRunRequestBody withSuiteRunConfiguration(StartSuiteRunRequestBodySuiteRunConfiguration suiteRunConfiguration) {
         this.suiteRunConfiguration = suiteRunConfiguration;
         return this;
@@ -36,9 +38,13 @@ public class StartSuiteRunRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public StartSuiteRunRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public StartSuiteRunRequestBody(@JsonProperty("suiteRunConfiguration") StartSuiteRunRequestBodySuiteRunConfiguration suiteRunConfiguration) {
+        this.suiteRunConfiguration = suiteRunConfiguration;
+  }
 }

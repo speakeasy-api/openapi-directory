@@ -18,6 +18,7 @@ public class EmployeeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeId")
     public String employeeId;
+
     public EmployeeInfo withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -29,6 +30,7 @@ public class EmployeeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusCode")
     public String statusCode;
+
     public EmployeeInfo withStatusCode(String statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +42,11 @@ public class EmployeeInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusTypeCode")
     public String statusTypeCode;
+
     public EmployeeInfo withStatusTypeCode(String statusTypeCode) {
         this.statusTypeCode = statusTypeCode;
         return this;
     }
     
+    public EmployeeInfo(){}
 }

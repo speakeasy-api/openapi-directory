@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEnsemblProteinMappingUsingPOSTResponse {
     
     public byte[] body;
+
     public GetEnsemblProteinMappingUsingPOSTResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetEnsemblProteinMappingUsingPOSTResponse {
     
     
     public String contentType;
+
     public GetEnsemblProteinMappingUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetEnsemblProteinMappingUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public GetEnsemblProteinMappingUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetEnsemblProteinMappingUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEnsemblProteinMappingUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetEnsemblProteinMappingUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

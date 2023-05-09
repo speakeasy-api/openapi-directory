@@ -15,9 +15,11 @@ public class CreateReplicationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationJobId")
     public String replicationJobId;
+
     public CreateReplicationJobResponse withReplicationJobId(String replicationJobId) {
         this.replicationJobId = replicationJobId;
         return this;
     }
     
+    public CreateReplicationJobResponse(){}
 }

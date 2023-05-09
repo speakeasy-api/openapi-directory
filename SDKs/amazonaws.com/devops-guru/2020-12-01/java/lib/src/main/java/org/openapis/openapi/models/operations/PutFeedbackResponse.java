@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFeedbackResponse {
@@ -12,6 +13,7 @@ public class PutFeedbackResponse {
      */
     
     public Object accessDeniedException;
+
     public PutFeedbackResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutFeedbackResponse {
      */
     
     public Object conflictException;
+
     public PutFeedbackResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutFeedbackResponse {
     
     
     public String contentType;
+
     public PutFeedbackResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutFeedbackResponse {
      */
     
     public Object internalServerException;
+
     public PutFeedbackResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutFeedbackResponse {
      */
     
     public java.util.Map<String, Object> putFeedbackResponse;
+
     public PutFeedbackResponse withPutFeedbackResponse(java.util.Map<String, Object> putFeedbackResponse) {
         this.putFeedbackResponse = putFeedbackResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutFeedbackResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutFeedbackResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutFeedbackResponse {
     
     
     public Integer statusCode;
+
     public PutFeedbackResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutFeedbackResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFeedbackResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class PutFeedbackResponse {
      */
     
     public Object throttlingException;
+
     public PutFeedbackResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class PutFeedbackResponse {
      */
     
     public Object validationException;
+
     public PutFeedbackResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutFeedbackResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

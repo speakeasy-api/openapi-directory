@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Stage {
     @JsonProperty("DurationInMinutes")
     public Long durationInMinutes;
+
     public Stage withDurationInMinutes(Long durationInMinutes) {
         this.durationInMinutes = durationInMinutes;
         return this;
@@ -19,9 +20,14 @@ public class Stage {
     
     @JsonProperty("Targets")
     public Target[] targets;
+
     public Stage withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public Stage(@JsonProperty("DurationInMinutes") Long durationInMinutes, @JsonProperty("Targets") Target[] targets) {
+        this.durationInMinutes = durationInMinutes;
+        this.targets = targets;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputConfig {
     @JsonProperty("DataInputConfig")
     public String dataInputConfig;
+
     public InputConfig withDataInputConfig(String dataInputConfig) {
         this.dataInputConfig = dataInputConfig;
         return this;
@@ -21,6 +22,7 @@ public class InputConfig {
     
     @JsonProperty("Framework")
     public FrameworkEnum framework;
+
     public InputConfig withFramework(FrameworkEnum framework) {
         this.framework = framework;
         return this;
@@ -29,6 +31,7 @@ public class InputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FrameworkVersion")
     public String frameworkVersion;
+
     public InputConfig withFrameworkVersion(String frameworkVersion) {
         this.frameworkVersion = frameworkVersion;
         return this;
@@ -36,9 +39,15 @@ public class InputConfig {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public InputConfig withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public InputConfig(@JsonProperty("DataInputConfig") String dataInputConfig, @JsonProperty("Framework") FrameworkEnum framework, @JsonProperty("S3Uri") String s3Uri) {
+        this.dataInputConfig = dataInputConfig;
+        this.framework = framework;
+        this.s3Uri = s3Uri;
+  }
 }

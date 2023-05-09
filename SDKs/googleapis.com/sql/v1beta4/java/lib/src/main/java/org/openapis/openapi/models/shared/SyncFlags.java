@@ -18,6 +18,7 @@ public class SyncFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SyncFlags withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class SyncFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SyncFlags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SyncFlags(){}
 }

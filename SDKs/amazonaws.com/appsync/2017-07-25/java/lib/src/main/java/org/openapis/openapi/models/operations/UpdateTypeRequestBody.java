@@ -15,6 +15,7 @@ public class UpdateTypeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public UpdateTypeRequestBody withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -25,9 +26,13 @@ public class UpdateTypeRequestBody {
      */
     @JsonProperty("format")
     public UpdateTypeRequestBodyFormatEnum format;
+
     public UpdateTypeRequestBody withFormat(UpdateTypeRequestBodyFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public UpdateTypeRequestBody(@JsonProperty("format") UpdateTypeRequestBodyFormatEnum format) {
+        this.format = format;
+  }
 }

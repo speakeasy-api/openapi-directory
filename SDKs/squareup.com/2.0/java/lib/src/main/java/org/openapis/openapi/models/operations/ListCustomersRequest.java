@@ -15,6 +15,7 @@ public class ListCustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListCustomersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -28,6 +29,7 @@ public class ListCustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListCustomersRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class ListCustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_field")
     public String sortField;
+
     public ListCustomersRequest withSortField(String sortField) {
         this.sortField = sortField;
         return this;
@@ -53,9 +56,11 @@ public class ListCustomersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListCustomersRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListCustomersRequest(){}
 }

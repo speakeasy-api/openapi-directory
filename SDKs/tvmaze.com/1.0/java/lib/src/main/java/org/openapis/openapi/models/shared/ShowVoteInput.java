@@ -15,9 +15,11 @@ public class ShowVoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vote")
     public Long vote;
+
     public ShowVoteInput withVote(Long vote) {
         this.vote = vote;
         return this;
     }
     
+    public ShowVoteInput(){}
 }

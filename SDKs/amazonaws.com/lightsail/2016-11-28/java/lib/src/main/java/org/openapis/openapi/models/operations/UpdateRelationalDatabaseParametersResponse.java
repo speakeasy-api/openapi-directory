@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRelationalDatabaseParametersResponse {
@@ -12,6 +13,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateRelationalDatabaseParametersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public UpdateRelationalDatabaseParametersResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRelationalDatabaseParametersResponse {
     
     
     public String contentType;
+
     public UpdateRelationalDatabaseParametersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateRelationalDatabaseParametersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object notFoundException;
+
     public UpdateRelationalDatabaseParametersResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object operationFailureException;
+
     public UpdateRelationalDatabaseParametersResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateRelationalDatabaseParametersResponse {
     
     
     public Integer statusCode;
+
     public UpdateRelationalDatabaseParametersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateRelationalDatabaseParametersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRelationalDatabaseParametersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object serviceException;
+
     public UpdateRelationalDatabaseParametersResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public Object unauthenticatedException;
+
     public UpdateRelationalDatabaseParametersResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateRelationalDatabaseParametersResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRelationalDatabaseParametersResult updateRelationalDatabaseParametersResult;
+
     public UpdateRelationalDatabaseParametersResponse withUpdateRelationalDatabaseParametersResult(org.openapis.openapi.models.shared.UpdateRelationalDatabaseParametersResult updateRelationalDatabaseParametersResult) {
         this.updateRelationalDatabaseParametersResult = updateRelationalDatabaseParametersResult;
         return this;
     }
     
+    public UpdateRelationalDatabaseParametersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteApiV2SpotsIdSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String cdOauth2;
+
     public DeleteApiV2SpotsIdSecurity withCdOauth2(String cdOauth2) {
         this.cdOauth2 = cdOauth2;
         return this;
     }
     
+    public DeleteApiV2SpotsIdSecurity(@JsonProperty("cd_oauth2") String cdOauth2) {
+        this.cdOauth2 = cdOauth2;
+  }
 }

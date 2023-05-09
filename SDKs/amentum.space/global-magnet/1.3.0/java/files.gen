@@ -36,4 +36,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMa
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSONTotalIntensity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticField200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/AppApiWMMEndpointsWMMMagneticFieldResponse.java
+docs/sdk/README.md
 USAGE.md

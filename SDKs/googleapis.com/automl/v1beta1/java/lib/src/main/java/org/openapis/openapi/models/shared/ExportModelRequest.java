@@ -18,9 +18,11 @@ public class ExportModelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputConfig")
     public ModelExportOutputConfig outputConfig;
+
     public ExportModelRequest withOutputConfig(ModelExportOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportModelRequest(){}
 }

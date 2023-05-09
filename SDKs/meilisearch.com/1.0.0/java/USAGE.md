@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequestBody;
 import org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequest;
+import org.openapis.openapi.models.operations.AddOrReplaceDocumentsRequestBody;
 import org.openapis.openapi.models.operations.AddOrReplaceDocumentsResponse;
 
 public class Application {
@@ -38,8 +37,9 @@ public class Application {
                         title = "Pride and Prejudice";
                     }}),
                 }};
+                csvDelimiter = ";";
                 primaryKey = "id";
-            }}            
+            }};            
 
             AddOrReplaceDocumentsResponse res = sdk.documents.addOrReplaceDocuments(req);
 
@@ -49,5 +49,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

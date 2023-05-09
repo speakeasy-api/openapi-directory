@@ -15,6 +15,7 @@ public class AddGoogleAnalyticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsAccountId")
     public String analyticsAccountId;
+
     public AddGoogleAnalyticsRequest withAnalyticsAccountId(String analyticsAccountId) {
         this.analyticsAccountId = analyticsAccountId;
         return this;
@@ -26,9 +27,11 @@ public class AddGoogleAnalyticsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyticsPropertyId")
     public String analyticsPropertyId;
+
     public AddGoogleAnalyticsRequest withAnalyticsPropertyId(String analyticsPropertyId) {
         this.analyticsPropertyId = analyticsPropertyId;
         return this;
     }
     
+    public AddGoogleAnalyticsRequest(){}
 }

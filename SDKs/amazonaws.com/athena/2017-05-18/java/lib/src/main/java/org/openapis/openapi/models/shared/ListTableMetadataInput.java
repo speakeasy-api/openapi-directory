@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListTableMetadataInput {
     @JsonProperty("CatalogName")
     public String catalogName;
+
     public ListTableMetadataInput withCatalogName(String catalogName) {
         this.catalogName = catalogName;
         return this;
@@ -18,6 +19,7 @@ public class ListTableMetadataInput {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public ListTableMetadataInput withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class ListTableMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public ListTableMetadataInput withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -34,6 +37,7 @@ public class ListTableMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListTableMetadataInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -42,9 +46,14 @@ public class ListTableMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTableMetadataInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTableMetadataInput(@JsonProperty("CatalogName") String catalogName, @JsonProperty("DatabaseName") String databaseName) {
+        this.catalogName = catalogName;
+        this.databaseName = databaseName;
+  }
 }

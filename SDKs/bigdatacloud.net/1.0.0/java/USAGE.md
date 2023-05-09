@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.IpGeolocationWithConfidenceAreaAndHazardReportApiRequest;
 import org.openapis.openapi.models.operations.IpGeolocationWithConfidenceAreaAndHazardReportApiResponse;
 
@@ -17,7 +16,7 @@ public class Application {
                 ip = "193.114.112.122";
                 key = "{{API KEY}}";
                 localityLanguage = "en";
-            }}            
+            }};            
 
             IpGeolocationWithConfidenceAreaAndHazardReportApiResponse res = sdk.ipGeolocationWithConfidenceAreaAndHazardReportApi(req);
 
@@ -27,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

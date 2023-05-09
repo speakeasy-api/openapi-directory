@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ApplyMapping {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public ApplyMapping withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class ApplyMapping {
     
     @JsonProperty("Mapping")
     public Mapping[] mapping;
+
     public ApplyMapping withMapping(Mapping[] mapping) {
         this.mapping = mapping;
         return this;
@@ -26,9 +28,15 @@ public class ApplyMapping {
     
     @JsonProperty("Name")
     public String name;
+
     public ApplyMapping withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApplyMapping(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Mapping") Mapping[] mapping, @JsonProperty("Name") String name) {
+        this.inputs = inputs;
+        this.mapping = mapping;
+        this.name = name;
+  }
 }

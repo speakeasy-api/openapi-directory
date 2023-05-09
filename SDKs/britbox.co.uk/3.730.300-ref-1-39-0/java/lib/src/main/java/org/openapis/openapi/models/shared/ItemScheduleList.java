@@ -17,6 +17,7 @@ public class ItemScheduleList {
      */
     @JsonProperty("channelId")
     public String channelId;
+
     public ItemScheduleList withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -29,6 +30,7 @@ public class ItemScheduleList {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDate")
     public OffsetDateTime endDate;
+
     public ItemScheduleList withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -39,6 +41,7 @@ public class ItemScheduleList {
      */
     @JsonProperty("schedules")
     public java.util.Map<String, Object>[] schedules;
+
     public ItemScheduleList withSchedules(java.util.Map<String, Object>[] schedules) {
         this.schedules = schedules;
         return this;
@@ -51,9 +54,16 @@ public class ItemScheduleList {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDate")
     public OffsetDateTime startDate;
+
     public ItemScheduleList withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ItemScheduleList(@JsonProperty("channelId") String channelId, @JsonProperty("endDate") OffsetDateTime endDate, @JsonProperty("schedules") java.util.Map<String, Object>[] schedules, @JsonProperty("startDate") OffsetDateTime startDate) {
+        this.channelId = channelId;
+        this.endDate = endDate;
+        this.schedules = schedules;
+        this.startDate = startDate;
+  }
 }

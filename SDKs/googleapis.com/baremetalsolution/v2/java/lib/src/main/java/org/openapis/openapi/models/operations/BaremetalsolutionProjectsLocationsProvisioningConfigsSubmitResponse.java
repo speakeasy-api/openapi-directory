@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse {
     
     public String contentType;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse
     
     
     public Integer statusCode;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse
      */
     
     public org.openapis.openapi.models.shared.SubmitProvisioningConfigResponse submitProvisioningConfigResponse;
+
     public BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse withSubmitProvisioningConfigResponse(org.openapis.openapi.models.shared.SubmitProvisioningConfigResponse submitProvisioningConfigResponse) {
         this.submitProvisioningConfigResponse = submitProvisioningConfigResponse;
         return this;
     }
     
+    public BaremetalsolutionProjectsLocationsProvisioningConfigsSubmitResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

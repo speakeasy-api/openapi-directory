@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETMostviewedSectionTimePeriodJsonResponse {
     
     public String contentType;
+
     public GETMostviewedSectionTimePeriodJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GETMostviewedSectionTimePeriodJsonResponse {
      */
     
     public GETMostviewedSectionTimePeriodJSON200ApplicationJSON getMostviewedSectionTimePeriodJSON200ApplicationJSONObject;
+
     public GETMostviewedSectionTimePeriodJsonResponse withGETMostviewedSectionTimePeriodJSON200ApplicationJSONObject(GETMostviewedSectionTimePeriodJSON200ApplicationJSON getMostviewedSectionTimePeriodJSON200ApplicationJSONObject) {
         this.getMostviewedSectionTimePeriodJSON200ApplicationJSONObject = getMostviewedSectionTimePeriodJSON200ApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class GETMostviewedSectionTimePeriodJsonResponse {
     
     
     public Integer statusCode;
+
     public GETMostviewedSectionTimePeriodJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GETMostviewedSectionTimePeriodJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETMostviewedSectionTimePeriodJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETMostviewedSectionTimePeriodJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

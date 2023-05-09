@@ -18,6 +18,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public Author author;
+
     public Question withAuthor(Author author) {
         this.author = author;
         return this;
@@ -29,6 +30,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public Question withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Question withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Question withText(String text) {
         this.text = text;
         return this;
@@ -62,6 +66,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topAnswers")
     public Answer[] topAnswers;
+
     public Question withTopAnswers(Answer[] topAnswers) {
         this.topAnswers = topAnswers;
         return this;
@@ -73,6 +78,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalAnswerCount")
     public Integer totalAnswerCount;
+
     public Question withTotalAnswerCount(Integer totalAnswerCount) {
         this.totalAnswerCount = totalAnswerCount;
         return this;
@@ -84,6 +90,7 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Question withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
@@ -95,9 +102,11 @@ public class Question {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upvoteCount")
     public Integer upvoteCount;
+
     public Question withUpvoteCount(Integer upvoteCount) {
         this.upvoteCount = upvoteCount;
         return this;
     }
     
+    public Question(){}
 }

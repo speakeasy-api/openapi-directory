@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesCreateResponse {
     
     public String contentType;
+
     public IssuesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesCreateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesCreateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesCreateResponse {
     
     
     public Integer statusCode;
+
     public IssuesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesCreateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class IssuesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Issue issue;
+
     public IssuesCreateResponse withIssue(org.openapis.openapi.models.shared.Issue issue) {
         this.issue = issue;
         return this;
@@ -60,6 +67,7 @@ public class IssuesCreateResponse {
      */
     
     public IssuesCreate503ApplicationJSON issuesCreate503ApplicationJSONObject;
+
     public IssuesCreateResponse withIssuesCreate503ApplicationJSONObject(IssuesCreate503ApplicationJSON issuesCreate503ApplicationJSONObject) {
         this.issuesCreate503ApplicationJSONObject = issuesCreate503ApplicationJSONObject;
         return this;
@@ -70,9 +78,14 @@ public class IssuesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesCreateResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAppVersionResourcesResolutionStatusResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -21,6 +22,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -29,6 +31,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -36,6 +39,7 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     @JsonProperty("resolutionId")
     public String resolutionId;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withResolutionId(String resolutionId) {
         this.resolutionId = resolutionId;
         return this;
@@ -43,9 +47,16 @@ public class DescribeAppVersionResourcesResolutionStatusResponse {
     
     @JsonProperty("status")
     public ResourceResolutionStatusTypeEnum status;
+
     public DescribeAppVersionResourcesResolutionStatusResponse withStatus(ResourceResolutionStatusTypeEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeAppVersionResourcesResolutionStatusResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("resolutionId") String resolutionId, @JsonProperty("status") ResourceResolutionStatusTypeEnum status) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.resolutionId = resolutionId;
+        this.status = status;
+  }
 }

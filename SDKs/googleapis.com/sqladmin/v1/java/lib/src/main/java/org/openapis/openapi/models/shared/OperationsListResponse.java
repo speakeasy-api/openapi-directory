@@ -18,6 +18,7 @@ public class OperationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Operation[] items;
+
     public OperationsListResponse withItems(Operation[] items) {
         this.items = items;
         return this;
@@ -29,6 +30,7 @@ public class OperationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public OperationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class OperationsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public OperationsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public OperationsListResponse(){}
 }

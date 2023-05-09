@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiVersionRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput;
+
     public RegistryUpdateApiVersionRequest withApiVersionInput(org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput) {
         this.apiVersionInput = apiVersionInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
     public Boolean allowMissing;
+
     public RegistryUpdateApiVersionRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +32,7 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryUpdateApiVersionRequest withApi(String api) {
         this.api = api;
         return this;
@@ -39,6 +43,7 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryUpdateApiVersionRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -49,6 +54,7 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryUpdateApiVersionRequest withProject(String project) {
         this.project = project;
         return this;
@@ -59,6 +65,7 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public RegistryUpdateApiVersionRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -69,9 +76,17 @@ public class RegistryUpdateApiVersionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public RegistryUpdateApiVersionRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public RegistryUpdateApiVersionRequest(@JsonProperty("ApiVersionInput") org.openapis.openapi.models.shared.ApiVersionInput apiVersionInput, @JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project, @JsonProperty("version") String version) {
+        this.apiVersionInput = apiVersionInput;
+        this.api = api;
+        this.location = location;
+        this.project = project;
+        this.version = version;
+  }
 }

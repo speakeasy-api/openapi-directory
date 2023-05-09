@@ -15,6 +15,7 @@ public class UpdateBackendStorageRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Permissions")
     public UpdateBackendStorageRequestBodyResourceConfigPermissions permissions;
+
     public UpdateBackendStorageRequestBodyResourceConfig withPermissions(UpdateBackendStorageRequestBodyResourceConfigPermissions permissions) {
         this.permissions = permissions;
         return this;
@@ -23,9 +24,11 @@ public class UpdateBackendStorageRequestBodyResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public UpdateBackendStorageRequestBodyResourceConfigServiceNameEnum serviceName;
+
     public UpdateBackendStorageRequestBodyResourceConfig withServiceName(UpdateBackendStorageRequestBodyResourceConfigServiceNameEnum serviceName) {
         this.serviceName = serviceName;
         return this;
     }
     
+    public UpdateBackendStorageRequestBodyResourceConfig(){}
 }

@@ -12,9 +12,11 @@ public class ResendContactReachabilityEmailRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public ResendContactReachabilityEmailRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public ResendContactReachabilityEmailRequest(){}
 }

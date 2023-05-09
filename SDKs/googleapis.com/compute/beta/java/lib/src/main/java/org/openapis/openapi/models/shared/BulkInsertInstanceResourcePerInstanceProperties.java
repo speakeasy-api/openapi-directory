@@ -18,9 +18,11 @@ public class BulkInsertInstanceResourcePerInstanceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public BulkInsertInstanceResourcePerInstanceProperties withName(String name) {
         this.name = name;
         return this;
     }
     
+    public BulkInsertInstanceResourcePerInstanceProperties(){}
 }

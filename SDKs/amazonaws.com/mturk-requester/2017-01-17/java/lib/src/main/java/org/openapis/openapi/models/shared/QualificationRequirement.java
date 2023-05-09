@@ -15,6 +15,7 @@ public class QualificationRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionsGuarded")
     public HITAccessActionsEnum actionsGuarded;
+
     public QualificationRequirement withActionsGuarded(HITAccessActionsEnum actionsGuarded) {
         this.actionsGuarded = actionsGuarded;
         return this;
@@ -22,6 +23,7 @@ public class QualificationRequirement {
     
     @JsonProperty("Comparator")
     public ComparatorEnum comparator;
+
     public QualificationRequirement withComparator(ComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -30,6 +32,7 @@ public class QualificationRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegerValues")
     public Long[] integerValues;
+
     public QualificationRequirement withIntegerValues(Long[] integerValues) {
         this.integerValues = integerValues;
         return this;
@@ -38,6 +41,7 @@ public class QualificationRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocaleValues")
     public Locale[] localeValues;
+
     public QualificationRequirement withLocaleValues(Locale[] localeValues) {
         this.localeValues = localeValues;
         return this;
@@ -45,6 +49,7 @@ public class QualificationRequirement {
     
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public QualificationRequirement withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -53,9 +58,14 @@ public class QualificationRequirement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequiredToPreview")
     public Boolean requiredToPreview;
+
     public QualificationRequirement withRequiredToPreview(Boolean requiredToPreview) {
         this.requiredToPreview = requiredToPreview;
         return this;
     }
     
+    public QualificationRequirement(@JsonProperty("Comparator") ComparatorEnum comparator, @JsonProperty("QualificationTypeId") String qualificationTypeId) {
+        this.comparator = comparator;
+        this.qualificationTypeId = qualificationTypeId;
+  }
 }

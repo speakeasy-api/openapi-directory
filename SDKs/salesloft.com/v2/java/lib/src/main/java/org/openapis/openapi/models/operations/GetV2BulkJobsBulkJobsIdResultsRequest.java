@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2BulkJobsBulkJobsIdResultsRequest {
@@ -12,6 +13,7 @@ public class GetV2BulkJobsBulkJobsIdResultsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bulk_jobs_id")
     public Long bulkJobsId;
+
     public GetV2BulkJobsBulkJobsIdResultsRequest withBulkJobsId(Long bulkJobsId) {
         this.bulkJobsId = bulkJobsId;
         return this;
@@ -22,6 +24,7 @@ public class GetV2BulkJobsBulkJobsIdResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public java.util.Map<String, Object> id;
+
     public GetV2BulkJobsBulkJobsIdResultsRequest withId(java.util.Map<String, Object> id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class GetV2BulkJobsBulkJobsIdResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2BulkJobsBulkJobsIdResultsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,13 @@ public class GetV2BulkJobsBulkJobsIdResultsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=status")
     public String[] status;
+
     public GetV2BulkJobsBulkJobsIdResultsRequest withStatus(String[] status) {
         this.status = status;
         return this;
     }
     
+    public GetV2BulkJobsBulkJobsIdResultsRequest(@JsonProperty("bulk_jobs_id") Long bulkJobsId) {
+        this.bulkJobsId = bulkJobsId;
+  }
 }

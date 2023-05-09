@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteEndpointAccessMessage {
     
     public String endpointName;
+
     public DeleteEndpointAccessMessage withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
     
+    public DeleteEndpointAccessMessage(@JsonProperty("EndpointName") String endpointName) {
+        this.endpointName = endpointName;
+  }
 }

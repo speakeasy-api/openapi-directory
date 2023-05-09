@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateMockRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateMockRequestBody requestBody;
+
     public UpdateMockRequest withRequestBody(UpdateMockRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class UpdateMockRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mock_uid")
     public String mockUid;
+
     public UpdateMockRequest withMockUid(String mockUid) {
         this.mockUid = mockUid;
         return this;
     }
     
+    public UpdateMockRequest(@JsonProperty("mock_uid") String mockUid) {
+        this.mockUid = mockUid;
+  }
 }

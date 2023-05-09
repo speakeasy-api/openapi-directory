@@ -15,6 +15,7 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccounts")
     public AWSAccount[] awsAccounts;
+
     public Scope withAwsAccounts(AWSAccount[] awsAccounts) {
         this.awsAccounts = awsAccounts;
         return this;
@@ -23,9 +24,11 @@ public class Scope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsServices")
     public AWSService[] awsServices;
+
     public Scope withAwsServices(AWSService[] awsServices) {
         this.awsServices = awsServices;
         return this;
     }
     
+    public Scope(){}
 }

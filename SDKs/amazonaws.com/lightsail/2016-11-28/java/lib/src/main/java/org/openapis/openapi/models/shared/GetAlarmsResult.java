@@ -15,6 +15,7 @@ public class GetAlarmsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarms")
     public Alarm[] alarms;
+
     public GetAlarmsResult withAlarms(Alarm[] alarms) {
         this.alarms = alarms;
         return this;
@@ -23,9 +24,11 @@ public class GetAlarmsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetAlarmsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetAlarmsResult(){}
 }

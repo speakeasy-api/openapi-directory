@@ -20,6 +20,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Aliases")
     public Alias[] aliases;
+
     public Edge withAliases(Alias[] aliases) {
         this.aliases = aliases;
         return this;
@@ -28,6 +29,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EdgeType")
     public String edgeType;
+
     public Edge withEdgeType(String edgeType) {
         this.edgeType = edgeType;
         return this;
@@ -38,6 +40,7 @@ public class Edge {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public Edge withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReceivedEventAgeHistogram")
     public HistogramEntry[] receivedEventAgeHistogram;
+
     public Edge withReceivedEventAgeHistogram(HistogramEntry[] receivedEventAgeHistogram) {
         this.receivedEventAgeHistogram = receivedEventAgeHistogram;
         return this;
@@ -54,6 +58,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public Long referenceId;
+
     public Edge withReferenceId(Long referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -62,6 +67,7 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseTimeHistogram")
     public HistogramEntry[] responseTimeHistogram;
+
     public Edge withResponseTimeHistogram(HistogramEntry[] responseTimeHistogram) {
         this.responseTimeHistogram = responseTimeHistogram;
         return this;
@@ -72,6 +78,7 @@ public class Edge {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Edge withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -80,9 +87,11 @@ public class Edge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryStatistics")
     public EdgeStatistics summaryStatistics;
+
     public Edge withSummaryStatistics(EdgeStatistics summaryStatistics) {
         this.summaryStatistics = summaryStatistics;
         return this;
     }
     
+    public Edge(){}
 }

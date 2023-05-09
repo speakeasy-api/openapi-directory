@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomMetricResponse {
     
     public String contentType;
+
     public CreateCustomMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCustomMetricResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomMetricResponse createCustomMetricResponse;
+
     public CreateCustomMetricResponse withCreateCustomMetricResponse(org.openapis.openapi.models.shared.CreateCustomMetricResponse createCustomMetricResponse) {
         this.createCustomMetricResponse = createCustomMetricResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomMetricResponse {
      */
     
     public Object internalFailureException;
+
     public CreateCustomMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateCustomMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomMetricResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomMetricResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateCustomMetricResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateCustomMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateCustomMetricResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateCustomMetricResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateCustomMetricResponse {
      */
     
     public Object throttlingException;
+
     public CreateCustomMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateCustomMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

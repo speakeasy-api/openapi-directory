@@ -15,6 +15,7 @@ public class DescribeNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public DescribeNotificationConfigurationRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -26,9 +27,11 @@ public class DescribeNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public DescribeNotificationConfigurationRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public DescribeNotificationConfigurationRequestBody(){}
 }

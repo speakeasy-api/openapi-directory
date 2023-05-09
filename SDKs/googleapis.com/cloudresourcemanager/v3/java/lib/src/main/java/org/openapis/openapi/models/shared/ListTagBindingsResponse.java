@@ -18,6 +18,7 @@ public class ListTagBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTagBindingsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTagBindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagBindings")
     public TagBinding[] tagBindings;
+
     public ListTagBindingsResponse withTagBindings(TagBinding[] tagBindings) {
         this.tagBindings = tagBindings;
         return this;
     }
     
+    public ListTagBindingsResponse(){}
 }

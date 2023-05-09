@@ -15,6 +15,7 @@ public class JobWorkerExecutorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingAccounts")
     public String[] pollingAccounts;
+
     public JobWorkerExecutorConfiguration withPollingAccounts(String[] pollingAccounts) {
         this.pollingAccounts = pollingAccounts;
         return this;
@@ -23,9 +24,11 @@ public class JobWorkerExecutorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pollingServicePrincipals")
     public String[] pollingServicePrincipals;
+
     public JobWorkerExecutorConfiguration withPollingServicePrincipals(String[] pollingServicePrincipals) {
         this.pollingServicePrincipals = pollingServicePrincipals;
         return this;
     }
     
+    public JobWorkerExecutorConfiguration(){}
 }

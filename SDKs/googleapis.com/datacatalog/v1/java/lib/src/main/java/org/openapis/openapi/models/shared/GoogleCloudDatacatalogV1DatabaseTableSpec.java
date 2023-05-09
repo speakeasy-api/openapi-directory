@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseViewSpec")
     public GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpec withDatabaseViewSpec(GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec databaseViewSpec) {
         this.databaseViewSpec = databaseViewSpec;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataplexTable")
     public GoogleCloudDatacatalogV1DataplexTableSpec dataplexTable;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpec withDataplexTable(GoogleCloudDatacatalogV1DataplexTableSpec dataplexTable) {
         this.dataplexTable = dataplexTable;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1DatabaseTableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum type;
+
     public GoogleCloudDatacatalogV1DatabaseTableSpec withType(GoogleCloudDatacatalogV1DatabaseTableSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1DatabaseTableSpec(){}
 }

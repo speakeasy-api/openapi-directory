@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteProductModuleRequest {
@@ -12,6 +13,7 @@ public class DeleteProductModuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forceCascade")
     public Boolean forceCascade;
+
     public DeleteProductModuleRequest withForceCascade(Boolean forceCascade) {
         this.forceCascade = forceCascade;
         return this;
@@ -22,9 +24,13 @@ public class DeleteProductModuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productModuleNumber")
     public String productModuleNumber;
+
     public DeleteProductModuleRequest withProductModuleNumber(String productModuleNumber) {
         this.productModuleNumber = productModuleNumber;
         return this;
     }
     
+    public DeleteProductModuleRequest(@JsonProperty("productModuleNumber") String productModuleNumber) {
+        this.productModuleNumber = productModuleNumber;
+  }
 }

@@ -12,6 +12,7 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addOns")
     public AddOnRequest[] addOns;
+
     public CreateInstancesRequest withAddOns(AddOnRequest[] addOns) {
         this.addOns = addOns;
         return this;
@@ -19,6 +20,7 @@ public class CreateInstancesRequest {
     
     @JsonProperty("availabilityZone")
     public String availabilityZone;
+
     public CreateInstancesRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class CreateInstancesRequest {
     
     @JsonProperty("blueprintId")
     public String blueprintId;
+
     public CreateInstancesRequest withBlueprintId(String blueprintId) {
         this.blueprintId = blueprintId;
         return this;
@@ -33,6 +36,7 @@ public class CreateInstancesRequest {
     
     @JsonProperty("bundleId")
     public String bundleId;
+
     public CreateInstancesRequest withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -41,6 +45,7 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customImageName")
     public String customImageName;
+
     public CreateInstancesRequest withCustomImageName(String customImageName) {
         this.customImageName = customImageName;
         return this;
@@ -48,6 +53,7 @@ public class CreateInstancesRequest {
     
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public CreateInstancesRequest withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -56,6 +62,7 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddressType")
     public IpAddressTypeEnum ipAddressType;
+
     public CreateInstancesRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -64,6 +71,7 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPairName")
     public String keyPairName;
+
     public CreateInstancesRequest withKeyPairName(String keyPairName) {
         this.keyPairName = keyPairName;
         return this;
@@ -72,6 +80,7 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateInstancesRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -80,9 +89,16 @@ public class CreateInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userData")
     public String userData;
+
     public CreateInstancesRequest withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public CreateInstancesRequest(@JsonProperty("availabilityZone") String availabilityZone, @JsonProperty("blueprintId") String blueprintId, @JsonProperty("bundleId") String bundleId, @JsonProperty("instanceNames") String[] instanceNames) {
+        this.availabilityZone = availabilityZone;
+        this.blueprintId = blueprintId;
+        this.bundleId = bundleId;
+        this.instanceNames = instanceNames;
+  }
 }

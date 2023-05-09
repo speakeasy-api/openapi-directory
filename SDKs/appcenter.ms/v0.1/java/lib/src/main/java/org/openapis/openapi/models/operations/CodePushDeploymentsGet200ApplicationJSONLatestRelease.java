@@ -12,6 +12,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blob_url")
     public String blobUrl;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withBlobUrl(String blobUrl) {
         this.blobUrl = blobUrl;
         return this;
@@ -20,6 +21,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +30,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diff_package_map")
     public java.util.Map<String, CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap> diffPackageMap;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withDiffPackageMap(java.util.Map<String, CodePushDeploymentsGet200ApplicationJSONLatestReleaseDiffPackageMap> diffPackageMap) {
         this.diffPackageMap = diffPackageMap;
         return this;
@@ -36,6 +39,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -44,6 +48,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -52,6 +57,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withLabel(String label) {
         this.label = label;
         return this;
@@ -63,6 +69,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_deployment")
     public String originalDeployment;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withOriginalDeployment(String originalDeployment) {
         this.originalDeployment = originalDeployment;
         return this;
@@ -74,6 +81,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("original_label")
     public String originalLabel;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withOriginalLabel(String originalLabel) {
         this.originalLabel = originalLabel;
         return this;
@@ -82,6 +90,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_hash")
     public String packageHash;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -93,6 +102,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_method")
     public CodePushDeploymentsGet200ApplicationJSONLatestReleaseReleaseMethodEnum releaseMethod;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withReleaseMethod(CodePushDeploymentsGet200ApplicationJSONLatestReleaseReleaseMethodEnum releaseMethod) {
         this.releaseMethod = releaseMethod;
         return this;
@@ -101,6 +111,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("released_by")
     public String releasedBy;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withReleasedBy(String releasedBy) {
         this.releasedBy = releasedBy;
         return this;
@@ -109,6 +120,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -117,6 +129,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Double size;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withSize(Double size) {
         this.size = size;
         return this;
@@ -125,6 +138,7 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
@@ -133,9 +147,11 @@ public class CodePushDeploymentsGet200ApplicationJSONLatestRelease {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upload_time")
     public Long uploadTime;
+
     public CodePushDeploymentsGet200ApplicationJSONLatestRelease withUploadTime(Long uploadTime) {
         this.uploadTime = uploadTime;
         return this;
     }
     
+    public CodePushDeploymentsGet200ApplicationJSONLatestRelease(){}
 }

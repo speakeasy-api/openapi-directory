@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MbusApiResponse {
     
     public String contentType;
+
     public MbusApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MbusApiResponse {
     
     
     public Integer statusCode;
+
     public MbusApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MbusApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MbusApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MbusApiResponse {
      */
     
     public String textError;
+
     public MbusApiResponse withTextError(String textError) {
         this.textError = textError;
         return this;
@@ -43,9 +48,14 @@ public class MbusApiResponse {
      */
     
     public String yaml;
+
     public MbusApiResponse withYaml(String yaml) {
         this.yaml = yaml;
         return this;
     }
     
+    public MbusApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

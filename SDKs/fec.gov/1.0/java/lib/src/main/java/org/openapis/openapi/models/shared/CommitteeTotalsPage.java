@@ -12,6 +12,7 @@ public class CommitteeTotalsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CommitteeTotalsPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CommitteeTotalsPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CommitteeTotals[] results;
+
     public CommitteeTotalsPage withResults(CommitteeTotals[] results) {
         this.results = results;
         return this;
     }
     
+    public CommitteeTotalsPage(){}
 }

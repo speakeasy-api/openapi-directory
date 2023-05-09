@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsListDiscussionCommentsLegacyRequest {
@@ -12,6 +13,7 @@ public class TeamsListDiscussionCommentsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public org.openapis.openapi.models.shared.DirectionEnum direction;
+
     public TeamsListDiscussionCommentsLegacyRequest withDirection(org.openapis.openapi.models.shared.DirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -19,6 +21,7 @@ public class TeamsListDiscussionCommentsLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public TeamsListDiscussionCommentsLegacyRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -29,6 +32,7 @@ public class TeamsListDiscussionCommentsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public TeamsListDiscussionCommentsLegacyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -39,6 +43,7 @@ public class TeamsListDiscussionCommentsLegacyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public TeamsListDiscussionCommentsLegacyRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -46,9 +51,14 @@ public class TeamsListDiscussionCommentsLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsListDiscussionCommentsLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsListDiscussionCommentsLegacyRequest(@JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("team_id") Long teamId) {
+        this.discussionNumber = discussionNumber;
+        this.teamId = teamId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartVectorEnrichmentJobResponse {
@@ -12,6 +13,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartVectorEnrichmentJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object conflictException;
+
     public StartVectorEnrichmentJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartVectorEnrichmentJobResponse {
     
     
     public String contentType;
+
     public StartVectorEnrichmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object internalServerException;
+
     public StartVectorEnrichmentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartVectorEnrichmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartVectorEnrichmentJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartVectorEnrichmentJobOutput startVectorEnrichmentJobOutput;
+
     public StartVectorEnrichmentJobResponse withStartVectorEnrichmentJobOutput(org.openapis.openapi.models.shared.StartVectorEnrichmentJobOutput startVectorEnrichmentJobOutput) {
         this.startVectorEnrichmentJobOutput = startVectorEnrichmentJobOutput;
         return this;
@@ -76,6 +84,7 @@ public class StartVectorEnrichmentJobResponse {
     
     
     public Integer statusCode;
+
     public StartVectorEnrichmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartVectorEnrichmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartVectorEnrichmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object throttlingException;
+
     public StartVectorEnrichmentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartVectorEnrichmentJobResponse {
      */
     
     public Object validationException;
+
     public StartVectorEnrichmentJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartVectorEnrichmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

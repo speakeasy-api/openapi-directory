@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,16 +14,18 @@ public class UpdateMonthCategoryRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatchMonthCategoryWrapper patchMonthCategoryWrapper;
+
     public UpdateMonthCategoryRequest withPatchMonthCategoryWrapper(org.openapis.openapi.models.shared.PatchMonthCategoryWrapper patchMonthCategoryWrapper) {
         this.patchMonthCategoryWrapper = patchMonthCategoryWrapper;
         return this;
     }
     
     /**
-     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.youneedabudget.com/#oauth-default-budget).
+     * The id of the budget. "last-used" can be used to specify the last used budget and "default" can be used if default budget selection is enabled (see: https://api.ynab.com/#oauth-default-budget).
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=budget_id")
     public String budgetId;
+
     public UpdateMonthCategoryRequest withBudgetId(String budgetId) {
         this.budgetId = budgetId;
         return this;
@@ -33,6 +36,7 @@ public class UpdateMonthCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
     public String categoryId;
+
     public UpdateMonthCategoryRequest withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -43,9 +47,16 @@ public class UpdateMonthCategoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=month")
     public LocalDate month;
+
     public UpdateMonthCategoryRequest withMonth(LocalDate month) {
         this.month = month;
         return this;
     }
     
+    public UpdateMonthCategoryRequest(@JsonProperty("PatchMonthCategoryWrapper") org.openapis.openapi.models.shared.PatchMonthCategoryWrapper patchMonthCategoryWrapper, @JsonProperty("budget_id") String budgetId, @JsonProperty("category_id") String categoryId, @JsonProperty("month") LocalDate month) {
+        this.patchMonthCategoryWrapper = patchMonthCategoryWrapper;
+        this.budgetId = budgetId;
+        this.categoryId = categoryId;
+        this.month = month;
+  }
 }

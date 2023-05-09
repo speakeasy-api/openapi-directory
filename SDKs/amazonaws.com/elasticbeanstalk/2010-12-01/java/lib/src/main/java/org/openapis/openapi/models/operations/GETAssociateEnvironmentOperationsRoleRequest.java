@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateEnvironmentOperationsRoleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateEnvironmentOperationsRoleActionEnum action;
+
     public GETAssociateEnvironmentOperationsRoleRequest withAction(GETAssociateEnvironmentOperationsRoleActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETAssociateEnvironmentOperationsRoleRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OperationsRole")
     public String operationsRole;
+
     public GETAssociateEnvironmentOperationsRoleRequest withOperationsRole(String operationsRole) {
         this.operationsRole = operationsRole;
         return this;
@@ -36,6 +40,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateEnvironmentOperationsRoleVersionEnum version;
+
     public GETAssociateEnvironmentOperationsRoleRequest withVersion(GETAssociateEnvironmentOperationsRoleVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETAssociateEnvironmentOperationsRoleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateEnvironmentOperationsRoleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateEnvironmentOperationsRoleRequest(@JsonProperty("Action") GETAssociateEnvironmentOperationsRoleActionEnum action, @JsonProperty("EnvironmentName") String environmentName, @JsonProperty("OperationsRole") String operationsRole, @JsonProperty("Version") GETAssociateEnvironmentOperationsRoleVersionEnum version) {
+        this.action = action;
+        this.environmentName = environmentName;
+        this.operationsRole = operationsRole;
+        this.version = version;
+  }
 }

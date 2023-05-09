@@ -12,6 +12,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district")
     public String district;
+
     public CandidateTotalAggregate withDistrict(String district) {
         this.district = district;
         return this;
@@ -20,6 +21,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("district_number")
     public Integer districtNumber;
+
     public CandidateTotalAggregate withDistrictNumber(Integer districtNumber) {
         this.districtNumber = districtNumber;
         return this;
@@ -28,6 +30,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("election_year")
     public Integer electionYear;
+
     public CandidateTotalAggregate withElectionYear(Integer electionYear) {
         this.electionYear = electionYear;
         return this;
@@ -36,6 +39,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("office")
     public String office;
+
     public CandidateTotalAggregate withOffice(String office) {
         this.office = office;
         return this;
@@ -44,6 +48,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public String party;
+
     public CandidateTotalAggregate withParty(String party) {
         this.party = party;
         return this;
@@ -52,14 +57,25 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CandidateTotalAggregate withState(String state) {
         this.state = state;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("state_full")
+    public String stateFull;
+
+    public CandidateTotalAggregate withStateFull(String stateFull) {
+        this.stateFull = stateFull;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_cash_on_hand_end_period")
     public Double totalCashOnHandEndPeriod;
+
     public CandidateTotalAggregate withTotalCashOnHandEndPeriod(Double totalCashOnHandEndPeriod) {
         this.totalCashOnHandEndPeriod = totalCashOnHandEndPeriod;
         return this;
@@ -68,6 +84,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_debts_owed_by_committee")
     public Double totalDebtsOwedByCommittee;
+
     public CandidateTotalAggregate withTotalDebtsOwedByCommittee(Double totalDebtsOwedByCommittee) {
         this.totalDebtsOwedByCommittee = totalDebtsOwedByCommittee;
         return this;
@@ -76,6 +93,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_disbursements")
     public Double totalDisbursements;
+
     public CandidateTotalAggregate withTotalDisbursements(Double totalDisbursements) {
         this.totalDisbursements = totalDisbursements;
         return this;
@@ -84,6 +102,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_individual_itemized_contributions")
     public Double totalIndividualItemizedContributions;
+
     public CandidateTotalAggregate withTotalIndividualItemizedContributions(Double totalIndividualItemizedContributions) {
         this.totalIndividualItemizedContributions = totalIndividualItemizedContributions;
         return this;
@@ -92,6 +111,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_other_political_committee_contributions")
     public Double totalOtherPoliticalCommitteeContributions;
+
     public CandidateTotalAggregate withTotalOtherPoliticalCommitteeContributions(Double totalOtherPoliticalCommitteeContributions) {
         this.totalOtherPoliticalCommitteeContributions = totalOtherPoliticalCommitteeContributions;
         return this;
@@ -100,6 +120,7 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_receipts")
     public Double totalReceipts;
+
     public CandidateTotalAggregate withTotalReceipts(Double totalReceipts) {
         this.totalReceipts = totalReceipts;
         return this;
@@ -108,9 +129,11 @@ public class CandidateTotalAggregate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_transfers_from_other_authorized_committee")
     public Double totalTransfersFromOtherAuthorizedCommittee;
+
     public CandidateTotalAggregate withTotalTransfersFromOtherAuthorizedCommittee(Double totalTransfersFromOtherAuthorizedCommittee) {
         this.totalTransfersFromOtherAuthorizedCommittee = totalTransfersFromOtherAuthorizedCommittee;
         return this;
     }
     
+    public CandidateTotalAggregate(){}
 }

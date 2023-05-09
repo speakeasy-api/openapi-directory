@@ -15,9 +15,11 @@ public class DescribeJobExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("execution")
     public JobExecution execution;
+
     public DescribeJobExecutionResponse withExecution(JobExecution execution) {
         this.execution = execution;
         return this;
     }
     
+    public DescribeJobExecutionResponse(){}
 }

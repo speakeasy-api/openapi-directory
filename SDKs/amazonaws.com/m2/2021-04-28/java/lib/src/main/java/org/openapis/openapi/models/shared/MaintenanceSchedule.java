@@ -22,6 +22,7 @@ public class MaintenanceSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public MaintenanceSchedule withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -32,9 +33,11 @@ public class MaintenanceSchedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public MaintenanceSchedule withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public MaintenanceSchedule(){}
 }

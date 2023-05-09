@@ -12,6 +12,7 @@ public class CreateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataStorageConfig")
     public InferenceExperimentDataStorageConfig dataStorageConfig;
+
     public CreateInferenceExperimentRequest withDataStorageConfig(InferenceExperimentDataStorageConfig dataStorageConfig) {
         this.dataStorageConfig = dataStorageConfig;
         return this;
@@ -20,6 +21,7 @@ public class CreateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateInferenceExperimentRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("EndpointName")
     public String endpointName;
+
     public CreateInferenceExperimentRequest withEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
@@ -35,6 +38,7 @@ public class CreateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKey")
     public String kmsKey;
+
     public CreateInferenceExperimentRequest withKmsKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -42,6 +46,7 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("ModelVariants")
     public ModelVariantConfig[] modelVariants;
+
     public CreateInferenceExperimentRequest withModelVariants(ModelVariantConfig[] modelVariants) {
         this.modelVariants = modelVariants;
         return this;
@@ -49,6 +54,7 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateInferenceExperimentRequest withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +62,7 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateInferenceExperimentRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -64,6 +71,7 @@ public class CreateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public InferenceExperimentSchedule schedule;
+
     public CreateInferenceExperimentRequest withSchedule(InferenceExperimentSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -71,6 +79,7 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("ShadowModeConfig")
     public ShadowModeConfig shadowModeConfig;
+
     public CreateInferenceExperimentRequest withShadowModeConfig(ShadowModeConfig shadowModeConfig) {
         this.shadowModeConfig = shadowModeConfig;
         return this;
@@ -79,6 +88,7 @@ public class CreateInferenceExperimentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateInferenceExperimentRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -86,9 +96,18 @@ public class CreateInferenceExperimentRequest {
     
     @JsonProperty("Type")
     public InferenceExperimentTypeEnum type;
+
     public CreateInferenceExperimentRequest withType(InferenceExperimentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateInferenceExperimentRequest(@JsonProperty("EndpointName") String endpointName, @JsonProperty("ModelVariants") ModelVariantConfig[] modelVariants, @JsonProperty("Name") String name, @JsonProperty("RoleArn") String roleArn, @JsonProperty("ShadowModeConfig") ShadowModeConfig shadowModeConfig, @JsonProperty("Type") InferenceExperimentTypeEnum type) {
+        this.endpointName = endpointName;
+        this.modelVariants = modelVariants;
+        this.name = name;
+        this.roleArn = roleArn;
+        this.shadowModeConfig = shadowModeConfig;
+        this.type = type;
+  }
 }

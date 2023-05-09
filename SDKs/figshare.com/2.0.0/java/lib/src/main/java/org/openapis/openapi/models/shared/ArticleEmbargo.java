@@ -15,6 +15,7 @@ public class ArticleEmbargo {
      */
     @JsonProperty("embargo_date")
     public String embargoDate;
+
     public ArticleEmbargo withEmbargoDate(String embargoDate) {
         this.embargoDate = embargoDate;
         return this;
@@ -25,6 +26,7 @@ public class ArticleEmbargo {
      */
     @JsonProperty("embargo_options")
     public java.util.Map<String, Object>[] embargoOptions;
+
     public ArticleEmbargo withEmbargoOptions(java.util.Map<String, Object>[] embargoOptions) {
         this.embargoOptions = embargoOptions;
         return this;
@@ -35,6 +37,7 @@ public class ArticleEmbargo {
      */
     @JsonProperty("embargo_reason")
     public String embargoReason;
+
     public ArticleEmbargo withEmbargoReason(String embargoReason) {
         this.embargoReason = embargoReason;
         return this;
@@ -45,6 +48,7 @@ public class ArticleEmbargo {
      */
     @JsonProperty("embargo_title")
     public String embargoTitle;
+
     public ArticleEmbargo withEmbargoTitle(String embargoTitle) {
         this.embargoTitle = embargoTitle;
         return this;
@@ -55,6 +59,7 @@ public class ArticleEmbargo {
      */
     @JsonProperty("embargo_type")
     public String embargoType;
+
     public ArticleEmbargo withEmbargoType(String embargoType) {
         this.embargoType = embargoType;
         return this;
@@ -65,9 +70,18 @@ public class ArticleEmbargo {
      */
     @JsonProperty("is_embargoed")
     public Boolean isEmbargoed;
+
     public ArticleEmbargo withIsEmbargoed(Boolean isEmbargoed) {
         this.isEmbargoed = isEmbargoed;
         return this;
     }
     
+    public ArticleEmbargo(@JsonProperty("embargo_date") String embargoDate, @JsonProperty("embargo_options") java.util.Map<String, Object>[] embargoOptions, @JsonProperty("embargo_reason") String embargoReason, @JsonProperty("embargo_title") String embargoTitle, @JsonProperty("embargo_type") String embargoType, @JsonProperty("is_embargoed") Boolean isEmbargoed) {
+        this.embargoDate = embargoDate;
+        this.embargoOptions = embargoOptions;
+        this.embargoReason = embargoReason;
+        this.embargoTitle = embargoTitle;
+        this.embargoType = embargoType;
+        this.isEmbargoed = isEmbargoed;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetComponentPolicyResponse {
@@ -12,6 +13,7 @@ public class GetComponentPolicyResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetComponentPolicyResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class GetComponentPolicyResponse {
     
     
     public String contentType;
+
     public GetComponentPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetComponentPolicyResponse {
      */
     
     public Object forbiddenException;
+
     public GetComponentPolicyResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetComponentPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetComponentPolicyResponse getComponentPolicyResponse;
+
     public GetComponentPolicyResponse withGetComponentPolicyResponse(org.openapis.openapi.models.shared.GetComponentPolicyResponse getComponentPolicyResponse) {
         this.getComponentPolicyResponse = getComponentPolicyResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetComponentPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public GetComponentPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class GetComponentPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetComponentPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetComponentPolicyResponse {
      */
     
     public Object serviceException;
+
     public GetComponentPolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetComponentPolicyResponse {
     
     
     public Integer statusCode;
+
     public GetComponentPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetComponentPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetComponentPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetComponentPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetComponentPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetComponentPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

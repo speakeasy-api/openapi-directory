@@ -15,6 +15,7 @@ public class S3BucketRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public S3RepositoryDetails details;
+
     public S3BucketRepository withDetails(S3RepositoryDetails details) {
         this.details = details;
         return this;
@@ -22,9 +23,13 @@ public class S3BucketRepository {
     
     @JsonProperty("Name")
     public String name;
+
     public S3BucketRepository withName(String name) {
         this.name = name;
         return this;
     }
     
+    public S3BucketRepository(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

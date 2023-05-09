@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionTargetHttpsProxiesListResponse {
     
     public String contentType;
+
     public ComputeRegionTargetHttpsProxiesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeRegionTargetHttpsProxiesListResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionTargetHttpsProxiesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeRegionTargetHttpsProxiesListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionTargetHttpsProxiesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionTargetHttpsProxiesListResponse {
      */
     
     public org.openapis.openapi.models.shared.TargetHttpsProxyList targetHttpsProxyList;
+
     public ComputeRegionTargetHttpsProxiesListResponse withTargetHttpsProxyList(org.openapis.openapi.models.shared.TargetHttpsProxyList targetHttpsProxyList) {
         this.targetHttpsProxyList = targetHttpsProxyList;
         return this;
     }
     
+    public ComputeRegionTargetHttpsProxiesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

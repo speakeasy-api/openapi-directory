@@ -19,6 +19,7 @@ public class Emoji {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Emoji withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class Emoji {
      */
     @JsonProperty("shortcode")
     public String shortcode;
+
     public Emoji withShortcode(String shortcode) {
         this.shortcode = shortcode;
         return this;
@@ -39,6 +41,7 @@ public class Emoji {
      */
     @JsonProperty("static_url")
     public String staticUrl;
+
     public Emoji withStaticUrl(String staticUrl) {
         this.staticUrl = staticUrl;
         return this;
@@ -49,6 +52,7 @@ public class Emoji {
      */
     @JsonProperty("url")
     public String url;
+
     public Emoji withUrl(String url) {
         this.url = url;
         return this;
@@ -59,9 +63,16 @@ public class Emoji {
      */
     @JsonProperty("visible_in_picker")
     public Boolean visibleInPicker;
+
     public Emoji withVisibleInPicker(Boolean visibleInPicker) {
         this.visibleInPicker = visibleInPicker;
         return this;
     }
     
+    public Emoji(@JsonProperty("shortcode") String shortcode, @JsonProperty("static_url") String staticUrl, @JsonProperty("url") String url, @JsonProperty("visible_in_picker") Boolean visibleInPicker) {
+        this.shortcode = shortcode;
+        this.staticUrl = staticUrl;
+        this.url = url;
+        this.visibleInPicker = visibleInPicker;
+  }
 }

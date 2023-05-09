@@ -425,4 +425,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateTimeToLiveOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimeToLiveSpecification.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTimeToLiveInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

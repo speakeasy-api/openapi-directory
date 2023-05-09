@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
@@ -12,6 +13,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_id")
     public Long commentId;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -32,6 +35,7 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=encoded_id")
     public String encodedId;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withEncodedId(String encodedId) {
         this.encodedId = encodedId;
         return this;
@@ -44,9 +48,16 @@ public class PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public PutSnippetsWorkspaceEncodedIdCommentsCommentIdRequest(@JsonProperty("RequestBody") java.util.Map<String, Object> requestBody, @JsonProperty("comment_id") Long commentId, @JsonProperty("encoded_id") String encodedId, @JsonProperty("workspace") String workspace) {
+        this.requestBody = requestBody;
+        this.commentId = commentId;
+        this.encodedId = encodedId;
+        this.workspace = workspace;
+  }
 }

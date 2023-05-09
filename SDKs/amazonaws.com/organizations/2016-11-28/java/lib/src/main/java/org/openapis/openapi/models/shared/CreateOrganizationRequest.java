@@ -12,9 +12,11 @@ public class CreateOrganizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureSet")
     public OrganizationFeatureSetEnum featureSet;
+
     public CreateOrganizationRequest withFeatureSet(OrganizationFeatureSetEnum featureSet) {
         this.featureSet = featureSet;
         return this;
     }
     
+    public CreateOrganizationRequest(){}
 }

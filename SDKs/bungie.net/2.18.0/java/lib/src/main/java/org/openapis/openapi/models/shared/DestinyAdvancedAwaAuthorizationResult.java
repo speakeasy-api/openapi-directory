@@ -12,6 +12,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public String actionToken;
+
     public DestinyAdvancedAwaAuthorizationResult withActionToken(String actionToken) {
         this.actionToken = actionToken;
         return this;
@@ -22,6 +23,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public String developerNote;
+
     public DestinyAdvancedAwaAuthorizationResult withDeveloperNote(String developerNote) {
         this.developerNote = developerNote;
         return this;
@@ -32,6 +34,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public Integer maximumNumberOfUses;
+
     public DestinyAdvancedAwaAuthorizationResult withMaximumNumberOfUses(Integer maximumNumberOfUses) {
         this.maximumNumberOfUses = maximumNumberOfUses;
         return this;
@@ -42,6 +45,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public Integer membershipType;
+
     public DestinyAdvancedAwaAuthorizationResult withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -49,6 +53,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
     
     
     public Integer responseReason;
+
     public DestinyAdvancedAwaAuthorizationResult withResponseReason(Integer responseReason) {
         this.responseReason = responseReason;
         return this;
@@ -59,6 +64,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public Integer type;
+
     public DestinyAdvancedAwaAuthorizationResult withType(Integer type) {
         this.type = type;
         return this;
@@ -69,6 +75,7 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public Integer userSelection;
+
     public DestinyAdvancedAwaAuthorizationResult withUserSelection(Integer userSelection) {
         this.userSelection = userSelection;
         return this;
@@ -79,9 +86,11 @@ public class DestinyAdvancedAwaAuthorizationResult {
      */
     
     public OffsetDateTime validUntil;
+
     public DestinyAdvancedAwaAuthorizationResult withValidUntil(OffsetDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public DestinyAdvancedAwaAuthorizationResult(){}
 }

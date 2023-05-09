@@ -60,11 +60,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBResponse(contentType, httpRes.statusCode()) {{
             scheduleBPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -105,11 +103,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBByPurposeResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByPurposeResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBByPurposeResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByPurposeResponse(contentType, httpRes.statusCode()) {{
             scheduleBByPurposePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -150,11 +146,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientResponse(contentType, httpRes.statusCode()) {{
             scheduleBByRecipientPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -195,11 +189,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBByRecipientIdResponse(contentType, httpRes.statusCode()) {{
             scheduleBByRecipientIDPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -240,11 +232,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBEfileResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBEfileResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBEfileResponse(contentType, httpRes.statusCode()) {{
             scheduleBEfilePage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -285,11 +275,9 @@ public class Disbursements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSchedulesScheduleBSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBSubIdResponse() {{
+        org.openapis.openapi.models.operations.GetSchedulesScheduleBSubIdResponse res = new org.openapis.openapi.models.operations.GetSchedulesScheduleBSubIdResponse(contentType, httpRes.statusCode()) {{
             scheduleBPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

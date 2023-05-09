@@ -18,6 +18,7 @@ public class GoogleSearchIdeahubV1betaTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleSearchIdeahubV1betaTopic withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleSearchIdeahubV1betaTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mid")
     public String mid;
+
     public GoogleSearchIdeahubV1betaTopic withMid(String mid) {
         this.mid = mid;
         return this;
@@ -40,9 +42,11 @@ public class GoogleSearchIdeahubV1betaTopic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleSearchIdeahubV1betaTopic withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleSearchIdeahubV1betaTopic(){}
 }

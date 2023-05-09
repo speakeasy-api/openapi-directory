@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteKeywordRequest {
     @JsonProperty("Keyword")
     public String keyword;
+
     public DeleteKeywordRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -16,9 +17,14 @@ public class DeleteKeywordRequest {
     
     @JsonProperty("OriginationIdentity")
     public String originationIdentity;
+
     public DeleteKeywordRequest withOriginationIdentity(String originationIdentity) {
         this.originationIdentity = originationIdentity;
         return this;
     }
     
+    public DeleteKeywordRequest(@JsonProperty("Keyword") String keyword, @JsonProperty("OriginationIdentity") String originationIdentity) {
+        this.keyword = keyword;
+        this.originationIdentity = originationIdentity;
+  }
 }

@@ -12,9 +12,13 @@ public class BatchGetDevicePositionRequestBody {
      */
     @JsonProperty("DeviceIds")
     public String[] deviceIds;
+
     public BatchGetDevicePositionRequestBody withDeviceIds(String[] deviceIds) {
         this.deviceIds = deviceIds;
         return this;
     }
     
+    public BatchGetDevicePositionRequestBody(@JsonProperty("DeviceIds") String[] deviceIds) {
+        this.deviceIds = deviceIds;
+  }
 }

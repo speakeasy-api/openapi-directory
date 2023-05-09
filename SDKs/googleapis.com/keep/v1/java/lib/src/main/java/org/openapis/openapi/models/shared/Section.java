@@ -18,6 +18,7 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public ListContent list;
+
     public Section withList(ListContent list) {
         this.list = list;
         return this;
@@ -29,9 +30,11 @@ public class Section {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextContent text;
+
     public Section withText(TextContent text) {
         this.text = text;
         return this;
     }
     
+    public Section(){}
 }

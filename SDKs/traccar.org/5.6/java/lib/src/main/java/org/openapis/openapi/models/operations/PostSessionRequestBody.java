@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostSessionRequestBody {
     @SpeakeasyMetadata("form:name=email")
     public String email;
+
     public PostSessionRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -16,9 +18,14 @@ public class PostSessionRequestBody {
     
     @SpeakeasyMetadata("form:name=password")
     public String password;
+
     public PostSessionRequestBody withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public PostSessionRequestBody(@JsonProperty("email") String email, @JsonProperty("password") String password) {
+        this.email = email;
+        this.password = password;
+  }
 }

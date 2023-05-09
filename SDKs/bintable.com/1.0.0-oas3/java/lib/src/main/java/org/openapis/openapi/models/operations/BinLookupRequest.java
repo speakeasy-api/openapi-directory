@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BinLookupRequest {
@@ -12,6 +13,7 @@ public class BinLookupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public BinLookupRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,9 +24,14 @@ public class BinLookupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bin")
     public String bin;
+
     public BinLookupRequest withBin(String bin) {
         this.bin = bin;
         return this;
     }
     
+    public BinLookupRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("bin") String bin) {
+        this.apiKey = apiKey;
+        this.bin = bin;
+  }
 }

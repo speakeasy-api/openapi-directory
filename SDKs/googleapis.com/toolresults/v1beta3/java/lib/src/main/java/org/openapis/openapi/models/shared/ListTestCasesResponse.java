@@ -15,6 +15,7 @@ public class ListTestCasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTestCasesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -26,9 +27,11 @@ public class ListTestCasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCases")
     public TestCase[] testCases;
+
     public ListTestCasesResponse withTestCases(TestCase[] testCases) {
         this.testCases = testCases;
         return this;
     }
     
+    public ListTestCasesResponse(){}
 }

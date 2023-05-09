@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateCustomDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public DisassociateCustomDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateCustomDomainRequest {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public DisassociateCustomDomainRequest withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
     }
     
+    public DisassociateCustomDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("ServiceArn") String serviceArn) {
+        this.domainName = domainName;
+        this.serviceArn = serviceArn;
+  }
 }

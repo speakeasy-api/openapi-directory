@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsQuickAddRequest {
@@ -12,6 +13,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsQuickAddRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsQuickAddRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
@@ -32,6 +35,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsQuickAddRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsQuickAddRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsQuickAddRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsQuickAddRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -72,6 +79,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsQuickAddRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -84,6 +92,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendNotifications")
     public Boolean sendNotifications;
+
     public CalendarEventsQuickAddRequest withSendNotifications(Boolean sendNotifications) {
         this.sendNotifications = sendNotifications;
         return this;
@@ -94,6 +103,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sendUpdates")
     public CalendarEventsQuickAddSendUpdatesEnum sendUpdates;
+
     public CalendarEventsQuickAddRequest withSendUpdates(CalendarEventsQuickAddSendUpdatesEnum sendUpdates) {
         this.sendUpdates = sendUpdates;
         return this;
@@ -104,6 +114,7 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public CalendarEventsQuickAddRequest withText(String text) {
         this.text = text;
         return this;
@@ -114,9 +125,14 @@ public class CalendarEventsQuickAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsQuickAddRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsQuickAddRequest(@JsonProperty("calendarId") String calendarId, @JsonProperty("text") String text) {
+        this.calendarId = calendarId;
+        this.text = text;
+  }
 }

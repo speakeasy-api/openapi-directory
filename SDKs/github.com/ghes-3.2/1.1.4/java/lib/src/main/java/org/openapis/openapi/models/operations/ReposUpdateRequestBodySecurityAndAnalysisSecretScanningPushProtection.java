@@ -18,9 +18,11 @@ public class ReposUpdateRequestBodySecurityAndAnalysisSecretScanningPushProtecti
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ReposUpdateRequestBodySecurityAndAnalysisSecretScanningPushProtection withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ReposUpdateRequestBodySecurityAndAnalysisSecretScanningPushProtection(){}
 }

@@ -18,6 +18,7 @@ public class SignupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionToken")
     public String completionToken;
+
     public SignupInfo withCompletionToken(String completionToken) {
         this.completionToken = completionToken;
         return this;
@@ -29,6 +30,7 @@ public class SignupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public SignupInfo withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class SignupInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SignupInfo withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SignupInfo(){}
 }

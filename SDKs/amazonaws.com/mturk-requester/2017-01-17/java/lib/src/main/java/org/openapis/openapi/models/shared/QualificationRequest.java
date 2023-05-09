@@ -20,6 +20,7 @@ public class QualificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Answer")
     public String answer;
+
     public QualificationRequest withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -28,6 +29,7 @@ public class QualificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationRequestId")
     public String qualificationRequestId;
+
     public QualificationRequest withQualificationRequestId(String qualificationRequestId) {
         this.qualificationRequestId = qualificationRequestId;
         return this;
@@ -36,6 +38,7 @@ public class QualificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public QualificationRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -46,6 +49,7 @@ public class QualificationRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public QualificationRequest withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
@@ -54,6 +58,7 @@ public class QualificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Test")
     public String test;
+
     public QualificationRequest withTest(String test) {
         this.test = test;
         return this;
@@ -62,9 +67,11 @@ public class QualificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkerId")
     public String workerId;
+
     public QualificationRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public QualificationRequest(){}
 }

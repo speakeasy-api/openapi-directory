@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegisterRequest {
@@ -12,6 +13,7 @@ public class RegisterRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RegistrationRequest registrationRequest;
+
     public RegisterRequest withRegistrationRequest(org.openapis.openapi.models.shared.RegistrationRequest registrationRequest) {
         this.registrationRequest = registrationRequest;
         return this;
@@ -42,6 +44,7 @@ public class RegisterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public RegisterRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -62,9 +65,13 @@ public class RegisterRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public RegisterRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public RegisterRequest(@JsonProperty("RegistrationRequest") org.openapis.openapi.models.shared.RegistrationRequest registrationRequest) {
+        this.registrationRequest = registrationRequest;
+  }
 }

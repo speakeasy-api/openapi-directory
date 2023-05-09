@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DecreaseReplicationFactorResponse {
@@ -12,6 +13,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object clusterNotFoundFault;
+
     public DecreaseReplicationFactorResponse withClusterNotFoundFault(Object clusterNotFoundFault) {
         this.clusterNotFoundFault = clusterNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class DecreaseReplicationFactorResponse {
     
     
     public String contentType;
+
     public DecreaseReplicationFactorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public org.openapis.openapi.models.shared.DecreaseReplicationFactorResponse decreaseReplicationFactorResponse;
+
     public DecreaseReplicationFactorResponse withDecreaseReplicationFactorResponse(org.openapis.openapi.models.shared.DecreaseReplicationFactorResponse decreaseReplicationFactorResponse) {
         this.decreaseReplicationFactorResponse = decreaseReplicationFactorResponse;
         return this;
@@ -39,6 +43,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object invalidClusterStateFault;
+
     public DecreaseReplicationFactorResponse withInvalidClusterStateFault(Object invalidClusterStateFault) {
         this.invalidClusterStateFault = invalidClusterStateFault;
         return this;
@@ -49,6 +54,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DecreaseReplicationFactorResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -59,6 +65,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DecreaseReplicationFactorResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -69,6 +76,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object nodeNotFoundFault;
+
     public DecreaseReplicationFactorResponse withNodeNotFoundFault(Object nodeNotFoundFault) {
         this.nodeNotFoundFault = nodeNotFoundFault;
         return this;
@@ -79,6 +87,7 @@ public class DecreaseReplicationFactorResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public DecreaseReplicationFactorResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -86,6 +95,7 @@ public class DecreaseReplicationFactorResponse {
     
     
     public Integer statusCode;
+
     public DecreaseReplicationFactorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class DecreaseReplicationFactorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DecreaseReplicationFactorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DecreaseReplicationFactorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

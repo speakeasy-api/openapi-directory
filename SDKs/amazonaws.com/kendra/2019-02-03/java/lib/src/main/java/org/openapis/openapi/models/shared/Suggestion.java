@@ -15,6 +15,7 @@ public class Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Suggestion withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class Suggestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public SuggestionValue value;
+
     public Suggestion withValue(SuggestionValue value) {
         this.value = value;
         return this;
     }
     
+    public Suggestion(){}
 }

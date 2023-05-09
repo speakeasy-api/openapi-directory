@@ -15,9 +15,11 @@ public class RegionDisksStopAsyncReplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asyncSecondaryDisk")
     public String asyncSecondaryDisk;
+
     public RegionDisksStopAsyncReplicationRequest withAsyncSecondaryDisk(String asyncSecondaryDisk) {
         this.asyncSecondaryDisk = asyncSecondaryDisk;
         return this;
     }
     
+    public RegionDisksStopAsyncReplicationRequest(){}
 }

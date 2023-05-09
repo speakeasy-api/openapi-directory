@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateInAppTemplateResponse {
@@ -12,6 +13,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object badRequestException;
+
     public UpdateInAppTemplateResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateInAppTemplateResponse {
     
     
     public String contentType;
+
     public UpdateInAppTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object forbiddenException;
+
     public UpdateInAppTemplateResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateInAppTemplateResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object methodNotAllowedException;
+
     public UpdateInAppTemplateResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object notFoundException;
+
     public UpdateInAppTemplateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object payloadTooLargeException;
+
     public UpdateInAppTemplateResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateInAppTemplateResponse {
     
     
     public Integer statusCode;
+
     public UpdateInAppTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateInAppTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateInAppTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateInAppTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateInAppTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateInAppTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateInAppTemplateResponse updateInAppTemplateResponse;
+
     public UpdateInAppTemplateResponse withUpdateInAppTemplateResponse(org.openapis.openapi.models.shared.UpdateInAppTemplateResponse updateInAppTemplateResponse) {
         this.updateInAppTemplateResponse = updateInAppTemplateResponse;
         return this;
     }
     
+    public UpdateInAppTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

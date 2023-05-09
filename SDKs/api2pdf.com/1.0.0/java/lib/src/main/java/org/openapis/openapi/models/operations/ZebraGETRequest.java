@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ZebraGETRequest {
@@ -12,6 +13,7 @@ public class ZebraGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public String format;
+
     public ZebraGETRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class ZebraGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=height")
     public Long height;
+
     public ZebraGETRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -32,6 +35,7 @@ public class ZebraGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showlabel")
     public Boolean showlabel;
+
     public ZebraGETRequest withShowlabel(Boolean showlabel) {
         this.showlabel = showlabel;
         return this;
@@ -42,6 +46,7 @@ public class ZebraGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=value")
     public String value;
+
     public ZebraGETRequest withValue(String value) {
         this.value = value;
         return this;
@@ -52,9 +57,14 @@ public class ZebraGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=width")
     public Long width;
+
     public ZebraGETRequest withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public ZebraGETRequest(@JsonProperty("format") String format, @JsonProperty("value") String value) {
+        this.format = format;
+        this.value = value;
+  }
 }

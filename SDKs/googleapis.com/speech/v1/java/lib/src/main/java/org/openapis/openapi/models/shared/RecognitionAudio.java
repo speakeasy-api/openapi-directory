@@ -18,6 +18,7 @@ public class RecognitionAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public RecognitionAudio withContent(String content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class RecognitionAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public RecognitionAudio withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public RecognitionAudio(){}
 }

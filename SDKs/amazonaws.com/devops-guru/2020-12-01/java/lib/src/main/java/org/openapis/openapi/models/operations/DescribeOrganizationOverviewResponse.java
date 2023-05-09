@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeOrganizationOverviewResponse {
@@ -12,6 +13,7 @@ public class DescribeOrganizationOverviewResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeOrganizationOverviewResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeOrganizationOverviewResponse {
     
     
     public String contentType;
+
     public DescribeOrganizationOverviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeOrganizationOverviewResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeOrganizationOverviewResponse describeOrganizationOverviewResponse;
+
     public DescribeOrganizationOverviewResponse withDescribeOrganizationOverviewResponse(org.openapis.openapi.models.shared.DescribeOrganizationOverviewResponse describeOrganizationOverviewResponse) {
         this.describeOrganizationOverviewResponse = describeOrganizationOverviewResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeOrganizationOverviewResponse {
      */
     
     public Object internalServerException;
+
     public DescribeOrganizationOverviewResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeOrganizationOverviewResponse {
     
     
     public Integer statusCode;
+
     public DescribeOrganizationOverviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeOrganizationOverviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeOrganizationOverviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeOrganizationOverviewResponse {
      */
     
     public Object throttlingException;
+
     public DescribeOrganizationOverviewResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeOrganizationOverviewResponse {
      */
     
     public Object validationException;
+
     public DescribeOrganizationOverviewResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeOrganizationOverviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

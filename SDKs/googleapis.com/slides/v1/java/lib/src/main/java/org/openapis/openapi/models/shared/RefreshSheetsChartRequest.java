@@ -18,9 +18,11 @@ public class RefreshSheetsChartRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectId")
     public String objectId;
+
     public RefreshSheetsChartRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public RefreshSheetsChartRequest(){}
 }

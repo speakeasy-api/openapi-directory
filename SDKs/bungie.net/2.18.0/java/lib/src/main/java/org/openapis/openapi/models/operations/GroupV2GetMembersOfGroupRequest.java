@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2GetMembersOfGroupRequest {
@@ -12,6 +13,7 @@ public class GroupV2GetMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currentpage")
     public Integer currentpage;
+
     public GroupV2GetMembersOfGroupRequest withCurrentpage(Integer currentpage) {
         this.currentpage = currentpage;
         return this;
@@ -22,6 +24,7 @@ public class GroupV2GetMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2GetMembersOfGroupRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,6 +35,7 @@ public class GroupV2GetMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=memberType")
     public Integer memberType;
+
     public GroupV2GetMembersOfGroupRequest withMemberType(Integer memberType) {
         this.memberType = memberType;
         return this;
@@ -42,9 +46,14 @@ public class GroupV2GetMembersOfGroupRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameSearch")
     public String nameSearch;
+
     public GroupV2GetMembersOfGroupRequest withNameSearch(String nameSearch) {
         this.nameSearch = nameSearch;
         return this;
     }
     
+    public GroupV2GetMembersOfGroupRequest(@JsonProperty("currentpage") Integer currentpage, @JsonProperty("groupId") Long groupId) {
+        this.currentpage = currentpage;
+        this.groupId = groupId;
+  }
 }

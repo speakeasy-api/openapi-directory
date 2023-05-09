@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1BigQueryDateShardedSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataset")
     public String dataset;
+
     public GoogleCloudDatacatalogV1BigQueryDateShardedSpec withDataset(String dataset) {
         this.dataset = dataset;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1BigQueryDateShardedSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestShardResource")
     public String latestShardResource;
+
     public GoogleCloudDatacatalogV1BigQueryDateShardedSpec withLatestShardResource(String latestShardResource) {
         this.latestShardResource = latestShardResource;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1BigQueryDateShardedSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardCount")
     public String shardCount;
+
     public GoogleCloudDatacatalogV1BigQueryDateShardedSpec withShardCount(String shardCount) {
         this.shardCount = shardCount;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1BigQueryDateShardedSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablePrefix")
     public String tablePrefix;
+
     public GoogleCloudDatacatalogV1BigQueryDateShardedSpec withTablePrefix(String tablePrefix) {
         this.tablePrefix = tablePrefix;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1BigQueryDateShardedSpec(){}
 }

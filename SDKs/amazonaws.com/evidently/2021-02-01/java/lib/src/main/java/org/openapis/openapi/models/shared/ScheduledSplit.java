@@ -20,6 +20,7 @@ public class ScheduledSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupWeights")
     public java.util.Map<String, Long> groupWeights;
+
     public ScheduledSplit withGroupWeights(java.util.Map<String, Long> groupWeights) {
         this.groupWeights = groupWeights;
         return this;
@@ -28,6 +29,7 @@ public class ScheduledSplit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segmentOverrides")
     public SegmentOverride[] segmentOverrides;
+
     public ScheduledSplit withSegmentOverrides(SegmentOverride[] segmentOverrides) {
         this.segmentOverrides = segmentOverrides;
         return this;
@@ -37,9 +39,13 @@ public class ScheduledSplit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ScheduledSplit withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ScheduledSplit(@JsonProperty("startTime") OffsetDateTime startTime) {
+        this.startTime = startTime;
+  }
 }

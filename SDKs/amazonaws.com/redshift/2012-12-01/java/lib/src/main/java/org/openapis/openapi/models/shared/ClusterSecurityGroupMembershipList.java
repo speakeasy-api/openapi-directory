@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ClusterSecurityGroupMembershipList {
     
     public String clusterSecurityGroupName;
+
     public ClusterSecurityGroupMembershipList withClusterSecurityGroupName(String clusterSecurityGroupName) {
         this.clusterSecurityGroupName = clusterSecurityGroupName;
         return this;
@@ -19,9 +20,11 @@ public class ClusterSecurityGroupMembershipList {
     
     
     public String status;
+
     public ClusterSecurityGroupMembershipList withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ClusterSecurityGroupMembershipList(){}
 }

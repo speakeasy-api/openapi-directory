@@ -21,6 +21,7 @@ public class ListGiftCardActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public ListGiftCardActivitiesResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -32,6 +33,7 @@ public class ListGiftCardActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public ListGiftCardActivitiesResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -43,9 +45,11 @@ public class ListGiftCardActivitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gift_card_activities")
     public GiftCardActivity[] giftCardActivities;
+
     public ListGiftCardActivitiesResponse withGiftCardActivities(GiftCardActivity[] giftCardActivities) {
         this.giftCardActivities = giftCardActivities;
         return this;
     }
     
+    public ListGiftCardActivitiesResponse(){}
 }

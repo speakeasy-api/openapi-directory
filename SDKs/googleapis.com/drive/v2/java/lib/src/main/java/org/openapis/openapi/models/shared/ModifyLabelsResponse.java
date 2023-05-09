@@ -18,6 +18,7 @@ public class ModifyLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ModifyLabelsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class ModifyLabelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedLabels")
     public Label[] modifiedLabels;
+
     public ModifyLabelsResponse withModifiedLabels(Label[] modifiedLabels) {
         this.modifiedLabels = modifiedLabels;
         return this;
     }
     
+    public ModifyLabelsResponse(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EffectiveDeployment {
     @JsonProperty("coreDeviceExecutionStatus")
     public EffectiveDeploymentExecutionStatusEnum coreDeviceExecutionStatus;
+
     public EffectiveDeployment withCoreDeviceExecutionStatus(EffectiveDeploymentExecutionStatusEnum coreDeviceExecutionStatus) {
         this.coreDeviceExecutionStatus = coreDeviceExecutionStatus;
         return this;
@@ -28,6 +29,7 @@ public class EffectiveDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTimestamp")
     public OffsetDateTime creationTimestamp;
+
     public EffectiveDeployment withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -35,6 +37,7 @@ public class EffectiveDeployment {
     
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public EffectiveDeployment withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -42,6 +45,7 @@ public class EffectiveDeployment {
     
     @JsonProperty("deploymentName")
     public String deploymentName;
+
     public EffectiveDeployment withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -50,6 +54,7 @@ public class EffectiveDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EffectiveDeployment withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +63,7 @@ public class EffectiveDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobArn")
     public String iotJobArn;
+
     public EffectiveDeployment withIotJobArn(String iotJobArn) {
         this.iotJobArn = iotJobArn;
         return this;
@@ -66,6 +72,7 @@ public class EffectiveDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iotJobId")
     public String iotJobId;
+
     public EffectiveDeployment withIotJobId(String iotJobId) {
         this.iotJobId = iotJobId;
         return this;
@@ -75,6 +82,7 @@ public class EffectiveDeployment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedTimestamp")
     public OffsetDateTime modifiedTimestamp;
+
     public EffectiveDeployment withModifiedTimestamp(OffsetDateTime modifiedTimestamp) {
         this.modifiedTimestamp = modifiedTimestamp;
         return this;
@@ -83,6 +91,7 @@ public class EffectiveDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EffectiveDeployment withReason(String reason) {
         this.reason = reason;
         return this;
@@ -91,6 +100,7 @@ public class EffectiveDeployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetails")
     public EffectiveDeploymentStatusDetails statusDetails;
+
     public EffectiveDeployment withStatusDetails(EffectiveDeploymentStatusDetails statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -98,9 +108,18 @@ public class EffectiveDeployment {
     
     @JsonProperty("targetArn")
     public String targetArn;
+
     public EffectiveDeployment withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public EffectiveDeployment(@JsonProperty("coreDeviceExecutionStatus") EffectiveDeploymentExecutionStatusEnum coreDeviceExecutionStatus, @JsonProperty("creationTimestamp") OffsetDateTime creationTimestamp, @JsonProperty("deploymentId") String deploymentId, @JsonProperty("deploymentName") String deploymentName, @JsonProperty("modifiedTimestamp") OffsetDateTime modifiedTimestamp, @JsonProperty("targetArn") String targetArn) {
+        this.coreDeviceExecutionStatus = coreDeviceExecutionStatus;
+        this.creationTimestamp = creationTimestamp;
+        this.deploymentId = deploymentId;
+        this.deploymentName = deploymentName;
+        this.modifiedTimestamp = modifiedTimestamp;
+        this.targetArn = targetArn;
+  }
 }

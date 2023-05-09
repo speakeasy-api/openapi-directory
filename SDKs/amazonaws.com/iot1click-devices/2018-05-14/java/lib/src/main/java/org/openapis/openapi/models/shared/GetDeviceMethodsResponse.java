@@ -15,9 +15,11 @@ public class GetDeviceMethodsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceMethods")
     public DeviceMethod[] deviceMethods;
+
     public GetDeviceMethodsResponse withDeviceMethods(DeviceMethod[] deviceMethods) {
         this.deviceMethods = deviceMethods;
         return this;
     }
     
+    public GetDeviceMethodsResponse(){}
 }

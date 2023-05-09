@@ -17,6 +17,7 @@ public class UpdateActivityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public Constraints constraints;
+
     public UpdateActivityRequest withConstraints(Constraints constraints) {
         this.constraints = constraints;
         return this;
@@ -25,6 +26,7 @@ public class UpdateActivityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nowPlaying")
     public PlayerContext nowPlaying;
+
     public UpdateActivityRequest withNowPlaying(PlayerContext nowPlaying) {
         this.nowPlaying = nowPlaying;
         return this;
@@ -33,6 +35,7 @@ public class UpdateActivityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previouslyPlaying")
     public PlayerContext previouslyPlaying;
+
     public UpdateActivityRequest withPreviouslyPlaying(PlayerContext previouslyPlaying) {
         this.previouslyPlaying = previouslyPlaying;
         return this;
@@ -40,6 +43,7 @@ public class UpdateActivityRequest {
     
     @JsonProperty("report")
     public QueueActivityReportEventEnum report;
+
     public UpdateActivityRequest withReport(QueueActivityReportEventEnum report) {
         this.report = report;
         return this;
@@ -49,6 +53,7 @@ public class UpdateActivityRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public UpdateActivityRequest withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -56,6 +61,7 @@ public class UpdateActivityRequest {
     
     @JsonProperty("userActivity")
     public UserActivity userActivity;
+
     public UpdateActivityRequest withUserActivity(UserActivity userActivity) {
         this.userActivity = userActivity;
         return this;
@@ -63,9 +69,16 @@ public class UpdateActivityRequest {
     
     @JsonProperty("version")
     public String version;
+
     public UpdateActivityRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public UpdateActivityRequest(@JsonProperty("report") QueueActivityReportEventEnum report, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("userActivity") UserActivity userActivity, @JsonProperty("version") String version) {
+        this.report = report;
+        this.timestamp = timestamp;
+        this.userActivity = userActivity;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Long bucketTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withBucketTypeHash(Long bucketTypeHash) {
         this.bucketTypeHash = bucketTypeHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public String expirationTooltip;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withExpirationTooltip(String expirationTooltip) {
         this.expirationTooltip = expirationTooltip;
         return this;
@@ -35,6 +37,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public String expiredInActivityMessage;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withExpiredInActivityMessage(String expiredInActivityMessage) {
         this.expiredInActivityMessage = expiredInActivityMessage;
         return this;
@@ -45,6 +48,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public String expiredInOrbitMessage;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withExpiredInOrbitMessage(String expiredInOrbitMessage) {
         this.expiredInOrbitMessage = expiredInOrbitMessage;
         return this;
@@ -55,6 +59,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Boolean isInstanceItem;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withIsInstanceItem(Boolean isInstanceItem) {
         this.isInstanceItem = isInstanceItem;
         return this;
@@ -65,6 +70,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Integer maxStackSize;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withMaxStackSize(Integer maxStackSize) {
         this.maxStackSize = maxStackSize;
         return this;
@@ -75,6 +81,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Long recipeItemHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withRecipeItemHash(Long recipeItemHash) {
         this.recipeItemHash = recipeItemHash;
         return this;
@@ -85,6 +92,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Long recoveryBucketTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withRecoveryBucketTypeHash(Long recoveryBucketTypeHash) {
         this.recoveryBucketTypeHash = recoveryBucketTypeHash;
         return this;
@@ -95,6 +103,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public String stackUniqueLabel;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withStackUniqueLabel(String stackUniqueLabel) {
         this.stackUniqueLabel = stackUniqueLabel;
         return this;
@@ -102,6 +111,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
     
     
     public Boolean suppressExpirationWhenObjectivesComplete;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withSuppressExpirationWhenObjectivesComplete(Boolean suppressExpirationWhenObjectivesComplete) {
         this.suppressExpirationWhenObjectivesComplete = suppressExpirationWhenObjectivesComplete;
         return this;
@@ -112,6 +122,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Integer tierType;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withTierType(Integer tierType) {
         this.tierType = tierType;
         return this;
@@ -122,6 +133,7 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public Long tierTypeHash;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withTierTypeHash(Long tierTypeHash) {
         this.tierTypeHash = tierTypeHash;
         return this;
@@ -132,9 +144,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionInventory {
      */
     
     public String tierTypeName;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionInventory withTierTypeName(String tierTypeName) {
         this.tierTypeName = tierTypeName;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionInventory(){}
 }

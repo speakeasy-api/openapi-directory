@@ -18,6 +18,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDatapipelinesV1Job withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowJobDetails")
     public GoogleCloudDatapipelinesV1DataflowJobDetails dataflowJobDetails;
+
     public GoogleCloudDatapipelinesV1Job withDataflowJobDetails(GoogleCloudDatapipelinesV1DataflowJobDetails dataflowJobDetails) {
         this.dataflowJobDetails = dataflowJobDetails;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudDatapipelinesV1Job withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDatapipelinesV1Job withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatapipelinesV1Job withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudDatapipelinesV1JobStateEnum state;
+
     public GoogleCloudDatapipelinesV1Job withState(GoogleCloudDatapipelinesV1JobStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDatapipelinesV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public GoogleCloudDatapipelinesV1Job withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
     }
     
+    public GoogleCloudDatapipelinesV1Job(){}
 }

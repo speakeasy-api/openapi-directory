@@ -18,6 +18,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidth")
     public NetworkConfigBandwidthEnum bandwidth;
+
     public NetworkConfig withBandwidth(NetworkConfigBandwidthEnum bandwidth) {
         this.bandwidth = bandwidth;
         return this;
@@ -29,6 +30,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidr")
     public String cidr;
+
     public NetworkConfig withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -40,6 +42,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NetworkConfig withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public NetworkConfig withLocation(String location) {
         this.location = location;
         return this;
@@ -62,6 +66,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceCidr")
     public NetworkConfigServiceCidrEnum serviceCidr;
+
     public NetworkConfig withServiceCidr(NetworkConfigServiceCidrEnum serviceCidr) {
         this.serviceCidr = serviceCidr;
         return this;
@@ -73,6 +78,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public NetworkConfigTypeEnum type;
+
     public NetworkConfig withType(NetworkConfigTypeEnum type) {
         this.type = type;
         return this;
@@ -84,6 +90,7 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userNote")
     public String userNote;
+
     public NetworkConfig withUserNote(String userNote) {
         this.userNote = userNote;
         return this;
@@ -95,9 +102,11 @@ public class NetworkConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanAttachments")
     public VlanAttachment[] vlanAttachments;
+
     public NetworkConfig withVlanAttachments(VlanAttachment[] vlanAttachments) {
         this.vlanAttachments = vlanAttachments;
         return this;
     }
     
+    public NetworkConfig(){}
 }

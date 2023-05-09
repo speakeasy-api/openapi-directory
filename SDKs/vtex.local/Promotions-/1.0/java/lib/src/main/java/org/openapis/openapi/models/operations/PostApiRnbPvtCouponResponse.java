@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostApiRnbPvtCouponResponse {
     
     public String contentType;
+
     public PostApiRnbPvtCouponResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostApiRnbPvtCouponResponse {
     
     
     public Integer statusCode;
+
     public PostApiRnbPvtCouponResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostApiRnbPvtCouponResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostApiRnbPvtCouponResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostApiRnbPvtCouponResponse {
      */
     
     public PostApiRnbPvtCoupon201ApplicationJSON postApiRnbPvtCoupon201ApplicationJSONObject;
+
     public PostApiRnbPvtCouponResponse withPostApiRnbPvtCoupon201ApplicationJSONObject(PostApiRnbPvtCoupon201ApplicationJSON postApiRnbPvtCoupon201ApplicationJSONObject) {
         this.postApiRnbPvtCoupon201ApplicationJSONObject = postApiRnbPvtCoupon201ApplicationJSONObject;
         return this;
     }
     
+    public PostApiRnbPvtCouponResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

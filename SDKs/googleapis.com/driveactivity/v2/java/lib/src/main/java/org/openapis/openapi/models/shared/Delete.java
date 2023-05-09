@@ -18,9 +18,11 @@ public class Delete {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DeleteTypeEnum type;
+
     public Delete withType(DeleteTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Delete(){}
 }

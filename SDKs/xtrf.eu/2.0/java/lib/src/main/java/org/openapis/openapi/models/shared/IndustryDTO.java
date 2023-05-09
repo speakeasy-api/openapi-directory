@@ -18,6 +18,7 @@ public class IndustryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public IndustryDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -29,6 +30,7 @@ public class IndustryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public IndustryDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -40,6 +42,7 @@ public class IndustryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public IndustryDTO withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class IndustryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IndustryDTO withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class IndustryDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public IndustryDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
     }
     
+    public IndustryDTO(){}
 }

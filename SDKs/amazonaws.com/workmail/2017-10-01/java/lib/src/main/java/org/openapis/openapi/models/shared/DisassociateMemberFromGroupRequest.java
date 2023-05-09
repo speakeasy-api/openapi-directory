@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateMemberFromGroupRequest {
     @JsonProperty("GroupId")
     public String groupId;
+
     public DisassociateMemberFromGroupRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -16,6 +17,7 @@ public class DisassociateMemberFromGroupRequest {
     
     @JsonProperty("MemberId")
     public String memberId;
+
     public DisassociateMemberFromGroupRequest withMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -23,9 +25,15 @@ public class DisassociateMemberFromGroupRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DisassociateMemberFromGroupRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DisassociateMemberFromGroupRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("MemberId") String memberId, @JsonProperty("OrganizationId") String organizationId) {
+        this.groupId = groupId;
+        this.memberId = memberId;
+        this.organizationId = organizationId;
+  }
 }

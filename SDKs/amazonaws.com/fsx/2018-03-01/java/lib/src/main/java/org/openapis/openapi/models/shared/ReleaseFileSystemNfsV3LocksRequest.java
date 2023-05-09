@@ -10,11 +10,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReleaseFileSystemNfsV3LocksRequest {
     /**
-     * (Optional) An idempotency token for resource creation, in a string of up to 64 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * (Optional) An idempotency token for resource creation, in a string of up to 63 ASCII characters. This token is automatically filled on your behalf when you use the Command Line Interface (CLI) or an Amazon Web Services SDK.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public ReleaseFileSystemNfsV3LocksRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -25,9 +26,13 @@ public class ReleaseFileSystemNfsV3LocksRequest {
      */
     @JsonProperty("FileSystemId")
     public String fileSystemId;
+
     public ReleaseFileSystemNfsV3LocksRequest withFileSystemId(String fileSystemId) {
         this.fileSystemId = fileSystemId;
         return this;
     }
     
+    public ReleaseFileSystemNfsV3LocksRequest(@JsonProperty("FileSystemId") String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+  }
 }

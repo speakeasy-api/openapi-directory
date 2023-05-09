@@ -480,4 +480,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoans200
 lib/src/main/java/org/openapis/openapi/models/operations/GetUnsecuredSmeLoansResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadUnsecuredSmeLoansRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/HeadUnsecuredSmeLoansResponse.java
+docs/sdk/README.md
+docs/atm/README.md
+docs/bca/README.md
+docs/branch/README.md
+docs/ccc/README.md
+docs/pca/README.md
+docs/sme/README.md
 USAGE.md

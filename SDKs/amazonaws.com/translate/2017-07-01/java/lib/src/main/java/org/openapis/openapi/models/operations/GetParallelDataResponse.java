@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParallelDataResponse {
     
     public String contentType;
+
     public GetParallelDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParallelDataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetParallelDataResponse getParallelDataResponse;
+
     public GetParallelDataResponse withGetParallelDataResponse(org.openapis.openapi.models.shared.GetParallelDataResponse getParallelDataResponse) {
         this.getParallelDataResponse = getParallelDataResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetParallelDataResponse {
      */
     
     public Object internalServerException;
+
     public GetParallelDataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetParallelDataResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetParallelDataResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class GetParallelDataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetParallelDataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetParallelDataResponse {
     
     
     public Integer statusCode;
+
     public GetParallelDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetParallelDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParallelDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetParallelDataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetParallelDataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetParallelDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

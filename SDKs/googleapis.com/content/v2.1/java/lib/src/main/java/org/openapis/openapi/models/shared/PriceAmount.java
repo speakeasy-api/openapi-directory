@@ -18,6 +18,7 @@ public class PriceAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public PriceAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -29,9 +30,11 @@ public class PriceAmount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PriceAmount withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PriceAmount(){}
 }

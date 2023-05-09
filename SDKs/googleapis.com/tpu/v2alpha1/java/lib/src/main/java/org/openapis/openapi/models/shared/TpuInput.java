@@ -18,9 +18,11 @@ public class TpuInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeSpec")
     public NodeSpecInput[] nodeSpec;
+
     public TpuInput withNodeSpec(NodeSpecInput[] nodeSpec) {
         this.nodeSpec = nodeSpec;
         return this;
     }
     
+    public TpuInput(){}
 }

@@ -15,6 +15,7 @@ public class EmailTemplateListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public EmailTemplateViewModel[] data;
+
     public EmailTemplateListViewModel withData(EmailTemplateViewModel[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class EmailTemplateListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public EmailTemplateListViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -31,6 +33,7 @@ public class EmailTemplateListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Integer total;
+
     public EmailTemplateListViewModel withTotal(Integer total) {
         this.total = total;
         return this;
@@ -39,9 +42,11 @@ public class EmailTemplateListViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public EmailTemplateListViewModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EmailTemplateListViewModel(){}
 }

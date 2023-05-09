@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDataExporterConfigRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DataExporterConfig dataExporterConfig;
+
     public UpdateDataExporterConfigRequest withDataExporterConfig(org.openapis.openapi.models.shared.DataExporterConfig dataExporterConfig) {
         this.dataExporterConfig = dataExporterConfig;
         return this;
@@ -19,9 +21,13 @@ public class UpdateDataExporterConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataExporterConfigId")
     public String dataExporterConfigId;
+
     public UpdateDataExporterConfigRequest withDataExporterConfigId(String dataExporterConfigId) {
         this.dataExporterConfigId = dataExporterConfigId;
         return this;
     }
     
+    public UpdateDataExporterConfigRequest(@JsonProperty("dataExporterConfigId") String dataExporterConfigId) {
+        this.dataExporterConfigId = dataExporterConfigId;
+  }
 }

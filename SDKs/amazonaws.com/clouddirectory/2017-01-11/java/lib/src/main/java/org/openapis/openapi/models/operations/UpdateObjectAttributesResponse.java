@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateObjectAttributesResponse {
@@ -12,6 +13,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateObjectAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateObjectAttributesResponse {
     
     
     public String contentType;
+
     public UpdateObjectAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public UpdateObjectAttributesResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object facetValidationException;
+
     public UpdateObjectAttributesResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateObjectAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public UpdateObjectAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateObjectAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object linkNameAlreadyInUseException;
+
     public UpdateObjectAttributesResponse withLinkNameAlreadyInUseException(Object linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -89,6 +98,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public UpdateObjectAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -96,6 +106,7 @@ public class UpdateObjectAttributesResponse {
     
     
     public Integer statusCode;
+
     public UpdateObjectAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class UpdateObjectAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateObjectAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,6 +125,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateObjectAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class UpdateObjectAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateObjectAttributesResponse updateObjectAttributesResponse;
+
     public UpdateObjectAttributesResponse withUpdateObjectAttributesResponse(org.openapis.openapi.models.shared.UpdateObjectAttributesResponse updateObjectAttributesResponse) {
         this.updateObjectAttributesResponse = updateObjectAttributesResponse;
         return this;
@@ -133,9 +147,14 @@ public class UpdateObjectAttributesResponse {
      */
     
     public Object validationException;
+
     public UpdateObjectAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateObjectAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

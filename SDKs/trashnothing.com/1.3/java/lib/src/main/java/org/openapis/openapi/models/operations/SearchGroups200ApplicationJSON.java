@@ -18,6 +18,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end_index")
     public Long endIndex;
+
     public SearchGroups200ApplicationJSON withEndIndex(Long endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -26,6 +27,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groups")
     public org.openapis.openapi.models.shared.Group[] groups;
+
     public SearchGroups200ApplicationJSON withGroups(org.openapis.openapi.models.shared.Group[] groups) {
         this.groups = groups;
         return this;
@@ -37,6 +39,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_groups")
     public Long numGroups;
+
     public SearchGroups200ApplicationJSON withNumGroups(Long numGroups) {
         this.numGroups = numGroups;
         return this;
@@ -48,6 +51,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("num_pages")
     public Long numPages;
+
     public SearchGroups200ApplicationJSON withNumPages(Long numPages) {
         this.numPages = numPages;
         return this;
@@ -59,6 +63,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public SearchGroups200ApplicationJSON withPage(Long page) {
         this.page = page;
         return this;
@@ -70,6 +75,7 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per_page")
     public Long perPage;
+
     public SearchGroups200ApplicationJSON withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -81,9 +87,11 @@ public class SearchGroups200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_index")
     public Long startIndex;
+
     public SearchGroups200ApplicationJSON withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public SearchGroups200ApplicationJSON(){}
 }

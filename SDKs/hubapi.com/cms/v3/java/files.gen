@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ForwardPaging.java
 lib/src/main/java/org/openapis/openapi/models/shared/NextPage.java
 lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/ErrorDetail.java
+docs/sdk/README.md
+docs/domains/README.md
 USAGE.md

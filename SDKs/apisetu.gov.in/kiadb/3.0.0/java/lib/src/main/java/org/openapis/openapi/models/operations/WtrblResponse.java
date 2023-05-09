@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WtrblResponse {
     
     public String contentType;
+
     public WtrblResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WtrblResponse {
     
     
     public Integer statusCode;
+
     public WtrblResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WtrblResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WtrblResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl400ApplicationJSON wtrbl400ApplicationJSONObject;
+
     public WtrblResponse withWtrbl400ApplicationJSONObject(Wtrbl400ApplicationJSON wtrbl400ApplicationJSONObject) {
         this.wtrbl400ApplicationJSONObject = wtrbl400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl401ApplicationJSON wtrbl401ApplicationJSONObject;
+
     public WtrblResponse withWtrbl401ApplicationJSONObject(Wtrbl401ApplicationJSON wtrbl401ApplicationJSONObject) {
         this.wtrbl401ApplicationJSONObject = wtrbl401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl404ApplicationJSON wtrbl404ApplicationJSONObject;
+
     public WtrblResponse withWtrbl404ApplicationJSONObject(Wtrbl404ApplicationJSON wtrbl404ApplicationJSONObject) {
         this.wtrbl404ApplicationJSONObject = wtrbl404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl500ApplicationJSON wtrbl500ApplicationJSONObject;
+
     public WtrblResponse withWtrbl500ApplicationJSONObject(Wtrbl500ApplicationJSON wtrbl500ApplicationJSONObject) {
         this.wtrbl500ApplicationJSONObject = wtrbl500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl502ApplicationJSON wtrbl502ApplicationJSONObject;
+
     public WtrblResponse withWtrbl502ApplicationJSONObject(Wtrbl502ApplicationJSON wtrbl502ApplicationJSONObject) {
         this.wtrbl502ApplicationJSONObject = wtrbl502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class WtrblResponse {
      */
     
     public Wtrbl503ApplicationJSON wtrbl503ApplicationJSONObject;
+
     public WtrblResponse withWtrbl503ApplicationJSONObject(Wtrbl503ApplicationJSON wtrbl503ApplicationJSONObject) {
         this.wtrbl503ApplicationJSONObject = wtrbl503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class WtrblResponse {
      */
     
     public Wtrbl504ApplicationJSON wtrbl504ApplicationJSONObject;
+
     public WtrblResponse withWtrbl504ApplicationJSONObject(Wtrbl504ApplicationJSON wtrbl504ApplicationJSONObject) {
         this.wtrbl504ApplicationJSONObject = wtrbl504ApplicationJSONObject;
         return this;
     }
     
+    public WtrblResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public Resource withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -23,9 +24,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public Resource withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public Resource(){}
 }

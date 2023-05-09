@@ -12,6 +12,7 @@ public class ConferenceSPRatingDefenseHavoc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("db")
     public Double db;
+
     public ConferenceSPRatingDefenseHavoc withDb(Double db) {
         this.db = db;
         return this;
@@ -20,6 +21,7 @@ public class ConferenceSPRatingDefenseHavoc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("frontSeven")
     public Double frontSeven;
+
     public ConferenceSPRatingDefenseHavoc withFrontSeven(Double frontSeven) {
         this.frontSeven = frontSeven;
         return this;
@@ -28,9 +30,11 @@ public class ConferenceSPRatingDefenseHavoc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ConferenceSPRatingDefenseHavoc withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public ConferenceSPRatingDefenseHavoc(){}
 }

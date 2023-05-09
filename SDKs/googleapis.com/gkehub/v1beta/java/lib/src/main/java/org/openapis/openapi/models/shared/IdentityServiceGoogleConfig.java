@@ -18,9 +18,11 @@ public class IdentityServiceGoogleConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disable")
     public Boolean disable;
+
     public IdentityServiceGoogleConfig withDisable(Boolean disable) {
         this.disable = disable;
         return this;
     }
     
+    public IdentityServiceGoogleConfig(){}
 }

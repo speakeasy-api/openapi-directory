@@ -15,6 +15,7 @@ public class ConversationsCall {
      */
     
     public String callCreatedAt;
+
     public ConversationsCall withCallCreatedAt(String callCreatedAt) {
         this.callCreatedAt = callCreatedAt;
         return this;
@@ -25,6 +26,7 @@ public class ConversationsCall {
      */
     
     public String direction;
+
     public ConversationsCall withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -35,6 +37,7 @@ public class ConversationsCall {
      */
     
     public Double duration;
+
     public ConversationsCall withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -45,6 +48,7 @@ public class ConversationsCall {
      */
     
     public String from;
+
     public ConversationsCall withFrom(String from) {
         this.from = from;
         return this;
@@ -55,6 +59,7 @@ public class ConversationsCall {
      */
     
     public java.util.Map<String, Object> recording;
+
     public ConversationsCall withRecording(java.util.Map<String, Object> recording) {
         this.recording = recording;
         return this;
@@ -65,6 +70,7 @@ public class ConversationsCall {
      */
     
     public String to;
+
     public ConversationsCall withTo(String to) {
         this.to = to;
         return this;
@@ -75,9 +81,11 @@ public class ConversationsCall {
      */
     
     public String userGuid;
+
     public ConversationsCall withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public ConversationsCall(){}
 }

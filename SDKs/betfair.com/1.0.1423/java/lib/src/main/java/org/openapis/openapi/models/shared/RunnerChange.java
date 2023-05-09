@@ -15,6 +15,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atb")
     public Double[][] atb;
+
     public RunnerChange withAtb(Double[][] atb) {
         this.atb = atb;
         return this;
@@ -26,6 +27,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atl")
     public Double[][] atl;
+
     public RunnerChange withAtl(Double[][] atl) {
         this.atl = atl;
         return this;
@@ -37,6 +39,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batb")
     public Double[][] batb;
+
     public RunnerChange withBatb(Double[][] batb) {
         this.batb = batb;
         return this;
@@ -48,6 +51,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batl")
     public Double[][] batl;
+
     public RunnerChange withBatl(Double[][] batl) {
         this.batl = batl;
         return this;
@@ -59,6 +63,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bdatb")
     public Double[][] bdatb;
+
     public RunnerChange withBdatb(Double[][] bdatb) {
         this.bdatb = bdatb;
         return this;
@@ -70,6 +75,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bdatl")
     public Double[][] bdatl;
+
     public RunnerChange withBdatl(Double[][] bdatl) {
         this.bdatl = bdatl;
         return this;
@@ -81,6 +87,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hc")
     public Double hc;
+
     public RunnerChange withHc(Double hc) {
         this.hc = hc;
         return this;
@@ -92,6 +99,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public RunnerChange withId(Long id) {
         this.id = id;
         return this;
@@ -103,6 +111,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ltp")
     public Double ltp;
+
     public RunnerChange withLtp(Double ltp) {
         this.ltp = ltp;
         return this;
@@ -114,6 +123,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spb")
     public Double[][] spb;
+
     public RunnerChange withSpb(Double[][] spb) {
         this.spb = spb;
         return this;
@@ -125,6 +135,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spf")
     public Double spf;
+
     public RunnerChange withSpf(Double spf) {
         this.spf = spf;
         return this;
@@ -136,6 +147,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spl")
     public Double[][] spl;
+
     public RunnerChange withSpl(Double[][] spl) {
         this.spl = spl;
         return this;
@@ -147,6 +159,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spn")
     public Double spn;
+
     public RunnerChange withSpn(Double spn) {
         this.spn = spn;
         return this;
@@ -158,6 +171,7 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trd")
     public Double[][] trd;
+
     public RunnerChange withTrd(Double[][] trd) {
         this.trd = trd;
         return this;
@@ -169,9 +183,11 @@ public class RunnerChange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tv")
     public Double tv;
+
     public RunnerChange withTv(Double tv) {
         this.tv = tv;
         return this;
     }
     
+    public RunnerChange(){}
 }

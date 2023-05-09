@@ -12,6 +12,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public TeamDetail withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaId")
     public Long areaId;
+
     public TeamDetail withAreaId(Long areaId) {
         this.areaId = areaId;
         return this;
@@ -28,6 +30,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AreaName")
     public String areaName;
+
     public TeamDetail withAreaName(String areaName) {
         this.areaName = areaName;
         return this;
@@ -36,6 +39,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public TeamDetail withEmail(String email) {
         this.email = email;
         return this;
@@ -44,6 +48,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facebook")
     public String facebook;
+
     public TeamDetail withFacebook(String facebook) {
         this.facebook = facebook;
         return this;
@@ -52,6 +57,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Founded")
     public Long founded;
+
     public TeamDetail withFounded(Long founded) {
         this.founded = founded;
         return this;
@@ -60,6 +66,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gender")
     public String gender;
+
     public TeamDetail withGender(String gender) {
         this.gender = gender;
         return this;
@@ -68,6 +75,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Instagram")
     public String instagram;
+
     public TeamDetail withInstagram(String instagram) {
         this.instagram = instagram;
         return this;
@@ -76,6 +84,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public TeamDetail withKey(String key) {
         this.key = key;
         return this;
@@ -84,6 +93,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public TeamDetail withName(String name) {
         this.name = name;
         return this;
@@ -92,6 +102,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Players")
     public Player[] players;
+
     public TeamDetail withPlayers(Player[] players) {
         this.players = players;
         return this;
@@ -100,6 +111,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryColor")
     public String primaryColor;
+
     public TeamDetail withPrimaryColor(String primaryColor) {
         this.primaryColor = primaryColor;
         return this;
@@ -108,6 +120,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuaternaryColor")
     public String quaternaryColor;
+
     public TeamDetail withQuaternaryColor(String quaternaryColor) {
         this.quaternaryColor = quaternaryColor;
         return this;
@@ -116,6 +129,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryColor")
     public String secondaryColor;
+
     public TeamDetail withSecondaryColor(String secondaryColor) {
         this.secondaryColor = secondaryColor;
         return this;
@@ -124,6 +138,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public TeamDetail withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -132,6 +147,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public TeamDetail withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -140,6 +156,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TertiaryColor")
     public String tertiaryColor;
+
     public TeamDetail withTertiaryColor(String tertiaryColor) {
         this.tertiaryColor = tertiaryColor;
         return this;
@@ -148,6 +165,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Twitter")
     public String twitter;
+
     public TeamDetail withTwitter(String twitter) {
         this.twitter = twitter;
         return this;
@@ -156,6 +174,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public TeamDetail withType(String type) {
         this.type = type;
         return this;
@@ -164,6 +183,7 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Website")
     public String website;
+
     public TeamDetail withWebsite(String website) {
         this.website = website;
         return this;
@@ -172,9 +192,11 @@ public class TeamDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("YouTube")
     public String youTube;
+
     public TeamDetail withYouTube(String youTube) {
         this.youTube = youTube;
         return this;
     }
     
+    public TeamDetail(){}
 }

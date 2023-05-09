@@ -12,6 +12,7 @@ public class UpdateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheBehaviorSettings")
     public CacheSettings cacheBehaviorSettings;
+
     public UpdateDistributionRequest withCacheBehaviorSettings(CacheSettings cacheBehaviorSettings) {
         this.cacheBehaviorSettings = cacheBehaviorSettings;
         return this;
@@ -20,6 +21,7 @@ public class UpdateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheBehaviors")
     public CacheBehaviorPerPath[] cacheBehaviors;
+
     public UpdateDistributionRequest withCacheBehaviors(CacheBehaviorPerPath[] cacheBehaviors) {
         this.cacheBehaviors = cacheBehaviors;
         return this;
@@ -28,6 +30,7 @@ public class UpdateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCacheBehavior")
     public CacheBehavior defaultCacheBehavior;
+
     public UpdateDistributionRequest withDefaultCacheBehavior(CacheBehavior defaultCacheBehavior) {
         this.defaultCacheBehavior = defaultCacheBehavior;
         return this;
@@ -35,6 +38,7 @@ public class UpdateDistributionRequest {
     
     @JsonProperty("distributionName")
     public String distributionName;
+
     public UpdateDistributionRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
@@ -43,6 +47,7 @@ public class UpdateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isEnabled")
     public Boolean isEnabled;
+
     public UpdateDistributionRequest withIsEnabled(Boolean isEnabled) {
         this.isEnabled = isEnabled;
         return this;
@@ -51,9 +56,13 @@ public class UpdateDistributionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("origin")
     public InputOrigin origin;
+
     public UpdateDistributionRequest withOrigin(InputOrigin origin) {
         this.origin = origin;
         return this;
     }
     
+    public UpdateDistributionRequest(@JsonProperty("distributionName") String distributionName) {
+        this.distributionName = distributionName;
+  }
 }

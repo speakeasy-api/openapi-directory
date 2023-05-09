@@ -18,6 +18,7 @@ public class PubsubMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public PubsubMessage withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class PubsubMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public PubsubMessage withData(String data) {
         this.data = data;
         return this;
@@ -40,6 +42,7 @@ public class PubsubMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageId")
     public String messageId;
+
     public PubsubMessage withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
@@ -51,6 +54,7 @@ public class PubsubMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderingKey")
     public String orderingKey;
+
     public PubsubMessage withOrderingKey(String orderingKey) {
         this.orderingKey = orderingKey;
         return this;
@@ -62,9 +66,11 @@ public class PubsubMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publishTime")
     public String publishTime;
+
     public PubsubMessage withPublishTime(String publishTime) {
         this.publishTime = publishTime;
         return this;
     }
     
+    public PubsubMessage(){}
 }

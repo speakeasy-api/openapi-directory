@@ -18,6 +18,7 @@ public class WindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public WindowsQuickFixEngineeringPackage withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -29,6 +30,7 @@ public class WindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WindowsQuickFixEngineeringPackage withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class WindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotFixId")
     public String hotFixId;
+
     public WindowsQuickFixEngineeringPackage withHotFixId(String hotFixId) {
         this.hotFixId = hotFixId;
         return this;
@@ -51,9 +54,11 @@ public class WindowsQuickFixEngineeringPackage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installTime")
     public String installTime;
+
     public WindowsQuickFixEngineeringPackage withInstallTime(String installTime) {
         this.installTime = installTime;
         return this;
     }
     
+    public WindowsQuickFixEngineeringPackage(){}
 }

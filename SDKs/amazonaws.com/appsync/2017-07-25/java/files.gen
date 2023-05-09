@@ -293,4 +293,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateGraphqlApiResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateResolverResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateTypeResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

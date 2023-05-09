@@ -12,6 +12,7 @@ public class MessageEventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contact")
     public ContactIdentifiers contact;
+
     public MessageEventPayload withContact(ContactIdentifiers contact) {
         this.contact = contact;
         return this;
@@ -20,6 +21,7 @@ public class MessageEventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public MessageEventPayload withError(String error) {
         this.error = error;
         return this;
@@ -28,6 +30,7 @@ public class MessageEventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MessageEventPayload withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,11 @@ public class MessageEventPayload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public MessageEventPayload withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public MessageEventPayload(){}
 }

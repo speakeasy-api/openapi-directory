@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportSourceCredentialsResponse {
@@ -12,6 +13,7 @@ public class ImportSourceCredentialsResponse {
      */
     
     public Object accountLimitExceededException;
+
     public ImportSourceCredentialsResponse withAccountLimitExceededException(Object accountLimitExceededException) {
         this.accountLimitExceededException = accountLimitExceededException;
         return this;
@@ -19,6 +21,7 @@ public class ImportSourceCredentialsResponse {
     
     
     public String contentType;
+
     public ImportSourceCredentialsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportSourceCredentialsResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportSourceCredentialsOutput importSourceCredentialsOutput;
+
     public ImportSourceCredentialsResponse withImportSourceCredentialsOutput(org.openapis.openapi.models.shared.ImportSourceCredentialsOutput importSourceCredentialsOutput) {
         this.importSourceCredentialsOutput = importSourceCredentialsOutput;
         return this;
@@ -39,6 +43,7 @@ public class ImportSourceCredentialsResponse {
      */
     
     public Object invalidInputException;
+
     public ImportSourceCredentialsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class ImportSourceCredentialsResponse {
     
     
     public Integer statusCode;
+
     public ImportSourceCredentialsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ImportSourceCredentialsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportSourceCredentialsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ImportSourceCredentialsResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public ImportSourceCredentialsResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public ImportSourceCredentialsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

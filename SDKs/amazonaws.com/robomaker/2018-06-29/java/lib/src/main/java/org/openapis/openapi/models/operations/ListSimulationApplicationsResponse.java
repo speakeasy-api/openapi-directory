@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSimulationApplicationsResponse {
     
     public String contentType;
+
     public ListSimulationApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSimulationApplicationsResponse {
      */
     
     public Object internalServerException;
+
     public ListSimulationApplicationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSimulationApplicationsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListSimulationApplicationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListSimulationApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSimulationApplicationsResponse listSimulationApplicationsResponse;
+
     public ListSimulationApplicationsResponse withListSimulationApplicationsResponse(org.openapis.openapi.models.shared.ListSimulationApplicationsResponse listSimulationApplicationsResponse) {
         this.listSimulationApplicationsResponse = listSimulationApplicationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSimulationApplicationsResponse {
     
     
     public Integer statusCode;
+
     public ListSimulationApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSimulationApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSimulationApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSimulationApplicationsResponse {
      */
     
     public Object throttlingException;
+
     public ListSimulationApplicationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListSimulationApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

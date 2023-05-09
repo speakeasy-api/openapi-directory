@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDisassociateApprovalRuleTemplateFromRepositoriesInput {
     @JsonProperty("approvalRuleTemplateName")
     public String approvalRuleTemplateName;
+
     public BatchDisassociateApprovalRuleTemplateFromRepositoriesInput withApprovalRuleTemplateName(String approvalRuleTemplateName) {
         this.approvalRuleTemplateName = approvalRuleTemplateName;
         return this;
@@ -16,9 +17,14 @@ public class BatchDisassociateApprovalRuleTemplateFromRepositoriesInput {
     
     @JsonProperty("repositoryNames")
     public String[] repositoryNames;
+
     public BatchDisassociateApprovalRuleTemplateFromRepositoriesInput withRepositoryNames(String[] repositoryNames) {
         this.repositoryNames = repositoryNames;
         return this;
     }
     
+    public BatchDisassociateApprovalRuleTemplateFromRepositoriesInput(@JsonProperty("approvalRuleTemplateName") String approvalRuleTemplateName, @JsonProperty("repositoryNames") String[] repositoryNames) {
+        this.approvalRuleTemplateName = approvalRuleTemplateName;
+        this.repositoryNames = repositoryNames;
+  }
 }

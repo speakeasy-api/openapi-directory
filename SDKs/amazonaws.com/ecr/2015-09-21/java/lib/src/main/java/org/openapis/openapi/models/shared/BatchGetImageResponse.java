@@ -15,6 +15,7 @@ public class BatchGetImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public ImageFailure[] failures;
+
     public BatchGetImageResponse withFailures(ImageFailure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class BatchGetImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("images")
     public Image[] images;
+
     public BatchGetImageResponse withImages(Image[] images) {
         this.images = images;
         return this;
     }
     
+    public BatchGetImageResponse(){}
 }

@@ -15,9 +15,11 @@ public class TierListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public Tier[] results;
+
     public TierListResponse withResults(Tier[] results) {
         this.results = results;
         return this;
     }
     
+    public TierListResponse(){}
 }

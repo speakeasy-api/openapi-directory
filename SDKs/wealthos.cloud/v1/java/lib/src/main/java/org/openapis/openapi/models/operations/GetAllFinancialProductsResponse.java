@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAllFinancialProductsResponse {
     
     public String contentType;
+
     public GetAllFinancialProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAllFinancialProductsResponse {
     
     
     public Integer statusCode;
+
     public GetAllFinancialProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetAllFinancialProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAllFinancialProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts200ApplicationJSON getAllFinancialProducts200ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts200ApplicationJSONObject(GetAllFinancialProducts200ApplicationJSON getAllFinancialProducts200ApplicationJSONObject) {
         this.getAllFinancialProducts200ApplicationJSONObject = getAllFinancialProducts200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts400ApplicationJSON getAllFinancialProducts400ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts400ApplicationJSONObject(GetAllFinancialProducts400ApplicationJSON getAllFinancialProducts400ApplicationJSONObject) {
         this.getAllFinancialProducts400ApplicationJSONObject = getAllFinancialProducts400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts401ApplicationJSON getAllFinancialProducts401ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts401ApplicationJSONObject(GetAllFinancialProducts401ApplicationJSON getAllFinancialProducts401ApplicationJSONObject) {
         this.getAllFinancialProducts401ApplicationJSONObject = getAllFinancialProducts401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts403ApplicationJSON getAllFinancialProducts403ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts403ApplicationJSONObject(GetAllFinancialProducts403ApplicationJSON getAllFinancialProducts403ApplicationJSONObject) {
         this.getAllFinancialProducts403ApplicationJSONObject = getAllFinancialProducts403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts404ApplicationJSON getAllFinancialProducts404ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts404ApplicationJSONObject(GetAllFinancialProducts404ApplicationJSON getAllFinancialProducts404ApplicationJSONObject) {
         this.getAllFinancialProducts404ApplicationJSONObject = getAllFinancialProducts404ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts429ApplicationJSON getAllFinancialProducts429ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts429ApplicationJSONObject(GetAllFinancialProducts429ApplicationJSON getAllFinancialProducts429ApplicationJSONObject) {
         this.getAllFinancialProducts429ApplicationJSONObject = getAllFinancialProducts429ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class GetAllFinancialProductsResponse {
      */
     
     public GetAllFinancialProducts500ApplicationJSON getAllFinancialProducts500ApplicationJSONObject;
+
     public GetAllFinancialProductsResponse withGetAllFinancialProducts500ApplicationJSONObject(GetAllFinancialProducts500ApplicationJSON getAllFinancialProducts500ApplicationJSONObject) {
         this.getAllFinancialProducts500ApplicationJSONObject = getAllFinancialProducts500ApplicationJSONObject;
         return this;
     }
     
+    public GetAllFinancialProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

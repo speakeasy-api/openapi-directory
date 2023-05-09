@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ServiceDescriptor - 'The ServiceDescriptor data type describes a MEC service produced by a service-providing MEC application.'
@@ -15,6 +15,7 @@ public class ServiceDescriptor {
      */
     
     public Object serCategory;
+
     public ServiceDescriptor withSerCategory(Object serCategory) {
         this.serCategory = serCategory;
         return this;
@@ -25,6 +26,7 @@ public class ServiceDescriptor {
      */
     
     public String serName;
+
     public ServiceDescriptor withSerName(String serName) {
         this.serName = serName;
         return this;
@@ -35,6 +37,7 @@ public class ServiceDescriptor {
      */
     
     public TransportsSupported transportsSupported;
+
     public ServiceDescriptor withTransportsSupported(TransportsSupported transportsSupported) {
         this.transportsSupported = transportsSupported;
         return this;
@@ -45,9 +48,14 @@ public class ServiceDescriptor {
      */
     
     public String version;
+
     public ServiceDescriptor withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ServiceDescriptor(@JsonProperty("serName") String serName, @JsonProperty("version") String version) {
+        this.serName = serName;
+        this.version = version;
+  }
 }

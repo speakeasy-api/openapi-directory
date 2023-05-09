@@ -15,9 +15,11 @@ public class DeleteCertificateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public DeleteCertificateResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public DeleteCertificateResult(){}
 }

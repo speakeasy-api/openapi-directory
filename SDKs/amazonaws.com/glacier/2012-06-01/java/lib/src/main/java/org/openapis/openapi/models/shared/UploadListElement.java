@@ -15,6 +15,7 @@ public class UploadListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArchiveDescription")
     public String archiveDescription;
+
     public UploadListElement withArchiveDescription(String archiveDescription) {
         this.archiveDescription = archiveDescription;
         return this;
@@ -23,6 +24,7 @@ public class UploadListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public UploadListElement withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -31,6 +33,7 @@ public class UploadListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MultipartUploadId")
     public String multipartUploadId;
+
     public UploadListElement withMultipartUploadId(String multipartUploadId) {
         this.multipartUploadId = multipartUploadId;
         return this;
@@ -39,6 +42,7 @@ public class UploadListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartSizeInBytes")
     public Long partSizeInBytes;
+
     public UploadListElement withPartSizeInBytes(Long partSizeInBytes) {
         this.partSizeInBytes = partSizeInBytes;
         return this;
@@ -47,9 +51,11 @@ public class UploadListElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VaultARN")
     public String vaultARN;
+
     public UploadListElement withVaultARN(String vaultARN) {
         this.vaultARN = vaultARN;
         return this;
     }
     
+    public UploadListElement(){}
 }

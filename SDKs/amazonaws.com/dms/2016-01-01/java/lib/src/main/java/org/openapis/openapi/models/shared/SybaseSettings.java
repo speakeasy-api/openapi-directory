@@ -15,6 +15,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public SybaseSettings withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -23,6 +24,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public SybaseSettings withPassword(String password) {
         this.password = password;
         return this;
@@ -31,6 +33,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public SybaseSettings withPort(Long port) {
         this.port = port;
         return this;
@@ -39,6 +42,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerAccessRoleArn")
     public String secretsManagerAccessRoleArn;
+
     public SybaseSettings withSecretsManagerAccessRoleArn(String secretsManagerAccessRoleArn) {
         this.secretsManagerAccessRoleArn = secretsManagerAccessRoleArn;
         return this;
@@ -47,6 +51,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretsManagerSecretId")
     public String secretsManagerSecretId;
+
     public SybaseSettings withSecretsManagerSecretId(String secretsManagerSecretId) {
         this.secretsManagerSecretId = secretsManagerSecretId;
         return this;
@@ -55,6 +60,7 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public SybaseSettings withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -63,9 +69,11 @@ public class SybaseSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public SybaseSettings withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SybaseSettings(){}
 }

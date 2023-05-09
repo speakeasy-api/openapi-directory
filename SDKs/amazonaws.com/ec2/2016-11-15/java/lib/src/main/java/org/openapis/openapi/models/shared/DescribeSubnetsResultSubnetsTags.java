@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSubnetsResultSubnetsTags {
     
     public String key;
+
     public DescribeSubnetsResultSubnetsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSubnetsResultSubnetsTags {
     
     
     public String value;
+
     public DescribeSubnetsResultSubnetsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeSubnetsResultSubnetsTags(){}
 }

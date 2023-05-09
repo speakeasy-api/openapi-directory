@@ -14,6 +14,7 @@ public class REPERTOIREcreatereponseEtatEtat {
      */
     @JsonProperty("code")
     public String code;
+
     public REPERTOIREcreatereponseEtatEtat withCode(String code) {
         this.code = code;
         return this;
@@ -25,6 +26,7 @@ public class REPERTOIREcreatereponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public REPERTOIREcreatereponseEtatEtat withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +38,13 @@ public class REPERTOIREcreatereponseEtatEtat {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repertoireId")
     public String repertoireId;
+
     public REPERTOIREcreatereponseEtatEtat withRepertoireId(String repertoireId) {
         this.repertoireId = repertoireId;
         return this;
     }
     
+    public REPERTOIREcreatereponseEtatEtat(@JsonProperty("code") String code) {
+        this.code = code;
+  }
 }

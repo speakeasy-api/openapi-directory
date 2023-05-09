@@ -15,6 +15,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bg_color_hex")
     public String bgColorHex;
+
     public Tag withBgColorHex(String bgColorHex) {
         this.bgColorHex = bgColorHex;
         return this;
@@ -26,6 +27,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Tag withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Tag withName(String name) {
         this.name = name;
         return this;
@@ -42,9 +45,11 @@ public class Tag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text_color_hex")
     public String textColorHex;
+
     public Tag withTextColorHex(String textColorHex) {
         this.textColorHex = textColorHex;
         return this;
     }
     
+    public Tag(){}
 }

@@ -16,6 +16,7 @@ public class HealthProfileQuestionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public HealthProfileQuestionResource withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class HealthProfileQuestionResource {
     
     @JsonProperty("id")
     public String id;
+
     public HealthProfileQuestionResource withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class HealthProfileQuestionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public HealthProfileQuestionResourceLinks links;
+
     public HealthProfileQuestionResource withLinks(HealthProfileQuestionResourceLinks links) {
         this.links = links;
         return this;
@@ -39,6 +42,7 @@ public class HealthProfileQuestionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public HealthProfileQuestionResourceRelationships relationships;
+
     public HealthProfileQuestionResource withRelationships(HealthProfileQuestionResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -46,9 +50,14 @@ public class HealthProfileQuestionResource {
     
     @JsonProperty("type")
     public String type;
+
     public HealthProfileQuestionResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HealthProfileQuestionResource(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

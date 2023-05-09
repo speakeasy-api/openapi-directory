@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFolderRequest {
@@ -12,6 +13,7 @@ public class GetFolderRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FolderId")
     public String folderId;
+
     public GetFolderRequest withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -22,9 +24,14 @@ public class GetFolderRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetFolderRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetFolderRequest(@JsonProperty("FolderId") String folderId, @JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.folderId = folderId;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

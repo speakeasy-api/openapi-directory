@@ -18,9 +18,11 @@ public class DetectLanguageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languages")
     public DetectedLanguage[] languages;
+
     public DetectLanguageResponse withLanguages(DetectedLanguage[] languages) {
         this.languages = languages;
         return this;
     }
     
+    public DetectLanguageResponse(){}
 }

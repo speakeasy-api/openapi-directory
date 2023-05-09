@@ -15,9 +15,11 @@ public class DescribeEmergencyContactSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmergencyContactList")
     public EmergencyContact[] emergencyContactList;
+
     public DescribeEmergencyContactSettingsResponse withEmergencyContactList(EmergencyContact[] emergencyContactList) {
         this.emergencyContactList = emergencyContactList;
         return this;
     }
     
+    public DescribeEmergencyContactSettingsResponse(){}
 }

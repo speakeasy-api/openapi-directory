@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigureAccessPointResponse {
     @JsonProperty("accessPoint")
     public NetworkResource accessPoint;
+
     public ConfigureAccessPointResponse withAccessPoint(NetworkResource accessPoint) {
         this.accessPoint = accessPoint;
         return this;
     }
     
+    public ConfigureAccessPointResponse(@JsonProperty("accessPoint") NetworkResource accessPoint) {
+        this.accessPoint = accessPoint;
+  }
 }

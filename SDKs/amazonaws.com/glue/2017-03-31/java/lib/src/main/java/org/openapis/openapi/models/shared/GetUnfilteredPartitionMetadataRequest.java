@@ -12,6 +12,7 @@ public class GetUnfilteredPartitionMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditContext")
     public AuditContext auditContext;
+
     public GetUnfilteredPartitionMetadataRequest withAuditContext(AuditContext auditContext) {
         this.auditContext = auditContext;
         return this;
@@ -19,6 +20,7 @@ public class GetUnfilteredPartitionMetadataRequest {
     
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetUnfilteredPartitionMetadataRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -26,6 +28,7 @@ public class GetUnfilteredPartitionMetadataRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetUnfilteredPartitionMetadataRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,6 +36,7 @@ public class GetUnfilteredPartitionMetadataRequest {
     
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public GetUnfilteredPartitionMetadataRequest withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -40,6 +44,7 @@ public class GetUnfilteredPartitionMetadataRequest {
     
     @JsonProperty("SupportedPermissionTypes")
     public PermissionTypeEnum[] supportedPermissionTypes;
+
     public GetUnfilteredPartitionMetadataRequest withSupportedPermissionTypes(PermissionTypeEnum[] supportedPermissionTypes) {
         this.supportedPermissionTypes = supportedPermissionTypes;
         return this;
@@ -47,9 +52,17 @@ public class GetUnfilteredPartitionMetadataRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetUnfilteredPartitionMetadataRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetUnfilteredPartitionMetadataRequest(@JsonProperty("CatalogId") String catalogId, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartitionValues") String[] partitionValues, @JsonProperty("SupportedPermissionTypes") PermissionTypeEnum[] supportedPermissionTypes, @JsonProperty("TableName") String tableName) {
+        this.catalogId = catalogId;
+        this.databaseName = databaseName;
+        this.partitionValues = partitionValues;
+        this.supportedPermissionTypes = supportedPermissionTypes;
+        this.tableName = tableName;
+  }
 }

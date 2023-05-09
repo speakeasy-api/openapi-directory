@@ -12,6 +12,7 @@ public class GetDistributionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionName")
     public String distributionName;
+
     public GetDistributionsRequest withDistributionName(String distributionName) {
         this.distributionName = distributionName;
         return this;
@@ -20,9 +21,11 @@ public class GetDistributionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GetDistributionsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GetDistributionsRequest(){}
 }

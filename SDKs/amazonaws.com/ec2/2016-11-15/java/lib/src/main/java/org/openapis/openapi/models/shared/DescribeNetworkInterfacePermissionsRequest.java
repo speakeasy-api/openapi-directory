@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNetworkInterfacePermissionsRequest {
     
     public DescribeNetworkInterfacePermissionsRequestFilters[] filters;
+
     public DescribeNetworkInterfacePermissionsRequest withFilters(DescribeNetworkInterfacePermissionsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -19,6 +20,7 @@ public class DescribeNetworkInterfacePermissionsRequest {
     
     
     public Long maxResults;
+
     public DescribeNetworkInterfacePermissionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +28,7 @@ public class DescribeNetworkInterfacePermissionsRequest {
     
     
     public String[] networkInterfacePermissionIds;
+
     public DescribeNetworkInterfacePermissionsRequest withNetworkInterfacePermissionIds(String[] networkInterfacePermissionIds) {
         this.networkInterfacePermissionIds = networkInterfacePermissionIds;
         return this;
@@ -33,9 +36,11 @@ public class DescribeNetworkInterfacePermissionsRequest {
     
     
     public String nextToken;
+
     public DescribeNetworkInterfacePermissionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNetworkInterfacePermissionsRequest(){}
 }

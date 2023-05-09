@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsListRepoWorkflowsResponse {
     
     public String contentType;
+
     public ActionsListRepoWorkflowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsListRepoWorkflowsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ActionsListRepoWorkflowsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ActionsListRepoWorkflowsResponse {
     
     
     public Integer statusCode;
+
     public ActionsListRepoWorkflowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ActionsListRepoWorkflowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsListRepoWorkflowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ActionsListRepoWorkflowsResponse {
      */
     
     public ActionsListRepoWorkflows200ApplicationJSON actionsListRepoWorkflows200ApplicationJSONObject;
+
     public ActionsListRepoWorkflowsResponse withActionsListRepoWorkflows200ApplicationJSONObject(ActionsListRepoWorkflows200ApplicationJSON actionsListRepoWorkflows200ApplicationJSONObject) {
         this.actionsListRepoWorkflows200ApplicationJSONObject = actionsListRepoWorkflows200ApplicationJSONObject;
         return this;
     }
     
+    public ActionsListRepoWorkflowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

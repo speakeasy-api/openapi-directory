@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FeedConfigurationRequest {
@@ -12,6 +13,7 @@ public class FeedConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FeedConfigurationRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FeedConfigurationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public FeedConfigurationRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class FeedConfigurationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FeedConfigurationRequest feedConfigurationRequest;
+
     public FeedConfigurationRequest withFeedConfigurationRequest(org.openapis.openapi.models.shared.FeedConfigurationRequest feedConfigurationRequest) {
         this.feedConfigurationRequest = feedConfigurationRequest;
         return this;
     }
     
+    public FeedConfigurationRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("FeedConfigurationRequest") org.openapis.openapi.models.shared.FeedConfigurationRequest feedConfigurationRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.feedConfigurationRequest = feedConfigurationRequest;
+  }
 }

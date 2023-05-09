@@ -15,6 +15,7 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackgroundColor")
     public String backgroundColor;
+
     public InAppMessageContent withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -23,6 +24,7 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BodyConfig")
     public InAppMessageBodyConfig bodyConfig;
+
     public InAppMessageContent withBodyConfig(InAppMessageBodyConfig bodyConfig) {
         this.bodyConfig = bodyConfig;
         return this;
@@ -31,6 +33,7 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HeaderConfig")
     public InAppMessageHeaderConfig headerConfig;
+
     public InAppMessageContent withHeaderConfig(InAppMessageHeaderConfig headerConfig) {
         this.headerConfig = headerConfig;
         return this;
@@ -39,6 +42,7 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public InAppMessageContent withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -47,6 +51,7 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryBtn")
     public InAppMessageButton primaryBtn;
+
     public InAppMessageContent withPrimaryBtn(InAppMessageButton primaryBtn) {
         this.primaryBtn = primaryBtn;
         return this;
@@ -55,9 +60,11 @@ public class InAppMessageContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryBtn")
     public InAppMessageButton secondaryBtn;
+
     public InAppMessageContent withSecondaryBtn(InAppMessageButton secondaryBtn) {
         this.secondaryBtn = secondaryBtn;
         return this;
     }
     
+    public InAppMessageContent(){}
 }

@@ -15,6 +15,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToAction")
     public String callToAction;
+
     public Form withCallToAction(String callToAction) {
         this.callToAction = callToAction;
         return this;
@@ -23,6 +24,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cssUrl")
     public String cssUrl;
+
     public Form withCssUrl(String cssUrl) {
         this.cssUrl = cssUrl;
         return this;
@@ -31,6 +33,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public FormField[] fields;
+
     public Form withFields(FormField[] fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heading")
     public String heading;
+
     public Form withHeading(String heading) {
         this.heading = heading;
         return this;
@@ -47,6 +51,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Form withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Form withName(String name) {
         this.name = name;
         return this;
@@ -63,6 +69,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noCss")
     public Boolean noCss;
+
     public Form withNoCss(Boolean noCss) {
         this.noCss = noCss;
         return this;
@@ -71,6 +78,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownedBy")
     public String ownedBy;
+
     public Form withOwnedBy(String ownedBy) {
         this.ownedBy = ownedBy;
         return this;
@@ -79,9 +87,11 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Form withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Form(){}
 }

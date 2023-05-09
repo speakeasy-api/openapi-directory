@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDirectoryConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateDirectoryConfigResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDirectoryConfigResponse {
     
     
     public String contentType;
+
     public UpdateDirectoryConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public Object invalidRoleException;
+
     public UpdateDirectoryConfigResponse withInvalidRoleException(Object invalidRoleException) {
         this.invalidRoleException = invalidRoleException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateDirectoryConfigResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDirectoryConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateDirectoryConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDirectoryConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDirectoryConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateDirectoryConfigResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDirectoryConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDirectoryConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateDirectoryConfigResult updateDirectoryConfigResult;
+
     public UpdateDirectoryConfigResponse withUpdateDirectoryConfigResult(org.openapis.openapi.models.shared.UpdateDirectoryConfigResult updateDirectoryConfigResult) {
         this.updateDirectoryConfigResult = updateDirectoryConfigResult;
         return this;
     }
     
+    public UpdateDirectoryConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

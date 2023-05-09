@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeCodeRepositoryInput {
     @JsonProperty("CodeRepositoryName")
     public String codeRepositoryName;
+
     public DescribeCodeRepositoryInput withCodeRepositoryName(String codeRepositoryName) {
         this.codeRepositoryName = codeRepositoryName;
         return this;
     }
     
+    public DescribeCodeRepositoryInput(@JsonProperty("CodeRepositoryName") String codeRepositoryName) {
+        this.codeRepositoryName = codeRepositoryName;
+  }
 }

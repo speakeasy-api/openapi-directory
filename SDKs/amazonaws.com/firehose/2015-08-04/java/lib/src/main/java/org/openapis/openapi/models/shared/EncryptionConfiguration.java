@@ -15,6 +15,7 @@ public class EncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSEncryptionConfig")
     public KMSEncryptionConfig kmsEncryptionConfig;
+
     public EncryptionConfiguration withKMSEncryptionConfig(KMSEncryptionConfig kmsEncryptionConfig) {
         this.kmsEncryptionConfig = kmsEncryptionConfig;
         return this;
@@ -23,9 +24,11 @@ public class EncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoEncryptionConfig")
     public NoEncryptionConfigEnum noEncryptionConfig;
+
     public EncryptionConfiguration withNoEncryptionConfig(NoEncryptionConfigEnum noEncryptionConfig) {
         this.noEncryptionConfig = noEncryptionConfig;
         return this;
     }
     
+    public EncryptionConfiguration(){}
 }

@@ -68,11 +68,9 @@ public class ApplicationCharge {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUsageChargeResponse res = new org.openapis.openapi.models.operations.CreateUsageChargeResponse() {{
+        org.openapis.openapi.models.operations.CreateUsageChargeResponse res = new org.openapis.openapi.models.operations.CreateUsageChargeResponse(contentType, httpRes.statusCode()) {{
             createUsageCharge201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -119,11 +117,9 @@ public class ApplicationCharge {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApplicationChargeResponse res = new org.openapis.openapi.models.operations.PostApplicationChargeResponse() {{
+        org.openapis.openapi.models.operations.PostApplicationChargeResponse res = new org.openapis.openapi.models.operations.PostApplicationChargeResponse(contentType, httpRes.statusCode()) {{
             postApplicationCharge201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

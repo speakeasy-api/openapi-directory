@@ -18,6 +18,7 @@ public class ZoneRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedOffset")
     public Boolean fixedOffset;
+
     public ZoneRules withFixedOffset(Boolean fixedOffset) {
         this.fixedOffset = fixedOffset;
         return this;
@@ -29,6 +30,7 @@ public class ZoneRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitionRules")
     public ZoneOffsetTransitionRule[] transitionRules;
+
     public ZoneRules withTransitionRules(ZoneOffsetTransitionRule[] transitionRules) {
         this.transitionRules = transitionRules;
         return this;
@@ -40,9 +42,11 @@ public class ZoneRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitions")
     public ZoneOffsetTransition[] transitions;
+
     public ZoneRules withTransitions(ZoneOffsetTransition[] transitions) {
         this.transitions = transitions;
         return this;
     }
     
+    public ZoneRules(){}
 }

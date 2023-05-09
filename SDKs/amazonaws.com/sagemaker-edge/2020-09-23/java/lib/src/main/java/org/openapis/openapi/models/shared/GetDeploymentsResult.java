@@ -15,9 +15,11 @@ public class GetDeploymentsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Deployments")
     public EdgeDeployment[] deployments;
+
     public GetDeploymentsResult withDeployments(EdgeDeployment[] deployments) {
         this.deployments = deployments;
         return this;
     }
     
+    public GetDeploymentsResult(){}
 }

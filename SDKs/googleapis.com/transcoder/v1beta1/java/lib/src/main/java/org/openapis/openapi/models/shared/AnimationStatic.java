@@ -18,6 +18,7 @@ public class AnimationStatic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeOffset")
     public String startTimeOffset;
+
     public AnimationStatic withStartTimeOffset(String startTimeOffset) {
         this.startTimeOffset = startTimeOffset;
         return this;
@@ -29,9 +30,11 @@ public class AnimationStatic {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xy")
     public NormalizedCoordinate xy;
+
     public AnimationStatic withXy(NormalizedCoordinate xy) {
         this.xy = xy;
         return this;
     }
     
+    public AnimationStatic(){}
 }

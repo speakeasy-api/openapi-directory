@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse {
     
     public String contentType;
+
     public AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListLinkedAdUnitsResponse listLinkedAdUnitsResponse;
+
     public AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse withListLinkedAdUnitsResponse(org.openapis.openapi.models.shared.ListLinkedAdUnitsResponse listLinkedAdUnitsResponse) {
         this.listLinkedAdUnitsResponse = listLinkedAdUnitsResponse;
         return this;
@@ -26,6 +29,7 @@ public class AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse {
     
     
     public Integer statusCode;
+
     public AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdsenseAccountsAdclientsCustomchannelsListLinkedAdUnitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

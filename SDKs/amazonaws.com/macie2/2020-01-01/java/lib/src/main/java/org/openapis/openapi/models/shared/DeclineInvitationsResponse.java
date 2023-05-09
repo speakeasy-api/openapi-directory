@@ -15,9 +15,11 @@ public class DeclineInvitationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unprocessedAccounts")
     public UnprocessedAccount[] unprocessedAccounts;
+
     public DeclineInvitationsResponse withUnprocessedAccounts(UnprocessedAccount[] unprocessedAccounts) {
         this.unprocessedAccounts = unprocessedAccounts;
         return this;
     }
     
+    public DeclineInvitationsResponse(){}
 }

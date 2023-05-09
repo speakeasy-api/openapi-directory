@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchCseSiterestrictListResponse {
     
     public String contentType;
+
     public SearchCseSiterestrictListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SearchCseSiterestrictListResponse {
      */
     
     public org.openapis.openapi.models.shared.Search search;
+
     public SearchCseSiterestrictListResponse withSearch(org.openapis.openapi.models.shared.Search search) {
         this.search = search;
         return this;
@@ -26,6 +29,7 @@ public class SearchCseSiterestrictListResponse {
     
     
     public Integer statusCode;
+
     public SearchCseSiterestrictListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SearchCseSiterestrictListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchCseSiterestrictListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SearchCseSiterestrictListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

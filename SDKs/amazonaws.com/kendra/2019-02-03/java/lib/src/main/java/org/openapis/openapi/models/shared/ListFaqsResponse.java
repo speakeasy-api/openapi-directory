@@ -15,6 +15,7 @@ public class ListFaqsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaqSummaryItems")
     public FaqSummary[] faqSummaryItems;
+
     public ListFaqsResponse withFaqSummaryItems(FaqSummary[] faqSummaryItems) {
         this.faqSummaryItems = faqSummaryItems;
         return this;
@@ -23,9 +24,11 @@ public class ListFaqsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFaqsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFaqsResponse(){}
 }

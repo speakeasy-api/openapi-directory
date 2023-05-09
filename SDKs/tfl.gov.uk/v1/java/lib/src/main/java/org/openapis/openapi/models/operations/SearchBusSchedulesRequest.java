@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchBusSchedulesRequest {
@@ -12,9 +13,13 @@ public class SearchBusSchedulesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public SearchBusSchedulesRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public SearchBusSchedulesRequest(@JsonProperty("query") String query) {
+        this.query = query;
+  }
 }

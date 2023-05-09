@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.InterferenceSecurity;
 import org.openapis.openapi.models.operations.InterferenceRequest;
 import org.openapis.openapi.models.operations.InterferenceResponse;
+import org.openapis.openapi.models.operations.InterferenceSecurity;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,12 +14,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            InterferenceRequest req = new InterferenceRequest() {{
-                name = "corrupti";
-                network = "provident";
-            }}            
+            InterferenceRequest req = new InterferenceRequest("corrupti", "provident");            
 
-            InterferenceResponse res = sdk.analyse.interference(req, new InterferenceSecurity() {{
+            InterferenceResponse res = sdk.analyse.interference(req, new InterferenceSecurity("distinctio") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
@@ -29,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

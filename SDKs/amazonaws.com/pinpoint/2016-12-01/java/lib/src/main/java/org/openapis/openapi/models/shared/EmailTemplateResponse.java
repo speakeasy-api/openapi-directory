@@ -15,6 +15,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public EmailTemplateResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class EmailTemplateResponse {
     
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public EmailTemplateResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +32,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSubstitutions")
     public String defaultSubstitutions;
+
     public EmailTemplateResponse withDefaultSubstitutions(String defaultSubstitutions) {
         this.defaultSubstitutions = defaultSubstitutions;
         return this;
@@ -38,6 +41,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HtmlPart")
     public String htmlPart;
+
     public EmailTemplateResponse withHtmlPart(String htmlPart) {
         this.htmlPart = htmlPart;
         return this;
@@ -45,6 +49,7 @@ public class EmailTemplateResponse {
     
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public EmailTemplateResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -53,6 +58,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecommenderId")
     public String recommenderId;
+
     public EmailTemplateResponse withRecommenderId(String recommenderId) {
         this.recommenderId = recommenderId;
         return this;
@@ -61,6 +67,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public EmailTemplateResponse withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -69,6 +76,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateDescription")
     public String templateDescription;
+
     public EmailTemplateResponse withTemplateDescription(String templateDescription) {
         this.templateDescription = templateDescription;
         return this;
@@ -76,6 +84,7 @@ public class EmailTemplateResponse {
     
     @JsonProperty("TemplateName")
     public String templateName;
+
     public EmailTemplateResponse withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -83,6 +92,7 @@ public class EmailTemplateResponse {
     
     @JsonProperty("TemplateType")
     public TemplateTypeEnum templateType;
+
     public EmailTemplateResponse withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
@@ -91,6 +101,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextPart")
     public String textPart;
+
     public EmailTemplateResponse withTextPart(String textPart) {
         this.textPart = textPart;
         return this;
@@ -99,6 +110,7 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public EmailTemplateResponse withVersion(String version) {
         this.version = version;
         return this;
@@ -107,9 +119,16 @@ public class EmailTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public EmailTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public EmailTemplateResponse(@JsonProperty("CreationDate") String creationDate, @JsonProperty("LastModifiedDate") String lastModifiedDate, @JsonProperty("TemplateName") String templateName, @JsonProperty("TemplateType") TemplateTypeEnum templateType) {
+        this.creationDate = creationDate;
+        this.lastModifiedDate = lastModifiedDate;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

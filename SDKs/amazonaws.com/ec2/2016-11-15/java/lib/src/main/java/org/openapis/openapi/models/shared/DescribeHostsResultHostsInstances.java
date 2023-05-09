@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeHostsResultHostsInstances {
     
     public String instanceId;
+
     public DescribeHostsResultHostsInstances withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeHostsResultHostsInstances {
     
     
     public String instanceType;
+
     public DescribeHostsResultHostsInstances withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,9 +28,11 @@ public class DescribeHostsResultHostsInstances {
     
     
     public String ownerId;
+
     public DescribeHostsResultHostsInstances withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
     }
     
+    public DescribeHostsResultHostsInstances(){}
 }

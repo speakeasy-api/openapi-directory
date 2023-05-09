@@ -15,6 +15,7 @@ public class PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError 
      */
     @JsonProperty("code")
     public String code;
+
     public PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError 
      */
     @JsonProperty("message")
     public String message;
+
     public PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostLoadBalancersIdActionsAttachToNetworkActionResponseActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

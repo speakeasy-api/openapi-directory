@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBProxyTargetGroup {
     
     public ConnectionPoolConfigurationInfo connectionPoolConfig;
+
     public DBProxyTargetGroup withConnectionPoolConfig(ConnectionPoolConfigurationInfo connectionPoolConfig) {
         this.connectionPoolConfig = connectionPoolConfig;
         return this;
@@ -19,6 +20,7 @@ public class DBProxyTargetGroup {
     
     
     public OffsetDateTime createdDate;
+
     public DBProxyTargetGroup withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -26,6 +28,7 @@ public class DBProxyTargetGroup {
     
     
     public String dbProxyName;
+
     public DBProxyTargetGroup withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -33,6 +36,7 @@ public class DBProxyTargetGroup {
     
     
     public Boolean isDefault;
+
     public DBProxyTargetGroup withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -40,6 +44,7 @@ public class DBProxyTargetGroup {
     
     
     public String status;
+
     public DBProxyTargetGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -47,6 +52,7 @@ public class DBProxyTargetGroup {
     
     
     public String targetGroupArn;
+
     public DBProxyTargetGroup withTargetGroupArn(String targetGroupArn) {
         this.targetGroupArn = targetGroupArn;
         return this;
@@ -54,6 +60,7 @@ public class DBProxyTargetGroup {
     
     
     public String targetGroupName;
+
     public DBProxyTargetGroup withTargetGroupName(String targetGroupName) {
         this.targetGroupName = targetGroupName;
         return this;
@@ -61,9 +68,11 @@ public class DBProxyTargetGroup {
     
     
     public OffsetDateTime updatedDate;
+
     public DBProxyTargetGroup withUpdatedDate(OffsetDateTime updatedDate) {
         this.updatedDate = updatedDate;
         return this;
     }
     
+    public DBProxyTargetGroup(){}
 }

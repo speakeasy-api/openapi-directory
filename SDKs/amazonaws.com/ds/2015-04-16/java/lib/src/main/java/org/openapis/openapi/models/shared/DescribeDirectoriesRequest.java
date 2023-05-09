@@ -15,6 +15,7 @@ public class DescribeDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryIds")
     public String[] directoryIds;
+
     public DescribeDirectoriesRequest withDirectoryIds(String[] directoryIds) {
         this.directoryIds = directoryIds;
         return this;
@@ -23,6 +24,7 @@ public class DescribeDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeDirectoriesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -31,9 +33,11 @@ public class DescribeDirectoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDirectoriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeDirectoriesRequest(){}
 }

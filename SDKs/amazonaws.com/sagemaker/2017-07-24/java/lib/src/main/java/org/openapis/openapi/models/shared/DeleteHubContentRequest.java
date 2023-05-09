@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteHubContentRequest {
     @JsonProperty("HubContentName")
     public String hubContentName;
+
     public DeleteHubContentRequest withHubContentName(String hubContentName) {
         this.hubContentName = hubContentName;
         return this;
@@ -16,6 +17,7 @@ public class DeleteHubContentRequest {
     
     @JsonProperty("HubContentType")
     public HubContentTypeEnum hubContentType;
+
     public DeleteHubContentRequest withHubContentType(HubContentTypeEnum hubContentType) {
         this.hubContentType = hubContentType;
         return this;
@@ -23,6 +25,7 @@ public class DeleteHubContentRequest {
     
     @JsonProperty("HubContentVersion")
     public String hubContentVersion;
+
     public DeleteHubContentRequest withHubContentVersion(String hubContentVersion) {
         this.hubContentVersion = hubContentVersion;
         return this;
@@ -30,9 +33,16 @@ public class DeleteHubContentRequest {
     
     @JsonProperty("HubName")
     public String hubName;
+
     public DeleteHubContentRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
     }
     
+    public DeleteHubContentRequest(@JsonProperty("HubContentName") String hubContentName, @JsonProperty("HubContentType") HubContentTypeEnum hubContentType, @JsonProperty("HubContentVersion") String hubContentVersion, @JsonProperty("HubName") String hubName) {
+        this.hubContentName = hubContentName;
+        this.hubContentType = hubContentType;
+        this.hubContentVersion = hubContentVersion;
+        this.hubName = hubName;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetKeyRotationStatusResponse {
     
     public String contentType;
+
     public GetKeyRotationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GetKeyRotationStatusResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetKeyRotationStatusResponse getKeyRotationStatusResponse;
+
     public GetKeyRotationStatusResponse withGetKeyRotationStatusResponse(org.openapis.openapi.models.shared.GetKeyRotationStatusResponse getKeyRotationStatusResponse) {
         this.getKeyRotationStatusResponse = getKeyRotationStatusResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object invalidArnException;
+
     public GetKeyRotationStatusResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object kmsInternalException;
+
     public GetKeyRotationStatusResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GetKeyRotationStatusResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object notFoundException;
+
     public GetKeyRotationStatusResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetKeyRotationStatusResponse {
     
     
     public Integer statusCode;
+
     public GetKeyRotationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetKeyRotationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetKeyRotationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetKeyRotationStatusResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetKeyRotationStatusResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetKeyRotationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

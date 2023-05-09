@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2WithdrawMfaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public GoogleCloudIdentitytoolkitV2WithdrawMfaResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudIdentitytoolkitV2WithdrawMfaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public GoogleCloudIdentitytoolkitV2WithdrawMfaResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2WithdrawMfaResponse(){}
 }

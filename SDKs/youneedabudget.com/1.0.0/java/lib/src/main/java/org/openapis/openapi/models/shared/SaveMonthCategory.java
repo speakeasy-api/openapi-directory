@@ -12,9 +12,13 @@ public class SaveMonthCategory {
      */
     @JsonProperty("budgeted")
     public Long budgeted;
+
     public SaveMonthCategory withBudgeted(Long budgeted) {
         this.budgeted = budgeted;
         return this;
     }
     
+    public SaveMonthCategory(@JsonProperty("budgeted") Long budgeted) {
+        this.budgeted = budgeted;
+  }
 }

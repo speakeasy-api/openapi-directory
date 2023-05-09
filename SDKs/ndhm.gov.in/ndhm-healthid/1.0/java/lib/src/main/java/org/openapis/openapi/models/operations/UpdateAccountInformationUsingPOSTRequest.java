@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAccountInformationUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public UpdateAccountInformationUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAccountInformationUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateAccountRequest updateAccountRequest;
+
     public UpdateAccountInformationUsingPOSTRequest withUpdateAccountRequest(org.openapis.openapi.models.shared.UpdateAccountRequest updateAccountRequest) {
         this.updateAccountRequest = updateAccountRequest;
         return this;
@@ -29,9 +32,14 @@ public class UpdateAccountInformationUsingPOSTRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Token")
     public String xToken;
+
     public UpdateAccountInformationUsingPOSTRequest withXToken(String xToken) {
         this.xToken = xToken;
         return this;
     }
     
+    public UpdateAccountInformationUsingPOSTRequest(@JsonProperty("UpdateAccountRequest") org.openapis.openapi.models.shared.UpdateAccountRequest updateAccountRequest, @JsonProperty("X-Token") String xToken) {
+        this.updateAccountRequest = updateAccountRequest;
+        this.xToken = xToken;
+  }
 }

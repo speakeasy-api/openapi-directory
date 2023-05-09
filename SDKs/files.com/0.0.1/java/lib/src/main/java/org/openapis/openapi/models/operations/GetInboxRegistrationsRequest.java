@@ -12,6 +12,7 @@ public class GetInboxRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetInboxRegistrationsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class GetInboxRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=folder_behavior_id")
     public Integer folderBehaviorId;
+
     public GetInboxRegistrationsRequest withFolderBehaviorId(Integer folderBehaviorId) {
         this.folderBehaviorId = folderBehaviorId;
         return this;
@@ -32,9 +34,11 @@ public class GetInboxRegistrationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetInboxRegistrationsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetInboxRegistrationsRequest(){}
 }

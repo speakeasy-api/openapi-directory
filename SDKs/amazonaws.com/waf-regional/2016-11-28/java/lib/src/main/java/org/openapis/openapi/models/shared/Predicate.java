@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Predicate {
     @JsonProperty("DataId")
     public String dataId;
+
     public Predicate withDataId(String dataId) {
         this.dataId = dataId;
         return this;
@@ -19,6 +20,7 @@ public class Predicate {
     
     @JsonProperty("Negated")
     public Boolean negated;
+
     public Predicate withNegated(Boolean negated) {
         this.negated = negated;
         return this;
@@ -26,9 +28,15 @@ public class Predicate {
     
     @JsonProperty("Type")
     public PredicateTypeEnum type;
+
     public Predicate withType(PredicateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Predicate(@JsonProperty("DataId") String dataId, @JsonProperty("Negated") Boolean negated, @JsonProperty("Type") PredicateTypeEnum type) {
+        this.dataId = dataId;
+        this.negated = negated;
+        this.type = type;
+  }
 }

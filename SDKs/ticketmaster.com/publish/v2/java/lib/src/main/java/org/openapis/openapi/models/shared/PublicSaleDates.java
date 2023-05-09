@@ -25,6 +25,7 @@ public class PublicSaleDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public PublicSaleDates withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -38,6 +39,7 @@ public class PublicSaleDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public PublicSaleDates withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -49,9 +51,11 @@ public class PublicSaleDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTBD")
     public Boolean startTBD;
+
     public PublicSaleDates withStartTBD(Boolean startTBD) {
         this.startTBD = startTBD;
         return this;
     }
     
+    public PublicSaleDates(){}
 }

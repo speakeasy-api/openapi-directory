@@ -15,6 +15,7 @@ public class TemplateParameterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public TemplateParameterConfiguration withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -23,9 +24,11 @@ public class TemplateParameterConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public TemplateParameterDataTypeEnum type;
+
     public TemplateParameterConfiguration withType(TemplateParameterDataTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TemplateParameterConfiguration(){}
 }

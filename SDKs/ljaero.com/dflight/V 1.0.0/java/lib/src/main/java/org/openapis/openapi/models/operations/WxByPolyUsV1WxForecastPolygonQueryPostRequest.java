@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class WxByPolyUsV1WxForecastPolygonQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.WxByPolygon wxByPolygon;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostRequest withWxByPolygon(org.openapis.openapi.models.shared.WxByPolygon wxByPolygon) {
         this.wxByPolygon = wxByPolygon;
         return this;
@@ -16,9 +18,13 @@ public class WxByPolyUsV1WxForecastPolygonQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public WxByPolyUsV1WxForecastPolygonQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public WxByPolyUsV1WxForecastPolygonQueryPostRequest(@JsonProperty("WxByPolygon") org.openapis.openapi.models.shared.WxByPolygon wxByPolygon) {
+        this.wxByPolygon = wxByPolygon;
+  }
 }

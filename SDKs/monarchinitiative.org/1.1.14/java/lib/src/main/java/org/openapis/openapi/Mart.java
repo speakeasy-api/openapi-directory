@@ -57,10 +57,8 @@ public class Mart {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceResponse() {{
+        org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartCaseAssociationsResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,10 +94,8 @@ public class Mart {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceResponse() {{
+        org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartDiseaseAssociationsResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Mart {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceResponse() {{
+        org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartGeneAssociationsResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,10 +161,8 @@ public class Mart {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceResponse() {{
+        org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartOrthologAssociationsResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,10 +191,8 @@ public class Mart {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceResponse() {{
+        org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceResponse res = new org.openapis.openapi.models.operations.GetMartParalogAssociationsResourceResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

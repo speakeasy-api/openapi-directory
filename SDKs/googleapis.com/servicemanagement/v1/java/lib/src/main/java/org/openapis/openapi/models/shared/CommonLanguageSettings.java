@@ -18,6 +18,7 @@ public class CommonLanguageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public CommonLanguageSettingsDestinationsEnum[] destinations;
+
     public CommonLanguageSettings withDestinations(CommonLanguageSettingsDestinationsEnum[] destinations) {
         this.destinations = destinations;
         return this;
@@ -29,9 +30,11 @@ public class CommonLanguageSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceDocsUri")
     public String referenceDocsUri;
+
     public CommonLanguageSettings withReferenceDocsUri(String referenceDocsUri) {
         this.referenceDocsUri = referenceDocsUri;
         return this;
     }
     
+    public CommonLanguageSettings(){}
 }

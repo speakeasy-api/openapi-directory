@@ -18,6 +18,7 @@ public class MarketplaceTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoTargeting")
     public CriteriaTargeting geoTargeting;
+
     public MarketplaceTargeting withGeoTargeting(CriteriaTargeting geoTargeting) {
         this.geoTargeting = geoTargeting;
         return this;
@@ -29,6 +30,7 @@ public class MarketplaceTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySizeTargeting")
     public InventorySizeTargeting inventorySizeTargeting;
+
     public MarketplaceTargeting withInventorySizeTargeting(InventorySizeTargeting inventorySizeTargeting) {
         this.inventorySizeTargeting = inventorySizeTargeting;
         return this;
@@ -40,6 +42,7 @@ public class MarketplaceTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placementTargeting")
     public PlacementTargeting placementTargeting;
+
     public MarketplaceTargeting withPlacementTargeting(PlacementTargeting placementTargeting) {
         this.placementTargeting = placementTargeting;
         return this;
@@ -51,6 +54,7 @@ public class MarketplaceTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("technologyTargeting")
     public TechnologyTargeting technologyTargeting;
+
     public MarketplaceTargeting withTechnologyTargeting(TechnologyTargeting technologyTargeting) {
         this.technologyTargeting = technologyTargeting;
         return this;
@@ -62,9 +66,11 @@ public class MarketplaceTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("videoTargeting")
     public VideoTargeting videoTargeting;
+
     public MarketplaceTargeting withVideoTargeting(VideoTargeting videoTargeting) {
         this.videoTargeting = videoTargeting;
         return this;
     }
     
+    public MarketplaceTargeting(){}
 }

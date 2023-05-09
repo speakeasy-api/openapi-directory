@@ -15,9 +15,11 @@ public class HLRReponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etat")
     public HLRReponseEtat etat;
+
     public HLRReponse withEtat(HLRReponseEtat etat) {
         this.etat = etat;
         return this;
     }
     
+    public HLRReponse(){}
 }

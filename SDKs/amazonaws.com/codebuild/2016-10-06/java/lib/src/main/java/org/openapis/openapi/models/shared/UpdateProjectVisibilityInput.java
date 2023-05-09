@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateProjectVisibilityInput {
     @JsonProperty("projectArn")
     public String projectArn;
+
     public UpdateProjectVisibilityInput withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -21,6 +22,7 @@ public class UpdateProjectVisibilityInput {
      */
     @JsonProperty("projectVisibility")
     public ProjectVisibilityTypeEnum projectVisibility;
+
     public UpdateProjectVisibilityInput withProjectVisibility(ProjectVisibilityTypeEnum projectVisibility) {
         this.projectVisibility = projectVisibility;
         return this;
@@ -29,9 +31,14 @@ public class UpdateProjectVisibilityInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceAccessRole")
     public String resourceAccessRole;
+
     public UpdateProjectVisibilityInput withResourceAccessRole(String resourceAccessRole) {
         this.resourceAccessRole = resourceAccessRole;
         return this;
     }
     
+    public UpdateProjectVisibilityInput(@JsonProperty("projectArn") String projectArn, @JsonProperty("projectVisibility") ProjectVisibilityTypeEnum projectVisibility) {
+        this.projectArn = projectArn;
+        this.projectVisibility = projectVisibility;
+  }
 }

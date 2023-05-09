@@ -15,6 +15,7 @@ public class LambdaFunctionScheduledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("control")
     public String control;
+
     public LambdaFunctionScheduledEventAttributes withControl(String control) {
         this.control = control;
         return this;
@@ -22,6 +23,7 @@ public class LambdaFunctionScheduledEventAttributes {
     
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public LambdaFunctionScheduledEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -29,6 +31,7 @@ public class LambdaFunctionScheduledEventAttributes {
     
     @JsonProperty("id")
     public String id;
+
     public LambdaFunctionScheduledEventAttributes withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +40,7 @@ public class LambdaFunctionScheduledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public LambdaFunctionScheduledEventAttributes withInput(String input) {
         this.input = input;
         return this;
@@ -44,6 +48,7 @@ public class LambdaFunctionScheduledEventAttributes {
     
     @JsonProperty("name")
     public String name;
+
     public LambdaFunctionScheduledEventAttributes withName(String name) {
         this.name = name;
         return this;
@@ -52,9 +57,15 @@ public class LambdaFunctionScheduledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToCloseTimeout")
     public String startToCloseTimeout;
+
     public LambdaFunctionScheduledEventAttributes withStartToCloseTimeout(String startToCloseTimeout) {
         this.startToCloseTimeout = startToCloseTimeout;
         return this;
     }
     
+    public LambdaFunctionScheduledEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+        this.id = id;
+        this.name = name;
+  }
 }

@@ -12,6 +12,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public RunAMonitor200ApplicationJSONRunExecutionsRequestBody body;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequest withBody(RunAMonitor200ApplicationJSONRunExecutionsRequestBody body) {
         this.body = body;
         return this;
@@ -20,6 +21,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders headers;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequest withHeaders(RunAMonitor200ApplicationJSONRunExecutionsRequestHeaders headers) {
         this.headers = headers;
         return this;
@@ -28,6 +30,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public String method;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequest withMethod(String method) {
         this.method = method;
         return this;
@@ -36,6 +39,7 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -44,9 +48,11 @@ public class RunAMonitor200ApplicationJSONRunExecutionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RunAMonitor200ApplicationJSONRunExecutionsRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RunAMonitor200ApplicationJSONRunExecutionsRequest(){}
 }

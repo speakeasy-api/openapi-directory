@@ -22,6 +22,7 @@ public class DescribeReturnShippingLabelResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ExpirationDate")
     public OffsetDateTime expirationDate;
+
     public DescribeReturnShippingLabelResult withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -30,6 +31,7 @@ public class DescribeReturnShippingLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnShippingLabelURI")
     public String returnShippingLabelURI;
+
     public DescribeReturnShippingLabelResult withReturnShippingLabelURI(String returnShippingLabelURI) {
         this.returnShippingLabelURI = returnShippingLabelURI;
         return this;
@@ -38,9 +40,11 @@ public class DescribeReturnShippingLabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShippingLabelStatusEnum status;
+
     public DescribeReturnShippingLabelResult withStatus(ShippingLabelStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribeReturnShippingLabelResult(){}
 }

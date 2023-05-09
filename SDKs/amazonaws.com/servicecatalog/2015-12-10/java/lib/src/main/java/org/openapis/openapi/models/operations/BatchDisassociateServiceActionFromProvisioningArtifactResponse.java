@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
@@ -12,6 +13,7 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDisassociateServiceActionFromProvisioningArtifactOutput batchDisassociateServiceActionFromProvisioningArtifactOutput;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactResponse withBatchDisassociateServiceActionFromProvisioningArtifactOutput(org.openapis.openapi.models.shared.BatchDisassociateServiceActionFromProvisioningArtifactOutput batchDisassociateServiceActionFromProvisioningArtifactOutput) {
         this.batchDisassociateServiceActionFromProvisioningArtifactOutput = batchDisassociateServiceActionFromProvisioningArtifactOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
     
     
     public String contentType;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
      */
     
     public Object invalidParametersException;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -36,6 +40,7 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
     
     
     public Integer statusCode;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchDisassociateServiceActionFromProvisioningArtifactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

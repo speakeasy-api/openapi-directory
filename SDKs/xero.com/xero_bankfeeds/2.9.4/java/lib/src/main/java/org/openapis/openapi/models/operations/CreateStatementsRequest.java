@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateStatementsRequest {
@@ -12,6 +13,7 @@ public class CreateStatementsRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Statements statements;
+
     public CreateStatementsRequest withStatements(org.openapis.openapi.models.shared.Statements statements) {
         this.statements = statements;
         return this;
@@ -22,9 +24,13 @@ public class CreateStatementsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Xero-Tenant-Id")
     public String xeroTenantId;
+
     public CreateStatementsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreateStatementsRequest(@JsonProperty("Xero-Tenant-Id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

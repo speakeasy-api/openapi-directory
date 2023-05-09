@@ -19,6 +19,7 @@ public class PostCallsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement_at")
     public String announcementAt;
+
     public PostCallsRequestBody withAnnouncementAt(String announcementAt) {
         this.announcementAt = announcementAt;
         return this;
@@ -31,6 +32,7 @@ public class PostCallsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement_id")
     public String announcementId;
+
     public PostCallsRequestBody withAnnouncementId(String announcementId) {
         this.announcementId = announcementId;
         return this;
@@ -41,6 +43,7 @@ public class PostCallsRequestBody {
      */
     @JsonProperty("caller_id")
     public String callerId;
+
     public PostCallsRequestBody withCallerId(String callerId) {
         this.callerId = callerId;
         return this;
@@ -51,6 +54,7 @@ public class PostCallsRequestBody {
      */
     @JsonProperty("from")
     public String from;
+
     public PostCallsRequestBody withFrom(String from) {
         this.from = from;
         return this;
@@ -63,6 +67,7 @@ public class PostCallsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hangup_announcement_id")
     public String hangupAnnouncementId;
+
     public PostCallsRequestBody withHangupAnnouncementId(String hangupAnnouncementId) {
         this.hangupAnnouncementId = hangupAnnouncementId;
         return this;
@@ -75,6 +80,7 @@ public class PostCallsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hangup_at")
     public String hangupAt;
+
     public PostCallsRequestBody withHangupAt(String hangupAt) {
         this.hangupAt = hangupAt;
         return this;
@@ -83,6 +89,7 @@ public class PostCallsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public PostCallsRequestBodyOptions options;
+
     public PostCallsRequestBody withOptions(PostCallsRequestBodyOptions options) {
         this.options = options;
         return this;
@@ -93,9 +100,15 @@ public class PostCallsRequestBody {
      */
     @JsonProperty("to")
     public String to;
+
     public PostCallsRequestBody withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public PostCallsRequestBody(@JsonProperty("caller_id") String callerId, @JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.callerId = callerId;
+        this.from = from;
+        this.to = to;
+  }
 }

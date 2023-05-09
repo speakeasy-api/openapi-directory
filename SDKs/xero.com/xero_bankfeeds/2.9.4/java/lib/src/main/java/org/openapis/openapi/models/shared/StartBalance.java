@@ -18,6 +18,7 @@ public class StartBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Double amount;
+
     public StartBalance withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -29,9 +30,11 @@ public class StartBalance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditDebitIndicator")
     public CreditDebitIndicatorEnum creditDebitIndicator;
+
     public StartBalance withCreditDebitIndicator(CreditDebitIndicatorEnum creditDebitIndicator) {
         this.creditDebitIndicator = creditDebitIndicator;
         return this;
     }
     
+    public StartBalance(){}
 }

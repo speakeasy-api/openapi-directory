@@ -15,9 +15,11 @@ public class SqlConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryIdentifiersEnclosingOption")
     public QueryIdentifiersEnclosingOptionEnum queryIdentifiersEnclosingOption;
+
     public SqlConfiguration withQueryIdentifiersEnclosingOption(QueryIdentifiersEnclosingOptionEnum queryIdentifiersEnclosingOption) {
         this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
         return this;
     }
     
+    public SqlConfiguration(){}
 }

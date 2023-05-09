@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateContactListFromFileRequestBody {
@@ -12,6 +13,7 @@ public class CreateContactListFromFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateContactListFromFileRequestBodyFile file;
+
     public CreateContactListFromFileRequestBody withFile(CreateContactListFromFileRequestBodyFile file) {
         this.file = file;
         return this;
@@ -22,6 +24,7 @@ public class CreateContactListFromFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public CreateContactListFromFileRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +35,13 @@ public class CreateContactListFromFileRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=useCustomFields")
     public Boolean useCustomFields;
+
     public CreateContactListFromFileRequestBody withUseCustomFields(Boolean useCustomFields) {
         this.useCustomFields = useCustomFields;
         return this;
     }
     
+    public CreateContactListFromFileRequestBody(@JsonProperty("file") CreateContactListFromFileRequestBodyFile file) {
+        this.file = file;
+  }
 }

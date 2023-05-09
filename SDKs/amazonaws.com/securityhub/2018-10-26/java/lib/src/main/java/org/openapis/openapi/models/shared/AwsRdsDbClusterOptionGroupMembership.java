@@ -15,6 +15,7 @@ public class AwsRdsDbClusterOptionGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbClusterOptionGroupName")
     public String dbClusterOptionGroupName;
+
     public AwsRdsDbClusterOptionGroupMembership withDbClusterOptionGroupName(String dbClusterOptionGroupName) {
         this.dbClusterOptionGroupName = dbClusterOptionGroupName;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbClusterOptionGroupMembership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbClusterOptionGroupMembership withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbClusterOptionGroupMembership(){}
 }

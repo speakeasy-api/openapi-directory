@@ -15,6 +15,7 @@ public class DescribeActivationsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterKey")
     public DescribeActivationsFilterKeysEnum filterKey;
+
     public DescribeActivationsFilter withFilterKey(DescribeActivationsFilterKeysEnum filterKey) {
         this.filterKey = filterKey;
         return this;
@@ -23,9 +24,11 @@ public class DescribeActivationsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterValues")
     public String[] filterValues;
+
     public DescribeActivationsFilter withFilterValues(String[] filterValues) {
         this.filterValues = filterValues;
         return this;
     }
     
+    public DescribeActivationsFilter(){}
 }

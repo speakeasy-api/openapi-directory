@@ -15,9 +15,11 @@ public class GenerateRandomResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Plaintext")
     public String plaintext;
+
     public GenerateRandomResponse withPlaintext(String plaintext) {
         this.plaintext = plaintext;
         return this;
     }
     
+    public GenerateRandomResponse(){}
 }

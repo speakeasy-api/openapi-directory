@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyLunaClientResponse {
@@ -12,6 +13,7 @@ public class ModifyLunaClientResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ModifyLunaClientResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -19,6 +21,7 @@ public class ModifyLunaClientResponse {
     
     
     public String contentType;
+
     public ModifyLunaClientResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyLunaClientResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyLunaClientResponse modifyLunaClientResponse;
+
     public ModifyLunaClientResponse withModifyLunaClientResponse(org.openapis.openapi.models.shared.ModifyLunaClientResponse modifyLunaClientResponse) {
         this.modifyLunaClientResponse = modifyLunaClientResponse;
         return this;
@@ -36,6 +40,7 @@ public class ModifyLunaClientResponse {
     
     
     public Integer statusCode;
+
     public ModifyLunaClientResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ModifyLunaClientResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyLunaClientResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyLunaClientResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

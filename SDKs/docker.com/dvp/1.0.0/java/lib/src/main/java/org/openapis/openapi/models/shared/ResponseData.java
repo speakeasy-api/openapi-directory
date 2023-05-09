@@ -15,9 +15,11 @@ public class ResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResponseDataFile[] data;
+
     public ResponseData withData(ResponseDataFile[] data) {
         this.data = data;
         return this;
     }
     
+    public ResponseData(){}
 }

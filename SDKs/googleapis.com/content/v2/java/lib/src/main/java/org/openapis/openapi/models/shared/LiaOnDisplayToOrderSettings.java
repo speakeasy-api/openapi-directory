@@ -15,6 +15,7 @@ public class LiaOnDisplayToOrderSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCostPolicyUrl")
     public String shippingCostPolicyUrl;
+
     public LiaOnDisplayToOrderSettings withShippingCostPolicyUrl(String shippingCostPolicyUrl) {
         this.shippingCostPolicyUrl = shippingCostPolicyUrl;
         return this;
@@ -26,9 +27,11 @@ public class LiaOnDisplayToOrderSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public LiaOnDisplayToOrderSettings withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public LiaOnDisplayToOrderSettings(){}
 }

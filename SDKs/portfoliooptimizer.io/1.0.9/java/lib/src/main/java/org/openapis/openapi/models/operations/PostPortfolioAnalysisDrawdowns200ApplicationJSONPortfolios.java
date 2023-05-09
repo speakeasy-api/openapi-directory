@@ -12,6 +12,7 @@ public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioDrawdowns")
     public Double[] portfolioDrawdowns;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfolios withPortfolioDrawdowns(Double[] portfolioDrawdowns) {
         this.portfolioDrawdowns = portfolioDrawdowns;
         return this;
@@ -19,9 +20,14 @@ public class PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfolios {
     
     @JsonProperty("portfolioWorstDrawdowns")
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns[] portfolioWorstDrawdowns;
+
     public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfolios withPortfolioWorstDrawdowns(PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns[] portfolioWorstDrawdowns) {
         this.portfolioWorstDrawdowns = portfolioWorstDrawdowns;
         return this;
     }
     
+    public PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfolios(@JsonProperty("portfolioDrawdowns") Double[] portfolioDrawdowns, @JsonProperty("portfolioWorstDrawdowns") PostPortfolioAnalysisDrawdowns200ApplicationJSONPortfoliosPortfolioWorstDrawdowns[] portfolioWorstDrawdowns) {
+        this.portfolioDrawdowns = portfolioDrawdowns;
+        this.portfolioWorstDrawdowns = portfolioWorstDrawdowns;
+  }
 }

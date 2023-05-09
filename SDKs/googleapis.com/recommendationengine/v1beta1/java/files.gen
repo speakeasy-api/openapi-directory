@@ -129,4 +129,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommendationen
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfigPredictItemLevelEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class DimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionName")
     public String dimensionName;
+
     public DimensionFilter withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -23,9 +24,11 @@ public class DimensionFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValueList")
     public String[] dimensionValueList;
+
     public DimensionFilter withDimensionValueList(String[] dimensionValueList) {
         this.dimensionValueList = dimensionValueList;
         return this;
     }
     
+    public DimensionFilter(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeProjectsSetUsageExportBucketSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetUsageExportBucketSecurityOption1 option1;
+
     public ComputeProjectsSetUsageExportBucketSecurity withOption1(ComputeProjectsSetUsageExportBucketSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeProjectsSetUsageExportBucketSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetUsageExportBucketSecurityOption2 option2;
+
     public ComputeProjectsSetUsageExportBucketSecurity withOption2(ComputeProjectsSetUsageExportBucketSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class ComputeProjectsSetUsageExportBucketSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetUsageExportBucketSecurityOption3 option3;
+
     public ComputeProjectsSetUsageExportBucketSecurity withOption3(ComputeProjectsSetUsageExportBucketSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class ComputeProjectsSetUsageExportBucketSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetUsageExportBucketSecurityOption4 option4;
+
     public ComputeProjectsSetUsageExportBucketSecurity withOption4(ComputeProjectsSetUsageExportBucketSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,9 +41,11 @@ public class ComputeProjectsSetUsageExportBucketSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeProjectsSetUsageExportBucketSecurityOption5 option5;
+
     public ComputeProjectsSetUsageExportBucketSecurity withOption5(ComputeProjectsSetUsageExportBucketSecurityOption5 option5) {
         this.option5 = option5;
         return this;
     }
     
+    public ComputeProjectsSetUsageExportBucketSecurity(){}
 }

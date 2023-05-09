@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetRequest;
 import org.openapis.openapi.models.operations.GetResponse;
 import org.openapis.openapi.models.shared.PossibleListsEnum;
@@ -28,31 +27,33 @@ public class Application {
                 .build();
 
             GetRequest req = new GetRequest() {{
-                list = "nbsIscc";
+                list = PossibleListsEnum.NBS_ISCC;
                 noduplicates = false;
                 values = "provident";
-            }}            
+            }};            
 
             GetResponse res = sdk.get(req);
 
-            if (res.get200ApplicationJSONObject.isPresent()) {
+            if (res.get200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `get` - Get all colors of the default color name list
-* `getLists` - Get all colors of the default color name list
-* `getNames` - Get all colors of the default color name list
-* `getSwatch` - Generate a color swatch for any color
+* [get](docs/sdk/README.md#get) - Get all colors of the default color name list
+* [getLists](docs/sdk/README.md#getlists) - Get all colors of the default color name list
+* [getNames](docs/sdk/README.md#getnames) - Get all colors of the default color name list
+* [getSwatch](docs/sdk/README.md#getswatch) - Generate a color swatch for any color
 <!-- End SDK Available Operations -->
 
 ### Maturity

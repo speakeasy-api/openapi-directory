@@ -12,6 +12,7 @@ public class IPSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IP")
     public String ip;
+
     public IPSource withIp(String ip) {
         this.ip = ip;
         return this;
@@ -20,9 +21,11 @@ public class IPSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public IPSource withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public IPSource(){}
 }

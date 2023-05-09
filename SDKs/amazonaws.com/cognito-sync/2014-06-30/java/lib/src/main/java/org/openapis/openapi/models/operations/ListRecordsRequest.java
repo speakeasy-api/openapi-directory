@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRecordsRequest {
@@ -12,6 +13,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=DatasetName")
     public String datasetName;
+
     public ListRecordsRequest withDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
@@ -22,6 +24,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityId")
     public String identityId;
+
     public ListRecordsRequest withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
@@ -32,6 +35,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=IdentityPoolId")
     public String identityPoolId;
+
     public ListRecordsRequest withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -39,6 +43,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListRecordsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListRecordsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListRecordsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListRecordsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListRecordsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListRecordsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,6 +91,7 @@ public class ListRecordsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListRecordsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -91,6 +102,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastSyncCount")
     public Long lastSyncCount;
+
     public ListRecordsRequest withLastSyncCount(Long lastSyncCount) {
         this.lastSyncCount = lastSyncCount;
         return this;
@@ -101,6 +113,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public ListRecordsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -111,6 +124,7 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListRecordsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -121,9 +135,15 @@ public class ListRecordsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncSessionToken")
     public String syncSessionToken;
+
     public ListRecordsRequest withSyncSessionToken(String syncSessionToken) {
         this.syncSessionToken = syncSessionToken;
         return this;
     }
     
+    public ListRecordsRequest(@JsonProperty("DatasetName") String datasetName, @JsonProperty("IdentityId") String identityId, @JsonProperty("IdentityPoolId") String identityPoolId) {
+        this.datasetName = datasetName;
+        this.identityId = identityId;
+        this.identityPoolId = identityPoolId;
+  }
 }

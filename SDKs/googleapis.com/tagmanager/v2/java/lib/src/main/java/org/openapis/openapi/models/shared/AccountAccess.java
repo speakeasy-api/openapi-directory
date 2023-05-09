@@ -18,9 +18,11 @@ public class AccountAccess {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public AccountAccessPermissionEnum permission;
+
     public AccountAccess withPermission(AccountAccessPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public AccountAccess(){}
 }

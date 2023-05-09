@@ -20,6 +20,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public BuildSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildStatus")
     public StatusTypeEnum buildStatus;
+
     public BuildSummary withBuildStatus(StatusTypeEnum buildStatus) {
         this.buildStatus = buildStatus;
         return this;
@@ -36,6 +38,7 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryArtifact")
     public ResolvedArtifact primaryArtifact;
+
     public BuildSummary withPrimaryArtifact(ResolvedArtifact primaryArtifact) {
         this.primaryArtifact = primaryArtifact;
         return this;
@@ -46,6 +49,7 @@ public class BuildSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedOn")
     public OffsetDateTime requestedOn;
+
     public BuildSummary withRequestedOn(OffsetDateTime requestedOn) {
         this.requestedOn = requestedOn;
         return this;
@@ -54,9 +58,11 @@ public class BuildSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secondaryArtifacts")
     public ResolvedArtifact[] secondaryArtifacts;
+
     public BuildSummary withSecondaryArtifacts(ResolvedArtifact[] secondaryArtifacts) {
         this.secondaryArtifacts = secondaryArtifacts;
         return this;
     }
     
+    public BuildSummary(){}
 }

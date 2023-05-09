@@ -12,6 +12,7 @@ public class RegistrationsInstitutionsListInstitution {
      */
     
     public RegistrationsInstitutionsListInstitutionAttributes attributes;
+
     public RegistrationsInstitutionsListInstitution withAttributes(RegistrationsInstitutionsListInstitutionAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationsInstitutionsListInstitution {
      */
     
     public String id;
+
     public RegistrationsInstitutionsListInstitution withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class RegistrationsInstitutionsListInstitution {
      */
     
     public RegistrationsInstitutionsListInstitutionLinks links;
+
     public RegistrationsInstitutionsListInstitution withLinks(RegistrationsInstitutionsListInstitutionLinks links) {
         this.links = links;
         return this;
@@ -42,6 +45,7 @@ public class RegistrationsInstitutionsListInstitution {
      */
     
     public RegistrationsInstitutionsListInstitutionRelationships relationships;
+
     public RegistrationsInstitutionsListInstitution withRelationships(RegistrationsInstitutionsListInstitutionRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -52,9 +56,11 @@ public class RegistrationsInstitutionsListInstitution {
      */
     
     public String type;
+
     public RegistrationsInstitutionsListInstitution withType(String type) {
         this.type = type;
         return this;
     }
     
+    public RegistrationsInstitutionsListInstitution(){}
 }

@@ -21,6 +21,7 @@ public class SearchRelatedItemsResponseItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("associationTime")
     public OffsetDateTime associationTime;
+
     public SearchRelatedItemsResponseItem withAssociationTime(OffsetDateTime associationTime) {
         this.associationTime = associationTime;
         return this;
@@ -28,6 +29,7 @@ public class SearchRelatedItemsResponseItem {
     
     @JsonProperty("content")
     public RelatedItemContent content;
+
     public SearchRelatedItemsResponseItem withContent(RelatedItemContent content) {
         this.content = content;
         return this;
@@ -35,6 +37,7 @@ public class SearchRelatedItemsResponseItem {
     
     @JsonProperty("relatedItemId")
     public String relatedItemId;
+
     public SearchRelatedItemsResponseItem withRelatedItemId(String relatedItemId) {
         this.relatedItemId = relatedItemId;
         return this;
@@ -43,6 +46,7 @@ public class SearchRelatedItemsResponseItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SearchRelatedItemsResponseItem withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -50,9 +54,16 @@ public class SearchRelatedItemsResponseItem {
     
     @JsonProperty("type")
     public RelatedItemTypeEnum type;
+
     public SearchRelatedItemsResponseItem withType(RelatedItemTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SearchRelatedItemsResponseItem(@JsonProperty("associationTime") OffsetDateTime associationTime, @JsonProperty("content") RelatedItemContent content, @JsonProperty("relatedItemId") String relatedItemId, @JsonProperty("type") RelatedItemTypeEnum type) {
+        this.associationTime = associationTime;
+        this.content = content;
+        this.relatedItemId = relatedItemId;
+        this.type = type;
+  }
 }

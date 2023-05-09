@@ -22,6 +22,7 @@ public class StreamSessionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public StreamSessionSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -30,6 +31,7 @@ public class StreamSessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasErrorEvent")
     public Boolean hasErrorEvent;
+
     public StreamSessionSummary withHasErrorEvent(Boolean hasErrorEvent) {
         this.hasErrorEvent = hasErrorEvent;
         return this;
@@ -40,6 +42,7 @@ public class StreamSessionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public StreamSessionSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -48,9 +51,11 @@ public class StreamSessionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamSessionSummary withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
     }
     
+    public StreamSessionSummary(){}
 }

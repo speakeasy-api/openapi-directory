@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeploymentmanagerTypeProvidersListTypesRequest {
@@ -12,6 +13,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -72,6 +79,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public String orderBy;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -112,6 +123,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withProject(String project) {
         this.project = project;
         return this;
@@ -142,6 +156,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=typeProvider")
     public String typeProvider;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withTypeProvider(String typeProvider) {
         this.typeProvider = typeProvider;
         return this;
@@ -162,6 +178,7 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,14 @@ public class DeploymentmanagerTypeProvidersListTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DeploymentmanagerTypeProvidersListTypesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DeploymentmanagerTypeProvidersListTypesRequest(@JsonProperty("project") String project, @JsonProperty("typeProvider") String typeProvider) {
+        this.project = project;
+        this.typeProvider = typeProvider;
+  }
 }

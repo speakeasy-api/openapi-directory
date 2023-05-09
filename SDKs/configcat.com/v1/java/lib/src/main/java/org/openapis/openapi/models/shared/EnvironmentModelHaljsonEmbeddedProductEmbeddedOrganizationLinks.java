@@ -12,6 +12,7 @@ public class EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganizationLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String members;
+
     public EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganizationLinks withMembers(String members) {
         this.members = members;
         return this;
@@ -20,9 +21,11 @@ public class EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganizationLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public String products;
+
     public EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganizationLinks withProducts(String products) {
         this.products = products;
         return this;
     }
     
+    public EnvironmentModelHaljsonEmbeddedProductEmbeddedOrganizationLinks(){}
 }

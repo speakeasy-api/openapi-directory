@@ -18,6 +18,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitStreamChunkSizeBytes")
     public String commitStreamChunkSizeBytes;
+
     public StreamingConfigTask withCommitStreamChunkSizeBytes(String commitStreamChunkSizeBytes) {
         this.commitStreamChunkSizeBytes = commitStreamChunkSizeBytes;
         return this;
@@ -29,6 +30,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("getDataStreamChunkSizeBytes")
     public String getDataStreamChunkSizeBytes;
+
     public StreamingConfigTask withGetDataStreamChunkSizeBytes(String getDataStreamChunkSizeBytes) {
         this.getDataStreamChunkSizeBytes = getDataStreamChunkSizeBytes;
         return this;
@@ -40,6 +42,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxWorkItemCommitBytes")
     public String maxWorkItemCommitBytes;
+
     public StreamingConfigTask withMaxWorkItemCommitBytes(String maxWorkItemCommitBytes) {
         this.maxWorkItemCommitBytes = maxWorkItemCommitBytes;
         return this;
@@ -51,6 +54,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingComputationConfigs")
     public StreamingComputationConfig[] streamingComputationConfigs;
+
     public StreamingConfigTask withStreamingComputationConfigs(StreamingComputationConfig[] streamingComputationConfigs) {
         this.streamingComputationConfigs = streamingComputationConfigs;
         return this;
@@ -62,6 +66,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userStepToStateFamilyNameMap")
     public java.util.Map<String, String> userStepToStateFamilyNameMap;
+
     public StreamingConfigTask withUserStepToStateFamilyNameMap(java.util.Map<String, String> userStepToStateFamilyNameMap) {
         this.userStepToStateFamilyNameMap = userStepToStateFamilyNameMap;
         return this;
@@ -73,6 +78,7 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windmillServiceEndpoint")
     public String windmillServiceEndpoint;
+
     public StreamingConfigTask withWindmillServiceEndpoint(String windmillServiceEndpoint) {
         this.windmillServiceEndpoint = windmillServiceEndpoint;
         return this;
@@ -84,9 +90,11 @@ public class StreamingConfigTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("windmillServicePort")
     public String windmillServicePort;
+
     public StreamingConfigTask withWindmillServicePort(String windmillServicePort) {
         this.windmillServicePort = windmillServicePort;
         return this;
     }
     
+    public StreamingConfigTask(){}
 }

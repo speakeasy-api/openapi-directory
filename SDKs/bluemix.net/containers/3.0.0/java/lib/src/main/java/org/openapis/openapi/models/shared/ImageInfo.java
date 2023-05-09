@@ -18,6 +18,7 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public Float created;
+
     public ImageInfo withCreated(Float created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ImageInfo withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public ImageInfo withImage(String image) {
         this.image = image;
         return this;
@@ -51,6 +54,7 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepoTags")
     public String[] repoTags;
+
     public ImageInfo withRepoTags(String[] repoTags) {
         this.repoTags = repoTags;
         return this;
@@ -62,6 +66,7 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Integer size;
+
     public ImageInfo withSize(Integer size) {
         this.size = size;
         return this;
@@ -73,9 +78,11 @@ public class ImageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualSize")
     public Integer virtualSize;
+
     public ImageInfo withVirtualSize(Integer virtualSize) {
         this.virtualSize = virtualSize;
         return this;
     }
     
+    public ImageInfo(){}
 }

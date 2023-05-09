@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AttachClassicLinkVpcRequest {
     
     public Boolean dryRun;
+
     public AttachClassicLinkVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class AttachClassicLinkVpcRequest {
     
     
     public String[] groups;
+
     public AttachClassicLinkVpcRequest withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -23,6 +25,7 @@ public class AttachClassicLinkVpcRequest {
     
     
     public String instanceId;
+
     public AttachClassicLinkVpcRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -30,9 +33,15 @@ public class AttachClassicLinkVpcRequest {
     
     
     public String vpcId;
+
     public AttachClassicLinkVpcRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AttachClassicLinkVpcRequest(@JsonProperty("Groups") String[] groups, @JsonProperty("InstanceId") String instanceId, @JsonProperty("VpcId") String vpcId) {
+        this.groups = groups;
+        this.instanceId = instanceId;
+        this.vpcId = vpcId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NewsRequest {
@@ -12,9 +13,13 @@ public class NewsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public NewsFormatEnum format;
+
     public NewsRequest withFormat(NewsFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public NewsRequest(@JsonProperty("format") NewsFormatEnum format) {
+        this.format = format;
+  }
 }

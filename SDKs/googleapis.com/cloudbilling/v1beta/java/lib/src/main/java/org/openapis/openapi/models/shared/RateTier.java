@@ -18,6 +18,7 @@ public class RateTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Money price;
+
     public RateTier withPrice(Money price) {
         this.price = price;
         return this;
@@ -29,9 +30,11 @@ public class RateTier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startAmount")
     public Double startAmount;
+
     public RateTier withStartAmount(Double startAmount) {
         this.startAmount = startAmount;
         return this;
     }
     
+    public RateTier(){}
 }

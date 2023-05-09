@@ -129,6 +129,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -154,11 +159,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +199,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse(contentType, httpRes.statusCode()) {{
             receiver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -238,11 +239,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse() {{
+        org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.DeleteSettingsOrganizationsOrganizationNameSendersSenderNameResponse(contentType, httpRes.statusCode()) {{
             sender = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,10 +259,11 @@ public class SDK {
 
     /**
      * The settings for all organizations of the system. Must have admin access.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse getSettingsOrganizations() throws Exception {
+    public org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse getSettingsOrganizations(org.openapis.openapi.models.operations.GetSettingsOrganizationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/settings/organizations");
         
@@ -272,16 +272,15 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsResponse(contentType, httpRes.statusCode()) {{
             organizations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -319,11 +318,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -359,11 +356,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversResponse(contentType, httpRes.statusCode()) {{
             receivers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -401,11 +396,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse(contentType, httpRes.statusCode()) {{
             receiver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +436,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersResponse(contentType, httpRes.statusCode()) {{
             senders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -485,11 +476,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse() {{
+        org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.GetSettingsOrganizationsOrganizationNameSendersSenderNameResponse(contentType, httpRes.statusCode()) {{
             sender = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -507,10 +496,11 @@ public class SDK {
 
     /**
      * Retrived the last modified for all settings of the system. Must have admin access.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse headSettingsOrganizations() throws Exception {
+    public org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse headSettingsOrganizations(org.openapis.openapi.models.operations.HeadSettingsOrganizationsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/settings/organizations");
         
@@ -519,15 +509,14 @@ public class SDK {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse res = new org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse res = new org.openapis.openapi.models.operations.HeadSettingsOrganizationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -571,11 +560,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostReportsResponse res = new org.openapis.openapi.models.operations.PostReportsResponse() {{
+        org.openapis.openapi.models.operations.PostReportsResponse res = new org.openapis.openapi.models.operations.PostReportsResponse(contentType, httpRes.statusCode()) {{
             report = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {
@@ -615,11 +602,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameResponse() {{
+        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameResponse(contentType, httpRes.statusCode()) {{
             organization = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -659,11 +644,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse() {{
+        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameReceiversReceiverNameResponse(contentType, httpRes.statusCode()) {{
             receiver = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {
@@ -703,11 +686,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse() {{
+        org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse res = new org.openapis.openapi.models.operations.PutSettingsOrganizationsOrganizationNameSendersSenderNameResponse(contentType, httpRes.statusCode()) {{
             senders = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 201) {

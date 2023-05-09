@@ -15,6 +15,7 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String collectedMetadata;
+
     public CollectionsDetailCollectionRelationships withCollectedMetadata(String collectedMetadata) {
         this.collectedMetadata = collectedMetadata;
         return this;
@@ -25,6 +26,7 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String linkedNodes;
+
     public CollectionsDetailCollectionRelationships withLinkedNodes(String linkedNodes) {
         this.linkedNodes = linkedNodes;
         return this;
@@ -35,6 +37,7 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String linkedPreprints;
+
     public CollectionsDetailCollectionRelationships withLinkedPreprints(String linkedPreprints) {
         this.linkedPreprints = linkedPreprints;
         return this;
@@ -45,6 +48,7 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String linkedRegistrations;
+
     public CollectionsDetailCollectionRelationships withLinkedRegistrations(String linkedRegistrations) {
         this.linkedRegistrations = linkedRegistrations;
         return this;
@@ -55,6 +59,7 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String nodeLinks;
+
     public CollectionsDetailCollectionRelationships withNodeLinks(String nodeLinks) {
         this.nodeLinks = nodeLinks;
         return this;
@@ -65,9 +70,11 @@ public class CollectionsDetailCollectionRelationships {
      */
     
     public String provider;
+
     public CollectionsDetailCollectionRelationships withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public CollectionsDetailCollectionRelationships(){}
 }

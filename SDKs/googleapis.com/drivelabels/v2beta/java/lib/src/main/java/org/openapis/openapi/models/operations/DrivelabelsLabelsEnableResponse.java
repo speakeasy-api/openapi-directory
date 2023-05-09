@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DrivelabelsLabelsEnableResponse {
     
     public String contentType;
+
     public DrivelabelsLabelsEnableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DrivelabelsLabelsEnableResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2betaLabel googleAppsDriveLabelsV2betaLabel;
+
     public DrivelabelsLabelsEnableResponse withGoogleAppsDriveLabelsV2betaLabel(org.openapis.openapi.models.shared.GoogleAppsDriveLabelsV2betaLabel googleAppsDriveLabelsV2betaLabel) {
         this.googleAppsDriveLabelsV2betaLabel = googleAppsDriveLabelsV2betaLabel;
         return this;
@@ -26,6 +29,7 @@ public class DrivelabelsLabelsEnableResponse {
     
     
     public Integer statusCode;
+
     public DrivelabelsLabelsEnableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DrivelabelsLabelsEnableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DrivelabelsLabelsEnableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DrivelabelsLabelsEnableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

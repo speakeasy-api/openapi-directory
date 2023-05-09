@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourcesAssociatedToCustomLineItemResponse {
@@ -12,6 +13,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResourcesAssociatedToCustomLineItemResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
     
     
     public String contentType;
+
     public ListResourcesAssociatedToCustomLineItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public Object internalServerException;
+
     public ListResourcesAssociatedToCustomLineItemResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourcesAssociatedToCustomLineItemOutput listResourcesAssociatedToCustomLineItemOutput;
+
     public ListResourcesAssociatedToCustomLineItemResponse withListResourcesAssociatedToCustomLineItemOutput(org.openapis.openapi.models.shared.ListResourcesAssociatedToCustomLineItemOutput listResourcesAssociatedToCustomLineItemOutput) {
         this.listResourcesAssociatedToCustomLineItemOutput = listResourcesAssociatedToCustomLineItemOutput;
         return this;
@@ -49,6 +54,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourcesAssociatedToCustomLineItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
     
     
     public Integer statusCode;
+
     public ListResourcesAssociatedToCustomLineItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourcesAssociatedToCustomLineItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public Object throttlingException;
+
     public ListResourcesAssociatedToCustomLineItemResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListResourcesAssociatedToCustomLineItemResponse {
      */
     
     public Object validationException;
+
     public ListResourcesAssociatedToCustomLineItemResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListResourcesAssociatedToCustomLineItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

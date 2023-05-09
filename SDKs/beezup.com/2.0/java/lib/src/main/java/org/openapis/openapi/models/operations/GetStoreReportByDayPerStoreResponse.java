@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreReportByDayPerStoreResponse {
@@ -12,6 +13,7 @@ public class GetStoreReportByDayPerStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoreReportByDayPerStoreResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreReportByDayPerStoreResponse {
     
     
     public String contentType;
+
     public GetStoreReportByDayPerStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreReportByDayPerStoreResponse {
     
     
     public Integer statusCode;
+
     public GetStoreReportByDayPerStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreReportByDayPerStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreReportByDayPerStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreReportByDayPerStoreResponse {
      */
     
     public java.util.Map<String, org.openapis.openapi.models.shared.ReportByDayResponse> reportByDayPerStoreResponse;
+
     public GetStoreReportByDayPerStoreResponse withReportByDayPerStoreResponse(java.util.Map<String, org.openapis.openapi.models.shared.ReportByDayResponse> reportByDayPerStoreResponse) {
         this.reportByDayPerStoreResponse = reportByDayPerStoreResponse;
         return this;
     }
     
+    public GetStoreReportByDayPerStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

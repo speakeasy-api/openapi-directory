@@ -18,6 +18,7 @@ public class RuntimeAccessConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessType")
     public RuntimeAccessConfigAccessTypeEnum accessType;
+
     public RuntimeAccessConfigInput withAccessType(RuntimeAccessConfigAccessTypeEnum accessType) {
         this.accessType = accessType;
         return this;
@@ -29,9 +30,11 @@ public class RuntimeAccessConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeOwner")
     public String runtimeOwner;
+
     public RuntimeAccessConfigInput withRuntimeOwner(String runtimeOwner) {
         this.runtimeOwner = runtimeOwner;
         return this;
     }
     
+    public RuntimeAccessConfigInput(){}
 }

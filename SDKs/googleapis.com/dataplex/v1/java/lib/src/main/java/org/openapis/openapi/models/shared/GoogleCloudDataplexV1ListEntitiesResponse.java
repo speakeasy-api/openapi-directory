@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public GoogleCloudDataplexV1Entity[] entities;
+
     public GoogleCloudDataplexV1ListEntitiesResponse withEntities(GoogleCloudDataplexV1Entity[] entities) {
         this.entities = entities;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListEntitiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListEntitiesResponse(){}
 }

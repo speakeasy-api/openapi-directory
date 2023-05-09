@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelSchemaExtensionRequest {
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public CancelSchemaExtensionRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -16,9 +17,14 @@ public class CancelSchemaExtensionRequest {
     
     @JsonProperty("SchemaExtensionId")
     public String schemaExtensionId;
+
     public CancelSchemaExtensionRequest withSchemaExtensionId(String schemaExtensionId) {
         this.schemaExtensionId = schemaExtensionId;
         return this;
     }
     
+    public CancelSchemaExtensionRequest(@JsonProperty("DirectoryId") String directoryId, @JsonProperty("SchemaExtensionId") String schemaExtensionId) {
+        this.directoryId = directoryId;
+        this.schemaExtensionId = schemaExtensionId;
+  }
 }

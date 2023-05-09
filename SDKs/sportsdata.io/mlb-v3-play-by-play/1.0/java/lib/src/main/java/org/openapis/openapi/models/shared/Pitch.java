@@ -12,6 +12,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ball")
     public Boolean ball;
+
     public Pitch withBall(Boolean ball) {
         this.ball = ball;
         return this;
@@ -20,6 +21,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BallsBeforePitch")
     public Long ballsBeforePitch;
+
     public Pitch withBallsBeforePitch(Long ballsBeforePitch) {
         this.ballsBeforePitch = ballsBeforePitch;
         return this;
@@ -28,6 +30,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Foul")
     public Boolean foul;
+
     public Pitch withFoul(Boolean foul) {
         this.foul = foul;
         return this;
@@ -36,6 +39,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HitterID")
     public Long hitterID;
+
     public Pitch withHitterID(Long hitterID) {
         this.hitterID = hitterID;
         return this;
@@ -44,6 +48,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Looking")
     public Boolean looking;
+
     public Pitch withLooking(Boolean looking) {
         this.looking = looking;
         return this;
@@ -52,6 +57,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outs")
     public Long outs;
+
     public Pitch withOuts(Long outs) {
         this.outs = outs;
         return this;
@@ -60,6 +66,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchID")
     public Long pitchID;
+
     public Pitch withPitchID(Long pitchID) {
         this.pitchID = pitchID;
         return this;
@@ -68,6 +75,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitchNumberThisAtBat")
     public Long pitchNumberThisAtBat;
+
     public Pitch withPitchNumberThisAtBat(Long pitchNumberThisAtBat) {
         this.pitchNumberThisAtBat = pitchNumberThisAtBat;
         return this;
@@ -76,6 +84,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PitcherID")
     public Long pitcherID;
+
     public Pitch withPitcherID(Long pitcherID) {
         this.pitcherID = pitcherID;
         return this;
@@ -84,6 +93,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayID")
     public Long playID;
+
     public Pitch withPlayID(Long playID) {
         this.playID = playID;
         return this;
@@ -92,6 +102,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Strike")
     public Boolean strike;
+
     public Pitch withStrike(Boolean strike) {
         this.strike = strike;
         return this;
@@ -100,6 +111,7 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StrikesBeforePitch")
     public Long strikesBeforePitch;
+
     public Pitch withStrikesBeforePitch(Long strikesBeforePitch) {
         this.strikesBeforePitch = strikesBeforePitch;
         return this;
@@ -108,9 +120,11 @@ public class Pitch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Swinging")
     public Boolean swinging;
+
     public Pitch withSwinging(Boolean swinging) {
         this.swinging = swinging;
         return this;
     }
     
+    public Pitch(){}
 }

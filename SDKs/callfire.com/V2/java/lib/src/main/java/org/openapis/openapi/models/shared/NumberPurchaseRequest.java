@@ -18,6 +18,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public NumberPurchaseRequest withCity(String city) {
         this.city = city;
         return this;
@@ -29,6 +30,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localCount")
     public Integer localCount;
+
     public NumberPurchaseRequest withLocalCount(Integer localCount) {
         this.localCount = localCount;
         return this;
@@ -40,6 +42,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numbers")
     public String[] numbers;
+
     public NumberPurchaseRequest withNumbers(String[] numbers) {
         this.numbers = numbers;
         return this;
@@ -51,6 +54,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public NumberPurchaseRequest withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -62,6 +66,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promo")
     public String promo;
+
     public NumberPurchaseRequest withPromo(String promo) {
         this.promo = promo;
         return this;
@@ -73,6 +78,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public NumberPurchaseRequest withState(String state) {
         this.state = state;
         return this;
@@ -84,6 +90,7 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tollFreeCount")
     public Integer tollFreeCount;
+
     public NumberPurchaseRequest withTollFreeCount(Integer tollFreeCount) {
         this.tollFreeCount = tollFreeCount;
         return this;
@@ -95,9 +102,11 @@ public class NumberPurchaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zipcode")
     public String zipcode;
+
     public NumberPurchaseRequest withZipcode(String zipcode) {
         this.zipcode = zipcode;
         return this;
     }
     
+    public NumberPurchaseRequest(){}
 }

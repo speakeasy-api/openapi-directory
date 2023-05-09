@@ -15,6 +15,7 @@ public class ChannelStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerManagedS3")
     public CustomerManagedChannelS3Storage customerManagedS3;
+
     public ChannelStorage withCustomerManagedS3(CustomerManagedChannelS3Storage customerManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         return this;
@@ -23,9 +24,11 @@ public class ChannelStorage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceManagedS3")
     public java.util.Map<String, Object> serviceManagedS3;
+
     public ChannelStorage withServiceManagedS3(java.util.Map<String, Object> serviceManagedS3) {
         this.serviceManagedS3 = serviceManagedS3;
         return this;
     }
     
+    public ChannelStorage(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsListForksResponse {
     
     public String contentType;
+
     public GistsListForksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsListForksResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GistsListForksResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GistsListForksResponse {
     
     
     public Integer statusCode;
+
     public GistsListForksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GistsListForksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsListForksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GistsListForksResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsListForksResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class GistsListForksResponse {
      */
     
     public org.openapis.openapi.models.shared.GistSimple[] gistSimples;
+
     public GistsListForksResponse withGistSimples(org.openapis.openapi.models.shared.GistSimple[] gistSimples) {
         this.gistSimples = gistSimples;
         return this;
     }
     
+    public GistsListForksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

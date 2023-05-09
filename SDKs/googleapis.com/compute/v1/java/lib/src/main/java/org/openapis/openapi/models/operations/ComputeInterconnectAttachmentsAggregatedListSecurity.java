@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeInterconnectAttachmentsAggregatedListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectAttachmentsAggregatedListSecurityOption1 option1;
+
     public ComputeInterconnectAttachmentsAggregatedListSecurity withOption1(ComputeInterconnectAttachmentsAggregatedListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeInterconnectAttachmentsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectAttachmentsAggregatedListSecurityOption2 option2;
+
     public ComputeInterconnectAttachmentsAggregatedListSecurity withOption2(ComputeInterconnectAttachmentsAggregatedListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeInterconnectAttachmentsAggregatedListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeInterconnectAttachmentsAggregatedListSecurityOption3 option3;
+
     public ComputeInterconnectAttachmentsAggregatedListSecurity withOption3(ComputeInterconnectAttachmentsAggregatedListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeInterconnectAttachmentsAggregatedListSecurity(){}
 }

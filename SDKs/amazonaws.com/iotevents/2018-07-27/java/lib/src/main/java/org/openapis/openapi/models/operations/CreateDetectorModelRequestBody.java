@@ -14,6 +14,7 @@ public class CreateDetectorModelRequestBody {
      */
     @JsonProperty("detectorModelDefinition")
     public CreateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition;
+
     public CreateDetectorModelRequestBody withDetectorModelDefinition(CreateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition) {
         this.detectorModelDefinition = detectorModelDefinition;
         return this;
@@ -25,6 +26,7 @@ public class CreateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorModelDescription")
     public String detectorModelDescription;
+
     public CreateDetectorModelRequestBody withDetectorModelDescription(String detectorModelDescription) {
         this.detectorModelDescription = detectorModelDescription;
         return this;
@@ -35,6 +37,7 @@ public class CreateDetectorModelRequestBody {
      */
     @JsonProperty("detectorModelName")
     public String detectorModelName;
+
     public CreateDetectorModelRequestBody withDetectorModelName(String detectorModelName) {
         this.detectorModelName = detectorModelName;
         return this;
@@ -46,6 +49,7 @@ public class CreateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMethod")
     public CreateDetectorModelRequestBodyEvaluationMethodEnum evaluationMethod;
+
     public CreateDetectorModelRequestBody withEvaluationMethod(CreateDetectorModelRequestBodyEvaluationMethodEnum evaluationMethod) {
         this.evaluationMethod = evaluationMethod;
         return this;
@@ -57,6 +61,7 @@ public class CreateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public CreateDetectorModelRequestBody withKey(String key) {
         this.key = key;
         return this;
@@ -67,6 +72,7 @@ public class CreateDetectorModelRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateDetectorModelRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -78,9 +84,15 @@ public class CreateDetectorModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public CreateDetectorModelRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDetectorModelRequestBody(@JsonProperty("detectorModelDefinition") CreateDetectorModelRequestBodyDetectorModelDefinition detectorModelDefinition, @JsonProperty("detectorModelName") String detectorModelName, @JsonProperty("roleArn") String roleArn) {
+        this.detectorModelDefinition = detectorModelDefinition;
+        this.detectorModelName = detectorModelName;
+        this.roleArn = roleArn;
+  }
 }

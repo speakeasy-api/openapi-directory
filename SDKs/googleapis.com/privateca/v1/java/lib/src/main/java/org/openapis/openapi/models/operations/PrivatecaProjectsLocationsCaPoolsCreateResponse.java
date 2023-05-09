@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivatecaProjectsLocationsCaPoolsCreateResponse {
     
     public String contentType;
+
     public PrivatecaProjectsLocationsCaPoolsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PrivatecaProjectsLocationsCaPoolsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.Operation operation;
+
     public PrivatecaProjectsLocationsCaPoolsCreateResponse withOperation(org.openapis.openapi.models.shared.Operation operation) {
         this.operation = operation;
         return this;
@@ -26,6 +29,7 @@ public class PrivatecaProjectsLocationsCaPoolsCreateResponse {
     
     
     public Integer statusCode;
+
     public PrivatecaProjectsLocationsCaPoolsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PrivatecaProjectsLocationsCaPoolsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivatecaProjectsLocationsCaPoolsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivatecaProjectsLocationsCaPoolsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

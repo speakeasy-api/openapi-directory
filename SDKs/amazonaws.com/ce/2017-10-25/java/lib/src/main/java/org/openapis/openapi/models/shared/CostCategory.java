@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CostCategory {
     @JsonProperty("CostCategoryArn")
     public String costCategoryArn;
+
     public CostCategory withCostCategoryArn(String costCategoryArn) {
         this.costCategoryArn = costCategoryArn;
         return this;
@@ -25,6 +26,7 @@ public class CostCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultValue")
     public String defaultValue;
+
     public CostCategory withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -33,6 +35,7 @@ public class CostCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EffectiveEnd")
     public String effectiveEnd;
+
     public CostCategory withEffectiveEnd(String effectiveEnd) {
         this.effectiveEnd = effectiveEnd;
         return this;
@@ -40,6 +43,7 @@ public class CostCategory {
     
     @JsonProperty("EffectiveStart")
     public String effectiveStart;
+
     public CostCategory withEffectiveStart(String effectiveStart) {
         this.effectiveStart = effectiveStart;
         return this;
@@ -50,6 +54,7 @@ public class CostCategory {
      */
     @JsonProperty("Name")
     public String name;
+
     public CostCategory withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +63,7 @@ public class CostCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingStatus")
     public CostCategoryProcessingStatus[] processingStatus;
+
     public CostCategory withProcessingStatus(CostCategoryProcessingStatus[] processingStatus) {
         this.processingStatus = processingStatus;
         return this;
@@ -68,6 +74,7 @@ public class CostCategory {
      */
     @JsonProperty("RuleVersion")
     public CostCategoryRuleVersionEnum ruleVersion;
+
     public CostCategory withRuleVersion(CostCategoryRuleVersionEnum ruleVersion) {
         this.ruleVersion = ruleVersion;
         return this;
@@ -75,6 +82,7 @@ public class CostCategory {
     
     @JsonProperty("Rules")
     public CostCategoryRule[] rules;
+
     public CostCategory withRules(CostCategoryRule[] rules) {
         this.rules = rules;
         return this;
@@ -83,9 +91,17 @@ public class CostCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SplitChargeRules")
     public CostCategorySplitChargeRule[] splitChargeRules;
+
     public CostCategory withSplitChargeRules(CostCategorySplitChargeRule[] splitChargeRules) {
         this.splitChargeRules = splitChargeRules;
         return this;
     }
     
+    public CostCategory(@JsonProperty("CostCategoryArn") String costCategoryArn, @JsonProperty("EffectiveStart") String effectiveStart, @JsonProperty("Name") String name, @JsonProperty("RuleVersion") CostCategoryRuleVersionEnum ruleVersion, @JsonProperty("Rules") CostCategoryRule[] rules) {
+        this.costCategoryArn = costCategoryArn;
+        this.effectiveStart = effectiveStart;
+        this.name = name;
+        this.ruleVersion = ruleVersion;
+        this.rules = rules;
+  }
 }

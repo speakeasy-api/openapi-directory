@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MiradoreCredentialFields {
     @JsonProperty("api_key")
     public String apiKey;
+
     public MiradoreCredentialFields withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +17,14 @@ public class MiradoreCredentialFields {
     
     @JsonProperty("hostname")
     public String hostname;
+
     public MiradoreCredentialFields withHostname(String hostname) {
         this.hostname = hostname;
         return this;
     }
     
+    public MiradoreCredentialFields(@JsonProperty("api_key") String apiKey, @JsonProperty("hostname") String hostname) {
+        this.apiKey = apiKey;
+        this.hostname = hostname;
+  }
 }

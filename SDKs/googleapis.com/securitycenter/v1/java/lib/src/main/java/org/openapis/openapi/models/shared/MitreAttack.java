@@ -18,6 +18,7 @@ public class MitreAttack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTactics")
     public MitreAttackAdditionalTacticsEnum[] additionalTactics;
+
     public MitreAttack withAdditionalTactics(MitreAttackAdditionalTacticsEnum[] additionalTactics) {
         this.additionalTactics = additionalTactics;
         return this;
@@ -29,6 +30,7 @@ public class MitreAttack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalTechniques")
     public MitreAttackAdditionalTechniquesEnum[] additionalTechniques;
+
     public MitreAttack withAdditionalTechniques(MitreAttackAdditionalTechniquesEnum[] additionalTechniques) {
         this.additionalTechniques = additionalTechniques;
         return this;
@@ -40,6 +42,7 @@ public class MitreAttack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryTactic")
     public MitreAttackPrimaryTacticEnum primaryTactic;
+
     public MitreAttack withPrimaryTactic(MitreAttackPrimaryTacticEnum primaryTactic) {
         this.primaryTactic = primaryTactic;
         return this;
@@ -51,6 +54,7 @@ public class MitreAttack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryTechniques")
     public MitreAttackPrimaryTechniquesEnum[] primaryTechniques;
+
     public MitreAttack withPrimaryTechniques(MitreAttackPrimaryTechniquesEnum[] primaryTechniques) {
         this.primaryTechniques = primaryTechniques;
         return this;
@@ -62,9 +66,11 @@ public class MitreAttack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public MitreAttack withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MitreAttack(){}
 }

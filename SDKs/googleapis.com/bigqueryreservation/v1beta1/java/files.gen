@@ -117,4 +117,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Reservation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReservationInput.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListReservationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/SearchAssignmentsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

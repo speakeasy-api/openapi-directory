@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetNetworkInsightsAccessScopeAnalysisFindingsResult {
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings[] analysisFindings;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResult withAnalysisFindings(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisFindings[] analysisFindings) {
         this.analysisFindings = analysisFindings;
         return this;
@@ -19,6 +20,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResult {
     
     
     public GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum analysisStatus;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResult withAnalysisStatus(GetNetworkInsightsAccessScopeAnalysisFindingsResultAnalysisStatusEnum analysisStatus) {
         this.analysisStatus = analysisStatus;
         return this;
@@ -26,6 +28,7 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResult {
     
     
     public String networkInsightsAccessScopeAnalysisId;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResult withNetworkInsightsAccessScopeAnalysisId(String networkInsightsAccessScopeAnalysisId) {
         this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
         return this;
@@ -33,9 +36,11 @@ public class GetNetworkInsightsAccessScopeAnalysisFindingsResult {
     
     
     public String nextToken;
+
     public GetNetworkInsightsAccessScopeAnalysisFindingsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetNetworkInsightsAccessScopeAnalysisFindingsResult(){}
 }

@@ -18,6 +18,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardedPorts")
     public String[] forwardedPorts;
+
     public Network withForwardedPorts(String[] forwardedPorts) {
         this.forwardedPorts = forwardedPorts;
         return this;
@@ -29,6 +30,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceIpMode")
     public NetworkInstanceIpModeEnum instanceIpMode;
+
     public Network withInstanceIpMode(NetworkInstanceIpModeEnum instanceIpMode) {
         this.instanceIpMode = instanceIpMode;
         return this;
@@ -40,6 +42,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTag")
     public String instanceTag;
+
     public Network withInstanceTag(String instanceTag) {
         this.instanceTag = instanceTag;
         return this;
@@ -51,6 +54,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Network withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionAffinity")
     public Boolean sessionAffinity;
+
     public Network withSessionAffinity(Boolean sessionAffinity) {
         this.sessionAffinity = sessionAffinity;
         return this;
@@ -73,9 +78,11 @@ public class Network {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetworkName")
     public String subnetworkName;
+
     public Network withSubnetworkName(String subnetworkName) {
         this.subnetworkName = subnetworkName;
         return this;
     }
     
+    public Network(){}
 }

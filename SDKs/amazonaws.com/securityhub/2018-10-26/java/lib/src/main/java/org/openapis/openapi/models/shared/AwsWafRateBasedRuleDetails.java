@@ -15,6 +15,7 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchPredicates")
     public AwsWafRateBasedRuleMatchPredicate[] matchPredicates;
+
     public AwsWafRateBasedRuleDetails withMatchPredicates(AwsWafRateBasedRuleMatchPredicate[] matchPredicates) {
         this.matchPredicates = matchPredicates;
         return this;
@@ -23,6 +24,7 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public AwsWafRateBasedRuleDetails withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,6 +33,7 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsWafRateBasedRuleDetails withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RateKey")
     public String rateKey;
+
     public AwsWafRateBasedRuleDetails withRateKey(String rateKey) {
         this.rateKey = rateKey;
         return this;
@@ -47,6 +51,7 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RateLimit")
     public Long rateLimit;
+
     public AwsWafRateBasedRuleDetails withRateLimit(Long rateLimit) {
         this.rateLimit = rateLimit;
         return this;
@@ -55,9 +60,11 @@ public class AwsWafRateBasedRuleDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleId")
     public String ruleId;
+
     public AwsWafRateBasedRuleDetails withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public AwsWafRateBasedRuleDetails(){}
 }

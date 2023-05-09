@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchDriverRequest {
@@ -12,6 +13,7 @@ public class PatchDriverRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PatchDriverRequestBody requestBody;
+
     public PatchDriverRequest withRequestBody(PatchDriverRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class PatchDriverRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PatchDriverRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PatchDriverRequest(@JsonProperty("RequestBody") PatchDriverRequestBody requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

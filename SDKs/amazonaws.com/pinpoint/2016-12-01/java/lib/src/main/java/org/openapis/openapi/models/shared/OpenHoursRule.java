@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * OpenHoursRule - List of OpenHours Rules.
+ * OpenHoursRule - Specifies the start and end time for OpenHours.
  */
 public class OpenHoursRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTime")
     public String endTime;
+
     public OpenHoursRule withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -23,9 +24,11 @@ public class OpenHoursRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTime")
     public String startTime;
+
     public OpenHoursRule withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public OpenHoursRule(){}
 }

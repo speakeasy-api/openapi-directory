@@ -59,11 +59,9 @@ public class InstanceSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceSettingsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceSettingsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceSettingsGetResponse res = new org.openapis.openapi.models.operations.ComputeInstanceSettingsGetResponse(contentType, httpRes.statusCode()) {{
             instanceSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class InstanceSettings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeInstanceSettingsPatchResponse res = new org.openapis.openapi.models.operations.ComputeInstanceSettingsPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeInstanceSettingsPatchResponse res = new org.openapis.openapi.models.operations.ComputeInstanceSettingsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

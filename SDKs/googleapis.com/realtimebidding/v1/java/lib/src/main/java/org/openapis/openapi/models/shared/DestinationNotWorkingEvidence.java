@@ -18,6 +18,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsError")
     public DestinationNotWorkingEvidenceDnsErrorEnum dnsError;
+
     public DestinationNotWorkingEvidence withDnsError(DestinationNotWorkingEvidenceDnsErrorEnum dnsError) {
         this.dnsError = dnsError;
         return this;
@@ -29,6 +30,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expandedUrl")
     public String expandedUrl;
+
     public DestinationNotWorkingEvidence withExpandedUrl(String expandedUrl) {
         this.expandedUrl = expandedUrl;
         return this;
@@ -40,6 +42,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpError")
     public Integer httpError;
+
     public DestinationNotWorkingEvidence withHttpError(Integer httpError) {
         this.httpError = httpError;
         return this;
@@ -51,6 +54,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidPage")
     public DestinationNotWorkingEvidenceInvalidPageEnum invalidPage;
+
     public DestinationNotWorkingEvidence withInvalidPage(DestinationNotWorkingEvidenceInvalidPageEnum invalidPage) {
         this.invalidPage = invalidPage;
         return this;
@@ -62,6 +66,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastCheckTime")
     public String lastCheckTime;
+
     public DestinationNotWorkingEvidence withLastCheckTime(String lastCheckTime) {
         this.lastCheckTime = lastCheckTime;
         return this;
@@ -73,6 +78,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public DestinationNotWorkingEvidencePlatformEnum platform;
+
     public DestinationNotWorkingEvidence withPlatform(DestinationNotWorkingEvidencePlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -84,6 +90,7 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectionError")
     public DestinationNotWorkingEvidenceRedirectionErrorEnum redirectionError;
+
     public DestinationNotWorkingEvidence withRedirectionError(DestinationNotWorkingEvidenceRedirectionErrorEnum redirectionError) {
         this.redirectionError = redirectionError;
         return this;
@@ -95,9 +102,11 @@ public class DestinationNotWorkingEvidence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlRejected")
     public DestinationNotWorkingEvidenceUrlRejectedEnum urlRejected;
+
     public DestinationNotWorkingEvidence withUrlRejected(DestinationNotWorkingEvidenceUrlRejectedEnum urlRejected) {
         this.urlRejected = urlRejected;
         return this;
     }
     
+    public DestinationNotWorkingEvidence(){}
 }

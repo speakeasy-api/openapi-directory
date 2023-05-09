@@ -12,9 +12,11 @@ public class DocumentSubjects {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DocumentSubjects withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DocumentSubjects(){}
 }

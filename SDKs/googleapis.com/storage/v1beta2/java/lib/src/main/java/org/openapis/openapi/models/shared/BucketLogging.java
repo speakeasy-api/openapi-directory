@@ -18,6 +18,7 @@ public class BucketLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logBucket")
     public String logBucket;
+
     public BucketLogging withLogBucket(String logBucket) {
         this.logBucket = logBucket;
         return this;
@@ -29,9 +30,11 @@ public class BucketLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logObjectPrefix")
     public String logObjectPrefix;
+
     public BucketLogging withLogObjectPrefix(String logObjectPrefix) {
         this.logObjectPrefix = logObjectPrefix;
         return this;
     }
     
+    public BucketLogging(){}
 }

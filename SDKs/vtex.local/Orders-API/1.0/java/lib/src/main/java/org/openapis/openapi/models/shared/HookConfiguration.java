@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HookConfiguration {
     @JsonProperty("CurrentChange")
     public String currentChange;
+
     public HookConfiguration withCurrentChange(String currentChange) {
         this.currentChange = currentChange;
         return this;
@@ -19,6 +20,7 @@ public class HookConfiguration {
     
     @JsonProperty("Domain")
     public String domain;
+
     public HookConfiguration withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -26,6 +28,7 @@ public class HookConfiguration {
     
     @JsonProperty("LastChange")
     public String lastChange;
+
     public HookConfiguration withLastChange(String lastChange) {
         this.lastChange = lastChange;
         return this;
@@ -33,6 +36,7 @@ public class HookConfiguration {
     
     @JsonProperty("LastState")
     public String lastState;
+
     public HookConfiguration withLastState(String lastState) {
         this.lastState = lastState;
         return this;
@@ -40,6 +44,7 @@ public class HookConfiguration {
     
     @JsonProperty("OrderId")
     public String orderId;
+
     public HookConfiguration withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -47,6 +52,7 @@ public class HookConfiguration {
     
     @JsonProperty("Origin")
     public Origin2 origin;
+
     public HookConfiguration withOrigin(Origin2 origin) {
         this.origin = origin;
         return this;
@@ -54,9 +60,19 @@ public class HookConfiguration {
     
     @JsonProperty("State")
     public String state;
+
     public HookConfiguration withState(String state) {
         this.state = state;
         return this;
     }
     
+    public HookConfiguration(@JsonProperty("CurrentChange") String currentChange, @JsonProperty("Domain") String domain, @JsonProperty("LastChange") String lastChange, @JsonProperty("LastState") String lastState, @JsonProperty("OrderId") String orderId, @JsonProperty("Origin") Origin2 origin, @JsonProperty("State") String state) {
+        this.currentChange = currentChange;
+        this.domain = domain;
+        this.lastChange = lastChange;
+        this.lastState = lastState;
+        this.orderId = orderId;
+        this.origin = origin;
+        this.state = state;
+  }
 }

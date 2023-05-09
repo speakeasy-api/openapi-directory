@@ -12,6 +12,7 @@ public class GetTaxFormRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetTaxFormRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,6 +23,7 @@ public class GetTaxFormRequest {
      */
     @JsonProperty("formType")
     public String formType;
+
     public GetTaxFormRequest withFormType(String formType) {
         this.formType = formType;
         return this;
@@ -32,9 +34,15 @@ public class GetTaxFormRequest {
      */
     @JsonProperty("year")
     public Integer year;
+
     public GetTaxFormRequest withYear(Integer year) {
         this.year = year;
         return this;
     }
     
+    public GetTaxFormRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("formType") String formType, @JsonProperty("year") Integer year) {
+        this.accountHolderCode = accountHolderCode;
+        this.formType = formType;
+        this.year = year;
+  }
 }

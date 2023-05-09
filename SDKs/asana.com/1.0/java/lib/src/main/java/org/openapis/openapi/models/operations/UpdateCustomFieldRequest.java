@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomFieldRequest {
@@ -12,6 +13,7 @@ public class UpdateCustomFieldRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateCustomFieldRequestBodyInput requestBody;
+
     public UpdateCustomFieldRequest withRequestBody(UpdateCustomFieldRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class UpdateCustomFieldRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_field_gid")
     public String customFieldGid;
+
     public UpdateCustomFieldRequest withCustomFieldGid(String customFieldGid) {
         this.customFieldGid = customFieldGid;
         return this;
@@ -34,6 +37,7 @@ public class UpdateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public UpdateCustomFieldRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -45,9 +49,13 @@ public class UpdateCustomFieldRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public UpdateCustomFieldRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public UpdateCustomFieldRequest(@JsonProperty("custom_field_gid") String customFieldGid) {
+        this.customFieldGid = customFieldGid;
+  }
 }

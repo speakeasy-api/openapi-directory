@@ -18,6 +18,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Step withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Step withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public java.util.Map<String, Object> properties;
+
     public Step withProperties(java.util.Map<String, Object> properties) {
         this.properties = properties;
         return this;
     }
     
+    public Step(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CrashesGetCrashAttachmentLocationDefaultApplicationJSON {
     @JsonProperty("message")
     public String message;
+
     public CrashesGetCrashAttachmentLocationDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CrashesGetCrashAttachmentLocationDefaultApplicationJSON(@JsonProperty("message") String message) {
+        this.message = message;
+  }
 }

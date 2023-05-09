@@ -18,9 +18,11 @@ public class HeldHangoutsChatQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeRooms")
     public Boolean includeRooms;
+
     public HeldHangoutsChatQuery withIncludeRooms(Boolean includeRooms) {
         this.includeRooms = includeRooms;
         return this;
     }
     
+    public HeldHangoutsChatQuery(){}
 }

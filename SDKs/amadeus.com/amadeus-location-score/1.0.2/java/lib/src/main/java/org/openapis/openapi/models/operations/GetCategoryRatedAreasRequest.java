@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCategoryRatedAreasRequest {
@@ -12,6 +13,7 @@ public class GetCategoryRatedAreasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latitude")
     public Double latitude;
+
     public GetCategoryRatedAreasRequest withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -22,9 +24,14 @@ public class GetCategoryRatedAreasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=longitude")
     public Double longitude;
+
     public GetCategoryRatedAreasRequest withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public GetCategoryRatedAreasRequest(@JsonProperty("latitude") Double latitude, @JsonProperty("longitude") Double longitude) {
+        this.latitude = latitude;
+        this.longitude = longitude;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateJobInput - Input structure for the CreateJob operation.
@@ -15,6 +15,7 @@ public class CreateJobInput {
      */
     
     public String apiVersion;
+
     public CreateJobInput withAPIVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -25,6 +26,7 @@ public class CreateJobInput {
      */
     
     public JobTypeEnum jobType;
+
     public CreateJobInput withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -35,6 +37,7 @@ public class CreateJobInput {
      */
     
     public String manifest;
+
     public CreateJobInput withManifest(String manifest) {
         this.manifest = manifest;
         return this;
@@ -45,6 +48,7 @@ public class CreateJobInput {
      */
     
     public String manifestAddendum;
+
     public CreateJobInput withManifestAddendum(String manifestAddendum) {
         this.manifestAddendum = manifestAddendum;
         return this;
@@ -55,9 +59,15 @@ public class CreateJobInput {
      */
     
     public Boolean validateOnly;
+
     public CreateJobInput withValidateOnly(Boolean validateOnly) {
         this.validateOnly = validateOnly;
         return this;
     }
     
+    public CreateJobInput(@JsonProperty("JobType") JobTypeEnum jobType, @JsonProperty("Manifest") String manifest, @JsonProperty("ValidateOnly") Boolean validateOnly) {
+        this.jobType = jobType;
+        this.manifest = manifest;
+        this.validateOnly = validateOnly;
+  }
 }

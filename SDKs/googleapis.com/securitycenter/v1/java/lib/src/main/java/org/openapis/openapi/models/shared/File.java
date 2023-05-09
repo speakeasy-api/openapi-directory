@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class File {
     /**
-     * Prefix of the file contents as a JSON encoded string. (Currently only populated for Malicious Script Executed findings.)
+     * Prefix of the file contents as a JSON-encoded string.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contents")
     public String contents;
+
     public File withContents(String contents) {
         this.contents = contents;
         return this;
@@ -29,6 +30,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hashedSize")
     public String hashedSize;
+
     public File withHashedSize(String hashedSize) {
         this.hashedSize = hashedSize;
         return this;
@@ -40,6 +42,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partiallyHashed")
     public Boolean partiallyHashed;
+
     public File withPartiallyHashed(Boolean partiallyHashed) {
         this.partiallyHashed = partiallyHashed;
         return this;
@@ -51,6 +54,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public File withPath(String path) {
         this.path = path;
         return this;
@@ -62,6 +66,7 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public File withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
@@ -73,9 +78,11 @@ public class File {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public File withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public File(){}
 }

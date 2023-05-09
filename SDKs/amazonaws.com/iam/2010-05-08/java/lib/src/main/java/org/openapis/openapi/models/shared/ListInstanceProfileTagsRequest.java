@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ListInstanceProfileTagsRequest {
     
     public String instanceProfileName;
+
     public ListInstanceProfileTagsRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -16,6 +17,7 @@ public class ListInstanceProfileTagsRequest {
     
     
     public String marker;
+
     public ListInstanceProfileTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,13 @@ public class ListInstanceProfileTagsRequest {
     
     
     public Long maxItems;
+
     public ListInstanceProfileTagsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public ListInstanceProfileTagsRequest(@JsonProperty("InstanceProfileName") String instanceProfileName) {
+        this.instanceProfileName = instanceProfileName;
+  }
 }

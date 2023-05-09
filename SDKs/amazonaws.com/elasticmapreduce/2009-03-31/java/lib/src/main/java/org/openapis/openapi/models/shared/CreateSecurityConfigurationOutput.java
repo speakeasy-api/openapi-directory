@@ -19,6 +19,7 @@ public class CreateSecurityConfigurationOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public CreateSecurityConfigurationOutput withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -26,9 +27,14 @@ public class CreateSecurityConfigurationOutput {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateSecurityConfigurationOutput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CreateSecurityConfigurationOutput(@JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Name") String name) {
+        this.creationDateTime = creationDateTime;
+        this.name = name;
+  }
 }

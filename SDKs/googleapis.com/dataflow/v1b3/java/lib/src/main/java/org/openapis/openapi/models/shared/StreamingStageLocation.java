@@ -18,9 +18,11 @@ public class StreamingStageLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamId")
     public String streamId;
+
     public StreamingStageLocation withStreamId(String streamId) {
         this.streamId = streamId;
         return this;
     }
     
+    public StreamingStageLocation(){}
 }

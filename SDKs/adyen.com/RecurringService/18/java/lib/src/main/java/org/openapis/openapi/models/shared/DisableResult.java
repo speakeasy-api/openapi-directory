@@ -18,6 +18,7 @@ public class DisableResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public RecurringDetail[] details;
+
     public DisableResult withDetails(RecurringDetail[] details) {
         this.details = details;
         return this;
@@ -29,9 +30,11 @@ public class DisableResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public String response;
+
     public DisableResult withResponse(String response) {
         this.response = response;
         return this;
     }
     
+    public DisableResult(){}
 }

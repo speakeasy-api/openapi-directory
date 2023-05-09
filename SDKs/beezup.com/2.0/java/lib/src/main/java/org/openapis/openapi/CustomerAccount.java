@@ -57,11 +57,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActivateUserAccountResponse res = new org.openapis.openapi.models.operations.ActivateUserAccountResponse() {{
+        org.openapis.openapi.models.operations.ActivateUserAccountResponse res = new org.openapis.openapi.models.operations.ActivateUserAccountResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -102,11 +100,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangeEmailResponse res = new org.openapis.openapi.models.operations.ChangeEmailResponse() {{
+        org.openapis.openapi.models.operations.ChangeEmailResponse res = new org.openapis.openapi.models.operations.ChangeEmailResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -147,11 +143,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.ChangePasswordResponse res = new org.openapis.openapi.models.operations.ChangePasswordResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -195,12 +189,10 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCreditCardInfoResponse res = new org.openapis.openapi.models.operations.GetCreditCardInfoResponse() {{
+        org.openapis.openapi.models.operations.GetCreditCardInfoResponse res = new org.openapis.openapi.models.operations.GetCreditCardInfoResponse(contentType, httpRes.statusCode()) {{
             creditCardInfoResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,12 +245,10 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProfilePictureInfoResponse res = new org.openapis.openapi.models.operations.GetProfilePictureInfoResponse() {{
+        org.openapis.openapi.models.operations.GetProfilePictureInfoResponse res = new org.openapis.openapi.models.operations.GetProfilePictureInfoResponse(contentType, httpRes.statusCode()) {{
             profilePictureInfoResponse = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,12 +301,10 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserAccountInfoResponse res = new org.openapis.openapi.models.operations.GetUserAccountInfoResponse() {{
+        org.openapis.openapi.models.operations.GetUserAccountInfoResponse res = new org.openapis.openapi.models.operations.GetUserAccountInfoResponse(contentType, httpRes.statusCode()) {{
             accountInfo = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -360,12 +348,10 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendEmailActivationResponse res = new org.openapis.openapi.models.operations.ResendEmailActivationResponse() {{
+        org.openapis.openapi.models.operations.ResendEmailActivationResponse res = new org.openapis.openapi.models.operations.ResendEmailActivationResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -415,11 +401,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveCompanyInfoResponse res = new org.openapis.openapi.models.operations.SaveCompanyInfoResponse() {{
+        org.openapis.openapi.models.operations.SaveCompanyInfoResponse res = new org.openapis.openapi.models.operations.SaveCompanyInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -460,11 +444,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveCreditCardInfoResponse res = new org.openapis.openapi.models.operations.SaveCreditCardInfoResponse() {{
+        org.openapis.openapi.models.operations.SaveCreditCardInfoResponse res = new org.openapis.openapi.models.operations.SaveCreditCardInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -505,11 +487,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SavePersonalInfoResponse res = new org.openapis.openapi.models.operations.SavePersonalInfoResponse() {{
+        org.openapis.openapi.models.operations.SavePersonalInfoResponse res = new org.openapis.openapi.models.operations.SavePersonalInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -550,11 +530,9 @@ public class CustomerAccount {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse res = new org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse() {{
+        org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse res = new org.openapis.openapi.models.operations.SaveProfilePictureInfoResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

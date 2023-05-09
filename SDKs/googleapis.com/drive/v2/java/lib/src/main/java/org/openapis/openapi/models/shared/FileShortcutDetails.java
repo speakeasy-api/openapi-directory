@@ -18,6 +18,7 @@ public class FileShortcutDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetId")
     public String targetId;
+
     public FileShortcutDetails withTargetId(String targetId) {
         this.targetId = targetId;
         return this;
@@ -29,6 +30,7 @@ public class FileShortcutDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetMimeType")
     public String targetMimeType;
+
     public FileShortcutDetails withTargetMimeType(String targetMimeType) {
         this.targetMimeType = targetMimeType;
         return this;
@@ -40,9 +42,11 @@ public class FileShortcutDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResourceKey")
     public String targetResourceKey;
+
     public FileShortcutDetails withTargetResourceKey(String targetResourceKey) {
         this.targetResourceKey = targetResourceKey;
         return this;
     }
     
+    public FileShortcutDetails(){}
 }

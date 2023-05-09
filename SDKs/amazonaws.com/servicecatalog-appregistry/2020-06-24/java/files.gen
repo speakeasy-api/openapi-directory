@@ -126,4 +126,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/SyncActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateApplicationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateAttributeGroupResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

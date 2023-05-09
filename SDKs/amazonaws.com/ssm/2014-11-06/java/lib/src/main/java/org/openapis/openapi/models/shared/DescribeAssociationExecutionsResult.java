@@ -15,6 +15,7 @@ public class DescribeAssociationExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationExecutions")
     public AssociationExecution[] associationExecutions;
+
     public DescribeAssociationExecutionsResult withAssociationExecutions(AssociationExecution[] associationExecutions) {
         this.associationExecutions = associationExecutions;
         return this;
@@ -23,9 +24,11 @@ public class DescribeAssociationExecutionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeAssociationExecutionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeAssociationExecutionsResult(){}
 }

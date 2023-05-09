@@ -12,9 +12,11 @@ public class PutOfferingsOfferingIdMetadataTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public PutOfferingsOfferingIdMetadataTagsRequestBody withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutOfferingsOfferingIdMetadataTagsRequestBody(){}
 }

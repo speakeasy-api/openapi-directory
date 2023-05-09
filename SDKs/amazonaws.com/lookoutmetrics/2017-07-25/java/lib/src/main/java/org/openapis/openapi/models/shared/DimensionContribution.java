@@ -15,6 +15,7 @@ public class DimensionContribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionName")
     public String dimensionName;
+
     public DimensionContribution withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -23,9 +24,11 @@ public class DimensionContribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValueContributionList")
     public DimensionValueContribution[] dimensionValueContributionList;
+
     public DimensionContribution withDimensionValueContributionList(DimensionValueContribution[] dimensionValueContributionList) {
         this.dimensionValueContributionList = dimensionValueContributionList;
         return this;
     }
     
+    public DimensionContribution(){}
 }

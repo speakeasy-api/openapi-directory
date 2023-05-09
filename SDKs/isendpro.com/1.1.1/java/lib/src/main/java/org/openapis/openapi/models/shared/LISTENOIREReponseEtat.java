@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LISTENOIREReponseEtat {
     @JsonProperty("etat")
     public LISTENOIREReponseEtatEtat[] etat;
+
     public LISTENOIREReponseEtat withEtat(LISTENOIREReponseEtatEtat[] etat) {
         this.etat = etat;
         return this;
     }
     
+    public LISTENOIREReponseEtat(@JsonProperty("etat") LISTENOIREReponseEtatEtat[] etat) {
+        this.etat = etat;
+  }
 }

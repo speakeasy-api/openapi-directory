@@ -18,9 +18,11 @@ public class AccountItemUpdatesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountItemUpdatesSettings")
     public AccountItemUpdatesSettings accountItemUpdatesSettings;
+
     public AccountItemUpdatesInput withAccountItemUpdatesSettings(AccountItemUpdatesSettings accountItemUpdatesSettings) {
         this.accountItemUpdatesSettings = accountItemUpdatesSettings;
         return this;
     }
     
+    public AccountItemUpdatesInput(){}
 }

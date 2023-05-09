@@ -15,6 +15,7 @@ public class DeleteRealtimeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public DeleteRealtimeEndpointOutput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteRealtimeEndpointOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RealtimeEndpointInfo")
     public RealtimeEndpointInfo realtimeEndpointInfo;
+
     public DeleteRealtimeEndpointOutput withRealtimeEndpointInfo(RealtimeEndpointInfo realtimeEndpointInfo) {
         this.realtimeEndpointInfo = realtimeEndpointInfo;
         return this;
     }
     
+    public DeleteRealtimeEndpointOutput(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudRunV2TaskAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exitCode")
     public Integer exitCode;
+
     public GoogleCloudRunV2TaskAttemptResult withExitCode(Integer exitCode) {
         this.exitCode = exitCode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRunV2TaskAttemptResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GoogleRpcStatus status;
+
     public GoogleCloudRunV2TaskAttemptResult withStatus(GoogleRpcStatus status) {
         this.status = status;
         return this;
     }
     
+    public GoogleCloudRunV2TaskAttemptResult(){}
 }

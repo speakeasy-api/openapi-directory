@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ErrorsDeleteErrorRequest {
@@ -12,6 +13,7 @@ public class ErrorsDeleteErrorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ErrorsDeleteErrorRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class ErrorsDeleteErrorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorGroupId")
     public String errorGroupId;
+
     public ErrorsDeleteErrorRequest withErrorGroupId(String errorGroupId) {
         this.errorGroupId = errorGroupId;
         return this;
@@ -32,6 +35,7 @@ public class ErrorsDeleteErrorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=errorId")
     public String errorId;
+
     public ErrorsDeleteErrorRequest withErrorId(String errorId) {
         this.errorId = errorId;
         return this;
@@ -42,9 +46,16 @@ public class ErrorsDeleteErrorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ErrorsDeleteErrorRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ErrorsDeleteErrorRequest(@JsonProperty("app_name") String appName, @JsonProperty("errorGroupId") String errorGroupId, @JsonProperty("errorId") String errorId, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.errorGroupId = errorGroupId;
+        this.errorId = errorId;
+        this.ownerName = ownerName;
+  }
 }

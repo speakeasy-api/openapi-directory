@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * VirusScan - The virus scan results for this file
@@ -15,6 +15,7 @@ public class VirusScan {
      */
     
     public Long finished;
+
     public VirusScan withFinished(Long finished) {
         this.finished = finished;
         return this;
@@ -25,6 +26,7 @@ public class VirusScan {
      */
     
     public FoundVirus[] foundViruses;
+
     public VirusScan withFoundViruses(FoundVirus[] foundViruses) {
         this.foundViruses = foundViruses;
         return this;
@@ -35,6 +37,7 @@ public class VirusScan {
      */
     
     public Long started;
+
     public VirusScan withStarted(Long started) {
         this.started = started;
         return this;
@@ -45,9 +48,13 @@ public class VirusScan {
      */
     
     public String status;
+
     public VirusScan withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public VirusScan(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

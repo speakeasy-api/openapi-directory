@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportConfigurationsDisableDefaultApplicationJSON {
     @JsonProperty("error")
     public ExportConfigurationsDisableDefaultApplicationJSONError error;
+
     public ExportConfigurationsDisableDefaultApplicationJSON withError(ExportConfigurationsDisableDefaultApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public ExportConfigurationsDisableDefaultApplicationJSON(@JsonProperty("error") ExportConfigurationsDisableDefaultApplicationJSONError error) {
+        this.error = error;
+  }
 }

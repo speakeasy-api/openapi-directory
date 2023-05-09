@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TwoSendPaymentsPublicRequest {
@@ -12,6 +13,7 @@ public class TwoSendPaymentsPublicRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public TwoSendPaymentsPublicRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class TwoSendPaymentsPublicRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public TwoSendPaymentsPublicRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TwoSendPaymentsPublicRequest[] requestBody;
+
     public TwoSendPaymentsPublicRequest withRequestBody(org.openapis.openapi.models.shared.TwoSendPaymentsPublicRequest[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,6 +43,7 @@ public class TwoSendPaymentsPublicRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public TwoSendPaymentsPublicRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -49,6 +54,7 @@ public class TwoSendPaymentsPublicRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public TwoSendPaymentsPublicRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -56,6 +62,7 @@ public class TwoSendPaymentsPublicRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public String orderId;
+
     public TwoSendPaymentsPublicRequest withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -63,9 +70,19 @@ public class TwoSendPaymentsPublicRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transactionId")
     public String transactionId;
+
     public TwoSendPaymentsPublicRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public TwoSendPaymentsPublicRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RequestBody") org.openapis.openapi.models.shared.TwoSendPaymentsPublicRequest[] requestBody, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("orderId") String orderId, @JsonProperty("transactionId") String transactionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requestBody = requestBody;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.orderId = orderId;
+        this.transactionId = transactionId;
+  }
 }

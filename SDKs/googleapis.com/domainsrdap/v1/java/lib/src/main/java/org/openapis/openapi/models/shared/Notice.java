@@ -18,6 +18,7 @@ public class Notice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String[] description;
+
     public Notice withDescription(String[] description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class Notice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public Link[] links;
+
     public Notice withLinks(Link[] links) {
         this.links = links;
         return this;
@@ -40,6 +42,7 @@ public class Notice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Notice withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class Notice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Notice withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Notice(){}
 }

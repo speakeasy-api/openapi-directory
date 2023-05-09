@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListNotificationRulesFilter {
     @JsonProperty("Name")
     public ListNotificationRulesFilterNameEnum name;
+
     public ListNotificationRulesFilter withName(ListNotificationRulesFilterNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class ListNotificationRulesFilter {
     
     @JsonProperty("Value")
     public String value;
+
     public ListNotificationRulesFilter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListNotificationRulesFilter(@JsonProperty("Name") ListNotificationRulesFilterNameEnum name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

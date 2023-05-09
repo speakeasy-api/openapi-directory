@@ -15,6 +15,7 @@ public class GetBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public GetBackendStorageResponse withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -23,6 +24,7 @@ public class GetBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackendEnvironmentName")
     public String backendEnvironmentName;
+
     public GetBackendStorageResponse withBackendEnvironmentName(String backendEnvironmentName) {
         this.backendEnvironmentName = backendEnvironmentName;
         return this;
@@ -31,6 +33,7 @@ public class GetBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceConfig")
     public GetBackendStorageResponseResourceConfig resourceConfig;
+
     public GetBackendStorageResponse withResourceConfig(GetBackendStorageResponseResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -39,9 +42,11 @@ public class GetBackendStorageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceName")
     public String resourceName;
+
     public GetBackendStorageResponse withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public GetBackendStorageResponse(){}
 }

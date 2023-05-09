@@ -50,13 +50,11 @@ public class MaliciousUrlScanner {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MaliciousUrlScannerResponse res = new org.openapis.openapi.models.operations.MaliciousUrlScannerResponse() {{
+        org.openapis.openapi.models.operations.MaliciousUrlScannerResponse res = new org.openapis.openapi.models.operations.MaliciousUrlScannerResponse(contentType, httpRes.statusCode()) {{
             maliciousUrlScanner200ApplicationJSONObject = null;
             maliciousUrlScanner400ApplicationJSONObject = null;
             maliciousUrlScanner500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

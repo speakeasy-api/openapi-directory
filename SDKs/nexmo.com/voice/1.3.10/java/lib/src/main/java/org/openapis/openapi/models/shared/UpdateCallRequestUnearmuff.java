@@ -15,9 +15,11 @@ public class UpdateCallRequestUnearmuff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public UpdateCallRequestUnearmuffActionEnum action;
+
     public UpdateCallRequestUnearmuff withAction(UpdateCallRequestUnearmuffActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public UpdateCallRequestUnearmuff(){}
 }

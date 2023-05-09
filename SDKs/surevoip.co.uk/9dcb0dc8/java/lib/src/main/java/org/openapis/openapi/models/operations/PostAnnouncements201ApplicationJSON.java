@@ -15,9 +15,11 @@ public class PostAnnouncements201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("announcement")
     public PostAnnouncements201ApplicationJSONAnnouncement announcement;
+
     public PostAnnouncements201ApplicationJSON withAnnouncement(PostAnnouncements201ApplicationJSONAnnouncement announcement) {
         this.announcement = announcement;
         return this;
     }
     
+    public PostAnnouncements201ApplicationJSON(){}
 }

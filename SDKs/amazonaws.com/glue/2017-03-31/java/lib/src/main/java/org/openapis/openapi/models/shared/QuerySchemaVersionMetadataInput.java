@@ -12,6 +12,7 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public QuerySchemaVersionMetadataInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataList")
     public MetadataKeyValuePair[] metadataList;
+
     public QuerySchemaVersionMetadataInput withMetadataList(MetadataKeyValuePair[] metadataList) {
         this.metadataList = metadataList;
         return this;
@@ -28,6 +30,7 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public QuerySchemaVersionMetadataInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaId")
     public SchemaId schemaId;
+
     public QuerySchemaVersionMetadataInput withSchemaId(SchemaId schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -44,6 +48,7 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionId")
     public String schemaVersionId;
+
     public QuerySchemaVersionMetadataInput withSchemaVersionId(String schemaVersionId) {
         this.schemaVersionId = schemaVersionId;
         return this;
@@ -52,9 +57,11 @@ public class QuerySchemaVersionMetadataInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionNumber")
     public SchemaVersionNumber schemaVersionNumber;
+
     public QuerySchemaVersionMetadataInput withSchemaVersionNumber(SchemaVersionNumber schemaVersionNumber) {
         this.schemaVersionNumber = schemaVersionNumber;
         return this;
     }
     
+    public QuerySchemaVersionMetadataInput(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class IdentitytoolkitRelyingpartyResetPasswordRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyResetPasswordRequest identitytoolkitRelyingpartyResetPasswordRequest;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withIdentitytoolkitRelyingpartyResetPasswordRequest(org.openapis.openapi.models.shared.IdentitytoolkitRelyingpartyResetPasswordRequest identitytoolkitRelyingpartyResetPasswordRequest) {
         this.identitytoolkitRelyingpartyResetPasswordRequest = identitytoolkitRelyingpartyResetPasswordRequest;
         return this;
@@ -19,6 +20,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +31,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withKey(String key) {
         this.key = key;
         return this;
@@ -49,6 +53,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -59,6 +64,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -69,6 +75,7 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -79,9 +86,11 @@ public class IdentitytoolkitRelyingpartyResetPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public IdentitytoolkitRelyingpartyResetPasswordRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public IdentitytoolkitRelyingpartyResetPasswordRequest(){}
 }

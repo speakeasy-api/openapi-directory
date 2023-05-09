@@ -15,6 +15,7 @@ public class KeyValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public KeyValuePair withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class KeyValuePair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public KeyValuePair withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public KeyValuePair(){}
 }

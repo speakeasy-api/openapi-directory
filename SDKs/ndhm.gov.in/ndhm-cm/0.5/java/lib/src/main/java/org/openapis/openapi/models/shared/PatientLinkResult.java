@@ -17,6 +17,7 @@ public class PatientLinkResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public PatientLinkResult withError(Error error) {
         this.error = error;
         return this;
@@ -25,6 +26,7 @@ public class PatientLinkResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patient")
     public PatientLinkResultPatient patient;
+
     public PatientLinkResult withPatient(PatientLinkResultPatient patient) {
         this.patient = patient;
         return this;
@@ -35,6 +37,7 @@ public class PatientLinkResult {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public PatientLinkResult withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class PatientLinkResult {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public PatientLinkResult withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class PatientLinkResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public PatientLinkResult withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public PatientLinkResult(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectionBasicAuthRequestParameters {
     @JsonProperty("Password")
     public String password;
+
     public CreateConnectionBasicAuthRequestParameters withPassword(String password) {
         this.password = password;
         return this;
@@ -19,9 +20,14 @@ public class CreateConnectionBasicAuthRequestParameters {
     
     @JsonProperty("Username")
     public String username;
+
     public CreateConnectionBasicAuthRequestParameters withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateConnectionBasicAuthRequestParameters(@JsonProperty("Username") String username, @JsonProperty("Password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

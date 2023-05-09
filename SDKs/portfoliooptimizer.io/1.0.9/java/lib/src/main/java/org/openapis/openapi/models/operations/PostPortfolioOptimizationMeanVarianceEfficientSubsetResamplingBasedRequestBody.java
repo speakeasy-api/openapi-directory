@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -34,6 +36,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -41,6 +44,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withConstraints(PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
@@ -52,6 +56,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfolios")
     public Long subsetPortfolios;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withSubsetPortfolios(Long subsetPortfolios) {
         this.subsetPortfolios = subsetPortfolios;
         return this;
@@ -63,6 +68,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosAggregationMethod")
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withSubsetPortfoliosAggregationMethod(PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodySubsetPortfoliosAggregationMethodEnum subsetPortfoliosAggregationMethod) {
         this.subsetPortfoliosAggregationMethod = subsetPortfoliosAggregationMethod;
         return this;
@@ -74,6 +80,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetPortfoliosEnumerationMethod")
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withSubsetPortfoliosEnumerationMethod(PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodySubsetPortfoliosEnumerationMethodEnum subsetPortfoliosEnumerationMethod) {
         this.subsetPortfoliosEnumerationMethod = subsetPortfoliosEnumerationMethod;
         return this;
@@ -85,9 +92,16 @@ public class PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBased
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subsetSize")
     public Long subsetSize;
+
     public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody withSubsetSize(Long subsetSize) {
         this.subsetSize = subsetSize;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("constraints") PostPortfolioOptimizationMeanVarianceEfficientSubsetResamplingBasedRequestBodyConstraints constraints) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.constraints = constraints;
+  }
 }

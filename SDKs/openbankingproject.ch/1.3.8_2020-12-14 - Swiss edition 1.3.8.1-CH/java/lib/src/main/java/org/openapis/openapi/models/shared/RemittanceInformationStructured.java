@@ -16,6 +16,7 @@ public class RemittanceInformationStructured {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCORorQRRorIPI")
     public RemittanceInformationStructuredSCORorQRRorIPIEnum scoRorQRRorIPI;
+
     public RemittanceInformationStructured withSCORorQRRorIPI(RemittanceInformationStructuredSCORorQRRorIPIEnum scoRorQRRorIPI) {
         this.scoRorQRRorIPI = scoRorQRRorIPI;
         return this;
@@ -24,6 +25,7 @@ public class RemittanceInformationStructured {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalRemittanceInformation")
     public String additionalRemittanceInformation;
+
     public RemittanceInformationStructured withAdditionalRemittanceInformation(String additionalRemittanceInformation) {
         this.additionalRemittanceInformation = additionalRemittanceInformation;
         return this;
@@ -31,6 +33,7 @@ public class RemittanceInformationStructured {
     
     @JsonProperty("reference")
     public String reference;
+
     public RemittanceInformationStructured withReference(String reference) {
         this.reference = reference;
         return this;
@@ -39,6 +42,7 @@ public class RemittanceInformationStructured {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceIssuer")
     public String referenceIssuer;
+
     public RemittanceInformationStructured withReferenceIssuer(String referenceIssuer) {
         this.referenceIssuer = referenceIssuer;
         return this;
@@ -47,9 +51,13 @@ public class RemittanceInformationStructured {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceType")
     public String referenceType;
+
     public RemittanceInformationStructured withReferenceType(String referenceType) {
         this.referenceType = referenceType;
         return this;
     }
     
+    public RemittanceInformationStructured(@JsonProperty("reference") String reference) {
+        this.reference = reference;
+  }
 }

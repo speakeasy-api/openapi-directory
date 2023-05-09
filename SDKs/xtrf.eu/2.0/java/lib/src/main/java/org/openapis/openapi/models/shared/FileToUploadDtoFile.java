@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FileToUploadDtoFile {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public FileToUploadDtoFile withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class FileToUploadDtoFile {
     
     @SpeakeasyMetadata("multipartForm:name=file")
     public String file;
+
     public FileToUploadDtoFile withFile(String file) {
         this.file = file;
         return this;
     }
     
+    public FileToUploadDtoFile(@JsonProperty("content") byte[] content, @JsonProperty("file") String file) {
+        this.content = content;
+        this.file = file;
+  }
 }

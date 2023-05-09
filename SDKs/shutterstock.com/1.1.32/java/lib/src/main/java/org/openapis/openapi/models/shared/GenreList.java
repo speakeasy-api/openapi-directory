@@ -15,9 +15,13 @@ public class GenreList {
      */
     @JsonProperty("data")
     public String[] data;
+
     public GenreList withData(String[] data) {
         this.data = data;
         return this;
     }
     
+    public GenreList(@JsonProperty("data") String[] data) {
+        this.data = data;
+  }
 }

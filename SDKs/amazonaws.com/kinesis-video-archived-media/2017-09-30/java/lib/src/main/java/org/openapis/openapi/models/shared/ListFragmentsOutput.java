@@ -15,6 +15,7 @@ public class ListFragmentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fragments")
     public Fragment[] fragments;
+
     public ListFragmentsOutput withFragments(Fragment[] fragments) {
         this.fragments = fragments;
         return this;
@@ -23,9 +24,11 @@ public class ListFragmentsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFragmentsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFragmentsOutput(){}
 }

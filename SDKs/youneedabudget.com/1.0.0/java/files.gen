@@ -206,4 +206,15 @@ lib/src/main/java/org/openapis/openapi/models/shared/UserResponseData.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/User.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/budgets/README.md
+docs/categories/README.md
+docs/deprecated/README.md
+docs/months/README.md
+docs/payeelocations/README.md
+docs/payees/README.md
+docs/scheduledtransactions/README.md
+docs/transactions/README.md
+docs/user/README.md
 USAGE.md

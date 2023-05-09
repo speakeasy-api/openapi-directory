@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -15,6 +16,7 @@ public class VatBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=companyAddress")
     public String companyAddress;
+
     public VatBasicRequestBody withCompanyAddress(String companyAddress) {
         this.companyAddress = companyAddress;
         return this;
@@ -25,6 +27,7 @@ public class VatBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=companyName")
     public String companyName;
+
     public VatBasicRequestBody withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -35,6 +38,7 @@ public class VatBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=companyNumber")
     public String companyNumber;
+
     public VatBasicRequestBody withCompanyNumber(String companyNumber) {
         this.companyNumber = companyNumber;
         return this;
@@ -45,9 +49,13 @@ public class VatBasicRequestBody {
      */
     @SpeakeasyMetadata("form:name=vatNumber")
     public String vatNumber;
+
     public VatBasicRequestBody withVatNumber(String vatNumber) {
         this.vatNumber = vatNumber;
         return this;
     }
     
+    public VatBasicRequestBody(@JsonProperty("vatNumber") String vatNumber) {
+        this.vatNumber = vatNumber;
+  }
 }

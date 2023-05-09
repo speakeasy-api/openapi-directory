@@ -15,9 +15,11 @@ public class SwitchoverBlueGreenDeploymentResponse {
      */
     
     public BlueGreenDeployment blueGreenDeployment;
+
     public SwitchoverBlueGreenDeploymentResponse withBlueGreenDeployment(BlueGreenDeployment blueGreenDeployment) {
         this.blueGreenDeployment = blueGreenDeployment;
         return this;
     }
     
+    public SwitchoverBlueGreenDeploymentResponse(){}
 }

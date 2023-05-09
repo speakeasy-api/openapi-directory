@@ -7,16 +7,16 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum StopsStopsByGeolocationRouteTypesEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private StopsStopsByGeolocationRouteTypesEnum(String value) {
+    private StopsStopsByGeolocationRouteTypesEnum(Integer value) {
         this.value = value;
     }
 }

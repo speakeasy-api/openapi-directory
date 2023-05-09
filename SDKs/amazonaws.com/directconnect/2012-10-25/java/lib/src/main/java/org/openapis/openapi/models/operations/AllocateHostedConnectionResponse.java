@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AllocateHostedConnectionResponse {
@@ -12,6 +13,7 @@ public class AllocateHostedConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.Connection connection;
+
     public AllocateHostedConnectionResponse withConnection(org.openapis.openapi.models.shared.Connection connection) {
         this.connection = connection;
         return this;
@@ -19,6 +21,7 @@ public class AllocateHostedConnectionResponse {
     
     
     public String contentType;
+
     public AllocateHostedConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AllocateHostedConnectionResponse {
      */
     
     public Object directConnectClientException;
+
     public AllocateHostedConnectionResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class AllocateHostedConnectionResponse {
      */
     
     public Object directConnectServerException;
+
     public AllocateHostedConnectionResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -49,6 +54,7 @@ public class AllocateHostedConnectionResponse {
      */
     
     public Object duplicateTagKeysException;
+
     public AllocateHostedConnectionResponse withDuplicateTagKeysException(Object duplicateTagKeysException) {
         this.duplicateTagKeysException = duplicateTagKeysException;
         return this;
@@ -56,6 +62,7 @@ public class AllocateHostedConnectionResponse {
     
     
     public Integer statusCode;
+
     public AllocateHostedConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AllocateHostedConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AllocateHostedConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AllocateHostedConnectionResponse {
      */
     
     public Object tooManyTagsException;
+
     public AllocateHostedConnectionResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public AllocateHostedConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

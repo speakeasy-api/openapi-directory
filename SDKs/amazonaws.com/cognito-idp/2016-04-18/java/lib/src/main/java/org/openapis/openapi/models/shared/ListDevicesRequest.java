@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDevicesRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public ListDevicesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -22,6 +23,7 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListDevicesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -30,9 +32,13 @@ public class ListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public ListDevicesRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public ListDevicesRequest(@JsonProperty("AccessToken") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

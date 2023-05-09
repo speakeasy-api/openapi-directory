@@ -18,6 +18,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public SimpleAddressType withCity(String city) {
         this.city = city;
         return this;
@@ -29,6 +30,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line1")
     public String line1;
+
     public SimpleAddressType withLine1(String line1) {
         this.line1 = line1;
         return this;
@@ -40,6 +42,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line2")
     public String line2;
+
     public SimpleAddressType withLine2(String line2) {
         this.line2 = line2;
         return this;
@@ -51,6 +54,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("line3")
     public String line3;
+
     public SimpleAddressType withLine3(String line3) {
         this.line3 = line3;
         return this;
@@ -62,6 +66,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationName")
     public String locationName;
+
     public SimpleAddressType withLocationName(String locationName) {
         this.locationName = locationName;
         return this;
@@ -73,6 +78,7 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public SimpleAddressType withState(String state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class SimpleAddressType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public SimpleAddressType withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public SimpleAddressType(){}
 }

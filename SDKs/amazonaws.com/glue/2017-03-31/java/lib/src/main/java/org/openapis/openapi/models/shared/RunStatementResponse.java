@@ -15,9 +15,11 @@ public class RunStatementResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public RunStatementResponse withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public RunStatementResponse(){}
 }

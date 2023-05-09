@@ -13,6 +13,7 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxDate")
     public OffsetDateTime maxDate;
+
     public EventApiGetListRequest withMaxDate(OffsetDateTime maxDate) {
         this.maxDate = maxDate;
         return this;
@@ -23,6 +24,7 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minDate")
     public OffsetDateTime minDate;
+
     public EventApiGetListRequest withMinDate(OffsetDateTime minDate) {
         this.minDate = minDate;
         return this;
@@ -33,6 +35,7 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public Long orderId;
+
     public EventApiGetListRequest withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -43,6 +46,7 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public EventApiGetListRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -53,6 +57,7 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public EventApiGetListRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -63,9 +68,11 @@ public class EventApiGetListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeId")
     public Integer[] typeId;
+
     public EventApiGetListRequest withTypeId(Integer[] typeId) {
         this.typeId = typeId;
         return this;
     }
     
+    public EventApiGetListRequest(){}
 }

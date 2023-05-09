@@ -12,6 +12,7 @@ public class CompanyReferenceSettingViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditorsJournal")
     public Boolean creditorsJournal;
+
     public CompanyReferenceSettingViewModel withCreditorsJournal(Boolean creditorsJournal) {
         this.creditorsJournal = creditorsJournal;
         return this;
@@ -20,6 +21,7 @@ public class CompanyReferenceSettingViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debtorsJournal")
     public Boolean debtorsJournal;
+
     public CompanyReferenceSettingViewModel withDebtorsJournal(Boolean debtorsJournal) {
         this.debtorsJournal = debtorsJournal;
         return this;
@@ -28,6 +30,7 @@ public class CompanyReferenceSettingViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchases")
     public Boolean purchases;
+
     public CompanyReferenceSettingViewModel withPurchases(Boolean purchases) {
         this.purchases = purchases;
         return this;
@@ -36,9 +39,11 @@ public class CompanyReferenceSettingViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sales")
     public Boolean sales;
+
     public CompanyReferenceSettingViewModel withSales(Boolean sales) {
         this.sales = sales;
         return this;
     }
     
+    public CompanyReferenceSettingViewModel(){}
 }

@@ -15,6 +15,7 @@ public class AwsDynamoDbTableSseDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InaccessibleEncryptionDateTime")
     public String inaccessibleEncryptionDateTime;
+
     public AwsDynamoDbTableSseDescription withInaccessibleEncryptionDateTime(String inaccessibleEncryptionDateTime) {
         this.inaccessibleEncryptionDateTime = inaccessibleEncryptionDateTime;
         return this;
@@ -23,6 +24,7 @@ public class AwsDynamoDbTableSseDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsMasterKeyArn")
     public String kmsMasterKeyArn;
+
     public AwsDynamoDbTableSseDescription withKmsMasterKeyArn(String kmsMasterKeyArn) {
         this.kmsMasterKeyArn = kmsMasterKeyArn;
         return this;
@@ -31,6 +33,7 @@ public class AwsDynamoDbTableSseDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SseType")
     public String sseType;
+
     public AwsDynamoDbTableSseDescription withSseType(String sseType) {
         this.sseType = sseType;
         return this;
@@ -39,9 +42,11 @@ public class AwsDynamoDbTableSseDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsDynamoDbTableSseDescription withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsDynamoDbTableSseDescription(){}
 }

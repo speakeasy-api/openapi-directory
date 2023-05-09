@@ -18,6 +18,7 @@ public class VirtualTariffConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Consumption")
     public Double consumption;
+
     public VirtualTariffConsumptionData withConsumption(Double consumption) {
         this.consumption = consumption;
         return this;
@@ -29,6 +30,7 @@ public class VirtualTariffConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public String currency;
+
     public VirtualTariffConsumptionData withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -40,6 +42,7 @@ public class VirtualTariffConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public VirtualTariffConsumptionData withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class VirtualTariffConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Price")
     public Double price;
+
     public VirtualTariffConsumptionData withPrice(Double price) {
         this.price = price;
         return this;
@@ -62,9 +66,11 @@ public class VirtualTariffConsumptionData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TariffType")
     public VirtualTariffConsumptionDataTariffTypeEnum tariffType;
+
     public VirtualTariffConsumptionData withTariffType(VirtualTariffConsumptionDataTariffTypeEnum tariffType) {
         this.tariffType = tariffType;
         return this;
     }
     
+    public VirtualTariffConsumptionData(){}
 }

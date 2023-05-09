@@ -18,9 +18,11 @@ public class DatasetOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GcsOutputDestination gcsDestination;
+
     public DatasetOutputConfig withGcsDestination(GcsOutputDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
     }
     
+    public DatasetOutputConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPublicationsRequest {
@@ -12,6 +13,7 @@ public class GetPublicationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public GetPublicationsRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -22,6 +24,7 @@ public class GetPublicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelCatalogId")
     public String channelCatalogId;
+
     public GetPublicationsRequest withChannelCatalogId(String channelCatalogId) {
         this.channelCatalogId = channelCatalogId;
         return this;
@@ -32,6 +35,7 @@ public class GetPublicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public Integer count;
+
     public GetPublicationsRequest withCount(Integer count) {
         this.count = count;
         return this;
@@ -42,6 +46,7 @@ public class GetPublicationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public GetPublicationsRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
@@ -52,9 +57,15 @@ public class GetPublicationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=publicationTypes")
     public GetPublicationsPublicationTypesEnum[] publicationTypes;
+
     public GetPublicationsRequest withPublicationTypes(GetPublicationsPublicationTypesEnum[] publicationTypes) {
         this.publicationTypes = publicationTypes;
         return this;
     }
     
+    public GetPublicationsRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode, @JsonProperty("publicationTypes") GetPublicationsPublicationTypesEnum[] publicationTypes) {
+        this.accountId = accountId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+        this.publicationTypes = publicationTypes;
+  }
 }

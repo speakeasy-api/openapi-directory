@@ -18,6 +18,7 @@ public class GoogleCloudMlV1StudyConfigMetricSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goal")
     public GoogleCloudMlV1StudyConfigMetricSpecGoalEnum goal;
+
     public GoogleCloudMlV1StudyConfigMetricSpec withGoal(GoogleCloudMlV1StudyConfigMetricSpecGoalEnum goal) {
         this.goal = goal;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudMlV1StudyConfigMetricSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public GoogleCloudMlV1StudyConfigMetricSpec withMetric(String metric) {
         this.metric = metric;
         return this;
     }
     
+    public GoogleCloudMlV1StudyConfigMetricSpec(){}
 }

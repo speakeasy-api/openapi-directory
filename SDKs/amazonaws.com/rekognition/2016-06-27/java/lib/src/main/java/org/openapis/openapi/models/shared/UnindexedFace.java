@@ -15,6 +15,7 @@ public class UnindexedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceDetail")
     public FaceDetail faceDetail;
+
     public UnindexedFace withFaceDetail(FaceDetail faceDetail) {
         this.faceDetail = faceDetail;
         return this;
@@ -23,9 +24,11 @@ public class UnindexedFace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reasons")
     public ReasonEnum[] reasons;
+
     public UnindexedFace withReasons(ReasonEnum[] reasons) {
         this.reasons = reasons;
         return this;
     }
     
+    public UnindexedFace(){}
 }

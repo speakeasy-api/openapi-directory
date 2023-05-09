@@ -15,6 +15,7 @@ public class BatchStatementError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public BatchStatementErrorCodeEnumEnum code;
+
     public BatchStatementError withCode(BatchStatementErrorCodeEnumEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class BatchStatementError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public BatchStatementError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public BatchStatementError(){}
 }

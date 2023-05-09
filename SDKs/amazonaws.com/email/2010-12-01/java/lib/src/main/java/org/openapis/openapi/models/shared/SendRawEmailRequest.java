@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendRawEmailRequest - Represents a request to send a single raw email using Amazon SES. For more information, see the &lt;a href="https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-raw.html"&gt;Amazon SES Developer Guide&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SendRawEmailRequest {
     
     public String configurationSetName;
+
     public SendRawEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,6 +20,7 @@ public class SendRawEmailRequest {
     
     
     public String[] destinations;
+
     public SendRawEmailRequest withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -26,6 +28,7 @@ public class SendRawEmailRequest {
     
     
     public String fromArn;
+
     public SendRawEmailRequest withFromArn(String fromArn) {
         this.fromArn = fromArn;
         return this;
@@ -33,6 +36,7 @@ public class SendRawEmailRequest {
     
     
     public RawMessage rawMessage;
+
     public SendRawEmailRequest withRawMessage(RawMessage rawMessage) {
         this.rawMessage = rawMessage;
         return this;
@@ -40,6 +44,7 @@ public class SendRawEmailRequest {
     
     
     public String returnPathArn;
+
     public SendRawEmailRequest withReturnPathArn(String returnPathArn) {
         this.returnPathArn = returnPathArn;
         return this;
@@ -47,6 +52,7 @@ public class SendRawEmailRequest {
     
     
     public String source;
+
     public SendRawEmailRequest withSource(String source) {
         this.source = source;
         return this;
@@ -54,6 +60,7 @@ public class SendRawEmailRequest {
     
     
     public String sourceArn;
+
     public SendRawEmailRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -61,9 +68,13 @@ public class SendRawEmailRequest {
     
     
     public MessageTag[] tags;
+
     public SendRawEmailRequest withTags(MessageTag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public SendRawEmailRequest(@JsonProperty("RawMessage") RawMessage rawMessage) {
+        this.rawMessage = rawMessage;
+  }
 }

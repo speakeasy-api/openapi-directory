@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeComponentConfigurationRecommendationRequest {
     @JsonProperty("ComponentName")
     public String componentName;
+
     public DescribeComponentConfigurationRecommendationRequest withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeComponentConfigurationRecommendationRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public DescribeComponentConfigurationRecommendationRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
@@ -23,9 +25,15 @@ public class DescribeComponentConfigurationRecommendationRequest {
     
     @JsonProperty("Tier")
     public TierEnum tier;
+
     public DescribeComponentConfigurationRecommendationRequest withTier(TierEnum tier) {
         this.tier = tier;
         return this;
     }
     
+    public DescribeComponentConfigurationRecommendationRequest(@JsonProperty("ComponentName") String componentName, @JsonProperty("ResourceGroupName") String resourceGroupName, @JsonProperty("Tier") TierEnum tier) {
+        this.componentName = componentName;
+        this.resourceGroupName = resourceGroupName;
+        this.tier = tier;
+  }
 }

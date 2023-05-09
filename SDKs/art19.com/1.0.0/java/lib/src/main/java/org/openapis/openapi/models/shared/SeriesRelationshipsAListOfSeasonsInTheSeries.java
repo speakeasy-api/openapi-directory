@@ -12,9 +12,11 @@ public class SeriesRelationshipsAListOfSeasonsInTheSeries {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier[] data;
+
     public SeriesRelationshipsAListOfSeasonsInTheSeries withData(ResourceIdentifier[] data) {
         this.data = data;
         return this;
     }
     
+    public SeriesRelationshipsAListOfSeasonsInTheSeries(){}
 }

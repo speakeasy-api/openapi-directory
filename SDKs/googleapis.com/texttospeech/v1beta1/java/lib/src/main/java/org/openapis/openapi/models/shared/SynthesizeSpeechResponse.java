@@ -18,6 +18,7 @@ public class SynthesizeSpeechResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioConfig")
     public AudioConfig audioConfig;
+
     public SynthesizeSpeechResponse withAudioConfig(AudioConfig audioConfig) {
         this.audioConfig = audioConfig;
         return this;
@@ -29,6 +30,7 @@ public class SynthesizeSpeechResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioContent")
     public String audioContent;
+
     public SynthesizeSpeechResponse withAudioContent(String audioContent) {
         this.audioContent = audioContent;
         return this;
@@ -40,9 +42,11 @@ public class SynthesizeSpeechResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timepoints")
     public Timepoint[] timepoints;
+
     public SynthesizeSpeechResponse withTimepoints(Timepoint[] timepoints) {
         this.timepoints = timepoints;
         return this;
     }
     
+    public SynthesizeSpeechResponse(){}
 }

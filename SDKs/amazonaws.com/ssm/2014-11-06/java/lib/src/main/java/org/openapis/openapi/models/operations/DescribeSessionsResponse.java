@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSessionsResponse {
     
     public String contentType;
+
     public DescribeSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSessionsResponse describeSessionsResponse;
+
     public DescribeSessionsResponse withDescribeSessionsResponse(org.openapis.openapi.models.shared.DescribeSessionsResponse describeSessionsResponse) {
         this.describeSessionsResponse = describeSessionsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSessionsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeSessionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSessionsResponse {
      */
     
     public Object invalidFilterKey;
+
     public DescribeSessionsResponse withInvalidFilterKey(Object invalidFilterKey) {
         this.invalidFilterKey = invalidFilterKey;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSessionsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeSessionsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSessionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

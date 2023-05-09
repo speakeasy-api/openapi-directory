@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCertificateAuthorityAuditReportRequest {
     @JsonProperty("AuditReportResponseFormat")
     public AuditReportResponseFormatEnum auditReportResponseFormat;
+
     public CreateCertificateAuthorityAuditReportRequest withAuditReportResponseFormat(AuditReportResponseFormatEnum auditReportResponseFormat) {
         this.auditReportResponseFormat = auditReportResponseFormat;
         return this;
@@ -16,6 +17,7 @@ public class CreateCertificateAuthorityAuditReportRequest {
     
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public CreateCertificateAuthorityAuditReportRequest withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -23,9 +25,15 @@ public class CreateCertificateAuthorityAuditReportRequest {
     
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CreateCertificateAuthorityAuditReportRequest withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
     }
     
+    public CreateCertificateAuthorityAuditReportRequest(@JsonProperty("AuditReportResponseFormat") AuditReportResponseFormatEnum auditReportResponseFormat, @JsonProperty("CertificateAuthorityArn") String certificateAuthorityArn, @JsonProperty("S3BucketName") String s3BucketName) {
+        this.auditReportResponseFormat = auditReportResponseFormat;
+        this.certificateAuthorityArn = certificateAuthorityArn;
+        this.s3BucketName = s3BucketName;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseError {
     
     public DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseErrorCodeEnum code;
+
     public DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseError withCode(DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTempla
     
     
     public String message;
+
     public DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteLaunchTemplateVersionsResultUnsuccessfullyDeletedLaunchTemplateVersionsResponseError(){}
 }

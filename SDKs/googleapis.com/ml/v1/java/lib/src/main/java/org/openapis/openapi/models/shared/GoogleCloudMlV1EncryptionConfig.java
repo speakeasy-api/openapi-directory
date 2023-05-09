@@ -18,9 +18,11 @@ public class GoogleCloudMlV1EncryptionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudMlV1EncryptionConfig withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
     }
     
+    public GoogleCloudMlV1EncryptionConfig(){}
 }

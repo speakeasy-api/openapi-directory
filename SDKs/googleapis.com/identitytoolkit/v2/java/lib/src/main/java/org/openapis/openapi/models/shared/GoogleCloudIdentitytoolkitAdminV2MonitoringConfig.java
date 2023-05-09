@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2MonitoringConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestLogging")
     public GoogleCloudIdentitytoolkitAdminV2RequestLogging requestLogging;
+
     public GoogleCloudIdentitytoolkitAdminV2MonitoringConfig withRequestLogging(GoogleCloudIdentitytoolkitAdminV2RequestLogging requestLogging) {
         this.requestLogging = requestLogging;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2MonitoringConfig(){}
 }

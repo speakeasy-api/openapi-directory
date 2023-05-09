@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class XMLClassifier {
     @JsonProperty("Classification")
     public String classification;
+
     public XMLClassifier withClassification(String classification) {
         this.classification = classification;
         return this;
@@ -29,6 +30,7 @@ public class XMLClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public XMLClassifier withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +41,7 @@ public class XMLClassifier {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public XMLClassifier withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -46,6 +49,7 @@ public class XMLClassifier {
     
     @JsonProperty("Name")
     public String name;
+
     public XMLClassifier withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +58,7 @@ public class XMLClassifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RowTag")
     public String rowTag;
+
     public XMLClassifier withRowTag(String rowTag) {
         this.rowTag = rowTag;
         return this;
@@ -62,9 +67,14 @@ public class XMLClassifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public XMLClassifier withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public XMLClassifier(@JsonProperty("Classification") String classification, @JsonProperty("Name") String name) {
+        this.classification = classification;
+        this.name = name;
+  }
 }

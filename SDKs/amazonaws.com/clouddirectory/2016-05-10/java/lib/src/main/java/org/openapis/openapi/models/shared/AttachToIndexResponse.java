@@ -15,9 +15,11 @@ public class AttachToIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttachedObjectIdentifier")
     public String attachedObjectIdentifier;
+
     public AttachToIndexResponse withAttachedObjectIdentifier(String attachedObjectIdentifier) {
         this.attachedObjectIdentifier = attachedObjectIdentifier;
         return this;
     }
     
+    public AttachToIndexResponse(){}
 }

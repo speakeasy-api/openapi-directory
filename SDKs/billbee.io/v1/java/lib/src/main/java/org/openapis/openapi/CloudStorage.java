@@ -48,14 +48,12 @@ public class CloudStorage {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudStorageApiGetListResponse res = new org.openapis.openapi.models.operations.CloudStorageApiGetListResponse() {{
+        org.openapis.openapi.models.operations.CloudStorageApiGetListResponse res = new org.openapis.openapi.models.operations.CloudStorageApiGetListResponse(contentType, httpRes.statusCode()) {{
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel = null;
             rechnungsdruckWebAppControllersAPIAPIResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelCloudStorageAPIModel = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

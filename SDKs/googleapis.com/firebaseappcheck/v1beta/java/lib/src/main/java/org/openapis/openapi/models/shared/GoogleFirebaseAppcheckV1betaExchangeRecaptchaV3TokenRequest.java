@@ -18,9 +18,11 @@ public class GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recaptchaV3Token")
     public String recaptchaV3Token;
+
     public GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest withRecaptchaV3Token(String recaptchaV3Token) {
         this.recaptchaV3Token = recaptchaV3Token;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaExchangeRecaptchaV3TokenRequest(){}
 }

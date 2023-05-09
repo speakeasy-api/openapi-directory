@@ -15,9 +15,11 @@ public class GetLinkedRelations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relations")
     public GetLinkedRelations200ApplicationJSONRelations relations;
+
     public GetLinkedRelations200ApplicationJSON withRelations(GetLinkedRelations200ApplicationJSONRelations relations) {
         this.relations = relations;
         return this;
     }
     
+    public GetLinkedRelations200ApplicationJSON(){}
 }

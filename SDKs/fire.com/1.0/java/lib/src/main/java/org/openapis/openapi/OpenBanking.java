@@ -102,11 +102,9 @@ public class OpenBanking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListOfAspspsResponse res = new org.openapis.openapi.models.operations.GetListOfAspspsResponse() {{
+        org.openapis.openapi.models.operations.GetListOfAspspsResponse res = new org.openapis.openapi.models.operations.GetListOfAspspsResponse(contentType, httpRes.statusCode()) {{
             aspsps = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +153,9 @@ public class OpenBanking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetPaymentDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentDetailsResponse res = new org.openapis.openapi.models.operations.GetPaymentDetailsResponse(contentType, httpRes.statusCode()) {{
             paymentRequest = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,11 +236,9 @@ public class OpenBanking {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NewPaymentRequestResponse res = new org.openapis.openapi.models.operations.NewPaymentRequestResponse() {{
+        org.openapis.openapi.models.operations.NewPaymentRequestResponse res = new org.openapis.openapi.models.operations.NewPaymentRequestResponse(contentType, httpRes.statusCode()) {{
             newPaymentRequestResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

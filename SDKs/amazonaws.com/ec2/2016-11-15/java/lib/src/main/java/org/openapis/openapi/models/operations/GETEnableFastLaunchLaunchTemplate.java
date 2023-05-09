@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 /**
@@ -12,6 +13,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETEnableFastLaunchLaunchTemplate {
     @SpeakeasyMetadata("queryParam:name=LaunchTemplateId")
     public String launchTemplateId;
+
     public GETEnableFastLaunchLaunchTemplate withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -19,6 +21,7 @@ public class GETEnableFastLaunchLaunchTemplate {
     
     @SpeakeasyMetadata("queryParam:name=LaunchTemplateName")
     public String launchTemplateName;
+
     public GETEnableFastLaunchLaunchTemplate withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -26,9 +29,13 @@ public class GETEnableFastLaunchLaunchTemplate {
     
     @SpeakeasyMetadata("queryParam:name=Version")
     public String version;
+
     public GETEnableFastLaunchLaunchTemplate withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GETEnableFastLaunchLaunchTemplate(@JsonProperty("Version") String version) {
+        this.version = version;
+  }
 }

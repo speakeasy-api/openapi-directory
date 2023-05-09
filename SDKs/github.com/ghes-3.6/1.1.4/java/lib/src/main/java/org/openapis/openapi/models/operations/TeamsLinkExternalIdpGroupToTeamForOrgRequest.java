@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsLinkExternalIdpGroupToTeamForOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsLinkExternalIdpGroupToTeamForOrgRequestBody requestBody;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgRequest withRequestBody(TeamsLinkExternalIdpGroupToTeamForOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -29,9 +32,15 @@ public class TeamsLinkExternalIdpGroupToTeamForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public TeamsLinkExternalIdpGroupToTeamForOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public TeamsLinkExternalIdpGroupToTeamForOrgRequest(@JsonProperty("RequestBody") TeamsLinkExternalIdpGroupToTeamForOrgRequestBody requestBody, @JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.requestBody = requestBody;
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

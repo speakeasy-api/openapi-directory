@@ -15,6 +15,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityProviderStrategy")
     public AwsEcsServiceCapacityProviderStrategyDetails[] capacityProviderStrategy;
+
     public AwsEcsServiceDetails withCapacityProviderStrategy(AwsEcsServiceCapacityProviderStrategyDetails[] capacityProviderStrategy) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cluster")
     public String cluster;
+
     public AwsEcsServiceDetails withCluster(String cluster) {
         this.cluster = cluster;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentConfiguration")
     public AwsEcsServiceDeploymentConfigurationDetails deploymentConfiguration;
+
     public AwsEcsServiceDetails withDeploymentConfiguration(AwsEcsServiceDeploymentConfigurationDetails deploymentConfiguration) {
         this.deploymentConfiguration = deploymentConfiguration;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentController")
     public AwsEcsServiceDeploymentControllerDetails deploymentController;
+
     public AwsEcsServiceDetails withDeploymentController(AwsEcsServiceDeploymentControllerDetails deploymentController) {
         this.deploymentController = deploymentController;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredCount")
     public Long desiredCount;
+
     public AwsEcsServiceDetails withDesiredCount(Long desiredCount) {
         this.desiredCount = desiredCount;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableEcsManagedTags")
     public Boolean enableEcsManagedTags;
+
     public AwsEcsServiceDetails withEnableEcsManagedTags(Boolean enableEcsManagedTags) {
         this.enableEcsManagedTags = enableEcsManagedTags;
         return this;
@@ -63,6 +69,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableExecuteCommand")
     public Boolean enableExecuteCommand;
+
     public AwsEcsServiceDetails withEnableExecuteCommand(Boolean enableExecuteCommand) {
         this.enableExecuteCommand = enableExecuteCommand;
         return this;
@@ -71,6 +78,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckGracePeriodSeconds")
     public Long healthCheckGracePeriodSeconds;
+
     public AwsEcsServiceDetails withHealthCheckGracePeriodSeconds(Long healthCheckGracePeriodSeconds) {
         this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
         return this;
@@ -79,6 +87,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LaunchType")
     public String launchType;
+
     public AwsEcsServiceDetails withLaunchType(String launchType) {
         this.launchType = launchType;
         return this;
@@ -87,6 +96,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadBalancers")
     public AwsEcsServiceLoadBalancersDetails[] loadBalancers;
+
     public AwsEcsServiceDetails withLoadBalancers(AwsEcsServiceLoadBalancersDetails[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -95,6 +105,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsEcsServiceDetails withName(String name) {
         this.name = name;
         return this;
@@ -103,6 +114,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public AwsEcsServiceNetworkConfigurationDetails networkConfiguration;
+
     public AwsEcsServiceDetails withNetworkConfiguration(AwsEcsServiceNetworkConfigurationDetails networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -111,6 +123,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementConstraints")
     public AwsEcsServicePlacementConstraintsDetails[] placementConstraints;
+
     public AwsEcsServiceDetails withPlacementConstraints(AwsEcsServicePlacementConstraintsDetails[] placementConstraints) {
         this.placementConstraints = placementConstraints;
         return this;
@@ -119,6 +132,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementStrategies")
     public AwsEcsServicePlacementStrategiesDetails[] placementStrategies;
+
     public AwsEcsServiceDetails withPlacementStrategies(AwsEcsServicePlacementStrategiesDetails[] placementStrategies) {
         this.placementStrategies = placementStrategies;
         return this;
@@ -127,6 +141,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlatformVersion")
     public String platformVersion;
+
     public AwsEcsServiceDetails withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -135,6 +150,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PropagateTags")
     public String propagateTags;
+
     public AwsEcsServiceDetails withPropagateTags(String propagateTags) {
         this.propagateTags = propagateTags;
         return this;
@@ -143,6 +159,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Role")
     public String role;
+
     public AwsEcsServiceDetails withRole(String role) {
         this.role = role;
         return this;
@@ -151,6 +168,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchedulingStrategy")
     public String schedulingStrategy;
+
     public AwsEcsServiceDetails withSchedulingStrategy(String schedulingStrategy) {
         this.schedulingStrategy = schedulingStrategy;
         return this;
@@ -159,6 +177,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public AwsEcsServiceDetails withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -167,6 +186,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public AwsEcsServiceDetails withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -175,6 +195,7 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRegistries")
     public AwsEcsServiceServiceRegistriesDetails[] serviceRegistries;
+
     public AwsEcsServiceDetails withServiceRegistries(AwsEcsServiceServiceRegistriesDetails[] serviceRegistries) {
         this.serviceRegistries = serviceRegistries;
         return this;
@@ -183,9 +204,11 @@ public class AwsEcsServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskDefinition")
     public String taskDefinition;
+
     public AwsEcsServiceDetails withTaskDefinition(String taskDefinition) {
         this.taskDefinition = taskDefinition;
         return this;
     }
     
+    public AwsEcsServiceDetails(){}
 }

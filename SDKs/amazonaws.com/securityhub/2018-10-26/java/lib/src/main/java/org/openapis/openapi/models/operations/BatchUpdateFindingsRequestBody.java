@@ -15,6 +15,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Long confidence;
+
     public BatchUpdateFindingsRequestBody withConfidence(Long confidence) {
         this.confidence = confidence;
         return this;
@@ -26,6 +27,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Criticality")
     public Long criticality;
+
     public BatchUpdateFindingsRequestBody withCriticality(Long criticality) {
         this.criticality = criticality;
         return this;
@@ -36,6 +38,7 @@ public class BatchUpdateFindingsRequestBody {
      */
     @JsonProperty("FindingIdentifiers")
     public org.openapis.openapi.models.shared.AwsSecurityFindingIdentifier[] findingIdentifiers;
+
     public BatchUpdateFindingsRequestBody withFindingIdentifiers(org.openapis.openapi.models.shared.AwsSecurityFindingIdentifier[] findingIdentifiers) {
         this.findingIdentifiers = findingIdentifiers;
         return this;
@@ -47,6 +50,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public BatchUpdateFindingsRequestBodyNote note;
+
     public BatchUpdateFindingsRequestBody withNote(BatchUpdateFindingsRequestBodyNote note) {
         this.note = note;
         return this;
@@ -58,6 +62,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedFindings")
     public org.openapis.openapi.models.shared.RelatedFinding[] relatedFindings;
+
     public BatchUpdateFindingsRequestBody withRelatedFindings(org.openapis.openapi.models.shared.RelatedFinding[] relatedFindings) {
         this.relatedFindings = relatedFindings;
         return this;
@@ -69,6 +74,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public BatchUpdateFindingsRequestBodySeverity severity;
+
     public BatchUpdateFindingsRequestBody withSeverity(BatchUpdateFindingsRequestBodySeverity severity) {
         this.severity = severity;
         return this;
@@ -80,6 +86,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public BatchUpdateFindingsRequestBody withTypes(String[] types) {
         this.types = types;
         return this;
@@ -91,6 +98,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefinedFields")
     public java.util.Map<String, String> userDefinedFields;
+
     public BatchUpdateFindingsRequestBody withUserDefinedFields(java.util.Map<String, String> userDefinedFields) {
         this.userDefinedFields = userDefinedFields;
         return this;
@@ -102,6 +110,7 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationState")
     public BatchUpdateFindingsRequestBodyVerificationStateEnum verificationState;
+
     public BatchUpdateFindingsRequestBody withVerificationState(BatchUpdateFindingsRequestBodyVerificationStateEnum verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -113,9 +122,13 @@ public class BatchUpdateFindingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workflow")
     public BatchUpdateFindingsRequestBodyWorkflow workflow;
+
     public BatchUpdateFindingsRequestBody withWorkflow(BatchUpdateFindingsRequestBodyWorkflow workflow) {
         this.workflow = workflow;
         return this;
     }
     
+    public BatchUpdateFindingsRequestBody(@JsonProperty("FindingIdentifiers") org.openapis.openapi.models.shared.AwsSecurityFindingIdentifier[] findingIdentifiers) {
+        this.findingIdentifiers = findingIdentifiers;
+  }
 }

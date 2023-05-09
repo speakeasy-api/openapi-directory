@@ -12,6 +12,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("DateofEvent")
     public String dateofEvent;
+
     public RmcerRequestBodyCertificateParameters withDateofEvent(String dateofEvent) {
         this.dateofEvent = dateofEvent;
         return this;
@@ -22,6 +23,7 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("RegisNumber")
     public String regisNumber;
+
     public RmcerRequestBodyCertificateParameters withRegisNumber(String regisNumber) {
         this.regisNumber = regisNumber;
         return this;
@@ -32,9 +34,15 @@ public class RmcerRequestBodyCertificateParameters {
      */
     @JsonProperty("Year")
     public String year;
+
     public RmcerRequestBodyCertificateParameters withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public RmcerRequestBodyCertificateParameters(@JsonProperty("DateofEvent") String dateofEvent, @JsonProperty("RegisNumber") String regisNumber, @JsonProperty("Year") String year) {
+        this.dateofEvent = dateofEvent;
+        this.regisNumber = regisNumber;
+        this.year = year;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountAggregationSource {
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public AccountAggregationSource withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,6 +23,7 @@ public class AccountAggregationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllAwsRegions")
     public Boolean allAwsRegions;
+
     public AccountAggregationSource withAllAwsRegions(Boolean allAwsRegions) {
         this.allAwsRegions = allAwsRegions;
         return this;
@@ -30,9 +32,13 @@ public class AccountAggregationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsRegions")
     public String[] awsRegions;
+
     public AccountAggregationSource withAwsRegions(String[] awsRegions) {
         this.awsRegions = awsRegions;
         return this;
     }
     
+    public AccountAggregationSource(@JsonProperty("AccountIds") String[] accountIds) {
+        this.accountIds = accountIds;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReimportApiResponse {
@@ -12,6 +13,7 @@ public class ReimportApiResponse {
      */
     
     public Object badRequestException;
+
     public ReimportApiResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class ReimportApiResponse {
      */
     
     public Object conflictException;
+
     public ReimportApiResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ReimportApiResponse {
     
     
     public String contentType;
+
     public ReimportApiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ReimportApiResponse {
      */
     
     public Object notFoundException;
+
     public ReimportApiResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ReimportApiResponse {
      */
     
     public org.openapis.openapi.models.shared.ReimportApiResponse reimportApiResponse;
+
     public ReimportApiResponse withReimportApiResponse(org.openapis.openapi.models.shared.ReimportApiResponse reimportApiResponse) {
         this.reimportApiResponse = reimportApiResponse;
         return this;
@@ -56,6 +62,7 @@ public class ReimportApiResponse {
     
     
     public Integer statusCode;
+
     public ReimportApiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ReimportApiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReimportApiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ReimportApiResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ReimportApiResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ReimportApiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

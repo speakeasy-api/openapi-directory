@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUserSettingsResponse {
     @JsonProperty("userSettingsArn")
     public String userSettingsArn;
+
     public CreateUserSettingsResponse withUserSettingsArn(String userSettingsArn) {
         this.userSettingsArn = userSettingsArn;
         return this;
     }
     
+    public CreateUserSettingsResponse(@JsonProperty("userSettingsArn") String userSettingsArn) {
+        this.userSettingsArn = userSettingsArn;
+  }
 }

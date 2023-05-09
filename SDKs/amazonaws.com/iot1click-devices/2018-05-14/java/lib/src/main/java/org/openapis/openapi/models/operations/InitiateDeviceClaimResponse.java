@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateDeviceClaimResponse {
     
     public String contentType;
+
     public InitiateDeviceClaimResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateDeviceClaimResponse {
      */
     
     public org.openapis.openapi.models.shared.InitiateDeviceClaimResponse initiateDeviceClaimResponse;
+
     public InitiateDeviceClaimResponse withInitiateDeviceClaimResponse(org.openapis.openapi.models.shared.InitiateDeviceClaimResponse initiateDeviceClaimResponse) {
         this.initiateDeviceClaimResponse = initiateDeviceClaimResponse;
         return this;
@@ -29,6 +32,7 @@ public class InitiateDeviceClaimResponse {
      */
     
     public Object internalFailureException;
+
     public InitiateDeviceClaimResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class InitiateDeviceClaimResponse {
      */
     
     public Object invalidRequestException;
+
     public InitiateDeviceClaimResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateDeviceClaimResponse {
      */
     
     public Object resourceConflictException;
+
     public InitiateDeviceClaimResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateDeviceClaimResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InitiateDeviceClaimResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class InitiateDeviceClaimResponse {
     
     
     public Integer statusCode;
+
     public InitiateDeviceClaimResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class InitiateDeviceClaimResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateDeviceClaimResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InitiateDeviceClaimResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

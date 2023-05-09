@@ -15,6 +15,7 @@ public class LicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public LicerRequestBodyCertificateParameters certificateParameters;
+
     public LicerRequestBody withCertificateParameters(LicerRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class LicerRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public LicerRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class LicerRequestBody {
      */
     @JsonProperty("format")
     public LicerRequestBodyFormatEnum format;
+
     public LicerRequestBody withFormat(LicerRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class LicerRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public LicerRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public LicerRequestBody(@JsonProperty("format") LicerRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

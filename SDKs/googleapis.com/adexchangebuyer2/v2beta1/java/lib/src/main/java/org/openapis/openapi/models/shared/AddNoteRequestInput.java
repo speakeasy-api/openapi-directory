@@ -18,9 +18,11 @@ public class AddNoteRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public NoteInput note;
+
     public AddNoteRequestInput withNote(NoteInput note) {
         this.note = note;
         return this;
     }
     
+    public AddNoteRequestInput(){}
 }

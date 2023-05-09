@@ -12,6 +12,7 @@ public class ApiCoreDtoDatapointsWeightedDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiCoreDtoDatapointsWeightedDestinationItem withUrl(String url) {
         this.url = url;
         return this;
@@ -20,9 +21,11 @@ public class ApiCoreDtoDatapointsWeightedDestinationItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Integer weight;
+
     public ApiCoreDtoDatapointsWeightedDestinationItem withWeight(Integer weight) {
         this.weight = weight;
         return this;
     }
     
+    public ApiCoreDtoDatapointsWeightedDestinationItem(){}
 }

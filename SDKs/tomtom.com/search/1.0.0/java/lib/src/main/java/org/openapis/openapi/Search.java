@@ -33,7 +33,9 @@ public class Search {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse getSearchVersionNumberCSCategoryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtRequest.class, baseUrl, "/search/{versionNumber}/cS/{category}.{ext}", request, null);
@@ -55,10 +57,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberCSCategoryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -94,10 +94,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberCategorySearchQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -133,10 +131,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberGeometrySearchQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -172,10 +168,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberNearbySearchExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -211,10 +205,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberPoiSearchQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -228,7 +220,9 @@ public class Search {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse getSearchVersionNumberRoutedSearchQueryPositionHeadingExt(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtRequest.class, baseUrl, "/search/{versionNumber}/routedSearch/{query}/{position}/{heading}.{ext}", request, null);
@@ -250,10 +244,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberRoutedSearchQueryPositionHeadingExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -267,7 +259,9 @@ public class Search {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse getSearchVersionNumberSQueryExt(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtRequest.class, baseUrl, "/search/{versionNumber}/s/{query}.{ext}", request, null);
@@ -289,10 +283,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberSQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -328,10 +320,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtResponse() {{
+        org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtResponse res = new org.openapis.openapi.models.operations.GetSearchVersionNumberSearchQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -369,10 +359,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtResponse() {{
+        org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberGeometrySearchQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -410,10 +398,8 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse() {{
+        org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse res = new org.openapis.openapi.models.operations.PostSearchVersionNumberSearchAlongRouteQueryExtResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 403 || httpRes.statusCode() == 405 || httpRes.statusCode() == 596 || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuotePutRequest {
@@ -12,6 +13,7 @@ public class QuotePutRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.QuoteDto quoteDto;
+
     public QuotePutRequest withQuoteDto(org.openapis.openapi.models.shared.QuoteDto quoteDto) {
         this.quoteDto = quoteDto;
         return this;
@@ -22,9 +24,14 @@ public class QuotePutRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public QuotePutRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public QuotePutRequest(@JsonProperty("QuoteDto") org.openapis.openapi.models.shared.QuoteDto quoteDto, @JsonProperty("id") Long id) {
+        this.quoteDto = quoteDto;
+        this.id = id;
+  }
 }

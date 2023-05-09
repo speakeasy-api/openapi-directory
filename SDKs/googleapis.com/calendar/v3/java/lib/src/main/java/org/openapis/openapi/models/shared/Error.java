@@ -15,6 +15,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Error withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -30,9 +31,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public Error withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Error(){}
 }

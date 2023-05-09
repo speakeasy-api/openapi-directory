@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateConnectionRequest {
     @JsonProperty("connectionId")
     public String connectionId;
+
     public UpdateConnectionRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -19,6 +20,7 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionName")
     public String connectionName;
+
     public UpdateConnectionRequest withConnectionName(String connectionName) {
         this.connectionName = connectionName;
         return this;
@@ -27,9 +29,13 @@ public class UpdateConnectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionMode")
     public String encryptionMode;
+
     public UpdateConnectionRequest withEncryptionMode(String encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
     }
     
+    public UpdateConnectionRequest(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

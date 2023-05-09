@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnConfirmJsonRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthOnConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthOnConfirmJsonRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthOnConfirmJsonRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.PatientAuthConfirmResponse patientAuthConfirmResponse;
+
     public PostV05UsersAuthOnConfirmJsonRequest withPatientAuthConfirmResponse(org.openapis.openapi.models.shared.PatientAuthConfirmResponse patientAuthConfirmResponse) {
         this.patientAuthConfirmResponse = patientAuthConfirmResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthOnConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05UsersAuthOnConfirmJsonRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
@@ -39,9 +43,16 @@ public class PostV05UsersAuthOnConfirmJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05UsersAuthOnConfirmJsonRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05UsersAuthOnConfirmJsonRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("PatientAuthConfirmResponse") org.openapis.openapi.models.shared.PatientAuthConfirmResponse patientAuthConfirmResponse, @JsonProperty("X-HIP-ID") String xHipId, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.patientAuthConfirmResponse = patientAuthConfirmResponse;
+        this.xHipId = xHipId;
+        this.xHiuId = xHiuId;
+  }
 }

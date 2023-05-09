@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTokenResponse {
@@ -12,6 +13,7 @@ public class CreateTokenResponse {
      */
     
     public Object badRequestException;
+
     public CreateTokenResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTokenResponse {
     
     
     public String contentType;
+
     public CreateTokenResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTokenResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse;
+
     public CreateTokenResponse withCreateTokenResponse(org.openapis.openapi.models.shared.CreateTokenResponse createTokenResponse) {
         this.createTokenResponse = createTokenResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateTokenResponse {
      */
     
     public Object gatewayTimeoutException;
+
     public CreateTokenResponse withGatewayTimeoutException(Object gatewayTimeoutException) {
         this.gatewayTimeoutException = gatewayTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTokenResponse {
      */
     
     public Object notFoundException;
+
     public CreateTokenResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateTokenResponse {
     
     
     public Integer statusCode;
+
     public CreateTokenResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateTokenResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTokenResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateTokenResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateTokenResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateTokenResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

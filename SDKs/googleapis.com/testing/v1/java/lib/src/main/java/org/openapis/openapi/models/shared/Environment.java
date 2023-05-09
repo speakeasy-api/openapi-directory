@@ -18,6 +18,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDevice")
     public AndroidDevice androidDevice;
+
     public Environment withAndroidDevice(AndroidDevice androidDevice) {
         this.androidDevice = androidDevice;
         return this;
@@ -29,9 +30,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosDevice")
     public IosDevice iosDevice;
+
     public Environment withIosDevice(IosDevice iosDevice) {
         this.iosDevice = iosDevice;
         return this;
     }
     
+    public Environment(){}
 }

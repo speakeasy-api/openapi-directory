@@ -19,6 +19,7 @@ public class AlertManagerDefinitionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AlertManagerDefinitionDescription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,6 +27,7 @@ public class AlertManagerDefinitionDescription {
     
     @JsonProperty("data")
     public String data;
+
     public AlertManagerDefinitionDescription withData(String data) {
         this.data = data;
         return this;
@@ -35,6 +37,7 @@ public class AlertManagerDefinitionDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedAt")
     public OffsetDateTime modifiedAt;
+
     public AlertManagerDefinitionDescription withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -42,9 +45,16 @@ public class AlertManagerDefinitionDescription {
     
     @JsonProperty("status")
     public AlertManagerDefinitionStatus status;
+
     public AlertManagerDefinitionDescription withStatus(AlertManagerDefinitionStatus status) {
         this.status = status;
         return this;
     }
     
+    public AlertManagerDefinitionDescription(@JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("data") String data, @JsonProperty("modifiedAt") OffsetDateTime modifiedAt, @JsonProperty("status") AlertManagerDefinitionStatus status) {
+        this.createdAt = createdAt;
+        this.data = data;
+        this.modifiedAt = modifiedAt;
+        this.status = status;
+  }
 }

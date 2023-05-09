@@ -15,6 +15,7 @@ public class ActionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceId")
     public String sourceId;
+
     public ActionSource withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -23,6 +24,7 @@ public class ActionSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ActionSource withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -30,9 +32,13 @@ public class ActionSource {
     
     @JsonProperty("SourceUri")
     public String sourceUri;
+
     public ActionSource withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ActionSource(@JsonProperty("SourceUri") String sourceUri) {
+        this.sourceUri = sourceUri;
+  }
 }

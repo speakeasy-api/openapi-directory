@@ -15,6 +15,7 @@ public class LambdaDeviceMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addGroupOwner")
     public Boolean addGroupOwner;
+
     public LambdaDeviceMount withAddGroupOwner(Boolean addGroupOwner) {
         this.addGroupOwner = addGroupOwner;
         return this;
@@ -22,6 +23,7 @@ public class LambdaDeviceMount {
     
     @JsonProperty("path")
     public String path;
+
     public LambdaDeviceMount withPath(String path) {
         this.path = path;
         return this;
@@ -30,9 +32,13 @@ public class LambdaDeviceMount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public LambdaFilesystemPermissionEnum permission;
+
     public LambdaDeviceMount withPermission(LambdaFilesystemPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public LambdaDeviceMount(@JsonProperty("path") String path) {
+        this.path = path;
+  }
 }

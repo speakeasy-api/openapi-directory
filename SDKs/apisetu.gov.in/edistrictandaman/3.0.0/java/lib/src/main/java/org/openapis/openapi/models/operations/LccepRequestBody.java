@@ -15,6 +15,7 @@ public class LccepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public LccepRequestBodyCertificateParameters certificateParameters;
+
     public LccepRequestBody withCertificateParameters(LccepRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class LccepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public LccepRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class LccepRequestBody {
      */
     @JsonProperty("format")
     public LccepRequestBodyFormatEnum format;
+
     public LccepRequestBody withFormat(LccepRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class LccepRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public LccepRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public LccepRequestBody(@JsonProperty("format") LccepRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

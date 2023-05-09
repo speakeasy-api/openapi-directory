@@ -15,6 +15,7 @@ public class NAWelcomeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NAWelcomeSnapshot withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class NAWelcomeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public NAWelcomeSnapshot withKey(String key) {
         this.key = key;
         return this;
@@ -37,9 +39,11 @@ public class NAWelcomeSnapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Integer version;
+
     public NAWelcomeSnapshot withVersion(Integer version) {
         this.version = version;
         return this;
     }
     
+    public NAWelcomeSnapshot(){}
 }

@@ -15,6 +15,7 @@ public class AccountsCustomBatchRequestEntryLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public AccountsCustomBatchRequestEntryLinkRequest withAction(String action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class AccountsCustomBatchRequestEntryLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkType")
     public String linkType;
+
     public AccountsCustomBatchRequestEntryLinkRequest withLinkType(String linkType) {
         this.linkType = linkType;
         return this;
@@ -37,6 +39,7 @@ public class AccountsCustomBatchRequestEntryLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedAccountId")
     public String linkedAccountId;
+
     public AccountsCustomBatchRequestEntryLinkRequest withLinkedAccountId(String linkedAccountId) {
         this.linkedAccountId = linkedAccountId;
         return this;
@@ -48,9 +51,11 @@ public class AccountsCustomBatchRequestEntryLinkRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public String[] services;
+
     public AccountsCustomBatchRequestEntryLinkRequest withServices(String[] services) {
         this.services = services;
         return this;
     }
     
+    public AccountsCustomBatchRequestEntryLinkRequest(){}
 }

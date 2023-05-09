@@ -15,6 +15,7 @@ public class ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelSummaries")
     public ModelSummary[] modelSummaries;
+
     public ListModelsResponse withModelSummaries(ModelSummary[] modelSummaries) {
         this.modelSummaries = modelSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListModelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListModelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListModelsResponse(){}
 }

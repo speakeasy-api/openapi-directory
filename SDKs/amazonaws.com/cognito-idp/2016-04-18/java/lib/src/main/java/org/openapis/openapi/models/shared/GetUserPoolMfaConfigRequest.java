@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUserPoolMfaConfigRequest {
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public GetUserPoolMfaConfigRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public GetUserPoolMfaConfigRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

@@ -53,11 +53,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuoteCloseResponse res = new org.openapis.openapi.models.operations.QuoteCloseResponse() {{
+        org.openapis.openapi.models.operations.QuoteCloseResponse res = new org.openapis.openapi.models.operations.QuoteCloseResponse(contentType, httpRes.statusCode()) {{
             quoteClose200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuoteDeleteResponse res = new org.openapis.openapi.models.operations.QuoteDeleteResponse() {{
+        org.openapis.openapi.models.operations.QuoteDeleteResponse res = new org.openapis.openapi.models.operations.QuoteDeleteResponse(contentType, httpRes.statusCode()) {{
             quoteDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -134,11 +130,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuoteGetResponse res = new org.openapis.openapi.models.operations.QuoteGetResponse() {{
+        org.openapis.openapi.models.operations.QuoteGetResponse res = new org.openapis.openapi.models.operations.QuoteGetResponse(contentType, httpRes.statusCode()) {{
             pageResultQuoteDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuotePostResponse res = new org.openapis.openapi.models.operations.QuotePostResponse() {{
+        org.openapis.openapi.models.operations.QuotePostResponse res = new org.openapis.openapi.models.operations.QuotePostResponse(contentType, httpRes.statusCode()) {{
             quotePost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -220,11 +212,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse res = new org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse() {{
+        org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse res = new org.openapis.openapi.models.operations.QuotePostCreateQuoteWithGeneratingReferenceResponse(contentType, httpRes.statusCode()) {{
             quotePostCreateQuoteWithGeneratingReference200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse res = new org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse() {{
+        org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse res = new org.openapis.openapi.models.operations.QuotePostGenerateSaleInvoiceResponse(contentType, httpRes.statusCode()) {{
             quotePostGenerateSaleInvoice200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -306,11 +294,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuoteProcessBatchResponse res = new org.openapis.openapi.models.operations.QuoteProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.QuoteProcessBatchResponse res = new org.openapis.openapi.models.operations.QuoteProcessBatchResponse(contentType, httpRes.statusCode()) {{
             quoteProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,11 +335,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuotePutResponse res = new org.openapis.openapi.models.operations.QuotePutResponse() {{
+        org.openapis.openapi.models.operations.QuotePutResponse res = new org.openapis.openapi.models.operations.QuotePutResponse(contentType, httpRes.statusCode()) {{
             quotePut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +371,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.QuoteReopenResponse res = new org.openapis.openapi.models.operations.QuoteReopenResponse() {{
+        org.openapis.openapi.models.operations.QuoteReopenResponse res = new org.openapis.openapi.models.operations.QuoteReopenResponse(contentType, httpRes.statusCode()) {{
             quoteReopen200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -425,11 +407,9 @@ public class Quote {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1QuotesIdResponse res = new org.openapis.openapi.models.operations.GetV1QuotesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1QuotesIdResponse res = new org.openapis.openapi.models.operations.GetV1QuotesIdResponse(contentType, httpRes.statusCode()) {{
             quoteDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

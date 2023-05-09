@@ -15,6 +15,7 @@ public class UsageReportsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public UsageReportsWarnings withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class UsageReportsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public UsageReportsWarningsData[] data;
+
     public UsageReportsWarnings withData(UsageReportsWarningsData[] data) {
         this.data = data;
         return this;
@@ -37,9 +39,11 @@ public class UsageReportsWarnings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UsageReportsWarnings withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public UsageReportsWarnings(){}
 }

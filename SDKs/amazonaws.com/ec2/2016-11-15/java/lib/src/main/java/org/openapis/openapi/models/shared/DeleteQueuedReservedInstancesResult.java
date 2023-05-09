@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteQueuedReservedInstancesResult {
     
     public DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletions[] failedQueuedPurchaseDeletions;
+
     public DeleteQueuedReservedInstancesResult withFailedQueuedPurchaseDeletions(DeleteQueuedReservedInstancesResultFailedQueuedPurchaseDeletions[] failedQueuedPurchaseDeletions) {
         this.failedQueuedPurchaseDeletions = failedQueuedPurchaseDeletions;
         return this;
@@ -19,9 +20,11 @@ public class DeleteQueuedReservedInstancesResult {
     
     
     public DeleteQueuedReservedInstancesResultSuccessfulQueuedPurchaseDeletions[] successfulQueuedPurchaseDeletions;
+
     public DeleteQueuedReservedInstancesResult withSuccessfulQueuedPurchaseDeletions(DeleteQueuedReservedInstancesResultSuccessfulQueuedPurchaseDeletions[] successfulQueuedPurchaseDeletions) {
         this.successfulQueuedPurchaseDeletions = successfulQueuedPurchaseDeletions;
         return this;
     }
     
+    public DeleteQueuedReservedInstancesResult(){}
 }

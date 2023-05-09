@@ -18,9 +18,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConfig")
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig instanceConfig;
+
     public GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse withInstanceConfig(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse(){}
 }

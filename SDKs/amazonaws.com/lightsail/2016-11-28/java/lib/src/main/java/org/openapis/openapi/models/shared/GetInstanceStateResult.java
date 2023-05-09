@@ -15,9 +15,11 @@ public class GetInstanceStateResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InstanceState state;
+
     public GetInstanceStateResult withState(InstanceState state) {
         this.state = state;
         return this;
     }
     
+    public GetInstanceStateResult(){}
 }

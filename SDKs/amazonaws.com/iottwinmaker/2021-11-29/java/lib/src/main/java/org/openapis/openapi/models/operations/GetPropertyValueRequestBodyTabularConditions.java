@@ -15,6 +15,7 @@ public class GetPropertyValueRequestBodyTabularConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderBy")
     public org.openapis.openapi.models.shared.OrderBy[] orderBy;
+
     public GetPropertyValueRequestBodyTabularConditions withOrderBy(org.openapis.openapi.models.shared.OrderBy[] orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -23,9 +24,11 @@ public class GetPropertyValueRequestBodyTabularConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyFilters")
     public org.openapis.openapi.models.shared.PropertyFilter[] propertyFilters;
+
     public GetPropertyValueRequestBodyTabularConditions withPropertyFilters(org.openapis.openapi.models.shared.PropertyFilter[] propertyFilters) {
         this.propertyFilters = propertyFilters;
         return this;
     }
     
+    public GetPropertyValueRequestBodyTabularConditions(){}
 }

@@ -57,14 +57,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointArrivalDeparturesResponse res = new org.openapis.openapi.models.operations.StopPointArrivalDeparturesResponse() {{
+        org.openapis.openapi.models.operations.StopPointArrivalDeparturesResponse res = new org.openapis.openapi.models.operations.StopPointArrivalDeparturesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesArrivalDepartures = null;
             tflApiPresentationEntitiesArrivalDepartures = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,14 +109,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointArrivalsResponse res = new org.openapis.openapi.models.operations.StopPointArrivalsResponse() {{
+        org.openapis.openapi.models.operations.StopPointArrivalsResponse res = new org.openapis.openapi.models.operations.StopPointArrivalsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPredictions = null;
             tflApiPresentationEntitiesPredictions = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,14 +167,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointCrowdingResponse res = new org.openapis.openapi.models.operations.StopPointCrowdingResponse() {{
+        org.openapis.openapi.models.operations.StopPointCrowdingResponse res = new org.openapis.openapi.models.operations.StopPointCrowdingResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,14 +225,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointDirectionResponse res = new org.openapis.openapi.models.operations.StopPointDirectionResponse() {{
+        org.openapis.openapi.models.operations.StopPointDirectionResponse res = new org.openapis.openapi.models.operations.StopPointDirectionResponse(contentType, httpRes.statusCode()) {{
             stopPointDirection200ApplicationJSONString = null;
             stopPointDirection200ApplicationXMLString = null;
             stopPointDirection200TextJSONString = null;
             stopPointDirection200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,14 +281,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointDisruptionResponse res = new org.openapis.openapi.models.operations.StopPointDisruptionResponse() {{
+        org.openapis.openapi.models.operations.StopPointDisruptionResponse res = new org.openapis.openapi.models.operations.StopPointDisruptionResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesDisruptedPoints = null;
             tflApiPresentationEntitiesDisruptedPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -349,14 +339,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointDisruptionByModeResponse res = new org.openapis.openapi.models.operations.StopPointDisruptionByModeResponse() {{
+        org.openapis.openapi.models.operations.StopPointDisruptionByModeResponse res = new org.openapis.openapi.models.operations.StopPointDisruptionByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesDisruptedPoints = null;
             tflApiPresentationEntitiesDisruptedPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -409,14 +397,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetResponse res = new org.openapis.openapi.models.operations.StopPointGetResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetResponse res = new org.openapis.openapi.models.operations.StopPointGetResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -469,14 +455,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetByGeoPointResponse res = new org.openapis.openapi.models.operations.StopPointGetByGeoPointResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetByGeoPointResponse res = new org.openapis.openapi.models.operations.StopPointGetByGeoPointResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPointsResponse = null;
             tflApiPresentationEntitiesStopPointsResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -529,14 +513,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetByModeResponse res = new org.openapis.openapi.models.operations.StopPointGetByModeResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetByModeResponse res = new org.openapis.openapi.models.operations.StopPointGetByModeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPointsResponse = null;
             tflApiPresentationEntitiesStopPointsResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -589,14 +571,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetBySmsResponse res = new org.openapis.openapi.models.operations.StopPointGetBySmsResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetBySmsResponse res = new org.openapis.openapi.models.operations.StopPointGetBySmsResponse(contentType, httpRes.statusCode()) {{
             systemObject = null;
             systemObject = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,14 +623,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetByTypeResponse res = new org.openapis.openapi.models.operations.StopPointGetByTypeResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetByTypeResponse res = new org.openapis.openapi.models.operations.StopPointGetByTypeResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -697,14 +675,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationResponse res = new org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationResponse res = new org.openapis.openapi.models.operations.StopPointGetByTypeWithPaginationResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -751,14 +727,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetCarParksByIdResponse res = new org.openapis.openapi.models.operations.StopPointGetCarParksByIdResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetCarParksByIdResponse res = new org.openapis.openapi.models.operations.StopPointGetCarParksByIdResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -811,14 +785,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetServiceTypesResponse res = new org.openapis.openapi.models.operations.StopPointGetServiceTypesResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetServiceTypesResponse res = new org.openapis.openapi.models.operations.StopPointGetServiceTypesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesLineServiceTypes = null;
             tflApiPresentationEntitiesLineServiceTypes = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -865,14 +837,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsResponse res = new org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsResponse() {{
+        org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsResponse res = new org.openapis.openapi.models.operations.StopPointGetTaxiRanksByIdsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -918,14 +888,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointMetaCategoriesResponse res = new org.openapis.openapi.models.operations.StopPointMetaCategoriesResponse() {{
+        org.openapis.openapi.models.operations.StopPointMetaCategoriesResponse res = new org.openapis.openapi.models.operations.StopPointMetaCategoriesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPointCategories = null;
             tflApiPresentationEntitiesStopPointCategories = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -971,14 +939,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointMetaModesResponse res = new org.openapis.openapi.models.operations.StopPointMetaModesResponse() {{
+        org.openapis.openapi.models.operations.StopPointMetaModesResponse res = new org.openapis.openapi.models.operations.StopPointMetaModesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesModes = null;
             tflApiPresentationEntitiesModes = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1024,14 +990,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointMetaStopTypesResponse res = new org.openapis.openapi.models.operations.StopPointMetaStopTypesResponse() {{
+        org.openapis.openapi.models.operations.StopPointMetaStopTypesResponse res = new org.openapis.openapi.models.operations.StopPointMetaStopTypesResponse(contentType, httpRes.statusCode()) {{
             stopPointMetaStopTypes200ApplicationJSONStrings = null;
             body = null;
             body = null;
             stopPointMetaStopTypes200TextJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1084,14 +1048,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointReachableFromResponse res = new org.openapis.openapi.models.operations.StopPointReachableFromResponse() {{
+        org.openapis.openapi.models.operations.StopPointReachableFromResponse res = new org.openapis.openapi.models.operations.StopPointReachableFromResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPoints = null;
             tflApiPresentationEntitiesStopPoints = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1144,14 +1106,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointRouteResponse res = new org.openapis.openapi.models.operations.StopPointRouteResponse() {{
+        org.openapis.openapi.models.operations.StopPointRouteResponse res = new org.openapis.openapi.models.operations.StopPointRouteResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesStopPointRouteSections = null;
             tflApiPresentationEntitiesStopPointRouteSections = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1204,14 +1164,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopPointSearchResponse res = new org.openapis.openapi.models.operations.StopPointSearchResponse() {{
+        org.openapis.openapi.models.operations.StopPointSearchResponse res = new org.openapis.openapi.models.operations.StopPointSearchResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesSearchResponse = null;
             tflApiPresentationEntitiesSearchResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1264,14 +1222,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStopPointSearchResponse res = new org.openapis.openapi.models.operations.GetStopPointSearchResponse() {{
+        org.openapis.openapi.models.operations.GetStopPointSearchResponse res = new org.openapis.openapi.models.operations.GetStopPointSearchResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesSearchResponse = null;
             tflApiPresentationEntitiesSearchResponse = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1324,14 +1280,12 @@ public class StopPoint {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesResponse res = new org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesResponse() {{
+        org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesResponse res = new org.openapis.openapi.models.operations.GetStopPointIdPlaceTypesResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesPlaces = null;
             tflApiPresentationEntitiesPlaces = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

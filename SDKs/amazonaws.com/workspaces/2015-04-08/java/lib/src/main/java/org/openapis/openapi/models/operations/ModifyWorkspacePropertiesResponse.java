@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyWorkspacePropertiesResponse {
@@ -12,6 +13,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifyWorkspacePropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifyWorkspacePropertiesResponse {
     
     
     public String contentType;
+
     public ModifyWorkspacePropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifyWorkspacePropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object invalidResourceStateException;
+
     public ModifyWorkspacePropertiesResponse withInvalidResourceStateException(Object invalidResourceStateException) {
         this.invalidResourceStateException = invalidResourceStateException;
         return this;
@@ -49,6 +54,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public java.util.Map<String, Object> modifyWorkspacePropertiesResult;
+
     public ModifyWorkspacePropertiesResponse withModifyWorkspacePropertiesResult(java.util.Map<String, Object> modifyWorkspacePropertiesResult) {
         this.modifyWorkspacePropertiesResult = modifyWorkspacePropertiesResult;
         return this;
@@ -59,6 +65,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object operationInProgressException;
+
     public ModifyWorkspacePropertiesResponse withOperationInProgressException(Object operationInProgressException) {
         this.operationInProgressException = operationInProgressException;
         return this;
@@ -66,6 +73,7 @@ public class ModifyWorkspacePropertiesResponse {
     
     
     public Integer statusCode;
+
     public ModifyWorkspacePropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ModifyWorkspacePropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyWorkspacePropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifyWorkspacePropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object resourceUnavailableException;
+
     public ModifyWorkspacePropertiesResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class ModifyWorkspacePropertiesResponse {
      */
     
     public Object unsupportedWorkspaceConfigurationException;
+
     public ModifyWorkspacePropertiesResponse withUnsupportedWorkspaceConfigurationException(Object unsupportedWorkspaceConfigurationException) {
         this.unsupportedWorkspaceConfigurationException = unsupportedWorkspaceConfigurationException;
         return this;
     }
     
+    public ModifyWorkspacePropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

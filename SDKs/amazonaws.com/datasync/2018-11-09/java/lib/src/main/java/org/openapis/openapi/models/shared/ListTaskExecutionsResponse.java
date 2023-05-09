@@ -15,6 +15,7 @@ public class ListTaskExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTaskExecutionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTaskExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutions")
     public TaskExecutionListEntry[] taskExecutions;
+
     public ListTaskExecutionsResponse withTaskExecutions(TaskExecutionListEntry[] taskExecutions) {
         this.taskExecutions = taskExecutions;
         return this;
     }
     
+    public ListTaskExecutionsResponse(){}
 }

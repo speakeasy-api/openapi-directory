@@ -15,6 +15,7 @@ public class Job {
      */
     
     public OffsetDateTime creationDate;
+
     public Job withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -25,6 +26,7 @@ public class Job {
      */
     
     public Boolean isCanceled;
+
     public Job withIsCanceled(Boolean isCanceled) {
         this.isCanceled = isCanceled;
         return this;
@@ -35,6 +37,7 @@ public class Job {
      */
     
     public String jobId;
+
     public Job withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -45,9 +48,11 @@ public class Job {
      */
     
     public JobTypeEnum jobType;
+
     public Job withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
     }
     
+    public Job(){}
 }

@@ -18,6 +18,7 @@ public class GsiPrediction200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forecast")
     public org.openapis.openapi.models.shared.ForecastItem[] forecast;
+
     public GsiPrediction200ApplicationJSON withForecast(org.openapis.openapi.models.shared.ForecastItem[] forecast) {
         this.forecast = forecast;
         return this;
@@ -29,6 +30,7 @@ public class GsiPrediction200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public GsiPrediction200ApplicationJSONLocation location;
+
     public GsiPrediction200ApplicationJSON withLocation(GsiPrediction200ApplicationJSONLocation location) {
         this.location = location;
         return this;
@@ -40,9 +42,11 @@ public class GsiPrediction200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matrix")
     public GsiPrediction200ApplicationJSONMatrix matrix;
+
     public GsiPrediction200ApplicationJSON withMatrix(GsiPrediction200ApplicationJSONMatrix matrix) {
         this.matrix = matrix;
         return this;
     }
     
+    public GsiPrediction200ApplicationJSON(){}
 }

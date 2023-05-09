@@ -12,9 +12,11 @@ public class BillingPeriodListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetBillingPeriodsLink self;
+
     public BillingPeriodListLinks withSelf(LinksGetBillingPeriodsLink self) {
         this.self = self;
         return this;
     }
     
+    public BillingPeriodListLinks(){}
 }

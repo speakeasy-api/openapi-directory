@@ -15,6 +15,7 @@ public class RecoveryInstanceDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytes")
     public Long bytes;
+
     public RecoveryInstanceDisk withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -23,6 +24,7 @@ public class RecoveryInstanceDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ebsVolumeID")
     public String ebsVolumeID;
+
     public RecoveryInstanceDisk withEbsVolumeID(String ebsVolumeID) {
         this.ebsVolumeID = ebsVolumeID;
         return this;
@@ -31,9 +33,11 @@ public class RecoveryInstanceDisk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("internalDeviceName")
     public String internalDeviceName;
+
     public RecoveryInstanceDisk withInternalDeviceName(String internalDeviceName) {
         this.internalDeviceName = internalDeviceName;
         return this;
     }
     
+    public RecoveryInstanceDisk(){}
 }

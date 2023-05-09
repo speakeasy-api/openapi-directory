@@ -18,6 +18,7 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batch")
     public AggregationResultBatch batch;
+
     public RunAggregationQueryResponse withBatch(AggregationResultBatch batch) {
         this.batch = batch;
         return this;
@@ -29,6 +30,7 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public AggregationQuery query;
+
     public RunAggregationQueryResponse withQuery(AggregationQuery query) {
         this.query = query;
         return this;
@@ -40,9 +42,11 @@ public class RunAggregationQueryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunAggregationQueryResponse withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunAggregationQueryResponse(){}
 }

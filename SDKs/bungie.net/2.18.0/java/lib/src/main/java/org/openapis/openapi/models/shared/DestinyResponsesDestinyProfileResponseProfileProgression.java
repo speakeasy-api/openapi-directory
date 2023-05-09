@@ -17,6 +17,7 @@ public class DestinyResponsesDestinyProfileResponseProfileProgression {
      */
     
     public DestinyComponentsProfilesDestinyProfileProgressionComponent data;
+
     public DestinyResponsesDestinyProfileResponseProfileProgression withData(DestinyComponentsProfilesDestinyProfileProgressionComponent data) {
         this.data = data;
         return this;
@@ -27,6 +28,7 @@ public class DestinyResponsesDestinyProfileResponseProfileProgression {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseProfileProgression withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -34,9 +36,11 @@ public class DestinyResponsesDestinyProfileResponseProfileProgression {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseProfileProgression withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseProfileProgression(){}
 }

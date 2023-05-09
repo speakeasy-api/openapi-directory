@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdAttachmentsRequest {
@@ -12,6 +13,7 @@ public class GetUsersIdAttachmentsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public GetUsersIdAttachmentsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +24,13 @@ public class GetUsersIdAttachmentsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unassigned")
     public Long unassigned;
+
     public GetUsersIdAttachmentsRequest withUnassigned(Long unassigned) {
         this.unassigned = unassigned;
         return this;
     }
     
+    public GetUsersIdAttachmentsRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

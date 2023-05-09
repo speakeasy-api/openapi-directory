@@ -15,9 +15,11 @@ public class UpdateWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.WorkspaceResponse data;
+
     public UpdateWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.WorkspaceResponse data) {
         this.data = data;
         return this;
     }
     
+    public UpdateWorkspace200ApplicationJSON(){}
 }

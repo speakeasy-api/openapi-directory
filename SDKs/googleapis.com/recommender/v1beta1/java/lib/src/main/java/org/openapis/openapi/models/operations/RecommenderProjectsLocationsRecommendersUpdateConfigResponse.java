@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecommenderProjectsLocationsRecommendersUpdateConfigResponse {
     
     public String contentType;
+
     public RecommenderProjectsLocationsRecommendersUpdateConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecommenderProjectsLocationsRecommendersUpdateConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecommenderV1beta1RecommenderConfig googleCloudRecommenderV1beta1RecommenderConfig;
+
     public RecommenderProjectsLocationsRecommendersUpdateConfigResponse withGoogleCloudRecommenderV1beta1RecommenderConfig(org.openapis.openapi.models.shared.GoogleCloudRecommenderV1beta1RecommenderConfig googleCloudRecommenderV1beta1RecommenderConfig) {
         this.googleCloudRecommenderV1beta1RecommenderConfig = googleCloudRecommenderV1beta1RecommenderConfig;
         return this;
@@ -26,6 +29,7 @@ public class RecommenderProjectsLocationsRecommendersUpdateConfigResponse {
     
     
     public Integer statusCode;
+
     public RecommenderProjectsLocationsRecommendersUpdateConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecommenderProjectsLocationsRecommendersUpdateConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecommenderProjectsLocationsRecommendersUpdateConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecommenderProjectsLocationsRecommendersUpdateConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

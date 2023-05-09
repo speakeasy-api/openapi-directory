@@ -15,6 +15,7 @@ public class CreateRateBasedRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public CreateRateBasedRuleResponse withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -23,9 +24,11 @@ public class CreateRateBasedRuleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rule")
     public RateBasedRule rule;
+
     public CreateRateBasedRuleResponse withRule(RateBasedRule rule) {
         this.rule = rule;
         return this;
     }
     
+    public CreateRateBasedRuleResponse(){}
 }

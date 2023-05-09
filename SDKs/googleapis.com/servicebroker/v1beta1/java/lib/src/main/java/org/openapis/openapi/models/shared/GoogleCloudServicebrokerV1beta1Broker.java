@@ -19,6 +19,7 @@ public class GoogleCloudServicebrokerV1beta1Broker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudServicebrokerV1beta1Broker withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +34,7 @@ public class GoogleCloudServicebrokerV1beta1Broker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudServicebrokerV1beta1Broker withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +47,7 @@ public class GoogleCloudServicebrokerV1beta1Broker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GoogleCloudServicebrokerV1beta1Broker withTitle(String title) {
         this.title = title;
         return this;
@@ -57,9 +60,11 @@ public class GoogleCloudServicebrokerV1beta1Broker {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GoogleCloudServicebrokerV1beta1Broker withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GoogleCloudServicebrokerV1beta1Broker(){}
 }

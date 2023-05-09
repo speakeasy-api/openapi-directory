@@ -12,6 +12,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Double failed;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withFailed(Double failed) {
         this.failed = failed;
         return this;
@@ -20,6 +21,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Double number;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withNumber(Double number) {
         this.number = number;
         return this;
@@ -36,6 +39,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_url")
     public String reportUrl;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withReportUrl(String reportUrl) {
         this.reportUrl = reportUrl;
         return this;
@@ -44,6 +48,7 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipped")
     public Double skipped;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withSkipped(Double skipped) {
         this.skipped = skipped;
         return this;
@@ -52,9 +57,11 @@ public class TestGetTestReport200ApplicationJSONFeaturesTestsRuns {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps[] steps;
+
     public TestGetTestReport200ApplicationJSONFeaturesTestsRuns withSteps(TestGetTestReport200ApplicationJSONFeaturesTestsRunsSteps[] steps) {
         this.steps = steps;
         return this;
     }
     
+    public TestGetTestReport200ApplicationJSONFeaturesTestsRuns(){}
 }

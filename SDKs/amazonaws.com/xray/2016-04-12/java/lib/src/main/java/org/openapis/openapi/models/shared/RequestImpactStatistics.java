@@ -15,6 +15,7 @@ public class RequestImpactStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaultCount")
     public Long faultCount;
+
     public RequestImpactStatistics withFaultCount(Long faultCount) {
         this.faultCount = faultCount;
         return this;
@@ -23,6 +24,7 @@ public class RequestImpactStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OkCount")
     public Long okCount;
+
     public RequestImpactStatistics withOkCount(Long okCount) {
         this.okCount = okCount;
         return this;
@@ -31,9 +33,11 @@ public class RequestImpactStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public RequestImpactStatistics withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public RequestImpactStatistics(){}
 }

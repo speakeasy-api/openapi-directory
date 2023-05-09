@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchTransactionRulesTransactionRuleIdResponse {
     
     public String contentType;
+
     public PatchTransactionRulesTransactionRuleIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PatchTransactionRulesTransactionRuleIdResponse {
     
     
     public Integer statusCode;
+
     public PatchTransactionRulesTransactionRuleIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PatchTransactionRulesTransactionRuleIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchTransactionRulesTransactionRuleIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PatchTransactionRulesTransactionRuleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PatchTransactionRulesTransactionRuleIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PatchTransactionRulesTransactionRuleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.TransactionRule transactionRule;
+
     public PatchTransactionRulesTransactionRuleIdResponse withTransactionRule(org.openapis.openapi.models.shared.TransactionRule transactionRule) {
         this.transactionRule = transactionRule;
         return this;
     }
     
+    public PatchTransactionRulesTransactionRuleIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

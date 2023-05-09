@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConfigurationStatusProgress {
     @JsonProperty("key")
     public String key;
+
     public ConfigurationStatusProgress withKey(String key) {
         this.key = key;
         return this;
@@ -16,9 +17,14 @@ public class ConfigurationStatusProgress {
     
     @JsonProperty("status")
     public String status;
+
     public ConfigurationStatusProgress withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public ConfigurationStatusProgress(@JsonProperty("key") String key, @JsonProperty("status") String status) {
+        this.key = key;
+        this.status = status;
+  }
 }

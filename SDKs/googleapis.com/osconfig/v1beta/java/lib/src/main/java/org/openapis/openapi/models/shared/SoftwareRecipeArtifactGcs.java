@@ -18,6 +18,7 @@ public class SoftwareRecipeArtifactGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucket")
     public String bucket;
+
     public SoftwareRecipeArtifactGcs withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -29,6 +30,7 @@ public class SoftwareRecipeArtifactGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generation")
     public String generation;
+
     public SoftwareRecipeArtifactGcs withGeneration(String generation) {
         this.generation = generation;
         return this;
@@ -40,9 +42,11 @@ public class SoftwareRecipeArtifactGcs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public SoftwareRecipeArtifactGcs withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public SoftwareRecipeArtifactGcs(){}
 }

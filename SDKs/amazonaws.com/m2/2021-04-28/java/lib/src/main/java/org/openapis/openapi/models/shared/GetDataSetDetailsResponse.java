@@ -20,6 +20,7 @@ public class GetDataSetDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blocksize")
     public Long blocksize;
+
     public GetDataSetDetailsResponse withBlocksize(Long blocksize) {
         this.blocksize = blocksize;
         return this;
@@ -30,6 +31,7 @@ public class GetDataSetDetailsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetDataSetDetailsResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class GetDataSetDetailsResponse {
     
     @JsonProperty("dataSetName")
     public String dataSetName;
+
     public GetDataSetDetailsResponse withDataSetName(String dataSetName) {
         this.dataSetName = dataSetName;
         return this;
@@ -45,6 +48,7 @@ public class GetDataSetDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSetOrg")
     public DatasetDetailOrgAttributes dataSetOrg;
+
     public GetDataSetDetailsResponse withDataSetOrg(DatasetDetailOrgAttributes dataSetOrg) {
         this.dataSetOrg = dataSetOrg;
         return this;
@@ -55,6 +59,7 @@ public class GetDataSetDetailsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastReferencedTime")
     public OffsetDateTime lastReferencedTime;
+
     public GetDataSetDetailsResponse withLastReferencedTime(OffsetDateTime lastReferencedTime) {
         this.lastReferencedTime = lastReferencedTime;
         return this;
@@ -65,6 +70,7 @@ public class GetDataSetDetailsResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public GetDataSetDetailsResponse withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -73,6 +79,7 @@ public class GetDataSetDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public GetDataSetDetailsResponse withLocation(String location) {
         this.location = location;
         return this;
@@ -81,9 +88,13 @@ public class GetDataSetDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordLength")
     public Long recordLength;
+
     public GetDataSetDetailsResponse withRecordLength(Long recordLength) {
         this.recordLength = recordLength;
         return this;
     }
     
+    public GetDataSetDetailsResponse(@JsonProperty("dataSetName") String dataSetName) {
+        this.dataSetName = dataSetName;
+  }
 }

@@ -18,6 +18,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public FormatMessage description;
+
     public StatusMessage withDescription(FormatMessage description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isError")
     public Boolean isError;
+
     public StatusMessage withIsError(Boolean isError) {
         this.isError = isError;
         return this;
@@ -40,9 +42,11 @@ public class StatusMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refersTo")
     public StatusMessageRefersToEnum refersTo;
+
     public StatusMessage withRefersTo(StatusMessageRefersToEnum refersTo) {
         this.refersTo = refersTo;
         return this;
     }
     
+    public StatusMessage(){}
 }

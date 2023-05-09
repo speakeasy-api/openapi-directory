@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLogStreamRequest {
     @JsonProperty("logGroupName")
     public String logGroupName;
+
     public DeleteLogStreamRequest withLogGroupName(String logGroupName) {
         this.logGroupName = logGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteLogStreamRequest {
     
     @JsonProperty("logStreamName")
     public String logStreamName;
+
     public DeleteLogStreamRequest withLogStreamName(String logStreamName) {
         this.logStreamName = logStreamName;
         return this;
     }
     
+    public DeleteLogStreamRequest(@JsonProperty("logGroupName") String logGroupName, @JsonProperty("logStreamName") String logStreamName) {
+        this.logGroupName = logGroupName;
+        this.logStreamName = logStreamName;
+  }
 }

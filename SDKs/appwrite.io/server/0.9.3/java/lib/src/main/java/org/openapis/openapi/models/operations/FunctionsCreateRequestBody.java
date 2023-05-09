@@ -15,6 +15,7 @@ public class FunctionsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public FunctionsCreateRequestBody withEvents(String[] events) {
         this.events = events;
         return this;
@@ -25,6 +26,7 @@ public class FunctionsCreateRequestBody {
      */
     @JsonProperty("execute")
     public String[] execute;
+
     public FunctionsCreateRequestBody withExecute(String[] execute) {
         this.execute = execute;
         return this;
@@ -35,6 +37,7 @@ public class FunctionsCreateRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public FunctionsCreateRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class FunctionsCreateRequestBody {
      */
     @JsonProperty("runtime")
     public String runtime;
+
     public FunctionsCreateRequestBody withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -56,6 +60,7 @@ public class FunctionsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public String schedule;
+
     public FunctionsCreateRequestBody withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -67,6 +72,7 @@ public class FunctionsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public Long timeout;
+
     public FunctionsCreateRequestBody withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
@@ -78,9 +84,15 @@ public class FunctionsCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vars")
     public java.util.Map<String, Object> vars;
+
     public FunctionsCreateRequestBody withVars(java.util.Map<String, Object> vars) {
         this.vars = vars;
         return this;
     }
     
+    public FunctionsCreateRequestBody(@JsonProperty("execute") String[] execute, @JsonProperty("name") String name, @JsonProperty("runtime") String runtime) {
+        this.execute = execute;
+        this.name = name;
+        this.runtime = runtime;
+  }
 }

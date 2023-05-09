@@ -15,6 +15,7 @@ public class PagerDutyIncidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoResolve")
     public Boolean autoResolve;
+
     public PagerDutyIncidentDetail withAutoResolve(Boolean autoResolve) {
         this.autoResolve = autoResolve;
         return this;
@@ -22,6 +23,7 @@ public class PagerDutyIncidentDetail {
     
     @JsonProperty("id")
     public String id;
+
     public PagerDutyIncidentDetail withId(String id) {
         this.id = id;
         return this;
@@ -30,9 +32,13 @@ public class PagerDutyIncidentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretId")
     public String secretId;
+
     public PagerDutyIncidentDetail withSecretId(String secretId) {
         this.secretId = secretId;
         return this;
     }
     
+    public PagerDutyIncidentDetail(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

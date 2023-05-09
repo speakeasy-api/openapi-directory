@@ -18,9 +18,11 @@ public class FetchCaCertsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public FetchCaCertsRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public FetchCaCertsRequest(){}
 }

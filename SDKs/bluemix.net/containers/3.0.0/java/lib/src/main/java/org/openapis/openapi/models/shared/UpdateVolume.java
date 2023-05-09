@@ -18,6 +18,7 @@ public class UpdateVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addSpaces")
     public String[] addSpaces;
+
     public UpdateVolume withAddSpaces(String[] addSpaces) {
         this.addSpaces = addSpaces;
         return this;
@@ -29,9 +30,11 @@ public class UpdateVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeSpaces")
     public String[] removeSpaces;
+
     public UpdateVolume withRemoveSpaces(String[] removeSpaces) {
         this.removeSpaces = removeSpaces;
         return this;
     }
     
+    public UpdateVolume(){}
 }

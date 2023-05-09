@@ -18,6 +18,7 @@ public class FailedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public FailedRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -29,6 +30,7 @@ public class FailedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public FailureCodeEnum failureCode;
+
     public FailedRequest withFailureCode(FailureCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -40,9 +42,11 @@ public class FailedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FailedRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public FailedRequest(){}
 }

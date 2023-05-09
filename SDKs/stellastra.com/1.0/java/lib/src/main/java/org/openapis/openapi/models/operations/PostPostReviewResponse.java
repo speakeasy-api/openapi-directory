@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPostReviewResponse {
     
     public String contentType;
+
     public PostPostReviewResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPostReviewResponse {
     
     
     public Integer statusCode;
+
     public PostPostReviewResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPostReviewResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPostReviewResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostPostReviewResponse {
      */
     
     public PostPostReview200ApplicationJSON postPostReview200ApplicationJSONObject;
+
     public PostPostReviewResponse withPostPostReview200ApplicationJSONObject(PostPostReview200ApplicationJSON postPostReview200ApplicationJSONObject) {
         this.postPostReview200ApplicationJSONObject = postPostReview200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PostPostReviewResponse {
      */
     
     public PostPostReview400ApplicationJSON postPostReview400ApplicationJSONObject;
+
     public PostPostReviewResponse withPostPostReview400ApplicationJSONObject(PostPostReview400ApplicationJSON postPostReview400ApplicationJSONObject) {
         this.postPostReview400ApplicationJSONObject = postPostReview400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PostPostReviewResponse {
      */
     
     public PostPostReview401ApplicationJSON postPostReview401ApplicationJSONObject;
+
     public PostPostReviewResponse withPostPostReview401ApplicationJSONObject(PostPostReview401ApplicationJSON postPostReview401ApplicationJSONObject) {
         this.postPostReview401ApplicationJSONObject = postPostReview401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class PostPostReviewResponse {
      */
     
     public PostPostReview403ApplicationJSON postPostReview403ApplicationJSONObject;
+
     public PostPostReviewResponse withPostPostReview403ApplicationJSONObject(PostPostReview403ApplicationJSON postPostReview403ApplicationJSONObject) {
         this.postPostReview403ApplicationJSONObject = postPostReview403ApplicationJSONObject;
         return this;
     }
     
+    public PostPostReviewResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

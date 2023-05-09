@@ -15,6 +15,7 @@ public class DescribeTableStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeTableStatisticsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +24,7 @@ public class DescribeTableStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskArn")
     public String replicationTaskArn;
+
     public DescribeTableStatisticsResponse withReplicationTaskArn(String replicationTaskArn) {
         this.replicationTaskArn = replicationTaskArn;
         return this;
@@ -31,9 +33,11 @@ public class DescribeTableStatisticsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableStatistics")
     public TableStatistics[] tableStatistics;
+
     public DescribeTableStatisticsResponse withTableStatistics(TableStatistics[] tableStatistics) {
         this.tableStatistics = tableStatistics;
         return this;
     }
     
+    public DescribeTableStatisticsResponse(){}
 }

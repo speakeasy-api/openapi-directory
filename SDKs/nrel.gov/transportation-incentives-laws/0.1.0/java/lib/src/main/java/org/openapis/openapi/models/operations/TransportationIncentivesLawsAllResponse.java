@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TransportationIncentivesLawsAllResponse {
     
     public byte[] body;
+
     public TransportationIncentivesLawsAllResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TransportationIncentivesLawsAllResponse {
     
     
     public String contentType;
+
     public TransportationIncentivesLawsAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TransportationIncentivesLawsAllResponse {
     
     
     public Integer statusCode;
+
     public TransportationIncentivesLawsAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TransportationIncentivesLawsAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TransportationIncentivesLawsAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TransportationIncentivesLawsAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

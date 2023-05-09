@@ -15,6 +15,7 @@ public class ConnectionHeaderParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsValueSecret")
     public Boolean isValueSecret;
+
     public ConnectionHeaderParameter withIsValueSecret(Boolean isValueSecret) {
         this.isValueSecret = isValueSecret;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionHeaderParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ConnectionHeaderParameter withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ConnectionHeaderParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ConnectionHeaderParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConnectionHeaderParameter(){}
 }

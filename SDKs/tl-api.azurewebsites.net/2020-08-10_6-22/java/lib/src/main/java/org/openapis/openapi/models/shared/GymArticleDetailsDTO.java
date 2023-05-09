@@ -17,6 +17,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("articleId")
     public Integer articleId;
+
     public GymArticleDetailsDTO withArticleId(Integer articleId) {
         this.articleId = articleId;
         return this;
@@ -25,6 +26,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableQty")
     public Double availableQty;
+
     public GymArticleDetailsDTO withAvailableQty(Double availableQty) {
         this.availableQty = availableQty;
         return this;
@@ -36,6 +38,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdUser")
     public String createdUser;
+
     public GymArticleDetailsDTO withCreatedUser(String createdUser) {
         this.createdUser = createdUser;
         return this;
@@ -44,6 +47,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeeDiscount")
     public Double employeeDiscount;
+
     public GymArticleDetailsDTO withEmployeeDiscount(Double employeeDiscount) {
         this.employeeDiscount = employeeDiscount;
         return this;
@@ -52,6 +56,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employeePrice")
     public Double employeePrice;
+
     public GymArticleDetailsDTO withEmployeePrice(Double employeePrice) {
         this.employeePrice = employeePrice;
         return this;
@@ -63,6 +68,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymId")
     public Integer gymId;
+
     public GymArticleDetailsDTO withGymId(Integer gymId) {
         this.gymId = gymId;
         return this;
@@ -74,6 +80,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymIdList")
     public String gymIdList;
+
     public GymArticleDetailsDTO withGymIdList(String gymIdList) {
         this.gymIdList = gymIdList;
         return this;
@@ -85,6 +92,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gymName")
     public String gymName;
+
     public GymArticleDetailsDTO withGymName(String gymName) {
         this.gymName = gymName;
         return this;
@@ -93,6 +101,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GymArticleDetailsDTO withId(Integer id) {
         this.id = id;
         return this;
@@ -104,6 +113,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefault")
     public Boolean isDefault;
+
     public GymArticleDetailsDTO withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -112,6 +122,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInventoryItem")
     public Boolean isInventoryItem;
+
     public GymArticleDetailsDTO withIsInventoryItem(Boolean isInventoryItem) {
         this.isInventoryItem = isInventoryItem;
         return this;
@@ -120,6 +131,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isObsolete")
     public Boolean isObsolete;
+
     public GymArticleDetailsDTO withIsObsolete(Boolean isObsolete) {
         this.isObsolete = isObsolete;
         return this;
@@ -131,6 +143,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifiedUser")
     public String modifiedUser;
+
     public GymArticleDetailsDTO withModifiedUser(String modifiedUser) {
         this.modifiedUser = modifiedUser;
         return this;
@@ -139,6 +152,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reorderLevel")
     public Double reorderLevel;
+
     public GymArticleDetailsDTO withReorderLevel(Double reorderLevel) {
         this.reorderLevel = reorderLevel;
         return this;
@@ -150,6 +164,7 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revenueAccountId")
     public Integer revenueAccountId;
+
     public GymArticleDetailsDTO withRevenueAccountId(Integer revenueAccountId) {
         this.revenueAccountId = revenueAccountId;
         return this;
@@ -158,9 +173,11 @@ public class GymArticleDetailsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Double sellingPrice;
+
     public GymArticleDetailsDTO withSellingPrice(Double sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
     }
     
+    public GymArticleDetailsDTO(){}
 }

@@ -15,6 +15,7 @@ public class AcceptResourceShareInvitationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public AcceptResourceShareInvitationResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +24,11 @@ public class AcceptResourceShareInvitationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareInvitation")
     public ResourceShareInvitation resourceShareInvitation;
+
     public AcceptResourceShareInvitationResponse withResourceShareInvitation(ResourceShareInvitation resourceShareInvitation) {
         this.resourceShareInvitation = resourceShareInvitation;
         return this;
     }
     
+    public AcceptResourceShareInvitationResponse(){}
 }

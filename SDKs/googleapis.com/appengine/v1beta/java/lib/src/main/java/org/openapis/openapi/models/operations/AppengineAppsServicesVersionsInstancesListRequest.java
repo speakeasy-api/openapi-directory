@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppengineAppsServicesVersionsInstancesListRequest {
@@ -12,6 +13,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AppengineAppsServicesVersionsInstancesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AppengineAppsServicesVersionsInstancesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AppengineAppsServicesVersionsInstancesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=appsId")
     public String appsId;
+
     public AppengineAppsServicesVersionsInstancesListRequest withAppsId(String appsId) {
         this.appsId = appsId;
         return this;
@@ -52,6 +57,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AppengineAppsServicesVersionsInstancesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AppengineAppsServicesVersionsInstancesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AppengineAppsServicesVersionsInstancesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AppengineAppsServicesVersionsInstancesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public AppengineAppsServicesVersionsInstancesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -102,6 +112,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public AppengineAppsServicesVersionsInstancesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AppengineAppsServicesVersionsInstancesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AppengineAppsServicesVersionsInstancesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=servicesId")
     public String servicesId;
+
     public AppengineAppsServicesVersionsInstancesListRequest withServicesId(String servicesId) {
         this.servicesId = servicesId;
         return this;
@@ -142,6 +156,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AppengineAppsServicesVersionsInstancesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AppengineAppsServicesVersionsInstancesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,9 +178,15 @@ public class AppengineAppsServicesVersionsInstancesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionsId")
     public String versionsId;
+
     public AppengineAppsServicesVersionsInstancesListRequest withVersionsId(String versionsId) {
         this.versionsId = versionsId;
         return this;
     }
     
+    public AppengineAppsServicesVersionsInstancesListRequest(@JsonProperty("appsId") String appsId, @JsonProperty("servicesId") String servicesId, @JsonProperty("versionsId") String versionsId) {
+        this.appsId = appsId;
+        this.servicesId = servicesId;
+        this.versionsId = versionsId;
+  }
 }

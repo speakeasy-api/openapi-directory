@@ -18,6 +18,7 @@ public class UsageLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabledLogTypes")
     public UsageLogEnabledLogTypesEnum[] enabledLogTypes;
+
     public UsageLog withEnabledLogTypes(UsageLogEnabledLogTypesEnum[] enabledLogTypes) {
         this.enabledLogTypes = enabledLogTypes;
         return this;
@@ -29,9 +30,11 @@ public class UsageLog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadOnCellularAllowed")
     public UsageLogUploadOnCellularAllowedEnum[] uploadOnCellularAllowed;
+
     public UsageLog withUploadOnCellularAllowed(UsageLogUploadOnCellularAllowedEnum[] uploadOnCellularAllowed) {
         this.uploadOnCellularAllowed = uploadOnCellularAllowed;
         return this;
     }
     
+    public UsageLog(){}
 }

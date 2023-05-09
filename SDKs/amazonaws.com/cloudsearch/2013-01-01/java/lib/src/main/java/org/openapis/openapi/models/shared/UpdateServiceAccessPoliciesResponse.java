@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateServiceAccessPoliciesResponse - The result of an &lt;code&gt;UpdateServiceAccessPolicies&lt;/code&gt; request. Contains the new access policies.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class UpdateServiceAccessPoliciesResponse {
     
     public AccessPoliciesStatus accessPolicies;
+
     public UpdateServiceAccessPoliciesResponse withAccessPolicies(AccessPoliciesStatus accessPolicies) {
         this.accessPolicies = accessPolicies;
         return this;
     }
     
+    public UpdateServiceAccessPoliciesResponse(@JsonProperty("AccessPolicies") AccessPoliciesStatus accessPolicies) {
+        this.accessPolicies = accessPolicies;
+  }
 }

@@ -15,6 +15,7 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Filter withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class Filter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValueList")
     public String[] valueList;
+
     public Filter withValueList(String[] valueList) {
         this.valueList = valueList;
         return this;
     }
     
+    public Filter(){}
 }

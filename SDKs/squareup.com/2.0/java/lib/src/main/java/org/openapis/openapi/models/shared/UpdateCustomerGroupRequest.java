@@ -19,9 +19,13 @@ public class UpdateCustomerGroupRequest {
      */
     @JsonProperty("group")
     public CustomerGroup group;
+
     public UpdateCustomerGroupRequest withGroup(CustomerGroup group) {
         this.group = group;
         return this;
     }
     
+    public UpdateCustomerGroupRequest(@JsonProperty("group") CustomerGroup group) {
+        this.group = group;
+  }
 }

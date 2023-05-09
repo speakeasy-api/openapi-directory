@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SectionModification {
     @JsonProperty("Operation")
     public OperationEnum operation;
+
     public SectionModification withOperation(OperationEnum operation) {
         this.operation = operation;
         return this;
@@ -21,6 +22,7 @@ public class SectionModification {
     
     @JsonProperty("Path")
     public String path;
+
     public SectionModification withPath(String path) {
         this.path = path;
         return this;
@@ -28,6 +30,7 @@ public class SectionModification {
     
     @JsonProperty("Section")
     public String section;
+
     public SectionModification withSection(String section) {
         this.section = section;
         return this;
@@ -36,9 +39,15 @@ public class SectionModification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public java.util.Map<String, Object> value;
+
     public SectionModification withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public SectionModification(@JsonProperty("Operation") OperationEnum operation, @JsonProperty("Path") String path, @JsonProperty("Section") String section) {
+        this.operation = operation;
+        this.path = path;
+        this.section = section;
+  }
 }

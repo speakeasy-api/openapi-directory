@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesTimetable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departureStopId")
     public String departureStopId;
+
     public TflApiPresentationEntitiesTimetable withDepartureStopId(String departureStopId) {
         this.departureStopId = departureStopId;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesTimetable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routes")
     public TflApiPresentationEntitiesTimetableRoute[] routes;
+
     public TflApiPresentationEntitiesTimetable withRoutes(TflApiPresentationEntitiesTimetableRoute[] routes) {
         this.routes = routes;
         return this;
     }
     
+    public TflApiPresentationEntitiesTimetable(){}
 }

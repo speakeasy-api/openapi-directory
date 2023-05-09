@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
     
     public String contentType;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
      */
     
     public TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSON teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withTeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject(TeamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSON teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject) {
         this.teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject = teamsAddOrUpdateProjectPermissionsLegacy403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
      */
     
     public TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSON teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withTeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject(TeamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSON teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject) {
         this.teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject = teamsAddOrUpdateProjectPermissionsLegacy415ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class TeamsAddOrUpdateProjectPermissionsLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public TeamsAddOrUpdateProjectPermissionsLegacyResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public TeamsAddOrUpdateProjectPermissionsLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

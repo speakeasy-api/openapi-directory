@@ -55,10 +55,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDistanceOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDistanceOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetDistanceBetweenPairsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,10 +131,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDistanceOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -175,10 +169,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.GetTruckDistanceBetweenPairsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +207,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDistanceOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDistanceOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -255,10 +245,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostDistanceBetweenPairsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,10 +283,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDistanceOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,10 +321,8 @@ public class Distance {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatResponse() {{
+        org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatResponse res = new org.openapis.openapi.models.operations.PostTruckDistanceBetweenPairsOutputFormatResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ContactListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ContactList[] items;
+
     public ContactListPage withItems(ContactList[] items) {
         this.items = items;
         return this;
@@ -26,6 +27,7 @@ public class ContactListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Integer limit;
+
     public ContactListPage withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -37,6 +39,7 @@ public class ContactListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offset")
     public Integer offset;
+
     public ContactListPage withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -48,9 +51,11 @@ public class ContactListPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Integer totalCount;
+
     public ContactListPage withTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public ContactListPage(){}
 }

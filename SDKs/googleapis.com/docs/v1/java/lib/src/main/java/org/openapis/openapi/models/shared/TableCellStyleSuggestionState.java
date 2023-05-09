@@ -18,6 +18,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backgroundColorSuggested")
     public Boolean backgroundColorSuggested;
+
     public TableCellStyleSuggestionState withBackgroundColorSuggested(Boolean backgroundColorSuggested) {
         this.backgroundColorSuggested = backgroundColorSuggested;
         return this;
@@ -29,6 +30,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderBottomSuggested")
     public Boolean borderBottomSuggested;
+
     public TableCellStyleSuggestionState withBorderBottomSuggested(Boolean borderBottomSuggested) {
         this.borderBottomSuggested = borderBottomSuggested;
         return this;
@@ -40,6 +42,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderLeftSuggested")
     public Boolean borderLeftSuggested;
+
     public TableCellStyleSuggestionState withBorderLeftSuggested(Boolean borderLeftSuggested) {
         this.borderLeftSuggested = borderLeftSuggested;
         return this;
@@ -51,6 +54,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderRightSuggested")
     public Boolean borderRightSuggested;
+
     public TableCellStyleSuggestionState withBorderRightSuggested(Boolean borderRightSuggested) {
         this.borderRightSuggested = borderRightSuggested;
         return this;
@@ -62,6 +66,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderTopSuggested")
     public Boolean borderTopSuggested;
+
     public TableCellStyleSuggestionState withBorderTopSuggested(Boolean borderTopSuggested) {
         this.borderTopSuggested = borderTopSuggested;
         return this;
@@ -73,6 +78,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpanSuggested")
     public Boolean columnSpanSuggested;
+
     public TableCellStyleSuggestionState withColumnSpanSuggested(Boolean columnSpanSuggested) {
         this.columnSpanSuggested = columnSpanSuggested;
         return this;
@@ -84,6 +90,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAlignmentSuggested")
     public Boolean contentAlignmentSuggested;
+
     public TableCellStyleSuggestionState withContentAlignmentSuggested(Boolean contentAlignmentSuggested) {
         this.contentAlignmentSuggested = contentAlignmentSuggested;
         return this;
@@ -95,6 +102,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingBottomSuggested")
     public Boolean paddingBottomSuggested;
+
     public TableCellStyleSuggestionState withPaddingBottomSuggested(Boolean paddingBottomSuggested) {
         this.paddingBottomSuggested = paddingBottomSuggested;
         return this;
@@ -106,6 +114,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingLeftSuggested")
     public Boolean paddingLeftSuggested;
+
     public TableCellStyleSuggestionState withPaddingLeftSuggested(Boolean paddingLeftSuggested) {
         this.paddingLeftSuggested = paddingLeftSuggested;
         return this;
@@ -117,6 +126,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingRightSuggested")
     public Boolean paddingRightSuggested;
+
     public TableCellStyleSuggestionState withPaddingRightSuggested(Boolean paddingRightSuggested) {
         this.paddingRightSuggested = paddingRightSuggested;
         return this;
@@ -128,6 +138,7 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingTopSuggested")
     public Boolean paddingTopSuggested;
+
     public TableCellStyleSuggestionState withPaddingTopSuggested(Boolean paddingTopSuggested) {
         this.paddingTopSuggested = paddingTopSuggested;
         return this;
@@ -139,9 +150,11 @@ public class TableCellStyleSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowSpanSuggested")
     public Boolean rowSpanSuggested;
+
     public TableCellStyleSuggestionState withRowSpanSuggested(Boolean rowSpanSuggested) {
         this.rowSpanSuggested = rowSpanSuggested;
         return this;
     }
     
+    public TableCellStyleSuggestionState(){}
 }

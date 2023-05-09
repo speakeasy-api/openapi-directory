@@ -12,6 +12,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartLabelDetectionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Features")
     public LabelDetectionFeatureNameEnum[] features;
+
     public StartLabelDetectionRequest withFeatures(LabelDetectionFeatureNameEnum[] features) {
         this.features = features;
         return this;
@@ -28,6 +30,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartLabelDetectionRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -36,6 +39,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinConfidence")
     public Float minConfidence;
+
     public StartLabelDetectionRequest withMinConfidence(Float minConfidence) {
         this.minConfidence = minConfidence;
         return this;
@@ -44,6 +48,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartLabelDetectionRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -52,6 +57,7 @@ public class StartLabelDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public LabelDetectionSettings settings;
+
     public StartLabelDetectionRequest withSettings(LabelDetectionSettings settings) {
         this.settings = settings;
         return this;
@@ -59,9 +65,13 @@ public class StartLabelDetectionRequest {
     
     @JsonProperty("Video")
     public Video video;
+
     public StartLabelDetectionRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartLabelDetectionRequest(@JsonProperty("Video") Video video) {
+        this.video = video;
+  }
 }

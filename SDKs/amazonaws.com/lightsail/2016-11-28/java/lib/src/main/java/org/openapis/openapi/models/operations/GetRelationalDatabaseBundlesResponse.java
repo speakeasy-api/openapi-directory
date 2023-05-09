@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRelationalDatabaseBundlesResponse {
@@ -12,6 +13,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRelationalDatabaseBundlesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetRelationalDatabaseBundlesResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetRelationalDatabaseBundlesResponse {
     
     
     public String contentType;
+
     public GetRelationalDatabaseBundlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRelationalDatabaseBundlesResult getRelationalDatabaseBundlesResult;
+
     public GetRelationalDatabaseBundlesResponse withGetRelationalDatabaseBundlesResult(org.openapis.openapi.models.shared.GetRelationalDatabaseBundlesResult getRelationalDatabaseBundlesResult) {
         this.getRelationalDatabaseBundlesResult = getRelationalDatabaseBundlesResult;
         return this;
@@ -49,6 +54,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object invalidInputException;
+
     public GetRelationalDatabaseBundlesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object notFoundException;
+
     public GetRelationalDatabaseBundlesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object operationFailureException;
+
     public GetRelationalDatabaseBundlesResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object serviceException;
+
     public GetRelationalDatabaseBundlesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetRelationalDatabaseBundlesResponse {
     
     
     public Integer statusCode;
+
     public GetRelationalDatabaseBundlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetRelationalDatabaseBundlesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRelationalDatabaseBundlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetRelationalDatabaseBundlesResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetRelationalDatabaseBundlesResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetRelationalDatabaseBundlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

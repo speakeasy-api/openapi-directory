@@ -15,9 +15,11 @@ public class DescribeManagedEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public Endpoint endpoint;
+
     public DescribeManagedEndpointResponse withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     
+    public DescribeManagedEndpointResponse(){}
 }

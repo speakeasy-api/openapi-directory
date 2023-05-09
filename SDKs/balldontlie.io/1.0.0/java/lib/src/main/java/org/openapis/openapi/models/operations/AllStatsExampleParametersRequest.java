@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AllStatsExampleParametersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=player_ids[]")
     public String playerIds;
+
     public AllStatsExampleParametersRequest withPlayerIds(String playerIds) {
         this.playerIds = playerIds;
         return this;
@@ -16,9 +17,11 @@ public class AllStatsExampleParametersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=season[]")
     public String season;
+
     public AllStatsExampleParametersRequest withSeason(String season) {
         this.season = season;
         return this;
     }
     
+    public AllStatsExampleParametersRequest(){}
 }

@@ -60,11 +60,9 @@ public class Producers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetProducersResponse res = new org.openapis.openapi.models.operations.GetProducersResponse() {{
+        org.openapis.openapi.models.operations.GetProducersResponse res = new org.openapis.openapi.models.operations.GetProducersResponse(contentType, httpRes.statusCode()) {{
             getProducers200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class GetCallsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetCallsCountDirectionEnum direction;
+
     public GetCallsCountRequest withDirection(GetCallsCountDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -22,6 +23,7 @@ public class GetCallsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromDate")
     public Long fromDate;
+
     public GetCallsCountRequest withFromDate(Long fromDate) {
         this.fromDate = fromDate;
         return this;
@@ -32,6 +34,7 @@ public class GetCallsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
     public GetCallsCountStatesEnum states;
+
     public GetCallsCountRequest withStates(GetCallsCountStatesEnum states) {
         this.states = states;
         return this;
@@ -42,9 +45,11 @@ public class GetCallsCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toDate")
     public Long toDate;
+
     public GetCallsCountRequest withToDate(Long toDate) {
         this.toDate = toDate;
         return this;
     }
     
+    public GetCallsCountRequest(){}
 }

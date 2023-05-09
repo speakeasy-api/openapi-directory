@@ -12,9 +12,11 @@ public class SendMessagesRequestPhoneNumberFilterGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public SendMessagesRequestPhoneNumberFilterGroup withId(String id) {
         this.id = id;
         return this;
     }
     
+    public SendMessagesRequestPhoneNumberFilterGroup(){}
 }

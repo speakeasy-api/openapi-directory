@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolsListResponse {
     
     public String contentType;
+
     public SymbolsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolsListResponse {
     
     
     public Integer statusCode;
+
     public SymbolsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolsListResponse {
      */
     
     public SymbolsList200ApplicationJSON[] symbolsList200ApplicationJSONObjects;
+
     public SymbolsListResponse withSymbolsList200ApplicationJSONObjects(SymbolsList200ApplicationJSON[] symbolsList200ApplicationJSONObjects) {
         this.symbolsList200ApplicationJSONObjects = symbolsList200ApplicationJSONObjects;
         return this;
@@ -43,6 +48,7 @@ public class SymbolsListResponse {
      */
     
     public SymbolsList403ApplicationJSON symbolsList403ApplicationJSONObject;
+
     public SymbolsListResponse withSymbolsList403ApplicationJSONObject(SymbolsList403ApplicationJSON symbolsList403ApplicationJSONObject) {
         this.symbolsList403ApplicationJSONObject = symbolsList403ApplicationJSONObject;
         return this;
@@ -53,9 +59,14 @@ public class SymbolsListResponse {
      */
     
     public SymbolsList500ApplicationJSON symbolsList500ApplicationJSONObject;
+
     public SymbolsListResponse withSymbolsList500ApplicationJSONObject(SymbolsList500ApplicationJSON symbolsList500ApplicationJSONObject) {
         this.symbolsList500ApplicationJSONObject = symbolsList500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

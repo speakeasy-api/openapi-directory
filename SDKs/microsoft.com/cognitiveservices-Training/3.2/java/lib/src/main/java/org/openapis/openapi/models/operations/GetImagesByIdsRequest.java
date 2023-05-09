@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetImagesByIdsRequest {
@@ -12,6 +13,7 @@ public class GetImagesByIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=imageIds")
     public String[] imageIds;
+
     public GetImagesByIdsRequest withImageIds(String[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -22,6 +24,7 @@ public class GetImagesByIdsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public GetImagesByIdsRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,9 +35,13 @@ public class GetImagesByIdsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetImagesByIdsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetImagesByIdsRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

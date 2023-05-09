@@ -53,11 +53,9 @@ public class Recordings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAdminRecordingsStatusResponse res = new org.openapis.openapi.models.operations.GetAdminRecordingsStatusResponse() {{
+        org.openapis.openapi.models.operations.GetAdminRecordingsStatusResponse res = new org.openapis.openapi.models.operations.GetAdminRecordingsStatusResponse(contentType, httpRes.statusCode()) {{
             getAdminRecordingsStatus200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class Recordings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsSnapshotResponse(contentType, httpRes.statusCode()) {{
             postAdminRecordingsSnapshot200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,10 +136,8 @@ public class Recordings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsStartResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -172,11 +166,9 @@ public class Recordings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAdminRecordingsStopResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsStopResponse() {{
+        org.openapis.openapi.models.operations.PostAdminRecordingsStopResponse res = new org.openapis.openapi.models.operations.PostAdminRecordingsStopResponse(contentType, httpRes.statusCode()) {{
             postAdminRecordingsStop200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

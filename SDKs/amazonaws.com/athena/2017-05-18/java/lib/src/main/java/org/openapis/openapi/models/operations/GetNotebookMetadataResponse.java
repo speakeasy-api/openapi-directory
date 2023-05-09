@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNotebookMetadataResponse {
     
     public String contentType;
+
     public GetNotebookMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNotebookMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNotebookMetadataOutput getNotebookMetadataOutput;
+
     public GetNotebookMetadataResponse withGetNotebookMetadataOutput(org.openapis.openapi.models.shared.GetNotebookMetadataOutput getNotebookMetadataOutput) {
         this.getNotebookMetadataOutput = getNotebookMetadataOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetNotebookMetadataResponse {
      */
     
     public Object internalServerException;
+
     public GetNotebookMetadataResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetNotebookMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public GetNotebookMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetNotebookMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetNotebookMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetNotebookMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNotebookMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetNotebookMetadataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetNotebookMetadataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetNotebookMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

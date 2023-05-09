@@ -12,6 +12,7 @@ public class PolicyNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PolicyNetwork withKind(String kind) {
         this.kind = kind;
         return this;
@@ -23,9 +24,11 @@ public class PolicyNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUrl")
     public String networkUrl;
+
     public PolicyNetwork withNetworkUrl(String networkUrl) {
         this.networkUrl = networkUrl;
         return this;
     }
     
+    public PolicyNetwork(){}
 }

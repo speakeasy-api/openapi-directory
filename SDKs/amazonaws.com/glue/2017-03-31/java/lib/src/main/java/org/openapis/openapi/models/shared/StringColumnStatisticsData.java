@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StringColumnStatisticsData {
     @JsonProperty("AverageLength")
     public Double averageLength;
+
     public StringColumnStatisticsData withAverageLength(Double averageLength) {
         this.averageLength = averageLength;
         return this;
@@ -19,6 +20,7 @@ public class StringColumnStatisticsData {
     
     @JsonProperty("MaximumLength")
     public Long maximumLength;
+
     public StringColumnStatisticsData withMaximumLength(Long maximumLength) {
         this.maximumLength = maximumLength;
         return this;
@@ -26,6 +28,7 @@ public class StringColumnStatisticsData {
     
     @JsonProperty("NumberOfDistinctValues")
     public Long numberOfDistinctValues;
+
     public StringColumnStatisticsData withNumberOfDistinctValues(Long numberOfDistinctValues) {
         this.numberOfDistinctValues = numberOfDistinctValues;
         return this;
@@ -33,9 +36,16 @@ public class StringColumnStatisticsData {
     
     @JsonProperty("NumberOfNulls")
     public Long numberOfNulls;
+
     public StringColumnStatisticsData withNumberOfNulls(Long numberOfNulls) {
         this.numberOfNulls = numberOfNulls;
         return this;
     }
     
+    public StringColumnStatisticsData(@JsonProperty("AverageLength") Double averageLength, @JsonProperty("MaximumLength") Long maximumLength, @JsonProperty("NumberOfDistinctValues") Long numberOfDistinctValues, @JsonProperty("NumberOfNulls") Long numberOfNulls) {
+        this.averageLength = averageLength;
+        this.maximumLength = maximumLength;
+        this.numberOfDistinctValues = numberOfDistinctValues;
+        this.numberOfNulls = numberOfNulls;
+  }
 }

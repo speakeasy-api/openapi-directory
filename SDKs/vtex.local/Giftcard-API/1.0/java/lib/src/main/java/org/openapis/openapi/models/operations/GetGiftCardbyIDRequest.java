@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGiftCardbyIDRequest {
@@ -12,6 +13,7 @@ public class GetGiftCardbyIDRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetGiftCardbyIDRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetGiftCardbyIDRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetGiftCardbyIDRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class GetGiftCardbyIDRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=giftCardID")
     public String giftCardID;
+
     public GetGiftCardbyIDRequest withGiftCardID(String giftCardID) {
         this.giftCardID = giftCardID;
         return this;
     }
     
+    public GetGiftCardbyIDRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("giftCardID") String giftCardID) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.giftCardID = giftCardID;
+  }
 }

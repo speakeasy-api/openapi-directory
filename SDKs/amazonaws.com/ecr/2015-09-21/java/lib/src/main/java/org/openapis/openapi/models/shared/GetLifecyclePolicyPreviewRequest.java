@@ -12,6 +12,7 @@ public class GetLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public LifecyclePolicyPreviewFilter filter;
+
     public GetLifecyclePolicyPreviewRequest withFilter(LifecyclePolicyPreviewFilter filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageIds")
     public ImageIdentifier[] imageIds;
+
     public GetLifecyclePolicyPreviewRequest withImageIds(ImageIdentifier[] imageIds) {
         this.imageIds = imageIds;
         return this;
@@ -28,6 +30,7 @@ public class GetLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetLifecyclePolicyPreviewRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetLifecyclePolicyPreviewRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +48,7 @@ public class GetLifecyclePolicyPreviewRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public GetLifecyclePolicyPreviewRequest withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -51,9 +56,13 @@ public class GetLifecyclePolicyPreviewRequest {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetLifecyclePolicyPreviewRequest withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetLifecyclePolicyPreviewRequest(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

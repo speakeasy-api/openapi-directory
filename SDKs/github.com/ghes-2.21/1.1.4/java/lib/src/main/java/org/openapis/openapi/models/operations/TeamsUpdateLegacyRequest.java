@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamsUpdateLegacyRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public TeamsUpdateLegacyRequestBody requestBody;
+
     public TeamsUpdateLegacyRequest withRequestBody(TeamsUpdateLegacyRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,14 @@ public class TeamsUpdateLegacyRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_id")
     public Long teamId;
+
     public TeamsUpdateLegacyRequest withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public TeamsUpdateLegacyRequest(@JsonProperty("RequestBody") TeamsUpdateLegacyRequestBody requestBody, @JsonProperty("team_id") Long teamId) {
+        this.requestBody = requestBody;
+        this.teamId = teamId;
+  }
 }

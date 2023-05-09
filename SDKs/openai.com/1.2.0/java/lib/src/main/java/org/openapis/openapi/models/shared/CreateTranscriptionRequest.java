@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateTranscriptionRequest {
@@ -13,6 +14,7 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public CreateTranscriptionRequestFile file;
+
     public CreateTranscriptionRequest withFile(CreateTranscriptionRequestFile file) {
         this.file = file;
         return this;
@@ -24,6 +26,7 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=language")
     public String language;
+
     public CreateTranscriptionRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -35,6 +38,7 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=model")
     public String model;
+
     public CreateTranscriptionRequest withModel(String model) {
         this.model = model;
         return this;
@@ -46,6 +50,7 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=prompt")
     public String prompt;
+
     public CreateTranscriptionRequest withPrompt(String prompt) {
         this.prompt = prompt;
         return this;
@@ -57,6 +62,7 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=response_format")
     public String responseFormat;
+
     public CreateTranscriptionRequest withResponseFormat(String responseFormat) {
         this.responseFormat = responseFormat;
         return this;
@@ -68,9 +74,14 @@ public class CreateTranscriptionRequest {
      */
     @SpeakeasyMetadata("multipartForm:name=temperature")
     public Double temperature;
+
     public CreateTranscriptionRequest withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
     }
     
+    public CreateTranscriptionRequest(@JsonProperty("file") CreateTranscriptionRequestFile file, @JsonProperty("model") String model) {
+        this.file = file;
+        this.model = model;
+  }
 }

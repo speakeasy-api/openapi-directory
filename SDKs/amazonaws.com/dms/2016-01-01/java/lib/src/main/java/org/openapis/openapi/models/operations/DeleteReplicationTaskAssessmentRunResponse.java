@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationTaskAssessmentRunResponse {
@@ -12,6 +13,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
      */
     
     public Object accessDeniedFault;
+
     public DeleteReplicationTaskAssessmentRunResponse withAccessDeniedFault(Object accessDeniedFault) {
         this.accessDeniedFault = accessDeniedFault;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
     
     
     public String contentType;
+
     public DeleteReplicationTaskAssessmentRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteReplicationTaskAssessmentRunResponse deleteReplicationTaskAssessmentRunResponse;
+
     public DeleteReplicationTaskAssessmentRunResponse withDeleteReplicationTaskAssessmentRunResponse(org.openapis.openapi.models.shared.DeleteReplicationTaskAssessmentRunResponse deleteReplicationTaskAssessmentRunResponse) {
         this.deleteReplicationTaskAssessmentRunResponse = deleteReplicationTaskAssessmentRunResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteReplicationTaskAssessmentRunResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationTaskAssessmentRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteReplicationTaskAssessmentRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationTaskAssessmentRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteReplicationTaskAssessmentRunResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteReplicationTaskAssessmentRunResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public DeleteReplicationTaskAssessmentRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

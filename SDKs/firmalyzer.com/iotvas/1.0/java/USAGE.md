@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DetectDeviceSecurity;
 import org.openapis.openapi.models.operations.DetectDeviceResponse;
+import org.openapis.openapi.models.operations.DetectDeviceSecurity;
 import org.openapis.openapi.models.shared.DeviceFeatures;
 
 public class Application {
@@ -24,17 +23,19 @@ public class Application {
                 snmpSysoid = "vel";
                 telnetBanner = "error";
                 upnpResponse = "deserunt";
-            }}            
+            }};            
 
-            DetectDeviceResponse res = sdk.device.detectDevice(req, new DetectDeviceSecurity() {{
+            DetectDeviceResponse res = sdk.device.detectDevice(req, new DetectDeviceSecurity("suscipit") {{
                 apiKeyHeader = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.deviceInfo.isPresent()) {
+            if (res.deviceInfo != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

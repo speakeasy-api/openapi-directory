@@ -18,6 +18,7 @@ public class TrackCountryAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public TrackTargetedCountry[] countries;
+
     public TrackCountryAvailability withCountries(TrackTargetedCountry[] countries) {
         this.countries = countries;
         return this;
@@ -29,6 +30,7 @@ public class TrackCountryAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restOfWorld")
     public Boolean restOfWorld;
+
     public TrackCountryAvailability withRestOfWorld(Boolean restOfWorld) {
         this.restOfWorld = restOfWorld;
         return this;
@@ -40,9 +42,11 @@ public class TrackCountryAvailability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncWithProduction")
     public Boolean syncWithProduction;
+
     public TrackCountryAvailability withSyncWithProduction(Boolean syncWithProduction) {
         this.syncWithProduction = syncWithProduction;
         return this;
     }
     
+    public TrackCountryAvailability(){}
 }

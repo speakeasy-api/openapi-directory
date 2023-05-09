@@ -12,6 +12,7 @@ public class UpdateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataDelayOffsetInMinutes")
     public Long dataDelayOffsetInMinutes;
+
     public UpdateInferenceSchedulerRequest withDataDelayOffsetInMinutes(Long dataDelayOffsetInMinutes) {
         this.dataDelayOffsetInMinutes = dataDelayOffsetInMinutes;
         return this;
@@ -20,6 +21,7 @@ public class UpdateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataInputConfiguration")
     public InferenceInputConfiguration dataInputConfiguration;
+
     public UpdateInferenceSchedulerRequest withDataInputConfiguration(InferenceInputConfiguration dataInputConfiguration) {
         this.dataInputConfiguration = dataInputConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataOutputConfiguration")
     public InferenceOutputConfiguration dataOutputConfiguration;
+
     public UpdateInferenceSchedulerRequest withDataOutputConfiguration(InferenceOutputConfiguration dataOutputConfiguration) {
         this.dataOutputConfiguration = dataOutputConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class UpdateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataUploadFrequency")
     public DataUploadFrequencyEnum dataUploadFrequency;
+
     public UpdateInferenceSchedulerRequest withDataUploadFrequency(DataUploadFrequencyEnum dataUploadFrequency) {
         this.dataUploadFrequency = dataUploadFrequency;
         return this;
@@ -43,6 +47,7 @@ public class UpdateInferenceSchedulerRequest {
     
     @JsonProperty("InferenceSchedulerName")
     public String inferenceSchedulerName;
+
     public UpdateInferenceSchedulerRequest withInferenceSchedulerName(String inferenceSchedulerName) {
         this.inferenceSchedulerName = inferenceSchedulerName;
         return this;
@@ -51,9 +56,13 @@ public class UpdateInferenceSchedulerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdateInferenceSchedulerRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateInferenceSchedulerRequest(@JsonProperty("InferenceSchedulerName") String inferenceSchedulerName) {
+        this.inferenceSchedulerName = inferenceSchedulerName;
+  }
 }

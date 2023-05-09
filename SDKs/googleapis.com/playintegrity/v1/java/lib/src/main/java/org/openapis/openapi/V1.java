@@ -61,11 +61,9 @@ public class V1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenResponse res = new org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenResponse() {{
+        org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenResponse res = new org.openapis.openapi.models.operations.PlayintegrityDecodeIntegrityTokenResponse(contentType, httpRes.statusCode()) {{
             decodeIntegrityTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

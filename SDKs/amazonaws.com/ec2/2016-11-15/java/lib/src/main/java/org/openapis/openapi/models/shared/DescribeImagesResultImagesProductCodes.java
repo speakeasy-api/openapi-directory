@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImagesResultImagesProductCodes {
     
     public String productCodeId;
+
     public DescribeImagesResultImagesProductCodes withProductCodeId(String productCodeId) {
         this.productCodeId = productCodeId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImagesResultImagesProductCodes {
     
     
     public DescribeImagesResultImagesProductCodesProductCodeTypeEnum productCodeType;
+
     public DescribeImagesResultImagesProductCodes withProductCodeType(DescribeImagesResultImagesProductCodesProductCodeTypeEnum productCodeType) {
         this.productCodeType = productCodeType;
         return this;
     }
     
+    public DescribeImagesResultImagesProductCodes(){}
 }

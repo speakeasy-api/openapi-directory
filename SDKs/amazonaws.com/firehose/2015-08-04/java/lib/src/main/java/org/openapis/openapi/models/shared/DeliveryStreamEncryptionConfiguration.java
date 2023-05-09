@@ -15,6 +15,7 @@ public class DeliveryStreamEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDescription")
     public FailureDescription failureDescription;
+
     public DeliveryStreamEncryptionConfiguration withFailureDescription(FailureDescription failureDescription) {
         this.failureDescription = failureDescription;
         return this;
@@ -23,6 +24,7 @@ public class DeliveryStreamEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyARN")
     public String keyARN;
+
     public DeliveryStreamEncryptionConfiguration withKeyARN(String keyARN) {
         this.keyARN = keyARN;
         return this;
@@ -31,6 +33,7 @@ public class DeliveryStreamEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyType")
     public KeyTypeEnum keyType;
+
     public DeliveryStreamEncryptionConfiguration withKeyType(KeyTypeEnum keyType) {
         this.keyType = keyType;
         return this;
@@ -39,9 +42,11 @@ public class DeliveryStreamEncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DeliveryStreamEncryptionStatusEnum status;
+
     public DeliveryStreamEncryptionConfiguration withStatus(DeliveryStreamEncryptionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeliveryStreamEncryptionConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class ProjectBuildBatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchReportMode")
     public BatchReportModeTypeEnum batchReportMode;
+
     public ProjectBuildBatchConfig withBatchReportMode(BatchReportModeTypeEnum batchReportMode) {
         this.batchReportMode = batchReportMode;
         return this;
@@ -23,6 +24,7 @@ public class ProjectBuildBatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("combineArtifacts")
     public Boolean combineArtifacts;
+
     public ProjectBuildBatchConfig withCombineArtifacts(Boolean combineArtifacts) {
         this.combineArtifacts = combineArtifacts;
         return this;
@@ -31,6 +33,7 @@ public class ProjectBuildBatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restrictions")
     public BatchRestrictions restrictions;
+
     public ProjectBuildBatchConfig withRestrictions(BatchRestrictions restrictions) {
         this.restrictions = restrictions;
         return this;
@@ -39,6 +42,7 @@ public class ProjectBuildBatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public ProjectBuildBatchConfig withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -47,9 +51,11 @@ public class ProjectBuildBatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInMins")
     public Long timeoutInMins;
+
     public ProjectBuildBatchConfig withTimeoutInMins(Long timeoutInMins) {
         this.timeoutInMins = timeoutInMins;
         return this;
     }
     
+    public ProjectBuildBatchConfig(){}
 }

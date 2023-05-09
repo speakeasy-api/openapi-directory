@@ -12,9 +12,13 @@ public class UpdateGameConfigurationRequestBody {
      */
     @JsonProperty("Modifications")
     public org.openapis.openapi.models.shared.SectionModification[] modifications;
+
     public UpdateGameConfigurationRequestBody withModifications(org.openapis.openapi.models.shared.SectionModification[] modifications) {
         this.modifications = modifications;
         return this;
     }
     
+    public UpdateGameConfigurationRequestBody(@JsonProperty("Modifications") org.openapis.openapi.models.shared.SectionModification[] modifications) {
+        this.modifications = modifications;
+  }
 }

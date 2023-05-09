@@ -15,6 +15,7 @@ public class StoredValueBalanceCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBalance")
     public Amount currentBalance;
+
     public StoredValueBalanceCheckResponse withCurrentBalance(Amount currentBalance) {
         this.currentBalance = currentBalance;
         return this;
@@ -26,6 +27,7 @@ public class StoredValueBalanceCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public StoredValueBalanceCheckResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -39,6 +41,7 @@ public class StoredValueBalanceCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refusalReason")
     public String refusalReason;
+
     public StoredValueBalanceCheckResponse withRefusalReason(String refusalReason) {
         this.refusalReason = refusalReason;
         return this;
@@ -56,6 +59,7 @@ public class StoredValueBalanceCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public StoredValueBalanceCheckResponseResultCodeEnum resultCode;
+
     public StoredValueBalanceCheckResponse withResultCode(StoredValueBalanceCheckResponseResultCodeEnum resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -67,9 +71,11 @@ public class StoredValueBalanceCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thirdPartyRefusalReason")
     public String thirdPartyRefusalReason;
+
     public StoredValueBalanceCheckResponse withThirdPartyRefusalReason(String thirdPartyRefusalReason) {
         this.thirdPartyRefusalReason = thirdPartyRefusalReason;
         return this;
     }
     
+    public StoredValueBalanceCheckResponse(){}
 }

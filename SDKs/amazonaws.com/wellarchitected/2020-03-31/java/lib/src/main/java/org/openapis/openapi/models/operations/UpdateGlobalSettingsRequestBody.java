@@ -15,9 +15,11 @@ public class UpdateGlobalSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationSharingStatus")
     public UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum organizationSharingStatus;
+
     public UpdateGlobalSettingsRequestBody withOrganizationSharingStatus(UpdateGlobalSettingsRequestBodyOrganizationSharingStatusEnum organizationSharingStatus) {
         this.organizationSharingStatus = organizationSharingStatus;
         return this;
     }
     
+    public UpdateGlobalSettingsRequestBody(){}
 }

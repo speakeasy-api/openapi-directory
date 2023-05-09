@@ -8,13 +8,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets {
     /**
-     * assetReturns[t] is the simulated return of the i-th asset for the t-th time period, in percentage
+     * assetReturns[t] is the simulated return of the i-th asset for the t-th time period
      */
     @JsonProperty("assetReturns")
     public Double[] assetReturns;
+
     public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets withAssetReturns(Double[] assetReturns) {
         this.assetReturns = assetReturns;
         return this;
     }
     
+    public PostAssetsReturnsSimulationBootstrap200ApplicationJSONSimulationsAssets(@JsonProperty("assetReturns") Double[] assetReturns) {
+        this.assetReturns = assetReturns;
+  }
 }

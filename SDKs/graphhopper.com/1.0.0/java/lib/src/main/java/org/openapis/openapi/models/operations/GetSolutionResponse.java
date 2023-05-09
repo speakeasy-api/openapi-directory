@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSolutionResponse {
@@ -12,6 +13,7 @@ public class GetSolutionResponse {
      */
     
     public org.openapis.openapi.models.shared.BadRequest badRequest;
+
     public GetSolutionResponse withBadRequest(org.openapis.openapi.models.shared.BadRequest badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class GetSolutionResponse {
     
     
     public String contentType;
+
     public GetSolutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSolutionResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSolutionResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class GetSolutionResponse {
      */
     
     public org.openapis.openapi.models.shared.Response response;
+
     public GetSolutionResponse withResponse(org.openapis.openapi.models.shared.Response response) {
         this.response = response;
         return this;
@@ -43,6 +48,7 @@ public class GetSolutionResponse {
     
     
     public Integer statusCode;
+
     public GetSolutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,6 +56,7 @@ public class GetSolutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSolutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -60,9 +67,14 @@ public class GetSolutionResponse {
      */
     
     public GetSolution404ApplicationJSON getSolution404ApplicationJSONObject;
+
     public GetSolutionResponse withGetSolution404ApplicationJSONObject(GetSolution404ApplicationJSON getSolution404ApplicationJSONObject) {
         this.getSolution404ApplicationJSONObject = getSolution404ApplicationJSONObject;
         return this;
     }
     
+    public GetSolutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

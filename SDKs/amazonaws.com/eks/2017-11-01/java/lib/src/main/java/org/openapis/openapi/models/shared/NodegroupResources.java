@@ -15,6 +15,7 @@ public class NodegroupResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroups")
     public AutoScalingGroup[] autoScalingGroups;
+
     public NodegroupResources withAutoScalingGroups(AutoScalingGroup[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -23,9 +24,11 @@ public class NodegroupResources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteAccessSecurityGroup")
     public String remoteAccessSecurityGroup;
+
     public NodegroupResources withRemoteAccessSecurityGroup(String remoteAccessSecurityGroup) {
         this.remoteAccessSecurityGroup = remoteAccessSecurityGroup;
         return this;
     }
     
+    public NodegroupResources(){}
 }

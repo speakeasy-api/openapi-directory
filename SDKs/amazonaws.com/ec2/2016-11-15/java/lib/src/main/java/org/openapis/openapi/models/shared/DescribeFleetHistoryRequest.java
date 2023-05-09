@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class DescribeFleetHistoryRequest {
     
     public Boolean dryRun;
+
     public DescribeFleetHistoryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +18,7 @@ public class DescribeFleetHistoryRequest {
     
     
     public FleetEventTypeEnum eventType;
+
     public DescribeFleetHistoryRequest withEventType(FleetEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -23,6 +26,7 @@ public class DescribeFleetHistoryRequest {
     
     
     public String fleetId;
+
     public DescribeFleetHistoryRequest withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -30,6 +34,7 @@ public class DescribeFleetHistoryRequest {
     
     
     public Long maxResults;
+
     public DescribeFleetHistoryRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +42,7 @@ public class DescribeFleetHistoryRequest {
     
     
     public String nextToken;
+
     public DescribeFleetHistoryRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +50,14 @@ public class DescribeFleetHistoryRequest {
     
     
     public OffsetDateTime startTime;
+
     public DescribeFleetHistoryRequest withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public DescribeFleetHistoryRequest(@JsonProperty("FleetId") String fleetId, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.fleetId = fleetId;
+        this.startTime = startTime;
+  }
 }

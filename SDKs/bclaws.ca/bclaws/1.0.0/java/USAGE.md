@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetContentAspectIDAspectIDEnum;
 import org.openapis.openapi.models.operations.GetContentAspectIdRequest;
 import org.openapis.openapi.models.operations.GetContentAspectIdResponse;
@@ -14,9 +13,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            GetContentAspectIdRequest req = new GetContentAspectIdRequest() {{
-                aspectId = "oic";
-            }}            
+            GetContentAspectIdRequest req = new GetContentAspectIdRequest(GetContentAspectIDAspectIDEnum.OIC);            
 
             GetContentAspectIdResponse res = sdk.content.getContentAspectId(req);
 
@@ -26,5 +23,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -22,6 +22,7 @@ public class FeatureGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FeatureGroup withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FeatureGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTimeFeatureName")
     public String eventTimeFeatureName;
+
     public FeatureGroup withEventTimeFeatureName(String eventTimeFeatureName) {
         this.eventTimeFeatureName = eventTimeFeatureName;
         return this;
@@ -46,6 +49,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public FeatureGroup withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureDefinitions")
     public FeatureDefinition[] featureDefinitions;
+
     public FeatureGroup withFeatureDefinitions(FeatureDefinition[] featureDefinitions) {
         this.featureDefinitions = featureDefinitions;
         return this;
@@ -62,6 +67,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupArn")
     public String featureGroupArn;
+
     public FeatureGroup withFeatureGroupArn(String featureGroupArn) {
         this.featureGroupArn = featureGroupArn;
         return this;
@@ -70,6 +76,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupName")
     public String featureGroupName;
+
     public FeatureGroup withFeatureGroupName(String featureGroupName) {
         this.featureGroupName = featureGroupName;
         return this;
@@ -78,6 +85,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeatureGroupStatus")
     public FeatureGroupStatusEnum featureGroupStatus;
+
     public FeatureGroup withFeatureGroupStatus(FeatureGroupStatusEnum featureGroupStatus) {
         this.featureGroupStatus = featureGroupStatus;
         return this;
@@ -88,6 +96,7 @@ public class FeatureGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public FeatureGroup withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -96,6 +105,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastUpdateStatus")
     public LastUpdateStatus lastUpdateStatus;
+
     public FeatureGroup withLastUpdateStatus(LastUpdateStatus lastUpdateStatus) {
         this.lastUpdateStatus = lastUpdateStatus;
         return this;
@@ -107,6 +117,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreConfig")
     public OfflineStoreConfig offlineStoreConfig;
+
     public FeatureGroup withOfflineStoreConfig(OfflineStoreConfig offlineStoreConfig) {
         this.offlineStoreConfig = offlineStoreConfig;
         return this;
@@ -118,17 +129,19 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OfflineStoreStatus")
     public OfflineStoreStatus offlineStoreStatus;
+
     public FeatureGroup withOfflineStoreStatus(OfflineStoreStatus offlineStoreStatus) {
         this.offlineStoreStatus = offlineStoreStatus;
         return this;
     }
     
     /**
-     * Use this to specify the Amazon Web Services Key Management Service (KMS) Key ID, or &lt;code&gt;KMSKeyId&lt;/code&gt;, for at rest data encryption. You can turn &lt;code&gt;OnlineStore&lt;/code&gt; on or off by specifying the &lt;code&gt;EnableOnlineStore&lt;/code&gt; flag at General Assembly; the default value is &lt;code&gt;False&lt;/code&gt;.
+     * &lt;p&gt;Use this to specify the Amazon Web Services Key Management Service (KMS) Key ID, or &lt;code&gt;KMSKeyId&lt;/code&gt;, for at rest data encryption. You can turn &lt;code&gt;OnlineStore&lt;/code&gt; on or off by specifying the &lt;code&gt;EnableOnlineStore&lt;/code&gt; flag at General Assembly.&lt;/p&gt; &lt;p&gt;The default value is &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnlineStoreConfig")
     public OnlineStoreConfig onlineStoreConfig;
+
     public FeatureGroup withOnlineStoreConfig(OnlineStoreConfig onlineStoreConfig) {
         this.onlineStoreConfig = onlineStoreConfig;
         return this;
@@ -137,6 +150,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordIdentifierFeatureName")
     public String recordIdentifierFeatureName;
+
     public FeatureGroup withRecordIdentifierFeatureName(String recordIdentifierFeatureName) {
         this.recordIdentifierFeatureName = recordIdentifierFeatureName;
         return this;
@@ -145,6 +159,7 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public FeatureGroup withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -153,9 +168,11 @@ public class FeatureGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public FeatureGroup withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public FeatureGroup(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCandidateCandidateIdHistoryRequest {
@@ -13,6 +14,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCandidateCandidateIdHistoryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -21,10 +23,17 @@ public class GetCandidateCandidateIdHistoryRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=candidate_id")
     public String candidateId;
+
     public GetCandidateCandidateIdHistoryRequest withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -36,6 +45,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCandidateCandidateIdHistoryRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -46,6 +56,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCandidateCandidateIdHistoryRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -56,6 +67,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCandidateCandidateIdHistoryRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -67,6 +79,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCandidateCandidateIdHistoryRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -77,6 +90,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCandidateCandidateIdHistoryRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -87,6 +101,7 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCandidateCandidateIdHistoryRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -97,9 +112,14 @@ public class GetCandidateCandidateIdHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCandidateCandidateIdHistoryRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCandidateCandidateIdHistoryRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("candidate_id") String candidateId) {
+        this.apiKey = apiKey;
+        this.candidateId = candidateId;
+  }
 }

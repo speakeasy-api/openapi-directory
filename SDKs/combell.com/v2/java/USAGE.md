@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateAccountResponse;
 import org.openapis.openapi.models.shared.CreateAccount;
 
@@ -17,7 +16,7 @@ public class Application {
                 ftpPassword = "corrupti";
                 identifier = "provident";
                 servicepackId = 715190;
-            }}            
+            }};            
 
             CreateAccountResponse res = sdk.accounts.createAccount(req);
 
@@ -27,5 +26,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

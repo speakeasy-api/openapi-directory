@@ -15,6 +15,7 @@ public class CompanySetupConfigViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("financialYear")
     public CompanyFinancialYearViewModel financialYear;
+
     public CompanySetupConfigViewModel withFinancialYear(CompanyFinancialYearViewModel financialYear) {
         this.financialYear = financialYear;
         return this;
@@ -23,6 +24,7 @@ public class CompanySetupConfigViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generalDetails")
     public CompanyGeneralDetaisViewModel generalDetails;
+
     public CompanySetupConfigViewModel withGeneralDetails(CompanyGeneralDetaisViewModel generalDetails) {
         this.generalDetails = generalDetails;
         return this;
@@ -31,6 +33,7 @@ public class CompanySetupConfigViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public CompanyOptionViewModel options;
+
     public CompanySetupConfigViewModel withOptions(CompanyOptionViewModel options) {
         this.options = options;
         return this;
@@ -39,9 +42,11 @@ public class CompanySetupConfigViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceSettings")
     public CompanyReferenceSettingViewModel referenceSettings;
+
     public CompanySetupConfigViewModel withReferenceSettings(CompanyReferenceSettingViewModel referenceSettings) {
         this.referenceSettings = referenceSettings;
         return this;
     }
     
+    public CompanySetupConfigViewModel(){}
 }

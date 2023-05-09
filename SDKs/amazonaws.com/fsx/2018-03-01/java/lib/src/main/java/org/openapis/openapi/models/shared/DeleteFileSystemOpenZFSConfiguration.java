@@ -15,6 +15,7 @@ public class DeleteFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinalBackupTags")
     public Tag[] finalBackupTags;
+
     public DeleteFileSystemOpenZFSConfiguration withFinalBackupTags(Tag[] finalBackupTags) {
         this.finalBackupTags = finalBackupTags;
         return this;
@@ -23,6 +24,7 @@ public class DeleteFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public DeleteFileSystemOpenZFSOptionEnum[] options;
+
     public DeleteFileSystemOpenZFSConfiguration withOptions(DeleteFileSystemOpenZFSOptionEnum[] options) {
         this.options = options;
         return this;
@@ -31,9 +33,11 @@ public class DeleteFileSystemOpenZFSConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkipFinalBackup")
     public Boolean skipFinalBackup;
+
     public DeleteFileSystemOpenZFSConfiguration withSkipFinalBackup(Boolean skipFinalBackup) {
         this.skipFinalBackup = skipFinalBackup;
         return this;
     }
     
+    public DeleteFileSystemOpenZFSConfiguration(){}
 }

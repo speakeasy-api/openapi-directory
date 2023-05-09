@@ -12,6 +12,7 @@ public class SegmentQueryFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SegmentQueryFilterModel withKey(String key) {
         this.key = key;
         return this;
@@ -20,6 +21,7 @@ public class SegmentQueryFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SegmentQueryFilterModel withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class SegmentQueryFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, Object>[] options;
+
     public SegmentQueryFilterModel withOptions(java.util.Map<String, Object>[] options) {
         this.options = options;
         return this;
@@ -36,9 +39,11 @@ public class SegmentQueryFilterModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SegmentQueryFilterModel withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SegmentQueryFilterModel(){}
 }

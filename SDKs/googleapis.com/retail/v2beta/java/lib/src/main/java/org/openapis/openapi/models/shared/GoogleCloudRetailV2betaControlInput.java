@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2betaControlInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetSpec")
     public GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec;
+
     public GoogleCloudRetailV2betaControlInput withFacetSpec(GoogleCloudRetailV2betaSearchRequestFacetSpec facetSpec) {
         this.facetSpec = facetSpec;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2betaControlInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rule")
     public GoogleCloudRetailV2betaRule rule;
+
     public GoogleCloudRetailV2betaControlInput withRule(GoogleCloudRetailV2betaRule rule) {
         this.rule = rule;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchSolutionUseCase")
     public GoogleCloudRetailV2betaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase;
+
     public GoogleCloudRetailV2betaControlInput withSearchSolutionUseCase(GoogleCloudRetailV2betaControlSearchSolutionUseCaseEnum[] searchSolutionUseCase) {
         this.searchSolutionUseCase = searchSolutionUseCase;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRetailV2betaControlInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionTypes")
     public GoogleCloudRetailV2betaControlSolutionTypesEnum[] solutionTypes;
+
     public GoogleCloudRetailV2betaControlInput withSolutionTypes(GoogleCloudRetailV2betaControlSolutionTypesEnum[] solutionTypes) {
         this.solutionTypes = solutionTypes;
         return this;
     }
     
+    public GoogleCloudRetailV2betaControlInput(){}
 }

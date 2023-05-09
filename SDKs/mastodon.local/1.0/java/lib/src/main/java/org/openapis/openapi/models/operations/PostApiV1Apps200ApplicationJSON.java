@@ -15,6 +15,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_id")
     public String clientId;
+
     public PostApiV1Apps200ApplicationJSON withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_secret")
     public String clientSecret;
+
     public PostApiV1Apps200ApplicationJSON withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -31,6 +33,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PostApiV1Apps200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostApiV1Apps200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -47,6 +51,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirect_uri")
     public String redirectUri;
+
     public PostApiV1Apps200ApplicationJSON withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -55,6 +60,7 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vapid_key")
     public String vapidKey;
+
     public PostApiV1Apps200ApplicationJSON withVapidKey(String vapidKey) {
         this.vapidKey = vapidKey;
         return this;
@@ -63,9 +69,11 @@ public class PostApiV1Apps200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public PostApiV1Apps200ApplicationJSON withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public PostApiV1Apps200ApplicationJSON(){}
 }

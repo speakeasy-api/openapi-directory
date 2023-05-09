@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFunctionCodeSigningConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object codeSigningConfigNotFoundException;
+
     public DeleteFunctionCodeSigningConfigResponse withCodeSigningConfigNotFoundException(Object codeSigningConfigNotFoundException) {
         this.codeSigningConfigNotFoundException = codeSigningConfigNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
     
     
     public String contentType;
+
     public DeleteFunctionCodeSigningConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteFunctionCodeSigningConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object resourceConflictException;
+
     public DeleteFunctionCodeSigningConfigResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object serviceException;
+
     public DeleteFunctionCodeSigningConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteFunctionCodeSigningConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFunctionCodeSigningConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFunctionCodeSigningConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteFunctionCodeSigningConfigResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteFunctionCodeSigningConfigResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteFunctionCodeSigningConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

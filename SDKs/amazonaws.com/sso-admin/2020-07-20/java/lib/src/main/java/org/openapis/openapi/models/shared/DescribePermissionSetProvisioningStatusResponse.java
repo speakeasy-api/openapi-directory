@@ -15,9 +15,11 @@ public class DescribePermissionSetProvisioningStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetProvisioningStatus")
     public PermissionSetProvisioningStatus permissionSetProvisioningStatus;
+
     public DescribePermissionSetProvisioningStatusResponse withPermissionSetProvisioningStatus(PermissionSetProvisioningStatus permissionSetProvisioningStatus) {
         this.permissionSetProvisioningStatus = permissionSetProvisioningStatus;
         return this;
     }
     
+    public DescribePermissionSetProvisioningStatusResponse(){}
 }

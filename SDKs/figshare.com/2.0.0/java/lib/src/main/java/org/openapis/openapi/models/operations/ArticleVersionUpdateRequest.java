@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ArticleVersionUpdateRequest {
@@ -12,6 +13,7 @@ public class ArticleVersionUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ArticleUpdate articleUpdate;
+
     public ArticleVersionUpdateRequest withArticleUpdate(org.openapis.openapi.models.shared.ArticleUpdate articleUpdate) {
         this.articleUpdate = articleUpdate;
         return this;
@@ -22,6 +24,7 @@ public class ArticleVersionUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=article_id")
     public Long articleId;
+
     public ArticleVersionUpdateRequest withArticleId(Long articleId) {
         this.articleId = articleId;
         return this;
@@ -32,9 +35,15 @@ public class ArticleVersionUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
     public Long versionId;
+
     public ArticleVersionUpdateRequest withVersionId(Long versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public ArticleVersionUpdateRequest(@JsonProperty("ArticleUpdate") org.openapis.openapi.models.shared.ArticleUpdate articleUpdate, @JsonProperty("article_id") Long articleId, @JsonProperty("version_id") Long versionId) {
+        this.articleUpdate = articleUpdate;
+        this.articleId = articleId;
+        this.versionId = versionId;
+  }
 }

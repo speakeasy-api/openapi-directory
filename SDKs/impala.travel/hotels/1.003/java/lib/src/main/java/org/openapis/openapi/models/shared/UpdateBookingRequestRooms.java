@@ -14,6 +14,7 @@ public class UpdateBookingRequestRooms {
      */
     @JsonProperty("adults")
     public Double adults;
+
     public UpdateBookingRequestRooms withAdults(Double adults) {
         this.adults = adults;
         return this;
@@ -26,6 +27,7 @@ public class UpdateBookingRequestRooms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public NotesBookedRoom notes;
+
     public UpdateBookingRequestRooms withNotes(NotesBookedRoom notes) {
         this.notes = notes;
         return this;
@@ -36,9 +38,14 @@ public class UpdateBookingRequestRooms {
      */
     @JsonProperty("rateId")
     public String rateId;
+
     public UpdateBookingRequestRooms withRateId(String rateId) {
         this.rateId = rateId;
         return this;
     }
     
+    public UpdateBookingRequestRooms(@JsonProperty("adults") Double adults, @JsonProperty("rateId") String rateId) {
+        this.adults = adults;
+        this.rateId = rateId;
+  }
 }

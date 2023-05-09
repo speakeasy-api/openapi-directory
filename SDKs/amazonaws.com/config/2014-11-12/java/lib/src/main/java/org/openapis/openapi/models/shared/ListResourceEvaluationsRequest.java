@@ -12,6 +12,7 @@ public class ListResourceEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public ResourceEvaluationFilters filters;
+
     public ListResourceEvaluationsRequest withFilters(ResourceEvaluationFilters filters) {
         this.filters = filters;
         return this;
@@ -20,6 +21,7 @@ public class ListResourceEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListResourceEvaluationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -28,9 +30,11 @@ public class ListResourceEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourceEvaluationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListResourceEvaluationsRequest(){}
 }

@@ -18,6 +18,7 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public UriOverride withHost(String host) {
         this.host = host;
         return this;
@@ -29,6 +30,7 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathOverride")
     public PathOverride pathOverride;
+
     public UriOverride withPathOverride(PathOverride pathOverride) {
         this.pathOverride = pathOverride;
         return this;
@@ -40,6 +42,7 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public String port;
+
     public UriOverride withPort(String port) {
         this.port = port;
         return this;
@@ -51,6 +54,7 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryOverride")
     public QueryOverride queryOverride;
+
     public UriOverride withQueryOverride(QueryOverride queryOverride) {
         this.queryOverride = queryOverride;
         return this;
@@ -62,6 +66,7 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheme")
     public UriOverrideSchemeEnum scheme;
+
     public UriOverride withScheme(UriOverrideSchemeEnum scheme) {
         this.scheme = scheme;
         return this;
@@ -73,9 +78,11 @@ public class UriOverride {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriOverrideEnforceMode")
     public UriOverrideUriOverrideEnforceModeEnum uriOverrideEnforceMode;
+
     public UriOverride withUriOverrideEnforceMode(UriOverrideUriOverrideEnforceModeEnum uriOverrideEnforceMode) {
         this.uriOverrideEnforceMode = uriOverrideEnforceMode;
         return this;
     }
     
+    public UriOverride(){}
 }

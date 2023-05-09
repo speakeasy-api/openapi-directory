@@ -15,6 +15,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignIpv6AddressOnCreation")
     public Boolean assignIpv6AddressOnCreation;
+
     public AwsEc2SubnetDetails withAssignIpv6AddressOnCreation(Boolean assignIpv6AddressOnCreation) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public AwsEc2SubnetDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZoneId")
     public String availabilityZoneId;
+
     public AwsEc2SubnetDetails withAvailabilityZoneId(String availabilityZoneId) {
         this.availabilityZoneId = availabilityZoneId;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailableIpAddressCount")
     public Long availableIpAddressCount;
+
     public AwsEc2SubnetDetails withAvailableIpAddressCount(Long availableIpAddressCount) {
         this.availableIpAddressCount = availableIpAddressCount;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrBlock")
     public String cidrBlock;
+
     public AwsEc2SubnetDetails withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultForAz")
     public Boolean defaultForAz;
+
     public AwsEc2SubnetDetails withDefaultForAz(Boolean defaultForAz) {
         this.defaultForAz = defaultForAz;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6CidrBlockAssociationSet")
     public Ipv6CidrBlockAssociation[] ipv6CidrBlockAssociationSet;
+
     public AwsEc2SubnetDetails withIpv6CidrBlockAssociationSet(Ipv6CidrBlockAssociation[] ipv6CidrBlockAssociationSet) {
         this.ipv6CidrBlockAssociationSet = ipv6CidrBlockAssociationSet;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MapPublicIpOnLaunch")
     public Boolean mapPublicIpOnLaunch;
+
     public AwsEc2SubnetDetails withMapPublicIpOnLaunch(Boolean mapPublicIpOnLaunch) {
         this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsEc2SubnetDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public AwsEc2SubnetDetails withState(String state) {
         this.state = state;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetArn")
     public String subnetArn;
+
     public AwsEc2SubnetDetails withSubnetArn(String subnetArn) {
         this.subnetArn = subnetArn;
         return this;
@@ -103,6 +114,7 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsEc2SubnetDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -111,9 +123,11 @@ public class AwsEc2SubnetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2SubnetDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2SubnetDetails(){}
 }

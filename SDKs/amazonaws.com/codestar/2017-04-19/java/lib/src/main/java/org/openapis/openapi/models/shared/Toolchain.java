@@ -15,6 +15,7 @@ public class Toolchain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public Toolchain withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -22,6 +23,7 @@ public class Toolchain {
     
     @JsonProperty("source")
     public ToolchainSource source;
+
     public Toolchain withSource(ToolchainSource source) {
         this.source = source;
         return this;
@@ -30,9 +32,13 @@ public class Toolchain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackParameters")
     public java.util.Map<String, String> stackParameters;
+
     public Toolchain withStackParameters(java.util.Map<String, String> stackParameters) {
         this.stackParameters = stackParameters;
         return this;
     }
     
+    public Toolchain(@JsonProperty("source") ToolchainSource source) {
+        this.source = source;
+  }
 }

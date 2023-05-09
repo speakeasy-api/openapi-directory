@@ -18,6 +18,7 @@ public class UrlDownloadSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadSizeKb")
     public Integer downloadSizeKb;
+
     public UrlDownloadSize withDownloadSizeKb(Integer downloadSizeKb) {
         this.downloadSizeKb = downloadSizeKb;
         return this;
@@ -29,9 +30,11 @@ public class UrlDownloadSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("normalizedUrl")
     public String normalizedUrl;
+
     public UrlDownloadSize withNormalizedUrl(String normalizedUrl) {
         this.normalizedUrl = normalizedUrl;
         return this;
     }
     
+    public UrlDownloadSize(){}
 }

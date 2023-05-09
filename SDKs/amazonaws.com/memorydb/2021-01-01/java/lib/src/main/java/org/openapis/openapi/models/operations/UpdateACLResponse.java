@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateACLResponse {
@@ -12,6 +13,7 @@ public class UpdateACLResponse {
      */
     
     public Object aclNotFoundFault;
+
     public UpdateACLResponse withACLNotFoundFault(Object aclNotFoundFault) {
         this.aclNotFoundFault = aclNotFoundFault;
         return this;
@@ -19,6 +21,7 @@ public class UpdateACLResponse {
     
     
     public String contentType;
+
     public UpdateACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateACLResponse {
      */
     
     public Object defaultUserRequired;
+
     public UpdateACLResponse withDefaultUserRequired(Object defaultUserRequired) {
         this.defaultUserRequired = defaultUserRequired;
         return this;
@@ -39,6 +43,7 @@ public class UpdateACLResponse {
      */
     
     public Object duplicateUserNameFault;
+
     public UpdateACLResponse withDuplicateUserNameFault(Object duplicateUserNameFault) {
         this.duplicateUserNameFault = duplicateUserNameFault;
         return this;
@@ -49,6 +54,7 @@ public class UpdateACLResponse {
      */
     
     public Object invalidACLStateFault;
+
     public UpdateACLResponse withInvalidACLStateFault(Object invalidACLStateFault) {
         this.invalidACLStateFault = invalidACLStateFault;
         return this;
@@ -59,6 +65,7 @@ public class UpdateACLResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public UpdateACLResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateACLResponse {
      */
     
     public Object invalidParameterValueException;
+
     public UpdateACLResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateACLResponse {
     
     
     public Integer statusCode;
+
     public UpdateACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateACLResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateACLResponse updateACLResponse;
+
     public UpdateACLResponse withUpdateACLResponse(org.openapis.openapi.models.shared.UpdateACLResponse updateACLResponse) {
         this.updateACLResponse = updateACLResponse;
         return this;
@@ -103,9 +114,14 @@ public class UpdateACLResponse {
      */
     
     public Object userNotFoundFault;
+
     public UpdateACLResponse withUserNotFoundFault(Object userNotFoundFault) {
         this.userNotFoundFault = userNotFoundFault;
         return this;
     }
     
+    public UpdateACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

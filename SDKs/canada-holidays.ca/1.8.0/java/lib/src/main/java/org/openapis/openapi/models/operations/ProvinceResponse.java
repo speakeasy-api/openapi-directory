@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProvinceResponse {
     
     public String contentType;
+
     public ProvinceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ProvinceResponse {
      */
     
     public Province200ApplicationJSON province200ApplicationJSONObject;
+
     public ProvinceResponse withProvince200ApplicationJSONObject(Province200ApplicationJSON province200ApplicationJSONObject) {
         this.province200ApplicationJSONObject = province200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class ProvinceResponse {
      */
     
     public Province400ApplicationJSON province400ApplicationJSONObject;
+
     public ProvinceResponse withProvince400ApplicationJSONObject(Province400ApplicationJSON province400ApplicationJSONObject) {
         this.province400ApplicationJSONObject = province400ApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class ProvinceResponse {
     
     
     public Integer statusCode;
+
     public ProvinceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class ProvinceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProvinceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProvinceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

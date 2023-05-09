@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * ResourceShareAssociation - Describes an association with a resource share and either a principal or a resource.
+ * ResourceShareAssociation - Describes an association between a resource share and either a principal or a resource.
  */
 public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatedEntity")
     public String associatedEntity;
+
     public ResourceShareAssociation withAssociatedEntity(String associatedEntity) {
         this.associatedEntity = associatedEntity;
         return this;
@@ -28,6 +29,7 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associationType")
     public ResourceShareAssociationTypeEnum associationType;
+
     public ResourceShareAssociation withAssociationType(ResourceShareAssociationTypeEnum associationType) {
         this.associationType = associationType;
         return this;
@@ -38,6 +40,7 @@ public class ResourceShareAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public ResourceShareAssociation withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external")
     public Boolean external;
+
     public ResourceShareAssociation withExternal(Boolean external) {
         this.external = external;
         return this;
@@ -56,6 +60,7 @@ public class ResourceShareAssociation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ResourceShareAssociation withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -64,6 +69,7 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public ResourceShareAssociation withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
@@ -72,6 +78,7 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareName")
     public String resourceShareName;
+
     public ResourceShareAssociation withResourceShareName(String resourceShareName) {
         this.resourceShareName = resourceShareName;
         return this;
@@ -80,6 +87,7 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ResourceShareAssociationStatusEnum status;
+
     public ResourceShareAssociation withStatus(ResourceShareAssociationStatusEnum status) {
         this.status = status;
         return this;
@@ -88,9 +96,11 @@ public class ResourceShareAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ResourceShareAssociation withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ResourceShareAssociation(){}
 }

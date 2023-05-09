@@ -15,6 +15,7 @@ public class EnterpriseCrmEventbusProtoCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public EnterpriseCrmEventbusProtoCoordinate withX(Integer x) {
         this.x = x;
         return this;
@@ -23,9 +24,11 @@ public class EnterpriseCrmEventbusProtoCoordinate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public EnterpriseCrmEventbusProtoCoordinate withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoCoordinate(){}
 }

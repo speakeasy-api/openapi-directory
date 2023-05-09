@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetInstancesRequestFilters {
     
     public String name;
+
     public DescribeFleetInstancesRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeFleetInstancesRequestFilters {
     
     
     public String[] values;
+
     public DescribeFleetInstancesRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeFleetInstancesRequestFilters(){}
 }

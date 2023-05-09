@@ -18,6 +18,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceSchedules")
     public DataSourceRefreshSchedule[] dataSourceSchedules;
+
     public Spreadsheet withDataSourceSchedules(DataSourceRefreshSchedule[] dataSourceSchedules) {
         this.dataSourceSchedules = dataSourceSchedules;
         return this;
@@ -29,6 +30,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSources")
     public DataSource[] dataSources;
+
     public Spreadsheet withDataSources(DataSource[] dataSources) {
         this.dataSources = dataSources;
         return this;
@@ -40,6 +42,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata[] developerMetadata;
+
     public Spreadsheet withDeveloperMetadata(DeveloperMetadata[] developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
@@ -51,6 +54,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namedRanges")
     public NamedRange[] namedRanges;
+
     public Spreadsheet withNamedRanges(NamedRange[] namedRanges) {
         this.namedRanges = namedRanges;
         return this;
@@ -62,6 +66,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public SpreadsheetProperties properties;
+
     public Spreadsheet withProperties(SpreadsheetProperties properties) {
         this.properties = properties;
         return this;
@@ -73,6 +78,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sheets")
     public Sheet[] sheets;
+
     public Spreadsheet withSheets(Sheet[] sheets) {
         this.sheets = sheets;
         return this;
@@ -84,6 +90,7 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetId")
     public String spreadsheetId;
+
     public Spreadsheet withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -95,9 +102,11 @@ public class Spreadsheet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spreadsheetUrl")
     public String spreadsheetUrl;
+
     public Spreadsheet withSpreadsheetUrl(String spreadsheetUrl) {
         this.spreadsheetUrl = spreadsheetUrl;
         return this;
     }
     
+    public Spreadsheet(){}
 }

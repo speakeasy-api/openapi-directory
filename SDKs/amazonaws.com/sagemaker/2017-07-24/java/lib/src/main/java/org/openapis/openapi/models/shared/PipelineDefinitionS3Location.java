@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PipelineDefinitionS3Location {
     @JsonProperty("Bucket")
     public String bucket;
+
     public PipelineDefinitionS3Location withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -21,6 +22,7 @@ public class PipelineDefinitionS3Location {
     
     @JsonProperty("ObjectKey")
     public String objectKey;
+
     public PipelineDefinitionS3Location withObjectKey(String objectKey) {
         this.objectKey = objectKey;
         return this;
@@ -29,9 +31,14 @@ public class PipelineDefinitionS3Location {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public PipelineDefinitionS3Location withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public PipelineDefinitionS3Location(@JsonProperty("Bucket") String bucket, @JsonProperty("ObjectKey") String objectKey) {
+        this.bucket = bucket;
+        this.objectKey = objectKey;
+  }
 }

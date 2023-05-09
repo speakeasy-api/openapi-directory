@@ -18,6 +18,7 @@ public class HazardousMaterialDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pictograms")
     public Pictogram[] pictograms;
+
     public HazardousMaterialDetailsResponse withPictograms(Pictogram[] pictograms) {
         this.pictograms = pictograms;
         return this;
@@ -29,6 +30,7 @@ public class HazardousMaterialDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signalWords")
     public SignalWord[] signalWords;
+
     public HazardousMaterialDetailsResponse withSignalWords(SignalWord[] signalWords) {
         this.signalWords = signalWords;
         return this;
@@ -40,9 +42,11 @@ public class HazardousMaterialDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statements")
     public HazardStatement[] statements;
+
     public HazardousMaterialDetailsResponse withStatements(HazardStatement[] statements) {
         this.statements = statements;
         return this;
     }
     
+    public HazardousMaterialDetailsResponse(){}
 }

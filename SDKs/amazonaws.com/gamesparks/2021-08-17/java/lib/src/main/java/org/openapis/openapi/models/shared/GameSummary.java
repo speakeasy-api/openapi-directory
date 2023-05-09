@@ -15,6 +15,7 @@ public class GameSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GameSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class GameSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GameSummary withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class GameSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public GameStateEnum state;
+
     public GameSummary withState(GameStateEnum state) {
         this.state = state;
         return this;
@@ -39,9 +42,11 @@ public class GameSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GameSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GameSummary(){}
 }

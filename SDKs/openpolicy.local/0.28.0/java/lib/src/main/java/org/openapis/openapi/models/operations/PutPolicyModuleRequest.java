@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPolicyModuleRequest {
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public String requestBody;
+
     public PutPolicyModuleRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PutPolicyModuleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutPolicyModuleRequest withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +32,7 @@ public class PutPolicyModuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metrics")
     public Boolean metrics;
+
     public PutPolicyModuleRequest withMetrics(Boolean metrics) {
         this.metrics = metrics;
         return this;
@@ -39,9 +43,14 @@ public class PutPolicyModuleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public PutPolicyModuleRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public PutPolicyModuleRequest(@JsonProperty("RequestBody") String requestBody, @JsonProperty("id") String id) {
+        this.requestBody = requestBody;
+        this.id = id;
+  }
 }

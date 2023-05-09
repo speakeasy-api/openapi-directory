@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDataSourceFromRDSResponse {
     
     public String contentType;
+
     public CreateDataSourceFromRDSResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateDataSourceFromRDSResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDataSourceFromRDSOutput createDataSourceFromRDSOutput;
+
     public CreateDataSourceFromRDSResponse withCreateDataSourceFromRDSOutput(org.openapis.openapi.models.shared.CreateDataSourceFromRDSOutput createDataSourceFromRDSOutput) {
         this.createDataSourceFromRDSOutput = createDataSourceFromRDSOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateDataSourceFromRDSResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CreateDataSourceFromRDSResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class CreateDataSourceFromRDSResponse {
      */
     
     public Object internalServerException;
+
     public CreateDataSourceFromRDSResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDataSourceFromRDSResponse {
      */
     
     public Object invalidInputException;
+
     public CreateDataSourceFromRDSResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class CreateDataSourceFromRDSResponse {
     
     
     public Integer statusCode;
+
     public CreateDataSourceFromRDSResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class CreateDataSourceFromRDSResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDataSourceFromRDSResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateDataSourceFromRDSResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

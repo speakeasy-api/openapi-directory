@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingValueRequest {
@@ -12,6 +13,7 @@ public class GetSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=environmentId")
     public String environmentId;
+
     public GetSettingValueRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -22,9 +24,14 @@ public class GetSettingValueRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingId")
     public Integer settingId;
+
     public GetSettingValueRequest withSettingId(Integer settingId) {
         this.settingId = settingId;
         return this;
     }
     
+    public GetSettingValueRequest(@JsonProperty("environmentId") String environmentId, @JsonProperty("settingId") Integer settingId) {
+        this.environmentId = environmentId;
+        this.settingId = settingId;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleChromePolicyVersionsV1InheritOrgUnitPolicyRequest[] requests;
+
     public GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest withRequests(GoogleChromePolicyVersionsV1InheritOrgUnitPolicyRequest[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1BatchInheritOrgUnitPoliciesRequest(){}
 }

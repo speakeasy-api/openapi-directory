@@ -15,9 +15,11 @@ public class VerificationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Valid")
     public Boolean valid;
+
     public VerificationResponse withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public VerificationResponse(){}
 }

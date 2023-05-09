@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsDestination")
     public GoogleCloudDocumentaiV1beta2GcsDestination gcsDestination;
+
     public GoogleCloudDocumentaiV1beta2OutputConfig withGcsDestination(GoogleCloudDocumentaiV1beta2GcsDestination gcsDestination) {
         this.gcsDestination = gcsDestination;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1beta2OutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagesPerShard")
     public Integer pagesPerShard;
+
     public GoogleCloudDocumentaiV1beta2OutputConfig withPagesPerShard(Integer pagesPerShard) {
         this.pagesPerShard = pagesPerShard;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2OutputConfig(){}
 }

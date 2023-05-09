@@ -12,9 +12,13 @@ public class IssuesUpdateCommentRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public IssuesUpdateCommentRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public IssuesUpdateCommentRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

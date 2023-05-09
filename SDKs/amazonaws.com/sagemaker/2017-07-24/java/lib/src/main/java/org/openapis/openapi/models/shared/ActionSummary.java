@@ -20,6 +20,7 @@ public class ActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionArn")
     public String actionArn;
+
     public ActionSummary withActionArn(String actionArn) {
         this.actionArn = actionArn;
         return this;
@@ -28,6 +29,7 @@ public class ActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionName")
     public String actionName;
+
     public ActionSummary withActionName(String actionName) {
         this.actionName = actionName;
         return this;
@@ -36,6 +38,7 @@ public class ActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public String actionType;
+
     public ActionSummary withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -46,6 +49,7 @@ public class ActionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ActionSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class ActionSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ActionSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +69,7 @@ public class ActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ActionSource source;
+
     public ActionSummary withSource(ActionSource source) {
         this.source = source;
         return this;
@@ -72,9 +78,11 @@ public class ActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ActionStatusEnum status;
+
     public ActionSummary withStatus(ActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ActionSummary(){}
 }

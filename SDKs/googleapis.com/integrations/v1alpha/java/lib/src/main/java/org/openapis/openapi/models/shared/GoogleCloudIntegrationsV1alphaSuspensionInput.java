@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalConfig")
     public GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput approvalConfig;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withApprovalConfig(GoogleCloudIntegrationsV1alphaSuspensionApprovalConfigInput approvalConfig) {
         this.approvalConfig = approvalConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audit")
     public GoogleCloudIntegrationsV1alphaSuspensionAudit audit;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withAudit(GoogleCloudIntegrationsV1alphaSuspensionAudit audit) {
         this.audit = audit;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventExecutionInfoId")
     public String eventExecutionInfoId;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withEventExecutionInfoId(String eventExecutionInfoId) {
         this.eventExecutionInfoId = eventExecutionInfoId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integration")
     public String integration;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withIntegration(String integration) {
         this.integration = integration;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudIntegrationsV1alphaSuspensionStateEnum state;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withState(GoogleCloudIntegrationsV1alphaSuspensionStateEnum state) {
         this.state = state;
         return this;
@@ -81,6 +87,7 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspensionConfig")
     public EnterpriseCrmEventbusProtoSuspensionConfig suspensionConfig;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withSuspensionConfig(EnterpriseCrmEventbusProtoSuspensionConfig suspensionConfig) {
         this.suspensionConfig = suspensionConfig;
         return this;
@@ -92,9 +99,11 @@ public class GoogleCloudIntegrationsV1alphaSuspensionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskId")
     public String taskId;
+
     public GoogleCloudIntegrationsV1alphaSuspensionInput withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaSuspensionInput(){}
 }

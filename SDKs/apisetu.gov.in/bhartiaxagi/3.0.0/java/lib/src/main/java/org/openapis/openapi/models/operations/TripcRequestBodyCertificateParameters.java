@@ -12,6 +12,7 @@ public class TripcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public TripcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,9 +23,14 @@ public class TripcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNumber")
     public String policyNumber;
+
     public TripcRequestBodyCertificateParameters withPolicyNumber(String policyNumber) {
         this.policyNumber = policyNumber;
         return this;
     }
     
+    public TripcRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("PolicyNumber") String policyNumber) {
+        this.fullName = fullName;
+        this.policyNumber = policyNumber;
+  }
 }

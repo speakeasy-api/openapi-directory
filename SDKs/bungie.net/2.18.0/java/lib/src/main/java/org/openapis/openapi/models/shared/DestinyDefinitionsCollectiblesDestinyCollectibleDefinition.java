@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     public DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock acquisitionInfo;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withAcquisitionInfo(DestinyDefinitionsCollectiblesDestinyCollectibleAcquisitionBlock acquisitionInfo) {
         this.acquisitionInfo = acquisitionInfo;
         return this;
@@ -22,6 +23,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withDisplayProperties(DestinyDefinitionsCommonDestinyDisplayPropertiesDefinition displayProperties) {
         this.displayProperties = displayProperties;
         return this;
@@ -33,6 +35,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Long hash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withHash(Long hash) {
         this.hash = hash;
         return this;
@@ -43,6 +46,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Integer index;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withIndex(Integer index) {
         this.index = index;
         return this;
@@ -50,6 +54,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public Long itemHash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
@@ -60,6 +65,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Long[] parentNodeHashes;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withParentNodeHashes(Long[] parentNodeHashes) {
         this.parentNodeHashes = parentNodeHashes;
         return this;
@@ -67,6 +73,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withPresentationInfo(DestinyDefinitionsPresentationDestinyPresentationChildBlock presentationInfo) {
         this.presentationInfo = presentationInfo;
         return this;
@@ -74,6 +81,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public Integer presentationNodeType;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withPresentationNodeType(Integer presentationNodeType) {
         this.presentationNodeType = presentationNodeType;
         return this;
@@ -84,6 +92,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Boolean redacted;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withRedacted(Boolean redacted) {
         this.redacted = redacted;
         return this;
@@ -94,6 +103,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Integer scope;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withScope(Integer scope) {
         this.scope = scope;
         return this;
@@ -106,6 +116,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public Long sourceHash;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withSourceHash(Long sourceHash) {
         this.sourceHash = sourceHash;
         return this;
@@ -116,6 +127,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
      */
     
     public String sourceString;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withSourceString(String sourceString) {
         this.sourceString = sourceString;
         return this;
@@ -123,6 +135,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock stateInfo;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withStateInfo(DestinyDefinitionsCollectiblesDestinyCollectibleStateBlock stateInfo) {
         this.stateInfo = stateInfo;
         return this;
@@ -130,6 +143,7 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public Long[] traitHashes;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withTraitHashes(Long[] traitHashes) {
         this.traitHashes = traitHashes;
         return this;
@@ -137,9 +151,11 @@ public class DestinyDefinitionsCollectiblesDestinyCollectibleDefinition {
     
     
     public String[] traitIds;
+
     public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition withTraitIds(String[] traitIds) {
         this.traitIds = traitIds;
         return this;
     }
     
+    public DestinyDefinitionsCollectiblesDestinyCollectibleDefinition(){}
 }

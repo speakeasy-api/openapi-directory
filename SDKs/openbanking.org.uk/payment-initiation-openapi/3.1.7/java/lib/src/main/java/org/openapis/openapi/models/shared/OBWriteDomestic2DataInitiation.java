@@ -17,6 +17,7 @@ public class OBWriteDomestic2DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomestic2DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomestic2DataInitiation withCreditorAccount(OBWriteDomestic2DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteDomestic2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorPostalAddress")
     public OBPostalAddress6 creditorPostalAddress;
+
     public OBWriteDomestic2DataInitiation withCreditorPostalAddress(OBPostalAddress6 creditorPostalAddress) {
         this.creditorPostalAddress = creditorPostalAddress;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteDomestic2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomestic2DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomestic2DataInitiation withDebtorAccount(OBWriteDomestic2DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -51,6 +54,7 @@ public class OBWriteDomestic2DataInitiation {
      */
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteDomestic2DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -62,6 +66,7 @@ public class OBWriteDomestic2DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteDomestic2DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteDomestic2DataInitiation withInstructedAmount(OBWriteDomestic2DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -73,6 +78,7 @@ public class OBWriteDomestic2DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteDomestic2DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -85,6 +91,7 @@ public class OBWriteDomestic2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteDomestic2DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -96,6 +103,7 @@ public class OBWriteDomestic2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteDomestic2DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteDomestic2DataInitiation withRemittanceInformation(OBWriteDomestic2DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -107,9 +115,16 @@ public class OBWriteDomestic2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomestic2DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomestic2DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomestic2DataInitiationCreditorAccount creditorAccount, @JsonProperty("EndToEndIdentification") String endToEndIdentification, @JsonProperty("InstructedAmount") OBWriteDomestic2DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification) {
+        this.creditorAccount = creditorAccount;
+        this.endToEndIdentification = endToEndIdentification;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+  }
 }

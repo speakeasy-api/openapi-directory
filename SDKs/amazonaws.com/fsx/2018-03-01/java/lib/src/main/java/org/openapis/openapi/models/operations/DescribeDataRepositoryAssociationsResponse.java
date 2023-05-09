@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDataRepositoryAssociationsResponse {
@@ -12,6 +13,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public Object badRequest;
+
     public DescribeDataRepositoryAssociationsResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDataRepositoryAssociationsResponse {
     
     
     public String contentType;
+
     public DescribeDataRepositoryAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public Object dataRepositoryAssociationNotFound;
+
     public DescribeDataRepositoryAssociationsResponse withDataRepositoryAssociationNotFound(Object dataRepositoryAssociationNotFound) {
         this.dataRepositoryAssociationNotFound = dataRepositoryAssociationNotFound;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDataRepositoryAssociationsResponse describeDataRepositoryAssociationsResponse;
+
     public DescribeDataRepositoryAssociationsResponse withDescribeDataRepositoryAssociationsResponse(org.openapis.openapi.models.shared.DescribeDataRepositoryAssociationsResponse describeDataRepositoryAssociationsResponse) {
         this.describeDataRepositoryAssociationsResponse = describeDataRepositoryAssociationsResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public Object fileSystemNotFound;
+
     public DescribeDataRepositoryAssociationsResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeDataRepositoryAssociationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class DescribeDataRepositoryAssociationsResponse {
      */
     
     public Object invalidDataRepositoryType;
+
     public DescribeDataRepositoryAssociationsResponse withInvalidDataRepositoryType(Object invalidDataRepositoryType) {
         this.invalidDataRepositoryType = invalidDataRepositoryType;
         return this;
@@ -76,6 +84,7 @@ public class DescribeDataRepositoryAssociationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeDataRepositoryAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDataRepositoryAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDataRepositoryAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDataRepositoryAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentLink {
     
     public String environmentName;
+
     public EnvironmentLink withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -19,9 +20,11 @@ public class EnvironmentLink {
     
     
     public String linkName;
+
     public EnvironmentLink withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
     }
     
+    public EnvironmentLink(){}
 }

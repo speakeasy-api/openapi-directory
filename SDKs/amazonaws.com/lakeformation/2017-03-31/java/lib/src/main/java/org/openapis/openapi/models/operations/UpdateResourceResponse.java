@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateResourceResponse {
     
     public String contentType;
+
     public UpdateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateResourceResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateResourceResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateResourceResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateResourceResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateResourceResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateResourceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateResourceResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateResourceResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateResourceResponse {
     
     
     public Integer statusCode;
+
     public UpdateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateResourceResponse {
      */
     
     public java.util.Map<String, Object> updateResourceResponse;
+
     public UpdateResourceResponse withUpdateResourceResponse(java.util.Map<String, Object> updateResourceResponse) {
         this.updateResourceResponse = updateResourceResponse;
         return this;
     }
     
+    public UpdateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

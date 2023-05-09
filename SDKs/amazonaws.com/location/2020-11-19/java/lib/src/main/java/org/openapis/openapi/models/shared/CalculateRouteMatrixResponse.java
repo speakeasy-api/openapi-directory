@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CalculateRouteMatrixResponse {
     @JsonProperty("RouteMatrix")
     public RouteMatrixEntry[][] routeMatrix;
+
     public CalculateRouteMatrixResponse withRouteMatrix(RouteMatrixEntry[][] routeMatrix) {
         this.routeMatrix = routeMatrix;
         return this;
@@ -22,6 +23,7 @@ public class CalculateRouteMatrixResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnappedDeparturePositions")
     public Double[][] snappedDeparturePositions;
+
     public CalculateRouteMatrixResponse withSnappedDeparturePositions(Double[][] snappedDeparturePositions) {
         this.snappedDeparturePositions = snappedDeparturePositions;
         return this;
@@ -30,6 +32,7 @@ public class CalculateRouteMatrixResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnappedDestinationPositions")
     public Double[][] snappedDestinationPositions;
+
     public CalculateRouteMatrixResponse withSnappedDestinationPositions(Double[][] snappedDestinationPositions) {
         this.snappedDestinationPositions = snappedDestinationPositions;
         return this;
@@ -37,9 +40,14 @@ public class CalculateRouteMatrixResponse {
     
     @JsonProperty("Summary")
     public CalculateRouteMatrixSummary summary;
+
     public CalculateRouteMatrixResponse withSummary(CalculateRouteMatrixSummary summary) {
         this.summary = summary;
         return this;
     }
     
+    public CalculateRouteMatrixResponse(@JsonProperty("RouteMatrix") RouteMatrixEntry[][] routeMatrix, @JsonProperty("Summary") CalculateRouteMatrixSummary summary) {
+        this.routeMatrix = routeMatrix;
+        this.summary = summary;
+  }
 }

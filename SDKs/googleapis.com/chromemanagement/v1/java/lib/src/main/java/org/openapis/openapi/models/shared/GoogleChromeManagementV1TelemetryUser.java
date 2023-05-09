@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryUser - Telemetry data collected from a managed user.
+ * GoogleChromeManagementV1TelemetryUser - Telemetry data collected from a managed user. * Granular permission needed: TELEMETRY_API_USER
  */
 public class GoogleChromeManagementV1TelemetryUser {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public String customer;
+
     public GoogleChromeManagementV1TelemetryUser withCustomer(String customer) {
         this.customer = customer;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleChromeManagementV1TelemetryUser withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public GoogleChromeManagementV1TelemetryUser withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userDevice")
     public GoogleChromeManagementV1TelemetryUserDevice[] userDevice;
+
     public GoogleChromeManagementV1TelemetryUser withUserDevice(GoogleChromeManagementV1TelemetryUserDevice[] userDevice) {
         this.userDevice = userDevice;
         return this;
@@ -62,6 +66,7 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public GoogleChromeManagementV1TelemetryUser withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
@@ -73,9 +78,11 @@ public class GoogleChromeManagementV1TelemetryUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GoogleChromeManagementV1TelemetryUser withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryUser(){}
 }

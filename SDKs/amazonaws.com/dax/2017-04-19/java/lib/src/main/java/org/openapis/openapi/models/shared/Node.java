@@ -20,6 +20,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Node withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -28,6 +29,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public Endpoint endpoint;
+
     public Node withEndpoint(Endpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -38,6 +40,7 @@ public class Node {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("NodeCreateTime")
     public OffsetDateTime nodeCreateTime;
+
     public Node withNodeCreateTime(OffsetDateTime nodeCreateTime) {
         this.nodeCreateTime = nodeCreateTime;
         return this;
@@ -46,6 +49,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeId")
     public String nodeId;
+
     public Node withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -54,6 +58,7 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeStatus")
     public String nodeStatus;
+
     public Node withNodeStatus(String nodeStatus) {
         this.nodeStatus = nodeStatus;
         return this;
@@ -62,9 +67,11 @@ public class Node {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParameterGroupStatus")
     public String parameterGroupStatus;
+
     public Node withParameterGroupStatus(String parameterGroupStatus) {
         this.parameterGroupStatus = parameterGroupStatus;
         return this;
     }
     
+    public Node(){}
 }

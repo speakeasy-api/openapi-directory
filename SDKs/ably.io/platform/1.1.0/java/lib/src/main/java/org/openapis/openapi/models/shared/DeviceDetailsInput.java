@@ -17,6 +17,7 @@ public class DeviceDetailsInput {
     @JsonProperty("clientId")
     @SpeakeasyMetadata("form:name=clientId")
     public String clientId;
+
     public DeviceDetailsInput withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class DeviceDetailsInput {
     @JsonProperty("deviceSecret")
     @SpeakeasyMetadata("form:name=deviceSecret")
     public String deviceSecret;
+
     public DeviceDetailsInput withDeviceSecret(String deviceSecret) {
         this.deviceSecret = deviceSecret;
         return this;
@@ -41,6 +43,7 @@ public class DeviceDetailsInput {
     @JsonProperty("formFactor")
     @SpeakeasyMetadata("form:name=formFactor")
     public DeviceDetailsFormFactorEnum formFactor;
+
     public DeviceDetailsInput withFormFactor(DeviceDetailsFormFactorEnum formFactor) {
         this.formFactor = formFactor;
         return this;
@@ -53,6 +56,7 @@ public class DeviceDetailsInput {
     @JsonProperty("id")
     @SpeakeasyMetadata("form:name=id")
     public String id;
+
     public DeviceDetailsInput withId(String id) {
         this.id = id;
         return this;
@@ -65,6 +69,7 @@ public class DeviceDetailsInput {
     @JsonProperty("metadata")
     @SpeakeasyMetadata("form:name=metadata,json")
     public java.util.Map<String, Object> metadata;
+
     public DeviceDetailsInput withMetadata(java.util.Map<String, Object> metadata) {
         this.metadata = metadata;
         return this;
@@ -77,6 +82,7 @@ public class DeviceDetailsInput {
     @JsonProperty("platform")
     @SpeakeasyMetadata("form:name=platform")
     public DeviceDetailsPlatformEnum platform;
+
     public DeviceDetailsInput withPlatform(DeviceDetailsPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -89,9 +95,11 @@ public class DeviceDetailsInput {
     @JsonProperty("push.recipient")
     @SpeakeasyMetadata("form:name=push.recipient,json")
     public Recipient pushRecipient;
+
     public DeviceDetailsInput withPushRecipient(Recipient pushRecipient) {
         this.pushRecipient = pushRecipient;
         return this;
     }
     
+    public DeviceDetailsInput(){}
 }

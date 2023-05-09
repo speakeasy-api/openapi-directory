@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImportResponse {
@@ -12,6 +13,7 @@ public class StartImportResponse {
      */
     
     public Object conflictException;
+
     public StartImportResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartImportResponse {
     
     
     public String contentType;
+
     public StartImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartImportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartImportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class StartImportResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartImportResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartImportResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImportResponse startImportResponse;
+
     public StartImportResponse withStartImportResponse(org.openapis.openapi.models.shared.StartImportResponse startImportResponse) {
         this.startImportResponse = startImportResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartImportResponse {
     
     
     public Integer statusCode;
+
     public StartImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartImportResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StartImportResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -83,9 +92,14 @@ public class StartImportResponse {
      */
     
     public Object validationException;
+
     public StartImportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

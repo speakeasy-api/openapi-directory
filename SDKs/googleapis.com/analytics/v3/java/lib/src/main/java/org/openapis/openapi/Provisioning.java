@@ -61,11 +61,9 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTicketResponse res = new org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTicketResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTicketResponse res = new org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTicketResponse(contentType, httpRes.statusCode()) {{
             accountTicket = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class Provisioning {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTreeResponse res = new org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTreeResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTreeResponse res = new org.openapis.openapi.models.operations.AnalyticsProvisioningCreateAccountTreeResponse(contentType, httpRes.statusCode()) {{
             accountTreeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

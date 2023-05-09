@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourcePolicyResponse {
     
     public String contentType;
+
     public PutResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object invalidPolicyRevisionIdException;
+
     public PutResourcePolicyResponse withInvalidPolicyRevisionIdException(Object invalidPolicyRevisionIdException) {
         this.invalidPolicyRevisionIdException = invalidPolicyRevisionIdException;
         return this;
@@ -29,6 +32,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object lockoutPreventionException;
+
     public PutResourcePolicyResponse withLockoutPreventionException(Object lockoutPreventionException) {
         this.lockoutPreventionException = lockoutPreventionException;
         return this;
@@ -39,6 +43,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object malformedPolicyDocumentException;
+
     public PutResourcePolicyResponse withMalformedPolicyDocumentException(Object malformedPolicyDocumentException) {
         this.malformedPolicyDocumentException = malformedPolicyDocumentException;
         return this;
@@ -49,6 +54,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object policyCountLimitExceededException;
+
     public PutResourcePolicyResponse withPolicyCountLimitExceededException(Object policyCountLimitExceededException) {
         this.policyCountLimitExceededException = policyCountLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object policySizeLimitExceededException;
+
     public PutResourcePolicyResponse withPolicySizeLimitExceededException(Object policySizeLimitExceededException) {
         this.policySizeLimitExceededException = policySizeLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class PutResourcePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutResourcePolicyResult putResourcePolicyResult;
+
     public PutResourcePolicyResponse withPutResourcePolicyResult(org.openapis.openapi.models.shared.PutResourcePolicyResult putResourcePolicyResult) {
         this.putResourcePolicyResult = putResourcePolicyResult;
         return this;
@@ -76,6 +84,7 @@ public class PutResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutResourcePolicyResponse {
      */
     
     public Object throttledException;
+
     public PutResourcePolicyResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public PutResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

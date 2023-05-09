@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class InboxItems {
     
     public Long answerId;
+
     public InboxItems withAnswerId(Long answerId) {
         this.answerId = answerId;
         return this;
@@ -16,6 +17,7 @@ public class InboxItems {
     
     
     public String body;
+
     public InboxItems withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +25,7 @@ public class InboxItems {
     
     
     public Long commentId;
+
     public InboxItems withCommentId(Long commentId) {
         this.commentId = commentId;
         return this;
@@ -30,6 +33,7 @@ public class InboxItems {
     
     
     public Long creationDate;
+
     public InboxItems withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -37,6 +41,7 @@ public class InboxItems {
     
     
     public Boolean isUnread;
+
     public InboxItems withIsUnread(Boolean isUnread) {
         this.isUnread = isUnread;
         return this;
@@ -44,6 +49,7 @@ public class InboxItems {
     
     
     public String itemType;
+
     public InboxItems withItemType(String itemType) {
         this.itemType = itemType;
         return this;
@@ -51,6 +57,7 @@ public class InboxItems {
     
     
     public String link;
+
     public InboxItems withLink(String link) {
         this.link = link;
         return this;
@@ -58,6 +65,7 @@ public class InboxItems {
     
     
     public Long questionId;
+
     public InboxItems withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
@@ -65,6 +73,7 @@ public class InboxItems {
     
     
     public InboxItemsSite site;
+
     public InboxItems withSite(InboxItemsSite site) {
         this.site = site;
         return this;
@@ -72,9 +81,11 @@ public class InboxItems {
     
     
     public String title;
+
     public InboxItems withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public InboxItems(){}
 }

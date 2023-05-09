@@ -15,6 +15,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchJobParameters")
     public PipeTargetBatchJobParameters batchJobParameters;
+
     public PipeTargetParameters withBatchJobParameters(PipeTargetBatchJobParameters batchJobParameters) {
         this.batchJobParameters = batchJobParameters;
         return this;
@@ -23,6 +24,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsParameters")
     public PipeTargetCloudWatchLogsParameters cloudWatchLogsParameters;
+
     public PipeTargetParameters withCloudWatchLogsParameters(PipeTargetCloudWatchLogsParameters cloudWatchLogsParameters) {
         this.cloudWatchLogsParameters = cloudWatchLogsParameters;
         return this;
@@ -31,6 +33,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsTaskParameters")
     public PipeTargetEcsTaskParameters ecsTaskParameters;
+
     public PipeTargetParameters withEcsTaskParameters(PipeTargetEcsTaskParameters ecsTaskParameters) {
         this.ecsTaskParameters = ecsTaskParameters;
         return this;
@@ -39,6 +42,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeEventBusParameters")
     public PipeTargetEventBridgeEventBusParameters eventBridgeEventBusParameters;
+
     public PipeTargetParameters withEventBridgeEventBusParameters(PipeTargetEventBridgeEventBusParameters eventBridgeEventBusParameters) {
         this.eventBridgeEventBusParameters = eventBridgeEventBusParameters;
         return this;
@@ -47,6 +51,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HttpParameters")
     public PipeTargetHttpParameters httpParameters;
+
     public PipeTargetParameters withHttpParameters(PipeTargetHttpParameters httpParameters) {
         this.httpParameters = httpParameters;
         return this;
@@ -55,6 +60,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputTemplate")
     public String inputTemplate;
+
     public PipeTargetParameters withInputTemplate(String inputTemplate) {
         this.inputTemplate = inputTemplate;
         return this;
@@ -63,6 +69,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisStreamParameters")
     public PipeTargetKinesisStreamParameters kinesisStreamParameters;
+
     public PipeTargetParameters withKinesisStreamParameters(PipeTargetKinesisStreamParameters kinesisStreamParameters) {
         this.kinesisStreamParameters = kinesisStreamParameters;
         return this;
@@ -71,6 +78,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LambdaFunctionParameters")
     public PipeTargetLambdaFunctionParameters lambdaFunctionParameters;
+
     public PipeTargetParameters withLambdaFunctionParameters(PipeTargetLambdaFunctionParameters lambdaFunctionParameters) {
         this.lambdaFunctionParameters = lambdaFunctionParameters;
         return this;
@@ -79,6 +87,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftDataParameters")
     public PipeTargetRedshiftDataParameters redshiftDataParameters;
+
     public PipeTargetParameters withRedshiftDataParameters(PipeTargetRedshiftDataParameters redshiftDataParameters) {
         this.redshiftDataParameters = redshiftDataParameters;
         return this;
@@ -87,6 +96,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerPipelineParameters")
     public PipeTargetSageMakerPipelineParameters sageMakerPipelineParameters;
+
     public PipeTargetParameters withSageMakerPipelineParameters(PipeTargetSageMakerPipelineParameters sageMakerPipelineParameters) {
         this.sageMakerPipelineParameters = sageMakerPipelineParameters;
         return this;
@@ -95,6 +105,7 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsQueueParameters")
     public PipeTargetSqsQueueParameters sqsQueueParameters;
+
     public PipeTargetParameters withSqsQueueParameters(PipeTargetSqsQueueParameters sqsQueueParameters) {
         this.sqsQueueParameters = sqsQueueParameters;
         return this;
@@ -103,9 +114,11 @@ public class PipeTargetParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepFunctionStateMachineParameters")
     public PipeTargetStateMachineParameters stepFunctionStateMachineParameters;
+
     public PipeTargetParameters withStepFunctionStateMachineParameters(PipeTargetStateMachineParameters stepFunctionStateMachineParameters) {
         this.stepFunctionStateMachineParameters = stepFunctionStateMachineParameters;
         return this;
     }
     
+    public PipeTargetParameters(){}
 }

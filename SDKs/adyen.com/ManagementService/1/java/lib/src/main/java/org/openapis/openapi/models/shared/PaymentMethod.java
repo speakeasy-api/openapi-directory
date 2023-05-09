@@ -18,6 +18,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Boolean allowed;
+
     public PaymentMethod withAllowed(Boolean allowed) {
         this.allowed = allowed;
         return this;
@@ -26,6 +27,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applePay")
     public ApplePayInfo applePay;
+
     public PaymentMethod withApplePay(ApplePayInfo applePay) {
         this.applePay = applePay;
         return this;
@@ -34,6 +36,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bcmc")
     public BcmcInfo bcmc;
+
     public PaymentMethod withBcmc(BcmcInfo bcmc) {
         this.bcmc = bcmc;
         return this;
@@ -45,6 +48,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineId")
     public String businessLineId;
+
     public PaymentMethod withBusinessLineId(String businessLineId) {
         this.businessLineId = businessLineId;
         return this;
@@ -53,6 +57,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cartesBancaires")
     public CartesBancairesInfo cartesBancaires;
+
     public PaymentMethod withCartesBancaires(CartesBancairesInfo cartesBancaires) {
         this.cartesBancaires = cartesBancaires;
         return this;
@@ -64,6 +69,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countries")
     public String[] countries;
+
     public PaymentMethod withCountries(String[] countries) {
         this.countries = countries;
         return this;
@@ -75,6 +81,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencies")
     public String[] currencies;
+
     public PaymentMethod withCurrencies(String[] currencies) {
         this.currencies = currencies;
         return this;
@@ -86,6 +93,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customRoutingFlags")
     public String[] customRoutingFlags;
+
     public PaymentMethod withCustomRoutingFlags(String[] customRoutingFlags) {
         this.customRoutingFlags = customRoutingFlags;
         return this;
@@ -97,6 +105,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PaymentMethod withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -105,6 +114,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("giroPay")
     public GiroPayInfo giroPay;
+
     public PaymentMethod withGiroPay(GiroPayInfo giroPay) {
         this.giroPay = giroPay;
         return this;
@@ -113,6 +123,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePay")
     public GooglePayInfo googlePay;
+
     public PaymentMethod withGooglePay(GooglePayInfo googlePay) {
         this.googlePay = googlePay;
         return this;
@@ -123,6 +134,7 @@ public class PaymentMethod {
      */
     @JsonProperty("id")
     public String id;
+
     public PaymentMethod withId(String id) {
         this.id = id;
         return this;
@@ -131,6 +143,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("klarna")
     public KlarnaInfo klarna;
+
     public PaymentMethod withKlarna(KlarnaInfo klarna) {
         this.klarna = klarna;
         return this;
@@ -139,6 +152,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mealVoucher_FR")
     public MealVoucherFRInfo mealVoucherFR;
+
     public PaymentMethod withMealVoucherFR(MealVoucherFRInfo mealVoucherFR) {
         this.mealVoucherFR = mealVoucherFR;
         return this;
@@ -147,6 +161,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paypal")
     public PayPalInfo paypal;
+
     public PaymentMethod withPaypal(PayPalInfo paypal) {
         this.paypal = paypal;
         return this;
@@ -158,6 +173,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PaymentMethod withReference(String reference) {
         this.reference = reference;
         return this;
@@ -169,6 +185,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperInteraction")
     public String shopperInteraction;
+
     public PaymentMethod withShopperInteraction(String shopperInteraction) {
         this.shopperInteraction = shopperInteraction;
         return this;
@@ -177,6 +194,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sofort")
     public SofortInfo sofort;
+
     public PaymentMethod withSofort(SofortInfo sofort) {
         this.sofort = sofort;
         return this;
@@ -188,6 +206,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public PaymentMethod withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -196,6 +215,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swish")
     public SwishInfo swish;
+
     public PaymentMethod withSwish(SwishInfo swish) {
         this.swish = swish;
         return this;
@@ -207,6 +227,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PaymentMethod withType(String type) {
         this.type = type;
         return this;
@@ -222,6 +243,7 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStatus")
     public PaymentMethodVerificationStatusEnum verificationStatus;
+
     public PaymentMethod withVerificationStatus(PaymentMethodVerificationStatusEnum verificationStatus) {
         this.verificationStatus = verificationStatus;
         return this;
@@ -230,9 +252,13 @@ public class PaymentMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vipps")
     public VippsInfo vipps;
+
     public PaymentMethod withVipps(VippsInfo vipps) {
         this.vipps = vipps;
         return this;
     }
     
+    public PaymentMethod(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

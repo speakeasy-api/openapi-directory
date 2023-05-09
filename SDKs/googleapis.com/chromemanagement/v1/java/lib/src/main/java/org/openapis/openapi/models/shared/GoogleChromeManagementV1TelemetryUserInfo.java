@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1TelemetryUserInfo - Information about a user associated with telemetry data.
+ * GoogleChromeManagementV1TelemetryUserInfo - Information about a user associated with telemetry data. * Granular permission needed: TELEMETRY_API_USER
  */
 public class GoogleChromeManagementV1TelemetryUserInfo {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1TelemetryUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleChromeManagementV1TelemetryUserInfo withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1TelemetryUserInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public GoogleChromeManagementV1TelemetryUserInfo withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
     }
     
+    public GoogleChromeManagementV1TelemetryUserInfo(){}
 }

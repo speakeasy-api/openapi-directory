@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class ModifyClusterMaintenanceMessage {
     
     public String clusterIdentifier;
+
     public ModifyClusterMaintenanceMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -16,6 +18,7 @@ public class ModifyClusterMaintenanceMessage {
     
     
     public Boolean deferMaintenance;
+
     public ModifyClusterMaintenanceMessage withDeferMaintenance(Boolean deferMaintenance) {
         this.deferMaintenance = deferMaintenance;
         return this;
@@ -23,6 +26,7 @@ public class ModifyClusterMaintenanceMessage {
     
     
     public Long deferMaintenanceDuration;
+
     public ModifyClusterMaintenanceMessage withDeferMaintenanceDuration(Long deferMaintenanceDuration) {
         this.deferMaintenanceDuration = deferMaintenanceDuration;
         return this;
@@ -30,6 +34,7 @@ public class ModifyClusterMaintenanceMessage {
     
     
     public OffsetDateTime deferMaintenanceEndTime;
+
     public ModifyClusterMaintenanceMessage withDeferMaintenanceEndTime(OffsetDateTime deferMaintenanceEndTime) {
         this.deferMaintenanceEndTime = deferMaintenanceEndTime;
         return this;
@@ -37,6 +42,7 @@ public class ModifyClusterMaintenanceMessage {
     
     
     public String deferMaintenanceIdentifier;
+
     public ModifyClusterMaintenanceMessage withDeferMaintenanceIdentifier(String deferMaintenanceIdentifier) {
         this.deferMaintenanceIdentifier = deferMaintenanceIdentifier;
         return this;
@@ -44,9 +50,13 @@ public class ModifyClusterMaintenanceMessage {
     
     
     public OffsetDateTime deferMaintenanceStartTime;
+
     public ModifyClusterMaintenanceMessage withDeferMaintenanceStartTime(OffsetDateTime deferMaintenanceStartTime) {
         this.deferMaintenanceStartTime = deferMaintenanceStartTime;
         return this;
     }
     
+    public ModifyClusterMaintenanceMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+  }
 }

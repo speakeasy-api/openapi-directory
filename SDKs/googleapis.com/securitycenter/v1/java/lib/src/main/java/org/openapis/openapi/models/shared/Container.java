@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Container {
     /**
-     * Optional container image id, when provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
+     * Optional container image ID, if provided by the container runtime. Uniquely identifies the container image launched using a container image digest.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageId")
     public String imageId;
+
     public Container withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -29,31 +30,35 @@ public class Container {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public Label[] labels;
+
     public Container withLabels(Label[] labels) {
         this.labels = labels;
         return this;
     }
     
     /**
-     * Container name.
+     * Name of the container.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Container withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Container image URI provided when configuring a pod/container. May identify a container image version using mutable tags.
+     * Container image URI provided when configuring a pod or container. This string can identify a container image version using mutable tags.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public Container withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public Container(){}
 }

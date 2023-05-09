@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteHsmClientCertificateMessage - &lt;p/&gt;
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteHsmClientCertificateMessage {
     
     public String hsmClientCertificateIdentifier;
+
     public DeleteHsmClientCertificateMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
     }
     
+    public DeleteHsmClientCertificateMessage(@JsonProperty("HsmClientCertificateIdentifier") String hsmClientCertificateIdentifier) {
+        this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
+  }
 }

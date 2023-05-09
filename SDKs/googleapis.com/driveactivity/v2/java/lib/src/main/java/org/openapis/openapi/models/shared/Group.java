@@ -18,6 +18,7 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Group withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class Group {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Group withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Group(){}
 }

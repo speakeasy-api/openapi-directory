@@ -12,6 +12,7 @@ public class ApiKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PredictionKeys")
     public KeyPair predictionKeys;
+
     public ApiKeys withPredictionKeys(KeyPair predictionKeys) {
         this.predictionKeys = predictionKeys;
         return this;
@@ -20,9 +21,11 @@ public class ApiKeys {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingKeys")
     public KeyPair trainingKeys;
+
     public ApiKeys withTrainingKeys(KeyPair trainingKeys) {
         this.trainingKeys = trainingKeys;
         return this;
     }
     
+    public ApiKeys(){}
 }

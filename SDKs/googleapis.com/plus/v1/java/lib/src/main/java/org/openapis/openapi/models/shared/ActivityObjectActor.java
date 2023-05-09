@@ -18,6 +18,7 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientSpecificActorInfo")
     public ActivityObjectActorClientSpecificActorInfo clientSpecificActorInfo;
+
     public ActivityObjectActor withClientSpecificActorInfo(ActivityObjectActorClientSpecificActorInfo clientSpecificActorInfo) {
         this.clientSpecificActorInfo = clientSpecificActorInfo;
         return this;
@@ -29,6 +30,7 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ActivityObjectActor withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ActivityObjectActor withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public ActivityObjectActorImage image;
+
     public ActivityObjectActor withImage(ActivityObjectActorImage image) {
         this.image = image;
         return this;
@@ -62,6 +66,7 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActivityObjectActor withUrl(String url) {
         this.url = url;
         return this;
@@ -73,9 +78,11 @@ public class ActivityObjectActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public ActivityObjectActorVerification verification;
+
     public ActivityObjectActor withVerification(ActivityObjectActorVerification verification) {
         this.verification = verification;
         return this;
     }
     
+    public ActivityObjectActor(){}
 }

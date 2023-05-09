@@ -18,9 +18,11 @@ public class DriveFolder {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DriveFolderTypeEnum type;
+
     public DriveFolder withType(DriveFolderTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DriveFolder(){}
 }

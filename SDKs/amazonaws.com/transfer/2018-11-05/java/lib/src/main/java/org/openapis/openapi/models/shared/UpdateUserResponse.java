@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserResponse {
     @JsonProperty("ServerId")
     public String serverId;
+
     public UpdateUserResponse withServerId(String serverId) {
         this.serverId = serverId;
         return this;
@@ -19,9 +20,14 @@ public class UpdateUserResponse {
     
     @JsonProperty("UserName")
     public String userName;
+
     public UpdateUserResponse withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public UpdateUserResponse(@JsonProperty("ServerId") String serverId, @JsonProperty("UserName") String userName) {
+        this.serverId = serverId;
+        this.userName = userName;
+  }
 }

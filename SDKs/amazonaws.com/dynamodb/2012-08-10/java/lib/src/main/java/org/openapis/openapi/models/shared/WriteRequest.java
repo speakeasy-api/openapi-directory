@@ -15,6 +15,7 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteRequest")
     public DeleteRequest deleteRequest;
+
     public WriteRequest withDeleteRequest(DeleteRequest deleteRequest) {
         this.deleteRequest = deleteRequest;
         return this;
@@ -23,9 +24,11 @@ public class WriteRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PutRequest")
     public PutRequest putRequest;
+
     public WriteRequest withPutRequest(PutRequest putRequest) {
         this.putRequest = putRequest;
         return this;
     }
     
+    public WriteRequest(){}
 }

@@ -15,6 +15,7 @@ public class ListNetworksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public java.util.Map<String, String[]> filters;
+
     public ListNetworksRequestBody withFilters(java.util.Map<String, String[]> filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class ListNetworksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListNetworksRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class ListNetworksRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startToken")
     public String startToken;
+
     public ListNetworksRequestBody withStartToken(String startToken) {
         this.startToken = startToken;
         return this;
     }
     
+    public ListNetworksRequestBody(){}
 }

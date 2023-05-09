@@ -15,6 +15,7 @@ public class DestinyDefinitionsDestinyItemPerkEntryDefinition {
      */
     
     public Long perkHash;
+
     public DestinyDefinitionsDestinyItemPerkEntryDefinition withPerkHash(Long perkHash) {
         this.perkHash = perkHash;
         return this;
@@ -25,6 +26,7 @@ public class DestinyDefinitionsDestinyItemPerkEntryDefinition {
      */
     
     public Integer perkVisibility;
+
     public DestinyDefinitionsDestinyItemPerkEntryDefinition withPerkVisibility(Integer perkVisibility) {
         this.perkVisibility = perkVisibility;
         return this;
@@ -35,9 +37,11 @@ public class DestinyDefinitionsDestinyItemPerkEntryDefinition {
      */
     
     public String requirementDisplayString;
+
     public DestinyDefinitionsDestinyItemPerkEntryDefinition withRequirementDisplayString(String requirementDisplayString) {
         this.requirementDisplayString = requirementDisplayString;
         return this;
     }
     
+    public DestinyDefinitionsDestinyItemPerkEntryDefinition(){}
 }

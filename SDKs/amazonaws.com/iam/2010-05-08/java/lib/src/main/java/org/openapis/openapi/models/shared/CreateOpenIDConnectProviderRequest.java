@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateOpenIDConnectProviderRequest {
     
     public String[] clientIDList;
+
     public CreateOpenIDConnectProviderRequest withClientIDList(String[] clientIDList) {
         this.clientIDList = clientIDList;
         return this;
@@ -16,6 +17,7 @@ public class CreateOpenIDConnectProviderRequest {
     
     
     public Tag[] tags;
+
     public CreateOpenIDConnectProviderRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -23,6 +25,7 @@ public class CreateOpenIDConnectProviderRequest {
     
     
     public String[] thumbprintList;
+
     public CreateOpenIDConnectProviderRequest withThumbprintList(String[] thumbprintList) {
         this.thumbprintList = thumbprintList;
         return this;
@@ -30,9 +33,14 @@ public class CreateOpenIDConnectProviderRequest {
     
     
     public String url;
+
     public CreateOpenIDConnectProviderRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateOpenIDConnectProviderRequest(@JsonProperty("ThumbprintList") String[] thumbprintList, @JsonProperty("Url") String url) {
+        this.thumbprintList = thumbprintList;
+        this.url = url;
+  }
 }

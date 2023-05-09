@@ -18,6 +18,7 @@ public class ListDeliveryPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryPipelines")
     public DeliveryPipeline[] deliveryPipelines;
+
     public ListDeliveryPipelinesResponse withDeliveryPipelines(DeliveryPipeline[] deliveryPipelines) {
         this.deliveryPipelines = deliveryPipelines;
         return this;
@@ -29,6 +30,7 @@ public class ListDeliveryPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDeliveryPipelinesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListDeliveryPipelinesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListDeliveryPipelinesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListDeliveryPipelinesResponse(){}
 }

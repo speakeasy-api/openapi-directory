@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersIdsMentionedRequest {
@@ -13,6 +14,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetUsersIdsMentionedRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetUsersIdsMentionedRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetUsersIdsMentionedRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -73,6 +77,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ids")
     public String ids;
+
     public GetUsersIdsMentionedRequest withIds(String ids) {
         this.ids = ids;
         return this;
@@ -85,6 +90,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetUsersIdsMentionedRequest withMax(String max) {
         this.max = max;
         return this;
@@ -97,6 +103,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetUsersIdsMentionedRequest withMin(String min) {
         this.min = min;
         return this;
@@ -104,6 +111,7 @@ public class GetUsersIdsMentionedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetUsersIdsMentionedOrderEnum order;
+
     public GetUsersIdsMentionedRequest withOrder(GetUsersIdsMentionedOrderEnum order) {
         this.order = order;
         return this;
@@ -111,6 +119,7 @@ public class GetUsersIdsMentionedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersIdsMentionedRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -118,6 +127,7 @@ public class GetUsersIdsMentionedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetUsersIdsMentionedRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -129,6 +139,7 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetUsersIdsMentionedRequest withSite(String site) {
         this.site = site;
         return this;
@@ -136,6 +147,7 @@ public class GetUsersIdsMentionedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetUsersIdsMentionedSortEnum sort;
+
     public GetUsersIdsMentionedRequest withSort(GetUsersIdsMentionedSortEnum sort) {
         this.sort = sort;
         return this;
@@ -146,9 +158,14 @@ public class GetUsersIdsMentionedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetUsersIdsMentionedRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetUsersIdsMentionedRequest(@JsonProperty("ids") String ids, @JsonProperty("site") String site) {
+        this.ids = ids;
+        this.site = site;
+  }
 }

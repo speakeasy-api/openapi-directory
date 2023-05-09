@@ -15,6 +15,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConfigResource")
     public CreateProjectRequestBodyAppConfigResource appConfigResource;
+
     public CreateProjectRequestBody withAppConfigResource(CreateProjectRequestBodyAppConfigResource appConfigResource) {
         this.appConfigResource = appConfigResource;
         return this;
@@ -26,6 +27,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataDelivery")
     public CreateProjectRequestBodyDataDelivery dataDelivery;
+
     public CreateProjectRequestBody withDataDelivery(CreateProjectRequestBodyDataDelivery dataDelivery) {
         this.dataDelivery = dataDelivery;
         return this;
@@ -37,6 +39,7 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateProjectRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +50,7 @@ public class CreateProjectRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateProjectRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -58,9 +62,13 @@ public class CreateProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateProjectRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProjectRequestBody(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

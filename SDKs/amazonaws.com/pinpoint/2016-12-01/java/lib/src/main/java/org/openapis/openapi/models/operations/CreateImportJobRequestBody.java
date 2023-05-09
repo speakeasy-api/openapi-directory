@@ -12,9 +12,13 @@ public class CreateImportJobRequestBody {
      */
     @JsonProperty("ImportJobRequest")
     public CreateImportJobRequestBodyImportJobRequest importJobRequest;
+
     public CreateImportJobRequestBody withImportJobRequest(CreateImportJobRequestBodyImportJobRequest importJobRequest) {
         this.importJobRequest = importJobRequest;
         return this;
     }
     
+    public CreateImportJobRequestBody(@JsonProperty("ImportJobRequest") CreateImportJobRequestBodyImportJobRequest importJobRequest) {
+        this.importJobRequest = importJobRequest;
+  }
 }

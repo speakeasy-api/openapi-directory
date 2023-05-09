@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 public class RestoreDBInstanceToPointInTimeMessage {
     
     public Boolean autoMinorVersionUpgrade;
+
     public RestoreDBInstanceToPointInTimeMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -16,6 +18,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String availabilityZone;
+
     public RestoreDBInstanceToPointInTimeMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +26,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String dbInstanceClass;
+
     public RestoreDBInstanceToPointInTimeMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -30,6 +34,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String dbName;
+
     public RestoreDBInstanceToPointInTimeMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -37,6 +42,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBInstanceToPointInTimeMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -44,6 +50,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String engine;
+
     public RestoreDBInstanceToPointInTimeMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -51,6 +58,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public Long iops;
+
     public RestoreDBInstanceToPointInTimeMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -58,6 +66,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String licenseModel;
+
     public RestoreDBInstanceToPointInTimeMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -65,6 +74,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public Boolean multiAZ;
+
     public RestoreDBInstanceToPointInTimeMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -72,6 +82,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String optionGroupName;
+
     public RestoreDBInstanceToPointInTimeMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -79,6 +90,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public Long port;
+
     public RestoreDBInstanceToPointInTimeMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -86,6 +98,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public Boolean publiclyAccessible;
+
     public RestoreDBInstanceToPointInTimeMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -93,6 +106,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public OffsetDateTime restoreTime;
+
     public RestoreDBInstanceToPointInTimeMessage withRestoreTime(OffsetDateTime restoreTime) {
         this.restoreTime = restoreTime;
         return this;
@@ -100,6 +114,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String sourceDBInstanceIdentifier;
+
     public RestoreDBInstanceToPointInTimeMessage withSourceDBInstanceIdentifier(String sourceDBInstanceIdentifier) {
         this.sourceDBInstanceIdentifier = sourceDBInstanceIdentifier;
         return this;
@@ -107,6 +122,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String storageType;
+
     public RestoreDBInstanceToPointInTimeMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -114,6 +130,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public TagList[] tags;
+
     public RestoreDBInstanceToPointInTimeMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -121,6 +138,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String targetDBInstanceIdentifier;
+
     public RestoreDBInstanceToPointInTimeMessage withTargetDBInstanceIdentifier(String targetDBInstanceIdentifier) {
         this.targetDBInstanceIdentifier = targetDBInstanceIdentifier;
         return this;
@@ -128,6 +146,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String tdeCredentialArn;
+
     public RestoreDBInstanceToPointInTimeMessage withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -135,6 +154,7 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public String tdeCredentialPassword;
+
     public RestoreDBInstanceToPointInTimeMessage withTdeCredentialPassword(String tdeCredentialPassword) {
         this.tdeCredentialPassword = tdeCredentialPassword;
         return this;
@@ -142,9 +162,14 @@ public class RestoreDBInstanceToPointInTimeMessage {
     
     
     public Boolean useLatestRestorableTime;
+
     public RestoreDBInstanceToPointInTimeMessage withUseLatestRestorableTime(Boolean useLatestRestorableTime) {
         this.useLatestRestorableTime = useLatestRestorableTime;
         return this;
     }
     
+    public RestoreDBInstanceToPointInTimeMessage(@JsonProperty("SourceDBInstanceIdentifier") String sourceDBInstanceIdentifier, @JsonProperty("TargetDBInstanceIdentifier") String targetDBInstanceIdentifier) {
+        this.sourceDBInstanceIdentifier = sourceDBInstanceIdentifier;
+        this.targetDBInstanceIdentifier = targetDBInstanceIdentifier;
+  }
 }

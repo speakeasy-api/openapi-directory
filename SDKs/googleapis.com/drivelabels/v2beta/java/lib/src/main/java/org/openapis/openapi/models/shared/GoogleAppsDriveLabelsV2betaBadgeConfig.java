@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2betaBadgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public GoogleTypeColor color;
+
     public GoogleAppsDriveLabelsV2betaBadgeConfig withColor(GoogleTypeColor color) {
         this.color = color;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsDriveLabelsV2betaBadgeConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorityOverride")
     public String priorityOverride;
+
     public GoogleAppsDriveLabelsV2betaBadgeConfig withPriorityOverride(String priorityOverride) {
         this.priorityOverride = priorityOverride;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2betaBadgeConfig(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDatasetResponse {
@@ -12,6 +13,7 @@ public class CreateDatasetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateDatasetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateDatasetResponse {
      */
     
     public Object conflictException;
+
     public CreateDatasetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateDatasetResponse {
     
     
     public String contentType;
+
     public CreateDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateDatasetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse;
+
     public CreateDatasetResponse withCreateDatasetResponse(org.openapis.openapi.models.shared.CreateDatasetResponse createDatasetResponse) {
         this.createDatasetResponse = createDatasetResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateDatasetResponse {
      */
     
     public Object internalServerException;
+
     public CreateDatasetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDatasetResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateDatasetResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateDatasetResponse {
     
     
     public Integer statusCode;
+
     public CreateDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateDatasetResponse {
      */
     
     public Object throttlingException;
+
     public CreateDatasetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateDatasetResponse {
      */
     
     public Object validationException;
+
     public CreateDatasetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

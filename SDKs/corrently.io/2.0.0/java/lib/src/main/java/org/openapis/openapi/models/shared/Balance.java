@@ -15,6 +15,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Long balance;
+
     public Balance withBalance(Long balance) {
         this.balance = balance;
         return this;
@@ -26,6 +27,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("haben")
     public Long haben;
+
     public Balance withHaben(Long haben) {
         this.haben = haben;
         return this;
@@ -37,6 +39,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("soll")
     public Long soll;
+
     public Balance withSoll(Long soll) {
         this.soll = soll;
         return this;
@@ -45,6 +48,7 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txs")
     public Transactions[] txs;
+
     public Balance withTxs(Transactions[] txs) {
         this.txs = txs;
         return this;
@@ -56,9 +60,11 @@ public class Balance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("variation")
     public BalanceVariationEnum variation;
+
     public Balance withVariation(BalanceVariationEnum variation) {
         this.variation = variation;
         return this;
     }
     
+    public Balance(){}
 }

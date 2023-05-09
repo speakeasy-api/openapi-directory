@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateAccessPointOutput {
     
     public String dnsName;
+
     public CreateAccessPointOutput withDNSName(String dnsName) {
         this.dnsName = dnsName;
         return this;
     }
     
+    public CreateAccessPointOutput(){}
 }

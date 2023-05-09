@@ -51,13 +51,11 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignConfirmResponse res = new org.openapis.openapi.models.operations.SignConfirmResponse() {{
+        org.openapis.openapi.models.operations.SignConfirmResponse res = new org.openapis.openapi.models.operations.SignConfirmResponse(contentType, httpRes.statusCode()) {{
             signConfirm202ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -104,13 +102,11 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignDeleteResponse res = new org.openapis.openapi.models.operations.SignDeleteResponse() {{
+        org.openapis.openapi.models.operations.SignDeleteResponse res = new org.openapis.openapi.models.operations.SignDeleteResponse(contentType, httpRes.statusCode()) {{
             signDelete200ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -168,13 +164,11 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRequestResponse res = new org.openapis.openapi.models.operations.SignRequestResponse() {{
+        org.openapis.openapi.models.operations.SignRequestResponse res = new org.openapis.openapi.models.operations.SignRequestResponse(contentType, httpRes.statusCode()) {{
             signRequest201ApplicationJSONObject = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -221,15 +215,13 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRetrieveResponse res = new org.openapis.openapi.models.operations.SignRetrieveResponse() {{
+        org.openapis.openapi.models.operations.SignRetrieveResponse res = new org.openapis.openapi.models.operations.SignRetrieveResponse(contentType, httpRes.statusCode()) {{
             jwt = null;
             body = null;
             body = null;
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,12 +278,10 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignRetrieveHeadResponse res = new org.openapis.openapi.models.operations.SignRetrieveHeadResponse() {{
+        org.openapis.openapi.models.operations.SignRetrieveHeadResponse res = new org.openapis.openapi.models.operations.SignRetrieveHeadResponse(contentType, httpRes.statusCode()) {{
             error = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 204) {
@@ -333,12 +323,10 @@ public class Scope {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SignUpdateResponse res = new org.openapis.openapi.models.operations.SignUpdateResponse() {{
+        org.openapis.openapi.models.operations.SignUpdateResponse res = new org.openapis.openapi.models.operations.SignUpdateResponse(contentType, httpRes.statusCode()) {{
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {

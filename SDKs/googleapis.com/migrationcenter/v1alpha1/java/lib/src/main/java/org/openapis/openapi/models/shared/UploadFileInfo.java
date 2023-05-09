@@ -18,6 +18,7 @@ public class UploadFileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public java.util.Map<String, String> headers;
+
     public UploadFileInfo withHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
@@ -29,6 +30,7 @@ public class UploadFileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedUri")
     public String signedUri;
+
     public UploadFileInfo withSignedUri(String signedUri) {
         this.signedUri = signedUri;
         return this;
@@ -40,6 +42,7 @@ public class UploadFileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public UploadFileInfo withUri(String uri) {
         this.uri = uri;
         return this;
@@ -51,9 +54,11 @@ public class UploadFileInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uriExpirationTime")
     public String uriExpirationTime;
+
     public UploadFileInfo withUriExpirationTime(String uriExpirationTime) {
         this.uriExpirationTime = uriExpirationTime;
         return this;
     }
     
+    public UploadFileInfo(){}
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFHIRExportJobsResponse {
     @JsonProperty("ExportJobPropertiesList")
     public ExportJobProperties[] exportJobPropertiesList;
+
     public ListFHIRExportJobsResponse withExportJobPropertiesList(ExportJobProperties[] exportJobPropertiesList) {
         this.exportJobPropertiesList = exportJobPropertiesList;
         return this;
@@ -22,9 +23,13 @@ public class ListFHIRExportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFHIRExportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFHIRExportJobsResponse(@JsonProperty("ExportJobPropertiesList") ExportJobProperties[] exportJobPropertiesList) {
+        this.exportJobPropertiesList = exportJobPropertiesList;
+  }
 }

@@ -12,6 +12,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Children")
     public Facetscategory200ApplicationJSONCategoriesTreesChildren[] children;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withChildren(Facetscategory200ApplicationJSONCategoriesTreesChildren[] children) {
         this.children = children;
         return this;
@@ -22,6 +23,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Id")
     public Long id;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Link")
     public String link;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withLink(String link) {
         this.link = link;
         return this;
@@ -42,6 +45,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("LinkEncoded")
     public String linkEncoded;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withLinkEncoded(String linkEncoded) {
         this.linkEncoded = linkEncoded;
         return this;
@@ -52,6 +56,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Map")
     public String map;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withMap(String map) {
         this.map = map;
         return this;
@@ -62,6 +67,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Name")
     public String name;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withName(String name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Position")
     public Long position;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withPosition(Long position) {
         this.position = position;
         return this;
@@ -82,6 +89,7 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Quantity")
     public Long quantity;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -92,9 +100,21 @@ public class Facetscategory200ApplicationJSONCategoriesTrees {
      */
     @JsonProperty("Value")
     public String value;
+
     public Facetscategory200ApplicationJSONCategoriesTrees withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Facetscategory200ApplicationJSONCategoriesTrees(@JsonProperty("Children") Facetscategory200ApplicationJSONCategoriesTreesChildren[] children, @JsonProperty("Id") Long id, @JsonProperty("Link") String link, @JsonProperty("LinkEncoded") String linkEncoded, @JsonProperty("Map") String map, @JsonProperty("Name") String name, @JsonProperty("Position") Long position, @JsonProperty("Quantity") Long quantity, @JsonProperty("Value") String value) {
+        this.children = children;
+        this.id = id;
+        this.link = link;
+        this.linkEncoded = linkEncoded;
+        this.map = map;
+        this.name = name;
+        this.position = position;
+        this.quantity = quantity;
+        this.value = value;
+  }
 }

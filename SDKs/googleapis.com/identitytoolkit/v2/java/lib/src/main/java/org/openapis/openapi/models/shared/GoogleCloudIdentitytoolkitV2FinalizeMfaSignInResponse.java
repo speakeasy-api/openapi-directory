@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idToken")
     public String idToken;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse withIdToken(String idToken) {
         this.idToken = idToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneAuthInfo")
     public GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneResponseInfo phoneAuthInfo;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse withPhoneAuthInfo(GoogleCloudIdentitytoolkitV2FinalizeMfaPhoneResponseInfo phoneAuthInfo) {
         this.phoneAuthInfo = phoneAuthInfo;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshToken")
     public String refreshToken;
+
     public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse withRefreshToken(String refreshToken) {
         this.refreshToken = refreshToken;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2FinalizeMfaSignInResponse(){}
 }

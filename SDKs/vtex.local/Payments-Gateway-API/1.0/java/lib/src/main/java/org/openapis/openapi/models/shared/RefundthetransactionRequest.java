@@ -15,6 +15,7 @@ public class RefundthetransactionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minicart")
     public RefundthetransactionRequestMinicart minicart;
+
     public RefundthetransactionRequest withMinicart(RefundthetransactionRequestMinicart minicart) {
         this.minicart = minicart;
         return this;
@@ -25,9 +26,13 @@ public class RefundthetransactionRequest {
      */
     @JsonProperty("value")
     public Integer value;
+
     public RefundthetransactionRequest withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public RefundthetransactionRequest(@JsonProperty("value") Integer value) {
+        this.value = value;
+  }
 }

@@ -14,6 +14,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("certificate")
     public String certificate;
+
     public GetCertificatesIdCertificateResponseCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -24,6 +25,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("created")
     public String created;
+
     public GetCertificatesIdCertificateResponseCertificate withCreated(String created) {
         this.created = created;
         return this;
@@ -34,6 +36,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("domain_names")
     public String[] domainNames;
+
     public GetCertificatesIdCertificateResponseCertificate withDomainNames(String[] domainNames) {
         this.domainNames = domainNames;
         return this;
@@ -44,6 +47,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public GetCertificatesIdCertificateResponseCertificate withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -54,6 +58,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetCertificatesIdCertificateResponseCertificate withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetCertificatesIdCertificateResponseCertificate withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -74,6 +80,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("name")
     public String name;
+
     public GetCertificatesIdCertificateResponseCertificate withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +91,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("not_valid_after")
     public String notValidAfter;
+
     public GetCertificatesIdCertificateResponseCertificate withNotValidAfter(String notValidAfter) {
         this.notValidAfter = notValidAfter;
         return this;
@@ -94,6 +102,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("not_valid_before")
     public String notValidBefore;
+
     public GetCertificatesIdCertificateResponseCertificate withNotValidBefore(String notValidBefore) {
         this.notValidBefore = notValidBefore;
         return this;
@@ -105,6 +114,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetCertificatesIdCertificateResponseCertificateStatus status;
+
     public GetCertificatesIdCertificateResponseCertificate withStatus(GetCertificatesIdCertificateResponseCertificateStatus status) {
         this.status = status;
         return this;
@@ -116,6 +126,7 @@ public class GetCertificatesIdCertificateResponseCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetCertificatesIdCertificateResponseCertificateTypeEnum type;
+
     public GetCertificatesIdCertificateResponseCertificate withType(GetCertificatesIdCertificateResponseCertificateTypeEnum type) {
         this.type = type;
         return this;
@@ -126,9 +137,22 @@ public class GetCertificatesIdCertificateResponseCertificate {
      */
     @JsonProperty("used_by")
     public GetCertificatesIdCertificateResponseCertificateUsedBy[] usedBy;
+
     public GetCertificatesIdCertificateResponseCertificate withUsedBy(GetCertificatesIdCertificateResponseCertificateUsedBy[] usedBy) {
         this.usedBy = usedBy;
         return this;
     }
     
+    public GetCertificatesIdCertificateResponseCertificate(@JsonProperty("certificate") String certificate, @JsonProperty("created") String created, @JsonProperty("domain_names") String[] domainNames, @JsonProperty("fingerprint") String fingerprint, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("name") String name, @JsonProperty("not_valid_after") String notValidAfter, @JsonProperty("not_valid_before") String notValidBefore, @JsonProperty("used_by") GetCertificatesIdCertificateResponseCertificateUsedBy[] usedBy) {
+        this.certificate = certificate;
+        this.created = created;
+        this.domainNames = domainNames;
+        this.fingerprint = fingerprint;
+        this.id = id;
+        this.labels = labels;
+        this.name = name;
+        this.notValidAfter = notValidAfter;
+        this.notValidBefore = notValidBefore;
+        this.usedBy = usedBy;
+  }
 }

@@ -15,6 +15,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bin")
     public String bin;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withBin(String bin) {
         this.bin = bin;
         return this;
@@ -37,6 +39,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installments")
     public Long installments;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withInstallments(Long installments) {
         this.installments = installments;
         return this;
@@ -48,6 +51,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentSystem")
     public String paymentSystem;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withPaymentSystem(String paymentSystem) {
         this.paymentSystem = paymentSystem;
         return this;
@@ -59,6 +63,7 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceValue")
     public Long referenceValue;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withReferenceValue(Long referenceValue) {
         this.referenceValue = referenceValue;
         return this;
@@ -70,9 +75,11 @@ public class PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PlaceOrder200ApplicationJSONOrdersPaymentDataTransactionsPayments(){}
 }

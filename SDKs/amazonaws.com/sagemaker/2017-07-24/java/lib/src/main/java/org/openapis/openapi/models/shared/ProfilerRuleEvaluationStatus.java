@@ -22,6 +22,7 @@ public class ProfilerRuleEvaluationStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public ProfilerRuleEvaluationStatus withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -30,6 +31,7 @@ public class ProfilerRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleConfigurationName")
     public String ruleConfigurationName;
+
     public ProfilerRuleEvaluationStatus withRuleConfigurationName(String ruleConfigurationName) {
         this.ruleConfigurationName = ruleConfigurationName;
         return this;
@@ -38,6 +40,7 @@ public class ProfilerRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleEvaluationJobArn")
     public String ruleEvaluationJobArn;
+
     public ProfilerRuleEvaluationStatus withRuleEvaluationJobArn(String ruleEvaluationJobArn) {
         this.ruleEvaluationJobArn = ruleEvaluationJobArn;
         return this;
@@ -46,6 +49,7 @@ public class ProfilerRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleEvaluationStatus")
     public RuleEvaluationStatusEnum ruleEvaluationStatus;
+
     public ProfilerRuleEvaluationStatus withRuleEvaluationStatus(RuleEvaluationStatusEnum ruleEvaluationStatus) {
         this.ruleEvaluationStatus = ruleEvaluationStatus;
         return this;
@@ -54,9 +58,11 @@ public class ProfilerRuleEvaluationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public ProfilerRuleEvaluationStatus withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
     }
     
+    public ProfilerRuleEvaluationStatus(){}
 }

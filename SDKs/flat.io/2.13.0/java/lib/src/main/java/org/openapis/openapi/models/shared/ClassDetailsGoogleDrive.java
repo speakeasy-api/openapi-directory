@@ -19,6 +19,7 @@ public class ClassDetailsGoogleDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teacherFolderAlternateLink")
     public String teacherFolderAlternateLink;
+
     public ClassDetailsGoogleDrive withTeacherFolderAlternateLink(String teacherFolderAlternateLink) {
         this.teacherFolderAlternateLink = teacherFolderAlternateLink;
         return this;
@@ -31,9 +32,11 @@ public class ClassDetailsGoogleDrive {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teacherFolderId")
     public String teacherFolderId;
+
     public ClassDetailsGoogleDrive withTeacherFolderId(String teacherFolderId) {
         this.teacherFolderId = teacherFolderId;
         return this;
     }
     
+    public ClassDetailsGoogleDrive(){}
 }

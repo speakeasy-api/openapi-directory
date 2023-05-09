@@ -20,6 +20,7 @@ public class CoreDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coreDeviceThingName")
     public String coreDeviceThingName;
+
     public CoreDevice withCoreDeviceThingName(String coreDeviceThingName) {
         this.coreDeviceThingName = coreDeviceThingName;
         return this;
@@ -30,6 +31,7 @@ public class CoreDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusUpdateTimestamp")
     public OffsetDateTime lastStatusUpdateTimestamp;
+
     public CoreDevice withLastStatusUpdateTimestamp(OffsetDateTime lastStatusUpdateTimestamp) {
         this.lastStatusUpdateTimestamp = lastStatusUpdateTimestamp;
         return this;
@@ -38,9 +40,11 @@ public class CoreDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CoreDeviceStatusEnum status;
+
     public CoreDevice withStatus(CoreDeviceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CoreDevice(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutAccountSuppressionAttributesResponse {
@@ -12,6 +13,7 @@ public class PutAccountSuppressionAttributesResponse {
      */
     
     public Object badRequestException;
+
     public PutAccountSuppressionAttributesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class PutAccountSuppressionAttributesResponse {
     
     
     public String contentType;
+
     public PutAccountSuppressionAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutAccountSuppressionAttributesResponse {
      */
     
     public java.util.Map<String, Object> putAccountSuppressionAttributesResponse;
+
     public PutAccountSuppressionAttributesResponse withPutAccountSuppressionAttributesResponse(java.util.Map<String, Object> putAccountSuppressionAttributesResponse) {
         this.putAccountSuppressionAttributesResponse = putAccountSuppressionAttributesResponse;
         return this;
@@ -36,6 +40,7 @@ public class PutAccountSuppressionAttributesResponse {
     
     
     public Integer statusCode;
+
     public PutAccountSuppressionAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PutAccountSuppressionAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutAccountSuppressionAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PutAccountSuppressionAttributesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PutAccountSuppressionAttributesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PutAccountSuppressionAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

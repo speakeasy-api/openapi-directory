@@ -8,7 +8,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum IPAddressTypeEnum {
     DUALSTACK("DUALSTACK"),
-    IPV4("IPV4");
+    IPV4("IPV4"),
+    IPV6("IPV6");
 
     @JsonValue
     public final String value;

@@ -12,9 +12,11 @@ public class SettingValueModelHaljsonLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public SettingValueModelHaljsonLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public SettingValueModelHaljsonLinks(){}
 }

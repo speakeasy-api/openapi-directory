@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixShrinkageRequestBody2 {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody2 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -19,6 +20,7 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody2 {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody2 withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -26,6 +28,7 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody2 {
     
     @JsonProperty("shrinkageFactor")
     public Double shrinkageFactor;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody2 withShrinkageFactor(Double shrinkageFactor) {
         this.shrinkageFactor = shrinkageFactor;
         return this;
@@ -36,9 +39,16 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody2 {
      */
     @JsonProperty("targetCorrelationMatrix")
     public Double[][] targetCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody2 withTargetCorrelationMatrix(Double[][] targetCorrelationMatrix) {
         this.targetCorrelationMatrix = targetCorrelationMatrix;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixShrinkageRequestBody2(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("shrinkageFactor") Double shrinkageFactor, @JsonProperty("targetCorrelationMatrix") Double[][] targetCorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.shrinkageFactor = shrinkageFactor;
+        this.targetCorrelationMatrix = targetCorrelationMatrix;
+  }
 }

@@ -59,11 +59,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesEntriesDeleteResponse res = new org.openapis.openapi.models.operations.SalesEntriesDeleteResponse() {{
+        org.openapis.openapi.models.operations.SalesEntriesDeleteResponse res = new org.openapis.openapi.models.operations.SalesEntriesDeleteResponse(contentType, httpRes.statusCode()) {{
             salesEntriesDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,11 +94,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesEntriesGetResponse res = new org.openapis.openapi.models.operations.SalesEntriesGetResponse() {{
+        org.openapis.openapi.models.operations.SalesEntriesGetResponse res = new org.openapis.openapi.models.operations.SalesEntriesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultSalesEntryQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -139,11 +135,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesEntriesPostResponse res = new org.openapis.openapi.models.operations.SalesEntriesPostResponse() {{
+        org.openapis.openapi.models.operations.SalesEntriesPostResponse res = new org.openapis.openapi.models.operations.SalesEntriesPostResponse(contentType, httpRes.statusCode()) {{
             salesEntriesPost200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse() {{
+        org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse res = new org.openapis.openapi.models.operations.SalesEntriesProcessBatchResponse(contentType, httpRes.statusCode()) {{
             salesEntriesProcessBatch200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesEntriesPutResponse res = new org.openapis.openapi.models.operations.SalesEntriesPutResponse() {{
+        org.openapis.openapi.models.operations.SalesEntriesPutResponse res = new org.openapis.openapi.models.operations.SalesEntriesPutResponse(contentType, httpRes.statusCode()) {{
             salesEntriesPut200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,11 +253,9 @@ public class SalesEntries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV1SalesEntriesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesEntriesIdResponse() {{
+        org.openapis.openapi.models.operations.GetV1SalesEntriesIdResponse res = new org.openapis.openapi.models.operations.GetV1SalesEntriesIdResponse(contentType, httpRes.statusCode()) {{
             salesEntryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

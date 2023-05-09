@@ -15,6 +15,7 @@ public class DescribeInstanceInformationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceInformationList")
     public InstanceInformation[] instanceInformationList;
+
     public DescribeInstanceInformationResult withInstanceInformationList(InstanceInformation[] instanceInformationList) {
         this.instanceInformationList = instanceInformationList;
         return this;
@@ -23,9 +24,11 @@ public class DescribeInstanceInformationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeInstanceInformationResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeInstanceInformationResult(){}
 }

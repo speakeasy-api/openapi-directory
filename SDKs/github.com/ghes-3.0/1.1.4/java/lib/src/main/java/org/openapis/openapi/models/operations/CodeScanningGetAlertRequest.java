@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningGetAlertRequest {
@@ -12,6 +13,7 @@ public class CodeScanningGetAlertRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
     public Long alertNumber;
+
     public CodeScanningGetAlertRequest withAlertNumber(Long alertNumber) {
         this.alertNumber = alertNumber;
         return this;
@@ -19,6 +21,7 @@ public class CodeScanningGetAlertRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningGetAlertRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class CodeScanningGetAlertRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningGetAlertRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public CodeScanningGetAlertRequest(@JsonProperty("alert_number") Long alertNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.alertNumber = alertNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

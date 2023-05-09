@@ -18,9 +18,11 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcementOutput")
     public String enforcementOutput;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput withEnforcementOutput(String enforcementOutput) {
         this.enforcementOutput = enforcementOutput;
         return this;
     }
     
+    public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput(){}
 }

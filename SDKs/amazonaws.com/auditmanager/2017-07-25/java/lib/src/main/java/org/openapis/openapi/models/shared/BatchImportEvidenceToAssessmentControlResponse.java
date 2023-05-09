@@ -15,9 +15,11 @@ public class BatchImportEvidenceToAssessmentControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public BatchImportEvidenceToAssessmentControlError[] errors;
+
     public BatchImportEvidenceToAssessmentControlResponse withErrors(BatchImportEvidenceToAssessmentControlError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public BatchImportEvidenceToAssessmentControlResponse(){}
 }

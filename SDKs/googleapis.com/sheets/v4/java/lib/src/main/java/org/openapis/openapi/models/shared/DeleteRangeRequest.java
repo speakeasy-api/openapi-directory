@@ -18,6 +18,7 @@ public class DeleteRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GridRange range;
+
     public DeleteRangeRequest withRange(GridRange range) {
         this.range = range;
         return this;
@@ -29,9 +30,11 @@ public class DeleteRangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shiftDimension")
     public DeleteRangeRequestShiftDimensionEnum shiftDimension;
+
     public DeleteRangeRequest withShiftDimension(DeleteRangeRequestShiftDimensionEnum shiftDimension) {
         this.shiftDimension = shiftDimension;
         return this;
     }
     
+    public DeleteRangeRequest(){}
 }

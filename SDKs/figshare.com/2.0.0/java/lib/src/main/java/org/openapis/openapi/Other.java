@@ -51,11 +51,9 @@ public class Other {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CategoriesListResponse res = new org.openapis.openapi.models.operations.CategoriesListResponse() {{
+        org.openapis.openapi.models.operations.CategoriesListResponse res = new org.openapis.openapi.models.operations.CategoriesListResponse(contentType, httpRes.statusCode()) {{
             categories = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,10 +90,8 @@ public class Other {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileDownloadResponse res = new org.openapis.openapi.models.operations.FileDownloadResponse() {{
+        org.openapis.openapi.models.operations.FileDownloadResponse res = new org.openapis.openapi.models.operations.FileDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 500) {
@@ -133,12 +129,10 @@ public class Other {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ItemTypesListResponse res = new org.openapis.openapi.models.operations.ItemTypesListResponse() {{
+        org.openapis.openapi.models.operations.ItemTypesListResponse res = new org.openapis.openapi.models.operations.ItemTypesListResponse(contentType, httpRes.statusCode()) {{
             itemTypes = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -181,11 +175,9 @@ public class Other {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LicensesListResponse res = new org.openapis.openapi.models.operations.LicensesListResponse() {{
+        org.openapis.openapi.models.operations.LicensesListResponse res = new org.openapis.openapi.models.operations.LicensesListResponse(contentType, httpRes.statusCode()) {{
             licenses = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,10 +196,11 @@ public class Other {
     /**
      * Private Account information
      * Account information for token/personal token
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateAccountResponse privateAccount() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateAccountResponse privateAccount(org.openapis.openapi.models.operations.PrivateAccountSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account");
         
@@ -216,17 +209,16 @@ public class Other {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateAccountResponse res = new org.openapis.openapi.models.operations.PrivateAccountResponse() {{
+        org.openapis.openapi.models.operations.PrivateAccountResponse res = new org.openapis.openapi.models.operations.PrivateAccountResponse(contentType, httpRes.statusCode()) {{
             account = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,12 +266,10 @@ public class Other {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateFundingSearchResponse res = new org.openapis.openapi.models.operations.PrivateFundingSearchResponse() {{
+        org.openapis.openapi.models.operations.PrivateFundingSearchResponse res = new org.openapis.openapi.models.operations.PrivateFundingSearchResponse(contentType, httpRes.statusCode()) {{
             fundingInformations = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,10 +295,11 @@ public class Other {
     /**
      * Private Account Licenses
      * This is a private endpoint that requires OAuth. It will return a list with figshare public licenses AND licenses defined for account's institution.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PrivateLicensesListResponse privateLicensesList() throws Exception {
+    public org.openapis.openapi.models.operations.PrivateLicensesListResponse privateLicensesList(org.openapis.openapi.models.operations.PrivateLicensesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/account/licenses");
         
@@ -317,17 +308,16 @@ public class Other {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PrivateLicensesListResponse res = new org.openapis.openapi.models.operations.PrivateLicensesListResponse() {{
+        org.openapis.openapi.models.operations.PrivateLicensesListResponse res = new org.openapis.openapi.models.operations.PrivateLicensesListResponse(contentType, httpRes.statusCode()) {{
             licenses = null;
             errorMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class AnalyzerOrgPolicyConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customConstraint")
     public GoogleCloudAssetV1CustomConstraint customConstraint;
+
     public AnalyzerOrgPolicyConstraint withCustomConstraint(GoogleCloudAssetV1CustomConstraint customConstraint) {
         this.customConstraint = customConstraint;
         return this;
@@ -29,9 +30,11 @@ public class AnalyzerOrgPolicyConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleDefinedConstraint")
     public GoogleCloudAssetV1Constraint googleDefinedConstraint;
+
     public AnalyzerOrgPolicyConstraint withGoogleDefinedConstraint(GoogleCloudAssetV1Constraint googleDefinedConstraint) {
         this.googleDefinedConstraint = googleDefinedConstraint;
         return this;
     }
     
+    public AnalyzerOrgPolicyConstraint(){}
 }

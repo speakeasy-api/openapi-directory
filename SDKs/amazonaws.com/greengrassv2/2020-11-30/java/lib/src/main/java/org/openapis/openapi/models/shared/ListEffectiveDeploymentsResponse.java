@@ -15,6 +15,7 @@ public class ListEffectiveDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveDeployments")
     public EffectiveDeployment[] effectiveDeployments;
+
     public ListEffectiveDeploymentsResponse withEffectiveDeployments(EffectiveDeployment[] effectiveDeployments) {
         this.effectiveDeployments = effectiveDeployments;
         return this;
@@ -23,9 +24,11 @@ public class ListEffectiveDeploymentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListEffectiveDeploymentsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEffectiveDeploymentsResponse(){}
 }

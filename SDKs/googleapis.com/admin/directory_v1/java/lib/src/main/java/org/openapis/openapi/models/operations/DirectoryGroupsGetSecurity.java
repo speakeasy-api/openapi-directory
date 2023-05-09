@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryGroupsGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryGroupsGetSecurityOption1 option1;
+
     public DirectoryGroupsGetSecurity withOption1(DirectoryGroupsGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DirectoryGroupsGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryGroupsGetSecurityOption2 option2;
+
     public DirectoryGroupsGetSecurity withOption2(DirectoryGroupsGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DirectoryGroupsGetSecurity(){}
 }

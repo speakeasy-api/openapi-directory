@@ -15,6 +15,7 @@ public class CreateGatewayRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateGatewayRouteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateGatewayRouteRequestBody {
      */
     @JsonProperty("gatewayRouteName")
     public String gatewayRouteName;
+
     public CreateGatewayRouteRequestBody withGatewayRouteName(String gatewayRouteName) {
         this.gatewayRouteName = gatewayRouteName;
         return this;
@@ -35,6 +37,7 @@ public class CreateGatewayRouteRequestBody {
      */
     @JsonProperty("spec")
     public CreateGatewayRouteRequestBodySpec spec;
+
     public CreateGatewayRouteRequestBody withSpec(CreateGatewayRouteRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -46,9 +49,14 @@ public class CreateGatewayRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public CreateGatewayRouteRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateGatewayRouteRequestBody(@JsonProperty("gatewayRouteName") String gatewayRouteName, @JsonProperty("spec") CreateGatewayRouteRequestBodySpec spec) {
+        this.gatewayRouteName = gatewayRouteName;
+        this.spec = spec;
+  }
 }

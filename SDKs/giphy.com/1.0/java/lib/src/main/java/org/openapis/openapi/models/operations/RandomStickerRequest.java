@@ -12,6 +12,7 @@ public class RandomStickerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public String rating;
+
     public RandomStickerRequest withRating(String rating) {
         this.rating = rating;
         return this;
@@ -22,9 +23,11 @@ public class RandomStickerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tag")
     public String tag;
+
     public RandomStickerRequest withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public RandomStickerRequest(){}
 }

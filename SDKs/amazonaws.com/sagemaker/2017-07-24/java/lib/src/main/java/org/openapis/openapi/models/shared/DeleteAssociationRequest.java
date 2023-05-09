@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteAssociationRequest {
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public DeleteAssociationRequest withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -16,9 +17,14 @@ public class DeleteAssociationRequest {
     
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public DeleteAssociationRequest withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public DeleteAssociationRequest(@JsonProperty("DestinationArn") String destinationArn, @JsonProperty("SourceArn") String sourceArn) {
+        this.destinationArn = destinationArn;
+        this.sourceArn = sourceArn;
+  }
 }

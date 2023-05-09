@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetServiceLastAccessedDetailsRequest {
     
     public String jobId;
+
     public GetServiceLastAccessedDetailsRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -16,6 +17,7 @@ public class GetServiceLastAccessedDetailsRequest {
     
     
     public String marker;
+
     public GetServiceLastAccessedDetailsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,13 @@ public class GetServiceLastAccessedDetailsRequest {
     
     
     public Long maxItems;
+
     public GetServiceLastAccessedDetailsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
     }
     
+    public GetServiceLastAccessedDetailsRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

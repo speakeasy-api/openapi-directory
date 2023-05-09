@@ -12,9 +12,11 @@ public class LiveChatMessageRetractedDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retractedMessageId")
     public String retractedMessageId;
+
     public LiveChatMessageRetractedDetails withRetractedMessageId(String retractedMessageId) {
         this.retractedMessageId = retractedMessageId;
         return this;
     }
     
+    public LiveChatMessageRetractedDetails(){}
 }

@@ -18,6 +18,7 @@ public class PolicyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedResource")
     public String attachedResource;
+
     public PolicyInfo withAttachedResource(String attachedResource) {
         this.attachedResource = attachedResource;
         return this;
@@ -29,9 +30,11 @@ public class PolicyInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public PolicyInfo withPolicy(Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public PolicyInfo(){}
 }

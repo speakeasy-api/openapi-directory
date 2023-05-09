@@ -20,6 +20,7 @@ public class ConfigurationRecorderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorCode")
     public String lastErrorCode;
+
     public ConfigurationRecorderStatus withLastErrorCode(String lastErrorCode) {
         this.lastErrorCode = lastErrorCode;
         return this;
@@ -28,6 +29,7 @@ public class ConfigurationRecorderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastErrorMessage")
     public String lastErrorMessage;
+
     public ConfigurationRecorderStatus withLastErrorMessage(String lastErrorMessage) {
         this.lastErrorMessage = lastErrorMessage;
         return this;
@@ -38,6 +40,7 @@ public class ConfigurationRecorderStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStartTime")
     public OffsetDateTime lastStartTime;
+
     public ConfigurationRecorderStatus withLastStartTime(OffsetDateTime lastStartTime) {
         this.lastStartTime = lastStartTime;
         return this;
@@ -46,6 +49,7 @@ public class ConfigurationRecorderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastStatus")
     public RecorderStatusEnum lastStatus;
+
     public ConfigurationRecorderStatus withLastStatus(RecorderStatusEnum lastStatus) {
         this.lastStatus = lastStatus;
         return this;
@@ -56,6 +60,7 @@ public class ConfigurationRecorderStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStatusChangeTime")
     public OffsetDateTime lastStatusChangeTime;
+
     public ConfigurationRecorderStatus withLastStatusChangeTime(OffsetDateTime lastStatusChangeTime) {
         this.lastStatusChangeTime = lastStatusChangeTime;
         return this;
@@ -66,6 +71,7 @@ public class ConfigurationRecorderStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastStopTime")
     public OffsetDateTime lastStopTime;
+
     public ConfigurationRecorderStatus withLastStopTime(OffsetDateTime lastStopTime) {
         this.lastStopTime = lastStopTime;
         return this;
@@ -74,6 +80,7 @@ public class ConfigurationRecorderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigurationRecorderStatus withName(String name) {
         this.name = name;
         return this;
@@ -82,9 +89,11 @@ public class ConfigurationRecorderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording")
     public Boolean recording;
+
     public ConfigurationRecorderStatus withRecording(Boolean recording) {
         this.recording = recording;
         return this;
     }
     
+    public ConfigurationRecorderStatus(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ConfirmProductInstanceResult {
     
     public String ownerId;
+
     public ConfirmProductInstanceResult withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -19,9 +20,11 @@ public class ConfirmProductInstanceResult {
     
     
     public Boolean return_;
+
     public ConfirmProductInstanceResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ConfirmProductInstanceResult(){}
 }

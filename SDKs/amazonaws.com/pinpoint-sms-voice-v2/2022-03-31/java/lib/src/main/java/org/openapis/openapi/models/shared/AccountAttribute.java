@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AccountAttribute {
     @JsonProperty("Name")
     public AccountAttributeNameEnum name;
+
     public AccountAttribute withName(AccountAttributeNameEnum name) {
         this.name = name;
         return this;
@@ -19,9 +20,14 @@ public class AccountAttribute {
     
     @JsonProperty("Value")
     public String value;
+
     public AccountAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AccountAttribute(@JsonProperty("Name") AccountAttributeNameEnum name, @JsonProperty("Value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

@@ -18,6 +18,7 @@ public class ListQualificationRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListQualificationRequestsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +27,7 @@ public class ListQualificationRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumResults")
     public Long numResults;
+
     public ListQualificationRequestsResponse withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -34,9 +36,11 @@ public class ListQualificationRequestsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationRequests")
     public QualificationRequest[] qualificationRequests;
+
     public ListQualificationRequestsResponse withQualificationRequests(QualificationRequest[] qualificationRequests) {
         this.qualificationRequests = qualificationRequests;
         return this;
     }
     
+    public ListQualificationRequestsResponse(){}
 }

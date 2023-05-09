@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetappkeysfromaccountRequest {
@@ -12,9 +13,13 @@ public class GetappkeysfromaccountRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetappkeysfromaccountRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
     }
     
+    public GetappkeysfromaccountRequest(@JsonProperty("Content-Type") String contentType) {
+        this.contentType = contentType;
+  }
 }

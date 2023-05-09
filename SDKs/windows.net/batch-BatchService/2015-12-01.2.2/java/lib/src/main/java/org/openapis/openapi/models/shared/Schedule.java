@@ -25,6 +25,7 @@ public class Schedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("doNotRunAfter")
     public OffsetDateTime doNotRunAfter;
+
     public Schedule withDoNotRunAfter(OffsetDateTime doNotRunAfter) {
         this.doNotRunAfter = doNotRunAfter;
         return this;
@@ -38,6 +39,7 @@ public class Schedule {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("doNotRunUntil")
     public OffsetDateTime doNotRunUntil;
+
     public Schedule withDoNotRunUntil(OffsetDateTime doNotRunUntil) {
         this.doNotRunUntil = doNotRunUntil;
         return this;
@@ -49,6 +51,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurrenceInterval")
     public String recurrenceInterval;
+
     public Schedule withRecurrenceInterval(String recurrenceInterval) {
         this.recurrenceInterval = recurrenceInterval;
         return this;
@@ -60,9 +63,11 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startWindow")
     public String startWindow;
+
     public Schedule withStartWindow(String startWindow) {
         this.startWindow = startWindow;
         return this;
     }
     
+    public Schedule(){}
 }

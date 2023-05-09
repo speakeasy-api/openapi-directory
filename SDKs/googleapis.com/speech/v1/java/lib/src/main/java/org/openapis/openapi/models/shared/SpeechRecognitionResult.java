@@ -18,6 +18,7 @@ public class SpeechRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alternatives")
     public SpeechRecognitionAlternative[] alternatives;
+
     public SpeechRecognitionResult withAlternatives(SpeechRecognitionAlternative[] alternatives) {
         this.alternatives = alternatives;
         return this;
@@ -29,6 +30,7 @@ public class SpeechRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTag")
     public Integer channelTag;
+
     public SpeechRecognitionResult withChannelTag(Integer channelTag) {
         this.channelTag = channelTag;
         return this;
@@ -40,6 +42,7 @@ public class SpeechRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public SpeechRecognitionResult withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,9 +54,11 @@ public class SpeechRecognitionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultEndTime")
     public String resultEndTime;
+
     public SpeechRecognitionResult withResultEndTime(String resultEndTime) {
         this.resultEndTime = resultEndTime;
         return this;
     }
     
+    public SpeechRecognitionResult(){}
 }

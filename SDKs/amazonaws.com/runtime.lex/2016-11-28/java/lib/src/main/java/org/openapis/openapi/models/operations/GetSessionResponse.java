@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSessionResponse {
@@ -12,6 +13,7 @@ public class GetSessionResponse {
      */
     
     public Object badRequestException;
+
     public GetSessionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetSessionResponse {
     
     
     public String contentType;
+
     public GetSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse;
+
     public GetSessionResponse withGetSessionResponse(org.openapis.openapi.models.shared.GetSessionResponse getSessionResponse) {
         this.getSessionResponse = getSessionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetSessionResponse {
      */
     
     public Object internalFailureException;
+
     public GetSessionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetSessionResponse {
      */
     
     public Object limitExceededException;
+
     public GetSessionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetSessionResponse {
      */
     
     public Object notFoundException;
+
     public GetSessionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetSessionResponse {
     
     
     public Integer statusCode;
+
     public GetSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

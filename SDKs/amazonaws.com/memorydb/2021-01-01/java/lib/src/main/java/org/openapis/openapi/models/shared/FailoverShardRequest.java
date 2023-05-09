@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FailoverShardRequest {
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public FailoverShardRequest withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -16,9 +17,14 @@ public class FailoverShardRequest {
     
     @JsonProperty("ShardName")
     public String shardName;
+
     public FailoverShardRequest withShardName(String shardName) {
         this.shardName = shardName;
         return this;
     }
     
+    public FailoverShardRequest(@JsonProperty("ClusterName") String clusterName, @JsonProperty("ShardName") String shardName) {
+        this.clusterName = clusterName;
+        this.shardName = shardName;
+  }
 }

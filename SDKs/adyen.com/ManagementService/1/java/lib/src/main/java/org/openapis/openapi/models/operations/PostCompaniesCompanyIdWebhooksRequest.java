@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostCompaniesCompanyIdWebhooksRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCompanyWebhookRequest createCompanyWebhookRequest;
+
     public PostCompaniesCompanyIdWebhooksRequest withCreateCompanyWebhookRequest(org.openapis.openapi.models.shared.CreateCompanyWebhookRequest createCompanyWebhookRequest) {
         this.createCompanyWebhookRequest = createCompanyWebhookRequest;
         return this;
@@ -19,9 +21,13 @@ public class PostCompaniesCompanyIdWebhooksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public PostCompaniesCompanyIdWebhooksRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public PostCompaniesCompanyIdWebhooksRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

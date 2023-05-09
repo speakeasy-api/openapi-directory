@@ -15,9 +15,11 @@ public class VirtualRouterSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public VirtualRouterListener[] listeners;
+
     public VirtualRouterSpec withListeners(VirtualRouterListener[] listeners) {
         this.listeners = listeners;
         return this;
     }
     
+    public VirtualRouterSpec(){}
 }

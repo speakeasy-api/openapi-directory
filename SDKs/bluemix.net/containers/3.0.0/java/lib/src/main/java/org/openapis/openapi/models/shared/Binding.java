@@ -15,9 +15,11 @@ public class Binding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerId")
     public String containerId;
+
     public Binding withContainerId(String containerId) {
         this.containerId = containerId;
         return this;
     }
     
+    public Binding(){}
 }

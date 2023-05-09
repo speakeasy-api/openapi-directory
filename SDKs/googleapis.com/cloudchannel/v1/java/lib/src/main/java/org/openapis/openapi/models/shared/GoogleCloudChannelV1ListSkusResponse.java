@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListSkusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListSkusResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListSkusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skus")
     public GoogleCloudChannelV1Sku[] skus;
+
     public GoogleCloudChannelV1ListSkusResponse withSkus(GoogleCloudChannelV1Sku[] skus) {
         this.skus = skus;
         return this;
     }
     
+    public GoogleCloudChannelV1ListSkusResponse(){}
 }

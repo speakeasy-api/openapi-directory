@@ -12,6 +12,7 @@ public class ErrorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public ErrorSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -20,9 +21,11 @@ public class ErrorSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public ErrorSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public ErrorSource(){}
 }

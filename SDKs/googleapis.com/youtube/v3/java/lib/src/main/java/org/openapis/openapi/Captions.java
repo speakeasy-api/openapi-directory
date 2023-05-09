@@ -59,10 +59,8 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCaptionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCaptionsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,10 +97,8 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCaptionsDownloadResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsDownloadResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCaptionsDownloadResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsDownloadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCaptionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCaptionsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsInsertResponse(contentType, httpRes.statusCode()) {{
             caption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -187,11 +181,9 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCaptionsListResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCaptionsListResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsListResponse(contentType, httpRes.statusCode()) {{
             captionListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -235,11 +227,9 @@ public class Captions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeCaptionsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsUpdateResponse() {{
+        org.openapis.openapi.models.operations.YoutubeCaptionsUpdateResponse res = new org.openapis.openapi.models.operations.YoutubeCaptionsUpdateResponse(contentType, httpRes.statusCode()) {{
             caption = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

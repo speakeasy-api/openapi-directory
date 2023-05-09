@@ -18,6 +18,7 @@ public class GoogleAppsCardV1CardAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionLabel")
     public String actionLabel;
+
     public GoogleAppsCardV1CardAction withActionLabel(String actionLabel) {
         this.actionLabel = actionLabel;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAppsCardV1CardAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public GoogleAppsCardV1OnClick onClick;
+
     public GoogleAppsCardV1CardAction withOnClick(GoogleAppsCardV1OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
+    public GoogleAppsCardV1CardAction(){}
 }

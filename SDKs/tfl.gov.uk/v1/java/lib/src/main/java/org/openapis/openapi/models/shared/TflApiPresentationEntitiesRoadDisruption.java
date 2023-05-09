@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public TflApiPresentationEntitiesRoadDisruption withCategory(String category) {
         this.category = category;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public TflApiPresentationEntitiesRoadDisruption withComments(String comments) {
         this.comments = comments;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corridorIds")
     public String[] corridorIds;
+
     public TflApiPresentationEntitiesRoadDisruption withCorridorIds(String[] corridorIds) {
         this.corridorIds = corridorIds;
         return this;
@@ -58,6 +61,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentUpdate")
     public String currentUpdate;
+
     public TflApiPresentationEntitiesRoadDisruption withCurrentUpdate(String currentUpdate) {
         this.currentUpdate = currentUpdate;
         return this;
@@ -72,6 +76,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("currentUpdateDateTime")
     public OffsetDateTime currentUpdateDateTime;
+
     public TflApiPresentationEntitiesRoadDisruption withCurrentUpdateDateTime(OffsetDateTime currentUpdateDateTime) {
         this.currentUpdateDateTime = currentUpdateDateTime;
         return this;
@@ -86,6 +91,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endDateTime")
     public OffsetDateTime endDateTime;
+
     public TflApiPresentationEntitiesRoadDisruption withEndDateTime(OffsetDateTime endDateTime) {
         this.endDateTime = endDateTime;
         return this;
@@ -94,6 +100,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public SystemDataSpatialDbGeography geography;
+
     public TflApiPresentationEntitiesRoadDisruption withGeography(SystemDataSpatialDbGeography geography) {
         this.geography = geography;
         return this;
@@ -102,6 +109,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geometry")
     public SystemDataSpatialDbGeography geometry;
+
     public TflApiPresentationEntitiesRoadDisruption withGeometry(SystemDataSpatialDbGeography geometry) {
         this.geometry = geometry;
         return this;
@@ -114,6 +122,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasClosures")
     public Boolean hasClosures;
+
     public TflApiPresentationEntitiesRoadDisruption withHasClosures(Boolean hasClosures) {
         this.hasClosures = hasClosures;
         return this;
@@ -125,6 +134,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesRoadDisruption withId(String id) {
         this.id = id;
         return this;
@@ -136,6 +146,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isProvisional")
     public Boolean isProvisional;
+
     public TflApiPresentationEntitiesRoadDisruption withIsProvisional(Boolean isProvisional) {
         this.isProvisional = isProvisional;
         return this;
@@ -150,6 +161,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public TflApiPresentationEntitiesRoadDisruption withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -164,6 +176,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("levelOfInterest")
     public String levelOfInterest;
+
     public TflApiPresentationEntitiesRoadDisruption withLevelOfInterest(String levelOfInterest) {
         this.levelOfInterest = levelOfInterest;
         return this;
@@ -175,6 +188,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkText")
     public String linkText;
+
     public TflApiPresentationEntitiesRoadDisruption withLinkText(String linkText) {
         this.linkText = linkText;
         return this;
@@ -186,6 +200,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkUrl")
     public String linkUrl;
+
     public TflApiPresentationEntitiesRoadDisruption withLinkUrl(String linkUrl) {
         this.linkUrl = linkUrl;
         return this;
@@ -197,6 +212,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public TflApiPresentationEntitiesRoadDisruption withLocation(String location) {
         this.location = location;
         return this;
@@ -208,6 +224,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Integer ordinal;
+
     public TflApiPresentationEntitiesRoadDisruption withOrdinal(Integer ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -219,6 +236,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("point")
     public String point;
+
     public TflApiPresentationEntitiesRoadDisruption withPoint(String point) {
         this.point = point;
         return this;
@@ -229,6 +247,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishEndDate")
     public OffsetDateTime publishEndDate;
+
     public TflApiPresentationEntitiesRoadDisruption withPublishEndDate(OffsetDateTime publishEndDate) {
         this.publishEndDate = publishEndDate;
         return this;
@@ -242,6 +261,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishStartDate")
     public OffsetDateTime publishStartDate;
+
     public TflApiPresentationEntitiesRoadDisruption withPublishStartDate(OffsetDateTime publishStartDate) {
         this.publishStartDate = publishStartDate;
         return this;
@@ -250,6 +270,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringSchedules")
     public TflApiPresentationEntitiesRoadDisruptionSchedule[] recurringSchedules;
+
     public TflApiPresentationEntitiesRoadDisruption withRecurringSchedules(TflApiPresentationEntitiesRoadDisruptionSchedule[] recurringSchedules) {
         this.recurringSchedules = recurringSchedules;
         return this;
@@ -258,6 +279,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadDisruptionImpactAreas")
     public TflApiPresentationEntitiesRoadDisruptionImpactArea[] roadDisruptionImpactAreas;
+
     public TflApiPresentationEntitiesRoadDisruption withRoadDisruptionImpactAreas(TflApiPresentationEntitiesRoadDisruptionImpactArea[] roadDisruptionImpactAreas) {
         this.roadDisruptionImpactAreas = roadDisruptionImpactAreas;
         return this;
@@ -266,6 +288,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadDisruptionLines")
     public TflApiPresentationEntitiesRoadDisruptionLine[] roadDisruptionLines;
+
     public TflApiPresentationEntitiesRoadDisruption withRoadDisruptionLines(TflApiPresentationEntitiesRoadDisruptionLine[] roadDisruptionLines) {
         this.roadDisruptionLines = roadDisruptionLines;
         return this;
@@ -274,6 +297,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roadProject")
     public TflApiPresentationEntitiesRoadProject roadProject;
+
     public TflApiPresentationEntitiesRoadDisruption withRoadProject(TflApiPresentationEntitiesRoadProject roadProject) {
         this.roadProject = roadProject;
         return this;
@@ -285,6 +309,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("severity")
     public String severity;
+
     public TflApiPresentationEntitiesRoadDisruption withSeverity(String severity) {
         this.severity = severity;
         return this;
@@ -299,6 +324,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startDateTime")
     public OffsetDateTime startDateTime;
+
     public TflApiPresentationEntitiesRoadDisruption withStartDateTime(OffsetDateTime startDateTime) {
         this.startDateTime = startDateTime;
         return this;
@@ -316,6 +342,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TflApiPresentationEntitiesRoadDisruption withStatus(String status) {
         this.status = status;
         return this;
@@ -327,6 +354,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streets")
     public TflApiPresentationEntitiesStreet[] streets;
+
     public TflApiPresentationEntitiesRoadDisruption withStreets(TflApiPresentationEntitiesStreet[] streets) {
         this.streets = streets;
         return this;
@@ -338,6 +366,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subCategory")
     public String subCategory;
+
     public TflApiPresentationEntitiesRoadDisruption withSubCategory(String subCategory) {
         this.subCategory = subCategory;
         return this;
@@ -346,6 +375,7 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeFrame")
     public String timeFrame;
+
     public TflApiPresentationEntitiesRoadDisruption withTimeFrame(String timeFrame) {
         this.timeFrame = timeFrame;
         return this;
@@ -357,9 +387,11 @@ public class TflApiPresentationEntitiesRoadDisruption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public TflApiPresentationEntitiesRoadDisruption withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public TflApiPresentationEntitiesRoadDisruption(){}
 }

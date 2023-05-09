@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetGrantRequest {
     @JsonProperty("GrantArn")
     public String grantArn;
+
     public GetGrantRequest withGrantArn(String grantArn) {
         this.grantArn = grantArn;
         return this;
@@ -19,9 +20,13 @@ public class GetGrantRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public GetGrantRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GetGrantRequest(@JsonProperty("GrantArn") String grantArn) {
+        this.grantArn = grantArn;
+  }
 }

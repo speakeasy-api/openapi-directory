@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInstanceProfileResponse {
@@ -12,6 +13,7 @@ public class DeleteInstanceProfileResponse {
      */
     
     public Object argumentException;
+
     public DeleteInstanceProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInstanceProfileResponse {
     
     
     public String contentType;
+
     public DeleteInstanceProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInstanceProfileResponse {
      */
     
     public java.util.Map<String, Object> deleteInstanceProfileResult;
+
     public DeleteInstanceProfileResponse withDeleteInstanceProfileResult(java.util.Map<String, Object> deleteInstanceProfileResult) {
         this.deleteInstanceProfileResult = deleteInstanceProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInstanceProfileResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteInstanceProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInstanceProfileResponse {
      */
     
     public Object notFoundException;
+
     public DeleteInstanceProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInstanceProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public DeleteInstanceProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteInstanceProfileResponse {
     
     
     public Integer statusCode;
+
     public DeleteInstanceProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteInstanceProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInstanceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteInstanceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

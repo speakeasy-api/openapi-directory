@@ -15,6 +15,7 @@ public class AppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerArguments")
     public String[] containerArguments;
+
     public AppSpecification withContainerArguments(String[] containerArguments) {
         this.containerArguments = containerArguments;
         return this;
@@ -23,6 +24,7 @@ public class AppSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerEntrypoint")
     public String[] containerEntrypoint;
+
     public AppSpecification withContainerEntrypoint(String[] containerEntrypoint) {
         this.containerEntrypoint = containerEntrypoint;
         return this;
@@ -30,9 +32,13 @@ public class AppSpecification {
     
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public AppSpecification withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public AppSpecification(@JsonProperty("ImageUri") String imageUri) {
+        this.imageUri = imageUri;
+  }
 }

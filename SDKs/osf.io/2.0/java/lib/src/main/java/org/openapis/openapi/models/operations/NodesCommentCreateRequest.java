@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class NodesCommentCreateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public NodesCommentCreateCommentInput requestBody;
+
     public NodesCommentCreateRequest withRequestBody(NodesCommentCreateCommentInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class NodesCommentCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=node_id")
     public String nodeId;
+
     public NodesCommentCreateRequest withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
     }
     
+    public NodesCommentCreateRequest(@JsonProperty("RequestBody") NodesCommentCreateCommentInput requestBody, @JsonProperty("node_id") String nodeId) {
+        this.requestBody = requestBody;
+        this.nodeId = nodeId;
+  }
 }

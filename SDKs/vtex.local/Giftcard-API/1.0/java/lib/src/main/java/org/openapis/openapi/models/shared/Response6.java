@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Response6 {
     @JsonProperty("date")
     public String date;
+
     public Response6 withDate(String date) {
         this.date = date;
         return this;
@@ -16,6 +17,7 @@ public class Response6 {
     
     @JsonProperty("oid")
     public String oid;
+
     public Response6 withOid(String oid) {
         this.oid = oid;
         return this;
@@ -23,9 +25,15 @@ public class Response6 {
     
     @JsonProperty("value")
     public Double value;
+
     public Response6 withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Response6(@JsonProperty("date") String date, @JsonProperty("oid") String oid, @JsonProperty("value") Double value) {
+        this.date = date;
+        this.oid = oid;
+        this.value = value;
+  }
 }

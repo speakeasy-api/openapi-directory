@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DBEngineVersionList {
     
     public OffsetDateTime createTime;
+
     public DBEngineVersionList withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class DBEngineVersionList {
     
     
     public String customDBEngineVersionManifest;
+
     public DBEngineVersionList withCustomDBEngineVersionManifest(String customDBEngineVersionManifest) {
         this.customDBEngineVersionManifest = customDBEngineVersionManifest;
         return this;
@@ -26,6 +28,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineDescription;
+
     public DBEngineVersionList withDBEngineDescription(String dbEngineDescription) {
         this.dbEngineDescription = dbEngineDescription;
         return this;
@@ -33,6 +36,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineMediaType;
+
     public DBEngineVersionList withDBEngineMediaType(String dbEngineMediaType) {
         this.dbEngineMediaType = dbEngineMediaType;
         return this;
@@ -40,6 +44,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineVersionArn;
+
     public DBEngineVersionList withDBEngineVersionArn(String dbEngineVersionArn) {
         this.dbEngineVersionArn = dbEngineVersionArn;
         return this;
@@ -47,6 +52,7 @@ public class DBEngineVersionList {
     
     
     public String dbEngineVersionDescription;
+
     public DBEngineVersionList withDBEngineVersionDescription(String dbEngineVersionDescription) {
         this.dbEngineVersionDescription = dbEngineVersionDescription;
         return this;
@@ -54,6 +60,7 @@ public class DBEngineVersionList {
     
     
     public String dbParameterGroupFamily;
+
     public DBEngineVersionList withDBParameterGroupFamily(String dbParameterGroupFamily) {
         this.dbParameterGroupFamily = dbParameterGroupFamily;
         return this;
@@ -61,6 +68,7 @@ public class DBEngineVersionList {
     
     
     public String databaseInstallationFilesS3BucketName;
+
     public DBEngineVersionList withDatabaseInstallationFilesS3BucketName(String databaseInstallationFilesS3BucketName) {
         this.databaseInstallationFilesS3BucketName = databaseInstallationFilesS3BucketName;
         return this;
@@ -68,6 +76,7 @@ public class DBEngineVersionList {
     
     
     public String databaseInstallationFilesS3Prefix;
+
     public DBEngineVersionList withDatabaseInstallationFilesS3Prefix(String databaseInstallationFilesS3Prefix) {
         this.databaseInstallationFilesS3Prefix = databaseInstallationFilesS3Prefix;
         return this;
@@ -75,6 +84,7 @@ public class DBEngineVersionList {
     
     
     public CharacterSet defaultCharacterSet;
+
     public DBEngineVersionList withDefaultCharacterSet(CharacterSet defaultCharacterSet) {
         this.defaultCharacterSet = defaultCharacterSet;
         return this;
@@ -82,6 +92,7 @@ public class DBEngineVersionList {
     
     
     public String engine;
+
     public DBEngineVersionList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -89,6 +100,7 @@ public class DBEngineVersionList {
     
     
     public String engineVersion;
+
     public DBEngineVersionList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -96,6 +108,7 @@ public class DBEngineVersionList {
     
     
     public String[] exportableLogTypes;
+
     public DBEngineVersionList withExportableLogTypes(String[] exportableLogTypes) {
         this.exportableLogTypes = exportableLogTypes;
         return this;
@@ -103,6 +116,7 @@ public class DBEngineVersionList {
     
     
     public CustomDBEngineVersionAMI image;
+
     public DBEngineVersionList withImage(CustomDBEngineVersionAMI image) {
         this.image = image;
         return this;
@@ -110,6 +124,7 @@ public class DBEngineVersionList {
     
     
     public String kmsKeyId;
+
     public DBEngineVersionList withKMSKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -117,6 +132,7 @@ public class DBEngineVersionList {
     
     
     public String majorEngineVersion;
+
     public DBEngineVersionList withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -124,6 +140,7 @@ public class DBEngineVersionList {
     
     
     public String status;
+
     public DBEngineVersionList withStatus(String status) {
         this.status = status;
         return this;
@@ -131,6 +148,7 @@ public class DBEngineVersionList {
     
     
     public String[] supportedCACertificateIdentifiers;
+
     public DBEngineVersionList withSupportedCACertificateIdentifiers(String[] supportedCACertificateIdentifiers) {
         this.supportedCACertificateIdentifiers = supportedCACertificateIdentifiers;
         return this;
@@ -138,6 +156,7 @@ public class DBEngineVersionList {
     
     
     public SupportedCharacterSetsList[] supportedCharacterSets;
+
     public DBEngineVersionList withSupportedCharacterSets(SupportedCharacterSetsList[] supportedCharacterSets) {
         this.supportedCharacterSets = supportedCharacterSets;
         return this;
@@ -145,6 +164,7 @@ public class DBEngineVersionList {
     
     
     public String[] supportedEngineModes;
+
     public DBEngineVersionList withSupportedEngineModes(String[] supportedEngineModes) {
         this.supportedEngineModes = supportedEngineModes;
         return this;
@@ -152,6 +172,7 @@ public class DBEngineVersionList {
     
     
     public String[] supportedFeatureNames;
+
     public DBEngineVersionList withSupportedFeatureNames(String[] supportedFeatureNames) {
         this.supportedFeatureNames = supportedFeatureNames;
         return this;
@@ -159,6 +180,7 @@ public class DBEngineVersionList {
     
     
     public SupportedCharacterSetsList[] supportedNcharCharacterSets;
+
     public DBEngineVersionList withSupportedNcharCharacterSets(SupportedCharacterSetsList[] supportedNcharCharacterSets) {
         this.supportedNcharCharacterSets = supportedNcharCharacterSets;
         return this;
@@ -166,6 +188,7 @@ public class DBEngineVersionList {
     
     
     public SupportedTimezonesList[] supportedTimezones;
+
     public DBEngineVersionList withSupportedTimezones(SupportedTimezonesList[] supportedTimezones) {
         this.supportedTimezones = supportedTimezones;
         return this;
@@ -173,6 +196,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsBabelfish;
+
     public DBEngineVersionList withSupportsBabelfish(Boolean supportsBabelfish) {
         this.supportsBabelfish = supportsBabelfish;
         return this;
@@ -180,6 +204,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsCertificateRotationWithoutRestart;
+
     public DBEngineVersionList withSupportsCertificateRotationWithoutRestart(Boolean supportsCertificateRotationWithoutRestart) {
         this.supportsCertificateRotationWithoutRestart = supportsCertificateRotationWithoutRestart;
         return this;
@@ -187,6 +212,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsGlobalDatabases;
+
     public DBEngineVersionList withSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
         this.supportsGlobalDatabases = supportsGlobalDatabases;
         return this;
@@ -194,6 +220,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsLogExportsToCloudwatchLogs;
+
     public DBEngineVersionList withSupportsLogExportsToCloudwatchLogs(Boolean supportsLogExportsToCloudwatchLogs) {
         this.supportsLogExportsToCloudwatchLogs = supportsLogExportsToCloudwatchLogs;
         return this;
@@ -201,6 +228,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsParallelQuery;
+
     public DBEngineVersionList withSupportsParallelQuery(Boolean supportsParallelQuery) {
         this.supportsParallelQuery = supportsParallelQuery;
         return this;
@@ -208,6 +236,7 @@ public class DBEngineVersionList {
     
     
     public Boolean supportsReadReplica;
+
     public DBEngineVersionList withSupportsReadReplica(Boolean supportsReadReplica) {
         this.supportsReadReplica = supportsReadReplica;
         return this;
@@ -218,6 +247,7 @@ public class DBEngineVersionList {
      */
     
     public TagList[] tagList;
+
     public DBEngineVersionList withTagList(TagList[] tagList) {
         this.tagList = tagList;
         return this;
@@ -225,9 +255,11 @@ public class DBEngineVersionList {
     
     
     public ValidUpgradeTargetList[] validUpgradeTarget;
+
     public DBEngineVersionList withValidUpgradeTarget(ValidUpgradeTargetList[] validUpgradeTarget) {
         this.validUpgradeTarget = validUpgradeTarget;
         return this;
     }
     
+    public DBEngineVersionList(){}
 }

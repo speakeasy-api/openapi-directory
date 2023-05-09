@@ -15,6 +15,7 @@ public class EndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientIPPreservationEnabled")
     public Boolean clientIPPreservationEnabled;
+
     public EndpointDescription withClientIPPreservationEnabled(Boolean clientIPPreservationEnabled) {
         this.clientIPPreservationEnabled = clientIPPreservationEnabled;
         return this;
@@ -23,6 +24,7 @@ public class EndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointId")
     public String endpointId;
+
     public EndpointDescription withEndpointId(String endpointId) {
         this.endpointId = endpointId;
         return this;
@@ -31,6 +33,7 @@ public class EndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthReason")
     public String healthReason;
+
     public EndpointDescription withHealthReason(String healthReason) {
         this.healthReason = healthReason;
         return this;
@@ -39,6 +42,7 @@ public class EndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthState")
     public HealthStateEnum healthState;
+
     public EndpointDescription withHealthState(HealthStateEnum healthState) {
         this.healthState = healthState;
         return this;
@@ -47,9 +51,11 @@ public class EndpointDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Weight")
     public Long weight;
+
     public EndpointDescription withWeight(Long weight) {
         this.weight = weight;
         return this;
     }
     
+    public EndpointDescription(){}
 }

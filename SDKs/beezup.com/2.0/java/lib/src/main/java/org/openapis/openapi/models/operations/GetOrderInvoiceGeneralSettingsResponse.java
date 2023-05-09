@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderInvoiceGeneralSettingsResponse {
@@ -12,6 +13,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderInvoiceGeneralSettingsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
     
     
     public String contentType;
+
     public GetOrderInvoiceGeneralSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetOrderInvoiceGeneralSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderInvoiceGeneralSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetOrderInvoiceGeneralSettingsResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -53,9 +59,14 @@ public class GetOrderInvoiceGeneralSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetOrderInvoiceGeneralSettingsResponse getOrderInvoiceGeneralSettingsResponse;
+
     public GetOrderInvoiceGeneralSettingsResponse withGetOrderInvoiceGeneralSettingsResponse(org.openapis.openapi.models.shared.GetOrderInvoiceGeneralSettingsResponse getOrderInvoiceGeneralSettingsResponse) {
         this.getOrderInvoiceGeneralSettingsResponse = getOrderInvoiceGeneralSettingsResponse;
         return this;
     }
     
+    public GetOrderInvoiceGeneralSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

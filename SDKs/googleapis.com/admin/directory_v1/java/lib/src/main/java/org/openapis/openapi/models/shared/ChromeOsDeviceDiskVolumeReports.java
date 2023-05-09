@@ -15,9 +15,11 @@ public class ChromeOsDeviceDiskVolumeReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeInfo")
     public ChromeOsDeviceDiskVolumeReportsVolumeInfo[] volumeInfo;
+
     public ChromeOsDeviceDiskVolumeReports withVolumeInfo(ChromeOsDeviceDiskVolumeReportsVolumeInfo[] volumeInfo) {
         this.volumeInfo = volumeInfo;
         return this;
     }
     
+    public ChromeOsDeviceDiskVolumeReports(){}
 }

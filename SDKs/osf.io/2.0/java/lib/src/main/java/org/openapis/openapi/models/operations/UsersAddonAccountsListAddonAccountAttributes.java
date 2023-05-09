@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UsersAddonAccountsListAddonAccountAttributes - The properties of the addon account entity.
@@ -15,6 +15,7 @@ public class UsersAddonAccountsListAddonAccountAttributes {
      */
     
     public String displayName;
+
     public UsersAddonAccountsListAddonAccountAttributes withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class UsersAddonAccountsListAddonAccountAttributes {
      */
     
     public String profileUrl;
+
     public UsersAddonAccountsListAddonAccountAttributes withProfileUrl(String profileUrl) {
         this.profileUrl = profileUrl;
         return this;
@@ -35,9 +37,14 @@ public class UsersAddonAccountsListAddonAccountAttributes {
      */
     
     public String provider;
+
     public UsersAddonAccountsListAddonAccountAttributes withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public UsersAddonAccountsListAddonAccountAttributes(@JsonProperty("display_name") String displayName, @JsonProperty("provider") String provider) {
+        this.displayName = displayName;
+        this.provider = provider;
+  }
 }

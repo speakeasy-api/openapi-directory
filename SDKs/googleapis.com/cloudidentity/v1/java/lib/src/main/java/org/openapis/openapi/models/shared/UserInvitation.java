@@ -18,6 +18,7 @@ public class UserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mailsSentCount")
     public String mailsSentCount;
+
     public UserInvitation withMailsSentCount(String mailsSentCount) {
         this.mailsSentCount = mailsSentCount;
         return this;
@@ -29,6 +30,7 @@ public class UserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserInvitation withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class UserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public UserInvitationStateEnum state;
+
     public UserInvitation withState(UserInvitationStateEnum state) {
         this.state = state;
         return this;
@@ -51,9 +54,11 @@ public class UserInvitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public UserInvitation withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public UserInvitation(){}
 }

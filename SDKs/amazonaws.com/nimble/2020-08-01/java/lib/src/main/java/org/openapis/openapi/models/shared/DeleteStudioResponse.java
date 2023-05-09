@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteStudioResponse {
     @JsonProperty("studio")
     public Studio studio;
+
     public DeleteStudioResponse withStudio(Studio studio) {
         this.studio = studio;
         return this;
     }
     
+    public DeleteStudioResponse(@JsonProperty("studio") Studio studio) {
+        this.studio = studio;
+  }
 }

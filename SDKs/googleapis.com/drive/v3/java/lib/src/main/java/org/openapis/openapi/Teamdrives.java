@@ -62,11 +62,9 @@ public class Teamdrives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveTeamdrivesCreateResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesCreateResponse() {{
+        org.openapis.openapi.models.operations.DriveTeamdrivesCreateResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesCreateResponse(contentType, httpRes.statusCode()) {{
             teamDrive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,10 +106,8 @@ public class Teamdrives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveTeamdrivesDeleteResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesDeleteResponse() {{
+        org.openapis.openapi.models.operations.DriveTeamdrivesDeleteResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Teamdrives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveTeamdrivesGetResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesGetResponse() {{
+        org.openapis.openapi.models.operations.DriveTeamdrivesGetResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesGetResponse(contentType, httpRes.statusCode()) {{
             teamDrive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,11 +188,9 @@ public class Teamdrives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveTeamdrivesListResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesListResponse() {{
+        org.openapis.openapi.models.operations.DriveTeamdrivesListResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesListResponse(contentType, httpRes.statusCode()) {{
             teamDriveList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Teamdrives {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DriveTeamdrivesUpdateResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DriveTeamdrivesUpdateResponse res = new org.openapis.openapi.models.operations.DriveTeamdrivesUpdateResponse(contentType, httpRes.statusCode()) {{
             teamDrive = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

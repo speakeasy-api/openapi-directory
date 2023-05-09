@@ -58,11 +58,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse res = new org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse res = new org.openapis.openapi.models.operations.GetAutomotivePartsCompatibilityPoliciesResponse(contentType, httpRes.statusCode()) {{
             automotivePartsCompatibilityPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse res = new org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse res = new org.openapis.openapi.models.operations.GetExtendedProducerResponsibilityPoliciesResponse(contentType, httpRes.statusCode()) {{
             extendedProducerResponsibilityPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse res = new org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse() {{
+        org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse res = new org.openapis.openapi.models.operations.GetHazardousMaterialsLabelsResponse(contentType, httpRes.statusCode()) {{
             hazardousMaterialDetailsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse res = new org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse res = new org.openapis.openapi.models.operations.GetItemConditionPoliciesResponse(contentType, httpRes.statusCode()) {{
             itemConditionPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +236,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse res = new org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse res = new org.openapis.openapi.models.operations.GetListingStructurePoliciesResponse(contentType, httpRes.statusCode()) {{
             listingStructurePolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -292,11 +282,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse res = new org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse res = new org.openapis.openapi.models.operations.GetNegotiatedPricePoliciesResponse(contentType, httpRes.statusCode()) {{
             negotiatedPricePolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -340,11 +328,9 @@ public class Marketplace {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReturnPoliciesResponse res = new org.openapis.openapi.models.operations.GetReturnPoliciesResponse() {{
+        org.openapis.openapi.models.operations.GetReturnPoliciesResponse res = new org.openapis.openapi.models.operations.GetReturnPoliciesResponse(contentType, httpRes.statusCode()) {{
             returnPolicyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class ManagedDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SensitiveDataItemCategoryEnum category;
+
     public ManagedDataIdentifierSummary withCategory(SensitiveDataItemCategoryEnum category) {
         this.category = category;
         return this;
@@ -23,9 +24,11 @@ public class ManagedDataIdentifierSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ManagedDataIdentifierSummary withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ManagedDataIdentifierSummary(){}
 }

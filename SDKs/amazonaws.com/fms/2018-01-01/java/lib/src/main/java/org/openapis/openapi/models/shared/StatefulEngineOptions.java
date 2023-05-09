@@ -15,9 +15,11 @@ public class StatefulEngineOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleOrder")
     public RuleOrderEnum ruleOrder;
+
     public StatefulEngineOptions withRuleOrder(RuleOrderEnum ruleOrder) {
         this.ruleOrder = ruleOrder;
         return this;
     }
     
+    public StatefulEngineOptions(){}
 }

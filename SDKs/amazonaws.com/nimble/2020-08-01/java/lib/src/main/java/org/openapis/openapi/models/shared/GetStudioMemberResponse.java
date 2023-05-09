@@ -15,9 +15,11 @@ public class GetStudioMemberResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member")
     public StudioMembership member;
+
     public GetStudioMemberResponse withMember(StudioMembership member) {
         this.member = member;
         return this;
     }
     
+    public GetStudioMemberResponse(){}
 }

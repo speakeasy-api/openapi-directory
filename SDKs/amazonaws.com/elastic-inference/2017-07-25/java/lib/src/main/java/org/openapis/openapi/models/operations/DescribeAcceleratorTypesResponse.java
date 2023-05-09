@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAcceleratorTypesResponse {
     
     public String contentType;
+
     public DescribeAcceleratorTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAcceleratorTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAcceleratorTypesResponse describeAcceleratorTypesResponse;
+
     public DescribeAcceleratorTypesResponse withDescribeAcceleratorTypesResponse(org.openapis.openapi.models.shared.DescribeAcceleratorTypesResponse describeAcceleratorTypesResponse) {
         this.describeAcceleratorTypesResponse = describeAcceleratorTypesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAcceleratorTypesResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAcceleratorTypesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeAcceleratorTypesResponse {
     
     
     public Integer statusCode;
+
     public DescribeAcceleratorTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeAcceleratorTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAcceleratorTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAcceleratorTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

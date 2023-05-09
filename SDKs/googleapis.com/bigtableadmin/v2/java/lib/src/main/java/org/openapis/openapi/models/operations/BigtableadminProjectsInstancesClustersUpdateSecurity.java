@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption1(BigtableadminProjectsInstancesClustersUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption2(BigtableadminProjectsInstancesClustersUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption3(BigtableadminProjectsInstancesClustersUpdateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption4(BigtableadminProjectsInstancesClustersUpdateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption5(BigtableadminProjectsInstancesClustersUpdateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesClustersUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersUpdateSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesClustersUpdateSecurity withOption6(BigtableadminProjectsInstancesClustersUpdateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesClustersUpdateSecurity(){}
 }

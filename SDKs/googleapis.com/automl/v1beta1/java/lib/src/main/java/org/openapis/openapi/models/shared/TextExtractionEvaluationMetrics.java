@@ -18,6 +18,7 @@ public class TextExtractionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auPrc")
     public Float auPrc;
+
     public TextExtractionEvaluationMetrics withAuPrc(Float auPrc) {
         this.auPrc = auPrc;
         return this;
@@ -29,9 +30,11 @@ public class TextExtractionEvaluationMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceMetricsEntries")
     public TextExtractionEvaluationMetricsConfidenceMetricsEntry[] confidenceMetricsEntries;
+
     public TextExtractionEvaluationMetrics withConfidenceMetricsEntries(TextExtractionEvaluationMetricsConfidenceMetricsEntry[] confidenceMetricsEntries) {
         this.confidenceMetricsEntries = confidenceMetricsEntries;
         return this;
     }
     
+    public TextExtractionEvaluationMetrics(){}
 }

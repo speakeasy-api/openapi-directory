@@ -15,6 +15,7 @@ public class DiskTypesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public DiskTypesScopedListWarningData withKey(String key) {
         this.key = key;
         return this;
@@ -26,9 +27,11 @@ public class DiskTypesScopedListWarningData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public DiskTypesScopedListWarningData withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DiskTypesScopedListWarningData(){}
 }

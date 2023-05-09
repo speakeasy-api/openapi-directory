@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class EligibilityChecksListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment")
     public Long appointment;
+
     public EligibilityChecksListRequest withAppointment(Long appointment) {
         this.appointment = appointment;
         return this;
@@ -16,6 +17,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date")
     public String appointmentDate;
+
     public EligibilityChecksListRequest withAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
         return this;
@@ -23,6 +25,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=appointment_date_range")
     public String appointmentDateRange;
+
     public EligibilityChecksListRequest withAppointmentDateRange(String appointmentDateRange) {
         this.appointmentDateRange = appointmentDateRange;
         return this;
@@ -30,6 +33,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public EligibilityChecksListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -37,6 +41,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=doctor")
     public Long doctor;
+
     public EligibilityChecksListRequest withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -44,6 +49,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public EligibilityChecksListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +57,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=patient")
     public Long patient;
+
     public EligibilityChecksListRequest withPatient(Long patient) {
         this.patient = patient;
         return this;
@@ -58,6 +65,7 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date")
     public String queryDate;
+
     public EligibilityChecksListRequest withQueryDate(String queryDate) {
         this.queryDate = queryDate;
         return this;
@@ -65,9 +73,11 @@ public class EligibilityChecksListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query_date_range")
     public String queryDateRange;
+
     public EligibilityChecksListRequest withQueryDateRange(String queryDateRange) {
         this.queryDateRange = queryDateRange;
         return this;
     }
     
+    public EligibilityChecksListRequest(){}
 }

@@ -57,10 +57,8 @@ public class TypeBioOntologySample {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchBioOntologySampleResponse res = new org.openapis.openapi.models.operations.SearchBioOntologySampleResponse() {{
+        org.openapis.openapi.models.operations.SearchBioOntologySampleResponse res = new org.openapis.openapi.models.operations.SearchBioOntologySampleResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

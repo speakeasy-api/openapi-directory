@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VerifySessionResponse {
@@ -12,6 +13,7 @@ public class VerifySessionResponse {
      */
     
     public Object accessDeniedException;
+
     public VerifySessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class VerifySessionResponse {
      */
     
     public Object conflictException;
+
     public VerifySessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class VerifySessionResponse {
     
     
     public String contentType;
+
     public VerifySessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class VerifySessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public VerifySessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class VerifySessionResponse {
     
     
     public Integer statusCode;
+
     public VerifySessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class VerifySessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VerifySessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class VerifySessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public VerifySessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class VerifySessionResponse {
      */
     
     public Object throttlingException;
+
     public VerifySessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class VerifySessionResponse {
      */
     
     public Object validationException;
+
     public VerifySessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
@@ -93,9 +103,14 @@ public class VerifySessionResponse {
      */
     
     public org.openapis.openapi.models.shared.VerifySessionResponse verifySessionResponse;
+
     public VerifySessionResponse withVerifySessionResponse(org.openapis.openapi.models.shared.VerifySessionResponse verifySessionResponse) {
         this.verifySessionResponse = verifySessionResponse;
         return this;
     }
     
+    public VerifySessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

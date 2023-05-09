@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UploadSigningCertificateResponse - Contains the response to a successful &lt;a&gt;UploadSigningCertificate&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class UploadSigningCertificateResponse {
     
     public SigningCertificate certificate;
+
     public UploadSigningCertificateResponse withCertificate(SigningCertificate certificate) {
         this.certificate = certificate;
         return this;
     }
     
+    public UploadSigningCertificateResponse(@JsonProperty("Certificate") SigningCertificate certificate) {
+        this.certificate = certificate;
+  }
 }

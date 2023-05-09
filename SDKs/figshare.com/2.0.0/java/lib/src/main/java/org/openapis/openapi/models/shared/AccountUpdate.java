@@ -15,6 +15,7 @@ public class AccountUpdate {
      */
     @JsonProperty("group_id")
     public Long groupId;
+
     public AccountUpdate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -25,9 +26,14 @@ public class AccountUpdate {
      */
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public AccountUpdate withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
     }
     
+    public AccountUpdate(@JsonProperty("group_id") Long groupId, @JsonProperty("is_active") Boolean isActive) {
+        this.groupId = groupId;
+        this.isActive = isActive;
+  }
 }

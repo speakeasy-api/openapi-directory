@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRoomResponse {
@@ -12,6 +13,7 @@ public class CreateRoomResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRoomResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRoomResponse {
      */
     
     public Object conflictException;
+
     public CreateRoomResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRoomResponse {
     
     
     public String contentType;
+
     public CreateRoomResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRoomResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRoomResponse createRoomResponse;
+
     public CreateRoomResponse withCreateRoomResponse(org.openapis.openapi.models.shared.CreateRoomResponse createRoomResponse) {
         this.createRoomResponse = createRoomResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateRoomResponse {
      */
     
     public Object pendingVerification;
+
     public CreateRoomResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -56,6 +62,7 @@ public class CreateRoomResponse {
     
     
     public Integer statusCode;
+
     public CreateRoomResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateRoomResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRoomResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateRoomResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateRoomResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRoomResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRoomResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRoomResponse {
      */
     
     public Object validationException;
+
     public CreateRoomResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRoomResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

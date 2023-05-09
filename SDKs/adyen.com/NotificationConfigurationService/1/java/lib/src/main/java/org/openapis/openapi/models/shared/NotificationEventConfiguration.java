@@ -14,6 +14,7 @@ public class NotificationEventConfiguration {
      */
     @JsonProperty("eventType")
     public NotificationEventConfigurationEventTypeEnum eventType;
+
     public NotificationEventConfiguration withEventType(NotificationEventConfigurationEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -27,9 +28,14 @@ public class NotificationEventConfiguration {
      */
     @JsonProperty("includeMode")
     public NotificationEventConfigurationIncludeModeEnum includeMode;
+
     public NotificationEventConfiguration withIncludeMode(NotificationEventConfigurationIncludeModeEnum includeMode) {
         this.includeMode = includeMode;
         return this;
     }
     
+    public NotificationEventConfiguration(@JsonProperty("eventType") NotificationEventConfigurationEventTypeEnum eventType, @JsonProperty("includeMode") NotificationEventConfigurationIncludeModeEnum includeMode) {
+        this.eventType = eventType;
+        this.includeMode = includeMode;
+  }
 }

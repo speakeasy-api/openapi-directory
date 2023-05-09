@@ -15,6 +15,7 @@ public class DetectLabelsImageForeground {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DominantColors")
     public DominantColor[] dominantColors;
+
     public DetectLabelsImageForeground withDominantColors(DominantColor[] dominantColors) {
         this.dominantColors = dominantColors;
         return this;
@@ -23,9 +24,11 @@ public class DetectLabelsImageForeground {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quality")
     public DetectLabelsImageQuality quality;
+
     public DetectLabelsImageForeground withQuality(DetectLabelsImageQuality quality) {
         this.quality = quality;
         return this;
     }
     
+    public DetectLabelsImageForeground(){}
 }

@@ -15,9 +15,11 @@ public class RGDIDListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rgdIds")
     public Integer[] rgdIds;
+
     public RGDIDListRequest withRgdIds(Integer[] rgdIds) {
         this.rgdIds = rgdIds;
         return this;
     }
     
+    public RGDIDListRequest(){}
 }

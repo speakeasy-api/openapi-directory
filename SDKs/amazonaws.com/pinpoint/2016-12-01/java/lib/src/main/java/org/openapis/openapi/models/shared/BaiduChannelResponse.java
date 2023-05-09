@@ -15,6 +15,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public BaiduChannelResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -23,6 +24,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public BaiduChannelResponse withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +32,7 @@ public class BaiduChannelResponse {
     
     @JsonProperty("Credential")
     public String credential;
+
     public BaiduChannelResponse withCredential(String credential) {
         this.credential = credential;
         return this;
@@ -38,6 +41,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public BaiduChannelResponse withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -46,6 +50,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasCredential")
     public Boolean hasCredential;
+
     public BaiduChannelResponse withHasCredential(Boolean hasCredential) {
         this.hasCredential = hasCredential;
         return this;
@@ -54,6 +59,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public BaiduChannelResponse withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +68,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsArchived")
     public Boolean isArchived;
+
     public BaiduChannelResponse withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -70,6 +77,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public String lastModifiedBy;
+
     public BaiduChannelResponse withLastModifiedBy(String lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -78,6 +86,7 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedDate")
     public String lastModifiedDate;
+
     public BaiduChannelResponse withLastModifiedDate(String lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -85,6 +94,7 @@ public class BaiduChannelResponse {
     
     @JsonProperty("Platform")
     public String platform;
+
     public BaiduChannelResponse withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -93,9 +103,14 @@ public class BaiduChannelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public BaiduChannelResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public BaiduChannelResponse(@JsonProperty("Credential") String credential, @JsonProperty("Platform") String platform) {
+        this.credential = credential;
+        this.platform = platform;
+  }
 }

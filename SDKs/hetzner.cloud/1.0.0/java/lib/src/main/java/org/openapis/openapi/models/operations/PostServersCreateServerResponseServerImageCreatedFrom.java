@@ -15,6 +15,7 @@ public class PostServersCreateServerResponseServerImageCreatedFrom {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostServersCreateServerResponseServerImageCreatedFrom withId(Long id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class PostServersCreateServerResponseServerImageCreatedFrom {
      */
     @JsonProperty("name")
     public String name;
+
     public PostServersCreateServerResponseServerImageCreatedFrom withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostServersCreateServerResponseServerImageCreatedFrom(@JsonProperty("id") Long id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

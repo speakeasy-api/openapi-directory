@@ -15,9 +15,11 @@ public class UpdateJobFromSourceControlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public UpdateJobFromSourceControlResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
     }
     
+    public UpdateJobFromSourceControlResponse(){}
 }

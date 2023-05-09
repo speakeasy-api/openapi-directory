@@ -15,6 +15,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessPolicy")
     public String accessPolicy;
+
     public Destination withAccessPolicy(String accessPolicy) {
         this.accessPolicy = accessPolicy;
         return this;
@@ -23,6 +24,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Destination withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public Long creationTime;
+
     public Destination withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -39,6 +42,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public Destination withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -47,6 +51,7 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public Destination withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -55,9 +60,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public Destination withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public Destination(){}
 }

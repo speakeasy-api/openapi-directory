@@ -15,6 +15,7 @@ public class DescribeTrailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeShadowTrails")
     public Boolean includeShadowTrails;
+
     public DescribeTrailsRequest withIncludeShadowTrails(Boolean includeShadowTrails) {
         this.includeShadowTrails = includeShadowTrails;
         return this;
@@ -23,9 +24,11 @@ public class DescribeTrailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trailNameList")
     public String[] trailNameList;
+
     public DescribeTrailsRequest withTrailNameList(String[] trailNameList) {
         this.trailNameList = trailNameList;
         return this;
     }
     
+    public DescribeTrailsRequest(){}
 }

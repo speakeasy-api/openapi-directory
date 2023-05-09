@@ -15,6 +15,7 @@ public class DebugHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionConfigurations")
     public CollectionConfiguration[] collectionConfigurations;
+
     public DebugHookConfig withCollectionConfigurations(CollectionConfiguration[] collectionConfigurations) {
         this.collectionConfigurations = collectionConfigurations;
         return this;
@@ -23,6 +24,7 @@ public class DebugHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HookParameters")
     public java.util.Map<String, String> hookParameters;
+
     public DebugHookConfig withHookParameters(java.util.Map<String, String> hookParameters) {
         this.hookParameters = hookParameters;
         return this;
@@ -31,6 +33,7 @@ public class DebugHookConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalPath")
     public String localPath;
+
     public DebugHookConfig withLocalPath(String localPath) {
         this.localPath = localPath;
         return this;
@@ -38,9 +41,13 @@ public class DebugHookConfig {
     
     @JsonProperty("S3OutputPath")
     public String s3OutputPath;
+
     public DebugHookConfig withS3OutputPath(String s3OutputPath) {
         this.s3OutputPath = s3OutputPath;
         return this;
     }
     
+    public DebugHookConfig(@JsonProperty("S3OutputPath") String s3OutputPath) {
+        this.s3OutputPath = s3OutputPath;
+  }
 }

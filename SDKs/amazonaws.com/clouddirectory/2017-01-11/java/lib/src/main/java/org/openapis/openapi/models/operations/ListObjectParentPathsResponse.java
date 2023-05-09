@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListObjectParentPathsResponse {
@@ -12,6 +13,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListObjectParentPathsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListObjectParentPathsResponse {
     
     
     public String contentType;
+
     public ListObjectParentPathsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public ListObjectParentPathsResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object internalServiceException;
+
     public ListObjectParentPathsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object invalidArnException;
+
     public ListObjectParentPathsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -59,6 +65,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListObjectParentPathsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object limitExceededException;
+
     public ListObjectParentPathsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListObjectParentPathsResponse listObjectParentPathsResponse;
+
     public ListObjectParentPathsResponse withListObjectParentPathsResponse(org.openapis.openapi.models.shared.ListObjectParentPathsResponse listObjectParentPathsResponse) {
         this.listObjectParentPathsResponse = listObjectParentPathsResponse;
         return this;
@@ -86,6 +95,7 @@ public class ListObjectParentPathsResponse {
     
     
     public Integer statusCode;
+
     public ListObjectParentPathsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListObjectParentPathsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListObjectParentPathsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListObjectParentPathsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object retryableConflictException;
+
     public ListObjectParentPathsResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class ListObjectParentPathsResponse {
      */
     
     public Object validationException;
+
     public ListObjectParentPathsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListObjectParentPathsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

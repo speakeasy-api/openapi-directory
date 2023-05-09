@@ -18,9 +18,11 @@ public class LookupMembershipNameResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LookupMembershipNameResponse withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LookupMembershipNameResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class InsurancesListRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public InsurancesListRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -16,6 +18,7 @@ public class InsurancesListRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public InsurancesListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -26,6 +29,7 @@ public class InsurancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=payer_type")
     public String payerType;
+
     public InsurancesListRequest withPayerType(String payerType) {
         this.payerType = payerType;
         return this;
@@ -36,9 +40,13 @@ public class InsurancesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=term")
     public String term;
+
     public InsurancesListRequest withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public InsurancesListRequest(@JsonProperty("payer_type") String payerType) {
+        this.payerType = payerType;
+  }
 }

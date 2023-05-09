@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("servingConfigId")
     public String servingConfigId;
+
     public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate withServingConfigId(String servingConfigId) {
         this.servingConfigId = servingConfigId;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate(){}
 }

@@ -18,6 +18,7 @@ public class V1Beta1ImportProducerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public V1Beta1ImportProducerOverridesRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -29,6 +30,7 @@ public class V1Beta1ImportProducerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceOnly")
     public V1Beta1ImportProducerOverridesRequestForceOnlyEnum[] forceOnly;
+
     public V1Beta1ImportProducerOverridesRequest withForceOnly(V1Beta1ImportProducerOverridesRequestForceOnlyEnum[] forceOnly) {
         this.forceOnly = forceOnly;
         return this;
@@ -40,9 +42,11 @@ public class V1Beta1ImportProducerOverridesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public V1Beta1OverrideInlineSource inlineSource;
+
     public V1Beta1ImportProducerOverridesRequest withInlineSource(V1Beta1OverrideInlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public V1Beta1ImportProducerOverridesRequest(){}
 }

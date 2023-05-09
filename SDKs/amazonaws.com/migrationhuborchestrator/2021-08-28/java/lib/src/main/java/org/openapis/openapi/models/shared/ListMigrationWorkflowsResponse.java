@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMigrationWorkflowsResponse {
     @JsonProperty("migrationWorkflowSummary")
     public MigrationWorkflowSummary[] migrationWorkflowSummary;
+
     public ListMigrationWorkflowsResponse withMigrationWorkflowSummary(MigrationWorkflowSummary[] migrationWorkflowSummary) {
         this.migrationWorkflowSummary = migrationWorkflowSummary;
         return this;
@@ -22,9 +23,13 @@ public class ListMigrationWorkflowsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMigrationWorkflowsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMigrationWorkflowsResponse(@JsonProperty("migrationWorkflowSummary") MigrationWorkflowSummary[] migrationWorkflowSummary) {
+        this.migrationWorkflowSummary = migrationWorkflowSummary;
+  }
 }

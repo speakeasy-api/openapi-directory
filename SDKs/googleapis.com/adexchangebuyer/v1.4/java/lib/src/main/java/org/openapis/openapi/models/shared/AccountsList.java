@@ -18,6 +18,7 @@ public class AccountsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Account[] items;
+
     public AccountsList withItems(Account[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class AccountsList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public AccountsList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public AccountsList(){}
 }

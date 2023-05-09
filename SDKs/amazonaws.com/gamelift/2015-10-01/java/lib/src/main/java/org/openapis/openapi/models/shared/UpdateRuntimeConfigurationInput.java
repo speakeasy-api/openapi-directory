@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRuntimeConfigurationInput {
     @JsonProperty("FleetId")
     public String fleetId;
+
     public UpdateRuntimeConfigurationInput withFleetId(String fleetId) {
         this.fleetId = fleetId;
         return this;
@@ -16,9 +17,14 @@ public class UpdateRuntimeConfigurationInput {
     
     @JsonProperty("RuntimeConfiguration")
     public RuntimeConfiguration runtimeConfiguration;
+
     public UpdateRuntimeConfigurationInput withRuntimeConfiguration(RuntimeConfiguration runtimeConfiguration) {
         this.runtimeConfiguration = runtimeConfiguration;
         return this;
     }
     
+    public UpdateRuntimeConfigurationInput(@JsonProperty("FleetId") String fleetId, @JsonProperty("RuntimeConfiguration") RuntimeConfiguration runtimeConfiguration) {
+        this.fleetId = fleetId;
+        this.runtimeConfiguration = runtimeConfiguration;
+  }
 }

@@ -12,6 +12,7 @@ public class HookEditFields {
      */
     @JsonProperty("event")
     public HookEditFieldsEventEnum event;
+
     public HookEditFields withEvent(HookEditFieldsEventEnum event) {
         this.event = event;
         return this;
@@ -22,9 +23,14 @@ public class HookEditFields {
      */
     @JsonProperty("url")
     public String url;
+
     public HookEditFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public HookEditFields(@JsonProperty("event") HookEditFieldsEventEnum event, @JsonProperty("url") String url) {
+        this.event = event;
+        this.url = url;
+  }
 }

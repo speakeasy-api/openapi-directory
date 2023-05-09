@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutFileInput {
     @JsonProperty("branchName")
     public String branchName;
+
     public PutFileInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,6 +20,7 @@ public class PutFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public PutFileInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -27,6 +29,7 @@ public class PutFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PutFileInput withEmail(String email) {
         this.email = email;
         return this;
@@ -34,6 +37,7 @@ public class PutFileInput {
     
     @JsonProperty("fileContent")
     public String fileContent;
+
     public PutFileInput withFileContent(String fileContent) {
         this.fileContent = fileContent;
         return this;
@@ -42,6 +46,7 @@ public class PutFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileMode")
     public FileModeTypeEnumEnum fileMode;
+
     public PutFileInput withFileMode(FileModeTypeEnumEnum fileMode) {
         this.fileMode = fileMode;
         return this;
@@ -49,6 +54,7 @@ public class PutFileInput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public PutFileInput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -57,6 +63,7 @@ public class PutFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PutFileInput withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +72,7 @@ public class PutFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentCommitId")
     public String parentCommitId;
+
     public PutFileInput withParentCommitId(String parentCommitId) {
         this.parentCommitId = parentCommitId;
         return this;
@@ -72,9 +80,16 @@ public class PutFileInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutFileInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutFileInput(@JsonProperty("branchName") String branchName, @JsonProperty("fileContent") String fileContent, @JsonProperty("filePath") String filePath, @JsonProperty("repositoryName") String repositoryName) {
+        this.branchName = branchName;
+        this.fileContent = fileContent;
+        this.filePath = filePath;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateRequest;
 import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateResponse;
+import org.openapis.openapi.models.operations.NotebooksProjectsLocationsEnvironmentsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.shared.ContainerImage;
 import org.openapis.openapi.models.shared.EnvironmentInput;
 import org.openapis.openapi.models.shared.VmImage;
-import org.openapis.openapi.models.shared.ContainerImage;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,46 +18,47 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            NotebooksProjectsLocationsEnvironmentsCreateRequest req = new NotebooksProjectsLocationsEnvironmentsCreateRequest() {{
-                dollarXgafv = "2";
+            NotebooksProjectsLocationsEnvironmentsCreateRequest req = new NotebooksProjectsLocationsEnvironmentsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 environmentInput = new EnvironmentInput() {{
                     containerImage = new ContainerImage() {{
-                        repository = "provident";
-                        tag = "distinctio";
-                    }};
-                    description = "quibusdam";
-                    displayName = "unde";
-                    postStartupScript = "nulla";
+                        repository = "distinctio";
+                        tag = "quibusdam";
+                    }};;
+                    description = "unde";
+                    displayName = "nulla";
+                    postStartupScript = "corrupti";
                     vmImage = new VmImage() {{
-                        imageFamily = "corrupti";
-                        imageName = "illum";
-                        project = "vel";
-                    }};
-                }};
-                accessToken = "error";
-                alt = "media";
-                callback = "suscipit";
-                environmentId = "iure";
-                fields = "magnam";
-                key = "debitis";
-                oauthToken = "ipsa";
-                parent = "delectus";
+                        imageFamily = "illum";
+                        imageName = "vel";
+                        project = "error";
+                    }};;
+                }};;
+                accessToken = "deserunt";
+                alt = AltEnum.MEDIA;
+                callback = "iure";
+                environmentId = "magnam";
+                fields = "debitis";
+                key = "ipsa";
+                oauthToken = "delectus";
                 prettyPrint = false;
                 quotaUser = "tempora";
                 uploadType = "suscipit";
                 uploadProtocol = "molestiae";
-            }}            
+            }};            
 
-            NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req, new NotebooksProjectsLocationsEnvironmentsCreateSecurity() {{
+            NotebooksProjectsLocationsEnvironmentsCreateResponse res = sdk.projects.notebooksProjectsLocationsEnvironmentsCreate(req, new NotebooksProjectsLocationsEnvironmentsCreateSecurity("minus", "placeat") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

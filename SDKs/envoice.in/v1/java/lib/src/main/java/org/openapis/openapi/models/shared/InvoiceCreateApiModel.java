@@ -22,6 +22,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Attachments")
     @SpeakeasyMetadata("form:name=Attachments,json")
     public InvoiceCreateAttachmentApiModel[] attachments;
+
     public InvoiceCreateApiModel withAttachments(InvoiceCreateAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -34,6 +35,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("ClientId")
     @SpeakeasyMetadata("form:name=ClientId")
     public Integer clientId;
+
     public InvoiceCreateApiModel withClientId(Integer clientId) {
         this.clientId = clientId;
         return this;
@@ -46,6 +48,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("ClonedFromId")
     @SpeakeasyMetadata("form:name=ClonedFromId")
     public Integer clonedFromId;
+
     public InvoiceCreateApiModel withClonedFromId(Integer clonedFromId) {
         this.clonedFromId = clonedFromId;
         return this;
@@ -58,6 +61,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public InvoiceCreateApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -72,6 +76,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Duedate")
     @SpeakeasyMetadata("form:name=Duedate")
     public OffsetDateTime duedate;
+
     public InvoiceCreateApiModel withDuedate(OffsetDateTime duedate) {
         this.duedate = duedate;
         return this;
@@ -84,6 +89,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("InvoiceCategoryId")
     @SpeakeasyMetadata("form:name=InvoiceCategoryId")
     public Integer invoiceCategoryId;
+
     public InvoiceCreateApiModel withInvoiceCategoryId(Integer invoiceCategoryId) {
         this.invoiceCategoryId = invoiceCategoryId;
         return this;
@@ -98,6 +104,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("IssuedOn")
     @SpeakeasyMetadata("form:name=IssuedOn")
     public OffsetDateTime issuedOn;
+
     public InvoiceCreateApiModel withIssuedOn(OffsetDateTime issuedOn) {
         this.issuedOn = issuedOn;
         return this;
@@ -110,6 +117,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public InvoiceCreateItemApiModel[] items;
+
     public InvoiceCreateApiModel withItems(InvoiceCreateItemApiModel[] items) {
         this.items = items;
         return this;
@@ -122,6 +130,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Notes")
     @SpeakeasyMetadata("form:name=Notes")
     public String notes;
+
     public InvoiceCreateApiModel withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -134,6 +143,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Number")
     @SpeakeasyMetadata("form:name=Number")
     public String number;
+
     public InvoiceCreateApiModel withNumber(String number) {
         this.number = number;
         return this;
@@ -146,6 +156,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("PaymentGateways")
     @SpeakeasyMetadata("form:name=PaymentGateways,json")
     public InvoiceGatewayApiModel[] paymentGateways;
+
     public InvoiceCreateApiModel withPaymentGateways(InvoiceGatewayApiModel[] paymentGateways) {
         this.paymentGateways = paymentGateways;
         return this;
@@ -158,6 +169,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("PoNumber")
     @SpeakeasyMetadata("form:name=PoNumber")
     public String poNumber;
+
     public InvoiceCreateApiModel withPoNumber(String poNumber) {
         this.poNumber = poNumber;
         return this;
@@ -170,6 +182,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("RecurringProfile")
     @SpeakeasyMetadata("form:name=RecurringProfile,json")
     public InvoiceRecurringApiModel recurringProfile;
+
     public InvoiceCreateApiModel withRecurringProfile(InvoiceRecurringApiModel recurringProfile) {
         this.recurringProfile = recurringProfile;
         return this;
@@ -182,6 +195,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("RecurringProfileId")
     @SpeakeasyMetadata("form:name=RecurringProfileId")
     public Integer recurringProfileId;
+
     public InvoiceCreateApiModel withRecurringProfileId(Integer recurringProfileId) {
         this.recurringProfileId = recurringProfileId;
         return this;
@@ -194,6 +208,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("ShouldSendReminders")
     @SpeakeasyMetadata("form:name=ShouldSendReminders")
     public Boolean shouldSendReminders;
+
     public InvoiceCreateApiModel withShouldSendReminders(Boolean shouldSendReminders) {
         this.shouldSendReminders = shouldSendReminders;
         return this;
@@ -206,6 +221,7 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public InvoiceCreateApiModelStatusEnum status;
+
     public InvoiceCreateApiModel withStatus(InvoiceCreateApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -218,9 +234,11 @@ public class InvoiceCreateApiModel {
     @JsonProperty("Terms")
     @SpeakeasyMetadata("form:name=Terms")
     public String terms;
+
     public InvoiceCreateApiModel withTerms(String terms) {
         this.terms = terms;
         return this;
     }
     
+    public InvoiceCreateApiModel(){}
 }

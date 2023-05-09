@@ -19,6 +19,7 @@ public class ListTagsResponse {
      */
     @JsonProperty("data")
     public TagResource[] data;
+
     public ListTagsResponse withData(TagResource[] data) {
         this.data = data;
         return this;
@@ -26,9 +27,14 @@ public class ListTagsResponse {
     
     @JsonProperty("links")
     public ListTagsResponseLinks links;
+
     public ListTagsResponse withLinks(ListTagsResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public ListTagsResponse(@JsonProperty("data") TagResource[] data, @JsonProperty("links") ListTagsResponseLinks links) {
+        this.data = data;
+        this.links = links;
+  }
 }

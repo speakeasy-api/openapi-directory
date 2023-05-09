@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSpaceResponse {
     
     public String contentType;
+
     public UpdateSpaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class UpdateSpaceResponse {
     
     
     public Integer statusCode;
+
     public UpdateSpaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class UpdateSpaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSpaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class UpdateSpaceResponse {
      */
     
     public Object resourceInUse;
+
     public UpdateSpaceResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSpaceResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public UpdateSpaceResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSpaceResponse {
      */
     
     public Object resourceNotFound;
+
     public UpdateSpaceResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -63,9 +70,14 @@ public class UpdateSpaceResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSpaceResponse updateSpaceResponse;
+
     public UpdateSpaceResponse withUpdateSpaceResponse(org.openapis.openapi.models.shared.UpdateSpaceResponse updateSpaceResponse) {
         this.updateSpaceResponse = updateSpaceResponse;
         return this;
     }
     
+    public UpdateSpaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

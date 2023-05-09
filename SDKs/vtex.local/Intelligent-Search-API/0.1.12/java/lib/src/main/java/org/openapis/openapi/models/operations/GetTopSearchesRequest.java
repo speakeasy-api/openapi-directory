@@ -12,9 +12,11 @@ public class GetTopSearchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetTopSearchesRequest withLocale(String locale) {
         this.locale = locale;
         return this;
     }
     
+    public GetTopSearchesRequest(){}
 }

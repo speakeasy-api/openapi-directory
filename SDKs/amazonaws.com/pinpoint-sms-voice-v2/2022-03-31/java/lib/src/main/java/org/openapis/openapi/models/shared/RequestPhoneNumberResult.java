@@ -22,6 +22,7 @@ public class RequestPhoneNumberResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public RequestPhoneNumberResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,6 +31,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionProtectionEnabled")
     public Boolean deletionProtectionEnabled;
+
     public RequestPhoneNumberResult withDeletionProtectionEnabled(Boolean deletionProtectionEnabled) {
         this.deletionProtectionEnabled = deletionProtectionEnabled;
         return this;
@@ -38,6 +40,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsoCountryCode")
     public String isoCountryCode;
+
     public RequestPhoneNumberResult withIsoCountryCode(String isoCountryCode) {
         this.isoCountryCode = isoCountryCode;
         return this;
@@ -46,6 +49,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageType")
     public MessageTypeEnum messageType;
+
     public RequestPhoneNumberResult withMessageType(MessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -54,6 +58,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MonthlyLeasingPrice")
     public String monthlyLeasingPrice;
+
     public RequestPhoneNumberResult withMonthlyLeasingPrice(String monthlyLeasingPrice) {
         this.monthlyLeasingPrice = monthlyLeasingPrice;
         return this;
@@ -62,6 +67,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberCapabilities")
     public NumberCapabilityEnum[] numberCapabilities;
+
     public RequestPhoneNumberResult withNumberCapabilities(NumberCapabilityEnum[] numberCapabilities) {
         this.numberCapabilities = numberCapabilities;
         return this;
@@ -70,6 +76,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberType")
     public RequestableNumberTypeEnum numberType;
+
     public RequestPhoneNumberResult withNumberType(RequestableNumberTypeEnum numberType) {
         this.numberType = numberType;
         return this;
@@ -78,6 +85,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptOutListName")
     public String optOutListName;
+
     public RequestPhoneNumberResult withOptOutListName(String optOutListName) {
         this.optOutListName = optOutListName;
         return this;
@@ -86,6 +94,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public RequestPhoneNumberResult withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -94,6 +103,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumberArn")
     public String phoneNumberArn;
+
     public RequestPhoneNumberResult withPhoneNumberArn(String phoneNumberArn) {
         this.phoneNumberArn = phoneNumberArn;
         return this;
@@ -102,6 +112,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumberId")
     public String phoneNumberId;
+
     public RequestPhoneNumberResult withPhoneNumberId(String phoneNumberId) {
         this.phoneNumberId = phoneNumberId;
         return this;
@@ -110,6 +121,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoolId")
     public String poolId;
+
     public RequestPhoneNumberResult withPoolId(String poolId) {
         this.poolId = poolId;
         return this;
@@ -118,6 +130,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedOptOutsEnabled")
     public Boolean selfManagedOptOutsEnabled;
+
     public RequestPhoneNumberResult withSelfManagedOptOutsEnabled(Boolean selfManagedOptOutsEnabled) {
         this.selfManagedOptOutsEnabled = selfManagedOptOutsEnabled;
         return this;
@@ -126,6 +139,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public NumberStatusEnum status;
+
     public RequestPhoneNumberResult withStatus(NumberStatusEnum status) {
         this.status = status;
         return this;
@@ -134,6 +148,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RequestPhoneNumberResult withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -142,6 +157,7 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayChannelArn")
     public String twoWayChannelArn;
+
     public RequestPhoneNumberResult withTwoWayChannelArn(String twoWayChannelArn) {
         this.twoWayChannelArn = twoWayChannelArn;
         return this;
@@ -150,9 +166,11 @@ public class RequestPhoneNumberResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TwoWayEnabled")
     public Boolean twoWayEnabled;
+
     public RequestPhoneNumberResult withTwoWayEnabled(Boolean twoWayEnabled) {
         this.twoWayEnabled = twoWayEnabled;
         return this;
     }
     
+    public RequestPhoneNumberResult(){}
 }

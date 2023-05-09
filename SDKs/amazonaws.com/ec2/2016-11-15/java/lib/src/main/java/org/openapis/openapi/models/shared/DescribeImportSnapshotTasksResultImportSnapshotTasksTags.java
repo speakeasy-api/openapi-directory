@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportSnapshotTasksResultImportSnapshotTasksTags {
     
     public String key;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeImportSnapshotTasksResultImportSnapshotTasksTags {
     
     
     public String value;
+
     public DescribeImportSnapshotTasksResultImportSnapshotTasksTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeImportSnapshotTasksResultImportSnapshotTasksTags(){}
 }

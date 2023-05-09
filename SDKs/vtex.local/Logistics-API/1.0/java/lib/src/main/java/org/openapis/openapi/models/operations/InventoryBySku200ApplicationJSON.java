@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InventoryBySku200ApplicationJSON {
     @JsonProperty("balance")
     public InventoryBySku200ApplicationJSONBalance[] balance;
+
     public InventoryBySku200ApplicationJSON withBalance(InventoryBySku200ApplicationJSONBalance[] balance) {
         this.balance = balance;
         return this;
@@ -16,9 +17,14 @@ public class InventoryBySku200ApplicationJSON {
     
     @JsonProperty("skuId")
     public String skuId;
+
     public InventoryBySku200ApplicationJSON withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
     }
     
+    public InventoryBySku200ApplicationJSON(@JsonProperty("balance") InventoryBySku200ApplicationJSONBalance[] balance, @JsonProperty("skuId") String skuId) {
+        this.balance = balance;
+        this.skuId = skuId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostContributionsIdModerateRequest {
@@ -12,6 +13,7 @@ public class PostContributionsIdModerateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ModerationHistoryItemSubmission moderationHistoryItemSubmission;
+
     public PostContributionsIdModerateRequest withModerationHistoryItemSubmission(org.openapis.openapi.models.shared.ModerationHistoryItemSubmission moderationHistoryItemSubmission) {
         this.moderationHistoryItemSubmission = moderationHistoryItemSubmission;
         return this;
@@ -22,9 +24,14 @@ public class PostContributionsIdModerateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PostContributionsIdModerateRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public PostContributionsIdModerateRequest(@JsonProperty("ModerationHistoryItemSubmission") org.openapis.openapi.models.shared.ModerationHistoryItemSubmission moderationHistoryItemSubmission, @JsonProperty("id") String id) {
+        this.moderationHistoryItemSubmission = moderationHistoryItemSubmission;
+        this.id = id;
+  }
 }

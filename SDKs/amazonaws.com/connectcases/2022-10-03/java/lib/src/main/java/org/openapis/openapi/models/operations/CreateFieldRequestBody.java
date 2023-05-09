@@ -15,6 +15,7 @@ public class CreateFieldRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFieldRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateFieldRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFieldRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -35,9 +37,14 @@ public class CreateFieldRequestBody {
      */
     @JsonProperty("type")
     public CreateFieldRequestBodyTypeEnum type;
+
     public CreateFieldRequestBody withType(CreateFieldRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateFieldRequestBody(@JsonProperty("name") String name, @JsonProperty("type") CreateFieldRequestBodyTypeEnum type) {
+        this.name = name;
+        this.type = type;
+  }
 }

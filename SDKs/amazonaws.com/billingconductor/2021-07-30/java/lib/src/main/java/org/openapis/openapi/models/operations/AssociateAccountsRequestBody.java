@@ -12,6 +12,7 @@ public class AssociateAccountsRequestBody {
      */
     @JsonProperty("AccountIds")
     public String[] accountIds;
+
     public AssociateAccountsRequestBody withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -22,9 +23,14 @@ public class AssociateAccountsRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public AssociateAccountsRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public AssociateAccountsRequestBody(@JsonProperty("AccountIds") String[] accountIds, @JsonProperty("Arn") String arn) {
+        this.accountIds = accountIds;
+        this.arn = arn;
+  }
 }

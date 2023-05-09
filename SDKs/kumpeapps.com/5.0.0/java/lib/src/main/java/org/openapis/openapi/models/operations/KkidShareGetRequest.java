@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidShareGetRequest {
@@ -12,6 +13,7 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=link")
     public KkidShareGetLinkEnum link;
+
     public KkidShareGetRequest withLink(KkidShareGetLinkEnum link) {
         this.link = link;
         return this;
@@ -22,6 +24,7 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=linkUserId")
     public String linkUserId;
+
     public KkidShareGetRequest withLinkUserId(String linkUserId) {
         this.linkUserId = linkUserId;
         return this;
@@ -32,6 +35,7 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public KkidShareGetScopeEnum scope;
+
     public KkidShareGetRequest withScope(KkidShareGetScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -42,6 +46,7 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope2")
     public KkidShareGetScope2Enum scope2;
+
     public KkidShareGetRequest withScope2(KkidShareGetScope2Enum scope2) {
         this.scope2 = scope2;
         return this;
@@ -52,6 +57,7 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope3")
     public KkidShareGetScope3Enum scope3;
+
     public KkidShareGetRequest withScope3(KkidShareGetScope3Enum scope3) {
         this.scope3 = scope3;
         return this;
@@ -62,9 +68,15 @@ public class KkidShareGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope4")
     public KkidShareGetScope4Enum scope4;
+
     public KkidShareGetRequest withScope4(KkidShareGetScope4Enum scope4) {
         this.scope4 = scope4;
         return this;
     }
     
+    public KkidShareGetRequest(@JsonProperty("link") KkidShareGetLinkEnum link, @JsonProperty("linkUserId") String linkUserId, @JsonProperty("scope") KkidShareGetScopeEnum scope) {
+        this.link = link;
+        this.linkUserId = linkUserId;
+        this.scope = scope;
+  }
 }

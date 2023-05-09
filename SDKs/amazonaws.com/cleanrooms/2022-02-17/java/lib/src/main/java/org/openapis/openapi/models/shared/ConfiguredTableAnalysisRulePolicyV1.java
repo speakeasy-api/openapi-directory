@@ -15,6 +15,7 @@ public class ConfiguredTableAnalysisRulePolicyV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregation")
     public AnalysisRuleAggregation aggregation;
+
     public ConfiguredTableAnalysisRulePolicyV1 withAggregation(AnalysisRuleAggregation aggregation) {
         this.aggregation = aggregation;
         return this;
@@ -23,9 +24,11 @@ public class ConfiguredTableAnalysisRulePolicyV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list")
     public AnalysisRuleList list;
+
     public ConfiguredTableAnalysisRulePolicyV1 withList(AnalysisRuleList list) {
         this.list = list;
         return this;
     }
     
+    public ConfiguredTableAnalysisRulePolicyV1(){}
 }

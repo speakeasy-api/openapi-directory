@@ -15,6 +15,7 @@ public class PatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApproveAfterDays")
     public Long approveAfterDays;
+
     public PatchRule withApproveAfterDays(Long approveAfterDays) {
         this.approveAfterDays = approveAfterDays;
         return this;
@@ -23,6 +24,7 @@ public class PatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApproveUntilDate")
     public String approveUntilDate;
+
     public PatchRule withApproveUntilDate(String approveUntilDate) {
         this.approveUntilDate = approveUntilDate;
         return this;
@@ -31,6 +33,7 @@ public class PatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceLevel")
     public PatchComplianceLevelEnum complianceLevel;
+
     public PatchRule withComplianceLevel(PatchComplianceLevelEnum complianceLevel) {
         this.complianceLevel = complianceLevel;
         return this;
@@ -39,6 +42,7 @@ public class PatchRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableNonSecurity")
     public Boolean enableNonSecurity;
+
     public PatchRule withEnableNonSecurity(Boolean enableNonSecurity) {
         this.enableNonSecurity = enableNonSecurity;
         return this;
@@ -46,9 +50,13 @@ public class PatchRule {
     
     @JsonProperty("PatchFilterGroup")
     public PatchFilterGroup patchFilterGroup;
+
     public PatchRule withPatchFilterGroup(PatchFilterGroup patchFilterGroup) {
         this.patchFilterGroup = patchFilterGroup;
         return this;
     }
     
+    public PatchRule(@JsonProperty("PatchFilterGroup") PatchFilterGroup patchFilterGroup) {
+        this.patchFilterGroup = patchFilterGroup;
+  }
 }

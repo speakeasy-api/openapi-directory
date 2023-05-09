@@ -22,6 +22,7 @@ public class TimelineCommentEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public TimelineCommentEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -32,6 +33,7 @@ public class TimelineCommentEvent {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public TimelineCommentEvent withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -43,6 +45,7 @@ public class TimelineCommentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public TimelineCommentEvent withBody(String body) {
         this.body = body;
         return this;
@@ -51,6 +54,7 @@ public class TimelineCommentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public TimelineCommentEvent withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -59,6 +63,7 @@ public class TimelineCommentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public TimelineCommentEvent withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -68,6 +73,7 @@ public class TimelineCommentEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public TimelineCommentEvent withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -75,6 +81,7 @@ public class TimelineCommentEvent {
     
     @JsonProperty("event")
     public String event;
+
     public TimelineCommentEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -82,6 +89,7 @@ public class TimelineCommentEvent {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public TimelineCommentEvent withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -92,6 +100,7 @@ public class TimelineCommentEvent {
      */
     @JsonProperty("id")
     public Long id;
+
     public TimelineCommentEvent withId(Long id) {
         this.id = id;
         return this;
@@ -99,6 +108,7 @@ public class TimelineCommentEvent {
     
     @JsonProperty("issue_url")
     public String issueUrl;
+
     public TimelineCommentEvent withIssueUrl(String issueUrl) {
         this.issueUrl = issueUrl;
         return this;
@@ -106,6 +116,7 @@ public class TimelineCommentEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public TimelineCommentEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -117,6 +128,7 @@ public class TimelineCommentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public TimelineCommentEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -125,6 +137,7 @@ public class TimelineCommentEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public TimelineCommentEvent withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -134,6 +147,7 @@ public class TimelineCommentEvent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public TimelineCommentEvent withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -144,6 +158,7 @@ public class TimelineCommentEvent {
      */
     @JsonProperty("url")
     public String url;
+
     public TimelineCommentEvent withUrl(String url) {
         this.url = url;
         return this;
@@ -154,9 +169,23 @@ public class TimelineCommentEvent {
      */
     @JsonProperty("user")
     public SimpleUser user;
+
     public TimelineCommentEvent withUser(SimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public TimelineCommentEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("event") String event, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("issue_url") String issueUrl, @JsonProperty("node_id") String nodeId, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") SimpleUser user) {
+        this.actor = actor;
+        this.authorAssociation = authorAssociation;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.issueUrl = issueUrl;
+        this.nodeId = nodeId;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

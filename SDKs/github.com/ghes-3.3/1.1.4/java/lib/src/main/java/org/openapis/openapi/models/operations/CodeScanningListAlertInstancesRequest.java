@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodeScanningListAlertInstancesRequest {
@@ -12,6 +13,7 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=alert_number")
     public Long alertNumber;
+
     public CodeScanningListAlertInstancesRequest withAlertNumber(Long alertNumber) {
         this.alertNumber = alertNumber;
         return this;
@@ -22,6 +24,7 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public CodeScanningListAlertInstancesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CodeScanningListAlertInstancesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public CodeScanningListAlertInstancesRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public CodeScanningListAlertInstancesRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -62,9 +68,15 @@ public class CodeScanningListAlertInstancesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public CodeScanningListAlertInstancesRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public CodeScanningListAlertInstancesRequest(@JsonProperty("alert_number") Long alertNumber, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.alertNumber = alertNumber;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

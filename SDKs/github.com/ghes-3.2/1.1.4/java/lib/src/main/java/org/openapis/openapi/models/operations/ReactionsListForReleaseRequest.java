@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsListForReleaseRequest {
@@ -12,6 +13,7 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=content")
     public ReactionsListForReleaseContentEnum content;
+
     public ReactionsListForReleaseRequest withContent(ReactionsListForReleaseContentEnum content) {
         this.content = content;
         return this;
@@ -22,6 +24,7 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReactionsListForReleaseRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ReactionsListForReleaseRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +46,7 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ReactionsListForReleaseRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +57,7 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=release_id")
     public Long releaseId;
+
     public ReactionsListForReleaseRequest withReleaseId(Long releaseId) {
         this.releaseId = releaseId;
         return this;
@@ -62,9 +68,15 @@ public class ReactionsListForReleaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReactionsListForReleaseRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReactionsListForReleaseRequest(@JsonProperty("owner") String owner, @JsonProperty("release_id") Long releaseId, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.releaseId = releaseId;
+        this.repo = repo;
+  }
 }

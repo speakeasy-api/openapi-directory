@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResumeServiceResponse {
     
     public String contentType;
+
     public ResumeServiceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ResumeServiceResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ResumeServiceResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ResumeServiceResponse {
      */
     
     public Object invalidRequestException;
+
     public ResumeServiceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ResumeServiceResponse {
      */
     
     public Object invalidStateException;
+
     public ResumeServiceResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class ResumeServiceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ResumeServiceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ResumeServiceResponse {
      */
     
     public org.openapis.openapi.models.shared.ResumeServiceResponse resumeServiceResponse;
+
     public ResumeServiceResponse withResumeServiceResponse(org.openapis.openapi.models.shared.ResumeServiceResponse resumeServiceResponse) {
         this.resumeServiceResponse = resumeServiceResponse;
         return this;
@@ -66,6 +73,7 @@ public class ResumeServiceResponse {
     
     
     public Integer statusCode;
+
     public ResumeServiceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ResumeServiceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResumeServiceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ResumeServiceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

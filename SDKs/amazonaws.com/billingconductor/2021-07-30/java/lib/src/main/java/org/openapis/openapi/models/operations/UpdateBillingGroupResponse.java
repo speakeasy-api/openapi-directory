@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateBillingGroupResponse {
@@ -12,6 +13,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateBillingGroupResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object conflictException;
+
     public UpdateBillingGroupResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateBillingGroupResponse {
     
     
     public String contentType;
+
     public UpdateBillingGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object internalServerException;
+
     public UpdateBillingGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateBillingGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateBillingGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateBillingGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateBillingGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateBillingGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object throttlingException;
+
     public UpdateBillingGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateBillingGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateBillingGroupOutput updateBillingGroupOutput;
+
     public UpdateBillingGroupResponse withUpdateBillingGroupOutput(org.openapis.openapi.models.shared.UpdateBillingGroupOutput updateBillingGroupOutput) {
         this.updateBillingGroupOutput = updateBillingGroupOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdateBillingGroupResponse {
      */
     
     public Object validationException;
+
     public UpdateBillingGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateBillingGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

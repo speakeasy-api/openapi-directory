@@ -15,9 +15,11 @@ public class GetLoadBalancerTypesId200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_balancer_type")
     public GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType loadBalancerType;
+
     public GetLoadBalancerTypesId200ApplicationJSON withLoadBalancerType(GetLoadBalancerTypesId200ApplicationJSONLoadBalancerType loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
     }
     
+    public GetLoadBalancerTypesId200ApplicationJSON(){}
 }

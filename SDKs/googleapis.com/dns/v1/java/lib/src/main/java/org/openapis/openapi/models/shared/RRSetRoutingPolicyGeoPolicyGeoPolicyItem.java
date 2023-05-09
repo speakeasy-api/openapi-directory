@@ -18,6 +18,7 @@ public class RRSetRoutingPolicyGeoPolicyGeoPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthCheckedTargets")
     public RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets;
+
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem withHealthCheckedTargets(RRSetRoutingPolicyHealthCheckTargets healthCheckedTargets) {
         this.healthCheckedTargets = healthCheckedTargets;
         return this;
@@ -26,6 +27,7 @@ public class RRSetRoutingPolicyGeoPolicyGeoPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem withKind(String kind) {
         this.kind = kind;
         return this;
@@ -37,6 +39,7 @@ public class RRSetRoutingPolicyGeoPolicyGeoPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem withLocation(String location) {
         this.location = location;
         return this;
@@ -45,6 +48,7 @@ public class RRSetRoutingPolicyGeoPolicyGeoPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rrdatas")
     public String[] rrdatas;
+
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem withRrdatas(String[] rrdatas) {
         this.rrdatas = rrdatas;
         return this;
@@ -56,9 +60,11 @@ public class RRSetRoutingPolicyGeoPolicyGeoPolicyItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signatureRrdatas")
     public String[] signatureRrdatas;
+
     public RRSetRoutingPolicyGeoPolicyGeoPolicyItem withSignatureRrdatas(String[] signatureRrdatas) {
         this.signatureRrdatas = signatureRrdatas;
         return this;
     }
     
+    public RRSetRoutingPolicyGeoPolicyGeoPolicyItem(){}
 }

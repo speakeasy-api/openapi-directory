@@ -18,6 +18,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public Attributes attributes;
+
     public Product withAttributes(Attributes attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentLanguage")
     public String contentLanguage;
+
     public Product withContentLanguage(String contentLanguage) {
         this.contentLanguage = contentLanguage;
         return this;
@@ -40,6 +42,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationStatuses")
     public DestinationStatus[] destinationStatuses;
+
     public Product withDestinationStatuses(DestinationStatus[] destinationStatuses) {
         this.destinationStatuses = destinationStatuses;
         return this;
@@ -51,6 +54,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public Issue[] issues;
+
     public Product withIssues(Issue[] issues) {
         this.issues = issues;
         return this;
@@ -62,6 +66,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Product withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public Product withParent(String parent) {
         this.parent = parent;
         return this;
@@ -84,6 +90,7 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public Product withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -95,9 +102,11 @@ public class Product {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetCountry")
     public String targetCountry;
+
     public Product withTargetCountry(String targetCountry) {
         this.targetCountry = targetCountry;
         return this;
     }
     
+    public Product(){}
 }

@@ -18,6 +18,7 @@ public class RecommendationJobInferenceBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointConfiguration")
     public EndpointOutputConfiguration endpointConfiguration;
+
     public RecommendationJobInferenceBenchmark withEndpointConfiguration(EndpointOutputConfiguration endpointConfiguration) {
         this.endpointConfiguration = endpointConfiguration;
         return this;
@@ -29,6 +30,7 @@ public class RecommendationJobInferenceBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointMetrics")
     public InferenceMetrics endpointMetrics;
+
     public RecommendationJobInferenceBenchmark withEndpointMetrics(InferenceMetrics endpointMetrics) {
         this.endpointMetrics = endpointMetrics;
         return this;
@@ -37,6 +39,7 @@ public class RecommendationJobInferenceBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public RecommendationJobInferenceBenchmark withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -48,6 +51,7 @@ public class RecommendationJobInferenceBenchmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metrics")
     public RecommendationMetrics metrics;
+
     public RecommendationJobInferenceBenchmark withMetrics(RecommendationMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -58,9 +62,13 @@ public class RecommendationJobInferenceBenchmark {
      */
     @JsonProperty("ModelConfiguration")
     public ModelConfiguration modelConfiguration;
+
     public RecommendationJobInferenceBenchmark withModelConfiguration(ModelConfiguration modelConfiguration) {
         this.modelConfiguration = modelConfiguration;
         return this;
     }
     
+    public RecommendationJobInferenceBenchmark(@JsonProperty("ModelConfiguration") ModelConfiguration modelConfiguration) {
+        this.modelConfiguration = modelConfiguration;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReceiptRuleSetMetadata {
     
     public OffsetDateTime createdTimestamp;
+
     public ReceiptRuleSetMetadata withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -19,9 +20,11 @@ public class ReceiptRuleSetMetadata {
     
     
     public String name;
+
     public ReceiptRuleSetMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReceiptRuleSetMetadata(){}
 }

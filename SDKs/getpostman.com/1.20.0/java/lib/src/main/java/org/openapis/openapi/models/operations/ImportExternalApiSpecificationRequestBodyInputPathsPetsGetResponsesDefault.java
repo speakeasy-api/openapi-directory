@@ -12,6 +12,7 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContent content;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefault withContent(ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefaultContent content) {
         this.content = content;
         return this;
@@ -20,9 +21,11 @@ public class ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponses
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefault withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ImportExternalApiSpecificationRequestBodyInputPathsPetsGetResponsesDefault(){}
 }

@@ -18,17 +18,19 @@ public class GoogleAppsCardV1ImageComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public GoogleAppsCardV1ImageComponent withAltText(String altText) {
         this.altText = altText;
         return this;
     }
     
     /**
-     * Represents the complete border style applied to items in a widget.
+     * The style options for the border of a card or widget, including the border type and color.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("borderStyle")
     public GoogleAppsCardV1BorderStyle borderStyle;
+
     public GoogleAppsCardV1ImageComponent withBorderStyle(GoogleAppsCardV1BorderStyle borderStyle) {
         this.borderStyle = borderStyle;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsCardV1ImageComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropStyle")
     public GoogleAppsCardV1ImageCropStyle cropStyle;
+
     public GoogleAppsCardV1ImageComponent withCropStyle(GoogleAppsCardV1ImageCropStyle cropStyle) {
         this.cropStyle = cropStyle;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAppsCardV1ImageComponent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public GoogleAppsCardV1ImageComponent withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
     }
     
+    public GoogleAppsCardV1ImageComponent(){}
 }

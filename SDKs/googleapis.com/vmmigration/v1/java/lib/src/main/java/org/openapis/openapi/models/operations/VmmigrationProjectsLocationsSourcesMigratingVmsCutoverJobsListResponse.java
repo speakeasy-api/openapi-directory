@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse {
     
     public String contentType;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListRespo
      */
     
     public org.openapis.openapi.models.shared.ListCutoverJobsResponse listCutoverJobsResponse;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse withListCutoverJobsResponse(org.openapis.openapi.models.shared.ListCutoverJobsResponse listCutoverJobsResponse) {
         this.listCutoverJobsResponse = listCutoverJobsResponse;
         return this;
@@ -26,6 +29,7 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListRespo
     
     
     public Integer statusCode;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListRespo
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VmmigrationProjectsLocationsSourcesMigratingVmsCutoverJobsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

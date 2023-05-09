@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyMonitorUnregisterResponse {
@@ -12,6 +13,7 @@ public class CompanyMonitorUnregisterResponse {
      */
     
     public CompanyMonitorUnregisterDefaultApplicationJSON companyMonitorUnregisterDefaultApplicationJSONObject;
+
     public CompanyMonitorUnregisterResponse withCompanyMonitorUnregisterDefaultApplicationJSONObject(CompanyMonitorUnregisterDefaultApplicationJSON companyMonitorUnregisterDefaultApplicationJSONObject) {
         this.companyMonitorUnregisterDefaultApplicationJSONObject = companyMonitorUnregisterDefaultApplicationJSONObject;
         return this;
@@ -19,6 +21,7 @@ public class CompanyMonitorUnregisterResponse {
     
     
     public String contentType;
+
     public CompanyMonitorUnregisterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CompanyMonitorUnregisterResponse {
     
     
     public Integer statusCode;
+
     public CompanyMonitorUnregisterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CompanyMonitorUnregisterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyMonitorUnregisterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyMonitorUnregisterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

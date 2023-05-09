@@ -20,6 +20,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttemptCount")
     public Long attemptCount;
+
     public PipelineExecutionStep withAttemptCount(Long attemptCount) {
         this.attemptCount = attemptCount;
         return this;
@@ -28,6 +29,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CacheHitResult")
     public CacheHitResult cacheHitResult;
+
     public PipelineExecutionStep withCacheHitResult(CacheHitResult cacheHitResult) {
         this.cacheHitResult = cacheHitResult;
         return this;
@@ -38,6 +40,7 @@ public class PipelineExecutionStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public PipelineExecutionStep withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public PipelineExecutionStep withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Metadata")
     public PipelineExecutionStepMetadata metadata;
+
     public PipelineExecutionStep withMetadata(PipelineExecutionStepMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -64,6 +69,7 @@ public class PipelineExecutionStep {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public PipelineExecutionStep withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -72,6 +78,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepDescription")
     public String stepDescription;
+
     public PipelineExecutionStep withStepDescription(String stepDescription) {
         this.stepDescription = stepDescription;
         return this;
@@ -80,6 +87,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepDisplayName")
     public String stepDisplayName;
+
     public PipelineExecutionStep withStepDisplayName(String stepDisplayName) {
         this.stepDisplayName = stepDisplayName;
         return this;
@@ -88,6 +96,7 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepName")
     public String stepName;
+
     public PipelineExecutionStep withStepName(String stepName) {
         this.stepName = stepName;
         return this;
@@ -96,9 +105,11 @@ public class PipelineExecutionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepStatus")
     public StepStatusEnum stepStatus;
+
     public PipelineExecutionStep withStepStatus(StepStatusEnum stepStatus) {
         this.stepStatus = stepStatus;
         return this;
     }
     
+    public PipelineExecutionStep(){}
 }

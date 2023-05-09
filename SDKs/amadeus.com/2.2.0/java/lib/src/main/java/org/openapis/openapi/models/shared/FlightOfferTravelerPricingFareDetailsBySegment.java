@@ -15,6 +15,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalServices")
     public FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest additionalServices;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withAdditionalServices(FlightOfferTravelerPricingFareDetailsBySegmentAdditionalServicesRequest additionalServices) {
         this.additionalServices = additionalServices;
         return this;
@@ -23,6 +24,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allotmentDetails")
     public FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails allotmentDetails;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withAllotmentDetails(FlightOfferTravelerPricingFareDetailsBySegmentAllotmentDetails allotmentDetails) {
         this.allotmentDetails = allotmentDetails;
         return this;
@@ -34,6 +36,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandedFare")
     public String brandedFare;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withBrandedFare(String brandedFare) {
         this.brandedFare = brandedFare;
         return this;
@@ -45,6 +48,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cabin")
     public TravelClassEnum cabin;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withCabin(TravelClassEnum cabin) {
         this.cabin = cabin;
         return this;
@@ -56,6 +60,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("class")
     public String class_;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withClass(String class_) {
         this.class_ = class_;
         return this;
@@ -67,6 +72,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fareBasis")
     public String fareBasis;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withFareBasis(String fareBasis) {
         this.fareBasis = fareBasis;
         return this;
@@ -78,6 +84,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedCheckedBags")
     public BaggageAllowance includedCheckedBags;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withIncludedCheckedBags(BaggageAllowance includedCheckedBags) {
         this.includedCheckedBags = includedCheckedBags;
         return this;
@@ -89,6 +96,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAllotment")
     public Boolean isAllotment;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withIsAllotment(Boolean isAllotment) {
         this.isAllotment = isAllotment;
         return this;
@@ -99,6 +107,7 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
      */
     @JsonProperty("segmentId")
     public String segmentId;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withSegmentId(String segmentId) {
         this.segmentId = segmentId;
         return this;
@@ -110,9 +119,13 @@ public class FlightOfferTravelerPricingFareDetailsBySegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sliceDiceIndicator")
     public SliceDiceIndicatorEnum sliceDiceIndicator;
+
     public FlightOfferTravelerPricingFareDetailsBySegment withSliceDiceIndicator(SliceDiceIndicatorEnum sliceDiceIndicator) {
         this.sliceDiceIndicator = sliceDiceIndicator;
         return this;
     }
     
+    public FlightOfferTravelerPricingFareDetailsBySegment(@JsonProperty("segmentId") String segmentId) {
+        this.segmentId = segmentId;
+  }
 }

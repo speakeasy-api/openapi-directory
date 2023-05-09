@@ -15,6 +15,7 @@ public class ListPortalsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListPortalsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPortalsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portalSummaries")
     public PortalSummary[] portalSummaries;
+
     public ListPortalsResponse withPortalSummaries(PortalSummary[] portalSummaries) {
         this.portalSummaries = portalSummaries;
         return this;
     }
     
+    public ListPortalsResponse(){}
 }

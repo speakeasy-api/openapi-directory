@@ -15,6 +15,7 @@ public class GetTaskProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failures")
     public Failure[] failures;
+
     public GetTaskProtectionResponse withFailures(Failure[] failures) {
         this.failures = failures;
         return this;
@@ -23,9 +24,11 @@ public class GetTaskProtectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedTasks")
     public ProtectedTask[] protectedTasks;
+
     public GetTaskProtectionResponse withProtectedTasks(ProtectedTask[] protectedTasks) {
         this.protectedTasks = protectedTasks;
         return this;
     }
     
+    public GetTaskProtectionResponse(){}
 }

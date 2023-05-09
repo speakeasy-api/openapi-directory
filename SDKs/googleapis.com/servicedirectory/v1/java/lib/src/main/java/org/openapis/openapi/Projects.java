@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesCreateResponse(contentType, httpRes.statusCode()) {{
             namespace = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesListResponse(contentType, httpRes.statusCode()) {{
             listNamespacesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesCreateResponse(contentType, httpRes.statusCode()) {{
             service = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsCreateResponse(contentType, httpRes.statusCode()) {{
             endpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsGetResponse(contentType, httpRes.statusCode()) {{
             endpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsListResponse(contentType, httpRes.statusCode()) {{
             listEndpointsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesEndpointsPatchResponse(contentType, httpRes.statusCode()) {{
             endpoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -484,11 +466,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,11 +510,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesListResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -578,11 +556,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesResolveResponse(contentType, httpRes.statusCode()) {{
             resolveServiceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ServicedirectoryProjectsLocationsNamespacesServicesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

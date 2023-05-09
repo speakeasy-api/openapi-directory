@@ -18,6 +18,7 @@ public class ResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public String groupId;
+
     public ResourceGroup withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -29,9 +30,11 @@ public class ResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceGroupResourceTypeEnum resourceType;
+
     public ResourceGroup withResourceType(ResourceGroupResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public ResourceGroup(){}
 }

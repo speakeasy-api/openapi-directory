@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ConnectionSettings - Information about the &lt;code&gt;ConnectionSettings&lt;/code&gt; attribute.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class ConnectionSettings {
     
     public Long idleTimeout;
+
     public ConnectionSettings withIdleTimeout(Long idleTimeout) {
         this.idleTimeout = idleTimeout;
         return this;
     }
     
+    public ConnectionSettings(@JsonProperty("IdleTimeout") Long idleTimeout) {
+        this.idleTimeout = idleTimeout;
+  }
 }

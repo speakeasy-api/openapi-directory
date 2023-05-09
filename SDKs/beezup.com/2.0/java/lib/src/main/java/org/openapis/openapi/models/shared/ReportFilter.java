@@ -18,6 +18,7 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ReportFilterLinks links;
+
     public ReportFilter withLinks(ReportFilterLinks links) {
         this.links = links;
         return this;
@@ -25,6 +26,7 @@ public class ReportFilter {
     
     @JsonProperty("parameters")
     public ReportFilterParameters parameters;
+
     public ReportFilter withParameters(ReportFilterParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -35,6 +37,7 @@ public class ReportFilter {
      */
     @JsonProperty("reportFilterId")
     public String reportFilterId;
+
     public ReportFilter withReportFilterId(String reportFilterId) {
         this.reportFilterId = reportFilterId;
         return this;
@@ -45,9 +48,15 @@ public class ReportFilter {
      */
     @JsonProperty("reportFilterName")
     public String reportFilterName;
+
     public ReportFilter withReportFilterName(String reportFilterName) {
         this.reportFilterName = reportFilterName;
         return this;
     }
     
+    public ReportFilter(@JsonProperty("parameters") ReportFilterParameters parameters, @JsonProperty("reportFilterId") String reportFilterId, @JsonProperty("reportFilterName") String reportFilterName) {
+        this.parameters = parameters;
+        this.reportFilterId = reportFilterId;
+        this.reportFilterName = reportFilterName;
+  }
 }

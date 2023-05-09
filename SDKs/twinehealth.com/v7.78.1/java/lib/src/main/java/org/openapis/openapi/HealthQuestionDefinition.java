@@ -53,12 +53,10 @@ public class HealthQuestionDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionResponse res = new org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionResponse() {{
+        org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionResponse res = new org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionResponse(contentType, httpRes.statusCode()) {{
             fetchHealthQuestionDefinitionResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class HealthQuestionDefinition {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionsResponse res = new org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionsResponse res = new org.openapis.openapi.models.operations.FetchHealthQuestionDefinitionsResponse(contentType, httpRes.statusCode()) {{
             fetchHealthQuestionDefinitionsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

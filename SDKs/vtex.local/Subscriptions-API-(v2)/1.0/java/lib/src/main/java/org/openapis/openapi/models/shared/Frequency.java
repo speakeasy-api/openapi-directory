@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Frequency {
     @JsonProperty("interval")
     public Integer interval;
+
     public Frequency withInterval(Integer interval) {
         this.interval = interval;
         return this;
@@ -16,9 +17,14 @@ public class Frequency {
     
     @JsonProperty("periodicity")
     public String periodicity;
+
     public Frequency withPeriodicity(String periodicity) {
         this.periodicity = periodicity;
         return this;
     }
     
+    public Frequency(@JsonProperty("interval") Integer interval, @JsonProperty("periodicity") String periodicity) {
+        this.interval = interval;
+        this.periodicity = periodicity;
+  }
 }

@@ -15,9 +15,11 @@ public class DisassociateGatewayFromServerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public DisassociateGatewayFromServerOutput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public DisassociateGatewayFromServerOutput(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelMLTaskRunRequest {
     @JsonProperty("TaskRunId")
     public String taskRunId;
+
     public CancelMLTaskRunRequest withTaskRunId(String taskRunId) {
         this.taskRunId = taskRunId;
         return this;
@@ -16,9 +17,14 @@ public class CancelMLTaskRunRequest {
     
     @JsonProperty("TransformId")
     public String transformId;
+
     public CancelMLTaskRunRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public CancelMLTaskRunRequest(@JsonProperty("TaskRunId") String taskRunId, @JsonProperty("TransformId") String transformId) {
+        this.taskRunId = taskRunId;
+        this.transformId = transformId;
+  }
 }

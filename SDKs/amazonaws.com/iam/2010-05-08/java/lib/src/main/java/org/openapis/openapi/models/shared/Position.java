@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class Position {
     
     public Long column;
+
     public Position withColumn(Long column) {
         this.column = column;
         return this;
@@ -19,9 +20,11 @@ public class Position {
     
     
     public Long line;
+
     public Position withLine(Long line) {
         this.line = line;
         return this;
     }
     
+    public Position(){}
 }

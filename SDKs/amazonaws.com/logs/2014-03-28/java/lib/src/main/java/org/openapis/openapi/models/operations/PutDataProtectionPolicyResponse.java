@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutDataProtectionPolicyResponse {
     
     public String contentType;
+
     public PutDataProtectionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public PutDataProtectionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public PutDataProtectionPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public Object operationAbortedException;
+
     public PutDataProtectionPolicyResponse withOperationAbortedException(Object operationAbortedException) {
         this.operationAbortedException = operationAbortedException;
         return this;
@@ -49,6 +54,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutDataProtectionPolicyResponse putDataProtectionPolicyResponse;
+
     public PutDataProtectionPolicyResponse withPutDataProtectionPolicyResponse(org.openapis.openapi.models.shared.PutDataProtectionPolicyResponse putDataProtectionPolicyResponse) {
         this.putDataProtectionPolicyResponse = putDataProtectionPolicyResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutDataProtectionPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutDataProtectionPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public PutDataProtectionPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class PutDataProtectionPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutDataProtectionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutDataProtectionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutDataProtectionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutDataProtectionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

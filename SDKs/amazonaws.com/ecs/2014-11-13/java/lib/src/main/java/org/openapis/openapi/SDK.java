@@ -201,6 +201,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -238,7 +243,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCapacityProviderResponse res = new org.openapis.openapi.models.operations.CreateCapacityProviderResponse() {{
+        org.openapis.openapi.models.operations.CreateCapacityProviderResponse res = new org.openapis.openapi.models.operations.CreateCapacityProviderResponse(contentType, httpRes.statusCode()) {{
             createCapacityProviderResponse = null;
             serverException = null;
             clientException = null;
@@ -246,8 +251,6 @@ public class SDK {
             limitExceededException = null;
             updateInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -330,14 +333,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse() {{
+        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse(contentType, httpRes.statusCode()) {{
             createClusterResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,7 +374,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Runs and maintains your desired number of tasks from a specified task definition. If the number of tasks running in a service drops below the &lt;code&gt;desiredCount&lt;/code&gt;, Amazon ECS runs another copy of the task in the specified cluster. To update an existing service, see the &lt;a&gt;UpdateService&lt;/a&gt; action.&lt;/p&gt; &lt;p&gt;In addition to maintaining the desired count of tasks in your service, you can optionally run your service behind one or more load balancers. The load balancers distribute traffic across the tasks that are associated with the service. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html"&gt;Service load balancing&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Tasks for services that don't use a load balancer are considered healthy if they're in the &lt;code&gt;RUNNING&lt;/code&gt; state. Tasks for services that use a load balancer are considered healthy if they're in the &lt;code&gt;RUNNING&lt;/code&gt; state and are reported as healthy by the load balancer.&lt;/p&gt; &lt;p&gt;There are two service scheduler strategies available:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;REPLICA&lt;/code&gt; - The replica scheduling strategy places and maintains your desired number of tasks across your cluster. By default, the service scheduler spreads tasks across Availability Zones. You can use task placement strategies and constraints to customize task placement decisions. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html"&gt;Service scheduler concepts&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DAEMON&lt;/code&gt; - The daemon scheduling strategy deploys exactly one task on each active container instance that meets all of the task placement constraints that you specify in your cluster. The service scheduler also evaluates the task placement constraints for running tasks. It also stops tasks that don't meet the placement constraints. When using this strategy, you don't need to specify a desired number of tasks, a task placement strategy, or use Service Auto Scaling policies. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html"&gt;Service scheduler concepts&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can optionally specify a deployment configuration for your service. The deployment is initiated by changing properties. For example, the deployment might be initiated by the task definition or by your desired count of a service. This is done with an &lt;a&gt;UpdateService&lt;/a&gt; operation. The default value for a replica service for &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is 100%. The default value for a daemon service for &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is 0%.&lt;/p&gt; &lt;p&gt;If a service uses the &lt;code&gt;ECS&lt;/code&gt; deployment controller, the minimum healthy percent represents a lower limit on the number of tasks in a service that must remain in the &lt;code&gt;RUNNING&lt;/code&gt; state during a deployment. Specifically, it represents it as a percentage of your desired number of tasks (rounded up to the nearest integer). This happens when any of your container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state if the service contains tasks using the EC2 launch type. Using this parameter, you can deploy without using additional cluster capacity. For example, if you set your service to have desired number of four tasks and a minimum healthy percent of 50%, the scheduler might stop two existing tasks to free up cluster capacity before starting two new tasks. If they're in the &lt;code&gt;RUNNING&lt;/code&gt; state, tasks for services that don't use a load balancer are considered healthy . If they're in the &lt;code&gt;RUNNING&lt;/code&gt; state and reported as healthy by the load balancer, tasks for services that &lt;i&gt;do&lt;/i&gt; use a load balancer are considered healthy . The default value for minimum healthy percent is 100%.&lt;/p&gt; &lt;p&gt;If a service uses the &lt;code&gt;ECS&lt;/code&gt; deployment controller, the &lt;b&gt;maximum percent&lt;/b&gt; parameter represents an upper limit on the number of tasks in a service that are allowed in the &lt;code&gt;RUNNING&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; state during a deployment. Specifically, it represents it as a percentage of the desired number of tasks (rounded down to the nearest integer). This happens when any of your container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state if the service contains tasks using the EC2 launch type. Using this parameter, you can define the deployment batch size. For example, if your service has a desired number of four tasks and a maximum percent value of 200%, the scheduler may start four new tasks before stopping the four older tasks (provided that the cluster resources required to do this are available). The default value for maximum percent is 200%.&lt;/p&gt; &lt;p&gt;If a service uses either the &lt;code&gt;CODE_DEPLOY&lt;/code&gt; or &lt;code&gt;EXTERNAL&lt;/code&gt; deployment controller types and tasks that use the EC2 launch type, the &lt;b&gt;minimum healthy percent&lt;/b&gt; and &lt;b&gt;maximum percent&lt;/b&gt; values are used only to define the lower and upper limit on the number of the tasks in the service that remain in the &lt;code&gt;RUNNING&lt;/code&gt; state. This is while the container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state. If the tasks in the service use the Fargate launch type, the minimum healthy percent and maximum percent values aren't used. This is the case even if they're currently visible when describing your service.&lt;/p&gt; &lt;p&gt;When creating a service that uses the &lt;code&gt;EXTERNAL&lt;/code&gt; deployment controller, you can specify only parameters that aren't controlled at the task set level. The only required parameter is the service name. You control your services using the &lt;a&gt;CreateTaskSet&lt;/a&gt; operation. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html"&gt;Amazon ECS deployment types&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When the service scheduler launches new tasks, it determines task placement. For information about task placement and task placement strategies, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html"&gt;Amazon ECS task placement&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Runs and maintains your desired number of tasks from a specified task definition. If the number of tasks running in a service drops below the &lt;code&gt;desiredCount&lt;/code&gt;, Amazon ECS runs another copy of the task in the specified cluster. To update an existing service, see the &lt;a&gt;UpdateService&lt;/a&gt; action.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options that offer better price and performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past 30-day period are considered current customers and will be able to continue using the service. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;In addition to maintaining the desired count of tasks in your service, you can optionally run your service behind one or more load balancers. The load balancers distribute traffic across the tasks that are associated with the service. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-load-balancing.html"&gt;Service load balancing&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Tasks for services that don't use a load balancer are considered healthy if they're in the &lt;code&gt;RUNNING&lt;/code&gt; state. Tasks for services that use a load balancer are considered healthy if they're in the &lt;code&gt;RUNNING&lt;/code&gt; state and are reported as healthy by the load balancer.&lt;/p&gt; &lt;p&gt;There are two service scheduler strategies available:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;REPLICA&lt;/code&gt; - The replica scheduling strategy places and maintains your desired number of tasks across your cluster. By default, the service scheduler spreads tasks across Availability Zones. You can use task placement strategies and constraints to customize task placement decisions. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html"&gt;Service scheduler concepts&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;code&gt;DAEMON&lt;/code&gt; - The daemon scheduling strategy deploys exactly one task on each active container instance that meets all of the task placement constraints that you specify in your cluster. The service scheduler also evaluates the task placement constraints for running tasks. It also stops tasks that don't meet the placement constraints. When using this strategy, you don't need to specify a desired number of tasks, a task placement strategy, or use Service Auto Scaling policies. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html"&gt;Service scheduler concepts&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;You can optionally specify a deployment configuration for your service. The deployment is initiated by changing properties. For example, the deployment might be initiated by the task definition or by your desired count of a service. This is done with an &lt;a&gt;UpdateService&lt;/a&gt; operation. The default value for a replica service for &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is 100%. The default value for a daemon service for &lt;code&gt;minimumHealthyPercent&lt;/code&gt; is 0%.&lt;/p&gt; &lt;p&gt;If a service uses the &lt;code&gt;ECS&lt;/code&gt; deployment controller, the minimum healthy percent represents a lower limit on the number of tasks in a service that must remain in the &lt;code&gt;RUNNING&lt;/code&gt; state during a deployment. Specifically, it represents it as a percentage of your desired number of tasks (rounded up to the nearest integer). This happens when any of your container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state if the service contains tasks using the EC2 launch type. Using this parameter, you can deploy without using additional cluster capacity. For example, if you set your service to have desired number of four tasks and a minimum healthy percent of 50%, the scheduler might stop two existing tasks to free up cluster capacity before starting two new tasks. If they're in the &lt;code&gt;RUNNING&lt;/code&gt; state, tasks for services that don't use a load balancer are considered healthy . If they're in the &lt;code&gt;RUNNING&lt;/code&gt; state and reported as healthy by the load balancer, tasks for services that &lt;i&gt;do&lt;/i&gt; use a load balancer are considered healthy . The default value for minimum healthy percent is 100%.&lt;/p&gt; &lt;p&gt;If a service uses the &lt;code&gt;ECS&lt;/code&gt; deployment controller, the &lt;b&gt;maximum percent&lt;/b&gt; parameter represents an upper limit on the number of tasks in a service that are allowed in the &lt;code&gt;RUNNING&lt;/code&gt; or &lt;code&gt;PENDING&lt;/code&gt; state during a deployment. Specifically, it represents it as a percentage of the desired number of tasks (rounded down to the nearest integer). This happens when any of your container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state if the service contains tasks using the EC2 launch type. Using this parameter, you can define the deployment batch size. For example, if your service has a desired number of four tasks and a maximum percent value of 200%, the scheduler may start four new tasks before stopping the four older tasks (provided that the cluster resources required to do this are available). The default value for maximum percent is 200%.&lt;/p&gt; &lt;p&gt;If a service uses either the &lt;code&gt;CODE_DEPLOY&lt;/code&gt; or &lt;code&gt;EXTERNAL&lt;/code&gt; deployment controller types and tasks that use the EC2 launch type, the &lt;b&gt;minimum healthy percent&lt;/b&gt; and &lt;b&gt;maximum percent&lt;/b&gt; values are used only to define the lower and upper limit on the number of the tasks in the service that remain in the &lt;code&gt;RUNNING&lt;/code&gt; state. This is while the container instances are in the &lt;code&gt;DRAINING&lt;/code&gt; state. If the tasks in the service use the Fargate launch type, the minimum healthy percent and maximum percent values aren't used. This is the case even if they're currently visible when describing your service.&lt;/p&gt; &lt;p&gt;When creating a service that uses the &lt;code&gt;EXTERNAL&lt;/code&gt; deployment controller, you can specify only parameters that aren't controlled at the task set level. The only required parameter is the service name. You control your services using the &lt;a&gt;CreateTaskSet&lt;/a&gt; operation. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html"&gt;Amazon ECS deployment types&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When the service scheduler launches new tasks, it determines task placement. For information about task placement and task placement strategies, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement.html"&gt;Amazon ECS task placement&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -406,7 +407,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateServiceResponse res = new org.openapis.openapi.models.operations.CreateServiceResponse() {{
+        org.openapis.openapi.models.operations.CreateServiceResponse res = new org.openapis.openapi.models.operations.CreateServiceResponse(contentType, httpRes.statusCode()) {{
             createServiceResponse = null;
             serverException = null;
             clientException = null;
@@ -418,8 +419,6 @@ public class SDK {
             accessDeniedException = null;
             namespaceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,7 +529,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTaskSetResponse res = new org.openapis.openapi.models.operations.CreateTaskSetResponse() {{
+        org.openapis.openapi.models.operations.CreateTaskSetResponse res = new org.openapis.openapi.models.operations.CreateTaskSetResponse(contentType, httpRes.statusCode()) {{
             createTaskSetResponse = null;
             serverException = null;
             clientException = null;
@@ -544,8 +543,6 @@ public class SDK {
             serviceNotActiveException = null;
             namespaceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -670,14 +667,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAccountSettingResponse res = new org.openapis.openapi.models.operations.DeleteAccountSettingResponse() {{
+        org.openapis.openapi.models.operations.DeleteAccountSettingResponse res = new org.openapis.openapi.models.operations.DeleteAccountSettingResponse(contentType, httpRes.statusCode()) {{
             deleteAccountSettingResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -746,14 +741,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAttributesResponse res = new org.openapis.openapi.models.operations.DeleteAttributesResponse() {{
+        org.openapis.openapi.models.operations.DeleteAttributesResponse res = new org.openapis.openapi.models.operations.DeleteAttributesResponse(contentType, httpRes.statusCode()) {{
             deleteAttributesResponse = null;
             clusterNotFoundException = null;
             targetNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -822,14 +815,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCapacityProviderResponse res = new org.openapis.openapi.models.operations.DeleteCapacityProviderResponse() {{
+        org.openapis.openapi.models.operations.DeleteCapacityProviderResponse res = new org.openapis.openapi.models.operations.DeleteCapacityProviderResponse(contentType, httpRes.statusCode()) {{
             deleteCapacityProviderResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -898,7 +889,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse() {{
+        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse(contentType, httpRes.statusCode()) {{
             deleteClusterResponse = null;
             serverException = null;
             clientException = null;
@@ -909,8 +900,6 @@ public class SDK {
             clusterContainsTasksException = null;
             updateInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1014,7 +1003,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteServiceResponse res = new org.openapis.openapi.models.operations.DeleteServiceResponse() {{
+        org.openapis.openapi.models.operations.DeleteServiceResponse res = new org.openapis.openapi.models.operations.DeleteServiceResponse(contentType, httpRes.statusCode()) {{
             deleteServiceResponse = null;
             serverException = null;
             clientException = null;
@@ -1022,8 +1011,6 @@ public class SDK {
             clusterNotFoundException = null;
             serviceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1106,15 +1093,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTaskDefinitionsResponse res = new org.openapis.openapi.models.operations.DeleteTaskDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.DeleteTaskDefinitionsResponse res = new org.openapis.openapi.models.operations.DeleteTaskDefinitionsResponse(contentType, httpRes.statusCode()) {{
             deleteTaskDefinitionsResponse = null;
             accessDeniedException = null;
             clientException = null;
             invalidParameterException = null;
             serverException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1190,7 +1175,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTaskSetResponse res = new org.openapis.openapi.models.operations.DeleteTaskSetResponse() {{
+        org.openapis.openapi.models.operations.DeleteTaskSetResponse res = new org.openapis.openapi.models.operations.DeleteTaskSetResponse(contentType, httpRes.statusCode()) {{
             deleteTaskSetResponse = null;
             serverException = null;
             clientException = null;
@@ -1202,8 +1187,6 @@ public class SDK {
             serviceNotActiveException = null;
             taskSetNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1314,15 +1297,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterContainerInstanceResponse res = new org.openapis.openapi.models.operations.DeregisterContainerInstanceResponse() {{
+        org.openapis.openapi.models.operations.DeregisterContainerInstanceResponse res = new org.openapis.openapi.models.operations.DeregisterContainerInstanceResponse(contentType, httpRes.statusCode()) {{
             deregisterContainerInstanceResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1398,14 +1379,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeregisterTaskDefinitionResponse res = new org.openapis.openapi.models.operations.DeregisterTaskDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DeregisterTaskDefinitionResponse res = new org.openapis.openapi.models.operations.DeregisterTaskDefinitionResponse(contentType, httpRes.statusCode()) {{
             deregisterTaskDefinitionResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1474,14 +1453,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeCapacityProvidersResponse res = new org.openapis.openapi.models.operations.DescribeCapacityProvidersResponse() {{
+        org.openapis.openapi.models.operations.DescribeCapacityProvidersResponse res = new org.openapis.openapi.models.operations.DescribeCapacityProvidersResponse(contentType, httpRes.statusCode()) {{
             describeCapacityProvidersResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1550,14 +1527,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse() {{
+        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse(contentType, httpRes.statusCode()) {{
             describeClustersResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1626,15 +1601,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeContainerInstancesResponse res = new org.openapis.openapi.models.operations.DescribeContainerInstancesResponse() {{
+        org.openapis.openapi.models.operations.DescribeContainerInstancesResponse res = new org.openapis.openapi.models.operations.DescribeContainerInstancesResponse(contentType, httpRes.statusCode()) {{
             describeContainerInstancesResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1710,15 +1683,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeServicesResponse res = new org.openapis.openapi.models.operations.DescribeServicesResponse() {{
+        org.openapis.openapi.models.operations.DescribeServicesResponse res = new org.openapis.openapi.models.operations.DescribeServicesResponse(contentType, httpRes.statusCode()) {{
             describeServicesResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1794,14 +1765,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTaskDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeTaskDefinitionResponse() {{
+        org.openapis.openapi.models.operations.DescribeTaskDefinitionResponse res = new org.openapis.openapi.models.operations.DescribeTaskDefinitionResponse(contentType, httpRes.statusCode()) {{
             describeTaskDefinitionResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1870,7 +1839,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTaskSetsResponse res = new org.openapis.openapi.models.operations.DescribeTaskSetsResponse() {{
+        org.openapis.openapi.models.operations.DescribeTaskSetsResponse res = new org.openapis.openapi.models.operations.DescribeTaskSetsResponse(contentType, httpRes.statusCode()) {{
             describeTaskSetsResponse = null;
             serverException = null;
             clientException = null;
@@ -1881,8 +1850,6 @@ public class SDK {
             serviceNotFoundException = null;
             serviceNotActiveException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1986,15 +1953,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeTasksResponse res = new org.openapis.openapi.models.operations.DescribeTasksResponse() {{
+        org.openapis.openapi.models.operations.DescribeTasksResponse res = new org.openapis.openapi.models.operations.DescribeTasksResponse(contentType, httpRes.statusCode()) {{
             describeTasksResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2070,13 +2035,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiscoverPollEndpointResponse res = new org.openapis.openapi.models.operations.DiscoverPollEndpointResponse() {{
+        org.openapis.openapi.models.operations.DiscoverPollEndpointResponse res = new org.openapis.openapi.models.operations.DiscoverPollEndpointResponse(contentType, httpRes.statusCode()) {{
             discoverPollEndpointResponse = null;
             serverException = null;
             clientException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2105,7 +2068,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Runs a command remotely on a container within a task.&lt;/p&gt; &lt;p&gt;If you use a condition key in your IAM policy to refine the conditions for the policy statement, for example limit the actions to a specific cluster, you receive an &lt;code&gt;AccessDeniedException&lt;/code&gt; when there is a mismatch between the condition key value and the corresponding parameter value.&lt;/p&gt; &lt;p&gt;For information about required permissions and considerations, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.htm"&gt;Using Amazon ECS Exec for debugging&lt;/a&gt; in the &lt;i&gt;Amazon ECS Developer Guide&lt;/i&gt;. &lt;/p&gt;
+     * &lt;p&gt;Runs a command remotely on a container within a task.&lt;/p&gt; &lt;p&gt;If you use a condition key in your IAM policy to refine the conditions for the policy statement, for example limit the actions to a specific cluster, you receive an &lt;code&gt;AccessDeniedException&lt;/code&gt; when there is a mismatch between the condition key value and the corresponding parameter value.&lt;/p&gt; &lt;p&gt;For information about required permissions and considerations, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-exec.html"&gt;Using Amazon ECS Exec for debugging&lt;/a&gt; in the &lt;i&gt;Amazon ECS Developer Guide&lt;/i&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -2138,7 +2101,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExecuteCommandResponse res = new org.openapis.openapi.models.operations.ExecuteCommandResponse() {{
+        org.openapis.openapi.models.operations.ExecuteCommandResponse res = new org.openapis.openapi.models.operations.ExecuteCommandResponse(contentType, httpRes.statusCode()) {{
             executeCommandResponse = null;
             serverException = null;
             clientException = null;
@@ -2147,8 +2110,6 @@ public class SDK {
             clusterNotFoundException = null;
             targetNotConnectedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2238,7 +2199,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTaskProtectionResponse res = new org.openapis.openapi.models.operations.GetTaskProtectionResponse() {{
+        org.openapis.openapi.models.operations.GetTaskProtectionResponse res = new org.openapis.openapi.models.operations.GetTaskProtectionResponse(contentType, httpRes.statusCode()) {{
             getTaskProtectionResponse = null;
             accessDeniedException = null;
             clientException = null;
@@ -2248,8 +2209,6 @@ public class SDK {
             serverException = null;
             unsupportedFeatureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2352,14 +2311,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAccountSettingsResponse res = new org.openapis.openapi.models.operations.ListAccountSettingsResponse() {{
+        org.openapis.openapi.models.operations.ListAccountSettingsResponse res = new org.openapis.openapi.models.operations.ListAccountSettingsResponse(contentType, httpRes.statusCode()) {{
             listAccountSettingsResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2434,13 +2391,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAttributesResponse res = new org.openapis.openapi.models.operations.ListAttributesResponse() {{
+        org.openapis.openapi.models.operations.ListAttributesResponse res = new org.openapis.openapi.models.operations.ListAttributesResponse(contentType, httpRes.statusCode()) {{
             listAttributesResponse = null;
             clusterNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2508,14 +2463,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListClustersResponse res = new org.openapis.openapi.models.operations.ListClustersResponse() {{
+        org.openapis.openapi.models.operations.ListClustersResponse res = new org.openapis.openapi.models.operations.ListClustersResponse(contentType, httpRes.statusCode()) {{
             listClustersResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2590,15 +2543,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListContainerInstancesResponse res = new org.openapis.openapi.models.operations.ListContainerInstancesResponse() {{
+        org.openapis.openapi.models.operations.ListContainerInstancesResponse res = new org.openapis.openapi.models.operations.ListContainerInstancesResponse(contentType, httpRes.statusCode()) {{
             listContainerInstancesResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2680,15 +2631,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse() {{
+        org.openapis.openapi.models.operations.ListServicesResponse res = new org.openapis.openapi.models.operations.ListServicesResponse(contentType, httpRes.statusCode()) {{
             listServicesResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2770,15 +2719,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListServicesByNamespaceResponse res = new org.openapis.openapi.models.operations.ListServicesByNamespaceResponse() {{
+        org.openapis.openapi.models.operations.ListServicesByNamespaceResponse res = new org.openapis.openapi.models.operations.ListServicesByNamespaceResponse(contentType, httpRes.statusCode()) {{
             listServicesByNamespaceResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             namespaceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2854,15 +2801,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             serverException = null;
             clientException = null;
             clusterNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2944,14 +2889,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTaskDefinitionFamiliesResponse res = new org.openapis.openapi.models.operations.ListTaskDefinitionFamiliesResponse() {{
+        org.openapis.openapi.models.operations.ListTaskDefinitionFamiliesResponse res = new org.openapis.openapi.models.operations.ListTaskDefinitionFamiliesResponse(contentType, httpRes.statusCode()) {{
             listTaskDefinitionFamiliesResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3026,14 +2969,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTaskDefinitionsResponse res = new org.openapis.openapi.models.operations.ListTaskDefinitionsResponse() {{
+        org.openapis.openapi.models.operations.ListTaskDefinitionsResponse res = new org.openapis.openapi.models.operations.ListTaskDefinitionsResponse(contentType, httpRes.statusCode()) {{
             listTaskDefinitionsResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3108,7 +3049,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse() {{
+        org.openapis.openapi.models.operations.ListTasksResponse res = new org.openapis.openapi.models.operations.ListTasksResponse(contentType, httpRes.statusCode()) {{
             listTasksResponse = null;
             serverException = null;
             clientException = null;
@@ -3116,8 +3057,6 @@ public class SDK {
             clusterNotFoundException = null;
             serviceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3167,7 +3106,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Modifies an account setting. Account settings are set on a per-Region basis.&lt;/p&gt; &lt;p&gt;If you change the account setting for the root user, the default settings for all of the users and roles that no individual account setting was specified are reset for. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html"&gt;Account Settings&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;serviceLongArnFormat&lt;/code&gt;, &lt;code&gt;taskLongArnFormat&lt;/code&gt;, or &lt;code&gt;containerInstanceLongArnFormat&lt;/code&gt; are specified, the Amazon Resource Name (ARN) and resource ID format of the resource type for a specified user, role, or the root user for an account is affected. The opt-in and opt-out account setting must be set for each Amazon ECS resource separately. The ARN and resource ID format of a resource is defined by the opt-in status of the user or role that created the resource. You must turn on this setting to use Amazon ECS features such as resource tagging.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;awsvpcTrunking&lt;/code&gt; is specified, the elastic network interface (ENI) limit for any new container instances that support the feature is changed. If &lt;code&gt;awsvpcTrunking&lt;/code&gt; is enabled, any new container instances that support the feature are launched have the increased ENI limits available to them. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html"&gt;Elastic Network Interface Trunking&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;containerInsights&lt;/code&gt; is specified, the default setting indicating whether CloudWatch Container Insights is enabled for your clusters is changed. If &lt;code&gt;containerInsights&lt;/code&gt; is enabled, any new clusters that are created will have Container Insights enabled unless you disable it during cluster creation. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-container-insights.html"&gt;CloudWatch Container Insights&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Modifies an account setting. Account settings are set on a per-Region basis.&lt;/p&gt; &lt;p&gt;If you change the root user account setting, the default settings are reset for users and roles that do not have specified individual account settings. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-account-settings.html"&gt;Account Settings&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;serviceLongArnFormat&lt;/code&gt;, &lt;code&gt;taskLongArnFormat&lt;/code&gt;, or &lt;code&gt;containerInstanceLongArnFormat&lt;/code&gt; are specified, the Amazon Resource Name (ARN) and resource ID format of the resource type for a specified user, role, or the root user for an account is affected. The opt-in and opt-out account setting must be set for each Amazon ECS resource separately. The ARN and resource ID format of a resource is defined by the opt-in status of the user or role that created the resource. You must turn on this setting to use Amazon ECS features such as resource tagging.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;awsvpcTrunking&lt;/code&gt; is specified, the elastic network interface (ENI) limit for any new container instances that support the feature is changed. If &lt;code&gt;awsvpcTrunking&lt;/code&gt; is turned on, any new container instances that support the feature are launched have the increased ENI limits available to them. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-instance-eni.html"&gt;Elastic Network Interface Trunking&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;When &lt;code&gt;containerInsights&lt;/code&gt; is specified, the default setting indicating whether Amazon Web Services CloudWatch Container Insights is turned on for your clusters is changed. If &lt;code&gt;containerInsights&lt;/code&gt; is turned on, any new clusters that are created will have Container Insights turned on unless you disable it during cluster creation. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-container-insights.html"&gt;CloudWatch Container Insights&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Amazon ECS is introducing tagging authorization for resource creation. Users must have permissions for actions that create the resource, such as &lt;code&gt;ecsCreateCluster&lt;/code&gt;. If tags are specified when you create a resource, Amazon Web Services performs additional authorization to verify if users or roles have permissions to create tags. Therefore, you must grant explicit permissions to use the &lt;code&gt;ecs:TagResource&lt;/code&gt; action. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/supported-iam-actions-tagging.html"&gt;Grant permission to tag resources on creation&lt;/a&gt; in the &lt;i&gt;Amazon ECS Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3200,14 +3139,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAccountSettingResponse res = new org.openapis.openapi.models.operations.PutAccountSettingResponse() {{
+        org.openapis.openapi.models.operations.PutAccountSettingResponse res = new org.openapis.openapi.models.operations.PutAccountSettingResponse(contentType, httpRes.statusCode()) {{
             putAccountSettingResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3276,14 +3213,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAccountSettingDefaultResponse res = new org.openapis.openapi.models.operations.PutAccountSettingDefaultResponse() {{
+        org.openapis.openapi.models.operations.PutAccountSettingDefaultResponse res = new org.openapis.openapi.models.operations.PutAccountSettingDefaultResponse(contentType, httpRes.statusCode()) {{
             putAccountSettingDefaultResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3352,15 +3287,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutAttributesResponse res = new org.openapis.openapi.models.operations.PutAttributesResponse() {{
+        org.openapis.openapi.models.operations.PutAttributesResponse res = new org.openapis.openapi.models.operations.PutAttributesResponse(contentType, httpRes.statusCode()) {{
             putAttributesResponse = null;
             clusterNotFoundException = null;
             targetNotFoundException = null;
             attributeLimitExceededException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3436,7 +3369,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutClusterCapacityProvidersResponse res = new org.openapis.openapi.models.operations.PutClusterCapacityProvidersResponse() {{
+        org.openapis.openapi.models.operations.PutClusterCapacityProvidersResponse res = new org.openapis.openapi.models.operations.PutClusterCapacityProvidersResponse(contentType, httpRes.statusCode()) {{
             putClusterCapacityProvidersResponse = null;
             serverException = null;
             clientException = null;
@@ -3445,8 +3378,6 @@ public class SDK {
             resourceInUseException = null;
             updateInProgressException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3536,14 +3467,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterContainerInstanceResponse res = new org.openapis.openapi.models.operations.RegisterContainerInstanceResponse() {{
+        org.openapis.openapi.models.operations.RegisterContainerInstanceResponse res = new org.openapis.openapi.models.operations.RegisterContainerInstanceResponse(contentType, httpRes.statusCode()) {{
             registerContainerInstanceResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3612,14 +3541,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RegisterTaskDefinitionResponse res = new org.openapis.openapi.models.operations.RegisterTaskDefinitionResponse() {{
+        org.openapis.openapi.models.operations.RegisterTaskDefinitionResponse res = new org.openapis.openapi.models.operations.RegisterTaskDefinitionResponse(contentType, httpRes.statusCode()) {{
             registerTaskDefinitionResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3655,7 +3582,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Starts a new task using the specified task definition.&lt;/p&gt; &lt;p&gt;You can allow Amazon ECS to place tasks for you, or you can customize how Amazon ECS places tasks using placement constraints and placement strategies. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html"&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Alternatively, you can use &lt;a&gt;StartTask&lt;/a&gt; to use your own scheduler or place tasks manually on specific container instances.&lt;/p&gt; &lt;p&gt;The Amazon ECS API follows an eventual consistency model. This is because of the distributed nature of the system supporting the API. This means that the result of an API command you run that affects your Amazon ECS resources might not be immediately visible to all subsequent commands you run. Keep this in mind when you carry out an API command that immediately follows a previous API command.&lt;/p&gt; &lt;p&gt;To manage eventual consistency, you can do the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Confirm the state of the resource before you run a command to modify it. Run the DescribeTasks command using an exponential backoff algorithm to ensure that you allow enough time for the previous command to propagate through the system. To do this, run the DescribeTasks command repeatedly, starting with a couple of seconds of wait time and increasing gradually up to five minutes of wait time.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Add wait time between subsequent commands, even if the DescribeTasks command returns an accurate response. Apply an exponential backoff algorithm starting with a couple of seconds of wait time, and increase gradually up to about five minutes of wait time.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;Starts a new task using the specified task definition.&lt;/p&gt; &lt;p&gt;You can allow Amazon ECS to place tasks for you, or you can customize how Amazon ECS places tasks using placement constraints and placement strategies. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html"&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt; &lt;p&gt;Alternatively, you can use &lt;a&gt;StartTask&lt;/a&gt; to use your own scheduler or place tasks manually on specific container instances.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options that offer better price and performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past 30-day period are considered current customers and will be able to continue using the service. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;The Amazon ECS API follows an eventual consistency model. This is because of the distributed nature of the system supporting the API. This means that the result of an API command you run that affects your Amazon ECS resources might not be immediately visible to all subsequent commands you run. Keep this in mind when you carry out an API command that immediately follows a previous API command.&lt;/p&gt; &lt;p&gt;To manage eventual consistency, you can do the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Confirm the state of the resource before you run a command to modify it. Run the DescribeTasks command using an exponential backoff algorithm to ensure that you allow enough time for the previous command to propagate through the system. To do this, run the DescribeTasks command repeatedly, starting with a couple of seconds of wait time and increasing gradually up to five minutes of wait time.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Add wait time between subsequent commands, even if the DescribeTasks command returns an accurate response. Apply an exponential backoff algorithm starting with a couple of seconds of wait time, and increase gradually up to about five minutes of wait time.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3688,7 +3615,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RunTaskResponse res = new org.openapis.openapi.models.operations.RunTaskResponse() {{
+        org.openapis.openapi.models.operations.RunTaskResponse res = new org.openapis.openapi.models.operations.RunTaskResponse(contentType, httpRes.statusCode()) {{
             runTaskResponse = null;
             serverException = null;
             clientException = null;
@@ -3700,8 +3627,6 @@ public class SDK {
             accessDeniedException = null;
             blockedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3779,7 +3704,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Starts a new task from the specified task definition on the specified container instance or instances.&lt;/p&gt; &lt;p&gt;Alternatively, you can use &lt;a&gt;RunTask&lt;/a&gt; to place tasks for you. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html"&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
+     * &lt;p&gt;Starts a new task from the specified task definition on the specified container instance or instances.&lt;/p&gt; &lt;note&gt; &lt;p&gt;Starting April 15, 2023, Amazon Web Services will not onboard new customers to Amazon Elastic Inference (EI), and will help current customers migrate their workloads to options that offer better price and performance. After April 15, 2023, new customers will not be able to launch instances with Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who have used Amazon EI at least once during the past 30-day period are considered current customers and will be able to continue using the service. &lt;/p&gt; &lt;/note&gt; &lt;p&gt;Alternatively, you can use &lt;a&gt;RunTask&lt;/a&gt; to place tasks for you. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html"&gt;Scheduling Tasks&lt;/a&gt; in the &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt;.&lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -3812,15 +3737,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartTaskResponse res = new org.openapis.openapi.models.operations.StartTaskResponse() {{
+        org.openapis.openapi.models.operations.StartTaskResponse res = new org.openapis.openapi.models.operations.StartTaskResponse(contentType, httpRes.statusCode()) {{
             startTaskResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3896,15 +3819,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StopTaskResponse res = new org.openapis.openapi.models.operations.StopTaskResponse() {{
+        org.openapis.openapi.models.operations.StopTaskResponse res = new org.openapis.openapi.models.operations.StopTaskResponse(contentType, httpRes.statusCode()) {{
             stopTaskResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3980,15 +3901,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitAttachmentStateChangesResponse res = new org.openapis.openapi.models.operations.SubmitAttachmentStateChangesResponse() {{
+        org.openapis.openapi.models.operations.SubmitAttachmentStateChangesResponse res = new org.openapis.openapi.models.operations.SubmitAttachmentStateChangesResponse(contentType, httpRes.statusCode()) {{
             submitAttachmentStateChangesResponse = null;
             serverException = null;
             clientException = null;
             accessDeniedException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4064,14 +3983,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitContainerStateChangeResponse res = new org.openapis.openapi.models.operations.SubmitContainerStateChangeResponse() {{
+        org.openapis.openapi.models.operations.SubmitContainerStateChangeResponse res = new org.openapis.openapi.models.operations.SubmitContainerStateChangeResponse(contentType, httpRes.statusCode()) {{
             submitContainerStateChangeResponse = null;
             serverException = null;
             clientException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4140,15 +4057,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitTaskStateChangeResponse res = new org.openapis.openapi.models.operations.SubmitTaskStateChangeResponse() {{
+        org.openapis.openapi.models.operations.SubmitTaskStateChangeResponse res = new org.openapis.openapi.models.operations.SubmitTaskStateChangeResponse(contentType, httpRes.statusCode()) {{
             submitTaskStateChangeResponse = null;
             serverException = null;
             clientException = null;
             accessDeniedException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4224,7 +4139,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             serverException = null;
             clientException = null;
@@ -4232,8 +4147,6 @@ public class SDK {
             resourceNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4316,7 +4229,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             serverException = null;
             clientException = null;
@@ -4324,8 +4237,6 @@ public class SDK {
             resourceNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4408,14 +4319,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCapacityProviderResponse res = new org.openapis.openapi.models.operations.UpdateCapacityProviderResponse() {{
+        org.openapis.openapi.models.operations.UpdateCapacityProviderResponse res = new org.openapis.openapi.models.operations.UpdateCapacityProviderResponse(contentType, httpRes.statusCode()) {{
             updateCapacityProviderResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4484,15 +4393,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse() {{
+        org.openapis.openapi.models.operations.UpdateClusterResponse res = new org.openapis.openapi.models.operations.UpdateClusterResponse(contentType, httpRes.statusCode()) {{
             updateClusterResponse = null;
             serverException = null;
             clientException = null;
             clusterNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4568,15 +4475,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateClusterSettingsResponse res = new org.openapis.openapi.models.operations.UpdateClusterSettingsResponse() {{
+        org.openapis.openapi.models.operations.UpdateClusterSettingsResponse res = new org.openapis.openapi.models.operations.UpdateClusterSettingsResponse(contentType, httpRes.statusCode()) {{
             updateClusterSettingsResponse = null;
             serverException = null;
             clientException = null;
             clusterNotFoundException = null;
             invalidParameterException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4652,7 +4557,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContainerAgentResponse res = new org.openapis.openapi.models.operations.UpdateContainerAgentResponse() {{
+        org.openapis.openapi.models.operations.UpdateContainerAgentResponse res = new org.openapis.openapi.models.operations.UpdateContainerAgentResponse(contentType, httpRes.statusCode()) {{
             updateContainerAgentResponse = null;
             serverException = null;
             clientException = null;
@@ -4662,8 +4567,6 @@ public class SDK {
             noUpdateAvailableException = null;
             missingVersionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4760,15 +4663,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateContainerInstancesStateResponse res = new org.openapis.openapi.models.operations.UpdateContainerInstancesStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateContainerInstancesStateResponse res = new org.openapis.openapi.models.operations.UpdateContainerInstancesStateResponse(contentType, httpRes.statusCode()) {{
             updateContainerInstancesStateResponse = null;
             serverException = null;
             clientException = null;
             invalidParameterException = null;
             clusterNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4844,7 +4745,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateServiceResponse res = new org.openapis.openapi.models.operations.UpdateServiceResponse() {{
+        org.openapis.openapi.models.operations.UpdateServiceResponse res = new org.openapis.openapi.models.operations.UpdateServiceResponse(contentType, httpRes.statusCode()) {{
             updateServiceResponse = null;
             serverException = null;
             clientException = null;
@@ -4857,8 +4758,6 @@ public class SDK {
             accessDeniedException = null;
             namespaceNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4976,7 +4875,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateServicePrimaryTaskSetResponse res = new org.openapis.openapi.models.operations.UpdateServicePrimaryTaskSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateServicePrimaryTaskSetResponse res = new org.openapis.openapi.models.operations.UpdateServicePrimaryTaskSetResponse(contentType, httpRes.statusCode()) {{
             updateServicePrimaryTaskSetResponse = null;
             serverException = null;
             clientException = null;
@@ -4988,8 +4887,6 @@ public class SDK {
             taskSetNotFoundException = null;
             accessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5067,7 +4964,7 @@ public class SDK {
     }
 
     /**
-     * &lt;p&gt;Updates the protection status of a task. You can set &lt;code&gt;protectionEnabled&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; to protect your task from termination during scale-in events from &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html"&gt;Service Autoscaling&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html"&gt;deployments&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Task-protection, by default, expires after 2 hours at which point Amazon ECS unsets the &lt;code&gt;protectionEnabled&lt;/code&gt; property making the task eligible for termination by a subsequent scale-in event.&lt;/p&gt; &lt;p&gt;You can specify a custom expiration period for task protection from 1 minute to up to 2,880 minutes (48 hours). To specify the custom expiration period, set the &lt;code&gt;expiresInMinutes&lt;/code&gt; property. The &lt;code&gt;expiresInMinutes&lt;/code&gt; property is always reset when you invoke this operation for a task that already has &lt;code&gt;protectionEnabled&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. You can keep extending the protection expiration period of a task by invoking this operation repeatedly.&lt;/p&gt; &lt;p&gt;To learn more about Amazon ECS task protection, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection.html"&gt;Task scale-in protection&lt;/a&gt; in the &lt;i&gt; &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt; &lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This operation is only supported for tasks belonging to an Amazon ECS service. Invoking this operation for a standalone task will result in an &lt;code&gt;TASK_NOT_VALID&lt;/code&gt; failure. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html"&gt;API failure reasons&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;important&gt; &lt;p&gt;If you prefer to set task protection from within the container, we recommend using the &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection-endpoint.html"&gt;Task scale-in protection endpoint&lt;/a&gt;.&lt;/p&gt; &lt;/important&gt;
+     * &lt;p&gt;Updates the protection status of a task. You can set &lt;code&gt;protectionEnabled&lt;/code&gt; to &lt;code&gt;true&lt;/code&gt; to protect your task from termination during scale-in events from &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html"&gt;Service Autoscaling&lt;/a&gt; or &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html"&gt;deployments&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Task-protection, by default, expires after 2 hours at which point Amazon ECS clears the &lt;code&gt;protectionEnabled&lt;/code&gt; property making the task eligible for termination by a subsequent scale-in event.&lt;/p&gt; &lt;p&gt;You can specify a custom expiration period for task protection from 1 minute to up to 2,880 minutes (48 hours). To specify the custom expiration period, set the &lt;code&gt;expiresInMinutes&lt;/code&gt; property. The &lt;code&gt;expiresInMinutes&lt;/code&gt; property is always reset when you invoke this operation for a task that already has &lt;code&gt;protectionEnabled&lt;/code&gt; set to &lt;code&gt;true&lt;/code&gt;. You can keep extending the protection expiration period of a task by invoking this operation repeatedly.&lt;/p&gt; &lt;p&gt;To learn more about Amazon ECS task protection, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection.html"&gt;Task scale-in protection&lt;/a&gt; in the &lt;i&gt; &lt;i&gt;Amazon Elastic Container Service Developer Guide&lt;/i&gt; &lt;/i&gt;.&lt;/p&gt; &lt;note&gt; &lt;p&gt;This operation is only supported for tasks belonging to an Amazon ECS service. Invoking this operation for a standalone task will result in an &lt;code&gt;TASK_NOT_VALID&lt;/code&gt; failure. For more information, see &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/api_failures_messages.html"&gt;API failure reasons&lt;/a&gt;.&lt;/p&gt; &lt;/note&gt; &lt;important&gt; &lt;p&gt;If you prefer to set task protection from within the container, we recommend using the &lt;a href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-scale-in-protection-endpoint.html"&gt;Task scale-in protection endpoint&lt;/a&gt;.&lt;/p&gt; &lt;/important&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
@@ -5100,7 +4997,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskProtectionResponse res = new org.openapis.openapi.models.operations.UpdateTaskProtectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskProtectionResponse res = new org.openapis.openapi.models.operations.UpdateTaskProtectionResponse(contentType, httpRes.statusCode()) {{
             updateTaskProtectionResponse = null;
             accessDeniedException = null;
             clientException = null;
@@ -5110,8 +5007,6 @@ public class SDK {
             serverException = null;
             unsupportedFeatureException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -5208,7 +5103,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTaskSetResponse res = new org.openapis.openapi.models.operations.UpdateTaskSetResponse() {{
+        org.openapis.openapi.models.operations.UpdateTaskSetResponse res = new org.openapis.openapi.models.operations.UpdateTaskSetResponse(contentType, httpRes.statusCode()) {{
             updateTaskSetResponse = null;
             serverException = null;
             clientException = null;
@@ -5220,8 +5115,6 @@ public class SDK {
             serviceNotActiveException = null;
             taskSetNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

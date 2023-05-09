@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Service {
     @JsonProperty("AutoScalingConfigurationSummary")
     public AutoScalingConfigurationSummary autoScalingConfigurationSummary;
+
     public Service withAutoScalingConfigurationSummary(AutoScalingConfigurationSummary autoScalingConfigurationSummary) {
         this.autoScalingConfigurationSummary = autoScalingConfigurationSummary;
         return this;
@@ -28,6 +29,7 @@ public class Service {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public Service withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class Service {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedAt")
     public OffsetDateTime deletedAt;
+
     public Service withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -46,6 +49,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfiguration")
     public EncryptionConfiguration encryptionConfiguration;
+
     public Service withEncryptionConfiguration(EncryptionConfiguration encryptionConfiguration) {
         this.encryptionConfiguration = encryptionConfiguration;
         return this;
@@ -54,6 +58,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckConfiguration")
     public HealthCheckConfiguration healthCheckConfiguration;
+
     public Service withHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         return this;
@@ -61,6 +66,7 @@ public class Service {
     
     @JsonProperty("InstanceConfiguration")
     public InstanceConfiguration instanceConfiguration;
+
     public Service withInstanceConfiguration(InstanceConfiguration instanceConfiguration) {
         this.instanceConfiguration = instanceConfiguration;
         return this;
@@ -68,6 +74,7 @@ public class Service {
     
     @JsonProperty("NetworkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public Service withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -76,6 +83,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfiguration")
     public ServiceObservabilityConfiguration observabilityConfiguration;
+
     public Service withObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
         this.observabilityConfiguration = observabilityConfiguration;
         return this;
@@ -83,6 +91,7 @@ public class Service {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public Service withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -90,6 +99,7 @@ public class Service {
     
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public Service withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -97,6 +107,7 @@ public class Service {
     
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public Service withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -105,6 +116,7 @@ public class Service {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceUrl")
     public String serviceUrl;
+
     public Service withServiceUrl(String serviceUrl) {
         this.serviceUrl = serviceUrl;
         return this;
@@ -112,6 +124,7 @@ public class Service {
     
     @JsonProperty("SourceConfiguration")
     public SourceConfiguration sourceConfiguration;
+
     public Service withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
@@ -119,6 +132,7 @@ public class Service {
     
     @JsonProperty("Status")
     public ServiceStatusEnum status;
+
     public Service withStatus(ServiceStatusEnum status) {
         this.status = status;
         return this;
@@ -128,9 +142,22 @@ public class Service {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdatedAt")
     public OffsetDateTime updatedAt;
+
     public Service withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Service(@JsonProperty("AutoScalingConfigurationSummary") AutoScalingConfigurationSummary autoScalingConfigurationSummary, @JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("InstanceConfiguration") InstanceConfiguration instanceConfiguration, @JsonProperty("NetworkConfiguration") NetworkConfiguration networkConfiguration, @JsonProperty("ServiceArn") String serviceArn, @JsonProperty("ServiceId") String serviceId, @JsonProperty("ServiceName") String serviceName, @JsonProperty("SourceConfiguration") SourceConfiguration sourceConfiguration, @JsonProperty("Status") ServiceStatusEnum status, @JsonProperty("UpdatedAt") OffsetDateTime updatedAt) {
+        this.autoScalingConfigurationSummary = autoScalingConfigurationSummary;
+        this.createdAt = createdAt;
+        this.instanceConfiguration = instanceConfiguration;
+        this.networkConfiguration = networkConfiguration;
+        this.serviceArn = serviceArn;
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+        this.sourceConfiguration = sourceConfiguration;
+        this.status = status;
+        this.updatedAt = updatedAt;
+  }
 }

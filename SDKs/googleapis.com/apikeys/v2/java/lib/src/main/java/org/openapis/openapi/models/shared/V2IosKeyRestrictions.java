@@ -18,9 +18,11 @@ public class V2IosKeyRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedBundleIds")
     public String[] allowedBundleIds;
+
     public V2IosKeyRestrictions withAllowedBundleIds(String[] allowedBundleIds) {
         this.allowedBundleIds = allowedBundleIds;
         return this;
     }
     
+    public V2IosKeyRestrictions(){}
 }

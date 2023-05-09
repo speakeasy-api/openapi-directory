@@ -15,6 +15,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -25,6 +26,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -35,6 +37,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -45,6 +48,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("id")
     public String id;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withId(String id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("name")
     public String name;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withName(String name) {
         this.name = name;
         return this;
@@ -65,6 +70,7 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("origin")
     public OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum origin;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withOrigin(OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum origin) {
         this.origin = origin;
         return this;
@@ -75,9 +81,18 @@ public class OrganizationsListAdministered200ApplicationJSONOrganizations {
      */
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public OrganizationsListAdministered200ApplicationJSONOrganizations withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public OrganizationsListAdministered200ApplicationJSONOrganizations(@JsonProperty("created_at") String createdAt, @JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("origin") OrganizationsListAdministered200ApplicationJSONOrganizationsOriginEnum origin, @JsonProperty("updated_at") String updatedAt) {
+        this.createdAt = createdAt;
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.origin = origin;
+        this.updatedAt = updatedAt;
+  }
 }

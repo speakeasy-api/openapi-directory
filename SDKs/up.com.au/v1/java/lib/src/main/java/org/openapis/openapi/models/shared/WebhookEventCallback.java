@@ -17,9 +17,13 @@ public class WebhookEventCallback {
      */
     @JsonProperty("data")
     public WebhookEventResource data;
+
     public WebhookEventCallback withData(WebhookEventResource data) {
         this.data = data;
         return this;
     }
     
+    public WebhookEventCallback(@JsonProperty("data") WebhookEventResource data) {
+        this.data = data;
+  }
 }

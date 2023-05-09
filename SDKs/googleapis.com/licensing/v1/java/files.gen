@@ -56,4 +56,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseAssignment.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseAssignmentInsert.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseAssignmentList.java
+docs/sdk/README.md
+docs/licenseassignments/README.md
 USAGE.md

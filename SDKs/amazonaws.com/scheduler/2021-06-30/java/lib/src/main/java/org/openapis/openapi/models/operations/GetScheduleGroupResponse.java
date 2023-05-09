@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetScheduleGroupResponse {
     
     public String contentType;
+
     public GetScheduleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetScheduleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.GetScheduleGroupOutput getScheduleGroupOutput;
+
     public GetScheduleGroupResponse withGetScheduleGroupOutput(org.openapis.openapi.models.shared.GetScheduleGroupOutput getScheduleGroupOutput) {
         this.getScheduleGroupOutput = getScheduleGroupOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetScheduleGroupResponse {
      */
     
     public Object internalServerException;
+
     public GetScheduleGroupResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetScheduleGroupResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetScheduleGroupResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetScheduleGroupResponse {
     
     
     public Integer statusCode;
+
     public GetScheduleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetScheduleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetScheduleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetScheduleGroupResponse {
      */
     
     public Object throttlingException;
+
     public GetScheduleGroupResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class GetScheduleGroupResponse {
      */
     
     public Object validationException;
+
     public GetScheduleGroupResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetScheduleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

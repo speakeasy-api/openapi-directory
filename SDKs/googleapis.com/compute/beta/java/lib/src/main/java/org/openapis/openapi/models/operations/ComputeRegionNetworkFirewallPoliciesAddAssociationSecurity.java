@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionNetworkFirewallPoliciesAddAssociationSecurityOption1 option1;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity withOption1(ComputeRegionNetworkFirewallPoliciesAddAssociationSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionNetworkFirewallPoliciesAddAssociationSecurityOption2 option2;
+
     public ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity withOption2(ComputeRegionNetworkFirewallPoliciesAddAssociationSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionNetworkFirewallPoliciesAddAssociationSecurity(){}
 }

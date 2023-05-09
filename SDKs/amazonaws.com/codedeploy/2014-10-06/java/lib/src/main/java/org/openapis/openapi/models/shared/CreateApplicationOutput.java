@@ -15,9 +15,11 @@ public class CreateApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public CreateApplicationOutput withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
     }
     
+    public CreateApplicationOutput(){}
 }

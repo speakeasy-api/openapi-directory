@@ -20,6 +20,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active_lock_reason")
     public String activeLockReason;
+
     public NullableIssue withActiveLockReason(String activeLockReason) {
         this.activeLockReason = activeLockReason;
         return this;
@@ -30,6 +31,7 @@ public class NullableIssue {
      */
     @JsonProperty("assignee")
     public NullableSimpleUser assignee;
+
     public NullableIssue withAssignee(NullableSimpleUser assignee) {
         this.assignee = assignee;
         return this;
@@ -38,6 +40,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignees")
     public SimpleUser[] assignees;
+
     public NullableIssue withAssignees(SimpleUser[] assignees) {
         this.assignees = assignees;
         return this;
@@ -48,6 +51,7 @@ public class NullableIssue {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public NullableIssue withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -59,6 +63,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public NullableIssue withBody(String body) {
         this.body = body;
         return this;
@@ -67,6 +72,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_html")
     public String bodyHtml;
+
     public NullableIssue withBodyHtml(String bodyHtml) {
         this.bodyHtml = bodyHtml;
         return this;
@@ -75,6 +81,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body_text")
     public String bodyText;
+
     public NullableIssue withBodyText(String bodyText) {
         this.bodyText = bodyText;
         return this;
@@ -84,6 +91,7 @@ public class NullableIssue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("closed_at")
     public OffsetDateTime closedAt;
+
     public NullableIssue withClosedAt(OffsetDateTime closedAt) {
         this.closedAt = closedAt;
         return this;
@@ -95,6 +103,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed_by")
     public NullableSimpleUser closedBy;
+
     public NullableIssue withClosedBy(NullableSimpleUser closedBy) {
         this.closedBy = closedBy;
         return this;
@@ -102,6 +111,7 @@ public class NullableIssue {
     
     @JsonProperty("comments")
     public Long comments;
+
     public NullableIssue withComments(Long comments) {
         this.comments = comments;
         return this;
@@ -109,6 +119,7 @@ public class NullableIssue {
     
     @JsonProperty("comments_url")
     public String commentsUrl;
+
     public NullableIssue withCommentsUrl(String commentsUrl) {
         this.commentsUrl = commentsUrl;
         return this;
@@ -118,6 +129,7 @@ public class NullableIssue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public NullableIssue withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -126,6 +138,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("draft")
     public Boolean draft;
+
     public NullableIssue withDraft(Boolean draft) {
         this.draft = draft;
         return this;
@@ -133,6 +146,7 @@ public class NullableIssue {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public NullableIssue withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -140,6 +154,7 @@ public class NullableIssue {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public NullableIssue withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -147,6 +162,7 @@ public class NullableIssue {
     
     @JsonProperty("id")
     public Long id;
+
     public NullableIssue withId(Long id) {
         this.id = id;
         return this;
@@ -157,6 +173,7 @@ public class NullableIssue {
      */
     @JsonProperty("labels")
     public Object[] labels;
+
     public NullableIssue withLabels(Object[] labels) {
         this.labels = labels;
         return this;
@@ -164,6 +181,7 @@ public class NullableIssue {
     
     @JsonProperty("labels_url")
     public String labelsUrl;
+
     public NullableIssue withLabelsUrl(String labelsUrl) {
         this.labelsUrl = labelsUrl;
         return this;
@@ -171,6 +189,7 @@ public class NullableIssue {
     
     @JsonProperty("locked")
     public Boolean locked;
+
     public NullableIssue withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -181,6 +200,7 @@ public class NullableIssue {
      */
     @JsonProperty("milestone")
     public NullableMilestone milestone;
+
     public NullableIssue withMilestone(NullableMilestone milestone) {
         this.milestone = milestone;
         return this;
@@ -188,6 +208,7 @@ public class NullableIssue {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public NullableIssue withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -198,6 +219,7 @@ public class NullableIssue {
      */
     @JsonProperty("number")
     public Long number;
+
     public NullableIssue withNumber(Long number) {
         this.number = number;
         return this;
@@ -209,6 +231,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public NullableIssue withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -217,6 +240,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pull_request")
     public NullableIssuePullRequest pullRequest;
+
     public NullableIssue withPullRequest(NullableIssuePullRequest pullRequest) {
         this.pullRequest = pullRequest;
         return this;
@@ -225,6 +249,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reactions")
     public ReactionRollup reactions;
+
     public NullableIssue withReactions(ReactionRollup reactions) {
         this.reactions = reactions;
         return this;
@@ -236,6 +261,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public Repository repository;
+
     public NullableIssue withRepository(Repository repository) {
         this.repository = repository;
         return this;
@@ -243,6 +269,7 @@ public class NullableIssue {
     
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public NullableIssue withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -253,6 +280,7 @@ public class NullableIssue {
      */
     @JsonProperty("state")
     public String state;
+
     public NullableIssue withState(String state) {
         this.state = state;
         return this;
@@ -261,6 +289,7 @@ public class NullableIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline_url")
     public String timelineUrl;
+
     public NullableIssue withTimelineUrl(String timelineUrl) {
         this.timelineUrl = timelineUrl;
         return this;
@@ -271,6 +300,7 @@ public class NullableIssue {
      */
     @JsonProperty("title")
     public String title;
+
     public NullableIssue withTitle(String title) {
         this.title = title;
         return this;
@@ -280,6 +310,7 @@ public class NullableIssue {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public NullableIssue withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -290,6 +321,7 @@ public class NullableIssue {
      */
     @JsonProperty("url")
     public String url;
+
     public NullableIssue withUrl(String url) {
         this.url = url;
         return this;
@@ -300,9 +332,33 @@ public class NullableIssue {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public NullableIssue withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public NullableIssue(@JsonProperty("assignee") NullableSimpleUser assignee, @JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("closed_at") OffsetDateTime closedAt, @JsonProperty("comments") Long comments, @JsonProperty("comments_url") String commentsUrl, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("events_url") String eventsUrl, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("labels") Object[] labels, @JsonProperty("labels_url") String labelsUrl, @JsonProperty("locked") Boolean locked, @JsonProperty("milestone") NullableMilestone milestone, @JsonProperty("node_id") String nodeId, @JsonProperty("number") Long number, @JsonProperty("repository_url") String repositoryUrl, @JsonProperty("state") String state, @JsonProperty("title") String title, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.assignee = assignee;
+        this.authorAssociation = authorAssociation;
+        this.closedAt = closedAt;
+        this.comments = comments;
+        this.commentsUrl = commentsUrl;
+        this.createdAt = createdAt;
+        this.eventsUrl = eventsUrl;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.labels = labels;
+        this.labelsUrl = labelsUrl;
+        this.locked = locked;
+        this.milestone = milestone;
+        this.nodeId = nodeId;
+        this.number = number;
+        this.repositoryUrl = repositoryUrl;
+        this.state = state;
+        this.title = title;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

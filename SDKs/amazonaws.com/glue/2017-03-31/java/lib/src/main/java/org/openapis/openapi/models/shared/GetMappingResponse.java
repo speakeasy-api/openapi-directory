@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetMappingResponse {
     @JsonProperty("Mapping")
     public MappingEntry[] mapping;
+
     public GetMappingResponse withMapping(MappingEntry[] mapping) {
         this.mapping = mapping;
         return this;
     }
     
+    public GetMappingResponse(@JsonProperty("Mapping") MappingEntry[] mapping) {
+        this.mapping = mapping;
+  }
 }

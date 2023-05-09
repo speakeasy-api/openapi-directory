@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccountAssignmentResponse {
@@ -12,6 +13,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateAccountAssignmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object conflictException;
+
     public CreateAccountAssignmentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateAccountAssignmentResponse {
     
     
     public String contentType;
+
     public CreateAccountAssignmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccountAssignmentResponse createAccountAssignmentResponse;
+
     public CreateAccountAssignmentResponse withCreateAccountAssignmentResponse(org.openapis.openapi.models.shared.CreateAccountAssignmentResponse createAccountAssignmentResponse) {
         this.createAccountAssignmentResponse = createAccountAssignmentResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object internalServerException;
+
     public CreateAccountAssignmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAccountAssignmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateAccountAssignmentResponse {
     
     
     public Integer statusCode;
+
     public CreateAccountAssignmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateAccountAssignmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccountAssignmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateAccountAssignmentResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object throttlingException;
+
     public CreateAccountAssignmentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateAccountAssignmentResponse {
      */
     
     public Object validationException;
+
     public CreateAccountAssignmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateAccountAssignmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

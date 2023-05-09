@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetParametersForImportResponse {
     
     public String contentType;
+
     public GetParametersForImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetParametersForImportResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GetParametersForImportResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GetParametersForImportResponse {
      */
     
     public org.openapis.openapi.models.shared.GetParametersForImportResponse getParametersForImportResponse;
+
     public GetParametersForImportResponse withGetParametersForImportResponse(org.openapis.openapi.models.shared.GetParametersForImportResponse getParametersForImportResponse) {
         this.getParametersForImportResponse = getParametersForImportResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetParametersForImportResponse {
      */
     
     public Object invalidArnException;
+
     public GetParametersForImportResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -49,6 +54,7 @@ public class GetParametersForImportResponse {
      */
     
     public Object kmsInternalException;
+
     public GetParametersForImportResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -59,6 +65,7 @@ public class GetParametersForImportResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GetParametersForImportResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -69,6 +76,7 @@ public class GetParametersForImportResponse {
      */
     
     public Object notFoundException;
+
     public GetParametersForImportResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -76,6 +84,7 @@ public class GetParametersForImportResponse {
     
     
     public Integer statusCode;
+
     public GetParametersForImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetParametersForImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetParametersForImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetParametersForImportResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GetParametersForImportResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GetParametersForImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

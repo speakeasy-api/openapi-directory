@@ -15,6 +15,7 @@ public class CollectionResponseWithTotalDomainForwardPaging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public ForwardPaging paging;
+
     public CollectionResponseWithTotalDomainForwardPaging withPaging(ForwardPaging paging) {
         this.paging = paging;
         return this;
@@ -22,6 +23,7 @@ public class CollectionResponseWithTotalDomainForwardPaging {
     
     @JsonProperty("results")
     public Domain[] results;
+
     public CollectionResponseWithTotalDomainForwardPaging withResults(Domain[] results) {
         this.results = results;
         return this;
@@ -29,9 +31,14 @@ public class CollectionResponseWithTotalDomainForwardPaging {
     
     @JsonProperty("total")
     public Integer total;
+
     public CollectionResponseWithTotalDomainForwardPaging withTotal(Integer total) {
         this.total = total;
         return this;
     }
     
+    public CollectionResponseWithTotalDomainForwardPaging(@JsonProperty("results") Domain[] results, @JsonProperty("total") Integer total) {
+        this.results = results;
+        this.total = total;
+  }
 }

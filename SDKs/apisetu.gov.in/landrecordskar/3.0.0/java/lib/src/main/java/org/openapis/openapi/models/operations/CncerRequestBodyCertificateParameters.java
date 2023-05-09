@@ -12,9 +12,13 @@ public class CncerRequestBodyCertificateParameters {
      */
     @JsonProperty("DocumentNumber")
     public String documentNumber;
+
     public CncerRequestBodyCertificateParameters withDocumentNumber(String documentNumber) {
         this.documentNumber = documentNumber;
         return this;
     }
     
+    public CncerRequestBodyCertificateParameters(@JsonProperty("DocumentNumber") String documentNumber) {
+        this.documentNumber = documentNumber;
+  }
 }

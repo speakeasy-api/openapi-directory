@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAssetTypeRequest {
@@ -12,6 +13,7 @@ public class CreateAssetTypeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssetType assetType;
+
     public CreateAssetTypeRequest withAssetType(org.openapis.openapi.models.shared.AssetType assetType) {
         this.assetType = assetType;
         return this;
@@ -22,9 +24,13 @@ public class CreateAssetTypeRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public CreateAssetTypeRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public CreateAssetTypeRequest(@JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

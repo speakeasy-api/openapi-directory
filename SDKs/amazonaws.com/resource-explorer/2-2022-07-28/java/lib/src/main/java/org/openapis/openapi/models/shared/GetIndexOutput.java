@@ -20,6 +20,7 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public GetIndexOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class GetIndexOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public GetIndexOutput withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -40,6 +42,7 @@ public class GetIndexOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public GetIndexOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -48,6 +51,7 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicatingFrom")
     public String[] replicatingFrom;
+
     public GetIndexOutput withReplicatingFrom(String[] replicatingFrom) {
         this.replicatingFrom = replicatingFrom;
         return this;
@@ -56,6 +60,7 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicatingTo")
     public String[] replicatingTo;
+
     public GetIndexOutput withReplicatingTo(String[] replicatingTo) {
         this.replicatingTo = replicatingTo;
         return this;
@@ -64,6 +69,7 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public IndexStateEnum state;
+
     public GetIndexOutput withState(IndexStateEnum state) {
         this.state = state;
         return this;
@@ -72,6 +78,7 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetIndexOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -80,9 +87,11 @@ public class GetIndexOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public IndexTypeEnum type;
+
     public GetIndexOutput withType(IndexTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetIndexOutput(){}
 }

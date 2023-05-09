@@ -18,6 +18,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public NotificationConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NotificationConfig withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopic")
     public String pubsubTopic;
+
     public NotificationConfig withPubsubTopic(String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
         return this;
@@ -51,6 +54,7 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public NotificationConfig withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -62,9 +66,11 @@ public class NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingConfig")
     public StreamingConfig streamingConfig;
+
     public NotificationConfig withStreamingConfig(StreamingConfig streamingConfig) {
         this.streamingConfig = streamingConfig;
         return this;
     }
     
+    public NotificationConfig(){}
 }

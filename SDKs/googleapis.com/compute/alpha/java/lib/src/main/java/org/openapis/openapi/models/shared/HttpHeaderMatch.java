@@ -18,6 +18,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exactMatch")
     public String exactMatch;
+
     public HttpHeaderMatch withExactMatch(String exactMatch) {
         this.exactMatch = exactMatch;
         return this;
@@ -29,6 +30,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerName")
     public String headerName;
+
     public HttpHeaderMatch withHeaderName(String headerName) {
         this.headerName = headerName;
         return this;
@@ -40,6 +42,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invertMatch")
     public Boolean invertMatch;
+
     public HttpHeaderMatch withInvertMatch(Boolean invertMatch) {
         this.invertMatch = invertMatch;
         return this;
@@ -51,6 +54,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefixMatch")
     public String prefixMatch;
+
     public HttpHeaderMatch withPrefixMatch(String prefixMatch) {
         this.prefixMatch = prefixMatch;
         return this;
@@ -62,6 +66,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presentMatch")
     public Boolean presentMatch;
+
     public HttpHeaderMatch withPresentMatch(Boolean presentMatch) {
         this.presentMatch = presentMatch;
         return this;
@@ -73,6 +78,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rangeMatch")
     public Int64RangeMatch rangeMatch;
+
     public HttpHeaderMatch withRangeMatch(Int64RangeMatch rangeMatch) {
         this.rangeMatch = rangeMatch;
         return this;
@@ -84,6 +90,7 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regexMatch")
     public String regexMatch;
+
     public HttpHeaderMatch withRegexMatch(String regexMatch) {
         this.regexMatch = regexMatch;
         return this;
@@ -95,9 +102,11 @@ public class HttpHeaderMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suffixMatch")
     public String suffixMatch;
+
     public HttpHeaderMatch withSuffixMatch(String suffixMatch) {
         this.suffixMatch = suffixMatch;
         return this;
     }
     
+    public HttpHeaderMatch(){}
 }

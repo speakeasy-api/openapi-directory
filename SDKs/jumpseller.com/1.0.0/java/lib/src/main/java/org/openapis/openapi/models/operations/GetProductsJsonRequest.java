@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetProductsJsonRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetProductsJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,6 +46,7 @@ public class GetProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -52,9 +57,14 @@ public class GetProductsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetProductsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
     }
     
+    public GetProductsJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.login = login;
+  }
 }

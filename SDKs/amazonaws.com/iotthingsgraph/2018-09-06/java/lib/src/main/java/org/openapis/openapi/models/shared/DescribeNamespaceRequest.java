@@ -12,9 +12,11 @@ public class DescribeNamespaceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public DescribeNamespaceRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }
     
+    public DescribeNamespaceRequest(){}
 }

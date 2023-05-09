@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1StorageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filePattern")
     public String[] filePattern;
+
     public GoogleCloudDatacatalogV1StorageProperties withFilePattern(String[] filePattern) {
         this.filePattern = filePattern;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1StorageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileType")
     public String fileType;
+
     public GoogleCloudDatacatalogV1StorageProperties withFileType(String fileType) {
         this.fileType = fileType;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1StorageProperties(){}
 }

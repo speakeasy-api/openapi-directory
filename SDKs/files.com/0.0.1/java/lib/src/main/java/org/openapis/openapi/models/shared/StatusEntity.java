@@ -18,6 +18,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_body")
     public String clickwrapBody;
+
     public StatusEntity withClickwrapBody(String clickwrapBody) {
         this.clickwrapBody = clickwrapBody;
         return this;
@@ -29,6 +30,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_id")
     public Integer clickwrapId;
+
     public StatusEntity withClickwrapId(Integer clickwrapId) {
         this.clickwrapId = clickwrapId;
         return this;
@@ -40,6 +42,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public StatusEntity withCode(Integer code) {
         this.code = code;
         return this;
@@ -48,6 +51,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AutoEntity data;
+
     public StatusEntity withData(AutoEntity data) {
         this.data = data;
         return this;
@@ -59,6 +63,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorsEntity[] errors;
+
     public StatusEntity withErrors(ErrorsEntity[] errors) {
         this.errors = errors;
         return this;
@@ -70,6 +75,7 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public StatusEntity withMessage(String message) {
         this.message = message;
         return this;
@@ -81,9 +87,11 @@ public class StatusEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public StatusEntity withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public StatusEntity(){}
 }

@@ -15,6 +15,7 @@ public class PutAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public PutAssetPropertyValueEntry withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -22,6 +23,7 @@ public class PutAssetPropertyValueEntry {
     
     @JsonProperty("entryId")
     public String entryId;
+
     public PutAssetPropertyValueEntry withEntryId(String entryId) {
         this.entryId = entryId;
         return this;
@@ -30,6 +32,7 @@ public class PutAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyAlias")
     public String propertyAlias;
+
     public PutAssetPropertyValueEntry withPropertyAlias(String propertyAlias) {
         this.propertyAlias = propertyAlias;
         return this;
@@ -38,6 +41,7 @@ public class PutAssetPropertyValueEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyId")
     public String propertyId;
+
     public PutAssetPropertyValueEntry withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
@@ -45,9 +49,14 @@ public class PutAssetPropertyValueEntry {
     
     @JsonProperty("propertyValues")
     public AssetPropertyValue[] propertyValues;
+
     public PutAssetPropertyValueEntry withPropertyValues(AssetPropertyValue[] propertyValues) {
         this.propertyValues = propertyValues;
         return this;
     }
     
+    public PutAssetPropertyValueEntry(@JsonProperty("entryId") String entryId, @JsonProperty("propertyValues") AssetPropertyValue[] propertyValues) {
+        this.entryId = entryId;
+        this.propertyValues = propertyValues;
+  }
 }

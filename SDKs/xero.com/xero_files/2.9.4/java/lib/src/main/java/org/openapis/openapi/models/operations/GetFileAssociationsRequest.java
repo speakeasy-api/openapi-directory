@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFileAssociationsRequest {
@@ -12,6 +13,7 @@ public class GetFileAssociationsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
     public String fileId;
+
     public GetFileAssociationsRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,9 +24,14 @@ public class GetFileAssociationsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetFileAssociationsRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetFileAssociationsRequest(@JsonProperty("FileId") String fileId, @JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.fileId = fileId;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

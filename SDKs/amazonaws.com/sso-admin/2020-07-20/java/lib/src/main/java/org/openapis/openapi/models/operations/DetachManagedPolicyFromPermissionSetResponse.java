@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachManagedPolicyFromPermissionSetResponse {
@@ -12,6 +13,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachManagedPolicyFromPermissionSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object conflictException;
+
     public DetachManagedPolicyFromPermissionSetResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
     
     
     public String contentType;
+
     public DetachManagedPolicyFromPermissionSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public java.util.Map<String, Object> detachManagedPolicyFromPermissionSetResponse;
+
     public DetachManagedPolicyFromPermissionSetResponse withDetachManagedPolicyFromPermissionSetResponse(java.util.Map<String, Object> detachManagedPolicyFromPermissionSetResponse) {
         this.detachManagedPolicyFromPermissionSetResponse = detachManagedPolicyFromPermissionSetResponse;
         return this;
@@ -49,6 +54,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object internalServerException;
+
     public DetachManagedPolicyFromPermissionSetResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DetachManagedPolicyFromPermissionSetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
     
     
     public Integer statusCode;
+
     public DetachManagedPolicyFromPermissionSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachManagedPolicyFromPermissionSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object throttlingException;
+
     public DetachManagedPolicyFromPermissionSetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DetachManagedPolicyFromPermissionSetResponse {
      */
     
     public Object validationException;
+
     public DetachManagedPolicyFromPermissionSetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DetachManagedPolicyFromPermissionSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

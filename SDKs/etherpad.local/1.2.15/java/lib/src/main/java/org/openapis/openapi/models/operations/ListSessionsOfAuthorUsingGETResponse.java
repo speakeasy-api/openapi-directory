@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSessionsOfAuthorUsingGETResponse {
     
     public String contentType;
+
     public ListSessionsOfAuthorUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListSessionsOfAuthorUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListSessionsOfAuthorUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListSessionsOfAuthorUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSessionsOfAuthorUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListSessionsOfAuthorUsingGETResponse {
      */
     
     public ListSessionsOfAuthorUsingGET200ApplicationJSON listSessionsOfAuthorUsingGET200ApplicationJSONObject;
+
     public ListSessionsOfAuthorUsingGETResponse withListSessionsOfAuthorUsingGET200ApplicationJSONObject(ListSessionsOfAuthorUsingGET200ApplicationJSON listSessionsOfAuthorUsingGET200ApplicationJSONObject) {
         this.listSessionsOfAuthorUsingGET200ApplicationJSONObject = listSessionsOfAuthorUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListSessionsOfAuthorUsingGETResponse {
      */
     
     public ListSessionsOfAuthorUsingGET400ApplicationJSON listSessionsOfAuthorUsingGET400ApplicationJSONObject;
+
     public ListSessionsOfAuthorUsingGETResponse withListSessionsOfAuthorUsingGET400ApplicationJSONObject(ListSessionsOfAuthorUsingGET400ApplicationJSON listSessionsOfAuthorUsingGET400ApplicationJSONObject) {
         this.listSessionsOfAuthorUsingGET400ApplicationJSONObject = listSessionsOfAuthorUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListSessionsOfAuthorUsingGETResponse {
      */
     
     public ListSessionsOfAuthorUsingGET401ApplicationJSON listSessionsOfAuthorUsingGET401ApplicationJSONObject;
+
     public ListSessionsOfAuthorUsingGETResponse withListSessionsOfAuthorUsingGET401ApplicationJSONObject(ListSessionsOfAuthorUsingGET401ApplicationJSON listSessionsOfAuthorUsingGET401ApplicationJSONObject) {
         this.listSessionsOfAuthorUsingGET401ApplicationJSONObject = listSessionsOfAuthorUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListSessionsOfAuthorUsingGETResponse {
      */
     
     public ListSessionsOfAuthorUsingGET500ApplicationJSON listSessionsOfAuthorUsingGET500ApplicationJSONObject;
+
     public ListSessionsOfAuthorUsingGETResponse withListSessionsOfAuthorUsingGET500ApplicationJSONObject(ListSessionsOfAuthorUsingGET500ApplicationJSON listSessionsOfAuthorUsingGET500ApplicationJSONObject) {
         this.listSessionsOfAuthorUsingGET500ApplicationJSONObject = listSessionsOfAuthorUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public ListSessionsOfAuthorUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -62,11 +62,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsPagesCreateResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesCreateResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsPagesCreateResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesCreateResponse(contentType, httpRes.statusCode()) {{
             googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsPagesDeleteResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesDeleteResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsPagesDeleteResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsPagesGetResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesGetResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsPagesGetResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesGetResponse(contentType, httpRes.statusCode()) {{
             googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -200,11 +194,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsPagesListResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesListResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsPagesListResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesListResponse(contentType, httpRes.statusCode()) {{
             googleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Pages {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FactchecktoolsPagesUpdateResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesUpdateResponse() {{
+        org.openapis.openapi.models.operations.FactchecktoolsPagesUpdateResponse res = new org.openapis.openapi.models.operations.FactchecktoolsPagesUpdateResponse(contentType, httpRes.statusCode()) {{
             googleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class DescribeGameSessionQueuesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeGameSessionQueuesInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -20,6 +21,7 @@ public class DescribeGameSessionQueuesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Names")
     public String[] names;
+
     public DescribeGameSessionQueuesInput withNames(String[] names) {
         this.names = names;
         return this;
@@ -28,9 +30,11 @@ public class DescribeGameSessionQueuesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeGameSessionQueuesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeGameSessionQueuesInput(){}
 }

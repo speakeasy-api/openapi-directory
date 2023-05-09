@@ -15,9 +15,11 @@ public class GetSchemaVersionsDiffResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Diff")
     public String diff;
+
     public GetSchemaVersionsDiffResponse withDiff(String diff) {
         this.diff = diff;
         return this;
     }
     
+    public GetSchemaVersionsDiffResponse(){}
 }

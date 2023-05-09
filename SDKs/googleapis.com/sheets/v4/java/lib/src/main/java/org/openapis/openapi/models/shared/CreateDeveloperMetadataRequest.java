@@ -18,9 +18,11 @@ public class CreateDeveloperMetadataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerMetadata")
     public DeveloperMetadata developerMetadata;
+
     public CreateDeveloperMetadataRequest withDeveloperMetadata(DeveloperMetadata developerMetadata) {
         this.developerMetadata = developerMetadata;
         return this;
     }
     
+    public CreateDeveloperMetadataRequest(){}
 }

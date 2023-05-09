@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDuration")
     public String minDuration;
+
     public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep withMinDuration(String minDuration) {
         this.minDuration = minDuration;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trafficPercent")
     public Integer trafficPercent;
+
     public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep withTrafficPercent(Integer trafficPercent) {
         this.trafficPercent = trafficPercent;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStep(){}
 }

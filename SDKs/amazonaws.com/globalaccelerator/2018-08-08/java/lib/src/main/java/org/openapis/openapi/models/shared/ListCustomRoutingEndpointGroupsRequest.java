@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCustomRoutingEndpointGroupsRequest {
     @JsonProperty("ListenerArn")
     public String listenerArn;
+
     public ListCustomRoutingEndpointGroupsRequest withListenerArn(String listenerArn) {
         this.listenerArn = listenerArn;
         return this;
@@ -19,6 +20,7 @@ public class ListCustomRoutingEndpointGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCustomRoutingEndpointGroupsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListCustomRoutingEndpointGroupsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomRoutingEndpointGroupsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomRoutingEndpointGroupsRequest(@JsonProperty("ListenerArn") String listenerArn) {
+        this.listenerArn = listenerArn;
+  }
 }

@@ -18,8 +18,21 @@ public class GoogleCloudRunV2Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSqlInstance")
     public GoogleCloudRunV2CloudSqlInstance cloudSqlInstance;
+
     public GoogleCloudRunV2Volume withCloudSqlInstance(GoogleCloudRunV2CloudSqlInstance cloudSqlInstance) {
         this.cloudSqlInstance = cloudSqlInstance;
+        return this;
+    }
+    
+    /**
+     * Ephemeral storage which can be backed by real disks (HD, SSD), network storage or memory (i.e. tmpfs). For now only in memory (tmpfs) is supported. It is ephemeral in the sense that when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox runs).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("emptyDir")
+    public GoogleCloudRunV2EmptyDirVolumeSource emptyDir;
+
+    public GoogleCloudRunV2Volume withEmptyDir(GoogleCloudRunV2EmptyDirVolumeSource emptyDir) {
+        this.emptyDir = emptyDir;
         return this;
     }
     
@@ -29,6 +42,7 @@ public class GoogleCloudRunV2Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2Volume withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +54,11 @@ public class GoogleCloudRunV2Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public GoogleCloudRunV2SecretVolumeSource secret;
+
     public GoogleCloudRunV2Volume withSecret(GoogleCloudRunV2SecretVolumeSource secret) {
         this.secret = secret;
         return this;
     }
     
+    public GoogleCloudRunV2Volume(){}
 }

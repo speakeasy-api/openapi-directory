@@ -15,9 +15,11 @@ public class ExecutionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxConcurrentRuns")
     public Long maxConcurrentRuns;
+
     public ExecutionProperty withMaxConcurrentRuns(Long maxConcurrentRuns) {
         this.maxConcurrentRuns = maxConcurrentRuns;
         return this;
     }
     
+    public ExecutionProperty(){}
 }

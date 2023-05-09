@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResendFailedIPN {
     @JsonProperty("id")
     public Integer id;
+
     public ResendFailedIPN withId(Integer id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class ResendFailedIPN {
     
     @JsonProperty("ok")
     public Boolean ok;
+
     public ResendFailedIPN withOk(Boolean ok) {
         this.ok = ok;
         return this;
     }
     
+    public ResendFailedIPN(@JsonProperty("id") Integer id, @JsonProperty("ok") Boolean ok) {
+        this.id = id;
+        this.ok = ok;
+  }
 }

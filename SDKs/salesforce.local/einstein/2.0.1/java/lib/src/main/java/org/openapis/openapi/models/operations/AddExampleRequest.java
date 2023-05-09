@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddExampleRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public AddExampleRequestBody requestBody;
+
     public AddExampleRequest withRequestBody(AddExampleRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class AddExampleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public AddExampleRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
     }
     
+    public AddExampleRequest(@JsonProperty("datasetId") String datasetId) {
+        this.datasetId = datasetId;
+  }
 }

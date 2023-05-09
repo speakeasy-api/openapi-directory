@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRegulationMarksRegulationMarkRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regulation-mark")
     public String regulationMark;
+
     public GetRegulationMarksRegulationMarkRequest withRegulationMark(String regulationMark) {
         this.regulationMark = regulationMark;
         return this;
     }
     
+    public GetRegulationMarksRegulationMarkRequest(@JsonProperty("regulation-mark") String regulationMark) {
+        this.regulationMark = regulationMark;
+  }
 }

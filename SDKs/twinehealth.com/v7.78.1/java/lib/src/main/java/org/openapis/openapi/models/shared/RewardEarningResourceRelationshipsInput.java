@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RewardEarningResourceRelationshipsInput {
     @JsonProperty("reward")
     public RewardEarningResourceRelationshipsReward reward;
+
     public RewardEarningResourceRelationshipsInput withReward(RewardEarningResourceRelationshipsReward reward) {
         this.reward = reward;
         return this;
     }
     
+    public RewardEarningResourceRelationshipsInput(@JsonProperty("reward") RewardEarningResourceRelationshipsReward reward) {
+        this.reward = reward;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverQueryLogConfigsResponse {
@@ -12,6 +13,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResolverQueryLogConfigsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverQueryLogConfigsResponse {
     
     
     public String contentType;
+
     public ListResolverQueryLogConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverQueryLogConfigsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverQueryLogConfigsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverQueryLogConfigsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverQueryLogConfigsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverQueryLogConfigsResponse listResolverQueryLogConfigsResponse;
+
     public ListResolverQueryLogConfigsResponse withListResolverQueryLogConfigsResponse(org.openapis.openapi.models.shared.ListResolverQueryLogConfigsResponse listResolverQueryLogConfigsResponse) {
         this.listResolverQueryLogConfigsResponse = listResolverQueryLogConfigsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListResolverQueryLogConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListResolverQueryLogConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListResolverQueryLogConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverQueryLogConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListResolverQueryLogConfigsResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverQueryLogConfigsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverQueryLogConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateJobRequestBodyJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exponentialRate")
     public org.openapis.openapi.models.shared.ExponentialRolloutRate exponentialRate;
+
     public CreateJobRequestBodyJobExecutionsRolloutConfig withExponentialRate(org.openapis.openapi.models.shared.ExponentialRolloutRate exponentialRate) {
         this.exponentialRate = exponentialRate;
         return this;
@@ -23,9 +24,11 @@ public class CreateJobRequestBodyJobExecutionsRolloutConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPerMinute")
     public Long maximumPerMinute;
+
     public CreateJobRequestBodyJobExecutionsRolloutConfig withMaximumPerMinute(Long maximumPerMinute) {
         this.maximumPerMinute = maximumPerMinute;
         return this;
     }
     
+    public CreateJobRequestBodyJobExecutionsRolloutConfig(){}
 }

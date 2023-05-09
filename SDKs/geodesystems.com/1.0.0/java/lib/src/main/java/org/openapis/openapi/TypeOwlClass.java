@@ -57,10 +57,8 @@ public class TypeOwlClass {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchOwlClassResponse res = new org.openapis.openapi.models.operations.SearchOwlClassResponse() {{
+        org.openapis.openapi.models.operations.SearchOwlClassResponse res = new org.openapis.openapi.models.operations.SearchOwlClassResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

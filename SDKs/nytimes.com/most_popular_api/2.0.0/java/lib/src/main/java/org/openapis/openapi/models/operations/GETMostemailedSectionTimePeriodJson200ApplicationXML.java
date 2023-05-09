@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class GETMostemailedSectionTimePeriodJson200ApplicationXML {
     
     public String copyright;
+
     public GETMostemailedSectionTimePeriodJson200ApplicationXML withCopyright(String copyright) {
         this.copyright = copyright;
         return this;
@@ -19,6 +20,7 @@ public class GETMostemailedSectionTimePeriodJson200ApplicationXML {
     
     
     public Long numResults;
+
     public GETMostemailedSectionTimePeriodJson200ApplicationXML withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -26,6 +28,7 @@ public class GETMostemailedSectionTimePeriodJson200ApplicationXML {
     
     
     public org.openapis.openapi.models.shared.ArticleWithCountType[] results;
+
     public GETMostemailedSectionTimePeriodJson200ApplicationXML withResults(org.openapis.openapi.models.shared.ArticleWithCountType[] results) {
         this.results = results;
         return this;
@@ -33,9 +36,11 @@ public class GETMostemailedSectionTimePeriodJson200ApplicationXML {
     
     
     public String status;
+
     public GETMostemailedSectionTimePeriodJson200ApplicationXML withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public GETMostemailedSectionTimePeriodJson200ApplicationXML(){}
 }

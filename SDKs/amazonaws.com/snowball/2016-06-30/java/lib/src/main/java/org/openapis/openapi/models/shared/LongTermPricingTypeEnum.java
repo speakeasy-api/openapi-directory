@@ -8,7 +8,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum LongTermPricingTypeEnum {
     ONE_YEAR("OneYear"),
-    THREE_YEAR("ThreeYear");
+    THREE_YEAR("ThreeYear"),
+    ONE_MONTH("OneMonth");
 
     @JsonValue
     public final String value;

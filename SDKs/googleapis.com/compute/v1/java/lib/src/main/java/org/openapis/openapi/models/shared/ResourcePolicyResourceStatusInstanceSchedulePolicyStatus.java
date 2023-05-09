@@ -15,6 +15,7 @@ public class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastRunStartTime")
     public String lastRunStartTime;
+
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus withLastRunStartTime(String lastRunStartTime) {
         this.lastRunStartTime = lastRunStartTime;
         return this;
@@ -26,9 +27,11 @@ public class ResourcePolicyResourceStatusInstanceSchedulePolicyStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRunStartTime")
     public String nextRunStartTime;
+
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus withNextRunStartTime(String nextRunStartTime) {
         this.nextRunStartTime = nextRunStartTime;
         return this;
     }
     
+    public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus(){}
 }

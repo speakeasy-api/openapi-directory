@@ -15,9 +15,11 @@ public class PodcastsSubmitRejectedRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podcast")
     public PodcastsSubmitRejectedRequestBodyPodcast podcast;
+
     public PodcastsSubmitRejectedRequestBody withPodcast(PodcastsSubmitRejectedRequestBodyPodcast podcast) {
         this.podcast = podcast;
         return this;
     }
     
+    public PodcastsSubmitRejectedRequestBody(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkerBlockRequest {
     @JsonProperty("Reason")
     public String reason;
+
     public CreateWorkerBlockRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -16,9 +17,14 @@ public class CreateWorkerBlockRequest {
     
     @JsonProperty("WorkerId")
     public String workerId;
+
     public CreateWorkerBlockRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public CreateWorkerBlockRequest(@JsonProperty("Reason") String reason, @JsonProperty("WorkerId") String workerId) {
+        this.reason = reason;
+        this.workerId = workerId;
+  }
 }

@@ -15,6 +15,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public SNOMEDCTAttribute withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -23,6 +24,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public SNOMEDCTEntityCategoryEnum category;
+
     public SNOMEDCTAttribute withCategory(SNOMEDCTEntityCategoryEnum category) {
         this.category = category;
         return this;
@@ -31,6 +33,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public SNOMEDCTAttribute withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -39,6 +42,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public SNOMEDCTAttribute withId(Long id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipScore")
     public Float relationshipScore;
+
     public SNOMEDCTAttribute withRelationshipScore(Float relationshipScore) {
         this.relationshipScore = relationshipScore;
         return this;
@@ -55,6 +60,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelationshipType")
     public SNOMEDCTRelationshipTypeEnum relationshipType;
+
     public SNOMEDCTAttribute withRelationshipType(SNOMEDCTRelationshipTypeEnum relationshipType) {
         this.relationshipType = relationshipType;
         return this;
@@ -63,6 +69,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SNOMEDCTConcepts")
     public SNOMEDCTConcept[] snomedctConcepts;
+
     public SNOMEDCTAttribute withSNOMEDCTConcepts(SNOMEDCTConcept[] snomedctConcepts) {
         this.snomedctConcepts = snomedctConcepts;
         return this;
@@ -71,6 +78,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public SNOMEDCTAttribute withScore(Float score) {
         this.score = score;
         return this;
@@ -79,6 +87,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public SNOMEDCTAttribute withText(String text) {
         this.text = text;
         return this;
@@ -87,6 +96,7 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public SNOMEDCTTrait[] traits;
+
     public SNOMEDCTAttribute withTraits(SNOMEDCTTrait[] traits) {
         this.traits = traits;
         return this;
@@ -95,9 +105,11 @@ public class SNOMEDCTAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SNOMEDCTAttributeTypeEnum type;
+
     public SNOMEDCTAttribute withType(SNOMEDCTAttributeTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SNOMEDCTAttribute(){}
 }

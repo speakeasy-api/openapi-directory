@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreImageFromRecycleBinRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRestoreImageFromRecycleBinActionEnum action;
+
     public GETRestoreImageFromRecycleBinRequest withAction(GETRestoreImageFromRecycleBinActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRestoreImageFromRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETRestoreImageFromRecycleBinRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETRestoreImageFromRecycleBinRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ImageId")
     public String imageId;
+
     public GETRestoreImageFromRecycleBinRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -36,6 +40,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRestoreImageFromRecycleBinVersionEnum version;
+
     public GETRestoreImageFromRecycleBinRequest withVersion(GETRestoreImageFromRecycleBinVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETRestoreImageFromRecycleBinRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRestoreImageFromRecycleBinRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRestoreImageFromRecycleBinRequest(@JsonProperty("Action") GETRestoreImageFromRecycleBinActionEnum action, @JsonProperty("ImageId") String imageId, @JsonProperty("Version") GETRestoreImageFromRecycleBinVersionEnum version) {
+        this.action = action;
+        this.imageId = imageId;
+        this.version = version;
+  }
 }

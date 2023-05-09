@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DatacatalogProjectsLocationsTagTemplatesCreateResponse {
     
     public String contentType;
+
     public DatacatalogProjectsLocationsTagTemplatesCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DatacatalogProjectsLocationsTagTemplatesCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1TagTemplate googleCloudDatacatalogV1TagTemplate;
+
     public DatacatalogProjectsLocationsTagTemplatesCreateResponse withGoogleCloudDatacatalogV1TagTemplate(org.openapis.openapi.models.shared.GoogleCloudDatacatalogV1TagTemplate googleCloudDatacatalogV1TagTemplate) {
         this.googleCloudDatacatalogV1TagTemplate = googleCloudDatacatalogV1TagTemplate;
         return this;
@@ -26,6 +29,7 @@ public class DatacatalogProjectsLocationsTagTemplatesCreateResponse {
     
     
     public Integer statusCode;
+
     public DatacatalogProjectsLocationsTagTemplatesCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DatacatalogProjectsLocationsTagTemplatesCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DatacatalogProjectsLocationsTagTemplatesCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DatacatalogProjectsLocationsTagTemplatesCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ErrorInternal {
      */
     @JsonProperty("detail")
     public String detail;
+
     public ErrorInternal withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -25,6 +26,7 @@ public class ErrorInternal {
      */
     @JsonProperty("instance")
     public String instance;
+
     public ErrorInternal withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -35,6 +37,7 @@ public class ErrorInternal {
      */
     @JsonProperty("title")
     public String title;
+
     public ErrorInternal withTitle(String title) {
         this.title = title;
         return this;
@@ -45,9 +48,16 @@ public class ErrorInternal {
      */
     @JsonProperty("type")
     public String type;
+
     public ErrorInternal withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ErrorInternal(@JsonProperty("detail") String detail, @JsonProperty("instance") String instance, @JsonProperty("title") String title, @JsonProperty("type") String type) {
+        this.detail = detail;
+        this.instance = instance;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTeamMemberWagesResponse {
     
     public String contentType;
+
     public ListTeamMemberWagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListTeamMemberWagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTeamMemberWagesResponse listTeamMemberWagesResponse;
+
     public ListTeamMemberWagesResponse withListTeamMemberWagesResponse(org.openapis.openapi.models.shared.ListTeamMemberWagesResponse listTeamMemberWagesResponse) {
         this.listTeamMemberWagesResponse = listTeamMemberWagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListTeamMemberWagesResponse {
     
     
     public Integer statusCode;
+
     public ListTeamMemberWagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListTeamMemberWagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTeamMemberWagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListTeamMemberWagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

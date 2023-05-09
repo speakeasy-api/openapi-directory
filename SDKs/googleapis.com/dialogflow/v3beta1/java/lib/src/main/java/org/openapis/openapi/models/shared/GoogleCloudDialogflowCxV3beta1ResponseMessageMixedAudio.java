@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegment[] segments;
+
     public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudio withSegments(GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegment[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudio(){}
 }

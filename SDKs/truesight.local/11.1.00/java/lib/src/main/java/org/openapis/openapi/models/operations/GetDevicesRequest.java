@@ -12,6 +12,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=applicationId")
     public String applicationId;
+
     public GetDevicesRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,6 +23,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=direction")
     public GetDevicesDirectionEnum direction;
+
     public GetDevicesRequest withDirection(GetDevicesDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -32,6 +34,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupId")
     public String groupId;
+
     public GetDevicesRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -42,6 +45,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetDevicesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDevicesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -62,6 +67,7 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public GetDevicesRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -72,9 +78,11 @@ public class GetDevicesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetDevicesRequest withSort(String sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetDevicesRequest(){}
 }

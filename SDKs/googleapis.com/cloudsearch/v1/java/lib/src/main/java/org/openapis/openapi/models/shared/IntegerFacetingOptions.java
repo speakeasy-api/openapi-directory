@@ -18,9 +18,11 @@ public class IntegerFacetingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integerBuckets")
     public String[] integerBuckets;
+
     public IntegerFacetingOptions withIntegerBuckets(String[] integerBuckets) {
         this.integerBuckets = integerBuckets;
         return this;
     }
     
+    public IntegerFacetingOptions(){}
 }

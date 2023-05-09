@@ -15,9 +15,11 @@ public class GetDeploymentInstanceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSummary")
     public InstanceSummary instanceSummary;
+
     public GetDeploymentInstanceOutput withInstanceSummary(InstanceSummary instanceSummary) {
         this.instanceSummary = instanceSummary;
         return this;
     }
     
+    public GetDeploymentInstanceOutput(){}
 }

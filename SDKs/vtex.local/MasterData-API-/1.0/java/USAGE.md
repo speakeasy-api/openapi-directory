@@ -3,26 +3,21 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.RetrieveattachmentRequest;
 import org.openapis.openapi.models.operations.RetrieveattachmentResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti", "provident") {{
                     appKey = "YOUR_API_KEY_HERE";
                     appToken = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            RetrieveattachmentRequest req = new RetrieveattachmentRequest() {{
-                acronym = "corrupti";
-                field = "provident";
-                fileName = "distinctio";
-                id = "quibusdam";
-            }}            
+            RetrieveattachmentRequest req = new RetrieveattachmentRequest("distinctio", "quibusdam", "unde", "nulla");            
 
             RetrieveattachmentResponse res = sdk.attachments.retrieveattachment(req);
 
@@ -32,5 +27,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

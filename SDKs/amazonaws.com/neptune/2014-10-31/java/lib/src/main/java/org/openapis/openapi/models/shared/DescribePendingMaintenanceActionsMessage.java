@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribePendingMaintenanceActionsMessage {
     
     public FilterList[] filters;
+
     public DescribePendingMaintenanceActionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -16,6 +17,7 @@ public class DescribePendingMaintenanceActionsMessage {
     
     
     public String marker;
+
     public DescribePendingMaintenanceActionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribePendingMaintenanceActionsMessage {
     
     
     public Long maxRecords;
+
     public DescribePendingMaintenanceActionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -30,9 +33,11 @@ public class DescribePendingMaintenanceActionsMessage {
     
     
     public String resourceIdentifier;
+
     public DescribePendingMaintenanceActionsMessage withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public DescribePendingMaintenanceActionsMessage(){}
 }

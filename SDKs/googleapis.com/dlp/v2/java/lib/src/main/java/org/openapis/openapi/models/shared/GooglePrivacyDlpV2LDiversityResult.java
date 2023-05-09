@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2LDiversityResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitiveValueFrequencyHistogramBuckets")
     public GooglePrivacyDlpV2LDiversityHistogramBucket[] sensitiveValueFrequencyHistogramBuckets;
+
     public GooglePrivacyDlpV2LDiversityResult withSensitiveValueFrequencyHistogramBuckets(GooglePrivacyDlpV2LDiversityHistogramBucket[] sensitiveValueFrequencyHistogramBuckets) {
         this.sensitiveValueFrequencyHistogramBuckets = sensitiveValueFrequencyHistogramBuckets;
         return this;
     }
     
+    public GooglePrivacyDlpV2LDiversityResult(){}
 }

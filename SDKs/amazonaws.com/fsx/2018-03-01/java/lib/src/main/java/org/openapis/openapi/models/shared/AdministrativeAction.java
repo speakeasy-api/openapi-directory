@@ -23,6 +23,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdministrativeActionType")
     public AdministrativeActionTypeEnum administrativeActionType;
+
     public AdministrativeAction withAdministrativeActionType(AdministrativeActionTypeEnum administrativeActionType) {
         this.administrativeActionType = administrativeActionType;
         return this;
@@ -34,6 +35,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureDetails")
     public AdministrativeActionFailureDetails failureDetails;
+
     public AdministrativeAction withFailureDetails(AdministrativeActionFailureDetails failureDetails) {
         this.failureDetails = failureDetails;
         return this;
@@ -42,6 +44,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressPercent")
     public Long progressPercent;
+
     public AdministrativeAction withProgressPercent(Long progressPercent) {
         this.progressPercent = progressPercent;
         return this;
@@ -52,6 +55,7 @@ public class AdministrativeAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestTime")
     public OffsetDateTime requestTime;
+
     public AdministrativeAction withRequestTime(OffsetDateTime requestTime) {
         this.requestTime = requestTime;
         return this;
@@ -60,6 +64,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public AdministrativeAction withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -68,6 +73,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetFileSystemValues")
     public FileSystem targetFileSystemValues;
+
     public AdministrativeAction withTargetFileSystemValues(FileSystem targetFileSystemValues) {
         this.targetFileSystemValues = targetFileSystemValues;
         return this;
@@ -79,6 +85,7 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetSnapshotValues")
     public Snapshot targetSnapshotValues;
+
     public AdministrativeAction withTargetSnapshotValues(Snapshot targetSnapshotValues) {
         this.targetSnapshotValues = targetSnapshotValues;
         return this;
@@ -90,9 +97,11 @@ public class AdministrativeAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetVolumeValues")
     public Volume targetVolumeValues;
+
     public AdministrativeAction withTargetVolumeValues(Volume targetVolumeValues) {
         this.targetVolumeValues = targetVolumeValues;
         return this;
     }
     
+    public AdministrativeAction(){}
 }

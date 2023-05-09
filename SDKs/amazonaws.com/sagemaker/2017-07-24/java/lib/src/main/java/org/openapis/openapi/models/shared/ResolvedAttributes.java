@@ -18,6 +18,7 @@ public class ResolvedAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobObjective")
     public AutoMLJobObjective autoMLJobObjective;
+
     public ResolvedAttributes withAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
         this.autoMLJobObjective = autoMLJobObjective;
         return this;
@@ -29,6 +30,7 @@ public class ResolvedAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompletionCriteria")
     public AutoMLJobCompletionCriteria completionCriteria;
+
     public ResolvedAttributes withCompletionCriteria(AutoMLJobCompletionCriteria completionCriteria) {
         this.completionCriteria = completionCriteria;
         return this;
@@ -37,9 +39,11 @@ public class ResolvedAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProblemType")
     public ProblemTypeEnum problemType;
+
     public ResolvedAttributes withProblemType(ProblemTypeEnum problemType) {
         this.problemType = problemType;
         return this;
     }
     
+    public ResolvedAttributes(){}
 }

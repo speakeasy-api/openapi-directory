@@ -12,6 +12,7 @@ public class CreateImportJobRequestBody {
      */
     @JsonProperty("ImportDataSource")
     public CreateImportJobRequestBodyImportDataSource importDataSource;
+
     public CreateImportJobRequestBody withImportDataSource(CreateImportJobRequestBodyImportDataSource importDataSource) {
         this.importDataSource = importDataSource;
         return this;
@@ -22,9 +23,14 @@ public class CreateImportJobRequestBody {
      */
     @JsonProperty("ImportDestination")
     public CreateImportJobRequestBodyImportDestination importDestination;
+
     public CreateImportJobRequestBody withImportDestination(CreateImportJobRequestBodyImportDestination importDestination) {
         this.importDestination = importDestination;
         return this;
     }
     
+    public CreateImportJobRequestBody(@JsonProperty("ImportDataSource") CreateImportJobRequestBodyImportDataSource importDataSource, @JsonProperty("ImportDestination") CreateImportJobRequestBodyImportDestination importDestination) {
+        this.importDataSource = importDataSource;
+        this.importDestination = importDestination;
+  }
 }

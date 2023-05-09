@@ -15,9 +15,11 @@ public class MeterUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeteringRecordId")
     public String meteringRecordId;
+
     public MeterUsageResult withMeteringRecordId(String meteringRecordId) {
         this.meteringRecordId = meteringRecordId;
         return this;
     }
     
+    public MeterUsageResult(){}
 }

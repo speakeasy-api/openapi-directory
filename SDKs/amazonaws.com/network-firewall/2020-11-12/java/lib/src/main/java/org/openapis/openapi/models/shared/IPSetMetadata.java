@@ -15,9 +15,11 @@ public class IPSetMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedCIDRCount")
     public Long resolvedCIDRCount;
+
     public IPSetMetadata withResolvedCIDRCount(Long resolvedCIDRCount) {
         this.resolvedCIDRCount = resolvedCIDRCount;
         return this;
     }
     
+    public IPSetMetadata(){}
 }

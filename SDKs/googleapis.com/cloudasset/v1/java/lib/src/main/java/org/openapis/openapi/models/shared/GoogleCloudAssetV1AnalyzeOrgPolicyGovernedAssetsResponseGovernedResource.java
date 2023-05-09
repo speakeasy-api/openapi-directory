@@ -18,6 +18,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedRes
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folders")
     public String[] folders;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource withFolders(String[] folders) {
         this.folders = folders;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedRes
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fullResourceName")
     public String fullResourceName;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource withFullResourceName(String fullResourceName) {
         this.fullResourceName = fullResourceName;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedRes
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedRes
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource withParent(String parent) {
         this.parent = parent;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedRes
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource(){}
 }

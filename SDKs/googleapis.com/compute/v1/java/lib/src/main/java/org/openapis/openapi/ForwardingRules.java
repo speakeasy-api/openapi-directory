@@ -59,11 +59,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             forwardingRuleAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesGetResponse(contentType, httpRes.statusCode()) {{
             forwardingRule = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesListResponse(contentType, httpRes.statusCode()) {{
             forwardingRuleList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +329,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesSetLabelsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +375,9 @@ public class ForwardingRules {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse() {{
+        org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse res = new org.openapis.openapi.models.operations.ComputeForwardingRulesSetTargetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

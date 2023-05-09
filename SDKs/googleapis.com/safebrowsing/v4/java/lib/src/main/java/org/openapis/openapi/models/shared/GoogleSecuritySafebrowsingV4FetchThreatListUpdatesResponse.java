@@ -18,6 +18,7 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listUpdateResponses")
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse[] listUpdateResponses;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse withListUpdateResponses(GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponseListUpdateResponse[] listUpdateResponses) {
         this.listUpdateResponses = listUpdateResponses;
         return this;
@@ -29,9 +30,11 @@ public class GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumWaitDuration")
     public String minimumWaitDuration;
+
     public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse withMinimumWaitDuration(String minimumWaitDuration) {
         this.minimumWaitDuration = minimumWaitDuration;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse(){}
 }

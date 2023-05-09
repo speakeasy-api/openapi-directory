@@ -18,6 +18,7 @@ public class Borders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottom")
     public Border bottom;
+
     public Borders withBottom(Border bottom) {
         this.bottom = bottom;
         return this;
@@ -29,6 +30,7 @@ public class Borders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("left")
     public Border left;
+
     public Borders withLeft(Border left) {
         this.left = left;
         return this;
@@ -40,6 +42,7 @@ public class Borders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("right")
     public Border right;
+
     public Borders withRight(Border right) {
         this.right = right;
         return this;
@@ -51,9 +54,11 @@ public class Borders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("top")
     public Border top;
+
     public Borders withTop(Border top) {
         this.top = top;
         return this;
     }
     
+    public Borders(){}
 }

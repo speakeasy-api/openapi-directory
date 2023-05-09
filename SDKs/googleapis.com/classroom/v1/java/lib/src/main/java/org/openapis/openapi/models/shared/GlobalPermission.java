@@ -18,9 +18,11 @@ public class GlobalPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public GlobalPermissionPermissionEnum permission;
+
     public GlobalPermission withPermission(GlobalPermissionPermissionEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public GlobalPermission(){}
 }

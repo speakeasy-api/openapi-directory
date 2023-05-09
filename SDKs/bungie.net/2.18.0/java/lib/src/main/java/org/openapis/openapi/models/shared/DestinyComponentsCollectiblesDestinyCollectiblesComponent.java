@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsCollectiblesDestinyCollectiblesComponent {
     
     public java.util.Map<String, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles;
+
     public DestinyComponentsCollectiblesDestinyCollectiblesComponent withCollectibles(java.util.Map<String, DestinyComponentsCollectiblesDestinyCollectibleComponent> collectibles) {
         this.collectibles = collectibles;
         return this;
@@ -19,6 +20,7 @@ public class DestinyComponentsCollectiblesDestinyCollectiblesComponent {
      */
     
     public Long collectionBadgesRootNodeHash;
+
     public DestinyComponentsCollectiblesDestinyCollectiblesComponent withCollectionBadgesRootNodeHash(Long collectionBadgesRootNodeHash) {
         this.collectionBadgesRootNodeHash = collectionBadgesRootNodeHash;
         return this;
@@ -29,9 +31,11 @@ public class DestinyComponentsCollectiblesDestinyCollectiblesComponent {
      */
     
     public Long collectionCategoriesRootNodeHash;
+
     public DestinyComponentsCollectiblesDestinyCollectiblesComponent withCollectionCategoriesRootNodeHash(Long collectionCategoriesRootNodeHash) {
         this.collectionCategoriesRootNodeHash = collectionCategoriesRootNodeHash;
         return this;
     }
     
+    public DestinyComponentsCollectiblesDestinyCollectiblesComponent(){}
 }

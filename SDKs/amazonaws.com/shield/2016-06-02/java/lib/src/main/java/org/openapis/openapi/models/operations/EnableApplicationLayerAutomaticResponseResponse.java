@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnableApplicationLayerAutomaticResponseResponse {
     
     public String contentType;
+
     public EnableApplicationLayerAutomaticResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public java.util.Map<String, Object> enableApplicationLayerAutomaticResponseResponse;
+
     public EnableApplicationLayerAutomaticResponseResponse withEnableApplicationLayerAutomaticResponseResponse(java.util.Map<String, Object> enableApplicationLayerAutomaticResponseResponse) {
         this.enableApplicationLayerAutomaticResponseResponse = enableApplicationLayerAutomaticResponseResponse;
         return this;
@@ -29,6 +32,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object internalErrorException;
+
     public EnableApplicationLayerAutomaticResponseResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidOperationException;
+
     public EnableApplicationLayerAutomaticResponseResponse withInvalidOperationException(Object invalidOperationException) {
         this.invalidOperationException = invalidOperationException;
         return this;
@@ -49,6 +54,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object invalidParameterException;
+
     public EnableApplicationLayerAutomaticResponseResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object limitsExceededException;
+
     public EnableApplicationLayerAutomaticResponseResponse withLimitsExceededException(Object limitsExceededException) {
         this.limitsExceededException = limitsExceededException;
         return this;
@@ -69,6 +76,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object optimisticLockException;
+
     public EnableApplicationLayerAutomaticResponseResponse withOptimisticLockException(Object optimisticLockException) {
         this.optimisticLockException = optimisticLockException;
         return this;
@@ -76,6 +84,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
     
     
     public Integer statusCode;
+
     public EnableApplicationLayerAutomaticResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class EnableApplicationLayerAutomaticResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnableApplicationLayerAutomaticResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class EnableApplicationLayerAutomaticResponseResponse {
      */
     
     public Object resourceNotFoundException;
+
     public EnableApplicationLayerAutomaticResponseResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public EnableApplicationLayerAutomaticResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

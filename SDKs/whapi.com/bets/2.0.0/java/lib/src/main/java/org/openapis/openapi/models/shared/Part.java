@@ -12,6 +12,7 @@ public class Part {
      */
     @JsonProperty("includeInMultiple")
     public Boolean includeInMultiple;
+
     public Part withIncludeInMultiple(Boolean includeInMultiple) {
         this.includeInMultiple = includeInMultiple;
         return this;
@@ -22,6 +23,7 @@ public class Part {
      */
     @JsonProperty("priceDen")
     public Long priceDen;
+
     public Part withPriceDen(Long priceDen) {
         this.priceDen = priceDen;
         return this;
@@ -32,16 +34,18 @@ public class Part {
      */
     @JsonProperty("priceNum")
     public Long priceNum;
+
     public Part withPriceNum(Long priceNum) {
         this.priceNum = priceNum;
         return this;
     }
     
     /**
-     * The type of price selected. For example - \u2018L\u2019 (Fixed)
+     * The type of price selected. For example - ‘L’ (Fixed)
      */
     @JsonProperty("priceType")
     public Long priceType;
+
     public Part withPriceType(Long priceType) {
         this.priceType = priceType;
         return this;
@@ -52,9 +56,17 @@ public class Part {
      */
     @JsonProperty("selectionId")
     public Long selectionId;
+
     public Part withSelectionId(Long selectionId) {
         this.selectionId = selectionId;
         return this;
     }
     
+    public Part(@JsonProperty("includeInMultiple") Boolean includeInMultiple, @JsonProperty("priceDen") Long priceDen, @JsonProperty("priceNum") Long priceNum, @JsonProperty("priceType") Long priceType, @JsonProperty("selectionId") Long selectionId) {
+        this.includeInMultiple = includeInMultiple;
+        this.priceDen = priceDen;
+        this.priceNum = priceNum;
+        this.priceType = priceType;
+        this.selectionId = selectionId;
+  }
 }

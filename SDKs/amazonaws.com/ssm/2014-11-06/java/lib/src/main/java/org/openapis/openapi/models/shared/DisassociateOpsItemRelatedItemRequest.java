@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateOpsItemRelatedItemRequest {
     @JsonProperty("AssociationId")
     public String associationId;
+
     public DisassociateOpsItemRelatedItemRequest withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -16,9 +17,14 @@ public class DisassociateOpsItemRelatedItemRequest {
     
     @JsonProperty("OpsItemId")
     public String opsItemId;
+
     public DisassociateOpsItemRelatedItemRequest withOpsItemId(String opsItemId) {
         this.opsItemId = opsItemId;
         return this;
     }
     
+    public DisassociateOpsItemRelatedItemRequest(@JsonProperty("AssociationId") String associationId, @JsonProperty("OpsItemId") String opsItemId) {
+        this.associationId = associationId;
+        this.opsItemId = opsItemId;
+  }
 }

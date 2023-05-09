@@ -15,6 +15,7 @@ public class MitigationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionParams")
     public MitigationActionParams actionParams;
+
     public MitigationAction withActionParams(MitigationActionParams actionParams) {
         this.actionParams = actionParams;
         return this;
@@ -23,6 +24,7 @@ public class MitigationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MitigationAction withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class MitigationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public MitigationAction withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class MitigationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public MitigationAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public MitigationAction(){}
 }

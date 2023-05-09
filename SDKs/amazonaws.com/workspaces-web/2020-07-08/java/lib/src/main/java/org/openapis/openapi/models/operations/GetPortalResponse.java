@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortalResponse {
@@ -12,6 +13,7 @@ public class GetPortalResponse {
      */
     
     public Object accessDeniedException;
+
     public GetPortalResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetPortalResponse {
     
     
     public String contentType;
+
     public GetPortalResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPortalResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPortalResponse getPortalResponse;
+
     public GetPortalResponse withGetPortalResponse(org.openapis.openapi.models.shared.GetPortalResponse getPortalResponse) {
         this.getPortalResponse = getPortalResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetPortalResponse {
      */
     
     public Object internalServerException;
+
     public GetPortalResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetPortalResponse {
     
     
     public Integer statusCode;
+
     public GetPortalResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetPortalResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortalResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetPortalResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetPortalResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class GetPortalResponse {
      */
     
     public Object throttlingException;
+
     public GetPortalResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetPortalResponse {
      */
     
     public Object validationException;
+
     public GetPortalResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetPortalResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

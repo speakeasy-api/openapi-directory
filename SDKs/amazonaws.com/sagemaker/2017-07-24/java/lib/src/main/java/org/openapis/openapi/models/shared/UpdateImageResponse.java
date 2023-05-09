@@ -15,9 +15,11 @@ public class UpdateImageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public UpdateImageResponse withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
     }
     
+    public UpdateImageResponse(){}
 }

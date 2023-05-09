@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DELETEAccountUsingDELETEResponse {
     
     public byte[] body;
+
     public DELETEAccountUsingDELETEResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DELETEAccountUsingDELETEResponse {
     
     
     public String contentType;
+
     public DELETEAccountUsingDELETEResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class DELETEAccountUsingDELETEResponse {
     
     
     public Integer statusCode;
+
     public DELETEAccountUsingDELETEResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class DELETEAccountUsingDELETEResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DELETEAccountUsingDELETEResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DELETEAccountUsingDELETEResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

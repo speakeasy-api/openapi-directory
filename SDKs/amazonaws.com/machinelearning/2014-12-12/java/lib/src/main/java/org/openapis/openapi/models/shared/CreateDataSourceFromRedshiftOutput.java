@@ -15,9 +15,11 @@ public class CreateDataSourceFromRedshiftOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public CreateDataSourceFromRedshiftOutput withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
     }
     
+    public CreateDataSourceFromRedshiftOutput(){}
 }

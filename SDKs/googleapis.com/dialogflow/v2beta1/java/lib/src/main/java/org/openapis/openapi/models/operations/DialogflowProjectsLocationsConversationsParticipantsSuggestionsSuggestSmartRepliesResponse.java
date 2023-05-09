@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse googleCloudDialogflowV2beta1SuggestSmartRepliesResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse withGoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2beta1SuggestSmartRepliesResponse googleCloudDialogflowV2beta1SuggestSmartRepliesResponse) {
         this.googleCloudDialogflowV2beta1SuggestSmartRepliesResponse = googleCloudDialogflowV2beta1SuggestSmartRepliesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestSmartRepliesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

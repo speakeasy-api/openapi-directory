@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTimeSeriesToAssetPropertyResponse {
@@ -12,6 +13,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
      */
     
     public Object conflictingOperationException;
+
     public AssociateTimeSeriesToAssetPropertyResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
     
     
     public String contentType;
+
     public AssociateTimeSeriesToAssetPropertyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
      */
     
     public Object internalFailureException;
+
     public AssociateTimeSeriesToAssetPropertyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
      */
     
     public Object invalidRequestException;
+
     public AssociateTimeSeriesToAssetPropertyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AssociateTimeSeriesToAssetPropertyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
     
     
     public Integer statusCode;
+
     public AssociateTimeSeriesToAssetPropertyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTimeSeriesToAssetPropertyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class AssociateTimeSeriesToAssetPropertyResponse {
      */
     
     public Object throttlingException;
+
     public AssociateTimeSeriesToAssetPropertyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public AssociateTimeSeriesToAssetPropertyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

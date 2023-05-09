@@ -22,6 +22,7 @@ public class VpcConnector {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public VpcConnector withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -32,6 +33,7 @@ public class VpcConnector {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeletedAt")
     public OffsetDateTime deletedAt;
+
     public VpcConnector withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -40,6 +42,7 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroups")
     public String[] securityGroups;
+
     public VpcConnector withSecurityGroups(String[] securityGroups) {
         this.securityGroups = securityGroups;
         return this;
@@ -48,6 +51,7 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public VpcConnectorStatusEnum status;
+
     public VpcConnector withStatus(VpcConnectorStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public VpcConnector withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
@@ -64,6 +69,7 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConnectorArn")
     public String vpcConnectorArn;
+
     public VpcConnector withVpcConnectorArn(String vpcConnectorArn) {
         this.vpcConnectorArn = vpcConnectorArn;
         return this;
@@ -72,6 +78,7 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConnectorName")
     public String vpcConnectorName;
+
     public VpcConnector withVpcConnectorName(String vpcConnectorName) {
         this.vpcConnectorName = vpcConnectorName;
         return this;
@@ -80,9 +87,11 @@ public class VpcConnector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConnectorRevision")
     public Long vpcConnectorRevision;
+
     public VpcConnector withVpcConnectorRevision(Long vpcConnectorRevision) {
         this.vpcConnectorRevision = vpcConnectorRevision;
         return this;
     }
     
+    public VpcConnector(){}
 }

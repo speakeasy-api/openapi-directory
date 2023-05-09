@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListRatePlanForHotelForRatePlanIdRequest {
@@ -12,6 +13,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public ListRatePlanForHotelForRatePlanIdRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -22,6 +24,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=hotelId")
     public String hotelId;
+
     public ListRatePlanForHotelForRatePlanIdRequest withHotelId(String hotelId) {
         this.hotelId = hotelId;
         return this;
@@ -32,6 +35,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Double offset;
+
     public ListRatePlanForHotelForRatePlanIdRequest withOffset(Double offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ratePlanId")
     public Long ratePlanId;
+
     public ListRatePlanForHotelForRatePlanIdRequest withRatePlanId(Long ratePlanId) {
         this.ratePlanId = ratePlanId;
         return this;
@@ -52,6 +57,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=roomTypeId")
     public String roomTypeId;
+
     public ListRatePlanForHotelForRatePlanIdRequest withRoomTypeId(String roomTypeId) {
         this.roomTypeId = roomTypeId;
         return this;
@@ -62,6 +68,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListRatePlanForHotelForRatePlanIdRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -72,6 +79,7 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public ListRatePlanForHotelForRatePlanIdRequest withStart(String start) {
         this.start = start;
         return this;
@@ -82,9 +90,14 @@ public class ListRatePlanForHotelForRatePlanIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=deepObject,explode=true,name=updatedAt")
     public java.util.Map<String, Object> updatedAt;
+
     public ListRatePlanForHotelForRatePlanIdRequest withUpdatedAt(java.util.Map<String, Object> updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public ListRatePlanForHotelForRatePlanIdRequest(@JsonProperty("hotelId") String hotelId, @JsonProperty("ratePlanId") Long ratePlanId) {
+        this.hotelId = hotelId;
+        this.ratePlanId = ratePlanId;
+  }
 }

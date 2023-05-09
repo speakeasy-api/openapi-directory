@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
@@ -13,6 +14,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -24,6 +26,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=committee_id")
     public String committeeId;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -35,6 +38,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=election_full")
     public Boolean electionFull;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withElectionFull(Boolean electionFull) {
         this.electionFull = electionFull;
         return this;
@@ -45,6 +49,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -55,6 +60,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -66,6 +72,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -76,6 +83,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -86,6 +94,7 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -96,9 +105,14 @@ public class GetCommitteeCommitteeIdCandidatesHistoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetCommitteeCommitteeIdCandidatesHistoryRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
     }
     
+    public GetCommitteeCommitteeIdCandidatesHistoryRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("committee_id") String committeeId) {
+        this.apiKey = apiKey;
+        this.committeeId = committeeId;
+  }
 }

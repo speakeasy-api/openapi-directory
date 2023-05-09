@@ -15,6 +15,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationReference")
     public String destinationReference;
+
     public Target withDestinationReference(String destinationReference) {
         this.destinationReference = destinationReference;
         return this;
@@ -22,6 +23,7 @@ public class Target {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public Target withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -29,9 +31,14 @@ public class Target {
     
     @JsonProperty("sourceReference")
     public String sourceReference;
+
     public Target withSourceReference(String sourceReference) {
         this.sourceReference = sourceReference;
         return this;
     }
     
+    public Target(@JsonProperty("repositoryName") String repositoryName, @JsonProperty("sourceReference") String sourceReference) {
+        this.repositoryName = repositoryName;
+        this.sourceReference = sourceReference;
+  }
 }

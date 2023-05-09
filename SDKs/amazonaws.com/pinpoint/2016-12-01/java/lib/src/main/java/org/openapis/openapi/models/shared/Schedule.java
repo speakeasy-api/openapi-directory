@@ -15,6 +15,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTime")
     public String endTime;
+
     public Schedule withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventFilter")
     public CampaignEventFilter eventFilter;
+
     public Schedule withEventFilter(CampaignEventFilter eventFilter) {
         this.eventFilter = eventFilter;
         return this;
@@ -31,6 +33,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Frequency")
     public FrequencyEnum frequency;
+
     public Schedule withFrequency(FrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
@@ -39,6 +42,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLocalTime")
     public Boolean isLocalTime;
+
     public Schedule withIsLocalTime(Boolean isLocalTime) {
         this.isLocalTime = isLocalTime;
         return this;
@@ -47,6 +51,7 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuietTime")
     public QuietTime quietTime;
+
     public Schedule withQuietTime(QuietTime quietTime) {
         this.quietTime = quietTime;
         return this;
@@ -54,6 +59,7 @@ public class Schedule {
     
     @JsonProperty("StartTime")
     public String startTime;
+
     public Schedule withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -62,9 +68,13 @@ public class Schedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timezone")
     public String timezone;
+
     public Schedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public Schedule(@JsonProperty("StartTime") String startTime) {
+        this.startTime = startTime;
+  }
 }

@@ -15,6 +15,7 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InitializationVector")
     public String initializationVector;
+
     public Encryption withInitializationVector(String initializationVector) {
         this.initializationVector = initializationVector;
         return this;
@@ -23,6 +24,7 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public Encryption withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyMd5")
     public String keyMd5;
+
     public Encryption withKeyMd5(String keyMd5) {
         this.keyMd5 = keyMd5;
         return this;
@@ -39,9 +42,11 @@ public class Encryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public String mode;
+
     public Encryption withMode(String mode) {
         this.mode = mode;
         return this;
     }
     
+    public Encryption(){}
 }

@@ -12,6 +12,7 @@ public class ClassifyDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bytes")
     public String bytes;
+
     public ClassifyDocumentRequest withBytes(String bytes) {
         this.bytes = bytes;
         return this;
@@ -20,6 +21,7 @@ public class ClassifyDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentReaderConfig")
     public DocumentReaderConfig documentReaderConfig;
+
     public ClassifyDocumentRequest withDocumentReaderConfig(DocumentReaderConfig documentReaderConfig) {
         this.documentReaderConfig = documentReaderConfig;
         return this;
@@ -27,6 +29,7 @@ public class ClassifyDocumentRequest {
     
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public ClassifyDocumentRequest withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -35,9 +38,13 @@ public class ClassifyDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public ClassifyDocumentRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ClassifyDocumentRequest(@JsonProperty("EndpointArn") String endpointArn) {
+        this.endpointArn = endpointArn;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDelegatedAdministratorsResponse {
@@ -12,6 +13,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListDelegatedAdministratorsResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListDelegatedAdministratorsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object constraintViolationException;
+
     public ListDelegatedAdministratorsResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -39,6 +43,7 @@ public class ListDelegatedAdministratorsResponse {
     
     
     public String contentType;
+
     public ListDelegatedAdministratorsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object invalidInputException;
+
     public ListDelegatedAdministratorsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDelegatedAdministratorsResponse listDelegatedAdministratorsResponse;
+
     public ListDelegatedAdministratorsResponse withListDelegatedAdministratorsResponse(org.openapis.openapi.models.shared.ListDelegatedAdministratorsResponse listDelegatedAdministratorsResponse) {
         this.listDelegatedAdministratorsResponse = listDelegatedAdministratorsResponse;
         return this;
@@ -66,6 +73,7 @@ public class ListDelegatedAdministratorsResponse {
     
     
     public Integer statusCode;
+
     public ListDelegatedAdministratorsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListDelegatedAdministratorsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDelegatedAdministratorsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object serviceException;
+
     public ListDelegatedAdministratorsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,6 +103,7 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListDelegatedAdministratorsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class ListDelegatedAdministratorsResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public ListDelegatedAdministratorsResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public ListDelegatedAdministratorsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

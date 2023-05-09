@@ -12,6 +12,7 @@ public class StartThingRegistrationTaskRequestBody {
      */
     @JsonProperty("inputFileBucket")
     public String inputFileBucket;
+
     public StartThingRegistrationTaskRequestBody withInputFileBucket(String inputFileBucket) {
         this.inputFileBucket = inputFileBucket;
         return this;
@@ -22,6 +23,7 @@ public class StartThingRegistrationTaskRequestBody {
      */
     @JsonProperty("inputFileKey")
     public String inputFileKey;
+
     public StartThingRegistrationTaskRequestBody withInputFileKey(String inputFileKey) {
         this.inputFileKey = inputFileKey;
         return this;
@@ -32,6 +34,7 @@ public class StartThingRegistrationTaskRequestBody {
      */
     @JsonProperty("roleArn")
     public String roleArn;
+
     public StartThingRegistrationTaskRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -42,9 +45,16 @@ public class StartThingRegistrationTaskRequestBody {
      */
     @JsonProperty("templateBody")
     public String templateBody;
+
     public StartThingRegistrationTaskRequestBody withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
     }
     
+    public StartThingRegistrationTaskRequestBody(@JsonProperty("inputFileBucket") String inputFileBucket, @JsonProperty("inputFileKey") String inputFileKey, @JsonProperty("roleArn") String roleArn, @JsonProperty("templateBody") String templateBody) {
+        this.inputFileBucket = inputFileBucket;
+        this.inputFileKey = inputFileKey;
+        this.roleArn = roleArn;
+        this.templateBody = templateBody;
+  }
 }

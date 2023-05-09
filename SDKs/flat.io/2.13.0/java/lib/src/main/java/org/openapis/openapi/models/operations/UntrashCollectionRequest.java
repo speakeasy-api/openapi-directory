@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UntrashCollectionRequest {
@@ -17,9 +18,13 @@ public class UntrashCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collection")
     public String collection;
+
     public UntrashCollectionRequest withCollection(String collection) {
         this.collection = collection;
         return this;
     }
     
+    public UntrashCollectionRequest(@JsonProperty("collection") String collection) {
+        this.collection = collection;
+  }
 }

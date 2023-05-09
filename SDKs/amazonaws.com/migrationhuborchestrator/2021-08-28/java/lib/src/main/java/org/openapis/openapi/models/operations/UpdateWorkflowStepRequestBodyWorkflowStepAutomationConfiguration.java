@@ -15,6 +15,7 @@ public class UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("command")
     public org.openapis.openapi.models.shared.PlatformCommand command;
+
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration withCommand(org.openapis.openapi.models.shared.PlatformCommand command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runEnvironment")
     public org.openapis.openapi.models.shared.RunEnvironmentEnum runEnvironment;
+
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration withRunEnvironment(org.openapis.openapi.models.shared.RunEnvironmentEnum runEnvironment) {
         this.runEnvironment = runEnvironment;
         return this;
@@ -31,6 +33,7 @@ public class UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptLocationS3Bucket")
     public String scriptLocationS3Bucket;
+
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration withScriptLocationS3Bucket(String scriptLocationS3Bucket) {
         this.scriptLocationS3Bucket = scriptLocationS3Bucket;
         return this;
@@ -39,6 +42,7 @@ public class UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scriptLocationS3Key")
     public org.openapis.openapi.models.shared.PlatformScriptKey scriptLocationS3Key;
+
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration withScriptLocationS3Key(org.openapis.openapi.models.shared.PlatformScriptKey scriptLocationS3Key) {
         this.scriptLocationS3Key = scriptLocationS3Key;
         return this;
@@ -47,9 +51,11 @@ public class UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetType")
     public org.openapis.openapi.models.shared.TargetTypeEnum targetType;
+
     public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration withTargetType(org.openapis.openapi.models.shared.TargetTypeEnum targetType) {
         this.targetType = targetType;
         return this;
     }
     
+    public UpdateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration(){}
 }

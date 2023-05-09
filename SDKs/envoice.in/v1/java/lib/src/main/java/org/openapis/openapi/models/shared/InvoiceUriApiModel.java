@@ -18,9 +18,11 @@ public class InvoiceUriApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Link")
     public String link;
+
     public InvoiceUriApiModel withLink(String link) {
         this.link = link;
         return this;
     }
     
+    public InvoiceUriApiModel(){}
 }

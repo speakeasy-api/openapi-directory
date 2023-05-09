@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDestinationsResponse {
     
     public String contentType;
+
     public DescribeDestinationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDestinationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDestinationsResponse describeDestinationsResponse;
+
     public DescribeDestinationsResponse withDescribeDestinationsResponse(org.openapis.openapi.models.shared.DescribeDestinationsResponse describeDestinationsResponse) {
         this.describeDestinationsResponse = describeDestinationsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDestinationsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeDestinationsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeDestinationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeDestinationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeDestinationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDestinationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeDestinationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeDestinationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DescribeDestinationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

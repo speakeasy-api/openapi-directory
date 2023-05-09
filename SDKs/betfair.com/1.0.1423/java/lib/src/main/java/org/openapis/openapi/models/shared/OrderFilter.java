@@ -15,6 +15,7 @@ public class OrderFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public Long[] accountIds;
+
     public OrderFilter withAccountIds(Long[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -26,6 +27,7 @@ public class OrderFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerStrategyRefs")
     public String[] customerStrategyRefs;
+
     public OrderFilter withCustomerStrategyRefs(String[] customerStrategyRefs) {
         this.customerStrategyRefs = customerStrategyRefs;
         return this;
@@ -37,6 +39,7 @@ public class OrderFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeOverallPosition")
     public Boolean includeOverallPosition;
+
     public OrderFilter withIncludeOverallPosition(Boolean includeOverallPosition) {
         this.includeOverallPosition = includeOverallPosition;
         return this;
@@ -48,9 +51,11 @@ public class OrderFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partitionMatchedByStrategyRef")
     public Boolean partitionMatchedByStrategyRef;
+
     public OrderFilter withPartitionMatchedByStrategyRef(Boolean partitionMatchedByStrategyRef) {
         this.partitionMatchedByStrategyRef = partitionMatchedByStrategyRef;
         return this;
     }
     
+    public OrderFilter(){}
 }

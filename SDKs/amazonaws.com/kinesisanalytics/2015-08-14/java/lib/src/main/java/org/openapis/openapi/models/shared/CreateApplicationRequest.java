@@ -15,6 +15,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCode")
     public String applicationCode;
+
     public CreateApplicationRequest withApplicationCode(String applicationCode) {
         this.applicationCode = applicationCode;
         return this;
@@ -23,6 +24,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationDescription")
     public String applicationDescription;
+
     public CreateApplicationRequest withApplicationDescription(String applicationDescription) {
         this.applicationDescription = applicationDescription;
         return this;
@@ -30,6 +32,7 @@ public class CreateApplicationRequest {
     
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public CreateApplicationRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -38,6 +41,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOption[] cloudWatchLoggingOptions;
+
     public CreateApplicationRequest withCloudWatchLoggingOptions(CloudWatchLoggingOption[] cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -46,6 +50,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Inputs")
     public Input[] inputs;
+
     public CreateApplicationRequest withInputs(Input[] inputs) {
         this.inputs = inputs;
         return this;
@@ -54,6 +59,7 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Outputs")
     public Output[] outputs;
+
     public CreateApplicationRequest withOutputs(Output[] outputs) {
         this.outputs = outputs;
         return this;
@@ -62,9 +68,13 @@ public class CreateApplicationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateApplicationRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateApplicationRequest(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

@@ -18,6 +18,7 @@ public class Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moduleEnablementState")
     public ConfigModuleEnablementStateEnum moduleEnablementState;
+
     public Config withModuleEnablementState(ConfigModuleEnablementStateEnum moduleEnablementState) {
         this.moduleEnablementState = moduleEnablementState;
         return this;
@@ -29,9 +30,11 @@ public class Config {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public java.util.Map<String, Object> value;
+
     public Config withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public Config(){}
 }

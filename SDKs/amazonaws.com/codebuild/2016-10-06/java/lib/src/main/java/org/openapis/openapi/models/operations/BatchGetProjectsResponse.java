@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetProjectsResponse {
@@ -12,6 +13,7 @@ public class BatchGetProjectsResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetProjectsOutput batchGetProjectsOutput;
+
     public BatchGetProjectsResponse withBatchGetProjectsOutput(org.openapis.openapi.models.shared.BatchGetProjectsOutput batchGetProjectsOutput) {
         this.batchGetProjectsOutput = batchGetProjectsOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetProjectsResponse {
     
     
     public String contentType;
+
     public BatchGetProjectsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetProjectsResponse {
      */
     
     public Object invalidInputException;
+
     public BatchGetProjectsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class BatchGetProjectsResponse {
     
     
     public Integer statusCode;
+
     public BatchGetProjectsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class BatchGetProjectsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetProjectsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetProjectsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

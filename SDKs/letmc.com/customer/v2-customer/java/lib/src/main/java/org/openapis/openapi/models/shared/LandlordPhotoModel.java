@@ -18,6 +18,7 @@ public class LandlordPhotoModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public LandlordPhotoModel withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -29,6 +30,7 @@ public class LandlordPhotoModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileName")
     public String fileName;
+
     public LandlordPhotoModel withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -40,6 +42,7 @@ public class LandlordPhotoModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OID")
     public String oid;
+
     public LandlordPhotoModel withOid(String oid) {
         this.oid = oid;
         return this;
@@ -51,9 +54,11 @@ public class LandlordPhotoModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhotoType")
     public LandlordPhotoModelPhotoTypeEnum photoType;
+
     public LandlordPhotoModel withPhotoType(LandlordPhotoModelPhotoTypeEnum photoType) {
         this.photoType = photoType;
         return this;
     }
     
+    public LandlordPhotoModel(){}
 }

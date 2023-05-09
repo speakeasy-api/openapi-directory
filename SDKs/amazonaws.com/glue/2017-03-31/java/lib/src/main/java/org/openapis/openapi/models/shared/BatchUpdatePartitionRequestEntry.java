@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchUpdatePartitionRequestEntry {
     @JsonProperty("PartitionInput")
     public PartitionInput partitionInput;
+
     public BatchUpdatePartitionRequestEntry withPartitionInput(PartitionInput partitionInput) {
         this.partitionInput = partitionInput;
         return this;
@@ -19,9 +20,14 @@ public class BatchUpdatePartitionRequestEntry {
     
     @JsonProperty("PartitionValueList")
     public String[] partitionValueList;
+
     public BatchUpdatePartitionRequestEntry withPartitionValueList(String[] partitionValueList) {
         this.partitionValueList = partitionValueList;
         return this;
     }
     
+    public BatchUpdatePartitionRequestEntry(@JsonProperty("PartitionInput") PartitionInput partitionInput, @JsonProperty("PartitionValueList") String[] partitionValueList) {
+        this.partitionInput = partitionInput;
+        this.partitionValueList = partitionValueList;
+  }
 }

@@ -12,9 +12,11 @@ public class JsonPatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public PatchOperationInput[] operations;
+
     public JsonPatchInput withOperations(PatchOperationInput[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public JsonPatchInput(){}
 }

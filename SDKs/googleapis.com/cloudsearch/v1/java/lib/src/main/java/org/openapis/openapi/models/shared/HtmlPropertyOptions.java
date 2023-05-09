@@ -18,6 +18,7 @@ public class HtmlPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatorOptions")
     public HtmlOperatorOptions operatorOptions;
+
     public HtmlPropertyOptions withOperatorOptions(HtmlOperatorOptions operatorOptions) {
         this.operatorOptions = operatorOptions;
         return this;
@@ -26,9 +27,11 @@ public class HtmlPropertyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retrievalImportance")
     public RetrievalImportance retrievalImportance;
+
     public HtmlPropertyOptions withRetrievalImportance(RetrievalImportance retrievalImportance) {
         this.retrievalImportance = retrievalImportance;
         return this;
     }
     
+    public HtmlPropertyOptions(){}
 }

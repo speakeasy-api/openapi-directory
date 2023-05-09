@@ -14,6 +14,7 @@ public class CreateWorkflowRequestBody {
      */
     @JsonProperty("applicationConfigurationId")
     public String applicationConfigurationId;
+
     public CreateWorkflowRequestBody withApplicationConfigurationId(String applicationConfigurationId) {
         this.applicationConfigurationId = applicationConfigurationId;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkflowRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateWorkflowRequestBody {
      */
     @JsonProperty("inputParameters")
     public java.util.Map<String, org.openapis.openapi.models.shared.StepInput> inputParameters;
+
     public CreateWorkflowRequestBody withInputParameters(java.util.Map<String, org.openapis.openapi.models.shared.StepInput> inputParameters) {
         this.inputParameters = inputParameters;
         return this;
@@ -45,6 +48,7 @@ public class CreateWorkflowRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTargets")
     public String[] stepTargets;
+
     public CreateWorkflowRequestBody withStepTargets(String[] stepTargets) {
         this.stepTargets = stepTargets;
         return this;
@@ -67,6 +72,7 @@ public class CreateWorkflowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkflowRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -77,9 +83,16 @@ public class CreateWorkflowRequestBody {
      */
     @JsonProperty("templateId")
     public String templateId;
+
     public CreateWorkflowRequestBody withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CreateWorkflowRequestBody(@JsonProperty("applicationConfigurationId") String applicationConfigurationId, @JsonProperty("inputParameters") java.util.Map<String, org.openapis.openapi.models.shared.StepInput> inputParameters, @JsonProperty("name") String name, @JsonProperty("templateId") String templateId) {
+        this.applicationConfigurationId = applicationConfigurationId;
+        this.inputParameters = inputParameters;
+        this.name = name;
+        this.templateId = templateId;
+  }
 }

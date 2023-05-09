@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class JobScheduleAddRequest {
@@ -12,6 +13,7 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.JobScheduleAddParameter jobScheduleAddParameter;
+
     public JobScheduleAddRequest withJobScheduleAddParameter(org.openapis.openapi.models.shared.JobScheduleAddParameter jobScheduleAddParameter) {
         this.jobScheduleAddParameter = jobScheduleAddParameter;
         return this;
@@ -22,6 +24,7 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api-version")
     public String apiVersion;
+
     public JobScheduleAddRequest withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -32,6 +35,7 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=client-request-id")
     public String clientRequestId;
+
     public JobScheduleAddRequest withClientRequestId(String clientRequestId) {
         this.clientRequestId = clientRequestId;
         return this;
@@ -42,6 +46,7 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=ocp-date")
     public String ocpDate;
+
     public JobScheduleAddRequest withOcpDate(String ocpDate) {
         this.ocpDate = ocpDate;
         return this;
@@ -52,6 +57,7 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=return-client-request-id")
     public Boolean returnClientRequestId;
+
     public JobScheduleAddRequest withReturnClientRequestId(Boolean returnClientRequestId) {
         this.returnClientRequestId = returnClientRequestId;
         return this;
@@ -62,9 +68,14 @@ public class JobScheduleAddRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeout")
     public Integer timeout;
+
     public JobScheduleAddRequest withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public JobScheduleAddRequest(@JsonProperty("JobScheduleAddParameter") org.openapis.openapi.models.shared.JobScheduleAddParameter jobScheduleAddParameter, @JsonProperty("api-version") String apiVersion) {
+        this.jobScheduleAddParameter = jobScheduleAddParameter;
+        this.apiVersion = apiVersion;
+  }
 }

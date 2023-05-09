@@ -14,6 +14,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("created")
     public String created;
+
     public GetNetworks200ApplicationJSONNetworks withCreated(String created) {
         this.created = created;
         return this;
@@ -24,6 +25,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetNetworks200ApplicationJSONNetworks withId(Long id) {
         this.id = id;
         return this;
@@ -34,6 +36,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("ip_range")
     public String ipRange;
+
     public GetNetworks200ApplicationJSONNetworks withIpRange(String ipRange) {
         this.ipRange = ipRange;
         return this;
@@ -44,6 +47,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("labels")
     public java.util.Map<String, Object> labels;
+
     public GetNetworks200ApplicationJSONNetworks withLabels(java.util.Map<String, Object> labels) {
         this.labels = labels;
         return this;
@@ -55,6 +59,7 @@ public class GetNetworks200ApplicationJSONNetworks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_balancers")
     public Long[] loadBalancers;
+
     public GetNetworks200ApplicationJSONNetworks withLoadBalancers(Long[] loadBalancers) {
         this.loadBalancers = loadBalancers;
         return this;
@@ -65,6 +70,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("name")
     public String name;
+
     public GetNetworks200ApplicationJSONNetworks withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("protection")
     public GetNetworks200ApplicationJSONNetworksProtection protection;
+
     public GetNetworks200ApplicationJSONNetworks withProtection(GetNetworks200ApplicationJSONNetworksProtection protection) {
         this.protection = protection;
         return this;
@@ -85,6 +92,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("routes")
     public GetNetworks200ApplicationJSONNetworksRoutes[] routes;
+
     public GetNetworks200ApplicationJSONNetworks withRoutes(GetNetworks200ApplicationJSONNetworksRoutes[] routes) {
         this.routes = routes;
         return this;
@@ -95,6 +103,7 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("servers")
     public Long[] servers;
+
     public GetNetworks200ApplicationJSONNetworks withServers(Long[] servers) {
         this.servers = servers;
         return this;
@@ -105,9 +114,21 @@ public class GetNetworks200ApplicationJSONNetworks {
      */
     @JsonProperty("subnets")
     public GetNetworks200ApplicationJSONNetworksSubnets[] subnets;
+
     public GetNetworks200ApplicationJSONNetworks withSubnets(GetNetworks200ApplicationJSONNetworksSubnets[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public GetNetworks200ApplicationJSONNetworks(@JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("ip_range") String ipRange, @JsonProperty("labels") java.util.Map<String, Object> labels, @JsonProperty("name") String name, @JsonProperty("protection") GetNetworks200ApplicationJSONNetworksProtection protection, @JsonProperty("routes") GetNetworks200ApplicationJSONNetworksRoutes[] routes, @JsonProperty("servers") Long[] servers, @JsonProperty("subnets") GetNetworks200ApplicationJSONNetworksSubnets[] subnets) {
+        this.created = created;
+        this.id = id;
+        this.ipRange = ipRange;
+        this.labels = labels;
+        this.name = name;
+        this.protection = protection;
+        this.routes = routes;
+        this.servers = servers;
+        this.subnets = subnets;
+  }
 }

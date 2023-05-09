@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * CreateVerifiedAccessEndpointLoadBalancerOptions - Describes a load balancer when creating an Amazon Web Services Verified Access endpoint using the &lt;code&gt;load-balancer&lt;/code&gt; type.
+ * CreateVerifiedAccessEndpointLoadBalancerOptions - Describes the load balancer options when creating an Amazon Web Services Verified Access endpoint using the &lt;code&gt;load-balancer&lt;/code&gt; type.
  */
 public class CreateVerifiedAccessEndpointLoadBalancerOptions {
     
     public String loadBalancerArn;
+
     public CreateVerifiedAccessEndpointLoadBalancerOptions withLoadBalancerArn(String loadBalancerArn) {
         this.loadBalancerArn = loadBalancerArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVerifiedAccessEndpointLoadBalancerOptions {
     
     
     public Long port;
+
     public CreateVerifiedAccessEndpointLoadBalancerOptions withPort(Long port) {
         this.port = port;
         return this;
@@ -26,6 +28,7 @@ public class CreateVerifiedAccessEndpointLoadBalancerOptions {
     
     
     public VerifiedAccessEndpointProtocolEnum protocol;
+
     public CreateVerifiedAccessEndpointLoadBalancerOptions withProtocol(VerifiedAccessEndpointProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -33,9 +36,11 @@ public class CreateVerifiedAccessEndpointLoadBalancerOptions {
     
     
     public String[] subnetIds;
+
     public CreateVerifiedAccessEndpointLoadBalancerOptions withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
     }
     
+    public CreateVerifiedAccessEndpointLoadBalancerOptions(){}
 }

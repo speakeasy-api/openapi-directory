@@ -12,6 +12,7 @@ public class SettingTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public SettingTagModel withColor(String color) {
         this.color = color;
         return this;
@@ -20,6 +21,7 @@ public class SettingTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingTagModel withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class SettingTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingTagId")
     public Long settingTagId;
+
     public SettingTagModel withSettingTagId(Long settingTagId) {
         this.settingTagId = settingTagId;
         return this;
@@ -36,9 +39,11 @@ public class SettingTagModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public Long tagId;
+
     public SettingTagModel withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public SettingTagModel(){}
 }

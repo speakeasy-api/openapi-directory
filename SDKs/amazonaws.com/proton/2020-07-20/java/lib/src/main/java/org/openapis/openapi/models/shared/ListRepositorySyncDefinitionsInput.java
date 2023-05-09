@@ -12,6 +12,7 @@ public class ListRepositorySyncDefinitionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListRepositorySyncDefinitionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,6 +20,7 @@ public class ListRepositorySyncDefinitionsInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public ListRepositorySyncDefinitionsInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -26,6 +28,7 @@ public class ListRepositorySyncDefinitionsInput {
     
     @JsonProperty("repositoryProvider")
     public RepositoryProviderEnum repositoryProvider;
+
     public ListRepositorySyncDefinitionsInput withRepositoryProvider(RepositoryProviderEnum repositoryProvider) {
         this.repositoryProvider = repositoryProvider;
         return this;
@@ -33,9 +36,15 @@ public class ListRepositorySyncDefinitionsInput {
     
     @JsonProperty("syncType")
     public SyncTypeEnum syncType;
+
     public ListRepositorySyncDefinitionsInput withSyncType(SyncTypeEnum syncType) {
         this.syncType = syncType;
         return this;
     }
     
+    public ListRepositorySyncDefinitionsInput(@JsonProperty("repositoryName") String repositoryName, @JsonProperty("repositoryProvider") RepositoryProviderEnum repositoryProvider, @JsonProperty("syncType") SyncTypeEnum syncType) {
+        this.repositoryName = repositoryName;
+        this.repositoryProvider = repositoryProvider;
+        this.syncType = syncType;
+  }
 }

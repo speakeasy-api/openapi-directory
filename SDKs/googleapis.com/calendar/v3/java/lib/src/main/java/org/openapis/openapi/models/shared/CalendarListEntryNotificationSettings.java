@@ -18,9 +18,11 @@ public class CalendarListEntryNotificationSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifications")
     public CalendarNotification[] notifications;
+
     public CalendarListEntryNotificationSettings withNotifications(CalendarNotification[] notifications) {
         this.notifications = notifications;
         return this;
     }
     
+    public CalendarListEntryNotificationSettings(){}
 }

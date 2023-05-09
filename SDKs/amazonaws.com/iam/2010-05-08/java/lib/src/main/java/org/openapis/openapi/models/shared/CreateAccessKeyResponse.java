@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateAccessKeyResponse - Contains the response to a successful &lt;a&gt;CreateAccessKey&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateAccessKeyResponse {
     
     public AccessKey accessKey;
+
     public CreateAccessKeyResponse withAccessKey(AccessKey accessKey) {
         this.accessKey = accessKey;
         return this;
     }
     
+    public CreateAccessKeyResponse(@JsonProperty("AccessKey") AccessKey accessKey) {
+        this.accessKey = accessKey;
+  }
 }

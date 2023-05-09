@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 10
+ * GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest - Use this request to post all workflows associated with a given trigger id. Next available id: 11
  */
 public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     /**
@@ -18,6 +18,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreErrorIfNoActiveWorkflow")
     public Boolean ignoreErrorIfNoActiveWorkflow;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withIgnoreErrorIfNoActiveWorkflow(Boolean ignoreErrorIfNoActiveWorkflow) {
         this.ignoreErrorIfNoActiveWorkflow = ignoreErrorIfNoActiveWorkflow;
         return this;
@@ -40,6 +42,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public EnterpriseCrmEventbusProtoEventParameters parameters;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withParameters(EnterpriseCrmEventbusProtoEventParameters parameters) {
         this.parameters = parameters;
         return this;
@@ -51,6 +54,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequestPriorityEnum priority;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withPriority(GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequestPriorityEnum priority) {
         this.priority = priority;
         return this;
@@ -62,8 +66,21 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withRequestId(String requestId) {
         this.requestId = requestId;
+        return this;
+    }
+    
+    /**
+     * This field is only required when using Admin Access. The resource name of target, or the parent resource name. For example: "projects/* /locations/* /integrations/*"
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceName")
+    public String resourceName;
+
+    public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withResourceName(String resourceName) {
+        this.resourceName = resourceName;
         return this;
     }
     
@@ -73,6 +90,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledTime")
     public String scheduledTime;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withScheduledTime(String scheduledTime) {
         this.scheduledTime = scheduledTime;
         return this;
@@ -84,6 +102,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testMode")
     public Boolean testMode;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
@@ -95,6 +114,7 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerId")
     public String triggerId;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withTriggerId(String triggerId) {
         this.triggerId = triggerId;
         return this;
@@ -106,9 +126,11 @@ public class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowName")
     public String workflowName;
+
     public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest withWorkflowName(String workflowName) {
         this.workflowName = workflowName;
         return this;
     }
     
+    public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest(){}
 }

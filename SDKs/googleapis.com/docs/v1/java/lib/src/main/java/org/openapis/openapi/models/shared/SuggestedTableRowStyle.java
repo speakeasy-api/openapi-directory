@@ -18,6 +18,7 @@ public class SuggestedTableRowStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRowStyle")
     public TableRowStyle tableRowStyle;
+
     public SuggestedTableRowStyle withTableRowStyle(TableRowStyle tableRowStyle) {
         this.tableRowStyle = tableRowStyle;
         return this;
@@ -29,9 +30,11 @@ public class SuggestedTableRowStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRowStyleSuggestionState")
     public TableRowStyleSuggestionState tableRowStyleSuggestionState;
+
     public SuggestedTableRowStyle withTableRowStyleSuggestionState(TableRowStyleSuggestionState tableRowStyleSuggestionState) {
         this.tableRowStyleSuggestionState = tableRowStyleSuggestionState;
         return this;
     }
     
+    public SuggestedTableRowStyle(){}
 }

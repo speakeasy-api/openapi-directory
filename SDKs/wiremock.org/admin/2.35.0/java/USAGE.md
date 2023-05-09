@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAdminRequestsUnmatchedNearMissesResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             GetAdminRequestsUnmatchedNearMissesResponse res = sdk.nearMisses.getAdminRequestsUnmatchedNearMisses();
 
-            if (res.getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject.isPresent()) {
+            if (res.getAdminRequestsUnmatchedNearMisses200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

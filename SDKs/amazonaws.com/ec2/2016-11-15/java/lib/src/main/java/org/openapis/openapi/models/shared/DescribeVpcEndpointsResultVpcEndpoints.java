@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeVpcEndpointsResultVpcEndpoints {
     
     public OffsetDateTime creationTimestamp;
+
     public DescribeVpcEndpointsResultVpcEndpoints withCreationTimestamp(OffsetDateTime creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsDnsEntries[] dnsEntries;
+
     public DescribeVpcEndpointsResultVpcEndpoints withDnsEntries(DescribeVpcEndpointsResultVpcEndpointsDnsEntries[] dnsEntries) {
         this.dnsEntries = dnsEntries;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsDnsOptions dnsOptions;
+
     public DescribeVpcEndpointsResultVpcEndpoints withDnsOptions(DescribeVpcEndpointsResultVpcEndpointsDnsOptions dnsOptions) {
         this.dnsOptions = dnsOptions;
         return this;
@@ -33,6 +36,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsGroups[] groups;
+
     public DescribeVpcEndpointsResultVpcEndpoints withGroups(DescribeVpcEndpointsResultVpcEndpointsGroups[] groups) {
         this.groups = groups;
         return this;
@@ -40,6 +44,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsIpAddressTypeEnum ipAddressType;
+
     public DescribeVpcEndpointsResultVpcEndpoints withIpAddressType(DescribeVpcEndpointsResultVpcEndpointsIpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsLastError lastError;
+
     public DescribeVpcEndpointsResultVpcEndpoints withLastError(DescribeVpcEndpointsResultVpcEndpointsLastError lastError) {
         this.lastError = lastError;
         return this;
@@ -54,6 +60,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String[] networkInterfaceIds;
+
     public DescribeVpcEndpointsResultVpcEndpoints withNetworkInterfaceIds(String[] networkInterfaceIds) {
         this.networkInterfaceIds = networkInterfaceIds;
         return this;
@@ -61,6 +68,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String ownerId;
+
     public DescribeVpcEndpointsResultVpcEndpoints withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -68,6 +76,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String policyDocument;
+
     public DescribeVpcEndpointsResultVpcEndpoints withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -75,6 +84,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public Boolean privateDnsEnabled;
+
     public DescribeVpcEndpointsResultVpcEndpoints withPrivateDnsEnabled(Boolean privateDnsEnabled) {
         this.privateDnsEnabled = privateDnsEnabled;
         return this;
@@ -82,6 +92,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public Boolean requesterManaged;
+
     public DescribeVpcEndpointsResultVpcEndpoints withRequesterManaged(Boolean requesterManaged) {
         this.requesterManaged = requesterManaged;
         return this;
@@ -89,6 +100,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String[] routeTableIds;
+
     public DescribeVpcEndpointsResultVpcEndpoints withRouteTableIds(String[] routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
@@ -96,6 +108,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String serviceName;
+
     public DescribeVpcEndpointsResultVpcEndpoints withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -103,6 +116,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsStateEnum state;
+
     public DescribeVpcEndpointsResultVpcEndpoints withState(DescribeVpcEndpointsResultVpcEndpointsStateEnum state) {
         this.state = state;
         return this;
@@ -110,6 +124,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String[] subnetIds;
+
     public DescribeVpcEndpointsResultVpcEndpoints withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -117,6 +132,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsTags[] tags;
+
     public DescribeVpcEndpointsResultVpcEndpoints withTags(DescribeVpcEndpointsResultVpcEndpointsTags[] tags) {
         this.tags = tags;
         return this;
@@ -124,6 +140,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String vpcEndpointId;
+
     public DescribeVpcEndpointsResultVpcEndpoints withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -131,6 +148,7 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum vpcEndpointType;
+
     public DescribeVpcEndpointsResultVpcEndpoints withVpcEndpointType(DescribeVpcEndpointsResultVpcEndpointsVpcEndpointTypeEnum vpcEndpointType) {
         this.vpcEndpointType = vpcEndpointType;
         return this;
@@ -138,9 +156,11 @@ public class DescribeVpcEndpointsResultVpcEndpoints {
     
     
     public String vpcId;
+
     public DescribeVpcEndpointsResultVpcEndpoints withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcEndpointsResultVpcEndpoints(){}
 }

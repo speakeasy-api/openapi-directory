@@ -18,6 +18,7 @@ public class TrainingRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSplitResult")
     public DataSplitResult dataSplitResult;
+
     public TrainingRunInput withDataSplitResult(DataSplitResult dataSplitResult) {
         this.dataSplitResult = dataSplitResult;
         return this;
@@ -29,6 +30,7 @@ public class TrainingRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationMetrics")
     public EvaluationMetrics evaluationMetrics;
+
     public TrainingRunInput withEvaluationMetrics(EvaluationMetrics evaluationMetrics) {
         this.evaluationMetrics = evaluationMetrics;
         return this;
@@ -40,6 +42,7 @@ public class TrainingRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelLevelGlobalExplanation")
     public GlobalExplanation modelLevelGlobalExplanation;
+
     public TrainingRunInput withModelLevelGlobalExplanation(GlobalExplanation modelLevelGlobalExplanation) {
         this.modelLevelGlobalExplanation = modelLevelGlobalExplanation;
         return this;
@@ -51,6 +54,7 @@ public class TrainingRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingOptions")
     public TrainingOptions trainingOptions;
+
     public TrainingRunInput withTrainingOptions(TrainingOptions trainingOptions) {
         this.trainingOptions = trainingOptions;
         return this;
@@ -62,9 +66,11 @@ public class TrainingRunInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vertexAiModelId")
     public String vertexAiModelId;
+
     public TrainingRunInput withVertexAiModelId(String vertexAiModelId) {
         this.vertexAiModelId = vertexAiModelId;
         return this;
     }
     
+    public TrainingRunInput(){}
 }

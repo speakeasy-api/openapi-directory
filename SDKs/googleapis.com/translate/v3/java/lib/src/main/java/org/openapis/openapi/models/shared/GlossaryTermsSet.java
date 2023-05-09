@@ -18,9 +18,11 @@ public class GlossaryTermsSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public GlossaryTerm[] terms;
+
     public GlossaryTermsSet withTerms(GlossaryTerm[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public GlossaryTermsSet(){}
 }

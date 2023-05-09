@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreatenewscheduleRequest {
@@ -12,6 +13,7 @@ public class CreatenewscheduleRequest {
      */
     @SpeakeasyMetadata("request:mediaType=text/plain")
     public byte[] requestBody;
+
     public CreatenewscheduleRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class CreatenewscheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=device_id")
     public String deviceId;
+
     public CreatenewscheduleRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -32,9 +35,15 @@ public class CreatenewscheduleRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=module_id")
     public String moduleId;
+
     public CreatenewscheduleRequest withModuleId(String moduleId) {
         this.moduleId = moduleId;
         return this;
     }
     
+    public CreatenewscheduleRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("device_id") String deviceId, @JsonProperty("module_id") String moduleId) {
+        this.requestBody = requestBody;
+        this.deviceId = deviceId;
+        this.moduleId = moduleId;
+  }
 }

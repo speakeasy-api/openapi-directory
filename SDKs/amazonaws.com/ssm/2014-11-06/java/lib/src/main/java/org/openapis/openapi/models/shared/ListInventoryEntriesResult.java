@@ -15,6 +15,7 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaptureTime")
     public String captureTime;
+
     public ListInventoryEntriesResult withCaptureTime(String captureTime) {
         this.captureTime = captureTime;
         return this;
@@ -23,6 +24,7 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entries")
     public java.util.Map<String, String>[] entries;
+
     public ListInventoryEntriesResult withEntries(java.util.Map<String, String>[] entries) {
         this.entries = entries;
         return this;
@@ -31,6 +33,7 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ListInventoryEntriesResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -39,6 +42,7 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListInventoryEntriesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,6 +51,7 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public ListInventoryEntriesResult withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -55,9 +60,11 @@ public class ListInventoryEntriesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public ListInventoryEntriesResult withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ListInventoryEntriesResult(){}
 }

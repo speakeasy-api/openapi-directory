@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RollbackApplicationResponse {
@@ -12,6 +13,7 @@ public class RollbackApplicationResponse {
      */
     
     public Object concurrentModificationException;
+
     public RollbackApplicationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class RollbackApplicationResponse {
     
     
     public String contentType;
+
     public RollbackApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RollbackApplicationResponse {
      */
     
     public Object invalidArgumentException;
+
     public RollbackApplicationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -39,6 +43,7 @@ public class RollbackApplicationResponse {
      */
     
     public Object invalidRequestException;
+
     public RollbackApplicationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class RollbackApplicationResponse {
      */
     
     public Object resourceInUseException;
+
     public RollbackApplicationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class RollbackApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RollbackApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class RollbackApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.RollbackApplicationResponse rollbackApplicationResponse;
+
     public RollbackApplicationResponse withRollbackApplicationResponse(org.openapis.openapi.models.shared.RollbackApplicationResponse rollbackApplicationResponse) {
         this.rollbackApplicationResponse = rollbackApplicationResponse;
         return this;
@@ -76,6 +84,7 @@ public class RollbackApplicationResponse {
     
     
     public Integer statusCode;
+
     public RollbackApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class RollbackApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RollbackApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class RollbackApplicationResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RollbackApplicationResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public RollbackApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

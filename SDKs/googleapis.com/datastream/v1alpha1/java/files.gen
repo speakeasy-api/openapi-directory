@@ -152,4 +152,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/BackfillJob.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListStreamObjectsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartBackfillJobResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/StopBackfillJobResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

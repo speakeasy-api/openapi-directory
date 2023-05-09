@@ -12,6 +12,7 @@ public class Offer {
      */
     @JsonProperty("AvailableSalesChannels")
     public String availableSalesChannels;
+
     public Offer withAvailableSalesChannels(String availableSalesChannels) {
         this.availableSalesChannels = availableSalesChannels;
         return this;
@@ -19,6 +20,7 @@ public class Offer {
     
     @JsonProperty("OffersPerSalesChannel")
     public OffersPerSalesChannel[] offersPerSalesChannel;
+
     public Offer withOffersPerSalesChannel(OffersPerSalesChannel[] offersPerSalesChannel) {
         this.offersPerSalesChannel = offersPerSalesChannel;
         return this;
@@ -29,6 +31,7 @@ public class Offer {
      */
     @JsonProperty("SellerId")
     public String sellerId;
+
     public Offer withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -39,9 +42,16 @@ public class Offer {
      */
     @JsonProperty("SellerSkuId")
     public String sellerSkuId;
+
     public Offer withSellerSkuId(String sellerSkuId) {
         this.sellerSkuId = sellerSkuId;
         return this;
     }
     
+    public Offer(@JsonProperty("AvailableSalesChannels") String availableSalesChannels, @JsonProperty("OffersPerSalesChannel") OffersPerSalesChannel[] offersPerSalesChannel, @JsonProperty("SellerId") String sellerId, @JsonProperty("SellerSkuId") String sellerSkuId) {
+        this.availableSalesChannels = availableSalesChannels;
+        this.offersPerSalesChannel = offersPerSalesChannel;
+        this.sellerId = sellerId;
+        this.sellerSkuId = sellerSkuId;
+  }
 }

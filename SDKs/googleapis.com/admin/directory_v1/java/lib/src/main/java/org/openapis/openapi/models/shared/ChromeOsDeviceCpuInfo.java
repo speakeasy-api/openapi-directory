@@ -18,6 +18,7 @@ public class ChromeOsDeviceCpuInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public ChromeOsDeviceCpuInfo withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class ChromeOsDeviceCpuInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalCpus")
     public ChromeOsDeviceCpuInfoLogicalCpus[] logicalCpus;
+
     public ChromeOsDeviceCpuInfo withLogicalCpus(ChromeOsDeviceCpuInfoLogicalCpus[] logicalCpus) {
         this.logicalCpus = logicalCpus;
         return this;
@@ -40,6 +42,7 @@ public class ChromeOsDeviceCpuInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxClockSpeedKhz")
     public Integer maxClockSpeedKhz;
+
     public ChromeOsDeviceCpuInfo withMaxClockSpeedKhz(Integer maxClockSpeedKhz) {
         this.maxClockSpeedKhz = maxClockSpeedKhz;
         return this;
@@ -51,9 +54,11 @@ public class ChromeOsDeviceCpuInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public ChromeOsDeviceCpuInfo withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public ChromeOsDeviceCpuInfo(){}
 }

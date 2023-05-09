@@ -15,6 +15,7 @@ public class AwsRedshiftClusterClusterNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NodeRole")
     public String nodeRole;
+
     public AwsRedshiftClusterClusterNode withNodeRole(String nodeRole) {
         this.nodeRole = nodeRole;
         return this;
@@ -23,6 +24,7 @@ public class AwsRedshiftClusterClusterNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public AwsRedshiftClusterClusterNode withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -31,9 +33,11 @@ public class AwsRedshiftClusterClusterNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicIpAddress")
     public String publicIpAddress;
+
     public AwsRedshiftClusterClusterNode withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
     
+    public AwsRedshiftClusterClusterNode(){}
 }

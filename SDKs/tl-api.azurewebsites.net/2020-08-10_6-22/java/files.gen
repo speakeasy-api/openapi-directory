@@ -59,6 +59,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/ArticleGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AuthLoginResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GymGetRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GymGetResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/MembershipGetSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/MembershipGetResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/MembershipPostResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/PackageDeleteRequest.java
@@ -109,4 +110,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessageStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestDTO.java
 lib/src/main/java/org/openapis/openapi/models/shared/UserDTO.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/article/README.md
+docs/auth/README.md
+docs/gym/README.md
+docs/membership/README.md
+docs/package/README.md
+docs/status/README.md
+docs/test/README.md
+docs/user/README.md
 USAGE.md

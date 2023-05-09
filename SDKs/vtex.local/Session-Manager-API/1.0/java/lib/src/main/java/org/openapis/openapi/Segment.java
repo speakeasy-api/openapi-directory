@@ -48,10 +48,8 @@ public class Segment {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSegmentResponse res = new org.openapis.openapi.models.operations.GetSegmentResponse() {{
+        org.openapis.openapi.models.operations.GetSegmentResponse res = new org.openapis.openapi.models.operations.GetSegmentResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

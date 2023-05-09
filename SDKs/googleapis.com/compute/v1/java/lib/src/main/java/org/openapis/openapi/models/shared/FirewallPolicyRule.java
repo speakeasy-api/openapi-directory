@@ -18,6 +18,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public FirewallPolicyRule withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FirewallPolicyRule withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public FirewallPolicyRuleDirectionEnum direction;
+
     public FirewallPolicyRule withDirection(FirewallPolicyRuleDirectionEnum direction) {
         this.direction = direction;
         return this;
@@ -51,6 +54,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public FirewallPolicyRule withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -62,6 +66,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableLogging")
     public Boolean enableLogging;
+
     public FirewallPolicyRule withEnableLogging(Boolean enableLogging) {
         this.enableLogging = enableLogging;
         return this;
@@ -73,6 +78,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FirewallPolicyRule withKind(String kind) {
         this.kind = kind;
         return this;
@@ -84,6 +90,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public FirewallPolicyRuleMatcher match;
+
     public FirewallPolicyRule withMatch(FirewallPolicyRuleMatcher match) {
         this.match = match;
         return this;
@@ -95,6 +102,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public FirewallPolicyRule withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -106,6 +114,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleName")
     public String ruleName;
+
     public FirewallPolicyRule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -117,6 +126,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleTupleCount")
     public Integer ruleTupleCount;
+
     public FirewallPolicyRule withRuleTupleCount(Integer ruleTupleCount) {
         this.ruleTupleCount = ruleTupleCount;
         return this;
@@ -128,6 +138,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResources")
     public String[] targetResources;
+
     public FirewallPolicyRule withTargetResources(String[] targetResources) {
         this.targetResources = targetResources;
         return this;
@@ -139,6 +150,7 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSecureTags")
     public FirewallPolicyRuleSecureTag[] targetSecureTags;
+
     public FirewallPolicyRule withTargetSecureTags(FirewallPolicyRuleSecureTag[] targetSecureTags) {
         this.targetSecureTags = targetSecureTags;
         return this;
@@ -150,9 +162,11 @@ public class FirewallPolicyRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetServiceAccounts")
     public String[] targetServiceAccounts;
+
     public FirewallPolicyRule withTargetServiceAccounts(String[] targetServiceAccounts) {
         this.targetServiceAccounts = targetServiceAccounts;
         return this;
     }
     
+    public FirewallPolicyRule(){}
 }

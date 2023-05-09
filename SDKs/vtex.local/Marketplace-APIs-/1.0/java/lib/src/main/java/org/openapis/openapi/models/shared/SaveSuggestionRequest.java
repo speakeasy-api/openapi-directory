@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveSuggestionRequest {
     @JsonProperty("AvailableQuantity")
     public Integer availableQuantity;
+
     public SaveSuggestionRequest withAvailableQuantity(Integer availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -21,6 +22,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("BrandName")
     public String brandName;
+
     public SaveSuggestionRequest withBrandName(String brandName) {
         this.brandName = brandName;
         return this;
@@ -31,6 +33,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("CategoryFullPath")
     public String categoryFullPath;
+
     public SaveSuggestionRequest withCategoryFullPath(String categoryFullPath) {
         this.categoryFullPath = categoryFullPath;
         return this;
@@ -41,6 +44,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("EAN")
     public String ean;
+
     public SaveSuggestionRequest withEan(String ean) {
         this.ean = ean;
         return this;
@@ -51,6 +55,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("Height")
     public Long height;
+
     public SaveSuggestionRequest withHeight(Long height) {
         this.height = height;
         return this;
@@ -61,6 +66,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("Images")
     public Image[] images;
+
     public SaveSuggestionRequest withImages(Image[] images) {
         this.images = images;
         return this;
@@ -71,6 +77,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("Length")
     public Long length;
+
     public SaveSuggestionRequest withLength(Long length) {
         this.length = length;
         return this;
@@ -82,6 +89,7 @@ public class SaveSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasurementUnit")
     public String measurementUnit;
+
     public SaveSuggestionRequest withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -89,6 +97,7 @@ public class SaveSuggestionRequest {
     
     @JsonProperty("Pricing")
     public SaveSuggestionRequestPricing pricing;
+
     public SaveSuggestionRequest withPricing(SaveSuggestionRequestPricing pricing) {
         this.pricing = pricing;
         return this;
@@ -99,6 +108,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("ProductDescription")
     public String productDescription;
+
     public SaveSuggestionRequest withProductDescription(String productDescription) {
         this.productDescription = productDescription;
         return this;
@@ -109,6 +119,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("ProductId")
     public String productId;
+
     public SaveSuggestionRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -119,6 +130,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("ProductName")
     public String productName;
+
     public SaveSuggestionRequest withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -130,6 +142,7 @@ public class SaveSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductSpecifications")
     public ProductSpecification[] productSpecifications;
+
     public SaveSuggestionRequest withProductSpecifications(ProductSpecification[] productSpecifications) {
         this.productSpecifications = productSpecifications;
         return this;
@@ -140,6 +153,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("RefId")
     public String refId;
+
     public SaveSuggestionRequest withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -150,6 +164,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("SellerId")
     public String sellerId;
+
     public SaveSuggestionRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -161,6 +176,7 @@ public class SaveSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SellerStockKeepingUnitId")
     public Integer sellerStockKeepingUnitId;
+
     public SaveSuggestionRequest withSellerStockKeepingUnitId(Integer sellerStockKeepingUnitId) {
         this.sellerStockKeepingUnitId = sellerStockKeepingUnitId;
         return this;
@@ -171,6 +187,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("SkuName")
     public String skuName;
+
     public SaveSuggestionRequest withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
@@ -182,6 +199,7 @@ public class SaveSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SkuSpecifications")
     public SkuSpecification[] skuSpecifications;
+
     public SaveSuggestionRequest withSkuSpecifications(SkuSpecification[] skuSpecifications) {
         this.skuSpecifications = skuSpecifications;
         return this;
@@ -193,6 +211,7 @@ public class SaveSuggestionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnitMultiplier")
     public Integer unitMultiplier;
+
     public SaveSuggestionRequest withUnitMultiplier(Integer unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
@@ -203,6 +222,7 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("Weight")
     public Long weight;
+
     public SaveSuggestionRequest withWeight(Long weight) {
         this.weight = weight;
         return this;
@@ -213,9 +233,28 @@ public class SaveSuggestionRequest {
      */
     @JsonProperty("Width")
     public Long width;
+
     public SaveSuggestionRequest withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public SaveSuggestionRequest(@JsonProperty("AvailableQuantity") Integer availableQuantity, @JsonProperty("BrandName") String brandName, @JsonProperty("CategoryFullPath") String categoryFullPath, @JsonProperty("EAN") String ean, @JsonProperty("Height") Long height, @JsonProperty("Images") Image[] images, @JsonProperty("Length") Long length, @JsonProperty("Pricing") SaveSuggestionRequestPricing pricing, @JsonProperty("ProductDescription") String productDescription, @JsonProperty("ProductId") String productId, @JsonProperty("ProductName") String productName, @JsonProperty("RefId") String refId, @JsonProperty("SellerId") String sellerId, @JsonProperty("SkuName") String skuName, @JsonProperty("Weight") Long weight, @JsonProperty("Width") Long width) {
+        this.availableQuantity = availableQuantity;
+        this.brandName = brandName;
+        this.categoryFullPath = categoryFullPath;
+        this.ean = ean;
+        this.height = height;
+        this.images = images;
+        this.length = length;
+        this.pricing = pricing;
+        this.productDescription = productDescription;
+        this.productId = productId;
+        this.productName = productName;
+        this.refId = refId;
+        this.sellerId = sellerId;
+        this.skuName = skuName;
+        this.weight = weight;
+        this.width = width;
+  }
 }

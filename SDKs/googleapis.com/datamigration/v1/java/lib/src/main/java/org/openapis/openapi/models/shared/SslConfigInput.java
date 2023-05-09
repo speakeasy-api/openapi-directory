@@ -18,6 +18,7 @@ public class SslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificate")
     public String caCertificate;
+
     public SslConfigInput withCaCertificate(String caCertificate) {
         this.caCertificate = caCertificate;
         return this;
@@ -29,6 +30,7 @@ public class SslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public String clientCertificate;
+
     public SslConfigInput withClientCertificate(String clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -40,9 +42,11 @@ public class SslConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientKey")
     public String clientKey;
+
     public SslConfigInput withClientKey(String clientKey) {
         this.clientKey = clientKey;
         return this;
     }
     
+    public SslConfigInput(){}
 }

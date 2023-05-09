@@ -4,14 +4,30 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagResourceRequestBody {
     /**
-     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resoure Name (ARN)&lt;/a&gt; of the resource share that you want to add tags to.
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the managed permission that you want to add tags to. You must specify &lt;i&gt;either&lt;/i&gt; &lt;code&gt;resourceArn&lt;/code&gt;, or &lt;code&gt;resourceShareArn&lt;/code&gt;, but not both.
      */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceArn")
+    public String resourceArn;
+
+    public TagResourceRequestBody withResourceArn(String resourceArn) {
+        this.resourceArn = resourceArn;
+        return this;
+    }
+    
+    /**
+     * Specifies the &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt;Amazon Resource Name (ARN)&lt;/a&gt; of the resource share that you want to add tags to. You must specify &lt;i&gt;either&lt;/i&gt; &lt;code&gt;resourceShareArn&lt;/code&gt;, or &lt;code&gt;resourceArn&lt;/code&gt;, but not both.
+     */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShareArn")
     public String resourceShareArn;
+
     public TagResourceRequestBody withResourceShareArn(String resourceShareArn) {
         this.resourceShareArn = resourceShareArn;
         return this;
@@ -22,9 +38,13 @@ public class TagResourceRequestBody {
      */
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.Tag[] tags;
+
     public TagResourceRequestBody withTags(org.openapis.openapi.models.shared.Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("tags") org.openapis.openapi.models.shared.Tag[] tags) {
+        this.tags = tags;
+  }
 }

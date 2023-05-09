@@ -15,6 +15,7 @@ public class FormResponseSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contribution")
     public String contribution;
+
     public FormResponseSubmission withContribution(String contribution) {
         this.contribution = contribution;
         return this;
@@ -23,6 +24,7 @@ public class FormResponseSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form")
     public String form;
+
     public FormResponseSubmission withForm(String form) {
         this.form = form;
         return this;
@@ -31,9 +33,11 @@ public class FormResponseSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public java.util.Map<String, String> responses;
+
     public FormResponseSubmission withResponses(java.util.Map<String, String> responses) {
         this.responses = responses;
         return this;
     }
     
+    public FormResponseSubmission(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications {
     
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications withResourceType(CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequest
     
     
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags[] tags;
+
     public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications withTags(CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateLocalGatewayRouteTableVirtualInterfaceGroupAssociationRequestTagSpecifications(){}
 }

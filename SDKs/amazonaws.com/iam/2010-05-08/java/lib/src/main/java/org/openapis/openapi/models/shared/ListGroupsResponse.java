@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListGroupsResponse - Contains the response to a successful &lt;a&gt;ListGroups&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListGroupsResponse {
     
     public Group[] groups;
+
     public ListGroupsResponse withGroups(Group[] groups) {
         this.groups = groups;
         return this;
@@ -19,6 +20,7 @@ public class ListGroupsResponse {
     
     
     public Boolean isTruncated;
+
     public ListGroupsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,13 @@ public class ListGroupsResponse {
     
     
     public String marker;
+
     public ListGroupsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListGroupsResponse(@JsonProperty("Groups") Group[] groups) {
+        this.groups = groups;
+  }
 }

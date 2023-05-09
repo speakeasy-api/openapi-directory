@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Betslipleg {
     @JsonProperty("parts")
     public Betslippart[] parts;
+
     public Betslipleg withParts(Betslippart[] parts) {
         this.parts = parts;
         return this;
@@ -22,6 +23,7 @@ public class Betslipleg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sort")
     public String sort;
+
     public Betslipleg withSort(String sort) {
         this.sort = sort;
         return this;
@@ -32,9 +34,14 @@ public class Betslipleg {
      */
     @JsonProperty("type")
     public String type;
+
     public Betslipleg withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Betslipleg(@JsonProperty("parts") Betslippart[] parts, @JsonProperty("type") String type) {
+        this.parts = parts;
+        this.type = type;
+  }
 }

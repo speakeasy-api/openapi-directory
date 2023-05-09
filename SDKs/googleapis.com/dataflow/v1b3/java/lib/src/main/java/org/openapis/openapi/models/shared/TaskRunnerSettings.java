@@ -18,6 +18,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alsologtostderr")
     public Boolean alsologtostderr;
+
     public TaskRunnerSettings withAlsologtostderr(Boolean alsologtostderr) {
         this.alsologtostderr = alsologtostderr;
         return this;
@@ -29,6 +30,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTaskDir")
     public String baseTaskDir;
+
     public TaskRunnerSettings withBaseTaskDir(String baseTaskDir) {
         this.baseTaskDir = baseTaskDir;
         return this;
@@ -40,6 +42,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseUrl")
     public String baseUrl;
+
     public TaskRunnerSettings withBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
         return this;
@@ -51,6 +54,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandlinesFileName")
     public String commandlinesFileName;
+
     public TaskRunnerSettings withCommandlinesFileName(String commandlinesFileName) {
         this.commandlinesFileName = commandlinesFileName;
         return this;
@@ -62,6 +66,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("continueOnException")
     public Boolean continueOnException;
+
     public TaskRunnerSettings withContinueOnException(Boolean continueOnException) {
         this.continueOnException = continueOnException;
         return this;
@@ -73,6 +78,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataflowApiVersion")
     public String dataflowApiVersion;
+
     public TaskRunnerSettings withDataflowApiVersion(String dataflowApiVersion) {
         this.dataflowApiVersion = dataflowApiVersion;
         return this;
@@ -84,6 +90,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harnessCommand")
     public String harnessCommand;
+
     public TaskRunnerSettings withHarnessCommand(String harnessCommand) {
         this.harnessCommand = harnessCommand;
         return this;
@@ -95,6 +102,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageHint")
     public String languageHint;
+
     public TaskRunnerSettings withLanguageHint(String languageHint) {
         this.languageHint = languageHint;
         return this;
@@ -106,6 +114,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logDir")
     public String logDir;
+
     public TaskRunnerSettings withLogDir(String logDir) {
         this.logDir = logDir;
         return this;
@@ -117,6 +126,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logToSerialconsole")
     public Boolean logToSerialconsole;
+
     public TaskRunnerSettings withLogToSerialconsole(Boolean logToSerialconsole) {
         this.logToSerialconsole = logToSerialconsole;
         return this;
@@ -128,6 +138,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logUploadLocation")
     public String logUploadLocation;
+
     public TaskRunnerSettings withLogUploadLocation(String logUploadLocation) {
         this.logUploadLocation = logUploadLocation;
         return this;
@@ -139,6 +150,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauthScopes")
     public String[] oauthScopes;
+
     public TaskRunnerSettings withOauthScopes(String[] oauthScopes) {
         this.oauthScopes = oauthScopes;
         return this;
@@ -150,6 +162,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelWorkerSettings")
     public WorkerSettings parallelWorkerSettings;
+
     public TaskRunnerSettings withParallelWorkerSettings(WorkerSettings parallelWorkerSettings) {
         this.parallelWorkerSettings = parallelWorkerSettings;
         return this;
@@ -161,6 +174,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingWorkerMainClass")
     public String streamingWorkerMainClass;
+
     public TaskRunnerSettings withStreamingWorkerMainClass(String streamingWorkerMainClass) {
         this.streamingWorkerMainClass = streamingWorkerMainClass;
         return this;
@@ -172,6 +186,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskGroup")
     public String taskGroup;
+
     public TaskRunnerSettings withTaskGroup(String taskGroup) {
         this.taskGroup = taskGroup;
         return this;
@@ -183,6 +198,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskUser")
     public String taskUser;
+
     public TaskRunnerSettings withTaskUser(String taskUser) {
         this.taskUser = taskUser;
         return this;
@@ -194,6 +210,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tempStoragePrefix")
     public String tempStoragePrefix;
+
     public TaskRunnerSettings withTempStoragePrefix(String tempStoragePrefix) {
         this.tempStoragePrefix = tempStoragePrefix;
         return this;
@@ -205,6 +222,7 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public TaskRunnerSettings withVmId(String vmId) {
         this.vmId = vmId;
         return this;
@@ -216,9 +234,11 @@ public class TaskRunnerSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowFileName")
     public String workflowFileName;
+
     public TaskRunnerSettings withWorkflowFileName(String workflowFileName) {
         this.workflowFileName = workflowFileName;
         return this;
     }
     
+    public TaskRunnerSettings(){}
 }

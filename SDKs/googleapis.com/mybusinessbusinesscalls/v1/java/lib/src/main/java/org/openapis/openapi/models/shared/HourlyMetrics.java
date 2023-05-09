@@ -18,6 +18,7 @@ public class HourlyMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public Integer hour;
+
     public HourlyMetrics withHour(Integer hour) {
         this.hour = hour;
         return this;
@@ -29,9 +30,11 @@ public class HourlyMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missedCallsCount")
     public Integer missedCallsCount;
+
     public HourlyMetrics withMissedCallsCount(Integer missedCallsCount) {
         this.missedCallsCount = missedCallsCount;
         return this;
     }
     
+    public HourlyMetrics(){}
 }

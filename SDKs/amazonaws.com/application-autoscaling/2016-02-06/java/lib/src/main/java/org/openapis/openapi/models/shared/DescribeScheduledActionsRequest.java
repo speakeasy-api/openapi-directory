@@ -12,6 +12,7 @@ public class DescribeScheduledActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeScheduledActionsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class DescribeScheduledActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeScheduledActionsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class DescribeScheduledActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DescribeScheduledActionsRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -36,6 +39,7 @@ public class DescribeScheduledActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public DescribeScheduledActionsRequest withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -44,6 +48,7 @@ public class DescribeScheduledActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledActionNames")
     public String[] scheduledActionNames;
+
     public DescribeScheduledActionsRequest withScheduledActionNames(String[] scheduledActionNames) {
         this.scheduledActionNames = scheduledActionNames;
         return this;
@@ -51,9 +56,13 @@ public class DescribeScheduledActionsRequest {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public DescribeScheduledActionsRequest withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
     }
     
+    public DescribeScheduledActionsRequest(@JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.serviceNamespace = serviceNamespace;
+  }
 }

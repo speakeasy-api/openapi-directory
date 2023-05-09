@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GroupMetaData {
     @JsonProperty("createdBy")
     public String createdBy;
+
     public GroupMetaData withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -26,6 +27,7 @@ public class GroupMetaData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdOn")
     public OffsetDateTime createdOn;
+
     public GroupMetaData withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -33,6 +35,7 @@ public class GroupMetaData {
     
     @JsonProperty("description")
     public String description;
+
     public GroupMetaData withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class GroupMetaData {
      */
     @JsonProperty("id")
     public String id;
+
     public GroupMetaData withId(String id) {
         this.id = id;
         return this;
@@ -50,6 +54,7 @@ public class GroupMetaData {
     
     @JsonProperty("modifiedBy")
     public String modifiedBy;
+
     public GroupMetaData withModifiedBy(String modifiedBy) {
         this.modifiedBy = modifiedBy;
         return this;
@@ -59,6 +64,7 @@ public class GroupMetaData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modifiedOn")
     public OffsetDateTime modifiedOn;
+
     public GroupMetaData withModifiedOn(OffsetDateTime modifiedOn) {
         this.modifiedOn = modifiedOn;
         return this;
@@ -69,9 +75,19 @@ public class GroupMetaData {
      */
     @JsonProperty("properties")
     public java.util.Map<String, String> properties;
+
     public GroupMetaData withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
     }
     
+    public GroupMetaData(@JsonProperty("createdBy") String createdBy, @JsonProperty("createdOn") OffsetDateTime createdOn, @JsonProperty("description") String description, @JsonProperty("id") String id, @JsonProperty("modifiedBy") String modifiedBy, @JsonProperty("modifiedOn") OffsetDateTime modifiedOn, @JsonProperty("properties") java.util.Map<String, String> properties) {
+        this.createdBy = createdBy;
+        this.createdOn = createdOn;
+        this.description = description;
+        this.id = id;
+        this.modifiedBy = modifiedBy;
+        this.modifiedOn = modifiedOn;
+        this.properties = properties;
+  }
 }

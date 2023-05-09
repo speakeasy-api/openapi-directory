@@ -15,6 +15,7 @@ public class EventIncludedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseData")
     public CaseEventIncludedData caseData;
+
     public EventIncludedData withCaseData(CaseEventIncludedData caseData) {
         this.caseData = caseData;
         return this;
@@ -23,9 +24,11 @@ public class EventIncludedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedItemData")
     public RelatedItemEventIncludedData relatedItemData;
+
     public EventIncludedData withRelatedItemData(RelatedItemEventIncludedData relatedItemData) {
         this.relatedItemData = relatedItemData;
         return this;
     }
     
+    public EventIncludedData(){}
 }

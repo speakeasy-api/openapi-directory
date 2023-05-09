@@ -15,6 +15,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,6 +24,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointFavourite")
     public Boolean datapointFavourite;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDatapointFavourite(Boolean datapointFavourite) {
         this.datapointFavourite = datapointFavourite;
         return this;
@@ -31,6 +33,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointId")
     public Long datapointId;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDatapointId(Long datapointId) {
         this.datapointId = datapointId;
         return this;
@@ -39,6 +42,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointName")
     public String datapointName;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDatapointName(String datapointName) {
         this.datapointName = datapointName;
         return this;
@@ -47,6 +51,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointTitle")
     public String datapointTitle;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDatapointTitle(String datapointTitle) {
         this.datapointTitle = datapointTitle;
         return this;
@@ -55,6 +60,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datapointType")
     public String datapointType;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDatapointType(String datapointType) {
         this.datapointType = datapointType;
         return this;
@@ -63,6 +69,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationUrl")
     public String destinationUrl;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withDestinationUrl(String destinationUrl) {
         this.destinationUrl = destinationUrl;
         return this;
@@ -71,6 +78,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupId")
     public Long groupId;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -79,6 +87,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -87,6 +96,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isABTest")
     public Boolean isABTest;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withIsABTest(Boolean isABTest) {
         this.isABTest = isABTest;
         return this;
@@ -95,6 +105,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrivateShared")
     public Boolean isPrivateShared;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withIsPrivateShared(Boolean isPrivateShared) {
         this.isPrivateShared = isPrivateShared;
         return this;
@@ -103,6 +114,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -111,6 +123,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -119,6 +132,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ApiCoreDtoClickStreamHitDatapointInfoStatusEnum status;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withStatus(ApiCoreDtoClickStreamHitDatapointInfoStatusEnum status) {
         this.status = status;
         return this;
@@ -127,6 +141,7 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public ApiCoreDtoTagsTag[] tags;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withTags(ApiCoreDtoTagsTag[] tags) {
         this.tags = tags;
         return this;
@@ -135,9 +150,11 @@ public class ApiCoreDtoClickStreamHitDatapointInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingCode")
     public String trackingCode;
+
     public ApiCoreDtoClickStreamHitDatapointInfo withTrackingCode(String trackingCode) {
         this.trackingCode = trackingCode;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitDatapointInfo(){}
 }

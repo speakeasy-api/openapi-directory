@@ -15,9 +15,11 @@ public class CopyProductOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyProductToken")
     public String copyProductToken;
+
     public CopyProductOutput withCopyProductToken(String copyProductToken) {
         this.copyProductToken = copyProductToken;
         return this;
     }
     
+    public CopyProductOutput(){}
 }

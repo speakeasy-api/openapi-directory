@@ -12,6 +12,7 @@ public class PostAuthJwt200ApplicationJSON {
      */
     @JsonProperty("jwt_token")
     public String jwtToken;
+
     public PostAuthJwt200ApplicationJSON withJwtToken(String jwtToken) {
         this.jwtToken = jwtToken;
         return this;
@@ -22,9 +23,14 @@ public class PostAuthJwt200ApplicationJSON {
      */
     @JsonProperty("payload")
     public java.util.Map<String, Object> payload;
+
     public PostAuthJwt200ApplicationJSON withPayload(java.util.Map<String, Object> payload) {
         this.payload = payload;
         return this;
     }
     
+    public PostAuthJwt200ApplicationJSON(@JsonProperty("jwt_token") String jwtToken, @JsonProperty("payload") java.util.Map<String, Object> payload) {
+        this.jwtToken = jwtToken;
+        this.payload = payload;
+  }
 }

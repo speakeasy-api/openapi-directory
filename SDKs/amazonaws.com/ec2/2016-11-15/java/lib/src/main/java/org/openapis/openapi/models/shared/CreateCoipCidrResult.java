@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateCoipCidrResult {
     
     public CreateCoipCidrResultCoipCidr coipCidr;
+
     public CreateCoipCidrResult withCoipCidr(CreateCoipCidrResultCoipCidr coipCidr) {
         this.coipCidr = coipCidr;
         return this;
     }
     
+    public CreateCoipCidrResult(){}
 }

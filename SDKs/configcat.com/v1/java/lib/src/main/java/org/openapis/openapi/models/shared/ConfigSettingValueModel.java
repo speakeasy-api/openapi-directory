@@ -17,6 +17,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationLinks")
     public IntegrationLinkModel[] integrationLinks;
+
     public ConfigSettingValueModel withIntegrationLinks(IntegrationLinkModel[] integrationLinks) {
         this.integrationLinks = integrationLinks;
         return this;
@@ -25,6 +26,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterUserEmail")
     public String lastUpdaterUserEmail;
+
     public ConfigSettingValueModel withLastUpdaterUserEmail(String lastUpdaterUserEmail) {
         this.lastUpdaterUserEmail = lastUpdaterUserEmail;
         return this;
@@ -33,6 +35,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdaterUserFullName")
     public String lastUpdaterUserFullName;
+
     public ConfigSettingValueModel withLastUpdaterUserFullName(String lastUpdaterUserFullName) {
         this.lastUpdaterUserFullName = lastUpdaterUserFullName;
         return this;
@@ -44,6 +47,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutPercentageItems")
     public RolloutPercentageItemModel[] rolloutPercentageItems;
+
     public ConfigSettingValueModel withRolloutPercentageItems(RolloutPercentageItemModel[] rolloutPercentageItems) {
         this.rolloutPercentageItems = rolloutPercentageItems;
         return this;
@@ -55,6 +59,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutRules")
     public RolloutRuleModel[] rolloutRules;
+
     public ConfigSettingValueModel withRolloutRules(RolloutRuleModel[] rolloutRules) {
         this.rolloutRules = rolloutRules;
         return this;
@@ -63,6 +68,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setting")
     public SettingDataModel setting;
+
     public ConfigSettingValueModel withSetting(SettingDataModel setting) {
         this.setting = setting;
         return this;
@@ -71,6 +77,7 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settingTags")
     public SettingTagModel[] settingTags;
+
     public ConfigSettingValueModel withSettingTags(SettingTagModel[] settingTags) {
         this.settingTags = settingTags;
         return this;
@@ -81,6 +88,7 @@ public class ConfigSettingValueModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public ConfigSettingValueModel withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -92,9 +100,11 @@ public class ConfigSettingValueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public ConfigSettingValueModel withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public ConfigSettingValueModel(){}
 }

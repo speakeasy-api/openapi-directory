@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ComputeNetworkEdgeSecurityServicesPatchRequest {
@@ -12,6 +13,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NetworkEdgeSecurityService networkEdgeSecurityService1;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withNetworkEdgeSecurityService1(org.openapis.openapi.models.shared.NetworkEdgeSecurityService networkEdgeSecurityService1) {
         this.networkEdgeSecurityService1 = networkEdgeSecurityService1;
         return this;
@@ -29,6 +32,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=networkEdgeSecurityService")
     public String networkEdgeSecurityServicePathParameter;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withNetworkEdgeSecurityServicePathParameter(String networkEdgeSecurityServicePathParameter) {
         this.networkEdgeSecurityServicePathParameter = networkEdgeSecurityServicePathParameter;
         return this;
@@ -89,6 +98,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -96,6 +106,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=paths")
     public String[] paths;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -106,6 +117,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -116,6 +128,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withProject(String project) {
         this.project = project;
         return this;
@@ -126,6 +139,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -136,6 +150,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=region")
     public String region;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withRegion(String region) {
         this.region = region;
         return this;
@@ -146,6 +161,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -156,6 +172,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -166,6 +183,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -176,6 +194,7 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -186,9 +205,15 @@ public class ComputeNetworkEdgeSecurityServicesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public ComputeNetworkEdgeSecurityServicesPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public ComputeNetworkEdgeSecurityServicesPatchRequest(@JsonProperty("networkEdgeSecurityServicePathParameter") String networkEdgeSecurityServicePathParameter, @JsonProperty("project") String project, @JsonProperty("region") String region) {
+        this.networkEdgeSecurityServicePathParameter = networkEdgeSecurityServicePathParameter;
+        this.project = project;
+        this.region = region;
+  }
 }

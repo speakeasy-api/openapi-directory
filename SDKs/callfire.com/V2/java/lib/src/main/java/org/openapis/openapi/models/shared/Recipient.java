@@ -18,6 +18,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, String> attributes;
+
     public Recipient withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -29,6 +30,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contactId")
     public Long contactId;
+
     public Recipient withContactId(Long contactId) {
         this.contactId = contactId;
         return this;
@@ -40,6 +42,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromNumber")
     public String fromNumber;
+
     public Recipient withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -51,9 +54,11 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Recipient withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public Recipient(){}
 }

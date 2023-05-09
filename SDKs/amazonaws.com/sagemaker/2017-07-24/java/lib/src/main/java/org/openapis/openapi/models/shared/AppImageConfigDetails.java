@@ -20,6 +20,7 @@ public class AppImageConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppImageConfigArn")
     public String appImageConfigArn;
+
     public AppImageConfigDetails withAppImageConfigArn(String appImageConfigArn) {
         this.appImageConfigArn = appImageConfigArn;
         return this;
@@ -28,6 +29,7 @@ public class AppImageConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppImageConfigName")
     public String appImageConfigName;
+
     public AppImageConfigDetails withAppImageConfigName(String appImageConfigName) {
         this.appImageConfigName = appImageConfigName;
         return this;
@@ -38,6 +40,7 @@ public class AppImageConfigDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public AppImageConfigDetails withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class AppImageConfigDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KernelGatewayImageConfig")
     public KernelGatewayImageConfig kernelGatewayImageConfig;
+
     public AppImageConfigDetails withKernelGatewayImageConfig(KernelGatewayImageConfig kernelGatewayImageConfig) {
         this.kernelGatewayImageConfig = kernelGatewayImageConfig;
         return this;
@@ -56,9 +60,11 @@ public class AppImageConfigDetails {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public AppImageConfigDetails withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
     }
     
+    public AppImageConfigDetails(){}
 }

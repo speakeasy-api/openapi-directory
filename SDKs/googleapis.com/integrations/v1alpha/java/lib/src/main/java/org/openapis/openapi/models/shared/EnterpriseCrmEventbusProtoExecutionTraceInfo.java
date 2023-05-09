@@ -18,6 +18,7 @@ public class EnterpriseCrmEventbusProtoExecutionTraceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEventExecutionInfoId")
     public String parentEventExecutionInfoId;
+
     public EnterpriseCrmEventbusProtoExecutionTraceInfo withParentEventExecutionInfoId(String parentEventExecutionInfoId) {
         this.parentEventExecutionInfoId = parentEventExecutionInfoId;
         return this;
@@ -29,9 +30,11 @@ public class EnterpriseCrmEventbusProtoExecutionTraceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traceId")
     public String traceId;
+
     public EnterpriseCrmEventbusProtoExecutionTraceInfo withTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
     
+    public EnterpriseCrmEventbusProtoExecutionTraceInfo(){}
 }

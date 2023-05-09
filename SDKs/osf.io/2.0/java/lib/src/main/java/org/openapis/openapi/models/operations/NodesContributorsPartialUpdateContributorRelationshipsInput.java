@@ -15,9 +15,13 @@ public class NodesContributorsPartialUpdateContributorRelationshipsInput {
      */
     @JsonProperty("user")
     public String user;
+
     public NodesContributorsPartialUpdateContributorRelationshipsInput withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public NodesContributorsPartialUpdateContributorRelationshipsInput(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

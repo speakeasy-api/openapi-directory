@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutTargetsResponse {
@@ -12,6 +13,7 @@ public class PutTargetsResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutTargetsResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class PutTargetsResponse {
     
     
     public String contentType;
+
     public PutTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutTargetsResponse {
      */
     
     public Object internalException;
+
     public PutTargetsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class PutTargetsResponse {
      */
     
     public Object limitExceededException;
+
     public PutTargetsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutTargetsResponse {
      */
     
     public Object managedRuleException;
+
     public PutTargetsResponse withManagedRuleException(Object managedRuleException) {
         this.managedRuleException = managedRuleException;
         return this;
@@ -59,6 +65,7 @@ public class PutTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.PutTargetsResponse putTargetsResponse;
+
     public PutTargetsResponse withPutTargetsResponse(org.openapis.openapi.models.shared.PutTargetsResponse putTargetsResponse) {
         this.putTargetsResponse = putTargetsResponse;
         return this;
@@ -69,6 +76,7 @@ public class PutTargetsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutTargetsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class PutTargetsResponse {
     
     
     public Integer statusCode;
+
     public PutTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

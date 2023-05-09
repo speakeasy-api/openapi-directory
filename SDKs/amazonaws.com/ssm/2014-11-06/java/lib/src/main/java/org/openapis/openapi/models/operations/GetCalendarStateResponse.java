@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCalendarStateResponse {
     
     public String contentType;
+
     public GetCalendarStateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetCalendarStateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCalendarStateResponse getCalendarStateResponse;
+
     public GetCalendarStateResponse withGetCalendarStateResponse(org.openapis.openapi.models.shared.GetCalendarStateResponse getCalendarStateResponse) {
         this.getCalendarStateResponse = getCalendarStateResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetCalendarStateResponse {
      */
     
     public Object internalServerError;
+
     public GetCalendarStateResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetCalendarStateResponse {
      */
     
     public Object invalidDocument;
+
     public GetCalendarStateResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -49,6 +54,7 @@ public class GetCalendarStateResponse {
      */
     
     public Object invalidDocumentType;
+
     public GetCalendarStateResponse withInvalidDocumentType(Object invalidDocumentType) {
         this.invalidDocumentType = invalidDocumentType;
         return this;
@@ -56,6 +62,7 @@ public class GetCalendarStateResponse {
     
     
     public Integer statusCode;
+
     public GetCalendarStateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetCalendarStateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCalendarStateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetCalendarStateResponse {
      */
     
     public Object unsupportedCalendarException;
+
     public GetCalendarStateResponse withUnsupportedCalendarException(Object unsupportedCalendarException) {
         this.unsupportedCalendarException = unsupportedCalendarException;
         return this;
     }
     
+    public GetCalendarStateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awayTeam")
     public String awayTeam;
+
     public PregameWP withAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
         return this;
@@ -20,6 +21,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gameId")
     public Long gameId;
+
     public PregameWP withGameId(Long gameId) {
         this.gameId = gameId;
         return this;
@@ -28,6 +30,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeTeam")
     public String homeTeam;
+
     public PregameWP withHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
         return this;
@@ -36,6 +39,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("homeWinProb")
     public Double homeWinProb;
+
     public PregameWP withHomeWinProb(Double homeWinProb) {
         this.homeWinProb = homeWinProb;
         return this;
@@ -44,6 +48,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("season")
     public Long season;
+
     public PregameWP withSeason(Long season) {
         this.season = season;
         return this;
@@ -52,6 +57,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seasonType")
     public String seasonType;
+
     public PregameWP withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -60,6 +66,7 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spread")
     public Double spread;
+
     public PregameWP withSpread(Double spread) {
         this.spread = spread;
         return this;
@@ -68,9 +75,11 @@ public class PregameWP {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public Long week;
+
     public PregameWP withWeek(Long week) {
         this.week = week;
         return this;
     }
     
+    public PregameWP(){}
 }

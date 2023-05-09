@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterPatchBaselineForPatchGroupRequest {
     @JsonProperty("BaselineId")
     public String baselineId;
+
     public DeregisterPatchBaselineForPatchGroupRequest withBaselineId(String baselineId) {
         this.baselineId = baselineId;
         return this;
@@ -16,9 +17,14 @@ public class DeregisterPatchBaselineForPatchGroupRequest {
     
     @JsonProperty("PatchGroup")
     public String patchGroup;
+
     public DeregisterPatchBaselineForPatchGroupRequest withPatchGroup(String patchGroup) {
         this.patchGroup = patchGroup;
         return this;
     }
     
+    public DeregisterPatchBaselineForPatchGroupRequest(@JsonProperty("BaselineId") String baselineId, @JsonProperty("PatchGroup") String patchGroup) {
+        this.baselineId = baselineId;
+        this.patchGroup = patchGroup;
+  }
 }

@@ -12,6 +12,7 @@ public class GetDomainsUpdatesAddedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetDomainsUpdatesAddedRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +23,7 @@ public class GetDomainsUpdatesAddedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=date")
     public String date;
+
     public GetDomainsUpdatesAddedRequest withDate(String date) {
         this.date = date;
         return this;
@@ -32,6 +34,7 @@ public class GetDomainsUpdatesAddedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetDomainsUpdatesAddedRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -42,9 +45,11 @@ public class GetDomainsUpdatesAddedRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDomainsUpdatesAddedRequest withPage(String page) {
         this.page = page;
         return this;
     }
     
+    public GetDomainsUpdatesAddedRequest(){}
 }

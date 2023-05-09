@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RandomGifResponse {
     
     public String contentType;
+
     public RandomGifResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RandomGifResponse {
     
     
     public Integer statusCode;
+
     public RandomGifResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RandomGifResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RandomGifResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -30,9 +34,14 @@ public class RandomGifResponse {
     
     
     public RandomGif200ApplicationJSON randomGif200ApplicationJSONObject;
+
     public RandomGifResponse withRandomGif200ApplicationJSONObject(RandomGif200ApplicationJSON randomGif200ApplicationJSONObject) {
         this.randomGif200ApplicationJSONObject = randomGif200ApplicationJSONObject;
         return this;
     }
     
+    public RandomGifResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebHookManagementDeleteResponse {
     
     public String contentType;
+
     public WebHookManagementDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WebHookManagementDeleteResponse {
     
     
     public Integer statusCode;
+
     public WebHookManagementDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WebHookManagementDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebHookManagementDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class WebHookManagementDeleteResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementDelete200ApplicationJSONObject;
+
     public WebHookManagementDeleteResponse withWebHookManagementDelete200ApplicationJSONObject(java.util.Map<String, Object> webHookManagementDelete200ApplicationJSONObject) {
         this.webHookManagementDelete200ApplicationJSONObject = webHookManagementDelete200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class WebHookManagementDeleteResponse {
      */
     
     public java.util.Map<String, Object> webHookManagementDelete200TextJSONObject;
+
     public WebHookManagementDeleteResponse withWebHookManagementDelete200TextJSONObject(java.util.Map<String, Object> webHookManagementDelete200TextJSONObject) {
         this.webHookManagementDelete200TextJSONObject = webHookManagementDelete200TextJSONObject;
         return this;
     }
     
+    public WebHookManagementDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

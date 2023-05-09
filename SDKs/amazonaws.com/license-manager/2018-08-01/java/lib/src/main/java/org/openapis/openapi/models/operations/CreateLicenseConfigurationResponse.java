@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLicenseConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLicenseConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object authorizationException;
+
     public CreateLicenseConfigurationResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateLicenseConfigurationResponse {
     
     
     public String contentType;
+
     public CreateLicenseConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateLicenseConfigurationResponse createLicenseConfigurationResponse;
+
     public CreateLicenseConfigurationResponse withCreateLicenseConfigurationResponse(org.openapis.openapi.models.shared.CreateLicenseConfigurationResponse createLicenseConfigurationResponse) {
         this.createLicenseConfigurationResponse = createLicenseConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public CreateLicenseConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object rateLimitExceededException;
+
     public CreateLicenseConfigurationResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public CreateLicenseConfigurationResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateLicenseConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateLicenseConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateLicenseConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLicenseConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateLicenseConfigurationResponse {
      */
     
     public Object serverInternalException;
+
     public CreateLicenseConfigurationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
     }
     
+    public CreateLicenseConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

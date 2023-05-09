@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSecurityConfigurationResponse {
     
     public String contentType;
+
     public DeleteSecurityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSecurityConfigurationResponse {
      */
     
     public java.util.Map<String, Object> deleteSecurityConfigurationOutput;
+
     public DeleteSecurityConfigurationResponse withDeleteSecurityConfigurationOutput(java.util.Map<String, Object> deleteSecurityConfigurationOutput) {
         this.deleteSecurityConfigurationOutput = deleteSecurityConfigurationOutput;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSecurityConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSecurityConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSecurityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteSecurityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSecurityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteSecurityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteSecurityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSecurityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteSecurityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestReportSummary {
     @JsonProperty("durationInNanoSeconds")
     public Long durationInNanoSeconds;
+
     public TestReportSummary withDurationInNanoSeconds(Long durationInNanoSeconds) {
         this.durationInNanoSeconds = durationInNanoSeconds;
         return this;
@@ -19,6 +20,7 @@ public class TestReportSummary {
     
     @JsonProperty("statusCounts")
     public java.util.Map<String, Long> statusCounts;
+
     public TestReportSummary withStatusCounts(java.util.Map<String, Long> statusCounts) {
         this.statusCounts = statusCounts;
         return this;
@@ -26,9 +28,15 @@ public class TestReportSummary {
     
     @JsonProperty("total")
     public Long total;
+
     public TestReportSummary withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public TestReportSummary(@JsonProperty("durationInNanoSeconds") Long durationInNanoSeconds, @JsonProperty("statusCounts") java.util.Map<String, Long> statusCounts, @JsonProperty("total") Long total) {
+        this.durationInNanoSeconds = durationInNanoSeconds;
+        this.statusCounts = statusCounts;
+        this.total = total;
+  }
 }

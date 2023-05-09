@@ -17,6 +17,7 @@ public class EmailStatementDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bccAddresses")
     public String[] bccAddresses;
+
     public EmailStatementDto withBccAddresses(String[] bccAddresses) {
         this.bccAddresses = bccAddresses;
         return this;
@@ -25,6 +26,7 @@ public class EmailStatementDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public EmailStatementDto withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -35,6 +37,7 @@ public class EmailStatementDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("fromPeriod")
     public OffsetDateTime fromPeriod;
+
     public EmailStatementDto withFromPeriod(OffsetDateTime fromPeriod) {
         this.fromPeriod = fromPeriod;
         return this;
@@ -43,6 +46,7 @@ public class EmailStatementDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageBody")
     public String messageBody;
+
     public EmailStatementDto withMessageBody(String messageBody) {
         this.messageBody = messageBody;
         return this;
@@ -51,6 +55,7 @@ public class EmailStatementDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumBalance")
     public Double minimumBalance;
+
     public EmailStatementDto withMinimumBalance(Double minimumBalance) {
         this.minimumBalance = minimumBalance;
         return this;
@@ -59,6 +64,7 @@ public class EmailStatementDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toAddress")
     public String toAddress;
+
     public EmailStatementDto withToAddress(String toAddress) {
         this.toAddress = toAddress;
         return this;
@@ -69,9 +75,11 @@ public class EmailStatementDto {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("toPeriod")
     public OffsetDateTime toPeriod;
+
     public EmailStatementDto withToPeriod(OffsetDateTime toPeriod) {
         this.toPeriod = toPeriod;
         return this;
     }
     
+    public EmailStatementDto(){}
 }

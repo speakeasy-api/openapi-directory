@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TopicPreference {
     @JsonProperty("SubscriptionStatus")
     public SubscriptionStatusEnum subscriptionStatus;
+
     public TopicPreference withSubscriptionStatus(SubscriptionStatusEnum subscriptionStatus) {
         this.subscriptionStatus = subscriptionStatus;
         return this;
@@ -19,9 +20,14 @@ public class TopicPreference {
     
     @JsonProperty("TopicName")
     public String topicName;
+
     public TopicPreference withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public TopicPreference(@JsonProperty("SubscriptionStatus") SubscriptionStatusEnum subscriptionStatus, @JsonProperty("TopicName") String topicName) {
+        this.subscriptionStatus = subscriptionStatus;
+        this.topicName = topicName;
+  }
 }

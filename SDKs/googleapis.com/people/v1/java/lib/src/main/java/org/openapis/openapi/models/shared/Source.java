@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Source withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Source withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileMetadata")
     public ProfileMetadata profileMetadata;
+
     public Source withProfileMetadata(ProfileMetadata profileMetadata) {
         this.profileMetadata = profileMetadata;
         return this;
@@ -51,6 +54,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SourceTypeEnum type;
+
     public Source withType(SourceTypeEnum type) {
         this.type = type;
         return this;
@@ -62,9 +66,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Source withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Source(){}
 }

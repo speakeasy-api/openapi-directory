@@ -14,6 +14,7 @@ public class UpdateFindingAggregatorRequestBody {
      */
     @JsonProperty("FindingAggregatorArn")
     public String findingAggregatorArn;
+
     public UpdateFindingAggregatorRequestBody withFindingAggregatorArn(String findingAggregatorArn) {
         this.findingAggregatorArn = findingAggregatorArn;
         return this;
@@ -24,6 +25,7 @@ public class UpdateFindingAggregatorRequestBody {
      */
     @JsonProperty("RegionLinkingMode")
     public String regionLinkingMode;
+
     public UpdateFindingAggregatorRequestBody withRegionLinkingMode(String regionLinkingMode) {
         this.regionLinkingMode = regionLinkingMode;
         return this;
@@ -35,9 +37,14 @@ public class UpdateFindingAggregatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public String[] regions;
+
     public UpdateFindingAggregatorRequestBody withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public UpdateFindingAggregatorRequestBody(@JsonProperty("FindingAggregatorArn") String findingAggregatorArn, @JsonProperty("RegionLinkingMode") String regionLinkingMode) {
+        this.findingAggregatorArn = findingAggregatorArn;
+        this.regionLinkingMode = regionLinkingMode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LandlordControllerGetInvetoryReportRequest {
@@ -12,6 +13,7 @@ public class LandlordControllerGetInvetoryReportRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public LandlordControllerGetInvetoryReportRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -22,6 +24,7 @@ public class LandlordControllerGetInvetoryReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tenancyID")
     public String tenancyID;
+
     public LandlordControllerGetInvetoryReportRequest withTenancyID(String tenancyID) {
         this.tenancyID = tenancyID;
         return this;
@@ -32,9 +35,15 @@ public class LandlordControllerGetInvetoryReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public LandlordControllerGetInvetoryReportRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public LandlordControllerGetInvetoryReportRequest(@JsonProperty("shortName") String shortName, @JsonProperty("tenancyID") String tenancyID, @JsonProperty("token") String token) {
+        this.shortName = shortName;
+        this.tenancyID = tenancyID;
+        this.token = token;
+  }
 }

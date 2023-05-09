@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLocations200ApplicationJSON {
     @JsonProperty("locations")
     public GetLocations200ApplicationJSONLocations[] locations;
+
     public GetLocations200ApplicationJSON withLocations(GetLocations200ApplicationJSONLocations[] locations) {
         this.locations = locations;
         return this;
     }
     
+    public GetLocations200ApplicationJSON(@JsonProperty("locations") GetLocations200ApplicationJSONLocations[] locations) {
+        this.locations = locations;
+  }
 }

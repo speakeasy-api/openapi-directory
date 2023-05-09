@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse {
     
     public String contentType;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse {
     
     
     public Integer statusCode;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse {
      */
     
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSON actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSONObject;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse withActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSONObject(ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSON actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSONObject) {
         this.actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSONObject = actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
     }
     
+    public ActionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class ResponsePolicyRuleLocalData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localDatas")
     public ResourceRecordSet[] localDatas;
+
     public ResponsePolicyRuleLocalData withLocalDatas(ResourceRecordSet[] localDatas) {
         this.localDatas = localDatas;
         return this;
     }
     
+    public ResponsePolicyRuleLocalData(){}
 }

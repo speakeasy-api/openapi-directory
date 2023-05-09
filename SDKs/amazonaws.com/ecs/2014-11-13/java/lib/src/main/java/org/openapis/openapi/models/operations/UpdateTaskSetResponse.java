@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTaskSetResponse {
@@ -12,6 +13,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateTaskSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object clientException;
+
     public UpdateTaskSetResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object clusterNotFoundException;
+
     public UpdateTaskSetResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTaskSetResponse {
     
     
     public String contentType;
+
     public UpdateTaskSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateTaskSetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object serviceNotActiveException;
+
     public UpdateTaskSetResponse withServiceNotActiveException(Object serviceNotActiveException) {
         this.serviceNotActiveException = serviceNotActiveException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object serviceNotFoundException;
+
     public UpdateTaskSetResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateTaskSetResponse {
     
     
     public Integer statusCode;
+
     public UpdateTaskSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTaskSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTaskSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object serverException;
+
     public UpdateTaskSetResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object taskSetNotFoundException;
+
     public UpdateTaskSetResponse withTaskSetNotFoundException(Object taskSetNotFoundException) {
         this.taskSetNotFoundException = taskSetNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateTaskSetResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public UpdateTaskSetResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateTaskSetResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateTaskSetResponse updateTaskSetResponse;
+
     public UpdateTaskSetResponse withUpdateTaskSetResponse(org.openapis.openapi.models.shared.UpdateTaskSetResponse updateTaskSetResponse) {
         this.updateTaskSetResponse = updateTaskSetResponse;
         return this;
     }
     
+    public UpdateTaskSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

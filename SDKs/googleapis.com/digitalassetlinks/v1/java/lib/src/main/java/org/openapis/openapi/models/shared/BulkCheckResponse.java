@@ -18,6 +18,7 @@ public class BulkCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulkErrorCode")
     public BulkCheckResponseBulkErrorCodeEnum bulkErrorCode;
+
     public BulkCheckResponse withBulkErrorCode(BulkCheckResponseBulkErrorCodeEnum bulkErrorCode) {
         this.bulkErrorCode = bulkErrorCode;
         return this;
@@ -29,9 +30,11 @@ public class BulkCheckResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checkResults")
     public CheckResponse[] checkResults;
+
     public BulkCheckResponse withCheckResults(CheckResponse[] checkResults) {
         this.checkResults = checkResults;
         return this;
     }
     
+    public BulkCheckResponse(){}
 }

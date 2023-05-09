@@ -12,6 +12,7 @@ public class HealthProfileQuestionResourceRelationshipsAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public HealthProfileQuestionResourceRelationshipsAnswerData data;
+
     public HealthProfileQuestionResourceRelationshipsAnswer withData(HealthProfileQuestionResourceRelationshipsAnswerData data) {
         this.data = data;
         return this;
@@ -20,9 +21,11 @@ public class HealthProfileQuestionResourceRelationshipsAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public HealthProfileQuestionResourceRelationshipsAnswerLinks links;
+
     public HealthProfileQuestionResourceRelationshipsAnswer withLinks(HealthProfileQuestionResourceRelationshipsAnswerLinks links) {
         this.links = links;
         return this;
     }
     
+    public HealthProfileQuestionResourceRelationshipsAnswer(){}
 }

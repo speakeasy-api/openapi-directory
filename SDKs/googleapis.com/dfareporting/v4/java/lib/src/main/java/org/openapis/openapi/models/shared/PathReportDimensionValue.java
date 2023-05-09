@@ -18,6 +18,7 @@ public class PathReportDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public PathReportDimensionValue withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -29,6 +30,7 @@ public class PathReportDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ids")
     public String[] ids;
+
     public PathReportDimensionValue withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -40,6 +42,7 @@ public class PathReportDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PathReportDimensionValue withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class PathReportDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchType")
     public PathReportDimensionValueMatchTypeEnum matchType;
+
     public PathReportDimensionValue withMatchType(PathReportDimensionValueMatchTypeEnum matchType) {
         this.matchType = matchType;
         return this;
@@ -62,9 +66,11 @@ public class PathReportDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public PathReportDimensionValue withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public PathReportDimensionValue(){}
 }

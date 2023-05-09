@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1StorageInfoDiskVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageFreeBytes")
     public String storageFreeBytes;
+
     public GoogleChromeManagementV1StorageInfoDiskVolume withStorageFreeBytes(String storageFreeBytes) {
         this.storageFreeBytes = storageFreeBytes;
         return this;
@@ -29,6 +30,7 @@ public class GoogleChromeManagementV1StorageInfoDiskVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageTotalBytes")
     public String storageTotalBytes;
+
     public GoogleChromeManagementV1StorageInfoDiskVolume withStorageTotalBytes(String storageTotalBytes) {
         this.storageTotalBytes = storageTotalBytes;
         return this;
@@ -40,9 +42,11 @@ public class GoogleChromeManagementV1StorageInfoDiskVolume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volumeId")
     public String volumeId;
+
     public GoogleChromeManagementV1StorageInfoDiskVolume withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
     }
     
+    public GoogleChromeManagementV1StorageInfoDiskVolume(){}
 }

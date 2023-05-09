@@ -12,6 +12,7 @@ public class GenerateTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public GenerateTemplateRequest withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -20,9 +21,11 @@ public class GenerateTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateFormat")
     public OutputFormatEnum templateFormat;
+
     public GenerateTemplateRequest withTemplateFormat(OutputFormatEnum templateFormat) {
         this.templateFormat = templateFormat;
         return this;
     }
     
+    public GenerateTemplateRequest(){}
 }

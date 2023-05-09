@@ -15,6 +15,7 @@ public class AssumeDecoratedRoleWithSAMLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationSeconds")
     public Long durationSeconds;
+
     public AssumeDecoratedRoleWithSAMLRequestBody withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -25,6 +26,7 @@ public class AssumeDecoratedRoleWithSAMLRequestBody {
      */
     @JsonProperty("PrincipalArn")
     public String principalArn;
+
     public AssumeDecoratedRoleWithSAMLRequestBody withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -35,6 +37,7 @@ public class AssumeDecoratedRoleWithSAMLRequestBody {
      */
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public AssumeDecoratedRoleWithSAMLRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -45,9 +48,15 @@ public class AssumeDecoratedRoleWithSAMLRequestBody {
      */
     @JsonProperty("SAMLAssertion")
     public String samlAssertion;
+
     public AssumeDecoratedRoleWithSAMLRequestBody withSAMLAssertion(String samlAssertion) {
         this.samlAssertion = samlAssertion;
         return this;
     }
     
+    public AssumeDecoratedRoleWithSAMLRequestBody(@JsonProperty("PrincipalArn") String principalArn, @JsonProperty("RoleArn") String roleArn, @JsonProperty("SAMLAssertion") String samlAssertion) {
+        this.principalArn = principalArn;
+        this.roleArn = roleArn;
+        this.samlAssertion = samlAssertion;
+  }
 }

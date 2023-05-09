@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataSourceResponse {
@@ -12,6 +13,7 @@ public class GetDataSourceResponse {
      */
     
     public Object badRequestException;
+
     public GetDataSourceResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class GetDataSourceResponse {
      */
     
     public Object concurrentModificationException;
+
     public GetDataSourceResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class GetDataSourceResponse {
     
     
     public String contentType;
+
     public GetDataSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDataSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataSourceResponse getDataSourceResponse;
+
     public GetDataSourceResponse withGetDataSourceResponse(org.openapis.openapi.models.shared.GetDataSourceResponse getDataSourceResponse) {
         this.getDataSourceResponse = getDataSourceResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDataSourceResponse {
      */
     
     public Object internalFailureException;
+
     public GetDataSourceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class GetDataSourceResponse {
      */
     
     public Object notFoundException;
+
     public GetDataSourceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetDataSourceResponse {
     
     
     public Integer statusCode;
+
     public GetDataSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetDataSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetDataSourceResponse {
      */
     
     public Object unauthorizedException;
+
     public GetDataSourceResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetDataSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

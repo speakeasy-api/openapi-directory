@@ -15,6 +15,7 @@ public class OnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EKSOnDeviceService")
     public EKSOnDeviceServiceConfiguration eksOnDeviceService;
+
     public OnDeviceServiceConfiguration withEKSOnDeviceService(EKSOnDeviceServiceConfiguration eksOnDeviceService) {
         this.eksOnDeviceService = eksOnDeviceService;
         return this;
@@ -23,17 +24,29 @@ public class OnDeviceServiceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NFSOnDeviceService")
     public NFSOnDeviceServiceConfiguration nfsOnDeviceService;
+
     public OnDeviceServiceConfiguration withNFSOnDeviceService(NFSOnDeviceServiceConfiguration nfsOnDeviceService) {
         this.nfsOnDeviceService = nfsOnDeviceService;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("S3OnDeviceService")
+    public S3OnDeviceServiceConfiguration s3OnDeviceService;
+
+    public OnDeviceServiceConfiguration withS3OnDeviceService(S3OnDeviceServiceConfiguration s3OnDeviceService) {
+        this.s3OnDeviceService = s3OnDeviceService;
+        return this;
+    }
+    
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TGWOnDeviceService")
     public TGWOnDeviceServiceConfiguration tgwOnDeviceService;
+
     public OnDeviceServiceConfiguration withTGWOnDeviceService(TGWOnDeviceServiceConfiguration tgwOnDeviceService) {
         this.tgwOnDeviceService = tgwOnDeviceService;
         return this;
     }
     
+    public OnDeviceServiceConfiguration(){}
 }

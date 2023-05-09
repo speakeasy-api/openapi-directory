@@ -15,6 +15,7 @@ public class MessagePropertyMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public MessagePropertyMessengerCategoryEnum category;
+
     public MessagePropertyMessenger withCategory(MessagePropertyMessengerCategoryEnum category) {
         this.category = category;
         return this;
@@ -26,9 +27,11 @@ public class MessagePropertyMessenger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tag")
     public String tag;
+
     public MessagePropertyMessenger withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public MessagePropertyMessenger(){}
 }

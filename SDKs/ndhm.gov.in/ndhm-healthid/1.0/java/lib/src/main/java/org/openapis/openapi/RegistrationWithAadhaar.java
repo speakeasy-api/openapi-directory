@@ -66,11 +66,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse res = new org.openapis.openapi.models.operations.CreateAadhaarAccountUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -121,11 +119,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateAadharOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,11 +172,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse res = new org.openapis.openapi.models.operations.GenerateMobileOTPForTxnUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -231,11 +225,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetHealthIdNumbersByAadharUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -286,11 +278,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResendAadharOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,11 +331,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharBioUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -396,11 +384,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOTPOnlyUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -451,11 +437,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyAadharOtpUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +490,9 @@ public class RegistrationWithAadhaar {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse res = new org.openapis.openapi.models.operations.VerifyMobileOTPForTxnUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,13 @@ public class DescribeResiliencyPolicyRequestBody {
      */
     @JsonProperty("policyArn")
     public String policyArn;
+
     public DescribeResiliencyPolicyRequestBody withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
     }
     
+    public DescribeResiliencyPolicyRequestBody(@JsonProperty("policyArn") String policyArn) {
+        this.policyArn = policyArn;
+  }
 }

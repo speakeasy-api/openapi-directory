@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModelInput {
     @JsonProperty("DataInputConfig")
     public String dataInputConfig;
+
     public ModelInput withDataInputConfig(String dataInputConfig) {
         this.dataInputConfig = dataInputConfig;
         return this;
     }
     
+    public ModelInput(@JsonProperty("DataInputConfig") String dataInputConfig) {
+        this.dataInputConfig = dataInputConfig;
+  }
 }

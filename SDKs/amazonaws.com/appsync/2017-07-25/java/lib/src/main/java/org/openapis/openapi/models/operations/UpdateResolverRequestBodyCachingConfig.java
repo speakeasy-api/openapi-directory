@@ -15,6 +15,7 @@ public class UpdateResolverRequestBodyCachingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cachingKeys")
     public String[] cachingKeys;
+
     public UpdateResolverRequestBodyCachingConfig withCachingKeys(String[] cachingKeys) {
         this.cachingKeys = cachingKeys;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResolverRequestBodyCachingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public UpdateResolverRequestBodyCachingConfig withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public UpdateResolverRequestBodyCachingConfig(){}
 }

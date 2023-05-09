@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeRegionNetworkEndpointGroupsGetResponse {
     
     public String contentType;
+
     public ComputeRegionNetworkEndpointGroupsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeRegionNetworkEndpointGroupsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.NetworkEndpointGroup networkEndpointGroup;
+
     public ComputeRegionNetworkEndpointGroupsGetResponse withNetworkEndpointGroup(org.openapis.openapi.models.shared.NetworkEndpointGroup networkEndpointGroup) {
         this.networkEndpointGroup = networkEndpointGroup;
         return this;
@@ -26,6 +29,7 @@ public class ComputeRegionNetworkEndpointGroupsGetResponse {
     
     
     public Integer statusCode;
+
     public ComputeRegionNetworkEndpointGroupsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeRegionNetworkEndpointGroupsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeRegionNetworkEndpointGroupsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeRegionNetworkEndpointGroupsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

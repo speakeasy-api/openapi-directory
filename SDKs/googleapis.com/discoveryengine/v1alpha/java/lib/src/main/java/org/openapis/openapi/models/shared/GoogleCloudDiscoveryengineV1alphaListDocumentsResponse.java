@@ -18,6 +18,7 @@ public class GoogleCloudDiscoveryengineV1alphaListDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GoogleCloudDiscoveryengineV1alphaDocument[] documents;
+
     public GoogleCloudDiscoveryengineV1alphaListDocumentsResponse withDocuments(GoogleCloudDiscoveryengineV1alphaDocument[] documents) {
         this.documents = documents;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDiscoveryengineV1alphaListDocumentsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDiscoveryengineV1alphaListDocumentsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudDiscoveryengineV1alphaListDocumentsResponse(){}
 }

@@ -15,6 +15,7 @@ public class MultiMeasureAttributeMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeasureValueType")
     public ScalarMeasureValueTypeEnum measureValueType;
+
     public MultiMeasureAttributeMapping withMeasureValueType(ScalarMeasureValueTypeEnum measureValueType) {
         this.measureValueType = measureValueType;
         return this;
@@ -22,6 +23,7 @@ public class MultiMeasureAttributeMapping {
     
     @JsonProperty("SourceColumn")
     public String sourceColumn;
+
     public MultiMeasureAttributeMapping withSourceColumn(String sourceColumn) {
         this.sourceColumn = sourceColumn;
         return this;
@@ -30,9 +32,13 @@ public class MultiMeasureAttributeMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMultiMeasureAttributeName")
     public String targetMultiMeasureAttributeName;
+
     public MultiMeasureAttributeMapping withTargetMultiMeasureAttributeName(String targetMultiMeasureAttributeName) {
         this.targetMultiMeasureAttributeName = targetMultiMeasureAttributeName;
         return this;
     }
     
+    public MultiMeasureAttributeMapping(@JsonProperty("SourceColumn") String sourceColumn) {
+        this.sourceColumn = sourceColumn;
+  }
 }

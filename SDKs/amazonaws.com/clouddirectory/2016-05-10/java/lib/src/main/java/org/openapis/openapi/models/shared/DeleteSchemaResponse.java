@@ -15,9 +15,11 @@ public class DeleteSchemaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public DeleteSchemaResponse withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
     }
     
+    public DeleteSchemaResponse(){}
 }

@@ -12,9 +12,11 @@ public class PostApiV1FeaturedTagsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostApiV1FeaturedTagsRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostApiV1FeaturedTagsRequestBody(){}
 }

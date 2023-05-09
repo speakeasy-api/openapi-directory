@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1LocationsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.LocationUpdateModel locationUpdateModel;
+
     public PutSetupV1LocationsIdRequest withLocationUpdateModel(org.openapis.openapi.models.shared.LocationUpdateModel locationUpdateModel) {
         this.locationUpdateModel = locationUpdateModel;
         return this;
@@ -16,6 +18,7 @@ public class PutSetupV1LocationsIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1LocationsIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +26,13 @@ public class PutSetupV1LocationsIdRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=removeRegion")
     public Boolean removeRegion;
+
     public PutSetupV1LocationsIdRequest withRemoveRegion(Boolean removeRegion) {
         this.removeRegion = removeRegion;
         return this;
     }
     
+    public PutSetupV1LocationsIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

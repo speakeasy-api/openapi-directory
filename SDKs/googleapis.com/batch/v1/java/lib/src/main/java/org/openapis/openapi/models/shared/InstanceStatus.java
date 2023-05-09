@@ -18,6 +18,7 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootDisk")
     public Disk bootDisk;
+
     public InstanceStatus withBootDisk(Disk bootDisk) {
         this.bootDisk = bootDisk;
         return this;
@@ -29,6 +30,7 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public InstanceStatus withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -40,6 +42,7 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningModel")
     public InstanceStatusProvisioningModelEnum provisioningModel;
+
     public InstanceStatus withProvisioningModel(InstanceStatusProvisioningModelEnum provisioningModel) {
         this.provisioningModel = provisioningModel;
         return this;
@@ -51,9 +54,11 @@ public class InstanceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskPack")
     public String taskPack;
+
     public InstanceStatus withTaskPack(String taskPack) {
         this.taskPack = taskPack;
         return this;
     }
     
+    public InstanceStatus(){}
 }

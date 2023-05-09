@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeChannelBannersInsertResponse {
@@ -12,6 +13,7 @@ public class YoutubeChannelBannersInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.ChannelBannerResource channelBannerResource;
+
     public YoutubeChannelBannersInsertResponse withChannelBannerResource(org.openapis.openapi.models.shared.ChannelBannerResource channelBannerResource) {
         this.channelBannerResource = channelBannerResource;
         return this;
@@ -19,6 +21,7 @@ public class YoutubeChannelBannersInsertResponse {
     
     
     public String contentType;
+
     public YoutubeChannelBannersInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class YoutubeChannelBannersInsertResponse {
     
     
     public Integer statusCode;
+
     public YoutubeChannelBannersInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeChannelBannersInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeChannelBannersInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public YoutubeChannelBannersInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

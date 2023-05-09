@@ -32,7 +32,7 @@ public class Inappproducts {
 	}
 
     /**
-     * Deletes an in-app product (i.e. a managed product or a subscriptions).
+     * Deletes an in-app product (i.e. a managed product or a subscription).
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -59,10 +59,8 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,11 +97,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsGetResponse(contentType, httpRes.statusCode()) {{
             inAppProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,7 +114,7 @@ public class Inappproducts {
     }
 
     /**
-     * Creates an in-app product (i.e. a managed product or a subscriptions).
+     * Creates an in-app product (i.e. a managed product or a subscription).
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -147,11 +143,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsInsertResponse(contentType, httpRes.statusCode()) {{
             inAppProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsListResponse(contentType, httpRes.statusCode()) {{
             inappproductsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -212,7 +204,7 @@ public class Inappproducts {
     }
 
     /**
-     * Patches an in-app product (i.e. a managed product or a subscriptions).
+     * Patches an in-app product (i.e. a managed product or a subscription).
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -241,11 +233,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsPatchResponse(contentType, httpRes.statusCode()) {{
             inAppProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -260,7 +250,7 @@ public class Inappproducts {
     }
 
     /**
-     * Updates an in-app product (i.e. a managed product or a subscriptions).
+     * Updates an in-app product (i.e. a managed product or a subscription).
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -289,11 +279,9 @@ public class Inappproducts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse() {{
+        org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse res = new org.openapis.openapi.models.operations.AndroidpublisherInappproductsUpdateResponse(contentType, httpRes.statusCode()) {{
             inAppProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

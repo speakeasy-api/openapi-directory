@@ -15,9 +15,11 @@ public class DescribeContainerOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Container")
     public Container container;
+
     public DescribeContainerOutput withContainer(Container container) {
         this.container = container;
         return this;
     }
     
+    public DescribeContainerOutput(){}
 }

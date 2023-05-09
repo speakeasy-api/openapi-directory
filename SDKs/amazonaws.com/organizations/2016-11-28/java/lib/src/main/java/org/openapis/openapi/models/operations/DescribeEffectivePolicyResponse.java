@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEffectivePolicyResponse {
@@ -12,6 +13,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribeEffectivePolicyResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeEffectivePolicyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object constraintViolationException;
+
     public DescribeEffectivePolicyResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEffectivePolicyResponse {
     
     
     public String contentType;
+
     public DescribeEffectivePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEffectivePolicyResponse describeEffectivePolicyResponse;
+
     public DescribeEffectivePolicyResponse withDescribeEffectivePolicyResponse(org.openapis.openapi.models.shared.DescribeEffectivePolicyResponse describeEffectivePolicyResponse) {
         this.describeEffectivePolicyResponse = describeEffectivePolicyResponse;
         return this;
@@ -59,6 +65,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object effectivePolicyNotFoundException;
+
     public DescribeEffectivePolicyResponse withEffectivePolicyNotFoundException(Object effectivePolicyNotFoundException) {
         this.effectivePolicyNotFoundException = effectivePolicyNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeEffectivePolicyResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object serviceException;
+
     public DescribeEffectivePolicyResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeEffectivePolicyResponse {
     
     
     public Integer statusCode;
+
     public DescribeEffectivePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeEffectivePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEffectivePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object targetNotFoundException;
+
     public DescribeEffectivePolicyResponse withTargetNotFoundException(Object targetNotFoundException) {
         this.targetNotFoundException = targetNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeEffectivePolicyResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -123,9 +136,14 @@ public class DescribeEffectivePolicyResponse {
      */
     
     public Object unsupportedAPIEndpointException;
+
     public DescribeEffectivePolicyResponse withUnsupportedAPIEndpointException(Object unsupportedAPIEndpointException) {
         this.unsupportedAPIEndpointException = unsupportedAPIEndpointException;
         return this;
     }
     
+    public DescribeEffectivePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

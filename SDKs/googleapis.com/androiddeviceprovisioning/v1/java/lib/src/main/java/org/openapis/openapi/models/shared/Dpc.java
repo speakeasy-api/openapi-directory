@@ -18,6 +18,7 @@ public class Dpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dpcName")
     public String dpcName;
+
     public Dpc withDpcName(String dpcName) {
         this.dpcName = dpcName;
         return this;
@@ -29,6 +30,7 @@ public class Dpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dpc withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Dpc {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public Dpc withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public Dpc(){}
 }

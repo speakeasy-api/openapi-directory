@@ -15,6 +15,7 @@ public class UpdateRouteCalculatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateRouteCalculatorRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class UpdateRouteCalculatorRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public UpdateRouteCalculatorRequestBodyPricingPlanEnum pricingPlan;
+
     public UpdateRouteCalculatorRequestBody withPricingPlan(UpdateRouteCalculatorRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
     }
     
+    public UpdateRouteCalculatorRequestBody(){}
 }

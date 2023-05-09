@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisconnectPlayerRequest {
@@ -12,6 +13,7 @@ public class DisconnectPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=GameName")
     public String gameName;
+
     public DisconnectPlayerRequest withGameName(String gameName) {
         this.gameName = gameName;
         return this;
@@ -22,6 +24,7 @@ public class DisconnectPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=PlayerId")
     public String playerId;
+
     public DisconnectPlayerRequest withPlayerId(String playerId) {
         this.playerId = playerId;
         return this;
@@ -32,6 +35,7 @@ public class DisconnectPlayerRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=StageName")
     public String stageName;
+
     public DisconnectPlayerRequest withStageName(String stageName) {
         this.stageName = stageName;
         return this;
@@ -39,6 +43,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DisconnectPlayerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DisconnectPlayerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DisconnectPlayerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DisconnectPlayerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DisconnectPlayerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DisconnectPlayerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,15 @@ public class DisconnectPlayerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DisconnectPlayerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public DisconnectPlayerRequest(@JsonProperty("GameName") String gameName, @JsonProperty("PlayerId") String playerId, @JsonProperty("StageName") String stageName) {
+        this.gameName = gameName;
+        this.playerId = playerId;
+        this.stageName = stageName;
+  }
 }

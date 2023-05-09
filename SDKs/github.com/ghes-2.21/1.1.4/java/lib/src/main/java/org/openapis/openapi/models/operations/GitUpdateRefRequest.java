@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GitUpdateRefRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public GitUpdateRefRequestBody requestBody;
+
     public GitUpdateRefRequest withRequestBody(GitUpdateRefRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class GitUpdateRefRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public GitUpdateRefRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,6 +29,7 @@ public class GitUpdateRefRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ref")
     public String ref;
+
     public GitUpdateRefRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -33,9 +37,16 @@ public class GitUpdateRefRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public GitUpdateRefRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public GitUpdateRefRequest(@JsonProperty("RequestBody") GitUpdateRefRequestBody requestBody, @JsonProperty("owner") String owner, @JsonProperty("ref") String ref, @JsonProperty("repo") String repo) {
+        this.requestBody = requestBody;
+        this.owner = owner;
+        this.ref = ref;
+        this.repo = repo;
+  }
 }

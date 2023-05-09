@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=characterId")
     public Long characterId;
+
     public Destiny2GetHistoricalStatsRequest withCharacterId(Long characterId) {
         this.characterId = characterId;
         return this;
@@ -23,6 +25,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dayend")
     public OffsetDateTime dayend;
+
     public Destiny2GetHistoricalStatsRequest withDayend(OffsetDateTime dayend) {
         this.dayend = dayend;
         return this;
@@ -33,6 +36,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=daystart")
     public OffsetDateTime daystart;
+
     public Destiny2GetHistoricalStatsRequest withDaystart(OffsetDateTime daystart) {
         this.daystart = daystart;
         return this;
@@ -43,6 +47,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinyMembershipId")
     public Long destinyMembershipId;
+
     public Destiny2GetHistoricalStatsRequest withDestinyMembershipId(Long destinyMembershipId) {
         this.destinyMembershipId = destinyMembershipId;
         return this;
@@ -53,6 +58,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=groups")
     public Integer[] groups;
+
     public Destiny2GetHistoricalStatsRequest withGroups(Integer[] groups) {
         this.groups = groups;
         return this;
@@ -63,6 +69,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public Destiny2GetHistoricalStatsRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -73,6 +80,7 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=modes")
     public Integer[] modes;
+
     public Destiny2GetHistoricalStatsRequest withModes(Integer[] modes) {
         this.modes = modes;
         return this;
@@ -83,9 +91,15 @@ public class Destiny2GetHistoricalStatsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=periodType")
     public Integer periodType;
+
     public Destiny2GetHistoricalStatsRequest withPeriodType(Integer periodType) {
         this.periodType = periodType;
         return this;
     }
     
+    public Destiny2GetHistoricalStatsRequest(@JsonProperty("characterId") Long characterId, @JsonProperty("destinyMembershipId") Long destinyMembershipId, @JsonProperty("membershipType") Integer membershipType) {
+        this.characterId = characterId;
+        this.destinyMembershipId = destinyMembershipId;
+        this.membershipType = membershipType;
+  }
 }

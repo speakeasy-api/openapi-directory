@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutScheduledActionResponse {
@@ -12,6 +13,7 @@ public class PutScheduledActionResponse {
      */
     
     public Object concurrentUpdateException;
+
     public PutScheduledActionResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class PutScheduledActionResponse {
     
     
     public String contentType;
+
     public PutScheduledActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutScheduledActionResponse {
      */
     
     public Object internalServiceException;
+
     public PutScheduledActionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class PutScheduledActionResponse {
      */
     
     public Object limitExceededException;
+
     public PutScheduledActionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class PutScheduledActionResponse {
      */
     
     public Object objectNotFoundException;
+
     public PutScheduledActionResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class PutScheduledActionResponse {
      */
     
     public java.util.Map<String, Object> putScheduledActionResponse;
+
     public PutScheduledActionResponse withPutScheduledActionResponse(java.util.Map<String, Object> putScheduledActionResponse) {
         this.putScheduledActionResponse = putScheduledActionResponse;
         return this;
@@ -66,6 +73,7 @@ public class PutScheduledActionResponse {
     
     
     public Integer statusCode;
+
     public PutScheduledActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class PutScheduledActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutScheduledActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class PutScheduledActionResponse {
      */
     
     public Object validationException;
+
     public PutScheduledActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutScheduledActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatepartialdocumentRequest {
@@ -12,6 +13,7 @@ public class UpdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public UpdatepartialdocumentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class UpdatepartialdocumentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, String> requestBody;
+
     public UpdatepartialdocumentRequest withRequestBody(java.util.Map<String, String> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class UpdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_schema")
     public String schema;
+
     public UpdatepartialdocumentRequest withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -39,6 +43,7 @@ public class UpdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=_where")
     public String where;
+
     public UpdatepartialdocumentRequest withWhere(String where) {
         this.where = where;
         return this;
@@ -49,6 +54,7 @@ public class UpdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dataEntityName")
     public String dataEntityName;
+
     public UpdatepartialdocumentRequest withDataEntityName(String dataEntityName) {
         this.dataEntityName = dataEntityName;
         return this;
@@ -59,9 +65,16 @@ public class UpdatepartialdocumentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdatepartialdocumentRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdatepartialdocumentRequest(@JsonProperty("Accept") String accept, @JsonProperty("RequestBody") java.util.Map<String, String> requestBody, @JsonProperty("dataEntityName") String dataEntityName, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.requestBody = requestBody;
+        this.dataEntityName = dataEntityName;
+        this.id = id;
+  }
 }

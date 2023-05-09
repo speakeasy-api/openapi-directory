@@ -12,6 +12,7 @@ public class DeleteVpcEndpointRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteVpcEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,13 @@ public class DeleteVpcEndpointRequest {
     
     @JsonProperty("id")
     public String id;
+
     public DeleteVpcEndpointRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteVpcEndpointRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

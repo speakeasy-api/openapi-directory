@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworksIdResponse {
     
     public String contentType;
+
     public GetNetworksIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworksIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetNetworksIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworksIdResponse {
     
     
     public Integer statusCode;
+
     public GetNetworksIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetNetworksIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworksIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetNetworksIdResponse {
      */
     
     public GetNetworksId200ApplicationVndApiPlusJson getNetworksId200ApplicationVndApiPlusJsonObject;
+
     public GetNetworksIdResponse withGetNetworksId200ApplicationVndApiPlusJsonObject(GetNetworksId200ApplicationVndApiPlusJson getNetworksId200ApplicationVndApiPlusJsonObject) {
         this.getNetworksId200ApplicationVndApiPlusJsonObject = getNetworksId200ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetNetworksIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

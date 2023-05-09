@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCreditsIdResponse {
     
     public String contentType;
+
     public GetCreditsIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetCreditsIdResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetCreditsIdResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetCreditsIdResponse {
     
     
     public Integer statusCode;
+
     public GetCreditsIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetCreditsIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCreditsIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetCreditsIdResponse {
      */
     
     public GetCreditsId200ApplicationVndApiPlusJson getCreditsId200ApplicationVndApiPlusJsonObject;
+
     public GetCreditsIdResponse withGetCreditsId200ApplicationVndApiPlusJsonObject(GetCreditsId200ApplicationVndApiPlusJson getCreditsId200ApplicationVndApiPlusJsonObject) {
         this.getCreditsId200ApplicationVndApiPlusJsonObject = getCreditsId200ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetCreditsIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

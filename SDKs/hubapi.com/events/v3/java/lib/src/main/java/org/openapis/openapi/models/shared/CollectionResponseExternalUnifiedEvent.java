@@ -15,6 +15,7 @@ public class CollectionResponseExternalUnifiedEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paging")
     public Paging paging;
+
     public CollectionResponseExternalUnifiedEvent withPaging(Paging paging) {
         this.paging = paging;
         return this;
@@ -22,9 +23,13 @@ public class CollectionResponseExternalUnifiedEvent {
     
     @JsonProperty("results")
     public ExternalUnifiedEvent[] results;
+
     public CollectionResponseExternalUnifiedEvent withResults(ExternalUnifiedEvent[] results) {
         this.results = results;
         return this;
     }
     
+    public CollectionResponseExternalUnifiedEvent(@JsonProperty("results") ExternalUnifiedEvent[] results) {
+        this.results = results;
+  }
 }

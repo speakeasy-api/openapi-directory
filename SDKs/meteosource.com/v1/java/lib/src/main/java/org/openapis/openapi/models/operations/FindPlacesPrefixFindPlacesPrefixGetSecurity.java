@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindPlacesPrefixFindPlacesPrefixGetSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Key")
     public String apiKeyHeader;
+
     public FindPlacesPrefixFindPlacesPrefixGetSecurity withAPIKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }
     
+    public FindPlacesPrefixFindPlacesPrefixGetSecurity(@JsonProperty("APIKeyHeader") String apiKeyHeader) {
+        this.apiKeyHeader = apiKeyHeader;
+  }
 }

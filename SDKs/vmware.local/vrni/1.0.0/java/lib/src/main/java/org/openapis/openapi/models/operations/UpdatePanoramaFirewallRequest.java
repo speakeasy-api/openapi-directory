@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdatePanoramaFirewallRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SwitchDataSource switchDataSource;
+
     public UpdatePanoramaFirewallRequest withSwitchDataSource(org.openapis.openapi.models.shared.SwitchDataSource switchDataSource) {
         this.switchDataSource = switchDataSource;
         return this;
@@ -19,9 +21,13 @@ public class UpdatePanoramaFirewallRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public UpdatePanoramaFirewallRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdatePanoramaFirewallRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

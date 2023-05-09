@@ -12,6 +12,7 @@ public class PaginationLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first")
     public PaginationLinksFirst first;
+
     public PaginationLinks withFirst(PaginationLinksFirst first) {
         this.first = first;
         return this;
@@ -20,6 +21,7 @@ public class PaginationLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public PaginationLinksLast last;
+
     public PaginationLinks withLast(PaginationLinksLast last) {
         this.last = last;
         return this;
@@ -27,6 +29,7 @@ public class PaginationLinks {
     
     @JsonProperty("next")
     public PaginationLinksNext next;
+
     public PaginationLinks withNext(PaginationLinksNext next) {
         this.next = next;
         return this;
@@ -35,9 +38,13 @@ public class PaginationLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prev")
     public PaginationLinksPrev prev;
+
     public PaginationLinks withPrev(PaginationLinksPrev prev) {
         this.prev = prev;
         return this;
     }
     
+    public PaginationLinks(@JsonProperty("next") PaginationLinksNext next) {
+        this.next = next;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAlternateContactResponse {
@@ -12,6 +13,7 @@ public class GetAlternateContactResponse {
      */
     
     public Object accessDeniedException;
+
     public GetAlternateContactResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetAlternateContactResponse {
     
     
     public String contentType;
+
     public GetAlternateContactResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetAlternateContactResponse {
      */
     
     public org.openapis.openapi.models.shared.GetAlternateContactResponse getAlternateContactResponse;
+
     public GetAlternateContactResponse withGetAlternateContactResponse(org.openapis.openapi.models.shared.GetAlternateContactResponse getAlternateContactResponse) {
         this.getAlternateContactResponse = getAlternateContactResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetAlternateContactResponse {
      */
     
     public Object internalServerException;
+
     public GetAlternateContactResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetAlternateContactResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetAlternateContactResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetAlternateContactResponse {
     
     
     public Integer statusCode;
+
     public GetAlternateContactResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetAlternateContactResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAlternateContactResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetAlternateContactResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetAlternateContactResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class GetAlternateContactResponse {
      */
     
     public Object validationException;
+
     public GetAlternateContactResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetAlternateContactResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

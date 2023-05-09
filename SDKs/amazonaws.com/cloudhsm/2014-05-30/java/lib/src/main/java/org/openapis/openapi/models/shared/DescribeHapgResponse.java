@@ -15,6 +15,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HapgArn")
     public String hapgArn;
+
     public DescribeHapgResponse withHapgArn(String hapgArn) {
         this.hapgArn = hapgArn;
         return this;
@@ -23,6 +24,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HapgSerial")
     public String hapgSerial;
+
     public DescribeHapgResponse withHapgSerial(String hapgSerial) {
         this.hapgSerial = hapgSerial;
         return this;
@@ -31,6 +33,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmsLastActionFailed")
     public String[] hsmsLastActionFailed;
+
     public DescribeHapgResponse withHsmsLastActionFailed(String[] hsmsLastActionFailed) {
         this.hsmsLastActionFailed = hsmsLastActionFailed;
         return this;
@@ -39,6 +42,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmsPendingDeletion")
     public String[] hsmsPendingDeletion;
+
     public DescribeHapgResponse withHsmsPendingDeletion(String[] hsmsPendingDeletion) {
         this.hsmsPendingDeletion = hsmsPendingDeletion;
         return this;
@@ -47,6 +51,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmsPendingRegistration")
     public String[] hsmsPendingRegistration;
+
     public DescribeHapgResponse withHsmsPendingRegistration(String[] hsmsPendingRegistration) {
         this.hsmsPendingRegistration = hsmsPendingRegistration;
         return this;
@@ -55,6 +60,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public String label;
+
     public DescribeHapgResponse withLabel(String label) {
         this.label = label;
         return this;
@@ -63,6 +69,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTimestamp")
     public String lastModifiedTimestamp;
+
     public DescribeHapgResponse withLastModifiedTimestamp(String lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
@@ -71,6 +78,7 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionSerialList")
     public String[] partitionSerialList;
+
     public DescribeHapgResponse withPartitionSerialList(String[] partitionSerialList) {
         this.partitionSerialList = partitionSerialList;
         return this;
@@ -79,9 +87,11 @@ public class DescribeHapgResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public CloudHsmObjectStateEnum state;
+
     public DescribeHapgResponse withState(CloudHsmObjectStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeHapgResponse(){}
 }

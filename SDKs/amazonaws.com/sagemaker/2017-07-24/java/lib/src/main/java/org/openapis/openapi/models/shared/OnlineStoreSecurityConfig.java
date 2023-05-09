@@ -15,9 +15,11 @@ public class OnlineStoreSecurityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public OnlineStoreSecurityConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public OnlineStoreSecurityConfig(){}
 }

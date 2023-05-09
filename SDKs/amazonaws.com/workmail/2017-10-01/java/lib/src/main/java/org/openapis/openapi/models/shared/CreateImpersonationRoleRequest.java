@@ -12,6 +12,7 @@ public class CreateImpersonationRoleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateImpersonationRoleRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateImpersonationRoleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateImpersonationRoleRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateImpersonationRoleRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateImpersonationRoleRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateImpersonationRoleRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CreateImpersonationRoleRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -41,6 +45,7 @@ public class CreateImpersonationRoleRequest {
     
     @JsonProperty("Rules")
     public ImpersonationRule[] rules;
+
     public CreateImpersonationRoleRequest withRules(ImpersonationRule[] rules) {
         this.rules = rules;
         return this;
@@ -48,9 +53,16 @@ public class CreateImpersonationRoleRequest {
     
     @JsonProperty("Type")
     public ImpersonationRoleTypeEnum type;
+
     public CreateImpersonationRoleRequest withType(ImpersonationRoleTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateImpersonationRoleRequest(@JsonProperty("Name") String name, @JsonProperty("OrganizationId") String organizationId, @JsonProperty("Rules") ImpersonationRule[] rules, @JsonProperty("Type") ImpersonationRoleTypeEnum type) {
+        this.name = name;
+        this.organizationId = organizationId;
+        this.rules = rules;
+        this.type = type;
+  }
 }

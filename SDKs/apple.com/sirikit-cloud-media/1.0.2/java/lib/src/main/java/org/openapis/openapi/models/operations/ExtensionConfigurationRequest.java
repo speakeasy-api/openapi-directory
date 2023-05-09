@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExtensionConfigurationRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ExtensionConfigurationRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -16,6 +18,7 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Cache-Control")
     public String cacheControl;
+
     public ExtensionConfigurationRequest withCacheControl(String cacheControl) {
         this.cacheControl = cacheControl;
         return this;
@@ -23,6 +26,7 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public ExtensionConfigurationRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -30,6 +34,7 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Request-Timeout")
     public Double requestTimeout;
+
     public ExtensionConfigurationRequest withRequestTimeout(Double requestTimeout) {
         this.requestTimeout = requestTimeout;
         return this;
@@ -37,6 +42,7 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
     public String userAgent;
+
     public ExtensionConfigurationRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -44,6 +50,7 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
     public Double xApplecloudextensionRetryCount;
+
     public ExtensionConfigurationRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
         this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
         return this;
@@ -51,9 +58,17 @@ public class ExtensionConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
     public String xApplecloudextensionSessionId;
+
     public ExtensionConfigurationRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
         this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     
+    public ExtensionConfigurationRequest(@JsonProperty("Accept-Language") String acceptLanguage, @JsonProperty("Cache-Control") String cacheControl, @JsonProperty("Request-Timeout") Double requestTimeout, @JsonProperty("User-Agent") String userAgent, @JsonProperty("x-applecloudextension-session-id") String xApplecloudextensionSessionId) {
+        this.acceptLanguage = acceptLanguage;
+        this.cacheControl = cacheControl;
+        this.requestTimeout = requestTimeout;
+        this.userAgent = userAgent;
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
+  }
 }

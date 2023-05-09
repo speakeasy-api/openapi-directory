@@ -12,6 +12,7 @@ public class RegriiRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public RegriiRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -22,6 +23,7 @@ public class RegriiRequestBodyCertificateParameters {
      */
     @JsonProperty("regno")
     public String regno;
+
     public RegriiRequestBodyCertificateParameters withRegno(String regno) {
         this.regno = regno;
         return this;
@@ -32,6 +34,7 @@ public class RegriiRequestBodyCertificateParameters {
      */
     @JsonProperty("sro_id")
     public String sroId;
+
     public RegriiRequestBodyCertificateParameters withSroId(String sroId) {
         this.sroId = sroId;
         return this;
@@ -42,9 +45,16 @@ public class RegriiRequestBodyCertificateParameters {
      */
     @JsonProperty("yr")
     public String yr;
+
     public RegriiRequestBodyCertificateParameters withYr(String yr) {
         this.yr = yr;
         return this;
     }
     
+    public RegriiRequestBodyCertificateParameters(@JsonProperty("FullName") String fullName, @JsonProperty("regno") String regno, @JsonProperty("sro_id") String sroId, @JsonProperty("yr") String yr) {
+        this.fullName = fullName;
+        this.regno = regno;
+        this.sroId = sroId;
+        this.yr = yr;
+  }
 }

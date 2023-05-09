@@ -15,6 +15,7 @@ public class Target {
      */
     @JsonProperty("host")
     public String host;
+
     public Target withHost(String host) {
         this.host = host;
         return this;
@@ -25,9 +26,14 @@ public class Target {
      */
     @JsonProperty("scheme")
     public String scheme;
+
     public Target withScheme(String scheme) {
         this.scheme = scheme;
         return this;
     }
     
+    public Target(@JsonProperty("host") String host, @JsonProperty("scheme") String scheme) {
+        this.host = host;
+        this.scheme = scheme;
+  }
 }

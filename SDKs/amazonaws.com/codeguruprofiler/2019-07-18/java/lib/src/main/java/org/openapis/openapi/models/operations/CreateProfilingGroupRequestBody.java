@@ -15,6 +15,7 @@ public class CreateProfilingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentOrchestrationConfig")
     public CreateProfilingGroupRequestBodyAgentOrchestrationConfig agentOrchestrationConfig;
+
     public CreateProfilingGroupRequestBody withAgentOrchestrationConfig(CreateProfilingGroupRequestBodyAgentOrchestrationConfig agentOrchestrationConfig) {
         this.agentOrchestrationConfig = agentOrchestrationConfig;
         return this;
@@ -26,6 +27,7 @@ public class CreateProfilingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computePlatform")
     public CreateProfilingGroupRequestBodyComputePlatformEnum computePlatform;
+
     public CreateProfilingGroupRequestBody withComputePlatform(CreateProfilingGroupRequestBodyComputePlatformEnum computePlatform) {
         this.computePlatform = computePlatform;
         return this;
@@ -36,6 +38,7 @@ public class CreateProfilingGroupRequestBody {
      */
     @JsonProperty("profilingGroupName")
     public String profilingGroupName;
+
     public CreateProfilingGroupRequestBody withProfilingGroupName(String profilingGroupName) {
         this.profilingGroupName = profilingGroupName;
         return this;
@@ -47,9 +50,13 @@ public class CreateProfilingGroupRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateProfilingGroupRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProfilingGroupRequestBody(@JsonProperty("profilingGroupName") String profilingGroupName) {
+        this.profilingGroupName = profilingGroupName;
+  }
 }

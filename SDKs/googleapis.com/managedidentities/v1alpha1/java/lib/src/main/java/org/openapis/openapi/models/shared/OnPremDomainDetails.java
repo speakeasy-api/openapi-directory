@@ -18,6 +18,7 @@ public class OnPremDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableSidFiltering")
     public Boolean disableSidFiltering;
+
     public OnPremDomainDetails withDisableSidFiltering(Boolean disableSidFiltering) {
         this.disableSidFiltering = disableSidFiltering;
         return this;
@@ -29,9 +30,11 @@ public class OnPremDomainDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public OnPremDomainDetails withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public OnPremDomainDetails(){}
 }

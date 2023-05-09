@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterOrganizationDelegatedAdminRequest {
     @JsonProperty("MemberAccountId")
     public String memberAccountId;
+
     public RegisterOrganizationDelegatedAdminRequest withMemberAccountId(String memberAccountId) {
         this.memberAccountId = memberAccountId;
         return this;
     }
     
+    public RegisterOrganizationDelegatedAdminRequest(@JsonProperty("MemberAccountId") String memberAccountId) {
+        this.memberAccountId = memberAccountId;
+  }
 }

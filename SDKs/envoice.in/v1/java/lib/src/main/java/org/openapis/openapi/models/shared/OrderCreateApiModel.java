@@ -17,6 +17,7 @@ public class OrderCreateApiModel {
     @JsonProperty("AfterPaymentDescription")
     @SpeakeasyMetadata("form:name=AfterPaymentDescription")
     public String afterPaymentDescription;
+
     public OrderCreateApiModel withAfterPaymentDescription(String afterPaymentDescription) {
         this.afterPaymentDescription = afterPaymentDescription;
         return this;
@@ -29,6 +30,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Attachments")
     @SpeakeasyMetadata("form:name=Attachments,json")
     public OrderAttachmentApiModel[] attachments;
+
     public OrderCreateApiModel withAttachments(OrderAttachmentApiModel[] attachments) {
         this.attachments = attachments;
         return this;
@@ -41,6 +43,7 @@ public class OrderCreateApiModel {
     @JsonProperty("CouponCode")
     @SpeakeasyMetadata("form:name=CouponCode")
     public String couponCode;
+
     public OrderCreateApiModel withCouponCode(String couponCode) {
         this.couponCode = couponCode;
         return this;
@@ -53,6 +56,7 @@ public class OrderCreateApiModel {
     @JsonProperty("CurrencyId")
     @SpeakeasyMetadata("form:name=CurrencyId")
     public Integer currencyId;
+
     public OrderCreateApiModel withCurrencyId(Integer currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -65,6 +69,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Description")
     @SpeakeasyMetadata("form:name=Description")
     public String description;
+
     public OrderCreateApiModel withDescription(String description) {
         this.description = description;
         return this;
@@ -77,6 +82,7 @@ public class OrderCreateApiModel {
     @JsonProperty("DiscountAmount")
     @SpeakeasyMetadata("form:name=DiscountAmount")
     public Double discountAmount;
+
     public OrderCreateApiModel withDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -89,6 +95,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Items")
     @SpeakeasyMetadata("form:name=Items,json")
     public OrderItemApiModel[] items;
+
     public OrderCreateApiModel withItems(OrderItemApiModel[] items) {
         this.items = items;
         return this;
@@ -101,6 +108,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Name")
     @SpeakeasyMetadata("form:name=Name")
     public String name;
+
     public OrderCreateApiModel withName(String name) {
         this.name = name;
         return this;
@@ -113,6 +121,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Note")
     @SpeakeasyMetadata("form:name=Note")
     public String note;
+
     public OrderCreateApiModel withNote(String note) {
         this.note = note;
         return this;
@@ -122,6 +131,7 @@ public class OrderCreateApiModel {
     @JsonProperty("OrderBillingDetails")
     @SpeakeasyMetadata("form:name=OrderBillingDetails,json")
     public OrderBillingDetailsApiModel orderBillingDetails;
+
     public OrderCreateApiModel withOrderBillingDetails(OrderBillingDetailsApiModel orderBillingDetails) {
         this.orderBillingDetails = orderBillingDetails;
         return this;
@@ -131,6 +141,7 @@ public class OrderCreateApiModel {
     @JsonProperty("OrderShippingDetails")
     @SpeakeasyMetadata("form:name=OrderShippingDetails,json")
     public OrderShippingDetailsApiModel orderShippingDetails;
+
     public OrderCreateApiModel withOrderShippingDetails(OrderShippingDetailsApiModel orderShippingDetails) {
         this.orderShippingDetails = orderShippingDetails;
         return this;
@@ -143,6 +154,7 @@ public class OrderCreateApiModel {
     @JsonProperty("ProductId")
     @SpeakeasyMetadata("form:name=ProductId")
     public Integer productId;
+
     public OrderCreateApiModel withProductId(Integer productId) {
         this.productId = productId;
         return this;
@@ -155,6 +167,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Referral")
     @SpeakeasyMetadata("form:name=Referral")
     public String referral;
+
     public OrderCreateApiModel withReferral(String referral) {
         this.referral = referral;
         return this;
@@ -167,6 +180,7 @@ public class OrderCreateApiModel {
     @JsonProperty("ShippingAmount")
     @SpeakeasyMetadata("form:name=ShippingAmount")
     public Double shippingAmount;
+
     public OrderCreateApiModel withShippingAmount(Double shippingAmount) {
         this.shippingAmount = shippingAmount;
         return this;
@@ -179,6 +193,7 @@ public class OrderCreateApiModel {
     @JsonProperty("ShippingDescription")
     @SpeakeasyMetadata("form:name=ShippingDescription")
     public String shippingDescription;
+
     public OrderCreateApiModel withShippingDescription(String shippingDescription) {
         this.shippingDescription = shippingDescription;
         return this;
@@ -191,6 +206,7 @@ public class OrderCreateApiModel {
     @JsonProperty("Status")
     @SpeakeasyMetadata("form:name=Status")
     public OrderCreateApiModelStatusEnum status;
+
     public OrderCreateApiModel withStatus(OrderCreateApiModelStatusEnum status) {
         this.status = status;
         return this;
@@ -203,6 +219,7 @@ public class OrderCreateApiModel {
     @JsonProperty("SubTotalAmount")
     @SpeakeasyMetadata("form:name=SubTotalAmount")
     public Double subTotalAmount;
+
     public OrderCreateApiModel withSubTotalAmount(Double subTotalAmount) {
         this.subTotalAmount = subTotalAmount;
         return this;
@@ -215,6 +232,7 @@ public class OrderCreateApiModel {
     @JsonProperty("TaxAmount")
     @SpeakeasyMetadata("form:name=TaxAmount")
     public Double taxAmount;
+
     public OrderCreateApiModel withTaxAmount(Double taxAmount) {
         this.taxAmount = taxAmount;
         return this;
@@ -227,6 +245,7 @@ public class OrderCreateApiModel {
     @JsonProperty("TotalAmount")
     @SpeakeasyMetadata("form:name=TotalAmount")
     public Double totalAmount;
+
     public OrderCreateApiModel withTotalAmount(Double totalAmount) {
         this.totalAmount = totalAmount;
         return this;
@@ -239,9 +258,11 @@ public class OrderCreateApiModel {
     @JsonProperty("WhatHappensNextDescription")
     @SpeakeasyMetadata("form:name=WhatHappensNextDescription")
     public String whatHappensNextDescription;
+
     public OrderCreateApiModel withWhatHappensNextDescription(String whatHappensNextDescription) {
         this.whatHappensNextDescription = whatHappensNextDescription;
         return this;
     }
     
+    public OrderCreateApiModel(){}
 }

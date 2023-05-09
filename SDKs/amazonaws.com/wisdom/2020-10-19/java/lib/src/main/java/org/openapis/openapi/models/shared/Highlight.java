@@ -15,6 +15,7 @@ public class Highlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beginOffsetInclusive")
     public Long beginOffsetInclusive;
+
     public Highlight withBeginOffsetInclusive(Long beginOffsetInclusive) {
         this.beginOffsetInclusive = beginOffsetInclusive;
         return this;
@@ -23,9 +24,11 @@ public class Highlight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffsetExclusive")
     public Long endOffsetExclusive;
+
     public Highlight withEndOffsetExclusive(Long endOffsetExclusive) {
         this.endOffsetExclusive = endOffsetExclusive;
         return this;
     }
     
+    public Highlight(){}
 }

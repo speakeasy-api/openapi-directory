@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCostEstimateResponse {
@@ -12,6 +13,7 @@ public class GetCostEstimateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCostEstimateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCostEstimateResponse {
     
     
     public String contentType;
+
     public GetCostEstimateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCostEstimateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCostEstimateResult getCostEstimateResult;
+
     public GetCostEstimateResponse withGetCostEstimateResult(org.openapis.openapi.models.shared.GetCostEstimateResult getCostEstimateResult) {
         this.getCostEstimateResult = getCostEstimateResult;
         return this;
@@ -39,6 +43,7 @@ public class GetCostEstimateResponse {
      */
     
     public Object invalidInputException;
+
     public GetCostEstimateResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class GetCostEstimateResponse {
      */
     
     public Object notFoundException;
+
     public GetCostEstimateResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class GetCostEstimateResponse {
      */
     
     public Object serviceException;
+
     public GetCostEstimateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -66,6 +73,7 @@ public class GetCostEstimateResponse {
     
     
     public Integer statusCode;
+
     public GetCostEstimateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetCostEstimateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCostEstimateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetCostEstimateResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetCostEstimateResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetCostEstimateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

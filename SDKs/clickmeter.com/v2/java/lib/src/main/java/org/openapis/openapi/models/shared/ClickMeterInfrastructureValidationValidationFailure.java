@@ -12,6 +12,7 @@ public class ClickMeterInfrastructureValidationValidationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public java.util.Map<String, Object> code;
+
     public ClickMeterInfrastructureValidationValidationFailure withCode(java.util.Map<String, Object> code) {
         this.code = code;
         return this;
@@ -20,6 +21,7 @@ public class ClickMeterInfrastructureValidationValidationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ClickMeterInfrastructureValidationValidationFailure withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -28,6 +30,7 @@ public class ClickMeterInfrastructureValidationValidationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorValue")
     public java.util.Map<String, Object> errorValue;
+
     public ClickMeterInfrastructureValidationValidationFailure withErrorValue(java.util.Map<String, Object> errorValue) {
         this.errorValue = errorValue;
         return this;
@@ -36,9 +39,11 @@ public class ClickMeterInfrastructureValidationValidationFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public ClickMeterInfrastructureValidationValidationFailure withProperty(String property) {
         this.property = property;
         return this;
     }
     
+    public ClickMeterInfrastructureValidationValidationFailure(){}
 }

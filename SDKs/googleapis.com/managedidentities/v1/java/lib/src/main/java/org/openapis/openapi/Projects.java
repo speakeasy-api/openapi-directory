@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsBackupsListResponse(contentType, httpRes.statusCode()) {{
             listBackupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDetachTrustResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -264,6 +254,52 @@ public class Projects {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
                 res.operation = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * DomainJoinMachine API joins a Compute Engine VM to the domain
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse managedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachine(org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest request, org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest.class, baseUrl, "/v1/{domain}:domainJoinMachine", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "domainJoinMachineRequest", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsDomainJoinMachineResponse(contentType, httpRes.statusCode()) {{
+            domainJoinMachineResponse = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DomainJoinMachineResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DomainJoinMachineResponse.class);
+                res.domainJoinMachineResponse = out;
             }
         }
 
@@ -300,11 +336,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsExtendSchemaResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsGetLdapssettingsResponse(contentType, httpRes.statusCode()) {{
             ldapsSettings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsListResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsListResponse(contentType, httpRes.statusCode()) {{
             listDomainsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsReconfigureTrustResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +516,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsResetAdminPasswordResponse(contentType, httpRes.statusCode()) {{
             resetAdminPasswordResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -536,11 +562,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsRestoreResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -582,11 +606,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsSqlIntegrationsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsSqlIntegrationsListResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsSqlIntegrationsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsSqlIntegrationsListResponse(contentType, httpRes.statusCode()) {{
             listSqlIntegrationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +652,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsUpdateLdapssettingsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -678,11 +698,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsValidateTrustResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -726,11 +744,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -774,11 +790,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -820,11 +834,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -866,11 +878,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetResponse(contentType, httpRes.statusCode()) {{
             peering = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -958,11 +966,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsListResponse(contentType, httpRes.statusCode()) {{
             listPeeringsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1006,11 +1012,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1054,11 +1058,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1102,11 +1104,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalPeeringsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1148,11 +1148,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     public String description;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String deviceName;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -26,6 +28,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public Double diskImageSize;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withDiskImageSize(Double diskImageSize) {
         this.diskImageSize = diskImageSize;
         return this;
@@ -33,6 +36,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String format;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +44,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String progress;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -47,6 +52,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String snapshotId;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -54,6 +60,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String status;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -61,6 +68,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String statusMessage;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -68,6 +76,7 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public String url;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withUrl(String url) {
         this.url = url;
         return this;
@@ -75,9 +84,11 @@ public class DescribeImportImageTasksResultImportImageTasksSnapshotDetails {
     
     
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket userBucket;
+
     public DescribeImportImageTasksResultImportImageTasksSnapshotDetails withUserBucket(DescribeImportImageTasksResultImportImageTasksSnapshotDetailsUserBucket userBucket) {
         this.userBucket = userBucket;
         return this;
     }
     
+    public DescribeImportImageTasksResultImportImageTasksSnapshotDetails(){}
 }

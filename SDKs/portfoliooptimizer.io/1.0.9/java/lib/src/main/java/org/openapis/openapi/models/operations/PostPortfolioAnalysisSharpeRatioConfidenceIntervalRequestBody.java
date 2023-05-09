@@ -15,6 +15,7 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceIntervalType")
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyConfidenceIntervalTypeEnum confidenceIntervalType;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody withConfidenceIntervalType(PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyConfidenceIntervalTypeEnum confidenceIntervalType) {
         this.confidenceIntervalType = confidenceIntervalType;
         return this;
@@ -26,6 +27,7 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidenceLevel")
     public Double confidenceLevel;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody withConfidenceLevel(Double confidenceLevel) {
         this.confidenceLevel = confidenceLevel;
         return this;
@@ -33,6 +35,7 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody {
     
     @JsonProperty("portfolios")
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfolios[] portfolios;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody withPortfolios(PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfolios[] portfolios) {
         this.portfolios = portfolios;
         return this;
@@ -43,9 +46,14 @@ public class PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody {
      */
     @JsonProperty("riskFreeRate")
     public Double riskFreeRate;
+
     public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody withRiskFreeRate(Double riskFreeRate) {
         this.riskFreeRate = riskFreeRate;
         return this;
     }
     
+    public PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBody(@JsonProperty("portfolios") PostPortfolioAnalysisSharpeRatioConfidenceIntervalRequestBodyPortfolios[] portfolios, @JsonProperty("riskFreeRate") Double riskFreeRate) {
+        this.portfolios = portfolios;
+        this.riskFreeRate = riskFreeRate;
+  }
 }

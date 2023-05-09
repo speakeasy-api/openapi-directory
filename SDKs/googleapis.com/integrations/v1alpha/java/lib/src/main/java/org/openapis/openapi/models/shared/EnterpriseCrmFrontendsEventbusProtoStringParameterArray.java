@@ -12,9 +12,11 @@ public class EnterpriseCrmFrontendsEventbusProtoStringParameterArray {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValues")
     public String[] stringValues;
+
     public EnterpriseCrmFrontendsEventbusProtoStringParameterArray withStringValues(String[] stringValues) {
         this.stringValues = stringValues;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoStringParameterArray(){}
 }

@@ -20,6 +20,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSource")
     public DataSourceEnum dataSource;
+
     public ContinuousExportDescription withDataSource(DataSourceEnum dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -28,6 +29,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportId")
     public String exportId;
+
     public ContinuousExportDescription withExportId(String exportId) {
         this.exportId = exportId;
         return this;
@@ -36,6 +38,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Bucket")
     public String s3Bucket;
+
     public ContinuousExportDescription withS3Bucket(String s3Bucket) {
         this.s3Bucket = s3Bucket;
         return this;
@@ -44,6 +47,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaStorageConfig")
     public java.util.Map<String, String> schemaStorageConfig;
+
     public ContinuousExportDescription withSchemaStorageConfig(java.util.Map<String, String> schemaStorageConfig) {
         this.schemaStorageConfig = schemaStorageConfig;
         return this;
@@ -54,6 +58,7 @@ public class ContinuousExportDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public ContinuousExportDescription withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -62,6 +67,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ContinuousExportStatusEnum status;
+
     public ContinuousExportDescription withStatus(ContinuousExportStatusEnum status) {
         this.status = status;
         return this;
@@ -70,6 +76,7 @@ public class ContinuousExportDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusDetail")
     public String statusDetail;
+
     public ContinuousExportDescription withStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
         return this;
@@ -80,9 +87,11 @@ public class ContinuousExportDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public ContinuousExportDescription withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
     }
     
+    public ContinuousExportDescription(){}
 }

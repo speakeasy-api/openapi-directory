@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudRunV2ServiceInput {
     /**
-     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules. More info: https://kubernetes.io/docs/user-guide/annotations
+     * Unstructured key value map that may be set by external tools to store and arbitrary metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected in new resources. All system annotations in v1 now have a corresponding field in v2 Service. This field follows Kubernetes annotations' namespacing, limits, and rules.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public GoogleCloudRunV2ServiceInput withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("binaryAuthorization")
     public GoogleCloudRunV2BinaryAuthorization binaryAuthorization;
+
     public GoogleCloudRunV2ServiceInput withBinaryAuthorization(GoogleCloudRunV2BinaryAuthorization binaryAuthorization) {
         this.binaryAuthorization = binaryAuthorization;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client")
     public String client;
+
     public GoogleCloudRunV2ServiceInput withClient(String client) {
         this.client = client;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientVersion")
     public String clientVersion;
+
     public GoogleCloudRunV2ServiceInput withClientVersion(String clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudRunV2ServiceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -73,17 +78,19 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ingress")
     public GoogleCloudRunV2ServiceIngressEnum ingress;
+
     public GoogleCloudRunV2ServiceInput withIngress(GoogleCloudRunV2ServiceIngressEnum ingress) {
         this.ingress = ingress;
         return this;
     }
     
     /**
-     * Map of string keys and values that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
+     * Unstructured key value map that can be used to organize and categorize objects. User-provided labels are shared with Google's billing system, so they can be used to filter, or break down billing charges by team, component, environment, state, etc. For more information, visit https://cloud.google.com/resource-manager/docs/creating-managing-labels or https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does not support labels with `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they will be rejected. All system labels in v1 now have a corresponding field in v2 Service.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudRunV2ServiceInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchStage")
     public GoogleCloudRunV2ServiceLaunchStageEnum launchStage;
+
     public GoogleCloudRunV2ServiceInput withLaunchStage(GoogleCloudRunV2ServiceLaunchStageEnum launchStage) {
         this.launchStage = launchStage;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRunV2ServiceInput withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public GoogleCloudRunV2RevisionTemplate template;
+
     public GoogleCloudRunV2ServiceInput withTemplate(GoogleCloudRunV2RevisionTemplate template) {
         this.template = template;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalCondition")
     public GoogleCloudRunV2Condition terminalCondition;
+
     public GoogleCloudRunV2ServiceInput withTerminalCondition(GoogleCloudRunV2Condition terminalCondition) {
         this.terminalCondition = terminalCondition;
         return this;
@@ -139,9 +150,11 @@ public class GoogleCloudRunV2ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("traffic")
     public GoogleCloudRunV2TrafficTarget[] traffic;
+
     public GoogleCloudRunV2ServiceInput withTraffic(GoogleCloudRunV2TrafficTarget[] traffic) {
         this.traffic = traffic;
         return this;
     }
     
+    public GoogleCloudRunV2ServiceInput(){}
 }

@@ -15,6 +15,7 @@ public class CreateKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPair")
     public KeyPair keyPair;
+
     public CreateKeyPairResult withKeyPair(KeyPair keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -23,6 +24,7 @@ public class CreateKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public CreateKeyPairResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
@@ -31,6 +33,7 @@ public class CreateKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateKeyBase64")
     public String privateKeyBase64;
+
     public CreateKeyPairResult withPrivateKeyBase64(String privateKeyBase64) {
         this.privateKeyBase64 = privateKeyBase64;
         return this;
@@ -39,9 +42,11 @@ public class CreateKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKeyBase64")
     public String publicKeyBase64;
+
     public CreateKeyPairResult withPublicKeyBase64(String publicKeyBase64) {
         this.publicKeyBase64 = publicKeyBase64;
         return this;
     }
     
+    public CreateKeyPairResult(){}
 }

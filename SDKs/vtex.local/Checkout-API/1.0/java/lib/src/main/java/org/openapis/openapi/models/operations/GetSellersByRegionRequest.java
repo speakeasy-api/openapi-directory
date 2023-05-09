@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSellersByRegionRequest {
@@ -12,6 +13,7 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetSellersByRegionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetSellersByRegionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String country;
+
     public GetSellersByRegionRequest withCountry(String country) {
         this.country = country;
         return this;
@@ -42,6 +46,7 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoCoordinates")
     public Double[] geoCoordinates;
+
     public GetSellersByRegionRequest withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -52,6 +57,7 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=postalCode")
     public String postalCode;
+
     public GetSellersByRegionRequest withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -62,9 +68,16 @@ public class GetSellersByRegionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=regionId")
     public String regionId;
+
     public GetSellersByRegionRequest withRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     
+    public GetSellersByRegionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("country") String country, @JsonProperty("regionId") String regionId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.country = country;
+        this.regionId = regionId;
+  }
 }

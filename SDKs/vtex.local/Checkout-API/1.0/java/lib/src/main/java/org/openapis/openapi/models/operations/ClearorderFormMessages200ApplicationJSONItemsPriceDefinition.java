@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculatedSellingPrice")
     public Long calculatedSellingPrice;
+
     public ClearorderFormMessages200ApplicationJSONItemsPriceDefinition withCalculatedSellingPrice(Long calculatedSellingPrice) {
         this.calculatedSellingPrice = calculatedSellingPrice;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrices")
     public ClearorderFormMessages200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices;
+
     public ClearorderFormMessages200ApplicationJSONItemsPriceDefinition withSellingPrices(ClearorderFormMessages200ApplicationJSONItemsPriceDefinitionSellingPrices[] sellingPrices) {
         this.sellingPrices = sellingPrices;
         return this;
@@ -40,9 +42,11 @@ public class ClearorderFormMessages200ApplicationJSONItemsPriceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public ClearorderFormMessages200ApplicationJSONItemsPriceDefinition withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONItemsPriceDefinition(){}
 }

@@ -15,6 +15,7 @@ public class NodeRangeProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("container")
     public ContainerProperties container;
+
     public NodeRangeProperty withContainer(ContainerProperties container) {
         this.container = container;
         return this;
@@ -22,9 +23,13 @@ public class NodeRangeProperty {
     
     @JsonProperty("targetNodes")
     public String targetNodes;
+
     public NodeRangeProperty withTargetNodes(String targetNodes) {
         this.targetNodes = targetNodes;
         return this;
     }
     
+    public NodeRangeProperty(@JsonProperty("targetNodes") String targetNodes) {
+        this.targetNodes = targetNodes;
+  }
 }

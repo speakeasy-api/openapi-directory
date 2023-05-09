@@ -18,6 +18,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentConfig")
     public DeploymentConfig deploymentConfig;
+
     public Deployment withDeploymentConfig(DeploymentConfig deploymentConfig) {
         this.deploymentConfig = deploymentConfig;
         return this;
@@ -29,6 +30,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public Deployment withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -40,6 +42,7 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entryPoints")
     public EntryPoint[] entryPoints;
+
     public Deployment withEntryPoints(EntryPoint[] entryPoints) {
         this.entryPoints = entryPoints;
         return this;
@@ -51,9 +54,11 @@ public class Deployment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public Deployment withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public Deployment(){}
 }

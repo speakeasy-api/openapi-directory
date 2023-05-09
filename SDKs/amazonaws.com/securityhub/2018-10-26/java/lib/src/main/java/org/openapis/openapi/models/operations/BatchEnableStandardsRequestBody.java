@@ -12,9 +12,13 @@ public class BatchEnableStandardsRequestBody {
      */
     @JsonProperty("StandardsSubscriptionRequests")
     public org.openapis.openapi.models.shared.StandardsSubscriptionRequest[] standardsSubscriptionRequests;
+
     public BatchEnableStandardsRequestBody withStandardsSubscriptionRequests(org.openapis.openapi.models.shared.StandardsSubscriptionRequest[] standardsSubscriptionRequests) {
         this.standardsSubscriptionRequests = standardsSubscriptionRequests;
         return this;
     }
     
+    public BatchEnableStandardsRequestBody(@JsonProperty("StandardsSubscriptionRequests") org.openapis.openapi.models.shared.StandardsSubscriptionRequest[] standardsSubscriptionRequests) {
+        this.standardsSubscriptionRequests = standardsSubscriptionRequests;
+  }
 }

@@ -15,9 +15,11 @@ public class Predictions400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Predictions400ApplicationJSONError error;
+
     public Predictions400ApplicationJSON withError(Predictions400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public Predictions400ApplicationJSON(){}
 }

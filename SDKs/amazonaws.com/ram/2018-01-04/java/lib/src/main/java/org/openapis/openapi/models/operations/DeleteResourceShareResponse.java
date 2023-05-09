@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourceShareResponse {
     
     public String contentType;
+
     public DeleteResourceShareResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourceShareResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResourceShareResponse deleteResourceShareResponse;
+
     public DeleteResourceShareResponse withDeleteResourceShareResponse(org.openapis.openapi.models.shared.DeleteResourceShareResponse deleteResourceShareResponse) {
         this.deleteResourceShareResponse = deleteResourceShareResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public DeleteResourceShareResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object invalidClientTokenException;
+
     public DeleteResourceShareResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteResourceShareResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public DeleteResourceShareResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object malformedArnException;
+
     public DeleteResourceShareResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DeleteResourceShareResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -89,6 +98,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object serverInternalException;
+
     public DeleteResourceShareResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -99,6 +109,7 @@ public class DeleteResourceShareResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteResourceShareResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -106,6 +117,7 @@ public class DeleteResourceShareResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourceShareResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class DeleteResourceShareResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourceShareResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class DeleteResourceShareResponse {
      */
     
     public Object unknownResourceException;
+
     public DeleteResourceShareResponse withUnknownResourceException(Object unknownResourceException) {
         this.unknownResourceException = unknownResourceException;
         return this;
     }
     
+    public DeleteResourceShareResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

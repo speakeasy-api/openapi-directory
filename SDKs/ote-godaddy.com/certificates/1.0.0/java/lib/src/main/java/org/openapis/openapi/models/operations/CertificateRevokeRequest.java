@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CertificateRevokeRequest {
@@ -12,6 +13,7 @@ public class CertificateRevokeRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CertificateRevoke certificateRevoke;
+
     public CertificateRevokeRequest withCertificateRevoke(org.openapis.openapi.models.shared.CertificateRevoke certificateRevoke) {
         this.certificateRevoke = certificateRevoke;
         return this;
@@ -22,9 +24,14 @@ public class CertificateRevokeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=certificateId")
     public String certificateId;
+
     public CertificateRevokeRequest withCertificateId(String certificateId) {
         this.certificateId = certificateId;
         return this;
     }
     
+    public CertificateRevokeRequest(@JsonProperty("CertificateRevoke") org.openapis.openapi.models.shared.CertificateRevoke certificateRevoke, @JsonProperty("certificateId") String certificateId) {
+        this.certificateRevoke = certificateRevoke;
+        this.certificateId = certificateId;
+  }
 }

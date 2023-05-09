@@ -18,6 +18,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalOptions")
     public AdditionalOption[] additionalOptions;
+
     public Rate withAdditionalOptions(AdditionalOption[] additionalOptions) {
         this.additionalOptions = additionalOptions;
         return this;
@@ -29,6 +30,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseShippingCost")
     public Amount baseShippingCost;
+
     public Rate withBaseShippingCost(Amount baseShippingCost) {
         this.baseShippingCost = baseShippingCost;
         return this;
@@ -40,6 +42,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationTimeZone")
     public String destinationTimeZone;
+
     public Rate withDestinationTimeZone(String destinationTimeZone) {
         this.destinationTimeZone = destinationTimeZone;
         return this;
@@ -51,6 +54,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxEstimatedDeliveryDate")
     public String maxEstimatedDeliveryDate;
+
     public Rate withMaxEstimatedDeliveryDate(String maxEstimatedDeliveryDate) {
         this.maxEstimatedDeliveryDate = maxEstimatedDeliveryDate;
         return this;
@@ -62,6 +66,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minEstimatedDeliveryDate")
     public String minEstimatedDeliveryDate;
+
     public Rate withMinEstimatedDeliveryDate(String minEstimatedDeliveryDate) {
         this.minEstimatedDeliveryDate = minEstimatedDeliveryDate;
         return this;
@@ -73,6 +78,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupNetworks")
     public String[] pickupNetworks;
+
     public Rate withPickupNetworks(String[] pickupNetworks) {
         this.pickupNetworks = pickupNetworks;
         return this;
@@ -84,6 +90,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupSlots")
     public PickupSlot[] pickupSlots;
+
     public Rate withPickupSlots(PickupSlot[] pickupSlots) {
         this.pickupSlots = pickupSlots;
         return this;
@@ -95,6 +102,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupType")
     public String pickupType;
+
     public Rate withPickupType(String pickupType) {
         this.pickupType = pickupType;
         return this;
@@ -106,6 +114,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateId")
     public String rateId;
+
     public Rate withRateId(String rateId) {
         this.rateId = rateId;
         return this;
@@ -117,6 +126,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateRecommendation")
     public String[] rateRecommendation;
+
     public Rate withRateRecommendation(String[] rateRecommendation) {
         this.rateRecommendation = rateRecommendation;
         return this;
@@ -128,6 +138,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCarrierCode")
     public String shippingCarrierCode;
+
     public Rate withShippingCarrierCode(String shippingCarrierCode) {
         this.shippingCarrierCode = shippingCarrierCode;
         return this;
@@ -139,6 +150,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCarrierName")
     public String shippingCarrierName;
+
     public Rate withShippingCarrierName(String shippingCarrierName) {
         this.shippingCarrierName = shippingCarrierName;
         return this;
@@ -150,6 +162,7 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServiceCode")
     public String shippingServiceCode;
+
     public Rate withShippingServiceCode(String shippingServiceCode) {
         this.shippingServiceCode = shippingServiceCode;
         return this;
@@ -161,9 +174,11 @@ public class Rate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServiceName")
     public String shippingServiceName;
+
     public Rate withShippingServiceName(String shippingServiceName) {
         this.shippingServiceName = shippingServiceName;
         return this;
     }
     
+    public Rate(){}
 }

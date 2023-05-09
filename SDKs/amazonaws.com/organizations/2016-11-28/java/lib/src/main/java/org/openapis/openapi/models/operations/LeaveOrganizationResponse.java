@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LeaveOrganizationResponse {
@@ -12,6 +13,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public LeaveOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public LeaveOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object accountNotFoundException;
+
     public LeaveOrganizationResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -42,6 +46,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public LeaveOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -52,6 +57,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object constraintViolationException;
+
     public LeaveOrganizationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -59,6 +65,7 @@ public class LeaveOrganizationResponse {
     
     
     public String contentType;
+
     public LeaveOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public LeaveOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -79,6 +87,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object masterCannotLeaveOrganizationException;
+
     public LeaveOrganizationResponse withMasterCannotLeaveOrganizationException(Object masterCannotLeaveOrganizationException) {
         this.masterCannotLeaveOrganizationException = masterCannotLeaveOrganizationException;
         return this;
@@ -89,6 +98,7 @@ public class LeaveOrganizationResponse {
      */
     
     public Object serviceException;
+
     public LeaveOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class LeaveOrganizationResponse {
     
     
     public Integer statusCode;
+
     public LeaveOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class LeaveOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LeaveOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class LeaveOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public LeaveOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public LeaveOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

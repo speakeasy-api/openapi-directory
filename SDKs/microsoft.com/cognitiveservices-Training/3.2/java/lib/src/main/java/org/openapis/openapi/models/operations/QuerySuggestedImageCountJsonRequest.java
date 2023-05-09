@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class QuerySuggestedImageCountJsonRequest {
@@ -12,6 +13,7 @@ public class QuerySuggestedImageCountJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TagFilter tagFilter;
+
     public QuerySuggestedImageCountJsonRequest withTagFilter(org.openapis.openapi.models.shared.TagFilter tagFilter) {
         this.tagFilter = tagFilter;
         return this;
@@ -22,6 +24,7 @@ public class QuerySuggestedImageCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public QuerySuggestedImageCountJsonRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -32,9 +35,15 @@ public class QuerySuggestedImageCountJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public QuerySuggestedImageCountJsonRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public QuerySuggestedImageCountJsonRequest(@JsonProperty("TagFilter") org.openapis.openapi.models.shared.TagFilter tagFilter, @JsonProperty("iterationId") String iterationId, @JsonProperty("projectId") String projectId) {
+        this.tagFilter = tagFilter;
+        this.iterationId = iterationId;
+        this.projectId = projectId;
+  }
 }

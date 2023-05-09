@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostUsersIdUserCategoriesFullRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public PostUsersIdUserCategoriesFullRequestBody requestBody;
+
     public PostUsersIdUserCategoriesFullRequest withRequestBody(PostUsersIdUserCategoriesFullRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PostUsersIdUserCategoriesFullRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=expand")
     public String expand;
+
     public PostUsersIdUserCategoriesFullRequest withExpand(String expand) {
         this.expand = expand;
         return this;
@@ -26,9 +29,13 @@ public class PostUsersIdUserCategoriesFullRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id_user")
     public String idUser;
+
     public PostUsersIdUserCategoriesFullRequest withIdUser(String idUser) {
         this.idUser = idUser;
         return this;
     }
     
+    public PostUsersIdUserCategoriesFullRequest(@JsonProperty("id_user") String idUser) {
+        this.idUser = idUser;
+  }
 }

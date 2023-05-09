@@ -15,6 +15,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availDates")
     public AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates[] availDates;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withAvailDates(AvailableProducts200ApplicationJSONDataPasTourGradesAvailDates[] availDates) {
         this.availDates = availDates;
         return this;
@@ -26,6 +27,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingEngine")
     public String bookingEngine;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withBookingEngine(String bookingEngine) {
         this.bookingEngine = bookingEngine;
         return this;
@@ -37,6 +39,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageServices")
     public java.util.Map<String, Object[]> languageServices;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withLanguageServices(java.util.Map<String, Object[]> languageServices) {
         this.languageServices = languageServices;
         return this;
@@ -59,6 +63,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sapi")
     public Boolean sapi;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withSapi(Boolean sapi) {
         this.sapi = sapi;
         return this;
@@ -70,6 +75,7 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withTitle(String title) {
         this.title = title;
         return this;
@@ -81,9 +87,11 @@ public class AvailableProducts200ApplicationJSONDataPasTourGrades {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tourGradeCode")
     public String tourGradeCode;
+
     public AvailableProducts200ApplicationJSONDataPasTourGrades withTourGradeCode(String tourGradeCode) {
         this.tourGradeCode = tourGradeCode;
         return this;
     }
     
+    public AvailableProducts200ApplicationJSONDataPasTourGrades(){}
 }

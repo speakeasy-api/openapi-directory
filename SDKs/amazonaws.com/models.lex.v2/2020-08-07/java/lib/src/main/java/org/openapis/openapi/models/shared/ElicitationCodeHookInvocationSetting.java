@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ElicitationCodeHookInvocationSetting {
     @JsonProperty("enableCodeHookInvocation")
     public Boolean enableCodeHookInvocation;
+
     public ElicitationCodeHookInvocationSetting withEnableCodeHookInvocation(Boolean enableCodeHookInvocation) {
         this.enableCodeHookInvocation = enableCodeHookInvocation;
         return this;
@@ -22,9 +23,13 @@ public class ElicitationCodeHookInvocationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invocationLabel")
     public String invocationLabel;
+
     public ElicitationCodeHookInvocationSetting withInvocationLabel(String invocationLabel) {
         this.invocationLabel = invocationLabel;
         return this;
     }
     
+    public ElicitationCodeHookInvocationSetting(@JsonProperty("enableCodeHookInvocation") Boolean enableCodeHookInvocation) {
+        this.enableCodeHookInvocation = enableCodeHookInvocation;
+  }
 }

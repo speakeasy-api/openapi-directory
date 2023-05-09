@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResultInstancesLaunchTemplateAndOverrides {
     
     public CreateFleetResultInstancesLaunchTemplateAndOverridesLaunchTemplateSpecification launchTemplateSpecification;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverrides withLaunchTemplateSpecification(CreateFleetResultInstancesLaunchTemplateAndOverridesLaunchTemplateSpecification launchTemplateSpecification) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         return this;
@@ -19,9 +20,11 @@ public class CreateFleetResultInstancesLaunchTemplateAndOverrides {
     
     
     public CreateFleetResultInstancesLaunchTemplateAndOverridesOverrides overrides;
+
     public CreateFleetResultInstancesLaunchTemplateAndOverrides withOverrides(CreateFleetResultInstancesLaunchTemplateAndOverridesOverrides overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public CreateFleetResultInstancesLaunchTemplateAndOverrides(){}
 }

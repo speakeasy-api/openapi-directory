@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeTemplateResponse {
     
     public String contentType;
+
     public MergeTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MergeTemplateResponse {
     
     
     public Integer statusCode;
+
     public MergeTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MergeTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate200ApplicationJSON mergeTemplate200ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate200ApplicationJSONObject(MergeTemplate200ApplicationJSON mergeTemplate200ApplicationJSONObject) {
         this.mergeTemplate200ApplicationJSONObject = mergeTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate401ApplicationJSON mergeTemplate401ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate401ApplicationJSONObject(MergeTemplate401ApplicationJSON mergeTemplate401ApplicationJSONObject) {
         this.mergeTemplate401ApplicationJSONObject = mergeTemplate401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate403ApplicationJSON mergeTemplate403ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate403ApplicationJSONObject(MergeTemplate403ApplicationJSON mergeTemplate403ApplicationJSONObject) {
         this.mergeTemplate403ApplicationJSONObject = mergeTemplate403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate404ApplicationJSON mergeTemplate404ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate404ApplicationJSONObject(MergeTemplate404ApplicationJSON mergeTemplate404ApplicationJSONObject) {
         this.mergeTemplate404ApplicationJSONObject = mergeTemplate404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate422ApplicationJSON mergeTemplate422ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate422ApplicationJSONObject(MergeTemplate422ApplicationJSON mergeTemplate422ApplicationJSONObject) {
         this.mergeTemplate422ApplicationJSONObject = mergeTemplate422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class MergeTemplateResponse {
      */
     
     public MergeTemplate500ApplicationJSON mergeTemplate500ApplicationJSONObject;
+
     public MergeTemplateResponse withMergeTemplate500ApplicationJSONObject(MergeTemplate500ApplicationJSON mergeTemplate500ApplicationJSONObject) {
         this.mergeTemplate500ApplicationJSONObject = mergeTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public MergeTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

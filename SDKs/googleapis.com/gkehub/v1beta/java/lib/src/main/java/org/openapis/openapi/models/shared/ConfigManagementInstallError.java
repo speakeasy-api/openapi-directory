@@ -18,9 +18,11 @@ public class ConfigManagementInstallError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public ConfigManagementInstallError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public ConfigManagementInstallError(){}
 }

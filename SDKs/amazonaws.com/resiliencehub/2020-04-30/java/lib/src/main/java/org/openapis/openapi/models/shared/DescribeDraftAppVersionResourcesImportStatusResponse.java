@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeDraftAppVersionResourcesImportStatusResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -34,6 +36,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -41,6 +44,7 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     
     @JsonProperty("status")
     public ResourceImportStatusTypeEnum status;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withStatus(ResourceImportStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -50,9 +54,16 @@ public class DescribeDraftAppVersionResourcesImportStatusResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("statusChangeTime")
     public OffsetDateTime statusChangeTime;
+
     public DescribeDraftAppVersionResourcesImportStatusResponse withStatusChangeTime(OffsetDateTime statusChangeTime) {
         this.statusChangeTime = statusChangeTime;
         return this;
     }
     
+    public DescribeDraftAppVersionResourcesImportStatusResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion, @JsonProperty("status") ResourceImportStatusTypeEnum status, @JsonProperty("statusChangeTime") OffsetDateTime statusChangeTime) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+        this.status = status;
+        this.statusChangeTime = statusChangeTime;
+  }
 }

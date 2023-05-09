@@ -18,9 +18,11 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawDer")
     public String rawDer;
+
     public CertificateInput withRawDer(String rawDer) {
         this.rawDer = rawDer;
         return this;
     }
     
+    public CertificateInput(){}
 }

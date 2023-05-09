@@ -15,6 +15,7 @@ public class EvaluationRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EvaluationRule withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class EvaluationRule {
     
     @JsonProperty("type")
     public String type;
+
     public EvaluationRule withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EvaluationRule(@JsonProperty("type") String type) {
+        this.type = type;
+  }
 }

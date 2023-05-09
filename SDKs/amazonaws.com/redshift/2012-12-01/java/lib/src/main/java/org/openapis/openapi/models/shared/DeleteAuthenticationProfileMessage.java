@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAuthenticationProfileMessage {
     
     public String authenticationProfileName;
+
     public DeleteAuthenticationProfileMessage withAuthenticationProfileName(String authenticationProfileName) {
         this.authenticationProfileName = authenticationProfileName;
         return this;
     }
     
+    public DeleteAuthenticationProfileMessage(@JsonProperty("AuthenticationProfileName") String authenticationProfileName) {
+        this.authenticationProfileName = authenticationProfileName;
+  }
 }

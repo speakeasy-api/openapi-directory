@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     public DisassociateInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withAssociationTarget(DisassociateInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget) {
         this.associationTarget = associationTarget;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String cronExpression;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -26,6 +28,7 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String instanceEventWindowId;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -33,6 +36,7 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public String name;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum state;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withState(DisassociateInstanceEventWindowResultInstanceEventWindowStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public DisassociateInstanceEventWindowResultInstanceEventWindowTags[] tags;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withTags(DisassociateInstanceEventWindowResultInstanceEventWindowTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class DisassociateInstanceEventWindowResultInstanceEventWindow {
     
     
     public DisassociateInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges;
+
     public DisassociateInstanceEventWindowResultInstanceEventWindow withTimeRanges(DisassociateInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public DisassociateInstanceEventWindowResultInstanceEventWindow(){}
 }

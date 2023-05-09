@@ -15,6 +15,7 @@ public class ScheduleTerminalActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionDetails")
     public Object actionDetails;
+
     public ScheduleTerminalActionsRequest withActionDetails(Object actionDetails) {
         this.actionDetails = actionDetails;
         return this;
@@ -29,6 +30,7 @@ public class ScheduleTerminalActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledAt")
     public String scheduledAt;
+
     public ScheduleTerminalActionsRequest withScheduledAt(String scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleTerminalActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeId")
     public String storeId;
+
     public ScheduleTerminalActionsRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
@@ -51,9 +54,11 @@ public class ScheduleTerminalActionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalIds")
     public String[] terminalIds;
+
     public ScheduleTerminalActionsRequest withTerminalIds(String[] terminalIds) {
         this.terminalIds = terminalIds;
         return this;
     }
     
+    public ScheduleTerminalActionsRequest(){}
 }

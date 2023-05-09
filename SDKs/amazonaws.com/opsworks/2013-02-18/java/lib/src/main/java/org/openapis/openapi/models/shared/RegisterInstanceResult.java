@@ -15,9 +15,11 @@ public class RegisterInstanceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RegisterInstanceResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public RegisterInstanceResult(){}
 }

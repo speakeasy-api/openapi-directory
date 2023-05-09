@@ -12,6 +12,7 @@ public class GroupsV2GroupMember {
      */
     
     public UserUserInfoCard bungieNetUserInfo;
+
     public GroupsV2GroupMember withBungieNetUserInfo(UserUserInfoCard bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -19,6 +20,7 @@ public class GroupsV2GroupMember {
     
     
     public GroupsV2GroupUserInfoCard destinyUserInfo;
+
     public GroupsV2GroupMember withDestinyUserInfo(GroupsV2GroupUserInfoCard destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -26,6 +28,7 @@ public class GroupsV2GroupMember {
     
     
     public Long groupId;
+
     public GroupsV2GroupMember withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -33,6 +36,7 @@ public class GroupsV2GroupMember {
     
     
     public Boolean isOnline;
+
     public GroupsV2GroupMember withIsOnline(Boolean isOnline) {
         this.isOnline = isOnline;
         return this;
@@ -40,6 +44,7 @@ public class GroupsV2GroupMember {
     
     
     public OffsetDateTime joinDate;
+
     public GroupsV2GroupMember withJoinDate(OffsetDateTime joinDate) {
         this.joinDate = joinDate;
         return this;
@@ -47,6 +52,7 @@ public class GroupsV2GroupMember {
     
     
     public Long lastOnlineStatusChange;
+
     public GroupsV2GroupMember withLastOnlineStatusChange(Long lastOnlineStatusChange) {
         this.lastOnlineStatusChange = lastOnlineStatusChange;
         return this;
@@ -54,9 +60,11 @@ public class GroupsV2GroupMember {
     
     
     public Integer memberType;
+
     public GroupsV2GroupMember withMemberType(Integer memberType) {
         this.memberType = memberType;
         return this;
     }
     
+    public GroupsV2GroupMember(){}
 }

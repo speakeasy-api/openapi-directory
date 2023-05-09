@@ -18,6 +18,7 @@ public class UpdateTableRowStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateTableRowStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateTableRowStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIndices")
     public Integer[] rowIndices;
+
     public UpdateTableRowStyleRequest withRowIndices(Integer[] rowIndices) {
         this.rowIndices = rowIndices;
         return this;
@@ -40,6 +42,7 @@ public class UpdateTableRowStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRowStyle")
     public TableRowStyle tableRowStyle;
+
     public UpdateTableRowStyleRequest withTableRowStyle(TableRowStyle tableRowStyle) {
         this.tableRowStyle = tableRowStyle;
         return this;
@@ -51,9 +54,11 @@ public class UpdateTableRowStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableStartLocation")
     public Location tableStartLocation;
+
     public UpdateTableRowStyleRequest withTableStartLocation(Location tableStartLocation) {
         this.tableStartLocation = tableStartLocation;
         return this;
     }
     
+    public UpdateTableRowStyleRequest(){}
 }

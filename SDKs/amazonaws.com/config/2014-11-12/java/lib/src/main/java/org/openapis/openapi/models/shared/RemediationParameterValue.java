@@ -15,6 +15,7 @@ public class RemediationParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceValue")
     public ResourceValue resourceValue;
+
     public RemediationParameterValue withResourceValue(ResourceValue resourceValue) {
         this.resourceValue = resourceValue;
         return this;
@@ -23,9 +24,11 @@ public class RemediationParameterValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StaticValue")
     public StaticValue staticValue;
+
     public RemediationParameterValue withStaticValue(StaticValue staticValue) {
         this.staticValue = staticValue;
         return this;
     }
     
+    public RemediationParameterValue(){}
 }

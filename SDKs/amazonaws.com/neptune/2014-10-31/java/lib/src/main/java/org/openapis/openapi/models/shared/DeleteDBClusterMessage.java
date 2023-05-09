@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteDBClusterMessage {
     
     public String dbClusterIdentifier;
+
     public DeleteDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DeleteDBClusterMessage {
     
     
     public String finalDBSnapshotIdentifier;
+
     public DeleteDBClusterMessage withFinalDBSnapshotIdentifier(String finalDBSnapshotIdentifier) {
         this.finalDBSnapshotIdentifier = finalDBSnapshotIdentifier;
         return this;
@@ -23,9 +25,13 @@ public class DeleteDBClusterMessage {
     
     
     public Boolean skipFinalSnapshot;
+
     public DeleteDBClusterMessage withSkipFinalSnapshot(Boolean skipFinalSnapshot) {
         this.skipFinalSnapshot = skipFinalSnapshot;
         return this;
     }
     
+    public DeleteDBClusterMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

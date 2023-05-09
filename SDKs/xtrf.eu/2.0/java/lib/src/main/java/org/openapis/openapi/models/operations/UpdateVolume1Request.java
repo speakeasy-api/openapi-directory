@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateVolume1Request {
@@ -12,6 +13,7 @@ public class UpdateVolume1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BigDecimalDTO bigDecimalDTO;
+
     public UpdateVolume1Request withBigDecimalDTO(org.openapis.openapi.models.shared.BigDecimalDTO bigDecimalDTO) {
         this.bigDecimalDTO = bigDecimalDTO;
         return this;
@@ -22,9 +24,14 @@ public class UpdateVolume1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public UpdateVolume1Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public UpdateVolume1Request(@JsonProperty("BigDecimalDTO") org.openapis.openapi.models.shared.BigDecimalDTO bigDecimalDTO, @JsonProperty("quoteId") String quoteId) {
+        this.bigDecimalDTO = bigDecimalDTO;
+        this.quoteId = quoteId;
+  }
 }

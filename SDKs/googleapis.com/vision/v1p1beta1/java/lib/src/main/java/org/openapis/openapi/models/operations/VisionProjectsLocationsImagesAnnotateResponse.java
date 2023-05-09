@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VisionProjectsLocationsImagesAnnotateResponse {
     
     public String contentType;
+
     public VisionProjectsLocationsImagesAnnotateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class VisionProjectsLocationsImagesAnnotateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse googleCloudVisionV1p1beta1BatchAnnotateImagesResponse;
+
     public VisionProjectsLocationsImagesAnnotateResponse withGoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse(org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateImagesResponse googleCloudVisionV1p1beta1BatchAnnotateImagesResponse) {
         this.googleCloudVisionV1p1beta1BatchAnnotateImagesResponse = googleCloudVisionV1p1beta1BatchAnnotateImagesResponse;
         return this;
@@ -26,6 +29,7 @@ public class VisionProjectsLocationsImagesAnnotateResponse {
     
     
     public Integer statusCode;
+
     public VisionProjectsLocationsImagesAnnotateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VisionProjectsLocationsImagesAnnotateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VisionProjectsLocationsImagesAnnotateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VisionProjectsLocationsImagesAnnotateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

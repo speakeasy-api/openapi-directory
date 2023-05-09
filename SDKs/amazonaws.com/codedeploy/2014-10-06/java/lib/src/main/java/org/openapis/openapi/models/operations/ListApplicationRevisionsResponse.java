@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationRevisionsResponse {
@@ -12,6 +13,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public ListApplicationRevisionsResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public ListApplicationRevisionsResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -32,6 +35,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object bucketNameFilterRequiredException;
+
     public ListApplicationRevisionsResponse withBucketNameFilterRequiredException(Object bucketNameFilterRequiredException) {
         this.bucketNameFilterRequiredException = bucketNameFilterRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class ListApplicationRevisionsResponse {
     
     
     public String contentType;
+
     public ListApplicationRevisionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public ListApplicationRevisionsResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -59,6 +65,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidBucketNameFilterException;
+
     public ListApplicationRevisionsResponse withInvalidBucketNameFilterException(Object invalidBucketNameFilterException) {
         this.invalidBucketNameFilterException = invalidBucketNameFilterException;
         return this;
@@ -69,6 +76,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidDeployedStateFilterException;
+
     public ListApplicationRevisionsResponse withInvalidDeployedStateFilterException(Object invalidDeployedStateFilterException) {
         this.invalidDeployedStateFilterException = invalidDeployedStateFilterException;
         return this;
@@ -79,6 +87,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidKeyPrefixFilterException;
+
     public ListApplicationRevisionsResponse withInvalidKeyPrefixFilterException(Object invalidKeyPrefixFilterException) {
         this.invalidKeyPrefixFilterException = invalidKeyPrefixFilterException;
         return this;
@@ -89,6 +98,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListApplicationRevisionsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -99,6 +109,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidSortByException;
+
     public ListApplicationRevisionsResponse withInvalidSortByException(Object invalidSortByException) {
         this.invalidSortByException = invalidSortByException;
         return this;
@@ -109,6 +120,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public Object invalidSortOrderException;
+
     public ListApplicationRevisionsResponse withInvalidSortOrderException(Object invalidSortOrderException) {
         this.invalidSortOrderException = invalidSortOrderException;
         return this;
@@ -119,6 +131,7 @@ public class ListApplicationRevisionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationRevisionsOutput listApplicationRevisionsOutput;
+
     public ListApplicationRevisionsResponse withListApplicationRevisionsOutput(org.openapis.openapi.models.shared.ListApplicationRevisionsOutput listApplicationRevisionsOutput) {
         this.listApplicationRevisionsOutput = listApplicationRevisionsOutput;
         return this;
@@ -126,6 +139,7 @@ public class ListApplicationRevisionsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationRevisionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class ListApplicationRevisionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationRevisionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListApplicationRevisionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

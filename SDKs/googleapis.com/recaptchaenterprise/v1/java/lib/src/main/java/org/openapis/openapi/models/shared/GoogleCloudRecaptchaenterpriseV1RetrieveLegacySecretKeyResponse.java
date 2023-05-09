@@ -18,9 +18,11 @@ public class GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacySecretKey")
     public String legacySecretKey;
+
     public GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse withLegacySecretKey(String legacySecretKey) {
         this.legacySecretKey = legacySecretKey;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse(){}
 }

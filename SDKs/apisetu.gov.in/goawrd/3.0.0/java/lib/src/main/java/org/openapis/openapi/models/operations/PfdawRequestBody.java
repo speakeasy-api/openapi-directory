@@ -15,6 +15,7 @@ public class PfdawRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public PfdawRequestBodyCertificateParameters certificateParameters;
+
     public PfdawRequestBody withCertificateParameters(PfdawRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class PfdawRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public PfdawRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class PfdawRequestBody {
      */
     @JsonProperty("format")
     public PfdawRequestBodyFormatEnum format;
+
     public PfdawRequestBody withFormat(PfdawRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class PfdawRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public PfdawRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public PfdawRequestBody(@JsonProperty("format") PfdawRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

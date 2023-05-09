@@ -15,9 +15,11 @@ public class ModifyReplicationGroupShardConfigurationResult {
      */
     
     public ReplicationGroup replicationGroup;
+
     public ModifyReplicationGroupShardConfigurationResult withReplicationGroup(ReplicationGroup replicationGroup) {
         this.replicationGroup = replicationGroup;
         return this;
     }
     
+    public ModifyReplicationGroupShardConfigurationResult(){}
 }

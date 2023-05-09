@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolsGetLocationResponse {
     
     public String contentType;
+
     public SymbolsGetLocationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolsGetLocationResponse {
     
     
     public Integer statusCode;
+
     public SymbolsGetLocationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolsGetLocationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolsGetLocationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolsGetLocationResponse {
      */
     
     public SymbolsGetLocation200ApplicationJSON symbolsGetLocation200ApplicationJSONObject;
+
     public SymbolsGetLocationResponse withSymbolsGetLocation200ApplicationJSONObject(SymbolsGetLocation200ApplicationJSON symbolsGetLocation200ApplicationJSONObject) {
         this.symbolsGetLocation200ApplicationJSONObject = symbolsGetLocation200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolsGetLocationResponse {
      */
     
     public SymbolsGetLocation403ApplicationJSON symbolsGetLocation403ApplicationJSONObject;
+
     public SymbolsGetLocationResponse withSymbolsGetLocation403ApplicationJSONObject(SymbolsGetLocation403ApplicationJSON symbolsGetLocation403ApplicationJSONObject) {
         this.symbolsGetLocation403ApplicationJSONObject = symbolsGetLocation403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolsGetLocationResponse {
      */
     
     public SymbolsGetLocation404ApplicationJSON symbolsGetLocation404ApplicationJSONObject;
+
     public SymbolsGetLocationResponse withSymbolsGetLocation404ApplicationJSONObject(SymbolsGetLocation404ApplicationJSON symbolsGetLocation404ApplicationJSONObject) {
         this.symbolsGetLocation404ApplicationJSONObject = symbolsGetLocation404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolsGetLocationResponse {
      */
     
     public SymbolsGetLocation500ApplicationJSON symbolsGetLocation500ApplicationJSONObject;
+
     public SymbolsGetLocationResponse withSymbolsGetLocation500ApplicationJSONObject(SymbolsGetLocation500ApplicationJSON symbolsGetLocation500ApplicationJSONObject) {
         this.symbolsGetLocation500ApplicationJSONObject = symbolsGetLocation500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolsGetLocationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

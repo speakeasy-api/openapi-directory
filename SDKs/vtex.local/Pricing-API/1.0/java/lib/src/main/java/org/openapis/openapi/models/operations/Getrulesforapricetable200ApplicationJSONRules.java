@@ -18,6 +18,7 @@ public class Getrulesforapricetable200ApplicationJSONRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public Getrulesforapricetable200ApplicationJSONRulesContext context;
+
     public Getrulesforapricetable200ApplicationJSONRules withContext(Getrulesforapricetable200ApplicationJSONRulesContext context) {
         this.context = context;
         return this;
@@ -29,9 +30,11 @@ public class Getrulesforapricetable200ApplicationJSONRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public Getrulesforapricetable200ApplicationJSONRules withId(Double id) {
         this.id = id;
         return this;
     }
     
+    public Getrulesforapricetable200ApplicationJSONRules(){}
 }

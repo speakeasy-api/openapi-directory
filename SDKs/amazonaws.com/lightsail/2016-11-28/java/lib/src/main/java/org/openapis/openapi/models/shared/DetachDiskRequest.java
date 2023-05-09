@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetachDiskRequest {
     @JsonProperty("diskName")
     public String diskName;
+
     public DetachDiskRequest withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
     }
     
+    public DetachDiskRequest(@JsonProperty("diskName") String diskName) {
+        this.diskName = diskName;
+  }
 }

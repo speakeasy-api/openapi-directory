@@ -18,6 +18,7 @@ public class ChangeOrderListRequestItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changeOrderRequest")
     public java.util.Map<String, String> changeOrderRequest;
+
     public ChangeOrderListRequestItem withChangeOrderRequest(java.util.Map<String, String> changeOrderRequest) {
         this.changeOrderRequest = changeOrderRequest;
         return this;
@@ -25,9 +26,13 @@ public class ChangeOrderListRequestItem {
     
     @JsonProperty("order")
     public OrderIdentifierWithETag order;
+
     public ChangeOrderListRequestItem withOrder(OrderIdentifierWithETag order) {
         this.order = order;
         return this;
     }
     
+    public ChangeOrderListRequestItem(@JsonProperty("order") OrderIdentifierWithETag order) {
+        this.order = order;
+  }
 }

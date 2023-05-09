@@ -25,6 +25,7 @@ public class AuthorisationConfirmationResponse {
      */
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public AuthorisationConfirmationResponse withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -36,6 +37,7 @@ public class AuthorisationConfirmationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public AuthorisationConfirmationResponse withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -52,9 +54,14 @@ public class AuthorisationConfirmationResponse {
      */
     @JsonProperty("scaStatus")
     public ScaStatusAuthorisationConfirmationEnum scaStatus;
+
     public AuthorisationConfirmationResponse withScaStatus(ScaStatusAuthorisationConfirmationEnum scaStatus) {
         this.scaStatus = scaStatus;
         return this;
     }
     
+    public AuthorisationConfirmationResponse(@JsonProperty("_links") java.util.Map<String, HrefType> links, @JsonProperty("scaStatus") ScaStatusAuthorisationConfirmationEnum scaStatus) {
+        this.links = links;
+        this.scaStatus = scaStatus;
+  }
 }

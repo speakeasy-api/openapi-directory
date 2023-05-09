@@ -16,108 +16,103 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.AddAttributesToFindingsXAmzTargetEnum;
 import org.openapis.openapi.models.operations.AddAttributesToFindingsRequest;
 import org.openapis.openapi.models.operations.AddAttributesToFindingsResponse;
+import org.openapis.openapi.models.operations.AddAttributesToFindingsXAmzTargetEnum;
 import org.openapis.openapi.models.shared.AddAttributesToFindingsRequest;
 import org.openapis.openapi.models.shared.Attribute;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            AddAttributesToFindingsRequest req = new AddAttributesToFindingsRequest() {{
-                addAttributesToFindingsRequest = new AddAttributesToFindingsRequest() {{
-                    attributes = new org.openapis.openapi.models.shared.Attribute[]{{
-                        add(new Attribute() {{
-                            key = "provident";
-                            value = "distinctio";
-                        }}),
-                        add(new Attribute() {{
-                            key = "quibusdam";
-                            value = "unde";
-                        }}),
-                        add(new Attribute() {{
-                            key = "nulla";
-                            value = "corrupti";
-                        }}),
-                    }};
-                    findingArns = new String[]{{
-                        add("vel"),
-                        add("error"),
-                        add("deserunt"),
-                        add("suscipit"),
-                    }};
-                }};
-                xAmzAlgorithm = "iure";
-                xAmzContentSha256 = "magnam";
-                xAmzCredential = "debitis";
-                xAmzDate = "ipsa";
-                xAmzSecurityToken = "delectus";
-                xAmzSignature = "tempora";
-                xAmzSignedHeaders = "suscipit";
-                xAmzTarget = "InspectorService.AddAttributesToFindings";
-            }}            
+            AddAttributesToFindingsRequest req = new AddAttributesToFindingsRequest(                new AddAttributesToFindingsRequest(                new org.openapis.openapi.models.shared.Attribute[]{{
+                                                add(new Attribute("unde") {{
+                                                    key = "distinctio";
+                                                    value = "quibusdam";
+                                                }}),
+                                                add(new Attribute("illum") {{
+                                                    key = "nulla";
+                                                    value = "corrupti";
+                                                }}),
+                                                add(new Attribute("deserunt") {{
+                                                    key = "vel";
+                                                    value = "error";
+                                                }}),
+                                            }},                 new String[]{{
+                                                add("iure"),
+                                                add("magnam"),
+                                            }});, AddAttributesToFindingsXAmzTargetEnum.INSPECTOR_SERVICE_ADD_ATTRIBUTES_TO_FINDINGS) {{
+                xAmzAlgorithm = "debitis";
+                xAmzContentSha256 = "ipsa";
+                xAmzCredential = "delectus";
+                xAmzDate = "tempora";
+                xAmzSecurityToken = "suscipit";
+                xAmzSignature = "molestiae";
+                xAmzSignedHeaders = "minus";
+            }};            
 
             AddAttributesToFindingsResponse res = sdk.addAttributesToFindings(req);
 
-            if (res.addAttributesToFindingsResponse.isPresent()) {
+            if (res.addAttributesToFindingsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `addAttributesToFindings` - Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the findings.
-* `createAssessmentTarget` - Creates a new assessment target using the ARN of the resource group that is generated by <a>CreateResourceGroup</a>. If resourceGroupArn is not specified, all EC2 instances in the current AWS account and region are included in the assessment target. If the <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html">service-linked role</a> isn’t already registered, this action also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security assessments. You can create up to 50 assessment targets per AWS account. You can run up to 500 concurrent agents per AWS account. For more information, see <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html"> Amazon Inspector Assessment Targets</a>.
-* `createAssessmentTemplate` - Creates an assessment template for the assessment target that is specified by the ARN of the assessment target. If the <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html">service-linked role</a> isn’t already registered, this action also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security assessments.
-* `createExclusionsPreview` - Starts the generation of an exclusions preview for the specified assessment template. The exclusions preview lists the potential exclusions (ExclusionPreview) that Inspector can detect before it runs the assessment. 
-* `createResourceGroup` - Creates a resource group using the specified set of tags (key and value pairs) that are used to select the EC2 instances to be included in an Amazon Inspector assessment target. The created resource group is then used to create an Amazon Inspector assessment target. For more information, see <a>CreateAssessmentTarget</a>.
-* `deleteAssessmentRun` - Deletes the assessment run that is specified by the ARN of the assessment run.
-* `deleteAssessmentTarget` - Deletes the assessment target that is specified by the ARN of the assessment target.
-* `deleteAssessmentTemplate` - Deletes the assessment template that is specified by the ARN of the assessment template.
-* `describeAssessmentRuns` - Describes the assessment runs that are specified by the ARNs of the assessment runs.
-* `describeAssessmentTargets` - Describes the assessment targets that are specified by the ARNs of the assessment targets.
-* `describeAssessmentTemplates` - Describes the assessment templates that are specified by the ARNs of the assessment templates.
-* `describeCrossAccountAccessRole` - Describes the IAM role that enables Amazon Inspector to access your AWS account.
-* `describeExclusions` - Describes the exclusions that are specified by the exclusions' ARNs.
-* `describeFindings` - Describes the findings that are specified by the ARNs of the findings.
-* `describeResourceGroups` - Describes the resource groups that are specified by the ARNs of the resource groups.
-* `describeRulesPackages` - Describes the rules packages that are specified by the ARNs of the rules packages.
-* `getAssessmentReport` - Produces an assessment report that includes detailed and comprehensive results of a specified assessment run. 
-* `getExclusionsPreview` - Retrieves the exclusions preview (a list of ExclusionPreview objects) specified by the preview token. You can obtain the preview token by running the CreateExclusionsPreview API.
-* `getTelemetryMetadata` - Information about the data that is collected for the specified assessment run.
-* `listAssessmentRunAgents` - Lists the agents of the assessment runs that are specified by the ARNs of the assessment runs.
-* `listAssessmentRuns` - Lists the assessment runs that correspond to the assessment templates that are specified by the ARNs of the assessment templates.
-* `listAssessmentTargets` - Lists the ARNs of the assessment targets within this AWS account. For more information about assessment targets, see <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html">Amazon Inspector Assessment Targets</a>.
-* `listAssessmentTemplates` - Lists the assessment templates that correspond to the assessment targets that are specified by the ARNs of the assessment targets.
-* `listEventSubscriptions` - Lists all the event subscriptions for the assessment template that is specified by the ARN of the assessment template. For more information, see <a>SubscribeToEvent</a> and <a>UnsubscribeFromEvent</a>.
-* `listExclusions` - List exclusions that are generated by the assessment run.
-* `listFindings` - Lists findings that are generated by the assessment runs that are specified by the ARNs of the assessment runs.
-* `listRulesPackages` - Lists all available Amazon Inspector rules packages.
-* `listTagsForResource` - Lists all tags associated with an assessment template.
-* `previewAgents` - Previews the agents installed on the EC2 instances that are part of the specified assessment target.
-* `registerCrossAccountAccessRole` - Registers the IAM role that grants Amazon Inspector access to AWS Services needed to perform security assessments.
-* `removeAttributesFromFindings` - Removes entire attributes (key and value pairs) from the findings that are specified by the ARNs of the findings where an attribute with the specified key exists.
-* `setTagsForResource` - Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment template.
-* `startAssessmentRun` - Starts the assessment run specified by the ARN of the assessment template. For this API to function properly, you must not exceed the limit of running up to 500 concurrent agents per AWS account.
-* `stopAssessmentRun` - Stops the assessment run that is specified by the ARN of the assessment run.
-* `subscribeToEvent` - Enables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS topic.
-* `unsubscribeFromEvent` - Disables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS topic.
-* `updateAssessmentTarget` - <p>Updates the assessment target that is specified by the ARN of the assessment target.</p> <p>If resourceGroupArn is not specified, all EC2 instances in the current AWS account and region are included in the assessment target.</p>
+* [addAttributesToFindings](docs/sdk/README.md#addattributestofindings) - Assigns attributes (key and value pairs) to the findings that are specified by the ARNs of the findings.
+* [createAssessmentTarget](docs/sdk/README.md#createassessmenttarget) - Creates a new assessment target using the ARN of the resource group that is generated by <a>CreateResourceGroup</a>. If resourceGroupArn is not specified, all EC2 instances in the current AWS account and region are included in the assessment target. If the <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html">service-linked role</a> isn’t already registered, this action also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security assessments. You can create up to 50 assessment targets per AWS account. You can run up to 500 concurrent agents per AWS account. For more information, see <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html"> Amazon Inspector Assessment Targets</a>.
+* [createAssessmentTemplate](docs/sdk/README.md#createassessmenttemplate) - Creates an assessment template for the assessment target that is specified by the ARN of the assessment target. If the <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_slr.html">service-linked role</a> isn’t already registered, this action also creates and registers a service-linked role to grant Amazon Inspector access to AWS Services needed to perform security assessments.
+* [createExclusionsPreview](docs/sdk/README.md#createexclusionspreview) - Starts the generation of an exclusions preview for the specified assessment template. The exclusions preview lists the potential exclusions (ExclusionPreview) that Inspector can detect before it runs the assessment. 
+* [createResourceGroup](docs/sdk/README.md#createresourcegroup) - Creates a resource group using the specified set of tags (key and value pairs) that are used to select the EC2 instances to be included in an Amazon Inspector assessment target. The created resource group is then used to create an Amazon Inspector assessment target. For more information, see <a>CreateAssessmentTarget</a>.
+* [deleteAssessmentRun](docs/sdk/README.md#deleteassessmentrun) - Deletes the assessment run that is specified by the ARN of the assessment run.
+* [deleteAssessmentTarget](docs/sdk/README.md#deleteassessmenttarget) - Deletes the assessment target that is specified by the ARN of the assessment target.
+* [deleteAssessmentTemplate](docs/sdk/README.md#deleteassessmenttemplate) - Deletes the assessment template that is specified by the ARN of the assessment template.
+* [describeAssessmentRuns](docs/sdk/README.md#describeassessmentruns) - Describes the assessment runs that are specified by the ARNs of the assessment runs.
+* [describeAssessmentTargets](docs/sdk/README.md#describeassessmenttargets) - Describes the assessment targets that are specified by the ARNs of the assessment targets.
+* [describeAssessmentTemplates](docs/sdk/README.md#describeassessmenttemplates) - Describes the assessment templates that are specified by the ARNs of the assessment templates.
+* [describeCrossAccountAccessRole](docs/sdk/README.md#describecrossaccountaccessrole) - Describes the IAM role that enables Amazon Inspector to access your AWS account.
+* [describeExclusions](docs/sdk/README.md#describeexclusions) - Describes the exclusions that are specified by the exclusions' ARNs.
+* [describeFindings](docs/sdk/README.md#describefindings) - Describes the findings that are specified by the ARNs of the findings.
+* [describeResourceGroups](docs/sdk/README.md#describeresourcegroups) - Describes the resource groups that are specified by the ARNs of the resource groups.
+* [describeRulesPackages](docs/sdk/README.md#describerulespackages) - Describes the rules packages that are specified by the ARNs of the rules packages.
+* [getAssessmentReport](docs/sdk/README.md#getassessmentreport) - Produces an assessment report that includes detailed and comprehensive results of a specified assessment run. 
+* [getExclusionsPreview](docs/sdk/README.md#getexclusionspreview) - Retrieves the exclusions preview (a list of ExclusionPreview objects) specified by the preview token. You can obtain the preview token by running the CreateExclusionsPreview API.
+* [getTelemetryMetadata](docs/sdk/README.md#gettelemetrymetadata) - Information about the data that is collected for the specified assessment run.
+* [listAssessmentRunAgents](docs/sdk/README.md#listassessmentrunagents) - Lists the agents of the assessment runs that are specified by the ARNs of the assessment runs.
+* [listAssessmentRuns](docs/sdk/README.md#listassessmentruns) - Lists the assessment runs that correspond to the assessment templates that are specified by the ARNs of the assessment templates.
+* [listAssessmentTargets](docs/sdk/README.md#listassessmenttargets) - Lists the ARNs of the assessment targets within this AWS account. For more information about assessment targets, see <a href="https://docs.aws.amazon.com/inspector/latest/userguide/inspector_applications.html">Amazon Inspector Assessment Targets</a>.
+* [listAssessmentTemplates](docs/sdk/README.md#listassessmenttemplates) - Lists the assessment templates that correspond to the assessment targets that are specified by the ARNs of the assessment targets.
+* [listEventSubscriptions](docs/sdk/README.md#listeventsubscriptions) - Lists all the event subscriptions for the assessment template that is specified by the ARN of the assessment template. For more information, see <a>SubscribeToEvent</a> and <a>UnsubscribeFromEvent</a>.
+* [listExclusions](docs/sdk/README.md#listexclusions) - List exclusions that are generated by the assessment run.
+* [listFindings](docs/sdk/README.md#listfindings) - Lists findings that are generated by the assessment runs that are specified by the ARNs of the assessment runs.
+* [listRulesPackages](docs/sdk/README.md#listrulespackages) - Lists all available Amazon Inspector rules packages.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists all tags associated with an assessment template.
+* [previewAgents](docs/sdk/README.md#previewagents) - Previews the agents installed on the EC2 instances that are part of the specified assessment target.
+* [registerCrossAccountAccessRole](docs/sdk/README.md#registercrossaccountaccessrole) - Registers the IAM role that grants Amazon Inspector access to AWS Services needed to perform security assessments.
+* [removeAttributesFromFindings](docs/sdk/README.md#removeattributesfromfindings) - Removes entire attributes (key and value pairs) from the findings that are specified by the ARNs of the findings where an attribute with the specified key exists.
+* [setTagsForResource](docs/sdk/README.md#settagsforresource) - Sets tags (key and value pairs) to the assessment template that is specified by the ARN of the assessment template.
+* [startAssessmentRun](docs/sdk/README.md#startassessmentrun) - Starts the assessment run specified by the ARN of the assessment template. For this API to function properly, you must not exceed the limit of running up to 500 concurrent agents per AWS account.
+* [stopAssessmentRun](docs/sdk/README.md#stopassessmentrun) - Stops the assessment run that is specified by the ARN of the assessment run.
+* [subscribeToEvent](docs/sdk/README.md#subscribetoevent) - Enables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS topic.
+* [unsubscribeFromEvent](docs/sdk/README.md#unsubscribefromevent) - Disables the process of sending Amazon Simple Notification Service (SNS) notifications about a specified event to a specified SNS topic.
+* [updateAssessmentTarget](docs/sdk/README.md#updateassessmenttarget) - <p>Updates the assessment target that is specified by the ARN of the assessment target.</p> <p>If resourceGroupArn is not specified, all EC2 instances in the current AWS account and region are included in the assessment target.</p>
 <!-- End SDK Available Operations -->
 
 ### Maturity

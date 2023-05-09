@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugCommitsResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugCommitsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugCommitsResponse {
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugCommitsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugCommitsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugCommitsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostRepositoriesWorkspaceRepoSlugCommitsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugCommitsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class PostRepositoriesWorkspaceRepoSlugCommitsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedChangeset paginatedChangeset;
+
     public PostRepositoriesWorkspaceRepoSlugCommitsResponse withPaginatedChangeset(org.openapis.openapi.models.shared.PaginatedChangeset paginatedChangeset) {
         this.paginatedChangeset = paginatedChangeset;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugCommitsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

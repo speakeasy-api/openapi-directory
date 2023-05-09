@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class GetPredictiveScalingForecastAnswer {
     
     public CapacityForecast capacityForecast;
+
     public GetPredictiveScalingForecastAnswer withCapacityForecast(CapacityForecast capacityForecast) {
         this.capacityForecast = capacityForecast;
         return this;
@@ -19,6 +21,7 @@ public class GetPredictiveScalingForecastAnswer {
     
     
     public LoadForecast[] loadForecast;
+
     public GetPredictiveScalingForecastAnswer withLoadForecast(LoadForecast[] loadForecast) {
         this.loadForecast = loadForecast;
         return this;
@@ -26,9 +29,15 @@ public class GetPredictiveScalingForecastAnswer {
     
     
     public OffsetDateTime updateTime;
+
     public GetPredictiveScalingForecastAnswer withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetPredictiveScalingForecastAnswer(@JsonProperty("CapacityForecast") CapacityForecast capacityForecast, @JsonProperty("LoadForecast") LoadForecast[] loadForecast, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.capacityForecast = capacityForecast;
+        this.loadForecast = loadForecast;
+        this.updateTime = updateTime;
+  }
 }

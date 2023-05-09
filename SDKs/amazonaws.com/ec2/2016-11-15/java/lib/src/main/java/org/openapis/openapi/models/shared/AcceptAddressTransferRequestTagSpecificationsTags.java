@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptAddressTransferRequestTagSpecificationsTags {
     
     public String key;
+
     public AcceptAddressTransferRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class AcceptAddressTransferRequestTagSpecificationsTags {
     
     
     public String value;
+
     public AcceptAddressTransferRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AcceptAddressTransferRequestTagSpecificationsTags(){}
 }

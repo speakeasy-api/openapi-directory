@@ -18,9 +18,11 @@ public class ClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public ClassificationAnnotation withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public ClassificationAnnotation(){}
 }

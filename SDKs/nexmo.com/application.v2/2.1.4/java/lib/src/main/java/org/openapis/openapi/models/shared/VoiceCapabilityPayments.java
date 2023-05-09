@@ -18,9 +18,11 @@ public class VoiceCapabilityPayments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public VoiceCapabilityPaymentsGateways[] gateways;
+
     public VoiceCapabilityPayments withGateways(VoiceCapabilityPaymentsGateways[] gateways) {
         this.gateways = gateways;
         return this;
     }
     
+    public VoiceCapabilityPayments(){}
 }

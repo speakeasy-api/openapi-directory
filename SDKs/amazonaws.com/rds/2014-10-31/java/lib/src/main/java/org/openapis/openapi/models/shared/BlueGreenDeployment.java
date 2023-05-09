@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class BlueGreenDeployment {
     
     public String blueGreenDeploymentIdentifier;
+
     public BlueGreenDeployment withBlueGreenDeploymentIdentifier(String blueGreenDeploymentIdentifier) {
         this.blueGreenDeploymentIdentifier = blueGreenDeploymentIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class BlueGreenDeployment {
     
     
     public String blueGreenDeploymentName;
+
     public BlueGreenDeployment withBlueGreenDeploymentName(String blueGreenDeploymentName) {
         this.blueGreenDeploymentName = blueGreenDeploymentName;
         return this;
@@ -26,6 +28,7 @@ public class BlueGreenDeployment {
     
     
     public OffsetDateTime createTime;
+
     public BlueGreenDeployment withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +36,7 @@ public class BlueGreenDeployment {
     
     
     public OffsetDateTime deleteTime;
+
     public BlueGreenDeployment withDeleteTime(OffsetDateTime deleteTime) {
         this.deleteTime = deleteTime;
         return this;
@@ -40,6 +44,7 @@ public class BlueGreenDeployment {
     
     
     public String source;
+
     public BlueGreenDeployment withSource(String source) {
         this.source = source;
         return this;
@@ -47,6 +52,7 @@ public class BlueGreenDeployment {
     
     
     public String status;
+
     public BlueGreenDeployment withStatus(String status) {
         this.status = status;
         return this;
@@ -54,6 +60,7 @@ public class BlueGreenDeployment {
     
     
     public String statusDetails;
+
     public BlueGreenDeployment withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -61,6 +68,7 @@ public class BlueGreenDeployment {
     
     
     public SwitchoverDetail[] switchoverDetails;
+
     public BlueGreenDeployment withSwitchoverDetails(SwitchoverDetail[] switchoverDetails) {
         this.switchoverDetails = switchoverDetails;
         return this;
@@ -71,6 +79,7 @@ public class BlueGreenDeployment {
      */
     
     public TagList[] tagList;
+
     public BlueGreenDeployment withTagList(TagList[] tagList) {
         this.tagList = tagList;
         return this;
@@ -78,6 +87,7 @@ public class BlueGreenDeployment {
     
     
     public String target;
+
     public BlueGreenDeployment withTarget(String target) {
         this.target = target;
         return this;
@@ -85,9 +95,11 @@ public class BlueGreenDeployment {
     
     
     public BlueGreenDeploymentTask[] tasks;
+
     public BlueGreenDeployment withTasks(BlueGreenDeploymentTask[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public BlueGreenDeployment(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaCloudKmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaCloudKmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyVersion")
     public String keyVersion;
+
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig withKeyVersion(String keyVersion) {
         this.keyVersion = keyVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIntegrationsV1alphaCloudKmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsLocation")
     public String kmsLocation;
+
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig withKmsLocation(String kmsLocation) {
         this.kmsLocation = kmsLocation;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudIntegrationsV1alphaCloudKmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsProjectId")
     public String kmsProjectId;
+
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig withKmsProjectId(String kmsProjectId) {
         this.kmsProjectId = kmsProjectId;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudIntegrationsV1alphaCloudKmsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsRing")
     public String kmsRing;
+
     public GoogleCloudIntegrationsV1alphaCloudKmsConfig withKmsRing(String kmsRing) {
         this.kmsRing = kmsRing;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaCloudKmsConfig(){}
 }

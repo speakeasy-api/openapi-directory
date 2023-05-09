@@ -50,4 +50,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/OrderLineItemQuantitiesQuan
 lib/src/main/java/org/openapis/openapi/models/shared/OrderLineItemQuantitiesQuantityUOMEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrderLineItemQuantities.java
 lib/src/main/java/org/openapis/openapi/models/shared/OrderLineItem.java
+docs/sdk/README.md
 USAGE.md

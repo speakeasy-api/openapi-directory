@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeNotificationConfigurationsType {
     
     public String[] autoScalingGroupNames;
+
     public DescribeNotificationConfigurationsType withAutoScalingGroupNames(String[] autoScalingGroupNames) {
         this.autoScalingGroupNames = autoScalingGroupNames;
         return this;
@@ -16,6 +17,7 @@ public class DescribeNotificationConfigurationsType {
     
     
     public Long maxRecords;
+
     public DescribeNotificationConfigurationsType withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -23,9 +25,11 @@ public class DescribeNotificationConfigurationsType {
     
     
     public String nextToken;
+
     public DescribeNotificationConfigurationsType withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeNotificationConfigurationsType(){}
 }

@@ -51,4 +51,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleSearchIdeahubV1alphaI
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSearchIdeahubV1alphaListAvailableLocalesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSearchIdeahubV1alphaAvailableLocale.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleSearchIdeahubV1alphaTopicState.java
+docs/sdk/README.md
+docs/ideas/README.md
+docs/platforms/README.md
 USAGE.md

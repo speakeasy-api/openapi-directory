@@ -15,6 +15,7 @@ public class CreateAssessmentRequestBodyScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccounts")
     public org.openapis.openapi.models.shared.AWSAccount[] awsAccounts;
+
     public CreateAssessmentRequestBodyScope withAwsAccounts(org.openapis.openapi.models.shared.AWSAccount[] awsAccounts) {
         this.awsAccounts = awsAccounts;
         return this;
@@ -23,9 +24,11 @@ public class CreateAssessmentRequestBodyScope {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsServices")
     public org.openapis.openapi.models.shared.AWSService[] awsServices;
+
     public CreateAssessmentRequestBodyScope withAwsServices(org.openapis.openapi.models.shared.AWSService[] awsServices) {
         this.awsServices = awsServices;
         return this;
     }
     
+    public CreateAssessmentRequestBodyScope(){}
 }

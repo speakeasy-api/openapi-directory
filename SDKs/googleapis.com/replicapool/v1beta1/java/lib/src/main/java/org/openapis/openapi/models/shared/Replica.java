@@ -15,6 +15,7 @@ public class Replica {
      */
     
     public String name;
+
     public Replica withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class Replica {
      */
     
     public String selfLink;
+
     public Replica withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -35,9 +37,11 @@ public class Replica {
      */
     
     public ReplicaStatus status;
+
     public Replica withStatus(ReplicaStatus status) {
         this.status = status;
         return this;
     }
     
+    public Replica(){}
 }

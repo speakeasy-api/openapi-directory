@@ -15,6 +15,7 @@ public class MeshRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public MeshRef withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,9 +24,11 @@ public class MeshRef {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshName")
     public String meshName;
+
     public MeshRef withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
     }
     
+    public MeshRef(){}
 }

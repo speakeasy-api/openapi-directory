@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesCreateResponse(contentType, httpRes.statusCode()) {{
             appProfile = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesAppProfilesListResponse(contentType, httpRes.statusCode()) {{
             listAppProfilesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCopyResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersBackupsListResponse(contentType, httpRes.statusCode()) {{
             listBackupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersHotTabletsListResponse(contentType, httpRes.statusCode()) {{
             listHotTabletsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersListResponse(contentType, httpRes.statusCode()) {{
             listClustersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -438,11 +422,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesClustersUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -486,11 +468,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -532,11 +512,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesListResponse(contentType, httpRes.statusCode()) {{
             listInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCheckConsistencyResponse(contentType, httpRes.statusCode()) {{
             checkConsistencyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -628,11 +604,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesCreateResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -674,11 +648,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -722,11 +694,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesDropRowRangeResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -770,11 +740,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGenerateConsistencyTokenResponse(contentType, httpRes.statusCode()) {{
             generateConsistencyTokenResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -818,11 +786,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -864,11 +830,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesListResponse(contentType, httpRes.statusCode()) {{
             listTablesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -912,11 +876,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesModifyColumnFamiliesResponse(contentType, httpRes.statusCode()) {{
             table = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +922,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1008,11 +968,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesRestoreResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1056,11 +1014,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1104,11 +1060,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1152,11 +1106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsInstancesTablesUndeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1198,11 +1150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsLocationsGetResponse(contentType, httpRes.statusCode()) {{
             location = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1244,11 +1194,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.BigtableadminProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

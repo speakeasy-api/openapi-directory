@@ -50,11 +50,9 @@ public class Ecosystem {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EcosystemsOneResponse res = new org.openapis.openapi.models.operations.EcosystemsOneResponse() {{
+        org.openapis.openapi.models.operations.EcosystemsOneResponse res = new org.openapis.openapi.models.operations.EcosystemsOneResponse(contentType, httpRes.statusCode()) {{
             getEcosystemResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

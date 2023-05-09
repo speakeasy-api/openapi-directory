@@ -12,6 +12,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllowedByTeamID")
     public Long allowedByTeamID;
+
     public ScoringPlay withAllowedByTeamID(Long allowedByTeamID) {
         this.allowedByTeamID = allowedByTeamID;
         return this;
@@ -20,6 +21,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerID1")
     public Long assistedByPlayerId1;
+
     public ScoringPlay withAssistedByPlayerId1(Long assistedByPlayerId1) {
         this.assistedByPlayerId1 = assistedByPlayerId1;
         return this;
@@ -28,6 +30,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistedByPlayerID2")
     public Long assistedByPlayerId2;
+
     public ScoringPlay withAssistedByPlayerId2(Long assistedByPlayerId2) {
         this.assistedByPlayerId2 = assistedByPlayerId2;
         return this;
@@ -36,6 +39,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamScore")
     public Long awayTeamScore;
+
     public ScoringPlay withAwayTeamScore(Long awayTeamScore) {
         this.awayTeamScore = awayTeamScore;
         return this;
@@ -44,6 +48,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmptyNet")
     public Boolean emptyNet;
+
     public ScoringPlay withEmptyNet(Boolean emptyNet) {
         this.emptyNet = emptyNet;
         return this;
@@ -52,6 +57,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamScore")
     public Long homeTeamScore;
+
     public ScoringPlay withHomeTeamScore(Long homeTeamScore) {
         this.homeTeamScore = homeTeamScore;
         return this;
@@ -60,6 +66,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PeriodID")
     public Long periodID;
+
     public ScoringPlay withPeriodID(Long periodID) {
         this.periodID = periodID;
         return this;
@@ -68,6 +75,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PowerPlay")
     public Boolean powerPlay;
+
     public ScoringPlay withPowerPlay(Boolean powerPlay) {
         this.powerPlay = powerPlay;
         return this;
@@ -76,6 +84,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoredByPlayerID")
     public Long scoredByPlayerID;
+
     public ScoringPlay withScoredByPlayerID(Long scoredByPlayerID) {
         this.scoredByPlayerID = scoredByPlayerID;
         return this;
@@ -84,6 +93,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoredByTeamID")
     public Long scoredByTeamID;
+
     public ScoringPlay withScoredByTeamID(Long scoredByTeamID) {
         this.scoredByTeamID = scoredByTeamID;
         return this;
@@ -92,6 +102,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScoringPlayID")
     public Long scoringPlayID;
+
     public ScoringPlay withScoringPlayID(Long scoringPlayID) {
         this.scoringPlayID = scoringPlayID;
         return this;
@@ -100,6 +111,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sequence")
     public Long sequence;
+
     public ScoringPlay withSequence(Long sequence) {
         this.sequence = sequence;
         return this;
@@ -108,6 +120,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortHanded")
     public Boolean shortHanded;
+
     public ScoringPlay withShortHanded(Boolean shortHanded) {
         this.shortHanded = shortHanded;
         return this;
@@ -116,6 +129,7 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingMinutes")
     public Long timeRemainingMinutes;
+
     public ScoringPlay withTimeRemainingMinutes(Long timeRemainingMinutes) {
         this.timeRemainingMinutes = timeRemainingMinutes;
         return this;
@@ -124,9 +138,11 @@ public class ScoringPlay {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeRemainingSeconds")
     public Long timeRemainingSeconds;
+
     public ScoringPlay withTimeRemainingSeconds(Long timeRemainingSeconds) {
         this.timeRemainingSeconds = timeRemainingSeconds;
         return this;
     }
     
+    public ScoringPlay(){}
 }

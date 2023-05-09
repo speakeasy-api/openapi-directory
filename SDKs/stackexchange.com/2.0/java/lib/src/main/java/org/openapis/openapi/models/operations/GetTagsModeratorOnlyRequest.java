@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTagsModeratorOnlyRequest {
@@ -13,6 +14,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetTagsModeratorOnlyRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetTagsModeratorOnlyRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetTagsModeratorOnlyRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -70,6 +74,7 @@ public class GetTagsModeratorOnlyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inname")
     public String inname;
+
     public GetTagsModeratorOnlyRequest withInname(String inname) {
         this.inname = inname;
         return this;
@@ -83,6 +88,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetTagsModeratorOnlyRequest withMax(String max) {
         this.max = max;
         return this;
@@ -96,6 +102,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetTagsModeratorOnlyRequest withMin(String min) {
         this.min = min;
         return this;
@@ -103,6 +110,7 @@ public class GetTagsModeratorOnlyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetTagsModeratorOnlyOrderEnum order;
+
     public GetTagsModeratorOnlyRequest withOrder(GetTagsModeratorOnlyOrderEnum order) {
         this.order = order;
         return this;
@@ -110,6 +118,7 @@ public class GetTagsModeratorOnlyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetTagsModeratorOnlyRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -117,6 +126,7 @@ public class GetTagsModeratorOnlyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetTagsModeratorOnlyRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -128,6 +138,7 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetTagsModeratorOnlyRequest withSite(String site) {
         this.site = site;
         return this;
@@ -135,6 +146,7 @@ public class GetTagsModeratorOnlyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetTagsModeratorOnlySortEnum sort;
+
     public GetTagsModeratorOnlyRequest withSort(GetTagsModeratorOnlySortEnum sort) {
         this.sort = sort;
         return this;
@@ -145,9 +157,13 @@ public class GetTagsModeratorOnlyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetTagsModeratorOnlyRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetTagsModeratorOnlyRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

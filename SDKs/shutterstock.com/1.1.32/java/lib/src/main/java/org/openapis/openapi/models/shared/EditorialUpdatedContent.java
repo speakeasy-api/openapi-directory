@@ -22,6 +22,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspect")
     public Double aspect;
+
     public EditorialUpdatedContent withAspect(Double aspect) {
         this.aspect = aspect;
         return this;
@@ -33,6 +34,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public EditorialAssets assets;
+
     public EditorialUpdatedContent withAssets(EditorialAssets assets) {
         this.assets = assets;
         return this;
@@ -41,6 +43,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byline")
     public String byline;
+
     public EditorialUpdatedContent withByline(String byline) {
         this.byline = byline;
         return this;
@@ -49,6 +52,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caption")
     public String caption;
+
     public EditorialUpdatedContent withCaption(String caption) {
         this.caption = caption;
         return this;
@@ -60,6 +64,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categories")
     public EditorialCategory[] categories;
+
     public EditorialUpdatedContent withCategories(EditorialCategory[] categories) {
         this.categories = categories;
         return this;
@@ -68,6 +73,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commercial_status")
     public EditorialUpdatedContentCommercialStatus commercialStatus;
+
     public EditorialUpdatedContent withCommercialStatus(EditorialUpdatedContentCommercialStatus commercialStatus) {
         this.commercialStatus = commercialStatus;
         return this;
@@ -78,6 +84,7 @@ public class EditorialUpdatedContent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_time")
     public OffsetDateTime createdTime;
+
     public EditorialUpdatedContent withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -87,6 +94,7 @@ public class EditorialUpdatedContent {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date_taken")
     public LocalDate dateTaken;
+
     public EditorialUpdatedContent withDateTaken(LocalDate dateTaken) {
         this.dateTaken = dateTaken;
         return this;
@@ -95,6 +103,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EditorialUpdatedContent withDescription(String description) {
         this.description = description;
         return this;
@@ -102,6 +111,7 @@ public class EditorialUpdatedContent {
     
     @JsonProperty("id")
     public String id;
+
     public EditorialUpdatedContent withId(String id) {
         this.id = id;
         return this;
@@ -110,6 +120,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public EditorialUpdatedContent withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -118,6 +129,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rights")
     public EditorialUpdatedContentRights rights;
+
     public EditorialUpdatedContent withRights(EditorialUpdatedContentRights rights) {
         this.rights = rights;
         return this;
@@ -126,6 +138,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("special_instructions")
     public String specialInstructions;
+
     public EditorialUpdatedContent withSpecialInstructions(String specialInstructions) {
         this.specialInstructions = specialInstructions;
         return this;
@@ -134,6 +147,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_code")
     public String supplierCode;
+
     public EditorialUpdatedContent withSupplierCode(String supplierCode) {
         this.supplierCode = supplierCode;
         return this;
@@ -142,6 +156,7 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EditorialUpdatedContent withTitle(String title) {
         this.title = title;
         return this;
@@ -152,6 +167,7 @@ public class EditorialUpdatedContent {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public EditorialUpdatedContent withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -160,9 +176,13 @@ public class EditorialUpdatedContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updates")
     public String[] updates;
+
     public EditorialUpdatedContent withUpdates(String[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public EditorialUpdatedContent(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse {
     
     public String contentType;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedDefaultReviewerAndType paginatedDefaultReviewerAndType;
+
     public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse withPaginatedDefaultReviewerAndType(org.openapis.openapi.models.shared.PaginatedDefaultReviewerAndType paginatedDefaultReviewerAndType) {
         this.paginatedDefaultReviewerAndType = paginatedDefaultReviewerAndType;
         return this;
     }
     
+    public GetWorkspacesWorkspaceProjectsProjectKeyDefaultReviewersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

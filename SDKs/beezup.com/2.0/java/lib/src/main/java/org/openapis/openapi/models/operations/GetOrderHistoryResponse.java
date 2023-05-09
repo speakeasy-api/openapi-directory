@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrderHistoryResponse {
@@ -12,6 +13,7 @@ public class GetOrderHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetOrderHistoryResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetOrderHistoryResponse {
     
     
     public String contentType;
+
     public GetOrderHistoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrderHistoryResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrderHistoryResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetOrderHistoryResponse {
     
     
     public Integer statusCode;
+
     public GetOrderHistoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetOrderHistoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrderHistoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetOrderHistoryResponse {
      */
     
     public org.openapis.openapi.models.shared.OrderHistory orderHistory;
+
     public GetOrderHistoryResponse withOrderHistory(org.openapis.openapi.models.shared.OrderHistory orderHistory) {
         this.orderHistory = orderHistory;
         return this;
     }
     
+    public GetOrderHistoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

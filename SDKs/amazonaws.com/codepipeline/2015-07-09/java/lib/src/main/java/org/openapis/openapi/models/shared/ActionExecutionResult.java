@@ -15,6 +15,7 @@ public class ActionExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalExecutionId")
     public String externalExecutionId;
+
     public ActionExecutionResult withExternalExecutionId(String externalExecutionId) {
         this.externalExecutionId = externalExecutionId;
         return this;
@@ -23,6 +24,7 @@ public class ActionExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalExecutionSummary")
     public String externalExecutionSummary;
+
     public ActionExecutionResult withExternalExecutionSummary(String externalExecutionSummary) {
         this.externalExecutionSummary = externalExecutionSummary;
         return this;
@@ -31,9 +33,11 @@ public class ActionExecutionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalExecutionUrl")
     public String externalExecutionUrl;
+
     public ActionExecutionResult withExternalExecutionUrl(String externalExecutionUrl) {
         this.externalExecutionUrl = externalExecutionUrl;
         return this;
     }
     
+    public ActionExecutionResult(){}
 }

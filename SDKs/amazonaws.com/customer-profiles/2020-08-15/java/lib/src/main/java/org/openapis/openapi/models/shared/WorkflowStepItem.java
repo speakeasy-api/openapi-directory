@@ -15,9 +15,11 @@ public class WorkflowStepItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppflowIntegration")
     public AppflowIntegrationWorkflowStep appflowIntegration;
+
     public WorkflowStepItem withAppflowIntegration(AppflowIntegrationWorkflowStep appflowIntegration) {
         this.appflowIntegration = appflowIntegration;
         return this;
     }
     
+    public WorkflowStepItem(){}
 }

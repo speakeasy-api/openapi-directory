@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BlockCardRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cardId")
     public Long cardId;
+
     public BlockCardRequest withCardId(Long cardId) {
         this.cardId = cardId;
         return this;
     }
     
+    public BlockCardRequest(@JsonProperty("cardId") Long cardId) {
+        this.cardId = cardId;
+  }
 }

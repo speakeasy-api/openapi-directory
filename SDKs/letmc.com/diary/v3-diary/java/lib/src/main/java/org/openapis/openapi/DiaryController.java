@@ -57,14 +57,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackFormResponse(contentType, httpRes.statusCode()) {{
             diaryControllerAddFeedbackForm200ApplicationJSONString = null;
             diaryControllerAddFeedbackForm200ApplicationXMLString = null;
             diaryControllerAddFeedbackForm200TextJSONString = null;
             diaryControllerAddFeedbackForm200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,14 +112,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackJsonResponse(contentType, httpRes.statusCode()) {{
             diaryControllerAddFeedbackJSON200ApplicationJSONString = null;
             diaryControllerAddFeedbackJson200ApplicationXMLString = null;
             diaryControllerAddFeedbackJSON200TextJSONString = null;
             diaryControllerAddFeedbackJson200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,14 +167,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerAddFeedbackRawResponse(contentType, httpRes.statusCode()) {{
             diaryControllerAddFeedbackRaw200ApplicationJSONString = null;
             diaryControllerAddFeedbackRaw200ApplicationXMLString = null;
             diaryControllerAddFeedbackRaw200TextJSONString = null;
             diaryControllerAddFeedbackRaw200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -223,14 +217,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerCancelAppointmentResponse(contentType, httpRes.statusCode()) {{
             diaryControllerCancelAppointment200ApplicationJSONString = null;
             diaryControllerCancelAppointment200ApplicationXMLString = null;
             diaryControllerCancelAppointment200TextJSONString = null;
             diaryControllerCancelAppointment200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,14 +273,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerDeleteAppointmentResponse(contentType, httpRes.statusCode()) {{
             diaryControllerDeleteAppointment200ApplicationJSONString = null;
             diaryControllerDeleteAppointment200ApplicationXMLString = null;
             diaryControllerDeleteAppointment200TextJSONString = null;
             diaryControllerDeleteAppointment200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,14 +329,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerGetAllocationsResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAllocationsResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerGetAllocationsResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAllocationsResponse(contentType, httpRes.statusCode()) {{
             diaryBookingModels = null;
             diaryBookingModels = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -399,12 +387,10 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentResponse(contentType, httpRes.statusCode()) {{
             diaryAppointmentModel = null;
             diaryAppointmentModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -449,14 +435,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentTypesResponse(contentType, httpRes.statusCode()) {{
             diaryAppointmentTypeModelResults = null;
             diaryAppointmentTypeModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -509,14 +493,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetAppointmentsBetweenDatesResponse(contentType, httpRes.statusCode()) {{
             diaryAppointmentModelResults = null;
             diaryAppointmentModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -569,14 +551,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsResponse res = new org.openapis.openapi.models.operations.DiaryControllerGetRecurringAppointmentsResponse(contentType, httpRes.statusCode()) {{
             diaryAppointmentModelResults = null;
             diaryAppointmentModelResults = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -634,14 +614,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentFormResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPostAppointmentForm200ApplicationJSONString = null;
             diaryControllerPostAppointmentForm200ApplicationXMLString = null;
             diaryControllerPostAppointmentForm200TextJSONString = null;
             diaryControllerPostAppointmentForm200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -697,14 +675,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentJsonResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPostAppointmentJSON200ApplicationJSONString = null;
             diaryControllerPostAppointmentJson200ApplicationXMLString = null;
             diaryControllerPostAppointmentJSON200TextJSONString = null;
             diaryControllerPostAppointmentJson200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -760,14 +736,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerPostAppointmentRawResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPostAppointmentRaw200ApplicationJSONString = null;
             diaryControllerPostAppointmentRaw200ApplicationXMLString = null;
             diaryControllerPostAppointmentRaw200TextJSONString = null;
             diaryControllerPostAppointmentRaw200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -823,14 +797,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentFormResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPutAppointmentForm200ApplicationJSONString = null;
             diaryControllerPutAppointmentForm200ApplicationXMLString = null;
             diaryControllerPutAppointmentForm200TextJSONString = null;
             diaryControllerPutAppointmentForm200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -886,14 +858,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentJsonResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPutAppointmentJSON200ApplicationJSONString = null;
             diaryControllerPutAppointmentJson200ApplicationXMLString = null;
             diaryControllerPutAppointmentJSON200TextJSONString = null;
             diaryControllerPutAppointmentJson200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -949,14 +919,12 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawResponse res = new org.openapis.openapi.models.operations.DiaryControllerPutAppointmentRawResponse(contentType, httpRes.statusCode()) {{
             diaryControllerPutAppointmentRaw200ApplicationJSONString = null;
             diaryControllerPutAppointmentRaw200ApplicationXMLString = null;
             diaryControllerPutAppointmentRaw200TextJSONString = null;
             diaryControllerPutAppointmentRaw200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1007,12 +975,10 @@ public class DiaryController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DiaryControllerSearchGuestResponse res = new org.openapis.openapi.models.operations.DiaryControllerSearchGuestResponse() {{
+        org.openapis.openapi.models.operations.DiaryControllerSearchGuestResponse res = new org.openapis.openapi.models.operations.DiaryControllerSearchGuestResponse(contentType, httpRes.statusCode()) {{
             guestDiaryParametersResultsModel = null;
             guestDiaryParametersResultsModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

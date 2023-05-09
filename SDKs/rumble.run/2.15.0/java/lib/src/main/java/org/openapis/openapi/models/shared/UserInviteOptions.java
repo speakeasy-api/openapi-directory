@@ -15,6 +15,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_admin")
     public Boolean clientAdmin;
+
     public UserInviteOptions withClientAdmin(Boolean clientAdmin) {
         this.clientAdmin = clientAdmin;
         return this;
@@ -23,6 +24,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UserInviteOptions withEmail(String email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("first_name")
     public String firstName;
+
     public UserInviteOptions withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -39,6 +42,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public UserInviteOptions withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -47,6 +51,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public UserInviteOptions withMessage(String message) {
         this.message = message;
         return this;
@@ -55,6 +60,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_default_role")
     public String orgDefaultRole;
+
     public UserInviteOptions withOrgDefaultRole(String orgDefaultRole) {
         this.orgDefaultRole = orgDefaultRole;
         return this;
@@ -63,6 +69,7 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("org_roles")
     public java.util.Map<String, Object> orgRoles;
+
     public UserInviteOptions withOrgRoles(java.util.Map<String, Object> orgRoles) {
         this.orgRoles = orgRoles;
         return this;
@@ -71,9 +78,11 @@ public class UserInviteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public UserInviteOptions withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public UserInviteOptions(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudVideointelligenceV1p1beta1SpeechContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phrases")
     public String[] phrases;
+
     public GoogleCloudVideointelligenceV1p1beta1SpeechContext withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
     }
     
+    public GoogleCloudVideointelligenceV1p1beta1SpeechContext(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Permission {
     @JsonProperty("operation")
     public OperationEnum operation;
+
     public Permission withOperation(OperationEnum operation) {
         this.operation = operation;
         return this;
@@ -19,9 +20,14 @@ public class Permission {
     
     @JsonProperty("service")
     public ServiceEnum service;
+
     public Permission withService(ServiceEnum service) {
         this.service = service;
         return this;
     }
     
+    public Permission(@JsonProperty("operation") OperationEnum operation, @JsonProperty("service") ServiceEnum service) {
+        this.operation = operation;
+        this.service = service;
+  }
 }

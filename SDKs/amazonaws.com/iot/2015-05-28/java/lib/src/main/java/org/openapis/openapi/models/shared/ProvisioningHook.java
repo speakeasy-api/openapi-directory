@@ -15,6 +15,7 @@ public class ProvisioningHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadVersion")
     public String payloadVersion;
+
     public ProvisioningHook withPayloadVersion(String payloadVersion) {
         this.payloadVersion = payloadVersion;
         return this;
@@ -22,9 +23,13 @@ public class ProvisioningHook {
     
     @JsonProperty("targetArn")
     public String targetArn;
+
     public ProvisioningHook withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public ProvisioningHook(@JsonProperty("targetArn") String targetArn) {
+        this.targetArn = targetArn;
+  }
 }

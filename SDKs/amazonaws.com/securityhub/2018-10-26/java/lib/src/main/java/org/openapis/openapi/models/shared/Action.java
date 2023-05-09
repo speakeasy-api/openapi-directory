@@ -15,6 +15,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionType")
     public String actionType;
+
     public Action withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -23,6 +24,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsApiCallAction")
     public AwsApiCallAction awsApiCallAction;
+
     public Action withAwsApiCallAction(AwsApiCallAction awsApiCallAction) {
         this.awsApiCallAction = awsApiCallAction;
         return this;
@@ -31,6 +33,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsRequestAction")
     public DnsRequestAction dnsRequestAction;
+
     public Action withDnsRequestAction(DnsRequestAction dnsRequestAction) {
         this.dnsRequestAction = dnsRequestAction;
         return this;
@@ -39,6 +42,7 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConnectionAction")
     public NetworkConnectionAction networkConnectionAction;
+
     public Action withNetworkConnectionAction(NetworkConnectionAction networkConnectionAction) {
         this.networkConnectionAction = networkConnectionAction;
         return this;
@@ -47,9 +51,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortProbeAction")
     public PortProbeAction portProbeAction;
+
     public Action withPortProbeAction(PortProbeAction portProbeAction) {
         this.portProbeAction = portProbeAction;
         return this;
     }
     
+    public Action(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRespon
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesRespon
      */
     
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse withGetUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSON getUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionAccountsIdAccountSources200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionAccountsIdAccountSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

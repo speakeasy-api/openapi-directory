@@ -15,6 +15,7 @@ public class UpdateLayoutRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public UpdateLayoutRequestBodyContent content;
+
     public UpdateLayoutRequestBody withContent(UpdateLayoutRequestBodyContent content) {
         this.content = content;
         return this;
@@ -26,9 +27,11 @@ public class UpdateLayoutRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateLayoutRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateLayoutRequestBody(){}
 }

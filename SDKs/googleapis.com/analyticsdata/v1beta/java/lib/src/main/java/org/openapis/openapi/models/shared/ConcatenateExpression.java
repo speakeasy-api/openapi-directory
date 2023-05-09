@@ -18,6 +18,7 @@ public class ConcatenateExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimiter")
     public String delimiter;
+
     public ConcatenateExpression withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -29,9 +30,11 @@ public class ConcatenateExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionNames")
     public String[] dimensionNames;
+
     public ConcatenateExpression withDimensionNames(String[] dimensionNames) {
         this.dimensionNames = dimensionNames;
         return this;
     }
     
+    public ConcatenateExpression(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaAuditUserLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleAnalyticsAdminV1alphaAuditUserLinksRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaAuditUserLinksRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleAnalyticsAdminV1alphaAuditUserLinksRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaAuditUserLinksRequest(){}
 }

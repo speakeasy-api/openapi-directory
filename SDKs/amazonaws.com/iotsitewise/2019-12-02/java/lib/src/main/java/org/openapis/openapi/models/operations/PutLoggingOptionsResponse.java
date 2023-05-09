@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutLoggingOptionsResponse {
@@ -12,6 +13,7 @@ public class PutLoggingOptionsResponse {
      */
     
     public Object conflictingOperationException;
+
     public PutLoggingOptionsResponse withConflictingOperationException(Object conflictingOperationException) {
         this.conflictingOperationException = conflictingOperationException;
         return this;
@@ -19,6 +21,7 @@ public class PutLoggingOptionsResponse {
     
     
     public String contentType;
+
     public PutLoggingOptionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutLoggingOptionsResponse {
      */
     
     public Object internalFailureException;
+
     public PutLoggingOptionsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class PutLoggingOptionsResponse {
      */
     
     public Object invalidRequestException;
+
     public PutLoggingOptionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class PutLoggingOptionsResponse {
      */
     
     public java.util.Map<String, Object> putLoggingOptionsResponse;
+
     public PutLoggingOptionsResponse withPutLoggingOptionsResponse(java.util.Map<String, Object> putLoggingOptionsResponse) {
         this.putLoggingOptionsResponse = putLoggingOptionsResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutLoggingOptionsResponse {
     
     
     public Integer statusCode;
+
     public PutLoggingOptionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutLoggingOptionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutLoggingOptionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutLoggingOptionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutLoggingOptionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class PutLoggingOptionsResponse {
      */
     
     public Object throttlingException;
+
     public PutLoggingOptionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutLoggingOptionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accepted_at")
     public String acceptedAt;
+
     public OrderFulfillmentPickupDetails withAcceptedAt(String acceptedAt) {
         this.acceptedAt = acceptedAt;
         return this;
@@ -35,6 +36,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auto_complete_duration")
     public String autoCompleteDuration;
+
     public OrderFulfillmentPickupDetails withAutoCompleteDuration(String autoCompleteDuration) {
         this.autoCompleteDuration = autoCompleteDuration;
         return this;
@@ -46,6 +48,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancel_reason")
     public String cancelReason;
+
     public OrderFulfillmentPickupDetails withCancelReason(String cancelReason) {
         this.cancelReason = cancelReason;
         return this;
@@ -59,6 +62,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canceled_at")
     public String canceledAt;
+
     public OrderFulfillmentPickupDetails withCanceledAt(String canceledAt) {
         this.canceledAt = canceledAt;
         return this;
@@ -70,6 +74,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("curbside_pickup_details")
     public OrderFulfillmentPickupDetailsCurbsidePickupDetails curbsidePickupDetails;
+
     public OrderFulfillmentPickupDetails withCurbsidePickupDetails(OrderFulfillmentPickupDetailsCurbsidePickupDetails curbsidePickupDetails) {
         this.curbsidePickupDetails = curbsidePickupDetails;
         return this;
@@ -83,6 +88,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expired_at")
     public String expiredAt;
+
     public OrderFulfillmentPickupDetails withExpiredAt(String expiredAt) {
         this.expiredAt = expiredAt;
         return this;
@@ -98,6 +104,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public OrderFulfillmentPickupDetails withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -109,6 +116,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_curbside_pickup")
     public Boolean isCurbsidePickup;
+
     public OrderFulfillmentPickupDetails withIsCurbsidePickup(Boolean isCurbsidePickup) {
         this.isCurbsidePickup = isCurbsidePickup;
         return this;
@@ -121,6 +129,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public OrderFulfillmentPickupDetails withNote(String note) {
         this.note = note;
         return this;
@@ -134,6 +143,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("picked_up_at")
     public String pickedUpAt;
+
     public OrderFulfillmentPickupDetails withPickedUpAt(String pickedUpAt) {
         this.pickedUpAt = pickedUpAt;
         return this;
@@ -150,6 +160,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickup_at")
     public String pickupAt;
+
     public OrderFulfillmentPickupDetails withPickupAt(String pickupAt) {
         this.pickupAt = pickupAt;
         return this;
@@ -163,6 +174,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickup_window_duration")
     public String pickupWindowDuration;
+
     public OrderFulfillmentPickupDetails withPickupWindowDuration(String pickupWindowDuration) {
         this.pickupWindowDuration = pickupWindowDuration;
         return this;
@@ -176,6 +188,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("placed_at")
     public String placedAt;
+
     public OrderFulfillmentPickupDetails withPlacedAt(String placedAt) {
         this.placedAt = placedAt;
         return this;
@@ -188,6 +201,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prep_time_duration")
     public String prepTimeDuration;
+
     public OrderFulfillmentPickupDetails withPrepTimeDuration(String prepTimeDuration) {
         this.prepTimeDuration = prepTimeDuration;
         return this;
@@ -201,6 +215,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ready_at")
     public String readyAt;
+
     public OrderFulfillmentPickupDetails withReadyAt(String readyAt) {
         this.readyAt = readyAt;
         return this;
@@ -212,6 +227,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient")
     public OrderFulfillmentRecipient recipient;
+
     public OrderFulfillmentPickupDetails withRecipient(OrderFulfillmentRecipient recipient) {
         this.recipient = recipient;
         return this;
@@ -225,6 +241,7 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejected_at")
     public String rejectedAt;
+
     public OrderFulfillmentPickupDetails withRejectedAt(String rejectedAt) {
         this.rejectedAt = rejectedAt;
         return this;
@@ -236,9 +253,11 @@ public class OrderFulfillmentPickupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule_type")
     public String scheduleType;
+
     public OrderFulfillmentPickupDetails withScheduleType(String scheduleType) {
         this.scheduleType = scheduleType;
         return this;
     }
     
+    public OrderFulfillmentPickupDetails(){}
 }

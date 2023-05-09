@@ -70,4 +70,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ApigatewayLocation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApigatewayOperation.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApigatewayStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/ApigatewayListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelAuthorizationRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorizationToken")
     public String authorizationToken;
+
     public CancelAuthorizationRequest withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
     }
     
+    public CancelAuthorizationRequest(@JsonProperty("authorizationToken") String authorizationToken) {
+        this.authorizationToken = authorizationToken;
+  }
 }

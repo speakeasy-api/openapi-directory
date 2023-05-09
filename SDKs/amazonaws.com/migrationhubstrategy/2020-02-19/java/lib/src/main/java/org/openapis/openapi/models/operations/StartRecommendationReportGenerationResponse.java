@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRecommendationReportGenerationResponse {
@@ -12,6 +13,7 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public Object accessDeniedException;
+
     public StartRecommendationReportGenerationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public Object conflictException;
+
     public StartRecommendationReportGenerationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartRecommendationReportGenerationResponse {
     
     
     public String contentType;
+
     public StartRecommendationReportGenerationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public Object internalServerException;
+
     public StartRecommendationReportGenerationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRecommendationReportGenerationResponse startRecommendationReportGenerationResponse;
+
     public StartRecommendationReportGenerationResponse withStartRecommendationReportGenerationResponse(org.openapis.openapi.models.shared.StartRecommendationReportGenerationResponse startRecommendationReportGenerationResponse) {
         this.startRecommendationReportGenerationResponse = startRecommendationReportGenerationResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartRecommendationReportGenerationResponse {
     
     
     public Integer statusCode;
+
     public StartRecommendationReportGenerationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartRecommendationReportGenerationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRecommendationReportGenerationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public Object throttlingException;
+
     public StartRecommendationReportGenerationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartRecommendationReportGenerationResponse {
      */
     
     public Object validationException;
+
     public StartRecommendationReportGenerationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartRecommendationReportGenerationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

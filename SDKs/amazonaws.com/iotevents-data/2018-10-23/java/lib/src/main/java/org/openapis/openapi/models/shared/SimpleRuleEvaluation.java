@@ -15,6 +15,7 @@ public class SimpleRuleEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputPropertyValue")
     public String inputPropertyValue;
+
     public SimpleRuleEvaluation withInputPropertyValue(String inputPropertyValue) {
         this.inputPropertyValue = inputPropertyValue;
         return this;
@@ -23,6 +24,7 @@ public class SimpleRuleEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public ComparisonOperatorEnum operator;
+
     public SimpleRuleEvaluation withOperator(ComparisonOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -31,9 +33,11 @@ public class SimpleRuleEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thresholdValue")
     public String thresholdValue;
+
     public SimpleRuleEvaluation withThresholdValue(String thresholdValue) {
         this.thresholdValue = thresholdValue;
         return this;
     }
     
+    public SimpleRuleEvaluation(){}
 }

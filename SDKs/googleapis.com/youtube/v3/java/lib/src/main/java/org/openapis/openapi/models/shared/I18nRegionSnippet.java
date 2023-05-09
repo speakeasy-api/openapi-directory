@@ -18,6 +18,7 @@ public class I18nRegionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gl")
     public String gl;
+
     public I18nRegionSnippet withGl(String gl) {
         this.gl = gl;
         return this;
@@ -29,9 +30,11 @@ public class I18nRegionSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public I18nRegionSnippet withName(String name) {
         this.name = name;
         return this;
     }
     
+    public I18nRegionSnippet(){}
 }

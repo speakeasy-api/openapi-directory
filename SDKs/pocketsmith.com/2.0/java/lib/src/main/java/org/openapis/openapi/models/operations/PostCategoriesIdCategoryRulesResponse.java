@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCategoriesIdCategoryRulesResponse {
@@ -12,6 +13,7 @@ public class PostCategoriesIdCategoryRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.CategoryRule categoryRule;
+
     public PostCategoriesIdCategoryRulesResponse withCategoryRule(org.openapis.openapi.models.shared.CategoryRule categoryRule) {
         this.categoryRule = categoryRule;
         return this;
@@ -19,6 +21,7 @@ public class PostCategoriesIdCategoryRulesResponse {
     
     
     public String contentType;
+
     public PostCategoriesIdCategoryRulesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostCategoriesIdCategoryRulesResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostCategoriesIdCategoryRulesResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class PostCategoriesIdCategoryRulesResponse {
     
     
     public Integer statusCode;
+
     public PostCategoriesIdCategoryRulesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostCategoriesIdCategoryRulesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCategoriesIdCategoryRulesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCategoriesIdCategoryRulesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

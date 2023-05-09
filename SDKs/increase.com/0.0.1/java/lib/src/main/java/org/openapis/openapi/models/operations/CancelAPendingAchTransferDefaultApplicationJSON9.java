@@ -4,13 +4,12 @@
 
 package org.openapis.openapi.models.operations;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CancelAPendingAchTransferDefaultApplicationJSON9 {
     @JsonProperty("detail")
     public String detail;
+
     public CancelAPendingAchTransferDefaultApplicationJSON9 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,9 +18,9 @@ public class CancelAPendingAchTransferDefaultApplicationJSON9 {
     /**
      * All errors related to parsing the request parameters.
      */
-    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object>[] errors;
+
     public CancelAPendingAchTransferDefaultApplicationJSON9 withErrors(java.util.Map<String, Object>[] errors) {
         this.errors = errors;
         return this;
@@ -29,6 +28,7 @@ public class CancelAPendingAchTransferDefaultApplicationJSON9 {
     
     @JsonProperty("status")
     public CancelAPendingAchTransferDefaultApplicationJSON9StatusEnum status;
+
     public CancelAPendingAchTransferDefaultApplicationJSON9 withStatus(CancelAPendingAchTransferDefaultApplicationJSON9StatusEnum status) {
         this.status = status;
         return this;
@@ -36,6 +36,7 @@ public class CancelAPendingAchTransferDefaultApplicationJSON9 {
     
     @JsonProperty("title")
     public String title;
+
     public CancelAPendingAchTransferDefaultApplicationJSON9 withTitle(String title) {
         this.title = title;
         return this;
@@ -43,9 +44,17 @@ public class CancelAPendingAchTransferDefaultApplicationJSON9 {
     
     @JsonProperty("type")
     public CancelAPendingAchTransferDefaultApplicationJSON9TypeEnum type;
+
     public CancelAPendingAchTransferDefaultApplicationJSON9 withType(CancelAPendingAchTransferDefaultApplicationJSON9TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancelAPendingAchTransferDefaultApplicationJSON9(@JsonProperty("detail") String detail, @JsonProperty("errors") java.util.Map<String, Object>[] errors, @JsonProperty("status") CancelAPendingAchTransferDefaultApplicationJSON9StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CancelAPendingAchTransferDefaultApplicationJSON9TypeEnum type) {
+        this.detail = detail;
+        this.errors = errors;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

@@ -147,4 +147,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ChannelStatus.java
 lib/src/main/java/org/openapis/openapi/models/shared/Occupancy.java
 lib/src/main/java/org/openapis/openapi/models/shared/SchemeBasicAuth.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/authentication/README.md
+docs/history/README.md
+docs/publishing/README.md
+docs/push/README.md
+docs/stats/README.md
+docs/status/README.md
 USAGE.md

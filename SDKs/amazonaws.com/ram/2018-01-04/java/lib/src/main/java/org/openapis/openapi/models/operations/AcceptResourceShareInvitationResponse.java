@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AcceptResourceShareInvitationResponse {
@@ -12,6 +13,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public org.openapis.openapi.models.shared.AcceptResourceShareInvitationResponse acceptResourceShareInvitationResponse;
+
     public AcceptResourceShareInvitationResponse withAcceptResourceShareInvitationResponse(org.openapis.openapi.models.shared.AcceptResourceShareInvitationResponse acceptResourceShareInvitationResponse) {
         this.acceptResourceShareInvitationResponse = acceptResourceShareInvitationResponse;
         return this;
@@ -19,6 +21,7 @@ public class AcceptResourceShareInvitationResponse {
     
     
     public String contentType;
+
     public AcceptResourceShareInvitationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public AcceptResourceShareInvitationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -39,6 +43,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object invalidClientTokenException;
+
     public AcceptResourceShareInvitationResponse withInvalidClientTokenException(Object invalidClientTokenException) {
         this.invalidClientTokenException = invalidClientTokenException;
         return this;
@@ -49,6 +54,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object malformedArnException;
+
     public AcceptResourceShareInvitationResponse withMalformedArnException(Object malformedArnException) {
         this.malformedArnException = malformedArnException;
         return this;
@@ -59,6 +65,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public AcceptResourceShareInvitationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -69,6 +76,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationAlreadyRejectedException;
+
     public AcceptResourceShareInvitationResponse withResourceShareInvitationAlreadyRejectedException(Object resourceShareInvitationAlreadyRejectedException) {
         this.resourceShareInvitationAlreadyRejectedException = resourceShareInvitationAlreadyRejectedException;
         return this;
@@ -79,6 +87,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object serverInternalException;
+
     public AcceptResourceShareInvitationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -86,6 +95,7 @@ public class AcceptResourceShareInvitationResponse {
     
     
     public Integer statusCode;
+
     public AcceptResourceShareInvitationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class AcceptResourceShareInvitationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AcceptResourceShareInvitationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationAlreadyAcceptedException;
+
     public AcceptResourceShareInvitationResponse withResourceShareInvitationAlreadyAcceptedException(Object resourceShareInvitationAlreadyAcceptedException) {
         this.resourceShareInvitationAlreadyAcceptedException = resourceShareInvitationAlreadyAcceptedException;
         return this;
@@ -113,6 +125,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationArnNotFoundException;
+
     public AcceptResourceShareInvitationResponse withResourceShareInvitationArnNotFoundException(Object resourceShareInvitationArnNotFoundException) {
         this.resourceShareInvitationArnNotFoundException = resourceShareInvitationArnNotFoundException;
         return this;
@@ -123,6 +136,7 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object resourceShareInvitationExpiredException;
+
     public AcceptResourceShareInvitationResponse withResourceShareInvitationExpiredException(Object resourceShareInvitationExpiredException) {
         this.resourceShareInvitationExpiredException = resourceShareInvitationExpiredException;
         return this;
@@ -133,9 +147,14 @@ public class AcceptResourceShareInvitationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AcceptResourceShareInvitationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public AcceptResourceShareInvitationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

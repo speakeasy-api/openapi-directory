@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeApplicationFleetAssociationsResponse {
     
     public String contentType;
+
     public DescribeApplicationFleetAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeApplicationFleetAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeApplicationFleetAssociationsResult describeApplicationFleetAssociationsResult;
+
     public DescribeApplicationFleetAssociationsResponse withDescribeApplicationFleetAssociationsResult(org.openapis.openapi.models.shared.DescribeApplicationFleetAssociationsResult describeApplicationFleetAssociationsResult) {
         this.describeApplicationFleetAssociationsResult = describeApplicationFleetAssociationsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeApplicationFleetAssociationsResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public DescribeApplicationFleetAssociationsResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeApplicationFleetAssociationsResponse {
      */
     
     public Object operationNotPermittedException;
+
     public DescribeApplicationFleetAssociationsResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeApplicationFleetAssociationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeApplicationFleetAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeApplicationFleetAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeApplicationFleetAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeApplicationFleetAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

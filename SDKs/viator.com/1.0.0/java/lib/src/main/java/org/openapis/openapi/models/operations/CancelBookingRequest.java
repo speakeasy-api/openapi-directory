@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingRequest {
@@ -13,6 +14,7 @@ public class CancelBookingRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public CancelBookingRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +22,7 @@ public class CancelBookingRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CancellationRequest cancellationRequest;
+
     public CancelBookingRequest withCancellationRequest(org.openapis.openapi.models.shared.CancellationRequest cancellationRequest) {
         this.cancellationRequest = cancellationRequest;
         return this;
@@ -30,9 +33,14 @@ public class CancelBookingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=booking-reference")
     public String bookingReference;
+
     public CancelBookingRequest withBookingReference(String bookingReference) {
         this.bookingReference = bookingReference;
         return this;
     }
     
+    public CancelBookingRequest(@JsonProperty("Accept-Language") String acceptLanguage, @JsonProperty("booking-reference") String bookingReference) {
+        this.acceptLanguage = acceptLanguage;
+        this.bookingReference = bookingReference;
+  }
 }

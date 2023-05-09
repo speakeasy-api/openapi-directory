@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BatchResultErrorEntryList - Gives a detailed description of the result of an action on each entry in the request.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class BatchResultErrorEntryList {
     
     public String code;
+
     public BatchResultErrorEntryList withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class BatchResultErrorEntryList {
     
     
     public String id;
+
     public BatchResultErrorEntryList withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +28,7 @@ public class BatchResultErrorEntryList {
     
     
     public String message;
+
     public BatchResultErrorEntryList withMessage(String message) {
         this.message = message;
         return this;
@@ -33,9 +36,15 @@ public class BatchResultErrorEntryList {
     
     
     public Boolean senderFault;
+
     public BatchResultErrorEntryList withSenderFault(Boolean senderFault) {
         this.senderFault = senderFault;
         return this;
     }
     
+    public BatchResultErrorEntryList(@JsonProperty("Code") String code, @JsonProperty("Id") String id, @JsonProperty("SenderFault") Boolean senderFault) {
+        this.code = code;
+        this.id = id;
+        this.senderFault = senderFault;
+  }
 }

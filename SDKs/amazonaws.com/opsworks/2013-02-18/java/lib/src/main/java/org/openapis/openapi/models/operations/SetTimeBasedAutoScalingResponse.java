@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetTimeBasedAutoScalingResponse {
     
     public String contentType;
+
     public SetTimeBasedAutoScalingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SetTimeBasedAutoScalingResponse {
     
     
     public Integer statusCode;
+
     public SetTimeBasedAutoScalingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SetTimeBasedAutoScalingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetTimeBasedAutoScalingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SetTimeBasedAutoScalingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetTimeBasedAutoScalingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -43,9 +48,14 @@ public class SetTimeBasedAutoScalingResponse {
      */
     
     public Object validationException;
+
     public SetTimeBasedAutoScalingResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public SetTimeBasedAutoScalingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

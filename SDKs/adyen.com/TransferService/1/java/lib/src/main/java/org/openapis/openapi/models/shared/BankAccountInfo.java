@@ -12,6 +12,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public BankAccountInfo withAddress(Address address) {
         this.address = address;
         return this;
@@ -23,6 +24,7 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iban")
     public String iban;
+
     public BankAccountInfo withIban(String iban) {
         this.iban = iban;
         return this;
@@ -31,9 +33,11 @@ public class BankAccountInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerName")
     public Name ownerName;
+
     public BankAccountInfo withOwnerName(Name ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public BankAccountInfo(){}
 }

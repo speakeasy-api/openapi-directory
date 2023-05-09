@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IpPermissionListUserIdGroupPairs {
     
     public String description;
+
     public IpPermissionListUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String groupId;
+
     public IpPermissionListUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String groupName;
+
     public IpPermissionListUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String peeringStatus;
+
     public IpPermissionListUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String userId;
+
     public IpPermissionListUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String vpcId;
+
     public IpPermissionListUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class IpPermissionListUserIdGroupPairs {
     
     
     public String vpcPeeringConnectionId;
+
     public IpPermissionListUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public IpPermissionListUserIdGroupPairs(){}
 }

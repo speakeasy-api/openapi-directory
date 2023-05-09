@@ -15,6 +15,7 @@ public class AwsS3BucketNotificationConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public AwsS3BucketNotificationConfigurationDetail withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -23,6 +24,7 @@ public class AwsS3BucketNotificationConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public String[] events;
+
     public AwsS3BucketNotificationConfigurationDetail withEvents(String[] events) {
         this.events = events;
         return this;
@@ -31,6 +33,7 @@ public class AwsS3BucketNotificationConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public AwsS3BucketNotificationConfigurationFilter filter;
+
     public AwsS3BucketNotificationConfigurationDetail withFilter(AwsS3BucketNotificationConfigurationFilter filter) {
         this.filter = filter;
         return this;
@@ -39,9 +42,11 @@ public class AwsS3BucketNotificationConfigurationDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsS3BucketNotificationConfigurationDetail withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsS3BucketNotificationConfigurationDetail(){}
 }

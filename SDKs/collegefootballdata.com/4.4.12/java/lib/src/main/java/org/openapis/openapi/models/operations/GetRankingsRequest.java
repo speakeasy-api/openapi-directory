@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRankingsRequest {
@@ -12,6 +13,7 @@ public class GetRankingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=seasonType")
     public String seasonType;
+
     public GetRankingsRequest withSeasonType(String seasonType) {
         this.seasonType = seasonType;
         return this;
@@ -22,6 +24,7 @@ public class GetRankingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=week")
     public Long week;
+
     public GetRankingsRequest withWeek(Long week) {
         this.week = week;
         return this;
@@ -32,9 +35,13 @@ public class GetRankingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetRankingsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetRankingsRequest(@JsonProperty("year") Long year) {
+        this.year = year;
+  }
 }

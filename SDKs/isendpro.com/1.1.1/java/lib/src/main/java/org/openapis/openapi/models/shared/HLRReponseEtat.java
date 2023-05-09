@@ -12,9 +12,13 @@ public class HLRReponseEtat {
      */
     @JsonProperty("etat")
     public HLRReponseEtatEtat[] etat;
+
     public HLRReponseEtat withEtat(HLRReponseEtatEtat[] etat) {
         this.etat = etat;
         return this;
     }
     
+    public HLRReponseEtat(@JsonProperty("etat") HLRReponseEtatEtat[] etat) {
+        this.etat = etat;
+  }
 }

@@ -15,9 +15,11 @@ public class PutAccountSendingAttributesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingEnabled")
     public Boolean sendingEnabled;
+
     public PutAccountSendingAttributesRequestBody withSendingEnabled(Boolean sendingEnabled) {
         this.sendingEnabled = sendingEnabled;
         return this;
     }
     
+    public PutAccountSendingAttributesRequestBody(){}
 }

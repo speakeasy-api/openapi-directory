@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GoogleCloudDatacatalogV1TaxonomyService {
     /**
-     * P4SA Identity of the service.
+     * The service agent for the service.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identity")
     public String identity;
+
     public GoogleCloudDatacatalogV1TaxonomyService withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1TaxonomyService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public GoogleCloudDatacatalogV1TaxonomyServiceNameEnum name;
+
     public GoogleCloudDatacatalogV1TaxonomyService withName(GoogleCloudDatacatalogV1TaxonomyServiceNameEnum name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1TaxonomyService(){}
 }

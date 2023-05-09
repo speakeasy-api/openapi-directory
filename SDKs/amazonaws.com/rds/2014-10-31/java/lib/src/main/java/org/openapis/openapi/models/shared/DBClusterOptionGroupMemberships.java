@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DBClusterOptionGroupMemberships {
     
     public String dbClusterOptionGroupName;
+
     public DBClusterOptionGroupMemberships withDBClusterOptionGroupName(String dbClusterOptionGroupName) {
         this.dbClusterOptionGroupName = dbClusterOptionGroupName;
         return this;
@@ -19,9 +20,11 @@ public class DBClusterOptionGroupMemberships {
     
     
     public String status;
+
     public DBClusterOptionGroupMemberships withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public DBClusterOptionGroupMemberships(){}
 }

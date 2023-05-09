@@ -20,6 +20,7 @@ public class DeviceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceAttributes")
     public AttributeType[] deviceAttributes;
+
     public DeviceType withDeviceAttributes(AttributeType[] deviceAttributes) {
         this.deviceAttributes = deviceAttributes;
         return this;
@@ -30,6 +31,7 @@ public class DeviceType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeviceCreateDate")
     public OffsetDateTime deviceCreateDate;
+
     public DeviceType withDeviceCreateDate(OffsetDateTime deviceCreateDate) {
         this.deviceCreateDate = deviceCreateDate;
         return this;
@@ -38,6 +40,7 @@ public class DeviceType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceKey")
     public String deviceKey;
+
     public DeviceType withDeviceKey(String deviceKey) {
         this.deviceKey = deviceKey;
         return this;
@@ -48,6 +51,7 @@ public class DeviceType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeviceLastAuthenticatedDate")
     public OffsetDateTime deviceLastAuthenticatedDate;
+
     public DeviceType withDeviceLastAuthenticatedDate(OffsetDateTime deviceLastAuthenticatedDate) {
         this.deviceLastAuthenticatedDate = deviceLastAuthenticatedDate;
         return this;
@@ -58,9 +62,11 @@ public class DeviceType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("DeviceLastModifiedDate")
     public OffsetDateTime deviceLastModifiedDate;
+
     public DeviceType withDeviceLastModifiedDate(OffsetDateTime deviceLastModifiedDate) {
         this.deviceLastModifiedDate = deviceLastModifiedDate;
         return this;
     }
     
+    public DeviceType(){}
 }

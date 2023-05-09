@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceEventWindowTimeRangeRequest {
     
     public Long endHour;
+
     public InstanceEventWindowTimeRangeRequest withEndHour(Long endHour) {
         this.endHour = endHour;
         return this;
@@ -19,6 +20,7 @@ public class InstanceEventWindowTimeRangeRequest {
     
     
     public WeekDayEnum endWeekDay;
+
     public InstanceEventWindowTimeRangeRequest withEndWeekDay(WeekDayEnum endWeekDay) {
         this.endWeekDay = endWeekDay;
         return this;
@@ -26,6 +28,7 @@ public class InstanceEventWindowTimeRangeRequest {
     
     
     public Long startHour;
+
     public InstanceEventWindowTimeRangeRequest withStartHour(Long startHour) {
         this.startHour = startHour;
         return this;
@@ -33,9 +36,11 @@ public class InstanceEventWindowTimeRangeRequest {
     
     
     public WeekDayEnum startWeekDay;
+
     public InstanceEventWindowTimeRangeRequest withStartWeekDay(WeekDayEnum startWeekDay) {
         this.startWeekDay = startWeekDay;
         return this;
     }
     
+    public InstanceEventWindowTimeRangeRequest(){}
 }

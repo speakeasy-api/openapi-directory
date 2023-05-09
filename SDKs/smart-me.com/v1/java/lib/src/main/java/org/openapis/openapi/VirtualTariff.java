@@ -50,14 +50,12 @@ public class VirtualTariff {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VirtualTariffGetResponse res = new org.openapis.openapi.models.operations.VirtualTariffGetResponse() {{
+        org.openapis.openapi.models.operations.VirtualTariffGetResponse res = new org.openapis.openapi.models.operations.VirtualTariffGetResponse(contentType, httpRes.statusCode()) {{
             virtualTariffsOfFolders = null;
             virtualTariffsOfFolders = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,12 +103,10 @@ public class VirtualTariff {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiVirtualTariffIdResponse res = new org.openapis.openapi.models.operations.GetApiVirtualTariffIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiVirtualTariffIdResponse res = new org.openapis.openapi.models.operations.GetApiVirtualTariffIdResponse(contentType, httpRes.statusCode()) {{
             virtualTariffsOfFolder = null;
             virtualTariffsOfFolder = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

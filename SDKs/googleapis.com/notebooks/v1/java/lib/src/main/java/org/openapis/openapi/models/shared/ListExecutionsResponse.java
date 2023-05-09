@@ -18,6 +18,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executions")
     public Execution[] executions;
+
     public ListExecutionsResponse withExecutions(Execution[] executions) {
         this.executions = executions;
         return this;
@@ -29,6 +30,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListExecutionsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListExecutionsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListExecutionsResponse(){}
 }

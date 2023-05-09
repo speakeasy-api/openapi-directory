@@ -15,9 +15,11 @@ public class AssociateApiResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiAssociation")
     public ApiAssociation apiAssociation;
+
     public AssociateApiResponse withApiAssociation(ApiAssociation apiAssociation) {
         this.apiAssociation = apiAssociation;
         return this;
     }
     
+    public AssociateApiResponse(){}
 }

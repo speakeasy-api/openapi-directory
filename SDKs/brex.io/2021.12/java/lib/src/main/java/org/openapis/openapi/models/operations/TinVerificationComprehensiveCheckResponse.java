@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TinVerificationComprehensiveCheckResponse {
     
     public String contentType;
+
     public TinVerificationComprehensiveCheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TinVerificationComprehensiveCheckResponse {
     
     
     public Integer statusCode;
+
     public TinVerificationComprehensiveCheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TinVerificationComprehensiveCheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TinVerificationComprehensiveCheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TinVerificationComprehensiveCheckResponse {
      */
     
     public TinVerificationComprehensiveCheck200ApplicationJSON tinVerificationComprehensiveCheck200ApplicationJSONObject;
+
     public TinVerificationComprehensiveCheckResponse withTinVerificationComprehensiveCheck200ApplicationJSONObject(TinVerificationComprehensiveCheck200ApplicationJSON tinVerificationComprehensiveCheck200ApplicationJSONObject) {
         this.tinVerificationComprehensiveCheck200ApplicationJSONObject = tinVerificationComprehensiveCheck200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class TinVerificationComprehensiveCheckResponse {
      */
     
     public TinVerificationComprehensiveCheckDefaultApplicationJSON tinVerificationComprehensiveCheckDefaultApplicationJSONObject;
+
     public TinVerificationComprehensiveCheckResponse withTinVerificationComprehensiveCheckDefaultApplicationJSONObject(TinVerificationComprehensiveCheckDefaultApplicationJSON tinVerificationComprehensiveCheckDefaultApplicationJSONObject) {
         this.tinVerificationComprehensiveCheckDefaultApplicationJSONObject = tinVerificationComprehensiveCheckDefaultApplicationJSONObject;
         return this;
     }
     
+    public TinVerificationComprehensiveCheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

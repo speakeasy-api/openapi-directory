@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonSecurity;
 import org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonRequest;
 import org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonResponse;
+import org.openapis.openapi.models.operations.GETListsBestSellersHistoryJsonSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -35,32 +34,34 @@ public class Application {
                 price = "unde";
                 publisher = "nulla";
                 title = "Ms.";
-            }}            
+            }};            
 
-            GETListsBestSellersHistoryJsonResponse res = sdk.getListsBestSellersHistoryJson(req, new GETListsBestSellersHistoryJsonSecurity() {{
+            GETListsBestSellersHistoryJsonResponse res = sdk.getListsBestSellersHistoryJson(req, new GETListsBestSellersHistoryJsonSecurity("illum") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.getListsBestSellersHistoryJSON200ApplicationJSONObject.isPresent()) {
+            if (res.getListsBestSellersHistoryJSON200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `getListsBestSellersHistoryJson` - Best Seller History List
-* `getListsDateListJson` - Best Seller List by Date
-* `getListsFormat` - Best Seller List
-* `getListsNamesFormat` - Best Seller List Names
-* `getListsOverviewFormat` - Best Seller List Overview
-* `getReviewsFormat` - Reviews
+* [getListsBestSellersHistoryJson](docs/sdk/README.md#getlistsbestsellershistoryjson) - Best Seller History List
+* [getListsDateListJson](docs/sdk/README.md#getlistsdatelistjson) - Best Seller List by Date
+* [getListsFormat](docs/sdk/README.md#getlistsformat) - Best Seller List
+* [getListsNamesFormat](docs/sdk/README.md#getlistsnamesformat) - Best Seller List Names
+* [getListsOverviewFormat](docs/sdk/README.md#getlistsoverviewformat) - Best Seller List Overview
+* [getReviewsFormat](docs/sdk/README.md#getreviewsformat) - Reviews
 <!-- End SDK Available Operations -->
 
 ### Maturity

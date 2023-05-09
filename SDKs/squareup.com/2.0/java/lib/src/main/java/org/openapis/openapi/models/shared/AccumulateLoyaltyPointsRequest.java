@@ -15,6 +15,7 @@ public class AccumulateLoyaltyPointsRequest {
      */
     @JsonProperty("accumulate_points")
     public LoyaltyEventAccumulatePoints accumulatePoints;
+
     public AccumulateLoyaltyPointsRequest withAccumulatePoints(LoyaltyEventAccumulatePoints accumulatePoints) {
         this.accumulatePoints = accumulatePoints;
         return this;
@@ -26,6 +27,7 @@ public class AccumulateLoyaltyPointsRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public AccumulateLoyaltyPointsRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -36,9 +38,15 @@ public class AccumulateLoyaltyPointsRequest {
      */
     @JsonProperty("location_id")
     public String locationId;
+
     public AccumulateLoyaltyPointsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public AccumulateLoyaltyPointsRequest(@JsonProperty("accumulate_points") LoyaltyEventAccumulatePoints accumulatePoints, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("location_id") String locationId) {
+        this.accumulatePoints = accumulatePoints;
+        this.idempotencyKey = idempotencyKey;
+        this.locationId = locationId;
+  }
 }

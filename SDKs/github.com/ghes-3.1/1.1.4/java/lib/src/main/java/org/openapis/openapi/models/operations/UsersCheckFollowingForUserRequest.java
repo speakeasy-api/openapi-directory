@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UsersCheckFollowingForUserRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=target_user")
     public String targetUser;
+
     public UsersCheckFollowingForUserRequest withTargetUser(String targetUser) {
         this.targetUser = targetUser;
         return this;
@@ -19,9 +21,14 @@ public class UsersCheckFollowingForUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public UsersCheckFollowingForUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public UsersCheckFollowingForUserRequest(@JsonProperty("target_user") String targetUser, @JsonProperty("username") String username) {
+        this.targetUser = targetUser;
+        this.username = username;
+  }
 }

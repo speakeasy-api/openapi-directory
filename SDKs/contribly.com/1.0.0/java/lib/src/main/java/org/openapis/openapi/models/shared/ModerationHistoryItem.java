@@ -17,6 +17,7 @@ public class ModerationHistoryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public ModerationAction action;
+
     public ModerationHistoryItem withAction(ModerationAction action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class ModerationHistoryItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public ModerationHistoryItem withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -34,9 +36,13 @@ public class ModerationHistoryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ModerationHistoryItem withNotes(String notes) {
         this.notes = notes;
         return this;
     }
     
+    public ModerationHistoryItem(@JsonProperty("date") OffsetDateTime date) {
+        this.date = date;
+  }
 }

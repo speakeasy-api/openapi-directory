@@ -12,6 +12,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBodySource {
      */
     
     public String language;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBodySource withLanguage(String language) {
         this.language = language;
         return this;
@@ -22,6 +23,7 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBodySource {
      */
     
     public String privacy;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBodySource withPrivacy(String privacy) {
         this.privacy = privacy;
         return this;
@@ -32,9 +34,11 @@ public class PatchApiV1AccountsUpdateCredentialsRequestBodySource {
      */
     
     public Boolean sensitive;
+
     public PatchApiV1AccountsUpdateCredentialsRequestBodySource withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
     }
     
+    public PatchApiV1AccountsUpdateCredentialsRequestBodySource(){}
 }

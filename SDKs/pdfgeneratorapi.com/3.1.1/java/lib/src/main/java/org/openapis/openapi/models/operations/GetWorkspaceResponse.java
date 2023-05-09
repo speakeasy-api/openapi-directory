@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkspaceResponse {
     
     public String contentType;
+
     public GetWorkspaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetWorkspaceResponse {
     
     
     public Integer statusCode;
+
     public GetWorkspaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetWorkspaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkspaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace200ApplicationJSON getWorkspace200ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace200ApplicationJSONObject(GetWorkspace200ApplicationJSON getWorkspace200ApplicationJSONObject) {
         this.getWorkspace200ApplicationJSONObject = getWorkspace200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace401ApplicationJSON getWorkspace401ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace401ApplicationJSONObject(GetWorkspace401ApplicationJSON getWorkspace401ApplicationJSONObject) {
         this.getWorkspace401ApplicationJSONObject = getWorkspace401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace403ApplicationJSON getWorkspace403ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace403ApplicationJSONObject(GetWorkspace403ApplicationJSON getWorkspace403ApplicationJSONObject) {
         this.getWorkspace403ApplicationJSONObject = getWorkspace403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace404ApplicationJSON getWorkspace404ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace404ApplicationJSONObject(GetWorkspace404ApplicationJSON getWorkspace404ApplicationJSONObject) {
         this.getWorkspace404ApplicationJSONObject = getWorkspace404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace422ApplicationJSON getWorkspace422ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace422ApplicationJSONObject(GetWorkspace422ApplicationJSON getWorkspace422ApplicationJSONObject) {
         this.getWorkspace422ApplicationJSONObject = getWorkspace422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetWorkspaceResponse {
      */
     
     public GetWorkspace500ApplicationJSON getWorkspace500ApplicationJSONObject;
+
     public GetWorkspaceResponse withGetWorkspace500ApplicationJSONObject(GetWorkspace500ApplicationJSON getWorkspace500ApplicationJSONObject) {
         this.getWorkspace500ApplicationJSONObject = getWorkspace500ApplicationJSONObject;
         return this;
     }
     
+    public GetWorkspaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

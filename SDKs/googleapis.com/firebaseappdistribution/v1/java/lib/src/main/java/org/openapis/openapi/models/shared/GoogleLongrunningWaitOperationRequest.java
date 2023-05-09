@@ -18,9 +18,11 @@ public class GoogleLongrunningWaitOperationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeout")
     public String timeout;
+
     public GoogleLongrunningWaitOperationRequest withTimeout(String timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public GoogleLongrunningWaitOperationRequest(){}
 }

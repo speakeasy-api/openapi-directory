@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GitListMatchingRefsResponse {
     
     public String contentType;
+
     public GitListMatchingRefsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GitListMatchingRefsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GitListMatchingRefsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GitListMatchingRefsResponse {
     
     
     public Integer statusCode;
+
     public GitListMatchingRefsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GitListMatchingRefsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GitListMatchingRefsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GitListMatchingRefsResponse {
      */
     
     public org.openapis.openapi.models.shared.GitRef[] gitRefs;
+
     public GitListMatchingRefsResponse withGitRefs(org.openapis.openapi.models.shared.GitRef[] gitRefs) {
         this.gitRefs = gitRefs;
         return this;
     }
     
+    public GitListMatchingRefsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

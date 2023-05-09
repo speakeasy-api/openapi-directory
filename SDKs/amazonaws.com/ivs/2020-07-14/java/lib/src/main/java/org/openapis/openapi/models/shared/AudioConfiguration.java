@@ -15,6 +15,7 @@ public class AudioConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Long channels;
+
     public AudioConfiguration withChannels(Long channels) {
         this.channels = channels;
         return this;
@@ -23,6 +24,7 @@ public class AudioConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public String codec;
+
     public AudioConfiguration withCodec(String codec) {
         this.codec = codec;
         return this;
@@ -31,6 +33,7 @@ public class AudioConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleRate")
     public Long sampleRate;
+
     public AudioConfiguration withSampleRate(Long sampleRate) {
         this.sampleRate = sampleRate;
         return this;
@@ -39,9 +42,11 @@ public class AudioConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetBitrate")
     public Long targetBitrate;
+
     public AudioConfiguration withTargetBitrate(Long targetBitrate) {
         this.targetBitrate = targetBitrate;
         return this;
     }
     
+    public AudioConfiguration(){}
 }

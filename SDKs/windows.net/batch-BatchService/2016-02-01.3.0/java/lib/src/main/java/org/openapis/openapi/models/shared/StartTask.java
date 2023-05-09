@@ -18,6 +18,7 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commandLine")
     public String commandLine;
+
     public StartTask withCommandLine(String commandLine) {
         this.commandLine = commandLine;
         return this;
@@ -29,6 +30,7 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentSettings")
     public EnvironmentSetting[] environmentSettings;
+
     public StartTask withEnvironmentSettings(EnvironmentSetting[] environmentSettings) {
         this.environmentSettings = environmentSettings;
         return this;
@@ -40,6 +42,7 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTaskRetryCount")
     public Integer maxTaskRetryCount;
+
     public StartTask withMaxTaskRetryCount(Integer maxTaskRetryCount) {
         this.maxTaskRetryCount = maxTaskRetryCount;
         return this;
@@ -51,6 +54,7 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceFiles")
     public ResourceFile[] resourceFiles;
+
     public StartTask withResourceFiles(ResourceFile[] resourceFiles) {
         this.resourceFiles = resourceFiles;
         return this;
@@ -62,6 +66,7 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runElevated")
     public Boolean runElevated;
+
     public StartTask withRunElevated(Boolean runElevated) {
         this.runElevated = runElevated;
         return this;
@@ -73,9 +78,11 @@ public class StartTask {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitForSuccess")
     public Boolean waitForSuccess;
+
     public StartTask withWaitForSuccess(Boolean waitForSuccess) {
         this.waitForSuccess = waitForSuccess;
         return this;
     }
     
+    public StartTask(){}
 }

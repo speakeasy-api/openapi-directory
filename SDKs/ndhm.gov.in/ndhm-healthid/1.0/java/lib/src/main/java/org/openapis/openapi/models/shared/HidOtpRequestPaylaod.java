@@ -15,6 +15,7 @@ public class HidOtpRequestPaylaod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPassword")
     public String newPassword;
+
     public HidOtpRequestPaylaod withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -23,6 +24,7 @@ public class HidOtpRequestPaylaod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otp")
     public String otp;
+
     public HidOtpRequestPaylaod withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -31,9 +33,11 @@ public class HidOtpRequestPaylaod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public HidOtpRequestPaylaod withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public HidOtpRequestPaylaod(){}
 }

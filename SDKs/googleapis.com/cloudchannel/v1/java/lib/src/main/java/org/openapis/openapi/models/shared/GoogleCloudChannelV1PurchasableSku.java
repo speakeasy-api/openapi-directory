@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1PurchasableSku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public GoogleCloudChannelV1Sku sku;
+
     public GoogleCloudChannelV1PurchasableSku withSku(GoogleCloudChannelV1Sku sku) {
         this.sku = sku;
         return this;
     }
     
+    public GoogleCloudChannelV1PurchasableSku(){}
 }

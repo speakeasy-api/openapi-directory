@@ -15,6 +15,7 @@ public class ItvEntitlementsHistory {
      */
     @JsonProperty("cancellations")
     public ItvEntitlementCancelation[] cancellations;
+
     public ItvEntitlementsHistory withCancellations(ItvEntitlementCancelation[] cancellations) {
         this.cancellations = cancellations;
         return this;
@@ -25,9 +26,14 @@ public class ItvEntitlementsHistory {
      */
     @JsonProperty("entitlements")
     public ItvEntitlement[] entitlements;
+
     public ItvEntitlementsHistory withEntitlements(ItvEntitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
     }
     
+    public ItvEntitlementsHistory(@JsonProperty("cancellations") ItvEntitlementCancelation[] cancellations, @JsonProperty("entitlements") ItvEntitlement[] entitlements) {
+        this.cancellations = cancellations;
+        this.entitlements = entitlements;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImageResponse {
@@ -12,6 +13,7 @@ public class GetImageResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public GetImageResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class GetImageResponse {
      */
     
     public Object clientException;
+
     public GetImageResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class GetImageResponse {
     
     
     public String contentType;
+
     public GetImageResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetImageResponse {
      */
     
     public Object forbiddenException;
+
     public GetImageResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class GetImageResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImageResponse getImageResponse;
+
     public GetImageResponse withGetImageResponse(org.openapis.openapi.models.shared.GetImageResponse getImageResponse) {
         this.getImageResponse = getImageResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetImageResponse {
      */
     
     public Object invalidRequestException;
+
     public GetImageResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class GetImageResponse {
      */
     
     public Object serviceException;
+
     public GetImageResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class GetImageResponse {
     
     
     public Integer statusCode;
+
     public GetImageResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetImageResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImageResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class GetImageResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetImageResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public GetImageResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -23,6 +23,7 @@ public class ActivityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationName")
     public String applicationName;
+
     public ActivityId withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -34,6 +35,7 @@ public class ActivityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public ActivityId withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -47,6 +49,7 @@ public class ActivityId {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("time")
     public OffsetDateTime time;
+
     public ActivityId withTime(OffsetDateTime time) {
         this.time = time;
         return this;
@@ -58,9 +61,11 @@ public class ActivityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueQualifier")
     public String uniqueQualifier;
+
     public ActivityId withUniqueQualifier(String uniqueQualifier) {
         this.uniqueQualifier = uniqueQualifier;
         return this;
     }
     
+    public ActivityId(){}
 }

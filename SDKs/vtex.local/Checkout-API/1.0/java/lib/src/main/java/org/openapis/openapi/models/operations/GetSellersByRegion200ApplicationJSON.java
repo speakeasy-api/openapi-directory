@@ -18,6 +18,7 @@ public class GetSellersByRegion200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetSellersByRegion200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class GetSellersByRegion200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellers")
     public GetSellersByRegion200ApplicationJSONSellers[] sellers;
+
     public GetSellersByRegion200ApplicationJSON withSellers(GetSellersByRegion200ApplicationJSONSellers[] sellers) {
         this.sellers = sellers;
         return this;
     }
     
+    public GetSellersByRegion200ApplicationJSON(){}
 }

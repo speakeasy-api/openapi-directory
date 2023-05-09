@@ -15,6 +15,7 @@ public class DeleteTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public DeleteTagsOutput withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -23,9 +24,11 @@ public class DeleteTagsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public TaggableResourceTypeEnum resourceType;
+
     public DeleteTagsOutput withResourceType(TaggableResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public DeleteTagsOutput(){}
 }

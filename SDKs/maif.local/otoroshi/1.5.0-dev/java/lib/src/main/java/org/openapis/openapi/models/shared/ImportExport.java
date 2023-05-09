@@ -22,6 +22,7 @@ public class ImportExport {
      */
     @JsonProperty("admins")
     public ImportExportAdmins[] admins;
+
     public ImportExport withAdmins(ImportExportAdmins[] admins) {
         this.admins = admins;
         return this;
@@ -32,6 +33,7 @@ public class ImportExport {
      */
     @JsonProperty("apiKeys")
     public ImportExportApiKeys[] apiKeys;
+
     public ImportExport withApiKeys(ImportExportApiKeys[] apiKeys) {
         this.apiKeys = apiKeys;
         return this;
@@ -43,6 +45,7 @@ public class ImportExport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appConfig")
     public java.util.Map<String, String> appConfig;
+
     public ImportExport withAppConfig(java.util.Map<String, String> appConfig) {
         this.appConfig = appConfig;
         return this;
@@ -53,6 +56,7 @@ public class ImportExport {
      */
     @JsonProperty("config")
     public GlobalConfig config;
+
     public ImportExport withConfig(GlobalConfig config) {
         this.config = config;
         return this;
@@ -62,6 +66,7 @@ public class ImportExport {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public ImportExport withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -69,6 +74,7 @@ public class ImportExport {
     
     @JsonProperty("dateRaw")
     public Long dateRaw;
+
     public ImportExport withDateRaw(Long dateRaw) {
         this.dateRaw = dateRaw;
         return this;
@@ -79,6 +85,7 @@ public class ImportExport {
      */
     @JsonProperty("errorTemplates")
     public ImportExportErrorTemplates[] errorTemplates;
+
     public ImportExport withErrorTemplates(ImportExportErrorTemplates[] errorTemplates) {
         this.errorTemplates = errorTemplates;
         return this;
@@ -86,6 +93,7 @@ public class ImportExport {
     
     @JsonProperty("label")
     public String label;
+
     public ImportExport withLabel(String label) {
         this.label = label;
         return this;
@@ -96,6 +104,7 @@ public class ImportExport {
      */
     @JsonProperty("serviceDescriptors")
     public ImportExportServiceDescriptors[] serviceDescriptors;
+
     public ImportExport withServiceDescriptors(ImportExportServiceDescriptors[] serviceDescriptors) {
         this.serviceDescriptors = serviceDescriptors;
         return this;
@@ -106,6 +115,7 @@ public class ImportExport {
      */
     @JsonProperty("serviceGroups")
     public ImportExportServiceGroups[] serviceGroups;
+
     public ImportExport withServiceGroups(ImportExportServiceGroups[] serviceGroups) {
         this.serviceGroups = serviceGroups;
         return this;
@@ -116,6 +126,7 @@ public class ImportExport {
      */
     @JsonProperty("simpleAdmins")
     public ImportExportSimpleAdmins[] simpleAdmins;
+
     public ImportExport withSimpleAdmins(ImportExportSimpleAdmins[] simpleAdmins) {
         this.simpleAdmins = simpleAdmins;
         return this;
@@ -126,9 +137,23 @@ public class ImportExport {
      */
     @JsonProperty("stats")
     public ImportExportStats stats;
+
     public ImportExport withStats(ImportExportStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public ImportExport(@JsonProperty("admins") ImportExportAdmins[] admins, @JsonProperty("apiKeys") ImportExportApiKeys[] apiKeys, @JsonProperty("config") GlobalConfig config, @JsonProperty("date") OffsetDateTime date, @JsonProperty("dateRaw") Long dateRaw, @JsonProperty("errorTemplates") ImportExportErrorTemplates[] errorTemplates, @JsonProperty("label") String label, @JsonProperty("serviceDescriptors") ImportExportServiceDescriptors[] serviceDescriptors, @JsonProperty("serviceGroups") ImportExportServiceGroups[] serviceGroups, @JsonProperty("simpleAdmins") ImportExportSimpleAdmins[] simpleAdmins, @JsonProperty("stats") ImportExportStats stats) {
+        this.admins = admins;
+        this.apiKeys = apiKeys;
+        this.config = config;
+        this.date = date;
+        this.dateRaw = dateRaw;
+        this.errorTemplates = errorTemplates;
+        this.label = label;
+        this.serviceDescriptors = serviceDescriptors;
+        this.serviceGroups = serviceGroups;
+        this.simpleAdmins = simpleAdmins;
+        this.stats = stats;
+  }
 }

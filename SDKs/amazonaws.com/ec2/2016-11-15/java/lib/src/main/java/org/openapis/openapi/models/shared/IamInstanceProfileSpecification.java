@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IamInstanceProfileSpecification {
     
     public String arn;
+
     public IamInstanceProfileSpecification withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class IamInstanceProfileSpecification {
     
     
     public String name;
+
     public IamInstanceProfileSpecification withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IamInstanceProfileSpecification(){}
 }

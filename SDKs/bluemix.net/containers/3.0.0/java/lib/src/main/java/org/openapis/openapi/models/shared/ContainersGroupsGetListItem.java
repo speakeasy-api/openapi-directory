@@ -15,6 +15,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creation_time")
     public String creationTime;
+
     public ContainersGroupsGetListItem withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -26,6 +27,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ContainersGroupsGetListItem withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +39,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ContainersGroupsGetListItem withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Integer port;
+
     public ContainersGroupsGetListItem withPort(Integer port) {
         this.port = port;
         return this;
@@ -59,6 +63,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Routes")
     public String[] routes;
+
     public ContainersGroupsGetListItem withRoutes(String[] routes) {
         this.routes = routes;
         return this;
@@ -70,6 +75,7 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ContainersGroupsGetListItem withStatus(String status) {
         this.status = status;
         return this;
@@ -81,9 +87,11 @@ public class ContainersGroupsGetListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated_time")
     public String updatedTime;
+
     public ContainersGroupsGetListItem withUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public ContainersGroupsGetListItem(){}
 }

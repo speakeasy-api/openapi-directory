@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ExecutePolicyType {
     
     public String autoScalingGroupName;
+
     public ExecutePolicyType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,6 +17,7 @@ public class ExecutePolicyType {
     
     
     public Double breachThreshold;
+
     public ExecutePolicyType withBreachThreshold(Double breachThreshold) {
         this.breachThreshold = breachThreshold;
         return this;
@@ -23,6 +25,7 @@ public class ExecutePolicyType {
     
     
     public Boolean honorCooldown;
+
     public ExecutePolicyType withHonorCooldown(Boolean honorCooldown) {
         this.honorCooldown = honorCooldown;
         return this;
@@ -30,6 +33,7 @@ public class ExecutePolicyType {
     
     
     public Double metricValue;
+
     public ExecutePolicyType withMetricValue(Double metricValue) {
         this.metricValue = metricValue;
         return this;
@@ -37,9 +41,13 @@ public class ExecutePolicyType {
     
     
     public String policyName;
+
     public ExecutePolicyType withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public ExecutePolicyType(@JsonProperty("PolicyName") String policyName) {
+        this.policyName = policyName;
+  }
 }

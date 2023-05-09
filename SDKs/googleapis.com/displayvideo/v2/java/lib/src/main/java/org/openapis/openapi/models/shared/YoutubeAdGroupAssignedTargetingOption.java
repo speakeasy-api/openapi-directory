@@ -18,6 +18,7 @@ public class YoutubeAdGroupAssignedTargetingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedTargetingOption")
     public AssignedTargetingOption assignedTargetingOption;
+
     public YoutubeAdGroupAssignedTargetingOption withAssignedTargetingOption(AssignedTargetingOption assignedTargetingOption) {
         this.assignedTargetingOption = assignedTargetingOption;
         return this;
@@ -29,9 +30,11 @@ public class YoutubeAdGroupAssignedTargetingOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("youtubeAdGroupId")
     public String youtubeAdGroupId;
+
     public YoutubeAdGroupAssignedTargetingOption withYoutubeAdGroupId(String youtubeAdGroupId) {
         this.youtubeAdGroupId = youtubeAdGroupId;
         return this;
     }
     
+    public YoutubeAdGroupAssignedTargetingOption(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteVPCEConfigurationRequest {
     @JsonProperty("arn")
     public String arn;
+
     public DeleteVPCEConfigurationRequest withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public DeleteVPCEConfigurationRequest(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

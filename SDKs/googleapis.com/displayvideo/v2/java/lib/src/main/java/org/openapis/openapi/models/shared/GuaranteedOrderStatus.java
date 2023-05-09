@@ -18,6 +18,7 @@ public class GuaranteedOrderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configStatus")
     public GuaranteedOrderStatusConfigStatusEnum configStatus;
+
     public GuaranteedOrderStatus withConfigStatus(GuaranteedOrderStatusConfigStatusEnum configStatus) {
         this.configStatus = configStatus;
         return this;
@@ -29,6 +30,7 @@ public class GuaranteedOrderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityPauseReason")
     public String entityPauseReason;
+
     public GuaranteedOrderStatus withEntityPauseReason(String entityPauseReason) {
         this.entityPauseReason = entityPauseReason;
         return this;
@@ -40,9 +42,11 @@ public class GuaranteedOrderStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityStatus")
     public GuaranteedOrderStatusEntityStatusEnum entityStatus;
+
     public GuaranteedOrderStatus withEntityStatus(GuaranteedOrderStatusEntityStatusEnum entityStatus) {
         this.entityStatus = entityStatus;
         return this;
     }
     
+    public GuaranteedOrderStatus(){}
 }

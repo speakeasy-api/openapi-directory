@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListPolicyPrincipalsRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListPolicyPrincipalsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListPolicyPrincipalsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListPolicyPrincipalsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListPolicyPrincipalsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListPolicyPrincipalsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListPolicyPrincipalsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class ListPolicyPrincipalsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListPolicyPrincipalsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class ListPolicyPrincipalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAscendingOrder")
     public Boolean isAscendingOrder;
+
     public ListPolicyPrincipalsRequest withIsAscendingOrder(Boolean isAscendingOrder) {
         this.isAscendingOrder = isAscendingOrder;
         return this;
@@ -71,6 +80,7 @@ public class ListPolicyPrincipalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=marker")
     public String marker;
+
     public ListPolicyPrincipalsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -81,6 +91,7 @@ public class ListPolicyPrincipalsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public ListPolicyPrincipalsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -91,9 +102,13 @@ public class ListPolicyPrincipalsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amzn-iot-policy")
     public String xAmznIotPolicy;
+
     public ListPolicyPrincipalsRequest withXAmznIotPolicy(String xAmznIotPolicy) {
         this.xAmznIotPolicy = xAmznIotPolicy;
         return this;
     }
     
+    public ListPolicyPrincipalsRequest(@JsonProperty("x-amzn-iot-policy") String xAmznIotPolicy) {
+        this.xAmznIotPolicy = xAmznIotPolicy;
+  }
 }

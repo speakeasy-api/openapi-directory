@@ -15,9 +15,11 @@ public class SubscriptionDefinitionVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subscriptions")
     public Subscription[] subscriptions;
+
     public SubscriptionDefinitionVersion withSubscriptions(Subscription[] subscriptions) {
         this.subscriptions = subscriptions;
         return this;
     }
     
+    public SubscriptionDefinitionVersion(){}
 }

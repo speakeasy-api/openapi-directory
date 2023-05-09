@@ -20,6 +20,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DescribeBotLocaleResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -28,6 +29,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleHistoryEvents")
     public BotLocaleHistoryEvent[] botLocaleHistoryEvents;
+
     public DescribeBotLocaleResponse withBotLocaleHistoryEvents(BotLocaleHistoryEvent[] botLocaleHistoryEvents) {
         this.botLocaleHistoryEvents = botLocaleHistoryEvents;
         return this;
@@ -36,6 +38,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleStatus")
     public BotLocaleStatusEnum botLocaleStatus;
+
     public DescribeBotLocaleResponse withBotLocaleStatus(BotLocaleStatusEnum botLocaleStatus) {
         this.botLocaleStatus = botLocaleStatus;
         return this;
@@ -44,6 +47,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DescribeBotLocaleResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -54,6 +58,7 @@ public class DescribeBotLocaleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDateTime")
     public OffsetDateTime creationDateTime;
+
     public DescribeBotLocaleResponse withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -62,6 +67,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DescribeBotLocaleResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -70,6 +76,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReasons")
     public String[] failureReasons;
+
     public DescribeBotLocaleResponse withFailureReasons(String[] failureReasons) {
         this.failureReasons = failureReasons;
         return this;
@@ -78,6 +85,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intentsCount")
     public Long intentsCount;
+
     public DescribeBotLocaleResponse withIntentsCount(Long intentsCount) {
         this.intentsCount = intentsCount;
         return this;
@@ -88,6 +96,7 @@ public class DescribeBotLocaleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastBuildSubmittedDateTime")
     public OffsetDateTime lastBuildSubmittedDateTime;
+
     public DescribeBotLocaleResponse withLastBuildSubmittedDateTime(OffsetDateTime lastBuildSubmittedDateTime) {
         this.lastBuildSubmittedDateTime = lastBuildSubmittedDateTime;
         return this;
@@ -98,6 +107,7 @@ public class DescribeBotLocaleResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public DescribeBotLocaleResponse withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -106,6 +116,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DescribeBotLocaleResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
@@ -114,6 +125,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeName")
     public String localeName;
+
     public DescribeBotLocaleResponse withLocaleName(String localeName) {
         this.localeName = localeName;
         return this;
@@ -122,6 +134,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nluIntentConfidenceThreshold")
     public Double nluIntentConfidenceThreshold;
+
     public DescribeBotLocaleResponse withNluIntentConfidenceThreshold(Double nluIntentConfidenceThreshold) {
         this.nluIntentConfidenceThreshold = nluIntentConfidenceThreshold;
         return this;
@@ -130,6 +143,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendedActions")
     public String[] recommendedActions;
+
     public DescribeBotLocaleResponse withRecommendedActions(String[] recommendedActions) {
         this.recommendedActions = recommendedActions;
         return this;
@@ -138,6 +152,7 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypesCount")
     public Long slotTypesCount;
+
     public DescribeBotLocaleResponse withSlotTypesCount(Long slotTypesCount) {
         this.slotTypesCount = slotTypesCount;
         return this;
@@ -146,9 +161,11 @@ public class DescribeBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("voiceSettings")
     public VoiceSettings voiceSettings;
+
     public DescribeBotLocaleResponse withVoiceSettings(VoiceSettings voiceSettings) {
         this.voiceSettings = voiceSettings;
         return this;
     }
     
+    public DescribeBotLocaleResponse(){}
 }

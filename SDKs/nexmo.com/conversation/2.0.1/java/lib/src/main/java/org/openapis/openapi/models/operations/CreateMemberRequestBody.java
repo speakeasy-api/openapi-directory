@@ -18,6 +18,7 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public org.openapis.openapi.models.shared.MemberActionEnum action;
+
     public CreateMemberRequestBody withAction(org.openapis.openapi.models.shared.MemberActionEnum action) {
         this.action = action;
         return this;
@@ -28,6 +29,7 @@ public class CreateMemberRequestBody {
      */
     @JsonProperty("channel")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public CreateMemberRequestBody withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -39,6 +41,7 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("knocking_id")
     public String knockingId;
+
     public CreateMemberRequestBody withKnockingId(String knockingId) {
         this.knockingId = knockingId;
         return this;
@@ -50,6 +53,7 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public java.util.Map<String, Object> media;
+
     public CreateMemberRequestBody withMedia(java.util.Map<String, Object> media) {
         this.media = media;
         return this;
@@ -61,6 +65,7 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_id")
     public String memberId;
+
     public CreateMemberRequestBody withMemberId(String memberId) {
         this.memberId = memberId;
         return this;
@@ -72,6 +77,7 @@ public class CreateMemberRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_id_inviting")
     public String memberIdInviting;
+
     public CreateMemberRequestBody withMemberIdInviting(String memberIdInviting) {
         this.memberIdInviting = memberIdInviting;
         return this;
@@ -82,9 +88,14 @@ public class CreateMemberRequestBody {
      */
     @JsonProperty("user_id")
     public String userId;
+
     public CreateMemberRequestBody withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateMemberRequestBody(@JsonProperty("channel") org.openapis.openapi.models.shared.Channel channel, @JsonProperty("user_id") String userId) {
+        this.channel = channel;
+        this.userId = userId;
+  }
 }

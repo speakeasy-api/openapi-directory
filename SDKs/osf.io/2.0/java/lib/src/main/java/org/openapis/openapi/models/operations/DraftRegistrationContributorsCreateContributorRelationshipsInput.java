@@ -15,9 +15,13 @@ public class DraftRegistrationContributorsCreateContributorRelationshipsInput {
      */
     @JsonProperty("user")
     public String user;
+
     public DraftRegistrationContributorsCreateContributorRelationshipsInput withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public DraftRegistrationContributorsCreateContributorRelationshipsInput(@JsonProperty("user") String user) {
+        this.user = user;
+  }
 }

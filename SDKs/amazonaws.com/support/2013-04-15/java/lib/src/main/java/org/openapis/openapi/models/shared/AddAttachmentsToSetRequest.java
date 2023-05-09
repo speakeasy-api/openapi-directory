@@ -12,6 +12,7 @@ public class AddAttachmentsToSetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachmentSetId")
     public String attachmentSetId;
+
     public AddAttachmentsToSetRequest withAttachmentSetId(String attachmentSetId) {
         this.attachmentSetId = attachmentSetId;
         return this;
@@ -19,9 +20,13 @@ public class AddAttachmentsToSetRequest {
     
     @JsonProperty("attachments")
     public Attachment[] attachments;
+
     public AddAttachmentsToSetRequest withAttachments(Attachment[] attachments) {
         this.attachments = attachments;
         return this;
     }
     
+    public AddAttachmentsToSetRequest(@JsonProperty("attachments") Attachment[] attachments) {
+        this.attachments = attachments;
+  }
 }

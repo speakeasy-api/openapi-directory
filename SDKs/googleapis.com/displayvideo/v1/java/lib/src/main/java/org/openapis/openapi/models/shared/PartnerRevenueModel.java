@@ -18,6 +18,7 @@ public class PartnerRevenueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markupAmount")
     public String markupAmount;
+
     public PartnerRevenueModel withMarkupAmount(String markupAmount) {
         this.markupAmount = markupAmount;
         return this;
@@ -29,9 +30,11 @@ public class PartnerRevenueModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("markupType")
     public PartnerRevenueModelMarkupTypeEnum markupType;
+
     public PartnerRevenueModel withMarkupType(PartnerRevenueModelMarkupTypeEnum markupType) {
         this.markupType = markupType;
         return this;
     }
     
+    public PartnerRevenueModel(){}
 }

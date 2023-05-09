@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PollForThirdPartyJobsResponse {
@@ -12,6 +13,7 @@ public class PollForThirdPartyJobsResponse {
      */
     
     public Object actionTypeNotFoundException;
+
     public PollForThirdPartyJobsResponse withActionTypeNotFoundException(Object actionTypeNotFoundException) {
         this.actionTypeNotFoundException = actionTypeNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class PollForThirdPartyJobsResponse {
     
     
     public String contentType;
+
     public PollForThirdPartyJobsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PollForThirdPartyJobsResponse {
      */
     
     public org.openapis.openapi.models.shared.PollForThirdPartyJobsOutput pollForThirdPartyJobsOutput;
+
     public PollForThirdPartyJobsResponse withPollForThirdPartyJobsOutput(org.openapis.openapi.models.shared.PollForThirdPartyJobsOutput pollForThirdPartyJobsOutput) {
         this.pollForThirdPartyJobsOutput = pollForThirdPartyJobsOutput;
         return this;
@@ -36,6 +40,7 @@ public class PollForThirdPartyJobsResponse {
     
     
     public Integer statusCode;
+
     public PollForThirdPartyJobsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class PollForThirdPartyJobsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PollForThirdPartyJobsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class PollForThirdPartyJobsResponse {
      */
     
     public Object validationException;
+
     public PollForThirdPartyJobsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PollForThirdPartyJobsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportTaskProgressOutput {
     @JsonProperty("canceled")
     public Boolean canceled;
+
     public ReportTaskProgressOutput withCanceled(Boolean canceled) {
         this.canceled = canceled;
         return this;
     }
     
+    public ReportTaskProgressOutput(@JsonProperty("canceled") Boolean canceled) {
+        this.canceled = canceled;
+  }
 }

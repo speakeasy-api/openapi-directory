@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostContainersGroupsNameOrIdUnmaprouteResponse {
@@ -12,6 +13,7 @@ public class PostContainersGroupsNameOrIdUnmaprouteResponse {
      */
     
     public org.openapis.openapi.models.shared.ContainersGroupsNameOrIdMaproutePostInfo containersGroupsNameOrIdMaproutePostInfo;
+
     public PostContainersGroupsNameOrIdUnmaprouteResponse withContainersGroupsNameOrIdMaproutePostInfo(org.openapis.openapi.models.shared.ContainersGroupsNameOrIdMaproutePostInfo containersGroupsNameOrIdMaproutePostInfo) {
         this.containersGroupsNameOrIdMaproutePostInfo = containersGroupsNameOrIdMaproutePostInfo;
         return this;
@@ -19,6 +21,7 @@ public class PostContainersGroupsNameOrIdUnmaprouteResponse {
     
     
     public String contentType;
+
     public PostContainersGroupsNameOrIdUnmaprouteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostContainersGroupsNameOrIdUnmaprouteResponse {
     
     
     public Integer statusCode;
+
     public PostContainersGroupsNameOrIdUnmaprouteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostContainersGroupsNameOrIdUnmaprouteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostContainersGroupsNameOrIdUnmaprouteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostContainersGroupsNameOrIdUnmaprouteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

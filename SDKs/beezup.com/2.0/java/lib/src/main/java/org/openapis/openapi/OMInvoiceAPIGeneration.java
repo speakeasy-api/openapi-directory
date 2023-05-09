@@ -64,14 +64,12 @@ public class OMInvoiceAPIGeneration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateBatchOrderInvoiceResponse res = new org.openapis.openapi.models.operations.GenerateBatchOrderInvoiceResponse() {{
+        org.openapis.openapi.models.operations.GenerateBatchOrderInvoiceResponse res = new org.openapis.openapi.models.operations.GenerateBatchOrderInvoiceResponse(contentType, httpRes.statusCode()) {{
             generateBatchOrderInvoiceResponse = null;
             generateBatchOrderInvoiceErrorResponseItems = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -137,12 +135,10 @@ public class OMInvoiceAPIGeneration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenerateOrderInvoiceResponse res = new org.openapis.openapi.models.operations.GenerateOrderInvoiceResponse() {{
+        org.openapis.openapi.models.operations.GenerateOrderInvoiceResponse res = new org.openapis.openapi.models.operations.GenerateOrderInvoiceResponse(contentType, httpRes.statusCode()) {{
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -192,13 +188,11 @@ public class OMInvoiceAPIGeneration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderInvoicePdfResponse res = new org.openapis.openapi.models.operations.GetOrderInvoicePdfResponse() {{
+        org.openapis.openapi.models.operations.GetOrderInvoicePdfResponse res = new org.openapis.openapi.models.operations.GetOrderInvoicePdfResponse(contentType, httpRes.statusCode()) {{
             getOrderInvoicePdf200ApplicationPdfBinaryString = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -258,13 +252,11 @@ public class OMInvoiceAPIGeneration {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrderInvoicePreviewResponse res = new org.openapis.openapi.models.operations.GetOrderInvoicePreviewResponse() {{
+        org.openapis.openapi.models.operations.GetOrderInvoicePreviewResponse res = new org.openapis.openapi.models.operations.GetOrderInvoicePreviewResponse(contentType, httpRes.statusCode()) {{
             previewOrderInvoiceResponse = null;
             errorResponseMessage = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,9 +15,13 @@ public class SymbolUploadsCompleteRequestBody {
      */
     @JsonProperty("status")
     public SymbolUploadsCompleteRequestBodyStatusEnum status;
+
     public SymbolUploadsCompleteRequestBody withStatus(SymbolUploadsCompleteRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public SymbolUploadsCompleteRequestBody(@JsonProperty("status") SymbolUploadsCompleteRequestBodyStatusEnum status) {
+        this.status = status;
+  }
 }

@@ -18,9 +18,11 @@ public class ListNodePoolsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePools")
     public NodePool[] nodePools;
+
     public ListNodePoolsResponse withNodePools(NodePool[] nodePools) {
         this.nodePools = nodePools;
         return this;
     }
     
+    public ListNodePoolsResponse(){}
 }

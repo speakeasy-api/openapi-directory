@@ -15,6 +15,7 @@ public class AwsRdsDbSecurityGroupIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CidrIp")
     public String cidrIp;
+
     public AwsRdsDbSecurityGroupIpRange withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbSecurityGroupIpRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbSecurityGroupIpRange withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsRdsDbSecurityGroupIpRange(){}
 }

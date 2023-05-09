@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class KeepNotesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public KeepNotesListSecurityOption1 option1;
+
     public KeepNotesListSecurity withOption1(KeepNotesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class KeepNotesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public KeepNotesListSecurityOption2 option2;
+
     public KeepNotesListSecurity withOption2(KeepNotesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public KeepNotesListSecurity(){}
 }

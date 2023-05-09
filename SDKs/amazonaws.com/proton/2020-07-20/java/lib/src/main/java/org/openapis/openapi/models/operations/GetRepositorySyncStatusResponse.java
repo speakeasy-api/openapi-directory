@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositorySyncStatusResponse {
@@ -12,6 +13,7 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public GetRepositorySyncStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetRepositorySyncStatusResponse {
     
     
     public String contentType;
+
     public GetRepositorySyncStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRepositorySyncStatusOutput getRepositorySyncStatusOutput;
+
     public GetRepositorySyncStatusResponse withGetRepositorySyncStatusOutput(org.openapis.openapi.models.shared.GetRepositorySyncStatusOutput getRepositorySyncStatusOutput) {
         this.getRepositorySyncStatusOutput = getRepositorySyncStatusOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public Object internalServerException;
+
     public GetRepositorySyncStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetRepositorySyncStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetRepositorySyncStatusResponse {
     
     
     public Integer statusCode;
+
     public GetRepositorySyncStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetRepositorySyncStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositorySyncStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public Object throttlingException;
+
     public GetRepositorySyncStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetRepositorySyncStatusResponse {
      */
     
     public Object validationException;
+
     public GetRepositorySyncStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetRepositorySyncStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

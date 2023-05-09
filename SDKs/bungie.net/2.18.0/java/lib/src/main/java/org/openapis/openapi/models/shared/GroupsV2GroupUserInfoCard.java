@@ -12,6 +12,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public String lastSeenDisplayName;
+
     public GroupsV2GroupUserInfoCard withLastSeenDisplayName(String lastSeenDisplayName) {
         this.lastSeenDisplayName = lastSeenDisplayName;
         return this;
@@ -22,6 +23,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Integer lastSeenDisplayNameType;
+
     public GroupsV2GroupUserInfoCard withLastSeenDisplayNameType(Integer lastSeenDisplayNameType) {
         this.lastSeenDisplayNameType = lastSeenDisplayNameType;
         return this;
@@ -33,6 +35,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Integer[] applicableMembershipTypes;
+
     public GroupsV2GroupUserInfoCard withApplicableMembershipTypes(Integer[] applicableMembershipTypes) {
         this.applicableMembershipTypes = applicableMembershipTypes;
         return this;
@@ -43,6 +46,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public String bungieGlobalDisplayName;
+
     public GroupsV2GroupUserInfoCard withBungieGlobalDisplayName(String bungieGlobalDisplayName) {
         this.bungieGlobalDisplayName = bungieGlobalDisplayName;
         return this;
@@ -53,6 +57,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Long bungieGlobalDisplayNameCode;
+
     public GroupsV2GroupUserInfoCard withBungieGlobalDisplayNameCode(Long bungieGlobalDisplayNameCode) {
         this.bungieGlobalDisplayNameCode = bungieGlobalDisplayNameCode;
         return this;
@@ -63,6 +68,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Integer crossSaveOverride;
+
     public GroupsV2GroupUserInfoCard withCrossSaveOverride(Integer crossSaveOverride) {
         this.crossSaveOverride = crossSaveOverride;
         return this;
@@ -73,6 +79,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public String displayName;
+
     public GroupsV2GroupUserInfoCard withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -83,6 +90,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public String iconPath;
+
     public GroupsV2GroupUserInfoCard withIconPath(String iconPath) {
         this.iconPath = iconPath;
         return this;
@@ -93,6 +101,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Boolean isPublic;
+
     public GroupsV2GroupUserInfoCard withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -103,6 +112,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Long membershipId;
+
     public GroupsV2GroupUserInfoCard withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -113,6 +123,7 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public Integer membershipType;
+
     public GroupsV2GroupUserInfoCard withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
@@ -123,9 +134,11 @@ public class GroupsV2GroupUserInfoCard {
      */
     
     public String supplementalDisplayName;
+
     public GroupsV2GroupUserInfoCard withSupplementalDisplayName(String supplementalDisplayName) {
         this.supplementalDisplayName = supplementalDisplayName;
         return this;
     }
     
+    public GroupsV2GroupUserInfoCard(){}
 }

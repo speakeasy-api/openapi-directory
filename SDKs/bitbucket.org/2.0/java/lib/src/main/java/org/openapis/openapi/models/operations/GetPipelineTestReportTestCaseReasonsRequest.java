@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPipelineTestReportTestCaseReasonsRequest {
@@ -12,6 +13,7 @@ public class GetPipelineTestReportTestCaseReasonsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pipeline_uuid")
     public String pipelineUuid;
+
     public GetPipelineTestReportTestCaseReasonsRequest withPipelineUuid(String pipelineUuid) {
         this.pipelineUuid = pipelineUuid;
         return this;
@@ -22,6 +24,7 @@ public class GetPipelineTestReportTestCaseReasonsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetPipelineTestReportTestCaseReasonsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -32,6 +35,7 @@ public class GetPipelineTestReportTestCaseReasonsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=step_uuid")
     public String stepUuid;
+
     public GetPipelineTestReportTestCaseReasonsRequest withStepUuid(String stepUuid) {
         this.stepUuid = stepUuid;
         return this;
@@ -42,6 +46,7 @@ public class GetPipelineTestReportTestCaseReasonsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=test_case_uuid")
     public String testCaseUuid;
+
     public GetPipelineTestReportTestCaseReasonsRequest withTestCaseUuid(String testCaseUuid) {
         this.testCaseUuid = testCaseUuid;
         return this;
@@ -52,9 +57,17 @@ public class GetPipelineTestReportTestCaseReasonsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetPipelineTestReportTestCaseReasonsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetPipelineTestReportTestCaseReasonsRequest(@JsonProperty("pipeline_uuid") String pipelineUuid, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("step_uuid") String stepUuid, @JsonProperty("test_case_uuid") String testCaseUuid, @JsonProperty("workspace") String workspace) {
+        this.pipelineUuid = pipelineUuid;
+        this.repoSlug = repoSlug;
+        this.stepUuid = stepUuid;
+        this.testCaseUuid = testCaseUuid;
+        this.workspace = workspace;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListManagedInsightRulesOutput {
     
     public ManagedRuleDescription[] managedRules;
+
     public ListManagedInsightRulesOutput withManagedRules(ManagedRuleDescription[] managedRules) {
         this.managedRules = managedRules;
         return this;
@@ -19,9 +20,11 @@ public class ListManagedInsightRulesOutput {
     
     
     public String nextToken;
+
     public ListManagedInsightRulesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListManagedInsightRulesOutput(){}
 }

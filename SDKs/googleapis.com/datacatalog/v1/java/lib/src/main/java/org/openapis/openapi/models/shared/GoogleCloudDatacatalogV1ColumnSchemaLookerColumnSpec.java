@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum type;
+
     public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec withType(GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpecTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec(){}
 }

@@ -12,6 +12,7 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainsLabels")
     public String[] containsLabels;
+
     public ListDatasetEntriesRequest withContainsLabels(String[] containsLabels) {
         this.containsLabels = containsLabels;
         return this;
@@ -19,6 +20,7 @@ public class ListDatasetEntriesRequest {
     
     @JsonProperty("DatasetArn")
     public String datasetArn;
+
     public ListDatasetEntriesRequest withDatasetArn(String datasetArn) {
         this.datasetArn = datasetArn;
         return this;
@@ -27,6 +29,7 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HasErrors")
     public Boolean hasErrors;
+
     public ListDatasetEntriesRequest withHasErrors(Boolean hasErrors) {
         this.hasErrors = hasErrors;
         return this;
@@ -35,6 +38,7 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labeled")
     public Boolean labeled;
+
     public ListDatasetEntriesRequest withLabeled(Boolean labeled) {
         this.labeled = labeled;
         return this;
@@ -43,6 +47,7 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDatasetEntriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -51,6 +56,7 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDatasetEntriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -59,9 +65,13 @@ public class ListDatasetEntriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceRefContains")
     public String sourceRefContains;
+
     public ListDatasetEntriesRequest withSourceRefContains(String sourceRefContains) {
         this.sourceRefContains = sourceRefContains;
         return this;
     }
     
+    public ListDatasetEntriesRequest(@JsonProperty("DatasetArn") String datasetArn) {
+        this.datasetArn = datasetArn;
+  }
 }

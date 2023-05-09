@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunRequest {
@@ -12,6 +13,7 @@ public class RunRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MacroRequestDTO macroRequestDTO;
+
     public RunRequest withMacroRequestDTO(org.openapis.openapi.models.shared.MacroRequestDTO macroRequestDTO) {
         this.macroRequestDTO = macroRequestDTO;
         return this;
@@ -22,9 +24,14 @@ public class RunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=macroId")
     public Long macroId;
+
     public RunRequest withMacroId(Long macroId) {
         this.macroId = macroId;
         return this;
     }
     
+    public RunRequest(@JsonProperty("MacroRequestDTO") org.openapis.openapi.models.shared.MacroRequestDTO macroRequestDTO, @JsonProperty("macroId") Long macroId) {
+        this.macroRequestDTO = macroRequestDTO;
+        this.macroId = macroId;
+  }
 }

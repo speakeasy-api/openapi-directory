@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs {
     
     public String description;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String groupId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String groupName;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String peeringStatus;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String userId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String vpcId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserId
     
     
     public String vpcPeeringConnectionId;
+
     public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroupsIpPermissionsEgressUserIdGroupPairs(){}
 }

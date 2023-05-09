@@ -15,6 +15,7 @@ public class InvideoPosition {
      */
     
     public InvideoPositionCornerPositionEnum cornerPosition;
+
     public InvideoPosition withCornerPosition(InvideoPositionCornerPositionEnum cornerPosition) {
         this.cornerPosition = cornerPosition;
         return this;
@@ -25,9 +26,11 @@ public class InvideoPosition {
      */
     
     public InvideoPositionTypeEnum type;
+
     public InvideoPosition withType(InvideoPositionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvideoPosition(){}
 }

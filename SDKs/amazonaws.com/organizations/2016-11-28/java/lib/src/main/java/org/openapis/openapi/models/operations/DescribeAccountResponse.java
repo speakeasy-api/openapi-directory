@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAccountResponse {
@@ -12,6 +13,7 @@ public class DescribeAccountResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public DescribeAccountResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeAccountResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAccountResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class DescribeAccountResponse {
      */
     
     public Object accountNotFoundException;
+
     public DescribeAccountResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAccountResponse {
     
     
     public String contentType;
+
     public DescribeAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAccountResponse describeAccountResponse;
+
     public DescribeAccountResponse withDescribeAccountResponse(org.openapis.openapi.models.shared.DescribeAccountResponse describeAccountResponse) {
         this.describeAccountResponse = describeAccountResponse;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAccountResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeAccountResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeAccountResponse {
      */
     
     public Object serviceException;
+
     public DescribeAccountResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DescribeAccountResponse {
     
     
     public Integer statusCode;
+
     public DescribeAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DescribeAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DescribeAccountResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeAccountResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

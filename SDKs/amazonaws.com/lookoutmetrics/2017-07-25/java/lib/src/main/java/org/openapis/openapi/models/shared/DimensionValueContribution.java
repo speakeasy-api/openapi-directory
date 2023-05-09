@@ -15,6 +15,7 @@ public class DimensionValueContribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContributionScore")
     public Double contributionScore;
+
     public DimensionValueContribution withContributionScore(Double contributionScore) {
         this.contributionScore = contributionScore;
         return this;
@@ -23,9 +24,11 @@ public class DimensionValueContribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DimensionValue")
     public String dimensionValue;
+
     public DimensionValueContribution withDimensionValue(String dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
     }
     
+    public DimensionValueContribution(){}
 }

@@ -63,12 +63,10 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCmsV3DomainsGetPageResponse res = new org.openapis.openapi.models.operations.GetCmsV3DomainsGetPageResponse() {{
+        org.openapis.openapi.models.operations.GetCmsV3DomainsGetPageResponse res = new org.openapis.openapi.models.operations.GetCmsV3DomainsGetPageResponse(contentType, httpRes.statusCode()) {{
             collectionResponseWithTotalDomainForwardPaging = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class Domains {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCmsV3DomainsDomainIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetCmsV3DomainsDomainIdGetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetCmsV3DomainsDomainIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetCmsV3DomainsDomainIdGetByIdResponse(contentType, httpRes.statusCode()) {{
             domain = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

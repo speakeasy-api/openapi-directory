@@ -16,6 +16,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorComponent {
      */
     
     public Boolean enabled;
+
     public DestinyComponentsVendorsDestinyPublicVendorComponent withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -28,6 +29,7 @@ public class DestinyComponentsVendorsDestinyPublicVendorComponent {
      */
     
     public OffsetDateTime nextRefreshDate;
+
     public DestinyComponentsVendorsDestinyPublicVendorComponent withNextRefreshDate(OffsetDateTime nextRefreshDate) {
         this.nextRefreshDate = nextRefreshDate;
         return this;
@@ -38,9 +40,11 @@ public class DestinyComponentsVendorsDestinyPublicVendorComponent {
      */
     
     public Long vendorHash;
+
     public DestinyComponentsVendorsDestinyPublicVendorComponent withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
     }
     
+    public DestinyComponentsVendorsDestinyPublicVendorComponent(){}
 }

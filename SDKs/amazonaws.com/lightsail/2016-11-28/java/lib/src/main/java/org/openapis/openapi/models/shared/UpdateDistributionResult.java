@@ -15,9 +15,11 @@ public class UpdateDistributionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public UpdateDistributionResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public UpdateDistributionResult(){}
 }

@@ -12,6 +12,7 @@ public class ImportExternalApiSpecification200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ImportExternalApiSpecification200ApplicationJSONCollections withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class ImportExternalApiSpecification200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ImportExternalApiSpecification200ApplicationJSONCollections withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ImportExternalApiSpecification200ApplicationJSONCollections {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public ImportExternalApiSpecification200ApplicationJSONCollections withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public ImportExternalApiSpecification200ApplicationJSONCollections(){}
 }

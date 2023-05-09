@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BtcerResponse {
     
     public byte[] body;
+
     public BtcerResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class BtcerResponse {
     
     
     public String contentType;
+
     public BtcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class BtcerResponse {
     
     
     public Integer statusCode;
+
     public BtcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class BtcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BtcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class BtcerResponse {
      */
     
     public Btcer400ApplicationJSON btcer400ApplicationJSONObject;
+
     public BtcerResponse withBtcer400ApplicationJSONObject(Btcer400ApplicationJSON btcer400ApplicationJSONObject) {
         this.btcer400ApplicationJSONObject = btcer400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class BtcerResponse {
      */
     
     public Btcer401ApplicationJSON btcer401ApplicationJSONObject;
+
     public BtcerResponse withBtcer401ApplicationJSONObject(Btcer401ApplicationJSON btcer401ApplicationJSONObject) {
         this.btcer401ApplicationJSONObject = btcer401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class BtcerResponse {
      */
     
     public Btcer404ApplicationJSON btcer404ApplicationJSONObject;
+
     public BtcerResponse withBtcer404ApplicationJSONObject(Btcer404ApplicationJSON btcer404ApplicationJSONObject) {
         this.btcer404ApplicationJSONObject = btcer404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class BtcerResponse {
      */
     
     public Btcer500ApplicationJSON btcer500ApplicationJSONObject;
+
     public BtcerResponse withBtcer500ApplicationJSONObject(Btcer500ApplicationJSON btcer500ApplicationJSONObject) {
         this.btcer500ApplicationJSONObject = btcer500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class BtcerResponse {
      */
     
     public Btcer502ApplicationJSON btcer502ApplicationJSONObject;
+
     public BtcerResponse withBtcer502ApplicationJSONObject(Btcer502ApplicationJSON btcer502ApplicationJSONObject) {
         this.btcer502ApplicationJSONObject = btcer502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class BtcerResponse {
      */
     
     public Btcer503ApplicationJSON btcer503ApplicationJSONObject;
+
     public BtcerResponse withBtcer503ApplicationJSONObject(Btcer503ApplicationJSON btcer503ApplicationJSONObject) {
         this.btcer503ApplicationJSONObject = btcer503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class BtcerResponse {
      */
     
     public Btcer504ApplicationJSON btcer504ApplicationJSONObject;
+
     public BtcerResponse withBtcer504ApplicationJSONObject(Btcer504ApplicationJSON btcer504ApplicationJSONObject) {
         this.btcer504ApplicationJSONObject = btcer504ApplicationJSONObject;
         return this;
     }
     
+    public BtcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

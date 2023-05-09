@@ -13,9 +13,13 @@ public class CategoryResourceRelationshipsParentLinks {
      */
     @JsonProperty("related")
     public String related;
+
     public CategoryResourceRelationshipsParentLinks withRelated(String related) {
         this.related = related;
         return this;
     }
     
+    public CategoryResourceRelationshipsParentLinks(@JsonProperty("related") String related) {
+        this.related = related;
+  }
 }

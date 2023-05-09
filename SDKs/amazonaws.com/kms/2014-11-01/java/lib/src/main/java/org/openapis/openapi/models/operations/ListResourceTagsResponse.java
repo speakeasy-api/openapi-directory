@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceTagsResponse {
     
     public String contentType;
+
     public ListResourceTagsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceTagsResponse {
      */
     
     public Object invalidArnException;
+
     public ListResourceTagsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceTagsResponse {
      */
     
     public Object invalidMarkerException;
+
     public ListResourceTagsResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceTagsResponse {
      */
     
     public Object kmsInternalException;
+
     public ListResourceTagsResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceTagsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceTagsResponse listResourceTagsResponse;
+
     public ListResourceTagsResponse withListResourceTagsResponse(org.openapis.openapi.models.shared.ListResourceTagsResponse listResourceTagsResponse) {
         this.listResourceTagsResponse = listResourceTagsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceTagsResponse {
      */
     
     public Object notFoundException;
+
     public ListResourceTagsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListResourceTagsResponse {
     
     
     public Integer statusCode;
+
     public ListResourceTagsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListResourceTagsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceTagsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListResourceTagsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

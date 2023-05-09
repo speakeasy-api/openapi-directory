@@ -15,6 +15,7 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AllocationStrategy")
     public HyperParameterTuningAllocationStrategyEnum allocationStrategy;
+
     public HyperParameterTuningResourceConfig withAllocationStrategy(HyperParameterTuningAllocationStrategyEnum allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
         return this;
@@ -23,6 +24,7 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceConfigs")
     public HyperParameterTuningInstanceConfig[] instanceConfigs;
+
     public HyperParameterTuningResourceConfig withInstanceConfigs(HyperParameterTuningInstanceConfig[] instanceConfigs) {
         this.instanceConfigs = instanceConfigs;
         return this;
@@ -31,6 +33,7 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceCount")
     public Long instanceCount;
+
     public HyperParameterTuningResourceConfig withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -39,6 +42,7 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public TrainingInstanceTypeEnum instanceType;
+
     public HyperParameterTuningResourceConfig withInstanceType(TrainingInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +51,7 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public HyperParameterTuningResourceConfig withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -55,9 +60,11 @@ public class HyperParameterTuningResourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeSizeInGB")
     public Long volumeSizeInGB;
+
     public HyperParameterTuningResourceConfig withVolumeSizeInGB(Long volumeSizeInGB) {
         this.volumeSizeInGB = volumeSizeInGB;
         return this;
     }
     
+    public HyperParameterTuningResourceConfig(){}
 }

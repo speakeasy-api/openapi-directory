@@ -18,6 +18,7 @@ public class AddCoupons200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ascending")
     public Boolean ascending;
+
     public AddCoupons200ApplicationJSONItemsOrdination withAscending(Boolean ascending) {
         this.ascending = ascending;
         return this;
@@ -29,9 +30,11 @@ public class AddCoupons200ApplicationJSONItemsOrdination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("criteria")
     public String criteria;
+
     public AddCoupons200ApplicationJSONItemsOrdination withCriteria(String criteria) {
         this.criteria = criteria;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONItemsOrdination(){}
 }

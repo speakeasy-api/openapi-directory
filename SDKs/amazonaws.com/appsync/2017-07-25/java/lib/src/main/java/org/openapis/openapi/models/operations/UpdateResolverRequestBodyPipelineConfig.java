@@ -15,9 +15,11 @@ public class UpdateResolverRequestBodyPipelineConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("functions")
     public String[] functions;
+
     public UpdateResolverRequestBodyPipelineConfig withFunctions(String[] functions) {
         this.functions = functions;
         return this;
     }
     
+    public UpdateResolverRequestBodyPipelineConfig(){}
 }

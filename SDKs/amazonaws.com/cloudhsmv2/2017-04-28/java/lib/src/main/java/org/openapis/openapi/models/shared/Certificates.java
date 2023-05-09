@@ -15,6 +15,7 @@ public class Certificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwsHardwareCertificate")
     public String awsHardwareCertificate;
+
     public Certificates withAwsHardwareCertificate(String awsHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         return this;
@@ -23,6 +24,7 @@ public class Certificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterCertificate")
     public String clusterCertificate;
+
     public Certificates withClusterCertificate(String clusterCertificate) {
         this.clusterCertificate = clusterCertificate;
         return this;
@@ -31,6 +33,7 @@ public class Certificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterCsr")
     public String clusterCsr;
+
     public Certificates withClusterCsr(String clusterCsr) {
         this.clusterCsr = clusterCsr;
         return this;
@@ -39,6 +42,7 @@ public class Certificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HsmCertificate")
     public String hsmCertificate;
+
     public Certificates withHsmCertificate(String hsmCertificate) {
         this.hsmCertificate = hsmCertificate;
         return this;
@@ -47,9 +51,11 @@ public class Certificates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManufacturerHardwareCertificate")
     public String manufacturerHardwareCertificate;
+
     public Certificates withManufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
         this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
         return this;
     }
     
+    public Certificates(){}
 }

@@ -12,6 +12,7 @@ public class GetRecruitingTeamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team")
     public String team;
+
     public GetRecruitingTeamsRequest withTeam(String team) {
         this.team = team;
         return this;
@@ -22,9 +23,11 @@ public class GetRecruitingTeamsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Long year;
+
     public GetRecruitingTeamsRequest withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public GetRecruitingTeamsRequest(){}
 }

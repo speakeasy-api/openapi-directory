@@ -12,9 +12,13 @@ public class ReposMergeUpstreamRequestBody {
      */
     @JsonProperty("branch")
     public String branch;
+
     public ReposMergeUpstreamRequestBody withBranch(String branch) {
         this.branch = branch;
         return this;
     }
     
+    public ReposMergeUpstreamRequestBody(@JsonProperty("branch") String branch) {
+        this.branch = branch;
+  }
 }

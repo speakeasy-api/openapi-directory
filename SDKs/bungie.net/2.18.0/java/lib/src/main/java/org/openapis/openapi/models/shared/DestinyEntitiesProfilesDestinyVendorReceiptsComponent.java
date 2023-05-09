@@ -15,9 +15,11 @@ public class DestinyEntitiesProfilesDestinyVendorReceiptsComponent {
      */
     
     public DestinyVendorsDestinyVendorReceipt[] receipts;
+
     public DestinyEntitiesProfilesDestinyVendorReceiptsComponent withReceipts(DestinyVendorsDestinyVendorReceipt[] receipts) {
         this.receipts = receipts;
         return this;
     }
     
+    public DestinyEntitiesProfilesDestinyVendorReceiptsComponent(){}
 }

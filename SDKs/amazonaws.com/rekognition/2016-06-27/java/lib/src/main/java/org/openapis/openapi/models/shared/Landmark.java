@@ -15,6 +15,7 @@ public class Landmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public LandmarkTypeEnum type;
+
     public Landmark withType(LandmarkTypeEnum type) {
         this.type = type;
         return this;
@@ -23,6 +24,7 @@ public class Landmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("X")
     public Float x;
+
     public Landmark withX(Float x) {
         this.x = x;
         return this;
@@ -31,9 +33,11 @@ public class Landmark {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Y")
     public Float y;
+
     public Landmark withY(Float y) {
         this.y = y;
         return this;
     }
     
+    public Landmark(){}
 }

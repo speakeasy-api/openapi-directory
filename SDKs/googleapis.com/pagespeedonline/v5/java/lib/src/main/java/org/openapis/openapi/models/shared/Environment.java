@@ -18,6 +18,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("benchmarkIndex")
     public Double benchmarkIndex;
+
     public Environment withBenchmarkIndex(Double benchmarkIndex) {
         this.benchmarkIndex = benchmarkIndex;
         return this;
@@ -29,6 +30,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credits")
     public java.util.Map<String, String> credits;
+
     public Environment withCredits(java.util.Map<String, String> credits) {
         this.credits = credits;
         return this;
@@ -40,6 +42,7 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostUserAgent")
     public String hostUserAgent;
+
     public Environment withHostUserAgent(String hostUserAgent) {
         this.hostUserAgent = hostUserAgent;
         return this;
@@ -51,9 +54,11 @@ public class Environment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkUserAgent")
     public String networkUserAgent;
+
     public Environment withNetworkUserAgent(String networkUserAgent) {
         this.networkUserAgent = networkUserAgent;
         return this;
     }
     
+    public Environment(){}
 }

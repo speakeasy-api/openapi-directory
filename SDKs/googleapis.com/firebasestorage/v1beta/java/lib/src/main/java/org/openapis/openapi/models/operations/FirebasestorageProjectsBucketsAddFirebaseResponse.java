@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FirebasestorageProjectsBucketsAddFirebaseResponse {
@@ -12,6 +13,7 @@ public class FirebasestorageProjectsBucketsAddFirebaseResponse {
      */
     
     public org.openapis.openapi.models.shared.Bucket bucket;
+
     public FirebasestorageProjectsBucketsAddFirebaseResponse withBucket(org.openapis.openapi.models.shared.Bucket bucket) {
         this.bucket = bucket;
         return this;
@@ -19,6 +21,7 @@ public class FirebasestorageProjectsBucketsAddFirebaseResponse {
     
     
     public String contentType;
+
     public FirebasestorageProjectsBucketsAddFirebaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class FirebasestorageProjectsBucketsAddFirebaseResponse {
     
     
     public Integer statusCode;
+
     public FirebasestorageProjectsBucketsAddFirebaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FirebasestorageProjectsBucketsAddFirebaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FirebasestorageProjectsBucketsAddFirebaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FirebasestorageProjectsBucketsAddFirebaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

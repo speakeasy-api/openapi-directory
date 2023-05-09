@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSimulationJobResponse {
     
     public String contentType;
+
     public DescribeSimulationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSimulationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSimulationJobResponse describeSimulationJobResponse;
+
     public DescribeSimulationJobResponse withDescribeSimulationJobResponse(org.openapis.openapi.models.shared.DescribeSimulationJobResponse describeSimulationJobResponse) {
         this.describeSimulationJobResponse = describeSimulationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSimulationJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeSimulationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSimulationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSimulationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSimulationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeSimulationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeSimulationJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeSimulationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeSimulationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSimulationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeSimulationJobResponse {
      */
     
     public Object throttlingException;
+
     public DescribeSimulationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeSimulationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

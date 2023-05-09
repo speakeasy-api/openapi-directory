@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostCompileRequest;
 import org.openapis.openapi.models.operations.PostCompileResponse;
 
@@ -23,15 +22,17 @@ public class Application {
                 instrument = false;
                 metrics = false;
                 pretty = false;
-            }}            
+            }};            
 
             PostCompileResponse res = sdk.compileAPI.postCompile(req);
 
-            if (res.postCompile200ApplicationJSONObject.isPresent()) {
+            if (res.postCompile200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

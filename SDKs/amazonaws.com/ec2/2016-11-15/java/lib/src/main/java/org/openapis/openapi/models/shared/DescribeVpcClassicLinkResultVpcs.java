@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcClassicLinkResultVpcs {
     
     public Boolean classicLinkEnabled;
+
     public DescribeVpcClassicLinkResultVpcs withClassicLinkEnabled(Boolean classicLinkEnabled) {
         this.classicLinkEnabled = classicLinkEnabled;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVpcClassicLinkResultVpcs {
     
     
     public DescribeVpcClassicLinkResultVpcsTags[] tags;
+
     public DescribeVpcClassicLinkResultVpcs withTags(DescribeVpcClassicLinkResultVpcsTags[] tags) {
         this.tags = tags;
         return this;
@@ -26,9 +28,11 @@ public class DescribeVpcClassicLinkResultVpcs {
     
     
     public String vpcId;
+
     public DescribeVpcClassicLinkResultVpcs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DescribeVpcClassicLinkResultVpcs(){}
 }

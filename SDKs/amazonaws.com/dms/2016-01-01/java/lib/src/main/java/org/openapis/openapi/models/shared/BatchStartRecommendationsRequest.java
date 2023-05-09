@@ -12,9 +12,11 @@ public class BatchStartRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public StartRecommendationsRequestEntry[] data;
+
     public BatchStartRecommendationsRequest withData(StartRecommendationsRequestEntry[] data) {
         this.data = data;
         return this;
     }
     
+    public BatchStartRecommendationsRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetEntitySetPhenotypeSlimmerRequest {
@@ -12,6 +13,7 @@ public class GetEntitySetPhenotypeSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=exclude_automatic_assertions")
     public Boolean excludeAutomaticAssertions;
+
     public GetEntitySetPhenotypeSlimmerRequest withExcludeAutomaticAssertions(Boolean excludeAutomaticAssertions) {
         this.excludeAutomaticAssertions = excludeAutomaticAssertions;
         return this;
@@ -22,6 +24,7 @@ public class GetEntitySetPhenotypeSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetEntitySetPhenotypeSlimmerRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -32,6 +35,7 @@ public class GetEntitySetPhenotypeSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=slim")
     public String[] slim;
+
     public GetEntitySetPhenotypeSlimmerRequest withSlim(String[] slim) {
         this.slim = slim;
         return this;
@@ -42,6 +46,7 @@ public class GetEntitySetPhenotypeSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetEntitySetPhenotypeSlimmerRequest withStart(Long start) {
         this.start = start;
         return this;
@@ -52,9 +57,14 @@ public class GetEntitySetPhenotypeSlimmerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
     public String[] subject;
+
     public GetEntitySetPhenotypeSlimmerRequest withSubject(String[] subject) {
         this.subject = subject;
         return this;
     }
     
+    public GetEntitySetPhenotypeSlimmerRequest(@JsonProperty("slim") String[] slim, @JsonProperty("subject") String[] subject) {
+        this.slim = slim;
+        this.subject = subject;
+  }
 }

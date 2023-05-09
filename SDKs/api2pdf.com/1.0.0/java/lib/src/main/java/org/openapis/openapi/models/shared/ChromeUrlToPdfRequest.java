@@ -19,6 +19,7 @@ public class ChromeUrlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileName")
     public String fileName;
+
     public ChromeUrlToPdfRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
@@ -27,6 +28,7 @@ public class ChromeUrlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlinePdf")
     public Boolean inlinePdf;
+
     public ChromeUrlToPdfRequest withInlinePdf(Boolean inlinePdf) {
         this.inlinePdf = inlinePdf;
         return this;
@@ -35,6 +37,7 @@ public class ChromeUrlToPdfRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ChromeAdvancedOptions options;
+
     public ChromeUrlToPdfRequest withOptions(ChromeAdvancedOptions options) {
         this.options = options;
         return this;
@@ -42,9 +45,13 @@ public class ChromeUrlToPdfRequest {
     
     @JsonProperty("url")
     public String url;
+
     public ChromeUrlToPdfRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ChromeUrlToPdfRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTestHarnessScenarioUsingPUTRequest {
@@ -12,6 +13,7 @@ public class UpdateTestHarnessScenarioUsingPUTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel;
+
     public UpdateTestHarnessScenarioUsingPUTRequest withTestHarnessScenarioModel(org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel) {
         this.testHarnessScenarioModel = testHarnessScenarioModel;
         return this;
@@ -22,6 +24,7 @@ public class UpdateTestHarnessScenarioUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public UpdateTestHarnessScenarioUsingPUTRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -32,9 +35,15 @@ public class UpdateTestHarnessScenarioUsingPUTRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scenarioName")
     public String scenarioName;
+
     public UpdateTestHarnessScenarioUsingPUTRequest withScenarioName(String scenarioName) {
         this.scenarioName = scenarioName;
         return this;
     }
     
+    public UpdateTestHarnessScenarioUsingPUTRequest(@JsonProperty("TestHarnessScenarioModel") org.openapis.openapi.models.shared.TestHarnessScenarioModel testHarnessScenarioModel, @JsonProperty("apiKey") String apiKey, @JsonProperty("scenarioName") String scenarioName) {
+        this.testHarnessScenarioModel = testHarnessScenarioModel;
+        this.apiKey = apiKey;
+        this.scenarioName = scenarioName;
+  }
 }

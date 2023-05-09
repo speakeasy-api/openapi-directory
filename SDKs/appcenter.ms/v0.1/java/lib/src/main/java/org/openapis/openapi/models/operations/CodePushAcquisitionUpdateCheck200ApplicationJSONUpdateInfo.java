@@ -12,6 +12,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -20,6 +21,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -27,6 +29,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     
     @JsonProperty("is_available")
     public Boolean isAvailable;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsAvailable(Boolean isAvailable) {
         this.isAvailable = isAvailable;
         return this;
@@ -35,6 +38,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -43,6 +47,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -51,6 +56,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withLabel(String label) {
         this.label = label;
         return this;
@@ -59,6 +65,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_hash")
     public String packageHash;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withPackageHash(String packageHash) {
         this.packageHash = packageHash;
         return this;
@@ -67,6 +74,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("package_size")
     public Double packageSize;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withPackageSize(Double packageSize) {
         this.packageSize = packageSize;
         return this;
@@ -75,6 +83,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -83,6 +92,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("should_run_binary_version")
     public Boolean shouldRunBinaryVersion;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withShouldRunBinaryVersion(Boolean shouldRunBinaryVersion) {
         this.shouldRunBinaryVersion = shouldRunBinaryVersion;
         return this;
@@ -91,6 +101,7 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
@@ -99,9 +110,13 @@ public class CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_app_version")
     public Boolean updateAppVersion;
+
     public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo withUpdateAppVersion(Boolean updateAppVersion) {
         this.updateAppVersion = updateAppVersion;
         return this;
     }
     
+    public CodePushAcquisitionUpdateCheck200ApplicationJSONUpdateInfo(@JsonProperty("is_available") Boolean isAvailable) {
+        this.isAvailable = isAvailable;
+  }
 }

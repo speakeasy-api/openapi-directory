@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestBuyRecommendationRequest {
@@ -12,9 +13,13 @@ public class RequestBuyRecommendationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=url")
     public String url;
+
     public RequestBuyRecommendationRequest withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RequestBuyRecommendationRequest(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

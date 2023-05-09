@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeKinesisStreamingDestinationInput {
     @JsonProperty("TableName")
     public String tableName;
+
     public DescribeKinesisStreamingDestinationInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DescribeKinesisStreamingDestinationInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

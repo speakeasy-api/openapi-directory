@@ -15,6 +15,7 @@ public class RuleGroupSourceStatelessRuleMatchAttributesTcpFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Flags")
     public String[] flags;
+
     public RuleGroupSourceStatelessRuleMatchAttributesTcpFlags withFlags(String[] flags) {
         this.flags = flags;
         return this;
@@ -23,9 +24,11 @@ public class RuleGroupSourceStatelessRuleMatchAttributesTcpFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Masks")
     public String[] masks;
+
     public RuleGroupSourceStatelessRuleMatchAttributesTcpFlags withMasks(String[] masks) {
         this.masks = masks;
         return this;
     }
     
+    public RuleGroupSourceStatelessRuleMatchAttributesTcpFlags(){}
 }

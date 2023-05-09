@@ -18,6 +18,7 @@ public class PutDialRequestBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedRequests")
     public FailedRequest[] failedRequests;
+
     public PutDialRequestBatchResponse withFailedRequests(FailedRequest[] failedRequests) {
         this.failedRequests = failedRequests;
         return this;
@@ -29,9 +30,11 @@ public class PutDialRequestBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successfulRequests")
     public SuccessfulRequest[] successfulRequests;
+
     public PutDialRequestBatchResponse withSuccessfulRequests(SuccessfulRequest[] successfulRequests) {
         this.successfulRequests = successfulRequests;
         return this;
     }
     
+    public PutDialRequestBatchResponse(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePageRequest {
     @JsonProperty("PageId")
     public String pageId;
+
     public DescribePageRequest withPageId(String pageId) {
         this.pageId = pageId;
         return this;
     }
     
+    public DescribePageRequest(@JsonProperty("PageId") String pageId) {
+        this.pageId = pageId;
+  }
 }

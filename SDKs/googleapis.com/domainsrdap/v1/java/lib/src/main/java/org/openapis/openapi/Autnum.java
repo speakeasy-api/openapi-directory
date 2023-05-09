@@ -56,11 +56,9 @@ public class Autnum {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse() {{
+        org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse res = new org.openapis.openapi.models.operations.DomainsrdapAutnumGetResponse(contentType, httpRes.statusCode()) {{
             rdapResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -22,6 +22,7 @@ public class CreateTerminalRefundRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateTerminalRefundRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -30,9 +31,13 @@ public class CreateTerminalRefundRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refund")
     public TerminalRefund refund;
+
     public CreateTerminalRefundRequest withRefund(TerminalRefund refund) {
         this.refund = refund;
         return this;
     }
     
+    public CreateTerminalRefundRequest(@JsonProperty("idempotency_key") String idempotencyKey) {
+        this.idempotencyKey = idempotencyKey;
+  }
 }

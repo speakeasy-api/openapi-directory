@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1LocationsIdEmailTemplatesMasterResponse {
     
     public String contentType;
+
     public GetSetupV1LocationsIdEmailTemplatesMasterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1LocationsIdEmailTemplatesMasterResponse {
      */
     
     public org.openapis.openapi.models.shared.MasterEmailTemplateSettingsViewModel masterEmailTemplateSettingsViewModel;
+
     public GetSetupV1LocationsIdEmailTemplatesMasterResponse withMasterEmailTemplateSettingsViewModel(org.openapis.openapi.models.shared.MasterEmailTemplateSettingsViewModel masterEmailTemplateSettingsViewModel) {
         this.masterEmailTemplateSettingsViewModel = masterEmailTemplateSettingsViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1LocationsIdEmailTemplatesMasterResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1LocationsIdEmailTemplatesMasterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1LocationsIdEmailTemplatesMasterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1LocationsIdEmailTemplatesMasterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1LocationsIdEmailTemplatesMasterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

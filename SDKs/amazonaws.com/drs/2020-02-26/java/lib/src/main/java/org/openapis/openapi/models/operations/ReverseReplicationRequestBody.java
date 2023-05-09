@@ -12,9 +12,13 @@ public class ReverseReplicationRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public ReverseReplicationRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
     }
     
+    public ReverseReplicationRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

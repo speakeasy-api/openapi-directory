@@ -15,6 +15,7 @@ public class AwsBackupBackupPlanAdvancedBackupSettingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupOptions")
     public java.util.Map<String, String> backupOptions;
+
     public AwsBackupBackupPlanAdvancedBackupSettingsDetails withBackupOptions(java.util.Map<String, String> backupOptions) {
         this.backupOptions = backupOptions;
         return this;
@@ -23,9 +24,11 @@ public class AwsBackupBackupPlanAdvancedBackupSettingsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public AwsBackupBackupPlanAdvancedBackupSettingsDetails withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public AwsBackupBackupPlanAdvancedBackupSettingsDetails(){}
 }

@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeAutoMLJobResponse {
     @JsonProperty("AutoMLJobArn")
     public String autoMLJobArn;
+
     public DescribeAutoMLJobResponse withAutoMLJobArn(String autoMLJobArn) {
         this.autoMLJobArn = autoMLJobArn;
         return this;
@@ -27,6 +28,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobArtifacts")
     public AutoMLJobArtifacts autoMLJobArtifacts;
+
     public DescribeAutoMLJobResponse withAutoMLJobArtifacts(AutoMLJobArtifacts autoMLJobArtifacts) {
         this.autoMLJobArtifacts = autoMLJobArtifacts;
         return this;
@@ -35,6 +37,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobConfig")
     public AutoMLJobConfig autoMLJobConfig;
+
     public DescribeAutoMLJobResponse withAutoMLJobConfig(AutoMLJobConfig autoMLJobConfig) {
         this.autoMLJobConfig = autoMLJobConfig;
         return this;
@@ -42,6 +45,7 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public DescribeAutoMLJobResponse withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -50,6 +54,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLJobObjective")
     public AutoMLJobObjective autoMLJobObjective;
+
     public DescribeAutoMLJobResponse withAutoMLJobObjective(AutoMLJobObjective autoMLJobObjective) {
         this.autoMLJobObjective = autoMLJobObjective;
         return this;
@@ -57,6 +62,7 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("AutoMLJobSecondaryStatus")
     public AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus;
+
     public DescribeAutoMLJobResponse withAutoMLJobSecondaryStatus(AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus) {
         this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
         return this;
@@ -64,6 +70,7 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("AutoMLJobStatus")
     public AutoMLJobStatusEnum autoMLJobStatus;
+
     public DescribeAutoMLJobResponse withAutoMLJobStatus(AutoMLJobStatusEnum autoMLJobStatus) {
         this.autoMLJobStatus = autoMLJobStatus;
         return this;
@@ -72,6 +79,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BestCandidate")
     public AutoMLCandidate bestCandidate;
+
     public DescribeAutoMLJobResponse withBestCandidate(AutoMLCandidate bestCandidate) {
         this.bestCandidate = bestCandidate;
         return this;
@@ -81,6 +89,7 @@ public class DescribeAutoMLJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeAutoMLJobResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -91,6 +100,7 @@ public class DescribeAutoMLJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public DescribeAutoMLJobResponse withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -99,6 +109,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeAutoMLJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -107,6 +118,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerateCandidateDefinitionsOnly")
     public Boolean generateCandidateDefinitionsOnly;
+
     public DescribeAutoMLJobResponse withGenerateCandidateDefinitionsOnly(Boolean generateCandidateDefinitionsOnly) {
         this.generateCandidateDefinitionsOnly = generateCandidateDefinitionsOnly;
         return this;
@@ -114,6 +126,7 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("InputDataConfig")
     public AutoMLChannel[] inputDataConfig;
+
     public DescribeAutoMLJobResponse withInputDataConfig(AutoMLChannel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -123,6 +136,7 @@ public class DescribeAutoMLJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeAutoMLJobResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -131,6 +145,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployConfig")
     public ModelDeployConfig modelDeployConfig;
+
     public DescribeAutoMLJobResponse withModelDeployConfig(ModelDeployConfig modelDeployConfig) {
         this.modelDeployConfig = modelDeployConfig;
         return this;
@@ -139,6 +154,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelDeployResult")
     public ModelDeployResult modelDeployResult;
+
     public DescribeAutoMLJobResponse withModelDeployResult(ModelDeployResult modelDeployResult) {
         this.modelDeployResult = modelDeployResult;
         return this;
@@ -146,6 +162,7 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("OutputDataConfig")
     public AutoMLOutputDataConfig outputDataConfig;
+
     public DescribeAutoMLJobResponse withOutputDataConfig(AutoMLOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -154,6 +171,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartialFailureReasons")
     public AutoMLPartialFailureReason[] partialFailureReasons;
+
     public DescribeAutoMLJobResponse withPartialFailureReasons(AutoMLPartialFailureReason[] partialFailureReasons) {
         this.partialFailureReasons = partialFailureReasons;
         return this;
@@ -162,6 +180,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProblemType")
     public ProblemTypeEnum problemType;
+
     public DescribeAutoMLJobResponse withProblemType(ProblemTypeEnum problemType) {
         this.problemType = problemType;
         return this;
@@ -170,6 +189,7 @@ public class DescribeAutoMLJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResolvedAttributes")
     public ResolvedAttributes resolvedAttributes;
+
     public DescribeAutoMLJobResponse withResolvedAttributes(ResolvedAttributes resolvedAttributes) {
         this.resolvedAttributes = resolvedAttributes;
         return this;
@@ -177,9 +197,21 @@ public class DescribeAutoMLJobResponse {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribeAutoMLJobResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribeAutoMLJobResponse(@JsonProperty("AutoMLJobArn") String autoMLJobArn, @JsonProperty("AutoMLJobName") String autoMLJobName, @JsonProperty("AutoMLJobSecondaryStatus") AutoMLJobSecondaryStatusEnum autoMLJobSecondaryStatus, @JsonProperty("AutoMLJobStatus") AutoMLJobStatusEnum autoMLJobStatus, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("InputDataConfig") AutoMLChannel[] inputDataConfig, @JsonProperty("LastModifiedTime") OffsetDateTime lastModifiedTime, @JsonProperty("OutputDataConfig") AutoMLOutputDataConfig outputDataConfig, @JsonProperty("RoleArn") String roleArn) {
+        this.autoMLJobArn = autoMLJobArn;
+        this.autoMLJobName = autoMLJobName;
+        this.autoMLJobSecondaryStatus = autoMLJobSecondaryStatus;
+        this.autoMLJobStatus = autoMLJobStatus;
+        this.creationTime = creationTime;
+        this.inputDataConfig = inputDataConfig;
+        this.lastModifiedTime = lastModifiedTime;
+        this.outputDataConfig = outputDataConfig;
+        this.roleArn = roleArn;
+  }
 }

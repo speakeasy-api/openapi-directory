@@ -15,6 +15,7 @@ public class IsochroneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrights")
     public String[] copyrights;
+
     public IsochroneResponse withCopyrights(String[] copyrights) {
         this.copyrights = copyrights;
         return this;
@@ -33,9 +34,11 @@ public class IsochroneResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polygons")
     public IsochroneResponsePolygon[] polygons;
+
     public IsochroneResponse withPolygons(IsochroneResponsePolygon[] polygons) {
         this.polygons = polygons;
         return this;
     }
     
+    public IsochroneResponse(){}
 }

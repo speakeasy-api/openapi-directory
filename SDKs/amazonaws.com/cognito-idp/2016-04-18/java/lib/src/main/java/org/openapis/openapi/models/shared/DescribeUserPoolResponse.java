@@ -15,9 +15,11 @@ public class DescribeUserPoolResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserPool")
     public UserPoolType userPool;
+
     public DescribeUserPoolResponse withUserPool(UserPoolType userPool) {
         this.userPool = userPool;
         return this;
     }
     
+    public DescribeUserPoolResponse(){}
 }

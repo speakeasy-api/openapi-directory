@@ -15,6 +15,7 @@ public class DimensionValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public DimensionEnum key;
+
     public DimensionValues withKey(DimensionEnum key) {
         this.key = key;
         return this;
@@ -23,6 +24,7 @@ public class DimensionValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchOptions")
     public MatchOptionEnum[] matchOptions;
+
     public DimensionValues withMatchOptions(MatchOptionEnum[] matchOptions) {
         this.matchOptions = matchOptions;
         return this;
@@ -31,9 +33,11 @@ public class DimensionValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Values")
     public String[] values;
+
     public DimensionValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DimensionValues(){}
 }

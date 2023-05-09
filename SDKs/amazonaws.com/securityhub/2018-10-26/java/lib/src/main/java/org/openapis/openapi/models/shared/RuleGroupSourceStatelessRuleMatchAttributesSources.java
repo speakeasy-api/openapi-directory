@@ -15,9 +15,11 @@ public class RuleGroupSourceStatelessRuleMatchAttributesSources {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressDefinition")
     public String addressDefinition;
+
     public RuleGroupSourceStatelessRuleMatchAttributesSources withAddressDefinition(String addressDefinition) {
         this.addressDefinition = addressDefinition;
         return this;
     }
     
+    public RuleGroupSourceStatelessRuleMatchAttributesSources(){}
 }

@@ -15,6 +15,7 @@ public class ResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourceRecord withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class ResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ResourceRecord withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class ResourceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ResourceRecord withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ResourceRecord(){}
 }

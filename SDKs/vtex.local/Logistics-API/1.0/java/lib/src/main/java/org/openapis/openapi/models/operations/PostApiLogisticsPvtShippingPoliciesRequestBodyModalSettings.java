@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings {
      */
     @JsonProperty("modals")
     public Object[] modals;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings withModals(Object[] modals) {
         this.modals = modals;
         return this;
@@ -25,9 +26,14 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings {
      */
     @JsonProperty("useOnlyItemsWithDefinedModal")
     public Boolean useOnlyItemsWithDefinedModal;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings withUseOnlyItemsWithDefinedModal(Boolean useOnlyItemsWithDefinedModal) {
         this.useOnlyItemsWithDefinedModal = useOnlyItemsWithDefinedModal;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyModalSettings(@JsonProperty("modals") Object[] modals, @JsonProperty("useOnlyItemsWithDefinedModal") Boolean useOnlyItemsWithDefinedModal) {
+        this.modals = modals;
+        this.useOnlyItemsWithDefinedModal = useOnlyItemsWithDefinedModal;
+  }
 }

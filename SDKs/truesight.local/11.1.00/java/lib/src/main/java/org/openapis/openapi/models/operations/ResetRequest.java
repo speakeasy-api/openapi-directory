@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ResetRequest {
@@ -12,6 +13,7 @@ public class ResetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public ResetRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -22,6 +24,7 @@ public class ResetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorClass")
     public String monitorClass;
+
     public ResetRequest withMonitorClass(String monitorClass) {
         this.monitorClass = monitorClass;
         return this;
@@ -32,9 +35,15 @@ public class ResetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monitorSid")
     public String monitorSid;
+
     public ResetRequest withMonitorSid(String monitorSid) {
         this.monitorSid = monitorSid;
         return this;
     }
     
+    public ResetRequest(@JsonProperty("deviceId") Integer deviceId, @JsonProperty("monitorClass") String monitorClass, @JsonProperty("monitorSid") String monitorSid) {
+        this.deviceId = deviceId;
+        this.monitorClass = monitorClass;
+        this.monitorSid = monitorSid;
+  }
 }

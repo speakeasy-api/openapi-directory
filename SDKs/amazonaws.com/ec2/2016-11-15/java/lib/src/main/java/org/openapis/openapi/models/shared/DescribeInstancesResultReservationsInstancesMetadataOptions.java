@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     public DescribeInstancesResultReservationsInstancesMetadataOptionsHttpEndpointEnum httpEndpoint;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withHttpEndpoint(DescribeInstancesResultReservationsInstancesMetadataOptionsHttpEndpointEnum httpEndpoint) {
         this.httpEndpoint = httpEndpoint;
         return this;
@@ -19,6 +20,7 @@ public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     
     public DescribeInstancesResultReservationsInstancesMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withHttpProtocolIpv6(DescribeInstancesResultReservationsInstancesMetadataOptionsHttpProtocolIpv6Enum httpProtocolIpv6) {
         this.httpProtocolIpv6 = httpProtocolIpv6;
         return this;
@@ -26,6 +28,7 @@ public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     
     public Long httpPutResponseHopLimit;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withHttpPutResponseHopLimit(Long httpPutResponseHopLimit) {
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         return this;
@@ -33,6 +36,7 @@ public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     
     public DescribeInstancesResultReservationsInstancesMetadataOptionsHttpTokensEnum httpTokens;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withHttpTokens(DescribeInstancesResultReservationsInstancesMetadataOptionsHttpTokensEnum httpTokens) {
         this.httpTokens = httpTokens;
         return this;
@@ -40,6 +44,7 @@ public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     
     public DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withInstanceMetadataTags(DescribeInstancesResultReservationsInstancesMetadataOptionsInstanceMetadataTagsEnum instanceMetadataTags) {
         this.instanceMetadataTags = instanceMetadataTags;
         return this;
@@ -47,9 +52,11 @@ public class DescribeInstancesResultReservationsInstancesMetadataOptions {
     
     
     public DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum state;
+
     public DescribeInstancesResultReservationsInstancesMetadataOptions withState(DescribeInstancesResultReservationsInstancesMetadataOptionsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public DescribeInstancesResultReservationsInstancesMetadataOptions(){}
 }

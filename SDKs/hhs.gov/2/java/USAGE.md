@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetResourcesCampaignsJsonRequest;
 import org.openapis.openapi.models.operations.GetResourcesCampaignsJsonResponse;
 
@@ -17,15 +16,17 @@ public class Application {
                 max = 548814;
                 offset = 592845;
                 sort = "distinctio";
-            }}            
+            }};            
 
             GetResourcesCampaignsJsonResponse res = sdk.campaigns.getResourcesCampaignsJson(req);
 
-            if (res.campaignWrapped.isPresent()) {
+            if (res.campaignWrapped != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

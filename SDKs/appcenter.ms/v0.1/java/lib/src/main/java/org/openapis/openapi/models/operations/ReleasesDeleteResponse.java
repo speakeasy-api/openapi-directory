@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleasesDeleteResponse {
     
     public String contentType;
+
     public ReleasesDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReleasesDeleteResponse {
     
     
     public Integer statusCode;
+
     public ReleasesDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReleasesDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleasesDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -34,6 +38,7 @@ public class ReleasesDeleteResponse {
      */
     
     public ReleasesDelete404ApplicationJSON releasesDelete404ApplicationJSONObject;
+
     public ReleasesDeleteResponse withReleasesDelete404ApplicationJSONObject(ReleasesDelete404ApplicationJSON releasesDelete404ApplicationJSONObject) {
         this.releasesDelete404ApplicationJSONObject = releasesDelete404ApplicationJSONObject;
         return this;
@@ -46,9 +51,14 @@ public class ReleasesDeleteResponse {
      */
     
     public ReleasesDelete500ApplicationJSON releasesDelete500ApplicationJSONObject;
+
     public ReleasesDeleteResponse withReleasesDelete500ApplicationJSONObject(ReleasesDelete500ApplicationJSON releasesDelete500ApplicationJSONObject) {
         this.releasesDelete500ApplicationJSONObject = releasesDelete500ApplicationJSONObject;
         return this;
     }
     
+    public ReleasesDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

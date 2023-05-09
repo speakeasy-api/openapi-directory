@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartInferenceExperimentResponse {
     @JsonProperty("InferenceExperimentArn")
     public String inferenceExperimentArn;
+
     public StartInferenceExperimentResponse withInferenceExperimentArn(String inferenceExperimentArn) {
         this.inferenceExperimentArn = inferenceExperimentArn;
         return this;
     }
     
+    public StartInferenceExperimentResponse(@JsonProperty("InferenceExperimentArn") String inferenceExperimentArn) {
+        this.inferenceExperimentArn = inferenceExperimentArn;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class SourceIpConditionConfig {
     
     public String[] values;
+
     public SourceIpConditionConfig withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SourceIpConditionConfig(){}
 }

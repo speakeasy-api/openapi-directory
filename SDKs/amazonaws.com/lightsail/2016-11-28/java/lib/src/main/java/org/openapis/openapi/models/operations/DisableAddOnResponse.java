@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisableAddOnResponse {
@@ -12,6 +13,7 @@ public class DisableAddOnResponse {
      */
     
     public Object accessDeniedException;
+
     public DisableAddOnResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisableAddOnResponse {
     
     
     public String contentType;
+
     public DisableAddOnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisableAddOnResponse {
      */
     
     public org.openapis.openapi.models.shared.DisableAddOnResult disableAddOnResult;
+
     public DisableAddOnResponse withDisableAddOnResult(org.openapis.openapi.models.shared.DisableAddOnResult disableAddOnResult) {
         this.disableAddOnResult = disableAddOnResult;
         return this;
@@ -39,6 +43,7 @@ public class DisableAddOnResponse {
      */
     
     public Object invalidInputException;
+
     public DisableAddOnResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DisableAddOnResponse {
      */
     
     public Object notFoundException;
+
     public DisableAddOnResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DisableAddOnResponse {
      */
     
     public Object operationFailureException;
+
     public DisableAddOnResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DisableAddOnResponse {
      */
     
     public Object serviceException;
+
     public DisableAddOnResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DisableAddOnResponse {
     
     
     public Integer statusCode;
+
     public DisableAddOnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DisableAddOnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisableAddOnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DisableAddOnResponse {
      */
     
     public Object unauthenticatedException;
+
     public DisableAddOnResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DisableAddOnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

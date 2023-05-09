@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class EventRecord {
     @JsonProperty("agent")
     public String agent;
+
     public EventRecord withAgent(String agent) {
         this.agent = agent;
         return this;
@@ -21,6 +22,7 @@ public class EventRecord {
     
     @JsonProperty("browsertype")
     public String browsertype;
+
     public EventRecord withBrowsertype(String browsertype) {
         this.browsertype = browsertype;
         return this;
@@ -28,6 +30,7 @@ public class EventRecord {
     
     @JsonProperty("channel")
     public String channel;
+
     public EventRecord withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -35,6 +38,7 @@ public class EventRecord {
     
     @JsonProperty("click")
     public String click;
+
     public EventRecord withClick(String click) {
         this.click = click;
         return this;
@@ -42,6 +46,7 @@ public class EventRecord {
     
     @JsonProperty("clicks")
     public Long clicks;
+
     public EventRecord withClicks(Long clicks) {
         this.clicks = clicks;
         return this;
@@ -49,6 +54,7 @@ public class EventRecord {
     
     @JsonProperty("code")
     public String code;
+
     public EventRecord withCode(String code) {
         this.code = code;
         return this;
@@ -56,6 +62,7 @@ public class EventRecord {
     
     @JsonProperty("company")
     public String company;
+
     public EventRecord withCompany(String company) {
         this.company = company;
         return this;
@@ -63,6 +70,7 @@ public class EventRecord {
     
     @JsonProperty("contact")
     public String contact;
+
     public EventRecord withContact(String contact) {
         this.contact = contact;
         return this;
@@ -70,6 +78,7 @@ public class EventRecord {
     
     @JsonProperty("cost")
     public Double cost;
+
     public EventRecord withCost(Double cost) {
         this.cost = cost;
         return this;
@@ -77,6 +86,7 @@ public class EventRecord {
     
     @JsonProperty("costcurrency")
     public String costcurrency;
+
     public EventRecord withCostcurrency(String costcurrency) {
         this.costcurrency = costcurrency;
         return this;
@@ -84,6 +94,7 @@ public class EventRecord {
     
     @JsonProperty("currency")
     public String currency;
+
     public EventRecord withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -91,6 +102,7 @@ public class EventRecord {
     
     @JsonProperty("deal")
     public String deal;
+
     public EventRecord withDeal(String deal) {
         this.deal = deal;
         return this;
@@ -98,6 +110,7 @@ public class EventRecord {
     
     @JsonProperty("deal name")
     public String dealName;
+
     public EventRecord withDealName(String dealName) {
         this.dealName = dealName;
         return this;
@@ -105,6 +118,7 @@ public class EventRecord {
     
     @JsonProperty("delay")
     public Long delay;
+
     public EventRecord withDelay(Long delay) {
         this.delay = delay;
         return this;
@@ -112,6 +126,7 @@ public class EventRecord {
     
     @JsonProperty("denyreason")
     public String denyreason;
+
     public EventRecord withDenyreason(String denyreason) {
         this.denyreason = denyreason;
         return this;
@@ -119,6 +134,7 @@ public class EventRecord {
     
     @JsonProperty("device")
     public String device;
+
     public EventRecord withDevice(String device) {
         this.device = device;
         return this;
@@ -126,6 +142,7 @@ public class EventRecord {
     
     @JsonProperty("devicetype")
     public String devicetype;
+
     public EventRecord withDevicetype(String devicetype) {
         this.devicetype = devicetype;
         return this;
@@ -133,6 +150,7 @@ public class EventRecord {
     
     @JsonProperty("email")
     public String email;
+
     public EventRecord withEmail(String email) {
         this.email = email;
         return this;
@@ -140,6 +158,7 @@ public class EventRecord {
     
     @JsonProperty("emailaddrsha256")
     public String emailaddrsha256;
+
     public EventRecord withEmailaddrsha256(String emailaddrsha256) {
         this.emailaddrsha256 = emailaddrsha256;
         return this;
@@ -147,6 +166,7 @@ public class EventRecord {
     
     @JsonProperty("flow")
     public String flow;
+
     public EventRecord withFlow(String flow) {
         this.flow = flow;
         return this;
@@ -154,6 +174,7 @@ public class EventRecord {
     
     @JsonProperty("flowstep")
     public String flowstep;
+
     public EventRecord withFlowstep(String flowstep) {
         this.flowstep = flowstep;
         return this;
@@ -161,6 +182,7 @@ public class EventRecord {
     
     @JsonProperty("flowtype")
     public String flowtype;
+
     public EventRecord withFlowtype(String flowtype) {
         this.flowtype = flowtype;
         return this;
@@ -168,6 +190,7 @@ public class EventRecord {
     
     @JsonProperty("impression")
     public String impression;
+
     public EventRecord withImpression(String impression) {
         this.impression = impression;
         return this;
@@ -175,6 +198,7 @@ public class EventRecord {
     
     @JsonProperty("ip")
     public String ip;
+
     public EventRecord withIp(String ip) {
         this.ip = ip;
         return this;
@@ -182,6 +206,7 @@ public class EventRecord {
     
     @JsonProperty("latitude")
     public String latitude;
+
     public EventRecord withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -189,6 +214,7 @@ public class EventRecord {
     
     @JsonProperty("longitude")
     public String longitude;
+
     public EventRecord withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -196,6 +222,7 @@ public class EventRecord {
     
     @JsonProperty("optin")
     public String optin;
+
     public EventRecord withOptin(String optin) {
         this.optin = optin;
         return this;
@@ -203,6 +230,7 @@ public class EventRecord {
     
     @JsonProperty("os")
     public String os;
+
     public EventRecord withOs(String os) {
         this.os = os;
         return this;
@@ -210,6 +238,7 @@ public class EventRecord {
     
     @JsonProperty("resolution")
     public String resolution;
+
     public EventRecord withResolution(String resolution) {
         this.resolution = resolution;
         return this;
@@ -217,6 +246,7 @@ public class EventRecord {
     
     @JsonProperty("revenue")
     public Double revenue;
+
     public EventRecord withRevenue(Double revenue) {
         this.revenue = revenue;
         return this;
@@ -224,6 +254,7 @@ public class EventRecord {
     
     @JsonProperty("role")
     public String role;
+
     public EventRecord withRole(String role) {
         this.role = role;
         return this;
@@ -231,6 +262,7 @@ public class EventRecord {
     
     @JsonProperty("session")
     public String session;
+
     public EventRecord withSession(String session) {
         this.session = session;
         return this;
@@ -238,6 +270,7 @@ public class EventRecord {
     
     @JsonProperty("site")
     public String site;
+
     public EventRecord withSite(String site) {
         this.site = site;
         return this;
@@ -245,6 +278,7 @@ public class EventRecord {
     
     @JsonProperty("site name")
     public String siteName;
+
     public EventRecord withSiteName(String siteName) {
         this.siteName = siteName;
         return this;
@@ -254,6 +288,7 @@ public class EventRecord {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public EventRecord withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -261,6 +296,7 @@ public class EventRecord {
     
     @JsonProperty("total")
     public Double total;
+
     public EventRecord withTotal(Double total) {
         this.total = total;
         return this;
@@ -268,6 +304,7 @@ public class EventRecord {
     
     @JsonProperty("user")
     public String user;
+
     public EventRecord withUser(String user) {
         this.user = user;
         return this;
@@ -275,9 +312,50 @@ public class EventRecord {
     
     @JsonProperty("userlanguage")
     public String userlanguage;
+
     public EventRecord withUserlanguage(String userlanguage) {
         this.userlanguage = userlanguage;
         return this;
     }
     
+    public EventRecord(@JsonProperty("agent") String agent, @JsonProperty("browsertype") String browsertype, @JsonProperty("channel") String channel, @JsonProperty("click") String click, @JsonProperty("clicks") Long clicks, @JsonProperty("code") String code, @JsonProperty("company") String company, @JsonProperty("contact") String contact, @JsonProperty("cost") Double cost, @JsonProperty("costcurrency") String costcurrency, @JsonProperty("currency") String currency, @JsonProperty("deal") String deal, @JsonProperty("deal name") String dealName, @JsonProperty("delay") Long delay, @JsonProperty("denyreason") String denyreason, @JsonProperty("device") String device, @JsonProperty("devicetype") String devicetype, @JsonProperty("email") String email, @JsonProperty("emailaddrsha256") String emailaddrsha256, @JsonProperty("flow") String flow, @JsonProperty("flowstep") String flowstep, @JsonProperty("flowtype") String flowtype, @JsonProperty("impression") String impression, @JsonProperty("ip") String ip, @JsonProperty("latitude") String latitude, @JsonProperty("longitude") String longitude, @JsonProperty("optin") String optin, @JsonProperty("os") String os, @JsonProperty("resolution") String resolution, @JsonProperty("revenue") Double revenue, @JsonProperty("role") String role, @JsonProperty("session") String session, @JsonProperty("site") String site, @JsonProperty("site name") String siteName, @JsonProperty("timestamp") OffsetDateTime timestamp, @JsonProperty("total") Double total, @JsonProperty("user") String user, @JsonProperty("userlanguage") String userlanguage) {
+        this.agent = agent;
+        this.browsertype = browsertype;
+        this.channel = channel;
+        this.click = click;
+        this.clicks = clicks;
+        this.code = code;
+        this.company = company;
+        this.contact = contact;
+        this.cost = cost;
+        this.costcurrency = costcurrency;
+        this.currency = currency;
+        this.deal = deal;
+        this.dealName = dealName;
+        this.delay = delay;
+        this.denyreason = denyreason;
+        this.device = device;
+        this.devicetype = devicetype;
+        this.email = email;
+        this.emailaddrsha256 = emailaddrsha256;
+        this.flow = flow;
+        this.flowstep = flowstep;
+        this.flowtype = flowtype;
+        this.impression = impression;
+        this.ip = ip;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.optin = optin;
+        this.os = os;
+        this.resolution = resolution;
+        this.revenue = revenue;
+        this.role = role;
+        this.session = session;
+        this.site = site;
+        this.siteName = siteName;
+        this.timestamp = timestamp;
+        this.total = total;
+        this.user = user;
+        this.userlanguage = userlanguage;
+  }
 }

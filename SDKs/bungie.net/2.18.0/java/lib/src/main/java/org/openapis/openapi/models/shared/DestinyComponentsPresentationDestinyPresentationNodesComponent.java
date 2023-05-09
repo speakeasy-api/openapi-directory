@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class DestinyComponentsPresentationDestinyPresentationNodesComponent {
     
     public java.util.Map<String, DestinyComponentsPresentationDestinyPresentationNodeComponent> nodes;
+
     public DestinyComponentsPresentationDestinyPresentationNodesComponent withNodes(java.util.Map<String, DestinyComponentsPresentationDestinyPresentationNodeComponent> nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public DestinyComponentsPresentationDestinyPresentationNodesComponent(){}
 }

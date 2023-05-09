@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransactionSettlementDetails {
     @JsonProperty("actions")
     public Action[] actions;
+
     public TransactionSettlementDetails withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -16,9 +17,14 @@ public class TransactionSettlementDetails {
     
     @JsonProperty("requests")
     public Request[] requests;
+
     public TransactionSettlementDetails withRequests(Request[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public TransactionSettlementDetails(@JsonProperty("actions") Action[] actions, @JsonProperty("requests") Request[] requests) {
+        this.actions = actions;
+        this.requests = requests;
+  }
 }

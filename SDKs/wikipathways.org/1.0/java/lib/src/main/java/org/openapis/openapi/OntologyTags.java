@@ -53,10 +53,8 @@ public class OntologyTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByOntologyTermResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class OntologyTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse() {{
+        org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse res = new org.openapis.openapi.models.operations.GetGetPathwaysByParentOntologyTermResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -129,10 +125,8 @@ public class OntologyTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetRemoveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,10 +161,8 @@ public class OntologyTags {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse() {{
+        org.openapis.openapi.models.operations.GetSaveOntologyTagResponse res = new org.openapis.openapi.models.operations.GetSaveOntologyTagResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

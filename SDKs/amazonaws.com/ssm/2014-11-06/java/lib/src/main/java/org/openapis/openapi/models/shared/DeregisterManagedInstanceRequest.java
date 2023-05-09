@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeregisterManagedInstanceRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public DeregisterManagedInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public DeregisterManagedInstanceRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

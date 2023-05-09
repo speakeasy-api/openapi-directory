@@ -18,6 +18,7 @@ public class BrowsersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browsers")
     public Browser[] browsers;
+
     public BrowsersListResponse withBrowsers(Browser[] browsers) {
         this.browsers = browsers;
         return this;
@@ -29,9 +30,11 @@ public class BrowsersListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public BrowsersListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public BrowsersListResponse(){}
 }

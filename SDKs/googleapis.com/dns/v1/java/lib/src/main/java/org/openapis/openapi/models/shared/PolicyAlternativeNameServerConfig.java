@@ -12,6 +12,7 @@ public class PolicyAlternativeNameServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PolicyAlternativeNameServerConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -23,9 +24,11 @@ public class PolicyAlternativeNameServerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetNameServers")
     public PolicyAlternativeNameServerConfigTargetNameServer[] targetNameServers;
+
     public PolicyAlternativeNameServerConfig withTargetNameServers(PolicyAlternativeNameServerConfigTargetNameServer[] targetNameServers) {
         this.targetNameServers = targetNameServers;
         return this;
     }
     
+    public PolicyAlternativeNameServerConfig(){}
 }

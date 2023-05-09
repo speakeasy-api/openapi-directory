@@ -15,9 +15,11 @@ public class ListReferencesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public ListReferencesRequestBodyFilter filter;
+
     public ListReferencesRequestBody withFilter(ListReferencesRequestBodyFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public ListReferencesRequestBody(){}
 }

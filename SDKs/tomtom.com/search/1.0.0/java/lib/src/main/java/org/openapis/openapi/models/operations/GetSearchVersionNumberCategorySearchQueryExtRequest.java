@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSearchVersionNumberCategorySearchQueryExtRequest {
@@ -12,6 +13,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=btmRight")
     public String btmRight;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withBtmRight(String btmRight) {
         this.btmRight = btmRight;
         return this;
@@ -22,6 +24,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countrySet")
     public String countrySet;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withCountrySet(String countrySet) {
         this.countrySet = countrySet;
         return this;
@@ -32,6 +35,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ext")
     public org.openapis.openapi.models.shared.ExtEnum ext;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withExt(org.openapis.openapi.models.shared.ExtEnum ext) {
         this.ext = ext;
         return this;
@@ -48,6 +52,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=extendedPostalCodesFor")
     public String extendedPostalCodesFor;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withExtendedPostalCodesFor(String extendedPostalCodesFor) {
         this.extendedPostalCodesFor = extendedPostalCodesFor;
         return this;
@@ -58,6 +63,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=language")
     public String language;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -69,6 +75,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lat")
     public Float lat;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withLat(Float lat) {
         this.lat = lat;
         return this;
@@ -79,6 +86,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -90,6 +98,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lon")
     public Float lon;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withLon(Float lon) {
         this.lon = lon;
         return this;
@@ -100,6 +109,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ofs")
     public Long ofs;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withOfs(Long ofs) {
         this.ofs = ofs;
         return this;
@@ -110,6 +120,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=query")
     public String query;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -120,6 +131,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public Long radius;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withRadius(Long radius) {
         this.radius = radius;
         return this;
@@ -130,6 +142,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topLeft")
     public String topLeft;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withTopLeft(String topLeft) {
         this.topLeft = topLeft;
         return this;
@@ -140,6 +153,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=typeahead")
     public Boolean typeahead;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withTypeahead(Boolean typeahead) {
         this.typeahead = typeahead;
         return this;
@@ -150,6 +164,7 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionNumber")
     public org.openapis.openapi.models.shared.VersionNumberEnum versionNumber;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withVersionNumber(org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
         this.versionNumber = versionNumber;
         return this;
@@ -160,9 +175,15 @@ public class GetSearchVersionNumberCategorySearchQueryExtRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public org.openapis.openapi.models.shared.ViewEnum view;
+
     public GetSearchVersionNumberCategorySearchQueryExtRequest withView(org.openapis.openapi.models.shared.ViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetSearchVersionNumberCategorySearchQueryExtRequest(@JsonProperty("ext") org.openapis.openapi.models.shared.ExtEnum ext, @JsonProperty("query") String query, @JsonProperty("versionNumber") org.openapis.openapi.models.shared.VersionNumberEnum versionNumber) {
+        this.ext = ext;
+        this.query = query;
+        this.versionNumber = versionNumber;
+  }
 }

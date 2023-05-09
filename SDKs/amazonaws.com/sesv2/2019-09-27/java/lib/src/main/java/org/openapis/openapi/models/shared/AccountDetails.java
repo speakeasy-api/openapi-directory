@@ -15,6 +15,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalContactEmailAddresses")
     public String[] additionalContactEmailAddresses;
+
     public AccountDetails withAdditionalContactEmailAddresses(String[] additionalContactEmailAddresses) {
         this.additionalContactEmailAddresses = additionalContactEmailAddresses;
         return this;
@@ -23,6 +24,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactLanguage")
     public ContactLanguageEnum contactLanguage;
+
     public AccountDetails withContactLanguage(ContactLanguageEnum contactLanguage) {
         this.contactLanguage = contactLanguage;
         return this;
@@ -31,6 +33,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MailType")
     public MailTypeEnum mailType;
+
     public AccountDetails withMailType(MailTypeEnum mailType) {
         this.mailType = mailType;
         return this;
@@ -39,6 +42,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReviewDetails")
     public ReviewDetails reviewDetails;
+
     public AccountDetails withReviewDetails(ReviewDetails reviewDetails) {
         this.reviewDetails = reviewDetails;
         return this;
@@ -47,6 +51,7 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseCaseDescription")
     public String useCaseDescription;
+
     public AccountDetails withUseCaseDescription(String useCaseDescription) {
         this.useCaseDescription = useCaseDescription;
         return this;
@@ -55,9 +60,11 @@ public class AccountDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WebsiteURL")
     public String websiteURL;
+
     public AccountDetails withWebsiteURL(String websiteURL) {
         this.websiteURL = websiteURL;
         return this;
     }
     
+    public AccountDetails(){}
 }

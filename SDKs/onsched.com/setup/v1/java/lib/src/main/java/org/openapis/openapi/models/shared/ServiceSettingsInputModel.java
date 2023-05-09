@@ -12,6 +12,7 @@ public class ServiceSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadUnit")
     public Integer bookAheadUnit;
+
     public ServiceSettingsInputModel withBookAheadUnit(Integer bookAheadUnit) {
         this.bookAheadUnit = bookAheadUnit;
         return this;
@@ -20,6 +21,7 @@ public class ServiceSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookAheadValue")
     public Integer bookAheadValue;
+
     public ServiceSettingsInputModel withBookAheadValue(Integer bookAheadValue) {
         this.bookAheadValue = bookAheadValue;
         return this;
@@ -28,9 +30,11 @@ public class ServiceSettingsInputModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookInAdvance")
     public Integer bookInAdvance;
+
     public ServiceSettingsInputModel withBookInAdvance(Integer bookInAdvance) {
         this.bookInAdvance = bookInAdvance;
         return this;
     }
     
+    public ServiceSettingsInputModel(){}
 }

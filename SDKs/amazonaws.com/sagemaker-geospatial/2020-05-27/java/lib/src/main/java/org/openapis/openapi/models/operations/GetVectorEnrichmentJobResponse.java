@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVectorEnrichmentJobResponse {
@@ -12,6 +13,7 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public Object accessDeniedException;
+
     public GetVectorEnrichmentJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetVectorEnrichmentJobResponse {
     
     
     public String contentType;
+
     public GetVectorEnrichmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public org.openapis.openapi.models.shared.GetVectorEnrichmentJobOutput getVectorEnrichmentJobOutput;
+
     public GetVectorEnrichmentJobResponse withGetVectorEnrichmentJobOutput(org.openapis.openapi.models.shared.GetVectorEnrichmentJobOutput getVectorEnrichmentJobOutput) {
         this.getVectorEnrichmentJobOutput = getVectorEnrichmentJobOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public Object internalServerException;
+
     public GetVectorEnrichmentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetVectorEnrichmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetVectorEnrichmentJobResponse {
     
     
     public Integer statusCode;
+
     public GetVectorEnrichmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetVectorEnrichmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVectorEnrichmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public Object throttlingException;
+
     public GetVectorEnrichmentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetVectorEnrichmentJobResponse {
      */
     
     public Object validationException;
+
     public GetVectorEnrichmentJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetVectorEnrichmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

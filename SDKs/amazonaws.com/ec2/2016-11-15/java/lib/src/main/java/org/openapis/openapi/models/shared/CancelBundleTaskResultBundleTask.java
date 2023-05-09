@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CancelBundleTaskResultBundleTask {
     
     public String bundleId;
+
     public CancelBundleTaskResultBundleTask withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -19,6 +20,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public CancelBundleTaskResultBundleTaskBundleTaskError bundleTaskError;
+
     public CancelBundleTaskResultBundleTask withBundleTaskError(CancelBundleTaskResultBundleTaskBundleTaskError bundleTaskError) {
         this.bundleTaskError = bundleTaskError;
         return this;
@@ -26,6 +28,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public String instanceId;
+
     public CancelBundleTaskResultBundleTask withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,6 +36,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public String progress;
+
     public CancelBundleTaskResultBundleTask withProgress(String progress) {
         this.progress = progress;
         return this;
@@ -40,6 +44,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public OffsetDateTime startTime;
+
     public CancelBundleTaskResultBundleTask withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -47,6 +52,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public CancelBundleTaskResultBundleTaskStateEnum state;
+
     public CancelBundleTaskResultBundleTask withState(CancelBundleTaskResultBundleTaskStateEnum state) {
         this.state = state;
         return this;
@@ -54,6 +60,7 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public CancelBundleTaskResultBundleTaskStorage storage;
+
     public CancelBundleTaskResultBundleTask withStorage(CancelBundleTaskResultBundleTaskStorage storage) {
         this.storage = storage;
         return this;
@@ -61,9 +68,11 @@ public class CancelBundleTaskResultBundleTask {
     
     
     public OffsetDateTime updateTime;
+
     public CancelBundleTaskResultBundleTask withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public CancelBundleTaskResultBundleTask(){}
 }

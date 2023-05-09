@@ -62,11 +62,9 @@ public class Registrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomRegistrationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomRegistrationsCreateResponse() {{
+        org.openapis.openapi.models.operations.ClassroomRegistrationsCreateResponse res = new org.openapis.openapi.models.operations.ClassroomRegistrationsCreateResponse(contentType, httpRes.statusCode()) {{
             registration = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Registrations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ClassroomRegistrationsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomRegistrationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ClassroomRegistrationsDeleteResponse res = new org.openapis.openapi.models.operations.ClassroomRegistrationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

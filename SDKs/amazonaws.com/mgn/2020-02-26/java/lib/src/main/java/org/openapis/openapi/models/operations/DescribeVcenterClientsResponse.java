@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeVcenterClientsResponse {
     
     public String contentType;
+
     public DescribeVcenterClientsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeVcenterClientsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeVcenterClientsResponse describeVcenterClientsResponse;
+
     public DescribeVcenterClientsResponse withDescribeVcenterClientsResponse(org.openapis.openapi.models.shared.DescribeVcenterClientsResponse describeVcenterClientsResponse) {
         this.describeVcenterClientsResponse = describeVcenterClientsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeVcenterClientsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeVcenterClientsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeVcenterClientsResponse {
     
     
     public Integer statusCode;
+
     public DescribeVcenterClientsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeVcenterClientsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeVcenterClientsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DescribeVcenterClientsResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DescribeVcenterClientsResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class DescribeVcenterClientsResponse {
      */
     
     public Object validationException;
+
     public DescribeVcenterClientsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeVcenterClientsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

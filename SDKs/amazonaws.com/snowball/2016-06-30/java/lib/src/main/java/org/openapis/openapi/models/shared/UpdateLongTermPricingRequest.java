@@ -12,6 +12,7 @@ public class UpdateLongTermPricingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsLongTermPricingAutoRenew")
     public Boolean isLongTermPricingAutoRenew;
+
     public UpdateLongTermPricingRequest withIsLongTermPricingAutoRenew(Boolean isLongTermPricingAutoRenew) {
         this.isLongTermPricingAutoRenew = isLongTermPricingAutoRenew;
         return this;
@@ -19,6 +20,7 @@ public class UpdateLongTermPricingRequest {
     
     @JsonProperty("LongTermPricingId")
     public String longTermPricingId;
+
     public UpdateLongTermPricingRequest withLongTermPricingId(String longTermPricingId) {
         this.longTermPricingId = longTermPricingId;
         return this;
@@ -27,9 +29,13 @@ public class UpdateLongTermPricingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplacementJob")
     public String replacementJob;
+
     public UpdateLongTermPricingRequest withReplacementJob(String replacementJob) {
         this.replacementJob = replacementJob;
         return this;
     }
     
+    public UpdateLongTermPricingRequest(@JsonProperty("LongTermPricingId") String longTermPricingId) {
+        this.longTermPricingId = longTermPricingId;
+  }
 }

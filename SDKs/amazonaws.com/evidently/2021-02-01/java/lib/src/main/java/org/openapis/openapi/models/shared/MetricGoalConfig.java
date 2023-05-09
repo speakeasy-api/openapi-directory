@@ -15,6 +15,7 @@ public class MetricGoalConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("desiredChange")
     public ChangeDirectionEnumEnum desiredChange;
+
     public MetricGoalConfig withDesiredChange(ChangeDirectionEnumEnum desiredChange) {
         this.desiredChange = desiredChange;
         return this;
@@ -22,9 +23,13 @@ public class MetricGoalConfig {
     
     @JsonProperty("metricDefinition")
     public MetricDefinitionConfig metricDefinition;
+
     public MetricGoalConfig withMetricDefinition(MetricDefinitionConfig metricDefinition) {
         this.metricDefinition = metricDefinition;
         return this;
     }
     
+    public MetricGoalConfig(@JsonProperty("metricDefinition") MetricDefinitionConfig metricDefinition) {
+        this.metricDefinition = metricDefinition;
+  }
 }

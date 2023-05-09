@@ -15,9 +15,11 @@ public class ValidationData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Assets")
     public Asset[] assets;
+
     public ValidationData withAssets(Asset[] assets) {
         this.assets = assets;
         return this;
     }
     
+    public ValidationData(){}
 }

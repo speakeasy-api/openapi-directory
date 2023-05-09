@@ -15,9 +15,13 @@ public class GetRecommenderConfigurationResponse {
      */
     @JsonProperty("RecommenderConfigurationResponse")
     public RecommenderConfigurationResponse recommenderConfigurationResponse;
+
     public GetRecommenderConfigurationResponse withRecommenderConfigurationResponse(RecommenderConfigurationResponse recommenderConfigurationResponse) {
         this.recommenderConfigurationResponse = recommenderConfigurationResponse;
         return this;
     }
     
+    public GetRecommenderConfigurationResponse(@JsonProperty("RecommenderConfigurationResponse") RecommenderConfigurationResponse recommenderConfigurationResponse) {
+        this.recommenderConfigurationResponse = recommenderConfigurationResponse;
+  }
 }

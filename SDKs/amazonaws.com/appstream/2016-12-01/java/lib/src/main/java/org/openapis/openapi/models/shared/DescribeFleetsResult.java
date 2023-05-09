@@ -15,6 +15,7 @@ public class DescribeFleetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Fleets")
     public Fleet[] fleets;
+
     public DescribeFleetsResult withFleets(Fleet[] fleets) {
         this.fleets = fleets;
         return this;
@@ -23,9 +24,11 @@ public class DescribeFleetsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeFleetsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeFleetsResult(){}
 }

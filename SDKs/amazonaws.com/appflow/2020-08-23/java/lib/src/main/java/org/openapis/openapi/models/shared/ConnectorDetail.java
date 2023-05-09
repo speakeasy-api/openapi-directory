@@ -20,6 +20,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationType")
     public String applicationType;
+
     public ConnectorDetail withApplicationType(String applicationType) {
         this.applicationType = applicationType;
         return this;
@@ -28,6 +29,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorDescription")
     public String connectorDescription;
+
     public ConnectorDetail withConnectorDescription(String connectorDescription) {
         this.connectorDescription = connectorDescription;
         return this;
@@ -36,6 +38,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorLabel")
     public String connectorLabel;
+
     public ConnectorDetail withConnectorLabel(String connectorLabel) {
         this.connectorLabel = connectorLabel;
         return this;
@@ -44,6 +47,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorModes")
     public String[] connectorModes;
+
     public ConnectorDetail withConnectorModes(String[] connectorModes) {
         this.connectorModes = connectorModes;
         return this;
@@ -52,6 +56,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorName")
     public String connectorName;
+
     public ConnectorDetail withConnectorName(String connectorName) {
         this.connectorName = connectorName;
         return this;
@@ -60,6 +65,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorOwner")
     public String connectorOwner;
+
     public ConnectorDetail withConnectorOwner(String connectorOwner) {
         this.connectorOwner = connectorOwner;
         return this;
@@ -68,6 +74,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorProvisioningType")
     public ConnectorProvisioningTypeEnum connectorProvisioningType;
+
     public ConnectorDetail withConnectorProvisioningType(ConnectorProvisioningTypeEnum connectorProvisioningType) {
         this.connectorProvisioningType = connectorProvisioningType;
         return this;
@@ -76,6 +83,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorType")
     public ConnectorTypeEnum connectorType;
+
     public ConnectorDetail withConnectorType(ConnectorTypeEnum connectorType) {
         this.connectorType = connectorType;
         return this;
@@ -84,6 +92,7 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorVersion")
     public String connectorVersion;
+
     public ConnectorDetail withConnectorVersion(String connectorVersion) {
         this.connectorVersion = connectorVersion;
         return this;
@@ -94,6 +103,7 @@ public class ConnectorDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("registeredAt")
     public OffsetDateTime registeredAt;
+
     public ConnectorDetail withRegisteredAt(OffsetDateTime registeredAt) {
         this.registeredAt = registeredAt;
         return this;
@@ -102,9 +112,11 @@ public class ConnectorDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registeredBy")
     public String registeredBy;
+
     public ConnectorDetail withRegisteredBy(String registeredBy) {
         this.registeredBy = registeredBy;
         return this;
     }
     
+    public ConnectorDetail(){}
 }

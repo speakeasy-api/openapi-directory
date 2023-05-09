@@ -15,9 +15,11 @@ public class ResourcePolicyResourceStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSchedulePolicy")
     public ResourcePolicyResourceStatusInstanceSchedulePolicyStatus instanceSchedulePolicy;
+
     public ResourcePolicyResourceStatus withInstanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatus instanceSchedulePolicy) {
         this.instanceSchedulePolicy = instanceSchedulePolicy;
         return this;
     }
     
+    public ResourcePolicyResourceStatus(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IsKeywordAvailableResponse {
     
     public String contentType;
+
     public IsKeywordAvailableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IsKeywordAvailableResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public IsKeywordAvailableResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class IsKeywordAvailableResponse {
     
     
     public Integer statusCode;
+
     public IsKeywordAvailableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class IsKeywordAvailableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IsKeywordAvailableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class IsKeywordAvailableResponse {
      */
     
     public Boolean isKeywordAvailable200ApplicationJSONBoolean;
+
     public IsKeywordAvailableResponse withIsKeywordAvailable200ApplicationJSONBoolean(Boolean isKeywordAvailable200ApplicationJSONBoolean) {
         this.isKeywordAvailable200ApplicationJSONBoolean = isKeywordAvailable200ApplicationJSONBoolean;
         return this;
     }
     
+    public IsKeywordAvailableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

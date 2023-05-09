@@ -21,6 +21,7 @@ public class BatchDescribeModelPackageSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public BatchDescribeModelPackageSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -31,6 +32,7 @@ public class BatchDescribeModelPackageSummary {
      */
     @JsonProperty("InferenceSpecification")
     public InferenceSpecification inferenceSpecification;
+
     public BatchDescribeModelPackageSummary withInferenceSpecification(InferenceSpecification inferenceSpecification) {
         this.inferenceSpecification = inferenceSpecification;
         return this;
@@ -39,6 +41,7 @@ public class BatchDescribeModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelApprovalStatus")
     public ModelApprovalStatusEnum modelApprovalStatus;
+
     public BatchDescribeModelPackageSummary withModelApprovalStatus(ModelApprovalStatusEnum modelApprovalStatus) {
         this.modelApprovalStatus = modelApprovalStatus;
         return this;
@@ -46,6 +49,7 @@ public class BatchDescribeModelPackageSummary {
     
     @JsonProperty("ModelPackageArn")
     public String modelPackageArn;
+
     public BatchDescribeModelPackageSummary withModelPackageArn(String modelPackageArn) {
         this.modelPackageArn = modelPackageArn;
         return this;
@@ -54,6 +58,7 @@ public class BatchDescribeModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageDescription")
     public String modelPackageDescription;
+
     public BatchDescribeModelPackageSummary withModelPackageDescription(String modelPackageDescription) {
         this.modelPackageDescription = modelPackageDescription;
         return this;
@@ -61,6 +66,7 @@ public class BatchDescribeModelPackageSummary {
     
     @JsonProperty("ModelPackageGroupName")
     public String modelPackageGroupName;
+
     public BatchDescribeModelPackageSummary withModelPackageGroupName(String modelPackageGroupName) {
         this.modelPackageGroupName = modelPackageGroupName;
         return this;
@@ -68,6 +74,7 @@ public class BatchDescribeModelPackageSummary {
     
     @JsonProperty("ModelPackageStatus")
     public ModelPackageStatusEnum modelPackageStatus;
+
     public BatchDescribeModelPackageSummary withModelPackageStatus(ModelPackageStatusEnum modelPackageStatus) {
         this.modelPackageStatus = modelPackageStatus;
         return this;
@@ -76,9 +83,17 @@ public class BatchDescribeModelPackageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPackageVersion")
     public Long modelPackageVersion;
+
     public BatchDescribeModelPackageSummary withModelPackageVersion(Long modelPackageVersion) {
         this.modelPackageVersion = modelPackageVersion;
         return this;
     }
     
+    public BatchDescribeModelPackageSummary(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("InferenceSpecification") InferenceSpecification inferenceSpecification, @JsonProperty("ModelPackageArn") String modelPackageArn, @JsonProperty("ModelPackageGroupName") String modelPackageGroupName, @JsonProperty("ModelPackageStatus") ModelPackageStatusEnum modelPackageStatus) {
+        this.creationTime = creationTime;
+        this.inferenceSpecification = inferenceSpecification;
+        this.modelPackageArn = modelPackageArn;
+        this.modelPackageGroupName = modelPackageGroupName;
+        this.modelPackageStatus = modelPackageStatus;
+  }
 }

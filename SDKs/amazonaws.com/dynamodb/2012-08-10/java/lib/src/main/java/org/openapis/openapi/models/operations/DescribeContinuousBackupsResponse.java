@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeContinuousBackupsResponse {
     
     public String contentType;
+
     public DescribeContinuousBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeContinuousBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeContinuousBackupsOutput describeContinuousBackupsOutput;
+
     public DescribeContinuousBackupsResponse withDescribeContinuousBackupsOutput(org.openapis.openapi.models.shared.DescribeContinuousBackupsOutput describeContinuousBackupsOutput) {
         this.describeContinuousBackupsOutput = describeContinuousBackupsOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeContinuousBackupsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeContinuousBackupsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeContinuousBackupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeContinuousBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeContinuousBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeContinuousBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DescribeContinuousBackupsResponse {
      */
     
     public Object tableNotFoundException;
+
     public DescribeContinuousBackupsResponse withTableNotFoundException(Object tableNotFoundException) {
         this.tableNotFoundException = tableNotFoundException;
         return this;
     }
     
+    public DescribeContinuousBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

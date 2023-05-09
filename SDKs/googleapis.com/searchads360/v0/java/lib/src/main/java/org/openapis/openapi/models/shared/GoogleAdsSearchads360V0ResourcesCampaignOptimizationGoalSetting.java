@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationGoalTypes")
     public GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSettingOptimizationGoalTypesEnum[] optimizationGoalTypes;
+
     public GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting withOptimizationGoalTypes(GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSettingOptimizationGoalTypesEnum[] optimizationGoalTypes) {
         this.optimizationGoalTypes = optimizationGoalTypes;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting(){}
 }

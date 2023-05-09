@@ -12,6 +12,7 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public UpdatePipelineRequest withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -20,6 +21,7 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinition")
     public String pipelineDefinition;
+
     public UpdatePipelineRequest withPipelineDefinition(String pipelineDefinition) {
         this.pipelineDefinition = pipelineDefinition;
         return this;
@@ -28,6 +30,7 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinitionS3Location")
     public PipelineDefinitionS3Location pipelineDefinitionS3Location;
+
     public UpdatePipelineRequest withPipelineDefinitionS3Location(PipelineDefinitionS3Location pipelineDefinitionS3Location) {
         this.pipelineDefinitionS3Location = pipelineDefinitionS3Location;
         return this;
@@ -36,6 +39,7 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDescription")
     public String pipelineDescription;
+
     public UpdatePipelineRequest withPipelineDescription(String pipelineDescription) {
         this.pipelineDescription = pipelineDescription;
         return this;
@@ -44,6 +48,7 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDisplayName")
     public String pipelineDisplayName;
+
     public UpdatePipelineRequest withPipelineDisplayName(String pipelineDisplayName) {
         this.pipelineDisplayName = pipelineDisplayName;
         return this;
@@ -51,6 +56,7 @@ public class UpdatePipelineRequest {
     
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public UpdatePipelineRequest withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -59,9 +65,13 @@ public class UpdatePipelineRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public UpdatePipelineRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdatePipelineRequest(@JsonProperty("PipelineName") String pipelineName) {
+        this.pipelineName = pipelineName;
+  }
 }

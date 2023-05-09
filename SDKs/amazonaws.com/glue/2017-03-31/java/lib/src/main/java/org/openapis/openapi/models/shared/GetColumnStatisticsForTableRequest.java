@@ -12,6 +12,7 @@ public class GetColumnStatisticsForTableRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public GetColumnStatisticsForTableRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -19,6 +20,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @JsonProperty("ColumnNames")
     public String[] columnNames;
+
     public GetColumnStatisticsForTableRequest withColumnNames(String[] columnNames) {
         this.columnNames = columnNames;
         return this;
@@ -26,6 +28,7 @@ public class GetColumnStatisticsForTableRequest {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetColumnStatisticsForTableRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -33,9 +36,15 @@ public class GetColumnStatisticsForTableRequest {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public GetColumnStatisticsForTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetColumnStatisticsForTableRequest(@JsonProperty("ColumnNames") String[] columnNames, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("TableName") String tableName) {
+        this.columnNames = columnNames;
+        this.databaseName = databaseName;
+        this.tableName = tableName;
+  }
 }

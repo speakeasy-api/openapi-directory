@@ -19,6 +19,7 @@ public class DataPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public DataPoint withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -26,9 +27,14 @@ public class DataPoint {
     
     @JsonProperty("Value")
     public Double value;
+
     public DataPoint withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public DataPoint(@JsonProperty("Timestamp") OffsetDateTime timestamp, @JsonProperty("Value") Double value) {
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

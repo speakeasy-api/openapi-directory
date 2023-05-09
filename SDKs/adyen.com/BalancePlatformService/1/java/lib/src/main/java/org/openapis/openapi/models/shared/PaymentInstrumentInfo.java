@@ -14,6 +14,7 @@ public class PaymentInstrumentInfo {
      */
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public PaymentInstrumentInfo withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -22,6 +23,7 @@ public class PaymentInstrumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("card")
     public CardInfo card;
+
     public PaymentInstrumentInfo withCard(CardInfo card) {
         this.card = card;
         return this;
@@ -33,6 +35,7 @@ public class PaymentInstrumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentInstrumentInfo withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class PaymentInstrumentInfo {
      */
     @JsonProperty("issuingCountryCode")
     public String issuingCountryCode;
+
     public PaymentInstrumentInfo withIssuingCountryCode(String issuingCountryCode) {
         this.issuingCountryCode = issuingCountryCode;
         return this;
@@ -54,6 +58,7 @@ public class PaymentInstrumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentGroupId")
     public String paymentInstrumentGroupId;
+
     public PaymentInstrumentInfo withPaymentInstrumentGroupId(String paymentInstrumentGroupId) {
         this.paymentInstrumentGroupId = paymentInstrumentGroupId;
         return this;
@@ -65,6 +70,7 @@ public class PaymentInstrumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public PaymentInstrumentInfo withReference(String reference) {
         this.reference = reference;
         return this;
@@ -94,6 +100,7 @@ public class PaymentInstrumentInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PaymentInstrumentInfoStatusEnum status;
+
     public PaymentInstrumentInfo withStatus(PaymentInstrumentInfoStatusEnum status) {
         this.status = status;
         return this;
@@ -106,9 +113,15 @@ public class PaymentInstrumentInfo {
      */
     @JsonProperty("type")
     public PaymentInstrumentInfoTypeEnum type;
+
     public PaymentInstrumentInfo withType(PaymentInstrumentInfoTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PaymentInstrumentInfo(@JsonProperty("balanceAccountId") String balanceAccountId, @JsonProperty("issuingCountryCode") String issuingCountryCode, @JsonProperty("type") PaymentInstrumentInfoTypeEnum type) {
+        this.balanceAccountId = balanceAccountId;
+        this.issuingCountryCode = issuingCountryCode;
+        this.type = type;
+  }
 }

@@ -14,6 +14,7 @@ public class CountriesGetv1V1CountriesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country")
     public String[] country;
+
     public CountriesGetv1V1CountriesGetRequest withCountry(String[] country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class CountriesGetv1V1CountriesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=country_id")
     public String countryId;
+
     public CountriesGetv1V1CountriesGetRequest withCountryId(String countryId) {
         this.countryId = countryId;
         return this;
@@ -33,6 +35,7 @@ public class CountriesGetv1V1CountriesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public CountriesGetv1V1CountriesGetRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -40,6 +43,7 @@ public class CountriesGetv1V1CountriesGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public CountriesGetv1V1CountriesGetRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -50,6 +54,7 @@ public class CountriesGetv1V1CountriesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum orderBy;
+
     public CountriesGetv1V1CountriesGetRequest withOrderBy(CountriesGetv1V1CountriesGetOrderByCountriesOrderEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -60,6 +65,7 @@ public class CountriesGetv1V1CountriesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public CountriesGetv1V1CountriesGetRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -70,9 +76,11 @@ public class CountriesGetv1V1CountriesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public CountriesGetv1V1CountriesGetSortSortEnum sort;
+
     public CountriesGetv1V1CountriesGetRequest withSort(CountriesGetv1V1CountriesGetSortSortEnum sort) {
         this.sort = sort;
         return this;
     }
     
+    public CountriesGetv1V1CountriesGetRequest(){}
 }

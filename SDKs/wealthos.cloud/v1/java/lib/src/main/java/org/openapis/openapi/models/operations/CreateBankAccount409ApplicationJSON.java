@@ -17,6 +17,7 @@ public class CreateBankAccount409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public CreateBankAccount409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class CreateBankAccount409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public CreateBankAccount409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class CreateBankAccount409ApplicationJSON {
      */
     @JsonProperty("status")
     public CreateBankAccount409ApplicationJSONStatusEnum status;
+
     public CreateBankAccount409ApplicationJSON withStatus(CreateBankAccount409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateBankAccount409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") CreateBankAccount409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

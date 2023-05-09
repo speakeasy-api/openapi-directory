@@ -15,6 +15,7 @@ public class OSInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OSTypeEnum type;
+
     public OSInfo withType(OSTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class OSInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public OSInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public OSInfo(){}
 }

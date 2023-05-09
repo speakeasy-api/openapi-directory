@@ -18,6 +18,7 @@ public class GoogleCloudWebriskV1SearchHashesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeExpireTime")
     public String negativeExpireTime;
+
     public GoogleCloudWebriskV1SearchHashesResponse withNegativeExpireTime(String negativeExpireTime) {
         this.negativeExpireTime = negativeExpireTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudWebriskV1SearchHashesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threats")
     public GoogleCloudWebriskV1SearchHashesResponseThreatHash[] threats;
+
     public GoogleCloudWebriskV1SearchHashesResponse withThreats(GoogleCloudWebriskV1SearchHashesResponseThreatHash[] threats) {
         this.threats = threats;
         return this;
     }
     
+    public GoogleCloudWebriskV1SearchHashesResponse(){}
 }

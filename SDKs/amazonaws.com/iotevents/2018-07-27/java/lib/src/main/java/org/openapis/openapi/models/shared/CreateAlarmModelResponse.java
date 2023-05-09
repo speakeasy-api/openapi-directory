@@ -20,6 +20,7 @@ public class CreateAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelArn")
     public String alarmModelArn;
+
     public CreateAlarmModelResponse withAlarmModelArn(String alarmModelArn) {
         this.alarmModelArn = alarmModelArn;
         return this;
@@ -28,6 +29,7 @@ public class CreateAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alarmModelVersion")
     public String alarmModelVersion;
+
     public CreateAlarmModelResponse withAlarmModelVersion(String alarmModelVersion) {
         this.alarmModelVersion = alarmModelVersion;
         return this;
@@ -38,6 +40,7 @@ public class CreateAlarmModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CreateAlarmModelResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -48,6 +51,7 @@ public class CreateAlarmModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public CreateAlarmModelResponse withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -56,9 +60,11 @@ public class CreateAlarmModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AlarmModelVersionStatusEnum status;
+
     public CreateAlarmModelResponse withStatus(AlarmModelVersionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateAlarmModelResponse(){}
 }

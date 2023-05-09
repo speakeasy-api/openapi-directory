@@ -15,6 +15,7 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public ChildWorkflowExecutionFailedEventAttributes withDetails(String details) {
         this.details = details;
         return this;
@@ -22,6 +23,7 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("initiatedEventId")
     public Long initiatedEventId;
+
     public ChildWorkflowExecutionFailedEventAttributes withInitiatedEventId(Long initiatedEventId) {
         this.initiatedEventId = initiatedEventId;
         return this;
@@ -30,6 +32,7 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ChildWorkflowExecutionFailedEventAttributes withReason(String reason) {
         this.reason = reason;
         return this;
@@ -37,6 +40,7 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public ChildWorkflowExecutionFailedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
@@ -44,6 +48,7 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("workflowExecution")
     public WorkflowExecution workflowExecution;
+
     public ChildWorkflowExecutionFailedEventAttributes withWorkflowExecution(WorkflowExecution workflowExecution) {
         this.workflowExecution = workflowExecution;
         return this;
@@ -51,9 +56,16 @@ public class ChildWorkflowExecutionFailedEventAttributes {
     
     @JsonProperty("workflowType")
     public WorkflowType workflowType;
+
     public ChildWorkflowExecutionFailedEventAttributes withWorkflowType(WorkflowType workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ChildWorkflowExecutionFailedEventAttributes(@JsonProperty("initiatedEventId") Long initiatedEventId, @JsonProperty("startedEventId") Long startedEventId, @JsonProperty("workflowExecution") WorkflowExecution workflowExecution, @JsonProperty("workflowType") WorkflowType workflowType) {
+        this.initiatedEventId = initiatedEventId;
+        this.startedEventId = startedEventId;
+        this.workflowExecution = workflowExecution;
+        this.workflowType = workflowType;
+  }
 }

@@ -15,6 +15,7 @@ public class LicenseCodeLicenseAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public LicenseCodeLicenseAlias withDescription(String description) {
         this.description = description;
         return this;
@@ -26,9 +27,11 @@ public class LicenseCodeLicenseAlias {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public LicenseCodeLicenseAlias withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public LicenseCodeLicenseAlias(){}
 }

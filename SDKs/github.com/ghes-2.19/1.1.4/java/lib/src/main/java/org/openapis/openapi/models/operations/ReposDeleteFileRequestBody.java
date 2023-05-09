@@ -15,6 +15,7 @@ public class ReposDeleteFileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public ReposDeleteFileRequestBodyAuthor author;
+
     public ReposDeleteFileRequestBody withAuthor(ReposDeleteFileRequestBodyAuthor author) {
         this.author = author;
         return this;
@@ -26,6 +27,7 @@ public class ReposDeleteFileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branch")
     public String branch;
+
     public ReposDeleteFileRequestBody withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -37,6 +39,7 @@ public class ReposDeleteFileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer")
     public ReposDeleteFileRequestBodyCommitter committer;
+
     public ReposDeleteFileRequestBody withCommitter(ReposDeleteFileRequestBodyCommitter committer) {
         this.committer = committer;
         return this;
@@ -47,6 +50,7 @@ public class ReposDeleteFileRequestBody {
      */
     @JsonProperty("message")
     public String message;
+
     public ReposDeleteFileRequestBody withMessage(String message) {
         this.message = message;
         return this;
@@ -57,9 +61,14 @@ public class ReposDeleteFileRequestBody {
      */
     @JsonProperty("sha")
     public String sha;
+
     public ReposDeleteFileRequestBody withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public ReposDeleteFileRequestBody(@JsonProperty("message") String message, @JsonProperty("sha") String sha) {
+        this.message = message;
+        this.sha = sha;
+  }
 }

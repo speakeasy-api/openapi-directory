@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServerStrategiesResponse {
@@ -12,6 +13,7 @@ public class GetServerStrategiesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServerStrategiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetServerStrategiesResponse {
     
     
     public String contentType;
+
     public GetServerStrategiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetServerStrategiesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServerStrategiesResponse getServerStrategiesResponse;
+
     public GetServerStrategiesResponse withGetServerStrategiesResponse(org.openapis.openapi.models.shared.GetServerStrategiesResponse getServerStrategiesResponse) {
         this.getServerStrategiesResponse = getServerStrategiesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetServerStrategiesResponse {
      */
     
     public Object internalServerException;
+
     public GetServerStrategiesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetServerStrategiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetServerStrategiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetServerStrategiesResponse {
     
     
     public Integer statusCode;
+
     public GetServerStrategiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetServerStrategiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServerStrategiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetServerStrategiesResponse {
      */
     
     public Object throttlingException;
+
     public GetServerStrategiesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetServerStrategiesResponse {
      */
     
     public Object validationException;
+
     public GetServerStrategiesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetServerStrategiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

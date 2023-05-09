@@ -15,6 +15,7 @@ public class SearchIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchIndexResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class SearchIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingGroups")
     public ThingGroupDocument[] thingGroups;
+
     public SearchIndexResponse withThingGroups(ThingGroupDocument[] thingGroups) {
         this.thingGroups = thingGroups;
         return this;
@@ -31,9 +33,11 @@ public class SearchIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("things")
     public ThingDocument[] things;
+
     public SearchIndexResponse withThings(ThingDocument[] things) {
         this.things = things;
         return this;
     }
     
+    public SearchIndexResponse(){}
 }

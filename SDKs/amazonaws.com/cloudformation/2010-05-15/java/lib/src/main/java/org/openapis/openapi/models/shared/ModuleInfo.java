@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModuleInfo {
     
     public String logicalIdHierarchy;
+
     public ModuleInfo withLogicalIdHierarchy(String logicalIdHierarchy) {
         this.logicalIdHierarchy = logicalIdHierarchy;
         return this;
@@ -19,9 +20,11 @@ public class ModuleInfo {
     
     
     public String typeHierarchy;
+
     public ModuleInfo withTypeHierarchy(String typeHierarchy) {
         this.typeHierarchy = typeHierarchy;
         return this;
     }
     
+    public ModuleInfo(){}
 }

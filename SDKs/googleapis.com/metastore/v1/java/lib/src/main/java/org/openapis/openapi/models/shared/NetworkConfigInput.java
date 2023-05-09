@@ -18,9 +18,11 @@ public class NetworkConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumers")
     public ConsumerInput[] consumers;
+
     public NetworkConfigInput withConsumers(ConsumerInput[] consumers) {
         this.consumers = consumers;
         return this;
     }
     
+    public NetworkConfigInput(){}
 }

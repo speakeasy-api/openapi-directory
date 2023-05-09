@@ -15,9 +15,11 @@ public class GetAllPostsChanges200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changes")
     public GetAllPostsChanges200ApplicationJSONChanges[] changes;
+
     public GetAllPostsChanges200ApplicationJSON withChanges(GetAllPostsChanges200ApplicationJSONChanges[] changes) {
         this.changes = changes;
         return this;
     }
     
+    public GetAllPostsChanges200ApplicationJSON(){}
 }

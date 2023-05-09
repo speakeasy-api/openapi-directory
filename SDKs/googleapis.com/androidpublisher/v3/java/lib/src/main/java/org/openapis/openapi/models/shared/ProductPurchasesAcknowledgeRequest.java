@@ -18,9 +18,11 @@ public class ProductPurchasesAcknowledgeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("developerPayload")
     public String developerPayload;
+
     public ProductPurchasesAcknowledgeRequest withDeveloperPayload(String developerPayload) {
         this.developerPayload = developerPayload;
         return this;
     }
     
+    public ProductPurchasesAcknowledgeRequest(){}
 }

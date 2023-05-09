@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MediaTabularExtractsheetRequest;
 import org.openapis.openapi.models.operations.MediaTabularExtractsheetResponse;
 
@@ -13,11 +12,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MediaTabularExtractsheetRequest req = new MediaTabularExtractsheetRequest() {{
-                arg1 = "corrupti";
-                entryid = "provident";
-                output = "distinctio";
-            }}            
+            MediaTabularExtractsheetRequest req = new MediaTabularExtractsheetRequest("corrupti", "provident") {{
+                arg1 = "distinctio";
+            }};            
 
             MediaTabularExtractsheetResponse res = sdk.serviceMediaTabularExtractsheet.mediaTabularExtractsheet(req);
 
@@ -27,5 +24,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

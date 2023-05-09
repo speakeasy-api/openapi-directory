@@ -56,11 +56,9 @@ public class Webfonts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.WebfontsWebfontsListResponse res = new org.openapis.openapi.models.operations.WebfontsWebfontsListResponse() {{
+        org.openapis.openapi.models.operations.WebfontsWebfontsListResponse res = new org.openapis.openapi.models.operations.WebfontsWebfontsListResponse(contentType, httpRes.statusCode()) {{
             webfontList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

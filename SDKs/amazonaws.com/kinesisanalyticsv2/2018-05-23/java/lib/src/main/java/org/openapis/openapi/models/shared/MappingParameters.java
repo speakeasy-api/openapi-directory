@@ -15,6 +15,7 @@ public class MappingParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSVMappingParameters")
     public CSVMappingParameters csvMappingParameters;
+
     public MappingParameters withCSVMappingParameters(CSVMappingParameters csvMappingParameters) {
         this.csvMappingParameters = csvMappingParameters;
         return this;
@@ -23,9 +24,11 @@ public class MappingParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JSONMappingParameters")
     public JSONMappingParameters jsonMappingParameters;
+
     public MappingParameters withJSONMappingParameters(JSONMappingParameters jsonMappingParameters) {
         this.jsonMappingParameters = jsonMappingParameters;
         return this;
     }
     
+    public MappingParameters(){}
 }

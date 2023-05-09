@@ -15,6 +15,7 @@ public class ModuleLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public ModuleLoggingConfiguration withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -23,6 +24,7 @@ public class ModuleLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public ModuleLoggingConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -31,9 +33,11 @@ public class ModuleLoggingConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogLevel")
     public LoggingLevelEnum logLevel;
+
     public ModuleLoggingConfiguration withLogLevel(LoggingLevelEnum logLevel) {
         this.logLevel = logLevel;
         return this;
     }
     
+    public ModuleLoggingConfiguration(){}
 }

@@ -15,6 +15,7 @@ public class LoggingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectorDebugOptions")
     public DetectorDebugOption[] detectorDebugOptions;
+
     public LoggingOptions withDetectorDebugOptions(DetectorDebugOption[] detectorDebugOptions) {
         this.detectorDebugOptions = detectorDebugOptions;
         return this;
@@ -22,6 +23,7 @@ public class LoggingOptions {
     
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public LoggingOptions withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,6 +31,7 @@ public class LoggingOptions {
     
     @JsonProperty("level")
     public LoggingLevelEnum level;
+
     public LoggingOptions withLevel(LoggingLevelEnum level) {
         this.level = level;
         return this;
@@ -36,9 +39,15 @@ public class LoggingOptions {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public LoggingOptions withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public LoggingOptions(@JsonProperty("enabled") Boolean enabled, @JsonProperty("level") LoggingLevelEnum level, @JsonProperty("roleArn") String roleArn) {
+        this.enabled = enabled;
+        this.level = level;
+        this.roleArn = roleArn;
+  }
 }

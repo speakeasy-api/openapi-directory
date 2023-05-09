@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOntologyTermGraphRequest {
@@ -12,6 +13,7 @@ public class GetOntologyTermGraphRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=graph_type")
     public GetOntologyTermGraphGraphTypeEnum graphType;
+
     public GetOntologyTermGraphRequest withGraphType(GetOntologyTermGraphGraphTypeEnum graphType) {
         this.graphType = graphType;
         return this;
@@ -22,9 +24,13 @@ public class GetOntologyTermGraphRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetOntologyTermGraphRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetOntologyTermGraphRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

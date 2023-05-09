@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEndpointGroupResponse {
     
     public String contentType;
+
     public DeleteEndpointGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEndpointGroupResponse {
      */
     
     public Object endpointGroupNotFoundException;
+
     public DeleteEndpointGroupResponse withEndpointGroupNotFoundException(Object endpointGroupNotFoundException) {
         this.endpointGroupNotFoundException = endpointGroupNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEndpointGroupResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteEndpointGroupResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteEndpointGroupResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteEndpointGroupResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteEndpointGroupResponse {
     
     
     public Integer statusCode;
+
     public DeleteEndpointGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteEndpointGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEndpointGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteEndpointGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

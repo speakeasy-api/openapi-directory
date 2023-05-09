@@ -18,6 +18,7 @@ public class TargetsTypeCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDetails")
     public String errorDetails;
+
     public TargetsTypeCondition withErrorDetails(String errorDetails) {
         this.errorDetails = errorDetails;
         return this;
@@ -29,9 +30,11 @@ public class TargetsTypeCondition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Boolean status;
+
     public TargetsTypeCondition withStatus(Boolean status) {
         this.status = status;
         return this;
     }
     
+    public TargetsTypeCondition(){}
 }

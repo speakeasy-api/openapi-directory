@@ -12,6 +12,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background_color")
     public String backgroundColor;
+
     public CTASettings withBackgroundColor(String backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
@@ -20,6 +21,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button_background_color")
     public String buttonBackgroundColor;
+
     public CTASettings withButtonBackgroundColor(String buttonBackgroundColor) {
         this.buttonBackgroundColor = buttonBackgroundColor;
         return this;
@@ -28,6 +30,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button_color")
     public String buttonColor;
+
     public CTASettings withButtonColor(String buttonColor) {
         this.buttonColor = buttonColor;
         return this;
@@ -36,6 +39,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button_label")
     public String buttonLabel;
+
     public CTASettings withButtonLabel(String buttonLabel) {
         this.buttonLabel = buttonLabel;
         return this;
@@ -44,6 +48,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button_link")
     public String buttonLink;
+
     public CTASettings withButtonLink(String buttonLink) {
         this.buttonLink = buttonLink;
         return this;
@@ -52,6 +57,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public CTASettings withColor(String color) {
         this.color = color;
         return this;
@@ -60,6 +66,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CTASettings withDescription(String description) {
         this.description = description;
         return this;
@@ -68,6 +75,7 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public CTASettings withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -76,9 +84,11 @@ public class CTASettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CTASettings withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CTASettings(){}
 }

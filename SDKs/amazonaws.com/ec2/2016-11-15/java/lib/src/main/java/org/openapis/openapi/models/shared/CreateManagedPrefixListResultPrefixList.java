@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateManagedPrefixListResultPrefixList {
     
     public String addressFamily;
+
     public CreateManagedPrefixListResultPrefixList withAddressFamily(String addressFamily) {
         this.addressFamily = addressFamily;
         return this;
@@ -19,6 +20,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public Long maxEntries;
+
     public CreateManagedPrefixListResultPrefixList withMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
         return this;
@@ -26,6 +28,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public String ownerId;
+
     public CreateManagedPrefixListResultPrefixList withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public String prefixListArn;
+
     public CreateManagedPrefixListResultPrefixList withPrefixListArn(String prefixListArn) {
         this.prefixListArn = prefixListArn;
         return this;
@@ -40,6 +44,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public String prefixListId;
+
     public CreateManagedPrefixListResultPrefixList withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -47,6 +52,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public String prefixListName;
+
     public CreateManagedPrefixListResultPrefixList withPrefixListName(String prefixListName) {
         this.prefixListName = prefixListName;
         return this;
@@ -54,6 +60,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public CreateManagedPrefixListResultPrefixListStateEnum state;
+
     public CreateManagedPrefixListResultPrefixList withState(CreateManagedPrefixListResultPrefixListStateEnum state) {
         this.state = state;
         return this;
@@ -61,6 +68,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public String stateMessage;
+
     public CreateManagedPrefixListResultPrefixList withStateMessage(String stateMessage) {
         this.stateMessage = stateMessage;
         return this;
@@ -68,6 +76,7 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public CreateManagedPrefixListResultPrefixListTags[] tags;
+
     public CreateManagedPrefixListResultPrefixList withTags(CreateManagedPrefixListResultPrefixListTags[] tags) {
         this.tags = tags;
         return this;
@@ -75,9 +84,11 @@ public class CreateManagedPrefixListResultPrefixList {
     
     
     public Long version;
+
     public CreateManagedPrefixListResultPrefixList withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public CreateManagedPrefixListResultPrefixList(){}
 }

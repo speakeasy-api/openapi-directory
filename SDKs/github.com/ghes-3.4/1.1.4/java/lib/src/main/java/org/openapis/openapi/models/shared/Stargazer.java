@@ -19,6 +19,7 @@ public class Stargazer {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("starred_at")
     public OffsetDateTime starredAt;
+
     public Stargazer withStarredAt(OffsetDateTime starredAt) {
         this.starredAt = starredAt;
         return this;
@@ -29,9 +30,14 @@ public class Stargazer {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public Stargazer withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public Stargazer(@JsonProperty("starred_at") OffsetDateTime starredAt, @JsonProperty("user") NullableSimpleUser user) {
+        this.starredAt = starredAt;
+        this.user = user;
+  }
 }

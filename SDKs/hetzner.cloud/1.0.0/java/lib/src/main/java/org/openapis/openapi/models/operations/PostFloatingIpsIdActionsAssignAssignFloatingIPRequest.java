@@ -20,9 +20,13 @@ public class PostFloatingIpsIdActionsAssignAssignFloatingIPRequest {
      */
     @JsonProperty("server")
     public Long server;
+
     public PostFloatingIpsIdActionsAssignAssignFloatingIPRequest withServer(Long server) {
         this.server = server;
         return this;
     }
     
+    public PostFloatingIpsIdActionsAssignAssignFloatingIPRequest(@JsonProperty("server") Long server) {
+        this.server = server;
+  }
 }

@@ -18,6 +18,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceleratorConfigs")
     public AcceleratorConfig[] acceleratorConfigs;
+
     public AcceleratorType withAcceleratorConfigs(AcceleratorConfig[] acceleratorConfigs) {
         this.acceleratorConfigs = acceleratorConfigs;
         return this;
@@ -29,6 +30,7 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AcceleratorType withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class AcceleratorType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public AcceleratorType withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AcceleratorType(){}
 }

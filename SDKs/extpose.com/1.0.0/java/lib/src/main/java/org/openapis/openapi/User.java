@@ -35,10 +35,11 @@ public class User {
     /**
      * Get User Extensions
      * This endpoint allows you to get list of your extensions including extensions from the watchlist.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetUserExtensionsResponse getUserExtensions() throws Exception {
+    public org.openapis.openapi.models.operations.GetUserExtensionsResponse getUserExtensions(org.openapis.openapi.models.operations.GetUserExtensionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/user-extensions");
         
@@ -47,16 +48,15 @@ public class User {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUserExtensionsResponse res = new org.openapis.openapi.models.operations.GetUserExtensionsResponse() {{
+        org.openapis.openapi.models.operations.GetUserExtensionsResponse res = new org.openapis.openapi.models.operations.GetUserExtensionsResponse(contentType, httpRes.statusCode()) {{
             extensions = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

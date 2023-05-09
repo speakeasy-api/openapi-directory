@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTrailResponse {
@@ -12,6 +13,7 @@ public class CreateTrailResponse {
      */
     
     public Object cloudTrailAccessNotEnabledException;
+
     public CreateTrailResponse withCloudTrailAccessNotEnabledException(Object cloudTrailAccessNotEnabledException) {
         this.cloudTrailAccessNotEnabledException = cloudTrailAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTrailResponse {
      */
     
     public Object cloudTrailInvalidClientTokenIdException;
+
     public CreateTrailResponse withCloudTrailInvalidClientTokenIdException(Object cloudTrailInvalidClientTokenIdException) {
         this.cloudTrailInvalidClientTokenIdException = cloudTrailInvalidClientTokenIdException;
         return this;
@@ -32,6 +35,7 @@ public class CreateTrailResponse {
      */
     
     public Object cloudWatchLogsDeliveryUnavailableException;
+
     public CreateTrailResponse withCloudWatchLogsDeliveryUnavailableException(Object cloudWatchLogsDeliveryUnavailableException) {
         this.cloudWatchLogsDeliveryUnavailableException = cloudWatchLogsDeliveryUnavailableException;
         return this;
@@ -42,6 +46,7 @@ public class CreateTrailResponse {
      */
     
     public Object conflictException;
+
     public CreateTrailResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTrailResponse {
     
     
     public String contentType;
+
     public CreateTrailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateTrailResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTrailResponse createTrailResponse;
+
     public CreateTrailResponse withCreateTrailResponse(org.openapis.openapi.models.shared.CreateTrailResponse createTrailResponse) {
         this.createTrailResponse = createTrailResponse;
         return this;
@@ -69,6 +76,7 @@ public class CreateTrailResponse {
      */
     
     public Object insufficientDependencyServiceAccessPermissionException;
+
     public CreateTrailResponse withInsufficientDependencyServiceAccessPermissionException(Object insufficientDependencyServiceAccessPermissionException) {
         this.insufficientDependencyServiceAccessPermissionException = insufficientDependencyServiceAccessPermissionException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTrailResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public CreateTrailResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTrailResponse {
      */
     
     public Object insufficientS3BucketPolicyException;
+
     public CreateTrailResponse withInsufficientS3BucketPolicyException(Object insufficientS3BucketPolicyException) {
         this.insufficientS3BucketPolicyException = insufficientS3BucketPolicyException;
         return this;
@@ -99,6 +109,7 @@ public class CreateTrailResponse {
      */
     
     public Object insufficientSnsTopicPolicyException;
+
     public CreateTrailResponse withInsufficientSnsTopicPolicyException(Object insufficientSnsTopicPolicyException) {
         this.insufficientSnsTopicPolicyException = insufficientSnsTopicPolicyException;
         return this;
@@ -109,6 +120,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidCloudWatchLogsLogGroupArnException;
+
     public CreateTrailResponse withInvalidCloudWatchLogsLogGroupArnException(Object invalidCloudWatchLogsLogGroupArnException) {
         this.invalidCloudWatchLogsLogGroupArnException = invalidCloudWatchLogsLogGroupArnException;
         return this;
@@ -119,6 +131,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidCloudWatchLogsRoleArnException;
+
     public CreateTrailResponse withInvalidCloudWatchLogsRoleArnException(Object invalidCloudWatchLogsRoleArnException) {
         this.invalidCloudWatchLogsRoleArnException = invalidCloudWatchLogsRoleArnException;
         return this;
@@ -129,6 +142,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidKmsKeyIdException;
+
     public CreateTrailResponse withInvalidKmsKeyIdException(Object invalidKmsKeyIdException) {
         this.invalidKmsKeyIdException = invalidKmsKeyIdException;
         return this;
@@ -139,6 +153,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidParameterCombinationException;
+
     public CreateTrailResponse withInvalidParameterCombinationException(Object invalidParameterCombinationException) {
         this.invalidParameterCombinationException = invalidParameterCombinationException;
         return this;
@@ -149,6 +164,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidS3BucketNameException;
+
     public CreateTrailResponse withInvalidS3BucketNameException(Object invalidS3BucketNameException) {
         this.invalidS3BucketNameException = invalidS3BucketNameException;
         return this;
@@ -159,6 +175,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidS3PrefixException;
+
     public CreateTrailResponse withInvalidS3PrefixException(Object invalidS3PrefixException) {
         this.invalidS3PrefixException = invalidS3PrefixException;
         return this;
@@ -169,6 +186,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidSnsTopicNameException;
+
     public CreateTrailResponse withInvalidSnsTopicNameException(Object invalidSnsTopicNameException) {
         this.invalidSnsTopicNameException = invalidSnsTopicNameException;
         return this;
@@ -179,6 +197,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidTagParameterException;
+
     public CreateTrailResponse withInvalidTagParameterException(Object invalidTagParameterException) {
         this.invalidTagParameterException = invalidTagParameterException;
         return this;
@@ -189,6 +208,7 @@ public class CreateTrailResponse {
      */
     
     public Object invalidTrailNameException;
+
     public CreateTrailResponse withInvalidTrailNameException(Object invalidTrailNameException) {
         this.invalidTrailNameException = invalidTrailNameException;
         return this;
@@ -199,6 +219,7 @@ public class CreateTrailResponse {
      */
     
     public Object kmsException;
+
     public CreateTrailResponse withKmsException(Object kmsException) {
         this.kmsException = kmsException;
         return this;
@@ -209,6 +230,7 @@ public class CreateTrailResponse {
      */
     
     public Object kmsKeyDisabledException;
+
     public CreateTrailResponse withKmsKeyDisabledException(Object kmsKeyDisabledException) {
         this.kmsKeyDisabledException = kmsKeyDisabledException;
         return this;
@@ -219,6 +241,7 @@ public class CreateTrailResponse {
      */
     
     public Object kmsKeyNotFoundException;
+
     public CreateTrailResponse withKmsKeyNotFoundException(Object kmsKeyNotFoundException) {
         this.kmsKeyNotFoundException = kmsKeyNotFoundException;
         return this;
@@ -229,6 +252,7 @@ public class CreateTrailResponse {
      */
     
     public Object maximumNumberOfTrailsExceededException;
+
     public CreateTrailResponse withMaximumNumberOfTrailsExceededException(Object maximumNumberOfTrailsExceededException) {
         this.maximumNumberOfTrailsExceededException = maximumNumberOfTrailsExceededException;
         return this;
@@ -239,6 +263,7 @@ public class CreateTrailResponse {
      */
     
     public Object noManagementAccountSLRExistsException;
+
     public CreateTrailResponse withNoManagementAccountSLRExistsException(Object noManagementAccountSLRExistsException) {
         this.noManagementAccountSLRExistsException = noManagementAccountSLRExistsException;
         return this;
@@ -249,6 +274,7 @@ public class CreateTrailResponse {
      */
     
     public Object notOrganizationMasterAccountException;
+
     public CreateTrailResponse withNotOrganizationMasterAccountException(Object notOrganizationMasterAccountException) {
         this.notOrganizationMasterAccountException = notOrganizationMasterAccountException;
         return this;
@@ -259,6 +285,7 @@ public class CreateTrailResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateTrailResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -269,6 +296,7 @@ public class CreateTrailResponse {
      */
     
     public Object organizationNotInAllFeaturesModeException;
+
     public CreateTrailResponse withOrganizationNotInAllFeaturesModeException(Object organizationNotInAllFeaturesModeException) {
         this.organizationNotInAllFeaturesModeException = organizationNotInAllFeaturesModeException;
         return this;
@@ -279,6 +307,7 @@ public class CreateTrailResponse {
      */
     
     public Object organizationsNotInUseException;
+
     public CreateTrailResponse withOrganizationsNotInUseException(Object organizationsNotInUseException) {
         this.organizationsNotInUseException = organizationsNotInUseException;
         return this;
@@ -289,6 +318,7 @@ public class CreateTrailResponse {
      */
     
     public Object s3BucketDoesNotExistException;
+
     public CreateTrailResponse withS3BucketDoesNotExistException(Object s3BucketDoesNotExistException) {
         this.s3BucketDoesNotExistException = s3BucketDoesNotExistException;
         return this;
@@ -296,6 +326,7 @@ public class CreateTrailResponse {
     
     
     public Integer statusCode;
+
     public CreateTrailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -303,6 +334,7 @@ public class CreateTrailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTrailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -313,6 +345,7 @@ public class CreateTrailResponse {
      */
     
     public Object tagsLimitExceededException;
+
     public CreateTrailResponse withTagsLimitExceededException(Object tagsLimitExceededException) {
         this.tagsLimitExceededException = tagsLimitExceededException;
         return this;
@@ -323,6 +356,7 @@ public class CreateTrailResponse {
      */
     
     public Object trailAlreadyExistsException;
+
     public CreateTrailResponse withTrailAlreadyExistsException(Object trailAlreadyExistsException) {
         this.trailAlreadyExistsException = trailAlreadyExistsException;
         return this;
@@ -333,6 +367,7 @@ public class CreateTrailResponse {
      */
     
     public Object trailNotProvidedException;
+
     public CreateTrailResponse withTrailNotProvidedException(Object trailNotProvidedException) {
         this.trailNotProvidedException = trailNotProvidedException;
         return this;
@@ -343,9 +378,14 @@ public class CreateTrailResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateTrailResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateTrailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

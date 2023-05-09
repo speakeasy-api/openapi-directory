@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateSecurityConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object alreadyExistsException;
+
     public CreateSecurityConfigurationResponse withAlreadyExistsException(Object alreadyExistsException) {
         this.alreadyExistsException = alreadyExistsException;
         return this;
@@ -19,6 +21,7 @@ public class CreateSecurityConfigurationResponse {
     
     
     public String contentType;
+
     public CreateSecurityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateSecurityConfigurationResponse createSecurityConfigurationResponse;
+
     public CreateSecurityConfigurationResponse withCreateSecurityConfigurationResponse(org.openapis.openapi.models.shared.CreateSecurityConfigurationResponse createSecurityConfigurationResponse) {
         this.createSecurityConfigurationResponse = createSecurityConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object internalServiceException;
+
     public CreateSecurityConfigurationResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object invalidInputException;
+
     public CreateSecurityConfigurationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object operationTimeoutException;
+
     public CreateSecurityConfigurationResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -69,6 +76,7 @@ public class CreateSecurityConfigurationResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public CreateSecurityConfigurationResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateSecurityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateSecurityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateSecurityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateSecurityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateSecurityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

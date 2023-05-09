@@ -18,6 +18,7 @@ public class DestinyDefinitionsDestinyInventoryItemStatDefinition {
      */
     
     public Integer displayMaximum;
+
     public DestinyDefinitionsDestinyInventoryItemStatDefinition withDisplayMaximum(Integer displayMaximum) {
         this.displayMaximum = displayMaximum;
         return this;
@@ -29,6 +30,7 @@ public class DestinyDefinitionsDestinyInventoryItemStatDefinition {
      */
     
     public Integer maximum;
+
     public DestinyDefinitionsDestinyInventoryItemStatDefinition withMaximum(Integer maximum) {
         this.maximum = maximum;
         return this;
@@ -39,6 +41,7 @@ public class DestinyDefinitionsDestinyInventoryItemStatDefinition {
      */
     
     public Integer minimum;
+
     public DestinyDefinitionsDestinyInventoryItemStatDefinition withMinimum(Integer minimum) {
         this.minimum = minimum;
         return this;
@@ -49,6 +52,7 @@ public class DestinyDefinitionsDestinyInventoryItemStatDefinition {
      */
     
     public Long statHash;
+
     public DestinyDefinitionsDestinyInventoryItemStatDefinition withStatHash(Long statHash) {
         this.statHash = statHash;
         return this;
@@ -61,9 +65,11 @@ public class DestinyDefinitionsDestinyInventoryItemStatDefinition {
      */
     
     public Integer value;
+
     public DestinyDefinitionsDestinyInventoryItemStatDefinition withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemStatDefinition(){}
 }

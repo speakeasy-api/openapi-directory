@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     @JsonProperty("cost")
     public String cost;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withCost(String cost) {
         this.cost = cost;
         return this;
@@ -16,6 +17,7 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     
     @JsonProperty("costToDisplay")
     public String costToDisplay;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withCostToDisplay(String costToDisplay) {
         this.costToDisplay = costToDisplay;
         return this;
@@ -23,6 +25,7 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     
     @JsonProperty("dockId")
     public String dockId;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -30,6 +33,7 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     
     @JsonProperty("name")
     public String name;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     
     @JsonProperty("time")
     public String time;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withTime(String time) {
         this.time = time;
         return this;
@@ -44,9 +49,18 @@ public class CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock {
     
     @JsonProperty("translateDays")
     public String translateDays;
+
     public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock withTranslateDays(String translateDays) {
         this.translateDays = translateDays;
         return this;
     }
     
+    public CreateUpdateWarehouseCreateUpdateWarehouseRequestWarehouseDock(@JsonProperty("cost") String cost, @JsonProperty("costToDisplay") String costToDisplay, @JsonProperty("dockId") String dockId, @JsonProperty("name") String name, @JsonProperty("time") String time, @JsonProperty("translateDays") String translateDays) {
+        this.cost = cost;
+        this.costToDisplay = costToDisplay;
+        this.dockId = dockId;
+        this.name = name;
+        this.time = time;
+        this.translateDays = translateDays;
+  }
 }

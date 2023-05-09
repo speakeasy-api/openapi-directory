@@ -18,6 +18,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowConflictingSubnetworks")
     public Boolean allowConflictingSubnetworks;
+
     public Route withAllowConflictingSubnetworks(Boolean allowConflictingSubnetworks) {
         this.allowConflictingSubnetworks = allowConflictingSubnetworks;
         return this;
@@ -29,6 +30,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asPaths")
     public RouteAsPath[] asPaths;
+
     public Route withAsPaths(RouteAsPath[] asPaths) {
         this.asPaths = asPaths;
         return this;
@@ -40,6 +42,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Route withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Route withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destRange")
     public String destRange;
+
     public Route withDestRange(String destRange) {
         this.destRange = destRange;
         return this;
@@ -73,6 +78,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Route withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ilbRouteBehaviorOnUnhealthy")
     public RouteIlbRouteBehaviorOnUnhealthyEnum ilbRouteBehaviorOnUnhealthy;
+
     public Route withIlbRouteBehaviorOnUnhealthy(RouteIlbRouteBehaviorOnUnhealthyEnum ilbRouteBehaviorOnUnhealthy) {
         this.ilbRouteBehaviorOnUnhealthy = ilbRouteBehaviorOnUnhealthy;
         return this;
@@ -95,6 +102,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Route withKind(String kind) {
         this.kind = kind;
         return this;
@@ -106,6 +114,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Route withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +126,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public Route withNetwork(String network) {
         this.network = network;
         return this;
@@ -128,6 +138,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopGateway")
     public String nextHopGateway;
+
     public Route withNextHopGateway(String nextHopGateway) {
         this.nextHopGateway = nextHopGateway;
         return this;
@@ -139,6 +150,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopHub")
     public String nextHopHub;
+
     public Route withNextHopHub(String nextHopHub) {
         this.nextHopHub = nextHopHub;
         return this;
@@ -150,6 +162,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopIlb")
     public String nextHopIlb;
+
     public Route withNextHopIlb(String nextHopIlb) {
         this.nextHopIlb = nextHopIlb;
         return this;
@@ -161,6 +174,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopInstance")
     public String nextHopInstance;
+
     public Route withNextHopInstance(String nextHopInstance) {
         this.nextHopInstance = nextHopInstance;
         return this;
@@ -172,6 +186,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopInterconnectAttachment")
     public String nextHopInterconnectAttachment;
+
     public Route withNextHopInterconnectAttachment(String nextHopInterconnectAttachment) {
         this.nextHopInterconnectAttachment = nextHopInterconnectAttachment;
         return this;
@@ -183,6 +198,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopIp")
     public String nextHopIp;
+
     public Route withNextHopIp(String nextHopIp) {
         this.nextHopIp = nextHopIp;
         return this;
@@ -194,6 +210,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopNetwork")
     public String nextHopNetwork;
+
     public Route withNextHopNetwork(String nextHopNetwork) {
         this.nextHopNetwork = nextHopNetwork;
         return this;
@@ -205,6 +222,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopPeering")
     public String nextHopPeering;
+
     public Route withNextHopPeering(String nextHopPeering) {
         this.nextHopPeering = nextHopPeering;
         return this;
@@ -216,6 +234,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHopVpnTunnel")
     public String nextHopVpnTunnel;
+
     public Route withNextHopVpnTunnel(String nextHopVpnTunnel) {
         this.nextHopVpnTunnel = nextHopVpnTunnel;
         return this;
@@ -227,6 +246,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Long priority;
+
     public Route withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -238,6 +258,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeStatus")
     public RouteRouteStatusEnum routeStatus;
+
     public Route withRouteStatus(RouteRouteStatusEnum routeStatus) {
         this.routeStatus = routeStatus;
         return this;
@@ -249,6 +270,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeType")
     public RouteRouteTypeEnum routeType;
+
     public Route withRouteType(RouteRouteTypeEnum routeType) {
         this.routeType = routeType;
         return this;
@@ -260,6 +282,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Route withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -271,6 +294,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public Route withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -282,6 +306,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public Route withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -293,9 +318,11 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public RouteWarnings[] warnings;
+
     public Route withWarnings(RouteWarnings[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public Route(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostProjectWebhookRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Webhook webhook;
+
     public PostProjectWebhookRequest withWebhook(org.openapis.openapi.models.shared.Webhook webhook) {
         this.webhook = webhook;
         return this;
@@ -19,9 +21,13 @@ public class PostProjectWebhookRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PostProjectWebhookRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostProjectWebhookRequest(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

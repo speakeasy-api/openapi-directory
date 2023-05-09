@@ -18,6 +18,7 @@ public class ProtectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadConfig")
     public WorkloadConfig workloadConfig;
+
     public ProtectConfig withWorkloadConfig(WorkloadConfig workloadConfig) {
         this.workloadConfig = workloadConfig;
         return this;
@@ -29,9 +30,11 @@ public class ProtectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workloadVulnerabilityMode")
     public ProtectConfigWorkloadVulnerabilityModeEnum workloadVulnerabilityMode;
+
     public ProtectConfig withWorkloadVulnerabilityMode(ProtectConfigWorkloadVulnerabilityModeEnum workloadVulnerabilityMode) {
         this.workloadVulnerabilityMode = workloadVulnerabilityMode;
         return this;
     }
     
+    public ProtectConfig(){}
 }

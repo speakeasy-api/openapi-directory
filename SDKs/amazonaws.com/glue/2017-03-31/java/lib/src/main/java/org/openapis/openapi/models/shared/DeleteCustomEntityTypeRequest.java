@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteCustomEntityTypeRequest {
     @JsonProperty("Name")
     public String name;
+
     public DeleteCustomEntityTypeRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteCustomEntityTypeRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

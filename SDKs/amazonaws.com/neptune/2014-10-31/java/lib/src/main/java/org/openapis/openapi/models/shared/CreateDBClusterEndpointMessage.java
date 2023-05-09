@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBClusterEndpointMessage {
     
     public String dbClusterEndpointIdentifier;
+
     public CreateDBClusterEndpointMessage withDBClusterEndpointIdentifier(String dbClusterEndpointIdentifier) {
         this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBClusterEndpointMessage {
     
     
     public String dbClusterIdentifier;
+
     public CreateDBClusterEndpointMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBClusterEndpointMessage {
     
     
     public String endpointType;
+
     public CreateDBClusterEndpointMessage withEndpointType(String endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBClusterEndpointMessage {
     
     
     public String[] excludedMembers;
+
     public CreateDBClusterEndpointMessage withExcludedMembers(String[] excludedMembers) {
         this.excludedMembers = excludedMembers;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBClusterEndpointMessage {
     
     
     public String[] staticMembers;
+
     public CreateDBClusterEndpointMessage withStaticMembers(String[] staticMembers) {
         this.staticMembers = staticMembers;
         return this;
@@ -44,9 +49,15 @@ public class CreateDBClusterEndpointMessage {
     
     
     public TagList[] tags;
+
     public CreateDBClusterEndpointMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDBClusterEndpointMessage(@JsonProperty("DBClusterEndpointIdentifier") String dbClusterEndpointIdentifier, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("EndpointType") String endpointType) {
+        this.dbClusterEndpointIdentifier = dbClusterEndpointIdentifier;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.endpointType = endpointType;
+  }
 }

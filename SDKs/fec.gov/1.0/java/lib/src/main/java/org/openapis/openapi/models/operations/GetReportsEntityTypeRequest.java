@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -22,6 +23,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amendment_indicator")
     public GetReportsEntityTypeAmendmentIndicatorEnum[] amendmentIndicator;
+
     public GetReportsEntityTypeRequest withAmendmentIndicator(GetReportsEntityTypeAmendmentIndicatorEnum[] amendmentIndicator) {
         this.amendmentIndicator = amendmentIndicator;
         return this;
@@ -33,6 +35,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public GetReportsEntityTypeRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -45,6 +48,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=beginning_image_number")
     public String[] beginningImageNumber;
+
     public GetReportsEntityTypeRequest withBeginningImageNumber(String[] beginningImageNumber) {
         this.beginningImageNumber = beginningImageNumber;
         return this;
@@ -53,10 +57,17 @@ public class GetReportsEntityTypeRequest {
     /**
      * A unique identifier assigned to each candidate registered with the FEC.
      * If a person runs for several offices, that person will have separate candidate IDs for each office.
+     * First character indicates office - [P]residential, [H]ouse, [S]enate].
+     * Second character is the last digit of the two-year period the ID was created.
+     * Third and fourth is the candidate state. Presidential IDs don't have state.
+     * Fifth and sixth is the district when the candidate first ran. This does not change if the
+     * candidate/member's district changes during re-districting. Presidential IDs don't have districts.
+     * The rest is sequence.
      * 
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=candidate_id")
     public String candidateId;
+
     public GetReportsEntityTypeRequest withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -68,6 +79,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_id")
     public String[] committeeId;
+
     public GetReportsEntityTypeRequest withCommitteeId(String[] committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -95,6 +107,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=committee_type")
     public String[] committeeType;
+
     public GetReportsEntityTypeRequest withCommitteeType(String[] committeeType) {
         this.committeeType = committeeType;
         return this;
@@ -108,6 +121,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cycle")
     public Integer[] cycle;
+
     public GetReportsEntityTypeRequest withCycle(Integer[] cycle) {
         this.cycle = cycle;
         return this;
@@ -118,6 +132,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=entity_type")
     public GetReportsEntityTypeEntityTypeEnum entityType;
+
     public GetReportsEntityTypeRequest withEntityType(GetReportsEntityTypeEntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -128,6 +143,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filer_type")
     public GetReportsEntityTypeFilerTypeEnum filerType;
+
     public GetReportsEntityTypeRequest withFilerType(GetReportsEntityTypeFilerTypeEnum filerType) {
         this.filerType = filerType;
         return this;
@@ -139,6 +155,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_amended")
     public Boolean isAmended;
+
     public GetReportsEntityTypeRequest withIsAmended(Boolean isAmended) {
         this.isAmended = isAmended;
         return this;
@@ -150,6 +167,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_cash_on_hand_end_period_amount")
     public String maxCashOnHandEndPeriodAmount;
+
     public GetReportsEntityTypeRequest withMaxCashOnHandEndPeriodAmount(String maxCashOnHandEndPeriodAmount) {
         this.maxCashOnHandEndPeriodAmount = maxCashOnHandEndPeriodAmount;
         return this;
@@ -161,6 +179,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_debts_owed_expenditures")
     public String maxDebtsOwedExpenditures;
+
     public GetReportsEntityTypeRequest withMaxDebtsOwedExpenditures(String maxDebtsOwedExpenditures) {
         this.maxDebtsOwedExpenditures = maxDebtsOwedExpenditures;
         return this;
@@ -172,6 +191,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_disbursements_amount")
     public String maxDisbursementsAmount;
+
     public GetReportsEntityTypeRequest withMaxDisbursementsAmount(String maxDisbursementsAmount) {
         this.maxDisbursementsAmount = maxDisbursementsAmount;
         return this;
@@ -183,6 +203,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_independent_expenditures")
     public String maxIndependentExpenditures;
+
     public GetReportsEntityTypeRequest withMaxIndependentExpenditures(String maxIndependentExpenditures) {
         this.maxIndependentExpenditures = maxIndependentExpenditures;
         return this;
@@ -194,6 +215,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_party_coordinated_expenditures")
     public String maxPartyCoordinatedExpenditures;
+
     public GetReportsEntityTypeRequest withMaxPartyCoordinatedExpenditures(String maxPartyCoordinatedExpenditures) {
         this.maxPartyCoordinatedExpenditures = maxPartyCoordinatedExpenditures;
         return this;
@@ -205,6 +227,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipt_date")
     public LocalDate maxReceiptDate;
+
     public GetReportsEntityTypeRequest withMaxReceiptDate(LocalDate maxReceiptDate) {
         this.maxReceiptDate = maxReceiptDate;
         return this;
@@ -216,6 +239,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_receipts_amount")
     public String maxReceiptsAmount;
+
     public GetReportsEntityTypeRequest withMaxReceiptsAmount(String maxReceiptsAmount) {
         this.maxReceiptsAmount = maxReceiptsAmount;
         return this;
@@ -227,6 +251,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_total_contributions")
     public String maxTotalContributions;
+
     public GetReportsEntityTypeRequest withMaxTotalContributions(String maxTotalContributions) {
         this.maxTotalContributions = maxTotalContributions;
         return this;
@@ -238,6 +263,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_cash_on_hand_end_period_amount")
     public String minCashOnHandEndPeriodAmount;
+
     public GetReportsEntityTypeRequest withMinCashOnHandEndPeriodAmount(String minCashOnHandEndPeriodAmount) {
         this.minCashOnHandEndPeriodAmount = minCashOnHandEndPeriodAmount;
         return this;
@@ -249,6 +275,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_debts_owed_amount")
     public String minDebtsOwedAmount;
+
     public GetReportsEntityTypeRequest withMinDebtsOwedAmount(String minDebtsOwedAmount) {
         this.minDebtsOwedAmount = minDebtsOwedAmount;
         return this;
@@ -260,6 +287,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_disbursements_amount")
     public String minDisbursementsAmount;
+
     public GetReportsEntityTypeRequest withMinDisbursementsAmount(String minDisbursementsAmount) {
         this.minDisbursementsAmount = minDisbursementsAmount;
         return this;
@@ -271,6 +299,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_independent_expenditures")
     public String minIndependentExpenditures;
+
     public GetReportsEntityTypeRequest withMinIndependentExpenditures(String minIndependentExpenditures) {
         this.minIndependentExpenditures = minIndependentExpenditures;
         return this;
@@ -282,6 +311,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_party_coordinated_expenditures")
     public String minPartyCoordinatedExpenditures;
+
     public GetReportsEntityTypeRequest withMinPartyCoordinatedExpenditures(String minPartyCoordinatedExpenditures) {
         this.minPartyCoordinatedExpenditures = minPartyCoordinatedExpenditures;
         return this;
@@ -293,6 +323,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipt_date")
     public LocalDate minReceiptDate;
+
     public GetReportsEntityTypeRequest withMinReceiptDate(LocalDate minReceiptDate) {
         this.minReceiptDate = minReceiptDate;
         return this;
@@ -304,6 +335,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_receipts_amount")
     public String minReceiptsAmount;
+
     public GetReportsEntityTypeRequest withMinReceiptsAmount(String minReceiptsAmount) {
         this.minReceiptsAmount = minReceiptsAmount;
         return this;
@@ -315,6 +347,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min_total_contributions")
     public String minTotalContributions;
+
     public GetReportsEntityTypeRequest withMinTotalContributions(String minTotalContributions) {
         this.minTotalContributions = minTotalContributions;
         return this;
@@ -326,6 +359,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=most_recent")
     public Boolean mostRecent;
+
     public GetReportsEntityTypeRequest withMostRecent(Boolean mostRecent) {
         this.mostRecent = mostRecent;
         return this;
@@ -336,6 +370,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public GetReportsEntityTypeRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -346,6 +381,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetReportsEntityTypeRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -357,6 +393,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_filer")
     public String[] qFiler;
+
     public GetReportsEntityTypeRequest withQFiler(String[] qFiler) {
         this.qFiler = qFiler;
         return this;
@@ -368,6 +405,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q_spender")
     public String[] qSpender;
+
     public GetReportsEntityTypeRequest withQSpender(String[] qSpender) {
         this.qSpender = qSpender;
         return this;
@@ -415,6 +453,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=report_type")
     public String[] reportType;
+
     public GetReportsEntityTypeRequest withReportType(String[] reportType) {
         this.reportType = reportType;
         return this;
@@ -426,6 +465,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String[] sort;
+
     public GetReportsEntityTypeRequest withSort(String[] sort) {
         this.sort = sort;
         return this;
@@ -436,6 +476,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_hide_null")
     public Boolean sortHideNull;
+
     public GetReportsEntityTypeRequest withSortHideNull(Boolean sortHideNull) {
         this.sortHideNull = sortHideNull;
         return this;
@@ -446,6 +487,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_null_only")
     public Boolean sortNullOnly;
+
     public GetReportsEntityTypeRequest withSortNullOnly(Boolean sortNullOnly) {
         this.sortNullOnly = sortNullOnly;
         return this;
@@ -456,6 +498,7 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_nulls_last")
     public Boolean sortNullsLast;
+
     public GetReportsEntityTypeRequest withSortNullsLast(Boolean sortNullsLast) {
         this.sortNullsLast = sortNullsLast;
         return this;
@@ -470,9 +513,14 @@ public class GetReportsEntityTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=year")
     public Integer[] year;
+
     public GetReportsEntityTypeRequest withYear(Integer[] year) {
         this.year = year;
         return this;
     }
     
+    public GetReportsEntityTypeRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("entity_type") GetReportsEntityTypeEntityTypeEnum entityType) {
+        this.apiKey = apiKey;
+        this.entityType = entityType;
+  }
 }

@@ -12,6 +12,7 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=event")
     public String event;
+
     public PostWebhooksRequestBody withEvent(String event) {
         this.event = event;
         return this;
@@ -22,6 +23,7 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_auth")
     public String idAuth;
+
     public PostWebhooksRequestBody withIdAuth(String idAuth) {
         this.idAuth = idAuth;
         return this;
@@ -32,6 +34,7 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_service")
     public Long idService;
+
     public PostWebhooksRequestBody withIdService(Long idService) {
         this.idService = idService;
         return this;
@@ -42,6 +45,7 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_user")
     public Long idUser;
+
     public PostWebhooksRequestBody withIdUser(Long idUser) {
         this.idUser = idUser;
         return this;
@@ -52,6 +56,7 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=params")
     public String params;
+
     public PostWebhooksRequestBody withParams(String params) {
         this.params = params;
         return this;
@@ -62,9 +67,11 @@ public class PostWebhooksRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=url")
     public String url;
+
     public PostWebhooksRequestBody withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PostWebhooksRequestBody(){}
 }

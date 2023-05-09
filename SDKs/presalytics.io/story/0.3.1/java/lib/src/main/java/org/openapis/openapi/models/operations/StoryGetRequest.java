@@ -12,6 +12,7 @@ public class StoryGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_outline")
     public Boolean includeOutline;
+
     public StoryGetRequest withIncludeOutline(Boolean includeOutline) {
         this.includeOutline = includeOutline;
         return this;
@@ -22,9 +23,11 @@ public class StoryGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_relationships")
     public Boolean includeRelationships;
+
     public StoryGetRequest withIncludeRelationships(Boolean includeRelationships) {
         this.includeRelationships = includeRelationships;
         return this;
     }
     
+    public StoryGetRequest(){}
 }

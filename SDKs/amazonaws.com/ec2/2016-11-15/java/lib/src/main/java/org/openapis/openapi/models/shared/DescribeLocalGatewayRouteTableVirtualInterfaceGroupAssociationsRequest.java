@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest {
     
     public Boolean dryRun;
+
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
     
     
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequestFilters[] filters;
+
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest withFilters(DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
     
     
     public String[] localGatewayRouteTableVirtualInterfaceGroupAssociationIds;
+
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest withLocalGatewayRouteTableVirtualInterfaceGroupAssociationIds(String[] localGatewayRouteTableVirtualInterfaceGroupAssociationIds) {
         this.localGatewayRouteTableVirtualInterfaceGroupAssociationIds = localGatewayRouteTableVirtualInterfaceGroupAssociationIds;
         return this;
@@ -30,6 +33,7 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
     
     
     public Long maxResults;
+
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,11 @@ public class DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequ
     
     
     public String nextToken;
+
     public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest(){}
 }

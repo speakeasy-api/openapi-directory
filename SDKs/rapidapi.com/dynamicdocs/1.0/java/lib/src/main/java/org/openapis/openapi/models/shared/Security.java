@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=ADVICEment API Key")
     public String advSecurityToken;
+
     public Security withAdvSecurityToken(String advSecurityToken) {
         this.advSecurityToken = advSecurityToken;
         return this;
@@ -16,9 +17,11 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=RapidAPI.com API Key")
     public String xRapidAPIKey;
+
     public Security withXRapidAPIKey(String xRapidAPIKey) {
         this.xRapidAPIKey = xRapidAPIKey;
         return this;
     }
     
+    public Security(){}
 }

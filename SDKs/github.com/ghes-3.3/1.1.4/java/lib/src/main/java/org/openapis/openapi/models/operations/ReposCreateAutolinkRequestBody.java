@@ -15,6 +15,7 @@ public class ReposCreateAutolinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_alphanumeric")
     public Boolean isAlphanumeric;
+
     public ReposCreateAutolinkRequestBody withIsAlphanumeric(Boolean isAlphanumeric) {
         this.isAlphanumeric = isAlphanumeric;
         return this;
@@ -25,6 +26,7 @@ public class ReposCreateAutolinkRequestBody {
      */
     @JsonProperty("key_prefix")
     public String keyPrefix;
+
     public ReposCreateAutolinkRequestBody withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
@@ -35,9 +37,14 @@ public class ReposCreateAutolinkRequestBody {
      */
     @JsonProperty("url_template")
     public String urlTemplate;
+
     public ReposCreateAutolinkRequestBody withUrlTemplate(String urlTemplate) {
         this.urlTemplate = urlTemplate;
         return this;
     }
     
+    public ReposCreateAutolinkRequestBody(@JsonProperty("key_prefix") String keyPrefix, @JsonProperty("url_template") String urlTemplate) {
+        this.keyPrefix = keyPrefix;
+        this.urlTemplate = urlTemplate;
+  }
 }

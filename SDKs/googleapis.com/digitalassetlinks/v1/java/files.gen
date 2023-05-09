@@ -52,4 +52,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/XgafvEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListResponseErrorCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Statement.java
+docs/sdk/README.md
+docs/assetlinks/README.md
+docs/statements/README.md
 USAGE.md

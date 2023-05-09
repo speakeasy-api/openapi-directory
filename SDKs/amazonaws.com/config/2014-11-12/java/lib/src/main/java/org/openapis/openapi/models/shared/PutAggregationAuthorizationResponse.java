@@ -15,9 +15,11 @@ public class PutAggregationAuthorizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AggregationAuthorization")
     public AggregationAuthorization aggregationAuthorization;
+
     public PutAggregationAuthorizationResponse withAggregationAuthorization(AggregationAuthorization aggregationAuthorization) {
         this.aggregationAuthorization = aggregationAuthorization;
         return this;
     }
     
+    public PutAggregationAuthorizationResponse(){}
 }

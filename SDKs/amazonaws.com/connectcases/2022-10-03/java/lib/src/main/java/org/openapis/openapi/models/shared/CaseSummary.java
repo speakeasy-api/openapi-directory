@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CaseSummary {
     @JsonProperty("caseId")
     public String caseId;
+
     public CaseSummary withCaseId(String caseId) {
         this.caseId = caseId;
         return this;
@@ -19,9 +20,14 @@ public class CaseSummary {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public CaseSummary withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public CaseSummary(@JsonProperty("caseId") String caseId, @JsonProperty("templateId") String templateId) {
+        this.caseId = caseId;
+        this.templateId = templateId;
+  }
 }

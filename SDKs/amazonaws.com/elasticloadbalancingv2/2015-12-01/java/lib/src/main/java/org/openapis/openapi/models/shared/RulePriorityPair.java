@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RulePriorityPair {
     
     public Long priority;
+
     public RulePriorityPair withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -19,9 +20,11 @@ public class RulePriorityPair {
     
     
     public String ruleArn;
+
     public RulePriorityPair withRuleArn(String ruleArn) {
         this.ruleArn = ruleArn;
         return this;
     }
     
+    public RulePriorityPair(){}
 }

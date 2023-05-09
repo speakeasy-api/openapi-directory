@@ -20,6 +20,7 @@ public class Reaction {
      */
     @JsonProperty("content")
     public ReactionContentEnum content;
+
     public Reaction withContent(ReactionContentEnum content) {
         this.content = content;
         return this;
@@ -29,6 +30,7 @@ public class Reaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public Reaction withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -36,6 +38,7 @@ public class Reaction {
     
     @JsonProperty("id")
     public Long id;
+
     public Reaction withId(Long id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class Reaction {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public Reaction withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -53,9 +57,17 @@ public class Reaction {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public Reaction withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public Reaction(@JsonProperty("content") ReactionContentEnum content, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("user") NullableSimpleUser user) {
+        this.content = content;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.user = user;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeRegionDisksCreateSnapshotSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksCreateSnapshotSecurityOption1 option1;
+
     public ComputeRegionDisksCreateSnapshotSecurity withOption1(ComputeRegionDisksCreateSnapshotSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeRegionDisksCreateSnapshotSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeRegionDisksCreateSnapshotSecurityOption2 option2;
+
     public ComputeRegionDisksCreateSnapshotSecurity withOption2(ComputeRegionDisksCreateSnapshotSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeRegionDisksCreateSnapshotSecurity(){}
 }

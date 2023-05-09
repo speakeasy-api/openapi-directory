@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelVariantImportJobResponse {
@@ -12,6 +13,7 @@ public class CancelVariantImportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelVariantImportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelVariantImportJobResponse {
      */
     
     public java.util.Map<String, Object> cancelVariantImportResponse;
+
     public CancelVariantImportJobResponse withCancelVariantImportResponse(java.util.Map<String, Object> cancelVariantImportResponse) {
         this.cancelVariantImportResponse = cancelVariantImportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CancelVariantImportJobResponse {
     
     
     public String contentType;
+
     public CancelVariantImportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CancelVariantImportJobResponse {
      */
     
     public Object internalServerException;
+
     public CancelVariantImportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CancelVariantImportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelVariantImportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CancelVariantImportJobResponse {
     
     
     public Integer statusCode;
+
     public CancelVariantImportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CancelVariantImportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelVariantImportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CancelVariantImportJobResponse {
      */
     
     public Object throttlingException;
+
     public CancelVariantImportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CancelVariantImportJobResponse {
      */
     
     public Object validationException;
+
     public CancelVariantImportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelVariantImportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

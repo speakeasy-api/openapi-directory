@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListKeysResponse {
     
     public String contentType;
+
     public ListKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListKeysResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ListKeysResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ListKeysResponse {
      */
     
     public Object invalidMarkerException;
+
     public ListKeysResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -39,6 +43,7 @@ public class ListKeysResponse {
      */
     
     public Object kmsInternalException;
+
     public ListKeysResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -49,6 +54,7 @@ public class ListKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListKeysResponse listKeysResponse;
+
     public ListKeysResponse withListKeysResponse(org.openapis.openapi.models.shared.ListKeysResponse listKeysResponse) {
         this.listKeysResponse = listKeysResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListKeysResponse {
     
     
     public Integer statusCode;
+
     public ListKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

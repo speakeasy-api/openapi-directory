@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Max")
     public Double max;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails withMax(Double max) {
         this.max = max;
         return this;
@@ -23,9 +24,11 @@ public class AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Min")
     public Double min;
+
     public AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails withMin(Double min) {
         this.min = min;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataInstanceRequirementsMemoryGiBPerVCpuDetails(){}
 }

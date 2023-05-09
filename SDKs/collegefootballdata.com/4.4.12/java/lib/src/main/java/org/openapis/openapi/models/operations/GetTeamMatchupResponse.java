@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTeamMatchupResponse {
     
     public String contentType;
+
     public GetTeamMatchupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetTeamMatchupResponse {
     
     
     public Integer statusCode;
+
     public GetTeamMatchupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetTeamMatchupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTeamMatchupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetTeamMatchupResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamMatchup teamMatchup;
+
     public GetTeamMatchupResponse withTeamMatchup(org.openapis.openapi.models.shared.TeamMatchup teamMatchup) {
         this.teamMatchup = teamMatchup;
         return this;
     }
     
+    public GetTeamMatchupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

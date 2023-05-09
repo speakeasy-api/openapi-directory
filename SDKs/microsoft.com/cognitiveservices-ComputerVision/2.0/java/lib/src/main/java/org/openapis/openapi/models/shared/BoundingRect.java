@@ -18,6 +18,7 @@ public class BoundingRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("h")
     public Integer h;
+
     public BoundingRect withH(Integer h) {
         this.h = h;
         return this;
@@ -29,6 +30,7 @@ public class BoundingRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("w")
     public Integer w;
+
     public BoundingRect withW(Integer w) {
         this.w = w;
         return this;
@@ -40,6 +42,7 @@ public class BoundingRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Integer x;
+
     public BoundingRect withX(Integer x) {
         this.x = x;
         return this;
@@ -51,9 +54,11 @@ public class BoundingRect {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Integer y;
+
     public BoundingRect withY(Integer y) {
         this.y = y;
         return this;
     }
     
+    public BoundingRect(){}
 }

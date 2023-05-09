@@ -15,6 +15,7 @@ public class UpdateRevealConfigurationRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public UpdateRevealConfigurationRequestBodyConfiguration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -23,9 +24,11 @@ public class UpdateRevealConfigurationRequestBodyConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public org.openapis.openapi.models.shared.RevealStatusEnum status;
+
     public UpdateRevealConfigurationRequestBodyConfiguration withStatus(org.openapis.openapi.models.shared.RevealStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateRevealConfigurationRequestBodyConfiguration(){}
 }

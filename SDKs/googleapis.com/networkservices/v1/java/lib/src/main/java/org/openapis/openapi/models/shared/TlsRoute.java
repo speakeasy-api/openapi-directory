@@ -18,6 +18,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public TlsRoute withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TlsRoute withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gateways")
     public String[] gateways;
+
     public TlsRoute withGateways(String[] gateways) {
         this.gateways = gateways;
         return this;
@@ -51,6 +54,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshes")
     public String[] meshes;
+
     public TlsRoute withMeshes(String[] meshes) {
         this.meshes = meshes;
         return this;
@@ -62,6 +66,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TlsRoute withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public TlsRouteRouteRule[] rules;
+
     public TlsRoute withRules(TlsRouteRouteRule[] rules) {
         this.rules = rules;
         return this;
@@ -84,6 +90,7 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public TlsRoute withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -95,9 +102,11 @@ public class TlsRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public TlsRoute withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public TlsRoute(){}
 }

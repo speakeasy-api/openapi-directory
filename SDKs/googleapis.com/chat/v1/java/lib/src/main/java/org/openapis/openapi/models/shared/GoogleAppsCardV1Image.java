@@ -18,6 +18,7 @@ public class GoogleAppsCardV1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altText")
     public String altText;
+
     public GoogleAppsCardV1Image withAltText(String altText) {
         this.altText = altText;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsCardV1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public GoogleAppsCardV1Image withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAppsCardV1Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public GoogleAppsCardV1OnClick onClick;
+
     public GoogleAppsCardV1Image withOnClick(GoogleAppsCardV1OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
+    public GoogleAppsCardV1Image(){}
 }

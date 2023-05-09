@@ -18,9 +18,11 @@ public class AcceptProposalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proposalRevision")
     public String proposalRevision;
+
     public AcceptProposalRequest withProposalRevision(String proposalRevision) {
         this.proposalRevision = proposalRevision;
         return this;
     }
     
+    public AcceptProposalRequest(){}
 }

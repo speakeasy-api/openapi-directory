@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETCancelInstanceRefreshResponse {
     
     public byte[] body;
+
     public GETCancelInstanceRefreshResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETCancelInstanceRefreshResponse {
     
     
     public String contentType;
+
     public GETCancelInstanceRefreshResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETCancelInstanceRefreshResponse {
     
     
     public Integer statusCode;
+
     public GETCancelInstanceRefreshResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETCancelInstanceRefreshResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETCancelInstanceRefreshResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETCancelInstanceRefreshResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

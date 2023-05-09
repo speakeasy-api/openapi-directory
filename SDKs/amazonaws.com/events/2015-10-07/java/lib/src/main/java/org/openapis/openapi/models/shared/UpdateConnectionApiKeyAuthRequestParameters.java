@@ -15,6 +15,7 @@ public class UpdateConnectionApiKeyAuthRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyName")
     public String apiKeyName;
+
     public UpdateConnectionApiKeyAuthRequestParameters withApiKeyName(String apiKeyName) {
         this.apiKeyName = apiKeyName;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectionApiKeyAuthRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeyValue")
     public String apiKeyValue;
+
     public UpdateConnectionApiKeyAuthRequestParameters withApiKeyValue(String apiKeyValue) {
         this.apiKeyValue = apiKeyValue;
         return this;
     }
     
+    public UpdateConnectionApiKeyAuthRequestParameters(){}
 }

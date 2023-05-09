@@ -18,9 +18,11 @@ public class RetrieveRegisterParametersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registerParameters")
     public RegisterParameters registerParameters;
+
     public RetrieveRegisterParametersResponse withRegisterParameters(RegisterParameters registerParameters) {
         this.registerParameters = registerParameters;
         return this;
     }
     
+    public RetrieveRegisterParametersResponse(){}
 }

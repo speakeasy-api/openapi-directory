@@ -18,6 +18,7 @@ public class TestEnvironmentCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("androidDeviceCatalog")
     public AndroidDeviceCatalog androidDeviceCatalog;
+
     public TestEnvironmentCatalog withAndroidDeviceCatalog(AndroidDeviceCatalog androidDeviceCatalog) {
         this.androidDeviceCatalog = androidDeviceCatalog;
         return this;
@@ -29,6 +30,7 @@ public class TestEnvironmentCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceIpBlockCatalog")
     public DeviceIpBlockCatalog deviceIpBlockCatalog;
+
     public TestEnvironmentCatalog withDeviceIpBlockCatalog(DeviceIpBlockCatalog deviceIpBlockCatalog) {
         this.deviceIpBlockCatalog = deviceIpBlockCatalog;
         return this;
@@ -40,6 +42,7 @@ public class TestEnvironmentCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iosDeviceCatalog")
     public IosDeviceCatalog iosDeviceCatalog;
+
     public TestEnvironmentCatalog withIosDeviceCatalog(IosDeviceCatalog iosDeviceCatalog) {
         this.iosDeviceCatalog = iosDeviceCatalog;
         return this;
@@ -48,6 +51,7 @@ public class TestEnvironmentCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkConfigurationCatalog")
     public NetworkConfigurationCatalog networkConfigurationCatalog;
+
     public TestEnvironmentCatalog withNetworkConfigurationCatalog(NetworkConfigurationCatalog networkConfigurationCatalog) {
         this.networkConfigurationCatalog = networkConfigurationCatalog;
         return this;
@@ -59,9 +63,11 @@ public class TestEnvironmentCatalog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareCatalog")
     public ProvidedSoftwareCatalog softwareCatalog;
+
     public TestEnvironmentCatalog withSoftwareCatalog(ProvidedSoftwareCatalog softwareCatalog) {
         this.softwareCatalog = softwareCatalog;
         return this;
     }
     
+    public TestEnvironmentCatalog(){}
 }

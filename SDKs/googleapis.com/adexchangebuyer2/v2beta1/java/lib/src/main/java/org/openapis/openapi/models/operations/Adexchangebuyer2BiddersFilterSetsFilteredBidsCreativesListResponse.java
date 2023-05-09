@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse 
      */
     
     public org.openapis.openapi.models.shared.ListCreativeStatusBreakdownByCreativeResponse listCreativeStatusBreakdownByCreativeResponse;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse withListCreativeStatusBreakdownByCreativeResponse(org.openapis.openapi.models.shared.ListCreativeStatusBreakdownByCreativeResponse listCreativeStatusBreakdownByCreativeResponse) {
         this.listCreativeStatusBreakdownByCreativeResponse = listCreativeStatusBreakdownByCreativeResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse 
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse 
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2BiddersFilterSetsFilteredBidsCreativesListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SpellcheckResponse {
     
     public String contentType;
+
     public SpellcheckResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SpellcheckResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public SpellcheckResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -26,6 +29,7 @@ public class SpellcheckResponse {
      */
     
     public org.openapis.openapi.models.shared.SpellCheckResponse spellCheckResponse;
+
     public SpellcheckResponse withSpellCheckResponse(org.openapis.openapi.models.shared.SpellCheckResponse spellCheckResponse) {
         this.spellCheckResponse = spellCheckResponse;
         return this;
@@ -33,6 +37,7 @@ public class SpellcheckResponse {
     
     
     public Integer statusCode;
+
     public SpellcheckResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class SpellcheckResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SpellcheckResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SpellcheckResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class ApiCoreDtoAccountingHitOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideReferrer")
     public Boolean hideReferrer;
+
     public ApiCoreDtoAccountingHitOptions withHideReferrer(Boolean hideReferrer) {
         this.hideReferrer = hideReferrer;
         return this;
     }
     
+    public ApiCoreDtoAccountingHitOptions(){}
 }

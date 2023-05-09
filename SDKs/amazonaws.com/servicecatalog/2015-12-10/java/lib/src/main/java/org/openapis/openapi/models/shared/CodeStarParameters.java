@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CodeStarParameters {
     @JsonProperty("ArtifactPath")
     public String artifactPath;
+
     public CodeStarParameters withArtifactPath(String artifactPath) {
         this.artifactPath = artifactPath;
         return this;
@@ -19,6 +20,7 @@ public class CodeStarParameters {
     
     @JsonProperty("Branch")
     public String branch;
+
     public CodeStarParameters withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -26,6 +28,7 @@ public class CodeStarParameters {
     
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public CodeStarParameters withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -33,9 +36,16 @@ public class CodeStarParameters {
     
     @JsonProperty("Repository")
     public String repository;
+
     public CodeStarParameters withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public CodeStarParameters(@JsonProperty("ArtifactPath") String artifactPath, @JsonProperty("Branch") String branch, @JsonProperty("ConnectionArn") String connectionArn, @JsonProperty("Repository") String repository) {
+        this.artifactPath = artifactPath;
+        this.branch = branch;
+        this.connectionArn = connectionArn;
+        this.repository = repository;
+  }
 }

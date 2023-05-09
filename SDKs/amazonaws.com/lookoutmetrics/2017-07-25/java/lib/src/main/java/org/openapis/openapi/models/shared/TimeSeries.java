@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimeSeries {
     @JsonProperty("DimensionList")
     public DimensionNameValue[] dimensionList;
+
     public TimeSeries withDimensionList(DimensionNameValue[] dimensionList) {
         this.dimensionList = dimensionList;
         return this;
@@ -19,6 +20,7 @@ public class TimeSeries {
     
     @JsonProperty("MetricValueList")
     public Double[] metricValueList;
+
     public TimeSeries withMetricValueList(Double[] metricValueList) {
         this.metricValueList = metricValueList;
         return this;
@@ -26,9 +28,15 @@ public class TimeSeries {
     
     @JsonProperty("TimeSeriesId")
     public String timeSeriesId;
+
     public TimeSeries withTimeSeriesId(String timeSeriesId) {
         this.timeSeriesId = timeSeriesId;
         return this;
     }
     
+    public TimeSeries(@JsonProperty("DimensionList") DimensionNameValue[] dimensionList, @JsonProperty("MetricValueList") Double[] metricValueList, @JsonProperty("TimeSeriesId") String timeSeriesId) {
+        this.dimensionList = dimensionList;
+        this.metricValueList = metricValueList;
+        this.timeSeriesId = timeSeriesId;
+  }
 }

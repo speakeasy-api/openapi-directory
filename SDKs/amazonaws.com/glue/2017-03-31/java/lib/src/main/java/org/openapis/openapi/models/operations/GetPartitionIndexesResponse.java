@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPartitionIndexesResponse {
@@ -12,6 +13,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public Object conflictException;
+
     public GetPartitionIndexesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class GetPartitionIndexesResponse {
     
     
     public String contentType;
+
     public GetPartitionIndexesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetPartitionIndexesResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPartitionIndexesResponse getPartitionIndexesResponse;
+
     public GetPartitionIndexesResponse withGetPartitionIndexesResponse(org.openapis.openapi.models.shared.GetPartitionIndexesResponse getPartitionIndexesResponse) {
         this.getPartitionIndexesResponse = getPartitionIndexesResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public Object internalServiceException;
+
     public GetPartitionIndexesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public Object invalidInputException;
+
     public GetPartitionIndexesResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class GetPartitionIndexesResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetPartitionIndexesResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class GetPartitionIndexesResponse {
     
     
     public Integer statusCode;
+
     public GetPartitionIndexesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetPartitionIndexesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPartitionIndexesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPartitionIndexesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetContentNetwork")
     public Boolean targetContentNetwork;
+
     public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings withTargetContentNetwork(Boolean targetContentNetwork) {
         this.targetContentNetwork = targetContentNetwork;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetGoogleSearch")
     public Boolean targetGoogleSearch;
+
     public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings withTargetGoogleSearch(Boolean targetGoogleSearch) {
         this.targetGoogleSearch = targetGoogleSearch;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPartnerSearchNetwork")
     public Boolean targetPartnerSearchNetwork;
+
     public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings withTargetPartnerSearchNetwork(Boolean targetPartnerSearchNetwork) {
         this.targetPartnerSearchNetwork = targetPartnerSearchNetwork;
         return this;
@@ -51,9 +54,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSearchNetwork")
     public Boolean targetSearchNetwork;
+
     public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings withTargetSearchNetwork(Boolean targetSearchNetwork) {
         this.targetSearchNetwork = targetSearchNetwork;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings(){}
 }

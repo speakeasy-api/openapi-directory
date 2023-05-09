@@ -12,6 +12,7 @@ public class LogisticsInfoDeliveryChannels {
      */
     @JsonProperty("id")
     public String id;
+
     public LogisticsInfoDeliveryChannels withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class LogisticsInfoDeliveryChannels {
      */
     @JsonProperty("stockBalance")
     public Long stockBalance;
+
     public LogisticsInfoDeliveryChannels withStockBalance(Long stockBalance) {
         this.stockBalance = stockBalance;
         return this;
     }
     
+    public LogisticsInfoDeliveryChannels(@JsonProperty("id") String id, @JsonProperty("stockBalance") Long stockBalance) {
+        this.id = id;
+        this.stockBalance = stockBalance;
+  }
 }

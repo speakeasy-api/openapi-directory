@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse {
     
     public String contentType;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamP
      */
     
     public org.openapis.openapi.models.shared.Policy policy;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse withPolicy(org.openapis.openapi.models.shared.Policy policy) {
         this.policy = policy;
         return this;
@@ -26,6 +29,7 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamP
     
     
     public Integer statusCode;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamP
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkebackupProjectsLocationsRestorePlansRestoresVolumeRestoresGetIamPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class UntagResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public UntagResourceOutput withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
     }
     
+    public UntagResourceOutput(){}
 }

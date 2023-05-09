@@ -12,6 +12,7 @@ public class DeletePayoutMethodRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public DeletePayoutMethodRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -22,9 +23,14 @@ public class DeletePayoutMethodRequest {
      */
     @JsonProperty("payoutMethodCodes")
     public String[] payoutMethodCodes;
+
     public DeletePayoutMethodRequest withPayoutMethodCodes(String[] payoutMethodCodes) {
         this.payoutMethodCodes = payoutMethodCodes;
         return this;
     }
     
+    public DeletePayoutMethodRequest(@JsonProperty("accountHolderCode") String accountHolderCode, @JsonProperty("payoutMethodCodes") String[] payoutMethodCodes) {
+        this.accountHolderCode = accountHolderCode;
+        this.payoutMethodCodes = payoutMethodCodes;
+  }
 }

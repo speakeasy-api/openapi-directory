@@ -15,6 +15,7 @@ public class ApiResponseListPublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public String[] errors;
+
     public ApiResponseListPublishedWrittenQuestion withErrors(String[] errors) {
         this.errors = errors;
         return this;
@@ -23,6 +24,7 @@ public class ApiResponseListPublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PagingInfo")
     public PagingInfo pagingInfo;
+
     public ApiResponseListPublishedWrittenQuestion withPagingInfo(PagingInfo pagingInfo) {
         this.pagingInfo = pagingInfo;
         return this;
@@ -31,6 +33,7 @@ public class ApiResponseListPublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Response")
     public PublishedWrittenQuestion[] response;
+
     public ApiResponseListPublishedWrittenQuestion withResponse(PublishedWrittenQuestion[] response) {
         this.response = response;
         return this;
@@ -39,6 +42,7 @@ public class ApiResponseListPublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusCode")
     public ApiResponseListPublishedWrittenQuestionStatusCodeEnum statusCode;
+
     public ApiResponseListPublishedWrittenQuestion withStatusCode(ApiResponseListPublishedWrittenQuestionStatusCodeEnum statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +51,11 @@ public class ApiResponseListPublishedWrittenQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Success")
     public Boolean success;
+
     public ApiResponseListPublishedWrittenQuestion withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public ApiResponseListPublishedWrittenQuestion(){}
 }

@@ -15,6 +15,7 @@ public class ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public ImageConfig withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntryPoint")
     public String[] entryPoint;
+
     public ImageConfig withEntryPoint(String[] entryPoint) {
         this.entryPoint = entryPoint;
         return this;
@@ -31,9 +33,11 @@ public class ImageConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkingDirectory")
     public String workingDirectory;
+
     public ImageConfig withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public ImageConfig(){}
 }

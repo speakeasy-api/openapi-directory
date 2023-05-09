@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DfareportingVideoFormatsListResponse {
     
     public String contentType;
+
     public DfareportingVideoFormatsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DfareportingVideoFormatsListResponse {
     
     
     public Integer statusCode;
+
     public DfareportingVideoFormatsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DfareportingVideoFormatsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DfareportingVideoFormatsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class DfareportingVideoFormatsListResponse {
      */
     
     public org.openapis.openapi.models.shared.VideoFormatsListResponse videoFormatsListResponse;
+
     public DfareportingVideoFormatsListResponse withVideoFormatsListResponse(org.openapis.openapi.models.shared.VideoFormatsListResponse videoFormatsListResponse) {
         this.videoFormatsListResponse = videoFormatsListResponse;
         return this;
     }
     
+    public DfareportingVideoFormatsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

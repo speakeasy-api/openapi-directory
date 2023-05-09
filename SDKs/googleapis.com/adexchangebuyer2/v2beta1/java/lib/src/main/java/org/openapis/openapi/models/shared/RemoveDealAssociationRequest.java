@@ -18,9 +18,11 @@ public class RemoveDealAssociationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("association")
     public CreativeDealAssociation association;
+
     public RemoveDealAssociationRequest withAssociation(CreativeDealAssociation association) {
         this.association = association;
         return this;
     }
     
+    public RemoveDealAssociationRequest(){}
 }

@@ -18,6 +18,7 @@ public class CompensationRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxCompensation")
     public Money maxCompensation;
+
     public CompensationRange withMaxCompensation(Money maxCompensation) {
         this.maxCompensation = maxCompensation;
         return this;
@@ -29,9 +30,11 @@ public class CompensationRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minCompensation")
     public Money minCompensation;
+
     public CompensationRange withMinCompensation(Money minCompensation) {
         this.minCompensation = minCompensation;
         return this;
     }
     
+    public CompensationRange(){}
 }

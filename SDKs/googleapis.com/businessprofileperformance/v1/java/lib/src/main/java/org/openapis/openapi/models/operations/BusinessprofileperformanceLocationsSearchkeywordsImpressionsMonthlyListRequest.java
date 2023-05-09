@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest {
@@ -12,6 +13,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.endMonth.day")
     public Long monthlyRangeEndMonthDay;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeEndMonthDay(Long monthlyRangeEndMonthDay) {
         this.monthlyRangeEndMonthDay = monthlyRangeEndMonthDay;
         return this;
@@ -82,6 +90,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.endMonth.month")
     public Long monthlyRangeEndMonthMonth;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeEndMonthMonth(Long monthlyRangeEndMonthMonth) {
         this.monthlyRangeEndMonthMonth = monthlyRangeEndMonthMonth;
         return this;
@@ -92,6 +101,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.endMonth.year")
     public Long monthlyRangeEndMonthYear;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeEndMonthYear(Long monthlyRangeEndMonthYear) {
         this.monthlyRangeEndMonthYear = monthlyRangeEndMonthYear;
         return this;
@@ -102,6 +112,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.startMonth.day")
     public Long monthlyRangeStartMonthDay;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeStartMonthDay(Long monthlyRangeStartMonthDay) {
         this.monthlyRangeStartMonthDay = monthlyRangeStartMonthDay;
         return this;
@@ -112,6 +123,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.startMonth.month")
     public Long monthlyRangeStartMonthMonth;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeStartMonthMonth(Long monthlyRangeStartMonthMonth) {
         this.monthlyRangeStartMonthMonth = monthlyRangeStartMonthMonth;
         return this;
@@ -122,6 +134,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=monthlyRange.startMonth.year")
     public Long monthlyRangeStartMonthYear;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withMonthlyRangeStartMonthYear(Long monthlyRangeStartMonthYear) {
         this.monthlyRangeStartMonthYear = monthlyRangeStartMonthYear;
         return this;
@@ -132,6 +145,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -142,6 +156,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -152,6 +167,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -162,6 +178,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -172,6 +189,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -182,6 +200,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -192,6 +211,7 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -202,9 +222,13 @@ public class BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthly
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public BusinessprofileperformanceLocationsSearchkeywordsImpressionsMonthlyListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

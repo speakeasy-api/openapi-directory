@@ -15,6 +15,7 @@ public class DipcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificateParameters")
     public DipcrRequestBodyCertificateParameters certificateParameters;
+
     public DipcrRequestBody withCertificateParameters(DipcrRequestBodyCertificateParameters certificateParameters) {
         this.certificateParameters = certificateParameters;
         return this;
@@ -23,6 +24,7 @@ public class DipcrRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentArtifact")
     public org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact;
+
     public DipcrRequestBody withConsentArtifact(org.openapis.openapi.models.shared.ConsentArtifactSchema consentArtifact) {
         this.consentArtifact = consentArtifact;
         return this;
@@ -33,6 +35,7 @@ public class DipcrRequestBody {
      */
     @JsonProperty("format")
     public DipcrRequestBodyFormatEnum format;
+
     public DipcrRequestBody withFormat(DipcrRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -43,9 +46,14 @@ public class DipcrRequestBody {
      */
     @JsonProperty("txnId")
     public String txnId;
+
     public DipcrRequestBody withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public DipcrRequestBody(@JsonProperty("format") DipcrRequestBodyFormatEnum format, @JsonProperty("txnId") String txnId) {
+        this.format = format;
+        this.txnId = txnId;
+  }
 }

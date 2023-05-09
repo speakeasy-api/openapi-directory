@@ -15,6 +15,7 @@ public class GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ItineraryPriceMetric[] data;
+
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson withData(org.openapis.openapi.models.shared.ItineraryPriceMetric[] data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks meta;
+
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson withMeta(GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJsonLinks meta) {
         this.meta = meta;
         return this;
@@ -34,9 +36,11 @@ public class GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public org.openapis.openapi.models.shared.Warning[] warnings;
+
     public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson withWarnings(org.openapis.openapi.models.shared.Warning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public GetItineraryPriceMetrics200ApplicationVndAmadeusPlusJson(){}
 }

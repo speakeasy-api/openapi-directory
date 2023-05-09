@@ -66,11 +66,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEmployeeResponse res = new org.openapis.openapi.models.operations.CreateEmployeeResponse() {{
+        org.openapis.openapi.models.operations.CreateEmployeeResponse res = new org.openapis.openapi.models.operations.CreateEmployeeResponse(contentType, httpRes.statusCode()) {{
             v1Employee = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateEmployeeRoleResponse res = new org.openapis.openapi.models.operations.CreateEmployeeRoleResponse() {{
+        org.openapis.openapi.models.operations.CreateEmployeeRoleResponse res = new org.openapis.openapi.models.operations.CreateEmployeeRoleResponse(contentType, httpRes.statusCode()) {{
             v1EmployeeRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -171,11 +167,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEmployeeRolesResponse res = new org.openapis.openapi.models.operations.ListEmployeeRolesResponse() {{
+        org.openapis.openapi.models.operations.ListEmployeeRolesResponse res = new org.openapis.openapi.models.operations.ListEmployeeRolesResponse(contentType, httpRes.statusCode()) {{
             v1EmployeeRoles = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,11 +212,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListEmployeesResponse res = new org.openapis.openapi.models.operations.ListEmployeesResponse() {{
+        org.openapis.openapi.models.operations.ListEmployeesResponse res = new org.openapis.openapi.models.operations.ListEmployeesResponse(contentType, httpRes.statusCode()) {{
             v1Employees = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,11 +251,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveEmployeeResponse res = new org.openapis.openapi.models.operations.RetrieveEmployeeResponse() {{
+        org.openapis.openapi.models.operations.RetrieveEmployeeResponse res = new org.openapis.openapi.models.operations.RetrieveEmployeeResponse(contentType, httpRes.statusCode()) {{
             v1Employee = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,11 +290,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse res = new org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse() {{
+        org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse res = new org.openapis.openapi.models.operations.RetrieveEmployeeRoleResponse(contentType, httpRes.statusCode()) {{
             v1EmployeeRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -345,11 +333,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse() {{
+        org.openapis.openapi.models.operations.UpdateEmployeeResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeResponse(contentType, httpRes.statusCode()) {{
             v1Employee = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,11 +377,9 @@ public class V1Employees {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse() {{
+        org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse res = new org.openapis.openapi.models.operations.UpdateEmployeeRoleResponse(contentType, httpRes.statusCode()) {{
             v1EmployeeRole = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

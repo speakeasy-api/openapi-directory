@@ -18,9 +18,11 @@ public class RunQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataRange")
     public DataRange dataRange;
+
     public RunQueryRequest withDataRange(DataRange dataRange) {
         this.dataRange = dataRange;
         return this;
     }
     
+    public RunQueryRequest(){}
 }

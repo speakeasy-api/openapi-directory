@@ -18,9 +18,11 @@ public class AirportPosition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Coordinate")
     public Coordinate coordinate;
+
     public AirportPosition withCoordinate(Coordinate coordinate) {
         this.coordinate = coordinate;
         return this;
     }
     
+    public AirportPosition(){}
 }

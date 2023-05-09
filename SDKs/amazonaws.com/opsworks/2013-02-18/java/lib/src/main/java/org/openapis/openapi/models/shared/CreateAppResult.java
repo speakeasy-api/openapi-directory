@@ -15,9 +15,11 @@ public class CreateAppResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppId")
     public String appId;
+
     public CreateAppResult withAppId(String appId) {
         this.appId = appId;
         return this;
     }
     
+    public CreateAppResult(){}
 }

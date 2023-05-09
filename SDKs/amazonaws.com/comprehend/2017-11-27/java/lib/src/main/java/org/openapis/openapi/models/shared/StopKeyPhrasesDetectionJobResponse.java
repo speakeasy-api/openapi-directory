@@ -15,6 +15,7 @@ public class StopKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobId")
     public String jobId;
+
     public StopKeyPhrasesDetectionJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -23,9 +24,11 @@ public class StopKeyPhrasesDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public StopKeyPhrasesDetectionJobResponse withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public StopKeyPhrasesDetectionJobResponse(){}
 }

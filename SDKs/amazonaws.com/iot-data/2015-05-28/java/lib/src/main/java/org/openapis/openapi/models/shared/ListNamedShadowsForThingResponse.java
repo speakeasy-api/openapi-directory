@@ -15,6 +15,7 @@ public class ListNamedShadowsForThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListNamedShadowsForThingResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListNamedShadowsForThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public String[] results;
+
     public ListNamedShadowsForThingResponse withResults(String[] results) {
         this.results = results;
         return this;
@@ -31,9 +33,11 @@ public class ListNamedShadowsForThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public Long timestamp;
+
     public ListNamedShadowsForThingResponse withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ListNamedShadowsForThingResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest {
@@ -12,6 +13,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1alphaDocument googleCloudDiscoveryengineV1alphaDocument;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withGoogleCloudDiscoveryengineV1alphaDocument(org.openapis.openapi.models.shared.GoogleCloudDiscoveryengineV1alphaDocument googleCloudDiscoveryengineV1alphaDocument) {
         this.googleCloudDiscoveryengineV1alphaDocument = googleCloudDiscoveryengineV1alphaDocument;
         return this;
@@ -29,6 +32,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,16 +54,18 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
     }
     
     /**
-     * Required. The ID to use for the Document, which will become the final component of the Document.name. If the caller does not have permission to create the Document, regardless of whether or not it exists, a PERMISSION_DENIED error is returned. This field must be unique among all Documents with the same parent. Otherwise, an ALREADY_EXISTS error is returned. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+     * Required. The ID to use for the Document, which will become the final component of the Document.name. If the caller does not have permission to create the Document, regardless of whether or not it exists, a `PERMISSION_DENIED` error is returned. This field must be unique among all Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is returned. This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=documentId")
     public String documentId;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -69,6 +76,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRe
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DiscoveryengineProjectsLocationsDataStoresBranchesDocumentsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -18,6 +18,7 @@ public class Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Sku withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prices")
     public Price[] prices;
+
     public Sku withPrices(Price[] prices) {
         this.prices = prices;
         return this;
@@ -40,9 +42,11 @@ public class Sku {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public Sku withSku(String sku) {
         this.sku = sku;
         return this;
     }
     
+    public Sku(){}
 }

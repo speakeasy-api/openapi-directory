@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProjectCompletionReportForPamResponse {
     
     public String contentType;
+
     public GetProjectCompletionReportForPamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProjectCompletionReportForPamResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetProjectCompletionReportForPamResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetProjectCompletionReportForPamResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectCompletionReport projectCompletionReport;
+
     public GetProjectCompletionReportForPamResponse withProjectCompletionReport(org.openapis.openapi.models.shared.ProjectCompletionReport projectCompletionReport) {
         this.projectCompletionReport = projectCompletionReport;
         return this;
@@ -36,6 +40,7 @@ public class GetProjectCompletionReportForPamResponse {
     
     
     public Integer statusCode;
+
     public GetProjectCompletionReportForPamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProjectCompletionReportForPamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProjectCompletionReportForPamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProjectCompletionReportForPamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateRelationalDatabaseParametersRequest {
     @JsonProperty("parameters")
     public RelationalDatabaseParameter[] parameters;
+
     public UpdateRelationalDatabaseParametersRequest withParameters(RelationalDatabaseParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -16,9 +17,14 @@ public class UpdateRelationalDatabaseParametersRequest {
     
     @JsonProperty("relationalDatabaseName")
     public String relationalDatabaseName;
+
     public UpdateRelationalDatabaseParametersRequest withRelationalDatabaseName(String relationalDatabaseName) {
         this.relationalDatabaseName = relationalDatabaseName;
         return this;
     }
     
+    public UpdateRelationalDatabaseParametersRequest(@JsonProperty("parameters") RelationalDatabaseParameter[] parameters, @JsonProperty("relationalDatabaseName") String relationalDatabaseName) {
+        this.parameters = parameters;
+        this.relationalDatabaseName = relationalDatabaseName;
+  }
 }

@@ -18,9 +18,11 @@ public class GceConfidentialInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableConfidentialCompute")
     public Boolean enableConfidentialCompute;
+
     public GceConfidentialInstanceConfig withEnableConfidentialCompute(Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
         return this;
     }
     
+    public GceConfidentialInstanceConfig(){}
 }

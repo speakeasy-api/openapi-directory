@@ -14,6 +14,7 @@ public class PullsRemoveRequestedReviewersRequestBody {
      */
     @JsonProperty("reviewers")
     public String[] reviewers;
+
     public PullsRemoveRequestedReviewersRequestBody withReviewers(String[] reviewers) {
         this.reviewers = reviewers;
         return this;
@@ -25,9 +26,13 @@ public class PullsRemoveRequestedReviewersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_reviewers")
     public String[] teamReviewers;
+
     public PullsRemoveRequestedReviewersRequestBody withTeamReviewers(String[] teamReviewers) {
         this.teamReviewers = teamReviewers;
         return this;
     }
     
+    public PullsRemoveRequestedReviewersRequestBody(@JsonProperty("reviewers") String[] reviewers) {
+        this.reviewers = reviewers;
+  }
 }

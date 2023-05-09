@@ -18,9 +18,11 @@ public class AuthorizedSellerStatusTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizedSellerStatus")
     public AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum authorizedSellerStatus;
+
     public AuthorizedSellerStatusTargetingOptionDetails withAuthorizedSellerStatus(AuthorizedSellerStatusTargetingOptionDetailsAuthorizedSellerStatusEnum authorizedSellerStatus) {
         this.authorizedSellerStatus = authorizedSellerStatus;
         return this;
     }
     
+    public AuthorizedSellerStatusTargetingOptionDetails(){}
 }

@@ -15,6 +15,7 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Primary")
     public Boolean primary;
+
     public PhoneNumber withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -23,6 +24,7 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public PhoneNumber withType(String type) {
         this.type = type;
         return this;
@@ -31,9 +33,11 @@ public class PhoneNumber {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public PhoneNumber withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PhoneNumber(){}
 }

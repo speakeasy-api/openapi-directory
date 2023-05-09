@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStagesResponse {
@@ -12,6 +13,7 @@ public class ListStagesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListStagesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListStagesResponse {
     
     
     public String contentType;
+
     public ListStagesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListStagesResponse {
      */
     
     public Object internalServerException;
+
     public ListStagesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListStagesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStagesResult listStagesResult;
+
     public ListStagesResponse withListStagesResult(org.openapis.openapi.models.shared.ListStagesResult listStagesResult) {
         this.listStagesResult = listStagesResult;
         return this;
@@ -49,6 +54,7 @@ public class ListStagesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListStagesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListStagesResponse {
     
     
     public Integer statusCode;
+
     public ListStagesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListStagesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStagesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListStagesResponse {
      */
     
     public Object throttlingException;
+
     public ListStagesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListStagesResponse {
      */
     
     public Object validationException;
+
     public ListStagesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListStagesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

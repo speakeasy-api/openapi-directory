@@ -12,9 +12,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETModifySubnetAttributeEnableDns64 {
     @SpeakeasyMetadata("queryParam:name=Value")
     public Boolean value;
+
     public GETModifySubnetAttributeEnableDns64 withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public GETModifySubnetAttributeEnableDns64(){}
 }

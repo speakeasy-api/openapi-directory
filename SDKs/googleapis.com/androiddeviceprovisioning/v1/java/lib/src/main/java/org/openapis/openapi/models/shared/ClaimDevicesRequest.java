@@ -18,9 +18,11 @@ public class ClaimDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("claims")
     public PartnerClaim[] claims;
+
     public ClaimDevicesRequest withClaims(PartnerClaim[] claims) {
         this.claims = claims;
         return this;
     }
     
+    public ClaimDevicesRequest(){}
 }

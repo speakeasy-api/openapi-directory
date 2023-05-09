@@ -58,10 +58,8 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.DeletePlacementGroupsIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.DeletePlacementGroupsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -97,11 +95,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlacementGroupsResponse res = new org.openapis.openapi.models.operations.GetPlacementGroupsResponse() {{
+        org.openapis.openapi.models.operations.GetPlacementGroupsResponse res = new org.openapis.openapi.models.operations.GetPlacementGroupsResponse(contentType, httpRes.statusCode()) {{
             placementGroupsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.GetPlacementGroupsIdResponse() {{
+        org.openapis.openapi.models.operations.GetPlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.GetPlacementGroupsIdResponse(contentType, httpRes.statusCode()) {{
             placementGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPlacementGroupsResponse res = new org.openapis.openapi.models.operations.PostPlacementGroupsResponse() {{
+        org.openapis.openapi.models.operations.PostPlacementGroupsResponse res = new org.openapis.openapi.models.operations.PostPlacementGroupsResponse(contentType, httpRes.statusCode()) {{
             createPlacementGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -224,11 +216,9 @@ public class PlacementGroups {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutPlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.PutPlacementGroupsIdResponse() {{
+        org.openapis.openapi.models.operations.PutPlacementGroupsIdResponse res = new org.openapis.openapi.models.operations.PutPlacementGroupsIdResponse(contentType, httpRes.statusCode()) {{
             placementGroupResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

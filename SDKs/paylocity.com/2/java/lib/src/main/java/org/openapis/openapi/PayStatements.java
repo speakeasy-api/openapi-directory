@@ -59,12 +59,10 @@ public class PayStatements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse() {{
+        org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearResponse(contentType, httpRes.statusCode()) {{
             payStatementDetails = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,12 +114,10 @@ public class PayStatements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse() {{
+        org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementDetailDataBasedOnTheSpecifiedYearAndCheckDateResponse(contentType, httpRes.statusCode()) {{
             payStatementDetails = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,12 +169,10 @@ public class PayStatements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse() {{
+        org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearResponse(contentType, httpRes.statusCode()) {{
             payStatementSummaries = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,12 +224,10 @@ public class PayStatements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse() {{
+        org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse res = new org.openapis.openapi.models.operations.GetsEmployeePayStatementSummaryDataBasedOnTheSpecifiedYearAndCheckDateResponse(contentType, httpRes.statusCode()) {{
             payStatementSummaries = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

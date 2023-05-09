@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAccessTokensRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListAccessTokensRequestBody requestBody;
+
     public ListAccessTokensRequest withRequestBody(ListAccessTokensRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ListAccessTokensRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListAccessTokensRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,9 +32,13 @@ public class ListAccessTokensRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListAccessTokensRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAccessTokensRequest(@JsonProperty("RequestBody") ListAccessTokensRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

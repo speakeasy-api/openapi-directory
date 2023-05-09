@@ -15,6 +15,7 @@ public class DeleteInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionId")
     public String deletionId;
+
     public DeleteInventoryResult withDeletionId(String deletionId) {
         this.deletionId = deletionId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeletionSummary")
     public InventoryDeletionSummary deletionSummary;
+
     public DeleteInventoryResult withDeletionSummary(InventoryDeletionSummary deletionSummary) {
         this.deletionSummary = deletionSummary;
         return this;
@@ -31,9 +33,11 @@ public class DeleteInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public DeleteInventoryResult withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public DeleteInventoryResult(){}
 }

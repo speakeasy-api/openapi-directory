@@ -52,12 +52,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsResponse res = new org.openapis.openapi.models.operations.GetOfferingsResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsResponse res = new org.openapis.openapi.models.operations.GetOfferingsResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,12 +97,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsCurrentResponse res = new org.openapis.openapi.models.operations.GetOfferingsCurrentResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsCurrentResponse res = new org.openapis.openapi.models.operations.GetOfferingsCurrentResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -146,12 +142,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsFutureResponse res = new org.openapis.openapi.models.operations.GetOfferingsFutureResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsFutureResponse res = new org.openapis.openapi.models.operations.GetOfferingsFutureResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -194,12 +188,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternResponse res = new org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternResponse res = new org.openapis.openapi.models.operations.GetOfferingsInfoTextPatternResponse(contentType, httpRes.statusCode()) {{
             portfolioActivations = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,12 +233,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsPastResponse res = new org.openapis.openapi.models.operations.GetOfferingsPastResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsPastResponse res = new org.openapis.openapi.models.operations.GetOfferingsPastResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponses = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,12 +279,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOfferingsOfferingIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdResponse() {{
+        org.openapis.openapi.models.operations.GetOfferingsOfferingIdResponse res = new org.openapis.openapi.models.operations.GetOfferingsOfferingIdResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,12 +330,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchOfferingsOfferingIdResponse res = new org.openapis.openapi.models.operations.PatchOfferingsOfferingIdResponse() {{
+        org.openapis.openapi.models.operations.PatchOfferingsOfferingIdResponse res = new org.openapis.openapi.models.operations.PatchOfferingsOfferingIdResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -395,12 +381,10 @@ public class Offerings {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostOfferingsResponse res = new org.openapis.openapi.models.operations.PostOfferingsResponse() {{
+        org.openapis.openapi.models.operations.PostOfferingsResponse res = new org.openapis.openapi.models.operations.PostOfferingsResponse(contentType, httpRes.statusCode()) {{
             offeringMetadataResponse = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

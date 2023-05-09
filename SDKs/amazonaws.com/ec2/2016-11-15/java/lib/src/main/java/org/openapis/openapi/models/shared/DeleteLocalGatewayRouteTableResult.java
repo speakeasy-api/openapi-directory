@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteTableResult {
     
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable localGatewayRouteTable;
+
     public DeleteLocalGatewayRouteTableResult withLocalGatewayRouteTable(DeleteLocalGatewayRouteTableResultLocalGatewayRouteTable localGatewayRouteTable) {
         this.localGatewayRouteTable = localGatewayRouteTable;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableResult(){}
 }

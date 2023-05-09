@@ -12,9 +12,11 @@ public class GetConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pretty")
     public Boolean pretty;
+
     public GetConfigRequest withPretty(Boolean pretty) {
         this.pretty = pretty;
         return this;
     }
     
+    public GetConfigRequest(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateApiCacheResponse {
@@ -12,6 +13,7 @@ public class UpdateApiCacheResponse {
      */
     
     public Object badRequestException;
+
     public UpdateApiCacheResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateApiCacheResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateApiCacheResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateApiCacheResponse {
     
     
     public String contentType;
+
     public UpdateApiCacheResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateApiCacheResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateApiCacheResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateApiCacheResponse {
      */
     
     public Object notFoundException;
+
     public UpdateApiCacheResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateApiCacheResponse {
     
     
     public Integer statusCode;
+
     public UpdateApiCacheResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateApiCacheResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateApiCacheResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateApiCacheResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateApiCacheResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateApiCacheResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateApiCacheResponse updateApiCacheResponse;
+
     public UpdateApiCacheResponse withUpdateApiCacheResponse(org.openapis.openapi.models.shared.UpdateApiCacheResponse updateApiCacheResponse) {
         this.updateApiCacheResponse = updateApiCacheResponse;
         return this;
     }
     
+    public UpdateApiCacheResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

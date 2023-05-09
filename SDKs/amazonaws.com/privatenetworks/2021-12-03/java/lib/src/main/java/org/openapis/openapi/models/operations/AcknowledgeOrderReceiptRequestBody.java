@@ -12,9 +12,13 @@ public class AcknowledgeOrderReceiptRequestBody {
      */
     @JsonProperty("orderArn")
     public String orderArn;
+
     public AcknowledgeOrderReceiptRequestBody withOrderArn(String orderArn) {
         this.orderArn = orderArn;
         return this;
     }
     
+    public AcknowledgeOrderReceiptRequestBody(@JsonProperty("orderArn") String orderArn) {
+        this.orderArn = orderArn;
+  }
 }

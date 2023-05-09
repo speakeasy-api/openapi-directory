@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0CommonWebpageConditionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("argument")
     public String argument;
+
     public GoogleAdsSearchads360V0CommonWebpageConditionInfo withArgument(String argument) {
         this.argument = argument;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0CommonWebpageConditionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operand")
     public GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum operand;
+
     public GoogleAdsSearchads360V0CommonWebpageConditionInfo withOperand(GoogleAdsSearchads360V0CommonWebpageConditionInfoOperandEnum operand) {
         this.operand = operand;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0CommonWebpageConditionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum operator;
+
     public GoogleAdsSearchads360V0CommonWebpageConditionInfo withOperator(GoogleAdsSearchads360V0CommonWebpageConditionInfoOperatorEnum operator) {
         this.operator = operator;
         return this;
     }
     
+    public GoogleAdsSearchads360V0CommonWebpageConditionInfo(){}
 }

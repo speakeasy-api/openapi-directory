@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePresetResponse {
@@ -12,6 +13,7 @@ public class DeletePresetResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePresetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeletePresetResponse {
     
     
     public String contentType;
+
     public DeletePresetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeletePresetResponse {
      */
     
     public java.util.Map<String, Object> deletePresetResponse;
+
     public DeletePresetResponse withDeletePresetResponse(java.util.Map<String, Object> deletePresetResponse) {
         this.deletePresetResponse = deletePresetResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeletePresetResponse {
      */
     
     public Object incompatibleVersionException;
+
     public DeletePresetResponse withIncompatibleVersionException(Object incompatibleVersionException) {
         this.incompatibleVersionException = incompatibleVersionException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePresetResponse {
      */
     
     public Object internalServiceException;
+
     public DeletePresetResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePresetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePresetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePresetResponse {
     
     
     public Integer statusCode;
+
     public DeletePresetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeletePresetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePresetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeletePresetResponse {
      */
     
     public Object validationException;
+
     public DeletePresetResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePresetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

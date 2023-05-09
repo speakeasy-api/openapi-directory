@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SecuritycenterProjectsMuteConfigsCreateResponse {
     
     public String contentType;
+
     public SecuritycenterProjectsMuteConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterProjectsMuteConfigsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfig googleCloudSecuritycenterV1MuteConfig;
+
     public SecuritycenterProjectsMuteConfigsCreateResponse withGoogleCloudSecuritycenterV1MuteConfig(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfig googleCloudSecuritycenterV1MuteConfig) {
         this.googleCloudSecuritycenterV1MuteConfig = googleCloudSecuritycenterV1MuteConfig;
         return this;
@@ -26,6 +29,7 @@ public class SecuritycenterProjectsMuteConfigsCreateResponse {
     
     
     public Integer statusCode;
+
     public SecuritycenterProjectsMuteConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SecuritycenterProjectsMuteConfigsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SecuritycenterProjectsMuteConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SecuritycenterProjectsMuteConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

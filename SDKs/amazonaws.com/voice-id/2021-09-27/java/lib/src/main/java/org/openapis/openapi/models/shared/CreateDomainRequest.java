@@ -12,6 +12,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDomainRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDomainRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDomainRequest withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +37,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("ServerSideEncryptionConfiguration")
     public ServerSideEncryptionConfiguration serverSideEncryptionConfiguration;
+
     public CreateDomainRequest withServerSideEncryptionConfiguration(ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
         this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
         return this;
@@ -42,9 +46,14 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDomainRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateDomainRequest(@JsonProperty("Name") String name, @JsonProperty("ServerSideEncryptionConfiguration") ServerSideEncryptionConfiguration serverSideEncryptionConfiguration) {
+        this.name = name;
+        this.serverSideEncryptionConfiguration = serverSideEncryptionConfiguration;
+  }
 }

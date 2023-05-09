@@ -59,11 +59,9 @@ public class Customer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse res = new org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse res = new org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosCommandsGetResponse(contentType, httpRes.statusCode()) {{
             directoryChromeosdevicesCommand = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Customer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse res = new org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse() {{
+        org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse res = new org.openapis.openapi.models.operations.AdminCustomerDevicesChromeosIssueCommandResponse(contentType, httpRes.statusCode()) {{
             directoryChromeosdevicesIssueCommandResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

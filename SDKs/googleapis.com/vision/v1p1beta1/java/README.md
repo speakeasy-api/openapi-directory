@@ -16,29 +16,28 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption1;
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption2;
-import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurity;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateRequest;
 import org.openapis.openapi.models.operations.VisionFilesAnnotateResponse;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurity;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption1;
+import org.openapis.openapi.models.operations.VisionFilesAnnotateSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1InputConfig;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BoundingPoly;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1CropHintsParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1Feature;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1FeatureTypeEnum;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1GcsSource;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1ImageContext;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1WebDetectionParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1TextDetectionParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1ProductSearchParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1BoundingPoly;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1Vertex;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1NormalizedVertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1InputConfig;
 import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1LatLongRect;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1NormalizedVertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1ProductSearchParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1TextDetectionParams;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1Vertex;
+import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1WebDetectionParams;
 import org.openapis.openapi.models.shared.LatLng;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1CropHintsParams;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1FeatureTypeEnum;
-import org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1Feature;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -48,7 +47,7 @@ public class Application {
                 .build();
 
             VisionFilesAnnotateRequest req = new VisionFilesAnnotateRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudVisionV1p1beta1BatchAnnotateFilesRequest = new GoogleCloudVisionV1p1beta1BatchAnnotateFilesRequest() {{
                     parent = "provident";
                     requests = new org.openapis.openapi.models.shared.GoogleCloudVisionV1p1beta1AnnotateFileRequest[]{{
@@ -57,22 +56,22 @@ public class Application {
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 602763;
                                     model = "nulla";
-                                    type = "SAFE_SEARCH_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.SAFE_SEARCH_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 847252;
                                     model = "vel";
-                                    type = "IMAGE_PROPERTIES";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.IMAGE_PROPERTIES;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 645894;
                                     model = "suscipit";
-                                    type = "TEXT_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.TEXT_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 297534;
                                     model = "debitis";
-                                    type = "TYPE_UNSPECIFIED";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.TYPE_UNSPECIFIED;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p1beta1ImageContext() {{
@@ -159,12 +158,12 @@ public class Application {
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 186332;
                                     model = "impedit";
-                                    type = "CROP_HINTS";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.CROP_HINTS;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 456150;
                                     model = "ipsum";
-                                    type = "SAFE_SEARCH_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.SAFE_SEARCH_DETECTION;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p1beta1ImageContext() {{
@@ -249,22 +248,22 @@ public class Application {
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 102044;
                                     model = "mollitia";
-                                    type = "LANDMARK_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.LANDMARK_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 635059;
                                     model = "consequuntur";
-                                    type = "OBJECT_LOCALIZATION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.OBJECT_LOCALIZATION;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 653108;
                                     model = "occaecati";
-                                    type = "LOGO_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.LOGO_DETECTION;
                                 }}),
                                 add(new GoogleCloudVisionV1p1beta1Feature() {{
                                     maxResults = 414369;
                                     model = "quam";
-                                    type = "DOCUMENT_TEXT_DETECTION";
+                                    type = GoogleCloudVisionV1p1beta1FeatureTypeEnum.DOCUMENT_TEXT_DETECTION;
                                 }}),
                             }};
                             imageContext = new GoogleCloudVisionV1p1beta1ImageContext() {{
@@ -347,9 +346,9 @@ public class Application {
                             }};
                         }}),
                     }};
-                }};
+                }};;
                 accessToken = "dicta";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "enim";
                 fields = "accusamus";
                 key = "commodi";
@@ -358,21 +357,23 @@ public class Application {
                 quotaUser = "quae";
                 uploadType = "ipsum";
                 uploadProtocol = "quidem";
-            }}            
+            }};            
 
             VisionFilesAnnotateResponse res = sdk.files.visionFilesAnnotate(req, new VisionFilesAnnotateSecurity() {{
-                option1 = new VisionFilesAnnotateSecurityOption1() {{
+                option1 = new VisionFilesAnnotateSecurityOption1("molestias", "excepturi") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.googleCloudVisionV1p1beta1BatchAnnotateFilesResponse.isPresent()) {
+            if (res.googleCloudVisionV1p1beta1BatchAnnotateFilesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -380,22 +381,22 @@ public class Application {
 ## Available Resources and Operations
 
 
-### files
+### [files](docs/files/README.md)
 
-* `visionFilesAnnotate` - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
-* `visionFilesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+* [visionFilesAnnotate](docs/files/README.md#visionfilesannotate) - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
+* [visionFilesAsyncBatchAnnotate](docs/files/README.md#visionfilesasyncbatchannotate) - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
 
-### images
+### [images](docs/images/README.md)
 
-* `visionImagesAnnotate` - Run image detection and annotation for a batch of images.
-* `visionImagesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+* [visionImagesAnnotate](docs/images/README.md#visionimagesannotate) - Run image detection and annotation for a batch of images.
+* [visionImagesAsyncBatchAnnotate](docs/images/README.md#visionimagesasyncbatchannotate) - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `visionProjectsLocationsFilesAnnotate` - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
-* `visionProjectsLocationsFilesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
-* `visionProjectsLocationsImagesAnnotate` - Run image detection and annotation for a batch of images.
-* `visionProjectsLocationsImagesAsyncBatchAnnotate` - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
+* [visionProjectsLocationsFilesAnnotate](docs/projects/README.md#visionprojectslocationsfilesannotate) - Service that performs image detection and annotation for a batch of files. Now only "application/pdf", "image/tiff" and "image/gif" are supported. This service will extract at most 5 (customers can specify which 5 in AnnotateFileRequest.pages) frames (gif) or pages (pdf or tiff) from each file provided and perform detection and annotation for each image extracted.
+* [visionProjectsLocationsFilesAsyncBatchAnnotate](docs/projects/README.md#visionprojectslocationsfilesasyncbatchannotate) - Run asynchronous image detection and annotation for a list of generic files, such as PDF files, which may contain multiple pages and multiple images per page. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateFilesResponse` (results).
+* [visionProjectsLocationsImagesAnnotate](docs/projects/README.md#visionprojectslocationsimagesannotate) - Run image detection and annotation for a batch of images.
+* [visionProjectsLocationsImagesAsyncBatchAnnotate](docs/projects/README.md#visionprojectslocationsimagesasyncbatchannotate) - Run asynchronous image detection and annotation for a list of images. Progress and results can be retrieved through the `google.longrunning.Operations` interface. `Operation.metadata` contains `OperationMetadata` (metadata). `Operation.response` contains `AsyncBatchAnnotateImagesResponse` (results). This service will write image annotation outputs to json files in customer GCS bucket, each json file containing BatchAnnotateImagesResponse proto.
 <!-- End SDK Available Operations -->
 
 ### Maturity

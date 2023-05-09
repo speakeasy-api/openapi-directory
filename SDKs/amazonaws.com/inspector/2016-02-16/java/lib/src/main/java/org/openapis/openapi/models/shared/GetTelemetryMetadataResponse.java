@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTelemetryMetadataResponse {
     @JsonProperty("telemetryMetadata")
     public TelemetryMetadata[] telemetryMetadata;
+
     public GetTelemetryMetadataResponse withTelemetryMetadata(TelemetryMetadata[] telemetryMetadata) {
         this.telemetryMetadata = telemetryMetadata;
         return this;
     }
     
+    public GetTelemetryMetadataResponse(@JsonProperty("telemetryMetadata") TelemetryMetadata[] telemetryMetadata) {
+        this.telemetryMetadata = telemetryMetadata;
+  }
 }

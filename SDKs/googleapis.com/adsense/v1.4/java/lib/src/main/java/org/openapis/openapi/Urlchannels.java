@@ -58,11 +58,9 @@ public class Urlchannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AdsenseUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseUrlchannelsListResponse() {{
+        org.openapis.openapi.models.operations.AdsenseUrlchannelsListResponse res = new org.openapis.openapi.models.operations.AdsenseUrlchannelsListResponse(contentType, httpRes.statusCode()) {{
             urlChannels = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class ViewabilityTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewability")
     public ViewabilityTargetingOptionDetailsViewabilityEnum viewability;
+
     public ViewabilityTargetingOptionDetails withViewability(ViewabilityTargetingOptionDetailsViewabilityEnum viewability) {
         this.viewability = viewability;
         return this;
     }
     
+    public ViewabilityTargetingOptionDetails(){}
 }

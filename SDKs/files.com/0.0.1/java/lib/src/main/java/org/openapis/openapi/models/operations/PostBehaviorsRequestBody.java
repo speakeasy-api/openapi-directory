@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostBehaviorsRequestBody {
@@ -12,6 +13,7 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public PostBehaviorsRequestBodyAttachmentFile attachmentFile;
+
     public PostBehaviorsRequestBody withAttachmentFile(PostBehaviorsRequestBodyAttachmentFile attachmentFile) {
         this.attachmentFile = attachmentFile;
         return this;
@@ -22,6 +24,7 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=behavior")
     public String behavior;
+
     public PostBehaviorsRequestBody withBehavior(String behavior) {
         this.behavior = behavior;
         return this;
@@ -32,6 +35,7 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PostBehaviorsRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +46,7 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostBehaviorsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostBehaviorsRequestBody withPath(String path) {
         this.path = path;
         return this;
@@ -62,9 +68,14 @@ public class PostBehaviorsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=value")
     public String value;
+
     public PostBehaviorsRequestBody withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PostBehaviorsRequestBody(@JsonProperty("behavior") String behavior, @JsonProperty("path") String path) {
+        this.behavior = behavior;
+        this.path = path;
+  }
 }

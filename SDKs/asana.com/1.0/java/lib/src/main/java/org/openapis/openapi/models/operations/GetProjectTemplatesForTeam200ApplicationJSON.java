@@ -15,9 +15,11 @@ public class GetProjectTemplatesForTeam200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.ProjectTemplateCompact[] data;
+
     public GetProjectTemplatesForTeam200ApplicationJSON withData(org.openapis.openapi.models.shared.ProjectTemplateCompact[] data) {
         this.data = data;
         return this;
     }
     
+    public GetProjectTemplatesForTeam200ApplicationJSON(){}
 }

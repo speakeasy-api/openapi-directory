@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAutomationExecutionResponse {
@@ -12,6 +13,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object automationDefinitionNotFoundException;
+
     public StartAutomationExecutionResponse withAutomationDefinitionNotFoundException(Object automationDefinitionNotFoundException) {
         this.automationDefinitionNotFoundException = automationDefinitionNotFoundException;
         return this;
@@ -22,6 +24,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object automationDefinitionVersionNotFoundException;
+
     public StartAutomationExecutionResponse withAutomationDefinitionVersionNotFoundException(Object automationDefinitionVersionNotFoundException) {
         this.automationDefinitionVersionNotFoundException = automationDefinitionVersionNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object automationExecutionLimitExceededException;
+
     public StartAutomationExecutionResponse withAutomationExecutionLimitExceededException(Object automationExecutionLimitExceededException) {
         this.automationExecutionLimitExceededException = automationExecutionLimitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class StartAutomationExecutionResponse {
     
     
     public String contentType;
+
     public StartAutomationExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object idempotentParameterMismatch;
+
     public StartAutomationExecutionResponse withIdempotentParameterMismatch(Object idempotentParameterMismatch) {
         this.idempotentParameterMismatch = idempotentParameterMismatch;
         return this;
@@ -59,6 +65,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object internalServerError;
+
     public StartAutomationExecutionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object invalidAutomationExecutionParametersException;
+
     public StartAutomationExecutionResponse withInvalidAutomationExecutionParametersException(Object invalidAutomationExecutionParametersException) {
         this.invalidAutomationExecutionParametersException = invalidAutomationExecutionParametersException;
         return this;
@@ -79,6 +87,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public Object invalidTarget;
+
     public StartAutomationExecutionResponse withInvalidTarget(Object invalidTarget) {
         this.invalidTarget = invalidTarget;
         return this;
@@ -89,6 +98,7 @@ public class StartAutomationExecutionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartAutomationExecutionResult startAutomationExecutionResult;
+
     public StartAutomationExecutionResponse withStartAutomationExecutionResult(org.openapis.openapi.models.shared.StartAutomationExecutionResult startAutomationExecutionResult) {
         this.startAutomationExecutionResult = startAutomationExecutionResult;
         return this;
@@ -96,6 +106,7 @@ public class StartAutomationExecutionResponse {
     
     
     public Integer statusCode;
+
     public StartAutomationExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class StartAutomationExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAutomationExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartAutomationExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

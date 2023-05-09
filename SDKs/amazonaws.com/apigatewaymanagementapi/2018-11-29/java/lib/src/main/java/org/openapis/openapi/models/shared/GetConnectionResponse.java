@@ -22,6 +22,7 @@ public class GetConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConnectedAt")
     public OffsetDateTime connectedAt;
+
     public GetConnectionResponse withConnectedAt(OffsetDateTime connectedAt) {
         this.connectedAt = connectedAt;
         return this;
@@ -30,6 +31,7 @@ public class GetConnectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Identity")
     public GetConnectionResponseIdentity identity;
+
     public GetConnectionResponse withIdentity(GetConnectionResponseIdentity identity) {
         this.identity = identity;
         return this;
@@ -40,9 +42,11 @@ public class GetConnectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastActiveAt")
     public OffsetDateTime lastActiveAt;
+
     public GetConnectionResponse withLastActiveAt(OffsetDateTime lastActiveAt) {
         this.lastActiveAt = lastActiveAt;
         return this;
     }
     
+    public GetConnectionResponse(){}
 }

@@ -18,6 +18,7 @@ public class DeletebulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public DeletebulkDataExporterConfig200ApplicationJSON withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class DeletebulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Boolean id;
+
     public DeletebulkDataExporterConfig200ApplicationJSON withId(Boolean id) {
         this.id = id;
         return this;
@@ -40,9 +42,11 @@ public class DeletebulkDataExporterConfig200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DeletebulkDataExporterConfig200ApplicationJSONStatusEnum status;
+
     public DeletebulkDataExporterConfig200ApplicationJSON withStatus(DeletebulkDataExporterConfig200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DeletebulkDataExporterConfig200ApplicationJSON(){}
 }

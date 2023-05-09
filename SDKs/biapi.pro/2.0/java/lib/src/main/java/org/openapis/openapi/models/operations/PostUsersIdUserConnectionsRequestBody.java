@@ -12,6 +12,7 @@ public class PostUsersIdUserConnectionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=connector_uuid")
     public String connectorUuid;
+
     public PostUsersIdUserConnectionsRequestBody withConnectorUuid(String connectorUuid) {
         this.connectorUuid = connectorUuid;
         return this;
@@ -22,9 +23,11 @@ public class PostUsersIdUserConnectionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=id_connector")
     public Long idConnector;
+
     public PostUsersIdUserConnectionsRequestBody withIdConnector(Long idConnector) {
         this.idConnector = idConnector;
         return this;
     }
     
+    public PostUsersIdUserConnectionsRequestBody(){}
 }

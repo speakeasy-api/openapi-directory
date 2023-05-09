@@ -15,6 +15,7 @@ public class RegistrationsIdentifiersListIdentifierAttributes {
      */
     
     public RegistrationsIdentifiersListIdentifierAttributesCategoryEnum category;
+
     public RegistrationsIdentifiersListIdentifierAttributes withCategory(RegistrationsIdentifiersListIdentifierAttributesCategoryEnum category) {
         this.category = category;
         return this;
@@ -25,9 +26,11 @@ public class RegistrationsIdentifiersListIdentifierAttributes {
      */
     
     public String value;
+
     public RegistrationsIdentifiersListIdentifierAttributes withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public RegistrationsIdentifiersListIdentifierAttributes(){}
 }

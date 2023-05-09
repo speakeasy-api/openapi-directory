@@ -12,9 +12,11 @@ public class V3StopLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gps")
     public V3StopGps gps;
+
     public V3StopLocation withGps(V3StopGps gps) {
         this.gps = gps;
         return this;
     }
     
+    public V3StopLocation(){}
 }

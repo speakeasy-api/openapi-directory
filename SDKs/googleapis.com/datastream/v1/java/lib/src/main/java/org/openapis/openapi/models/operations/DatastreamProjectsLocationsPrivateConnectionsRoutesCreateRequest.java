@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
@@ -12,6 +13,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RouteInput routeInput;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withRouteInput(org.openapis.openapi.models.shared.RouteInput routeInput) {
         this.routeInput = routeInput;
         return this;
@@ -29,6 +32,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requestId")
     public String requestId;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -129,6 +142,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=routeId")
     public String routeId;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withRouteId(String routeId) {
         this.routeId = routeId;
         return this;
@@ -139,6 +153,7 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,13 @@ public class DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatastreamProjectsLocationsPrivateConnectionsRoutesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -14,6 +14,7 @@ public class DescribeBudgetActionHistoriesRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public DescribeBudgetActionHistoriesRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -21,6 +22,7 @@ public class DescribeBudgetActionHistoriesRequest {
     
     @JsonProperty("ActionId")
     public String actionId;
+
     public DescribeBudgetActionHistoriesRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -31,6 +33,7 @@ public class DescribeBudgetActionHistoriesRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public DescribeBudgetActionHistoriesRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -42,6 +45,7 @@ public class DescribeBudgetActionHistoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeBudgetActionHistoriesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -53,6 +57,7 @@ public class DescribeBudgetActionHistoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetActionHistoriesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -64,9 +69,15 @@ public class DescribeBudgetActionHistoriesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimePeriod")
     public TimePeriod timePeriod;
+
     public DescribeBudgetActionHistoriesRequest withTimePeriod(TimePeriod timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public DescribeBudgetActionHistoriesRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionId") String actionId, @JsonProperty("BudgetName") String budgetName) {
+        this.accountId = accountId;
+        this.actionId = actionId;
+        this.budgetName = budgetName;
+  }
 }

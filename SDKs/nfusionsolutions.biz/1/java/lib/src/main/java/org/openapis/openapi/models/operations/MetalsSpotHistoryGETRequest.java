@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -13,6 +14,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=currency")
     public String currency;
+
     public MetalsSpotHistoryGETRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -23,6 +25,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public OffsetDateTime end;
+
     public MetalsSpotHistoryGETRequest withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -33,6 +36,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public MetalsSpotHistoryGETFormatEnum format;
+
     public MetalsSpotHistoryGETRequest withFormat(MetalsSpotHistoryGETFormatEnum format) {
         this.format = format;
         return this;
@@ -43,6 +47,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=historicalfx")
     public Boolean historicalfx;
+
     public MetalsSpotHistoryGETRequest withHistoricalfx(Boolean historicalfx) {
         this.historicalfx = historicalfx;
         return this;
@@ -64,6 +69,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=interval")
     public String interval;
+
     public MetalsSpotHistoryGETRequest withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -74,6 +80,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=metals")
     public String metals;
+
     public MetalsSpotHistoryGETRequest withMetals(String metals) {
         this.metals = metals;
         return this;
@@ -84,6 +91,7 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public OffsetDateTime start;
+
     public MetalsSpotHistoryGETRequest withStart(OffsetDateTime start) {
         this.start = start;
         return this;
@@ -102,9 +110,14 @@ public class MetalsSpotHistoryGETRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unitofmeasure")
     public MetalsSpotHistoryGETUnitofmeasureEnum unitofmeasure;
+
     public MetalsSpotHistoryGETRequest withUnitofmeasure(MetalsSpotHistoryGETUnitofmeasureEnum unitofmeasure) {
         this.unitofmeasure = unitofmeasure;
         return this;
     }
     
+    public MetalsSpotHistoryGETRequest(@JsonProperty("metals") String metals, @JsonProperty("start") OffsetDateTime start) {
+        this.metals = metals;
+        this.start = start;
+  }
 }

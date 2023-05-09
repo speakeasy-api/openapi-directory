@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artifactVersioning")
     public BranchConfigurationsUpdate200ApplicationJSONArtifactVersioning artifactVersioning;
+
     public BranchConfigurationsUpdate200ApplicationJSON withArtifactVersioning(BranchConfigurationsUpdate200ApplicationJSONArtifactVersioning artifactVersioning) {
         this.artifactVersioning = artifactVersioning;
         return this;
@@ -26,6 +27,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("badgeIsEnabled")
     public Boolean badgeIsEnabled;
+
     public BranchConfigurationsUpdate200ApplicationJSON withBadgeIsEnabled(Boolean badgeIsEnabled) {
         this.badgeIsEnabled = badgeIsEnabled;
         return this;
@@ -37,6 +39,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloneFromBranch")
     public String cloneFromBranch;
+
     public BranchConfigurationsUpdate200ApplicationJSON withCloneFromBranch(String cloneFromBranch) {
         this.cloneFromBranch = cloneFromBranch;
         return this;
@@ -44,6 +47,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     
     @JsonProperty("id")
     public Long id;
+
     public BranchConfigurationsUpdate200ApplicationJSON withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signed")
     public Boolean signed;
+
     public BranchConfigurationsUpdate200ApplicationJSON withSigned(Boolean signed) {
         this.signed = signed;
         return this;
@@ -60,6 +65,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testsEnabled")
     public Boolean testsEnabled;
+
     public BranchConfigurationsUpdate200ApplicationJSON withTestsEnabled(Boolean testsEnabled) {
         this.testsEnabled = testsEnabled;
         return this;
@@ -71,6 +77,7 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("toolsets")
     public BranchConfigurationsUpdate200ApplicationJSONToolsets toolsets;
+
     public BranchConfigurationsUpdate200ApplicationJSON withToolsets(BranchConfigurationsUpdate200ApplicationJSONToolsets toolsets) {
         this.toolsets = toolsets;
         return this;
@@ -79,9 +86,13 @@ public class BranchConfigurationsUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trigger")
     public BranchConfigurationsUpdate200ApplicationJSONTriggerEnum trigger;
+
     public BranchConfigurationsUpdate200ApplicationJSON withTrigger(BranchConfigurationsUpdate200ApplicationJSONTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
     }
     
+    public BranchConfigurationsUpdate200ApplicationJSON(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

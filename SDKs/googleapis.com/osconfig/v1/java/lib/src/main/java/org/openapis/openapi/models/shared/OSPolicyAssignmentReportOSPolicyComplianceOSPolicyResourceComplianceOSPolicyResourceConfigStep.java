@@ -18,6 +18,7 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -29,9 +30,11 @@ public class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum type;
+
     public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep withType(OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStepTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep(){}
 }

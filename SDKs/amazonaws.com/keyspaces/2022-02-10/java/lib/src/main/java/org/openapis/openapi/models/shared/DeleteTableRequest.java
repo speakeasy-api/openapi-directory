@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTableRequest {
     @JsonProperty("keyspaceName")
     public String keyspaceName;
+
     public DeleteTableRequest withKeyspaceName(String keyspaceName) {
         this.keyspaceName = keyspaceName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteTableRequest {
     
     @JsonProperty("tableName")
     public String tableName;
+
     public DeleteTableRequest withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteTableRequest(@JsonProperty("keyspaceName") String keyspaceName, @JsonProperty("tableName") String tableName) {
+        this.keyspaceName = keyspaceName;
+        this.tableName = tableName;
+  }
 }

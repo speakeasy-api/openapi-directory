@@ -12,6 +12,7 @@ public class UserEmails {
      */
     @JsonProperty("primary")
     public Boolean primary;
+
     public UserEmails withPrimary(Boolean primary) {
         this.primary = primary;
         return this;
@@ -22,6 +23,7 @@ public class UserEmails {
      */
     @JsonProperty("type")
     public String type;
+
     public UserEmails withType(String type) {
         this.type = type;
         return this;
@@ -32,9 +34,15 @@ public class UserEmails {
      */
     @JsonProperty("value")
     public String value;
+
     public UserEmails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UserEmails(@JsonProperty("primary") Boolean primary, @JsonProperty("type") String type, @JsonProperty("value") String value) {
+        this.primary = primary;
+        this.type = type;
+        this.value = value;
+  }
 }

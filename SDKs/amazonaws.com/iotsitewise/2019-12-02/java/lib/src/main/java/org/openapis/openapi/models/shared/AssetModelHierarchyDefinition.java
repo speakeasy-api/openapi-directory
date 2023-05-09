@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssetModelHierarchyDefinition {
     @JsonProperty("childAssetModelId")
     public String childAssetModelId;
+
     public AssetModelHierarchyDefinition withChildAssetModelId(String childAssetModelId) {
         this.childAssetModelId = childAssetModelId;
         return this;
@@ -19,9 +20,14 @@ public class AssetModelHierarchyDefinition {
     
     @JsonProperty("name")
     public String name;
+
     public AssetModelHierarchyDefinition withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AssetModelHierarchyDefinition(@JsonProperty("childAssetModelId") String childAssetModelId, @JsonProperty("name") String name) {
+        this.childAssetModelId = childAssetModelId;
+        this.name = name;
+  }
 }

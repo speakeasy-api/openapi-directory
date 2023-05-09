@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsDetailsForOrgRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsDetailsForOrgRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apps_limit")
     public Double appsLimit;
+
     public DistributionGroupsDetailsForOrgRequest withAppsLimit(Double appsLimit) {
         this.appsLimit = appsLimit;
         return this;
@@ -22,9 +24,13 @@ public class DistributionGroupsDetailsForOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_name")
     public String orgName;
+
     public DistributionGroupsDetailsForOrgRequest withOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
     
+    public DistributionGroupsDetailsForOrgRequest(@JsonProperty("org_name") String orgName) {
+        this.orgName = orgName;
+  }
 }

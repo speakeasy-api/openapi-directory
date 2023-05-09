@@ -15,6 +15,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationAggregatedStatus")
     public ApplicationAggregatedStatus applicationAggregatedStatus;
+
     public Application withApplicationAggregatedStatus(ApplicationAggregatedStatus applicationAggregatedStatus) {
         this.applicationAggregatedStatus = applicationAggregatedStatus;
         return this;
@@ -23,6 +24,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationID")
     public String applicationID;
+
     public Application withApplicationID(String applicationID) {
         this.applicationID = applicationID;
         return this;
@@ -31,6 +33,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Application withArn(String arn) {
         this.arn = arn;
         return this;
@@ -39,6 +42,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDateTime")
     public String creationDateTime;
+
     public Application withCreationDateTime(String creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -47,6 +51,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Application withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +60,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isArchived")
     public Boolean isArchived;
+
     public Application withIsArchived(Boolean isArchived) {
         this.isArchived = isArchived;
         return this;
@@ -63,6 +69,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastModifiedDateTime")
     public String lastModifiedDateTime;
+
     public Application withLastModifiedDateTime(String lastModifiedDateTime) {
         this.lastModifiedDateTime = lastModifiedDateTime;
         return this;
@@ -71,6 +78,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +87,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Application withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -87,9 +96,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waveID")
     public String waveID;
+
     public Application withWaveID(String waveID) {
         this.waveID = waveID;
         return this;
     }
     
+    public Application(){}
 }

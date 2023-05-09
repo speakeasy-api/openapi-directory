@@ -18,6 +18,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public ImageArchitectureEnum architecture;
+
     public Image withArchitecture(ImageArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("archiveSizeBytes")
     public String archiveSizeBytes;
+
     public Image withArchiveSizeBytes(String archiveSizeBytes) {
         this.archiveSizeBytes = archiveSizeBytes;
         return this;
@@ -40,6 +42,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public Image withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -51,6 +54,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecated")
     public DeprecationStatus deprecated;
+
     public Image withDeprecated(DeprecationStatus deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -62,6 +66,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Image withDescription(String description) {
         this.description = description;
         return this;
@@ -73,6 +78,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public Image withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -84,6 +90,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family")
     public String family;
+
     public Image withFamily(String family) {
         this.family = family;
         return this;
@@ -95,6 +102,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOsFeatures")
     public GuestOsFeature[] guestOsFeatures;
+
     public Image withGuestOsFeatures(GuestOsFeature[] guestOsFeatures) {
         this.guestOsFeatures = guestOsFeatures;
         return this;
@@ -106,6 +114,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Image withId(String id) {
         this.id = id;
         return this;
@@ -114,6 +123,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageEncryptionKey")
     public CustomerEncryptionKey imageEncryptionKey;
+
     public Image withImageEncryptionKey(CustomerEncryptionKey imageEncryptionKey) {
         this.imageEncryptionKey = imageEncryptionKey;
         return this;
@@ -125,6 +135,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Image withKind(String kind) {
         this.kind = kind;
         return this;
@@ -136,6 +147,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public Image withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -147,6 +159,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public Image withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -158,6 +171,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCodes")
     public String[] licenseCodes;
+
     public Image withLicenseCodes(String[] licenseCodes) {
         this.licenseCodes = licenseCodes;
         return this;
@@ -169,6 +183,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public Image withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -180,6 +195,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locked")
     public Boolean locked;
+
     public Image withLocked(Boolean locked) {
         this.locked = locked;
         return this;
@@ -191,6 +207,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Image withName(String name) {
         this.name = name;
         return this;
@@ -202,6 +219,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawDisk")
     public ImageRawDisk rawDisk;
+
     public Image withRawDisk(ImageRawDisk rawDisk) {
         this.rawDisk = rawDisk;
         return this;
@@ -213,6 +231,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rolloutOverride")
     public RolloutPolicy rolloutOverride;
+
     public Image withRolloutOverride(RolloutPolicy rolloutOverride) {
         this.rolloutOverride = rolloutOverride;
         return this;
@@ -224,6 +243,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("satisfiesPzs")
     public Boolean satisfiesPzs;
+
     public Image withSatisfiesPzs(Boolean satisfiesPzs) {
         this.satisfiesPzs = satisfiesPzs;
         return this;
@@ -235,6 +255,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Image withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -246,6 +267,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shieldedInstanceInitialState")
     public InitialStateConfig shieldedInstanceInitialState;
+
     public Image withShieldedInstanceInitialState(InitialStateConfig shieldedInstanceInitialState) {
         this.shieldedInstanceInitialState = shieldedInstanceInitialState;
         return this;
@@ -257,6 +279,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDisk")
     public String sourceDisk;
+
     public Image withSourceDisk(String sourceDisk) {
         this.sourceDisk = sourceDisk;
         return this;
@@ -265,6 +288,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskEncryptionKey")
     public CustomerEncryptionKey sourceDiskEncryptionKey;
+
     public Image withSourceDiskEncryptionKey(CustomerEncryptionKey sourceDiskEncryptionKey) {
         this.sourceDiskEncryptionKey = sourceDiskEncryptionKey;
         return this;
@@ -276,6 +300,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDiskId")
     public String sourceDiskId;
+
     public Image withSourceDiskId(String sourceDiskId) {
         this.sourceDiskId = sourceDiskId;
         return this;
@@ -287,6 +312,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public Image withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -295,6 +321,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageEncryptionKey")
     public CustomerEncryptionKey sourceImageEncryptionKey;
+
     public Image withSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
         this.sourceImageEncryptionKey = sourceImageEncryptionKey;
         return this;
@@ -306,6 +333,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageId")
     public String sourceImageId;
+
     public Image withSourceImageId(String sourceImageId) {
         this.sourceImageId = sourceImageId;
         return this;
@@ -317,6 +345,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public Image withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
@@ -325,6 +354,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotEncryptionKey")
     public CustomerEncryptionKey sourceSnapshotEncryptionKey;
+
     public Image withSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
         this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
         return this;
@@ -336,6 +366,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotId")
     public String sourceSnapshotId;
+
     public Image withSourceSnapshotId(String sourceSnapshotId) {
         this.sourceSnapshotId = sourceSnapshotId;
         return this;
@@ -347,6 +378,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public ImageSourceTypeEnum sourceType;
+
     public Image withSourceType(ImageSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -358,6 +390,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImageStatusEnum status;
+
     public Image withStatus(ImageStatusEnum status) {
         this.status = status;
         return this;
@@ -369,6 +402,7 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storageLocations")
     public String[] storageLocations;
+
     public Image withStorageLocations(String[] storageLocations) {
         this.storageLocations = storageLocations;
         return this;
@@ -380,9 +414,11 @@ public class Image {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLicenses")
     public String[] userLicenses;
+
     public Image withUserLicenses(String[] userLicenses) {
         this.userLicenses = userLicenses;
         return this;
     }
     
+    public Image(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartImportResponse {
@@ -12,6 +13,7 @@ public class StartImportResponse {
      */
     
     public Object accountHasOngoingImportException;
+
     public StartImportResponse withAccountHasOngoingImportException(Object accountHasOngoingImportException) {
         this.accountHasOngoingImportException = accountHasOngoingImportException;
         return this;
@@ -19,6 +21,7 @@ public class StartImportResponse {
     
     
     public String contentType;
+
     public StartImportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartImportResponse {
      */
     
     public Object eventDataStoreARNInvalidException;
+
     public StartImportResponse withEventDataStoreARNInvalidException(Object eventDataStoreARNInvalidException) {
         this.eventDataStoreARNInvalidException = eventDataStoreARNInvalidException;
         return this;
@@ -39,6 +43,7 @@ public class StartImportResponse {
      */
     
     public Object eventDataStoreNotFoundException;
+
     public StartImportResponse withEventDataStoreNotFoundException(Object eventDataStoreNotFoundException) {
         this.eventDataStoreNotFoundException = eventDataStoreNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartImportResponse {
      */
     
     public Object importNotFoundException;
+
     public StartImportResponse withImportNotFoundException(Object importNotFoundException) {
         this.importNotFoundException = importNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartImportResponse {
      */
     
     public Object inactiveEventDataStoreException;
+
     public StartImportResponse withInactiveEventDataStoreException(Object inactiveEventDataStoreException) {
         this.inactiveEventDataStoreException = inactiveEventDataStoreException;
         return this;
@@ -69,6 +76,7 @@ public class StartImportResponse {
      */
     
     public Object insufficientEncryptionPolicyException;
+
     public StartImportResponse withInsufficientEncryptionPolicyException(Object insufficientEncryptionPolicyException) {
         this.insufficientEncryptionPolicyException = insufficientEncryptionPolicyException;
         return this;
@@ -79,6 +87,7 @@ public class StartImportResponse {
      */
     
     public Object invalidEventDataStoreCategoryException;
+
     public StartImportResponse withInvalidEventDataStoreCategoryException(Object invalidEventDataStoreCategoryException) {
         this.invalidEventDataStoreCategoryException = invalidEventDataStoreCategoryException;
         return this;
@@ -89,6 +98,7 @@ public class StartImportResponse {
      */
     
     public Object invalidEventDataStoreStatusException;
+
     public StartImportResponse withInvalidEventDataStoreStatusException(Object invalidEventDataStoreStatusException) {
         this.invalidEventDataStoreStatusException = invalidEventDataStoreStatusException;
         return this;
@@ -99,6 +109,7 @@ public class StartImportResponse {
      */
     
     public Object invalidImportSourceException;
+
     public StartImportResponse withInvalidImportSourceException(Object invalidImportSourceException) {
         this.invalidImportSourceException = invalidImportSourceException;
         return this;
@@ -109,6 +120,7 @@ public class StartImportResponse {
      */
     
     public Object invalidParameterException;
+
     public StartImportResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -119,6 +131,7 @@ public class StartImportResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartImportResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -129,6 +142,7 @@ public class StartImportResponse {
      */
     
     public org.openapis.openapi.models.shared.StartImportResponse startImportResponse;
+
     public StartImportResponse withStartImportResponse(org.openapis.openapi.models.shared.StartImportResponse startImportResponse) {
         this.startImportResponse = startImportResponse;
         return this;
@@ -136,6 +150,7 @@ public class StartImportResponse {
     
     
     public Integer statusCode;
+
     public StartImportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -143,6 +158,7 @@ public class StartImportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartImportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -153,9 +169,14 @@ public class StartImportResponse {
      */
     
     public Object unsupportedOperationException;
+
     public StartImportResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public StartImportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

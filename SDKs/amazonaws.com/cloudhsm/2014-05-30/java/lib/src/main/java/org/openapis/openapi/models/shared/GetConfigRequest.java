@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConfigRequest {
     @JsonProperty("ClientArn")
     public String clientArn;
+
     public GetConfigRequest withClientArn(String clientArn) {
         this.clientArn = clientArn;
         return this;
@@ -16,6 +17,7 @@ public class GetConfigRequest {
     
     @JsonProperty("ClientVersion")
     public ClientVersionEnum clientVersion;
+
     public GetConfigRequest withClientVersion(ClientVersionEnum clientVersion) {
         this.clientVersion = clientVersion;
         return this;
@@ -23,9 +25,15 @@ public class GetConfigRequest {
     
     @JsonProperty("HapgList")
     public String[] hapgList;
+
     public GetConfigRequest withHapgList(String[] hapgList) {
         this.hapgList = hapgList;
         return this;
     }
     
+    public GetConfigRequest(@JsonProperty("ClientArn") String clientArn, @JsonProperty("ClientVersion") ClientVersionEnum clientVersion, @JsonProperty("HapgList") String[] hapgList) {
+        this.clientArn = clientArn;
+        this.clientVersion = clientVersion;
+        this.hapgList = hapgList;
+  }
 }

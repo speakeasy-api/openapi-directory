@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteHubRequest {
     @JsonProperty("HubName")
     public String hubName;
+
     public DeleteHubRequest withHubName(String hubName) {
         this.hubName = hubName;
         return this;
     }
     
+    public DeleteHubRequest(@JsonProperty("HubName") String hubName) {
+        this.hubName = hubName;
+  }
 }

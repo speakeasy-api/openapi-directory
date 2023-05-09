@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TimestreamTimestamp {
     @JsonProperty("unit")
     public String unit;
+
     public TimestreamTimestamp withUnit(String unit) {
         this.unit = unit;
         return this;
@@ -19,9 +20,14 @@ public class TimestreamTimestamp {
     
     @JsonProperty("value")
     public String value;
+
     public TimestreamTimestamp withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public TimestreamTimestamp(@JsonProperty("unit") String unit, @JsonProperty("value") String value) {
+        this.unit = unit;
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class ListTagOptionsFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public ListTagOptionsFilters withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class ListTagOptionsFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ListTagOptionsFilters withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ListTagOptionsFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ListTagOptionsFilters withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListTagOptionsFilters(){}
 }

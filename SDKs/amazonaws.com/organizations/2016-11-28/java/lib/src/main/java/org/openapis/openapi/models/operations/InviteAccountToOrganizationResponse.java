@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InviteAccountToOrganizationResponse {
@@ -12,6 +13,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public InviteAccountToOrganizationResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public InviteAccountToOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -32,6 +35,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object accountOwnerNotVerifiedException;
+
     public InviteAccountToOrganizationResponse withAccountOwnerNotVerifiedException(Object accountOwnerNotVerifiedException) {
         this.accountOwnerNotVerifiedException = accountOwnerNotVerifiedException;
         return this;
@@ -42,6 +46,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object concurrentModificationException;
+
     public InviteAccountToOrganizationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -52,6 +57,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object constraintViolationException;
+
     public InviteAccountToOrganizationResponse withConstraintViolationException(Object constraintViolationException) {
         this.constraintViolationException = constraintViolationException;
         return this;
@@ -59,6 +65,7 @@ public class InviteAccountToOrganizationResponse {
     
     
     public String contentType;
+
     public InviteAccountToOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object duplicateHandshakeException;
+
     public InviteAccountToOrganizationResponse withDuplicateHandshakeException(Object duplicateHandshakeException) {
         this.duplicateHandshakeException = duplicateHandshakeException;
         return this;
@@ -79,6 +87,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object finalizingOrganizationException;
+
     public InviteAccountToOrganizationResponse withFinalizingOrganizationException(Object finalizingOrganizationException) {
         this.finalizingOrganizationException = finalizingOrganizationException;
         return this;
@@ -89,6 +98,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object handshakeConstraintViolationException;
+
     public InviteAccountToOrganizationResponse withHandshakeConstraintViolationException(Object handshakeConstraintViolationException) {
         this.handshakeConstraintViolationException = handshakeConstraintViolationException;
         return this;
@@ -99,6 +109,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object invalidInputException;
+
     public InviteAccountToOrganizationResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -109,6 +120,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.InviteAccountToOrganizationResponse inviteAccountToOrganizationResponse;
+
     public InviteAccountToOrganizationResponse withInviteAccountToOrganizationResponse(org.openapis.openapi.models.shared.InviteAccountToOrganizationResponse inviteAccountToOrganizationResponse) {
         this.inviteAccountToOrganizationResponse = inviteAccountToOrganizationResponse;
         return this;
@@ -116,6 +128,7 @@ public class InviteAccountToOrganizationResponse {
     
     
     public Integer statusCode;
+
     public InviteAccountToOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -123,6 +136,7 @@ public class InviteAccountToOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InviteAccountToOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -133,6 +147,7 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object serviceException;
+
     public InviteAccountToOrganizationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -143,9 +158,14 @@ public class InviteAccountToOrganizationResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InviteAccountToOrganizationResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public InviteAccountToOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

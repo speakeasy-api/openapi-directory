@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SetWriteCommunityRequest {
@@ -12,6 +13,7 @@ public class SetWriteCommunityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public SetWriteCommunityRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class SetWriteCommunityRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=write")
     public String write;
+
     public SetWriteCommunityRequest withWrite(String write) {
         this.write = write;
         return this;
     }
     
+    public SetWriteCommunityRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("write") String write) {
+        this.agentNum = agentNum;
+        this.write = write;
+  }
 }

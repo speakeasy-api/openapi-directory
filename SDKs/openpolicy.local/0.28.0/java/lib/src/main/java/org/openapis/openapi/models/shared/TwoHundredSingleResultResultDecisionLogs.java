@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultDecisionLogs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public String service;
+
     public TwoHundredSingleResultResultDecisionLogs withService(String service) {
         this.service = service;
         return this;
     }
     
+    public TwoHundredSingleResultResultDecisionLogs(){}
 }

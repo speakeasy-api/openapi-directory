@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelMailboxExportJobResponse {
@@ -12,6 +13,7 @@ public class CancelMailboxExportJobResponse {
      */
     
     public java.util.Map<String, Object> cancelMailboxExportJobResponse;
+
     public CancelMailboxExportJobResponse withCancelMailboxExportJobResponse(java.util.Map<String, Object> cancelMailboxExportJobResponse) {
         this.cancelMailboxExportJobResponse = cancelMailboxExportJobResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelMailboxExportJobResponse {
     
     
     public String contentType;
+
     public CancelMailboxExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelMailboxExportJobResponse {
      */
     
     public Object entityNotFoundException;
+
     public CancelMailboxExportJobResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CancelMailboxExportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public CancelMailboxExportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CancelMailboxExportJobResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CancelMailboxExportJobResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CancelMailboxExportJobResponse {
      */
     
     public Object organizationStateException;
+
     public CancelMailboxExportJobResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -66,6 +73,7 @@ public class CancelMailboxExportJobResponse {
     
     
     public Integer statusCode;
+
     public CancelMailboxExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CancelMailboxExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelMailboxExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelMailboxExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

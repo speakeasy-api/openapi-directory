@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CancelBookingRequest {
@@ -12,9 +13,13 @@ public class CancelBookingRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=bookingId")
     public String bookingId;
+
     public CancelBookingRequest withBookingId(String bookingId) {
         this.bookingId = bookingId;
         return this;
     }
     
+    public CancelBookingRequest(@JsonProperty("bookingId") String bookingId) {
+        this.bookingId = bookingId;
+  }
 }

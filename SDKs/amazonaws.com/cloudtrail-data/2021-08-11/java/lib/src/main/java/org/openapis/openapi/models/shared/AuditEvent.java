@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuditEvent {
     @JsonProperty("eventData")
     public String eventData;
+
     public AuditEvent withEventData(String eventData) {
         this.eventData = eventData;
         return this;
@@ -22,6 +23,7 @@ public class AuditEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDataChecksum")
     public String eventDataChecksum;
+
     public AuditEvent withEventDataChecksum(String eventDataChecksum) {
         this.eventDataChecksum = eventDataChecksum;
         return this;
@@ -29,9 +31,14 @@ public class AuditEvent {
     
     @JsonProperty("id")
     public String id;
+
     public AuditEvent withId(String id) {
         this.id = id;
         return this;
     }
     
+    public AuditEvent(@JsonProperty("eventData") String eventData, @JsonProperty("id") String id) {
+        this.eventData = eventData;
+        this.id = id;
+  }
 }

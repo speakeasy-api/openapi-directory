@@ -18,6 +18,7 @@ public class EditGuaranteedOrderReadAccessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAccessInherited")
     public Boolean readAccessInherited;
+
     public EditGuaranteedOrderReadAccessorsResponse withReadAccessInherited(Boolean readAccessInherited) {
         this.readAccessInherited = readAccessInherited;
         return this;
@@ -29,9 +30,11 @@ public class EditGuaranteedOrderReadAccessorsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readAdvertiserIds")
     public String[] readAdvertiserIds;
+
     public EditGuaranteedOrderReadAccessorsResponse withReadAdvertiserIds(String[] readAdvertiserIds) {
         this.readAdvertiserIds = readAdvertiserIds;
         return this;
     }
     
+    public EditGuaranteedOrderReadAccessorsResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateOptionGroupMessage {
     
     public String engineName;
+
     public CreateOptionGroupMessage withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -16,6 +17,7 @@ public class CreateOptionGroupMessage {
     
     
     public String majorEngineVersion;
+
     public CreateOptionGroupMessage withMajorEngineVersion(String majorEngineVersion) {
         this.majorEngineVersion = majorEngineVersion;
         return this;
@@ -23,6 +25,7 @@ public class CreateOptionGroupMessage {
     
     
     public String optionGroupDescription;
+
     public CreateOptionGroupMessage withOptionGroupDescription(String optionGroupDescription) {
         this.optionGroupDescription = optionGroupDescription;
         return this;
@@ -30,6 +33,7 @@ public class CreateOptionGroupMessage {
     
     
     public String optionGroupName;
+
     public CreateOptionGroupMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -37,9 +41,16 @@ public class CreateOptionGroupMessage {
     
     
     public TagList[] tags;
+
     public CreateOptionGroupMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOptionGroupMessage(@JsonProperty("EngineName") String engineName, @JsonProperty("MajorEngineVersion") String majorEngineVersion, @JsonProperty("OptionGroupDescription") String optionGroupDescription, @JsonProperty("OptionGroupName") String optionGroupName) {
+        this.engineName = engineName;
+        this.majorEngineVersion = majorEngineVersion;
+        this.optionGroupDescription = optionGroupDescription;
+        this.optionGroupName = optionGroupName;
+  }
 }

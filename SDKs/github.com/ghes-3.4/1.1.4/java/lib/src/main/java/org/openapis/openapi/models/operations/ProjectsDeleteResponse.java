@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsDeleteResponse {
     
     public String contentType;
+
     public ProjectsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsDeleteResponse {
     
     
     public Integer statusCode;
+
     public ProjectsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsDeleteResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsDeleteResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ProjectsDeleteResponse {
      */
     
     public ProjectsDelete403ApplicationJSON projectsDelete403ApplicationJSONObject;
+
     public ProjectsDeleteResponse withProjectsDelete403ApplicationJSONObject(ProjectsDelete403ApplicationJSON projectsDelete403ApplicationJSONObject) {
         this.projectsDelete403ApplicationJSONObject = projectsDelete403ApplicationJSONObject;
         return this;
     }
     
+    public ProjectsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

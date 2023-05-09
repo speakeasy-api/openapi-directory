@@ -15,9 +15,11 @@ public class StartBlueprintRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public StartBlueprintRunResponse withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public StartBlueprintRunResponse(){}
 }

@@ -15,6 +15,7 @@ public class ListProfileObjectsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectFilter")
     public ListProfileObjectsRequestBodyObjectFilter objectFilter;
+
     public ListProfileObjectsRequestBody withObjectFilter(ListProfileObjectsRequestBodyObjectFilter objectFilter) {
         this.objectFilter = objectFilter;
         return this;
@@ -25,6 +26,7 @@ public class ListProfileObjectsRequestBody {
      */
     @JsonProperty("ObjectTypeName")
     public String objectTypeName;
+
     public ListProfileObjectsRequestBody withObjectTypeName(String objectTypeName) {
         this.objectTypeName = objectTypeName;
         return this;
@@ -35,9 +37,14 @@ public class ListProfileObjectsRequestBody {
      */
     @JsonProperty("ProfileId")
     public String profileId;
+
     public ListProfileObjectsRequestBody withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
     }
     
+    public ListProfileObjectsRequestBody(@JsonProperty("ObjectTypeName") String objectTypeName, @JsonProperty("ProfileId") String profileId) {
+        this.objectTypeName = objectTypeName;
+        this.profileId = profileId;
+  }
 }

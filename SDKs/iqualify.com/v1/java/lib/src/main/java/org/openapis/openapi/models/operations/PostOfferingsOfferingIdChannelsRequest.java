@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOfferingsOfferingIdChannelsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ChannelRequired channelRequired;
+
     public PostOfferingsOfferingIdChannelsRequest withChannelRequired(org.openapis.openapi.models.shared.ChannelRequired channelRequired) {
         this.channelRequired = channelRequired;
         return this;
@@ -19,9 +21,14 @@ public class PostOfferingsOfferingIdChannelsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=offeringId")
     public String offeringId;
+
     public PostOfferingsOfferingIdChannelsRequest withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
     }
     
+    public PostOfferingsOfferingIdChannelsRequest(@JsonProperty("ChannelRequired") org.openapis.openapi.models.shared.ChannelRequired channelRequired, @JsonProperty("offeringId") String offeringId) {
+        this.channelRequired = channelRequired;
+        this.offeringId = offeringId;
+  }
 }

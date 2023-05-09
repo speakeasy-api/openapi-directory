@@ -22,6 +22,7 @@ public class SymbolUploadsCreate200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration_date")
     public OffsetDateTime expirationDate;
+
     public SymbolUploadsCreate200ApplicationJSON withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -32,6 +33,7 @@ public class SymbolUploadsCreate200ApplicationJSON {
      */
     @JsonProperty("symbol_upload_id")
     public String symbolUploadId;
+
     public SymbolUploadsCreate200ApplicationJSON withSymbolUploadId(String symbolUploadId) {
         this.symbolUploadId = symbolUploadId;
         return this;
@@ -42,9 +44,15 @@ public class SymbolUploadsCreate200ApplicationJSON {
      */
     @JsonProperty("upload_url")
     public String uploadUrl;
+
     public SymbolUploadsCreate200ApplicationJSON withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
     }
     
+    public SymbolUploadsCreate200ApplicationJSON(@JsonProperty("expiration_date") OffsetDateTime expirationDate, @JsonProperty("symbol_upload_id") String symbolUploadId, @JsonProperty("upload_url") String uploadUrl) {
+        this.expirationDate = expirationDate;
+        this.symbolUploadId = symbolUploadId;
+        this.uploadUrl = uploadUrl;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AerodromesByPolygon aerodromesByPolygon;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest withAerodromesByPolygon(org.openapis.openapi.models.shared.AerodromesByPolygon aerodromesByPolygon) {
         this.aerodromesByPolygon = aerodromesByPolygon;
         return this;
@@ -16,9 +18,13 @@ public class AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public AerodromesByPolyUsV1AerodromesPolygonQueryPostRequest(@JsonProperty("AerodromesByPolygon") org.openapis.openapi.models.shared.AerodromesByPolygon aerodromesByPolygon) {
+        this.aerodromesByPolygon = aerodromesByPolygon;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateAuthorityArn")
     public String certificateAuthorityArn;
+
     public AwsCertificateManagerCertificateDetails withCertificateAuthorityArn(String certificateAuthorityArn) {
         this.certificateAuthorityArn = certificateAuthorityArn;
         return this;
@@ -23,6 +24,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public AwsCertificateManagerCertificateDetails withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,6 +33,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainName")
     public String domainName;
+
     public AwsCertificateManagerCertificateDetails withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -39,6 +42,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainValidationOptions")
     public AwsCertificateManagerCertificateDomainValidationOption[] domainValidationOptions;
+
     public AwsCertificateManagerCertificateDetails withDomainValidationOptions(AwsCertificateManagerCertificateDomainValidationOption[] domainValidationOptions) {
         this.domainValidationOptions = domainValidationOptions;
         return this;
@@ -47,6 +51,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtendedKeyUsages")
     public AwsCertificateManagerCertificateExtendedKeyUsage[] extendedKeyUsages;
+
     public AwsCertificateManagerCertificateDetails withExtendedKeyUsages(AwsCertificateManagerCertificateExtendedKeyUsage[] extendedKeyUsages) {
         this.extendedKeyUsages = extendedKeyUsages;
         return this;
@@ -55,6 +60,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public AwsCertificateManagerCertificateDetails withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -63,6 +69,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedAt")
     public String importedAt;
+
     public AwsCertificateManagerCertificateDetails withImportedAt(String importedAt) {
         this.importedAt = importedAt;
         return this;
@@ -71,6 +78,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InUseBy")
     public String[] inUseBy;
+
     public AwsCertificateManagerCertificateDetails withInUseBy(String[] inUseBy) {
         this.inUseBy = inUseBy;
         return this;
@@ -79,6 +87,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IssuedAt")
     public String issuedAt;
+
     public AwsCertificateManagerCertificateDetails withIssuedAt(String issuedAt) {
         this.issuedAt = issuedAt;
         return this;
@@ -87,6 +96,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Issuer")
     public String issuer;
+
     public AwsCertificateManagerCertificateDetails withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
@@ -95,6 +105,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyAlgorithm")
     public String keyAlgorithm;
+
     public AwsCertificateManagerCertificateDetails withKeyAlgorithm(String keyAlgorithm) {
         this.keyAlgorithm = keyAlgorithm;
         return this;
@@ -103,6 +114,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyUsages")
     public AwsCertificateManagerCertificateKeyUsage[] keyUsages;
+
     public AwsCertificateManagerCertificateDetails withKeyUsages(AwsCertificateManagerCertificateKeyUsage[] keyUsages) {
         this.keyUsages = keyUsages;
         return this;
@@ -111,6 +123,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotAfter")
     public String notAfter;
+
     public AwsCertificateManagerCertificateDetails withNotAfter(String notAfter) {
         this.notAfter = notAfter;
         return this;
@@ -119,6 +132,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotBefore")
     public String notBefore;
+
     public AwsCertificateManagerCertificateDetails withNotBefore(String notBefore) {
         this.notBefore = notBefore;
         return this;
@@ -127,6 +141,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public AwsCertificateManagerCertificateOptions options;
+
     public AwsCertificateManagerCertificateDetails withOptions(AwsCertificateManagerCertificateOptions options) {
         this.options = options;
         return this;
@@ -135,6 +150,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalEligibility")
     public String renewalEligibility;
+
     public AwsCertificateManagerCertificateDetails withRenewalEligibility(String renewalEligibility) {
         this.renewalEligibility = renewalEligibility;
         return this;
@@ -143,6 +159,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RenewalSummary")
     public AwsCertificateManagerCertificateRenewalSummary renewalSummary;
+
     public AwsCertificateManagerCertificateDetails withRenewalSummary(AwsCertificateManagerCertificateRenewalSummary renewalSummary) {
         this.renewalSummary = renewalSummary;
         return this;
@@ -151,6 +168,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Serial")
     public String serial;
+
     public AwsCertificateManagerCertificateDetails withSerial(String serial) {
         this.serial = serial;
         return this;
@@ -159,6 +177,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignatureAlgorithm")
     public String signatureAlgorithm;
+
     public AwsCertificateManagerCertificateDetails withSignatureAlgorithm(String signatureAlgorithm) {
         this.signatureAlgorithm = signatureAlgorithm;
         return this;
@@ -167,6 +186,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsCertificateManagerCertificateDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -175,6 +195,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public AwsCertificateManagerCertificateDetails withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -183,6 +204,7 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public AwsCertificateManagerCertificateDetails withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
@@ -191,9 +213,11 @@ public class AwsCertificateManagerCertificateDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsCertificateManagerCertificateDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsCertificateManagerCertificateDetails(){}
 }

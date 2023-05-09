@@ -18,6 +18,7 @@ public class CheckCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("compatibilityFilter")
     public CheckCompatibilityRequestCompatibilityFilterEnum compatibilityFilter;
+
     public CheckCompatibilityRequest withCompatibilityFilter(CheckCompatibilityRequestCompatibilityFilterEnum compatibilityFilter) {
         this.compatibilityFilter = compatibilityFilter;
         return this;
@@ -29,6 +30,7 @@ public class CheckCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public FilterExpression dimensionFilter;
+
     public CheckCompatibilityRequest withDimensionFilter(FilterExpression dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -40,6 +42,7 @@ public class CheckCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public Dimension[] dimensions;
+
     public CheckCompatibilityRequest withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -51,6 +54,7 @@ public class CheckCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public FilterExpression metricFilter;
+
     public CheckCompatibilityRequest withMetricFilter(FilterExpression metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -62,9 +66,11 @@ public class CheckCompatibilityRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public Metric[] metrics;
+
     public CheckCompatibilityRequest withMetrics(Metric[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public CheckCompatibilityRequest(){}
 }

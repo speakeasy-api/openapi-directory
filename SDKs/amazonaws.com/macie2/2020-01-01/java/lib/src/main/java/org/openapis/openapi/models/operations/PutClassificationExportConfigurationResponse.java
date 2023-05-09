@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutClassificationExportConfigurationResponse {
@@ -12,6 +13,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public PutClassificationExportConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object conflictException;
+
     public PutClassificationExportConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class PutClassificationExportConfigurationResponse {
     
     
     public String contentType;
+
     public PutClassificationExportConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public PutClassificationExportConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutClassificationExportConfigurationResponse putClassificationExportConfigurationResponse;
+
     public PutClassificationExportConfigurationResponse withPutClassificationExportConfigurationResponse(org.openapis.openapi.models.shared.PutClassificationExportConfigurationResponse putClassificationExportConfigurationResponse) {
         this.putClassificationExportConfigurationResponse = putClassificationExportConfigurationResponse;
         return this;
@@ -59,6 +65,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutClassificationExportConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public PutClassificationExportConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class PutClassificationExportConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutClassificationExportConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutClassificationExportConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutClassificationExportConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public PutClassificationExportConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class PutClassificationExportConfigurationResponse {
      */
     
     public Object validationException;
+
     public PutClassificationExportConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutClassificationExportConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

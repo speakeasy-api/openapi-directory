@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse {
     
     public String contentType;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse {
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse {
     
     
     public Integer statusCode;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ChromepolicyCustomersPoliciesGroupsBatchDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

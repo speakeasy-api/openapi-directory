@@ -12,9 +12,13 @@ public class DeleteGraphRequestBody {
      */
     @JsonProperty("GraphArn")
     public String graphArn;
+
     public DeleteGraphRequestBody withGraphArn(String graphArn) {
         this.graphArn = graphArn;
         return this;
     }
     
+    public DeleteGraphRequestBody(@JsonProperty("GraphArn") String graphArn) {
+        this.graphArn = graphArn;
+  }
 }

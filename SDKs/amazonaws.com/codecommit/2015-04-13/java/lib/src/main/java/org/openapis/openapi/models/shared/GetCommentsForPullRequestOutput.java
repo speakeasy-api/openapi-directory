@@ -15,6 +15,7 @@ public class GetCommentsForPullRequestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commentsForPullRequestData")
     public CommentsForPullRequest[] commentsForPullRequestData;
+
     public GetCommentsForPullRequestOutput withCommentsForPullRequestData(CommentsForPullRequest[] commentsForPullRequestData) {
         this.commentsForPullRequestData = commentsForPullRequestData;
         return this;
@@ -23,9 +24,11 @@ public class GetCommentsForPullRequestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetCommentsForPullRequestOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCommentsForPullRequestOutput(){}
 }

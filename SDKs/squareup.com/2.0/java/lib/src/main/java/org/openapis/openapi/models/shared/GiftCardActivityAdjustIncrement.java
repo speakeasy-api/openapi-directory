@@ -20,6 +20,7 @@ public class GiftCardActivityAdjustIncrement {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public GiftCardActivityAdjustIncrement withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -27,9 +28,14 @@ public class GiftCardActivityAdjustIncrement {
     
     @JsonProperty("reason")
     public Object reason;
+
     public GiftCardActivityAdjustIncrement withReason(Object reason) {
         this.reason = reason;
         return this;
     }
     
+    public GiftCardActivityAdjustIncrement(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("reason") Object reason) {
+        this.amountMoney = amountMoney;
+        this.reason = reason;
+  }
 }

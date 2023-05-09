@@ -18,6 +18,7 @@ public class ReportInstanceInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public ReportInstanceInfoRequest withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -29,9 +30,11 @@ public class ReportInstanceInfoRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public ReportInstanceInfoRequest withVmId(String vmId) {
         this.vmId = vmId;
         return this;
     }
     
+    public ReportInstanceInfoRequest(){}
 }

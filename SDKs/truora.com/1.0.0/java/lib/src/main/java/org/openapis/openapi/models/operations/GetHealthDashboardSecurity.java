@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetHealthDashboardSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Truora-API-Key")
     public String apiKey;
+
     public GetHealthDashboardSecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public GetHealthDashboardSecurity(@JsonProperty("api-key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

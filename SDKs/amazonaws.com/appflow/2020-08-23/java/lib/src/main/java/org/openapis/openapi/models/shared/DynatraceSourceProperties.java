@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DynatraceSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public DynatraceSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public DynatraceSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

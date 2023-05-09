@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFindingPageRequest {
@@ -12,9 +13,13 @@ public class GetFindingPageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scanId")
     public Long scanId;
+
     public GetFindingPageRequest withScanId(Long scanId) {
         this.scanId = scanId;
         return this;
     }
     
+    public GetFindingPageRequest(@JsonProperty("scanId") Long scanId) {
+        this.scanId = scanId;
+  }
 }

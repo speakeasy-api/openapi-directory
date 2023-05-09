@@ -18,6 +18,7 @@ public class WatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventType")
     public WatchEventTypeEnum eventType;
+
     public WatchInput withEventType(WatchEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -29,9 +30,11 @@ public class WatchInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public WatchTarget target;
+
     public WatchInput withTarget(WatchTarget target) {
         this.target = target;
         return this;
     }
     
+    public WatchInput(){}
 }

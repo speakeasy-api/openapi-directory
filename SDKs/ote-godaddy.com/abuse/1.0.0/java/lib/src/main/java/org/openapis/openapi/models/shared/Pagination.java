@@ -12,6 +12,7 @@ public class Pagination {
      */
     
     public String first;
+
     public Pagination withFirst(String first) {
         this.first = first;
         return this;
@@ -22,6 +23,7 @@ public class Pagination {
      */
     
     public String last;
+
     public Pagination withLast(String last) {
         this.last = last;
         return this;
@@ -32,6 +34,7 @@ public class Pagination {
      */
     
     public String next;
+
     public Pagination withNext(String next) {
         this.next = next;
         return this;
@@ -42,6 +45,7 @@ public class Pagination {
      */
     
     public String previous;
+
     public Pagination withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -52,9 +56,11 @@ public class Pagination {
      */
     
     public Long total;
+
     public Pagination withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public Pagination(){}
 }

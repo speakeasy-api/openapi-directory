@@ -15,6 +15,7 @@ public class ListInputRoutingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListInputRoutingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListInputRoutingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routedResources")
     public RoutedResource[] routedResources;
+
     public ListInputRoutingsResponse withRoutedResources(RoutedResource[] routedResources) {
         this.routedResources = routedResources;
         return this;
     }
     
+    public ListInputRoutingsResponse(){}
 }

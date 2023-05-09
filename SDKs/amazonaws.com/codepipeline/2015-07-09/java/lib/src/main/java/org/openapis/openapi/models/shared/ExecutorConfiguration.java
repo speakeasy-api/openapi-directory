@@ -15,6 +15,7 @@ public class ExecutorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobWorkerExecutorConfiguration")
     public JobWorkerExecutorConfiguration jobWorkerExecutorConfiguration;
+
     public ExecutorConfiguration withJobWorkerExecutorConfiguration(JobWorkerExecutorConfiguration jobWorkerExecutorConfiguration) {
         this.jobWorkerExecutorConfiguration = jobWorkerExecutorConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class ExecutorConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambdaExecutorConfiguration")
     public LambdaExecutorConfiguration lambdaExecutorConfiguration;
+
     public ExecutorConfiguration withLambdaExecutorConfiguration(LambdaExecutorConfiguration lambdaExecutorConfiguration) {
         this.lambdaExecutorConfiguration = lambdaExecutorConfiguration;
         return this;
     }
     
+    public ExecutorConfiguration(){}
 }

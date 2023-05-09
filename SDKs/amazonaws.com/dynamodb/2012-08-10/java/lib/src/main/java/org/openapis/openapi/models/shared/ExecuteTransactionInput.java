@@ -12,6 +12,7 @@ public class ExecuteTransactionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public ExecuteTransactionInput withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class ExecuteTransactionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnConsumedCapacity")
     public ReturnConsumedCapacityEnum returnConsumedCapacity;
+
     public ExecuteTransactionInput withReturnConsumedCapacity(ReturnConsumedCapacityEnum returnConsumedCapacity) {
         this.returnConsumedCapacity = returnConsumedCapacity;
         return this;
@@ -27,9 +29,13 @@ public class ExecuteTransactionInput {
     
     @JsonProperty("TransactStatements")
     public ParameterizedStatement[] transactStatements;
+
     public ExecuteTransactionInput withTransactStatements(ParameterizedStatement[] transactStatements) {
         this.transactStatements = transactStatements;
         return this;
     }
     
+    public ExecuteTransactionInput(@JsonProperty("TransactStatements") ParameterizedStatement[] transactStatements) {
+        this.transactStatements = transactStatements;
+  }
 }

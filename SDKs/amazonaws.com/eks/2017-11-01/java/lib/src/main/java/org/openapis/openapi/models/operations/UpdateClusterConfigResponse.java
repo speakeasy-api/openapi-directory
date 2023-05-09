@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterConfigResponse {
@@ -12,6 +13,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object clientException;
+
     public UpdateClusterConfigResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClusterConfigResponse {
     
     
     public String contentType;
+
     public UpdateClusterConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateClusterConfigResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateClusterConfigResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateClusterConfigResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateClusterConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateClusterConfigResponse {
      */
     
     public Object serverException;
+
     public UpdateClusterConfigResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateClusterConfigResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateClusterConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateClusterConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateClusterConfigResponse updateClusterConfigResponse;
+
     public UpdateClusterConfigResponse withUpdateClusterConfigResponse(org.openapis.openapi.models.shared.UpdateClusterConfigResponse updateClusterConfigResponse) {
         this.updateClusterConfigResponse = updateClusterConfigResponse;
         return this;
     }
     
+    public UpdateClusterConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

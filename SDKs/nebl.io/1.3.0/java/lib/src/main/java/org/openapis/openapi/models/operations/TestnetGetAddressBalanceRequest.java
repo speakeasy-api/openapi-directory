@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetAddressBalanceRequest {
@@ -12,9 +13,13 @@ public class TestnetGetAddressBalanceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=address")
     public String address;
+
     public TestnetGetAddressBalanceRequest withAddress(String address) {
         this.address = address;
         return this;
     }
     
+    public TestnetGetAddressBalanceRequest(@JsonProperty("address") String address) {
+        this.address = address;
+  }
 }

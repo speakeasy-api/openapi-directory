@@ -15,6 +15,7 @@ public class GetResourcePoliciesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourcePoliciesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class GetResourcePoliciesOutput {
     
     @JsonProperty("resourcePolicies")
     public ResourcePolicy[] resourcePolicies;
+
     public GetResourcePoliciesOutput withResourcePolicies(ResourcePolicy[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
     }
     
+    public GetResourcePoliciesOutput(@JsonProperty("resourcePolicies") ResourcePolicy[] resourcePolicies) {
+        this.resourcePolicies = resourcePolicies;
+  }
 }

@@ -18,6 +18,7 @@ public class AccountAutomaticImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageImprovements")
     public AccountImageImprovements imageImprovements;
+
     public AccountAutomaticImprovements withImageImprovements(AccountImageImprovements imageImprovements) {
         this.imageImprovements = imageImprovements;
         return this;
@@ -29,6 +30,7 @@ public class AccountAutomaticImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemUpdates")
     public AccountItemUpdates itemUpdates;
+
     public AccountAutomaticImprovements withItemUpdates(AccountItemUpdates itemUpdates) {
         this.itemUpdates = itemUpdates;
         return this;
@@ -40,9 +42,11 @@ public class AccountAutomaticImprovements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingImprovements")
     public AccountShippingImprovements shippingImprovements;
+
     public AccountAutomaticImprovements withShippingImprovements(AccountShippingImprovements shippingImprovements) {
         this.shippingImprovements = shippingImprovements;
         return this;
     }
     
+    public AccountAutomaticImprovements(){}
 }

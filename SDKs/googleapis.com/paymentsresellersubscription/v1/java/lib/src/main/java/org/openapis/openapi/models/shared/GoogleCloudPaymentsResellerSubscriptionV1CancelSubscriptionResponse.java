@@ -18,9 +18,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscription")
     public GoogleCloudPaymentsResellerSubscriptionV1Subscription subscription;
+
     public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse withSubscription(GoogleCloudPaymentsResellerSubscriptionV1Subscription subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse(){}
 }

@@ -13,9 +13,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WebhookInputResource {
     @JsonProperty("attributes")
     public WebhookInputResourceAttributes attributes;
+
     public WebhookInputResource withAttributes(WebhookInputResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public WebhookInputResource(@JsonProperty("attributes") WebhookInputResourceAttributes attributes) {
+        this.attributes = attributes;
+  }
 }

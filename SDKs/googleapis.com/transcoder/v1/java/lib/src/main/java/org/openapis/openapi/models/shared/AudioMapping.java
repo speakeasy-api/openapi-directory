@@ -18,6 +18,7 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("atomKey")
     public String atomKey;
+
     public AudioMapping withAtomKey(String atomKey) {
         this.atomKey = atomKey;
         return this;
@@ -29,6 +30,7 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gainDb")
     public Double gainDb;
+
     public AudioMapping withGainDb(Double gainDb) {
         this.gainDb = gainDb;
         return this;
@@ -40,6 +42,7 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputChannel")
     public Integer inputChannel;
+
     public AudioMapping withInputChannel(Integer inputChannel) {
         this.inputChannel = inputChannel;
         return this;
@@ -51,6 +54,7 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputKey")
     public String inputKey;
+
     public AudioMapping withInputKey(String inputKey) {
         this.inputKey = inputKey;
         return this;
@@ -62,6 +66,7 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputTrack")
     public Integer inputTrack;
+
     public AudioMapping withInputTrack(Integer inputTrack) {
         this.inputTrack = inputTrack;
         return this;
@@ -73,9 +78,11 @@ public class AudioMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputChannel")
     public Integer outputChannel;
+
     public AudioMapping withOutputChannel(Integer outputChannel) {
         this.outputChannel = outputChannel;
         return this;
     }
     
+    public AudioMapping(){}
 }

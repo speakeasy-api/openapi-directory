@@ -15,6 +15,7 @@ public class GrpcRouteMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invert")
     public Boolean invert;
+
     public GrpcRouteMetadata withInvert(Boolean invert) {
         this.invert = invert;
         return this;
@@ -23,6 +24,7 @@ public class GrpcRouteMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public GrpcRouteMetadataMatchMethod match;
+
     public GrpcRouteMetadata withMatch(GrpcRouteMetadataMatchMethod match) {
         this.match = match;
         return this;
@@ -30,9 +32,13 @@ public class GrpcRouteMetadata {
     
     @JsonProperty("name")
     public String name;
+
     public GrpcRouteMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GrpcRouteMetadata(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

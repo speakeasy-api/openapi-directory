@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SqlConnectGetResponse {
@@ -12,6 +13,7 @@ public class SqlConnectGetResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectSettings connectSettings;
+
     public SqlConnectGetResponse withConnectSettings(org.openapis.openapi.models.shared.ConnectSettings connectSettings) {
         this.connectSettings = connectSettings;
         return this;
@@ -19,6 +21,7 @@ public class SqlConnectGetResponse {
     
     
     public String contentType;
+
     public SqlConnectGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class SqlConnectGetResponse {
     
     
     public Integer statusCode;
+
     public SqlConnectGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SqlConnectGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SqlConnectGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SqlConnectGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

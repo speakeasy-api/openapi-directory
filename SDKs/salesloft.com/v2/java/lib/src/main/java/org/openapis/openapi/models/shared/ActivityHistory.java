@@ -15,6 +15,7 @@ public class ActivityHistory {
      */
     
     public OffsetDateTime createdAt;
+
     public ActivityHistory withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -25,6 +26,7 @@ public class ActivityHistory {
      */
     
     public java.util.Map<String, Object> dynamicData;
+
     public ActivityHistory withDynamicData(java.util.Map<String, Object> dynamicData) {
         this.dynamicData = dynamicData;
         return this;
@@ -35,6 +37,7 @@ public class ActivityHistory {
      */
     
     public java.util.Map<String, Object> failedDynamicResources;
+
     public ActivityHistory withFailedDynamicResources(java.util.Map<String, Object> failedDynamicResources) {
         this.failedDynamicResources = failedDynamicResources;
         return this;
@@ -45,6 +48,7 @@ public class ActivityHistory {
      */
     
     public Long id;
+
     public ActivityHistory withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +59,7 @@ public class ActivityHistory {
      */
     
     public OffsetDateTime occurredAt;
+
     public ActivityHistory withOccurredAt(OffsetDateTime occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -65,6 +70,7 @@ public class ActivityHistory {
      */
     
     public OffsetDateTime pinnedAt;
+
     public ActivityHistory withPinnedAt(OffsetDateTime pinnedAt) {
         this.pinnedAt = pinnedAt;
         return this;
@@ -75,6 +81,7 @@ public class ActivityHistory {
      */
     
     public Long resourceId;
+
     public ActivityHistory withResourceId(Long resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -85,6 +92,7 @@ public class ActivityHistory {
      */
     
     public Long resourceType;
+
     public ActivityHistory withResourceType(Long resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -95,6 +103,7 @@ public class ActivityHistory {
      */
     
     public java.util.Map<String, Object> staticData;
+
     public ActivityHistory withStaticData(java.util.Map<String, Object> staticData) {
         this.staticData = staticData;
         return this;
@@ -105,6 +114,7 @@ public class ActivityHistory {
      */
     
     public String type;
+
     public ActivityHistory withType(String type) {
         this.type = type;
         return this;
@@ -115,6 +125,7 @@ public class ActivityHistory {
      */
     
     public OffsetDateTime updatedAt;
+
     public ActivityHistory withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -125,9 +136,11 @@ public class ActivityHistory {
      */
     
     public String userGuid;
+
     public ActivityHistory withUserGuid(String userGuid) {
         this.userGuid = userGuid;
         return this;
     }
     
+    public ActivityHistory(){}
 }

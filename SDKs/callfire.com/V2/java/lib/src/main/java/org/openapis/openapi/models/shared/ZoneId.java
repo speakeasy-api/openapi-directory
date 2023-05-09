@@ -18,6 +18,7 @@ public class ZoneId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ZoneId withId(String id) {
         this.id = id;
         return this;
@@ -29,9 +30,11 @@ public class ZoneId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public ZoneRules rules;
+
     public ZoneId withRules(ZoneRules rules) {
         this.rules = rules;
         return this;
     }
     
+    public ZoneId(){}
 }

@@ -15,9 +15,11 @@ public class KYCCheckResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checks")
     public KYCCheckStatusData[] checks;
+
     public KYCCheckResult withChecks(KYCCheckStatusData[] checks) {
         this.checks = checks;
         return this;
     }
     
+    public KYCCheckResult(){}
 }

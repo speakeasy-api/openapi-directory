@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCalendarEventResponseRequestDataRelationshipsCalendarEvent {
     @JsonProperty("data")
     public Data data;
+
     public CreateCalendarEventResponseRequestDataRelationshipsCalendarEvent withData(Data data) {
         this.data = data;
         return this;
     }
     
+    public CreateCalendarEventResponseRequestDataRelationshipsCalendarEvent(@JsonProperty("data") Data data) {
+        this.data = data;
+  }
 }

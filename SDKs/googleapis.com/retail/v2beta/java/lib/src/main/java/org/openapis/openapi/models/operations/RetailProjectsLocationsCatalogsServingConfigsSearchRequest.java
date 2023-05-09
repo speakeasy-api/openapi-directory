@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
@@ -12,6 +13,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest googleCloudRetailV2betaSearchRequest;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withGoogleCloudRetailV2betaSearchRequest(org.openapis.openapi.models.shared.GoogleCloudRetailV2betaSearchRequest googleCloudRetailV2betaSearchRequest) {
         this.googleCloudRetailV2betaSearchRequest = googleCloudRetailV2betaSearchRequest;
         return this;
@@ -29,6 +32,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,16 +87,18 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
     }
     
     /**
-     * Required. The resource name of the Retail Search serving config, such as `projects/* /locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the name of the legacy placement resource, such as `projects/* /locations/global/catalogs/default_catalog/placements/default_search`. This field is used to identify the serving config name and the set of models that will be used to make the search.
+     * Required. The resource name of the Retail Search serving config, such as `projects/* /locations/global/catalogs/default_catalog/servingConfigs/default_serving_config` or the name of the legacy placement resource, such as `projects/* /locations/global/catalogs/default_catalog/placements/default_search`. This field is used to identify the serving config name and the set of models that are used to make the search.
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=placement")
     public String placement;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withPlacement(String placement) {
         this.placement = placement;
         return this;
@@ -99,6 +109,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class RetailProjectsLocationsCatalogsServingConfigsSearchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RetailProjectsLocationsCatalogsServingConfigsSearchRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public RetailProjectsLocationsCatalogsServingConfigsSearchRequest(@JsonProperty("placement") String placement) {
+        this.placement = placement;
+  }
 }

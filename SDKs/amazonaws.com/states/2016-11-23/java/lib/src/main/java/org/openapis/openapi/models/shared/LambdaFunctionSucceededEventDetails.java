@@ -15,6 +15,7 @@ public class LambdaFunctionSucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public LambdaFunctionSucceededEventDetails withOutput(String output) {
         this.output = output;
         return this;
@@ -23,9 +24,11 @@ public class LambdaFunctionSucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public HistoryEventExecutionDataDetails outputDetails;
+
     public LambdaFunctionSucceededEventDetails withOutputDetails(HistoryEventExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
     }
     
+    public LambdaFunctionSucceededEventDetails(){}
 }

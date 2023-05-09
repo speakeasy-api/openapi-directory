@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignVendor1Request {
@@ -12,6 +13,7 @@ public class AssignVendor1Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VendorPriceProfileDTO vendorPriceProfileDTO;
+
     public AssignVendor1Request withVendorPriceProfileDTO(org.openapis.openapi.models.shared.VendorPriceProfileDTO vendorPriceProfileDTO) {
         this.vendorPriceProfileDTO = vendorPriceProfileDTO;
         return this;
@@ -22,9 +24,14 @@ public class AssignVendor1Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=jobId")
     public String jobId;
+
     public AssignVendor1Request withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public AssignVendor1Request(@JsonProperty("VendorPriceProfileDTO") org.openapis.openapi.models.shared.VendorPriceProfileDTO vendorPriceProfileDTO, @JsonProperty("jobId") String jobId) {
+        this.vendorPriceProfileDTO = vendorPriceProfileDTO;
+        this.jobId = jobId;
+  }
 }

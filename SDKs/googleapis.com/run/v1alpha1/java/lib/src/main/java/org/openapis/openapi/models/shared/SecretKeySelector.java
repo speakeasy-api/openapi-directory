@@ -18,6 +18,7 @@ public class SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SecretKeySelector withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localObjectReference")
     public LocalObjectReference localObjectReference;
+
     public SecretKeySelector withLocalObjectReference(LocalObjectReference localObjectReference) {
         this.localObjectReference = localObjectReference;
         return this;
@@ -40,6 +42,7 @@ public class SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecretKeySelector withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class SecretKeySelector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public SecretKeySelector withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public SecretKeySelector(){}
 }

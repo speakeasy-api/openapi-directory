@@ -12,6 +12,7 @@ package org.openapis.openapi.models.operations;
 public class PriceBulkUploads200ApplicationXML {
     
     public java.util.Map<String, Object> additionalAttributes;
+
     public PriceBulkUploads200ApplicationXML withAdditionalAttributes(java.util.Map<String, Object> additionalAttributes) {
         this.additionalAttributes = additionalAttributes;
         return this;
@@ -19,6 +20,7 @@ public class PriceBulkUploads200ApplicationXML {
     
     
     public java.util.Map<String, Object> errors;
+
     public PriceBulkUploads200ApplicationXML withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
@@ -29,9 +31,11 @@ public class PriceBulkUploads200ApplicationXML {
      */
     
     public String feedId;
+
     public PriceBulkUploads200ApplicationXML withFeedId(String feedId) {
         this.feedId = feedId;
         return this;
     }
     
+    public PriceBulkUploads200ApplicationXML(){}
 }

@@ -15,6 +15,7 @@ public class DestinyDestinyEquipItemResult {
      */
     
     public Integer equipStatus;
+
     public DestinyDestinyEquipItemResult withEquipStatus(Integer equipStatus) {
         this.equipStatus = equipStatus;
         return this;
@@ -25,9 +26,11 @@ public class DestinyDestinyEquipItemResult {
      */
     
     public Long itemInstanceId;
+
     public DestinyDestinyEquipItemResult withItemInstanceId(Long itemInstanceId) {
         this.itemInstanceId = itemInstanceId;
         return this;
     }
     
+    public DestinyDestinyEquipItemResult(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPresidentialCoverageEndDateResponse {
     
     public String contentType;
+
     public GetPresidentialCoverageEndDateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPresidentialCoverageEndDateResponse {
     
     
     public org.openapis.openapi.models.shared.PresidentialCoveragePage presidentialCoveragePage;
+
     public GetPresidentialCoverageEndDateResponse withPresidentialCoveragePage(org.openapis.openapi.models.shared.PresidentialCoveragePage presidentialCoveragePage) {
         this.presidentialCoveragePage = presidentialCoveragePage;
         return this;
@@ -23,6 +26,7 @@ public class GetPresidentialCoverageEndDateResponse {
     
     
     public Integer statusCode;
+
     public GetPresidentialCoverageEndDateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GetPresidentialCoverageEndDateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPresidentialCoverageEndDateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPresidentialCoverageEndDateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

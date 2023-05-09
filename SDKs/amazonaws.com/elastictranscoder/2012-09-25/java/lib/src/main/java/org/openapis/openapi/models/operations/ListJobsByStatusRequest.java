@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListJobsByStatusRequest {
@@ -12,6 +13,7 @@ public class ListJobsByStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Ascending")
     public String ascending;
+
     public ListJobsByStatusRequest withAscending(String ascending) {
         this.ascending = ascending;
         return this;
@@ -22,6 +24,7 @@ public class ListJobsByStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PageToken")
     public String pageToken;
+
     public ListJobsByStatusRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -32,6 +35,7 @@ public class ListJobsByStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Status")
     public String status;
+
     public ListJobsByStatusRequest withStatus(String status) {
         this.status = status;
         return this;
@@ -39,6 +43,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListJobsByStatusRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -46,6 +51,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListJobsByStatusRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -53,6 +59,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListJobsByStatusRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -60,6 +67,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListJobsByStatusRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -67,6 +75,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListJobsByStatusRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -74,6 +83,7 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListJobsByStatusRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -81,9 +91,13 @@ public class ListJobsByStatusRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListJobsByStatusRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListJobsByStatusRequest(@JsonProperty("Status") String status) {
+        this.status = status;
+  }
 }

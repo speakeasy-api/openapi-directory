@@ -16,9 +16,11 @@ public class PostTracksTrackIdCommentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public PostTracksTrackIdCommentsRequestBodyComment comment;
+
     public PostTracksTrackIdCommentsRequestBody withComment(PostTracksTrackIdCommentsRequestBodyComment comment) {
         this.comment = comment;
         return this;
     }
     
+    public PostTracksTrackIdCommentsRequestBody(){}
 }

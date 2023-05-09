@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeMailboxExportJobRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public DescribeMailboxExportJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -16,9 +17,14 @@ public class DescribeMailboxExportJobRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public DescribeMailboxExportJobRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public DescribeMailboxExportJobRequest(@JsonProperty("JobId") String jobId, @JsonProperty("OrganizationId") String organizationId) {
+        this.jobId = jobId;
+        this.organizationId = organizationId;
+  }
 }

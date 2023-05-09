@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostValidateBankAccountIdentificationResponse {
     
     public String contentType;
+
     public PostValidateBankAccountIdentificationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostValidateBankAccountIdentificationResponse {
     
     
     public Integer statusCode;
+
     public PostValidateBankAccountIdentificationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostValidateBankAccountIdentificationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostValidateBankAccountIdentificationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostValidateBankAccountIdentificationResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PostValidateBankAccountIdentificationResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class PostValidateBankAccountIdentificationResponse {
      */
     
     public java.util.Map<String, Object> void_;
+
     public PostValidateBankAccountIdentificationResponse withVoid(java.util.Map<String, Object> void_) {
         this.void_ = void_;
         return this;
     }
     
+    public PostValidateBankAccountIdentificationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

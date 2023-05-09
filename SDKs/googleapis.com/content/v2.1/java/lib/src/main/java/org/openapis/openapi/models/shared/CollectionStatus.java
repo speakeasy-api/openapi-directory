@@ -18,6 +18,7 @@ public class CollectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionLevelIssuses")
     public CollectionStatusItemLevelIssue[] collectionLevelIssuses;
+
     public CollectionStatus withCollectionLevelIssuses(CollectionStatusItemLevelIssue[] collectionLevelIssuses) {
         this.collectionLevelIssuses = collectionLevelIssuses;
         return this;
@@ -29,6 +30,7 @@ public class CollectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationDate")
     public String creationDate;
+
     public CollectionStatus withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -40,6 +42,7 @@ public class CollectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationStatuses")
     public CollectionStatusDestinationStatus[] destinationStatuses;
+
     public CollectionStatus withDestinationStatuses(CollectionStatusDestinationStatus[] destinationStatuses) {
         this.destinationStatuses = destinationStatuses;
         return this;
@@ -51,6 +54,7 @@ public class CollectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CollectionStatus withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +66,11 @@ public class CollectionStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateDate")
     public String lastUpdateDate;
+
     public CollectionStatus withLastUpdateDate(String lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
         return this;
     }
     
+    public CollectionStatus(){}
 }

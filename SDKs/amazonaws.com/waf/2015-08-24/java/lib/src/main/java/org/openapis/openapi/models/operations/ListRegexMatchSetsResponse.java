@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRegexMatchSetsResponse {
     
     public String contentType;
+
     public ListRegexMatchSetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRegexMatchSetsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRegexMatchSetsResponse listRegexMatchSetsResponse;
+
     public ListRegexMatchSetsResponse withListRegexMatchSetsResponse(org.openapis.openapi.models.shared.ListRegexMatchSetsResponse listRegexMatchSetsResponse) {
         this.listRegexMatchSetsResponse = listRegexMatchSetsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListRegexMatchSetsResponse {
     
     
     public Integer statusCode;
+
     public ListRegexMatchSetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListRegexMatchSetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRegexMatchSetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class ListRegexMatchSetsResponse {
      */
     
     public Object wafInternalErrorException;
+
     public ListRegexMatchSetsResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,9 +59,14 @@ public class ListRegexMatchSetsResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public ListRegexMatchSetsResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
     }
     
+    public ListRegexMatchSetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

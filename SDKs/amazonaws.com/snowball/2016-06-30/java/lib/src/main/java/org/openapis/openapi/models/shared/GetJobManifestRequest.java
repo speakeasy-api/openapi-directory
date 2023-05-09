@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetJobManifestRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public GetJobManifestRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public GetJobManifestRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

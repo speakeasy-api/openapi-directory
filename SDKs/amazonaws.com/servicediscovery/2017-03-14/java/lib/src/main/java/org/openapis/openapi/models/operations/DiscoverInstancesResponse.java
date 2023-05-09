@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DiscoverInstancesResponse {
     
     public String contentType;
+
     public DiscoverInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DiscoverInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.DiscoverInstancesResponse discoverInstancesResponse;
+
     public DiscoverInstancesResponse withDiscoverInstancesResponse(org.openapis.openapi.models.shared.DiscoverInstancesResponse discoverInstancesResponse) {
         this.discoverInstancesResponse = discoverInstancesResponse;
         return this;
@@ -29,6 +32,7 @@ public class DiscoverInstancesResponse {
      */
     
     public Object invalidInput;
+
     public DiscoverInstancesResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class DiscoverInstancesResponse {
      */
     
     public Object namespaceNotFound;
+
     public DiscoverInstancesResponse withNamespaceNotFound(Object namespaceNotFound) {
         this.namespaceNotFound = namespaceNotFound;
         return this;
@@ -49,6 +54,7 @@ public class DiscoverInstancesResponse {
      */
     
     public Object requestLimitExceeded;
+
     public DiscoverInstancesResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -59,6 +65,7 @@ public class DiscoverInstancesResponse {
      */
     
     public Object serviceNotFound;
+
     public DiscoverInstancesResponse withServiceNotFound(Object serviceNotFound) {
         this.serviceNotFound = serviceNotFound;
         return this;
@@ -66,6 +73,7 @@ public class DiscoverInstancesResponse {
     
     
     public Integer statusCode;
+
     public DiscoverInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DiscoverInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DiscoverInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DiscoverInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

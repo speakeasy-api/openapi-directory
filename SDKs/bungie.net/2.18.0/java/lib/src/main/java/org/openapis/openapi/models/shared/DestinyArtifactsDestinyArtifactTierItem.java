@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyArtifactsDestinyArtifactTierItem {
     
     public Boolean isActive;
+
     public DestinyArtifactsDestinyArtifactTierItem withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -16,9 +17,11 @@ public class DestinyArtifactsDestinyArtifactTierItem {
     
     
     public Long itemHash;
+
     public DestinyArtifactsDestinyArtifactTierItem withItemHash(Long itemHash) {
         this.itemHash = itemHash;
         return this;
     }
     
+    public DestinyArtifactsDestinyArtifactTierItem(){}
 }

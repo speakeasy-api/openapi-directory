@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeGeofenceCollectionResponse {
     @JsonProperty("CollectionArn")
     public String collectionArn;
+
     public DescribeGeofenceCollectionResponse withCollectionArn(String collectionArn) {
         this.collectionArn = collectionArn;
         return this;
@@ -26,6 +27,7 @@ public class DescribeGeofenceCollectionResponse {
     
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public DescribeGeofenceCollectionResponse withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -35,6 +37,7 @@ public class DescribeGeofenceCollectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreateTime")
     public OffsetDateTime createTime;
+
     public DescribeGeofenceCollectionResponse withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -42,6 +45,7 @@ public class DescribeGeofenceCollectionResponse {
     
     @JsonProperty("Description")
     public String description;
+
     public DescribeGeofenceCollectionResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -50,6 +54,7 @@ public class DescribeGeofenceCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public DescribeGeofenceCollectionResponse withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -58,6 +63,7 @@ public class DescribeGeofenceCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public DescribeGeofenceCollectionResponsePricingPlanEnum pricingPlan;
+
     public DescribeGeofenceCollectionResponse withPricingPlan(DescribeGeofenceCollectionResponsePricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -66,6 +72,7 @@ public class DescribeGeofenceCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlanDataSource")
     public String pricingPlanDataSource;
+
     public DescribeGeofenceCollectionResponse withPricingPlanDataSource(String pricingPlanDataSource) {
         this.pricingPlanDataSource = pricingPlanDataSource;
         return this;
@@ -74,6 +81,7 @@ public class DescribeGeofenceCollectionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeGeofenceCollectionResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -83,9 +91,17 @@ public class DescribeGeofenceCollectionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("UpdateTime")
     public OffsetDateTime updateTime;
+
     public DescribeGeofenceCollectionResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public DescribeGeofenceCollectionResponse(@JsonProperty("CollectionArn") String collectionArn, @JsonProperty("CollectionName") String collectionName, @JsonProperty("CreateTime") OffsetDateTime createTime, @JsonProperty("Description") String description, @JsonProperty("UpdateTime") OffsetDateTime updateTime) {
+        this.collectionArn = collectionArn;
+        this.collectionName = collectionName;
+        this.createTime = createTime;
+        this.description = description;
+        this.updateTime = updateTime;
+  }
 }

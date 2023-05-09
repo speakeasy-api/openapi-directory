@@ -12,9 +12,11 @@ public class SiteTypeLayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sites")
     public Sites[] sites;
+
     public SiteTypeLayer withSites(Sites[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public SiteTypeLayer(){}
 }

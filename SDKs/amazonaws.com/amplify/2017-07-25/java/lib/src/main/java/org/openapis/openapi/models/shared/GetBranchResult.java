@@ -15,9 +15,13 @@ public class GetBranchResult {
      */
     @JsonProperty("branch")
     public Branch branch;
+
     public GetBranchResult withBranch(Branch branch) {
         this.branch = branch;
         return this;
     }
     
+    public GetBranchResult(@JsonProperty("branch") Branch branch) {
+        this.branch = branch;
+  }
 }

@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class Permission {
     @JsonProperty("accessMode")
     public PermissionAccessModeEnum accessMode;
+
     public Permission withAccessMode(PermissionAccessModeEnum accessMode) {
         this.accessMode = accessMode;
         return this;
@@ -23,6 +24,7 @@ public class Permission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dataEraseAt")
     public OffsetDateTime dataEraseAt;
+
     public Permission withDataEraseAt(OffsetDateTime dataEraseAt) {
         this.dataEraseAt = dataEraseAt;
         return this;
@@ -30,6 +32,7 @@ public class Permission {
     
     @JsonProperty("dateRange")
     public PermissionDateRange dateRange;
+
     public Permission withDateRange(PermissionDateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -37,9 +40,16 @@ public class Permission {
     
     @JsonProperty("frequency")
     public PermissionFrequency frequency;
+
     public Permission withFrequency(PermissionFrequency frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public Permission(@JsonProperty("accessMode") PermissionAccessModeEnum accessMode, @JsonProperty("dataEraseAt") OffsetDateTime dataEraseAt, @JsonProperty("dateRange") PermissionDateRange dateRange, @JsonProperty("frequency") PermissionFrequency frequency) {
+        this.accessMode = accessMode;
+        this.dataEraseAt = dataEraseAt;
+        this.dateRange = dateRange;
+        this.frequency = frequency;
+  }
 }

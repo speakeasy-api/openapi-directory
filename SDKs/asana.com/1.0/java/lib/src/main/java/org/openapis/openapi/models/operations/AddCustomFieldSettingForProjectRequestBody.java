@@ -15,9 +15,11 @@ public class AddCustomFieldSettingForProjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.AddCustomFieldSettingRequest data;
+
     public AddCustomFieldSettingForProjectRequestBody withData(org.openapis.openapi.models.shared.AddCustomFieldSettingRequest data) {
         this.data = data;
         return this;
     }
     
+    public AddCustomFieldSettingForProjectRequestBody(){}
 }

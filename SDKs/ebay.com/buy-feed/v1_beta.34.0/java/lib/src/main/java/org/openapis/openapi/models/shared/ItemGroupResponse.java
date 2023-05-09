@@ -18,9 +18,11 @@ public class ItemGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemGroups")
     public ItemGroup[] itemGroups;
+
     public ItemGroupResponse withItemGroups(ItemGroup[] itemGroups) {
         this.itemGroups = itemGroups;
         return this;
     }
     
+    public ItemGroupResponse(){}
 }

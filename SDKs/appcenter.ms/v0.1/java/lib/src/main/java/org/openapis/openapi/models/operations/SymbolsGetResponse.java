@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SymbolsGetResponse {
     
     public String contentType;
+
     public SymbolsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SymbolsGetResponse {
     
     
     public Integer statusCode;
+
     public SymbolsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SymbolsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SymbolsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SymbolsGetResponse {
      */
     
     public SymbolsGet200ApplicationJSON symbolsGet200ApplicationJSONObject;
+
     public SymbolsGetResponse withSymbolsGet200ApplicationJSONObject(SymbolsGet200ApplicationJSON symbolsGet200ApplicationJSONObject) {
         this.symbolsGet200ApplicationJSONObject = symbolsGet200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SymbolsGetResponse {
      */
     
     public SymbolsGet403ApplicationJSON symbolsGet403ApplicationJSONObject;
+
     public SymbolsGetResponse withSymbolsGet403ApplicationJSONObject(SymbolsGet403ApplicationJSON symbolsGet403ApplicationJSONObject) {
         this.symbolsGet403ApplicationJSONObject = symbolsGet403ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SymbolsGetResponse {
      */
     
     public SymbolsGet404ApplicationJSON symbolsGet404ApplicationJSONObject;
+
     public SymbolsGetResponse withSymbolsGet404ApplicationJSONObject(SymbolsGet404ApplicationJSON symbolsGet404ApplicationJSONObject) {
         this.symbolsGet404ApplicationJSONObject = symbolsGet404ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SymbolsGetResponse {
      */
     
     public SymbolsGet500ApplicationJSON symbolsGet500ApplicationJSONObject;
+
     public SymbolsGetResponse withSymbolsGet500ApplicationJSONObject(SymbolsGet500ApplicationJSON symbolsGet500ApplicationJSONObject) {
         this.symbolsGet500ApplicationJSONObject = symbolsGet500ApplicationJSONObject;
         return this;
     }
     
+    public SymbolsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

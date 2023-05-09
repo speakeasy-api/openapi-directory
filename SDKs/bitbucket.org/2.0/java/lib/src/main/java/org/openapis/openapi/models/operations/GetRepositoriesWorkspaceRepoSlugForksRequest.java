@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugForksRequest {
@@ -13,6 +14,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRepoSlugForksRequest withQ(String q) {
         this.q = q;
         return this;
@@ -25,6 +27,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugForksRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -41,6 +44,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=role")
     public GetRepositoriesWorkspaceRepoSlugForksRoleEnum role;
+
     public GetRepositoriesWorkspaceRepoSlugForksRequest withRole(GetRepositoriesWorkspaceRepoSlugForksRoleEnum role) {
         this.role = role;
         return this;
@@ -52,6 +56,7 @@ public class GetRepositoriesWorkspaceRepoSlugForksRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRepoSlugForksRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -64,9 +69,14 @@ public class GetRepositoriesWorkspaceRepoSlugForksRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugForksRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugForksRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

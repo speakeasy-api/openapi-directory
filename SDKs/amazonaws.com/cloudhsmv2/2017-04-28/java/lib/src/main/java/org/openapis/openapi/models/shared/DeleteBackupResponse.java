@@ -15,9 +15,11 @@ public class DeleteBackupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Backup")
     public Backup backup;
+
     public DeleteBackupResponse withBackup(Backup backup) {
         this.backup = backup;
         return this;
     }
     
+    public DeleteBackupResponse(){}
 }

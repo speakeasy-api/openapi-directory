@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreTrackedExternalOrdersResponse {
@@ -12,6 +13,7 @@ public class GetStoreTrackedExternalOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoreTrackedExternalOrdersResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreTrackedExternalOrdersResponse {
     
     
     public String contentType;
+
     public GetStoreTrackedExternalOrdersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreTrackedExternalOrdersResponse {
     
     
     public Integer statusCode;
+
     public GetStoreTrackedExternalOrdersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreTrackedExternalOrdersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreTrackedExternalOrdersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreTrackedExternalOrdersResponse {
      */
     
     public org.openapis.openapi.models.shared.TrackedExternalOrders trackedExternalOrders;
+
     public GetStoreTrackedExternalOrdersResponse withTrackedExternalOrders(org.openapis.openapi.models.shared.TrackedExternalOrders trackedExternalOrders) {
         this.trackedExternalOrders = trackedExternalOrders;
         return this;
     }
     
+    public GetStoreTrackedExternalOrdersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

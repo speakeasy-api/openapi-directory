@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSectionsForDistrictRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ending_before")
     public String endingBefore;
+
     public GetSectionsForDistrictRequest withEndingBefore(String endingBefore) {
         this.endingBefore = endingBefore;
         return this;
@@ -16,6 +18,7 @@ public class GetSectionsForDistrictRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetSectionsForDistrictRequest withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +26,7 @@ public class GetSectionsForDistrictRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetSectionsForDistrictRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -30,6 +34,7 @@ public class GetSectionsForDistrictRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=starting_after")
     public String startingAfter;
+
     public GetSectionsForDistrictRequest withStartingAfter(String startingAfter) {
         this.startingAfter = startingAfter;
         return this;
@@ -37,9 +42,13 @@ public class GetSectionsForDistrictRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=where")
     public String where;
+
     public GetSectionsForDistrictRequest withWhere(String where) {
         this.where = where;
         return this;
     }
     
+    public GetSectionsForDistrictRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

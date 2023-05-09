@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateVolumeFromBackupResponse {
@@ -12,6 +13,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object backupNotFound;
+
     public CreateVolumeFromBackupResponse withBackupNotFound(Object backupNotFound) {
         this.backupNotFound = backupNotFound;
         return this;
@@ -22,6 +24,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object badRequest;
+
     public CreateVolumeFromBackupResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -29,6 +32,7 @@ public class CreateVolumeFromBackupResponse {
     
     
     public String contentType;
+
     public CreateVolumeFromBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateVolumeFromBackupResponse createVolumeFromBackupResponse;
+
     public CreateVolumeFromBackupResponse withCreateVolumeFromBackupResponse(org.openapis.openapi.models.shared.CreateVolumeFromBackupResponse createVolumeFromBackupResponse) {
         this.createVolumeFromBackupResponse = createVolumeFromBackupResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateVolumeFromBackupResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -59,6 +65,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object incompatibleParameterError;
+
     public CreateVolumeFromBackupResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -69,6 +76,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object internalServerError;
+
     public CreateVolumeFromBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -79,6 +87,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object missingVolumeConfiguration;
+
     public CreateVolumeFromBackupResponse withMissingVolumeConfiguration(Object missingVolumeConfiguration) {
         this.missingVolumeConfiguration = missingVolumeConfiguration;
         return this;
@@ -89,6 +98,7 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object serviceLimitExceeded;
+
     public CreateVolumeFromBackupResponse withServiceLimitExceeded(Object serviceLimitExceeded) {
         this.serviceLimitExceeded = serviceLimitExceeded;
         return this;
@@ -96,6 +106,7 @@ public class CreateVolumeFromBackupResponse {
     
     
     public Integer statusCode;
+
     public CreateVolumeFromBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateVolumeFromBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateVolumeFromBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateVolumeFromBackupResponse {
      */
     
     public Object storageVirtualMachineNotFound;
+
     public CreateVolumeFromBackupResponse withStorageVirtualMachineNotFound(Object storageVirtualMachineNotFound) {
         this.storageVirtualMachineNotFound = storageVirtualMachineNotFound;
         return this;
     }
     
+    public CreateVolumeFromBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

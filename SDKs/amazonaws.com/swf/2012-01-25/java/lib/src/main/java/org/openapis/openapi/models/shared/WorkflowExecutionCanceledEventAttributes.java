@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class WorkflowExecutionCanceledEventAttributes {
     @JsonProperty("decisionTaskCompletedEventId")
     public Long decisionTaskCompletedEventId;
+
     public WorkflowExecutionCanceledEventAttributes withDecisionTaskCompletedEventId(Long decisionTaskCompletedEventId) {
         this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
         return this;
@@ -22,9 +23,13 @@ public class WorkflowExecutionCanceledEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public WorkflowExecutionCanceledEventAttributes withDetails(String details) {
         this.details = details;
         return this;
     }
     
+    public WorkflowExecutionCanceledEventAttributes(@JsonProperty("decisionTaskCompletedEventId") Long decisionTaskCompletedEventId) {
+        this.decisionTaskCompletedEventId = decisionTaskCompletedEventId;
+  }
 }

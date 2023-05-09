@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Users {
     
     public String aboutMe;
+
     public Users withAboutMe(String aboutMe) {
         this.aboutMe = aboutMe;
         return this;
@@ -16,6 +17,7 @@ public class Users {
     
     
     public Long acceptRate;
+
     public Users withAcceptRate(Long acceptRate) {
         this.acceptRate = acceptRate;
         return this;
@@ -23,6 +25,7 @@ public class Users {
     
     
     public Long accountId;
+
     public Users withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -30,6 +33,7 @@ public class Users {
     
     
     public Long age;
+
     public Users withAge(Long age) {
         this.age = age;
         return this;
@@ -37,6 +41,7 @@ public class Users {
     
     
     public Long answerCount;
+
     public Users withAnswerCount(Long answerCount) {
         this.answerCount = answerCount;
         return this;
@@ -44,6 +49,7 @@ public class Users {
     
     
     public UsersBadgeCounts badgeCounts;
+
     public Users withBadgeCounts(UsersBadgeCounts badgeCounts) {
         this.badgeCounts = badgeCounts;
         return this;
@@ -51,6 +57,7 @@ public class Users {
     
     
     public Long creationDate;
+
     public Users withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -58,6 +65,7 @@ public class Users {
     
     
     public String displayName;
+
     public Users withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -65,6 +73,7 @@ public class Users {
     
     
     public Long downVoteCount;
+
     public Users withDownVoteCount(Long downVoteCount) {
         this.downVoteCount = downVoteCount;
         return this;
@@ -72,6 +81,7 @@ public class Users {
     
     
     public Boolean isEmployee;
+
     public Users withIsEmployee(Boolean isEmployee) {
         this.isEmployee = isEmployee;
         return this;
@@ -79,6 +89,7 @@ public class Users {
     
     
     public Long lastAccessDate;
+
     public Users withLastAccessDate(Long lastAccessDate) {
         this.lastAccessDate = lastAccessDate;
         return this;
@@ -86,6 +97,7 @@ public class Users {
     
     
     public Long lastModifiedDate;
+
     public Users withLastModifiedDate(Long lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -93,6 +105,7 @@ public class Users {
     
     
     public String link;
+
     public Users withLink(String link) {
         this.link = link;
         return this;
@@ -100,6 +113,7 @@ public class Users {
     
     
     public String location;
+
     public Users withLocation(String location) {
         this.location = location;
         return this;
@@ -107,6 +121,7 @@ public class Users {
     
     
     public String profileImage;
+
     public Users withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -114,6 +129,7 @@ public class Users {
     
     
     public Long questionCount;
+
     public Users withQuestionCount(Long questionCount) {
         this.questionCount = questionCount;
         return this;
@@ -121,6 +137,7 @@ public class Users {
     
     
     public Long reputation;
+
     public Users withReputation(Long reputation) {
         this.reputation = reputation;
         return this;
@@ -128,6 +145,7 @@ public class Users {
     
     
     public Long reputationChangeDay;
+
     public Users withReputationChangeDay(Long reputationChangeDay) {
         this.reputationChangeDay = reputationChangeDay;
         return this;
@@ -135,6 +153,7 @@ public class Users {
     
     
     public Long reputationChangeMonth;
+
     public Users withReputationChangeMonth(Long reputationChangeMonth) {
         this.reputationChangeMonth = reputationChangeMonth;
         return this;
@@ -142,6 +161,7 @@ public class Users {
     
     
     public Long reputationChangeQuarter;
+
     public Users withReputationChangeQuarter(Long reputationChangeQuarter) {
         this.reputationChangeQuarter = reputationChangeQuarter;
         return this;
@@ -149,6 +169,7 @@ public class Users {
     
     
     public Long reputationChangeWeek;
+
     public Users withReputationChangeWeek(Long reputationChangeWeek) {
         this.reputationChangeWeek = reputationChangeWeek;
         return this;
@@ -156,6 +177,7 @@ public class Users {
     
     
     public Long reputationChangeYear;
+
     public Users withReputationChangeYear(Long reputationChangeYear) {
         this.reputationChangeYear = reputationChangeYear;
         return this;
@@ -163,6 +185,7 @@ public class Users {
     
     
     public Long timedPenaltyDate;
+
     public Users withTimedPenaltyDate(Long timedPenaltyDate) {
         this.timedPenaltyDate = timedPenaltyDate;
         return this;
@@ -170,6 +193,7 @@ public class Users {
     
     
     public Long upVoteCount;
+
     public Users withUpVoteCount(Long upVoteCount) {
         this.upVoteCount = upVoteCount;
         return this;
@@ -177,6 +201,7 @@ public class Users {
     
     
     public Long userId;
+
     public Users withUserId(Long userId) {
         this.userId = userId;
         return this;
@@ -184,6 +209,7 @@ public class Users {
     
     
     public String userType;
+
     public Users withUserType(String userType) {
         this.userType = userType;
         return this;
@@ -191,6 +217,7 @@ public class Users {
     
     
     public Long viewCount;
+
     public Users withViewCount(Long viewCount) {
         this.viewCount = viewCount;
         return this;
@@ -198,9 +225,11 @@ public class Users {
     
     
     public String websiteUrl;
+
     public Users withWebsiteUrl(String websiteUrl) {
         this.websiteUrl = websiteUrl;
         return this;
     }
     
+    public Users(){}
 }

@@ -18,6 +18,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamPolicy")
     public IAMPolicy iamPolicy;
+
     public Namespace withIamPolicy(IAMPolicy iamPolicy) {
         this.iamPolicy = iamPolicy;
         return this;
@@ -29,9 +30,11 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Namespace withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Namespace(){}
 }

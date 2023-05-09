@@ -15,9 +15,11 @@ public class DescribeJobTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTemplate")
     public JobTemplate jobTemplate;
+
     public DescribeJobTemplateResponse withJobTemplate(JobTemplate jobTemplate) {
         this.jobTemplate = jobTemplate;
         return this;
     }
     
+    public DescribeJobTemplateResponse(){}
 }

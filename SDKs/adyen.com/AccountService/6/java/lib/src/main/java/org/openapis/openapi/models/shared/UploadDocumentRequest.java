@@ -14,6 +14,7 @@ public class UploadDocumentRequest {
      */
     @JsonProperty("documentContent")
     public String documentContent;
+
     public UploadDocumentRequest withDocumentContent(String documentContent) {
         this.documentContent = documentContent;
         return this;
@@ -21,9 +22,14 @@ public class UploadDocumentRequest {
     
     @JsonProperty("documentDetail")
     public DocumentDetail documentDetail;
+
     public UploadDocumentRequest withDocumentDetail(DocumentDetail documentDetail) {
         this.documentDetail = documentDetail;
         return this;
     }
     
+    public UploadDocumentRequest(@JsonProperty("documentContent") String documentContent, @JsonProperty("documentDetail") DocumentDetail documentDetail) {
+        this.documentContent = documentContent;
+        this.documentDetail = documentDetail;
+  }
 }

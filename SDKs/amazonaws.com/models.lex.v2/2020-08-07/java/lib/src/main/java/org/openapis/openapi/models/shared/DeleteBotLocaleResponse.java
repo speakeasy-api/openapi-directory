@@ -15,6 +15,7 @@ public class DeleteBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botId")
     public String botId;
+
     public DeleteBotLocaleResponse withBotId(String botId) {
         this.botId = botId;
         return this;
@@ -23,6 +24,7 @@ public class DeleteBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botLocaleStatus")
     public BotLocaleStatusEnum botLocaleStatus;
+
     public DeleteBotLocaleResponse withBotLocaleStatus(BotLocaleStatusEnum botLocaleStatus) {
         this.botLocaleStatus = botLocaleStatus;
         return this;
@@ -31,6 +33,7 @@ public class DeleteBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("botVersion")
     public String botVersion;
+
     public DeleteBotLocaleResponse withBotVersion(String botVersion) {
         this.botVersion = botVersion;
         return this;
@@ -39,9 +42,11 @@ public class DeleteBotLocaleResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localeId")
     public String localeId;
+
     public DeleteBotLocaleResponse withLocaleId(String localeId) {
         this.localeId = localeId;
         return this;
     }
     
+    public DeleteBotLocaleResponse(){}
 }

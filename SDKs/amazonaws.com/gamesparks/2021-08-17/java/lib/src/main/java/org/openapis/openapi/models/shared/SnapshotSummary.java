@@ -22,6 +22,7 @@ public class SnapshotSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public SnapshotSummary withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class SnapshotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SnapshotSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class SnapshotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public SnapshotSummary withId(String id) {
         this.id = id;
         return this;
@@ -48,9 +51,11 @@ public class SnapshotSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public SnapshotSummary withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
     }
     
+    public SnapshotSummary(){}
 }

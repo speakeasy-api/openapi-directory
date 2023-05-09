@@ -150,6 +150,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -187,15 +192,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateScalingPlanResponse res = new org.openapis.openapi.models.operations.CreateScalingPlanResponse() {{
+        org.openapis.openapi.models.operations.CreateScalingPlanResponse res = new org.openapis.openapi.models.operations.CreateScalingPlanResponse(contentType, httpRes.statusCode()) {{
             createScalingPlanResponse = null;
             validationException = null;
             limitExceededException = null;
             concurrentUpdateException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -271,15 +274,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteScalingPlanResponse res = new org.openapis.openapi.models.operations.DeleteScalingPlanResponse() {{
+        org.openapis.openapi.models.operations.DeleteScalingPlanResponse res = new org.openapis.openapi.models.operations.DeleteScalingPlanResponse(contentType, httpRes.statusCode()) {{
             deleteScalingPlanResponse = null;
             validationException = null;
             objectNotFoundException = null;
             concurrentUpdateException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -355,15 +356,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeScalingPlanResourcesResponse res = new org.openapis.openapi.models.operations.DescribeScalingPlanResourcesResponse() {{
+        org.openapis.openapi.models.operations.DescribeScalingPlanResourcesResponse res = new org.openapis.openapi.models.operations.DescribeScalingPlanResourcesResponse(contentType, httpRes.statusCode()) {{
             describeScalingPlanResourcesResponse = null;
             validationException = null;
             invalidNextTokenException = null;
             concurrentUpdateException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,15 +438,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeScalingPlansResponse res = new org.openapis.openapi.models.operations.DescribeScalingPlansResponse() {{
+        org.openapis.openapi.models.operations.DescribeScalingPlansResponse res = new org.openapis.openapi.models.operations.DescribeScalingPlansResponse(contentType, httpRes.statusCode()) {{
             describeScalingPlansResponse = null;
             validationException = null;
             invalidNextTokenException = null;
             concurrentUpdateException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -523,13 +520,11 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetScalingPlanResourceForecastDataResponse res = new org.openapis.openapi.models.operations.GetScalingPlanResourceForecastDataResponse() {{
+        org.openapis.openapi.models.operations.GetScalingPlanResourceForecastDataResponse res = new org.openapis.openapi.models.operations.GetScalingPlanResourceForecastDataResponse(contentType, httpRes.statusCode()) {{
             getScalingPlanResourceForecastDataResponse = null;
             validationException = null;
             internalServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -591,15 +586,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateScalingPlanResponse res = new org.openapis.openapi.models.operations.UpdateScalingPlanResponse() {{
+        org.openapis.openapi.models.operations.UpdateScalingPlanResponse res = new org.openapis.openapi.models.operations.UpdateScalingPlanResponse(contentType, httpRes.statusCode()) {{
             updateScalingPlanResponse = null;
             validationException = null;
             concurrentUpdateException = null;
             internalServiceException = null;
             objectNotFoundException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

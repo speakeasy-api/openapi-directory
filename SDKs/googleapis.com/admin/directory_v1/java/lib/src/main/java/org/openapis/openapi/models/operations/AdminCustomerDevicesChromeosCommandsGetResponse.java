@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminCustomerDevicesChromeosCommandsGetResponse {
     
     public String contentType;
+
     public AdminCustomerDevicesChromeosCommandsGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AdminCustomerDevicesChromeosCommandsGetResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryChromeosdevicesCommand directoryChromeosdevicesCommand;
+
     public AdminCustomerDevicesChromeosCommandsGetResponse withDirectoryChromeosdevicesCommand(org.openapis.openapi.models.shared.DirectoryChromeosdevicesCommand directoryChromeosdevicesCommand) {
         this.directoryChromeosdevicesCommand = directoryChromeosdevicesCommand;
         return this;
@@ -26,6 +29,7 @@ public class AdminCustomerDevicesChromeosCommandsGetResponse {
     
     
     public Integer statusCode;
+
     public AdminCustomerDevicesChromeosCommandsGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AdminCustomerDevicesChromeosCommandsGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminCustomerDevicesChromeosCommandsGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AdminCustomerDevicesChromeosCommandsGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -54,4 +54,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/UserInformationMaritalStatu
 lib/src/main/java/org/openapis/openapi/models/shared/UserInformation.java
 lib/src/main/java/org/openapis/openapi/models/shared/PropertiesHistoricPrices.java
 lib/src/main/java/org/openapis/openapi/models/shared/Properties.java
+docs/sdk/README.md
+docs/entitydata/README.md
 USAGE.md

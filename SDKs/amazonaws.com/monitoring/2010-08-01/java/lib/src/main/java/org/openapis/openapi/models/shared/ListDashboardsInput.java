@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ListDashboardsInput {
     
     public String dashboardNamePrefix;
+
     public ListDashboardsInput withDashboardNamePrefix(String dashboardNamePrefix) {
         this.dashboardNamePrefix = dashboardNamePrefix;
         return this;
@@ -16,9 +17,11 @@ public class ListDashboardsInput {
     
     
     public String nextToken;
+
     public ListDashboardsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDashboardsInput(){}
 }

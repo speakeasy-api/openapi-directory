@@ -15,6 +15,7 @@ public class ListBotVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListBotVersionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListBotVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBotVersionsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +39,11 @@ public class ListBotVersionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortBy")
     public ListBotVersionsRequestBodySortBy sortBy;
+
     public ListBotVersionsRequestBody withSortBy(ListBotVersionsRequestBodySortBy sortBy) {
         this.sortBy = sortBy;
         return this;
     }
     
+    public ListBotVersionsRequestBody(){}
 }

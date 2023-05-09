@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddCommentRequest {
@@ -12,6 +13,7 @@ public class AddCommentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public AddCommentRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -19,6 +21,7 @@ public class AddCommentRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AddCommentRequest addCommentRequest;
+
     public AddCommentRequest withAddCommentRequest(org.openapis.openapi.models.shared.AddCommentRequest addCommentRequest) {
         this.addCommentRequest = addCommentRequest;
         return this;
@@ -29,6 +32,7 @@ public class AddCommentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public AddCommentRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,9 +43,16 @@ public class AddCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taskId")
     public String taskId;
+
     public AddCommentRequest withTaskId(String taskId) {
         this.taskId = taskId;
         return this;
     }
     
+    public AddCommentRequest(@JsonProperty("Accept") String accept, @JsonProperty("AddCommentRequest") org.openapis.openapi.models.shared.AddCommentRequest addCommentRequest, @JsonProperty("Content-Type") String contentType, @JsonProperty("taskId") String taskId) {
+        this.accept = accept;
+        this.addCommentRequest = addCommentRequest;
+        this.contentType = contentType;
+        this.taskId = taskId;
+  }
 }

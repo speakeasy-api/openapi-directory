@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     public ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withAssociationTarget(ModifyInstanceEventWindowResultInstanceEventWindowAssociationTarget associationTarget) {
         this.associationTarget = associationTarget;
         return this;
@@ -19,6 +20,7 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public String cronExpression;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withCronExpression(String cronExpression) {
         this.cronExpression = cronExpression;
         return this;
@@ -26,6 +28,7 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public String instanceEventWindowId;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withInstanceEventWindowId(String instanceEventWindowId) {
         this.instanceEventWindowId = instanceEventWindowId;
         return this;
@@ -33,6 +36,7 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public String name;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +44,7 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public ModifyInstanceEventWindowResultInstanceEventWindowStateEnum state;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withState(ModifyInstanceEventWindowResultInstanceEventWindowStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public ModifyInstanceEventWindowResultInstanceEventWindowTags[] tags;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withTags(ModifyInstanceEventWindowResultInstanceEventWindowTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,9 +60,11 @@ public class ModifyInstanceEventWindowResultInstanceEventWindow {
     
     
     public ModifyInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges;
+
     public ModifyInstanceEventWindowResultInstanceEventWindow withTimeRanges(ModifyInstanceEventWindowResultInstanceEventWindowTimeRanges[] timeRanges) {
         this.timeRanges = timeRanges;
         return this;
     }
     
+    public ModifyInstanceEventWindowResultInstanceEventWindow(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSuiteDefinitionResponse {
     
     public String contentType;
+
     public GetSuiteDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSuiteDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetSuiteDefinitionResponse getSuiteDefinitionResponse;
+
     public GetSuiteDefinitionResponse withGetSuiteDefinitionResponse(org.openapis.openapi.models.shared.GetSuiteDefinitionResponse getSuiteDefinitionResponse) {
         this.getSuiteDefinitionResponse = getSuiteDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetSuiteDefinitionResponse {
      */
     
     public Object internalServerException;
+
     public GetSuiteDefinitionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetSuiteDefinitionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetSuiteDefinitionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetSuiteDefinitionResponse {
     
     
     public Integer statusCode;
+
     public GetSuiteDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetSuiteDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSuiteDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetSuiteDefinitionResponse {
      */
     
     public Object validationException;
+
     public GetSuiteDefinitionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetSuiteDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

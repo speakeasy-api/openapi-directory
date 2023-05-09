@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldId")
     public String fieldId;
+
     public Source withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
@@ -29,9 +30,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceType")
     public SourceSourceTypeEnum sourceType;
+
     public Source withSourceType(SourceSourceTypeEnum sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public Source(){}
 }

@@ -18,6 +18,7 @@ public class AccountTaxTaxRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public AccountTaxTaxRule withCountry(String country) {
         this.country = country;
         return this;
@@ -29,6 +30,7 @@ public class AccountTaxTaxRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locationId")
     public String locationId;
+
     public AccountTaxTaxRule withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -40,6 +42,7 @@ public class AccountTaxTaxRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratePercent")
     public String ratePercent;
+
     public AccountTaxTaxRule withRatePercent(String ratePercent) {
         this.ratePercent = ratePercent;
         return this;
@@ -51,6 +54,7 @@ public class AccountTaxTaxRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingTaxed")
     public Boolean shippingTaxed;
+
     public AccountTaxTaxRule withShippingTaxed(Boolean shippingTaxed) {
         this.shippingTaxed = shippingTaxed;
         return this;
@@ -62,9 +66,11 @@ public class AccountTaxTaxRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useGlobalRate")
     public Boolean useGlobalRate;
+
     public AccountTaxTaxRule withUseGlobalRate(Boolean useGlobalRate) {
         this.useGlobalRate = useGlobalRate;
         return this;
     }
     
+    public AccountTaxTaxRule(){}
 }

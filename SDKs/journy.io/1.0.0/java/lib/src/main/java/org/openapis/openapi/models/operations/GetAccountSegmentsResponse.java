@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetAccountSegmentsResponse {
     
     public String contentType;
+
     public GetAccountSegmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetAccountSegmentsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetAccountSegmentsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetAccountSegmentsResponse {
     
     
     public Integer statusCode;
+
     public GetAccountSegmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetAccountSegmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetAccountSegmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments200ApplicationJSON getAccountSegments200ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments200ApplicationJSONObject(GetAccountSegments200ApplicationJSON getAccountSegments200ApplicationJSONObject) {
         this.getAccountSegments200ApplicationJSONObject = getAccountSegments200ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments400ApplicationJSON getAccountSegments400ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments400ApplicationJSONObject(GetAccountSegments400ApplicationJSON getAccountSegments400ApplicationJSONObject) {
         this.getAccountSegments400ApplicationJSONObject = getAccountSegments400ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments401ApplicationJSON getAccountSegments401ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments401ApplicationJSONObject(GetAccountSegments401ApplicationJSON getAccountSegments401ApplicationJSONObject) {
         this.getAccountSegments401ApplicationJSONObject = getAccountSegments401ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments403ApplicationJSON getAccountSegments403ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments403ApplicationJSONObject(GetAccountSegments403ApplicationJSON getAccountSegments403ApplicationJSONObject) {
         this.getAccountSegments403ApplicationJSONObject = getAccountSegments403ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments429ApplicationJSON getAccountSegments429ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments429ApplicationJSONObject(GetAccountSegments429ApplicationJSON getAccountSegments429ApplicationJSONObject) {
         this.getAccountSegments429ApplicationJSONObject = getAccountSegments429ApplicationJSONObject;
         return this;
@@ -90,9 +100,14 @@ public class GetAccountSegmentsResponse {
      */
     
     public GetAccountSegments500ApplicationJSON getAccountSegments500ApplicationJSONObject;
+
     public GetAccountSegmentsResponse withGetAccountSegments500ApplicationJSONObject(GetAccountSegments500ApplicationJSON getAccountSegments500ApplicationJSONObject) {
         this.getAccountSegments500ApplicationJSONObject = getAccountSegments500ApplicationJSONObject;
         return this;
     }
     
+    public GetAccountSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

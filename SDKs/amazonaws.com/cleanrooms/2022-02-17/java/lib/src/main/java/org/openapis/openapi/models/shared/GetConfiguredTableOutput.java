@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetConfiguredTableOutput {
     @JsonProperty("configuredTable")
     public ConfiguredTable configuredTable;
+
     public GetConfiguredTableOutput withConfiguredTable(ConfiguredTable configuredTable) {
         this.configuredTable = configuredTable;
         return this;
     }
     
+    public GetConfiguredTableOutput(@JsonProperty("configuredTable") ConfiguredTable configuredTable) {
+        this.configuredTable = configuredTable;
+  }
 }

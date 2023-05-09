@@ -15,9 +15,11 @@ public class GetFindingsPublicationConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityHubConfiguration")
     public SecurityHubConfiguration securityHubConfiguration;
+
     public GetFindingsPublicationConfigurationResponse withSecurityHubConfiguration(SecurityHubConfiguration securityHubConfiguration) {
         this.securityHubConfiguration = securityHubConfiguration;
         return this;
     }
     
+    public GetFindingsPublicationConfigurationResponse(){}
 }

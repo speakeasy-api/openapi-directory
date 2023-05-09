@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateClientProfileRequest {
@@ -12,6 +13,7 @@ public class CreateClientProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateClientProfileRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateClientProfileRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateClientProfileRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateClientProfileRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Profile profile;
+
     public CreateClientProfileRequest withProfile(org.openapis.openapi.models.shared.Profile profile) {
         this.profile = profile;
         return this;
@@ -41,9 +45,14 @@ public class CreateClientProfileRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ttl")
     public Long ttl;
+
     public CreateClientProfileRequest withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
     }
     
+    public CreateClientProfileRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

@@ -12,6 +12,7 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetPropert
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupID")
     public Long groupID;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortApprovedateDesc withGroupID(Long groupID) {
         this.groupID = groupID;
         return this;
@@ -20,9 +21,11 @@ public class GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetPropert
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomyID")
     public Long taxonomyID;
+
     public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortApprovedateDesc withTaxonomyID(Long taxonomyID) {
         this.taxonomyID = taxonomyID;
         return this;
     }
     
+    public GETUserContentUserJSON200ApplicationJSONResultsCommentsAssetPropertiesCommentListSortApprovedateDesc(){}
 }

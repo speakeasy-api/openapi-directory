@@ -15,9 +15,11 @@ public class SendTokenRequestMetadataUserData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public SendTokenRequestMetadataUserDataMeta[] meta;
+
     public SendTokenRequestMetadataUserData withMeta(SendTokenRequestMetadataUserDataMeta[] meta) {
         this.meta = meta;
         return this;
     }
     
+    public SendTokenRequestMetadataUserData(){}
 }

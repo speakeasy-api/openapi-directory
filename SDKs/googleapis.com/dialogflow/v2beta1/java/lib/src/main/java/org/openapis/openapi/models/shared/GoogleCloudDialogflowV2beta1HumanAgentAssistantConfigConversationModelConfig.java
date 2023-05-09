@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationMo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig withModel(String model) {
         this.model = model;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationModelConfig(){}
 }

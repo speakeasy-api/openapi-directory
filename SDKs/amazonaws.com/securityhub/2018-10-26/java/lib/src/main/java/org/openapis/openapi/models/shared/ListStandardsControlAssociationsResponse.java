@@ -15,6 +15,7 @@ public class ListStandardsControlAssociationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStandardsControlAssociationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListStandardsControlAssociationsResponse {
     
     @JsonProperty("StandardsControlAssociationSummaries")
     public StandardsControlAssociationSummary[] standardsControlAssociationSummaries;
+
     public ListStandardsControlAssociationsResponse withStandardsControlAssociationSummaries(StandardsControlAssociationSummary[] standardsControlAssociationSummaries) {
         this.standardsControlAssociationSummaries = standardsControlAssociationSummaries;
         return this;
     }
     
+    public ListStandardsControlAssociationsResponse(@JsonProperty("StandardsControlAssociationSummaries") StandardsControlAssociationSummary[] standardsControlAssociationSummaries) {
+        this.standardsControlAssociationSummaries = standardsControlAssociationSummaries;
+  }
 }

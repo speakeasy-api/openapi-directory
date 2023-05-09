@@ -15,9 +15,11 @@ public class ValidateMatchmakingRuleSetOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Valid")
     public Boolean valid;
+
     public ValidateMatchmakingRuleSetOutput withValid(Boolean valid) {
         this.valid = valid;
         return this;
     }
     
+    public ValidateMatchmakingRuleSetOutput(){}
 }

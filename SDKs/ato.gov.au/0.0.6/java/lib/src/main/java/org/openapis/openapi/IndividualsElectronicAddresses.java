@@ -71,12 +71,10 @@ public class IndividualsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.DeleteIndividualsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -127,13 +125,11 @@ public class IndividualsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesResponse(contentType, httpRes.statusCode()) {{
             electronicAddresses = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,13 +189,11 @@ public class IndividualsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.GetIndividualsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -262,13 +256,11 @@ public class IndividualsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostIndividualsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdElectronicAddressesResponse() {{
+        org.openapis.openapi.models.operations.PostIndividualsPartyIdElectronicAddressesResponse res = new org.openapis.openapi.models.operations.PostIndividualsPartyIdElectronicAddressesResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             invalidArgument = null;
             unauthenticated = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -333,14 +325,12 @@ public class IndividualsElectronicAddresses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdElectronicAddressesAddressIdResponse() {{
+        org.openapis.openapi.models.operations.PutIndividualsPartyIdElectronicAddressesAddressIdResponse res = new org.openapis.openapi.models.operations.PutIndividualsPartyIdElectronicAddressesAddressIdResponse(contentType, httpRes.statusCode()) {{
             electronicAddress = null;
             invalidArgument = null;
             unauthenticated = null;
             notFound = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

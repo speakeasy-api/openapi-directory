@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteObjectsOnCancelResponse {
@@ -12,6 +13,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteObjectsOnCancelResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteObjectsOnCancelResponse {
     
     
     public String contentType;
+
     public DeleteObjectsOnCancelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public java.util.Map<String, Object> deleteObjectsOnCancelResponse;
+
     public DeleteObjectsOnCancelResponse withDeleteObjectsOnCancelResponse(java.util.Map<String, Object> deleteObjectsOnCancelResponse) {
         this.deleteObjectsOnCancelResponse = deleteObjectsOnCancelResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteObjectsOnCancelResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteObjectsOnCancelResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteObjectsOnCancelResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteObjectsOnCancelResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteObjectsOnCancelResponse {
     
     
     public Integer statusCode;
+
     public DeleteObjectsOnCancelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteObjectsOnCancelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteObjectsOnCancelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object resourceNotReadyException;
+
     public DeleteObjectsOnCancelResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -103,6 +114,7 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object transactionCanceledException;
+
     public DeleteObjectsOnCancelResponse withTransactionCanceledException(Object transactionCanceledException) {
         this.transactionCanceledException = transactionCanceledException;
         return this;
@@ -113,9 +125,14 @@ public class DeleteObjectsOnCancelResponse {
      */
     
     public Object transactionCommittedException;
+
     public DeleteObjectsOnCancelResponse withTransactionCommittedException(Object transactionCommittedException) {
         this.transactionCommittedException = transactionCommittedException;
         return this;
     }
     
+    public DeleteObjectsOnCancelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

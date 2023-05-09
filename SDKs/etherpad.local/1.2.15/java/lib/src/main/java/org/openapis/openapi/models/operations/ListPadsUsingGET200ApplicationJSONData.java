@@ -12,9 +12,11 @@ public class ListPadsUsingGET200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padIDs")
     public String[] padIDs;
+
     public ListPadsUsingGET200ApplicationJSONData withPadIDs(String[] padIDs) {
         this.padIDs = padIDs;
         return this;
     }
     
+    public ListPadsUsingGET200ApplicationJSONData(){}
 }

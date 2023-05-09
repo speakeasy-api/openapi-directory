@@ -20,6 +20,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesCompressed")
     public Long bytesCompressed;
+
     public DescribeTaskExecutionResponse withBytesCompressed(Long bytesCompressed) {
         this.bytesCompressed = bytesCompressed;
         return this;
@@ -28,6 +29,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesTransferred")
     public Long bytesTransferred;
+
     public DescribeTaskExecutionResponse withBytesTransferred(Long bytesTransferred) {
         this.bytesTransferred = bytesTransferred;
         return this;
@@ -36,6 +38,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BytesWritten")
     public Long bytesWritten;
+
     public DescribeTaskExecutionResponse withBytesWritten(Long bytesWritten) {
         this.bytesWritten = bytesWritten;
         return this;
@@ -44,6 +47,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedBytesToTransfer")
     public Long estimatedBytesToTransfer;
+
     public DescribeTaskExecutionResponse withEstimatedBytesToTransfer(Long estimatedBytesToTransfer) {
         this.estimatedBytesToTransfer = estimatedBytesToTransfer;
         return this;
@@ -52,6 +56,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedFilesToTransfer")
     public Long estimatedFilesToTransfer;
+
     public DescribeTaskExecutionResponse withEstimatedFilesToTransfer(Long estimatedFilesToTransfer) {
         this.estimatedFilesToTransfer = estimatedFilesToTransfer;
         return this;
@@ -60,6 +65,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Excludes")
     public FilterRule[] excludes;
+
     public DescribeTaskExecutionResponse withExcludes(FilterRule[] excludes) {
         this.excludes = excludes;
         return this;
@@ -68,6 +74,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilesTransferred")
     public Long filesTransferred;
+
     public DescribeTaskExecutionResponse withFilesTransferred(Long filesTransferred) {
         this.filesTransferred = filesTransferred;
         return this;
@@ -76,6 +83,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Includes")
     public FilterRule[] includes;
+
     public DescribeTaskExecutionResponse withIncludes(FilterRule[] includes) {
         this.includes = includes;
         return this;
@@ -87,6 +95,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Options")
     public Options options;
+
     public DescribeTaskExecutionResponse withOptions(Options options) {
         this.options = options;
         return this;
@@ -95,6 +104,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Result")
     public TaskExecutionResultDetail result;
+
     public DescribeTaskExecutionResponse withResult(TaskExecutionResultDetail result) {
         this.result = result;
         return this;
@@ -105,6 +115,7 @@ public class DescribeTaskExecutionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public DescribeTaskExecutionResponse withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -113,6 +124,7 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public TaskExecutionStatusEnum status;
+
     public DescribeTaskExecutionResponse withStatus(TaskExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -121,9 +133,11 @@ public class DescribeTaskExecutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutionArn")
     public String taskExecutionArn;
+
     public DescribeTaskExecutionResponse withTaskExecutionArn(String taskExecutionArn) {
         this.taskExecutionArn = taskExecutionArn;
         return this;
     }
     
+    public DescribeTaskExecutionResponse(){}
 }

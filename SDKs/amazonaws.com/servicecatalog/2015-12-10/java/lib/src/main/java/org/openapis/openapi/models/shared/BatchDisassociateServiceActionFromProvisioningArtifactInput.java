@@ -12,6 +12,7 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +20,13 @@ public class BatchDisassociateServiceActionFromProvisioningArtifactInput {
     
     @JsonProperty("ServiceActionAssociations")
     public ServiceActionAssociation[] serviceActionAssociations;
+
     public BatchDisassociateServiceActionFromProvisioningArtifactInput withServiceActionAssociations(ServiceActionAssociation[] serviceActionAssociations) {
         this.serviceActionAssociations = serviceActionAssociations;
         return this;
     }
     
+    public BatchDisassociateServiceActionFromProvisioningArtifactInput(@JsonProperty("ServiceActionAssociations") ServiceActionAssociation[] serviceActionAssociations) {
+        this.serviceActionAssociations = serviceActionAssociations;
+  }
 }

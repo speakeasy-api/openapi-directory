@@ -15,9 +15,11 @@ public class GetAssistantAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assistantAssociation")
     public AssistantAssociationData assistantAssociation;
+
     public GetAssistantAssociationResponse withAssistantAssociation(AssistantAssociationData assistantAssociation) {
         this.assistantAssociation = assistantAssociation;
         return this;
     }
     
+    public GetAssistantAssociationResponse(){}
 }

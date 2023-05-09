@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RollbackStackOutput {
     
     public String stackId;
+
     public RollbackStackOutput withStackId(String stackId) {
         this.stackId = stackId;
         return this;
     }
     
+    public RollbackStackOutput(){}
 }

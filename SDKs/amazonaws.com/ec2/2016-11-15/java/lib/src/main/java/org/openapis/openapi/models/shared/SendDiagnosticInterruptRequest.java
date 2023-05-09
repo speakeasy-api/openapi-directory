@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SendDiagnosticInterruptRequest {
     
     public Boolean dryRun;
+
     public SendDiagnosticInterruptRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class SendDiagnosticInterruptRequest {
     
     
     public String instanceId;
+
     public SendDiagnosticInterruptRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public SendDiagnosticInterruptRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ErgoPayCreateBabelBoxResponse {
     
     public byte[] body;
+
     public ErgoPayCreateBabelBoxResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class ErgoPayCreateBabelBoxResponse {
     
     
     public String contentType;
+
     public ErgoPayCreateBabelBoxResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class ErgoPayCreateBabelBoxResponse {
     
     
     public Integer statusCode;
+
     public ErgoPayCreateBabelBoxResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ErgoPayCreateBabelBoxResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ErgoPayCreateBabelBoxResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ErgoPayCreateBabelBoxResponse {
      */
     
     public String ergoPayCreateBabelBox400WildcardString;
+
     public ErgoPayCreateBabelBoxResponse withErgoPayCreateBabelBox400WildcardString(String ergoPayCreateBabelBox400WildcardString) {
         this.ergoPayCreateBabelBox400WildcardString = ergoPayCreateBabelBox400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class ErgoPayCreateBabelBoxResponse {
      */
     
     public String ergoPayCreateBabelBox401WildcardString;
+
     public ErgoPayCreateBabelBoxResponse withErgoPayCreateBabelBox401WildcardString(String ergoPayCreateBabelBox401WildcardString) {
         this.ergoPayCreateBabelBox401WildcardString = ergoPayCreateBabelBox401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class ErgoPayCreateBabelBoxResponse {
      */
     
     public String ergoPayCreateBabelBox404WildcardString;
+
     public ErgoPayCreateBabelBoxResponse withErgoPayCreateBabelBox404WildcardString(String ergoPayCreateBabelBox404WildcardString) {
         this.ergoPayCreateBabelBox404WildcardString = ergoPayCreateBabelBox404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class ErgoPayCreateBabelBoxResponse {
      */
     
     public String ergoPayCreateBabelBox409WildcardString;
+
     public ErgoPayCreateBabelBoxResponse withErgoPayCreateBabelBox409WildcardString(String ergoPayCreateBabelBox409WildcardString) {
         this.ergoPayCreateBabelBox409WildcardString = ergoPayCreateBabelBox409WildcardString;
         return this;
     }
     
+    public ErgoPayCreateBabelBoxResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

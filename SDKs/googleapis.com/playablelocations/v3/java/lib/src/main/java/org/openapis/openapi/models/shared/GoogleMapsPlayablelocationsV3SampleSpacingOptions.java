@@ -18,6 +18,7 @@ public class GoogleMapsPlayablelocationsV3SampleSpacingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minSpacingMeters")
     public Double minSpacingMeters;
+
     public GoogleMapsPlayablelocationsV3SampleSpacingOptions withMinSpacingMeters(Double minSpacingMeters) {
         this.minSpacingMeters = minSpacingMeters;
         return this;
@@ -29,9 +30,11 @@ public class GoogleMapsPlayablelocationsV3SampleSpacingOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointType")
     public GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum pointType;
+
     public GoogleMapsPlayablelocationsV3SampleSpacingOptions withPointType(GoogleMapsPlayablelocationsV3SampleSpacingOptionsPointTypeEnum pointType) {
         this.pointType = pointType;
         return this;
     }
     
+    public GoogleMapsPlayablelocationsV3SampleSpacingOptions(){}
 }

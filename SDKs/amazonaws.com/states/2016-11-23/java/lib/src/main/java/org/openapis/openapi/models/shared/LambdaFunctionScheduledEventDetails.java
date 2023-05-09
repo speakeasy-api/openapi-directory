@@ -15,6 +15,7 @@ public class LambdaFunctionScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public LambdaFunctionScheduledEventDetails withInput(String input) {
         this.input = input;
         return this;
@@ -23,6 +24,7 @@ public class LambdaFunctionScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputDetails")
     public HistoryEventExecutionDataDetails inputDetails;
+
     public LambdaFunctionScheduledEventDetails withInputDetails(HistoryEventExecutionDataDetails inputDetails) {
         this.inputDetails = inputDetails;
         return this;
@@ -30,6 +32,7 @@ public class LambdaFunctionScheduledEventDetails {
     
     @JsonProperty("resource")
     public String resource;
+
     public LambdaFunctionScheduledEventDetails withResource(String resource) {
         this.resource = resource;
         return this;
@@ -38,6 +41,7 @@ public class LambdaFunctionScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskCredentials")
     public TaskCredentials taskCredentials;
+
     public LambdaFunctionScheduledEventDetails withTaskCredentials(TaskCredentials taskCredentials) {
         this.taskCredentials = taskCredentials;
         return this;
@@ -46,9 +50,13 @@ public class LambdaFunctionScheduledEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutInSeconds")
     public Long timeoutInSeconds;
+
     public LambdaFunctionScheduledEventDetails withTimeoutInSeconds(Long timeoutInSeconds) {
         this.timeoutInSeconds = timeoutInSeconds;
         return this;
     }
     
+    public LambdaFunctionScheduledEventDetails(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

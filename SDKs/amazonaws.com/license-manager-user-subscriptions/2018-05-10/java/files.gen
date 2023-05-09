@@ -93,4 +93,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/StartProductSubscriptionRes
 lib/src/main/java/org/openapis/openapi/models/shared/StopProductSubscriptionResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateIdentityProviderSettingsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

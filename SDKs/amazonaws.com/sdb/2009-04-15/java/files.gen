@@ -117,4 +117,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListDomainsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutAttributesRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SelectRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

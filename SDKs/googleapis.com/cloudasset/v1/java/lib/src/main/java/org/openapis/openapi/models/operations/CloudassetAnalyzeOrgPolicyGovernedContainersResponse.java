@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudassetAnalyzeOrgPolicyGovernedContainersResponse {
@@ -12,6 +13,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedContainersResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyzeOrgPolicyGovernedContainersResponse analyzeOrgPolicyGovernedContainersResponse;
+
     public CloudassetAnalyzeOrgPolicyGovernedContainersResponse withAnalyzeOrgPolicyGovernedContainersResponse(org.openapis.openapi.models.shared.AnalyzeOrgPolicyGovernedContainersResponse analyzeOrgPolicyGovernedContainersResponse) {
         this.analyzeOrgPolicyGovernedContainersResponse = analyzeOrgPolicyGovernedContainersResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedContainersResponse {
     
     
     public String contentType;
+
     public CloudassetAnalyzeOrgPolicyGovernedContainersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CloudassetAnalyzeOrgPolicyGovernedContainersResponse {
     
     
     public Integer statusCode;
+
     public CloudassetAnalyzeOrgPolicyGovernedContainersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudassetAnalyzeOrgPolicyGovernedContainersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudassetAnalyzeOrgPolicyGovernedContainersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudassetAnalyzeOrgPolicyGovernedContainersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

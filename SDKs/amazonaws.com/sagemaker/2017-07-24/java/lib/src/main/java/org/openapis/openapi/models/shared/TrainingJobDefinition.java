@@ -15,6 +15,7 @@ public class TrainingJobDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HyperParameters")
     public java.util.Map<String, String> hyperParameters;
+
     public TrainingJobDefinition withHyperParameters(java.util.Map<String, String> hyperParameters) {
         this.hyperParameters = hyperParameters;
         return this;
@@ -22,6 +23,7 @@ public class TrainingJobDefinition {
     
     @JsonProperty("InputDataConfig")
     public Channel[] inputDataConfig;
+
     public TrainingJobDefinition withInputDataConfig(Channel[] inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -29,6 +31,7 @@ public class TrainingJobDefinition {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public TrainingJobDefinition withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -36,6 +39,7 @@ public class TrainingJobDefinition {
     
     @JsonProperty("ResourceConfig")
     public ResourceConfig resourceConfig;
+
     public TrainingJobDefinition withResourceConfig(ResourceConfig resourceConfig) {
         this.resourceConfig = resourceConfig;
         return this;
@@ -43,6 +47,7 @@ public class TrainingJobDefinition {
     
     @JsonProperty("StoppingCondition")
     public StoppingCondition stoppingCondition;
+
     public TrainingJobDefinition withStoppingCondition(StoppingCondition stoppingCondition) {
         this.stoppingCondition = stoppingCondition;
         return this;
@@ -53,9 +58,17 @@ public class TrainingJobDefinition {
      */
     @JsonProperty("TrainingInputMode")
     public TrainingInputModeEnum trainingInputMode;
+
     public TrainingJobDefinition withTrainingInputMode(TrainingInputModeEnum trainingInputMode) {
         this.trainingInputMode = trainingInputMode;
         return this;
     }
     
+    public TrainingJobDefinition(@JsonProperty("InputDataConfig") Channel[] inputDataConfig, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("ResourceConfig") ResourceConfig resourceConfig, @JsonProperty("StoppingCondition") StoppingCondition stoppingCondition, @JsonProperty("TrainingInputMode") TrainingInputModeEnum trainingInputMode) {
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+        this.resourceConfig = resourceConfig;
+        this.stoppingCondition = stoppingCondition;
+        this.trainingInputMode = trainingInputMode;
+  }
 }

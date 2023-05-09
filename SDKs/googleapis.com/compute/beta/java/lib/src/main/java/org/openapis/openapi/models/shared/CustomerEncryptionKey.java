@@ -15,6 +15,7 @@ public class CustomerEncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public CustomerEncryptionKey withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
@@ -26,6 +27,7 @@ public class CustomerEncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyServiceAccount")
     public String kmsKeyServiceAccount;
+
     public CustomerEncryptionKey withKmsKeyServiceAccount(String kmsKeyServiceAccount) {
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         return this;
@@ -37,6 +39,7 @@ public class CustomerEncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawKey")
     public String rawKey;
+
     public CustomerEncryptionKey withRawKey(String rawKey) {
         this.rawKey = rawKey;
         return this;
@@ -48,6 +51,7 @@ public class CustomerEncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rsaEncryptedKey")
     public String rsaEncryptedKey;
+
     public CustomerEncryptionKey withRsaEncryptedKey(String rsaEncryptedKey) {
         this.rsaEncryptedKey = rsaEncryptedKey;
         return this;
@@ -59,9 +63,11 @@ public class CustomerEncryptionKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public CustomerEncryptionKey withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public CustomerEncryptionKey(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ServicemanagementServicesConsumersTestIamPermissionsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConsumersTestIamPermissionsSecurityOption1 option1;
+
     public ServicemanagementServicesConsumersTestIamPermissionsSecurity withOption1(ServicemanagementServicesConsumersTestIamPermissionsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ServicemanagementServicesConsumersTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConsumersTestIamPermissionsSecurityOption2 option2;
+
     public ServicemanagementServicesConsumersTestIamPermissionsSecurity withOption2(ServicemanagementServicesConsumersTestIamPermissionsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class ServicemanagementServicesConsumersTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConsumersTestIamPermissionsSecurityOption3 option3;
+
     public ServicemanagementServicesConsumersTestIamPermissionsSecurity withOption3(ServicemanagementServicesConsumersTestIamPermissionsSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class ServicemanagementServicesConsumersTestIamPermissionsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ServicemanagementServicesConsumersTestIamPermissionsSecurityOption4 option4;
+
     public ServicemanagementServicesConsumersTestIamPermissionsSecurity withOption4(ServicemanagementServicesConsumersTestIamPermissionsSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public ServicemanagementServicesConsumersTestIamPermissionsSecurity(){}
 }

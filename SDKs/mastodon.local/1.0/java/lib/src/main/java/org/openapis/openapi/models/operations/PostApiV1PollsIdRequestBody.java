@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostApiV1PollsIdRequestBody {
     @JsonProperty("choices")
     public String[] choices;
+
     public PostApiV1PollsIdRequestBody withChoices(String[] choices) {
         this.choices = choices;
         return this;
     }
     
+    public PostApiV1PollsIdRequestBody(@JsonProperty("choices") String[] choices) {
+        this.choices = choices;
+  }
 }

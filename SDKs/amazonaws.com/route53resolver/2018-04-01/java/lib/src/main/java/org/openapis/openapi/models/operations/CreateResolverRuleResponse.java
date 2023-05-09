@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResolverRuleResponse {
     
     public String contentType;
+
     public CreateResolverRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResolverRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResolverRuleResponse createResolverRuleResponse;
+
     public CreateResolverRuleResponse withCreateResolverRuleResponse(org.openapis.openapi.models.shared.CreateResolverRuleResponse createResolverRuleResponse) {
         this.createResolverRuleResponse = createResolverRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateResolverRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateResolverRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateResolverRuleResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object limitExceededException;
+
     public CreateResolverRuleResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object resourceExistsException;
+
     public CreateResolverRuleResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -79,6 +87,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateResolverRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -89,6 +98,7 @@ public class CreateResolverRuleResponse {
      */
     
     public Object resourceUnavailableException;
+
     public CreateResolverRuleResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -96,6 +106,7 @@ public class CreateResolverRuleResponse {
     
     
     public Integer statusCode;
+
     public CreateResolverRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CreateResolverRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResolverRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CreateResolverRuleResponse {
      */
     
     public Object throttlingException;
+
     public CreateResolverRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateResolverRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

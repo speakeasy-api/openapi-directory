@@ -14,6 +14,7 @@ public class ProjectRequest {
      */
     @JsonProperty("file_id")
     public String fileId;
+
     public ProjectRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,6 +23,7 @@ public class ProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("process")
     public Process process;
+
     public ProjectRequest withProcess(Process process) {
         this.process = process;
         return this;
@@ -32,9 +34,14 @@ public class ProjectRequest {
      */
     @JsonProperty("project_title")
     public String projectTitle;
+
     public ProjectRequest withProjectTitle(String projectTitle) {
         this.projectTitle = projectTitle;
         return this;
     }
     
+    public ProjectRequest(@JsonProperty("file_id") String fileId, @JsonProperty("project_title") String projectTitle) {
+        this.fileId = fileId;
+        this.projectTitle = projectTitle;
+  }
 }

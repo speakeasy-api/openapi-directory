@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListenerTlsAcmCertificate {
     @JsonProperty("certificateArn")
     public String certificateArn;
+
     public ListenerTlsAcmCertificate withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
     }
     
+    public ListenerTlsAcmCertificate(@JsonProperty("certificateArn") String certificateArn) {
+        this.certificateArn = certificateArn;
+  }
 }

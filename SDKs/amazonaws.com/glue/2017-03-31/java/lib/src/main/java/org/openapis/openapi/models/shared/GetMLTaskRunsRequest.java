@@ -12,6 +12,7 @@ public class GetMLTaskRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public TaskRunFilterCriteria filter;
+
     public GetMLTaskRunsRequest withFilter(TaskRunFilterCriteria filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetMLTaskRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetMLTaskRunsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class GetMLTaskRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetMLTaskRunsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +39,7 @@ public class GetMLTaskRunsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public TaskRunSortCriteria sort;
+
     public GetMLTaskRunsRequest withSort(TaskRunSortCriteria sort) {
         this.sort = sort;
         return this;
@@ -43,9 +47,13 @@ public class GetMLTaskRunsRequest {
     
     @JsonProperty("TransformId")
     public String transformId;
+
     public GetMLTaskRunsRequest withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public GetMLTaskRunsRequest(@JsonProperty("TransformId") String transformId) {
+        this.transformId = transformId;
+  }
 }

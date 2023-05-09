@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteConnectorsIdConnectorLogosIdLogoResponse {
@@ -12,6 +13,7 @@ public class DeleteConnectorsIdConnectorLogosIdLogoResponse {
      */
     
     public org.openapis.openapi.models.shared.ConnectorLogo connectorLogo;
+
     public DeleteConnectorsIdConnectorLogosIdLogoResponse withConnectorLogo(org.openapis.openapi.models.shared.ConnectorLogo connectorLogo) {
         this.connectorLogo = connectorLogo;
         return this;
@@ -19,6 +21,7 @@ public class DeleteConnectorsIdConnectorLogosIdLogoResponse {
     
     
     public String contentType;
+
     public DeleteConnectorsIdConnectorLogosIdLogoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DeleteConnectorsIdConnectorLogosIdLogoResponse {
     
     
     public Integer statusCode;
+
     public DeleteConnectorsIdConnectorLogosIdLogoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteConnectorsIdConnectorLogosIdLogoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteConnectorsIdConnectorLogosIdLogoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteConnectorsIdConnectorLogosIdLogoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

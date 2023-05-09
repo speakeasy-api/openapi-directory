@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1ListIssuesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issues")
     public GoogleCloudContactcenterinsightsV1Issue[] issues;
+
     public GoogleCloudContactcenterinsightsV1ListIssuesResponse withIssues(GoogleCloudContactcenterinsightsV1Issue[] issues) {
         this.issues = issues;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ListIssuesResponse(){}
 }

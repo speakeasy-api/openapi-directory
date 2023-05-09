@@ -15,6 +15,7 @@ public class RecommendationJobStoppingConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxInvocations")
     public Long maxInvocations;
+
     public RecommendationJobStoppingConditions withMaxInvocations(Long maxInvocations) {
         this.maxInvocations = maxInvocations;
         return this;
@@ -23,9 +24,11 @@ public class RecommendationJobStoppingConditions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelLatencyThresholds")
     public ModelLatencyThreshold[] modelLatencyThresholds;
+
     public RecommendationJobStoppingConditions withModelLatencyThresholds(ModelLatencyThreshold[] modelLatencyThresholds) {
         this.modelLatencyThresholds = modelLatencyThresholds;
         return this;
     }
     
+    public RecommendationJobStoppingConditions(){}
 }

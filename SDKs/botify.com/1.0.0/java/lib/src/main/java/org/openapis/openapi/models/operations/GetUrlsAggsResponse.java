@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUrlsAggsResponse {
     
     public String contentType;
+
     public GetUrlsAggsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUrlsAggsResponse {
      */
     
     public org.openapis.openapi.models.shared.DefaultPayload defaultPayload;
+
     public GetUrlsAggsResponse withDefaultPayload(org.openapis.openapi.models.shared.DefaultPayload defaultPayload) {
         this.defaultPayload = defaultPayload;
         return this;
@@ -26,6 +29,7 @@ public class GetUrlsAggsResponse {
     
     
     public Integer statusCode;
+
     public GetUrlsAggsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUrlsAggsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUrlsAggsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetUrlsAggsResponse {
     
     
     public Object[] getUrlsAggs200ApplicationJSONAnies;
+
     public GetUrlsAggsResponse withGetUrlsAggs200ApplicationJSONAnies(Object[] getUrlsAggs200ApplicationJSONAnies) {
         this.getUrlsAggs200ApplicationJSONAnies = getUrlsAggs200ApplicationJSONAnies;
         return this;
     }
     
+    public GetUrlsAggsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

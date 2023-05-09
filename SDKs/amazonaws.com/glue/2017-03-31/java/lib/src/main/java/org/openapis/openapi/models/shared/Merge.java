@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Merge {
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Merge withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -19,6 +20,7 @@ public class Merge {
     
     @JsonProperty("Name")
     public String name;
+
     public Merge withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +28,7 @@ public class Merge {
     
     @JsonProperty("PrimaryKeys")
     public String[][] primaryKeys;
+
     public Merge withPrimaryKeys(String[][] primaryKeys) {
         this.primaryKeys = primaryKeys;
         return this;
@@ -33,9 +36,16 @@ public class Merge {
     
     @JsonProperty("Source")
     public String source;
+
     public Merge withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public Merge(@JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name, @JsonProperty("PrimaryKeys") String[][] primaryKeys, @JsonProperty("Source") String source) {
+        this.inputs = inputs;
+        this.name = name;
+        this.primaryKeys = primaryKeys;
+        this.source = source;
+  }
 }

@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings 
      */
     @JsonProperty("carrierBusinessHours")
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours[] carrierBusinessHours;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings withCarrierBusinessHours(PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours[] carrierBusinessHours) {
         this.carrierBusinessHours = carrierBusinessHours;
         return this;
@@ -25,9 +26,14 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings 
      */
     @JsonProperty("isOpenOutsideBusinessHours")
     public Boolean isOpenOutsideBusinessHours;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings withIsOpenOutsideBusinessHours(Boolean isOpenOutsideBusinessHours) {
         this.isOpenOutsideBusinessHours = isOpenOutsideBusinessHours;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettings(@JsonProperty("carrierBusinessHours") PostApiLogisticsPvtShippingPoliciesRequestBodyBusinessHourSettingsCarrierBusinessHours[] carrierBusinessHours, @JsonProperty("isOpenOutsideBusinessHours") Boolean isOpenOutsideBusinessHours) {
+        this.carrierBusinessHours = carrierBusinessHours;
+        this.isOpenOutsideBusinessHours = isOpenOutsideBusinessHours;
+  }
 }

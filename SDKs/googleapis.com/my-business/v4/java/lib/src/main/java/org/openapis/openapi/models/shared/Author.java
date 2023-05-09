@@ -18,6 +18,7 @@ public class Author {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Author withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Author {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhotoUrl")
     public String profilePhotoUrl;
+
     public Author withProfilePhotoUrl(String profilePhotoUrl) {
         this.profilePhotoUrl = profilePhotoUrl;
         return this;
@@ -40,9 +42,11 @@ public class Author {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public AuthorTypeEnum type;
+
     public Author withType(AuthorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Author(){}
 }

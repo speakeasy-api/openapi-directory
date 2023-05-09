@@ -22,6 +22,7 @@ public class DescribeDimensionKeysResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AlignedEndTime")
     public OffsetDateTime alignedEndTime;
+
     public DescribeDimensionKeysResponse withAlignedEndTime(OffsetDateTime alignedEndTime) {
         this.alignedEndTime = alignedEndTime;
         return this;
@@ -32,6 +33,7 @@ public class DescribeDimensionKeysResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AlignedStartTime")
     public OffsetDateTime alignedStartTime;
+
     public DescribeDimensionKeysResponse withAlignedStartTime(OffsetDateTime alignedStartTime) {
         this.alignedStartTime = alignedStartTime;
         return this;
@@ -40,6 +42,7 @@ public class DescribeDimensionKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keys")
     public DimensionKeyDescription[] keys;
+
     public DescribeDimensionKeysResponse withKeys(DimensionKeyDescription[] keys) {
         this.keys = keys;
         return this;
@@ -48,6 +51,7 @@ public class DescribeDimensionKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeDimensionKeysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -56,9 +60,11 @@ public class DescribeDimensionKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionKeys")
     public ResponsePartitionKey[] partitionKeys;
+
     public DescribeDimensionKeysResponse withPartitionKeys(ResponsePartitionKey[] partitionKeys) {
         this.partitionKeys = partitionKeys;
         return this;
     }
     
+    public DescribeDimensionKeysResponse(){}
 }

@@ -22,6 +22,7 @@ public class StartSuiteRunResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StartSuiteRunResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class StartSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public StartSuiteRunResponse withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -38,6 +40,7 @@ public class StartSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunArn")
     public String suiteRunArn;
+
     public StartSuiteRunResponse withSuiteRunArn(String suiteRunArn) {
         this.suiteRunArn = suiteRunArn;
         return this;
@@ -46,9 +49,11 @@ public class StartSuiteRunResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suiteRunId")
     public String suiteRunId;
+
     public StartSuiteRunResponse withSuiteRunId(String suiteRunId) {
         this.suiteRunId = suiteRunId;
         return this;
     }
     
+    public StartSuiteRunResponse(){}
 }

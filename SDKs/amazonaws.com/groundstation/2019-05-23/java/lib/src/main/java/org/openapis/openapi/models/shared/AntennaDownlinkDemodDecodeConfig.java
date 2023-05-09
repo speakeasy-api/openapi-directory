@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AntennaDownlinkDemodDecodeConfig {
     @JsonProperty("decodeConfig")
     public DecodeConfig decodeConfig;
+
     public AntennaDownlinkDemodDecodeConfig withDecodeConfig(DecodeConfig decodeConfig) {
         this.decodeConfig = decodeConfig;
         return this;
@@ -19,6 +20,7 @@ public class AntennaDownlinkDemodDecodeConfig {
     
     @JsonProperty("demodulationConfig")
     public DemodulationConfig demodulationConfig;
+
     public AntennaDownlinkDemodDecodeConfig withDemodulationConfig(DemodulationConfig demodulationConfig) {
         this.demodulationConfig = demodulationConfig;
         return this;
@@ -26,9 +28,15 @@ public class AntennaDownlinkDemodDecodeConfig {
     
     @JsonProperty("spectrumConfig")
     public SpectrumConfig spectrumConfig;
+
     public AntennaDownlinkDemodDecodeConfig withSpectrumConfig(SpectrumConfig spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
         return this;
     }
     
+    public AntennaDownlinkDemodDecodeConfig(@JsonProperty("decodeConfig") DecodeConfig decodeConfig, @JsonProperty("demodulationConfig") DemodulationConfig demodulationConfig, @JsonProperty("spectrumConfig") SpectrumConfig spectrumConfig) {
+        this.decodeConfig = decodeConfig;
+        this.demodulationConfig = demodulationConfig;
+        this.spectrumConfig = spectrumConfig;
+  }
 }

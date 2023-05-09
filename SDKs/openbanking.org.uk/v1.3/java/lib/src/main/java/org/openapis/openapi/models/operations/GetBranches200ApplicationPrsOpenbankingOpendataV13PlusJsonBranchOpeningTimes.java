@@ -14,6 +14,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpe
      */
     @JsonProperty("ClosingTime")
     public String closingTime;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes withClosingTime(String closingTime) {
         this.closingTime = closingTime;
         return this;
@@ -24,6 +25,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpe
      */
     @JsonProperty("OpeningDay")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimesOpeningDayEnum openingDay;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes withOpeningDay(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimesOpeningDayEnum openingDay) {
         this.openingDay = openingDay;
         return this;
@@ -34,6 +36,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpe
      */
     @JsonProperty("OpeningTime")
     public String openingTime;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes withOpeningTime(String openingTime) {
         this.openingTime = openingTime;
         return this;
@@ -45,6 +48,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnavailableFinishTime")
     public String unavailableFinishTime;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes withUnavailableFinishTime(String unavailableFinishTime) {
         this.unavailableFinishTime = unavailableFinishTime;
         return this;
@@ -56,9 +60,15 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnavailableStartTime")
     public String unavailableStartTime;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes withUnavailableStartTime(String unavailableStartTime) {
         this.unavailableStartTime = unavailableStartTime;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimes(@JsonProperty("ClosingTime") String closingTime, @JsonProperty("OpeningDay") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOpeningTimesOpeningDayEnum openingDay, @JsonProperty("OpeningTime") String openingTime) {
+        this.closingTime = closingTime;
+        this.openingDay = openingDay;
+        this.openingTime = openingTime;
+  }
 }

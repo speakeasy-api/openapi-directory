@@ -18,6 +18,7 @@ public class StatisticalTimeSeriesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTimeSeries")
     public Integer numTimeSeries;
+
     public StatisticalTimeSeriesFilter withNumTimeSeries(Integer numTimeSeries) {
         this.numTimeSeries = numTimeSeries;
         return this;
@@ -29,9 +30,11 @@ public class StatisticalTimeSeriesFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rankingMethod")
     public StatisticalTimeSeriesFilterRankingMethodEnum rankingMethod;
+
     public StatisticalTimeSeriesFilter withRankingMethod(StatisticalTimeSeriesFilterRankingMethodEnum rankingMethod) {
         this.rankingMethod = rankingMethod;
         return this;
     }
     
+    public StatisticalTimeSeriesFilter(){}
 }

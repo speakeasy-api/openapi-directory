@@ -35,10 +35,11 @@ public class TestMethods {
 
     /**
      * Wealth Manager Greeting for BE
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetBEGreetingResponse getBEGreeting() throws Exception {
+    public org.openapis.openapi.models.operations.GetBEGreetingResponse getBEGreeting(org.openapis.openapi.models.operations.GetBEGreetingSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/tenant/test/hello-world-be");
         
@@ -47,19 +48,18 @@ public class TestMethods {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBEGreetingResponse res = new org.openapis.openapi.models.operations.GetBEGreetingResponse() {{
+        org.openapis.openapi.models.operations.GetBEGreetingResponse res = new org.openapis.openapi.models.operations.GetBEGreetingResponse(contentType, httpRes.statusCode()) {{
             getBEGreeting200ApplicationJSONObject = null;
             getBEGreeting403ApplicationJSONObject = null;
             getBEGreeting429ApplicationJSONObject = null;
             getBEGreeting500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

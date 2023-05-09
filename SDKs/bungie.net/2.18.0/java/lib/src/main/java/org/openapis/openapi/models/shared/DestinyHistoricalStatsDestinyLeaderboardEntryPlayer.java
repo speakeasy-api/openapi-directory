@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerBungieNetUserInfo bungieNetUserInfo;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withBungieNetUserInfo(DestinyHistoricalStatsDestinyLeaderboardEntryPlayerBungieNetUserInfo bungieNetUserInfo) {
         this.bungieNetUserInfo = bungieNetUserInfo;
         return this;
@@ -25,6 +26,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public String characterClass;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withCharacterClass(String characterClass) {
         this.characterClass = characterClass;
         return this;
@@ -35,6 +37,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public Integer characterLevel;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withCharacterLevel(Integer characterLevel) {
         this.characterLevel = characterLevel;
         return this;
@@ -45,6 +48,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public String clanName;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withClanName(String clanName) {
         this.clanName = clanName;
         return this;
@@ -55,6 +59,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public String clanTag;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withClanTag(String clanTag) {
         this.clanTag = clanTag;
         return this;
@@ -62,6 +67,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
     
     
     public Long classHash;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withClassHash(Long classHash) {
         this.classHash = classHash;
         return this;
@@ -72,6 +78,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo destinyUserInfo;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withDestinyUserInfo(DestinyHistoricalStatsDestinyLeaderboardEntryPlayerDestinyUserInfo destinyUserInfo) {
         this.destinyUserInfo = destinyUserInfo;
         return this;
@@ -82,6 +89,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public Long emblemHash;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withEmblemHash(Long emblemHash) {
         this.emblemHash = emblemHash;
         return this;
@@ -89,6 +97,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
     
     
     public Long genderHash;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withGenderHash(Long genderHash) {
         this.genderHash = genderHash;
         return this;
@@ -99,6 +108,7 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
      */
     
     public Integer lightLevel;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withLightLevel(Integer lightLevel) {
         this.lightLevel = lightLevel;
         return this;
@@ -106,9 +116,11 @@ public class DestinyHistoricalStatsDestinyLeaderboardEntryPlayer {
     
     
     public Long raceHash;
+
     public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer withRaceHash(Long raceHash) {
         this.raceHash = raceHash;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyLeaderboardEntryPlayer(){}
 }

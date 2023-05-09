@@ -15,6 +15,7 @@ public class IceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Password")
     public String password;
+
     public IceServer withPassword(String password) {
         this.password = password;
         return this;
@@ -23,6 +24,7 @@ public class IceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ttl")
     public Long ttl;
+
     public IceServer withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -31,6 +33,7 @@ public class IceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Uris")
     public String[] uris;
+
     public IceServer withUris(String[] uris) {
         this.uris = uris;
         return this;
@@ -39,9 +42,11 @@ public class IceServer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public IceServer withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public IceServer(){}
 }

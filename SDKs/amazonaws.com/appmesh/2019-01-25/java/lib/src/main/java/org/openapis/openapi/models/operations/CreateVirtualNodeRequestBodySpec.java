@@ -15,6 +15,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backendDefaults")
     public org.openapis.openapi.models.shared.BackendDefaults backendDefaults;
+
     public CreateVirtualNodeRequestBodySpec withBackendDefaults(org.openapis.openapi.models.shared.BackendDefaults backendDefaults) {
         this.backendDefaults = backendDefaults;
         return this;
@@ -23,6 +24,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backends")
     public org.openapis.openapi.models.shared.Backend[] backends;
+
     public CreateVirtualNodeRequestBodySpec withBackends(org.openapis.openapi.models.shared.Backend[] backends) {
         this.backends = backends;
         return this;
@@ -31,6 +33,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public org.openapis.openapi.models.shared.Listener[] listeners;
+
     public CreateVirtualNodeRequestBodySpec withListeners(org.openapis.openapi.models.shared.Listener[] listeners) {
         this.listeners = listeners;
         return this;
@@ -39,6 +42,7 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public org.openapis.openapi.models.shared.Logging logging;
+
     public CreateVirtualNodeRequestBodySpec withLogging(org.openapis.openapi.models.shared.Logging logging) {
         this.logging = logging;
         return this;
@@ -47,9 +51,11 @@ public class CreateVirtualNodeRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceDiscovery")
     public org.openapis.openapi.models.shared.ServiceDiscovery serviceDiscovery;
+
     public CreateVirtualNodeRequestBodySpec withServiceDiscovery(org.openapis.openapi.models.shared.ServiceDiscovery serviceDiscovery) {
         this.serviceDiscovery = serviceDiscovery;
         return this;
     }
     
+    public CreateVirtualNodeRequestBodySpec(){}
 }

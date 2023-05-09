@@ -49,14 +49,12 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserDeleteResponse res = new org.openapis.openapi.models.operations.UserDeleteResponse() {{
+        org.openapis.openapi.models.operations.UserDeleteResponse res = new org.openapis.openapi.models.operations.UserDeleteResponse(contentType, httpRes.statusCode()) {{
             object = null;
             object = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,14 +101,12 @@ public class User {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UserGetResponse res = new org.openapis.openapi.models.operations.UserGetResponse() {{
+        org.openapis.openapi.models.operations.UserGetResponse res = new org.openapis.openapi.models.operations.UserGetResponse(contentType, httpRes.statusCode()) {{
             user = null;
             user = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

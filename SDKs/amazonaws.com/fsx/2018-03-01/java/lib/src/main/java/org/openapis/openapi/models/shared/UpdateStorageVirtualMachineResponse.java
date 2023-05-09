@@ -18,9 +18,11 @@ public class UpdateStorageVirtualMachineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageVirtualMachine")
     public StorageVirtualMachine storageVirtualMachine;
+
     public UpdateStorageVirtualMachineResponse withStorageVirtualMachine(StorageVirtualMachine storageVirtualMachine) {
         this.storageVirtualMachine = storageVirtualMachine;
         return this;
     }
     
+    public UpdateStorageVirtualMachineResponse(){}
 }

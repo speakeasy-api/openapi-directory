@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DatadogSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public DatadogSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public DatadogSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

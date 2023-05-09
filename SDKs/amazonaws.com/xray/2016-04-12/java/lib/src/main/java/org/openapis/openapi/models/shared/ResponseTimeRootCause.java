@@ -15,6 +15,7 @@ public class ResponseTimeRootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientImpacting")
     public Boolean clientImpacting;
+
     public ResponseTimeRootCause withClientImpacting(Boolean clientImpacting) {
         this.clientImpacting = clientImpacting;
         return this;
@@ -23,9 +24,11 @@ public class ResponseTimeRootCause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Services")
     public ResponseTimeRootCauseService[] services;
+
     public ResponseTimeRootCause withServices(ResponseTimeRootCauseService[] services) {
         this.services = services;
         return this;
     }
     
+    public ResponseTimeRootCause(){}
 }

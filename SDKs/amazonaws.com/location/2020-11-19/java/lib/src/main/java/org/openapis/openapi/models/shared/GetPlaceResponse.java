@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetPlaceResponse {
     @JsonProperty("Place")
     public Place place;
+
     public GetPlaceResponse withPlace(Place place) {
         this.place = place;
         return this;
     }
     
+    public GetPlaceResponse(@JsonProperty("Place") Place place) {
+        this.place = place;
+  }
 }

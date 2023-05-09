@@ -15,6 +15,7 @@ public class Timing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FinishTimeMillis")
     public Long finishTimeMillis;
+
     public Timing withFinishTimeMillis(Long finishTimeMillis) {
         this.finishTimeMillis = finishTimeMillis;
         return this;
@@ -23,6 +24,7 @@ public class Timing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimeMillis")
     public Long startTimeMillis;
+
     public Timing withStartTimeMillis(Long startTimeMillis) {
         this.startTimeMillis = startTimeMillis;
         return this;
@@ -31,9 +33,11 @@ public class Timing {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubmitTimeMillis")
     public Long submitTimeMillis;
+
     public Timing withSubmitTimeMillis(Long submitTimeMillis) {
         this.submitTimeMillis = submitTimeMillis;
         return this;
     }
     
+    public Timing(){}
 }

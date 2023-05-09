@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeExportTasksRequest {
     
     public String[] exportTaskIds;
+
     public DescribeExportTasksRequest withExportTaskIds(String[] exportTaskIds) {
         this.exportTaskIds = exportTaskIds;
         return this;
@@ -16,9 +17,11 @@ public class DescribeExportTasksRequest {
     
     
     public DescribeExportTasksRequestFilters[] filters;
+
     public DescribeExportTasksRequest withFilters(DescribeExportTasksRequestFilters[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public DescribeExportTasksRequest(){}
 }

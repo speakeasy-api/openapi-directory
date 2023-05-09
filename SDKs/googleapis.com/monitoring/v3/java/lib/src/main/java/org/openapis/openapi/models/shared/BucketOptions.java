@@ -18,6 +18,7 @@ public class BucketOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicitBuckets")
     public Explicit explicitBuckets;
+
     public BucketOptions withExplicitBuckets(Explicit explicitBuckets) {
         this.explicitBuckets = explicitBuckets;
         return this;
@@ -29,6 +30,7 @@ public class BucketOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exponentialBuckets")
     public Exponential exponentialBuckets;
+
     public BucketOptions withExponentialBuckets(Exponential exponentialBuckets) {
         this.exponentialBuckets = exponentialBuckets;
         return this;
@@ -40,9 +42,11 @@ public class BucketOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linearBuckets")
     public Linear linearBuckets;
+
     public BucketOptions withLinearBuckets(Linear linearBuckets) {
         this.linearBuckets = linearBuckets;
         return this;
     }
     
+    public BucketOptions(){}
 }

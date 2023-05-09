@@ -12,6 +12,7 @@ public class ListSecurityGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListSecurityGroupsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -22,6 +23,7 @@ public class ListSecurityGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public Double endTime;
+
     public ListSecurityGroupsRequest withEndTime(Double endTime) {
         this.endTime = endTime;
         return this;
@@ -32,6 +34,7 @@ public class ListSecurityGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Double size;
+
     public ListSecurityGroupsRequest withSize(Double size) {
         this.size = size;
         return this;
@@ -42,9 +45,11 @@ public class ListSecurityGroupsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
     public Double startTime;
+
     public ListSecurityGroupsRequest withStartTime(Double startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListSecurityGroupsRequest(){}
 }

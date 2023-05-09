@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class WithdrawByoipCidrRequest {
     
     public String cidr;
+
     public WithdrawByoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,9 +17,13 @@ public class WithdrawByoipCidrRequest {
     
     
     public Boolean dryRun;
+
     public WithdrawByoipCidrRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
+    public WithdrawByoipCidrRequest(@JsonProperty("Cidr") String cidr) {
+        this.cidr = cidr;
+  }
 }

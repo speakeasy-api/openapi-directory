@@ -15,6 +15,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public MessageStatusLinks links;
+
     public MessageStatus withLinks(MessageStatusLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public MessageStatusError error;
+
     public MessageStatus withError(MessageStatusError error) {
         this.error = error;
         return this;
@@ -31,6 +33,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public FromProperty from;
+
     public MessageStatus withFrom(FromProperty from) {
         this.from = from;
         return this;
@@ -39,6 +42,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message_uuid")
     public String messageUuid;
+
     public MessageStatus withMessageUuid(String messageUuid) {
         this.messageUuid = messageUuid;
         return this;
@@ -50,6 +54,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MessageStatusStatusEnum status;
+
     public MessageStatus withStatus(MessageStatusStatusEnum status) {
         this.status = status;
         return this;
@@ -61,6 +66,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public String timestamp;
+
     public MessageStatus withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -69,6 +75,7 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public ToProperty to;
+
     public MessageStatus withTo(ToProperty to) {
         this.to = to;
         return this;
@@ -77,9 +84,11 @@ public class MessageStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public MessageStatusUsage usage;
+
     public MessageStatus withUsage(MessageStatusUsage usage) {
         this.usage = usage;
         return this;
     }
     
+    public MessageStatus(){}
 }

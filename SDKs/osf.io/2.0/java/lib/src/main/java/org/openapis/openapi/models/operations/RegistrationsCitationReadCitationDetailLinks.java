@@ -15,9 +15,11 @@ public class RegistrationsCitationReadCitationDetailLinks {
      */
     
     public String self;
+
     public RegistrationsCitationReadCitationDetailLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public RegistrationsCitationReadCitationDetailLinks(){}
 }

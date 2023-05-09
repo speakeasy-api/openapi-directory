@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingCreativeFieldValuesUpdateRequest {
@@ -12,6 +13,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingCreativeFieldValuesUpdateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreativeFieldValue creativeFieldValue;
+
     public DfareportingCreativeFieldValuesUpdateRequest withCreativeFieldValue(org.openapis.openapi.models.shared.CreativeFieldValue creativeFieldValue) {
         this.creativeFieldValue = creativeFieldValue;
         return this;
@@ -29,6 +32,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingCreativeFieldValuesUpdateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingCreativeFieldValuesUpdateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingCreativeFieldValuesUpdateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=creativeFieldId")
     public String creativeFieldId;
+
     public DfareportingCreativeFieldValuesUpdateRequest withCreativeFieldId(String creativeFieldId) {
         this.creativeFieldId = creativeFieldId;
         return this;
@@ -69,6 +76,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingCreativeFieldValuesUpdateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingCreativeFieldValuesUpdateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingCreativeFieldValuesUpdateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingCreativeFieldValuesUpdateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingCreativeFieldValuesUpdateRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -119,6 +131,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingCreativeFieldValuesUpdateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingCreativeFieldValuesUpdateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,14 @@ public class DfareportingCreativeFieldValuesUpdateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingCreativeFieldValuesUpdateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingCreativeFieldValuesUpdateRequest(@JsonProperty("creativeFieldId") String creativeFieldId, @JsonProperty("profileId") String profileId) {
+        this.creativeFieldId = creativeFieldId;
+        this.profileId = profileId;
+  }
 }

@@ -15,6 +15,7 @@ public class FailedCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public FailedCreateStandbyWorkspacesRequest withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailedCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailedCreateStandbyWorkspacesRequest withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailedCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandbyWorkspaceRequest")
     public StandbyWorkspace standbyWorkspaceRequest;
+
     public FailedCreateStandbyWorkspacesRequest withStandbyWorkspaceRequest(StandbyWorkspace standbyWorkspaceRequest) {
         this.standbyWorkspaceRequest = standbyWorkspaceRequest;
         return this;
     }
     
+    public FailedCreateStandbyWorkspacesRequest(){}
 }

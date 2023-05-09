@@ -15,6 +15,7 @@ public class FsxProtocol {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NFS")
     public FsxProtocolNfs nfs;
+
     public FsxProtocol withNfs(FsxProtocolNfs nfs) {
         this.nfs = nfs;
         return this;
@@ -23,9 +24,11 @@ public class FsxProtocol {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SMB")
     public FsxProtocolSmb smb;
+
     public FsxProtocol withSmb(FsxProtocolSmb smb) {
         this.smb = smb;
         return this;
     }
     
+    public FsxProtocol(){}
 }

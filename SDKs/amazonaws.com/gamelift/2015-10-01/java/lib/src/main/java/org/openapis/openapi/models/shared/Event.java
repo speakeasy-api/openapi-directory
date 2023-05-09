@@ -14,12 +14,13 @@ import org.openapis.openapi.utils.DateTimeDeserializer;
 import org.openapis.openapi.utils.DateTimeSerializer;
 
 /**
- * Event - Log entry describing an event that involves GameLift resources (such as a fleet). In addition to tracking activity, event codes and messages can provide additional information for troubleshooting and debugging problems.
+ * Event - Log entry describing an event that involves Amazon GameLift resources (such as a fleet). In addition to tracking activity, event codes and messages can provide additional information for troubleshooting and debugging problems.
  */
 public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventCode")
     public EventCodeEnum eventCode;
+
     public Event withEventCode(EventCodeEnum eventCode) {
         this.eventCode = eventCode;
         return this;
@@ -28,6 +29,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventId")
     public String eventId;
+
     public Event withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -38,6 +40,7 @@ public class Event {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventTime")
     public OffsetDateTime eventTime;
+
     public Event withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -46,6 +49,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public Event withMessage(String message) {
         this.message = message;
         return this;
@@ -54,6 +58,7 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreSignedLogUrl")
     public String preSignedLogUrl;
+
     public Event withPreSignedLogUrl(String preSignedLogUrl) {
         this.preSignedLogUrl = preSignedLogUrl;
         return this;
@@ -62,9 +67,11 @@ public class Event {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public Event withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public Event(){}
 }

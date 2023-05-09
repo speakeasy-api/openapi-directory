@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetVSMAccountResponse {
@@ -12,6 +13,7 @@ public class GetVSMAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse;
+
     public GetVSMAccountResponse withFourHundredAndOneResponse(org.openapis.openapi.models.shared.FourHundredAndOneResponse fourHundredAndOneResponse) {
         this.fourHundredAndOneResponse = fourHundredAndOneResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetVSMAccountResponse {
     
     
     public String contentType;
+
     public GetVSMAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetVSMAccountResponse {
     
     
     public Integer statusCode;
+
     public GetVSMAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetVSMAccountResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetVSMAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetVSMAccountResponse {
      */
     
     public org.openapis.openapi.models.shared.VSMAccountResponse vsmAccountResponse;
+
     public GetVSMAccountResponse withVSMAccountResponse(org.openapis.openapi.models.shared.VSMAccountResponse vsmAccountResponse) {
         this.vsmAccountResponse = vsmAccountResponse;
         return this;
     }
     
+    public GetVSMAccountResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

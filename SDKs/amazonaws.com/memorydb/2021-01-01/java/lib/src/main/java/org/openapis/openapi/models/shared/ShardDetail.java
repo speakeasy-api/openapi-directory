@@ -20,6 +20,7 @@ public class ShardDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public ShardConfiguration configuration;
+
     public ShardDetail withConfiguration(ShardConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -28,6 +29,7 @@ public class ShardDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ShardDetail withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class ShardDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public String size;
+
     public ShardDetail withSize(String size) {
         this.size = size;
         return this;
@@ -46,9 +49,11 @@ public class ShardDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SnapshotCreationTime")
     public OffsetDateTime snapshotCreationTime;
+
     public ShardDetail withSnapshotCreationTime(OffsetDateTime snapshotCreationTime) {
         this.snapshotCreationTime = snapshotCreationTime;
         return this;
     }
     
+    public ShardDetail(){}
 }

@@ -19,6 +19,7 @@ public class Reddit {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Reddit withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Reddit withId(Long id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Reddit withImage(String image) {
         this.image = image;
         return this;
@@ -43,6 +46,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Reddit withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +55,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public Reddit withText(String text) {
         this.text = text;
         return this;
@@ -59,6 +64,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Reddit withUrl(String url) {
         this.url = url;
         return this;
@@ -67,6 +73,7 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public Reddit withUsername(String username) {
         this.username = username;
         return this;
@@ -75,9 +82,11 @@ public class Reddit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username_url")
     public String usernameUrl;
+
     public Reddit withUsernameUrl(String usernameUrl) {
         this.usernameUrl = usernameUrl;
         return this;
     }
     
+    public Reddit(){}
 }

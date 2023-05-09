@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProjectsListCardsRequest {
@@ -12,6 +13,7 @@ public class ProjectsListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived_state")
     public ProjectsListCardsArchivedStateEnum archivedState;
+
     public ProjectsListCardsRequest withArchivedState(ProjectsListCardsArchivedStateEnum archivedState) {
         this.archivedState = archivedState;
         return this;
@@ -22,6 +24,7 @@ public class ProjectsListCardsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=column_id")
     public Long columnId;
+
     public ProjectsListCardsRequest withColumnId(Long columnId) {
         this.columnId = columnId;
         return this;
@@ -32,6 +35,7 @@ public class ProjectsListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ProjectsListCardsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,9 +46,13 @@ public class ProjectsListCardsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ProjectsListCardsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public ProjectsListCardsRequest(@JsonProperty("column_id") Long columnId) {
+        this.columnId = columnId;
+  }
 }

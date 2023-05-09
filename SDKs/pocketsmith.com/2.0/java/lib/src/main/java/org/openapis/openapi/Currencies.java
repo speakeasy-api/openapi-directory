@@ -50,11 +50,9 @@ public class Currencies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCurrenciesResponse res = new org.openapis.openapi.models.operations.GetCurrenciesResponse() {{
+        org.openapis.openapi.models.operations.GetCurrenciesResponse res = new org.openapis.openapi.models.operations.GetCurrenciesResponse(contentType, httpRes.statusCode()) {{
             currencies = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -90,12 +88,10 @@ public class Currencies {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCurrenciesIdResponse res = new org.openapis.openapi.models.operations.GetCurrenciesIdResponse() {{
+        org.openapis.openapi.models.operations.GetCurrenciesIdResponse res = new org.openapis.openapi.models.operations.GetCurrenciesIdResponse(contentType, httpRes.statusCode()) {{
             currency = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

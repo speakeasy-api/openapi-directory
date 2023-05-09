@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DataflowProjectsDeleteSnapshotsRequest {
@@ -12,6 +13,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DataflowProjectsDeleteSnapshotsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DataflowProjectsDeleteSnapshotsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DataflowProjectsDeleteSnapshotsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DataflowProjectsDeleteSnapshotsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DataflowProjectsDeleteSnapshotsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DataflowProjectsDeleteSnapshotsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public String location;
+
     public DataflowProjectsDeleteSnapshotsRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -82,6 +90,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DataflowProjectsDeleteSnapshotsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DataflowProjectsDeleteSnapshotsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DataflowProjectsDeleteSnapshotsRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -112,6 +123,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DataflowProjectsDeleteSnapshotsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=snapshotId")
     public String snapshotId;
+
     public DataflowProjectsDeleteSnapshotsRequest withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -132,6 +145,7 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DataflowProjectsDeleteSnapshotsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DataflowProjectsDeleteSnapshotsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DataflowProjectsDeleteSnapshotsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DataflowProjectsDeleteSnapshotsRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

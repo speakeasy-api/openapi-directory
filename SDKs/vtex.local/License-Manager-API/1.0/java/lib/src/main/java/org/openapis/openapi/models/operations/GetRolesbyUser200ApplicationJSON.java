@@ -15,6 +15,7 @@ public class GetRolesbyUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public GetRolesbyUser200ApplicationJSON withId(Integer id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class GetRolesbyUser200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetRolesbyUser200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetRolesbyUser200ApplicationJSON(){}
 }

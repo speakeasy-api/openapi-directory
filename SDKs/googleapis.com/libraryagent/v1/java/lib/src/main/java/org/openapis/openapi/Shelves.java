@@ -58,11 +58,9 @@ public class Shelves {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowResponse() {{
+        org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowResponse(contentType, httpRes.statusCode()) {{
             googleExampleLibraryagentV1Book = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Shelves {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibraryagentShelvesBooksGetResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksGetResponse() {{
+        org.openapis.openapi.models.operations.LibraryagentShelvesBooksGetResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksGetResponse(contentType, httpRes.statusCode()) {{
             googleExampleLibraryagentV1Book = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Shelves {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibraryagentShelvesBooksListResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksListResponse() {{
+        org.openapis.openapi.models.operations.LibraryagentShelvesBooksListResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksListResponse(contentType, httpRes.statusCode()) {{
             googleExampleLibraryagentV1ListBooksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Shelves {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibraryagentShelvesBooksReturnResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksReturnResponse() {{
+        org.openapis.openapi.models.operations.LibraryagentShelvesBooksReturnResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesBooksReturnResponse(contentType, httpRes.statusCode()) {{
             googleExampleLibraryagentV1Book = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Shelves {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LibraryagentShelvesListResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesListResponse() {{
+        org.openapis.openapi.models.operations.LibraryagentShelvesListResponse res = new org.openapis.openapi.models.operations.LibraryagentShelvesListResponse(contentType, httpRes.statusCode()) {{
             googleExampleLibraryagentV1ListShelvesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETActivateTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETActivateTypeActionEnum action;
+
     public GETActivateTypeRequest withAction(GETActivateTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AutoUpdate")
     public Boolean autoUpdate;
+
     public GETActivateTypeRequest withAutoUpdate(Boolean autoUpdate) {
         this.autoUpdate = autoUpdate;
         return this;
@@ -29,6 +32,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExecutionRoleArn")
     public String executionRoleArn;
+
     public GETActivateTypeRequest withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -39,6 +43,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoggingConfig")
     public GETActivateTypeLoggingConfig loggingConfig;
+
     public GETActivateTypeRequest withLoggingConfig(GETActivateTypeLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -49,6 +54,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MajorVersion")
     public Long majorVersion;
+
     public GETActivateTypeRequest withMajorVersion(Long majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -59,6 +65,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublicTypeArn")
     public String publicTypeArn;
+
     public GETActivateTypeRequest withPublicTypeArn(String publicTypeArn) {
         this.publicTypeArn = publicTypeArn;
         return this;
@@ -69,6 +76,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PublisherId")
     public String publisherId;
+
     public GETActivateTypeRequest withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -79,6 +87,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETActivateTypeTypeEnum type;
+
     public GETActivateTypeRequest withType(GETActivateTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -89,6 +98,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETActivateTypeRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -99,6 +109,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeNameAlias")
     public String typeNameAlias;
+
     public GETActivateTypeRequest withTypeNameAlias(String typeNameAlias) {
         this.typeNameAlias = typeNameAlias;
         return this;
@@ -106,6 +117,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETActivateTypeVersionEnum version;
+
     public GETActivateTypeRequest withVersion(GETActivateTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -116,6 +128,7 @@ public class GETActivateTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VersionBump")
     public GETActivateTypeVersionBumpEnum versionBump;
+
     public GETActivateTypeRequest withVersionBump(GETActivateTypeVersionBumpEnum versionBump) {
         this.versionBump = versionBump;
         return this;
@@ -123,6 +136,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETActivateTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -130,6 +144,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETActivateTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -137,6 +152,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETActivateTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -144,6 +160,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETActivateTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -151,6 +168,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETActivateTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -158,6 +176,7 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETActivateTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -165,9 +184,14 @@ public class GETActivateTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETActivateTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETActivateTypeRequest(@JsonProperty("Action") GETActivateTypeActionEnum action, @JsonProperty("Version") GETActivateTypeVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

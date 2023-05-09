@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetDocumentsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetDocumentsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -16,6 +17,7 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetDocumentsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -23,9 +25,11 @@ public class GetDocumentsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetDocumentsRequest withOffset(String offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetDocumentsRequest(){}
 }

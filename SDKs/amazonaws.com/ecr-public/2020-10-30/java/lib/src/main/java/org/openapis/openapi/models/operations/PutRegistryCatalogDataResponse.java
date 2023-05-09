@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRegistryCatalogDataResponse {
     
     public String contentType;
+
     public PutRegistryCatalogDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRegistryCatalogDataResponse {
      */
     
     public Object invalidParameterException;
+
     public PutRegistryCatalogDataResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -29,6 +32,7 @@ public class PutRegistryCatalogDataResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRegistryCatalogDataResponse putRegistryCatalogDataResponse;
+
     public PutRegistryCatalogDataResponse withPutRegistryCatalogDataResponse(org.openapis.openapi.models.shared.PutRegistryCatalogDataResponse putRegistryCatalogDataResponse) {
         this.putRegistryCatalogDataResponse = putRegistryCatalogDataResponse;
         return this;
@@ -39,6 +43,7 @@ public class PutRegistryCatalogDataResponse {
      */
     
     public Object serverException;
+
     public PutRegistryCatalogDataResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -46,6 +51,7 @@ public class PutRegistryCatalogDataResponse {
     
     
     public Integer statusCode;
+
     public PutRegistryCatalogDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PutRegistryCatalogDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRegistryCatalogDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PutRegistryCatalogDataResponse {
      */
     
     public Object unsupportedCommandException;
+
     public PutRegistryCatalogDataResponse withUnsupportedCommandException(Object unsupportedCommandException) {
         this.unsupportedCommandException = unsupportedCommandException;
         return this;
     }
     
+    public PutRegistryCatalogDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

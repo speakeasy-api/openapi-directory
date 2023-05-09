@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRequestPasswordResetResponse {
     
     public String contentType;
+
     public PostRequestPasswordResetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRequestPasswordResetResponse {
     
     
     public Integer statusCode;
+
     public PostRequestPasswordResetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostRequestPasswordResetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRequestPasswordResetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostRequestPasswordResetResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidToken invalidToken;
+
     public PostRequestPasswordResetResponse withInvalidToken(org.openapis.openapi.models.shared.InvalidToken invalidToken) {
         this.invalidToken = invalidToken;
         return this;
@@ -43,9 +48,14 @@ public class PostRequestPasswordResetResponse {
      */
     
     public org.openapis.openapi.models.shared.RequestPasswordResetResponse requestPasswordResetResponse;
+
     public PostRequestPasswordResetResponse withRequestPasswordResetResponse(org.openapis.openapi.models.shared.RequestPasswordResetResponse requestPasswordResetResponse) {
         this.requestPasswordResetResponse = requestPasswordResetResponse;
         return this;
     }
     
+    public PostRequestPasswordResetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

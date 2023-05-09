@@ -27,6 +27,7 @@ public class CreateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateOrderRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -43,9 +44,11 @@ public class CreateOrderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Order order;
+
     public CreateOrderRequest withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public CreateOrderRequest(){}
 }

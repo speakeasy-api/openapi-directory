@@ -15,6 +15,7 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationCallBackURL")
     public String applicationCallBackURL;
+
     public UpdateEnvironmentRequestBodyFederationParameters withApplicationCallBackURL(String applicationCallBackURL) {
         this.applicationCallBackURL = applicationCallBackURL;
         return this;
@@ -23,6 +24,7 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributeMap")
     public java.util.Map<String, String> attributeMap;
+
     public UpdateEnvironmentRequestBodyFederationParameters withAttributeMap(java.util.Map<String, String> attributeMap) {
         this.attributeMap = attributeMap;
         return this;
@@ -31,6 +33,7 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationProviderName")
     public String federationProviderName;
+
     public UpdateEnvironmentRequestBodyFederationParameters withFederationProviderName(String federationProviderName) {
         this.federationProviderName = federationProviderName;
         return this;
@@ -39,6 +42,7 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("federationURN")
     public String federationURN;
+
     public UpdateEnvironmentRequestBodyFederationParameters withFederationURN(String federationURN) {
         this.federationURN = federationURN;
         return this;
@@ -47,6 +51,7 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlMetadataDocument")
     public String samlMetadataDocument;
+
     public UpdateEnvironmentRequestBodyFederationParameters withSamlMetadataDocument(String samlMetadataDocument) {
         this.samlMetadataDocument = samlMetadataDocument;
         return this;
@@ -55,9 +60,11 @@ public class UpdateEnvironmentRequestBodyFederationParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samlMetadataURL")
     public String samlMetadataURL;
+
     public UpdateEnvironmentRequestBodyFederationParameters withSamlMetadataURL(String samlMetadataURL) {
         this.samlMetadataURL = samlMetadataURL;
         return this;
     }
     
+    public UpdateEnvironmentRequestBodyFederationParameters(){}
 }

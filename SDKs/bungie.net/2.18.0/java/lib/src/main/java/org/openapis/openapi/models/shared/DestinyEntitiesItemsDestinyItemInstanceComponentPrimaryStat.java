@@ -15,6 +15,7 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat {
      */
     
     public Long statHash;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat withStatHash(Long statHash) {
         this.statHash = statHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat {
      */
     
     public Integer value;
+
     public DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public DestinyEntitiesItemsDestinyItemInstanceComponentPrimaryStat(){}
 }

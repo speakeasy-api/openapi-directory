@@ -12,6 +12,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public CreateDocumentClassifierRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateDocumentClassifierRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateDocumentClassifierRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateDocumentClassifierRequest {
     
     @JsonProperty("DocumentClassifierName")
     public String documentClassifierName;
+
     public CreateDocumentClassifierRequest withDocumentClassifierName(String documentClassifierName) {
         this.documentClassifierName = documentClassifierName;
         return this;
@@ -33,6 +36,7 @@ public class CreateDocumentClassifierRequest {
     
     @JsonProperty("InputDataConfig")
     public DocumentClassifierInputDataConfig inputDataConfig;
+
     public CreateDocumentClassifierRequest withInputDataConfig(DocumentClassifierInputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -40,6 +44,7 @@ public class CreateDocumentClassifierRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CreateDocumentClassifierRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -48,6 +53,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mode")
     public DocumentClassifierModeEnum mode;
+
     public CreateDocumentClassifierRequest withMode(DocumentClassifierModeEnum mode) {
         this.mode = mode;
         return this;
@@ -56,6 +62,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelKmsKeyId")
     public String modelKmsKeyId;
+
     public CreateDocumentClassifierRequest withModelKmsKeyId(String modelKmsKeyId) {
         this.modelKmsKeyId = modelKmsKeyId;
         return this;
@@ -64,6 +71,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelPolicy")
     public String modelPolicy;
+
     public CreateDocumentClassifierRequest withModelPolicy(String modelPolicy) {
         this.modelPolicy = modelPolicy;
         return this;
@@ -72,6 +80,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputDataConfig")
     public DocumentClassifierOutputDataConfig outputDataConfig;
+
     public CreateDocumentClassifierRequest withOutputDataConfig(DocumentClassifierOutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -80,6 +89,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDocumentClassifierRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -88,6 +98,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionName")
     public String versionName;
+
     public CreateDocumentClassifierRequest withVersionName(String versionName) {
         this.versionName = versionName;
         return this;
@@ -96,6 +107,7 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeKmsKeyId")
     public String volumeKmsKeyId;
+
     public CreateDocumentClassifierRequest withVolumeKmsKeyId(String volumeKmsKeyId) {
         this.volumeKmsKeyId = volumeKmsKeyId;
         return this;
@@ -104,9 +116,16 @@ public class CreateDocumentClassifierRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfig")
     public VpcConfig vpcConfig;
+
     public CreateDocumentClassifierRequest withVpcConfig(VpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
     
+    public CreateDocumentClassifierRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("DocumentClassifierName") String documentClassifierName, @JsonProperty("InputDataConfig") DocumentClassifierInputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.documentClassifierName = documentClassifierName;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+  }
 }

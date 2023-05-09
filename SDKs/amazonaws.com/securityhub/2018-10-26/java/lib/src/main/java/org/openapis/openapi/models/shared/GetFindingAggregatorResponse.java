@@ -15,6 +15,7 @@ public class GetFindingAggregatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingAggregationRegion")
     public String findingAggregationRegion;
+
     public GetFindingAggregatorResponse withFindingAggregationRegion(String findingAggregationRegion) {
         this.findingAggregationRegion = findingAggregationRegion;
         return this;
@@ -23,6 +24,7 @@ public class GetFindingAggregatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingAggregatorArn")
     public String findingAggregatorArn;
+
     public GetFindingAggregatorResponse withFindingAggregatorArn(String findingAggregatorArn) {
         this.findingAggregatorArn = findingAggregatorArn;
         return this;
@@ -31,6 +33,7 @@ public class GetFindingAggregatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegionLinkingMode")
     public String regionLinkingMode;
+
     public GetFindingAggregatorResponse withRegionLinkingMode(String regionLinkingMode) {
         this.regionLinkingMode = regionLinkingMode;
         return this;
@@ -39,9 +42,11 @@ public class GetFindingAggregatorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Regions")
     public String[] regions;
+
     public GetFindingAggregatorResponse withRegions(String[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public GetFindingAggregatorResponse(){}
 }

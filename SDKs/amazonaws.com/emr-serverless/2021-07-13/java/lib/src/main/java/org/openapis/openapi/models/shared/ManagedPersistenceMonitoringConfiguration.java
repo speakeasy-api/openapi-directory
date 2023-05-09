@@ -15,6 +15,7 @@ public class ManagedPersistenceMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ManagedPersistenceMonitoringConfiguration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class ManagedPersistenceMonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKeyArn")
     public String encryptionKeyArn;
+
     public ManagedPersistenceMonitoringConfiguration withEncryptionKeyArn(String encryptionKeyArn) {
         this.encryptionKeyArn = encryptionKeyArn;
         return this;
     }
     
+    public ManagedPersistenceMonitoringConfiguration(){}
 }

@@ -12,6 +12,7 @@ public class ListComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListComponentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListComponentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListComponentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListComponentsRequest {
     
     @JsonProperty("ResourceGroupName")
     public String resourceGroupName;
+
     public ListComponentsRequest withResourceGroupName(String resourceGroupName) {
         this.resourceGroupName = resourceGroupName;
         return this;
     }
     
+    public ListComponentsRequest(@JsonProperty("ResourceGroupName") String resourceGroupName) {
+        this.resourceGroupName = resourceGroupName;
+  }
 }

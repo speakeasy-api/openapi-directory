@@ -20,6 +20,7 @@ public class SamplingStatisticSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BorrowCount")
     public Long borrowCount;
+
     public SamplingStatisticSummary withBorrowCount(Long borrowCount) {
         this.borrowCount = borrowCount;
         return this;
@@ -28,6 +29,7 @@ public class SamplingStatisticSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestCount")
     public Long requestCount;
+
     public SamplingStatisticSummary withRequestCount(Long requestCount) {
         this.requestCount = requestCount;
         return this;
@@ -36,6 +38,7 @@ public class SamplingStatisticSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public SamplingStatisticSummary withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -44,6 +47,7 @@ public class SamplingStatisticSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SampledCount")
     public Long sampledCount;
+
     public SamplingStatisticSummary withSampledCount(Long sampledCount) {
         this.sampledCount = sampledCount;
         return this;
@@ -54,9 +58,11 @@ public class SamplingStatisticSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public SamplingStatisticSummary withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public SamplingStatisticSummary(){}
 }

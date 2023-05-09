@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveSourceServerActionResponse {
     
     public String contentType;
+
     public RemoveSourceServerActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveSourceServerActionResponse {
      */
     
     public java.util.Map<String, Object> removeSourceServerActionResponse;
+
     public RemoveSourceServerActionResponse withRemoveSourceServerActionResponse(java.util.Map<String, Object> removeSourceServerActionResponse) {
         this.removeSourceServerActionResponse = removeSourceServerActionResponse;
         return this;
@@ -29,6 +32,7 @@ public class RemoveSourceServerActionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveSourceServerActionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class RemoveSourceServerActionResponse {
     
     
     public Integer statusCode;
+
     public RemoveSourceServerActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class RemoveSourceServerActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveSourceServerActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class RemoveSourceServerActionResponse {
      */
     
     public Object uninitializedAccountException;
+
     public RemoveSourceServerActionResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class RemoveSourceServerActionResponse {
      */
     
     public Object validationException;
+
     public RemoveSourceServerActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public RemoveSourceServerActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

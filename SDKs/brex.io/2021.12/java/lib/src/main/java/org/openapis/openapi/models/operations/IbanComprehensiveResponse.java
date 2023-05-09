@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IbanComprehensiveResponse {
     
     public String contentType;
+
     public IbanComprehensiveResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IbanComprehensiveResponse {
      */
     
     public IbanComprehensiveDefaultApplicationJSON ibanComprehensiveDefaultApplicationJSONObject;
+
     public IbanComprehensiveResponse withIbanComprehensiveDefaultApplicationJSONObject(IbanComprehensiveDefaultApplicationJSON ibanComprehensiveDefaultApplicationJSONObject) {
         this.ibanComprehensiveDefaultApplicationJSONObject = ibanComprehensiveDefaultApplicationJSONObject;
         return this;
@@ -26,6 +29,7 @@ public class IbanComprehensiveResponse {
     
     
     public Integer statusCode;
+
     public IbanComprehensiveResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class IbanComprehensiveResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IbanComprehensiveResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class IbanComprehensiveResponse {
      */
     
     public org.openapis.openapi.models.shared.Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema;
+
     public IbanComprehensiveResponse withOneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema(org.openapis.openapi.models.shared.Oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema) {
         this.oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema = oneapi1v11ibanVerification1checkIbanPostResponses200ContentApplication1jsonSchema;
         return this;
     }
     
+    public IbanComprehensiveResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

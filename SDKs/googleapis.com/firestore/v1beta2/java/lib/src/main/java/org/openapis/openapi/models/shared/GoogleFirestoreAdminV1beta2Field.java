@@ -18,6 +18,7 @@ public class GoogleFirestoreAdminV1beta2Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexConfig")
     public GoogleFirestoreAdminV1beta2IndexConfig indexConfig;
+
     public GoogleFirestoreAdminV1beta2Field withIndexConfig(GoogleFirestoreAdminV1beta2IndexConfig indexConfig) {
         this.indexConfig = indexConfig;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirestoreAdminV1beta2Field {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirestoreAdminV1beta2Field withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleFirestoreAdminV1beta2Field(){}
 }

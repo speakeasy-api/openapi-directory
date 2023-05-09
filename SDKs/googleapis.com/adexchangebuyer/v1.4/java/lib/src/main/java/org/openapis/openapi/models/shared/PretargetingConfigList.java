@@ -18,6 +18,7 @@ public class PretargetingConfigList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public PretargetingConfig[] items;
+
     public PretargetingConfigList withItems(PretargetingConfig[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class PretargetingConfigList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PretargetingConfigList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public PretargetingConfigList(){}
 }

@@ -15,9 +15,11 @@ public class RecipientDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssoIdentity")
     public SSOIdentity ssoIdentity;
+
     public RecipientDetail withSsoIdentity(SSOIdentity ssoIdentity) {
         this.ssoIdentity = ssoIdentity;
         return this;
     }
     
+    public RecipientDetail(){}
 }

@@ -18,9 +18,11 @@ public class QueryList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queries")
     public String[] queries;
+
     public QueryList withQueries(String[] queries) {
         this.queries = queries;
         return this;
     }
     
+    public QueryList(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvideAnomalyFeedbackResponse {
     @JsonProperty("AnomalyId")
     public String anomalyId;
+
     public ProvideAnomalyFeedbackResponse withAnomalyId(String anomalyId) {
         this.anomalyId = anomalyId;
         return this;
     }
     
+    public ProvideAnomalyFeedbackResponse(@JsonProperty("AnomalyId") String anomalyId) {
+        this.anomalyId = anomalyId;
+  }
 }

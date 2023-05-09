@@ -12,6 +12,7 @@ public class PatientHealthResultResourceAttributesAnnotations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public PatientHealthResultResourceAttributesAnnotations withText(String text) {
         this.text = text;
         return this;
@@ -20,9 +21,11 @@ public class PatientHealthResultResourceAttributesAnnotations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public PatientHealthResultResourceAttributesAnnotations withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PatientHealthResultResourceAttributesAnnotations(){}
 }

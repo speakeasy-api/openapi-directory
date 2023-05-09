@@ -15,6 +15,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public JobTypeDTO withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationUnitIds")
     public Long[] calculationUnitIds;
+
     public JobTypeDTO withCalculationUnitIds(Long[] calculationUnitIds) {
         this.calculationUnitIds = calculationUnitIds;
         return this;
@@ -34,6 +36,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public JobTypeDTO withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -42,6 +45,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filesNeeded")
     public Boolean filesNeeded;
+
     public JobTypeDTO withFilesNeeded(Boolean filesNeeded) {
         this.filesNeeded = filesNeeded;
         return this;
@@ -53,6 +57,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public JobTypeDTO withId(Long id) {
         this.id = id;
         return this;
@@ -64,6 +69,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public JobTypeDTO withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preferred")
     public Boolean preferred;
+
     public JobTypeDTO withPreferred(Boolean preferred) {
         this.preferred = preferred;
         return this;
@@ -83,6 +90,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providedByClient")
     public Boolean providedByClient;
+
     public JobTypeDTO withProvidedByClient(Boolean providedByClient) {
         this.providedByClient = providedByClient;
         return this;
@@ -91,6 +99,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationToLanguage")
     public JobTypeDTORelationToLanguageEnum relationToLanguage;
+
     public JobTypeDTO withRelationToLanguage(JobTypeDTORelationToLanguageEnum relationToLanguage) {
         this.relationToLanguage = relationToLanguage;
         return this;
@@ -99,6 +108,7 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProductivity")
     public Double vendorProductivity;
+
     public JobTypeDTO withVendorProductivity(Double vendorProductivity) {
         this.vendorProductivity = vendorProductivity;
         return this;
@@ -107,9 +117,11 @@ public class JobTypeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vendorProductivityCalculationUnitId")
     public Long vendorProductivityCalculationUnitId;
+
     public JobTypeDTO withVendorProductivityCalculationUnitId(Long vendorProductivityCalculationUnitId) {
         this.vendorProductivityCalculationUnitId = vendorProductivityCalculationUnitId;
         return this;
     }
     
+    public JobTypeDTO(){}
 }

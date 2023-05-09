@@ -17,6 +17,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
      */
     @JsonProperty("creation_time")
     public String creationTime;
+
     public ExportConfigurationsList200ApplicationJSONValues withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_configuration")
     public ExportConfigurationsList200ApplicationJSONValuesExportConfiguration exportConfiguration;
+
     public ExportConfigurationsList200ApplicationJSONValues withExportConfiguration(ExportConfigurationsList200ApplicationJSONValuesExportConfiguration exportConfiguration) {
         this.exportConfiguration = exportConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsList200ApplicationJSONValuesExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsList200ApplicationJSONValues withExportEntities(ExportConfigurationsList200ApplicationJSONValuesExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -46,6 +49,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
      */
     @JsonProperty("export_type")
     public ExportConfigurationsList200ApplicationJSONValuesExportTypeEnum exportType;
+
     public ExportConfigurationsList200ApplicationJSONValues withExportType(ExportConfigurationsList200ApplicationJSONValuesExportTypeEnum exportType) {
         this.exportType = exportType;
         return this;
@@ -56,6 +60,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
      */
     @JsonProperty("id")
     public String id;
+
     public ExportConfigurationsList200ApplicationJSONValues withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_time")
     public String lastRunTime;
+
     public ExportConfigurationsList200ApplicationJSONValues withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -78,6 +84,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsList200ApplicationJSONValues withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -89,6 +96,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsList200ApplicationJSONValues withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -99,6 +107,7 @@ public class ExportConfigurationsList200ApplicationJSONValues {
      */
     @JsonProperty("state")
     public ExportConfigurationsList200ApplicationJSONValuesStateEnum state;
+
     public ExportConfigurationsList200ApplicationJSONValues withState(ExportConfigurationsList200ApplicationJSONValuesStateEnum state) {
         this.state = state;
         return this;
@@ -110,9 +119,16 @@ public class ExportConfigurationsList200ApplicationJSONValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_info")
     public String stateInfo;
+
     public ExportConfigurationsList200ApplicationJSONValues withStateInfo(String stateInfo) {
         this.stateInfo = stateInfo;
         return this;
     }
     
+    public ExportConfigurationsList200ApplicationJSONValues(@JsonProperty("creation_time") String creationTime, @JsonProperty("export_type") ExportConfigurationsList200ApplicationJSONValuesExportTypeEnum exportType, @JsonProperty("id") String id, @JsonProperty("state") ExportConfigurationsList200ApplicationJSONValuesStateEnum state) {
+        this.creationTime = creationTime;
+        this.exportType = exportType;
+        this.id = id;
+        this.state = state;
+  }
 }

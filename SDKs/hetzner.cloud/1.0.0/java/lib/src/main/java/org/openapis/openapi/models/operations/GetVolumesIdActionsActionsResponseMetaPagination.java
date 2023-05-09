@@ -12,6 +12,7 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("last_page")
     public Double lastPage;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withLastPage(Double lastPage) {
         this.lastPage = lastPage;
         return this;
@@ -22,6 +23,7 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("next_page")
     public Double nextPage;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withNextPage(Double nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -32,6 +34,7 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("page")
     public Double page;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withPage(Double page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("per_page")
     public Double perPage;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withPerPage(Double perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +56,7 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("previous_page")
     public Double previousPage;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withPreviousPage(Double previousPage) {
         this.previousPage = previousPage;
         return this;
@@ -62,9 +67,18 @@ public class GetVolumesIdActionsActionsResponseMetaPagination {
      */
     @JsonProperty("total_entries")
     public Double totalEntries;
+
     public GetVolumesIdActionsActionsResponseMetaPagination withTotalEntries(Double totalEntries) {
         this.totalEntries = totalEntries;
         return this;
     }
     
+    public GetVolumesIdActionsActionsResponseMetaPagination(@JsonProperty("last_page") Double lastPage, @JsonProperty("next_page") Double nextPage, @JsonProperty("page") Double page, @JsonProperty("per_page") Double perPage, @JsonProperty("previous_page") Double previousPage, @JsonProperty("total_entries") Double totalEntries) {
+        this.lastPage = lastPage;
+        this.nextPage = nextPage;
+        this.page = page;
+        this.perPage = perPage;
+        this.previousPage = previousPage;
+        this.totalEntries = totalEntries;
+  }
 }

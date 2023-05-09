@@ -15,6 +15,7 @@ public class ServiceAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAttachments")
     public ServiceAttachment[] serviceAttachments;
+
     public ServiceAttachmentsScopedList withServiceAttachments(ServiceAttachment[] serviceAttachments) {
         this.serviceAttachments = serviceAttachments;
         return this;
@@ -26,9 +27,11 @@ public class ServiceAttachmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public ServiceAttachmentsScopedListWarning warning;
+
     public ServiceAttachmentsScopedList withWarning(ServiceAttachmentsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public ServiceAttachmentsScopedList(){}
 }

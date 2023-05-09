@@ -15,6 +15,7 @@ public class LustreLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public String destination;
+
     public LustreLogConfiguration withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -22,9 +23,13 @@ public class LustreLogConfiguration {
     
     @JsonProperty("Level")
     public LustreAccessAuditLogLevelEnum level;
+
     public LustreLogConfiguration withLevel(LustreAccessAuditLogLevelEnum level) {
         this.level = level;
         return this;
     }
     
+    public LustreLogConfiguration(@JsonProperty("Level") LustreAccessAuditLogLevelEnum level) {
+        this.level = level;
+  }
 }

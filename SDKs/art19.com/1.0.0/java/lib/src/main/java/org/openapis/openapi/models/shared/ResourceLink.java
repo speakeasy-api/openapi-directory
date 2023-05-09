@@ -18,9 +18,11 @@ public class ResourceLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public String self;
+
     public ResourceLink withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public ResourceLink(){}
 }

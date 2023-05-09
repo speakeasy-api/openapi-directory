@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse;
 
 public class Application {
@@ -14,11 +13,13 @@ public class Application {
 
             GetV05WellKnownOpenidConfigurationResponse res = sdk.gateway.getV05WellKnownOpenidConfiguration();
 
-            if (res.openIdConfiguration.isPresent()) {
+            if (res.openIdConfiguration != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

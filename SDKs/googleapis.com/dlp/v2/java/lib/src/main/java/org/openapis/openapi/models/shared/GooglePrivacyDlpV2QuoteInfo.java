@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2QuoteInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateTime")
     public GooglePrivacyDlpV2DateTime dateTime;
+
     public GooglePrivacyDlpV2QuoteInfo withDateTime(GooglePrivacyDlpV2DateTime dateTime) {
         this.dateTime = dateTime;
         return this;
     }
     
+    public GooglePrivacyDlpV2QuoteInfo(){}
 }

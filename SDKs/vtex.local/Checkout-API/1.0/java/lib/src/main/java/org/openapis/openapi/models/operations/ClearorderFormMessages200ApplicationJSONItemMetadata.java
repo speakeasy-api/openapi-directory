@@ -18,9 +18,11 @@ public class ClearorderFormMessages200ApplicationJSONItemMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public ClearorderFormMessages200ApplicationJSONItemMetadataItems[] items;
+
     public ClearorderFormMessages200ApplicationJSONItemMetadata withItems(ClearorderFormMessages200ApplicationJSONItemMetadataItems[] items) {
         this.items = items;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONItemMetadata(){}
 }

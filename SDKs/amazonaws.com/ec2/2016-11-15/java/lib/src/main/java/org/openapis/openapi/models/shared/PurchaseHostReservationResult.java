@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PurchaseHostReservationResult {
     
     public String clientToken;
+
     public PurchaseHostReservationResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class PurchaseHostReservationResult {
     
     
     public PurchaseHostReservationResultCurrencyCodeEnum currencyCode;
+
     public PurchaseHostReservationResult withCurrencyCode(PurchaseHostReservationResultCurrencyCodeEnum currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -26,6 +28,7 @@ public class PurchaseHostReservationResult {
     
     
     public PurchaseHostReservationResultPurchase[] purchase;
+
     public PurchaseHostReservationResult withPurchase(PurchaseHostReservationResultPurchase[] purchase) {
         this.purchase = purchase;
         return this;
@@ -33,6 +36,7 @@ public class PurchaseHostReservationResult {
     
     
     public String totalHourlyPrice;
+
     public PurchaseHostReservationResult withTotalHourlyPrice(String totalHourlyPrice) {
         this.totalHourlyPrice = totalHourlyPrice;
         return this;
@@ -40,9 +44,11 @@ public class PurchaseHostReservationResult {
     
     
     public String totalUpfrontPrice;
+
     public PurchaseHostReservationResult withTotalUpfrontPrice(String totalUpfrontPrice) {
         this.totalUpfrontPrice = totalUpfrontPrice;
         return this;
     }
     
+    public PurchaseHostReservationResult(){}
 }

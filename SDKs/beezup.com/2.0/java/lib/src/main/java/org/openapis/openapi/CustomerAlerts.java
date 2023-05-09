@@ -60,12 +60,10 @@ public class CustomerAlerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetStoreAlertsResponse res = new org.openapis.openapi.models.operations.GetStoreAlertsResponse() {{
+        org.openapis.openapi.models.operations.GetStoreAlertsResponse res = new org.openapis.openapi.models.operations.GetStoreAlertsResponse(contentType, httpRes.statusCode()) {{
             storeAlerts = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -116,11 +114,9 @@ public class CustomerAlerts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SaveStoreAlertsResponse res = new org.openapis.openapi.models.operations.SaveStoreAlertsResponse() {{
+        org.openapis.openapi.models.operations.SaveStoreAlertsResponse res = new org.openapis.openapi.models.operations.SaveStoreAlertsResponse(contentType, httpRes.statusCode()) {{
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

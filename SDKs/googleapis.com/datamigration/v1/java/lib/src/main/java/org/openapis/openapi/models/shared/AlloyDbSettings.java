@@ -13,11 +13,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class AlloyDbSettings {
     /**
+     * EncryptionConfig describes the encryption config of a cluster that is encrypted with a CMEK (customer-managed encryption key).
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("encryptionConfig")
+    public EncryptionConfig encryptionConfig;
+
+    public AlloyDbSettings withEncryptionConfig(EncryptionConfig encryptionConfig) {
+        this.encryptionConfig = encryptionConfig;
+        return this;
+    }
+    
+    /**
      * The username/password for a database user. Used for specifying initial users at cluster creation time.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialUser")
     public UserPassword initialUser;
+
     public AlloyDbSettings withInitialUser(UserPassword initialUser) {
         this.initialUser = initialUser;
         return this;
@@ -29,6 +42,7 @@ public class AlloyDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AlloyDbSettings withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +54,7 @@ public class AlloyDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryInstanceSettings")
     public PrimaryInstanceSettings primaryInstanceSettings;
+
     public AlloyDbSettings withPrimaryInstanceSettings(PrimaryInstanceSettings primaryInstanceSettings) {
         this.primaryInstanceSettings = primaryInstanceSettings;
         return this;
@@ -51,9 +66,11 @@ public class AlloyDbSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcNetwork")
     public String vpcNetwork;
+
     public AlloyDbSettings withVpcNetwork(String vpcNetwork) {
         this.vpcNetwork = vpcNetwork;
         return this;
     }
     
+    public AlloyDbSettings(){}
 }

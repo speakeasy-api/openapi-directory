@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETVpnConnectionDeviceSampleConfigurationActionEnum action;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withAction(GETGETVpnConnectionDeviceSampleConfigurationActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=InternetKeyExchangeVersion")
     public String internetKeyExchangeVersion;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withInternetKeyExchangeVersion(String internetKeyExchangeVersion) {
         this.internetKeyExchangeVersion = internetKeyExchangeVersion;
         return this;
@@ -36,6 +40,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETVpnConnectionDeviceSampleConfigurationVersionEnum version;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withVersion(GETGETVpnConnectionDeviceSampleConfigurationVersionEnum version) {
         this.version = version;
         return this;
@@ -46,6 +51,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionDeviceTypeId")
     public String vpnConnectionDeviceTypeId;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withVpnConnectionDeviceTypeId(String vpnConnectionDeviceTypeId) {
         this.vpnConnectionDeviceTypeId = vpnConnectionDeviceTypeId;
         return this;
@@ -56,6 +62,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VpnConnectionId")
     public String vpnConnectionId;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -63,6 +70,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,16 @@ public class GETGETVpnConnectionDeviceSampleConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETVpnConnectionDeviceSampleConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETVpnConnectionDeviceSampleConfigurationRequest(@JsonProperty("Action") GETGETVpnConnectionDeviceSampleConfigurationActionEnum action, @JsonProperty("Version") GETGETVpnConnectionDeviceSampleConfigurationVersionEnum version, @JsonProperty("VpnConnectionDeviceTypeId") String vpnConnectionDeviceTypeId, @JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.action = action;
+        this.version = version;
+        this.vpnConnectionDeviceTypeId = vpnConnectionDeviceTypeId;
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

@@ -12,6 +12,7 @@ public class FindKeywordLeasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindKeywordLeasesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +23,7 @@ public class FindKeywordLeasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public FindKeywordLeasesRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -32,6 +34,7 @@ public class FindKeywordLeasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelName")
     public String labelName;
+
     public FindKeywordLeasesRequest withLabelName(String labelName) {
         this.labelName = labelName;
         return this;
@@ -42,6 +45,7 @@ public class FindKeywordLeasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindKeywordLeasesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -52,9 +56,11 @@ public class FindKeywordLeasesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindKeywordLeasesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public FindKeywordLeasesRequest(){}
 }

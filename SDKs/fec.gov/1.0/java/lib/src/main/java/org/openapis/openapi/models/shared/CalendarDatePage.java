@@ -12,6 +12,7 @@ public class CalendarDatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public CalendarDatePage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class CalendarDatePage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public CalendarDate[] results;
+
     public CalendarDatePage withResults(CalendarDate[] results) {
         this.results = results;
         return this;
     }
     
+    public CalendarDatePage(){}
 }

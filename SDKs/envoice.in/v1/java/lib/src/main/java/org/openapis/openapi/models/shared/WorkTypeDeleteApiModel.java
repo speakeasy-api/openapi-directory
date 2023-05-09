@@ -17,9 +17,11 @@ public class WorkTypeDeleteApiModel {
     @JsonProperty("Id")
     @SpeakeasyMetadata("form:name=Id")
     public Integer id;
+
     public WorkTypeDeleteApiModel withId(Integer id) {
         this.id = id;
         return this;
     }
     
+    public WorkTypeDeleteApiModel(){}
 }

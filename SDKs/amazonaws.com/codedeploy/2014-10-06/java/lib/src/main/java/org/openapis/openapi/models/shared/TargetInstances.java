@@ -15,6 +15,7 @@ public class TargetInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroups")
     public String[] autoScalingGroups;
+
     public TargetInstances withAutoScalingGroups(String[] autoScalingGroups) {
         this.autoScalingGroups = autoScalingGroups;
         return this;
@@ -23,6 +24,7 @@ public class TargetInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2TagSet")
     public Ec2TagSet ec2TagSet;
+
     public TargetInstances withEc2TagSet(Ec2TagSet ec2TagSet) {
         this.ec2TagSet = ec2TagSet;
         return this;
@@ -31,9 +33,11 @@ public class TargetInstances {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagFilters")
     public Ec2TagFilter[] tagFilters;
+
     public TargetInstances withTagFilters(Ec2TagFilter[] tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
     
+    public TargetInstances(){}
 }

@@ -20,28 +20,31 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmazonManagedKafkaEventSourceConfig")
     public CreateEventSourceMappingRequestBodyAmazonManagedKafkaEventSourceConfig amazonManagedKafkaEventSourceConfig;
+
     public CreateEventSourceMappingRequestBody withAmazonManagedKafkaEventSourceConfig(CreateEventSourceMappingRequestBodyAmazonManagedKafkaEventSourceConfig amazonManagedKafkaEventSourceConfig) {
         this.amazonManagedKafkaEventSourceConfig = amazonManagedKafkaEventSourceConfig;
         return this;
     }
     
     /**
-     * &lt;p&gt;The maximum number of records in each batch that Lambda pulls from your stream or queue and sends to your function. Lambda passes all of the records in the batch to the function in a single call, up to the payload limit for synchronous invocation (6 MB).&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Kinesis&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DynamoDB Streams&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Simple Queue Service&lt;/b&gt; \u2013 Default 10. For standard queues the max is 10,000. For FIFO queues the max is 10.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Managed Streaming for Apache Kafka&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Self-managed Apache Kafka&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon MQ (ActiveMQ and RabbitMQ)&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;The maximum number of records in each batch that Lambda pulls from your stream or queue and sends to your function. Lambda passes all of the records in the batch to the function in a single call, up to the payload limit for synchronous invocation (6 MB).&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Kinesis&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DynamoDB Streams&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Simple Queue Service&lt;/b&gt; \u2013 Default 10. For standard queues the max is 10,000. For FIFO queues the max is 10.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Managed Streaming for Apache Kafka&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Self-managed Apache Kafka&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon MQ (ActiveMQ and RabbitMQ)&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;DocumentDB&lt;/b&gt; \u2013 Default 100. Max 10,000.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public CreateEventSourceMappingRequestBody withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
     }
     
     /**
-     * (Streams only) If the function returns an error, split the batch in two and retry.
+     * (Kinesis and DynamoDB Streams only) If the function returns an error, split the batch in two and retry.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BisectBatchOnFunctionError")
     public Boolean bisectBatchOnFunctionError;
+
     public CreateEventSourceMappingRequestBody withBisectBatchOnFunctionError(Boolean bisectBatchOnFunctionError) {
         this.bisectBatchOnFunctionError = bisectBatchOnFunctionError;
         return this;
@@ -53,6 +56,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationConfig")
     public CreateEventSourceMappingRequestBodyDestinationConfig destinationConfig;
+
     public CreateEventSourceMappingRequestBody withDestinationConfig(CreateEventSourceMappingRequestBodyDestinationConfig destinationConfig) {
         this.destinationConfig = destinationConfig;
         return this;
@@ -64,6 +68,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentDBEventSourceConfig")
     public CreateEventSourceMappingRequestBodyDocumentDBEventSourceConfig documentDBEventSourceConfig;
+
     public CreateEventSourceMappingRequestBody withDocumentDBEventSourceConfig(CreateEventSourceMappingRequestBodyDocumentDBEventSourceConfig documentDBEventSourceConfig) {
         this.documentDBEventSourceConfig = documentDBEventSourceConfig;
         return this;
@@ -75,17 +80,19 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public CreateEventSourceMappingRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
     /**
-     * &lt;p&gt;The Amazon Resource Name (ARN) of the event source.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Kinesis&lt;/b&gt; \u2013 The ARN of the data stream or a stream consumer.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DynamoDB Streams&lt;/b&gt; \u2013 The ARN of the stream.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Simple Queue Service&lt;/b&gt; \u2013 The ARN of the queue.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Managed Streaming for Apache Kafka&lt;/b&gt; \u2013 The ARN of the cluster.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon MQ&lt;/b&gt; \u2013 The ARN of the broker.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
+     * &lt;p&gt;The Amazon Resource Name (ARN) of the event source.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Kinesis&lt;/b&gt; \u2013 The ARN of the data stream or a stream consumer.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DynamoDB Streams&lt;/b&gt; \u2013 The ARN of the stream.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Simple Queue Service&lt;/b&gt; \u2013 The ARN of the queue.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon Managed Streaming for Apache Kafka&lt;/b&gt; \u2013 The ARN of the cluster.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon MQ&lt;/b&gt; \u2013 The ARN of the broker.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;b&gt;Amazon DocumentDB&lt;/b&gt; \u2013 The ARN of the DocumentDB change stream.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public CreateEventSourceMappingRequestBody withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -97,6 +104,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCriteria")
     public CreateEventSourceMappingRequestBodyFilterCriteria filterCriteria;
+
     public CreateEventSourceMappingRequestBody withFilterCriteria(CreateEventSourceMappingRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -107,61 +115,67 @@ public class CreateEventSourceMappingRequestBody {
      */
     @JsonProperty("FunctionName")
     public String functionName;
+
     public CreateEventSourceMappingRequestBody withFunctionName(String functionName) {
         this.functionName = functionName;
         return this;
     }
     
     /**
-     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
+     * (Kinesis, DynamoDB Streams, and Amazon SQS) A list of current response type enums applied to the event source mapping.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FunctionResponseTypes")
     public org.openapis.openapi.models.shared.FunctionResponseTypeEnum[] functionResponseTypes;
+
     public CreateEventSourceMappingRequestBody withFunctionResponseTypes(org.openapis.openapi.models.shared.FunctionResponseTypeEnum[] functionResponseTypes) {
         this.functionResponseTypes = functionResponseTypes;
         return this;
     }
     
     /**
-     * &lt;p&gt;The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function. You can configure &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; to any value from 0 seconds to 300 seconds in increments of seconds.&lt;/p&gt; &lt;p&gt;For streams and Amazon SQS event sources, the default batching window is 0 seconds. For Amazon MSK, Self-managed Apache Kafka, and Amazon MQ event sources, the default batching window is 500 ms. Note that because you can only change &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; in increments of seconds, you cannot revert back to the 500 ms default batching window after you have changed it. To restore the default batching window, you must create a new event source mapping.&lt;/p&gt; &lt;p&gt;Related setting: For streams and Amazon SQS event sources, when you set &lt;code&gt;BatchSize&lt;/code&gt; to a value greater than 10, you must set &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; to at least 1.&lt;/p&gt;
+     * &lt;p&gt;The maximum amount of time, in seconds, that Lambda spends gathering records before invoking the function. You can configure &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; to any value from 0 seconds to 300 seconds in increments of seconds.&lt;/p&gt; &lt;p&gt;For streams and Amazon SQS event sources, the default batching window is 0 seconds. For Amazon MSK, Self-managed Apache Kafka, Amazon MQ, and DocumentDB event sources, the default batching window is 500 ms. Note that because you can only change &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; in increments of seconds, you cannot revert back to the 500 ms default batching window after you have changed it. To restore the default batching window, you must create a new event source mapping.&lt;/p&gt; &lt;p&gt;Related setting: For streams and Amazon SQS event sources, when you set &lt;code&gt;BatchSize&lt;/code&gt; to a value greater than 10, you must set &lt;code&gt;MaximumBatchingWindowInSeconds&lt;/code&gt; to at least 1.&lt;/p&gt;
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public CreateEventSourceMappingRequestBody withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
     }
     
     /**
-     * (Streams only) Discard records older than the specified age. The default value is infinite (-1).
+     * (Kinesis and DynamoDB Streams only) Discard records older than the specified age. The default value is infinite (-1).
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRecordAgeInSeconds")
     public Long maximumRecordAgeInSeconds;
+
     public CreateEventSourceMappingRequestBody withMaximumRecordAgeInSeconds(Long maximumRecordAgeInSeconds) {
         this.maximumRecordAgeInSeconds = maximumRecordAgeInSeconds;
         return this;
     }
     
     /**
-     * (Streams only) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.
+     * (Kinesis and DynamoDB Streams only) Discard records after the specified number of retries. The default value is infinite (-1). When set to infinite (-1), failed records are retried until the record expires.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumRetryAttempts")
     public Long maximumRetryAttempts;
+
     public CreateEventSourceMappingRequestBody withMaximumRetryAttempts(Long maximumRetryAttempts) {
         this.maximumRetryAttempts = maximumRetryAttempts;
         return this;
     }
     
     /**
-     * (Streams only) The number of batches to process from each shard concurrently.
+     * (Kinesis and DynamoDB Streams only) The number of batches to process from each shard concurrently.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelizationFactor")
     public Long parallelizationFactor;
+
     public CreateEventSourceMappingRequestBody withParallelizationFactor(Long parallelizationFactor) {
         this.parallelizationFactor = parallelizationFactor;
         return this;
@@ -173,6 +187,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Queues")
     public String[] queues;
+
     public CreateEventSourceMappingRequestBody withQueues(String[] queues) {
         this.queues = queues;
         return this;
@@ -184,6 +199,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingConfig")
     public CreateEventSourceMappingRequestBodyScalingConfig scalingConfig;
+
     public CreateEventSourceMappingRequestBody withScalingConfig(CreateEventSourceMappingRequestBodyScalingConfig scalingConfig) {
         this.scalingConfig = scalingConfig;
         return this;
@@ -195,6 +211,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedEventSource")
     public CreateEventSourceMappingRequestBodySelfManagedEventSource selfManagedEventSource;
+
     public CreateEventSourceMappingRequestBody withSelfManagedEventSource(CreateEventSourceMappingRequestBodySelfManagedEventSource selfManagedEventSource) {
         this.selfManagedEventSource = selfManagedEventSource;
         return this;
@@ -206,6 +223,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedKafkaEventSourceConfig")
     public CreateEventSourceMappingRequestBodySelfManagedKafkaEventSourceConfig selfManagedKafkaEventSourceConfig;
+
     public CreateEventSourceMappingRequestBody withSelfManagedKafkaEventSourceConfig(CreateEventSourceMappingRequestBodySelfManagedKafkaEventSourceConfig selfManagedKafkaEventSourceConfig) {
         this.selfManagedKafkaEventSourceConfig = selfManagedKafkaEventSourceConfig;
         return this;
@@ -217,17 +235,19 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAccessConfigurations")
     public org.openapis.openapi.models.shared.SourceAccessConfiguration[] sourceAccessConfigurations;
+
     public CreateEventSourceMappingRequestBody withSourceAccessConfigurations(org.openapis.openapi.models.shared.SourceAccessConfiguration[] sourceAccessConfigurations) {
         this.sourceAccessConfigurations = sourceAccessConfigurations;
         return this;
     }
     
     /**
-     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. &lt;code&gt;AT_TIMESTAMP&lt;/code&gt; is supported only for Amazon Kinesis streams.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon MSK Streams sources. &lt;code&gt;AT_TIMESTAMP&lt;/code&gt; is supported only for Amazon Kinesis streams and Amazon DocumentDB.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartingPosition")
     public CreateEventSourceMappingRequestBodyStartingPositionEnum startingPosition;
+
     public CreateEventSourceMappingRequestBody withStartingPosition(CreateEventSourceMappingRequestBodyStartingPositionEnum startingPosition) {
         this.startingPosition = startingPosition;
         return this;
@@ -241,6 +261,7 @@ public class CreateEventSourceMappingRequestBody {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartingPositionTimestamp")
     public OffsetDateTime startingPositionTimestamp;
+
     public CreateEventSourceMappingRequestBody withStartingPositionTimestamp(OffsetDateTime startingPositionTimestamp) {
         this.startingPositionTimestamp = startingPositionTimestamp;
         return this;
@@ -252,20 +273,25 @@ public class CreateEventSourceMappingRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topics")
     public String[] topics;
+
     public CreateEventSourceMappingRequestBody withTopics(String[] topics) {
         this.topics = topics;
         return this;
     }
     
     /**
-     * (Streams only) The duration in seconds of a processing window. The range is between 1 second and 900 seconds.
+     * (Kinesis and DynamoDB Streams only) The duration in seconds of a processing window for DynamoDB and Kinesis Streams event sources. A value of 0 seconds indicates no tumbling window.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TumblingWindowInSeconds")
     public Long tumblingWindowInSeconds;
+
     public CreateEventSourceMappingRequestBody withTumblingWindowInSeconds(Long tumblingWindowInSeconds) {
         this.tumblingWindowInSeconds = tumblingWindowInSeconds;
         return this;
     }
     
+    public CreateEventSourceMappingRequestBody(@JsonProperty("FunctionName") String functionName) {
+        this.functionName = functionName;
+  }
 }

@@ -54,11 +54,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse res = new org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse res = new org.openapis.openapi.models.operations.AnalyticsAudienceNameExistsResponse(contentType, httpRes.statusCode()) {{
             analyticsAudienceNameExistsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -75,12 +73,69 @@ public class Analytics {
     }
 
     /**
+     * Available for UWP apps only.
+     * Count of crashes by day in the time range based the selected versions. Available for UWP apps only.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     */
+    @Deprecated
+    public org.openapis.openapi.models.operations.AnalyticsCrashCountsResponse analyticsCrashCounts(org.openapis.openapi.models.operations.AnalyticsCrashCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_counts", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsCrashCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsCrashCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsCrashCounts200ApplicationJSONObject = null;
+            analyticsCrashCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsCrashCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsCrashCounts200ApplicationJSON.class);
+                res.analyticsCrashCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsCrashCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsCrashCountsDefaultApplicationJSON.class);
+                res.analyticsCrashCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Percentage of crash-free device by day in the time range based on the selected versions. Api will return -1 if crash devices is greater than active devices.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse analyticsCrashFreeDevicePercentages(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest request, org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crashfree_device_percentages", request, null);
@@ -102,12 +157,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashFreeDevicePercentagesResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashFreeDevicePercentages200ApplicationJSONObject = null;
             analyticsCrashFreeDevicePercentagesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,7 +188,9 @@ public class Analytics {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse analyticsCrashGroupCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/crash_counts", request, null);
@@ -157,12 +212,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupCountsResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashGroupCounts200ApplicationJSONObject = null;
             analyticsCrashGroupCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,7 +243,9 @@ public class Analytics {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse analyticsCrashGroupModelCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/models", request, null);
@@ -212,12 +267,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupModelCountsResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashGroupModelCounts200ApplicationJSONObject = null;
             analyticsCrashGroupModelCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,7 +298,9 @@ public class Analytics {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse analyticsCrashGroupOperatingSystemCounts(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/operating_systems", request, null);
@@ -267,12 +322,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupOperatingSystemCountsResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashGroupOperatingSystemCounts200ApplicationJSONObject = null;
             analyticsCrashGroupOperatingSystemCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -300,7 +353,9 @@ public class Analytics {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse analyticsCrashGroupTotals(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest request, org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/crash_groups/{crash_group_id}/overall", request, null);
@@ -322,12 +377,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupTotalsResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashGroupTotals200ApplicationJSONObject = null;
             analyticsCrashGroupTotalsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -375,12 +428,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse res = new org.openapis.openapi.models.operations.AnalyticsCrashGroupsTotalsResponse(contentType, httpRes.statusCode()) {{
             analyticsCrashGroupsTotals200ApplicationJSONObjects = null;
             analyticsCrashGroupsTotalsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -428,12 +479,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsCreateOrUpdateAudienceResponse(contentType, httpRes.statusCode()) {{
             analyticsCreateOrUpdateAudience200ApplicationJSONObject = null;
             analyticsCreateOrUpdateAudienceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +525,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsDeleteAudienceResponse(contentType, httpRes.statusCode()) {{
             analyticsDeleteAudienceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -490,6 +537,58 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsDeleteAudienceDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsDeleteAudienceDefaultApplicationJSON.class);
                 res.analyticsDeleteAudienceDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of active devices by interval in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsDeviceCountsResponse analyticsDeviceCounts(org.openapis.openapi.models.operations.AnalyticsDeviceCountsRequest request, org.openapis.openapi.models.operations.AnalyticsDeviceCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsDeviceCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/active_device_counts", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsDeviceCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsDeviceCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsDeviceCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsDeviceCounts200ApplicationJSONObject = null;
+            analyticsDeviceCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsDeviceCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsDeviceCounts200ApplicationJSON.class);
+                res.analyticsDeviceCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsDeviceCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsDeviceCountsDefaultApplicationJSON.class);
+                res.analyticsDeviceCountsDefaultApplicationJSONObject = out;
             }
         }
 
@@ -523,12 +622,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsResponse(contentType, httpRes.statusCode()) {{
             analyticsDistributionReleaseCounts200ApplicationJSONObject = null;
             analyticsDistributionReleaseCountsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -543,6 +640,214 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsDistributionReleaseCountsDefaultApplicationJSON.class);
                 res.analyticsDistributionReleaseCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of events by interval in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventCountResponse analyticsEventCount(org.openapis.openapi.models.operations.AnalyticsEventCountRequest request, org.openapis.openapi.models.operations.AnalyticsEventCountSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventCountRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/event_count", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventCountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventCountResponse res = new org.openapis.openapi.models.operations.AnalyticsEventCountResponse(contentType, httpRes.statusCode()) {{
+            analyticsEventCount200ApplicationJSONObject = null;
+            analyticsEventCountDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventCount200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventCount200ApplicationJSON.class);
+                res.analyticsEventCount200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventCountDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventCountDefaultApplicationJSON.class);
+                res.analyticsEventCountDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of devices for an event by interval in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventDeviceCountResponse analyticsEventDeviceCount(org.openapis.openapi.models.operations.AnalyticsEventDeviceCountRequest request, org.openapis.openapi.models.operations.AnalyticsEventDeviceCountSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventDeviceCountRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/device_count", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventDeviceCountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventDeviceCountResponse res = new org.openapis.openapi.models.operations.AnalyticsEventDeviceCountResponse(contentType, httpRes.statusCode()) {{
+            analyticsEventDeviceCount200ApplicationJSONObject = null;
+            analyticsEventDeviceCountDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventDeviceCount200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventDeviceCount200ApplicationJSON.class);
+                res.analyticsEventDeviceCount200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventDeviceCountDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventDeviceCountDefaultApplicationJSON.class);
+                res.analyticsEventDeviceCountDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of events per device by interval in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountResponse analyticsEventPerDeviceCount(org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountRequest request, org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_device", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountResponse res = new org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountResponse(contentType, httpRes.statusCode()) {{
+            analyticsEventPerDeviceCount200ApplicationJSONObject = null;
+            analyticsEventPerDeviceCountDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCount200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCount200ApplicationJSON.class);
+                res.analyticsEventPerDeviceCount200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPerDeviceCountDefaultApplicationJSON.class);
+                res.analyticsEventPerDeviceCountDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of events per session by interval in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountResponse analyticsEventPerSessionCount(org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountRequest request, org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/count_per_session", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountResponse res = new org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountResponse(contentType, httpRes.statusCode()) {{
+            analyticsEventPerSessionCount200ApplicationJSONObject = null;
+            analyticsEventPerSessionCountDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPerSessionCount200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPerSessionCount200ApplicationJSON.class);
+                res.analyticsEventPerSessionCount200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPerSessionCountDefaultApplicationJSON.class);
+                res.analyticsEventPerSessionCountDefaultApplicationJSONObject = out;
             }
         }
 
@@ -571,12 +876,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsEventPropertiesResponse(contentType, httpRes.statusCode()) {{
             analyticsEventProperties200ApplicationJSONObject = null;
             analyticsEventPropertiesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -591,6 +894,110 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsEventPropertiesDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPropertiesDefaultApplicationJSON.class);
                 res.analyticsEventPropertiesDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Event properties value counts during the time range in descending order.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsResponse analyticsEventPropertyCounts(org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsRequest request, org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events/{event_name}/properties/{event_property_name}/counts", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsEventPropertyCounts200ApplicationJSONObject = null;
+            analyticsEventPropertyCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPropertyCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPropertyCounts200ApplicationJSON.class);
+                res.analyticsEventPropertyCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventPropertyCountsDefaultApplicationJSON.class);
+                res.analyticsEventPropertyCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of active events in the time range ordered by event.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsEventsResponse analyticsEvents(org.openapis.openapi.models.operations.AnalyticsEventsRequest request, org.openapis.openapi.models.operations.AnalyticsEventsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsEventsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/events", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsEventsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsEventsResponse res = new org.openapis.openapi.models.operations.AnalyticsEventsResponse(contentType, httpRes.statusCode()) {{
+            analyticsEvents200ApplicationJSONObject = null;
+            analyticsEventsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEvents200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEvents200ApplicationJSON.class);
+                res.analyticsEvents200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsEventsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsEventsDefaultApplicationJSON.class);
+                res.analyticsEventsDefaultApplicationJSONObject = out;
             }
         }
 
@@ -619,11 +1026,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse res = new org.openapis.openapi.models.operations.AnalyticsEventsDeleteResponse(contentType, httpRes.statusCode()) {{
             analyticsEventsDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -661,11 +1066,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse res = new org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse res = new org.openapis.openapi.models.operations.AnalyticsEventsDeleteLogsResponse(contentType, httpRes.statusCode()) {{
             analyticsEventsDeleteLogsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -709,12 +1112,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse res = new org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse res = new org.openapis.openapi.models.operations.AnalyticsGenericLogFlowResponse(contentType, httpRes.statusCode()) {{
             analyticsGenericLogFlow200ApplicationJSONObject = null;
             analyticsGenericLogFlowDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -757,12 +1158,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsGetAudienceResponse(contentType, httpRes.statusCode()) {{
             analyticsGetAudience200ApplicationJSONObject = null;
             analyticsGetAudienceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -777,6 +1176,58 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsGetAudienceDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsGetAudienceDefaultApplicationJSON.class);
                 res.analyticsGetAudienceDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Languages in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsLanguageCountsResponse analyticsLanguageCounts(org.openapis.openapi.models.operations.AnalyticsLanguageCountsRequest request, org.openapis.openapi.models.operations.AnalyticsLanguageCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsLanguageCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/languages", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsLanguageCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsLanguageCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsLanguageCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsLanguageCounts200ApplicationJSONObject = null;
+            analyticsLanguageCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsLanguageCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsLanguageCounts200ApplicationJSON.class);
+                res.analyticsLanguageCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsLanguageCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsLanguageCountsDefaultApplicationJSON.class);
+                res.analyticsLanguageCountsDefaultApplicationJSONObject = out;
             }
         }
 
@@ -811,12 +1262,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse res = new org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse res = new org.openapis.openapi.models.operations.AnalyticsListAudiencesResponse(contentType, httpRes.statusCode()) {{
             analyticsListAudiences200ApplicationJSONObject = null;
             analyticsListAudiencesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -859,12 +1308,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsListCustomPropertiesResponse(contentType, httpRes.statusCode()) {{
             analyticsListCustomProperties200ApplicationJSONObject = null;
             analyticsListCustomPropertiesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -907,12 +1354,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse res = new org.openapis.openapi.models.operations.AnalyticsListDevicePropertiesResponse(contentType, httpRes.statusCode()) {{
             analyticsListDeviceProperties200ApplicationJSONObject = null;
             analyticsListDevicePropertiesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -961,12 +1406,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse res = new org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse res = new org.openapis.openapi.models.operations.AnalyticsListDevicePropertyValuesResponse(contentType, httpRes.statusCode()) {{
             analyticsListDevicePropertyValues200ApplicationJSONObject = null;
             analyticsListDevicePropertyValuesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1015,12 +1458,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsLogFlowResponse res = new org.openapis.openapi.models.operations.AnalyticsLogFlowResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsLogFlowResponse res = new org.openapis.openapi.models.operations.AnalyticsLogFlowResponse(contentType, httpRes.statusCode()) {{
             analyticsLogFlow200ApplicationJSONObject = null;
             analyticsLogFlowDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1035,6 +1476,318 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsLogFlowDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsLogFlowDefaultApplicationJSON.class);
                 res.analyticsLogFlowDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Models in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsModelCountsResponse analyticsModelCounts(org.openapis.openapi.models.operations.AnalyticsModelCountsRequest request, org.openapis.openapi.models.operations.AnalyticsModelCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsModelCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/models", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsModelCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsModelCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsModelCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsModelCounts200ApplicationJSONObject = null;
+            analyticsModelCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsModelCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsModelCounts200ApplicationJSON.class);
+                res.analyticsModelCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsModelCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsModelCountsDefaultApplicationJSON.class);
+                res.analyticsModelCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * OSes in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsResponse analyticsOperatingSystemCounts(org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsRequest request, org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/oses", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsOperatingSystemCounts200ApplicationJSONObject = null;
+            analyticsOperatingSystemCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsOperatingSystemCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsOperatingSystemCounts200ApplicationJSON.class);
+                res.analyticsOperatingSystemCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsOperatingSystemCountsDefaultApplicationJSON.class);
+                res.analyticsOperatingSystemCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of sessions per device in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsResponse analyticsPerDeviceCounts(org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsRequest request, org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/sessions_per_device", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsPerDeviceCounts200ApplicationJSONObject = null;
+            analyticsPerDeviceCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsPerDeviceCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsPerDeviceCounts200ApplicationJSON.class);
+                res.analyticsPerDeviceCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsPerDeviceCountsDefaultApplicationJSON.class);
+                res.analyticsPerDeviceCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Places in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsPlaceCountsResponse analyticsPlaceCounts(org.openapis.openapi.models.operations.AnalyticsPlaceCountsRequest request, org.openapis.openapi.models.operations.AnalyticsPlaceCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsPlaceCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/places", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsPlaceCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsPlaceCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsPlaceCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsPlaceCounts200ApplicationJSONObject = null;
+            analyticsPlaceCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsPlaceCounts200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsPlaceCounts200ApplicationJSON.class);
+                res.analyticsPlaceCounts200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsPlaceCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsPlaceCountsDefaultApplicationJSON.class);
+                res.analyticsPlaceCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of sessions in the time range.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsSessionCountsResponse analyticsSessionCounts(org.openapis.openapi.models.operations.AnalyticsSessionCountsRequest request, org.openapis.openapi.models.operations.AnalyticsSessionCountsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsSessionCountsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/session_counts", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsSessionCountsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsSessionCountsResponse res = new org.openapis.openapi.models.operations.AnalyticsSessionCountsResponse(contentType, httpRes.statusCode()) {{
+            analyticsSessionCounts200ApplicationJSONObjects = null;
+            analyticsSessionCountsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsSessionCounts200ApplicationJSON[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsSessionCounts200ApplicationJSON[].class);
+                res.analyticsSessionCounts200ApplicationJSONObjects = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsSessionCountsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsSessionCountsDefaultApplicationJSON.class);
+                res.analyticsSessionCountsDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Gets session duration.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionResponse analyticsSessionDurationsDistribution(org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionRequest request, org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/session_durations_distribution", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionResponse res = new org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionResponse(contentType, httpRes.statusCode()) {{
+            analyticsSessionDurationsDistribution200ApplicationJSONObject = null;
+            analyticsSessionDurationsDistributionDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistribution200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistribution200ApplicationJSON.class);
+                res.analyticsSessionDurationsDistribution200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsSessionDurationsDistributionDefaultApplicationJSON.class);
+                res.analyticsSessionDurationsDistributionDefaultApplicationJSONObject = out;
             }
         }
 
@@ -1068,12 +1821,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse() {{
+        org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse res = new org.openapis.openapi.models.operations.AnalyticsTestAudienceResponse(contentType, httpRes.statusCode()) {{
             analyticsTestAudience200ApplicationJSONObject = null;
             analyticsTestAudienceDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1088,6 +1839,58 @@ public class Analytics {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.operations.AnalyticsTestAudienceDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsTestAudienceDefaultApplicationJSON.class);
                 res.analyticsTestAudienceDefaultApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Count of active versions in the time range ordered by version.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.AnalyticsVersionsResponse analyticsVersions(org.openapis.openapi.models.operations.AnalyticsVersionsRequest request, org.openapis.openapi.models.operations.AnalyticsVersionsSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.AnalyticsVersionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/analytics/versions", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.AnalyticsVersionsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.AnalyticsVersionsResponse res = new org.openapis.openapi.models.operations.AnalyticsVersionsResponse(contentType, httpRes.statusCode()) {{
+            analyticsVersions200ApplicationJSONObject = null;
+            analyticsVersionsDefaultApplicationJSONObject = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsVersions200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsVersions200ApplicationJSON.class);
+                res.analyticsVersions200ApplicationJSONObject = out;
+            }
+        }
+        else {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.operations.AnalyticsVersionsDefaultApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.operations.AnalyticsVersionsDefaultApplicationJSON.class);
+                res.analyticsVersionsDefaultApplicationJSONObject = out;
             }
         }
 
@@ -1116,11 +1919,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AppBlockLogsResponse res = new org.openapis.openapi.models.operations.AppBlockLogsResponse() {{
+        org.openapis.openapi.models.operations.AppBlockLogsResponse res = new org.openapis.openapi.models.operations.AppBlockLogsResponse(contentType, httpRes.statusCode()) {{
             appBlockLogs200ApplicationJSONStringString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1161,12 +1962,10 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CrashesListSessionLogsResponse res = new org.openapis.openapi.models.operations.CrashesListSessionLogsResponse() {{
+        org.openapis.openapi.models.operations.CrashesListSessionLogsResponse res = new org.openapis.openapi.models.operations.CrashesListSessionLogsResponse(contentType, httpRes.statusCode()) {{
             crashesListSessionLogs200ApplicationJSONObject = null;
             crashesListSessionLogsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1209,11 +2008,9 @@ public class Analytics {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DevicesBlockLogsResponse res = new org.openapis.openapi.models.operations.DevicesBlockLogsResponse() {{
+        org.openapis.openapi.models.operations.DevicesBlockLogsResponse res = new org.openapis.openapi.models.operations.DevicesBlockLogsResponse(contentType, httpRes.statusCode()) {{
             devicesBlockLogs200ApplicationJSONStringString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

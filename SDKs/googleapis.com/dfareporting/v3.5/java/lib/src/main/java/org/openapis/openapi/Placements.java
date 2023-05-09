@@ -59,11 +59,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsGeneratetagsResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsGeneratetagsResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsGeneratetagsResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsGeneratetagsResponse(contentType, httpRes.statusCode()) {{
             placementsGenerateTagsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsGetResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsGetResponse(contentType, httpRes.statusCode()) {{
             placement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +149,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsInsertResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsInsertResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsInsertResponse(contentType, httpRes.statusCode()) {{
             placement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsListResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsListResponse(contentType, httpRes.statusCode()) {{
             placementsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -247,11 +239,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsPatchResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsPatchResponse(contentType, httpRes.statusCode()) {{
             placement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -295,11 +285,9 @@ public class Placements {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingPlacementsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingPlacementsUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingPlacementsUpdateResponse(contentType, httpRes.statusCode()) {{
             placement = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

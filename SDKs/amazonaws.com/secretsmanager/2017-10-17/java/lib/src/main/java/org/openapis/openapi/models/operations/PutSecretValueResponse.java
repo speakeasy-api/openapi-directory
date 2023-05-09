@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutSecretValueResponse {
     
     public String contentType;
+
     public PutSecretValueResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutSecretValueResponse {
      */
     
     public Object decryptionFailure;
+
     public PutSecretValueResponse withDecryptionFailure(Object decryptionFailure) {
         this.decryptionFailure = decryptionFailure;
         return this;
@@ -29,6 +32,7 @@ public class PutSecretValueResponse {
      */
     
     public Object encryptionFailure;
+
     public PutSecretValueResponse withEncryptionFailure(Object encryptionFailure) {
         this.encryptionFailure = encryptionFailure;
         return this;
@@ -39,6 +43,7 @@ public class PutSecretValueResponse {
      */
     
     public Object internalServiceError;
+
     public PutSecretValueResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -49,6 +54,7 @@ public class PutSecretValueResponse {
      */
     
     public Object invalidParameterException;
+
     public PutSecretValueResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class PutSecretValueResponse {
      */
     
     public Object invalidRequestException;
+
     public PutSecretValueResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class PutSecretValueResponse {
      */
     
     public Object limitExceededException;
+
     public PutSecretValueResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class PutSecretValueResponse {
      */
     
     public org.openapis.openapi.models.shared.PutSecretValueResponse putSecretValueResponse;
+
     public PutSecretValueResponse withPutSecretValueResponse(org.openapis.openapi.models.shared.PutSecretValueResponse putSecretValueResponse) {
         this.putSecretValueResponse = putSecretValueResponse;
         return this;
@@ -89,6 +98,7 @@ public class PutSecretValueResponse {
      */
     
     public Object resourceExistsException;
+
     public PutSecretValueResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -99,6 +109,7 @@ public class PutSecretValueResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutSecretValueResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class PutSecretValueResponse {
     
     
     public Integer statusCode;
+
     public PutSecretValueResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class PutSecretValueResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutSecretValueResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutSecretValueResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

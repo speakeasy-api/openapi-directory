@@ -12,6 +12,7 @@ public class UpdateSchemaRequestBodySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public UpdateSchemaRequestBodySchema withLanguage(String language) {
         this.language = language;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSchemaRequestBodySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public String schema;
+
     public UpdateSchemaRequestBodySchema withSchema(String schema) {
         this.schema = schema;
         return this;
@@ -28,9 +30,11 @@ public class UpdateSchemaRequestBodySchema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UpdateSchemaRequestBodySchema withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UpdateSchemaRequestBodySchema(){}
 }

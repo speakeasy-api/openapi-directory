@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategies {
     
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance capacityRebalance;
+
     public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategies withCapacityRebalance(DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
         return this;
     }
     
+    public DescribeSpotFleetRequestsResponseSpotFleetRequestConfigsSpotFleetRequestConfigSpotMaintenanceStrategies(){}
 }

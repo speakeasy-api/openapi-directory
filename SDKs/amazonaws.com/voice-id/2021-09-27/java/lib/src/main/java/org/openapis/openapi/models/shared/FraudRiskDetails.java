@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FraudRiskDetails {
     @JsonProperty("KnownFraudsterRisk")
     public KnownFraudsterRisk knownFraudsterRisk;
+
     public FraudRiskDetails withKnownFraudsterRisk(KnownFraudsterRisk knownFraudsterRisk) {
         this.knownFraudsterRisk = knownFraudsterRisk;
         return this;
@@ -19,9 +20,14 @@ public class FraudRiskDetails {
     
     @JsonProperty("VoiceSpoofingRisk")
     public VoiceSpoofingRisk voiceSpoofingRisk;
+
     public FraudRiskDetails withVoiceSpoofingRisk(VoiceSpoofingRisk voiceSpoofingRisk) {
         this.voiceSpoofingRisk = voiceSpoofingRisk;
         return this;
     }
     
+    public FraudRiskDetails(@JsonProperty("KnownFraudsterRisk") KnownFraudsterRisk knownFraudsterRisk, @JsonProperty("VoiceSpoofingRisk") VoiceSpoofingRisk voiceSpoofingRisk) {
+        this.knownFraudsterRisk = knownFraudsterRisk;
+        this.voiceSpoofingRisk = voiceSpoofingRisk;
+  }
 }

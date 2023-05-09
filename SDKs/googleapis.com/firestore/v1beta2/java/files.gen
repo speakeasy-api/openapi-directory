@@ -86,4 +86,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Status.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirestoreAdminV1beta2ListIndexesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirestoreAdminV1beta2ExportDocumentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleFirestoreAdminV1beta2ImportDocumentsRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImageAttributeLaunchPermissions {
     
     public ImageAttributeLaunchPermissionsGroupEnum group;
+
     public ImageAttributeLaunchPermissions withGroup(ImageAttributeLaunchPermissionsGroupEnum group) {
         this.group = group;
         return this;
@@ -19,6 +20,7 @@ public class ImageAttributeLaunchPermissions {
     
     
     public String organizationArn;
+
     public ImageAttributeLaunchPermissions withOrganizationArn(String organizationArn) {
         this.organizationArn = organizationArn;
         return this;
@@ -26,6 +28,7 @@ public class ImageAttributeLaunchPermissions {
     
     
     public String organizationalUnitArn;
+
     public ImageAttributeLaunchPermissions withOrganizationalUnitArn(String organizationalUnitArn) {
         this.organizationalUnitArn = organizationalUnitArn;
         return this;
@@ -33,9 +36,11 @@ public class ImageAttributeLaunchPermissions {
     
     
     public String userId;
+
     public ImageAttributeLaunchPermissions withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ImageAttributeLaunchPermissions(){}
 }

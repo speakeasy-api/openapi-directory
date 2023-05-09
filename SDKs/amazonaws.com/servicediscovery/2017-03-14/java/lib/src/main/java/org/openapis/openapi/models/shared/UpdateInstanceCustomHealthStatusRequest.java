@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateInstanceCustomHealthStatusRequest {
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public UpdateInstanceCustomHealthStatusRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -16,6 +17,7 @@ public class UpdateInstanceCustomHealthStatusRequest {
     
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public UpdateInstanceCustomHealthStatusRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateInstanceCustomHealthStatusRequest {
     
     @JsonProperty("Status")
     public CustomHealthStatusEnum status;
+
     public UpdateInstanceCustomHealthStatusRequest withStatus(CustomHealthStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateInstanceCustomHealthStatusRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("ServiceId") String serviceId, @JsonProperty("Status") CustomHealthStatusEnum status) {
+        this.instanceId = instanceId;
+        this.serviceId = serviceId;
+        this.status = status;
+  }
 }

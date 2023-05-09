@@ -12,6 +12,7 @@ public class PostEntities200ApplicationJSON2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accounts")
     public Object[] accounts;
+
     public PostEntities200ApplicationJSON2 withAccounts(Object[] accounts) {
         this.accounts = accounts;
         return this;
@@ -20,6 +21,7 @@ public class PostEntities200ApplicationJSON2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public PostEntities200ApplicationJSON2Payload payload;
+
     public PostEntities200ApplicationJSON2 withPayload(PostEntities200ApplicationJSON2Payload payload) {
         this.payload = payload;
         return this;
@@ -27,6 +29,7 @@ public class PostEntities200ApplicationJSON2 {
     
     @JsonProperty("statistics")
     public org.openapis.openapi.models.shared.Statistics statistics;
+
     public PostEntities200ApplicationJSON2 withStatistics(org.openapis.openapi.models.shared.Statistics statistics) {
         this.statistics = statistics;
         return this;
@@ -34,9 +37,14 @@ public class PostEntities200ApplicationJSON2 {
     
     @JsonProperty("success")
     public Boolean success;
+
     public PostEntities200ApplicationJSON2 withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public PostEntities200ApplicationJSON2(@JsonProperty("statistics") org.openapis.openapi.models.shared.Statistics statistics, @JsonProperty("success") Boolean success) {
+        this.statistics = statistics;
+        this.success = success;
+  }
 }

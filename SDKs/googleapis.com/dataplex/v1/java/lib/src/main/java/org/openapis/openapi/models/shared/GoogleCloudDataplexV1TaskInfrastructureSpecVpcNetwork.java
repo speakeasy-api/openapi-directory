@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork withNetwork(String network) {
         this.network = network;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkTags")
     public String[] networkTags;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork withNetworkTags(String[] networkTags) {
         this.networkTags = networkTags;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subNetwork")
     public String subNetwork;
+
     public GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork withSubNetwork(String subNetwork) {
         this.subNetwork = subNetwork;
         return this;
     }
     
+    public GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork(){}
 }

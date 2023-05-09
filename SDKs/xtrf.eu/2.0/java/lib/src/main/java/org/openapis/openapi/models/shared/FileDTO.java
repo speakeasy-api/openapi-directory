@@ -12,6 +12,7 @@ public class FileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public FileDTO withContent(String content) {
         this.content = content;
         return this;
@@ -20,6 +21,7 @@ public class FileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileDTO withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class FileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public FileDTO withToken(String token) {
         this.token = token;
         return this;
@@ -36,9 +39,11 @@ public class FileDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileDTO(){}
 }

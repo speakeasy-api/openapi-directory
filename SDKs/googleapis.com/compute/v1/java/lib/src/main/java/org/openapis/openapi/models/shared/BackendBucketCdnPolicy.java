@@ -18,6 +18,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bypassCacheOnRequestHeaders")
     public BackendBucketCdnPolicyBypassCacheOnRequestHeader[] bypassCacheOnRequestHeaders;
+
     public BackendBucketCdnPolicy withBypassCacheOnRequestHeaders(BackendBucketCdnPolicyBypassCacheOnRequestHeader[] bypassCacheOnRequestHeaders) {
         this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
         return this;
@@ -29,6 +30,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheKeyPolicy")
     public BackendBucketCdnPolicyCacheKeyPolicy cacheKeyPolicy;
+
     public BackendBucketCdnPolicy withCacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         return this;
@@ -40,6 +42,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheMode")
     public BackendBucketCdnPolicyCacheModeEnum cacheMode;
+
     public BackendBucketCdnPolicy withCacheMode(BackendBucketCdnPolicyCacheModeEnum cacheMode) {
         this.cacheMode = cacheMode;
         return this;
@@ -51,6 +54,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTtl")
     public Integer clientTtl;
+
     public BackendBucketCdnPolicy withClientTtl(Integer clientTtl) {
         this.clientTtl = clientTtl;
         return this;
@@ -62,6 +66,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultTtl")
     public Integer defaultTtl;
+
     public BackendBucketCdnPolicy withDefaultTtl(Integer defaultTtl) {
         this.defaultTtl = defaultTtl;
         return this;
@@ -73,6 +78,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxTtl")
     public Integer maxTtl;
+
     public BackendBucketCdnPolicy withMaxTtl(Integer maxTtl) {
         this.maxTtl = maxTtl;
         return this;
@@ -84,6 +90,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeCaching")
     public Boolean negativeCaching;
+
     public BackendBucketCdnPolicy withNegativeCaching(Boolean negativeCaching) {
         this.negativeCaching = negativeCaching;
         return this;
@@ -95,6 +102,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negativeCachingPolicy")
     public BackendBucketCdnPolicyNegativeCachingPolicy[] negativeCachingPolicy;
+
     public BackendBucketCdnPolicy withNegativeCachingPolicy(BackendBucketCdnPolicyNegativeCachingPolicy[] negativeCachingPolicy) {
         this.negativeCachingPolicy = negativeCachingPolicy;
         return this;
@@ -106,6 +114,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestCoalescing")
     public Boolean requestCoalescing;
+
     public BackendBucketCdnPolicy withRequestCoalescing(Boolean requestCoalescing) {
         this.requestCoalescing = requestCoalescing;
         return this;
@@ -117,6 +126,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serveWhileStale")
     public Integer serveWhileStale;
+
     public BackendBucketCdnPolicy withServeWhileStale(Integer serveWhileStale) {
         this.serveWhileStale = serveWhileStale;
         return this;
@@ -128,6 +138,7 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedUrlCacheMaxAgeSec")
     public String signedUrlCacheMaxAgeSec;
+
     public BackendBucketCdnPolicy withSignedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
         this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
         return this;
@@ -139,9 +150,11 @@ public class BackendBucketCdnPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedUrlKeyNames")
     public String[] signedUrlKeyNames;
+
     public BackendBucketCdnPolicy withSignedUrlKeyNames(String[] signedUrlKeyNames) {
         this.signedUrlKeyNames = signedUrlKeyNames;
         return this;
     }
     
+    public BackendBucketCdnPolicy(){}
 }

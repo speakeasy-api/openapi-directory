@@ -21,6 +21,7 @@ public class RestoreSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RestoreDateTime")
     public OffsetDateTime restoreDateTime;
+
     public RestoreSummary withRestoreDateTime(OffsetDateTime restoreDateTime) {
         this.restoreDateTime = restoreDateTime;
         return this;
@@ -28,6 +29,7 @@ public class RestoreSummary {
     
     @JsonProperty("RestoreInProgress")
     public Boolean restoreInProgress;
+
     public RestoreSummary withRestoreInProgress(Boolean restoreInProgress) {
         this.restoreInProgress = restoreInProgress;
         return this;
@@ -36,6 +38,7 @@ public class RestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceBackupArn")
     public String sourceBackupArn;
+
     public RestoreSummary withSourceBackupArn(String sourceBackupArn) {
         this.sourceBackupArn = sourceBackupArn;
         return this;
@@ -44,9 +47,14 @@ public class RestoreSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableArn")
     public String sourceTableArn;
+
     public RestoreSummary withSourceTableArn(String sourceTableArn) {
         this.sourceTableArn = sourceTableArn;
         return this;
     }
     
+    public RestoreSummary(@JsonProperty("RestoreDateTime") OffsetDateTime restoreDateTime, @JsonProperty("RestoreInProgress") Boolean restoreInProgress) {
+        this.restoreDateTime = restoreDateTime;
+        this.restoreInProgress = restoreInProgress;
+  }
 }

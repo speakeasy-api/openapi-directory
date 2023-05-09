@@ -15,6 +15,7 @@ public class DescribeImportTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeImportTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeImportTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public ImportTask[] tasks;
+
     public DescribeImportTasksResponse withTasks(ImportTask[] tasks) {
         this.tasks = tasks;
         return this;
     }
     
+    public DescribeImportTasksResponse(){}
 }

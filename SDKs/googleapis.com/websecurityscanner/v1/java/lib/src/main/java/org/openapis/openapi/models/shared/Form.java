@@ -18,6 +18,7 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionUri")
     public String actionUri;
+
     public Form withActionUri(String actionUri) {
         this.actionUri = actionUri;
         return this;
@@ -29,9 +30,11 @@ public class Form {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String[] fields;
+
     public Form withFields(String[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public Form(){}
 }

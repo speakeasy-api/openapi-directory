@@ -28,6 +28,7 @@ public class OrderLineItemAppliedTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applied_money")
     public Money appliedMoney;
+
     public OrderLineItemAppliedTax withAppliedMoney(Money appliedMoney) {
         this.appliedMoney = appliedMoney;
         return this;
@@ -42,6 +43,7 @@ public class OrderLineItemAppliedTax {
      */
     @JsonProperty("tax_uid")
     public String taxUid;
+
     public OrderLineItemAppliedTax withTaxUid(String taxUid) {
         this.taxUid = taxUid;
         return this;
@@ -53,9 +55,13 @@ public class OrderLineItemAppliedTax {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public OrderLineItemAppliedTax withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public OrderLineItemAppliedTax(@JsonProperty("tax_uid") String taxUid) {
+        this.taxUid = taxUid;
+  }
 }

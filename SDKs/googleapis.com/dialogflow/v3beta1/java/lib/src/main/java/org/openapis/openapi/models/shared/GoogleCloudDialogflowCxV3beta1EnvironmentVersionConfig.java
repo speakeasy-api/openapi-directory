@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig(){}
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateAttachmentRequest;
 import org.openapis.openapi.models.operations.CreateAttachmentResponse;
 
@@ -13,11 +12,7 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateAttachmentRequest req = new CreateAttachmentRequest() {{
-                bucketId = "corrupti";
-                collectionId = "provident";
-                id = "distinctio";
-            }}            
+            CreateAttachmentRequest req = new CreateAttachmentRequest("corrupti", "provident", "distinctio");            
 
             CreateAttachmentResponse res = sdk.attachment.createAttachment(req);
 
@@ -27,5 +22,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

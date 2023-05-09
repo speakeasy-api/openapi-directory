@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CalendarEventsWatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Channel channel;
+
     public CalendarEventsWatchRequest withChannel(org.openapis.openapi.models.shared.Channel channel) {
         this.channel = channel;
         return this;
@@ -19,6 +21,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public CalendarEventsWatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alwaysIncludeEmail")
     public Boolean alwaysIncludeEmail;
+
     public CalendarEventsWatchRequest withAlwaysIncludeEmail(Boolean alwaysIncludeEmail) {
         this.alwaysIncludeEmail = alwaysIncludeEmail;
         return this;
@@ -39,16 +43,26 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=calendarId")
     public String calendarId;
+
     public CalendarEventsWatchRequest withCalendarId(String calendarId) {
         this.calendarId = calendarId;
         return this;
     }
     
     /**
-     * Event types to return. Optional. The default is ["default", "outOfOffice", "focusTime"]. This is used by the Working Location developer preview and only the default value is allowed for non-opted-in users.
+     * Event types to return. Optional. Possible values are: 
+     * - "default" 
+     * - "focusTime" 
+     * - "outOfOffice"This parameter can be repeated multiple times to return events of different types. Currently, this is the only allowed value for this field: 
+     * - ["default", "focusTime", "outOfOffice"] This value will be the default.
+     * 
+     * If you're enrolled in the Working Location developer preview program, in addition to the default value above you can also set the "workingLocation" event type: 
+     * - ["default", "focusTime", "outOfOffice", "workingLocation"] 
+     * - ["workingLocation"] Additional combinations of these 4 event types will be made available in later releases. Developer Preview.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventTypes")
     public String[] eventTypes;
+
     public CalendarEventsWatchRequest withEventTypes(String[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -59,6 +73,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public CalendarEventsWatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +84,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iCalUID")
     public String iCalUID;
+
     public CalendarEventsWatchRequest withICalUID(String iCalUID) {
         this.iCalUID = iCalUID;
         return this;
@@ -79,6 +95,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public CalendarEventsWatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +106,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxAttendees")
     public Long maxAttendees;
+
     public CalendarEventsWatchRequest withMaxAttendees(Long maxAttendees) {
         this.maxAttendees = maxAttendees;
         return this;
@@ -99,6 +117,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public CalendarEventsWatchRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -109,6 +128,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public CalendarEventsWatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +139,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public CalendarEventsWatchOrderByEnum orderBy;
+
     public CalendarEventsWatchRequest withOrderBy(CalendarEventsWatchOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -129,6 +150,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public CalendarEventsWatchRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -139,6 +161,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public CalendarEventsWatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -149,6 +172,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=privateExtendedProperty")
     public String[] privateExtendedProperty;
+
     public CalendarEventsWatchRequest withPrivateExtendedProperty(String[] privateExtendedProperty) {
         this.privateExtendedProperty = privateExtendedProperty;
         return this;
@@ -159,6 +183,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public CalendarEventsWatchRequest withQ(String q) {
         this.q = q;
         return this;
@@ -169,6 +194,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public CalendarEventsWatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -179,6 +205,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sharedExtendedProperty")
     public String[] sharedExtendedProperty;
+
     public CalendarEventsWatchRequest withSharedExtendedProperty(String[] sharedExtendedProperty) {
         this.sharedExtendedProperty = sharedExtendedProperty;
         return this;
@@ -189,6 +216,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showDeleted")
     public Boolean showDeleted;
+
     public CalendarEventsWatchRequest withShowDeleted(Boolean showDeleted) {
         this.showDeleted = showDeleted;
         return this;
@@ -199,6 +227,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showHiddenInvitations")
     public Boolean showHiddenInvitations;
+
     public CalendarEventsWatchRequest withShowHiddenInvitations(Boolean showHiddenInvitations) {
         this.showHiddenInvitations = showHiddenInvitations;
         return this;
@@ -209,6 +238,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=singleEvents")
     public Boolean singleEvents;
+
     public CalendarEventsWatchRequest withSingleEvents(Boolean singleEvents) {
         this.singleEvents = singleEvents;
         return this;
@@ -232,6 +262,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=syncToken")
     public String syncToken;
+
     public CalendarEventsWatchRequest withSyncToken(String syncToken) {
         this.syncToken = syncToken;
         return this;
@@ -242,6 +273,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMax")
     public String timeMax;
+
     public CalendarEventsWatchRequest withTimeMax(String timeMax) {
         this.timeMax = timeMax;
         return this;
@@ -252,6 +284,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeMin")
     public String timeMin;
+
     public CalendarEventsWatchRequest withTimeMin(String timeMin) {
         this.timeMin = timeMin;
         return this;
@@ -262,6 +295,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=timeZone")
     public String timeZone;
+
     public CalendarEventsWatchRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
@@ -272,6 +306,7 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedMin")
     public String updatedMin;
+
     public CalendarEventsWatchRequest withUpdatedMin(String updatedMin) {
         this.updatedMin = updatedMin;
         return this;
@@ -282,9 +317,13 @@ public class CalendarEventsWatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public CalendarEventsWatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public CalendarEventsWatchRequest(@JsonProperty("calendarId") String calendarId) {
+        this.calendarId = calendarId;
+  }
 }

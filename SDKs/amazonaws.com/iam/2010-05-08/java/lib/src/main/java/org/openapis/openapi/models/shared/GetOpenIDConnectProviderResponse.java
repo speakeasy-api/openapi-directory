@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class GetOpenIDConnectProviderResponse {
     
     public String[] clientIDList;
+
     public GetOpenIDConnectProviderResponse withClientIDList(String[] clientIDList) {
         this.clientIDList = clientIDList;
         return this;
@@ -19,6 +20,7 @@ public class GetOpenIDConnectProviderResponse {
     
     
     public OffsetDateTime createDate;
+
     public GetOpenIDConnectProviderResponse withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -26,6 +28,7 @@ public class GetOpenIDConnectProviderResponse {
     
     
     public Tag[] tags;
+
     public GetOpenIDConnectProviderResponse withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -33,6 +36,7 @@ public class GetOpenIDConnectProviderResponse {
     
     
     public String[] thumbprintList;
+
     public GetOpenIDConnectProviderResponse withThumbprintList(String[] thumbprintList) {
         this.thumbprintList = thumbprintList;
         return this;
@@ -40,9 +44,11 @@ public class GetOpenIDConnectProviderResponse {
     
     
     public String url;
+
     public GetOpenIDConnectProviderResponse withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetOpenIDConnectProviderResponse(){}
 }

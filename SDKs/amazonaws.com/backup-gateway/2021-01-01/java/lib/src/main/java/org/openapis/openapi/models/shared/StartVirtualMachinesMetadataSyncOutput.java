@@ -15,9 +15,11 @@ public class StartVirtualMachinesMetadataSyncOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HypervisorArn")
     public String hypervisorArn;
+
     public StartVirtualMachinesMetadataSyncOutput withHypervisorArn(String hypervisorArn) {
         this.hypervisorArn = hypervisorArn;
         return this;
     }
     
+    public StartVirtualMachinesMetadataSyncOutput(){}
 }

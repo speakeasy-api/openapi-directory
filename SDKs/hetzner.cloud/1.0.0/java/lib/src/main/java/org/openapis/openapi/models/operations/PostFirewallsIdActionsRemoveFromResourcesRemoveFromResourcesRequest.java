@@ -12,9 +12,13 @@ public class PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest
      */
     @JsonProperty("remove_from")
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources[] removeFrom;
+
     public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest withRemoveFrom(PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources[] removeFrom) {
         this.removeFrom = removeFrom;
         return this;
     }
     
+    public PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequest(@JsonProperty("remove_from") PostFirewallsIdActionsRemoveFromResourcesRemoveFromResourcesRequestFirewallRemoveFromResources[] removeFrom) {
+        this.removeFrom = removeFrom;
+  }
 }

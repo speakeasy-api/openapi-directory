@@ -15,6 +15,7 @@ public class DeleteApplicationVpcConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public DeleteApplicationVpcConfigurationResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,9 +24,11 @@ public class DeleteApplicationVpcConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public DeleteApplicationVpcConfigurationResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
     }
     
+    public DeleteApplicationVpcConfigurationResponse(){}
 }

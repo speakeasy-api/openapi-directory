@@ -18,6 +18,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusteredResults")
     public SearchResult[] clusteredResults;
+
     public SearchResult withClusteredResults(SearchResult[] clusteredResults) {
         this.clusteredResults = clusteredResults;
         return this;
@@ -29,6 +30,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("debugInfo")
     public ResultDebugInfo debugInfo;
+
     public SearchResult withDebugInfo(ResultDebugInfo debugInfo) {
         this.debugInfo = debugInfo;
         return this;
@@ -40,6 +42,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public Metadata metadata;
+
     public SearchResult withMetadata(Metadata metadata) {
         this.metadata = metadata;
         return this;
@@ -51,6 +54,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snippet")
     public Snippet snippet;
+
     public SearchResult withSnippet(Snippet snippet) {
         this.snippet = snippet;
         return this;
@@ -62,6 +66,7 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SearchResult withTitle(String title) {
         this.title = title;
         return this;
@@ -73,9 +78,11 @@ public class SearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public SearchResult withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public SearchResult(){}
 }

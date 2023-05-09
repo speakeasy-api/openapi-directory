@@ -18,9 +18,11 @@ public class SellerEligibilityMultiProgramResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisingEligibility")
     public SellerEligibilityResponse[] advertisingEligibility;
+
     public SellerEligibilityMultiProgramResponse withAdvertisingEligibility(SellerEligibilityResponse[] advertisingEligibility) {
         this.advertisingEligibility = advertisingEligibility;
         return this;
     }
     
+    public SellerEligibilityMultiProgramResponse(){}
 }

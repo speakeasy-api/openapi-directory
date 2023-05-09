@@ -12,9 +12,11 @@ public class DescribeContainerInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerName")
     public String containerName;
+
     public DescribeContainerInput withContainerName(String containerName) {
         this.containerName = containerName;
         return this;
     }
     
+    public DescribeContainerInput(){}
 }

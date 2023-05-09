@@ -15,9 +15,11 @@ public class PodcastAudienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("by_regions")
     public PodcastAudienceResponseByRegions[] byRegions;
+
     public PodcastAudienceResponse withByRegions(PodcastAudienceResponseByRegions[] byRegions) {
         this.byRegions = byRegions;
         return this;
     }
     
+    public PodcastAudienceResponse(){}
 }

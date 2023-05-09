@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeGlobalTableInput {
     @JsonProperty("GlobalTableName")
     public String globalTableName;
+
     public DescribeGlobalTableInput withGlobalTableName(String globalTableName) {
         this.globalTableName = globalTableName;
         return this;
     }
     
+    public DescribeGlobalTableInput(@JsonProperty("GlobalTableName") String globalTableName) {
+        this.globalTableName = globalTableName;
+  }
 }

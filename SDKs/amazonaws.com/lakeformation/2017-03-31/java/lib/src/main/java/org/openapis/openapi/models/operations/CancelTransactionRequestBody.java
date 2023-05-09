@@ -12,9 +12,13 @@ public class CancelTransactionRequestBody {
      */
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public CancelTransactionRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CancelTransactionRequestBody(@JsonProperty("TransactionId") String transactionId) {
+        this.transactionId = transactionId;
+  }
 }

@@ -15,6 +15,7 @@ public class Scale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public ScaleUnitEnum unit;
+
     public Scale withUnit(ScaleUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -23,9 +24,11 @@ public class Scale {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Double value;
+
     public Scale withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public Scale(){}
 }

@@ -18,6 +18,7 @@ public class ServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeFormServiceItem")
     public FreeFormServiceItem freeFormServiceItem;
+
     public ServiceItem withFreeFormServiceItem(FreeFormServiceItem freeFormServiceItem) {
         this.freeFormServiceItem = freeFormServiceItem;
         return this;
@@ -29,6 +30,7 @@ public class ServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Money price;
+
     public ServiceItem withPrice(Money price) {
         this.price = price;
         return this;
@@ -40,9 +42,11 @@ public class ServiceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredServiceItem")
     public StructuredServiceItem structuredServiceItem;
+
     public ServiceItem withStructuredServiceItem(StructuredServiceItem structuredServiceItem) {
         this.structuredServiceItem = structuredServiceItem;
         return this;
     }
     
+    public ServiceItem(){}
 }

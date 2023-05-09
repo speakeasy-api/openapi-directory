@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFirewallDomainsRequest {
     @JsonProperty("FirewallDomainListId")
     public String firewallDomainListId;
+
     public ListFirewallDomainsRequest withFirewallDomainListId(String firewallDomainListId) {
         this.firewallDomainListId = firewallDomainListId;
         return this;
@@ -19,6 +20,7 @@ public class ListFirewallDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFirewallDomainsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListFirewallDomainsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFirewallDomainsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFirewallDomainsRequest(@JsonProperty("FirewallDomainListId") String firewallDomainListId) {
+        this.firewallDomainListId = firewallDomainListId;
+  }
 }

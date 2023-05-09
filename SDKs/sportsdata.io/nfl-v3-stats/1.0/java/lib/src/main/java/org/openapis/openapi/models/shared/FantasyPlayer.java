@@ -12,6 +12,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValue")
     public Long auctionValue;
+
     public FantasyPlayer withAuctionValue(Long auctionValue) {
         this.auctionValue = auctionValue;
         return this;
@@ -20,6 +21,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuctionValuePPR")
     public Long auctionValuePPR;
+
     public FantasyPlayer withAuctionValuePPR(Long auctionValuePPR) {
         this.auctionValuePPR = auctionValuePPR;
         return this;
@@ -28,6 +30,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition")
     public Double averageDraftPosition;
+
     public FantasyPlayer withAverageDraftPosition(Double averageDraftPosition) {
         this.averageDraftPosition = averageDraftPosition;
         return this;
@@ -36,6 +39,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPosition2QB")
     public Double averageDraftPosition2QB;
+
     public FantasyPlayer withAverageDraftPosition2QB(Double averageDraftPosition2QB) {
         this.averageDraftPosition2QB = averageDraftPosition2QB;
         return this;
@@ -44,6 +48,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionDynasty")
     public Double averageDraftPositionDynasty;
+
     public FantasyPlayer withAverageDraftPositionDynasty(Double averageDraftPositionDynasty) {
         this.averageDraftPositionDynasty = averageDraftPositionDynasty;
         return this;
@@ -52,6 +57,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionIDP")
     public Long averageDraftPositionIDP;
+
     public FantasyPlayer withAverageDraftPositionIDP(Long averageDraftPositionIDP) {
         this.averageDraftPositionIDP = averageDraftPositionIDP;
         return this;
@@ -60,6 +66,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionPPR")
     public Double averageDraftPositionPPR;
+
     public FantasyPlayer withAverageDraftPositionPPR(Double averageDraftPositionPPR) {
         this.averageDraftPositionPPR = averageDraftPositionPPR;
         return this;
@@ -68,6 +75,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AverageDraftPositionRookie")
     public Double averageDraftPositionRookie;
+
     public FantasyPlayer withAverageDraftPositionRookie(Double averageDraftPositionRookie) {
         this.averageDraftPositionRookie = averageDraftPositionRookie;
         return this;
@@ -76,6 +84,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ByeWeek")
     public Long byeWeek;
+
     public FantasyPlayer withByeWeek(Long byeWeek) {
         this.byeWeek = byeWeek;
         return this;
@@ -84,6 +93,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPlayerKey")
     public String fantasyPlayerKey;
+
     public FantasyPlayer withFantasyPlayerKey(String fantasyPlayerKey) {
         this.fantasyPlayerKey = fantasyPlayerKey;
         return this;
@@ -92,6 +102,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastSeasonFantasyPoints")
     public Double lastSeasonFantasyPoints;
+
     public FantasyPlayer withLastSeasonFantasyPoints(Double lastSeasonFantasyPoints) {
         this.lastSeasonFantasyPoints = lastSeasonFantasyPoints;
         return this;
@@ -100,6 +111,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public FantasyPlayer withName(String name) {
         this.name = name;
         return this;
@@ -108,6 +120,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public FantasyPlayer withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -116,6 +129,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public FantasyPlayer withPosition(String position) {
         this.position = position;
         return this;
@@ -124,6 +138,7 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedFantasyPoints")
     public Double projectedFantasyPoints;
+
     public FantasyPlayer withProjectedFantasyPoints(Double projectedFantasyPoints) {
         this.projectedFantasyPoints = projectedFantasyPoints;
         return this;
@@ -132,9 +147,11 @@ public class FantasyPlayer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public FantasyPlayer withTeam(String team) {
         this.team = team;
         return this;
     }
     
+    public FantasyPlayer(){}
 }

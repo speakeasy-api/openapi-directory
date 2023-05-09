@@ -18,6 +18,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CreateAccountResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -29,6 +30,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -40,6 +42,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountUUID")
     public String bankAccountUUID;
+
     public CreateAccountResponse withBankAccountUUID(String bankAccountUUID) {
         this.bankAccountUUID = bankAccountUUID;
         return this;
@@ -51,6 +54,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAccountResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -62,6 +66,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public CreateAccountResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -73,6 +78,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public CreateAccountResponse withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -84,6 +90,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutMethodCode")
     public String payoutMethodCode;
+
     public CreateAccountResponse withPayoutMethodCode(String payoutMethodCode) {
         this.payoutMethodCode = payoutMethodCode;
         return this;
@@ -92,6 +99,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSchedule")
     public PayoutScheduleResponse payoutSchedule;
+
     public CreateAccountResponse withPayoutSchedule(PayoutScheduleResponse payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
@@ -103,6 +111,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutSpeed")
     public CreateAccountResponsePayoutSpeedEnum payoutSpeed;
+
     public CreateAccountResponse withPayoutSpeed(CreateAccountResponsePayoutSpeedEnum payoutSpeed) {
         this.payoutSpeed = payoutSpeed;
         return this;
@@ -114,6 +123,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CreateAccountResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -125,6 +135,7 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CreateAccountResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -137,9 +148,11 @@ public class CreateAccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CreateAccountResponseStatusEnum status;
+
     public CreateAccountResponse withStatus(CreateAccountResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CreateAccountResponse(){}
 }

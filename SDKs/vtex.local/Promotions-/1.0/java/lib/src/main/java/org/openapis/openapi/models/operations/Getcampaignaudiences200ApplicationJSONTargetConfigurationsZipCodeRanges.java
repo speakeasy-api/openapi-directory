@@ -18,9 +18,11 @@ public class Getcampaignaudiences200ApplicationJSONTargetConfigurationsZipCodeRa
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inclusive")
     public Boolean inclusive;
+
     public Getcampaignaudiences200ApplicationJSONTargetConfigurationsZipCodeRanges withInclusive(Boolean inclusive) {
         this.inclusive = inclusive;
         return this;
     }
     
+    public Getcampaignaudiences200ApplicationJSONTargetConfigurationsZipCodeRanges(){}
 }

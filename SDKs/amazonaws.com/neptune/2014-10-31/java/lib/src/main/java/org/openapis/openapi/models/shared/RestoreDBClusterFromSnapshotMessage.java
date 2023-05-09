@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreDBClusterFromSnapshotMessage {
     
     public String[] availabilityZones;
+
     public RestoreDBClusterFromSnapshotMessage withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -16,6 +17,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public RestoreDBClusterFromSnapshotMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -23,6 +25,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String dbClusterIdentifier;
+
     public RestoreDBClusterFromSnapshotMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -30,6 +33,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String dbClusterParameterGroupName;
+
     public RestoreDBClusterFromSnapshotMessage withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -37,6 +41,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBClusterFromSnapshotMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -44,6 +49,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String databaseName;
+
     public RestoreDBClusterFromSnapshotMessage withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -51,6 +57,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public Boolean deletionProtection;
+
     public RestoreDBClusterFromSnapshotMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -58,6 +65,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public RestoreDBClusterFromSnapshotMessage withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -65,6 +73,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public RestoreDBClusterFromSnapshotMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -72,6 +81,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String engine;
+
     public RestoreDBClusterFromSnapshotMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -79,6 +89,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String engineVersion;
+
     public RestoreDBClusterFromSnapshotMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -86,6 +97,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String kmsKeyId;
+
     public RestoreDBClusterFromSnapshotMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -93,6 +105,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String optionGroupName;
+
     public RestoreDBClusterFromSnapshotMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -100,6 +113,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public Long port;
+
     public RestoreDBClusterFromSnapshotMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -110,6 +124,7 @@ public class RestoreDBClusterFromSnapshotMessage {
      */
     
     public ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public RestoreDBClusterFromSnapshotMessage withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -117,6 +132,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String snapshotIdentifier;
+
     public RestoreDBClusterFromSnapshotMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -124,6 +140,7 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public TagList[] tags;
+
     public RestoreDBClusterFromSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -131,9 +148,15 @@ public class RestoreDBClusterFromSnapshotMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreDBClusterFromSnapshotMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreDBClusterFromSnapshotMessage(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Engine") String engine, @JsonProperty("SnapshotIdentifier") String snapshotIdentifier) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.engine = engine;
+        this.snapshotIdentifier = snapshotIdentifier;
+  }
 }

@@ -15,9 +15,11 @@ public class GetFileUploadURLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileUploadURL")
     public String fileUploadURL;
+
     public GetFileUploadURLResponse withFileUploadURL(String fileUploadURL) {
         this.fileUploadURL = fileUploadURL;
         return this;
     }
     
+    public GetFileUploadURLResponse(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnterpriseIssueOverview {
     @JsonProperty("closed_issues")
     public Long closedIssues;
+
     public EnterpriseIssueOverview withClosedIssues(Long closedIssues) {
         this.closedIssues = closedIssues;
         return this;
@@ -19,6 +20,7 @@ public class EnterpriseIssueOverview {
     
     @JsonProperty("open_issues")
     public Long openIssues;
+
     public EnterpriseIssueOverview withOpenIssues(Long openIssues) {
         this.openIssues = openIssues;
         return this;
@@ -26,9 +28,15 @@ public class EnterpriseIssueOverview {
     
     @JsonProperty("total_issues")
     public Long totalIssues;
+
     public EnterpriseIssueOverview withTotalIssues(Long totalIssues) {
         this.totalIssues = totalIssues;
         return this;
     }
     
+    public EnterpriseIssueOverview(@JsonProperty("closed_issues") Long closedIssues, @JsonProperty("open_issues") Long openIssues, @JsonProperty("total_issues") Long totalIssues) {
+        this.closedIssues = closedIssues;
+        this.openIssues = openIssues;
+        this.totalIssues = totalIssues;
+  }
 }

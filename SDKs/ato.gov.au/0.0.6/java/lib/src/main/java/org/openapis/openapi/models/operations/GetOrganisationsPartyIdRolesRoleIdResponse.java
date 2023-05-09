@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganisationsPartyIdRolesRoleIdResponse {
     
     public String contentType;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetOrganisationsPartyIdRolesRoleIdResponse {
     
     
     public Integer statusCode;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetOrganisationsPartyIdRolesRoleIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetOrganisationsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -43,6 +48,7 @@ public class GetOrganisationsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.PartyRole partyRole;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withPartyRole(org.openapis.openapi.models.shared.PartyRole partyRole) {
         this.partyRole = partyRole;
         return this;
@@ -53,9 +59,14 @@ public class GetOrganisationsPartyIdRolesRoleIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Unauthenticated unauthenticated;
+
     public GetOrganisationsPartyIdRolesRoleIdResponse withUnauthenticated(org.openapis.openapi.models.shared.Unauthenticated unauthenticated) {
         this.unauthenticated = unauthenticated;
         return this;
     }
     
+    public GetOrganisationsPartyIdRolesRoleIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

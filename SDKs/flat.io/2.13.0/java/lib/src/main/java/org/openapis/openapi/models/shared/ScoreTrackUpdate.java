@@ -19,6 +19,7 @@ public class ScoreTrackUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default")
     public Boolean default_;
+
     public ScoreTrackUpdate withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -30,6 +31,7 @@ public class ScoreTrackUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public ScoreTrackStateEnum state;
+
     public ScoreTrackUpdate withState(ScoreTrackStateEnum state) {
         this.state = state;
         return this;
@@ -38,6 +40,7 @@ public class ScoreTrackUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("synchronizationPoints")
     public ScoreTrackPoint[] synchronizationPoints;
+
     public ScoreTrackUpdate withSynchronizationPoints(ScoreTrackPoint[] synchronizationPoints) {
         this.synchronizationPoints = synchronizationPoints;
         return this;
@@ -49,9 +52,11 @@ public class ScoreTrackUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ScoreTrackUpdate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ScoreTrackUpdate(){}
 }

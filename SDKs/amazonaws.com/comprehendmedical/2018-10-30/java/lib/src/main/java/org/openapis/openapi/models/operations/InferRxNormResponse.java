@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InferRxNormResponse {
     
     public String contentType;
+
     public InferRxNormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InferRxNormResponse {
      */
     
     public org.openapis.openapi.models.shared.InferRxNormResponse inferRxNormResponse;
+
     public InferRxNormResponse withInferRxNormResponse(org.openapis.openapi.models.shared.InferRxNormResponse inferRxNormResponse) {
         this.inferRxNormResponse = inferRxNormResponse;
         return this;
@@ -29,6 +32,7 @@ public class InferRxNormResponse {
      */
     
     public Object internalServerException;
+
     public InferRxNormResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class InferRxNormResponse {
      */
     
     public Object invalidEncodingException;
+
     public InferRxNormResponse withInvalidEncodingException(Object invalidEncodingException) {
         this.invalidEncodingException = invalidEncodingException;
         return this;
@@ -49,6 +54,7 @@ public class InferRxNormResponse {
      */
     
     public Object invalidRequestException;
+
     public InferRxNormResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class InferRxNormResponse {
     
     
     public Integer statusCode;
+
     public InferRxNormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class InferRxNormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InferRxNormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class InferRxNormResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InferRxNormResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class InferRxNormResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public InferRxNormResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class InferRxNormResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InferRxNormResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public InferRxNormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

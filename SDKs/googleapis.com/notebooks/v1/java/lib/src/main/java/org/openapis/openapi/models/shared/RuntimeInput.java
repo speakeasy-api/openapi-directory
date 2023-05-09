@@ -18,6 +18,7 @@ public class RuntimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessConfig")
     public RuntimeAccessConfigInput accessConfig;
+
     public RuntimeInput withAccessConfig(RuntimeAccessConfigInput accessConfig) {
         this.accessConfig = accessConfig;
         return this;
@@ -29,6 +30,7 @@ public class RuntimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RuntimeInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class RuntimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("softwareConfig")
     public RuntimeSoftwareConfigInput softwareConfig;
+
     public RuntimeInput withSoftwareConfig(RuntimeSoftwareConfigInput softwareConfig) {
         this.softwareConfig = softwareConfig;
         return this;
@@ -51,9 +54,11 @@ public class RuntimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualMachine")
     public VirtualMachineInput virtualMachine;
+
     public RuntimeInput withVirtualMachine(VirtualMachineInput virtualMachine) {
         this.virtualMachine = virtualMachine;
         return this;
     }
     
+    public RuntimeInput(){}
 }

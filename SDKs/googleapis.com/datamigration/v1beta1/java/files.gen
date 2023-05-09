@@ -140,4 +140,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/SetIamPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TestIamPermissionsRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

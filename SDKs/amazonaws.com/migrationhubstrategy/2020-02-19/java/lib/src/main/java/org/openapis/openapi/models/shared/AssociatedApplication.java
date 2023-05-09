@@ -15,6 +15,7 @@ public class AssociatedApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssociatedApplication withId(String id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class AssociatedApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssociatedApplication withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AssociatedApplication(){}
 }

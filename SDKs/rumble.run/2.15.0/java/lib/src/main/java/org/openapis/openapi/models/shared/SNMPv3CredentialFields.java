@@ -12,6 +12,7 @@ public class SNMPv3CredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth-passphrase")
     public String authPassphrase;
+
     public SNMPv3CredentialFields withAuthPassphrase(String authPassphrase) {
         this.authPassphrase = authPassphrase;
         return this;
@@ -20,6 +21,7 @@ public class SNMPv3CredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth-protocol")
     public String authProtocol;
+
     public SNMPv3CredentialFields withAuthProtocol(String authProtocol) {
         this.authProtocol = authProtocol;
         return this;
@@ -28,6 +30,7 @@ public class SNMPv3CredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public String context;
+
     public SNMPv3CredentialFields withContext(String context) {
         this.context = context;
         return this;
@@ -36,6 +39,7 @@ public class SNMPv3CredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy-passphrase")
     public String privacyPassphrase;
+
     public SNMPv3CredentialFields withPrivacyPassphrase(String privacyPassphrase) {
         this.privacyPassphrase = privacyPassphrase;
         return this;
@@ -44,6 +48,7 @@ public class SNMPv3CredentialFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privacy-protocol")
     public String privacyProtocol;
+
     public SNMPv3CredentialFields withPrivacyProtocol(String privacyProtocol) {
         this.privacyProtocol = privacyProtocol;
         return this;
@@ -51,9 +56,13 @@ public class SNMPv3CredentialFields {
     
     @JsonProperty("username")
     public String username;
+
     public SNMPv3CredentialFields withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public SNMPv3CredentialFields(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

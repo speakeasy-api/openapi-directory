@@ -15,6 +15,7 @@ public class LoyaltyPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LoyaltyPoints withName(String name) {
         this.name = name;
         return this;
@@ -26,6 +27,7 @@ public class LoyaltyPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointsValue")
     public String pointsValue;
+
     public LoyaltyPoints withPointsValue(String pointsValue) {
         this.pointsValue = pointsValue;
         return this;
@@ -37,9 +39,11 @@ public class LoyaltyPoints {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ratio")
     public Double ratio;
+
     public LoyaltyPoints withRatio(Double ratio) {
         this.ratio = ratio;
         return this;
     }
     
+    public LoyaltyPoints(){}
 }

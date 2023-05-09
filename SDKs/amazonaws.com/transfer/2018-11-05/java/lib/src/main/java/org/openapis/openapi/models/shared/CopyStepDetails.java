@@ -15,6 +15,7 @@ public class CopyStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationFileLocation")
     public InputFileLocation destinationFileLocation;
+
     public CopyStepDetails withDestinationFileLocation(InputFileLocation destinationFileLocation) {
         this.destinationFileLocation = destinationFileLocation;
         return this;
@@ -23,6 +24,7 @@ public class CopyStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CopyStepDetails withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class CopyStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverwriteExisting")
     public OverwriteExistingEnum overwriteExisting;
+
     public CopyStepDetails withOverwriteExisting(OverwriteExistingEnum overwriteExisting) {
         this.overwriteExisting = overwriteExisting;
         return this;
@@ -39,9 +42,11 @@ public class CopyStepDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceFileLocation")
     public String sourceFileLocation;
+
     public CopyStepDetails withSourceFileLocation(String sourceFileLocation) {
         this.sourceFileLocation = sourceFileLocation;
         return this;
     }
     
+    public CopyStepDetails(){}
 }

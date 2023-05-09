@@ -18,6 +18,7 @@ public class ListClientTlsPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsPolicies")
     public ClientTlsPolicy[] clientTlsPolicies;
+
     public ListClientTlsPoliciesResponse withClientTlsPolicies(ClientTlsPolicy[] clientTlsPolicies) {
         this.clientTlsPolicies = clientTlsPolicies;
         return this;
@@ -29,9 +30,11 @@ public class ListClientTlsPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListClientTlsPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListClientTlsPoliciesResponse(){}
 }

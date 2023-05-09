@@ -18,9 +18,11 @@ public class CorrectAnswer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public CorrectAnswer withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CorrectAnswer(){}
 }

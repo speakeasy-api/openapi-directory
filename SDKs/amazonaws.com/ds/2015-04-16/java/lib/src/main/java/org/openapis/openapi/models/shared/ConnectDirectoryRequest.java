@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectDirectoryRequest {
     @JsonProperty("ConnectSettings")
     public DirectoryConnectSettings connectSettings;
+
     public ConnectDirectoryRequest withConnectSettings(DirectoryConnectSettings connectSettings) {
         this.connectSettings = connectSettings;
         return this;
@@ -22,6 +23,7 @@ public class ConnectDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ConnectDirectoryRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +31,7 @@ public class ConnectDirectoryRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public ConnectDirectoryRequest withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class ConnectDirectoryRequest {
     
     @JsonProperty("Password")
     public String password;
+
     public ConnectDirectoryRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -44,6 +48,7 @@ public class ConnectDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public ConnectDirectoryRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -51,6 +56,7 @@ public class ConnectDirectoryRequest {
     
     @JsonProperty("Size")
     public DirectorySizeEnum size;
+
     public ConnectDirectoryRequest withSize(DirectorySizeEnum size) {
         this.size = size;
         return this;
@@ -59,9 +65,16 @@ public class ConnectDirectoryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ConnectDirectoryRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ConnectDirectoryRequest(@JsonProperty("ConnectSettings") DirectoryConnectSettings connectSettings, @JsonProperty("Name") String name, @JsonProperty("Password") String password, @JsonProperty("Size") DirectorySizeEnum size) {
+        this.connectSettings = connectSettings;
+        this.name = name;
+        this.password = password;
+        this.size = size;
+  }
 }

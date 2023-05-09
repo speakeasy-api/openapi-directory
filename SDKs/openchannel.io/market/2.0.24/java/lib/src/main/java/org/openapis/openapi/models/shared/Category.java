@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Category - The category supported by this category group
@@ -15,6 +15,7 @@ public class Category {
      */
     
     public String description;
+
     public Category withDescription(String description) {
         this.description = description;
         return this;
@@ -25,9 +26,14 @@ public class Category {
      */
     
     public String name;
+
     public Category withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Category(@JsonProperty("description") String description, @JsonProperty("name") String name) {
+        this.description = description;
+        this.name = name;
+  }
 }

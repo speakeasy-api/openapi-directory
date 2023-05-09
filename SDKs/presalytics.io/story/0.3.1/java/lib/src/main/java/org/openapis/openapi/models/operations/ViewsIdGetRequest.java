@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ViewsIdGetRequest {
@@ -12,9 +13,13 @@ public class ViewsIdGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=view_id")
     public String viewId;
+
     public ViewsIdGetRequest withViewId(String viewId) {
         this.viewId = viewId;
         return this;
     }
     
+    public ViewsIdGetRequest(@JsonProperty("view_id") String viewId) {
+        this.viewId = viewId;
+  }
 }

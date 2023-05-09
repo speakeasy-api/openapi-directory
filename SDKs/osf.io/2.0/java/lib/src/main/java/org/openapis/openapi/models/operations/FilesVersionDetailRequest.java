@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FilesVersionDetailRequest {
@@ -12,6 +13,7 @@ public class FilesVersionDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=file_id")
     public String fileId;
+
     public FilesVersionDetailRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,9 +24,14 @@ public class FilesVersionDetailRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version_id")
     public String versionId;
+
     public FilesVersionDetailRequest withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public FilesVersionDetailRequest(@JsonProperty("file_id") String fileId, @JsonProperty("version_id") String versionId) {
+        this.fileId = fileId;
+        this.versionId = versionId;
+  }
 }

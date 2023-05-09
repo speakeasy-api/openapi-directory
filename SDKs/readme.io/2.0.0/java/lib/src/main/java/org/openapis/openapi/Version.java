@@ -55,10 +55,8 @@ public class Version {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateVersionResponse res = new org.openapis.openapi.models.operations.CreateVersionResponse() {{
+        org.openapis.openapi.models.operations.CreateVersionResponse res = new org.openapis.openapi.models.operations.CreateVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -90,10 +88,8 @@ public class Version {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVersionResponse res = new org.openapis.openapi.models.operations.DeleteVersionResponse() {{
+        org.openapis.openapi.models.operations.DeleteVersionResponse res = new org.openapis.openapi.models.operations.DeleteVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {
@@ -125,10 +121,8 @@ public class Version {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse() {{
+        org.openapis.openapi.models.operations.GetVersionResponse res = new org.openapis.openapi.models.operations.GetVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 404) {
@@ -140,10 +134,11 @@ public class Version {
     /**
      * Get versions
      * Retrieve a list of versions associated with a project API key
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.GetVersionsResponse getVersions() throws Exception {
+    public org.openapis.openapi.models.operations.GetVersionsResponse getVersions(org.openapis.openapi.models.operations.GetVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/version");
         
@@ -152,15 +147,14 @@ public class Version {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVersionsResponse res = new org.openapis.openapi.models.operations.GetVersionsResponse() {{
+        org.openapis.openapi.models.operations.GetVersionsResponse res = new org.openapis.openapi.models.operations.GetVersionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,10 +191,8 @@ public class Version {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVersionResponse res = new org.openapis.openapi.models.operations.UpdateVersionResponse() {{
+        org.openapis.openapi.models.operations.UpdateVersionResponse res = new org.openapis.openapi.models.operations.UpdateVersionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400 || httpRes.statusCode() == 404) {

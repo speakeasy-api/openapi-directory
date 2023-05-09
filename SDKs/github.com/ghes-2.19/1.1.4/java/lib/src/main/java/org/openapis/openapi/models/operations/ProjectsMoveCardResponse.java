@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsMoveCardResponse {
     
     public String contentType;
+
     public ProjectsMoveCardResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsMoveCardResponse {
     
     
     public Integer statusCode;
+
     public ProjectsMoveCardResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsMoveCardResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsMoveCardResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsMoveCardResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsMoveCardResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsMoveCardResponse {
      */
     
     public java.util.Map<String, Object> projectsMoveCard201ApplicationJSONObject;
+
     public ProjectsMoveCardResponse withProjectsMoveCard201ApplicationJSONObject(java.util.Map<String, Object> projectsMoveCard201ApplicationJSONObject) {
         this.projectsMoveCard201ApplicationJSONObject = projectsMoveCard201ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ProjectsMoveCardResponse {
      */
     
     public ProjectsMoveCard403ApplicationJSON projectsMoveCard403ApplicationJSONObject;
+
     public ProjectsMoveCardResponse withProjectsMoveCard403ApplicationJSONObject(ProjectsMoveCard403ApplicationJSON projectsMoveCard403ApplicationJSONObject) {
         this.projectsMoveCard403ApplicationJSONObject = projectsMoveCard403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class ProjectsMoveCardResponse {
      */
     
     public ProjectsMoveCard503ApplicationJSON projectsMoveCard503ApplicationJSONObject;
+
     public ProjectsMoveCardResponse withProjectsMoveCard503ApplicationJSONObject(ProjectsMoveCard503ApplicationJSON projectsMoveCard503ApplicationJSONObject) {
         this.projectsMoveCard503ApplicationJSONObject = projectsMoveCard503ApplicationJSONObject;
         return this;
@@ -73,9 +81,14 @@ public class ProjectsMoveCardResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ProjectsMoveCardResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ProjectsMoveCardResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetOrder2200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetOrder2200ApplicationJSONItemsBundleItems withId(Long id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class GetOrder2200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetOrder2200ApplicationJSONItemsBundleItems withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class GetOrder2200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public GetOrder2200ApplicationJSONItemsBundleItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -48,9 +51,11 @@ public class GetOrder2200ApplicationJSONItemsBundleItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetOrder2200ApplicationJSONItemsBundleItems withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetOrder2200ApplicationJSONItemsBundleItems(){}
 }

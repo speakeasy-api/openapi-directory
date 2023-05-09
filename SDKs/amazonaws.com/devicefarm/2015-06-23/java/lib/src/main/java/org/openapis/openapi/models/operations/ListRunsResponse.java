@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRunsResponse {
@@ -12,6 +13,7 @@ public class ListRunsResponse {
      */
     
     public Object argumentException;
+
     public ListRunsResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class ListRunsResponse {
     
     
     public String contentType;
+
     public ListRunsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRunsResponse {
      */
     
     public Object limitExceededException;
+
     public ListRunsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -39,6 +43,7 @@ public class ListRunsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRunsResult listRunsResult;
+
     public ListRunsResponse withListRunsResult(org.openapis.openapi.models.shared.ListRunsResult listRunsResult) {
         this.listRunsResult = listRunsResult;
         return this;
@@ -49,6 +54,7 @@ public class ListRunsResponse {
      */
     
     public Object notFoundException;
+
     public ListRunsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListRunsResponse {
      */
     
     public Object serviceAccountException;
+
     public ListRunsResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class ListRunsResponse {
     
     
     public Integer statusCode;
+
     public ListRunsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ListRunsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRunsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListRunsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

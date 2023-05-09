@@ -15,6 +15,7 @@ public class BooksAnnotationsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endOffset")
     public String endOffset;
+
     public BooksAnnotationsRange withEndOffset(String endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -26,6 +27,7 @@ public class BooksAnnotationsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endPosition")
     public String endPosition;
+
     public BooksAnnotationsRange withEndPosition(String endPosition) {
         this.endPosition = endPosition;
         return this;
@@ -37,6 +39,7 @@ public class BooksAnnotationsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startOffset")
     public String startOffset;
+
     public BooksAnnotationsRange withStartOffset(String startOffset) {
         this.startOffset = startOffset;
         return this;
@@ -48,9 +51,11 @@ public class BooksAnnotationsRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startPosition")
     public String startPosition;
+
     public BooksAnnotationsRange withStartPosition(String startPosition) {
         this.startPosition = startPosition;
         return this;
     }
     
+    public BooksAnnotationsRange(){}
 }

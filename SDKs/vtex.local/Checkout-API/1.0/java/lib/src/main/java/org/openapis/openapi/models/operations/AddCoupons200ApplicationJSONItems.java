@@ -15,6 +15,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public AddCoupons200ApplicationJSONItemsAdditionalInfo additionalInfo;
+
     public AddCoupons200ApplicationJSONItems withAdditionalInfo(AddCoupons200ApplicationJSONItemsAdditionalInfo additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -26,6 +27,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public String[] attachments;
+
     public AddCoupons200ApplicationJSONItems withAttachments(String[] attachments) {
         this.attachments = attachments;
         return this;
@@ -37,6 +39,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public AddCoupons200ApplicationJSONItems withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -48,6 +51,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleItems")
     public AddCoupons200ApplicationJSONItemsBundleItems[] bundleItems;
+
     public AddCoupons200ApplicationJSONItems withBundleItems(AddCoupons200ApplicationJSONItemsBundleItems[] bundleItems) {
         this.bundleItems = bundleItems;
         return this;
@@ -59,6 +63,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailUrl")
     public String detailUrl;
+
     public AddCoupons200ApplicationJSONItems withDetailUrl(String detailUrl) {
         this.detailUrl = detailUrl;
         return this;
@@ -70,6 +75,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ean")
     public String ean;
+
     public AddCoupons200ApplicationJSONItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -81,6 +87,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AddCoupons200ApplicationJSONItems withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public AddCoupons200ApplicationJSONItems withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -103,6 +111,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isGift")
     public Boolean isGift;
+
     public AddCoupons200ApplicationJSONItems withIsGift(Boolean isGift) {
         this.isGift = isGift;
         return this;
@@ -114,6 +123,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public AddCoupons200ApplicationJSONItems withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -125,6 +135,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualPrice")
     public Long manualPrice;
+
     public AddCoupons200ApplicationJSONItems withManualPrice(Long manualPrice) {
         this.manualPrice = manualPrice;
         return this;
@@ -136,6 +147,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualPriceAppliedBy")
     public String manualPriceAppliedBy;
+
     public AddCoupons200ApplicationJSONItems withManualPriceAppliedBy(String manualPriceAppliedBy) {
         this.manualPriceAppliedBy = manualPriceAppliedBy;
         return this;
@@ -147,6 +159,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturerCode")
     public String manufacturerCode;
+
     public AddCoupons200ApplicationJSONItems withManufacturerCode(String manufacturerCode) {
         this.manufacturerCode = manufacturerCode;
         return this;
@@ -158,6 +171,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public AddCoupons200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -169,6 +183,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modalType")
     public String modalType;
+
     public AddCoupons200ApplicationJSONItems withModalType(String modalType) {
         this.modalType = modalType;
         return this;
@@ -180,6 +195,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AddCoupons200ApplicationJSONItems withName(String name) {
         this.name = name;
         return this;
@@ -191,6 +207,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentAssemblyBinding")
     public String parentAssemblyBinding;
+
     public AddCoupons200ApplicationJSONItems withParentAssemblyBinding(String parentAssemblyBinding) {
         this.parentAssemblyBinding = parentAssemblyBinding;
         return this;
@@ -202,6 +219,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentItemIndex")
     public Long parentItemIndex;
+
     public AddCoupons200ApplicationJSONItems withParentItemIndex(Long parentItemIndex) {
         this.parentItemIndex = parentItemIndex;
         return this;
@@ -213,6 +231,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preSaleDate")
     public String preSaleDate;
+
     public AddCoupons200ApplicationJSONItems withPreSaleDate(String preSaleDate) {
         this.preSaleDate = preSaleDate;
         return this;
@@ -224,6 +243,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public AddCoupons200ApplicationJSONItems withPrice(Long price) {
         this.price = price;
         return this;
@@ -235,6 +255,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceDefinition")
     public AddCoupons200ApplicationJSONItemsPriceDefinition priceDefinition;
+
     public AddCoupons200ApplicationJSONItems withPriceDefinition(AddCoupons200ApplicationJSONItemsPriceDefinition priceDefinition) {
         this.priceDefinition = priceDefinition;
         return this;
@@ -246,6 +267,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceTags")
     public AddCoupons200ApplicationJSONItemsPriceTags[] priceTags;
+
     public AddCoupons200ApplicationJSONItems withPriceTags(AddCoupons200ApplicationJSONItemsPriceTags[] priceTags) {
         this.priceTags = priceTags;
         return this;
@@ -257,6 +279,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceValidUntil")
     public String priceValidUntil;
+
     public AddCoupons200ApplicationJSONItems withPriceValidUntil(String priceValidUntil) {
         this.priceValidUntil = priceValidUntil;
         return this;
@@ -268,6 +291,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategories")
     public AddCoupons200ApplicationJSONItemsProductCategories productCategories;
+
     public AddCoupons200ApplicationJSONItems withProductCategories(AddCoupons200ApplicationJSONItemsProductCategories productCategories) {
         this.productCategories = productCategories;
         return this;
@@ -279,6 +303,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCategoryIds")
     public String productCategoryIds;
+
     public AddCoupons200ApplicationJSONItems withProductCategoryIds(String productCategoryIds) {
         this.productCategoryIds = productCategoryIds;
         return this;
@@ -290,6 +315,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productId")
     public String productId;
+
     public AddCoupons200ApplicationJSONItems withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -301,6 +327,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productRefId")
     public String productRefId;
+
     public AddCoupons200ApplicationJSONItems withProductRefId(String productRefId) {
         this.productRefId = productRefId;
         return this;
@@ -312,6 +339,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public AddCoupons200ApplicationJSONItems withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -323,6 +351,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refId")
     public String refId;
+
     public AddCoupons200ApplicationJSONItems withRefId(String refId) {
         this.refId = refId;
         return this;
@@ -334,6 +363,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rewardValue")
     public Long rewardValue;
+
     public AddCoupons200ApplicationJSONItems withRewardValue(Long rewardValue) {
         this.rewardValue = rewardValue;
         return this;
@@ -345,6 +375,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seller")
     public String seller;
+
     public AddCoupons200ApplicationJSONItems withSeller(String seller) {
         this.seller = seller;
         return this;
@@ -356,6 +387,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerChain")
     public String[] sellerChain;
+
     public AddCoupons200ApplicationJSONItems withSellerChain(String[] sellerChain) {
         this.sellerChain = sellerChain;
         return this;
@@ -367,6 +399,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellingPrice")
     public Long sellingPrice;
+
     public AddCoupons200ApplicationJSONItems withSellingPrice(Long sellingPrice) {
         this.sellingPrice = sellingPrice;
         return this;
@@ -378,6 +411,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuName")
     public String skuName;
+
     public AddCoupons200ApplicationJSONItems withSkuName(String skuName) {
         this.skuName = skuName;
         return this;
@@ -389,6 +423,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public AddCoupons200ApplicationJSONItems withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -400,6 +435,7 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueId")
     public String uniqueId;
+
     public AddCoupons200ApplicationJSONItems withUniqueId(String uniqueId) {
         this.uniqueId = uniqueId;
         return this;
@@ -411,9 +447,11 @@ public class AddCoupons200ApplicationJSONItems {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitMultiplier")
     public Long unitMultiplier;
+
     public AddCoupons200ApplicationJSONItems withUnitMultiplier(Long unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public AddCoupons200ApplicationJSONItems(){}
 }

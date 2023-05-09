@@ -12,6 +12,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorName")
     public String authorName;
+
     public MergePullRequestByThreeWayInput withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -20,6 +21,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public MergePullRequestByThreeWayInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -28,6 +30,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictDetailLevel")
     public ConflictDetailLevelTypeEnumEnum conflictDetailLevel;
+
     public MergePullRequestByThreeWayInput withConflictDetailLevel(ConflictDetailLevelTypeEnumEnum conflictDetailLevel) {
         this.conflictDetailLevel = conflictDetailLevel;
         return this;
@@ -36,6 +39,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolution")
     public ConflictResolution conflictResolution;
+
     public MergePullRequestByThreeWayInput withConflictResolution(ConflictResolution conflictResolution) {
         this.conflictResolution = conflictResolution;
         return this;
@@ -44,6 +48,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conflictResolutionStrategy")
     public ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy;
+
     public MergePullRequestByThreeWayInput withConflictResolutionStrategy(ConflictResolutionStrategyTypeEnumEnum conflictResolutionStrategy) {
         this.conflictResolutionStrategy = conflictResolutionStrategy;
         return this;
@@ -52,6 +57,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public MergePullRequestByThreeWayInput withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public MergePullRequestByThreeWayInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -67,6 +74,7 @@ public class MergePullRequestByThreeWayInput {
     
     @JsonProperty("pullRequestId")
     public String pullRequestId;
+
     public MergePullRequestByThreeWayInput withPullRequestId(String pullRequestId) {
         this.pullRequestId = pullRequestId;
         return this;
@@ -74,6 +82,7 @@ public class MergePullRequestByThreeWayInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public MergePullRequestByThreeWayInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -82,9 +91,14 @@ public class MergePullRequestByThreeWayInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCommitId")
     public String sourceCommitId;
+
     public MergePullRequestByThreeWayInput withSourceCommitId(String sourceCommitId) {
         this.sourceCommitId = sourceCommitId;
         return this;
     }
     
+    public MergePullRequestByThreeWayInput(@JsonProperty("pullRequestId") String pullRequestId, @JsonProperty("repositoryName") String repositoryName) {
+        this.pullRequestId = pullRequestId;
+        this.repositoryName = repositoryName;
+  }
 }

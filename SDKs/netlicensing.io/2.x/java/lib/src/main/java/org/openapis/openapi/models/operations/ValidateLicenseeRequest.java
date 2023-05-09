@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ValidateLicenseeRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public ValidateLicenseeRequestBody requestBody;
+
     public ValidateLicenseeRequest withRequestBody(ValidateLicenseeRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,13 @@ public class ValidateLicenseeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=licenseeNumber")
     public String licenseeNumber;
+
     public ValidateLicenseeRequest withLicenseeNumber(String licenseeNumber) {
         this.licenseeNumber = licenseeNumber;
         return this;
     }
     
+    public ValidateLicenseeRequest(@JsonProperty("licenseeNumber") String licenseeNumber) {
+        this.licenseeNumber = licenseeNumber;
+  }
 }

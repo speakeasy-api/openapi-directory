@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateFulfillmentPolicyRequest {
@@ -12,6 +13,7 @@ public class UpdateFulfillmentPolicyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FulfillmentPolicyRequest fulfillmentPolicyRequest;
+
     public UpdateFulfillmentPolicyRequest withFulfillmentPolicyRequest(org.openapis.openapi.models.shared.FulfillmentPolicyRequest fulfillmentPolicyRequest) {
         this.fulfillmentPolicyRequest = fulfillmentPolicyRequest;
         return this;
@@ -22,9 +24,14 @@ public class UpdateFulfillmentPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fulfillmentPolicyId")
     public String fulfillmentPolicyId;
+
     public UpdateFulfillmentPolicyRequest withFulfillmentPolicyId(String fulfillmentPolicyId) {
         this.fulfillmentPolicyId = fulfillmentPolicyId;
         return this;
     }
     
+    public UpdateFulfillmentPolicyRequest(@JsonProperty("FulfillmentPolicyRequest") org.openapis.openapi.models.shared.FulfillmentPolicyRequest fulfillmentPolicyRequest, @JsonProperty("fulfillmentPolicyId") String fulfillmentPolicyId) {
+        this.fulfillmentPolicyRequest = fulfillmentPolicyRequest;
+        this.fulfillmentPolicyId = fulfillmentPolicyId;
+  }
 }

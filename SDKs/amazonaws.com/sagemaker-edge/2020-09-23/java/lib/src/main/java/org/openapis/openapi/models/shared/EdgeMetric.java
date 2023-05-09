@@ -20,6 +20,7 @@ public class EdgeMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimension")
     public String dimension;
+
     public EdgeMetric withDimension(String dimension) {
         this.dimension = dimension;
         return this;
@@ -28,6 +29,7 @@ public class EdgeMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public EdgeMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -38,6 +40,7 @@ public class EdgeMetric {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public EdgeMetric withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -46,9 +49,11 @@ public class EdgeMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public EdgeMetric withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public EdgeMetric(){}
 }

@@ -15,6 +15,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capability")
     public String capability;
+
     public BusinessLineInfoUpdateInput withCapability(String capability) {
         this.capability = capability;
         return this;
@@ -26,6 +27,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("industryCode")
     public String industryCode;
+
     public BusinessLineInfoUpdateInput withIndustryCode(String industryCode) {
         this.industryCode = industryCode;
         return this;
@@ -37,6 +39,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntityId")
     public String legalEntityId;
+
     public BusinessLineInfoUpdateInput withLegalEntityId(String legalEntityId) {
         this.legalEntityId = legalEntityId;
         return this;
@@ -52,6 +55,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesChannels")
     public String[] salesChannels;
+
     public BusinessLineInfoUpdateInput withSalesChannels(String[] salesChannels) {
         this.salesChannels = salesChannels;
         return this;
@@ -60,6 +64,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceOfFunds")
     public SourceOfFunds sourceOfFunds;
+
     public BusinessLineInfoUpdateInput withSourceOfFunds(SourceOfFunds sourceOfFunds) {
         this.sourceOfFunds = sourceOfFunds;
         return this;
@@ -71,6 +76,7 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebDataInput[] webData;
+
     public BusinessLineInfoUpdateInput withWebData(WebDataInput[] webData) {
         this.webData = webData;
         return this;
@@ -79,9 +85,11 @@ public class BusinessLineInfoUpdateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webDataExemption")
     public WebDataExemption webDataExemption;
+
     public BusinessLineInfoUpdateInput withWebDataExemption(WebDataExemption webDataExemption) {
         this.webDataExemption = webDataExemption;
         return this;
     }
     
+    public BusinessLineInfoUpdateInput(){}
 }

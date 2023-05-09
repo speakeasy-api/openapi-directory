@@ -18,6 +18,7 @@ public class GetDocument200ApplicationJSONResultAstRulesHeadKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetDocument200ApplicationJSONResultAstRulesHeadKey withType(String type) {
         this.type = type;
         return this;
@@ -29,9 +30,11 @@ public class GetDocument200ApplicationJSONResultAstRulesHeadKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetDocument200ApplicationJSONResultAstRulesHeadKey withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetDocument200ApplicationJSONResultAstRulesHeadKey(){}
 }

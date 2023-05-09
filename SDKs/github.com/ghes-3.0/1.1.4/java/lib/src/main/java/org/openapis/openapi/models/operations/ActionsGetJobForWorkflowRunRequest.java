@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsGetJobForWorkflowRunRequest {
@@ -12,6 +13,7 @@ public class ActionsGetJobForWorkflowRunRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=job_id")
     public Long jobId;
+
     public ActionsGetJobForWorkflowRunRequest withJobId(Long jobId) {
         this.jobId = jobId;
         return this;
@@ -19,6 +21,7 @@ public class ActionsGetJobForWorkflowRunRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsGetJobForWorkflowRunRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -26,9 +29,15 @@ public class ActionsGetJobForWorkflowRunRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsGetJobForWorkflowRunRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsGetJobForWorkflowRunRequest(@JsonProperty("job_id") Long jobId, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.jobId = jobId;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

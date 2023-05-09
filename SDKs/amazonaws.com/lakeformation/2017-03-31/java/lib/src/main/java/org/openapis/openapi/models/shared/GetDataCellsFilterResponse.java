@@ -15,9 +15,11 @@ public class GetDataCellsFilterResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataCellsFilter")
     public DataCellsFilter dataCellsFilter;
+
     public GetDataCellsFilterResponse withDataCellsFilter(DataCellsFilter dataCellsFilter) {
         this.dataCellsFilter = dataCellsFilter;
         return this;
     }
     
+    public GetDataCellsFilterResponse(){}
 }

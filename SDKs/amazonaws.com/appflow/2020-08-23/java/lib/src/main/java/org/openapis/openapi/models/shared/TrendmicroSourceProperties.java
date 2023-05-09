@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrendmicroSourceProperties {
     @JsonProperty("object")
     public String object;
+
     public TrendmicroSourceProperties withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public TrendmicroSourceProperties(@JsonProperty("object") String object) {
+        this.object = object;
+  }
 }

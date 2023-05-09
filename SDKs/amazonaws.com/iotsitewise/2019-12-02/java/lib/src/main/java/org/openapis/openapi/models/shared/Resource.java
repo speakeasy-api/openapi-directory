@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal")
     public PortalResource portal;
+
     public Resource withPortal(PortalResource portal) {
         this.portal = portal;
         return this;
@@ -23,9 +24,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectResource project;
+
     public Resource withProject(ProjectResource project) {
         this.project = project;
         return this;
     }
     
+    public Resource(){}
 }

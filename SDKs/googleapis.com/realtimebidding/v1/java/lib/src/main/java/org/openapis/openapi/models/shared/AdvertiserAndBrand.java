@@ -18,6 +18,7 @@ public class AdvertiserAndBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public AdvertiserAndBrand withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class AdvertiserAndBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserName")
     public String advertiserName;
+
     public AdvertiserAndBrand withAdvertiserName(String advertiserName) {
         this.advertiserName = advertiserName;
         return this;
@@ -40,6 +42,7 @@ public class AdvertiserAndBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandId")
     public String brandId;
+
     public AdvertiserAndBrand withBrandId(String brandId) {
         this.brandId = brandId;
         return this;
@@ -51,9 +54,11 @@ public class AdvertiserAndBrand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brandName")
     public String brandName;
+
     public AdvertiserAndBrand withBrandName(String brandName) {
         this.brandName = brandName;
         return this;
     }
     
+    public AdvertiserAndBrand(){}
 }

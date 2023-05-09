@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PollForActivityTaskResponse {
@@ -12,6 +13,7 @@ public class PollForActivityTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ActivityTask activityTask;
+
     public PollForActivityTaskResponse withActivityTask(org.openapis.openapi.models.shared.ActivityTask activityTask) {
         this.activityTask = activityTask;
         return this;
@@ -19,6 +21,7 @@ public class PollForActivityTaskResponse {
     
     
     public String contentType;
+
     public PollForActivityTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PollForActivityTaskResponse {
      */
     
     public Object limitExceededFault;
+
     public PollForActivityTaskResponse withLimitExceededFault(Object limitExceededFault) {
         this.limitExceededFault = limitExceededFault;
         return this;
@@ -39,6 +43,7 @@ public class PollForActivityTaskResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public PollForActivityTaskResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -46,6 +51,7 @@ public class PollForActivityTaskResponse {
     
     
     public Integer statusCode;
+
     public PollForActivityTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class PollForActivityTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PollForActivityTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class PollForActivityTaskResponse {
      */
     
     public Object unknownResourceFault;
+
     public PollForActivityTaskResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public PollForActivityTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

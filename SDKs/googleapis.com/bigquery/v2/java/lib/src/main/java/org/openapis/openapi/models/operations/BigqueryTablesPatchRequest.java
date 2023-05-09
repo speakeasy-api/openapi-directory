@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryTablesPatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Table table;
+
     public BigqueryTablesPatchRequest withTable(org.openapis.openapi.models.shared.Table table) {
         this.table = table;
         return this;
@@ -19,6 +21,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryTablesPatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=autodetect_schema")
     public Boolean autodetectSchema;
+
     public BigqueryTablesPatchRequest withAutodetectSchema(Boolean autodetectSchema) {
         this.autodetectSchema = autodetectSchema;
         return this;
@@ -39,6 +43,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public BigqueryTablesPatchRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -49,6 +54,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryTablesPatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryTablesPatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -69,6 +76,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryTablesPatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -79,6 +87,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryTablesPatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -89,6 +98,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryTablesPatchRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -99,6 +109,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryTablesPatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -109,6 +120,7 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tableId")
     public String tableId;
+
     public BigqueryTablesPatchRequest withTableId(String tableId) {
         this.tableId = tableId;
         return this;
@@ -119,9 +131,15 @@ public class BigqueryTablesPatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryTablesPatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryTablesPatchRequest(@JsonProperty("datasetId") String datasetId, @JsonProperty("projectId") String projectId, @JsonProperty("tableId") String tableId) {
+        this.datasetId = datasetId;
+        this.projectId = projectId;
+        this.tableId = tableId;
+  }
 }

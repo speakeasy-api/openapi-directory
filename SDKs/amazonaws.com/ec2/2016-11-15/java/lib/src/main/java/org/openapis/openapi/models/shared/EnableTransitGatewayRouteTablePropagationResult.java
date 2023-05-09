@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnableTransitGatewayRouteTablePropagationResult {
     
     public EnableTransitGatewayRouteTablePropagationResultPropagation propagation;
+
     public EnableTransitGatewayRouteTablePropagationResult withPropagation(EnableTransitGatewayRouteTablePropagationResultPropagation propagation) {
         this.propagation = propagation;
         return this;
     }
     
+    public EnableTransitGatewayRouteTablePropagationResult(){}
 }

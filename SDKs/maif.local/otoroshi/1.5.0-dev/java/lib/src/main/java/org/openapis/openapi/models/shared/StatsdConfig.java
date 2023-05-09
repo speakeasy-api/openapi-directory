@@ -15,6 +15,7 @@ public class StatsdConfig {
      */
     @JsonProperty("datadog")
     public Boolean datadog;
+
     public StatsdConfig withDatadog(Boolean datadog) {
         this.datadog = datadog;
         return this;
@@ -25,6 +26,7 @@ public class StatsdConfig {
      */
     @JsonProperty("host")
     public String host;
+
     public StatsdConfig withHost(String host) {
         this.host = host;
         return this;
@@ -35,9 +37,15 @@ public class StatsdConfig {
      */
     @JsonProperty("port")
     public Integer port;
+
     public StatsdConfig withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public StatsdConfig(@JsonProperty("datadog") Boolean datadog, @JsonProperty("host") String host, @JsonProperty("port") Integer port) {
+        this.datadog = datadog;
+        this.host = host;
+        this.port = port;
+  }
 }

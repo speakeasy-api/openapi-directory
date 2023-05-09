@@ -15,6 +15,7 @@ public class CustomerInvoiceCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prepaymentsIds")
     public Long[] prepaymentsIds;
+
     public CustomerInvoiceCreateDTO withPrepaymentsIds(Long[] prepaymentsIds) {
         this.prepaymentsIds = prepaymentsIds;
         return this;
@@ -23,6 +24,7 @@ public class CustomerInvoiceCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasksIds")
     public Long[] tasksIds;
+
     public CustomerInvoiceCreateDTO withTasksIds(Long[] tasksIds) {
         this.tasksIds = tasksIds;
         return this;
@@ -31,9 +33,11 @@ public class CustomerInvoiceCreateDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomerInvoiceCreateDTOTypeEnum type;
+
     public CustomerInvoiceCreateDTO withType(CustomerInvoiceCreateDTOTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CustomerInvoiceCreateDTO(){}
 }

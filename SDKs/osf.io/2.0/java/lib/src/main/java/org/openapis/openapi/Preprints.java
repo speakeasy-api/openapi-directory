@@ -64,11 +64,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListResponse res = new org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListResponse() {{
+        org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListResponse res = new org.openapis.openapi.models.operations.PreprintsBibliographicContributorsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsCitationListResponse res = new org.openapis.openapi.models.operations.PreprintsCitationListResponse() {{
+        org.openapis.openapi.models.operations.PreprintsCitationListResponse res = new org.openapis.openapi.models.operations.PreprintsCitationListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsCitationReadResponse res = new org.openapis.openapi.models.operations.PreprintsCitationReadResponse() {{
+        org.openapis.openapi.models.operations.PreprintsCitationReadResponse res = new org.openapis.openapi.models.operations.PreprintsCitationReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +183,8 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsContributorReadResponse res = new org.openapis.openapi.models.operations.PreprintsContributorReadResponse() {{
+        org.openapis.openapi.models.operations.PreprintsContributorReadResponse res = new org.openapis.openapi.models.operations.PreprintsContributorReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,10 +233,8 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsContributorsCreateResponse res = new org.openapis.openapi.models.operations.PreprintsContributorsCreateResponse() {{
+        org.openapis.openapi.models.operations.PreprintsContributorsCreateResponse res = new org.openapis.openapi.models.operations.PreprintsContributorsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -291,11 +281,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsContributorsListResponse res = new org.openapis.openapi.models.operations.PreprintsContributorsListResponse() {{
+        org.openapis.openapi.models.operations.PreprintsContributorsListResponse res = new org.openapis.openapi.models.operations.PreprintsContributorsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -338,10 +326,8 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsCreateResponse res = new org.openapis.openapi.models.operations.PreprintsCreateResponse() {{
+        org.openapis.openapi.models.operations.PreprintsCreateResponse res = new org.openapis.openapi.models.operations.PreprintsCreateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -383,11 +369,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsListResponse res = new org.openapis.openapi.models.operations.PreprintsListResponse() {{
+        org.openapis.openapi.models.operations.PreprintsListResponse res = new org.openapis.openapi.models.operations.PreprintsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -430,10 +414,8 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PreprintsPartialUpdateResponse() {{
+        org.openapis.openapi.models.operations.PreprintsPartialUpdateResponse res = new org.openapis.openapi.models.operations.PreprintsPartialUpdateResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +449,9 @@ public class Preprints {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreprintsReadResponse res = new org.openapis.openapi.models.operations.PreprintsReadResponse() {{
+        org.openapis.openapi.models.operations.PreprintsReadResponse res = new org.openapis.openapi.models.operations.PreprintsReadResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

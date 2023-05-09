@@ -15,6 +15,7 @@ public class AnalyzeIDResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzeIDModelVersion")
     public String analyzeIDModelVersion;
+
     public AnalyzeIDResponse withAnalyzeIDModelVersion(String analyzeIDModelVersion) {
         this.analyzeIDModelVersion = analyzeIDModelVersion;
         return this;
@@ -26,6 +27,7 @@ public class AnalyzeIDResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public AnalyzeIDResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -34,9 +36,11 @@ public class AnalyzeIDResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityDocuments")
     public IdentityDocument[] identityDocuments;
+
     public AnalyzeIDResponse withIdentityDocuments(IdentityDocument[] identityDocuments) {
         this.identityDocuments = identityDocuments;
         return this;
     }
     
+    public AnalyzeIDResponse(){}
 }

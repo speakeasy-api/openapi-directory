@@ -15,6 +15,7 @@ public class Facetscategory200ApplicationJSONSummaryDepartments {
      */
     @JsonProperty("DisplayedItems")
     public Long displayedItems;
+
     public Facetscategory200ApplicationJSONSummaryDepartments withDisplayedItems(Long displayedItems) {
         this.displayedItems = displayedItems;
         return this;
@@ -25,9 +26,14 @@ public class Facetscategory200ApplicationJSONSummaryDepartments {
      */
     @JsonProperty("TotalItems")
     public Long totalItems;
+
     public Facetscategory200ApplicationJSONSummaryDepartments withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
     }
     
+    public Facetscategory200ApplicationJSONSummaryDepartments(@JsonProperty("DisplayedItems") Long displayedItems, @JsonProperty("TotalItems") Long totalItems) {
+        this.displayedItems = displayedItems;
+        this.totalItems = totalItems;
+  }
 }

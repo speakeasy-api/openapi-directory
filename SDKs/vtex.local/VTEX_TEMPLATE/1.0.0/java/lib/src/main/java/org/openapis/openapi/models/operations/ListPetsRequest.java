@@ -12,9 +12,11 @@ public class ListPetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public ListPetsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListPetsRequest(){}
 }

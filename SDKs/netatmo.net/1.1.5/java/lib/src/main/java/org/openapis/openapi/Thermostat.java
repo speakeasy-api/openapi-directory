@@ -67,11 +67,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreatenewscheduleResponse res = new org.openapis.openapi.models.operations.CreatenewscheduleResponse() {{
+        org.openapis.openapi.models.operations.CreatenewscheduleResponse res = new org.openapis.openapi.models.operations.CreatenewscheduleResponse(contentType, httpRes.statusCode()) {{
             naNewScheduleResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,11 +111,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetmeasureResponse res = new org.openapis.openapi.models.operations.GetmeasureResponse() {{
+        org.openapis.openapi.models.operations.GetmeasureResponse res = new org.openapis.openapi.models.operations.GetmeasureResponse(contentType, httpRes.statusCode()) {{
             naMeasureResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,11 +155,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetthermostatsdataResponse res = new org.openapis.openapi.models.operations.GetthermostatsdataResponse() {{
+        org.openapis.openapi.models.operations.GetthermostatsdataResponse res = new org.openapis.openapi.models.operations.GetthermostatsdataResponse(contentType, httpRes.statusCode()) {{
             naThermostatDataResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +199,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SetthermpointResponse res = new org.openapis.openapi.models.operations.SetthermpointResponse() {{
+        org.openapis.openapi.models.operations.SetthermpointResponse res = new org.openapis.openapi.models.operations.SetthermpointResponse(contentType, httpRes.statusCode()) {{
             naOkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,11 +243,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SwitchscheduleResponse res = new org.openapis.openapi.models.operations.SwitchscheduleResponse() {{
+        org.openapis.openapi.models.operations.SwitchscheduleResponse res = new org.openapis.openapi.models.operations.SwitchscheduleResponse(contentType, httpRes.statusCode()) {{
             naOkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Thermostat {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SyncscheduleResponse res = new org.openapis.openapi.models.operations.SyncscheduleResponse() {{
+        org.openapis.openapi.models.operations.SyncscheduleResponse res = new org.openapis.openapi.models.operations.SyncscheduleResponse(contentType, httpRes.statusCode()) {{
             naOkResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

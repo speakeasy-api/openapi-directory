@@ -18,6 +18,7 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertiserId")
     public String advertiserId;
+
     public CreateSdfDownloadTaskRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -29,6 +30,7 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idFilter")
     public IdFilter idFilter;
+
     public CreateSdfDownloadTaskRequest withIdFilter(IdFilter idFilter) {
         this.idFilter = idFilter;
         return this;
@@ -40,6 +42,7 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventorySourceFilter")
     public InventorySourceFilter inventorySourceFilter;
+
     public CreateSdfDownloadTaskRequest withInventorySourceFilter(InventorySourceFilter inventorySourceFilter) {
         this.inventorySourceFilter = inventorySourceFilter;
         return this;
@@ -51,6 +54,7 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentEntityFilter")
     public ParentEntityFilter parentEntityFilter;
+
     public CreateSdfDownloadTaskRequest withParentEntityFilter(ParentEntityFilter parentEntityFilter) {
         this.parentEntityFilter = parentEntityFilter;
         return this;
@@ -62,6 +66,7 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerId")
     public String partnerId;
+
     public CreateSdfDownloadTaskRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -73,9 +78,11 @@ public class CreateSdfDownloadTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public CreateSdfDownloadTaskRequestVersionEnum version;
+
     public CreateSdfDownloadTaskRequest withVersion(CreateSdfDownloadTaskRequestVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public CreateSdfDownloadTaskRequest(){}
 }

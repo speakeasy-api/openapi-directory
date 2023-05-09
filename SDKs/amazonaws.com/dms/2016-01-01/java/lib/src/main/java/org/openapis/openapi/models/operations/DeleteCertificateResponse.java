@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCertificateResponse {
     
     public String contentType;
+
     public DeleteCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCertificateResponse deleteCertificateResponse;
+
     public DeleteCertificateResponse withDeleteCertificateResponse(org.openapis.openapi.models.shared.DeleteCertificateResponse deleteCertificateResponse) {
         this.deleteCertificateResponse = deleteCertificateResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteCertificateResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteCertificateResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
@@ -46,6 +51,7 @@ public class DeleteCertificateResponse {
     
     
     public Integer statusCode;
+
     public DeleteCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DeleteCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

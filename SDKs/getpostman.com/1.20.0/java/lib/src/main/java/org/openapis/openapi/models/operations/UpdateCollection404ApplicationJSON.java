@@ -15,9 +15,11 @@ public class UpdateCollection404ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public UpdateCollection404ApplicationJSONError error;
+
     public UpdateCollection404ApplicationJSON withError(UpdateCollection404ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public UpdateCollection404ApplicationJSON(){}
 }

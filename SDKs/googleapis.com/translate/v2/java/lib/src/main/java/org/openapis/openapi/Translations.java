@@ -59,11 +59,9 @@ public class Translations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageTranslationsListResponse res = new org.openapis.openapi.models.operations.LanguageTranslationsListResponse() {{
+        org.openapis.openapi.models.operations.LanguageTranslationsListResponse res = new org.openapis.openapi.models.operations.LanguageTranslationsListResponse(contentType, httpRes.statusCode()) {{
             translationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Translations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LanguageTranslationsTranslateResponse res = new org.openapis.openapi.models.operations.LanguageTranslationsTranslateResponse() {{
+        org.openapis.openapi.models.operations.LanguageTranslationsTranslateResponse res = new org.openapis.openapi.models.operations.LanguageTranslationsTranslateResponse(contentType, httpRes.statusCode()) {{
             translationsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

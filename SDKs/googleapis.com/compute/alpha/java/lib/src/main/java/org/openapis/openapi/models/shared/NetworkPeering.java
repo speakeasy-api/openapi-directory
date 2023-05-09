@@ -18,6 +18,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("advertisePeerSubnetsViaRouters")
     public Boolean advertisePeerSubnetsViaRouters;
+
     public NetworkPeering withAdvertisePeerSubnetsViaRouters(Boolean advertisePeerSubnetsViaRouters) {
         this.advertisePeerSubnetsViaRouters = advertisePeerSubnetsViaRouters;
         return this;
@@ -29,6 +30,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCreateRoutes")
     public Boolean autoCreateRoutes;
+
     public NetworkPeering withAutoCreateRoutes(Boolean autoCreateRoutes) {
         this.autoCreateRoutes = autoCreateRoutes;
         return this;
@@ -40,6 +42,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exchangeSubnetRoutes")
     public Boolean exchangeSubnetRoutes;
+
     public NetworkPeering withExchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
         this.exchangeSubnetRoutes = exchangeSubnetRoutes;
         return this;
@@ -51,6 +54,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportCustomRoutes")
     public Boolean exportCustomRoutes;
+
     public NetworkPeering withExportCustomRoutes(Boolean exportCustomRoutes) {
         this.exportCustomRoutes = exportCustomRoutes;
         return this;
@@ -62,6 +66,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportSubnetRoutesWithPublicIp")
     public Boolean exportSubnetRoutesWithPublicIp;
+
     public NetworkPeering withExportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
         this.exportSubnetRoutesWithPublicIp = exportSubnetRoutesWithPublicIp;
         return this;
@@ -73,6 +78,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importCustomRoutes")
     public Boolean importCustomRoutes;
+
     public NetworkPeering withImportCustomRoutes(Boolean importCustomRoutes) {
         this.importCustomRoutes = importCustomRoutes;
         return this;
@@ -84,6 +90,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importSubnetRoutesWithPublicIp")
     public Boolean importSubnetRoutesWithPublicIp;
+
     public NetworkPeering withImportSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
         this.importSubnetRoutesWithPublicIp = importSubnetRoutesWithPublicIp;
         return this;
@@ -95,6 +102,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NetworkPeering withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public String network;
+
     public NetworkPeering withNetwork(String network) {
         this.network = network;
         return this;
@@ -117,6 +126,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peerMtu")
     public Integer peerMtu;
+
     public NetworkPeering withPeerMtu(Integer peerMtu) {
         this.peerMtu = peerMtu;
         return this;
@@ -128,6 +138,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stackType")
     public NetworkPeeringStackTypeEnum stackType;
+
     public NetworkPeering withStackType(NetworkPeeringStackTypeEnum stackType) {
         this.stackType = stackType;
         return this;
@@ -139,6 +150,7 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public NetworkPeeringStateEnum state;
+
     public NetworkPeering withState(NetworkPeeringStateEnum state) {
         this.state = state;
         return this;
@@ -150,9 +162,11 @@ public class NetworkPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateDetails")
     public String stateDetails;
+
     public NetworkPeering withStateDetails(String stateDetails) {
         this.stateDetails = stateDetails;
         return this;
     }
     
+    public NetworkPeering(){}
 }

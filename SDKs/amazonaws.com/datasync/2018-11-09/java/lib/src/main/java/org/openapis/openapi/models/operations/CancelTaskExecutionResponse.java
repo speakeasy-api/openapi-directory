@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelTaskExecutionResponse {
@@ -12,6 +13,7 @@ public class CancelTaskExecutionResponse {
      */
     
     public java.util.Map<String, Object> cancelTaskExecutionResponse;
+
     public CancelTaskExecutionResponse withCancelTaskExecutionResponse(java.util.Map<String, Object> cancelTaskExecutionResponse) {
         this.cancelTaskExecutionResponse = cancelTaskExecutionResponse;
         return this;
@@ -19,6 +21,7 @@ public class CancelTaskExecutionResponse {
     
     
     public String contentType;
+
     public CancelTaskExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CancelTaskExecutionResponse {
      */
     
     public Object internalException;
+
     public CancelTaskExecutionResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class CancelTaskExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelTaskExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class CancelTaskExecutionResponse {
     
     
     public Integer statusCode;
+
     public CancelTaskExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CancelTaskExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelTaskExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CancelTaskExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

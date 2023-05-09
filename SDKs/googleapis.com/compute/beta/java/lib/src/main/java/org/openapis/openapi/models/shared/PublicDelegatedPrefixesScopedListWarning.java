@@ -18,6 +18,7 @@ public class PublicDelegatedPrefixesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public PublicDelegatedPrefixesScopedListWarningCodeEnum code;
+
     public PublicDelegatedPrefixesScopedListWarning withCode(PublicDelegatedPrefixesScopedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class PublicDelegatedPrefixesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public PublicDelegatedPrefixesScopedListWarningData[] data;
+
     public PublicDelegatedPrefixesScopedListWarning withData(PublicDelegatedPrefixesScopedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class PublicDelegatedPrefixesScopedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PublicDelegatedPrefixesScopedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PublicDelegatedPrefixesScopedListWarning(){}
 }

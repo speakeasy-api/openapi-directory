@@ -18,6 +18,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientCertificate")
     public GoogleCloudNetworksecurityV1CertificateProvider clientCertificate;
+
     public ClientTlsPolicy withClientCertificate(GoogleCloudNetworksecurityV1CertificateProvider clientCertificate) {
         this.clientCertificate = clientCertificate;
         return this;
@@ -29,6 +30,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public ClientTlsPolicy withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ClientTlsPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ClientTlsPolicy withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -62,6 +66,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ClientTlsPolicy withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serverValidationCa")
     public ValidationCA[] serverValidationCa;
+
     public ClientTlsPolicy withServerValidationCa(ValidationCA[] serverValidationCa) {
         this.serverValidationCa = serverValidationCa;
         return this;
@@ -84,6 +90,7 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sni")
     public String sni;
+
     public ClientTlsPolicy withSni(String sni) {
         this.sni = sni;
         return this;
@@ -95,9 +102,11 @@ public class ClientTlsPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public ClientTlsPolicy withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public ClientTlsPolicy(){}
 }

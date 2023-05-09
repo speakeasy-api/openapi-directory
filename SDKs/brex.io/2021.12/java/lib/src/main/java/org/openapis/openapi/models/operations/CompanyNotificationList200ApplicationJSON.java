@@ -14,6 +14,7 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackCount")
     public Integer callbackCount;
+
     public CompanyNotificationList200ApplicationJSON withCallbackCount(Integer callbackCount) {
         this.callbackCount = callbackCount;
         return this;
@@ -22,6 +23,7 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CompanyNotificationList200ApplicationJSON withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -31,6 +33,7 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("created")
     public LocalDate created;
+
     public CompanyNotificationList200ApplicationJSON withCreated(LocalDate created) {
         this.created = created;
         return this;
@@ -39,6 +42,7 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitorStatus")
     public String monitorStatus;
+
     public CompanyNotificationList200ApplicationJSON withMonitorStatus(String monitorStatus) {
         this.monitorStatus = monitorStatus;
         return this;
@@ -47,6 +51,7 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationId")
     public String notificationId;
+
     public CompanyNotificationList200ApplicationJSON withNotificationId(String notificationId) {
         this.notificationId = notificationId;
         return this;
@@ -55,9 +60,11 @@ public class CompanyNotificationList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectId")
     public String subjectId;
+
     public CompanyNotificationList200ApplicationJSON withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }
     
+    public CompanyNotificationList200ApplicationJSON(){}
 }

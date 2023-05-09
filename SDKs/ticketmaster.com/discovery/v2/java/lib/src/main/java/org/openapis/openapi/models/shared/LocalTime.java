@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class LocalTime {
     
     public Chronology chronology;
+
     public LocalTime withChronology(Chronology chronology) {
         this.chronology = chronology;
         return this;
@@ -16,6 +17,7 @@ public class LocalTime {
     
     
     public DateTimeFieldType[] fieldTypes;
+
     public LocalTime withFieldTypes(DateTimeFieldType[] fieldTypes) {
         this.fieldTypes = fieldTypes;
         return this;
@@ -23,6 +25,7 @@ public class LocalTime {
     
     
     public DateTimeField[] fields;
+
     public LocalTime withFields(DateTimeField[] fields) {
         this.fields = fields;
         return this;
@@ -30,6 +33,7 @@ public class LocalTime {
     
     
     public Integer hourOfDay;
+
     public LocalTime withHourOfDay(Integer hourOfDay) {
         this.hourOfDay = hourOfDay;
         return this;
@@ -37,6 +41,7 @@ public class LocalTime {
     
     
     public Integer millisOfDay;
+
     public LocalTime withMillisOfDay(Integer millisOfDay) {
         this.millisOfDay = millisOfDay;
         return this;
@@ -44,6 +49,7 @@ public class LocalTime {
     
     
     public Integer millisOfSecond;
+
     public LocalTime withMillisOfSecond(Integer millisOfSecond) {
         this.millisOfSecond = millisOfSecond;
         return this;
@@ -51,6 +57,7 @@ public class LocalTime {
     
     
     public Integer minuteOfHour;
+
     public LocalTime withMinuteOfHour(Integer minuteOfHour) {
         this.minuteOfHour = minuteOfHour;
         return this;
@@ -58,6 +65,7 @@ public class LocalTime {
     
     
     public Integer secondOfMinute;
+
     public LocalTime withSecondOfMinute(Integer secondOfMinute) {
         this.secondOfMinute = secondOfMinute;
         return this;
@@ -65,9 +73,11 @@ public class LocalTime {
     
     
     public Integer[] values;
+
     public LocalTime withValues(Integer[] values) {
         this.values = values;
         return this;
     }
     
+    public LocalTime(){}
 }

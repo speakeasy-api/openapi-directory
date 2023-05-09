@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductPhotosRequest {
@@ -13,6 +14,7 @@ public class ProductPhotosRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public ProductPhotosRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -23,6 +25,7 @@ public class ProductPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=code")
     public String code;
+
     public ProductPhotosRequest withCode(String code) {
         this.code = code;
         return this;
@@ -37,6 +40,7 @@ public class ProductPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showUnavailable")
     public Boolean showUnavailable;
+
     public ProductPhotosRequest withShowUnavailable(Boolean showUnavailable) {
         this.showUnavailable = showUnavailable;
         return this;
@@ -53,9 +57,13 @@ public class ProductPhotosRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topX")
     public String topX;
+
     public ProductPhotosRequest withTopX(String topX) {
         this.topX = topX;
         return this;
     }
     
+    public ProductPhotosRequest(@JsonProperty("Accept-Language") String acceptLanguage) {
+        this.acceptLanguage = acceptLanguage;
+  }
 }

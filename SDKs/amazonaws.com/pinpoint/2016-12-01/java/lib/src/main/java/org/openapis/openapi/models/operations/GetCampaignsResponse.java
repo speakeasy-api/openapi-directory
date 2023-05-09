@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCampaignsResponse {
@@ -12,6 +13,7 @@ public class GetCampaignsResponse {
      */
     
     public Object badRequestException;
+
     public GetCampaignsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCampaignsResponse {
     
     
     public String contentType;
+
     public GetCampaignsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCampaignsResponse {
      */
     
     public Object forbiddenException;
+
     public GetCampaignsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetCampaignsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCampaignsResponse getCampaignsResponse;
+
     public GetCampaignsResponse withGetCampaignsResponse(org.openapis.openapi.models.shared.GetCampaignsResponse getCampaignsResponse) {
         this.getCampaignsResponse = getCampaignsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetCampaignsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetCampaignsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetCampaignsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetCampaignsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetCampaignsResponse {
      */
     
     public Object notFoundException;
+
     public GetCampaignsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetCampaignsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetCampaignsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetCampaignsResponse {
     
     
     public Integer statusCode;
+
     public GetCampaignsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetCampaignsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCampaignsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetCampaignsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetCampaignsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetCampaignsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

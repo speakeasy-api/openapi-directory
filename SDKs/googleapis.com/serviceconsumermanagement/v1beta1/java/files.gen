@@ -69,4 +69,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/V1Beta1QuotaBucket.java
 lib/src/main/java/org/openapis/openapi/models/shared/V1Beta1ListProducerOverridesResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/V1Beta1ListConsumerQuotaMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/V1Beta1ConsumerQuotaMetric.java
+docs/sdk/README.md
+docs/services/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class ImageIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDigest")
     public String imageDigest;
+
     public ImageIdentifier withImageDigest(String imageDigest) {
         this.imageDigest = imageDigest;
         return this;
@@ -23,9 +24,11 @@ public class ImageIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTag")
     public String imageTag;
+
     public ImageIdentifier withImageTag(String imageTag) {
         this.imageTag = imageTag;
         return this;
     }
     
+    public ImageIdentifier(){}
 }

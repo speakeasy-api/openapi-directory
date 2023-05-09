@@ -18,6 +18,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byteOffset")
     public String byteOffset;
+
     public Position withByteOffset(String byteOffset) {
         this.byteOffset = byteOffset;
         return this;
@@ -29,6 +30,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concatPosition")
     public ConcatPosition concatPosition;
+
     public Position withConcatPosition(ConcatPosition concatPosition) {
         this.concatPosition = concatPosition;
         return this;
@@ -40,6 +42,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Boolean end;
+
     public Position withEnd(Boolean end) {
         this.end = end;
         return this;
@@ -51,6 +54,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Position withKey(String key) {
         this.key = key;
         return this;
@@ -62,6 +66,7 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordIndex")
     public String recordIndex;
+
     public Position withRecordIndex(String recordIndex) {
         this.recordIndex = recordIndex;
         return this;
@@ -73,9 +78,11 @@ public class Position {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shufflePosition")
     public String shufflePosition;
+
     public Position withShufflePosition(String shufflePosition) {
         this.shufflePosition = shufflePosition;
         return this;
     }
     
+    public Position(){}
 }

@@ -15,9 +15,11 @@ public class Action {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ssmAutomation")
     public SsmAutomation ssmAutomation;
+
     public Action withSsmAutomation(SsmAutomation ssmAutomation) {
         this.ssmAutomation = ssmAutomation;
         return this;
     }
     
+    public Action(){}
 }

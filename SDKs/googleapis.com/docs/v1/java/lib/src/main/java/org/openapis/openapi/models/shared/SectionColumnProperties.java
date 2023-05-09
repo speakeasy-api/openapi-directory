@@ -18,6 +18,7 @@ public class SectionColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paddingEnd")
     public Dimension paddingEnd;
+
     public SectionColumnProperties withPaddingEnd(Dimension paddingEnd) {
         this.paddingEnd = paddingEnd;
         return this;
@@ -29,9 +30,11 @@ public class SectionColumnProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Dimension width;
+
     public SectionColumnProperties withWidth(Dimension width) {
         this.width = width;
         return this;
     }
     
+    public SectionColumnProperties(){}
 }

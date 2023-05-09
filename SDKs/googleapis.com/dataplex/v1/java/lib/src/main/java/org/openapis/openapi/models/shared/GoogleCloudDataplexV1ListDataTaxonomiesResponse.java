@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1ListDataTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTaxonomies")
     public GoogleCloudDataplexV1DataTaxonomy[] dataTaxonomies;
+
     public GoogleCloudDataplexV1ListDataTaxonomiesResponse withDataTaxonomies(GoogleCloudDataplexV1DataTaxonomy[] dataTaxonomies) {
         this.dataTaxonomies = dataTaxonomies;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDataplexV1ListDataTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudDataplexV1ListDataTaxonomiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDataplexV1ListDataTaxonomiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachableLocations")
     public String[] unreachableLocations;
+
     public GoogleCloudDataplexV1ListDataTaxonomiesResponse withUnreachableLocations(String[] unreachableLocations) {
         this.unreachableLocations = unreachableLocations;
         return this;
     }
     
+    public GoogleCloudDataplexV1ListDataTaxonomiesResponse(){}
 }

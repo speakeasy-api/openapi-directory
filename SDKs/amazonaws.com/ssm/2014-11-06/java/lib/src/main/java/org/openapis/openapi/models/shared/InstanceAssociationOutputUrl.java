@@ -15,9 +15,11 @@ public class InstanceAssociationOutputUrl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3OutputUrl")
     public S3OutputUrl s3OutputUrl;
+
     public InstanceAssociationOutputUrl withS3OutputUrl(S3OutputUrl s3OutputUrl) {
         this.s3OutputUrl = s3OutputUrl;
         return this;
     }
     
+    public InstanceAssociationOutputUrl(){}
 }

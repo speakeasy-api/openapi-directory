@@ -15,9 +15,13 @@ public class CurationCommentCreate {
      */
     @JsonProperty("text")
     public String text;
+
     public CurationCommentCreate withText(String text) {
         this.text = text;
         return this;
     }
     
+    public CurationCommentCreate(@JsonProperty("text") String text) {
+        this.text = text;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PublishVersionResponse {
@@ -12,6 +13,7 @@ public class PublishVersionResponse {
      */
     
     public Object codeStorageExceededException;
+
     public PublishVersionResponse withCodeStorageExceededException(Object codeStorageExceededException) {
         this.codeStorageExceededException = codeStorageExceededException;
         return this;
@@ -19,6 +21,7 @@ public class PublishVersionResponse {
     
     
     public String contentType;
+
     public PublishVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PublishVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration;
+
     public PublishVersionResponse withFunctionConfiguration(org.openapis.openapi.models.shared.FunctionConfiguration functionConfiguration) {
         this.functionConfiguration = functionConfiguration;
         return this;
@@ -39,6 +43,7 @@ public class PublishVersionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PublishVersionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class PublishVersionResponse {
      */
     
     public Object preconditionFailedException;
+
     public PublishVersionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class PublishVersionResponse {
      */
     
     public Object resourceConflictException;
+
     public PublishVersionResponse withResourceConflictException(Object resourceConflictException) {
         this.resourceConflictException = resourceConflictException;
         return this;
@@ -69,6 +76,7 @@ public class PublishVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PublishVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class PublishVersionResponse {
      */
     
     public Object serviceException;
+
     public PublishVersionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class PublishVersionResponse {
     
     
     public Integer statusCode;
+
     public PublishVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class PublishVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PublishVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class PublishVersionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public PublishVersionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public PublishVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

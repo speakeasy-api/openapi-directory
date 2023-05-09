@@ -18,6 +18,7 @@ public class VmUtilizationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilization")
     public VmUtilizationMetrics utilization;
+
     public VmUtilizationInfoInput withUtilization(VmUtilizationMetrics utilization) {
         this.utilization = utilization;
         return this;
@@ -29,6 +30,7 @@ public class VmUtilizationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmId")
     public String vmId;
+
     public VmUtilizationInfoInput withVmId(String vmId) {
         this.vmId = vmId;
         return this;
@@ -40,9 +42,11 @@ public class VmUtilizationInfoInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmwareVmDetails")
     public VmwareVmDetailsInput vmwareVmDetails;
+
     public VmUtilizationInfoInput withVmwareVmDetails(VmwareVmDetailsInput vmwareVmDetails) {
         this.vmwareVmDetails = vmwareVmDetails;
         return this;
     }
     
+    public VmUtilizationInfoInput(){}
 }

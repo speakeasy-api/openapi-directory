@@ -18,6 +18,7 @@ public class EnterpriseAdminCreateGlobalWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content_type")
     public String contentType;
+
     public EnterpriseAdminCreateGlobalWebhookRequestBodyConfig withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseAdminCreateGlobalWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecure_ssl")
     public String insecureSsl;
+
     public EnterpriseAdminCreateGlobalWebhookRequestBodyConfig withInsecureSsl(String insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -40,6 +42,7 @@ public class EnterpriseAdminCreateGlobalWebhookRequestBodyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public EnterpriseAdminCreateGlobalWebhookRequestBodyConfig withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -50,9 +53,13 @@ public class EnterpriseAdminCreateGlobalWebhookRequestBodyConfig {
      */
     @JsonProperty("url")
     public String url;
+
     public EnterpriseAdminCreateGlobalWebhookRequestBodyConfig withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public EnterpriseAdminCreateGlobalWebhookRequestBodyConfig(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

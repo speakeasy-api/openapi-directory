@@ -15,6 +15,7 @@ public class RfeItemOptionVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_id")
     public Long itemOptionId;
+
     public RfeItemOptionVO withItemOptionId(Long itemOptionId) {
         this.itemOptionId = itemOptionId;
         return this;
@@ -26,6 +27,7 @@ public class RfeItemOptionVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Object quantity;
+
     public RfeItemOptionVO withQuantity(Object quantity) {
         this.quantity = quantity;
         return this;
@@ -34,9 +36,11 @@ public class RfeItemOptionVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity_index")
     public Integer quantityIndex;
+
     public RfeItemOptionVO withQuantityIndex(Integer quantityIndex) {
         this.quantityIndex = quantityIndex;
         return this;
     }
     
+    public RfeItemOptionVO(){}
 }

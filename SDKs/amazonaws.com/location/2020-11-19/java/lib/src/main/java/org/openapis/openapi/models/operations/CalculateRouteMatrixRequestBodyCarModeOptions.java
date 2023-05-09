@@ -15,6 +15,7 @@ public class CalculateRouteMatrixRequestBodyCarModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidFerries")
     public Boolean avoidFerries;
+
     public CalculateRouteMatrixRequestBodyCarModeOptions withAvoidFerries(Boolean avoidFerries) {
         this.avoidFerries = avoidFerries;
         return this;
@@ -23,9 +24,11 @@ public class CalculateRouteMatrixRequestBodyCarModeOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvoidTolls")
     public Boolean avoidTolls;
+
     public CalculateRouteMatrixRequestBodyCarModeOptions withAvoidTolls(Boolean avoidTolls) {
         this.avoidTolls = avoidTolls;
         return this;
     }
     
+    public CalculateRouteMatrixRequestBodyCarModeOptions(){}
 }

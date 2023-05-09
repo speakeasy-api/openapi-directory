@@ -14,6 +14,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HealthInformationNotificationNotification {
     @JsonProperty("consentId")
     public String consentId;
+
     public HealthInformationNotificationNotification withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -23,6 +24,7 @@ public class HealthInformationNotificationNotification {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("doneAt")
     public OffsetDateTime doneAt;
+
     public HealthInformationNotificationNotification withDoneAt(OffsetDateTime doneAt) {
         this.doneAt = doneAt;
         return this;
@@ -30,6 +32,7 @@ public class HealthInformationNotificationNotification {
     
     @JsonProperty("notifier")
     public HealthInformationNotificationNotificationNotifier notifier;
+
     public HealthInformationNotificationNotification withNotifier(HealthInformationNotificationNotificationNotifier notifier) {
         this.notifier = notifier;
         return this;
@@ -37,6 +40,7 @@ public class HealthInformationNotificationNotification {
     
     @JsonProperty("statusNotification")
     public HealthInformationNotificationNotificationStatusNotification statusNotification;
+
     public HealthInformationNotificationNotification withStatusNotification(HealthInformationNotificationNotificationStatusNotification statusNotification) {
         this.statusNotification = statusNotification;
         return this;
@@ -44,9 +48,17 @@ public class HealthInformationNotificationNotification {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public HealthInformationNotificationNotification withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public HealthInformationNotificationNotification(@JsonProperty("consentId") String consentId, @JsonProperty("doneAt") OffsetDateTime doneAt, @JsonProperty("notifier") HealthInformationNotificationNotificationNotifier notifier, @JsonProperty("statusNotification") HealthInformationNotificationNotificationStatusNotification statusNotification, @JsonProperty("transactionId") String transactionId) {
+        this.consentId = consentId;
+        this.doneAt = doneAt;
+        this.notifier = notifier;
+        this.statusNotification = statusNotification;
+        this.transactionId = transactionId;
+  }
 }

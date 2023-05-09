@@ -15,9 +15,11 @@ public class NamesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public NameRequestParam[] entities;
+
     public NamesRequest withEntities(NameRequestParam[] entities) {
         this.entities = entities;
         return this;
     }
     
+    public NamesRequest(){}
 }

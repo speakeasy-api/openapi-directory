@@ -15,9 +15,11 @@ public class EksPropertiesDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("podProperties")
     public EksPodPropertiesDetail podProperties;
+
     public EksPropertiesDetail withPodProperties(EksPodPropertiesDetail podProperties) {
         this.podProperties = podProperties;
         return this;
     }
     
+    public EksPropertiesDetail(){}
 }

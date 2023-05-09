@@ -15,6 +15,7 @@ public class AutoMLConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public AutoMLConfig withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -23,9 +24,11 @@ public class AutoMLConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipeList")
     public String[] recipeList;
+
     public AutoMLConfig withRecipeList(String[] recipeList) {
         this.recipeList = recipeList;
         return this;
     }
     
+    public AutoMLConfig(){}
 }

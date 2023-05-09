@@ -62,12 +62,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchArtifactsResponse res = new org.openapis.openapi.models.operations.SearchArtifactsResponse() {{
+        org.openapis.openapi.models.operations.SearchArtifactsResponse res = new org.openapis.openapi.models.operations.SearchArtifactsResponse(contentType, httpRes.statusCode()) {{
             artifactSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,12 +120,10 @@ public class Search {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchArtifactsByContentResponse res = new org.openapis.openapi.models.operations.SearchArtifactsByContentResponse() {{
+        org.openapis.openapi.models.operations.SearchArtifactsByContentResponse res = new org.openapis.openapi.models.operations.SearchArtifactsByContentResponse(contentType, httpRes.statusCode()) {{
             artifactSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

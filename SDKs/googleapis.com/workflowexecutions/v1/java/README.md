@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity;
 import org.openapis.openapi.models.operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest;
 import org.openapis.openapi.models.operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse;
+import org.openapis.openapi.models.operations.WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,37 +28,38 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest req = new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest() {{
-                dollarXgafv = "2";
+            WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest req = new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 requestBody = new java.util.HashMap<String, Object>() {{
-                    put("distinctio", "quibusdam");
-                    put("unde", "nulla");
-                    put("corrupti", "illum");
+                    put("quibusdam", "unde");
+                    put("nulla", "corrupti");
+                    put("illum", "vel");
                 }};
-                accessToken = "vel";
-                alt = "media";
-                callback = "deserunt";
-                fields = "suscipit";
-                key = "iure";
-                name = "magnam";
+                accessToken = "error";
+                alt = AltEnum.MEDIA;
+                callback = "suscipit";
+                fields = "iure";
+                key = "magnam";
                 oauthToken = "debitis";
                 prettyPrint = false;
                 quotaUser = "ipsa";
                 uploadType = "delectus";
                 uploadProtocol = "tempora";
-            }}            
+            }};            
 
-            WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse res = sdk.projects.workflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(req, new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity() {{
+            WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelResponse res = sdk.projects.workflowexecutionsProjectsLocationsWorkflowsExecutionsCancel(req, new WorkflowexecutionsProjectsLocationsWorkflowsExecutionsCancelSecurity("suscipit", "molestiae") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.execution.isPresent()) {
+            if (res.execution != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -67,13 +67,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `workflowexecutionsProjectsLocationsWorkflowsExecutionsCancel` - Cancels an execution of the given name.
-* `workflowexecutionsProjectsLocationsWorkflowsExecutionsCreate` - Creates a new execution using the latest revision of the given workflow.
-* `workflowexecutionsProjectsLocationsWorkflowsExecutionsGet` - Returns an execution of the given name.
-* `workflowexecutionsProjectsLocationsWorkflowsExecutionsList` - Returns a list of executions which belong to the workflow with the given name. The method returns executions of all workflow revisions. Returned executions are ordered by their start time (newest first).
-* `workflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecution` - Triggers a new execution using the latest revision of the given workflow by a Pub/Sub push notification.
+* [workflowexecutionsProjectsLocationsWorkflowsExecutionsCancel](docs/projects/README.md#workflowexecutionsprojectslocationsworkflowsexecutionscancel) - Cancels an execution of the given name.
+* [workflowexecutionsProjectsLocationsWorkflowsExecutionsCreate](docs/projects/README.md#workflowexecutionsprojectslocationsworkflowsexecutionscreate) - Creates a new execution using the latest revision of the given workflow.
+* [workflowexecutionsProjectsLocationsWorkflowsExecutionsGet](docs/projects/README.md#workflowexecutionsprojectslocationsworkflowsexecutionsget) - Returns an execution of the given name.
+* [workflowexecutionsProjectsLocationsWorkflowsExecutionsList](docs/projects/README.md#workflowexecutionsprojectslocationsworkflowsexecutionslist) - Returns a list of executions which belong to the workflow with the given name. The method returns executions of all workflow revisions. Returned executions are ordered by their start time (newest first).
+* [workflowexecutionsProjectsLocationsWorkflowsTriggerPubsubExecution](docs/projects/README.md#workflowexecutionsprojectslocationsworkflowstriggerpubsubexecution) - Triggers a new execution using the latest revision of the given workflow by a Pub/Sub push notification.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProjectsGetPermissionForUserResponse {
     
     public String contentType;
+
     public ProjectsGetPermissionForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ProjectsGetPermissionForUserResponse {
     
     
     public Integer statusCode;
+
     public ProjectsGetPermissionForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ProjectsGetPermissionForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProjectsGetPermissionForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ProjectsGetPermissionForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ProjectsGetPermissionForUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ProjectsGetPermissionForUserResponse {
      */
     
     public ProjectsGetPermissionForUser415ApplicationJSON projectsGetPermissionForUser415ApplicationJSONObject;
+
     public ProjectsGetPermissionForUserResponse withProjectsGetPermissionForUser415ApplicationJSONObject(ProjectsGetPermissionForUser415ApplicationJSON projectsGetPermissionForUser415ApplicationJSONObject) {
         this.projectsGetPermissionForUser415ApplicationJSONObject = projectsGetPermissionForUser415ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ProjectsGetPermissionForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.RepositoryCollaboratorPermission repositoryCollaboratorPermission;
+
     public ProjectsGetPermissionForUserResponse withRepositoryCollaboratorPermission(org.openapis.openapi.models.shared.RepositoryCollaboratorPermission repositoryCollaboratorPermission) {
         this.repositoryCollaboratorPermission = repositoryCollaboratorPermission;
         return this;
@@ -63,9 +70,14 @@ public class ProjectsGetPermissionForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ProjectsGetPermissionForUserResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ProjectsGetPermissionForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

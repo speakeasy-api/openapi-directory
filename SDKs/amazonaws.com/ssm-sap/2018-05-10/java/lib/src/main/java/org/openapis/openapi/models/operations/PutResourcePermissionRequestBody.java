@@ -12,6 +12,7 @@ public class PutResourcePermissionRequestBody {
      */
     @JsonProperty("ActionType")
     public PutResourcePermissionRequestBodyActionTypeEnum actionType;
+
     public PutResourcePermissionRequestBody withActionType(PutResourcePermissionRequestBodyActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -22,6 +23,7 @@ public class PutResourcePermissionRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public PutResourcePermissionRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -32,9 +34,15 @@ public class PutResourcePermissionRequestBody {
      */
     @JsonProperty("SourceResourceArn")
     public String sourceResourceArn;
+
     public PutResourcePermissionRequestBody withSourceResourceArn(String sourceResourceArn) {
         this.sourceResourceArn = sourceResourceArn;
         return this;
     }
     
+    public PutResourcePermissionRequestBody(@JsonProperty("ActionType") PutResourcePermissionRequestBodyActionTypeEnum actionType, @JsonProperty("ResourceArn") String resourceArn, @JsonProperty("SourceResourceArn") String sourceResourceArn) {
+        this.actionType = actionType;
+        this.resourceArn = resourceArn;
+        this.sourceResourceArn = sourceResourceArn;
+  }
 }

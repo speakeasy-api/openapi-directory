@@ -15,9 +15,11 @@ public class GetDASHStreamingSessionURLOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DASHStreamingSessionURL")
     public String dashStreamingSessionURL;
+
     public GetDASHStreamingSessionURLOutput withDASHStreamingSessionURL(String dashStreamingSessionURL) {
         this.dashStreamingSessionURL = dashStreamingSessionURL;
         return this;
     }
     
+    public GetDASHStreamingSessionURLOutput(){}
 }

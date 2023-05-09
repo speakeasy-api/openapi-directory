@@ -15,6 +15,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentName")
     public String componentName;
+
     public GetPropertyValueRequestBody withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -26,6 +27,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentTypeId")
     public String componentTypeId;
+
     public GetPropertyValueRequestBody withComponentTypeId(String componentTypeId) {
         this.componentTypeId = componentTypeId;
         return this;
@@ -37,6 +39,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityId")
     public String entityId;
+
     public GetPropertyValueRequestBody withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -48,6 +51,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetPropertyValueRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +63,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetPropertyValueRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -70,6 +75,7 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyGroupName")
     public String propertyGroupName;
+
     public GetPropertyValueRequestBody withPropertyGroupName(String propertyGroupName) {
         this.propertyGroupName = propertyGroupName;
         return this;
@@ -80,6 +86,7 @@ public class GetPropertyValueRequestBody {
      */
     @JsonProperty("selectedProperties")
     public String[] selectedProperties;
+
     public GetPropertyValueRequestBody withSelectedProperties(String[] selectedProperties) {
         this.selectedProperties = selectedProperties;
         return this;
@@ -91,9 +98,13 @@ public class GetPropertyValueRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tabularConditions")
     public GetPropertyValueRequestBodyTabularConditions tabularConditions;
+
     public GetPropertyValueRequestBody withTabularConditions(GetPropertyValueRequestBodyTabularConditions tabularConditions) {
         this.tabularConditions = tabularConditions;
         return this;
     }
     
+    public GetPropertyValueRequestBody(@JsonProperty("selectedProperties") String[] selectedProperties) {
+        this.selectedProperties = selectedProperties;
+  }
 }

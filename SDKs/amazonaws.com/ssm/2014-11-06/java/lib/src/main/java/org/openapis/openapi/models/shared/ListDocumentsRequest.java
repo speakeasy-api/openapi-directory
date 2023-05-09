@@ -12,6 +12,7 @@ public class ListDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentFilterList")
     public DocumentFilter[] documentFilterList;
+
     public ListDocumentsRequest withDocumentFilterList(DocumentFilter[] documentFilterList) {
         this.documentFilterList = documentFilterList;
         return this;
@@ -20,6 +21,7 @@ public class ListDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public DocumentKeyValuesFilter[] filters;
+
     public ListDocumentsRequest withFilters(DocumentKeyValuesFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class ListDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDocumentsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +39,11 @@ public class ListDocumentsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDocumentsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDocumentsRequest(){}
 }

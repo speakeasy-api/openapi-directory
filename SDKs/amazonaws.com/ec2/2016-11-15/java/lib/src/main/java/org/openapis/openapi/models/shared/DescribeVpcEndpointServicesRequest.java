@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServicesRequest {
     
     public Boolean dryRun;
+
     public DescribeVpcEndpointServicesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DescribeVpcEndpointServicesRequest {
     
     
     public DescribeVpcEndpointServicesRequestFilters[] filters;
+
     public DescribeVpcEndpointServicesRequest withFilters(DescribeVpcEndpointServicesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class DescribeVpcEndpointServicesRequest {
     
     
     public Long maxResults;
+
     public DescribeVpcEndpointServicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -30,6 +33,7 @@ public class DescribeVpcEndpointServicesRequest {
     
     
     public String nextToken;
+
     public DescribeVpcEndpointServicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -37,9 +41,11 @@ public class DescribeVpcEndpointServicesRequest {
     
     
     public String[] serviceNames;
+
     public DescribeVpcEndpointServicesRequest withServiceNames(String[] serviceNames) {
         this.serviceNames = serviceNames;
         return this;
     }
     
+    public DescribeVpcEndpointServicesRequest(){}
 }

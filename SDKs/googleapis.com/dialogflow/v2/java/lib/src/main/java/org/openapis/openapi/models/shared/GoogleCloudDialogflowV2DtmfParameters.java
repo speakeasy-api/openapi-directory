@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2DtmfParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsDtmfInput")
     public Boolean acceptsDtmfInput;
+
     public GoogleCloudDialogflowV2DtmfParameters withAcceptsDtmfInput(Boolean acceptsDtmfInput) {
         this.acceptsDtmfInput = acceptsDtmfInput;
         return this;
     }
     
+    public GoogleCloudDialogflowV2DtmfParameters(){}
 }

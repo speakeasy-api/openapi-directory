@@ -15,6 +15,7 @@ public class AttachmentEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public AttachmentEditFields withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -26,9 +27,11 @@ public class AttachmentEditFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public AttachmentEditFields withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public AttachmentEditFields(){}
 }

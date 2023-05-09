@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteScheduledActionType {
     
     public String autoScalingGroupName;
+
     public DeleteScheduledActionType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,14 @@ public class DeleteScheduledActionType {
     
     
     public String scheduledActionName;
+
     public DeleteScheduledActionType withScheduledActionName(String scheduledActionName) {
         this.scheduledActionName = scheduledActionName;
         return this;
     }
     
+    public DeleteScheduledActionType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName, @JsonProperty("ScheduledActionName") String scheduledActionName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+        this.scheduledActionName = scheduledActionName;
+  }
 }

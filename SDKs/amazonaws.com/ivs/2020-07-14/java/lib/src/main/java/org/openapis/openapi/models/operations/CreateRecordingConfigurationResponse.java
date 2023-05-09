@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRecordingConfigurationResponse {
@@ -12,6 +13,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateRecordingConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object conflictException;
+
     public CreateRecordingConfigurationResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateRecordingConfigurationResponse {
     
     
     public String contentType;
+
     public CreateRecordingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRecordingConfigurationResponse createRecordingConfigurationResponse;
+
     public CreateRecordingConfigurationResponse withCreateRecordingConfigurationResponse(org.openapis.openapi.models.shared.CreateRecordingConfigurationResponse createRecordingConfigurationResponse) {
         this.createRecordingConfigurationResponse = createRecordingConfigurationResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object internalServerException;
+
     public CreateRecordingConfigurationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object pendingVerification;
+
     public CreateRecordingConfigurationResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -66,6 +73,7 @@ public class CreateRecordingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public CreateRecordingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateRecordingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRecordingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateRecordingConfigurationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,9 +103,14 @@ public class CreateRecordingConfigurationResponse {
      */
     
     public Object validationException;
+
     public CreateRecordingConfigurationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateRecordingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

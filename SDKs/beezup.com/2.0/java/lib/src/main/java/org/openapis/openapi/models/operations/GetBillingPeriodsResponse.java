@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBillingPeriodsResponse {
@@ -12,6 +13,7 @@ public class GetBillingPeriodsResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetBillingPeriodsResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetBillingPeriodsResponse {
     
     
     public String contentType;
+
     public GetBillingPeriodsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetBillingPeriodsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetBillingPeriodsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetBillingPeriodsResponse {
     
     
     public Integer statusCode;
+
     public GetBillingPeriodsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetBillingPeriodsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBillingPeriodsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetBillingPeriodsResponse {
      */
     
     public org.openapis.openapi.models.shared.BillingPeriodList billingPeriodList;
+
     public GetBillingPeriodsResponse withBillingPeriodList(org.openapis.openapi.models.shared.BillingPeriodList billingPeriodList) {
         this.billingPeriodList = billingPeriodList;
         return this;
     }
     
+    public GetBillingPeriodsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

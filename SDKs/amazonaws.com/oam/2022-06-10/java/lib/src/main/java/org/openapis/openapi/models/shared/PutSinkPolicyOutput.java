@@ -15,6 +15,7 @@ public class PutSinkPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public PutSinkPolicyOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -23,6 +24,7 @@ public class PutSinkPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SinkArn")
     public String sinkArn;
+
     public PutSinkPolicyOutput withSinkArn(String sinkArn) {
         this.sinkArn = sinkArn;
         return this;
@@ -31,9 +33,11 @@ public class PutSinkPolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SinkId")
     public String sinkId;
+
     public PutSinkPolicyOutput withSinkId(String sinkId) {
         this.sinkId = sinkId;
         return this;
     }
     
+    public PutSinkPolicyOutput(){}
 }

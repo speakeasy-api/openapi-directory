@@ -15,9 +15,11 @@ public class CreateRecordingConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingConfiguration")
     public RecordingConfiguration recordingConfiguration;
+
     public CreateRecordingConfigurationResponse withRecordingConfiguration(RecordingConfiguration recordingConfiguration) {
         this.recordingConfiguration = recordingConfiguration;
         return this;
     }
     
+    public CreateRecordingConfigurationResponse(){}
 }

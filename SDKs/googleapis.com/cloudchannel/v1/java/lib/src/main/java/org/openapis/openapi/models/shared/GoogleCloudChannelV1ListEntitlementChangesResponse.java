@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListEntitlementChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlementChanges")
     public GoogleCloudChannelV1EntitlementChange[] entitlementChanges;
+
     public GoogleCloudChannelV1ListEntitlementChangesResponse withEntitlementChanges(GoogleCloudChannelV1EntitlementChange[] entitlementChanges) {
         this.entitlementChanges = entitlementChanges;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListEntitlementChangesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListEntitlementChangesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudChannelV1ListEntitlementChangesResponse(){}
 }

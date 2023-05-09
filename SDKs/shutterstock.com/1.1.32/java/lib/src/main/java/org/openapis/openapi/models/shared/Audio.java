@@ -26,6 +26,7 @@ public class Audio {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("added_date")
     public LocalDate addedDate;
+
     public Audio withAddedDate(LocalDate addedDate) {
         this.addedDate = addedDate;
         return this;
@@ -37,6 +38,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("affiliate_url")
     public String affiliateUrl;
+
     public Audio withAffiliateUrl(String affiliateUrl) {
         this.affiliateUrl = affiliateUrl;
         return this;
@@ -48,6 +50,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("album")
     public Album album;
+
     public Audio withAlbum(Album album) {
         this.album = album;
         return this;
@@ -59,6 +62,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("artists")
     public Artist[] artists;
+
     public Audio withArtists(Artist[] artists) {
         this.artists = artists;
         return this;
@@ -70,6 +74,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public AudioAssets assets;
+
     public Audio withAssets(AudioAssets assets) {
         this.assets = assets;
         return this;
@@ -81,6 +86,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bpm")
     public Long bpm;
+
     public Audio withBpm(Long bpm) {
         this.bpm = bpm;
         return this;
@@ -91,6 +97,7 @@ public class Audio {
      */
     @JsonProperty("contributor")
     public Contributor contributor;
+
     public Audio withContributor(Contributor contributor) {
         this.contributor = contributor;
         return this;
@@ -101,6 +108,7 @@ public class Audio {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("deleted_time")
     public OffsetDateTime deletedTime;
+
     public Audio withDeletedTime(OffsetDateTime deletedTime) {
         this.deletedTime = deletedTime;
         return this;
@@ -112,6 +120,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Audio withDescription(String description) {
         this.description = description;
         return this;
@@ -123,6 +132,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Double duration;
+
     public Audio withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -134,6 +144,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genres")
     public String[] genres;
+
     public Audio withGenres(String[] genres) {
         this.genres = genres;
         return this;
@@ -144,6 +155,7 @@ public class Audio {
      */
     @JsonProperty("id")
     public String id;
+
     public Audio withId(String id) {
         this.id = id;
         return this;
@@ -155,6 +167,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instruments")
     public String[] instruments;
+
     public Audio withInstruments(String[] instruments) {
         this.instruments = instruments;
         return this;
@@ -166,6 +179,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_adult")
     public Boolean isAdult;
+
     public Audio withIsAdult(Boolean isAdult) {
         this.isAdult = isAdult;
         return this;
@@ -177,6 +191,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_instrumental")
     public Boolean isInstrumental;
+
     public Audio withIsInstrumental(Boolean isInstrumental) {
         this.isInstrumental = isInstrumental;
         return this;
@@ -185,6 +200,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isrc")
     public String isrc;
+
     public Audio withIsrc(String isrc) {
         this.isrc = isrc;
         return this;
@@ -196,6 +212,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public Audio withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -207,6 +224,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public Audio withLanguage(String language) {
         this.language = language;
         return this;
@@ -218,6 +236,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lyrics")
     public String lyrics;
+
     public Audio withLyrics(String lyrics) {
         this.lyrics = lyrics;
         return this;
@@ -228,6 +247,7 @@ public class Audio {
      */
     @JsonProperty("media_type")
     public String mediaType;
+
     public Audio withMediaType(String mediaType) {
         this.mediaType = mediaType;
         return this;
@@ -239,6 +259,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model_releases")
     public ModelRelease[] modelReleases;
+
     public Audio withModelReleases(ModelRelease[] modelReleases) {
         this.modelReleases = modelReleases;
         return this;
@@ -250,6 +271,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moods")
     public String[] moods;
+
     public Audio withMoods(String[] moods) {
         this.moods = moods;
         return this;
@@ -263,6 +285,7 @@ public class Audio {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("published_time")
     public OffsetDateTime publishedTime;
+
     public Audio withPublishedTime(OffsetDateTime publishedTime) {
         this.publishedTime = publishedTime;
         return this;
@@ -274,6 +297,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recording_version")
     public String recordingVersion;
+
     public Audio withRecordingVersion(String recordingVersion) {
         this.recordingVersion = recordingVersion;
         return this;
@@ -285,6 +309,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("releases")
     public String[] releases;
+
     public Audio withReleases(String[] releases) {
         this.releases = releases;
         return this;
@@ -296,6 +321,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("similar_artists")
     public Artist[] similarArtists;
+
     public Audio withSimilarArtists(Artist[] similarArtists) {
         this.similarArtists = similarArtists;
         return this;
@@ -309,6 +335,7 @@ public class Audio {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submitted_time")
     public OffsetDateTime submittedTime;
+
     public Audio withSubmittedTime(OffsetDateTime submittedTime) {
         this.submittedTime = submittedTime;
         return this;
@@ -320,6 +347,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Audio withTitle(String title) {
         this.title = title;
         return this;
@@ -333,6 +361,7 @@ public class Audio {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_time")
     public OffsetDateTime updatedTime;
+
     public Audio withUpdatedTime(OffsetDateTime updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -341,6 +370,7 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Audio withUrl(String url) {
         this.url = url;
         return this;
@@ -352,9 +382,15 @@ public class Audio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vocal_description")
     public String vocalDescription;
+
     public Audio withVocalDescription(String vocalDescription) {
         this.vocalDescription = vocalDescription;
         return this;
     }
     
+    public Audio(@JsonProperty("contributor") Contributor contributor, @JsonProperty("id") String id, @JsonProperty("media_type") String mediaType) {
+        this.contributor = contributor;
+        this.id = id;
+        this.mediaType = mediaType;
+  }
 }

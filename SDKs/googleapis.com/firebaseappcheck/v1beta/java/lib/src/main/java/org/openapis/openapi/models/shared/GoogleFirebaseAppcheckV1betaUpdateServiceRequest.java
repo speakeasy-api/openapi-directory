@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaUpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service")
     public GoogleFirebaseAppcheckV1betaService service;
+
     public GoogleFirebaseAppcheckV1betaUpdateServiceRequest withService(GoogleFirebaseAppcheckV1betaService service) {
         this.service = service;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1betaUpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public GoogleFirebaseAppcheckV1betaUpdateServiceRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaUpdateServiceRequest(){}
 }

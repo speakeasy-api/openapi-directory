@@ -15,9 +15,11 @@ public class AuthMobileOTPRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthid")
     public String healthid;
+
     public AuthMobileOTPRequest withHealthid(String healthid) {
         this.healthid = healthid;
         return this;
     }
     
+    public AuthMobileOTPRequest(){}
 }

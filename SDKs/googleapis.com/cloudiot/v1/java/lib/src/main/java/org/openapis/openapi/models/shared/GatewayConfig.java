@@ -18,6 +18,7 @@ public class GatewayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayAuthMethod")
     public GatewayConfigGatewayAuthMethodEnum gatewayAuthMethod;
+
     public GatewayConfig withGatewayAuthMethod(GatewayConfigGatewayAuthMethodEnum gatewayAuthMethod) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         return this;
@@ -29,6 +30,7 @@ public class GatewayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayType")
     public GatewayConfigGatewayTypeEnum gatewayType;
+
     public GatewayConfig withGatewayType(GatewayConfigGatewayTypeEnum gatewayType) {
         this.gatewayType = gatewayType;
         return this;
@@ -40,6 +42,7 @@ public class GatewayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAccessedGatewayId")
     public String lastAccessedGatewayId;
+
     public GatewayConfig withLastAccessedGatewayId(String lastAccessedGatewayId) {
         this.lastAccessedGatewayId = lastAccessedGatewayId;
         return this;
@@ -51,9 +54,11 @@ public class GatewayConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastAccessedGatewayTime")
     public String lastAccessedGatewayTime;
+
     public GatewayConfig withLastAccessedGatewayTime(String lastAccessedGatewayTime) {
         this.lastAccessedGatewayTime = lastAccessedGatewayTime;
         return this;
     }
     
+    public GatewayConfig(){}
 }

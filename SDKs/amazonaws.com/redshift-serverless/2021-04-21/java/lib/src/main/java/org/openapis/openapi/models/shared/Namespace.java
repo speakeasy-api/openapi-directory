@@ -20,6 +20,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminUsername")
     public String adminUsername;
+
     public Namespace withAdminUsername(String adminUsername) {
         this.adminUsername = adminUsername;
         return this;
@@ -30,6 +31,7 @@ public class Namespace {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Namespace withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -38,6 +40,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dbName")
     public String dbName;
+
     public Namespace withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -46,6 +49,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultIamRoleArn")
     public String defaultIamRoleArn;
+
     public Namespace withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -54,6 +58,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iamRoles")
     public String[] iamRoles;
+
     public Namespace withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -62,6 +67,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyId")
     public String kmsKeyId;
+
     public Namespace withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -70,6 +76,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logExports")
     public LogExportEnum[] logExports;
+
     public Namespace withLogExports(LogExportEnum[] logExports) {
         this.logExports = logExports;
         return this;
@@ -78,6 +85,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceArn")
     public String namespaceArn;
+
     public Namespace withNamespaceArn(String namespaceArn) {
         this.namespaceArn = namespaceArn;
         return this;
@@ -86,6 +94,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceId")
     public String namespaceId;
+
     public Namespace withNamespaceId(String namespaceId) {
         this.namespaceId = namespaceId;
         return this;
@@ -94,6 +103,7 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public Namespace withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -102,9 +112,11 @@ public class Namespace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public NamespaceStatusEnum status;
+
     public Namespace withStatus(NamespaceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Namespace(){}
 }

@@ -68,11 +68,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -113,11 +111,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -157,11 +153,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse() {{
+        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -207,11 +201,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.DeleteSnippetsWorkspaceEncodedIdNodeIdResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -277,12 +269,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsResponse res = new org.openapis.openapi.models.operations.GetSnippetsResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsResponse res = new org.openapis.openapi.models.operations.GetSnippetsResponse(contentType, httpRes.statusCode()) {{
             paginatedSnippets = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,12 +324,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceResponse(contentType, httpRes.statusCode()) {{
             paginatedSnippets = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -568,7 +556,7 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             body = null;
             body = null;
@@ -576,8 +564,6 @@ public class Snippets {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -643,12 +629,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsResponse(contentType, httpRes.statusCode()) {{
             paginatedSnippetComments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -692,12 +676,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
             snippetComment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -741,12 +723,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsResponse(contentType, httpRes.statusCode()) {{
             paginatedSnippetCommit = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,12 +770,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdCommitsRevisionResponse(contentType, httpRes.statusCode()) {{
             snippetCommit = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -841,11 +819,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdFilesPathResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -891,11 +867,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -918,7 +892,9 @@ public class Snippets {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse getSnippetsWorkspaceEncodedIdWatchers(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersRequest request, org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersRequest.class, baseUrl, "/snippets/{workspace}/{encoded_id}/watchers", request, null);
@@ -934,12 +910,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdWatchersResponse(contentType, httpRes.statusCode()) {{
             paginatedAccounts = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -991,7 +965,7 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             body = null;
             body = null;
@@ -999,8 +973,6 @@ public class Snippets {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1068,11 +1040,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdNodeIdFilesPathResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1137,11 +1107,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionDiffResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1199,11 +1167,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse() {{
+        org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse res = new org.openapis.openapi.models.operations.GetSnippetsWorkspaceEncodedIdRevisionPatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1394,12 +1360,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSnippetsResponse res = new org.openapis.openapi.models.operations.PostSnippetsResponse() {{
+        org.openapis.openapi.models.operations.PostSnippetsResponse res = new org.openapis.openapi.models.operations.PostSnippetsResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1452,12 +1416,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse res = new org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse() {{
+        org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse res = new org.openapis.openapi.models.operations.PostSnippetsWorkspaceResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1512,12 +1474,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse res = new org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse res = new org.openapis.openapi.models.operations.PostSnippetsWorkspaceEncodedIdCommentsResponse(contentType, httpRes.statusCode()) {{
             snippetComment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1760,7 +1720,7 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse() {{
+        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             body = null;
             body = null;
@@ -1768,8 +1728,6 @@ public class Snippets {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1838,12 +1796,10 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
             snippetComment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1887,11 +1843,9 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse() {{
+        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -1943,7 +1897,7 @@ public class Snippets {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse() {{
+        org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse res = new org.openapis.openapi.models.operations.PutSnippetsWorkspaceEncodedIdNodeIdResponse(contentType, httpRes.statusCode()) {{
             snippet = null;
             body = null;
             body = null;
@@ -1951,8 +1905,6 @@ public class Snippets {
             body = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

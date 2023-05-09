@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetPullRequestStatsResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetPullRequestStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetPullRequestStatsResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetPullRequestStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetPullRequestStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetPullRequestStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetPullRequestStatsResponse {
      */
     
     public org.openapis.openapi.models.shared.EnterprisePullRequestOverview enterprisePullRequestOverview;
+
     public EnterpriseAdminGetPullRequestStatsResponse withEnterprisePullRequestOverview(org.openapis.openapi.models.shared.EnterprisePullRequestOverview enterprisePullRequestOverview) {
         this.enterprisePullRequestOverview = enterprisePullRequestOverview;
         return this;
     }
     
+    public EnterpriseAdminGetPullRequestStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

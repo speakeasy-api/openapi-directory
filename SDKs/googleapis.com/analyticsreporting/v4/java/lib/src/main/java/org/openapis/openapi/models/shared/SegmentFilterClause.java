@@ -18,6 +18,7 @@ public class SegmentFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionFilter")
     public SegmentDimensionFilter dimensionFilter;
+
     public SegmentFilterClause withDimensionFilter(SegmentDimensionFilter dimensionFilter) {
         this.dimensionFilter = dimensionFilter;
         return this;
@@ -29,6 +30,7 @@ public class SegmentFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilter")
     public SegmentMetricFilter metricFilter;
+
     public SegmentFilterClause withMetricFilter(SegmentMetricFilter metricFilter) {
         this.metricFilter = metricFilter;
         return this;
@@ -40,9 +42,11 @@ public class SegmentFilterClause {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("not")
     public Boolean not;
+
     public SegmentFilterClause withNot(Boolean not) {
         this.not = not;
         return this;
     }
     
+    public SegmentFilterClause(){}
 }

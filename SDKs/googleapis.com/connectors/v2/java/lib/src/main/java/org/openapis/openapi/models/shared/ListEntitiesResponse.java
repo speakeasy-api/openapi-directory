@@ -18,6 +18,7 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entities")
     public Entity[] entities;
+
     public ListEntitiesResponse withEntities(Entity[] entities) {
         this.entities = entities;
         return this;
@@ -29,9 +30,11 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListEntitiesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListEntitiesResponse(){}
 }

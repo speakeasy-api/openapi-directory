@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ErrorResponseMessagePaymentRequiredLinks {
     @JsonProperty("offer")
     public LinksGetOfferLink offer;
+
     public ErrorResponseMessagePaymentRequiredLinks withOffer(LinksGetOfferLink offer) {
         this.offer = offer;
         return this;
     }
     
+    public ErrorResponseMessagePaymentRequiredLinks(@JsonProperty("offer") LinksGetOfferLink offer) {
+        this.offer = offer;
+  }
 }

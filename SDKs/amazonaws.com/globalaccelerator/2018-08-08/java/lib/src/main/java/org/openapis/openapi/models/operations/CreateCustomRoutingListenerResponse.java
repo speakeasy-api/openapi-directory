@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomRoutingListenerResponse {
@@ -12,6 +13,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public CreateCustomRoutingListenerResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCustomRoutingListenerResponse {
     
     
     public String contentType;
+
     public CreateCustomRoutingListenerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomRoutingListenerResponse createCustomRoutingListenerResponse;
+
     public CreateCustomRoutingListenerResponse withCreateCustomRoutingListenerResponse(org.openapis.openapi.models.shared.CreateCustomRoutingListenerResponse createCustomRoutingListenerResponse) {
         this.createCustomRoutingListenerResponse = createCustomRoutingListenerResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateCustomRoutingListenerResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateCustomRoutingListenerResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public Object invalidPortRangeException;
+
     public CreateCustomRoutingListenerResponse withInvalidPortRangeException(Object invalidPortRangeException) {
         this.invalidPortRangeException = invalidPortRangeException;
         return this;
@@ -69,6 +76,7 @@ public class CreateCustomRoutingListenerResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomRoutingListenerResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateCustomRoutingListenerResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomRoutingListenerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateCustomRoutingListenerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomRoutingListenerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCustomRoutingListenerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

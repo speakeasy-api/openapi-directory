@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImportVolumeRequest {
     
     public String availabilityZone;
+
     public ImportVolumeRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -16,6 +17,7 @@ public class ImportVolumeRequest {
     
     
     public String description;
+
     public ImportVolumeRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ImportVolumeRequest {
     
     
     public Boolean dryRun;
+
     public ImportVolumeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ImportVolumeRequest {
     
     
     public ImportVolumeRequestImage image;
+
     public ImportVolumeRequest withImage(ImportVolumeRequestImage image) {
         this.image = image;
         return this;
@@ -37,9 +41,15 @@ public class ImportVolumeRequest {
     
     
     public ImportVolumeRequestVolume volume;
+
     public ImportVolumeRequest withVolume(ImportVolumeRequestVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public ImportVolumeRequest(@JsonProperty("AvailabilityZone") String availabilityZone, @JsonProperty("Image") ImportVolumeRequestImage image, @JsonProperty("Volume") ImportVolumeRequestVolume volume) {
+        this.availabilityZone = availabilityZone;
+        this.image = image;
+        this.volume = volume;
+  }
 }

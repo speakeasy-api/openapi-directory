@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDetectorResponse {
     
     public String contentType;
+
     public DescribeDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDetectorResponse describeDetectorResponse;
+
     public DescribeDetectorResponse withDescribeDetectorResponse(org.openapis.openapi.models.shared.DescribeDetectorResponse describeDetectorResponse) {
         this.describeDetectorResponse = describeDetectorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDetectorResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeDetectorResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDetectorResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDetectorResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDetectorResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeDetectorResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDetectorResponse {
     
     
     public Integer statusCode;
+
     public DescribeDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeDetectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeDetectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeDetectorResponse {
      */
     
     public Object throttlingException;
+
     public DescribeDetectorResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

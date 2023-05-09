@@ -15,6 +15,7 @@ public class ExternalAccountBinding {
      */
     @JsonProperty("directoryUrl")
     public String directoryUrl;
+
     public ExternalAccountBinding withDirectoryUrl(String directoryUrl) {
         this.directoryUrl = directoryUrl;
         return this;
@@ -25,6 +26,7 @@ public class ExternalAccountBinding {
      */
     @JsonProperty("hmacKey")
     public String hmacKey;
+
     public ExternalAccountBinding withHmacKey(String hmacKey) {
         this.hmacKey = hmacKey;
         return this;
@@ -35,9 +37,15 @@ public class ExternalAccountBinding {
      */
     @JsonProperty("keyId")
     public String keyId;
+
     public ExternalAccountBinding withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public ExternalAccountBinding(@JsonProperty("directoryUrl") String directoryUrl, @JsonProperty("hmacKey") String hmacKey, @JsonProperty("keyId") String keyId) {
+        this.directoryUrl = directoryUrl;
+        this.hmacKey = hmacKey;
+        this.keyId = keyId;
+  }
 }

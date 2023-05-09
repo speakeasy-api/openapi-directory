@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateNotebookInstanceLifecycleConfigResponse {
     
     public String contentType;
+
     public CreateNotebookInstanceLifecycleConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateNotebookInstanceLifecycleConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateNotebookInstanceLifecycleConfigOutput createNotebookInstanceLifecycleConfigOutput;
+
     public CreateNotebookInstanceLifecycleConfigResponse withCreateNotebookInstanceLifecycleConfigOutput(org.openapis.openapi.models.shared.CreateNotebookInstanceLifecycleConfigOutput createNotebookInstanceLifecycleConfigOutput) {
         this.createNotebookInstanceLifecycleConfigOutput = createNotebookInstanceLifecycleConfigOutput;
         return this;
@@ -29,6 +32,7 @@ public class CreateNotebookInstanceLifecycleConfigResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateNotebookInstanceLifecycleConfigResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -36,6 +40,7 @@ public class CreateNotebookInstanceLifecycleConfigResponse {
     
     
     public Integer statusCode;
+
     public CreateNotebookInstanceLifecycleConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CreateNotebookInstanceLifecycleConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateNotebookInstanceLifecycleConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateNotebookInstanceLifecycleConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

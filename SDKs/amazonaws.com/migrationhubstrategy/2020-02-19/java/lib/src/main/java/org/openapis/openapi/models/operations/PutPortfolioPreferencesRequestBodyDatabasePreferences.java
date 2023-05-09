@@ -15,6 +15,7 @@ public class PutPortfolioPreferencesRequestBodyDatabasePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseManagementPreference")
     public org.openapis.openapi.models.shared.DatabaseManagementPreferenceEnum databaseManagementPreference;
+
     public PutPortfolioPreferencesRequestBodyDatabasePreferences withDatabaseManagementPreference(org.openapis.openapi.models.shared.DatabaseManagementPreferenceEnum databaseManagementPreference) {
         this.databaseManagementPreference = databaseManagementPreference;
         return this;
@@ -23,9 +24,11 @@ public class PutPortfolioPreferencesRequestBodyDatabasePreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseMigrationPreference")
     public org.openapis.openapi.models.shared.DatabaseMigrationPreference databaseMigrationPreference;
+
     public PutPortfolioPreferencesRequestBodyDatabasePreferences withDatabaseMigrationPreference(org.openapis.openapi.models.shared.DatabaseMigrationPreference databaseMigrationPreference) {
         this.databaseMigrationPreference = databaseMigrationPreference;
         return this;
     }
     
+    public PutPortfolioPreferencesRequestBodyDatabasePreferences(){}
 }

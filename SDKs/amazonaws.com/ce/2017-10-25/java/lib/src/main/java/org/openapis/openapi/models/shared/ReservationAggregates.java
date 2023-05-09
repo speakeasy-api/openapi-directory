@@ -15,6 +15,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedRecurringFee")
     public String amortizedRecurringFee;
+
     public ReservationAggregates withAmortizedRecurringFee(String amortizedRecurringFee) {
         this.amortizedRecurringFee = amortizedRecurringFee;
         return this;
@@ -23,6 +24,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmortizedUpfrontFee")
     public String amortizedUpfrontFee;
+
     public ReservationAggregates withAmortizedUpfrontFee(String amortizedUpfrontFee) {
         this.amortizedUpfrontFee = amortizedUpfrontFee;
         return this;
@@ -31,6 +33,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetRISavings")
     public String netRISavings;
+
     public ReservationAggregates withNetRISavings(String netRISavings) {
         this.netRISavings = netRISavings;
         return this;
@@ -39,6 +42,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandCostOfRIHoursUsed")
     public String onDemandCostOfRIHoursUsed;
+
     public ReservationAggregates withOnDemandCostOfRIHoursUsed(String onDemandCostOfRIHoursUsed) {
         this.onDemandCostOfRIHoursUsed = onDemandCostOfRIHoursUsed;
         return this;
@@ -47,6 +51,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PurchasedHours")
     public String purchasedHours;
+
     public ReservationAggregates withPurchasedHours(String purchasedHours) {
         this.purchasedHours = purchasedHours;
         return this;
@@ -55,6 +60,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PurchasedUnits")
     public String purchasedUnits;
+
     public ReservationAggregates withPurchasedUnits(String purchasedUnits) {
         this.purchasedUnits = purchasedUnits;
         return this;
@@ -63,6 +69,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RICostForUnusedHours")
     public String riCostForUnusedHours;
+
     public ReservationAggregates withRICostForUnusedHours(String riCostForUnusedHours) {
         this.riCostForUnusedHours = riCostForUnusedHours;
         return this;
@@ -71,6 +78,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RealizedSavings")
     public String realizedSavings;
+
     public ReservationAggregates withRealizedSavings(String realizedSavings) {
         this.realizedSavings = realizedSavings;
         return this;
@@ -79,6 +87,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalActualHours")
     public String totalActualHours;
+
     public ReservationAggregates withTotalActualHours(String totalActualHours) {
         this.totalActualHours = totalActualHours;
         return this;
@@ -87,6 +96,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalActualUnits")
     public String totalActualUnits;
+
     public ReservationAggregates withTotalActualUnits(String totalActualUnits) {
         this.totalActualUnits = totalActualUnits;
         return this;
@@ -95,6 +105,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalAmortizedFee")
     public String totalAmortizedFee;
+
     public ReservationAggregates withTotalAmortizedFee(String totalAmortizedFee) {
         this.totalAmortizedFee = totalAmortizedFee;
         return this;
@@ -103,6 +114,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPotentialRISavings")
     public String totalPotentialRISavings;
+
     public ReservationAggregates withTotalPotentialRISavings(String totalPotentialRISavings) {
         this.totalPotentialRISavings = totalPotentialRISavings;
         return this;
@@ -111,6 +123,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnrealizedSavings")
     public String unrealizedSavings;
+
     public ReservationAggregates withUnrealizedSavings(String unrealizedSavings) {
         this.unrealizedSavings = unrealizedSavings;
         return this;
@@ -119,6 +132,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnusedHours")
     public String unusedHours;
+
     public ReservationAggregates withUnusedHours(String unusedHours) {
         this.unusedHours = unusedHours;
         return this;
@@ -127,6 +141,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnusedUnits")
     public String unusedUnits;
+
     public ReservationAggregates withUnusedUnits(String unusedUnits) {
         this.unusedUnits = unusedUnits;
         return this;
@@ -135,6 +150,7 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizationPercentage")
     public String utilizationPercentage;
+
     public ReservationAggregates withUtilizationPercentage(String utilizationPercentage) {
         this.utilizationPercentage = utilizationPercentage;
         return this;
@@ -143,9 +159,11 @@ public class ReservationAggregates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UtilizationPercentageInUnits")
     public String utilizationPercentageInUnits;
+
     public ReservationAggregates withUtilizationPercentageInUnits(String utilizationPercentageInUnits) {
         this.utilizationPercentageInUnits = utilizationPercentageInUnits;
         return this;
     }
     
+    public ReservationAggregates(){}
 }

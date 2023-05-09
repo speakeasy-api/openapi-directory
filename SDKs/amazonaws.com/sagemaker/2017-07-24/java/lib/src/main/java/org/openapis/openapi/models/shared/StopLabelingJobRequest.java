@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopLabelingJobRequest {
     @JsonProperty("LabelingJobName")
     public String labelingJobName;
+
     public StopLabelingJobRequest withLabelingJobName(String labelingJobName) {
         this.labelingJobName = labelingJobName;
         return this;
     }
     
+    public StopLabelingJobRequest(@JsonProperty("LabelingJobName") String labelingJobName) {
+        this.labelingJobName = labelingJobName;
+  }
 }

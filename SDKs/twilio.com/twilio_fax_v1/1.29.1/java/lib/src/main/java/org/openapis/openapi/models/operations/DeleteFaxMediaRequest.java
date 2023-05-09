@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFaxMediaRequest {
@@ -12,6 +13,7 @@ public class DeleteFaxMediaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FaxSid")
     public String faxSid;
+
     public DeleteFaxMediaRequest withFaxSid(String faxSid) {
         this.faxSid = faxSid;
         return this;
@@ -22,9 +24,14 @@ public class DeleteFaxMediaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=Sid")
     public String sid;
+
     public DeleteFaxMediaRequest withSid(String sid) {
         this.sid = sid;
         return this;
     }
     
+    public DeleteFaxMediaRequest(@JsonProperty("FaxSid") String faxSid, @JsonProperty("Sid") String sid) {
+        this.faxSid = faxSid;
+        this.sid = sid;
+  }
 }

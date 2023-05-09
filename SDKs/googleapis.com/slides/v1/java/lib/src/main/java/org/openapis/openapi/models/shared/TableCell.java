@@ -18,6 +18,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSpan")
     public Integer columnSpan;
+
     public TableCell withColumnSpan(Integer columnSpan) {
         this.columnSpan = columnSpan;
         return this;
@@ -29,6 +30,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public TableCellLocation location;
+
     public TableCell withLocation(TableCellLocation location) {
         this.location = location;
         return this;
@@ -40,6 +42,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowSpan")
     public Integer rowSpan;
+
     public TableCell withRowSpan(Integer rowSpan) {
         this.rowSpan = rowSpan;
         return this;
@@ -51,6 +54,7 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCellProperties")
     public TableCellProperties tableCellProperties;
+
     public TableCell withTableCellProperties(TableCellProperties tableCellProperties) {
         this.tableCellProperties = tableCellProperties;
         return this;
@@ -62,9 +66,11 @@ public class TableCell {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextContent text;
+
     public TableCell withText(TextContent text) {
         this.text = text;
         return this;
     }
     
+    public TableCell(){}
 }

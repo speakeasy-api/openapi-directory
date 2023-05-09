@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -52,9 +57,14 @@ public class GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedTreeentries paginatedTreeentries;
+
     public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse withPaginatedTreeentries(org.openapis.openapi.models.shared.PaginatedTreeentries paginatedTreeentries) {
         this.paginatedTreeentries = paginatedTreeentries;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugSrcCommitPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

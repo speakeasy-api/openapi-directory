@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * OnlineStoreConfig - Use this to specify the Amazon Web Services Key Management Service (KMS) Key ID, or &lt;code&gt;KMSKeyId&lt;/code&gt;, for at rest data encryption. You can turn &lt;code&gt;OnlineStore&lt;/code&gt; on or off by specifying the &lt;code&gt;EnableOnlineStore&lt;/code&gt; flag at General Assembly; the default value is &lt;code&gt;False&lt;/code&gt;.
+ * OnlineStoreConfig - &lt;p&gt;Use this to specify the Amazon Web Services Key Management Service (KMS) Key ID, or &lt;code&gt;KMSKeyId&lt;/code&gt;, for at rest data encryption. You can turn &lt;code&gt;OnlineStore&lt;/code&gt; on or off by specifying the &lt;code&gt;EnableOnlineStore&lt;/code&gt; flag at General Assembly.&lt;/p&gt; &lt;p&gt;The default value is &lt;code&gt;False&lt;/code&gt;.&lt;/p&gt;
  */
 public class OnlineStoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableOnlineStore")
     public Boolean enableOnlineStore;
+
     public OnlineStoreConfig withEnableOnlineStore(Boolean enableOnlineStore) {
         this.enableOnlineStore = enableOnlineStore;
         return this;
@@ -23,9 +24,11 @@ public class OnlineStoreConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfig")
     public OnlineStoreSecurityConfig securityConfig;
+
     public OnlineStoreConfig withSecurityConfig(OnlineStoreSecurityConfig securityConfig) {
         this.securityConfig = securityConfig;
         return this;
     }
     
+    public OnlineStoreConfig(){}
 }

@@ -15,6 +15,7 @@ public class ListGlobalTablesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalTables")
     public GlobalTable[] globalTables;
+
     public ListGlobalTablesOutput withGlobalTables(GlobalTable[] globalTables) {
         this.globalTables = globalTables;
         return this;
@@ -23,9 +24,11 @@ public class ListGlobalTablesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastEvaluatedGlobalTableName")
     public String lastEvaluatedGlobalTableName;
+
     public ListGlobalTablesOutput withLastEvaluatedGlobalTableName(String lastEvaluatedGlobalTableName) {
         this.lastEvaluatedGlobalTableName = lastEvaluatedGlobalTableName;
         return this;
     }
     
+    public ListGlobalTablesOutput(){}
 }

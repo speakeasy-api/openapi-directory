@@ -15,6 +15,7 @@ public class GetResponsePlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public Action[] actions;
+
     public GetResponsePlanOutput withActions(Action[] actions) {
         this.actions = actions;
         return this;
@@ -22,6 +23,7 @@ public class GetResponsePlanOutput {
     
     @JsonProperty("arn")
     public String arn;
+
     public GetResponsePlanOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +32,7 @@ public class GetResponsePlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chatChannel")
     public ChatChannel chatChannel;
+
     public GetResponsePlanOutput withChatChannel(ChatChannel chatChannel) {
         this.chatChannel = chatChannel;
         return this;
@@ -38,6 +41,7 @@ public class GetResponsePlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GetResponsePlanOutput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +50,7 @@ public class GetResponsePlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("engagements")
     public String[] engagements;
+
     public GetResponsePlanOutput withEngagements(String[] engagements) {
         this.engagements = engagements;
         return this;
@@ -53,6 +58,7 @@ public class GetResponsePlanOutput {
     
     @JsonProperty("incidentTemplate")
     public IncidentTemplate incidentTemplate;
+
     public GetResponsePlanOutput withIncidentTemplate(IncidentTemplate incidentTemplate) {
         this.incidentTemplate = incidentTemplate;
         return this;
@@ -61,6 +67,7 @@ public class GetResponsePlanOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrations")
     public Integration[] integrations;
+
     public GetResponsePlanOutput withIntegrations(Integration[] integrations) {
         this.integrations = integrations;
         return this;
@@ -68,9 +75,15 @@ public class GetResponsePlanOutput {
     
     @JsonProperty("name")
     public String name;
+
     public GetResponsePlanOutput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetResponsePlanOutput(@JsonProperty("arn") String arn, @JsonProperty("incidentTemplate") IncidentTemplate incidentTemplate, @JsonProperty("name") String name) {
+        this.arn = arn;
+        this.incidentTemplate = incidentTemplate;
+        this.name = name;
+  }
 }

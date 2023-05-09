@@ -12,6 +12,7 @@ public class LocalizedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultLanguage")
     public LanguageTag defaultLanguage;
+
     public LocalizedProperty withDefaultLanguage(LanguageTag defaultLanguage) {
         this.defaultLanguage = defaultLanguage;
         return this;
@@ -20,9 +21,11 @@ public class LocalizedProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localized")
     public LocalizedString[] localized;
+
     public LocalizedProperty withLocalized(LocalizedString[] localized) {
         this.localized = localized;
         return this;
     }
     
+    public LocalizedProperty(){}
 }

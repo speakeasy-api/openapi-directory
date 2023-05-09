@@ -15,9 +15,11 @@ public class AnomalyDetectorConfigSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnomalyDetectorFrequency")
     public FrequencyEnum anomalyDetectorFrequency;
+
     public AnomalyDetectorConfigSummary withAnomalyDetectorFrequency(FrequencyEnum anomalyDetectorFrequency) {
         this.anomalyDetectorFrequency = anomalyDetectorFrequency;
         return this;
     }
     
+    public AnomalyDetectorConfigSummary(){}
 }

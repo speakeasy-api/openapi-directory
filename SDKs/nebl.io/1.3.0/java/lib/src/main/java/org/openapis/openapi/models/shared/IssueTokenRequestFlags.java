@@ -18,9 +18,11 @@ public class IssueTokenRequestFlags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitChange")
     public Boolean splitChange;
+
     public IssueTokenRequestFlags withSplitChange(Boolean splitChange) {
         this.splitChange = splitChange;
         return this;
     }
     
+    public IssueTokenRequestFlags(){}
 }

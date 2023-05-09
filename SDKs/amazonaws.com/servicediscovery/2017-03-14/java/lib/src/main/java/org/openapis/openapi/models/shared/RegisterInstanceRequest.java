@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegisterInstanceRequest {
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public RegisterInstanceRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class RegisterInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatorRequestId")
     public String creatorRequestId;
+
     public RegisterInstanceRequest withCreatorRequestId(String creatorRequestId) {
         this.creatorRequestId = creatorRequestId;
         return this;
@@ -26,6 +28,7 @@ public class RegisterInstanceRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public RegisterInstanceRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -33,9 +36,15 @@ public class RegisterInstanceRequest {
     
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public RegisterInstanceRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
     }
     
+    public RegisterInstanceRequest(@JsonProperty("Attributes") java.util.Map<String, String> attributes, @JsonProperty("InstanceId") String instanceId, @JsonProperty("ServiceId") String serviceId) {
+        this.attributes = attributes;
+        this.instanceId = instanceId;
+        this.serviceId = serviceId;
+  }
 }

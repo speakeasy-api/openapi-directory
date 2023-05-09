@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse {
     
     public String contentType;
+
     public EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsEnterprisePermissions actionsEnterprisePermissions;
+
     public EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse withActionsEnterprisePermissions(org.openapis.openapi.models.shared.ActionsEnterprisePermissions actionsEnterprisePermissions) {
         this.actionsEnterprisePermissions = actionsEnterprisePermissions;
         return this;
     }
     
+    public EnterpriseAdminGetGithubActionsPermissionsEnterpriseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

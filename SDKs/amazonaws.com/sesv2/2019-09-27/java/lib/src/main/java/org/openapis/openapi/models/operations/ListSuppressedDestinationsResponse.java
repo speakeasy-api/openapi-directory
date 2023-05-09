@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSuppressedDestinationsResponse {
@@ -12,6 +13,7 @@ public class ListSuppressedDestinationsResponse {
      */
     
     public Object badRequestException;
+
     public ListSuppressedDestinationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListSuppressedDestinationsResponse {
     
     
     public String contentType;
+
     public ListSuppressedDestinationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListSuppressedDestinationsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListSuppressedDestinationsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListSuppressedDestinationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSuppressedDestinationsResponse listSuppressedDestinationsResponse;
+
     public ListSuppressedDestinationsResponse withListSuppressedDestinationsResponse(org.openapis.openapi.models.shared.ListSuppressedDestinationsResponse listSuppressedDestinationsResponse) {
         this.listSuppressedDestinationsResponse = listSuppressedDestinationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSuppressedDestinationsResponse {
     
     
     public Integer statusCode;
+
     public ListSuppressedDestinationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSuppressedDestinationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSuppressedDestinationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListSuppressedDestinationsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListSuppressedDestinationsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListSuppressedDestinationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

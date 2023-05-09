@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteRequest {
@@ -12,6 +13,7 @@ public class DeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public DeleteRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class DeleteRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public DeleteRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class DeleteRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pickupPointId")
     public String pickupPointId;
+
     public DeleteRequest withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
     }
     
+    public DeleteRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("pickupPointId") String pickupPointId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.pickupPointId = pickupPointId;
+  }
 }

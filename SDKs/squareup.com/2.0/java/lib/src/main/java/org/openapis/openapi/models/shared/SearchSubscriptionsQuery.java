@@ -18,9 +18,11 @@ public class SearchSubscriptionsQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public SearchSubscriptionsFilter filter;
+
     public SearchSubscriptionsQuery withFilter(SearchSubscriptionsFilter filter) {
         this.filter = filter;
         return this;
     }
     
+    public SearchSubscriptionsQuery(){}
 }

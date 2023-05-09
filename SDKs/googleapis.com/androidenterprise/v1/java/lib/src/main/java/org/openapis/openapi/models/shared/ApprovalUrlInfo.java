@@ -18,9 +18,11 @@ public class ApprovalUrlInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approvalUrl")
     public String approvalUrl;
+
     public ApprovalUrlInfo withApprovalUrl(String approvalUrl) {
         this.approvalUrl = approvalUrl;
         return this;
     }
     
+    public ApprovalUrlInfo(){}
 }

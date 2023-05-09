@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvisionByoipCidrRequest {
     @JsonProperty("Cidr")
     public String cidr;
+
     public ProvisionByoipCidrRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,9 +17,14 @@ public class ProvisionByoipCidrRequest {
     
     @JsonProperty("CidrAuthorizationContext")
     public CidrAuthorizationContext cidrAuthorizationContext;
+
     public ProvisionByoipCidrRequest withCidrAuthorizationContext(CidrAuthorizationContext cidrAuthorizationContext) {
         this.cidrAuthorizationContext = cidrAuthorizationContext;
         return this;
     }
     
+    public ProvisionByoipCidrRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("CidrAuthorizationContext") CidrAuthorizationContext cidrAuthorizationContext) {
+        this.cidr = cidr;
+        this.cidrAuthorizationContext = cidrAuthorizationContext;
+  }
 }

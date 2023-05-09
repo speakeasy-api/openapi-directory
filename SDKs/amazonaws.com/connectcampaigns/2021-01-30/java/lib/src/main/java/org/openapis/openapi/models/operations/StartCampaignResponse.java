@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCampaignResponse {
@@ -12,6 +13,7 @@ public class StartCampaignResponse {
      */
     
     public Object accessDeniedException;
+
     public StartCampaignResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StartCampaignResponse {
      */
     
     public Object conflictException;
+
     public StartCampaignResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class StartCampaignResponse {
     
     
     public String contentType;
+
     public StartCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class StartCampaignResponse {
      */
     
     public Object internalServerException;
+
     public StartCampaignResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class StartCampaignResponse {
      */
     
     public Object invalidCampaignStateException;
+
     public StartCampaignResponse withInvalidCampaignStateException(Object invalidCampaignStateException) {
         this.invalidCampaignStateException = invalidCampaignStateException;
         return this;
@@ -59,6 +65,7 @@ public class StartCampaignResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartCampaignResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class StartCampaignResponse {
     
     
     public Integer statusCode;
+
     public StartCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class StartCampaignResponse {
      */
     
     public Object throttlingException;
+
     public StartCampaignResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class StartCampaignResponse {
      */
     
     public Object validationException;
+
     public StartCampaignResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

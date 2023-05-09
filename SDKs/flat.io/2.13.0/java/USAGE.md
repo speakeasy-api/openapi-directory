@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetAuthenticatedUserSecurity;
 import org.openapis.openapi.models.operations.GetAuthenticatedUserRequest;
 import org.openapis.openapi.models.operations.GetAuthenticatedUserResponse;
+import org.openapis.openapi.models.operations.GetAuthenticatedUserSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -16,17 +15,19 @@ public class Application {
 
             GetAuthenticatedUserRequest req = new GetAuthenticatedUserRequest() {{
                 onlyId = false;
-            }}            
+            }};            
 
-            GetAuthenticatedUserResponse res = sdk.account.getAuthenticatedUser(req, new GetAuthenticatedUserSecurity() {{
+            GetAuthenticatedUserResponse res = sdk.account.getAuthenticatedUser(req, new GetAuthenticatedUserSecurity("corrupti") {{
                 oAuth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.userDetails.isPresent()) {
+            if (res.userDetails != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

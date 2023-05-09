@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetBadgesTagsRequest {
@@ -13,6 +14,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public GetBadgesTagsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -53,6 +55,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public String filter;
+
     public GetBadgesTagsRequest withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -63,6 +66,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public Long fromdate;
+
     public GetBadgesTagsRequest withFromdate(Long fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -70,6 +74,7 @@ public class GetBadgesTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inname")
     public String inname;
+
     public GetBadgesTagsRequest withInname(String inname) {
         this.inname = inname;
         return this;
@@ -82,6 +87,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public String max;
+
     public GetBadgesTagsRequest withMax(String max) {
         this.max = max;
         return this;
@@ -94,6 +100,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min")
     public String min;
+
     public GetBadgesTagsRequest withMin(String min) {
         this.min = min;
         return this;
@@ -101,6 +108,7 @@ public class GetBadgesTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetBadgesTagsOrderEnum order;
+
     public GetBadgesTagsRequest withOrder(GetBadgesTagsOrderEnum order) {
         this.order = order;
         return this;
@@ -108,6 +116,7 @@ public class GetBadgesTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetBadgesTagsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -115,6 +124,7 @@ public class GetBadgesTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetBadgesTagsRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -126,6 +136,7 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=site")
     public String site;
+
     public GetBadgesTagsRequest withSite(String site) {
         this.site = site;
         return this;
@@ -133,6 +144,7 @@ public class GetBadgesTagsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetBadgesTagsSortEnum sort;
+
     public GetBadgesTagsRequest withSort(GetBadgesTagsSortEnum sort) {
         this.sort = sort;
         return this;
@@ -143,9 +155,13 @@ public class GetBadgesTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public Long todate;
+
     public GetBadgesTagsRequest withTodate(Long todate) {
         this.todate = todate;
         return this;
     }
     
+    public GetBadgesTagsRequest(@JsonProperty("site") String site) {
+        this.site = site;
+  }
 }

@@ -18,6 +18,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aos")
     public Double aos;
+
     public Metrics withAos(Double aos) {
         this.aos = aos;
         return this;
@@ -29,6 +30,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aovMicros")
     public Double aovMicros;
+
     public Metrics withAovMicros(Double aovMicros) {
         this.aovMicros = aovMicros;
         return this;
@@ -40,6 +42,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clicks")
     public String clicks;
+
     public Metrics withClicks(String clicks) {
         this.clicks = clicks;
         return this;
@@ -51,6 +54,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionRate")
     public Double conversionRate;
+
     public Metrics withConversionRate(Double conversionRate) {
         this.conversionRate = conversionRate;
         return this;
@@ -62,6 +66,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionValueMicros")
     public String conversionValueMicros;
+
     public Metrics withConversionValueMicros(String conversionValueMicros) {
         this.conversionValueMicros = conversionValueMicros;
         return this;
@@ -73,6 +78,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversions")
     public Double conversions;
+
     public Metrics withConversions(Double conversions) {
         this.conversions = conversions;
         return this;
@@ -84,6 +90,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ctr")
     public Double ctr;
+
     public Metrics withCtr(Double ctr) {
         this.ctr = ctr;
         return this;
@@ -95,6 +102,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("daysToShip")
     public Double daysToShip;
+
     public Metrics withDaysToShip(Double daysToShip) {
         this.daysToShip = daysToShip;
         return this;
@@ -106,6 +114,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impressions")
     public String impressions;
+
     public Metrics withImpressions(String impressions) {
         this.impressions = impressions;
         return this;
@@ -117,6 +126,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemDaysToShip")
     public Double itemDaysToShip;
+
     public Metrics withItemDaysToShip(Double itemDaysToShip) {
         this.itemDaysToShip = itemDaysToShip;
         return this;
@@ -128,6 +138,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemFillRate")
     public Double itemFillRate;
+
     public Metrics withItemFillRate(Double itemFillRate) {
         this.itemFillRate = itemFillRate;
         return this;
@@ -139,6 +150,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedItemSalesMicros")
     public String orderedItemSalesMicros;
+
     public Metrics withOrderedItemSalesMicros(String orderedItemSalesMicros) {
         this.orderedItemSalesMicros = orderedItemSalesMicros;
         return this;
@@ -150,6 +162,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderedItems")
     public String orderedItems;
+
     public Metrics withOrderedItems(String orderedItems) {
         this.orderedItems = orderedItems;
         return this;
@@ -161,6 +174,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orders")
     public String orders;
+
     public Metrics withOrders(String orders) {
         this.orders = orders;
         return this;
@@ -172,6 +186,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rejectedItems")
     public String rejectedItems;
+
     public Metrics withRejectedItems(String rejectedItems) {
         this.rejectedItems = rejectedItems;
         return this;
@@ -183,6 +198,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnRate")
     public Double returnRate;
+
     public Metrics withReturnRate(Double returnRate) {
         this.returnRate = returnRate;
         return this;
@@ -194,6 +210,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnedItems")
     public String returnedItems;
+
     public Metrics withReturnedItems(String returnedItems) {
         this.returnedItems = returnedItems;
         return this;
@@ -205,6 +222,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnsMicros")
     public String returnsMicros;
+
     public Metrics withReturnsMicros(String returnsMicros) {
         this.returnsMicros = returnsMicros;
         return this;
@@ -216,6 +234,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippedItemSalesMicros")
     public String shippedItemSalesMicros;
+
     public Metrics withShippedItemSalesMicros(String shippedItemSalesMicros) {
         this.shippedItemSalesMicros = shippedItemSalesMicros;
         return this;
@@ -227,6 +246,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippedItems")
     public String shippedItems;
+
     public Metrics withShippedItems(String shippedItems) {
         this.shippedItems = shippedItems;
         return this;
@@ -238,6 +258,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippedOrders")
     public String shippedOrders;
+
     public Metrics withShippedOrders(String shippedOrders) {
         this.shippedOrders = shippedOrders;
         return this;
@@ -249,6 +270,7 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unshippedItems")
     public Double unshippedItems;
+
     public Metrics withUnshippedItems(Double unshippedItems) {
         this.unshippedItems = unshippedItems;
         return this;
@@ -260,9 +282,11 @@ public class Metrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unshippedOrders")
     public Double unshippedOrders;
+
     public Metrics withUnshippedOrders(Double unshippedOrders) {
         this.unshippedOrders = unshippedOrders;
         return this;
     }
     
+    public Metrics(){}
 }

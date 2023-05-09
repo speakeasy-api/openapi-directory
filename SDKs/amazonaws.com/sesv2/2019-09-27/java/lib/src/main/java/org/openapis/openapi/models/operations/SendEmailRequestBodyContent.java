@@ -15,6 +15,7 @@ public class SendEmailRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Raw")
     public org.openapis.openapi.models.shared.RawMessage raw;
+
     public SendEmailRequestBodyContent withRaw(org.openapis.openapi.models.shared.RawMessage raw) {
         this.raw = raw;
         return this;
@@ -23,6 +24,7 @@ public class SendEmailRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Simple")
     public org.openapis.openapi.models.shared.Message simple;
+
     public SendEmailRequestBodyContent withSimple(org.openapis.openapi.models.shared.Message simple) {
         this.simple = simple;
         return this;
@@ -31,9 +33,11 @@ public class SendEmailRequestBodyContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Template")
     public org.openapis.openapi.models.shared.Template template;
+
     public SendEmailRequestBodyContent withTemplate(org.openapis.openapi.models.shared.Template template) {
         this.template = template;
         return this;
     }
     
+    public SendEmailRequestBodyContent(){}
 }

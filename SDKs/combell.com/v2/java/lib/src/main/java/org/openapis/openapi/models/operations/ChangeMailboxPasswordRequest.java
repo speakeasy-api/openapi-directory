@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ChangeMailboxPasswordRequest {
@@ -12,6 +13,7 @@ public class ChangeMailboxPasswordRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest updateMailboxPasswordRequest;
+
     public ChangeMailboxPasswordRequest withUpdateMailboxPasswordRequest(org.openapis.openapi.models.shared.UpdateMailboxPasswordRequest updateMailboxPasswordRequest) {
         this.updateMailboxPasswordRequest = updateMailboxPasswordRequest;
         return this;
@@ -22,6 +24,7 @@ public class ChangeMailboxPasswordRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=mailboxName")
     public String mailboxNamePathParameter;
+
     public ChangeMailboxPasswordRequest withMailboxNamePathParameter(String mailboxNamePathParameter) {
         this.mailboxNamePathParameter = mailboxNamePathParameter;
         return this;
@@ -32,9 +35,14 @@ public class ChangeMailboxPasswordRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=mailbox_name")
     public String mailboxNameQueryParameter;
+
     public ChangeMailboxPasswordRequest withMailboxNameQueryParameter(String mailboxNameQueryParameter) {
         this.mailboxNameQueryParameter = mailboxNameQueryParameter;
         return this;
     }
     
+    public ChangeMailboxPasswordRequest(@JsonProperty("mailboxNamePathParameter") String mailboxNamePathParameter, @JsonProperty("mailbox_nameQueryParameter") String mailboxNameQueryParameter) {
+        this.mailboxNamePathParameter = mailboxNamePathParameter;
+        this.mailboxNameQueryParameter = mailboxNameQueryParameter;
+  }
 }

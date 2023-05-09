@@ -18,6 +18,7 @@ public class SubmitProvisioningConfigRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public SubmitProvisioningConfigRequestInput withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class SubmitProvisioningConfigRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningConfig")
     public ProvisioningConfigInput provisioningConfig;
+
     public SubmitProvisioningConfigRequestInput withProvisioningConfig(ProvisioningConfigInput provisioningConfig) {
         this.provisioningConfig = provisioningConfig;
         return this;
     }
     
+    public SubmitProvisioningConfigRequestInput(){}
 }

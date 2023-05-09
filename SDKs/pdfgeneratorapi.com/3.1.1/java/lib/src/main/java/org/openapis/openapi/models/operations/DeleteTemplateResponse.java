@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteTemplateResponse {
     
     public String contentType;
+
     public DeleteTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeleteTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeleteTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate200ApplicationJSON deleteTemplate200ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate200ApplicationJSONObject(DeleteTemplate200ApplicationJSON deleteTemplate200ApplicationJSONObject) {
         this.deleteTemplate200ApplicationJSONObject = deleteTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate401ApplicationJSON deleteTemplate401ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate401ApplicationJSONObject(DeleteTemplate401ApplicationJSON deleteTemplate401ApplicationJSONObject) {
         this.deleteTemplate401ApplicationJSONObject = deleteTemplate401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate403ApplicationJSON deleteTemplate403ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate403ApplicationJSONObject(DeleteTemplate403ApplicationJSON deleteTemplate403ApplicationJSONObject) {
         this.deleteTemplate403ApplicationJSONObject = deleteTemplate403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate404ApplicationJSON deleteTemplate404ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate404ApplicationJSONObject(DeleteTemplate404ApplicationJSON deleteTemplate404ApplicationJSONObject) {
         this.deleteTemplate404ApplicationJSONObject = deleteTemplate404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate422ApplicationJSON deleteTemplate422ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate422ApplicationJSONObject(DeleteTemplate422ApplicationJSON deleteTemplate422ApplicationJSONObject) {
         this.deleteTemplate422ApplicationJSONObject = deleteTemplate422ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class DeleteTemplateResponse {
      */
     
     public DeleteTemplate500ApplicationJSON deleteTemplate500ApplicationJSONObject;
+
     public DeleteTemplateResponse withDeleteTemplate500ApplicationJSONObject(DeleteTemplate500ApplicationJSON deleteTemplate500ApplicationJSONObject) {
         this.deleteTemplate500ApplicationJSONObject = deleteTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public DeleteTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

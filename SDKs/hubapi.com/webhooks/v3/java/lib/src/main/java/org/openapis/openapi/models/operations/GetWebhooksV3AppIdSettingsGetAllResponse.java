@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWebhooksV3AppIdSettingsGetAllResponse {
     
     public byte[] body;
+
     public GetWebhooksV3AppIdSettingsGetAllResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetWebhooksV3AppIdSettingsGetAllResponse {
     
     
     public String contentType;
+
     public GetWebhooksV3AppIdSettingsGetAllResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetWebhooksV3AppIdSettingsGetAllResponse {
      */
     
     public org.openapis.openapi.models.shared.SettingsResponse settingsResponse;
+
     public GetWebhooksV3AppIdSettingsGetAllResponse withSettingsResponse(org.openapis.openapi.models.shared.SettingsResponse settingsResponse) {
         this.settingsResponse = settingsResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetWebhooksV3AppIdSettingsGetAllResponse {
     
     
     public Integer statusCode;
+
     public GetWebhooksV3AppIdSettingsGetAllResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetWebhooksV3AppIdSettingsGetAllResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWebhooksV3AppIdSettingsGetAllResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWebhooksV3AppIdSettingsGetAllResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

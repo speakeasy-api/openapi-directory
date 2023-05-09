@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PageBuildStatus {
     @JsonProperty("status")
     public String status;
+
     public PageBuildStatus withStatus(String status) {
         this.status = status;
         return this;
@@ -19,9 +20,14 @@ public class PageBuildStatus {
     
     @JsonProperty("url")
     public String url;
+
     public PageBuildStatus withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PageBuildStatus(@JsonProperty("status") String status, @JsonProperty("url") String url) {
+        this.status = status;
+        this.url = url;
+  }
 }

@@ -58,11 +58,9 @@ public class Grouplicenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesGetResponse(contentType, httpRes.statusCode()) {{
             groupLicense = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Grouplicenses {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse() {{
+        org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse res = new org.openapis.openapi.models.operations.AndroidenterpriseGrouplicensesListResponse(contentType, httpRes.statusCode()) {{
             groupLicensesListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

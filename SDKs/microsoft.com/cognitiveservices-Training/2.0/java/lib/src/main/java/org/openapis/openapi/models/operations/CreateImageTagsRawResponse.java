@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateImageTagsRawResponse {
     
     public byte[] body;
+
     public CreateImageTagsRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class CreateImageTagsRawResponse {
     
     
     public String contentType;
+
     public CreateImageTagsRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CreateImageTagsRawResponse {
      */
     
     public org.openapis.openapi.models.shared.ImageTagCreateSummary imageTagCreateSummary;
+
     public CreateImageTagsRawResponse withImageTagCreateSummary(org.openapis.openapi.models.shared.ImageTagCreateSummary imageTagCreateSummary) {
         this.imageTagCreateSummary = imageTagCreateSummary;
         return this;
@@ -33,6 +37,7 @@ public class CreateImageTagsRawResponse {
     
     
     public Integer statusCode;
+
     public CreateImageTagsRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class CreateImageTagsRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateImageTagsRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateImageTagsRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

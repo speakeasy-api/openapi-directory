@@ -21,6 +21,7 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author")
     public UserCompact author;
+
     public ProjectResponseCurrentStatus withAuthor(UserCompact author) {
         this.author = author;
         return this;
@@ -31,6 +32,7 @@ public class ProjectResponseCurrentStatus {
      */
     @JsonProperty("color")
     public ProjectResponseCurrentStatusColorEnum color;
+
     public ProjectResponseCurrentStatus withColor(ProjectResponseCurrentStatusColorEnum color) {
         this.color = color;
         return this;
@@ -44,6 +46,7 @@ public class ProjectResponseCurrentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ProjectResponseCurrentStatus withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,6 +55,7 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_by")
     public UserCompact createdBy;
+
     public ProjectResponseCurrentStatus withCreatedBy(UserCompact createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -63,6 +67,7 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public ProjectResponseCurrentStatus withGid(String gid) {
         this.gid = gid;
         return this;
@@ -74,6 +79,7 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_text")
     public String htmlText;
+
     public ProjectResponseCurrentStatus withHtmlText(String htmlText) {
         this.htmlText = htmlText;
         return this;
@@ -88,6 +94,7 @@ public class ProjectResponseCurrentStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("modified_at")
     public OffsetDateTime modifiedAt;
+
     public ProjectResponseCurrentStatus withModifiedAt(OffsetDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
         return this;
@@ -99,6 +106,7 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public ProjectResponseCurrentStatus withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -109,6 +117,7 @@ public class ProjectResponseCurrentStatus {
      */
     @JsonProperty("text")
     public String text;
+
     public ProjectResponseCurrentStatus withText(String text) {
         this.text = text;
         return this;
@@ -120,9 +129,14 @@ public class ProjectResponseCurrentStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProjectResponseCurrentStatus withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProjectResponseCurrentStatus(@JsonProperty("color") ProjectResponseCurrentStatusColorEnum color, @JsonProperty("text") String text) {
+        this.color = color;
+        this.text = text;
+  }
 }

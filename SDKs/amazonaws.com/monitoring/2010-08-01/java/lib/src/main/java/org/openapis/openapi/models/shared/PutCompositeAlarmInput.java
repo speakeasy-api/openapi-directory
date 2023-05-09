@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PutCompositeAlarmInput {
     
     public Boolean actionsEnabled;
+
     public PutCompositeAlarmInput withActionsEnabled(Boolean actionsEnabled) {
         this.actionsEnabled = actionsEnabled;
         return this;
@@ -16,6 +17,7 @@ public class PutCompositeAlarmInput {
     
     
     public String actionsSuppressor;
+
     public PutCompositeAlarmInput withActionsSuppressor(String actionsSuppressor) {
         this.actionsSuppressor = actionsSuppressor;
         return this;
@@ -23,6 +25,7 @@ public class PutCompositeAlarmInput {
     
     
     public Long actionsSuppressorExtensionPeriod;
+
     public PutCompositeAlarmInput withActionsSuppressorExtensionPeriod(Long actionsSuppressorExtensionPeriod) {
         this.actionsSuppressorExtensionPeriod = actionsSuppressorExtensionPeriod;
         return this;
@@ -30,6 +33,7 @@ public class PutCompositeAlarmInput {
     
     
     public Long actionsSuppressorWaitPeriod;
+
     public PutCompositeAlarmInput withActionsSuppressorWaitPeriod(Long actionsSuppressorWaitPeriod) {
         this.actionsSuppressorWaitPeriod = actionsSuppressorWaitPeriod;
         return this;
@@ -37,6 +41,7 @@ public class PutCompositeAlarmInput {
     
     
     public String[] alarmActions;
+
     public PutCompositeAlarmInput withAlarmActions(String[] alarmActions) {
         this.alarmActions = alarmActions;
         return this;
@@ -44,6 +49,7 @@ public class PutCompositeAlarmInput {
     
     
     public String alarmDescription;
+
     public PutCompositeAlarmInput withAlarmDescription(String alarmDescription) {
         this.alarmDescription = alarmDescription;
         return this;
@@ -51,6 +57,7 @@ public class PutCompositeAlarmInput {
     
     
     public String alarmName;
+
     public PutCompositeAlarmInput withAlarmName(String alarmName) {
         this.alarmName = alarmName;
         return this;
@@ -58,6 +65,7 @@ public class PutCompositeAlarmInput {
     
     
     public String alarmRule;
+
     public PutCompositeAlarmInput withAlarmRule(String alarmRule) {
         this.alarmRule = alarmRule;
         return this;
@@ -65,6 +73,7 @@ public class PutCompositeAlarmInput {
     
     
     public String[] insufficientDataActions;
+
     public PutCompositeAlarmInput withInsufficientDataActions(String[] insufficientDataActions) {
         this.insufficientDataActions = insufficientDataActions;
         return this;
@@ -72,6 +81,7 @@ public class PutCompositeAlarmInput {
     
     
     public String[] okActions;
+
     public PutCompositeAlarmInput withOKActions(String[] okActions) {
         this.okActions = okActions;
         return this;
@@ -79,9 +89,14 @@ public class PutCompositeAlarmInput {
     
     
     public Tag[] tags;
+
     public PutCompositeAlarmInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public PutCompositeAlarmInput(@JsonProperty("AlarmName") String alarmName, @JsonProperty("AlarmRule") String alarmRule) {
+        this.alarmName = alarmName;
+        this.alarmRule = alarmRule;
+  }
 }

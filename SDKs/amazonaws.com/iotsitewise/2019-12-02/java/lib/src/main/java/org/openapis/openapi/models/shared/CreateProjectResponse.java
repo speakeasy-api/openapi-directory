@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProjectResponse {
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateProjectResponse withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateProjectResponse {
     
     @JsonProperty("projectId")
     public String projectId;
+
     public CreateProjectResponse withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public CreateProjectResponse(@JsonProperty("projectArn") String projectArn, @JsonProperty("projectId") String projectId) {
+        this.projectArn = projectArn;
+        this.projectId = projectId;
+  }
 }

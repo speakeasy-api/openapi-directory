@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PendingTaskCount {
     @JsonProperty("count")
     public Long count;
+
     public PendingTaskCount withCount(Long count) {
         this.count = count;
         return this;
@@ -22,9 +23,13 @@ public class PendingTaskCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truncated")
     public Boolean truncated;
+
     public PendingTaskCount withTruncated(Boolean truncated) {
         this.truncated = truncated;
         return this;
     }
     
+    public PendingTaskCount(@JsonProperty("count") Long count) {
+        this.count = count;
+  }
 }

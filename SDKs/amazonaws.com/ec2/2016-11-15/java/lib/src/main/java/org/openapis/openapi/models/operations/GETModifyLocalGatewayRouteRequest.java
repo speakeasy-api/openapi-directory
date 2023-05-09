@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyLocalGatewayRouteRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyLocalGatewayRouteActionEnum action;
+
     public GETModifyLocalGatewayRouteRequest withAction(GETModifyLocalGatewayRouteActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationCidrBlock")
     public String destinationCidrBlock;
+
     public GETModifyLocalGatewayRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DestinationPrefixListId")
     public String destinationPrefixListId;
+
     public GETModifyLocalGatewayRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -39,6 +43,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETModifyLocalGatewayRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -49,6 +54,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayRouteTableId")
     public String localGatewayRouteTableId;
+
     public GETModifyLocalGatewayRouteRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -59,6 +65,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LocalGatewayVirtualInterfaceGroupId")
     public String localGatewayVirtualInterfaceGroupId;
+
     public GETModifyLocalGatewayRouteRequest withLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
         this.localGatewayVirtualInterfaceGroupId = localGatewayVirtualInterfaceGroupId;
         return this;
@@ -69,6 +76,7 @@ public class GETModifyLocalGatewayRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NetworkInterfaceId")
     public String networkInterfaceId;
+
     public GETModifyLocalGatewayRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -76,6 +84,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyLocalGatewayRouteVersionEnum version;
+
     public GETModifyLocalGatewayRouteRequest withVersion(GETModifyLocalGatewayRouteVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyLocalGatewayRouteRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyLocalGatewayRouteRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyLocalGatewayRouteRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyLocalGatewayRouteRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyLocalGatewayRouteRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyLocalGatewayRouteRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,15 @@ public class GETModifyLocalGatewayRouteRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyLocalGatewayRouteRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyLocalGatewayRouteRequest(@JsonProperty("Action") GETModifyLocalGatewayRouteActionEnum action, @JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId, @JsonProperty("Version") GETModifyLocalGatewayRouteVersionEnum version) {
+        this.action = action;
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+        this.version = version;
+  }
 }

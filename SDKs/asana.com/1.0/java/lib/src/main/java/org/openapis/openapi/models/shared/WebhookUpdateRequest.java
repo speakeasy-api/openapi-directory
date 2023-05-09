@@ -15,9 +15,11 @@ public class WebhookUpdateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public WebhookUpdateRequestFilters[] filters;
+
     public WebhookUpdateRequest withFilters(WebhookUpdateRequestFilters[] filters) {
         this.filters = filters;
         return this;
     }
     
+    public WebhookUpdateRequest(){}
 }

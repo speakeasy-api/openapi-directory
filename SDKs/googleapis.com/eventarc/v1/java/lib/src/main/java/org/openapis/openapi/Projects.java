@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelConnectionsListResponse(contentType, httpRes.statusCode()) {{
             listChannelConnectionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsCreateResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsChannelsListResponse(contentType, httpRes.statusCode()) {{
             listChannelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsProvidersListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsProvidersListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsProvidersListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsProvidersListResponse(contentType, httpRes.statusCode()) {{
             listProvidersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -436,11 +420,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersCreateResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersCreateResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -482,11 +464,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersDeleteResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersDeleteResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersDeleteResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -528,11 +508,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetResponse(contentType, httpRes.statusCode()) {{
             trigger = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -574,11 +552,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -620,11 +596,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersListResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersListResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersListResponse(contentType, httpRes.statusCode()) {{
             listTriggersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -668,11 +642,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersPatchResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersPatchResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersPatchResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -716,11 +688,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -764,11 +734,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.EventarcProjectsLocationsTriggersTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

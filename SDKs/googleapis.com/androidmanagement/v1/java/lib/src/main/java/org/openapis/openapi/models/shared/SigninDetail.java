@@ -18,6 +18,7 @@ public class SigninDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowPersonalUsage")
     public SigninDetailAllowPersonalUsageEnum allowPersonalUsage;
+
     public SigninDetail withAllowPersonalUsage(SigninDetailAllowPersonalUsageEnum allowPersonalUsage) {
         this.allowPersonalUsage = allowPersonalUsage;
         return this;
@@ -29,6 +30,7 @@ public class SigninDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qrCode")
     public String qrCode;
+
     public SigninDetail withQrCode(String qrCode) {
         this.qrCode = qrCode;
         return this;
@@ -40,6 +42,7 @@ public class SigninDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signinEnrollmentToken")
     public String signinEnrollmentToken;
+
     public SigninDetail withSigninEnrollmentToken(String signinEnrollmentToken) {
         this.signinEnrollmentToken = signinEnrollmentToken;
         return this;
@@ -51,9 +54,11 @@ public class SigninDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signinUrl")
     public String signinUrl;
+
     public SigninDetail withSigninUrl(String signinUrl) {
         this.signinUrl = signinUrl;
         return this;
     }
     
+    public SigninDetail(){}
 }

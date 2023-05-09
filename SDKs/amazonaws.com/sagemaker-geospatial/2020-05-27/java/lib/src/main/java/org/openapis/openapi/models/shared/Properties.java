@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Properties - &lt;p/&gt;
+ * Properties - Properties associated with the Item.
  */
 public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EoCloudCover")
     public Float eoCloudCover;
+
     public Properties withEoCloudCover(Float eoCloudCover) {
         this.eoCloudCover = eoCloudCover;
         return this;
@@ -23,6 +24,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LandsatCloudCoverLand")
     public Float landsatCloudCoverLand;
+
     public Properties withLandsatCloudCoverLand(Float landsatCloudCoverLand) {
         this.landsatCloudCoverLand = landsatCloudCoverLand;
         return this;
@@ -31,6 +33,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public Properties withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -39,6 +42,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewOffNadir")
     public Float viewOffNadir;
+
     public Properties withViewOffNadir(Float viewOffNadir) {
         this.viewOffNadir = viewOffNadir;
         return this;
@@ -47,6 +51,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewSunAzimuth")
     public Float viewSunAzimuth;
+
     public Properties withViewSunAzimuth(Float viewSunAzimuth) {
         this.viewSunAzimuth = viewSunAzimuth;
         return this;
@@ -55,9 +60,11 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ViewSunElevation")
     public Float viewSunElevation;
+
     public Properties withViewSunElevation(Float viewSunElevation) {
         this.viewSunElevation = viewSunElevation;
         return this;
     }
     
+    public Properties(){}
 }

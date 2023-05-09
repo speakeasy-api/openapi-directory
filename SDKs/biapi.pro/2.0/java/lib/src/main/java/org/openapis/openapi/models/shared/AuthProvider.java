@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthProvider {
     @JsonProperty("id")
     public Long id;
+
     public AuthProvider withId(Long id) {
         this.id = id;
         return this;
@@ -22,6 +23,7 @@ public class AuthProvider {
      */
     @JsonProperty("name")
     public String name;
+
     public AuthProvider withName(String name) {
         this.name = name;
         return this;
@@ -32,9 +34,15 @@ public class AuthProvider {
      */
     @JsonProperty("type")
     public String type;
+
     public AuthProvider withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AuthProvider(@JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("type") String type) {
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

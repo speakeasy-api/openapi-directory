@@ -18,9 +18,11 @@ public class InstallsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("install")
     public Install[] install;
+
     public InstallsListResponse withInstall(Install[] install) {
         this.install = install;
         return this;
     }
     
+    public InstallsListResponse(){}
 }

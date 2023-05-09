@@ -18,6 +18,7 @@ public class CloudInterconnectEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("egressRate")
     public Usage egressRate;
+
     public CloudInterconnectEgressWorkload withEgressRate(Usage egressRate) {
         this.egressRate = egressRate;
         return this;
@@ -29,9 +30,11 @@ public class CloudInterconnectEgressWorkload {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectConnectionLocation")
     public CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum interconnectConnectionLocation;
+
     public CloudInterconnectEgressWorkload withInterconnectConnectionLocation(CloudInterconnectEgressWorkloadInterconnectConnectionLocationEnum interconnectConnectionLocation) {
         this.interconnectConnectionLocation = interconnectConnectionLocation;
         return this;
     }
     
+    public CloudInterconnectEgressWorkload(){}
 }

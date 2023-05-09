@@ -18,6 +18,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("api_key")
     public String apiKey;
+
     public SubaccountResponse withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -29,6 +30,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balance")
     public Double balance;
+
     public SubaccountResponse withBalance(Double balance) {
         this.balance = balance;
         return this;
@@ -40,6 +42,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public SubaccountResponse withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -51,6 +54,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("credit_limit")
     public Double creditLimit;
+
     public SubaccountResponse withCreditLimit(Double creditLimit) {
         this.creditLimit = creditLimit;
         return this;
@@ -62,6 +66,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SubaccountResponse withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_account_api_key")
     public String primaryAccountApiKey;
+
     public SubaccountResponse withPrimaryAccountApiKey(String primaryAccountApiKey) {
         this.primaryAccountApiKey = primaryAccountApiKey;
         return this;
@@ -84,6 +90,7 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suspended")
     public Boolean suspended;
+
     public SubaccountResponse withSuspended(Boolean suspended) {
         this.suspended = suspended;
         return this;
@@ -95,9 +102,11 @@ public class SubaccountResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("use_primary_account_balance")
     public Boolean usePrimaryAccountBalance;
+
     public SubaccountResponse withUsePrimaryAccountBalance(Boolean usePrimaryAccountBalance) {
         this.usePrimaryAccountBalance = usePrimaryAccountBalance;
         return this;
     }
     
+    public SubaccountResponse(){}
 }

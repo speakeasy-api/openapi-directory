@@ -18,6 +18,7 @@ public class QueuedResourcesAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public QueuedResourcesAggregatedListWarningCodeEnum code;
+
     public QueuedResourcesAggregatedListWarning withCode(QueuedResourcesAggregatedListWarningCodeEnum code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class QueuedResourcesAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public QueuedResourcesAggregatedListWarningData[] data;
+
     public QueuedResourcesAggregatedListWarning withData(QueuedResourcesAggregatedListWarningData[] data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class QueuedResourcesAggregatedListWarning {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public QueuedResourcesAggregatedListWarning withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public QueuedResourcesAggregatedListWarning(){}
 }

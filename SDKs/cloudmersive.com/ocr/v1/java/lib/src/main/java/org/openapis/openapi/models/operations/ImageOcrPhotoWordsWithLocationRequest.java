@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ImageOcrPhotoWordsWithLocationRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public ImageOcrPhotoWordsWithLocationRequestBody requestBody;
+
     public ImageOcrPhotoWordsWithLocationRequest withRequestBody(ImageOcrPhotoWordsWithLocationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ImageOcrPhotoWordsWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=diagnostics")
     public String diagnostics;
+
     public ImageOcrPhotoWordsWithLocationRequest withDiagnostics(String diagnostics) {
         this.diagnostics = diagnostics;
         return this;
@@ -29,6 +32,7 @@ public class ImageOcrPhotoWordsWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=language")
     public String language;
+
     public ImageOcrPhotoWordsWithLocationRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -39,6 +43,7 @@ public class ImageOcrPhotoWordsWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=preprocessing")
     public String preprocessing;
+
     public ImageOcrPhotoWordsWithLocationRequest withPreprocessing(String preprocessing) {
         this.preprocessing = preprocessing;
         return this;
@@ -49,9 +54,13 @@ public class ImageOcrPhotoWordsWithLocationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=recognitionMode")
     public String recognitionMode;
+
     public ImageOcrPhotoWordsWithLocationRequest withRecognitionMode(String recognitionMode) {
         this.recognitionMode = recognitionMode;
         return this;
     }
     
+    public ImageOcrPhotoWordsWithLocationRequest(@JsonProperty("RequestBody") ImageOcrPhotoWordsWithLocationRequestBody requestBody) {
+        this.requestBody = requestBody;
+  }
 }

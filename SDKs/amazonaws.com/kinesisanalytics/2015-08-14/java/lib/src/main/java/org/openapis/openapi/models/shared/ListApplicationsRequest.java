@@ -15,6 +15,7 @@ public class ListApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartApplicationName")
     public String exclusiveStartApplicationName;
+
     public ListApplicationsRequest withExclusiveStartApplicationName(String exclusiveStartApplicationName) {
         this.exclusiveStartApplicationName = exclusiveStartApplicationName;
         return this;
@@ -23,9 +24,11 @@ public class ListApplicationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListApplicationsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
     }
     
+    public ListApplicationsRequest(){}
 }

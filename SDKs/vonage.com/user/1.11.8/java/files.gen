@@ -51,4 +51,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ValidationErrorsResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/DetailedInvalidParam.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsersHalResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/UsersEmbeddedObject.java
+docs/sdk/README.md
 USAGE.md

@@ -12,6 +12,7 @@ public class CertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beneficiaryId")
     public String beneficiaryId;
+
     public CertificateRequest withBeneficiaryId(String beneficiaryId) {
         this.beneficiaryId = beneficiaryId;
         return this;
@@ -20,9 +21,11 @@ public class CertificateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public String mobile;
+
     public CertificateRequest withMobile(String mobile) {
         this.mobile = mobile;
         return this;
     }
     
+    public CertificateRequest(){}
 }

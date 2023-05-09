@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DownloadDBLogFilePortionMessage {
     
     public String dbInstanceIdentifier;
+
     public DownloadDBLogFilePortionMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -16,6 +17,7 @@ public class DownloadDBLogFilePortionMessage {
     
     
     public String logFileName;
+
     public DownloadDBLogFilePortionMessage withLogFileName(String logFileName) {
         this.logFileName = logFileName;
         return this;
@@ -23,6 +25,7 @@ public class DownloadDBLogFilePortionMessage {
     
     
     public String marker;
+
     public DownloadDBLogFilePortionMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,9 +33,14 @@ public class DownloadDBLogFilePortionMessage {
     
     
     public Long numberOfLines;
+
     public DownloadDBLogFilePortionMessage withNumberOfLines(Long numberOfLines) {
         this.numberOfLines = numberOfLines;
         return this;
     }
     
+    public DownloadDBLogFilePortionMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("LogFileName") String logFileName) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.logFileName = logFileName;
+  }
 }

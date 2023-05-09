@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsTags {
     
     public String key;
+
     public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcEndpointServiceConfigurationsResultServiceConfigurations
     
     
     public String value;
+
     public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeVpcEndpointServiceConfigurationsResultServiceConfigurationsTags(){}
 }

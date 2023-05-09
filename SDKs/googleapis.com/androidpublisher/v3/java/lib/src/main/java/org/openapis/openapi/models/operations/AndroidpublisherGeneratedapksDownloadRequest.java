@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AndroidpublisherGeneratedapksDownloadRequest {
@@ -12,6 +13,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AndroidpublisherGeneratedapksDownloadRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AndroidpublisherGeneratedapksDownloadRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AndroidpublisherGeneratedapksDownloadRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AndroidpublisherGeneratedapksDownloadRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=downloadId")
     public String downloadId;
+
     public AndroidpublisherGeneratedapksDownloadRequest withDownloadId(String downloadId) {
         this.downloadId = downloadId;
         return this;
@@ -62,6 +68,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AndroidpublisherGeneratedapksDownloadRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AndroidpublisherGeneratedapksDownloadRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AndroidpublisherGeneratedapksDownloadRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=packageName")
     public String packageName;
+
     public AndroidpublisherGeneratedapksDownloadRequest withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
@@ -102,6 +112,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AndroidpublisherGeneratedapksDownloadRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AndroidpublisherGeneratedapksDownloadRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AndroidpublisherGeneratedapksDownloadRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,6 +145,7 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AndroidpublisherGeneratedapksDownloadRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -142,9 +156,15 @@ public class AndroidpublisherGeneratedapksDownloadRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=versionCode")
     public Long versionCode;
+
     public AndroidpublisherGeneratedapksDownloadRequest withVersionCode(Long versionCode) {
         this.versionCode = versionCode;
         return this;
     }
     
+    public AndroidpublisherGeneratedapksDownloadRequest(@JsonProperty("downloadId") String downloadId, @JsonProperty("packageName") String packageName, @JsonProperty("versionCode") Long versionCode) {
+        this.downloadId = downloadId;
+        this.packageName = packageName;
+        this.versionCode = versionCode;
+  }
 }

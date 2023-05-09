@@ -61,11 +61,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsCustombatchResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsCustombatchResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsCustombatchResponse(contentType, httpRes.statusCode()) {{
             datafeedsCustomBatchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,10 +105,8 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsDeleteResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsDeleteResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsFetchnowResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsFetchnowResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsFetchnowResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsFetchnowResponse(contentType, httpRes.statusCode()) {{
             datafeedsFetchNowResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsGetResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsGetResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsGetResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsGetResponse(contentType, httpRes.statusCode()) {{
             datafeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -241,11 +233,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsInsertResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsInsertResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsInsertResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsInsertResponse(contentType, httpRes.statusCode()) {{
             datafeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -287,11 +277,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsListResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsListResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsListResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsListResponse(contentType, httpRes.statusCode()) {{
             datafeedsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +323,9 @@ public class Datafeeds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ContentDatafeedsUpdateResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ContentDatafeedsUpdateResponse res = new org.openapis.openapi.models.operations.ContentDatafeedsUpdateResponse(contentType, httpRes.statusCode()) {{
             datafeed = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

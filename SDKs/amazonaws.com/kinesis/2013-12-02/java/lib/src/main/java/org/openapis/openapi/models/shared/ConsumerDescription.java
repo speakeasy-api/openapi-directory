@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ConsumerDescription {
     @JsonProperty("ConsumerARN")
     public String consumerARN;
+
     public ConsumerDescription withConsumerARN(String consumerARN) {
         this.consumerARN = consumerARN;
         return this;
@@ -26,6 +27,7 @@ public class ConsumerDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ConsumerCreationTimestamp")
     public OffsetDateTime consumerCreationTimestamp;
+
     public ConsumerDescription withConsumerCreationTimestamp(OffsetDateTime consumerCreationTimestamp) {
         this.consumerCreationTimestamp = consumerCreationTimestamp;
         return this;
@@ -33,6 +35,7 @@ public class ConsumerDescription {
     
     @JsonProperty("ConsumerName")
     public String consumerName;
+
     public ConsumerDescription withConsumerName(String consumerName) {
         this.consumerName = consumerName;
         return this;
@@ -40,6 +43,7 @@ public class ConsumerDescription {
     
     @JsonProperty("ConsumerStatus")
     public ConsumerStatusEnum consumerStatus;
+
     public ConsumerDescription withConsumerStatus(ConsumerStatusEnum consumerStatus) {
         this.consumerStatus = consumerStatus;
         return this;
@@ -47,9 +51,17 @@ public class ConsumerDescription {
     
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public ConsumerDescription withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
     }
     
+    public ConsumerDescription(@JsonProperty("ConsumerARN") String consumerARN, @JsonProperty("ConsumerCreationTimestamp") OffsetDateTime consumerCreationTimestamp, @JsonProperty("ConsumerName") String consumerName, @JsonProperty("ConsumerStatus") ConsumerStatusEnum consumerStatus, @JsonProperty("StreamARN") String streamARN) {
+        this.consumerARN = consumerARN;
+        this.consumerCreationTimestamp = consumerCreationTimestamp;
+        this.consumerName = consumerName;
+        this.consumerStatus = consumerStatus;
+        this.streamARN = streamARN;
+  }
 }

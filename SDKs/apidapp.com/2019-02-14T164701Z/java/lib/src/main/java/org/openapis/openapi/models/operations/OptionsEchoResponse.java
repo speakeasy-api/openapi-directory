@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OptionsEchoResponse {
     
     public String contentType;
+
     public OptionsEchoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class OptionsEchoResponse {
      */
     
     public java.util.Map<String, Object> empty;
+
     public OptionsEchoResponse withEmpty(java.util.Map<String, Object> empty) {
         this.empty = empty;
         return this;
@@ -26,6 +29,7 @@ public class OptionsEchoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OptionsEchoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class OptionsEchoResponse {
     
     
     public Integer statusCode;
+
     public OptionsEchoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class OptionsEchoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OptionsEchoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OptionsEchoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

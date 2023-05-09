@@ -136,6 +136,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PutWorkspaceSlugOrganiz
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceSlugReportsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceSlugReportsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspaceSlugReportsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetUserSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspaceSlugWebhooksIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteWorkspaceSlugWebhooksIdRequest.java
@@ -152,6 +153,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/PostWorkspaceSlugWebhoo
 lib/src/main/java/org/openapis/openapi/models/operations/PutWorkspaceSlugWebhooksIdSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutWorkspaceSlugWebhooksIdRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PutWorkspaceSlugWebhooksIdResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspacesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspacesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspacesWorkspaceSlugSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetWorkspacesWorkspaceSlugRequest.java
@@ -169,4 +171,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/MemberAndIdentity.java
 lib/src/main/java/org/openapis/openapi/models/shared/Note.java
 lib/src/main/java/org/openapis/openapi/models/shared/Organization.java
 lib/src/main/java/org/openapis/openapi/models/shared/WebhookSubscription.java
+docs/sdk/README.md
+docs/activities/README.md
+docs/activitytypes/README.md
+docs/members/README.md
+docs/notes/README.md
+docs/organizations/README.md
+docs/reports/README.md
+docs/users/README.md
+docs/webhooks/README.md
+docs/workspaces/README.md
 USAGE.md

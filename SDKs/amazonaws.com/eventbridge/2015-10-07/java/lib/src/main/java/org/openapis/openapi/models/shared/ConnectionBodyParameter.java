@@ -15,6 +15,7 @@ public class ConnectionBodyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsValueSecret")
     public Boolean isValueSecret;
+
     public ConnectionBodyParameter withIsValueSecret(Boolean isValueSecret) {
         this.isValueSecret = isValueSecret;
         return this;
@@ -23,6 +24,7 @@ public class ConnectionBodyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ConnectionBodyParameter withKey(String key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ConnectionBodyParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ConnectionBodyParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ConnectionBodyParameter(){}
 }

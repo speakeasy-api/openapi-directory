@@ -20,6 +20,7 @@ public class OrganizationConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConformancePackInputParameters")
     public ConformancePackInputParameter[] conformancePackInputParameters;
+
     public OrganizationConformancePack withConformancePackInputParameters(ConformancePackInputParameter[] conformancePackInputParameters) {
         this.conformancePackInputParameters = conformancePackInputParameters;
         return this;
@@ -28,6 +29,7 @@ public class OrganizationConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3Bucket")
     public String deliveryS3Bucket;
+
     public OrganizationConformancePack withDeliveryS3Bucket(String deliveryS3Bucket) {
         this.deliveryS3Bucket = deliveryS3Bucket;
         return this;
@@ -36,6 +38,7 @@ public class OrganizationConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeliveryS3KeyPrefix")
     public String deliveryS3KeyPrefix;
+
     public OrganizationConformancePack withDeliveryS3KeyPrefix(String deliveryS3KeyPrefix) {
         this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
         return this;
@@ -44,6 +47,7 @@ public class OrganizationConformancePack {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludedAccounts")
     public String[] excludedAccounts;
+
     public OrganizationConformancePack withExcludedAccounts(String[] excludedAccounts) {
         this.excludedAccounts = excludedAccounts;
         return this;
@@ -53,6 +57,7 @@ public class OrganizationConformancePack {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public OrganizationConformancePack withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -60,6 +65,7 @@ public class OrganizationConformancePack {
     
     @JsonProperty("OrganizationConformancePackArn")
     public String organizationConformancePackArn;
+
     public OrganizationConformancePack withOrganizationConformancePackArn(String organizationConformancePackArn) {
         this.organizationConformancePackArn = organizationConformancePackArn;
         return this;
@@ -67,9 +73,15 @@ public class OrganizationConformancePack {
     
     @JsonProperty("OrganizationConformancePackName")
     public String organizationConformancePackName;
+
     public OrganizationConformancePack withOrganizationConformancePackName(String organizationConformancePackName) {
         this.organizationConformancePackName = organizationConformancePackName;
         return this;
     }
     
+    public OrganizationConformancePack(@JsonProperty("LastUpdateTime") OffsetDateTime lastUpdateTime, @JsonProperty("OrganizationConformancePackArn") String organizationConformancePackArn, @JsonProperty("OrganizationConformancePackName") String organizationConformancePackName) {
+        this.lastUpdateTime = lastUpdateTime;
+        this.organizationConformancePackArn = organizationConformancePackArn;
+        this.organizationConformancePackName = organizationConformancePackName;
+  }
 }

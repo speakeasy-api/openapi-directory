@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LhcerResponse {
     
     public String contentType;
+
     public LhcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LhcerResponse {
     
     
     public Integer statusCode;
+
     public LhcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LhcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LhcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class LhcerResponse {
      */
     
     public Lhcer400ApplicationJSON lhcer400ApplicationJSONObject;
+
     public LhcerResponse withLhcer400ApplicationJSONObject(Lhcer400ApplicationJSON lhcer400ApplicationJSONObject) {
         this.lhcer400ApplicationJSONObject = lhcer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class LhcerResponse {
      */
     
     public Lhcer401ApplicationJSON lhcer401ApplicationJSONObject;
+
     public LhcerResponse withLhcer401ApplicationJSONObject(Lhcer401ApplicationJSON lhcer401ApplicationJSONObject) {
         this.lhcer401ApplicationJSONObject = lhcer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class LhcerResponse {
      */
     
     public Lhcer404ApplicationJSON lhcer404ApplicationJSONObject;
+
     public LhcerResponse withLhcer404ApplicationJSONObject(Lhcer404ApplicationJSON lhcer404ApplicationJSONObject) {
         this.lhcer404ApplicationJSONObject = lhcer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class LhcerResponse {
      */
     
     public Lhcer500ApplicationJSON lhcer500ApplicationJSONObject;
+
     public LhcerResponse withLhcer500ApplicationJSONObject(Lhcer500ApplicationJSON lhcer500ApplicationJSONObject) {
         this.lhcer500ApplicationJSONObject = lhcer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class LhcerResponse {
      */
     
     public Lhcer502ApplicationJSON lhcer502ApplicationJSONObject;
+
     public LhcerResponse withLhcer502ApplicationJSONObject(Lhcer502ApplicationJSON lhcer502ApplicationJSONObject) {
         this.lhcer502ApplicationJSONObject = lhcer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class LhcerResponse {
      */
     
     public Lhcer503ApplicationJSON lhcer503ApplicationJSONObject;
+
     public LhcerResponse withLhcer503ApplicationJSONObject(Lhcer503ApplicationJSON lhcer503ApplicationJSONObject) {
         this.lhcer503ApplicationJSONObject = lhcer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class LhcerResponse {
      */
     
     public Lhcer504ApplicationJSON lhcer504ApplicationJSONObject;
+
     public LhcerResponse withLhcer504ApplicationJSONObject(Lhcer504ApplicationJSON lhcer504ApplicationJSONObject) {
         this.lhcer504ApplicationJSONObject = lhcer504ApplicationJSONObject;
         return this;
     }
     
+    public LhcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

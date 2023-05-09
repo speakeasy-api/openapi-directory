@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListEntityPersonasRequest {
     @JsonProperty("Id")
     public String id;
+
     public ListEntityPersonasRequest withId(String id) {
         this.id = id;
         return this;
@@ -18,6 +19,7 @@ public class ListEntityPersonasRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public ListEntityPersonasRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -26,6 +28,7 @@ public class ListEntityPersonasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListEntityPersonasRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,9 +37,14 @@ public class ListEntityPersonasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntityPersonasRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntityPersonasRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId) {
+        this.id = id;
+        this.indexId = indexId;
+  }
 }

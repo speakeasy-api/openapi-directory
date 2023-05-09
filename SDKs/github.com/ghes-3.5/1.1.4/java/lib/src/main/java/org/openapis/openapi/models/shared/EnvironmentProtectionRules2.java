@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EnvironmentProtectionRules2 {
     @JsonProperty("id")
     public Long id;
+
     public EnvironmentProtectionRules2 withId(Long id) {
         this.id = id;
         return this;
@@ -18,6 +19,7 @@ public class EnvironmentProtectionRules2 {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public EnvironmentProtectionRules2 withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -29,6 +31,7 @@ public class EnvironmentProtectionRules2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reviewers")
     public EnvironmentProtectionRules2Reviewers[] reviewers;
+
     public EnvironmentProtectionRules2 withReviewers(EnvironmentProtectionRules2Reviewers[] reviewers) {
         this.reviewers = reviewers;
         return this;
@@ -36,9 +39,15 @@ public class EnvironmentProtectionRules2 {
     
     @JsonProperty("type")
     public String type;
+
     public EnvironmentProtectionRules2 withType(String type) {
         this.type = type;
         return this;
     }
     
+    public EnvironmentProtectionRules2(@JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("type") String type) {
+        this.id = id;
+        this.nodeId = nodeId;
+        this.type = type;
+  }
 }

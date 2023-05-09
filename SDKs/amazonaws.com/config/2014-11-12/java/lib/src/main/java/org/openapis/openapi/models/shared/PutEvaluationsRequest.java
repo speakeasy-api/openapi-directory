@@ -15,6 +15,7 @@ public class PutEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Evaluations")
     public Evaluation[] evaluations;
+
     public PutEvaluationsRequest withEvaluations(Evaluation[] evaluations) {
         this.evaluations = evaluations;
         return this;
@@ -22,6 +23,7 @@ public class PutEvaluationsRequest {
     
     @JsonProperty("ResultToken")
     public String resultToken;
+
     public PutEvaluationsRequest withResultToken(String resultToken) {
         this.resultToken = resultToken;
         return this;
@@ -30,9 +32,13 @@ public class PutEvaluationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TestMode")
     public Boolean testMode;
+
     public PutEvaluationsRequest withTestMode(Boolean testMode) {
         this.testMode = testMode;
         return this;
     }
     
+    public PutEvaluationsRequest(@JsonProperty("ResultToken") String resultToken) {
+        this.resultToken = resultToken;
+  }
 }

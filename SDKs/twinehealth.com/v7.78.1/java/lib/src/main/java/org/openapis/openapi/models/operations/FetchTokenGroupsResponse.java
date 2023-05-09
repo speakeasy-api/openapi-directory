@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FetchTokenGroupsResponse {
     
     public String contentType;
+
     public FetchTokenGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FetchTokenGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse;
+
     public FetchTokenGroupsResponse withFetchErrorResponse(org.openapis.openapi.models.shared.FetchErrorResponse fetchErrorResponse) {
         this.fetchErrorResponse = fetchErrorResponse;
         return this;
@@ -29,6 +32,7 @@ public class FetchTokenGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.FetchGroupsResponse fetchGroupsResponse;
+
     public FetchTokenGroupsResponse withFetchGroupsResponse(org.openapis.openapi.models.shared.FetchGroupsResponse fetchGroupsResponse) {
         this.fetchGroupsResponse = fetchGroupsResponse;
         return this;
@@ -36,6 +40,7 @@ public class FetchTokenGroupsResponse {
     
     
     public Integer statusCode;
+
     public FetchTokenGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class FetchTokenGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FetchTokenGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FetchTokenGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

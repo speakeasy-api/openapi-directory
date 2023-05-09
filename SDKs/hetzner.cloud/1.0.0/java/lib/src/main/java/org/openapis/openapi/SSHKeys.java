@@ -55,10 +55,8 @@ public class SSHKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteSshKeysIdResponse res = new org.openapis.openapi.models.operations.DeleteSshKeysIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteSshKeysIdResponse res = new org.openapis.openapi.models.operations.DeleteSshKeysIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -94,11 +92,9 @@ public class SSHKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSshKeysResponse res = new org.openapis.openapi.models.operations.GetSshKeysResponse() {{
+        org.openapis.openapi.models.operations.GetSshKeysResponse res = new org.openapis.openapi.models.operations.GetSshKeysResponse(contentType, httpRes.statusCode()) {{
             getSshKeys200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -133,11 +129,9 @@ public class SSHKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSshKeysIdResponse res = new org.openapis.openapi.models.operations.GetSshKeysIdResponse() {{
+        org.openapis.openapi.models.operations.GetSshKeysIdResponse res = new org.openapis.openapi.models.operations.GetSshKeysIdResponse(contentType, httpRes.statusCode()) {{
             getSshKeysId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +168,9 @@ public class SSHKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostSshKeysResponse res = new org.openapis.openapi.models.operations.PostSshKeysResponse() {{
+        org.openapis.openapi.models.operations.PostSshKeysResponse res = new org.openapis.openapi.models.operations.PostSshKeysResponse(contentType, httpRes.statusCode()) {{
             postSshKeys201ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -218,11 +210,9 @@ public class SSHKeys {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutSshKeysIdResponse res = new org.openapis.openapi.models.operations.PutSshKeysIdResponse() {{
+        org.openapis.openapi.models.operations.PutSshKeysIdResponse res = new org.openapis.openapi.models.operations.PutSshKeysIdResponse(contentType, httpRes.statusCode()) {{
             putSshKeysId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

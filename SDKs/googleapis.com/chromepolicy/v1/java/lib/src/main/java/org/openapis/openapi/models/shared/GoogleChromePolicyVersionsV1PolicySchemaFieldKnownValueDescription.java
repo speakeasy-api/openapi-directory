@@ -18,8 +18,21 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription withDescription(String description) {
         this.description = description;
+        return this;
+    }
+    
+    /**
+     * Output only. Field conditions required for this value to be valid.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("fieldDependencies")
+    public GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[] fieldDependencies;
+
+    public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription withFieldDependencies(GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[] fieldDependencies) {
+        this.fieldDependencies = fieldDependencies;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription(){}
 }

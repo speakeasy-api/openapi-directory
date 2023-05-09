@@ -12,6 +12,7 @@ public class GetRateBasedRuleManagedKeysRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public GetRateBasedRuleManagedKeysRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -19,9 +20,13 @@ public class GetRateBasedRuleManagedKeysRequest {
     
     @JsonProperty("RuleId")
     public String ruleId;
+
     public GetRateBasedRuleManagedKeysRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public GetRateBasedRuleManagedKeysRequest(@JsonProperty("RuleId") String ruleId) {
+        this.ruleId = ruleId;
+  }
 }

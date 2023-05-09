@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowSetFileNameRequest {
@@ -12,6 +13,7 @@ public class ProtocolNetflowSetFileNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolNetflowSetFileNameRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolNetflowSetFileNameRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileName")
     public String fileName;
+
     public ProtocolNetflowSetFileNameRequest withFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
     
+    public ProtocolNetflowSetFileNameRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("fileName") String fileName) {
+        this.agentNum = agentNum;
+        this.fileName = fileName;
+  }
 }

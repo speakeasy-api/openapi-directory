@@ -22,6 +22,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_id")
     public String catalogObjectId;
+
     public InventoryPhysicalCount withCatalogObjectId(String catalogObjectId) {
         this.catalogObjectId = catalogObjectId;
         return this;
@@ -35,6 +36,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalog_object_type")
     public String catalogObjectType;
+
     public InventoryPhysicalCount withCatalogObjectType(String catalogObjectType) {
         this.catalogObjectType = catalogObjectType;
         return this;
@@ -46,6 +48,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public InventoryPhysicalCount withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -58,6 +61,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("employee_id")
     public String employeeId;
+
     public InventoryPhysicalCount withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -70,6 +74,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public InventoryPhysicalCount withId(String id) {
         this.id = id;
         return this;
@@ -82,6 +87,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public InventoryPhysicalCount withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -96,6 +102,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurred_at")
     public String occurredAt;
+
     public InventoryPhysicalCount withOccurredAt(String occurredAt) {
         this.occurredAt = occurredAt;
         return this;
@@ -108,6 +115,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public InventoryPhysicalCount withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
@@ -121,6 +129,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public InventoryPhysicalCount withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -132,6 +141,7 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public SourceApplication source;
+
     public InventoryPhysicalCount withSource(SourceApplication source) {
         this.source = source;
         return this;
@@ -144,9 +154,11 @@ public class InventoryPhysicalCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public InventoryPhysicalCount withState(String state) {
         this.state = state;
         return this;
     }
     
+    public InventoryPhysicalCount(){}
 }

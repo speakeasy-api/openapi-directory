@@ -12,6 +12,7 @@ public class ChannelCatalogMarketplacePropertyGroup {
      */
     @JsonProperty("name")
     public String name;
+
     public ChannelCatalogMarketplacePropertyGroup withName(String name) {
         this.name = name;
         return this;
@@ -22,6 +23,7 @@ public class ChannelCatalogMarketplacePropertyGroup {
      */
     @JsonProperty("position")
     public Long position;
+
     public ChannelCatalogMarketplacePropertyGroup withPosition(Long position) {
         this.position = position;
         return this;
@@ -29,9 +31,15 @@ public class ChannelCatalogMarketplacePropertyGroup {
     
     @JsonProperty("properties")
     public ChannelCatalogMarketplaceProperty[] properties;
+
     public ChannelCatalogMarketplacePropertyGroup withProperties(ChannelCatalogMarketplaceProperty[] properties) {
         this.properties = properties;
         return this;
     }
     
+    public ChannelCatalogMarketplacePropertyGroup(@JsonProperty("name") String name, @JsonProperty("position") Long position, @JsonProperty("properties") ChannelCatalogMarketplaceProperty[] properties) {
+        this.name = name;
+        this.position = position;
+        this.properties = properties;
+  }
 }

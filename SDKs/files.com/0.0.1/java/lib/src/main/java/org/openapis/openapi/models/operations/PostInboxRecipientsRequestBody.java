@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostInboxRecipientsRequestBody {
@@ -12,6 +13,7 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=company")
     public String company;
+
     public PostInboxRecipientsRequestBody withCompany(String company) {
         this.company = company;
         return this;
@@ -22,6 +24,7 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=inbox_id")
     public Integer inboxId;
+
     public PostInboxRecipientsRequestBody withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -32,6 +35,7 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostInboxRecipientsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +46,7 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=note")
     public String note;
+
     public PostInboxRecipientsRequestBody withNote(String note) {
         this.note = note;
         return this;
@@ -52,6 +57,7 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=recipient")
     public String recipient;
+
     public PostInboxRecipientsRequestBody withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -62,19 +68,14 @@ public class PostInboxRecipientsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=share_after_create")
     public Boolean shareAfterCreate;
+
     public PostInboxRecipientsRequestBody withShareAfterCreate(Boolean shareAfterCreate) {
         this.shareAfterCreate = shareAfterCreate;
         return this;
     }
     
-    /**
-     * User ID.  Provide a value of `0` to operate the current session's user.
-     */
-    @SpeakeasyMetadata("multipartForm:name=user_id")
-    public Integer userId;
-    public PostInboxRecipientsRequestBody withUserId(Integer userId) {
-        this.userId = userId;
-        return this;
-    }
-    
+    public PostInboxRecipientsRequestBody(@JsonProperty("inbox_id") Integer inboxId, @JsonProperty("recipient") String recipient) {
+        this.inboxId = inboxId;
+        this.recipient = recipient;
+  }
 }

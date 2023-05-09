@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PackageProjectTranslationMemoryForLanguageStatusRequest {
@@ -12,6 +13,7 @@ public class PackageProjectTranslationMemoryForLanguageStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=async_request_key")
     public String asyncRequestKey;
+
     public PackageProjectTranslationMemoryForLanguageStatusRequest withAsyncRequestKey(String asyncRequestKey) {
         this.asyncRequestKey = asyncRequestKey;
         return this;
@@ -22,6 +24,7 @@ public class PackageProjectTranslationMemoryForLanguageStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=languageCode")
     public String languageCode;
+
     public PackageProjectTranslationMemoryForLanguageStatusRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -32,9 +35,15 @@ public class PackageProjectTranslationMemoryForLanguageStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public Long projectId;
+
     public PackageProjectTranslationMemoryForLanguageStatusRequest withProjectId(Long projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public PackageProjectTranslationMemoryForLanguageStatusRequest(@JsonProperty("async_request_key") String asyncRequestKey, @JsonProperty("languageCode") String languageCode, @JsonProperty("projectId") Long projectId) {
+        this.asyncRequestKey = asyncRequestKey;
+        this.languageCode = languageCode;
+        this.projectId = projectId;
+  }
 }

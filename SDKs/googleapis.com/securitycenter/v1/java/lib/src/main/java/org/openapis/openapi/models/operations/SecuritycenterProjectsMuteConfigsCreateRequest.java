@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SecuritycenterProjectsMuteConfigsCreateRequest {
@@ -12,6 +13,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput googleCloudSecuritycenterV1MuteConfigInput;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withGoogleCloudSecuritycenterV1MuteConfigInput(org.openapis.openapi.models.shared.GoogleCloudSecuritycenterV1MuteConfigInput googleCloudSecuritycenterV1MuteConfigInput) {
         this.googleCloudSecuritycenterV1MuteConfigInput = googleCloudSecuritycenterV1MuteConfigInput;
         return this;
@@ -29,6 +32,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,16 +76,18 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withKey(String key) {
         this.key = key;
         return this;
     }
     
     /**
-     * Required. Unique identifier provided by the client within the parent scope. It must consist of lower case letters, numbers, and hyphen, with the first character a letter, the last a letter or a number, and a 63 character maximum.
+     * Required. Unique identifier provided by the client within the parent scope. It must consist of only lowercase letters, numbers, and hyphens, must start with a letter, must end with either a letter or a number, and must be 63 characters or less.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=muteConfigId")
     public String muteConfigId;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withMuteConfigId(String muteConfigId) {
         this.muteConfigId = muteConfigId;
         return this;
@@ -89,6 +98,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -109,6 +120,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -139,9 +153,13 @@ public class SecuritycenterProjectsMuteConfigsCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SecuritycenterProjectsMuteConfigsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public SecuritycenterProjectsMuteConfigsCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

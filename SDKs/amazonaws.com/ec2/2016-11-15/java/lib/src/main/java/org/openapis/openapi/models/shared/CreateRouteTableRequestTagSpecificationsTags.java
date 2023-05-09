@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateRouteTableRequestTagSpecificationsTags {
     
     public String key;
+
     public CreateRouteTableRequestTagSpecificationsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateRouteTableRequestTagSpecificationsTags {
     
     
     public String value;
+
     public CreateRouteTableRequestTagSpecificationsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateRouteTableRequestTagSpecificationsTags(){}
 }

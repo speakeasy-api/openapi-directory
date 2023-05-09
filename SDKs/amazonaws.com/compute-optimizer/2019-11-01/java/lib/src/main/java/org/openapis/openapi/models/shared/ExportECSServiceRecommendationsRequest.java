@@ -12,6 +12,7 @@ public class ExportECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public ExportECSServiceRecommendationsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -20,6 +21,7 @@ public class ExportECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldsToExport")
     public ExportableECSServiceFieldEnum[] fieldsToExport;
+
     public ExportECSServiceRecommendationsRequest withFieldsToExport(ExportableECSServiceFieldEnum[] fieldsToExport) {
         this.fieldsToExport = fieldsToExport;
         return this;
@@ -28,6 +30,7 @@ public class ExportECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileFormat")
     public FileFormatEnum fileFormat;
+
     public ExportECSServiceRecommendationsRequest withFileFormat(FileFormatEnum fileFormat) {
         this.fileFormat = fileFormat;
         return this;
@@ -36,6 +39,7 @@ public class ExportECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ECSServiceRecommendationFilter[] filters;
+
     public ExportECSServiceRecommendationsRequest withFilters(ECSServiceRecommendationFilter[] filters) {
         this.filters = filters;
         return this;
@@ -44,6 +48,7 @@ public class ExportECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeMemberAccounts")
     public Boolean includeMemberAccounts;
+
     public ExportECSServiceRecommendationsRequest withIncludeMemberAccounts(Boolean includeMemberAccounts) {
         this.includeMemberAccounts = includeMemberAccounts;
         return this;
@@ -54,9 +59,13 @@ public class ExportECSServiceRecommendationsRequest {
      */
     @JsonProperty("s3DestinationConfig")
     public S3DestinationConfig s3DestinationConfig;
+
     public ExportECSServiceRecommendationsRequest withS3DestinationConfig(S3DestinationConfig s3DestinationConfig) {
         this.s3DestinationConfig = s3DestinationConfig;
         return this;
     }
     
+    public ExportECSServiceRecommendationsRequest(@JsonProperty("s3DestinationConfig") S3DestinationConfig s3DestinationConfig) {
+        this.s3DestinationConfig = s3DestinationConfig;
+  }
 }

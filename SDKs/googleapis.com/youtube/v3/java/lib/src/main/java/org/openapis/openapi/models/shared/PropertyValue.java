@@ -18,6 +18,7 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public PropertyValue withProperty(String property) {
         this.property = property;
         return this;
@@ -29,9 +30,11 @@ public class PropertyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PropertyValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PropertyValue(){}
 }

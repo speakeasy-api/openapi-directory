@@ -15,6 +15,7 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abortConfig")
     public UpdateJobRequestBodyAbortConfig abortConfig;
+
     public UpdateJobRequestBody withAbortConfig(UpdateJobRequestBodyAbortConfig abortConfig) {
         this.abortConfig = abortConfig;
         return this;
@@ -26,6 +27,7 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateJobRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRetryConfig")
     public UpdateJobRequestBodyJobExecutionsRetryConfig jobExecutionsRetryConfig;
+
     public UpdateJobRequestBody withJobExecutionsRetryConfig(UpdateJobRequestBodyJobExecutionsRetryConfig jobExecutionsRetryConfig) {
         this.jobExecutionsRetryConfig = jobExecutionsRetryConfig;
         return this;
@@ -48,6 +51,7 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobExecutionsRolloutConfig")
     public UpdateJobRequestBodyJobExecutionsRolloutConfig jobExecutionsRolloutConfig;
+
     public UpdateJobRequestBody withJobExecutionsRolloutConfig(UpdateJobRequestBodyJobExecutionsRolloutConfig jobExecutionsRolloutConfig) {
         this.jobExecutionsRolloutConfig = jobExecutionsRolloutConfig;
         return this;
@@ -59,6 +63,7 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("presignedUrlConfig")
     public UpdateJobRequestBodyPresignedUrlConfig presignedUrlConfig;
+
     public UpdateJobRequestBody withPresignedUrlConfig(UpdateJobRequestBodyPresignedUrlConfig presignedUrlConfig) {
         this.presignedUrlConfig = presignedUrlConfig;
         return this;
@@ -70,9 +75,11 @@ public class UpdateJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeoutConfig")
     public UpdateJobRequestBodyTimeoutConfig timeoutConfig;
+
     public UpdateJobRequestBody withTimeoutConfig(UpdateJobRequestBodyTimeoutConfig timeoutConfig) {
         this.timeoutConfig = timeoutConfig;
         return this;
     }
     
+    public UpdateJobRequestBody(){}
 }

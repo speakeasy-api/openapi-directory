@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportCertificateRequest {
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public ExportCertificateRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -16,9 +17,14 @@ public class ExportCertificateRequest {
     
     @JsonProperty("Passphrase")
     public String passphrase;
+
     public ExportCertificateRequest withPassphrase(String passphrase) {
         this.passphrase = passphrase;
         return this;
     }
     
+    public ExportCertificateRequest(@JsonProperty("CertificateArn") String certificateArn, @JsonProperty("Passphrase") String passphrase) {
+        this.certificateArn = certificateArn;
+        this.passphrase = passphrase;
+  }
 }

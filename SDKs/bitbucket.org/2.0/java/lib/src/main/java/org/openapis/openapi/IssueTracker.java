@@ -69,12 +69,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse(contentType, httpRes.statusCode()) {{
             issue = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,11 +116,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401) {
@@ -161,10 +157,8 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -196,11 +190,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -237,11 +229,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse() {{
+        org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.DeleteRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -281,12 +271,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsResponse(contentType, httpRes.statusCode()) {{
             paginatedComponents = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -330,12 +318,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugComponentsComponentIdResponse(contentType, httpRes.statusCode()) {{
             component = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -379,12 +365,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesResponse(contentType, httpRes.statusCode()) {{
             paginatedIssues = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -457,12 +441,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesExportRepoNameIssuesTaskIdZipResponse(contentType, httpRes.statusCode()) {{
             issueJobStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -528,12 +510,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesImportResponse(contentType, httpRes.statusCode()) {{
             issueJobStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 202) {
@@ -577,12 +557,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse(contentType, httpRes.statusCode()) {{
             issue = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -631,12 +609,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             paginatedIssueAttachments = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -689,11 +665,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsPathResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 302) {
@@ -867,12 +841,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse(contentType, httpRes.statusCode()) {{
             paginatedLogEntries = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -919,12 +891,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesChangeIdResponse(contentType, httpRes.statusCode()) {{
             issueChange = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -981,11 +951,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse(contentType, httpRes.statusCode()) {{
             paginatedIssueComments = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1022,11 +990,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
             issueComment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1065,11 +1031,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -1107,11 +1071,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -1151,12 +1113,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesResponse(contentType, httpRes.statusCode()) {{
             paginatedMilestones = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1200,12 +1160,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugMilestonesMilestoneIdResponse(contentType, httpRes.statusCode()) {{
             milestone = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1252,12 +1210,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsResponse(contentType, httpRes.statusCode()) {{
             paginatedVersions = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1301,12 +1257,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse() {{
+        org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse res = new org.openapis.openapi.models.operations.GetRepositoriesWorkspaceRepoSlugVersionsVersionIdResponse(contentType, httpRes.statusCode()) {{
             version = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1361,12 +1315,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesResponse(contentType, httpRes.statusCode()) {{
             issue = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1422,11 +1374,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesExportResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1488,12 +1438,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesImportResponse(contentType, httpRes.statusCode()) {{
             issueJobStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1543,11 +1491,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdAttachmentsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1632,12 +1578,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdChangesResponse(contentType, httpRes.statusCode()) {{
             issueChange = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1695,11 +1639,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse() {{
+        org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse res = new org.openapis.openapi.models.operations.PostRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -1765,12 +1707,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdResponse(contentType, httpRes.statusCode()) {{
             issue = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1827,12 +1767,10 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdCommentsCommentIdResponse(contentType, httpRes.statusCode()) {{
             issueComment = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1879,11 +1817,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdVoteResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -1923,11 +1859,9 @@ public class IssueTracker {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse() {{
+        org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse res = new org.openapis.openapi.models.operations.PutRepositoriesWorkspaceRepoSlugIssuesIssueIdWatchResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {

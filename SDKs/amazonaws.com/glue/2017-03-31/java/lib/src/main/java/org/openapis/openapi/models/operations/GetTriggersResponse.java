@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetTriggersResponse {
     
     public String contentType;
+
     public GetTriggersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetTriggersResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetTriggersResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetTriggersResponse {
      */
     
     public org.openapis.openapi.models.shared.GetTriggersResponse getTriggersResponse;
+
     public GetTriggersResponse withGetTriggersResponse(org.openapis.openapi.models.shared.GetTriggersResponse getTriggersResponse) {
         this.getTriggersResponse = getTriggersResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetTriggersResponse {
      */
     
     public Object internalServiceException;
+
     public GetTriggersResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetTriggersResponse {
      */
     
     public Object invalidInputException;
+
     public GetTriggersResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetTriggersResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetTriggersResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -66,6 +73,7 @@ public class GetTriggersResponse {
     
     
     public Integer statusCode;
+
     public GetTriggersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetTriggersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetTriggersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetTriggersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class InventoryResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Data")
     public java.util.Map<String, InventoryResultItem> data;
+
     public InventoryResultEntity withData(java.util.Map<String, InventoryResultItem> data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class InventoryResultEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public InventoryResultEntity withId(String id) {
         this.id = id;
         return this;
     }
     
+    public InventoryResultEntity(){}
 }

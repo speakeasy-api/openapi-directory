@@ -21,6 +21,7 @@ public class ListSourceRepositoriesItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdTime")
     public OffsetDateTime createdTime;
+
     public ListSourceRepositoriesItem withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -29,6 +30,7 @@ public class ListSourceRepositoriesItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ListSourceRepositoriesItem withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +38,7 @@ public class ListSourceRepositoriesItem {
     
     @JsonProperty("id")
     public String id;
+
     public ListSourceRepositoriesItem withId(String id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class ListSourceRepositoriesItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public ListSourceRepositoriesItem withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -52,9 +56,16 @@ public class ListSourceRepositoriesItem {
     
     @JsonProperty("name")
     public String name;
+
     public ListSourceRepositoriesItem withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ListSourceRepositoriesItem(@JsonProperty("createdTime") OffsetDateTime createdTime, @JsonProperty("id") String id, @JsonProperty("lastUpdatedTime") OffsetDateTime lastUpdatedTime, @JsonProperty("name") String name) {
+        this.createdTime = createdTime;
+        this.id = id;
+        this.lastUpdatedTime = lastUpdatedTime;
+        this.name = name;
+  }
 }

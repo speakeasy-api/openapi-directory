@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Cost {
     @JsonProperty("amount")
     public Double amount;
+
     public Cost withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -19,6 +20,7 @@ public class Cost {
     
     @JsonProperty("currency")
     public String currency;
+
     public Cost withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -26,9 +28,15 @@ public class Cost {
     
     @JsonProperty("frequency")
     public CostFrequencyEnum frequency;
+
     public Cost withFrequency(CostFrequencyEnum frequency) {
         this.frequency = frequency;
         return this;
     }
     
+    public Cost(@JsonProperty("amount") Double amount, @JsonProperty("currency") String currency, @JsonProperty("frequency") CostFrequencyEnum frequency) {
+        this.amount = amount;
+        this.currency = currency;
+        this.frequency = frequency;
+  }
 }

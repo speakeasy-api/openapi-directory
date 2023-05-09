@@ -15,6 +15,7 @@ public class GetBucketMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricData")
     public MetricDatapoint[] metricData;
+
     public GetBucketMetricDataResult withMetricData(MetricDatapoint[] metricData) {
         this.metricData = metricData;
         return this;
@@ -23,9 +24,11 @@ public class GetBucketMetricDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public BucketMetricNameEnum metricName;
+
     public GetBucketMetricDataResult withMetricName(BucketMetricNameEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public GetBucketMetricDataResult(){}
 }

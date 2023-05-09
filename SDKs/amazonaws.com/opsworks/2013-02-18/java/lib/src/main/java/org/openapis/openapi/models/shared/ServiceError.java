@@ -15,6 +15,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public ServiceError withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -23,6 +24,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public ServiceError withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -31,6 +33,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ServiceError withMessage(String message) {
         this.message = message;
         return this;
@@ -39,6 +42,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceErrorId")
     public String serviceErrorId;
+
     public ServiceError withServiceErrorId(String serviceErrorId) {
         this.serviceErrorId = serviceErrorId;
         return this;
@@ -47,6 +51,7 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public ServiceError withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -55,9 +60,11 @@ public class ServiceError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ServiceError withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ServiceError(){}
 }

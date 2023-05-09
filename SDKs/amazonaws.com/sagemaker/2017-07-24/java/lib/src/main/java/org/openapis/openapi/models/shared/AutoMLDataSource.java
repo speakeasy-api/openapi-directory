@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoMLDataSource {
     @JsonProperty("S3DataSource")
     public AutoMls3DataSource s3DataSource;
+
     public AutoMLDataSource withS3DataSource(AutoMls3DataSource s3DataSource) {
         this.s3DataSource = s3DataSource;
         return this;
     }
     
+    public AutoMLDataSource(@JsonProperty("S3DataSource") AutoMls3DataSource s3DataSource) {
+        this.s3DataSource = s3DataSource;
+  }
 }

@@ -365,4 +365,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/SigningBasketResponse201.ja
 lib/src/main/java/org/openapis/openapi/models/shared/LinksSigningBasket.java
 lib/src/main/java/org/openapis/openapi/models/shared/SigningBasket.java
 lib/src/main/java/org/openapis/openapi/models/shared/SigningBasketResponse200.java
+docs/sdk/README.md
+docs/accountinformationserviceais/README.md
+docs/commonservices/README.md
+docs/confirmationoffundsservicepiis/README.md
+docs/paymentinitiationservicepis/README.md
+docs/signingbasketsservicesbs/README.md
 USAGE.md

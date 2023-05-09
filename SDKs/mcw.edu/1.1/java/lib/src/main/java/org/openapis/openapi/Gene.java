@@ -47,11 +47,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETResponse res = new org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETResponse res = new org.openapis.openapi.models.operations.GETAllAnnotatedGenesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -88,11 +86,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetAnnotatedGenesUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -127,11 +123,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneAllelesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneAllelesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneAllelesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneAllelesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -166,11 +160,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneByMapKeyUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -205,11 +197,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneByRgdIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -244,11 +234,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneBySymbolUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +271,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETResponse res = new org.openapis.openapi.models.operations.GETGeneOrthologsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -322,11 +308,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesAnnotatedUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -361,11 +345,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByAffyIdUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -400,11 +382,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByAliasSymbolUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +419,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByKeywordUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -478,11 +456,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesByPositionUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByPositionUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesByPositionUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesByPositionUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -517,11 +493,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesBySpeciesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,11 +530,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETGenesInRegionUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesInRegionUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETGenesInRegionUsingGETResponse res = new org.openapis.openapi.models.operations.GETGenesInRegionUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -595,11 +567,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETResponse res = new org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETResponse res = new org.openapis.openapi.models.operations.GETMappedGenesByPositionUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -639,11 +609,9 @@ public class Gene {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse res = new org.openapis.openapi.models.operations.GetOrthologsByListUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

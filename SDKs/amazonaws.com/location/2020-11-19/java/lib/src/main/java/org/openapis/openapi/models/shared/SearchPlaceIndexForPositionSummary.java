@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchPlaceIndexForPositionSummary {
     @JsonProperty("DataSource")
     public String dataSource;
+
     public SearchPlaceIndexForPositionSummary withDataSource(String dataSource) {
         this.dataSource = dataSource;
         return this;
@@ -22,6 +23,7 @@ public class SearchPlaceIndexForPositionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForPositionSummary withLanguage(String language) {
         this.language = language;
         return this;
@@ -30,6 +32,7 @@ public class SearchPlaceIndexForPositionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForPositionSummary withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +40,14 @@ public class SearchPlaceIndexForPositionSummary {
     
     @JsonProperty("Position")
     public Double[] position;
+
     public SearchPlaceIndexForPositionSummary withPosition(Double[] position) {
         this.position = position;
         return this;
     }
     
+    public SearchPlaceIndexForPositionSummary(@JsonProperty("DataSource") String dataSource, @JsonProperty("Position") Double[] position) {
+        this.dataSource = dataSource;
+        this.position = position;
+  }
 }

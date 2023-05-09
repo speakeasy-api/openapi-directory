@@ -20,6 +20,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("behavior")
     public Behavior behavior;
+
     public ActiveViolation withBehavior(Behavior behavior) {
         this.behavior = behavior;
         return this;
@@ -30,6 +31,7 @@ public class ActiveViolation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastViolationTime")
     public OffsetDateTime lastViolationTime;
+
     public ActiveViolation withLastViolationTime(OffsetDateTime lastViolationTime) {
         this.lastViolationTime = lastViolationTime;
         return this;
@@ -38,6 +40,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastViolationValue")
     public MetricValue lastViolationValue;
+
     public ActiveViolation withLastViolationValue(MetricValue lastViolationValue) {
         this.lastViolationValue = lastViolationValue;
         return this;
@@ -46,6 +49,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityProfileName")
     public String securityProfileName;
+
     public ActiveViolation withSecurityProfileName(String securityProfileName) {
         this.securityProfileName = securityProfileName;
         return this;
@@ -54,6 +58,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thingName")
     public String thingName;
+
     public ActiveViolation withThingName(String thingName) {
         this.thingName = thingName;
         return this;
@@ -62,6 +67,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationState")
     public VerificationStateEnum verificationState;
+
     public ActiveViolation withVerificationState(VerificationStateEnum verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -70,6 +76,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationStateDescription")
     public String verificationStateDescription;
+
     public ActiveViolation withVerificationStateDescription(String verificationStateDescription) {
         this.verificationStateDescription = verificationStateDescription;
         return this;
@@ -78,6 +85,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEventAdditionalInfo")
     public ViolationEventAdditionalInfo violationEventAdditionalInfo;
+
     public ActiveViolation withViolationEventAdditionalInfo(ViolationEventAdditionalInfo violationEventAdditionalInfo) {
         this.violationEventAdditionalInfo = violationEventAdditionalInfo;
         return this;
@@ -86,6 +94,7 @@ public class ActiveViolation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationId")
     public String violationId;
+
     public ActiveViolation withViolationId(String violationId) {
         this.violationId = violationId;
         return this;
@@ -96,9 +105,11 @@ public class ActiveViolation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("violationStartTime")
     public OffsetDateTime violationStartTime;
+
     public ActiveViolation withViolationStartTime(OffsetDateTime violationStartTime) {
         this.violationStartTime = violationStartTime;
         return this;
     }
     
+    public ActiveViolation(){}
 }

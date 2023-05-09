@@ -18,6 +18,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiVersion")
     public String apiVersion;
+
     public ListExecutionsResponse withApiVersion(String apiVersion) {
         this.apiVersion = apiVersion;
         return this;
@@ -29,6 +30,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Execution[] items;
+
     public ListExecutionsResponse withItems(Execution[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ListExecutionsResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ListMeta metadata;
+
     public ListExecutionsResponse withMetadata(ListMeta metadata) {
         this.metadata = metadata;
         return this;
@@ -62,9 +66,11 @@ public class ListExecutionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListExecutionsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListExecutionsResponse(){}
 }

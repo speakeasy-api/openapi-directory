@@ -18,6 +18,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeConfig")
     public SasPortalDeviceConfig activeConfig;
+
     public SasPortalDevice withActiveConfig(SasPortalDeviceConfig activeConfig) {
         this.activeConfig = activeConfig;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentChannels")
     public SasPortalChannelWithScore[] currentChannels;
+
     public SasPortalDevice withCurrentChannels(SasPortalChannelWithScore[] currentChannels) {
         this.currentChannels = currentChannels;
         return this;
@@ -40,6 +42,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceMetadata")
     public SasPortalDeviceMetadata deviceMetadata;
+
     public SasPortalDevice withDeviceMetadata(SasPortalDeviceMetadata deviceMetadata) {
         this.deviceMetadata = deviceMetadata;
         return this;
@@ -51,6 +54,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SasPortalDevice withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fccId")
     public String fccId;
+
     public SasPortalDevice withFccId(String fccId) {
         this.fccId = fccId;
         return this;
@@ -73,6 +78,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grantRangeAllowlists")
     public SasPortalFrequencyRange[] grantRangeAllowlists;
+
     public SasPortalDevice withGrantRangeAllowlists(SasPortalFrequencyRange[] grantRangeAllowlists) {
         this.grantRangeAllowlists = grantRangeAllowlists;
         return this;
@@ -84,6 +90,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grants")
     public SasPortalDeviceGrant[] grants;
+
     public SasPortalDevice withGrants(SasPortalDeviceGrant[] grants) {
         this.grants = grants;
         return this;
@@ -95,6 +102,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SasPortalDevice withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preloadedConfig")
     public SasPortalDeviceConfig preloadedConfig;
+
     public SasPortalDevice withPreloadedConfig(SasPortalDeviceConfig preloadedConfig) {
         this.preloadedConfig = preloadedConfig;
         return this;
@@ -117,6 +126,7 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public SasPortalDevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -128,9 +138,11 @@ public class SasPortalDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SasPortalDeviceStateEnum state;
+
     public SasPortalDevice withState(SasPortalDeviceStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SasPortalDevice(){}
 }

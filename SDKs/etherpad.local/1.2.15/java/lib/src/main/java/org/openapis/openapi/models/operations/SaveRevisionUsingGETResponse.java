@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SaveRevisionUsingGETResponse {
     
     public String contentType;
+
     public SaveRevisionUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SaveRevisionUsingGETResponse {
     
     
     public Integer statusCode;
+
     public SaveRevisionUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SaveRevisionUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SaveRevisionUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SaveRevisionUsingGETResponse {
      */
     
     public SaveRevisionUsingGET200ApplicationJSON saveRevisionUsingGET200ApplicationJSONObject;
+
     public SaveRevisionUsingGETResponse withSaveRevisionUsingGET200ApplicationJSONObject(SaveRevisionUsingGET200ApplicationJSON saveRevisionUsingGET200ApplicationJSONObject) {
         this.saveRevisionUsingGET200ApplicationJSONObject = saveRevisionUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class SaveRevisionUsingGETResponse {
      */
     
     public SaveRevisionUsingGET400ApplicationJSON saveRevisionUsingGET400ApplicationJSONObject;
+
     public SaveRevisionUsingGETResponse withSaveRevisionUsingGET400ApplicationJSONObject(SaveRevisionUsingGET400ApplicationJSON saveRevisionUsingGET400ApplicationJSONObject) {
         this.saveRevisionUsingGET400ApplicationJSONObject = saveRevisionUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SaveRevisionUsingGETResponse {
      */
     
     public SaveRevisionUsingGET401ApplicationJSON saveRevisionUsingGET401ApplicationJSONObject;
+
     public SaveRevisionUsingGETResponse withSaveRevisionUsingGET401ApplicationJSONObject(SaveRevisionUsingGET401ApplicationJSON saveRevisionUsingGET401ApplicationJSONObject) {
         this.saveRevisionUsingGET401ApplicationJSONObject = saveRevisionUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SaveRevisionUsingGETResponse {
      */
     
     public SaveRevisionUsingGET500ApplicationJSON saveRevisionUsingGET500ApplicationJSONObject;
+
     public SaveRevisionUsingGETResponse withSaveRevisionUsingGET500ApplicationJSONObject(SaveRevisionUsingGET500ApplicationJSON saveRevisionUsingGET500ApplicationJSONObject) {
         this.saveRevisionUsingGET500ApplicationJSONObject = saveRevisionUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public SaveRevisionUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdAfter")
     public String createdAfter;
+
     public DataPointsGetRequest withCreatedAfter(String createdAfter) {
         this.createdAfter = createdAfter;
         return this;
@@ -22,6 +23,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdBefore")
     public String createdBefore;
+
     public DataPointsGetRequest withCreatedBefore(String createdBefore) {
         this.createdBefore = createdBefore;
         return this;
@@ -32,6 +34,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public DataPointsGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -42,6 +45,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DataPointsGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -52,6 +56,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onlyFavorites")
     public Boolean onlyFavorites;
+
     public DataPointsGetRequest withOnlyFavorites(Boolean onlyFavorites) {
         this.onlyFavorites = onlyFavorites;
         return this;
@@ -62,6 +67,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public String sortBy;
+
     public DataPointsGetRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -72,6 +78,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortDirection")
     public DataPointsGetSortDirectionEnum sortDirection;
+
     public DataPointsGetRequest withSortDirection(DataPointsGetSortDirectionEnum sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -82,6 +89,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public DataPointsGetStatusEnum status;
+
     public DataPointsGetRequest withStatus(DataPointsGetStatusEnum status) {
         this.status = status;
         return this;
@@ -92,6 +100,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=tags")
     public String tags;
+
     public DataPointsGetRequest withTags(String tags) {
         this.tags = tags;
         return this;
@@ -102,6 +111,7 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=textSearch")
     public String textSearch;
+
     public DataPointsGetRequest withTextSearch(String textSearch) {
         this.textSearch = textSearch;
         return this;
@@ -112,9 +122,11 @@ public class DataPointsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DataPointsGetTypeEnum type;
+
     public DataPointsGetRequest withType(DataPointsGetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DataPointsGetRequest(){}
 }

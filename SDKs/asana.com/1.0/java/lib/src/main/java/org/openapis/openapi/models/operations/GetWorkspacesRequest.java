@@ -13,6 +13,7 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetWorkspacesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -25,6 +26,7 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetWorkspacesRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -37,6 +39,7 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetWorkspacesRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -48,9 +51,11 @@ public class GetWorkspacesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetWorkspacesRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
     }
     
+    public GetWorkspacesRequest(){}
 }

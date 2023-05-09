@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetECSServiceRecommendationsResponse {
@@ -12,6 +13,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetECSServiceRecommendationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetECSServiceRecommendationsResponse {
     
     
     public String contentType;
+
     public GetECSServiceRecommendationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetECSServiceRecommendationsResponse getECSServiceRecommendationsResponse;
+
     public GetECSServiceRecommendationsResponse withGetECSServiceRecommendationsResponse(org.openapis.openapi.models.shared.GetECSServiceRecommendationsResponse getECSServiceRecommendationsResponse) {
         this.getECSServiceRecommendationsResponse = getECSServiceRecommendationsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object internalServerException;
+
     public GetECSServiceRecommendationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public GetECSServiceRecommendationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object missingAuthenticationToken;
+
     public GetECSServiceRecommendationsResponse withMissingAuthenticationToken(Object missingAuthenticationToken) {
         this.missingAuthenticationToken = missingAuthenticationToken;
         return this;
@@ -69,6 +76,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object optInRequiredException;
+
     public GetECSServiceRecommendationsResponse withOptInRequiredException(Object optInRequiredException) {
         this.optInRequiredException = optInRequiredException;
         return this;
@@ -76,6 +84,7 @@ public class GetECSServiceRecommendationsResponse {
     
     
     public Integer statusCode;
+
     public GetECSServiceRecommendationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class GetECSServiceRecommendationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetECSServiceRecommendationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetECSServiceRecommendationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public GetECSServiceRecommendationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -113,9 +125,14 @@ public class GetECSServiceRecommendationsResponse {
      */
     
     public Object throttlingException;
+
     public GetECSServiceRecommendationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetECSServiceRecommendationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

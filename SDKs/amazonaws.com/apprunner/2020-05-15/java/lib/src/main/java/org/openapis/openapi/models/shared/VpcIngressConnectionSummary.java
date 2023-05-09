@@ -15,6 +15,7 @@ public class VpcIngressConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public VpcIngressConnectionSummary withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -23,9 +24,11 @@ public class VpcIngressConnectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcIngressConnectionArn")
     public String vpcIngressConnectionArn;
+
     public VpcIngressConnectionSummary withVpcIngressConnectionArn(String vpcIngressConnectionArn) {
         this.vpcIngressConnectionArn = vpcIngressConnectionArn;
         return this;
     }
     
+    public VpcIngressConnectionSummary(){}
 }

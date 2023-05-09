@@ -12,9 +12,11 @@ public class WimstatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vid")
     public String vid;
+
     public WimstatusRequest withVid(String vid) {
         this.vid = vid;
         return this;
     }
     
+    public WimstatusRequest(){}
 }

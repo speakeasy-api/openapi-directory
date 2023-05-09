@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SubmitContainerStateChangeResponse {
@@ -12,6 +13,7 @@ public class SubmitContainerStateChangeResponse {
      */
     
     public Object accessDeniedException;
+
     public SubmitContainerStateChangeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class SubmitContainerStateChangeResponse {
      */
     
     public Object clientException;
+
     public SubmitContainerStateChangeResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class SubmitContainerStateChangeResponse {
     
     
     public String contentType;
+
     public SubmitContainerStateChangeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class SubmitContainerStateChangeResponse {
     
     
     public Integer statusCode;
+
     public SubmitContainerStateChangeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class SubmitContainerStateChangeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SubmitContainerStateChangeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class SubmitContainerStateChangeResponse {
      */
     
     public Object serverException;
+
     public SubmitContainerStateChangeResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -63,9 +70,14 @@ public class SubmitContainerStateChangeResponse {
      */
     
     public org.openapis.openapi.models.shared.SubmitContainerStateChangeResponse submitContainerStateChangeResponse;
+
     public SubmitContainerStateChangeResponse withSubmitContainerStateChangeResponse(org.openapis.openapi.models.shared.SubmitContainerStateChangeResponse submitContainerStateChangeResponse) {
         this.submitContainerStateChangeResponse = submitContainerStateChangeResponse;
         return this;
     }
     
+    public SubmitContainerStateChangeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

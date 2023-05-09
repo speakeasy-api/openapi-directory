@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VerifyRequestWithPsd2Request {
@@ -12,6 +13,7 @@ public class VerifyRequestWithPsd2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public org.openapis.openapi.models.shared.FormatEnum format;
+
     public VerifyRequestWithPsd2Request withFormat(org.openapis.openapi.models.shared.FormatEnum format) {
         this.format = format;
         return this;
@@ -19,9 +21,14 @@ public class VerifyRequestWithPsd2Request {
     
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.Psd2Request psd2Request;
+
     public VerifyRequestWithPsd2Request withPsd2Request(org.openapis.openapi.models.shared.Psd2Request psd2Request) {
         this.psd2Request = psd2Request;
         return this;
     }
     
+    public VerifyRequestWithPsd2Request(@JsonProperty("format") org.openapis.openapi.models.shared.FormatEnum format, @JsonProperty("psd2Request") org.openapis.openapi.models.shared.Psd2Request psd2Request) {
+        this.format = format;
+        this.psd2Request = psd2Request;
+  }
 }

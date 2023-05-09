@@ -15,6 +15,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callToAction")
     public String callToAction;
+
     public FormSubmission withCallToAction(String callToAction) {
         this.callToAction = callToAction;
         return this;
@@ -23,6 +24,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cssUrl")
     public String cssUrl;
+
     public FormSubmission withCssUrl(String cssUrl) {
         this.cssUrl = cssUrl;
         return this;
@@ -31,6 +33,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public FormField[] fields;
+
     public FormSubmission withFields(FormField[] fields) {
         this.fields = fields;
         return this;
@@ -39,6 +42,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heading")
     public String heading;
+
     public FormSubmission withHeading(String heading) {
         this.heading = heading;
         return this;
@@ -47,6 +51,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FormSubmission withName(String name) {
         this.name = name;
         return this;
@@ -55,6 +60,7 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noCss")
     public Boolean noCss;
+
     public FormSubmission withNoCss(Boolean noCss) {
         this.noCss = noCss;
         return this;
@@ -63,9 +69,11 @@ public class FormSubmission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public FormSubmission withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public FormSubmission(){}
 }

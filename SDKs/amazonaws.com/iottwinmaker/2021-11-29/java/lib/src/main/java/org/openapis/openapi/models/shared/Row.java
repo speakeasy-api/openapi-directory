@@ -15,9 +15,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowData")
     public java.util.Map<String, Object>[] rowData;
+
     public Row withRowData(java.util.Map<String, Object>[] rowData) {
         this.rowData = rowData;
         return this;
     }
     
+    public Row(){}
 }

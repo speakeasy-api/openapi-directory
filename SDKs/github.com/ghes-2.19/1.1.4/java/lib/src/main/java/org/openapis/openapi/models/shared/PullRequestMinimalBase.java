@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PullRequestMinimalBase {
     @JsonProperty("ref")
     public String ref;
+
     public PullRequestMinimalBase withRef(String ref) {
         this.ref = ref;
         return this;
@@ -16,6 +17,7 @@ public class PullRequestMinimalBase {
     
     @JsonProperty("repo")
     public PullRequestMinimalBaseRepo repo;
+
     public PullRequestMinimalBase withRepo(PullRequestMinimalBaseRepo repo) {
         this.repo = repo;
         return this;
@@ -23,9 +25,15 @@ public class PullRequestMinimalBase {
     
     @JsonProperty("sha")
     public String sha;
+
     public PullRequestMinimalBase withSha(String sha) {
         this.sha = sha;
         return this;
     }
     
+    public PullRequestMinimalBase(@JsonProperty("ref") String ref, @JsonProperty("repo") PullRequestMinimalBaseRepo repo, @JsonProperty("sha") String sha) {
+        this.ref = ref;
+        this.repo = repo;
+        this.sha = sha;
+  }
 }

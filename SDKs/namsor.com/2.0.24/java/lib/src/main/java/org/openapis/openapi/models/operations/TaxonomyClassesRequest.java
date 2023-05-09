@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TaxonomyClassesRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=classifierName")
     public String classifierName;
+
     public TaxonomyClassesRequest withClassifierName(String classifierName) {
         this.classifierName = classifierName;
         return this;
     }
     
+    public TaxonomyClassesRequest(@JsonProperty("classifierName") String classifierName) {
+        this.classifierName = classifierName;
+  }
 }

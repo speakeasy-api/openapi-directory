@@ -18,6 +18,7 @@ public class TaskGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("counts")
     public java.util.Map<String, String> counts;
+
     public TaskGroupStatus withCounts(java.util.Map<String, String> counts) {
         this.counts = counts;
         return this;
@@ -29,9 +30,11 @@ public class TaskGroupStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instances")
     public InstanceStatus[] instances;
+
     public TaskGroupStatus withInstances(InstanceStatus[] instances) {
         this.instances = instances;
         return this;
     }
     
+    public TaskGroupStatus(){}
 }

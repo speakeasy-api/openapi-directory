@@ -15,6 +15,7 @@ public class TreatmentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TreatmentConfig withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class TreatmentConfig {
     
     @JsonProperty("feature")
     public String feature;
+
     public TreatmentConfig withFeature(String feature) {
         this.feature = feature;
         return this;
@@ -29,6 +31,7 @@ public class TreatmentConfig {
     
     @JsonProperty("name")
     public String name;
+
     public TreatmentConfig withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class TreatmentConfig {
     
     @JsonProperty("variation")
     public String variation;
+
     public TreatmentConfig withVariation(String variation) {
         this.variation = variation;
         return this;
     }
     
+    public TreatmentConfig(@JsonProperty("feature") String feature, @JsonProperty("name") String name, @JsonProperty("variation") String variation) {
+        this.feature = feature;
+        this.name = name;
+        this.variation = variation;
+  }
 }

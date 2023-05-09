@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteExpressionResponse - The result of a &lt;code&gt;&lt;a&gt;DeleteExpression&lt;/a&gt;&lt;/code&gt; request. Specifies the expression being deleted.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteExpressionResponse {
     
     public ExpressionStatus expression;
+
     public DeleteExpressionResponse withExpression(ExpressionStatus expression) {
         this.expression = expression;
         return this;
     }
     
+    public DeleteExpressionResponse(@JsonProperty("Expression") ExpressionStatus expression) {
+        this.expression = expression;
+  }
 }

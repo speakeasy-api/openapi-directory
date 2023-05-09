@@ -16,6 +16,7 @@ public class ListBankAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListBankAccountsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -28,6 +29,7 @@ public class ListBankAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListBankAccountsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -39,9 +41,11 @@ public class ListBankAccountsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListBankAccountsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public ListBankAccountsRequest(){}
 }

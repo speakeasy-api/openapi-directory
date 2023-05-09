@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessEndpointsRequestFilters {
     
     public String name;
+
     public DescribeVerifiedAccessEndpointsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessEndpointsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVerifiedAccessEndpointsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVerifiedAccessEndpointsRequestFilters(){}
 }

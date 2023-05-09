@@ -15,6 +15,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowsHostedConnections")
     public Boolean allowsHostedConnections;
+
     public Lag withAllowsHostedConnections(Boolean allowsHostedConnections) {
         this.allowsHostedConnections = allowsHostedConnections;
         return this;
@@ -23,6 +24,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsDevice")
     public String awsDevice;
+
     public Lag withAwsDevice(String awsDevice) {
         this.awsDevice = awsDevice;
         return this;
@@ -31,6 +33,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsDeviceV2")
     public String awsDeviceV2;
+
     public Lag withAwsDeviceV2(String awsDeviceV2) {
         this.awsDeviceV2 = awsDeviceV2;
         return this;
@@ -39,6 +42,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsLogicalDeviceId")
     public String awsLogicalDeviceId;
+
     public Lag withAwsLogicalDeviceId(String awsLogicalDeviceId) {
         this.awsLogicalDeviceId = awsLogicalDeviceId;
         return this;
@@ -47,6 +51,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connections")
     public Connection[] connections;
+
     public Lag withConnections(Connection[] connections) {
         this.connections = connections;
         return this;
@@ -55,6 +60,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionsBandwidth")
     public String connectionsBandwidth;
+
     public Lag withConnectionsBandwidth(String connectionsBandwidth) {
         this.connectionsBandwidth = connectionsBandwidth;
         return this;
@@ -63,6 +69,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionMode")
     public String encryptionMode;
+
     public Lag withEncryptionMode(String encryptionMode) {
         this.encryptionMode = encryptionMode;
         return this;
@@ -71,6 +78,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasLogicalRedundancy")
     public HasLogicalRedundancyEnum hasLogicalRedundancy;
+
     public Lag withHasLogicalRedundancy(HasLogicalRedundancyEnum hasLogicalRedundancy) {
         this.hasLogicalRedundancy = hasLogicalRedundancy;
         return this;
@@ -79,6 +87,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jumboFrameCapable")
     public Boolean jumboFrameCapable;
+
     public Lag withJumboFrameCapable(Boolean jumboFrameCapable) {
         this.jumboFrameCapable = jumboFrameCapable;
         return this;
@@ -87,6 +96,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagId")
     public String lagId;
+
     public Lag withLagId(String lagId) {
         this.lagId = lagId;
         return this;
@@ -95,6 +105,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagName")
     public String lagName;
+
     public Lag withLagName(String lagName) {
         this.lagName = lagName;
         return this;
@@ -103,6 +114,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lagState")
     public LagStateEnum lagState;
+
     public Lag withLagState(LagStateEnum lagState) {
         this.lagState = lagState;
         return this;
@@ -111,6 +123,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public Lag withLocation(String location) {
         this.location = location;
         return this;
@@ -119,6 +132,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macSecCapable")
     public Boolean macSecCapable;
+
     public Lag withMacSecCapable(Boolean macSecCapable) {
         this.macSecCapable = macSecCapable;
         return this;
@@ -127,6 +141,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macSecKeys")
     public MacSecKey[] macSecKeys;
+
     public Lag withMacSecKeys(MacSecKey[] macSecKeys) {
         this.macSecKeys = macSecKeys;
         return this;
@@ -135,6 +150,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumLinks")
     public Long minimumLinks;
+
     public Lag withMinimumLinks(Long minimumLinks) {
         this.minimumLinks = minimumLinks;
         return this;
@@ -143,6 +159,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfConnections")
     public Long numberOfConnections;
+
     public Lag withNumberOfConnections(Long numberOfConnections) {
         this.numberOfConnections = numberOfConnections;
         return this;
@@ -151,6 +168,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public Lag withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -159,6 +177,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("providerName")
     public String providerName;
+
     public Lag withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -167,6 +186,7 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public Lag withRegion(String region) {
         this.region = region;
         return this;
@@ -175,9 +195,11 @@ public class Lag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public Lag withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public Lag(){}
 }

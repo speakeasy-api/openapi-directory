@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ForgetWiFiNetworkRequest {
     @JsonProperty("wpa_id")
     public Integer wpaId;
+
     public ForgetWiFiNetworkRequest withWpaId(Integer wpaId) {
         this.wpaId = wpaId;
         return this;
     }
     
+    public ForgetWiFiNetworkRequest(@JsonProperty("wpa_id") Integer wpaId) {
+        this.wpaId = wpaId;
+  }
 }

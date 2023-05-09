@@ -18,6 +18,7 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Route withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -29,9 +30,11 @@ public class Route {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public Route withHost(String host) {
         this.host = host;
         return this;
     }
     
+    public Route(){}
 }

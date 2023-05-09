@@ -18,6 +18,7 @@ public class AutoExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportFormat")
     public String exportFormat;
+
     public AutoExportSettings withExportFormat(String exportFormat) {
         this.exportFormat = exportFormat;
         return this;
@@ -29,6 +30,7 @@ public class AutoExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportInterval")
     public AutoExportSettingsExportIntervalEnum exportInterval;
+
     public AutoExportSettings withExportInterval(AutoExportSettingsExportIntervalEnum exportInterval) {
         this.exportInterval = exportInterval;
         return this;
@@ -40,6 +42,7 @@ public class AutoExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeterPointId")
     public String meterPointId;
+
     public AutoExportSettings withMeterPointId(String meterPointId) {
         this.meterPointId = meterPointId;
         return this;
@@ -51,9 +54,11 @@ public class AutoExportSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UploadType")
     public String uploadType;
+
     public AutoExportSettings withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
     }
     
+    public AutoExportSettings(){}
 }

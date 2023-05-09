@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaFirebaseLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleAnalyticsAdminV1betaFirebaseLink withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaFirebaseLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaFirebaseLink withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1betaFirebaseLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public String project;
+
     public GoogleAnalyticsAdminV1betaFirebaseLink withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaFirebaseLink(){}
 }

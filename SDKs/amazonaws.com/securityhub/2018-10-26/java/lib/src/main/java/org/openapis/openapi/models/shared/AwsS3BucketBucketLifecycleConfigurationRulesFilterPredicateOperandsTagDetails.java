@@ -15,6 +15,7 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperands
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsTagDetails withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperands
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsTagDetails withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AwsS3BucketBucketLifecycleConfigurationRulesFilterPredicateOperandsTagDetails(){}
 }

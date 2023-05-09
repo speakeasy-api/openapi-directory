@@ -58,11 +58,9 @@ public class SensitiveData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse res = new org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse() {{
+        org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse res = new org.openapis.openapi.models.operations.AddOrUpdateSensitiveDataResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {
@@ -101,12 +99,10 @@ public class SensitiveData {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSensitiveDataResponse res = new org.openapis.openapi.models.operations.GetSensitiveDataResponse() {{
+        org.openapis.openapi.models.operations.GetSensitiveDataResponse res = new org.openapis.openapi.models.operations.GetSensitiveDataResponse(contentType, httpRes.statusCode()) {{
             sensitiveData = null;
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

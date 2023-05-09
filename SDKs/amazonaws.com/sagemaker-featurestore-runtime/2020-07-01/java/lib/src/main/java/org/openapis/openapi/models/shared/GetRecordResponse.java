@@ -15,9 +15,11 @@ public class GetRecordResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Record")
     public FeatureValue[] record;
+
     public GetRecordResponse withRecord(FeatureValue[] record) {
         this.record = record;
         return this;
     }
     
+    public GetRecordResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBabelFeeNewOfferResponse {
     
     public byte[] body;
+
     public GetBabelFeeNewOfferResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetBabelFeeNewOfferResponse {
     
     
     public String contentType;
+
     public GetBabelFeeNewOfferResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetBabelFeeNewOfferResponse {
     
     
     public Integer statusCode;
+
     public GetBabelFeeNewOfferResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetBabelFeeNewOfferResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBabelFeeNewOfferResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetBabelFeeNewOfferResponse {
      */
     
     public String getBabelFeeNewOffer400WildcardString;
+
     public GetBabelFeeNewOfferResponse withGetBabelFeeNewOffer400WildcardString(String getBabelFeeNewOffer400WildcardString) {
         this.getBabelFeeNewOffer400WildcardString = getBabelFeeNewOffer400WildcardString;
         return this;
@@ -50,6 +56,7 @@ public class GetBabelFeeNewOfferResponse {
      */
     
     public String getBabelFeeNewOffer401WildcardString;
+
     public GetBabelFeeNewOfferResponse withGetBabelFeeNewOffer401WildcardString(String getBabelFeeNewOffer401WildcardString) {
         this.getBabelFeeNewOffer401WildcardString = getBabelFeeNewOffer401WildcardString;
         return this;
@@ -60,6 +67,7 @@ public class GetBabelFeeNewOfferResponse {
      */
     
     public String getBabelFeeNewOffer404WildcardString;
+
     public GetBabelFeeNewOfferResponse withGetBabelFeeNewOffer404WildcardString(String getBabelFeeNewOffer404WildcardString) {
         this.getBabelFeeNewOffer404WildcardString = getBabelFeeNewOffer404WildcardString;
         return this;
@@ -70,9 +78,14 @@ public class GetBabelFeeNewOfferResponse {
      */
     
     public String getBabelFeeNewOffer409WildcardString;
+
     public GetBabelFeeNewOfferResponse withGetBabelFeeNewOffer409WildcardString(String getBabelFeeNewOffer409WildcardString) {
         this.getBabelFeeNewOffer409WildcardString = getBabelFeeNewOffer409WildcardString;
         return this;
     }
     
+    public GetBabelFeeNewOfferResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

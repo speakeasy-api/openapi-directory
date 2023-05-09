@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CidrAuthorizationContext {
     @JsonProperty("Message")
     public String message;
+
     public CidrAuthorizationContext withMessage(String message) {
         this.message = message;
         return this;
@@ -19,9 +20,14 @@ public class CidrAuthorizationContext {
     
     @JsonProperty("Signature")
     public String signature;
+
     public CidrAuthorizationContext withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public CidrAuthorizationContext(@JsonProperty("Message") String message, @JsonProperty("Signature") String signature) {
+        this.message = message;
+        this.signature = signature;
+  }
 }

@@ -16,9 +16,11 @@ public class PersonRelationshipsAvatar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ResourceIdentifier data;
+
     public PersonRelationshipsAvatar withData(ResourceIdentifier data) {
         this.data = data;
         return this;
     }
     
+    public PersonRelationshipsAvatar(){}
 }

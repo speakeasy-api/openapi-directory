@@ -18,9 +18,11 @@ public class ReplaceAllTextResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("occurrencesChanged")
     public Integer occurrencesChanged;
+
     public ReplaceAllTextResponse withOccurrencesChanged(Integer occurrencesChanged) {
         this.occurrencesChanged = occurrencesChanged;
         return this;
     }
     
+    public ReplaceAllTextResponse(){}
 }

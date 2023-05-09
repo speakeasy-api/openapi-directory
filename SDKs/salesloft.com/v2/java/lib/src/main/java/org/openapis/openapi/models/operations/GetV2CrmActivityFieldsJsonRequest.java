@@ -12,6 +12,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CrmActivityFieldsJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -22,6 +23,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2CrmActivityFieldsJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -32,6 +34,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CrmActivityFieldsJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -42,6 +45,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CrmActivityFieldsJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -52,6 +56,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CrmActivityFieldsJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -62,6 +67,7 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CrmActivityFieldsJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -72,9 +78,11 @@ public class GetV2CrmActivityFieldsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public GetV2CrmActivityFieldsJsonRequest withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public GetV2CrmActivityFieldsJsonRequest(){}
 }

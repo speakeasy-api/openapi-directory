@@ -18,6 +18,7 @@ public class ReportFooter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchingRowCount")
     public String matchingRowCount;
+
     public ReportFooter withMatchingRowCount(String matchingRowCount) {
         this.matchingRowCount = matchingRowCount;
         return this;
@@ -29,9 +30,11 @@ public class ReportFooter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public ReportWarning[] warnings;
+
     public ReportFooter withWarnings(ReportWarning[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public ReportFooter(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries {
     
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule policyRule;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries withPolicyRule(GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntriesPolicyRule policyRule) {
         this.policyRule = policyRule;
         return this;
@@ -19,6 +20,7 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String policyRuleNumber;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries withPolicyRuleNumber(String policyRuleNumber) {
         this.policyRuleNumber = policyRuleNumber;
         return this;
@@ -26,9 +28,11 @@ public class GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableE
     
     
     public String targetRouteTableId;
+
     public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries withTargetRouteTableId(String targetRouteTableId) {
         this.targetRouteTableId = targetRouteTableId;
         return this;
     }
     
+    public GetTransitGatewayPolicyTableEntriesResultTransitGatewayPolicyTableEntries(){}
 }

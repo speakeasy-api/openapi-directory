@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2InspectDataSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestedOptions")
     public GooglePrivacyDlpV2RequestedOptions requestedOptions;
+
     public GooglePrivacyDlpV2InspectDataSourceDetails withRequestedOptions(GooglePrivacyDlpV2RequestedOptions requestedOptions) {
         this.requestedOptions = requestedOptions;
         return this;
@@ -29,9 +30,11 @@ public class GooglePrivacyDlpV2InspectDataSourceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GooglePrivacyDlpV2Result result;
+
     public GooglePrivacyDlpV2InspectDataSourceDetails withResult(GooglePrivacyDlpV2Result result) {
         this.result = result;
         return this;
     }
     
+    public GooglePrivacyDlpV2InspectDataSourceDetails(){}
 }

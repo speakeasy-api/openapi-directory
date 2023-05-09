@@ -15,6 +15,7 @@ public class Ritin504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ritin504ApplicationJSONErrorEnum error;
+
     public Ritin504ApplicationJSON withError(Ritin504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ritin504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ritin504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ritin504ApplicationJSON withErrorDescription(Ritin504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ritin504ApplicationJSON(){}
 }

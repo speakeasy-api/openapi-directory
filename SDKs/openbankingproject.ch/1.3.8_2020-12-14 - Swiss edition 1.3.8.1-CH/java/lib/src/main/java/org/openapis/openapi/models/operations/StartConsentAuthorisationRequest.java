@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartConsentAuthorisationRequest {
@@ -12,6 +13,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public StartConsentAuthorisationRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -23,6 +25,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public StartConsentAuthorisationRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -34,6 +37,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public StartConsentAuthorisationRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -45,6 +49,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public StartConsentAuthorisationRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -56,6 +61,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public StartConsentAuthorisationRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -67,6 +73,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID")
     public String psuCorporateID;
+
     public StartConsentAuthorisationRequest withPSUCorporateID(String psuCorporateID) {
         this.psuCorporateID = psuCorporateID;
         return this;
@@ -78,6 +85,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID-Type")
     public String psuCorporateIDType;
+
     public StartConsentAuthorisationRequest withPSUCorporateIDType(String psuCorporateIDType) {
         this.psuCorporateIDType = psuCorporateIDType;
         return this;
@@ -91,6 +99,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public StartConsentAuthorisationRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -102,6 +111,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public StartConsentAuthorisationRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -119,6 +129,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public StartConsentAuthorisationRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -137,6 +148,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID")
     public String psuId;
+
     public StartConsentAuthorisationRequest withPsuId(String psuId) {
         this.psuId = psuId;
         return this;
@@ -150,6 +162,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID-Type")
     public String psuIDType;
+
     public StartConsentAuthorisationRequest withPSUIDType(String psuIDType) {
         this.psuIDType = psuIDType;
         return this;
@@ -163,6 +176,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public StartConsentAuthorisationRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -174,6 +188,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public StartConsentAuthorisationRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -185,6 +200,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public StartConsentAuthorisationRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -192,6 +208,7 @@ public class StartConsentAuthorisationRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public StartConsentAuthorisationRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -203,6 +220,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public StartConsentAuthorisationRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -215,6 +233,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Nok-Redirect-URI")
     public String tppNokRedirectURI;
+
     public StartConsentAuthorisationRequest withTPPNokRedirectURI(String tppNokRedirectURI) {
         this.tppNokRedirectURI = tppNokRedirectURI;
         return this;
@@ -239,6 +258,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-Content-Preferred")
     public String tppNotificationContentPreferred;
+
     public StartConsentAuthorisationRequest withTPPNotificationContentPreferred(String tppNotificationContentPreferred) {
         this.tppNotificationContentPreferred = tppNotificationContentPreferred;
         return this;
@@ -258,6 +278,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-URI")
     public String tppNotificationURI;
+
     public StartConsentAuthorisationRequest withTPPNotificationURI(String tppNotificationURI) {
         this.tppNotificationURI = tppNotificationURI;
         return this;
@@ -273,6 +294,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-Preferred")
     public Boolean tppRedirectPreferred;
+
     public StartConsentAuthorisationRequest withTPPRedirectPreferred(Boolean tppRedirectPreferred) {
         this.tppRedirectPreferred = tppRedirectPreferred;
         return this;
@@ -291,6 +313,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-URI")
     public String tppRedirectURI;
+
     public StartConsentAuthorisationRequest withTPPRedirectURI(String tppRedirectURI) {
         this.tppRedirectURI = tppRedirectURI;
         return this;
@@ -303,6 +326,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public StartConsentAuthorisationRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -313,6 +337,7 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public StartConsentAuthorisationRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -324,9 +349,14 @@ public class StartConsentAuthorisationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=consentId")
     public String consentId;
+
     public StartConsentAuthorisationRequest withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
     }
     
+    public StartConsentAuthorisationRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("consentId") String consentId) {
+        this.xRequestID = xRequestID;
+        this.consentId = consentId;
+  }
 }

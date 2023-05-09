@@ -19,6 +19,7 @@ public class ChosenScaMethod {
      */
     @JsonProperty("authenticationMethodId")
     public String authenticationMethodId;
+
     public ChosenScaMethod withAuthenticationMethodId(String authenticationMethodId) {
         this.authenticationMethodId = authenticationMethodId;
         return this;
@@ -45,6 +46,7 @@ public class ChosenScaMethod {
      */
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public ChosenScaMethod withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -59,6 +61,7 @@ public class ChosenScaMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationVersion")
     public String authenticationVersion;
+
     public ChosenScaMethod withAuthenticationVersion(String authenticationVersion) {
         this.authenticationVersion = authenticationVersion;
         return this;
@@ -71,6 +74,7 @@ public class ChosenScaMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public String explanation;
+
     public ChosenScaMethod withExplanation(String explanation) {
         this.explanation = explanation;
         return this;
@@ -85,9 +89,14 @@ public class ChosenScaMethod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ChosenScaMethod withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ChosenScaMethod(@JsonProperty("authenticationMethodId") String authenticationMethodId, @JsonProperty("authenticationType") AuthenticationTypeEnum authenticationType) {
+        this.authenticationMethodId = authenticationMethodId;
+        this.authenticationType = authenticationType;
+  }
 }

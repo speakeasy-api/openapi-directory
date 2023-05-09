@@ -18,6 +18,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msg")
     public String msg;
+
     public WorkerHealthReport withMsg(String msg) {
         this.msg = msg;
         return this;
@@ -29,6 +30,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pods")
     public java.util.Map<String, Object>[] pods;
+
     public WorkerHealthReport withPods(java.util.Map<String, Object>[] pods) {
         this.pods = pods;
         return this;
@@ -40,6 +42,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportInterval")
     public String reportInterval;
+
     public WorkerHealthReport withReportInterval(String reportInterval) {
         this.reportInterval = reportInterval;
         return this;
@@ -51,6 +54,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmBrokenCode")
     public String vmBrokenCode;
+
     public WorkerHealthReport withVmBrokenCode(String vmBrokenCode) {
         this.vmBrokenCode = vmBrokenCode;
         return this;
@@ -62,6 +66,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmIsBroken")
     public Boolean vmIsBroken;
+
     public WorkerHealthReport withVmIsBroken(Boolean vmIsBroken) {
         this.vmIsBroken = vmIsBroken;
         return this;
@@ -73,6 +78,7 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmIsHealthy")
     public Boolean vmIsHealthy;
+
     public WorkerHealthReport withVmIsHealthy(Boolean vmIsHealthy) {
         this.vmIsHealthy = vmIsHealthy;
         return this;
@@ -84,9 +90,11 @@ public class WorkerHealthReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vmStartupTime")
     public String vmStartupTime;
+
     public WorkerHealthReport withVmStartupTime(String vmStartupTime) {
         this.vmStartupTime = vmStartupTime;
         return this;
     }
     
+    public WorkerHealthReport(){}
 }

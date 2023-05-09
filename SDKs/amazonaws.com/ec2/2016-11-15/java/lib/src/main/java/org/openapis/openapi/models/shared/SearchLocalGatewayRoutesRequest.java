@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SearchLocalGatewayRoutesRequest {
     
     public Boolean dryRun;
+
     public SearchLocalGatewayRoutesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class SearchLocalGatewayRoutesRequest {
     
     
     public SearchLocalGatewayRoutesRequestFilters[] filters;
+
     public SearchLocalGatewayRoutesRequest withFilters(SearchLocalGatewayRoutesRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class SearchLocalGatewayRoutesRequest {
     
     
     public String localGatewayRouteTableId;
+
     public SearchLocalGatewayRoutesRequest withLocalGatewayRouteTableId(String localGatewayRouteTableId) {
         this.localGatewayRouteTableId = localGatewayRouteTableId;
         return this;
@@ -30,6 +33,7 @@ public class SearchLocalGatewayRoutesRequest {
     
     
     public Long maxResults;
+
     public SearchLocalGatewayRoutesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,13 @@ public class SearchLocalGatewayRoutesRequest {
     
     
     public String nextToken;
+
     public SearchLocalGatewayRoutesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchLocalGatewayRoutesRequest(@JsonProperty("LocalGatewayRouteTableId") String localGatewayRouteTableId) {
+        this.localGatewayRouteTableId = localGatewayRouteTableId;
+  }
 }

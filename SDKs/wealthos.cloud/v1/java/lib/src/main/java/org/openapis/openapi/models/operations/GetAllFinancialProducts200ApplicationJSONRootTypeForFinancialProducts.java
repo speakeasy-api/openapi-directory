@@ -17,6 +17,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additional_cash_currencies")
     public String[] additionalCashCurrencies;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withAdditionalCashCurrencies(String[] additionalCashCurrencies) {
         this.additionalCashCurrencies = additionalCashCurrencies;
         return this;
@@ -25,6 +26,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String[] availability;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withAvailability(String[] availability) {
         this.availability = availability;
         return this;
@@ -35,6 +37,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -43,6 +46,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dividend_options")
     public String[] dividendOptions;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withDividendOptions(String[] dividendOptions) {
         this.dividendOptions = dividendOptions;
         return this;
@@ -50,6 +54,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     
     @JsonProperty("financial_product_id")
     public String financialProductId;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withFinancialProductId(String financialProductId) {
         this.financialProductId = financialProductId;
         return this;
@@ -61,6 +66,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flexible")
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum flexible;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withFlexible(GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsFlexibleEnum flexible) {
         this.flexible = flexible;
         return this;
@@ -69,6 +75,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interest_preferences")
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences interestPreferences;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withInterestPreferences(GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInterestPreferences interestPreferences) {
         this.interestPreferences = interestPreferences;
         return this;
@@ -77,6 +84,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_preferences")
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences investmentPreferences;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withInvestmentPreferences(GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsInvestmentPreferences investmentPreferences) {
         this.investmentPreferences = investmentPreferences;
         return this;
@@ -84,6 +92,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     
     @JsonProperty("name")
     public String name;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withName(String name) {
         this.name = name;
         return this;
@@ -94,6 +103,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
      */
     @JsonProperty("product_type")
     public String productType;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withProductType(String productType) {
         this.productType = productType;
         return this;
@@ -104,6 +114,7 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -112,9 +123,15 @@ public class GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProduc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withdrawal_preferences")
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withdrawalPreferences;
+
     public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts withWithdrawalPreferences(GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProductsWithdrawalPreferences withdrawalPreferences) {
         this.withdrawalPreferences = withdrawalPreferences;
         return this;
     }
     
+    public GetAllFinancialProducts200ApplicationJSONRootTypeForFinancialProducts(@JsonProperty("financial_product_id") String financialProductId, @JsonProperty("name") String name, @JsonProperty("product_type") String productType) {
+        this.financialProductId = financialProductId;
+        this.name = name;
+        this.productType = productType;
+  }
 }

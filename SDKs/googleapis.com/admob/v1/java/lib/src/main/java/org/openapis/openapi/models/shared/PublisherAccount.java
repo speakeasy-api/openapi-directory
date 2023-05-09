@@ -18,6 +18,7 @@ public class PublisherAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public PublisherAccount withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class PublisherAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PublisherAccount withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class PublisherAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisherId")
     public String publisherId;
+
     public PublisherAccount withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -51,9 +54,11 @@ public class PublisherAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingTimeZone")
     public String reportingTimeZone;
+
     public PublisherAccount withReportingTimeZone(String reportingTimeZone) {
         this.reportingTimeZone = reportingTimeZone;
         return this;
     }
     
+    public PublisherAccount(){}
 }

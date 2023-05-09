@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsCreateForTeamDiscussionInOrgRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ReactionsCreateForTeamDiscussionInOrgRequestBody requestBody;
+
     public ReactionsCreateForTeamDiscussionInOrgRequest withRequestBody(ReactionsCreateForTeamDiscussionInOrgRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ReactionsCreateForTeamDiscussionInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsCreateForTeamDiscussionInOrgRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -29,6 +32,7 @@ public class ReactionsCreateForTeamDiscussionInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ReactionsCreateForTeamDiscussionInOrgRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -39,9 +43,16 @@ public class ReactionsCreateForTeamDiscussionInOrgRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public ReactionsCreateForTeamDiscussionInOrgRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public ReactionsCreateForTeamDiscussionInOrgRequest(@JsonProperty("RequestBody") ReactionsCreateForTeamDiscussionInOrgRequestBody requestBody, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("team_slug") String teamSlug) {
+        this.requestBody = requestBody;
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.teamSlug = teamSlug;
+  }
 }

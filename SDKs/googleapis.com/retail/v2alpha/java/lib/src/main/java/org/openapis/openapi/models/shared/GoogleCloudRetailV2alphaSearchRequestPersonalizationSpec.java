@@ -18,9 +18,11 @@ public class GoogleCloudRetailV2alphaSearchRequestPersonalizationSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum mode;
+
     public GoogleCloudRetailV2alphaSearchRequestPersonalizationSpec withMode(GoogleCloudRetailV2alphaSearchRequestPersonalizationSpecModeEnum mode) {
         this.mode = mode;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaSearchRequestPersonalizationSpec(){}
 }

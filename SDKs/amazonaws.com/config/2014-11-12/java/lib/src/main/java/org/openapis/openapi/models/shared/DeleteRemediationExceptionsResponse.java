@@ -15,9 +15,11 @@ public class DeleteRemediationExceptionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedBatches")
     public FailedDeleteRemediationExceptionsBatch[] failedBatches;
+
     public DeleteRemediationExceptionsResponse withFailedBatches(FailedDeleteRemediationExceptionsBatch[] failedBatches) {
         this.failedBatches = failedBatches;
         return this;
     }
     
+    public DeleteRemediationExceptionsResponse(){}
 }

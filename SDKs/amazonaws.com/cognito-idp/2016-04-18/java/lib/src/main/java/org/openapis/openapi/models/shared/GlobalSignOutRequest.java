@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GlobalSignOutRequest {
     @JsonProperty("AccessToken")
     public String accessToken;
+
     public GlobalSignOutRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
     }
     
+    public GlobalSignOutRequest(@JsonProperty("AccessToken") String accessToken) {
+        this.accessToken = accessToken;
+  }
 }

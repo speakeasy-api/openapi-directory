@@ -15,6 +15,7 @@ public class CustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomFieldFields withId(Integer id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class CustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public CustomFieldFields withLabel(String label) {
         this.label = label;
         return this;
@@ -37,6 +39,7 @@ public class CustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomFieldFieldsTypeEnum type;
+
     public CustomFieldFields withType(CustomFieldFieldsTypeEnum type) {
         this.type = type;
         return this;
@@ -48,9 +51,11 @@ public class CustomFieldFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public CustomFieldFields withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public CustomFieldFields(){}
 }

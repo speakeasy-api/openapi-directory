@@ -15,6 +15,7 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FileAssetsCreate200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public FileAssetsCreate200ApplicationJSON withLocation(String location) {
         this.location = location;
         return this;
@@ -31,6 +33,7 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public FileAssetsCreate200ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
@@ -39,6 +42,7 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadDomain")
     public String uploadDomain;
+
     public FileAssetsCreate200ApplicationJSON withUploadDomain(String uploadDomain) {
         this.uploadDomain = uploadDomain;
         return this;
@@ -47,6 +51,7 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadWindowLocation")
     public String uploadWindowLocation;
+
     public FileAssetsCreate200ApplicationJSON withUploadWindowLocation(String uploadWindowLocation) {
         this.uploadWindowLocation = uploadWindowLocation;
         return this;
@@ -55,9 +60,11 @@ public class FileAssetsCreate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlEncodedToken")
     public String urlEncodedToken;
+
     public FileAssetsCreate200ApplicationJSON withUrlEncodedToken(String urlEncodedToken) {
         this.urlEncodedToken = urlEncodedToken;
         return this;
     }
     
+    public FileAssetsCreate200ApplicationJSON(){}
 }

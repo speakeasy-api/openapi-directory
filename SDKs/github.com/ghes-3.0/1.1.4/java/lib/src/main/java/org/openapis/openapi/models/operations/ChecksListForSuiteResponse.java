@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChecksListForSuiteResponse {
     
     public String contentType;
+
     public ChecksListForSuiteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ChecksListForSuiteResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ChecksListForSuiteResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ChecksListForSuiteResponse {
     
     
     public Integer statusCode;
+
     public ChecksListForSuiteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ChecksListForSuiteResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChecksListForSuiteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class ChecksListForSuiteResponse {
      */
     
     public ChecksListForSuite200ApplicationJSON checksListForSuite200ApplicationJSONObject;
+
     public ChecksListForSuiteResponse withChecksListForSuite200ApplicationJSONObject(ChecksListForSuite200ApplicationJSON checksListForSuite200ApplicationJSONObject) {
         this.checksListForSuite200ApplicationJSONObject = checksListForSuite200ApplicationJSONObject;
         return this;
     }
     
+    public ChecksListForSuiteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

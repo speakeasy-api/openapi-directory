@@ -53,12 +53,10 @@ public class IntegrationLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkResponse res = new org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkResponse() {{
+        org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkResponse res = new org.openapis.openapi.models.operations.AddOrUpdateIntegrationLinkResponse(contentType, httpRes.statusCode()) {{
             integrationLinkModel = null;
             integrationLinkModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,12 +98,10 @@ public class IntegrationLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteIntegrationLinkResponse res = new org.openapis.openapi.models.operations.DeleteIntegrationLinkResponse() {{
+        org.openapis.openapi.models.operations.DeleteIntegrationLinkResponse res = new org.openapis.openapi.models.operations.DeleteIntegrationLinkResponse(contentType, httpRes.statusCode()) {{
             deleteIntegrationLinkModel = null;
             deleteIntegrationLinkModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,12 +143,10 @@ public class IntegrationLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetIntegrationLinkDetailsResponse res = new org.openapis.openapi.models.operations.GetIntegrationLinkDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetIntegrationLinkDetailsResponse res = new org.openapis.openapi.models.operations.GetIntegrationLinkDetailsResponse(contentType, httpRes.statusCode()) {{
             integrationLinkDetailsModel = null;
             integrationLinkDetailsModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,12 +184,10 @@ public class IntegrationLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkResponse res = new org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkResponse() {{
+        org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkResponse res = new org.openapis.openapi.models.operations.JiraAddOrUpdateIntegrationLinkResponse(contentType, httpRes.statusCode()) {{
             integrationLinkModel = null;
             integrationLinkModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -233,10 +225,8 @@ public class IntegrationLinks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV1JiraConnectResponse res = new org.openapis.openapi.models.operations.PostV1JiraConnectResponse() {{
+        org.openapis.openapi.models.operations.PostV1JiraConnectResponse res = new org.openapis.openapi.models.operations.PostV1JiraConnectResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 429) {

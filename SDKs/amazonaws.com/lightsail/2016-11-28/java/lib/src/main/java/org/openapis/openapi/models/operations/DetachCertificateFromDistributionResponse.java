@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetachCertificateFromDistributionResponse {
@@ -12,6 +13,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object accessDeniedException;
+
     public DetachCertificateFromDistributionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetachCertificateFromDistributionResponse {
     
     
     public String contentType;
+
     public DetachCertificateFromDistributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public org.openapis.openapi.models.shared.DetachCertificateFromDistributionResult detachCertificateFromDistributionResult;
+
     public DetachCertificateFromDistributionResponse withDetachCertificateFromDistributionResult(org.openapis.openapi.models.shared.DetachCertificateFromDistributionResult detachCertificateFromDistributionResult) {
         this.detachCertificateFromDistributionResult = detachCertificateFromDistributionResult;
         return this;
@@ -39,6 +43,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object invalidInputException;
+
     public DetachCertificateFromDistributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object notFoundException;
+
     public DetachCertificateFromDistributionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object operationFailureException;
+
     public DetachCertificateFromDistributionResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object serviceException;
+
     public DetachCertificateFromDistributionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DetachCertificateFromDistributionResponse {
     
     
     public Integer statusCode;
+
     public DetachCertificateFromDistributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DetachCertificateFromDistributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetachCertificateFromDistributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class DetachCertificateFromDistributionResponse {
      */
     
     public Object unauthenticatedException;
+
     public DetachCertificateFromDistributionResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DetachCertificateFromDistributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

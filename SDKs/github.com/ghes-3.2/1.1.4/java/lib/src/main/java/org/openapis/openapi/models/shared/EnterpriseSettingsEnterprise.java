@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin_password")
     public String adminPassword;
+
     public EnterpriseSettingsEnterprise withAdminPassword(String adminPassword) {
         this.adminPassword = adminPassword;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assets")
     public String assets;
+
     public EnterpriseSettingsEnterprise withAssets(String assets) {
         this.assets = assets;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth_mode")
     public String authMode;
+
     public EnterpriseSettingsEnterprise withAuthMode(String authMode) {
         this.authMode = authMode;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar")
     public EnterpriseSettingsEnterpriseAvatar avatar;
+
     public EnterpriseSettingsEnterprise withAvatar(EnterpriseSettingsEnterpriseAvatar avatar) {
         this.avatar = avatar;
         return this;
@@ -44,6 +48,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cas")
     public EnterpriseSettingsEnterpriseCas cas;
+
     public EnterpriseSettingsEnterprise withCas(EnterpriseSettingsEnterpriseCas cas) {
         this.cas = cas;
         return this;
@@ -52,6 +57,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectd")
     public EnterpriseSettingsEnterpriseCollectd collectd;
+
     public EnterpriseSettingsEnterprise withCollectd(EnterpriseSettingsEnterpriseCollectd collectd) {
         this.collectd = collectd;
         return this;
@@ -60,6 +66,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration_id")
     public Long configurationId;
+
     public EnterpriseSettingsEnterprise withConfigurationId(Long configurationId) {
         this.configurationId = configurationId;
         return this;
@@ -68,6 +75,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration_run_count")
     public Long configurationRunCount;
+
     public EnterpriseSettingsEnterprise withConfigurationRunCount(Long configurationRunCount) {
         this.configurationRunCount = configurationRunCount;
         return this;
@@ -76,6 +84,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer")
     public EnterpriseSettingsEnterpriseCustomer customer;
+
     public EnterpriseSettingsEnterprise withCustomer(EnterpriseSettingsEnterpriseCustomer customer) {
         this.customer = customer;
         return this;
@@ -84,6 +93,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expire_sessions")
     public Boolean expireSessions;
+
     public EnterpriseSettingsEnterprise withExpireSessions(Boolean expireSessions) {
         this.expireSessions = expireSessions;
         return this;
@@ -92,6 +102,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_hostname")
     public String githubHostname;
+
     public EnterpriseSettingsEnterprise withGithubHostname(String githubHostname) {
         this.githubHostname = githubHostname;
         return this;
@@ -100,6 +111,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_oauth")
     public EnterpriseSettingsEnterpriseGithubOauth githubOauth;
+
     public EnterpriseSettingsEnterprise withGithubOauth(EnterpriseSettingsEnterpriseGithubOauth githubOauth) {
         this.githubOauth = githubOauth;
         return this;
@@ -108,6 +120,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_ssl")
     public EnterpriseSettingsEnterpriseGithubSsl githubSsl;
+
     public EnterpriseSettingsEnterprise withGithubSsl(EnterpriseSettingsEnterpriseGithubSsl githubSsl) {
         this.githubSsl = githubSsl;
         return this;
@@ -116,6 +129,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("http_proxy")
     public String httpProxy;
+
     public EnterpriseSettingsEnterprise withHttpProxy(String httpProxy) {
         this.httpProxy = httpProxy;
         return this;
@@ -124,6 +138,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identicons_host")
     public String identiconsHost;
+
     public EnterpriseSettingsEnterprise withIdenticonsHost(String identiconsHost) {
         this.identiconsHost = identiconsHost;
         return this;
@@ -132,6 +147,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap")
     public EnterpriseSettingsEnterpriseLdap ldap;
+
     public EnterpriseSettingsEnterprise withLdap(EnterpriseSettingsEnterpriseLdap ldap) {
         this.ldap = ldap;
         return this;
@@ -140,6 +156,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("license")
     public EnterpriseSettingsEnterpriseLicense license;
+
     public EnterpriseSettingsEnterprise withLicense(EnterpriseSettingsEnterpriseLicense license) {
         this.license = license;
         return this;
@@ -148,6 +165,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load_balancer")
     public String loadBalancer;
+
     public EnterpriseSettingsEnterprise withLoadBalancer(String loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
@@ -156,6 +174,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapping")
     public EnterpriseSettingsEnterpriseMapping mapping;
+
     public EnterpriseSettingsEnterprise withMapping(EnterpriseSettingsEnterpriseMapping mapping) {
         this.mapping = mapping;
         return this;
@@ -164,6 +183,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ntp")
     public EnterpriseSettingsEnterpriseNtp ntp;
+
     public EnterpriseSettingsEnterprise withNtp(EnterpriseSettingsEnterpriseNtp ntp) {
         this.ntp = ntp;
         return this;
@@ -172,6 +192,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pages")
     public EnterpriseSettingsEnterprisePages pages;
+
     public EnterpriseSettingsEnterprise withPages(EnterpriseSettingsEnterprisePages pages) {
         this.pages = pages;
         return this;
@@ -180,6 +201,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_mode")
     public Boolean privateMode;
+
     public EnterpriseSettingsEnterprise withPrivateMode(Boolean privateMode) {
         this.privateMode = privateMode;
         return this;
@@ -188,6 +210,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_pages")
     public Boolean publicPages;
+
     public EnterpriseSettingsEnterprise withPublicPages(Boolean publicPages) {
         this.publicPages = publicPages;
         return this;
@@ -196,6 +219,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("saml")
     public EnterpriseSettingsEnterpriseSaml saml;
+
     public EnterpriseSettingsEnterprise withSaml(EnterpriseSettingsEnterpriseSaml saml) {
         this.saml = saml;
         return this;
@@ -204,6 +228,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signup_enabled")
     public Boolean signupEnabled;
+
     public EnterpriseSettingsEnterprise withSignupEnabled(Boolean signupEnabled) {
         this.signupEnabled = signupEnabled;
         return this;
@@ -212,6 +237,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smtp")
     public EnterpriseSettingsEnterpriseSmtp smtp;
+
     public EnterpriseSettingsEnterprise withSmtp(EnterpriseSettingsEnterpriseSmtp smtp) {
         this.smtp = smtp;
         return this;
@@ -220,6 +246,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snmp")
     public EnterpriseSettingsEnterpriseSnmp snmp;
+
     public EnterpriseSettingsEnterprise withSnmp(EnterpriseSettingsEnterpriseSnmp snmp) {
         this.snmp = snmp;
         return this;
@@ -228,6 +255,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdomain_isolation")
     public Boolean subdomainIsolation;
+
     public EnterpriseSettingsEnterprise withSubdomainIsolation(Boolean subdomainIsolation) {
         this.subdomainIsolation = subdomainIsolation;
         return this;
@@ -236,6 +264,7 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syslog")
     public EnterpriseSettingsEnterpriseSyslog syslog;
+
     public EnterpriseSettingsEnterprise withSyslog(EnterpriseSettingsEnterpriseSyslog syslog) {
         this.syslog = syslog;
         return this;
@@ -244,9 +273,11 @@ public class EnterpriseSettingsEnterprise {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public EnterpriseSettingsEnterprise withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
     }
     
+    public EnterpriseSettingsEnterprise(){}
 }

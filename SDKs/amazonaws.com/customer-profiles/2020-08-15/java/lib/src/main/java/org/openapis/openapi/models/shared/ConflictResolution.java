@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConflictResolution {
     @JsonProperty("ConflictResolvingModel")
     public ConflictResolvingModelEnum conflictResolvingModel;
+
     public ConflictResolution withConflictResolvingModel(ConflictResolvingModelEnum conflictResolvingModel) {
         this.conflictResolvingModel = conflictResolvingModel;
         return this;
@@ -22,9 +23,13 @@ public class ConflictResolution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public ConflictResolution withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
     }
     
+    public ConflictResolution(@JsonProperty("ConflictResolvingModel") ConflictResolvingModelEnum conflictResolvingModel) {
+        this.conflictResolvingModel = conflictResolvingModel;
+  }
 }

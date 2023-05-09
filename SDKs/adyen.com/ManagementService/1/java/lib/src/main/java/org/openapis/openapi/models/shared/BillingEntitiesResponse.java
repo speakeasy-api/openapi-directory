@@ -18,9 +18,11 @@ public class BillingEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BillingEntity[] data;
+
     public BillingEntitiesResponse withData(BillingEntity[] data) {
         this.data = data;
         return this;
     }
     
+    public BillingEntitiesResponse(){}
 }

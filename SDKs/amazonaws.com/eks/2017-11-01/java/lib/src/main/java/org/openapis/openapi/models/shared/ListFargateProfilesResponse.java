@@ -15,6 +15,7 @@ public class ListFargateProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fargateProfileNames")
     public String[] fargateProfileNames;
+
     public ListFargateProfilesResponse withFargateProfileNames(String[] fargateProfileNames) {
         this.fargateProfileNames = fargateProfileNames;
         return this;
@@ -23,9 +24,11 @@ public class ListFargateProfilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFargateProfilesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFargateProfilesResponse(){}
 }

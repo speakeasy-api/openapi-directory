@@ -15,6 +15,7 @@ public class CreateAccessPointRequestBodyRootDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationInfo")
     public org.openapis.openapi.models.shared.CreationInfo creationInfo;
+
     public CreateAccessPointRequestBodyRootDirectory withCreationInfo(org.openapis.openapi.models.shared.CreationInfo creationInfo) {
         this.creationInfo = creationInfo;
         return this;
@@ -23,9 +24,11 @@ public class CreateAccessPointRequestBodyRootDirectory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Path")
     public String path;
+
     public CreateAccessPointRequestBodyRootDirectory withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public CreateAccessPointRequestBodyRootDirectory(){}
 }

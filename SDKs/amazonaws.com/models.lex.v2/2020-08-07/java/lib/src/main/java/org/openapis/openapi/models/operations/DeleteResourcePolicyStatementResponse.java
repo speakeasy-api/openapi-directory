@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourcePolicyStatementResponse {
     
     public String contentType;
+
     public DeleteResourcePolicyStatementResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourcePolicyStatementResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteResourcePolicyStatementResponse deleteResourcePolicyStatementResponse;
+
     public DeleteResourcePolicyStatementResponse withDeleteResourcePolicyStatementResponse(org.openapis.openapi.models.shared.DeleteResourcePolicyStatementResponse deleteResourcePolicyStatementResponse) {
         this.deleteResourcePolicyStatementResponse = deleteResourcePolicyStatementResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourcePolicyStatementResponse {
      */
     
     public Object internalServerException;
+
     public DeleteResourcePolicyStatementResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourcePolicyStatementResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteResourcePolicyStatementResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourcePolicyStatementResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResourcePolicyStatementResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteResourcePolicyStatementResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourcePolicyStatementResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteResourcePolicyStatementResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourcePolicyStatementResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteResourcePolicyStatementResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResourcePolicyStatementResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteResourcePolicyStatementResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

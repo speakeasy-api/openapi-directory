@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSettingValueBySdkkeyRequest {
@@ -12,6 +13,7 @@ public class GetSettingValueBySdkkeyRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-CONFIGCAT-SDKKEY")
     public String xConfigcatSdkkey;
+
     public GetSettingValueBySdkkeyRequest withXConfigcatSdkkey(String xConfigcatSdkkey) {
         this.xConfigcatSdkkey = xConfigcatSdkkey;
         return this;
@@ -22,9 +24,13 @@ public class GetSettingValueBySdkkeyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=settingKeyOrId")
     public String settingKeyOrId;
+
     public GetSettingValueBySdkkeyRequest withSettingKeyOrId(String settingKeyOrId) {
         this.settingKeyOrId = settingKeyOrId;
         return this;
     }
     
+    public GetSettingValueBySdkkeyRequest(@JsonProperty("settingKeyOrId") String settingKeyOrId) {
+        this.settingKeyOrId = settingKeyOrId;
+  }
 }

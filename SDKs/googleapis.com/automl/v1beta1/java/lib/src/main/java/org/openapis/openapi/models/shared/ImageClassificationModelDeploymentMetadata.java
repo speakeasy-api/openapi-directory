@@ -18,9 +18,11 @@ public class ImageClassificationModelDeploymentMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodeCount")
     public String nodeCount;
+
     public ImageClassificationModelDeploymentMetadata withNodeCount(String nodeCount) {
         this.nodeCount = nodeCount;
         return this;
     }
     
+    public ImageClassificationModelDeploymentMetadata(){}
 }

@@ -15,6 +15,7 @@ public class CommitmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitments")
     public Commitment[] commitments;
+
     public CommitmentsScopedList withCommitments(Commitment[] commitments) {
         this.commitments = commitments;
         return this;
@@ -26,9 +27,11 @@ public class CommitmentsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public CommitmentsScopedListWarning warning;
+
     public CommitmentsScopedList withWarning(CommitmentsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public CommitmentsScopedList(){}
 }

@@ -18,6 +18,7 @@ public class SupportedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public SupportedConfiguration withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -29,6 +30,7 @@ public class SupportedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public SupportedConfiguration withProperty(String property) {
         this.property = property;
         return this;
@@ -40,9 +42,11 @@ public class SupportedConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usage")
     public String usage;
+
     public SupportedConfiguration withUsage(String usage) {
         this.usage = usage;
         return this;
     }
     
+    public SupportedConfiguration(){}
 }

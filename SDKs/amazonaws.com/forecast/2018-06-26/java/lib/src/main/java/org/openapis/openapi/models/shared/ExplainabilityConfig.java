@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExplainabilityConfig {
     @JsonProperty("TimePointGranularity")
     public TimePointGranularityEnum timePointGranularity;
+
     public ExplainabilityConfig withTimePointGranularity(TimePointGranularityEnum timePointGranularity) {
         this.timePointGranularity = timePointGranularity;
         return this;
@@ -19,9 +20,14 @@ public class ExplainabilityConfig {
     
     @JsonProperty("TimeSeriesGranularity")
     public TimeSeriesGranularityEnum timeSeriesGranularity;
+
     public ExplainabilityConfig withTimeSeriesGranularity(TimeSeriesGranularityEnum timeSeriesGranularity) {
         this.timeSeriesGranularity = timeSeriesGranularity;
         return this;
     }
     
+    public ExplainabilityConfig(@JsonProperty("TimePointGranularity") TimePointGranularityEnum timePointGranularity, @JsonProperty("TimeSeriesGranularity") TimeSeriesGranularityEnum timeSeriesGranularity) {
+        this.timePointGranularity = timePointGranularity;
+        this.timeSeriesGranularity = timeSeriesGranularity;
+  }
 }

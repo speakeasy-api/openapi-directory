@@ -18,6 +18,7 @@ public class FootnoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public StructuralElementInput[] content;
+
     public FootnoteInput withContent(StructuralElementInput[] content) {
         this.content = content;
         return this;
@@ -29,9 +30,11 @@ public class FootnoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("footnoteId")
     public String footnoteId;
+
     public FootnoteInput withFootnoteId(String footnoteId) {
         this.footnoteId = footnoteId;
         return this;
     }
     
+    public FootnoteInput(){}
 }

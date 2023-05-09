@@ -15,9 +15,11 @@ public class MobileDeviceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public MobileDeviceAction withAction(String action) {
         this.action = action;
         return this;
     }
     
+    public MobileDeviceAction(){}
 }

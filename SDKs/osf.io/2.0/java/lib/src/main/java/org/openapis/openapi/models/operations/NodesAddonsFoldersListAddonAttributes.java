@@ -15,6 +15,7 @@ public class NodesAddonsFoldersListAddonAttributes {
      */
     
     public NodesAddonsFoldersListAddonAttributesCategoriesEnum[] categories;
+
     public NodesAddonsFoldersListAddonAttributes withCategories(NodesAddonsFoldersListAddonAttributesCategoriesEnum[] categories) {
         this.categories = categories;
         return this;
@@ -25,6 +26,7 @@ public class NodesAddonsFoldersListAddonAttributes {
      */
     
     public String description;
+
     public NodesAddonsFoldersListAddonAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class NodesAddonsFoldersListAddonAttributes {
      */
     
     public String name;
+
     public NodesAddonsFoldersListAddonAttributes withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,11 @@ public class NodesAddonsFoldersListAddonAttributes {
      */
     
     public String url;
+
     public NodesAddonsFoldersListAddonAttributes withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public NodesAddonsFoldersListAddonAttributes(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCandidatesForAutoMLJobRequest {
     @JsonProperty("AutoMLJobName")
     public String autoMLJobName;
+
     public ListCandidatesForAutoMLJobRequest withAutoMLJobName(String autoMLJobName) {
         this.autoMLJobName = autoMLJobName;
         return this;
@@ -19,6 +20,7 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CandidateNameEquals")
     public String candidateNameEquals;
+
     public ListCandidatesForAutoMLJobRequest withCandidateNameEquals(String candidateNameEquals) {
         this.candidateNameEquals = candidateNameEquals;
         return this;
@@ -27,6 +29,7 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListCandidatesForAutoMLJobRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -35,6 +38,7 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCandidatesForAutoMLJobRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -43,6 +47,7 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public CandidateSortByEnum sortBy;
+
     public ListCandidatesForAutoMLJobRequest withSortBy(CandidateSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -51,6 +56,7 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public AutoMLSortOrderEnum sortOrder;
+
     public ListCandidatesForAutoMLJobRequest withSortOrder(AutoMLSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -59,9 +65,13 @@ public class ListCandidatesForAutoMLJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusEquals")
     public CandidateStatusEnum statusEquals;
+
     public ListCandidatesForAutoMLJobRequest withStatusEquals(CandidateStatusEnum statusEquals) {
         this.statusEquals = statusEquals;
         return this;
     }
     
+    public ListCandidatesForAutoMLJobRequest(@JsonProperty("AutoMLJobName") String autoMLJobName) {
+        this.autoMLJobName = autoMLJobName;
+  }
 }

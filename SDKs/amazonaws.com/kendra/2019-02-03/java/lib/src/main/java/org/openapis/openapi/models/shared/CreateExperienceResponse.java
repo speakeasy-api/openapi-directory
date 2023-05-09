@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateExperienceResponse {
     @JsonProperty("Id")
     public String id;
+
     public CreateExperienceResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateExperienceResponse(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

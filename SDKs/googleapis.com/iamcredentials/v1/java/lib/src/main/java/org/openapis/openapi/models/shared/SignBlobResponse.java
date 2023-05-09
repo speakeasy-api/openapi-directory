@@ -18,6 +18,7 @@ public class SignBlobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyId")
     public String keyId;
+
     public SignBlobResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -29,9 +30,11 @@ public class SignBlobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("signedBlob")
     public String signedBlob;
+
     public SignBlobResponse withSignedBlob(String signedBlob) {
         this.signedBlob = signedBlob;
         return this;
     }
     
+    public SignBlobResponse(){}
 }

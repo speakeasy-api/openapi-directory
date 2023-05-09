@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
@@ -12,6 +13,7 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=enterprise")
     public String enterprise;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withEnterprise(String enterprise) {
         this.enterprise = enterprise;
         return this;
@@ -22,6 +24,7 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,9 +35,13 @@ public class EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public EnterpriseAdminListSelfHostedRunnerGroupsForEnterpriseRequest(@JsonProperty("enterprise") String enterprise) {
+        this.enterprise = enterprise;
+  }
 }

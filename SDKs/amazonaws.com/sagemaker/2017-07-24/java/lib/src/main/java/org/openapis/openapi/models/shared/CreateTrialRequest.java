@@ -12,6 +12,7 @@ public class CreateTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateTrialRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -19,6 +20,7 @@ public class CreateTrialRequest {
     
     @JsonProperty("ExperimentName")
     public String experimentName;
+
     public CreateTrialRequest withExperimentName(String experimentName) {
         this.experimentName = experimentName;
         return this;
@@ -30,6 +32,7 @@ public class CreateTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public CreateTrialRequest withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -38,6 +41,7 @@ public class CreateTrialRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateTrialRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -45,9 +49,14 @@ public class CreateTrialRequest {
     
     @JsonProperty("TrialName")
     public String trialName;
+
     public CreateTrialRequest withTrialName(String trialName) {
         this.trialName = trialName;
         return this;
     }
     
+    public CreateTrialRequest(@JsonProperty("ExperimentName") String experimentName, @JsonProperty("TrialName") String trialName) {
+        this.experimentName = experimentName;
+        this.trialName = trialName;
+  }
 }

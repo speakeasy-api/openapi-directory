@@ -15,6 +15,7 @@ public class StoresGet200ApplicationJSONIntuneDetailsAppCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StoresGet200ApplicationJSONIntuneDetailsAppCategory withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class StoresGet200ApplicationJSONIntuneDetailsAppCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StoresGet200ApplicationJSONIntuneDetailsAppCategory withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StoresGet200ApplicationJSONIntuneDetailsAppCategory(){}
 }

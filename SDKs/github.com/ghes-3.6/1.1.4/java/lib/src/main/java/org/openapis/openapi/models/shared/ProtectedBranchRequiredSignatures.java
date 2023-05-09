@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchRequiredSignatures {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProtectedBranchRequiredSignatures withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -16,9 +17,14 @@ public class ProtectedBranchRequiredSignatures {
     
     @JsonProperty("url")
     public String url;
+
     public ProtectedBranchRequiredSignatures withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProtectedBranchRequiredSignatures(@JsonProperty("enabled") Boolean enabled, @JsonProperty("url") String url) {
+        this.enabled = enabled;
+        this.url = url;
+  }
 }

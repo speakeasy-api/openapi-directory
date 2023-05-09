@@ -15,6 +15,7 @@ public class UpdatePipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public UpdatePipeSourceManagedStreamingKafkaParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credentials")
     public MSKAccessCredentials credentials;
+
     public UpdatePipeSourceManagedStreamingKafkaParameters withCredentials(MSKAccessCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -31,9 +33,11 @@ public class UpdatePipeSourceManagedStreamingKafkaParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public UpdatePipeSourceManagedStreamingKafkaParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
     }
     
+    public UpdatePipeSourceManagedStreamingKafkaParameters(){}
 }

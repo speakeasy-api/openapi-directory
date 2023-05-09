@@ -18,6 +18,7 @@ public class ListAdminClusterMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adminClusterMemberships")
     public Membership[] adminClusterMemberships;
+
     public ListAdminClusterMembershipsResponse withAdminClusterMemberships(Membership[] adminClusterMemberships) {
         this.adminClusterMemberships = adminClusterMemberships;
         return this;
@@ -29,6 +30,7 @@ public class ListAdminClusterMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAdminClusterMembershipsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListAdminClusterMembershipsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListAdminClusterMembershipsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListAdminClusterMembershipsResponse(){}
 }

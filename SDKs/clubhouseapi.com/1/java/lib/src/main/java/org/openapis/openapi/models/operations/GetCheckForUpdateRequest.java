@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetCheckForUpdateRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_testflight")
     public Long isTestflight;
+
     public GetCheckForUpdateRequest withIsTestflight(Long isTestflight) {
         this.isTestflight = isTestflight;
         return this;
     }
     
+    public GetCheckForUpdateRequest(){}
 }

@@ -17,6 +17,7 @@ public class Assignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public Document[] files;
+
     public Assignments withFiles(Document[] files) {
         this.files = files;
         return this;
@@ -25,6 +26,7 @@ public class Assignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marks")
     public Mark[] marks;
+
     public Assignments withMarks(Mark[] marks) {
         this.marks = marks;
         return this;
@@ -33,6 +35,7 @@ public class Assignments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Assignments withStatus(String status) {
         this.status = status;
         return this;
@@ -43,6 +46,7 @@ public class Assignments {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("submittedAt")
     public OffsetDateTime submittedAt;
+
     public Assignments withSubmittedAt(OffsetDateTime submittedAt) {
         this.submittedAt = submittedAt;
         return this;
@@ -53,9 +57,11 @@ public class Assignments {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public Assignments withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public Assignments(){}
 }

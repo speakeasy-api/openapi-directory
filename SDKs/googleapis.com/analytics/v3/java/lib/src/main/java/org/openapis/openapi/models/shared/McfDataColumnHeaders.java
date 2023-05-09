@@ -15,6 +15,7 @@ public class McfDataColumnHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnType")
     public String columnType;
+
     public McfDataColumnHeaders withColumnType(String columnType) {
         this.columnType = columnType;
         return this;
@@ -26,6 +27,7 @@ public class McfDataColumnHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public String dataType;
+
     public McfDataColumnHeaders withDataType(String dataType) {
         this.dataType = dataType;
         return this;
@@ -37,9 +39,11 @@ public class McfDataColumnHeaders {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public McfDataColumnHeaders withName(String name) {
         this.name = name;
         return this;
     }
     
+    public McfDataColumnHeaders(){}
 }

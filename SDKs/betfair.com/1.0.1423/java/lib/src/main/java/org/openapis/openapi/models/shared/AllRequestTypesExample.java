@@ -15,6 +15,7 @@ public class AllRequestTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public AuthenticationMessage authentication;
+
     public AllRequestTypesExample withAuthentication(AuthenticationMessage authentication) {
         this.authentication = authentication;
         return this;
@@ -23,6 +24,7 @@ public class AllRequestTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heartbeat")
     public HeartbeatMessage heartbeat;
+
     public AllRequestTypesExample withHeartbeat(HeartbeatMessage heartbeat) {
         this.heartbeat = heartbeat;
         return this;
@@ -31,6 +33,7 @@ public class AllRequestTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketSubscription")
     public MarketSubscriptionMessage marketSubscription;
+
     public AllRequestTypesExample withMarketSubscription(MarketSubscriptionMessage marketSubscription) {
         this.marketSubscription = marketSubscription;
         return this;
@@ -39,6 +42,7 @@ public class AllRequestTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opTypes")
     public AllRequestTypesExampleOpTypesEnum opTypes;
+
     public AllRequestTypesExample withOpTypes(AllRequestTypesExampleOpTypesEnum opTypes) {
         this.opTypes = opTypes;
         return this;
@@ -47,9 +51,11 @@ public class AllRequestTypesExample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderSubscriptionMessage")
     public OrderSubscriptionMessage orderSubscriptionMessage;
+
     public AllRequestTypesExample withOrderSubscriptionMessage(OrderSubscriptionMessage orderSubscriptionMessage) {
         this.orderSubscriptionMessage = orderSubscriptionMessage;
         return this;
     }
     
+    public AllRequestTypesExample(){}
 }

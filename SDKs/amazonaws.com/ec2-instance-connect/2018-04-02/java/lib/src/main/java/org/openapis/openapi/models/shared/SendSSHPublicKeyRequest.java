@@ -12,6 +12,7 @@ public class SendSSHPublicKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public SendSSHPublicKeyRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class SendSSHPublicKeyRequest {
     
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public SendSSHPublicKeyRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -26,6 +28,7 @@ public class SendSSHPublicKeyRequest {
     
     @JsonProperty("InstanceOSUser")
     public String instanceOSUser;
+
     public SendSSHPublicKeyRequest withInstanceOSUser(String instanceOSUser) {
         this.instanceOSUser = instanceOSUser;
         return this;
@@ -33,9 +36,15 @@ public class SendSSHPublicKeyRequest {
     
     @JsonProperty("SSHPublicKey")
     public String sshPublicKey;
+
     public SendSSHPublicKeyRequest withSSHPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public SendSSHPublicKeyRequest(@JsonProperty("InstanceId") String instanceId, @JsonProperty("InstanceOSUser") String instanceOSUser, @JsonProperty("SSHPublicKey") String sshPublicKey) {
+        this.instanceId = instanceId;
+        this.instanceOSUser = instanceOSUser;
+        this.sshPublicKey = sshPublicKey;
+  }
 }

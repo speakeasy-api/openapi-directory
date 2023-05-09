@@ -15,9 +15,13 @@ public class BuildsGetDownloadUri200ApplicationJSON {
      */
     @JsonProperty("uri")
     public String uri;
+
     public BuildsGetDownloadUri200ApplicationJSON withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public BuildsGetDownloadUri200ApplicationJSON(@JsonProperty("uri") String uri) {
+        this.uri = uri;
+  }
 }

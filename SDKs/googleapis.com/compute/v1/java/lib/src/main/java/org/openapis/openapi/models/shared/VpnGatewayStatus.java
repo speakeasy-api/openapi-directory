@@ -15,9 +15,11 @@ public class VpnGatewayStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnConnections")
     public VpnGatewayStatusVpnConnection[] vpnConnections;
+
     public VpnGatewayStatus withVpnConnections(VpnGatewayStatusVpnConnection[] vpnConnections) {
         this.vpnConnections = vpnConnections;
         return this;
     }
     
+    public VpnGatewayStatus(){}
 }

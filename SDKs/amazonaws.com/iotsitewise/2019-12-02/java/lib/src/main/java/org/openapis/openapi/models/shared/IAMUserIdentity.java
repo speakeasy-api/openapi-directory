@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IAMUserIdentity {
     @JsonProperty("arn")
     public String arn;
+
     public IAMUserIdentity withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public IAMUserIdentity(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

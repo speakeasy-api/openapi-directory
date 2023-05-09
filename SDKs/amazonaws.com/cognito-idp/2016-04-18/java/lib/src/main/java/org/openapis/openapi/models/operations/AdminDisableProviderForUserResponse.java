@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AdminDisableProviderForUserResponse {
@@ -12,6 +13,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public java.util.Map<String, Object> adminDisableProviderForUserResponse;
+
     public AdminDisableProviderForUserResponse withAdminDisableProviderForUserResponse(java.util.Map<String, Object> adminDisableProviderForUserResponse) {
         this.adminDisableProviderForUserResponse = adminDisableProviderForUserResponse;
         return this;
@@ -22,6 +24,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object aliasExistsException;
+
     public AdminDisableProviderForUserResponse withAliasExistsException(Object aliasExistsException) {
         this.aliasExistsException = aliasExistsException;
         return this;
@@ -29,6 +32,7 @@ public class AdminDisableProviderForUserResponse {
     
     
     public String contentType;
+
     public AdminDisableProviderForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object internalErrorException;
+
     public AdminDisableProviderForUserResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object invalidParameterException;
+
     public AdminDisableProviderForUserResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object notAuthorizedException;
+
     public AdminDisableProviderForUserResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -69,6 +76,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AdminDisableProviderForUserResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class AdminDisableProviderForUserResponse {
     
     
     public Integer statusCode;
+
     public AdminDisableProviderForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class AdminDisableProviderForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AdminDisableProviderForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object tooManyRequestsException;
+
     public AdminDisableProviderForUserResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class AdminDisableProviderForUserResponse {
      */
     
     public Object userNotFoundException;
+
     public AdminDisableProviderForUserResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public AdminDisableProviderForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

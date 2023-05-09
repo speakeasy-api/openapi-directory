@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutRuleByIdRequest {
@@ -12,6 +13,7 @@ public class PutRuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public PutRuleByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class PutRuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public PutRuleByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutRuleByIdRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.RuleByIdRequest ruleByIdRequest;
+
     public PutRuleByIdRequest withRuleByIdRequest(org.openapis.openapi.models.shared.RuleByIdRequest ruleByIdRequest) {
         this.ruleByIdRequest = ruleByIdRequest;
         return this;
@@ -39,6 +43,7 @@ public class PutRuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppKey")
     public String xPROVIDERAPIAppKey;
+
     public PutRuleByIdRequest withXPROVIDERAPIAppKey(String xPROVIDERAPIAppKey) {
         this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
         return this;
@@ -49,6 +54,7 @@ public class PutRuleByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-PROVIDER-API-AppToken")
     public String xPROVIDERAPIAppToken;
+
     public PutRuleByIdRequest withXPROVIDERAPIAppToken(String xPROVIDERAPIAppToken) {
         this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
         return this;
@@ -56,9 +62,18 @@ public class PutRuleByIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ruleId")
     public String ruleId;
+
     public PutRuleByIdRequest withRuleId(String ruleId) {
         this.ruleId = ruleId;
         return this;
     }
     
+    public PutRuleByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("RuleByIdRequest") org.openapis.openapi.models.shared.RuleByIdRequest ruleByIdRequest, @JsonProperty("X-PROVIDER-API-AppKey") String xPROVIDERAPIAppKey, @JsonProperty("X-PROVIDER-API-AppToken") String xPROVIDERAPIAppToken, @JsonProperty("ruleId") String ruleId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.ruleByIdRequest = ruleByIdRequest;
+        this.xPROVIDERAPIAppKey = xPROVIDERAPIAppKey;
+        this.xPROVIDERAPIAppToken = xPROVIDERAPIAppToken;
+        this.ruleId = ruleId;
+  }
 }

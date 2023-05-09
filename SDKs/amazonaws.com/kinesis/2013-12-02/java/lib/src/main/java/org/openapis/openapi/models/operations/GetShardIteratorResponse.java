@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetShardIteratorResponse {
@@ -12,6 +13,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object accessDeniedException;
+
     public GetShardIteratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetShardIteratorResponse {
     
     
     public String contentType;
+
     public GetShardIteratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetShardIteratorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetShardIteratorOutput getShardIteratorOutput;
+
     public GetShardIteratorResponse withGetShardIteratorOutput(org.openapis.openapi.models.shared.GetShardIteratorOutput getShardIteratorOutput) {
         this.getShardIteratorOutput = getShardIteratorOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public GetShardIteratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetShardIteratorResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetShardIteratorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetShardIteratorResponse {
     
     
     public Integer statusCode;
+
     public GetShardIteratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetShardIteratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetShardIteratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetShardIteratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

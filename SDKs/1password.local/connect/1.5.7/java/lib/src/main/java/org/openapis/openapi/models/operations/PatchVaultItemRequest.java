@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PatchVaultItemRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Patch[] requestBody;
+
     public PatchVaultItemRequest withRequestBody(org.openapis.openapi.models.shared.Patch[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PatchVaultItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemUuid")
     public String itemUuid;
+
     public PatchVaultItemRequest withItemUuid(String itemUuid) {
         this.itemUuid = itemUuid;
         return this;
@@ -29,9 +32,14 @@ public class PatchVaultItemRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=vaultUuid")
     public String vaultUuid;
+
     public PatchVaultItemRequest withVaultUuid(String vaultUuid) {
         this.vaultUuid = vaultUuid;
         return this;
     }
     
+    public PatchVaultItemRequest(@JsonProperty("itemUuid") String itemUuid, @JsonProperty("vaultUuid") String vaultUuid) {
+        this.itemUuid = itemUuid;
+        this.vaultUuid = vaultUuid;
+  }
 }

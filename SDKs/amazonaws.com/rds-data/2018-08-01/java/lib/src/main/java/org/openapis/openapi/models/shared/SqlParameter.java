@@ -15,6 +15,7 @@ public class SqlParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SqlParameter withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class SqlParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeHint")
     public TypeHintEnum typeHint;
+
     public SqlParameter withTypeHint(TypeHintEnum typeHint) {
         this.typeHint = typeHint;
         return this;
@@ -31,9 +33,11 @@ public class SqlParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Field value;
+
     public SqlParameter withValue(Field value) {
         this.value = value;
         return this;
     }
     
+    public SqlParameter(){}
 }

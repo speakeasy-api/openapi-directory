@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1ExactMatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseSensitive")
     public Boolean caseSensitive;
+
     public GoogleCloudContactcenterinsightsV1ExactMatchConfig withCaseSensitive(Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ExactMatchConfig(){}
 }

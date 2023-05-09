@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFleetResultInstances {
     
     public String[] instanceIds;
+
     public CreateFleetResultInstances withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
@@ -19,6 +20,7 @@ public class CreateFleetResultInstances {
     
     
     public CreateFleetResultInstancesInstanceTypeEnum instanceType;
+
     public CreateFleetResultInstances withInstanceType(CreateFleetResultInstancesInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -26,6 +28,7 @@ public class CreateFleetResultInstances {
     
     
     public CreateFleetResultInstancesLaunchTemplateAndOverrides launchTemplateAndOverrides;
+
     public CreateFleetResultInstances withLaunchTemplateAndOverrides(CreateFleetResultInstancesLaunchTemplateAndOverrides launchTemplateAndOverrides) {
         this.launchTemplateAndOverrides = launchTemplateAndOverrides;
         return this;
@@ -33,6 +36,7 @@ public class CreateFleetResultInstances {
     
     
     public CreateFleetResultInstancesLifecycleEnum lifecycle;
+
     public CreateFleetResultInstances withLifecycle(CreateFleetResultInstancesLifecycleEnum lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -40,9 +44,11 @@ public class CreateFleetResultInstances {
     
     
     public CreateFleetResultInstancesPlatformEnum platform;
+
     public CreateFleetResultInstances withPlatform(CreateFleetResultInstancesPlatformEnum platform) {
         this.platform = platform;
         return this;
     }
     
+    public CreateFleetResultInstances(){}
 }

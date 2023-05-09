@@ -12,9 +12,11 @@ public class QuittungZugferdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=account")
     public String account;
+
     public QuittungZugferdRequest withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public QuittungZugferdRequest(){}
 }

@@ -15,6 +15,7 @@ public class SiteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SiteOptions withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class SiteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public String excludes;
+
     public SiteOptions withExcludes(String excludes) {
         this.excludes = excludes;
         return this;
@@ -30,6 +32,7 @@ public class SiteOptions {
     
     @JsonProperty("name")
     public String name;
+
     public SiteOptions withName(String name) {
         this.name = name;
         return this;
@@ -38,9 +41,13 @@ public class SiteOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public String scope;
+
     public SiteOptions withScope(String scope) {
         this.scope = scope;
         return this;
     }
     
+    public SiteOptions(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

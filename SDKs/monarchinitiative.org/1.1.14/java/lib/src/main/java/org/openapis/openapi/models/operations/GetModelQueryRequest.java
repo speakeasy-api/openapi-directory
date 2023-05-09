@@ -12,6 +12,7 @@ public class GetModelQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contributor")
     public String contributor;
+
     public GetModelQueryRequest withContributor(String contributor) {
         this.contributor = contributor;
         return this;
@@ -22,9 +23,11 @@ public class GetModelQueryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=title")
     public String title;
+
     public GetModelQueryRequest withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetModelQueryRequest(){}
 }

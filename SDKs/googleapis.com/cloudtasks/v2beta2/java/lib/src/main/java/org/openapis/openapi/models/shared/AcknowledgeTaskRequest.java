@@ -18,9 +18,11 @@ public class AcknowledgeTaskRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleTime")
     public String scheduleTime;
+
     public AcknowledgeTaskRequest withScheduleTime(String scheduleTime) {
         this.scheduleTime = scheduleTime;
         return this;
     }
     
+    public AcknowledgeTaskRequest(){}
 }

@@ -18,6 +18,7 @@ public class Wimstatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wim_started")
     public Long wimStarted;
+
     public Wimstatus200ApplicationJSON withWimStarted(Long wimStarted) {
         this.wimStarted = wimStarted;
         return this;
@@ -29,9 +30,11 @@ public class Wimstatus200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wim_status")
     public String wimStatus;
+
     public Wimstatus200ApplicationJSON withWimStatus(String wimStatus) {
         this.wimStatus = wimStatus;
         return this;
     }
     
+    public Wimstatus200ApplicationJSON(){}
 }

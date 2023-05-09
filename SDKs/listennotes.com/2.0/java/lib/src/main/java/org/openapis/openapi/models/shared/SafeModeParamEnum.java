@@ -10,13 +10,13 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * SafeModeParamEnum - Whether or not to exclude podcasts with explicit language. 1 is yes, and 0 is no.
  */
 public enum SafeModeParamEnum {
-    ZERO("0"),
-    ONE("1");
+    ZERO(0L),
+    ONE(1L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private SafeModeParamEnum(String value) {
+    private SafeModeParamEnum(Long value) {
         this.value = value;
     }
 }

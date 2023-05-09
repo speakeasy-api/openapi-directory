@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ResultFormattedResultsRuleResultsUrlBlocks {
     
     public PagespeedApiFormatStringV2 header;
+
     public ResultFormattedResultsRuleResultsUrlBlocks withHeader(PagespeedApiFormatStringV2 header) {
         this.header = header;
         return this;
@@ -19,9 +20,11 @@ public class ResultFormattedResultsRuleResultsUrlBlocks {
      */
     
     public ResultFormattedResultsRuleResultsUrlBlocksUrls[] urls;
+
     public ResultFormattedResultsRuleResultsUrlBlocks withUrls(ResultFormattedResultsRuleResultsUrlBlocksUrls[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public ResultFormattedResultsRuleResultsUrlBlocks(){}
 }

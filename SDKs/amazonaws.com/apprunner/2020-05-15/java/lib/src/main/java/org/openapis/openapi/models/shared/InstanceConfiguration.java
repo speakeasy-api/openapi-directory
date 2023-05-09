@@ -15,6 +15,7 @@ public class InstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cpu")
     public String cpu;
+
     public InstanceConfiguration withCpu(String cpu) {
         this.cpu = cpu;
         return this;
@@ -23,6 +24,7 @@ public class InstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceRoleArn")
     public String instanceRoleArn;
+
     public InstanceConfiguration withInstanceRoleArn(String instanceRoleArn) {
         this.instanceRoleArn = instanceRoleArn;
         return this;
@@ -31,9 +33,11 @@ public class InstanceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public String memory;
+
     public InstanceConfiguration withMemory(String memory) {
         this.memory = memory;
         return this;
     }
     
+    public InstanceConfiguration(){}
 }

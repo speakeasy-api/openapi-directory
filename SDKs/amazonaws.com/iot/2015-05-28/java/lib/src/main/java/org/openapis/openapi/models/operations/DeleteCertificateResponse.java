@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCertificateResponse {
@@ -12,6 +13,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object certificateStateException;
+
     public DeleteCertificateResponse withCertificateStateException(Object certificateStateException) {
         this.certificateStateException = certificateStateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCertificateResponse {
     
     
     public String contentType;
+
     public DeleteCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object deleteConflictException;
+
     public DeleteCertificateResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteCertificateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteCertificateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteCertificateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteCertificateResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCertificateResponse {
     
     
     public Integer statusCode;
+
     public DeleteCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteCertificateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteCertificateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteCertificateResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteCertificateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ListSqlInjectionMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListSqlInjectionMatchSetsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,9 +24,11 @@ public class ListSqlInjectionMatchSetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListSqlInjectionMatchSetsRequest withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public ListSqlInjectionMatchSetsRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse {
     
     public String contentType;
+
     public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse {
     
     
     public Integer statusCode;
+
     public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -43,9 +48,14 @@ public class GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse {
      */
     
     public org.openapis.openapi.models.shared.PaginatedBranchrestrictions paginatedBranchrestrictions;
+
     public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse withPaginatedBranchrestrictions(org.openapis.openapi.models.shared.PaginatedBranchrestrictions paginatedBranchrestrictions) {
         this.paginatedBranchrestrictions = paginatedBranchrestrictions;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugBranchRestrictionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

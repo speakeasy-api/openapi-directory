@@ -18,6 +18,7 @@ public class Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("printout")
     public Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPrintout[] printout;
+
     public Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchema withPrintout(Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchemaPrintout[] printout) {
         this.printout = printout;
         return this;
@@ -29,9 +30,11 @@ public class Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1j
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_record_count")
     public Integer totalRecordCount;
+
     public Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchema withTotalRecordCount(Integer totalRecordCount) {
         this.totalRecordCount = totalRecordCount;
         return this;
     }
     
+    public Onealmaws1v11taskLists1printoutsGetResponses200ContentApplication1jsonSchema(){}
 }

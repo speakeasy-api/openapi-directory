@@ -18,9 +18,11 @@ public class RenameVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newVolumeId")
     public String newVolumeId;
+
     public RenameVolumeRequest withNewVolumeId(String newVolumeId) {
         this.newVolumeId = newVolumeId;
         return this;
     }
     
+    public RenameVolumeRequest(){}
 }

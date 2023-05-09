@@ -15,6 +15,7 @@ public class SqlQueryDatasetAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public QueryFilter[] filters;
+
     public SqlQueryDatasetAction withFilters(QueryFilter[] filters) {
         this.filters = filters;
         return this;
@@ -22,9 +23,13 @@ public class SqlQueryDatasetAction {
     
     @JsonProperty("sqlQuery")
     public String sqlQuery;
+
     public SqlQueryDatasetAction withSqlQuery(String sqlQuery) {
         this.sqlQuery = sqlQuery;
         return this;
     }
     
+    public SqlQueryDatasetAction(@JsonProperty("sqlQuery") String sqlQuery) {
+        this.sqlQuery = sqlQuery;
+  }
 }

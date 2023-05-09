@@ -15,6 +15,7 @@ public class ComputeExpressionRequest {
      */
     @JsonProperty("encryptedExpression")
     public String encryptedExpression;
+
     public ComputeExpressionRequest withEncryptedExpression(String encryptedExpression) {
         this.encryptedExpression = encryptedExpression;
         return this;
@@ -25,9 +26,14 @@ public class ComputeExpressionRequest {
      */
     @JsonProperty("productValues")
     public java.util.Map<String, String> productValues;
+
     public ComputeExpressionRequest withProductValues(java.util.Map<String, String> productValues) {
         this.productValues = productValues;
         return this;
     }
     
+    public ComputeExpressionRequest(@JsonProperty("encryptedExpression") String encryptedExpression, @JsonProperty("productValues") java.util.Map<String, String> productValues) {
+        this.encryptedExpression = encryptedExpression;
+        this.productValues = productValues;
+  }
 }

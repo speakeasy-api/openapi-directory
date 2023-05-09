@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AreGamesInProgressRequest {
@@ -12,9 +13,13 @@ public class AreGamesInProgressRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public AreGamesInProgressFormatEnum format;
+
     public AreGamesInProgressRequest withFormat(AreGamesInProgressFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public AreGamesInProgressRequest(@JsonProperty("format") AreGamesInProgressFormatEnum format) {
+        this.format = format;
+  }
 }

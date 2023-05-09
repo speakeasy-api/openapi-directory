@@ -15,9 +15,11 @@ public class CreateIndexResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateIndexResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateIndexResponse(){}
 }

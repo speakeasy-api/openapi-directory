@@ -15,6 +15,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlbumArt")
     public JobAlbumArt albumArt;
+
     public CreateJobOutput withAlbumArt(JobAlbumArt albumArt) {
         this.albumArt = albumArt;
         return this;
@@ -23,6 +24,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Captions")
     public Captions captions;
+
     public CreateJobOutput withCaptions(Captions captions) {
         this.captions = captions;
         return this;
@@ -31,6 +33,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Composition")
     public Clip[] composition;
+
     public CreateJobOutput withComposition(Clip[] composition) {
         this.composition = composition;
         return this;
@@ -39,6 +42,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Encryption")
     public Encryption encryption;
+
     public CreateJobOutput withEncryption(Encryption encryption) {
         this.encryption = encryption;
         return this;
@@ -47,6 +51,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public CreateJobOutput withKey(String key) {
         this.key = key;
         return this;
@@ -55,6 +60,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PresetId")
     public String presetId;
+
     public CreateJobOutput withPresetId(String presetId) {
         this.presetId = presetId;
         return this;
@@ -63,6 +69,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Rotate")
     public String rotate;
+
     public CreateJobOutput withRotate(String rotate) {
         this.rotate = rotate;
         return this;
@@ -71,6 +78,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SegmentDuration")
     public String segmentDuration;
+
     public CreateJobOutput withSegmentDuration(String segmentDuration) {
         this.segmentDuration = segmentDuration;
         return this;
@@ -79,6 +87,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailEncryption")
     public Encryption thumbnailEncryption;
+
     public CreateJobOutput withThumbnailEncryption(Encryption thumbnailEncryption) {
         this.thumbnailEncryption = thumbnailEncryption;
         return this;
@@ -87,6 +96,7 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailPattern")
     public String thumbnailPattern;
+
     public CreateJobOutput withThumbnailPattern(String thumbnailPattern) {
         this.thumbnailPattern = thumbnailPattern;
         return this;
@@ -95,9 +105,11 @@ public class CreateJobOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Watermarks")
     public JobWatermark[] watermarks;
+
     public CreateJobOutput withWatermarks(JobWatermark[] watermarks) {
         this.watermarks = watermarks;
         return this;
     }
     
+    public CreateJobOutput(){}
 }

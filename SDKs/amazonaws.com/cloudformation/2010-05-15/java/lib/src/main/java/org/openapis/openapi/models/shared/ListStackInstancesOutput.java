@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListStackInstancesOutput {
     
     public String nextToken;
+
     public ListStackInstancesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListStackInstancesOutput {
     
     
     public StackInstanceSummary[] summaries;
+
     public ListStackInstancesOutput withSummaries(StackInstanceSummary[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public ListStackInstancesOutput(){}
 }

@@ -12,6 +12,7 @@ public class PutTargetsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBusName")
     public String eventBusName;
+
     public PutTargetsRequest withEventBusName(String eventBusName) {
         this.eventBusName = eventBusName;
         return this;
@@ -19,6 +20,7 @@ public class PutTargetsRequest {
     
     @JsonProperty("Rule")
     public String rule;
+
     public PutTargetsRequest withRule(String rule) {
         this.rule = rule;
         return this;
@@ -26,9 +28,14 @@ public class PutTargetsRequest {
     
     @JsonProperty("Targets")
     public Target[] targets;
+
     public PutTargetsRequest withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public PutTargetsRequest(@JsonProperty("Rule") String rule, @JsonProperty("Targets") Target[] targets) {
+        this.rule = rule;
+        this.targets = targets;
+  }
 }

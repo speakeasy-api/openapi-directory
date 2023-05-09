@@ -12,9 +12,13 @@ public class GistsCreateCommentRequestBody {
      */
     @JsonProperty("body")
     public String body;
+
     public GistsCreateCommentRequestBody withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public GistsCreateCommentRequestBody(@JsonProperty("body") String body) {
+        this.body = body;
+  }
 }

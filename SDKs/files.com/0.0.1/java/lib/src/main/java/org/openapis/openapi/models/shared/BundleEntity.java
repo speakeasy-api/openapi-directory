@@ -23,6 +23,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_body")
     public String clickwrapBody;
+
     public BundleEntity withClickwrapBody(String clickwrapBody) {
         this.clickwrapBody = clickwrapBody;
         return this;
@@ -34,6 +35,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clickwrap_id")
     public Integer clickwrapId;
+
     public BundleEntity withClickwrapId(Integer clickwrapId) {
         this.clickwrapId = clickwrapId;
         return this;
@@ -45,6 +47,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BundleEntity withCode(String code) {
         this.code = code;
         return this;
@@ -58,6 +61,7 @@ public class BundleEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public BundleEntity withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -69,6 +73,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public BundleEntity withDescription(String description) {
         this.description = description;
         return this;
@@ -80,6 +85,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dont_separate_submissions_by_folder")
     public Boolean dontSeparateSubmissionsByFolder;
+
     public BundleEntity withDontSeparateSubmissionsByFolder(Boolean dontSeparateSubmissionsByFolder) {
         this.dontSeparateSubmissionsByFolder = dontSeparateSubmissionsByFolder;
         return this;
@@ -93,6 +99,7 @@ public class BundleEntity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires_at")
     public OffsetDateTime expiresAt;
+
     public BundleEntity withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -104,6 +111,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("form_field_set")
     public FormFieldSetEntity formFieldSet;
+
     public BundleEntity withFormFieldSet(FormFieldSetEntity formFieldSet) {
         this.formFieldSet = formFieldSet;
         return this;
@@ -115,6 +123,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("has_inbox")
     public Boolean hasInbox;
+
     public BundleEntity withHasInbox(Boolean hasInbox) {
         this.hasInbox = hasInbox;
         return this;
@@ -126,6 +135,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public BundleEntity withId(Integer id) {
         this.id = id;
         return this;
@@ -137,6 +147,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inbox_id")
     public Integer inboxId;
+
     public BundleEntity withInboxId(Integer inboxId) {
         this.inboxId = inboxId;
         return this;
@@ -148,6 +159,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_uses")
     public Integer maxUses;
+
     public BundleEntity withMaxUses(Integer maxUses) {
         this.maxUses = maxUses;
         return this;
@@ -159,6 +171,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public BundleEntity withNote(String note) {
         this.note = note;
         return this;
@@ -170,6 +183,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password_protected")
     public Boolean passwordProtected;
+
     public BundleEntity withPasswordProtected(Boolean passwordProtected) {
         this.passwordProtected = passwordProtected;
         return this;
@@ -181,17 +195,19 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path_template")
     public String pathTemplate;
+
     public BundleEntity withPathTemplate(String pathTemplate) {
         this.pathTemplate = pathTemplate;
         return this;
     }
     
     /**
-     * A list of paths in this bundle
+     * A list of paths in this bundle.  For performance reasons, this is not provided when listing bundles.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paths")
     public String[] paths;
+
     public BundleEntity withPaths(String[] paths) {
         this.paths = paths;
         return this;
@@ -203,6 +219,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public BundleEntityPermissionsEnum permissions;
+
     public BundleEntity withPermissions(BundleEntityPermissionsEnum permissions) {
         this.permissions = permissions;
         return this;
@@ -214,6 +231,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("preview_only")
     public Boolean previewOnly;
+
     public BundleEntity withPreviewOnly(Boolean previewOnly) {
         this.previewOnly = previewOnly;
         return this;
@@ -225,6 +243,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_registration")
     public Boolean requireRegistration;
+
     public BundleEntity withRequireRegistration(Boolean requireRegistration) {
         this.requireRegistration = requireRegistration;
         return this;
@@ -236,6 +255,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("require_share_recipient")
     public Boolean requireShareRecipient;
+
     public BundleEntity withRequireShareRecipient(Boolean requireShareRecipient) {
         this.requireShareRecipient = requireShareRecipient;
         return this;
@@ -247,6 +267,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send_email_receipt_to_uploader")
     public Boolean sendEmailReceiptToUploader;
+
     public BundleEntity withSendEmailReceiptToUploader(Boolean sendEmailReceiptToUploader) {
         this.sendEmailReceiptToUploader = sendEmailReceiptToUploader;
         return this;
@@ -258,6 +279,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_company")
     public Boolean skipCompany;
+
     public BundleEntity withSkipCompany(Boolean skipCompany) {
         this.skipCompany = skipCompany;
         return this;
@@ -269,6 +291,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_email")
     public Boolean skipEmail;
+
     public BundleEntity withSkipEmail(Boolean skipEmail) {
         this.skipEmail = skipEmail;
         return this;
@@ -280,6 +303,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skip_name")
     public Boolean skipName;
+
     public BundleEntity withSkipName(Boolean skipName) {
         this.skipName = skipName;
         return this;
@@ -291,6 +315,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BundleEntity withUrl(String url) {
         this.url = url;
         return this;
@@ -302,6 +327,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public Integer userId;
+
     public BundleEntity withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -313,6 +339,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public BundleEntity withUsername(String username) {
         this.username = username;
         return this;
@@ -321,6 +348,7 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watermark_attachment")
     public ImageEntity watermarkAttachment;
+
     public BundleEntity withWatermarkAttachment(ImageEntity watermarkAttachment) {
         this.watermarkAttachment = watermarkAttachment;
         return this;
@@ -332,9 +360,11 @@ public class BundleEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("watermark_value")
     public java.util.Map<String, Object> watermarkValue;
+
     public BundleEntity withWatermarkValue(java.util.Map<String, Object> watermarkValue) {
         this.watermarkValue = watermarkValue;
         return this;
     }
     
+    public BundleEntity(){}
 }

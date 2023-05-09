@@ -15,6 +15,7 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRan
      */
     @JsonProperty("from")
     public String from;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRan
      */
     @JsonProperty("to")
     public String to;
+
     public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public PutPricingPipelineCatalogPriceTableIdRequestBodyRulesContextDateRange(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

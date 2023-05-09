@@ -17,6 +17,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppTypeEquals")
     public StudioLifecycleConfigAppTypeEnum appTypeEquals;
+
     public ListStudioLifecycleConfigsRequest withAppTypeEquals(StudioLifecycleConfigAppTypeEnum appTypeEquals) {
         this.appTypeEquals = appTypeEquals;
         return this;
@@ -27,6 +28,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public ListStudioLifecycleConfigsRequest withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -37,6 +39,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public ListStudioLifecycleConfigsRequest withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -45,6 +48,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListStudioLifecycleConfigsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -55,6 +59,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedTimeAfter")
     public OffsetDateTime modifiedTimeAfter;
+
     public ListStudioLifecycleConfigsRequest withModifiedTimeAfter(OffsetDateTime modifiedTimeAfter) {
         this.modifiedTimeAfter = modifiedTimeAfter;
         return this;
@@ -65,6 +70,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ModifiedTimeBefore")
     public OffsetDateTime modifiedTimeBefore;
+
     public ListStudioLifecycleConfigsRequest withModifiedTimeBefore(OffsetDateTime modifiedTimeBefore) {
         this.modifiedTimeBefore = modifiedTimeBefore;
         return this;
@@ -73,6 +79,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NameContains")
     public String nameContains;
+
     public ListStudioLifecycleConfigsRequest withNameContains(String nameContains) {
         this.nameContains = nameContains;
         return this;
@@ -81,6 +88,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListStudioLifecycleConfigsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -89,6 +97,7 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public StudioLifecycleConfigSortKeyEnum sortBy;
+
     public ListStudioLifecycleConfigsRequest withSortBy(StudioLifecycleConfigSortKeyEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -97,9 +106,11 @@ public class ListStudioLifecycleConfigsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListStudioLifecycleConfigsRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListStudioLifecycleConfigsRequest(){}
 }

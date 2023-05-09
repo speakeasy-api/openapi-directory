@@ -15,6 +15,7 @@ public class PendingCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public PendingCreateStandbyWorkspacesRequest withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -23,6 +24,7 @@ public class PendingCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkspaceStateEnum state;
+
     public PendingCreateStandbyWorkspacesRequest withState(WorkspaceStateEnum state) {
         this.state = state;
         return this;
@@ -31,6 +33,7 @@ public class PendingCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public PendingCreateStandbyWorkspacesRequest withUserName(String userName) {
         this.userName = userName;
         return this;
@@ -39,9 +42,11 @@ public class PendingCreateStandbyWorkspacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public PendingCreateStandbyWorkspacesRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public PendingCreateStandbyWorkspacesRequest(){}
 }

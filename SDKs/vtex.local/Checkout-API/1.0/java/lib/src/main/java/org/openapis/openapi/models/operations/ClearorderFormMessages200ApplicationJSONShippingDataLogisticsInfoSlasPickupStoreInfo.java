@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInfo")
     public String additionalInfo;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -29,6 +30,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withAddress(ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress address) {
         this.address = address;
         return this;
@@ -40,6 +42,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockId")
     public String dockId;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withDockId(String dockId) {
         this.dockId = dockId;
         return this;
@@ -51,6 +54,7 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("friendlyName")
     public String friendlyName;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withFriendlyName(String friendlyName) {
         this.friendlyName = friendlyName;
         return this;
@@ -62,9 +66,11 @@ public class ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSl
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPickupStore")
     public Boolean isPickupStore;
+
     public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo withIsPickupStore(Boolean isPickupStore) {
         this.isPickupStore = isPickupStore;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo(){}
 }

@@ -15,9 +15,11 @@ public class UpdateCallRequestUnmute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public UpdateCallRequestUnmuteActionEnum action;
+
     public UpdateCallRequestUnmute withAction(UpdateCallRequestUnmuteActionEnum action) {
         this.action = action;
         return this;
     }
     
+    public UpdateCallRequestUnmute(){}
 }

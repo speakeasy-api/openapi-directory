@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RepositoriesListRequest {
@@ -12,6 +13,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public RepositoriesListRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form")
     public RepositoriesListFormEnum form;
+
     public RepositoriesListRequest withForm(RepositoriesListFormEnum form) {
         this.form = form;
         return this;
@@ -32,6 +35,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public RepositoriesListRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -42,6 +46,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service_connection_id")
     public String serviceConnectionId;
+
     public RepositoriesListRequest withServiceConnectionId(String serviceConnectionId) {
         this.serviceConnectionId = serviceConnectionId;
         return this;
@@ -52,6 +57,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=source_host")
     public RepositoriesListSourceHostEnum sourceHost;
+
     public RepositoriesListRequest withSourceHost(RepositoriesListSourceHostEnum sourceHost) {
         this.sourceHost = sourceHost;
         return this;
@@ -62,6 +68,7 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vstsAccountName")
     public String vstsAccountName;
+
     public RepositoriesListRequest withVstsAccountName(String vstsAccountName) {
         this.vstsAccountName = vstsAccountName;
         return this;
@@ -72,9 +79,15 @@ public class RepositoriesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=vstsProjectId")
     public String vstsProjectId;
+
     public RepositoriesListRequest withVstsProjectId(String vstsProjectId) {
         this.vstsProjectId = vstsProjectId;
         return this;
     }
     
+    public RepositoriesListRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("source_host") RepositoriesListSourceHostEnum sourceHost) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.sourceHost = sourceHost;
+  }
 }

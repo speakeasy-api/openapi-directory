@@ -15,10 +15,24 @@ public class PaymentRead {
     /**
      * Registered creditor account
      */
+    @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditor_account")
     public String creditorAccount;
+
     public PaymentRead withCreditorAccount(String creditorAccount) {
         this.creditorAccount = creditorAccount;
+        return this;
+    }
+    
+    /**
+     * Creditor account
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("creditor_object")
+    public CreditorAccountWrite creditorObject;
+
+    public PaymentRead withCreditorObject(CreditorAccountWrite creditorObject) {
+        this.creditorObject = creditorObject;
         return this;
     }
     
@@ -28,6 +42,7 @@ public class PaymentRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_payment_id")
     public String customPaymentId;
+
     public PaymentRead withCustomPaymentId(String customPaymentId) {
         this.customPaymentId = customPaymentId;
         return this;
@@ -38,6 +53,7 @@ public class PaymentRead {
      */
     @JsonProperty("debtor_account")
     public DebtorAccountWrite debtorAccount;
+
     public PaymentRead withDebtorAccount(DebtorAccountWrite debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -49,6 +65,7 @@ public class PaymentRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PaymentRead withDescription(String description) {
         this.description = description;
         return this;
@@ -59,6 +76,7 @@ public class PaymentRead {
      */
     @JsonProperty("instructed_amount")
     public InstructedAmount instructedAmount;
+
     public PaymentRead withInstructedAmount(InstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -70,6 +88,7 @@ public class PaymentRead {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public PaymentRead withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -77,10 +96,22 @@ public class PaymentRead {
     
     /**
      * Payment product
+     * 
+     * * `T2P` - target-2-payments
+     * * `SCT` - sepa-credit-transfers
+     * * `ISCT` - instant-sepa-credit-transfer
+     * * `CBCT` - cross-border-credit-transfers
+     * * `BACS` - Back Payment Scheme
+     * * `CHAPS` - CHAPS Payment Scheme
+     * * `FPS` - Faster Payment Scheme
+     * * `SWIFT` - Swift Payment Service
+     * * `BT` - Balance Transfer
+     * * `MT` - Money Transfer
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_product")
     public PaymentReadPaymentProductEnum paymentProduct;
+
     public PaymentRead withPaymentProduct(PaymentReadPaymentProductEnum paymentProduct) {
         this.paymentProduct = paymentProduct;
         return this;
@@ -88,10 +119,29 @@ public class PaymentRead {
     
     /**
      * Payment end to end identification
+     * 
+     * * `INIT` - Initiated. Payment has been initiated.
+     * * `ERRE` - ExecutionError. We experienced error on payment execution.
+     * * `ERRS` - StatusError. We experienced error retrieving payment status. Try again.
+     * * `ACCC` - AcceptedSettlementCompleted. Settlement on the creditor's account has been completed
+     * * `ACCP` - AcceptedCustomerProfile. Preceding check of technical validation was successful. Customer profile check was successful
+     * * `ACSC` - AcceptedSettlementCompleted. Settlement on the debtor\u2019s account has been completed
+     * * `ACSP` - AcceptedSettlementInProcess. All preceding checks such as technical validation and customer profile were successful and therefore the payment initiation has been accepted for execution
+     * * `ACTC` - AcceptedTechnicalValidation. Authentication and syntactical and semantical validation are successful
+     * * `ACWC` - AcceptedWithChange. Instruction is accepted but a change will be made, such as date or remittance not sent
+     * * `ACWP` - AcceptedWithoutPosting. Payment instruction included in the credit transfer is accepted without being posted to the creditor customer\u2019s account
+     * * `RCVD` - Received. Payment initiation has been received by the receiving agent
+     * * `PDNG` - Pending. Payment initiation or individual transaction included in the payment initiation is pending. Further checks and status update will be performed
+     * * `RJCT` - Rejected. Payment initiation or individual transaction included in the payment initiation has been rejected.
+     * * `CANC` - Cancelled. Payment initiation has been cancelled before execution
+     * * `ACFC` - AcceptedFundsChecked. Pre-ceeding check of technical validation and customer profile was successful and an automatic funds check was positive
+     * * `PATC` - PartiallyAcceptedTechnicalCorrect. The payment initiation needs multiple authentications, where some but not yet all have been performed
+     * * `PART` - PartiallyAccepted. A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_status")
     public PaymentReadPaymentStatusEnum paymentStatus;
+
     public PaymentRead withPaymentStatus(PaymentReadPaymentStatusEnum paymentStatus) {
         this.paymentStatus = paymentStatus;
         return this;
@@ -99,10 +149,15 @@ public class PaymentRead {
     
     /**
      * Payment Type
+     * 
+     * * `single-payment` - payment
+     * * `bulk-payment` - bulk-payments
+     * * `periodic-payment` - periodic-payments
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_type")
     public PaymentReadPaymentTypeEnum paymentType;
+
     public PaymentRead withPaymentType(PaymentReadPaymentTypeEnum paymentType) {
         this.paymentType = paymentType;
         return this;
@@ -113,9 +168,15 @@ public class PaymentRead {
      */
     @JsonProperty("redirect")
     public String redirect;
+
     public PaymentRead withRedirect(String redirect) {
         this.redirect = redirect;
         return this;
     }
     
+    public PaymentRead(@JsonProperty("debtor_account") DebtorAccountWrite debtorAccount, @JsonProperty("instructed_amount") InstructedAmount instructedAmount, @JsonProperty("redirect") String redirect) {
+        this.debtorAccount = debtorAccount;
+        this.instructedAmount = instructedAmount;
+        this.redirect = redirect;
+  }
 }

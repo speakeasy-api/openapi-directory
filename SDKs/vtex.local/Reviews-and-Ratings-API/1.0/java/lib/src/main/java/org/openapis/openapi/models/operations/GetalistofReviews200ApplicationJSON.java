@@ -18,6 +18,7 @@ public class GetalistofReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public GetalistofReviews200ApplicationJSONData[] data;
+
     public GetalistofReviews200ApplicationJSON withData(GetalistofReviews200ApplicationJSONData[] data) {
         this.data = data;
         return this;
@@ -29,9 +30,11 @@ public class GetalistofReviews200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public GetalistofReviews200ApplicationJSONRange range;
+
     public GetalistofReviews200ApplicationJSON withRange(GetalistofReviews200ApplicationJSONRange range) {
         this.range = range;
         return this;
     }
     
+    public GetalistofReviews200ApplicationJSON(){}
 }

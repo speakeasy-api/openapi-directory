@@ -20,6 +20,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available_for_booking")
     public Boolean availableForBooking;
+
     public CatalogItemVariation withAvailableForBooking(Boolean availableForBooking) {
         this.availableForBooking = availableForBooking;
         return this;
@@ -34,6 +35,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory_alert_threshold")
     public Long inventoryAlertThreshold;
+
     public CatalogItemVariation withInventoryAlertThreshold(Long inventoryAlertThreshold) {
         this.inventoryAlertThreshold = inventoryAlertThreshold;
         return this;
@@ -46,6 +48,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventory_alert_type")
     public String inventoryAlertType;
+
     public CatalogItemVariation withInventoryAlertType(String inventoryAlertType) {
         this.inventoryAlertType = inventoryAlertType;
         return this;
@@ -57,6 +60,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_id")
     public String itemId;
+
     public CatalogItemVariation withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -69,6 +73,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item_option_values")
     public CatalogItemOptionValueForItemVariation[] itemOptionValues;
+
     public CatalogItemVariation withItemOptionValues(CatalogItemOptionValueForItemVariation[] itemOptionValues) {
         this.itemOptionValues = itemOptionValues;
         return this;
@@ -80,6 +85,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_overrides")
     public ItemVariationLocationOverrides[] locationOverrides;
+
     public CatalogItemVariation withLocationOverrides(ItemVariationLocationOverrides[] locationOverrides) {
         this.locationOverrides = locationOverrides;
         return this;
@@ -93,6 +99,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("measurement_unit_id")
     public String measurementUnitId;
+
     public CatalogItemVariation withMeasurementUnitId(String measurementUnitId) {
         this.measurementUnitId = measurementUnitId;
         return this;
@@ -104,6 +111,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CatalogItemVariation withName(String name) {
         this.name = name;
         return this;
@@ -117,6 +125,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal")
     public Long ordinal;
+
     public CatalogItemVariation withOrdinal(Long ordinal) {
         this.ordinal = ordinal;
         return this;
@@ -133,6 +142,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price_money")
     public Money priceMoney;
+
     public CatalogItemVariation withPriceMoney(Money priceMoney) {
         this.priceMoney = priceMoney;
         return this;
@@ -145,6 +155,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pricing_type")
     public String pricingType;
+
     public CatalogItemVariation withPricingType(String pricingType) {
         this.pricingType = pricingType;
         return this;
@@ -159,6 +170,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("service_duration")
     public Long serviceDuration;
+
     public CatalogItemVariation withServiceDuration(Long serviceDuration) {
         this.serviceDuration = serviceDuration;
         return this;
@@ -170,6 +182,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sku")
     public String sku;
+
     public CatalogItemVariation withSku(String sku) {
         this.sku = sku;
         return this;
@@ -182,6 +195,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockable")
     public Boolean stockable;
+
     public CatalogItemVariation withStockable(Boolean stockable) {
         this.stockable = stockable;
         return this;
@@ -195,6 +209,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stockable_conversion")
     public CatalogStockConversion stockableConversion;
+
     public CatalogItemVariation withStockableConversion(CatalogStockConversion stockableConversion) {
         this.stockableConversion = stockableConversion;
         return this;
@@ -207,6 +222,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team_member_ids")
     public String[] teamMemberIds;
+
     public CatalogItemVariation withTeamMemberIds(String[] teamMemberIds) {
         this.teamMemberIds = teamMemberIds;
         return this;
@@ -218,6 +234,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("track_inventory")
     public Boolean trackInventory;
+
     public CatalogItemVariation withTrackInventory(Boolean trackInventory) {
         this.trackInventory = trackInventory;
         return this;
@@ -234,6 +251,7 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upc")
     public String upc;
+
     public CatalogItemVariation withUpc(String upc) {
         this.upc = upc;
         return this;
@@ -245,9 +263,11 @@ public class CatalogItemVariation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_data")
     public String userData;
+
     public CatalogItemVariation withUserData(String userData) {
         this.userData = userData;
         return this;
     }
     
+    public CatalogItemVariation(){}
 }

@@ -18,9 +18,11 @@ public class AllocateTransitVirtualInterfaceResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualInterface")
     public VirtualInterface virtualInterface;
+
     public AllocateTransitVirtualInterfaceResult withVirtualInterface(VirtualInterface virtualInterface) {
         this.virtualInterface = virtualInterface;
         return this;
     }
     
+    public AllocateTransitVirtualInterfaceResult(){}
 }

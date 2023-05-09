@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FetchFieldByIdRequest {
@@ -12,9 +13,13 @@ public class FetchFieldByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fieldId")
     public String fieldId;
+
     public FetchFieldByIdRequest withFieldId(String fieldId) {
         this.fieldId = fieldId;
         return this;
     }
     
+    public FetchFieldByIdRequest(@JsonProperty("fieldId") String fieldId) {
+        this.fieldId = fieldId;
+  }
 }

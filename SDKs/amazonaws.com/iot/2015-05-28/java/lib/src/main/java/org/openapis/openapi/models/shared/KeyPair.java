@@ -15,6 +15,7 @@ public class KeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateKey")
     public String privateKey;
+
     public KeyPair withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -23,9 +24,11 @@ public class KeyPair {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public KeyPair withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public KeyPair(){}
 }

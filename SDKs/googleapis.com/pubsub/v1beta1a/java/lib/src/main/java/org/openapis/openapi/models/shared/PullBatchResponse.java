@@ -18,9 +18,11 @@ public class PullBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pullResponses")
     public PullResponse[] pullResponses;
+
     public PullBatchResponse withPullResponses(PullResponse[] pullResponses) {
         this.pullResponses = pullResponses;
         return this;
     }
     
+    public PullBatchResponse(){}
 }

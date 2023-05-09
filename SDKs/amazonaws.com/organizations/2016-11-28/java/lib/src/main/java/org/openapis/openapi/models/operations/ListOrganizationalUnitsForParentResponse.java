@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOrganizationalUnitsForParentResponse {
@@ -12,6 +13,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object awsOrganizationsNotInUseException;
+
     public ListOrganizationalUnitsForParentResponse withAWSOrganizationsNotInUseException(Object awsOrganizationsNotInUseException) {
         this.awsOrganizationsNotInUseException = awsOrganizationsNotInUseException;
         return this;
@@ -22,6 +24,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object accessDeniedException;
+
     public ListOrganizationalUnitsForParentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class ListOrganizationalUnitsForParentResponse {
     
     
     public String contentType;
+
     public ListOrganizationalUnitsForParentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object invalidInputException;
+
     public ListOrganizationalUnitsForParentResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOrganizationalUnitsForParentResponse listOrganizationalUnitsForParentResponse;
+
     public ListOrganizationalUnitsForParentResponse withListOrganizationalUnitsForParentResponse(org.openapis.openapi.models.shared.ListOrganizationalUnitsForParentResponse listOrganizationalUnitsForParentResponse) {
         this.listOrganizationalUnitsForParentResponse = listOrganizationalUnitsForParentResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object parentNotFoundException;
+
     public ListOrganizationalUnitsForParentResponse withParentNotFoundException(Object parentNotFoundException) {
         this.parentNotFoundException = parentNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object serviceException;
+
     public ListOrganizationalUnitsForParentResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class ListOrganizationalUnitsForParentResponse {
     
     
     public Integer statusCode;
+
     public ListOrganizationalUnitsForParentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListOrganizationalUnitsForParentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOrganizationalUnitsForParentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class ListOrganizationalUnitsForParentResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListOrganizationalUnitsForParentResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListOrganizationalUnitsForParentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

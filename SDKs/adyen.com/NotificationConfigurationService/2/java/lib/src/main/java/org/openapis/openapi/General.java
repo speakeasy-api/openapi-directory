@@ -55,12 +55,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostCreateNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             getNotificationConfigurationResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,12 +104,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse() {{
+        org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse res = new org.openapis.openapi.models.operations.PostDeleteNotificationConfigurationsResponse(contentType, httpRes.statusCode()) {{
             genericResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -157,12 +153,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostGetNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             getNotificationConfigurationResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -208,12 +202,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse res = new org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse() {{
+        org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse res = new org.openapis.openapi.models.operations.PostGetNotificationConfigurationListResponse(contentType, httpRes.statusCode()) {{
             getNotificationConfigurationListResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -259,12 +251,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostTestNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             testNotificationConfigurationResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -310,12 +300,10 @@ public class General {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse() {{
+        org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse res = new org.openapis.openapi.models.operations.PostUpdateNotificationConfigurationResponse(contentType, httpRes.statusCode()) {{
             getNotificationConfigurationResponse = null;
             serviceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

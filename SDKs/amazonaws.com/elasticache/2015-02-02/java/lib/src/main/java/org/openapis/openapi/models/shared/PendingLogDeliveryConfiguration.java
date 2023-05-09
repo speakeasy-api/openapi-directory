@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PendingLogDeliveryConfiguration {
     
     public DestinationDetails destinationDetails;
+
     public PendingLogDeliveryConfiguration withDestinationDetails(DestinationDetails destinationDetails) {
         this.destinationDetails = destinationDetails;
         return this;
@@ -19,6 +20,7 @@ public class PendingLogDeliveryConfiguration {
     
     
     public DestinationTypeEnum destinationType;
+
     public PendingLogDeliveryConfiguration withDestinationType(DestinationTypeEnum destinationType) {
         this.destinationType = destinationType;
         return this;
@@ -26,6 +28,7 @@ public class PendingLogDeliveryConfiguration {
     
     
     public LogFormatEnum logFormat;
+
     public PendingLogDeliveryConfiguration withLogFormat(LogFormatEnum logFormat) {
         this.logFormat = logFormat;
         return this;
@@ -33,9 +36,11 @@ public class PendingLogDeliveryConfiguration {
     
     
     public LogTypeEnum logType;
+
     public PendingLogDeliveryConfiguration withLogType(LogTypeEnum logType) {
         this.logType = logType;
         return this;
     }
     
+    public PendingLogDeliveryConfiguration(){}
 }

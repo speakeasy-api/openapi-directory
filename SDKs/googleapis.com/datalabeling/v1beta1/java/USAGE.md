@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity;
 import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateRequest;
 import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateResponse;
+import org.openapis.openapi.models.operations.DatalabelingProjectsAnnotationSpecSetsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;
-import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet;
 import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec;
+import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpecSet;
+import org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -19,59 +18,60 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            DatalabelingProjectsAnnotationSpecSetsCreateRequest req = new DatalabelingProjectsAnnotationSpecSetsCreateRequest() {{
-                dollarXgafv = "2";
+            DatalabelingProjectsAnnotationSpecSetsCreateRequest req = new DatalabelingProjectsAnnotationSpecSetsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest = new GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest() {{
                     annotationSpecSet = new GoogleCloudDatalabelingV1beta1AnnotationSpecSet() {{
                         annotationSpecs = new org.openapis.openapi.models.shared.GoogleCloudDatalabelingV1beta1AnnotationSpec[]{{
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "distinctio";
-                                displayName = "quibusdam";
-                                index = 602763;
+                                description = "quibusdam";
+                                displayName = "unde";
+                                index = 857946;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "nulla";
-                                displayName = "corrupti";
-                                index = 847252;
+                                description = "corrupti";
+                                displayName = "illum";
+                                index = 423655;
                             }}),
                             add(new GoogleCloudDatalabelingV1beta1AnnotationSpec() {{
-                                description = "vel";
-                                displayName = "error";
-                                index = 645894;
+                                description = "error";
+                                displayName = "deserunt";
+                                index = 384382;
                             }}),
                         }};
                         blockingResources = new String[]{{
-                            add("iure"),
                             add("magnam"),
+                            add("debitis"),
                         }};
-                        description = "debitis";
-                        displayName = "ipsa";
-                        name = "delectus";
-                    }};
-                }};
-                accessToken = "tempora";
-                alt = "media";
-                callback = "molestiae";
-                fields = "minus";
-                key = "placeat";
-                oauthToken = "voluptatum";
-                parent = "iusto";
+                        description = "ipsa";
+                        displayName = "delectus";
+                        name = "Laurie Kreiger";
+                    }};;
+                }};;
+                accessToken = "voluptatum";
+                alt = AltEnum.MEDIA;
+                callback = "excepturi";
+                fields = "nisi";
+                key = "recusandae";
+                oauthToken = "temporibus";
                 prettyPrint = false;
-                quotaUser = "excepturi";
-                uploadType = "nisi";
-                uploadProtocol = "recusandae";
-            }}            
+                quotaUser = "ab";
+                uploadType = "quis";
+                uploadProtocol = "veritatis";
+            }};            
 
-            DatalabelingProjectsAnnotationSpecSetsCreateResponse res = sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req, new DatalabelingProjectsAnnotationSpecSetsCreateSecurity() {{
+            DatalabelingProjectsAnnotationSpecSetsCreateResponse res = sdk.projects.datalabelingProjectsAnnotationSpecSetsCreate(req, new DatalabelingProjectsAnnotationSpecSetsCreateSecurity("deserunt", "perferendis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleCloudDatalabelingV1beta1AnnotationSpecSet.isPresent()) {
+            if (res.googleCloudDatalabelingV1beta1AnnotationSpecSet != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

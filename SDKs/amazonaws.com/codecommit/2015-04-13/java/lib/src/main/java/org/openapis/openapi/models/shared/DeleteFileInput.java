@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteFileInput {
     @JsonProperty("branchName")
     public String branchName;
+
     public DeleteFileInput withBranchName(String branchName) {
         this.branchName = branchName;
         return this;
@@ -19,6 +20,7 @@ public class DeleteFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public DeleteFileInput withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -27,6 +29,7 @@ public class DeleteFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public DeleteFileInput withEmail(String email) {
         this.email = email;
         return this;
@@ -34,6 +37,7 @@ public class DeleteFileInput {
     
     @JsonProperty("filePath")
     public String filePath;
+
     public DeleteFileInput withFilePath(String filePath) {
         this.filePath = filePath;
         return this;
@@ -42,6 +46,7 @@ public class DeleteFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keepEmptyFolders")
     public Boolean keepEmptyFolders;
+
     public DeleteFileInput withKeepEmptyFolders(Boolean keepEmptyFolders) {
         this.keepEmptyFolders = keepEmptyFolders;
         return this;
@@ -50,6 +55,7 @@ public class DeleteFileInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DeleteFileInput withName(String name) {
         this.name = name;
         return this;
@@ -57,6 +63,7 @@ public class DeleteFileInput {
     
     @JsonProperty("parentCommitId")
     public String parentCommitId;
+
     public DeleteFileInput withParentCommitId(String parentCommitId) {
         this.parentCommitId = parentCommitId;
         return this;
@@ -64,9 +71,16 @@ public class DeleteFileInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public DeleteFileInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public DeleteFileInput(@JsonProperty("branchName") String branchName, @JsonProperty("filePath") String filePath, @JsonProperty("parentCommitId") String parentCommitId, @JsonProperty("repositoryName") String repositoryName) {
+        this.branchName = branchName;
+        this.filePath = filePath;
+        this.parentCommitId = parentCommitId;
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest {
@@ -12,6 +13,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=acceptsIncomplete")
     public Boolean acceptsIncomplete;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withAcceptsIncomplete(Boolean acceptsIncomplete) {
         this.acceptsIncomplete = acceptsIncomplete;
         return this;
@@ -32,6 +35,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -42,6 +46,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -87,6 +95,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withName(String name) {
         this.name = name;
         return this;
@@ -97,6 +106,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -107,6 +117,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=planId")
     public String planId;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withPlanId(String planId) {
         this.planId = planId;
         return this;
@@ -117,6 +128,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -127,6 +139,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -138,6 +151,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceId")
     public String serviceId;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -148,6 +162,7 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -158,9 +173,13 @@ public class ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDelete
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ServicebrokerProjectsBrokersV2ServiceInstancesServiceBindingsDeleteRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

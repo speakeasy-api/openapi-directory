@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportAppCatalogResponse {
     
     public String contentType;
+
     public ImportAppCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportAppCatalogResponse {
      */
     
     public java.util.Map<String, Object> importAppCatalogResponse;
+
     public ImportAppCatalogResponse withImportAppCatalogResponse(java.util.Map<String, Object> importAppCatalogResponse) {
         this.importAppCatalogResponse = importAppCatalogResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportAppCatalogResponse {
      */
     
     public Object internalError;
+
     public ImportAppCatalogResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -39,6 +43,7 @@ public class ImportAppCatalogResponse {
      */
     
     public Object invalidParameterException;
+
     public ImportAppCatalogResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ImportAppCatalogResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public ImportAppCatalogResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ImportAppCatalogResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ImportAppCatalogResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class ImportAppCatalogResponse {
     
     
     public Integer statusCode;
+
     public ImportAppCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ImportAppCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportAppCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ImportAppCatalogResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public ImportAppCatalogResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public ImportAppCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

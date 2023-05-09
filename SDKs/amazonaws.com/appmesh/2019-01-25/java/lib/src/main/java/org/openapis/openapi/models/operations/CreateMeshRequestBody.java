@@ -15,6 +15,7 @@ public class CreateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateMeshRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,6 +26,7 @@ public class CreateMeshRequestBody {
      */
     @JsonProperty("meshName")
     public String meshName;
+
     public CreateMeshRequestBody withMeshName(String meshName) {
         this.meshName = meshName;
         return this;
@@ -36,6 +38,7 @@ public class CreateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public CreateMeshRequestBodySpec spec;
+
     public CreateMeshRequestBody withSpec(CreateMeshRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -47,9 +50,13 @@ public class CreateMeshRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public org.openapis.openapi.models.shared.TagRef[] tags;
+
     public CreateMeshRequestBody withTags(org.openapis.openapi.models.shared.TagRef[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMeshRequestBody(@JsonProperty("meshName") String meshName) {
+        this.meshName = meshName;
+  }
 }

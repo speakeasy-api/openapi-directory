@@ -18,6 +18,7 @@ public class PortfolioMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public PortfolioMembershipResponse withGid(String gid) {
         this.gid = gid;
         return this;
@@ -26,6 +27,7 @@ public class PortfolioMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portfolio")
     public PortfolioCompact portfolio;
+
     public PortfolioMembershipResponse withPortfolio(PortfolioCompact portfolio) {
         this.portfolio = portfolio;
         return this;
@@ -37,6 +39,7 @@ public class PortfolioMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public PortfolioMembershipResponse withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -45,9 +48,11 @@ public class PortfolioMembershipResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public UserCompact user;
+
     public PortfolioMembershipResponse withUser(UserCompact user) {
         this.user = user;
         return this;
     }
     
+    public PortfolioMembershipResponse(){}
 }

@@ -12,6 +12,7 @@ public class TeamsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public TeamsListRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class TeamsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public TeamsListRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -32,6 +34,7 @@ public class TeamsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderType")
     public String orderType;
+
     public TeamsListRequest withOrderType(String orderType) {
         this.orderType = orderType;
         return this;
@@ -42,9 +45,11 @@ public class TeamsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public TeamsListRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public TeamsListRequest(){}
 }

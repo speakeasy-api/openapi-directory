@@ -15,6 +15,7 @@ public class CollectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public CollectionSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CollectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CollectionSummary withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class CollectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CollectionSummary withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class CollectionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CollectionStatusEnum status;
+
     public CollectionSummary withStatus(CollectionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public CollectionSummary(){}
 }

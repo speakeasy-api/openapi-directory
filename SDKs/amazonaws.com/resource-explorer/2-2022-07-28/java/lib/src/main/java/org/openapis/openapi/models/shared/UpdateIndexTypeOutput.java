@@ -20,6 +20,7 @@ public class UpdateIndexTypeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateIndexTypeOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -30,6 +31,7 @@ public class UpdateIndexTypeOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public UpdateIndexTypeOutput withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -38,6 +40,7 @@ public class UpdateIndexTypeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public IndexStateEnum state;
+
     public UpdateIndexTypeOutput withState(IndexStateEnum state) {
         this.state = state;
         return this;
@@ -46,9 +49,11 @@ public class UpdateIndexTypeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public IndexTypeEnum type;
+
     public UpdateIndexTypeOutput withType(IndexTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateIndexTypeOutput(){}
 }

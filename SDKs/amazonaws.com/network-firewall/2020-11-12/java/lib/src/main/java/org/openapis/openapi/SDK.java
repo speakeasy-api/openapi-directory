@@ -17,7 +17,7 @@ import org.openapis.openapi.utils.SerializedBody;
 import org.openapis.openapi.utils.SpeakeasyHTTPClient;
 
 /**
- * &lt;p&gt;This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html"&gt;Amazon Web Services APIs&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;To access Network Firewall using the REST API endpoint: &lt;code&gt;https://network-firewall.&amp;lt;region&amp;gt;.amazonaws.com &lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see &lt;a href="http://aws.amazon.com/tools/#SDKs"&gt;Amazon Web Services SDKs&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/"&gt;Network Firewall Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 5.0.2. For information about Suricata, see the &lt;a href="https://suricata.io/"&gt;Suricata website&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Use custom lists of known bad domains to limit the types of domain names that your applications can access.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Perform deep packet inspection on traffic entering or leaving your VPC.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/"&gt;Amazon VPC User Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To start using Network Firewall, do the following: &lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.&lt;/p&gt; &lt;/li&gt; &lt;/ol&gt;
+ * &lt;p&gt;This is the API Reference for Network Firewall. This guide is for developers who need detailed information about the Network Firewall API actions, data types, and errors. &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;The REST API requires you to handle connection details, such as calculating signatures, handling request retries, and error handling. For general information about using the Amazon Web Services REST APIs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-apis.html"&gt;Amazon Web Services APIs&lt;/a&gt;. &lt;/p&gt; &lt;p&gt;To access Network Firewall using the REST API endpoint: &lt;code&gt;https://network-firewall.&amp;lt;region&amp;gt;.amazonaws.com &lt;/code&gt; &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Alternatively, you can use one of the Amazon Web Services SDKs to access an API that's tailored to the programming language or platform that you're using. For more information, see &lt;a href="http://aws.amazon.com/tools/#SDKs"&gt;Amazon Web Services SDKs&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;For descriptions of Network Firewall features, including and step-by-step instructions on how to use them through the Network Firewall console, see the &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/"&gt;Network Firewall Developer Guide&lt;/a&gt;.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for Amazon Virtual Private Cloud (Amazon VPC). With Network Firewall, you can filter traffic at the perimeter of your VPC. This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or Direct Connect. Network Firewall uses rules that are compatible with Suricata, a free, open source network analysis and threat detection engine. Network Firewall supports Suricata version 6.0.9. For information about Suricata, see the &lt;a href="https://suricata.io/"&gt;Suricata website&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;You can use Network Firewall to monitor and protect your VPC traffic in a number of ways. The following are just a few examples: &lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Allow domains or IP addresses for known Amazon Web Services service endpoints, such as Amazon S3, and block all other forms of traffic.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Use custom lists of known bad domains to limit the types of domain names that your applications can access.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Perform deep packet inspection on traffic entering or leaving your VPC.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Use stateful protocol detection to filter protocols like HTTPS, regardless of the port used.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;To enable Network Firewall for your VPCs, you perform steps in both Amazon VPC and in Network Firewall. For information about using Amazon VPC, see &lt;a href="https://docs.aws.amazon.com/vpc/latest/userguide/"&gt;Amazon VPC User Guide&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To start using Network Firewall, do the following: &lt;/p&gt; &lt;ol&gt; &lt;li&gt; &lt;p&gt;(Optional) If you don't already have a VPC that you want to protect, create it in Amazon VPC. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Amazon VPC, in each Availability Zone where you want to have a firewall endpoint, create a subnet for the sole use of Network Firewall. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create stateless and stateful rule groups, to define the components of the network traffic filtering behavior that you want your firewall to have. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create a firewall policy that uses your rule groups and specifies additional default traffic filtering behavior. &lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Network Firewall, create a firewall and specify your new firewall policy and VPC subnets. Network Firewall creates a firewall endpoint in each subnet that you specify, with the behavior that's defined in the firewall policy.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;In Amazon VPC, use ingress routing enhancements to route traffic through the new firewall endpoints.&lt;/p&gt; &lt;/li&gt; &lt;/ol&gt;
  * https://docs.aws.amazon.com/network-firewall/ - Amazon Web Services documentation
  */
 public class SDK {
@@ -42,6 +42,11 @@ public class SDK {
          */
         "https://network-firewall.{region}.amazonaws.com.cn",
 	};
+	
+	
+	
+	
+	
 	
 	
 	
@@ -177,6 +182,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -214,7 +224,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.AssociateFirewallPolicyResponse() {{
+        org.openapis.openapi.models.operations.AssociateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.AssociateFirewallPolicyResponse(contentType, httpRes.statusCode()) {{
             associateFirewallPolicyResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -223,8 +233,6 @@ public class SDK {
             invalidTokenException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -314,7 +322,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AssociateSubnetsResponse res = new org.openapis.openapi.models.operations.AssociateSubnetsResponse() {{
+        org.openapis.openapi.models.operations.AssociateSubnetsResponse res = new org.openapis.openapi.models.operations.AssociateSubnetsResponse(contentType, httpRes.statusCode()) {{
             associateSubnetsResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -324,8 +332,6 @@ public class SDK {
             invalidOperationException = null;
             insufficientCapacityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,7 +428,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFirewallResponse res = new org.openapis.openapi.models.operations.CreateFirewallResponse() {{
+        org.openapis.openapi.models.operations.CreateFirewallResponse res = new org.openapis.openapi.models.operations.CreateFirewallResponse(contentType, httpRes.statusCode()) {{
             createFirewallResponse = null;
             invalidRequestException = null;
             limitExceededException = null;
@@ -431,8 +437,6 @@ public class SDK {
             insufficientCapacityException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -522,7 +526,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.CreateFirewallPolicyResponse() {{
+        org.openapis.openapi.models.operations.CreateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.CreateFirewallPolicyResponse(contentType, httpRes.statusCode()) {{
             createFirewallPolicyResponse = null;
             limitExceededException = null;
             invalidRequestException = null;
@@ -530,8 +534,6 @@ public class SDK {
             internalServerError = null;
             insufficientCapacityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -614,7 +616,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRuleGroupResponse res = new org.openapis.openapi.models.operations.CreateRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.CreateRuleGroupResponse res = new org.openapis.openapi.models.operations.CreateRuleGroupResponse(contentType, httpRes.statusCode()) {{
             createRuleGroupResponse = null;
             limitExceededException = null;
             invalidRequestException = null;
@@ -622,8 +624,6 @@ public class SDK {
             internalServerError = null;
             insufficientCapacityException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -673,6 +673,80 @@ public class SDK {
     }
 
     /**
+     * &lt;p&gt;Creates an Network Firewall TLS inspection configuration. A TLS inspection configuration contains the Certificate Manager certificate references that Network Firewall uses to decrypt and re-encrypt inbound traffic.&lt;/p&gt; &lt;p&gt;After you create a TLS inspection configuration, you associate it with a firewall policy.&lt;/p&gt; &lt;p&gt;To update the settings for a TLS inspection configuration, use &lt;a&gt;UpdateTLSInspectionConfiguration&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To manage a TLS inspection configuration's tags, use the standard Amazon Web Services resource tagging operations, &lt;a&gt;ListTagsForResource&lt;/a&gt;, &lt;a&gt;TagResource&lt;/a&gt;, and &lt;a&gt;UntagResource&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;To retrieve information about TLS inspection configurations, use &lt;a&gt;ListTLSInspectionConfigurations&lt;/a&gt; and &lt;a&gt;DescribeTLSInspectionConfiguration&lt;/a&gt;.&lt;/p&gt; &lt;p&gt; For more information about TLS inspection configurations, see &lt;a href="https://docs.aws.amazon.com/network-firewall/latest/developerguide/tls-inspection.html"&gt;Decrypting SSL/TLS traffic with TLS inspection configurations&lt;/a&gt; in the &lt;i&gt;Network Firewall Developer Guide&lt;/i&gt;. &lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.CreateTLSInspectionConfigurationResponse createTLSInspectionConfiguration(org.openapis.openapi.models.operations.CreateTLSInspectionConfigurationRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=NetworkFirewall_20201112.CreateTLSInspectionConfiguration");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createTLSInspectionConfigurationRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.CreateTLSInspectionConfigurationResponse res = new org.openapis.openapi.models.operations.CreateTLSInspectionConfigurationResponse(contentType, httpRes.statusCode()) {{
+            createTLSInspectionConfigurationResponse = null;
+            invalidRequestException = null;
+            throttlingException = null;
+            internalServerError = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.CreateTLSInspectionConfigurationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.CreateTLSInspectionConfigurationResponse.class);
+                res.createTLSInspectionConfigurationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * &lt;p&gt;Deletes the specified &lt;a&gt;Firewall&lt;/a&gt; and its &lt;a&gt;FirewallStatus&lt;/a&gt;. This operation requires the firewall's &lt;code&gt;DeleteProtection&lt;/code&gt; flag to be &lt;code&gt;FALSE&lt;/code&gt;. You can't revert this operation. &lt;/p&gt; &lt;p&gt;You can check whether a firewall is in use by reviewing the route tables for the Availability Zones where you have firewall subnet mappings. Retrieve the subnet mappings by calling &lt;a&gt;DescribeFirewall&lt;/a&gt;. You define and update the route tables through Amazon VPC. As needed, update the route tables for the zones to remove the firewall endpoints. When the route tables no longer use the firewall endpoints, you can remove the firewall safely.&lt;/p&gt; &lt;p&gt;To delete a firewall, remove the delete protection if you need to using &lt;a&gt;UpdateFirewallDeleteProtection&lt;/a&gt;, then delete the firewall by calling &lt;a&gt;DeleteFirewall&lt;/a&gt;. &lt;/p&gt;
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -706,7 +780,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFirewallResponse res = new org.openapis.openapi.models.operations.DeleteFirewallResponse() {{
+        org.openapis.openapi.models.operations.DeleteFirewallResponse res = new org.openapis.openapi.models.operations.DeleteFirewallResponse(contentType, httpRes.statusCode()) {{
             deleteFirewallResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -715,8 +789,6 @@ public class SDK {
             unsupportedOperationException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -806,7 +878,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFirewallPolicyResponse res = new org.openapis.openapi.models.operations.DeleteFirewallPolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteFirewallPolicyResponse res = new org.openapis.openapi.models.operations.DeleteFirewallPolicyResponse(contentType, httpRes.statusCode()) {{
             deleteFirewallPolicyResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -815,8 +887,6 @@ public class SDK {
             unsupportedOperationException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -906,7 +976,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.DeleteResourcePolicyResponse res = new org.openapis.openapi.models.operations.DeleteResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             deleteResourcePolicyResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -914,8 +984,6 @@ public class SDK {
             throttlingException = null;
             invalidResourcePolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -998,7 +1066,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRuleGroupResponse res = new org.openapis.openapi.models.operations.DeleteRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.DeleteRuleGroupResponse res = new org.openapis.openapi.models.operations.DeleteRuleGroupResponse(contentType, httpRes.statusCode()) {{
             deleteRuleGroupResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -1007,8 +1075,6 @@ public class SDK {
             unsupportedOperationException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1065,6 +1131,96 @@ public class SDK {
     }
 
     /**
+     * Deletes the specified &lt;a&gt;TLSInspectionConfiguration&lt;/a&gt;.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteTLSInspectionConfigurationResponse deleteTLSInspectionConfiguration(org.openapis.openapi.models.operations.DeleteTLSInspectionConfigurationRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=NetworkFirewall_20201112.DeleteTLSInspectionConfiguration");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "deleteTLSInspectionConfigurationRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeleteTLSInspectionConfigurationResponse res = new org.openapis.openapi.models.operations.DeleteTLSInspectionConfigurationResponse(contentType, httpRes.statusCode()) {{
+            deleteTLSInspectionConfigurationResponse = null;
+            invalidRequestException = null;
+            internalServerError = null;
+            resourceNotFoundException = null;
+            throttlingException = null;
+            invalidOperationException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DeleteTLSInspectionConfigurationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DeleteTLSInspectionConfigurationResponse.class);
+                res.deleteTLSInspectionConfigurationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidOperationException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Returns the data objects for the specified firewall. 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -1098,15 +1254,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFirewallResponse res = new org.openapis.openapi.models.operations.DescribeFirewallResponse() {{
+        org.openapis.openapi.models.operations.DescribeFirewallResponse res = new org.openapis.openapi.models.operations.DescribeFirewallResponse(contentType, httpRes.statusCode()) {{
             describeFirewallResponse = null;
             invalidRequestException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1182,15 +1336,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeFirewallPolicyResponse res = new org.openapis.openapi.models.operations.DescribeFirewallPolicyResponse() {{
+        org.openapis.openapi.models.operations.DescribeFirewallPolicyResponse res = new org.openapis.openapi.models.operations.DescribeFirewallPolicyResponse(contentType, httpRes.statusCode()) {{
             describeFirewallPolicyResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1266,15 +1418,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeLoggingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.DescribeLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeLoggingConfigurationResponse(contentType, httpRes.statusCode()) {{
             describeLoggingConfigurationResponse = null;
             invalidRequestException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1350,15 +1500,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeResourcePolicyResponse res = new org.openapis.openapi.models.operations.DescribeResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.DescribeResourcePolicyResponse res = new org.openapis.openapi.models.operations.DescribeResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             describeResourcePolicyResponse = null;
             invalidRequestException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1434,15 +1582,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRuleGroupResponse res = new org.openapis.openapi.models.operations.DescribeRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.DescribeRuleGroupResponse res = new org.openapis.openapi.models.operations.DescribeRuleGroupResponse(contentType, httpRes.statusCode()) {{
             describeRuleGroupResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1518,15 +1664,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeRuleGroupMetadataResponse res = new org.openapis.openapi.models.operations.DescribeRuleGroupMetadataResponse() {{
+        org.openapis.openapi.models.operations.DescribeRuleGroupMetadataResponse res = new org.openapis.openapi.models.operations.DescribeRuleGroupMetadataResponse(contentType, httpRes.statusCode()) {{
             describeRuleGroupMetadataResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
             throttlingException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1569,6 +1713,88 @@ public class SDK {
     }
 
     /**
+     * Returns the data objects for the specified TLS inspection configuration.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DescribeTLSInspectionConfigurationResponse describeTLSInspectionConfiguration(org.openapis.openapi.models.operations.DescribeTLSInspectionConfigurationRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=NetworkFirewall_20201112.DescribeTLSInspectionConfiguration");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "describeTLSInspectionConfigurationRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DescribeTLSInspectionConfigurationResponse res = new org.openapis.openapi.models.operations.DescribeTLSInspectionConfigurationResponse(contentType, httpRes.statusCode()) {{
+            describeTLSInspectionConfigurationResponse = null;
+            invalidRequestException = null;
+            internalServerError = null;
+            resourceNotFoundException = null;
+            throttlingException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DescribeTLSInspectionConfigurationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DescribeTLSInspectionConfigurationResponse.class);
+                res.describeTLSInspectionConfigurationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
      * Removes the specified subnet associations from the firewall. This removes the firewall endpoints from the subnets and removes any network filtering protections that the endpoints were providing. 
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
@@ -1602,7 +1828,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisassociateSubnetsResponse res = new org.openapis.openapi.models.operations.DisassociateSubnetsResponse() {{
+        org.openapis.openapi.models.operations.DisassociateSubnetsResponse res = new org.openapis.openapi.models.operations.DisassociateSubnetsResponse(contentType, httpRes.statusCode()) {{
             disassociateSubnetsResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -1611,8 +1837,6 @@ public class SDK {
             invalidTokenException = null;
             invalidOperationException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1708,14 +1932,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFirewallPoliciesResponse res = new org.openapis.openapi.models.operations.ListFirewallPoliciesResponse() {{
+        org.openapis.openapi.models.operations.ListFirewallPoliciesResponse res = new org.openapis.openapi.models.operations.ListFirewallPoliciesResponse(contentType, httpRes.statusCode()) {{
             listFirewallPoliciesResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1790,14 +2012,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListFirewallsResponse res = new org.openapis.openapi.models.operations.ListFirewallsResponse() {{
+        org.openapis.openapi.models.operations.ListFirewallsResponse res = new org.openapis.openapi.models.operations.ListFirewallsResponse(contentType, httpRes.statusCode()) {{
             listFirewallsResponse = null;
             invalidRequestException = null;
             internalServerError = null;
             throttlingException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1872,14 +2092,12 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListRuleGroupsResponse() {{
+        org.openapis.openapi.models.operations.ListRuleGroupsResponse res = new org.openapis.openapi.models.operations.ListRuleGroupsResponse(contentType, httpRes.statusCode()) {{
             listRuleGroupsResponse = null;
             invalidRequestException = null;
             throttlingException = null;
             internalServerError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1908,6 +2126,86 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
                 res.internalServerError = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Retrieves the metadata for the TLS inspection configurations that you have defined. Depending on your setting for max results and the number of TLS inspection configurations, a single call might not return the full list.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListTLSInspectionConfigurationsResponse listTLSInspectionConfigurations(org.openapis.openapi.models.operations.ListTLSInspectionConfigurationsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=NetworkFirewall_20201112.ListTLSInspectionConfigurations");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "listTLSInspectionConfigurationsRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTLSInspectionConfigurationsRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListTLSInspectionConfigurationsResponse res = new org.openapis.openapi.models.operations.ListTLSInspectionConfigurationsResponse(contentType, httpRes.statusCode()) {{
+            listTLSInspectionConfigurationsResponse = null;
+            invalidRequestException = null;
+            internalServerError = null;
+            throttlingException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ListTLSInspectionConfigurationsResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ListTLSInspectionConfigurationsResponse.class);
+                res.listTLSInspectionConfigurationsResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
             }
         }
 
@@ -1954,15 +2252,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse() {{
+        org.openapis.openapi.models.operations.ListTagsForResourceResponse res = new org.openapis.openapi.models.operations.ListTagsForResourceResponse(contentType, httpRes.statusCode()) {{
             listTagsForResourceResponse = null;
             throttlingException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2038,7 +2334,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse() {{
+        org.openapis.openapi.models.operations.PutResourcePolicyResponse res = new org.openapis.openapi.models.operations.PutResourcePolicyResponse(contentType, httpRes.statusCode()) {{
             putResourcePolicyResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2046,8 +2342,6 @@ public class SDK {
             throttlingException = null;
             invalidResourcePolicyException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2130,15 +2424,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             throttlingException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2214,15 +2506,13 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             throttlingException = null;
             internalServerError = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2298,7 +2588,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFirewallDeleteProtectionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallDeleteProtectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateFirewallDeleteProtectionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallDeleteProtectionResponse(contentType, httpRes.statusCode()) {{
             updateFirewallDeleteProtectionResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2307,8 +2597,6 @@ public class SDK {
             invalidTokenException = null;
             resourceOwnerCheckException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2398,7 +2686,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFirewallDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallDescriptionResponse() {{
+        org.openapis.openapi.models.operations.UpdateFirewallDescriptionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallDescriptionResponse(contentType, httpRes.statusCode()) {{
             updateFirewallDescriptionResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2406,8 +2694,6 @@ public class SDK {
             throttlingException = null;
             invalidTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2490,7 +2776,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFirewallEncryptionConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateFirewallEncryptionConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateFirewallEncryptionConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateFirewallEncryptionConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateFirewallEncryptionConfigurationResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2499,8 +2785,6 @@ public class SDK {
             invalidTokenException = null;
             resourceOwnerCheckException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2590,7 +2874,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.UpdateFirewallPolicyResponse() {{
+        org.openapis.openapi.models.operations.UpdateFirewallPolicyResponse res = new org.openapis.openapi.models.operations.UpdateFirewallPolicyResponse(contentType, httpRes.statusCode()) {{
             updateFirewallPolicyResponse = null;
             invalidRequestException = null;
             resourceNotFoundException = null;
@@ -2598,8 +2882,6 @@ public class SDK {
             internalServerError = null;
             invalidTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2682,7 +2964,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateFirewallPolicyChangeProtectionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallPolicyChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateFirewallPolicyChangeProtectionResponse res = new org.openapis.openapi.models.operations.UpdateFirewallPolicyChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             updateFirewallPolicyChangeProtectionResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2691,8 +2973,6 @@ public class SDK {
             invalidTokenException = null;
             resourceOwnerCheckException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2782,7 +3062,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateLoggingConfigurationResponse() {{
+        org.openapis.openapi.models.operations.UpdateLoggingConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateLoggingConfigurationResponse(contentType, httpRes.statusCode()) {{
             updateLoggingConfigurationResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2791,8 +3071,6 @@ public class SDK {
             invalidTokenException = null;
             logDestinationPermissionException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2882,7 +3160,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateRuleGroupResponse res = new org.openapis.openapi.models.operations.UpdateRuleGroupResponse() {{
+        org.openapis.openapi.models.operations.UpdateRuleGroupResponse res = new org.openapis.openapi.models.operations.UpdateRuleGroupResponse(contentType, httpRes.statusCode()) {{
             updateRuleGroupResponse = null;
             resourceNotFoundException = null;
             invalidRequestException = null;
@@ -2890,8 +3168,6 @@ public class SDK {
             internalServerError = null;
             invalidTokenException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2974,7 +3250,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateSubnetChangeProtectionResponse res = new org.openapis.openapi.models.operations.UpdateSubnetChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateSubnetChangeProtectionResponse res = new org.openapis.openapi.models.operations.UpdateSubnetChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             updateSubnetChangeProtectionResponse = null;
             invalidRequestException = null;
             internalServerError = null;
@@ -2983,8 +3259,6 @@ public class SDK {
             invalidTokenException = null;
             resourceOwnerCheckException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3034,6 +3308,96 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
                 res.resourceOwnerCheckException = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * &lt;p&gt;Updates the TLS inspection configuration settings for the specified TLS inspection configuration. You use a TLS inspection configuration by reference in one or more firewall policies. When you modify a TLS inspection configuration, you modify all firewall policies that use the TLS inspection configuration. &lt;/p&gt; &lt;p&gt;To update a TLS inspection configuration, first call &lt;a&gt;DescribeTLSInspectionConfiguration&lt;/a&gt; to retrieve the current &lt;a&gt;TLSInspectionConfiguration&lt;/a&gt; object, update the object as needed, and then provide the updated object to this call. &lt;/p&gt;
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.UpdateTLSInspectionConfigurationResponse updateTLSInspectionConfiguration(org.openapis.openapi.models.operations.UpdateTLSInspectionConfigurationRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/#X-Amz-Target=NetworkFirewall_20201112.UpdateTLSInspectionConfiguration");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "updateTLSInspectionConfigurationRequest", "json");
+        if (serializedRequestBody == null) {
+            throw new Exception("Request body is required");
+        }
+        req.setBody(serializedRequestBody);
+        
+        java.util.Map<String, java.util.List<String>> headers = org.openapis.openapi.utils.Utils.getHeaders(request);
+        if (headers != null) {
+            for (java.util.Map.Entry<String, java.util.List<String>> header : headers.entrySet()) {
+                for (String value : header.getValue()) {
+                    req.addHeader(header.getKey(), value);
+                }
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.UpdateTLSInspectionConfigurationResponse res = new org.openapis.openapi.models.operations.UpdateTLSInspectionConfigurationResponse(contentType, httpRes.statusCode()) {{
+            updateTLSInspectionConfigurationResponse = null;
+            invalidRequestException = null;
+            resourceNotFoundException = null;
+            throttlingException = null;
+            internalServerError = null;
+            invalidTokenException = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.UpdateTLSInspectionConfigurationResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.UpdateTLSInspectionConfigurationResponse.class);
+                res.updateTLSInspectionConfigurationResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 480) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidRequestException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 481) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.resourceNotFoundException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 482) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.throttlingException = out;
+            }
+        }
+        else if (httpRes.statusCode() == 483) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.internalServerError = out;
+            }
+        }
+        else if (httpRes.statusCode() == 484) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
+                res.invalidTokenException = out;
             }
         }
 

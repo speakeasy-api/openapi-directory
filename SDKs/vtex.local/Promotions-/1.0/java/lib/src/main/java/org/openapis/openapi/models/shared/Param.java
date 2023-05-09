@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Param {
     @JsonProperty("name")
     public String name;
+
     public Param withName(String name) {
         this.name = name;
         return this;
@@ -16,9 +17,14 @@ public class Param {
     
     @JsonProperty("value")
     public String value;
+
     public Param withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Param(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+        this.name = name;
+        this.value = value;
+  }
 }

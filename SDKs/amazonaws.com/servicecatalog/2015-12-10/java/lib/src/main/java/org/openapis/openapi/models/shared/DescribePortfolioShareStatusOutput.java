@@ -15,6 +15,7 @@ public class DescribePortfolioShareStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationNodeValue")
     public String organizationNodeValue;
+
     public DescribePortfolioShareStatusOutput withOrganizationNodeValue(String organizationNodeValue) {
         this.organizationNodeValue = organizationNodeValue;
         return this;
@@ -23,6 +24,7 @@ public class DescribePortfolioShareStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public DescribePortfolioShareStatusOutput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -31,6 +33,7 @@ public class DescribePortfolioShareStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortfolioShareToken")
     public String portfolioShareToken;
+
     public DescribePortfolioShareStatusOutput withPortfolioShareToken(String portfolioShareToken) {
         this.portfolioShareToken = portfolioShareToken;
         return this;
@@ -39,6 +42,7 @@ public class DescribePortfolioShareStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShareDetails")
     public ShareDetails shareDetails;
+
     public DescribePortfolioShareStatusOutput withShareDetails(ShareDetails shareDetails) {
         this.shareDetails = shareDetails;
         return this;
@@ -47,9 +51,11 @@ public class DescribePortfolioShareStatusOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ShareStatusEnum status;
+
     public DescribePortfolioShareStatusOutput withStatus(ShareStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DescribePortfolioShareStatusOutput(){}
 }

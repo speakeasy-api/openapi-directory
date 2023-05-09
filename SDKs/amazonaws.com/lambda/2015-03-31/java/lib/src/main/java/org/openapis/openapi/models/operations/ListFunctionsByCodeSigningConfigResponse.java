@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListFunctionsByCodeSigningConfigResponse {
     
     public String contentType;
+
     public ListFunctionsByCodeSigningConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListFunctionsByCodeSigningConfigResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.ListFunctionsByCodeSigningConfigResponse listFunctionsByCodeSigningConfigResponse;
+
     public ListFunctionsByCodeSigningConfigResponse withListFunctionsByCodeSigningConfigResponse(org.openapis.openapi.models.shared.ListFunctionsByCodeSigningConfigResponse listFunctionsByCodeSigningConfigResponse) {
         this.listFunctionsByCodeSigningConfigResponse = listFunctionsByCodeSigningConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListFunctionsByCodeSigningConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
      */
     
     public Object serviceException;
+
     public ListFunctionsByCodeSigningConfigResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class ListFunctionsByCodeSigningConfigResponse {
     
     
     public Integer statusCode;
+
     public ListFunctionsByCodeSigningConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListFunctionsByCodeSigningConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListFunctionsByCodeSigningConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListFunctionsByCodeSigningConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

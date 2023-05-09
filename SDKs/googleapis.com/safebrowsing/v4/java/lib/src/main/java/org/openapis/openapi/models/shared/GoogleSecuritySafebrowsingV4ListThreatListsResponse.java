@@ -18,9 +18,11 @@ public class GoogleSecuritySafebrowsingV4ListThreatListsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("threatLists")
     public GoogleSecuritySafebrowsingV4ThreatListDescriptor[] threatLists;
+
     public GoogleSecuritySafebrowsingV4ListThreatListsResponse withThreatLists(GoogleSecuritySafebrowsingV4ThreatListDescriptor[] threatLists) {
         this.threatLists = threatLists;
         return this;
     }
     
+    public GoogleSecuritySafebrowsingV4ListThreatListsResponse(){}
 }

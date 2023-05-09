@@ -16,9 +16,8 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostDisableSecurity;
 import org.openapis.openapi.models.operations.PostDisableResponse;
+import org.openapis.openapi.models.operations.PostDisableSecurity;
 import org.openapis.openapi.models.shared.DisableRequest;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
@@ -28,23 +27,23 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.DisableRequest req = new DisableRequest() {{
-                contract = "corrupti";
-                merchantAccount = "provident";
-                recurringDetailReference = "distinctio";
-                shopperReference = "quibusdam";
-            }}            
+            org.openapis.openapi.models.shared.DisableRequest req = new DisableRequest("corrupti", "provident") {{
+                contract = "distinctio";
+                recurringDetailReference = "quibusdam";
+            }};            
 
             PostDisableResponse res = sdk.general.postDisable(req, new PostDisableSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.disableResult.isPresent()) {
+            if (res.disableResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -52,12 +51,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### general
+### [general](docs/general/README.md)
 
-* `postDisable` - Disable stored payment details
-* `postListRecurringDetails` - Get stored payment details
-* `postNotifyShopper` - Ask issuer to notify the shopper
-* `postScheduleAccountUpdater` - Schedule running the Account Updater
+* [postDisable](docs/general/README.md#postdisable) - Disable stored payment details
+* [postListRecurringDetails](docs/general/README.md#postlistrecurringdetails) - Get stored payment details
+* [postNotifyShopper](docs/general/README.md#postnotifyshopper) - Ask issuer to notify the shopper
+* [postScheduleAccountUpdater](docs/general/README.md#postscheduleaccountupdater) - Schedule running the Account Updater
 <!-- End SDK Available Operations -->
 
 ### Maturity

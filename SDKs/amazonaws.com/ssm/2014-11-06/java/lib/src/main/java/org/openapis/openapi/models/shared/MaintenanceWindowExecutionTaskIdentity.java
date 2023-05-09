@@ -20,6 +20,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlarmConfiguration")
     public AlarmConfiguration alarmConfiguration;
+
     public MaintenanceWindowExecutionTaskIdentity withAlarmConfiguration(AlarmConfiguration alarmConfiguration) {
         this.alarmConfiguration = alarmConfiguration;
         return this;
@@ -30,6 +31,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public MaintenanceWindowExecutionTaskIdentity withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public MaintenanceWindowExecutionTaskIdentity withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -48,6 +51,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MaintenanceWindowExecutionStatusEnum status;
+
     public MaintenanceWindowExecutionTaskIdentity withStatus(MaintenanceWindowExecutionStatusEnum status) {
         this.status = status;
         return this;
@@ -56,6 +60,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusDetails")
     public String statusDetails;
+
     public MaintenanceWindowExecutionTaskIdentity withStatusDetails(String statusDetails) {
         this.statusDetails = statusDetails;
         return this;
@@ -64,6 +69,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskArn")
     public String taskArn;
+
     public MaintenanceWindowExecutionTaskIdentity withTaskArn(String taskArn) {
         this.taskArn = taskArn;
         return this;
@@ -72,6 +78,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskExecutionId")
     public String taskExecutionId;
+
     public MaintenanceWindowExecutionTaskIdentity withTaskExecutionId(String taskExecutionId) {
         this.taskExecutionId = taskExecutionId;
         return this;
@@ -80,6 +87,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskType")
     public MaintenanceWindowTaskTypeEnum taskType;
+
     public MaintenanceWindowExecutionTaskIdentity withTaskType(MaintenanceWindowTaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
@@ -88,6 +96,7 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TriggeredAlarms")
     public AlarmStateInformation[] triggeredAlarms;
+
     public MaintenanceWindowExecutionTaskIdentity withTriggeredAlarms(AlarmStateInformation[] triggeredAlarms) {
         this.triggeredAlarms = triggeredAlarms;
         return this;
@@ -96,9 +105,11 @@ public class MaintenanceWindowExecutionTaskIdentity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WindowExecutionId")
     public String windowExecutionId;
+
     public MaintenanceWindowExecutionTaskIdentity withWindowExecutionId(String windowExecutionId) {
         this.windowExecutionId = windowExecutionId;
         return this;
     }
     
+    public MaintenanceWindowExecutionTaskIdentity(){}
 }

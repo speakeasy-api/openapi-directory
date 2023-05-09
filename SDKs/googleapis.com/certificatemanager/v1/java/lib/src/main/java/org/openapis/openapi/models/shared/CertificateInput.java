@@ -18,6 +18,7 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CertificateInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public CertificateInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -40,6 +42,7 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managed")
     public ManagedCertificateInput managed;
+
     public CertificateInput withManaged(ManagedCertificateInput managed) {
         this.managed = managed;
         return this;
@@ -51,6 +54,7 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CertificateInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public CertificateScopeEnum scope;
+
     public CertificateInput withScope(CertificateScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -73,9 +78,11 @@ public class CertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfManaged")
     public SelfManagedCertificate selfManaged;
+
     public CertificateInput withSelfManaged(SelfManagedCertificate selfManaged) {
         this.selfManaged = selfManaged;
         return this;
     }
     
+    public CertificateInput(){}
 }

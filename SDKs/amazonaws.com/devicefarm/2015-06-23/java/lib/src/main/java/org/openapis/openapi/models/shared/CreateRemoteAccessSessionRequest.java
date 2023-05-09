@@ -15,6 +15,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public CreateRemoteAccessSessionRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,6 +24,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public CreateRemoteAccessSessionConfiguration configuration;
+
     public CreateRemoteAccessSessionRequest withConfiguration(CreateRemoteAccessSessionConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +32,7 @@ public class CreateRemoteAccessSessionRequest {
     
     @JsonProperty("deviceArn")
     public String deviceArn;
+
     public CreateRemoteAccessSessionRequest withDeviceArn(String deviceArn) {
         this.deviceArn = deviceArn;
         return this;
@@ -38,6 +41,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceArn")
     public String instanceArn;
+
     public CreateRemoteAccessSessionRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -46,6 +50,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interactionMode")
     public InteractionModeEnum interactionMode;
+
     public CreateRemoteAccessSessionRequest withInteractionMode(InteractionModeEnum interactionMode) {
         this.interactionMode = interactionMode;
         return this;
@@ -54,6 +59,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateRemoteAccessSessionRequest withName(String name) {
         this.name = name;
         return this;
@@ -61,6 +67,7 @@ public class CreateRemoteAccessSessionRequest {
     
     @JsonProperty("projectArn")
     public String projectArn;
+
     public CreateRemoteAccessSessionRequest withProjectArn(String projectArn) {
         this.projectArn = projectArn;
         return this;
@@ -69,6 +76,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteDebugEnabled")
     public Boolean remoteDebugEnabled;
+
     public CreateRemoteAccessSessionRequest withRemoteDebugEnabled(Boolean remoteDebugEnabled) {
         this.remoteDebugEnabled = remoteDebugEnabled;
         return this;
@@ -77,6 +85,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteRecordAppArn")
     public String remoteRecordAppArn;
+
     public CreateRemoteAccessSessionRequest withRemoteRecordAppArn(String remoteRecordAppArn) {
         this.remoteRecordAppArn = remoteRecordAppArn;
         return this;
@@ -85,6 +94,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remoteRecordEnabled")
     public Boolean remoteRecordEnabled;
+
     public CreateRemoteAccessSessionRequest withRemoteRecordEnabled(Boolean remoteRecordEnabled) {
         this.remoteRecordEnabled = remoteRecordEnabled;
         return this;
@@ -93,6 +103,7 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipAppResign")
     public Boolean skipAppResign;
+
     public CreateRemoteAccessSessionRequest withSkipAppResign(Boolean skipAppResign) {
         this.skipAppResign = skipAppResign;
         return this;
@@ -101,9 +112,14 @@ public class CreateRemoteAccessSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshPublicKey")
     public String sshPublicKey;
+
     public CreateRemoteAccessSessionRequest withSshPublicKey(String sshPublicKey) {
         this.sshPublicKey = sshPublicKey;
         return this;
     }
     
+    public CreateRemoteAccessSessionRequest(@JsonProperty("deviceArn") String deviceArn, @JsonProperty("projectArn") String projectArn) {
+        this.deviceArn = deviceArn;
+        this.projectArn = projectArn;
+  }
 }

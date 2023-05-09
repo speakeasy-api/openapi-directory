@@ -15,6 +15,7 @@ public class LendingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LendingFields")
     public LendingField[] lendingFields;
+
     public LendingDocument withLendingFields(LendingField[] lendingFields) {
         this.lendingFields = lendingFields;
         return this;
@@ -23,9 +24,11 @@ public class LendingDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignatureDetections")
     public SignatureDetection[] signatureDetections;
+
     public LendingDocument withSignatureDetections(SignatureDetection[] signatureDetections) {
         this.signatureDetections = signatureDetections;
         return this;
     }
     
+    public LendingDocument(){}
 }

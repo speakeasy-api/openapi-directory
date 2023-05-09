@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetShardIteratorResponse {
     
     public String contentType;
+
     public GetShardIteratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetShardIteratorResponse {
      */
     
     public org.openapis.openapi.models.shared.GetShardIteratorOutput getShardIteratorOutput;
+
     public GetShardIteratorResponse withGetShardIteratorOutput(org.openapis.openapi.models.shared.GetShardIteratorOutput getShardIteratorOutput) {
         this.getShardIteratorOutput = getShardIteratorOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object internalServerError;
+
     public GetShardIteratorResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetShardIteratorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetShardIteratorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetShardIteratorResponse {
     
     
     public Integer statusCode;
+
     public GetShardIteratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetShardIteratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetShardIteratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetShardIteratorResponse {
      */
     
     public Object trimmedDataAccessException;
+
     public GetShardIteratorResponse withTrimmedDataAccessException(Object trimmedDataAccessException) {
         this.trimmedDataAccessException = trimmedDataAccessException;
         return this;
     }
     
+    public GetShardIteratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

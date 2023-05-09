@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateEvaluationInput {
     @JsonProperty("EvaluationDataSourceId")
     public String evaluationDataSourceId;
+
     public CreateEvaluationInput withEvaluationDataSourceId(String evaluationDataSourceId) {
         this.evaluationDataSourceId = evaluationDataSourceId;
         return this;
@@ -18,6 +19,7 @@ public class CreateEvaluationInput {
     
     @JsonProperty("EvaluationId")
     public String evaluationId;
+
     public CreateEvaluationInput withEvaluationId(String evaluationId) {
         this.evaluationId = evaluationId;
         return this;
@@ -26,6 +28,7 @@ public class CreateEvaluationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationName")
     public String evaluationName;
+
     public CreateEvaluationInput withEvaluationName(String evaluationName) {
         this.evaluationName = evaluationName;
         return this;
@@ -33,9 +36,15 @@ public class CreateEvaluationInput {
     
     @JsonProperty("MLModelId")
     public String mlModelId;
+
     public CreateEvaluationInput withMLModelId(String mlModelId) {
         this.mlModelId = mlModelId;
         return this;
     }
     
+    public CreateEvaluationInput(@JsonProperty("EvaluationDataSourceId") String evaluationDataSourceId, @JsonProperty("EvaluationId") String evaluationId, @JsonProperty("MLModelId") String mlModelId) {
+        this.evaluationDataSourceId = evaluationDataSourceId;
+        this.evaluationId = evaluationId;
+        this.mlModelId = mlModelId;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateClusterMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClusterMessage {
     
     public String additionalInfo;
+
     public CreateClusterMessage withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterMessage {
     
     
     public Boolean allowVersionUpgrade;
+
     public CreateClusterMessage withAllowVersionUpgrade(Boolean allowVersionUpgrade) {
         this.allowVersionUpgrade = allowVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class CreateClusterMessage {
     
     
     public AquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public CreateClusterMessage withAquaConfigurationStatus(AquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -33,6 +36,7 @@ public class CreateClusterMessage {
     
     
     public Long automatedSnapshotRetentionPeriod;
+
     public CreateClusterMessage withAutomatedSnapshotRetentionPeriod(Long automatedSnapshotRetentionPeriod) {
         this.automatedSnapshotRetentionPeriod = automatedSnapshotRetentionPeriod;
         return this;
@@ -40,6 +44,7 @@ public class CreateClusterMessage {
     
     
     public String availabilityZone;
+
     public CreateClusterMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -47,6 +52,7 @@ public class CreateClusterMessage {
     
     
     public Boolean availabilityZoneRelocation;
+
     public CreateClusterMessage withAvailabilityZoneRelocation(Boolean availabilityZoneRelocation) {
         this.availabilityZoneRelocation = availabilityZoneRelocation;
         return this;
@@ -54,6 +60,7 @@ public class CreateClusterMessage {
     
     
     public String clusterIdentifier;
+
     public CreateClusterMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -61,6 +68,7 @@ public class CreateClusterMessage {
     
     
     public String clusterParameterGroupName;
+
     public CreateClusterMessage withClusterParameterGroupName(String clusterParameterGroupName) {
         this.clusterParameterGroupName = clusterParameterGroupName;
         return this;
@@ -68,6 +76,7 @@ public class CreateClusterMessage {
     
     
     public String[] clusterSecurityGroups;
+
     public CreateClusterMessage withClusterSecurityGroups(String[] clusterSecurityGroups) {
         this.clusterSecurityGroups = clusterSecurityGroups;
         return this;
@@ -75,6 +84,7 @@ public class CreateClusterMessage {
     
     
     public String clusterSubnetGroupName;
+
     public CreateClusterMessage withClusterSubnetGroupName(String clusterSubnetGroupName) {
         this.clusterSubnetGroupName = clusterSubnetGroupName;
         return this;
@@ -82,6 +92,7 @@ public class CreateClusterMessage {
     
     
     public String clusterType;
+
     public CreateClusterMessage withClusterType(String clusterType) {
         this.clusterType = clusterType;
         return this;
@@ -89,6 +100,7 @@ public class CreateClusterMessage {
     
     
     public String clusterVersion;
+
     public CreateClusterMessage withClusterVersion(String clusterVersion) {
         this.clusterVersion = clusterVersion;
         return this;
@@ -96,6 +108,7 @@ public class CreateClusterMessage {
     
     
     public String dbName;
+
     public CreateClusterMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -103,6 +116,7 @@ public class CreateClusterMessage {
     
     
     public String defaultIamRoleArn;
+
     public CreateClusterMessage withDefaultIamRoleArn(String defaultIamRoleArn) {
         this.defaultIamRoleArn = defaultIamRoleArn;
         return this;
@@ -110,6 +124,7 @@ public class CreateClusterMessage {
     
     
     public String elasticIp;
+
     public CreateClusterMessage withElasticIp(String elasticIp) {
         this.elasticIp = elasticIp;
         return this;
@@ -117,6 +132,7 @@ public class CreateClusterMessage {
     
     
     public Boolean encrypted;
+
     public CreateClusterMessage withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -124,6 +140,7 @@ public class CreateClusterMessage {
     
     
     public Boolean enhancedVpcRouting;
+
     public CreateClusterMessage withEnhancedVpcRouting(Boolean enhancedVpcRouting) {
         this.enhancedVpcRouting = enhancedVpcRouting;
         return this;
@@ -131,6 +148,7 @@ public class CreateClusterMessage {
     
     
     public String hsmClientCertificateIdentifier;
+
     public CreateClusterMessage withHsmClientCertificateIdentifier(String hsmClientCertificateIdentifier) {
         this.hsmClientCertificateIdentifier = hsmClientCertificateIdentifier;
         return this;
@@ -138,6 +156,7 @@ public class CreateClusterMessage {
     
     
     public String hsmConfigurationIdentifier;
+
     public CreateClusterMessage withHsmConfigurationIdentifier(String hsmConfigurationIdentifier) {
         this.hsmConfigurationIdentifier = hsmConfigurationIdentifier;
         return this;
@@ -145,6 +164,7 @@ public class CreateClusterMessage {
     
     
     public String[] iamRoles;
+
     public CreateClusterMessage withIamRoles(String[] iamRoles) {
         this.iamRoles = iamRoles;
         return this;
@@ -152,6 +172,7 @@ public class CreateClusterMessage {
     
     
     public String kmsKeyId;
+
     public CreateClusterMessage withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -159,6 +180,7 @@ public class CreateClusterMessage {
     
     
     public String loadSampleData;
+
     public CreateClusterMessage withLoadSampleData(String loadSampleData) {
         this.loadSampleData = loadSampleData;
         return this;
@@ -166,6 +188,7 @@ public class CreateClusterMessage {
     
     
     public String maintenanceTrackName;
+
     public CreateClusterMessage withMaintenanceTrackName(String maintenanceTrackName) {
         this.maintenanceTrackName = maintenanceTrackName;
         return this;
@@ -173,6 +196,7 @@ public class CreateClusterMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public CreateClusterMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -180,6 +204,7 @@ public class CreateClusterMessage {
     
     
     public String masterUserPassword;
+
     public CreateClusterMessage withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -187,6 +212,7 @@ public class CreateClusterMessage {
     
     
     public String masterUsername;
+
     public CreateClusterMessage withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -194,6 +220,7 @@ public class CreateClusterMessage {
     
     
     public String nodeType;
+
     public CreateClusterMessage withNodeType(String nodeType) {
         this.nodeType = nodeType;
         return this;
@@ -201,6 +228,7 @@ public class CreateClusterMessage {
     
     
     public Long numberOfNodes;
+
     public CreateClusterMessage withNumberOfNodes(Long numberOfNodes) {
         this.numberOfNodes = numberOfNodes;
         return this;
@@ -208,6 +236,7 @@ public class CreateClusterMessage {
     
     
     public Long port;
+
     public CreateClusterMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -215,6 +244,7 @@ public class CreateClusterMessage {
     
     
     public String preferredMaintenanceWindow;
+
     public CreateClusterMessage withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -222,6 +252,7 @@ public class CreateClusterMessage {
     
     
     public Boolean publiclyAccessible;
+
     public CreateClusterMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -229,6 +260,7 @@ public class CreateClusterMessage {
     
     
     public String snapshotScheduleIdentifier;
+
     public CreateClusterMessage withSnapshotScheduleIdentifier(String snapshotScheduleIdentifier) {
         this.snapshotScheduleIdentifier = snapshotScheduleIdentifier;
         return this;
@@ -236,6 +268,7 @@ public class CreateClusterMessage {
     
     
     public TagList[] tags;
+
     public CreateClusterMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -243,9 +276,16 @@ public class CreateClusterMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public CreateClusterMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public CreateClusterMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("MasterUserPassword") String masterUserPassword, @JsonProperty("MasterUsername") String masterUsername, @JsonProperty("NodeType") String nodeType) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.masterUserPassword = masterUserPassword;
+        this.masterUsername = masterUsername;
+        this.nodeType = nodeType;
+  }
 }

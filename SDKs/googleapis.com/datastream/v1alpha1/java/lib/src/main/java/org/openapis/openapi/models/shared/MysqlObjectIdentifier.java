@@ -18,6 +18,7 @@ public class MysqlObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("database")
     public String database;
+
     public MysqlObjectIdentifier withDatabase(String database) {
         this.database = database;
         return this;
@@ -29,9 +30,11 @@ public class MysqlObjectIdentifier {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public String table;
+
     public MysqlObjectIdentifier withTable(String table) {
         this.table = table;
         return this;
     }
     
+    public MysqlObjectIdentifier(){}
 }

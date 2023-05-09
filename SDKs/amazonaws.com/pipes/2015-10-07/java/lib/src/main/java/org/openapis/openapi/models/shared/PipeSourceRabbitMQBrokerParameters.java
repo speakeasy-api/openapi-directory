@@ -15,6 +15,7 @@ public class PipeSourceRabbitMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchSize")
     public Long batchSize;
+
     public PipeSourceRabbitMQBrokerParameters withBatchSize(Long batchSize) {
         this.batchSize = batchSize;
         return this;
@@ -22,6 +23,7 @@ public class PipeSourceRabbitMQBrokerParameters {
     
     @JsonProperty("Credentials")
     public MQBrokerAccessCredentials credentials;
+
     public PipeSourceRabbitMQBrokerParameters withCredentials(MQBrokerAccessCredentials credentials) {
         this.credentials = credentials;
         return this;
@@ -30,6 +32,7 @@ public class PipeSourceRabbitMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumBatchingWindowInSeconds")
     public Long maximumBatchingWindowInSeconds;
+
     public PipeSourceRabbitMQBrokerParameters withMaximumBatchingWindowInSeconds(Long maximumBatchingWindowInSeconds) {
         this.maximumBatchingWindowInSeconds = maximumBatchingWindowInSeconds;
         return this;
@@ -37,6 +40,7 @@ public class PipeSourceRabbitMQBrokerParameters {
     
     @JsonProperty("QueueName")
     public String queueName;
+
     public PipeSourceRabbitMQBrokerParameters withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -45,9 +49,14 @@ public class PipeSourceRabbitMQBrokerParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualHost")
     public String virtualHost;
+
     public PipeSourceRabbitMQBrokerParameters withVirtualHost(String virtualHost) {
         this.virtualHost = virtualHost;
         return this;
     }
     
+    public PipeSourceRabbitMQBrokerParameters(@JsonProperty("Credentials") MQBrokerAccessCredentials credentials, @JsonProperty("QueueName") String queueName) {
+        this.credentials = credentials;
+        this.queueName = queueName;
+  }
 }

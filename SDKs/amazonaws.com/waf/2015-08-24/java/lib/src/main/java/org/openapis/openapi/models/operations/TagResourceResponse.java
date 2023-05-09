@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagResourceResponse {
     
     public String contentType;
+
     public TagResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TagResourceResponse {
     
     
     public Integer statusCode;
+
     public TagResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class TagResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class TagResourceResponse {
      */
     
     public java.util.Map<String, Object> tagResourceResponse;
+
     public TagResourceResponse withTagResourceResponse(java.util.Map<String, Object> tagResourceResponse) {
         this.tagResourceResponse = tagResourceResponse;
         return this;
@@ -43,6 +48,7 @@ public class TagResourceResponse {
      */
     
     public Object wafBadRequestException;
+
     public TagResourceResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class TagResourceResponse {
      */
     
     public Object wafInternalErrorException;
+
     public TagResourceResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -63,6 +70,7 @@ public class TagResourceResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public TagResourceResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class TagResourceResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public TagResourceResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -83,6 +92,7 @@ public class TagResourceResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public TagResourceResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -93,6 +103,7 @@ public class TagResourceResponse {
      */
     
     public Object wafTagOperationException;
+
     public TagResourceResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -103,9 +114,14 @@ public class TagResourceResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public TagResourceResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public TagResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

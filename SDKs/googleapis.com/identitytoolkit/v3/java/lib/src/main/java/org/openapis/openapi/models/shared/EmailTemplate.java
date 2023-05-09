@@ -18,6 +18,7 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public EmailTemplate withBody(String body) {
         this.body = body;
         return this;
@@ -29,6 +30,7 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public EmailTemplate withFormat(String format) {
         this.format = format;
         return this;
@@ -40,6 +42,7 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("from")
     public String from;
+
     public EmailTemplate withFrom(String from) {
         this.from = from;
         return this;
@@ -51,6 +54,7 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fromDisplayName")
     public String fromDisplayName;
+
     public EmailTemplate withFromDisplayName(String fromDisplayName) {
         this.fromDisplayName = fromDisplayName;
         return this;
@@ -62,6 +66,7 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replyTo")
     public String replyTo;
+
     public EmailTemplate withReplyTo(String replyTo) {
         this.replyTo = replyTo;
         return this;
@@ -73,9 +78,11 @@ public class EmailTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public EmailTemplate withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public EmailTemplate(){}
 }

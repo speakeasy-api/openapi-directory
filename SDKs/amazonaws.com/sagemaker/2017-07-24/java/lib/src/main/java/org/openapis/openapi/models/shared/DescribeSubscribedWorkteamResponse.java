@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeSubscribedWorkteamResponse {
     @JsonProperty("SubscribedWorkteam")
     public SubscribedWorkteam subscribedWorkteam;
+
     public DescribeSubscribedWorkteamResponse withSubscribedWorkteam(SubscribedWorkteam subscribedWorkteam) {
         this.subscribedWorkteam = subscribedWorkteam;
         return this;
     }
     
+    public DescribeSubscribedWorkteamResponse(@JsonProperty("SubscribedWorkteam") SubscribedWorkteam subscribedWorkteam) {
+        this.subscribedWorkteam = subscribedWorkteam;
+  }
 }

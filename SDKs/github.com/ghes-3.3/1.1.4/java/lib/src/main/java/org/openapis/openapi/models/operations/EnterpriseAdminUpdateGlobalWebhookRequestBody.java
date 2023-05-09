@@ -15,6 +15,7 @@ public class EnterpriseAdminUpdateGlobalWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public EnterpriseAdminUpdateGlobalWebhookRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -26,6 +27,7 @@ public class EnterpriseAdminUpdateGlobalWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public EnterpriseAdminUpdateGlobalWebhookRequestBodyConfig config;
+
     public EnterpriseAdminUpdateGlobalWebhookRequestBody withConfig(EnterpriseAdminUpdateGlobalWebhookRequestBodyConfig config) {
         this.config = config;
         return this;
@@ -37,9 +39,11 @@ public class EnterpriseAdminUpdateGlobalWebhookRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public String[] events;
+
     public EnterpriseAdminUpdateGlobalWebhookRequestBody withEvents(String[] events) {
         this.events = events;
         return this;
     }
     
+    public EnterpriseAdminUpdateGlobalWebhookRequestBody(){}
 }

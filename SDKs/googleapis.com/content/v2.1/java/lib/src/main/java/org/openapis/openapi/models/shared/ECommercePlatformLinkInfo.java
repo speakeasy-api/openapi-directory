@@ -18,9 +18,11 @@ public class ECommercePlatformLinkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalAccountId")
     public String externalAccountId;
+
     public ECommercePlatformLinkInfo withExternalAccountId(String externalAccountId) {
         this.externalAccountId = externalAccountId;
         return this;
     }
     
+    public ECommercePlatformLinkInfo(){}
 }

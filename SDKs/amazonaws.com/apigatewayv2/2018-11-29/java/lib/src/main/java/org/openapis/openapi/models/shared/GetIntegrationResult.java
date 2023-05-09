@@ -15,6 +15,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiGatewayManaged")
     public Boolean apiGatewayManaged;
+
     public GetIntegrationResult withApiGatewayManaged(Boolean apiGatewayManaged) {
         this.apiGatewayManaged = apiGatewayManaged;
         return this;
@@ -23,6 +24,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionId")
     public String connectionId;
+
     public GetIntegrationResult withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -31,6 +33,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionType")
     public GetIntegrationResultConnectionTypeEnum connectionType;
+
     public GetIntegrationResult withConnectionType(GetIntegrationResultConnectionTypeEnum connectionType) {
         this.connectionType = connectionType;
         return this;
@@ -39,6 +42,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentHandlingStrategy")
     public GetIntegrationResultContentHandlingStrategyEnum contentHandlingStrategy;
+
     public GetIntegrationResult withContentHandlingStrategy(GetIntegrationResultContentHandlingStrategyEnum contentHandlingStrategy) {
         this.contentHandlingStrategy = contentHandlingStrategy;
         return this;
@@ -47,6 +51,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CredentialsArn")
     public String credentialsArn;
+
     public GetIntegrationResult withCredentialsArn(String credentialsArn) {
         this.credentialsArn = credentialsArn;
         return this;
@@ -55,6 +60,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public GetIntegrationResult withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +69,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationId")
     public String integrationId;
+
     public GetIntegrationResult withIntegrationId(String integrationId) {
         this.integrationId = integrationId;
         return this;
@@ -71,6 +78,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationMethod")
     public String integrationMethod;
+
     public GetIntegrationResult withIntegrationMethod(String integrationMethod) {
         this.integrationMethod = integrationMethod;
         return this;
@@ -79,6 +87,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationResponseSelectionExpression")
     public String integrationResponseSelectionExpression;
+
     public GetIntegrationResult withIntegrationResponseSelectionExpression(String integrationResponseSelectionExpression) {
         this.integrationResponseSelectionExpression = integrationResponseSelectionExpression;
         return this;
@@ -87,6 +96,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationSubtype")
     public String integrationSubtype;
+
     public GetIntegrationResult withIntegrationSubtype(String integrationSubtype) {
         this.integrationSubtype = integrationSubtype;
         return this;
@@ -95,6 +105,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationType")
     public GetIntegrationResultIntegrationTypeEnum integrationType;
+
     public GetIntegrationResult withIntegrationType(GetIntegrationResultIntegrationTypeEnum integrationType) {
         this.integrationType = integrationType;
         return this;
@@ -103,6 +114,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntegrationUri")
     public String integrationUri;
+
     public GetIntegrationResult withIntegrationUri(String integrationUri) {
         this.integrationUri = integrationUri;
         return this;
@@ -111,6 +123,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PassthroughBehavior")
     public GetIntegrationResultPassthroughBehaviorEnum passthroughBehavior;
+
     public GetIntegrationResult withPassthroughBehavior(GetIntegrationResultPassthroughBehaviorEnum passthroughBehavior) {
         this.passthroughBehavior = passthroughBehavior;
         return this;
@@ -119,6 +132,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PayloadFormatVersion")
     public String payloadFormatVersion;
+
     public GetIntegrationResult withPayloadFormatVersion(String payloadFormatVersion) {
         this.payloadFormatVersion = payloadFormatVersion;
         return this;
@@ -127,6 +141,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestParameters")
     public java.util.Map<String, String> requestParameters;
+
     public GetIntegrationResult withRequestParameters(java.util.Map<String, String> requestParameters) {
         this.requestParameters = requestParameters;
         return this;
@@ -135,6 +150,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestTemplates")
     public java.util.Map<String, String> requestTemplates;
+
     public GetIntegrationResult withRequestTemplates(java.util.Map<String, String> requestTemplates) {
         this.requestTemplates = requestTemplates;
         return this;
@@ -143,6 +159,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResponseParameters")
     public java.util.Map<String, java.util.Map<String, String>> responseParameters;
+
     public GetIntegrationResult withResponseParameters(java.util.Map<String, java.util.Map<String, String>> responseParameters) {
         this.responseParameters = responseParameters;
         return this;
@@ -151,6 +168,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateSelectionExpression")
     public String templateSelectionExpression;
+
     public GetIntegrationResult withTemplateSelectionExpression(String templateSelectionExpression) {
         this.templateSelectionExpression = templateSelectionExpression;
         return this;
@@ -159,6 +177,7 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeoutInMillis")
     public Long timeoutInMillis;
+
     public GetIntegrationResult withTimeoutInMillis(Long timeoutInMillis) {
         this.timeoutInMillis = timeoutInMillis;
         return this;
@@ -167,9 +186,11 @@ public class GetIntegrationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TlsConfig")
     public GetIntegrationResultTlsConfig tlsConfig;
+
     public GetIntegrationResult withTlsConfig(GetIntegrationResultTlsConfig tlsConfig) {
         this.tlsConfig = tlsConfig;
         return this;
     }
     
+    public GetIntegrationResult(){}
 }

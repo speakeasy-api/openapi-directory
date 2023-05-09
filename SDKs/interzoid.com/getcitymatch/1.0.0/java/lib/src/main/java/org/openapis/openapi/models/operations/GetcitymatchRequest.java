@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetcitymatchRequest {
@@ -12,6 +13,7 @@ public class GetcitymatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=city")
     public String city;
+
     public GetcitymatchRequest withCity(String city) {
         this.city = city;
         return this;
@@ -22,9 +24,14 @@ public class GetcitymatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=license")
     public String license;
+
     public GetcitymatchRequest withLicense(String license) {
         this.license = license;
         return this;
     }
     
+    public GetcitymatchRequest(@JsonProperty("city") String city, @JsonProperty("license") String license) {
+        this.city = city;
+        this.license = license;
+  }
 }

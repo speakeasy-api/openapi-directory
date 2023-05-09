@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ListPurchasableOffersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudChannelV1ListPurchasableOffersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudChannelV1ListPurchasableOffersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchasableOffers")
     public GoogleCloudChannelV1PurchasableOffer[] purchasableOffers;
+
     public GoogleCloudChannelV1ListPurchasableOffersResponse withPurchasableOffers(GoogleCloudChannelV1PurchasableOffer[] purchasableOffers) {
         this.purchasableOffers = purchasableOffers;
         return this;
     }
     
+    public GoogleCloudChannelV1ListPurchasableOffersResponse(){}
 }

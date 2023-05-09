@@ -15,6 +15,7 @@ public class DescribeReplicationInstancesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public Filter[] filters;
+
     public DescribeReplicationInstancesMessage withFilters(Filter[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +24,7 @@ public class DescribeReplicationInstancesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationInstancesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -31,9 +33,11 @@ public class DescribeReplicationInstancesMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRecords")
     public Long maxRecords;
+
     public DescribeReplicationInstancesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeReplicationInstancesMessage(){}
 }

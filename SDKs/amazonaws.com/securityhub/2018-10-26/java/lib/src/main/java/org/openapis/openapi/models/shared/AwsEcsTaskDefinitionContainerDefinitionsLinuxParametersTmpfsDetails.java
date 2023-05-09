@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerPath")
     public String containerPath;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails withContainerPath(String containerPath) {
         this.containerPath = containerPath;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountOptions")
     public String[] mountOptions;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails withMountOptions(String[] mountOptions) {
         this.mountOptions = mountOptions;
         return this;
@@ -31,9 +33,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Size")
     public Long size;
+
     public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails withSize(Long size) {
         this.size = size;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsLinuxParametersTmpfsDetails(){}
 }

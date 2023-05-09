@@ -12,6 +12,7 @@ public class ResponsiblePersonsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectCoordinatorId")
     public Long projectCoordinatorId;
+
     public ResponsiblePersonsDTO withProjectCoordinatorId(Long projectCoordinatorId) {
         this.projectCoordinatorId = projectCoordinatorId;
         return this;
@@ -20,9 +21,11 @@ public class ResponsiblePersonsDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectManagerId")
     public Long projectManagerId;
+
     public ResponsiblePersonsDTO withProjectManagerId(Long projectManagerId) {
         this.projectManagerId = projectManagerId;
         return this;
     }
     
+    public ResponsiblePersonsDTO(){}
 }

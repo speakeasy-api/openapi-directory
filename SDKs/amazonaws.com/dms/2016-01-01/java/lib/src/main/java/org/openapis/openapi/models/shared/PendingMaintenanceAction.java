@@ -20,6 +20,7 @@ public class PendingMaintenanceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public String action;
+
     public PendingMaintenanceAction withAction(String action) {
         this.action = action;
         return this;
@@ -30,6 +31,7 @@ public class PendingMaintenanceAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("AutoAppliedAfterDate")
     public OffsetDateTime autoAppliedAfterDate;
+
     public PendingMaintenanceAction withAutoAppliedAfterDate(OffsetDateTime autoAppliedAfterDate) {
         this.autoAppliedAfterDate = autoAppliedAfterDate;
         return this;
@@ -40,6 +42,7 @@ public class PendingMaintenanceAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CurrentApplyDate")
     public OffsetDateTime currentApplyDate;
+
     public PendingMaintenanceAction withCurrentApplyDate(OffsetDateTime currentApplyDate) {
         this.currentApplyDate = currentApplyDate;
         return this;
@@ -48,6 +51,7 @@ public class PendingMaintenanceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PendingMaintenanceAction withDescription(String description) {
         this.description = description;
         return this;
@@ -58,6 +62,7 @@ public class PendingMaintenanceAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ForcedApplyDate")
     public OffsetDateTime forcedApplyDate;
+
     public PendingMaintenanceAction withForcedApplyDate(OffsetDateTime forcedApplyDate) {
         this.forcedApplyDate = forcedApplyDate;
         return this;
@@ -66,9 +71,11 @@ public class PendingMaintenanceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptInStatus")
     public String optInStatus;
+
     public PendingMaintenanceAction withOptInStatus(String optInStatus) {
         this.optInStatus = optInStatus;
         return this;
     }
     
+    public PendingMaintenanceAction(){}
 }

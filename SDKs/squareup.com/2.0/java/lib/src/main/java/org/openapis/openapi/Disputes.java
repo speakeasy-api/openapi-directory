@@ -58,11 +58,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AcceptDisputeResponse res = new org.openapis.openapi.models.operations.AcceptDisputeResponse() {{
+        org.openapis.openapi.models.operations.AcceptDisputeResponse res = new org.openapis.openapi.models.operations.AcceptDisputeResponse(contentType, httpRes.statusCode()) {{
             acceptDisputeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse res = new org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse() {{
+        org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse res = new org.openapis.openapi.models.operations.CreateDisputeEvidenceTextResponse(contentType, httpRes.statusCode()) {{
             createDisputeEvidenceTextResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -148,11 +144,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse() {{
+        org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.DeleteDisputeEvidenceResponse(contentType, httpRes.statusCode()) {{
             deleteDisputeEvidenceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,11 +189,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.ListDisputeEvidenceResponse() {{
+        org.openapis.openapi.models.operations.ListDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.ListDisputeEvidenceResponse(contentType, httpRes.statusCode()) {{
             listDisputeEvidenceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDisputesResponse res = new org.openapis.openapi.models.operations.ListDisputesResponse() {{
+        org.openapis.openapi.models.operations.ListDisputesResponse res = new org.openapis.openapi.models.operations.ListDisputesResponse(contentType, httpRes.statusCode()) {{
             listDisputesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +273,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveDisputeResponse res = new org.openapis.openapi.models.operations.RetrieveDisputeResponse() {{
+        org.openapis.openapi.models.operations.RetrieveDisputeResponse res = new org.openapis.openapi.models.operations.RetrieveDisputeResponse(contentType, httpRes.statusCode()) {{
             retrieveDisputeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -327,11 +315,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse() {{
+        org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse res = new org.openapis.openapi.models.operations.RetrieveDisputeEvidenceResponse(contentType, httpRes.statusCode()) {{
             retrieveDisputeEvidenceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -373,11 +359,9 @@ public class Disputes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SubmitEvidenceResponse res = new org.openapis.openapi.models.operations.SubmitEvidenceResponse() {{
+        org.openapis.openapi.models.operations.SubmitEvidenceResponse res = new org.openapis.openapi.models.operations.SubmitEvidenceResponse(contentType, httpRes.statusCode()) {{
             submitEvidenceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

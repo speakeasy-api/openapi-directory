@@ -12,6 +12,7 @@ public class VerifyMacRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public VerifyMacRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,6 +20,7 @@ public class VerifyMacRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public VerifyMacRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -26,6 +28,7 @@ public class VerifyMacRequest {
     
     @JsonProperty("Mac")
     public String mac;
+
     public VerifyMacRequest withMac(String mac) {
         this.mac = mac;
         return this;
@@ -33,6 +36,7 @@ public class VerifyMacRequest {
     
     @JsonProperty("MacAlgorithm")
     public MacAlgorithmSpecEnum macAlgorithm;
+
     public VerifyMacRequest withMacAlgorithm(MacAlgorithmSpecEnum macAlgorithm) {
         this.macAlgorithm = macAlgorithm;
         return this;
@@ -40,9 +44,16 @@ public class VerifyMacRequest {
     
     @JsonProperty("Message")
     public String message;
+
     public VerifyMacRequest withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public VerifyMacRequest(@JsonProperty("KeyId") String keyId, @JsonProperty("Mac") String mac, @JsonProperty("MacAlgorithm") MacAlgorithmSpecEnum macAlgorithm, @JsonProperty("Message") String message) {
+        this.keyId = keyId;
+        this.mac = mac;
+        this.macAlgorithm = macAlgorithm;
+        this.message = message;
+  }
 }

@@ -23,6 +23,7 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeLineageGroupResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +34,7 @@ public class DescribeLineageGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeLineageGroupResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -41,6 +43,7 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeLineageGroupResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -49,6 +52,7 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public DescribeLineageGroupResponse withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -60,6 +64,7 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeLineageGroupResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -70,6 +75,7 @@ public class DescribeLineageGroupResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeLineageGroupResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -78,6 +84,7 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public DescribeLineageGroupResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -86,9 +93,11 @@ public class DescribeLineageGroupResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupName")
     public String lineageGroupName;
+
     public DescribeLineageGroupResponse withLineageGroupName(String lineageGroupName) {
         this.lineageGroupName = lineageGroupName;
         return this;
     }
     
+    public DescribeLineageGroupResponse(){}
 }

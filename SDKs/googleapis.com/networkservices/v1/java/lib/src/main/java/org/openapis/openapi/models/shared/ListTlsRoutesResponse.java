@@ -18,6 +18,7 @@ public class ListTlsRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListTlsRoutesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListTlsRoutesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tlsRoutes")
     public TlsRoute[] tlsRoutes;
+
     public ListTlsRoutesResponse withTlsRoutes(TlsRoute[] tlsRoutes) {
         this.tlsRoutes = tlsRoutes;
         return this;
     }
     
+    public ListTlsRoutesResponse(){}
 }

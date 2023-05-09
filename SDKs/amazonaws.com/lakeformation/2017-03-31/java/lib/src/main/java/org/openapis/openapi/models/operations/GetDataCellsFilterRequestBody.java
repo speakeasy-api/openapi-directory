@@ -12,6 +12,7 @@ public class GetDataCellsFilterRequestBody {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public GetDataCellsFilterRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -22,6 +23,7 @@ public class GetDataCellsFilterRequestBody {
      */
     @JsonProperty("Name")
     public String name;
+
     public GetDataCellsFilterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class GetDataCellsFilterRequestBody {
      */
     @JsonProperty("TableCatalogId")
     public String tableCatalogId;
+
     public GetDataCellsFilterRequestBody withTableCatalogId(String tableCatalogId) {
         this.tableCatalogId = tableCatalogId;
         return this;
@@ -42,9 +45,16 @@ public class GetDataCellsFilterRequestBody {
      */
     @JsonProperty("TableName")
     public String tableName;
+
     public GetDataCellsFilterRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public GetDataCellsFilterRequestBody(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("Name") String name, @JsonProperty("TableCatalogId") String tableCatalogId, @JsonProperty("TableName") String tableName) {
+        this.databaseName = databaseName;
+        this.name = name;
+        this.tableCatalogId = tableCatalogId;
+        this.tableName = tableName;
+  }
 }

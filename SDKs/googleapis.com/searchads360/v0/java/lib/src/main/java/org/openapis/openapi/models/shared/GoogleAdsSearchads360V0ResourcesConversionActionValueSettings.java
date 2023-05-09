@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionValueSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alwaysUseDefaultValue")
     public Boolean alwaysUseDefaultValue;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionValueSettings withAlwaysUseDefaultValue(Boolean alwaysUseDefaultValue) {
         this.alwaysUseDefaultValue = alwaysUseDefaultValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionValueSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultCurrencyCode")
     public String defaultCurrencyCode;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionValueSettings withDefaultCurrencyCode(String defaultCurrencyCode) {
         this.defaultCurrencyCode = defaultCurrencyCode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionValueSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public Double defaultValue;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionValueSettings withDefaultValue(Double defaultValue) {
         this.defaultValue = defaultValue;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesConversionActionValueSettings(){}
 }

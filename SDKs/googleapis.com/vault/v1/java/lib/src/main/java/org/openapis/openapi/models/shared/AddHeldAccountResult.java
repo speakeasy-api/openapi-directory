@@ -18,6 +18,7 @@ public class AddHeldAccountResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public HeldAccount account;
+
     public AddHeldAccountResult withAccount(HeldAccount account) {
         this.account = account;
         return this;
@@ -29,9 +30,11 @@ public class AddHeldAccountResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public AddHeldAccountResult withStatus(Status status) {
         this.status = status;
         return this;
     }
     
+    public AddHeldAccountResult(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllEmployeesRequest {
@@ -12,6 +13,7 @@ public class GetAllEmployeesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetAllEmployeesRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class GetAllEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includetotalcount")
     public Boolean includetotalcount;
+
     public GetAllEmployeesRequest withIncludetotalcount(Boolean includetotalcount) {
         this.includetotalcount = includetotalcount;
         return this;
@@ -32,6 +35,7 @@ public class GetAllEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagenumber")
     public Long pagenumber;
+
     public GetAllEmployeesRequest withPagenumber(Long pagenumber) {
         this.pagenumber = pagenumber;
         return this;
@@ -42,9 +46,13 @@ public class GetAllEmployeesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetAllEmployeesRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
     }
     
+    public GetAllEmployeesRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

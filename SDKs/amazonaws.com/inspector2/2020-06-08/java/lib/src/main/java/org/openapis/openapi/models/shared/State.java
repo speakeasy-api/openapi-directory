@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class State {
     @JsonProperty("errorCode")
     public ErrorCodeEnum errorCode;
+
     public State withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -19,6 +20,7 @@ public class State {
     
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public State withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -26,9 +28,15 @@ public class State {
     
     @JsonProperty("status")
     public StatusEnum status;
+
     public State withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public State(@JsonProperty("errorCode") ErrorCodeEnum errorCode, @JsonProperty("errorMessage") String errorMessage, @JsonProperty("status") StatusEnum status) {
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.status = status;
+  }
 }

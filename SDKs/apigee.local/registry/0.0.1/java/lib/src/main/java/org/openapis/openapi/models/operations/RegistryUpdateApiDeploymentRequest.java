@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryUpdateApiDeploymentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput;
+
     public RegistryUpdateApiDeploymentRequest withApiDeploymentInput(org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput) {
         this.apiDeploymentInput = apiDeploymentInput;
         return this;
@@ -19,6 +21,7 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allowMissing")
     public Boolean allowMissing;
+
     public RegistryUpdateApiDeploymentRequest withAllowMissing(Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
@@ -29,6 +32,7 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryUpdateApiDeploymentRequest withApi(String api) {
         this.api = api;
         return this;
@@ -39,6 +43,7 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment")
     public String deployment;
+
     public RegistryUpdateApiDeploymentRequest withDeployment(String deployment) {
         this.deployment = deployment;
         return this;
@@ -49,6 +54,7 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryUpdateApiDeploymentRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -59,6 +65,7 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryUpdateApiDeploymentRequest withProject(String project) {
         this.project = project;
         return this;
@@ -69,9 +76,17 @@ public class RegistryUpdateApiDeploymentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updateMask")
     public String updateMask;
+
     public RegistryUpdateApiDeploymentRequest withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public RegistryUpdateApiDeploymentRequest(@JsonProperty("ApiDeploymentInput") org.openapis.openapi.models.shared.ApiDeploymentInput apiDeploymentInput, @JsonProperty("api") String api, @JsonProperty("deployment") String deployment, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.apiDeploymentInput = apiDeploymentInput;
+        this.api = api;
+        this.deployment = deployment;
+        this.location = location;
+        this.project = project;
+  }
 }

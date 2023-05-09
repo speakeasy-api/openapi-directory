@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SlidesPresentationsBatchUpdateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption1 option1;
+
     public SlidesPresentationsBatchUpdateSecurity withOption1(SlidesPresentationsBatchUpdateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SlidesPresentationsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption2 option2;
+
     public SlidesPresentationsBatchUpdateSecurity withOption2(SlidesPresentationsBatchUpdateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class SlidesPresentationsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption3 option3;
+
     public SlidesPresentationsBatchUpdateSecurity withOption3(SlidesPresentationsBatchUpdateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class SlidesPresentationsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption4 option4;
+
     public SlidesPresentationsBatchUpdateSecurity withOption4(SlidesPresentationsBatchUpdateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class SlidesPresentationsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption5 option5;
+
     public SlidesPresentationsBatchUpdateSecurity withOption5(SlidesPresentationsBatchUpdateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class SlidesPresentationsBatchUpdateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SlidesPresentationsBatchUpdateSecurityOption6 option6;
+
     public SlidesPresentationsBatchUpdateSecurity withOption6(SlidesPresentationsBatchUpdateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public SlidesPresentationsBatchUpdateSecurity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AnalyticsManagementRemarketingAudienceUpdateResponse {
     
     public String contentType;
+
     public AnalyticsManagementRemarketingAudienceUpdateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateResponse {
      */
     
     public org.openapis.openapi.models.shared.RemarketingAudience remarketingAudience;
+
     public AnalyticsManagementRemarketingAudienceUpdateResponse withRemarketingAudience(org.openapis.openapi.models.shared.RemarketingAudience remarketingAudience) {
         this.remarketingAudience = remarketingAudience;
         return this;
@@ -26,6 +29,7 @@ public class AnalyticsManagementRemarketingAudienceUpdateResponse {
     
     
     public Integer statusCode;
+
     public AnalyticsManagementRemarketingAudienceUpdateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class AnalyticsManagementRemarketingAudienceUpdateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AnalyticsManagementRemarketingAudienceUpdateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AnalyticsManagementRemarketingAudienceUpdateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

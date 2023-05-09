@@ -12,6 +12,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Stadium withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public Stadium withAddress(String address) {
         this.address = address;
         return this;
@@ -28,6 +30,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public Stadium withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -36,6 +39,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public Stadium withCity(String city) {
         this.city = city;
         return this;
@@ -44,6 +48,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Stadium withCountry(String country) {
         this.country = country;
         return this;
@@ -52,6 +57,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLat")
     public Double geoLat;
+
     public Stadium withGeoLat(Double geoLat) {
         this.geoLat = geoLat;
         return this;
@@ -60,6 +66,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeoLong")
     public Double geoLong;
+
     public Stadium withGeoLong(Double geoLong) {
         this.geoLong = geoLong;
         return this;
@@ -68,6 +75,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Stadium withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +84,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StadiumID")
     public Long stadiumID;
+
     public Stadium withStadiumID(Long stadiumID) {
         this.stadiumID = stadiumID;
         return this;
@@ -84,6 +93,7 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public Stadium withState(String state) {
         this.state = state;
         return this;
@@ -92,9 +102,11 @@ public class Stadium {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Zip")
     public String zip;
+
     public Stadium withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public Stadium(){}
 }

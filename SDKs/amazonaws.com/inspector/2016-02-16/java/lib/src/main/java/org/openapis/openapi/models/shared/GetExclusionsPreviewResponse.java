@@ -15,6 +15,7 @@ public class GetExclusionsPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionPreviews")
     public ExclusionPreview[] exclusionPreviews;
+
     public GetExclusionsPreviewResponse withExclusionPreviews(ExclusionPreview[] exclusionPreviews) {
         this.exclusionPreviews = exclusionPreviews;
         return this;
@@ -23,6 +24,7 @@ public class GetExclusionsPreviewResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetExclusionsPreviewResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -30,9 +32,13 @@ public class GetExclusionsPreviewResponse {
     
     @JsonProperty("previewStatus")
     public PreviewStatusEnum previewStatus;
+
     public GetExclusionsPreviewResponse withPreviewStatus(PreviewStatusEnum previewStatus) {
         this.previewStatus = previewStatus;
         return this;
     }
     
+    public GetExclusionsPreviewResponse(@JsonProperty("previewStatus") PreviewStatusEnum previewStatus) {
+        this.previewStatus = previewStatus;
+  }
 }

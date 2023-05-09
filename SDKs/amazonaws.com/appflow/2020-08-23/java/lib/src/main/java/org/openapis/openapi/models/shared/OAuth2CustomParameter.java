@@ -15,6 +15,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectorSuppliedValues")
     public String[] connectorSuppliedValues;
+
     public OAuth2CustomParameter withConnectorSuppliedValues(String[] connectorSuppliedValues) {
         this.connectorSuppliedValues = connectorSuppliedValues;
         return this;
@@ -23,6 +24,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OAuth2CustomParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequired")
     public Boolean isRequired;
+
     public OAuth2CustomParameter withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -39,6 +42,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isSensitiveField")
     public Boolean isSensitiveField;
+
     public OAuth2CustomParameter withIsSensitiveField(Boolean isSensitiveField) {
         this.isSensitiveField = isSensitiveField;
         return this;
@@ -47,6 +51,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public OAuth2CustomParameter withKey(String key) {
         this.key = key;
         return this;
@@ -55,6 +60,7 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public OAuth2CustomParameter withLabel(String label) {
         this.label = label;
         return this;
@@ -63,9 +69,11 @@ public class OAuth2CustomParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public OAuth2CustomPropTypeEnum type;
+
     public OAuth2CustomParameter withType(OAuth2CustomPropTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OAuth2CustomParameter(){}
 }

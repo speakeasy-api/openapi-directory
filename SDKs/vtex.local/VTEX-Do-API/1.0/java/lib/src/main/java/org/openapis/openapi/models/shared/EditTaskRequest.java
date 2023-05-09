@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EditTaskRequest {
     @JsonProperty("status")
     public String status;
+
     public EditTaskRequest withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EditTaskRequest(@JsonProperty("status") String status) {
+        this.status = status;
+  }
 }

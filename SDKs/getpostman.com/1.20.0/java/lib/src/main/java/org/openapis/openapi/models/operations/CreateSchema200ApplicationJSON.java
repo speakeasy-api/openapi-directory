@@ -15,9 +15,11 @@ public class CreateSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public CreateSchema200ApplicationJSONSchema schema;
+
     public CreateSchema200ApplicationJSON withSchema(CreateSchema200ApplicationJSONSchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public CreateSchema200ApplicationJSON(){}
 }

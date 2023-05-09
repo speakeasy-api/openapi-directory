@@ -15,6 +15,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Capacity")
     public Long capacity;
+
     public AwsNetworkFirewallRuleGroupDetails withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -23,6 +24,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsNetworkFirewallRuleGroupDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroup")
     public RuleGroupDetails ruleGroup;
+
     public AwsNetworkFirewallRuleGroupDetails withRuleGroup(RuleGroupDetails ruleGroup) {
         this.ruleGroup = ruleGroup;
         return this;
@@ -39,6 +42,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupArn")
     public String ruleGroupArn;
+
     public AwsNetworkFirewallRuleGroupDetails withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -47,6 +51,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupId")
     public String ruleGroupId;
+
     public AwsNetworkFirewallRuleGroupDetails withRuleGroupId(String ruleGroupId) {
         this.ruleGroupId = ruleGroupId;
         return this;
@@ -55,6 +60,7 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleGroupName")
     public String ruleGroupName;
+
     public AwsNetworkFirewallRuleGroupDetails withRuleGroupName(String ruleGroupName) {
         this.ruleGroupName = ruleGroupName;
         return this;
@@ -63,9 +69,11 @@ public class AwsNetworkFirewallRuleGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public AwsNetworkFirewallRuleGroupDetails withType(String type) {
         this.type = type;
         return this;
     }
     
+    public AwsNetworkFirewallRuleGroupDetails(){}
 }

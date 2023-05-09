@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ImportResourcesToDraftAppVersionRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public ImportResourcesToDraftAppVersionRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -25,6 +26,7 @@ public class ImportResourcesToDraftAppVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksSources")
     public org.openapis.openapi.models.shared.EksSource[] eksSources;
+
     public ImportResourcesToDraftAppVersionRequestBody withEksSources(org.openapis.openapi.models.shared.EksSource[] eksSources) {
         this.eksSources = eksSources;
         return this;
@@ -36,6 +38,7 @@ public class ImportResourcesToDraftAppVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importStrategy")
     public ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum importStrategy;
+
     public ImportResourcesToDraftAppVersionRequestBody withImportStrategy(ImportResourcesToDraftAppVersionRequestBodyImportStrategyEnum importStrategy) {
         this.importStrategy = importStrategy;
         return this;
@@ -47,6 +50,7 @@ public class ImportResourcesToDraftAppVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceArns")
     public String[] sourceArns;
+
     public ImportResourcesToDraftAppVersionRequestBody withSourceArns(String[] sourceArns) {
         this.sourceArns = sourceArns;
         return this;
@@ -58,9 +62,13 @@ public class ImportResourcesToDraftAppVersionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terraformSources")
     public org.openapis.openapi.models.shared.TerraformSource[] terraformSources;
+
     public ImportResourcesToDraftAppVersionRequestBody withTerraformSources(org.openapis.openapi.models.shared.TerraformSource[] terraformSources) {
         this.terraformSources = terraformSources;
         return this;
     }
     
+    public ImportResourcesToDraftAppVersionRequestBody(@JsonProperty("appArn") String appArn) {
+        this.appArn = appArn;
+  }
 }

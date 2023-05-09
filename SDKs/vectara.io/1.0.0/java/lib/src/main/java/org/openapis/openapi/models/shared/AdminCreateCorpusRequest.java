@@ -12,9 +12,11 @@ public class AdminCreateCorpusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpus")
     public AdminCorpus corpus;
+
     public AdminCreateCorpusRequest withCorpus(AdminCorpus corpus) {
         this.corpus = corpus;
         return this;
     }
     
+    public AdminCreateCorpusRequest(){}
 }

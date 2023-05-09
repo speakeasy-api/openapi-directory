@@ -12,6 +12,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("algorithm")
     public PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm algorithm;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withAlgorithm(PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm algorithm) {
         this.algorithm = algorithm;
         return this;
@@ -22,6 +23,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("created")
     public String created;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withCreated(String created) {
         this.created = created;
         return this;
@@ -32,6 +34,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("included_traffic")
     public Long includedTraffic;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withIncludedTraffic(Long includedTraffic) {
         this.includedTraffic = includedTraffic;
         return this;
@@ -52,6 +56,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("ingoing_traffic")
     public Long ingoingTraffic;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withIngoingTraffic(Long ingoingTraffic) {
         this.ingoingTraffic = ingoingTraffic;
         return this;
@@ -62,6 +67,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -69,6 +75,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
     
     @JsonProperty("load_balancer_type")
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerType loadBalancerType;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withLoadBalancerType(PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerType loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
@@ -76,6 +83,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
     
     @JsonProperty("location")
     public PostLoadBalancers201ApplicationJSONLoadBalancerLocation location;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withLocation(PostLoadBalancers201ApplicationJSONLoadBalancerLocation location) {
         this.location = location;
         return this;
@@ -86,6 +94,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("name")
     public String name;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +105,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("outgoing_traffic")
     public Long outgoingTraffic;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withOutgoingTraffic(Long outgoingTraffic) {
         this.outgoingTraffic = outgoingTraffic;
         return this;
@@ -106,6 +116,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("private_net")
     public PostLoadBalancers201ApplicationJSONLoadBalancerPrivateNet[] privateNet;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withPrivateNet(PostLoadBalancers201ApplicationJSONLoadBalancerPrivateNet[] privateNet) {
         this.privateNet = privateNet;
         return this;
@@ -116,6 +127,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("protection")
     public PostLoadBalancers201ApplicationJSONLoadBalancerProtection protection;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withProtection(PostLoadBalancers201ApplicationJSONLoadBalancerProtection protection) {
         this.protection = protection;
         return this;
@@ -126,6 +138,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("public_net")
     public PostLoadBalancers201ApplicationJSONLoadBalancerPublicNet publicNet;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withPublicNet(PostLoadBalancers201ApplicationJSONLoadBalancerPublicNet publicNet) {
         this.publicNet = publicNet;
         return this;
@@ -136,6 +149,7 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("services")
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerService[] services;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withServices(PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerService[] services) {
         this.services = services;
         return this;
@@ -146,9 +160,27 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancer {
      */
     @JsonProperty("targets")
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTarget[] targets;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancer withTargets(PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTarget[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONLoadBalancer(@JsonProperty("algorithm") PostLoadBalancers201ApplicationJSONLoadBalancerAlgorithm algorithm, @JsonProperty("created") String created, @JsonProperty("id") Long id, @JsonProperty("included_traffic") Long includedTraffic, @JsonProperty("ingoing_traffic") Long ingoingTraffic, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("load_balancer_type") PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerType loadBalancerType, @JsonProperty("location") PostLoadBalancers201ApplicationJSONLoadBalancerLocation location, @JsonProperty("name") String name, @JsonProperty("outgoing_traffic") Long outgoingTraffic, @JsonProperty("private_net") PostLoadBalancers201ApplicationJSONLoadBalancerPrivateNet[] privateNet, @JsonProperty("protection") PostLoadBalancers201ApplicationJSONLoadBalancerProtection protection, @JsonProperty("public_net") PostLoadBalancers201ApplicationJSONLoadBalancerPublicNet publicNet, @JsonProperty("services") PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerService[] services, @JsonProperty("targets") PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTarget[] targets) {
+        this.algorithm = algorithm;
+        this.created = created;
+        this.id = id;
+        this.includedTraffic = includedTraffic;
+        this.ingoingTraffic = ingoingTraffic;
+        this.labels = labels;
+        this.loadBalancerType = loadBalancerType;
+        this.location = location;
+        this.name = name;
+        this.outgoingTraffic = outgoingTraffic;
+        this.privateNet = privateNet;
+        this.protection = protection;
+        this.publicNet = publicNet;
+        this.services = services;
+        this.targets = targets;
+  }
 }

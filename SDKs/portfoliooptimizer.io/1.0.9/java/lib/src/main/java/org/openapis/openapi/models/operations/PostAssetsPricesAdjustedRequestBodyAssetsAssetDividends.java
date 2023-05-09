@@ -12,6 +12,7 @@ public class PostAssetsPricesAdjustedRequestBodyAssetsAssetDividends {
      */
     @JsonProperty("amount")
     public Double amount;
+
     public PostAssetsPricesAdjustedRequestBodyAssetsAssetDividends withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -22,9 +23,14 @@ public class PostAssetsPricesAdjustedRequestBodyAssetsAssetDividends {
      */
     @JsonProperty("date")
     public String date;
+
     public PostAssetsPricesAdjustedRequestBodyAssetsAssetDividends withDate(String date) {
         this.date = date;
         return this;
     }
     
+    public PostAssetsPricesAdjustedRequestBodyAssetsAssetDividends(@JsonProperty("amount") Double amount, @JsonProperty("date") String date) {
+        this.amount = amount;
+        this.date = date;
+  }
 }

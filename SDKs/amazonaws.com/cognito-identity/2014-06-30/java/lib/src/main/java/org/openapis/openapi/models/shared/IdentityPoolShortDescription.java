@@ -15,6 +15,7 @@ public class IdentityPoolShortDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public IdentityPoolShortDescription withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -23,9 +24,11 @@ public class IdentityPoolShortDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolName")
     public String identityPoolName;
+
     public IdentityPoolShortDescription withIdentityPoolName(String identityPoolName) {
         this.identityPoolName = identityPoolName;
         return this;
     }
     
+    public IdentityPoolShortDescription(){}
 }

@@ -15,6 +15,7 @@ public class UpdateInvestorRootTypeForInvestorLtaProtectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_individual_protection_amount")
     public String ltaIndividualProtectionAmount;
+
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetails withLtaIndividualProtectionAmount(String ltaIndividualProtectionAmount) {
         this.ltaIndividualProtectionAmount = ltaIndividualProtectionAmount;
         return this;
@@ -26,6 +27,7 @@ public class UpdateInvestorRootTypeForInvestorLtaProtectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_primary_protection_factor")
     public String ltaPrimaryProtectionFactor;
+
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetails withLtaPrimaryProtectionFactor(String ltaPrimaryProtectionFactor) {
         this.ltaPrimaryProtectionFactor = ltaPrimaryProtectionFactor;
         return this;
@@ -37,6 +39,7 @@ public class UpdateInvestorRootTypeForInvestorLtaProtectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_notification_number")
     public String ltaProtectionNotificationNumber;
+
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetails withLtaProtectionNotificationNumber(String ltaProtectionNotificationNumber) {
         this.ltaProtectionNotificationNumber = ltaProtectionNotificationNumber;
         return this;
@@ -48,6 +51,7 @@ public class UpdateInvestorRootTypeForInvestorLtaProtectionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lta_protection_scheme_administrator_reference")
     public String ltaProtectionSchemeAdministratorReference;
+
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetails withLtaProtectionSchemeAdministratorReference(String ltaProtectionSchemeAdministratorReference) {
         this.ltaProtectionSchemeAdministratorReference = ltaProtectionSchemeAdministratorReference;
         return this;
@@ -55,9 +59,13 @@ public class UpdateInvestorRootTypeForInvestorLtaProtectionDetails {
     
     @JsonProperty("lta_protection_type")
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType;
+
     public UpdateInvestorRootTypeForInvestorLtaProtectionDetails withLtaProtectionType(UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
         this.ltaProtectionType = ltaProtectionType;
         return this;
     }
     
+    public UpdateInvestorRootTypeForInvestorLtaProtectionDetails(@JsonProperty("lta_protection_type") UpdateInvestorRootTypeForInvestorLtaProtectionDetailsLtaProtectionTypeEnum ltaProtectionType) {
+        this.ltaProtectionType = ltaProtectionType;
+  }
 }

@@ -15,6 +15,7 @@ public class ListJobsOutput {
      */
     
     public Boolean isTruncated;
+
     public ListJobsOutput withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -25,9 +26,11 @@ public class ListJobsOutput {
      */
     
     public Job[] jobs;
+
     public ListJobsOutput withJobs(Job[] jobs) {
         this.jobs = jobs;
         return this;
     }
     
+    public ListJobsOutput(){}
 }

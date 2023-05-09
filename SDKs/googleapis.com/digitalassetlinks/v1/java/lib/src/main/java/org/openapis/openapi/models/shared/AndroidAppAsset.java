@@ -18,6 +18,7 @@ public class AndroidAppAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public CertificateInfo certificate;
+
     public AndroidAppAsset withCertificate(CertificateInfo certificate) {
         this.certificate = certificate;
         return this;
@@ -29,9 +30,11 @@ public class AndroidAppAsset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageName")
     public String packageName;
+
     public AndroidAppAsset withPackageName(String packageName) {
         this.packageName = packageName;
         return this;
     }
     
+    public AndroidAppAsset(){}
 }

@@ -18,6 +18,7 @@ public class ApplicationResponseCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public ApplicationResponseCollectionEmbedded embedded;
+
     public ApplicationResponseCollection withEmbedded(ApplicationResponseCollectionEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -29,6 +30,7 @@ public class ApplicationResponseCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page")
     public Long page;
+
     public ApplicationResponseCollection withPage(Long page) {
         this.page = page;
         return this;
@@ -40,6 +42,7 @@ public class ApplicationResponseCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("page_size")
     public Long pageSize;
+
     public ApplicationResponseCollection withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -51,6 +54,7 @@ public class ApplicationResponseCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_items")
     public Long totalItems;
+
     public ApplicationResponseCollection withTotalItems(Long totalItems) {
         this.totalItems = totalItems;
         return this;
@@ -62,9 +66,11 @@ public class ApplicationResponseCollection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_pages")
     public Long totalPages;
+
     public ApplicationResponseCollection withTotalPages(Long totalPages) {
         this.totalPages = totalPages;
         return this;
     }
     
+    public ApplicationResponseCollection(){}
 }

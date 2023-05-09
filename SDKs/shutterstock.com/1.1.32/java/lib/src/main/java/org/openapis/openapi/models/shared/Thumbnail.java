@@ -15,6 +15,7 @@ public class Thumbnail {
      */
     @JsonProperty("height")
     public Long height;
+
     public Thumbnail withHeight(Long height) {
         this.height = height;
         return this;
@@ -25,6 +26,7 @@ public class Thumbnail {
      */
     @JsonProperty("url")
     public String url;
+
     public Thumbnail withUrl(String url) {
         this.url = url;
         return this;
@@ -35,9 +37,15 @@ public class Thumbnail {
      */
     @JsonProperty("width")
     public Long width;
+
     public Thumbnail withWidth(Long width) {
         this.width = width;
         return this;
     }
     
+    public Thumbnail(@JsonProperty("height") Long height, @JsonProperty("url") String url, @JsonProperty("width") Long width) {
+        this.height = height;
+        this.url = url;
+        this.width = width;
+  }
 }

@@ -20,6 +20,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public DescribeReplayResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -28,6 +29,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Destination")
     public ReplayDestination destination;
+
     public DescribeReplayResponse withDestination(ReplayDestination destination) {
         this.destination = destination;
         return this;
@@ -38,6 +40,7 @@ public class DescribeReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventEndTime")
     public OffsetDateTime eventEndTime;
+
     public DescribeReplayResponse withEventEndTime(OffsetDateTime eventEndTime) {
         this.eventEndTime = eventEndTime;
         return this;
@@ -48,6 +51,7 @@ public class DescribeReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventLastReplayedTime")
     public OffsetDateTime eventLastReplayedTime;
+
     public DescribeReplayResponse withEventLastReplayedTime(OffsetDateTime eventLastReplayedTime) {
         this.eventLastReplayedTime = eventLastReplayedTime;
         return this;
@@ -56,6 +60,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventSourceArn")
     public String eventSourceArn;
+
     public DescribeReplayResponse withEventSourceArn(String eventSourceArn) {
         this.eventSourceArn = eventSourceArn;
         return this;
@@ -66,6 +71,7 @@ public class DescribeReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EventStartTime")
     public OffsetDateTime eventStartTime;
+
     public DescribeReplayResponse withEventStartTime(OffsetDateTime eventStartTime) {
         this.eventStartTime = eventStartTime;
         return this;
@@ -74,6 +80,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplayArn")
     public String replayArn;
+
     public DescribeReplayResponse withReplayArn(String replayArn) {
         this.replayArn = replayArn;
         return this;
@@ -84,6 +91,7 @@ public class DescribeReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplayEndTime")
     public OffsetDateTime replayEndTime;
+
     public DescribeReplayResponse withReplayEndTime(OffsetDateTime replayEndTime) {
         this.replayEndTime = replayEndTime;
         return this;
@@ -92,6 +100,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplayName")
     public String replayName;
+
     public DescribeReplayResponse withReplayName(String replayName) {
         this.replayName = replayName;
         return this;
@@ -102,6 +111,7 @@ public class DescribeReplayResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ReplayStartTime")
     public OffsetDateTime replayStartTime;
+
     public DescribeReplayResponse withReplayStartTime(OffsetDateTime replayStartTime) {
         this.replayStartTime = replayStartTime;
         return this;
@@ -110,6 +120,7 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public ReplayStateEnum state;
+
     public DescribeReplayResponse withState(ReplayStateEnum state) {
         this.state = state;
         return this;
@@ -118,9 +129,11 @@ public class DescribeReplayResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateReason")
     public String stateReason;
+
     public DescribeReplayResponse withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
     }
     
+    public DescribeReplayResponse(){}
 }

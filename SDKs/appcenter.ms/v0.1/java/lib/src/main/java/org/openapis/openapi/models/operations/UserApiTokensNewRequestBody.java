@@ -18,6 +18,7 @@ public class UserApiTokensNewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UserApiTokensNewRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -29,9 +30,11 @@ public class UserApiTokensNewRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public UserApiTokensNewRequestBodyScopeEnum[] scope;
+
     public UserApiTokensNewRequestBody withScope(UserApiTokensNewRequestBodyScopeEnum[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public UserApiTokensNewRequestBody(){}
 }

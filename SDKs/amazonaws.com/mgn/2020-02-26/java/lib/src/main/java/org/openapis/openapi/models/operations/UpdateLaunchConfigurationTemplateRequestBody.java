@@ -15,6 +15,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public UpdateLaunchConfigurationTemplateRequestBody withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +27,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootMode")
     public UpdateLaunchConfigurationTemplateRequestBodyBootModeEnum bootMode;
+
     public UpdateLaunchConfigurationTemplateRequestBody withBootMode(UpdateLaunchConfigurationTemplateRequestBodyBootModeEnum bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -37,6 +39,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyPrivateIp")
     public Boolean copyPrivateIp;
+
     public UpdateLaunchConfigurationTemplateRequestBody withCopyPrivateIp(Boolean copyPrivateIp) {
         this.copyPrivateIp = copyPrivateIp;
         return this;
@@ -48,6 +51,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyTags")
     public Boolean copyTags;
+
     public UpdateLaunchConfigurationTemplateRequestBody withCopyTags(Boolean copyTags) {
         this.copyTags = copyTags;
         return this;
@@ -59,6 +63,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableMapAutoTagging")
     public Boolean enableMapAutoTagging;
+
     public UpdateLaunchConfigurationTemplateRequestBody withEnableMapAutoTagging(Boolean enableMapAutoTagging) {
         this.enableMapAutoTagging = enableMapAutoTagging;
         return this;
@@ -70,6 +75,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("largeVolumeConf")
     public UpdateLaunchConfigurationTemplateRequestBodyLargeVolumeConf largeVolumeConf;
+
     public UpdateLaunchConfigurationTemplateRequestBody withLargeVolumeConf(UpdateLaunchConfigurationTemplateRequestBodyLargeVolumeConf largeVolumeConf) {
         this.largeVolumeConf = largeVolumeConf;
         return this;
@@ -80,6 +86,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
      */
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public UpdateLaunchConfigurationTemplateRequestBody withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
@@ -91,6 +98,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("launchDisposition")
     public UpdateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum launchDisposition;
+
     public UpdateLaunchConfigurationTemplateRequestBody withLaunchDisposition(UpdateLaunchConfigurationTemplateRequestBodyLaunchDispositionEnum launchDisposition) {
         this.launchDisposition = launchDisposition;
         return this;
@@ -102,6 +110,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licensing")
     public UpdateLaunchConfigurationTemplateRequestBodyLicensing licensing;
+
     public UpdateLaunchConfigurationTemplateRequestBody withLicensing(UpdateLaunchConfigurationTemplateRequestBodyLicensing licensing) {
         this.licensing = licensing;
         return this;
@@ -113,6 +122,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mapAutoTaggingMpeID")
     public String mapAutoTaggingMpeID;
+
     public UpdateLaunchConfigurationTemplateRequestBody withMapAutoTaggingMpeID(String mapAutoTaggingMpeID) {
         this.mapAutoTaggingMpeID = mapAutoTaggingMpeID;
         return this;
@@ -124,6 +134,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postLaunchActions")
     public UpdateLaunchConfigurationTemplateRequestBodyPostLaunchActions postLaunchActions;
+
     public UpdateLaunchConfigurationTemplateRequestBody withPostLaunchActions(UpdateLaunchConfigurationTemplateRequestBodyPostLaunchActions postLaunchActions) {
         this.postLaunchActions = postLaunchActions;
         return this;
@@ -135,6 +146,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeConf")
     public UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf smallVolumeConf;
+
     public UpdateLaunchConfigurationTemplateRequestBody withSmallVolumeConf(UpdateLaunchConfigurationTemplateRequestBodySmallVolumeConf smallVolumeConf) {
         this.smallVolumeConf = smallVolumeConf;
         return this;
@@ -146,6 +158,7 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallVolumeMaxSize")
     public Long smallVolumeMaxSize;
+
     public UpdateLaunchConfigurationTemplateRequestBody withSmallVolumeMaxSize(Long smallVolumeMaxSize) {
         this.smallVolumeMaxSize = smallVolumeMaxSize;
         return this;
@@ -157,9 +170,13 @@ public class UpdateLaunchConfigurationTemplateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetInstanceTypeRightSizingMethod")
     public UpdateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod;
+
     public UpdateLaunchConfigurationTemplateRequestBody withTargetInstanceTypeRightSizingMethod(UpdateLaunchConfigurationTemplateRequestBodyTargetInstanceTypeRightSizingMethodEnum targetInstanceTypeRightSizingMethod) {
         this.targetInstanceTypeRightSizingMethod = targetInstanceTypeRightSizingMethod;
         return this;
     }
     
+    public UpdateLaunchConfigurationTemplateRequestBody(@JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID) {
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+  }
 }

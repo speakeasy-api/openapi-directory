@@ -18,6 +18,7 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlaneManagement")
     public ServiceMeshControlPlaneManagement controlPlaneManagement;
+
     public ServiceMeshMembershipState withControlPlaneManagement(ServiceMeshControlPlaneManagement controlPlaneManagement) {
         this.controlPlaneManagement = controlPlaneManagement;
         return this;
@@ -29,9 +30,11 @@ public class ServiceMeshMembershipState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataPlaneManagement")
     public ServiceMeshDataPlaneManagement dataPlaneManagement;
+
     public ServiceMeshMembershipState withDataPlaneManagement(ServiceMeshDataPlaneManagement dataPlaneManagement) {
         this.dataPlaneManagement = dataPlaneManagement;
         return this;
     }
     
+    public ServiceMeshMembershipState(){}
 }

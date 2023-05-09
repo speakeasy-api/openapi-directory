@@ -733,6 +733,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/ReminderProfilesReadRes
 lib/src/main/java/org/openapis/openapi/models/operations/ReminderProfilesUpdateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReminderProfilesUpdateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ReminderProfilesUpdateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/SublabsCreateSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SublabsCreateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SublabsDeleteSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SublabsDeleteRequest.java
@@ -1064,4 +1065,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/TaskTaskReminder.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaskTaskNote.java
 lib/src/main/java/org/openapis/openapi/models/shared/TaskPriorityEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Task.java
+docs/sdk/README.md
+docs/administrative/README.md
+docs/billing/README.md
+docs/clinical/README.md
+docs/practicemanagement/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class MetadataProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommitId")
     public String commitId;
+
     public MetadataProperties withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -23,6 +24,7 @@ public class MetadataProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GeneratedBy")
     public String generatedBy;
+
     public MetadataProperties withGeneratedBy(String generatedBy) {
         this.generatedBy = generatedBy;
         return this;
@@ -31,6 +33,7 @@ public class MetadataProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectId")
     public String projectId;
+
     public MetadataProperties withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -39,9 +42,11 @@ public class MetadataProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Repository")
     public String repository;
+
     public MetadataProperties withRepository(String repository) {
         this.repository = repository;
         return this;
     }
     
+    public MetadataProperties(){}
 }

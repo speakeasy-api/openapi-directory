@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnGatewayResultVpnGatewayVpcAttachments {
     
     public CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum state;
+
     public CreateVpnGatewayResultVpnGatewayVpcAttachments withState(CreateVpnGatewayResultVpnGatewayVpcAttachmentsStateEnum state) {
         this.state = state;
         return this;
@@ -19,9 +20,11 @@ public class CreateVpnGatewayResultVpnGatewayVpcAttachments {
     
     
     public String vpcId;
+
     public CreateVpnGatewayResultVpnGatewayVpcAttachments withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpnGatewayResultVpnGatewayVpcAttachments(){}
 }

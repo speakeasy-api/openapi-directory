@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CodePushDeploymentUploadCreateRequest {
@@ -12,6 +13,7 @@ public class CodePushDeploymentUploadCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public CodePushDeploymentUploadCreateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -22,6 +24,7 @@ public class CodePushDeploymentUploadCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deployment_name")
     public String deploymentName;
+
     public CodePushDeploymentUploadCreateRequest withDeploymentName(String deploymentName) {
         this.deploymentName = deploymentName;
         return this;
@@ -32,9 +35,15 @@ public class CodePushDeploymentUploadCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public CodePushDeploymentUploadCreateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public CodePushDeploymentUploadCreateRequest(@JsonProperty("app_name") String appName, @JsonProperty("deployment_name") String deploymentName, @JsonProperty("owner_name") String ownerName) {
+        this.appName = appName;
+        this.deploymentName = deploymentName;
+        this.ownerName = ownerName;
+  }
 }

@@ -15,6 +15,7 @@ public class ModelList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Model[] data;
+
     public ModelList withData(Model[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ModelList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ModelList withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ModelList(){}
 }

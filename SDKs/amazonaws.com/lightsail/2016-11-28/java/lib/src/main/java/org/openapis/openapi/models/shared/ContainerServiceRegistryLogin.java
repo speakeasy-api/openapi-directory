@@ -22,6 +22,7 @@ public class ContainerServiceRegistryLogin {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiresAt")
     public OffsetDateTime expiresAt;
+
     public ContainerServiceRegistryLogin withExpiresAt(OffsetDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -30,6 +31,7 @@ public class ContainerServiceRegistryLogin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ContainerServiceRegistryLogin withPassword(String password) {
         this.password = password;
         return this;
@@ -38,6 +40,7 @@ public class ContainerServiceRegistryLogin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registry")
     public String registry;
+
     public ContainerServiceRegistryLogin withRegistry(String registry) {
         this.registry = registry;
         return this;
@@ -46,9 +49,11 @@ public class ContainerServiceRegistryLogin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public ContainerServiceRegistryLogin withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ContainerServiceRegistryLogin(){}
 }

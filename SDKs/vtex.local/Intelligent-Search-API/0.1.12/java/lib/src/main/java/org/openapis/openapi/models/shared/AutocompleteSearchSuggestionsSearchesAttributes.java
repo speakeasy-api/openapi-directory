@@ -15,6 +15,7 @@ public class AutocompleteSearchSuggestionsSearchesAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public AutocompleteSearchSuggestionsSearchesAttributes withKey(String key) {
         this.key = key;
         return this;
@@ -26,6 +27,7 @@ public class AutocompleteSearchSuggestionsSearchesAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelKey")
     public String labelKey;
+
     public AutocompleteSearchSuggestionsSearchesAttributes withLabelKey(String labelKey) {
         this.labelKey = labelKey;
         return this;
@@ -37,6 +39,7 @@ public class AutocompleteSearchSuggestionsSearchesAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelValue")
     public String labelValue;
+
     public AutocompleteSearchSuggestionsSearchesAttributes withLabelValue(String labelValue) {
         this.labelValue = labelValue;
         return this;
@@ -48,9 +51,11 @@ public class AutocompleteSearchSuggestionsSearchesAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public AutocompleteSearchSuggestionsSearchesAttributes withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public AutocompleteSearchSuggestionsSearchesAttributes(){}
 }

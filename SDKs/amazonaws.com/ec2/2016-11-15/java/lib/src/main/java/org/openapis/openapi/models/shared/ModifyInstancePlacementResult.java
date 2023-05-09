@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstancePlacementResult {
     
     public Boolean return_;
+
     public ModifyInstancePlacementResult withReturn(Boolean return_) {
         this.return_ = return_;
         return this;
     }
     
+    public ModifyInstancePlacementResult(){}
 }

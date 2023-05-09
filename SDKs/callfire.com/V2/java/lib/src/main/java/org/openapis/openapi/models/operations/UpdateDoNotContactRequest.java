@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateDoNotContactRequest {
@@ -12,6 +13,7 @@ public class UpdateDoNotContactRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DoNotContactInput doNotContactInput;
+
     public UpdateDoNotContactRequest withDoNotContactInput(org.openapis.openapi.models.shared.DoNotContactInput doNotContactInput) {
         this.doNotContactInput = doNotContactInput;
         return this;
@@ -22,9 +24,13 @@ public class UpdateDoNotContactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=number")
     public String number;
+
     public UpdateDoNotContactRequest withNumber(String number) {
         this.number = number;
         return this;
     }
     
+    public UpdateDoNotContactRequest(@JsonProperty("number") String number) {
+        this.number = number;
+  }
 }

@@ -12,9 +12,11 @@ public class CreateCollectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public CreateCollectionRequestBodyCollection collection;
+
     public CreateCollectionRequestBody withCollection(CreateCollectionRequestBodyCollection collection) {
         this.collection = collection;
         return this;
     }
     
+    public CreateCollectionRequestBody(){}
 }

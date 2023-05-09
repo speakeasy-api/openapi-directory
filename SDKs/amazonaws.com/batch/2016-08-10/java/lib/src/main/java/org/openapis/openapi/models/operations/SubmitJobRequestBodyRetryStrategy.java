@@ -15,6 +15,7 @@ public class SubmitJobRequestBodyRetryStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attempts")
     public Long attempts;
+
     public SubmitJobRequestBodyRetryStrategy withAttempts(Long attempts) {
         this.attempts = attempts;
         return this;
@@ -23,9 +24,11 @@ public class SubmitJobRequestBodyRetryStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluateOnExit")
     public org.openapis.openapi.models.shared.EvaluateOnExit[] evaluateOnExit;
+
     public SubmitJobRequestBodyRetryStrategy withEvaluateOnExit(org.openapis.openapi.models.shared.EvaluateOnExit[] evaluateOnExit) {
         this.evaluateOnExit = evaluateOnExit;
         return this;
     }
     
+    public SubmitJobRequestBodyRetryStrategy(){}
 }

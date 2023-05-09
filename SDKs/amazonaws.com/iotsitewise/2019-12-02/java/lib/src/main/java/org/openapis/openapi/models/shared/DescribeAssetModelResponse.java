@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeAssetModelResponse {
     @JsonProperty("assetModelArn")
     public String assetModelArn;
+
     public DescribeAssetModelResponse withAssetModelArn(String assetModelArn) {
         this.assetModelArn = assetModelArn;
         return this;
@@ -27,6 +28,7 @@ public class DescribeAssetModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelCompositeModels")
     public AssetModelCompositeModel[] assetModelCompositeModels;
+
     public DescribeAssetModelResponse withAssetModelCompositeModels(AssetModelCompositeModel[] assetModelCompositeModels) {
         this.assetModelCompositeModels = assetModelCompositeModels;
         return this;
@@ -36,6 +38,7 @@ public class DescribeAssetModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("assetModelCreationDate")
     public OffsetDateTime assetModelCreationDate;
+
     public DescribeAssetModelResponse withAssetModelCreationDate(OffsetDateTime assetModelCreationDate) {
         this.assetModelCreationDate = assetModelCreationDate;
         return this;
@@ -43,6 +46,7 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelDescription")
     public String assetModelDescription;
+
     public DescribeAssetModelResponse withAssetModelDescription(String assetModelDescription) {
         this.assetModelDescription = assetModelDescription;
         return this;
@@ -50,6 +54,7 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelHierarchies")
     public AssetModelHierarchy[] assetModelHierarchies;
+
     public DescribeAssetModelResponse withAssetModelHierarchies(AssetModelHierarchy[] assetModelHierarchies) {
         this.assetModelHierarchies = assetModelHierarchies;
         return this;
@@ -57,6 +62,7 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public DescribeAssetModelResponse withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -66,6 +72,7 @@ public class DescribeAssetModelResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("assetModelLastUpdateDate")
     public OffsetDateTime assetModelLastUpdateDate;
+
     public DescribeAssetModelResponse withAssetModelLastUpdateDate(OffsetDateTime assetModelLastUpdateDate) {
         this.assetModelLastUpdateDate = assetModelLastUpdateDate;
         return this;
@@ -73,6 +80,7 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelName")
     public String assetModelName;
+
     public DescribeAssetModelResponse withAssetModelName(String assetModelName) {
         this.assetModelName = assetModelName;
         return this;
@@ -80,6 +88,7 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelProperties")
     public AssetModelProperty[] assetModelProperties;
+
     public DescribeAssetModelResponse withAssetModelProperties(AssetModelProperty[] assetModelProperties) {
         this.assetModelProperties = assetModelProperties;
         return this;
@@ -87,9 +96,21 @@ public class DescribeAssetModelResponse {
     
     @JsonProperty("assetModelStatus")
     public AssetModelStatus assetModelStatus;
+
     public DescribeAssetModelResponse withAssetModelStatus(AssetModelStatus assetModelStatus) {
         this.assetModelStatus = assetModelStatus;
         return this;
     }
     
+    public DescribeAssetModelResponse(@JsonProperty("assetModelArn") String assetModelArn, @JsonProperty("assetModelCreationDate") OffsetDateTime assetModelCreationDate, @JsonProperty("assetModelDescription") String assetModelDescription, @JsonProperty("assetModelHierarchies") AssetModelHierarchy[] assetModelHierarchies, @JsonProperty("assetModelId") String assetModelId, @JsonProperty("assetModelLastUpdateDate") OffsetDateTime assetModelLastUpdateDate, @JsonProperty("assetModelName") String assetModelName, @JsonProperty("assetModelProperties") AssetModelProperty[] assetModelProperties, @JsonProperty("assetModelStatus") AssetModelStatus assetModelStatus) {
+        this.assetModelArn = assetModelArn;
+        this.assetModelCreationDate = assetModelCreationDate;
+        this.assetModelDescription = assetModelDescription;
+        this.assetModelHierarchies = assetModelHierarchies;
+        this.assetModelId = assetModelId;
+        this.assetModelLastUpdateDate = assetModelLastUpdateDate;
+        this.assetModelName = assetModelName;
+        this.assetModelProperties = assetModelProperties;
+        this.assetModelStatus = assetModelStatus;
+  }
 }

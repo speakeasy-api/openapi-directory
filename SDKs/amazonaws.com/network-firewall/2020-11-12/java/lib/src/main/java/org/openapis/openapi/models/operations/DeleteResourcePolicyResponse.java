@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteResourcePolicyResponse {
     
     public String contentType;
+
     public DeleteResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteResourcePolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteResourcePolicyResponse;
+
     public DeleteResourcePolicyResponse withDeleteResourcePolicyResponse(java.util.Map<String, Object> deleteResourcePolicyResponse) {
         this.deleteResourcePolicyResponse = deleteResourcePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteResourcePolicyResponse {
      */
     
     public Object internalServerError;
+
     public DeleteResourcePolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DeleteResourcePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteResourcePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteResourcePolicyResponse {
      */
     
     public Object invalidResourcePolicyException;
+
     public DeleteResourcePolicyResponse withInvalidResourcePolicyException(Object invalidResourcePolicyException) {
         this.invalidResourcePolicyException = invalidResourcePolicyException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteResourcePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteResourcePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteResourcePolicyResponse {
      */
     
     public Object throttlingException;
+
     public DeleteResourcePolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

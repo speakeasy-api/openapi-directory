@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentFreelistingsprogramGetResponse {
     
     public String contentType;
+
     public ContentFreelistingsprogramGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentFreelistingsprogramGetResponse {
      */
     
     public org.openapis.openapi.models.shared.FreeListingsProgramStatus freeListingsProgramStatus;
+
     public ContentFreelistingsprogramGetResponse withFreeListingsProgramStatus(org.openapis.openapi.models.shared.FreeListingsProgramStatus freeListingsProgramStatus) {
         this.freeListingsProgramStatus = freeListingsProgramStatus;
         return this;
@@ -26,6 +29,7 @@ public class ContentFreelistingsprogramGetResponse {
     
     
     public Integer statusCode;
+
     public ContentFreelistingsprogramGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentFreelistingsprogramGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentFreelistingsprogramGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentFreelistingsprogramGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

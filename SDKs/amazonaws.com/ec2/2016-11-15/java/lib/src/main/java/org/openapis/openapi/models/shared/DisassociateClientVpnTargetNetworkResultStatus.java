@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DisassociateClientVpnTargetNetworkResultStatus {
     
     public DisassociateClientVpnTargetNetworkResultStatusCodeEnum code;
+
     public DisassociateClientVpnTargetNetworkResultStatus withCode(DisassociateClientVpnTargetNetworkResultStatusCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DisassociateClientVpnTargetNetworkResultStatus {
     
     
     public String message;
+
     public DisassociateClientVpnTargetNetworkResultStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DisassociateClientVpnTargetNetworkResultStatus(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration {
     
     public String name;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfigurationPriv
     
     
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfigurationStateEnum state;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration withState(CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfigurationStateEnum state) {
         this.state = state;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfigurationPriv
     
     
     public String type;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration withType(String type) {
         this.type = type;
         return this;
@@ -33,9 +36,11 @@ public class CreateVpcEndpointServiceConfigurationResultServiceConfigurationPriv
     
     
     public String value;
+
     public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateVpcEndpointServiceConfigurationResultServiceConfigurationPrivateDnsNameConfiguration(){}
 }

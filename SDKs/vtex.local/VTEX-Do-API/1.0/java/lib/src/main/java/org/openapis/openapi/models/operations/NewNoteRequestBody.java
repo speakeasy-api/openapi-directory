@@ -12,6 +12,7 @@ public class NewNoteRequestBody {
      */
     @JsonProperty("description")
     public String description;
+
     public NewNoteRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class NewNoteRequestBody {
      */
     @JsonProperty("domain")
     public String domain;
+
     public NewNoteRequestBody withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -32,9 +34,15 @@ public class NewNoteRequestBody {
      */
     @JsonProperty("target")
     public NewNoteRequestBodyTarget target;
+
     public NewNoteRequestBody withTarget(NewNoteRequestBodyTarget target) {
         this.target = target;
         return this;
     }
     
+    public NewNoteRequestBody(@JsonProperty("description") String description, @JsonProperty("domain") String domain, @JsonProperty("target") NewNoteRequestBodyTarget target) {
+        this.description = description;
+        this.domain = domain;
+        this.target = target;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SeverityLevel {
     @JsonProperty("occurrencesThreshold")
     public Long occurrencesThreshold;
+
     public SeverityLevel withOccurrencesThreshold(Long occurrencesThreshold) {
         this.occurrencesThreshold = occurrencesThreshold;
         return this;
@@ -19,9 +20,14 @@ public class SeverityLevel {
     
     @JsonProperty("severity")
     public DataIdentifierSeverityEnum severity;
+
     public SeverityLevel withSeverity(DataIdentifierSeverityEnum severity) {
         this.severity = severity;
         return this;
     }
     
+    public SeverityLevel(@JsonProperty("occurrencesThreshold") Long occurrencesThreshold, @JsonProperty("severity") DataIdentifierSeverityEnum severity) {
+        this.occurrencesThreshold = occurrencesThreshold;
+        this.severity = severity;
+  }
 }

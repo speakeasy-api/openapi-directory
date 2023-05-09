@@ -18,6 +18,7 @@ public class InventoryItemsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryItems")
     public InventoryItem[] inventoryItems;
+
     public InventoryItemsListResponse withInventoryItems(InventoryItem[] inventoryItems) {
         this.inventoryItems = inventoryItems;
         return this;
@@ -29,6 +30,7 @@ public class InventoryItemsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public InventoryItemsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class InventoryItemsListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public InventoryItemsListResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public InventoryItemsListResponse(){}
 }

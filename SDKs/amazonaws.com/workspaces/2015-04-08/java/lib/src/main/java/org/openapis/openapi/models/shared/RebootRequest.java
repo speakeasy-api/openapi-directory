@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RebootRequest {
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public RebootRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public RebootRequest(@JsonProperty("WorkspaceId") String workspaceId) {
+        this.workspaceId = workspaceId;
+  }
 }

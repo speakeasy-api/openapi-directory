@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TimeframesRequest {
@@ -12,6 +13,7 @@ public class TimeframesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public TimeframesFormatEnum format;
+
     public TimeframesRequest withFormat(TimeframesFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class TimeframesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=type")
     public TimeframesTypeEnum type;
+
     public TimeframesRequest withType(TimeframesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TimeframesRequest(@JsonProperty("format") TimeframesFormatEnum format, @JsonProperty("type") TimeframesTypeEnum type) {
+        this.format = format;
+        this.type = type;
+  }
 }

@@ -17,6 +17,7 @@ public class StateChangeIssueEvent {
      */
     @JsonProperty("actor")
     public SimpleUser actor;
+
     public StateChangeIssueEvent withActor(SimpleUser actor) {
         this.actor = actor;
         return this;
@@ -24,6 +25,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("commit_id")
     public String commitId;
+
     public StateChangeIssueEvent withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -31,6 +33,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public StateChangeIssueEvent withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -38,6 +41,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("created_at")
     public String createdAt;
+
     public StateChangeIssueEvent withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -45,6 +49,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("event")
     public String event;
+
     public StateChangeIssueEvent withEvent(String event) {
         this.event = event;
         return this;
@@ -52,6 +57,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("id")
     public Long id;
+
     public StateChangeIssueEvent withId(Long id) {
         this.id = id;
         return this;
@@ -59,6 +65,7 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public StateChangeIssueEvent withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -69,6 +76,7 @@ public class StateChangeIssueEvent {
      */
     @JsonProperty("performed_via_github_app")
     public NullableIntegration performedViaGithubApp;
+
     public StateChangeIssueEvent withPerformedViaGithubApp(NullableIntegration performedViaGithubApp) {
         this.performedViaGithubApp = performedViaGithubApp;
         return this;
@@ -77,6 +85,7 @@ public class StateChangeIssueEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_reason")
     public String stateReason;
+
     public StateChangeIssueEvent withStateReason(String stateReason) {
         this.stateReason = stateReason;
         return this;
@@ -84,9 +93,21 @@ public class StateChangeIssueEvent {
     
     @JsonProperty("url")
     public String url;
+
     public StateChangeIssueEvent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public StateChangeIssueEvent(@JsonProperty("actor") SimpleUser actor, @JsonProperty("commit_id") String commitId, @JsonProperty("commit_url") String commitUrl, @JsonProperty("created_at") String createdAt, @JsonProperty("event") String event, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("performed_via_github_app") NullableIntegration performedViaGithubApp, @JsonProperty("url") String url) {
+        this.actor = actor;
+        this.commitId = commitId;
+        this.commitUrl = commitUrl;
+        this.createdAt = createdAt;
+        this.event = event;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.performedViaGithubApp = performedViaGithubApp;
+        this.url = url;
+  }
 }

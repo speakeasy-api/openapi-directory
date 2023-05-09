@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMediaStorageConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateMediaStorageConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public UpdateMediaStorageConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMediaStorageConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateMediaStorageConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateMediaStorageConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object noDataRetentionException;
+
     public UpdateMediaStorageConfigurationResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateMediaStorageConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateMediaStorageConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateMediaStorageConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateMediaStorageConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMediaStorageConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateMediaStorageConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateMediaStorageConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateMediaStorageConfigurationOutput;
+
     public UpdateMediaStorageConfigurationResponse withUpdateMediaStorageConfigurationOutput(java.util.Map<String, Object> updateMediaStorageConfigurationOutput) {
         this.updateMediaStorageConfigurationOutput = updateMediaStorageConfigurationOutput;
         return this;
     }
     
+    public UpdateMediaStorageConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

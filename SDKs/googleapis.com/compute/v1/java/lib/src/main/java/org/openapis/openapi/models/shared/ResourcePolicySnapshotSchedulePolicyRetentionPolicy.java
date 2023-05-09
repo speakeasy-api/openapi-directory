@@ -18,6 +18,7 @@ public class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetentionDays")
     public Integer maxRetentionDays;
+
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicy withMaxRetentionDays(Integer maxRetentionDays) {
         this.maxRetentionDays = maxRetentionDays;
         return this;
@@ -29,9 +30,11 @@ public class ResourcePolicySnapshotSchedulePolicyRetentionPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onSourceDiskDelete")
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDeleteEnum onSourceDiskDelete;
+
     public ResourcePolicySnapshotSchedulePolicyRetentionPolicy withOnSourceDiskDelete(ResourcePolicySnapshotSchedulePolicyRetentionPolicyOnSourceDiskDeleteEnum onSourceDiskDelete) {
         this.onSourceDiskDelete = onSourceDiskDelete;
         return this;
     }
     
+    public ResourcePolicySnapshotSchedulePolicyRetentionPolicy(){}
 }

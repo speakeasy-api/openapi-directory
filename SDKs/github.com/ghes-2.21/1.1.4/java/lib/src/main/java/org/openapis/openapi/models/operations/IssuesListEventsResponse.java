@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesListEventsResponse {
     
     public String contentType;
+
     public IssuesListEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesListEventsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesListEventsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesListEventsResponse {
     
     
     public Integer statusCode;
+
     public IssuesListEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesListEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesListEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesListEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public IssuesListEventsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class IssuesListEventsResponse {
      */
     
     public Object[] issueEventForIssues;
+
     public IssuesListEventsResponse withIssueEventForIssues(Object[] issueEventForIssues) {
         this.issueEventForIssues = issueEventForIssues;
         return this;
     }
     
+    public IssuesListEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

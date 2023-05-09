@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateChannelResponse {
     
     public String contentType;
+
     public CreateChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateChannelResponse createChannelResponse;
+
     public CreateChannelResponse withCreateChannelResponse(org.openapis.openapi.models.shared.CreateChannelResponse createChannelResponse) {
         this.createChannelResponse = createChannelResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateChannelResponse {
      */
     
     public Object internalFailureException;
+
     public CreateChannelResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateChannelResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateChannelResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateChannelResponse {
      */
     
     public Object limitExceededException;
+
     public CreateChannelResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateChannelResponse {
     
     
     public Integer statusCode;
+
     public CreateChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateChannelResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateChannelResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,6 +92,7 @@ public class CreateChannelResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CreateChannelResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -93,9 +103,14 @@ public class CreateChannelResponse {
      */
     
     public Object throttlingException;
+
     public CreateChannelResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

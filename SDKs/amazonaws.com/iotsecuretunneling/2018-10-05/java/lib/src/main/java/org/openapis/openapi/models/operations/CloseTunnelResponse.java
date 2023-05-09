@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloseTunnelResponse {
@@ -12,6 +13,7 @@ public class CloseTunnelResponse {
      */
     
     public java.util.Map<String, Object> closeTunnelResponse;
+
     public CloseTunnelResponse withCloseTunnelResponse(java.util.Map<String, Object> closeTunnelResponse) {
         this.closeTunnelResponse = closeTunnelResponse;
         return this;
@@ -19,6 +21,7 @@ public class CloseTunnelResponse {
     
     
     public String contentType;
+
     public CloseTunnelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CloseTunnelResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CloseTunnelResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class CloseTunnelResponse {
     
     
     public Integer statusCode;
+
     public CloseTunnelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CloseTunnelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloseTunnelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloseTunnelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

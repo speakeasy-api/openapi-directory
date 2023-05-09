@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRemovebgMultipartResponse {
     
     public byte[] body;
+
     public PostRemovebgMultipartResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostRemovebgMultipartResponse {
     
     
     public String contentType;
+
     public PostRemovebgMultipartResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class PostRemovebgMultipartResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRemovebgMultipartResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class PostRemovebgMultipartResponse {
      */
     
     public org.openapis.openapi.models.shared.RemoveBgJsonResponse removeBgJsonResponse;
+
     public PostRemovebgMultipartResponse withRemoveBgJsonResponse(org.openapis.openapi.models.shared.RemoveBgJsonResponse removeBgJsonResponse) {
         this.removeBgJsonResponse = removeBgJsonResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostRemovebgMultipartResponse {
     
     
     public Integer statusCode;
+
     public PostRemovebgMultipartResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,6 +53,7 @@ public class PostRemovebgMultipartResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRemovebgMultipartResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -57,9 +64,14 @@ public class PostRemovebgMultipartResponse {
      */
     
     public byte[] postRemovebgMultipart200ImageWildcardBinaryString;
+
     public PostRemovebgMultipartResponse withPostRemovebgMultipart200ImageWildcardBinaryString(byte[] postRemovebgMultipart200ImageWildcardBinaryString) {
         this.postRemovebgMultipart200ImageWildcardBinaryString = postRemovebgMultipart200ImageWildcardBinaryString;
         return this;
     }
     
+    public PostRemovebgMultipartResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class ActivitySucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public ActivitySucceededEventDetails withOutput(String output) {
         this.output = output;
         return this;
@@ -23,9 +24,11 @@ public class ActivitySucceededEventDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputDetails")
     public HistoryEventExecutionDataDetails outputDetails;
+
     public ActivitySucceededEventDetails withOutputDetails(HistoryEventExecutionDataDetails outputDetails) {
         this.outputDetails = outputDetails;
         return this;
     }
     
+    public ActivitySucceededEventDetails(){}
 }

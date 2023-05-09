@@ -15,6 +15,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public CustomerInvoiceDTO withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -23,6 +24,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerDetails")
     public CustomerDetailsDTO customerDetails;
+
     public CustomerInvoiceDTO withCustomerDetails(CustomerDetailsDTO customerDetails) {
         this.customerDetails = customerDetails;
         return this;
@@ -31,6 +33,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public Long customerId;
+
     public CustomerInvoiceDTO withCustomerId(Long customerId) {
         this.customerId = customerId;
         return this;
@@ -39,6 +42,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dates")
     public CustomerInvoiceDatesDTO dates;
+
     public CustomerInvoiceDTO withDates(CustomerInvoiceDatesDTO dates) {
         this.dates = dates;
         return this;
@@ -47,6 +51,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public CustomerInvoiceDTO withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceNumber")
     public String invoiceNumber;
+
     public CustomerInvoiceDTO withInvoiceNumber(String invoiceNumber) {
         this.invoiceNumber = invoiceNumber;
         return this;
@@ -63,6 +69,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentMethodId")
     public Long paymentMethodId;
+
     public CustomerInvoiceDTO withPaymentMethodId(Long paymentMethodId) {
         this.paymentMethodId = paymentMethodId;
         return this;
@@ -71,6 +78,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentTerms")
     public PaymentTermsDTO paymentTerms;
+
     public CustomerInvoiceDTO withPaymentTerms(PaymentTermsDTO paymentTerms) {
         this.paymentTerms = paymentTerms;
         return this;
@@ -79,6 +87,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public CustomerInvoiceDTOStatusEnum status;
+
     public CustomerInvoiceDTO withStatus(CustomerInvoiceDTOStatusEnum status) {
         this.status = status;
         return this;
@@ -87,6 +96,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasks")
     public TaskDTO[] tasks;
+
     public CustomerInvoiceDTO withTasks(TaskDTO[] tasks) {
         this.tasks = tasks;
         return this;
@@ -95,6 +105,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasksValue")
     public Double tasksValue;
+
     public CustomerInvoiceDTO withTasksValue(Double tasksValue) {
         this.tasksValue = tasksValue;
         return this;
@@ -103,6 +114,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalGross")
     public Double totalGross;
+
     public CustomerInvoiceDTO withTotalGross(Double totalGross) {
         this.totalGross = totalGross;
         return this;
@@ -111,6 +123,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalInWords")
     public String totalInWords;
+
     public CustomerInvoiceDTO withTotalInWords(String totalInWords) {
         this.totalInWords = totalInWords;
         return this;
@@ -119,6 +132,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalNetto")
     public Double totalNetto;
+
     public CustomerInvoiceDTO withTotalNetto(Double totalNetto) {
         this.totalNetto = totalNetto;
         return this;
@@ -127,6 +141,7 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CustomerInvoiceDTOTypeEnum type;
+
     public CustomerInvoiceDTO withType(CustomerInvoiceDTOTypeEnum type) {
         this.type = type;
         return this;
@@ -135,9 +150,11 @@ public class CustomerInvoiceDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vatCalculationRule")
     public CustomerInvoiceDTOVatCalculationRuleEnum vatCalculationRule;
+
     public CustomerInvoiceDTO withVatCalculationRule(CustomerInvoiceDTOVatCalculationRuleEnum vatCalculationRule) {
         this.vatCalculationRule = vatCalculationRule;
         return this;
     }
     
+    public CustomerInvoiceDTO(){}
 }

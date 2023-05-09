@@ -15,9 +15,11 @@ public class DeleteRecurringPayment200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public DeleteRecurringPayment200ApplicationJSON withResult(String result) {
         this.result = result;
         return this;
     }
     
+    public DeleteRecurringPayment200ApplicationJSON(){}
 }

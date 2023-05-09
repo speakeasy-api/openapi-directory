@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TypedAttributeValueRange {
     @JsonProperty("EndMode")
     public RangeModeEnum endMode;
+
     public TypedAttributeValueRange withEndMode(RangeModeEnum endMode) {
         this.endMode = endMode;
         return this;
@@ -22,6 +23,7 @@ public class TypedAttributeValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndValue")
     public TypedAttributeValue endValue;
+
     public TypedAttributeValueRange withEndValue(TypedAttributeValue endValue) {
         this.endValue = endValue;
         return this;
@@ -29,6 +31,7 @@ public class TypedAttributeValueRange {
     
     @JsonProperty("StartMode")
     public RangeModeEnum startMode;
+
     public TypedAttributeValueRange withStartMode(RangeModeEnum startMode) {
         this.startMode = startMode;
         return this;
@@ -37,9 +40,14 @@ public class TypedAttributeValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartValue")
     public TypedAttributeValue startValue;
+
     public TypedAttributeValueRange withStartValue(TypedAttributeValue startValue) {
         this.startValue = startValue;
         return this;
     }
     
+    public TypedAttributeValueRange(@JsonProperty("EndMode") RangeModeEnum endMode, @JsonProperty("StartMode") RangeModeEnum startMode) {
+        this.endMode = endMode;
+        this.startMode = startMode;
+  }
 }

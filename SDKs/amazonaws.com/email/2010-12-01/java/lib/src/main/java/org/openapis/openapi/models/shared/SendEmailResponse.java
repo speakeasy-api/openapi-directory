@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * SendEmailResponse - Represents a unique message ID.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class SendEmailResponse {
     
     public String messageId;
+
     public SendEmailResponse withMessageId(String messageId) {
         this.messageId = messageId;
         return this;
     }
     
+    public SendEmailResponse(@JsonProperty("MessageId") String messageId) {
+        this.messageId = messageId;
+  }
 }

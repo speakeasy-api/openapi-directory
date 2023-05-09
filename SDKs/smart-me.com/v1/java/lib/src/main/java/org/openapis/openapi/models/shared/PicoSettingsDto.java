@@ -18,6 +18,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthenticationType")
     public PicoSettingsDtoAuthenticationTypeEnum authenticationType;
+
     public PicoSettingsDto withAuthenticationType(PicoSettingsDtoAuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -29,6 +30,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CarIdDetection")
     public Boolean carIdDetection;
+
     public PicoSettingsDto withCarIdDetection(Boolean carIdDetection) {
         this.carIdDetection = carIdDetection;
         return this;
@@ -40,6 +42,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayBrightness")
     public String displayBrightness;
+
     public PicoSettingsDto withDisplayBrightness(String displayBrightness) {
         this.displayBrightness = displayBrightness;
         return this;
@@ -51,6 +54,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DnsName")
     public String dnsName;
+
     public PicoSettingsDto withDnsName(String dnsName) {
         this.dnsName = dnsName;
         return this;
@@ -62,6 +66,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FixCableLockEnable")
     public Boolean fixCableLockEnable;
+
     public PicoSettingsDto withFixCableLockEnable(Boolean fixCableLockEnable) {
         this.fixCableLockEnable = fixCableLockEnable;
         return this;
@@ -73,6 +78,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdleImageUrl")
     public String idleImageUrl;
+
     public PicoSettingsDto withIdleImageUrl(String idleImageUrl) {
         this.idleImageUrl = idleImageUrl;
         return this;
@@ -84,6 +90,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InternalIp")
     public String internalIp;
+
     public PicoSettingsDto withInternalIp(String internalIp) {
         this.internalIp = internalIp;
         return this;
@@ -95,6 +102,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoadmanagementGroupId")
     public String loadmanagementGroupId;
+
     public PicoSettingsDto withLoadmanagementGroupId(String loadmanagementGroupId) {
         this.loadmanagementGroupId = loadmanagementGroupId;
         return this;
@@ -106,6 +114,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxCurrent")
     public Integer maxCurrent;
+
     public PicoSettingsDto withMaxCurrent(Integer maxCurrent) {
         this.maxCurrent = maxCurrent;
         return this;
@@ -117,6 +126,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinCurrent")
     public Integer minCurrent;
+
     public PicoSettingsDto withMinCurrent(Integer minCurrent) {
         this.minCurrent = minCurrent;
         return this;
@@ -128,6 +138,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModbusTcp")
     public Boolean modbusTcp;
+
     public PicoSettingsDto withModbusTcp(Boolean modbusTcp) {
         this.modbusTcp = modbusTcp;
         return this;
@@ -139,6 +150,7 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PicoSettingsDto withName(String name) {
         this.name = name;
         return this;
@@ -150,9 +162,11 @@ public class PicoSettingsDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SerialNumber")
     public String serialNumber;
+
     public PicoSettingsDto withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
+    public PicoSettingsDto(){}
 }

@@ -15,6 +15,7 @@ public class UsersReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public PagingMeta meta;
+
     public UsersReport withMeta(PagingMeta meta) {
         this.meta = meta;
         return this;
@@ -23,9 +24,11 @@ public class UsersReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report")
     public UsersReportReport[] report;
+
     public UsersReport withReport(UsersReportReport[] report) {
         this.report = report;
         return this;
     }
     
+    public UsersReport(){}
 }

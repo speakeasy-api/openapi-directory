@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MergeDocumentsV1Response {
     
     public String contentType;
+
     public MergeDocumentsV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MergeDocumentsV1Response {
     
     
     public Integer statusCode;
+
     public MergeDocumentsV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class MergeDocumentsV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MergeDocumentsV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class MergeDocumentsV1Response {
      */
     
     public byte[] mergeDocumentsV1200ApplicationPdfBinaryString;
+
     public MergeDocumentsV1Response withMergeDocumentsV1200ApplicationPdfBinaryString(byte[] mergeDocumentsV1200ApplicationPdfBinaryString) {
         this.mergeDocumentsV1200ApplicationPdfBinaryString = mergeDocumentsV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class MergeDocumentsV1Response {
      */
     
     public MergeDocumentsV14XXApplicationProblemPlusJson mergeDocumentsV14XXApplicationProblemPlusJsonObject;
+
     public MergeDocumentsV1Response withMergeDocumentsV14XXApplicationProblemPlusJsonObject(MergeDocumentsV14XXApplicationProblemPlusJson mergeDocumentsV14XXApplicationProblemPlusJsonObject) {
         this.mergeDocumentsV14XXApplicationProblemPlusJsonObject = mergeDocumentsV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public MergeDocumentsV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

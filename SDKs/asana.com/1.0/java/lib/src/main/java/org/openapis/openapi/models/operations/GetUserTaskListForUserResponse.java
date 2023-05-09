@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUserTaskListForUserResponse {
     
     public String contentType;
+
     public GetUserTaskListForUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUserTaskListForUserResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetUserTaskListForUserResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetUserTaskListForUserResponse {
     
     
     public Integer statusCode;
+
     public GetUserTaskListForUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetUserTaskListForUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUserTaskListForUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetUserTaskListForUserResponse {
      */
     
     public GetUserTaskListForUser200ApplicationJSON getUserTaskListForUser200ApplicationJSONObject;
+
     public GetUserTaskListForUserResponse withGetUserTaskListForUser200ApplicationJSONObject(GetUserTaskListForUser200ApplicationJSON getUserTaskListForUser200ApplicationJSONObject) {
         this.getUserTaskListForUser200ApplicationJSONObject = getUserTaskListForUser200ApplicationJSONObject;
         return this;
     }
     
+    public GetUserTaskListForUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

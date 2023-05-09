@@ -14,6 +14,7 @@ public class ListIndexRequestBody {
      */
     @JsonProperty("IndexReference")
     public ListIndexRequestBodyIndexReference indexReference;
+
     public ListIndexRequestBody withIndexReference(ListIndexRequestBodyIndexReference indexReference) {
         this.indexReference = indexReference;
         return this;
@@ -25,6 +26,7 @@ public class ListIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListIndexRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +38,7 @@ public class ListIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIndexRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListIndexRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RangesOnIndexedValues")
     public org.openapis.openapi.models.shared.ObjectAttributeRange[] rangesOnIndexedValues;
+
     public ListIndexRequestBody withRangesOnIndexedValues(org.openapis.openapi.models.shared.ObjectAttributeRange[] rangesOnIndexedValues) {
         this.rangesOnIndexedValues = rangesOnIndexedValues;
         return this;
     }
     
+    public ListIndexRequestBody(@JsonProperty("IndexReference") ListIndexRequestBodyIndexReference indexReference) {
+        this.indexReference = indexReference;
+  }
 }

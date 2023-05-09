@@ -15,6 +15,7 @@ public class ListJobRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobRuns")
     public JobRun[] jobRuns;
+
     public ListJobRunsResponse withJobRuns(JobRun[] jobRuns) {
         this.jobRuns = jobRuns;
         return this;
@@ -23,9 +24,11 @@ public class ListJobRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListJobRunsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListJobRunsResponse(){}
 }

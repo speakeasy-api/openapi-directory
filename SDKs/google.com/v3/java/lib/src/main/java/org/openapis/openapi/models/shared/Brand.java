@@ -18,6 +18,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeDisplayNames")
     public LocalizedText[] activeDisplayNames;
+
     public Brand withActiveDisplayNames(LocalizedText[] activeDisplayNames) {
         this.activeDisplayNames = activeDisplayNames;
         return this;
@@ -29,6 +30,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeIcon")
     public String activeIcon;
+
     public Brand withActiveIcon(String activeIcon) {
         this.activeIcon = activeIcon;
         return this;
@@ -40,6 +42,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeIconUri")
     public String activeIconUri;
+
     public Brand withActiveIconUri(String activeIconUri) {
         this.activeIconUri = activeIconUri;
         return this;
@@ -51,6 +54,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayNameDisapprovalReason")
     public DisplayNameDisapprovalReason[] displayNameDisapprovalReason;
+
     public Brand withDisplayNameDisapprovalReason(DisplayNameDisapprovalReason[] displayNameDisapprovalReason) {
         this.displayNameDisapprovalReason = displayNameDisapprovalReason;
         return this;
@@ -62,6 +66,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayNameState")
     public BrandDisplayNameStateEnum displayNameState;
+
     public Brand withDisplayNameState(BrandDisplayNameStateEnum displayNameState) {
         this.displayNameState = displayNameState;
         return this;
@@ -73,6 +78,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayNames")
     public LocalizedText[] displayNames;
+
     public Brand withDisplayNames(LocalizedText[] displayNames) {
         this.displayNames = displayNames;
         return this;
@@ -84,6 +90,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public String icon;
+
     public Brand withIcon(String icon) {
         this.icon = icon;
         return this;
@@ -95,6 +102,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconDisapprovalReasons")
     public BrandIconDisapprovalReasonsEnum[] iconDisapprovalReasons;
+
     public Brand withIconDisapprovalReasons(BrandIconDisapprovalReasonsEnum[] iconDisapprovalReasons) {
         this.iconDisapprovalReasons = iconDisapprovalReasons;
         return this;
@@ -106,6 +114,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconState")
     public BrandIconStateEnum iconState;
+
     public Brand withIconState(BrandIconStateEnum iconState) {
         this.iconState = iconState;
         return this;
@@ -117,6 +126,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Brand withName(String name) {
         this.name = name;
         return this;
@@ -128,6 +138,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyCount")
     public String propertyCount;
+
     public Brand withPropertyCount(String propertyCount) {
         this.propertyCount = propertyCount;
         return this;
@@ -139,6 +150,7 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedDisplayNames")
     public LocalizedText[] submittedDisplayNames;
+
     public Brand withSubmittedDisplayNames(LocalizedText[] submittedDisplayNames) {
         this.submittedDisplayNames = submittedDisplayNames;
         return this;
@@ -150,9 +162,11 @@ public class Brand {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("submittedIcon")
     public String submittedIcon;
+
     public Brand withSubmittedIcon(String submittedIcon) {
         this.submittedIcon = submittedIcon;
         return this;
     }
     
+    public Brand(){}
 }

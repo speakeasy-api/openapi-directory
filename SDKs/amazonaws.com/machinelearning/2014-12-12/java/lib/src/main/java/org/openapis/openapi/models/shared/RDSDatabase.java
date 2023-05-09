@@ -15,6 +15,7 @@ public class RDSDatabase {
      */
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public RDSDatabase withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -22,9 +23,14 @@ public class RDSDatabase {
     
     @JsonProperty("InstanceIdentifier")
     public String instanceIdentifier;
+
     public RDSDatabase withInstanceIdentifier(String instanceIdentifier) {
         this.instanceIdentifier = instanceIdentifier;
         return this;
     }
     
+    public RDSDatabase(@JsonProperty("DatabaseName") String databaseName, @JsonProperty("InstanceIdentifier") String instanceIdentifier) {
+        this.databaseName = databaseName;
+        this.instanceIdentifier = instanceIdentifier;
+  }
 }

@@ -18,6 +18,7 @@ public class AlertStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoClose")
     public String autoClose;
+
     public AlertStrategy withAutoClose(String autoClose) {
         this.autoClose = autoClose;
         return this;
@@ -29,6 +30,7 @@ public class AlertStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationChannelStrategy")
     public NotificationChannelStrategy[] notificationChannelStrategy;
+
     public AlertStrategy withNotificationChannelStrategy(NotificationChannelStrategy[] notificationChannelStrategy) {
         this.notificationChannelStrategy = notificationChannelStrategy;
         return this;
@@ -40,9 +42,11 @@ public class AlertStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationRateLimit")
     public NotificationRateLimit notificationRateLimit;
+
     public AlertStrategy withNotificationRateLimit(NotificationRateLimit notificationRateLimit) {
         this.notificationRateLimit = notificationRateLimit;
         return this;
     }
     
+    public AlertStrategy(){}
 }

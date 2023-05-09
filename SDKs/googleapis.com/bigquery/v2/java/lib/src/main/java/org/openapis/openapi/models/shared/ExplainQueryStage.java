@@ -15,6 +15,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedParallelInputs")
     public String completedParallelInputs;
+
     public ExplainQueryStage withCompletedParallelInputs(String completedParallelInputs) {
         this.completedParallelInputs = completedParallelInputs;
         return this;
@@ -26,6 +27,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeMsAvg")
     public String computeMsAvg;
+
     public ExplainQueryStage withComputeMsAvg(String computeMsAvg) {
         this.computeMsAvg = computeMsAvg;
         return this;
@@ -37,6 +39,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeMsMax")
     public String computeMsMax;
+
     public ExplainQueryStage withComputeMsMax(String computeMsMax) {
         this.computeMsMax = computeMsMax;
         return this;
@@ -48,6 +51,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeRatioAvg")
     public Double computeRatioAvg;
+
     public ExplainQueryStage withComputeRatioAvg(Double computeRatioAvg) {
         this.computeRatioAvg = computeRatioAvg;
         return this;
@@ -59,6 +63,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("computeRatioMax")
     public Double computeRatioMax;
+
     public ExplainQueryStage withComputeRatioMax(Double computeRatioMax) {
         this.computeRatioMax = computeRatioMax;
         return this;
@@ -70,6 +75,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endMs")
     public String endMs;
+
     public ExplainQueryStage withEndMs(String endMs) {
         this.endMs = endMs;
         return this;
@@ -81,6 +87,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExplainQueryStage withId(String id) {
         this.id = id;
         return this;
@@ -92,6 +99,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inputStages")
     public String[] inputStages;
+
     public ExplainQueryStage withInputStages(String[] inputStages) {
         this.inputStages = inputStages;
         return this;
@@ -103,6 +111,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExplainQueryStage withName(String name) {
         this.name = name;
         return this;
@@ -114,6 +123,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelInputs")
     public String parallelInputs;
+
     public ExplainQueryStage withParallelInputs(String parallelInputs) {
         this.parallelInputs = parallelInputs;
         return this;
@@ -125,6 +135,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readMsAvg")
     public String readMsAvg;
+
     public ExplainQueryStage withReadMsAvg(String readMsAvg) {
         this.readMsAvg = readMsAvg;
         return this;
@@ -136,6 +147,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readMsMax")
     public String readMsMax;
+
     public ExplainQueryStage withReadMsMax(String readMsMax) {
         this.readMsMax = readMsMax;
         return this;
@@ -147,6 +159,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readRatioAvg")
     public Double readRatioAvg;
+
     public ExplainQueryStage withReadRatioAvg(Double readRatioAvg) {
         this.readRatioAvg = readRatioAvg;
         return this;
@@ -158,6 +171,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readRatioMax")
     public Double readRatioMax;
+
     public ExplainQueryStage withReadRatioMax(Double readRatioMax) {
         this.readRatioMax = readRatioMax;
         return this;
@@ -169,6 +183,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsRead")
     public String recordsRead;
+
     public ExplainQueryStage withRecordsRead(String recordsRead) {
         this.recordsRead = recordsRead;
         return this;
@@ -180,6 +195,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordsWritten")
     public String recordsWritten;
+
     public ExplainQueryStage withRecordsWritten(String recordsWritten) {
         this.recordsWritten = recordsWritten;
         return this;
@@ -191,6 +207,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleOutputBytes")
     public String shuffleOutputBytes;
+
     public ExplainQueryStage withShuffleOutputBytes(String shuffleOutputBytes) {
         this.shuffleOutputBytes = shuffleOutputBytes;
         return this;
@@ -202,6 +219,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shuffleOutputBytesSpilled")
     public String shuffleOutputBytesSpilled;
+
     public ExplainQueryStage withShuffleOutputBytesSpilled(String shuffleOutputBytesSpilled) {
         this.shuffleOutputBytesSpilled = shuffleOutputBytesSpilled;
         return this;
@@ -213,6 +231,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotMs")
     public String slotMs;
+
     public ExplainQueryStage withSlotMs(String slotMs) {
         this.slotMs = slotMs;
         return this;
@@ -224,6 +243,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startMs")
     public String startMs;
+
     public ExplainQueryStage withStartMs(String startMs) {
         this.startMs = startMs;
         return this;
@@ -235,6 +255,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ExplainQueryStage withStatus(String status) {
         this.status = status;
         return this;
@@ -246,6 +267,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("steps")
     public ExplainQueryStep[] steps;
+
     public ExplainQueryStage withSteps(ExplainQueryStep[] steps) {
         this.steps = steps;
         return this;
@@ -257,6 +279,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitMsAvg")
     public String waitMsAvg;
+
     public ExplainQueryStage withWaitMsAvg(String waitMsAvg) {
         this.waitMsAvg = waitMsAvg;
         return this;
@@ -268,6 +291,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitMsMax")
     public String waitMsMax;
+
     public ExplainQueryStage withWaitMsMax(String waitMsMax) {
         this.waitMsMax = waitMsMax;
         return this;
@@ -279,6 +303,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitRatioAvg")
     public Double waitRatioAvg;
+
     public ExplainQueryStage withWaitRatioAvg(Double waitRatioAvg) {
         this.waitRatioAvg = waitRatioAvg;
         return this;
@@ -290,6 +315,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitRatioMax")
     public Double waitRatioMax;
+
     public ExplainQueryStage withWaitRatioMax(Double waitRatioMax) {
         this.waitRatioMax = waitRatioMax;
         return this;
@@ -301,6 +327,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeMsAvg")
     public String writeMsAvg;
+
     public ExplainQueryStage withWriteMsAvg(String writeMsAvg) {
         this.writeMsAvg = writeMsAvg;
         return this;
@@ -312,6 +339,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeMsMax")
     public String writeMsMax;
+
     public ExplainQueryStage withWriteMsMax(String writeMsMax) {
         this.writeMsMax = writeMsMax;
         return this;
@@ -323,6 +351,7 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeRatioAvg")
     public Double writeRatioAvg;
+
     public ExplainQueryStage withWriteRatioAvg(Double writeRatioAvg) {
         this.writeRatioAvg = writeRatioAvg;
         return this;
@@ -334,9 +363,11 @@ public class ExplainQueryStage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeRatioMax")
     public Double writeRatioMax;
+
     public ExplainQueryStage withWriteRatioMax(Double writeRatioMax) {
         this.writeRatioMax = writeRatioMax;
         return this;
     }
     
+    public ExplainQueryStage(){}
 }

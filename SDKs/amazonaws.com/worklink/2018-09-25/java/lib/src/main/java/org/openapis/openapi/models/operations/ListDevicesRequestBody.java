@@ -14,6 +14,7 @@ public class ListDevicesRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public ListDevicesRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -25,6 +26,7 @@ public class ListDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListDevicesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,9 +38,13 @@ public class ListDevicesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDevicesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicesRequestBody(@JsonProperty("FleetArn") String fleetArn) {
+        this.fleetArn = fleetArn;
+  }
 }

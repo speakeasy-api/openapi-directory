@@ -18,6 +18,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bikesCount")
     public Integer bikesCount;
+
     public TflApiPresentationEntitiesBikePointOccupancy withBikesCount(Integer bikesCount) {
         this.bikesCount = bikesCount;
         return this;
@@ -29,6 +30,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eBikesCount")
     public Integer eBikesCount;
+
     public TflApiPresentationEntitiesBikePointOccupancy withEBikesCount(Integer eBikesCount) {
         this.eBikesCount = eBikesCount;
         return this;
@@ -40,6 +42,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emptyDocks")
     public Integer emptyDocks;
+
     public TflApiPresentationEntitiesBikePointOccupancy withEmptyDocks(Integer emptyDocks) {
         this.emptyDocks = emptyDocks;
         return this;
@@ -51,6 +54,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TflApiPresentationEntitiesBikePointOccupancy withId(String id) {
         this.id = id;
         return this;
@@ -62,6 +66,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesBikePointOccupancy withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardBikesCount")
     public Integer standardBikesCount;
+
     public TflApiPresentationEntitiesBikePointOccupancy withStandardBikesCount(Integer standardBikesCount) {
         this.standardBikesCount = standardBikesCount;
         return this;
@@ -84,9 +90,11 @@ public class TflApiPresentationEntitiesBikePointOccupancy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalDocks")
     public Integer totalDocks;
+
     public TflApiPresentationEntitiesBikePointOccupancy withTotalDocks(Integer totalDocks) {
         this.totalDocks = totalDocks;
         return this;
     }
     
+    public TflApiPresentationEntitiesBikePointOccupancy(){}
 }

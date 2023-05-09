@@ -9,9 +9,11 @@ package org.openapis.openapi.models.operations;
 public class GetPlaylists200ApplicationXMLLinks {
     
     public org.openapis.openapi.models.shared.Link self;
+
     public GetPlaylists200ApplicationXMLLinks withSelf(org.openapis.openapi.models.shared.Link self) {
         this.self = self;
         return this;
     }
     
+    public GetPlaylists200ApplicationXMLLinks(){}
 }

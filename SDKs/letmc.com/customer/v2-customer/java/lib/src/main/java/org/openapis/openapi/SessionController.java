@@ -54,10 +54,8 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerChangePasswordResponse res = new org.openapis.openapi.models.operations.SessionControllerChangePasswordResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerChangePasswordResponse res = new org.openapis.openapi.models.operations.SessionControllerChangePasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -92,10 +90,8 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginResponse res = new org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginResponse res = new org.openapis.openapi.models.operations.SessionControllerCreateLandlordLoginResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -130,14 +126,12 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerGetSessionInfoResponse res = new org.openapis.openapi.models.operations.SessionControllerGetSessionInfoResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerGetSessionInfoResponse res = new org.openapis.openapi.models.operations.SessionControllerGetSessionInfoResponse(contentType, httpRes.statusCode()) {{
             sessionControllerGetSessionInfo200ApplicationJSONString = null;
             sessionControllerGetSessionInfo200ApplicationXMLString = null;
             sessionControllerGetSessionInfo200TextJSONString = null;
             sessionControllerGetSessionInfo200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -188,14 +182,12 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerLoginResponse res = new org.openapis.openapi.models.operations.SessionControllerLoginResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerLoginResponse res = new org.openapis.openapi.models.operations.SessionControllerLoginResponse(contentType, httpRes.statusCode()) {{
             sessionControllerLogin200ApplicationJSONString = null;
             sessionControllerLogin200ApplicationXMLString = null;
             sessionControllerLogin200TextJSONString = null;
             sessionControllerLogin200TextXMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,10 +238,8 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerLogoutResponse res = new org.openapis.openapi.models.operations.SessionControllerLogoutResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerLogoutResponse res = new org.openapis.openapi.models.operations.SessionControllerLogoutResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -284,10 +274,8 @@ public class SessionController {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SessionControllerResetPasswordResponse res = new org.openapis.openapi.models.operations.SessionControllerResetPasswordResponse() {{
+        org.openapis.openapi.models.operations.SessionControllerResetPasswordResponse res = new org.openapis.openapi.models.operations.SessionControllerResetPasswordResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

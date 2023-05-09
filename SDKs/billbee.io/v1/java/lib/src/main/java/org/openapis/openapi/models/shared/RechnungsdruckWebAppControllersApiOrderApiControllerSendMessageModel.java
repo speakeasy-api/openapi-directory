@@ -17,6 +17,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageMode
     @JsonProperty("AlternativeMail")
     @SpeakeasyMetadata("form:name=AlternativeMail")
     public String alternativeMail;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel withAlternativeMail(String alternativeMail) {
         this.alternativeMail = alternativeMail;
         return this;
@@ -26,6 +27,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageMode
     @JsonProperty("Body")
     @SpeakeasyMetadata("form:name=Body,json")
     public BillbeeInterfacesOrderMultiLanguageString[] body;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel withBody(BillbeeInterfacesOrderMultiLanguageString[] body) {
         this.body = body;
         return this;
@@ -35,6 +37,7 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageMode
     @JsonProperty("SendMode")
     @SpeakeasyMetadata("form:name=SendMode")
     public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModelSendModeEnum sendMode;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel withSendMode(RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModelSendModeEnum sendMode) {
         this.sendMode = sendMode;
         return this;
@@ -44,9 +47,11 @@ public class RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageMode
     @JsonProperty("Subject")
     @SpeakeasyMetadata("form:name=Subject,json")
     public BillbeeInterfacesOrderMultiLanguageString[] subject;
+
     public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel withSubject(BillbeeInterfacesOrderMultiLanguageString[] subject) {
         this.subject = subject;
         return this;
     }
     
+    public RechnungsdruckWebAppControllersApiOrderApiControllerSendMessageModel(){}
 }

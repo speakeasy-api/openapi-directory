@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetExamplesRequest {
@@ -12,6 +13,7 @@ public class GetExamplesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
     public String count;
+
     public GetExamplesRequest withCount(String count) {
         this.count = count;
         return this;
@@ -22,6 +24,7 @@ public class GetExamplesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=datasetId")
     public String datasetId;
+
     public GetExamplesRequest withDatasetId(String datasetId) {
         this.datasetId = datasetId;
         return this;
@@ -32,6 +35,7 @@ public class GetExamplesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetExamplesRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -42,9 +46,13 @@ public class GetExamplesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public GetExamplesSourceEnum source;
+
     public GetExamplesRequest withSource(GetExamplesSourceEnum source) {
         this.source = source;
         return this;
     }
     
+    public GetExamplesRequest(@JsonProperty("datasetId") String datasetId) {
+        this.datasetId = datasetId;
+  }
 }

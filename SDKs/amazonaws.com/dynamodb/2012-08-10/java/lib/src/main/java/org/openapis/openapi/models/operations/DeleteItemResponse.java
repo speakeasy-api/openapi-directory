@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteItemResponse {
@@ -12,6 +13,7 @@ public class DeleteItemResponse {
      */
     
     public Object conditionalCheckFailedException;
+
     public DeleteItemResponse withConditionalCheckFailedException(Object conditionalCheckFailedException) {
         this.conditionalCheckFailedException = conditionalCheckFailedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteItemResponse {
     
     
     public String contentType;
+
     public DeleteItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteItemResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteItemOutput deleteItemOutput;
+
     public DeleteItemResponse withDeleteItemOutput(org.openapis.openapi.models.shared.DeleteItemOutput deleteItemOutput) {
         this.deleteItemOutput = deleteItemOutput;
         return this;
@@ -39,6 +43,7 @@ public class DeleteItemResponse {
      */
     
     public Object internalServerError;
+
     public DeleteItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DeleteItemResponse {
      */
     
     public Object itemCollectionSizeLimitExceededException;
+
     public DeleteItemResponse withItemCollectionSizeLimitExceededException(Object itemCollectionSizeLimitExceededException) {
         this.itemCollectionSizeLimitExceededException = itemCollectionSizeLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DeleteItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteItemResponse {
     
     
     public Integer statusCode;
+
     public DeleteItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public DeleteItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -93,6 +103,7 @@ public class DeleteItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteItemResponse {
      */
     
     public Object transactionConflictException;
+
     public DeleteItemResponse withTransactionConflictException(Object transactionConflictException) {
         this.transactionConflictException = transactionConflictException;
         return this;
     }
     
+    public DeleteItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

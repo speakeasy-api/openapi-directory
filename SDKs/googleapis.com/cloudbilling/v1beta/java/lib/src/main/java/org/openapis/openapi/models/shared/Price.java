@@ -18,6 +18,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effectiveTime")
     public EstimationTimePoint effectiveTime;
+
     public Price withEffectiveTime(EstimationTimePoint effectiveTime) {
         this.effectiveTime = effectiveTime;
         return this;
@@ -29,6 +30,7 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceType")
     public String priceType;
+
     public Price withPriceType(String priceType) {
         this.priceType = priceType;
         return this;
@@ -40,9 +42,11 @@ public class Price {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public Rate rate;
+
     public Price withRate(Rate rate) {
         this.rate = rate;
         return this;
     }
     
+    public Price(){}
 }

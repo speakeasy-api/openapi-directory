@@ -15,6 +15,7 @@ public class UpdateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSeconds")
     public Long durationSeconds;
+
     public UpdateProfileRequestBody withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
@@ -26,6 +27,7 @@ public class UpdateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedPolicyArns")
     public String[] managedPolicyArns;
+
     public UpdateProfileRequestBody withManagedPolicyArns(String[] managedPolicyArns) {
         this.managedPolicyArns = managedPolicyArns;
         return this;
@@ -37,6 +39,7 @@ public class UpdateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateProfileRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class UpdateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArns")
     public String[] roleArns;
+
     public UpdateProfileRequestBody withRoleArns(String[] roleArns) {
         this.roleArns = roleArns;
         return this;
@@ -59,9 +63,11 @@ public class UpdateProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionPolicy")
     public String sessionPolicy;
+
     public UpdateProfileRequestBody withSessionPolicy(String sessionPolicy) {
         this.sessionPolicy = sessionPolicy;
         return this;
     }
     
+    public UpdateProfileRequestBody(){}
 }

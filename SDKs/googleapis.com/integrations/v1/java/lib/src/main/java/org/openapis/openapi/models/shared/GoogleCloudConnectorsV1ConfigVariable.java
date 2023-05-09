@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1ConfigVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boolValue")
     public Boolean boolValue;
+
     public GoogleCloudConnectorsV1ConfigVariable withBoolValue(Boolean boolValue) {
         this.boolValue = boolValue;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1ConfigVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intValue")
     public String intValue;
+
     public GoogleCloudConnectorsV1ConfigVariable withIntValue(String intValue) {
         this.intValue = intValue;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudConnectorsV1ConfigVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public GoogleCloudConnectorsV1ConfigVariable withKey(String key) {
         this.key = key;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudConnectorsV1ConfigVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretValue")
     public GoogleCloudConnectorsV1Secret secretValue;
+
     public GoogleCloudConnectorsV1ConfigVariable withSecretValue(GoogleCloudConnectorsV1Secret secretValue) {
         this.secretValue = secretValue;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudConnectorsV1ConfigVariable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringValue")
     public String stringValue;
+
     public GoogleCloudConnectorsV1ConfigVariable withStringValue(String stringValue) {
         this.stringValue = stringValue;
         return this;
     }
     
+    public GoogleCloudConnectorsV1ConfigVariable(){}
 }

@@ -15,6 +15,7 @@ public class TwoHundredResultResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public TwoHundredResultResultAstRulesBody withIndex(Double index) {
         this.index = index;
         return this;
@@ -26,9 +27,11 @@ public class TwoHundredResultResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public TwoHundredResultResultAstRulesBodyTerms[] terms;
+
     public TwoHundredResultResultAstRulesBody withTerms(TwoHundredResultResultAstRulesBodyTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public TwoHundredResultResultAstRulesBody(){}
 }

@@ -15,9 +15,11 @@ public class GetResourcePolicyOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public String policy;
+
     public GetResourcePolicyOutput withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetResourcePolicyOutput(){}
 }

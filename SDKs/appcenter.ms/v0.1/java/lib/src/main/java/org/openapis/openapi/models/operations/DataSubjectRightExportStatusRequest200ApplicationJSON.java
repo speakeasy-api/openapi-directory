@@ -17,6 +17,7 @@ public class DataSubjectRightExportStatusRequest200ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public DataSubjectRightExportStatusRequest200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class DataSubjectRightExportStatusRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUrl")
     public String sasUrl;
+
     public DataSubjectRightExportStatusRequest200ApplicationJSON withSasUrl(String sasUrl) {
         this.sasUrl = sasUrl;
         return this;
@@ -39,6 +41,7 @@ public class DataSubjectRightExportStatusRequest200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sasUrlExpired")
     public Boolean sasUrlExpired;
+
     public DataSubjectRightExportStatusRequest200ApplicationJSON withSasUrlExpired(Boolean sasUrlExpired) {
         this.sasUrlExpired = sasUrlExpired;
         return this;
@@ -49,9 +52,14 @@ public class DataSubjectRightExportStatusRequest200ApplicationJSON {
      */
     @JsonProperty("status")
     public DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum status;
+
     public DataSubjectRightExportStatusRequest200ApplicationJSON withStatus(DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DataSubjectRightExportStatusRequest200ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") DataSubjectRightExportStatusRequest200ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

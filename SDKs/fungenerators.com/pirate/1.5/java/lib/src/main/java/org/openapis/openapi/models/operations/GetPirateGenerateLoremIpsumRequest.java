@@ -12,6 +12,7 @@ public class GetPirateGenerateLoremIpsumRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetPirateGenerateLoremIpsumRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetPirateGenerateLoremIpsumRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String type;
+
     public GetPirateGenerateLoremIpsumRequest withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetPirateGenerateLoremIpsumRequest(){}
 }

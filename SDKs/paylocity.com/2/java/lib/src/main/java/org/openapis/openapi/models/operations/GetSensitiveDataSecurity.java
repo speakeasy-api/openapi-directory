@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSensitiveDataSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String paylocityAuth;
+
     public GetSensitiveDataSecurity withPaylocityAuth(String paylocityAuth) {
         this.paylocityAuth = paylocityAuth;
         return this;
     }
     
+    public GetSensitiveDataSecurity(@JsonProperty("paylocity_auth") String paylocityAuth) {
+        this.paylocityAuth = paylocityAuth;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TrustedAdvisorResourcesSummary {
     @JsonProperty("resourcesFlagged")
     public Long resourcesFlagged;
+
     public TrustedAdvisorResourcesSummary withResourcesFlagged(Long resourcesFlagged) {
         this.resourcesFlagged = resourcesFlagged;
         return this;
@@ -19,6 +20,7 @@ public class TrustedAdvisorResourcesSummary {
     
     @JsonProperty("resourcesIgnored")
     public Long resourcesIgnored;
+
     public TrustedAdvisorResourcesSummary withResourcesIgnored(Long resourcesIgnored) {
         this.resourcesIgnored = resourcesIgnored;
         return this;
@@ -26,6 +28,7 @@ public class TrustedAdvisorResourcesSummary {
     
     @JsonProperty("resourcesProcessed")
     public Long resourcesProcessed;
+
     public TrustedAdvisorResourcesSummary withResourcesProcessed(Long resourcesProcessed) {
         this.resourcesProcessed = resourcesProcessed;
         return this;
@@ -33,9 +36,16 @@ public class TrustedAdvisorResourcesSummary {
     
     @JsonProperty("resourcesSuppressed")
     public Long resourcesSuppressed;
+
     public TrustedAdvisorResourcesSummary withResourcesSuppressed(Long resourcesSuppressed) {
         this.resourcesSuppressed = resourcesSuppressed;
         return this;
     }
     
+    public TrustedAdvisorResourcesSummary(@JsonProperty("resourcesFlagged") Long resourcesFlagged, @JsonProperty("resourcesIgnored") Long resourcesIgnored, @JsonProperty("resourcesProcessed") Long resourcesProcessed, @JsonProperty("resourcesSuppressed") Long resourcesSuppressed) {
+        this.resourcesFlagged = resourcesFlagged;
+        this.resourcesIgnored = resourcesIgnored;
+        this.resourcesProcessed = resourcesProcessed;
+        this.resourcesSuppressed = resourcesSuppressed;
+  }
 }

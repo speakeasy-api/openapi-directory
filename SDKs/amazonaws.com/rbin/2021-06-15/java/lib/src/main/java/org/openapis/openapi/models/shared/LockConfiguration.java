@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LockConfiguration {
     @JsonProperty("UnlockDelay")
     public UnlockDelay unlockDelay;
+
     public LockConfiguration withUnlockDelay(UnlockDelay unlockDelay) {
         this.unlockDelay = unlockDelay;
         return this;
     }
     
+    public LockConfiguration(@JsonProperty("UnlockDelay") UnlockDelay unlockDelay) {
+        this.unlockDelay = unlockDelay;
+  }
 }

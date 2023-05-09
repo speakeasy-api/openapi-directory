@@ -12,6 +12,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public CreateLayerRequest withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAssignElasticIps")
     public Boolean autoAssignElasticIps;
+
     public CreateLayerRequest withAutoAssignElasticIps(Boolean autoAssignElasticIps) {
         this.autoAssignElasticIps = autoAssignElasticIps;
         return this;
@@ -28,6 +30,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAssignPublicIps")
     public Boolean autoAssignPublicIps;
+
     public CreateLayerRequest withAutoAssignPublicIps(Boolean autoAssignPublicIps) {
         this.autoAssignPublicIps = autoAssignPublicIps;
         return this;
@@ -36,6 +39,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsConfiguration")
     public CloudWatchLogsConfiguration cloudWatchLogsConfiguration;
+
     public CreateLayerRequest withCloudWatchLogsConfiguration(CloudWatchLogsConfiguration cloudWatchLogsConfiguration) {
         this.cloudWatchLogsConfiguration = cloudWatchLogsConfiguration;
         return this;
@@ -44,6 +48,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomInstanceProfileArn")
     public String customInstanceProfileArn;
+
     public CreateLayerRequest withCustomInstanceProfileArn(String customInstanceProfileArn) {
         this.customInstanceProfileArn = customInstanceProfileArn;
         return this;
@@ -52,6 +57,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public CreateLayerRequest withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -60,6 +66,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRecipes")
     public Recipes customRecipes;
+
     public CreateLayerRequest withCustomRecipes(Recipes customRecipes) {
         this.customRecipes = customRecipes;
         return this;
@@ -68,6 +75,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomSecurityGroupIds")
     public String[] customSecurityGroupIds;
+
     public CreateLayerRequest withCustomSecurityGroupIds(String[] customSecurityGroupIds) {
         this.customSecurityGroupIds = customSecurityGroupIds;
         return this;
@@ -76,6 +84,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableAutoHealing")
     public Boolean enableAutoHealing;
+
     public CreateLayerRequest withEnableAutoHealing(Boolean enableAutoHealing) {
         this.enableAutoHealing = enableAutoHealing;
         return this;
@@ -84,6 +93,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallUpdatesOnBoot")
     public Boolean installUpdatesOnBoot;
+
     public CreateLayerRequest withInstallUpdatesOnBoot(Boolean installUpdatesOnBoot) {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
@@ -92,6 +102,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleEventConfiguration")
     public LifecycleEventConfiguration lifecycleEventConfiguration;
+
     public CreateLayerRequest withLifecycleEventConfiguration(LifecycleEventConfiguration lifecycleEventConfiguration) {
         this.lifecycleEventConfiguration = lifecycleEventConfiguration;
         return this;
@@ -99,6 +110,7 @@ public class CreateLayerRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateLayerRequest withName(String name) {
         this.name = name;
         return this;
@@ -107,6 +119,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Packages")
     public String[] packages;
+
     public CreateLayerRequest withPackages(String[] packages) {
         this.packages = packages;
         return this;
@@ -114,6 +127,7 @@ public class CreateLayerRequest {
     
     @JsonProperty("Shortname")
     public String shortname;
+
     public CreateLayerRequest withShortname(String shortname) {
         this.shortname = shortname;
         return this;
@@ -121,6 +135,7 @@ public class CreateLayerRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public CreateLayerRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -128,6 +143,7 @@ public class CreateLayerRequest {
     
     @JsonProperty("Type")
     public LayerTypeEnum type;
+
     public CreateLayerRequest withType(LayerTypeEnum type) {
         this.type = type;
         return this;
@@ -136,6 +152,7 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseEbsOptimizedInstances")
     public Boolean useEbsOptimizedInstances;
+
     public CreateLayerRequest withUseEbsOptimizedInstances(Boolean useEbsOptimizedInstances) {
         this.useEbsOptimizedInstances = useEbsOptimizedInstances;
         return this;
@@ -144,9 +161,16 @@ public class CreateLayerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeConfigurations")
     public VolumeConfiguration[] volumeConfigurations;
+
     public CreateLayerRequest withVolumeConfigurations(VolumeConfiguration[] volumeConfigurations) {
         this.volumeConfigurations = volumeConfigurations;
         return this;
     }
     
+    public CreateLayerRequest(@JsonProperty("Name") String name, @JsonProperty("Shortname") String shortname, @JsonProperty("StackId") String stackId, @JsonProperty("Type") LayerTypeEnum type) {
+        this.name = name;
+        this.shortname = shortname;
+        this.stackId = stackId;
+        this.type = type;
+  }
 }

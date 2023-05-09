@@ -18,6 +18,7 @@ public class ContentDurationAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDuration")
     public ContentDurationAssignedTargetingOptionDetailsContentDurationEnum contentDuration;
+
     public ContentDurationAssignedTargetingOptionDetails withContentDuration(ContentDurationAssignedTargetingOptionDetailsContentDurationEnum contentDuration) {
         this.contentDuration = contentDuration;
         return this;
@@ -29,9 +30,11 @@ public class ContentDurationAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public ContentDurationAssignedTargetingOptionDetails withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public ContentDurationAssignedTargetingOptionDetails(){}
 }

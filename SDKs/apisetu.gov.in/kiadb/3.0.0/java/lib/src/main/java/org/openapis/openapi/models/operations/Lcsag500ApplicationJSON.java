@@ -15,6 +15,7 @@ public class Lcsag500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Lcsag500ApplicationJSONErrorEnum error;
+
     public Lcsag500ApplicationJSON withError(Lcsag500ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Lcsag500ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Lcsag500ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Lcsag500ApplicationJSON withErrorDescription(Lcsag500ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Lcsag500ApplicationJSON(){}
 }

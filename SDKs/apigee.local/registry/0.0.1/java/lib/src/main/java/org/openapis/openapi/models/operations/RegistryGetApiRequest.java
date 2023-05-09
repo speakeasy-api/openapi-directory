@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RegistryGetApiRequest {
@@ -12,6 +13,7 @@ public class RegistryGetApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api")
     public String api;
+
     public RegistryGetApiRequest withApi(String api) {
         this.api = api;
         return this;
@@ -22,6 +24,7 @@ public class RegistryGetApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public RegistryGetApiRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -32,9 +35,15 @@ public class RegistryGetApiRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public RegistryGetApiRequest withProject(String project) {
         this.project = project;
         return this;
     }
     
+    public RegistryGetApiRequest(@JsonProperty("api") String api, @JsonProperty("location") String location, @JsonProperty("project") String project) {
+        this.api = api;
+        this.location = location;
+        this.project = project;
+  }
 }

@@ -18,6 +18,7 @@ public class PageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultPerPage")
     public Integer resultPerPage;
+
     public PageInfo withResultPerPage(Integer resultPerPage) {
         this.resultPerPage = resultPerPage;
         return this;
@@ -29,6 +30,7 @@ public class PageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public PageInfo withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -40,9 +42,11 @@ public class PageInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalResults")
     public Integer totalResults;
+
     public PageInfo withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
     }
     
+    public PageInfo(){}
 }

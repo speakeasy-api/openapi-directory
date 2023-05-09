@@ -54,12 +54,10 @@ public class AccountHolders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountHoldersIdResponse res = new org.openapis.openapi.models.operations.GetAccountHoldersIdResponse() {{
+        org.openapis.openapi.models.operations.GetAccountHoldersIdResponse res = new org.openapis.openapi.models.operations.GetAccountHoldersIdResponse(contentType, httpRes.statusCode()) {{
             accountHolder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,12 +109,10 @@ public class AccountHolders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountHoldersIdBalanceAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountHoldersIdBalanceAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetAccountHoldersIdBalanceAccountsResponse res = new org.openapis.openapi.models.operations.GetAccountHoldersIdBalanceAccountsResponse(contentType, httpRes.statusCode()) {{
             paginatedBalanceAccountsResponse = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -162,12 +158,10 @@ public class AccountHolders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchAccountHoldersIdResponse res = new org.openapis.openapi.models.operations.PatchAccountHoldersIdResponse() {{
+        org.openapis.openapi.models.operations.PatchAccountHoldersIdResponse res = new org.openapis.openapi.models.operations.PatchAccountHoldersIdResponse(contentType, httpRes.statusCode()) {{
             accountHolder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,12 +209,10 @@ public class AccountHolders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostAccountHoldersResponse res = new org.openapis.openapi.models.operations.PostAccountHoldersResponse() {{
+        org.openapis.openapi.models.operations.PostAccountHoldersResponse res = new org.openapis.openapi.models.operations.PostAccountHoldersResponse(contentType, httpRes.statusCode()) {{
             accountHolder = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

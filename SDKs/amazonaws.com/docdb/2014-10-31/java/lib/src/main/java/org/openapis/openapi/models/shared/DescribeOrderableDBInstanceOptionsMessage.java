@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeOrderableDBInstanceOptionsMessage - Represents the input to &lt;a&gt;DescribeOrderableDBInstanceOptions&lt;/a&gt;.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeOrderableDBInstanceOptionsMessage {
     
     public String dbInstanceClass;
+
     public DescribeOrderableDBInstanceOptionsMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -19,6 +20,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public String engine;
+
     public DescribeOrderableDBInstanceOptionsMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -26,6 +28,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public String engineVersion;
+
     public DescribeOrderableDBInstanceOptionsMessage withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -33,6 +36,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public FilterList[] filters;
+
     public DescribeOrderableDBInstanceOptionsMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -40,6 +44,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public String licenseModel;
+
     public DescribeOrderableDBInstanceOptionsMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -47,6 +52,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public String marker;
+
     public DescribeOrderableDBInstanceOptionsMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -54,6 +60,7 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public Long maxRecords;
+
     public DescribeOrderableDBInstanceOptionsMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
@@ -61,9 +68,13 @@ public class DescribeOrderableDBInstanceOptionsMessage {
     
     
     public Boolean vpc;
+
     public DescribeOrderableDBInstanceOptionsMessage withVpc(Boolean vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public DescribeOrderableDBInstanceOptionsMessage(@JsonProperty("Engine") String engine) {
+        this.engine = engine;
+  }
 }

@@ -15,6 +15,7 @@ public class ShippingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboundShipment")
     public Shipment inboundShipment;
+
     public ShippingDetails withInboundShipment(Shipment inboundShipment) {
         this.inboundShipment = inboundShipment;
         return this;
@@ -23,6 +24,7 @@ public class ShippingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutboundShipment")
     public Shipment outboundShipment;
+
     public ShippingDetails withOutboundShipment(Shipment outboundShipment) {
         this.outboundShipment = outboundShipment;
         return this;
@@ -31,9 +33,11 @@ public class ShippingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public ShippingDetails withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
     }
     
+    public ShippingDetails(){}
 }

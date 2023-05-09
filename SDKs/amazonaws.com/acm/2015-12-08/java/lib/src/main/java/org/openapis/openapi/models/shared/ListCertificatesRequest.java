@@ -12,6 +12,7 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateStatuses")
     public CertificateStatusEnum[] certificateStatuses;
+
     public ListCertificatesRequest withCertificateStatuses(CertificateStatusEnum[] certificateStatuses) {
         this.certificateStatuses = certificateStatuses;
         return this;
@@ -20,6 +21,7 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Includes")
     public Filters includes;
+
     public ListCertificatesRequest withIncludes(Filters includes) {
         this.includes = includes;
         return this;
@@ -28,6 +30,7 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxItems")
     public Long maxItems;
+
     public ListCertificatesRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -36,6 +39,7 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCertificatesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +48,7 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortByEnum sortBy;
+
     public ListCertificatesRequest withSortBy(SortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -52,9 +57,11 @@ public class ListCertificatesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public ListCertificatesRequest withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListCertificatesRequest(){}
 }

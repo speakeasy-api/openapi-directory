@@ -15,6 +15,7 @@ public class DescribeSourceServersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public DescribeSourceServersRequestBodyFilters filters;
+
     public DescribeSourceServersRequestBody withFilters(DescribeSourceServersRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class DescribeSourceServersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeSourceServersRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +39,11 @@ public class DescribeSourceServersRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeSourceServersRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeSourceServersRequestBody(){}
 }

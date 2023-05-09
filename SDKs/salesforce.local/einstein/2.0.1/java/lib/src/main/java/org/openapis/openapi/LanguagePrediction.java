@@ -58,12 +58,10 @@ public class LanguagePrediction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IntentMultipartResponse res = new org.openapis.openapi.models.operations.IntentMultipartResponse() {{
+        org.openapis.openapi.models.operations.IntentMultipartResponse res = new org.openapis.openapi.models.operations.IntentMultipartResponse(contentType, httpRes.statusCode()) {{
             intentPredictResponse = null;
             predictionErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,11 +107,9 @@ public class LanguagePrediction {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SentimentMultipartResponse res = new org.openapis.openapi.models.operations.SentimentMultipartResponse() {{
+        org.openapis.openapi.models.operations.SentimentMultipartResponse res = new org.openapis.openapi.models.operations.SentimentMultipartResponse(contentType, httpRes.statusCode()) {{
             sentimentPredictResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

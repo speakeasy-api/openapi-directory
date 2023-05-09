@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResponseOkListAppsApiRoutesTemplatesTemplate {
     @JsonProperty("results")
     public Template[] results;
+
     public ResponseOkListAppsApiRoutesTemplatesTemplate withResults(Template[] results) {
         this.results = results;
         return this;
     }
     
+    public ResponseOkListAppsApiRoutesTemplatesTemplate(@JsonProperty("results") Template[] results) {
+        this.results = results;
+  }
 }

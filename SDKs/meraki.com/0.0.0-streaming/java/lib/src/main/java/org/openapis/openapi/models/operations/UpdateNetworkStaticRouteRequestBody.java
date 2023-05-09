@@ -15,6 +15,7 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public UpdateNetworkStaticRouteRequestBody withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fixedIpAssignments")
     public java.util.Map<String, Object> fixedIpAssignments;
+
     public UpdateNetworkStaticRouteRequestBody withFixedIpAssignments(java.util.Map<String, Object> fixedIpAssignments) {
         this.fixedIpAssignments = fixedIpAssignments;
         return this;
@@ -37,6 +39,7 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gatewayIp")
     public String gatewayIp;
+
     public UpdateNetworkStaticRouteRequestBody withGatewayIp(String gatewayIp) {
         this.gatewayIp = gatewayIp;
         return this;
@@ -48,6 +51,7 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateNetworkStaticRouteRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -59,6 +63,7 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservedIpRanges")
     public UpdateNetworkStaticRouteRequestBodyReservedIpRanges[] reservedIpRanges;
+
     public UpdateNetworkStaticRouteRequestBody withReservedIpRanges(UpdateNetworkStaticRouteRequestBodyReservedIpRanges[] reservedIpRanges) {
         this.reservedIpRanges = reservedIpRanges;
         return this;
@@ -70,9 +75,11 @@ public class UpdateNetworkStaticRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnet")
     public String subnet;
+
     public UpdateNetworkStaticRouteRequestBody withSubnet(String subnet) {
         this.subnet = subnet;
         return this;
     }
     
+    public UpdateNetworkStaticRouteRequestBody(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAggregateDiscoveredResourcesResponse {
     
     public String contentType;
+
     public ListAggregateDiscoveredResourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListAggregateDiscoveredResourcesResponse {
      */
     
     public Object invalidLimitException;
+
     public ListAggregateDiscoveredResourcesResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -29,6 +32,7 @@ public class ListAggregateDiscoveredResourcesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListAggregateDiscoveredResourcesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListAggregateDiscoveredResourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesResponse listAggregateDiscoveredResourcesResponse;
+
     public ListAggregateDiscoveredResourcesResponse withListAggregateDiscoveredResourcesResponse(org.openapis.openapi.models.shared.ListAggregateDiscoveredResourcesResponse listAggregateDiscoveredResourcesResponse) {
         this.listAggregateDiscoveredResourcesResponse = listAggregateDiscoveredResourcesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListAggregateDiscoveredResourcesResponse {
      */
     
     public Object noSuchConfigurationAggregatorException;
+
     public ListAggregateDiscoveredResourcesResponse withNoSuchConfigurationAggregatorException(Object noSuchConfigurationAggregatorException) {
         this.noSuchConfigurationAggregatorException = noSuchConfigurationAggregatorException;
         return this;
@@ -56,6 +62,7 @@ public class ListAggregateDiscoveredResourcesResponse {
     
     
     public Integer statusCode;
+
     public ListAggregateDiscoveredResourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAggregateDiscoveredResourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAggregateDiscoveredResourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ListAggregateDiscoveredResourcesResponse {
      */
     
     public Object validationException;
+
     public ListAggregateDiscoveredResourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAggregateDiscoveredResourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

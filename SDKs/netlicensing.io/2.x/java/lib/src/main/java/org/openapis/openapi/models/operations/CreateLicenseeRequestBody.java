@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateLicenseeRequestBody {
@@ -12,6 +13,7 @@ public class CreateLicenseeRequestBody {
      */
     @SpeakeasyMetadata("form:name=active")
     public Boolean active;
+
     public CreateLicenseeRequestBody withActive(Boolean active) {
         this.active = active;
         return this;
@@ -22,6 +24,7 @@ public class CreateLicenseeRequestBody {
      */
     @SpeakeasyMetadata("form:name=markedForTransfer")
     public Boolean markedForTransfer;
+
     public CreateLicenseeRequestBody withMarkedForTransfer(Boolean markedForTransfer) {
         this.markedForTransfer = markedForTransfer;
         return this;
@@ -29,6 +32,7 @@ public class CreateLicenseeRequestBody {
     
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public CreateLicenseeRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +43,7 @@ public class CreateLicenseeRequestBody {
      */
     @SpeakeasyMetadata("form:name=number")
     public String number;
+
     public CreateLicenseeRequestBody withNumber(String number) {
         this.number = number;
         return this;
@@ -49,9 +54,14 @@ public class CreateLicenseeRequestBody {
      */
     @SpeakeasyMetadata("form:name=productNumber")
     public String productNumber;
+
     public CreateLicenseeRequestBody withProductNumber(String productNumber) {
         this.productNumber = productNumber;
         return this;
     }
     
+    public CreateLicenseeRequestBody(@JsonProperty("active") Boolean active, @JsonProperty("productNumber") String productNumber) {
+        this.active = active;
+        this.productNumber = productNumber;
+  }
 }

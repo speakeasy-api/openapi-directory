@@ -15,6 +15,7 @@ public class PutRuntimeManagementConfigRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuntimeVersionArn")
     public String runtimeVersionArn;
+
     public PutRuntimeManagementConfigRequestBody withRuntimeVersionArn(String runtimeVersionArn) {
         this.runtimeVersionArn = runtimeVersionArn;
         return this;
@@ -25,9 +26,13 @@ public class PutRuntimeManagementConfigRequestBody {
      */
     @JsonProperty("UpdateRuntimeOn")
     public PutRuntimeManagementConfigRequestBodyUpdateRuntimeOnEnum updateRuntimeOn;
+
     public PutRuntimeManagementConfigRequestBody withUpdateRuntimeOn(PutRuntimeManagementConfigRequestBodyUpdateRuntimeOnEnum updateRuntimeOn) {
         this.updateRuntimeOn = updateRuntimeOn;
         return this;
     }
     
+    public PutRuntimeManagementConfigRequestBody(@JsonProperty("UpdateRuntimeOn") PutRuntimeManagementConfigRequestBodyUpdateRuntimeOnEnum updateRuntimeOn) {
+        this.updateRuntimeOn = updateRuntimeOn;
+  }
 }

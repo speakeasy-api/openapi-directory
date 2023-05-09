@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceTypesResponse {
     
     public String contentType;
+
     public ListResourceTypesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceTypesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResourceTypesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceTypesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResourceTypesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceTypesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceTypesResponse listResourceTypesResponse;
+
     public ListResourceTypesResponse withListResourceTypesResponse(org.openapis.openapi.models.shared.ListResourceTypesResponse listResourceTypesResponse) {
         this.listResourceTypesResponse = listResourceTypesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListResourceTypesResponse {
     
     
     public Integer statusCode;
+
     public ListResourceTypesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListResourceTypesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceTypesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListResourceTypesResponse {
      */
     
     public Object serverInternalException;
+
     public ListResourceTypesResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -73,9 +81,14 @@ public class ListResourceTypesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListResourceTypesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListResourceTypesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class Insight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("migrationInsight")
     public MigrationInsight migrationInsight;
+
     public Insight withMigrationInsight(MigrationInsight migrationInsight) {
         this.migrationInsight = migrationInsight;
         return this;
     }
     
+    public Insight(){}
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeFastLaunchImagesResultFastLaunchImagesSnapshotConfiguration {
     
     public Long targetResourceCount;
+
     public DescribeFastLaunchImagesResultFastLaunchImagesSnapshotConfiguration withTargetResourceCount(Long targetResourceCount) {
         this.targetResourceCount = targetResourceCount;
         return this;
     }
     
+    public DescribeFastLaunchImagesResultFastLaunchImagesSnapshotConfiguration(){}
 }

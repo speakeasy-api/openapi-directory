@@ -12,9 +12,13 @@ public class CreateExportJobRequestBody {
      */
     @JsonProperty("ExportJobRequest")
     public CreateExportJobRequestBodyExportJobRequest exportJobRequest;
+
     public CreateExportJobRequestBody withExportJobRequest(CreateExportJobRequestBodyExportJobRequest exportJobRequest) {
         this.exportJobRequest = exportJobRequest;
         return this;
     }
     
+    public CreateExportJobRequestBody(@JsonProperty("ExportJobRequest") CreateExportJobRequestBodyExportJobRequest exportJobRequest) {
+        this.exportJobRequest = exportJobRequest;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleTypeMoney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyCode")
     public String currencyCode;
+
     public GoogleTypeMoney withCurrencyCode(String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
@@ -29,6 +30,7 @@ public class GoogleTypeMoney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nanos")
     public Integer nanos;
+
     public GoogleTypeMoney withNanos(Integer nanos) {
         this.nanos = nanos;
         return this;
@@ -40,9 +42,11 @@ public class GoogleTypeMoney {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("units")
     public String units;
+
     public GoogleTypeMoney withUnits(String units) {
         this.units = units;
         return this;
     }
     
+    public GoogleTypeMoney(){}
 }

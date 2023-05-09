@@ -15,6 +15,7 @@ public class ListJobsFilterTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comparator")
     public JobComparatorEnum comparator;
+
     public ListJobsFilterTerm withComparator(JobComparatorEnum comparator) {
         this.comparator = comparator;
         return this;
@@ -23,6 +24,7 @@ public class ListJobsFilterTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public ListJobsFilterKeyEnum key;
+
     public ListJobsFilterTerm withKey(ListJobsFilterKeyEnum key) {
         this.key = key;
         return this;
@@ -31,9 +33,11 @@ public class ListJobsFilterTerm {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public ListJobsFilterTerm withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public ListJobsFilterTerm(){}
 }

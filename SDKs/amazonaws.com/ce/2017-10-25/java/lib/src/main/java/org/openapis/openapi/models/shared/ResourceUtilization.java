@@ -15,9 +15,11 @@ public class ResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2ResourceUtilization")
     public Ec2ResourceUtilization ec2ResourceUtilization;
+
     public ResourceUtilization withEc2ResourceUtilization(Ec2ResourceUtilization ec2ResourceUtilization) {
         this.ec2ResourceUtilization = ec2ResourceUtilization;
         return this;
     }
     
+    public ResourceUtilization(){}
 }

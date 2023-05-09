@@ -15,6 +15,7 @@ public class CreateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ARN")
     public String arn;
+
     public CreateSecretResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class CreateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public CreateSecretResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class CreateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationStatus")
     public ReplicationStatusType[] replicationStatus;
+
     public CreateSecretResponse withReplicationStatus(ReplicationStatusType[] replicationStatus) {
         this.replicationStatus = replicationStatus;
         return this;
@@ -39,9 +42,11 @@ public class CreateSecretResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VersionId")
     public String versionId;
+
     public CreateSecretResponse withVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     
+    public CreateSecretResponse(){}
 }

@@ -133,6 +133,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.templates = new Templates(
@@ -153,7 +158,7 @@ public class SDK {
      */
     public org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse createTemplateDesignerTemplatesPost(org.openapis.openapi.models.shared.CreateOrUpdateTemplateRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates/");
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates");
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -171,12 +176,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse res = new org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse() {{
+        org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse res = new org.openapis.openapi.models.operations.CreateTemplateDesignerTemplatesPostResponse(contentType, httpRes.statusCode()) {{
             responseOkDesignerTemplate = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -218,12 +221,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteResponse res = new org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteResponse() {{
+        org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteResponse res = new org.openapis.openapi.models.operations.DeleteDesignerTemplatesIdDeleteResponse(contentType, httpRes.statusCode()) {{
             responseOkNoneType = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -270,12 +271,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostResponse res = new org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostResponse() {{
+        org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostResponse res = new org.openapis.openapi.models.operations.GeneratePdfDesignerTemplatesIdGeneratePostResponse(contentType, httpRes.statusCode()) {{
             generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,59 +282,6 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 Object out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), Object.class);
                 res.generatePdfDesignerTemplatesIdGeneratePost200ApplicationJSONAny = out;
-            }
-        }
-        else if ((httpRes.statusCode() >= 400 && httpRes.statusCode() < 500) || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ResponseError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ResponseError.class);
-                res.responseError = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * List Templates
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse listTemplatesDesignerTemplatesGet(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates/");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetRequest.class, request, null);
-        if (queryParams != null) {
-            for (NameValuePair queryParam : queryParams) {
-                req.addQueryParam(queryParam);
-            }
-        }
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse res = new org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse() {{
-            responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = null;
-            responseError = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate.class);
-                res.responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = out;
             }
         }
         else if ((httpRes.statusCode() >= 400 && httpRes.statusCode() < 500) || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -370,12 +316,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetResponse res = new org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetResponse() {{
+        org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetResponse res = new org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesIdGetResponse(contentType, httpRes.statusCode()) {{
             responseOkDesignerTemplate = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -383,6 +327,57 @@ public class SDK {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.ResponseOkDesignerTemplate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ResponseOkDesignerTemplate.class);
                 res.responseOkDesignerTemplate = out;
+            }
+        }
+        else if ((httpRes.statusCode() >= 400 && httpRes.statusCode() < 500) || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ResponseError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ResponseError.class);
+                res.responseError = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * List Templates
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse listTemplatesDesignerTemplatesGet(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/designer/templates");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse res = new org.openapis.openapi.models.operations.ListTemplatesDesignerTemplatesGetResponse(contentType, httpRes.statusCode()) {{
+            responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = null;
+            responseError = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.ResponseOkListFillrEntitiesDesignerTemplateDesignerTemplate.class);
+                res.responseOkListFillrEntitiesDesignerTemplateDesignerTemplate = out;
             }
         }
         else if ((httpRes.statusCode() >= 400 && httpRes.statusCode() < 500) || (httpRes.statusCode() >= 500 && httpRes.statusCode() < 600)) {
@@ -422,12 +417,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse res = new org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse() {{
+        org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse res = new org.openapis.openapi.models.operations.PreviewDesignerTemplatesPreviewPostResponse(contentType, httpRes.statusCode()) {{
             responseOkPreviewResponse = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -474,12 +467,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutResponse res = new org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutResponse() {{
+        org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutResponse res = new org.openapis.openapi.models.operations.UpdateTemplateDesignerTemplatesIdPutResponse(contentType, httpRes.statusCode()) {{
             responseOkDesignerTemplate = null;
             responseError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

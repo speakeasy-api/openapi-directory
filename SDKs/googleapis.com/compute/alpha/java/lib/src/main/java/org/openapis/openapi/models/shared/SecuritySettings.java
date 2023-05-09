@@ -18,6 +18,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authentication")
     public String authentication;
+
     public SecuritySettings withAuthentication(String authentication) {
         this.authentication = authentication;
         return this;
@@ -29,6 +30,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authenticationPolicy")
     public AuthenticationPolicy authenticationPolicy;
+
     public SecuritySettings withAuthenticationPolicy(AuthenticationPolicy authenticationPolicy) {
         this.authenticationPolicy = authenticationPolicy;
         return this;
@@ -40,6 +42,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorizationConfig")
     public AuthorizationConfig authorizationConfig;
+
     public SecuritySettings withAuthorizationConfig(AuthorizationConfig authorizationConfig) {
         this.authorizationConfig = authorizationConfig;
         return this;
@@ -51,6 +54,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsV4Authentication")
     public Awsv4Signature awsV4Authentication;
+
     public SecuritySettings withAwsV4Authentication(Awsv4Signature awsV4Authentication) {
         this.awsV4Authentication = awsV4Authentication;
         return this;
@@ -62,6 +66,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsPolicy")
     public String clientTlsPolicy;
+
     public SecuritySettings withClientTlsPolicy(String clientTlsPolicy) {
         this.clientTlsPolicy = clientTlsPolicy;
         return this;
@@ -73,6 +78,7 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientTlsSettings")
     public ClientTlsSettings clientTlsSettings;
+
     public SecuritySettings withClientTlsSettings(ClientTlsSettings clientTlsSettings) {
         this.clientTlsSettings = clientTlsSettings;
         return this;
@@ -84,9 +90,11 @@ public class SecuritySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAltNames")
     public String[] subjectAltNames;
+
     public SecuritySettings withSubjectAltNames(String[] subjectAltNames) {
         this.subjectAltNames = subjectAltNames;
         return this;
     }
     
+    public SecuritySettings(){}
 }

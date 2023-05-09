@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWorkspaceResponse {
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorkspaceResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -21,6 +22,7 @@ public class CreateWorkspaceResponse {
     
     @JsonProperty("status")
     public WorkspaceStatus status;
+
     public CreateWorkspaceResponse withStatus(WorkspaceStatus status) {
         this.status = status;
         return this;
@@ -29,6 +31,7 @@ public class CreateWorkspaceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateWorkspaceResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -36,9 +39,15 @@ public class CreateWorkspaceResponse {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CreateWorkspaceResponse withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CreateWorkspaceResponse(@JsonProperty("arn") String arn, @JsonProperty("status") WorkspaceStatus status, @JsonProperty("workspaceId") String workspaceId) {
+        this.arn = arn;
+        this.status = status;
+        this.workspaceId = workspaceId;
+  }
 }

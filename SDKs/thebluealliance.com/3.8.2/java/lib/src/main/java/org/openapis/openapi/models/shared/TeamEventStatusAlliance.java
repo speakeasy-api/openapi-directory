@@ -15,6 +15,7 @@ public class TeamEventStatusAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("backup")
     public TeamEventStatusAllianceBackup backup;
+
     public TeamEventStatusAlliance withBackup(TeamEventStatusAllianceBackup backup) {
         this.backup = backup;
         return this;
@@ -26,6 +27,7 @@ public class TeamEventStatusAlliance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamEventStatusAlliance withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class TeamEventStatusAlliance {
      */
     @JsonProperty("number")
     public Long number;
+
     public TeamEventStatusAlliance withNumber(Long number) {
         this.number = number;
         return this;
@@ -46,9 +49,14 @@ public class TeamEventStatusAlliance {
      */
     @JsonProperty("pick")
     public Long pick;
+
     public TeamEventStatusAlliance withPick(Long pick) {
         this.pick = pick;
         return this;
     }
     
+    public TeamEventStatusAlliance(@JsonProperty("number") Long number, @JsonProperty("pick") Long pick) {
+        this.number = number;
+        this.pick = pick;
+  }
 }

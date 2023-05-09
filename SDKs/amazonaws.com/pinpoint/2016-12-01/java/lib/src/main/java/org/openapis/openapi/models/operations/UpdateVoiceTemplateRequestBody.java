@@ -12,9 +12,13 @@ public class UpdateVoiceTemplateRequestBody {
      */
     @JsonProperty("VoiceTemplateRequest")
     public UpdateVoiceTemplateRequestBodyVoiceTemplateRequest voiceTemplateRequest;
+
     public UpdateVoiceTemplateRequestBody withVoiceTemplateRequest(UpdateVoiceTemplateRequestBodyVoiceTemplateRequest voiceTemplateRequest) {
         this.voiceTemplateRequest = voiceTemplateRequest;
         return this;
     }
     
+    public UpdateVoiceTemplateRequestBody(@JsonProperty("VoiceTemplateRequest") UpdateVoiceTemplateRequestBodyVoiceTemplateRequest voiceTemplateRequest) {
+        this.voiceTemplateRequest = voiceTemplateRequest;
+  }
 }

@@ -15,6 +15,7 @@ public class S3LocationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bucketArn")
     public String bucketArn;
+
     public S3LocationDescription withBucketArn(String bucketArn) {
         this.bucketArn = bucketArn;
         return this;
@@ -23,6 +24,7 @@ public class S3LocationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileKey")
     public String fileKey;
+
     public S3LocationDescription withFileKey(String fileKey) {
         this.fileKey = fileKey;
         return this;
@@ -31,9 +33,11 @@ public class S3LocationDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectVersion")
     public String objectVersion;
+
     public S3LocationDescription withObjectVersion(String objectVersion) {
         this.objectVersion = objectVersion;
         return this;
     }
     
+    public S3LocationDescription(){}
 }

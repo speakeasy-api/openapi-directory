@@ -3,20 +3,19 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateSecurity;
 import org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateRequest;
 import org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateResponse;
+import org.openapis.openapi.models.operations.AutomlProjectsLocationsDatasetsCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.Dataset;
-import org.openapis.openapi.models.shared.TranslationDatasetMetadata;
-import org.openapis.openapi.models.shared.TextSentimentDatasetMetadata;
-import org.openapis.openapi.models.shared.TextClassificationDatasetMetadataClassificationTypeEnum;
-import org.openapis.openapi.models.shared.TextClassificationDatasetMetadata;
-import org.openapis.openapi.models.shared.TablesDatasetMetadata;
 import org.openapis.openapi.models.shared.CorrelationStats;
-import org.openapis.openapi.models.shared.ImageClassificationDatasetMetadataClassificationTypeEnum;
+import org.openapis.openapi.models.shared.Dataset;
 import org.openapis.openapi.models.shared.ImageClassificationDatasetMetadata;
+import org.openapis.openapi.models.shared.ImageClassificationDatasetMetadataClassificationTypeEnum;
+import org.openapis.openapi.models.shared.TablesDatasetMetadata;
+import org.openapis.openapi.models.shared.TextClassificationDatasetMetadata;
+import org.openapis.openapi.models.shared.TextClassificationDatasetMetadataClassificationTypeEnum;
+import org.openapis.openapi.models.shared.TextSentimentDatasetMetadata;
+import org.openapis.openapi.models.shared.TranslationDatasetMetadata;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -25,93 +24,92 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            AutomlProjectsLocationsDatasetsCreateRequest req = new AutomlProjectsLocationsDatasetsCreateRequest() {{
-                dollarXgafv = "2";
+            AutomlProjectsLocationsDatasetsCreateRequest req = new AutomlProjectsLocationsDatasetsCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 dataset = new Dataset() {{
-                    createTime = "provident";
-                    description = "distinctio";
-                    displayName = "quibusdam";
-                    etag = "unde";
-                    exampleCount = 857946;
+                    createTime = "distinctio";
+                    description = "quibusdam";
+                    displayName = "unde";
+                    etag = "nulla";
+                    exampleCount = 544883;
                     imageClassificationDatasetMetadata = new ImageClassificationDatasetMetadata() {{
-                        classificationType = "MULTICLASS";
-                    }};
+                        classificationType = ImageClassificationDatasetMetadataClassificationTypeEnum.MULTILABEL;
+                    }};;
                     imageObjectDetectionDatasetMetadata = new java.util.HashMap<String, Object>() {{
-                        put("vel", "error");
-                        put("deserunt", "suscipit");
-                        put("iure", "magnam");
-                        put("debitis", "ipsa");
+                        put("error", "deserunt");
+                        put("suscipit", "iure");
                     }};
-                    name = "delectus";
+                    name = "Raquel Bednar";
                     tablesDatasetMetadata = new TablesDatasetMetadata() {{
-                        mlUseColumnSpecId = "tempora";
-                        primaryTableSpecId = "suscipit";
-                        statsUpdateTime = "molestiae";
+                        mlUseColumnSpecId = "suscipit";
+                        primaryTableSpecId = "molestiae";
+                        statsUpdateTime = "minus";
                         targetColumnCorrelations = new java.util.HashMap<String, org.openapis.openapi.models.shared.CorrelationStats>() {{
-                            put("placeat", new CorrelationStats() {{
-                                cramersV = 5288.95;
+                            put("voluptatum", new CorrelationStats() {{
+                                cramersV = 4799.77;
                             }});
-                            put("iusto", new CorrelationStats() {{
-                                cramersV = 5680.45;
+                            put("excepturi", new CorrelationStats() {{
+                                cramersV = 3927.85;
                             }});
-                            put("nisi", new CorrelationStats() {{
-                                cramersV = 9255.97;
+                            put("recusandae", new CorrelationStats() {{
+                                cramersV = 8360.79;
                             }});
-                            put("temporibus", new CorrelationStats() {{
-                                cramersV = 710.36;
+                            put("ab", new CorrelationStats() {{
+                                cramersV = 3373.96;
                             }});
                         }};
-                        targetColumnSpecId = "quis";
-                        weightColumnSpecId = "veritatis";
-                    }};
+                        targetColumnSpecId = "veritatis";
+                        weightColumnSpecId = "deserunt";
+                    }};;
                     textClassificationDatasetMetadata = new TextClassificationDatasetMetadata() {{
-                        classificationType = "MULTICLASS";
-                    }};
+                        classificationType = TextClassificationDatasetMetadataClassificationTypeEnum.CLASSIFICATION_TYPE_UNSPECIFIED;
+                    }};;
                     textExtractionDatasetMetadata = new java.util.HashMap<String, Object>() {{
-                        put("ipsam", "repellendus");
+                        put("repellendus", "sapiente");
+                        put("quo", "odit");
                     }};
                     textSentimentDatasetMetadata = new TextSentimentDatasetMetadata() {{
-                        sentimentMax = 957156;
-                    }};
+                        sentimentMax = 870013;
+                    }};;
                     translationDatasetMetadata = new TranslationDatasetMetadata() {{
-                        sourceLanguageCode = "quo";
-                        targetLanguageCode = "odit";
-                    }};
+                        sourceLanguageCode = "at";
+                        targetLanguageCode = "maiores";
+                    }};;
                     videoClassificationDatasetMetadata = new java.util.HashMap<String, Object>() {{
-                        put("at", "maiores");
-                        put("molestiae", "quod");
-                        put("quod", "esse");
-                        put("totam", "porro");
+                        put("quod", "quod");
+                        put("esse", "totam");
                     }};
                     videoObjectTrackingDatasetMetadata = new java.util.HashMap<String, Object>() {{
-                        put("dicta", "nam");
-                        put("officia", "occaecati");
-                        put("fugit", "deleniti");
+                        put("dolorum", "dicta");
+                        put("nam", "officia");
+                        put("occaecati", "fugit");
+                        put("deleniti", "hic");
                     }};
-                }};
-                accessToken = "hic";
-                alt = "proto";
-                callback = "totam";
-                fields = "beatae";
-                key = "commodi";
-                oauthToken = "molestiae";
-                parent = "modi";
+                }};;
+                accessToken = "optio";
+                alt = AltEnum.MEDIA;
+                callback = "beatae";
+                fields = "commodi";
+                key = "molestiae";
+                oauthToken = "modi";
                 prettyPrint = false;
                 quotaUser = "qui";
                 uploadType = "impedit";
                 uploadProtocol = "cum";
-            }}            
+            }};            
 
-            AutomlProjectsLocationsDatasetsCreateResponse res = sdk.projects.automlProjectsLocationsDatasetsCreate(req, new AutomlProjectsLocationsDatasetsCreateSecurity() {{
+            AutomlProjectsLocationsDatasetsCreateResponse res = sdk.projects.automlProjectsLocationsDatasetsCreate(req, new AutomlProjectsLocationsDatasetsCreateSecurity("esse", "ipsum") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.dataset.isPresent()) {
+            if (res.dataset != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -15,6 +15,7 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange {
      */
     @JsonProperty("from")
     public String from;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange withFrom(String from) {
         this.from = from;
         return this;
@@ -25,9 +26,14 @@ public class CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange {
      */
     @JsonProperty("to")
     public String to;
+
     public CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public CreateUpdatePriceOrFixedPriceRequestBodyFixedPricesDateRange(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

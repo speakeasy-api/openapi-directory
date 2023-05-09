@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegisterCertificateResponse {
@@ -12,6 +13,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object certificateAlreadyExistsException;
+
     public RegisterCertificateResponse withCertificateAlreadyExistsException(Object certificateAlreadyExistsException) {
         this.certificateAlreadyExistsException = certificateAlreadyExistsException;
         return this;
@@ -22,6 +24,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object certificateLimitExceededException;
+
     public RegisterCertificateResponse withCertificateLimitExceededException(Object certificateLimitExceededException) {
         this.certificateLimitExceededException = certificateLimitExceededException;
         return this;
@@ -32,6 +35,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object clientException;
+
     public RegisterCertificateResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -39,6 +43,7 @@ public class RegisterCertificateResponse {
     
     
     public String contentType;
+
     public RegisterCertificateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object directoryDoesNotExistException;
+
     public RegisterCertificateResponse withDirectoryDoesNotExistException(Object directoryDoesNotExistException) {
         this.directoryDoesNotExistException = directoryDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object directoryUnavailableException;
+
     public RegisterCertificateResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -69,6 +76,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object invalidCertificateException;
+
     public RegisterCertificateResponse withInvalidCertificateException(Object invalidCertificateException) {
         this.invalidCertificateException = invalidCertificateException;
         return this;
@@ -79,6 +87,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object invalidParameterException;
+
     public RegisterCertificateResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -89,6 +98,7 @@ public class RegisterCertificateResponse {
      */
     
     public org.openapis.openapi.models.shared.RegisterCertificateResult registerCertificateResult;
+
     public RegisterCertificateResponse withRegisterCertificateResult(org.openapis.openapi.models.shared.RegisterCertificateResult registerCertificateResult) {
         this.registerCertificateResult = registerCertificateResult;
         return this;
@@ -99,6 +109,7 @@ public class RegisterCertificateResponse {
      */
     
     public Object serviceException;
+
     public RegisterCertificateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -106,6 +117,7 @@ public class RegisterCertificateResponse {
     
     
     public Integer statusCode;
+
     public RegisterCertificateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class RegisterCertificateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegisterCertificateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,9 +136,14 @@ public class RegisterCertificateResponse {
      */
     
     public Object unsupportedOperationException;
+
     public RegisterCertificateResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public RegisterCertificateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

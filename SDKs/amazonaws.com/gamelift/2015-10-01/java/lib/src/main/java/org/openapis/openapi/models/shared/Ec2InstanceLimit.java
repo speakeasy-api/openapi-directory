@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * Ec2InstanceLimit - The GameLift service limits for an Amazon EC2 instance type and current utilization. GameLift allows Amazon Web Services accounts a maximum number of instances, per instance type, per Amazon Web Services Region or location, for use with GameLift. You can request an limit increase for your account by using the &lt;b&gt;Service limits&lt;/b&gt; page in the GameLift console.
+ * Ec2InstanceLimit - The Amazon GameLift service limits for an Amazon EC2 instance type and current utilization. Amazon GameLift allows Amazon Web Services accounts a maximum number of instances, per instance type, per Amazon Web Services Region or location, for use with Amazon GameLift. You can request an limit increase for your account by using the &lt;b&gt;Service limits&lt;/b&gt; page in the Amazon GameLift console.
  */
 public class Ec2InstanceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentInstances")
     public Long currentInstances;
+
     public Ec2InstanceLimit withCurrentInstances(Long currentInstances) {
         this.currentInstances = currentInstances;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InstanceType")
     public Ec2InstanceTypeEnum ec2InstanceType;
+
     public Ec2InstanceLimit withEc2InstanceType(Ec2InstanceTypeEnum ec2InstanceType) {
         this.ec2InstanceType = ec2InstanceType;
         return this;
@@ -31,6 +33,7 @@ public class Ec2InstanceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceLimit")
     public Long instanceLimit;
+
     public Ec2InstanceLimit withInstanceLimit(Long instanceLimit) {
         this.instanceLimit = instanceLimit;
         return this;
@@ -39,9 +42,11 @@ public class Ec2InstanceLimit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public Ec2InstanceLimit withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public Ec2InstanceLimit(){}
 }

@@ -15,9 +15,11 @@ public class ItemsUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderItems")
     public ItemsUpdateRequestBodyOrderItems[] orderItems;
+
     public ItemsUpdateRequestBody withOrderItems(ItemsUpdateRequestBodyOrderItems[] orderItems) {
         this.orderItems = orderItems;
         return this;
     }
     
+    public ItemsUpdateRequestBody(){}
 }

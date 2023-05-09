@@ -15,6 +15,7 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogFile")
     public String logFile;
+
     public FailureDetails withLogFile(String logFile) {
         this.logFile = logFile;
         return this;
@@ -23,6 +24,7 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FailureDetails withMessage(String message) {
         this.message = message;
         return this;
@@ -31,9 +33,11 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public FailureDetails withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public FailureDetails(){}
 }

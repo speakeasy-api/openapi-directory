@@ -15,6 +15,7 @@ public class CloudFormationHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AnalyzedResourceCount")
     public Long analyzedResourceCount;
+
     public CloudFormationHealth withAnalyzedResourceCount(Long analyzedResourceCount) {
         this.analyzedResourceCount = analyzedResourceCount;
         return this;
@@ -23,6 +24,7 @@ public class CloudFormationHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Insight")
     public InsightHealth insight;
+
     public CloudFormationHealth withInsight(InsightHealth insight) {
         this.insight = insight;
         return this;
@@ -31,9 +33,11 @@ public class CloudFormationHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackName")
     public String stackName;
+
     public CloudFormationHealth withStackName(String stackName) {
         this.stackName = stackName;
         return this;
     }
     
+    public CloudFormationHealth(){}
 }

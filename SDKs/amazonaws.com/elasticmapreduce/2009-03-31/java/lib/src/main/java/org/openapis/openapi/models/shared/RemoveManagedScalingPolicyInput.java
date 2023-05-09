@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RemoveManagedScalingPolicyInput {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public RemoveManagedScalingPolicyInput withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public RemoveManagedScalingPolicyInput(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

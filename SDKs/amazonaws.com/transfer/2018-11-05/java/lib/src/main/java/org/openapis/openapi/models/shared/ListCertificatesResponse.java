@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListCertificatesResponse {
     @JsonProperty("Certificates")
     public ListedCertificate[] certificates;
+
     public ListCertificatesResponse withCertificates(ListedCertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -22,9 +23,13 @@ public class ListCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCertificatesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCertificatesResponse(@JsonProperty("Certificates") ListedCertificate[] certificates) {
+        this.certificates = certificates;
+  }
 }

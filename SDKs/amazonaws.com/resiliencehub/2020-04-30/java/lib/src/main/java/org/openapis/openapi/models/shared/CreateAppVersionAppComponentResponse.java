@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAppVersionAppComponentResponse {
     @JsonProperty("appArn")
     public String appArn;
+
     public CreateAppVersionAppComponentResponse withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -22,6 +23,7 @@ public class CreateAppVersionAppComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appComponent")
     public AppComponent appComponent;
+
     public CreateAppVersionAppComponentResponse withAppComponent(AppComponent appComponent) {
         this.appComponent = appComponent;
         return this;
@@ -29,9 +31,14 @@ public class CreateAppVersionAppComponentResponse {
     
     @JsonProperty("appVersion")
     public String appVersion;
+
     public CreateAppVersionAppComponentResponse withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
     }
     
+    public CreateAppVersionAppComponentResponse(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+  }
 }

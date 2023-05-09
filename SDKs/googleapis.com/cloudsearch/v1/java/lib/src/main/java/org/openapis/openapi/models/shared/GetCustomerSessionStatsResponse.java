@@ -15,9 +15,11 @@ public class GetCustomerSessionStatsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public CustomerSessionStats[] stats;
+
     public GetCustomerSessionStatsResponse withStats(CustomerSessionStats[] stats) {
         this.stats = stats;
         return this;
     }
     
+    public GetCustomerSessionStatsResponse(){}
 }

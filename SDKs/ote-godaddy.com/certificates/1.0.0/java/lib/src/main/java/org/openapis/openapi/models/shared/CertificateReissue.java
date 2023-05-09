@@ -18,6 +18,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CertificateReissue withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -29,6 +30,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commonName")
     public String commonName;
+
     public CertificateReissue withCommonName(String commonName) {
         this.commonName = commonName;
         return this;
@@ -40,6 +42,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("csr")
     public String csr;
+
     public CertificateReissue withCsr(String csr) {
         this.csr = csr;
         return this;
@@ -51,6 +54,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delayExistingRevoke")
     public Long delayExistingRevoke;
+
     public CertificateReissue withDelayExistingRevoke(Long delayExistingRevoke) {
         this.delayExistingRevoke = delayExistingRevoke;
         return this;
@@ -62,6 +66,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forceDomainRevetting")
     public String[] forceDomainRevetting;
+
     public CertificateReissue withForceDomainRevetting(String[] forceDomainRevetting) {
         this.forceDomainRevetting = forceDomainRevetting;
         return this;
@@ -73,6 +78,7 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootType")
     public CertificateReissueRootTypeEnum rootType;
+
     public CertificateReissue withRootType(CertificateReissueRootTypeEnum rootType) {
         this.rootType = rootType;
         return this;
@@ -84,9 +90,11 @@ public class CertificateReissue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAlternativeNames")
     public String[] subjectAlternativeNames;
+
     public CertificateReissue withSubjectAlternativeNames(String[] subjectAlternativeNames) {
         this.subjectAlternativeNames = subjectAlternativeNames;
         return this;
     }
     
+    public CertificateReissue(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WebriskHashesSearchResponse {
     
     public String contentType;
+
     public WebriskHashesSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class WebriskHashesSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudWebriskV1SearchHashesResponse googleCloudWebriskV1SearchHashesResponse;
+
     public WebriskHashesSearchResponse withGoogleCloudWebriskV1SearchHashesResponse(org.openapis.openapi.models.shared.GoogleCloudWebriskV1SearchHashesResponse googleCloudWebriskV1SearchHashesResponse) {
         this.googleCloudWebriskV1SearchHashesResponse = googleCloudWebriskV1SearchHashesResponse;
         return this;
@@ -26,6 +29,7 @@ public class WebriskHashesSearchResponse {
     
     
     public Integer statusCode;
+
     public WebriskHashesSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class WebriskHashesSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WebriskHashesSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public WebriskHashesSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

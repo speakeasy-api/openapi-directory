@@ -15,6 +15,7 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AWSCost")
     public String awsCost;
+
     public BillingGroupCostReportElement withAWSCost(String awsCost) {
         this.awsCost = awsCost;
         return this;
@@ -23,6 +24,7 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public BillingGroupCostReportElement withArn(String arn) {
         this.arn = arn;
         return this;
@@ -31,6 +33,7 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Currency")
     public String currency;
+
     public BillingGroupCostReportElement withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -39,6 +42,7 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Margin")
     public String margin;
+
     public BillingGroupCostReportElement withMargin(String margin) {
         this.margin = margin;
         return this;
@@ -47,6 +51,7 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MarginPercentage")
     public String marginPercentage;
+
     public BillingGroupCostReportElement withMarginPercentage(String marginPercentage) {
         this.marginPercentage = marginPercentage;
         return this;
@@ -55,9 +60,11 @@ public class BillingGroupCostReportElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProformaCost")
     public String proformaCost;
+
     public BillingGroupCostReportElement withProformaCost(String proformaCost) {
         this.proformaCost = proformaCost;
         return this;
     }
     
+    public BillingGroupCostReportElement(){}
 }

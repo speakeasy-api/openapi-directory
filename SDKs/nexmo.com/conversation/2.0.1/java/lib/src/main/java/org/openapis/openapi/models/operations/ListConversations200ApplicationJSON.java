@@ -15,6 +15,7 @@ public class ListConversations200ApplicationJSON {
      */
     @JsonProperty("_embedded")
     public ListConversations200ApplicationJSONEmbedded embedded;
+
     public ListConversations200ApplicationJSON withEmbedded(ListConversations200ApplicationJSONEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -25,6 +26,7 @@ public class ListConversations200ApplicationJSON {
      */
     @JsonProperty("_links")
     public org.openapis.openapi.models.shared.LinksConversationsList links;
+
     public ListConversations200ApplicationJSON withLinks(org.openapis.openapi.models.shared.LinksConversationsList links) {
         this.links = links;
         return this;
@@ -35,6 +37,7 @@ public class ListConversations200ApplicationJSON {
      */
     @JsonProperty("count")
     public Double count;
+
     public ListConversations200ApplicationJSON withCount(Double count) {
         this.count = count;
         return this;
@@ -45,6 +48,7 @@ public class ListConversations200ApplicationJSON {
      */
     @JsonProperty("page_size")
     public Double pageSize;
+
     public ListConversations200ApplicationJSON withPageSize(Double pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -55,9 +59,17 @@ public class ListConversations200ApplicationJSON {
      */
     @JsonProperty("record_index")
     public Double recordIndex;
+
     public ListConversations200ApplicationJSON withRecordIndex(Double recordIndex) {
         this.recordIndex = recordIndex;
         return this;
     }
     
+    public ListConversations200ApplicationJSON(@JsonProperty("_embedded") ListConversations200ApplicationJSONEmbedded embedded, @JsonProperty("_links") org.openapis.openapi.models.shared.LinksConversationsList links, @JsonProperty("count") Double count, @JsonProperty("page_size") Double pageSize, @JsonProperty("record_index") Double recordIndex) {
+        this.embedded = embedded;
+        this.links = links;
+        this.count = count;
+        this.pageSize = pageSize;
+        this.recordIndex = recordIndex;
+  }
 }

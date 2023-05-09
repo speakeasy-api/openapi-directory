@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1alphaConnectedSiteTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleAnalyticsAdminV1alphaConnectedSiteTag withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,9 +30,11 @@ public class GoogleAnalyticsAdminV1alphaConnectedSiteTag {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagId")
     public String tagId;
+
     public GoogleAnalyticsAdminV1alphaConnectedSiteTag withTagId(String tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaConnectedSiteTag(){}
 }

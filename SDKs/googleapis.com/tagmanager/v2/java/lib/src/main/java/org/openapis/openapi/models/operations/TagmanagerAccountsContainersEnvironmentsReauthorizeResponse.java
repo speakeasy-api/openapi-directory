@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TagmanagerAccountsContainersEnvironmentsReauthorizeResponse {
     
     public String contentType;
+
     public TagmanagerAccountsContainersEnvironmentsReauthorizeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class TagmanagerAccountsContainersEnvironmentsReauthorizeResponse {
      */
     
     public org.openapis.openapi.models.shared.Environment environment;
+
     public TagmanagerAccountsContainersEnvironmentsReauthorizeResponse withEnvironment(org.openapis.openapi.models.shared.Environment environment) {
         this.environment = environment;
         return this;
@@ -26,6 +29,7 @@ public class TagmanagerAccountsContainersEnvironmentsReauthorizeResponse {
     
     
     public Integer statusCode;
+
     public TagmanagerAccountsContainersEnvironmentsReauthorizeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class TagmanagerAccountsContainersEnvironmentsReauthorizeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TagmanagerAccountsContainersEnvironmentsReauthorizeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TagmanagerAccountsContainersEnvironmentsReauthorizeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

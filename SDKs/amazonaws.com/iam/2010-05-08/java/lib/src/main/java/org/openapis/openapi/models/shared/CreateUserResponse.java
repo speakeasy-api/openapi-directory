@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateUserResponse {
     
     public User user;
+
     public CreateUserResponse withUser(User user) {
         this.user = user;
         return this;
     }
     
+    public CreateUserResponse(){}
 }

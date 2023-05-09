@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StopRxNormInferenceJobRequest {
     @JsonProperty("JobId")
     public String jobId;
+
     public StopRxNormInferenceJobRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public StopRxNormInferenceJobRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListEventLogsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListEventLogsRequestBody requestBody;
+
     public ListEventLogsRequest withRequestBody(ListEventLogsRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class ListEventLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public String maxResults;
+
     public ListEventLogsRequest withMaxResults(String maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -29,6 +32,7 @@ public class ListEventLogsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nextToken")
     public String nextToken;
+
     public ListEventLogsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -39,9 +43,14 @@ public class ListEventLogsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public ListEventLogsRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public ListEventLogsRequest(@JsonProperty("RequestBody") ListEventLogsRequestBody requestBody, @JsonProperty("spaceName") String spaceName) {
+        this.requestBody = requestBody;
+        this.spaceName = spaceName;
+  }
 }

@@ -12,6 +12,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public AdcrdRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("PrnNo")
     public String prnNo;
+
     public AdcrdRequestBodyCertificateParameters withPrnNo(String prnNo) {
         this.prnNo = prnNo;
         return this;
@@ -32,9 +34,15 @@ public class AdcrdRequestBodyCertificateParameters {
      */
     @JsonProperty("RequestId")
     public String requestId;
+
     public AdcrdRequestBodyCertificateParameters withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     
+    public AdcrdRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("PrnNo") String prnNo, @JsonProperty("RequestId") String requestId) {
+        this.dob = dob;
+        this.prnNo = prnNo;
+        this.requestId = requestId;
+  }
 }

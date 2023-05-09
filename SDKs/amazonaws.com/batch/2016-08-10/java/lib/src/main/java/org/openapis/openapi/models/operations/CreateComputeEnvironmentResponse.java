@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateComputeEnvironmentResponse {
@@ -12,6 +13,7 @@ public class CreateComputeEnvironmentResponse {
      */
     
     public Object clientException;
+
     public CreateComputeEnvironmentResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateComputeEnvironmentResponse {
     
     
     public String contentType;
+
     public CreateComputeEnvironmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateComputeEnvironmentResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateComputeEnvironmentResponse createComputeEnvironmentResponse;
+
     public CreateComputeEnvironmentResponse withCreateComputeEnvironmentResponse(org.openapis.openapi.models.shared.CreateComputeEnvironmentResponse createComputeEnvironmentResponse) {
         this.createComputeEnvironmentResponse = createComputeEnvironmentResponse;
         return this;
@@ -36,6 +40,7 @@ public class CreateComputeEnvironmentResponse {
     
     
     public Integer statusCode;
+
     public CreateComputeEnvironmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateComputeEnvironmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateComputeEnvironmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CreateComputeEnvironmentResponse {
      */
     
     public Object serverException;
+
     public CreateComputeEnvironmentResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
     }
     
+    public CreateComputeEnvironmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

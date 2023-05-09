@@ -15,6 +15,7 @@ public class SessionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public SessionContextAttributes attributes;
+
     public SessionContext withAttributes(SessionContextAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -23,9 +24,11 @@ public class SessionContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionIssuer")
     public SessionIssuer sessionIssuer;
+
     public SessionContext withSessionIssuer(SessionIssuer sessionIssuer) {
         this.sessionIssuer = sessionIssuer;
         return this;
     }
     
+    public SessionContext(){}
 }

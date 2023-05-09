@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ClusterServiceConnectDefaultsRequest {
     @JsonProperty("namespace")
     public String namespace;
+
     public ClusterServiceConnectDefaultsRequest withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public ClusterServiceConnectDefaultsRequest(@JsonProperty("namespace") String namespace) {
+        this.namespace = namespace;
+  }
 }

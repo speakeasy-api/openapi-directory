@@ -25,6 +25,7 @@ public class FlightEndPoint {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("at")
     public OffsetDateTime at;
+
     public FlightEndPoint withAt(OffsetDateTime at) {
         this.at = at;
         return this;
@@ -36,6 +37,7 @@ public class FlightEndPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iataCode")
     public String iataCode;
+
     public FlightEndPoint withIataCode(String iataCode) {
         this.iataCode = iataCode;
         return this;
@@ -47,9 +49,11 @@ public class FlightEndPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminal")
     public String terminal;
+
     public FlightEndPoint withTerminal(String terminal) {
         this.terminal = terminal;
         return this;
     }
     
+    public FlightEndPoint(){}
 }

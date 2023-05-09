@@ -16,9 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetPersonasRequest;
 import org.openapis.openapi.models.operations.GetPersonasResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,7 +30,7 @@ public class Application {
                 .build();
 
             GetPersonasRequest req = new GetPersonasRequest() {{
-                count = 548814;
+                count = 548814L;
                 expand = new String[]{{
                     add("distinctio"),
                     add("quibusdam"),
@@ -42,18 +42,20 @@ public class Application {
                     add("vel"),
                     add("error"),
                 }};
-                name = "deserunt";
-                page = 384382;
-            }}            
+                name = "Rick Kertzmann";
+                page = 56713L;
+            }};            
 
             GetPersonasResponse res = sdk.persona.getPersonas(req);
 
-            if (res.getPersonas200ApplicationJSONObject.isPresent()) {
+            if (res.getPersonas200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -61,26 +63,26 @@ public class Application {
 ## Available Resources and Operations
 
 
-### persona
+### [persona](docs/persona/README.md)
 
-* `getPersonas` - Get Personas
-* `getPersonasId` - Get Persona by id
+* [getPersonas](docs/persona/README.md#getpersonas) - Get Personas
+* [getPersonasId](docs/persona/README.md#getpersonasid) - Get Persona by id
 
-### playlist
+### [playlist](docs/playlist/README.md)
 
-* `getPlaylists` - Returns playlists optionally filtered by {start} and/or {end} datetimes
-* `getPlaylistsId` - Get a Playlist by id
+* [getPlaylists](docs/playlist/README.md#getplaylists) - Returns playlists optionally filtered by {start} and/or {end} datetimes
+* [getPlaylistsId](docs/playlist/README.md#getplaylistsid) - Get a Playlist by id
 
-### show
+### [show](docs/show/README.md)
 
-* `getShows` - Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
-* `getShowsId` - Get a Show by id
+* [getShows](docs/show/README.md#getshows) - Returns scheduled shows optionally filtered by {start} and/or {end} datetimes
+* [getShowsId](docs/show/README.md#getshowsid) - Get a Show by id
 
-### spin
+### [spin](docs/spin/README.md)
 
-* `getSpins` - Returns spins optionally filtered by {start} and/or {end} datetimes
-* `getSpinsId` - Get a Spin by id
-* `postSpins` - Log a Spin
+* [getSpins](docs/spin/README.md#getspins) - Returns spins optionally filtered by {start} and/or {end} datetimes
+* [getSpinsId](docs/spin/README.md#getspinsid) - Get a Spin by id
+* [postSpins](docs/spin/README.md#postspins) - Log a Spin
 <!-- End SDK Available Operations -->
 
 ### Maturity

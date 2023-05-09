@@ -12,9 +12,13 @@ public class GetChannelRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public GetChannelRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public GetChannelRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

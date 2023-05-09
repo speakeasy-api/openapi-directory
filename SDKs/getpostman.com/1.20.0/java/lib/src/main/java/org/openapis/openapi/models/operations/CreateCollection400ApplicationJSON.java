@@ -15,9 +15,11 @@ public class CreateCollection400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public CreateCollection400ApplicationJSONError error;
+
     public CreateCollection400ApplicationJSON withError(CreateCollection400ApplicationJSONError error) {
         this.error = error;
         return this;
     }
     
+    public CreateCollection400ApplicationJSON(){}
 }

@@ -15,6 +15,7 @@ public class ResolverConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutodefinedReverse")
     public ResolverAutodefinedReverseStatusEnum autodefinedReverse;
+
     public ResolverConfig withAutodefinedReverse(ResolverAutodefinedReverseStatusEnum autodefinedReverse) {
         this.autodefinedReverse = autodefinedReverse;
         return this;
@@ -23,6 +24,7 @@ public class ResolverConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverConfig withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class ResolverConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public ResolverConfig withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -39,9 +42,11 @@ public class ResolverConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResolverConfig withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ResolverConfig(){}
 }

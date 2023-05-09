@@ -18,6 +18,7 @@ public class PrimaryStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualOutcome")
     public IndividualOutcome[] individualOutcome;
+
     public PrimaryStep withIndividualOutcome(IndividualOutcome[] individualOutcome) {
         this.individualOutcome = individualOutcome;
         return this;
@@ -29,9 +30,11 @@ public class PrimaryStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollUp")
     public PrimaryStepRollUpEnum rollUp;
+
     public PrimaryStep withRollUp(PrimaryStepRollUpEnum rollUp) {
         this.rollUp = rollUp;
         return this;
     }
     
+    public PrimaryStep(){}
 }

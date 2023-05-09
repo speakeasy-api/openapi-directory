@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyInstanceAttributeRequestRamdisk {
     
     public String value;
+
     public ModifyInstanceAttributeRequestRamdisk withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyInstanceAttributeRequestRamdisk(){}
 }

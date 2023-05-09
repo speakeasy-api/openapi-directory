@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteCatalogObjectRequest {
@@ -14,9 +15,13 @@ public class DeleteCatalogObjectRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=object_id")
     public String objectId;
+
     public DeleteCatalogObjectRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
     }
     
+    public DeleteCatalogObjectRequest(@JsonProperty("object_id") String objectId) {
+        this.objectId = objectId;
+  }
 }

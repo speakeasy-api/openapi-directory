@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResourceResponse {
     
     public String contentType;
+
     public CreateResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResourceResponse createResourceResponse;
+
     public CreateResourceResponse withCreateResourceResponse(org.openapis.openapi.models.shared.CreateResourceResponse createResourceResponse) {
         this.createResourceResponse = createResourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateResourceResponse {
      */
     
     public Object directoryServiceAuthenticationFailedException;
+
     public CreateResourceResponse withDirectoryServiceAuthenticationFailedException(Object directoryServiceAuthenticationFailedException) {
         this.directoryServiceAuthenticationFailedException = directoryServiceAuthenticationFailedException;
         return this;
@@ -39,6 +43,7 @@ public class CreateResourceResponse {
      */
     
     public Object directoryUnavailableException;
+
     public CreateResourceResponse withDirectoryUnavailableException(Object directoryUnavailableException) {
         this.directoryUnavailableException = directoryUnavailableException;
         return this;
@@ -49,6 +54,7 @@ public class CreateResourceResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateResourceResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResourceResponse {
      */
     
     public Object nameAvailabilityException;
+
     public CreateResourceResponse withNameAvailabilityException(Object nameAvailabilityException) {
         this.nameAvailabilityException = nameAvailabilityException;
         return this;
@@ -69,6 +76,7 @@ public class CreateResourceResponse {
      */
     
     public Object organizationNotFoundException;
+
     public CreateResourceResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateResourceResponse {
      */
     
     public Object organizationStateException;
+
     public CreateResourceResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -89,6 +98,7 @@ public class CreateResourceResponse {
      */
     
     public Object reservedNameException;
+
     public CreateResourceResponse withReservedNameException(Object reservedNameException) {
         this.reservedNameException = reservedNameException;
         return this;
@@ -96,6 +106,7 @@ public class CreateResourceResponse {
     
     
     public Integer statusCode;
+
     public CreateResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class CreateResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

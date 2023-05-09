@@ -18,6 +18,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public SimpleAddressType[] address;
+
     public Official withAddress(SimpleAddressType[] address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channels")
     public Channel[] channels;
+
     public Official withChannels(Channel[] channels) {
         this.channels = channels;
         return this;
@@ -40,6 +42,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emails")
     public String[] emails;
+
     public Official withEmails(String[] emails) {
         this.emails = emails;
         return this;
@@ -51,6 +54,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geocodingSummaries")
     public GeocodingSummary[] geocodingSummaries;
+
     public Official withGeocodingSummaries(GeocodingSummary[] geocodingSummaries) {
         this.geocodingSummaries = geocodingSummaries;
         return this;
@@ -62,6 +66,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Official withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("party")
     public String party;
+
     public Official withParty(String party) {
         this.party = party;
         return this;
@@ -84,6 +90,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phones")
     public String[] phones;
+
     public Official withPhones(String[] phones) {
         this.phones = phones;
         return this;
@@ -95,6 +102,7 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoUrl")
     public String photoUrl;
+
     public Official withPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
         return this;
@@ -106,9 +114,11 @@ public class Official {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urls")
     public String[] urls;
+
     public Official withUrls(String[] urls) {
         this.urls = urls;
         return this;
     }
     
+    public Official(){}
 }

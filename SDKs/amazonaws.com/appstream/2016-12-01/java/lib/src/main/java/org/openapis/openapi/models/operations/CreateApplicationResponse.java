@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateApplicationResponse {
@@ -12,6 +13,7 @@ public class CreateApplicationResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateApplicationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class CreateApplicationResponse {
     
     
     public String contentType;
+
     public CreateApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateApplicationResult createApplicationResult;
+
     public CreateApplicationResponse withCreateApplicationResult(org.openapis.openapi.models.shared.CreateApplicationResult createApplicationResult) {
         this.createApplicationResult = createApplicationResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateApplicationResponse {
      */
     
     public Object limitExceededException;
+
     public CreateApplicationResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateApplicationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public CreateApplicationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -56,6 +62,7 @@ public class CreateApplicationResponse {
     
     
     public Integer statusCode;
+
     public CreateApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateApplicationResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateApplicationResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -83,9 +92,14 @@ public class CreateApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

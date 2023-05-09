@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SheetsSpreadsheetsGetByDataFilterResponse {
     
     public String contentType;
+
     public SheetsSpreadsheetsGetByDataFilterResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SheetsSpreadsheetsGetByDataFilterResponse {
      */
     
     public org.openapis.openapi.models.shared.Spreadsheet spreadsheet;
+
     public SheetsSpreadsheetsGetByDataFilterResponse withSpreadsheet(org.openapis.openapi.models.shared.Spreadsheet spreadsheet) {
         this.spreadsheet = spreadsheet;
         return this;
@@ -26,6 +29,7 @@ public class SheetsSpreadsheetsGetByDataFilterResponse {
     
     
     public Integer statusCode;
+
     public SheetsSpreadsheetsGetByDataFilterResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SheetsSpreadsheetsGetByDataFilterResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SheetsSpreadsheetsGetByDataFilterResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SheetsSpreadsheetsGetByDataFilterResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

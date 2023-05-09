@@ -15,9 +15,11 @@ public class GetIPSetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IPSet")
     public IPSet ipSet;
+
     public GetIPSetResponse withIPSet(IPSet ipSet) {
         this.ipSet = ipSet;
         return this;
     }
     
+    public GetIPSetResponse(){}
 }

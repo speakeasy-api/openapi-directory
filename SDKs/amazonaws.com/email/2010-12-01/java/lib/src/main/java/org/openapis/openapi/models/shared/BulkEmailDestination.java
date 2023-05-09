@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * BulkEmailDestination - An array that contains one or more Destinations, as well as the tags and replacement data associated with each of those Destinations.
@@ -15,6 +15,7 @@ public class BulkEmailDestination {
      */
     
     public Destination destination;
+
     public BulkEmailDestination withDestination(Destination destination) {
         this.destination = destination;
         return this;
@@ -22,6 +23,7 @@ public class BulkEmailDestination {
     
     
     public MessageTag[] replacementTags;
+
     public BulkEmailDestination withReplacementTags(MessageTag[] replacementTags) {
         this.replacementTags = replacementTags;
         return this;
@@ -29,9 +31,13 @@ public class BulkEmailDestination {
     
     
     public String replacementTemplateData;
+
     public BulkEmailDestination withReplacementTemplateData(String replacementTemplateData) {
         this.replacementTemplateData = replacementTemplateData;
         return this;
     }
     
+    public BulkEmailDestination(@JsonProperty("Destination") Destination destination) {
+        this.destination = destination;
+  }
 }

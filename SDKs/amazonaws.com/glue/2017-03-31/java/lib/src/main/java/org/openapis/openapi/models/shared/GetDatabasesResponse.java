@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDatabasesResponse {
     @JsonProperty("DatabaseList")
     public Database[] databaseList;
+
     public GetDatabasesResponse withDatabaseList(Database[] databaseList) {
         this.databaseList = databaseList;
         return this;
@@ -22,9 +23,13 @@ public class GetDatabasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDatabasesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDatabasesResponse(@JsonProperty("DatabaseList") Database[] databaseList) {
+        this.databaseList = databaseList;
+  }
 }

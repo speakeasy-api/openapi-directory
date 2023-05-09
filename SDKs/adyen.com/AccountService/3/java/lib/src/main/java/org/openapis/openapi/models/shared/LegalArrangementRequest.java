@@ -14,6 +14,7 @@ public class LegalArrangementRequest {
      */
     @JsonProperty("legalArrangementCode")
     public String legalArrangementCode;
+
     public LegalArrangementRequest withLegalArrangementCode(String legalArrangementCode) {
         this.legalArrangementCode = legalArrangementCode;
         return this;
@@ -25,9 +26,13 @@ public class LegalArrangementRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementEntityCodes")
     public String[] legalArrangementEntityCodes;
+
     public LegalArrangementRequest withLegalArrangementEntityCodes(String[] legalArrangementEntityCodes) {
         this.legalArrangementEntityCodes = legalArrangementEntityCodes;
         return this;
     }
     
+    public LegalArrangementRequest(@JsonProperty("legalArrangementCode") String legalArrangementCode) {
+        this.legalArrangementCode = legalArrangementCode;
+  }
 }

@@ -15,6 +15,7 @@ public class UpdateConnectionOAuthClientRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientID")
     public String clientID;
+
     public UpdateConnectionOAuthClientRequestParameters withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -23,9 +24,11 @@ public class UpdateConnectionOAuthClientRequestParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientSecret")
     public String clientSecret;
+
     public UpdateConnectionOAuthClientRequestParameters withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
     }
     
+    public UpdateConnectionOAuthClientRequestParameters(){}
 }

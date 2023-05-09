@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportByProductAllChannelsLinks {
     @JsonProperty("disableProductForAllChannels")
     public LinksOptimiseByProductLink disableProductForAllChannels;
+
     public ReportByProductAllChannelsLinks withDisableProductForAllChannels(LinksOptimiseByProductLink disableProductForAllChannels) {
         this.disableProductForAllChannels = disableProductForAllChannels;
         return this;
@@ -16,9 +17,14 @@ public class ReportByProductAllChannelsLinks {
     
     @JsonProperty("enableProductForAllChannels")
     public LinksOptimiseByProductLink enableProductForAllChannels;
+
     public ReportByProductAllChannelsLinks withEnableProductForAllChannels(LinksOptimiseByProductLink enableProductForAllChannels) {
         this.enableProductForAllChannels = enableProductForAllChannels;
         return this;
     }
     
+    public ReportByProductAllChannelsLinks(@JsonProperty("disableProductForAllChannels") LinksOptimiseByProductLink disableProductForAllChannels, @JsonProperty("enableProductForAllChannels") LinksOptimiseByProductLink enableProductForAllChannels) {
+        this.disableProductForAllChannels = disableProductForAllChannels;
+        this.enableProductForAllChannels = enableProductForAllChannels;
+  }
 }

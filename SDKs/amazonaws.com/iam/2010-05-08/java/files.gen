@@ -1538,4 +1538,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UploadServerCertificateResp
 lib/src/main/java/org/openapis/openapi/models/shared/UploadServerCertificateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/UploadSigningCertificateRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

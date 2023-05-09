@@ -17,6 +17,7 @@ public class CheckDetailsOutput {
      */
     @JsonProperty("details")
     public CheckDetails[] details;
+
     public CheckDetailsOutput withDetails(CheckDetails[] details) {
         this.details = details;
         return this;
@@ -28,6 +29,7 @@ public class CheckDetailsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public CheckDetailsOutput withNext(String next) {
         this.next = next;
         return this;
@@ -38,9 +40,14 @@ public class CheckDetailsOutput {
      */
     @JsonProperty("self")
     public String self;
+
     public CheckDetailsOutput withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public CheckDetailsOutput(@JsonProperty("details") CheckDetails[] details, @JsonProperty("self") String self) {
+        this.details = details;
+        this.self = self;
+  }
 }

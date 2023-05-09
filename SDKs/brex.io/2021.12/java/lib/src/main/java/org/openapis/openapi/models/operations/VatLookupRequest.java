@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VatLookupRequest {
@@ -12,6 +13,7 @@ public class VatLookupRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public VatLookupRequestBody requestBody;
+
     public VatLookupRequest withRequestBody(VatLookupRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class VatLookupRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=country")
     public String country;
+
     public VatLookupRequest withCountry(String country) {
         this.country = country;
         return this;
     }
     
+    public VatLookupRequest(@JsonProperty("RequestBody") VatLookupRequestBody requestBody, @JsonProperty("country") String country) {
+        this.requestBody = requestBody;
+        this.country = country;
+  }
 }

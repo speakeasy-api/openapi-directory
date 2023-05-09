@@ -15,6 +15,7 @@ public class DescribeImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeImagePermissionsResult withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class DescribeImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeImagePermissionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -31,9 +33,11 @@ public class DescribeImagePermissionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedImagePermissionsList")
     public SharedImagePermissions[] sharedImagePermissionsList;
+
     public DescribeImagePermissionsResult withSharedImagePermissionsList(SharedImagePermissions[] sharedImagePermissionsList) {
         this.sharedImagePermissionsList = sharedImagePermissionsList;
         return this;
     }
     
+    public DescribeImagePermissionsResult(){}
 }

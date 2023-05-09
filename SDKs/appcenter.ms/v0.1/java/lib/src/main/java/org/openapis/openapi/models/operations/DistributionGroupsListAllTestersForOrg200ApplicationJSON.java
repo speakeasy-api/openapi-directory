@@ -15,6 +15,7 @@ public class DistributionGroupsListAllTestersForOrg200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public DistributionGroupsListAllTestersForOrg200ApplicationJSON withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -25,6 +26,7 @@ public class DistributionGroupsListAllTestersForOrg200ApplicationJSON {
      */
     @JsonProperty("email")
     public String email;
+
     public DistributionGroupsListAllTestersForOrg200ApplicationJSON withEmail(String email) {
         this.email = email;
         return this;
@@ -35,9 +37,14 @@ public class DistributionGroupsListAllTestersForOrg200ApplicationJSON {
      */
     @JsonProperty("name")
     public String name;
+
     public DistributionGroupsListAllTestersForOrg200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DistributionGroupsListAllTestersForOrg200ApplicationJSON(@JsonProperty("email") String email, @JsonProperty("name") String name) {
+        this.email = email;
+        this.name = name;
+  }
 }

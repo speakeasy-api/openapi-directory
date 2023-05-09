@@ -59,11 +59,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetAnatomyGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -83,7 +81,9 @@ public class Bioentity {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse getAnatomyGeneByTaxonAssociations(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsRequest.class, baseUrl, "/bioentity/anatomy/{id}/genes/{taxid}", request, null);
@@ -104,10 +104,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetAnatomyGeneByTaxonAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -142,11 +140,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +182,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -230,11 +224,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCaseModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetCaseModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -274,11 +266,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetCasePhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -318,11 +308,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCaseVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetCaseVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetCaseVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -362,11 +350,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -406,11 +392,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -450,11 +434,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,11 +488,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -530,7 +510,9 @@ public class Bioentity {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse getDiseaseModelTaxonAssociations(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsRequest.class, baseUrl, "/bioentity/disease/{id}/models/{taxon}", request, null);
@@ -551,11 +533,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseModelTaxonAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -595,11 +575,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePathwayAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -639,11 +617,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             d2PAssociationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -683,11 +659,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseasePublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -728,10 +702,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseSubstanceAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -766,11 +738,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetDiseaseVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -810,10 +780,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFunctionAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetFunctionAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -848,11 +816,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFunctionGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetFunctionGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -892,10 +858,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionPublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -930,10 +894,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetFunctionTaxonAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -968,11 +930,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneAnatomyAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1012,11 +972,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1056,11 +1014,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1100,11 +1056,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneExpressionAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneExpressionAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneExpressionAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneExpressionAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1159,11 +1113,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneFunctionAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneFunctionAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneFunctionAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneFunctionAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1203,11 +1155,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1247,11 +1197,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneHomologAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneHomologAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneHomologAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneHomologAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1291,11 +1239,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneInteractionsResponse res = new org.openapis.openapi.models.operations.GetGeneInteractionsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneInteractionsResponse res = new org.openapis.openapi.models.operations.GetGeneInteractionsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1335,11 +1281,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1379,11 +1323,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneOrthologDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1423,11 +1365,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneOrthologPhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1467,11 +1407,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePathwayAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePathwayAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1511,11 +1449,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1555,11 +1491,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenePublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1599,11 +1533,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGeneVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGeneVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetGeneVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1643,11 +1575,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenericAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenericAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenericAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenericAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1687,11 +1617,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenericObjectResponse res = new org.openapis.openapi.models.operations.GetGenericObjectResponse() {{
+        org.openapis.openapi.models.operations.GetGenericObjectResponse res = new org.openapis.openapi.models.operations.GetGenericObjectResponse(contentType, httpRes.statusCode()) {{
             bioObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1731,10 +1659,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenericObjectByTypeResponse res = new org.openapis.openapi.models.operations.GetGenericObjectByTypeResponse() {{
+        org.openapis.openapi.models.operations.GetGenericObjectByTypeResponse res = new org.openapis.openapi.models.operations.GetGenericObjectByTypeResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1769,11 +1695,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1813,11 +1737,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1857,11 +1779,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1902,11 +1822,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1946,11 +1864,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1990,11 +1906,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypePhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2034,11 +1948,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypePublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2078,11 +1990,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetGenotypeVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2101,7 +2011,9 @@ public class Bioentity {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse getGotermGeneAssociations(org.openapis.openapi.models.operations.GetGotermGeneAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetGotermGeneAssociationsRequest.class, baseUrl, "/bioentity/goterm/{id}/genes", request, null);
@@ -2122,11 +2034,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetGotermGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2166,11 +2076,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2210,11 +2118,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2254,11 +2160,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2298,11 +2202,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2342,11 +2244,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelPhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2386,11 +2286,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelPublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelPublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2430,11 +2328,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetModelVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetModelVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetModelVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2474,11 +2370,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2518,11 +2412,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPathwayGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPathwayGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2562,11 +2454,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPathwayPhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2609,11 +2499,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeAnatomyAssociationsResponse(contentType, httpRes.statusCode()) {{
             namedObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2653,11 +2541,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2697,11 +2583,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             d2PAssociationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2741,11 +2625,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2765,7 +2647,9 @@ public class Bioentity {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse getPhenotypeGeneByTaxonAssociations(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsRequest.class, baseUrl, "/bioentity/phenotype/{id}/gene/{taxid}/ids", request, null);
@@ -2786,10 +2670,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGeneByTaxonAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2824,11 +2706,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2868,11 +2748,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypePathwayAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2912,11 +2790,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypePublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2956,11 +2832,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetPhenotypeVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3000,11 +2874,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3044,11 +2916,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3088,11 +2958,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3132,11 +3000,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3176,11 +3042,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationPhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3220,11 +3084,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPublicationVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationVariantAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetPublicationVariantAssociationsResponse res = new org.openapis.openapi.models.operations.GetPublicationVariantAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3273,11 +3135,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceParticipantInAssociationsResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3318,11 +3178,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceRoleAssociationsResponse(contentType, httpRes.statusCode()) {{
             associations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3363,10 +3221,8 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsResponse res = new org.openapis.openapi.models.operations.GetSubstanceTreatsAssociationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3401,11 +3257,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantCaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantCaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantCaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3445,11 +3299,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantDiseaseAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3489,11 +3341,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantGeneAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantGeneAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantGeneAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3533,11 +3383,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantGenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3577,11 +3425,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantModelAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantModelAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantModelAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3621,11 +3467,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantPhenotypeAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3665,11 +3509,9 @@ public class Bioentity {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVariantPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantPublicationAssociationsResponse() {{
+        org.openapis.openapi.models.operations.GetVariantPublicationAssociationsResponse res = new org.openapis.openapi.models.operations.GetVariantPublicationAssociationsResponse(contentType, httpRes.statusCode()) {{
             associationResults = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

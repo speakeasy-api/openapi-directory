@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateGroupIfNotExistsForUsingGETResponse {
     
     public String contentType;
+
     public CreateGroupIfNotExistsForUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
     
     
     public Integer statusCode;
+
     public CreateGroupIfNotExistsForUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateGroupIfNotExistsForUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
      */
     
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSON createGroupIfNotExistsForUsingGET200ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingGETResponse withCreateGroupIfNotExistsForUsingGET200ApplicationJSONObject(CreateGroupIfNotExistsForUsingGET200ApplicationJSON createGroupIfNotExistsForUsingGET200ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingGET200ApplicationJSONObject = createGroupIfNotExistsForUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
      */
     
     public CreateGroupIfNotExistsForUsingGET400ApplicationJSON createGroupIfNotExistsForUsingGET400ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingGETResponse withCreateGroupIfNotExistsForUsingGET400ApplicationJSONObject(CreateGroupIfNotExistsForUsingGET400ApplicationJSON createGroupIfNotExistsForUsingGET400ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingGET400ApplicationJSONObject = createGroupIfNotExistsForUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
      */
     
     public CreateGroupIfNotExistsForUsingGET401ApplicationJSON createGroupIfNotExistsForUsingGET401ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingGETResponse withCreateGroupIfNotExistsForUsingGET401ApplicationJSONObject(CreateGroupIfNotExistsForUsingGET401ApplicationJSON createGroupIfNotExistsForUsingGET401ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingGET401ApplicationJSONObject = createGroupIfNotExistsForUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateGroupIfNotExistsForUsingGETResponse {
      */
     
     public CreateGroupIfNotExistsForUsingGET500ApplicationJSON createGroupIfNotExistsForUsingGET500ApplicationJSONObject;
+
     public CreateGroupIfNotExistsForUsingGETResponse withCreateGroupIfNotExistsForUsingGET500ApplicationJSONObject(CreateGroupIfNotExistsForUsingGET500ApplicationJSON createGroupIfNotExistsForUsingGET500ApplicationJSONObject) {
         this.createGroupIfNotExistsForUsingGET500ApplicationJSONObject = createGroupIfNotExistsForUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -20,6 +20,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public Association withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -28,6 +29,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationName")
     public String associationName;
+
     public Association withAssociationName(String associationName) {
         this.associationName = associationName;
         return this;
@@ -36,6 +38,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationVersion")
     public String associationVersion;
+
     public Association withAssociationVersion(String associationVersion) {
         this.associationVersion = associationVersion;
         return this;
@@ -44,6 +47,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public Association withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
@@ -52,6 +56,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceId")
     public String instanceId;
+
     public Association withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -62,6 +67,7 @@ public class Association {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastExecutionDate")
     public OffsetDateTime lastExecutionDate;
+
     public Association withLastExecutionDate(OffsetDateTime lastExecutionDate) {
         this.lastExecutionDate = lastExecutionDate;
         return this;
@@ -70,6 +76,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Association withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overview")
     public AssociationOverview overview;
+
     public Association withOverview(AssociationOverview overview) {
         this.overview = overview;
         return this;
@@ -86,6 +94,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleExpression")
     public String scheduleExpression;
+
     public Association withScheduleExpression(String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
         return this;
@@ -94,6 +103,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduleOffset")
     public Long scheduleOffset;
+
     public Association withScheduleOffset(Long scheduleOffset) {
         this.scheduleOffset = scheduleOffset;
         return this;
@@ -102,6 +112,7 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetMaps")
     public java.util.Map<String, String[]>[] targetMaps;
+
     public Association withTargetMaps(java.util.Map<String, String[]>[] targetMaps) {
         this.targetMaps = targetMaps;
         return this;
@@ -110,9 +121,11 @@ public class Association {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public Target[] targets;
+
     public Association withTargets(Target[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public Association(){}
 }

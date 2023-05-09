@@ -15,6 +15,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyTagsToBackups")
     public Boolean copyTagsToBackups;
+
     public UpdateOntapVolumeConfiguration withCopyTagsToBackups(Boolean copyTagsToBackups) {
         this.copyTagsToBackups = copyTagsToBackups;
         return this;
@@ -23,6 +24,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JunctionPath")
     public String junctionPath;
+
     public UpdateOntapVolumeConfiguration withJunctionPath(String junctionPath) {
         this.junctionPath = junctionPath;
         return this;
@@ -31,6 +33,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityStyle")
     public SecurityStyleEnum securityStyle;
+
     public UpdateOntapVolumeConfiguration withSecurityStyle(SecurityStyleEnum securityStyle) {
         this.securityStyle = securityStyle;
         return this;
@@ -39,6 +42,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeInMegabytes")
     public Long sizeInMegabytes;
+
     public UpdateOntapVolumeConfiguration withSizeInMegabytes(Long sizeInMegabytes) {
         this.sizeInMegabytes = sizeInMegabytes;
         return this;
@@ -47,6 +51,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotPolicy")
     public String snapshotPolicy;
+
     public UpdateOntapVolumeConfiguration withSnapshotPolicy(String snapshotPolicy) {
         this.snapshotPolicy = snapshotPolicy;
         return this;
@@ -55,6 +60,7 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageEfficiencyEnabled")
     public Boolean storageEfficiencyEnabled;
+
     public UpdateOntapVolumeConfiguration withStorageEfficiencyEnabled(Boolean storageEfficiencyEnabled) {
         this.storageEfficiencyEnabled = storageEfficiencyEnabled;
         return this;
@@ -63,9 +69,11 @@ public class UpdateOntapVolumeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TieringPolicy")
     public TieringPolicy tieringPolicy;
+
     public UpdateOntapVolumeConfiguration withTieringPolicy(TieringPolicy tieringPolicy) {
         this.tieringPolicy = tieringPolicy;
         return this;
     }
     
+    public UpdateOntapVolumeConfiguration(){}
 }

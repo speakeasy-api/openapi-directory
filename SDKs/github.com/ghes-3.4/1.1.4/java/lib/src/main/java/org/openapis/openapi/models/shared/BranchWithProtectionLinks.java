@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BranchWithProtectionLinks {
     @JsonProperty("html")
     public String html;
+
     public BranchWithProtectionLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -16,9 +17,14 @@ public class BranchWithProtectionLinks {
     
     @JsonProperty("self")
     public String self;
+
     public BranchWithProtectionLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public BranchWithProtectionLinks(@JsonProperty("html") String html, @JsonProperty("self") String self) {
+        this.html = html;
+        this.self = self;
+  }
 }

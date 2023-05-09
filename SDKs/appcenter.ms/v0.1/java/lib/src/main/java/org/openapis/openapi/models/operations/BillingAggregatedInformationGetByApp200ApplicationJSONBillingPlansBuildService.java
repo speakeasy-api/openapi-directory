@@ -18,6 +18,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canSelectTrialPlan")
     public Boolean canSelectTrialPlan;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildService withCanSelectTrialPlan(Boolean canSelectTrialPlan) {
         this.canSelectTrialPlan = canSelectTrialPlan;
         return this;
@@ -29,6 +30,7 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentBillingPeriod")
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriod currentBillingPeriod;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildService withCurrentBillingPeriod(BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildServiceCurrentBillingPeriod currentBillingPeriod) {
         this.currentBillingPeriod = currentBillingPeriod;
         return this;
@@ -40,9 +42,11 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansB
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTrialPlanExpirationTime")
     public String lastTrialPlanExpirationTime;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildService withLastTrialPlanExpirationTime(String lastTrialPlanExpirationTime) {
         this.lastTrialPlanExpirationTime = lastTrialPlanExpirationTime;
         return this;
     }
     
+    public BillingAggregatedInformationGetByApp200ApplicationJSONBillingPlansBuildService(){}
 }

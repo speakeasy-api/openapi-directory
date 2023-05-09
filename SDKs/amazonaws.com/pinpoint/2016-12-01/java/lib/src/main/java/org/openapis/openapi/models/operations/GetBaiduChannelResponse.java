@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBaiduChannelResponse {
@@ -12,6 +13,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object badRequestException;
+
     public GetBaiduChannelResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetBaiduChannelResponse {
     
     
     public String contentType;
+
     public GetBaiduChannelResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object forbiddenException;
+
     public GetBaiduChannelResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetBaiduChannelResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBaiduChannelResponse getBaiduChannelResponse;
+
     public GetBaiduChannelResponse withGetBaiduChannelResponse(org.openapis.openapi.models.shared.GetBaiduChannelResponse getBaiduChannelResponse) {
         this.getBaiduChannelResponse = getBaiduChannelResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetBaiduChannelResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetBaiduChannelResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object notFoundException;
+
     public GetBaiduChannelResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetBaiduChannelResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetBaiduChannelResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetBaiduChannelResponse {
     
     
     public Integer statusCode;
+
     public GetBaiduChannelResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetBaiduChannelResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBaiduChannelResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetBaiduChannelResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetBaiduChannelResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetBaiduChannelResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

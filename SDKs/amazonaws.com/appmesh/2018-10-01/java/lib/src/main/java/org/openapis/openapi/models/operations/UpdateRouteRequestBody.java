@@ -16,6 +16,7 @@ public class UpdateRouteRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateRouteRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,9 +27,13 @@ public class UpdateRouteRequestBody {
      */
     @JsonProperty("spec")
     public UpdateRouteRequestBodySpec spec;
+
     public UpdateRouteRequestBody withSpec(UpdateRouteRequestBodySpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateRouteRequestBody(@JsonProperty("spec") UpdateRouteRequestBodySpec spec) {
+        this.spec = spec;
+  }
 }

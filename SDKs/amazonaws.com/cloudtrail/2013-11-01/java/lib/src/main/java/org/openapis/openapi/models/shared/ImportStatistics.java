@@ -15,6 +15,7 @@ public class ImportStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventsCompleted")
     public Long eventsCompleted;
+
     public ImportStatistics withEventsCompleted(Long eventsCompleted) {
         this.eventsCompleted = eventsCompleted;
         return this;
@@ -23,6 +24,7 @@ public class ImportStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntries")
     public Long failedEntries;
+
     public ImportStatistics withFailedEntries(Long failedEntries) {
         this.failedEntries = failedEntries;
         return this;
@@ -31,6 +33,7 @@ public class ImportStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilesCompleted")
     public Long filesCompleted;
+
     public ImportStatistics withFilesCompleted(Long filesCompleted) {
         this.filesCompleted = filesCompleted;
         return this;
@@ -39,6 +42,7 @@ public class ImportStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrefixesCompleted")
     public Long prefixesCompleted;
+
     public ImportStatistics withPrefixesCompleted(Long prefixesCompleted) {
         this.prefixesCompleted = prefixesCompleted;
         return this;
@@ -47,9 +51,11 @@ public class ImportStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrefixesFound")
     public Long prefixesFound;
+
     public ImportStatistics withPrefixesFound(Long prefixesFound) {
         this.prefixesFound = prefixesFound;
         return this;
     }
     
+    public ImportStatistics(){}
 }

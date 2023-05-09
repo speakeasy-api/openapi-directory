@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostAssignTerminalsSecurity;
 import org.openapis.openapi.models.operations.PostAssignTerminalsResponse;
+import org.openapis.openapi.models.operations.PostAssignTerminalsSecurity;
 import org.openapis.openapi.models.shared.AssignTerminalsRequest;
 
 public class Application {
@@ -14,28 +13,27 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.AssignTerminalsRequest req = new AssignTerminalsRequest() {{
-                companyAccount = "corrupti";
-                merchantAccount = "provident";
+            org.openapis.openapi.models.shared.AssignTerminalsRequest req = new AssignTerminalsRequest("corrupti",                 new String[]{{
+                                add("distinctio"),
+                                add("quibusdam"),
+                                add("unde"),
+                            }}) {{
+                merchantAccount = "nulla";
                 merchantInventory = false;
-                store = "distinctio";
-                terminals = new String[]{{
-                    add("unde"),
-                    add("nulla"),
-                    add("corrupti"),
-                    add("illum"),
-                }};
-            }}            
+                store = "corrupti";
+            }};            
 
-            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req, new PostAssignTerminalsSecurity() {{
+            PostAssignTerminalsResponse res = sdk.general.postAssignTerminals(req, new PostAssignTerminalsSecurity("illum") {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.assignTerminalsResponse.isPresent()) {
+            if (res.assignTerminalsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

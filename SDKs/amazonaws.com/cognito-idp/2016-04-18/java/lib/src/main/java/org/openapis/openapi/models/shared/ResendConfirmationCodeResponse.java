@@ -15,9 +15,11 @@ public class ResendConfirmationCodeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CodeDeliveryDetails")
     public CodeDeliveryDetailsType codeDeliveryDetails;
+
     public ResendConfirmationCodeResponse withCodeDeliveryDetails(CodeDeliveryDetailsType codeDeliveryDetails) {
         this.codeDeliveryDetails = codeDeliveryDetails;
         return this;
     }
     
+    public ResendConfirmationCodeResponse(){}
 }

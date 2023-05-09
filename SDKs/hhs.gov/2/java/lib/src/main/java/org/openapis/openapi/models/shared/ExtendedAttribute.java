@@ -12,6 +12,7 @@ public class ExtendedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ExtendedAttribute withId(Long id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class ExtendedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExtendedAttribute withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class ExtendedAttribute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ExtendedAttribute withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ExtendedAttribute(){}
 }

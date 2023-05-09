@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeTagsInput - Contains the parameters for DescribeTags.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsInput {
     
     public String[] loadBalancerNames;
+
     public DescribeTagsInput withLoadBalancerNames(String[] loadBalancerNames) {
         this.loadBalancerNames = loadBalancerNames;
         return this;
     }
     
+    public DescribeTagsInput(@JsonProperty("LoadBalancerNames") String[] loadBalancerNames) {
+        this.loadBalancerNames = loadBalancerNames;
+  }
 }

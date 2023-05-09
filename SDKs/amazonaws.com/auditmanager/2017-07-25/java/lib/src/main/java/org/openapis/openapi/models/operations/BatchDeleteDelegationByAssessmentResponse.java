@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchDeleteDelegationByAssessmentResponse {
@@ -12,6 +13,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchDeleteDelegationByAssessmentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchDeleteDelegationByAssessmentResponse batchDeleteDelegationByAssessmentResponse;
+
     public BatchDeleteDelegationByAssessmentResponse withBatchDeleteDelegationByAssessmentResponse(org.openapis.openapi.models.shared.BatchDeleteDelegationByAssessmentResponse batchDeleteDelegationByAssessmentResponse) {
         this.batchDeleteDelegationByAssessmentResponse = batchDeleteDelegationByAssessmentResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
     
     
     public String contentType;
+
     public BatchDeleteDelegationByAssessmentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
      */
     
     public Object internalServerException;
+
     public BatchDeleteDelegationByAssessmentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchDeleteDelegationByAssessmentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
     
     
     public Integer statusCode;
+
     public BatchDeleteDelegationByAssessmentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchDeleteDelegationByAssessmentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchDeleteDelegationByAssessmentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class BatchDeleteDelegationByAssessmentResponse {
      */
     
     public Object validationException;
+
     public BatchDeleteDelegationByAssessmentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchDeleteDelegationByAssessmentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

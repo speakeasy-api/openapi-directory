@@ -15,6 +15,7 @@ public class FixedPrice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public FixedPrice withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -25,6 +26,7 @@ public class FixedPrice {
      */
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public FixedPrice withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -35,6 +37,7 @@ public class FixedPrice {
      */
     @JsonProperty("minQuantity")
     public Integer minQuantity;
+
     public FixedPrice withMinQuantity(Integer minQuantity) {
         this.minQuantity = minQuantity;
         return this;
@@ -45,6 +48,7 @@ public class FixedPrice {
      */
     @JsonProperty("tradePolicyId")
     public String tradePolicyId;
+
     public FixedPrice withTradePolicyId(String tradePolicyId) {
         this.tradePolicyId = tradePolicyId;
         return this;
@@ -55,9 +59,16 @@ public class FixedPrice {
      */
     @JsonProperty("value")
     public Double value;
+
     public FixedPrice withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public FixedPrice(@JsonProperty("listPrice") Double listPrice, @JsonProperty("minQuantity") Integer minQuantity, @JsonProperty("tradePolicyId") String tradePolicyId, @JsonProperty("value") Double value) {
+        this.listPrice = listPrice;
+        this.minQuantity = minQuantity;
+        this.tradePolicyId = tradePolicyId;
+        this.value = value;
+  }
 }

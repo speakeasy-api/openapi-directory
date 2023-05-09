@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBillingGroupsResponse {
     
     public String contentType;
+
     public ListBillingGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBillingGroupsResponse {
      */
     
     public Object internalFailureException;
+
     public ListBillingGroupsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListBillingGroupsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListBillingGroupsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListBillingGroupsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBillingGroupsResponse listBillingGroupsResponse;
+
     public ListBillingGroupsResponse withListBillingGroupsResponse(org.openapis.openapi.models.shared.ListBillingGroupsResponse listBillingGroupsResponse) {
         this.listBillingGroupsResponse = listBillingGroupsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListBillingGroupsResponse {
     
     
     public Integer statusCode;
+
     public ListBillingGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListBillingGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBillingGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListBillingGroupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListBillingGroupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListBillingGroupsResponse {
      */
     
     public Object throttlingException;
+
     public ListBillingGroupsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListBillingGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

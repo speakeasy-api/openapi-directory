@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AppleMappingDeleteDefaultApplicationJSON {
     @JsonProperty("code")
     public AppleMappingDeleteDefaultApplicationJSONCodeEnum code;
+
     public AppleMappingDeleteDefaultApplicationJSON withCode(AppleMappingDeleteDefaultApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class AppleMappingDeleteDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public AppleMappingDeleteDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AppleMappingDeleteDefaultApplicationJSON(@JsonProperty("code") AppleMappingDeleteDefaultApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

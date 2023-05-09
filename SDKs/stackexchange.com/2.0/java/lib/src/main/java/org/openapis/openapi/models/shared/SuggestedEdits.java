@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class SuggestedEdits {
     
     public Long approvalDate;
+
     public SuggestedEdits withApprovalDate(Long approvalDate) {
         this.approvalDate = approvalDate;
         return this;
@@ -16,6 +17,7 @@ public class SuggestedEdits {
     
     
     public String body;
+
     public SuggestedEdits withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +25,7 @@ public class SuggestedEdits {
     
     
     public String comment;
+
     public SuggestedEdits withComment(String comment) {
         this.comment = comment;
         return this;
@@ -30,6 +33,7 @@ public class SuggestedEdits {
     
     
     public Long creationDate;
+
     public SuggestedEdits withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -37,6 +41,7 @@ public class SuggestedEdits {
     
     
     public Long postId;
+
     public SuggestedEdits withPostId(Long postId) {
         this.postId = postId;
         return this;
@@ -44,6 +49,7 @@ public class SuggestedEdits {
     
     
     public String postType;
+
     public SuggestedEdits withPostType(String postType) {
         this.postType = postType;
         return this;
@@ -51,6 +57,7 @@ public class SuggestedEdits {
     
     
     public SuggestedEditsProposingUser proposingUser;
+
     public SuggestedEdits withProposingUser(SuggestedEditsProposingUser proposingUser) {
         this.proposingUser = proposingUser;
         return this;
@@ -58,6 +65,7 @@ public class SuggestedEdits {
     
     
     public Long rejectionDate;
+
     public SuggestedEdits withRejectionDate(Long rejectionDate) {
         this.rejectionDate = rejectionDate;
         return this;
@@ -65,6 +73,7 @@ public class SuggestedEdits {
     
     
     public Long suggestedEditId;
+
     public SuggestedEdits withSuggestedEditId(Long suggestedEditId) {
         this.suggestedEditId = suggestedEditId;
         return this;
@@ -72,6 +81,7 @@ public class SuggestedEdits {
     
     
     public Object[] tags;
+
     public SuggestedEdits withTags(Object[] tags) {
         this.tags = tags;
         return this;
@@ -79,9 +89,11 @@ public class SuggestedEdits {
     
     
     public String title;
+
     public SuggestedEdits withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SuggestedEdits(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribePipelineResponse {
     
     public String contentType;
+
     public DescribePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribePipelineResponse describePipelineResponse;
+
     public DescribePipelineResponse withDescribePipelineResponse(org.openapis.openapi.models.shared.DescribePipelineResponse describePipelineResponse) {
         this.describePipelineResponse = describePipelineResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribePipelineResponse {
      */
     
     public Object internalFailureException;
+
     public DescribePipelineResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribePipelineResponse {
     
     
     public Integer statusCode;
+
     public DescribePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribePipelineResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribePipelineResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,9 +92,14 @@ public class DescribePipelineResponse {
      */
     
     public Object throttlingException;
+
     public DescribePipelineResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

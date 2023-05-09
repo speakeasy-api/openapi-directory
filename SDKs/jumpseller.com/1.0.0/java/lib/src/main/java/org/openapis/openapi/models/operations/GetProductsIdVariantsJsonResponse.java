@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProductsIdVariantsJsonResponse {
     
     public String contentType;
+
     public GetProductsIdVariantsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProductsIdVariantsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetProductsIdVariantsJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -26,6 +29,7 @@ public class GetProductsIdVariantsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetProductsIdVariantsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetProductsIdVariantsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProductsIdVariantsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetProductsIdVariantsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.Variant[] variants;
+
     public GetProductsIdVariantsJsonResponse withVariants(org.openapis.openapi.models.shared.Variant[] variants) {
         this.variants = variants;
         return this;
     }
     
+    public GetProductsIdVariantsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

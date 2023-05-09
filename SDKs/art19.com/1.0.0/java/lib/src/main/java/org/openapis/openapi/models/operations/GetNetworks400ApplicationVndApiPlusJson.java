@@ -25,9 +25,11 @@ public class GetNetworks400ApplicationVndApiPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public GetNetworks400ApplicationVndApiPlusJsonErrors[] errors;
+
     public GetNetworks400ApplicationVndApiPlusJson withErrors(GetNetworks400ApplicationVndApiPlusJsonErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public GetNetworks400ApplicationVndApiPlusJson(){}
 }

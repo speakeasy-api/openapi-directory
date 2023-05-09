@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateDirectoryResponse {
@@ -12,6 +13,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException;
+
     public CreateDirectoryResponse withAccessDeniedException(org.openapis.openapi.models.shared.AccessDeniedException accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateDirectoryResponse {
     
     
     public String contentType;
+
     public CreateDirectoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateDirectoryResponse createDirectoryResponse;
+
     public CreateDirectoryResponse withCreateDirectoryResponse(org.openapis.openapi.models.shared.CreateDirectoryResponse createDirectoryResponse) {
         this.createDirectoryResponse = createDirectoryResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.DirectoryAlreadyExistsException directoryAlreadyExistsException;
+
     public CreateDirectoryResponse withDirectoryAlreadyExistsException(org.openapis.openapi.models.shared.DirectoryAlreadyExistsException directoryAlreadyExistsException) {
         this.directoryAlreadyExistsException = directoryAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InternalServiceException internalServiceException;
+
     public CreateDirectoryResponse withInternalServiceException(org.openapis.openapi.models.shared.InternalServiceException internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidArnException invalidArnException;
+
     public CreateDirectoryResponse withInvalidArnException(org.openapis.openapi.models.shared.InvalidArnException invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.LimitExceededException limitExceededException;
+
     public CreateDirectoryResponse withLimitExceededException(org.openapis.openapi.models.shared.LimitExceededException limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateDirectoryResponse {
     
     
     public Integer statusCode;
+
     public CreateDirectoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateDirectoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateDirectoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public CreateDirectoryResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,6 +114,7 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException;
+
     public CreateDirectoryResponse withRetryableConflictException(org.openapis.openapi.models.shared.RetryableConflictException retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -113,9 +125,14 @@ public class CreateDirectoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationException validationException;
+
     public CreateDirectoryResponse withValidationException(org.openapis.openapi.models.shared.ValidationException validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateDirectoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

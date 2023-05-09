@@ -18,6 +18,7 @@ public class SearchAllIamPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchAllIamPoliciesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class SearchAllIamPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public IamPolicySearchResult[] results;
+
     public SearchAllIamPoliciesResponse withResults(IamPolicySearchResult[] results) {
         this.results = results;
         return this;
     }
     
+    public SearchAllIamPoliciesResponse(){}
 }

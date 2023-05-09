@@ -14,6 +14,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("address1")
     public String address1;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withAddress1(String address1) {
         this.address1 = address1;
         return this;
@@ -25,6 +26,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address2")
     public String address2;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withAddress2(String address2) {
         this.address2 = address2;
         return this;
@@ -35,6 +37,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("addressLocality")
     public String addressLocality;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withAddressLocality(String addressLocality) {
         this.addressLocality = addressLocality;
         return this;
@@ -45,6 +48,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("addressRegion")
     public String addressRegion;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withAddressRegion(String addressRegion) {
         this.addressRegion = addressRegion;
         return this;
@@ -53,6 +57,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("companyName")
     public String companyName;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -63,6 +68,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("country")
     public String country;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withCountry(String country) {
         this.country = country;
         return this;
@@ -73,6 +79,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("email")
     public String email;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withEmail(String email) {
         this.email = email;
         return this;
@@ -80,6 +87,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
     
     @JsonProperty("firstName")
     public String firstName;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -87,6 +95,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
     
     @JsonProperty("lastName")
     public String lastName;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -97,6 +106,7 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
      */
     @JsonProperty("phone")
     public String phone;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withPhone(String phone) {
         this.phone = phone;
         return this;
@@ -108,9 +118,20 @@ public class OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesReci
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
     }
     
+    public OneordersPostRequestBodyContentApplication1jsonSchemaPropertiesRecipient(@JsonProperty("address1") String address1, @JsonProperty("addressLocality") String addressLocality, @JsonProperty("addressRegion") String addressRegion, @JsonProperty("country") String country, @JsonProperty("email") String email, @JsonProperty("firstName") String firstName, @JsonProperty("lastName") String lastName, @JsonProperty("phone") String phone) {
+        this.address1 = address1;
+        this.addressLocality = addressLocality;
+        this.addressRegion = addressRegion;
+        this.country = country;
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+  }
 }

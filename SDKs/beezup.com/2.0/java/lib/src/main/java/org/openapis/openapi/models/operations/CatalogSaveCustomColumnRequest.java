@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CatalogSaveCustomColumnRequest {
@@ -12,6 +13,7 @@ public class CatalogSaveCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=columnId")
     public String columnId;
+
     public CatalogSaveCustomColumnRequest withColumnId(String columnId) {
         this.columnId = columnId;
         return this;
@@ -19,6 +21,7 @@ public class CatalogSaveCustomColumnRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCustomColumnRequest createCustomColumnRequest;
+
     public CatalogSaveCustomColumnRequest withCreateCustomColumnRequest(org.openapis.openapi.models.shared.CreateCustomColumnRequest createCustomColumnRequest) {
         this.createCustomColumnRequest = createCustomColumnRequest;
         return this;
@@ -29,9 +32,15 @@ public class CatalogSaveCustomColumnRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=storeId")
     public String storeId;
+
     public CatalogSaveCustomColumnRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public CatalogSaveCustomColumnRequest(@JsonProperty("columnId") String columnId, @JsonProperty("createCustomColumnRequest") org.openapis.openapi.models.shared.CreateCustomColumnRequest createCustomColumnRequest, @JsonProperty("storeId") String storeId) {
+        this.columnId = columnId;
+        this.createCustomColumnRequest = createCustomColumnRequest;
+        this.storeId = storeId;
+  }
 }

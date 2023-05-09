@@ -15,6 +15,7 @@ public class SlackWorkspaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowOrganizationMemberAccount")
     public Boolean allowOrganizationMemberAccount;
+
     public SlackWorkspaceConfiguration withAllowOrganizationMemberAccount(Boolean allowOrganizationMemberAccount) {
         this.allowOrganizationMemberAccount = allowOrganizationMemberAccount;
         return this;
@@ -22,6 +23,7 @@ public class SlackWorkspaceConfiguration {
     
     @JsonProperty("teamId")
     public String teamId;
+
     public SlackWorkspaceConfiguration withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
@@ -30,9 +32,13 @@ public class SlackWorkspaceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamName")
     public String teamName;
+
     public SlackWorkspaceConfiguration withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
     }
     
+    public SlackWorkspaceConfiguration(@JsonProperty("teamId") String teamId) {
+        this.teamId = teamId;
+  }
 }

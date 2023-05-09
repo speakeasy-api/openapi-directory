@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Item {
     @JsonProperty("id")
     public String id;
+
     public Item withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class Item {
     
     @JsonProperty("name")
     public String name;
+
     public Item withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +25,7 @@ public class Item {
     
     @JsonProperty("price")
     public Integer price;
+
     public Item withPrice(Integer price) {
         this.price = price;
         return this;
@@ -30,6 +33,7 @@ public class Item {
     
     @JsonProperty("productId")
     public String productId;
+
     public Item withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -37,6 +41,7 @@ public class Item {
     
     @JsonProperty("quantity")
     public Integer quantity;
+
     public Item withQuantity(Integer quantity) {
         this.quantity = quantity;
         return this;
@@ -44,9 +49,18 @@ public class Item {
     
     @JsonProperty("refId")
     public String refId;
+
     public Item withRefId(String refId) {
         this.refId = refId;
         return this;
     }
     
+    public Item(@JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("price") Integer price, @JsonProperty("productId") String productId, @JsonProperty("quantity") Integer quantity, @JsonProperty("refId") String refId) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.productId = productId;
+        this.quantity = quantity;
+        this.refId = refId;
+  }
 }

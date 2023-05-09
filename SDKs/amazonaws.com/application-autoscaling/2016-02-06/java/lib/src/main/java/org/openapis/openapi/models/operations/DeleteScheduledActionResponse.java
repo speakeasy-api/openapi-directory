@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteScheduledActionResponse {
@@ -12,6 +13,7 @@ public class DeleteScheduledActionResponse {
      */
     
     public Object concurrentUpdateException;
+
     public DeleteScheduledActionResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteScheduledActionResponse {
     
     
     public String contentType;
+
     public DeleteScheduledActionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteScheduledActionResponse {
      */
     
     public java.util.Map<String, Object> deleteScheduledActionResponse;
+
     public DeleteScheduledActionResponse withDeleteScheduledActionResponse(java.util.Map<String, Object> deleteScheduledActionResponse) {
         this.deleteScheduledActionResponse = deleteScheduledActionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteScheduledActionResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteScheduledActionResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteScheduledActionResponse {
      */
     
     public Object objectNotFoundException;
+
     public DeleteScheduledActionResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteScheduledActionResponse {
     
     
     public Integer statusCode;
+
     public DeleteScheduledActionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteScheduledActionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteScheduledActionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteScheduledActionResponse {
      */
     
     public Object validationException;
+
     public DeleteScheduledActionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteScheduledActionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

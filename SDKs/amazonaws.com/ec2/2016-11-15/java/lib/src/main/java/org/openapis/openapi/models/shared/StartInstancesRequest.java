@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class StartInstancesRequest {
     
     public String additionalInfo;
+
     public StartInstancesRequest withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -16,6 +17,7 @@ public class StartInstancesRequest {
     
     
     public Boolean dryRun;
+
     public StartInstancesRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,9 +25,13 @@ public class StartInstancesRequest {
     
     
     public String[] instanceIds;
+
     public StartInstancesRequest withInstanceIds(String[] instanceIds) {
         this.instanceIds = instanceIds;
         return this;
     }
     
+    public StartInstancesRequest(@JsonProperty("InstanceIds") String[] instanceIds) {
+        this.instanceIds = instanceIds;
+  }
 }

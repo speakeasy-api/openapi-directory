@@ -12,6 +12,7 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("average")
     public Float average;
+
     public OrdersData withAverage(Float average) {
         this.average = average;
         return this;
@@ -20,6 +21,7 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Float count;
+
     public OrdersData withCount(Float count) {
         this.count = count;
         return this;
@@ -28,6 +30,7 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public OrdersData withDate(String date) {
         this.date = date;
         return this;
@@ -39,6 +42,7 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paid")
     public Float paid;
+
     public OrdersData withPaid(Float paid) {
         this.paid = paid;
         return this;
@@ -47,6 +51,7 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pending")
     public Float pending;
+
     public OrdersData withPending(Float pending) {
         this.pending = pending;
         return this;
@@ -55,9 +60,11 @@ public class OrdersData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Float total;
+
     public OrdersData withTotal(Float total) {
         this.total = total;
         return this;
     }
     
+    public OrdersData(){}
 }

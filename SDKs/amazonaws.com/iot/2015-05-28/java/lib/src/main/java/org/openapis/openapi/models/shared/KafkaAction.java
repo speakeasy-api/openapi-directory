@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class KafkaAction {
     @JsonProperty("clientProperties")
     public java.util.Map<String, String> clientProperties;
+
     public KafkaAction withClientProperties(java.util.Map<String, String> clientProperties) {
         this.clientProperties = clientProperties;
         return this;
@@ -21,6 +22,7 @@ public class KafkaAction {
     
     @JsonProperty("destinationArn")
     public String destinationArn;
+
     public KafkaAction withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -29,6 +31,7 @@ public class KafkaAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public KafkaAction withKey(String key) {
         this.key = key;
         return this;
@@ -37,6 +40,7 @@ public class KafkaAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partition")
     public String partition;
+
     public KafkaAction withPartition(String partition) {
         this.partition = partition;
         return this;
@@ -44,9 +48,15 @@ public class KafkaAction {
     
     @JsonProperty("topic")
     public String topic;
+
     public KafkaAction withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public KafkaAction(@JsonProperty("clientProperties") java.util.Map<String, String> clientProperties, @JsonProperty("destinationArn") String destinationArn, @JsonProperty("topic") String topic) {
+        this.clientProperties = clientProperties;
+        this.destinationArn = destinationArn;
+        this.topic = topic;
+  }
 }

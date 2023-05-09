@@ -14,6 +14,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride {
     
     public String[] additionalEquipRequirementsDisplayStrings;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride withAdditionalEquipRequirementsDisplayStrings(String[] additionalEquipRequirementsDisplayStrings) {
         this.additionalEquipRequirementsDisplayStrings = additionalEquipRequirementsDisplayStrings;
         return this;
@@ -21,9 +22,11 @@ public class DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverr
     
     
     public String pipIcon;
+
     public DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride withPipIcon(String pipIcon) {
         this.pipIcon = pipIcon;
         return this;
     }
     
+    public DestinyDefinitionsDestinyInventoryItemDefinitionPlugParentItemOverride(){}
 }

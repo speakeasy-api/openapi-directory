@@ -56,10 +56,8 @@ public class BioentitysetSlimmer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetAnatomySlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetAnatomySlimmerResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetAnatomySlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetAnatomySlimmerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,10 +92,8 @@ public class BioentitysetSlimmer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetFunctionSlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetFunctionSlimmerResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetFunctionSlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetFunctionSlimmerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,10 +128,8 @@ public class BioentitysetSlimmer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetEntitySetPhenotypeSlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetPhenotypeSlimmerResponse() {{
+        org.openapis.openapi.models.operations.GetEntitySetPhenotypeSlimmerResponse res = new org.openapis.openapi.models.operations.GetEntitySetPhenotypeSlimmerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

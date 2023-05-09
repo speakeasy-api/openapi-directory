@@ -15,9 +15,11 @@ public class ResetJobBookmarkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobBookmarkEntry")
     public JobBookmarkEntry jobBookmarkEntry;
+
     public ResetJobBookmarkResponse withJobBookmarkEntry(JobBookmarkEntry jobBookmarkEntry) {
         this.jobBookmarkEntry = jobBookmarkEntry;
         return this;
     }
     
+    public ResetJobBookmarkResponse(){}
 }

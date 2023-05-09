@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PublishersList200ApplicationJSON {
     @JsonProperty("count")
     public Long count;
+
     public PublishersList200ApplicationJSON withCount(Long count) {
         this.count = count;
         return this;
@@ -19,6 +20,7 @@ public class PublishersList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public PublishersList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -27,6 +29,7 @@ public class PublishersList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public PublishersList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -34,9 +37,14 @@ public class PublishersList200ApplicationJSON {
     
     @JsonProperty("results")
     public org.openapis.openapi.models.shared.Publisher[] results;
+
     public PublishersList200ApplicationJSON withResults(org.openapis.openapi.models.shared.Publisher[] results) {
         this.results = results;
         return this;
     }
     
+    public PublishersList200ApplicationJSON(@JsonProperty("count") Long count, @JsonProperty("results") org.openapis.openapi.models.shared.Publisher[] results) {
+        this.count = count;
+        this.results = results;
+  }
 }

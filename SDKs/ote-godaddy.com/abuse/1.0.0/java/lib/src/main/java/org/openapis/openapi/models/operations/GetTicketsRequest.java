@@ -12,6 +12,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=closed")
     public Boolean closed;
+
     public GetTicketsRequest withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -22,6 +23,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdEnd")
     public String createdEnd;
+
     public GetTicketsRequest withCreatedEnd(String createdEnd) {
         this.createdEnd = createdEnd;
         return this;
@@ -32,6 +34,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdStart")
     public String createdStart;
+
     public GetTicketsRequest withCreatedStart(String createdStart) {
         this.createdStart = createdStart;
         return this;
@@ -42,6 +45,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetTicketsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -52,6 +56,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public GetTicketsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -62,6 +67,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sourceDomainOrIp")
     public String sourceDomainOrIp;
+
     public GetTicketsRequest withSourceDomainOrIp(String sourceDomainOrIp) {
         this.sourceDomainOrIp = sourceDomainOrIp;
         return this;
@@ -72,6 +78,7 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public GetTicketsRequest withTarget(String target) {
         this.target = target;
         return this;
@@ -82,9 +89,11 @@ public class GetTicketsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetTicketsTypeEnum type;
+
     public GetTicketsRequest withType(GetTicketsTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetTicketsRequest(){}
 }

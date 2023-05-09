@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateRouteRequest {
     
     public String carrierGatewayId;
+
     public CreateRouteRequest withCarrierGatewayId(String carrierGatewayId) {
         this.carrierGatewayId = carrierGatewayId;
         return this;
@@ -16,6 +17,7 @@ public class CreateRouteRequest {
     
     
     public String coreNetworkArn;
+
     public CreateRouteRequest withCoreNetworkArn(String coreNetworkArn) {
         this.coreNetworkArn = coreNetworkArn;
         return this;
@@ -23,6 +25,7 @@ public class CreateRouteRequest {
     
     
     public String destinationCidrBlock;
+
     public CreateRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -30,6 +33,7 @@ public class CreateRouteRequest {
     
     
     public String destinationIpv6CidrBlock;
+
     public CreateRouteRequest withDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
         return this;
@@ -37,6 +41,7 @@ public class CreateRouteRequest {
     
     
     public String destinationPrefixListId;
+
     public CreateRouteRequest withDestinationPrefixListId(String destinationPrefixListId) {
         this.destinationPrefixListId = destinationPrefixListId;
         return this;
@@ -44,6 +49,7 @@ public class CreateRouteRequest {
     
     
     public Boolean dryRun;
+
     public CreateRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,6 +57,7 @@ public class CreateRouteRequest {
     
     
     public String egressOnlyInternetGatewayId;
+
     public CreateRouteRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
@@ -58,6 +65,7 @@ public class CreateRouteRequest {
     
     
     public String gatewayId;
+
     public CreateRouteRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -65,6 +73,7 @@ public class CreateRouteRequest {
     
     
     public String instanceId;
+
     public CreateRouteRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -72,6 +81,7 @@ public class CreateRouteRequest {
     
     
     public String localGatewayId;
+
     public CreateRouteRequest withLocalGatewayId(String localGatewayId) {
         this.localGatewayId = localGatewayId;
         return this;
@@ -79,6 +89,7 @@ public class CreateRouteRequest {
     
     
     public String natGatewayId;
+
     public CreateRouteRequest withNatGatewayId(String natGatewayId) {
         this.natGatewayId = natGatewayId;
         return this;
@@ -86,6 +97,7 @@ public class CreateRouteRequest {
     
     
     public String networkInterfaceId;
+
     public CreateRouteRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -93,6 +105,7 @@ public class CreateRouteRequest {
     
     
     public String routeTableId;
+
     public CreateRouteRequest withRouteTableId(String routeTableId) {
         this.routeTableId = routeTableId;
         return this;
@@ -100,6 +113,7 @@ public class CreateRouteRequest {
     
     
     public String transitGatewayId;
+
     public CreateRouteRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -107,6 +121,7 @@ public class CreateRouteRequest {
     
     
     public String vpcEndpointId;
+
     public CreateRouteRequest withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
@@ -114,9 +129,13 @@ public class CreateRouteRequest {
     
     
     public String vpcPeeringConnectionId;
+
     public CreateRouteRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public CreateRouteRequest(@JsonProperty("RouteTableId") String routeTableId) {
+        this.routeTableId = routeTableId;
+  }
 }

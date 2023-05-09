@@ -15,6 +15,7 @@ public class BundleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public BundleData[] data;
+
     public BundleInfo withData(BundleData[] data) {
         this.data = data;
         return this;
@@ -23,6 +24,7 @@ public class BundleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s")
     public Long[] s;
+
     public BundleInfo withS(Long[] s) {
         this.s = s;
         return this;
@@ -34,9 +36,11 @@ public class BundleInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public BundleInfo withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public BundleInfo(){}
 }

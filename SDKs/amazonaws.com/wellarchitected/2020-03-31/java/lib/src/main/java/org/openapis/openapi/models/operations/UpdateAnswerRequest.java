@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAnswerRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=LensAlias")
     public String lensAlias;
+
     public UpdateAnswerRequest withLensAlias(String lensAlias) {
         this.lensAlias = lensAlias;
         return this;
@@ -16,6 +18,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QuestionId")
     public String questionId;
+
     public UpdateAnswerRequest withQuestionId(String questionId) {
         this.questionId = questionId;
         return this;
@@ -23,6 +26,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateAnswerRequestBody requestBody;
+
     public UpdateAnswerRequest withRequestBody(UpdateAnswerRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -30,6 +34,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=WorkloadId")
     public String workloadId;
+
     public UpdateAnswerRequest withWorkloadId(String workloadId) {
         this.workloadId = workloadId;
         return this;
@@ -37,6 +42,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateAnswerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -44,6 +50,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateAnswerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -51,6 +58,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateAnswerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -58,6 +66,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateAnswerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -65,6 +74,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateAnswerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -72,6 +82,7 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateAnswerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -79,9 +90,16 @@ public class UpdateAnswerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateAnswerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public UpdateAnswerRequest(@JsonProperty("LensAlias") String lensAlias, @JsonProperty("QuestionId") String questionId, @JsonProperty("RequestBody") UpdateAnswerRequestBody requestBody, @JsonProperty("WorkloadId") String workloadId) {
+        this.lensAlias = lensAlias;
+        this.questionId = questionId;
+        this.requestBody = requestBody;
+        this.workloadId = workloadId;
+  }
 }

@@ -12,6 +12,7 @@ public class CustomerFieldsWithBillingAddressAndShippingAddressFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billing_address")
     public BillingAddress billingAddress;
+
     public CustomerFieldsWithBillingAddressAndShippingAddressFields withBillingAddress(BillingAddress billingAddress) {
         this.billingAddress = billingAddress;
         return this;
@@ -23,6 +24,7 @@ public class CustomerFieldsWithBillingAddressAndShippingAddressFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Integer id;
+
     public CustomerFieldsWithBillingAddressAndShippingAddressFields withId(Integer id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class CustomerFieldsWithBillingAddressAndShippingAddressFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping_address")
     public ShippingAddress shippingAddress;
+
     public CustomerFieldsWithBillingAddressAndShippingAddressFields withShippingAddress(ShippingAddress shippingAddress) {
         this.shippingAddress = shippingAddress;
         return this;
     }
     
+    public CustomerFieldsWithBillingAddressAndShippingAddressFields(){}
 }

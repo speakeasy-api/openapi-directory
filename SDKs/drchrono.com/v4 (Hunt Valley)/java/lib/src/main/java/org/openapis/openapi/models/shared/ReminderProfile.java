@@ -17,6 +17,7 @@ public class ReminderProfile {
      */
     @JsonProperty("doctor")
     public Long doctor;
+
     public ReminderProfile withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -25,6 +26,7 @@ public class ReminderProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ReminderProfile withId(Long id) {
         this.id = id;
         return this;
@@ -33,6 +35,7 @@ public class ReminderProfile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReminderProfile withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +46,14 @@ public class ReminderProfile {
      */
     @JsonProperty("reminders")
     public ReminderProfileReminderTemplate[] reminders;
+
     public ReminderProfile withReminders(ReminderProfileReminderTemplate[] reminders) {
         this.reminders = reminders;
         return this;
     }
     
+    public ReminderProfile(@JsonProperty("doctor") Long doctor, @JsonProperty("reminders") ReminderProfileReminderTemplate[] reminders) {
+        this.doctor = doctor;
+        this.reminders = reminders;
+  }
 }

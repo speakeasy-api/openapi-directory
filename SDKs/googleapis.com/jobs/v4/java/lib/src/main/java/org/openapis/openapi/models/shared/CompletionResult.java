@@ -18,6 +18,7 @@ public class CompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUri")
     public String imageUri;
+
     public CompletionResult withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -29,6 +30,7 @@ public class CompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestion")
     public String suggestion;
+
     public CompletionResult withSuggestion(String suggestion) {
         this.suggestion = suggestion;
         return this;
@@ -40,9 +42,11 @@ public class CompletionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CompletionResultTypeEnum type;
+
     public CompletionResult withType(CompletionResultTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CompletionResult(){}
 }

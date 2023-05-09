@@ -12,6 +12,7 @@ public class GetBlockedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetBlockedNumbersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetBlockedNumbersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=min-id")
     public Integer minId;
+
     public GetBlockedNumbersRequest withMinId(Integer minId) {
         this.minId = minId;
         return this;
     }
     
+    public GetBlockedNumbersRequest(){}
 }

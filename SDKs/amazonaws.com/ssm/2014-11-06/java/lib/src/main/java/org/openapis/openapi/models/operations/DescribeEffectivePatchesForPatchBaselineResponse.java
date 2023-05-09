@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeEffectivePatchesForPatchBaselineResponse {
     
     public String contentType;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineResult describeEffectivePatchesForPatchBaselineResult;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withDescribeEffectivePatchesForPatchBaselineResult(org.openapis.openapi.models.shared.DescribeEffectivePatchesForPatchBaselineResult describeEffectivePatchesForPatchBaselineResult) {
         this.describeEffectivePatchesForPatchBaselineResult = describeEffectivePatchesForPatchBaselineResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
      */
     
     public Object doesNotExistException;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withDoesNotExistException(Object doesNotExistException) {
         this.doesNotExistException = doesNotExistException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
      */
     
     public Object internalServerError;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
      */
     
     public Object invalidResourceId;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withInvalidResourceId(Object invalidResourceId) {
         this.invalidResourceId = invalidResourceId;
         return this;
@@ -56,6 +62,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
     
     
     public Integer statusCode;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeEffectivePatchesForPatchBaselineResponse {
      */
     
     public Object unsupportedOperatingSystem;
+
     public DescribeEffectivePatchesForPatchBaselineResponse withUnsupportedOperatingSystem(Object unsupportedOperatingSystem) {
         this.unsupportedOperatingSystem = unsupportedOperatingSystem;
         return this;
     }
     
+    public DescribeEffectivePatchesForPatchBaselineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

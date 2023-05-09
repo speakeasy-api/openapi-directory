@@ -15,6 +15,7 @@ public class PageResultVatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Long count;
+
     public PageResultVatCategoryDto withCount(Long count) {
         this.count = count;
         return this;
@@ -23,6 +24,7 @@ public class PageResultVatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Items")
     public VatCategoryDto[] items;
+
     public PageResultVatCategoryDto withItems(VatCategoryDto[] items) {
         this.items = items;
         return this;
@@ -31,9 +33,11 @@ public class PageResultVatCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageLink")
     public String nextPageLink;
+
     public PageResultVatCategoryDto withNextPageLink(String nextPageLink) {
         this.nextPageLink = nextPageLink;
         return this;
     }
     
+    public PageResultVatCategoryDto(){}
 }

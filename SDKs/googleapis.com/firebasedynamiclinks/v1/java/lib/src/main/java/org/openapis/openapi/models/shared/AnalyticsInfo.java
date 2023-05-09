@@ -18,6 +18,7 @@ public class AnalyticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googlePlayAnalytics")
     public GooglePlayAnalytics googlePlayAnalytics;
+
     public AnalyticsInfo withGooglePlayAnalytics(GooglePlayAnalytics googlePlayAnalytics) {
         this.googlePlayAnalytics = googlePlayAnalytics;
         return this;
@@ -29,9 +30,11 @@ public class AnalyticsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itunesConnectAnalytics")
     public ITunesConnectAnalytics itunesConnectAnalytics;
+
     public AnalyticsInfo withItunesConnectAnalytics(ITunesConnectAnalytics itunesConnectAnalytics) {
         this.itunesConnectAnalytics = itunesConnectAnalytics;
         return this;
     }
     
+    public AnalyticsInfo(){}
 }

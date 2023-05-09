@@ -15,6 +15,7 @@ public class NotifyRecommendationsReceivedError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public NotifyRecommendationsReceivedError withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class NotifyRecommendationsReceivedError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationId")
     public String recommendationId;
+
     public NotifyRecommendationsReceivedError withRecommendationId(String recommendationId) {
         this.recommendationId = recommendationId;
         return this;
     }
     
+    public NotifyRecommendationsReceivedError(){}
 }

@@ -15,9 +15,11 @@ public class Characters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OriginalTextCharacters")
     public Long originalTextCharacters;
+
     public Characters withOriginalTextCharacters(Long originalTextCharacters) {
         this.originalTextCharacters = originalTextCharacters;
         return this;
     }
     
+    public Characters(){}
 }

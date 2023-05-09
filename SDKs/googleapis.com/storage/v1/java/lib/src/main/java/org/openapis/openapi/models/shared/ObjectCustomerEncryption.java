@@ -18,6 +18,7 @@ public class ObjectCustomerEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionAlgorithm")
     public String encryptionAlgorithm;
+
     public ObjectCustomerEncryption withEncryptionAlgorithm(String encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -29,9 +30,11 @@ public class ObjectCustomerEncryption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keySha256")
     public String keySha256;
+
     public ObjectCustomerEncryption withKeySha256(String keySha256) {
         this.keySha256 = keySha256;
         return this;
     }
     
+    public ObjectCustomerEncryption(){}
 }

@@ -18,6 +18,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public Rule withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -29,6 +30,7 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Rule withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Rule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingTemplateId")
     public String targetingTemplateId;
+
     public Rule withTargetingTemplateId(String targetingTemplateId) {
         this.targetingTemplateId = targetingTemplateId;
         return this;
     }
     
+    public Rule(){}
 }

@@ -15,9 +15,11 @@ public class CatalogStoreIndexList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, CatalogStoreIndex> links;
+
     public CatalogStoreIndexList withLinks(java.util.Map<String, CatalogStoreIndex> links) {
         this.links = links;
         return this;
     }
     
+    public CatalogStoreIndexList(){}
 }

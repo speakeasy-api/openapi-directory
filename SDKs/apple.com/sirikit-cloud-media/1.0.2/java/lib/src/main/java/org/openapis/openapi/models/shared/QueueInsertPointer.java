@@ -12,6 +12,7 @@ public class QueueInsertPointer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterIdentifier")
     public String afterIdentifier;
+
     public QueueInsertPointer withAfterIdentifier(String afterIdentifier) {
         this.afterIdentifier = afterIdentifier;
         return this;
@@ -20,9 +21,11 @@ public class QueueInsertPointer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replace")
     public Boolean replace;
+
     public QueueInsertPointer withReplace(Boolean replace) {
         this.replace = replace;
         return this;
     }
     
+    public QueueInsertPointer(){}
 }

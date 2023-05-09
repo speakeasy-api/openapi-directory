@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteAutoScalingGroupType {
     
     public String autoScalingGroupName;
+
     public DeleteAutoScalingGroupType withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class DeleteAutoScalingGroupType {
     
     
     public Boolean forceDelete;
+
     public DeleteAutoScalingGroupType withForceDelete(Boolean forceDelete) {
         this.forceDelete = forceDelete;
         return this;
     }
     
+    public DeleteAutoScalingGroupType(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

@@ -15,6 +15,7 @@ public class FailedWorkspaceChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public FailedWorkspaceChangeRequest withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,6 +24,7 @@ public class FailedWorkspaceChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public FailedWorkspaceChangeRequest withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -31,9 +33,11 @@ public class FailedWorkspaceChangeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceId")
     public String workspaceId;
+
     public FailedWorkspaceChangeRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public FailedWorkspaceChangeRequest(){}
 }

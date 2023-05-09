@@ -16,72 +16,71 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequestBody;
 import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequest;
+import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionRequestBody;
 import org.openapis.openapi.models.operations.CreateAlertManagerDefinitionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreateAlertManagerDefinitionRequest req = new CreateAlertManagerDefinitionRequest() {{
-                requestBody = new CreateAlertManagerDefinitionRequestBody() {{
-                    clientToken = "corrupti";
-                    data = "provident";
-                }};
-                xAmzAlgorithm = "distinctio";
-                xAmzContentSha256 = "quibusdam";
-                xAmzCredential = "unde";
-                xAmzDate = "nulla";
-                xAmzSecurityToken = "corrupti";
-                xAmzSignature = "illum";
-                xAmzSignedHeaders = "vel";
-                workspaceId = "error";
-            }}            
+            CreateAlertManagerDefinitionRequest req = new CreateAlertManagerDefinitionRequest(                new CreateAlertManagerDefinitionRequestBody("provident") {{
+                                clientToken = "distinctio";
+                            }};, "quibusdam") {{
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }};            
 
             CreateAlertManagerDefinitionResponse res = sdk.createAlertManagerDefinition(req);
 
-            if (res.createAlertManagerDefinitionResponse.isPresent()) {
+            if (res.createAlertManagerDefinitionResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `createAlertManagerDefinition` - Create an alert manager definition.
-* `createLoggingConfiguration` - Create logging configuration.
-* `createRuleGroupsNamespace` - Create a rule group namespace.
-* `createWorkspace` - Creates a new AMP workspace.
-* `deleteAlertManagerDefinition` - Deletes an alert manager definition.
-* `deleteLoggingConfiguration` - Delete logging configuration.
-* `deleteRuleGroupsNamespace` - Delete a rule groups namespace.
-* `deleteWorkspace` - Deletes an AMP workspace.
-* `describeAlertManagerDefinition` - Describes an alert manager definition.
-* `describeLoggingConfiguration` - Describes logging configuration.
-* `describeRuleGroupsNamespace` - Describe a rule groups namespace.
-* `describeWorkspace` - Describes an existing AMP workspace.
-* `listRuleGroupsNamespaces` - Lists rule groups namespaces.
-* `listTagsForResource` - Lists the tags you have assigned to the resource.
-* `listWorkspaces` - Lists all AMP workspaces, including workspaces being created or deleted.
-* `putAlertManagerDefinition` - Update an alert manager definition.
-* `putRuleGroupsNamespace` - Update a rule groups namespace.
-* `tagResource` - Creates tags for the specified resource.
-* `untagResource` - Deletes tags from the specified resource.
-* `updateLoggingConfiguration` - Update logging configuration.
-* `updateWorkspaceAlias` - Updates an AMP workspace alias.
+* [createAlertManagerDefinition](docs/sdk/README.md#createalertmanagerdefinition) - Create an alert manager definition.
+* [createLoggingConfiguration](docs/sdk/README.md#createloggingconfiguration) - Create logging configuration.
+* [createRuleGroupsNamespace](docs/sdk/README.md#createrulegroupsnamespace) - Create a rule group namespace.
+* [createWorkspace](docs/sdk/README.md#createworkspace) - Creates a new AMP workspace.
+* [deleteAlertManagerDefinition](docs/sdk/README.md#deletealertmanagerdefinition) - Deletes an alert manager definition.
+* [deleteLoggingConfiguration](docs/sdk/README.md#deleteloggingconfiguration) - Delete logging configuration.
+* [deleteRuleGroupsNamespace](docs/sdk/README.md#deleterulegroupsnamespace) - Delete a rule groups namespace.
+* [deleteWorkspace](docs/sdk/README.md#deleteworkspace) - Deletes an AMP workspace.
+* [describeAlertManagerDefinition](docs/sdk/README.md#describealertmanagerdefinition) - Describes an alert manager definition.
+* [describeLoggingConfiguration](docs/sdk/README.md#describeloggingconfiguration) - Describes logging configuration.
+* [describeRuleGroupsNamespace](docs/sdk/README.md#describerulegroupsnamespace) - Describe a rule groups namespace.
+* [describeWorkspace](docs/sdk/README.md#describeworkspace) - Describes an existing AMP workspace.
+* [listRuleGroupsNamespaces](docs/sdk/README.md#listrulegroupsnamespaces) - Lists rule groups namespaces.
+* [listTagsForResource](docs/sdk/README.md#listtagsforresource) - Lists the tags you have assigned to the resource.
+* [listWorkspaces](docs/sdk/README.md#listworkspaces) - Lists all AMP workspaces, including workspaces being created or deleted.
+* [putAlertManagerDefinition](docs/sdk/README.md#putalertmanagerdefinition) - Update an alert manager definition.
+* [putRuleGroupsNamespace](docs/sdk/README.md#putrulegroupsnamespace) - Update a rule groups namespace.
+* [tagResource](docs/sdk/README.md#tagresource) - Creates tags for the specified resource.
+* [untagResource](docs/sdk/README.md#untagresource) - Deletes tags from the specified resource.
+* [updateLoggingConfiguration](docs/sdk/README.md#updateloggingconfiguration) - Update logging configuration.
+* [updateWorkspaceAlias](docs/sdk/README.md#updateworkspacealias) - Updates an AMP workspace alias.
 <!-- End SDK Available Operations -->
 
 ### Maturity

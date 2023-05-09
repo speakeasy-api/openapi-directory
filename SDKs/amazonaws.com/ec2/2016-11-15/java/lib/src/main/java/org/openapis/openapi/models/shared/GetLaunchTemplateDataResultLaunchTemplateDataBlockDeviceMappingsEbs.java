@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs {
     
     public Boolean deleteOnTermination;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -19,6 +20,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public Boolean encrypted;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -26,6 +28,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public Long iops;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -33,6 +36,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public String kmsKeyId;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -40,6 +44,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public String snapshotId;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -47,6 +52,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public Long throughput;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -54,6 +60,7 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public Long volumeSize;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withVolumeSize(Long volumeSize) {
         this.volumeSize = volumeSize;
         return this;
@@ -61,9 +68,11 @@ public class GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs
     
     
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum volumeType;
+
     public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs withVolumeType(GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbsVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public GetLaunchTemplateDataResultLaunchTemplateDataBlockDeviceMappingsEbs(){}
 }

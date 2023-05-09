@@ -12,6 +12,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request")
     public SeldonMessage request;
+
     public Feedback withRequest(SeldonMessage request) {
         this.request = request;
         return this;
@@ -20,6 +21,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public SeldonMessage response;
+
     public Feedback withResponse(SeldonMessage response) {
         this.response = response;
         return this;
@@ -28,6 +30,7 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reward")
     public Float reward;
+
     public Feedback withReward(Float reward) {
         this.reward = reward;
         return this;
@@ -36,9 +39,11 @@ public class Feedback {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("truth")
     public SeldonMessage truth;
+
     public Feedback withTruth(SeldonMessage truth) {
         this.truth = truth;
         return this;
     }
     
+    public Feedback(){}
 }

@@ -15,6 +15,7 @@ public class GeneratorRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("characterSets")
     public GeneratorRecipeCharacterSetsEnum[] characterSets;
+
     public GeneratorRecipe withCharacterSets(GeneratorRecipeCharacterSetsEnum[] characterSets) {
         this.characterSets = characterSets;
         return this;
@@ -26,6 +27,7 @@ public class GeneratorRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludeCharacters")
     public String excludeCharacters;
+
     public GeneratorRecipe withExcludeCharacters(String excludeCharacters) {
         this.excludeCharacters = excludeCharacters;
         return this;
@@ -37,9 +39,11 @@ public class GeneratorRecipe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("length")
     public Long length;
+
     public GeneratorRecipe withLength(Long length) {
         this.length = length;
         return this;
     }
     
+    public GeneratorRecipe(){}
 }

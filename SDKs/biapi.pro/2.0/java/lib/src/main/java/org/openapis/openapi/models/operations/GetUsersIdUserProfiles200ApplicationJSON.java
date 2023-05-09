@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetUsersIdUserProfiles200ApplicationJSON {
     @JsonProperty("profiles")
     public org.openapis.openapi.models.shared.Profile[] profiles;
+
     public GetUsersIdUserProfiles200ApplicationJSON withProfiles(org.openapis.openapi.models.shared.Profile[] profiles) {
         this.profiles = profiles;
         return this;
@@ -25,9 +26,13 @@ public class GetUsersIdUserProfiles200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public GetUsersIdUserProfiles200ApplicationJSON withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public GetUsersIdUserProfiles200ApplicationJSON(@JsonProperty("profiles") org.openapis.openapi.models.shared.Profile[] profiles) {
+        this.profiles = profiles;
+  }
 }

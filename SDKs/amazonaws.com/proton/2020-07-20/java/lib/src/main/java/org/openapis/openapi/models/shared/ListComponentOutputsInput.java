@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListComponentOutputsInput {
     @JsonProperty("componentName")
     public String componentName;
+
     public ListComponentOutputsInput withComponentName(String componentName) {
         this.componentName = componentName;
         return this;
@@ -19,9 +20,13 @@ public class ListComponentOutputsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListComponentOutputsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListComponentOutputsInput(@JsonProperty("componentName") String componentName) {
+        this.componentName = componentName;
+  }
 }

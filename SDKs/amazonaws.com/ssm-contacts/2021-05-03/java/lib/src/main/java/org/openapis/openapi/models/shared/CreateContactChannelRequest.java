@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateContactChannelRequest {
     @JsonProperty("ContactId")
     public String contactId;
+
     public CreateContactChannelRequest withContactId(String contactId) {
         this.contactId = contactId;
         return this;
@@ -19,6 +20,7 @@ public class CreateContactChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeferActivation")
     public Boolean deferActivation;
+
     public CreateContactChannelRequest withDeferActivation(Boolean deferActivation) {
         this.deferActivation = deferActivation;
         return this;
@@ -26,6 +28,7 @@ public class CreateContactChannelRequest {
     
     @JsonProperty("DeliveryAddress")
     public ContactChannelAddress deliveryAddress;
+
     public CreateContactChannelRequest withDeliveryAddress(ContactChannelAddress deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
         return this;
@@ -34,6 +37,7 @@ public class CreateContactChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateContactChannelRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -41,6 +45,7 @@ public class CreateContactChannelRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateContactChannelRequest withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +53,16 @@ public class CreateContactChannelRequest {
     
     @JsonProperty("Type")
     public ChannelTypeEnum type;
+
     public CreateContactChannelRequest withType(ChannelTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateContactChannelRequest(@JsonProperty("ContactId") String contactId, @JsonProperty("DeliveryAddress") ContactChannelAddress deliveryAddress, @JsonProperty("Name") String name, @JsonProperty("Type") ChannelTypeEnum type) {
+        this.contactId = contactId;
+        this.deliveryAddress = deliveryAddress;
+        this.name = name;
+        this.type = type;
+  }
 }

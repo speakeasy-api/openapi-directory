@@ -13,6 +13,7 @@ public class GetPositionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=deviceId")
     public Long deviceId;
+
     public GetPositionsRequest withDeviceId(Long deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -23,6 +24,7 @@ public class GetPositionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public OffsetDateTime from;
+
     public GetPositionsRequest withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -33,6 +35,7 @@ public class GetPositionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long id;
+
     public GetPositionsRequest withId(Long id) {
         this.id = id;
         return this;
@@ -43,9 +46,11 @@ public class GetPositionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public OffsetDateTime to;
+
     public GetPositionsRequest withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public GetPositionsRequest(){}
 }

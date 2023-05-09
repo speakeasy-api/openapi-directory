@@ -17,6 +17,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change")
     public Double change;
+
     public Interval withChange(Double change) {
         this.change = change;
         return this;
@@ -25,6 +26,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changePercent")
     public Double changePercent;
+
     public Interval withChangePercent(Double changePercent) {
         this.changePercent = changePercent;
         return this;
@@ -35,6 +37,7 @@ public class Interval {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("end")
     public OffsetDateTime end;
+
     public Interval withEnd(OffsetDateTime end) {
         this.end = end;
         return this;
@@ -43,6 +46,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("high")
     public Double high;
+
     public Interval withHigh(Double high) {
         this.high = high;
         return this;
@@ -51,6 +55,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last")
     public Double last;
+
     public Interval withLast(Double last) {
         this.last = last;
         return this;
@@ -59,6 +64,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("low")
     public Double low;
+
     public Interval withLow(Double low) {
         this.low = low;
         return this;
@@ -67,6 +73,7 @@ public class Interval {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("open")
     public Double open;
+
     public Interval withOpen(Double open) {
         this.open = open;
         return this;
@@ -77,9 +84,11 @@ public class Interval {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("start")
     public OffsetDateTime start;
+
     public Interval withStart(OffsetDateTime start) {
         this.start = start;
         return this;
     }
     
+    public Interval(){}
 }

@@ -15,6 +15,7 @@ public class StackError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public StackErrorCodeEnum errorCode;
+
     public StackError withErrorCode(StackErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class StackError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public StackError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public StackError(){}
 }

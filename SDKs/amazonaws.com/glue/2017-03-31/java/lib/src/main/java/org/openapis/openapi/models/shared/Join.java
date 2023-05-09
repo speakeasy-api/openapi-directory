@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Join {
     @JsonProperty("Columns")
     public JoinColumn[] columns;
+
     public Join withColumns(JoinColumn[] columns) {
         this.columns = columns;
         return this;
@@ -19,6 +20,7 @@ public class Join {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public Join withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -26,6 +28,7 @@ public class Join {
     
     @JsonProperty("JoinType")
     public JoinTypeEnum joinType;
+
     public Join withJoinType(JoinTypeEnum joinType) {
         this.joinType = joinType;
         return this;
@@ -33,9 +36,16 @@ public class Join {
     
     @JsonProperty("Name")
     public String name;
+
     public Join withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Join(@JsonProperty("Columns") JoinColumn[] columns, @JsonProperty("Inputs") String[] inputs, @JsonProperty("JoinType") JoinTypeEnum joinType, @JsonProperty("Name") String name) {
+        this.columns = columns;
+        this.inputs = inputs;
+        this.joinType = joinType;
+        this.name = name;
+  }
 }

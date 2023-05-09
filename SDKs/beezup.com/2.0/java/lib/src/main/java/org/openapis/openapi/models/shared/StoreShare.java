@@ -12,6 +12,7 @@ public class StoreShare {
      */
     @JsonProperty("links")
     public StoreShareLinks links;
+
     public StoreShare withLinks(StoreShareLinks links) {
         this.links = links;
         return this;
@@ -22,6 +23,7 @@ public class StoreShare {
      */
     @JsonProperty("userId")
     public String userId;
+
     public StoreShare withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -35,9 +37,15 @@ public class StoreShare {
      */
     @JsonProperty("userRole")
     public StoreUserRoleEnum userRole;
+
     public StoreShare withUserRole(StoreUserRoleEnum userRole) {
         this.userRole = userRole;
         return this;
     }
     
+    public StoreShare(@JsonProperty("links") StoreShareLinks links, @JsonProperty("userId") String userId, @JsonProperty("userRole") StoreUserRoleEnum userRole) {
+        this.links = links;
+        this.userId = userId;
+        this.userRole = userRole;
+  }
 }

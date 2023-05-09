@@ -15,9 +15,11 @@ public class EcrConfigurationState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rescanDurationState")
     public EcrRescanDurationState rescanDurationState;
+
     public EcrConfigurationState withRescanDurationState(EcrRescanDurationState rescanDurationState) {
         this.rescanDurationState = rescanDurationState;
         return this;
     }
     
+    public EcrConfigurationState(){}
 }

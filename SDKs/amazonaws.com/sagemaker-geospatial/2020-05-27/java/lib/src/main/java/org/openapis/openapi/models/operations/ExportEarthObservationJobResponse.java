@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ExportEarthObservationJobResponse {
@@ -12,6 +13,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object accessDeniedException;
+
     public ExportEarthObservationJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object conflictException;
+
     public ExportEarthObservationJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ExportEarthObservationJobResponse {
     
     
     public String contentType;
+
     public ExportEarthObservationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.ExportEarthObservationJobOutput exportEarthObservationJobOutput;
+
     public ExportEarthObservationJobResponse withExportEarthObservationJobOutput(org.openapis.openapi.models.shared.ExportEarthObservationJobOutput exportEarthObservationJobOutput) {
         this.exportEarthObservationJobOutput = exportEarthObservationJobOutput;
         return this;
@@ -49,6 +54,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object internalServerException;
+
     public ExportEarthObservationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ExportEarthObservationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ExportEarthObservationJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ExportEarthObservationJobResponse {
     
     
     public Integer statusCode;
+
     public ExportEarthObservationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ExportEarthObservationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ExportEarthObservationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object throttlingException;
+
     public ExportEarthObservationJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ExportEarthObservationJobResponse {
      */
     
     public Object validationException;
+
     public ExportEarthObservationJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ExportEarthObservationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

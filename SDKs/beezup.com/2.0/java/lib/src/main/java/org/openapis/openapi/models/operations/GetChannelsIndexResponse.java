@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelsIndexResponse {
@@ -12,6 +13,7 @@ public class GetChannelsIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetChannelsIndexResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelsIndexResponse {
     
     
     public String contentType;
+
     public GetChannelsIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetChannelsIndexResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetChannelsIndexResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetChannelsIndexResponse {
     
     
     public Integer statusCode;
+
     public GetChannelsIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetChannelsIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelsIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetChannelsIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicChannelIndex publicChannelIndex;
+
     public GetChannelsIndexResponse withPublicChannelIndex(org.openapis.openapi.models.shared.PublicChannelIndex publicChannelIndex) {
         this.publicChannelIndex = publicChannelIndex;
         return this;
     }
     
+    public GetChannelsIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class CommitDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("author_date")
     public OffsetDateTime authorDate;
+
     public CommitDetail withAuthorDate(OffsetDateTime authorDate) {
         this.authorDate = authorDate;
         return this;
@@ -27,6 +28,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_email")
     public String authorEmail;
+
     public CommitDetail withAuthorEmail(String authorEmail) {
         this.authorEmail = authorEmail;
         return this;
@@ -35,6 +37,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_login")
     public String authorLogin;
+
     public CommitDetail withAuthorLogin(String authorLogin) {
         this.authorLogin = authorLogin;
         return this;
@@ -43,6 +46,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("author_name")
     public String authorName;
+
     public CommitDetail withAuthorName(String authorName) {
         this.authorName = authorName;
         return this;
@@ -51,6 +55,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public CommitDetail withBody(String body) {
         this.body = body;
         return this;
@@ -59,6 +64,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit")
     public String commit;
+
     public CommitDetail withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -67,6 +73,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commit_url")
     public String commitUrl;
+
     public CommitDetail withCommitUrl(String commitUrl) {
         this.commitUrl = commitUrl;
         return this;
@@ -77,6 +84,7 @@ public class CommitDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("committer_date")
     public OffsetDateTime committerDate;
+
     public CommitDetail withCommitterDate(OffsetDateTime committerDate) {
         this.committerDate = committerDate;
         return this;
@@ -85,6 +93,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer_email")
     public String committerEmail;
+
     public CommitDetail withCommitterEmail(String committerEmail) {
         this.committerEmail = committerEmail;
         return this;
@@ -93,6 +102,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer_login")
     public String committerLogin;
+
     public CommitDetail withCommitterLogin(String committerLogin) {
         this.committerLogin = committerLogin;
         return this;
@@ -101,6 +111,7 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committer_name")
     public String committerName;
+
     public CommitDetail withCommitterName(String committerName) {
         this.committerName = committerName;
         return this;
@@ -109,9 +120,11 @@ public class CommitDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public CommitDetail withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public CommitDetail(){}
 }

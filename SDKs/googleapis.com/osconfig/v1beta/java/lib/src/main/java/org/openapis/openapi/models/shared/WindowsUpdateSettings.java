@@ -18,6 +18,7 @@ public class WindowsUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifications")
     public WindowsUpdateSettingsClassificationsEnum[] classifications;
+
     public WindowsUpdateSettings withClassifications(WindowsUpdateSettingsClassificationsEnum[] classifications) {
         this.classifications = classifications;
         return this;
@@ -29,6 +30,7 @@ public class WindowsUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludes")
     public String[] excludes;
+
     public WindowsUpdateSettings withExcludes(String[] excludes) {
         this.excludes = excludes;
         return this;
@@ -40,9 +42,11 @@ public class WindowsUpdateSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusivePatches")
     public String[] exclusivePatches;
+
     public WindowsUpdateSettings withExclusivePatches(String[] exclusivePatches) {
         this.exclusivePatches = exclusivePatches;
         return this;
     }
     
+    public WindowsUpdateSettings(){}
 }

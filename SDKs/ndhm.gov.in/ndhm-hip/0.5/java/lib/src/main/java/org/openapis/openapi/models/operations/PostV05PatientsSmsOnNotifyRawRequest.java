@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05PatientsSmsOnNotifyRawRequest {
@@ -12,6 +13,7 @@ public class PostV05PatientsSmsOnNotifyRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05PatientsSmsOnNotifyRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05PatientsSmsOnNotifyRawRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
     public byte[] requestBody;
+
     public PostV05PatientsSmsOnNotifyRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,9 +32,15 @@ public class PostV05PatientsSmsOnNotifyRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05PatientsSmsOnNotifyRawRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
     }
     
+    public PostV05PatientsSmsOnNotifyRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-HIP-ID") String xHipId) {
+        this.authorization = authorization;
+        this.requestBody = requestBody;
+        this.xHipId = xHipId;
+  }
 }

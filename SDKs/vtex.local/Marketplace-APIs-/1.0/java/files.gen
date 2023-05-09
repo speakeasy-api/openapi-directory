@@ -86,4 +86,10 @@ lib/src/main/java/org/openapis/openapi/models/shared/Matcher.java
 lib/src/main/java/org/openapis/openapi/models/shared/SaveautoapproveforaccountRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/SaveautoapproveforaccountsellerRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/getsuggestions/README.md
+docs/getversions/README.md
+docs/managesuggestions/README.md
+docs/matchreceivedskus/README.md
+docs/skuapprovalsettings/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAnomalyResponse {
@@ -12,6 +13,7 @@ public class DescribeAnomalyResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAnomalyResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAnomalyResponse {
     
     
     public String contentType;
+
     public DescribeAnomalyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAnomalyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAnomalyResponse describeAnomalyResponse;
+
     public DescribeAnomalyResponse withDescribeAnomalyResponse(org.openapis.openapi.models.shared.DescribeAnomalyResponse describeAnomalyResponse) {
         this.describeAnomalyResponse = describeAnomalyResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAnomalyResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAnomalyResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeAnomalyResponse {
     
     
     public Integer statusCode;
+
     public DescribeAnomalyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeAnomalyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAnomalyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAnomalyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAnomalyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAnomalyResponse {
      */
     
     public Object throttlingException;
+
     public DescribeAnomalyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAnomalyResponse {
      */
     
     public Object validationException;
+
     public DescribeAnomalyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAnomalyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

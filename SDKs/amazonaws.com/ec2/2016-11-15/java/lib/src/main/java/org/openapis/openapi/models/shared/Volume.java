@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class Volume {
     
     public VolumeAttachments[] attachments;
+
     public Volume withAttachments(VolumeAttachments[] attachments) {
         this.attachments = attachments;
         return this;
@@ -19,6 +20,7 @@ public class Volume {
     
     
     public String availabilityZone;
+
     public Volume withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -26,6 +28,7 @@ public class Volume {
     
     
     public OffsetDateTime createTime;
+
     public Volume withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -33,6 +36,7 @@ public class Volume {
     
     
     public Boolean encrypted;
+
     public Volume withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
@@ -40,6 +44,7 @@ public class Volume {
     
     
     public Boolean fastRestored;
+
     public Volume withFastRestored(Boolean fastRestored) {
         this.fastRestored = fastRestored;
         return this;
@@ -47,6 +52,7 @@ public class Volume {
     
     
     public Long iops;
+
     public Volume withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -54,6 +60,7 @@ public class Volume {
     
     
     public String kmsKeyId;
+
     public Volume withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -61,6 +68,7 @@ public class Volume {
     
     
     public Boolean multiAttachEnabled;
+
     public Volume withMultiAttachEnabled(Boolean multiAttachEnabled) {
         this.multiAttachEnabled = multiAttachEnabled;
         return this;
@@ -68,6 +76,7 @@ public class Volume {
     
     
     public String outpostArn;
+
     public Volume withOutpostArn(String outpostArn) {
         this.outpostArn = outpostArn;
         return this;
@@ -75,6 +84,7 @@ public class Volume {
     
     
     public Long size;
+
     public Volume withSize(Long size) {
         this.size = size;
         return this;
@@ -82,6 +92,7 @@ public class Volume {
     
     
     public String snapshotId;
+
     public Volume withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -89,6 +100,7 @@ public class Volume {
     
     
     public VolumeStateEnum state;
+
     public Volume withState(VolumeStateEnum state) {
         this.state = state;
         return this;
@@ -96,6 +108,7 @@ public class Volume {
     
     
     public VolumeTags[] tags;
+
     public Volume withTags(VolumeTags[] tags) {
         this.tags = tags;
         return this;
@@ -103,6 +116,7 @@ public class Volume {
     
     
     public Long throughput;
+
     public Volume withThroughput(Long throughput) {
         this.throughput = throughput;
         return this;
@@ -110,6 +124,7 @@ public class Volume {
     
     
     public String volumeId;
+
     public Volume withVolumeId(String volumeId) {
         this.volumeId = volumeId;
         return this;
@@ -117,9 +132,11 @@ public class Volume {
     
     
     public VolumeVolumeTypeEnum volumeType;
+
     public Volume withVolumeType(VolumeVolumeTypeEnum volumeType) {
         this.volumeType = volumeType;
         return this;
     }
     
+    public Volume(){}
 }

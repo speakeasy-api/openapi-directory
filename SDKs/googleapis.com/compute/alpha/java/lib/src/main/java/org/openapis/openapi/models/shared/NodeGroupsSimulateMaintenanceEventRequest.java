@@ -15,9 +15,11 @@ public class NodeGroupsSimulateMaintenanceEventRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodes")
     public String[] nodes;
+
     public NodeGroupsSimulateMaintenanceEventRequest withNodes(String[] nodes) {
         this.nodes = nodes;
         return this;
     }
     
+    public NodeGroupsSimulateMaintenanceEventRequest(){}
 }

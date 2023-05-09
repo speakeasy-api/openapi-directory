@@ -15,6 +15,7 @@ public class UserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporate_id")
     public Long corporateId;
+
     public UserGroup withCorporateId(Long corporateId) {
         this.corporateId = corporateId;
         return this;
@@ -23,6 +24,7 @@ public class UserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public UserGroup withId(Long id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class UserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UserGroup withName(String name) {
         this.name = name;
         return this;
@@ -39,9 +42,11 @@ public class UserGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissions")
     public String[] permissions;
+
     public UserGroup withPermissions(String[] permissions) {
         this.permissions = permissions;
         return this;
     }
     
+    public UserGroup(){}
 }

@@ -12,6 +12,7 @@ public class GetSslCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Integer skip;
+
     public GetSslCertificatesRequest withSkip(Integer skip) {
         this.skip = skip;
         return this;
@@ -22,9 +23,11 @@ public class GetSslCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=take")
     public Integer take;
+
     public GetSslCertificatesRequest withTake(Integer take) {
         this.take = take;
         return this;
     }
     
+    public GetSslCertificatesRequest(){}
 }

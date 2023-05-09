@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EinVerificationBasicResponse {
     
     public String contentType;
+
     public EinVerificationBasicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EinVerificationBasicResponse {
      */
     
     public EinVerificationBasic200ApplicationJSON einVerificationBasic200ApplicationJSONObject;
+
     public EinVerificationBasicResponse withEinVerificationBasic200ApplicationJSONObject(EinVerificationBasic200ApplicationJSON einVerificationBasic200ApplicationJSONObject) {
         this.einVerificationBasic200ApplicationJSONObject = einVerificationBasic200ApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class EinVerificationBasicResponse {
      */
     
     public EinVerificationBasicDefaultApplicationJSON einVerificationBasicDefaultApplicationJSONObject;
+
     public EinVerificationBasicResponse withEinVerificationBasicDefaultApplicationJSONObject(EinVerificationBasicDefaultApplicationJSON einVerificationBasicDefaultApplicationJSONObject) {
         this.einVerificationBasicDefaultApplicationJSONObject = einVerificationBasicDefaultApplicationJSONObject;
         return this;
@@ -36,6 +40,7 @@ public class EinVerificationBasicResponse {
     
     
     public Integer statusCode;
+
     public EinVerificationBasicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class EinVerificationBasicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EinVerificationBasicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EinVerificationBasicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

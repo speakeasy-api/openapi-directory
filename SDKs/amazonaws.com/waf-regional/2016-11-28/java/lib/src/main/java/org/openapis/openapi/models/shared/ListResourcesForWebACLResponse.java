@@ -15,9 +15,11 @@ public class ListResourcesForWebACLResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceArns")
     public String[] resourceArns;
+
     public ListResourcesForWebACLResponse withResourceArns(String[] resourceArns) {
         this.resourceArns = resourceArns;
         return this;
     }
     
+    public ListResourcesForWebACLResponse(){}
 }

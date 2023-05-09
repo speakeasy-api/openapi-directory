@@ -18,6 +18,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptedPaymentMethods")
     public String acceptedPaymentMethods;
+
     public Item withAcceptedPaymentMethods(String acceptedPaymentMethods) {
         this.acceptedPaymentMethods = acceptedPaymentMethods;
         return this;
@@ -29,6 +30,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalImageUrls")
     public String additionalImageUrls;
+
     public Item withAdditionalImageUrls(String additionalImageUrls) {
         this.additionalImageUrls = additionalImageUrls;
         return this;
@@ -40,6 +42,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalShippingCostPerUnit")
     public String additionalShippingCostPerUnit;
+
     public Item withAdditionalShippingCostPerUnit(String additionalShippingCostPerUnit) {
         this.additionalShippingCostPerUnit = additionalShippingCostPerUnit;
         return this;
@@ -51,6 +54,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ageGroup")
     public String ageGroup;
+
     public Item withAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
         return this;
@@ -62,6 +66,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alerts")
     public String alerts;
+
     public Item withAlerts(String alerts) {
         this.alerts = alerts;
         return this;
@@ -73,6 +78,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availability")
     public String availability;
+
     public Item withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -84,6 +90,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityThreshold")
     public Long availabilityThreshold;
+
     public Item withAvailabilityThreshold(Long availabilityThreshold) {
         this.availabilityThreshold = availabilityThreshold;
         return this;
@@ -95,6 +102,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilityThresholdType")
     public String availabilityThresholdType;
+
     public Item withAvailabilityThresholdType(String availabilityThresholdType) {
         this.availabilityThresholdType = availabilityThresholdType;
         return this;
@@ -106,6 +114,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public Item withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -117,6 +126,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyingOptions")
     public String buyingOptions;
+
     public Item withBuyingOptions(String buyingOptions) {
         this.buyingOptions = buyingOptions;
         return this;
@@ -128,6 +138,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public Item withCategory(String category) {
         this.category = category;
         return this;
@@ -139,6 +150,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public Item withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -150,6 +162,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public Item withColor(String color) {
         this.color = color;
         return this;
@@ -161,6 +174,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public Item withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -172,6 +186,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conditionId")
     public String conditionId;
+
     public Item withConditionId(String conditionId) {
         this.conditionId = conditionId;
         return this;
@@ -183,6 +198,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultImageUrl")
     public String defaultImageUrl;
+
     public Item withDefaultImageUrl(String defaultImageUrl) {
         this.defaultImageUrl = defaultImageUrl;
         return this;
@@ -194,6 +210,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryOptions")
     public String deliveryOptions;
+
     public Item withDeliveryOptions(String deliveryOptions) {
         this.deliveryOptions = deliveryOptions;
         return this;
@@ -205,6 +222,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountAmount")
     public String discountAmount;
+
     public Item withDiscountAmount(String discountAmount) {
         this.discountAmount = discountAmount;
         return this;
@@ -216,6 +234,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountPercentage")
     public String discountPercentage;
+
     public Item withDiscountPercentage(String discountPercentage) {
         this.discountPercentage = discountPercentage;
         return this;
@@ -227,6 +246,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecoParticipationFeeCurrency")
     public String ecoParticipationFeeCurrency;
+
     public Item withEcoParticipationFeeCurrency(String ecoParticipationFeeCurrency) {
         this.ecoParticipationFeeCurrency = ecoParticipationFeeCurrency;
         return this;
@@ -238,6 +258,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ecoParticipationFeeValue")
     public String ecoParticipationFeeValue;
+
     public Item withEcoParticipationFeeValue(String ecoParticipationFeeValue) {
         this.ecoParticipationFeeValue = ecoParticipationFeeValue;
         return this;
@@ -249,6 +270,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("energyEfficiencyClass")
     public String energyEfficiencyClass;
+
     public Item withEnergyEfficiencyClass(String energyEfficiencyClass) {
         this.energyEfficiencyClass = energyEfficiencyClass;
         return this;
@@ -260,6 +282,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("epid")
     public String epid;
+
     public Item withEpid(String epid) {
         this.epid = epid;
         return this;
@@ -271,6 +294,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedAvailableQuantity")
     public Long estimatedAvailableQuantity;
+
     public Item withEstimatedAvailableQuantity(Long estimatedAvailableQuantity) {
         this.estimatedAvailableQuantity = estimatedAvailableQuantity;
         return this;
@@ -282,6 +306,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gender")
     public String gender;
+
     public Item withGender(String gender) {
         this.gender = gender;
         return this;
@@ -293,6 +318,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gtin")
     public String gtin;
+
     public Item withGtin(String gtin) {
         this.gtin = gtin;
         return this;
@@ -304,6 +330,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatAdditionalInformation")
     public String hazmatAdditionalInformation;
+
     public Item withHazmatAdditionalInformation(String hazmatAdditionalInformation) {
         this.hazmatAdditionalInformation = hazmatAdditionalInformation;
         return this;
@@ -315,6 +342,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatPictogramDescriptions")
     public String hazmatPictogramDescriptions;
+
     public Item withHazmatPictogramDescriptions(String hazmatPictogramDescriptions) {
         this.hazmatPictogramDescriptions = hazmatPictogramDescriptions;
         return this;
@@ -326,6 +354,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatPictogramIds")
     public String hazmatPictogramIds;
+
     public Item withHazmatPictogramIds(String hazmatPictogramIds) {
         this.hazmatPictogramIds = hazmatPictogramIds;
         return this;
@@ -337,6 +366,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatPictogramImageUrls")
     public String hazmatPictogramImageUrls;
+
     public Item withHazmatPictogramImageUrls(String hazmatPictogramImageUrls) {
         this.hazmatPictogramImageUrls = hazmatPictogramImageUrls;
         return this;
@@ -348,6 +378,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatSignalWord")
     public String hazmatSignalWord;
+
     public Item withHazmatSignalWord(String hazmatSignalWord) {
         this.hazmatSignalWord = hazmatSignalWord;
         return this;
@@ -359,6 +390,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatSignalWordId")
     public String hazmatSignalWordId;
+
     public Item withHazmatSignalWordId(String hazmatSignalWordId) {
         this.hazmatSignalWordId = hazmatSignalWordId;
         return this;
@@ -370,6 +402,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatStatementDescriptions")
     public String hazmatStatementDescriptions;
+
     public Item withHazmatStatementDescriptions(String hazmatStatementDescriptions) {
         this.hazmatStatementDescriptions = hazmatStatementDescriptions;
         return this;
@@ -381,6 +414,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hazmatStatementIds")
     public String hazmatStatementIds;
+
     public Item withHazmatStatementIds(String hazmatStatementIds) {
         this.hazmatStatementIds = hazmatStatementIds;
         return this;
@@ -392,6 +426,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageAlteringProhibited")
     public Boolean imageAlteringProhibited;
+
     public Item withImageAlteringProhibited(Boolean imageAlteringProhibited) {
         this.imageAlteringProhibited = imageAlteringProhibited;
         return this;
@@ -403,6 +438,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageUrl")
     public String imageUrl;
+
     public Item withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -414,6 +450,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredBrand")
     public String inferredBrand;
+
     public Item withInferredBrand(String inferredBrand) {
         this.inferredBrand = inferredBrand;
         return this;
@@ -425,6 +462,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredEpid")
     public String inferredEpid;
+
     public Item withInferredEpid(String inferredEpid) {
         this.inferredEpid = inferredEpid;
         return this;
@@ -436,6 +474,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredGtin")
     public String inferredGtin;
+
     public Item withInferredGtin(String inferredGtin) {
         this.inferredGtin = inferredGtin;
         return this;
@@ -447,6 +486,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredLocalizedAspects")
     public String inferredLocalizedAspects;
+
     public Item withInferredLocalizedAspects(String inferredLocalizedAspects) {
         this.inferredLocalizedAspects = inferredLocalizedAspects;
         return this;
@@ -458,6 +498,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inferredMpn")
     public String inferredMpn;
+
     public Item withInferredMpn(String inferredMpn) {
         this.inferredMpn = inferredMpn;
         return this;
@@ -469,6 +510,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemAffiliateWebUrl")
     public String itemAffiliateWebUrl;
+
     public Item withItemAffiliateWebUrl(String itemAffiliateWebUrl) {
         this.itemAffiliateWebUrl = itemAffiliateWebUrl;
         return this;
@@ -480,6 +522,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemCreationDate")
     public String itemCreationDate;
+
     public Item withItemCreationDate(String itemCreationDate) {
         this.itemCreationDate = itemCreationDate;
         return this;
@@ -491,6 +534,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemEndDate")
     public String itemEndDate;
+
     public Item withItemEndDate(String itemEndDate) {
         this.itemEndDate = itemEndDate;
         return this;
@@ -502,6 +546,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public String itemId;
+
     public Item withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -513,6 +558,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemLocationCountry")
     public String itemLocationCountry;
+
     public Item withItemLocationCountry(String itemLocationCountry) {
         this.itemLocationCountry = itemLocationCountry;
         return this;
@@ -524,6 +570,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemWebUrl")
     public String itemWebUrl;
+
     public Item withItemWebUrl(String itemWebUrl) {
         this.itemWebUrl = itemWebUrl;
         return this;
@@ -535,6 +582,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legacyItemId")
     public String legacyItemId;
+
     public Item withLegacyItemId(String legacyItemId) {
         this.legacyItemId = legacyItemId;
         return this;
@@ -546,6 +594,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lengthUnitOfMeasure")
     public String lengthUnitOfMeasure;
+
     public Item withLengthUnitOfMeasure(String lengthUnitOfMeasure) {
         this.lengthUnitOfMeasure = lengthUnitOfMeasure;
         return this;
@@ -557,6 +606,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedAspects")
     public String localizedAspects;
+
     public Item withLocalizedAspects(String localizedAspects) {
         this.localizedAspects = localizedAspects;
         return this;
@@ -568,6 +618,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lotSize")
     public Long lotSize;
+
     public Item withLotSize(Long lotSize) {
         this.lotSize = lotSize;
         return this;
@@ -579,6 +630,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("material")
     public String material;
+
     public Item withMaterial(String material) {
         this.material = material;
         return this;
@@ -590,6 +642,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String mpn;
+
     public Item withMpn(String mpn) {
         this.mpn = mpn;
         return this;
@@ -601,6 +654,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPriceCurrency")
     public String originalPriceCurrency;
+
     public Item withOriginalPriceCurrency(String originalPriceCurrency) {
         this.originalPriceCurrency = originalPriceCurrency;
         return this;
@@ -612,6 +666,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalPriceValue")
     public String originalPriceValue;
+
     public Item withOriginalPriceValue(String originalPriceValue) {
         this.originalPriceValue = originalPriceValue;
         return this;
@@ -623,6 +678,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageHeight")
     public String packageHeight;
+
     public Item withPackageHeight(String packageHeight) {
         this.packageHeight = packageHeight;
         return this;
@@ -634,6 +690,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageLength")
     public String packageLength;
+
     public Item withPackageLength(String packageLength) {
         this.packageLength = packageLength;
         return this;
@@ -645,6 +702,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageWeight")
     public String packageWeight;
+
     public Item withPackageWeight(String packageWeight) {
         this.packageWeight = packageWeight;
         return this;
@@ -656,6 +714,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packageWidth")
     public String packageWidth;
+
     public Item withPackageWidth(String packageWidth) {
         this.packageWidth = packageWidth;
         return this;
@@ -667,6 +726,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pattern")
     public String pattern;
+
     public Item withPattern(String pattern) {
         this.pattern = pattern;
         return this;
@@ -678,6 +738,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceCurrency")
     public String priceCurrency;
+
     public Item withPriceCurrency(String priceCurrency) {
         this.priceCurrency = priceCurrency;
         return this;
@@ -689,6 +750,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceValue")
     public String priceValue;
+
     public Item withPriceValue(String priceValue) {
         this.priceValue = priceValue;
         return this;
@@ -700,6 +762,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryItemGroupId")
     public String primaryItemGroupId;
+
     public Item withPrimaryItemGroupId(String primaryItemGroupId) {
         this.primaryItemGroupId = primaryItemGroupId;
         return this;
@@ -711,6 +774,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryItemGroupType")
     public String primaryItemGroupType;
+
     public Item withPrimaryItemGroupType(String primaryItemGroupType) {
         this.primaryItemGroupType = primaryItemGroupType;
         return this;
@@ -722,6 +786,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priorityListingPayload")
     public String priorityListingPayload;
+
     public Item withPriorityListingPayload(String priorityListingPayload) {
         this.priorityListingPayload = priorityListingPayload;
         return this;
@@ -733,6 +798,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qualifiedPrograms")
     public String qualifiedPrograms;
+
     public Item withQualifiedPrograms(String qualifiedPrograms) {
         this.qualifiedPrograms = qualifiedPrograms;
         return this;
@@ -744,6 +810,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantityUsedForEstimate")
     public Long quantityUsedForEstimate;
+
     public Item withQuantityUsedForEstimate(Long quantityUsedForEstimate) {
         this.quantityUsedForEstimate = quantityUsedForEstimate;
         return this;
@@ -755,6 +822,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refundMethod")
     public String refundMethod;
+
     public Item withRefundMethod(String refundMethod) {
         this.refundMethod = refundMethod;
         return this;
@@ -766,6 +834,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repairScore")
     public String repairScore;
+
     public Item withRepairScore(String repairScore) {
         this.repairScore = repairScore;
         return this;
@@ -777,6 +846,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnMethod")
     public String returnMethod;
+
     public Item withReturnMethod(String returnMethod) {
         this.returnMethod = returnMethod;
         return this;
@@ -788,6 +858,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPeriodUnit")
     public String returnPeriodUnit;
+
     public Item withReturnPeriodUnit(String returnPeriodUnit) {
         this.returnPeriodUnit = returnPeriodUnit;
         return this;
@@ -799,6 +870,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnPeriodValue")
     public Long returnPeriodValue;
+
     public Item withReturnPeriodValue(Long returnPeriodValue) {
         this.returnPeriodValue = returnPeriodValue;
         return this;
@@ -810,6 +882,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShippingCostPayer")
     public String returnShippingCostPayer;
+
     public Item withReturnShippingCostPayer(String returnShippingCostPayer) {
         this.returnShippingCostPayer = returnShippingCostPayer;
         return this;
@@ -821,6 +894,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnsAccepted")
     public Boolean returnsAccepted;
+
     public Item withReturnsAccepted(Boolean returnsAccepted) {
         this.returnsAccepted = returnsAccepted;
         return this;
@@ -832,6 +906,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerAccountType")
     public String sellerAccountType;
+
     public Item withSellerAccountType(String sellerAccountType) {
         this.sellerAccountType = sellerAccountType;
         return this;
@@ -843,6 +918,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerFeedbackPercentage")
     public String sellerFeedbackPercentage;
+
     public Item withSellerFeedbackPercentage(String sellerFeedbackPercentage) {
         this.sellerFeedbackPercentage = sellerFeedbackPercentage;
         return this;
@@ -854,6 +930,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerFeedbackScore")
     public String sellerFeedbackScore;
+
     public Item withSellerFeedbackScore(String sellerFeedbackScore) {
         this.sellerFeedbackScore = sellerFeedbackScore;
         return this;
@@ -865,6 +942,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerItemRevision")
     public String sellerItemRevision;
+
     public Item withSellerItemRevision(String sellerItemRevision) {
         this.sellerItemRevision = sellerItemRevision;
         return this;
@@ -876,6 +954,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerTrustLevel")
     public String sellerTrustLevel;
+
     public Item withSellerTrustLevel(String sellerTrustLevel) {
         this.sellerTrustLevel = sellerTrustLevel;
         return this;
@@ -887,6 +966,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerUsername")
     public String sellerUsername;
+
     public Item withSellerUsername(String sellerUsername) {
         this.sellerUsername = sellerUsername;
         return this;
@@ -898,6 +978,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipToExcludedRegions")
     public String shipToExcludedRegions;
+
     public Item withShipToExcludedRegions(String shipToExcludedRegions) {
         this.shipToExcludedRegions = shipToExcludedRegions;
         return this;
@@ -909,6 +990,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipToIncludedRegions")
     public String shipToIncludedRegions;
+
     public Item withShipToIncludedRegions(String shipToIncludedRegions) {
         this.shipToIncludedRegions = shipToIncludedRegions;
         return this;
@@ -920,6 +1002,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCarrierCode")
     public String shippingCarrierCode;
+
     public Item withShippingCarrierCode(String shippingCarrierCode) {
         this.shippingCarrierCode = shippingCarrierCode;
         return this;
@@ -931,6 +1014,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCost")
     public String shippingCost;
+
     public Item withShippingCost(String shippingCost) {
         this.shippingCost = shippingCost;
         return this;
@@ -942,6 +1026,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingCostType")
     public String shippingCostType;
+
     public Item withShippingCostType(String shippingCostType) {
         this.shippingCostType = shippingCostType;
         return this;
@@ -953,6 +1038,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingServiceCode")
     public String shippingServiceCode;
+
     public Item withShippingServiceCode(String shippingServiceCode) {
         this.shippingServiceCode = shippingServiceCode;
         return this;
@@ -964,6 +1050,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingType")
     public String shippingType;
+
     public Item withShippingType(String shippingType) {
         this.shippingType = shippingType;
         return this;
@@ -975,6 +1062,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public Item withSize(String size) {
         this.size = size;
         return this;
@@ -986,6 +1074,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("takeBackPolicyDescription")
     public String takeBackPolicyDescription;
+
     public Item withTakeBackPolicyDescription(String takeBackPolicyDescription) {
         this.takeBackPolicyDescription = takeBackPolicyDescription;
         return this;
@@ -997,6 +1086,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("takeBackPolicyLabel")
     public String takeBackPolicyLabel;
+
     public Item withTakeBackPolicyLabel(String takeBackPolicyLabel) {
         this.takeBackPolicyLabel = takeBackPolicyLabel;
         return this;
@@ -1008,6 +1098,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Item withTitle(String title) {
         this.title = title;
         return this;
@@ -1019,6 +1110,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalUnits")
     public String totalUnits;
+
     public Item withTotalUnits(String totalUnits) {
         this.totalUnits = totalUnits;
         return this;
@@ -1030,6 +1122,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tyreLabelImageUrl")
     public String tyreLabelImageUrl;
+
     public Item withTyreLabelImageUrl(String tyreLabelImageUrl) {
         this.tyreLabelImageUrl = tyreLabelImageUrl;
         return this;
@@ -1041,6 +1134,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPrice")
     public String unitPrice;
+
     public Item withUnitPrice(String unitPrice) {
         this.unitPrice = unitPrice;
         return this;
@@ -1052,6 +1146,7 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unitPricingMeasure")
     public String unitPricingMeasure;
+
     public Item withUnitPricingMeasure(String unitPricingMeasure) {
         this.unitPricingMeasure = unitPricingMeasure;
         return this;
@@ -1063,9 +1158,11 @@ public class Item {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightUnitOfMeasure")
     public String weightUnitOfMeasure;
+
     public Item withWeightUnitOfMeasure(String weightUnitOfMeasure) {
         this.weightUnitOfMeasure = weightUnitOfMeasure;
         return this;
     }
     
+    public Item(){}
 }

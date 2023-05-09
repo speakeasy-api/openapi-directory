@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportServerCatalogResponse {
     
     public String contentType;
+
     public ImportServerCatalogResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ImportServerCatalogResponse {
      */
     
     public java.util.Map<String, Object> importServerCatalogResponse;
+
     public ImportServerCatalogResponse withImportServerCatalogResponse(java.util.Map<String, Object> importServerCatalogResponse) {
         this.importServerCatalogResponse = importServerCatalogResponse;
         return this;
@@ -29,6 +32,7 @@ public class ImportServerCatalogResponse {
      */
     
     public Object invalidParameterException;
+
     public ImportServerCatalogResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ImportServerCatalogResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public ImportServerCatalogResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ImportServerCatalogResponse {
      */
     
     public Object noConnectorsAvailableException;
+
     public ImportServerCatalogResponse withNoConnectorsAvailableException(Object noConnectorsAvailableException) {
         this.noConnectorsAvailableException = noConnectorsAvailableException;
         return this;
@@ -59,6 +65,7 @@ public class ImportServerCatalogResponse {
      */
     
     public Object operationNotPermittedException;
+
     public ImportServerCatalogResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -66,6 +73,7 @@ public class ImportServerCatalogResponse {
     
     
     public Integer statusCode;
+
     public ImportServerCatalogResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ImportServerCatalogResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportServerCatalogResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ImportServerCatalogResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public ImportServerCatalogResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public ImportServerCatalogResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

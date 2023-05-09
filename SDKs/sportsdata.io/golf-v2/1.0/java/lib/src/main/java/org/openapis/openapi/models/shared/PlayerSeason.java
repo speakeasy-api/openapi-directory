@@ -12,6 +12,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AveragePoints")
     public Double averagePoints;
+
     public PlayerSeason withAveragePoints(Double averagePoints) {
         this.averagePoints = averagePoints;
         return this;
@@ -20,6 +21,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Events")
     public Long events;
+
     public PlayerSeason withEvents(Long events) {
         this.events = events;
         return this;
@@ -28,6 +30,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerSeason withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +39,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerSeason withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -44,6 +48,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerSeasonID")
     public Long playerSeasonID;
+
     public PlayerSeason withPlayerSeasonID(Long playerSeasonID) {
         this.playerSeasonID = playerSeasonID;
         return this;
@@ -52,6 +57,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsGained")
     public Double pointsGained;
+
     public PlayerSeason withPointsGained(Double pointsGained) {
         this.pointsGained = pointsGained;
         return this;
@@ -60,6 +66,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PointsLost")
     public Double pointsLost;
+
     public PlayerSeason withPointsLost(Double pointsLost) {
         this.pointsLost = pointsLost;
         return this;
@@ -68,6 +75,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public PlayerSeason withSeason(Long season) {
         this.season = season;
         return this;
@@ -76,6 +84,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalPoints")
     public Double totalPoints;
+
     public PlayerSeason withTotalPoints(Double totalPoints) {
         this.totalPoints = totalPoints;
         return this;
@@ -84,6 +93,7 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorldGolfRank")
     public Long worldGolfRank;
+
     public PlayerSeason withWorldGolfRank(Long worldGolfRank) {
         this.worldGolfRank = worldGolfRank;
         return this;
@@ -92,9 +102,11 @@ public class PlayerSeason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorldGolfRankLastWeek")
     public Long worldGolfRankLastWeek;
+
     public PlayerSeason withWorldGolfRankLastWeek(Long worldGolfRankLastWeek) {
         this.worldGolfRankLastWeek = worldGolfRankLastWeek;
         return this;
     }
     
+    public PlayerSeason(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDocumentTextDetectionResponse {
@@ -12,6 +13,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDocumentTextDetectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetDocumentTextDetectionResponse {
     
     
     public String contentType;
+
     public GetDocumentTextDetectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDocumentTextDetectionResponse getDocumentTextDetectionResponse;
+
     public GetDocumentTextDetectionResponse withGetDocumentTextDetectionResponse(org.openapis.openapi.models.shared.GetDocumentTextDetectionResponse getDocumentTextDetectionResponse) {
         this.getDocumentTextDetectionResponse = getDocumentTextDetectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object internalServerError;
+
     public GetDocumentTextDetectionResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object invalidJobIdException;
+
     public GetDocumentTextDetectionResponse withInvalidJobIdException(Object invalidJobIdException) {
         this.invalidJobIdException = invalidJobIdException;
         return this;
@@ -59,6 +65,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object invalidKMSKeyException;
+
     public GetDocumentTextDetectionResponse withInvalidKMSKeyException(Object invalidKMSKeyException) {
         this.invalidKMSKeyException = invalidKMSKeyException;
         return this;
@@ -69,6 +76,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object invalidParameterException;
+
     public GetDocumentTextDetectionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public GetDocumentTextDetectionResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetDocumentTextDetectionResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class GetDocumentTextDetectionResponse {
     
     
     public Integer statusCode;
+
     public GetDocumentTextDetectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class GetDocumentTextDetectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDocumentTextDetectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class GetDocumentTextDetectionResponse {
      */
     
     public Object throttlingException;
+
     public GetDocumentTextDetectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetDocumentTextDetectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

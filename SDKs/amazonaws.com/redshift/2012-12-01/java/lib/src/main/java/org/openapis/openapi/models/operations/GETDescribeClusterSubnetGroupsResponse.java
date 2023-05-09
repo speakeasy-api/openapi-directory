@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDescribeClusterSubnetGroupsResponse {
     
     public byte[] body;
+
     public GETDescribeClusterSubnetGroupsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETDescribeClusterSubnetGroupsResponse {
     
     
     public String contentType;
+
     public GETDescribeClusterSubnetGroupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETDescribeClusterSubnetGroupsResponse {
     
     
     public Integer statusCode;
+
     public GETDescribeClusterSubnetGroupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETDescribeClusterSubnetGroupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDescribeClusterSubnetGroupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDescribeClusterSubnetGroupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

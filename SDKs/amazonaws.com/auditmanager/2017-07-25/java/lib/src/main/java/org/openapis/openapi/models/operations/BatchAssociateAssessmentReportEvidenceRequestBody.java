@@ -12,6 +12,7 @@ public class BatchAssociateAssessmentReportEvidenceRequestBody {
      */
     @JsonProperty("evidenceFolderId")
     public String evidenceFolderId;
+
     public BatchAssociateAssessmentReportEvidenceRequestBody withEvidenceFolderId(String evidenceFolderId) {
         this.evidenceFolderId = evidenceFolderId;
         return this;
@@ -22,9 +23,14 @@ public class BatchAssociateAssessmentReportEvidenceRequestBody {
      */
     @JsonProperty("evidenceIds")
     public String[] evidenceIds;
+
     public BatchAssociateAssessmentReportEvidenceRequestBody withEvidenceIds(String[] evidenceIds) {
         this.evidenceIds = evidenceIds;
         return this;
     }
     
+    public BatchAssociateAssessmentReportEvidenceRequestBody(@JsonProperty("evidenceFolderId") String evidenceFolderId, @JsonProperty("evidenceIds") String[] evidenceIds) {
+        this.evidenceFolderId = evidenceFolderId;
+        this.evidenceIds = evidenceIds;
+  }
 }

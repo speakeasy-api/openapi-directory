@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenesForLatestAssemblyUsingGETRequest {
@@ -12,9 +13,13 @@ public class GETGenesForLatestAssemblyUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxonId")
     public String taxonId;
+
     public GETGenesForLatestAssemblyUsingGETRequest withTaxonId(String taxonId) {
         this.taxonId = taxonId;
         return this;
     }
     
+    public GETGenesForLatestAssemblyUsingGETRequest(@JsonProperty("taxonId") String taxonId) {
+        this.taxonId = taxonId;
+  }
 }

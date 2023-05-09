@@ -17,6 +17,7 @@ public class AccountCreate {
      */
     @JsonProperty("email")
     public String email;
+
     public AccountCreate withEmail(String email) {
         this.email = email;
         return this;
@@ -27,6 +28,7 @@ public class AccountCreate {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public AccountCreate withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -38,6 +40,7 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group_id")
     public Long groupId;
+
     public AccountCreate withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -49,6 +52,7 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("institution_user_id")
     public String institutionUserId;
+
     public AccountCreate withInstitutionUserId(String institutionUserId) {
         this.institutionUserId = institutionUserId;
         return this;
@@ -60,6 +64,7 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_active")
     public Boolean isActive;
+
     public AccountCreate withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -71,6 +76,7 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_name")
     public String lastName;
+
     public AccountCreate withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -82,6 +88,7 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quota")
     public Long quota;
+
     public AccountCreate withQuota(Long quota) {
         this.quota = quota;
         return this;
@@ -93,9 +100,14 @@ public class AccountCreate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("symplectic_user_id")
     public String symplecticUserId;
+
     public AccountCreate withSymplecticUserId(String symplecticUserId) {
         this.symplecticUserId = symplecticUserId;
         return this;
     }
     
+    public AccountCreate(@JsonProperty("email") String email, @JsonProperty("first_name") String firstName) {
+        this.email = email;
+        this.firstName = firstName;
+  }
 }

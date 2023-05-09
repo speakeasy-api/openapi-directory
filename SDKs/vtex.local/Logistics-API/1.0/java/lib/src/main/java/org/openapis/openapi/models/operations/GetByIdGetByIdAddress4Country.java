@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetByIdGetByIdAddress4Country {
     @JsonProperty("acronym")
     public String acronym;
+
     public GetByIdGetByIdAddress4Country withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -16,9 +17,14 @@ public class GetByIdGetByIdAddress4Country {
     
     @JsonProperty("name")
     public String name;
+
     public GetByIdGetByIdAddress4Country withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetByIdGetByIdAddress4Country(@JsonProperty("acronym") String acronym, @JsonProperty("name") String name) {
+        this.acronym = acronym;
+        this.name = name;
+  }
 }

@@ -18,6 +18,7 @@ public class SapDiscoveryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relatedResources")
     public String[] relatedResources;
+
     public SapDiscoveryResource withRelatedResources(String[] relatedResources) {
         this.relatedResources = relatedResources;
         return this;
@@ -29,8 +30,21 @@ public class SapDiscoveryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceKind")
     public String resourceKind;
+
     public SapDiscoveryResource withResourceKind(String resourceKind) {
         this.resourceKind = resourceKind;
+        return this;
+    }
+    
+    /**
+     * Indicates whether this is a new, updated, or missing resource.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("resourceState")
+    public SapDiscoveryResourceResourceStateEnum resourceState;
+
+    public SapDiscoveryResource withResourceState(SapDiscoveryResourceResourceStateEnum resourceState) {
+        this.resourceState = resourceState;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class SapDiscoveryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public SapDiscoveryResourceResourceTypeEnum resourceType;
+
     public SapDiscoveryResource withResourceType(SapDiscoveryResourceResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -51,6 +66,7 @@ public class SapDiscoveryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceUri")
     public String resourceUri;
+
     public SapDiscoveryResource withResourceUri(String resourceUri) {
         this.resourceUri = resourceUri;
         return this;
@@ -62,9 +78,11 @@ public class SapDiscoveryResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public SapDiscoveryResource withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public SapDiscoveryResource(){}
 }

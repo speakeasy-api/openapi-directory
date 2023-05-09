@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class CreateSessionUsingGETRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authorID")
     public String authorID;
+
     public CreateSessionUsingGETRequest withAuthorID(String authorID) {
         this.authorID = authorID;
         return this;
@@ -16,6 +17,7 @@ public class CreateSessionUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupID")
     public String groupID;
+
     public CreateSessionUsingGETRequest withGroupID(String groupID) {
         this.groupID = groupID;
         return this;
@@ -23,9 +25,11 @@ public class CreateSessionUsingGETRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=validUntil")
     public String validUntil;
+
     public CreateSessionUsingGETRequest withValidUntil(String validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public CreateSessionUsingGETRequest(){}
 }

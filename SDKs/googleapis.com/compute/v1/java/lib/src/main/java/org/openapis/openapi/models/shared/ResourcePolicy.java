@@ -18,6 +18,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ResourcePolicy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -26,6 +27,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ResourcePolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupPlacementPolicy")
     public ResourcePolicyGroupPlacementPolicy groupPlacementPolicy;
+
     public ResourcePolicy withGroupPlacementPolicy(ResourcePolicyGroupPlacementPolicy groupPlacementPolicy) {
         this.groupPlacementPolicy = groupPlacementPolicy;
         return this;
@@ -48,6 +51,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ResourcePolicy withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSchedulePolicy")
     public ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy;
+
     public ResourcePolicy withInstanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicy instanceSchedulePolicy) {
         this.instanceSchedulePolicy = instanceSchedulePolicy;
         return this;
@@ -70,6 +75,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ResourcePolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -81,6 +87,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ResourcePolicy withName(String name) {
         this.name = name;
         return this;
@@ -89,6 +96,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public ResourcePolicy withRegion(String region) {
         this.region = region;
         return this;
@@ -100,6 +108,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceStatus")
     public ResourcePolicyResourceStatus resourceStatus;
+
     public ResourcePolicy withResourceStatus(ResourcePolicyResourceStatus resourceStatus) {
         this.resourceStatus = resourceStatus;
         return this;
@@ -111,6 +120,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ResourcePolicy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -122,6 +132,7 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotSchedulePolicy")
     public ResourcePolicySnapshotSchedulePolicy snapshotSchedulePolicy;
+
     public ResourcePolicy withSnapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicy snapshotSchedulePolicy) {
         this.snapshotSchedulePolicy = snapshotSchedulePolicy;
         return this;
@@ -133,9 +144,11 @@ public class ResourcePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ResourcePolicyStatusEnum status;
+
     public ResourcePolicy withStatus(ResourcePolicyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ResourcePolicy(){}
 }

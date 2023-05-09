@@ -14,6 +14,7 @@ public class UpdateDatasetRequestBody {
      */
     @JsonProperty("actions")
     public org.openapis.openapi.models.shared.DatasetAction[] actions;
+
     public UpdateDatasetRequestBody withActions(org.openapis.openapi.models.shared.DatasetAction[] actions) {
         this.actions = actions;
         return this;
@@ -25,6 +26,7 @@ public class UpdateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDeliveryRules")
     public org.openapis.openapi.models.shared.DatasetContentDeliveryRule[] contentDeliveryRules;
+
     public UpdateDatasetRequestBody withContentDeliveryRules(org.openapis.openapi.models.shared.DatasetContentDeliveryRule[] contentDeliveryRules) {
         this.contentDeliveryRules = contentDeliveryRules;
         return this;
@@ -36,6 +38,7 @@ public class UpdateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateDataRules")
     public org.openapis.openapi.models.shared.LateDataRule[] lateDataRules;
+
     public UpdateDatasetRequestBody withLateDataRules(org.openapis.openapi.models.shared.LateDataRule[] lateDataRules) {
         this.lateDataRules = lateDataRules;
         return this;
@@ -47,6 +50,7 @@ public class UpdateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public UpdateDatasetRequestBodyRetentionPeriod retentionPeriod;
+
     public UpdateDatasetRequestBody withRetentionPeriod(UpdateDatasetRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -58,6 +62,7 @@ public class UpdateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public org.openapis.openapi.models.shared.DatasetTrigger[] triggers;
+
     public UpdateDatasetRequestBody withTriggers(org.openapis.openapi.models.shared.DatasetTrigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -69,9 +74,13 @@ public class UpdateDatasetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioningConfiguration")
     public UpdateDatasetRequestBodyVersioningConfiguration versioningConfiguration;
+
     public UpdateDatasetRequestBody withVersioningConfiguration(UpdateDatasetRequestBodyVersioningConfiguration versioningConfiguration) {
         this.versioningConfiguration = versioningConfiguration;
         return this;
     }
     
+    public UpdateDatasetRequestBody(@JsonProperty("actions") org.openapis.openapi.models.shared.DatasetAction[] actions) {
+        this.actions = actions;
+  }
 }

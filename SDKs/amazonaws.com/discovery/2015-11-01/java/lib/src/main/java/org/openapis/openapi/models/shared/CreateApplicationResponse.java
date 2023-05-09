@@ -15,9 +15,11 @@ public class CreateApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationId")
     public String configurationId;
+
     public CreateApplicationResponse withConfigurationId(String configurationId) {
         this.configurationId = configurationId;
         return this;
     }
     
+    public CreateApplicationResponse(){}
 }

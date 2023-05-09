@@ -18,6 +18,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public Attachment withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUrl")
     public String contentUrl;
+
     public Attachment withContentUrl(String contentUrl) {
         this.contentUrl = contentUrl;
         return this;
@@ -40,6 +42,7 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Attachment withId(String id) {
         this.id = id;
         return this;
@@ -51,9 +54,11 @@ public class Attachment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isProcessingContent")
     public Boolean isProcessingContent;
+
     public Attachment withIsProcessingContent(Boolean isProcessingContent) {
         this.isProcessingContent = isProcessingContent;
         return this;
     }
     
+    public Attachment(){}
 }

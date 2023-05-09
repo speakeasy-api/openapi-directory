@@ -15,6 +15,7 @@ public class CustomConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public ApiKeyCredentials apiKey;
+
     public CustomConnectorProfileCredentials withApiKey(ApiKeyCredentials apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +23,7 @@ public class CustomConnectorProfileCredentials {
     
     @JsonProperty("authenticationType")
     public AuthenticationTypeEnum authenticationType;
+
     public CustomConnectorProfileCredentials withAuthenticationType(AuthenticationTypeEnum authenticationType) {
         this.authenticationType = authenticationType;
         return this;
@@ -30,6 +32,7 @@ public class CustomConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic")
     public BasicAuthCredentials basic;
+
     public CustomConnectorProfileCredentials withBasic(BasicAuthCredentials basic) {
         this.basic = basic;
         return this;
@@ -38,6 +41,7 @@ public class CustomConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public CustomAuthCredentials custom;
+
     public CustomConnectorProfileCredentials withCustom(CustomAuthCredentials custom) {
         this.custom = custom;
         return this;
@@ -46,9 +50,13 @@ public class CustomConnectorProfileCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oauth2")
     public OAuth2Credentials oauth2;
+
     public CustomConnectorProfileCredentials withOauth2(OAuth2Credentials oauth2) {
         this.oauth2 = oauth2;
         return this;
     }
     
+    public CustomConnectorProfileCredentials(@JsonProperty("authenticationType") AuthenticationTypeEnum authenticationType) {
+        this.authenticationType = authenticationType;
+  }
 }

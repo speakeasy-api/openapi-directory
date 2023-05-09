@@ -18,6 +18,7 @@ public class UpdateAssetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset")
     public AssetInput asset;
+
     public UpdateAssetRequestInput withAsset(AssetInput asset) {
         this.asset = asset;
         return this;
@@ -29,6 +30,7 @@ public class UpdateAssetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public UpdateAssetRequestInput withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -40,9 +42,11 @@ public class UpdateAssetRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateMask")
     public String updateMask;
+
     public UpdateAssetRequestInput withUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
     }
     
+    public UpdateAssetRequestInput(){}
 }

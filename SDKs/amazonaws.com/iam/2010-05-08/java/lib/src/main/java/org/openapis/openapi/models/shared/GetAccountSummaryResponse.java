@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class GetAccountSummaryResponse {
     
     public java.util.Map<String, Long> summaryMap;
+
     public GetAccountSummaryResponse withSummaryMap(java.util.Map<String, Long> summaryMap) {
         this.summaryMap = summaryMap;
         return this;
     }
     
+    public GetAccountSummaryResponse(){}
 }

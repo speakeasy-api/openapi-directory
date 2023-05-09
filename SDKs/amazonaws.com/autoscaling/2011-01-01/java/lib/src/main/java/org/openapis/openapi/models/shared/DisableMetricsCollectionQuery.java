@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DisableMetricsCollectionQuery {
     
     public String autoScalingGroupName;
+
     public DisableMetricsCollectionQuery withAutoScalingGroupName(String autoScalingGroupName) {
         this.autoScalingGroupName = autoScalingGroupName;
         return this;
@@ -16,9 +17,13 @@ public class DisableMetricsCollectionQuery {
     
     
     public String[] metrics;
+
     public DisableMetricsCollectionQuery withMetrics(String[] metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public DisableMetricsCollectionQuery(@JsonProperty("AutoScalingGroupName") String autoScalingGroupName) {
+        this.autoScalingGroupName = autoScalingGroupName;
+  }
 }

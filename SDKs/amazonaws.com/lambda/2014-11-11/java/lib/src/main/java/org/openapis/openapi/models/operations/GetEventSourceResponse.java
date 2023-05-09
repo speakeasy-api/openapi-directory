@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetEventSourceResponse {
     
     public String contentType;
+
     public GetEventSourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.EventSourceConfiguration eventSourceConfiguration;
+
     public GetEventSourceResponse withEventSourceConfiguration(org.openapis.openapi.models.shared.EventSourceConfiguration eventSourceConfiguration) {
         this.eventSourceConfiguration = eventSourceConfiguration;
         return this;
@@ -29,6 +32,7 @@ public class GetEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException;
+
     public GetEventSourceResponse withInvalidParameterValueException(org.openapis.openapi.models.shared.InvalidParameterValueException invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class GetEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceException serviceException;
+
     public GetEventSourceResponse withServiceException(org.openapis.openapi.models.shared.ServiceException serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class GetEventSourceResponse {
     
     
     public Integer statusCode;
+
     public GetEventSourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetEventSourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetEventSourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetEventSourceResponse {
      */
     
     public org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException;
+
     public GetEventSourceResponse withResourceNotFoundException(org.openapis.openapi.models.shared.ResourceNotFoundException resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetEventSourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

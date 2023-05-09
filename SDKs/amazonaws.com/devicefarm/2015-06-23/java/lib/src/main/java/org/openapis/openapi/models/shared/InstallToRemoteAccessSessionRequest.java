@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InstallToRemoteAccessSessionRequest {
     @JsonProperty("appArn")
     public String appArn;
+
     public InstallToRemoteAccessSessionRequest withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
@@ -19,9 +20,14 @@ public class InstallToRemoteAccessSessionRequest {
     
     @JsonProperty("remoteAccessSessionArn")
     public String remoteAccessSessionArn;
+
     public InstallToRemoteAccessSessionRequest withRemoteAccessSessionArn(String remoteAccessSessionArn) {
         this.remoteAccessSessionArn = remoteAccessSessionArn;
         return this;
     }
     
+    public InstallToRemoteAccessSessionRequest(@JsonProperty("appArn") String appArn, @JsonProperty("remoteAccessSessionArn") String remoteAccessSessionArn) {
+        this.appArn = appArn;
+        this.remoteAccessSessionArn = remoteAccessSessionArn;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SalesforceCustomKnowledgeArticleTypeConfiguration {
     @JsonProperty("DocumentDataFieldName")
     public String documentDataFieldName;
+
     public SalesforceCustomKnowledgeArticleTypeConfiguration withDocumentDataFieldName(String documentDataFieldName) {
         this.documentDataFieldName = documentDataFieldName;
         return this;
@@ -22,6 +23,7 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentTitleFieldName")
     public String documentTitleFieldName;
+
     public SalesforceCustomKnowledgeArticleTypeConfiguration withDocumentTitleFieldName(String documentTitleFieldName) {
         this.documentTitleFieldName = documentTitleFieldName;
         return this;
@@ -30,6 +32,7 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldMappings")
     public DataSourceToIndexFieldMapping[] fieldMappings;
+
     public SalesforceCustomKnowledgeArticleTypeConfiguration withFieldMappings(DataSourceToIndexFieldMapping[] fieldMappings) {
         this.fieldMappings = fieldMappings;
         return this;
@@ -37,9 +40,14 @@ public class SalesforceCustomKnowledgeArticleTypeConfiguration {
     
     @JsonProperty("Name")
     public String name;
+
     public SalesforceCustomKnowledgeArticleTypeConfiguration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public SalesforceCustomKnowledgeArticleTypeConfiguration(@JsonProperty("DocumentDataFieldName") String documentDataFieldName, @JsonProperty("Name") String name) {
+        this.documentDataFieldName = documentDataFieldName;
+        this.name = name;
+  }
 }

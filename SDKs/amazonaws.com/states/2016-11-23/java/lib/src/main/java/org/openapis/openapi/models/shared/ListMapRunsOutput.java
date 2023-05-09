@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListMapRunsOutput {
     @JsonProperty("mapRuns")
     public MapRunListItem[] mapRuns;
+
     public ListMapRunsOutput withMapRuns(MapRunListItem[] mapRuns) {
         this.mapRuns = mapRuns;
         return this;
@@ -22,9 +23,13 @@ public class ListMapRunsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMapRunsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMapRunsOutput(@JsonProperty("mapRuns") MapRunListItem[] mapRuns) {
+        this.mapRuns = mapRuns;
+  }
 }

@@ -18,9 +18,11 @@ public class ActivityEventsParametersMessageValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public NestedParameter[] parameter;
+
     public ActivityEventsParametersMessageValue withParameter(NestedParameter[] parameter) {
         this.parameter = parameter;
         return this;
     }
     
+    public ActivityEventsParametersMessageValue(){}
 }

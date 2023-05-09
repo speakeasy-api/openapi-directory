@@ -18,6 +18,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Schema withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Schema withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -40,6 +42,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public SchemaFieldSpec[] fields;
+
     public Schema withFields(SchemaFieldSpec[] fields) {
         this.fields = fields;
         return this;
@@ -51,6 +54,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Schema withKind(String kind) {
         this.kind = kind;
         return this;
@@ -62,6 +66,7 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaId")
     public String schemaId;
+
     public Schema withSchemaId(String schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -73,9 +78,11 @@ public class Schema {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaName")
     public String schemaName;
+
     public Schema withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
     }
     
+    public Schema(){}
 }

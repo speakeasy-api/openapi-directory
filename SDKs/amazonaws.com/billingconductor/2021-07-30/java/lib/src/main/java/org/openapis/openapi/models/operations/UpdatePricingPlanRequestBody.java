@@ -14,6 +14,7 @@ public class UpdatePricingPlanRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdatePricingPlanRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,6 +26,7 @@ public class UpdatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePricingPlanRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -36,9 +38,13 @@ public class UpdatePricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePricingPlanRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdatePricingPlanRequestBody(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

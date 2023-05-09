@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ServiceMeshMembershipSpec {
     /**
-     * Enables automatic control plane management.
+     * Deprecated: use `management` instead Enables automatic control plane management.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlPlane")
     public ServiceMeshMembershipSpecControlPlaneEnum controlPlane;
+
     public ServiceMeshMembershipSpec withControlPlane(ServiceMeshMembershipSpecControlPlaneEnum controlPlane) {
         this.controlPlane = controlPlane;
         return this;
@@ -29,9 +30,11 @@ public class ServiceMeshMembershipSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("management")
     public ServiceMeshMembershipSpecManagementEnum management;
+
     public ServiceMeshMembershipSpec withManagement(ServiceMeshMembershipSpecManagementEnum management) {
         this.management = management;
         return this;
     }
     
+    public ServiceMeshMembershipSpec(){}
 }

@@ -15,6 +15,7 @@ public class AwsCodeBuildProjectLogsConfigS3LogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionDisabled")
     public Boolean encryptionDisabled;
+
     public AwsCodeBuildProjectLogsConfigS3LogsDetails withEncryptionDisabled(Boolean encryptionDisabled) {
         this.encryptionDisabled = encryptionDisabled;
         return this;
@@ -23,6 +24,7 @@ public class AwsCodeBuildProjectLogsConfigS3LogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Location")
     public String location;
+
     public AwsCodeBuildProjectLogsConfigS3LogsDetails withLocation(String location) {
         this.location = location;
         return this;
@@ -31,9 +33,11 @@ public class AwsCodeBuildProjectLogsConfigS3LogsDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsCodeBuildProjectLogsConfigS3LogsDetails withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsCodeBuildProjectLogsConfigS3LogsDetails(){}
 }

@@ -61,12 +61,10 @@ public class PortfolioMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfolioMembershipResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipResponse() {{
+        org.openapis.openapi.models.operations.GetPortfolioMembershipResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipResponse(contentType, httpRes.statusCode()) {{
             getPortfolioMembership200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -115,12 +113,10 @@ public class PortfolioMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfolioMembershipsResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipsResponse() {{
+        org.openapis.openapi.models.operations.GetPortfolioMembershipsResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipsResponse(contentType, httpRes.statusCode()) {{
             getPortfolioMemberships200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -169,12 +165,10 @@ public class PortfolioMemberships {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioResponse() {{
+        org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioResponse res = new org.openapis.openapi.models.operations.GetPortfolioMembershipsForPortfolioResponse(contentType, httpRes.statusCode()) {{
             getPortfolioMembershipsForPortfolio200ApplicationJSONObject = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

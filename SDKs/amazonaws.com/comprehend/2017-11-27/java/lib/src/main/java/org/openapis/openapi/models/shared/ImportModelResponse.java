@@ -15,9 +15,11 @@ public class ImportModelResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public ImportModelResponse withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
     }
     
+    public ImportModelResponse(){}
 }

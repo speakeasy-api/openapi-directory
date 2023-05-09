@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1WebKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAllDomains")
     public Boolean allowAllDomains;
+
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings withAllowAllDomains(Boolean allowAllDomains) {
         this.allowAllDomains = allowAllDomains;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1WebKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowAmpTraffic")
     public Boolean allowAmpTraffic;
+
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings withAllowAmpTraffic(Boolean allowAmpTraffic) {
         this.allowAmpTraffic = allowAmpTraffic;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1WebKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedDomains")
     public String[] allowedDomains;
+
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings withAllowedDomains(String[] allowedDomains) {
         this.allowedDomains = allowedDomains;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1WebKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challengeSecurityPreference")
     public GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum challengeSecurityPreference;
+
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings withChallengeSecurityPreference(GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSecurityPreferenceEnum challengeSecurityPreference) {
         this.challengeSecurityPreference = challengeSecurityPreference;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudRecaptchaenterpriseV1WebKeySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integrationType")
     public GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum integrationType;
+
     public GoogleCloudRecaptchaenterpriseV1WebKeySettings withIntegrationType(GoogleCloudRecaptchaenterpriseV1WebKeySettingsIntegrationTypeEnum integrationType) {
         this.integrationType = integrationType;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1WebKeySettings(){}
 }

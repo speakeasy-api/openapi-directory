@@ -12,6 +12,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public ExecuteStatementInput withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterIdentifier")
     public String clusterIdentifier;
+
     public ExecuteStatementInput withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -27,6 +29,7 @@ public class ExecuteStatementInput {
     
     @JsonProperty("Database")
     public String database;
+
     public ExecuteStatementInput withDatabase(String database) {
         this.database = database;
         return this;
@@ -35,6 +38,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DbUser")
     public String dbUser;
+
     public ExecuteStatementInput withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -43,6 +47,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Parameters")
     public SqlParameter[] parameters;
+
     public ExecuteStatementInput withParameters(SqlParameter[] parameters) {
         this.parameters = parameters;
         return this;
@@ -51,6 +56,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ExecuteStatementInput withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -58,6 +64,7 @@ public class ExecuteStatementInput {
     
     @JsonProperty("Sql")
     public String sql;
+
     public ExecuteStatementInput withSql(String sql) {
         this.sql = sql;
         return this;
@@ -66,6 +73,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatementName")
     public String statementName;
+
     public ExecuteStatementInput withStatementName(String statementName) {
         this.statementName = statementName;
         return this;
@@ -74,6 +82,7 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WithEvent")
     public Boolean withEvent;
+
     public ExecuteStatementInput withWithEvent(Boolean withEvent) {
         this.withEvent = withEvent;
         return this;
@@ -82,9 +91,14 @@ public class ExecuteStatementInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkgroupName")
     public String workgroupName;
+
     public ExecuteStatementInput withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public ExecuteStatementInput(@JsonProperty("Database") String database, @JsonProperty("Sql") String sql) {
+        this.database = database;
+        this.sql = sql;
+  }
 }

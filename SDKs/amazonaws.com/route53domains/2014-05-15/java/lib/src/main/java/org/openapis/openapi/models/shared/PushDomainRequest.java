@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PushDomainRequest {
     @JsonProperty("DomainName")
     public String domainName;
+
     public PushDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -16,9 +17,14 @@ public class PushDomainRequest {
     
     @JsonProperty("Target")
     public String target;
+
     public PushDomainRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public PushDomainRequest(@JsonProperty("DomainName") String domainName, @JsonProperty("Target") String target) {
+        this.domainName = domainName;
+        this.target = target;
+  }
 }

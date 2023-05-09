@@ -20,6 +20,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountingBookValue")
     public Double accountingBookValue;
+
     public Asset withAccountingBookValue(Double accountingBookValue) {
         this.accountingBookValue = accountingBookValue;
         return this;
@@ -31,6 +32,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetId")
     public String assetId;
+
     public Asset withAssetId(String assetId) {
         this.assetId = assetId;
         return this;
@@ -41,6 +43,7 @@ public class Asset {
      */
     @JsonProperty("assetName")
     public String assetName;
+
     public Asset withAssetName(String assetName) {
         this.assetName = assetName;
         return this;
@@ -52,6 +55,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetNumber")
     public String assetNumber;
+
     public Asset withAssetNumber(String assetNumber) {
         this.assetNumber = assetNumber;
         return this;
@@ -63,6 +67,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetStatus")
     public AssetStatusEnum assetStatus;
+
     public Asset withAssetStatus(AssetStatusEnum assetStatus) {
         this.assetStatus = assetStatus;
         return this;
@@ -74,6 +79,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetTypeId")
     public String assetTypeId;
+
     public Asset withAssetTypeId(String assetTypeId) {
         this.assetTypeId = assetTypeId;
         return this;
@@ -82,6 +88,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookDepreciationDetail")
     public BookDepreciationDetail bookDepreciationDetail;
+
     public Asset withBookDepreciationDetail(BookDepreciationDetail bookDepreciationDetail) {
         this.bookDepreciationDetail = bookDepreciationDetail;
         return this;
@@ -90,6 +97,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookDepreciationSetting")
     public BookDepreciationSetting bookDepreciationSetting;
+
     public Asset withBookDepreciationSetting(BookDepreciationSetting bookDepreciationSetting) {
         this.bookDepreciationSetting = bookDepreciationSetting;
         return this;
@@ -101,6 +109,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canRollback")
     public Boolean canRollback;
+
     public Asset withCanRollback(Boolean canRollback) {
         this.canRollback = canRollback;
         return this;
@@ -113,6 +122,7 @@ public class Asset {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("disposalDate")
     public LocalDate disposalDate;
+
     public Asset withDisposalDate(LocalDate disposalDate) {
         this.disposalDate = disposalDate;
         return this;
@@ -124,6 +134,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disposalPrice")
     public Double disposalPrice;
+
     public Asset withDisposalPrice(Double disposalPrice) {
         this.disposalPrice = disposalPrice;
         return this;
@@ -135,6 +146,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeleteEnabledForDate")
     public Boolean isDeleteEnabledForDate;
+
     public Asset withIsDeleteEnabledForDate(Boolean isDeleteEnabledForDate) {
         this.isDeleteEnabledForDate = isDeleteEnabledForDate;
         return this;
@@ -147,6 +159,7 @@ public class Asset {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("purchaseDate")
     public LocalDate purchaseDate;
+
     public Asset withPurchaseDate(LocalDate purchaseDate) {
         this.purchaseDate = purchaseDate;
         return this;
@@ -158,6 +171,7 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchasePrice")
     public Double purchasePrice;
+
     public Asset withPurchasePrice(Double purchasePrice) {
         this.purchasePrice = purchasePrice;
         return this;
@@ -169,20 +183,25 @@ public class Asset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public Asset withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
     }
     
     /**
-     * The date the asset\u2019s warranty expires (if needed) YYYY-MM-DD
+     * The date the asset’s warranty expires (if needed) YYYY-MM-DD
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warrantyExpiryDate")
     public String warrantyExpiryDate;
+
     public Asset withWarrantyExpiryDate(String warrantyExpiryDate) {
         this.warrantyExpiryDate = warrantyExpiryDate;
         return this;
     }
     
+    public Asset(@JsonProperty("assetName") String assetName) {
+        this.assetName = assetName;
+  }
 }

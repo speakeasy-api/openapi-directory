@@ -12,6 +12,7 @@ public class IndexUnusedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("base_table")
     public TableReference baseTable;
+
     public IndexUnusedReason withBaseTable(TableReference baseTable) {
         this.baseTable = baseTable;
         return this;
@@ -23,6 +24,7 @@ public class IndexUnusedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public IndexUnusedReason withCode(String code) {
         this.code = code;
         return this;
@@ -34,6 +36,7 @@ public class IndexUnusedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index_name")
     public String indexName;
+
     public IndexUnusedReason withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -45,9 +48,11 @@ public class IndexUnusedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public IndexUnusedReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public IndexUnusedReason(){}
 }

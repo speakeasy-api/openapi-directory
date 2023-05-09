@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
@@ -12,6 +13,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end")
     public String end;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withEnd(String end) {
         this.end = end;
         return this;
@@ -62,6 +68,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=label")
     public String label;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -92,6 +101,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location")
     public String location;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -102,6 +112,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=match")
     public String match;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withMatch(String match) {
         this.match = match;
         return this;
@@ -112,6 +123,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +134,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public String start;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withStart(String start) {
         this.start = start;
         return this;
@@ -162,6 +178,7 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,15 @@ public class MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MonitoringProjectsLocationPrometheusApiV1LabelValuesRequest(@JsonProperty("label") String label, @JsonProperty("location") String location, @JsonProperty("name") String name) {
+        this.label = label;
+        this.location = location;
+        this.name = name;
+  }
 }

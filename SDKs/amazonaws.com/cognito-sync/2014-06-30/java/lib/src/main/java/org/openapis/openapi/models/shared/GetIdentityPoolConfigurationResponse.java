@@ -15,6 +15,7 @@ public class GetIdentityPoolConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CognitoStreams")
     public CognitoStreams cognitoStreams;
+
     public GetIdentityPoolConfigurationResponse withCognitoStreams(CognitoStreams cognitoStreams) {
         this.cognitoStreams = cognitoStreams;
         return this;
@@ -23,6 +24,7 @@ public class GetIdentityPoolConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityPoolId")
     public String identityPoolId;
+
     public GetIdentityPoolConfigurationResponse withIdentityPoolId(String identityPoolId) {
         this.identityPoolId = identityPoolId;
         return this;
@@ -31,9 +33,11 @@ public class GetIdentityPoolConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PushSync")
     public PushSync pushSync;
+
     public GetIdentityPoolConfigurationResponse withPushSync(PushSync pushSync) {
         this.pushSync = pushSync;
         return this;
     }
     
+    public GetIdentityPoolConfigurationResponse(){}
 }

@@ -15,6 +15,7 @@ public class TargetPoolsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetPools")
     public TargetPool[] targetPools;
+
     public TargetPoolsScopedList withTargetPools(TargetPool[] targetPools) {
         this.targetPools = targetPools;
         return this;
@@ -26,9 +27,11 @@ public class TargetPoolsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public TargetPoolsScopedListWarning warning;
+
     public TargetPoolsScopedList withWarning(TargetPoolsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public TargetPoolsScopedList(){}
 }

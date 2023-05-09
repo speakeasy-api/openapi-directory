@@ -15,6 +15,7 @@ public class BatchCreateIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchReferenceName")
     public String batchReferenceName;
+
     public BatchCreateIndex withBatchReferenceName(String batchReferenceName) {
         this.batchReferenceName = batchReferenceName;
         return this;
@@ -22,6 +23,7 @@ public class BatchCreateIndex {
     
     @JsonProperty("IsUnique")
     public Boolean isUnique;
+
     public BatchCreateIndex withIsUnique(Boolean isUnique) {
         this.isUnique = isUnique;
         return this;
@@ -30,6 +32,7 @@ public class BatchCreateIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public BatchCreateIndex withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -37,6 +40,7 @@ public class BatchCreateIndex {
     
     @JsonProperty("OrderedIndexedAttributeList")
     public AttributeKey[] orderedIndexedAttributeList;
+
     public BatchCreateIndex withOrderedIndexedAttributeList(AttributeKey[] orderedIndexedAttributeList) {
         this.orderedIndexedAttributeList = orderedIndexedAttributeList;
         return this;
@@ -45,9 +49,14 @@ public class BatchCreateIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentReference")
     public ObjectReference parentReference;
+
     public BatchCreateIndex withParentReference(ObjectReference parentReference) {
         this.parentReference = parentReference;
         return this;
     }
     
+    public BatchCreateIndex(@JsonProperty("IsUnique") Boolean isUnique, @JsonProperty("OrderedIndexedAttributeList") AttributeKey[] orderedIndexedAttributeList) {
+        this.isUnique = isUnique;
+        this.orderedIndexedAttributeList = orderedIndexedAttributeList;
+  }
 }

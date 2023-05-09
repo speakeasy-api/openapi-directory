@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PartialFailure {
     
     public String exceptionType;
+
     public PartialFailure withExceptionType(String exceptionType) {
         this.exceptionType = exceptionType;
         return this;
@@ -19,6 +20,7 @@ public class PartialFailure {
     
     
     public String failureCode;
+
     public PartialFailure withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -26,6 +28,7 @@ public class PartialFailure {
     
     
     public String failureDescription;
+
     public PartialFailure withFailureDescription(String failureDescription) {
         this.failureDescription = failureDescription;
         return this;
@@ -33,9 +36,11 @@ public class PartialFailure {
     
     
     public String failureResource;
+
     public PartialFailure withFailureResource(String failureResource) {
         this.failureResource = failureResource;
         return this;
     }
     
+    public PartialFailure(){}
 }

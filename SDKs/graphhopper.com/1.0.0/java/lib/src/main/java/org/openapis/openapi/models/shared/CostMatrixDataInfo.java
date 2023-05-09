@@ -15,6 +15,7 @@ public class CostMatrixDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copyrights")
     public String[] copyrights;
+
     public CostMatrixDataInfo withCopyrights(String[] copyrights) {
         this.copyrights = copyrights;
         return this;
@@ -23,9 +24,11 @@ public class CostMatrixDataInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("took")
     public Double took;
+
     public CostMatrixDataInfo withTook(Double took) {
         this.took = took;
         return this;
     }
     
+    public CostMatrixDataInfo(){}
 }

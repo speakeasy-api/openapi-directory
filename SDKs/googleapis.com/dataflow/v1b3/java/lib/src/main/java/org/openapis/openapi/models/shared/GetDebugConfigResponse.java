@@ -18,9 +18,11 @@ public class GetDebugConfigResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public GetDebugConfigResponse withConfig(String config) {
         this.config = config;
         return this;
     }
     
+    public GetDebugConfigResponse(){}
 }

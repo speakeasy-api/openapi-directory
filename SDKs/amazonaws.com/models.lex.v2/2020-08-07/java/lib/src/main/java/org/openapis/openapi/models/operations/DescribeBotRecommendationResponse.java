@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBotRecommendationResponse {
     
     public String contentType;
+
     public DescribeBotRecommendationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBotRecommendationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBotRecommendationResponse describeBotRecommendationResponse;
+
     public DescribeBotRecommendationResponse withDescribeBotRecommendationResponse(org.openapis.openapi.models.shared.DescribeBotRecommendationResponse describeBotRecommendationResponse) {
         this.describeBotRecommendationResponse = describeBotRecommendationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBotRecommendationResponse {
      */
     
     public Object internalServerException;
+
     public DescribeBotRecommendationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeBotRecommendationResponse {
     
     
     public Integer statusCode;
+
     public DescribeBotRecommendationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DescribeBotRecommendationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBotRecommendationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DescribeBotRecommendationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBotRecommendationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class DescribeBotRecommendationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBotRecommendationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeBotRecommendationResponse {
      */
     
     public Object validationException;
+
     public DescribeBotRecommendationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeBotRecommendationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

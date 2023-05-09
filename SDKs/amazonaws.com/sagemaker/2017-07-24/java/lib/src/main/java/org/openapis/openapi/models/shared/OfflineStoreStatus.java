@@ -15,6 +15,7 @@ public class OfflineStoreStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockedReason")
     public String blockedReason;
+
     public OfflineStoreStatus withBlockedReason(String blockedReason) {
         this.blockedReason = blockedReason;
         return this;
@@ -22,9 +23,13 @@ public class OfflineStoreStatus {
     
     @JsonProperty("Status")
     public OfflineStoreStatusValueEnum status;
+
     public OfflineStoreStatus withStatus(OfflineStoreStatusValueEnum status) {
         this.status = status;
         return this;
     }
     
+    public OfflineStoreStatus(@JsonProperty("Status") OfflineStoreStatusValueEnum status) {
+        this.status = status;
+  }
 }

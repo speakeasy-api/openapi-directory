@@ -15,6 +15,7 @@ public class GetCrawlerMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerMetricsList")
     public CrawlerMetrics[] crawlerMetricsList;
+
     public GetCrawlerMetricsResponse withCrawlerMetricsList(CrawlerMetrics[] crawlerMetricsList) {
         this.crawlerMetricsList = crawlerMetricsList;
         return this;
@@ -23,9 +24,11 @@ public class GetCrawlerMetricsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetCrawlerMetricsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetCrawlerMetricsResponse(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeployAsApplicationConfiguration {
     @JsonProperty("S3ContentLocation")
     public S3ContentBaseLocation s3ContentLocation;
+
     public DeployAsApplicationConfiguration withS3ContentLocation(S3ContentBaseLocation s3ContentLocation) {
         this.s3ContentLocation = s3ContentLocation;
         return this;
     }
     
+    public DeployAsApplicationConfiguration(@JsonProperty("S3ContentLocation") S3ContentBaseLocation s3ContentLocation) {
+        this.s3ContentLocation = s3ContentLocation;
+  }
 }

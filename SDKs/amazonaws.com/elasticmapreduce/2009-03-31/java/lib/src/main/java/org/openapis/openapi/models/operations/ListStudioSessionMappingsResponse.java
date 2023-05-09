@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStudioSessionMappingsResponse {
     
     public String contentType;
+
     public ListStudioSessionMappingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListStudioSessionMappingsResponse {
      */
     
     public Object internalServerError;
+
     public ListStudioSessionMappingsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class ListStudioSessionMappingsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListStudioSessionMappingsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListStudioSessionMappingsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStudioSessionMappingsOutput listStudioSessionMappingsOutput;
+
     public ListStudioSessionMappingsResponse withListStudioSessionMappingsOutput(org.openapis.openapi.models.shared.ListStudioSessionMappingsOutput listStudioSessionMappingsOutput) {
         this.listStudioSessionMappingsOutput = listStudioSessionMappingsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListStudioSessionMappingsResponse {
     
     
     public Integer statusCode;
+
     public ListStudioSessionMappingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ListStudioSessionMappingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStudioSessionMappingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListStudioSessionMappingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

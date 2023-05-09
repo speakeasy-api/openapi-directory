@@ -15,6 +15,7 @@ public class BulkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public BulkResponse withCode(Long code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class BulkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public java.util.Map<String, Object> errors;
+
     public BulkResponse withErrors(java.util.Map<String, Object> errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class BulkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public java.util.Map<String, Object> input;
+
     public BulkResponse withInput(java.util.Map<String, Object> input) {
         this.input = input;
         return this;
@@ -48,6 +51,7 @@ public class BulkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public BulkResponse withMessage(String message) {
         this.message = message;
         return this;
@@ -59,9 +63,11 @@ public class BulkResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public BulkResponse withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public BulkResponse(){}
 }

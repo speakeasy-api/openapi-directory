@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBackupsResponse {
     
     public String contentType;
+
     public DescribeBackupsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBackupsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse;
+
     public DescribeBackupsResponse withDescribeBackupsResponse(org.openapis.openapi.models.shared.DescribeBackupsResponse describeBackupsResponse) {
         this.describeBackupsResponse = describeBackupsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeBackupsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBackupsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeBackupsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeBackupsResponse {
     
     
     public Integer statusCode;
+
     public DescribeBackupsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeBackupsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBackupsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DescribeBackupsResponse {
      */
     
     public Object validationException;
+
     public DescribeBackupsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeBackupsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

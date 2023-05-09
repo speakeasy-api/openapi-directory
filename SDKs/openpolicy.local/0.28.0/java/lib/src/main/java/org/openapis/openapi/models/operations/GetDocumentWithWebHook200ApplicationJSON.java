@@ -15,6 +15,7 @@ public class GetDocumentWithWebHook200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public GetDocumentWithWebHook200ApplicationJSONExplanation[] explanation;
+
     public GetDocumentWithWebHook200ApplicationJSON withExplanation(GetDocumentWithWebHook200ApplicationJSONExplanation[] explanation) {
         this.explanation = explanation;
         return this;
@@ -23,6 +24,7 @@ public class GetDocumentWithWebHook200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GetDocumentWithWebHook200ApplicationJSONMetrics metrics;
+
     public GetDocumentWithWebHook200ApplicationJSON withMetrics(GetDocumentWithWebHook200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -31,6 +33,7 @@ public class GetDocumentWithWebHook200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GetDocumentWithWebHook200ApplicationJSONProvenance provenance;
+
     public GetDocumentWithWebHook200ApplicationJSON withProvenance(GetDocumentWithWebHook200ApplicationJSONProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -39,9 +42,11 @@ public class GetDocumentWithWebHook200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetDocumentWithWebHook200ApplicationJSONResult[] result;
+
     public GetDocumentWithWebHook200ApplicationJSON withResult(GetDocumentWithWebHook200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSON(){}
 }

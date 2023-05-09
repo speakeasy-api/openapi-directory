@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RequestreportbyStatusRequest {
@@ -12,6 +13,7 @@ public class RequestreportbyStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public RequestreportbyStatusRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class RequestreportbyStatusRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public RequestreportbyStatusRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class RequestreportbyStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=requesterEmail")
     public String requesterEmail;
+
     public RequestreportbyStatusRequest withRequesterEmail(String requesterEmail) {
         this.requesterEmail = requesterEmail;
         return this;
@@ -42,9 +46,16 @@ public class RequestreportbyStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Integer status;
+
     public RequestreportbyStatusRequest withStatus(Integer status) {
         this.status = status;
         return this;
     }
     
+    public RequestreportbyStatusRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("requesterEmail") String requesterEmail, @JsonProperty("status") Integer status) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.requesterEmail = requesterEmail;
+        this.status = status;
+  }
 }

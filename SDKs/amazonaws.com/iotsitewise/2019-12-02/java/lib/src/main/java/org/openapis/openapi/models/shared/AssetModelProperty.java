@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssetModelProperty {
     @JsonProperty("dataType")
     public PropertyDataTypeEnum dataType;
+
     public AssetModelProperty withDataType(PropertyDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -22,6 +23,7 @@ public class AssetModelProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataTypeSpec")
     public String dataTypeSpec;
+
     public AssetModelProperty withDataTypeSpec(String dataTypeSpec) {
         this.dataTypeSpec = dataTypeSpec;
         return this;
@@ -30,6 +32,7 @@ public class AssetModelProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssetModelProperty withId(String id) {
         this.id = id;
         return this;
@@ -37,6 +40,7 @@ public class AssetModelProperty {
     
     @JsonProperty("name")
     public String name;
+
     public AssetModelProperty withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class AssetModelProperty {
     
     @JsonProperty("type")
     public PropertyType type;
+
     public AssetModelProperty withType(PropertyType type) {
         this.type = type;
         return this;
@@ -52,9 +57,15 @@ public class AssetModelProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public AssetModelProperty withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public AssetModelProperty(@JsonProperty("dataType") PropertyDataTypeEnum dataType, @JsonProperty("name") String name, @JsonProperty("type") PropertyType type) {
+        this.dataType = dataType;
+        this.name = name;
+        this.type = type;
+  }
 }

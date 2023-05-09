@@ -14,6 +14,7 @@ public class PutDeliverabilityDashboardOptionRequestBody {
      */
     @JsonProperty("DashboardEnabled")
     public Boolean dashboardEnabled;
+
     public PutDeliverabilityDashboardOptionRequestBody withDashboardEnabled(Boolean dashboardEnabled) {
         this.dashboardEnabled = dashboardEnabled;
         return this;
@@ -25,9 +26,13 @@ public class PutDeliverabilityDashboardOptionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubscribedDomains")
     public org.openapis.openapi.models.shared.DomainDeliverabilityTrackingOption[] subscribedDomains;
+
     public PutDeliverabilityDashboardOptionRequestBody withSubscribedDomains(org.openapis.openapi.models.shared.DomainDeliverabilityTrackingOption[] subscribedDomains) {
         this.subscribedDomains = subscribedDomains;
         return this;
     }
     
+    public PutDeliverabilityDashboardOptionRequestBody(@JsonProperty("DashboardEnabled") Boolean dashboardEnabled) {
+        this.dashboardEnabled = dashboardEnabled;
+  }
 }

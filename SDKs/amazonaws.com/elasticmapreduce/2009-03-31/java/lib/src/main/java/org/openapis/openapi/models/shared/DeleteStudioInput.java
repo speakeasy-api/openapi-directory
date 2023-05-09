@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteStudioInput {
     @JsonProperty("StudioId")
     public String studioId;
+
     public DeleteStudioInput withStudioId(String studioId) {
         this.studioId = studioId;
         return this;
     }
     
+    public DeleteStudioInput(@JsonProperty("StudioId") String studioId) {
+        this.studioId = studioId;
+  }
 }

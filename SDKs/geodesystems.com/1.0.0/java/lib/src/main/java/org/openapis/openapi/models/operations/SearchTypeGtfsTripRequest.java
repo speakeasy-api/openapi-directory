@@ -13,6 +13,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.from")
     public OffsetDateTime changedateFrom;
+
     public SearchTypeGtfsTripRequest withChangedateFrom(OffsetDateTime changedateFrom) {
         this.changedateFrom = changedateFrom;
         return this;
@@ -23,6 +24,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=changedate.to")
     public OffsetDateTime changedateTo;
+
     public SearchTypeGtfsTripRequest withChangedateTo(OffsetDateTime changedateTo) {
         this.changedateTo = changedateTo;
         return this;
@@ -33,6 +35,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.from")
     public OffsetDateTime createdateFrom;
+
     public SearchTypeGtfsTripRequest withCreatedateFrom(OffsetDateTime createdateFrom) {
         this.createdateFrom = createdateFrom;
         return this;
@@ -43,6 +46,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createdate.to")
     public OffsetDateTime createdateTo;
+
     public SearchTypeGtfsTripRequest withCreatedateTo(OffsetDateTime createdateTo) {
         this.createdateTo = createdateTo;
         return this;
@@ -53,6 +57,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public SearchTypeGtfsTripRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -63,6 +68,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filesuffix")
     public String filesuffix;
+
     public SearchTypeGtfsTripRequest withFilesuffix(String filesuffix) {
         this.filesuffix = filesuffix;
         return this;
@@ -73,6 +79,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromdate")
     public OffsetDateTime fromdate;
+
     public SearchTypeGtfsTripRequest withFromdate(OffsetDateTime fromdate) {
         this.fromdate = fromdate;
         return this;
@@ -83,6 +90,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group")
     public String group;
+
     public SearchTypeGtfsTripRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -93,6 +101,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max")
     public Long max;
+
     public SearchTypeGtfsTripRequest withMax(Long max) {
         this.max = max;
         return this;
@@ -103,6 +112,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlatitude")
     public Float maxlatitude;
+
     public SearchTypeGtfsTripRequest withMaxlatitude(Float maxlatitude) {
         this.maxlatitude = maxlatitude;
         return this;
@@ -113,6 +123,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxlongitude")
     public Float maxlongitude;
+
     public SearchTypeGtfsTripRequest withMaxlongitude(Float maxlongitude) {
         this.maxlongitude = maxlongitude;
         return this;
@@ -123,6 +134,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlatitude")
     public Float minlatitude;
+
     public SearchTypeGtfsTripRequest withMinlatitude(Float minlatitude) {
         this.minlatitude = minlatitude;
         return this;
@@ -133,6 +145,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minlongitude")
     public Float minlongitude;
+
     public SearchTypeGtfsTripRequest withMinlongitude(Float minlongitude) {
         this.minlongitude = minlongitude;
         return this;
@@ -143,6 +156,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public SearchTypeGtfsTripRequest withName(String name) {
         this.name = name;
         return this;
@@ -153,6 +167,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_gtfs_trip.bikes_allowed")
     public String searchTypeGtfsTripBikesAllowed;
+
     public SearchTypeGtfsTripRequest withSearchTypeGtfsTripBikesAllowed(String searchTypeGtfsTripBikesAllowed) {
         this.searchTypeGtfsTripBikesAllowed = searchTypeGtfsTripBikesAllowed;
         return this;
@@ -163,6 +178,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_gtfs_trip.stop_ids")
     public String searchTypeGtfsTripStopIds;
+
     public SearchTypeGtfsTripRequest withSearchTypeGtfsTripStopIds(String searchTypeGtfsTripStopIds) {
         this.searchTypeGtfsTripStopIds = searchTypeGtfsTripStopIds;
         return this;
@@ -173,6 +189,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_gtfs_trip.trip_id")
     public String searchTypeGtfsTripTripId;
+
     public SearchTypeGtfsTripRequest withSearchTypeGtfsTripTripId(String searchTypeGtfsTripTripId) {
         this.searchTypeGtfsTripTripId = searchTypeGtfsTripTripId;
         return this;
@@ -183,6 +200,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search.type_gtfs_trip.wheelchair_accessible")
     public String searchTypeGtfsTripWheelchairAccessible;
+
     public SearchTypeGtfsTripRequest withSearchTypeGtfsTripWheelchairAccessible(String searchTypeGtfsTripWheelchairAccessible) {
         this.searchTypeGtfsTripWheelchairAccessible = searchTypeGtfsTripWheelchairAccessible;
         return this;
@@ -193,6 +211,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=skip")
     public Long skip;
+
     public SearchTypeGtfsTripRequest withSkip(Long skip) {
         this.skip = skip;
         return this;
@@ -203,6 +222,7 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=text")
     public String text;
+
     public SearchTypeGtfsTripRequest withText(String text) {
         this.text = text;
         return this;
@@ -213,9 +233,11 @@ public class SearchTypeGtfsTripRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=todate")
     public OffsetDateTime todate;
+
     public SearchTypeGtfsTripRequest withTodate(OffsetDateTime todate) {
         this.todate = todate;
         return this;
     }
     
+    public SearchTypeGtfsTripRequest(){}
 }

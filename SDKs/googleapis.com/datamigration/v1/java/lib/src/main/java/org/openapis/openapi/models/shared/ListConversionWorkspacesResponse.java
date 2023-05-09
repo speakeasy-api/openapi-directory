@@ -18,6 +18,7 @@ public class ListConversionWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("conversionWorkspaces")
     public ConversionWorkspace[] conversionWorkspaces;
+
     public ListConversionWorkspacesResponse withConversionWorkspaces(ConversionWorkspace[] conversionWorkspaces) {
         this.conversionWorkspaces = conversionWorkspaces;
         return this;
@@ -29,6 +30,7 @@ public class ListConversionWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListConversionWorkspacesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListConversionWorkspacesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListConversionWorkspacesResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListConversionWorkspacesResponse(){}
 }

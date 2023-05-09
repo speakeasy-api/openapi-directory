@@ -15,6 +15,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locals")
     public GetDocumentWithPath200ApplicationJSONExplanationLocals[] locals;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withLocals(GetDocumentWithPath200ApplicationJSONExplanationLocals[] locals) {
         this.locals = locals;
         return this;
@@ -27,6 +28,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public GetDocumentWithPath200ApplicationJSONExplanationNode node;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withNode(GetDocumentWithPath200ApplicationJSONExplanationNode node) {
         this.node = node;
         return this;
@@ -47,6 +49,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("op")
     public GetDocumentWithPath200ApplicationJSONExplanationOpEnum op;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withOp(GetDocumentWithPath200ApplicationJSONExplanationOpEnum op) {
         this.op = op;
         return this;
@@ -60,6 +63,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent_id")
     public Double parentId;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withParentId(Double parentId) {
         this.parentId = parentId;
         return this;
@@ -71,6 +75,7 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query_id")
     public Double queryId;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withQueryId(Double queryId) {
         this.queryId = queryId;
         return this;
@@ -82,9 +87,11 @@ public class GetDocumentWithPath200ApplicationJSONExplanation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public GetDocumentWithPath200ApplicationJSONExplanationTypeEnum type;
+
     public GetDocumentWithPath200ApplicationJSONExplanation withType(GetDocumentWithPath200ApplicationJSONExplanationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetDocumentWithPath200ApplicationJSONExplanation(){}
 }

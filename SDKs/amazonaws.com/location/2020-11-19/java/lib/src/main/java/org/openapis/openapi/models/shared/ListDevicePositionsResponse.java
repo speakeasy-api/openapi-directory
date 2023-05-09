@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListDevicePositionsResponse {
     @JsonProperty("Entries")
     public ListDevicePositionsResponseEntry[] entries;
+
     public ListDevicePositionsResponse withEntries(ListDevicePositionsResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -22,9 +23,13 @@ public class ListDevicePositionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListDevicePositionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDevicePositionsResponse(@JsonProperty("Entries") ListDevicePositionsResponseEntry[] entries) {
+        this.entries = entries;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
@@ -12,6 +13,7 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CompanyApiCredential companyApiCredential;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withCompanyApiCredential(org.openapis.openapi.models.shared.CompanyApiCredential companyApiCredential) {
         this.companyApiCredential = companyApiCredential;
         return this;
@@ -19,6 +21,7 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public String contentType;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -36,6 +40,7 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public Integer statusCode;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PatchCompaniesCompanyIdApiCredentialsApiCredentialIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

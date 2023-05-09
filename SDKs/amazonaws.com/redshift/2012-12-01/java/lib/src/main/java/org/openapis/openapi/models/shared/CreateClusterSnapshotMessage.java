@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateClusterSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateClusterSnapshotMessage {
     
     public String clusterIdentifier;
+
     public CreateClusterSnapshotMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class CreateClusterSnapshotMessage {
     
     
     public Long manualSnapshotRetentionPeriod;
+
     public CreateClusterSnapshotMessage withManualSnapshotRetentionPeriod(Long manualSnapshotRetentionPeriod) {
         this.manualSnapshotRetentionPeriod = manualSnapshotRetentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class CreateClusterSnapshotMessage {
     
     
     public String snapshotIdentifier;
+
     public CreateClusterSnapshotMessage withSnapshotIdentifier(String snapshotIdentifier) {
         this.snapshotIdentifier = snapshotIdentifier;
         return this;
@@ -33,9 +36,14 @@ public class CreateClusterSnapshotMessage {
     
     
     public TagList[] tags;
+
     public CreateClusterSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateClusterSnapshotMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("SnapshotIdentifier") String snapshotIdentifier) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.snapshotIdentifier = snapshotIdentifier;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchDataCaptureConfig {
     @JsonProperty("DestinationS3Uri")
     public String destinationS3Uri;
+
     public BatchDataCaptureConfig withDestinationS3Uri(String destinationS3Uri) {
         this.destinationS3Uri = destinationS3Uri;
         return this;
@@ -22,6 +23,7 @@ public class BatchDataCaptureConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GenerateInferenceId")
     public Boolean generateInferenceId;
+
     public BatchDataCaptureConfig withGenerateInferenceId(Boolean generateInferenceId) {
         this.generateInferenceId = generateInferenceId;
         return this;
@@ -30,9 +32,13 @@ public class BatchDataCaptureConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public BatchDataCaptureConfig withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
     }
     
+    public BatchDataCaptureConfig(@JsonProperty("DestinationS3Uri") String destinationS3Uri) {
+        this.destinationS3Uri = destinationS3Uri;
+  }
 }

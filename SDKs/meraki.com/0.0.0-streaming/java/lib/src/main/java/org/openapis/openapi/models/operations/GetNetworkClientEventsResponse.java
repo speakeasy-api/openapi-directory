@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkClientEventsResponse {
     
     public String contentType;
+
     public GetNetworkClientEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkClientEventsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetNetworkClientEventsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkClientEventsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkClientEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetNetworkClientEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkClientEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetNetworkClientEventsResponse {
      */
     
     public java.util.Map<String, Object>[] getNetworkClientEvents200ApplicationJSONObjects;
+
     public GetNetworkClientEventsResponse withGetNetworkClientEvents200ApplicationJSONObjects(java.util.Map<String, Object>[] getNetworkClientEvents200ApplicationJSONObjects) {
         this.getNetworkClientEvents200ApplicationJSONObjects = getNetworkClientEvents200ApplicationJSONObjects;
         return this;
     }
     
+    public GetNetworkClientEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

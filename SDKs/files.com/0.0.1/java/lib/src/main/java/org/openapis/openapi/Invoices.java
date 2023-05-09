@@ -61,11 +61,9 @@ public class Invoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvoicesResponse res = new org.openapis.openapi.models.operations.GetInvoicesResponse() {{
+        org.openapis.openapi.models.operations.GetInvoicesResponse res = new org.openapis.openapi.models.operations.GetInvoicesResponse(contentType, httpRes.statusCode()) {{
             accountLineItemEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,11 +100,9 @@ public class Invoices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetInvoicesIdResponse res = new org.openapis.openapi.models.operations.GetInvoicesIdResponse() {{
+        org.openapis.openapi.models.operations.GetInvoicesIdResponse res = new org.openapis.openapi.models.operations.GetInvoicesIdResponse(contentType, httpRes.statusCode()) {{
             accountLineItemEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

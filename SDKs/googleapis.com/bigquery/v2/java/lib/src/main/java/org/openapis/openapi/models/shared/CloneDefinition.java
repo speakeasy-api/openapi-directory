@@ -17,6 +17,7 @@ public class CloneDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseTableReference")
     public TableReference baseTableReference;
+
     public CloneDefinition withBaseTableReference(TableReference baseTableReference) {
         this.baseTableReference = baseTableReference;
         return this;
@@ -30,9 +31,11 @@ public class CloneDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("cloneTime")
     public OffsetDateTime cloneTime;
+
     public CloneDefinition withCloneTime(OffsetDateTime cloneTime) {
         this.cloneTime = cloneTime;
         return this;
     }
     
+    public CloneDefinition(){}
 }

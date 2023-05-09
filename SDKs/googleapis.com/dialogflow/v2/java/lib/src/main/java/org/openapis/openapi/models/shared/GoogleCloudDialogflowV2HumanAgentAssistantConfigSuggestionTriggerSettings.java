@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noSmalltalk")
     public Boolean noSmalltalk;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings withNoSmalltalk(Boolean noSmalltalk) {
         this.noSmalltalk = noSmalltalk;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSe
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onlyEndUser")
     public Boolean onlyEndUser;
+
     public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings withOnlyEndUser(Boolean onlyEndUser) {
         this.onlyEndUser = onlyEndUser;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettings(){}
 }

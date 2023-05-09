@@ -12,9 +12,11 @@ public class PostPoliciesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quote_id")
     public String quoteId;
+
     public PostPoliciesRequestBody withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public PostPoliciesRequestBody(){}
 }

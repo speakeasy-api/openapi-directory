@@ -18,9 +18,11 @@ public class TrackTargetedCountry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public TrackTargetedCountry withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
     }
     
+    public TrackTargetedCountry(){}
 }

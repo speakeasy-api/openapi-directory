@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class DBSnapshot {
     
     public Long allocatedStorage;
+
     public DBSnapshot withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -16,6 +17,7 @@ public class DBSnapshot {
     
     
     public String availabilityZone;
+
     public DBSnapshot withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +25,7 @@ public class DBSnapshot {
     
     
     public String dbInstanceIdentifier;
+
     public DBSnapshot withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -30,6 +33,7 @@ public class DBSnapshot {
     
     
     public String dbSnapshotIdentifier;
+
     public DBSnapshot withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class DBSnapshot {
     
     
     public String engine;
+
     public DBSnapshot withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -44,6 +49,7 @@ public class DBSnapshot {
     
     
     public String engineVersion;
+
     public DBSnapshot withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -51,6 +57,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime instanceCreateTime;
+
     public DBSnapshot withInstanceCreateTime(OffsetDateTime instanceCreateTime) {
         this.instanceCreateTime = instanceCreateTime;
         return this;
@@ -58,6 +65,7 @@ public class DBSnapshot {
     
     
     public Long iops;
+
     public DBSnapshot withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -65,6 +73,7 @@ public class DBSnapshot {
     
     
     public String licenseModel;
+
     public DBSnapshot withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -72,6 +81,7 @@ public class DBSnapshot {
     
     
     public String masterUsername;
+
     public DBSnapshot withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -79,6 +89,7 @@ public class DBSnapshot {
     
     
     public Long port;
+
     public DBSnapshot withPort(Long port) {
         this.port = port;
         return this;
@@ -86,6 +97,7 @@ public class DBSnapshot {
     
     
     public OffsetDateTime snapshotCreateTime;
+
     public DBSnapshot withSnapshotCreateTime(OffsetDateTime snapshotCreateTime) {
         this.snapshotCreateTime = snapshotCreateTime;
         return this;
@@ -93,6 +105,7 @@ public class DBSnapshot {
     
     
     public String snapshotType;
+
     public DBSnapshot withSnapshotType(String snapshotType) {
         this.snapshotType = snapshotType;
         return this;
@@ -100,6 +113,7 @@ public class DBSnapshot {
     
     
     public String status;
+
     public DBSnapshot withStatus(String status) {
         this.status = status;
         return this;
@@ -107,9 +121,11 @@ public class DBSnapshot {
     
     
     public String vpcId;
+
     public DBSnapshot withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DBSnapshot(){}
 }

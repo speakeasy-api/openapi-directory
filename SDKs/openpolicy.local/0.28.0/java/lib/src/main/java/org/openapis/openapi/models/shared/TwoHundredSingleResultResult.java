@@ -15,6 +15,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundles")
     public TwoHundredSingleResultResultBundles bundles;
+
     public TwoHundredSingleResultResult withBundles(TwoHundredSingleResultResultBundles bundles) {
         this.bundles = bundles;
         return this;
@@ -26,6 +27,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("decision_logs")
     public TwoHundredSingleResultResultDecisionLogs decisionLogs;
+
     public TwoHundredSingleResultResult withDecisionLogs(TwoHundredSingleResultResultDecisionLogs decisionLogs) {
         this.decisionLogs = decisionLogs;
         return this;
@@ -34,6 +36,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_authorization_decision")
     public String defaultAuthorizationDecision;
+
     public TwoHundredSingleResultResult withDefaultAuthorizationDecision(String defaultAuthorizationDecision) {
         this.defaultAuthorizationDecision = defaultAuthorizationDecision;
         return this;
@@ -42,6 +45,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("default_decision")
     public String defaultDecision;
+
     public TwoHundredSingleResultResult withDefaultDecision(String defaultDecision) {
         this.defaultDecision = defaultDecision;
         return this;
@@ -53,6 +57,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keys")
     public TwoHundredSingleResultResultKeys keys;
+
     public TwoHundredSingleResultResult withKeys(TwoHundredSingleResultResultKeys keys) {
         this.keys = keys;
         return this;
@@ -64,6 +69,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public TwoHundredSingleResultResultLabels labels;
+
     public TwoHundredSingleResultResult withLabels(TwoHundredSingleResultResultLabels labels) {
         this.labels = labels;
         return this;
@@ -75,6 +81,7 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("services")
     public TwoHundredSingleResultResultServices services;
+
     public TwoHundredSingleResultResult withServices(TwoHundredSingleResultResultServices services) {
         this.services = services;
         return this;
@@ -86,9 +93,11 @@ public class TwoHundredSingleResultResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public TwoHundredSingleResultResultStatus status;
+
     public TwoHundredSingleResultResult withStatus(TwoHundredSingleResultResultStatus status) {
         this.status = status;
         return this;
     }
     
+    public TwoHundredSingleResultResult(){}
 }

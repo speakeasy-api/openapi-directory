@@ -15,6 +15,7 @@ public class PreprintProviderListPreprintProviders {
      */
     
     public PreprintProviderListPreprintProvidersAttributes attributes;
+
     public PreprintProviderListPreprintProviders withAttributes(PreprintProviderListPreprintProvidersAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -25,6 +26,7 @@ public class PreprintProviderListPreprintProviders {
      */
     
     public String id;
+
     public PreprintProviderListPreprintProviders withId(String id) {
         this.id = id;
         return this;
@@ -35,6 +37,7 @@ public class PreprintProviderListPreprintProviders {
      */
     
     public PreprintProviderListPreprintProvidersLinks links;
+
     public PreprintProviderListPreprintProviders withLinks(PreprintProviderListPreprintProvidersLinks links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class PreprintProviderListPreprintProviders {
      */
     
     public PreprintProviderListPreprintProvidersRelationships relationships;
+
     public PreprintProviderListPreprintProviders withRelationships(PreprintProviderListPreprintProvidersRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -55,9 +59,11 @@ public class PreprintProviderListPreprintProviders {
      */
     
     public String type;
+
     public PreprintProviderListPreprintProviders withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PreprintProviderListPreprintProviders(){}
 }

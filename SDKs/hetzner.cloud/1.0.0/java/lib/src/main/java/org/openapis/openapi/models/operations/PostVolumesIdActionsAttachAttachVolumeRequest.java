@@ -15,6 +15,7 @@ public class PostVolumesIdActionsAttachAttachVolumeRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automount")
     public Boolean automount;
+
     public PostVolumesIdActionsAttachAttachVolumeRequest withAutomount(Boolean automount) {
         this.automount = automount;
         return this;
@@ -25,9 +26,13 @@ public class PostVolumesIdActionsAttachAttachVolumeRequest {
      */
     @JsonProperty("server")
     public Long server;
+
     public PostVolumesIdActionsAttachAttachVolumeRequest withServer(Long server) {
         this.server = server;
         return this;
     }
     
+    public PostVolumesIdActionsAttachAttachVolumeRequest(@JsonProperty("server") Long server) {
+        this.server = server;
+  }
 }

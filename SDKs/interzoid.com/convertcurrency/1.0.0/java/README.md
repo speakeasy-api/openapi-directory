@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.ConvertcurrencyRequest;
 import org.openapis.openapi.models.operations.ConvertcurrencyResponse;
 
@@ -26,21 +25,18 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ConvertcurrencyRequest req = new ConvertcurrencyRequest() {{
-                amount = "corrupti";
-                from = "provident";
-                license = "distinctio";
-                to = "quibusdam";
-            }}            
+            ConvertcurrencyRequest req = new ConvertcurrencyRequest("corrupti", "provident", "distinctio", "quibusdam");            
 
             ConvertcurrencyResponse res = sdk.liveCurrencyRateConversion.convertcurrency(req);
 
-            if (res.convertcurrency200ApplicationJSONObject.isPresent()) {
+            if (res.convertcurrency200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -48,9 +44,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### liveCurrencyRateConversion
+### [liveCurrencyRateConversion](docs/livecurrencyrateconversion/README.md)
 
-* `convertcurrency` - Converts amount in one currency to that of another
+* [convertcurrency](docs/livecurrencyrateconversion/README.md#convertcurrency) - Converts amount in one currency to that of another
 <!-- End SDK Available Operations -->
 
 ### Maturity

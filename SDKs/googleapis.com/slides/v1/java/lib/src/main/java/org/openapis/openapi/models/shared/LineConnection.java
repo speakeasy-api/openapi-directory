@@ -18,6 +18,7 @@ public class LineConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectedObjectId")
     public String connectedObjectId;
+
     public LineConnection withConnectedObjectId(String connectedObjectId) {
         this.connectedObjectId = connectedObjectId;
         return this;
@@ -29,9 +30,11 @@ public class LineConnection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionSiteIndex")
     public Integer connectionSiteIndex;
+
     public LineConnection withConnectionSiteIndex(Integer connectionSiteIndex) {
         this.connectionSiteIndex = connectionSiteIndex;
         return this;
     }
     
+    public LineConnection(){}
 }

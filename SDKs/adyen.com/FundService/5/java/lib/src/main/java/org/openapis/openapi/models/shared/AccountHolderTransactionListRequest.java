@@ -14,6 +14,7 @@ public class AccountHolderTransactionListRequest {
      */
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public AccountHolderTransactionListRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -25,6 +26,7 @@ public class AccountHolderTransactionListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionListsPerAccount")
     public TransactionListForAccount[] transactionListsPerAccount;
+
     public AccountHolderTransactionListRequest withTransactionListsPerAccount(TransactionListForAccount[] transactionListsPerAccount) {
         this.transactionListsPerAccount = transactionListsPerAccount;
         return this;
@@ -57,9 +59,13 @@ public class AccountHolderTransactionListRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatuses")
     public AccountHolderTransactionListRequestTransactionStatusesEnum[] transactionStatuses;
+
     public AccountHolderTransactionListRequest withTransactionStatuses(AccountHolderTransactionListRequestTransactionStatusesEnum[] transactionStatuses) {
         this.transactionStatuses = transactionStatuses;
         return this;
     }
     
+    public AccountHolderTransactionListRequest(@JsonProperty("accountHolderCode") String accountHolderCode) {
+        this.accountHolderCode = accountHolderCode;
+  }
 }

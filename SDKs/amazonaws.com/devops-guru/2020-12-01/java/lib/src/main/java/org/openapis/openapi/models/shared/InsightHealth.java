@@ -15,6 +15,7 @@ public class InsightHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MeanTimeToRecoverInMilliseconds")
     public Long meanTimeToRecoverInMilliseconds;
+
     public InsightHealth withMeanTimeToRecoverInMilliseconds(Long meanTimeToRecoverInMilliseconds) {
         this.meanTimeToRecoverInMilliseconds = meanTimeToRecoverInMilliseconds;
         return this;
@@ -23,6 +24,7 @@ public class InsightHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenProactiveInsights")
     public Long openProactiveInsights;
+
     public InsightHealth withOpenProactiveInsights(Long openProactiveInsights) {
         this.openProactiveInsights = openProactiveInsights;
         return this;
@@ -31,9 +33,11 @@ public class InsightHealth {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpenReactiveInsights")
     public Long openReactiveInsights;
+
     public InsightHealth withOpenReactiveInsights(Long openReactiveInsights) {
         this.openReactiveInsights = openReactiveInsights;
         return this;
     }
     
+    public InsightHealth(){}
 }

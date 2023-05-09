@@ -14,6 +14,7 @@ public class ListChangeSetsRequestBody {
      */
     @JsonProperty("Catalog")
     public String catalog;
+
     public ListChangeSetsRequestBody withCatalog(String catalog) {
         this.catalog = catalog;
         return this;
@@ -25,6 +26,7 @@ public class ListChangeSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterList")
     public org.openapis.openapi.models.shared.Filter[] filterList;
+
     public ListChangeSetsRequestBody withFilterList(org.openapis.openapi.models.shared.Filter[] filterList) {
         this.filterList = filterList;
         return this;
@@ -36,6 +38,7 @@ public class ListChangeSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListChangeSetsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -47,6 +50,7 @@ public class ListChangeSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListChangeSetsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -58,9 +62,13 @@ public class ListChangeSetsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sort")
     public ListChangeSetsRequestBodySort sort;
+
     public ListChangeSetsRequestBody withSort(ListChangeSetsRequestBodySort sort) {
         this.sort = sort;
         return this;
     }
     
+    public ListChangeSetsRequestBody(@JsonProperty("Catalog") String catalog) {
+        this.catalog = catalog;
+  }
 }

@@ -15,6 +15,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableQuantity")
     public Long availableQuantity;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withAvailableQuantity(Long availableQuantity) {
         this.availableQuantity = availableQuantity;
         return this;
@@ -26,6 +27,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispatchedReservationsQuantity")
     public Long dispatchedReservationsQuantity;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withDispatchedReservationsQuantity(Long dispatchedReservationsQuantity) {
         this.dispatchedReservationsQuantity = dispatchedReservationsQuantity;
         return this;
@@ -37,6 +39,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isUnlimitedQuantity")
     public Boolean isUnlimitedQuantity;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withIsUnlimitedQuantity(Boolean isUnlimitedQuantity) {
         this.isUnlimitedQuantity = isUnlimitedQuantity;
         return this;
@@ -48,6 +51,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -59,6 +63,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skuId")
     public String skuId;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withSkuId(String skuId) {
         this.skuId = skuId;
         return this;
@@ -70,6 +75,7 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalReservedQuantity")
     public Long totalReservedQuantity;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withTotalReservedQuantity(Long totalReservedQuantity) {
         this.totalReservedQuantity = totalReservedQuantity;
         return this;
@@ -81,9 +87,11 @@ public class Getinventorywithdispatchedreservations200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warehouseId")
     public String warehouseId;
+
     public Getinventorywithdispatchedreservations200ApplicationJSON withWarehouseId(String warehouseId) {
         this.warehouseId = warehouseId;
         return this;
     }
     
+    public Getinventorywithdispatchedreservations200ApplicationJSON(){}
 }

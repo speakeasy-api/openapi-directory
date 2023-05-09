@@ -4,9 +4,13 @@
 
 package org.openapis.openapi;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import org.openapis.openapi.utils.HTTPClient;
 import org.openapis.openapi.utils.HTTPRequest;
+import org.openapis.openapi.utils.JSON;
 import org.openapis.openapi.utils.SerializedBody;
 
 public class DisplayAds {
@@ -48,13 +52,19 @@ public class DisplayAds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiDisplayAdsResponse res = new org.openapis.openapi.models.operations.GetApiDisplayAdsResponse() {{
+        org.openapis.openapi.models.operations.GetApiDisplayAdsResponse res = new org.openapis.openapi.models.operations.GetApiDisplayAdsResponse(contentType, httpRes.statusCode()) {{
+            displayAds = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.DisplayAd[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.DisplayAd[].class);
+                res.displayAds = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401) {
         }
 
         return res;
@@ -82,10 +92,8 @@ public class DisplayAds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetApiDisplayAdsIdResponse res = new org.openapis.openapi.models.operations.GetApiDisplayAdsIdResponse() {{
+        org.openapis.openapi.models.operations.GetApiDisplayAdsIdResponse res = new org.openapis.openapi.models.operations.GetApiDisplayAdsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
@@ -101,7 +109,7 @@ public class DisplayAds {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.PostApiDisplayAdsResponse postApiDisplayAds(org.openapis.openapi.models.operations.PostApiDisplayAdsRequestBody request) throws Exception {
+    public org.openapis.openapi.models.operations.PostApiDisplayAdsResponse postApiDisplayAds(java.util.Map<String, Object> request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/display_ads");
         
@@ -118,13 +126,19 @@ public class DisplayAds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostApiDisplayAdsResponse res = new org.openapis.openapi.models.operations.PostApiDisplayAdsResponse() {{
+        org.openapis.openapi.models.operations.PostApiDisplayAdsResponse res = new org.openapis.openapi.models.operations.PostApiDisplayAdsResponse(contentType, httpRes.statusCode()) {{
+            postApiDisplayAds200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 422) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.postApiDisplayAds200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 422) {
         }
 
         return res;
@@ -154,13 +168,19 @@ public class DisplayAds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiDisplayAdsIdResponse res = new org.openapis.openapi.models.operations.PutApiDisplayAdsIdResponse() {{
+        org.openapis.openapi.models.operations.PutApiDisplayAdsIdResponse res = new org.openapis.openapi.models.operations.PutApiDisplayAdsIdResponse(contentType, httpRes.statusCode()) {{
+            putApiDisplayAdsId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
-        if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
+                res.putApiDisplayAdsId200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
         }
 
         return res;
@@ -188,10 +208,8 @@ public class DisplayAds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishResponse res = new org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishResponse() {{
+        org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishResponse res = new org.openapis.openapi.models.operations.PutApiDisplayAdsIdUnpublishResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {

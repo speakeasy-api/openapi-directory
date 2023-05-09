@@ -22,6 +22,7 @@ public class CreateTestGridUrlResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expires")
     public OffsetDateTime expires;
+
     public CreateTestGridUrlResult withExpires(OffsetDateTime expires) {
         this.expires = expires;
         return this;
@@ -30,9 +31,11 @@ public class CreateTestGridUrlResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CreateTestGridUrlResult withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CreateTestGridUrlResult(){}
 }

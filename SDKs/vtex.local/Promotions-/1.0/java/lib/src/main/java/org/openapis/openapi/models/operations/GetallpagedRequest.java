@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetallpagedRequest {
@@ -12,6 +13,7 @@ public class GetallpagedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetallpagedRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetallpagedRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetallpagedRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetallpagedRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=an")
     public String an;
+
     public GetallpagedRequest withAn(String an) {
         this.an = an;
         return this;
@@ -36,6 +40,7 @@ public class GetallpagedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public String page;
+
     public GetallpagedRequest withPage(String page) {
         this.page = page;
         return this;
@@ -43,9 +48,17 @@ public class GetallpagedRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageSize")
     public String pageSize;
+
     public GetallpagedRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetallpagedRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("an") String an, @JsonProperty("page") String page, @JsonProperty("pageSize") String pageSize) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.an = an;
+        this.page = page;
+        this.pageSize = pageSize;
+  }
 }

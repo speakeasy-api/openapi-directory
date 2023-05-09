@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttonId")
     public String buttonId;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig withButtonId(String buttonId) {
         this.buttonId = buttonId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpointDomain")
     public String endpointDomain;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig withEndpointDomain(String endpointDomain) {
         this.endpointDomain = endpointDomain;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organizationId")
     public String organizationId;
+
     public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfig(){}
 }

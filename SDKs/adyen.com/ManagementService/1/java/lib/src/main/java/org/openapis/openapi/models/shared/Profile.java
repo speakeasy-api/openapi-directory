@@ -14,6 +14,7 @@ public class Profile {
      */
     @JsonProperty("authType")
     public String authType;
+
     public Profile withAuthType(String authType) {
         this.authType = authType;
         return this;
@@ -25,6 +26,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoWifi")
     public Boolean autoWifi;
+
     public Profile withAutoWifi(Boolean autoWifi) {
         this.autoWifi = autoWifi;
         return this;
@@ -35,6 +37,7 @@ public class Profile {
      */
     @JsonProperty("bssType")
     public String bssType;
+
     public Profile withBssType(String bssType) {
         this.bssType = bssType;
         return this;
@@ -46,6 +49,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channel")
     public Integer channel;
+
     public Profile withChannel(Integer channel) {
         this.channel = channel;
         return this;
@@ -57,6 +61,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultProfile")
     public Boolean defaultProfile;
+
     public Profile withDefaultProfile(Boolean defaultProfile) {
         this.defaultProfile = defaultProfile;
         return this;
@@ -68,6 +73,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eap")
     public String eap;
+
     public Profile withEap(String eap) {
         this.eap = eap;
         return this;
@@ -76,6 +82,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapCaCert")
     public File eapCaCert;
+
     public Profile withEapCaCert(File eapCaCert) {
         this.eapCaCert = eapCaCert;
         return this;
@@ -84,6 +91,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapClientCert")
     public File eapClientCert;
+
     public Profile withEapClientCert(File eapClientCert) {
         this.eapClientCert = eapClientCert;
         return this;
@@ -92,6 +100,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapClientKey")
     public File eapClientKey;
+
     public Profile withEapClientKey(File eapClientKey) {
         this.eapClientKey = eapClientKey;
         return this;
@@ -103,6 +112,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapClientPwd")
     public String eapClientPwd;
+
     public Profile withEapClientPwd(String eapClientPwd) {
         this.eapClientPwd = eapClientPwd;
         return this;
@@ -114,6 +124,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapIdentity")
     public String eapIdentity;
+
     public Profile withEapIdentity(String eapIdentity) {
         this.eapIdentity = eapIdentity;
         return this;
@@ -122,6 +133,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapIntermediateCert")
     public File eapIntermediateCert;
+
     public Profile withEapIntermediateCert(File eapIntermediateCert) {
         this.eapIntermediateCert = eapIntermediateCert;
         return this;
@@ -133,6 +145,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eapPwd")
     public String eapPwd;
+
     public Profile withEapPwd(String eapPwd) {
         this.eapPwd = eapPwd;
         return this;
@@ -144,6 +157,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hiddenSsid")
     public Boolean hiddenSsid;
+
     public Profile withHiddenSsid(Boolean hiddenSsid) {
         this.hiddenSsid = hiddenSsid;
         return this;
@@ -155,6 +169,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Profile withName(String name) {
         this.name = name;
         return this;
@@ -166,6 +181,7 @@ public class Profile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psk")
     public String psk;
+
     public Profile withPsk(String psk) {
         this.psk = psk;
         return this;
@@ -176,6 +192,7 @@ public class Profile {
      */
     @JsonProperty("ssid")
     public String ssid;
+
     public Profile withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -186,9 +203,16 @@ public class Profile {
      */
     @JsonProperty("wsec")
     public String wsec;
+
     public Profile withWsec(String wsec) {
         this.wsec = wsec;
         return this;
     }
     
+    public Profile(@JsonProperty("authType") String authType, @JsonProperty("bssType") String bssType, @JsonProperty("ssid") String ssid, @JsonProperty("wsec") String wsec) {
+        this.authType = authType;
+        this.bssType = bssType;
+        this.ssid = ssid;
+        this.wsec = wsec;
+  }
 }

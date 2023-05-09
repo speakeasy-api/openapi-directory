@@ -14,6 +14,7 @@ public class CreateMapRequestBody {
      */
     @JsonProperty("Configuration")
     public CreateMapRequestBodyConfiguration configuration;
+
     public CreateMapRequestBody withConfiguration(CreateMapRequestBodyConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -25,6 +26,7 @@ public class CreateMapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateMapRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateMapRequestBody {
      */
     @JsonProperty("MapName")
     public String mapName;
+
     public CreateMapRequestBody withMapName(String mapName) {
         this.mapName = mapName;
         return this;
@@ -46,6 +49,7 @@ public class CreateMapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PricingPlan")
     public CreateMapRequestBodyPricingPlanEnum pricingPlan;
+
     public CreateMapRequestBody withPricingPlan(CreateMapRequestBodyPricingPlanEnum pricingPlan) {
         this.pricingPlan = pricingPlan;
         return this;
@@ -57,9 +61,14 @@ public class CreateMapRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public CreateMapRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateMapRequestBody(@JsonProperty("Configuration") CreateMapRequestBodyConfiguration configuration, @JsonProperty("MapName") String mapName) {
+        this.configuration = configuration;
+        this.mapName = mapName;
+  }
 }

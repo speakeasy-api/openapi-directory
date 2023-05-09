@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListApplicationsResponse {
     
     public String contentType;
+
     public ListApplicationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListApplicationsResponse {
      */
     
     public Object internalFailureException;
+
     public ListApplicationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListApplicationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListApplicationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListApplicationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListApplicationsResponse listApplicationsResponse;
+
     public ListApplicationsResponse withListApplicationsResponse(org.openapis.openapi.models.shared.ListApplicationsResponse listApplicationsResponse) {
         this.listApplicationsResponse = listApplicationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListApplicationsResponse {
     
     
     public Integer statusCode;
+
     public ListApplicationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListApplicationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListApplicationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListApplicationsResponse {
      */
     
     public Object throttlingException;
+
     public ListApplicationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListApplicationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class DeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Device")
     public DeviceEventDevice device;
+
     public DeviceEvent withDevice(DeviceEventDevice device) {
         this.device = device;
         return this;
@@ -20,9 +21,11 @@ public class DeviceEvent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StdEvent")
     public String stdEvent;
+
     public DeviceEvent withStdEvent(String stdEvent) {
         this.stdEvent = stdEvent;
         return this;
     }
     
+    public DeviceEvent(){}
 }

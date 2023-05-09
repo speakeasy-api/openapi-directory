@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateForkResponse {
     
     public String contentType;
+
     public ReposCreateForkResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateForkResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateForkResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateForkResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateForkResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCreateForkResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateForkResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class ReposCreateForkResponse {
      */
     
     public org.openapis.openapi.models.shared.FullRepository fullRepository;
+
     public ReposCreateForkResponse withFullRepository(org.openapis.openapi.models.shared.FullRepository fullRepository) {
         this.fullRepository = fullRepository;
         return this;
@@ -53,6 +59,7 @@ public class ReposCreateForkResponse {
      */
     
     public org.openapis.openapi.models.shared.ScimError scimError;
+
     public ReposCreateForkResponse withScimError(org.openapis.openapi.models.shared.ScimError scimError) {
         this.scimError = scimError;
         return this;
@@ -63,9 +70,14 @@ public class ReposCreateForkResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public ReposCreateForkResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ReposCreateForkResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,9 +15,11 @@ public class GetDataLakeSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeSettings")
     public DataLakeSettings dataLakeSettings;
+
     public GetDataLakeSettingsResponse withDataLakeSettings(DataLakeSettings dataLakeSettings) {
         this.dataLakeSettings = dataLakeSettings;
         return this;
     }
     
+    public GetDataLakeSettingsResponse(){}
 }

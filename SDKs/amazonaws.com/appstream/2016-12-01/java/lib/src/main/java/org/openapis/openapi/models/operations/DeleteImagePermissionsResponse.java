@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImagePermissionsResponse {
     
     public String contentType;
+
     public DeleteImagePermissionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteImagePermissionsResponse {
      */
     
     public java.util.Map<String, Object> deleteImagePermissionsResult;
+
     public DeleteImagePermissionsResponse withDeleteImagePermissionsResult(java.util.Map<String, Object> deleteImagePermissionsResult) {
         this.deleteImagePermissionsResult = deleteImagePermissionsResult;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImagePermissionsResponse {
      */
     
     public Object resourceNotAvailableException;
+
     public DeleteImagePermissionsResponse withResourceNotAvailableException(Object resourceNotAvailableException) {
         this.resourceNotAvailableException = resourceNotAvailableException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteImagePermissionsResponse {
     
     
     public Integer statusCode;
+
     public DeleteImagePermissionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteImagePermissionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImagePermissionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteImagePermissionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteImagePermissionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public DeleteImagePermissionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

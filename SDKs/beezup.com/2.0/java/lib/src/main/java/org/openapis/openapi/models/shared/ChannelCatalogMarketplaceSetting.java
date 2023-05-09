@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ChannelCatalogMarketplaceSetting {
     @JsonProperty("discriminatorType")
     public ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum discriminatorType;
+
     public ChannelCatalogMarketplaceSetting withDiscriminatorType(ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum discriminatorType) {
         this.discriminatorType = discriminatorType;
         return this;
@@ -22,9 +23,14 @@ public class ChannelCatalogMarketplaceSetting {
      */
     @JsonProperty("name")
     public String name;
+
     public ChannelCatalogMarketplaceSetting withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ChannelCatalogMarketplaceSetting(@JsonProperty("discriminatorType") ChannelCatalogMarketplaceSettingDiscriminatorTypeEnum discriminatorType, @JsonProperty("name") String name) {
+        this.discriminatorType = discriminatorType;
+        this.name = name;
+  }
 }

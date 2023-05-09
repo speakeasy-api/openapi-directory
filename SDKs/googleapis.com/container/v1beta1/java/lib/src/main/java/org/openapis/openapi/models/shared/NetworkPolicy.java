@@ -18,6 +18,7 @@ public class NetworkPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public NetworkPolicy withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -29,9 +30,11 @@ public class NetworkPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provider")
     public NetworkPolicyProviderEnum provider;
+
     public NetworkPolicy withProvider(NetworkPolicyProviderEnum provider) {
         this.provider = provider;
         return this;
     }
     
+    public NetworkPolicy(){}
 }

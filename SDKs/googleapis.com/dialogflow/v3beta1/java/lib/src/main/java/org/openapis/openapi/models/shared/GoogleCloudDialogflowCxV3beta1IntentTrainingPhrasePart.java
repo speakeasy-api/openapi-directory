@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameterId")
     public String parameterId;
+
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart withParameterId(String parameterId) {
         this.parameterId = parameterId;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart(){}
 }

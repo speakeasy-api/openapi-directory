@@ -18,6 +18,7 @@ public class GoogleAnalyticsAdminV1betaDataRetentionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventDataRetention")
     public GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum eventDataRetention;
+
     public GoogleAnalyticsAdminV1betaDataRetentionSettings withEventDataRetention(GoogleAnalyticsAdminV1betaDataRetentionSettingsEventDataRetentionEnum eventDataRetention) {
         this.eventDataRetention = eventDataRetention;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAnalyticsAdminV1betaDataRetentionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleAnalyticsAdminV1betaDataRetentionSettings withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAnalyticsAdminV1betaDataRetentionSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetUserDataOnNewActivity")
     public Boolean resetUserDataOnNewActivity;
+
     public GoogleAnalyticsAdminV1betaDataRetentionSettings withResetUserDataOnNewActivity(Boolean resetUserDataOnNewActivity) {
         this.resetUserDataOnNewActivity = resetUserDataOnNewActivity;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1betaDataRetentionSettings(){}
 }

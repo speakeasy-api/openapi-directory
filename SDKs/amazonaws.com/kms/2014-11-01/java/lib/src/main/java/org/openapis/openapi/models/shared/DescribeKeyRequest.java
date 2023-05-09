@@ -12,6 +12,7 @@ public class DescribeKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GrantTokens")
     public String[] grantTokens;
+
     public DescribeKeyRequest withGrantTokens(String[] grantTokens) {
         this.grantTokens = grantTokens;
         return this;
@@ -19,9 +20,13 @@ public class DescribeKeyRequest {
     
     @JsonProperty("KeyId")
     public String keyId;
+
     public DescribeKeyRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public DescribeKeyRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

@@ -12,6 +12,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capacity")
     public Long capacity;
+
     public Venue withCapacity(Long capacity) {
         this.capacity = capacity;
         return this;
@@ -20,6 +21,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public Venue withCity(String city) {
         this.city = city;
         return this;
@@ -28,6 +30,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country_code")
     public String countryCode;
+
     public Venue withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -36,6 +39,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dome")
     public Boolean dome;
+
     public Venue withDome(Boolean dome) {
         this.dome = dome;
         return this;
@@ -44,6 +48,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elevation")
     public Double elevation;
+
     public Venue withElevation(Double elevation) {
         this.elevation = elevation;
         return this;
@@ -52,6 +57,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grass")
     public Boolean grass;
+
     public Venue withGrass(Boolean grass) {
         this.grass = grass;
         return this;
@@ -60,6 +66,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Venue withId(Long id) {
         this.id = id;
         return this;
@@ -68,6 +75,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public VenueLocation location;
+
     public Venue withLocation(VenueLocation location) {
         this.location = location;
         return this;
@@ -76,6 +84,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Venue withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public Venue withState(String state) {
         this.state = state;
         return this;
@@ -92,6 +102,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public Venue withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -100,6 +111,7 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year_constructed")
     public Long yearConstructed;
+
     public Venue withYearConstructed(Long yearConstructed) {
         this.yearConstructed = yearConstructed;
         return this;
@@ -108,9 +120,11 @@ public class Venue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zip")
     public String zip;
+
     public Venue withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public Venue(){}
 }

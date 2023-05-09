@@ -12,6 +12,7 @@ public class GetBucketObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection:create")
     public String[] collectionCreate;
+
     public GetBucketObjectSchemaPermissions withCollectionCreate(String[] collectionCreate) {
         this.collectionCreate = collectionCreate;
         return this;
@@ -20,6 +21,7 @@ public class GetBucketObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("group:create")
     public String[] groupCreate;
+
     public GetBucketObjectSchemaPermissions withGroupCreate(String[] groupCreate) {
         this.groupCreate = groupCreate;
         return this;
@@ -28,6 +30,7 @@ public class GetBucketObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public String[] read;
+
     public GetBucketObjectSchemaPermissions withRead(String[] read) {
         this.read = read;
         return this;
@@ -36,9 +39,11 @@ public class GetBucketObjectSchemaPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write")
     public String[] write;
+
     public GetBucketObjectSchemaPermissions withWrite(String[] write) {
         this.write = write;
         return this;
     }
     
+    public GetBucketObjectSchemaPermissions(){}
 }

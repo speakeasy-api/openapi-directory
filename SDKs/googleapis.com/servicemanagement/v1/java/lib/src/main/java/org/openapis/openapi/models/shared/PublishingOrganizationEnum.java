@@ -14,7 +14,10 @@ public enum PublishingOrganizationEnum {
     CLOUD("CLOUD"),
     ADS("ADS"),
     PHOTOS("PHOTOS"),
-    STREET_VIEW("STREET_VIEW");
+    STREET_VIEW("STREET_VIEW"),
+    SHOPPING("SHOPPING"),
+    GEO("GEO"),
+    GENERATIVE_AI("GENERATIVE_AI");
 
     @JsonValue
     public final String value;

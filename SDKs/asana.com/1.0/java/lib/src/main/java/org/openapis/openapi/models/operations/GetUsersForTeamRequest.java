@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUsersForTeamRequest {
@@ -14,6 +15,7 @@ public class GetUsersForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public String offset;
+
     public GetUsersForTeamRequest withOffset(String offset) {
         this.offset = offset;
         return this;
@@ -26,6 +28,7 @@ public class GetUsersForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public GetUsersForTeamRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -37,6 +40,7 @@ public class GetUsersForTeamRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public GetUsersForTeamRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -47,9 +51,13 @@ public class GetUsersForTeamRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_gid")
     public String teamGid;
+
     public GetUsersForTeamRequest withTeamGid(String teamGid) {
         this.teamGid = teamGid;
         return this;
     }
     
+    public GetUsersForTeamRequest(@JsonProperty("team_gid") String teamGid) {
+        this.teamGid = teamGid;
+  }
 }

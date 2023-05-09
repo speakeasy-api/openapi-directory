@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRemovePermissionRequest {
@@ -12,6 +13,7 @@ public class GETRemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=AccountNumber")
     public Long accountNumber;
+
     public GETRemovePermissionRequest withAccountNumber(Long accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -19,6 +21,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRemovePermissionActionEnum action;
+
     public GETRemovePermissionRequest withAction(GETRemovePermissionActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETRemovePermissionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Label")
     public String label;
+
     public GETRemovePermissionRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -39,6 +43,7 @@ public class GETRemovePermissionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=QueueName")
     public String queueName;
+
     public GETRemovePermissionRequest withQueueName(String queueName) {
         this.queueName = queueName;
         return this;
@@ -46,6 +51,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRemovePermissionVersionEnum version;
+
     public GETRemovePermissionRequest withVersion(GETRemovePermissionVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRemovePermissionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRemovePermissionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRemovePermissionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRemovePermissionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRemovePermissionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRemovePermissionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,17 @@ public class GETRemovePermissionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRemovePermissionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRemovePermissionRequest(@JsonProperty("AccountNumber") Long accountNumber, @JsonProperty("Action") GETRemovePermissionActionEnum action, @JsonProperty("Label") String label, @JsonProperty("QueueName") String queueName, @JsonProperty("Version") GETRemovePermissionVersionEnum version) {
+        this.accountNumber = accountNumber;
+        this.action = action;
+        this.label = label;
+        this.queueName = queueName;
+        this.version = version;
+  }
 }

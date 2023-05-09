@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DeleteTransitGatewayResultTransitGateway {
     
     public OffsetDateTime creationTime;
+
     public DeleteTransitGatewayResultTransitGateway withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public String description;
+
     public DeleteTransitGatewayResultTransitGateway withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public DeleteTransitGatewayResultTransitGatewayOptions options;
+
     public DeleteTransitGatewayResultTransitGateway withOptions(DeleteTransitGatewayResultTransitGatewayOptions options) {
         this.options = options;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public String ownerId;
+
     public DeleteTransitGatewayResultTransitGateway withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public DeleteTransitGatewayResultTransitGatewayStateEnum state;
+
     public DeleteTransitGatewayResultTransitGateway withState(DeleteTransitGatewayResultTransitGatewayStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public DeleteTransitGatewayResultTransitGatewayTags[] tags;
+
     public DeleteTransitGatewayResultTransitGateway withTags(DeleteTransitGatewayResultTransitGatewayTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public String transitGatewayArn;
+
     public DeleteTransitGatewayResultTransitGateway withTransitGatewayArn(String transitGatewayArn) {
         this.transitGatewayArn = transitGatewayArn;
         return this;
@@ -61,9 +68,11 @@ public class DeleteTransitGatewayResultTransitGateway {
     
     
     public String transitGatewayId;
+
     public DeleteTransitGatewayResultTransitGateway withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public DeleteTransitGatewayResultTransitGateway(){}
 }

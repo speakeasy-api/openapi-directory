@@ -15,6 +15,7 @@ public class GetOpsSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Entities")
     public OpsEntity[] entities;
+
     public GetOpsSummaryResult withEntities(OpsEntity[] entities) {
         this.entities = entities;
         return this;
@@ -23,9 +24,11 @@ public class GetOpsSummaryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetOpsSummaryResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetOpsSummaryResult(){}
 }

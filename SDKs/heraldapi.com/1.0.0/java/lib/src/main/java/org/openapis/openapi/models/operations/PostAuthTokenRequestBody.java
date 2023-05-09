@@ -12,9 +12,13 @@ public class PostAuthTokenRequestBody {
      */
     @JsonProperty("api_key")
     public String apiKey;
+
     public PostAuthTokenRequestBody withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public PostAuthTokenRequestBody(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

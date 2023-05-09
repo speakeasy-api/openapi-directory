@@ -18,6 +18,7 @@ public class JobPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterLabels")
     public java.util.Map<String, String> clusterLabels;
+
     public JobPlacement withClusterLabels(java.util.Map<String, String> clusterLabels) {
         this.clusterLabels = clusterLabels;
         return this;
@@ -29,6 +30,7 @@ public class JobPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterName")
     public String clusterName;
+
     public JobPlacement withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -40,9 +42,11 @@ public class JobPlacement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterUuid")
     public String clusterUuid;
+
     public JobPlacement withClusterUuid(String clusterUuid) {
         this.clusterUuid = clusterUuid;
         return this;
     }
     
+    public JobPlacement(){}
 }

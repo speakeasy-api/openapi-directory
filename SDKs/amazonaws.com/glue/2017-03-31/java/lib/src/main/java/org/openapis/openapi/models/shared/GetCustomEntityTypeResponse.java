@@ -15,6 +15,7 @@ public class GetCustomEntityTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContextWords")
     public String[] contextWords;
+
     public GetCustomEntityTypeResponse withContextWords(String[] contextWords) {
         this.contextWords = contextWords;
         return this;
@@ -23,6 +24,7 @@ public class GetCustomEntityTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public GetCustomEntityTypeResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,9 +33,11 @@ public class GetCustomEntityTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegexString")
     public String regexString;
+
     public GetCustomEntityTypeResponse withRegexString(String regexString) {
         this.regexString = regexString;
         return this;
     }
     
+    public GetCustomEntityTypeResponse(){}
 }

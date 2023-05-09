@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeFleetAttributesResponse {
     
     public String contentType;
+
     public DescribeFleetAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeFleetAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeFleetAttributesOutput describeFleetAttributesOutput;
+
     public DescribeFleetAttributesResponse withDescribeFleetAttributesOutput(org.openapis.openapi.models.shared.DescribeFleetAttributesOutput describeFleetAttributesOutput) {
         this.describeFleetAttributesOutput = describeFleetAttributesOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeFleetAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeFleetAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeFleetAttributesResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeFleetAttributesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeFleetAttributesResponse {
      */
     
     public Object notFoundException;
+
     public DescribeFleetAttributesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeFleetAttributesResponse {
     
     
     public Integer statusCode;
+
     public DescribeFleetAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeFleetAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeFleetAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeFleetAttributesResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeFleetAttributesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeFleetAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

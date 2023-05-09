@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETUpdateOpenIDConnectProviderThumbprintActionEnum action;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withAction(GETUpdateOpenIDConnectProviderThumbprintActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OpenIDConnectProviderArn")
     public String openIDConnectProviderArn;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
@@ -29,6 +32,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ThumbprintList")
     public String[] thumbprintList;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withThumbprintList(String[] thumbprintList) {
         this.thumbprintList = thumbprintList;
         return this;
@@ -36,6 +40,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETUpdateOpenIDConnectProviderThumbprintVersionEnum version;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withVersion(GETUpdateOpenIDConnectProviderThumbprintVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETUpdateOpenIDConnectProviderThumbprintRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETUpdateOpenIDConnectProviderThumbprintRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETUpdateOpenIDConnectProviderThumbprintRequest(@JsonProperty("Action") GETUpdateOpenIDConnectProviderThumbprintActionEnum action, @JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn, @JsonProperty("ThumbprintList") String[] thumbprintList, @JsonProperty("Version") GETUpdateOpenIDConnectProviderThumbprintVersionEnum version) {
+        this.action = action;
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+        this.thumbprintList = thumbprintList;
+        this.version = version;
+  }
 }

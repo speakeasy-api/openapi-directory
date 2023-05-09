@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesListResponse(contentType, httpRes.statusCode()) {{
             googleDevtoolsRemotebuildexecutionAdminV1alphaListInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesTestNotifyResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsListResponse(contentType, httpRes.statusCode()) {{
             googleDevtoolsRemotebuildexecutionAdminV1alphaListWorkerPoolsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesWorkerpoolsPatchResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -390,11 +376,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.RemotebuildexecutionProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

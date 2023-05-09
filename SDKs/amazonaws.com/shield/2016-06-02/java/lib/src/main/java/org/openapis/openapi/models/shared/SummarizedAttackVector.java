@@ -15,6 +15,7 @@ public class SummarizedAttackVector {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VectorCounters")
     public SummarizedCounter[] vectorCounters;
+
     public SummarizedAttackVector withVectorCounters(SummarizedCounter[] vectorCounters) {
         this.vectorCounters = vectorCounters;
         return this;
@@ -22,9 +23,13 @@ public class SummarizedAttackVector {
     
     @JsonProperty("VectorType")
     public String vectorType;
+
     public SummarizedAttackVector withVectorType(String vectorType) {
         this.vectorType = vectorType;
         return this;
     }
     
+    public SummarizedAttackVector(@JsonProperty("VectorType") String vectorType) {
+        this.vectorType = vectorType;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VectortileTerraintilesGetRequest {
@@ -12,6 +13,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public VectortileTerraintilesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public VectortileTerraintilesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public VectortileTerraintilesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=altitudePrecisionCentimeters")
     public Long altitudePrecisionCentimeters;
+
     public VectortileTerraintilesGetRequest withAltitudePrecisionCentimeters(Long altitudePrecisionCentimeters) {
         this.altitudePrecisionCentimeters = altitudePrecisionCentimeters;
         return this;
@@ -52,6 +57,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public VectortileTerraintilesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -62,6 +68,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.apiClient")
     public String clientInfoApiClient;
+
     public VectortileTerraintilesGetRequest withClientInfoApiClient(String clientInfoApiClient) {
         this.clientInfoApiClient = clientInfoApiClient;
         return this;
@@ -72,6 +79,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.applicationId")
     public String clientInfoApplicationId;
+
     public VectortileTerraintilesGetRequest withClientInfoApplicationId(String clientInfoApplicationId) {
         this.clientInfoApplicationId = clientInfoApplicationId;
         return this;
@@ -82,6 +90,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.applicationVersion")
     public String clientInfoApplicationVersion;
+
     public VectortileTerraintilesGetRequest withClientInfoApplicationVersion(String clientInfoApplicationVersion) {
         this.clientInfoApplicationVersion = clientInfoApplicationVersion;
         return this;
@@ -92,6 +101,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.deviceModel")
     public String clientInfoDeviceModel;
+
     public VectortileTerraintilesGetRequest withClientInfoDeviceModel(String clientInfoDeviceModel) {
         this.clientInfoDeviceModel = clientInfoDeviceModel;
         return this;
@@ -102,6 +112,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.operatingSystem")
     public String clientInfoOperatingSystem;
+
     public VectortileTerraintilesGetRequest withClientInfoOperatingSystem(String clientInfoOperatingSystem) {
         this.clientInfoOperatingSystem = clientInfoOperatingSystem;
         return this;
@@ -112,6 +123,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.platform")
     public VectortileTerraintilesGetClientInfoPlatformEnum clientInfoPlatform;
+
     public VectortileTerraintilesGetRequest withClientInfoPlatform(VectortileTerraintilesGetClientInfoPlatformEnum clientInfoPlatform) {
         this.clientInfoPlatform = clientInfoPlatform;
         return this;
@@ -122,6 +134,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clientInfo.userId")
     public String clientInfoUserId;
+
     public VectortileTerraintilesGetRequest withClientInfoUserId(String clientInfoUserId) {
         this.clientInfoUserId = clientInfoUserId;
         return this;
@@ -132,6 +145,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableModeledVolumes")
     public Boolean enableModeledVolumes;
+
     public VectortileTerraintilesGetRequest withEnableModeledVolumes(Boolean enableModeledVolumes) {
         this.enableModeledVolumes = enableModeledVolumes;
         return this;
@@ -142,6 +156,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enablePoliticalFeatures")
     public Boolean enablePoliticalFeatures;
+
     public VectortileTerraintilesGetRequest withEnablePoliticalFeatures(Boolean enablePoliticalFeatures) {
         this.enablePoliticalFeatures = enablePoliticalFeatures;
         return this;
@@ -152,6 +167,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enablePrivateRoads")
     public Boolean enablePrivateRoads;
+
     public VectortileTerraintilesGetRequest withEnablePrivateRoads(Boolean enablePrivateRoads) {
         this.enablePrivateRoads = enablePrivateRoads;
         return this;
@@ -162,6 +178,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=enableUnclippedBuildings")
     public Boolean enableUnclippedBuildings;
+
     public VectortileTerraintilesGetRequest withEnableUnclippedBuildings(Boolean enableUnclippedBuildings) {
         this.enableUnclippedBuildings = enableUnclippedBuildings;
         return this;
@@ -172,6 +189,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public VectortileTerraintilesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -182,6 +200,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public VectortileTerraintilesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -192,6 +211,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=languageCode")
     public String languageCode;
+
     public VectortileTerraintilesGetRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -202,6 +222,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxElevationResolutionCells")
     public Long maxElevationResolutionCells;
+
     public VectortileTerraintilesGetRequest withMaxElevationResolutionCells(Long maxElevationResolutionCells) {
         this.maxElevationResolutionCells = maxElevationResolutionCells;
         return this;
@@ -212,6 +233,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minElevationResolutionCells")
     public Long minElevationResolutionCells;
+
     public VectortileTerraintilesGetRequest withMinElevationResolutionCells(Long minElevationResolutionCells) {
         this.minElevationResolutionCells = minElevationResolutionCells;
         return this;
@@ -222,6 +244,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public VectortileTerraintilesGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -232,6 +255,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public VectortileTerraintilesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -242,6 +266,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public VectortileTerraintilesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -252,6 +277,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public VectortileTerraintilesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -262,6 +288,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionCode")
     public String regionCode;
+
     public VectortileTerraintilesGetRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -272,6 +299,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=terrainFormats")
     public VectortileTerraintilesGetTerrainFormatsEnum[] terrainFormats;
+
     public VectortileTerraintilesGetRequest withTerrainFormats(VectortileTerraintilesGetTerrainFormatsEnum[] terrainFormats) {
         this.terrainFormats = terrainFormats;
         return this;
@@ -282,6 +310,7 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public VectortileTerraintilesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -292,9 +321,13 @@ public class VectortileTerraintilesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public VectortileTerraintilesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public VectortileTerraintilesGetRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

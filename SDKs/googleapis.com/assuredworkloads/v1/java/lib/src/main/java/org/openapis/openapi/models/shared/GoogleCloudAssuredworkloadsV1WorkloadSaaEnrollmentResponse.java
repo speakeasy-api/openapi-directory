@@ -18,6 +18,7 @@ public class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setupErrors")
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum[] setupErrors;
+
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse withSetupErrors(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupErrorsEnum[] setupErrors) {
         this.setupErrors = setupErrors;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setupStatus")
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum setupStatus;
+
     public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse withSetupStatus(GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseSetupStatusEnum setupStatus) {
         this.setupStatus = setupStatus;
         return this;
     }
     
+    public GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse(){}
 }

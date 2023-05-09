@@ -23,6 +23,7 @@ public class EndDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("approximate")
     public Boolean approximate;
+
     public EndDates withApproximate(Boolean approximate) {
         this.approximate = approximate;
         return this;
@@ -36,6 +37,7 @@ public class EndDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("dateTime")
     public OffsetDateTime dateTime;
+
     public EndDates withDateTime(OffsetDateTime dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -44,9 +46,11 @@ public class EndDates {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localTime")
     public LocalTime localTime;
+
     public EndDates withLocalTime(LocalTime localTime) {
         this.localTime = localTime;
         return this;
     }
     
+    public EndDates(){}
 }

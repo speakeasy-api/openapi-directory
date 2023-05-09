@@ -18,6 +18,7 @@ public class ValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("majorDimension")
     public ValueRangeMajorDimensionEnum majorDimension;
+
     public ValueRange withMajorDimension(ValueRangeMajorDimensionEnum majorDimension) {
         this.majorDimension = majorDimension;
         return this;
@@ -29,6 +30,7 @@ public class ValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public String range;
+
     public ValueRange withRange(String range) {
         this.range = range;
         return this;
@@ -40,9 +42,11 @@ public class ValueRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public Object[][] values;
+
     public ValueRange withValues(Object[][] values) {
         this.values = values;
         return this;
     }
     
+    public ValueRange(){}
 }

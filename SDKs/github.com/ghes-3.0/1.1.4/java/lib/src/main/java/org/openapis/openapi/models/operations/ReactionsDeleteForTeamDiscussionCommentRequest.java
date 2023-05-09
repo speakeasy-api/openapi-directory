@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReactionsDeleteForTeamDiscussionCommentRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comment_number")
     public Long commentNumber;
+
     public ReactionsDeleteForTeamDiscussionCommentRequest withCommentNumber(Long commentNumber) {
         this.commentNumber = commentNumber;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsDeleteForTeamDiscussionCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=discussion_number")
     public Long discussionNumber;
+
     public ReactionsDeleteForTeamDiscussionCommentRequest withDiscussionNumber(Long discussionNumber) {
         this.discussionNumber = discussionNumber;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsDeleteForTeamDiscussionCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ReactionsDeleteForTeamDiscussionCommentRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -30,6 +34,7 @@ public class ReactionsDeleteForTeamDiscussionCommentRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reaction_id")
     public Long reactionId;
+
     public ReactionsDeleteForTeamDiscussionCommentRequest withReactionId(Long reactionId) {
         this.reactionId = reactionId;
         return this;
@@ -40,9 +45,17 @@ public class ReactionsDeleteForTeamDiscussionCommentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=team_slug")
     public String teamSlug;
+
     public ReactionsDeleteForTeamDiscussionCommentRequest withTeamSlug(String teamSlug) {
         this.teamSlug = teamSlug;
         return this;
     }
     
+    public ReactionsDeleteForTeamDiscussionCommentRequest(@JsonProperty("comment_number") Long commentNumber, @JsonProperty("discussion_number") Long discussionNumber, @JsonProperty("org") String org, @JsonProperty("reaction_id") Long reactionId, @JsonProperty("team_slug") String teamSlug) {
+        this.commentNumber = commentNumber;
+        this.discussionNumber = discussionNumber;
+        this.org = org;
+        this.reactionId = reactionId;
+        this.teamSlug = teamSlug;
+  }
 }

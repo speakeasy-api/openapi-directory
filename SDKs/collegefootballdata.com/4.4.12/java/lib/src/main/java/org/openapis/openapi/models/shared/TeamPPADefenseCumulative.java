@@ -12,6 +12,7 @@ public class TeamPPADefenseCumulative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passing")
     public Double passing;
+
     public TeamPPADefenseCumulative withPassing(Double passing) {
         this.passing = passing;
         return this;
@@ -20,6 +21,7 @@ public class TeamPPADefenseCumulative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rushing")
     public Double rushing;
+
     public TeamPPADefenseCumulative withRushing(Double rushing) {
         this.rushing = rushing;
         return this;
@@ -28,9 +30,11 @@ public class TeamPPADefenseCumulative {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public TeamPPADefenseCumulative withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public TeamPPADefenseCumulative(){}
 }

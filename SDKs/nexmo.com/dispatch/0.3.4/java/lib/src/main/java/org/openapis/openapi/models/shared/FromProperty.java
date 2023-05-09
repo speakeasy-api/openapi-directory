@@ -22,6 +22,7 @@ public class FromProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FromProperty withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +39,7 @@ public class FromProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public FromProperty withNumber(String number) {
         this.number = number;
         return this;
@@ -48,9 +50,13 @@ public class FromProperty {
      */
     @JsonProperty("type")
     public FromPropertyTypeEnum type;
+
     public FromProperty withType(FromPropertyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public FromProperty(@JsonProperty("type") FromPropertyTypeEnum type) {
+        this.type = type;
+  }
 }

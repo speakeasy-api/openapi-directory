@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ReceiptAction {
     
     public AddHeaderAction addHeaderAction;
+
     public ReceiptAction withAddHeaderAction(AddHeaderAction addHeaderAction) {
         this.addHeaderAction = addHeaderAction;
         return this;
@@ -19,6 +20,7 @@ public class ReceiptAction {
     
     
     public BounceAction bounceAction;
+
     public ReceiptAction withBounceAction(BounceAction bounceAction) {
         this.bounceAction = bounceAction;
         return this;
@@ -26,6 +28,7 @@ public class ReceiptAction {
     
     
     public LambdaAction lambdaAction;
+
     public ReceiptAction withLambdaAction(LambdaAction lambdaAction) {
         this.lambdaAction = lambdaAction;
         return this;
@@ -33,6 +36,7 @@ public class ReceiptAction {
     
     
     public S3Action s3Action;
+
     public ReceiptAction withS3Action(S3Action s3Action) {
         this.s3Action = s3Action;
         return this;
@@ -40,6 +44,7 @@ public class ReceiptAction {
     
     
     public SNSAction snsAction;
+
     public ReceiptAction withSNSAction(SNSAction snsAction) {
         this.snsAction = snsAction;
         return this;
@@ -47,6 +52,7 @@ public class ReceiptAction {
     
     
     public StopAction stopAction;
+
     public ReceiptAction withStopAction(StopAction stopAction) {
         this.stopAction = stopAction;
         return this;
@@ -54,9 +60,11 @@ public class ReceiptAction {
     
     
     public WorkmailAction workmailAction;
+
     public ReceiptAction withWorkmailAction(WorkmailAction workmailAction) {
         this.workmailAction = workmailAction;
         return this;
     }
     
+    public ReceiptAction(){}
 }

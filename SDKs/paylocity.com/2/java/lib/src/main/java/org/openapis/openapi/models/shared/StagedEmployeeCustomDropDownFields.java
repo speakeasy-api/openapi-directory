@@ -12,6 +12,7 @@ public class StagedEmployeeCustomDropDownFields {
      */
     @JsonProperty("category")
     public StagedEmployeeCustomDropDownFieldsCategoryEnum category;
+
     public StagedEmployeeCustomDropDownFields withCategory(StagedEmployeeCustomDropDownFieldsCategoryEnum category) {
         this.category = category;
         return this;
@@ -22,6 +23,7 @@ public class StagedEmployeeCustomDropDownFields {
      */
     @JsonProperty("label")
     public String label;
+
     public StagedEmployeeCustomDropDownFields withLabel(String label) {
         this.label = label;
         return this;
@@ -32,9 +34,15 @@ public class StagedEmployeeCustomDropDownFields {
      */
     @JsonProperty("value")
     public String value;
+
     public StagedEmployeeCustomDropDownFields withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public StagedEmployeeCustomDropDownFields(@JsonProperty("category") StagedEmployeeCustomDropDownFieldsCategoryEnum category, @JsonProperty("label") String label, @JsonProperty("value") String value) {
+        this.category = category;
+        this.label = label;
+        this.value = value;
+  }
 }

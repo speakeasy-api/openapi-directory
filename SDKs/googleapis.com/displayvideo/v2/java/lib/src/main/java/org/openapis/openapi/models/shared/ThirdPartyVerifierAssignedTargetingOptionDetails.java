@@ -18,6 +18,7 @@ public class ThirdPartyVerifierAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("adloox")
     public Adloox adloox;
+
     public ThirdPartyVerifierAssignedTargetingOptionDetails withAdloox(Adloox adloox) {
         this.adloox = adloox;
         return this;
@@ -29,6 +30,7 @@ public class ThirdPartyVerifierAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doubleVerify")
     public DoubleVerify doubleVerify;
+
     public ThirdPartyVerifierAssignedTargetingOptionDetails withDoubleVerify(DoubleVerify doubleVerify) {
         this.doubleVerify = doubleVerify;
         return this;
@@ -40,9 +42,11 @@ public class ThirdPartyVerifierAssignedTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("integralAdScience")
     public IntegralAdScience integralAdScience;
+
     public ThirdPartyVerifierAssignedTargetingOptionDetails withIntegralAdScience(IntegralAdScience integralAdScience) {
         this.integralAdScience = integralAdScience;
         return this;
     }
     
+    public ThirdPartyVerifierAssignedTargetingOptionDetails(){}
 }

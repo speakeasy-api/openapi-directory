@@ -18,6 +18,7 @@ public class GoogleFirebaseAppcheckV1betaService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcementMode")
     public GoogleFirebaseAppcheckV1betaServiceEnforcementModeEnum enforcementMode;
+
     public GoogleFirebaseAppcheckV1betaService withEnforcementMode(GoogleFirebaseAppcheckV1betaServiceEnforcementModeEnum enforcementMode) {
         this.enforcementMode = enforcementMode;
         return this;
@@ -29,9 +30,11 @@ public class GoogleFirebaseAppcheckV1betaService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleFirebaseAppcheckV1betaService withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleFirebaseAppcheckV1betaService(){}
 }

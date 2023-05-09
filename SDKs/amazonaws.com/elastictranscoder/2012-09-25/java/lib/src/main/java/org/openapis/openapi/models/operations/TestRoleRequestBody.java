@@ -12,6 +12,7 @@ public class TestRoleRequestBody {
      */
     @JsonProperty("InputBucket")
     public String inputBucket;
+
     public TestRoleRequestBody withInputBucket(String inputBucket) {
         this.inputBucket = inputBucket;
         return this;
@@ -22,6 +23,7 @@ public class TestRoleRequestBody {
      */
     @JsonProperty("OutputBucket")
     public String outputBucket;
+
     public TestRoleRequestBody withOutputBucket(String outputBucket) {
         this.outputBucket = outputBucket;
         return this;
@@ -32,6 +34,7 @@ public class TestRoleRequestBody {
      */
     @JsonProperty("Role")
     public String role;
+
     public TestRoleRequestBody withRole(String role) {
         this.role = role;
         return this;
@@ -42,9 +45,16 @@ public class TestRoleRequestBody {
      */
     @JsonProperty("Topics")
     public String[] topics;
+
     public TestRoleRequestBody withTopics(String[] topics) {
         this.topics = topics;
         return this;
     }
     
+    public TestRoleRequestBody(@JsonProperty("InputBucket") String inputBucket, @JsonProperty("OutputBucket") String outputBucket, @JsonProperty("Role") String role, @JsonProperty("Topics") String[] topics) {
+        this.inputBucket = inputBucket;
+        this.outputBucket = outputBucket;
+        this.role = role;
+        this.topics = topics;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCollectionsResponse {
@@ -12,6 +13,7 @@ public class ListCollectionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCollectionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCollectionsResponse {
     
     
     public String contentType;
+
     public ListCollectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCollectionsResponse {
      */
     
     public Object internalServerError;
+
     public ListCollectionsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class ListCollectionsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListCollectionsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListCollectionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListCollectionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListCollectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCollectionsResponse listCollectionsResponse;
+
     public ListCollectionsResponse withListCollectionsResponse(org.openapis.openapi.models.shared.ListCollectionsResponse listCollectionsResponse) {
         this.listCollectionsResponse = listCollectionsResponse;
         return this;
@@ -69,6 +76,7 @@ public class ListCollectionsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public ListCollectionsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListCollectionsResponse {
     
     
     public Integer statusCode;
+
     public ListCollectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListCollectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCollectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListCollectionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCollectionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -103,9 +114,14 @@ public class ListCollectionsResponse {
      */
     
     public Object throttlingException;
+
     public ListCollectionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListCollectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

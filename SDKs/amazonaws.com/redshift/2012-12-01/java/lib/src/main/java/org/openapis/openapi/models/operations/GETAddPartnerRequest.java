@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAddPartnerRequest {
@@ -12,6 +13,7 @@ public class GETAddPartnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AccountId")
     public String accountId;
+
     public GETAddPartnerRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAddPartnerActionEnum action;
+
     public GETAddPartnerRequest withAction(GETAddPartnerActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +32,7 @@ public class GETAddPartnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClusterIdentifier")
     public String clusterIdentifier;
+
     public GETAddPartnerRequest withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -39,6 +43,7 @@ public class GETAddPartnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DatabaseName")
     public String databaseName;
+
     public GETAddPartnerRequest withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -49,6 +54,7 @@ public class GETAddPartnerRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PartnerName")
     public String partnerName;
+
     public GETAddPartnerRequest withPartnerName(String partnerName) {
         this.partnerName = partnerName;
         return this;
@@ -56,6 +62,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAddPartnerVersionEnum version;
+
     public GETAddPartnerRequest withVersion(GETAddPartnerVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAddPartnerRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAddPartnerRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAddPartnerRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAddPartnerRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAddPartnerRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAddPartnerRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,18 @@ public class GETAddPartnerRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAddPartnerRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAddPartnerRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("Action") GETAddPartnerActionEnum action, @JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("PartnerName") String partnerName, @JsonProperty("Version") GETAddPartnerVersionEnum version) {
+        this.accountId = accountId;
+        this.action = action;
+        this.clusterIdentifier = clusterIdentifier;
+        this.databaseName = databaseName;
+        this.partnerName = partnerName;
+        this.version = version;
+  }
 }

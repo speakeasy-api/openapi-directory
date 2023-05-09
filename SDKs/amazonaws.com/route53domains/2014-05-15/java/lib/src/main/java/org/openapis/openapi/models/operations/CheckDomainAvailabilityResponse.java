@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CheckDomainAvailabilityResponse {
@@ -12,6 +13,7 @@ public class CheckDomainAvailabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.CheckDomainAvailabilityResponse checkDomainAvailabilityResponse;
+
     public CheckDomainAvailabilityResponse withCheckDomainAvailabilityResponse(org.openapis.openapi.models.shared.CheckDomainAvailabilityResponse checkDomainAvailabilityResponse) {
         this.checkDomainAvailabilityResponse = checkDomainAvailabilityResponse;
         return this;
@@ -19,6 +21,7 @@ public class CheckDomainAvailabilityResponse {
     
     
     public String contentType;
+
     public CheckDomainAvailabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CheckDomainAvailabilityResponse {
      */
     
     public Object invalidInput;
+
     public CheckDomainAvailabilityResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -36,6 +40,7 @@ public class CheckDomainAvailabilityResponse {
     
     
     public Integer statusCode;
+
     public CheckDomainAvailabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CheckDomainAvailabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CheckDomainAvailabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CheckDomainAvailabilityResponse {
      */
     
     public Object unsupportedTLD;
+
     public CheckDomainAvailabilityResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public CheckDomainAvailabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

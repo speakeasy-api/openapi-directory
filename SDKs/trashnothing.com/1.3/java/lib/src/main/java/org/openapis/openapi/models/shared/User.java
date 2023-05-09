@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * User - User data
- */
 public class User {
     /**
      * A short bio a user has written about themselves to help other members get to know them better. May be null if the user has not written anything about themselves.
@@ -19,6 +16,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("about_me")
     public String aboutMe;
+
     public User withAboutMe(String aboutMe) {
         this.aboutMe = aboutMe;
         return this;
@@ -31,6 +29,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public User withCountry(String country) {
         this.country = country;
         return this;
@@ -39,6 +38,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("feedback")
     public UserFeedback feedback;
+
     public User withFeedback(UserFeedback feedback) {
         this.feedback = feedback;
         return this;
@@ -50,6 +50,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstname")
     public String firstname;
+
     public User withFirstname(String firstname) {
         this.firstname = firstname;
         return this;
@@ -61,6 +62,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastname")
     public String lastname;
+
     public User withLastname(String lastname) {
         this.lastname = lastname;
         return this;
@@ -72,6 +74,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("member_since")
     public String memberSince;
+
     public User withMemberSince(String memberSince) {
         this.memberSince = memberSince;
         return this;
@@ -84,6 +87,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile_image")
     public String profileImage;
+
     public User withProfileImage(String profileImage) {
         this.profileImage = profileImage;
         return this;
@@ -96,6 +100,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reply_time")
     public Long replyTime;
+
     public User withReplyTime(Long replyTime) {
         this.replyTime = replyTime;
         return this;
@@ -104,6 +109,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_id")
     public String userId;
+
     public User withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -116,9 +122,11 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public User withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public User(){}
 }

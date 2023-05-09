@@ -37,10 +37,11 @@ public class Locale {
      * Get the current user location based on IP. Returns an object with user country code, country name, continent name, continent code, ip address and suggested currency. You can use the locale header to get the data in a supported language.
      * 
      * ([IP Geolocation by DB-IP](https://db-ip.com))
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetResponse localeGet() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetResponse localeGet(org.openapis.openapi.models.operations.LocaleGetSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale");
         
@@ -49,16 +50,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetResponse res = new org.openapis.openapi.models.operations.LocaleGetResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetResponse res = new org.openapis.openapi.models.operations.LocaleGetResponse(contentType, httpRes.statusCode()) {{
             locale = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -75,10 +75,11 @@ public class Locale {
     /**
      * List Continents
      * List of all continents. You can use the locale header to get the data in a supported language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetContinentsResponse localeGetContinents() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetContinentsResponse localeGetContinents(org.openapis.openapi.models.operations.LocaleGetContinentsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/continents");
         
@@ -87,16 +88,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetContinentsResponse res = new org.openapis.openapi.models.operations.LocaleGetContinentsResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetContinentsResponse res = new org.openapis.openapi.models.operations.LocaleGetContinentsResponse(contentType, httpRes.statusCode()) {{
             continentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -113,10 +113,11 @@ public class Locale {
     /**
      * List Countries
      * List of all countries. You can use the locale header to get the data in a supported language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetCountriesResponse localeGetCountries() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetCountriesResponse localeGetCountries(org.openapis.openapi.models.operations.LocaleGetCountriesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/countries");
         
@@ -125,16 +126,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetCountriesResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetCountriesResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesResponse(contentType, httpRes.statusCode()) {{
             countryList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,10 +151,11 @@ public class Locale {
     /**
      * List EU Countries
      * List of all countries that are currently members of the EU. You can use the locale header to get the data in a supported language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse localeGetCountriesEU() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse localeGetCountriesEU(org.openapis.openapi.models.operations.LocaleGetCountriesEUSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/countries/eu");
         
@@ -163,16 +164,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesEUResponse(contentType, httpRes.statusCode()) {{
             countryList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,10 +189,11 @@ public class Locale {
     /**
      * List Countries Phone Codes
      * List of all countries phone codes. You can use the locale header to get the data in a supported language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse localeGetCountriesPhones() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse localeGetCountriesPhones(org.openapis.openapi.models.operations.LocaleGetCountriesPhonesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/countries/phones");
         
@@ -201,16 +202,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse res = new org.openapis.openapi.models.operations.LocaleGetCountriesPhonesResponse(contentType, httpRes.statusCode()) {{
             phoneList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,10 +227,11 @@ public class Locale {
     /**
      * List Currencies
      * List of all currencies, including currency symbol, name, plural, and decimal digits for all major and minor currencies. You can use the locale header to get the data in a supported language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse localeGetCurrencies() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse localeGetCurrencies(org.openapis.openapi.models.operations.LocaleGetCurrenciesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/currencies");
         
@@ -239,16 +240,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse res = new org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse res = new org.openapis.openapi.models.operations.LocaleGetCurrenciesResponse(contentType, httpRes.statusCode()) {{
             currencyList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,10 +265,11 @@ public class Locale {
     /**
      * List Languages
      * List of all languages classified by ISO 639-1 including 2-letter code, name in English, and name in the respective language.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.LocaleGetLanguagesResponse localeGetLanguages() throws Exception {
+    public org.openapis.openapi.models.operations.LocaleGetLanguagesResponse localeGetLanguages(org.openapis.openapi.models.operations.LocaleGetLanguagesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/locale/languages");
         
@@ -277,16 +278,15 @@ public class Locale {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LocaleGetLanguagesResponse res = new org.openapis.openapi.models.operations.LocaleGetLanguagesResponse() {{
+        org.openapis.openapi.models.operations.LocaleGetLanguagesResponse res = new org.openapis.openapi.models.operations.LocaleGetLanguagesResponse(contentType, httpRes.statusCode()) {{
             languageList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

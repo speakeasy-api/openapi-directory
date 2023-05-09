@@ -22,6 +22,7 @@ public class Prediction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public Prediction withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Prediction withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUri")
     public String imageUri;
+
     public Prediction withImageUri(String imageUri) {
         this.imageUri = imageUri;
         return this;
@@ -46,6 +49,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iteration")
     public String iteration;
+
     public Prediction withIteration(String iteration) {
         this.iteration = iteration;
         return this;
@@ -54,6 +58,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predictions")
     public PredictionTag[] predictions;
+
     public Prediction withPredictions(PredictionTag[] predictions) {
         this.predictions = predictions;
         return this;
@@ -62,6 +67,7 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Project")
     public String project;
+
     public Prediction withProject(String project) {
         this.project = project;
         return this;
@@ -70,9 +76,11 @@ public class Prediction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThumbnailUri")
     public String thumbnailUri;
+
     public Prediction withThumbnailUri(String thumbnailUri) {
         this.thumbnailUri = thumbnailUri;
         return this;
     }
     
+    public Prediction(){}
 }

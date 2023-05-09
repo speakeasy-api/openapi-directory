@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateReplicationJobResponse {
     
     public String contentType;
+
     public UpdateReplicationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object internalError;
+
     public UpdateReplicationJobResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateReplicationJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public UpdateReplicationJobResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object operationNotPermittedException;
+
     public UpdateReplicationJobResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object replicationJobNotFoundException;
+
     public UpdateReplicationJobResponse withReplicationJobNotFoundException(Object replicationJobNotFoundException) {
         this.replicationJobNotFoundException = replicationJobNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object serverCannotBeReplicatedException;
+
     public UpdateReplicationJobResponse withServerCannotBeReplicatedException(Object serverCannotBeReplicatedException) {
         this.serverCannotBeReplicatedException = serverCannotBeReplicatedException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateReplicationJobResponse {
     
     
     public Integer statusCode;
+
     public UpdateReplicationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateReplicationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateReplicationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object temporarilyUnavailableException;
+
     public UpdateReplicationJobResponse withTemporarilyUnavailableException(Object temporarilyUnavailableException) {
         this.temporarilyUnavailableException = temporarilyUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateReplicationJobResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public UpdateReplicationJobResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateReplicationJobResponse {
      */
     
     public java.util.Map<String, Object> updateReplicationJobResponse;
+
     public UpdateReplicationJobResponse withUpdateReplicationJobResponse(java.util.Map<String, Object> updateReplicationJobResponse) {
         this.updateReplicationJobResponse = updateReplicationJobResponse;
         return this;
     }
     
+    public UpdateReplicationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

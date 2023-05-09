@@ -15,6 +15,7 @@ public class CloudWatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackTestConfiguration")
     public BackTestConfiguration backTestConfiguration;
+
     public CloudWatchConfig withBackTestConfiguration(BackTestConfiguration backTestConfiguration) {
         this.backTestConfiguration = backTestConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class CloudWatchConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CloudWatchConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public CloudWatchConfig(){}
 }

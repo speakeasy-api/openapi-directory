@@ -16,9 +16,13 @@ public class AuthorisationConfirmation {
      */
     @JsonProperty("confirmationCode")
     public String confirmationCode;
+
     public AuthorisationConfirmation withConfirmationCode(String confirmationCode) {
         this.confirmationCode = confirmationCode;
         return this;
     }
     
+    public AuthorisationConfirmation(@JsonProperty("confirmationCode") String confirmationCode) {
+        this.confirmationCode = confirmationCode;
+  }
 }

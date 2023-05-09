@@ -18,6 +18,7 @@ public class CountArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public CountArtifactsRequest withQuery(Query query) {
         this.query = query;
         return this;
@@ -29,9 +30,11 @@ public class CountArtifactsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public CountArtifactsRequestViewEnum view;
+
     public CountArtifactsRequest withView(CountArtifactsRequestViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public CountArtifactsRequest(){}
 }

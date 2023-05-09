@@ -18,6 +18,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("builtInAlgorithmOutput")
     public GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput;
+
     public GoogleCloudMlV1TrainingOutput withBuiltInAlgorithmOutput(GoogleCloudMlV1BuiltInAlgorithmOutput builtInAlgorithmOutput) {
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completedTrialCount")
     public String completedTrialCount;
+
     public GoogleCloudMlV1TrainingOutput withCompletedTrialCount(String completedTrialCount) {
         this.completedTrialCount = completedTrialCount;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumedMLUnits")
     public Double consumedMLUnits;
+
     public GoogleCloudMlV1TrainingOutput withConsumedMLUnits(Double consumedMLUnits) {
         this.consumedMLUnits = consumedMLUnits;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hyperparameterMetricTag")
     public String hyperparameterMetricTag;
+
     public GoogleCloudMlV1TrainingOutput withHyperparameterMetricTag(String hyperparameterMetricTag) {
         this.hyperparameterMetricTag = hyperparameterMetricTag;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isBuiltInAlgorithmJob")
     public Boolean isBuiltInAlgorithmJob;
+
     public GoogleCloudMlV1TrainingOutput withIsBuiltInAlgorithmJob(Boolean isBuiltInAlgorithmJob) {
         this.isBuiltInAlgorithmJob = isBuiltInAlgorithmJob;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isHyperparameterTuningJob")
     public Boolean isHyperparameterTuningJob;
+
     public GoogleCloudMlV1TrainingOutput withIsHyperparameterTuningJob(Boolean isHyperparameterTuningJob) {
         this.isHyperparameterTuningJob = isHyperparameterTuningJob;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trials")
     public GoogleCloudMlV1HyperparameterOutput[] trials;
+
     public GoogleCloudMlV1TrainingOutput withTrials(GoogleCloudMlV1HyperparameterOutput[] trials) {
         this.trials = trials;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudMlV1TrainingOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webAccessUris")
     public java.util.Map<String, String> webAccessUris;
+
     public GoogleCloudMlV1TrainingOutput withWebAccessUris(java.util.Map<String, String> webAccessUris) {
         this.webAccessUris = webAccessUris;
         return this;
     }
     
+    public GoogleCloudMlV1TrainingOutput(){}
 }

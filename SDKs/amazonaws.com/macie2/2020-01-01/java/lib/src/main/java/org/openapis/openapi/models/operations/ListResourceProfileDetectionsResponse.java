@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResourceProfileDetectionsResponse {
@@ -12,6 +13,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResourceProfileDetectionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListResourceProfileDetectionsResponse {
     
     
     public String contentType;
+
     public ListResourceProfileDetectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object internalServerException;
+
     public ListResourceProfileDetectionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResourceProfileDetectionsResponse listResourceProfileDetectionsResponse;
+
     public ListResourceProfileDetectionsResponse withListResourceProfileDetectionsResponse(org.openapis.openapi.models.shared.ListResourceProfileDetectionsResponse listResourceProfileDetectionsResponse) {
         this.listResourceProfileDetectionsResponse = listResourceProfileDetectionsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResourceProfileDetectionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListResourceProfileDetectionsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class ListResourceProfileDetectionsResponse {
     
     
     public Integer statusCode;
+
     public ListResourceProfileDetectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResourceProfileDetectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResourceProfileDetectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object throttlingException;
+
     public ListResourceProfileDetectionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ListResourceProfileDetectionsResponse {
      */
     
     public Object validationException;
+
     public ListResourceProfileDetectionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListResourceProfileDetectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

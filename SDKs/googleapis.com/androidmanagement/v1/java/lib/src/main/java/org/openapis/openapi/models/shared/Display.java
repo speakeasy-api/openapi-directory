@@ -18,6 +18,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("density")
     public Integer density;
+
     public Display withDensity(Integer density) {
         this.density = density;
         return this;
@@ -29,6 +30,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayId")
     public Integer displayId;
+
     public Display withDisplayId(Integer displayId) {
         this.displayId = displayId;
         return this;
@@ -40,6 +42,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public Display withHeight(Integer height) {
         this.height = height;
         return this;
@@ -51,6 +54,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Display withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refreshRate")
     public Integer refreshRate;
+
     public Display withRefreshRate(Integer refreshRate) {
         this.refreshRate = refreshRate;
         return this;
@@ -73,6 +78,7 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public DisplayStateEnum state;
+
     public Display withState(DisplayStateEnum state) {
         this.state = state;
         return this;
@@ -84,9 +90,11 @@ public class Display {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public Display withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Display(){}
 }

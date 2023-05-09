@@ -18,6 +18,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NodePool withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceNames")
     public String[] instanceNames;
+
     public NodePool withInstanceNames(String[] instanceNames) {
         this.instanceNames = instanceNames;
         return this;
@@ -40,9 +42,11 @@ public class NodePool {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repairAction")
     public NodePoolRepairActionEnum repairAction;
+
     public NodePool withRepairAction(NodePoolRepairActionEnum repairAction) {
         this.repairAction = repairAction;
         return this;
     }
     
+    public NodePool(){}
 }

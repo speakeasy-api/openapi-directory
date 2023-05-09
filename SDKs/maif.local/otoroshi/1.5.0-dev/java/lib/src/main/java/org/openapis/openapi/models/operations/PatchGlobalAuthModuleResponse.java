@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PatchGlobalAuthModuleResponse {
     
     public String contentType;
+
     public PatchGlobalAuthModuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PatchGlobalAuthModuleResponse {
     
     
     public Integer statusCode;
+
     public PatchGlobalAuthModuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PatchGlobalAuthModuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PatchGlobalAuthModuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PatchGlobalAuthModuleResponse {
      */
     
     public Object patchGlobalAuthModule200ApplicationJSONOneOf;
+
     public PatchGlobalAuthModuleResponse withPatchGlobalAuthModule200ApplicationJSONOneOf(Object patchGlobalAuthModule200ApplicationJSONOneOf) {
         this.patchGlobalAuthModule200ApplicationJSONOneOf = patchGlobalAuthModule200ApplicationJSONOneOf;
         return this;
     }
     
+    public PatchGlobalAuthModuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

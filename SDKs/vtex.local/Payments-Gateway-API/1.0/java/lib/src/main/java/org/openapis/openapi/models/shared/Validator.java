@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Validator {
     @JsonProperty("cardCodeMask")
     public String cardCodeMask;
+
     public Validator withCardCodeMask(String cardCodeMask) {
         this.cardCodeMask = cardCodeMask;
         return this;
@@ -16,6 +17,7 @@ public class Validator {
     
     @JsonProperty("cardCodeRegex")
     public String cardCodeRegex;
+
     public Validator withCardCodeRegex(String cardCodeRegex) {
         this.cardCodeRegex = cardCodeRegex;
         return this;
@@ -23,6 +25,7 @@ public class Validator {
     
     @JsonProperty("mask")
     public String mask;
+
     public Validator withMask(String mask) {
         this.mask = mask;
         return this;
@@ -30,6 +33,7 @@ public class Validator {
     
     @JsonProperty("regex")
     public String regex;
+
     public Validator withRegex(String regex) {
         this.regex = regex;
         return this;
@@ -37,6 +41,7 @@ public class Validator {
     
     @JsonProperty("useBillingAddress")
     public Boolean useBillingAddress;
+
     public Validator withUseBillingAddress(Boolean useBillingAddress) {
         this.useBillingAddress = useBillingAddress;
         return this;
@@ -44,6 +49,7 @@ public class Validator {
     
     @JsonProperty("useCardHolderName")
     public Boolean useCardHolderName;
+
     public Validator withUseCardHolderName(Boolean useCardHolderName) {
         this.useCardHolderName = useCardHolderName;
         return this;
@@ -51,6 +57,7 @@ public class Validator {
     
     @JsonProperty("useCvv")
     public Boolean useCvv;
+
     public Validator withUseCvv(Boolean useCvv) {
         this.useCvv = useCvv;
         return this;
@@ -58,6 +65,7 @@ public class Validator {
     
     @JsonProperty("useExpirationDate")
     public Boolean useExpirationDate;
+
     public Validator withUseExpirationDate(Boolean useExpirationDate) {
         this.useExpirationDate = useExpirationDate;
         return this;
@@ -65,6 +73,7 @@ public class Validator {
     
     @JsonProperty("validCardLengths")
     public String validCardLengths;
+
     public Validator withValidCardLengths(String validCardLengths) {
         this.validCardLengths = validCardLengths;
         return this;
@@ -72,9 +81,22 @@ public class Validator {
     
     @JsonProperty("weights")
     public Integer[] weights;
+
     public Validator withWeights(Integer[] weights) {
         this.weights = weights;
         return this;
     }
     
+    public Validator(@JsonProperty("cardCodeMask") String cardCodeMask, @JsonProperty("cardCodeRegex") String cardCodeRegex, @JsonProperty("mask") String mask, @JsonProperty("regex") String regex, @JsonProperty("useBillingAddress") Boolean useBillingAddress, @JsonProperty("useCardHolderName") Boolean useCardHolderName, @JsonProperty("useCvv") Boolean useCvv, @JsonProperty("useExpirationDate") Boolean useExpirationDate, @JsonProperty("validCardLengths") String validCardLengths, @JsonProperty("weights") Integer[] weights) {
+        this.cardCodeMask = cardCodeMask;
+        this.cardCodeRegex = cardCodeRegex;
+        this.mask = mask;
+        this.regex = regex;
+        this.useBillingAddress = useBillingAddress;
+        this.useCardHolderName = useCardHolderName;
+        this.useCvv = useCvv;
+        this.useExpirationDate = useExpirationDate;
+        this.validCardLengths = validCardLengths;
+        this.weights = weights;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessEndpoints")
     public AccessEndpoint[] accessEndpoints;
+
     public UpdateStackRequest withAccessEndpoints(AccessEndpoint[] accessEndpoints) {
         this.accessEndpoints = accessEndpoints;
         return this;
@@ -20,6 +21,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSettings")
     public ApplicationSettings applicationSettings;
+
     public UpdateStackRequest withApplicationSettings(ApplicationSettings applicationSettings) {
         this.applicationSettings = applicationSettings;
         return this;
@@ -28,6 +30,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToDelete")
     public StackAttributeEnum[] attributesToDelete;
+
     public UpdateStackRequest withAttributesToDelete(StackAttributeEnum[] attributesToDelete) {
         this.attributesToDelete = attributesToDelete;
         return this;
@@ -36,6 +39,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteStorageConnectors")
     public Boolean deleteStorageConnectors;
+
     public UpdateStackRequest withDeleteStorageConnectors(Boolean deleteStorageConnectors) {
         this.deleteStorageConnectors = deleteStorageConnectors;
         return this;
@@ -44,6 +48,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateStackRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -52,6 +57,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public UpdateStackRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -60,6 +66,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmbedHostDomains")
     public String[] embedHostDomains;
+
     public UpdateStackRequest withEmbedHostDomains(String[] embedHostDomains) {
         this.embedHostDomains = embedHostDomains;
         return this;
@@ -68,6 +75,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackURL")
     public String feedbackURL;
+
     public UpdateStackRequest withFeedbackURL(String feedbackURL) {
         this.feedbackURL = feedbackURL;
         return this;
@@ -75,6 +83,7 @@ public class UpdateStackRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public UpdateStackRequest withName(String name) {
         this.name = name;
         return this;
@@ -83,6 +92,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedirectURL")
     public String redirectURL;
+
     public UpdateStackRequest withRedirectURL(String redirectURL) {
         this.redirectURL = redirectURL;
         return this;
@@ -91,6 +101,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StorageConnectors")
     public StorageConnector[] storageConnectors;
+
     public UpdateStackRequest withStorageConnectors(StorageConnector[] storageConnectors) {
         this.storageConnectors = storageConnectors;
         return this;
@@ -99,6 +110,7 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamingExperienceSettings")
     public StreamingExperienceSettings streamingExperienceSettings;
+
     public UpdateStackRequest withStreamingExperienceSettings(StreamingExperienceSettings streamingExperienceSettings) {
         this.streamingExperienceSettings = streamingExperienceSettings;
         return this;
@@ -107,9 +119,13 @@ public class UpdateStackRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserSettings")
     public UserSetting[] userSettings;
+
     public UpdateStackRequest withUserSettings(UserSetting[] userSettings) {
         this.userSettings = userSettings;
         return this;
     }
     
+    public UpdateStackRequest(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

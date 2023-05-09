@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AutoMLJobObjective {
     @JsonProperty("MetricName")
     public AutoMLMetricEnumEnum metricName;
+
     public AutoMLJobObjective withMetricName(AutoMLMetricEnumEnum metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public AutoMLJobObjective(@JsonProperty("MetricName") AutoMLMetricEnumEnum metricName) {
+        this.metricName = metricName;
+  }
 }

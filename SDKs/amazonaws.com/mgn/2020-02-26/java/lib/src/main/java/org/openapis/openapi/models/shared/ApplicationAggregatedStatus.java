@@ -15,6 +15,7 @@ public class ApplicationAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatus")
     public ApplicationHealthStatusEnum healthStatus;
+
     public ApplicationAggregatedStatus withHealthStatus(ApplicationHealthStatusEnum healthStatus) {
         this.healthStatus = healthStatus;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastUpdateDateTime")
     public String lastUpdateDateTime;
+
     public ApplicationAggregatedStatus withLastUpdateDateTime(String lastUpdateDateTime) {
         this.lastUpdateDateTime = lastUpdateDateTime;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressStatus")
     public ApplicationProgressStatusEnum progressStatus;
+
     public ApplicationAggregatedStatus withProgressStatus(ApplicationProgressStatusEnum progressStatus) {
         this.progressStatus = progressStatus;
         return this;
@@ -39,9 +42,11 @@ public class ApplicationAggregatedStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSourceServers")
     public Long totalSourceServers;
+
     public ApplicationAggregatedStatus withTotalSourceServers(Long totalSourceServers) {
         this.totalSourceServers = totalSourceServers;
         return this;
     }
     
+    public ApplicationAggregatedStatus(){}
 }

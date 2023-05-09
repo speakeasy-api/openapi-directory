@@ -15,9 +15,11 @@ public class ActionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public java.util.Map<String, String> configuration;
+
     public ActionConfiguration withConfiguration(java.util.Map<String, String> configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public ActionConfiguration(){}
 }

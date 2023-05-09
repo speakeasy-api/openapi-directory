@@ -12,6 +12,7 @@ public class ControllersAdvisoryDetailItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public ControllersAdvisoryDetailAttributes attributes;
+
     public ControllersAdvisoryDetailItem withAttributes(ControllersAdvisoryDetailAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class ControllersAdvisoryDetailItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControllersAdvisoryDetailItem withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class ControllersAdvisoryDetailItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public ControllersAdvisoryDetailItem withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ControllersAdvisoryDetailItem(){}
 }

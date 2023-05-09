@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifySecurityGroupRulesRequestSecurityGroupRules - Describes an update to a security group rule.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifySecurityGroupRulesRequestSecurityGroupRules {
     
     public SecurityGroupRuleRequest securityGroupRule;
+
     public ModifySecurityGroupRulesRequestSecurityGroupRules withSecurityGroupRule(SecurityGroupRuleRequest securityGroupRule) {
         this.securityGroupRule = securityGroupRule;
         return this;
@@ -19,9 +20,13 @@ public class ModifySecurityGroupRulesRequestSecurityGroupRules {
     
     
     public String securityGroupRuleId;
+
     public ModifySecurityGroupRulesRequestSecurityGroupRules withSecurityGroupRuleId(String securityGroupRuleId) {
         this.securityGroupRuleId = securityGroupRuleId;
         return this;
     }
     
+    public ModifySecurityGroupRulesRequestSecurityGroupRules(@JsonProperty("SecurityGroupRuleId") String securityGroupRuleId) {
+        this.securityGroupRuleId = securityGroupRuleId;
+  }
 }

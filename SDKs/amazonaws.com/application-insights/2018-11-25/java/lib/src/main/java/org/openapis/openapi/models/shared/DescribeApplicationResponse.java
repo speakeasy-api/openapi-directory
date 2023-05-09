@@ -15,9 +15,11 @@ public class DescribeApplicationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationInfo")
     public ApplicationInfo applicationInfo;
+
     public DescribeApplicationResponse withApplicationInfo(ApplicationInfo applicationInfo) {
         this.applicationInfo = applicationInfo;
         return this;
     }
     
+    public DescribeApplicationResponse(){}
 }

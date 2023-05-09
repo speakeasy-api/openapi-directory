@@ -18,6 +18,7 @@ public class ListOtherContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListOtherContactsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class ListOtherContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextSyncToken")
     public String nextSyncToken;
+
     public ListOtherContactsResponse withNextSyncToken(String nextSyncToken) {
         this.nextSyncToken = nextSyncToken;
         return this;
@@ -40,6 +42,7 @@ public class ListOtherContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherContacts")
     public Person[] otherContacts;
+
     public ListOtherContactsResponse withOtherContacts(Person[] otherContacts) {
         this.otherContacts = otherContacts;
         return this;
@@ -51,9 +54,11 @@ public class ListOtherContactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListOtherContactsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListOtherContactsResponse(){}
 }

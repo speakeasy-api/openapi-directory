@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRescoreExecutionPlanRequest {
     @JsonProperty("Id")
     public String id;
+
     public DeleteRescoreExecutionPlanRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteRescoreExecutionPlanRequest(@JsonProperty("Id") String id) {
+        this.id = id;
+  }
 }

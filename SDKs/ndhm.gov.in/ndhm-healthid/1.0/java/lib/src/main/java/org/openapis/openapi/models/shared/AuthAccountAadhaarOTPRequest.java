@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AuthAccountAadhaarOTPRequest {
     @JsonProperty("otp")
     public String otp;
+
     public AuthAccountAadhaarOTPRequest withOtp(String otp) {
         this.otp = otp;
         return this;
@@ -19,9 +20,14 @@ public class AuthAccountAadhaarOTPRequest {
     
     @JsonProperty("txnId")
     public String txnId;
+
     public AuthAccountAadhaarOTPRequest withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public AuthAccountAadhaarOTPRequest(@JsonProperty("otp") String otp, @JsonProperty("txnId") String txnId) {
+        this.otp = otp;
+        this.txnId = txnId;
+  }
 }

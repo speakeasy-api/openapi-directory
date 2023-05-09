@@ -12,6 +12,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("copy")
     public JobConfigurationTableCopy copy;
+
     public JobConfiguration withCopy(JobConfigurationTableCopy copy) {
         this.copy = copy;
         return this;
@@ -23,6 +24,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public JobConfiguration withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -31,6 +33,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extract")
     public JobConfigurationExtract extract;
+
     public JobConfiguration withExtract(JobConfigurationExtract extract) {
         this.extract = extract;
         return this;
@@ -42,6 +45,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTimeoutMs")
     public String jobTimeoutMs;
+
     public JobConfiguration withJobTimeoutMs(String jobTimeoutMs) {
         this.jobTimeoutMs = jobTimeoutMs;
         return this;
@@ -53,6 +57,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobType")
     public String jobType;
+
     public JobConfiguration withJobType(String jobType) {
         this.jobType = jobType;
         return this;
@@ -64,6 +69,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public JobConfiguration withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -72,6 +78,7 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("load")
     public JobConfigurationLoad load;
+
     public JobConfiguration withLoad(JobConfigurationLoad load) {
         this.load = load;
         return this;
@@ -80,9 +87,11 @@ public class JobConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public JobConfigurationQuery query;
+
     public JobConfiguration withQuery(JobConfigurationQuery query) {
         this.query = query;
         return this;
     }
     
+    public JobConfiguration(){}
 }

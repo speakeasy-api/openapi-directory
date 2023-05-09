@@ -85,10 +85,8 @@ public class CustomEvents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomEventsAnalyticsResponse res = new org.openapis.openapi.models.operations.CustomEventsAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.CustomEventsAnalyticsResponse res = new org.openapis.openapi.models.operations.CustomEventsAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,10 +150,8 @@ public class CustomEvents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CustomEventsListResponse res = new org.openapis.openapi.models.operations.CustomEventsListResponse() {{
+        org.openapis.openapi.models.operations.CustomEventsListResponse res = new org.openapis.openapi.models.operations.CustomEventsListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListIndexResponse {
@@ -12,6 +13,7 @@ public class ListIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public ListIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListIndexResponse {
     
     
     public String contentType;
+
     public ListIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListIndexResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public ListIndexResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class ListIndexResponse {
      */
     
     public Object facetValidationException;
+
     public ListIndexResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class ListIndexResponse {
      */
     
     public Object internalServiceException;
+
     public ListIndexResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ListIndexResponse {
      */
     
     public Object invalidArnException;
+
     public ListIndexResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -69,6 +76,7 @@ public class ListIndexResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListIndexResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -79,6 +87,7 @@ public class ListIndexResponse {
      */
     
     public Object limitExceededException;
+
     public ListIndexResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -89,6 +98,7 @@ public class ListIndexResponse {
      */
     
     public org.openapis.openapi.models.shared.ListIndexResponse listIndexResponse;
+
     public ListIndexResponse withListIndexResponse(org.openapis.openapi.models.shared.ListIndexResponse listIndexResponse) {
         this.listIndexResponse = listIndexResponse;
         return this;
@@ -99,6 +109,7 @@ public class ListIndexResponse {
      */
     
     public Object notIndexException;
+
     public ListIndexResponse withNotIndexException(Object notIndexException) {
         this.notIndexException = notIndexException;
         return this;
@@ -106,6 +117,7 @@ public class ListIndexResponse {
     
     
     public Integer statusCode;
+
     public ListIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class ListIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class ListIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class ListIndexResponse {
      */
     
     public Object retryableConflictException;
+
     public ListIndexResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -143,9 +158,14 @@ public class ListIndexResponse {
      */
     
     public Object validationException;
+
     public ListIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

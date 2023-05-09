@@ -18,6 +18,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExecutePatchJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ExecutePatchJobRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dryRun")
     public Boolean dryRun;
+
     public ExecutePatchJobRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -51,6 +54,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public String duration;
+
     public ExecutePatchJobRequest withDuration(String duration) {
         this.duration = duration;
         return this;
@@ -62,6 +66,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceFilter")
     public PatchInstanceFilter instanceFilter;
+
     public ExecutePatchJobRequest withInstanceFilter(PatchInstanceFilter instanceFilter) {
         this.instanceFilter = instanceFilter;
         return this;
@@ -73,6 +78,7 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("patchConfig")
     public PatchConfig patchConfig;
+
     public ExecutePatchJobRequest withPatchConfig(PatchConfig patchConfig) {
         this.patchConfig = patchConfig;
         return this;
@@ -84,9 +90,11 @@ public class ExecutePatchJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public PatchRollout rollout;
+
     public ExecutePatchJobRequest withRollout(PatchRollout rollout) {
         this.rollout = rollout;
         return this;
     }
     
+    public ExecutePatchJobRequest(){}
 }

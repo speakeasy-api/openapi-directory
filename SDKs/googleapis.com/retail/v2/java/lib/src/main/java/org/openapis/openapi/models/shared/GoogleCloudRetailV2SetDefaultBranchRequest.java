@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2SetDefaultBranchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("branchId")
     public String branchId;
+
     public GoogleCloudRetailV2SetDefaultBranchRequest withBranchId(String branchId) {
         this.branchId = branchId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2SetDefaultBranchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("force")
     public Boolean force;
+
     public GoogleCloudRetailV2SetDefaultBranchRequest withForce(Boolean force) {
         this.force = force;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2SetDefaultBranchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public GoogleCloudRetailV2SetDefaultBranchRequest withNote(String note) {
         this.note = note;
         return this;
     }
     
+    public GoogleCloudRetailV2SetDefaultBranchRequest(){}
 }

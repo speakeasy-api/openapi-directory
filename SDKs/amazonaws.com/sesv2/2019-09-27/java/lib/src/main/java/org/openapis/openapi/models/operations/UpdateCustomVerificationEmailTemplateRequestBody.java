@@ -12,6 +12,7 @@ public class UpdateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("FailureRedirectionURL")
     public String failureRedirectionURL;
+
     public UpdateCustomVerificationEmailTemplateRequestBody withFailureRedirectionURL(String failureRedirectionURL) {
         this.failureRedirectionURL = failureRedirectionURL;
         return this;
@@ -22,6 +23,7 @@ public class UpdateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("FromEmailAddress")
     public String fromEmailAddress;
+
     public UpdateCustomVerificationEmailTemplateRequestBody withFromEmailAddress(String fromEmailAddress) {
         this.fromEmailAddress = fromEmailAddress;
         return this;
@@ -32,6 +34,7 @@ public class UpdateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("SuccessRedirectionURL")
     public String successRedirectionURL;
+
     public UpdateCustomVerificationEmailTemplateRequestBody withSuccessRedirectionURL(String successRedirectionURL) {
         this.successRedirectionURL = successRedirectionURL;
         return this;
@@ -42,6 +45,7 @@ public class UpdateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateContent")
     public String templateContent;
+
     public UpdateCustomVerificationEmailTemplateRequestBody withTemplateContent(String templateContent) {
         this.templateContent = templateContent;
         return this;
@@ -52,9 +56,17 @@ public class UpdateCustomVerificationEmailTemplateRequestBody {
      */
     @JsonProperty("TemplateSubject")
     public String templateSubject;
+
     public UpdateCustomVerificationEmailTemplateRequestBody withTemplateSubject(String templateSubject) {
         this.templateSubject = templateSubject;
         return this;
     }
     
+    public UpdateCustomVerificationEmailTemplateRequestBody(@JsonProperty("FailureRedirectionURL") String failureRedirectionURL, @JsonProperty("FromEmailAddress") String fromEmailAddress, @JsonProperty("SuccessRedirectionURL") String successRedirectionURL, @JsonProperty("TemplateContent") String templateContent, @JsonProperty("TemplateSubject") String templateSubject) {
+        this.failureRedirectionURL = failureRedirectionURL;
+        this.fromEmailAddress = fromEmailAddress;
+        this.successRedirectionURL = successRedirectionURL;
+        this.templateContent = templateContent;
+        this.templateSubject = templateSubject;
+  }
 }

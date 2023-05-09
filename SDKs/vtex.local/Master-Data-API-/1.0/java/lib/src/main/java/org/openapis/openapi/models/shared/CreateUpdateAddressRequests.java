@@ -15,6 +15,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressName")
     public String addressName;
+
     public CreateUpdateAddressRequests withAddressName(String addressName) {
         this.addressName = addressName;
         return this;
@@ -26,6 +27,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public CreateUpdateAddressRequests withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +39,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public CreateUpdateAddressRequests withCity(String city) {
         this.city = city;
         return this;
@@ -48,6 +51,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public CreateUpdateAddressRequests withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -59,6 +63,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public CreateUpdateAddressRequests withCountry(String country) {
         this.country = country;
         return this;
@@ -70,6 +75,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public CreateUpdateAddressRequests withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -81,6 +87,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public CreateUpdateAddressRequests withNumber(String number) {
         this.number = number;
         return this;
@@ -92,6 +99,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public CreateUpdateAddressRequests withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -103,6 +111,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public CreateUpdateAddressRequests withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -114,6 +123,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public CreateUpdateAddressRequests withReference(String reference) {
         this.reference = reference;
         return this;
@@ -125,6 +135,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public CreateUpdateAddressRequests withState(String state) {
         this.state = state;
         return this;
@@ -136,6 +147,7 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public CreateUpdateAddressRequests withStreet(String street) {
         this.street = street;
         return this;
@@ -147,9 +159,11 @@ public class CreateUpdateAddressRequests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public CreateUpdateAddressRequests withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public CreateUpdateAddressRequests(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PostAssetsCorrelationMatrixShrinkageRequestBody1 {
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody1 withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -19,6 +20,7 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody1 {
      */
     @JsonProperty("assetsCorrelationMatrix")
     public Double[][] assetsCorrelationMatrix;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody1 withAssetsCorrelationMatrix(Double[][] assetsCorrelationMatrix) {
         this.assetsCorrelationMatrix = assetsCorrelationMatrix;
         return this;
@@ -29,6 +31,7 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody1 {
      */
     @JsonProperty("shrinkageFactor")
     public Double shrinkageFactor;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody1 withShrinkageFactor(Double shrinkageFactor) {
         this.shrinkageFactor = shrinkageFactor;
         return this;
@@ -39,9 +42,16 @@ public class PostAssetsCorrelationMatrixShrinkageRequestBody1 {
      */
     @JsonProperty("targetEquicorrelationMatrix")
     public PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum targetEquicorrelationMatrix;
+
     public PostAssetsCorrelationMatrixShrinkageRequestBody1 withTargetEquicorrelationMatrix(PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum targetEquicorrelationMatrix) {
         this.targetEquicorrelationMatrix = targetEquicorrelationMatrix;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixShrinkageRequestBody1(@JsonProperty("assets") Long assets, @JsonProperty("assetsCorrelationMatrix") Double[][] assetsCorrelationMatrix, @JsonProperty("shrinkageFactor") Double shrinkageFactor, @JsonProperty("targetEquicorrelationMatrix") PostAssetsCorrelationMatrixShrinkageRequestBody1TargetEquicorrelationMatrixEnum targetEquicorrelationMatrix) {
+        this.assets = assets;
+        this.assetsCorrelationMatrix = assetsCorrelationMatrix;
+        this.shrinkageFactor = shrinkageFactor;
+        this.targetEquicorrelationMatrix = targetEquicorrelationMatrix;
+  }
 }

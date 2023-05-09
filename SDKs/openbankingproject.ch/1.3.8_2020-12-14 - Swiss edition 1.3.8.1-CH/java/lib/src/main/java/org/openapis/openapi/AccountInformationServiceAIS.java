@@ -94,7 +94,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateConsentResponse res = new org.openapis.openapi.models.operations.CreateConsentResponse() {{
+        org.openapis.openapi.models.operations.CreateConsentResponse res = new org.openapis.openapi.models.operations.CreateConsentResponse(contentType, httpRes.statusCode()) {{
             consentsResponse201 = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -113,8 +113,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -277,7 +275,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteConsentResponse res = new org.openapis.openapi.models.operations.DeleteConsentResponse() {{
+        org.openapis.openapi.models.operations.DeleteConsentResponse res = new org.openapis.openapi.models.operations.DeleteConsentResponse(contentType, httpRes.statusCode()) {{
             error400NGAIS = null;
             error400AIS = null;
             error401NGAIS = null;
@@ -295,8 +293,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 408 || httpRes.statusCode() == 415 || httpRes.statusCode() == 500 || httpRes.statusCode() == 503) {
@@ -472,7 +468,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAccountListResponse res = new org.openapis.openapi.models.operations.GetAccountListResponse() {{
+        org.openapis.openapi.models.operations.GetAccountListResponse res = new org.openapis.openapi.models.operations.GetAccountListResponse(contentType, httpRes.statusCode()) {{
             accountList = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -491,8 +487,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -662,7 +656,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBalancesResponse res = new org.openapis.openapi.models.operations.GetBalancesResponse() {{
+        org.openapis.openapi.models.operations.GetBalancesResponse res = new org.openapis.openapi.models.operations.GetBalancesResponse(contentType, httpRes.statusCode()) {{
             readAccountBalanceResponse200 = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -681,8 +675,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -848,7 +840,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.GetConsentAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.GetConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.GetConsentAuthorisationResponse(contentType, httpRes.statusCode()) {{
             authorisations = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -867,8 +859,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1034,7 +1024,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsentInformationResponse res = new org.openapis.openapi.models.operations.GetConsentInformationResponse() {{
+        org.openapis.openapi.models.operations.GetConsentInformationResponse res = new org.openapis.openapi.models.operations.GetConsentInformationResponse(contentType, httpRes.statusCode()) {{
             consentInformationResponse200Json = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -1053,8 +1043,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1218,7 +1206,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsentScaStatusResponse res = new org.openapis.openapi.models.operations.GetConsentScaStatusResponse() {{
+        org.openapis.openapi.models.operations.GetConsentScaStatusResponse res = new org.openapis.openapi.models.operations.GetConsentScaStatusResponse(contentType, httpRes.statusCode()) {{
             scaStatusResponse = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -1237,8 +1225,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1401,7 +1387,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetConsentStatusResponse res = new org.openapis.openapi.models.operations.GetConsentStatusResponse() {{
+        org.openapis.openapi.models.operations.GetConsentStatusResponse res = new org.openapis.openapi.models.operations.GetConsentStatusResponse(contentType, httpRes.statusCode()) {{
             consentStatusResponse200 = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -1420,8 +1406,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1589,7 +1573,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionDetailsResponse res = new org.openapis.openapi.models.operations.GetTransactionDetailsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionDetailsResponse res = new org.openapis.openapi.models.operations.GetTransactionDetailsResponse(contentType, httpRes.statusCode()) {{
             getTransactionDetails200ApplicationJSONObject = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -1608,8 +1592,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1783,7 +1765,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionListResponse res = new org.openapis.openapi.models.operations.GetTransactionListResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionListResponse res = new org.openapis.openapi.models.operations.GetTransactionListResponse(contentType, httpRes.statusCode()) {{
             transactionsResponse200Json = null;
             body = null;
             getTransactionList200TextPlainOneOf = null;
@@ -1804,8 +1786,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1994,7 +1974,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReadAccountDetailsResponse res = new org.openapis.openapi.models.operations.ReadAccountDetailsResponse() {{
+        org.openapis.openapi.models.operations.ReadAccountDetailsResponse res = new org.openapis.openapi.models.operations.ReadAccountDetailsResponse(contentType, httpRes.statusCode()) {{
             readAccountDetails200ApplicationJSONObject = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -2013,8 +1993,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2211,7 +2189,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.StartConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartConsentAuthorisationResponse() {{
+        org.openapis.openapi.models.operations.StartConsentAuthorisationResponse res = new org.openapis.openapi.models.operations.StartConsentAuthorisationResponse(contentType, httpRes.statusCode()) {{
             startScaprocessResponse = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -2230,8 +2208,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -2434,7 +2410,7 @@ public class AccountInformationServiceAIS {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse() {{
+        org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse res = new org.openapis.openapi.models.operations.UpdateConsentsPsuDataResponse(contentType, httpRes.statusCode()) {{
             updateConsentsPsuData200ApplicationJSONOneOf = null;
             error400NGAIS = null;
             error400AIS = null;
@@ -2453,8 +2429,6 @@ public class AccountInformationServiceAIS {
             error429NGAIS = null;
             error429AIS = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

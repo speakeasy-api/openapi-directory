@@ -12,6 +12,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FormatVersion")
     public String formatVersion;
+
     public DescribeServicesRequest withFormatVersion(String formatVersion) {
         this.formatVersion = formatVersion;
         return this;
@@ -20,6 +21,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public DescribeServicesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -28,6 +30,7 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeServicesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +39,11 @@ public class DescribeServicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public DescribeServicesRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public DescribeServicesRequest(){}
 }

@@ -15,6 +15,7 @@ public class Dgcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Dgcer503ApplicationJSONErrorEnum error;
+
     public Dgcer503ApplicationJSON withError(Dgcer503ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Dgcer503ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Dgcer503ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Dgcer503ApplicationJSON withErrorDescription(Dgcer503ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Dgcer503ApplicationJSON(){}
 }

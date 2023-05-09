@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSwatchRequest {
@@ -12,6 +13,7 @@ public class GetSwatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=color")
     public String color;
+
     public GetSwatchRequest withColor(String color) {
         this.color = color;
         return this;
@@ -22,9 +24,13 @@ public class GetSwatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
     public String name;
+
     public GetSwatchRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetSwatchRequest(@JsonProperty("color") String color) {
+        this.color = color;
+  }
 }

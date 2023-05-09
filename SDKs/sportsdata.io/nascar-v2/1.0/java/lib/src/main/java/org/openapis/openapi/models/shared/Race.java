@@ -12,6 +12,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActualLaps")
     public Long actualLaps;
+
     public Race withActualLaps(Long actualLaps) {
         this.actualLaps = actualLaps;
         return this;
@@ -20,6 +21,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Broadcast")
     public String broadcast;
+
     public Race withBroadcast(String broadcast) {
         this.broadcast = broadcast;
         return this;
@@ -28,6 +30,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Canceled")
     public Boolean canceled;
+
     public Race withCanceled(Boolean canceled) {
         this.canceled = canceled;
         return this;
@@ -36,6 +39,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Created")
     public String created;
+
     public Race withCreated(String created) {
         this.created = created;
         return this;
@@ -44,6 +48,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DateTime")
     public String dateTime;
+
     public Race withDateTime(String dateTime) {
         this.dateTime = dateTime;
         return this;
@@ -52,6 +57,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Day")
     public String day;
+
     public Race withDay(String day) {
         this.day = day;
         return this;
@@ -60,6 +66,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsInProgress")
     public Boolean isInProgress;
+
     public Race withIsInProgress(Boolean isInProgress) {
         this.isInProgress = isInProgress;
         return this;
@@ -68,6 +75,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IsOver")
     public Boolean isOver;
+
     public Race withIsOver(Boolean isOver) {
         this.isOver = isOver;
         return this;
@@ -76,6 +84,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Race withName(String name) {
         this.name = name;
         return this;
@@ -84,6 +93,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PoleWinnerID")
     public Long poleWinnerID;
+
     public Race withPoleWinnerID(Long poleWinnerID) {
         this.poleWinnerID = poleWinnerID;
         return this;
@@ -92,6 +102,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RaceID")
     public Long raceID;
+
     public Race withRaceID(Long raceID) {
         this.raceID = raceID;
         return this;
@@ -100,6 +111,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RescheduledDateTime")
     public String rescheduledDateTime;
+
     public Race withRescheduledDateTime(String rescheduledDateTime) {
         this.rescheduledDateTime = rescheduledDateTime;
         return this;
@@ -108,6 +120,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RescheduledDay")
     public String rescheduledDay;
+
     public Race withRescheduledDay(String rescheduledDay) {
         this.rescheduledDay = rescheduledDay;
         return this;
@@ -116,6 +129,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScheduledLaps")
     public Long scheduledLaps;
+
     public Race withScheduledLaps(Long scheduledLaps) {
         this.scheduledLaps = scheduledLaps;
         return this;
@@ -124,6 +138,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Season")
     public Long season;
+
     public Race withSeason(Long season) {
         this.season = season;
         return this;
@@ -132,6 +147,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeriesID")
     public Long seriesID;
+
     public Race withSeriesID(Long seriesID) {
         this.seriesID = seriesID;
         return this;
@@ -140,6 +156,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SeriesName")
     public String seriesName;
+
     public Race withSeriesName(String seriesName) {
         this.seriesName = seriesName;
         return this;
@@ -148,6 +165,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Track")
     public String track;
+
     public Race withTrack(String track) {
         this.track = track;
         return this;
@@ -156,6 +174,7 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Race withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -164,9 +183,11 @@ public class Race {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WinnerID")
     public Long winnerID;
+
     public Race withWinnerID(Long winnerID) {
         this.winnerID = winnerID;
         return this;
     }
     
+    public Race(){}
 }

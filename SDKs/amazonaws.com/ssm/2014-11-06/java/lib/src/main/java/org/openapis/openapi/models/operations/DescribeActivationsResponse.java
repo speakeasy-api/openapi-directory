@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeActivationsResponse {
     
     public String contentType;
+
     public DescribeActivationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeActivationsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeActivationsResult describeActivationsResult;
+
     public DescribeActivationsResponse withDescribeActivationsResult(org.openapis.openapi.models.shared.DescribeActivationsResult describeActivationsResult) {
         this.describeActivationsResult = describeActivationsResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeActivationsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeActivationsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeActivationsResponse {
      */
     
     public Object invalidFilter;
+
     public DescribeActivationsResponse withInvalidFilter(Object invalidFilter) {
         this.invalidFilter = invalidFilter;
         return this;
@@ -49,6 +54,7 @@ public class DescribeActivationsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeActivationsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -56,6 +62,7 @@ public class DescribeActivationsResponse {
     
     
     public Integer statusCode;
+
     public DescribeActivationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeActivationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeActivationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeActivationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

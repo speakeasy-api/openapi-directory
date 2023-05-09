@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResolverRuleResponse {
     
     public String contentType;
+
     public GetResolverRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetResolverRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResolverRuleResponse getResolverRuleResponse;
+
     public GetResolverRuleResponse withGetResolverRuleResponse(org.openapis.openapi.models.shared.GetResolverRuleResponse getResolverRuleResponse) {
         this.getResolverRuleResponse = getResolverRuleResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetResolverRuleResponse {
      */
     
     public Object internalServiceErrorException;
+
     public GetResolverRuleResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetResolverRuleResponse {
      */
     
     public Object invalidParameterException;
+
     public GetResolverRuleResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class GetResolverRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetResolverRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetResolverRuleResponse {
     
     
     public Integer statusCode;
+
     public GetResolverRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetResolverRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResolverRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetResolverRuleResponse {
      */
     
     public Object throttlingException;
+
     public GetResolverRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetResolverRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

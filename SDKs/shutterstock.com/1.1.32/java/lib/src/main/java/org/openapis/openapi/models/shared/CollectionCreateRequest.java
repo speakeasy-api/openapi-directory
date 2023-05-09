@@ -15,9 +15,13 @@ public class CollectionCreateRequest {
      */
     @JsonProperty("name")
     public String name;
+
     public CollectionCreateRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CollectionCreateRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

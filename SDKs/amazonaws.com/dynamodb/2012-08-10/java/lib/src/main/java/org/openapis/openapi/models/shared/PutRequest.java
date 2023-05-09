@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutRequest {
     @JsonProperty("Item")
     public java.util.Map<String, AttributeValue> item;
+
     public PutRequest withItem(java.util.Map<String, AttributeValue> item) {
         this.item = item;
         return this;
     }
     
+    public PutRequest(@JsonProperty("Item") java.util.Map<String, AttributeValue> item) {
+        this.item = item;
+  }
 }

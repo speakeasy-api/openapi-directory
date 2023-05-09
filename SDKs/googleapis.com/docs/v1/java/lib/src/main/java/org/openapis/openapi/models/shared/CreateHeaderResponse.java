@@ -18,9 +18,11 @@ public class CreateHeaderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headerId")
     public String headerId;
+
     public CreateHeaderResponse withHeaderId(String headerId) {
         this.headerId = headerId;
         return this;
     }
     
+    public CreateHeaderResponse(){}
 }

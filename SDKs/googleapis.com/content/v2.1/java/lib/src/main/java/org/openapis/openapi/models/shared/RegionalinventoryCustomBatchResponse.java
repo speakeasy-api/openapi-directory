@@ -18,6 +18,7 @@ public class RegionalinventoryCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public RegionalinventoryCustomBatchResponseEntry[] entries;
+
     public RegionalinventoryCustomBatchResponse withEntries(RegionalinventoryCustomBatchResponseEntry[] entries) {
         this.entries = entries;
         return this;
@@ -29,9 +30,11 @@ public class RegionalinventoryCustomBatchResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RegionalinventoryCustomBatchResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public RegionalinventoryCustomBatchResponse(){}
 }

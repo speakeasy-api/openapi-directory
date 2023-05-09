@@ -18,6 +18,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ProductCertificationInput withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -29,6 +30,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certification")
     public Certification[] certification;
+
     public ProductCertificationInput withCertification(Certification[] certification) {
         this.certification = certification;
         return this;
@@ -40,6 +42,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String[] countryCode;
+
     public ProductCertificationInput withCountryCode(String[] countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -51,6 +54,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mpn")
     public String[] mpn;
+
     public ProductCertificationInput withMpn(String[] mpn) {
         this.mpn = mpn;
         return this;
@@ -62,6 +66,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ProductCertificationInput withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +78,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productCode")
     public String[] productCode;
+
     public ProductCertificationInput withProductCode(String[] productCode) {
         this.productCode = productCode;
         return this;
@@ -84,6 +90,7 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productType")
     public String[] productType;
+
     public ProductCertificationInput withProductType(String[] productType) {
         this.productType = productType;
         return this;
@@ -95,9 +102,11 @@ public class ProductCertificationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public ProductCertificationInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public ProductCertificationInput(){}
 }

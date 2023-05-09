@@ -15,6 +15,7 @@ public class ManagedZonePrivateVisibilityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeClusters")
     public ManagedZonePrivateVisibilityConfigGKECluster[] gkeClusters;
+
     public ManagedZonePrivateVisibilityConfig withGkeClusters(ManagedZonePrivateVisibilityConfigGKECluster[] gkeClusters) {
         this.gkeClusters = gkeClusters;
         return this;
@@ -23,6 +24,7 @@ public class ManagedZonePrivateVisibilityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ManagedZonePrivateVisibilityConfig withKind(String kind) {
         this.kind = kind;
         return this;
@@ -34,9 +36,11 @@ public class ManagedZonePrivateVisibilityConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public ManagedZonePrivateVisibilityConfigNetwork[] networks;
+
     public ManagedZonePrivateVisibilityConfig withNetworks(ManagedZonePrivateVisibilityConfigNetwork[] networks) {
         this.networks = networks;
         return this;
     }
     
+    public ManagedZonePrivateVisibilityConfig(){}
 }

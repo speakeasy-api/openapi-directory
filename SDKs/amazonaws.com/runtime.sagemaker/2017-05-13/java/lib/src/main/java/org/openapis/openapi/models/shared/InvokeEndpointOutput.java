@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InvokeEndpointOutput {
     @JsonProperty("Body")
     public String body;
+
     public InvokeEndpointOutput withBody(String body) {
         this.body = body;
         return this;
     }
     
+    public InvokeEndpointOutput(@JsonProperty("Body") String body) {
+        this.body = body;
+  }
 }

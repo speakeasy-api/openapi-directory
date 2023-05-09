@@ -15,6 +15,7 @@ public class GetQuery200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public GetQuery200ApplicationJSONResultAstRulesBody[] body;
+
     public GetQuery200ApplicationJSONResultAstRules withBody(GetQuery200ApplicationJSONResultAstRulesBody[] body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class GetQuery200ApplicationJSONResultAstRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("head")
     public GetQuery200ApplicationJSONResultAstRulesHead head;
+
     public GetQuery200ApplicationJSONResultAstRules withHead(GetQuery200ApplicationJSONResultAstRulesHead head) {
         this.head = head;
         return this;
     }
     
+    public GetQuery200ApplicationJSONResultAstRules(){}
 }

@@ -23,6 +23,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeTimeRanges")
     public ChromeOsDeviceActiveTimeRanges[] activeTimeRanges;
+
     public ChromeOsDevice withActiveTimeRanges(ChromeOsDeviceActiveTimeRanges[] activeTimeRanges) {
         this.activeTimeRanges = activeTimeRanges;
         return this;
@@ -34,6 +35,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatedAssetId")
     public String annotatedAssetId;
+
     public ChromeOsDevice withAnnotatedAssetId(String annotatedAssetId) {
         this.annotatedAssetId = annotatedAssetId;
         return this;
@@ -45,6 +47,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatedLocation")
     public String annotatedLocation;
+
     public ChromeOsDevice withAnnotatedLocation(String annotatedLocation) {
         this.annotatedLocation = annotatedLocation;
         return this;
@@ -56,6 +59,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotatedUser")
     public String annotatedUser;
+
     public ChromeOsDevice withAnnotatedUser(String annotatedUser) {
         this.annotatedUser = annotatedUser;
         return this;
@@ -67,6 +71,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoUpdateExpiration")
     public String autoUpdateExpiration;
+
     public ChromeOsDevice withAutoUpdateExpiration(String autoUpdateExpiration) {
         this.autoUpdateExpiration = autoUpdateExpiration;
         return this;
@@ -78,6 +83,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bootMode")
     public String bootMode;
+
     public ChromeOsDevice withBootMode(String bootMode) {
         this.bootMode = bootMode;
         return this;
@@ -89,6 +95,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuInfo")
     public ChromeOsDeviceCpuInfo[] cpuInfo;
+
     public ChromeOsDevice withCpuInfo(ChromeOsDeviceCpuInfo[] cpuInfo) {
         this.cpuInfo = cpuInfo;
         return this;
@@ -100,6 +107,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpuStatusReports")
     public ChromeOsDeviceCpuStatusReports[] cpuStatusReports;
+
     public ChromeOsDevice withCpuStatusReports(ChromeOsDeviceCpuStatusReports[] cpuStatusReports) {
         this.cpuStatusReports = cpuStatusReports;
         return this;
@@ -111,6 +119,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprovisionReason")
     public ChromeOsDeviceDeprovisionReasonEnum deprovisionReason;
+
     public ChromeOsDevice withDeprovisionReason(ChromeOsDeviceDeprovisionReasonEnum deprovisionReason) {
         this.deprovisionReason = deprovisionReason;
         return this;
@@ -122,6 +131,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceFiles")
     public ChromeOsDeviceDeviceFiles[] deviceFiles;
+
     public ChromeOsDevice withDeviceFiles(ChromeOsDeviceDeviceFiles[] deviceFiles) {
         this.deviceFiles = deviceFiles;
         return this;
@@ -133,6 +143,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public ChromeOsDevice withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -144,6 +155,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskVolumeReports")
     public ChromeOsDeviceDiskVolumeReports[] diskVolumeReports;
+
     public ChromeOsDevice withDiskVolumeReports(ChromeOsDeviceDiskVolumeReports[] diskVolumeReports) {
         this.diskVolumeReports = diskVolumeReports;
         return this;
@@ -155,6 +167,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dockMacAddress")
     public String dockMacAddress;
+
     public ChromeOsDevice withDockMacAddress(String dockMacAddress) {
         this.dockMacAddress = dockMacAddress;
         return this;
@@ -166,6 +179,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ChromeOsDevice withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -177,6 +191,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetMacAddress")
     public String ethernetMacAddress;
+
     public ChromeOsDevice withEthernetMacAddress(String ethernetMacAddress) {
         this.ethernetMacAddress = ethernetMacAddress;
         return this;
@@ -188,6 +203,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ethernetMacAddress0")
     public String ethernetMacAddress0;
+
     public ChromeOsDevice withEthernetMacAddress0(String ethernetMacAddress0) {
         this.ethernetMacAddress0 = ethernetMacAddress0;
         return this;
@@ -199,6 +215,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firmwareVersion")
     public String firmwareVersion;
+
     public ChromeOsDevice withFirmwareVersion(String firmwareVersion) {
         this.firmwareVersion = firmwareVersion;
         return this;
@@ -210,6 +227,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstEnrollmentTime")
     public String firstEnrollmentTime;
+
     public ChromeOsDevice withFirstEnrollmentTime(String firstEnrollmentTime) {
         this.firstEnrollmentTime = firstEnrollmentTime;
         return this;
@@ -221,6 +239,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ChromeOsDevice withKind(String kind) {
         this.kind = kind;
         return this;
@@ -232,6 +251,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastDeprovisionTimestamp")
     public String lastDeprovisionTimestamp;
+
     public ChromeOsDevice withLastDeprovisionTimestamp(String lastDeprovisionTimestamp) {
         this.lastDeprovisionTimestamp = lastDeprovisionTimestamp;
         return this;
@@ -245,6 +265,7 @@ public class ChromeOsDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastEnrollmentTime")
     public OffsetDateTime lastEnrollmentTime;
+
     public ChromeOsDevice withLastEnrollmentTime(OffsetDateTime lastEnrollmentTime) {
         this.lastEnrollmentTime = lastEnrollmentTime;
         return this;
@@ -256,6 +277,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastKnownNetwork")
     public ChromeOsDeviceLastKnownNetwork[] lastKnownNetwork;
+
     public ChromeOsDevice withLastKnownNetwork(ChromeOsDeviceLastKnownNetwork[] lastKnownNetwork) {
         this.lastKnownNetwork = lastKnownNetwork;
         return this;
@@ -269,6 +291,7 @@ public class ChromeOsDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastSync")
     public OffsetDateTime lastSync;
+
     public ChromeOsDevice withLastSync(OffsetDateTime lastSync) {
         this.lastSync = lastSync;
         return this;
@@ -280,6 +303,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public ChromeOsDevice withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -291,6 +315,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufactureDate")
     public String manufactureDate;
+
     public ChromeOsDevice withManufactureDate(String manufactureDate) {
         this.manufactureDate = manufactureDate;
         return this;
@@ -302,6 +327,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meid")
     public String meid;
+
     public ChromeOsDevice withMeid(String meid) {
         this.meid = meid;
         return this;
@@ -313,6 +339,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public ChromeOsDevice withModel(String model) {
         this.model = model;
         return this;
@@ -324,6 +351,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public ChromeOsDevice withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -335,6 +363,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderNumber")
     public String orderNumber;
+
     public ChromeOsDevice withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -346,6 +375,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public ChromeOsDevice withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
@@ -357,6 +387,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitPath")
     public String orgUnitPath;
+
     public ChromeOsDevice withOrgUnitPath(String orgUnitPath) {
         this.orgUnitPath = orgUnitPath;
         return this;
@@ -368,6 +399,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osUpdateStatus")
     public OsUpdateStatus osUpdateStatus;
+
     public ChromeOsDevice withOsUpdateStatus(OsUpdateStatus osUpdateStatus) {
         this.osUpdateStatus = osUpdateStatus;
         return this;
@@ -379,6 +411,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osVersion")
     public String osVersion;
+
     public ChromeOsDevice withOsVersion(String osVersion) {
         this.osVersion = osVersion;
         return this;
@@ -390,6 +423,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platformVersion")
     public String platformVersion;
+
     public ChromeOsDevice withPlatformVersion(String platformVersion) {
         this.platformVersion = platformVersion;
         return this;
@@ -401,6 +435,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentUsers")
     public ChromeOsDeviceRecentUsers[] recentUsers;
+
     public ChromeOsDevice withRecentUsers(ChromeOsDeviceRecentUsers[] recentUsers) {
         this.recentUsers = recentUsers;
         return this;
@@ -412,6 +447,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("screenshotFiles")
     public ChromeOsDeviceScreenshotFiles[] screenshotFiles;
+
     public ChromeOsDevice withScreenshotFiles(ChromeOsDeviceScreenshotFiles[] screenshotFiles) {
         this.screenshotFiles = screenshotFiles;
         return this;
@@ -423,6 +459,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serialNumber")
     public String serialNumber;
+
     public ChromeOsDevice withSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
         return this;
@@ -434,6 +471,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ChromeOsDevice withStatus(String status) {
         this.status = status;
         return this;
@@ -447,6 +485,7 @@ public class ChromeOsDevice {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("supportEndDate")
     public OffsetDateTime supportEndDate;
+
     public ChromeOsDevice withSupportEndDate(OffsetDateTime supportEndDate) {
         this.supportEndDate = supportEndDate;
         return this;
@@ -458,6 +497,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemRamFreeReports")
     public ChromeOsDeviceSystemRamFreeReports[] systemRamFreeReports;
+
     public ChromeOsDevice withSystemRamFreeReports(ChromeOsDeviceSystemRamFreeReports[] systemRamFreeReports) {
         this.systemRamFreeReports = systemRamFreeReports;
         return this;
@@ -469,6 +509,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemRamTotal")
     public String systemRamTotal;
+
     public ChromeOsDevice withSystemRamTotal(String systemRamTotal) {
         this.systemRamTotal = systemRamTotal;
         return this;
@@ -480,6 +521,7 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tpmVersionInfo")
     public ChromeOsDeviceTpmVersionInfo tpmVersionInfo;
+
     public ChromeOsDevice withTpmVersionInfo(ChromeOsDeviceTpmVersionInfo tpmVersionInfo) {
         this.tpmVersionInfo = tpmVersionInfo;
         return this;
@@ -491,9 +533,11 @@ public class ChromeOsDevice {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("willAutoRenew")
     public Boolean willAutoRenew;
+
     public ChromeOsDevice withWillAutoRenew(Boolean willAutoRenew) {
         this.willAutoRenew = willAutoRenew;
         return this;
     }
     
+    public ChromeOsDevice(){}
 }

@@ -12,6 +12,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressId")
     public String addressId;
+
     public CreateJobRequest withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -20,6 +21,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public CreateJobRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
@@ -28,6 +30,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateJobRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceConfiguration")
     public DeviceConfiguration deviceConfiguration;
+
     public CreateJobRequest withDeviceConfiguration(DeviceConfiguration deviceConfiguration) {
         this.deviceConfiguration = deviceConfiguration;
         return this;
@@ -44,6 +48,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForwardingAddressId")
     public String forwardingAddressId;
+
     public CreateJobRequest withForwardingAddressId(String forwardingAddressId) {
         this.forwardingAddressId = forwardingAddressId;
         return this;
@@ -52,6 +57,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public CreateJobRequest withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -60,6 +66,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyARN")
     public String kmsKeyARN;
+
     public CreateJobRequest withKmsKeyARN(String kmsKeyARN) {
         this.kmsKeyARN = kmsKeyARN;
         return this;
@@ -68,6 +75,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LongTermPricingId")
     public String longTermPricingId;
+
     public CreateJobRequest withLongTermPricingId(String longTermPricingId) {
         this.longTermPricingId = longTermPricingId;
         return this;
@@ -76,6 +84,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Notification")
     public Notification notification;
+
     public CreateJobRequest withNotification(Notification notification) {
         this.notification = notification;
         return this;
@@ -84,6 +93,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDeviceServiceConfiguration")
     public OnDeviceServiceConfiguration onDeviceServiceConfiguration;
+
     public CreateJobRequest withOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
         this.onDeviceServiceConfiguration = onDeviceServiceConfiguration;
         return this;
@@ -92,6 +102,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemoteManagement")
     public RemoteManagementEnum remoteManagement;
+
     public CreateJobRequest withRemoteManagement(RemoteManagementEnum remoteManagement) {
         this.remoteManagement = remoteManagement;
         return this;
@@ -100,6 +111,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public JobResource resources;
+
     public CreateJobRequest withResources(JobResource resources) {
         this.resources = resources;
         return this;
@@ -108,6 +120,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public CreateJobRequest withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -116,6 +129,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShippingOption")
     public ShippingOptionEnum shippingOption;
+
     public CreateJobRequest withShippingOption(ShippingOptionEnum shippingOption) {
         this.shippingOption = shippingOption;
         return this;
@@ -124,6 +138,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballCapacityPreference")
     public SnowballCapacityEnum snowballCapacityPreference;
+
     public CreateJobRequest withSnowballCapacityPreference(SnowballCapacityEnum snowballCapacityPreference) {
         this.snowballCapacityPreference = snowballCapacityPreference;
         return this;
@@ -132,6 +147,7 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballType")
     public SnowballTypeEnum snowballType;
+
     public CreateJobRequest withSnowballType(SnowballTypeEnum snowballType) {
         this.snowballType = snowballType;
         return this;
@@ -140,9 +156,11 @@ public class CreateJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaxDocuments")
     public TaxDocuments taxDocuments;
+
     public CreateJobRequest withTaxDocuments(TaxDocuments taxDocuments) {
         this.taxDocuments = taxDocuments;
         return this;
     }
     
+    public CreateJobRequest(){}
 }

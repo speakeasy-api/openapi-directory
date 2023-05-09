@@ -17,6 +17,7 @@ public class FindTerminalResponse {
      */
     @JsonProperty("companyAccount")
     public String companyAccount;
+
     public FindTerminalResponse withCompanyAccount(String companyAccount) {
         this.companyAccount = companyAccount;
         return this;
@@ -28,6 +29,7 @@ public class FindTerminalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public FindTerminalResponse withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -43,6 +45,7 @@ public class FindTerminalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantInventory")
     public Boolean merchantInventory;
+
     public FindTerminalResponse withMerchantInventory(Boolean merchantInventory) {
         this.merchantInventory = merchantInventory;
         return this;
@@ -54,6 +57,7 @@ public class FindTerminalResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("store")
     public String store;
+
     public FindTerminalResponse withStore(String store) {
         this.store = store;
         return this;
@@ -64,9 +68,14 @@ public class FindTerminalResponse {
      */
     @JsonProperty("terminal")
     public String terminal;
+
     public FindTerminalResponse withTerminal(String terminal) {
         this.terminal = terminal;
         return this;
     }
     
+    public FindTerminalResponse(@JsonProperty("companyAccount") String companyAccount, @JsonProperty("terminal") String terminal) {
+        this.companyAccount = companyAccount;
+        this.terminal = terminal;
+  }
 }

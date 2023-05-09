@@ -18,6 +18,7 @@ public class CreateTableRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initialSplits")
     public Split[] initialSplits;
+
     public CreateTableRequestInput withInitialSplits(Split[] initialSplits) {
         this.initialSplits = initialSplits;
         return this;
@@ -29,6 +30,7 @@ public class CreateTableRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("table")
     public TableInput table;
+
     public CreateTableRequestInput withTable(TableInput table) {
         this.table = table;
         return this;
@@ -40,9 +42,11 @@ public class CreateTableRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableId")
     public String tableId;
+
     public CreateTableRequestInput withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public CreateTableRequestInput(){}
 }

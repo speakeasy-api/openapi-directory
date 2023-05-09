@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteCustomEntityTypeResponse {
@@ -12,6 +13,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteCustomEntityTypeResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteCustomEntityTypeResponse {
     
     
     public String contentType;
+
     public DeleteCustomEntityTypeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteCustomEntityTypeResponse deleteCustomEntityTypeResponse;
+
     public DeleteCustomEntityTypeResponse withDeleteCustomEntityTypeResponse(org.openapis.openapi.models.shared.DeleteCustomEntityTypeResponse deleteCustomEntityTypeResponse) {
         this.deleteCustomEntityTypeResponse = deleteCustomEntityTypeResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public Object entityNotFoundException;
+
     public DeleteCustomEntityTypeResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public Object internalServiceException;
+
     public DeleteCustomEntityTypeResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteCustomEntityTypeResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteCustomEntityTypeResponse {
      */
     
     public Object operationTimeoutException;
+
     public DeleteCustomEntityTypeResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteCustomEntityTypeResponse {
     
     
     public Integer statusCode;
+
     public DeleteCustomEntityTypeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteCustomEntityTypeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteCustomEntityTypeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteCustomEntityTypeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

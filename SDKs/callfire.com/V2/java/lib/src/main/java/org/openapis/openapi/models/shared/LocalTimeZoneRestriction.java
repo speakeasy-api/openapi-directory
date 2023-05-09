@@ -23,6 +23,7 @@ public class LocalTimeZoneRestriction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public LocalTimeZoneRestriction withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -36,6 +37,7 @@ public class LocalTimeZoneRestriction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public LocalTimeZoneRestriction withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -49,9 +51,11 @@ public class LocalTimeZoneRestriction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("stopTime")
     public OffsetDateTime stopTime;
+
     public LocalTimeZoneRestriction withStopTime(OffsetDateTime stopTime) {
         this.stopTime = stopTime;
         return this;
     }
     
+    public LocalTimeZoneRestriction(){}
 }

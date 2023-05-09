@@ -15,9 +15,13 @@ public class GetSegmentImportJobsResponse {
      */
     @JsonProperty("ImportJobsResponse")
     public ImportJobsResponse importJobsResponse;
+
     public GetSegmentImportJobsResponse withImportJobsResponse(ImportJobsResponse importJobsResponse) {
         this.importJobsResponse = importJobsResponse;
         return this;
     }
     
+    public GetSegmentImportJobsResponse(@JsonProperty("ImportJobsResponse") ImportJobsResponse importJobsResponse) {
+        this.importJobsResponse = importJobsResponse;
+  }
 }

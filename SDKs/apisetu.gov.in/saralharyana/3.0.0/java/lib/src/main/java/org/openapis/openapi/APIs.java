@@ -55,7 +55,7 @@ public class APIs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.NbcerResponse res = new org.openapis.openapi.models.operations.NbcerResponse() {{
+        org.openapis.openapi.models.operations.NbcerResponse res = new org.openapis.openapi.models.operations.NbcerResponse(contentType, httpRes.statusCode()) {{
             nbcer400ApplicationJSONObject = null;
             nbcer401ApplicationJSONObject = null;
             nbcer404ApplicationJSONObject = null;
@@ -64,8 +64,6 @@ public class APIs {
             nbcer503ApplicationJSONObject = null;
             nbcer504ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

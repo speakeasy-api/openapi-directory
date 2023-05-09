@@ -18,6 +18,7 @@ public class CreateJobFromTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public RuntimeEnvironment environment;
+
     public CreateJobFromTemplateRequest withEnvironment(RuntimeEnvironment environment) {
         this.environment = environment;
         return this;
@@ -29,6 +30,7 @@ public class CreateJobFromTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsPath")
     public String gcsPath;
+
     public CreateJobFromTemplateRequest withGcsPath(String gcsPath) {
         this.gcsPath = gcsPath;
         return this;
@@ -40,6 +42,7 @@ public class CreateJobFromTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateJobFromTemplateRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -51,6 +54,7 @@ public class CreateJobFromTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public CreateJobFromTemplateRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -62,9 +66,11 @@ public class CreateJobFromTemplateRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public CreateJobFromTemplateRequest withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public CreateJobFromTemplateRequest(){}
 }

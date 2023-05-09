@@ -15,6 +15,7 @@ public class ListKeywordsForDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public ListKeywordsForDataSourceResponse withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
@@ -23,9 +24,11 @@ public class ListKeywordsForDataSourceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListKeywordsForDataSourceResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListKeywordsForDataSourceResponse(){}
 }

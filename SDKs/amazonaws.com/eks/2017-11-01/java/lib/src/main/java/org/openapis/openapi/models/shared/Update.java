@@ -22,6 +22,7 @@ public class Update {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Update withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public ErrorDetail[] errors;
+
     public Update withErrors(ErrorDetail[] errors) {
         this.errors = errors;
         return this;
@@ -38,6 +40,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Update withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public UpdateParam[] params;
+
     public Update withParams(UpdateParam[] params) {
         this.params = params;
         return this;
@@ -54,6 +58,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public UpdateStatusEnum status;
+
     public Update withStatus(UpdateStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +67,11 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public UpdateTypeEnum type;
+
     public Update withType(UpdateTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Update(){}
 }

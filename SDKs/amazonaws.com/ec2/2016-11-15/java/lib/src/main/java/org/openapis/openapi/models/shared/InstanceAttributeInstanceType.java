@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class InstanceAttributeInstanceType {
     
     public String value;
+
     public InstanceAttributeInstanceType withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceAttributeInstanceType(){}
 }

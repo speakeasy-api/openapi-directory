@@ -18,6 +18,7 @@ public class GoogleCloudAdvisorynotificationsV1Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachments")
     public GoogleCloudAdvisorynotificationsV1Attachment[] attachments;
+
     public GoogleCloudAdvisorynotificationsV1Message withAttachments(GoogleCloudAdvisorynotificationsV1Attachment[] attachments) {
         this.attachments = attachments;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudAdvisorynotificationsV1Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public GoogleCloudAdvisorynotificationsV1MessageBody body;
+
     public GoogleCloudAdvisorynotificationsV1Message withBody(GoogleCloudAdvisorynotificationsV1MessageBody body) {
         this.body = body;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudAdvisorynotificationsV1Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudAdvisorynotificationsV1Message withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudAdvisorynotificationsV1Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizationTime")
     public String localizationTime;
+
     public GoogleCloudAdvisorynotificationsV1Message withLocalizationTime(String localizationTime) {
         this.localizationTime = localizationTime;
         return this;
     }
     
+    public GoogleCloudAdvisorynotificationsV1Message(){}
 }

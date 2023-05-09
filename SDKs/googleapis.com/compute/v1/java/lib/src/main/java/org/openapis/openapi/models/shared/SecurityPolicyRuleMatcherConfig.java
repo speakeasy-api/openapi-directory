@@ -15,9 +15,11 @@ public class SecurityPolicyRuleMatcherConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcIpRanges")
     public String[] srcIpRanges;
+
     public SecurityPolicyRuleMatcherConfig withSrcIpRanges(String[] srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
         return this;
     }
     
+    public SecurityPolicyRuleMatcherConfig(){}
 }

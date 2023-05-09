@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateCanaryResponse {
@@ -12,6 +13,7 @@ public class UpdateCanaryResponse {
      */
     
     public Object conflictException;
+
     public UpdateCanaryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateCanaryResponse {
     
     
     public String contentType;
+
     public UpdateCanaryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateCanaryResponse {
      */
     
     public Object internalServerException;
+
     public UpdateCanaryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateCanaryResponse {
     
     
     public Integer statusCode;
+
     public UpdateCanaryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateCanaryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateCanaryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateCanaryResponse {
      */
     
     public Object requestEntityTooLargeException;
+
     public UpdateCanaryResponse withRequestEntityTooLargeException(Object requestEntityTooLargeException) {
         this.requestEntityTooLargeException = requestEntityTooLargeException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateCanaryResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateCanaryResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateCanaryResponse {
      */
     
     public java.util.Map<String, Object> updateCanaryResponse;
+
     public UpdateCanaryResponse withUpdateCanaryResponse(java.util.Map<String, Object> updateCanaryResponse) {
         this.updateCanaryResponse = updateCanaryResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateCanaryResponse {
      */
     
     public Object validationException;
+
     public UpdateCanaryResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateCanaryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization {
     
     public Long decalColor;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withDecalColor(Long decalColor) {
         this.decalColor = decalColor;
         return this;
@@ -20,6 +21,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Integer decalIndex;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withDecalIndex(Integer decalIndex) {
         this.decalIndex = decalIndex;
         return this;
@@ -27,6 +29,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long eyeColor;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withEyeColor(Long eyeColor) {
         this.eyeColor = eyeColor;
         return this;
@@ -34,6 +37,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long face;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withFace(Long face) {
         this.face = face;
         return this;
@@ -41,6 +45,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long[] featureColors;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withFeatureColors(Long[] featureColors) {
         this.featureColors = featureColors;
         return this;
@@ -48,6 +53,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Integer featureIndex;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withFeatureIndex(Integer featureIndex) {
         this.featureIndex = featureIndex;
         return this;
@@ -55,6 +61,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long[] hairColors;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withHairColors(Long[] hairColors) {
         this.hairColors = hairColors;
         return this;
@@ -62,6 +69,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Integer hairIndex;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withHairIndex(Integer hairIndex) {
         this.hairIndex = hairIndex;
         return this;
@@ -69,6 +77,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long lipColor;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withLipColor(Long lipColor) {
         this.lipColor = lipColor;
         return this;
@@ -76,6 +85,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long personality;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withPersonality(Long personality) {
         this.personality = personality;
         return this;
@@ -83,6 +93,7 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Long skinColor;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withSkinColor(Long skinColor) {
         this.skinColor = skinColor;
         return this;
@@ -90,9 +101,11 @@ public class DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomizati
     
     
     public Boolean wearHelmet;
+
     public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization withWearHelmet(Boolean wearHelmet) {
         this.wearHelmet = wearHelmet;
         return this;
     }
     
+    public DestinyEntitiesCharactersDestinyCharacterRenderComponentCustomization(){}
 }

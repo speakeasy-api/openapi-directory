@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConditionalSpecification {
     @JsonProperty("active")
     public Boolean active;
+
     public ConditionalSpecification withActive(Boolean active) {
         this.active = active;
         return this;
@@ -19,6 +20,7 @@ public class ConditionalSpecification {
     
     @JsonProperty("conditionalBranches")
     public ConditionalBranch[] conditionalBranches;
+
     public ConditionalSpecification withConditionalBranches(ConditionalBranch[] conditionalBranches) {
         this.conditionalBranches = conditionalBranches;
         return this;
@@ -26,9 +28,15 @@ public class ConditionalSpecification {
     
     @JsonProperty("defaultBranch")
     public DefaultConditionalBranch defaultBranch;
+
     public ConditionalSpecification withDefaultBranch(DefaultConditionalBranch defaultBranch) {
         this.defaultBranch = defaultBranch;
         return this;
     }
     
+    public ConditionalSpecification(@JsonProperty("active") Boolean active, @JsonProperty("conditionalBranches") ConditionalBranch[] conditionalBranches, @JsonProperty("defaultBranch") DefaultConditionalBranch defaultBranch) {
+        this.active = active;
+        this.conditionalBranches = conditionalBranches;
+        this.defaultBranch = defaultBranch;
+  }
 }

@@ -15,6 +15,7 @@ public class PagespeedApiPagespeedResponseV4Version {
      */
     
     public Integer major;
+
     public PagespeedApiPagespeedResponseV4Version withMajor(Integer major) {
         this.major = major;
         return this;
@@ -25,9 +26,11 @@ public class PagespeedApiPagespeedResponseV4Version {
      */
     
     public Integer minor;
+
     public PagespeedApiPagespeedResponseV4Version withMinor(Integer minor) {
         this.minor = minor;
         return this;
     }
     
+    public PagespeedApiPagespeedResponseV4Version(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteApplicationInputProcessingConfigurationResponse {
@@ -12,6 +13,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteApplicationInputProcessingConfigurationResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
     
     
     public String contentType;
+
     public DeleteApplicationInputProcessingConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteApplicationInputProcessingConfigurationResponse deleteApplicationInputProcessingConfigurationResponse;
+
     public DeleteApplicationInputProcessingConfigurationResponse withDeleteApplicationInputProcessingConfigurationResponse(org.openapis.openapi.models.shared.DeleteApplicationInputProcessingConfigurationResponse deleteApplicationInputProcessingConfigurationResponse) {
         this.deleteApplicationInputProcessingConfigurationResponse = deleteApplicationInputProcessingConfigurationResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteApplicationInputProcessingConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteApplicationInputProcessingConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public DeleteApplicationInputProcessingConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteApplicationInputProcessingConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DeleteApplicationInputProcessingConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class DeleteApplicationInputProcessingConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteApplicationInputProcessingConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteApplicationInputProcessingConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

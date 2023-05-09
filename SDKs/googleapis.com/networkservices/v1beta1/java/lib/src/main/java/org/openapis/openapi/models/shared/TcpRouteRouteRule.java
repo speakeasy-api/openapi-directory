@@ -18,6 +18,7 @@ public class TcpRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public TcpRouteRouteAction action;
+
     public TcpRouteRouteRule withAction(TcpRouteRouteAction action) {
         this.action = action;
         return this;
@@ -29,9 +30,11 @@ public class TcpRouteRouteRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matches")
     public TcpRouteRouteMatch[] matches;
+
     public TcpRouteRouteRule withMatches(TcpRouteRouteMatch[] matches) {
         this.matches = matches;
         return this;
     }
     
+    public TcpRouteRouteRule(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreManagedPrefixListVersionRequest {
     
     public Long currentVersion;
+
     public RestoreManagedPrefixListVersionRequest withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -16,6 +17,7 @@ public class RestoreManagedPrefixListVersionRequest {
     
     
     public Boolean dryRun;
+
     public RestoreManagedPrefixListVersionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class RestoreManagedPrefixListVersionRequest {
     
     
     public String prefixListId;
+
     public RestoreManagedPrefixListVersionRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -30,9 +33,15 @@ public class RestoreManagedPrefixListVersionRequest {
     
     
     public Long previousVersion;
+
     public RestoreManagedPrefixListVersionRequest withPreviousVersion(Long previousVersion) {
         this.previousVersion = previousVersion;
         return this;
     }
     
+    public RestoreManagedPrefixListVersionRequest(@JsonProperty("CurrentVersion") Long currentVersion, @JsonProperty("PrefixListId") String prefixListId, @JsonProperty("PreviousVersion") Long previousVersion) {
+        this.currentVersion = currentVersion;
+        this.prefixListId = prefixListId;
+        this.previousVersion = previousVersion;
+  }
 }

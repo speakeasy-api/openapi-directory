@@ -12,6 +12,7 @@ public class DescribePrincipalMappingRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceId")
     public String dataSourceId;
+
     public DescribePrincipalMappingRequest withDataSourceId(String dataSourceId) {
         this.dataSourceId = dataSourceId;
         return this;
@@ -19,6 +20,7 @@ public class DescribePrincipalMappingRequest {
     
     @JsonProperty("GroupId")
     public String groupId;
+
     public DescribePrincipalMappingRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,9 +28,14 @@ public class DescribePrincipalMappingRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public DescribePrincipalMappingRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public DescribePrincipalMappingRequest(@JsonProperty("GroupId") String groupId, @JsonProperty("IndexId") String indexId) {
+        this.groupId = groupId;
+        this.indexId = indexId;
+  }
 }

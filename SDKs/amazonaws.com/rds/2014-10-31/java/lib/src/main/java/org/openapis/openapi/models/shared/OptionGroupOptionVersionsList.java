@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OptionGroupOptionVersionsList {
     
     public Boolean isDefault;
+
     public OptionGroupOptionVersionsList withIsDefault(Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
@@ -19,9 +20,11 @@ public class OptionGroupOptionVersionsList {
     
     
     public String version;
+
     public OptionGroupOptionVersionsList withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public OptionGroupOptionVersionsList(){}
 }

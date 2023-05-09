@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartMailboxExportJobResponse {
     
     public String contentType;
+
     public StartMailboxExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public Object entityNotFoundException;
+
     public StartMailboxExportJobResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public Object invalidParameterException;
+
     public StartMailboxExportJobResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public Object limitExceededException;
+
     public StartMailboxExportJobResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public Object organizationNotFoundException;
+
     public StartMailboxExportJobResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public Object organizationStateException;
+
     public StartMailboxExportJobResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -69,6 +76,7 @@ public class StartMailboxExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartMailboxExportJobResponse startMailboxExportJobResponse;
+
     public StartMailboxExportJobResponse withStartMailboxExportJobResponse(org.openapis.openapi.models.shared.StartMailboxExportJobResponse startMailboxExportJobResponse) {
         this.startMailboxExportJobResponse = startMailboxExportJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartMailboxExportJobResponse {
     
     
     public Integer statusCode;
+
     public StartMailboxExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class StartMailboxExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartMailboxExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StartMailboxExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

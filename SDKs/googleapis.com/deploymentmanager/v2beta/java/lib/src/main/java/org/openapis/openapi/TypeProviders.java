@@ -59,11 +59,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetResponse(contentType, httpRes.statusCode()) {{
             typeProvider = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersGetTypeResponse(contentType, httpRes.statusCode()) {{
             typeInfo = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListResponse(contentType, httpRes.statusCode()) {{
             typeProvidersListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersListTypesResponse(contentType, httpRes.statusCode()) {{
             typeProvidersListTypesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class TypeProviders {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse() {{
+        org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse res = new org.openapis.openapi.models.operations.DeploymentmanagerTypeProvidersUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2EntityTypeBatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityTypes")
     public GoogleCloudDialogflowV2EntityType[] entityTypes;
+
     public GoogleCloudDialogflowV2EntityTypeBatch withEntityTypes(GoogleCloudDialogflowV2EntityType[] entityTypes) {
         this.entityTypes = entityTypes;
         return this;
     }
     
+    public GoogleCloudDialogflowV2EntityTypeBatch(){}
 }

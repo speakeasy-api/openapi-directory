@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSubscriptionStatusRequest {
@@ -22,6 +23,7 @@ public class GetSubscriptionStatusRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetSubscriptionStatusRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -32,9 +34,13 @@ public class GetSubscriptionStatusRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public GetSubscriptionStatusRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public GetSubscriptionStatusRequest(@JsonProperty("platform") String platform) {
+        this.platform = platform;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PepOrder200ApplicationJSON {
     @JsonProperty("availability")
     public String availability;
+
     public PepOrder200ApplicationJSON withAvailability(String availability) {
         this.availability = availability;
         return this;
@@ -19,6 +20,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("category")
     public String category;
+
     public PepOrder200ApplicationJSON withCategory(String category) {
         this.category = category;
         return this;
@@ -26,6 +28,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("countryCode")
     public String countryCode;
+
     public PepOrder200ApplicationJSON withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -33,6 +36,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("description")
     public String description;
+
     public PepOrder200ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("hasOptions")
     public Boolean hasOptions;
+
     public PepOrder200ApplicationJSON withHasOptions(Boolean hasOptions) {
         this.hasOptions = hasOptions;
         return this;
@@ -47,6 +52,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("options")
     public String[] options;
+
     public PepOrder200ApplicationJSON withOptions(String[] options) {
         this.options = options;
         return this;
@@ -54,6 +60,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("price")
     public Float price;
+
     public PepOrder200ApplicationJSON withPrice(Float price) {
         this.price = price;
         return this;
@@ -61,6 +68,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("provider")
     public String provider;
+
     public PepOrder200ApplicationJSON withProvider(String provider) {
         this.provider = provider;
         return this;
@@ -68,6 +76,7 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("sku")
     public String sku;
+
     public PepOrder200ApplicationJSON withSku(String sku) {
         this.sku = sku;
         return this;
@@ -75,9 +84,22 @@ public class PepOrder200ApplicationJSON {
     
     @JsonProperty("type")
     public String type;
+
     public PepOrder200ApplicationJSON withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PepOrder200ApplicationJSON(@JsonProperty("availability") String availability, @JsonProperty("category") String category, @JsonProperty("countryCode") String countryCode, @JsonProperty("description") String description, @JsonProperty("hasOptions") Boolean hasOptions, @JsonProperty("options") String[] options, @JsonProperty("price") Float price, @JsonProperty("provider") String provider, @JsonProperty("sku") String sku, @JsonProperty("type") String type) {
+        this.availability = availability;
+        this.category = category;
+        this.countryCode = countryCode;
+        this.description = description;
+        this.hasOptions = hasOptions;
+        this.options = options;
+        this.price = price;
+        this.provider = provider;
+        this.sku = sku;
+        this.type = type;
+  }
 }

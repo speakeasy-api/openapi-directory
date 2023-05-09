@@ -18,6 +18,7 @@ public class IncidentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monitoredResources")
     public MonitoredResource[] monitoredResources;
+
     public IncidentList withMonitoredResources(MonitoredResource[] monitoredResources) {
         this.monitoredResources = monitoredResources;
         return this;
@@ -29,9 +30,11 @@ public class IncidentList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyNames")
     public String[] policyNames;
+
     public IncidentList withPolicyNames(String[] policyNames) {
         this.policyNames = policyNames;
         return this;
     }
     
+    public IncidentList(){}
 }

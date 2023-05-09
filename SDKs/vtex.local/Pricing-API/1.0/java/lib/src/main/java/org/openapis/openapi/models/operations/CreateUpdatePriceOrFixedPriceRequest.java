@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateUpdatePriceOrFixedPriceRequest {
@@ -12,6 +13,7 @@ public class CreateUpdatePriceOrFixedPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateUpdatePriceOrFixedPriceRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateUpdatePriceOrFixedPriceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateUpdatePriceOrFixedPriceRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUpdatePriceOrFixedPriceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateUpdatePriceOrFixedPriceRequestBody requestBody;
+
     public CreateUpdatePriceOrFixedPriceRequest withRequestBody(CreateUpdatePriceOrFixedPriceRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,15 @@ public class CreateUpdatePriceOrFixedPriceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=itemId")
     public Long itemId;
+
     public CreateUpdatePriceOrFixedPriceRequest withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public CreateUpdatePriceOrFixedPriceRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("itemId") Long itemId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.itemId = itemId;
+  }
 }

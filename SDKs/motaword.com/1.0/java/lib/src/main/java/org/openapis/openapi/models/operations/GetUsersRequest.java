@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetUsersRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public GetUsersRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -16,6 +17,7 @@ public class GetUsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetUsersRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -23,6 +25,7 @@ public class GetUsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetUsersRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -30,6 +33,7 @@ public class GetUsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetUsersRequest withSearch(String search) {
         this.search = search;
         return this;
@@ -37,9 +41,11 @@ public class GetUsersRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user_type")
     public GetUsersUserTypeEnum userType;
+
     public GetUsersRequest withUserType(GetUsersUserTypeEnum userType) {
         this.userType = userType;
         return this;
     }
     
+    public GetUsersRequest(){}
 }

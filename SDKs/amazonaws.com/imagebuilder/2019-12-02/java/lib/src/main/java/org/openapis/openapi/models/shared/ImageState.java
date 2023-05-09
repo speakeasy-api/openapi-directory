@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * ImageState -  Image state shows the image status and the reason for that status.
+ * ImageState - Image status and the reason for that status.
  */
 public class ImageState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public ImageState withReason(String reason) {
         this.reason = reason;
         return this;
@@ -23,9 +24,11 @@ public class ImageState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ImageStatusEnum status;
+
     public ImageState withStatus(ImageStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ImageState(){}
 }

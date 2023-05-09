@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CompanyLogoRequest {
@@ -12,9 +13,13 @@ public class CompanyLogoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain")
     public String domain;
+
     public CompanyLogoRequest withDomain(String domain) {
         this.domain = domain;
         return this;
     }
     
+    public CompanyLogoRequest(@JsonProperty("domain") String domain) {
+        this.domain = domain;
+  }
 }

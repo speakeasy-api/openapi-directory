@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetApiV1DonationsCarbonCalculateRequest {
@@ -12,6 +13,7 @@ public class GetApiV1DonationsCarbonCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=destination_address")
     public Double destinationAddress;
+
     public GetApiV1DonationsCarbonCalculateRequest withDestinationAddress(Double destinationAddress) {
         this.destinationAddress = destinationAddress;
         return this;
@@ -22,6 +24,7 @@ public class GetApiV1DonationsCarbonCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=distance_mi")
     public Double distanceMi;
+
     public GetApiV1DonationsCarbonCalculateRequest withDistanceMi(Double distanceMi) {
         this.distanceMi = distanceMi;
         return this;
@@ -32,6 +35,7 @@ public class GetApiV1DonationsCarbonCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=origin_address")
     public Double originAddress;
+
     public GetApiV1DonationsCarbonCalculateRequest withOriginAddress(Double originAddress) {
         this.originAddress = originAddress;
         return this;
@@ -42,6 +46,7 @@ public class GetApiV1DonationsCarbonCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transportation_method")
     public GetApiV1DonationsCarbonCalculateTransportationMethodEnum transportationMethod;
+
     public GetApiV1DonationsCarbonCalculateRequest withTransportationMethod(GetApiV1DonationsCarbonCalculateTransportationMethodEnum transportationMethod) {
         this.transportationMethod = transportationMethod;
         return this;
@@ -52,9 +57,13 @@ public class GetApiV1DonationsCarbonCalculateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=weight_lb")
     public Double weightLb;
+
     public GetApiV1DonationsCarbonCalculateRequest withWeightLb(Double weightLb) {
         this.weightLb = weightLb;
         return this;
     }
     
+    public GetApiV1DonationsCarbonCalculateRequest(@JsonProperty("weight_lb") Double weightLb) {
+        this.weightLb = weightLb;
+  }
 }

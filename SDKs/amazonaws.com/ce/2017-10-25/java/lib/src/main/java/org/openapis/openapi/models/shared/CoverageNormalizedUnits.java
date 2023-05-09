@@ -15,6 +15,7 @@ public class CoverageNormalizedUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CoverageNormalizedUnitsPercentage")
     public String coverageNormalizedUnitsPercentage;
+
     public CoverageNormalizedUnits withCoverageNormalizedUnitsPercentage(String coverageNormalizedUnitsPercentage) {
         this.coverageNormalizedUnitsPercentage = coverageNormalizedUnitsPercentage;
         return this;
@@ -23,6 +24,7 @@ public class CoverageNormalizedUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandNormalizedUnits")
     public String onDemandNormalizedUnits;
+
     public CoverageNormalizedUnits withOnDemandNormalizedUnits(String onDemandNormalizedUnits) {
         this.onDemandNormalizedUnits = onDemandNormalizedUnits;
         return this;
@@ -31,6 +33,7 @@ public class CoverageNormalizedUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReservedNormalizedUnits")
     public String reservedNormalizedUnits;
+
     public CoverageNormalizedUnits withReservedNormalizedUnits(String reservedNormalizedUnits) {
         this.reservedNormalizedUnits = reservedNormalizedUnits;
         return this;
@@ -39,9 +42,11 @@ public class CoverageNormalizedUnits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalRunningNormalizedUnits")
     public String totalRunningNormalizedUnits;
+
     public CoverageNormalizedUnits withTotalRunningNormalizedUnits(String totalRunningNormalizedUnits) {
         this.totalRunningNormalizedUnits = totalRunningNormalizedUnits;
         return this;
     }
     
+    public CoverageNormalizedUnits(){}
 }

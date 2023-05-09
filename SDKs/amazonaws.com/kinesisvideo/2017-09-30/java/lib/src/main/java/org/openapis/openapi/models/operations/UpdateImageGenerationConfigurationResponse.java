@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateImageGenerationConfigurationResponse {
@@ -12,6 +13,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateImageGenerationConfigurationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object clientLimitExceededException;
+
     public UpdateImageGenerationConfigurationResponse withClientLimitExceededException(Object clientLimitExceededException) {
         this.clientLimitExceededException = clientLimitExceededException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateImageGenerationConfigurationResponse {
     
     
     public String contentType;
+
     public UpdateImageGenerationConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object invalidArgumentException;
+
     public UpdateImageGenerationConfigurationResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object noDataRetentionException;
+
     public UpdateImageGenerationConfigurationResponse withNoDataRetentionException(Object noDataRetentionException) {
         this.noDataRetentionException = noDataRetentionException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateImageGenerationConfigurationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateImageGenerationConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateImageGenerationConfigurationResponse {
     
     
     public Integer statusCode;
+
     public UpdateImageGenerationConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateImageGenerationConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateImageGenerationConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateImageGenerationConfigurationResponse {
      */
     
     public java.util.Map<String, Object> updateImageGenerationConfigurationOutput;
+
     public UpdateImageGenerationConfigurationResponse withUpdateImageGenerationConfigurationOutput(java.util.Map<String, Object> updateImageGenerationConfigurationOutput) {
         this.updateImageGenerationConfigurationOutput = updateImageGenerationConfigurationOutput;
         return this;
     }
     
+    public UpdateImageGenerationConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

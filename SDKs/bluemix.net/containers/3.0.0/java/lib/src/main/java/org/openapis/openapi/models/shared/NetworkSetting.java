@@ -15,6 +15,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bridge")
     public String bridge;
+
     public NetworkSetting withBridge(String bridge) {
         this.bridge = bridge;
         return this;
@@ -26,6 +27,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Gateway")
     public String gateway;
+
     public NetworkSetting withGateway(String gateway) {
         this.gateway = gateway;
         return this;
@@ -36,6 +38,7 @@ public class NetworkSetting {
      */
     @JsonProperty("IpAddress")
     public String ipAddress;
+
     public NetworkSetting withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -44,6 +47,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpPrefixLen")
     public Integer ipPrefixLen;
+
     public NetworkSetting withIpPrefixLen(Integer ipPrefixLen) {
         this.ipPrefixLen = ipPrefixLen;
         return this;
@@ -55,6 +59,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MacAddress")
     public String macAddress;
+
     public NetworkSetting withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
@@ -63,6 +68,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Network")
     public Network network;
+
     public NetworkSetting withNetwork(Network network) {
         this.network = network;
         return this;
@@ -74,6 +80,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PortMapping")
     public String portMapping;
+
     public NetworkSetting withPortMapping(String portMapping) {
         this.portMapping = portMapping;
         return this;
@@ -85,6 +92,7 @@ public class NetworkSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ports")
     public String[] ports;
+
     public NetworkSetting withPorts(String[] ports) {
         this.ports = ports;
         return this;
@@ -95,9 +103,14 @@ public class NetworkSetting {
      */
     @JsonProperty("PublicIpAddress")
     public String publicIpAddress;
+
     public NetworkSetting withPublicIpAddress(String publicIpAddress) {
         this.publicIpAddress = publicIpAddress;
         return this;
     }
     
+    public NetworkSetting(@JsonProperty("IpAddress") String ipAddress, @JsonProperty("PublicIpAddress") String publicIpAddress) {
+        this.ipAddress = ipAddress;
+        this.publicIpAddress = publicIpAddress;
+  }
 }

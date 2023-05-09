@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSpotFleetInstancesResponse {
     
     public DescribeSpotFleetInstancesResponseActiveInstances[] activeInstances;
+
     public DescribeSpotFleetInstancesResponse withActiveInstances(DescribeSpotFleetInstancesResponseActiveInstances[] activeInstances) {
         this.activeInstances = activeInstances;
         return this;
@@ -19,6 +20,7 @@ public class DescribeSpotFleetInstancesResponse {
     
     
     public String nextToken;
+
     public DescribeSpotFleetInstancesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,9 +28,11 @@ public class DescribeSpotFleetInstancesResponse {
     
     
     public String spotFleetRequestId;
+
     public DescribeSpotFleetInstancesResponse withSpotFleetRequestId(String spotFleetRequestId) {
         this.spotFleetRequestId = spotFleetRequestId;
         return this;
     }
     
+    public DescribeSpotFleetInstancesResponse(){}
 }

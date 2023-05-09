@@ -63,12 +63,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateUrlsExportResponse res = new org.openapis.openapi.models.operations.CreateUrlsExportResponse() {{
+        org.openapis.openapi.models.operations.CreateUrlsExportResponse res = new org.openapis.openapi.models.operations.CreateUrlsExportResponse(contentType, httpRes.statusCode()) {{
             csvExportStatus = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -111,12 +109,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAnalysisSummaryResponse res = new org.openapis.openapi.models.operations.GetAnalysisSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetAnalysisSummaryResponse res = new org.openapis.openapi.models.operations.GetAnalysisSummaryResponse(contentType, httpRes.statusCode()) {{
             analysisDetail = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,12 +155,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrawlStatisticsResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsResponse() {{
+        org.openapis.openapi.models.operations.GetCrawlStatisticsResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsResponse(contentType, httpRes.statusCode()) {{
             crawlStatistics = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -213,12 +207,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyResponse() {{
+        org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsByFrequencyResponse(contentType, httpRes.statusCode()) {{
             crawlStatisticsTime = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,12 +253,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsResponse() {{
+        org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsResponse res = new org.openapis.openapi.models.operations.GetCrawlStatisticsUrlsResponse(contentType, httpRes.statusCode()) {{
             getCrawlStatisticsUrls200ApplicationJSONAnies = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -315,12 +305,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsResponse res = new org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsResponse() {{
+        org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsResponse res = new org.openapis.openapi.models.operations.GetGanalyticsOrphanURLsResponse(contentType, httpRes.statusCode()) {{
             getGanalyticsOrphanURLs200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -363,12 +351,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinksPercentilesResponse res = new org.openapis.openapi.models.operations.GetLinksPercentilesResponse() {{
+        org.openapis.openapi.models.operations.GetLinksPercentilesResponse res = new org.openapis.openapi.models.operations.GetLinksPercentilesResponse(contentType, httpRes.statusCode()) {{
             linksPercentiles = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -417,12 +403,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinksTopDomainsResponse res = new org.openapis.openapi.models.operations.GetLinksTopDomainsResponse() {{
+        org.openapis.openapi.models.operations.GetLinksTopDomainsResponse res = new org.openapis.openapi.models.operations.GetLinksTopDomainsResponse(contentType, httpRes.statusCode()) {{
             getLinksTopDomains200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -471,12 +455,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLinksTopSubdomainsResponse res = new org.openapis.openapi.models.operations.GetLinksTopSubdomainsResponse() {{
+        org.openapis.openapi.models.operations.GetLinksTopSubdomainsResponse res = new org.openapis.openapi.models.operations.GetLinksTopSubdomainsResponse(contentType, httpRes.statusCode()) {{
             getLinksTopSubdomains200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -519,12 +501,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPageRankLostResponse res = new org.openapis.openapi.models.operations.GetPageRankLostResponse() {{
+        org.openapis.openapi.models.operations.GetPageRankLostResponse res = new org.openapis.openapi.models.operations.GetPageRankLostResponse(contentType, httpRes.statusCode()) {{
             pageRankLost = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -567,12 +547,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitemapsReportResponse res = new org.openapis.openapi.models.operations.GetSitemapsReportResponse() {{
+        org.openapis.openapi.models.operations.GetSitemapsReportResponse res = new org.openapis.openapi.models.operations.GetSitemapsReportResponse(contentType, httpRes.statusCode()) {{
             sitemapsReport = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -621,12 +599,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigResponse res = new org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigResponse() {{
+        org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigResponse res = new org.openapis.openapi.models.operations.GetSitemapsSamplesOutOfConfigResponse(contentType, httpRes.statusCode()) {{
             getSitemapsSamplesOutOfConfig200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -675,12 +651,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyResponse res = new org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyResponse() {{
+        org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyResponse res = new org.openapis.openapi.models.operations.GetSitemapsSamplesSitemapsOnlyResponse(contentType, httpRes.statusCode()) {{
             getSitemapsSamplesSitemapsOnly200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -729,12 +703,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlDetailResponse res = new org.openapis.openapi.models.operations.GetUrlDetailResponse() {{
+        org.openapis.openapi.models.operations.GetUrlDetailResponse res = new org.openapis.openapi.models.operations.GetUrlDetailResponse(contentType, httpRes.statusCode()) {{
             urlDetail = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -785,12 +757,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsResponse res = new org.openapis.openapi.models.operations.GetUrlsResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsResponse res = new org.openapis.openapi.models.operations.GetUrlsResponse(contentType, httpRes.statusCode()) {{
             getUrls200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -841,12 +811,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsAggsResponse res = new org.openapis.openapi.models.operations.GetUrlsAggsResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsAggsResponse res = new org.openapis.openapi.models.operations.GetUrlsAggsResponse(contentType, httpRes.statusCode()) {{
             getUrlsAggs200ApplicationJSONAnies = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -895,12 +863,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsDatamodelResponse res = new org.openapis.openapi.models.operations.GetUrlsDatamodelResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsDatamodelResponse res = new org.openapis.openapi.models.operations.GetUrlsDatamodelResponse(contentType, httpRes.statusCode()) {{
             crawlDatamodel = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -943,12 +909,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsExportStatusResponse res = new org.openapis.openapi.models.operations.GetUrlsExportStatusResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsExportStatusResponse res = new org.openapis.openapi.models.operations.GetUrlsExportStatusResponse(contentType, httpRes.statusCode()) {{
             csvExportStatus = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -997,12 +961,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsExportsResponse res = new org.openapis.openapi.models.operations.GetUrlsExportsResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsExportsResponse res = new org.openapis.openapi.models.operations.GetUrlsExportsResponse(contentType, httpRes.statusCode()) {{
             getUrlsExports200ApplicationJSONObject = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1053,12 +1015,10 @@ public class Analysis {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersResponse res = new org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersResponse() {{
+        org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersResponse res = new org.openapis.openapi.models.operations.GetUrlsSuggestedFiltersResponse(contentType, httpRes.statusCode()) {{
             urlsAggsQuery = null;
             defaultPayload = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

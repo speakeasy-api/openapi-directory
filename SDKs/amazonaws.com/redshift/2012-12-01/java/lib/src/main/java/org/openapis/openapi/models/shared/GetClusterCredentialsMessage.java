@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * GetClusterCredentialsMessage - The request parameters to get cluster credentials.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetClusterCredentialsMessage {
     
     public Boolean autoCreate;
+
     public GetClusterCredentialsMessage withAutoCreate(Boolean autoCreate) {
         this.autoCreate = autoCreate;
         return this;
@@ -19,6 +20,7 @@ public class GetClusterCredentialsMessage {
     
     
     public String clusterIdentifier;
+
     public GetClusterCredentialsMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class GetClusterCredentialsMessage {
     
     
     public String[] dbGroups;
+
     public GetClusterCredentialsMessage withDbGroups(String[] dbGroups) {
         this.dbGroups = dbGroups;
         return this;
@@ -33,6 +36,7 @@ public class GetClusterCredentialsMessage {
     
     
     public String dbName;
+
     public GetClusterCredentialsMessage withDbName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -40,6 +44,7 @@ public class GetClusterCredentialsMessage {
     
     
     public String dbUser;
+
     public GetClusterCredentialsMessage withDbUser(String dbUser) {
         this.dbUser = dbUser;
         return this;
@@ -47,9 +52,14 @@ public class GetClusterCredentialsMessage {
     
     
     public Long durationSeconds;
+
     public GetClusterCredentialsMessage withDurationSeconds(Long durationSeconds) {
         this.durationSeconds = durationSeconds;
         return this;
     }
     
+    public GetClusterCredentialsMessage(@JsonProperty("ClusterIdentifier") String clusterIdentifier, @JsonProperty("DbUser") String dbUser) {
+        this.clusterIdentifier = clusterIdentifier;
+        this.dbUser = dbUser;
+  }
 }

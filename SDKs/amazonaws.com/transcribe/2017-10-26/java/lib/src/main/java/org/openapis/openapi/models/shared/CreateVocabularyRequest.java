@@ -12,6 +12,7 @@ public class CreateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public CreateVocabularyRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateVocabularyRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public CreateVocabularyRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -27,6 +29,7 @@ public class CreateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Phrases")
     public String[] phrases;
+
     public CreateVocabularyRequest withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
@@ -35,6 +38,7 @@ public class CreateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateVocabularyRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -43,6 +47,7 @@ public class CreateVocabularyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VocabularyFileUri")
     public String vocabularyFileUri;
+
     public CreateVocabularyRequest withVocabularyFileUri(String vocabularyFileUri) {
         this.vocabularyFileUri = vocabularyFileUri;
         return this;
@@ -50,9 +55,14 @@ public class CreateVocabularyRequest {
     
     @JsonProperty("VocabularyName")
     public String vocabularyName;
+
     public CreateVocabularyRequest withVocabularyName(String vocabularyName) {
         this.vocabularyName = vocabularyName;
         return this;
     }
     
+    public CreateVocabularyRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("VocabularyName") String vocabularyName) {
+        this.languageCode = languageCode;
+        this.vocabularyName = vocabularyName;
+  }
 }

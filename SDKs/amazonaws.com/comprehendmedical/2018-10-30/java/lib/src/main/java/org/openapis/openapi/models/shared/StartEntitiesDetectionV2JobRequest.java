@@ -12,6 +12,7 @@ public class StartEntitiesDetectionV2JobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartEntitiesDetectionV2JobRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -19,6 +20,7 @@ public class StartEntitiesDetectionV2JobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartEntitiesDetectionV2JobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class StartEntitiesDetectionV2JobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartEntitiesDetectionV2JobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -34,6 +37,7 @@ public class StartEntitiesDetectionV2JobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartEntitiesDetectionV2JobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -42,6 +46,7 @@ public class StartEntitiesDetectionV2JobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSKey")
     public String kmsKey;
+
     public StartEntitiesDetectionV2JobRequest withKMSKey(String kmsKey) {
         this.kmsKey = kmsKey;
         return this;
@@ -49,6 +54,7 @@ public class StartEntitiesDetectionV2JobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartEntitiesDetectionV2JobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -56,9 +62,16 @@ public class StartEntitiesDetectionV2JobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartEntitiesDetectionV2JobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
     }
     
+    public StartEntitiesDetectionV2JobRequest(@JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig) {
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.languageCode = languageCode;
+        this.outputDataConfig = outputDataConfig;
+  }
 }

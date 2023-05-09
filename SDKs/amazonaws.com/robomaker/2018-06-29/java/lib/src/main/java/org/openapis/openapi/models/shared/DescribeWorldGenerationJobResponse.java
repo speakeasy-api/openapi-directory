@@ -20,6 +20,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public DescribeWorldGenerationJobResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public DescribeWorldGenerationJobResponse withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -38,6 +40,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public DescribeWorldGenerationJobResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public WorldGenerationJobErrorCodeEnum failureCode;
+
     public DescribeWorldGenerationJobResponse withFailureCode(WorldGenerationJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -54,6 +58,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureReason")
     public String failureReason;
+
     public DescribeWorldGenerationJobResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -62,6 +67,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("finishedWorldsSummary")
     public FinishedWorldsSummary finishedWorldsSummary;
+
     public DescribeWorldGenerationJobResponse withFinishedWorldsSummary(FinishedWorldsSummary finishedWorldsSummary) {
         this.finishedWorldsSummary = finishedWorldsSummary;
         return this;
@@ -70,6 +76,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public WorldGenerationJobStatusEnum status;
+
     public DescribeWorldGenerationJobResponse withStatus(WorldGenerationJobStatusEnum status) {
         this.status = status;
         return this;
@@ -78,6 +85,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public DescribeWorldGenerationJobResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -86,6 +94,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public String template;
+
     public DescribeWorldGenerationJobResponse withTemplate(String template) {
         this.template = template;
         return this;
@@ -94,6 +103,7 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldCount")
     public WorldCount worldCount;
+
     public DescribeWorldGenerationJobResponse withWorldCount(WorldCount worldCount) {
         this.worldCount = worldCount;
         return this;
@@ -102,9 +112,11 @@ public class DescribeWorldGenerationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("worldTags")
     public java.util.Map<String, String> worldTags;
+
     public DescribeWorldGenerationJobResponse withWorldTags(java.util.Map<String, String> worldTags) {
         this.worldTags = worldTags;
         return this;
     }
     
+    public DescribeWorldGenerationJobResponse(){}
 }

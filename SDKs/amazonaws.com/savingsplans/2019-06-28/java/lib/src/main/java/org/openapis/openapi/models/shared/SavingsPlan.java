@@ -15,6 +15,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitment")
     public String commitment;
+
     public SavingsPlan withCommitment(String commitment) {
         this.commitment = commitment;
         return this;
@@ -23,6 +24,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public CurrencyCodeEnum currency;
+
     public SavingsPlan withCurrency(CurrencyCodeEnum currency) {
         this.currency = currency;
         return this;
@@ -31,6 +33,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SavingsPlan withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ec2InstanceFamily")
     public String ec2InstanceFamily;
+
     public SavingsPlan withEc2InstanceFamily(String ec2InstanceFamily) {
         this.ec2InstanceFamily = ec2InstanceFamily;
         return this;
@@ -47,6 +51,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public String end;
+
     public SavingsPlan withEnd(String end) {
         this.end = end;
         return this;
@@ -55,6 +60,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offeringId")
     public String offeringId;
+
     public SavingsPlan withOfferingId(String offeringId) {
         this.offeringId = offeringId;
         return this;
@@ -63,6 +69,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentOption")
     public SavingsPlanPaymentOptionEnum paymentOption;
+
     public SavingsPlan withPaymentOption(SavingsPlanPaymentOptionEnum paymentOption) {
         this.paymentOption = paymentOption;
         return this;
@@ -71,6 +78,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productTypes")
     public SavingsPlanProductTypeEnum[] productTypes;
+
     public SavingsPlan withProductTypes(SavingsPlanProductTypeEnum[] productTypes) {
         this.productTypes = productTypes;
         return this;
@@ -79,6 +87,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringPaymentAmount")
     public String recurringPaymentAmount;
+
     public SavingsPlan withRecurringPaymentAmount(String recurringPaymentAmount) {
         this.recurringPaymentAmount = recurringPaymentAmount;
         return this;
@@ -87,6 +96,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public SavingsPlan withRegion(String region) {
         this.region = region;
         return this;
@@ -95,6 +105,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanArn")
     public String savingsPlanArn;
+
     public SavingsPlan withSavingsPlanArn(String savingsPlanArn) {
         this.savingsPlanArn = savingsPlanArn;
         return this;
@@ -103,6 +114,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanId")
     public String savingsPlanId;
+
     public SavingsPlan withSavingsPlanId(String savingsPlanId) {
         this.savingsPlanId = savingsPlanId;
         return this;
@@ -111,6 +123,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("savingsPlanType")
     public SavingsPlanTypeEnum savingsPlanType;
+
     public SavingsPlan withSavingsPlanType(SavingsPlanTypeEnum savingsPlanType) {
         this.savingsPlanType = savingsPlanType;
         return this;
@@ -119,6 +132,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public String start;
+
     public SavingsPlan withStart(String start) {
         this.start = start;
         return this;
@@ -127,6 +141,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SavingsPlanStateEnum state;
+
     public SavingsPlan withState(SavingsPlanStateEnum state) {
         this.state = state;
         return this;
@@ -135,6 +150,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public SavingsPlan withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -143,6 +159,7 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("termDurationInSeconds")
     public Long termDurationInSeconds;
+
     public SavingsPlan withTermDurationInSeconds(Long termDurationInSeconds) {
         this.termDurationInSeconds = termDurationInSeconds;
         return this;
@@ -151,9 +168,11 @@ public class SavingsPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upfrontPaymentAmount")
     public String upfrontPaymentAmount;
+
     public SavingsPlan withUpfrontPaymentAmount(String upfrontPaymentAmount) {
         this.upfrontPaymentAmount = upfrontPaymentAmount;
         return this;
     }
     
+    public SavingsPlan(){}
 }

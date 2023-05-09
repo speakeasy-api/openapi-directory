@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DestinyMilestonesDestinyPublicMilestone {
     
     public DestinyMilestonesDestinyPublicMilestoneChallengeActivity[] activities;
+
     public DestinyMilestonesDestinyPublicMilestone withActivities(DestinyMilestonesDestinyPublicMilestoneChallengeActivity[] activities) {
         this.activities = activities;
         return this;
@@ -22,6 +23,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneQuest[] availableQuests;
+
     public DestinyMilestonesDestinyPublicMilestone withAvailableQuests(DestinyMilestonesDestinyPublicMilestoneQuest[] availableQuests) {
         this.availableQuests = availableQuests;
         return this;
@@ -32,6 +34,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public OffsetDateTime endDate;
+
     public DestinyMilestonesDestinyPublicMilestone withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +45,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public Long milestoneHash;
+
     public DestinyMilestonesDestinyPublicMilestone withMilestoneHash(Long milestoneHash) {
         this.milestoneHash = milestoneHash;
         return this;
@@ -52,6 +56,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public Integer order;
+
     public DestinyMilestonesDestinyPublicMilestone withOrder(Integer order) {
         this.order = order;
         return this;
@@ -62,6 +67,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public OffsetDateTime startDate;
+
     public DestinyMilestonesDestinyPublicMilestone withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -73,6 +79,7 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public Long[] vendorHashes;
+
     public DestinyMilestonesDestinyPublicMilestone withVendorHashes(Long[] vendorHashes) {
         this.vendorHashes = vendorHashes;
         return this;
@@ -83,9 +90,11 @@ public class DestinyMilestonesDestinyPublicMilestone {
      */
     
     public DestinyMilestonesDestinyPublicMilestoneVendor[] vendors;
+
     public DestinyMilestonesDestinyPublicMilestone withVendors(DestinyMilestonesDestinyPublicMilestoneVendor[] vendors) {
         this.vendors = vendors;
         return this;
     }
     
+    public DestinyMilestonesDestinyPublicMilestone(){}
 }

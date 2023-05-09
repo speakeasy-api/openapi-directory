@@ -18,6 +18,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withCategory(String category) {
         this.category = category;
         return this;
@@ -29,6 +30,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withDescription(String description) {
         this.description = description;
         return this;
@@ -37,6 +39,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node_license")
     public DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense nodeLicense;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withNodeLicense(DraftRegistrationsCreateDraftRegistrationAttributesNodeLicense nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -48,6 +51,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration_metadata")
     public java.util.Map<String, Object> registrationMetadata;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withRegistrationMetadata(java.util.Map<String, Object> registrationMetadata) {
         this.registrationMetadata = registrationMetadata;
         return this;
@@ -59,6 +63,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registration_responses")
     public java.util.Map<String, Object> registrationResponses;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withRegistrationResponses(java.util.Map<String, Object> registrationResponses) {
         this.registrationResponses = registrationResponses;
         return this;
@@ -70,6 +75,7 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -81,9 +87,11 @@ public class DraftRegistrationsCreateDraftRegistrationAttributesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public DraftRegistrationsCreateDraftRegistrationAttributesInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public DraftRegistrationsCreateDraftRegistrationAttributesInput(){}
 }

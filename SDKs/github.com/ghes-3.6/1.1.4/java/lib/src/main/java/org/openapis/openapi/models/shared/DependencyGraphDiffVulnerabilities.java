@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DependencyGraphDiffVulnerabilities {
     @JsonProperty("advisory_ghsa_id")
     public String advisoryGhsaId;
+
     public DependencyGraphDiffVulnerabilities withAdvisoryGhsaId(String advisoryGhsaId) {
         this.advisoryGhsaId = advisoryGhsaId;
         return this;
@@ -16,6 +17,7 @@ public class DependencyGraphDiffVulnerabilities {
     
     @JsonProperty("advisory_summary")
     public String advisorySummary;
+
     public DependencyGraphDiffVulnerabilities withAdvisorySummary(String advisorySummary) {
         this.advisorySummary = advisorySummary;
         return this;
@@ -23,6 +25,7 @@ public class DependencyGraphDiffVulnerabilities {
     
     @JsonProperty("advisory_url")
     public String advisoryUrl;
+
     public DependencyGraphDiffVulnerabilities withAdvisoryUrl(String advisoryUrl) {
         this.advisoryUrl = advisoryUrl;
         return this;
@@ -30,9 +33,16 @@ public class DependencyGraphDiffVulnerabilities {
     
     @JsonProperty("severity")
     public String severity;
+
     public DependencyGraphDiffVulnerabilities withSeverity(String severity) {
         this.severity = severity;
         return this;
     }
     
+    public DependencyGraphDiffVulnerabilities(@JsonProperty("advisory_ghsa_id") String advisoryGhsaId, @JsonProperty("advisory_summary") String advisorySummary, @JsonProperty("advisory_url") String advisoryUrl, @JsonProperty("severity") String severity) {
+        this.advisoryGhsaId = advisoryGhsaId;
+        this.advisorySummary = advisorySummary;
+        this.advisoryUrl = advisoryUrl;
+        this.severity = severity;
+  }
 }

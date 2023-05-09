@@ -18,6 +18,7 @@ public class GoogleApiHttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentType")
     public String contentType;
+
     public GoogleApiHttpBody withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleApiHttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public String data;
+
     public GoogleApiHttpBody withData(String data) {
         this.data = data;
         return this;
@@ -40,9 +42,11 @@ public class GoogleApiHttpBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extensions")
     public java.util.Map<String, Object>[] extensions;
+
     public GoogleApiHttpBody withExtensions(java.util.Map<String, Object>[] extensions) {
         this.extensions = extensions;
         return this;
     }
     
+    public GoogleApiHttpBody(){}
 }

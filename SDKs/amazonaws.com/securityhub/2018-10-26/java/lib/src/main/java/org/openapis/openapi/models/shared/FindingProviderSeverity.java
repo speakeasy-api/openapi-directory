@@ -15,6 +15,7 @@ public class FindingProviderSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public SeverityLabelEnum label;
+
     public FindingProviderSeverity withLabel(SeverityLabelEnum label) {
         this.label = label;
         return this;
@@ -23,9 +24,11 @@ public class FindingProviderSeverity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Original")
     public String original;
+
     public FindingProviderSeverity withOriginal(String original) {
         this.original = original;
         return this;
     }
     
+    public FindingProviderSeverity(){}
 }

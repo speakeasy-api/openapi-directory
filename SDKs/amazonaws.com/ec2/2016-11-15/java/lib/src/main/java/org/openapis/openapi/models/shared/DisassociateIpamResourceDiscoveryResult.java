@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DisassociateIpamResourceDiscoveryResult {
     
     public DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation ipamResourceDiscoveryAssociation;
+
     public DisassociateIpamResourceDiscoveryResult withIpamResourceDiscoveryAssociation(DisassociateIpamResourceDiscoveryResultIpamResourceDiscoveryAssociation ipamResourceDiscoveryAssociation) {
         this.ipamResourceDiscoveryAssociation = ipamResourceDiscoveryAssociation;
         return this;
     }
     
+    public DisassociateIpamResourceDiscoveryResult(){}
 }

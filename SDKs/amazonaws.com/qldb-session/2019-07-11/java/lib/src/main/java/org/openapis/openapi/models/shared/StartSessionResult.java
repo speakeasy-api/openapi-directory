@@ -15,6 +15,7 @@ public class StartSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionToken")
     public String sessionToken;
+
     public StartSessionResult withSessionToken(String sessionToken) {
         this.sessionToken = sessionToken;
         return this;
@@ -23,9 +24,11 @@ public class StartSessionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public StartSessionResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
     }
     
+    public StartSessionResult(){}
 }

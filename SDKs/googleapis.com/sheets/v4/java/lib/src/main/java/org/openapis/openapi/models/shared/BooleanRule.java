@@ -18,6 +18,7 @@ public class BooleanRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public BooleanCondition condition;
+
     public BooleanRule withCondition(BooleanCondition condition) {
         this.condition = condition;
         return this;
@@ -29,9 +30,11 @@ public class BooleanRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public CellFormat format;
+
     public BooleanRule withFormat(CellFormat format) {
         this.format = format;
         return this;
     }
     
+    public BooleanRule(){}
 }

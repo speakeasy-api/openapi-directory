@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest {
@@ -12,6 +13,7 @@ public class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerId")
     public String developerId;
+
     public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -22,9 +24,14 @@ public class DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=stripeId")
     public String stripeId;
+
     public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest withStripeId(String stripeId) {
         this.stripeId = stripeId;
         return this;
     }
     
+    public DeleteStripeGatewayDeveloperDeveloperIdAccountsStripeIdRequest(@JsonProperty("developerId") String developerId, @JsonProperty("stripeId") String stripeId) {
+        this.developerId = developerId;
+        this.stripeId = stripeId;
+  }
 }

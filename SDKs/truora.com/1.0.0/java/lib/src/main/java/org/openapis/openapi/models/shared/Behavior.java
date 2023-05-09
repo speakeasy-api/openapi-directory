@@ -25,6 +25,7 @@ public class Behavior {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("birth_date")
     public LocalDate birthDate;
+
     public Behavior withBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -35,6 +36,7 @@ public class Behavior {
      */
     @JsonProperty("country")
     public BehaviorCountryEnum country;
+
     public Behavior withCountry(BehaviorCountryEnum country) {
         this.country = country;
         return this;
@@ -48,6 +50,7 @@ public class Behavior {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creation_date")
     public OffsetDateTime creationDate;
+
     public Behavior withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -58,6 +61,7 @@ public class Behavior {
      */
     @JsonProperty("document_id")
     public String documentId;
+
     public Behavior withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -68,6 +72,7 @@ public class Behavior {
      */
     @JsonProperty("document_type")
     public BehaviorDocumentTypeEnum documentType;
+
     public Behavior withDocumentType(BehaviorDocumentTypeEnum documentType) {
         this.documentType = documentType;
         return this;
@@ -78,6 +83,7 @@ public class Behavior {
      */
     @JsonProperty("email")
     public String email;
+
     public Behavior withEmail(String email) {
         this.email = email;
         return this;
@@ -89,6 +95,7 @@ public class Behavior {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("feedback_date")
     public LocalDate feedbackDate;
+
     public Behavior withFeedbackDate(LocalDate feedbackDate) {
         this.feedbackDate = feedbackDate;
         return this;
@@ -99,6 +106,7 @@ public class Behavior {
      */
     @JsonProperty("first_name")
     public String firstName;
+
     public Behavior withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -109,6 +117,7 @@ public class Behavior {
      */
     @JsonProperty("last_name")
     public String lastName;
+
     public Behavior withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -120,6 +129,7 @@ public class Behavior {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public Behavior withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -130,9 +140,21 @@ public class Behavior {
      */
     @JsonProperty("reason")
     public String reason;
+
     public Behavior withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public Behavior(@JsonProperty("birth_date") LocalDate birthDate, @JsonProperty("country") BehaviorCountryEnum country, @JsonProperty("document_id") String documentId, @JsonProperty("document_type") BehaviorDocumentTypeEnum documentType, @JsonProperty("email") String email, @JsonProperty("feedback_date") LocalDate feedbackDate, @JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName, @JsonProperty("reason") String reason) {
+        this.birthDate = birthDate;
+        this.country = country;
+        this.documentId = documentId;
+        this.documentType = documentType;
+        this.email = email;
+        this.feedbackDate = feedbackDate;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.reason = reason;
+  }
 }

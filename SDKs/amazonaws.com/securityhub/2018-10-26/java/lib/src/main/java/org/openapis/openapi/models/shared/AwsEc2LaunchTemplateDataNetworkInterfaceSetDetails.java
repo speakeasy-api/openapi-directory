@@ -15,6 +15,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociateCarrierIpAddress")
     public Boolean associateCarrierIpAddress;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withAssociateCarrierIpAddress(Boolean associateCarrierIpAddress) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatePublicIpAddress")
     public Boolean associatePublicIpAddress;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOnTermination")
     public Boolean deleteOnTermination;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceIndex")
     public Long deviceIndex;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Groups")
     public String[] groups;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InterfaceType")
     public String interfaceType;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv4PrefixCount")
     public Long ipv4PrefixCount;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv4Prefixes")
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv4PrefixesDetails[] ipv4Prefixes;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv4Prefixes(AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv4PrefixesDetails[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6AddressCount")
     public Long ipv6AddressCount;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -95,6 +105,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6Addresses")
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6AddressesDetails[] ipv6Addresses;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv6Addresses(AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6AddressesDetails[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -103,6 +114,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6PrefixCount")
     public Long ipv6PrefixCount;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -111,6 +123,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Ipv6Prefixes")
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6PrefixesDetails[] ipv6Prefixes;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withIpv6Prefixes(AwsEc2LaunchTemplateDataNetworkInterfaceSetIpv6PrefixesDetails[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -119,6 +132,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkCardIndex")
     public Long networkCardIndex;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -127,6 +141,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkInterfaceId")
     public String networkInterfaceId;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -135,6 +150,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddress")
     public String privateIpAddress;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -143,6 +159,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateIpAddresses")
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetails[] privateIpAddresses;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withPrivateIpAddresses(AwsEc2LaunchTemplateDataNetworkInterfaceSetPrivateIpAddressesDetails[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -151,6 +168,7 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryPrivateIpAddressCount")
     public Long secondaryPrivateIpAddressCount;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -159,9 +177,11 @@ public class AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public AwsEc2LaunchTemplateDataNetworkInterfaceSetDetails(){}
 }

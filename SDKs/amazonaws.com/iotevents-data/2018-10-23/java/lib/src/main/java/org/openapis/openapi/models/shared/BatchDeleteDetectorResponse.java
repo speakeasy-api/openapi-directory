@@ -15,9 +15,11 @@ public class BatchDeleteDetectorResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchDeleteDetectorErrorEntries")
     public BatchDeleteDetectorErrorEntry[] batchDeleteDetectorErrorEntries;
+
     public BatchDeleteDetectorResponse withBatchDeleteDetectorErrorEntries(BatchDeleteDetectorErrorEntry[] batchDeleteDetectorErrorEntries) {
         this.batchDeleteDetectorErrorEntries = batchDeleteDetectorErrorEntries;
         return this;
     }
     
+    public BatchDeleteDetectorResponse(){}
 }

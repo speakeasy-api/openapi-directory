@@ -12,6 +12,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appendQuery")
     public Boolean appendQuery;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withAppendQuery(Boolean appendQuery) {
         this.appendQuery = appendQuery;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserDestinationItem")
     public ApiCoreDtoDatapointsBrowserBaseDestinationItem browserDestinationItem;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withBrowserDestinationItem(ApiCoreDtoDatapointsBrowserBaseDestinationItem browserDestinationItem) {
         this.browserDestinationItem = browserDestinationItem;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationMode")
     public ApiCoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum destinationMode;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withDestinationMode(ApiCoreDtoDatapointsTrackingLinkSpecificsDestinationModeEnum destinationMode) {
         this.destinationMode = destinationMode;
         return this;
@@ -36,6 +39,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainId")
     public Integer domainId;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withDomainId(Integer domainId) {
         this.domainId = domainId;
         return this;
@@ -44,6 +48,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encodeUrl")
     public Boolean encodeUrl;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withEncodeUrl(Boolean encodeUrl) {
         this.encodeUrl = encodeUrl;
         return this;
@@ -52,6 +57,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationClicks")
     public Long expirationClicks;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withExpirationClicks(Long expirationClicks) {
         this.expirationClicks = expirationClicks;
         return this;
@@ -63,6 +69,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expirationDate")
     public String expirationDate;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withExpirationDate(String expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -71,6 +78,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstUrl")
     public String firstUrl;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withFirstUrl(String firstUrl) {
         this.firstUrl = firstUrl;
         return this;
@@ -79,6 +87,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("goDomainId")
     public Integer goDomainId;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withGoDomainId(Integer goDomainId) {
         this.goDomainId = goDomainId;
         return this;
@@ -87,6 +96,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideUrl")
     public Boolean hideUrl;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withHideUrl(Boolean hideUrl) {
         this.hideUrl = hideUrl;
         return this;
@@ -95,6 +105,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hideUrlTitle")
     public String hideUrlTitle;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withHideUrlTitle(String hideUrlTitle) {
         this.hideUrlTitle = hideUrlTitle;
         return this;
@@ -103,6 +114,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isABTest")
     public Boolean isABTest;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withIsABTest(Boolean isABTest) {
         this.isABTest = isABTest;
         return this;
@@ -111,6 +123,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withPassword(String password) {
         this.password = password;
         return this;
@@ -119,6 +132,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pauseAfterClicksExpiration")
     public Boolean pauseAfterClicksExpiration;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withPauseAfterClicksExpiration(Boolean pauseAfterClicksExpiration) {
         this.pauseAfterClicksExpiration = pauseAfterClicksExpiration;
         return this;
@@ -127,6 +141,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pauseAfterDateExpiration")
     public Boolean pauseAfterDateExpiration;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withPauseAfterDateExpiration(Boolean pauseAfterDateExpiration) {
         this.pauseAfterDateExpiration = pauseAfterDateExpiration;
         return this;
@@ -135,6 +150,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("randomDestinationItems")
     public ApiCoreDtoDatapointsMultipleDestinationItem[] randomDestinationItems;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withRandomDestinationItems(ApiCoreDtoDatapointsMultipleDestinationItem[] randomDestinationItems) {
         this.randomDestinationItems = randomDestinationItems;
         return this;
@@ -143,6 +159,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectType")
     public ApiCoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum redirectType;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withRedirectType(ApiCoreDtoDatapointsTrackingLinkSpecificsRedirectTypeEnum redirectType) {
         this.redirectType = redirectType;
         return this;
@@ -151,6 +168,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referrerClean")
     public ApiCoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum referrerClean;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withReferrerClean(ApiCoreDtoDatapointsTrackingLinkSpecificsReferrerCleanEnum referrerClean) {
         this.referrerClean = referrerClean;
         return this;
@@ -159,6 +177,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scripts")
     public ApiCoreDtoDatapointsDatapointRetargetingInfo[] scripts;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withScripts(ApiCoreDtoDatapointsDatapointRetargetingInfo[] scripts) {
         this.scripts = scripts;
         return this;
@@ -167,6 +186,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequentialDestinationItems")
     public ApiCoreDtoDatapointsMultipleDestinationItem[] sequentialDestinationItems;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withSequentialDestinationItems(ApiCoreDtoDatapointsMultipleDestinationItem[] sequentialDestinationItems) {
         this.sequentialDestinationItems = sequentialDestinationItems;
         return this;
@@ -175,6 +195,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spilloverDestinationItems")
     public ApiCoreDtoDatapointsMultipleDestinationItem[] spilloverDestinationItems;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withSpilloverDestinationItems(ApiCoreDtoDatapointsMultipleDestinationItem[] spilloverDestinationItems) {
         this.spilloverDestinationItems = spilloverDestinationItems;
         return this;
@@ -183,6 +204,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uniqueDestinationItem")
     public ApiCoreDtoDatapointsUniqueDestinationItem uniqueDestinationItem;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUniqueDestinationItem(ApiCoreDtoDatapointsUniqueDestinationItem uniqueDestinationItem) {
         this.uniqueDestinationItem = uniqueDestinationItem;
         return this;
@@ -191,6 +213,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUrl(String url) {
         this.url = url;
         return this;
@@ -199,6 +222,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlAfterClicksExpiration")
     public String urlAfterClicksExpiration;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUrlAfterClicksExpiration(String urlAfterClicksExpiration) {
         this.urlAfterClicksExpiration = urlAfterClicksExpiration;
         return this;
@@ -207,6 +231,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlAfterDateExpiration")
     public String urlAfterDateExpiration;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUrlAfterDateExpiration(String urlAfterDateExpiration) {
         this.urlAfterDateExpiration = urlAfterDateExpiration;
         return this;
@@ -215,6 +240,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlsByLanguage")
     public ApiCoreDtoDatapointsUrlByLanguageItem[] urlsByLanguage;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUrlsByLanguage(ApiCoreDtoDatapointsUrlByLanguageItem[] urlsByLanguage) {
         this.urlsByLanguage = urlsByLanguage;
         return this;
@@ -223,6 +249,7 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("urlsByNation")
     public ApiCoreDtoDatapointsUrlByNationItem[] urlsByNation;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withUrlsByNation(ApiCoreDtoDatapointsUrlByNationItem[] urlsByNation) {
         this.urlsByNation = urlsByNation;
         return this;
@@ -231,9 +258,11 @@ public class ApiCoreDtoDatapointsTrackingLinkSpecifics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightedDestinationItems")
     public ApiCoreDtoDatapointsWeightedDestinationItem[] weightedDestinationItems;
+
     public ApiCoreDtoDatapointsTrackingLinkSpecifics withWeightedDestinationItems(ApiCoreDtoDatapointsWeightedDestinationItem[] weightedDestinationItems) {
         this.weightedDestinationItems = weightedDestinationItems;
         return this;
     }
     
+    public ApiCoreDtoDatapointsTrackingLinkSpecifics(){}
 }

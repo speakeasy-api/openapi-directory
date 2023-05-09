@@ -59,4 +59,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudKmsV1KeyOperatio
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudKmsV1KeyOperationAttestation.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudKmsV1KeyOperationAttestationCertificateChains.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudKmsInventoryV1ProtectedResourcesSummary.java
+docs/sdk/README.md
+docs/organizations/README.md
+docs/projects/README.md
 USAGE.md

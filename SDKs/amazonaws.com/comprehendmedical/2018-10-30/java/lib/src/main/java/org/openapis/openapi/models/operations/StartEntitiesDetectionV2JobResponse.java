@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartEntitiesDetectionV2JobResponse {
     
     public String contentType;
+
     public StartEntitiesDetectionV2JobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartEntitiesDetectionV2JobResponse {
      */
     
     public Object internalServerException;
+
     public StartEntitiesDetectionV2JobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class StartEntitiesDetectionV2JobResponse {
      */
     
     public Object invalidRequestException;
+
     public StartEntitiesDetectionV2JobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class StartEntitiesDetectionV2JobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartEntitiesDetectionV2JobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartEntitiesDetectionV2JobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartEntitiesDetectionV2JobResponse startEntitiesDetectionV2JobResponse;
+
     public StartEntitiesDetectionV2JobResponse withStartEntitiesDetectionV2JobResponse(org.openapis.openapi.models.shared.StartEntitiesDetectionV2JobResponse startEntitiesDetectionV2JobResponse) {
         this.startEntitiesDetectionV2JobResponse = startEntitiesDetectionV2JobResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartEntitiesDetectionV2JobResponse {
     
     
     public Integer statusCode;
+
     public StartEntitiesDetectionV2JobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartEntitiesDetectionV2JobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartEntitiesDetectionV2JobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartEntitiesDetectionV2JobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StartEntitiesDetectionV2JobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StartEntitiesDetectionV2JobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

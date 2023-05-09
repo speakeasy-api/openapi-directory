@@ -58,11 +58,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BranchConfigurationsCreateResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsCreateResponse() {{
+        org.openapis.openapi.models.operations.BranchConfigurationsCreateResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsCreateResponse(contentType, httpRes.statusCode()) {{
             branchConfigurationsCreate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BranchConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BranchConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsDeleteResponse(contentType, httpRes.statusCode()) {{
             branchConfigurationsDelete200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,12 +136,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BranchConfigurationsGetResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.BranchConfigurationsGetResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             branchConfigurationsGet200ApplicationJSONObject = null;
             branchConfigurationsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -193,11 +187,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BranchConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.BranchConfigurationsUpdateResponse res = new org.openapis.openapi.models.operations.BranchConfigurationsUpdateResponse(contentType, httpRes.statusCode()) {{
             branchConfigurationsUpdate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -239,12 +231,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildConfigurationsGetResponse res = new org.openapis.openapi.models.operations.BuildConfigurationsGetResponse() {{
+        org.openapis.openapi.models.operations.BuildConfigurationsGetResponse res = new org.openapis.openapi.models.operations.BuildConfigurationsGetResponse(contentType, httpRes.statusCode()) {{
             buildConfigurationsGet200ApplicationJSONObject = null;
             buildConfigurationsGetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -289,11 +279,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsCreateResponse res = new org.openapis.openapi.models.operations.BuildsCreateResponse() {{
+        org.openapis.openapi.models.operations.BuildsCreateResponse res = new org.openapis.openapi.models.operations.BuildsCreateResponse(contentType, httpRes.statusCode()) {{
             buildsCreate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -334,11 +322,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsDistributeResponse res = new org.openapis.openapi.models.operations.BuildsDistributeResponse() {{
+        org.openapis.openapi.models.operations.BuildsDistributeResponse res = new org.openapis.openapi.models.operations.BuildsDistributeResponse(contentType, httpRes.statusCode()) {{
             buildsDistribute200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -374,11 +360,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsGetResponse res = new org.openapis.openapi.models.operations.BuildsGetResponse() {{
+        org.openapis.openapi.models.operations.BuildsGetResponse res = new org.openapis.openapi.models.operations.BuildsGetResponse(contentType, httpRes.statusCode()) {{
             buildsGet200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,11 +398,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsGetDownloadUriResponse res = new org.openapis.openapi.models.operations.BuildsGetDownloadUriResponse() {{
+        org.openapis.openapi.models.operations.BuildsGetDownloadUriResponse res = new org.openapis.openapi.models.operations.BuildsGetDownloadUriResponse(contentType, httpRes.statusCode()) {{
             buildsGetDownloadUri200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -454,11 +436,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsGetLogResponse res = new org.openapis.openapi.models.operations.BuildsGetLogResponse() {{
+        org.openapis.openapi.models.operations.BuildsGetLogResponse res = new org.openapis.openapi.models.operations.BuildsGetLogResponse(contentType, httpRes.statusCode()) {{
             buildsGetLog200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -494,11 +474,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsGetStatusByAppIdResponse res = new org.openapis.openapi.models.operations.BuildsGetStatusByAppIdResponse() {{
+        org.openapis.openapi.models.operations.BuildsGetStatusByAppIdResponse res = new org.openapis.openapi.models.operations.BuildsGetStatusByAppIdResponse(contentType, httpRes.statusCode()) {{
             buildsGetStatusByAppId200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -536,12 +514,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListBranchesResponse res = new org.openapis.openapi.models.operations.BuildsListBranchesResponse() {{
+        org.openapis.openapi.models.operations.BuildsListBranchesResponse res = new org.openapis.openapi.models.operations.BuildsListBranchesResponse(contentType, httpRes.statusCode()) {{
             buildsListBranches200ApplicationJSONObjects = null;
             buildsListBranchesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -584,11 +560,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListByBranchResponse res = new org.openapis.openapi.models.operations.BuildsListByBranchResponse() {{
+        org.openapis.openapi.models.operations.BuildsListByBranchResponse res = new org.openapis.openapi.models.operations.BuildsListByBranchResponse(contentType, httpRes.statusCode()) {{
             buildsListByBranch200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +604,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListToolsetProjectsResponse res = new org.openapis.openapi.models.operations.BuildsListToolsetProjectsResponse() {{
+        org.openapis.openapi.models.operations.BuildsListToolsetProjectsResponse res = new org.openapis.openapi.models.operations.BuildsListToolsetProjectsResponse(contentType, httpRes.statusCode()) {{
             buildsListToolsetProjects200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -676,12 +648,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListToolsetsResponse res = new org.openapis.openapi.models.operations.BuildsListToolsetsResponse() {{
+        org.openapis.openapi.models.operations.BuildsListToolsetsResponse res = new org.openapis.openapi.models.operations.BuildsListToolsetsResponse(contentType, httpRes.statusCode()) {{
             buildsListToolsets200ApplicationJSONObject = null;
             buildsListToolsetsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -708,7 +678,9 @@ public class Build {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesResponse buildsListXamarinSDKBundles(org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesRequest request, org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/xamarin_sdk_bundles", request, null);
@@ -724,12 +696,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesResponse res = new org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesResponse() {{
+        org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesResponse res = new org.openapis.openapi.models.operations.BuildsListXamarinSDKBundlesResponse(contentType, httpRes.statusCode()) {{
             buildsListXamarinSDKBundles200ApplicationJSONObjects = null;
             buildsListXamarinSDKBundlesDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -756,7 +726,9 @@ public class Build {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.BuildsListXcodeVersionsResponse buildsListXcodeVersions(org.openapis.openapi.models.operations.BuildsListXcodeVersionsRequest request, org.openapis.openapi.models.operations.BuildsListXcodeVersionsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.BuildsListXcodeVersionsRequest.class, baseUrl, "/v0.1/apps/{owner_name}/{app_name}/xcode_versions", request, null);
@@ -772,12 +744,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsListXcodeVersionsResponse res = new org.openapis.openapi.models.operations.BuildsListXcodeVersionsResponse() {{
+        org.openapis.openapi.models.operations.BuildsListXcodeVersionsResponse res = new org.openapis.openapi.models.operations.BuildsListXcodeVersionsResponse(contentType, httpRes.statusCode()) {{
             buildsListXcodeVersions200ApplicationJSONObjects = null;
             buildsListXcodeVersionsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -825,11 +795,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsUpdateResponse res = new org.openapis.openapi.models.operations.BuildsUpdateResponse() {{
+        org.openapis.openapi.models.operations.BuildsUpdateResponse res = new org.openapis.openapi.models.operations.BuildsUpdateResponse(contentType, httpRes.statusCode()) {{
             buildsUpdate200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -865,11 +833,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BuildsWebhookResponse res = new org.openapis.openapi.models.operations.BuildsWebhookResponse() {{
+        org.openapis.openapi.models.operations.BuildsWebhookResponse res = new org.openapis.openapi.models.operations.BuildsWebhookResponse(contentType, httpRes.statusCode()) {{
             buildsWebhookDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -913,11 +879,9 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CommitsListByShaListResponse res = new org.openapis.openapi.models.operations.CommitsListByShaListResponse() {{
+        org.openapis.openapi.models.operations.CommitsListByShaListResponse res = new org.openapis.openapi.models.operations.CommitsListByShaListResponse(contentType, httpRes.statusCode()) {{
             commitsListByShaList200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -955,12 +919,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileAssetsCreateResponse res = new org.openapis.openapi.models.operations.FileAssetsCreateResponse() {{
+        org.openapis.openapi.models.operations.FileAssetsCreateResponse res = new org.openapis.openapi.models.operations.FileAssetsCreateResponse(contentType, httpRes.statusCode()) {{
             fileAssetsCreate200ApplicationJSONObject = null;
             fileAssetsCreateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1009,12 +971,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepositoriesListResponse res = new org.openapis.openapi.models.operations.RepositoriesListResponse() {{
+        org.openapis.openapi.models.operations.RepositoriesListResponse res = new org.openapis.openapi.models.operations.RepositoriesListResponse(contentType, httpRes.statusCode()) {{
             repositoriesList200ApplicationJSONObjects = null;
             repositoriesListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1062,12 +1022,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepositoryConfigurationsCreateOrUpdateResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsCreateOrUpdateResponse() {{
+        org.openapis.openapi.models.operations.RepositoryConfigurationsCreateOrUpdateResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsCreateOrUpdateResponse(contentType, httpRes.statusCode()) {{
             repositoryConfigurationsCreateOrUpdate200ApplicationJSONObject = null;
             repositoryConfigurationsCreateOrUpdateDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1110,12 +1068,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepositoryConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RepositoryConfigurationsDeleteResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsDeleteResponse(contentType, httpRes.statusCode()) {{
             repositoryConfigurationsDelete200ApplicationJSONObject = null;
             repositoryConfigurationsDeleteDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1164,12 +1120,10 @@ public class Build {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RepositoryConfigurationsListResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsListResponse() {{
+        org.openapis.openapi.models.operations.RepositoryConfigurationsListResponse res = new org.openapis.openapi.models.operations.RepositoryConfigurationsListResponse(contentType, httpRes.statusCode()) {{
             repositoryConfigurationsList200ApplicationJSONAnies = null;
             repositoryConfigurationsListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

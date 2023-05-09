@@ -22,6 +22,7 @@ public class PermissionSet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedDate")
     public OffsetDateTime createdDate;
+
     public PermissionSet withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -30,6 +31,7 @@ public class PermissionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public PermissionSet withDescription(String description) {
         this.description = description;
         return this;
@@ -38,6 +40,7 @@ public class PermissionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PermissionSet withName(String name) {
         this.name = name;
         return this;
@@ -46,6 +49,7 @@ public class PermissionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PermissionSetArn")
     public String permissionSetArn;
+
     public PermissionSet withPermissionSetArn(String permissionSetArn) {
         this.permissionSetArn = permissionSetArn;
         return this;
@@ -54,6 +58,7 @@ public class PermissionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelayState")
     public String relayState;
+
     public PermissionSet withRelayState(String relayState) {
         this.relayState = relayState;
         return this;
@@ -62,9 +67,11 @@ public class PermissionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SessionDuration")
     public String sessionDuration;
+
     public PermissionSet withSessionDuration(String sessionDuration) {
         this.sessionDuration = sessionDuration;
         return this;
     }
     
+    public PermissionSet(){}
 }

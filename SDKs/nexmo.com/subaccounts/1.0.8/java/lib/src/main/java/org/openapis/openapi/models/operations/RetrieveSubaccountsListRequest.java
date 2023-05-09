@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RetrieveSubaccountsListRequest {
@@ -12,9 +13,13 @@ public class RetrieveSubaccountsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=api_key")
     public String apiKey;
+
     public RetrieveSubaccountsListRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
     }
     
+    public RetrieveSubaccountsListRequest(@JsonProperty("api_key") String apiKey) {
+        this.apiKey = apiKey;
+  }
 }

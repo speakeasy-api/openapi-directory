@@ -12,6 +12,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("command")
     public String command;
+
     public PostVolumes201ApplicationJSONAction withCommand(String command) {
         this.command = command;
         return this;
@@ -22,6 +23,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("error")
     public PostVolumes201ApplicationJSONActionError error;
+
     public PostVolumes201ApplicationJSONAction withError(PostVolumes201ApplicationJSONActionError error) {
         this.error = error;
         return this;
@@ -32,6 +34,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("finished")
     public String finished;
+
     public PostVolumes201ApplicationJSONAction withFinished(String finished) {
         this.finished = finished;
         return this;
@@ -42,6 +45,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostVolumes201ApplicationJSONAction withId(Long id) {
         this.id = id;
         return this;
@@ -52,6 +56,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("progress")
     public Double progress;
+
     public PostVolumes201ApplicationJSONAction withProgress(Double progress) {
         this.progress = progress;
         return this;
@@ -62,6 +67,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("resources")
     public PostVolumes201ApplicationJSONActionResources[] resources;
+
     public PostVolumes201ApplicationJSONAction withResources(PostVolumes201ApplicationJSONActionResources[] resources) {
         this.resources = resources;
         return this;
@@ -72,6 +78,7 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("started")
     public String started;
+
     public PostVolumes201ApplicationJSONAction withStarted(String started) {
         this.started = started;
         return this;
@@ -82,9 +89,20 @@ public class PostVolumes201ApplicationJSONAction {
      */
     @JsonProperty("status")
     public PostVolumes201ApplicationJSONActionStatusEnum status;
+
     public PostVolumes201ApplicationJSONAction withStatus(PostVolumes201ApplicationJSONActionStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public PostVolumes201ApplicationJSONAction(@JsonProperty("command") String command, @JsonProperty("error") PostVolumes201ApplicationJSONActionError error, @JsonProperty("finished") String finished, @JsonProperty("id") Long id, @JsonProperty("progress") Double progress, @JsonProperty("resources") PostVolumes201ApplicationJSONActionResources[] resources, @JsonProperty("started") String started, @JsonProperty("status") PostVolumes201ApplicationJSONActionStatusEnum status) {
+        this.command = command;
+        this.error = error;
+        this.finished = finished;
+        this.id = id;
+        this.progress = progress;
+        this.resources = resources;
+        this.started = started;
+        this.status = status;
+  }
 }

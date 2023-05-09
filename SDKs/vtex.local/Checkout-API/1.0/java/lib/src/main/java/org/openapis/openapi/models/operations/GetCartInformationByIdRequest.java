@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCartInformationByIdRequest {
@@ -12,6 +13,7 @@ public class GetCartInformationByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetCartInformationByIdRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetCartInformationByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetCartInformationByIdRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetCartInformationByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=orderFormId")
     public String orderFormId;
+
     public GetCartInformationByIdRequest withOrderFormId(String orderFormId) {
         this.orderFormId = orderFormId;
         return this;
@@ -42,9 +46,15 @@ public class GetCartInformationByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=refreshOutdatedData")
     public Boolean refreshOutdatedData;
+
     public GetCartInformationByIdRequest withRefreshOutdatedData(Boolean refreshOutdatedData) {
         this.refreshOutdatedData = refreshOutdatedData;
         return this;
     }
     
+    public GetCartInformationByIdRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("orderFormId") String orderFormId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.orderFormId = orderFormId;
+  }
 }

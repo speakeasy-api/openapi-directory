@@ -15,6 +15,7 @@ public class ContextSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceId")
     public String sourceId;
+
     public ContextSource withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -23,6 +24,7 @@ public class ContextSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public ContextSource withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
@@ -30,9 +32,13 @@ public class ContextSource {
     
     @JsonProperty("SourceUri")
     public String sourceUri;
+
     public ContextSource withSourceUri(String sourceUri) {
         this.sourceUri = sourceUri;
         return this;
     }
     
+    public ContextSource(@JsonProperty("SourceUri") String sourceUri) {
+        this.sourceUri = sourceUri;
+  }
 }

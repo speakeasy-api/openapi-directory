@@ -15,6 +15,7 @@ public class FaceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Face")
     public Face face;
+
     public FaceRecord withFace(Face face) {
         this.face = face;
         return this;
@@ -23,9 +24,11 @@ public class FaceRecord {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FaceDetail")
     public FaceDetail faceDetail;
+
     public FaceRecord withFaceDetail(FaceDetail faceDetail) {
         this.faceDetail = faceDetail;
         return this;
     }
     
+    public FaceRecord(){}
 }

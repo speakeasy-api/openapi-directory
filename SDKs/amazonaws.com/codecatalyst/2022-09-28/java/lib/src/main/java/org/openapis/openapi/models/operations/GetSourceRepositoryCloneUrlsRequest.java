@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSourceRepositoryCloneUrlsRequest {
@@ -12,6 +13,7 @@ public class GetSourceRepositoryCloneUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public GetSourceRepositoryCloneUrlsRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -22,6 +24,7 @@ public class GetSourceRepositoryCloneUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sourceRepositoryName")
     public String sourceRepositoryName;
+
     public GetSourceRepositoryCloneUrlsRequest withSourceRepositoryName(String sourceRepositoryName) {
         this.sourceRepositoryName = sourceRepositoryName;
         return this;
@@ -32,9 +35,15 @@ public class GetSourceRepositoryCloneUrlsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spaceName")
     public String spaceName;
+
     public GetSourceRepositoryCloneUrlsRequest withSpaceName(String spaceName) {
         this.spaceName = spaceName;
         return this;
     }
     
+    public GetSourceRepositoryCloneUrlsRequest(@JsonProperty("projectName") String projectName, @JsonProperty("sourceRepositoryName") String sourceRepositoryName, @JsonProperty("spaceName") String spaceName) {
+        this.projectName = projectName;
+        this.sourceRepositoryName = sourceRepositoryName;
+        this.spaceName = spaceName;
+  }
 }

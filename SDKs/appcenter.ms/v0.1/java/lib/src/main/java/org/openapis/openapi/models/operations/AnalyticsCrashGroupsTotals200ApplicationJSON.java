@@ -12,6 +12,7 @@ public class AnalyticsCrashGroupsTotals200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_version")
     public String appVersion;
+
     public AnalyticsCrashGroupsTotals200ApplicationJSON withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -20,6 +21,7 @@ public class AnalyticsCrashGroupsTotals200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crash_group_id")
     public String crashGroupId;
+
     public AnalyticsCrashGroupsTotals200ApplicationJSON withCrashGroupId(String crashGroupId) {
         this.crashGroupId = crashGroupId;
         return this;
@@ -28,9 +30,11 @@ public class AnalyticsCrashGroupsTotals200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overall")
     public AnalyticsCrashGroupsTotals200ApplicationJSONOverall overall;
+
     public AnalyticsCrashGroupsTotals200ApplicationJSON withOverall(AnalyticsCrashGroupsTotals200ApplicationJSONOverall overall) {
         this.overall = overall;
         return this;
     }
     
+    public AnalyticsCrashGroupsTotals200ApplicationJSON(){}
 }

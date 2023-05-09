@@ -15,6 +15,7 @@ public class ThemeValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public ThemeValues withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ThemeValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public ThemeValue value;
+
     public ThemeValues withValue(ThemeValue value) {
         this.value = value;
         return this;
     }
     
+    public ThemeValues(){}
 }

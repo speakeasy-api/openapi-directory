@@ -18,9 +18,11 @@ public class KeyOperationAttestationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certChains")
     public CertificateChains certChains;
+
     public KeyOperationAttestationInput withCertChains(CertificateChains certChains) {
         this.certChains = certChains;
         return this;
     }
     
+    public KeyOperationAttestationInput(){}
 }

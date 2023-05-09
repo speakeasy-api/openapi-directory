@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     public String frequency;
+
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence withFrequency(String frequency) {
         this.frequency = frequency;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Long interval;
+
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -26,6 +28,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Long[] occurrenceDaySet;
+
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceDaySet(Long[] occurrenceDaySet) {
         this.occurrenceDaySet = occurrenceDaySet;
         return this;
@@ -33,6 +36,7 @@ public class DescribeScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public Boolean occurrenceRelativeToEnd;
+
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceRelativeToEnd(Boolean occurrenceRelativeToEnd) {
         this.occurrenceRelativeToEnd = occurrenceRelativeToEnd;
         return this;
@@ -40,9 +44,11 @@ public class DescribeScheduledInstancesResultScheduledInstanceSetRecurrence {
     
     
     public String occurrenceUnit;
+
     public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence withOccurrenceUnit(String occurrenceUnit) {
         this.occurrenceUnit = occurrenceUnit;
         return this;
     }
     
+    public DescribeScheduledInstancesResultScheduledInstanceSetRecurrence(){}
 }

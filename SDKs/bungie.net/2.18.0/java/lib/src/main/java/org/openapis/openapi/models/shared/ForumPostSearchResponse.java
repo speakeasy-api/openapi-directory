@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ForumPostSearchResponse {
     
     public UserGeneralUser[] authors;
+
     public ForumPostSearchResponse withAuthors(UserGeneralUser[] authors) {
         this.authors = authors;
         return this;
@@ -16,6 +17,7 @@ public class ForumPostSearchResponse {
     
     
     public Integer availablePages;
+
     public ForumPostSearchResponse withAvailablePages(Integer availablePages) {
         this.availablePages = availablePages;
         return this;
@@ -23,6 +25,7 @@ public class ForumPostSearchResponse {
     
     
     public GroupsV2GroupResponse[] groups;
+
     public ForumPostSearchResponse withGroups(GroupsV2GroupResponse[] groups) {
         this.groups = groups;
         return this;
@@ -30,6 +33,7 @@ public class ForumPostSearchResponse {
     
     
     public Boolean hasMore;
+
     public ForumPostSearchResponse withHasMore(Boolean hasMore) {
         this.hasMore = hasMore;
         return this;
@@ -37,6 +41,7 @@ public class ForumPostSearchResponse {
     
     
     public ForumPollResponse[] polls;
+
     public ForumPostSearchResponse withPolls(ForumPollResponse[] polls) {
         this.polls = polls;
         return this;
@@ -44,6 +49,7 @@ public class ForumPostSearchResponse {
     
     
     public QueriesPagedQuery query;
+
     public ForumPostSearchResponse withQuery(QueriesPagedQuery query) {
         this.query = query;
         return this;
@@ -51,6 +57,7 @@ public class ForumPostSearchResponse {
     
     
     public ForumForumRecruitmentDetail[] recruitmentDetails;
+
     public ForumPostSearchResponse withRecruitmentDetails(ForumForumRecruitmentDetail[] recruitmentDetails) {
         this.recruitmentDetails = recruitmentDetails;
         return this;
@@ -58,6 +65,7 @@ public class ForumPostSearchResponse {
     
     
     public ForumPostResponse[] relatedPosts;
+
     public ForumPostSearchResponse withRelatedPosts(ForumPostResponse[] relatedPosts) {
         this.relatedPosts = relatedPosts;
         return this;
@@ -65,6 +73,7 @@ public class ForumPostSearchResponse {
     
     
     public String replacementContinuationToken;
+
     public ForumPostSearchResponse withReplacementContinuationToken(String replacementContinuationToken) {
         this.replacementContinuationToken = replacementContinuationToken;
         return this;
@@ -72,6 +81,7 @@ public class ForumPostSearchResponse {
     
     
     public ForumPostResponse[] results;
+
     public ForumPostSearchResponse withResults(ForumPostResponse[] results) {
         this.results = results;
         return this;
@@ -79,6 +89,7 @@ public class ForumPostSearchResponse {
     
     
     public TagsModelsContractsTagResponse[] searchedTags;
+
     public ForumPostSearchResponse withSearchedTags(TagsModelsContractsTagResponse[] searchedTags) {
         this.searchedTags = searchedTags;
         return this;
@@ -86,6 +97,7 @@ public class ForumPostSearchResponse {
     
     
     public Integer totalResults;
+
     public ForumPostSearchResponse withTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
         return this;
@@ -99,9 +111,11 @@ public class ForumPostSearchResponse {
      */
     
     public Boolean useTotalResults;
+
     public ForumPostSearchResponse withUseTotalResults(Boolean useTotalResults) {
         this.useTotalResults = useTotalResults;
         return this;
     }
     
+    public ForumPostSearchResponse(){}
 }

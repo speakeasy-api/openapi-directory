@@ -15,6 +15,7 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesBody withIndex(Double index) {
         this.index = index;
         return this;
@@ -26,9 +27,11 @@ public class DeletePolicyModule200ApplicationJSONResultAstRulesBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms[] terms;
+
     public DeletePolicyModule200ApplicationJSONResultAstRulesBody withTerms(DeletePolicyModule200ApplicationJSONResultAstRulesBodyTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public DeletePolicyModule200ApplicationJSONResultAstRulesBody(){}
 }

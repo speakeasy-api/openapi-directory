@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationGetReportingsAllStoresResponse {
@@ -12,6 +13,7 @@ public class ImportationGetReportingsAllStoresResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationGetReportingsAllStoresResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class ImportationGetReportingsAllStoresResponse {
     
     
     public String contentType;
+
     public ImportationGetReportingsAllStoresResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ImportationGetReportingsAllStoresResponse {
     
     
     public Integer statusCode;
+
     public ImportationGetReportingsAllStoresResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ImportationGetReportingsAllStoresResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationGetReportingsAllStoresResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ImportationGetReportingsAllStoresResponse {
      */
     
     public java.util.Map<String, org.openapis.openapi.models.shared.ImportationsResponse> importationsPerStoreResponse;
+
     public ImportationGetReportingsAllStoresResponse withImportationsPerStoreResponse(java.util.Map<String, org.openapis.openapi.models.shared.ImportationsResponse> importationsPerStoreResponse) {
         this.importationsPerStoreResponse = importationsPerStoreResponse;
         return this;
     }
     
+    public ImportationGetReportingsAllStoresResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

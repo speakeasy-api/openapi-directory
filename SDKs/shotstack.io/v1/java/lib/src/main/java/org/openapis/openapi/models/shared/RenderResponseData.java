@@ -17,6 +17,7 @@ public class RenderResponseData {
      */
     @JsonProperty("created")
     public String created;
+
     public RenderResponseData withCreated(String created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class RenderResponseData {
      */
     @JsonProperty("data")
     public Edit data;
+
     public RenderResponseData withData(Edit data) {
         this.data = data;
         return this;
@@ -38,6 +40,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Double duration;
+
     public RenderResponseData withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -49,6 +52,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public RenderResponseData withError(String error) {
         this.error = error;
         return this;
@@ -59,6 +63,7 @@ public class RenderResponseData {
      */
     @JsonProperty("id")
     public String id;
+
     public RenderResponseData withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +74,7 @@ public class RenderResponseData {
      */
     @JsonProperty("owner")
     public String owner;
+
     public RenderResponseData withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -80,6 +86,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public String plan;
+
     public RenderResponseData withPlan(String plan) {
         this.plan = plan;
         return this;
@@ -91,6 +98,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("poster")
     public String poster;
+
     public RenderResponseData withPoster(String poster) {
         this.poster = poster;
         return this;
@@ -102,6 +110,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renderTime")
     public Double renderTime;
+
     public RenderResponseData withRenderTime(Double renderTime) {
         this.renderTime = renderTime;
         return this;
@@ -119,6 +128,7 @@ public class RenderResponseData {
      */
     @JsonProperty("status")
     public RenderResponseDataStatusEnum status;
+
     public RenderResponseData withStatus(RenderResponseDataStatusEnum status) {
         this.status = status;
         return this;
@@ -130,6 +140,7 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public RenderResponseData withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -140,6 +151,7 @@ public class RenderResponseData {
      */
     @JsonProperty("updated")
     public String updated;
+
     public RenderResponseData withUpdated(String updated) {
         this.updated = updated;
         return this;
@@ -151,9 +163,18 @@ public class RenderResponseData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public RenderResponseData withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public RenderResponseData(@JsonProperty("created") String created, @JsonProperty("data") Edit data, @JsonProperty("id") String id, @JsonProperty("owner") String owner, @JsonProperty("status") RenderResponseDataStatusEnum status, @JsonProperty("updated") String updated) {
+        this.created = created;
+        this.data = data;
+        this.id = id;
+        this.owner = owner;
+        this.status = status;
+        this.updated = updated;
+  }
 }

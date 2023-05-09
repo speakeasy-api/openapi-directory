@@ -12,6 +12,7 @@ public class GetAccountingAccountingArrayV2AccountingV2Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetAccountingAccountingArrayV2AccountingV2Warehouse withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class GetAccountingAccountingArrayV2AccountingV2Warehouse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public GetAccountingAccountingArrayV2AccountingV2Warehouse withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public GetAccountingAccountingArrayV2AccountingV2Warehouse(){}
 }

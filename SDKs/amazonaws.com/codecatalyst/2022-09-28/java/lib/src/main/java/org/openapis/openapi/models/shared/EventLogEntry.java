@@ -20,6 +20,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public EventLogEntry withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -27,6 +28,7 @@ public class EventLogEntry {
     
     @JsonProperty("eventCategory")
     public String eventCategory;
+
     public EventLogEntry withEventCategory(String eventCategory) {
         this.eventCategory = eventCategory;
         return this;
@@ -34,6 +36,7 @@ public class EventLogEntry {
     
     @JsonProperty("eventName")
     public String eventName;
+
     public EventLogEntry withEventName(String eventName) {
         this.eventName = eventName;
         return this;
@@ -41,6 +44,7 @@ public class EventLogEntry {
     
     @JsonProperty("eventSource")
     public String eventSource;
+
     public EventLogEntry withEventSource(String eventSource) {
         this.eventSource = eventSource;
         return this;
@@ -50,6 +54,7 @@ public class EventLogEntry {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("eventTime")
     public OffsetDateTime eventTime;
+
     public EventLogEntry withEventTime(OffsetDateTime eventTime) {
         this.eventTime = eventTime;
         return this;
@@ -57,6 +62,7 @@ public class EventLogEntry {
     
     @JsonProperty("eventType")
     public String eventType;
+
     public EventLogEntry withEventType(String eventType) {
         this.eventType = eventType;
         return this;
@@ -64,6 +70,7 @@ public class EventLogEntry {
     
     @JsonProperty("id")
     public String id;
+
     public EventLogEntry withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +78,7 @@ public class EventLogEntry {
     
     @JsonProperty("operationType")
     public OperationTypeEnum operationType;
+
     public EventLogEntry withOperationType(OperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -79,6 +87,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectInformation")
     public ProjectInformation projectInformation;
+
     public EventLogEntry withProjectInformation(ProjectInformation projectInformation) {
         this.projectInformation = projectInformation;
         return this;
@@ -87,6 +96,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestId")
     public String requestId;
+
     public EventLogEntry withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -95,6 +105,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestPayload")
     public EventPayload requestPayload;
+
     public EventLogEntry withRequestPayload(EventPayload requestPayload) {
         this.requestPayload = requestPayload;
         return this;
@@ -103,6 +114,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responsePayload")
     public EventPayload responsePayload;
+
     public EventLogEntry withResponsePayload(EventPayload responsePayload) {
         this.responsePayload = responsePayload;
         return this;
@@ -111,6 +123,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIpAddress")
     public String sourceIpAddress;
+
     public EventLogEntry withSourceIpAddress(String sourceIpAddress) {
         this.sourceIpAddress = sourceIpAddress;
         return this;
@@ -119,6 +132,7 @@ public class EventLogEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public EventLogEntry withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -126,9 +140,20 @@ public class EventLogEntry {
     
     @JsonProperty("userIdentity")
     public UserIdentity userIdentity;
+
     public EventLogEntry withUserIdentity(UserIdentity userIdentity) {
         this.userIdentity = userIdentity;
         return this;
     }
     
+    public EventLogEntry(@JsonProperty("eventCategory") String eventCategory, @JsonProperty("eventName") String eventName, @JsonProperty("eventSource") String eventSource, @JsonProperty("eventTime") OffsetDateTime eventTime, @JsonProperty("eventType") String eventType, @JsonProperty("id") String id, @JsonProperty("operationType") OperationTypeEnum operationType, @JsonProperty("userIdentity") UserIdentity userIdentity) {
+        this.eventCategory = eventCategory;
+        this.eventName = eventName;
+        this.eventSource = eventSource;
+        this.eventTime = eventTime;
+        this.eventType = eventType;
+        this.id = id;
+        this.operationType = operationType;
+        this.userIdentity = userIdentity;
+  }
 }

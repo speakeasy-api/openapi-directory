@@ -12,6 +12,7 @@ public class RebootReplicationInstanceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceFailover")
     public Boolean forceFailover;
+
     public RebootReplicationInstanceMessage withForceFailover(Boolean forceFailover) {
         this.forceFailover = forceFailover;
         return this;
@@ -20,6 +21,7 @@ public class RebootReplicationInstanceMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForcePlannedFailover")
     public Boolean forcePlannedFailover;
+
     public RebootReplicationInstanceMessage withForcePlannedFailover(Boolean forcePlannedFailover) {
         this.forcePlannedFailover = forcePlannedFailover;
         return this;
@@ -27,9 +29,13 @@ public class RebootReplicationInstanceMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public RebootReplicationInstanceMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public RebootReplicationInstanceMessage(@JsonProperty("ReplicationInstanceArn") String replicationInstanceArn) {
+        this.replicationInstanceArn = replicationInstanceArn;
+  }
 }

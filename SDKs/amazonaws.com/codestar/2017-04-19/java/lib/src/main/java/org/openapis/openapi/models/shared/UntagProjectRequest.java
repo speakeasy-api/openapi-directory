@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UntagProjectRequest {
     @JsonProperty("id")
     public String id;
+
     public UntagProjectRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class UntagProjectRequest {
     
     @JsonProperty("tags")
     public String[] tags;
+
     public UntagProjectRequest withTags(String[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public UntagProjectRequest(@JsonProperty("id") String id, @JsonProperty("tags") String[] tags) {
+        this.id = id;
+        this.tags = tags;
+  }
 }

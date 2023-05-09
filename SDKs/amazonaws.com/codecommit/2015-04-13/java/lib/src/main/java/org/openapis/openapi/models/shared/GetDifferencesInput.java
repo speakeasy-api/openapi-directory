@@ -12,6 +12,7 @@ public class GetDifferencesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetDifferencesInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class GetDifferencesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetDifferencesInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,6 +29,7 @@ public class GetDifferencesInput {
     
     @JsonProperty("afterCommitSpecifier")
     public String afterCommitSpecifier;
+
     public GetDifferencesInput withAfterCommitSpecifier(String afterCommitSpecifier) {
         this.afterCommitSpecifier = afterCommitSpecifier;
         return this;
@@ -35,6 +38,7 @@ public class GetDifferencesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterPath")
     public String afterPath;
+
     public GetDifferencesInput withAfterPath(String afterPath) {
         this.afterPath = afterPath;
         return this;
@@ -43,6 +47,7 @@ public class GetDifferencesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeCommitSpecifier")
     public String beforeCommitSpecifier;
+
     public GetDifferencesInput withBeforeCommitSpecifier(String beforeCommitSpecifier) {
         this.beforeCommitSpecifier = beforeCommitSpecifier;
         return this;
@@ -51,6 +56,7 @@ public class GetDifferencesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforePath")
     public String beforePath;
+
     public GetDifferencesInput withBeforePath(String beforePath) {
         this.beforePath = beforePath;
         return this;
@@ -58,9 +64,14 @@ public class GetDifferencesInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public GetDifferencesInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public GetDifferencesInput(@JsonProperty("afterCommitSpecifier") String afterCommitSpecifier, @JsonProperty("repositoryName") String repositoryName) {
+        this.afterCommitSpecifier = afterCommitSpecifier;
+        this.repositoryName = repositoryName;
+  }
 }

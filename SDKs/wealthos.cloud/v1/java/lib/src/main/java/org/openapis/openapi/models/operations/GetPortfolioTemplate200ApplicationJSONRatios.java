@@ -12,6 +12,7 @@ public class GetPortfolioTemplate200ApplicationJSONRatios {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetPortfolioTemplate200ApplicationJSONRatios withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -22,9 +23,14 @@ public class GetPortfolioTemplate200ApplicationJSONRatios {
      */
     @JsonProperty("ratio")
     public String ratio;
+
     public GetPortfolioTemplate200ApplicationJSONRatios withRatio(String ratio) {
         this.ratio = ratio;
         return this;
     }
     
+    public GetPortfolioTemplate200ApplicationJSONRatios(@JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("ratio") String ratio) {
+        this.investmentProductId = investmentProductId;
+        this.ratio = ratio;
+  }
 }

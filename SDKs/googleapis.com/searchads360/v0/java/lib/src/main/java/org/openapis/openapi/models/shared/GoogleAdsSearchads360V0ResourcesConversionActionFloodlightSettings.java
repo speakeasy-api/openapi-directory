@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityGroupTag")
     public String activityGroupTag;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings withActivityGroupTag(String activityGroupTag) {
         this.activityGroupTag = activityGroupTag;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityId")
     public String activityId;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings withActivityId(String activityId) {
         this.activityId = activityId;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings 
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityTag")
     public String activityTag;
+
     public GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings withActivityTag(String activityTag) {
         this.activityTag = activityTag;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesConversionActionFloodlightSettings(){}
 }

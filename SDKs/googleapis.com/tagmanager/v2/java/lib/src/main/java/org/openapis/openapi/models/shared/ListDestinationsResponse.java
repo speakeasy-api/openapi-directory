@@ -18,6 +18,7 @@ public class ListDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public Destination[] destination;
+
     public ListDestinationsResponse withDestination(Destination[] destination) {
         this.destination = destination;
         return this;
@@ -29,9 +30,11 @@ public class ListDestinationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListDestinationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListDestinationsResponse(){}
 }

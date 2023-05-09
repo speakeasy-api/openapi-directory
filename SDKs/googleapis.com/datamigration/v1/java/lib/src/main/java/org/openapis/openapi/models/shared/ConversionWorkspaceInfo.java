@@ -18,6 +18,7 @@ public class ConversionWorkspaceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commitId")
     public String commitId;
+
     public ConversionWorkspaceInfo withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -29,9 +30,11 @@ public class ConversionWorkspaceInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConversionWorkspaceInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConversionWorkspaceInfo(){}
 }

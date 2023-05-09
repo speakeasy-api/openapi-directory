@@ -15,6 +15,7 @@ public class ListAppImageConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppImageConfigs")
     public AppImageConfigDetails[] appImageConfigs;
+
     public ListAppImageConfigsResponse withAppImageConfigs(AppImageConfigDetails[] appImageConfigs) {
         this.appImageConfigs = appImageConfigs;
         return this;
@@ -23,9 +24,11 @@ public class ListAppImageConfigsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAppImageConfigsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAppImageConfigsResponse(){}
 }

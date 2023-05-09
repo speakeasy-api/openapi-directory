@@ -12,6 +12,7 @@ public class ListInflectedForms200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public ListInflectedForms200ApplicationJSONFeatures withIndex(Double index) {
         this.index = index;
         return this;
@@ -20,9 +21,11 @@ public class ListInflectedForms200ApplicationJSONFeatures {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ListInflectedForms200ApplicationJSONFeatures withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ListInflectedForms200ApplicationJSONFeatures(){}
 }

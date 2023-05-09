@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PublicUserPlan {
     @JsonProperty("collaborators")
     public Long collaborators;
+
     public PublicUserPlan withCollaborators(Long collaborators) {
         this.collaborators = collaborators;
         return this;
@@ -16,6 +17,7 @@ public class PublicUserPlan {
     
     @JsonProperty("name")
     public String name;
+
     public PublicUserPlan withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +25,7 @@ public class PublicUserPlan {
     
     @JsonProperty("private_repos")
     public Long privateRepos;
+
     public PublicUserPlan withPrivateRepos(Long privateRepos) {
         this.privateRepos = privateRepos;
         return this;
@@ -30,9 +33,16 @@ public class PublicUserPlan {
     
     @JsonProperty("space")
     public Long space;
+
     public PublicUserPlan withSpace(Long space) {
         this.space = space;
         return this;
     }
     
+    public PublicUserPlan(@JsonProperty("collaborators") Long collaborators, @JsonProperty("name") String name, @JsonProperty("private_repos") Long privateRepos, @JsonProperty("space") Long space) {
+        this.collaborators = collaborators;
+        this.name = name;
+        this.privateRepos = privateRepos;
+        this.space = space;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appliedCapabilities")
     public GoogleAppsDriveLabelsV2FieldAppliedCapabilities appliedCapabilities;
+
     public GoogleAppsDriveLabelsV2FieldInput withAppliedCapabilities(GoogleAppsDriveLabelsV2FieldAppliedCapabilities appliedCapabilities) {
         this.appliedCapabilities = appliedCapabilities;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creator")
     public GoogleAppsDriveLabelsV2UserInfo creator;
+
     public GoogleAppsDriveLabelsV2FieldInput withCreator(GoogleAppsDriveLabelsV2UserInfo creator) {
         this.creator = creator;
         return this;
@@ -40,6 +42,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateOptions")
     public GoogleAppsDriveLabelsV2FieldDateOptionsInput dateOptions;
+
     public GoogleAppsDriveLabelsV2FieldInput withDateOptions(GoogleAppsDriveLabelsV2FieldDateOptionsInput dateOptions) {
         this.dateOptions = dateOptions;
         return this;
@@ -51,6 +54,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabler")
     public GoogleAppsDriveLabelsV2UserInfo disabler;
+
     public GoogleAppsDriveLabelsV2FieldInput withDisabler(GoogleAppsDriveLabelsV2UserInfo disabler) {
         this.disabler = disabler;
         return this;
@@ -62,6 +66,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayHints")
     public GoogleAppsDriveLabelsV2FieldDisplayHints displayHints;
+
     public GoogleAppsDriveLabelsV2FieldInput withDisplayHints(GoogleAppsDriveLabelsV2FieldDisplayHints displayHints) {
         this.displayHints = displayHints;
         return this;
@@ -73,6 +78,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecycle")
     public GoogleAppsDriveLabelsV2LifecycleInput lifecycle;
+
     public GoogleAppsDriveLabelsV2FieldInput withLifecycle(GoogleAppsDriveLabelsV2LifecycleInput lifecycle) {
         this.lifecycle = lifecycle;
         return this;
@@ -84,6 +90,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public GoogleAppsDriveLabelsV2FieldProperties properties;
+
     public GoogleAppsDriveLabelsV2FieldInput withProperties(GoogleAppsDriveLabelsV2FieldProperties properties) {
         this.properties = properties;
         return this;
@@ -95,6 +102,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher")
     public GoogleAppsDriveLabelsV2UserInfo publisher;
+
     public GoogleAppsDriveLabelsV2FieldInput withPublisher(GoogleAppsDriveLabelsV2UserInfo publisher) {
         this.publisher = publisher;
         return this;
@@ -106,6 +114,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaCapabilities")
     public GoogleAppsDriveLabelsV2FieldSchemaCapabilities schemaCapabilities;
+
     public GoogleAppsDriveLabelsV2FieldInput withSchemaCapabilities(GoogleAppsDriveLabelsV2FieldSchemaCapabilities schemaCapabilities) {
         this.schemaCapabilities = schemaCapabilities;
         return this;
@@ -117,6 +126,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selectionOptions")
     public GoogleAppsDriveLabelsV2FieldSelectionOptionsInput selectionOptions;
+
     public GoogleAppsDriveLabelsV2FieldInput withSelectionOptions(GoogleAppsDriveLabelsV2FieldSelectionOptionsInput selectionOptions) {
         this.selectionOptions = selectionOptions;
         return this;
@@ -128,6 +138,7 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updater")
     public GoogleAppsDriveLabelsV2UserInfo updater;
+
     public GoogleAppsDriveLabelsV2FieldInput withUpdater(GoogleAppsDriveLabelsV2UserInfo updater) {
         this.updater = updater;
         return this;
@@ -139,9 +150,11 @@ public class GoogleAppsDriveLabelsV2FieldInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userOptions")
     public GoogleAppsDriveLabelsV2FieldUserOptions userOptions;
+
     public GoogleAppsDriveLabelsV2FieldInput withUserOptions(GoogleAppsDriveLabelsV2FieldUserOptions userOptions) {
         this.userOptions = userOptions;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2FieldInput(){}
 }

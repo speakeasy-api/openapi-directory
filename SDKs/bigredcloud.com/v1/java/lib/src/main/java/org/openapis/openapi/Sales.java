@@ -48,11 +48,9 @@ public class Sales {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SalesGetResponse res = new org.openapis.openapi.models.operations.SalesGetResponse() {{
+        org.openapis.openapi.models.operations.SalesGetResponse res = new org.openapis.openapi.models.operations.SalesGetResponse(contentType, httpRes.statusCode()) {{
             pageResultSalesQueryDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

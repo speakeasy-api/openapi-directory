@@ -15,6 +15,7 @@ public class CreateUsageReportSubscriptionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketName")
     public String s3BucketName;
+
     public CreateUsageReportSubscriptionResult withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -23,9 +24,11 @@ public class CreateUsageReportSubscriptionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public UsageReportScheduleEnum schedule;
+
     public CreateUsageReportSubscriptionResult withSchedule(UsageReportScheduleEnum schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public CreateUsageReportSubscriptionResult(){}
 }

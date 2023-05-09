@@ -18,6 +18,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expression")
     public String expression;
+
     public Metric withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -29,6 +30,7 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invisible")
     public Boolean invisible;
+
     public Metric withInvisible(Boolean invisible) {
         this.invisible = invisible;
         return this;
@@ -40,9 +42,11 @@ public class Metric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Metric withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Metric(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveClientIDFromOpenIDConnectProviderRequest {
     
     public String clientID;
+
     public RemoveClientIDFromOpenIDConnectProviderRequest withClientID(String clientID) {
         this.clientID = clientID;
         return this;
@@ -16,9 +17,14 @@ public class RemoveClientIDFromOpenIDConnectProviderRequest {
     
     
     public String openIDConnectProviderArn;
+
     public RemoveClientIDFromOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
     }
     
+    public RemoveClientIDFromOpenIDConnectProviderRequest(@JsonProperty("ClientID") String clientID, @JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn) {
+        this.clientID = clientID;
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+  }
 }

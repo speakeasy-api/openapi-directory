@@ -15,6 +15,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("busSegmentAllowed")
     public Boolean busSegmentAllowed;
+
     public SearchCriteriaFlightFilters withBusSegmentAllowed(Boolean busSegmentAllowed) {
         this.busSegmentAllowed = busSegmentAllowed;
         return this;
@@ -26,6 +27,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cabinRestrictions")
     public SearchCriteriaFlightFiltersCabinRestriction[] cabinRestrictions;
+
     public SearchCriteriaFlightFilters withCabinRestrictions(SearchCriteriaFlightFiltersCabinRestriction[] cabinRestrictions) {
         this.cabinRestrictions = cabinRestrictions;
         return this;
@@ -37,6 +39,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("carrierRestrictions")
     public SearchCriteriaFlightFiltersCarrierRestrictions carrierRestrictions;
+
     public SearchCriteriaFlightFilters withCarrierRestrictions(SearchCriteriaFlightFiltersCarrierRestrictions carrierRestrictions) {
         this.carrierRestrictions = carrierRestrictions;
         return this;
@@ -48,6 +51,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionRestriction")
     public SearchCriteriaFlightFiltersConnectionRestriction connectionRestriction;
+
     public SearchCriteriaFlightFilters withConnectionRestriction(SearchCriteriaFlightFiltersConnectionRestriction connectionRestriction) {
         this.connectionRestriction = connectionRestriction;
         return this;
@@ -59,6 +63,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossBorderAllowed")
     public Boolean crossBorderAllowed;
+
     public SearchCriteriaFlightFilters withCrossBorderAllowed(Boolean crossBorderAllowed) {
         this.crossBorderAllowed = crossBorderAllowed;
         return this;
@@ -70,6 +75,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFlightTime")
     public Double maxFlightTime;
+
     public SearchCriteriaFlightFilters withMaxFlightTime(Double maxFlightTime) {
         this.maxFlightTime = maxFlightTime;
         return this;
@@ -81,6 +87,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("moreOvernightsAllowed")
     public Boolean moreOvernightsAllowed;
+
     public SearchCriteriaFlightFilters withMoreOvernightsAllowed(Boolean moreOvernightsAllowed) {
         this.moreOvernightsAllowed = moreOvernightsAllowed;
         return this;
@@ -92,6 +99,7 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("railSegmentAllowed")
     public Boolean railSegmentAllowed;
+
     public SearchCriteriaFlightFilters withRailSegmentAllowed(Boolean railSegmentAllowed) {
         this.railSegmentAllowed = railSegmentAllowed;
         return this;
@@ -103,9 +111,11 @@ public class SearchCriteriaFlightFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnToDepartureAirport")
     public Boolean returnToDepartureAirport;
+
     public SearchCriteriaFlightFilters withReturnToDepartureAirport(Boolean returnToDepartureAirport) {
         this.returnToDepartureAirport = returnToDepartureAirport;
         return this;
     }
     
+    public SearchCriteriaFlightFilters(){}
 }

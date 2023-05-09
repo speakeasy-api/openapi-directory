@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UntagResourceInput {
     
     public String resourceARN;
+
     public UntagResourceInput withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -16,9 +17,14 @@ public class UntagResourceInput {
     
     
     public String[] tagKeys;
+
     public UntagResourceInput withTagKeys(String[] tagKeys) {
         this.tagKeys = tagKeys;
         return this;
     }
     
+    public UntagResourceInput(@JsonProperty("ResourceARN") String resourceARN, @JsonProperty("TagKeys") String[] tagKeys) {
+        this.resourceARN = resourceARN;
+        this.tagKeys = tagKeys;
+  }
 }

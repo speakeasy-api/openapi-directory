@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackActionEnum;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackFormatEnum;
 import org.openapis.openapi.models.operations.PostV1OrderFeedbackRequest;
@@ -15,21 +14,20 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest() {{
-                action = "REJECT";
-                format = "xml";
-                id = "distinctio";
-                key = "quibusdam";
+            PostV1OrderFeedbackRequest req = new PostV1OrderFeedbackRequest(PostV1OrderFeedbackActionEnum.REJECT, "provident", "distinctio") {{
+                format = PostV1OrderFeedbackFormatEnum.XML;
                 notes = "unde";
-            }}            
+            }};            
 
             PostV1OrderFeedbackResponse res = sdk.postV1OrderFeedback(req);
 
-            if (res.postV1OrderFeedback200ApplicationJSONString.isPresent()) {
+            if (res.postV1OrderFeedback200ApplicationJSONString != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

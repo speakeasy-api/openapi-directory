@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryDomainAliasesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryDomainAliasesListSecurityOption1 option1;
+
     public DirectoryDomainAliasesListSecurity withOption1(DirectoryDomainAliasesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class DirectoryDomainAliasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryDomainAliasesListSecurityOption2 option2;
+
     public DirectoryDomainAliasesListSecurity withOption2(DirectoryDomainAliasesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public DirectoryDomainAliasesListSecurity(){}
 }

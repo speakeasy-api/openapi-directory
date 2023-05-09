@@ -15,6 +15,7 @@ public class ListMemberAccountsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberAccounts")
     public MemberAccount[] memberAccounts;
+
     public ListMemberAccountsResult withMemberAccounts(MemberAccount[] memberAccounts) {
         this.memberAccounts = memberAccounts;
         return this;
@@ -23,9 +24,11 @@ public class ListMemberAccountsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListMemberAccountsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListMemberAccountsResult(){}
 }

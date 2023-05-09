@@ -18,6 +18,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDateUtc")
     public String endDateUtc;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow withEndDateUtc(String endDateUtc) {
         this.endDateUtc = endDateUtc;
         return this;
@@ -29,6 +30,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lisPrice")
     public Long lisPrice;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow withLisPrice(Long lisPrice) {
         this.lisPrice = lisPrice;
         return this;
@@ -40,6 +42,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow withPrice(Long price) {
         this.price = price;
         return this;
@@ -51,6 +54,7 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDateUtc")
     public String startDateUtc;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow withStartDateUtc(String startDateUtc) {
         this.startDateUtc = startDateUtc;
         return this;
@@ -62,9 +66,11 @@ public class PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow withTax(Long tax) {
         this.tax = tax;
         return this;
     }
     
+    public PlaceOrderRequestBodyShippingDataLogisticsInfoDeliveryWindow(){}
 }

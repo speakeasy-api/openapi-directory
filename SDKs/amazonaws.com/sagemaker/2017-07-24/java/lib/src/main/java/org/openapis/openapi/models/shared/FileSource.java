@@ -15,6 +15,7 @@ public class FileSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentDigest")
     public String contentDigest;
+
     public FileSource withContentDigest(String contentDigest) {
         this.contentDigest = contentDigest;
         return this;
@@ -23,6 +24,7 @@ public class FileSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public String contentType;
+
     public FileSource withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,9 +32,13 @@ public class FileSource {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public FileSource withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public FileSource(@JsonProperty("S3Uri") String s3Uri) {
+        this.s3Uri = s3Uri;
+  }
 }

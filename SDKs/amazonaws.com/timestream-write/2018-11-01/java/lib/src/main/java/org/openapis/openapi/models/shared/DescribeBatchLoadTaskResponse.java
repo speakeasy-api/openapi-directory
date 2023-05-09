@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeBatchLoadTaskResponse {
     @JsonProperty("BatchLoadTaskDescription")
     public BatchLoadTaskDescription batchLoadTaskDescription;
+
     public DescribeBatchLoadTaskResponse withBatchLoadTaskDescription(BatchLoadTaskDescription batchLoadTaskDescription) {
         this.batchLoadTaskDescription = batchLoadTaskDescription;
         return this;
     }
     
+    public DescribeBatchLoadTaskResponse(@JsonProperty("BatchLoadTaskDescription") BatchLoadTaskDescription batchLoadTaskDescription) {
+        this.batchLoadTaskDescription = batchLoadTaskDescription;
+  }
 }

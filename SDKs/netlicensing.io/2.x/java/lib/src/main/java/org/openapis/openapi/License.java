@@ -62,12 +62,10 @@ public class License {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateLicenseResponse res = new org.openapis.openapi.models.operations.CreateLicenseResponse() {{
+        org.openapis.openapi.models.operations.CreateLicenseResponse res = new org.openapis.openapi.models.operations.CreateLicenseResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,12 +108,10 @@ public class License {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLicenseResponse res = new org.openapis.openapi.models.operations.DeleteLicenseResponse() {{
+        org.openapis.openapi.models.operations.DeleteLicenseResponse res = new org.openapis.openapi.models.operations.DeleteLicenseResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,12 +154,10 @@ public class License {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLicenseResponse res = new org.openapis.openapi.models.operations.GetLicenseResponse() {{
+        org.openapis.openapi.models.operations.GetLicenseResponse res = new org.openapis.openapi.models.operations.GetLicenseResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,10 +180,11 @@ public class License {
     /**
      * List Licenses
      * Return a list of all Licenses for the current Vendor
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListLicensesResponse listLicenses() throws Exception {
+    public org.openapis.openapi.models.operations.ListLicensesResponse listLicenses(org.openapis.openapi.models.operations.ListLicensesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/license");
         
@@ -198,17 +193,16 @@ public class License {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListLicensesResponse res = new org.openapis.openapi.models.operations.ListLicensesResponse() {{
+        org.openapis.openapi.models.operations.ListLicensesResponse res = new org.openapis.openapi.models.operations.ListLicensesResponse(contentType, httpRes.statusCode()) {{
             netlicensings = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -253,12 +247,10 @@ public class License {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateLicenseResponse res = new org.openapis.openapi.models.operations.UpdateLicenseResponse() {{
+        org.openapis.openapi.models.operations.UpdateLicenseResponse res = new org.openapis.openapi.models.operations.UpdateLicenseResponse(contentType, httpRes.statusCode()) {{
             netlicensing = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

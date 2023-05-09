@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAssociationFilterRequest;
 import org.openapis.openapi.models.operations.GetAssociationFilterResponse;
 
@@ -34,7 +33,7 @@ public class Application {
                 targetClass = "ipsa";
                 therapeuticArea = "delectus";
                 uniprotkw = "tempora";
-            }}            
+            }};            
 
             GetAssociationFilterResponse res = sdk.filter.getAssociationFilter(req);
 
@@ -44,5 +43,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

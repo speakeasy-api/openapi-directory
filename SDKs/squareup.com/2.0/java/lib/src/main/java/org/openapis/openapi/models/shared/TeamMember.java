@@ -18,6 +18,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assigned_locations")
     public TeamMemberAssignedLocations assignedLocations;
+
     public TeamMember withAssignedLocations(TeamMemberAssignedLocations assignedLocations) {
         this.assignedLocations = assignedLocations;
         return this;
@@ -30,6 +31,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public TeamMember withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -41,6 +43,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public TeamMember withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -52,6 +55,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public TeamMember withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -63,6 +67,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public TeamMember withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -74,6 +79,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public TeamMember withId(String id) {
         this.id = id;
         return this;
@@ -85,6 +91,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_owner")
     public Boolean isOwner;
+
     public TeamMember withIsOwner(Boolean isOwner) {
         this.isOwner = isOwner;
         return this;
@@ -98,6 +105,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public TeamMember withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -109,6 +117,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public TeamMember withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -120,6 +129,7 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public TeamMember withStatus(String status) {
         this.status = status;
         return this;
@@ -132,9 +142,11 @@ public class TeamMember {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public TeamMember withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public TeamMember(){}
 }

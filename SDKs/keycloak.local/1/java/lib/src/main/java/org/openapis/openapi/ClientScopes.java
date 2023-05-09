@@ -51,10 +51,8 @@ public class ClientScopes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmClientScopesIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.DeleteRealmClientScopesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -84,11 +82,9 @@ public class ClientScopes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmClientScopesResponse res = new org.openapis.openapi.models.operations.GetRealmClientScopesResponse() {{
+        org.openapis.openapi.models.operations.GetRealmClientScopesResponse res = new org.openapis.openapi.models.operations.GetRealmClientScopesResponse(contentType, httpRes.statusCode()) {{
             clientScopeRepresentations = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -123,11 +119,9 @@ public class ClientScopes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.GetRealmClientScopesIdResponse() {{
+        org.openapis.openapi.models.operations.GetRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.GetRealmClientScopesIdResponse(contentType, httpRes.statusCode()) {{
             clientScopeRepresentation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -167,10 +161,8 @@ public class ClientScopes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostRealmClientScopesResponse res = new org.openapis.openapi.models.operations.PostRealmClientScopesResponse() {{
+        org.openapis.openapi.models.operations.PostRealmClientScopesResponse res = new org.openapis.openapi.models.operations.PostRealmClientScopesResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {
@@ -205,10 +197,8 @@ public class ClientScopes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.PutRealmClientScopesIdResponse() {{
+        org.openapis.openapi.models.operations.PutRealmClientScopesIdResponse res = new org.openapis.openapi.models.operations.PutRealmClientScopesIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if ((httpRes.statusCode() >= 200 && httpRes.statusCode() < 300)) {

@@ -20,6 +20,7 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SlotSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +31,7 @@ public class SlotSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedDateTime")
     public OffsetDateTime lastUpdatedDateTime;
+
     public SlotSummary withLastUpdatedDateTime(OffsetDateTime lastUpdatedDateTime) {
         this.lastUpdatedDateTime = lastUpdatedDateTime;
         return this;
@@ -38,6 +40,7 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotConstraint")
     public SlotConstraintEnum slotConstraint;
+
     public SlotSummary withSlotConstraint(SlotConstraintEnum slotConstraint) {
         this.slotConstraint = slotConstraint;
         return this;
@@ -46,6 +49,7 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotId")
     public String slotId;
+
     public SlotSummary withSlotId(String slotId) {
         this.slotId = slotId;
         return this;
@@ -54,6 +58,7 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotName")
     public String slotName;
+
     public SlotSummary withSlotName(String slotName) {
         this.slotName = slotName;
         return this;
@@ -62,6 +67,7 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slotTypeId")
     public String slotTypeId;
+
     public SlotSummary withSlotTypeId(String slotTypeId) {
         this.slotTypeId = slotTypeId;
         return this;
@@ -70,9 +76,11 @@ public class SlotSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueElicitationPromptSpecification")
     public PromptSpecification valueElicitationPromptSpecification;
+
     public SlotSummary withValueElicitationPromptSpecification(PromptSpecification valueElicitationPromptSpecification) {
         this.valueElicitationPromptSpecification = valueElicitationPromptSpecification;
         return this;
     }
     
+    public SlotSummary(){}
 }

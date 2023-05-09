@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteKeywordResponse {
@@ -12,6 +13,7 @@ public class DeleteKeywordResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteKeywordResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteKeywordResponse {
      */
     
     public Object conflictException;
+
     public DeleteKeywordResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteKeywordResponse {
     
     
     public String contentType;
+
     public DeleteKeywordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteKeywordResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteKeywordResult deleteKeywordResult;
+
     public DeleteKeywordResponse withDeleteKeywordResult(org.openapis.openapi.models.shared.DeleteKeywordResult deleteKeywordResult) {
         this.deleteKeywordResult = deleteKeywordResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteKeywordResponse {
      */
     
     public Object internalServerException;
+
     public DeleteKeywordResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteKeywordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteKeywordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteKeywordResponse {
     
     
     public Integer statusCode;
+
     public DeleteKeywordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteKeywordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteKeywordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteKeywordResponse {
      */
     
     public Object throttlingException;
+
     public DeleteKeywordResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteKeywordResponse {
      */
     
     public Object validationException;
+
     public DeleteKeywordResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteKeywordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

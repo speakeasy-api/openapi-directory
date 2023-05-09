@@ -15,6 +15,7 @@ public class CreateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricArn")
     public String metricArn;
+
     public CreateCustomMetricResponse withMetricArn(String metricArn) {
         this.metricArn = metricArn;
         return this;
@@ -23,9 +24,11 @@ public class CreateCustomMetricResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public CreateCustomMetricResponse withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public CreateCustomMetricResponse(){}
 }

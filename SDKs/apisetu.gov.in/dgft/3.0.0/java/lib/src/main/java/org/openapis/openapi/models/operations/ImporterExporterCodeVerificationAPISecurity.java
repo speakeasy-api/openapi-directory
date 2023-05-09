@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ImporterExporterCodeVerificationAPISecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-APIKEY")
     public String apiKey;
+
     public ImporterExporterCodeVerificationAPISecurity withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -16,9 +17,11 @@ public class ImporterExporterCodeVerificationAPISecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-APISETU-CLIENTID")
     public String clientId;
+
     public ImporterExporterCodeVerificationAPISecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public ImporterExporterCodeVerificationAPISecurity(){}
 }

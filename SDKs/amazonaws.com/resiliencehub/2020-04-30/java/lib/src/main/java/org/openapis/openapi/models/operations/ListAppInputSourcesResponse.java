@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAppInputSourcesResponse {
@@ -12,6 +13,7 @@ public class ListAppInputSourcesResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAppInputSourcesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListAppInputSourcesResponse {
     
     
     public String contentType;
+
     public ListAppInputSourcesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListAppInputSourcesResponse {
      */
     
     public Object internalServerException;
+
     public ListAppInputSourcesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListAppInputSourcesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAppInputSourcesResponse listAppInputSourcesResponse;
+
     public ListAppInputSourcesResponse withListAppInputSourcesResponse(org.openapis.openapi.models.shared.ListAppInputSourcesResponse listAppInputSourcesResponse) {
         this.listAppInputSourcesResponse = listAppInputSourcesResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListAppInputSourcesResponse {
     
     
     public Integer statusCode;
+
     public ListAppInputSourcesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListAppInputSourcesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAppInputSourcesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListAppInputSourcesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAppInputSourcesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class ListAppInputSourcesResponse {
      */
     
     public Object throttlingException;
+
     public ListAppInputSourcesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListAppInputSourcesResponse {
      */
     
     public Object validationException;
+
     public ListAppInputSourcesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListAppInputSourcesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

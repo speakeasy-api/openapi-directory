@@ -15,9 +15,11 @@ public class GetActionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public Action action;
+
     public GetActionResponse withAction(Action action) {
         this.action = action;
         return this;
     }
     
+    public GetActionResponse(){}
 }

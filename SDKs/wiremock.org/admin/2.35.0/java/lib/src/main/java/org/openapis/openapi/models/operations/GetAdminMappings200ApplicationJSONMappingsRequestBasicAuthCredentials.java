@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials {
     @JsonProperty("password")
     public String password;
+
     public GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials withPassword(String password) {
         this.password = password;
         return this;
@@ -19,9 +20,14 @@ public class GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentia
     
     @JsonProperty("username")
     public String username;
+
     public GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetAdminMappings200ApplicationJSONMappingsRequestBasicAuthCredentials(@JsonProperty("username") String username, @JsonProperty("password") String password) {
+        this.username = username;
+        this.password = password;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSendCustomVerificationEmailRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSendCustomVerificationEmailActionEnum action;
+
     public GETSendCustomVerificationEmailRequest withAction(GETSendCustomVerificationEmailActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSendCustomVerificationEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConfigurationSetName")
     public String configurationSetName;
+
     public GETSendCustomVerificationEmailRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -29,6 +32,7 @@ public class GETSendCustomVerificationEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EmailAddress")
     public String emailAddress;
+
     public GETSendCustomVerificationEmailRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -39,6 +43,7 @@ public class GETSendCustomVerificationEmailRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TemplateName")
     public String templateName;
+
     public GETSendCustomVerificationEmailRequest withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -46,6 +51,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSendCustomVerificationEmailVersionEnum version;
+
     public GETSendCustomVerificationEmailRequest withVersion(GETSendCustomVerificationEmailVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSendCustomVerificationEmailRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSendCustomVerificationEmailRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSendCustomVerificationEmailRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSendCustomVerificationEmailRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSendCustomVerificationEmailRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSendCustomVerificationEmailRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETSendCustomVerificationEmailRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSendCustomVerificationEmailRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSendCustomVerificationEmailRequest(@JsonProperty("Action") GETSendCustomVerificationEmailActionEnum action, @JsonProperty("EmailAddress") String emailAddress, @JsonProperty("TemplateName") String templateName, @JsonProperty("Version") GETSendCustomVerificationEmailVersionEnum version) {
+        this.action = action;
+        this.emailAddress = emailAddress;
+        this.templateName = templateName;
+        this.version = version;
+  }
 }

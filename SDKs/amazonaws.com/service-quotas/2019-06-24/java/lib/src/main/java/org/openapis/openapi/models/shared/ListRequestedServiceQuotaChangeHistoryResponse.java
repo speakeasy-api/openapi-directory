@@ -15,6 +15,7 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRequestedServiceQuotaChangeHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestedQuotas")
     public RequestedServiceQuotaChange[] requestedQuotas;
+
     public ListRequestedServiceQuotaChangeHistoryResponse withRequestedQuotas(RequestedServiceQuotaChange[] requestedQuotas) {
         this.requestedQuotas = requestedQuotas;
         return this;
     }
     
+    public ListRequestedServiceQuotaChangeHistoryResponse(){}
 }

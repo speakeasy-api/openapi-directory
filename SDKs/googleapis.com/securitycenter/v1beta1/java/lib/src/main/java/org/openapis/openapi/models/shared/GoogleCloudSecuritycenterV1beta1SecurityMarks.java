@@ -18,6 +18,7 @@ public class GoogleCloudSecuritycenterV1beta1SecurityMarks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marks")
     public java.util.Map<String, String> marks;
+
     public GoogleCloudSecuritycenterV1beta1SecurityMarks withMarks(java.util.Map<String, String> marks) {
         this.marks = marks;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudSecuritycenterV1beta1SecurityMarks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudSecuritycenterV1beta1SecurityMarks withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudSecuritycenterV1beta1SecurityMarks(){}
 }

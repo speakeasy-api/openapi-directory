@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ImportInstanceResultConversionTaskTags {
     
     public String key;
+
     public ImportInstanceResultConversionTaskTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class ImportInstanceResultConversionTaskTags {
     
     
     public String value;
+
     public ImportInstanceResultConversionTaskTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ImportInstanceResultConversionTaskTags(){}
 }

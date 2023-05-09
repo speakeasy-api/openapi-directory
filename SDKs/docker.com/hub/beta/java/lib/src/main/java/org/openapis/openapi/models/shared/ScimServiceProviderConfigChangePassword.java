@@ -12,9 +12,11 @@ public class ScimServiceProviderConfigChangePassword {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported")
     public Boolean supported;
+
     public ScimServiceProviderConfigChangePassword withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public ScimServiceProviderConfigChangePassword(){}
 }

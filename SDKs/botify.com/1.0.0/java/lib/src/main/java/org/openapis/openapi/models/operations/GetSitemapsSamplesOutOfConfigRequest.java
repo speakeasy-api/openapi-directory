@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSitemapsSamplesOutOfConfigRequest {
@@ -12,6 +13,7 @@ public class GetSitemapsSamplesOutOfConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=analysis_slug")
     public String analysisSlug;
+
     public GetSitemapsSamplesOutOfConfigRequest withAnalysisSlug(String analysisSlug) {
         this.analysisSlug = analysisSlug;
         return this;
@@ -22,6 +24,7 @@ public class GetSitemapsSamplesOutOfConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetSitemapsSamplesOutOfConfigRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class GetSitemapsSamplesOutOfConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project_slug")
     public String projectSlug;
+
     public GetSitemapsSamplesOutOfConfigRequest withProjectSlug(String projectSlug) {
         this.projectSlug = projectSlug;
         return this;
@@ -42,6 +46,7 @@ public class GetSitemapsSamplesOutOfConfigRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Long size;
+
     public GetSitemapsSamplesOutOfConfigRequest withSize(Long size) {
         this.size = size;
         return this;
@@ -52,9 +57,15 @@ public class GetSitemapsSamplesOutOfConfigRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetSitemapsSamplesOutOfConfigRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetSitemapsSamplesOutOfConfigRequest(@JsonProperty("analysis_slug") String analysisSlug, @JsonProperty("project_slug") String projectSlug, @JsonProperty("username") String username) {
+        this.analysisSlug = analysisSlug;
+        this.projectSlug = projectSlug;
+        this.username = username;
+  }
 }

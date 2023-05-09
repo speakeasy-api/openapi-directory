@@ -18,9 +18,11 @@ public class GoogleCloudDatacatalogV1beta1TableSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupedEntry")
     public String groupedEntry;
+
     public GoogleCloudDatacatalogV1beta1TableSpec withGroupedEntry(String groupedEntry) {
         this.groupedEntry = groupedEntry;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1TableSpec(){}
 }

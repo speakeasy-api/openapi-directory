@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Target {
     @JsonProperty("Arn")
     public String arn;
+
     public Target withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeadLetterConfig")
     public DeadLetterConfig deadLetterConfig;
+
     public Target withDeadLetterConfig(DeadLetterConfig deadLetterConfig) {
         this.deadLetterConfig = deadLetterConfig;
         return this;
@@ -30,6 +32,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EcsParameters")
     public EcsParameters ecsParameters;
+
     public Target withEcsParameters(EcsParameters ecsParameters) {
         this.ecsParameters = ecsParameters;
         return this;
@@ -38,6 +41,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeParameters")
     public EventBridgeParameters eventBridgeParameters;
+
     public Target withEventBridgeParameters(EventBridgeParameters eventBridgeParameters) {
         this.eventBridgeParameters = eventBridgeParameters;
         return this;
@@ -46,6 +50,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Input")
     public String input;
+
     public Target withInput(String input) {
         this.input = input;
         return this;
@@ -54,6 +59,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisParameters")
     public KinesisParameters kinesisParameters;
+
     public Target withKinesisParameters(KinesisParameters kinesisParameters) {
         this.kinesisParameters = kinesisParameters;
         return this;
@@ -62,6 +68,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryPolicy")
     public RetryPolicy retryPolicy;
+
     public Target withRetryPolicy(RetryPolicy retryPolicy) {
         this.retryPolicy = retryPolicy;
         return this;
@@ -69,6 +76,7 @@ public class Target {
     
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public Target withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -77,6 +85,7 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SageMakerPipelineParameters")
     public SageMakerPipelineParameters sageMakerPipelineParameters;
+
     public Target withSageMakerPipelineParameters(SageMakerPipelineParameters sageMakerPipelineParameters) {
         this.sageMakerPipelineParameters = sageMakerPipelineParameters;
         return this;
@@ -85,9 +94,14 @@ public class Target {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqsParameters")
     public SqsParameters sqsParameters;
+
     public Target withSqsParameters(SqsParameters sqsParameters) {
         this.sqsParameters = sqsParameters;
         return this;
     }
     
+    public Target(@JsonProperty("Arn") String arn, @JsonProperty("RoleArn") String roleArn) {
+        this.arn = arn;
+        this.roleArn = roleArn;
+  }
 }

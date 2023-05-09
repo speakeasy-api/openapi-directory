@@ -18,6 +18,7 @@ public class AuthorizationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public AuthorizationPolicyActionEnum action;
+
     public AuthorizationPolicyInput withAction(AuthorizationPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class AuthorizationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AuthorizationPolicyInput withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AuthorizationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AuthorizationPolicyInput withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -51,6 +54,7 @@ public class AuthorizationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthorizationPolicyInput withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class AuthorizationPolicyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public Rule[] rules;
+
     public AuthorizationPolicyInput withRules(Rule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public AuthorizationPolicyInput(){}
 }

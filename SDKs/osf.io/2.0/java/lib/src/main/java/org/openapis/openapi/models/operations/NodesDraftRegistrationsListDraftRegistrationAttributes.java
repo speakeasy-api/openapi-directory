@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public String category;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withCategory(String category) {
         this.category = category;
         return this;
@@ -25,6 +26,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public String[] currentUserPermissions;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withCurrentUserPermissions(String[] currentUserPermissions) {
         this.currentUserPermissions = currentUserPermissions;
         return this;
@@ -35,6 +37,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeInitiated;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withDatetimeInitiated(OffsetDateTime datetimeInitiated) {
         this.datetimeInitiated = datetimeInitiated;
         return this;
@@ -45,6 +48,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public OffsetDateTime datetimeUpdated;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withDatetimeUpdated(OffsetDateTime datetimeUpdated) {
         this.datetimeUpdated = datetimeUpdated;
         return this;
@@ -55,6 +59,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public String description;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withDescription(String description) {
         this.description = description;
         return this;
@@ -65,6 +70,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public Boolean hasProject;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withHasProject(Boolean hasProject) {
         this.hasProject = hasProject;
         return this;
@@ -72,6 +78,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
     
     
     public NodesDraftRegistrationsListDraftRegistrationAttributesNodeLicense nodeLicense;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withNodeLicense(NodesDraftRegistrationsListDraftRegistrationAttributesNodeLicense nodeLicense) {
         this.nodeLicense = nodeLicense;
         return this;
@@ -82,6 +89,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationMetadata;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withRegistrationMetadata(java.util.Map<String, Object> registrationMetadata) {
         this.registrationMetadata = registrationMetadata;
         return this;
@@ -92,6 +100,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public java.util.Map<String, Object> registrationResponses;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withRegistrationResponses(java.util.Map<String, Object> registrationResponses) {
         this.registrationResponses = registrationResponses;
         return this;
@@ -102,6 +111,7 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public String[] tags;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -112,9 +122,11 @@ public class NodesDraftRegistrationsListDraftRegistrationAttributes {
      */
     
     public String title;
+
     public NodesDraftRegistrationsListDraftRegistrationAttributes withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NodesDraftRegistrationsListDraftRegistrationAttributes(){}
 }

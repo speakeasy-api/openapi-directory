@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActionTypeExecutor {
     @JsonProperty("configuration")
     public ExecutorConfiguration configuration;
+
     public ActionTypeExecutor withConfiguration(ExecutorConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -22,6 +23,7 @@ public class ActionTypeExecutor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTimeout")
     public Long jobTimeout;
+
     public ActionTypeExecutor withJobTimeout(Long jobTimeout) {
         this.jobTimeout = jobTimeout;
         return this;
@@ -30,6 +32,7 @@ public class ActionTypeExecutor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyStatementsTemplate")
     public String policyStatementsTemplate;
+
     public ActionTypeExecutor withPolicyStatementsTemplate(String policyStatementsTemplate) {
         this.policyStatementsTemplate = policyStatementsTemplate;
         return this;
@@ -37,9 +40,14 @@ public class ActionTypeExecutor {
     
     @JsonProperty("type")
     public ExecutorTypeEnum type;
+
     public ActionTypeExecutor withType(ExecutorTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ActionTypeExecutor(@JsonProperty("configuration") ExecutorConfiguration configuration, @JsonProperty("type") ExecutorTypeEnum type) {
+        this.configuration = configuration;
+        this.type = type;
+  }
 }

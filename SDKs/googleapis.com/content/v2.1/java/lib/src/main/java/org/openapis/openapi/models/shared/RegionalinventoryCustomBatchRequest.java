@@ -15,9 +15,11 @@ public class RegionalinventoryCustomBatchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public RegionalinventoryCustomBatchRequestEntry[] entries;
+
     public RegionalinventoryCustomBatchRequest withEntries(RegionalinventoryCustomBatchRequestEntry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public RegionalinventoryCustomBatchRequest(){}
 }

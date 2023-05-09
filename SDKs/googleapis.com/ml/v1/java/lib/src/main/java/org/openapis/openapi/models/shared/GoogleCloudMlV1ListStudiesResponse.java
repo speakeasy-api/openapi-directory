@@ -18,9 +18,11 @@ public class GoogleCloudMlV1ListStudiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studies")
     public GoogleCloudMlV1Study[] studies;
+
     public GoogleCloudMlV1ListStudiesResponse withStudies(GoogleCloudMlV1Study[] studies) {
         this.studies = studies;
         return this;
     }
     
+    public GoogleCloudMlV1ListStudiesResponse(){}
 }

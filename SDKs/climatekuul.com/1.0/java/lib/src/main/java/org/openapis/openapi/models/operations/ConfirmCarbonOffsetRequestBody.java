@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmCarbonOffsetRequestBody {
@@ -12,6 +13,7 @@ public class ConfirmCarbonOffsetRequestBody {
      */
     @SpeakeasyMetadata("form:name=carbonOffset")
     public String carbonOffset;
+
     public ConfirmCarbonOffsetRequestBody withCarbonOffset(String carbonOffset) {
         this.carbonOffset = carbonOffset;
         return this;
@@ -22,6 +24,7 @@ public class ConfirmCarbonOffsetRequestBody {
      */
     @SpeakeasyMetadata("form:name=contactEmail")
     public String contactEmail;
+
     public ConfirmCarbonOffsetRequestBody withContactEmail(String contactEmail) {
         this.contactEmail = contactEmail;
         return this;
@@ -32,6 +35,7 @@ public class ConfirmCarbonOffsetRequestBody {
      */
     @SpeakeasyMetadata("form:name=contactFirstName")
     public String contactFirstName;
+
     public ConfirmCarbonOffsetRequestBody withContactFirstName(String contactFirstName) {
         this.contactFirstName = contactFirstName;
         return this;
@@ -42,6 +46,7 @@ public class ConfirmCarbonOffsetRequestBody {
      */
     @SpeakeasyMetadata("form:name=contactLastName")
     public String contactLastName;
+
     public ConfirmCarbonOffsetRequestBody withContactLastName(String contactLastName) {
         this.contactLastName = contactLastName;
         return this;
@@ -52,9 +57,14 @@ public class ConfirmCarbonOffsetRequestBody {
      */
     @SpeakeasyMetadata("form:name=transaction_id")
     public String transactionId;
+
     public ConfirmCarbonOffsetRequestBody withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public ConfirmCarbonOffsetRequestBody(@JsonProperty("carbonOffset") String carbonOffset, @JsonProperty("transaction_id") String transactionId) {
+        this.carbonOffset = carbonOffset;
+        this.transactionId = transactionId;
+  }
 }

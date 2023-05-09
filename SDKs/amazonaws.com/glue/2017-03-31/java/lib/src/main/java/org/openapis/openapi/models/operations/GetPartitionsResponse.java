@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPartitionsResponse {
     
     public String contentType;
+
     public GetPartitionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,8 +21,31 @@ public class GetPartitionsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetPartitionsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceException
+     */
+    
+    public Object federationSourceException;
+
+    public GetPartitionsResponse withFederationSourceException(Object federationSourceException) {
+        this.federationSourceException = federationSourceException;
+        return this;
+    }
+    
+    /**
+     * FederationSourceRetryableException
+     */
+    
+    public Object federationSourceRetryableException;
+
+    public GetPartitionsResponse withFederationSourceRetryableException(Object federationSourceRetryableException) {
+        this.federationSourceRetryableException = federationSourceRetryableException;
         return this;
     }
     
@@ -29,6 +54,7 @@ public class GetPartitionsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetPartitionsResponse getPartitionsResponse;
+
     public GetPartitionsResponse withGetPartitionsResponse(org.openapis.openapi.models.shared.GetPartitionsResponse getPartitionsResponse) {
         this.getPartitionsResponse = getPartitionsResponse;
         return this;
@@ -39,6 +65,7 @@ public class GetPartitionsResponse {
      */
     
     public Object glueEncryptionException;
+
     public GetPartitionsResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +76,7 @@ public class GetPartitionsResponse {
      */
     
     public Object internalServiceException;
+
     public GetPartitionsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +87,7 @@ public class GetPartitionsResponse {
      */
     
     public Object invalidInputException;
+
     public GetPartitionsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +98,7 @@ public class GetPartitionsResponse {
      */
     
     public Object invalidStateException;
+
     public GetPartitionsResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -79,6 +109,7 @@ public class GetPartitionsResponse {
      */
     
     public Object operationTimeoutException;
+
     public GetPartitionsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -89,6 +120,7 @@ public class GetPartitionsResponse {
      */
     
     public Object resourceNotReadyException;
+
     public GetPartitionsResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -96,6 +128,7 @@ public class GetPartitionsResponse {
     
     
     public Integer statusCode;
+
     public GetPartitionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +136,14 @@ public class GetPartitionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPartitionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPartitionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

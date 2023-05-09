@@ -17,6 +17,7 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public RfePO withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public String details;
+
     public RfePO withDetails(String details) {
         this.details = details;
         return this;
@@ -34,6 +36,7 @@ public class RfePO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("estimate_due_date")
     public LocalDate estimateDueDate;
+
     public RfePO withEstimateDueDate(LocalDate estimateDueDate) {
         this.estimateDueDate = estimateDueDate;
         return this;
@@ -43,6 +46,7 @@ public class RfePO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("proposed_order_completion_date")
     public LocalDate proposedOrderCompletionDate;
+
     public RfePO withProposedOrderCompletionDate(LocalDate proposedOrderCompletionDate) {
         this.proposedOrderCompletionDate = proposedOrderCompletionDate;
         return this;
@@ -51,6 +55,7 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_number")
     public String rfeNumber;
+
     public RfePO withRfeNumber(String rfeNumber) {
         this.rfeNumber = rfeNumber;
         return this;
@@ -59,6 +64,7 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rfe_title")
     public String rfeTitle;
+
     public RfePO withRfeTitle(String rfeTitle) {
         this.rfeTitle = rfeTitle;
         return this;
@@ -67,6 +73,7 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specs")
     public RfeSpecPO[] specs;
+
     public RfePO withSpecs(RfeSpecPO[] specs) {
         this.specs = specs;
         return this;
@@ -75,9 +82,11 @@ public class RfePO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_user_ids")
     public Long[] supplierUserIds;
+
     public RfePO withSupplierUserIds(Long[] supplierUserIds) {
         this.supplierUserIds = supplierUserIds;
         return this;
     }
     
+    public RfePO(){}
 }

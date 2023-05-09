@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReceivableResponse {
     
     public String contentType;
+
     public CreateReceivableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateReceivableResponse {
      */
     
     public org.openapis.openapi.models.shared.ReceivableDTO receivableDTO;
+
     public CreateReceivableResponse withReceivableDTO(org.openapis.openapi.models.shared.ReceivableDTO receivableDTO) {
         this.receivableDTO = receivableDTO;
         return this;
@@ -26,6 +29,7 @@ public class CreateReceivableResponse {
     
     
     public Integer statusCode;
+
     public CreateReceivableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CreateReceivableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReceivableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateReceivableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

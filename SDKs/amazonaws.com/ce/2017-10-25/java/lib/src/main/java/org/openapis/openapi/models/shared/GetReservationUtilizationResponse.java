@@ -15,6 +15,7 @@ public class GetReservationUtilizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationUtilizationResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -23,6 +24,7 @@ public class GetReservationUtilizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public ReservationAggregates total;
+
     public GetReservationUtilizationResponse withTotal(ReservationAggregates total) {
         this.total = total;
         return this;
@@ -30,9 +32,13 @@ public class GetReservationUtilizationResponse {
     
     @JsonProperty("UtilizationsByTime")
     public UtilizationByTime[] utilizationsByTime;
+
     public GetReservationUtilizationResponse withUtilizationsByTime(UtilizationByTime[] utilizationsByTime) {
         this.utilizationsByTime = utilizationsByTime;
         return this;
     }
     
+    public GetReservationUtilizationResponse(@JsonProperty("UtilizationsByTime") UtilizationByTime[] utilizationsByTime) {
+        this.utilizationsByTime = utilizationsByTime;
+  }
 }

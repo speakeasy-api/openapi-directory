@@ -18,6 +18,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfaEnrollmentId")
     public String mfaEnrollmentId;
+
     public GoogleCloudIdentitytoolkitV2StartMfaSignInRequest withMfaEnrollmentId(String mfaEnrollmentId) {
         this.mfaEnrollmentId = mfaEnrollmentId;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mfaPendingCredential")
     public String mfaPendingCredential;
+
     public GoogleCloudIdentitytoolkitV2StartMfaSignInRequest withMfaPendingCredential(String mfaPendingCredential) {
         this.mfaPendingCredential = mfaPendingCredential;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudIdentitytoolkitV2StartMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneSignInInfo")
     public GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo phoneSignInInfo;
+
     public GoogleCloudIdentitytoolkitV2StartMfaSignInRequest withPhoneSignInInfo(GoogleCloudIdentitytoolkitV2StartMfaPhoneRequestInfo phoneSignInInfo) {
         this.phoneSignInInfo = phoneSignInInfo;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudIdentitytoolkitV2StartMfaSignInRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tenantId")
     public String tenantId;
+
     public GoogleCloudIdentitytoolkitV2StartMfaSignInRequest withTenantId(String tenantId) {
         this.tenantId = tenantId;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2StartMfaSignInRequest(){}
 }

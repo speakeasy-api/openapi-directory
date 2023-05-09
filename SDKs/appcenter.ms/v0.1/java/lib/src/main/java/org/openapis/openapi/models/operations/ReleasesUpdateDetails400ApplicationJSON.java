@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReleasesUpdateDetails400ApplicationJSON {
     @JsonProperty("code")
     public ReleasesUpdateDetails400ApplicationJSONCodeEnum code;
+
     public ReleasesUpdateDetails400ApplicationJSON withCode(ReleasesUpdateDetails400ApplicationJSONCodeEnum code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class ReleasesUpdateDetails400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinations")
     public ReleasesUpdateDetails400ApplicationJSONDestinations[] destinations;
+
     public ReleasesUpdateDetails400ApplicationJSON withDestinations(ReleasesUpdateDetails400ApplicationJSONDestinations[] destinations) {
         this.destinations = destinations;
         return this;
@@ -30,6 +32,7 @@ public class ReleasesUpdateDetails400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mandatory_update")
     public Boolean mandatoryUpdate;
+
     public ReleasesUpdateDetails400ApplicationJSON withMandatoryUpdate(Boolean mandatoryUpdate) {
         this.mandatoryUpdate = mandatoryUpdate;
         return this;
@@ -37,6 +40,7 @@ public class ReleasesUpdateDetails400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public ReleasesUpdateDetails400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -45,9 +49,14 @@ public class ReleasesUpdateDetails400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("release_notes")
     public String releaseNotes;
+
     public ReleasesUpdateDetails400ApplicationJSON withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
     }
     
+    public ReleasesUpdateDetails400ApplicationJSON(@JsonProperty("code") ReleasesUpdateDetails400ApplicationJSONCodeEnum code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

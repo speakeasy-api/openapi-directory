@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateTableResponse {
@@ -12,6 +13,7 @@ public class UpdateTableResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateTableResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateTableResponse {
     
     
     public String contentType;
+
     public UpdateTableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateTableResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateTableResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateTableResponse {
      */
     
     public Object glueEncryptionException;
+
     public UpdateTableResponse withGlueEncryptionException(Object glueEncryptionException) {
         this.glueEncryptionException = glueEncryptionException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateTableResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateTableResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateTableResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateTableResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateTableResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateTableResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateTableResponse {
     
     
     public Integer statusCode;
+
     public UpdateTableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateTableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateTableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class UpdateTableResponse {
      */
     
     public Object resourceNotReadyException;
+
     public UpdateTableResponse withResourceNotReadyException(Object resourceNotReadyException) {
         this.resourceNotReadyException = resourceNotReadyException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateTableResponse {
      */
     
     public Object resourceNumberLimitExceededException;
+
     public UpdateTableResponse withResourceNumberLimitExceededException(Object resourceNumberLimitExceededException) {
         this.resourceNumberLimitExceededException = resourceNumberLimitExceededException;
         return this;
@@ -113,9 +125,14 @@ public class UpdateTableResponse {
      */
     
     public java.util.Map<String, Object> updateTableResponse;
+
     public UpdateTableResponse withUpdateTableResponse(java.util.Map<String, Object> updateTableResponse) {
         this.updateTableResponse = updateTableResponse;
         return this;
     }
     
+    public UpdateTableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class OSImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicableInstanceTypes")
     public String[] applicableInstanceTypes;
+
     public OSImage withApplicableInstanceTypes(String[] applicableInstanceTypes) {
         this.applicableInstanceTypes = applicableInstanceTypes;
         return this;
@@ -29,6 +30,7 @@ public class OSImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public OSImage withCode(String code) {
         this.code = code;
         return this;
@@ -40,6 +42,7 @@ public class OSImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public OSImage withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class OSImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OSImage withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class OSImage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedNetworkTemplates")
     public ServerNetworkTemplate[] supportedNetworkTemplates;
+
     public OSImage withSupportedNetworkTemplates(ServerNetworkTemplate[] supportedNetworkTemplates) {
         this.supportedNetworkTemplates = supportedNetworkTemplates;
         return this;
     }
     
+    public OSImage(){}
 }

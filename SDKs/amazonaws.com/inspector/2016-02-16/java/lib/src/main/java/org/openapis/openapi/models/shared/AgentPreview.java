@@ -15,6 +15,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentHealth")
     public AgentHealthEnum agentHealth;
+
     public AgentPreview withAgentHealth(AgentHealthEnum agentHealth) {
         this.agentHealth = agentHealth;
         return this;
@@ -22,6 +23,7 @@ public class AgentPreview {
     
     @JsonProperty("agentId")
     public String agentId;
+
     public AgentPreview withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -30,6 +32,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentVersion")
     public String agentVersion;
+
     public AgentPreview withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -38,6 +41,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroup")
     public String autoScalingGroup;
+
     public AgentPreview withAutoScalingGroup(String autoScalingGroup) {
         this.autoScalingGroup = autoScalingGroup;
         return this;
@@ -46,6 +50,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public AgentPreview withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -54,6 +59,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipv4Address")
     public String ipv4Address;
+
     public AgentPreview withIpv4Address(String ipv4Address) {
         this.ipv4Address = ipv4Address;
         return this;
@@ -62,6 +68,7 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelVersion")
     public String kernelVersion;
+
     public AgentPreview withKernelVersion(String kernelVersion) {
         this.kernelVersion = kernelVersion;
         return this;
@@ -70,9 +77,13 @@ public class AgentPreview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operatingSystem")
     public String operatingSystem;
+
     public AgentPreview withOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
         return this;
     }
     
+    public AgentPreview(@JsonProperty("agentId") String agentId) {
+        this.agentId = agentId;
+  }
 }

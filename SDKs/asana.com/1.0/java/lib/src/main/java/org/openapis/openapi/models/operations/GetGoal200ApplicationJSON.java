@@ -15,9 +15,11 @@ public class GetGoal200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.GoalResponse data;
+
     public GetGoal200ApplicationJSON withData(org.openapis.openapi.models.shared.GoalResponse data) {
         this.data = data;
         return this;
     }
     
+    public GetGoal200ApplicationJSON(){}
 }

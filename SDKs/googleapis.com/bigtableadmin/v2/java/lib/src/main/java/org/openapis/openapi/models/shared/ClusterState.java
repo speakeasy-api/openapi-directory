@@ -18,6 +18,7 @@ public class ClusterState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionInfo")
     public EncryptionInfo[] encryptionInfo;
+
     public ClusterState withEncryptionInfo(EncryptionInfo[] encryptionInfo) {
         this.encryptionInfo = encryptionInfo;
         return this;
@@ -29,9 +30,11 @@ public class ClusterState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationState")
     public ClusterStateReplicationStateEnum replicationState;
+
     public ClusterState withReplicationState(ClusterStateReplicationStateEnum replicationState) {
         this.replicationState = replicationState;
         return this;
     }
     
+    public ClusterState(){}
 }

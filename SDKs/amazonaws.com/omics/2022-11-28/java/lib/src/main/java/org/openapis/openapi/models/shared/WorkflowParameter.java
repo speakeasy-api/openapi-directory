@@ -15,6 +15,7 @@ public class WorkflowParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public WorkflowParameter withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class WorkflowParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public WorkflowParameter withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public WorkflowParameter(){}
 }

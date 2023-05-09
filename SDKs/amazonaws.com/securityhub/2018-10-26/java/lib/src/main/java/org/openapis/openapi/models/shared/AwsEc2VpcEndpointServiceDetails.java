@@ -15,6 +15,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptanceRequired")
     public Boolean acceptanceRequired;
+
     public AwsEc2VpcEndpointServiceDetails withAcceptanceRequired(Boolean acceptanceRequired) {
         this.acceptanceRequired = acceptanceRequired;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public AwsEc2VpcEndpointServiceDetails withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseEndpointDnsNames")
     public String[] baseEndpointDnsNames;
+
     public AwsEc2VpcEndpointServiceDetails withBaseEndpointDnsNames(String[] baseEndpointDnsNames) {
         this.baseEndpointDnsNames = baseEndpointDnsNames;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayLoadBalancerArns")
     public String[] gatewayLoadBalancerArns;
+
     public AwsEc2VpcEndpointServiceDetails withGatewayLoadBalancerArns(String[] gatewayLoadBalancerArns) {
         this.gatewayLoadBalancerArns = gatewayLoadBalancerArns;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagesVpcEndpoints")
     public Boolean managesVpcEndpoints;
+
     public AwsEc2VpcEndpointServiceDetails withManagesVpcEndpoints(Boolean managesVpcEndpoints) {
         this.managesVpcEndpoints = managesVpcEndpoints;
         return this;
@@ -55,6 +60,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkLoadBalancerArns")
     public String[] networkLoadBalancerArns;
+
     public AwsEc2VpcEndpointServiceDetails withNetworkLoadBalancerArns(String[] networkLoadBalancerArns) {
         this.networkLoadBalancerArns = networkLoadBalancerArns;
         return this;
@@ -63,6 +69,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrivateDnsName")
     public String privateDnsName;
+
     public AwsEc2VpcEndpointServiceDetails withPrivateDnsName(String privateDnsName) {
         this.privateDnsName = privateDnsName;
         return this;
@@ -71,6 +78,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceId")
     public String serviceId;
+
     public AwsEc2VpcEndpointServiceDetails withServiceId(String serviceId) {
         this.serviceId = serviceId;
         return this;
@@ -79,6 +87,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public AwsEc2VpcEndpointServiceDetails withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -87,6 +96,7 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceState")
     public String serviceState;
+
     public AwsEc2VpcEndpointServiceDetails withServiceState(String serviceState) {
         this.serviceState = serviceState;
         return this;
@@ -95,9 +105,11 @@ public class AwsEc2VpcEndpointServiceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceType")
     public AwsEc2VpcEndpointServiceServiceTypeDetails[] serviceType;
+
     public AwsEc2VpcEndpointServiceDetails withServiceType(AwsEc2VpcEndpointServiceServiceTypeDetails[] serviceType) {
         this.serviceType = serviceType;
         return this;
     }
     
+    public AwsEc2VpcEndpointServiceDetails(){}
 }

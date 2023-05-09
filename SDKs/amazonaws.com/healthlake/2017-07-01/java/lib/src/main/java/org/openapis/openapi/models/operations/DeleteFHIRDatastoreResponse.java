@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteFHIRDatastoreResponse {
@@ -12,6 +13,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteFHIRDatastoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object conflictException;
+
     public DeleteFHIRDatastoreResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteFHIRDatastoreResponse {
     
     
     public String contentType;
+
     public DeleteFHIRDatastoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteFHIRDatastoreResponse deleteFHIRDatastoreResponse;
+
     public DeleteFHIRDatastoreResponse withDeleteFHIRDatastoreResponse(org.openapis.openapi.models.shared.DeleteFHIRDatastoreResponse deleteFHIRDatastoreResponse) {
         this.deleteFHIRDatastoreResponse = deleteFHIRDatastoreResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object internalServerException;
+
     public DeleteFHIRDatastoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteFHIRDatastoreResponse {
     
     
     public Integer statusCode;
+
     public DeleteFHIRDatastoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteFHIRDatastoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteFHIRDatastoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteFHIRDatastoreResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object throttlingException;
+
     public DeleteFHIRDatastoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteFHIRDatastoreResponse {
      */
     
     public Object validationException;
+
     public DeleteFHIRDatastoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteFHIRDatastoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

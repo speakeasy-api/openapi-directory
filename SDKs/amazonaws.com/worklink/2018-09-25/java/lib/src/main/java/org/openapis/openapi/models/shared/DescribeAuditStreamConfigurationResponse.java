@@ -15,9 +15,11 @@ public class DescribeAuditStreamConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuditStreamArn")
     public String auditStreamArn;
+
     public DescribeAuditStreamConfigurationResponse withAuditStreamArn(String auditStreamArn) {
         this.auditStreamArn = auditStreamArn;
         return this;
     }
     
+    public DescribeAuditStreamConfigurationResponse(){}
 }

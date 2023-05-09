@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConnectRequest {
@@ -12,6 +13,7 @@ public class GetConnectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public GetConnectRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +24,7 @@ public class GetConnectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
     public String redirectUri;
+
     public GetConnectRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -32,6 +35,7 @@ public class GetConnectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=response_type")
     public org.openapis.openapi.models.shared.ResponseTypeEnum responseType;
+
     public GetConnectRequest withResponseType(org.openapis.openapi.models.shared.ResponseTypeEnum responseType) {
         this.responseType = responseType;
         return this;
@@ -42,6 +46,7 @@ public class GetConnectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public GetConnectRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -52,9 +57,16 @@ public class GetConnectRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public GetConnectRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetConnectRequest(@JsonProperty("client_id") String clientId, @JsonProperty("redirect_uri") String redirectUri, @JsonProperty("response_type") org.openapis.openapi.models.shared.ResponseTypeEnum responseType, @JsonProperty("scope") String scope) {
+        this.clientId = clientId;
+        this.redirectUri = redirectUri;
+        this.responseType = responseType;
+        this.scope = scope;
+  }
 }

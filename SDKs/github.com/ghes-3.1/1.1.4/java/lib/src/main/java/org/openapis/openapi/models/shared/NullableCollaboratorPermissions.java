@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NullableCollaboratorPermissions {
     @JsonProperty("admin")
     public Boolean admin;
+
     public NullableCollaboratorPermissions withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -19,6 +20,7 @@ public class NullableCollaboratorPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintain")
     public Boolean maintain;
+
     public NullableCollaboratorPermissions withMaintain(Boolean maintain) {
         this.maintain = maintain;
         return this;
@@ -26,6 +28,7 @@ public class NullableCollaboratorPermissions {
     
     @JsonProperty("pull")
     public Boolean pull;
+
     public NullableCollaboratorPermissions withPull(Boolean pull) {
         this.pull = pull;
         return this;
@@ -33,6 +36,7 @@ public class NullableCollaboratorPermissions {
     
     @JsonProperty("push")
     public Boolean push;
+
     public NullableCollaboratorPermissions withPush(Boolean push) {
         this.push = push;
         return this;
@@ -41,9 +45,15 @@ public class NullableCollaboratorPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triage")
     public Boolean triage;
+
     public NullableCollaboratorPermissions withTriage(Boolean triage) {
         this.triage = triage;
         return this;
     }
     
+    public NullableCollaboratorPermissions(@JsonProperty("admin") Boolean admin, @JsonProperty("pull") Boolean pull, @JsonProperty("push") Boolean push) {
+        this.admin = admin;
+        this.pull = pull;
+        this.push = push;
+  }
 }

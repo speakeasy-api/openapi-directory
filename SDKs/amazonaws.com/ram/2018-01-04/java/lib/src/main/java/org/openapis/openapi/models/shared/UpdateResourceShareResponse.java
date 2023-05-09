@@ -15,6 +15,7 @@ public class UpdateResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateResourceShareResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +24,11 @@ public class UpdateResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceShare")
     public ResourceShare resourceShare;
+
     public UpdateResourceShareResponse withResourceShare(ResourceShare resourceShare) {
         this.resourceShare = resourceShare;
         return this;
     }
     
+    public UpdateResourceShareResponse(){}
 }

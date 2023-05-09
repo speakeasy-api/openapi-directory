@@ -15,6 +15,7 @@ public class RuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceSets")
     public ReferenceSets referenceSets;
+
     public RuleGroup withReferenceSets(ReferenceSets referenceSets) {
         this.referenceSets = referenceSets;
         return this;
@@ -23,6 +24,7 @@ public class RuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleVariables")
     public RuleVariables ruleVariables;
+
     public RuleGroup withRuleVariables(RuleVariables ruleVariables) {
         this.ruleVariables = ruleVariables;
         return this;
@@ -30,6 +32,7 @@ public class RuleGroup {
     
     @JsonProperty("RulesSource")
     public RulesSource rulesSource;
+
     public RuleGroup withRulesSource(RulesSource rulesSource) {
         this.rulesSource = rulesSource;
         return this;
@@ -38,9 +41,13 @@ public class RuleGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatefulRuleOptions")
     public StatefulRuleOptions statefulRuleOptions;
+
     public RuleGroup withStatefulRuleOptions(StatefulRuleOptions statefulRuleOptions) {
         this.statefulRuleOptions = statefulRuleOptions;
         return this;
     }
     
+    public RuleGroup(@JsonProperty("RulesSource") RulesSource rulesSource) {
+        this.rulesSource = rulesSource;
+  }
 }

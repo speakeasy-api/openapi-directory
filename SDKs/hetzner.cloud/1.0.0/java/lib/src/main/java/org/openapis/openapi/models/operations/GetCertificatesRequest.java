@@ -12,6 +12,7 @@ public class GetCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label_selector")
     public String labelSelector;
+
     public GetCertificatesRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -22,6 +23,7 @@ public class GetCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public GetCertificatesRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class GetCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetCertificatesSortEnum sort;
+
     public GetCertificatesRequest withSort(GetCertificatesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -42,9 +45,11 @@ public class GetCertificatesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetCertificatesTypeParameterTypeEnum type;
+
     public GetCertificatesRequest withType(GetCertificatesTypeParameterTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetCertificatesRequest(){}
 }

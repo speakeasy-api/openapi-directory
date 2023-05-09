@@ -15,6 +15,7 @@ public class DelimitedTextImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCharacterEncoding")
     public ImportDataCharacterEncodingEnum dataCharacterEncoding;
+
     public DelimitedTextImportOptions withDataCharacterEncoding(ImportDataCharacterEncodingEnum dataCharacterEncoding) {
         this.dataCharacterEncoding = dataCharacterEncoding;
         return this;
@@ -22,6 +23,7 @@ public class DelimitedTextImportOptions {
     
     @JsonProperty("delimiter")
     public String delimiter;
+
     public DelimitedTextImportOptions withDelimiter(String delimiter) {
         this.delimiter = delimiter;
         return this;
@@ -30,6 +32,7 @@ public class DelimitedTextImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasHeaderRow")
     public Boolean hasHeaderRow;
+
     public DelimitedTextImportOptions withHasHeaderRow(Boolean hasHeaderRow) {
         this.hasHeaderRow = hasHeaderRow;
         return this;
@@ -38,9 +41,13 @@ public class DelimitedTextImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreEmptyRows")
     public Boolean ignoreEmptyRows;
+
     public DelimitedTextImportOptions withIgnoreEmptyRows(Boolean ignoreEmptyRows) {
         this.ignoreEmptyRows = ignoreEmptyRows;
         return this;
     }
     
+    public DelimitedTextImportOptions(@JsonProperty("delimiter") String delimiter) {
+        this.delimiter = delimiter;
+  }
 }

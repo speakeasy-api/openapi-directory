@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETCreateLBCookieStickinessPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETCreateLBCookieStickinessPolicyActionEnum action;
+
     public GETCreateLBCookieStickinessPolicyRequest withAction(GETCreateLBCookieStickinessPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CookieExpirationPeriod")
     public Long cookieExpirationPeriod;
+
     public GETCreateLBCookieStickinessPolicyRequest withCookieExpirationPeriod(Long cookieExpirationPeriod) {
         this.cookieExpirationPeriod = cookieExpirationPeriod;
         return this;
@@ -29,6 +32,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoadBalancerName")
     public String loadBalancerName;
+
     public GETCreateLBCookieStickinessPolicyRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
@@ -39,6 +43,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PolicyName")
     public String policyName;
+
     public GETCreateLBCookieStickinessPolicyRequest withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -46,6 +51,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETCreateLBCookieStickinessPolicyVersionEnum version;
+
     public GETCreateLBCookieStickinessPolicyRequest withVersion(GETCreateLBCookieStickinessPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETCreateLBCookieStickinessPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETCreateLBCookieStickinessPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETCreateLBCookieStickinessPolicyRequest(@JsonProperty("Action") GETCreateLBCookieStickinessPolicyActionEnum action, @JsonProperty("LoadBalancerName") String loadBalancerName, @JsonProperty("PolicyName") String policyName, @JsonProperty("Version") GETCreateLBCookieStickinessPolicyVersionEnum version) {
+        this.action = action;
+        this.loadBalancerName = loadBalancerName;
+        this.policyName = policyName;
+        this.version = version;
+  }
 }

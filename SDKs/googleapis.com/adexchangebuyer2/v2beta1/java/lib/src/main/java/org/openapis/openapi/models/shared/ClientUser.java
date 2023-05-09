@@ -18,6 +18,7 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientAccountId")
     public String clientAccountId;
+
     public ClientUser withClientAccountId(String clientAccountId) {
         this.clientAccountId = clientAccountId;
         return this;
@@ -29,6 +30,7 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ClientUser withEmail(String email) {
         this.email = email;
         return this;
@@ -40,6 +42,7 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ClientUserStatusEnum status;
+
     public ClientUser withStatus(ClientUserStatusEnum status) {
         this.status = status;
         return this;
@@ -51,9 +54,11 @@ public class ClientUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public ClientUser withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public ClientUser(){}
 }

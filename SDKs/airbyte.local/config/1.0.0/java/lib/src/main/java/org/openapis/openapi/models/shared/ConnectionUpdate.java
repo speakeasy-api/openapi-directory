@@ -15,6 +15,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("breakingChange")
     public Boolean breakingChange;
+
     public ConnectionUpdate withBreakingChange(Boolean breakingChange) {
         this.breakingChange = breakingChange;
         return this;
@@ -22,6 +23,7 @@ public class ConnectionUpdate {
     
     @JsonProperty("connectionId")
     public String connectionId;
+
     public ConnectionUpdate withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -30,6 +32,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geography")
     public GeographyEnum geography;
+
     public ConnectionUpdate withGeography(GeographyEnum geography) {
         this.geography = geography;
         return this;
@@ -41,6 +44,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectionUpdate withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +56,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceDefinition")
     public NamespaceDefinitionTypeEnum namespaceDefinition;
+
     public ConnectionUpdate withNamespaceDefinition(NamespaceDefinitionTypeEnum namespaceDefinition) {
         this.namespaceDefinition = namespaceDefinition;
         return this;
@@ -63,6 +68,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceFormat")
     public String namespaceFormat;
+
     public ConnectionUpdate withNamespaceFormat(String namespaceFormat) {
         this.namespaceFormat = namespaceFormat;
         return this;
@@ -71,6 +77,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nonBreakingChangesPreference")
     public NonBreakingChangesPreferenceEnum nonBreakingChangesPreference;
+
     public ConnectionUpdate withNonBreakingChangesPreference(NonBreakingChangesPreferenceEnum nonBreakingChangesPreference) {
         this.nonBreakingChangesPreference = nonBreakingChangesPreference;
         return this;
@@ -79,6 +86,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifySchemaChanges")
     public Boolean notifySchemaChanges;
+
     public ConnectionUpdate withNotifySchemaChanges(Boolean notifySchemaChanges) {
         this.notifySchemaChanges = notifySchemaChanges;
         return this;
@@ -87,6 +95,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationIds")
     public String[] operationIds;
+
     public ConnectionUpdate withOperationIds(String[] operationIds) {
         this.operationIds = operationIds;
         return this;
@@ -98,6 +107,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public ConnectionUpdate withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -109,6 +119,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceRequirements")
     public ResourceRequirements resourceRequirements;
+
     public ConnectionUpdate withResourceRequirements(ResourceRequirements resourceRequirements) {
         this.resourceRequirements = resourceRequirements;
         return this;
@@ -120,6 +131,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public ConnectionSchedule schedule;
+
     public ConnectionUpdate withSchedule(ConnectionSchedule schedule) {
         this.schedule = schedule;
         return this;
@@ -131,6 +143,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleData")
     public ConnectionScheduleData scheduleData;
+
     public ConnectionUpdate withScheduleData(ConnectionScheduleData scheduleData) {
         this.scheduleData = scheduleData;
         return this;
@@ -142,6 +155,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduleType")
     public ConnectionScheduleTypeEnum scheduleType;
+
     public ConnectionUpdate withScheduleType(ConnectionScheduleTypeEnum scheduleType) {
         this.scheduleType = scheduleType;
         return this;
@@ -150,6 +164,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceCatalogId")
     public String sourceCatalogId;
+
     public ConnectionUpdate withSourceCatalogId(String sourceCatalogId) {
         this.sourceCatalogId = sourceCatalogId;
         return this;
@@ -161,6 +176,7 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ConnectionStatusEnum status;
+
     public ConnectionUpdate withStatus(ConnectionStatusEnum status) {
         this.status = status;
         return this;
@@ -172,9 +188,13 @@ public class ConnectionUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syncCatalog")
     public AirbyteCatalog syncCatalog;
+
     public ConnectionUpdate withSyncCatalog(AirbyteCatalog syncCatalog) {
         this.syncCatalog = syncCatalog;
         return this;
     }
     
+    public ConnectionUpdate(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

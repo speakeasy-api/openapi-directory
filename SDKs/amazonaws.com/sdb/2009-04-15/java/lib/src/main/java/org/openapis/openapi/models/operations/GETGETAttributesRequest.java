@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETAttributesRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AWSAccessKeyId")
     public String awsAccessKeyId;
+
     public GETGETAttributesRequest withAWSAccessKeyId(String awsAccessKeyId) {
         this.awsAccessKeyId = awsAccessKeyId;
         return this;
@@ -16,6 +18,7 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETAttributesActionEnum action;
+
     public GETGETAttributesRequest withAction(GETGETAttributesActionEnum action) {
         this.action = action;
         return this;
@@ -26,6 +29,7 @@ public class GETGETAttributesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AttributeNames")
     public String[] attributeNames;
+
     public GETGETAttributesRequest withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -36,6 +40,7 @@ public class GETGETAttributesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ConsistentRead")
     public Boolean consistentRead;
+
     public GETGETAttributesRequest withConsistentRead(Boolean consistentRead) {
         this.consistentRead = consistentRead;
         return this;
@@ -46,6 +51,7 @@ public class GETGETAttributesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETGETAttributesRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -56,6 +62,7 @@ public class GETGETAttributesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ItemName")
     public String itemName;
+
     public GETGETAttributesRequest withItemName(String itemName) {
         this.itemName = itemName;
         return this;
@@ -63,6 +70,7 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Signature")
     public String signature;
+
     public GETGETAttributesRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -70,6 +78,7 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureMethod")
     public String signatureMethod;
+
     public GETGETAttributesRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -77,6 +86,7 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SignatureVersion")
     public String signatureVersion;
+
     public GETGETAttributesRequest withSignatureVersion(String signatureVersion) {
         this.signatureVersion = signatureVersion;
         return this;
@@ -84,6 +94,7 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Timestamp")
     public String timestamp;
+
     public GETGETAttributesRequest withTimestamp(String timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -91,9 +102,21 @@ public class GETGETAttributesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETAttributesVersionEnum version;
+
     public GETGETAttributesRequest withVersion(GETGETAttributesVersionEnum version) {
         this.version = version;
         return this;
     }
     
+    public GETGETAttributesRequest(@JsonProperty("AWSAccessKeyId") String awsAccessKeyId, @JsonProperty("Action") GETGETAttributesActionEnum action, @JsonProperty("DomainName") String domainName, @JsonProperty("ItemName") String itemName, @JsonProperty("Signature") String signature, @JsonProperty("SignatureMethod") String signatureMethod, @JsonProperty("SignatureVersion") String signatureVersion, @JsonProperty("Timestamp") String timestamp, @JsonProperty("Version") GETGETAttributesVersionEnum version) {
+        this.awsAccessKeyId = awsAccessKeyId;
+        this.action = action;
+        this.domainName = domainName;
+        this.itemName = itemName;
+        this.signature = signature;
+        this.signatureMethod = signatureMethod;
+        this.signatureVersion = signatureVersion;
+        this.timestamp = timestamp;
+        this.version = version;
+  }
 }

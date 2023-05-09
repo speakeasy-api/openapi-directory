@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
@@ -12,6 +13,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleFirestoreAdminV1Index googleFirestoreAdminV1Index;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withGoogleFirestoreAdminV1Index(org.openapis.openapi.models.shared.GoogleFirestoreAdminV1Index googleFirestoreAdminV1Index) {
         this.googleFirestoreAdminV1Index = googleFirestoreAdminV1Index;
         return this;
@@ -29,6 +32,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -99,6 +109,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public FirestoreProjectsDatabasesCollectionGroupsIndexesCreateRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DistributionGroupsRemoveUserResponse {
     
     public String contentType;
+
     public DistributionGroupsRemoveUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DistributionGroupsRemoveUserResponse {
     
     
     public Integer statusCode;
+
     public DistributionGroupsRemoveUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DistributionGroupsRemoveUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DistributionGroupsRemoveUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DistributionGroupsRemoveUserResponse {
      */
     
     public DistributionGroupsRemoveUser200ApplicationJSON[] distributionGroupsRemoveUser200ApplicationJSONObjects;
+
     public DistributionGroupsRemoveUserResponse withDistributionGroupsRemoveUser200ApplicationJSONObjects(DistributionGroupsRemoveUser200ApplicationJSON[] distributionGroupsRemoveUser200ApplicationJSONObjects) {
         this.distributionGroupsRemoveUser200ApplicationJSONObjects = distributionGroupsRemoveUser200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class DistributionGroupsRemoveUserResponse {
      */
     
     public DistributionGroupsRemoveUserDefaultApplicationJSON distributionGroupsRemoveUserDefaultApplicationJSONObject;
+
     public DistributionGroupsRemoveUserResponse withDistributionGroupsRemoveUserDefaultApplicationJSONObject(DistributionGroupsRemoveUserDefaultApplicationJSON distributionGroupsRemoveUserDefaultApplicationJSONObject) {
         this.distributionGroupsRemoveUserDefaultApplicationJSONObject = distributionGroupsRemoveUserDefaultApplicationJSONObject;
         return this;
     }
     
+    public DistributionGroupsRemoveUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelReservedInstancesListingResultReservedInstancesListingsInstanceCounts {
     
     public Long instanceCount;
+
     public CancelReservedInstancesListingResultReservedInstancesListingsInstanceCounts withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -19,9 +20,11 @@ public class CancelReservedInstancesListingResultReservedInstancesListingsInstan
     
     
     public CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum state;
+
     public CancelReservedInstancesListingResultReservedInstancesListingsInstanceCounts withState(CancelReservedInstancesListingResultReservedInstancesListingsInstanceCountsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CancelReservedInstancesListingResultReservedInstancesListingsInstanceCounts(){}
 }

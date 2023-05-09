@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationResponse {
     
     public String contentType;
+
     public GetApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationResponse getApplicationResponse;
+
     public GetApplicationResponse withGetApplicationResponse(org.openapis.openapi.models.shared.GetApplicationResponse getApplicationResponse) {
         this.getApplicationResponse = getApplicationResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationResponse {
      */
     
     public Object internalServerException;
+
     public GetApplicationResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetApplicationResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetApplicationResponse {
      */
     
     public Object validationException;
+
     public GetApplicationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

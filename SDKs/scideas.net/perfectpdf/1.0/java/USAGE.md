@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.PostPerfectpdfApiResponse;
 import org.openapis.openapi.models.shared.PerfectpdfApiBody;
 
@@ -13,18 +12,17 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.PerfectpdfApiBody req = new PerfectpdfApiBody() {{
-                apiKey = "abc123";
-                html = "<!doctype html><html><head><meta charset="UTF-8"><title>my title</title><script src="script.js"></script></head><body><div>My PDF</div></body></html>";
-            }}            
+            org.openapis.openapi.models.shared.PerfectpdfApiBody req = new PerfectpdfApiBody("abc123", "<!doctype html><html><head><meta charset="UTF-8"><title>my title</title><script src="script.js"></script></head><body><div>My PDF</div></body></html>");            
 
             PostPerfectpdfApiResponse res = sdk.postPerfectpdfApi(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

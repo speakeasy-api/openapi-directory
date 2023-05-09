@@ -18,9 +18,11 @@ public class QueryRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public QueryRequestPayload payload;
+
     public QueryRequestInput withPayload(QueryRequestPayload payload) {
         this.payload = payload;
         return this;
     }
     
+    public QueryRequestInput(){}
 }

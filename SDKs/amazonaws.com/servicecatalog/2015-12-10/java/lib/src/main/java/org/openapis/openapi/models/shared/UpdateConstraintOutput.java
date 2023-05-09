@@ -15,6 +15,7 @@ public class UpdateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintDetail")
     public ConstraintDetail constraintDetail;
+
     public UpdateConstraintOutput withConstraintDetail(ConstraintDetail constraintDetail) {
         this.constraintDetail = constraintDetail;
         return this;
@@ -23,6 +24,7 @@ public class UpdateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConstraintParameters")
     public String constraintParameters;
+
     public UpdateConstraintOutput withConstraintParameters(String constraintParameters) {
         this.constraintParameters = constraintParameters;
         return this;
@@ -31,9 +33,11 @@ public class UpdateConstraintOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StatusEnum status;
+
     public UpdateConstraintOutput withStatus(StatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateConstraintOutput(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETDataCountUsingGETResponse {
@@ -12,6 +13,7 @@ public class GETDataCountUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.AnalyticsDataCountSwaggerModel analyticsDataCountSwaggerModel;
+
     public GETDataCountUsingGETResponse withAnalyticsDataCountSwaggerModel(org.openapis.openapi.models.shared.AnalyticsDataCountSwaggerModel analyticsDataCountSwaggerModel) {
         this.analyticsDataCountSwaggerModel = analyticsDataCountSwaggerModel;
         return this;
@@ -19,6 +21,7 @@ public class GETDataCountUsingGETResponse {
     
     
     public String contentType;
+
     public GETDataCountUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GETDataCountUsingGETResponse {
      */
     
     public org.openapis.openapi.models.shared.MessageModel messageModel;
+
     public GETDataCountUsingGETResponse withMessageModel(org.openapis.openapi.models.shared.MessageModel messageModel) {
         this.messageModel = messageModel;
         return this;
@@ -36,6 +40,7 @@ public class GETDataCountUsingGETResponse {
     
     
     public Integer statusCode;
+
     public GETDataCountUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GETDataCountUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETDataCountUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETDataCountUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

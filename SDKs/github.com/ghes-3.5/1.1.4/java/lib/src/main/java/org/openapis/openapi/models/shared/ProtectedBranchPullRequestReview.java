@@ -18,6 +18,7 @@ public class ProtectedBranchPullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bypass_pull_request_allowances")
     public ProtectedBranchPullRequestReviewBypassPullRequestAllowances bypassPullRequestAllowances;
+
     public ProtectedBranchPullRequestReview withBypassPullRequestAllowances(ProtectedBranchPullRequestReviewBypassPullRequestAllowances bypassPullRequestAllowances) {
         this.bypassPullRequestAllowances = bypassPullRequestAllowances;
         return this;
@@ -25,6 +26,7 @@ public class ProtectedBranchPullRequestReview {
     
     @JsonProperty("dismiss_stale_reviews")
     public Boolean dismissStaleReviews;
+
     public ProtectedBranchPullRequestReview withDismissStaleReviews(Boolean dismissStaleReviews) {
         this.dismissStaleReviews = dismissStaleReviews;
         return this;
@@ -33,6 +35,7 @@ public class ProtectedBranchPullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dismissal_restrictions")
     public ProtectedBranchPullRequestReviewDismissalRestrictions dismissalRestrictions;
+
     public ProtectedBranchPullRequestReview withDismissalRestrictions(ProtectedBranchPullRequestReviewDismissalRestrictions dismissalRestrictions) {
         this.dismissalRestrictions = dismissalRestrictions;
         return this;
@@ -40,6 +43,7 @@ public class ProtectedBranchPullRequestReview {
     
     @JsonProperty("require_code_owner_reviews")
     public Boolean requireCodeOwnerReviews;
+
     public ProtectedBranchPullRequestReview withRequireCodeOwnerReviews(Boolean requireCodeOwnerReviews) {
         this.requireCodeOwnerReviews = requireCodeOwnerReviews;
         return this;
@@ -48,6 +52,7 @@ public class ProtectedBranchPullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required_approving_review_count")
     public Long requiredApprovingReviewCount;
+
     public ProtectedBranchPullRequestReview withRequiredApprovingReviewCount(Long requiredApprovingReviewCount) {
         this.requiredApprovingReviewCount = requiredApprovingReviewCount;
         return this;
@@ -56,9 +61,14 @@ public class ProtectedBranchPullRequestReview {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ProtectedBranchPullRequestReview withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ProtectedBranchPullRequestReview(@JsonProperty("dismiss_stale_reviews") Boolean dismissStaleReviews, @JsonProperty("require_code_owner_reviews") Boolean requireCodeOwnerReviews) {
+        this.dismissStaleReviews = dismissStaleReviews;
+        this.requireCodeOwnerReviews = requireCodeOwnerReviews;
+  }
 }

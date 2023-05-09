@@ -12,6 +12,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GETDeleteStackInstancesOperationPreferences {
     @SpeakeasyMetadata("queryParam:name=FailureToleranceCount")
     public Long failureToleranceCount;
+
     public GETDeleteStackInstancesOperationPreferences withFailureToleranceCount(Long failureToleranceCount) {
         this.failureToleranceCount = failureToleranceCount;
         return this;
@@ -19,6 +20,7 @@ public class GETDeleteStackInstancesOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=FailureTolerancePercentage")
     public Long failureTolerancePercentage;
+
     public GETDeleteStackInstancesOperationPreferences withFailureTolerancePercentage(Long failureTolerancePercentage) {
         this.failureTolerancePercentage = failureTolerancePercentage;
         return this;
@@ -26,6 +28,7 @@ public class GETDeleteStackInstancesOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=MaxConcurrentCount")
     public Long maxConcurrentCount;
+
     public GETDeleteStackInstancesOperationPreferences withMaxConcurrentCount(Long maxConcurrentCount) {
         this.maxConcurrentCount = maxConcurrentCount;
         return this;
@@ -33,6 +36,7 @@ public class GETDeleteStackInstancesOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=MaxConcurrentPercentage")
     public Long maxConcurrentPercentage;
+
     public GETDeleteStackInstancesOperationPreferences withMaxConcurrentPercentage(Long maxConcurrentPercentage) {
         this.maxConcurrentPercentage = maxConcurrentPercentage;
         return this;
@@ -40,6 +44,7 @@ public class GETDeleteStackInstancesOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=RegionConcurrencyType")
     public org.openapis.openapi.models.shared.RegionConcurrencyTypeEnum regionConcurrencyType;
+
     public GETDeleteStackInstancesOperationPreferences withRegionConcurrencyType(org.openapis.openapi.models.shared.RegionConcurrencyTypeEnum regionConcurrencyType) {
         this.regionConcurrencyType = regionConcurrencyType;
         return this;
@@ -47,9 +52,11 @@ public class GETDeleteStackInstancesOperationPreferences {
     
     @SpeakeasyMetadata("queryParam:name=RegionOrder")
     public String[] regionOrder;
+
     public GETDeleteStackInstancesOperationPreferences withRegionOrder(String[] regionOrder) {
         this.regionOrder = regionOrder;
         return this;
     }
     
+    public GETDeleteStackInstancesOperationPreferences(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutPushDeviceDetailsRawRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-msgpack")
     public byte[] requestBody;
+
     public PutPushDeviceDetailsRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class PutPushDeviceDetailsRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public PutPushDeviceDetailsRawRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,6 +32,7 @@ public class PutPushDeviceDetailsRawRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=device_id")
     public String deviceId;
+
     public PutPushDeviceDetailsRawRequest withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -39,9 +43,13 @@ public class PutPushDeviceDetailsRawRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public PutPushDeviceDetailsRawRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public PutPushDeviceDetailsRawRequest(@JsonProperty("device_id") String deviceId) {
+        this.deviceId = deviceId;
+  }
 }

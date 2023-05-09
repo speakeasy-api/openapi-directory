@@ -18,6 +18,7 @@ public class ResellernotifyGetwatchdetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccountEmailAddresses")
     public String[] serviceAccountEmailAddresses;
+
     public ResellernotifyGetwatchdetailsResponse withServiceAccountEmailAddresses(String[] serviceAccountEmailAddresses) {
         this.serviceAccountEmailAddresses = serviceAccountEmailAddresses;
         return this;
@@ -29,9 +30,11 @@ public class ResellernotifyGetwatchdetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topicName")
     public String topicName;
+
     public ResellernotifyGetwatchdetailsResponse withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public ResellernotifyGetwatchdetailsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeCertificatesMessage {
     
     public String certificateIdentifier;
+
     public DescribeCertificatesMessage withCertificateIdentifier(String certificateIdentifier) {
         this.certificateIdentifier = certificateIdentifier;
         return this;
@@ -19,6 +20,7 @@ public class DescribeCertificatesMessage {
     
     
     public FilterList[] filters;
+
     public DescribeCertificatesMessage withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeCertificatesMessage {
     
     
     public String marker;
+
     public DescribeCertificatesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -33,9 +36,11 @@ public class DescribeCertificatesMessage {
     
     
     public Long maxRecords;
+
     public DescribeCertificatesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeCertificatesMessage(){}
 }

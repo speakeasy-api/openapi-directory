@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CripcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public CripcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public CripcRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public CripcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -52,9 +56,17 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyType")
     public String policyType;
+
     public CripcRequestBodyCertificateParameters withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PolicyNo") String policyNo, @JsonProperty("PolicyType") String policyType) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.policyNo = policyNo;
+        this.policyType = policyType;
+  }
 }

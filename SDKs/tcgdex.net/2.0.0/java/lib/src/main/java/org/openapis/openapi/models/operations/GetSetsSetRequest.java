@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetsSetRequest {
@@ -12,9 +13,13 @@ public class GetSetsSetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=set")
     public String set;
+
     public GetSetsSetRequest withSet(String set) {
         this.set = set;
         return this;
     }
     
+    public GetSetsSetRequest(@JsonProperty("set") String set) {
+        this.set = set;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudConnectorsV1AuthConfigSshPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certType")
     public String certType;
+
     public GoogleCloudConnectorsV1AuthConfigSshPublicKey withCertType(String certType) {
         this.certType = certType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudConnectorsV1AuthConfigSshPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshClientCert")
     public GoogleCloudConnectorsV1Secret sshClientCert;
+
     public GoogleCloudConnectorsV1AuthConfigSshPublicKey withSshClientCert(GoogleCloudConnectorsV1Secret sshClientCert) {
         this.sshClientCert = sshClientCert;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudConnectorsV1AuthConfigSshPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sshClientCertPass")
     public GoogleCloudConnectorsV1Secret sshClientCertPass;
+
     public GoogleCloudConnectorsV1AuthConfigSshPublicKey withSshClientCertPass(GoogleCloudConnectorsV1Secret sshClientCertPass) {
         this.sshClientCertPass = sshClientCertPass;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudConnectorsV1AuthConfigSshPublicKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public GoogleCloudConnectorsV1AuthConfigSshPublicKey withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GoogleCloudConnectorsV1AuthConfigSshPublicKey(){}
 }

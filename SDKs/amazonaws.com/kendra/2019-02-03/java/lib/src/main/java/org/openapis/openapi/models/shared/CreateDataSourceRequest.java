@@ -12,6 +12,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateDataSourceRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -20,6 +21,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public DataSourceConfiguration configuration;
+
     public CreateDataSourceRequest withConfiguration(DataSourceConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -28,6 +30,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomDocumentEnrichmentConfiguration")
     public CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration;
+
     public CreateDataSourceRequest withCustomDocumentEnrichmentConfiguration(CustomDocumentEnrichmentConfiguration customDocumentEnrichmentConfiguration) {
         this.customDocumentEnrichmentConfiguration = customDocumentEnrichmentConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateDataSourceRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class CreateDataSourceRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public CreateDataSourceRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -51,6 +56,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LanguageCode")
     public String languageCode;
+
     public CreateDataSourceRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -58,6 +64,7 @@ public class CreateDataSourceRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateDataSourceRequest withName(String name) {
         this.name = name;
         return this;
@@ -66,6 +73,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public CreateDataSourceRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -74,6 +82,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Schedule")
     public String schedule;
+
     public CreateDataSourceRequest withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -82,6 +91,7 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDataSourceRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -89,6 +99,7 @@ public class CreateDataSourceRequest {
     
     @JsonProperty("Type")
     public DataSourceTypeEnum type;
+
     public CreateDataSourceRequest withType(DataSourceTypeEnum type) {
         this.type = type;
         return this;
@@ -97,9 +108,15 @@ public class CreateDataSourceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfiguration")
     public DataSourceVpcConfiguration vpcConfiguration;
+
     public CreateDataSourceRequest withVpcConfiguration(DataSourceVpcConfiguration vpcConfiguration) {
         this.vpcConfiguration = vpcConfiguration;
         return this;
     }
     
+    public CreateDataSourceRequest(@JsonProperty("IndexId") String indexId, @JsonProperty("Name") String name, @JsonProperty("Type") DataSourceTypeEnum type) {
+        this.indexId = indexId;
+        this.name = name;
+        this.type = type;
+  }
 }

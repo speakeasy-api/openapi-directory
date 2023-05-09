@@ -15,9 +15,13 @@ public class ImageCreateRequest {
      */
     @JsonProperty("base64_image")
     public String base64Image;
+
     public ImageCreateRequest withBase64Image(String base64Image) {
         this.base64Image = base64Image;
         return this;
     }
     
+    public ImageCreateRequest(@JsonProperty("base64_image") String base64Image) {
+        this.base64Image = base64Image;
+  }
 }

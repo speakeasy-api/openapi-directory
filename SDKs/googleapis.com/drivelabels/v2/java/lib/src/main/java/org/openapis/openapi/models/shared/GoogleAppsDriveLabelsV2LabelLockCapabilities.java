@@ -18,9 +18,11 @@ public class GoogleAppsDriveLabelsV2LabelLockCapabilities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("canViewPolicy")
     public Boolean canViewPolicy;
+
     public GoogleAppsDriveLabelsV2LabelLockCapabilities withCanViewPolicy(Boolean canViewPolicy) {
         this.canViewPolicy = canViewPolicy;
         return this;
     }
     
+    public GoogleAppsDriveLabelsV2LabelLockCapabilities(){}
 }

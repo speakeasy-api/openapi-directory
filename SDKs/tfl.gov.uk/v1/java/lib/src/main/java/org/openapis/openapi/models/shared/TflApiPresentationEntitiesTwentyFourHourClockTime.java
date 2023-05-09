@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesTwentyFourHourClockTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hour")
     public String hour;
+
     public TflApiPresentationEntitiesTwentyFourHourClockTime withHour(String hour) {
         this.hour = hour;
         return this;
@@ -20,9 +21,11 @@ public class TflApiPresentationEntitiesTwentyFourHourClockTime {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minute")
     public String minute;
+
     public TflApiPresentationEntitiesTwentyFourHourClockTime withMinute(String minute) {
         this.minute = minute;
         return this;
     }
     
+    public TflApiPresentationEntitiesTwentyFourHourClockTime(){}
 }

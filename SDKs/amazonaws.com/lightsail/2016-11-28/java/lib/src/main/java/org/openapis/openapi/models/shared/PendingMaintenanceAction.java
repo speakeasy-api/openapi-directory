@@ -20,6 +20,7 @@ public class PendingMaintenanceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public PendingMaintenanceAction withAction(String action) {
         this.action = action;
         return this;
@@ -30,6 +31,7 @@ public class PendingMaintenanceAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("currentApplyDate")
     public OffsetDateTime currentApplyDate;
+
     public PendingMaintenanceAction withCurrentApplyDate(OffsetDateTime currentApplyDate) {
         this.currentApplyDate = currentApplyDate;
         return this;
@@ -38,9 +40,11 @@ public class PendingMaintenanceAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public PendingMaintenanceAction withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public PendingMaintenanceAction(){}
 }

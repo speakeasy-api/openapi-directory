@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV05WellKnownOpenidConfigurationResponse {
     
     public byte[] body;
+
     public GetV05WellKnownOpenidConfigurationResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetV05WellKnownOpenidConfigurationResponse {
     
     
     public String contentType;
+
     public GetV05WellKnownOpenidConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -28,6 +31,7 @@ public class GetV05WellKnownOpenidConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetV05WellKnownOpenidConfigurationResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -38,6 +42,7 @@ public class GetV05WellKnownOpenidConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.OpenIdConfiguration openIdConfiguration;
+
     public GetV05WellKnownOpenidConfigurationResponse withOpenIdConfiguration(org.openapis.openapi.models.shared.OpenIdConfiguration openIdConfiguration) {
         this.openIdConfiguration = openIdConfiguration;
         return this;
@@ -45,6 +50,7 @@ public class GetV05WellKnownOpenidConfigurationResponse {
     
     
     public Integer statusCode;
+
     public GetV05WellKnownOpenidConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -52,9 +58,14 @@ public class GetV05WellKnownOpenidConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV05WellKnownOpenidConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetV05WellKnownOpenidConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

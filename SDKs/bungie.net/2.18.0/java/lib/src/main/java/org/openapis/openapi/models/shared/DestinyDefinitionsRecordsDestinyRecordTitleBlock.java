@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyDefinitionsRecordsDestinyRecordTitleBlock {
     
     public Long gildingTrackingRecordHash;
+
     public DestinyDefinitionsRecordsDestinyRecordTitleBlock withGildingTrackingRecordHash(Long gildingTrackingRecordHash) {
         this.gildingTrackingRecordHash = gildingTrackingRecordHash;
         return this;
@@ -16,6 +17,7 @@ public class DestinyDefinitionsRecordsDestinyRecordTitleBlock {
     
     
     public Boolean hasTitle;
+
     public DestinyDefinitionsRecordsDestinyRecordTitleBlock withHasTitle(Boolean hasTitle) {
         this.hasTitle = hasTitle;
         return this;
@@ -23,6 +25,7 @@ public class DestinyDefinitionsRecordsDestinyRecordTitleBlock {
     
     
     public java.util.Map<String, String> titlesByGender;
+
     public DestinyDefinitionsRecordsDestinyRecordTitleBlock withTitlesByGender(java.util.Map<String, String> titlesByGender) {
         this.titlesByGender = titlesByGender;
         return this;
@@ -33,9 +36,11 @@ public class DestinyDefinitionsRecordsDestinyRecordTitleBlock {
      */
     
     public java.util.Map<String, String> titlesByGenderHash;
+
     public DestinyDefinitionsRecordsDestinyRecordTitleBlock withTitlesByGenderHash(java.util.Map<String, String> titlesByGenderHash) {
         this.titlesByGenderHash = titlesByGenderHash;
         return this;
     }
     
+    public DestinyDefinitionsRecordsDestinyRecordTitleBlock(){}
 }

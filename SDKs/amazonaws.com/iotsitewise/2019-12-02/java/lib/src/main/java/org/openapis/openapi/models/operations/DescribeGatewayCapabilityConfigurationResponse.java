@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeGatewayCapabilityConfigurationResponse {
     
     public String contentType;
+
     public DescribeGatewayCapabilityConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeGatewayCapabilityConfigurationResponse describeGatewayCapabilityConfigurationResponse;
+
     public DescribeGatewayCapabilityConfigurationResponse withDescribeGatewayCapabilityConfigurationResponse(org.openapis.openapi.models.shared.DescribeGatewayCapabilityConfigurationResponse describeGatewayCapabilityConfigurationResponse) {
         this.describeGatewayCapabilityConfigurationResponse = describeGatewayCapabilityConfigurationResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeGatewayCapabilityConfigurationResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeGatewayCapabilityConfigurationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
     
     
     public Integer statusCode;
+
     public DescribeGatewayCapabilityConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeGatewayCapabilityConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeGatewayCapabilityConfigurationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeGatewayCapabilityConfigurationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeGatewayCapabilityConfigurationResponse {
      */
     
     public Object throttlingException;
+
     public DescribeGatewayCapabilityConfigurationResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeGatewayCapabilityConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

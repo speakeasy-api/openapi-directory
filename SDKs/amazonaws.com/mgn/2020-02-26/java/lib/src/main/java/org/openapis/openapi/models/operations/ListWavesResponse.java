@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListWavesResponse {
     
     public String contentType;
+
     public ListWavesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListWavesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListWavesResponse listWavesResponse;
+
     public ListWavesResponse withListWavesResponse(org.openapis.openapi.models.shared.ListWavesResponse listWavesResponse) {
         this.listWavesResponse = listWavesResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListWavesResponse {
     
     
     public Integer statusCode;
+
     public ListWavesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class ListWavesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListWavesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class ListWavesResponse {
      */
     
     public Object uninitializedAccountException;
+
     public ListWavesResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public ListWavesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

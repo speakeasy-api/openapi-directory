@@ -18,6 +18,7 @@ public class ChartData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aggregateType")
     public ChartDataAggregateTypeEnum aggregateType;
+
     public ChartData withAggregateType(ChartDataAggregateTypeEnum aggregateType) {
         this.aggregateType = aggregateType;
         return this;
@@ -29,6 +30,7 @@ public class ChartData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnReference")
     public DataSourceColumnReference columnReference;
+
     public ChartData withColumnReference(DataSourceColumnReference columnReference) {
         this.columnReference = columnReference;
         return this;
@@ -40,6 +42,7 @@ public class ChartData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupRule")
     public ChartGroupRule groupRule;
+
     public ChartData withGroupRule(ChartGroupRule groupRule) {
         this.groupRule = groupRule;
         return this;
@@ -51,9 +54,11 @@ public class ChartData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceRange")
     public ChartSourceRange sourceRange;
+
     public ChartData withSourceRange(ChartSourceRange sourceRange) {
         this.sourceRange = sourceRange;
         return this;
     }
     
+    public ChartData(){}
 }

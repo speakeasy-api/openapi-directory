@@ -52,10 +52,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse() {{
+        org.openapis.openapi.models.operations.DeleteLocationResponse res = new org.openapis.openapi.models.operations.DeleteLocationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -91,10 +89,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLocationResponse res = new org.openapis.openapi.models.operations.GetLocationResponse() {{
+        org.openapis.openapi.models.operations.GetLocationResponse res = new org.openapis.openapi.models.operations.GetLocationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -130,10 +126,8 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLocationsResponse res = new org.openapis.openapi.models.operations.GetLocationsResponse() {{
+        org.openapis.openapi.models.operations.GetLocationsResponse res = new org.openapis.openapi.models.operations.GetLocationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -168,11 +162,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchLocationResponse res = new org.openapis.openapi.models.operations.PatchLocationResponse() {{
+        org.openapis.openapi.models.operations.PatchLocationResponse res = new org.openapis.openapi.models.operations.PatchLocationResponse(contentType, httpRes.statusCode()) {{
             patchLocation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,11 +206,9 @@ public class Locations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostLocationsResponse res = new org.openapis.openapi.models.operations.PostLocationsResponse() {{
+        org.openapis.openapi.models.operations.PostLocationsResponse res = new org.openapis.openapi.models.operations.PostLocationsResponse(contentType, httpRes.statusCode()) {{
             postLocations200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

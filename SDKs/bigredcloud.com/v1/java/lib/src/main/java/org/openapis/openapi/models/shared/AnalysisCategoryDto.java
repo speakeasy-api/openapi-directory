@@ -12,6 +12,7 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public AnalysisCategoryDto withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -20,6 +21,7 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public Long accountId;
+
     public AnalysisCategoryDto withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -28,6 +30,7 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryTypeId")
     public Long categoryTypeId;
+
     public AnalysisCategoryDto withCategoryTypeId(Long categoryTypeId) {
         this.categoryTypeId = categoryTypeId;
         return this;
@@ -36,6 +39,7 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AnalysisCategoryDto withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public AnalysisCategoryDto withId(Long id) {
         this.id = id;
         return this;
@@ -52,9 +57,11 @@ public class AnalysisCategoryDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderIndex")
     public Integer orderIndex;
+
     public AnalysisCategoryDto withOrderIndex(Integer orderIndex) {
         this.orderIndex = orderIndex;
         return this;
     }
     
+    public AnalysisCategoryDto(){}
 }

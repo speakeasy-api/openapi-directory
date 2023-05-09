@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSecurityProfilesForTargetResponse {
     
     public String contentType;
+
     public ListSecurityProfilesForTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSecurityProfilesForTargetResponse {
      */
     
     public Object internalFailureException;
+
     public ListSecurityProfilesForTargetResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListSecurityProfilesForTargetResponse {
      */
     
     public Object invalidRequestException;
+
     public ListSecurityProfilesForTargetResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListSecurityProfilesForTargetResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSecurityProfilesForTargetResponse listSecurityProfilesForTargetResponse;
+
     public ListSecurityProfilesForTargetResponse withListSecurityProfilesForTargetResponse(org.openapis.openapi.models.shared.ListSecurityProfilesForTargetResponse listSecurityProfilesForTargetResponse) {
         this.listSecurityProfilesForTargetResponse = listSecurityProfilesForTargetResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListSecurityProfilesForTargetResponse {
     
     
     public Integer statusCode;
+
     public ListSecurityProfilesForTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListSecurityProfilesForTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSecurityProfilesForTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListSecurityProfilesForTargetResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSecurityProfilesForTargetResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListSecurityProfilesForTargetResponse {
      */
     
     public Object throttlingException;
+
     public ListSecurityProfilesForTargetResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListSecurityProfilesForTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

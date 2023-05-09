@@ -15,6 +15,7 @@ public class Pripc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Pripc504ApplicationJSONErrorEnum error;
+
     public Pripc504ApplicationJSON withError(Pripc504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Pripc504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Pripc504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Pripc504ApplicationJSON withErrorDescription(Pripc504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Pripc504ApplicationJSON(){}
 }

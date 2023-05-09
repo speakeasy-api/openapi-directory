@@ -18,6 +18,7 @@ public class DisputeEvidenceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public DisputeEvidenceFile withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -29,9 +30,11 @@ public class DisputeEvidenceFile {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filetype")
     public String filetype;
+
     public DisputeEvidenceFile withFiletype(String filetype) {
         this.filetype = filetype;
         return this;
     }
     
+    public DisputeEvidenceFile(){}
 }

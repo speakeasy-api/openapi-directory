@@ -18,6 +18,7 @@ public class AccessUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caCertificateAccessUrl")
     public String caCertificateAccessUrl;
+
     public AccessUrls withCaCertificateAccessUrl(String caCertificateAccessUrl) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         return this;
@@ -29,9 +30,11 @@ public class AccessUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlAccessUrls")
     public String[] crlAccessUrls;
+
     public AccessUrls withCrlAccessUrls(String[] crlAccessUrls) {
         this.crlAccessUrls = crlAccessUrls;
         return this;
     }
     
+    public AccessUrls(){}
 }

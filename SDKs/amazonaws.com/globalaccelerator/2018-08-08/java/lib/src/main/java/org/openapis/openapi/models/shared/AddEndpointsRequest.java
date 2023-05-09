@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddEndpointsRequest {
     @JsonProperty("EndpointConfigurations")
     public EndpointConfiguration[] endpointConfigurations;
+
     public AddEndpointsRequest withEndpointConfigurations(EndpointConfiguration[] endpointConfigurations) {
         this.endpointConfigurations = endpointConfigurations;
         return this;
@@ -16,9 +17,14 @@ public class AddEndpointsRequest {
     
     @JsonProperty("EndpointGroupArn")
     public String endpointGroupArn;
+
     public AddEndpointsRequest withEndpointGroupArn(String endpointGroupArn) {
         this.endpointGroupArn = endpointGroupArn;
         return this;
     }
     
+    public AddEndpointsRequest(@JsonProperty("EndpointConfigurations") EndpointConfiguration[] endpointConfigurations, @JsonProperty("EndpointGroupArn") String endpointGroupArn) {
+        this.endpointConfigurations = endpointConfigurations;
+        this.endpointGroupArn = endpointGroupArn;
+  }
 }

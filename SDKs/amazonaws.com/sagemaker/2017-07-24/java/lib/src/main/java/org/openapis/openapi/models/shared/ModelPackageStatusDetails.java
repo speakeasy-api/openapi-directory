@@ -15,6 +15,7 @@ public class ModelPackageStatusDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageScanStatuses")
     public ModelPackageStatusItem[] imageScanStatuses;
+
     public ModelPackageStatusDetails withImageScanStatuses(ModelPackageStatusItem[] imageScanStatuses) {
         this.imageScanStatuses = imageScanStatuses;
         return this;
@@ -22,9 +23,13 @@ public class ModelPackageStatusDetails {
     
     @JsonProperty("ValidationStatuses")
     public ModelPackageStatusItem[] validationStatuses;
+
     public ModelPackageStatusDetails withValidationStatuses(ModelPackageStatusItem[] validationStatuses) {
         this.validationStatuses = validationStatuses;
         return this;
     }
     
+    public ModelPackageStatusDetails(@JsonProperty("ValidationStatuses") ModelPackageStatusItem[] validationStatuses) {
+        this.validationStatuses = validationStatuses;
+  }
 }

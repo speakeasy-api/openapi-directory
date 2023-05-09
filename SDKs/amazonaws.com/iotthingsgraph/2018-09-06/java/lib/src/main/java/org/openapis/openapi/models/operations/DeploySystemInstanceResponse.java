@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeploySystemInstanceResponse {
     
     public String contentType;
+
     public DeploySystemInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeploySystemInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeploySystemInstanceResponse deploySystemInstanceResponse;
+
     public DeploySystemInstanceResponse withDeploySystemInstanceResponse(org.openapis.openapi.models.shared.DeploySystemInstanceResponse deploySystemInstanceResponse) {
         this.deploySystemInstanceResponse = deploySystemInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeploySystemInstanceResponse {
      */
     
     public Object internalFailureException;
+
     public DeploySystemInstanceResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeploySystemInstanceResponse {
      */
     
     public Object invalidRequestException;
+
     public DeploySystemInstanceResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeploySystemInstanceResponse {
      */
     
     public Object resourceInUseException;
+
     public DeploySystemInstanceResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class DeploySystemInstanceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeploySystemInstanceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeploySystemInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeploySystemInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeploySystemInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeploySystemInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class DeploySystemInstanceResponse {
      */
     
     public Object throttlingException;
+
     public DeploySystemInstanceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeploySystemInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetSetupV1BusinessusersEmailCompaniesRequest {
@@ -12,6 +13,7 @@ public class GetSetupV1BusinessusersEmailCompaniesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=email")
     public String email;
+
     public GetSetupV1BusinessusersEmailCompaniesRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +24,7 @@ public class GetSetupV1BusinessusersEmailCompaniesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public GetSetupV1BusinessusersEmailCompaniesRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class GetSetupV1BusinessusersEmailCompaniesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public GetSetupV1BusinessusersEmailCompaniesRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,9 +46,13 @@ public class GetSetupV1BusinessusersEmailCompaniesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=searchText")
     public String searchText;
+
     public GetSetupV1BusinessusersEmailCompaniesRequest withSearchText(String searchText) {
         this.searchText = searchText;
         return this;
     }
     
+    public GetSetupV1BusinessusersEmailCompaniesRequest(@JsonProperty("email") String email) {
+        this.email = email;
+  }
 }

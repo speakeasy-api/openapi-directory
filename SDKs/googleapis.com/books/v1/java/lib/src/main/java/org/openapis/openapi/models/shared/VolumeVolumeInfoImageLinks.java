@@ -18,6 +18,7 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("extraLarge")
     public String extraLarge;
+
     public VolumeVolumeInfoImageLinks withExtraLarge(String extraLarge) {
         this.extraLarge = extraLarge;
         return this;
@@ -29,6 +30,7 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("large")
     public String large;
+
     public VolumeVolumeInfoImageLinks withLarge(String large) {
         this.large = large;
         return this;
@@ -40,6 +42,7 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("medium")
     public String medium;
+
     public VolumeVolumeInfoImageLinks withMedium(String medium) {
         this.medium = medium;
         return this;
@@ -51,6 +54,7 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("small")
     public String small;
+
     public VolumeVolumeInfoImageLinks withSmall(String small) {
         this.small = small;
         return this;
@@ -62,6 +66,7 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("smallThumbnail")
     public String smallThumbnail;
+
     public VolumeVolumeInfoImageLinks withSmallThumbnail(String smallThumbnail) {
         this.smallThumbnail = smallThumbnail;
         return this;
@@ -73,9 +78,11 @@ public class VolumeVolumeInfoImageLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public VolumeVolumeInfoImageLinks withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
     }
     
+    public VolumeVolumeInfoImageLinks(){}
 }

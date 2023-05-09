@@ -18,9 +18,11 @@ public class GoogleCloudMlV1ExplainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpBody")
     public GoogleApiHttpBody httpBody;
+
     public GoogleCloudMlV1ExplainRequest withHttpBody(GoogleApiHttpBody httpBody) {
         this.httpBody = httpBody;
         return this;
     }
     
+    public GoogleCloudMlV1ExplainRequest(){}
 }

@@ -18,9 +18,11 @@ public class ComputeFlightEmissionsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flights")
     public Flight[] flights;
+
     public ComputeFlightEmissionsRequest withFlights(Flight[] flights) {
         this.flights = flights;
         return this;
     }
     
+    public ComputeFlightEmissionsRequest(){}
 }

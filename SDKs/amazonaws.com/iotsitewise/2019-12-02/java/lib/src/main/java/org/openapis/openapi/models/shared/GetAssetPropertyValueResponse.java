@@ -15,9 +15,11 @@ public class GetAssetPropertyValueResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyValue")
     public AssetPropertyValue propertyValue;
+
     public GetAssetPropertyValueResponse withPropertyValue(AssetPropertyValue propertyValue) {
         this.propertyValue = propertyValue;
         return this;
     }
     
+    public GetAssetPropertyValueResponse(){}
 }

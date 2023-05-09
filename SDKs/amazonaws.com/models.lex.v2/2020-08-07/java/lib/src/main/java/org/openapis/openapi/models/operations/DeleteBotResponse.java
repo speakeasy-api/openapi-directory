@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBotResponse {
@@ -12,6 +13,7 @@ public class DeleteBotResponse {
      */
     
     public Object conflictException;
+
     public DeleteBotResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteBotResponse {
     
     
     public String contentType;
+
     public DeleteBotResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteBotResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBotResponse deleteBotResponse;
+
     public DeleteBotResponse withDeleteBotResponse(org.openapis.openapi.models.shared.DeleteBotResponse deleteBotResponse) {
         this.deleteBotResponse = deleteBotResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteBotResponse {
      */
     
     public Object internalServerException;
+
     public DeleteBotResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteBotResponse {
      */
     
     public Object preconditionFailedException;
+
     public DeleteBotResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBotResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteBotResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteBotResponse {
     
     
     public Integer statusCode;
+
     public DeleteBotResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteBotResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBotResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteBotResponse {
      */
     
     public Object throttlingException;
+
     public DeleteBotResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteBotResponse {
      */
     
     public Object validationException;
+
     public DeleteBotResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteBotResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class PlaceOrderRequestBody {
      */
     @JsonProperty("clientProfileData")
     public PlaceOrderRequestBodyClientProfileData clientProfileData;
+
     public PlaceOrderRequestBody withClientProfileData(PlaceOrderRequestBodyClientProfileData clientProfileData) {
         this.clientProfileData = clientProfileData;
         return this;
@@ -28,6 +29,7 @@ public class PlaceOrderRequestBody {
      */
     @JsonProperty("items")
     public PlaceOrderRequestBodyItems[] items;
+
     public PlaceOrderRequestBody withItems(PlaceOrderRequestBodyItems[] items) {
         this.items = items;
         return this;
@@ -36,6 +38,7 @@ public class PlaceOrderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketingData")
     public PlaceOrderRequestBodyMarketingData marketingData;
+
     public PlaceOrderRequestBody withMarketingData(PlaceOrderRequestBodyMarketingData marketingData) {
         this.marketingData = marketingData;
         return this;
@@ -47,6 +50,7 @@ public class PlaceOrderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("openTextField")
     public String openTextField;
+
     public PlaceOrderRequestBody withOpenTextField(String openTextField) {
         this.openTextField = openTextField;
         return this;
@@ -57,6 +61,7 @@ public class PlaceOrderRequestBody {
      */
     @JsonProperty("paymentData")
     public PlaceOrderRequestBodyPaymentData paymentData;
+
     public PlaceOrderRequestBody withPaymentData(PlaceOrderRequestBodyPaymentData paymentData) {
         this.paymentData = paymentData;
         return this;
@@ -68,6 +73,7 @@ public class PlaceOrderRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("salesAssociateData")
     public PlaceOrderRequestBodySalesAssociateData salesAssociateData;
+
     public PlaceOrderRequestBody withSalesAssociateData(PlaceOrderRequestBodySalesAssociateData salesAssociateData) {
         this.salesAssociateData = salesAssociateData;
         return this;
@@ -78,9 +84,16 @@ public class PlaceOrderRequestBody {
      */
     @JsonProperty("shippingData")
     public PlaceOrderRequestBodyShippingData shippingData;
+
     public PlaceOrderRequestBody withShippingData(PlaceOrderRequestBodyShippingData shippingData) {
         this.shippingData = shippingData;
         return this;
     }
     
+    public PlaceOrderRequestBody(@JsonProperty("clientProfileData") PlaceOrderRequestBodyClientProfileData clientProfileData, @JsonProperty("items") PlaceOrderRequestBodyItems[] items, @JsonProperty("paymentData") PlaceOrderRequestBodyPaymentData paymentData, @JsonProperty("shippingData") PlaceOrderRequestBodyShippingData shippingData) {
+        this.clientProfileData = clientProfileData;
+        this.items = items;
+        this.paymentData = paymentData;
+        this.shippingData = shippingData;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReactionsListForReleaseResponse {
     
     public String contentType;
+
     public ReactionsListForReleaseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsListForReleaseResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReactionsListForReleaseResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsListForReleaseResponse {
     
     
     public Integer statusCode;
+
     public ReactionsListForReleaseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReactionsListForReleaseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReactionsListForReleaseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReactionsListForReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReactionsListForReleaseResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class ReactionsListForReleaseResponse {
      */
     
     public org.openapis.openapi.models.shared.Reaction[] reactions;
+
     public ReactionsListForReleaseResponse withReactions(org.openapis.openapi.models.shared.Reaction[] reactions) {
         this.reactions = reactions;
         return this;
@@ -60,9 +67,14 @@ public class ReactionsListForReleaseResponse {
      */
     
     public ReactionsListForRelease415ApplicationJSON reactionsListForRelease415ApplicationJSONObject;
+
     public ReactionsListForReleaseResponse withReactionsListForRelease415ApplicationJSONObject(ReactionsListForRelease415ApplicationJSON reactionsListForRelease415ApplicationJSONObject) {
         this.reactionsListForRelease415ApplicationJSONObject = reactionsListForRelease415ApplicationJSONObject;
         return this;
     }
     
+    public ReactionsListForReleaseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

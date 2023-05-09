@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeTransitGatewaysResultTransitGateways {
     
     public OffsetDateTime creationTime;
+
     public DescribeTransitGatewaysResultTransitGateways withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public String description;
+
     public DescribeTransitGatewaysResultTransitGateways withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public DescribeTransitGatewaysResultTransitGatewaysOptions options;
+
     public DescribeTransitGatewaysResultTransitGateways withOptions(DescribeTransitGatewaysResultTransitGatewaysOptions options) {
         this.options = options;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public String ownerId;
+
     public DescribeTransitGatewaysResultTransitGateways withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public DescribeTransitGatewaysResultTransitGatewaysStateEnum state;
+
     public DescribeTransitGatewaysResultTransitGateways withState(DescribeTransitGatewaysResultTransitGatewaysStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public DescribeTransitGatewaysResultTransitGatewaysTags[] tags;
+
     public DescribeTransitGatewaysResultTransitGateways withTags(DescribeTransitGatewaysResultTransitGatewaysTags[] tags) {
         this.tags = tags;
         return this;
@@ -54,6 +60,7 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public String transitGatewayArn;
+
     public DescribeTransitGatewaysResultTransitGateways withTransitGatewayArn(String transitGatewayArn) {
         this.transitGatewayArn = transitGatewayArn;
         return this;
@@ -61,9 +68,11 @@ public class DescribeTransitGatewaysResultTransitGateways {
     
     
     public String transitGatewayId;
+
     public DescribeTransitGatewaysResultTransitGateways withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
     }
     
+    public DescribeTransitGatewaysResultTransitGateways(){}
 }

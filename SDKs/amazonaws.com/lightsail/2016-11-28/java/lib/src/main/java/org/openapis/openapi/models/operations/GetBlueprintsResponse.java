@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetBlueprintsResponse {
@@ -12,6 +13,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetBlueprintsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public GetBlueprintsResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class GetBlueprintsResponse {
     
     
     public String contentType;
+
     public GetBlueprintsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetBlueprintsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetBlueprintsResult getBlueprintsResult;
+
     public GetBlueprintsResponse withGetBlueprintsResult(org.openapis.openapi.models.shared.GetBlueprintsResult getBlueprintsResult) {
         this.getBlueprintsResult = getBlueprintsResult;
         return this;
@@ -49,6 +54,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object invalidInputException;
+
     public GetBlueprintsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object notFoundException;
+
     public GetBlueprintsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object operationFailureException;
+
     public GetBlueprintsResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class GetBlueprintsResponse {
      */
     
     public Object serviceException;
+
     public GetBlueprintsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class GetBlueprintsResponse {
     
     
     public Integer statusCode;
+
     public GetBlueprintsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetBlueprintsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetBlueprintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetBlueprintsResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetBlueprintsResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetBlueprintsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

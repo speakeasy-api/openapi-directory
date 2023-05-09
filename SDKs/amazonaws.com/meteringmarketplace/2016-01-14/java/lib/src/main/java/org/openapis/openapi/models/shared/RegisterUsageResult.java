@@ -22,6 +22,7 @@ public class RegisterUsageResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("PublicKeyRotationTimestamp")
     public OffsetDateTime publicKeyRotationTimestamp;
+
     public RegisterUsageResult withPublicKeyRotationTimestamp(OffsetDateTime publicKeyRotationTimestamp) {
         this.publicKeyRotationTimestamp = publicKeyRotationTimestamp;
         return this;
@@ -30,9 +31,11 @@ public class RegisterUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signature")
     public String signature;
+
     public RegisterUsageResult withSignature(String signature) {
         this.signature = signature;
         return this;
     }
     
+    public RegisterUsageResult(){}
 }

@@ -58,11 +58,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsCancelResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -103,11 +101,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsListResponse() {{
+        org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsListResponse res = new org.openapis.openapi.models.operations.CloudprivatecatalogproducerOperationsListResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

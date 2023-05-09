@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ImageLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingBoxes")
     public GooglePrivacyDlpV2BoundingBox[] boundingBoxes;
+
     public GooglePrivacyDlpV2ImageLocation withBoundingBoxes(GooglePrivacyDlpV2BoundingBox[] boundingBoxes) {
         this.boundingBoxes = boundingBoxes;
         return this;
     }
     
+    public GooglePrivacyDlpV2ImageLocation(){}
 }

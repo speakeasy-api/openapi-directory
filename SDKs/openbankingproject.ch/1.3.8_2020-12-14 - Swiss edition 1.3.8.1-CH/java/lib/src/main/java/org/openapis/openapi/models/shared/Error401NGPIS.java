@@ -20,6 +20,7 @@ public class Error401NGPIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public Error401NGPIS withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -28,9 +29,11 @@ public class Error401NGPIS {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tppMessages")
     public TppMessage401PIS[] tppMessages;
+
     public Error401NGPIS withTppMessages(TppMessage401PIS[] tppMessages) {
         this.tppMessages = tppMessages;
         return this;
     }
     
+    public Error401NGPIS(){}
 }

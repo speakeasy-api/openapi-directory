@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ReposGetReadmeInDirectoryRequest {
@@ -12,6 +13,7 @@ public class ReposGetReadmeInDirectoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=dir")
     public String dir;
+
     public ReposGetReadmeInDirectoryRequest withDir(String dir) {
         this.dir = dir;
         return this;
@@ -22,6 +24,7 @@ public class ReposGetReadmeInDirectoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ReposGetReadmeInDirectoryRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,6 +35,7 @@ public class ReposGetReadmeInDirectoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ref")
     public String ref;
+
     public ReposGetReadmeInDirectoryRequest withRef(String ref) {
         this.ref = ref;
         return this;
@@ -42,9 +46,15 @@ public class ReposGetReadmeInDirectoryRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ReposGetReadmeInDirectoryRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ReposGetReadmeInDirectoryRequest(@JsonProperty("dir") String dir, @JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.dir = dir;
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

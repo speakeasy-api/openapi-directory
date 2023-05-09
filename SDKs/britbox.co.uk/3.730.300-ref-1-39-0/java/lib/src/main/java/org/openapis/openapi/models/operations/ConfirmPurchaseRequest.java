@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfirmPurchaseRequest {
@@ -12,6 +13,7 @@ public class ConfirmPurchaseRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvPurchaseRequest itvPurchaseRequest;
+
     public ConfirmPurchaseRequest withItvPurchaseRequest(org.openapis.openapi.models.shared.ItvPurchaseRequest itvPurchaseRequest) {
         this.itvPurchaseRequest = itvPurchaseRequest;
         return this;
@@ -32,6 +34,7 @@ public class ConfirmPurchaseRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public ConfirmPurchaseRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -42,9 +45,14 @@ public class ConfirmPurchaseRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=platform")
     public String platform;
+
     public ConfirmPurchaseRequest withPlatform(String platform) {
         this.platform = platform;
         return this;
     }
     
+    public ConfirmPurchaseRequest(@JsonProperty("ItvPurchaseRequest") org.openapis.openapi.models.shared.ItvPurchaseRequest itvPurchaseRequest, @JsonProperty("platform") String platform) {
+        this.itvPurchaseRequest = itvPurchaseRequest;
+        this.platform = platform;
+  }
 }

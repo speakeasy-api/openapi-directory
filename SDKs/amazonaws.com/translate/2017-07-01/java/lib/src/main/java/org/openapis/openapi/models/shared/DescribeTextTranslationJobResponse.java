@@ -15,9 +15,11 @@ public class DescribeTextTranslationJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextTranslationJobProperties")
     public TextTranslationJobProperties textTranslationJobProperties;
+
     public DescribeTextTranslationJobResponse withTextTranslationJobProperties(TextTranslationJobProperties textTranslationJobProperties) {
         this.textTranslationJobProperties = textTranslationJobProperties;
         return this;
     }
     
+    public DescribeTextTranslationJobResponse(){}
 }

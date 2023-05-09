@@ -18,9 +18,11 @@ public class OrgUnitInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orgUnitId")
     public String orgUnitId;
+
     public OrgUnitInfo withOrgUnitId(String orgUnitId) {
         this.orgUnitId = orgUnitId;
         return this;
     }
     
+    public OrgUnitInfo(){}
 }

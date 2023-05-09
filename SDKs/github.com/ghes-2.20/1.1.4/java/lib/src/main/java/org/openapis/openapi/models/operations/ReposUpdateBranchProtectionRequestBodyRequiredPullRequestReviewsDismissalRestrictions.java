@@ -18,6 +18,7 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teams")
     public String[] teams;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions withTeams(String[] teams) {
         this.teams = teams;
         return this;
@@ -29,9 +30,11 @@ public class ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDis
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public String[] users;
+
     public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions withUsers(String[] users) {
         this.users = users;
         return this;
     }
     
+    public ReposUpdateBranchProtectionRequestBodyRequiredPullRequestReviewsDismissalRestrictions(){}
 }

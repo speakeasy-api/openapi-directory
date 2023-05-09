@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribePlacementResponse {
     @JsonProperty("placement")
     public PlacementDescription placement;
+
     public DescribePlacementResponse withPlacement(PlacementDescription placement) {
         this.placement = placement;
         return this;
     }
     
+    public DescribePlacementResponse(@JsonProperty("placement") PlacementDescription placement) {
+        this.placement = placement;
+  }
 }

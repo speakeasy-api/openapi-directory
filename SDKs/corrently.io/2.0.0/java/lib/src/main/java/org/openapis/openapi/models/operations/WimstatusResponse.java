@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class WimstatusResponse {
     
     public String contentType;
+
     public WimstatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class WimstatusResponse {
     
     
     public Integer statusCode;
+
     public WimstatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class WimstatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public WimstatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class WimstatusResponse {
      */
     
     public Wimstatus200ApplicationJSON wimstatus200ApplicationJSONObject;
+
     public WimstatusResponse withWimstatus200ApplicationJSONObject(Wimstatus200ApplicationJSON wimstatus200ApplicationJSONObject) {
         this.wimstatus200ApplicationJSONObject = wimstatus200ApplicationJSONObject;
         return this;
     }
     
+    public WimstatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

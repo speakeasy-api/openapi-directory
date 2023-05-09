@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGeofenceCollectionsResponse {
@@ -12,6 +13,7 @@ public class ListGeofenceCollectionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListGeofenceCollectionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListGeofenceCollectionsResponse {
     
     
     public String contentType;
+
     public ListGeofenceCollectionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListGeofenceCollectionsResponse {
      */
     
     public Object internalServerException;
+
     public ListGeofenceCollectionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListGeofenceCollectionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGeofenceCollectionsResponse listGeofenceCollectionsResponse;
+
     public ListGeofenceCollectionsResponse withListGeofenceCollectionsResponse(org.openapis.openapi.models.shared.ListGeofenceCollectionsResponse listGeofenceCollectionsResponse) {
         this.listGeofenceCollectionsResponse = listGeofenceCollectionsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListGeofenceCollectionsResponse {
     
     
     public Integer statusCode;
+
     public ListGeofenceCollectionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListGeofenceCollectionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGeofenceCollectionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListGeofenceCollectionsResponse {
      */
     
     public Object throttlingException;
+
     public ListGeofenceCollectionsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListGeofenceCollectionsResponse {
      */
     
     public Object validationException;
+
     public ListGeofenceCollectionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListGeofenceCollectionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

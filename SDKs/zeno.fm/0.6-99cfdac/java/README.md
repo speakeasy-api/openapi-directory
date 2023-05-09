@@ -16,64 +16,55 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
-import org.openapis.openapi.models.operations.CreatePodcastRequestBodyFileLogo;
 import org.openapis.openapi.models.operations.CreatePodcastRequestBody;
+import org.openapis.openapi.models.operations.CreatePodcastRequestBodyFileLogo;
 import org.openapis.openapi.models.operations.CreatePodcastResponse;
 import org.openapis.openapi.models.shared.Podcast;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     apiKey = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            CreatePodcastRequestBody req = new CreatePodcastRequestBody() {{
-                fileLogo = new CreatePodcastRequestBodyFileLogo() {{
-                    content = "corrupti".getBytes();
-                    fileLogo = "provident";
-                }};
-                podcast = new Podcast() {{
-                    author = "distinctio";
-                    block = false;
-                    categories = new String[]{{
-                        add("unde"),
-                        add("nulla"),
-                        add("corrupti"),
-                        add("illum"),
-                    }};
-                    copyright = "vel";
-                    country = "Netherlands Antilles";
-                    description = "deserunt";
-                    explicit = false;
-                    image = "suscipit";
-                    key = "iure";
-                    keywords = new String[]{{
-                        add("debitis"),
-                        add("ipsa"),
-                    }};
-                    language = "delectus";
-                    link = "tempora";
-                    ownerEmail = "suscipit";
-                    ownerName = "molestiae";
-                    showType = "minus";
-                    subtitle = "placeat";
-                    summary = "voluptatum";
-                    title = "Ms.";
-                }};
-            }}            
+            CreatePodcastRequestBody req = new CreatePodcastRequestBody(                new CreatePodcastRequestBodyFileLogo("provident".getBytes(), "distinctio");,                 new Podcast(                new String[]{{
+                                                add("unde"),
+                                                add("nulla"),
+                                                add("corrupti"),
+                                                add("illum"),
+                                            }}, "vel", "error", "deserunt", "suscipit") {{
+                                author = "iure";
+                                block = false;
+                                copyright = "magnam";
+                                country = "Togo";
+                                explicit = false;
+                                image = "ipsa";
+                                key = "delectus";
+                                keywords = new String[]{{
+                                    add("suscipit"),
+                                    add("molestiae"),
+                                }};
+                                link = "minus";
+                                ownerEmail = "placeat";
+                                ownerName = "voluptatum";
+                                showType = "iusto";
+                                subtitle = "excepturi";
+                            }};);            
 
             CreatePodcastResponse res = sdk.apiV2.createPodcast(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,26 +72,26 @@ public class Application {
 ## Available Resources and Operations
 
 
-### apiV2
+### [apiV2](docs/apiv2/README.md)
 
-* `createPodcast` - Create podcast
-* `createPodcastEpisode` - Create podcast episode
-* `deletePodcast` - Delete podcast
-* `deletePodcast1` - Delete podcast episode
-* `getPartnerAggregatorStations` - List stations
-* `getPodcast` - Get podcast
-* `getPodcastCategories` - Get the list of Categories that can be used to filter podcasts in the search podcasts request
-* `getPodcastCountries` - Get the list of Countries that can be used to filter podcasts in the search podcasts request
-* `getPodcastEpisode` - Get podcast episode
-* `getPodcastEpisodes` - Get podcast episodes
-* `getPodcastLanguages` - Get the list of Languages that can be used to filter podcasts in the search podcasts request
-* `getStationCountries` - Get the list of Countries that can be used to filter stations in the search stations request
-* `getStationGenres` - Get the list of Genres that can be used to filter stations in the search stations request
-* `getStationLanguages` - Get the list of Languages that can be used to filter stations in the search stations request
-* `searchPodcasts` - Search podcasts
-* `searchStations` - Search stations
-* `updatePodcast` - Update podcast
-* `updatePodcastEpisode` - Update podcast episode
+* [createPodcast](docs/apiv2/README.md#createpodcast) - Create podcast
+* [createPodcastEpisode](docs/apiv2/README.md#createpodcastepisode) - Create podcast episode
+* [deletePodcast](docs/apiv2/README.md#deletepodcast) - Delete podcast
+* [deletePodcast1](docs/apiv2/README.md#deletepodcast1) - Delete podcast episode
+* [getPartnerAggregatorStations](docs/apiv2/README.md#getpartneraggregatorstations) - List stations
+* [getPodcast](docs/apiv2/README.md#getpodcast) - Get podcast
+* [getPodcastCategories](docs/apiv2/README.md#getpodcastcategories) - Get the list of Categories that can be used to filter podcasts in the search podcasts request
+* [getPodcastCountries](docs/apiv2/README.md#getpodcastcountries) - Get the list of Countries that can be used to filter podcasts in the search podcasts request
+* [getPodcastEpisode](docs/apiv2/README.md#getpodcastepisode) - Get podcast episode
+* [getPodcastEpisodes](docs/apiv2/README.md#getpodcastepisodes) - Get podcast episodes
+* [getPodcastLanguages](docs/apiv2/README.md#getpodcastlanguages) - Get the list of Languages that can be used to filter podcasts in the search podcasts request
+* [getStationCountries](docs/apiv2/README.md#getstationcountries) - Get the list of Countries that can be used to filter stations in the search stations request
+* [getStationGenres](docs/apiv2/README.md#getstationgenres) - Get the list of Genres that can be used to filter stations in the search stations request
+* [getStationLanguages](docs/apiv2/README.md#getstationlanguages) - Get the list of Languages that can be used to filter stations in the search stations request
+* [searchPodcasts](docs/apiv2/README.md#searchpodcasts) - Search podcasts
+* [searchStations](docs/apiv2/README.md#searchstations) - Search stations
+* [updatePodcast](docs/apiv2/README.md#updatepodcast) - Update podcast
+* [updatePodcastEpisode](docs/apiv2/README.md#updatepodcastepisode) - Update podcast episode
 <!-- End SDK Available Operations -->
 
 ### Maturity

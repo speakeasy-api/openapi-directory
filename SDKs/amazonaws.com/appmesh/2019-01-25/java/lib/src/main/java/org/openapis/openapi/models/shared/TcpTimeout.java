@@ -15,9 +15,11 @@ public class TcpTimeout {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idle")
     public Duration idle;
+
     public TcpTimeout withIdle(Duration idle) {
         this.idle = idle;
         return this;
     }
     
+    public TcpTimeout(){}
 }

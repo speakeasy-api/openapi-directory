@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateConfiguredTableAssociationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public UpdateConfiguredTableAssociationRequestBody requestBody;
+
     public UpdateConfiguredTableAssociationRequest withRequestBody(UpdateConfiguredTableAssociationRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public UpdateConfiguredTableAssociationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public UpdateConfiguredTableAssociationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public UpdateConfiguredTableAssociationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public UpdateConfiguredTableAssociationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public UpdateConfiguredTableAssociationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public UpdateConfiguredTableAssociationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class UpdateConfiguredTableAssociationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public UpdateConfiguredTableAssociationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class UpdateConfiguredTableAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=configuredTableAssociationIdentifier")
     public String configuredTableAssociationIdentifier;
+
     public UpdateConfiguredTableAssociationRequest withConfiguredTableAssociationIdentifier(String configuredTableAssociationIdentifier) {
         this.configuredTableAssociationIdentifier = configuredTableAssociationIdentifier;
         return this;
@@ -78,9 +88,15 @@ public class UpdateConfiguredTableAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipIdentifier")
     public String membershipIdentifier;
+
     public UpdateConfiguredTableAssociationRequest withMembershipIdentifier(String membershipIdentifier) {
         this.membershipIdentifier = membershipIdentifier;
         return this;
     }
     
+    public UpdateConfiguredTableAssociationRequest(@JsonProperty("RequestBody") UpdateConfiguredTableAssociationRequestBody requestBody, @JsonProperty("configuredTableAssociationIdentifier") String configuredTableAssociationIdentifier, @JsonProperty("membershipIdentifier") String membershipIdentifier) {
+        this.requestBody = requestBody;
+        this.configuredTableAssociationIdentifier = configuredTableAssociationIdentifier;
+        this.membershipIdentifier = membershipIdentifier;
+  }
 }

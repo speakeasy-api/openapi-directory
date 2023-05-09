@@ -20,6 +20,7 @@ public class GistComment {
      */
     @JsonProperty("author_association")
     public AuthorAssociationEnum authorAssociation;
+
     public GistComment withAuthorAssociation(AuthorAssociationEnum authorAssociation) {
         this.authorAssociation = authorAssociation;
         return this;
@@ -30,6 +31,7 @@ public class GistComment {
      */
     @JsonProperty("body")
     public String body;
+
     public GistComment withBody(String body) {
         this.body = body;
         return this;
@@ -39,6 +41,7 @@ public class GistComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GistComment withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class GistComment {
     
     @JsonProperty("id")
     public Long id;
+
     public GistComment withId(Long id) {
         this.id = id;
         return this;
@@ -53,6 +57,7 @@ public class GistComment {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public GistComment withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -62,6 +67,7 @@ public class GistComment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GistComment withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -69,6 +75,7 @@ public class GistComment {
     
     @JsonProperty("url")
     public String url;
+
     public GistComment withUrl(String url) {
         this.url = url;
         return this;
@@ -79,9 +86,20 @@ public class GistComment {
      */
     @JsonProperty("user")
     public NullableSimpleUser user;
+
     public GistComment withUser(NullableSimpleUser user) {
         this.user = user;
         return this;
     }
     
+    public GistComment(@JsonProperty("author_association") AuthorAssociationEnum authorAssociation, @JsonProperty("body") String body, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("id") Long id, @JsonProperty("node_id") String nodeId, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url, @JsonProperty("user") NullableSimpleUser user) {
+        this.authorAssociation = authorAssociation;
+        this.body = body;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.nodeId = nodeId;
+        this.updatedAt = updatedAt;
+        this.url = url;
+        this.user = user;
+  }
 }

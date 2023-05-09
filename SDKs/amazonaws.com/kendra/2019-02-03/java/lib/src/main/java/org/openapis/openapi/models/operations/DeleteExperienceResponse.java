@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteExperienceResponse {
@@ -12,6 +13,7 @@ public class DeleteExperienceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteExperienceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteExperienceResponse {
      */
     
     public Object conflictException;
+
     public DeleteExperienceResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteExperienceResponse {
     
     
     public String contentType;
+
     public DeleteExperienceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteExperienceResponse {
      */
     
     public java.util.Map<String, Object> deleteExperienceResponse;
+
     public DeleteExperienceResponse withDeleteExperienceResponse(java.util.Map<String, Object> deleteExperienceResponse) {
         this.deleteExperienceResponse = deleteExperienceResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteExperienceResponse {
      */
     
     public Object internalServerException;
+
     public DeleteExperienceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteExperienceResponse {
     
     
     public Integer statusCode;
+
     public DeleteExperienceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteExperienceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteExperienceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteExperienceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteExperienceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DeleteExperienceResponse {
      */
     
     public Object throttlingException;
+
     public DeleteExperienceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteExperienceResponse {
      */
     
     public Object validationException;
+
     public DeleteExperienceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteExperienceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

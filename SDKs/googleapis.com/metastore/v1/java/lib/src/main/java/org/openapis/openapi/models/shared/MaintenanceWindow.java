@@ -18,6 +18,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public MaintenanceWindowDayOfWeekEnum dayOfWeek;
+
     public MaintenanceWindow withDayOfWeek(MaintenanceWindowDayOfWeekEnum dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -29,9 +30,11 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hourOfDay")
     public Integer hourOfDay;
+
     public MaintenanceWindow withHourOfDay(Integer hourOfDay) {
         this.hourOfDay = hourOfDay;
         return this;
     }
     
+    public MaintenanceWindow(){}
 }

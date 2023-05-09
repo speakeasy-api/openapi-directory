@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.CreateEventNotificationRequest;
 import org.openapis.openapi.models.operations.CreateEventNotificationResponse;
 
@@ -13,11 +12,9 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            CreateEventNotificationRequest req = new CreateEventNotificationRequest() {{
-                requestBody = "corrupti";
-                xFapiFinancialId = "provident";
+            CreateEventNotificationRequest req = new CreateEventNotificationRequest("corrupti", "provident") {{
                 xFapiInteractionId = "distinctio";
-            }}            
+            }};            
 
             CreateEventNotificationResponse res = sdk.eventNotification.createEventNotification(req);
 
@@ -27,5 +24,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

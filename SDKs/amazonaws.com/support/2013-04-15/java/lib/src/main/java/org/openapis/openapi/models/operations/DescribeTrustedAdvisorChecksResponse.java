@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTrustedAdvisorChecksResponse {
     
     public String contentType;
+
     public DescribeTrustedAdvisorChecksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTrustedAdvisorChecksResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTrustedAdvisorChecksResponse describeTrustedAdvisorChecksResponse;
+
     public DescribeTrustedAdvisorChecksResponse withDescribeTrustedAdvisorChecksResponse(org.openapis.openapi.models.shared.DescribeTrustedAdvisorChecksResponse describeTrustedAdvisorChecksResponse) {
         this.describeTrustedAdvisorChecksResponse = describeTrustedAdvisorChecksResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTrustedAdvisorChecksResponse {
      */
     
     public Object internalServerError;
+
     public DescribeTrustedAdvisorChecksResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -36,6 +40,7 @@ public class DescribeTrustedAdvisorChecksResponse {
     
     
     public Integer statusCode;
+
     public DescribeTrustedAdvisorChecksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeTrustedAdvisorChecksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTrustedAdvisorChecksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTrustedAdvisorChecksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

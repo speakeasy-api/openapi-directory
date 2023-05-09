@@ -18,6 +18,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appendMissingElements")
     public ArrayValue appendMissingElements;
+
     public FieldTransform withAppendMissingElements(ArrayValue appendMissingElements) {
         this.appendMissingElements = appendMissingElements;
         return this;
@@ -29,6 +30,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldPath")
     public String fieldPath;
+
     public FieldTransform withFieldPath(String fieldPath) {
         this.fieldPath = fieldPath;
         return this;
@@ -40,6 +42,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("increment")
     public Value increment;
+
     public FieldTransform withIncrement(Value increment) {
         this.increment = increment;
         return this;
@@ -51,6 +54,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximum")
     public Value maximum;
+
     public FieldTransform withMaximum(Value maximum) {
         this.maximum = maximum;
         return this;
@@ -62,6 +66,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimum")
     public Value minimum;
+
     public FieldTransform withMinimum(Value minimum) {
         this.minimum = minimum;
         return this;
@@ -73,6 +78,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeAllFromArray")
     public ArrayValue removeAllFromArray;
+
     public FieldTransform withRemoveAllFromArray(ArrayValue removeAllFromArray) {
         this.removeAllFromArray = removeAllFromArray;
         return this;
@@ -84,9 +90,11 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("setToServerValue")
     public FieldTransformSetToServerValueEnum setToServerValue;
+
     public FieldTransform withSetToServerValue(FieldTransformSetToServerValueEnum setToServerValue) {
         this.setToServerValue = setToServerValue;
         return this;
     }
     
+    public FieldTransform(){}
 }

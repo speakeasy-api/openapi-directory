@@ -20,6 +20,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public ImportTableDescription withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -28,6 +29,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogGroupArn")
     public String cloudWatchLogGroupArn;
+
     public ImportTableDescription withCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         return this;
@@ -38,6 +40,7 @@ public class ImportTableDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ImportTableDescription withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCount")
     public Long errorCount;
+
     public ImportTableDescription withErrorCount(Long errorCount) {
         this.errorCount = errorCount;
         return this;
@@ -54,6 +58,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureCode")
     public String failureCode;
+
     public ImportTableDescription withFailureCode(String failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -62,6 +67,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureMessage")
     public String failureMessage;
+
     public ImportTableDescription withFailureMessage(String failureMessage) {
         this.failureMessage = failureMessage;
         return this;
@@ -70,6 +76,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportArn")
     public String importArn;
+
     public ImportTableDescription withImportArn(String importArn) {
         this.importArn = importArn;
         return this;
@@ -78,6 +85,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportStatus")
     public ImportStatusEnum importStatus;
+
     public ImportTableDescription withImportStatus(ImportStatusEnum importStatus) {
         this.importStatus = importStatus;
         return this;
@@ -86,6 +94,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportedItemCount")
     public Long importedItemCount;
+
     public ImportTableDescription withImportedItemCount(Long importedItemCount) {
         this.importedItemCount = importedItemCount;
         return this;
@@ -94,6 +103,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputCompressionType")
     public InputCompressionTypeEnum inputCompressionType;
+
     public ImportTableDescription withInputCompressionType(InputCompressionTypeEnum inputCompressionType) {
         this.inputCompressionType = inputCompressionType;
         return this;
@@ -102,6 +112,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormat")
     public InputFormatEnum inputFormat;
+
     public ImportTableDescription withInputFormat(InputFormatEnum inputFormat) {
         this.inputFormat = inputFormat;
         return this;
@@ -110,6 +121,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InputFormatOptions")
     public InputFormatOptions inputFormatOptions;
+
     public ImportTableDescription withInputFormatOptions(InputFormatOptions inputFormatOptions) {
         this.inputFormatOptions = inputFormatOptions;
         return this;
@@ -118,6 +130,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedItemCount")
     public Long processedItemCount;
+
     public ImportTableDescription withProcessedItemCount(Long processedItemCount) {
         this.processedItemCount = processedItemCount;
         return this;
@@ -126,6 +139,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessedSizeBytes")
     public Long processedSizeBytes;
+
     public ImportTableDescription withProcessedSizeBytes(Long processedSizeBytes) {
         this.processedSizeBytes = processedSizeBytes;
         return this;
@@ -134,6 +148,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BucketSource")
     public S3BucketSource s3BucketSource;
+
     public ImportTableDescription withS3BucketSource(S3BucketSource s3BucketSource) {
         this.s3BucketSource = s3BucketSource;
         return this;
@@ -144,6 +159,7 @@ public class ImportTableDescription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public ImportTableDescription withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -152,6 +168,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public ImportTableDescription withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
@@ -160,6 +177,7 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableCreationParameters")
     public TableCreationParameters tableCreationParameters;
+
     public ImportTableDescription withTableCreationParameters(TableCreationParameters tableCreationParameters) {
         this.tableCreationParameters = tableCreationParameters;
         return this;
@@ -168,9 +186,11 @@ public class ImportTableDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableId")
     public String tableId;
+
     public ImportTableDescription withTableId(String tableId) {
         this.tableId = tableId;
         return this;
     }
     
+    public ImportTableDescription(){}
 }

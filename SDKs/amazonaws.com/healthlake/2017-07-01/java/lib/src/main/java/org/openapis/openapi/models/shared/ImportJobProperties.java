@@ -20,6 +20,7 @@ public class ImportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public ImportJobProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -27,6 +28,7 @@ public class ImportJobProperties {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public ImportJobProperties withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -37,6 +39,7 @@ public class ImportJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public ImportJobProperties withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -44,6 +47,7 @@ public class ImportJobProperties {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public ImportJobProperties withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -51,6 +55,7 @@ public class ImportJobProperties {
     
     @JsonProperty("JobId")
     public String jobId;
+
     public ImportJobProperties withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -59,6 +64,7 @@ public class ImportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public ImportJobProperties withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -70,6 +76,7 @@ public class ImportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobOutputDataConfig")
     public OutputDataConfig jobOutputDataConfig;
+
     public ImportJobProperties withJobOutputDataConfig(OutputDataConfig jobOutputDataConfig) {
         this.jobOutputDataConfig = jobOutputDataConfig;
         return this;
@@ -77,6 +84,7 @@ public class ImportJobProperties {
     
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public ImportJobProperties withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -85,6 +93,7 @@ public class ImportJobProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ImportJobProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -94,9 +103,17 @@ public class ImportJobProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTime")
     public OffsetDateTime submitTime;
+
     public ImportJobProperties withSubmitTime(OffsetDateTime submitTime) {
         this.submitTime = submitTime;
         return this;
     }
     
+    public ImportJobProperties(@JsonProperty("DatastoreId") String datastoreId, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("JobId") String jobId, @JsonProperty("JobStatus") JobStatusEnum jobStatus, @JsonProperty("SubmitTime") OffsetDateTime submitTime) {
+        this.datastoreId = datastoreId;
+        this.inputDataConfig = inputDataConfig;
+        this.jobId = jobId;
+        this.jobStatus = jobStatus;
+        this.submitTime = submitTime;
+  }
 }

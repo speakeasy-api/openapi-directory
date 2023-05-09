@@ -12,9 +12,11 @@ public class HarvestAllV3Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=storeId")
     public String storeId;
+
     public HarvestAllV3Request withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public HarvestAllV3Request(){}
 }

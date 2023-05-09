@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * UpdateConfigurationSetSendingEnabledRequest - Represents a request to enable or disable the email sending capabilities for a specific configuration set.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UpdateConfigurationSetSendingEnabledRequest {
     
     public String configurationSetName;
+
     public UpdateConfigurationSetSendingEnabledRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateConfigurationSetSendingEnabledRequest {
     
     
     public Boolean enabled;
+
     public UpdateConfigurationSetSendingEnabledRequest withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public UpdateConfigurationSetSendingEnabledRequest(@JsonProperty("ConfigurationSetName") String configurationSetName, @JsonProperty("Enabled") Boolean enabled) {
+        this.configurationSetName = configurationSetName;
+        this.enabled = enabled;
+  }
 }

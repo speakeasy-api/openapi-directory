@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReleaseStaticIpResponse {
@@ -12,6 +13,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object accessDeniedException;
+
     public ReleaseStaticIpResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public ReleaseStaticIpResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class ReleaseStaticIpResponse {
     
     
     public String contentType;
+
     public ReleaseStaticIpResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object invalidInputException;
+
     public ReleaseStaticIpResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object notFoundException;
+
     public ReleaseStaticIpResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object operationFailureException;
+
     public ReleaseStaticIpResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -69,6 +76,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public org.openapis.openapi.models.shared.ReleaseStaticIpResult releaseStaticIpResult;
+
     public ReleaseStaticIpResponse withReleaseStaticIpResult(org.openapis.openapi.models.shared.ReleaseStaticIpResult releaseStaticIpResult) {
         this.releaseStaticIpResult = releaseStaticIpResult;
         return this;
@@ -79,6 +87,7 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object serviceException;
+
     public ReleaseStaticIpResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ReleaseStaticIpResponse {
     
     
     public Integer statusCode;
+
     public ReleaseStaticIpResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ReleaseStaticIpResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReleaseStaticIpResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ReleaseStaticIpResponse {
      */
     
     public Object unauthenticatedException;
+
     public ReleaseStaticIpResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public ReleaseStaticIpResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

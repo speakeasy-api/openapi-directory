@@ -59,11 +59,9 @@ public class RemarketingListShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse() {{
+        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesGetResponse(contentType, httpRes.statusCode()) {{
             remarketingListShare = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class RemarketingListShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse() {{
+        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesPatchResponse(contentType, httpRes.statusCode()) {{
             remarketingListShare = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,11 +151,9 @@ public class RemarketingListShares {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse() {{
+        org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse res = new org.openapis.openapi.models.operations.DfareportingRemarketingListSharesUpdateResponse(contentType, httpRes.statusCode()) {{
             remarketingListShare = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

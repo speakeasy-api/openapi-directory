@@ -18,6 +18,7 @@ public class GoogleCloudDataplexV1Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onDemand")
     public java.util.Map<String, Object> onDemand;
+
     public GoogleCloudDataplexV1Trigger withOnDemand(java.util.Map<String, Object> onDemand) {
         this.onDemand = onDemand;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDataplexV1Trigger {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schedule")
     public GoogleCloudDataplexV1TriggerSchedule schedule;
+
     public GoogleCloudDataplexV1Trigger withSchedule(GoogleCloudDataplexV1TriggerSchedule schedule) {
         this.schedule = schedule;
         return this;
     }
     
+    public GoogleCloudDataplexV1Trigger(){}
 }

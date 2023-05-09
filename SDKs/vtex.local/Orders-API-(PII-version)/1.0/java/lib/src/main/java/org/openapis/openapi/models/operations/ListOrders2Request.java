@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListOrders2Request {
@@ -12,6 +13,7 @@ public class ListOrders2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListOrders2Request withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListOrders2Request {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListOrders2Request withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListOrders2Request {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ListOrders2RequestBody requestBody;
+
     public ListOrders2Request withRequestBody(ListOrders2RequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -39,9 +43,14 @@ public class ListOrders2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=f_hasInputInvoice")
     public Boolean fHasInputInvoice;
+
     public ListOrders2Request withFHasInputInvoice(Boolean fHasInputInvoice) {
         this.fHasInputInvoice = fHasInputInvoice;
         return this;
     }
     
+    public ListOrders2Request(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

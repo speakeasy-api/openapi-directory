@@ -12,6 +12,7 @@ public class EnterpriseSettingsEnterpriseCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public EnterpriseSettingsEnterpriseCustomer withEmail(String email) {
         this.email = email;
         return this;
@@ -20,6 +21,7 @@ public class EnterpriseSettingsEnterpriseCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EnterpriseSettingsEnterpriseCustomer withName(String name) {
         this.name = name;
         return this;
@@ -28,6 +30,7 @@ public class EnterpriseSettingsEnterpriseCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key_data")
     public String publicKeyData;
+
     public EnterpriseSettingsEnterpriseCustomer withPublicKeyData(String publicKeyData) {
         this.publicKeyData = publicKeyData;
         return this;
@@ -36,6 +39,7 @@ public class EnterpriseSettingsEnterpriseCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_key_data")
     public String secretKeyData;
+
     public EnterpriseSettingsEnterpriseCustomer withSecretKeyData(String secretKeyData) {
         this.secretKeyData = secretKeyData;
         return this;
@@ -44,9 +48,11 @@ public class EnterpriseSettingsEnterpriseCustomer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uuid")
     public String uuid;
+
     public EnterpriseSettingsEnterpriseCustomer withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public EnterpriseSettingsEnterpriseCustomer(){}
 }

@@ -15,6 +15,7 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientAssociationMetadata")
     public java.util.Map<String, String> clientAssociationMetadata;
+
     public EventIntegrationAssociation withClientAssociationMetadata(java.util.Map<String, String> clientAssociationMetadata) {
         this.clientAssociationMetadata = clientAssociationMetadata;
         return this;
@@ -23,6 +24,7 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public EventIntegrationAssociation withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventBridgeRuleName")
     public String eventBridgeRuleName;
+
     public EventIntegrationAssociation withEventBridgeRuleName(String eventBridgeRuleName) {
         this.eventBridgeRuleName = eventBridgeRuleName;
         return this;
@@ -39,6 +42,7 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationAssociationArn")
     public String eventIntegrationAssociationArn;
+
     public EventIntegrationAssociation withEventIntegrationAssociationArn(String eventIntegrationAssociationArn) {
         this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
         return this;
@@ -47,6 +51,7 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationAssociationId")
     public String eventIntegrationAssociationId;
+
     public EventIntegrationAssociation withEventIntegrationAssociationId(String eventIntegrationAssociationId) {
         this.eventIntegrationAssociationId = eventIntegrationAssociationId;
         return this;
@@ -55,9 +60,11 @@ public class EventIntegrationAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventIntegrationName")
     public String eventIntegrationName;
+
     public EventIntegrationAssociation withEventIntegrationName(String eventIntegrationName) {
         this.eventIntegrationName = eventIntegrationName;
         return this;
     }
     
+    public EventIntegrationAssociation(){}
 }

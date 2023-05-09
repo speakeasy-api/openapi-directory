@@ -16,9 +16,11 @@ public class HttpRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("prefix")
     public String prefix;
+
     public HttpRouteMatch withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public HttpRouteMatch(){}
 }

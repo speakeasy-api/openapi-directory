@@ -15,6 +15,7 @@ public class CreateDeploymentJobRequestBodyDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("concurrentDeploymentPercentage")
     public Long concurrentDeploymentPercentage;
+
     public CreateDeploymentJobRequestBodyDeploymentConfig withConcurrentDeploymentPercentage(Long concurrentDeploymentPercentage) {
         this.concurrentDeploymentPercentage = concurrentDeploymentPercentage;
         return this;
@@ -23,6 +24,7 @@ public class CreateDeploymentJobRequestBodyDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadConditionFile")
     public org.openapis.openapi.models.shared.S3Object downloadConditionFile;
+
     public CreateDeploymentJobRequestBodyDeploymentConfig withDownloadConditionFile(org.openapis.openapi.models.shared.S3Object downloadConditionFile) {
         this.downloadConditionFile = downloadConditionFile;
         return this;
@@ -31,6 +33,7 @@ public class CreateDeploymentJobRequestBodyDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureThresholdPercentage")
     public Long failureThresholdPercentage;
+
     public CreateDeploymentJobRequestBodyDeploymentConfig withFailureThresholdPercentage(Long failureThresholdPercentage) {
         this.failureThresholdPercentage = failureThresholdPercentage;
         return this;
@@ -39,9 +42,11 @@ public class CreateDeploymentJobRequestBodyDeploymentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("robotDeploymentTimeoutInSeconds")
     public Long robotDeploymentTimeoutInSeconds;
+
     public CreateDeploymentJobRequestBodyDeploymentConfig withRobotDeploymentTimeoutInSeconds(Long robotDeploymentTimeoutInSeconds) {
         this.robotDeploymentTimeoutInSeconds = robotDeploymentTimeoutInSeconds;
         return this;
     }
     
+    public CreateDeploymentJobRequestBodyDeploymentConfig(){}
 }

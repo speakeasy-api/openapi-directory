@@ -12,6 +12,7 @@ public class CreateBatchInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchInferenceJobConfig")
     public BatchInferenceJobConfig batchInferenceJobConfig;
+
     public CreateBatchInferenceJobRequest withBatchInferenceJobConfig(BatchInferenceJobConfig batchInferenceJobConfig) {
         this.batchInferenceJobConfig = batchInferenceJobConfig;
         return this;
@@ -20,6 +21,7 @@ public class CreateBatchInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filterArn")
     public String filterArn;
+
     public CreateBatchInferenceJobRequest withFilterArn(String filterArn) {
         this.filterArn = filterArn;
         return this;
@@ -27,6 +29,7 @@ public class CreateBatchInferenceJobRequest {
     
     @JsonProperty("jobInput")
     public BatchInferenceJobInput jobInput;
+
     public CreateBatchInferenceJobRequest withJobInput(BatchInferenceJobInput jobInput) {
         this.jobInput = jobInput;
         return this;
@@ -34,6 +37,7 @@ public class CreateBatchInferenceJobRequest {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public CreateBatchInferenceJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -41,6 +45,7 @@ public class CreateBatchInferenceJobRequest {
     
     @JsonProperty("jobOutput")
     public BatchInferenceJobOutput jobOutput;
+
     public CreateBatchInferenceJobRequest withJobOutput(BatchInferenceJobOutput jobOutput) {
         this.jobOutput = jobOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateBatchInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public CreateBatchInferenceJobRequest withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -56,6 +62,7 @@ public class CreateBatchInferenceJobRequest {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public CreateBatchInferenceJobRequest withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -63,6 +70,7 @@ public class CreateBatchInferenceJobRequest {
     
     @JsonProperty("solutionVersionArn")
     public String solutionVersionArn;
+
     public CreateBatchInferenceJobRequest withSolutionVersionArn(String solutionVersionArn) {
         this.solutionVersionArn = solutionVersionArn;
         return this;
@@ -71,9 +79,17 @@ public class CreateBatchInferenceJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateBatchInferenceJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateBatchInferenceJobRequest(@JsonProperty("jobInput") BatchInferenceJobInput jobInput, @JsonProperty("jobName") String jobName, @JsonProperty("jobOutput") BatchInferenceJobOutput jobOutput, @JsonProperty("roleArn") String roleArn, @JsonProperty("solutionVersionArn") String solutionVersionArn) {
+        this.jobInput = jobInput;
+        this.jobName = jobName;
+        this.jobOutput = jobOutput;
+        this.roleArn = roleArn;
+        this.solutionVersionArn = solutionVersionArn;
+  }
 }

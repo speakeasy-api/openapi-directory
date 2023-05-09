@@ -160,6 +160,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 	}
 
@@ -197,7 +202,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CopyBackupToRegionResponse res = new org.openapis.openapi.models.operations.CopyBackupToRegionResponse() {{
+        org.openapis.openapi.models.operations.CopyBackupToRegionResponse res = new org.openapis.openapi.models.operations.CopyBackupToRegionResponse(contentType, httpRes.statusCode()) {{
             copyBackupToRegionResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -206,8 +211,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -297,7 +300,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse() {{
+        org.openapis.openapi.models.operations.CreateClusterResponse res = new org.openapis.openapi.models.operations.CreateClusterResponse(contentType, httpRes.statusCode()) {{
             createClusterResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -306,8 +309,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,7 +398,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateHsmResponse res = new org.openapis.openapi.models.operations.CreateHsmResponse() {{
+        org.openapis.openapi.models.operations.CreateHsmResponse res = new org.openapis.openapi.models.operations.CreateHsmResponse(contentType, httpRes.statusCode()) {{
             createHsmResponse = null;
             cloudHsmInternalFailureException = null;
             cloudHsmServiceException = null;
@@ -405,8 +406,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmAccessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -489,7 +488,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse() {{
+        org.openapis.openapi.models.operations.DeleteBackupResponse res = new org.openapis.openapi.models.operations.DeleteBackupResponse(contentType, httpRes.statusCode()) {{
             deleteBackupResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -497,8 +496,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -581,7 +578,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse() {{
+        org.openapis.openapi.models.operations.DeleteClusterResponse res = new org.openapis.openapi.models.operations.DeleteClusterResponse(contentType, httpRes.statusCode()) {{
             deleteClusterResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -590,8 +587,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -681,7 +676,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHsmResponse res = new org.openapis.openapi.models.operations.DeleteHsmResponse() {{
+        org.openapis.openapi.models.operations.DeleteHsmResponse res = new org.openapis.openapi.models.operations.DeleteHsmResponse(contentType, httpRes.statusCode()) {{
             deleteHsmResponse = null;
             cloudHsmInternalFailureException = null;
             cloudHsmServiceException = null;
@@ -689,8 +684,6 @@ public class SDK {
             cloudHsmInvalidRequestException = null;
             cloudHsmAccessDeniedException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -779,7 +772,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeBackupsResponse res = new org.openapis.openapi.models.operations.DescribeBackupsResponse() {{
+        org.openapis.openapi.models.operations.DescribeBackupsResponse res = new org.openapis.openapi.models.operations.DescribeBackupsResponse(contentType, httpRes.statusCode()) {{
             describeBackupsResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -788,8 +781,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -885,7 +876,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse() {{
+        org.openapis.openapi.models.operations.DescribeClustersResponse res = new org.openapis.openapi.models.operations.DescribeClustersResponse(contentType, httpRes.statusCode()) {{
             describeClustersResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -893,8 +884,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -977,7 +966,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InitializeClusterResponse res = new org.openapis.openapi.models.operations.InitializeClusterResponse() {{
+        org.openapis.openapi.models.operations.InitializeClusterResponse res = new org.openapis.openapi.models.operations.InitializeClusterResponse(contentType, httpRes.statusCode()) {{
             initializeClusterResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -985,8 +974,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1075,7 +1062,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse() {{
+        org.openapis.openapi.models.operations.ListTagsResponse res = new org.openapis.openapi.models.operations.ListTagsResponse(contentType, httpRes.statusCode()) {{
             listTagsResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1084,8 +1071,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1175,7 +1160,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifyBackupAttributesResponse res = new org.openapis.openapi.models.operations.ModifyBackupAttributesResponse() {{
+        org.openapis.openapi.models.operations.ModifyBackupAttributesResponse res = new org.openapis.openapi.models.operations.ModifyBackupAttributesResponse(contentType, httpRes.statusCode()) {{
             modifyBackupAttributesResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1183,8 +1168,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1267,7 +1250,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ModifyClusterResponse res = new org.openapis.openapi.models.operations.ModifyClusterResponse() {{
+        org.openapis.openapi.models.operations.ModifyClusterResponse res = new org.openapis.openapi.models.operations.ModifyClusterResponse(contentType, httpRes.statusCode()) {{
             modifyClusterResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1275,8 +1258,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1359,7 +1340,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RestoreBackupResponse res = new org.openapis.openapi.models.operations.RestoreBackupResponse() {{
+        org.openapis.openapi.models.operations.RestoreBackupResponse res = new org.openapis.openapi.models.operations.RestoreBackupResponse(contentType, httpRes.statusCode()) {{
             restoreBackupResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1367,8 +1348,6 @@ public class SDK {
             cloudHsmResourceNotFoundException = null;
             cloudHsmServiceException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1451,7 +1430,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse() {{
+        org.openapis.openapi.models.operations.TagResourceResponse res = new org.openapis.openapi.models.operations.TagResourceResponse(contentType, httpRes.statusCode()) {{
             tagResourceResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1460,8 +1439,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1551,7 +1528,7 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse() {{
+        org.openapis.openapi.models.operations.UntagResourceResponse res = new org.openapis.openapi.models.operations.UntagResourceResponse(contentType, httpRes.statusCode()) {{
             untagResourceResponse = null;
             cloudHsmAccessDeniedException = null;
             cloudHsmInternalFailureException = null;
@@ -1560,8 +1537,6 @@ public class SDK {
             cloudHsmServiceException = null;
             cloudHsmTagException = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

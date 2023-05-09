@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMeConnectionsConnectionIdRequest {
@@ -12,9 +13,13 @@ public class GetMeConnectionsConnectionIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=connection_id")
     public Long connectionId;
+
     public GetMeConnectionsConnectionIdRequest withConnectionId(Long connectionId) {
         this.connectionId = connectionId;
         return this;
     }
     
+    public GetMeConnectionsConnectionIdRequest(@JsonProperty("connection_id") Long connectionId) {
+        this.connectionId = connectionId;
+  }
 }

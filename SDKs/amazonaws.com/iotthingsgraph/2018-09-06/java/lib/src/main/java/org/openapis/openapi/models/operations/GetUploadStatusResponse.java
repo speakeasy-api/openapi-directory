@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUploadStatusResponse {
     
     public String contentType;
+
     public GetUploadStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUploadStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUploadStatusResponse getUploadStatusResponse;
+
     public GetUploadStatusResponse withGetUploadStatusResponse(org.openapis.openapi.models.shared.GetUploadStatusResponse getUploadStatusResponse) {
         this.getUploadStatusResponse = getUploadStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetUploadStatusResponse {
      */
     
     public Object internalFailureException;
+
     public GetUploadStatusResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class GetUploadStatusResponse {
      */
     
     public Object invalidRequestException;
+
     public GetUploadStatusResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class GetUploadStatusResponse {
     
     
     public Integer statusCode;
+
     public GetUploadStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetUploadStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUploadStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetUploadStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetUploadStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetUploadStatusResponse {
      */
     
     public Object throttlingException;
+
     public GetUploadStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public GetUploadStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TaxRatesByCountryCodeRequest;
 import org.openapis.openapi.models.operations.TaxRatesByCountryCodeResponse;
 
@@ -21,15 +20,17 @@ public class Application {
                 productCodes = "C010";
                 province = "provident";
                 zip = "71642";
-            }}            
+            }};            
 
             TaxRatesByCountryCodeResponse res = sdk.v1Tax.taxRatesByCountryCode(req);
 
-            if (res.taxRatesByCountryCode200ApplicationJSONObject.isPresent()) {
+            if (res.taxRatesByCountryCode200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

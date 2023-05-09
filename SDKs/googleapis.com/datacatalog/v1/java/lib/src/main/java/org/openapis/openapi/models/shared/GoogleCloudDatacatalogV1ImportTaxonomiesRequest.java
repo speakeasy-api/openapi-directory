@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1ImportTaxonomiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossRegionalSource")
     public GoogleCloudDatacatalogV1CrossRegionalSource crossRegionalSource;
+
     public GoogleCloudDatacatalogV1ImportTaxonomiesRequest withCrossRegionalSource(GoogleCloudDatacatalogV1CrossRegionalSource crossRegionalSource) {
         this.crossRegionalSource = crossRegionalSource;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatacatalogV1ImportTaxonomiesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineSource")
     public GoogleCloudDatacatalogV1InlineSource inlineSource;
+
     public GoogleCloudDatacatalogV1ImportTaxonomiesRequest withInlineSource(GoogleCloudDatacatalogV1InlineSource inlineSource) {
         this.inlineSource = inlineSource;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1ImportTaxonomiesRequest(){}
 }

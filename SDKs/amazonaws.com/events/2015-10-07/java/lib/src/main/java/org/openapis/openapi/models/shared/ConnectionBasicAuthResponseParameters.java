@@ -15,9 +15,11 @@ public class ConnectionBasicAuthResponseParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public ConnectionBasicAuthResponseParameters withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public ConnectionBasicAuthResponseParameters(){}
 }

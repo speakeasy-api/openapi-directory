@@ -15,6 +15,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CertificateArn")
     public String certificateArn;
+
     public Endpoint withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -23,6 +24,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public Endpoint withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,6 +33,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DmsTransferSettings")
     public DmsTransferSettings dmsTransferSettings;
+
     public Endpoint withDmsTransferSettings(DmsTransferSettings dmsTransferSettings) {
         this.dmsTransferSettings = dmsTransferSettings;
         return this;
@@ -42,6 +45,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocDbSettings")
     public DocDbSettings docDbSettings;
+
     public Endpoint withDocDbSettings(DocDbSettings docDbSettings) {
         this.docDbSettings = docDbSettings;
         return this;
@@ -50,6 +54,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DynamoDbSettings")
     public DynamoDbSettings dynamoDbSettings;
+
     public Endpoint withDynamoDbSettings(DynamoDbSettings dynamoDbSettings) {
         this.dynamoDbSettings = dynamoDbSettings;
         return this;
@@ -58,6 +63,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ElasticsearchSettings")
     public ElasticsearchSettings elasticsearchSettings;
+
     public Endpoint withElasticsearchSettings(ElasticsearchSettings elasticsearchSettings) {
         this.elasticsearchSettings = elasticsearchSettings;
         return this;
@@ -66,6 +72,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public Endpoint withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -74,6 +81,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointIdentifier")
     public String endpointIdentifier;
+
     public Endpoint withEndpointIdentifier(String endpointIdentifier) {
         this.endpointIdentifier = endpointIdentifier;
         return this;
@@ -82,6 +90,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public ReplicationEndpointTypeValueEnum endpointType;
+
     public Endpoint withEndpointType(ReplicationEndpointTypeValueEnum endpointType) {
         this.endpointType = endpointType;
         return this;
@@ -90,6 +99,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineDisplayName")
     public String engineDisplayName;
+
     public Endpoint withEngineDisplayName(String engineDisplayName) {
         this.engineDisplayName = engineDisplayName;
         return this;
@@ -98,6 +108,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineName")
     public String engineName;
+
     public Endpoint withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -106,6 +117,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalId")
     public String externalId;
+
     public Endpoint withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -114,6 +126,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExternalTableDefinition")
     public String externalTableDefinition;
+
     public Endpoint withExternalTableDefinition(String externalTableDefinition) {
         this.externalTableDefinition = externalTableDefinition;
         return this;
@@ -122,6 +135,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraConnectionAttributes")
     public String extraConnectionAttributes;
+
     public Endpoint withExtraConnectionAttributes(String extraConnectionAttributes) {
         this.extraConnectionAttributes = extraConnectionAttributes;
         return this;
@@ -130,6 +144,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GcpMySQLSettings")
     public GcpMySQLSettings gcpMySQLSettings;
+
     public Endpoint withGcpMySQLSettings(GcpMySQLSettings gcpMySQLSettings) {
         this.gcpMySQLSettings = gcpMySQLSettings;
         return this;
@@ -138,6 +153,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IBMDb2Settings")
     public IBMDb2Settings ibmDb2Settings;
+
     public Endpoint withIBMDb2Settings(IBMDb2Settings ibmDb2Settings) {
         this.ibmDb2Settings = ibmDb2Settings;
         return this;
@@ -146,6 +162,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KafkaSettings")
     public KafkaSettings kafkaSettings;
+
     public Endpoint withKafkaSettings(KafkaSettings kafkaSettings) {
         this.kafkaSettings = kafkaSettings;
         return this;
@@ -154,6 +171,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KinesisSettings")
     public KinesisSettings kinesisSettings;
+
     public Endpoint withKinesisSettings(KinesisSettings kinesisSettings) {
         this.kinesisSettings = kinesisSettings;
         return this;
@@ -162,6 +180,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public Endpoint withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -170,6 +189,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MicrosoftSQLServerSettings")
     public MicrosoftSQLServerSettings microsoftSQLServerSettings;
+
     public Endpoint withMicrosoftSQLServerSettings(MicrosoftSQLServerSettings microsoftSQLServerSettings) {
         this.microsoftSQLServerSettings = microsoftSQLServerSettings;
         return this;
@@ -178,6 +198,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MongoDbSettings")
     public MongoDbSettings mongoDbSettings;
+
     public Endpoint withMongoDbSettings(MongoDbSettings mongoDbSettings) {
         this.mongoDbSettings = mongoDbSettings;
         return this;
@@ -186,6 +207,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MySQLSettings")
     public MySQLSettings mySQLSettings;
+
     public Endpoint withMySQLSettings(MySQLSettings mySQLSettings) {
         this.mySQLSettings = mySQLSettings;
         return this;
@@ -194,6 +216,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NeptuneSettings")
     public NeptuneSettings neptuneSettings;
+
     public Endpoint withNeptuneSettings(NeptuneSettings neptuneSettings) {
         this.neptuneSettings = neptuneSettings;
         return this;
@@ -202,6 +225,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OracleSettings")
     public OracleSettings oracleSettings;
+
     public Endpoint withOracleSettings(OracleSettings oracleSettings) {
         this.oracleSettings = oracleSettings;
         return this;
@@ -210,6 +234,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Long port;
+
     public Endpoint withPort(Long port) {
         this.port = port;
         return this;
@@ -218,6 +243,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostgreSQLSettings")
     public PostgreSQLSettings postgreSQLSettings;
+
     public Endpoint withPostgreSQLSettings(PostgreSQLSettings postgreSQLSettings) {
         this.postgreSQLSettings = postgreSQLSettings;
         return this;
@@ -226,6 +252,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedisSettings")
     public RedisSettings redisSettings;
+
     public Endpoint withRedisSettings(RedisSettings redisSettings) {
         this.redisSettings = redisSettings;
         return this;
@@ -234,6 +261,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RedshiftSettings")
     public RedshiftSettings redshiftSettings;
+
     public Endpoint withRedshiftSettings(RedshiftSettings redshiftSettings) {
         this.redshiftSettings = redshiftSettings;
         return this;
@@ -242,6 +270,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Settings")
     public S3Settings s3Settings;
+
     public Endpoint withS3Settings(S3Settings s3Settings) {
         this.s3Settings = s3Settings;
         return this;
@@ -250,6 +279,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServerName")
     public String serverName;
+
     public Endpoint withServerName(String serverName) {
         this.serverName = serverName;
         return this;
@@ -258,6 +288,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceAccessRoleArn")
     public String serviceAccessRoleArn;
+
     public Endpoint withServiceAccessRoleArn(String serviceAccessRoleArn) {
         this.serviceAccessRoleArn = serviceAccessRoleArn;
         return this;
@@ -266,6 +297,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslMode")
     public DmsSslModeValueEnum sslMode;
+
     public Endpoint withSslMode(DmsSslModeValueEnum sslMode) {
         this.sslMode = sslMode;
         return this;
@@ -274,6 +306,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public Endpoint withStatus(String status) {
         this.status = status;
         return this;
@@ -282,6 +315,7 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SybaseSettings")
     public SybaseSettings sybaseSettings;
+
     public Endpoint withSybaseSettings(SybaseSettings sybaseSettings) {
         this.sybaseSettings = sybaseSettings;
         return this;
@@ -290,9 +324,11 @@ public class Endpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Username")
     public String username;
+
     public Endpoint withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public Endpoint(){}
 }

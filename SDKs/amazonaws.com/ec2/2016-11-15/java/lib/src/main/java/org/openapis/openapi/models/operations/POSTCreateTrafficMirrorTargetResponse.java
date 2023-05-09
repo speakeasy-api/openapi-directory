@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTCreateTrafficMirrorTargetResponse {
     
     public byte[] body;
+
     public POSTCreateTrafficMirrorTargetResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTCreateTrafficMirrorTargetResponse {
     
     
     public String contentType;
+
     public POSTCreateTrafficMirrorTargetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTCreateTrafficMirrorTargetResponse {
     
     
     public Integer statusCode;
+
     public POSTCreateTrafficMirrorTargetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTCreateTrafficMirrorTargetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTCreateTrafficMirrorTargetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTCreateTrafficMirrorTargetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

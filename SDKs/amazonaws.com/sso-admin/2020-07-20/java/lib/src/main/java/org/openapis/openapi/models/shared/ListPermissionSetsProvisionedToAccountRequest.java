@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListPermissionSetsProvisionedToAccountRequest {
     @JsonProperty("AccountId")
     public String accountId;
+
     public ListPermissionSetsProvisionedToAccountRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -18,6 +19,7 @@ public class ListPermissionSetsProvisionedToAccountRequest {
     
     @JsonProperty("InstanceArn")
     public String instanceArn;
+
     public ListPermissionSetsProvisionedToAccountRequest withInstanceArn(String instanceArn) {
         this.instanceArn = instanceArn;
         return this;
@@ -26,6 +28,7 @@ public class ListPermissionSetsProvisionedToAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPermissionSetsProvisionedToAccountRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -34,6 +37,7 @@ public class ListPermissionSetsProvisionedToAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPermissionSetsProvisionedToAccountRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -42,9 +46,14 @@ public class ListPermissionSetsProvisionedToAccountRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisioningStatus")
     public ProvisioningStatusEnum provisioningStatus;
+
     public ListPermissionSetsProvisionedToAccountRequest withProvisioningStatus(ProvisioningStatusEnum provisioningStatus) {
         this.provisioningStatus = provisioningStatus;
         return this;
     }
     
+    public ListPermissionSetsProvisionedToAccountRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("InstanceArn") String instanceArn) {
+        this.accountId = accountId;
+        this.instanceArn = instanceArn;
+  }
 }

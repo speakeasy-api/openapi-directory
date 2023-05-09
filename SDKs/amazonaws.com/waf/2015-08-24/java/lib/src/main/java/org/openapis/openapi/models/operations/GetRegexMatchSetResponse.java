@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRegexMatchSetResponse {
     
     public String contentType;
+
     public GetRegexMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetRegexMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRegexMatchSetResponse getRegexMatchSetResponse;
+
     public GetRegexMatchSetResponse withGetRegexMatchSetResponse(org.openapis.openapi.models.shared.GetRegexMatchSetResponse getRegexMatchSetResponse) {
         this.getRegexMatchSetResponse = getRegexMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetRegexMatchSetResponse {
     
     
     public Integer statusCode;
+
     public GetRegexMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetRegexMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRegexMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetRegexMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetRegexMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetRegexMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetRegexMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetRegexMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetRegexMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetRegexMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

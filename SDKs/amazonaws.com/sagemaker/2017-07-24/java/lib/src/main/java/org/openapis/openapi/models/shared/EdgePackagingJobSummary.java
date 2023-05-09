@@ -20,6 +20,7 @@ public class EdgePackagingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompilationJobName")
     public String compilationJobName;
+
     public EdgePackagingJobSummary withCompilationJobName(String compilationJobName) {
         this.compilationJobName = compilationJobName;
         return this;
@@ -30,6 +31,7 @@ public class EdgePackagingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public EdgePackagingJobSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -37,6 +39,7 @@ public class EdgePackagingJobSummary {
     
     @JsonProperty("EdgePackagingJobArn")
     public String edgePackagingJobArn;
+
     public EdgePackagingJobSummary withEdgePackagingJobArn(String edgePackagingJobArn) {
         this.edgePackagingJobArn = edgePackagingJobArn;
         return this;
@@ -44,6 +47,7 @@ public class EdgePackagingJobSummary {
     
     @JsonProperty("EdgePackagingJobName")
     public String edgePackagingJobName;
+
     public EdgePackagingJobSummary withEdgePackagingJobName(String edgePackagingJobName) {
         this.edgePackagingJobName = edgePackagingJobName;
         return this;
@@ -51,6 +55,7 @@ public class EdgePackagingJobSummary {
     
     @JsonProperty("EdgePackagingJobStatus")
     public EdgePackagingJobStatusEnum edgePackagingJobStatus;
+
     public EdgePackagingJobSummary withEdgePackagingJobStatus(EdgePackagingJobStatusEnum edgePackagingJobStatus) {
         this.edgePackagingJobStatus = edgePackagingJobStatus;
         return this;
@@ -61,6 +66,7 @@ public class EdgePackagingJobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public EdgePackagingJobSummary withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -69,6 +75,7 @@ public class EdgePackagingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelName")
     public String modelName;
+
     public EdgePackagingJobSummary withModelName(String modelName) {
         this.modelName = modelName;
         return this;
@@ -77,9 +84,15 @@ public class EdgePackagingJobSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelVersion")
     public String modelVersion;
+
     public EdgePackagingJobSummary withModelVersion(String modelVersion) {
         this.modelVersion = modelVersion;
         return this;
     }
     
+    public EdgePackagingJobSummary(@JsonProperty("EdgePackagingJobArn") String edgePackagingJobArn, @JsonProperty("EdgePackagingJobName") String edgePackagingJobName, @JsonProperty("EdgePackagingJobStatus") EdgePackagingJobStatusEnum edgePackagingJobStatus) {
+        this.edgePackagingJobArn = edgePackagingJobArn;
+        this.edgePackagingJobName = edgePackagingJobName;
+        this.edgePackagingJobStatus = edgePackagingJobStatus;
+  }
 }

@@ -15,6 +15,7 @@ public class StopDeploymentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StopStatusEnum status;
+
     public StopDeploymentOutput withStatus(StopStatusEnum status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class StopDeploymentOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public StopDeploymentOutput withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public StopDeploymentOutput(){}
 }

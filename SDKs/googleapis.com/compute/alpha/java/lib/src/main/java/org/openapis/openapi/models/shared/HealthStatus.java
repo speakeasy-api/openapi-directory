@@ -15,6 +15,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public HealthStatus withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -26,6 +27,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRule")
     public String forwardingRule;
+
     public HealthStatus withForwardingRule(String forwardingRule) {
         this.forwardingRule = forwardingRule;
         return this;
@@ -37,17 +39,19 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRuleIp")
     public String forwardingRuleIp;
+
     public HealthStatus withForwardingRuleIp(String forwardingRuleIp) {
         this.forwardingRuleIp = forwardingRuleIp;
         return this;
     }
     
     /**
-     * Health state of the instance.
+     * Health state of the IPv4 address of the instance.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthState")
     public HealthStatusHealthStateEnum healthState;
+
     public HealthStatus withHealthState(HealthStatusHealthStateEnum healthState) {
         this.healthState = healthState;
         return this;
@@ -59,6 +63,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public HealthStatus withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -70,6 +75,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public HealthStatus withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -81,6 +87,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public HealthStatus withPort(Integer port) {
         this.port = port;
         return this;
@@ -89,6 +96,7 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public String weight;
+
     public HealthStatus withWeight(String weight) {
         this.weight = weight;
         return this;
@@ -97,9 +105,11 @@ public class HealthStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightError")
     public HealthStatusWeightErrorEnum weightError;
+
     public HealthStatus withWeightError(HealthStatusWeightErrorEnum weightError) {
         this.weightError = weightError;
         return this;
     }
     
+    public HealthStatus(){}
 }

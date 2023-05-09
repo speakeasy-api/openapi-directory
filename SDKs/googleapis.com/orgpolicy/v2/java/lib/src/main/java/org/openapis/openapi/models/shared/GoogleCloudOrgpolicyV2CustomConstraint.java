@@ -18,6 +18,7 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum actionType;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withActionType(GoogleCloudOrgpolicyV2CustomConstraintActionTypeEnum actionType) {
         this.actionType = actionType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public String condition;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withCondition(String condition) {
         this.condition = condition;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("methodTypes")
     public GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum[] methodTypes;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withMethodTypes(GoogleCloudOrgpolicyV2CustomConstraintMethodTypesEnum[] methodTypes) {
         this.methodTypes = methodTypes;
         return this;
@@ -73,17 +78,19 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Immutable. The resource instance type on which this policy applies. Format will be of the form : "/" Example: * `compute.googleapis.com/Instance`.
+     * Immutable. The resource instance type on which this policy applies. Format will be of the form : `/` Example: * `compute.googleapis.com/Instance`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTypes")
     public String[] resourceTypes;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withResourceTypes(String[] resourceTypes) {
         this.resourceTypes = resourceTypes;
         return this;
@@ -95,9 +102,11 @@ public class GoogleCloudOrgpolicyV2CustomConstraint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateTime")
     public String updateTime;
+
     public GoogleCloudOrgpolicyV2CustomConstraint withUpdateTime(String updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GoogleCloudOrgpolicyV2CustomConstraint(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BonusInfo {
     @JsonProperty("amount")
     public Double amount;
+
     public BonusInfo withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -16,9 +17,14 @@ public class BonusInfo {
     
     @JsonProperty("bonusType")
     public BonusTypeEnum bonusType;
+
     public BonusInfo withBonusType(BonusTypeEnum bonusType) {
         this.bonusType = bonusType;
         return this;
     }
     
+    public BonusInfo(@JsonProperty("amount") Double amount, @JsonProperty("bonusType") BonusTypeEnum bonusType) {
+        this.amount = amount;
+        this.bonusType = bonusType;
+  }
 }

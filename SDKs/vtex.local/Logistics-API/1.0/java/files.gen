@@ -240,4 +240,16 @@ lib/src/main/java/org/openapis/openapi/models/operations/WarehouseById200Applica
 lib/src/main/java/org/openapis/openapi/models/operations/WarehouseById200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/WarehouseByIdResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/docks/README.md
+docs/freightvalues/README.md
+docs/holidays/README.md
+docs/inventory/README.md
+docs/pickuppoints/README.md
+docs/polygons/README.md
+docs/reservations/README.md
+docs/sla/README.md
+docs/scheduleddelivery/README.md
+docs/shippingpolicies/README.md
+docs/warehouses/README.md
 USAGE.md

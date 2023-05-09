@@ -12,6 +12,7 @@ public class StepTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public StepTypeDto withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class StepTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTypeId")
     public Long jobTypeId;
+
     public StepTypeDto withJobTypeId(Long jobTypeId) {
         this.jobTypeId = jobTypeId;
         return this;
@@ -28,6 +30,7 @@ public class StepTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StepTypeDto withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,11 @@ public class StepTypeDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("semantics")
     public StepTypeSemanticsDto semantics;
+
     public StepTypeDto withSemantics(StepTypeSemanticsDto semantics) {
         this.semantics = semantics;
         return this;
     }
     
+    public StepTypeDto(){}
 }

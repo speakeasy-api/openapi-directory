@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DataNotification {
     @JsonProperty("entries")
     public Object[] entries;
+
     public DataNotification withEntries(Object[] entries) {
         this.entries = entries;
         return this;
@@ -16,6 +17,7 @@ public class DataNotification {
     
     @JsonProperty("keyMaterial")
     public KeyMaterial keyMaterial;
+
     public DataNotification withKeyMaterial(KeyMaterial keyMaterial) {
         this.keyMaterial = keyMaterial;
         return this;
@@ -26,6 +28,7 @@ public class DataNotification {
      */
     @JsonProperty("pageCount")
     public Long pageCount;
+
     public DataNotification withPageCount(Long pageCount) {
         this.pageCount = pageCount;
         return this;
@@ -36,6 +39,7 @@ public class DataNotification {
      */
     @JsonProperty("pageNumber")
     public Long pageNumber;
+
     public DataNotification withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -46,9 +50,17 @@ public class DataNotification {
      */
     @JsonProperty("transactionId")
     public String transactionId;
+
     public DataNotification withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public DataNotification(@JsonProperty("entries") Object[] entries, @JsonProperty("keyMaterial") KeyMaterial keyMaterial, @JsonProperty("pageCount") Long pageCount, @JsonProperty("pageNumber") Long pageNumber, @JsonProperty("transactionId") String transactionId) {
+        this.entries = entries;
+        this.keyMaterial = keyMaterial;
+        this.pageCount = pageCount;
+        this.pageNumber = pageNumber;
+        this.transactionId = transactionId;
+  }
 }

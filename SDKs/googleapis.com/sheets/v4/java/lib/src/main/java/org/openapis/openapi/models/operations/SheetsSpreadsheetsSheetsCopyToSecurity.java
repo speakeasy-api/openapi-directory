@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class SheetsSpreadsheetsSheetsCopyToSecurity {
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsSheetsCopyToSecurityOption1 option1;
+
     public SheetsSpreadsheetsSheetsCopyToSecurity withOption1(SheetsSpreadsheetsSheetsCopyToSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class SheetsSpreadsheetsSheetsCopyToSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsSheetsCopyToSecurityOption2 option2;
+
     public SheetsSpreadsheetsSheetsCopyToSecurity withOption2(SheetsSpreadsheetsSheetsCopyToSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class SheetsSpreadsheetsSheetsCopyToSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public SheetsSpreadsheetsSheetsCopyToSecurityOption3 option3;
+
     public SheetsSpreadsheetsSheetsCopyToSecurity withOption3(SheetsSpreadsheetsSheetsCopyToSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public SheetsSpreadsheetsSheetsCopyToSecurity(){}
 }

@@ -18,6 +18,7 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio")
     public String audio;
+
     public CustomAudio withAudio(String audio) {
         this.audio = audio;
         return this;
@@ -29,6 +30,7 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio_length_sec")
     public Long audioLengthSec;
+
     public CustomAudio withAudioLengthSec(Long audioLengthSec) {
         this.audioLengthSec = audioLengthSec;
         return this;
@@ -40,6 +42,7 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public CustomAudio withImage(String image) {
         this.image = image;
         return this;
@@ -53,6 +56,7 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pub_date_ms")
     public Long pubDateMs;
+
     public CustomAudio withPubDateMs(Long pubDateMs) {
         this.pubDateMs = pubDateMs;
         return this;
@@ -64,6 +68,7 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public CustomAudio withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -75,9 +80,11 @@ public class CustomAudio {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CustomAudio withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CustomAudio(){}
 }

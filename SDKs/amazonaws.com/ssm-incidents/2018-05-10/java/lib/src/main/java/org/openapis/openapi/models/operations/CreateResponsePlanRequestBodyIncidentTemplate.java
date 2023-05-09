@@ -15,6 +15,7 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dedupeString")
     public String dedupeString;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withDedupeString(String dedupeString) {
         this.dedupeString = dedupeString;
         return this;
@@ -23,6 +24,7 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("impact")
     public Long impact;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withImpact(Long impact) {
         this.impact = impact;
         return this;
@@ -31,6 +33,7 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("incidentTags")
     public java.util.Map<String, String> incidentTags;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withIncidentTags(java.util.Map<String, String> incidentTags) {
         this.incidentTags = incidentTags;
         return this;
@@ -39,6 +42,7 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationTargets")
     public org.openapis.openapi.models.shared.NotificationTargetItem[] notificationTargets;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withNotificationTargets(org.openapis.openapi.models.shared.NotificationTargetItem[] notificationTargets) {
         this.notificationTargets = notificationTargets;
         return this;
@@ -47,6 +51,7 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("summary")
     public String summary;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withSummary(String summary) {
         this.summary = summary;
         return this;
@@ -55,9 +60,11 @@ public class CreateResponsePlanRequestBodyIncidentTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateResponsePlanRequestBodyIncidentTemplate withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CreateResponsePlanRequestBodyIncidentTemplate(){}
 }

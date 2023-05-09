@@ -22,6 +22,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
      */
     @JsonProperty("CreditorAccount")
     public OBWriteDomesticScheduled2DataInitiationCreditorAccount creditorAccount;
+
     public OBWriteDomesticScheduled2DataInitiation withCreditorAccount(OBWriteDomesticScheduled2DataInitiationCreditorAccount creditorAccount) {
         this.creditorAccount = creditorAccount;
         return this;
@@ -33,6 +34,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreditorPostalAddress")
     public OBPostalAddress6 creditorPostalAddress;
+
     public OBWriteDomesticScheduled2DataInitiation withCreditorPostalAddress(OBPostalAddress6 creditorPostalAddress) {
         this.creditorPostalAddress = creditorPostalAddress;
         return this;
@@ -44,6 +46,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DebtorAccount")
     public OBWriteDomesticScheduled2DataInitiationDebtorAccount debtorAccount;
+
     public OBWriteDomesticScheduled2DataInitiation withDebtorAccount(OBWriteDomesticScheduled2DataInitiationDebtorAccount debtorAccount) {
         this.debtorAccount = debtorAccount;
         return this;
@@ -57,6 +60,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndToEndIdentification")
     public String endToEndIdentification;
+
     public OBWriteDomesticScheduled2DataInitiation withEndToEndIdentification(String endToEndIdentification) {
         this.endToEndIdentification = endToEndIdentification;
         return this;
@@ -68,6 +72,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
      */
     @JsonProperty("InstructedAmount")
     public OBWriteDomesticScheduled2DataInitiationInstructedAmount instructedAmount;
+
     public OBWriteDomesticScheduled2DataInitiation withInstructedAmount(OBWriteDomesticScheduled2DataInitiationInstructedAmount instructedAmount) {
         this.instructedAmount = instructedAmount;
         return this;
@@ -79,6 +84,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
      */
     @JsonProperty("InstructionIdentification")
     public String instructionIdentification;
+
     public OBWriteDomesticScheduled2DataInitiation withInstructionIdentification(String instructionIdentification) {
         this.instructionIdentification = instructionIdentification;
         return this;
@@ -91,6 +97,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalInstrument")
     public String localInstrument;
+
     public OBWriteDomesticScheduled2DataInitiation withLocalInstrument(String localInstrument) {
         this.localInstrument = localInstrument;
         return this;
@@ -102,6 +109,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RemittanceInformation")
     public OBWriteDomesticScheduled2DataInitiationRemittanceInformation remittanceInformation;
+
     public OBWriteDomesticScheduled2DataInitiation withRemittanceInformation(OBWriteDomesticScheduled2DataInitiationRemittanceInformation remittanceInformation) {
         this.remittanceInformation = remittanceInformation;
         return this;
@@ -117,6 +125,7 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RequestedExecutionDateTime")
     public OffsetDateTime requestedExecutionDateTime;
+
     public OBWriteDomesticScheduled2DataInitiation withRequestedExecutionDateTime(OffsetDateTime requestedExecutionDateTime) {
         this.requestedExecutionDateTime = requestedExecutionDateTime;
         return this;
@@ -128,9 +137,16 @@ public class OBWriteDomesticScheduled2DataInitiation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupplementaryData")
     public java.util.Map<String, Object> supplementaryData;
+
     public OBWriteDomesticScheduled2DataInitiation withSupplementaryData(java.util.Map<String, Object> supplementaryData) {
         this.supplementaryData = supplementaryData;
         return this;
     }
     
+    public OBWriteDomesticScheduled2DataInitiation(@JsonProperty("CreditorAccount") OBWriteDomesticScheduled2DataInitiationCreditorAccount creditorAccount, @JsonProperty("InstructedAmount") OBWriteDomesticScheduled2DataInitiationInstructedAmount instructedAmount, @JsonProperty("InstructionIdentification") String instructionIdentification, @JsonProperty("RequestedExecutionDateTime") OffsetDateTime requestedExecutionDateTime) {
+        this.creditorAccount = creditorAccount;
+        this.instructedAmount = instructedAmount;
+        this.instructionIdentification = instructionIdentification;
+        this.requestedExecutionDateTime = requestedExecutionDateTime;
+  }
 }

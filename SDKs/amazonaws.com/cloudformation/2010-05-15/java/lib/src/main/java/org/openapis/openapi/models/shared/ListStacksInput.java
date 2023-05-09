@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListStacksInput {
     
     public String nextToken;
+
     public ListStacksInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class ListStacksInput {
     
     
     public StackStatusEnum[] stackStatusFilter;
+
     public ListStacksInput withStackStatusFilter(StackStatusEnum[] stackStatusFilter) {
         this.stackStatusFilter = stackStatusFilter;
         return this;
     }
     
+    public ListStacksInput(){}
 }

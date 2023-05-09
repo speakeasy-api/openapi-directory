@@ -15,6 +15,7 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataPipelineId")
     public String dataPipelineId;
+
     public RDSMetadata withDataPipelineId(String dataPipelineId) {
         this.dataPipelineId = dataPipelineId;
         return this;
@@ -23,6 +24,7 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public RDSDatabase database;
+
     public RDSMetadata withDatabase(RDSDatabase database) {
         this.database = database;
         return this;
@@ -34,6 +36,7 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseUserName")
     public String databaseUserName;
+
     public RDSMetadata withDatabaseUserName(String databaseUserName) {
         this.databaseUserName = databaseUserName;
         return this;
@@ -42,6 +45,7 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceRole")
     public String resourceRole;
+
     public RDSMetadata withResourceRole(String resourceRole) {
         this.resourceRole = resourceRole;
         return this;
@@ -50,6 +54,7 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelectSqlQuery")
     public String selectSqlQuery;
+
     public RDSMetadata withSelectSqlQuery(String selectSqlQuery) {
         this.selectSqlQuery = selectSqlQuery;
         return this;
@@ -58,9 +63,11 @@ public class RDSMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public RDSMetadata withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
     }
     
+    public RDSMetadata(){}
 }

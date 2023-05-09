@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSubscriptionResponse {
@@ -12,6 +13,7 @@ public class GetSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetSubscriptionResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetSubscriptionResponse {
     
     
     public String contentType;
+
     public GetSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public GetSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage;
+
     public GetSubscriptionResponse withErrorResponseMessage(org.openapis.openapi.models.shared.ErrorResponseMessage errorResponseMessage) {
         this.errorResponseMessage = errorResponseMessage;
         return this;
@@ -53,9 +59,14 @@ public class GetSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.SubscriptionIndex subscriptionIndex;
+
     public GetSubscriptionResponse withSubscriptionIndex(org.openapis.openapi.models.shared.SubscriptionIndex subscriptionIndex) {
         this.subscriptionIndex = subscriptionIndex;
         return this;
     }
     
+    public GetSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

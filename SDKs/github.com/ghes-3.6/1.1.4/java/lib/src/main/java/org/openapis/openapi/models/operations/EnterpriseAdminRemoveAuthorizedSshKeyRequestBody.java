@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminRemoveAuthorizedSshKeyRequestBody {
@@ -12,9 +13,13 @@ public class EnterpriseAdminRemoveAuthorizedSshKeyRequestBody {
      */
     @SpeakeasyMetadata("form:name=authorized_key")
     public String authorizedKey;
+
     public EnterpriseAdminRemoveAuthorizedSshKeyRequestBody withAuthorizedKey(String authorizedKey) {
         this.authorizedKey = authorizedKey;
         return this;
     }
     
+    public EnterpriseAdminRemoveAuthorizedSshKeyRequestBody(@JsonProperty("authorized_key") String authorizedKey) {
+        this.authorizedKey = authorizedKey;
+  }
 }

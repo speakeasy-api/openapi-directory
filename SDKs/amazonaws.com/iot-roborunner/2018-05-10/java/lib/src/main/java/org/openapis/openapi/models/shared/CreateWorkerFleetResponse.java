@@ -20,6 +20,7 @@ public class CreateWorkerFleetResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public CreateWorkerFleetResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -32,6 +33,7 @@ public class CreateWorkerFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateWorkerFleetResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class CreateWorkerFleetResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateWorkerFleetResponse withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +57,16 @@ public class CreateWorkerFleetResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public CreateWorkerFleetResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateWorkerFleetResponse(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.updatedAt = updatedAt;
+  }
 }

@@ -15,6 +15,7 @@ public class ValueMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayValue")
     public FormInputValueProperty displayValue;
+
     public ValueMapping withDisplayValue(FormInputValueProperty displayValue) {
         this.displayValue = displayValue;
         return this;
@@ -22,9 +23,13 @@ public class ValueMapping {
     
     @JsonProperty("value")
     public FormInputValueProperty value;
+
     public ValueMapping withValue(FormInputValueProperty value) {
         this.value = value;
         return this;
     }
     
+    public ValueMapping(@JsonProperty("value") FormInputValueProperty value) {
+        this.value = value;
+  }
 }

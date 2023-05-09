@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDimensionValuesResponse {
@@ -12,6 +13,7 @@ public class GetDimensionValuesResponse {
      */
     
     public Object billExpirationException;
+
     public GetDimensionValuesResponse withBillExpirationException(Object billExpirationException) {
         this.billExpirationException = billExpirationException;
         return this;
@@ -19,6 +21,7 @@ public class GetDimensionValuesResponse {
     
     
     public String contentType;
+
     public GetDimensionValuesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDimensionValuesResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetDimensionValuesResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -39,6 +43,7 @@ public class GetDimensionValuesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDimensionValuesResponse getDimensionValuesResponse;
+
     public GetDimensionValuesResponse withGetDimensionValuesResponse(org.openapis.openapi.models.shared.GetDimensionValuesResponse getDimensionValuesResponse) {
         this.getDimensionValuesResponse = getDimensionValuesResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDimensionValuesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public GetDimensionValuesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GetDimensionValuesResponse {
      */
     
     public Object limitExceededException;
+
     public GetDimensionValuesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class GetDimensionValuesResponse {
      */
     
     public Object requestChangedException;
+
     public GetDimensionValuesResponse withRequestChangedException(Object requestChangedException) {
         this.requestChangedException = requestChangedException;
         return this;
@@ -76,6 +84,7 @@ public class GetDimensionValuesResponse {
     
     
     public Integer statusCode;
+
     public GetDimensionValuesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetDimensionValuesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDimensionValuesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDimensionValuesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

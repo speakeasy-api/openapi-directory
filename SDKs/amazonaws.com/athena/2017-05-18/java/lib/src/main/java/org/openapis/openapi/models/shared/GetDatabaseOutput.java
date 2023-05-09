@@ -15,9 +15,11 @@ public class GetDatabaseOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Database")
     public Database database;
+
     public GetDatabaseOutput withDatabase(Database database) {
         this.database = database;
         return this;
     }
     
+    public GetDatabaseOutput(){}
 }

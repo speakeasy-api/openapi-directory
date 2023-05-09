@@ -15,6 +15,7 @@ public class AttachmentInput {
      */
     
     public ActorInput creator;
+
     public AttachmentInput withCreator(ActorInput creator) {
         this.creator = creator;
         return this;
@@ -25,9 +26,11 @@ public class AttachmentInput {
      */
     
     public String filename;
+
     public AttachmentInput withFilename(String filename) {
         this.filename = filename;
         return this;
     }
     
+    public AttachmentInput(){}
 }

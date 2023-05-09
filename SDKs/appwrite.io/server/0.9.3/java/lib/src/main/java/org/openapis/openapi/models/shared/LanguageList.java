@@ -15,6 +15,7 @@ public class LanguageList {
      */
     @JsonProperty("languages")
     public Language[] languages;
+
     public LanguageList withLanguages(Language[] languages) {
         this.languages = languages;
         return this;
@@ -25,9 +26,14 @@ public class LanguageList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public LanguageList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public LanguageList(@JsonProperty("languages") Language[] languages, @JsonProperty("sum") Integer sum) {
+        this.languages = languages;
+        this.sum = sum;
+  }
 }

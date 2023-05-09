@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListStreamSessionsResponse {
@@ -12,6 +13,7 @@ public class ListStreamSessionsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListStreamSessionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListStreamSessionsResponse {
     
     
     public String contentType;
+
     public ListStreamSessionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListStreamSessionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListStreamSessionsResponse listStreamSessionsResponse;
+
     public ListStreamSessionsResponse withListStreamSessionsResponse(org.openapis.openapi.models.shared.ListStreamSessionsResponse listStreamSessionsResponse) {
         this.listStreamSessionsResponse = listStreamSessionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListStreamSessionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListStreamSessionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListStreamSessionsResponse {
     
     
     public Integer statusCode;
+
     public ListStreamSessionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListStreamSessionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListStreamSessionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class ListStreamSessionsResponse {
      */
     
     public Object validationException;
+
     public ListStreamSessionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListStreamSessionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

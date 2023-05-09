@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SafebrowsingEncodedUpdatesGetResponse {
     
     public String contentType;
+
     public SafebrowsingEncodedUpdatesGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SafebrowsingEncodedUpdatesGetResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;
+
     public SafebrowsingEncodedUpdatesGetResponse withGoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse(org.openapis.openapi.models.shared.GoogleSecuritySafebrowsingV4FetchThreatListUpdatesResponse googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse) {
         this.googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse = googleSecuritySafebrowsingV4FetchThreatListUpdatesResponse;
         return this;
@@ -26,6 +29,7 @@ public class SafebrowsingEncodedUpdatesGetResponse {
     
     
     public Integer statusCode;
+
     public SafebrowsingEncodedUpdatesGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SafebrowsingEncodedUpdatesGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SafebrowsingEncodedUpdatesGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SafebrowsingEncodedUpdatesGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

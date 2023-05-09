@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateWebACLResponse {
@@ -12,6 +13,7 @@ public class AssociateWebACLResponse {
      */
     
     public java.util.Map<String, Object> associateWebACLResponse;
+
     public AssociateWebACLResponse withAssociateWebACLResponse(java.util.Map<String, Object> associateWebACLResponse) {
         this.associateWebACLResponse = associateWebACLResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateWebACLResponse {
     
     
     public String contentType;
+
     public AssociateWebACLResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class AssociateWebACLResponse {
     
     
     public Integer statusCode;
+
     public AssociateWebACLResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class AssociateWebACLResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateWebACLResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class AssociateWebACLResponse {
      */
     
     public Object wafInternalErrorException;
+
     public AssociateWebACLResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class AssociateWebACLResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public AssociateWebACLResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,6 +70,7 @@ public class AssociateWebACLResponse {
      */
     
     public Object wafInvalidParameterException;
+
     public AssociateWebACLResponse withWAFInvalidParameterException(Object wafInvalidParameterException) {
         this.wafInvalidParameterException = wafInvalidParameterException;
         return this;
@@ -73,6 +81,7 @@ public class AssociateWebACLResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public AssociateWebACLResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
@@ -83,9 +92,14 @@ public class AssociateWebACLResponse {
      */
     
     public Object wafUnavailableEntityException;
+
     public AssociateWebACLResponse withWAFUnavailableEntityException(Object wafUnavailableEntityException) {
         this.wafUnavailableEntityException = wafUnavailableEntityException;
         return this;
     }
     
+    public AssociateWebACLResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

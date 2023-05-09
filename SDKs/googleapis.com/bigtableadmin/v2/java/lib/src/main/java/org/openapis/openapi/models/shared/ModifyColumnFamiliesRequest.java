@@ -18,9 +18,11 @@ public class ModifyColumnFamiliesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modifications")
     public Modification[] modifications;
+
     public ModifyColumnFamiliesRequest withModifications(Modification[] modifications) {
         this.modifications = modifications;
         return this;
     }
     
+    public ModifyColumnFamiliesRequest(){}
 }

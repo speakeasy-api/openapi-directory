@@ -15,6 +15,7 @@ public class PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Long index;
+
     public PathElement withIndex(Long index) {
         this.index = index;
         return this;
@@ -23,6 +24,7 @@ public class PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PathElement withKey(String key) {
         this.key = key;
         return this;
@@ -31,6 +33,7 @@ public class PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("substring")
     public Substring substring;
+
     public PathElement withSubstring(Substring substring) {
         this.substring = substring;
         return this;
@@ -39,9 +42,11 @@ public class PathElement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public PathElement withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public PathElement(){}
 }

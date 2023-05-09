@@ -12,6 +12,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlgorithmArn")
     public String algorithmArn;
+
     public CreatePredictorRequest withAlgorithmArn(String algorithmArn) {
         this.algorithmArn = algorithmArn;
         return this;
@@ -20,6 +21,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoMLOverrideStrategy")
     public AutoMLOverrideStrategyEnum autoMLOverrideStrategy;
+
     public CreatePredictorRequest withAutoMLOverrideStrategy(AutoMLOverrideStrategyEnum autoMLOverrideStrategy) {
         this.autoMLOverrideStrategy = autoMLOverrideStrategy;
         return this;
@@ -28,6 +30,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionConfig")
     public EncryptionConfig encryptionConfig;
+
     public CreatePredictorRequest withEncryptionConfig(EncryptionConfig encryptionConfig) {
         this.encryptionConfig = encryptionConfig;
         return this;
@@ -36,6 +39,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationParameters")
     public EvaluationParameters evaluationParameters;
+
     public CreatePredictorRequest withEvaluationParameters(EvaluationParameters evaluationParameters) {
         this.evaluationParameters = evaluationParameters;
         return this;
@@ -43,6 +47,7 @@ public class CreatePredictorRequest {
     
     @JsonProperty("FeaturizationConfig")
     public FeaturizationConfig featurizationConfig;
+
     public CreatePredictorRequest withFeaturizationConfig(FeaturizationConfig featurizationConfig) {
         this.featurizationConfig = featurizationConfig;
         return this;
@@ -50,6 +55,7 @@ public class CreatePredictorRequest {
     
     @JsonProperty("ForecastHorizon")
     public Long forecastHorizon;
+
     public CreatePredictorRequest withForecastHorizon(Long forecastHorizon) {
         this.forecastHorizon = forecastHorizon;
         return this;
@@ -58,6 +64,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForecastTypes")
     public String[] forecastTypes;
+
     public CreatePredictorRequest withForecastTypes(String[] forecastTypes) {
         this.forecastTypes = forecastTypes;
         return this;
@@ -66,6 +73,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HPOConfig")
     public HyperParameterTuningJobConfig hpoConfig;
+
     public CreatePredictorRequest withHPOConfig(HyperParameterTuningJobConfig hpoConfig) {
         this.hpoConfig = hpoConfig;
         return this;
@@ -73,6 +81,7 @@ public class CreatePredictorRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public CreatePredictorRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -81,6 +90,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptimizationMetric")
     public OptimizationMetricEnum optimizationMetric;
+
     public CreatePredictorRequest withOptimizationMetric(OptimizationMetricEnum optimizationMetric) {
         this.optimizationMetric = optimizationMetric;
         return this;
@@ -89,6 +99,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformAutoML")
     public Boolean performAutoML;
+
     public CreatePredictorRequest withPerformAutoML(Boolean performAutoML) {
         this.performAutoML = performAutoML;
         return this;
@@ -97,6 +108,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PerformHPO")
     public Boolean performHPO;
+
     public CreatePredictorRequest withPerformHPO(Boolean performHPO) {
         this.performHPO = performHPO;
         return this;
@@ -104,6 +116,7 @@ public class CreatePredictorRequest {
     
     @JsonProperty("PredictorName")
     public String predictorName;
+
     public CreatePredictorRequest withPredictorName(String predictorName) {
         this.predictorName = predictorName;
         return this;
@@ -112,6 +125,7 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreatePredictorRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -120,9 +134,16 @@ public class CreatePredictorRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TrainingParameters")
     public java.util.Map<String, String> trainingParameters;
+
     public CreatePredictorRequest withTrainingParameters(java.util.Map<String, String> trainingParameters) {
         this.trainingParameters = trainingParameters;
         return this;
     }
     
+    public CreatePredictorRequest(@JsonProperty("FeaturizationConfig") FeaturizationConfig featurizationConfig, @JsonProperty("ForecastHorizon") Long forecastHorizon, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("PredictorName") String predictorName) {
+        this.featurizationConfig = featurizationConfig;
+        this.forecastHorizon = forecastHorizon;
+        this.inputDataConfig = inputDataConfig;
+        this.predictorName = predictorName;
+  }
 }

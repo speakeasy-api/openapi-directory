@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFacesRequest {
     @JsonProperty("CollectionId")
     public String collectionId;
+
     public ListFacesRequest withCollectionId(String collectionId) {
         this.collectionId = collectionId;
         return this;
@@ -19,6 +20,7 @@ public class ListFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListFacesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListFacesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFacesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFacesRequest(@JsonProperty("CollectionId") String collectionId) {
+        this.collectionId = collectionId;
+  }
 }

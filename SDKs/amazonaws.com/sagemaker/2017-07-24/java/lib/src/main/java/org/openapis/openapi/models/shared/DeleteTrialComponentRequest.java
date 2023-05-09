@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteTrialComponentRequest {
     @JsonProperty("TrialComponentName")
     public String trialComponentName;
+
     public DeleteTrialComponentRequest withTrialComponentName(String trialComponentName) {
         this.trialComponentName = trialComponentName;
         return this;
     }
     
+    public DeleteTrialComponentRequest(@JsonProperty("TrialComponentName") String trialComponentName) {
+        this.trialComponentName = trialComponentName;
+  }
 }

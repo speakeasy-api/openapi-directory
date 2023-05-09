@@ -15,6 +15,7 @@ public class SplunkDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLoggingOptions")
     public CloudWatchLoggingOptions cloudWatchLoggingOptions;
+
     public SplunkDestinationConfiguration withCloudWatchLoggingOptions(CloudWatchLoggingOptions cloudWatchLoggingOptions) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         return this;
@@ -23,6 +24,7 @@ public class SplunkDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HECAcknowledgmentTimeoutInSeconds")
     public Long hecAcknowledgmentTimeoutInSeconds;
+
     public SplunkDestinationConfiguration withHECAcknowledgmentTimeoutInSeconds(Long hecAcknowledgmentTimeoutInSeconds) {
         this.hecAcknowledgmentTimeoutInSeconds = hecAcknowledgmentTimeoutInSeconds;
         return this;
@@ -30,6 +32,7 @@ public class SplunkDestinationConfiguration {
     
     @JsonProperty("HECEndpoint")
     public String hecEndpoint;
+
     public SplunkDestinationConfiguration withHECEndpoint(String hecEndpoint) {
         this.hecEndpoint = hecEndpoint;
         return this;
@@ -37,6 +40,7 @@ public class SplunkDestinationConfiguration {
     
     @JsonProperty("HECEndpointType")
     public HECEndpointTypeEnum hecEndpointType;
+
     public SplunkDestinationConfiguration withHECEndpointType(HECEndpointTypeEnum hecEndpointType) {
         this.hecEndpointType = hecEndpointType;
         return this;
@@ -44,6 +48,7 @@ public class SplunkDestinationConfiguration {
     
     @JsonProperty("HECToken")
     public String hecToken;
+
     public SplunkDestinationConfiguration withHECToken(String hecToken) {
         this.hecToken = hecToken;
         return this;
@@ -52,6 +57,7 @@ public class SplunkDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProcessingConfiguration")
     public ProcessingConfiguration processingConfiguration;
+
     public SplunkDestinationConfiguration withProcessingConfiguration(ProcessingConfiguration processingConfiguration) {
         this.processingConfiguration = processingConfiguration;
         return this;
@@ -60,6 +66,7 @@ public class SplunkDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RetryOptions")
     public SplunkRetryOptions retryOptions;
+
     public SplunkDestinationConfiguration withRetryOptions(SplunkRetryOptions retryOptions) {
         this.retryOptions = retryOptions;
         return this;
@@ -68,6 +75,7 @@ public class SplunkDestinationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3BackupMode")
     public SplunkS3BackupModeEnum s3BackupMode;
+
     public SplunkDestinationConfiguration withS3BackupMode(SplunkS3BackupModeEnum s3BackupMode) {
         this.s3BackupMode = s3BackupMode;
         return this;
@@ -75,9 +83,16 @@ public class SplunkDestinationConfiguration {
     
     @JsonProperty("S3Configuration")
     public S3DestinationConfiguration s3Configuration;
+
     public SplunkDestinationConfiguration withS3Configuration(S3DestinationConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
     }
     
+    public SplunkDestinationConfiguration(@JsonProperty("HECEndpoint") String hecEndpoint, @JsonProperty("HECEndpointType") HECEndpointTypeEnum hecEndpointType, @JsonProperty("HECToken") String hecToken, @JsonProperty("S3Configuration") S3DestinationConfiguration s3Configuration) {
+        this.hecEndpoint = hecEndpoint;
+        this.hecEndpointType = hecEndpointType;
+        this.hecToken = hecToken;
+        this.s3Configuration = s3Configuration;
+  }
 }

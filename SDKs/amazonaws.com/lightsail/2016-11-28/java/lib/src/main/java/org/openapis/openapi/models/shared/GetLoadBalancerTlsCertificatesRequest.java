@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetLoadBalancerTlsCertificatesRequest {
     @JsonProperty("loadBalancerName")
     public String loadBalancerName;
+
     public GetLoadBalancerTlsCertificatesRequest withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public GetLoadBalancerTlsCertificatesRequest(@JsonProperty("loadBalancerName") String loadBalancerName) {
+        this.loadBalancerName = loadBalancerName;
+  }
 }

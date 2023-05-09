@@ -20,6 +20,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buyer_workgroup")
     public WorkgroupBaseVO buyerWorkgroup;
+
     public OrderWorkgroupLevelSimpleVO withBuyerWorkgroup(WorkgroupBaseVO buyerWorkgroup) {
         this.buyerWorkgroup = buyerWorkgroup;
         return this;
@@ -28,6 +29,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("change_orders")
     public OrderSimpleBaseVO[] changeOrders;
+
     public OrderWorkgroupLevelSimpleVO withChangeOrders(OrderSimpleBaseVO[] changeOrders) {
         this.changeOrders = changeOrders;
         return this;
@@ -36,6 +38,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closing_change_orders")
     public OrderSimpleBaseVO[] closingChangeOrders;
+
     public OrderWorkgroupLevelSimpleVO withClosingChangeOrders(OrderSimpleBaseVO[] closingChangeOrders) {
         this.closingChangeOrders = closingChangeOrders;
         return this;
@@ -44,6 +47,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public OrderWorkgroupLevelSimpleVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -53,6 +57,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public OrderWorkgroupLevelSimpleVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -61,6 +66,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public OrderWorkgroupLevelSimpleVO withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -72,6 +78,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total")
     public Object grandTotal;
+
     public OrderWorkgroupLevelSimpleVO withGrandTotal(Object grandTotal) {
         this.grandTotal = grandTotal;
         return this;
@@ -83,6 +90,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("grand_total_with_changes")
     public Object grandTotalWithChanges;
+
     public OrderWorkgroupLevelSimpleVO withGrandTotalWithChanges(Object grandTotalWithChanges) {
         this.grandTotalWithChanges = grandTotalWithChanges;
         return this;
@@ -92,6 +100,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_changed")
     public LocalDate lastChanged;
+
     public OrderWorkgroupLevelSimpleVO withLastChanged(LocalDate lastChanged) {
         this.lastChanged = lastChanged;
         return this;
@@ -101,6 +110,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("last_status_change")
     public LocalDate lastStatusChange;
+
     public OrderWorkgroupLevelSimpleVO withLastStatusChange(LocalDate lastStatusChange) {
         this.lastStatusChange = lastStatusChange;
         return this;
@@ -109,6 +119,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public Long orderId;
+
     public OrderWorkgroupLevelSimpleVO withOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
@@ -117,6 +128,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_number")
     public String orderNumber;
+
     public OrderWorkgroupLevelSimpleVO withOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
@@ -125,6 +137,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_title")
     public String orderTitle;
+
     public OrderWorkgroupLevelSimpleVO withOrderTitle(String orderTitle) {
         this.orderTitle = orderTitle;
         return this;
@@ -133,6 +146,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_reference")
     public String paymentReference;
+
     public OrderWorkgroupLevelSimpleVO withPaymentReference(String paymentReference) {
         this.paymentReference = paymentReference;
         return this;
@@ -141,6 +155,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("print_order_ids")
     public Long[] printOrderIds;
+
     public OrderWorkgroupLevelSimpleVO withPrintOrderIds(Long[] printOrderIds) {
         this.printOrderIds = printOrderIds;
         return this;
@@ -152,6 +167,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public ProjectBaseVO project;
+
     public OrderWorkgroupLevelSimpleVO withProject(ProjectBaseVO project) {
         this.project = project;
         return this;
@@ -160,6 +176,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public OrderWorkgroupLevelSimpleVO withStatus(String status) {
         this.status = status;
         return this;
@@ -168,6 +185,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_comments")
     public String statusComments;
+
     public OrderWorkgroupLevelSimpleVO withStatusComments(String statusComments) {
         this.statusComments = statusComments;
         return this;
@@ -176,6 +194,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_reference")
     public String supplierReference;
+
     public OrderWorkgroupLevelSimpleVO withSupplierReference(String supplierReference) {
         this.supplierReference = supplierReference;
         return this;
@@ -187,6 +206,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supplier_workgroup")
     public WorkgroupBaseVO supplierWorkgroup;
+
     public OrderWorkgroupLevelSimpleVO withSupplierWorkgroup(WorkgroupBaseVO supplierWorkgroup) {
         this.supplierWorkgroup = supplierWorkgroup;
         return this;
@@ -195,6 +215,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_currency")
     public String transactionalCurrency;
+
     public OrderWorkgroupLevelSimpleVO withTransactionalCurrency(String transactionalCurrency) {
         this.transactionalCurrency = transactionalCurrency;
         return this;
@@ -206,6 +227,7 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total")
     public Object transactionalGrandTotal;
+
     public OrderWorkgroupLevelSimpleVO withTransactionalGrandTotal(Object transactionalGrandTotal) {
         this.transactionalGrandTotal = transactionalGrandTotal;
         return this;
@@ -217,9 +239,11 @@ public class OrderWorkgroupLevelSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactional_grand_total_with_changes")
     public Object transactionalGrandTotalWithChanges;
+
     public OrderWorkgroupLevelSimpleVO withTransactionalGrandTotalWithChanges(Object transactionalGrandTotalWithChanges) {
         this.transactionalGrandTotalWithChanges = transactionalGrandTotalWithChanges;
         return this;
     }
     
+    public OrderWorkgroupLevelSimpleVO(){}
 }

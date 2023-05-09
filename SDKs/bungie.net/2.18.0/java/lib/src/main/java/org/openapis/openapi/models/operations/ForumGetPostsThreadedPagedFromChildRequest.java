@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ForumGetPostsThreadedPagedFromChildRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=childPostId")
     public Long childPostId;
+
     public ForumGetPostsThreadedPagedFromChildRequest withChildPostId(Long childPostId) {
         this.childPostId = childPostId;
         return this;
@@ -16,6 +18,7 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=page")
     public Integer page;
+
     public ForumGetPostsThreadedPagedFromChildRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -23,6 +26,7 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pageSize")
     public Integer pageSize;
+
     public ForumGetPostsThreadedPagedFromChildRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -30,6 +34,7 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=replySize")
     public Integer replySize;
+
     public ForumGetPostsThreadedPagedFromChildRequest withReplySize(Integer replySize) {
         this.replySize = replySize;
         return this;
@@ -37,6 +42,7 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rootThreadMode")
     public Boolean rootThreadMode;
+
     public ForumGetPostsThreadedPagedFromChildRequest withRootThreadMode(Boolean rootThreadMode) {
         this.rootThreadMode = rootThreadMode;
         return this;
@@ -47,6 +53,7 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=showbanned")
     public String showbanned;
+
     public ForumGetPostsThreadedPagedFromChildRequest withShowbanned(String showbanned) {
         this.showbanned = showbanned;
         return this;
@@ -54,9 +61,18 @@ public class ForumGetPostsThreadedPagedFromChildRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sortMode")
     public Integer sortMode;
+
     public ForumGetPostsThreadedPagedFromChildRequest withSortMode(Integer sortMode) {
         this.sortMode = sortMode;
         return this;
     }
     
+    public ForumGetPostsThreadedPagedFromChildRequest(@JsonProperty("childPostId") Long childPostId, @JsonProperty("page") Integer page, @JsonProperty("pageSize") Integer pageSize, @JsonProperty("replySize") Integer replySize, @JsonProperty("rootThreadMode") Boolean rootThreadMode, @JsonProperty("sortMode") Integer sortMode) {
+        this.childPostId = childPostId;
+        this.page = page;
+        this.pageSize = pageSize;
+        this.replySize = replySize;
+        this.rootThreadMode = rootThreadMode;
+        this.sortMode = sortMode;
+  }
 }

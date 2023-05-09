@@ -15,6 +15,7 @@ public class TrendingTrendingEntry {
      */
     
     public OffsetDateTime creationDate;
+
     public TrendingTrendingEntry withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -25,6 +26,7 @@ public class TrendingTrendingEntry {
      */
     
     public String displayName;
+
     public TrendingTrendingEntry withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -32,6 +34,7 @@ public class TrendingTrendingEntry {
     
     
     public OffsetDateTime endDate;
+
     public TrendingTrendingEntry withEndDate(OffsetDateTime endDate) {
         this.endDate = endDate;
         return this;
@@ -42,6 +45,7 @@ public class TrendingTrendingEntry {
      */
     
     public Integer entityType;
+
     public TrendingTrendingEntry withEntityType(Integer entityType) {
         this.entityType = entityType;
         return this;
@@ -52,6 +56,7 @@ public class TrendingTrendingEntry {
      */
     
     public String featureImage;
+
     public TrendingTrendingEntry withFeatureImage(String featureImage) {
         this.featureImage = featureImage;
         return this;
@@ -62,6 +67,7 @@ public class TrendingTrendingEntry {
      */
     
     public String identifier;
+
     public TrendingTrendingEntry withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -69,6 +75,7 @@ public class TrendingTrendingEntry {
     
     
     public String image;
+
     public TrendingTrendingEntry withImage(String image) {
         this.image = image;
         return this;
@@ -76,6 +83,7 @@ public class TrendingTrendingEntry {
     
     
     public Boolean isFeatured;
+
     public TrendingTrendingEntry withIsFeatured(Boolean isFeatured) {
         this.isFeatured = isFeatured;
         return this;
@@ -86,6 +94,7 @@ public class TrendingTrendingEntry {
      */
     
     public TrendingTrendingEntry[] items;
+
     public TrendingTrendingEntry withItems(TrendingTrendingEntry[] items) {
         this.items = items;
         return this;
@@ -93,6 +102,7 @@ public class TrendingTrendingEntry {
     
     
     public String link;
+
     public TrendingTrendingEntry withLink(String link) {
         this.link = link;
         return this;
@@ -103,6 +113,7 @@ public class TrendingTrendingEntry {
      */
     
     public String mp4Video;
+
     public TrendingTrendingEntry withMp4Video(String mp4Video) {
         this.mp4Video = mp4Video;
         return this;
@@ -110,6 +121,7 @@ public class TrendingTrendingEntry {
     
     
     public OffsetDateTime startDate;
+
     public TrendingTrendingEntry withStartDate(OffsetDateTime startDate) {
         this.startDate = startDate;
         return this;
@@ -120,6 +132,7 @@ public class TrendingTrendingEntry {
      */
     
     public String tagline;
+
     public TrendingTrendingEntry withTagline(String tagline) {
         this.tagline = tagline;
         return this;
@@ -130,6 +143,7 @@ public class TrendingTrendingEntry {
      */
     
     public String webmVideo;
+
     public TrendingTrendingEntry withWebmVideo(String webmVideo) {
         this.webmVideo = webmVideo;
         return this;
@@ -140,9 +154,11 @@ public class TrendingTrendingEntry {
      */
     
     public Double weight;
+
     public TrendingTrendingEntry withWeight(Double weight) {
         this.weight = weight;
         return this;
     }
     
+    public TrendingTrendingEntry(){}
 }

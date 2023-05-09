@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeFindingsRequest {
     @JsonProperty("findingArns")
     public String[] findingArns;
+
     public DescribeFindingsRequest withFindingArns(String[] findingArns) {
         this.findingArns = findingArns;
         return this;
@@ -19,9 +20,13 @@ public class DescribeFindingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public LocaleEnum locale;
+
     public DescribeFindingsRequest withLocale(LocaleEnum locale) {
         this.locale = locale;
         return this;
     }
     
+    public DescribeFindingsRequest(@JsonProperty("findingArns") String[] findingArns) {
+        this.findingArns = findingArns;
+  }
 }

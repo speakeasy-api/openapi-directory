@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSetupV1AppointmentsIdReassignResourceResourceIdRequest {
@@ -12,6 +13,7 @@ public class PutSetupV1AppointmentsIdReassignResourceResourceIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +24,14 @@ public class PutSetupV1AppointmentsIdReassignResourceResourceIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resourceId")
     public String resourceId;
+
     public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public PutSetupV1AppointmentsIdReassignResourceResourceIdRequest(@JsonProperty("id") String id, @JsonProperty("resourceId") String resourceId) {
+        this.id = id;
+        this.resourceId = resourceId;
+  }
 }

@@ -20,6 +20,7 @@ public class StageDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentAction")
     public DeploymentActionEnum deploymentAction;
+
     public StageDeploymentSummary withDeploymentAction(DeploymentActionEnum deploymentAction) {
         this.deploymentAction = deploymentAction;
         return this;
@@ -28,6 +29,7 @@ public class StageDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentId")
     public String deploymentId;
+
     public StageDeploymentSummary withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -36,6 +38,7 @@ public class StageDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentResult")
     public DeploymentResult deploymentResult;
+
     public StageDeploymentSummary withDeploymentResult(DeploymentResult deploymentResult) {
         this.deploymentResult = deploymentResult;
         return this;
@@ -44,6 +47,7 @@ public class StageDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeploymentState")
     public DeploymentStateEnum deploymentState;
+
     public StageDeploymentSummary withDeploymentState(DeploymentStateEnum deploymentState) {
         this.deploymentState = deploymentState;
         return this;
@@ -54,6 +58,7 @@ public class StageDeploymentSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdated")
     public OffsetDateTime lastUpdated;
+
     public StageDeploymentSummary withLastUpdated(OffsetDateTime lastUpdated) {
         this.lastUpdated = lastUpdated;
         return this;
@@ -62,9 +67,11 @@ public class StageDeploymentSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public StageDeploymentSummary withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
     }
     
+    public StageDeploymentSummary(){}
 }

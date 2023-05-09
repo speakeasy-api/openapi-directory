@@ -12,6 +12,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("count")
     public Long count;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("hasInterestRate")
     public Boolean hasInterestRate;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withHasInterestRate(Boolean hasInterestRate) {
         this.hasInterestRate = hasInterestRate;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("interestRate")
     public Long interestRate;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withInterestRate(Long interestRate) {
         this.interestRate = interestRate;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("sellerMerchantInstallments")
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments[] sellerMerchantInstallments;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withSellerMerchantInstallments(ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments[] sellerMerchantInstallments) {
         this.sellerMerchantInstallments = sellerMerchantInstallments;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("total")
     public Long total;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withTotal(Long total) {
         this.total = total;
         return this;
@@ -62,9 +67,18 @@ public class ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialO
      */
     @JsonProperty("value")
     public Long value;
+
     public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallments(@JsonProperty("count") Long count, @JsonProperty("hasInterestRate") Boolean hasInterestRate, @JsonProperty("interestRate") Long interestRate, @JsonProperty("sellerMerchantInstallments") ProductSearchWhoSawAlsoSaw200ApplicationJSONItemsSellersCommertialOfferPaymentOptionsInstallmentOptionsInstallmentsSellerMerchantInstallments[] sellerMerchantInstallments, @JsonProperty("total") Long total, @JsonProperty("value") Long value) {
+        this.count = count;
+        this.hasInterestRate = hasInterestRate;
+        this.interestRate = interestRate;
+        this.sellerMerchantInstallments = sellerMerchantInstallments;
+        this.total = total;
+        this.value = value;
+  }
 }

@@ -15,6 +15,7 @@ public class LambdaFunctionCompletedEventAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public LambdaFunctionCompletedEventAttributes withResult(String result) {
         this.result = result;
         return this;
@@ -22,6 +23,7 @@ public class LambdaFunctionCompletedEventAttributes {
     
     @JsonProperty("scheduledEventId")
     public Long scheduledEventId;
+
     public LambdaFunctionCompletedEventAttributes withScheduledEventId(Long scheduledEventId) {
         this.scheduledEventId = scheduledEventId;
         return this;
@@ -29,9 +31,14 @@ public class LambdaFunctionCompletedEventAttributes {
     
     @JsonProperty("startedEventId")
     public Long startedEventId;
+
     public LambdaFunctionCompletedEventAttributes withStartedEventId(Long startedEventId) {
         this.startedEventId = startedEventId;
         return this;
     }
     
+    public LambdaFunctionCompletedEventAttributes(@JsonProperty("scheduledEventId") Long scheduledEventId, @JsonProperty("startedEventId") Long startedEventId) {
+        this.scheduledEventId = scheduledEventId;
+        this.startedEventId = startedEventId;
+  }
 }

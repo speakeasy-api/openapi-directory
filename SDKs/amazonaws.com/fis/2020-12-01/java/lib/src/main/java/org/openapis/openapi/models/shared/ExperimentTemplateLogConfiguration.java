@@ -15,6 +15,7 @@ public class ExperimentTemplateLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudWatchLogsConfiguration")
     public ExperimentTemplateCloudWatchLogsLogConfiguration cloudWatchLogsConfiguration;
+
     public ExperimentTemplateLogConfiguration withCloudWatchLogsConfiguration(ExperimentTemplateCloudWatchLogsLogConfiguration cloudWatchLogsConfiguration) {
         this.cloudWatchLogsConfiguration = cloudWatchLogsConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ExperimentTemplateLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logSchemaVersion")
     public Long logSchemaVersion;
+
     public ExperimentTemplateLogConfiguration withLogSchemaVersion(Long logSchemaVersion) {
         this.logSchemaVersion = logSchemaVersion;
         return this;
@@ -31,9 +33,11 @@ public class ExperimentTemplateLogConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Configuration")
     public ExperimentTemplateS3LogConfiguration s3Configuration;
+
     public ExperimentTemplateLogConfiguration withS3Configuration(ExperimentTemplateS3LogConfiguration s3Configuration) {
         this.s3Configuration = s3Configuration;
         return this;
     }
     
+    public ExperimentTemplateLogConfiguration(){}
 }

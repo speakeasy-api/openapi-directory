@@ -15,9 +15,13 @@ public class DeleteCampaignResponse {
      */
     @JsonProperty("CampaignResponse")
     public CampaignResponse campaignResponse;
+
     public DeleteCampaignResponse withCampaignResponse(CampaignResponse campaignResponse) {
         this.campaignResponse = campaignResponse;
         return this;
     }
     
+    public DeleteCampaignResponse(@JsonProperty("CampaignResponse") CampaignResponse campaignResponse) {
+        this.campaignResponse = campaignResponse;
+  }
 }

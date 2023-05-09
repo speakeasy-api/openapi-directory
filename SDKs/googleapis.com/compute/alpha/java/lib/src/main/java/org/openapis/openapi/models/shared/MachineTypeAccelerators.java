@@ -15,6 +15,7 @@ public class MachineTypeAccelerators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAcceleratorCount")
     public Integer guestAcceleratorCount;
+
     public MachineTypeAccelerators withGuestAcceleratorCount(Integer guestAcceleratorCount) {
         this.guestAcceleratorCount = guestAcceleratorCount;
         return this;
@@ -26,9 +27,11 @@ public class MachineTypeAccelerators {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestAcceleratorType")
     public String guestAcceleratorType;
+
     public MachineTypeAccelerators withGuestAcceleratorType(String guestAcceleratorType) {
         this.guestAcceleratorType = guestAcceleratorType;
         return this;
     }
     
+    public MachineTypeAccelerators(){}
 }

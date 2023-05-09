@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LocationAction {
     @JsonProperty("deviceId")
     public String deviceId;
+
     public LocationAction withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -21,6 +22,7 @@ public class LocationAction {
     
     @JsonProperty("latitude")
     public String latitude;
+
     public LocationAction withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -28,6 +30,7 @@ public class LocationAction {
     
     @JsonProperty("longitude")
     public String longitude;
+
     public LocationAction withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
@@ -35,6 +38,7 @@ public class LocationAction {
     
     @JsonProperty("roleArn")
     public String roleArn;
+
     public LocationAction withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -43,6 +47,7 @@ public class LocationAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestamp")
     public LocationTimestamp timestamp;
+
     public LocationAction withTimestamp(LocationTimestamp timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -50,9 +55,17 @@ public class LocationAction {
     
     @JsonProperty("trackerName")
     public String trackerName;
+
     public LocationAction withTrackerName(String trackerName) {
         this.trackerName = trackerName;
         return this;
     }
     
+    public LocationAction(@JsonProperty("deviceId") String deviceId, @JsonProperty("latitude") String latitude, @JsonProperty("longitude") String longitude, @JsonProperty("roleArn") String roleArn, @JsonProperty("trackerName") String trackerName) {
+        this.deviceId = deviceId;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.roleArn = roleArn;
+        this.trackerName = trackerName;
+  }
 }

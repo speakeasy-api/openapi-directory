@@ -15,6 +15,7 @@ public class AddApplicationVpcConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationARN")
     public String applicationARN;
+
     public AddApplicationVpcConfigurationResponse withApplicationARN(String applicationARN) {
         this.applicationARN = applicationARN;
         return this;
@@ -23,6 +24,7 @@ public class AddApplicationVpcConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationVersionId")
     public Long applicationVersionId;
+
     public AddApplicationVpcConfigurationResponse withApplicationVersionId(Long applicationVersionId) {
         this.applicationVersionId = applicationVersionId;
         return this;
@@ -31,9 +33,11 @@ public class AddApplicationVpcConfigurationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurationDescription")
     public VpcConfigurationDescription vpcConfigurationDescription;
+
     public AddApplicationVpcConfigurationResponse withVpcConfigurationDescription(VpcConfigurationDescription vpcConfigurationDescription) {
         this.vpcConfigurationDescription = vpcConfigurationDescription;
         return this;
     }
     
+    public AddApplicationVpcConfigurationResponse(){}
 }

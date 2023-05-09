@@ -17,6 +17,7 @@ public class UserApiTokensNew201ApplicationJSON {
      */
     @JsonProperty("api_token")
     public String apiToken;
+
     public UserApiTokensNew201ApplicationJSON withApiToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
@@ -27,6 +28,7 @@ public class UserApiTokensNew201ApplicationJSON {
      */
     @JsonProperty("created_at")
     public String createdAt;
+
     public UserApiTokensNew201ApplicationJSON withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class UserApiTokensNew201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UserApiTokensNew201ApplicationJSON withDescription(String description) {
         this.description = description;
         return this;
@@ -48,6 +51,7 @@ public class UserApiTokensNew201ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public UserApiTokensNew201ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -59,9 +63,15 @@ public class UserApiTokensNew201ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public UserApiTokensNew201ApplicationJSONScopeEnum[] scope;
+
     public UserApiTokensNew201ApplicationJSON withScope(UserApiTokensNew201ApplicationJSONScopeEnum[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public UserApiTokensNew201ApplicationJSON(@JsonProperty("api_token") String apiToken, @JsonProperty("created_at") String createdAt, @JsonProperty("id") String id) {
+        this.apiToken = apiToken;
+        this.createdAt = createdAt;
+        this.id = id;
+  }
 }

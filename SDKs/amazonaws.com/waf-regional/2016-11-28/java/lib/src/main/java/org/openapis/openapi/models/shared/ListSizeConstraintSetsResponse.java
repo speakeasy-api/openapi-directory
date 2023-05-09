@@ -15,6 +15,7 @@ public class ListSizeConstraintSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public ListSizeConstraintSetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
@@ -23,9 +24,11 @@ public class ListSizeConstraintSetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeConstraintSets")
     public SizeConstraintSetSummary[] sizeConstraintSets;
+
     public ListSizeConstraintSetsResponse withSizeConstraintSets(SizeConstraintSetSummary[] sizeConstraintSets) {
         this.sizeConstraintSets = sizeConstraintSets;
         return this;
     }
     
+    public ListSizeConstraintSetsResponse(){}
 }

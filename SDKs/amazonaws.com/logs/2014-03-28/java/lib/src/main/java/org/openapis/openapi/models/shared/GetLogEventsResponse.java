@@ -15,6 +15,7 @@ public class GetLogEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("events")
     public OutputLogEvent[] events;
+
     public GetLogEventsResponse withEvents(OutputLogEvent[] events) {
         this.events = events;
         return this;
@@ -23,6 +24,7 @@ public class GetLogEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextBackwardToken")
     public String nextBackwardToken;
+
     public GetLogEventsResponse withNextBackwardToken(String nextBackwardToken) {
         this.nextBackwardToken = nextBackwardToken;
         return this;
@@ -31,9 +33,11 @@ public class GetLogEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextForwardToken")
     public String nextForwardToken;
+
     public GetLogEventsResponse withNextForwardToken(String nextForwardToken) {
         this.nextForwardToken = nextForwardToken;
         return this;
     }
     
+    public GetLogEventsResponse(){}
 }

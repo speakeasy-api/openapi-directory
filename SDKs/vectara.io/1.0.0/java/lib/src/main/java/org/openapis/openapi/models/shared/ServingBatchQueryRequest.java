@@ -12,9 +12,11 @@ public class ServingBatchQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public ServingQueryRequest[] query;
+
     public ServingBatchQueryRequest withQuery(ServingQueryRequest[] query) {
         this.query = query;
         return this;
     }
     
+    public ServingBatchQueryRequest(){}
 }

@@ -12,6 +12,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public TwipcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,6 +23,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("FullName")
     public String fullName;
+
     public TwipcRequestBodyCertificateParameters withFullName(String fullName) {
         this.fullName = fullName;
         return this;
@@ -32,6 +34,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("GENDER")
     public String gender;
+
     public TwipcRequestBodyCertificateParameters withGender(String gender) {
         this.gender = gender;
         return this;
@@ -42,6 +45,7 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyNo")
     public String policyNo;
+
     public TwipcRequestBodyCertificateParameters withPolicyNo(String policyNo) {
         this.policyNo = policyNo;
         return this;
@@ -52,9 +56,17 @@ public class TwipcRequestBodyCertificateParameters {
      */
     @JsonProperty("PolicyType")
     public String policyType;
+
     public TwipcRequestBodyCertificateParameters withPolicyType(String policyType) {
         this.policyType = policyType;
         return this;
     }
     
+    public TwipcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("FullName") String fullName, @JsonProperty("GENDER") String gender, @JsonProperty("PolicyNo") String policyNo, @JsonProperty("PolicyType") String policyType) {
+        this.dob = dob;
+        this.fullName = fullName;
+        this.gender = gender;
+        this.policyNo = policyNo;
+        this.policyType = policyType;
+  }
 }

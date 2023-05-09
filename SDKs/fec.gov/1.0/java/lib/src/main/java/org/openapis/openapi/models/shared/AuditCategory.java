@@ -12,6 +12,7 @@ public class AuditCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_id")
     public String primaryCategoryId;
+
     public AuditCategory withPrimaryCategoryId(String primaryCategoryId) {
         this.primaryCategoryId = primaryCategoryId;
         return this;
@@ -20,6 +21,7 @@ public class AuditCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_category_name")
     public String primaryCategoryName;
+
     public AuditCategory withPrimaryCategoryName(String primaryCategoryName) {
         this.primaryCategoryName = primaryCategoryName;
         return this;
@@ -28,9 +30,11 @@ public class AuditCategory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sub_category_list")
     public AuditCategoryRelation[] subCategoryList;
+
     public AuditCategory withSubCategoryList(AuditCategoryRelation[] subCategoryList) {
         this.subCategoryList = subCategoryList;
         return this;
     }
     
+    public AuditCategory(){}
 }

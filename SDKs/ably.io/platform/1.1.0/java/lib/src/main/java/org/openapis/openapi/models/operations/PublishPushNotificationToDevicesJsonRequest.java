@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PublishPushNotificationToDevicesJsonRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PublishPushNotificationToDevicesApplicationJSON requestBody;
+
     public PublishPushNotificationToDevicesJsonRequest withRequestBody(PublishPushNotificationToDevicesApplicationJSON requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +20,7 @@ public class PublishPushNotificationToDevicesJsonRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Ably-Version")
     public String xAblyVersion;
+
     public PublishPushNotificationToDevicesJsonRequest withXAblyVersion(String xAblyVersion) {
         this.xAblyVersion = xAblyVersion;
         return this;
@@ -29,9 +31,11 @@ public class PublishPushNotificationToDevicesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public org.openapis.openapi.models.shared.ResponseFormatEnum format;
+
     public PublishPushNotificationToDevicesJsonRequest withFormat(org.openapis.openapi.models.shared.ResponseFormatEnum format) {
         this.format = format;
         return this;
     }
     
+    public PublishPushNotificationToDevicesJsonRequest(){}
 }

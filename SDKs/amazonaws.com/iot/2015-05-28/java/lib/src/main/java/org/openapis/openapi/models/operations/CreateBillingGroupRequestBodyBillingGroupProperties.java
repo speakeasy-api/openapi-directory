@@ -15,9 +15,11 @@ public class CreateBillingGroupRequestBodyBillingGroupProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingGroupDescription")
     public String billingGroupDescription;
+
     public CreateBillingGroupRequestBodyBillingGroupProperties withBillingGroupDescription(String billingGroupDescription) {
         this.billingGroupDescription = billingGroupDescription;
         return this;
     }
     
+    public CreateBillingGroupRequestBodyBillingGroupProperties(){}
 }

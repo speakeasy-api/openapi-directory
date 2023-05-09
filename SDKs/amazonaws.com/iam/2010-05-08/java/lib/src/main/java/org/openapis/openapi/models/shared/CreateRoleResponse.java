@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateRoleResponse - Contains the response to a successful &lt;a&gt;CreateRole&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateRoleResponse {
     
     public Role role;
+
     public CreateRoleResponse withRole(Role role) {
         this.role = role;
         return this;
     }
     
+    public CreateRoleResponse(@JsonProperty("Role") Role role) {
+        this.role = role;
+  }
 }

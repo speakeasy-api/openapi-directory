@@ -78,4 +78,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/Fragment.java
 lib/src/main/java/org/openapis/openapi/models/shared/TimestampRange.java
 lib/src/main/java/org/openapis/openapi/models/shared/FragmentSelectorTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

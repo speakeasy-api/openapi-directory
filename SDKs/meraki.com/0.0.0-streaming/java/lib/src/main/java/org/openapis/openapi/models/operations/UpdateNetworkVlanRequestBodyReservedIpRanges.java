@@ -12,6 +12,7 @@ public class UpdateNetworkVlanRequestBodyReservedIpRanges {
      */
     @JsonProperty("comment")
     public String comment;
+
     public UpdateNetworkVlanRequestBodyReservedIpRanges withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +23,7 @@ public class UpdateNetworkVlanRequestBodyReservedIpRanges {
      */
     @JsonProperty("end")
     public String end;
+
     public UpdateNetworkVlanRequestBodyReservedIpRanges withEnd(String end) {
         this.end = end;
         return this;
@@ -32,9 +34,15 @@ public class UpdateNetworkVlanRequestBodyReservedIpRanges {
      */
     @JsonProperty("start")
     public String start;
+
     public UpdateNetworkVlanRequestBodyReservedIpRanges withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public UpdateNetworkVlanRequestBodyReservedIpRanges(@JsonProperty("comment") String comment, @JsonProperty("end") String end, @JsonProperty("start") String start) {
+        this.comment = comment;
+        this.end = end;
+        this.start = start;
+  }
 }

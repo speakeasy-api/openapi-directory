@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNamespaceYearsResponse {
     
     public String contentType;
+
     public GetNamespaceYearsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNamespaceYearsResponse {
     
     
     public Integer statusCode;
+
     public GetNamespaceYearsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNamespaceYearsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNamespaceYearsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNamespaceYearsResponse {
      */
     
     public org.openapis.openapi.models.shared.YearData yearData;
+
     public GetNamespaceYearsResponse withYearData(org.openapis.openapi.models.shared.YearData yearData) {
         this.yearData = yearData;
         return this;
     }
     
+    public GetNamespaceYearsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

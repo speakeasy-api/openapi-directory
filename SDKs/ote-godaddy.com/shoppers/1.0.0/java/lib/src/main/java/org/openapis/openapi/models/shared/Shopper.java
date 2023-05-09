@@ -18,6 +18,7 @@ public class Shopper {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customerId")
     public String customerId;
+
     public Shopper withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -25,6 +26,7 @@ public class Shopper {
     
     @JsonProperty("email")
     public String email;
+
     public Shopper withEmail(String email) {
         this.email = email;
         return this;
@@ -33,6 +35,7 @@ public class Shopper {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalId")
     public Long externalId;
+
     public Shopper withExternalId(Long externalId) {
         this.externalId = externalId;
         return this;
@@ -40,6 +43,7 @@ public class Shopper {
     
     @JsonProperty("marketId")
     public String marketId;
+
     public Shopper withMarketId(String marketId) {
         this.marketId = marketId;
         return this;
@@ -47,6 +51,7 @@ public class Shopper {
     
     @JsonProperty("nameFirst")
     public String nameFirst;
+
     public Shopper withNameFirst(String nameFirst) {
         this.nameFirst = nameFirst;
         return this;
@@ -54,6 +59,7 @@ public class Shopper {
     
     @JsonProperty("nameLast")
     public String nameLast;
+
     public Shopper withNameLast(String nameLast) {
         this.nameLast = nameLast;
         return this;
@@ -61,9 +67,17 @@ public class Shopper {
     
     @JsonProperty("shopperId")
     public String shopperId;
+
     public Shopper withShopperId(String shopperId) {
         this.shopperId = shopperId;
         return this;
     }
     
+    public Shopper(@JsonProperty("email") String email, @JsonProperty("marketId") String marketId, @JsonProperty("nameFirst") String nameFirst, @JsonProperty("nameLast") String nameLast, @JsonProperty("shopperId") String shopperId) {
+        this.email = email;
+        this.marketId = marketId;
+        this.nameFirst = nameFirst;
+        this.nameLast = nameLast;
+        this.shopperId = shopperId;
+  }
 }

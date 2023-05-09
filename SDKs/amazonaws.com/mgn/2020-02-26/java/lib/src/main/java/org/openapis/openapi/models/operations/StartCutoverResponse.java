@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartCutoverResponse {
@@ -12,6 +13,7 @@ public class StartCutoverResponse {
      */
     
     public Object conflictException;
+
     public StartCutoverResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartCutoverResponse {
     
     
     public String contentType;
+
     public StartCutoverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartCutoverResponse {
      */
     
     public org.openapis.openapi.models.shared.StartCutoverResponse startCutoverResponse;
+
     public StartCutoverResponse withStartCutoverResponse(org.openapis.openapi.models.shared.StartCutoverResponse startCutoverResponse) {
         this.startCutoverResponse = startCutoverResponse;
         return this;
@@ -36,6 +40,7 @@ public class StartCutoverResponse {
     
     
     public Integer statusCode;
+
     public StartCutoverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StartCutoverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartCutoverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StartCutoverResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StartCutoverResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class StartCutoverResponse {
      */
     
     public Object validationException;
+
     public StartCutoverResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartCutoverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

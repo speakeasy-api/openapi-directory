@@ -15,6 +15,7 @@ public class ComponentDeploymentSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentVersion")
     public String componentVersion;
+
     public ComponentDeploymentSpecification withComponentVersion(String componentVersion) {
         this.componentVersion = componentVersion;
         return this;
@@ -23,6 +24,7 @@ public class ComponentDeploymentSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationUpdate")
     public ComponentConfigurationUpdate configurationUpdate;
+
     public ComponentDeploymentSpecification withConfigurationUpdate(ComponentConfigurationUpdate configurationUpdate) {
         this.configurationUpdate = configurationUpdate;
         return this;
@@ -31,9 +33,11 @@ public class ComponentDeploymentSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runWith")
     public ComponentRunWith runWith;
+
     public ComponentDeploymentSpecification withRunWith(ComponentRunWith runWith) {
         this.runWith = runWith;
         return this;
     }
     
+    public ComponentDeploymentSpecification(){}
 }

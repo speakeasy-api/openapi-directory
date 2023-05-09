@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAuthorIfNotExistsForUsingPOSTResponse {
     
     public String contentType;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingPOST200ApplicationJSON createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withCreateAuthorIfNotExistsForUsingPOST200ApplicationJSONObject(CreateAuthorIfNotExistsForUsingPOST200ApplicationJSON createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject = createAuthorIfNotExistsForUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingPOST400ApplicationJSON createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withCreateAuthorIfNotExistsForUsingPOST400ApplicationJSONObject(CreateAuthorIfNotExistsForUsingPOST400ApplicationJSON createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject = createAuthorIfNotExistsForUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingPOST401ApplicationJSON createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withCreateAuthorIfNotExistsForUsingPOST401ApplicationJSONObject(CreateAuthorIfNotExistsForUsingPOST401ApplicationJSON createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject = createAuthorIfNotExistsForUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class CreateAuthorIfNotExistsForUsingPOSTResponse {
      */
     
     public CreateAuthorIfNotExistsForUsingPOST500ApplicationJSON createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject;
+
     public CreateAuthorIfNotExistsForUsingPOSTResponse withCreateAuthorIfNotExistsForUsingPOST500ApplicationJSONObject(CreateAuthorIfNotExistsForUsingPOST500ApplicationJSON createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject) {
         this.createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject = createAuthorIfNotExistsForUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public CreateAuthorIfNotExistsForUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

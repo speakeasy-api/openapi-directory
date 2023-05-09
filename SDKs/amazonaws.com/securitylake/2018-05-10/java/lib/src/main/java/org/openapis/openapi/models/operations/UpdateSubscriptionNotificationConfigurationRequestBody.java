@@ -15,6 +15,7 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createSqs")
     public Boolean createSqs;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withCreateSqs(Boolean createSqs) {
         this.createSqs = createSqs;
         return this;
@@ -26,6 +27,7 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsApiKeyName")
     public String httpsApiKeyName;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withHttpsApiKeyName(String httpsApiKeyName) {
         this.httpsApiKeyName = httpsApiKeyName;
         return this;
@@ -37,6 +39,7 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsApiKeyValue")
     public String httpsApiKeyValue;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withHttpsApiKeyValue(String httpsApiKeyValue) {
         this.httpsApiKeyValue = httpsApiKeyValue;
         return this;
@@ -48,6 +51,7 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpsMethod")
     public UpdateSubscriptionNotificationConfigurationRequestBodyHttpsMethodEnum httpsMethod;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withHttpsMethod(UpdateSubscriptionNotificationConfigurationRequestBodyHttpsMethodEnum httpsMethod) {
         this.httpsMethod = httpsMethod;
         return this;
@@ -59,6 +63,7 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -70,9 +75,11 @@ public class UpdateSubscriptionNotificationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subscriptionEndpoint")
     public String subscriptionEndpoint;
+
     public UpdateSubscriptionNotificationConfigurationRequestBody withSubscriptionEndpoint(String subscriptionEndpoint) {
         this.subscriptionEndpoint = subscriptionEndpoint;
         return this;
     }
     
+    public UpdateSubscriptionNotificationConfigurationRequestBody(){}
 }

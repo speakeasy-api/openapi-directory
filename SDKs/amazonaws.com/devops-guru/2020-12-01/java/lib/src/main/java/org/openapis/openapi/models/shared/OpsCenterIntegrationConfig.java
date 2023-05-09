@@ -15,9 +15,11 @@ public class OpsCenterIntegrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OptInStatus")
     public OptInStatusEnum optInStatus;
+
     public OpsCenterIntegrationConfig withOptInStatus(OptInStatusEnum optInStatus) {
         this.optInStatus = optInStatus;
         return this;
     }
     
+    public OpsCenterIntegrationConfig(){}
 }

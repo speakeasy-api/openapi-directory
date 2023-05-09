@@ -3,25 +3,28 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetAuthResponse;
+import org.openapis.openapi.models.operations.GetAuthSecurity;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
-                    jwt = "YOUR_API_KEY_HERE";
-                }})
                 .build();
 
-            GetAuthResponse res = sdk.auth.getAuth();
+            GetAuthResponse res = sdk.auth.getAuth(new GetAuthSecurity("corrupti", "provident") {{
+                password = "YOUR_PASSWORD_HERE";
+                username = "YOUR_USERNAME_HERE";
+            }});
 
-            if (res.authResult.isPresent()) {
+            if (res.authResult != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

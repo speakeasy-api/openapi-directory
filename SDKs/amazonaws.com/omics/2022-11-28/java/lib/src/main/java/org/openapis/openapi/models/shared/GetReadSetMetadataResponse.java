@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetReadSetMetadataResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetReadSetMetadataResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class GetReadSetMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReadSetMetadataResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetReadSetMetadataResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +46,7 @@ public class GetReadSetMetadataResponse {
     
     @JsonProperty("fileType")
     public FileTypeEnum fileType;
+
     public GetReadSetMetadataResponse withFileType(FileTypeEnum fileType) {
         this.fileType = fileType;
         return this;
@@ -51,6 +55,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public ReadSetFiles files;
+
     public GetReadSetMetadataResponse withFiles(ReadSetFiles files) {
         this.files = files;
         return this;
@@ -58,6 +63,7 @@ public class GetReadSetMetadataResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReadSetMetadataResponse withId(String id) {
         this.id = id;
         return this;
@@ -66,6 +72,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetReadSetMetadataResponse withName(String name) {
         this.name = name;
         return this;
@@ -74,6 +81,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referenceArn")
     public String referenceArn;
+
     public GetReadSetMetadataResponse withReferenceArn(String referenceArn) {
         this.referenceArn = referenceArn;
         return this;
@@ -82,6 +90,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleId")
     public String sampleId;
+
     public GetReadSetMetadataResponse withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
@@ -90,6 +99,7 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceInformation")
     public SequenceInformation sequenceInformation;
+
     public GetReadSetMetadataResponse withSequenceInformation(SequenceInformation sequenceInformation) {
         this.sequenceInformation = sequenceInformation;
         return this;
@@ -97,6 +107,7 @@ public class GetReadSetMetadataResponse {
     
     @JsonProperty("sequenceStoreId")
     public String sequenceStoreId;
+
     public GetReadSetMetadataResponse withSequenceStoreId(String sequenceStoreId) {
         this.sequenceStoreId = sequenceStoreId;
         return this;
@@ -104,6 +115,7 @@ public class GetReadSetMetadataResponse {
     
     @JsonProperty("status")
     public ReadSetStatusEnum status;
+
     public GetReadSetMetadataResponse withStatus(ReadSetStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +124,18 @@ public class GetReadSetMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectId")
     public String subjectId;
+
     public GetReadSetMetadataResponse withSubjectId(String subjectId) {
         this.subjectId = subjectId;
         return this;
     }
     
+    public GetReadSetMetadataResponse(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("fileType") FileTypeEnum fileType, @JsonProperty("id") String id, @JsonProperty("sequenceStoreId") String sequenceStoreId, @JsonProperty("status") ReadSetStatusEnum status) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.fileType = fileType;
+        this.id = id;
+        this.sequenceStoreId = sequenceStoreId;
+        this.status = status;
+  }
 }

@@ -18,9 +18,11 @@ public class RateTableResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateTables")
     public RateTable[] rateTables;
+
     public RateTableResponse withRateTables(RateTable[] rateTables) {
         this.rateTables = rateTables;
         return this;
     }
     
+    public RateTableResponse(){}
 }

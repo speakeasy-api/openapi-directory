@@ -15,6 +15,7 @@ public class OpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authTTL")
     public Long authTTL;
+
     public OpenIDConnectConfig withAuthTTL(Long authTTL) {
         this.authTTL = authTTL;
         return this;
@@ -23,6 +24,7 @@ public class OpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public OpenIDConnectConfig withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -31,6 +33,7 @@ public class OpenIDConnectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iatTTL")
     public Long iatTTL;
+
     public OpenIDConnectConfig withIatTTL(Long iatTTL) {
         this.iatTTL = iatTTL;
         return this;
@@ -38,9 +41,13 @@ public class OpenIDConnectConfig {
     
     @JsonProperty("issuer")
     public String issuer;
+
     public OpenIDConnectConfig withIssuer(String issuer) {
         this.issuer = issuer;
         return this;
     }
     
+    public OpenIDConnectConfig(@JsonProperty("issuer") String issuer) {
+        this.issuer = issuer;
+  }
 }

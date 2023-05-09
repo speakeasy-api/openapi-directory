@@ -18,6 +18,7 @@ public class AcceptDisputeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dispute")
     public Dispute dispute;
+
     public AcceptDisputeResponse withDispute(Dispute dispute) {
         this.dispute = dispute;
         return this;
@@ -29,9 +30,11 @@ public class AcceptDisputeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public AcceptDisputeResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public AcceptDisputeResponse(){}
 }

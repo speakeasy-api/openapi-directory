@@ -18,6 +18,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnFamilies")
     public java.util.Map<String, ColumnFamily> columnFamilies;
+
     public TableInput withColumnFamilies(java.util.Map<String, ColumnFamily> columnFamilies) {
         this.columnFamilies = columnFamilies;
         return this;
@@ -29,6 +30,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deletionProtection")
     public Boolean deletionProtection;
+
     public TableInput withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -40,6 +42,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("granularity")
     public TableGranularityEnum granularity;
+
     public TableInput withGranularity(TableGranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -51,6 +54,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TableInput withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("restoreInfo")
     public RestoreInfoInput restoreInfo;
+
     public TableInput withRestoreInfo(RestoreInfoInput restoreInfo) {
         this.restoreInfo = restoreInfo;
         return this;
@@ -73,9 +78,11 @@ public class TableInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stats")
     public TableStats stats;
+
     public TableInput withStats(TableStats stats) {
         this.stats = stats;
         return this;
     }
     
+    public TableInput(){}
 }

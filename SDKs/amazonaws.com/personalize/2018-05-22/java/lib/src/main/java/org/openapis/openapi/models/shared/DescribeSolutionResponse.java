@@ -15,9 +15,11 @@ public class DescribeSolutionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solution")
     public Solution solution;
+
     public DescribeSolutionResponse withSolution(Solution solution) {
         this.solution = solution;
         return this;
     }
     
+    public DescribeSolutionResponse(){}
 }

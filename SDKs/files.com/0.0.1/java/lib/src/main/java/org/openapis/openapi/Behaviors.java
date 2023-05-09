@@ -61,11 +61,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BehaviorListForPathResponse res = new org.openapis.openapi.models.operations.BehaviorListForPathResponse() {{
+        org.openapis.openapi.models.operations.BehaviorListForPathResponse res = new org.openapis.openapi.models.operations.BehaviorListForPathResponse(contentType, httpRes.statusCode()) {{
             behaviorEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -102,10 +100,8 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBehaviorsIdResponse res = new org.openapis.openapi.models.operations.DeleteBehaviorsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteBehaviorsIdResponse res = new org.openapis.openapi.models.operations.DeleteBehaviorsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -141,11 +137,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBehaviorsResponse res = new org.openapis.openapi.models.operations.GetBehaviorsResponse() {{
+        org.openapis.openapi.models.operations.GetBehaviorsResponse res = new org.openapis.openapi.models.operations.GetBehaviorsResponse(contentType, httpRes.statusCode()) {{
             behaviorEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -182,11 +176,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBehaviorsIdResponse res = new org.openapis.openapi.models.operations.GetBehaviorsIdResponse() {{
+        org.openapis.openapi.models.operations.GetBehaviorsIdResponse res = new org.openapis.openapi.models.operations.GetBehaviorsIdResponse(contentType, httpRes.statusCode()) {{
             behaviorEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,11 +217,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBehaviorsIdResponse res = new org.openapis.openapi.models.operations.PatchBehaviorsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBehaviorsIdResponse res = new org.openapis.openapi.models.operations.PatchBehaviorsIdResponse(contentType, httpRes.statusCode()) {{
             behaviorEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -268,11 +258,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBehaviorsResponse res = new org.openapis.openapi.models.operations.PostBehaviorsResponse() {{
+        org.openapis.openapi.models.operations.PostBehaviorsResponse res = new org.openapis.openapi.models.operations.PostBehaviorsResponse(contentType, httpRes.statusCode()) {{
             behaviorEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -314,11 +302,9 @@ public class Behaviors {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse res = new org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse() {{
+        org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse res = new org.openapis.openapi.models.operations.PostBehaviorsWebhookTestResponse(contentType, httpRes.statusCode()) {{
             statusEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

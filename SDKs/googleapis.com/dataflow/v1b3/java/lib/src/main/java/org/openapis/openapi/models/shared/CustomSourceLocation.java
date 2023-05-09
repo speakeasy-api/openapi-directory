@@ -18,9 +18,11 @@ public class CustomSourceLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stateful")
     public Boolean stateful;
+
     public CustomSourceLocation withStateful(Boolean stateful) {
         this.stateful = stateful;
         return this;
     }
     
+    public CustomSourceLocation(){}
 }

@@ -20,6 +20,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Authorisation")
     public OBWriteDomesticStandingOrderConsentResponse6DataAuthorisation authorisation;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withAuthorisation(OBWriteDomesticStandingOrderConsentResponse6DataAuthorisation authorisation) {
         this.authorisation = authorisation;
         return this;
@@ -28,6 +29,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Charges")
     public OBWriteDomesticStandingOrderConsentResponse6DataCharges[] charges;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withCharges(OBWriteDomesticStandingOrderConsentResponse6DataCharges[] charges) {
         this.charges = charges;
         return this;
@@ -38,6 +40,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
      */
     @JsonProperty("ConsentId")
     public String consentId;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -52,6 +55,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -67,6 +71,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CutOffDateTime")
     public OffsetDateTime cutOffDateTime;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withCutOffDateTime(OffsetDateTime cutOffDateTime) {
         this.cutOffDateTime = cutOffDateTime;
         return this;
@@ -78,6 +83,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Debtor")
     public OBCashAccountDebtor4 debtor;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withDebtor(OBCashAccountDebtor4 debtor) {
         this.debtor = debtor;
         return this;
@@ -88,6 +94,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
      */
     @JsonProperty("Initiation")
     public OBWriteDomesticStandingOrderConsentResponse6DataInitiation initiation;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withInitiation(OBWriteDomesticStandingOrderConsentResponse6DataInitiation initiation) {
         this.initiation = initiation;
         return this;
@@ -98,6 +105,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
      */
     @JsonProperty("Permission")
     public OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum permission;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withPermission(OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum permission) {
         this.permission = permission;
         return this;
@@ -109,6 +117,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRefundAccount")
     public OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum readRefundAccount;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withReadRefundAccount(OBWriteDomesticStandingOrderConsentResponse6DataReadRefundAccountEnum readRefundAccount) {
         this.readRefundAccount = readRefundAccount;
         return this;
@@ -120,6 +129,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SCASupportData")
     public OBSCASupportData1 scaSupportData;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withSCASupportData(OBSCASupportData1 scaSupportData) {
         this.scaSupportData = scaSupportData;
         return this;
@@ -130,6 +140,7 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
      */
     @JsonProperty("Status")
     public OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum status;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withStatus(OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum status) {
         this.status = status;
         return this;
@@ -144,9 +155,18 @@ public class OBWriteDomesticStandingOrderConsentResponse6Data {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StatusUpdateDateTime")
     public OffsetDateTime statusUpdateDateTime;
+
     public OBWriteDomesticStandingOrderConsentResponse6Data withStatusUpdateDateTime(OffsetDateTime statusUpdateDateTime) {
         this.statusUpdateDateTime = statusUpdateDateTime;
         return this;
     }
     
+    public OBWriteDomesticStandingOrderConsentResponse6Data(@JsonProperty("ConsentId") String consentId, @JsonProperty("CreationDateTime") OffsetDateTime creationDateTime, @JsonProperty("Initiation") OBWriteDomesticStandingOrderConsentResponse6DataInitiation initiation, @JsonProperty("Permission") OBWriteDomesticStandingOrderConsentResponse6DataPermissionEnum permission, @JsonProperty("Status") OBWriteDomesticStandingOrderConsentResponse6DataStatusEnum status, @JsonProperty("StatusUpdateDateTime") OffsetDateTime statusUpdateDateTime) {
+        this.consentId = consentId;
+        this.creationDateTime = creationDateTime;
+        this.initiation = initiation;
+        this.permission = permission;
+        this.status = status;
+        this.statusUpdateDateTime = statusUpdateDateTime;
+  }
 }

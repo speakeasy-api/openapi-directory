@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteNetworkInsightsPathRequest {
     
     public Boolean dryRun;
+
     public DeleteNetworkInsightsPathRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteNetworkInsightsPathRequest {
     
     
     public String networkInsightsPathId;
+
     public DeleteNetworkInsightsPathRequest withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
     }
     
+    public DeleteNetworkInsightsPathRequest(@JsonProperty("NetworkInsightsPathId") String networkInsightsPathId) {
+        this.networkInsightsPathId = networkInsightsPathId;
+  }
 }

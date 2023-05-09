@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdatePrimaryStateTaxRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdatePrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdatePrimaryStateTaxRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdatePrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdatePrimaryStateTaxRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdatePrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.StateTax stateTax;
+
     public AddOrUpdatePrimaryStateTaxRequest withStateTax(org.openapis.openapi.models.shared.StateTax stateTax) {
         this.stateTax = stateTax;
         return this;
     }
     
+    public AddOrUpdatePrimaryStateTaxRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId, @JsonProperty("stateTax") org.openapis.openapi.models.shared.StateTax stateTax) {
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+        this.stateTax = stateTax;
+  }
 }

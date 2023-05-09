@@ -18,6 +18,7 @@ public class FilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("andGroup")
     public FilterExpressionList andGroup;
+
     public FilterExpression withAndGroup(FilterExpressionList andGroup) {
         this.andGroup = andGroup;
         return this;
@@ -29,6 +30,7 @@ public class FilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public Filter filter;
+
     public FilterExpression withFilter(Filter filter) {
         this.filter = filter;
         return this;
@@ -40,6 +42,7 @@ public class FilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notExpression")
     public FilterExpression notExpression;
+
     public FilterExpression withNotExpression(FilterExpression notExpression) {
         this.notExpression = notExpression;
         return this;
@@ -51,9 +54,11 @@ public class FilterExpression {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orGroup")
     public FilterExpressionList orGroup;
+
     public FilterExpression withOrGroup(FilterExpressionList orGroup) {
         this.orGroup = orGroup;
         return this;
     }
     
+    public FilterExpression(){}
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * TargetCapacitySpecificationRequest - &lt;p&gt;The number of units to request. You can choose to set the target capacity as the number of instances. Or you can set the target capacity to a performance characteristic that is important to your application workload, such as vCPUs, memory, or I/O. If the request type is &lt;code&gt;maintain&lt;/code&gt;, you can specify a target capacity of 0 and add capacity later.&lt;/p&gt; &lt;p&gt;You can use the On-Demand Instance &lt;code&gt;MaxTotalPrice&lt;/code&gt; parameter, the Spot Instance &lt;code&gt;MaxTotalPrice&lt;/code&gt; parameter, or both parameters to ensure that your fleet cost does not exceed your budget. If you set a maximum price per hour for the On-Demand Instances and Spot Instances in your request, EC2 Fleet will launch instances until it reaches the maximum amount that you're willing to pay. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn\u2019t met the target capacity. The &lt;code&gt;MaxTotalPrice&lt;/code&gt; parameters are located in &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_OnDemandOptionsRequest"&gt;OnDemandOptionsRequest&lt;/a&gt; and &lt;a href="https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_SpotOptionsRequest"&gt;SpotOptionsRequest&lt;/a&gt;.&lt;/p&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetCapacitySpecificationRequest {
     
     public DefaultTargetCapacityTypeEnum defaultTargetCapacityType;
+
     public TargetCapacitySpecificationRequest withDefaultTargetCapacityType(DefaultTargetCapacityTypeEnum defaultTargetCapacityType) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         return this;
@@ -19,6 +20,7 @@ public class TargetCapacitySpecificationRequest {
     
     
     public Long onDemandTargetCapacity;
+
     public TargetCapacitySpecificationRequest withOnDemandTargetCapacity(Long onDemandTargetCapacity) {
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         return this;
@@ -26,6 +28,7 @@ public class TargetCapacitySpecificationRequest {
     
     
     public Long spotTargetCapacity;
+
     public TargetCapacitySpecificationRequest withSpotTargetCapacity(Long spotTargetCapacity) {
         this.spotTargetCapacity = spotTargetCapacity;
         return this;
@@ -33,6 +36,7 @@ public class TargetCapacitySpecificationRequest {
     
     
     public TargetCapacityUnitTypeEnum targetCapacityUnitType;
+
     public TargetCapacitySpecificationRequest withTargetCapacityUnitType(TargetCapacityUnitTypeEnum targetCapacityUnitType) {
         this.targetCapacityUnitType = targetCapacityUnitType;
         return this;
@@ -40,9 +44,13 @@ public class TargetCapacitySpecificationRequest {
     
     
     public Long totalTargetCapacity;
+
     public TargetCapacitySpecificationRequest withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
     
+    public TargetCapacitySpecificationRequest(@JsonProperty("TotalTargetCapacity") Long totalTargetCapacity) {
+        this.totalTargetCapacity = totalTargetCapacity;
+  }
 }

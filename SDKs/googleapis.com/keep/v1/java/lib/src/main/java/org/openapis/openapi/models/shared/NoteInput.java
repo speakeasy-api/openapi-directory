@@ -18,6 +18,7 @@ public class NoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public Section body;
+
     public NoteInput withBody(Section body) {
         this.body = body;
         return this;
@@ -29,9 +30,11 @@ public class NoteInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public NoteInput withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public NoteInput(){}
 }

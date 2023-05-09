@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCampaignResponse {
     
     public String contentType;
+
     public CreateCampaignResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateCampaignResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCampaignResponse createCampaignResponse;
+
     public CreateCampaignResponse withCreateCampaignResponse(org.openapis.openapi.models.shared.CreateCampaignResponse createCampaignResponse) {
         this.createCampaignResponse = createCampaignResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateCampaignResponse {
      */
     
     public Object invalidInputException;
+
     public CreateCampaignResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateCampaignResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCampaignResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCampaignResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateCampaignResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateCampaignResponse {
     
     
     public Integer statusCode;
+
     public CreateCampaignResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateCampaignResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCampaignResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateCampaignResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateCampaignResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,6 +92,7 @@ public class CreateCampaignResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateCampaignResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,9 +103,14 @@ public class CreateCampaignResponse {
      */
     
     public Object tooManyTagsException;
+
     public CreateCampaignResponse withTooManyTagsException(Object tooManyTagsException) {
         this.tooManyTagsException = tooManyTagsException;
         return this;
     }
     
+    public CreateCampaignResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

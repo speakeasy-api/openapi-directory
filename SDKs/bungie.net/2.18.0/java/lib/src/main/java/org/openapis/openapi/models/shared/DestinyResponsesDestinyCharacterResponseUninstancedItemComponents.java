@@ -13,6 +13,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyCharacterResponseUninstancedItemComponents {
     
     public DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives;
+
     public DestinyResponsesDestinyCharacterResponseUninstancedItemComponents withObjectives(DictionaryComponentResponseOfuint32AndDestinyItemObjectivesComponent objectives) {
         this.objectives = objectives;
         return this;
@@ -20,9 +21,11 @@ public class DestinyResponsesDestinyCharacterResponseUninstancedItemComponents {
     
     
     public DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks;
+
     public DestinyResponsesDestinyCharacterResponseUninstancedItemComponents withPerks(DictionaryComponentResponseOfuint32AndDestinyItemPerksComponent perks) {
         this.perks = perks;
         return this;
     }
     
+    public DestinyResponsesDestinyCharacterResponseUninstancedItemComponents(){}
 }

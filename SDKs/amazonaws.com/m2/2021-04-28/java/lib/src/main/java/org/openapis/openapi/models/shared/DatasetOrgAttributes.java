@@ -15,6 +15,7 @@ public class DatasetOrgAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gdg")
     public GdgAttributes gdg;
+
     public DatasetOrgAttributes withGdg(GdgAttributes gdg) {
         this.gdg = gdg;
         return this;
@@ -23,9 +24,11 @@ public class DatasetOrgAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vsam")
     public VsamAttributes vsam;
+
     public DatasetOrgAttributes withVsam(VsamAttributes vsam) {
         this.vsam = vsam;
         return this;
     }
     
+    public DatasetOrgAttributes(){}
 }

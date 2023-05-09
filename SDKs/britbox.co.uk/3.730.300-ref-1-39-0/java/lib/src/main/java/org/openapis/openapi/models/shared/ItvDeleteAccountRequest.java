@@ -15,9 +15,13 @@ public class ItvDeleteAccountRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvDeleteAccountRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvDeleteAccountRequest(@JsonProperty("profileToken") String profileToken) {
+        this.profileToken = profileToken;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeLoadBalancerPolicyTypesInput {
     
     public String[] policyTypeNames;
+
     public DescribeLoadBalancerPolicyTypesInput withPolicyTypeNames(String[] policyTypeNames) {
         this.policyTypeNames = policyTypeNames;
         return this;
     }
     
+    public DescribeLoadBalancerPolicyTypesInput(){}
 }

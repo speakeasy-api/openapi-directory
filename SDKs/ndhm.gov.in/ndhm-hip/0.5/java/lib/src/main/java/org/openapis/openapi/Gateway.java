@@ -49,14 +49,12 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse res = new org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse() {{
+        org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse res = new org.openapis.openapi.models.operations.GetV05WellKnownOpenidConfigurationResponse(contentType, httpRes.statusCode()) {{
             openIdConfiguration = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,14 +102,12 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetV05CertsResponse res = new org.openapis.openapi.models.operations.GetV05CertsResponse() {{
+        org.openapis.openapi.models.operations.GetV05CertsResponse res = new org.openapis.openapi.models.operations.GetV05CertsResponse(contentType, httpRes.statusCode()) {{
             certs = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,13 +173,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -247,13 +241,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse res = new org.openapis.openapi.models.operations.PostV05CareContextsOnDiscoverRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -315,12 +307,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -375,12 +365,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05ConsentsHipOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -435,12 +423,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -495,12 +481,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationHipOnRequestRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -559,12 +543,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -623,12 +605,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05HealthInformationNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -684,12 +664,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -745,12 +723,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkAddContextsRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -809,12 +785,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -873,12 +847,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -961,13 +933,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1057,13 +1027,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse res = new org.openapis.openapi.models.operations.PostV05LinksLinkOnInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1125,13 +1093,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1193,13 +1159,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsProfileOnShareRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1261,12 +1225,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1321,12 +1283,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05PatientsSmsNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1371,14 +1331,12 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SessionsJsonResponse res = new org.openapis.openapi.models.operations.PostV05SessionsJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05SessionsJsonResponse res = new org.openapis.openapi.models.operations.PostV05SessionsJsonResponse(contentType, httpRes.statusCode()) {{
             sessionResponse = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1432,14 +1390,12 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05SessionsRawResponse res = new org.openapis.openapi.models.operations.PostV05SessionsRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05SessionsRawResponse res = new org.openapis.openapi.models.operations.PostV05SessionsRawResponse(contentType, httpRes.statusCode()) {{
             sessionResponse = null;
             body = null;
             body = null;
             errorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1507,12 +1463,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1571,12 +1525,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthConfirmRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1631,13 +1583,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1699,13 +1649,11 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthFetchModesRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1767,12 +1715,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1827,12 +1773,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthInitRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1887,12 +1831,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyJsonResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -1947,12 +1889,10 @@ public class Gateway {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse() {{
+        org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse res = new org.openapis.openapi.models.operations.PostV05UsersAuthOnNotifyRawResponse(contentType, httpRes.statusCode()) {{
             errorResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {

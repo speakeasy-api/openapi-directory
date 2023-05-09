@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostApiReactionsToggleRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=category")
     public PostApiReactionsToggleCategoryEnum category;
+
     public PostApiReactionsToggleRequest withCategory(PostApiReactionsToggleCategoryEnum category) {
         this.category = category;
         return this;
@@ -16,6 +18,7 @@ public class PostApiReactionsToggleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_id")
     public Integer reactableId;
+
     public PostApiReactionsToggleRequest withReactableId(Integer reactableId) {
         this.reactableId = reactableId;
         return this;
@@ -23,9 +26,15 @@ public class PostApiReactionsToggleRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reactable_type")
     public PostApiReactionsToggleReactableTypeEnum reactableType;
+
     public PostApiReactionsToggleRequest withReactableType(PostApiReactionsToggleReactableTypeEnum reactableType) {
         this.reactableType = reactableType;
         return this;
     }
     
+    public PostApiReactionsToggleRequest(@JsonProperty("category") PostApiReactionsToggleCategoryEnum category, @JsonProperty("reactable_id") Integer reactableId, @JsonProperty("reactable_type") PostApiReactionsToggleReactableTypeEnum reactableType) {
+        this.category = category;
+        this.reactableId = reactableId;
+        this.reactableType = reactableType;
+  }
 }

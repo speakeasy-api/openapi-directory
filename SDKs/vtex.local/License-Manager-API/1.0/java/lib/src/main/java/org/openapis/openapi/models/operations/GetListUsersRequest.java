@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListUsersRequest {
@@ -12,6 +13,7 @@ public class GetListUsersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetListUsersRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -22,6 +24,7 @@ public class GetListUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=numItems")
     public Long numItems;
+
     public GetListUsersRequest withNumItems(Long numItems) {
         this.numItems = numItems;
         return this;
@@ -32,6 +35,7 @@ public class GetListUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Long pageNumber;
+
     public GetListUsersRequest withPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -42,6 +46,7 @@ public class GetListUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetListUsersRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -52,9 +57,13 @@ public class GetListUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortType")
     public String sortType;
+
     public GetListUsersRequest withSortType(String sortType) {
         this.sortType = sortType;
         return this;
     }
     
+    public GetListUsersRequest(@JsonProperty("Content-Type") String contentType) {
+        this.contentType = contentType;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveServicesCount")
     public Long activeServicesCount;
+
     public AwsEcsClusterDetails withActiveServicesCount(Long activeServicesCount) {
         this.activeServicesCount = activeServicesCount;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityProviders")
     public String[] capacityProviders;
+
     public AwsEcsClusterDetails withCapacityProviders(String[] capacityProviders) {
         this.capacityProviders = capacityProviders;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterArn")
     public String clusterArn;
+
     public AwsEcsClusterDetails withClusterArn(String clusterArn) {
         this.clusterArn = clusterArn;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterName")
     public String clusterName;
+
     public AwsEcsClusterDetails withClusterName(String clusterName) {
         this.clusterName = clusterName;
         return this;
@@ -47,6 +51,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterSettings")
     public AwsEcsClusterClusterSettingsDetails[] clusterSettings;
+
     public AwsEcsClusterDetails withClusterSettings(AwsEcsClusterClusterSettingsDetails[] clusterSettings) {
         this.clusterSettings = clusterSettings;
         return this;
@@ -55,6 +60,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public AwsEcsClusterConfigurationDetails configuration;
+
     public AwsEcsClusterDetails withConfiguration(AwsEcsClusterConfigurationDetails configuration) {
         this.configuration = configuration;
         return this;
@@ -63,6 +69,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultCapacityProviderStrategy")
     public AwsEcsClusterDefaultCapacityProviderStrategyDetails[] defaultCapacityProviderStrategy;
+
     public AwsEcsClusterDetails withDefaultCapacityProviderStrategy(AwsEcsClusterDefaultCapacityProviderStrategyDetails[] defaultCapacityProviderStrategy) {
         this.defaultCapacityProviderStrategy = defaultCapacityProviderStrategy;
         return this;
@@ -71,6 +78,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegisteredContainerInstancesCount")
     public Long registeredContainerInstancesCount;
+
     public AwsEcsClusterDetails withRegisteredContainerInstancesCount(Long registeredContainerInstancesCount) {
         this.registeredContainerInstancesCount = registeredContainerInstancesCount;
         return this;
@@ -79,6 +87,7 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunningTasksCount")
     public Long runningTasksCount;
+
     public AwsEcsClusterDetails withRunningTasksCount(Long runningTasksCount) {
         this.runningTasksCount = runningTasksCount;
         return this;
@@ -87,9 +96,11 @@ public class AwsEcsClusterDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsEcsClusterDetails withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AwsEcsClusterDetails(){}
 }

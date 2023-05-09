@@ -12,6 +12,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_concept_id")
     public Long sourceConceptId;
+
     public ConceptTaxonomy withSourceConceptId(Long sourceConceptId) {
         this.sourceConceptId = sourceConceptId;
         return this;
@@ -20,6 +21,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_concept_name")
     public String sourceConceptName;
+
     public ConceptTaxonomy withSourceConceptName(String sourceConceptName) {
         this.sourceConceptName = sourceConceptName;
         return this;
@@ -28,6 +30,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_concept_type")
     public String sourceConceptType;
+
     public ConceptTaxonomy withSourceConceptType(String sourceConceptType) {
         this.sourceConceptType = sourceConceptType;
         return this;
@@ -36,6 +39,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_concept_vernacular")
     public String sourceConceptVernacular;
+
     public ConceptTaxonomy withSourceConceptVernacular(String sourceConceptVernacular) {
         this.sourceConceptVernacular = sourceConceptVernacular;
         return this;
@@ -44,6 +48,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_concept_id")
     public Long targetConceptId;
+
     public ConceptTaxonomy withTargetConceptId(Long targetConceptId) {
         this.targetConceptId = targetConceptId;
         return this;
@@ -52,6 +57,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_concept_name")
     public String targetConceptName;
+
     public ConceptTaxonomy withTargetConceptName(String targetConceptName) {
         this.targetConceptName = targetConceptName;
         return this;
@@ -60,6 +66,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_concept_type")
     public String targetConceptType;
+
     public ConceptTaxonomy withTargetConceptType(String targetConceptType) {
         this.targetConceptType = targetConceptType;
         return this;
@@ -68,6 +75,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_concept_vernacular")
     public String targetConceptVernacular;
+
     public ConceptTaxonomy withTargetConceptVernacular(String targetConceptVernacular) {
         this.targetConceptVernacular = targetConceptVernacular;
         return this;
@@ -76,6 +84,7 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomic_relation")
     public String taxonomicRelation;
+
     public ConceptTaxonomy withTaxonomicRelation(String taxonomicRelation) {
         this.taxonomicRelation = taxonomicRelation;
         return this;
@@ -84,9 +93,11 @@ public class ConceptTaxonomy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomic_verification_status")
     public String taxonomicVerificationStatus;
+
     public ConceptTaxonomy withTaxonomicVerificationStatus(String taxonomicVerificationStatus) {
         this.taxonomicVerificationStatus = taxonomicVerificationStatus;
         return this;
     }
     
+    public ConceptTaxonomy(){}
 }

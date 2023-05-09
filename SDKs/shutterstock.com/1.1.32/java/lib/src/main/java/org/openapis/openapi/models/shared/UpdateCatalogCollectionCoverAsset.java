@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCatalogCollectionCoverAsset {
     @JsonProperty("id")
     public String id;
+
     public UpdateCatalogCollectionCoverAsset withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UpdateCatalogCollectionCoverAsset(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class BatchDeleteDocumentRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSourceSyncJobMetricTarget")
     public DataSourceSyncJobMetricTarget dataSourceSyncJobMetricTarget;
+
     public BatchDeleteDocumentRequest withDataSourceSyncJobMetricTarget(DataSourceSyncJobMetricTarget dataSourceSyncJobMetricTarget) {
         this.dataSourceSyncJobMetricTarget = dataSourceSyncJobMetricTarget;
         return this;
@@ -22,6 +23,7 @@ public class BatchDeleteDocumentRequest {
     
     @JsonProperty("DocumentIdList")
     public String[] documentIdList;
+
     public BatchDeleteDocumentRequest withDocumentIdList(String[] documentIdList) {
         this.documentIdList = documentIdList;
         return this;
@@ -29,9 +31,14 @@ public class BatchDeleteDocumentRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public BatchDeleteDocumentRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
     }
     
+    public BatchDeleteDocumentRequest(@JsonProperty("DocumentIdList") String[] documentIdList, @JsonProperty("IndexId") String indexId) {
+        this.documentIdList = documentIdList;
+        this.indexId = indexId;
+  }
 }

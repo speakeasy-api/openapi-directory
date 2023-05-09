@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverEndpointIpAddressesResponse {
     
     public String contentType;
+
     public ListResolverEndpointIpAddressesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverEndpointIpAddressesResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverEndpointIpAddressesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverEndpointIpAddressesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverEndpointIpAddressesResponse listResolverEndpointIpAddressesResponse;
+
     public ListResolverEndpointIpAddressesResponse withListResolverEndpointIpAddressesResponse(org.openapis.openapi.models.shared.ListResolverEndpointIpAddressesResponse listResolverEndpointIpAddressesResponse) {
         this.listResolverEndpointIpAddressesResponse = listResolverEndpointIpAddressesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListResolverEndpointIpAddressesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ListResolverEndpointIpAddressesResponse {
     
     
     public Integer statusCode;
+
     public ListResolverEndpointIpAddressesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ListResolverEndpointIpAddressesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverEndpointIpAddressesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class ListResolverEndpointIpAddressesResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverEndpointIpAddressesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListResolverEndpointIpAddressesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

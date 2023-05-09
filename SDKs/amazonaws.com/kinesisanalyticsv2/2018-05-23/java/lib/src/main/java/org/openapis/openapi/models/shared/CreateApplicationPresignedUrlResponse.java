@@ -15,9 +15,11 @@ public class CreateApplicationPresignedUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AuthorizedUrl")
     public String authorizedUrl;
+
     public CreateApplicationPresignedUrlResponse withAuthorizedUrl(String authorizedUrl) {
         this.authorizedUrl = authorizedUrl;
         return this;
     }
     
+    public CreateApplicationPresignedUrlResponse(){}
 }

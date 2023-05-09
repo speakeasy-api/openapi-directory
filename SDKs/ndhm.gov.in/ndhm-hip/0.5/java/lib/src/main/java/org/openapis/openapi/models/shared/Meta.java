@@ -12,6 +12,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communicationExpiry")
     public String communicationExpiry;
+
     public Meta withCommunicationExpiry(String communicationExpiry) {
         this.communicationExpiry = communicationExpiry;
         return this;
@@ -20,6 +21,7 @@ public class Meta {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("communicationHint")
     public String communicationHint;
+
     public Meta withCommunicationHint(String communicationHint) {
         this.communicationHint = communicationHint;
         return this;
@@ -27,9 +29,13 @@ public class Meta {
     
     @JsonProperty("communicationMedium")
     public MetaCommunicationMediumEnum communicationMedium;
+
     public Meta withCommunicationMedium(MetaCommunicationMediumEnum communicationMedium) {
         this.communicationMedium = communicationMedium;
         return this;
     }
     
+    public Meta(@JsonProperty("communicationMedium") MetaCommunicationMediumEnum communicationMedium) {
+        this.communicationMedium = communicationMedium;
+  }
 }

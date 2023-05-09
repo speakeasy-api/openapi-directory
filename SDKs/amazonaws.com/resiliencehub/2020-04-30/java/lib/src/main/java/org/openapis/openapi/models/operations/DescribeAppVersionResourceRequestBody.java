@@ -10,20 +10,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DescribeAppVersionResourceRequestBody {
     /**
-     * The Amazon Resource Name (ARN) of the AWS Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
+     * The Amazon Resource Name (ARN) of the Resilience Hub application. The format for this ARN is: arn:&lt;code&gt;partition&lt;/code&gt;:resiliencehub:&lt;code&gt;region&lt;/code&gt;:&lt;code&gt;account&lt;/code&gt;:app/&lt;code&gt;app-id&lt;/code&gt;. For more information about ARNs, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html"&gt; Amazon Resource Names (ARNs)&lt;/a&gt; in the &lt;i&gt;AWS General Reference&lt;/i&gt; guide.
      */
     @JsonProperty("appArn")
     public String appArn;
+
     public DescribeAppVersionResourceRequestBody withAppArn(String appArn) {
         this.appArn = appArn;
         return this;
     }
     
     /**
-     * The AWS Resilience Hub application version.
+     * The Resilience Hub application version.
      */
     @JsonProperty("appVersion")
     public String appVersion;
+
     public DescribeAppVersionResourceRequestBody withAppVersion(String appVersion) {
         this.appVersion = appVersion;
         return this;
@@ -35,6 +37,7 @@ public class DescribeAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsAccountId")
     public String awsAccountId;
+
     public DescribeAppVersionResourceRequestBody withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -46,6 +49,7 @@ public class DescribeAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsRegion")
     public String awsRegion;
+
     public DescribeAppVersionResourceRequestBody withAwsRegion(String awsRegion) {
         this.awsRegion = awsRegion;
         return this;
@@ -57,6 +61,7 @@ public class DescribeAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalResourceId")
     public DescribeAppVersionResourceRequestBodyLogicalResourceId logicalResourceId;
+
     public DescribeAppVersionResourceRequestBody withLogicalResourceId(DescribeAppVersionResourceRequestBodyLogicalResourceId logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -68,6 +73,7 @@ public class DescribeAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalResourceId")
     public String physicalResourceId;
+
     public DescribeAppVersionResourceRequestBody withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -79,9 +85,14 @@ public class DescribeAppVersionResourceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceName")
     public String resourceName;
+
     public DescribeAppVersionResourceRequestBody withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
     }
     
+    public DescribeAppVersionResourceRequestBody(@JsonProperty("appArn") String appArn, @JsonProperty("appVersion") String appVersion) {
+        this.appArn = appArn;
+        this.appVersion = appVersion;
+  }
 }

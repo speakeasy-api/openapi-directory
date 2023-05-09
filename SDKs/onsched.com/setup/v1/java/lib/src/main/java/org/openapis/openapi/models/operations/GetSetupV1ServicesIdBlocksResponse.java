@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSetupV1ServicesIdBlocksResponse {
     
     public String contentType;
+
     public GetSetupV1ServicesIdBlocksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSetupV1ServicesIdBlocksResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceBlockListViewModel serviceBlockListViewModel;
+
     public GetSetupV1ServicesIdBlocksResponse withServiceBlockListViewModel(org.openapis.openapi.models.shared.ServiceBlockListViewModel serviceBlockListViewModel) {
         this.serviceBlockListViewModel = serviceBlockListViewModel;
         return this;
@@ -26,6 +29,7 @@ public class GetSetupV1ServicesIdBlocksResponse {
     
     
     public Integer statusCode;
+
     public GetSetupV1ServicesIdBlocksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSetupV1ServicesIdBlocksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSetupV1ServicesIdBlocksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSetupV1ServicesIdBlocksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

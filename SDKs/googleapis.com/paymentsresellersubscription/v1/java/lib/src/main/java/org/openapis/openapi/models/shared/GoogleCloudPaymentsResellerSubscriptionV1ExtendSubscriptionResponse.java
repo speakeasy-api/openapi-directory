@@ -18,6 +18,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycleEndTime")
     public String cycleEndTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse withCycleEndTime(String cycleEndTime) {
         this.cycleEndTime = cycleEndTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("freeTrialEndTime")
     public String freeTrialEndTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse withFreeTrialEndTime(String freeTrialEndTime) {
         this.freeTrialEndTime = freeTrialEndTime;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("renewalTime")
     public String renewalTime;
+
     public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse withRenewalTime(String renewalTime) {
         this.renewalTime = renewalTime;
         return this;
     }
     
+    public GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse(){}
 }

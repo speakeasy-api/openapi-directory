@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Issuer {
     @JsonProperty("Name")
     public String name;
+
     public Issuer withName(String name) {
         this.name = name;
         return this;
@@ -22,9 +23,13 @@ public class Issuer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignKey")
     public String signKey;
+
     public Issuer withSignKey(String signKey) {
         this.signKey = signKey;
         return this;
     }
     
+    public Issuer(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

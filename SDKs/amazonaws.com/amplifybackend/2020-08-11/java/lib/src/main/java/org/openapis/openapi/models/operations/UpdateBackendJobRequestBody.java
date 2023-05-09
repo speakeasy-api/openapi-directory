@@ -15,6 +15,7 @@ public class UpdateBackendJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public String operation;
+
     public UpdateBackendJobRequestBody withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -26,9 +27,11 @@ public class UpdateBackendJobRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public UpdateBackendJobRequestBody withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public UpdateBackendJobRequestBody(){}
 }

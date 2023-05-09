@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProjectUsernameProjectBuildNumRequest {
@@ -13,6 +14,7 @@ public class GetProjectUsernameProjectBuildNumRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=build_num")
     public Long buildNum;
+
     public GetProjectUsernameProjectBuildNumRequest withBuildNum(Long buildNum) {
         this.buildNum = buildNum;
         return this;
@@ -24,6 +26,7 @@ public class GetProjectUsernameProjectBuildNumRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=project")
     public String project;
+
     public GetProjectUsernameProjectBuildNumRequest withProject(String project) {
         this.project = project;
         return this;
@@ -35,9 +38,15 @@ public class GetProjectUsernameProjectBuildNumRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public GetProjectUsernameProjectBuildNumRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public GetProjectUsernameProjectBuildNumRequest(@JsonProperty("build_num") Long buildNum, @JsonProperty("project") String project, @JsonProperty("username") String username) {
+        this.buildNum = buildNum;
+        this.project = project;
+        this.username = username;
+  }
 }

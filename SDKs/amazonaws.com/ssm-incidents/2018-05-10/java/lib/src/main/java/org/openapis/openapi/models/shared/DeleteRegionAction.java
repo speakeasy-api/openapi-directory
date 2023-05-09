@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteRegionAction {
     @JsonProperty("regionName")
     public String regionName;
+
     public DeleteRegionAction withRegionName(String regionName) {
         this.regionName = regionName;
         return this;
     }
     
+    public DeleteRegionAction(@JsonProperty("regionName") String regionName) {
+        this.regionName = regionName;
+  }
 }

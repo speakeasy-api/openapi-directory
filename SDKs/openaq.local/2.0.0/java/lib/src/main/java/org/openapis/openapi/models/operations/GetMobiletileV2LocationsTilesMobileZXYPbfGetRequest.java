@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateFrom")
     public Object dateFrom;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withDateFrom(Object dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -16,6 +18,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTo")
     public Object dateTo;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withDateTo(Object dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -23,6 +26,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isAnalysis")
     public Boolean isAnalysis;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withIsAnalysis(Boolean isAnalysis) {
         this.isAnalysis = isAnalysis;
         return this;
@@ -30,6 +34,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isMobile")
     public Boolean isMobile;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withIsMobile(Boolean isMobile) {
         this.isMobile = isMobile;
         return this;
@@ -37,6 +42,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedFrom")
     public Object lastUpdatedFrom;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withLastUpdatedFrom(Object lastUpdatedFrom) {
         this.lastUpdatedFrom = lastUpdatedFrom;
         return this;
@@ -44,6 +50,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lastUpdatedTo")
     public Object lastUpdatedTo;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withLastUpdatedTo(Object lastUpdatedTo) {
         this.lastUpdatedTo = lastUpdatedTo;
         return this;
@@ -54,6 +61,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public Long[] location;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withLocation(Long[] location) {
         this.location = location;
         return this;
@@ -61,6 +69,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parameter")
     public Object parameter;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withParameter(Object parameter) {
         this.parameter = parameter;
         return this;
@@ -68,6 +77,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=project")
     public Long project;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withProject(Long project) {
         this.project = project;
         return this;
@@ -75,6 +85,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=x")
     public Long x;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withX(Long x) {
         this.x = x;
         return this;
@@ -82,6 +93,7 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=y")
     public Long y;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withY(Long y) {
         this.y = y;
         return this;
@@ -89,9 +101,17 @@ public class GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=z")
     public Long z;
+
     public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest withZ(Long z) {
         this.z = z;
         return this;
     }
     
+    public GetMobiletileV2LocationsTilesMobileZXYPbfGetRequest(@JsonProperty("dateFrom") Object dateFrom, @JsonProperty("dateTo") Object dateTo, @JsonProperty("x") Long x, @JsonProperty("y") Long y, @JsonProperty("z") Long z) {
+        this.dateFrom = dateFrom;
+        this.dateTo = dateTo;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+  }
 }

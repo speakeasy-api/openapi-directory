@@ -18,6 +18,7 @@ public class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drainNatIpPortRanges")
     public String[] drainNatIpPortRanges;
+
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings withDrainNatIpPortRanges(String[] drainNatIpPortRanges) {
         this.drainNatIpPortRanges = drainNatIpPortRanges;
         return this;
@@ -29,6 +30,7 @@ public class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("natIpPortRanges")
     public String[] natIpPortRanges;
+
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings withNatIpPortRanges(String[] natIpPortRanges) {
         this.natIpPortRanges = natIpPortRanges;
         return this;
@@ -40,6 +42,7 @@ public class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTotalDrainNatPorts")
     public Integer numTotalDrainNatPorts;
+
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings withNumTotalDrainNatPorts(Integer numTotalDrainNatPorts) {
         this.numTotalDrainNatPorts = numTotalDrainNatPorts;
         return this;
@@ -51,6 +54,7 @@ public class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numTotalNatPorts")
     public Integer numTotalNatPorts;
+
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings withNumTotalNatPorts(Integer numTotalNatPorts) {
         this.numTotalNatPorts = numTotalNatPorts;
         return this;
@@ -62,9 +66,11 @@ public class VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleNumber")
     public Integer ruleNumber;
+
     public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings withRuleNumber(Integer ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings(){}
 }

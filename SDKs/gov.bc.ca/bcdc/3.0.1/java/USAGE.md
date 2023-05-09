@@ -3,9 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.GetActionOrganizationActivityListRequest;
 import org.openapis.openapi.models.operations.GetActionOrganizationActivityListResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,8 +17,8 @@ public class Application {
                 .build();
 
             GetActionOrganizationActivityListRequest req = new GetActionOrganizationActivityListRequest() {{
-                id = "corrupti";
-            }}            
+                id = "89bd9d8d-69a6-474e-8f46-7cc8796ed151";
+            }};            
 
             GetActionOrganizationActivityListResponse res = sdk.action.getActionOrganizationActivityList(req);
 
@@ -28,5 +28,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

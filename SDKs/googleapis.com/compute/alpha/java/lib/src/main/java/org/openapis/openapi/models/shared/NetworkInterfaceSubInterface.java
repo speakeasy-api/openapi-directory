@@ -15,6 +15,7 @@ public class NetworkInterfaceSubInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkInterfaceSubInterface withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -23,6 +24,7 @@ public class NetworkInterfaceSubInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAllocationMode")
     public NetworkInterfaceSubInterfaceIpAllocationModeEnum ipAllocationMode;
+
     public NetworkInterfaceSubInterface withIpAllocationMode(NetworkInterfaceSubInterfaceIpAllocationModeEnum ipAllocationMode) {
         this.ipAllocationMode = ipAllocationMode;
         return this;
@@ -34,6 +36,7 @@ public class NetworkInterfaceSubInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetwork")
     public String subnetwork;
+
     public NetworkInterfaceSubInterface withSubnetwork(String subnetwork) {
         this.subnetwork = subnetwork;
         return this;
@@ -45,9 +48,11 @@ public class NetworkInterfaceSubInterface {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlan")
     public Integer vlan;
+
     public NetworkInterfaceSubInterface withVlan(Integer vlan) {
         this.vlan = vlan;
         return this;
     }
     
+    public NetworkInterfaceSubInterface(){}
 }

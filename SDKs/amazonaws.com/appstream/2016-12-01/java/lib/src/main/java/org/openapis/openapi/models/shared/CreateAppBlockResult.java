@@ -15,9 +15,11 @@ public class CreateAppBlockResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppBlock")
     public AppBlock appBlock;
+
     public CreateAppBlockResult withAppBlock(AppBlock appBlock) {
         this.appBlock = appBlock;
         return this;
     }
     
+    public CreateAppBlockResult(){}
 }

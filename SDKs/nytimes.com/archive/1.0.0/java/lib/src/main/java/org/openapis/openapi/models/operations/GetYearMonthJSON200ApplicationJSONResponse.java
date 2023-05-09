@@ -12,6 +12,7 @@ public class GetYearMonthJSON200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("docs")
     public org.openapis.openapi.models.shared.Doc[] docs;
+
     public GetYearMonthJSON200ApplicationJSONResponse withDocs(org.openapis.openapi.models.shared.Doc[] docs) {
         this.docs = docs;
         return this;
@@ -20,9 +21,11 @@ public class GetYearMonthJSON200ApplicationJSONResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public GetYearMonthJSON200ApplicationJSONResponseMeta meta;
+
     public GetYearMonthJSON200ApplicationJSONResponse withMeta(GetYearMonthJSON200ApplicationJSONResponseMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetYearMonthJSON200ApplicationJSONResponse(){}
 }

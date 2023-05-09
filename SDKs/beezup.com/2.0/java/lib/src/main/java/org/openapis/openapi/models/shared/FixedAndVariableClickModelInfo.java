@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class FixedAndVariableClickModelInfo {
     @JsonProperty("clickIncludedAndAdditionalClickPrices")
     public ClickIncludedAndAdditionalClickPrice[] clickIncludedAndAdditionalClickPrices;
+
     public FixedAndVariableClickModelInfo withClickIncludedAndAdditionalClickPrices(ClickIncludedAndAdditionalClickPrice[] clickIncludedAndAdditionalClickPrices) {
         this.clickIncludedAndAdditionalClickPrices = clickIncludedAndAdditionalClickPrices;
         return this;
     }
     
+    public FixedAndVariableClickModelInfo(@JsonProperty("clickIncludedAndAdditionalClickPrices") ClickIncludedAndAdditionalClickPrice[] clickIncludedAndAdditionalClickPrices) {
+        this.clickIncludedAndAdditionalClickPrices = clickIncludedAndAdditionalClickPrices;
+  }
 }

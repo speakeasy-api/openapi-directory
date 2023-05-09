@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListOutgoingCertificatesResponse {
     
     public String contentType;
+
     public ListOutgoingCertificatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public Object internalFailureException;
+
     public ListOutgoingCertificatesResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public Object invalidRequestException;
+
     public ListOutgoingCertificatesResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListOutgoingCertificatesResponse listOutgoingCertificatesResponse;
+
     public ListOutgoingCertificatesResponse withListOutgoingCertificatesResponse(org.openapis.openapi.models.shared.ListOutgoingCertificatesResponse listOutgoingCertificatesResponse) {
         this.listOutgoingCertificatesResponse = listOutgoingCertificatesResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListOutgoingCertificatesResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -56,6 +62,7 @@ public class ListOutgoingCertificatesResponse {
     
     
     public Integer statusCode;
+
     public ListOutgoingCertificatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListOutgoingCertificatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListOutgoingCertificatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public Object throttlingException;
+
     public ListOutgoingCertificatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListOutgoingCertificatesResponse {
      */
     
     public Object unauthorizedException;
+
     public ListOutgoingCertificatesResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public ListOutgoingCertificatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

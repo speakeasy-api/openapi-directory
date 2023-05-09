@@ -15,6 +15,7 @@ public class CreateNodegroupRequestBodyUpdateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUnavailable")
     public Long maxUnavailable;
+
     public CreateNodegroupRequestBodyUpdateConfig withMaxUnavailable(Long maxUnavailable) {
         this.maxUnavailable = maxUnavailable;
         return this;
@@ -23,9 +24,11 @@ public class CreateNodegroupRequestBodyUpdateConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxUnavailablePercentage")
     public Long maxUnavailablePercentage;
+
     public CreateNodegroupRequestBodyUpdateConfig withMaxUnavailablePercentage(Long maxUnavailablePercentage) {
         this.maxUnavailablePercentage = maxUnavailablePercentage;
         return this;
     }
     
+    public CreateNodegroupRequestBodyUpdateConfig(){}
 }

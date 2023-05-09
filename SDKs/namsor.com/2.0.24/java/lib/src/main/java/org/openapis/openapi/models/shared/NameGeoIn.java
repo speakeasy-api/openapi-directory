@@ -12,6 +12,7 @@ public class NameGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryIso2")
     public String countryIso2;
+
     public NameGeoIn withCountryIso2(String countryIso2) {
         this.countryIso2 = countryIso2;
         return this;
@@ -20,6 +21,7 @@ public class NameGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public NameGeoIn withId(String id) {
         this.id = id;
         return this;
@@ -28,9 +30,11 @@ public class NameGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public NameGeoIn withName(String name) {
         this.name = name;
         return this;
     }
     
+    public NameGeoIn(){}
 }

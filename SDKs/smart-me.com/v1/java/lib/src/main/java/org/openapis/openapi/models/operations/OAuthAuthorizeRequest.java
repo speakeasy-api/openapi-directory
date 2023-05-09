@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OAuthAuthorizeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_id")
     public String clientId;
+
     public OAuthAuthorizeRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -16,6 +18,7 @@ public class OAuthAuthorizeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=client_secret")
     public String clientSecret;
+
     public OAuthAuthorizeRequest withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -23,6 +26,7 @@ public class OAuthAuthorizeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=redirect_uri")
     public String redirectUri;
+
     public OAuthAuthorizeRequest withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
@@ -30,6 +34,7 @@ public class OAuthAuthorizeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scope")
     public String scope;
+
     public OAuthAuthorizeRequest withScope(String scope) {
         this.scope = scope;
         return this;
@@ -37,9 +42,15 @@ public class OAuthAuthorizeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=state")
     public String state;
+
     public OAuthAuthorizeRequest withState(String state) {
         this.state = state;
         return this;
     }
     
+    public OAuthAuthorizeRequest(@JsonProperty("client_id") String clientId, @JsonProperty("redirect_uri") String redirectUri, @JsonProperty("state") String state) {
+        this.clientId = clientId;
+        this.redirectUri = redirectUri;
+        this.state = state;
+  }
 }

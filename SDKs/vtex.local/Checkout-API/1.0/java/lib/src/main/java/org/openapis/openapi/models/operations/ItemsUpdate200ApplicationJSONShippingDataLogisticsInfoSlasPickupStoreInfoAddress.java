@@ -18,6 +18,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -29,6 +30,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withCity(String city) {
         this.city = city;
         return this;
@@ -40,6 +42,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -51,6 +54,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withCountry(String country) {
         this.country = country;
         return this;
@@ -62,6 +66,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public String[] geoCoordinates;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withGeoCoordinates(String[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -73,6 +78,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -84,6 +90,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withNumber(String number) {
         this.number = number;
         return this;
@@ -95,6 +102,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -106,6 +114,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withReference(String reference) {
         this.reference = reference;
         return this;
@@ -117,6 +126,7 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withState(String state) {
         this.state = state;
         return this;
@@ -128,9 +138,11 @@ public class ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupSto
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public ItemsUpdate200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfoAddress(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeSharedDirectoriesResponse {
@@ -12,6 +13,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object clientException;
+
     public DescribeSharedDirectoriesResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeSharedDirectoriesResponse {
     
     
     public String contentType;
+
     public DescribeSharedDirectoriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeSharedDirectoriesResult describeSharedDirectoriesResult;
+
     public DescribeSharedDirectoriesResponse withDescribeSharedDirectoriesResult(org.openapis.openapi.models.shared.DescribeSharedDirectoriesResult describeSharedDirectoriesResult) {
         this.describeSharedDirectoriesResult = describeSharedDirectoriesResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public DescribeSharedDirectoriesResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeSharedDirectoriesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeSharedDirectoriesResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeSharedDirectoriesResponse {
     
     
     public Integer statusCode;
+
     public DescribeSharedDirectoriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeSharedDirectoriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeSharedDirectoriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object serviceException;
+
     public DescribeSharedDirectoriesResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeSharedDirectoriesResponse {
      */
     
     public Object unsupportedOperationException;
+
     public DescribeSharedDirectoriesResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public DescribeSharedDirectoriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

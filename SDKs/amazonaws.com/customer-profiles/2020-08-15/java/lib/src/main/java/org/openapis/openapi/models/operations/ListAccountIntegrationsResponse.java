@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAccountIntegrationsResponse {
@@ -12,6 +13,7 @@ public class ListAccountIntegrationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListAccountIntegrationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListAccountIntegrationsResponse {
      */
     
     public Object badRequestException;
+
     public ListAccountIntegrationsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -29,6 +32,7 @@ public class ListAccountIntegrationsResponse {
     
     
     public String contentType;
+
     public ListAccountIntegrationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListAccountIntegrationsResponse {
      */
     
     public Object internalServerException;
+
     public ListAccountIntegrationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ListAccountIntegrationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListAccountIntegrationsResponse listAccountIntegrationsResponse;
+
     public ListAccountIntegrationsResponse withListAccountIntegrationsResponse(org.openapis.openapi.models.shared.ListAccountIntegrationsResponse listAccountIntegrationsResponse) {
         this.listAccountIntegrationsResponse = listAccountIntegrationsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListAccountIntegrationsResponse {
     
     
     public Integer statusCode;
+
     public ListAccountIntegrationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListAccountIntegrationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAccountIntegrationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListAccountIntegrationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListAccountIntegrationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListAccountIntegrationsResponse {
      */
     
     public Object throttlingException;
+
     public ListAccountIntegrationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListAccountIntegrationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -16,6 +16,7 @@ public class TimeMachinePointDailyStatsWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_angle")
     public Double avgAngle;
+
     public TimeMachinePointDailyStatsWindData withAvgAngle(Double avgAngle) {
         this.avgAngle = avgAngle;
         return this;
@@ -28,6 +29,7 @@ public class TimeMachinePointDailyStatsWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_dir")
     public byte[] avgDir;
+
     public TimeMachinePointDailyStatsWindData withAvgDir(byte[] avgDir) {
         this.avgDir = avgDir;
         return this;
@@ -40,6 +42,7 @@ public class TimeMachinePointDailyStatsWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avg_speed")
     public Double avgSpeed;
+
     public TimeMachinePointDailyStatsWindData withAvgSpeed(Double avgSpeed) {
         this.avgSpeed = avgSpeed;
         return this;
@@ -52,6 +55,7 @@ public class TimeMachinePointDailyStatsWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_gust")
     public Double maxGust;
+
     public TimeMachinePointDailyStatsWindData withMaxGust(Double maxGust) {
         this.maxGust = maxGust;
         return this;
@@ -64,9 +68,11 @@ public class TimeMachinePointDailyStatsWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_speed")
     public Double maxSpeed;
+
     public TimeMachinePointDailyStatsWindData withMaxSpeed(Double maxSpeed) {
         this.maxSpeed = maxSpeed;
         return this;
     }
     
+    public TimeMachinePointDailyStatsWindData(){}
 }

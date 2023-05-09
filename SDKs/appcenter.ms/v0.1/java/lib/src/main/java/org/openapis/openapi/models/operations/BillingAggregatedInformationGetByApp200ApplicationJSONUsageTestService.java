@@ -18,9 +18,11 @@ public class BillingAggregatedInformationGetByApp200ApplicationJSONUsageTestServ
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currentUsagePeriod")
     public BillingAggregatedInformationGetByApp200ApplicationJSONUsageTestServiceCurrentUsagePeriod currentUsagePeriod;
+
     public BillingAggregatedInformationGetByApp200ApplicationJSONUsageTestService withCurrentUsagePeriod(BillingAggregatedInformationGetByApp200ApplicationJSONUsageTestServiceCurrentUsagePeriod currentUsagePeriod) {
         this.currentUsagePeriod = currentUsagePeriod;
         return this;
     }
     
+    public BillingAggregatedInformationGetByApp200ApplicationJSONUsageTestService(){}
 }

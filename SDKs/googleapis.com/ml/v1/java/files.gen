@@ -232,4 +232,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GoogleIamV1TestIamPermissio
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudMlV1ListVersionsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleLongrunningListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GoogleCloudMlV1PredictRequest.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

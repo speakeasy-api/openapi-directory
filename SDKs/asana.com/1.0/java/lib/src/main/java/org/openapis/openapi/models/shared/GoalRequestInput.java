@@ -18,6 +18,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("due_on")
     public String dueOn;
+
     public GoalRequestInput withDueOn(String dueOn) {
         this.dueOn = dueOn;
         return this;
@@ -26,6 +27,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("followers")
     public String[] followers;
+
     public GoalRequestInput withFollowers(String[] followers) {
         this.followers = followers;
         return this;
@@ -37,6 +39,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_notes")
     public String htmlNotes;
+
     public GoalRequestInput withHtmlNotes(String htmlNotes) {
         this.htmlNotes = htmlNotes;
         return this;
@@ -48,6 +51,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_workspace_level")
     public Boolean isWorkspaceLevel;
+
     public GoalRequestInput withIsWorkspaceLevel(Boolean isWorkspaceLevel) {
         this.isWorkspaceLevel = isWorkspaceLevel;
         return this;
@@ -59,6 +63,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liked")
     public Boolean liked;
+
     public GoalRequestInput withLiked(Boolean liked) {
         this.liked = liked;
         return this;
@@ -70,6 +75,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoalRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public GoalRequestInput withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -92,6 +99,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public GoalRequestInput withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -103,6 +111,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start_on")
     public String startOn;
+
     public GoalRequestInput withStartOn(String startOn) {
         this.startOn = startOn;
         return this;
@@ -115,6 +124,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public GoalRequestInput withStatus(String status) {
         this.status = status;
         return this;
@@ -126,6 +136,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("team")
     public String team;
+
     public GoalRequestInput withTeam(String team) {
         this.team = team;
         return this;
@@ -137,6 +148,7 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time_period")
     public String timePeriod;
+
     public GoalRequestInput withTimePeriod(String timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -148,9 +160,11 @@ public class GoalRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workspace")
     public String workspace;
+
     public GoalRequestInput withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GoalRequestInput(){}
 }

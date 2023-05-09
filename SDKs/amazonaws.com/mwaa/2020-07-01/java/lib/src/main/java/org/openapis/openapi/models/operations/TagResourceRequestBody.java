@@ -8,13 +8,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagResourceRequestBody {
     /**
-     * The key-value tag pairs you want to associate to your environment. For example, &lt;code&gt;"Environment": "Staging"&lt;/code&gt;. To learn more, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services resources&lt;/a&gt;.
+     * The key-value tag pairs you want to associate to your environment. For example, &lt;code&gt;"Environment": "Staging"&lt;/code&gt;. For more information, see &lt;a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"&gt;Tagging Amazon Web Services resources&lt;/a&gt;.
      */
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public TagResourceRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public TagResourceRequestBody(@JsonProperty("Tags") java.util.Map<String, String> tags) {
+        this.tags = tags;
+  }
 }

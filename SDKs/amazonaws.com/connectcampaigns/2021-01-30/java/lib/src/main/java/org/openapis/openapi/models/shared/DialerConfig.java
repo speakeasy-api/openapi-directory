@@ -18,6 +18,7 @@ public class DialerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictiveDialerConfig")
     public PredictiveDialerConfig predictiveDialerConfig;
+
     public DialerConfig withPredictiveDialerConfig(PredictiveDialerConfig predictiveDialerConfig) {
         this.predictiveDialerConfig = predictiveDialerConfig;
         return this;
@@ -29,9 +30,11 @@ public class DialerConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("progressiveDialerConfig")
     public ProgressiveDialerConfig progressiveDialerConfig;
+
     public DialerConfig withProgressiveDialerConfig(ProgressiveDialerConfig progressiveDialerConfig) {
         this.progressiveDialerConfig = progressiveDialerConfig;
         return this;
     }
     
+    public DialerConfig(){}
 }

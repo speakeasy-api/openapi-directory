@@ -18,6 +18,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public Recipient withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -29,6 +30,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceId")
     public String deviceId;
+
     public Recipient withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -40,6 +42,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceToken")
     public String deviceToken;
+
     public Recipient withDeviceToken(String deviceToken) {
         this.deviceToken = deviceToken;
         return this;
@@ -51,6 +54,7 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationToken")
     public String registrationToken;
+
     public Recipient withRegistrationToken(String registrationToken) {
         this.registrationToken = registrationToken;
         return this;
@@ -62,9 +66,11 @@ public class Recipient {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transportType")
     public RecipientTransportTypeEnum transportType;
+
     public Recipient withTransportType(RecipientTransportTypeEnum transportType) {
         this.transportType = transportType;
         return this;
     }
     
+    public Recipient(){}
 }

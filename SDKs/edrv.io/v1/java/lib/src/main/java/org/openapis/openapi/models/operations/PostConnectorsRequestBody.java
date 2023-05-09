@@ -15,6 +15,7 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chargestation")
     public String chargestation;
+
     public PostConnectorsRequestBody withChargestation(String chargestation) {
         this.chargestation = chargestation;
         return this;
@@ -23,6 +24,7 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public PostConnectorsRequestBody withFormat(String format) {
         this.format = format;
         return this;
@@ -31,6 +33,7 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("power")
     public Long power;
+
     public PostConnectorsRequestBody withPower(Long power) {
         this.power = power;
         return this;
@@ -39,6 +42,7 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("power_type")
     public String powerType;
+
     public PostConnectorsRequestBody withPowerType(String powerType) {
         this.powerType = powerType;
         return this;
@@ -47,6 +51,7 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rate")
     public String rate;
+
     public PostConnectorsRequestBody withRate(String rate) {
         this.rate = rate;
         return this;
@@ -55,9 +60,11 @@ public class PostConnectorsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public PostConnectorsRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostConnectorsRequestBody(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreatePatientHealthMetricRequest {
     @JsonProperty("data")
     public PatientHealthMetricCreateResource data;
+
     public CreatePatientHealthMetricRequest withData(PatientHealthMetricCreateResource data) {
         this.data = data;
         return this;
@@ -19,9 +20,13 @@ public class CreatePatientHealthMetricRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meta")
     public CreatePatientHealthMetricRequestMeta meta;
+
     public CreatePatientHealthMetricRequest withMeta(CreatePatientHealthMetricRequestMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public CreatePatientHealthMetricRequest(@JsonProperty("data") PatientHealthMetricCreateResource data) {
+        this.data = data;
+  }
 }

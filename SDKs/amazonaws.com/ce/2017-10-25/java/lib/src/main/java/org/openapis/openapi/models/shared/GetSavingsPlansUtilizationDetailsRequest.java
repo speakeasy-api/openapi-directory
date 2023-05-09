@@ -12,6 +12,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataType")
     public SavingsPlansDataTypeEnum[] dataType;
+
     public GetSavingsPlansUtilizationDetailsRequest withDataType(SavingsPlansDataTypeEnum[] dataType) {
         this.dataType = dataType;
         return this;
@@ -20,6 +21,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetSavingsPlansUtilizationDetailsRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -28,6 +30,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetSavingsPlansUtilizationDetailsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSavingsPlansUtilizationDetailsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,6 +48,7 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition sortBy;
+
     public GetSavingsPlansUtilizationDetailsRequest withSortBy(SortDefinition sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -51,9 +56,13 @@ public class GetSavingsPlansUtilizationDetailsRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetSavingsPlansUtilizationDetailsRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetSavingsPlansUtilizationDetailsRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

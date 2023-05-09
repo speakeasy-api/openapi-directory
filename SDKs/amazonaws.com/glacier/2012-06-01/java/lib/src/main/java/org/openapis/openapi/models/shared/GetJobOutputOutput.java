@@ -15,6 +15,7 @@ public class GetJobOutputOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("body")
     public String body;
+
     public GetJobOutputOutput withBody(String body) {
         this.body = body;
         return this;
@@ -23,9 +24,11 @@ public class GetJobOutputOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetJobOutputOutput withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public GetJobOutputOutput(){}
 }

@@ -15,9 +15,11 @@ public class GetBucketStatisticsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public GetBucketStatisticsRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
     }
     
+    public GetBucketStatisticsRequestBody(){}
 }

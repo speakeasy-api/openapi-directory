@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PepOrderDefaultApplicationJSON {
     @JsonProperty("code")
     public Integer code;
+
     public PepOrderDefaultApplicationJSON withCode(Integer code) {
         this.code = code;
         return this;
@@ -22,6 +23,7 @@ public class PepOrderDefaultApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fault")
     public String fault;
+
     public PepOrderDefaultApplicationJSON withFault(String fault) {
         this.fault = fault;
         return this;
@@ -29,6 +31,7 @@ public class PepOrderDefaultApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public PepOrderDefaultApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -36,9 +39,15 @@ public class PepOrderDefaultApplicationJSON {
     
     @JsonProperty("tag")
     public String tag;
+
     public PepOrderDefaultApplicationJSON withTag(String tag) {
         this.tag = tag;
         return this;
     }
     
+    public PepOrderDefaultApplicationJSON(@JsonProperty("code") Integer code, @JsonProperty("message") String message, @JsonProperty("tag") String tag) {
+        this.code = code;
+        this.message = message;
+        this.tag = tag;
+  }
 }

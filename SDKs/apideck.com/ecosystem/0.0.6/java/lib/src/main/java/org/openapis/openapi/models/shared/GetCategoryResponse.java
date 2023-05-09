@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCategoryResponse {
     @JsonProperty("data")
     public Category data;
+
     public GetCategoryResponse withData(Category data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class GetCategoryResponse {
      */
     @JsonProperty("status")
     public String status;
+
     public GetCategoryResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -32,9 +34,15 @@ public class GetCategoryResponse {
      */
     @JsonProperty("status_code")
     public Long statusCode;
+
     public GetCategoryResponse withStatusCode(Long statusCode) {
         this.statusCode = statusCode;
         return this;
     }
     
+    public GetCategoryResponse(@JsonProperty("data") Category data, @JsonProperty("status") String status, @JsonProperty("status_code") Long statusCode) {
+        this.data = data;
+        this.status = status;
+        this.statusCode = statusCode;
+  }
 }

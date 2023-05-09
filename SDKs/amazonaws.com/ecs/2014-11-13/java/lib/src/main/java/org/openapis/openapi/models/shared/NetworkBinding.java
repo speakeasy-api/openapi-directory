@@ -15,6 +15,7 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindIP")
     public String bindIP;
+
     public NetworkBinding withBindIP(String bindIP) {
         this.bindIP = bindIP;
         return this;
@@ -23,6 +24,7 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPort")
     public Long containerPort;
+
     public NetworkBinding withContainerPort(Long containerPort) {
         this.containerPort = containerPort;
         return this;
@@ -31,6 +33,7 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPortRange")
     public String containerPortRange;
+
     public NetworkBinding withContainerPortRange(String containerPortRange) {
         this.containerPortRange = containerPortRange;
         return this;
@@ -39,6 +42,7 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostPort")
     public Long hostPort;
+
     public NetworkBinding withHostPort(Long hostPort) {
         this.hostPort = hostPort;
         return this;
@@ -47,6 +51,7 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostPortRange")
     public String hostPortRange;
+
     public NetworkBinding withHostPortRange(String hostPortRange) {
         this.hostPortRange = hostPortRange;
         return this;
@@ -55,9 +60,11 @@ public class NetworkBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public TransportProtocolEnum protocol;
+
     public NetworkBinding withProtocol(TransportProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
     }
     
+    public NetworkBinding(){}
 }

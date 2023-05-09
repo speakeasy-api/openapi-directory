@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsListPublicResponse {
     
     public String contentType;
+
     public GistsListPublicResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsListPublicResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GistsListPublicResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GistsListPublicResponse {
     
     
     public Integer statusCode;
+
     public GistsListPublicResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GistsListPublicResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsListPublicResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GistsListPublicResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseGist[] baseGists;
+
     public GistsListPublicResponse withBaseGists(org.openapis.openapi.models.shared.BaseGist[] baseGists) {
         this.baseGists = baseGists;
         return this;
@@ -50,6 +56,7 @@ public class GistsListPublicResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsListPublicResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -60,9 +67,14 @@ public class GistsListPublicResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GistsListPublicResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GistsListPublicResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

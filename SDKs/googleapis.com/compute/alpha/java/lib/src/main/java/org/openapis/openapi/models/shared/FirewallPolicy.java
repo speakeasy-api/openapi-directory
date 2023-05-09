@@ -18,6 +18,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("associations")
     public FirewallPolicyAssociation[] associations;
+
     public FirewallPolicy withAssociations(FirewallPolicyAssociation[] associations) {
         this.associations = associations;
         return this;
@@ -29,6 +30,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public FirewallPolicy withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public FirewallPolicy withDescription(String description) {
         this.description = description;
         return this;
@@ -51,6 +54,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public FirewallPolicy withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -62,6 +66,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public FirewallPolicy withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -73,6 +78,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public FirewallPolicy withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FirewallPolicy withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FirewallPolicy withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public FirewallPolicy withParent(String parent) {
         this.parent = parent;
         return this;
@@ -117,6 +126,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public FirewallPolicy withRegion(String region) {
         this.region = region;
         return this;
@@ -128,6 +138,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ruleTupleCount")
     public Integer ruleTupleCount;
+
     public FirewallPolicy withRuleTupleCount(Integer ruleTupleCount) {
         this.ruleTupleCount = ruleTupleCount;
         return this;
@@ -139,6 +150,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public FirewallPolicyRule[] rules;
+
     public FirewallPolicy withRules(FirewallPolicyRule[] rules) {
         this.rules = rules;
         return this;
@@ -150,6 +162,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public FirewallPolicy withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -161,6 +174,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLinkWithId")
     public String selfLinkWithId;
+
     public FirewallPolicy withSelfLinkWithId(String selfLinkWithId) {
         this.selfLinkWithId = selfLinkWithId;
         return this;
@@ -172,6 +186,7 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public FirewallPolicy withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -183,9 +198,11 @@ public class FirewallPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcNetworkScope")
     public FirewallPolicyVpcNetworkScopeEnum vpcNetworkScope;
+
     public FirewallPolicy withVpcNetworkScope(FirewallPolicyVpcNetworkScopeEnum vpcNetworkScope) {
         this.vpcNetworkScope = vpcNetworkScope;
         return this;
     }
     
+    public FirewallPolicy(){}
 }

@@ -15,9 +15,11 @@ public class DeleteStreamingSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("session")
     public StreamingSession session;
+
     public DeleteStreamingSessionResponse withSession(StreamingSession session) {
         this.session = session;
         return this;
     }
     
+    public DeleteStreamingSessionResponse(){}
 }

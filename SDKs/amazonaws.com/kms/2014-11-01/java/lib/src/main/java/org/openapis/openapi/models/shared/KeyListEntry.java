@@ -15,6 +15,7 @@ public class KeyListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyArn")
     public String keyArn;
+
     public KeyListEntry withKeyArn(String keyArn) {
         this.keyArn = keyArn;
         return this;
@@ -23,9 +24,11 @@ public class KeyListEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public KeyListEntry withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
     }
     
+    public KeyListEntry(){}
 }

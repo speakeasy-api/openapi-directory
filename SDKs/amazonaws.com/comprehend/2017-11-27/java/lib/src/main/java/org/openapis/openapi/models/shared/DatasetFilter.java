@@ -22,6 +22,7 @@ public class DatasetFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public DatasetFilter withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -32,6 +33,7 @@ public class DatasetFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public DatasetFilter withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -40,6 +42,7 @@ public class DatasetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatasetType")
     public DatasetTypeEnum datasetType;
+
     public DatasetFilter withDatasetType(DatasetTypeEnum datasetType) {
         this.datasetType = datasetType;
         return this;
@@ -48,9 +51,11 @@ public class DatasetFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DatasetStatusEnum status;
+
     public DatasetFilter withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public DatasetFilter(){}
 }

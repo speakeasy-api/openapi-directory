@@ -15,9 +15,11 @@ public class AttachInstancesToLoadBalancerResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operations")
     public Operation[] operations;
+
     public AttachInstancesToLoadBalancerResult withOperations(Operation[] operations) {
         this.operations = operations;
         return this;
     }
     
+    public AttachInstancesToLoadBalancerResult(){}
 }

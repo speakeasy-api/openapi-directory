@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MoveByoipCidrToIpamRequest {
     
     public String cidr;
+
     public MoveByoipCidrToIpamRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class MoveByoipCidrToIpamRequest {
     
     
     public Boolean dryRun;
+
     public MoveByoipCidrToIpamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class MoveByoipCidrToIpamRequest {
     
     
     public String ipamPoolId;
+
     public MoveByoipCidrToIpamRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -30,9 +33,15 @@ public class MoveByoipCidrToIpamRequest {
     
     
     public String ipamPoolOwner;
+
     public MoveByoipCidrToIpamRequest withIpamPoolOwner(String ipamPoolOwner) {
         this.ipamPoolOwner = ipamPoolOwner;
         return this;
     }
     
+    public MoveByoipCidrToIpamRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("IpamPoolId") String ipamPoolId, @JsonProperty("IpamPoolOwner") String ipamPoolOwner) {
+        this.cidr = cidr;
+        this.ipamPoolId = ipamPoolId;
+        this.ipamPoolOwner = ipamPoolOwner;
+  }
 }

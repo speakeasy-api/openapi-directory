@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LineTimetableResponse {
     
     public byte[] body;
+
     public LineTimetableResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class LineTimetableResponse {
     
     
     public String contentType;
+
     public LineTimetableResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class LineTimetableResponse {
     
     
     public Integer statusCode;
+
     public LineTimetableResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class LineTimetableResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LineTimetableResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class LineTimetableResponse {
      */
     
     public org.openapis.openapi.models.shared.TflApiPresentationEntitiesTimetableResponse tflApiPresentationEntitiesTimetableResponse;
+
     public LineTimetableResponse withTflApiPresentationEntitiesTimetableResponse(org.openapis.openapi.models.shared.TflApiPresentationEntitiesTimetableResponse tflApiPresentationEntitiesTimetableResponse) {
         this.tflApiPresentationEntitiesTimetableResponse = tflApiPresentationEntitiesTimetableResponse;
         return this;
     }
     
+    public LineTimetableResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predefinedRole")
     public RolePredefinedRoleEnum predefinedRole;
+
     public Role withPredefinedRole(RolePredefinedRoleEnum predefinedRole) {
         this.predefinedRole = predefinedRole;
         return this;
     }
     
+    public Role(){}
 }

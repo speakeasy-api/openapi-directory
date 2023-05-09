@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteUsageLimitRequest {
     @JsonProperty("usageLimitId")
     public String usageLimitId;
+
     public DeleteUsageLimitRequest withUsageLimitId(String usageLimitId) {
         this.usageLimitId = usageLimitId;
         return this;
     }
     
+    public DeleteUsageLimitRequest(@JsonProperty("usageLimitId") String usageLimitId) {
+        this.usageLimitId = usageLimitId;
+  }
 }

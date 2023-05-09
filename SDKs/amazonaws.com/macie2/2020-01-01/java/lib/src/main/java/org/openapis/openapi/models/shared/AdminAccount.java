@@ -15,6 +15,7 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public AdminAccount withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AdminAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public AdminStatusEnum status;
+
     public AdminAccount withStatus(AdminStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AdminAccount(){}
 }

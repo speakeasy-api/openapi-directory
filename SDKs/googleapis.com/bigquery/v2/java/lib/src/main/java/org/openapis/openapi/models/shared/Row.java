@@ -18,6 +18,7 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actualLabel")
     public String actualLabel;
+
     public Row withActualLabel(String actualLabel) {
         this.actualLabel = actualLabel;
         return this;
@@ -29,9 +30,11 @@ public class Row {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entries")
     public Entry[] entries;
+
     public Row withEntries(Entry[] entries) {
         this.entries = entries;
         return this;
     }
     
+    public Row(){}
 }

@@ -15,6 +15,7 @@ public class InternalPartyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public InternalPartyIdentification withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -26,9 +27,11 @@ public class InternalPartyIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentInstrumentId")
     public String paymentInstrumentId;
+
     public InternalPartyIdentification withPaymentInstrumentId(String paymentInstrumentId) {
         this.paymentInstrumentId = paymentInstrumentId;
         return this;
     }
     
+    public InternalPartyIdentification(){}
 }

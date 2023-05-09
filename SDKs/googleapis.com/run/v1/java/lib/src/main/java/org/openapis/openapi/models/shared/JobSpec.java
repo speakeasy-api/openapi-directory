@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class JobSpec {
     /**
-     * ExecutionTemplateSpec describes the metadata and spec an Execution should have when created from a job. Based on: https://github.com/kubernetes/api/blob/e771f807/core/v1/types.go#L3179-L3190
+     * ExecutionTemplateSpec describes the metadata and spec an Execution should have when created from a job.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("template")
     public ExecutionTemplateSpec template;
+
     public JobSpec withTemplate(ExecutionTemplateSpec template) {
         this.template = template;
         return this;
     }
     
+    public JobSpec(){}
 }

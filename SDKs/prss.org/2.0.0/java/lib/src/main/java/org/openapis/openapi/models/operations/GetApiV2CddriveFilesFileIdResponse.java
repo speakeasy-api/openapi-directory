@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApiV2CddriveFilesFileIdResponse {
@@ -12,6 +13,7 @@ public class GetApiV2CddriveFilesFileIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CDDriveFile cdDriveFile;
+
     public GetApiV2CddriveFilesFileIdResponse withCDDriveFile(org.openapis.openapi.models.shared.CDDriveFile cdDriveFile) {
         this.cdDriveFile = cdDriveFile;
         return this;
@@ -19,6 +21,7 @@ public class GetApiV2CddriveFilesFileIdResponse {
     
     
     public String contentType;
+
     public GetApiV2CddriveFilesFileIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetApiV2CddriveFilesFileIdResponse {
     
     
     public Integer statusCode;
+
     public GetApiV2CddriveFilesFileIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetApiV2CddriveFilesFileIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApiV2CddriveFilesFileIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApiV2CddriveFilesFileIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

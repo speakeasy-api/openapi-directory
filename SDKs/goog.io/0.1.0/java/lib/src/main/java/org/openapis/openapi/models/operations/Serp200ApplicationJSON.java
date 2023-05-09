@@ -15,6 +15,7 @@ public class Serp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("position")
     public Long position;
+
     public Serp200ApplicationJSON withPosition(Long position) {
         this.position = position;
         return this;
@@ -23,6 +24,7 @@ public class Serp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public Serp200ApplicationJSON withQuery(String query) {
         this.query = query;
         return this;
@@ -31,6 +33,7 @@ public class Serp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searched_results")
     public Long searchedResults;
+
     public Serp200ApplicationJSON withSearchedResults(Long searchedResults) {
         this.searchedResults = searchedResults;
         return this;
@@ -39,9 +42,11 @@ public class Serp200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public Serp200ApplicationJSON withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public Serp200ApplicationJSON(){}
 }

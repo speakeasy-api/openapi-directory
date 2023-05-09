@@ -60,11 +60,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsGameServerDeploymentsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -388,11 +374,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.GameservicesProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

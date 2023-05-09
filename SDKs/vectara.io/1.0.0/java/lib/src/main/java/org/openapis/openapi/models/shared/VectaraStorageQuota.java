@@ -15,6 +15,7 @@ public class VectaraStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numChars")
     public String numChars;
+
     public VectaraStorageQuota withNumChars(String numChars) {
         this.numChars = numChars;
         return this;
@@ -27,9 +28,11 @@ public class VectaraStorageQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numMetadataChars")
     public String numMetadataChars;
+
     public VectaraStorageQuota withNumMetadataChars(String numMetadataChars) {
         this.numMetadataChars = numMetadataChars;
         return this;
     }
     
+    public VectaraStorageQuota(){}
 }

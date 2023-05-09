@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UserToFolderAssignDeleteRequest {
@@ -12,6 +13,7 @@ public class UserToFolderAssignDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public String source;
+
     public UserToFolderAssignDeleteRequest withSource(String source) {
         this.source = source;
         return this;
@@ -22,9 +24,14 @@ public class UserToFolderAssignDeleteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=target")
     public String target;
+
     public UserToFolderAssignDeleteRequest withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public UserToFolderAssignDeleteRequest(@JsonProperty("source") String source, @JsonProperty("target") String target) {
+        this.source = source;
+        this.target = target;
+  }
 }

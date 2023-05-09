@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class DescribeNotificationRuleResult {
     @JsonProperty("Arn")
     public String arn;
+
     public DescribeNotificationRuleResult withArn(String arn) {
         this.arn = arn;
         return this;
@@ -27,6 +28,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public String createdBy;
+
     public DescribeNotificationRuleResult withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -37,6 +39,7 @@ public class DescribeNotificationRuleResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public DescribeNotificationRuleResult withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -45,6 +48,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DetailType")
     public DetailTypeEnum detailType;
+
     public DescribeNotificationRuleResult withDetailType(DetailTypeEnum detailType) {
         this.detailType = detailType;
         return this;
@@ -53,6 +57,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EventTypes")
     public EventTypeSummary[] eventTypes;
+
     public DescribeNotificationRuleResult withEventTypes(EventTypeSummary[] eventTypes) {
         this.eventTypes = eventTypes;
         return this;
@@ -63,6 +68,7 @@ public class DescribeNotificationRuleResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTimestamp")
     public OffsetDateTime lastModifiedTimestamp;
+
     public DescribeNotificationRuleResult withLastModifiedTimestamp(OffsetDateTime lastModifiedTimestamp) {
         this.lastModifiedTimestamp = lastModifiedTimestamp;
         return this;
@@ -71,6 +77,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DescribeNotificationRuleResult withName(String name) {
         this.name = name;
         return this;
@@ -79,6 +86,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resource")
     public String resource;
+
     public DescribeNotificationRuleResult withResource(String resource) {
         this.resource = resource;
         return this;
@@ -87,6 +95,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public NotificationRuleStatusEnum status;
+
     public DescribeNotificationRuleResult withStatus(NotificationRuleStatusEnum status) {
         this.status = status;
         return this;
@@ -95,6 +104,7 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public DescribeNotificationRuleResult withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -103,9 +113,13 @@ public class DescribeNotificationRuleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Targets")
     public TargetSummary[] targets;
+
     public DescribeNotificationRuleResult withTargets(TargetSummary[] targets) {
         this.targets = targets;
         return this;
     }
     
+    public DescribeNotificationRuleResult(@JsonProperty("Arn") String arn) {
+        this.arn = arn;
+  }
 }

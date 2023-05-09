@@ -15,6 +15,7 @@ public class ListThesauriResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListThesauriResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListThesauriResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThesaurusSummaryItems")
     public ThesaurusSummary[] thesaurusSummaryItems;
+
     public ListThesauriResponse withThesaurusSummaryItems(ThesaurusSummary[] thesaurusSummaryItems) {
         this.thesaurusSummaryItems = thesaurusSummaryItems;
         return this;
     }
     
+    public ListThesauriResponse(){}
 }

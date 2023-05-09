@@ -15,6 +15,7 @@ public class DescribeBudgetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Budgets")
     public Budget[] budgets;
+
     public DescribeBudgetsResponse withBudgets(Budget[] budgets) {
         this.budgets = budgets;
         return this;
@@ -23,9 +24,11 @@ public class DescribeBudgetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBudgetsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeBudgetsResponse(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVpcPeeringConnectionsRequestFilters {
     
     public String name;
+
     public DescribeVpcPeeringConnectionsRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVpcPeeringConnectionsRequestFilters {
     
     
     public String[] values;
+
     public DescribeVpcPeeringConnectionsRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVpcPeeringConnectionsRequestFilters(){}
 }

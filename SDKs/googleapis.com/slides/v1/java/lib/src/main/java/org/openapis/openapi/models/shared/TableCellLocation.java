@@ -18,6 +18,7 @@ public class TableCellLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnIndex")
     public Integer columnIndex;
+
     public TableCellLocation withColumnIndex(Integer columnIndex) {
         this.columnIndex = columnIndex;
         return this;
@@ -29,9 +30,11 @@ public class TableCellLocation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowIndex")
     public Integer rowIndex;
+
     public TableCellLocation withRowIndex(Integer rowIndex) {
         this.rowIndex = rowIndex;
         return this;
     }
     
+    public TableCellLocation(){}
 }

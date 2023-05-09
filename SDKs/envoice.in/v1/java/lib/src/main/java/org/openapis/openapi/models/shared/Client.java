@@ -12,6 +12,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Address")
     public String address;
+
     public Client withAddress(String address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCountryId")
     public Integer clientCountryId;
+
     public Client withClientCountryId(Integer clientCountryId) {
         this.clientCountryId = clientCountryId;
         return this;
@@ -28,6 +30,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientCurrencyId")
     public Integer clientCurrencyId;
+
     public Client withClientCurrencyId(Integer clientCurrencyId) {
         this.clientCurrencyId = clientCurrencyId;
         return this;
@@ -36,6 +39,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyRegistrationNumber")
     public String companyRegistrationNumber;
+
     public Client withCompanyRegistrationNumber(String companyRegistrationNumber) {
         this.companyRegistrationNumber = companyRegistrationNumber;
         return this;
@@ -44,6 +48,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultDueDateInDays")
     public Integer defaultDueDateInDays;
+
     public Client withDefaultDueDateInDays(Integer defaultDueDateInDays) {
         this.defaultDueDateInDays = defaultDueDateInDays;
         return this;
@@ -52,6 +57,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Email")
     public String email;
+
     public Client withEmail(String email) {
         this.email = email;
         return this;
@@ -60,6 +66,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public Client withId(Integer id) {
         this.id = id;
         return this;
@@ -68,6 +75,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Client withName(String name) {
         this.name = name;
         return this;
@@ -76,6 +84,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public Client withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -84,6 +93,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UiLanguageId")
     public Integer uiLanguageId;
+
     public Client withUiLanguageId(Integer uiLanguageId) {
         this.uiLanguageId = uiLanguageId;
         return this;
@@ -92,6 +102,7 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserId")
     public Integer userId;
+
     public Client withUserId(Integer userId) {
         this.userId = userId;
         return this;
@@ -100,9 +111,11 @@ public class Client {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vat")
     public String vat;
+
     public Client withVat(String vat) {
         this.vat = vat;
         return this;
     }
     
+    public Client(){}
 }

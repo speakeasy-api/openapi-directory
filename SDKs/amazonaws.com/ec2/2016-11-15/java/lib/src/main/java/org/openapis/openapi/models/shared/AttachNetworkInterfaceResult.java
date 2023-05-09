@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AttachNetworkInterfaceResult {
     
     public String attachmentId;
+
     public AttachNetworkInterfaceResult withAttachmentId(String attachmentId) {
         this.attachmentId = attachmentId;
         return this;
@@ -19,9 +20,11 @@ public class AttachNetworkInterfaceResult {
     
     
     public Long networkCardIndex;
+
     public AttachNetworkInterfaceResult withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
     }
     
+    public AttachNetworkInterfaceResult(){}
 }

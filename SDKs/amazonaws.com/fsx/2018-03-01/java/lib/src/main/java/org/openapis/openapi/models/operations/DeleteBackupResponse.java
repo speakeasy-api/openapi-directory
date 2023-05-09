@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteBackupResponse {
@@ -12,6 +13,7 @@ public class DeleteBackupResponse {
      */
     
     public Object backupBeingCopied;
+
     public DeleteBackupResponse withBackupBeingCopied(Object backupBeingCopied) {
         this.backupBeingCopied = backupBeingCopied;
         return this;
@@ -22,6 +24,7 @@ public class DeleteBackupResponse {
      */
     
     public Object backupInProgress;
+
     public DeleteBackupResponse withBackupInProgress(Object backupInProgress) {
         this.backupInProgress = backupInProgress;
         return this;
@@ -32,6 +35,7 @@ public class DeleteBackupResponse {
      */
     
     public Object backupNotFound;
+
     public DeleteBackupResponse withBackupNotFound(Object backupNotFound) {
         this.backupNotFound = backupNotFound;
         return this;
@@ -42,6 +46,7 @@ public class DeleteBackupResponse {
      */
     
     public Object backupRestoring;
+
     public DeleteBackupResponse withBackupRestoring(Object backupRestoring) {
         this.backupRestoring = backupRestoring;
         return this;
@@ -52,6 +57,7 @@ public class DeleteBackupResponse {
      */
     
     public Object badRequest;
+
     public DeleteBackupResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -59,6 +65,7 @@ public class DeleteBackupResponse {
     
     
     public String contentType;
+
     public DeleteBackupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class DeleteBackupResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteBackupResponse deleteBackupResponse;
+
     public DeleteBackupResponse withDeleteBackupResponse(org.openapis.openapi.models.shared.DeleteBackupResponse deleteBackupResponse) {
         this.deleteBackupResponse = deleteBackupResponse;
         return this;
@@ -79,6 +87,7 @@ public class DeleteBackupResponse {
      */
     
     public Object incompatibleParameterError;
+
     public DeleteBackupResponse withIncompatibleParameterError(Object incompatibleParameterError) {
         this.incompatibleParameterError = incompatibleParameterError;
         return this;
@@ -89,6 +98,7 @@ public class DeleteBackupResponse {
      */
     
     public Object internalServerError;
+
     public DeleteBackupResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -96,6 +106,7 @@ public class DeleteBackupResponse {
     
     
     public Integer statusCode;
+
     public DeleteBackupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class DeleteBackupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteBackupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteBackupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

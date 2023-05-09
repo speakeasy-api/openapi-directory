@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceEventWindowAssociationRequestInstanceTags {
     
     public String key;
+
     public InstanceEventWindowAssociationRequestInstanceTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class InstanceEventWindowAssociationRequestInstanceTags {
     
     
     public String value;
+
     public InstanceEventWindowAssociationRequestInstanceTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InstanceEventWindowAssociationRequestInstanceTags(){}
 }

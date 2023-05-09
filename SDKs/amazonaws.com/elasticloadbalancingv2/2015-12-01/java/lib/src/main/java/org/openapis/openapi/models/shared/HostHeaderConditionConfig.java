@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class HostHeaderConditionConfig {
     
     public String[] values;
+
     public HostHeaderConditionConfig withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public HostHeaderConditionConfig(){}
 }

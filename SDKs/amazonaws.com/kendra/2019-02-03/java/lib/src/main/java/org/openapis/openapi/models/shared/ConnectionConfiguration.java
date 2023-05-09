@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConnectionConfiguration {
     @JsonProperty("DatabaseHost")
     public String databaseHost;
+
     public ConnectionConfiguration withDatabaseHost(String databaseHost) {
         this.databaseHost = databaseHost;
         return this;
@@ -19,6 +20,7 @@ public class ConnectionConfiguration {
     
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public ConnectionConfiguration withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +28,7 @@ public class ConnectionConfiguration {
     
     @JsonProperty("DatabasePort")
     public Long databasePort;
+
     public ConnectionConfiguration withDatabasePort(Long databasePort) {
         this.databasePort = databasePort;
         return this;
@@ -33,6 +36,7 @@ public class ConnectionConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public ConnectionConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -40,9 +44,17 @@ public class ConnectionConfiguration {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public ConnectionConfiguration withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ConnectionConfiguration(@JsonProperty("DatabaseHost") String databaseHost, @JsonProperty("DatabaseName") String databaseName, @JsonProperty("DatabasePort") Long databasePort, @JsonProperty("SecretArn") String secretArn, @JsonProperty("TableName") String tableName) {
+        this.databaseHost = databaseHost;
+        this.databaseName = databaseName;
+        this.databasePort = databasePort;
+        this.secretArn = secretArn;
+        this.tableName = tableName;
+  }
 }

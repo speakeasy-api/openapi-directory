@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentsMetadataFilters")
     public java.util.Map<String, String> documentsMetadataFilters;
+
     public GoogleCloudDialogflowV2Participant withDocumentsMetadataFilters(java.util.Map<String, String> documentsMetadataFilters) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2Participant withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obfuscatedExternalUserId")
     public String obfuscatedExternalUserId;
+
     public GoogleCloudDialogflowV2Participant withObfuscatedExternalUserId(String obfuscatedExternalUserId) {
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public GoogleCloudDialogflowV2ParticipantRoleEnum role;
+
     public GoogleCloudDialogflowV2Participant withRole(GoogleCloudDialogflowV2ParticipantRoleEnum role) {
         this.role = role;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudDialogflowV2Participant {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sipRecordingMediaLabel")
     public String sipRecordingMediaLabel;
+
     public GoogleCloudDialogflowV2Participant withSipRecordingMediaLabel(String sipRecordingMediaLabel) {
         this.sipRecordingMediaLabel = sipRecordingMediaLabel;
         return this;
     }
     
+    public GoogleCloudDialogflowV2Participant(){}
 }

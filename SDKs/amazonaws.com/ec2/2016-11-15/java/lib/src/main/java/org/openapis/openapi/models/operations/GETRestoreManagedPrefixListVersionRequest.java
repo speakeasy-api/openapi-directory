@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRestoreManagedPrefixListVersionRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRestoreManagedPrefixListVersionActionEnum action;
+
     public GETRestoreManagedPrefixListVersionRequest withAction(GETRestoreManagedPrefixListVersionActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=CurrentVersion")
     public Long currentVersion;
+
     public GETRestoreManagedPrefixListVersionRequest withCurrentVersion(Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -29,6 +32,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETRestoreManagedPrefixListVersionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -39,6 +43,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrefixListId")
     public String prefixListId;
+
     public GETRestoreManagedPrefixListVersionRequest withPrefixListId(String prefixListId) {
         this.prefixListId = prefixListId;
         return this;
@@ -49,6 +54,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PreviousVersion")
     public Long previousVersion;
+
     public GETRestoreManagedPrefixListVersionRequest withPreviousVersion(Long previousVersion) {
         this.previousVersion = previousVersion;
         return this;
@@ -56,6 +62,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRestoreManagedPrefixListVersionVersionEnum version;
+
     public GETRestoreManagedPrefixListVersionRequest withVersion(GETRestoreManagedPrefixListVersionVersionEnum version) {
         this.version = version;
         return this;
@@ -63,6 +70,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -70,6 +78,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -77,6 +86,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -84,6 +94,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -91,6 +102,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -98,6 +110,7 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -105,9 +118,17 @@ public class GETRestoreManagedPrefixListVersionRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRestoreManagedPrefixListVersionRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRestoreManagedPrefixListVersionRequest(@JsonProperty("Action") GETRestoreManagedPrefixListVersionActionEnum action, @JsonProperty("CurrentVersion") Long currentVersion, @JsonProperty("PrefixListId") String prefixListId, @JsonProperty("PreviousVersion") Long previousVersion, @JsonProperty("Version") GETRestoreManagedPrefixListVersionVersionEnum version) {
+        this.action = action;
+        this.currentVersion = currentVersion;
+        this.prefixListId = prefixListId;
+        this.previousVersion = previousVersion;
+        this.version = version;
+  }
 }

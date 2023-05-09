@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ApplicationActivityContents - OK
@@ -15,9 +15,13 @@ public class ApplicationActivityContents {
      */
     
     public byte[] body;
+
     public ApplicationActivityContents withBody(byte[] body) {
         this.body = body;
         return this;
     }
     
+    public ApplicationActivityContents(@JsonProperty("body") byte[] body) {
+        this.body = body;
+  }
 }

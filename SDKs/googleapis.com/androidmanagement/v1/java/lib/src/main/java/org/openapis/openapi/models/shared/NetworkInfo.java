@@ -18,6 +18,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imei")
     public String imei;
+
     public NetworkInfo withImei(String imei) {
         this.imei = imei;
         return this;
@@ -29,6 +30,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meid")
     public String meid;
+
     public NetworkInfo withMeid(String meid) {
         this.meid = meid;
         return this;
@@ -40,6 +42,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkOperatorName")
     public String networkOperatorName;
+
     public NetworkInfo withNetworkOperatorName(String networkOperatorName) {
         this.networkOperatorName = networkOperatorName;
         return this;
@@ -51,6 +54,7 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telephonyInfos")
     public TelephonyInfo[] telephonyInfos;
+
     public NetworkInfo withTelephonyInfos(TelephonyInfo[] telephonyInfos) {
         this.telephonyInfos = telephonyInfos;
         return this;
@@ -62,9 +66,11 @@ public class NetworkInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("wifiMacAddress")
     public String wifiMacAddress;
+
     public NetworkInfo withWifiMacAddress(String wifiMacAddress) {
         this.wifiMacAddress = wifiMacAddress;
         return this;
     }
     
+    public NetworkInfo(){}
 }

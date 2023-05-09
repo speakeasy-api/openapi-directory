@@ -15,6 +15,7 @@ public class PutLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lifecyclePolicyText")
     public String lifecyclePolicyText;
+
     public PutLifecyclePolicyResponse withLifecyclePolicyText(String lifecyclePolicyText) {
         this.lifecyclePolicyText = lifecyclePolicyText;
         return this;
@@ -23,6 +24,7 @@ public class PutLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registryId")
     public String registryId;
+
     public PutLifecyclePolicyResponse withRegistryId(String registryId) {
         this.registryId = registryId;
         return this;
@@ -31,9 +33,11 @@ public class PutLifecyclePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public PutLifecyclePolicyResponse withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public PutLifecyclePolicyResponse(){}
 }

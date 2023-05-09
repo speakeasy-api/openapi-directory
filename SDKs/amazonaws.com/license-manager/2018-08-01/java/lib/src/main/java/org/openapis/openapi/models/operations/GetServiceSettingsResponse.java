@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServiceSettingsResponse {
@@ -12,6 +13,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServiceSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object authorizationException;
+
     public GetServiceSettingsResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class GetServiceSettingsResponse {
     
     
     public String contentType;
+
     public GetServiceSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetServiceSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceSettingsResponse getServiceSettingsResponse;
+
     public GetServiceSettingsResponse withGetServiceSettingsResponse(org.openapis.openapi.models.shared.GetServiceSettingsResponse getServiceSettingsResponse) {
         this.getServiceSettingsResponse = getServiceSettingsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object rateLimitExceededException;
+
     public GetServiceSettingsResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetServiceSettingsResponse {
      */
     
     public Object serverInternalException;
+
     public GetServiceSettingsResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -66,6 +73,7 @@ public class GetServiceSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetServiceSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetServiceSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServiceSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetServiceSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

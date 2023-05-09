@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class TagUserRequest {
     
     public Tag[] tags;
+
     public TagUserRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -16,9 +17,14 @@ public class TagUserRequest {
     
     
     public String userName;
+
     public TagUserRequest withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public TagUserRequest(@JsonProperty("Tags") Tag[] tags, @JsonProperty("UserName") String userName) {
+        this.tags = tags;
+        this.userName = userName;
+  }
 }

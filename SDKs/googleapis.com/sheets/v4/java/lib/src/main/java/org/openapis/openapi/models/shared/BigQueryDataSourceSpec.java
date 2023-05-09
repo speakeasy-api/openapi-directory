@@ -18,6 +18,7 @@ public class BigQueryDataSourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public BigQueryDataSourceSpec withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -29,6 +30,7 @@ public class BigQueryDataSourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("querySpec")
     public BigQueryQuerySpec querySpec;
+
     public BigQueryDataSourceSpec withQuerySpec(BigQueryQuerySpec querySpec) {
         this.querySpec = querySpec;
         return this;
@@ -40,9 +42,11 @@ public class BigQueryDataSourceSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableSpec")
     public BigQueryTableSpec tableSpec;
+
     public BigQueryDataSourceSpec withTableSpec(BigQueryTableSpec tableSpec) {
         this.tableSpec = tableSpec;
         return this;
     }
     
+    public BigQueryDataSourceSpec(){}
 }

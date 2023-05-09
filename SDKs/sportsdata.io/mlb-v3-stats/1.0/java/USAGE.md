@@ -3,10 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.AreGamesInProgressFormatEnum;
 import org.openapis.openapi.models.operations.AreGamesInProgressRequest;
 import org.openapis.openapi.models.operations.AreGamesInProgressResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,17 +17,17 @@ public class Application {
                 }})
                 .build();
 
-            AreGamesInProgressRequest req = new AreGamesInProgressRequest() {{
-                format = "JSON";
-            }}            
+            AreGamesInProgressRequest req = new AreGamesInProgressRequest(AreGamesInProgressFormatEnum.JSON);            
 
             AreGamesInProgressResponse res = sdk.areGamesInProgress(req);
 
-            if (res.areGamesInProgress200ApplicationJSONBoolean.isPresent()) {
+            if (res.areGamesInProgress200ApplicationJSONBoolean != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

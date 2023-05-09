@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateDRTLogBucketRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssociateDRTLogBucketRequest associateDRTLogBucketRequest;
+
     public AssociateDRTLogBucketRequest withAssociateDRTLogBucketRequest(org.openapis.openapi.models.shared.AssociateDRTLogBucketRequest associateDRTLogBucketRequest) {
         this.associateDRTLogBucketRequest = associateDRTLogBucketRequest;
         return this;
@@ -16,6 +18,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateDRTLogBucketRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateDRTLogBucketRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateDRTLogBucketRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateDRTLogBucketRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateDRTLogBucketRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateDRTLogBucketRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateDRTLogBucketRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AssociateDRTLogBucketRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AssociateDRTLogBucketXAmzTargetEnum xAmzTarget;
+
     public AssociateDRTLogBucketRequest withXAmzTarget(AssociateDRTLogBucketXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AssociateDRTLogBucketRequest(@JsonProperty("AssociateDRTLogBucketRequest") org.openapis.openapi.models.shared.AssociateDRTLogBucketRequest associateDRTLogBucketRequest, @JsonProperty("X-Amz-Target") AssociateDRTLogBucketXAmzTargetEnum xAmzTarget) {
+        this.associateDRTLogBucketRequest = associateDRTLogBucketRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

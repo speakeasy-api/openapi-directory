@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Command")
     public String[] command;
+
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails withCommand(String[] command) {
         this.command = command;
         return this;
@@ -23,6 +24,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -31,6 +33,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Retries")
     public Long retries;
+
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails withRetries(Long retries) {
         this.retries = retries;
         return this;
@@ -39,6 +42,7 @@ public class AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartPeriod")
     public Long startPeriod;
+
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails withStartPeriod(Long startPeriod) {
         this.startPeriod = startPeriod;
         return this;
@@ -47,9 +51,11 @@ public class AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeout")
     public Long timeout;
+
     public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails withTimeout(Long timeout) {
         this.timeout = timeout;
         return this;
     }
     
+    public AwsEcsTaskDefinitionContainerDefinitionsHealthCheckDetails(){}
 }

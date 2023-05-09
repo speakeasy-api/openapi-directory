@@ -18,6 +18,7 @@ public class OrderItemPersistVO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("completion_date")
     public LocalDate completionDate;
+
     public OrderItemPersistVO withCompletionDate(LocalDate completionDate) {
         this.completionDate = completionDate;
         return this;
@@ -26,6 +27,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public CustomFieldPersistVO[] customFields;
+
     public OrderItemPersistVO withCustomFields(CustomFieldPersistVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -37,6 +39,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ex_tax_value_calculated")
     public Object exTaxValueCalculated;
+
     public OrderItemPersistVO withExTaxValueCalculated(Object exTaxValueCalculated) {
         this.exTaxValueCalculated = exTaxValueCalculated;
         return this;
@@ -45,6 +48,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public OrderItemPersistVO withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -53,6 +57,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("per")
     public Long per;
+
     public OrderItemPersistVO withPer(Long per) {
         this.per = per;
         return this;
@@ -64,6 +69,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Object price;
+
     public OrderItemPersistVO withPrice(Object price) {
         this.price = price;
         return this;
@@ -75,6 +81,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Object quantity;
+
     public OrderItemPersistVO withQuantity(Object quantity) {
         this.quantity = quantity;
         return this;
@@ -86,6 +93,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shipping")
     public Object shipping;
+
     public OrderItemPersistVO withShipping(Object shipping) {
         this.shipping = shipping;
         return this;
@@ -94,6 +102,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public OrderItemPersistVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -102,6 +111,7 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_reference_id")
     public Long specReferenceId;
+
     public OrderItemPersistVO withSpecReferenceId(Long specReferenceId) {
         this.specReferenceId = specReferenceId;
         return this;
@@ -110,9 +120,11 @@ public class OrderItemPersistVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public String tax;
+
     public OrderItemPersistVO withTax(String tax) {
         this.tax = tax;
         return this;
     }
     
+    public OrderItemPersistVO(){}
 }

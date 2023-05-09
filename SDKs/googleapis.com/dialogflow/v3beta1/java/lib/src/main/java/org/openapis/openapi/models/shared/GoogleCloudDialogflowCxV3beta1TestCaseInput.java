@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastTestResult")
     public GoogleCloudDialogflowCxV3beta1TestCaseResultInput lastTestResult;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withLastTestResult(GoogleCloudDialogflowCxV3beta1TestCaseResultInput lastTestResult) {
         this.lastTestResult = lastTestResult;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notes")
     public String notes;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String[] tags;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withTags(String[] tags) {
         this.tags = tags;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testCaseConversationTurns")
     public GoogleCloudDialogflowCxV3beta1ConversationTurnInput[] testCaseConversationTurns;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withTestCaseConversationTurns(GoogleCloudDialogflowCxV3beta1ConversationTurnInput[] testCaseConversationTurns) {
         this.testCaseConversationTurns = testCaseConversationTurns;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3beta1TestCaseInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("testConfig")
     public GoogleCloudDialogflowCxV3beta1TestConfig testConfig;
+
     public GoogleCloudDialogflowCxV3beta1TestCaseInput withTestConfig(GoogleCloudDialogflowCxV3beta1TestConfig testConfig) {
         this.testConfig = testConfig;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1TestCaseInput(){}
 }

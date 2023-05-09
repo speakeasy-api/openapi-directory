@@ -18,9 +18,11 @@ public class StateNotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubTopicName")
     public String pubsubTopicName;
+
     public StateNotificationConfig withPubsubTopicName(String pubsubTopicName) {
         this.pubsubTopicName = pubsubTopicName;
         return this;
     }
     
+    public StateNotificationConfig(){}
 }

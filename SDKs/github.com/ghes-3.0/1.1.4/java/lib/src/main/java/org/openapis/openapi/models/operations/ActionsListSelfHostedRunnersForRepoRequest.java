@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelfHostedRunnersForRepoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public ActionsListSelfHostedRunnersForRepoRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -19,6 +21,7 @@ public class ActionsListSelfHostedRunnersForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListSelfHostedRunnersForRepoRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -29,6 +32,7 @@ public class ActionsListSelfHostedRunnersForRepoRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListSelfHostedRunnersForRepoRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -36,9 +40,14 @@ public class ActionsListSelfHostedRunnersForRepoRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public ActionsListSelfHostedRunnersForRepoRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public ActionsListSelfHostedRunnersForRepoRequest(@JsonProperty("owner") String owner, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.repo = repo;
+  }
 }

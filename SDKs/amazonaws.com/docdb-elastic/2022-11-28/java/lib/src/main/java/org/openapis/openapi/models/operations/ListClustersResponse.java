@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListClustersResponse {
@@ -12,6 +13,7 @@ public class ListClustersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListClustersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListClustersResponse {
     
     
     public String contentType;
+
     public ListClustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListClustersResponse {
      */
     
     public Object internalServerException;
+
     public ListClustersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListClustersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClustersOutput listClustersOutput;
+
     public ListClustersResponse withListClustersOutput(org.openapis.openapi.models.shared.ListClustersOutput listClustersOutput) {
         this.listClustersOutput = listClustersOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListClustersResponse {
     
     
     public Integer statusCode;
+
     public ListClustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListClustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListClustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListClustersResponse {
      */
     
     public Object throttlingException;
+
     public ListClustersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListClustersResponse {
      */
     
     public Object validationException;
+
     public ListClustersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListClustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

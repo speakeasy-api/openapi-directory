@@ -18,6 +18,7 @@ public class ConfigMapVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultMode")
     public Integer defaultMode;
+
     public ConfigMapVolumeSource withDefaultMode(Integer defaultMode) {
         this.defaultMode = defaultMode;
         return this;
@@ -29,6 +30,7 @@ public class ConfigMapVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public KeyToPath[] items;
+
     public ConfigMapVolumeSource withItems(KeyToPath[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class ConfigMapVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConfigMapVolumeSource withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class ConfigMapVolumeSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public Boolean optional;
+
     public ConfigMapVolumeSource withOptional(Boolean optional) {
         this.optional = optional;
         return this;
     }
     
+    public ConfigMapVolumeSource(){}
 }

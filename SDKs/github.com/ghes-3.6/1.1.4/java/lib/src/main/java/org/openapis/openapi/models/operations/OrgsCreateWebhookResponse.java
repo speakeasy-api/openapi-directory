@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrgsCreateWebhookResponse {
     
     public String contentType;
+
     public OrgsCreateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class OrgsCreateWebhookResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public OrgsCreateWebhookResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class OrgsCreateWebhookResponse {
     
     
     public Integer statusCode;
+
     public OrgsCreateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class OrgsCreateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrgsCreateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class OrgsCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public OrgsCreateWebhookResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class OrgsCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.OrgHook orgHook;
+
     public OrgsCreateWebhookResponse withOrgHook(org.openapis.openapi.models.shared.OrgHook orgHook) {
         this.orgHook = orgHook;
         return this;
@@ -60,9 +67,14 @@ public class OrgsCreateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public OrgsCreateWebhookResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public OrgsCreateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

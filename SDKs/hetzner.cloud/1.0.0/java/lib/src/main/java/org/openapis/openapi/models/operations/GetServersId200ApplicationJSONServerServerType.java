@@ -15,6 +15,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("cores")
     public Double cores;
+
     public GetServersId200ApplicationJSONServerServerType withCores(Double cores) {
         this.cores = cores;
         return this;
@@ -25,6 +26,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("cpu_type")
     public GetServersId200ApplicationJSONServerServerTypeCpuTypeEnum cpuType;
+
     public GetServersId200ApplicationJSONServerServerType withCpuType(GetServersId200ApplicationJSONServerServerTypeCpuTypeEnum cpuType) {
         this.cpuType = cpuType;
         return this;
@@ -35,6 +37,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("deprecated")
     public Boolean deprecated;
+
     public GetServersId200ApplicationJSONServerServerType withDeprecated(Boolean deprecated) {
         this.deprecated = deprecated;
         return this;
@@ -45,6 +48,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("description")
     public String description;
+
     public GetServersId200ApplicationJSONServerServerType withDescription(String description) {
         this.description = description;
         return this;
@@ -55,6 +59,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("disk")
     public Double disk;
+
     public GetServersId200ApplicationJSONServerServerType withDisk(Double disk) {
         this.disk = disk;
         return this;
@@ -65,6 +70,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetServersId200ApplicationJSONServerServerType withId(Long id) {
         this.id = id;
         return this;
@@ -75,6 +81,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("memory")
     public Double memory;
+
     public GetServersId200ApplicationJSONServerServerType withMemory(Double memory) {
         this.memory = memory;
         return this;
@@ -85,6 +92,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("name")
     public String name;
+
     public GetServersId200ApplicationJSONServerServerType withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +103,7 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("prices")
     public GetServersId200ApplicationJSONServerServerTypePrices[] prices;
+
     public GetServersId200ApplicationJSONServerServerType withPrices(GetServersId200ApplicationJSONServerServerTypePrices[] prices) {
         this.prices = prices;
         return this;
@@ -105,9 +114,22 @@ public class GetServersId200ApplicationJSONServerServerType {
      */
     @JsonProperty("storage_type")
     public GetServersId200ApplicationJSONServerServerTypeStorageTypeEnum storageType;
+
     public GetServersId200ApplicationJSONServerServerType withStorageType(GetServersId200ApplicationJSONServerServerTypeStorageTypeEnum storageType) {
         this.storageType = storageType;
         return this;
     }
     
+    public GetServersId200ApplicationJSONServerServerType(@JsonProperty("cores") Double cores, @JsonProperty("cpu_type") GetServersId200ApplicationJSONServerServerTypeCpuTypeEnum cpuType, @JsonProperty("deprecated") Boolean deprecated, @JsonProperty("description") String description, @JsonProperty("disk") Double disk, @JsonProperty("id") Long id, @JsonProperty("memory") Double memory, @JsonProperty("name") String name, @JsonProperty("prices") GetServersId200ApplicationJSONServerServerTypePrices[] prices, @JsonProperty("storage_type") GetServersId200ApplicationJSONServerServerTypeStorageTypeEnum storageType) {
+        this.cores = cores;
+        this.cpuType = cpuType;
+        this.deprecated = deprecated;
+        this.description = description;
+        this.disk = disk;
+        this.id = id;
+        this.memory = memory;
+        this.name = name;
+        this.prices = prices;
+        this.storageType = storageType;
+  }
 }

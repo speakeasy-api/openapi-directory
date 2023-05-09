@@ -15,6 +15,7 @@ public class CreateSimulationApplicationRequestBodySimulationSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public org.openapis.openapi.models.shared.SimulationSoftwareSuiteTypeEnum name;
+
     public CreateSimulationApplicationRequestBodySimulationSoftwareSuite withName(org.openapis.openapi.models.shared.SimulationSoftwareSuiteTypeEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class CreateSimulationApplicationRequestBodySimulationSoftwareSuite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public CreateSimulationApplicationRequestBodySimulationSoftwareSuite withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public CreateSimulationApplicationRequestBodySimulationSoftwareSuite(){}
 }

@@ -15,6 +15,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsExpiredCertificate")
     public Boolean acceptsExpiredCertificate;
+
     public CreateCompanyWebhookRequest withAcceptsExpiredCertificate(Boolean acceptsExpiredCertificate) {
         this.acceptsExpiredCertificate = acceptsExpiredCertificate;
         return this;
@@ -26,6 +27,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsSelfSignedCertificate")
     public Boolean acceptsSelfSignedCertificate;
+
     public CreateCompanyWebhookRequest withAcceptsSelfSignedCertificate(Boolean acceptsSelfSignedCertificate) {
         this.acceptsSelfSignedCertificate = acceptsSelfSignedCertificate;
         return this;
@@ -37,6 +39,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("acceptsUntrustedRootCertificate")
     public Boolean acceptsUntrustedRootCertificate;
+
     public CreateCompanyWebhookRequest withAcceptsUntrustedRootCertificate(Boolean acceptsUntrustedRootCertificate) {
         this.acceptsUntrustedRootCertificate = acceptsUntrustedRootCertificate;
         return this;
@@ -47,6 +50,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("active")
     public Boolean active;
+
     public CreateCompanyWebhookRequest withActive(Boolean active) {
         this.active = active;
         return this;
@@ -55,6 +59,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalSettings")
     public AdditionalSettings additionalSettings;
+
     public CreateCompanyWebhookRequest withAdditionalSettings(AdditionalSettings additionalSettings) {
         this.additionalSettings = additionalSettings;
         return this;
@@ -68,6 +73,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("communicationFormat")
     public CreateCompanyWebhookRequestCommunicationFormatEnum communicationFormat;
+
     public CreateCompanyWebhookRequest withCommunicationFormat(CreateCompanyWebhookRequestCommunicationFormatEnum communicationFormat) {
         this.communicationFormat = communicationFormat;
         return this;
@@ -79,6 +85,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateCompanyWebhookRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -92,6 +99,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("filterMerchantAccountType")
     public CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum filterMerchantAccountType;
+
     public CreateCompanyWebhookRequest withFilterMerchantAccountType(CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum filterMerchantAccountType) {
         this.filterMerchantAccountType = filterMerchantAccountType;
         return this;
@@ -108,6 +116,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("filterMerchantAccounts")
     public String[] filterMerchantAccounts;
+
     public CreateCompanyWebhookRequest withFilterMerchantAccounts(String[] filterMerchantAccounts) {
         this.filterMerchantAccounts = filterMerchantAccounts;
         return this;
@@ -123,6 +132,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkType")
     public CreateCompanyWebhookRequestNetworkTypeEnum networkType;
+
     public CreateCompanyWebhookRequest withNetworkType(CreateCompanyWebhookRequestNetworkTypeEnum networkType) {
         this.networkType = networkType;
         return this;
@@ -134,6 +144,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateCompanyWebhookRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -147,6 +158,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("populateSoapActionHeader")
     public Boolean populateSoapActionHeader;
+
     public CreateCompanyWebhookRequest withPopulateSoapActionHeader(Boolean populateSoapActionHeader) {
         this.populateSoapActionHeader = populateSoapActionHeader;
         return this;
@@ -163,6 +175,7 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sslVersion")
     public CreateCompanyWebhookRequestSslVersionEnum sslVersion;
+
     public CreateCompanyWebhookRequest withSslVersion(CreateCompanyWebhookRequestSslVersionEnum sslVersion) {
         this.sslVersion = sslVersion;
         return this;
@@ -186,6 +199,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("type")
     public String type;
+
     public CreateCompanyWebhookRequest withType(String type) {
         this.type = type;
         return this;
@@ -196,6 +210,7 @@ public class CreateCompanyWebhookRequest {
      */
     @JsonProperty("url")
     public String url;
+
     public CreateCompanyWebhookRequest withUrl(String url) {
         this.url = url;
         return this;
@@ -207,9 +222,18 @@ public class CreateCompanyWebhookRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("username")
     public String username;
+
     public CreateCompanyWebhookRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public CreateCompanyWebhookRequest(@JsonProperty("active") Boolean active, @JsonProperty("communicationFormat") CreateCompanyWebhookRequestCommunicationFormatEnum communicationFormat, @JsonProperty("filterMerchantAccountType") CreateCompanyWebhookRequestFilterMerchantAccountTypeEnum filterMerchantAccountType, @JsonProperty("filterMerchantAccounts") String[] filterMerchantAccounts, @JsonProperty("type") String type, @JsonProperty("url") String url) {
+        this.active = active;
+        this.communicationFormat = communicationFormat;
+        this.filterMerchantAccountType = filterMerchantAccountType;
+        this.filterMerchantAccounts = filterMerchantAccounts;
+        this.type = type;
+        this.url = url;
+  }
 }

@@ -18,6 +18,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newJobState")
     public MessageNewJobStateEnum newJobState;
+
     public Message withNewJobState(MessageNewJobStateEnum newJobState) {
         this.newJobState = newJobState;
         return this;
@@ -29,6 +30,7 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newTaskState")
     public MessageNewTaskStateEnum newTaskState;
+
     public Message withNewTaskState(MessageNewTaskStateEnum newTaskState) {
         this.newTaskState = newTaskState;
         return this;
@@ -40,9 +42,11 @@ public class Message {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MessageTypeEnum type;
+
     public Message withType(MessageTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Message(){}
 }

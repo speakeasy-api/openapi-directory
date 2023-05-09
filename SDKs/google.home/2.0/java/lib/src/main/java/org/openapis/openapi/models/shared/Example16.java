@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example16 {
     @JsonProperty("bytes_received")
     public Integer bytesReceived;
+
     public Example16 withBytesReceived(Integer bytesReceived) {
         this.bytesReceived = bytesReceived;
         return this;
@@ -16,6 +17,7 @@ public class Example16 {
     
     @JsonProperty("response_code")
     public Integer responseCode;
+
     public Example16 withResponseCode(Integer responseCode) {
         this.responseCode = responseCode;
         return this;
@@ -23,6 +25,7 @@ public class Example16 {
     
     @JsonProperty("time_for_data_fetch")
     public Integer timeForDataFetch;
+
     public Example16 withTimeForDataFetch(Integer timeForDataFetch) {
         this.timeForDataFetch = timeForDataFetch;
         return this;
@@ -30,9 +33,16 @@ public class Example16 {
     
     @JsonProperty("time_for_http_response")
     public Integer timeForHttpResponse;
+
     public Example16 withTimeForHttpResponse(Integer timeForHttpResponse) {
         this.timeForHttpResponse = timeForHttpResponse;
         return this;
     }
     
+    public Example16(@JsonProperty("bytes_received") Integer bytesReceived, @JsonProperty("response_code") Integer responseCode, @JsonProperty("time_for_data_fetch") Integer timeForDataFetch, @JsonProperty("time_for_http_response") Integer timeForHttpResponse) {
+        this.bytesReceived = bytesReceived;
+        this.responseCode = responseCode;
+        this.timeForDataFetch = timeForDataFetch;
+        this.timeForHttpResponse = timeForHttpResponse;
+  }
 }

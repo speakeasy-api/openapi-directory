@@ -20,6 +20,7 @@ public class SearchShiftsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cursor")
     public String cursor;
+
     public SearchShiftsResponse withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -31,6 +32,7 @@ public class SearchShiftsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchShiftsResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
@@ -42,9 +44,11 @@ public class SearchShiftsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shifts")
     public Shift[] shifts;
+
     public SearchShiftsResponse withShifts(Shift[] shifts) {
         this.shifts = shifts;
         return this;
     }
     
+    public SearchShiftsResponse(){}
 }

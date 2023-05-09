@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateApplicationSnapshotRequest {
     @JsonProperty("ApplicationName")
     public String applicationName;
+
     public CreateApplicationSnapshotRequest withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -16,9 +17,14 @@ public class CreateApplicationSnapshotRequest {
     
     @JsonProperty("SnapshotName")
     public String snapshotName;
+
     public CreateApplicationSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
     }
     
+    public CreateApplicationSnapshotRequest(@JsonProperty("ApplicationName") String applicationName, @JsonProperty("SnapshotName") String snapshotName) {
+        this.applicationName = applicationName;
+        this.snapshotName = snapshotName;
+  }
 }

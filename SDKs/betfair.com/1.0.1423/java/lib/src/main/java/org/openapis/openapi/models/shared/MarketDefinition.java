@@ -17,6 +17,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("betDelay")
     public Integer betDelay;
+
     public MarketDefinition withBetDelay(Integer betDelay) {
         this.betDelay = betDelay;
         return this;
@@ -25,6 +26,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bettingType")
     public MarketDefinitionBettingTypeEnum bettingType;
+
     public MarketDefinition withBettingType(MarketDefinitionBettingTypeEnum bettingType) {
         this.bettingType = bettingType;
         return this;
@@ -33,6 +35,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bspMarket")
     public Boolean bspMarket;
+
     public MarketDefinition withBspMarket(Boolean bspMarket) {
         this.bspMarket = bspMarket;
         return this;
@@ -41,6 +44,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bspReconciled")
     public Boolean bspReconciled;
+
     public MarketDefinition withBspReconciled(Boolean bspReconciled) {
         this.bspReconciled = bspReconciled;
         return this;
@@ -49,6 +53,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complete")
     public Boolean complete;
+
     public MarketDefinition withComplete(Boolean complete) {
         this.complete = complete;
         return this;
@@ -57,6 +62,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public MarketDefinition withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -65,6 +71,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crossMatching")
     public Boolean crossMatching;
+
     public MarketDefinition withCrossMatching(Boolean crossMatching) {
         this.crossMatching = crossMatching;
         return this;
@@ -73,6 +80,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discountAllowed")
     public Boolean discountAllowed;
+
     public MarketDefinition withDiscountAllowed(Boolean discountAllowed) {
         this.discountAllowed = discountAllowed;
         return this;
@@ -81,6 +89,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eachWayDivisor")
     public Double eachWayDivisor;
+
     public MarketDefinition withEachWayDivisor(Double eachWayDivisor) {
         this.eachWayDivisor = eachWayDivisor;
         return this;
@@ -89,6 +98,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventId")
     public String eventId;
+
     public MarketDefinition withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -100,6 +110,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eventTypeId")
     public String eventTypeId;
+
     public MarketDefinition withEventTypeId(String eventTypeId) {
         this.eventTypeId = eventTypeId;
         return this;
@@ -108,6 +119,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inPlay")
     public Boolean inPlay;
+
     public MarketDefinition withInPlay(Boolean inPlay) {
         this.inPlay = inPlay;
         return this;
@@ -116,6 +128,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyLineDefinition")
     public KeyLineDefinition keyLineDefinition;
+
     public MarketDefinition withKeyLineDefinition(KeyLineDefinition keyLineDefinition) {
         this.keyLineDefinition = keyLineDefinition;
         return this;
@@ -127,6 +140,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineInterval")
     public Double lineInterval;
+
     public MarketDefinition withLineInterval(Double lineInterval) {
         this.lineInterval = lineInterval;
         return this;
@@ -138,6 +152,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineMaxUnit")
     public Double lineMaxUnit;
+
     public MarketDefinition withLineMaxUnit(Double lineMaxUnit) {
         this.lineMaxUnit = lineMaxUnit;
         return this;
@@ -149,6 +164,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineMinUnit")
     public Double lineMinUnit;
+
     public MarketDefinition withLineMinUnit(Double lineMinUnit) {
         this.lineMinUnit = lineMinUnit;
         return this;
@@ -157,6 +173,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketBaseRate")
     public Double marketBaseRate;
+
     public MarketDefinition withMarketBaseRate(Double marketBaseRate) {
         this.marketBaseRate = marketBaseRate;
         return this;
@@ -167,6 +184,7 @@ public class MarketDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("marketTime")
     public OffsetDateTime marketTime;
+
     public MarketDefinition withMarketTime(OffsetDateTime marketTime) {
         this.marketTime = marketTime;
         return this;
@@ -175,6 +193,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketType")
     public String marketType;
+
     public MarketDefinition withMarketType(String marketType) {
         this.marketType = marketType;
         return this;
@@ -183,6 +202,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfActiveRunners")
     public Integer numberOfActiveRunners;
+
     public MarketDefinition withNumberOfActiveRunners(Integer numberOfActiveRunners) {
         this.numberOfActiveRunners = numberOfActiveRunners;
         return this;
@@ -191,6 +211,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numberOfWinners")
     public Integer numberOfWinners;
+
     public MarketDefinition withNumberOfWinners(Integer numberOfWinners) {
         this.numberOfWinners = numberOfWinners;
         return this;
@@ -201,6 +222,7 @@ public class MarketDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("openDate")
     public OffsetDateTime openDate;
+
     public MarketDefinition withOpenDate(OffsetDateTime openDate) {
         this.openDate = openDate;
         return this;
@@ -209,6 +231,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("persistenceEnabled")
     public Boolean persistenceEnabled;
+
     public MarketDefinition withPersistenceEnabled(Boolean persistenceEnabled) {
         this.persistenceEnabled = persistenceEnabled;
         return this;
@@ -217,6 +240,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priceLadderDefinition")
     public PriceLadderDefinition priceLadderDefinition;
+
     public MarketDefinition withPriceLadderDefinition(PriceLadderDefinition priceLadderDefinition) {
         this.priceLadderDefinition = priceLadderDefinition;
         return this;
@@ -225,6 +249,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("raceType")
     public String raceType;
+
     public MarketDefinition withRaceType(String raceType) {
         this.raceType = raceType;
         return this;
@@ -236,6 +261,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regulators")
     public String[] regulators;
+
     public MarketDefinition withRegulators(String[] regulators) {
         this.regulators = regulators;
         return this;
@@ -244,6 +270,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runners")
     public RunnerDefinition[] runners;
+
     public MarketDefinition withRunners(RunnerDefinition[] runners) {
         this.runners = runners;
         return this;
@@ -252,6 +279,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runnersVoidable")
     public Boolean runnersVoidable;
+
     public MarketDefinition withRunnersVoidable(Boolean runnersVoidable) {
         this.runnersVoidable = runnersVoidable;
         return this;
@@ -262,6 +290,7 @@ public class MarketDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("settledTime")
     public OffsetDateTime settledTime;
+
     public MarketDefinition withSettledTime(OffsetDateTime settledTime) {
         this.settledTime = settledTime;
         return this;
@@ -270,6 +299,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MarketDefinitionStatusEnum status;
+
     public MarketDefinition withStatus(MarketDefinitionStatusEnum status) {
         this.status = status;
         return this;
@@ -280,6 +310,7 @@ public class MarketDefinition {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspendTime")
     public OffsetDateTime suspendTime;
+
     public MarketDefinition withSuspendTime(OffsetDateTime suspendTime) {
         this.suspendTime = suspendTime;
         return this;
@@ -288,6 +319,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timezone")
     public String timezone;
+
     public MarketDefinition withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -296,6 +328,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("turnInPlayEnabled")
     public Boolean turnInPlayEnabled;
+
     public MarketDefinition withTurnInPlayEnabled(Boolean turnInPlayEnabled) {
         this.turnInPlayEnabled = turnInPlayEnabled;
         return this;
@@ -304,6 +337,7 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("venue")
     public String venue;
+
     public MarketDefinition withVenue(String venue) {
         this.venue = venue;
         return this;
@@ -312,9 +346,11 @@ public class MarketDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public MarketDefinition withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public MarketDefinition(){}
 }

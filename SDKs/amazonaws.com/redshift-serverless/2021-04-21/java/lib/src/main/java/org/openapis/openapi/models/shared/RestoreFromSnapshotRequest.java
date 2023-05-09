@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RestoreFromSnapshotRequest {
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public RestoreFromSnapshotRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -19,6 +20,7 @@ public class RestoreFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ownerAccount")
     public String ownerAccount;
+
     public RestoreFromSnapshotRequest withOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
@@ -27,6 +29,7 @@ public class RestoreFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotArn")
     public String snapshotArn;
+
     public RestoreFromSnapshotRequest withSnapshotArn(String snapshotArn) {
         this.snapshotArn = snapshotArn;
         return this;
@@ -35,6 +38,7 @@ public class RestoreFromSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public RestoreFromSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -42,9 +46,14 @@ public class RestoreFromSnapshotRequest {
     
     @JsonProperty("workgroupName")
     public String workgroupName;
+
     public RestoreFromSnapshotRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
     }
     
+    public RestoreFromSnapshotRequest(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("workgroupName") String workgroupName) {
+        this.namespaceName = namespaceName;
+        this.workgroupName = workgroupName;
+  }
 }

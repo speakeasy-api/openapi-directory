@@ -18,6 +18,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withAddress(String[] address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("administrativeArea")
     public String administrativeArea;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withAdministrativeArea(String administrativeArea) {
         this.administrativeArea = administrativeArea;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locality")
     public String locality;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withLocality(String locality) {
         this.locality = locality;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCode")
     public String postalCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recipient")
     public String recipient;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withRecipient(String recipient) {
         this.recipient = recipient;
         return this;
@@ -73,9 +78,11 @@ public class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionCode")
     public String regionCode;
+
     public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
     }
     
+    public GoogleCloudRecaptchaenterpriseV1TransactionDataAddress(){}
 }

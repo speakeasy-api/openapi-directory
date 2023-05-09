@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteEgressOnlyInternetGatewayRequest {
     
     public Boolean dryRun;
+
     public DeleteEgressOnlyInternetGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteEgressOnlyInternetGatewayRequest {
     
     
     public String egressOnlyInternetGatewayId;
+
     public DeleteEgressOnlyInternetGatewayRequest withEgressOnlyInternetGatewayId(String egressOnlyInternetGatewayId) {
         this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
         return this;
     }
     
+    public DeleteEgressOnlyInternetGatewayRequest(@JsonProperty("EgressOnlyInternetGatewayId") String egressOnlyInternetGatewayId) {
+        this.egressOnlyInternetGatewayId = egressOnlyInternetGatewayId;
+  }
 }

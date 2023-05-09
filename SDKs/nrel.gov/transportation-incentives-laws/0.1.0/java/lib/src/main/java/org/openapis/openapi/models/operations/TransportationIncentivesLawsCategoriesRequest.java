@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TransportationIncentivesLawsCategoriesRequest {
@@ -12,6 +13,7 @@ public class TransportationIncentivesLawsCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=api_key")
     public String apiKey;
+
     public TransportationIncentivesLawsCategoriesRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class TransportationIncentivesLawsCategoriesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=output_format")
     public TransportationIncentivesLawsCategoriesOutputFormatEnum outputFormat;
+
     public TransportationIncentivesLawsCategoriesRequest withOutputFormat(TransportationIncentivesLawsCategoriesOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -32,9 +35,14 @@ public class TransportationIncentivesLawsCategoriesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public TransportationIncentivesLawsCategoriesTypeEnum type;
+
     public TransportationIncentivesLawsCategoriesRequest withType(TransportationIncentivesLawsCategoriesTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TransportationIncentivesLawsCategoriesRequest(@JsonProperty("api_key") String apiKey, @JsonProperty("output_format") TransportationIncentivesLawsCategoriesOutputFormatEnum outputFormat) {
+        this.apiKey = apiKey;
+        this.outputFormat = outputFormat;
+  }
 }

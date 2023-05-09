@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DelinkHidBenefitUsingPOSTRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public DelinkHidBenefitUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,9 +21,13 @@ public class DelinkHidBenefitUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload hidBenefitDelinkRequestPayload;
+
     public DelinkHidBenefitUsingPOSTRequest withHidBenefitDelinkRequestPayload(org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload hidBenefitDelinkRequestPayload) {
         this.hidBenefitDelinkRequestPayload = hidBenefitDelinkRequestPayload;
         return this;
     }
     
+    public DelinkHidBenefitUsingPOSTRequest(@JsonProperty("HidBenefitDelinkRequestPayload") org.openapis.openapi.models.shared.HidBenefitDelinkRequestPayload hidBenefitDelinkRequestPayload) {
+        this.hidBenefitDelinkRequestPayload = hidBenefitDelinkRequestPayload;
+  }
 }

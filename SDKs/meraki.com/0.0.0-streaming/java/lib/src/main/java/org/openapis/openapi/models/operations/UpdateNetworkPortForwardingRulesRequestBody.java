@@ -12,9 +12,13 @@ public class UpdateNetworkPortForwardingRulesRequestBody {
      */
     @JsonProperty("rules")
     public UpdateNetworkPortForwardingRulesRequestBodyRules[] rules;
+
     public UpdateNetworkPortForwardingRulesRequestBody withRules(UpdateNetworkPortForwardingRulesRequestBodyRules[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public UpdateNetworkPortForwardingRulesRequestBody(@JsonProperty("rules") UpdateNetworkPortForwardingRulesRequestBodyRules[] rules) {
+        this.rules = rules;
+  }
 }

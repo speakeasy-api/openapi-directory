@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVolumeStatusResultVolumeStatusesActions {
     
     public String code;
+
     public DescribeVolumeStatusResultVolumeStatusesActions withCode(String code) {
         this.code = code;
         return this;
@@ -19,6 +20,7 @@ public class DescribeVolumeStatusResultVolumeStatusesActions {
     
     
     public String description;
+
     public DescribeVolumeStatusResultVolumeStatusesActions withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DescribeVolumeStatusResultVolumeStatusesActions {
     
     
     public String eventId;
+
     public DescribeVolumeStatusResultVolumeStatusesActions withEventId(String eventId) {
         this.eventId = eventId;
         return this;
@@ -33,9 +36,11 @@ public class DescribeVolumeStatusResultVolumeStatusesActions {
     
     
     public String eventType;
+
     public DescribeVolumeStatusResultVolumeStatusesActions withEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     
+    public DescribeVolumeStatusResultVolumeStatusesActions(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetImportationReportResponseDiff {
     @JsonProperty("createdCount")
     public Long createdCount;
+
     public GetImportationReportResponseDiff withCreatedCount(Long createdCount) {
         this.createdCount = createdCount;
         return this;
@@ -18,6 +19,7 @@ public class GetImportationReportResponseDiff {
     
     @JsonProperty("deletedCount")
     public Long deletedCount;
+
     public GetImportationReportResponseDiff withDeletedCount(Long deletedCount) {
         this.deletedCount = deletedCount;
         return this;
@@ -26,6 +28,7 @@ public class GetImportationReportResponseDiff {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unchangedCount")
     public Long unchangedCount;
+
     public GetImportationReportResponseDiff withUnchangedCount(Long unchangedCount) {
         this.unchangedCount = unchangedCount;
         return this;
@@ -33,9 +36,15 @@ public class GetImportationReportResponseDiff {
     
     @JsonProperty("updatedCount")
     public Long updatedCount;
+
     public GetImportationReportResponseDiff withUpdatedCount(Long updatedCount) {
         this.updatedCount = updatedCount;
         return this;
     }
     
+    public GetImportationReportResponseDiff(@JsonProperty("createdCount") Long createdCount, @JsonProperty("deletedCount") Long deletedCount, @JsonProperty("updatedCount") Long updatedCount) {
+        this.createdCount = createdCount;
+        this.deletedCount = deletedCount;
+        this.updatedCount = updatedCount;
+  }
 }

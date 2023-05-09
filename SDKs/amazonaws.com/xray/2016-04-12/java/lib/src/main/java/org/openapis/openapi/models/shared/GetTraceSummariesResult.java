@@ -22,6 +22,7 @@ public class GetTraceSummariesResult {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ApproximateTime")
     public OffsetDateTime approximateTime;
+
     public GetTraceSummariesResult withApproximateTime(OffsetDateTime approximateTime) {
         this.approximateTime = approximateTime;
         return this;
@@ -30,6 +31,7 @@ public class GetTraceSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetTraceSummariesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -38,6 +40,7 @@ public class GetTraceSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TraceSummaries")
     public TraceSummary[] traceSummaries;
+
     public GetTraceSummariesResult withTraceSummaries(TraceSummary[] traceSummaries) {
         this.traceSummaries = traceSummaries;
         return this;
@@ -46,9 +49,11 @@ public class GetTraceSummariesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TracesProcessedCount")
     public Long tracesProcessedCount;
+
     public GetTraceSummariesResult withTracesProcessedCount(Long tracesProcessedCount) {
         this.tracesProcessedCount = tracesProcessedCount;
         return this;
     }
     
+    public GetTraceSummariesResult(){}
 }

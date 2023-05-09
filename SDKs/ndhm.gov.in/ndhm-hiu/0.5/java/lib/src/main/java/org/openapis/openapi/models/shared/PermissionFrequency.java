@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PermissionFrequency {
     @JsonProperty("repeats")
     public Long repeats;
+
     public PermissionFrequency withRepeats(Long repeats) {
         this.repeats = repeats;
         return this;
@@ -16,6 +17,7 @@ public class PermissionFrequency {
     
     @JsonProperty("unit")
     public PermissionFrequencyUnitEnum unit;
+
     public PermissionFrequency withUnit(PermissionFrequencyUnitEnum unit) {
         this.unit = unit;
         return this;
@@ -23,9 +25,15 @@ public class PermissionFrequency {
     
     @JsonProperty("value")
     public Long value;
+
     public PermissionFrequency withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public PermissionFrequency(@JsonProperty("repeats") Long repeats, @JsonProperty("unit") PermissionFrequencyUnitEnum unit, @JsonProperty("value") Long value) {
+        this.repeats = repeats;
+        this.unit = unit;
+        this.value = value;
+  }
 }

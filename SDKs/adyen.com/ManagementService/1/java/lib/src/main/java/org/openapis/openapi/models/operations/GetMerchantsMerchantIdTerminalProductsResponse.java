@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMerchantsMerchantIdTerminalProductsResponse {
     
     public String contentType;
+
     public GetMerchantsMerchantIdTerminalProductsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetMerchantsMerchantIdTerminalProductsResponse {
     
     
     public Integer statusCode;
+
     public GetMerchantsMerchantIdTerminalProductsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetMerchantsMerchantIdTerminalProductsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMerchantsMerchantIdTerminalProductsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetMerchantsMerchantIdTerminalProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.RestServiceError restServiceError;
+
     public GetMerchantsMerchantIdTerminalProductsResponse withRestServiceError(org.openapis.openapi.models.shared.RestServiceError restServiceError) {
         this.restServiceError = restServiceError;
         return this;
@@ -43,9 +48,14 @@ public class GetMerchantsMerchantIdTerminalProductsResponse {
      */
     
     public org.openapis.openapi.models.shared.TerminalProductsResponse terminalProductsResponse;
+
     public GetMerchantsMerchantIdTerminalProductsResponse withTerminalProductsResponse(org.openapis.openapi.models.shared.TerminalProductsResponse terminalProductsResponse) {
         this.terminalProductsResponse = terminalProductsResponse;
         return this;
     }
     
+    public GetMerchantsMerchantIdTerminalProductsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

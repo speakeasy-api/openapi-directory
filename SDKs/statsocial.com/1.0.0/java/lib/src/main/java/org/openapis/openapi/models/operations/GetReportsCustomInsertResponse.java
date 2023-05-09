@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportsCustomInsertResponse {
@@ -12,6 +13,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredError fourHundredError;
+
     public GetReportsCustomInsertResponse withFourHundredError(org.openapis.openapi.models.shared.FourHundredError fourHundredError) {
         this.fourHundredError = fourHundredError;
         return this;
@@ -22,6 +24,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError;
+
     public GetReportsCustomInsertResponse withFourHundredAndOneError(org.openapis.openapi.models.shared.FourHundredAndOneError fourHundredAndOneError) {
         this.fourHundredAndOneError = fourHundredAndOneError;
         return this;
@@ -32,6 +35,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError;
+
     public GetReportsCustomInsertResponse withFourHundredAndThreeError(org.openapis.openapi.models.shared.FourHundredAndThreeError fourHundredAndThreeError) {
         this.fourHundredAndThreeError = fourHundredAndThreeError;
         return this;
@@ -42,6 +46,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.FourHundredAndFourError fourHundredAndFourError;
+
     public GetReportsCustomInsertResponse withFourHundredAndFourError(org.openapis.openapi.models.shared.FourHundredAndFourError fourHundredAndFourError) {
         this.fourHundredAndFourError = fourHundredAndFourError;
         return this;
@@ -52,6 +57,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.FiveHundredError fiveHundredError;
+
     public GetReportsCustomInsertResponse withFiveHundredError(org.openapis.openapi.models.shared.FiveHundredError fiveHundredError) {
         this.fiveHundredError = fiveHundredError;
         return this;
@@ -59,6 +65,7 @@ public class GetReportsCustomInsertResponse {
     
     
     public String contentType;
+
     public GetReportsCustomInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class GetReportsCustomInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomInsert customInsert;
+
     public GetReportsCustomInsertResponse withCustomInsert(org.openapis.openapi.models.shared.CustomInsert customInsert) {
         this.customInsert = customInsert;
         return this;
@@ -76,6 +84,7 @@ public class GetReportsCustomInsertResponse {
     
     
     public Integer statusCode;
+
     public GetReportsCustomInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class GetReportsCustomInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportsCustomInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetReportsCustomInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

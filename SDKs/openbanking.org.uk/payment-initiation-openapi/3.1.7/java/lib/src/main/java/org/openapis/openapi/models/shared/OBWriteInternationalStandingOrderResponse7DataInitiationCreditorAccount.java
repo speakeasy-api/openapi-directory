@@ -17,6 +17,7 @@ public class OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAcc
      */
     @JsonProperty("Identification")
     public String identification;
+
     public OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAccount withIdentification(String identification) {
         this.identification = identification;
         return this;
@@ -29,6 +30,7 @@ public class OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAcc
      */
     @JsonProperty("Name")
     public String name;
+
     public OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAccount withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +41,7 @@ public class OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAcc
      */
     @JsonProperty("SchemeName")
     public String schemeName;
+
     public OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAccount withSchemeName(String schemeName) {
         this.schemeName = schemeName;
         return this;
@@ -51,9 +54,15 @@ public class OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAcc
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecondaryIdentification")
     public String secondaryIdentification;
+
     public OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAccount withSecondaryIdentification(String secondaryIdentification) {
         this.secondaryIdentification = secondaryIdentification;
         return this;
     }
     
+    public OBWriteInternationalStandingOrderResponse7DataInitiationCreditorAccount(@JsonProperty("Identification") String identification, @JsonProperty("Name") String name, @JsonProperty("SchemeName") String schemeName) {
+        this.identification = identification;
+        this.name = name;
+        this.schemeName = schemeName;
+  }
 }

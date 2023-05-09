@@ -18,6 +18,7 @@ public class BackendServiceLocalityLoadBalancingPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPolicy")
     public BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy customPolicy;
+
     public BackendServiceLocalityLoadBalancingPolicyConfig withCustomPolicy(BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy customPolicy) {
         this.customPolicy = customPolicy;
         return this;
@@ -29,9 +30,11 @@ public class BackendServiceLocalityLoadBalancingPolicyConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public BackendServiceLocalityLoadBalancingPolicyConfigPolicy policy;
+
     public BackendServiceLocalityLoadBalancingPolicyConfig withPolicy(BackendServiceLocalityLoadBalancingPolicyConfigPolicy policy) {
         this.policy = policy;
         return this;
     }
     
+    public BackendServiceLocalityLoadBalancingPolicyConfig(){}
 }

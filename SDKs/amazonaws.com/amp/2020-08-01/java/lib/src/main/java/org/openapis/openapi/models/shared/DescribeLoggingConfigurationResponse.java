@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeLoggingConfigurationResponse {
     @JsonProperty("loggingConfiguration")
     public LoggingConfigurationMetadata loggingConfiguration;
+
     public DescribeLoggingConfigurationResponse withLoggingConfiguration(LoggingConfigurationMetadata loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
     }
     
+    public DescribeLoggingConfigurationResponse(@JsonProperty("loggingConfiguration") LoggingConfigurationMetadata loggingConfiguration) {
+        this.loggingConfiguration = loggingConfiguration;
+  }
 }

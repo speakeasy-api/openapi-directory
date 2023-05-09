@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2TimeZone {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetMinutes")
     public Integer offsetMinutes;
+
     public GooglePrivacyDlpV2TimeZone withOffsetMinutes(Integer offsetMinutes) {
         this.offsetMinutes = offsetMinutes;
         return this;
     }
     
+    public GooglePrivacyDlpV2TimeZone(){}
 }

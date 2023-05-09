@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLaunchTemplateRequest {
     
     public Boolean dryRun;
+
     public DeleteLaunchTemplateRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class DeleteLaunchTemplateRequest {
     
     
     public String launchTemplateId;
+
     public DeleteLaunchTemplateRequest withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -23,9 +25,11 @@ public class DeleteLaunchTemplateRequest {
     
     
     public String launchTemplateName;
+
     public DeleteLaunchTemplateRequest withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
     }
     
+    public DeleteLaunchTemplateRequest(){}
 }

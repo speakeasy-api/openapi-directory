@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DisassociateQualificationFromWorkerRequest {
     @JsonProperty("QualificationTypeId")
     public String qualificationTypeId;
+
     public DisassociateQualificationFromWorkerRequest withQualificationTypeId(String qualificationTypeId) {
         this.qualificationTypeId = qualificationTypeId;
         return this;
@@ -19,6 +20,7 @@ public class DisassociateQualificationFromWorkerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Reason")
     public String reason;
+
     public DisassociateQualificationFromWorkerRequest withReason(String reason) {
         this.reason = reason;
         return this;
@@ -26,9 +28,14 @@ public class DisassociateQualificationFromWorkerRequest {
     
     @JsonProperty("WorkerId")
     public String workerId;
+
     public DisassociateQualificationFromWorkerRequest withWorkerId(String workerId) {
         this.workerId = workerId;
         return this;
     }
     
+    public DisassociateQualificationFromWorkerRequest(@JsonProperty("QualificationTypeId") String qualificationTypeId, @JsonProperty("WorkerId") String workerId) {
+        this.qualificationTypeId = qualificationTypeId;
+        this.workerId = workerId;
+  }
 }

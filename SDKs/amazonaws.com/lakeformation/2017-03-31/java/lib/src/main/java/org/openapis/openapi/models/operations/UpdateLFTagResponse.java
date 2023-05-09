@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateLFTagResponse {
@@ -12,6 +13,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateLFTagResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object concurrentModificationException;
+
     public UpdateLFTagResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateLFTagResponse {
     
     
     public String contentType;
+
     public UpdateLFTagResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object entityNotFoundException;
+
     public UpdateLFTagResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object internalServiceException;
+
     public UpdateLFTagResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateLFTagResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateLFTagResponse {
      */
     
     public Object operationTimeoutException;
+
     public UpdateLFTagResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateLFTagResponse {
     
     
     public Integer statusCode;
+
     public UpdateLFTagResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateLFTagResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateLFTagResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateLFTagResponse {
      */
     
     public java.util.Map<String, Object> updateLFTagResponse;
+
     public UpdateLFTagResponse withUpdateLFTagResponse(java.util.Map<String, Object> updateLFTagResponse) {
         this.updateLFTagResponse = updateLFTagResponse;
         return this;
     }
     
+    public UpdateLFTagResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

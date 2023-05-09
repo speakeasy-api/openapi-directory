@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteProvisioningTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object conflictingResourceUpdateException;
+
     public DeleteProvisioningTemplateResponse withConflictingResourceUpdateException(Object conflictingResourceUpdateException) {
         this.conflictingResourceUpdateException = conflictingResourceUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteProvisioningTemplateResponse {
     
     
     public String contentType;
+
     public DeleteProvisioningTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object deleteConflictException;
+
     public DeleteProvisioningTemplateResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteProvisioningTemplateResponse;
+
     public DeleteProvisioningTemplateResponse withDeleteProvisioningTemplateResponse(java.util.Map<String, Object> deleteProvisioningTemplateResponse) {
         this.deleteProvisioningTemplateResponse = deleteProvisioningTemplateResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object internalFailureException;
+
     public DeleteProvisioningTemplateResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteProvisioningTemplateResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteProvisioningTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteProvisioningTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteProvisioningTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteProvisioningTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteProvisioningTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object throttlingException;
+
     public DeleteProvisioningTemplateResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteProvisioningTemplateResponse {
      */
     
     public Object unauthorizedException;
+
     public DeleteProvisioningTemplateResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeleteProvisioningTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

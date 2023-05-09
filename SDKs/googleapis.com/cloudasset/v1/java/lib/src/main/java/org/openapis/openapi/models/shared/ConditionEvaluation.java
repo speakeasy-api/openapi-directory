@@ -18,9 +18,11 @@ public class ConditionEvaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluationValue")
     public ConditionEvaluationEvaluationValueEnum evaluationValue;
+
     public ConditionEvaluation withEvaluationValue(ConditionEvaluationEvaluationValueEnum evaluationValue) {
         this.evaluationValue = evaluationValue;
         return this;
     }
     
+    public ConditionEvaluation(){}
 }

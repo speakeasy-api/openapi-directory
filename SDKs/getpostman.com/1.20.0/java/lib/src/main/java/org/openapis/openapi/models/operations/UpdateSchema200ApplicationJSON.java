@@ -15,9 +15,11 @@ public class UpdateSchema200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public UpdateSchema200ApplicationJSONSchema schema;
+
     public UpdateSchema200ApplicationJSON withSchema(UpdateSchema200ApplicationJSONSchema schema) {
         this.schema = schema;
         return this;
     }
     
+    public UpdateSchema200ApplicationJSON(){}
 }

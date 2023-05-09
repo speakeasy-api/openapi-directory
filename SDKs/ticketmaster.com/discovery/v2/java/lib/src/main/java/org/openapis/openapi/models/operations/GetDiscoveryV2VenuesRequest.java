@@ -12,6 +12,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=countryCode")
     public String countryCode;
+
     public GetDiscoveryV2VenuesRequest withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -22,6 +23,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=geoPoint")
     public String geoPoint;
+
     public GetDiscoveryV2VenuesRequest withGeoPoint(String geoPoint) {
         this.geoPoint = geoPoint;
         return this;
@@ -32,6 +34,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String id;
+
     public GetDiscoveryV2VenuesRequest withId(String id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicensedContent")
     public GetDiscoveryV2VenuesIncludeLicensedContentEnum includeLicensedContent;
+
     public GetDiscoveryV2VenuesRequest withIncludeLicensedContent(GetDiscoveryV2VenuesIncludeLicensedContentEnum includeLicensedContent) {
         this.includeLicensedContent = includeLicensedContent;
         return this;
@@ -52,6 +56,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeSpellcheck")
     public GetDiscoveryV2VenuesIncludeSpellcheckEnum includeSpellcheck;
+
     public GetDiscoveryV2VenuesRequest withIncludeSpellcheck(GetDiscoveryV2VenuesIncludeSpellcheckEnum includeSpellcheck) {
         this.includeSpellcheck = includeSpellcheck;
         return this;
@@ -62,6 +67,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeTest")
     public GetDiscoveryV2VenuesIncludeTestEnum includeTest;
+
     public GetDiscoveryV2VenuesRequest withIncludeTest(GetDiscoveryV2VenuesIncludeTestEnum includeTest) {
         this.includeTest = includeTest;
         return this;
@@ -72,6 +78,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetDiscoveryV2VenuesRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -82,6 +89,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=latlong")
     public String latlong;
+
     public GetDiscoveryV2VenuesRequest withLatlong(String latlong) {
         this.latlong = latlong;
         return this;
@@ -92,6 +100,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetDiscoveryV2VenuesRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -102,6 +111,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public String page;
+
     public GetDiscoveryV2VenuesRequest withPage(String page) {
         this.page = page;
         return this;
@@ -112,6 +122,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=radius")
     public String radius;
+
     public GetDiscoveryV2VenuesRequest withRadius(String radius) {
         this.radius = radius;
         return this;
@@ -122,6 +133,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public String size;
+
     public GetDiscoveryV2VenuesRequest withSize(String size) {
         this.size = size;
         return this;
@@ -132,6 +144,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetDiscoveryV2VenuesRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -142,6 +155,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=source")
     public GetDiscoveryV2VenuesSourceEnum source;
+
     public GetDiscoveryV2VenuesRequest withSource(GetDiscoveryV2VenuesSourceEnum source) {
         this.source = source;
         return this;
@@ -152,6 +166,7 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateCode")
     public String stateCode;
+
     public GetDiscoveryV2VenuesRequest withStateCode(String stateCode) {
         this.stateCode = stateCode;
         return this;
@@ -162,9 +177,11 @@ public class GetDiscoveryV2VenuesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=unit")
     public GetDiscoveryV2VenuesUnitEnum unit;
+
     public GetDiscoveryV2VenuesRequest withUnit(GetDiscoveryV2VenuesUnitEnum unit) {
         this.unit = unit;
         return this;
     }
     
+    public GetDiscoveryV2VenuesRequest(){}
 }

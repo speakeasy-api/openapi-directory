@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateImagesFromDataRequest {
     @SpeakeasyMetadata("request:mediaType=multipart/form-data")
     public CreateImagesFromDataRequestBody requestBody;
+
     public CreateImagesFromDataRequest withRequestBody(CreateImagesFromDataRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class CreateImagesFromDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public CreateImagesFromDataRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -29,9 +32,14 @@ public class CreateImagesFromDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=tagIds")
     public String[] tagIds;
+
     public CreateImagesFromDataRequest withTagIds(String[] tagIds) {
         this.tagIds = tagIds;
         return this;
     }
     
+    public CreateImagesFromDataRequest(@JsonProperty("RequestBody") CreateImagesFromDataRequestBody requestBody, @JsonProperty("projectId") String projectId) {
+        this.requestBody = requestBody;
+        this.projectId = projectId;
+  }
 }

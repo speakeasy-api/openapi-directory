@@ -18,6 +18,7 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applianceCluster")
     public ApplianceCluster applianceCluster;
+
     public MembershipEndpointInput withApplianceCluster(ApplianceCluster applianceCluster) {
         this.applianceCluster = applianceCluster;
         return this;
@@ -29,6 +30,7 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("edgeCluster")
     public EdgeCluster edgeCluster;
+
     public MembershipEndpointInput withEdgeCluster(EdgeCluster edgeCluster) {
         this.edgeCluster = edgeCluster;
         return this;
@@ -40,6 +42,7 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeCluster")
     public GkeClusterInput gkeCluster;
+
     public MembershipEndpointInput withGkeCluster(GkeClusterInput gkeCluster) {
         this.gkeCluster = gkeCluster;
         return this;
@@ -51,6 +54,7 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kubernetesResource")
     public KubernetesResourceInput kubernetesResource;
+
     public MembershipEndpointInput withKubernetesResource(KubernetesResourceInput kubernetesResource) {
         this.kubernetesResource = kubernetesResource;
         return this;
@@ -62,6 +66,7 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiCloudCluster")
     public MultiCloudClusterInput multiCloudCluster;
+
     public MembershipEndpointInput withMultiCloudCluster(MultiCloudClusterInput multiCloudCluster) {
         this.multiCloudCluster = multiCloudCluster;
         return this;
@@ -73,9 +78,11 @@ public class MembershipEndpointInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onPremCluster")
     public OnPremClusterInput onPremCluster;
+
     public MembershipEndpointInput withOnPremCluster(OnPremClusterInput onPremCluster) {
         this.onPremCluster = onPremCluster;
         return this;
     }
     
+    public MembershipEndpointInput(){}
 }

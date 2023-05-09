@@ -12,6 +12,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=item_type")
     public Long itemType;
+
     public PrivateInstitutionArticlesRequest withItemType(Long itemType) {
         this.itemType = itemType;
         return this;
@@ -22,6 +23,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public PrivateInstitutionArticlesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -32,6 +34,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=modified_since")
     public String modifiedSince;
+
     public PrivateInstitutionArticlesRequest withModifiedSince(String modifiedSince) {
         this.modifiedSince = modifiedSince;
         return this;
@@ -42,6 +45,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Long offset;
+
     public PrivateInstitutionArticlesRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
@@ -52,6 +56,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public PrivateInstitutionArticlesOrderEnum order;
+
     public PrivateInstitutionArticlesRequest withOrder(PrivateInstitutionArticlesOrderEnum order) {
         this.order = order;
         return this;
@@ -59,6 +64,7 @@ public class PrivateInstitutionArticlesRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_direction")
     public PrivateInstitutionArticlesOrderDirectionEnum orderDirection;
+
     public PrivateInstitutionArticlesRequest withOrderDirection(PrivateInstitutionArticlesOrderDirectionEnum orderDirection) {
         this.orderDirection = orderDirection;
         return this;
@@ -69,6 +75,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public PrivateInstitutionArticlesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -79,6 +86,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public PrivateInstitutionArticlesRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -89,6 +97,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=published_since")
     public String publishedSince;
+
     public PrivateInstitutionArticlesRequest withPublishedSince(String publishedSince) {
         this.publishedSince = publishedSince;
         return this;
@@ -99,6 +108,7 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resource_doi")
     public String resourceDoi;
+
     public PrivateInstitutionArticlesRequest withResourceDoi(String resourceDoi) {
         this.resourceDoi = resourceDoi;
         return this;
@@ -109,9 +119,11 @@ public class PrivateInstitutionArticlesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
     public Long status;
+
     public PrivateInstitutionArticlesRequest withStatus(Long status) {
         this.status = status;
         return this;
     }
     
+    public PrivateInstitutionArticlesRequest(){}
 }

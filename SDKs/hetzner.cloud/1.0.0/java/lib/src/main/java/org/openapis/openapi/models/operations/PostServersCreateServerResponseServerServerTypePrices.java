@@ -12,6 +12,7 @@ public class PostServersCreateServerResponseServerServerTypePrices {
      */
     @JsonProperty("location")
     public String location;
+
     public PostServersCreateServerResponseServerServerTypePrices withLocation(String location) {
         this.location = location;
         return this;
@@ -22,6 +23,7 @@ public class PostServersCreateServerResponseServerServerTypePrices {
      */
     @JsonProperty("price_hourly")
     public PostServersCreateServerResponseServerServerTypePricesPriceHourly priceHourly;
+
     public PostServersCreateServerResponseServerServerTypePrices withPriceHourly(PostServersCreateServerResponseServerServerTypePricesPriceHourly priceHourly) {
         this.priceHourly = priceHourly;
         return this;
@@ -32,9 +34,15 @@ public class PostServersCreateServerResponseServerServerTypePrices {
      */
     @JsonProperty("price_monthly")
     public PostServersCreateServerResponseServerServerTypePricesPriceMonthly priceMonthly;
+
     public PostServersCreateServerResponseServerServerTypePrices withPriceMonthly(PostServersCreateServerResponseServerServerTypePricesPriceMonthly priceMonthly) {
         this.priceMonthly = priceMonthly;
         return this;
     }
     
+    public PostServersCreateServerResponseServerServerTypePrices(@JsonProperty("location") String location, @JsonProperty("price_hourly") PostServersCreateServerResponseServerServerTypePricesPriceHourly priceHourly, @JsonProperty("price_monthly") PostServersCreateServerResponseServerServerTypePricesPriceMonthly priceMonthly) {
+        this.location = location;
+        this.priceHourly = priceHourly;
+        this.priceMonthly = priceMonthly;
+  }
 }

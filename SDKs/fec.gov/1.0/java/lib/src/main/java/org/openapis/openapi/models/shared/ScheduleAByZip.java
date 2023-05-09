@@ -15,6 +15,7 @@ public class ScheduleAByZip {
      */
     @JsonProperty("committee_id")
     public String committeeId;
+
     public ScheduleAByZip withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -27,6 +28,7 @@ public class ScheduleAByZip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public ScheduleAByZip withCount(Integer count) {
         this.count = count;
         return this;
@@ -40,6 +42,7 @@ public class ScheduleAByZip {
      */
     @JsonProperty("cycle")
     public Integer cycle;
+
     public ScheduleAByZip withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -51,6 +54,7 @@ public class ScheduleAByZip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ScheduleAByZip withState(String state) {
         this.state = state;
         return this;
@@ -62,6 +66,7 @@ public class ScheduleAByZip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_full")
     public String stateFull;
+
     public ScheduleAByZip withStateFull(String stateFull) {
         this.stateFull = stateFull;
         return this;
@@ -73,6 +78,7 @@ public class ScheduleAByZip {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ScheduleAByZip withTotal(Double total) {
         this.total = total;
         return this;
@@ -80,9 +86,15 @@ public class ScheduleAByZip {
     
     @JsonProperty("zip")
     public String zip;
+
     public ScheduleAByZip withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public ScheduleAByZip(@JsonProperty("committee_id") String committeeId, @JsonProperty("cycle") Integer cycle, @JsonProperty("zip") String zip) {
+        this.committeeId = committeeId;
+        this.cycle = cycle;
+        this.zip = zip;
+  }
 }

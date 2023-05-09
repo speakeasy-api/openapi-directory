@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTrackersResponse {
@@ -12,6 +13,7 @@ public class ListTrackersResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTrackersResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTrackersResponse {
     
     
     public String contentType;
+
     public ListTrackersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTrackersResponse {
      */
     
     public Object internalServerException;
+
     public ListTrackersResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTrackersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTrackersResponse listTrackersResponse;
+
     public ListTrackersResponse withListTrackersResponse(org.openapis.openapi.models.shared.ListTrackersResponse listTrackersResponse) {
         this.listTrackersResponse = listTrackersResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListTrackersResponse {
     
     
     public Integer statusCode;
+
     public ListTrackersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTrackersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTrackersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTrackersResponse {
      */
     
     public Object throttlingException;
+
     public ListTrackersResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListTrackersResponse {
      */
     
     public Object validationException;
+
     public ListTrackersResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTrackersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

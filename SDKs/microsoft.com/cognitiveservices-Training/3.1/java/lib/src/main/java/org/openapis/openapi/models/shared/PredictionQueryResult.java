@@ -18,6 +18,7 @@ public class PredictionQueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public StoredImagePrediction[] results;
+
     public PredictionQueryResult withResults(StoredImagePrediction[] results) {
         this.results = results;
         return this;
@@ -26,9 +27,11 @@ public class PredictionQueryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public PredictionQueryToken token;
+
     public PredictionQueryResult withToken(PredictionQueryToken token) {
         this.token = token;
         return this;
     }
     
+    public PredictionQueryResult(){}
 }

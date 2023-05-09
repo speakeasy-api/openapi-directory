@@ -3,11 +3,10 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostGet3dsAvailabilitySecurity;
 import org.openapis.openapi.models.operations.PostGet3dsAvailabilityResponse;
-import org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest;
+import org.openapis.openapi.models.operations.PostGet3dsAvailabilitySecurity;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
+import org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,33 +14,32 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest req = new ThreeDSAvailabilityRequest() {{
+            org.openapis.openapi.models.shared.ThreeDSAvailabilityRequest req = new ThreeDSAvailabilityRequest("corrupti") {{
                 additionalData = new java.util.HashMap<String, String>() {{
-                    put("provident", "distinctio");
-                    put("quibusdam", "unde");
-                    put("nulla", "corrupti");
+                    put("distinctio", "quibusdam");
+                    put("unde", "nulla");
+                    put("corrupti", "illum");
                 }};
                 brands = new String[]{{
-                    add("vel"),
                     add("error"),
                     add("deserunt"),
-                    add("suscipit"),
                 }};
-                cardNumber = "iure";
-                merchantAccount = "magnam";
-                recurringDetailReference = "debitis";
-                shopperReference = "ipsa";
-            }}            
+                cardNumber = "suscipit";
+                recurringDetailReference = "iure";
+                shopperReference = "magnam";
+            }};            
 
             PostGet3dsAvailabilityResponse res = sdk.general.postGet3dsAvailability(req, new PostGet3dsAvailabilitySecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.threeDSAvailabilityResponse.isPresent()) {
+            if (res.threeDSAvailabilityResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

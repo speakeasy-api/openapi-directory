@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFeatureResponse {
@@ -12,6 +13,7 @@ public class UpdateFeatureResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateFeatureResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdateFeatureResponse {
      */
     
     public Object conflictException;
+
     public UpdateFeatureResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFeatureResponse {
     
     
     public String contentType;
+
     public UpdateFeatureResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class UpdateFeatureResponse {
     
     
     public Integer statusCode;
+
     public UpdateFeatureResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateFeatureResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFeatureResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateFeatureResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFeatureResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateFeatureResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UpdateFeatureResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFeatureResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateFeatureResponse updateFeatureResponse;
+
     public UpdateFeatureResponse withUpdateFeatureResponse(org.openapis.openapi.models.shared.UpdateFeatureResponse updateFeatureResponse) {
         this.updateFeatureResponse = updateFeatureResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateFeatureResponse {
      */
     
     public Object validationException;
+
     public UpdateFeatureResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateFeatureResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

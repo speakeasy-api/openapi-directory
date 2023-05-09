@@ -15,6 +15,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Body")
     public String body;
+
     public EmailMessage withBody(String body) {
         this.body = body;
         return this;
@@ -23,6 +24,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FeedbackForwardingAddress")
     public String feedbackForwardingAddress;
+
     public EmailMessage withFeedbackForwardingAddress(String feedbackForwardingAddress) {
         this.feedbackForwardingAddress = feedbackForwardingAddress;
         return this;
@@ -31,6 +33,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public EmailMessage withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -39,6 +42,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RawEmail")
     public RawEmail rawEmail;
+
     public EmailMessage withRawEmail(RawEmail rawEmail) {
         this.rawEmail = rawEmail;
         return this;
@@ -47,6 +51,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplyToAddresses")
     public String[] replyToAddresses;
+
     public EmailMessage withReplyToAddresses(String[] replyToAddresses) {
         this.replyToAddresses = replyToAddresses;
         return this;
@@ -55,6 +60,7 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SimpleEmail")
     public SimpleEmail simpleEmail;
+
     public EmailMessage withSimpleEmail(SimpleEmail simpleEmail) {
         this.simpleEmail = simpleEmail;
         return this;
@@ -63,9 +69,11 @@ public class EmailMessage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Substitutions")
     public java.util.Map<String, String[]> substitutions;
+
     public EmailMessage withSubstitutions(java.util.Map<String, String[]> substitutions) {
         this.substitutions = substitutions;
         return this;
     }
     
+    public EmailMessage(){}
 }

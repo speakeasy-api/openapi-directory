@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ActionsGetWorkflowAccessToRepositoryResponse {
     
     public String contentType;
+
     public ActionsGetWorkflowAccessToRepositoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ActionsGetWorkflowAccessToRepositoryResponse {
     
     
     public Integer statusCode;
+
     public ActionsGetWorkflowAccessToRepositoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ActionsGetWorkflowAccessToRepositoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ActionsGetWorkflowAccessToRepositoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ActionsGetWorkflowAccessToRepositoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository actionsWorkflowAccessToRepository;
+
     public ActionsGetWorkflowAccessToRepositoryResponse withActionsWorkflowAccessToRepository(org.openapis.openapi.models.shared.ActionsWorkflowAccessToRepository actionsWorkflowAccessToRepository) {
         this.actionsWorkflowAccessToRepository = actionsWorkflowAccessToRepository;
         return this;
     }
     
+    public ActionsGetWorkflowAccessToRepositoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

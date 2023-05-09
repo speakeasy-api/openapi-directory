@@ -14,6 +14,7 @@ public class UpdateSchedulingPolicyRequestBody {
      */
     @JsonProperty("arn")
     public String arn;
+
     public UpdateSchedulingPolicyRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -25,9 +26,13 @@ public class UpdateSchedulingPolicyRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fairsharePolicy")
     public UpdateSchedulingPolicyRequestBodyFairsharePolicy fairsharePolicy;
+
     public UpdateSchedulingPolicyRequestBody withFairsharePolicy(UpdateSchedulingPolicyRequestBodyFairsharePolicy fairsharePolicy) {
         this.fairsharePolicy = fairsharePolicy;
         return this;
     }
     
+    public UpdateSchedulingPolicyRequestBody(@JsonProperty("arn") String arn) {
+        this.arn = arn;
+  }
 }

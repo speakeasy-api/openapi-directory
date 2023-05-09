@@ -15,9 +15,11 @@ public class CreateIpGroupResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public CreateIpGroupResult withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     
+    public CreateIpGroupResult(){}
 }

@@ -15,6 +15,7 @@ public class ListIpRoutesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpRoutesInfo")
     public IpRouteInfo[] ipRoutesInfo;
+
     public ListIpRoutesResult withIpRoutesInfo(IpRouteInfo[] ipRoutesInfo) {
         this.ipRoutesInfo = ipRoutesInfo;
         return this;
@@ -23,9 +24,11 @@ public class ListIpRoutesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListIpRoutesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListIpRoutesResult(){}
 }

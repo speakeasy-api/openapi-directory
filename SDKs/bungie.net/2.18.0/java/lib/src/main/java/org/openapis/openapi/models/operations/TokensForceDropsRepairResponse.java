@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TokensForceDropsRepairResponse {
     
     public byte[] body;
+
     public TokensForceDropsRepairResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class TokensForceDropsRepairResponse {
     
     
     public String contentType;
+
     public TokensForceDropsRepairResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class TokensForceDropsRepairResponse {
     
     
     public Integer statusCode;
+
     public TokensForceDropsRepairResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class TokensForceDropsRepairResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TokensForceDropsRepairResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public TokensForceDropsRepairResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

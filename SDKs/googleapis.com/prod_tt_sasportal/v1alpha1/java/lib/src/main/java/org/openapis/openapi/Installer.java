@@ -62,11 +62,9 @@ public class Installer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalInstallerGenerateSecretResponse(contentType, httpRes.statusCode()) {{
             sasPortalGenerateSecretResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Installer {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalInstallerValidateResponse(contentType, httpRes.statusCode()) {{
             sasPortalValidateInstallerResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

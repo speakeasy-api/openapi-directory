@@ -18,9 +18,11 @@ public class DeviceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountState")
     public DeviceStateAccountStateEnum accountState;
+
     public DeviceState withAccountState(DeviceStateAccountStateEnum accountState) {
         this.accountState = accountState;
         return this;
     }
     
+    public DeviceState(){}
 }

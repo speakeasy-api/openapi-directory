@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeLocalGatewaysResultLocalGatewaysTags {
     
     public String key;
+
     public DescribeLocalGatewaysResultLocalGatewaysTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeLocalGatewaysResultLocalGatewaysTags {
     
     
     public String value;
+
     public DescribeLocalGatewaysResultLocalGatewaysTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeLocalGatewaysResultLocalGatewaysTags(){}
 }

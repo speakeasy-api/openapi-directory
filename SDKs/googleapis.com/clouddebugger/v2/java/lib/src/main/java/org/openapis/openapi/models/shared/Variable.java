@@ -18,6 +18,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public Variable[] members;
+
     public Variable withMembers(Variable[] members) {
         this.members = members;
         return this;
@@ -29,6 +30,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Variable withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StatusMessage status;
+
     public Variable withStatus(StatusMessage status) {
         this.status = status;
         return this;
@@ -51,6 +54,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Variable withType(String type) {
         this.type = type;
         return this;
@@ -62,6 +66,7 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Variable withValue(String value) {
         this.value = value;
         return this;
@@ -73,9 +78,11 @@ public class Variable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("varTableIndex")
     public Integer varTableIndex;
+
     public Variable withVarTableIndex(Integer varTableIndex) {
         this.varTableIndex = varTableIndex;
         return this;
     }
     
+    public Variable(){}
 }

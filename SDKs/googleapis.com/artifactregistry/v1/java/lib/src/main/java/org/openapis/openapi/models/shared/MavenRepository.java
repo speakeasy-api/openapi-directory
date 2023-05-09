@@ -18,9 +18,11 @@ public class MavenRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicRepository")
     public MavenRepositoryPublicRepositoryEnum publicRepository;
+
     public MavenRepository withPublicRepository(MavenRepositoryPublicRepositoryEnum publicRepository) {
         this.publicRepository = publicRepository;
         return this;
     }
     
+    public MavenRepository(){}
 }

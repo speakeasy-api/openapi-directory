@@ -18,6 +18,7 @@ public class NodeGroupMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maintenanceDuration")
     public Duration maintenanceDuration;
+
     public NodeGroupMaintenanceWindow withMaintenanceDuration(Duration maintenanceDuration) {
         this.maintenanceDuration = maintenanceDuration;
         return this;
@@ -29,9 +30,11 @@ public class NodeGroupMaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public NodeGroupMaintenanceWindow withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public NodeGroupMaintenanceWindow(){}
 }

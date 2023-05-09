@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ModifyTransitGatewayPrefixListReferenceResult {
     
     public ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference transitGatewayPrefixListReference;
+
     public ModifyTransitGatewayPrefixListReferenceResult withTransitGatewayPrefixListReference(ModifyTransitGatewayPrefixListReferenceResultTransitGatewayPrefixListReference transitGatewayPrefixListReference) {
         this.transitGatewayPrefixListReference = transitGatewayPrefixListReference;
         return this;
     }
     
+    public ModifyTransitGatewayPrefixListReferenceResult(){}
 }

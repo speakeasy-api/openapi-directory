@@ -52,11 +52,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetArgsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshGetArgsResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetArgsResponse(contentType, httpRes.statusCode()) {{
             protocolSshGetArgs200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,11 +92,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshGetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetConfigResponse(contentType, httpRes.statusCode()) {{
             configSSH = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,11 +132,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetStatisticsResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshGetStatisticsResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetStatisticsResponse(contentType, httpRes.statusCode()) {{
             protocolSshGetStatistics200ApplicationJSONInt32Integers = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -177,11 +171,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetStatsHdrResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshGetStatsHdrResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetStatsHdrResponse(contentType, httpRes.statusCode()) {{
             protocolSshGetStatsHdr200ApplicationJSONStrings = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -219,11 +211,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshGetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSshGetTraceResponse(contentType, httpRes.statusCode()) {{
             configSSH = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -261,11 +251,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasDisableResponse(contentType, httpRes.statusCode()) {{
             protocolSshIpaliasDisable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +290,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasEnableResponse(contentType, httpRes.statusCode()) {{
             protocolSshIpaliasEnable200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,11 +329,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasIsenabledResponse(contentType, httpRes.statusCode()) {{
             protocolSshIpaliasIsenabled200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -384,11 +368,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasListResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshIpaliasListResponse res = new org.openapis.openapi.models.operations.ProtocolSshIpaliasListResponse(contentType, httpRes.statusCode()) {{
             ipAliases = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,11 +408,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSshSetConfigResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshSetConfigResponse res = new org.openapis.openapi.models.operations.ProtocolSshSetConfigResponse(contentType, httpRes.statusCode()) {{
             protocolSshSetConfig200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -467,11 +447,9 @@ public class Ssh {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProtocolSshSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSshSetTraceResponse() {{
+        org.openapis.openapi.models.operations.ProtocolSshSetTraceResponse res = new org.openapis.openapi.models.operations.ProtocolSshSetTraceResponse(contentType, httpRes.statusCode()) {{
             protocolSshSetTrace200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

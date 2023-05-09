@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetConsoleScreenshotRequest {
     
     public Boolean dryRun;
+
     public GetConsoleScreenshotRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetConsoleScreenshotRequest {
     
     
     public String instanceId;
+
     public GetConsoleScreenshotRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -23,9 +25,13 @@ public class GetConsoleScreenshotRequest {
     
     
     public Boolean wakeUp;
+
     public GetConsoleScreenshotRequest withWakeUp(Boolean wakeUp) {
         this.wakeUp = wakeUp;
         return this;
     }
     
+    public GetConsoleScreenshotRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

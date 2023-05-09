@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRetentionPolicyResponse {
     
     public String contentType;
+
     public DeleteRetentionPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRetentionPolicyResponse {
      */
     
     public java.util.Map<String, Object> deleteRetentionPolicyResponse;
+
     public DeleteRetentionPolicyResponse withDeleteRetentionPolicyResponse(java.util.Map<String, Object> deleteRetentionPolicyResponse) {
         this.deleteRetentionPolicyResponse = deleteRetentionPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRetentionPolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteRetentionPolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRetentionPolicyResponse {
      */
     
     public Object organizationNotFoundException;
+
     public DeleteRetentionPolicyResponse withOrganizationNotFoundException(Object organizationNotFoundException) {
         this.organizationNotFoundException = organizationNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteRetentionPolicyResponse {
      */
     
     public Object organizationStateException;
+
     public DeleteRetentionPolicyResponse withOrganizationStateException(Object organizationStateException) {
         this.organizationStateException = organizationStateException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteRetentionPolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteRetentionPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteRetentionPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRetentionPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteRetentionPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

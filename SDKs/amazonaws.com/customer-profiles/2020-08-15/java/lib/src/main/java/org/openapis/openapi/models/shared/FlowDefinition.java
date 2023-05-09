@@ -15,6 +15,7 @@ public class FlowDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public FlowDefinition withDescription(String description) {
         this.description = description;
         return this;
@@ -22,6 +23,7 @@ public class FlowDefinition {
     
     @JsonProperty("FlowName")
     public String flowName;
+
     public FlowDefinition withFlowName(String flowName) {
         this.flowName = flowName;
         return this;
@@ -29,6 +31,7 @@ public class FlowDefinition {
     
     @JsonProperty("KmsArn")
     public String kmsArn;
+
     public FlowDefinition withKmsArn(String kmsArn) {
         this.kmsArn = kmsArn;
         return this;
@@ -36,6 +39,7 @@ public class FlowDefinition {
     
     @JsonProperty("SourceFlowConfig")
     public SourceFlowConfig sourceFlowConfig;
+
     public FlowDefinition withSourceFlowConfig(SourceFlowConfig sourceFlowConfig) {
         this.sourceFlowConfig = sourceFlowConfig;
         return this;
@@ -43,6 +47,7 @@ public class FlowDefinition {
     
     @JsonProperty("Tasks")
     public Task[] tasks;
+
     public FlowDefinition withTasks(Task[] tasks) {
         this.tasks = tasks;
         return this;
@@ -50,9 +55,17 @@ public class FlowDefinition {
     
     @JsonProperty("TriggerConfig")
     public TriggerConfig triggerConfig;
+
     public FlowDefinition withTriggerConfig(TriggerConfig triggerConfig) {
         this.triggerConfig = triggerConfig;
         return this;
     }
     
+    public FlowDefinition(@JsonProperty("FlowName") String flowName, @JsonProperty("KmsArn") String kmsArn, @JsonProperty("SourceFlowConfig") SourceFlowConfig sourceFlowConfig, @JsonProperty("Tasks") Task[] tasks, @JsonProperty("TriggerConfig") TriggerConfig triggerConfig) {
+        this.flowName = flowName;
+        this.kmsArn = kmsArn;
+        this.sourceFlowConfig = sourceFlowConfig;
+        this.tasks = tasks;
+        this.triggerConfig = triggerConfig;
+  }
 }

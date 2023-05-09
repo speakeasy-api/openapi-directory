@@ -19,6 +19,7 @@ public class Document {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public Document withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -27,6 +28,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filename")
     public String filename;
+
     public Document withFilename(String filename) {
         this.filename = filename;
         return this;
@@ -35,6 +37,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Document withId(String id) {
         this.id = id;
         return this;
@@ -43,6 +46,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mimetype")
     public String mimetype;
+
     public Document withMimetype(String mimetype) {
         this.mimetype = mimetype;
         return this;
@@ -51,6 +55,7 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public Document withSize(Long size) {
         this.size = size;
         return this;
@@ -59,9 +64,11 @@ public class Document {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public Document withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public Document(){}
 }

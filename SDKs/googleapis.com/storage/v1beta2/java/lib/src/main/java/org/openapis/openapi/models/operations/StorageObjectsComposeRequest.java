@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageObjectsComposeRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ComposeRequest composeRequest;
+
     public StorageObjectsComposeRequest withComposeRequest(org.openapis.openapi.models.shared.ComposeRequest composeRequest) {
         this.composeRequest = composeRequest;
         return this;
@@ -19,6 +21,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageObjectsComposeRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationBucket")
     public String destinationBucket;
+
     public StorageObjectsComposeRequest withDestinationBucket(String destinationBucket) {
         this.destinationBucket = destinationBucket;
         return this;
@@ -39,6 +43,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=destinationObject")
     public String destinationObject;
+
     public StorageObjectsComposeRequest withDestinationObject(String destinationObject) {
         this.destinationObject = destinationObject;
         return this;
@@ -49,6 +54,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageObjectsComposeRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -59,6 +65,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifGenerationMatch")
     public String ifGenerationMatch;
+
     public StorageObjectsComposeRequest withIfGenerationMatch(String ifGenerationMatch) {
         this.ifGenerationMatch = ifGenerationMatch;
         return this;
@@ -69,6 +76,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ifMetagenerationMatch")
     public String ifMetagenerationMatch;
+
     public StorageObjectsComposeRequest withIfMetagenerationMatch(String ifMetagenerationMatch) {
         this.ifMetagenerationMatch = ifMetagenerationMatch;
         return this;
@@ -79,6 +87,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageObjectsComposeRequest withKey(String key) {
         this.key = key;
         return this;
@@ -89,6 +98,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageObjectsComposeRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -99,6 +109,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageObjectsComposeRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -109,6 +120,7 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageObjectsComposeRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,9 +131,14 @@ public class StorageObjectsComposeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageObjectsComposeRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public StorageObjectsComposeRequest(@JsonProperty("destinationBucket") String destinationBucket, @JsonProperty("destinationObject") String destinationObject) {
+        this.destinationBucket = destinationBucket;
+        this.destinationObject = destinationObject;
+  }
 }

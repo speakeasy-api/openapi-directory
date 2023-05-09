@@ -18,6 +18,7 @@ public class NumericTargetingDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("excludedIds")
     public String[] excludedIds;
+
     public NumericTargetingDimension withExcludedIds(String[] excludedIds) {
         this.excludedIds = excludedIds;
         return this;
@@ -29,9 +30,11 @@ public class NumericTargetingDimension {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedIds")
     public String[] includedIds;
+
     public NumericTargetingDimension withIncludedIds(String[] includedIds) {
         this.includedIds = includedIds;
         return this;
     }
     
+    public NumericTargetingDimension(){}
 }

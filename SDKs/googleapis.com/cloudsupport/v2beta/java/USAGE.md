@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchSecurity;
 import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchRequest;
 import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchResponse;
+import org.openapis.openapi.models.operations.CloudsupportCaseClassificationsSearchSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -17,32 +16,34 @@ public class Application {
                 .build();
 
             CloudsupportCaseClassificationsSearchRequest req = new CloudsupportCaseClassificationsSearchRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "quibusdam";
                 fields = "unde";
                 key = "nulla";
                 oauthToken = "corrupti";
-                pageSize = 847252;
+                pageSize = 847252L;
                 pageToken = "vel";
                 prettyPrint = false;
                 query = "error";
                 quotaUser = "deserunt";
                 uploadType = "suscipit";
                 uploadProtocol = "iure";
-            }}            
+            }};            
 
-            CloudsupportCaseClassificationsSearchResponse res = sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req, new CloudsupportCaseClassificationsSearchSecurity() {{
+            CloudsupportCaseClassificationsSearchResponse res = sdk.caseClassifications.cloudsupportCaseClassificationsSearch(req, new CloudsupportCaseClassificationsSearchSecurity("magnam", "debitis") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.searchCaseClassificationsResponse.isPresent()) {
+            if (res.searchCaseClassificationsResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

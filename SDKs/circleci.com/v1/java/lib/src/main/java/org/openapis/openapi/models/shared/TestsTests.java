@@ -12,6 +12,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classname")
     public String classname;
+
     public TestsTests withClassname(String classname) {
         this.classname = classname;
         return this;
@@ -20,6 +21,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public TestsTests withFile(String file) {
         this.file = file;
         return this;
@@ -28,6 +30,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public TestsTests withMessage(String message) {
         this.message = message;
         return this;
@@ -36,6 +39,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TestsTests withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public StatusEnum result;
+
     public TestsTests withResult(StatusEnum result) {
         this.result = result;
         return this;
@@ -52,6 +57,7 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("run_time")
     public Double runTime;
+
     public TestsTests withRunTime(Double runTime) {
         this.runTime = runTime;
         return this;
@@ -60,9 +66,11 @@ public class TestsTests {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public String source;
+
     public TestsTests withSource(String source) {
         this.source = source;
         return this;
     }
     
+    public TestsTests(){}
 }

@@ -18,6 +18,7 @@ public class PublicKeyCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certificate")
     public String certificate;
+
     public PublicKeyCertificate withCertificate(String certificate) {
         this.certificate = certificate;
         return this;
@@ -29,6 +30,7 @@ public class PublicKeyCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public PublicKeyCertificateFormatEnum format;
+
     public PublicKeyCertificate withFormat(PublicKeyCertificateFormatEnum format) {
         this.format = format;
         return this;
@@ -40,9 +42,11 @@ public class PublicKeyCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Details")
     public X509CertificateDetails x509Details;
+
     public PublicKeyCertificate withX509Details(X509CertificateDetails x509Details) {
         this.x509Details = x509Details;
         return this;
     }
     
+    public PublicKeyCertificate(){}
 }

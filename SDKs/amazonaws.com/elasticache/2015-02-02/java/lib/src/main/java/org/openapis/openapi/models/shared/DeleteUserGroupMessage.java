@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteUserGroupMessage {
     
     public String userGroupId;
+
     public DeleteUserGroupMessage withUserGroupId(String userGroupId) {
         this.userGroupId = userGroupId;
         return this;
     }
     
+    public DeleteUserGroupMessage(@JsonProperty("UserGroupId") String userGroupId) {
+        this.userGroupId = userGroupId;
+  }
 }

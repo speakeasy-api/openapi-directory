@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNameConceptTypeSpecificConceptJsonRequest {
@@ -13,6 +14,7 @@ public class GetNameConceptTypeSpecificConceptJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=concept-type")
     public GetNameConceptTypeSpecificConceptJsonConceptTypeEnum conceptType;
+
     public GetNameConceptTypeSpecificConceptJsonRequest withConceptType(GetNameConceptTypeSpecificConceptJsonConceptTypeEnum conceptType) {
         this.conceptType = conceptType;
         return this;
@@ -36,6 +38,7 @@ public class GetNameConceptTypeSpecificConceptJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public GetNameConceptTypeSpecificConceptJsonFieldsEnum fields;
+
     public GetNameConceptTypeSpecificConceptJsonRequest withFields(GetNameConceptTypeSpecificConceptJsonFieldsEnum fields) {
         this.fields = fields;
         return this;
@@ -46,6 +49,7 @@ public class GetNameConceptTypeSpecificConceptJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public GetNameConceptTypeSpecificConceptJsonRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -57,9 +61,15 @@ public class GetNameConceptTypeSpecificConceptJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=specific-concept")
     public String specificConcept;
+
     public GetNameConceptTypeSpecificConceptJsonRequest withSpecificConcept(String specificConcept) {
         this.specificConcept = specificConcept;
         return this;
     }
     
+    public GetNameConceptTypeSpecificConceptJsonRequest(@JsonProperty("concept-type") GetNameConceptTypeSpecificConceptJsonConceptTypeEnum conceptType, @JsonProperty("query") String query, @JsonProperty("specific-concept") String specificConcept) {
+        this.conceptType = conceptType;
+        this.query = query;
+        this.specificConcept = specificConcept;
+  }
 }

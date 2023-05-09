@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageDisplayOptions")
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptionsEnum imageDisplayOptions;
+
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard withImageDisplayOptions(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardImageDisplayOptionsEnum imageDisplayOptions) {
         this.imageDisplayOptions = imageDisplayOptions;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem[] items;
+
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard withItems(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem[] items) {
         this.items = items;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard(){}
 }

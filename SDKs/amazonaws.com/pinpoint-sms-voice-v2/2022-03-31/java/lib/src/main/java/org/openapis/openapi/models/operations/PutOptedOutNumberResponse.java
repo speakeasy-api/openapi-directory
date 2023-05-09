@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutOptedOutNumberResponse {
@@ -12,6 +13,7 @@ public class PutOptedOutNumberResponse {
      */
     
     public Object accessDeniedException;
+
     public PutOptedOutNumberResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class PutOptedOutNumberResponse {
     
     
     public String contentType;
+
     public PutOptedOutNumberResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutOptedOutNumberResponse {
      */
     
     public Object internalServerException;
+
     public PutOptedOutNumberResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class PutOptedOutNumberResponse {
      */
     
     public org.openapis.openapi.models.shared.PutOptedOutNumberResult putOptedOutNumberResult;
+
     public PutOptedOutNumberResponse withPutOptedOutNumberResult(org.openapis.openapi.models.shared.PutOptedOutNumberResult putOptedOutNumberResult) {
         this.putOptedOutNumberResult = putOptedOutNumberResult;
         return this;
@@ -49,6 +54,7 @@ public class PutOptedOutNumberResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutOptedOutNumberResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class PutOptedOutNumberResponse {
     
     
     public Integer statusCode;
+
     public PutOptedOutNumberResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutOptedOutNumberResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutOptedOutNumberResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutOptedOutNumberResponse {
      */
     
     public Object throttlingException;
+
     public PutOptedOutNumberResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class PutOptedOutNumberResponse {
      */
     
     public Object validationException;
+
     public PutOptedOutNumberResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutOptedOutNumberResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

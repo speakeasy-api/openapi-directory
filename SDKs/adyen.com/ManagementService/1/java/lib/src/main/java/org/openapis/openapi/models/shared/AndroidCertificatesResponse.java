@@ -18,9 +18,11 @@ public class AndroidCertificatesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public AndroidCertificate[] data;
+
     public AndroidCertificatesResponse withData(AndroidCertificate[] data) {
         this.data = data;
         return this;
     }
     
+    public AndroidCertificatesResponse(){}
 }

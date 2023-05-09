@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpcRequest {
     
     public Boolean amazonProvidedIpv6CidrBlock;
+
     public CreateVpcRequest withAmazonProvidedIpv6CidrBlock(Boolean amazonProvidedIpv6CidrBlock) {
         this.amazonProvidedIpv6CidrBlock = amazonProvidedIpv6CidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class CreateVpcRequest {
     
     
     public String cidrBlock;
+
     public CreateVpcRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class CreateVpcRequest {
     
     
     public Boolean dryRun;
+
     public CreateVpcRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateVpcRequest {
     
     
     public CreateVpcRequestInstanceTenancyEnum instanceTenancy;
+
     public CreateVpcRequest withInstanceTenancy(CreateVpcRequestInstanceTenancyEnum instanceTenancy) {
         this.instanceTenancy = instanceTenancy;
         return this;
@@ -37,6 +41,7 @@ public class CreateVpcRequest {
     
     
     public String ipv4IpamPoolId;
+
     public CreateVpcRequest withIpv4IpamPoolId(String ipv4IpamPoolId) {
         this.ipv4IpamPoolId = ipv4IpamPoolId;
         return this;
@@ -44,6 +49,7 @@ public class CreateVpcRequest {
     
     
     public Long ipv4NetmaskLength;
+
     public CreateVpcRequest withIpv4NetmaskLength(Long ipv4NetmaskLength) {
         this.ipv4NetmaskLength = ipv4NetmaskLength;
         return this;
@@ -51,6 +57,7 @@ public class CreateVpcRequest {
     
     
     public String ipv6CidrBlock;
+
     public CreateVpcRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -58,6 +65,7 @@ public class CreateVpcRequest {
     
     
     public String ipv6CidrBlockNetworkBorderGroup;
+
     public CreateVpcRequest withIpv6CidrBlockNetworkBorderGroup(String ipv6CidrBlockNetworkBorderGroup) {
         this.ipv6CidrBlockNetworkBorderGroup = ipv6CidrBlockNetworkBorderGroup;
         return this;
@@ -65,6 +73,7 @@ public class CreateVpcRequest {
     
     
     public String ipv6IpamPoolId;
+
     public CreateVpcRequest withIpv6IpamPoolId(String ipv6IpamPoolId) {
         this.ipv6IpamPoolId = ipv6IpamPoolId;
         return this;
@@ -72,6 +81,7 @@ public class CreateVpcRequest {
     
     
     public Long ipv6NetmaskLength;
+
     public CreateVpcRequest withIpv6NetmaskLength(Long ipv6NetmaskLength) {
         this.ipv6NetmaskLength = ipv6NetmaskLength;
         return this;
@@ -79,6 +89,7 @@ public class CreateVpcRequest {
     
     
     public String ipv6Pool;
+
     public CreateVpcRequest withIpv6Pool(String ipv6Pool) {
         this.ipv6Pool = ipv6Pool;
         return this;
@@ -86,9 +97,11 @@ public class CreateVpcRequest {
     
     
     public CreateVpcRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpcRequest withTagSpecifications(CreateVpcRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateVpcRequest(){}
 }

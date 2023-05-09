@@ -15,6 +15,7 @@ public class CloudWatchLogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupName")
     public String groupName;
+
     public CloudWatchLogsConfig withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -22,6 +23,7 @@ public class CloudWatchLogsConfig {
     
     @JsonProperty("status")
     public LogsConfigStatusTypeEnum status;
+
     public CloudWatchLogsConfig withStatus(LogsConfigStatusTypeEnum status) {
         this.status = status;
         return this;
@@ -30,9 +32,13 @@ public class CloudWatchLogsConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamName")
     public String streamName;
+
     public CloudWatchLogsConfig withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public CloudWatchLogsConfig(@JsonProperty("status") LogsConfigStatusTypeEnum status) {
+        this.status = status;
+  }
 }

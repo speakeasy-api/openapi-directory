@@ -53,11 +53,9 @@ public class OpenMETER {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OmActivitiesResponse res = new org.openapis.openapi.models.operations.OmActivitiesResponse() {{
+        org.openapis.openapi.models.operations.OmActivitiesResponse res = new org.openapis.openapi.models.operations.OmActivitiesResponse(contentType, httpRes.statusCode()) {{
             ommeters = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -92,11 +90,9 @@ public class OpenMETER {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OmMetersResponse res = new org.openapis.openapi.models.operations.OmMetersResponse() {{
+        org.openapis.openapi.models.operations.OmMetersResponse res = new org.openapis.openapi.models.operations.OmMetersResponse(contentType, httpRes.statusCode()) {{
             ommeters = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -131,11 +127,9 @@ public class OpenMETER {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.OmReadingsResponse res = new org.openapis.openapi.models.operations.OmReadingsResponse() {{
+        org.openapis.openapi.models.operations.OmReadingsResponse res = new org.openapis.openapi.models.operations.OmReadingsResponse(contentType, httpRes.statusCode()) {{
             ommeters = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

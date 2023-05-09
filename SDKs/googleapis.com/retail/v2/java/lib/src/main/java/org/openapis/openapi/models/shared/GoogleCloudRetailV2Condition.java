@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeTimeRange")
     public GoogleCloudRetailV2ConditionTimeRange[] activeTimeRange;
+
     public GoogleCloudRetailV2Condition withActiveTimeRange(GoogleCloudRetailV2ConditionTimeRange[] activeTimeRange) {
         this.activeTimeRange = activeTimeRange;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2Condition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryTerms")
     public GoogleCloudRetailV2ConditionQueryTerm[] queryTerms;
+
     public GoogleCloudRetailV2Condition withQueryTerms(GoogleCloudRetailV2ConditionQueryTerm[] queryTerms) {
         this.queryTerms = queryTerms;
         return this;
     }
     
+    public GoogleCloudRetailV2Condition(){}
 }

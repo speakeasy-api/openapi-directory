@@ -58,11 +58,9 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse res = new org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse() {{
+        org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse res = new org.openapis.openapi.models.operations.KmsinventoryOrganizationsProtectedResourcesSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudKmsInventoryV1SearchProtectedResourcesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

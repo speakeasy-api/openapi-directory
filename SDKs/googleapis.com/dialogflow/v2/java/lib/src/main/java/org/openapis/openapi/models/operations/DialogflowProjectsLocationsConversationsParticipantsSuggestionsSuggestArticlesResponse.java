@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse {
     
     public String contentType;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudDialogflowV2SuggestArticlesResponse googleCloudDialogflowV2SuggestArticlesResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse withGoogleCloudDialogflowV2SuggestArticlesResponse(org.openapis.openapi.models.shared.GoogleCloudDialogflowV2SuggestArticlesResponse googleCloudDialogflowV2SuggestArticlesResponse) {
         this.googleCloudDialogflowV2SuggestArticlesResponse = googleCloudDialogflowV2SuggestArticlesResponse;
         return this;
@@ -26,6 +29,7 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public Integer statusCode;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DialogflowProjectsLocationsConversationsParticipantsSuggestionsSugg
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DialogflowProjectsLocationsConversationsParticipantsSuggestionsSuggestArticlesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

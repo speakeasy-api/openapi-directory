@@ -18,6 +18,7 @@ public class TagSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dynamicTagEnabled")
     public Boolean dynamicTagEnabled;
+
     public TagSettings withDynamicTagEnabled(Boolean dynamicTagEnabled) {
         this.dynamicTagEnabled = dynamicTagEnabled;
         return this;
@@ -29,9 +30,11 @@ public class TagSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTagEnabled")
     public Boolean imageTagEnabled;
+
     public TagSettings withImageTagEnabled(Boolean imageTagEnabled) {
         this.imageTagEnabled = imageTagEnabled;
         return this;
     }
     
+    public TagSettings(){}
 }

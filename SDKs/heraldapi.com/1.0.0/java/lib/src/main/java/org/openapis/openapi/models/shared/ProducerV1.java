@@ -17,6 +17,7 @@ public class ProducerV1 {
      */
     @JsonProperty("email")
     public String email;
+
     public ProducerV1 withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +29,7 @@ public class ProducerV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("external_id")
     public String externalId;
+
     public ProducerV1 withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -38,6 +40,7 @@ public class ProducerV1 {
      */
     @JsonProperty("id")
     public String id;
+
     public ProducerV1 withId(String id) {
         this.id = id;
         return this;
@@ -48,9 +51,15 @@ public class ProducerV1 {
      */
     @JsonProperty("name")
     public String name;
+
     public ProducerV1 withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ProducerV1(@JsonProperty("email") String email, @JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.email = email;
+        this.id = id;
+        this.name = name;
+  }
 }

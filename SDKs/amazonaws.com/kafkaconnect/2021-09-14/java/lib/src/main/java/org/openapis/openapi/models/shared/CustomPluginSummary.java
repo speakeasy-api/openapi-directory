@@ -22,6 +22,7 @@ public class CustomPluginSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public CustomPluginSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -30,6 +31,7 @@ public class CustomPluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginArn")
     public String customPluginArn;
+
     public CustomPluginSummary withCustomPluginArn(String customPluginArn) {
         this.customPluginArn = customPluginArn;
         return this;
@@ -38,6 +40,7 @@ public class CustomPluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customPluginState")
     public CustomPluginStateEnum customPluginState;
+
     public CustomPluginSummary withCustomPluginState(CustomPluginStateEnum customPluginState) {
         this.customPluginState = customPluginState;
         return this;
@@ -46,6 +49,7 @@ public class CustomPluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CustomPluginSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -54,6 +58,7 @@ public class CustomPluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latestRevision")
     public CustomPluginRevisionSummary latestRevision;
+
     public CustomPluginSummary withLatestRevision(CustomPluginRevisionSummary latestRevision) {
         this.latestRevision = latestRevision;
         return this;
@@ -62,9 +67,11 @@ public class CustomPluginSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CustomPluginSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CustomPluginSummary(){}
 }

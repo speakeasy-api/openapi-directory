@@ -17,6 +17,7 @@ public class DocumentUpdates {
     @JsonProperty("documents[]")
     @SpeakeasyMetadata("multipartForm:name=documents[],json")
     public byte[][] documents;
+
     public DocumentUpdates withDocuments(byte[][] documents) {
         this.documents = documents;
         return this;
@@ -29,6 +30,7 @@ public class DocumentUpdates {
     @JsonProperty("schemes[]")
     @SpeakeasyMetadata("multipartForm:name=schemes[]")
     public String schemes;
+
     public DocumentUpdates withSchemes(String schemes) {
         this.schemes = schemes;
         return this;
@@ -41,9 +43,11 @@ public class DocumentUpdates {
     @JsonProperty("source-links[]")
     @SpeakeasyMetadata("multipartForm:name=source-links[],json")
     public LinkedSourceDocument[] sourceLinks;
+
     public DocumentUpdates withSourceLinks(LinkedSourceDocument[] sourceLinks) {
         this.sourceLinks = sourceLinks;
         return this;
     }
     
+    public DocumentUpdates(){}
 }

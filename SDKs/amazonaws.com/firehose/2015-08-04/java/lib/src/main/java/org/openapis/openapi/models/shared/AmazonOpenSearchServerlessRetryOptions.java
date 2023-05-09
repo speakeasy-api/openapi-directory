@@ -15,9 +15,11 @@ public class AmazonOpenSearchServerlessRetryOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationInSeconds")
     public Long durationInSeconds;
+
     public AmazonOpenSearchServerlessRetryOptions withDurationInSeconds(Long durationInSeconds) {
         this.durationInSeconds = durationInSeconds;
         return this;
     }
     
+    public AmazonOpenSearchServerlessRetryOptions(){}
 }

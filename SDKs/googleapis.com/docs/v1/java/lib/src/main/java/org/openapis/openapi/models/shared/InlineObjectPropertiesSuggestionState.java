@@ -18,9 +18,11 @@ public class InlineObjectPropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObjectSuggestionState")
     public EmbeddedObjectSuggestionState embeddedObjectSuggestionState;
+
     public InlineObjectPropertiesSuggestionState withEmbeddedObjectSuggestionState(EmbeddedObjectSuggestionState embeddedObjectSuggestionState) {
         this.embeddedObjectSuggestionState = embeddedObjectSuggestionState;
         return this;
     }
     
+    public InlineObjectPropertiesSuggestionState(){}
 }

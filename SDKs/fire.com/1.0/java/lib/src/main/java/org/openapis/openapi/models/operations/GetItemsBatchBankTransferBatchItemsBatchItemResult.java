@@ -15,6 +15,7 @@ public class GetItemsBatchBankTransferBatchItemsBatchItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public GetItemsBatchBankTransferBatchItemsBatchItemResult withCode(Long code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class GetItemsBatchBankTransferBatchItemsBatchItemResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetItemsBatchBankTransferBatchItemsBatchItemResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public GetItemsBatchBankTransferBatchItemsBatchItemResult(){}
 }

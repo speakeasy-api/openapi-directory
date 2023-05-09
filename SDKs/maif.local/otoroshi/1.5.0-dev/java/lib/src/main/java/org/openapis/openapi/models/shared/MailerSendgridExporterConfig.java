@@ -18,6 +18,7 @@ public class MailerSendgridExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyPublic")
     public String apiKeyPublic;
+
     public MailerSendgridExporterConfig withApiKeyPublic(String apiKeyPublic) {
         this.apiKeyPublic = apiKeyPublic;
         return this;
@@ -29,6 +30,7 @@ public class MailerSendgridExporterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("to")
     public String[] to;
+
     public MailerSendgridExporterConfig withTo(String[] to) {
         this.to = to;
         return this;
@@ -39,9 +41,13 @@ public class MailerSendgridExporterConfig {
      */
     @JsonProperty("type")
     public MailerSendgridExporterConfigTypeEnum type;
+
     public MailerSendgridExporterConfig withType(MailerSendgridExporterConfigTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public MailerSendgridExporterConfig(@JsonProperty("type") MailerSendgridExporterConfigTypeEnum type) {
+        this.type = type;
+  }
 }

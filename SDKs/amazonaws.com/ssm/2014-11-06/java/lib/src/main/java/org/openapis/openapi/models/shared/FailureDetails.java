@@ -15,6 +15,7 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Details")
     public java.util.Map<String, String[]> details;
+
     public FailureDetails withDetails(java.util.Map<String, String[]> details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureStage")
     public String failureStage;
+
     public FailureDetails withFailureStage(String failureStage) {
         this.failureStage = failureStage;
         return this;
@@ -31,9 +33,11 @@ public class FailureDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureType")
     public String failureType;
+
     public FailureDetails withFailureType(String failureType) {
         this.failureType = failureType;
         return this;
     }
     
+    public FailureDetails(){}
 }

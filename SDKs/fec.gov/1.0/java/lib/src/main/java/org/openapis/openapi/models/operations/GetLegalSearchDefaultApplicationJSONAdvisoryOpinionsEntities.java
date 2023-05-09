@@ -12,6 +12,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities withRole(String role) {
         this.role = role;
         return this;
@@ -28,9 +30,11 @@ public class GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdvisoryOpinionsEntities(){}
 }

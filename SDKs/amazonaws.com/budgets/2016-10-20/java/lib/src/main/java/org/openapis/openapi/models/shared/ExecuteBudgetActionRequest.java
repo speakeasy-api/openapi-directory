@@ -12,6 +12,7 @@ public class ExecuteBudgetActionRequest {
      */
     @JsonProperty("AccountId")
     public String accountId;
+
     public ExecuteBudgetActionRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class ExecuteBudgetActionRequest {
     
     @JsonProperty("ActionId")
     public String actionId;
+
     public ExecuteBudgetActionRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -29,6 +31,7 @@ public class ExecuteBudgetActionRequest {
      */
     @JsonProperty("BudgetName")
     public String budgetName;
+
     public ExecuteBudgetActionRequest withBudgetName(String budgetName) {
         this.budgetName = budgetName;
         return this;
@@ -36,9 +39,16 @@ public class ExecuteBudgetActionRequest {
     
     @JsonProperty("ExecutionType")
     public ExecutionTypeEnum executionType;
+
     public ExecuteBudgetActionRequest withExecutionType(ExecutionTypeEnum executionType) {
         this.executionType = executionType;
         return this;
     }
     
+    public ExecuteBudgetActionRequest(@JsonProperty("AccountId") String accountId, @JsonProperty("ActionId") String actionId, @JsonProperty("BudgetName") String budgetName, @JsonProperty("ExecutionType") ExecutionTypeEnum executionType) {
+        this.accountId = accountId;
+        this.actionId = actionId;
+        this.budgetName = budgetName;
+        this.executionType = executionType;
+  }
 }

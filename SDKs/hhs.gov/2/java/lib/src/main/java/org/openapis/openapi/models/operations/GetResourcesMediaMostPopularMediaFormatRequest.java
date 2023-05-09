@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetResourcesMediaMostPopularMediaFormatRequest {
@@ -12,6 +13,7 @@ public class GetResourcesMediaMostPopularMediaFormatRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public String format;
+
     public GetResourcesMediaMostPopularMediaFormatRequest withFormat(String format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class GetResourcesMediaMostPopularMediaFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=max")
     public Integer max;
+
     public GetResourcesMediaMostPopularMediaFormatRequest withMax(Integer max) {
         this.max = max;
         return this;
@@ -32,9 +35,13 @@ public class GetResourcesMediaMostPopularMediaFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=offset")
     public Integer offset;
+
     public GetResourcesMediaMostPopularMediaFormatRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetResourcesMediaMostPopularMediaFormatRequest(@JsonProperty("format") String format) {
+        this.format = format;
+  }
 }

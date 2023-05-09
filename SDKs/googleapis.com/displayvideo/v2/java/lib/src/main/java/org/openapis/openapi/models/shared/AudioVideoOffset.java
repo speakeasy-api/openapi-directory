@@ -18,6 +18,7 @@ public class AudioVideoOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public String percentage;
+
     public AudioVideoOffset withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -29,9 +30,11 @@ public class AudioVideoOffset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seconds")
     public String seconds;
+
     public AudioVideoOffset withSeconds(String seconds) {
         this.seconds = seconds;
         return this;
     }
     
+    public AudioVideoOffset(){}
 }

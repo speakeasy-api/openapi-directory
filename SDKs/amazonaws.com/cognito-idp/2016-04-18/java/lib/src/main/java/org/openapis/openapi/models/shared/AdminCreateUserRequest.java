@@ -15,6 +15,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientMetadata")
     public java.util.Map<String, String> clientMetadata;
+
     public AdminCreateUserRequest withClientMetadata(java.util.Map<String, String> clientMetadata) {
         this.clientMetadata = clientMetadata;
         return this;
@@ -23,6 +24,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DesiredDeliveryMediums")
     public DeliveryMediumTypeEnum[] desiredDeliveryMediums;
+
     public AdminCreateUserRequest withDesiredDeliveryMediums(DeliveryMediumTypeEnum[] desiredDeliveryMediums) {
         this.desiredDeliveryMediums = desiredDeliveryMediums;
         return this;
@@ -31,6 +33,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ForceAliasCreation")
     public Boolean forceAliasCreation;
+
     public AdminCreateUserRequest withForceAliasCreation(Boolean forceAliasCreation) {
         this.forceAliasCreation = forceAliasCreation;
         return this;
@@ -39,6 +42,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageAction")
     public MessageActionTypeEnum messageAction;
+
     public AdminCreateUserRequest withMessageAction(MessageActionTypeEnum messageAction) {
         this.messageAction = messageAction;
         return this;
@@ -47,6 +51,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemporaryPassword")
     public String temporaryPassword;
+
     public AdminCreateUserRequest withTemporaryPassword(String temporaryPassword) {
         this.temporaryPassword = temporaryPassword;
         return this;
@@ -55,6 +60,7 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserAttributes")
     public AttributeType[] userAttributes;
+
     public AdminCreateUserRequest withUserAttributes(AttributeType[] userAttributes) {
         this.userAttributes = userAttributes;
         return this;
@@ -62,6 +68,7 @@ public class AdminCreateUserRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminCreateUserRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -69,6 +76,7 @@ public class AdminCreateUserRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminCreateUserRequest withUsername(String username) {
         this.username = username;
         return this;
@@ -77,9 +85,14 @@ public class AdminCreateUserRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationData")
     public AttributeType[] validationData;
+
     public AdminCreateUserRequest withValidationData(AttributeType[] validationData) {
         this.validationData = validationData;
         return this;
     }
     
+    public AdminCreateUserRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

@@ -15,9 +15,13 @@ public class GenerateHmacKeyResponse {
      */
     @JsonProperty("hmacKey")
     public String hmacKey;
+
     public GenerateHmacKeyResponse withHmacKey(String hmacKey) {
         this.hmacKey = hmacKey;
         return this;
     }
     
+    public GenerateHmacKeyResponse(@JsonProperty("hmacKey") String hmacKey) {
+        this.hmacKey = hmacKey;
+  }
 }

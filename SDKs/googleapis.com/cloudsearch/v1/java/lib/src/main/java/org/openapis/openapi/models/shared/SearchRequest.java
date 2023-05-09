@@ -18,6 +18,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contextAttributes")
     public ContextAttribute[] contextAttributes;
+
     public SearchRequest withContextAttributes(ContextAttribute[] contextAttributes) {
         this.contextAttributes = contextAttributes;
         return this;
@@ -29,6 +30,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataSourceRestrictions")
     public DataSourceRestriction[] dataSourceRestrictions;
+
     public SearchRequest withDataSourceRestrictions(DataSourceRestriction[] dataSourceRestrictions) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         return this;
@@ -37,6 +39,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facetOptions")
     public FacetOptions[] facetOptions;
+
     public SearchRequest withFacetOptions(FacetOptions[] facetOptions) {
         this.facetOptions = facetOptions;
         return this;
@@ -48,6 +51,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public SearchRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -59,6 +63,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SearchRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -70,6 +75,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryInterpretationOptions")
     public QueryInterpretationOptions queryInterpretationOptions;
+
     public SearchRequest withQueryInterpretationOptions(QueryInterpretationOptions queryInterpretationOptions) {
         this.queryInterpretationOptions = queryInterpretationOptions;
         return this;
@@ -81,6 +87,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestOptions")
     public RequestOptions requestOptions;
+
     public SearchRequest withRequestOptions(RequestOptions requestOptions) {
         this.requestOptions = requestOptions;
         return this;
@@ -89,6 +96,7 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOptions")
     public SortOptions sortOptions;
+
     public SearchRequest withSortOptions(SortOptions sortOptions) {
         this.sortOptions = sortOptions;
         return this;
@@ -100,9 +108,11 @@ public class SearchRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Integer start;
+
     public SearchRequest withStart(Integer start) {
         this.start = start;
         return this;
     }
     
+    public SearchRequest(){}
 }

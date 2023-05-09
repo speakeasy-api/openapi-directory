@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CaseEventIncludedData {
     @JsonProperty("fields")
     public FieldIdentifier[] fields;
+
     public CaseEventIncludedData withFields(FieldIdentifier[] fields) {
         this.fields = fields;
         return this;
     }
     
+    public CaseEventIncludedData(@JsonProperty("fields") FieldIdentifier[] fields) {
+        this.fields = fields;
+  }
 }

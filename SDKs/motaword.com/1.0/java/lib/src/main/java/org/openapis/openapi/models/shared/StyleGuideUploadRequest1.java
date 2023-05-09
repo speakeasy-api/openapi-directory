@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StyleGuideUploadRequest1 {
@@ -12,9 +13,13 @@ public class StyleGuideUploadRequest1 {
      */
     @SpeakeasyMetadata("multipartForm:file")
     public StyleGuideUploadRequestStyleguides styleguides;
+
     public StyleGuideUploadRequest1 withStyleguides(StyleGuideUploadRequestStyleguides styleguides) {
         this.styleguides = styleguides;
         return this;
     }
     
+    public StyleGuideUploadRequest1(@JsonProperty("styleguides") StyleGuideUploadRequestStyleguides styleguides) {
+        this.styleguides = styleguides;
+  }
 }

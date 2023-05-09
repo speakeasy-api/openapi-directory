@@ -15,6 +15,7 @@ public class ImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delimitedTextOptions")
     public DelimitedTextImportOptions delimitedTextOptions;
+
     public ImportOptions withDelimitedTextOptions(DelimitedTextImportOptions delimitedTextOptions) {
         this.delimitedTextOptions = delimitedTextOptions;
         return this;
@@ -23,9 +24,11 @@ public class ImportOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationOptions")
     public DestinationOptions destinationOptions;
+
     public ImportOptions withDestinationOptions(DestinationOptions destinationOptions) {
         this.destinationOptions = destinationOptions;
         return this;
     }
     
+    public ImportOptions(){}
 }

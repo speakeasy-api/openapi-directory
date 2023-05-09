@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAliasRequest {
     @JsonProperty("Alias")
     public String alias;
+
     public CreateAliasRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -16,6 +17,7 @@ public class CreateAliasRequest {
     
     @JsonProperty("EntityId")
     public String entityId;
+
     public CreateAliasRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -23,9 +25,15 @@ public class CreateAliasRequest {
     
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public CreateAliasRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public CreateAliasRequest(@JsonProperty("Alias") String alias, @JsonProperty("EntityId") String entityId, @JsonProperty("OrganizationId") String organizationId) {
+        this.alias = alias;
+        this.entityId = entityId;
+        this.organizationId = organizationId;
+  }
 }

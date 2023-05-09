@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaConditionTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudRetailV2alphaConditionTimeRange withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudRetailV2alphaConditionTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudRetailV2alphaConditionTimeRange withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaConditionTimeRange(){}
 }

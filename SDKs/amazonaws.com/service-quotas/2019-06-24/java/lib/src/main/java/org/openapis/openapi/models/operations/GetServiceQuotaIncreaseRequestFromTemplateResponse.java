@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
@@ -12,6 +13,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object awsServiceAccessNotEnabledException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withAWSServiceAccessNotEnabledException(Object awsServiceAccessNotEnabledException) {
         this.awsServiceAccessNotEnabledException = awsServiceAccessNotEnabledException;
         return this;
@@ -22,6 +24,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -29,6 +32,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
     
     
     public String contentType;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object dependencyAccessDeniedException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withDependencyAccessDeniedException(Object dependencyAccessDeniedException) {
         this.dependencyAccessDeniedException = dependencyAccessDeniedException;
         return this;
@@ -49,6 +54,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.GetServiceQuotaIncreaseRequestFromTemplateResponse getServiceQuotaIncreaseRequestFromTemplateResponse;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withGetServiceQuotaIncreaseRequestFromTemplateResponse(org.openapis.openapi.models.shared.GetServiceQuotaIncreaseRequestFromTemplateResponse getServiceQuotaIncreaseRequestFromTemplateResponse) {
         this.getServiceQuotaIncreaseRequestFromTemplateResponse = getServiceQuotaIncreaseRequestFromTemplateResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object illegalArgumentException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withIllegalArgumentException(Object illegalArgumentException) {
         this.illegalArgumentException = illegalArgumentException;
         return this;
@@ -69,6 +76,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object noAvailableOrganizationException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withNoAvailableOrganizationException(Object noAvailableOrganizationException) {
         this.noAvailableOrganizationException = noAvailableOrganizationException;
         return this;
@@ -79,6 +87,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object noSuchResourceException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withNoSuchResourceException(Object noSuchResourceException) {
         this.noSuchResourceException = noSuchResourceException;
         return this;
@@ -86,6 +95,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object serviceException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -113,6 +125,7 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object templatesNotAvailableInRegionException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withTemplatesNotAvailableInRegionException(Object templatesNotAvailableInRegionException) {
         this.templatesNotAvailableInRegionException = templatesNotAvailableInRegionException;
         return this;
@@ -123,9 +136,14 @@ public class GetServiceQuotaIncreaseRequestFromTemplateResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetServiceQuotaIncreaseRequestFromTemplateResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetServiceQuotaIncreaseRequestFromTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

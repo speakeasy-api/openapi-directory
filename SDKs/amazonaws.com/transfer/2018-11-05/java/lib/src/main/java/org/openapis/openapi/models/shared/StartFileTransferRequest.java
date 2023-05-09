@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartFileTransferRequest {
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public StartFileTransferRequest withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
@@ -16,9 +17,14 @@ public class StartFileTransferRequest {
     
     @JsonProperty("SendFilePaths")
     public String[] sendFilePaths;
+
     public StartFileTransferRequest withSendFilePaths(String[] sendFilePaths) {
         this.sendFilePaths = sendFilePaths;
         return this;
     }
     
+    public StartFileTransferRequest(@JsonProperty("ConnectorId") String connectorId, @JsonProperty("SendFilePaths") String[] sendFilePaths) {
+        this.connectorId = connectorId;
+        this.sendFilePaths = sendFilePaths;
+  }
 }

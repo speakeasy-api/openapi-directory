@@ -15,6 +15,7 @@ public class RescoreResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentId")
     public String documentId;
+
     public RescoreResultItem withDocumentId(String documentId) {
         this.documentId = documentId;
         return this;
@@ -23,9 +24,11 @@ public class RescoreResultItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public RescoreResultItem withScore(Float score) {
         this.score = score;
         return this;
     }
     
+    public RescoreResultItem(){}
 }

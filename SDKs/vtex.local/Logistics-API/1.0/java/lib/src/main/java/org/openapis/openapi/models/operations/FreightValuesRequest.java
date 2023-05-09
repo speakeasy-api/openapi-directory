@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FreightValuesRequest {
@@ -12,6 +13,7 @@ public class FreightValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public FreightValuesRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class FreightValuesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public FreightValuesRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class FreightValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=carrierId")
     public String carrierId;
+
     public FreightValuesRequest withCarrierId(String carrierId) {
         this.carrierId = carrierId;
         return this;
@@ -42,9 +46,16 @@ public class FreightValuesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cep")
     public String cep;
+
     public FreightValuesRequest withCep(String cep) {
         this.cep = cep;
         return this;
     }
     
+    public FreightValuesRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("carrierId") String carrierId, @JsonProperty("cep") String cep) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.carrierId = carrierId;
+        this.cep = cep;
+  }
 }

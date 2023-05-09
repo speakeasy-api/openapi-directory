@@ -20,6 +20,7 @@ public class Fragment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentLengthInMilliseconds")
     public Long fragmentLengthInMilliseconds;
+
     public Fragment withFragmentLengthInMilliseconds(Long fragmentLengthInMilliseconds) {
         this.fragmentLengthInMilliseconds = fragmentLengthInMilliseconds;
         return this;
@@ -28,6 +29,7 @@ public class Fragment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentNumber")
     public String fragmentNumber;
+
     public Fragment withFragmentNumber(String fragmentNumber) {
         this.fragmentNumber = fragmentNumber;
         return this;
@@ -36,6 +38,7 @@ public class Fragment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FragmentSizeInBytes")
     public Long fragmentSizeInBytes;
+
     public Fragment withFragmentSizeInBytes(Long fragmentSizeInBytes) {
         this.fragmentSizeInBytes = fragmentSizeInBytes;
         return this;
@@ -46,6 +49,7 @@ public class Fragment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ProducerTimestamp")
     public OffsetDateTime producerTimestamp;
+
     public Fragment withProducerTimestamp(OffsetDateTime producerTimestamp) {
         this.producerTimestamp = producerTimestamp;
         return this;
@@ -56,9 +60,11 @@ public class Fragment {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ServerTimestamp")
     public OffsetDateTime serverTimestamp;
+
     public Fragment withServerTimestamp(OffsetDateTime serverTimestamp) {
         this.serverTimestamp = serverTimestamp;
         return this;
     }
     
+    public Fragment(){}
 }

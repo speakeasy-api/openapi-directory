@@ -12,6 +12,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulativeDistance")
     public Integer cumulativeDistance;
+
     public TflApiPresentationEntitiesInstructionStep withCumulativeDistance(Integer cumulativeDistance) {
         this.cumulativeDistance = cumulativeDistance;
         return this;
@@ -20,6 +21,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cumulativeTravelTime")
     public Integer cumulativeTravelTime;
+
     public TflApiPresentationEntitiesInstructionStep withCumulativeTravelTime(Integer cumulativeTravelTime) {
         this.cumulativeTravelTime = cumulativeTravelTime;
         return this;
@@ -28,6 +30,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TflApiPresentationEntitiesInstructionStep withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("descriptionHeading")
     public String descriptionHeading;
+
     public TflApiPresentationEntitiesInstructionStep withDescriptionHeading(String descriptionHeading) {
         this.descriptionHeading = descriptionHeading;
         return this;
@@ -44,6 +48,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Integer distance;
+
     public TflApiPresentationEntitiesInstructionStep withDistance(Integer distance) {
         this.distance = distance;
         return this;
@@ -52,6 +57,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public Double latitude;
+
     public TflApiPresentationEntitiesInstructionStep withLatitude(Double latitude) {
         this.latitude = latitude;
         return this;
@@ -60,6 +66,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public Double longitude;
+
     public TflApiPresentationEntitiesInstructionStep withLongitude(Double longitude) {
         this.longitude = longitude;
         return this;
@@ -68,6 +75,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathAttribute")
     public TflApiPresentationEntitiesPathAttribute pathAttribute;
+
     public TflApiPresentationEntitiesInstructionStep withPathAttribute(TflApiPresentationEntitiesPathAttribute pathAttribute) {
         this.pathAttribute = pathAttribute;
         return this;
@@ -76,6 +84,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skyDirection")
     public Integer skyDirection;
+
     public TflApiPresentationEntitiesInstructionStep withSkyDirection(Integer skyDirection) {
         this.skyDirection = skyDirection;
         return this;
@@ -84,6 +93,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skyDirectionDescription")
     public TflApiPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum skyDirectionDescription;
+
     public TflApiPresentationEntitiesInstructionStep withSkyDirectionDescription(TflApiPresentationEntitiesInstructionStepSkyDirectionDescriptionEnum skyDirectionDescription) {
         this.skyDirectionDescription = skyDirectionDescription;
         return this;
@@ -92,6 +102,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streetName")
     public String streetName;
+
     public TflApiPresentationEntitiesInstructionStep withStreetName(String streetName) {
         this.streetName = streetName;
         return this;
@@ -100,6 +111,7 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackType")
     public TflApiPresentationEntitiesInstructionStepTrackTypeEnum trackType;
+
     public TflApiPresentationEntitiesInstructionStep withTrackType(TflApiPresentationEntitiesInstructionStepTrackTypeEnum trackType) {
         this.trackType = trackType;
         return this;
@@ -108,9 +120,11 @@ public class TflApiPresentationEntitiesInstructionStep {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("turnDirection")
     public String turnDirection;
+
     public TflApiPresentationEntitiesInstructionStep withTurnDirection(String turnDirection) {
         this.turnDirection = turnDirection;
         return this;
     }
     
+    public TflApiPresentationEntitiesInstructionStep(){}
 }

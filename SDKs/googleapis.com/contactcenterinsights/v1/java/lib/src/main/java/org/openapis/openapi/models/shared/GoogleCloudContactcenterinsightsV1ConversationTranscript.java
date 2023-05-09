@@ -18,9 +18,11 @@ public class GoogleCloudContactcenterinsightsV1ConversationTranscript {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transcriptSegments")
     public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment[] transcriptSegments;
+
     public GoogleCloudContactcenterinsightsV1ConversationTranscript withTranscriptSegments(GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment[] transcriptSegments) {
         this.transcriptSegments = transcriptSegments;
         return this;
     }
     
+    public GoogleCloudContactcenterinsightsV1ConversationTranscript(){}
 }

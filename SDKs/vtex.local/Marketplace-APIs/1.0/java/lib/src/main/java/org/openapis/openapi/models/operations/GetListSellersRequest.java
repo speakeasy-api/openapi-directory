@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetListSellersRequest {
@@ -12,6 +13,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetListSellersRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetListSellersRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetListSellersRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public GetListSellersRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -52,6 +57,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=from")
     public Double from;
+
     public GetListSellersRequest withFrom(Double from) {
         this.from = from;
         return this;
@@ -62,6 +68,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group ")
     public String group;
+
     public GetListSellersRequest withGroup(String group) {
         this.group = group;
         return this;
@@ -72,6 +79,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=integration")
     public String integration;
+
     public GetListSellersRequest withIntegration(String integration) {
         this.integration = integration;
         return this;
@@ -82,6 +90,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isActive")
     public Boolean isActive;
+
     public GetListSellersRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -92,6 +101,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isBetterScope")
     public Boolean isBetterScope;
+
     public GetListSellersRequest withIsBetterScope(Boolean isBetterScope) {
         this.isBetterScope = isBetterScope;
         return this;
@@ -102,6 +112,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=isVtex")
     public Boolean isVtex;
+
     public GetListSellersRequest withIsVtex(Boolean isVtex) {
         this.isVtex = isVtex;
         return this;
@@ -112,6 +123,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyword")
     public String keyword;
+
     public GetListSellersRequest withKeyword(String keyword) {
         this.keyword = keyword;
         return this;
@@ -122,6 +134,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sc")
     public String sc;
+
     public GetListSellersRequest withSc(String sc) {
         this.sc = sc;
         return this;
@@ -132,6 +145,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sellerType")
     public Long sellerType;
+
     public GetListSellersRequest withSellerType(Long sellerType) {
         this.sellerType = sellerType;
         return this;
@@ -142,6 +156,7 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetListSellersRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -152,9 +167,16 @@ public class GetListSellersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=to")
     public Double to;
+
     public GetListSellersRequest withTo(Double to) {
         this.to = to;
         return this;
     }
     
+    public GetListSellersRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+  }
 }

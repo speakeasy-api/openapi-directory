@@ -18,6 +18,7 @@ public class LinkedInterconnectAttachments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteToSiteDataTransfer")
     public Boolean siteToSiteDataTransfer;
+
     public LinkedInterconnectAttachments withSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         return this;
@@ -29,6 +30,7 @@ public class LinkedInterconnectAttachments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uris")
     public String[] uris;
+
     public LinkedInterconnectAttachments withUris(String[] uris) {
         this.uris = uris;
         return this;
@@ -40,9 +42,11 @@ public class LinkedInterconnectAttachments {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcNetwork")
     public String vpcNetwork;
+
     public LinkedInterconnectAttachments withVpcNetwork(String vpcNetwork) {
         this.vpcNetwork = vpcNetwork;
         return this;
     }
     
+    public LinkedInterconnectAttachments(){}
 }

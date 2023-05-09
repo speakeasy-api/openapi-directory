@@ -4,11 +4,21 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class OrderApiGetInvoiceListResponse {
     
+    public byte[] body;
+
+    public OrderApiGetInvoiceListResponse withBody(byte[] body) {
+        this.body = body;
+        return this;
+    }
+    
+    
     public String contentType;
+
     public OrderApiGetInvoiceListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -18,24 +28,16 @@ public class OrderApiGetInvoiceListResponse {
      * OK
      */
     
-    public java.util.Map<String, Object> orderApiGetInvoiceList200ApplicationJSONObject;
-    public OrderApiGetInvoiceListResponse withOrderApiGetInvoiceList200ApplicationJSONObject(java.util.Map<String, Object> orderApiGetInvoiceList200ApplicationJSONObject) {
-        this.orderApiGetInvoiceList200ApplicationJSONObject = orderApiGetInvoiceList200ApplicationJSONObject;
-        return this;
-    }
-    
-    /**
-     * OK
-     */
-    
-    public java.util.Map<String, Object> orderApiGetInvoiceList200TextJSONObject;
-    public OrderApiGetInvoiceListResponse withOrderApiGetInvoiceList200TextJSONObject(java.util.Map<String, Object> orderApiGetInvoiceList200TextJSONObject) {
-        this.orderApiGetInvoiceList200TextJSONObject = orderApiGetInvoiceList200TextJSONObject;
+    public org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel;
+
+    public OrderApiGetInvoiceListResponse withRechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel(org.openapis.openapi.models.shared.RechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel) {
+        this.rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel = rechnungsdruckWebAppControllersAPIAPIPagedResultSystemCollectionsGenericListBillbeeInterfacesBillbeeAPIModelInvoiceAPIModel;
         return this;
     }
     
     
     public Integer statusCode;
+
     public OrderApiGetInvoiceListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +45,14 @@ public class OrderApiGetInvoiceListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public OrderApiGetInvoiceListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public OrderApiGetInvoiceListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

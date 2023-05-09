@@ -15,6 +15,7 @@ public class PostServersCreateServerResponseServerProtection {
      */
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostServersCreateServerResponseServerProtection withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -25,9 +26,14 @@ public class PostServersCreateServerResponseServerProtection {
      */
     @JsonProperty("rebuild")
     public Boolean rebuild;
+
     public PostServersCreateServerResponseServerProtection withRebuild(Boolean rebuild) {
         this.rebuild = rebuild;
         return this;
     }
     
+    public PostServersCreateServerResponseServerProtection(@JsonProperty("delete") Boolean delete, @JsonProperty("rebuild") Boolean rebuild) {
+        this.delete = delete;
+        this.rebuild = rebuild;
+  }
 }

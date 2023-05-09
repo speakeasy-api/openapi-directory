@@ -16,6 +16,7 @@ public class CreateVirtualRouterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateVirtualRouterRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class CreateVirtualRouterRequestBody {
      */
     @JsonProperty("spec")
     public CreateVirtualRouterRequestBodySpec spec;
+
     public CreateVirtualRouterRequestBody withSpec(CreateVirtualRouterRequestBodySpec spec) {
         this.spec = spec;
         return this;
@@ -36,9 +38,14 @@ public class CreateVirtualRouterRequestBody {
      */
     @JsonProperty("virtualRouterName")
     public String virtualRouterName;
+
     public CreateVirtualRouterRequestBody withVirtualRouterName(String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
         return this;
     }
     
+    public CreateVirtualRouterRequestBody(@JsonProperty("spec") CreateVirtualRouterRequestBodySpec spec, @JsonProperty("virtualRouterName") String virtualRouterName) {
+        this.spec = spec;
+        this.virtualRouterName = virtualRouterName;
+  }
 }

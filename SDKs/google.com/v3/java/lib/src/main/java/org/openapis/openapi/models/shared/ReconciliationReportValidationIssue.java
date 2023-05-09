@@ -18,6 +18,7 @@ public class ReconciliationReportValidationIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ReconciliationReportValidationIssue withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class ReconciliationReportValidationIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public ReconciliationReportValidationIssue withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -40,9 +42,11 @@ public class ReconciliationReportValidationIssue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lineNum")
     public Integer lineNum;
+
     public ReconciliationReportValidationIssue withLineNum(Integer lineNum) {
         this.lineNum = lineNum;
         return this;
     }
     
+    public ReconciliationReportValidationIssue(){}
 }

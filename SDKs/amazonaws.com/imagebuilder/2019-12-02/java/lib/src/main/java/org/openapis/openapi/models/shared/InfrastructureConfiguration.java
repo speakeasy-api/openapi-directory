@@ -15,6 +15,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public InfrastructureConfiguration withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateCreated")
     public String dateCreated;
+
     public InfrastructureConfiguration withDateCreated(String dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -31,6 +33,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateUpdated")
     public String dateUpdated;
+
     public InfrastructureConfiguration withDateUpdated(String dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -39,6 +42,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public InfrastructureConfiguration withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceMetadataOptions")
     public InstanceMetadataOptions instanceMetadataOptions;
+
     public InfrastructureConfiguration withInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
         this.instanceMetadataOptions = instanceMetadataOptions;
         return this;
@@ -55,6 +60,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceProfileName")
     public String instanceProfileName;
+
     public InfrastructureConfiguration withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -63,6 +69,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceTypes")
     public String[] instanceTypes;
+
     public InfrastructureConfiguration withInstanceTypes(String[] instanceTypes) {
         this.instanceTypes = instanceTypes;
         return this;
@@ -71,6 +78,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPair")
     public String keyPair;
+
     public InfrastructureConfiguration withKeyPair(String keyPair) {
         this.keyPair = keyPair;
         return this;
@@ -79,6 +87,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logging")
     public Logging logging;
+
     public InfrastructureConfiguration withLogging(Logging logging) {
         this.logging = logging;
         return this;
@@ -87,6 +96,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public InfrastructureConfiguration withName(String name) {
         this.name = name;
         return this;
@@ -95,6 +105,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceTags")
     public java.util.Map<String, String> resourceTags;
+
     public InfrastructureConfiguration withResourceTags(java.util.Map<String, String> resourceTags) {
         this.resourceTags = resourceTags;
         return this;
@@ -103,6 +114,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public InfrastructureConfiguration withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -111,6 +123,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("snsTopicArn")
     public String snsTopicArn;
+
     public InfrastructureConfiguration withSnsTopicArn(String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
         return this;
@@ -119,6 +132,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetId")
     public String subnetId;
+
     public InfrastructureConfiguration withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -127,6 +141,7 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public InfrastructureConfiguration withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -135,9 +150,11 @@ public class InfrastructureConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminateInstanceOnFailure")
     public Boolean terminateInstanceOnFailure;
+
     public InfrastructureConfiguration withTerminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
         this.terminateInstanceOnFailure = terminateInstanceOnFailure;
         return this;
     }
     
+    public InfrastructureConfiguration(){}
 }

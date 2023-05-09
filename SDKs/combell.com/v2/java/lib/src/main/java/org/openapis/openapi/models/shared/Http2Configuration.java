@@ -15,9 +15,11 @@ public class Http2Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public Http2Configuration withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public Http2Configuration(){}
 }

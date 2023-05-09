@@ -18,6 +18,7 @@ public class ApkBinary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha1")
     public String sha1;
+
     public ApkBinary withSha1(String sha1) {
         this.sha1 = sha1;
         return this;
@@ -29,9 +30,11 @@ public class ApkBinary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha256")
     public String sha256;
+
     public ApkBinary withSha256(String sha256) {
         this.sha256 = sha256;
         return this;
     }
     
+    public ApkBinary(){}
 }

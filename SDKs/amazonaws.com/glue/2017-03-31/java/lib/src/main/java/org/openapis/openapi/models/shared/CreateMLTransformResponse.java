@@ -15,9 +15,11 @@ public class CreateMLTransformResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransformId")
     public String transformId;
+
     public CreateMLTransformResponse withTransformId(String transformId) {
         this.transformId = transformId;
         return this;
     }
     
+    public CreateMLTransformResponse(){}
 }

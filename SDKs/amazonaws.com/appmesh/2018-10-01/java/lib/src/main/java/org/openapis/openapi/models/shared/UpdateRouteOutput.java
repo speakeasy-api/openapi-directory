@@ -15,9 +15,11 @@ public class UpdateRouteOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public RouteData route;
+
     public UpdateRouteOutput withRoute(RouteData route) {
         this.route = route;
         return this;
     }
     
+    public UpdateRouteOutput(){}
 }

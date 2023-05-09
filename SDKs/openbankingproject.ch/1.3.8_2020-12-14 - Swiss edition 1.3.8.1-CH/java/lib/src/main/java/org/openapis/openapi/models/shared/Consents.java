@@ -19,6 +19,7 @@ public class Consents {
      */
     @JsonProperty("access")
     public AccountAccess access;
+
     public Consents withAccess(AccountAccess access) {
         this.access = access;
         return this;
@@ -30,6 +31,7 @@ public class Consents {
      */
     @JsonProperty("combinedServiceIndicator")
     public Boolean combinedServiceIndicator;
+
     public Consents withCombinedServiceIndicator(Boolean combinedServiceIndicator) {
         this.combinedServiceIndicator = combinedServiceIndicator;
         return this;
@@ -46,6 +48,7 @@ public class Consents {
      */
     @JsonProperty("frequencyPerDay")
     public Long frequencyPerDay;
+
     public Consents withFrequencyPerDay(Long frequencyPerDay) {
         this.frequencyPerDay = frequencyPerDay;
         return this;
@@ -59,6 +62,7 @@ public class Consents {
      */
     @JsonProperty("recurringIndicator")
     public Boolean recurringIndicator;
+
     public Consents withRecurringIndicator(Boolean recurringIndicator) {
         this.recurringIndicator = recurringIndicator;
         return this;
@@ -78,9 +82,17 @@ public class Consents {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("validUntil")
     public LocalDate validUntil;
+
     public Consents withValidUntil(LocalDate validUntil) {
         this.validUntil = validUntil;
         return this;
     }
     
+    public Consents(@JsonProperty("access") AccountAccess access, @JsonProperty("combinedServiceIndicator") Boolean combinedServiceIndicator, @JsonProperty("frequencyPerDay") Long frequencyPerDay, @JsonProperty("recurringIndicator") Boolean recurringIndicator, @JsonProperty("validUntil") LocalDate validUntil) {
+        this.access = access;
+        this.combinedServiceIndicator = combinedServiceIndicator;
+        this.frequencyPerDay = frequencyPerDay;
+        this.recurringIndicator = recurringIndicator;
+        this.validUntil = validUntil;
+  }
 }

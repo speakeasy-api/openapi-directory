@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRebuildEnvironmentRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRebuildEnvironmentActionEnum action;
+
     public GETRebuildEnvironmentRequest withAction(GETRebuildEnvironmentActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRebuildEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentId")
     public String environmentId;
+
     public GETRebuildEnvironmentRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -29,6 +32,7 @@ public class GETRebuildEnvironmentRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EnvironmentName")
     public String environmentName;
+
     public GETRebuildEnvironmentRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -36,6 +40,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRebuildEnvironmentVersionEnum version;
+
     public GETRebuildEnvironmentRequest withVersion(GETRebuildEnvironmentVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRebuildEnvironmentRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRebuildEnvironmentRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRebuildEnvironmentRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRebuildEnvironmentRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRebuildEnvironmentRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRebuildEnvironmentRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,14 @@ public class GETRebuildEnvironmentRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRebuildEnvironmentRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRebuildEnvironmentRequest(@JsonProperty("Action") GETRebuildEnvironmentActionEnum action, @JsonProperty("Version") GETRebuildEnvironmentVersionEnum version) {
+        this.action = action;
+        this.version = version;
+  }
 }

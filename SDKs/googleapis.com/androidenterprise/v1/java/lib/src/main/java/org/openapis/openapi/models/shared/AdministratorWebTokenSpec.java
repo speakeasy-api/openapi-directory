@@ -15,6 +15,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedConfigurations")
     public AdministratorWebTokenSpecManagedConfigurations managedConfigurations;
+
     public AdministratorWebTokenSpec withManagedConfigurations(AdministratorWebTokenSpecManagedConfigurations managedConfigurations) {
         this.managedConfigurations = managedConfigurations;
         return this;
@@ -26,6 +27,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parent")
     public String parent;
+
     public AdministratorWebTokenSpec withParent(String parent) {
         this.parent = parent;
         return this;
@@ -37,6 +39,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permission")
     public AdministratorWebTokenSpecPermissionEnum[] permission;
+
     public AdministratorWebTokenSpec withPermission(AdministratorWebTokenSpecPermissionEnum[] permission) {
         this.permission = permission;
         return this;
@@ -45,6 +48,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playSearch")
     public AdministratorWebTokenSpecPlaySearch playSearch;
+
     public AdministratorWebTokenSpec withPlaySearch(AdministratorWebTokenSpecPlaySearch playSearch) {
         this.playSearch = playSearch;
         return this;
@@ -53,6 +57,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("privateApps")
     public AdministratorWebTokenSpecPrivateApps privateApps;
+
     public AdministratorWebTokenSpec withPrivateApps(AdministratorWebTokenSpecPrivateApps privateApps) {
         this.privateApps = privateApps;
         return this;
@@ -61,6 +66,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeBuilder")
     public AdministratorWebTokenSpecStoreBuilder storeBuilder;
+
     public AdministratorWebTokenSpec withStoreBuilder(AdministratorWebTokenSpecStoreBuilder storeBuilder) {
         this.storeBuilder = storeBuilder;
         return this;
@@ -69,6 +75,7 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webApps")
     public AdministratorWebTokenSpecWebApps webApps;
+
     public AdministratorWebTokenSpec withWebApps(AdministratorWebTokenSpecWebApps webApps) {
         this.webApps = webApps;
         return this;
@@ -77,9 +84,11 @@ public class AdministratorWebTokenSpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("zeroTouch")
     public AdministratorWebTokenSpecZeroTouch zeroTouch;
+
     public AdministratorWebTokenSpec withZeroTouch(AdministratorWebTokenSpecZeroTouch zeroTouch) {
         this.zeroTouch = zeroTouch;
         return this;
     }
     
+    public AdministratorWebTokenSpec(){}
 }

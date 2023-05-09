@@ -15,6 +15,7 @@ public class GetInstanceSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSnapshots")
     public InstanceSnapshot[] instanceSnapshots;
+
     public GetInstanceSnapshotsResult withInstanceSnapshots(InstanceSnapshot[] instanceSnapshots) {
         this.instanceSnapshots = instanceSnapshots;
         return this;
@@ -23,9 +24,11 @@ public class GetInstanceSnapshotsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetInstanceSnapshotsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetInstanceSnapshotsResult(){}
 }

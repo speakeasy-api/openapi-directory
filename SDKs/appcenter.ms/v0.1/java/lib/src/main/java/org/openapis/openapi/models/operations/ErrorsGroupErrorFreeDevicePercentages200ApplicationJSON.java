@@ -18,6 +18,7 @@ public class ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averagePercentage")
     public Double averagePercentage;
+
     public ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON withAveragePercentage(Double averagePercentage) {
         this.averagePercentage = averagePercentage;
         return this;
@@ -29,9 +30,11 @@ public class ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dailyPercentages")
     public ErrorsGroupErrorFreeDevicePercentages200ApplicationJSONDailyPercentages[] dailyPercentages;
+
     public ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON withDailyPercentages(ErrorsGroupErrorFreeDevicePercentages200ApplicationJSONDailyPercentages[] dailyPercentages) {
         this.dailyPercentages = dailyPercentages;
         return this;
     }
     
+    public ErrorsGroupErrorFreeDevicePercentages200ApplicationJSON(){}
 }

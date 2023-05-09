@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     public Boolean enableAcceleration;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withEnableAcceleration(Boolean enableAcceleration) {
         this.enableAcceleration = enableAcceleration;
         return this;
@@ -19,6 +20,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String localIpv4NetworkCidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withLocalIpv4NetworkCidr(String localIpv4NetworkCidr) {
         this.localIpv4NetworkCidr = localIpv4NetworkCidr;
         return this;
@@ -26,6 +28,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String localIpv6NetworkCidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withLocalIpv6NetworkCidr(String localIpv6NetworkCidr) {
         this.localIpv6NetworkCidr = localIpv6NetworkCidr;
         return this;
@@ -33,6 +36,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String outsideIpAddressType;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withOutsideIpAddressType(String outsideIpAddressType) {
         this.outsideIpAddressType = outsideIpAddressType;
         return this;
@@ -40,6 +44,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String remoteIpv4NetworkCidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withRemoteIpv4NetworkCidr(String remoteIpv4NetworkCidr) {
         this.remoteIpv4NetworkCidr = remoteIpv4NetworkCidr;
         return this;
@@ -47,6 +52,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String remoteIpv6NetworkCidr;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withRemoteIpv6NetworkCidr(String remoteIpv6NetworkCidr) {
         this.remoteIpv6NetworkCidr = remoteIpv6NetworkCidr;
         return this;
@@ -54,6 +60,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public Boolean staticRoutesOnly;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withStaticRoutesOnly(Boolean staticRoutesOnly) {
         this.staticRoutesOnly = staticRoutesOnly;
         return this;
@@ -61,6 +68,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public String transportTransitGatewayAttachmentId;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withTransportTransitGatewayAttachmentId(String transportTransitGatewayAttachmentId) {
         this.transportTransitGatewayAttachmentId = transportTransitGatewayAttachmentId;
         return this;
@@ -68,6 +76,7 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelInsideIpVersionEnum tunnelInsideIpVersion;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withTunnelInsideIpVersion(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelInsideIpVersionEnum tunnelInsideIpVersion) {
         this.tunnelInsideIpVersion = tunnelInsideIpVersion;
         return this;
@@ -75,9 +84,11 @@ public class ModifyVpnTunnelCertificateResultVpnConnectionOptions {
     
     
     public ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions[] tunnelOptions;
+
     public ModifyVpnTunnelCertificateResultVpnConnectionOptions withTunnelOptions(ModifyVpnTunnelCertificateResultVpnConnectionOptionsTunnelOptions[] tunnelOptions) {
         this.tunnelOptions = tunnelOptions;
         return this;
     }
     
+    public ModifyVpnTunnelCertificateResultVpnConnectionOptions(){}
 }

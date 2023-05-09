@@ -7,11 +7,12 @@ package org.openapis.openapi.models.shared;
 
 
 /**
- * DeleteVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Amazon Web Services Verified Access instance.
+ * DeleteVerifiedAccessInstanceResultVerifiedAccessInstance - The ID of the Verified Access instance.
  */
 public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     public String creationTime;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String description;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withDescription(String description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String lastUpdatedTime;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withLastUpdatedTime(String lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -33,6 +36,7 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags[] tags;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withTags(DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceTags[] tags) {
         this.tags = tags;
         return this;
@@ -40,6 +44,7 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public String verifiedAccessInstanceId;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withVerifiedAccessInstanceId(String verifiedAccessInstanceId) {
         this.verifiedAccessInstanceId = verifiedAccessInstanceId;
         return this;
@@ -47,9 +52,11 @@ public class DeleteVerifiedAccessInstanceResultVerifiedAccessInstance {
     
     
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders;
+
     public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance withVerifiedAccessTrustProviders(DeleteVerifiedAccessInstanceResultVerifiedAccessInstanceVerifiedAccessTrustProviders[] verifiedAccessTrustProviders) {
         this.verifiedAccessTrustProviders = verifiedAccessTrustProviders;
         return this;
     }
     
+    public DeleteVerifiedAccessInstanceResultVerifiedAccessInstance(){}
 }

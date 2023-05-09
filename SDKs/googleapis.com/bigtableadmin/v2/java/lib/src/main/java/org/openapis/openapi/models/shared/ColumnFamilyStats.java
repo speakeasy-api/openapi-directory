@@ -18,6 +18,7 @@ public class ColumnFamilyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageCellsPerColumn")
     public Double averageCellsPerColumn;
+
     public ColumnFamilyStats withAverageCellsPerColumn(Double averageCellsPerColumn) {
         this.averageCellsPerColumn = averageCellsPerColumn;
         return this;
@@ -29,6 +30,7 @@ public class ColumnFamilyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageColumnsPerRow")
     public Double averageColumnsPerRow;
+
     public ColumnFamilyStats withAverageColumnsPerRow(Double averageColumnsPerRow) {
         this.averageColumnsPerRow = averageColumnsPerRow;
         return this;
@@ -40,9 +42,11 @@ public class ColumnFamilyStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalDataBytes")
     public String logicalDataBytes;
+
     public ColumnFamilyStats withLogicalDataBytes(String logicalDataBytes) {
         this.logicalDataBytes = logicalDataBytes;
         return this;
     }
     
+    public ColumnFamilyStats(){}
 }

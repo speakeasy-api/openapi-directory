@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemotebuildexecutionProjectsInstancesTestNotifyResponse {
     
     public String contentType;
+
     public RemotebuildexecutionProjectsInstancesTestNotifyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemotebuildexecutionProjectsInstancesTestNotifyResponse {
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public RemotebuildexecutionProjectsInstancesTestNotifyResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class RemotebuildexecutionProjectsInstancesTestNotifyResponse {
     
     
     public Integer statusCode;
+
     public RemotebuildexecutionProjectsInstancesTestNotifyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemotebuildexecutionProjectsInstancesTestNotifyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemotebuildexecutionProjectsInstancesTestNotifyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemotebuildexecutionProjectsInstancesTestNotifyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

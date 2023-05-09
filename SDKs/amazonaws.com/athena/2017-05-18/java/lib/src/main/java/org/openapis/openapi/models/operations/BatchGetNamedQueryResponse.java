@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetNamedQueryResponse {
@@ -12,6 +13,7 @@ public class BatchGetNamedQueryResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetNamedQueryOutput batchGetNamedQueryOutput;
+
     public BatchGetNamedQueryResponse withBatchGetNamedQueryOutput(org.openapis.openapi.models.shared.BatchGetNamedQueryOutput batchGetNamedQueryOutput) {
         this.batchGetNamedQueryOutput = batchGetNamedQueryOutput;
         return this;
@@ -19,6 +21,7 @@ public class BatchGetNamedQueryResponse {
     
     
     public String contentType;
+
     public BatchGetNamedQueryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetNamedQueryResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetNamedQueryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetNamedQueryResponse {
      */
     
     public Object invalidRequestException;
+
     public BatchGetNamedQueryResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class BatchGetNamedQueryResponse {
     
     
     public Integer statusCode;
+
     public BatchGetNamedQueryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class BatchGetNamedQueryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetNamedQueryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BatchGetNamedQueryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

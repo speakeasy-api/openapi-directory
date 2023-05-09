@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTaskSetResponse {
@@ -12,6 +13,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateTaskSetResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object clientException;
+
     public CreateTaskSetResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -32,6 +35,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object clusterNotFoundException;
+
     public CreateTaskSetResponse withClusterNotFoundException(Object clusterNotFoundException) {
         this.clusterNotFoundException = clusterNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class CreateTaskSetResponse {
     
     
     public String contentType;
+
     public CreateTaskSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CreateTaskSetResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTaskSetResponse createTaskSetResponse;
+
     public CreateTaskSetResponse withCreateTaskSetResponse(org.openapis.openapi.models.shared.CreateTaskSetResponse createTaskSetResponse) {
         this.createTaskSetResponse = createTaskSetResponse;
         return this;
@@ -59,6 +65,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateTaskSetResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object namespaceNotFoundException;
+
     public CreateTaskSetResponse withNamespaceNotFoundException(Object namespaceNotFoundException) {
         this.namespaceNotFoundException = namespaceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object platformTaskDefinitionIncompatibilityException;
+
     public CreateTaskSetResponse withPlatformTaskDefinitionIncompatibilityException(Object platformTaskDefinitionIncompatibilityException) {
         this.platformTaskDefinitionIncompatibilityException = platformTaskDefinitionIncompatibilityException;
         return this;
@@ -89,6 +98,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object platformUnknownException;
+
     public CreateTaskSetResponse withPlatformUnknownException(Object platformUnknownException) {
         this.platformUnknownException = platformUnknownException;
         return this;
@@ -99,6 +109,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object serverException;
+
     public CreateTaskSetResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -109,6 +120,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object serviceNotActiveException;
+
     public CreateTaskSetResponse withServiceNotActiveException(Object serviceNotActiveException) {
         this.serviceNotActiveException = serviceNotActiveException;
         return this;
@@ -119,6 +131,7 @@ public class CreateTaskSetResponse {
      */
     
     public Object serviceNotFoundException;
+
     public CreateTaskSetResponse withServiceNotFoundException(Object serviceNotFoundException) {
         this.serviceNotFoundException = serviceNotFoundException;
         return this;
@@ -126,6 +139,7 @@ public class CreateTaskSetResponse {
     
     
     public Integer statusCode;
+
     public CreateTaskSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,6 +147,7 @@ public class CreateTaskSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTaskSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -143,9 +158,14 @@ public class CreateTaskSetResponse {
      */
     
     public Object unsupportedFeatureException;
+
     public CreateTaskSetResponse withUnsupportedFeatureException(Object unsupportedFeatureException) {
         this.unsupportedFeatureException = unsupportedFeatureException;
         return this;
     }
     
+    public CreateTaskSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

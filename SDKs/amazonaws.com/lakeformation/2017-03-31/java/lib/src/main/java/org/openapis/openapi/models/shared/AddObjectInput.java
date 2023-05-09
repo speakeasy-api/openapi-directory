@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddObjectInput {
     @JsonProperty("ETag")
     public String eTag;
+
     public AddObjectInput withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -22,6 +23,7 @@ public class AddObjectInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionValues")
     public String[] partitionValues;
+
     public AddObjectInput withPartitionValues(String[] partitionValues) {
         this.partitionValues = partitionValues;
         return this;
@@ -29,6 +31,7 @@ public class AddObjectInput {
     
     @JsonProperty("Size")
     public Long size;
+
     public AddObjectInput withSize(Long size) {
         this.size = size;
         return this;
@@ -36,9 +39,15 @@ public class AddObjectInput {
     
     @JsonProperty("Uri")
     public String uri;
+
     public AddObjectInput withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public AddObjectInput(@JsonProperty("ETag") String eTag, @JsonProperty("Size") Long size, @JsonProperty("Uri") String uri) {
+        this.eTag = eTag;
+        this.size = size;
+        this.uri = uri;
+  }
 }

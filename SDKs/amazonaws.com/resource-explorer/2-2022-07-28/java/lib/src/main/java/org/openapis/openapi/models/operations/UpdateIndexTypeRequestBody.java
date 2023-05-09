@@ -12,6 +12,7 @@ public class UpdateIndexTypeRequestBody {
      */
     @JsonProperty("Arn")
     public String arn;
+
     public UpdateIndexTypeRequestBody withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,9 +23,14 @@ public class UpdateIndexTypeRequestBody {
      */
     @JsonProperty("Type")
     public UpdateIndexTypeRequestBodyTypeEnum type;
+
     public UpdateIndexTypeRequestBody withType(UpdateIndexTypeRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public UpdateIndexTypeRequestBody(@JsonProperty("Arn") String arn, @JsonProperty("Type") UpdateIndexTypeRequestBodyTypeEnum type) {
+        this.arn = arn;
+        this.type = type;
+  }
 }

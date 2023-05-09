@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigRuleEvaluationStatusResponse {
     
     public String contentType;
+
     public DescribeConfigRuleEvaluationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusResponse describeConfigRuleEvaluationStatusResponse;
+
     public DescribeConfigRuleEvaluationStatusResponse withDescribeConfigRuleEvaluationStatusResponse(org.openapis.openapi.models.shared.DescribeConfigRuleEvaluationStatusResponse describeConfigRuleEvaluationStatusResponse) {
         this.describeConfigRuleEvaluationStatusResponse = describeConfigRuleEvaluationStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeConfigRuleEvaluationStatusResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DescribeConfigRuleEvaluationStatusResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
      */
     
     public Object noSuchConfigRuleException;
+
     public DescribeConfigRuleEvaluationStatusResponse withNoSuchConfigRuleException(Object noSuchConfigRuleException) {
         this.noSuchConfigRuleException = noSuchConfigRuleException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeConfigRuleEvaluationStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigRuleEvaluationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeConfigRuleEvaluationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigRuleEvaluationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigRuleEvaluationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

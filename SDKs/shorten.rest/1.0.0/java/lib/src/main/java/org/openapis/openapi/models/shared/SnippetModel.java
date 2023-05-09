@@ -14,6 +14,7 @@ public class SnippetModel {
      */
     @JsonProperty("id")
     public String id;
+
     public SnippetModel withId(String id) {
         this.id = id;
         return this;
@@ -22,9 +23,13 @@ public class SnippetModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, String> parameters;
+
     public SnippetModel withParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
     }
     
+    public SnippetModel(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

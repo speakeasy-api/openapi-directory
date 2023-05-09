@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteDefaultMessageTypeRequest {
     @JsonProperty("ConfigurationSetName")
     public String configurationSetName;
+
     public DeleteDefaultMessageTypeRequest withConfigurationSetName(String configurationSetName) {
         this.configurationSetName = configurationSetName;
         return this;
     }
     
+    public DeleteDefaultMessageTypeRequest(@JsonProperty("ConfigurationSetName") String configurationSetName) {
+        this.configurationSetName = configurationSetName;
+  }
 }

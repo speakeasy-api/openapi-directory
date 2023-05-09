@@ -12,6 +12,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedPersonalDomains")
     public Integer allowedPersonalDomains;
+
     public ApiCoreDtoAccountingPlan withAllowedPersonalDomains(Integer allowedPersonalDomains) {
         this.allowedPersonalDomains = allowedPersonalDomains;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedPersonalUrls")
     public Integer allowedPersonalUrls;
+
     public ApiCoreDtoAccountingPlan withAllowedPersonalUrls(Integer allowedPersonalUrls) {
         this.allowedPersonalUrls = allowedPersonalUrls;
         return this;
@@ -31,6 +33,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodEnd")
     public String billingPeriodEnd;
+
     public ApiCoreDtoAccountingPlan withBillingPeriodEnd(String billingPeriodEnd) {
         this.billingPeriodEnd = billingPeriodEnd;
         return this;
@@ -42,6 +45,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingPeriodStart")
     public String billingPeriodStart;
+
     public ApiCoreDtoAccountingPlan withBillingPeriodStart(String billingPeriodStart) {
         this.billingPeriodStart = billingPeriodStart;
         return this;
@@ -50,6 +54,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bonusMonthlyEvents")
     public Long bonusMonthlyEvents;
+
     public ApiCoreDtoAccountingPlan withBonusMonthlyEvents(Long bonusMonthlyEvents) {
         this.bonusMonthlyEvents = bonusMonthlyEvents;
         return this;
@@ -58,6 +63,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumDatapoints")
     public Long maximumDatapoints;
+
     public ApiCoreDtoAccountingPlan withMaximumDatapoints(Long maximumDatapoints) {
         this.maximumDatapoints = maximumDatapoints;
         return this;
@@ -66,6 +72,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumGuests")
     public Long maximumGuests;
+
     public ApiCoreDtoAccountingPlan withMaximumGuests(Long maximumGuests) {
         this.maximumGuests = maximumGuests;
         return this;
@@ -74,6 +81,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("monthlyEvents")
     public Long monthlyEvents;
+
     public ApiCoreDtoAccountingPlan withMonthlyEvents(Long monthlyEvents) {
         this.monthlyEvents = monthlyEvents;
         return this;
@@ -82,6 +90,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCoreDtoAccountingPlan withName(String name) {
         this.name = name;
         return this;
@@ -90,6 +99,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Double price;
+
     public ApiCoreDtoAccountingPlan withPrice(Double price) {
         this.price = price;
         return this;
@@ -98,6 +108,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileId")
     public Long profileId;
+
     public ApiCoreDtoAccountingPlan withProfileId(Long profileId) {
         this.profileId = profileId;
         return this;
@@ -106,6 +117,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurring")
     public Boolean recurring;
+
     public ApiCoreDtoAccountingPlan withRecurring(Boolean recurring) {
         this.recurring = recurring;
         return this;
@@ -114,6 +126,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recurringPeriod")
     public Integer recurringPeriod;
+
     public ApiCoreDtoAccountingPlan withRecurringPeriod(Integer recurringPeriod) {
         this.recurringPeriod = recurringPeriod;
         return this;
@@ -122,6 +135,7 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usedDatapoints")
     public Long usedDatapoints;
+
     public ApiCoreDtoAccountingPlan withUsedDatapoints(Long usedDatapoints) {
         this.usedDatapoints = usedDatapoints;
         return this;
@@ -130,9 +144,11 @@ public class ApiCoreDtoAccountingPlan {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usedMonthlyEvents")
     public Long usedMonthlyEvents;
+
     public ApiCoreDtoAccountingPlan withUsedMonthlyEvents(Long usedMonthlyEvents) {
         this.usedMonthlyEvents = usedMonthlyEvents;
         return this;
     }
     
+    public ApiCoreDtoAccountingPlan(){}
 }

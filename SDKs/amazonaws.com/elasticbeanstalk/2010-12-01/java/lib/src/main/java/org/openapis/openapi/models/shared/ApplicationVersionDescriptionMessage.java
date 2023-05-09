@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ApplicationVersionDescriptionMessage {
     
     public ApplicationVersionDescription applicationVersion;
+
     public ApplicationVersionDescriptionMessage withApplicationVersion(ApplicationVersionDescription applicationVersion) {
         this.applicationVersion = applicationVersion;
         return this;
     }
     
+    public ApplicationVersionDescriptionMessage(){}
 }

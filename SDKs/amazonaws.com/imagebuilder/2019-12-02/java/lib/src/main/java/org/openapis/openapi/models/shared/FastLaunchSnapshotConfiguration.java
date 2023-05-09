@@ -15,9 +15,11 @@ public class FastLaunchSnapshotConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetResourceCount")
     public Long targetResourceCount;
+
     public FastLaunchSnapshotConfiguration withTargetResourceCount(Long targetResourceCount) {
         this.targetResourceCount = targetResourceCount;
         return this;
     }
     
+    public FastLaunchSnapshotConfiguration(){}
 }

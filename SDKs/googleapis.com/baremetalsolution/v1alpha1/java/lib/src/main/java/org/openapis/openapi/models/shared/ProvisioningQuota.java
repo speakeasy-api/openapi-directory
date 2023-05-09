@@ -18,9 +18,11 @@ public class ProvisioningQuota {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceQuota")
     public InstanceQuota instanceQuota;
+
     public ProvisioningQuota withInstanceQuota(InstanceQuota instanceQuota) {
         this.instanceQuota = instanceQuota;
         return this;
     }
     
+    public ProvisioningQuota(){}
 }

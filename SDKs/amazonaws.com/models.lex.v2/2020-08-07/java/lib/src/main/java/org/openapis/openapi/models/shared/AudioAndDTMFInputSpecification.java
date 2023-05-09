@@ -15,6 +15,7 @@ public class AudioAndDTMFInputSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audioSpecification")
     public AudioSpecification audioSpecification;
+
     public AudioAndDTMFInputSpecification withAudioSpecification(AudioSpecification audioSpecification) {
         this.audioSpecification = audioSpecification;
         return this;
@@ -23,6 +24,7 @@ public class AudioAndDTMFInputSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dtmfSpecification")
     public DTMFSpecification dtmfSpecification;
+
     public AudioAndDTMFInputSpecification withDtmfSpecification(DTMFSpecification dtmfSpecification) {
         this.dtmfSpecification = dtmfSpecification;
         return this;
@@ -30,9 +32,13 @@ public class AudioAndDTMFInputSpecification {
     
     @JsonProperty("startTimeoutMs")
     public Long startTimeoutMs;
+
     public AudioAndDTMFInputSpecification withStartTimeoutMs(Long startTimeoutMs) {
         this.startTimeoutMs = startTimeoutMs;
         return this;
     }
     
+    public AudioAndDTMFInputSpecification(@JsonProperty("startTimeoutMs") Long startTimeoutMs) {
+        this.startTimeoutMs = startTimeoutMs;
+  }
 }

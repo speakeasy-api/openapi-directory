@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse {
@@ -12,6 +13,7 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse
      */
     
     public org.openapis.openapi.models.shared.Assignments[] assignments;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse withAssignments(org.openapis.openapi.models.shared.Assignments[] assignments) {
         this.assignments = assignments;
         return this;
@@ -19,6 +21,7 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse
     
     
     public String contentType;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse
     
     
     public Integer statusCode;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetOfferingsOfferingIdUsersUserEmailSubmissionsOpenResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

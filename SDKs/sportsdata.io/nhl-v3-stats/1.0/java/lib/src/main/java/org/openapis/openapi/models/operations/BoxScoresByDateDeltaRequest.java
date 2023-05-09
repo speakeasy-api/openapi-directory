@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BoxScoresByDateDeltaRequest {
@@ -14,6 +15,7 @@ public class BoxScoresByDateDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=date")
     public String date;
+
     public BoxScoresByDateDeltaRequest withDate(String date) {
         this.date = date;
         return this;
@@ -24,6 +26,7 @@ public class BoxScoresByDateDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public BoxScoresByDateDeltaFormatEnum format;
+
     public BoxScoresByDateDeltaRequest withFormat(BoxScoresByDateDeltaFormatEnum format) {
         this.format = format;
         return this;
@@ -36,9 +39,15 @@ public class BoxScoresByDateDeltaRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=minutes")
     public String minutes;
+
     public BoxScoresByDateDeltaRequest withMinutes(String minutes) {
         this.minutes = minutes;
         return this;
     }
     
+    public BoxScoresByDateDeltaRequest(@JsonProperty("date") String date, @JsonProperty("format") BoxScoresByDateDeltaFormatEnum format, @JsonProperty("minutes") String minutes) {
+        this.date = date;
+        this.format = format;
+        this.minutes = minutes;
+  }
 }

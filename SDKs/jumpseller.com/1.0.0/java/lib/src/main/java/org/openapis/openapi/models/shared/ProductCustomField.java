@@ -15,9 +15,11 @@ public class ProductCustomField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public ProductCustomFieldFields field;
+
     public ProductCustomField withField(ProductCustomFieldFields field) {
         this.field = field;
         return this;
     }
     
+    public ProductCustomField(){}
 }

@@ -18,6 +18,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Integer pageSize;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -29,6 +30,7 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageToken")
     public String pageToken;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -40,9 +42,11 @@ public class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest(){}
 }

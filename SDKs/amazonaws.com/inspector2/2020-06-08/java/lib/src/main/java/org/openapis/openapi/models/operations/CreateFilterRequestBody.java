@@ -14,6 +14,7 @@ public class CreateFilterRequestBody {
      */
     @JsonProperty("action")
     public CreateFilterRequestBodyActionEnum action;
+
     public CreateFilterRequestBody withAction(CreateFilterRequestBodyActionEnum action) {
         this.action = action;
         return this;
@@ -25,6 +26,7 @@ public class CreateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateFilterRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class CreateFilterRequestBody {
      */
     @JsonProperty("filterCriteria")
     public CreateFilterRequestBodyFilterCriteria filterCriteria;
+
     public CreateFilterRequestBody withFilterCriteria(CreateFilterRequestBodyFilterCriteria filterCriteria) {
         this.filterCriteria = filterCriteria;
         return this;
@@ -45,6 +48,7 @@ public class CreateFilterRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateFilterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -56,6 +60,7 @@ public class CreateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CreateFilterRequestBody withReason(String reason) {
         this.reason = reason;
         return this;
@@ -67,9 +72,15 @@ public class CreateFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateFilterRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFilterRequestBody(@JsonProperty("action") CreateFilterRequestBodyActionEnum action, @JsonProperty("filterCriteria") CreateFilterRequestBodyFilterCriteria filterCriteria, @JsonProperty("name") String name) {
+        this.action = action;
+        this.filterCriteria = filterCriteria;
+        this.name = name;
+  }
 }

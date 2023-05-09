@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetContainerAPIMetadataResponse {
@@ -12,6 +13,7 @@ public class GetContainerAPIMetadataResponse {
      */
     
     public Object accessDeniedException;
+
     public GetContainerAPIMetadataResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetContainerAPIMetadataResponse {
     
     
     public String contentType;
+
     public GetContainerAPIMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetContainerAPIMetadataResponse {
      */
     
     public org.openapis.openapi.models.shared.GetContainerAPIMetadataResult getContainerAPIMetadataResult;
+
     public GetContainerAPIMetadataResponse withGetContainerAPIMetadataResult(org.openapis.openapi.models.shared.GetContainerAPIMetadataResult getContainerAPIMetadataResult) {
         this.getContainerAPIMetadataResult = getContainerAPIMetadataResult;
         return this;
@@ -39,6 +43,7 @@ public class GetContainerAPIMetadataResponse {
      */
     
     public Object serviceException;
+
     public GetContainerAPIMetadataResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -46,6 +51,7 @@ public class GetContainerAPIMetadataResponse {
     
     
     public Integer statusCode;
+
     public GetContainerAPIMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetContainerAPIMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetContainerAPIMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetContainerAPIMetadataResponse {
      */
     
     public Object unauthenticatedException;
+
     public GetContainerAPIMetadataResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public GetContainerAPIMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

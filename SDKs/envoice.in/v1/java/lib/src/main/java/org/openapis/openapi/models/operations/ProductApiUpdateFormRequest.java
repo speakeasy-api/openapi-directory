@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductApiUpdateFormRequest {
     @SpeakeasyMetadata("request:mediaType=application/x-www-form-urlencoded")
     public org.openapis.openapi.models.shared.ProductUpdateApiModel productUpdateApiModel;
+
     public ProductApiUpdateFormRequest withProductUpdateApiModel(org.openapis.openapi.models.shared.ProductUpdateApiModel productUpdateApiModel) {
         this.productUpdateApiModel = productUpdateApiModel;
         return this;
@@ -16,6 +18,7 @@ public class ProductApiUpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-key")
     public String xAuthKey;
+
     public ProductApiUpdateFormRequest withXAuthKey(String xAuthKey) {
         this.xAuthKey = xAuthKey;
         return this;
@@ -23,9 +26,15 @@ public class ProductApiUpdateFormRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-auth-secret")
     public String xAuthSecret;
+
     public ProductApiUpdateFormRequest withXAuthSecret(String xAuthSecret) {
         this.xAuthSecret = xAuthSecret;
         return this;
     }
     
+    public ProductApiUpdateFormRequest(@JsonProperty("ProductUpdateApiModel") org.openapis.openapi.models.shared.ProductUpdateApiModel productUpdateApiModel, @JsonProperty("x-auth-key") String xAuthKey, @JsonProperty("x-auth-secret") String xAuthSecret) {
+        this.productUpdateApiModel = productUpdateApiModel;
+        this.xAuthKey = xAuthKey;
+        this.xAuthSecret = xAuthSecret;
+  }
 }

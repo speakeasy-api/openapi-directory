@@ -18,6 +18,7 @@ public class BulkImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bulk_search_id")
     public String bulkSearchId;
+
     public BulkImageSearchResults withBulkSearchId(String bulkSearchId) {
         this.bulkSearchId = bulkSearchId;
         return this;
@@ -29,9 +30,11 @@ public class BulkImageSearchResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public ImageSearchResults[] results;
+
     public BulkImageSearchResults withResults(ImageSearchResults[] results) {
         this.results = results;
         return this;
     }
     
+    public BulkImageSearchResults(){}
 }

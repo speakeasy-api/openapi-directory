@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class ExportVectorEnrichmentJobOutput {
     @JsonProperty("Arn")
     public String arn;
+
     public ExportVectorEnrichmentJobOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -26,6 +27,7 @@ public class ExportVectorEnrichmentJobOutput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ExportVectorEnrichmentJobOutput withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -33,6 +35,7 @@ public class ExportVectorEnrichmentJobOutput {
     
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public ExportVectorEnrichmentJobOutput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -40,6 +43,7 @@ public class ExportVectorEnrichmentJobOutput {
     
     @JsonProperty("ExportStatus")
     public VectorEnrichmentJobExportStatusEnum exportStatus;
+
     public ExportVectorEnrichmentJobOutput withExportStatus(VectorEnrichmentJobExportStatusEnum exportStatus) {
         this.exportStatus = exportStatus;
         return this;
@@ -47,9 +51,17 @@ public class ExportVectorEnrichmentJobOutput {
     
     @JsonProperty("OutputConfig")
     public ExportVectorEnrichmentJobOutputConfig outputConfig;
+
     public ExportVectorEnrichmentJobOutput withOutputConfig(ExportVectorEnrichmentJobOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
         return this;
     }
     
+    public ExportVectorEnrichmentJobOutput(@JsonProperty("Arn") String arn, @JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("ExecutionRoleArn") String executionRoleArn, @JsonProperty("ExportStatus") VectorEnrichmentJobExportStatusEnum exportStatus, @JsonProperty("OutputConfig") ExportVectorEnrichmentJobOutputConfig outputConfig) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.executionRoleArn = executionRoleArn;
+        this.exportStatus = exportStatus;
+        this.outputConfig = outputConfig;
+  }
 }

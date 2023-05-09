@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCheckBalanceResponse {
     
     public String contentType;
+
     public PostCheckBalanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostCheckBalanceResponse {
     
     
     public Integer statusCode;
+
     public PostCheckBalanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostCheckBalanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCheckBalanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PostCheckBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostCheckBalanceResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -43,9 +48,14 @@ public class PostCheckBalanceResponse {
      */
     
     public org.openapis.openapi.models.shared.StoredValueBalanceCheckResponse storedValueBalanceCheckResponse;
+
     public PostCheckBalanceResponse withStoredValueBalanceCheckResponse(org.openapis.openapi.models.shared.StoredValueBalanceCheckResponse storedValueBalanceCheckResponse) {
         this.storedValueBalanceCheckResponse = storedValueBalanceCheckResponse;
         return this;
     }
     
+    public PostCheckBalanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

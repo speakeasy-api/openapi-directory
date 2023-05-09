@@ -15,6 +15,7 @@ public class ListPublicKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPublicKeysResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListPublicKeysResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKeyList")
     public PublicKey[] publicKeyList;
+
     public ListPublicKeysResponse withPublicKeyList(PublicKey[] publicKeyList) {
         this.publicKeyList = publicKeyList;
         return this;
     }
     
+    public ListPublicKeysResponse(){}
 }

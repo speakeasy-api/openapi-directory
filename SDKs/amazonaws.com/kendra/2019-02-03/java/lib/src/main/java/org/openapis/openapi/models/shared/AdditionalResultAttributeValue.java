@@ -15,9 +15,11 @@ public class AdditionalResultAttributeValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextWithHighlightsValue")
     public TextWithHighlights textWithHighlightsValue;
+
     public AdditionalResultAttributeValue withTextWithHighlightsValue(TextWithHighlights textWithHighlightsValue) {
         this.textWithHighlightsValue = textWithHighlightsValue;
         return this;
     }
     
+    public AdditionalResultAttributeValue(){}
 }

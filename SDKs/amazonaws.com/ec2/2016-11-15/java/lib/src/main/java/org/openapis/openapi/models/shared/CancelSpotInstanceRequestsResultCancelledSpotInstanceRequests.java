@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests {
     
     public String spotInstanceRequestId;
+
     public CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests withSpotInstanceRequestId(String spotInstanceRequestId) {
         this.spotInstanceRequestId = spotInstanceRequestId;
         return this;
@@ -19,9 +20,11 @@ public class CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests {
     
     
     public CancelSpotInstanceRequestsResultCancelledSpotInstanceRequestsStateEnum state;
+
     public CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests withState(CancelSpotInstanceRequestsResultCancelledSpotInstanceRequestsStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public CancelSpotInstanceRequestsResultCancelledSpotInstanceRequests(){}
 }

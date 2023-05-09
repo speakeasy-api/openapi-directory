@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteRoomResponse {
@@ -12,6 +13,7 @@ public class DeleteRoomResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteRoomResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteRoomResponse {
     
     
     public String contentType;
+
     public DeleteRoomResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteRoomResponse {
      */
     
     public Object pendingVerification;
+
     public DeleteRoomResponse withPendingVerification(Object pendingVerification) {
         this.pendingVerification = pendingVerification;
         return this;
@@ -39,6 +43,7 @@ public class DeleteRoomResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteRoomResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteRoomResponse {
     
     
     public Integer statusCode;
+
     public DeleteRoomResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteRoomResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteRoomResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteRoomResponse {
      */
     
     public Object validationException;
+
     public DeleteRoomResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteRoomResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

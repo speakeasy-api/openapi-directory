@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RemoveAgentRequest {
@@ -12,9 +13,13 @@ public class RemoveAgentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
     public String agentId;
+
     public RemoveAgentRequest withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
     
+    public RemoveAgentRequest(@JsonProperty("agent_id") String agentId) {
+        this.agentId = agentId;
+  }
 }

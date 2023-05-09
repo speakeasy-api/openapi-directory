@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetShippingQuoteRequest {
@@ -12,9 +13,13 @@ public class GetShippingQuoteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shippingQuoteId")
     public String shippingQuoteId;
+
     public GetShippingQuoteRequest withShippingQuoteId(String shippingQuoteId) {
         this.shippingQuoteId = shippingQuoteId;
         return this;
     }
     
+    public GetShippingQuoteRequest(@JsonProperty("shippingQuoteId") String shippingQuoteId) {
+        this.shippingQuoteId = shippingQuoteId;
+  }
 }

@@ -15,6 +15,7 @@ public class DeploymentReadyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionOnTimeout")
     public DeploymentReadyActionEnum actionOnTimeout;
+
     public DeploymentReadyOption withActionOnTimeout(DeploymentReadyActionEnum actionOnTimeout) {
         this.actionOnTimeout = actionOnTimeout;
         return this;
@@ -23,9 +24,11 @@ public class DeploymentReadyOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("waitTimeInMinutes")
     public Long waitTimeInMinutes;
+
     public DeploymentReadyOption withWaitTimeInMinutes(Long waitTimeInMinutes) {
         this.waitTimeInMinutes = waitTimeInMinutes;
         return this;
     }
     
+    public DeploymentReadyOption(){}
 }

@@ -22,6 +22,7 @@ public class Directory {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationDateTime")
     public OffsetDateTime creationDateTime;
+
     public Directory withCreationDateTime(OffsetDateTime creationDateTime) {
         this.creationDateTime = creationDateTime;
         return this;
@@ -30,6 +31,7 @@ public class Directory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryArn")
     public String directoryArn;
+
     public Directory withDirectoryArn(String directoryArn) {
         this.directoryArn = directoryArn;
         return this;
@@ -38,6 +40,7 @@ public class Directory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Directory withName(String name) {
         this.name = name;
         return this;
@@ -46,9 +49,11 @@ public class Directory {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public DirectoryStateEnum state;
+
     public Directory withState(DirectoryStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public Directory(){}
 }

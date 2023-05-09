@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListBlueprintsResponse {
     
     public String contentType;
+
     public ListBlueprintsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListBlueprintsResponse {
      */
     
     public Object internalServiceException;
+
     public ListBlueprintsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -29,6 +32,7 @@ public class ListBlueprintsResponse {
      */
     
     public Object invalidInputException;
+
     public ListBlueprintsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class ListBlueprintsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListBlueprintsResponse listBlueprintsResponse;
+
     public ListBlueprintsResponse withListBlueprintsResponse(org.openapis.openapi.models.shared.ListBlueprintsResponse listBlueprintsResponse) {
         this.listBlueprintsResponse = listBlueprintsResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListBlueprintsResponse {
      */
     
     public Object operationTimeoutException;
+
     public ListBlueprintsResponse withOperationTimeoutException(Object operationTimeoutException) {
         this.operationTimeoutException = operationTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class ListBlueprintsResponse {
     
     
     public Integer statusCode;
+
     public ListBlueprintsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ListBlueprintsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListBlueprintsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListBlueprintsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

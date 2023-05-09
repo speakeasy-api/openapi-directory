@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListForAuthenticatedUserResponse {
     
     public String contentType;
+
     public TeamsListForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TeamsListForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public TeamsListForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TeamsListForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TeamsListForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsListForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class TeamsListForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.TeamFull[] teamFulls;
+
     public TeamsListForAuthenticatedUserResponse withTeamFulls(org.openapis.openapi.models.shared.TeamFull[] teamFulls) {
         this.teamFulls = teamFulls;
         return this;
     }
     
+    public TeamsListForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

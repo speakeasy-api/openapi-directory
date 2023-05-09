@@ -21,6 +21,7 @@ public class ThreadSubscription {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public ThreadSubscription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class ThreadSubscription {
     
     @JsonProperty("ignored")
     public Boolean ignored;
+
     public ThreadSubscription withIgnored(Boolean ignored) {
         this.ignored = ignored;
         return this;
@@ -35,6 +37,7 @@ public class ThreadSubscription {
     
     @JsonProperty("reason")
     public String reason;
+
     public ThreadSubscription withReason(String reason) {
         this.reason = reason;
         return this;
@@ -43,6 +46,7 @@ public class ThreadSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository_url")
     public String repositoryUrl;
+
     public ThreadSubscription withRepositoryUrl(String repositoryUrl) {
         this.repositoryUrl = repositoryUrl;
         return this;
@@ -50,6 +54,7 @@ public class ThreadSubscription {
     
     @JsonProperty("subscribed")
     public Boolean subscribed;
+
     public ThreadSubscription withSubscribed(Boolean subscribed) {
         this.subscribed = subscribed;
         return this;
@@ -58,6 +63,7 @@ public class ThreadSubscription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thread_url")
     public String threadUrl;
+
     public ThreadSubscription withThreadUrl(String threadUrl) {
         this.threadUrl = threadUrl;
         return this;
@@ -65,9 +71,17 @@ public class ThreadSubscription {
     
     @JsonProperty("url")
     public String url;
+
     public ThreadSubscription withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ThreadSubscription(@JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("ignored") Boolean ignored, @JsonProperty("reason") String reason, @JsonProperty("subscribed") Boolean subscribed, @JsonProperty("url") String url) {
+        this.createdAt = createdAt;
+        this.ignored = ignored;
+        this.reason = reason;
+        this.subscribed = subscribed;
+        this.url = url;
+  }
 }

@@ -15,6 +15,7 @@ public class ModelExplainabilityJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BatchTransformInput")
     public BatchTransformInput batchTransformInput;
+
     public ModelExplainabilityJobInput withBatchTransformInput(BatchTransformInput batchTransformInput) {
         this.batchTransformInput = batchTransformInput;
         return this;
@@ -26,9 +27,11 @@ public class ModelExplainabilityJobInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointInput")
     public EndpointInput endpointInput;
+
     public ModelExplainabilityJobInput withEndpointInput(EndpointInput endpointInput) {
         this.endpointInput = endpointInput;
         return this;
     }
     
+    public ModelExplainabilityJobInput(){}
 }

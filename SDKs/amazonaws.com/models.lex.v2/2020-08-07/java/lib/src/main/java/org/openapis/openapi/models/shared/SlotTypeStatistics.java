@@ -15,9 +15,11 @@ public class SlotTypeStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("discoveredSlotTypeCount")
     public Long discoveredSlotTypeCount;
+
     public SlotTypeStatistics withDiscoveredSlotTypeCount(Long discoveredSlotTypeCount) {
         this.discoveredSlotTypeCount = discoveredSlotTypeCount;
         return this;
     }
     
+    public SlotTypeStatistics(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryUsersAliasesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryUsersAliasesListSecurityOption1 option1;
+
     public DirectoryUsersAliasesListSecurity withOption1(DirectoryUsersAliasesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DirectoryUsersAliasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryUsersAliasesListSecurityOption2 option2;
+
     public DirectoryUsersAliasesListSecurity withOption2(DirectoryUsersAliasesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DirectoryUsersAliasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryUsersAliasesListSecurityOption3 option3;
+
     public DirectoryUsersAliasesListSecurity withOption3(DirectoryUsersAliasesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,9 +33,11 @@ public class DirectoryUsersAliasesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryUsersAliasesListSecurityOption4 option4;
+
     public DirectoryUsersAliasesListSecurity withOption4(DirectoryUsersAliasesListSecurityOption4 option4) {
         this.option4 = option4;
         return this;
     }
     
+    public DirectoryUsersAliasesListSecurity(){}
 }

@@ -15,6 +15,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreateTime")
     public String createTime;
+
     public ReportGenerator withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -23,6 +24,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ReportGenerator withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastReportGenerationTime")
     public String lastReportGenerationTime;
+
     public ReportGenerator withLastReportGenerationTime(String lastReportGenerationTime) {
         this.lastReportGenerationTime = lastReportGenerationTime;
         return this;
@@ -39,6 +42,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRunFailureReason")
     public String lastRunFailureReason;
+
     public ReportGenerator withLastRunFailureReason(String lastRunFailureReason) {
         this.lastRunFailureReason = lastRunFailureReason;
         return this;
@@ -47,6 +51,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastRunStatus")
     public String lastRunStatus;
+
     public ReportGenerator withLastRunStatus(String lastRunStatus) {
         this.lastRunStatus = lastRunStatus;
         return this;
@@ -55,6 +60,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseManagerReportGeneratorArn")
     public String licenseManagerReportGeneratorArn;
+
     public ReportGenerator withLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
         this.licenseManagerReportGeneratorArn = licenseManagerReportGeneratorArn;
         return this;
@@ -63,6 +69,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportContext")
     public ReportContext reportContext;
+
     public ReportGenerator withReportContext(ReportContext reportContext) {
         this.reportContext = reportContext;
         return this;
@@ -71,6 +78,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportCreatorAccount")
     public String reportCreatorAccount;
+
     public ReportGenerator withReportCreatorAccount(String reportCreatorAccount) {
         this.reportCreatorAccount = reportCreatorAccount;
         return this;
@@ -79,6 +87,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportFrequency")
     public ReportFrequency reportFrequency;
+
     public ReportGenerator withReportFrequency(ReportFrequency reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
@@ -87,6 +96,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportGeneratorName")
     public String reportGeneratorName;
+
     public ReportGenerator withReportGeneratorName(String reportGeneratorName) {
         this.reportGeneratorName = reportGeneratorName;
         return this;
@@ -95,6 +105,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReportType")
     public ReportTypeEnum[] reportType;
+
     public ReportGenerator withReportType(ReportTypeEnum[] reportType) {
         this.reportType = reportType;
         return this;
@@ -103,6 +114,7 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3Location")
     public S3Location s3Location;
+
     public ReportGenerator withS3Location(S3Location s3Location) {
         this.s3Location = s3Location;
         return this;
@@ -111,9 +123,11 @@ public class ReportGenerator {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public ReportGenerator withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ReportGenerator(){}
 }

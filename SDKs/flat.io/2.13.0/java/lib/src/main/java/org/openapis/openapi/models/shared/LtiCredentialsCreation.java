@@ -15,6 +15,7 @@ public class LtiCredentialsCreation {
      */
     @JsonProperty("lms")
     public LmsNameEnum lms;
+
     public LtiCredentialsCreation withLms(LmsNameEnum lms) {
         this.lms = lms;
         return this;
@@ -25,9 +26,14 @@ public class LtiCredentialsCreation {
      */
     @JsonProperty("name")
     public String name;
+
     public LtiCredentialsCreation withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LtiCredentialsCreation(@JsonProperty("lms") LmsNameEnum lms, @JsonProperty("name") String name) {
+        this.lms = lms;
+        this.name = name;
+  }
 }

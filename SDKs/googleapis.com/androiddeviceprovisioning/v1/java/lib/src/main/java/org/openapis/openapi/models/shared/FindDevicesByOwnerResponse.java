@@ -18,6 +18,7 @@ public class FindDevicesByOwnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Device[] devices;
+
     public FindDevicesByOwnerResponse withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -29,6 +30,7 @@ public class FindDevicesByOwnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public FindDevicesByOwnerResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class FindDevicesByOwnerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public FindDevicesByOwnerResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public FindDevicesByOwnerResponse(){}
 }

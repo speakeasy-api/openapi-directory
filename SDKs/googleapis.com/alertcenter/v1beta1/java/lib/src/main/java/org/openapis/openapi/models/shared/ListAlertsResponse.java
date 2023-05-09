@@ -18,6 +18,7 @@ public class ListAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("alerts")
     public Alert[] alerts;
+
     public ListAlertsResponse withAlerts(Alert[] alerts) {
         this.alerts = alerts;
         return this;
@@ -29,9 +30,11 @@ public class ListAlertsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAlertsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListAlertsResponse(){}
 }

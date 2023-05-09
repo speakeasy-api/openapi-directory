@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.SearchCseListImgColorTypeEnum;
 import org.openapis.openapi.models.operations.SearchCseListImgDominantColorEnum;
 import org.openapis.openapi.models.operations.SearchCseListImgSizeEnum;
 import org.openapis.openapi.models.operations.SearchCseListImgTypeEnum;
+import org.openapis.openapi.models.operations.SearchCseListRequest;
+import org.openapis.openapi.models.operations.SearchCseListResponse;
 import org.openapis.openapi.models.operations.SearchCseListSafeEnum;
 import org.openapis.openapi.models.operations.SearchCseListSearchTypeEnum;
 import org.openapis.openapi.models.operations.SearchCseListSiteSearchFilterEnum;
-import org.openapis.openapi.models.operations.SearchCseListRequest;
-import org.openapis.openapi.models.operations.SearchCseListResponse;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -23,9 +22,9 @@ public class Application {
                 .build();
 
             SearchCseListRequest req = new SearchCseListRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 accessToken = "provident";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 c2coff = "quibusdam";
                 callback = "unde";
                 cr = "nulla";
@@ -41,15 +40,15 @@ public class Application {
                 highRange = "ipsa";
                 hl = "delectus";
                 hq = "tempora";
-                imgColorType = "mono";
-                imgDominantColor = "orange";
-                imgSize = "XLARGE";
-                imgType = "photo";
+                imgColorType = SearchCseListImgColorTypeEnum.MONO;
+                imgDominantColor = SearchCseListImgDominantColorEnum.ORANGE;
+                imgSize = SearchCseListImgSizeEnum.XLARGE;
+                imgType = SearchCseListImgTypeEnum.PHOTO;
                 key = "voluptatum";
                 linkSite = "iusto";
                 lowRange = "excepturi";
                 lr = "nisi";
-                num = 925597;
+                num = 925597L;
                 oauthToken = "temporibus";
                 orTerms = "ab";
                 prettyPrint = false;
@@ -57,23 +56,25 @@ public class Application {
                 quotaUser = "veritatis";
                 relatedSite = "deserunt";
                 rights = "perferendis";
-                safe = "active";
-                searchType = "image";
+                safe = SearchCseListSafeEnum.ACTIVE;
+                searchType = SearchCseListSearchTypeEnum.IMAGE;
                 siteSearch = "sapiente";
-                siteSearchFilter = "i";
+                siteSearchFilter = SearchCseListSiteSearchFilterEnum.I;
                 sort = "odit";
-                start = 870013;
+                start = 870013L;
                 uploadType = "at";
                 uploadProtocol = "maiores";
-            }}            
+            }};            
 
             SearchCseListResponse res = sdk.cse.searchCseList(req);
 
-            if (res.search.isPresent()) {
+            if (res.search != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

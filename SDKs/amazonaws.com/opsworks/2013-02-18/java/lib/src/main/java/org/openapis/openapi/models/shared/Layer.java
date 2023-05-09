@@ -15,6 +15,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public Layer withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public Layer withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -31,6 +33,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAssignElasticIps")
     public Boolean autoAssignElasticIps;
+
     public Layer withAutoAssignElasticIps(Boolean autoAssignElasticIps) {
         this.autoAssignElasticIps = autoAssignElasticIps;
         return this;
@@ -39,6 +42,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoAssignPublicIps")
     public Boolean autoAssignPublicIps;
+
     public Layer withAutoAssignPublicIps(Boolean autoAssignPublicIps) {
         this.autoAssignPublicIps = autoAssignPublicIps;
         return this;
@@ -47,6 +51,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudWatchLogsConfiguration")
     public CloudWatchLogsConfiguration cloudWatchLogsConfiguration;
+
     public Layer withCloudWatchLogsConfiguration(CloudWatchLogsConfiguration cloudWatchLogsConfiguration) {
         this.cloudWatchLogsConfiguration = cloudWatchLogsConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public Layer withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -63,6 +69,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomInstanceProfileArn")
     public String customInstanceProfileArn;
+
     public Layer withCustomInstanceProfileArn(String customInstanceProfileArn) {
         this.customInstanceProfileArn = customInstanceProfileArn;
         return this;
@@ -71,6 +78,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomJson")
     public String customJson;
+
     public Layer withCustomJson(String customJson) {
         this.customJson = customJson;
         return this;
@@ -79,6 +87,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomRecipes")
     public Recipes customRecipes;
+
     public Layer withCustomRecipes(Recipes customRecipes) {
         this.customRecipes = customRecipes;
         return this;
@@ -87,6 +96,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomSecurityGroupIds")
     public String[] customSecurityGroupIds;
+
     public Layer withCustomSecurityGroupIds(String[] customSecurityGroupIds) {
         this.customSecurityGroupIds = customSecurityGroupIds;
         return this;
@@ -95,6 +105,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultRecipes")
     public Recipes defaultRecipes;
+
     public Layer withDefaultRecipes(Recipes defaultRecipes) {
         this.defaultRecipes = defaultRecipes;
         return this;
@@ -103,6 +114,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSecurityGroupNames")
     public String[] defaultSecurityGroupNames;
+
     public Layer withDefaultSecurityGroupNames(String[] defaultSecurityGroupNames) {
         this.defaultSecurityGroupNames = defaultSecurityGroupNames;
         return this;
@@ -111,6 +123,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnableAutoHealing")
     public Boolean enableAutoHealing;
+
     public Layer withEnableAutoHealing(Boolean enableAutoHealing) {
         this.enableAutoHealing = enableAutoHealing;
         return this;
@@ -119,6 +132,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallUpdatesOnBoot")
     public Boolean installUpdatesOnBoot;
+
     public Layer withInstallUpdatesOnBoot(Boolean installUpdatesOnBoot) {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
@@ -127,6 +141,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LayerId")
     public String layerId;
+
     public Layer withLayerId(String layerId) {
         this.layerId = layerId;
         return this;
@@ -135,6 +150,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LifecycleEventConfiguration")
     public LifecycleEventConfiguration lifecycleEventConfiguration;
+
     public Layer withLifecycleEventConfiguration(LifecycleEventConfiguration lifecycleEventConfiguration) {
         this.lifecycleEventConfiguration = lifecycleEventConfiguration;
         return this;
@@ -143,6 +159,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Layer withName(String name) {
         this.name = name;
         return this;
@@ -151,6 +168,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Packages")
     public String[] packages;
+
     public Layer withPackages(String[] packages) {
         this.packages = packages;
         return this;
@@ -159,6 +177,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Shortname")
     public String shortname;
+
     public Layer withShortname(String shortname) {
         this.shortname = shortname;
         return this;
@@ -167,6 +186,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StackId")
     public String stackId;
+
     public Layer withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -175,6 +195,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public LayerTypeEnum type;
+
     public Layer withType(LayerTypeEnum type) {
         this.type = type;
         return this;
@@ -183,6 +204,7 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseEbsOptimizedInstances")
     public Boolean useEbsOptimizedInstances;
+
     public Layer withUseEbsOptimizedInstances(Boolean useEbsOptimizedInstances) {
         this.useEbsOptimizedInstances = useEbsOptimizedInstances;
         return this;
@@ -191,9 +213,11 @@ public class Layer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VolumeConfigurations")
     public VolumeConfiguration[] volumeConfigurations;
+
     public Layer withVolumeConfigurations(VolumeConfiguration[] volumeConfigurations) {
         this.volumeConfigurations = volumeConfigurations;
         return this;
     }
     
+    public Layer(){}
 }

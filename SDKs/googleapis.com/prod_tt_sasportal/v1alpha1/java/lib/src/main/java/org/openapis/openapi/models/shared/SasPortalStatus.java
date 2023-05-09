@@ -18,6 +18,7 @@ public class SasPortalStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Integer code;
+
     public SasPortalStatus withCode(Integer code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class SasPortalStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public java.util.Map<String, Object>[] details;
+
     public SasPortalStatus withDetails(java.util.Map<String, Object>[] details) {
         this.details = details;
         return this;
@@ -40,9 +42,11 @@ public class SasPortalStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public SasPortalStatus withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public SasPortalStatus(){}
 }

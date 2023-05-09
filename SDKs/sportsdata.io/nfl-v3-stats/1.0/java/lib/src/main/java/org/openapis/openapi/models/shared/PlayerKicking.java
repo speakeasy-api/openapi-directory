@@ -12,6 +12,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsAttempted")
     public Long extraPointsAttempted;
+
     public PlayerKicking withExtraPointsAttempted(Long extraPointsAttempted) {
         this.extraPointsAttempted = extraPointsAttempted;
         return this;
@@ -20,6 +21,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExtraPointsMade")
     public Long extraPointsMade;
+
     public PlayerKicking withExtraPointsMade(Long extraPointsMade) {
         this.extraPointsMade = extraPointsMade;
         return this;
@@ -28,6 +30,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPoints")
     public Double fantasyPoints;
+
     public PlayerKicking withFantasyPoints(Double fantasyPoints) {
         this.fantasyPoints = fantasyPoints;
         return this;
@@ -36,6 +39,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FantasyPosition")
     public String fantasyPosition;
+
     public PlayerKicking withFantasyPosition(String fantasyPosition) {
         this.fantasyPosition = fantasyPosition;
         return this;
@@ -44,6 +48,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalPercentage")
     public Double fieldGoalPercentage;
+
     public PlayerKicking withFieldGoalPercentage(Double fieldGoalPercentage) {
         this.fieldGoalPercentage = fieldGoalPercentage;
         return this;
@@ -52,6 +57,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsAttempted")
     public Long fieldGoalsAttempted;
+
     public PlayerKicking withFieldGoalsAttempted(Long fieldGoalsAttempted) {
         this.fieldGoalsAttempted = fieldGoalsAttempted;
         return this;
@@ -60,6 +66,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsLongestMade")
     public Long fieldGoalsLongestMade;
+
     public PlayerKicking withFieldGoalsLongestMade(Long fieldGoalsLongestMade) {
         this.fieldGoalsLongestMade = fieldGoalsLongestMade;
         return this;
@@ -68,6 +75,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade")
     public Long fieldGoalsMade;
+
     public PlayerKicking withFieldGoalsMade(Long fieldGoalsMade) {
         this.fieldGoalsMade = fieldGoalsMade;
         return this;
@@ -76,6 +84,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade0to19")
     public Long fieldGoalsMade0to19;
+
     public PlayerKicking withFieldGoalsMade0to19(Long fieldGoalsMade0to19) {
         this.fieldGoalsMade0to19 = fieldGoalsMade0to19;
         return this;
@@ -84,6 +93,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade20to29")
     public Long fieldGoalsMade20to29;
+
     public PlayerKicking withFieldGoalsMade20to29(Long fieldGoalsMade20to29) {
         this.fieldGoalsMade20to29 = fieldGoalsMade20to29;
         return this;
@@ -92,6 +102,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade30to39")
     public Long fieldGoalsMade30to39;
+
     public PlayerKicking withFieldGoalsMade30to39(Long fieldGoalsMade30to39) {
         this.fieldGoalsMade30to39 = fieldGoalsMade30to39;
         return this;
@@ -100,6 +111,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade40to49")
     public Long fieldGoalsMade40to49;
+
     public PlayerKicking withFieldGoalsMade40to49(Long fieldGoalsMade40to49) {
         this.fieldGoalsMade40to49 = fieldGoalsMade40to49;
         return this;
@@ -108,6 +120,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldGoalsMade50Plus")
     public Long fieldGoalsMade50Plus;
+
     public PlayerKicking withFieldGoalsMade50Plus(Long fieldGoalsMade50Plus) {
         this.fieldGoalsMade50Plus = fieldGoalsMade50Plus;
         return this;
@@ -116,6 +129,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public PlayerKicking withName(String name) {
         this.name = name;
         return this;
@@ -124,6 +138,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Long number;
+
     public PlayerKicking withNumber(Long number) {
         this.number = number;
         return this;
@@ -132,6 +147,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGameID")
     public Long playerGameID;
+
     public PlayerKicking withPlayerGameID(Long playerGameID) {
         this.playerGameID = playerGameID;
         return this;
@@ -140,6 +156,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerID")
     public Long playerID;
+
     public PlayerKicking withPlayerID(Long playerID) {
         this.playerID = playerID;
         return this;
@@ -148,6 +165,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Position")
     public String position;
+
     public PlayerKicking withPosition(String position) {
         this.position = position;
         return this;
@@ -156,6 +174,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PositionCategory")
     public String positionCategory;
+
     public PlayerKicking withPositionCategory(String positionCategory) {
         this.positionCategory = positionCategory;
         return this;
@@ -164,6 +183,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public PlayerKicking withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -172,6 +192,7 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Team")
     public String team;
+
     public PlayerKicking withTeam(String team) {
         this.team = team;
         return this;
@@ -180,9 +201,11 @@ public class PlayerKicking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public PlayerKicking withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public PlayerKicking(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MigrationsListReposForAuthenticatedUserResponse {
     
     public String contentType;
+
     public MigrationsListReposForAuthenticatedUserResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class MigrationsListReposForAuthenticatedUserResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public MigrationsListReposForAuthenticatedUserResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class MigrationsListReposForAuthenticatedUserResponse {
     
     
     public Integer statusCode;
+
     public MigrationsListReposForAuthenticatedUserResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class MigrationsListReposForAuthenticatedUserResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MigrationsListReposForAuthenticatedUserResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class MigrationsListReposForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public MigrationsListReposForAuthenticatedUserResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class MigrationsListReposForAuthenticatedUserResponse {
      */
     
     public org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories;
+
     public MigrationsListReposForAuthenticatedUserResponse withMinimalRepositories(org.openapis.openapi.models.shared.MinimalRepository[] minimalRepositories) {
         this.minimalRepositories = minimalRepositories;
         return this;
     }
     
+    public MigrationsListReposForAuthenticatedUserResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CollectionList {
      */
     @JsonProperty("collections")
     public Collection[] collections;
+
     public CollectionList withCollections(Collection[] collections) {
         this.collections = collections;
         return this;
@@ -25,9 +26,14 @@ public class CollectionList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public CollectionList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public CollectionList(@JsonProperty("collections") Collection[] collections, @JsonProperty("sum") Integer sum) {
+        this.collections = collections;
+        this.sum = sum;
+  }
 }

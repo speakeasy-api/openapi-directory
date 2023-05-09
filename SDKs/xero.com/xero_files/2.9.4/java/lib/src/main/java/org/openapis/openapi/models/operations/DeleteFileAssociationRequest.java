@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteFileAssociationRequest {
@@ -12,6 +13,7 @@ public class DeleteFileAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=FileId")
     public String fileId;
+
     public DeleteFileAssociationRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteFileAssociationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ObjectId")
     public String objectId;
+
     public DeleteFileAssociationRequest withObjectId(String objectId) {
         this.objectId = objectId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteFileAssociationRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public DeleteFileAssociationRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public DeleteFileAssociationRequest(@JsonProperty("FileId") String fileId, @JsonProperty("ObjectId") String objectId, @JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.fileId = fileId;
+        this.objectId = objectId;
+        this.xeroTenantId = xeroTenantId;
+  }
 }

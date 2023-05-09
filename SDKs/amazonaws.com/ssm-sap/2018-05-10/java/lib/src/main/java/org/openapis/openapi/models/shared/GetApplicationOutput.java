@@ -15,6 +15,7 @@ public class GetApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Application")
     public Application application;
+
     public GetApplicationOutput withApplication(Application application) {
         this.application = application;
         return this;
@@ -23,9 +24,11 @@ public class GetApplicationOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public GetApplicationOutput withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public GetApplicationOutput(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeEgressOnlyInternetGatewaysRequestFilters {
     
     public String name;
+
     public DescribeEgressOnlyInternetGatewaysRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeEgressOnlyInternetGatewaysRequestFilters {
     
     
     public String[] values;
+
     public DescribeEgressOnlyInternetGatewaysRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeEgressOnlyInternetGatewaysRequestFilters(){}
 }

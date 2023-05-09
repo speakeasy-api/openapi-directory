@@ -20,6 +20,7 @@ public class CreateSiteResponse {
      */
     @JsonProperty("arn")
     public String arn;
+
     public CreateSiteResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -32,6 +33,7 @@ public class CreateSiteResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CreateSiteResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -42,6 +44,7 @@ public class CreateSiteResponse {
      */
     @JsonProperty("id")
     public String id;
+
     public CreateSiteResponse withId(String id) {
         this.id = id;
         return this;
@@ -54,9 +57,16 @@ public class CreateSiteResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public CreateSiteResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public CreateSiteResponse(@JsonProperty("arn") String arn, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("id") String id, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.arn = arn;
+        this.createdAt = createdAt;
+        this.id = id;
+        this.updatedAt = updatedAt;
+  }
 }

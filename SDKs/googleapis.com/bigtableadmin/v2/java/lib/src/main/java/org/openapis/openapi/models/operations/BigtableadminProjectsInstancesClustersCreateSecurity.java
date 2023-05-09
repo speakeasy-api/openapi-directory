@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesClustersCreateSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption1(BigtableadminProjectsInstancesClustersCreateSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesClustersCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption2(BigtableadminProjectsInstancesClustersCreateSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesClustersCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption3(BigtableadminProjectsInstancesClustersCreateSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesClustersCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption4(BigtableadminProjectsInstancesClustersCreateSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesClustersCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption5(BigtableadminProjectsInstancesClustersCreateSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesClustersCreateSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesClustersCreateSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesClustersCreateSecurity withOption6(BigtableadminProjectsInstancesClustersCreateSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesClustersCreateSecurity(){}
 }

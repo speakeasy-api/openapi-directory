@@ -15,6 +15,7 @@ public class PutTelemetryRecordsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EC2InstanceId")
     public String ec2InstanceId;
+
     public PutTelemetryRecordsRequestBody withEc2InstanceId(String ec2InstanceId) {
         this.ec2InstanceId = ec2InstanceId;
         return this;
@@ -26,6 +27,7 @@ public class PutTelemetryRecordsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public PutTelemetryRecordsRequestBody withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -37,6 +39,7 @@ public class PutTelemetryRecordsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public PutTelemetryRecordsRequestBody withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -47,9 +50,13 @@ public class PutTelemetryRecordsRequestBody {
      */
     @JsonProperty("TelemetryRecords")
     public org.openapis.openapi.models.shared.TelemetryRecord[] telemetryRecords;
+
     public PutTelemetryRecordsRequestBody withTelemetryRecords(org.openapis.openapi.models.shared.TelemetryRecord[] telemetryRecords) {
         this.telemetryRecords = telemetryRecords;
         return this;
     }
     
+    public PutTelemetryRecordsRequestBody(@JsonProperty("TelemetryRecords") org.openapis.openapi.models.shared.TelemetryRecord[] telemetryRecords) {
+        this.telemetryRecords = telemetryRecords;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class BacktrackDBClusterMessage {
     
     public OffsetDateTime backtrackTo;
+
     public BacktrackDBClusterMessage withBacktrackTo(OffsetDateTime backtrackTo) {
         this.backtrackTo = backtrackTo;
         return this;
@@ -19,6 +21,7 @@ public class BacktrackDBClusterMessage {
     
     
     public String dbClusterIdentifier;
+
     public BacktrackDBClusterMessage withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -26,6 +29,7 @@ public class BacktrackDBClusterMessage {
     
     
     public Boolean force;
+
     public BacktrackDBClusterMessage withForce(Boolean force) {
         this.force = force;
         return this;
@@ -33,9 +37,14 @@ public class BacktrackDBClusterMessage {
     
     
     public Boolean useEarliestTimeOnPointInTimeUnavailable;
+
     public BacktrackDBClusterMessage withUseEarliestTimeOnPointInTimeUnavailable(Boolean useEarliestTimeOnPointInTimeUnavailable) {
         this.useEarliestTimeOnPointInTimeUnavailable = useEarliestTimeOnPointInTimeUnavailable;
         return this;
     }
     
+    public BacktrackDBClusterMessage(@JsonProperty("BacktrackTo") OffsetDateTime backtrackTo, @JsonProperty("DBClusterIdentifier") String dbClusterIdentifier) {
+        this.backtrackTo = backtrackTo;
+        this.dbClusterIdentifier = dbClusterIdentifier;
+  }
 }

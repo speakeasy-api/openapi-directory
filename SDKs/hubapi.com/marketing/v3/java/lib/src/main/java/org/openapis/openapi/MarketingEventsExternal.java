@@ -53,11 +53,9 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse() {{
+        org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse res = new org.openapis.openapi.models.operations.DeleteMarketingV3MarketingEventsEventsExternalEventIdArchiveResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -93,12 +91,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse() {{
+        org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse res = new org.openapis.openapi.models.operations.GetMarketingV3MarketingEventsEventsExternalEventIdGetByIdResponse(contentType, httpRes.statusCode()) {{
             marketingEventPublicReadResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,12 +140,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse() {{
+        org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse res = new org.openapis.openapi.models.operations.PatchMarketingV3MarketingEventsEventsExternalEventIdUpdateResponse(contentType, httpRes.statusCode()) {{
             marketingEventPublicDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -189,11 +183,9 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsDeleteArchiveBatchResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -226,12 +218,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsUpsertDoUpsertResponse(contentType, httpRes.statusCode()) {{
             batchResponseMarketingEventPublicDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -272,12 +262,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCancelDoCancelResponse(contentType, httpRes.statusCode()) {{
             marketingEventDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -323,12 +311,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdCompleteCompleteResponse(contentType, httpRes.statusCode()) {{
             marketingEventDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -374,11 +360,9 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateEmailUpsertDoEmailUpsertByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -417,11 +401,9 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsExternalEventIdSubscriberStateUpsertDoUpsertByIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -454,12 +436,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse() {{
+        org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse res = new org.openapis.openapi.models.operations.PostMarketingV3MarketingEventsEventsCreateResponse(contentType, httpRes.statusCode()) {{
             marketingEventDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,12 +479,10 @@ public class MarketingEventsExternal {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse res = new org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse() {{
+        org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse res = new org.openapis.openapi.models.operations.PutMarketingV3MarketingEventsEventsExternalEventIdReplaceResponse(contentType, httpRes.statusCode()) {{
             marketingEventPublicDefaultResponse = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

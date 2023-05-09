@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RefreshPreferences {
     
     public Boolean autoRollback;
+
     public RefreshPreferences withAutoRollback(Boolean autoRollback) {
         this.autoRollback = autoRollback;
         return this;
@@ -19,6 +20,7 @@ public class RefreshPreferences {
     
     
     public Long checkpointDelay;
+
     public RefreshPreferences withCheckpointDelay(Long checkpointDelay) {
         this.checkpointDelay = checkpointDelay;
         return this;
@@ -26,6 +28,7 @@ public class RefreshPreferences {
     
     
     public Long[] checkpointPercentages;
+
     public RefreshPreferences withCheckpointPercentages(Long[] checkpointPercentages) {
         this.checkpointPercentages = checkpointPercentages;
         return this;
@@ -33,6 +36,7 @@ public class RefreshPreferences {
     
     
     public Long instanceWarmup;
+
     public RefreshPreferences withInstanceWarmup(Long instanceWarmup) {
         this.instanceWarmup = instanceWarmup;
         return this;
@@ -40,6 +44,7 @@ public class RefreshPreferences {
     
     
     public Long minHealthyPercentage;
+
     public RefreshPreferences withMinHealthyPercentage(Long minHealthyPercentage) {
         this.minHealthyPercentage = minHealthyPercentage;
         return this;
@@ -47,6 +52,7 @@ public class RefreshPreferences {
     
     
     public ScaleInProtectedInstancesEnum scaleInProtectedInstances;
+
     public RefreshPreferences withScaleInProtectedInstances(ScaleInProtectedInstancesEnum scaleInProtectedInstances) {
         this.scaleInProtectedInstances = scaleInProtectedInstances;
         return this;
@@ -54,6 +60,7 @@ public class RefreshPreferences {
     
     
     public Boolean skipMatching;
+
     public RefreshPreferences withSkipMatching(Boolean skipMatching) {
         this.skipMatching = skipMatching;
         return this;
@@ -61,9 +68,11 @@ public class RefreshPreferences {
     
     
     public StandbyInstancesEnum standbyInstances;
+
     public RefreshPreferences withStandbyInstances(StandbyInstancesEnum standbyInstances) {
         this.standbyInstances = standbyInstances;
         return this;
     }
     
+    public RefreshPreferences(){}
 }

@@ -18,6 +18,7 @@ public class GetCaptions405ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detail")
     public String detail;
+
     public GetCaptions405ApplicationProblemPlusJson withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -29,6 +30,7 @@ public class GetCaptions405ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Long status;
+
     public GetCaptions405ApplicationProblemPlusJson withStatus(Long status) {
         this.status = status;
         return this;
@@ -40,6 +42,7 @@ public class GetCaptions405ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetCaptions405ApplicationProblemPlusJson withTitle(String title) {
         this.title = title;
         return this;
@@ -51,9 +54,11 @@ public class GetCaptions405ApplicationProblemPlusJson {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetCaptions405ApplicationProblemPlusJson withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GetCaptions405ApplicationProblemPlusJson(){}
 }

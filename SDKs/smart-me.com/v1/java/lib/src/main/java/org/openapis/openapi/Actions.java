@@ -51,14 +51,12 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsGetResponse res = new org.openapis.openapi.models.operations.ActionsGetResponse() {{
+        org.openapis.openapi.models.operations.ActionsGetResponse res = new org.openapis.openapi.models.operations.ActionsGetResponse(contentType, httpRes.statusCode()) {{
             actionInformations = null;
             actionInformations = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -111,10 +109,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsPostFormResponse res = new org.openapis.openapi.models.operations.ActionsPostFormResponse() {{
+        org.openapis.openapi.models.operations.ActionsPostFormResponse res = new org.openapis.openapi.models.operations.ActionsPostFormResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -149,10 +145,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsPostJsonResponse res = new org.openapis.openapi.models.operations.ActionsPostJsonResponse() {{
+        org.openapis.openapi.models.operations.ActionsPostJsonResponse res = new org.openapis.openapi.models.operations.ActionsPostJsonResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -187,10 +181,8 @@ public class Actions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ActionsPostRawResponse res = new org.openapis.openapi.models.operations.ActionsPostRawResponse() {{
+        org.openapis.openapi.models.operations.ActionsPostRawResponse res = new org.openapis.openapi.models.operations.ActionsPostRawResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

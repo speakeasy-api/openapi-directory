@@ -17,6 +17,7 @@ public class LicensingInformation {
      */
     @JsonProperty("license")
     public String license;
+
     public LicensingInformation withLicense(String license) {
         this.license = license;
         return this;
@@ -28,9 +29,13 @@ public class LicensingInformation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regionRestriction")
     public RegionRestrictions regionRestriction;
+
     public LicensingInformation withRegionRestriction(RegionRestrictions regionRestriction) {
         this.regionRestriction = regionRestriction;
         return this;
     }
     
+    public LicensingInformation(@JsonProperty("license") String license) {
+        this.license = license;
+  }
 }

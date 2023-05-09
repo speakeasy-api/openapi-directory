@@ -15,6 +15,7 @@ public class GetSnowballUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballLimit")
     public Long snowballLimit;
+
     public GetSnowballUsageResult withSnowballLimit(Long snowballLimit) {
         this.snowballLimit = snowballLimit;
         return this;
@@ -23,9 +24,11 @@ public class GetSnowballUsageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnowballsInUse")
     public Long snowballsInUse;
+
     public GetSnowballUsageResult withSnowballsInUse(Long snowballsInUse) {
         this.snowballsInUse = snowballsInUse;
         return this;
     }
     
+    public GetSnowballUsageResult(){}
 }

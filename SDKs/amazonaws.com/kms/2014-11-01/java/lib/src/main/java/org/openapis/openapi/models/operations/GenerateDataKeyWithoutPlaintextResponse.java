@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateDataKeyWithoutPlaintextResponse {
     
     public String contentType;
+
     public GenerateDataKeyWithoutPlaintextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GenerateDataKeyWithoutPlaintextResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object disabledException;
+
     public GenerateDataKeyWithoutPlaintextResponse withDisabledException(Object disabledException) {
         this.disabledException = disabledException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateDataKeyWithoutPlaintextResponse generateDataKeyWithoutPlaintextResponse;
+
     public GenerateDataKeyWithoutPlaintextResponse withGenerateDataKeyWithoutPlaintextResponse(org.openapis.openapi.models.shared.GenerateDataKeyWithoutPlaintextResponse generateDataKeyWithoutPlaintextResponse) {
         this.generateDataKeyWithoutPlaintextResponse = generateDataKeyWithoutPlaintextResponse;
         return this;
@@ -49,6 +54,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object invalidGrantTokenException;
+
     public GenerateDataKeyWithoutPlaintextResponse withInvalidGrantTokenException(Object invalidGrantTokenException) {
         this.invalidGrantTokenException = invalidGrantTokenException;
         return this;
@@ -59,6 +65,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object invalidKeyUsageException;
+
     public GenerateDataKeyWithoutPlaintextResponse withInvalidKeyUsageException(Object invalidKeyUsageException) {
         this.invalidKeyUsageException = invalidKeyUsageException;
         return this;
@@ -69,6 +76,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateDataKeyWithoutPlaintextResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -79,6 +87,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public GenerateDataKeyWithoutPlaintextResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -89,6 +98,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object keyUnavailableException;
+
     public GenerateDataKeyWithoutPlaintextResponse withKeyUnavailableException(Object keyUnavailableException) {
         this.keyUnavailableException = keyUnavailableException;
         return this;
@@ -99,6 +109,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
      */
     
     public Object notFoundException;
+
     public GenerateDataKeyWithoutPlaintextResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -106,6 +117,7 @@ public class GenerateDataKeyWithoutPlaintextResponse {
     
     
     public Integer statusCode;
+
     public GenerateDataKeyWithoutPlaintextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,9 +125,14 @@ public class GenerateDataKeyWithoutPlaintextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateDataKeyWithoutPlaintextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GenerateDataKeyWithoutPlaintextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

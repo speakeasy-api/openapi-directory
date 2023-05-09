@@ -15,6 +15,7 @@ public class ThirdPartyJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientId")
     public String clientId;
+
     public ThirdPartyJob withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -23,9 +24,11 @@ public class ThirdPartyJob {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public ThirdPartyJob withJobId(String jobId) {
         this.jobId = jobId;
         return this;
     }
     
+    public ThirdPartyJob(){}
 }

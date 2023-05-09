@@ -12,6 +12,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AgentVersion")
     public String agentVersion;
+
     public CreateInstanceRequest withAgentVersion(String agentVersion) {
         this.agentVersion = agentVersion;
         return this;
@@ -20,6 +21,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiId")
     public String amiId;
+
     public CreateInstanceRequest withAmiId(String amiId) {
         this.amiId = amiId;
         return this;
@@ -28,6 +30,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Architecture")
     public ArchitectureEnum architecture;
+
     public CreateInstanceRequest withArchitecture(ArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -36,6 +39,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingType")
     public AutoScalingTypeEnum autoScalingType;
+
     public CreateInstanceRequest withAutoScalingType(AutoScalingTypeEnum autoScalingType) {
         this.autoScalingType = autoScalingType;
         return this;
@@ -44,6 +48,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public CreateInstanceRequest withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -52,6 +57,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BlockDeviceMappings")
     public BlockDeviceMapping[] blockDeviceMappings;
+
     public CreateInstanceRequest withBlockDeviceMappings(BlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -60,6 +66,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsOptimized")
     public Boolean ebsOptimized;
+
     public CreateInstanceRequest withEbsOptimized(Boolean ebsOptimized) {
         this.ebsOptimized = ebsOptimized;
         return this;
@@ -68,6 +75,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Hostname")
     public String hostname;
+
     public CreateInstanceRequest withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -76,6 +84,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstallUpdatesOnBoot")
     public Boolean installUpdatesOnBoot;
+
     public CreateInstanceRequest withInstallUpdatesOnBoot(Boolean installUpdatesOnBoot) {
         this.installUpdatesOnBoot = installUpdatesOnBoot;
         return this;
@@ -83,6 +92,7 @@ public class CreateInstanceRequest {
     
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public CreateInstanceRequest withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -90,6 +100,7 @@ public class CreateInstanceRequest {
     
     @JsonProperty("LayerIds")
     public String[] layerIds;
+
     public CreateInstanceRequest withLayerIds(String[] layerIds) {
         this.layerIds = layerIds;
         return this;
@@ -98,6 +109,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Os")
     public String os;
+
     public CreateInstanceRequest withOs(String os) {
         this.os = os;
         return this;
@@ -106,6 +118,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RootDeviceType")
     public RootDeviceTypeEnum rootDeviceType;
+
     public CreateInstanceRequest withRootDeviceType(RootDeviceTypeEnum rootDeviceType) {
         this.rootDeviceType = rootDeviceType;
         return this;
@@ -114,6 +127,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SshKeyName")
     public String sshKeyName;
+
     public CreateInstanceRequest withSshKeyName(String sshKeyName) {
         this.sshKeyName = sshKeyName;
         return this;
@@ -121,6 +135,7 @@ public class CreateInstanceRequest {
     
     @JsonProperty("StackId")
     public String stackId;
+
     public CreateInstanceRequest withStackId(String stackId) {
         this.stackId = stackId;
         return this;
@@ -129,6 +144,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetId")
     public String subnetId;
+
     public CreateInstanceRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -137,6 +153,7 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public String tenancy;
+
     public CreateInstanceRequest withTenancy(String tenancy) {
         this.tenancy = tenancy;
         return this;
@@ -145,9 +162,15 @@ public class CreateInstanceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VirtualizationType")
     public String virtualizationType;
+
     public CreateInstanceRequest withVirtualizationType(String virtualizationType) {
         this.virtualizationType = virtualizationType;
         return this;
     }
     
+    public CreateInstanceRequest(@JsonProperty("InstanceType") String instanceType, @JsonProperty("LayerIds") String[] layerIds, @JsonProperty("StackId") String stackId) {
+        this.instanceType = instanceType;
+        this.layerIds = layerIds;
+        this.stackId = stackId;
+  }
 }

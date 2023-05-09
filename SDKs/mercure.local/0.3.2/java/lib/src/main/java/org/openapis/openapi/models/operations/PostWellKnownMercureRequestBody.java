@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostWellKnownMercureRequestBody {
@@ -12,6 +13,7 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=data")
     public String data;
+
     public PostWellKnownMercureRequestBody withData(String data) {
         this.data = data;
         return this;
@@ -22,6 +24,7 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=id")
     public String id;
+
     public PostWellKnownMercureRequestBody withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +35,7 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=private")
     public Boolean private_;
+
     public PostWellKnownMercureRequestBody withPrivate(Boolean private_) {
         this.private_ = private_;
         return this;
@@ -42,6 +46,7 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=retry")
     public Long retry;
+
     public PostWellKnownMercureRequestBody withRetry(Long retry) {
         this.retry = retry;
         return this;
@@ -52,6 +57,7 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=topic")
     public String[] topic;
+
     public PostWellKnownMercureRequestBody withTopic(String[] topic) {
         this.topic = topic;
         return this;
@@ -62,9 +68,14 @@ public class PostWellKnownMercureRequestBody {
      */
     @SpeakeasyMetadata("form:name=type")
     public String type;
+
     public PostWellKnownMercureRequestBody withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostWellKnownMercureRequestBody(@JsonProperty("data") String data, @JsonProperty("topic") String[] topic) {
+        this.data = data;
+        this.topic = topic;
+  }
 }

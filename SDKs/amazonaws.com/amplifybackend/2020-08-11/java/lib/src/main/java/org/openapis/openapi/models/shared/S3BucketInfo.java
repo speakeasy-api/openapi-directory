@@ -15,6 +15,7 @@ public class S3BucketInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreationDate")
     public String creationDate;
+
     public S3BucketInfo withCreationDate(String creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,9 +24,11 @@ public class S3BucketInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public S3BucketInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public S3BucketInfo(){}
 }

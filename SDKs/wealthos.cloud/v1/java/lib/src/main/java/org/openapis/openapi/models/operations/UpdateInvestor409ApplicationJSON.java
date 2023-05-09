@@ -17,6 +17,7 @@ public class UpdateInvestor409ApplicationJSON {
      */
     @JsonProperty("message")
     public String message;
+
     public UpdateInvestor409ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -28,6 +29,7 @@ public class UpdateInvestor409ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public java.util.Map<String, Object> response;
+
     public UpdateInvestor409ApplicationJSON withResponse(java.util.Map<String, Object> response) {
         this.response = response;
         return this;
@@ -38,9 +40,14 @@ public class UpdateInvestor409ApplicationJSON {
      */
     @JsonProperty("status")
     public UpdateInvestor409ApplicationJSONStatusEnum status;
+
     public UpdateInvestor409ApplicationJSON withStatus(UpdateInvestor409ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateInvestor409ApplicationJSON(@JsonProperty("message") String message, @JsonProperty("status") UpdateInvestor409ApplicationJSONStatusEnum status) {
+        this.message = message;
+        this.status = status;
+  }
 }

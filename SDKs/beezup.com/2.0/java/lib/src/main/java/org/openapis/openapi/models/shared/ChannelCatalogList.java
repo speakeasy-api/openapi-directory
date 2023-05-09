@@ -18,6 +18,7 @@ public class ChannelCatalogList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCatalogs")
     public java.util.Map<String, ChannelCatalog> channelCatalogs;
+
     public ChannelCatalogList withChannelCatalogs(java.util.Map<String, ChannelCatalog> channelCatalogs) {
         this.channelCatalogs = channelCatalogs;
         return this;
@@ -30,6 +31,7 @@ public class ChannelCatalogList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public ChannelCatalogListLinks links;
+
     public ChannelCatalogList withLinks(ChannelCatalogListLinks links) {
         this.links = links;
         return this;
@@ -38,9 +40,11 @@ public class ChannelCatalogList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lovLinks")
     public ChannelCatalogListLovLinks lovLinks;
+
     public ChannelCatalogList withLovLinks(ChannelCatalogListLovLinks lovLinks) {
         this.lovLinks = lovLinks;
         return this;
     }
     
+    public ChannelCatalogList(){}
 }

@@ -18,6 +18,7 @@ public class RegionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public RegionInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class RegionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geotargetArea")
     public RegionGeoTargetArea geotargetArea;
+
     public RegionInput withGeotargetArea(RegionGeoTargetArea geotargetArea) {
         this.geotargetArea = geotargetArea;
         return this;
@@ -40,9 +42,11 @@ public class RegionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeArea")
     public RegionPostalCodeArea postalCodeArea;
+
     public RegionInput withPostalCodeArea(RegionPostalCodeArea postalCodeArea) {
         this.postalCodeArea = postalCodeArea;
         return this;
     }
     
+    public RegionInput(){}
 }

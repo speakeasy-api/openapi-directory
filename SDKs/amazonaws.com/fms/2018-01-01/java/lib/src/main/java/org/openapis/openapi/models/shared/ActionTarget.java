@@ -15,6 +15,7 @@ public class ActionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ActionTarget withDescription(String description) {
         this.description = description;
         return this;
@@ -23,9 +24,11 @@ public class ActionTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ActionTarget withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public ActionTarget(){}
 }

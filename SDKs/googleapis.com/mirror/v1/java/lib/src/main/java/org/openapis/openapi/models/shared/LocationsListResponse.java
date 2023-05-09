@@ -15,6 +15,7 @@ public class LocationsListResponse {
      */
     
     public Location[] items;
+
     public LocationsListResponse withItems(Location[] items) {
         this.items = items;
         return this;
@@ -25,9 +26,11 @@ public class LocationsListResponse {
      */
     
     public String kind;
+
     public LocationsListResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public LocationsListResponse(){}
 }

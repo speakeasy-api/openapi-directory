@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CountOpenWorkflowExecutionsInput {
     @JsonProperty("domain")
     public String domain;
+
     public CountOpenWorkflowExecutionsInput withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -19,6 +20,7 @@ public class CountOpenWorkflowExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionFilter")
     public WorkflowExecutionFilter executionFilter;
+
     public CountOpenWorkflowExecutionsInput withExecutionFilter(WorkflowExecutionFilter executionFilter) {
         this.executionFilter = executionFilter;
         return this;
@@ -26,6 +28,7 @@ public class CountOpenWorkflowExecutionsInput {
     
     @JsonProperty("startTimeFilter")
     public ExecutionTimeFilter startTimeFilter;
+
     public CountOpenWorkflowExecutionsInput withStartTimeFilter(ExecutionTimeFilter startTimeFilter) {
         this.startTimeFilter = startTimeFilter;
         return this;
@@ -34,6 +37,7 @@ public class CountOpenWorkflowExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagFilter")
     public TagFilter tagFilter;
+
     public CountOpenWorkflowExecutionsInput withTagFilter(TagFilter tagFilter) {
         this.tagFilter = tagFilter;
         return this;
@@ -42,9 +46,14 @@ public class CountOpenWorkflowExecutionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("typeFilter")
     public WorkflowTypeFilter typeFilter;
+
     public CountOpenWorkflowExecutionsInput withTypeFilter(WorkflowTypeFilter typeFilter) {
         this.typeFilter = typeFilter;
         return this;
     }
     
+    public CountOpenWorkflowExecutionsInput(@JsonProperty("domain") String domain, @JsonProperty("startTimeFilter") ExecutionTimeFilter startTimeFilter) {
+        this.domain = domain;
+        this.startTimeFilter = startTimeFilter;
+  }
 }

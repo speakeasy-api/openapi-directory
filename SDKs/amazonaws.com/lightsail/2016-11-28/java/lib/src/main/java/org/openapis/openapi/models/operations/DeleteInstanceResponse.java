@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInstanceResponse {
@@ -12,6 +13,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteInstanceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object accountSetupInProgressException;
+
     public DeleteInstanceResponse withAccountSetupInProgressException(Object accountSetupInProgressException) {
         this.accountSetupInProgressException = accountSetupInProgressException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInstanceResponse {
     
     
     public String contentType;
+
     public DeleteInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInstanceResult deleteInstanceResult;
+
     public DeleteInstanceResponse withDeleteInstanceResult(org.openapis.openapi.models.shared.DeleteInstanceResult deleteInstanceResult) {
         this.deleteInstanceResult = deleteInstanceResult;
         return this;
@@ -49,6 +54,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object invalidInputException;
+
     public DeleteInstanceResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object notFoundException;
+
     public DeleteInstanceResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object operationFailureException;
+
     public DeleteInstanceResponse withOperationFailureException(Object operationFailureException) {
         this.operationFailureException = operationFailureException;
         return this;
@@ -79,6 +87,7 @@ public class DeleteInstanceResponse {
      */
     
     public Object serviceException;
+
     public DeleteInstanceResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class DeleteInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeleteInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DeleteInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DeleteInstanceResponse {
      */
     
     public Object unauthenticatedException;
+
     public DeleteInstanceResponse withUnauthenticatedException(Object unauthenticatedException) {
         this.unauthenticatedException = unauthenticatedException;
         return this;
     }
     
+    public DeleteInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

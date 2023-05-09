@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowCancellation")
     public Boolean allowCancellation;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withAllowCancellation(Boolean allowCancellation) {
         this.allowCancellation = allowCancellation;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automatedAgentReplyType")
     public GoogleCloudDialogflowV2beta1AutomatedAgentReplyAutomatedAgentReplyTypeEnum automatedAgentReplyType;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withAutomatedAgentReplyType(GoogleCloudDialogflowV2beta1AutomatedAgentReplyAutomatedAgentReplyTypeEnum automatedAgentReplyType) {
         this.automatedAgentReplyType = automatedAgentReplyType;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxCurrentPage")
     public String cxCurrentPage;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withCxCurrentPage(String cxCurrentPage) {
         this.cxCurrentPage = cxCurrentPage;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cxSessionParameters")
     public java.util.Map<String, Object> cxSessionParameters;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withCxSessionParameters(java.util.Map<String, Object> cxSessionParameters) {
         this.cxSessionParameters = cxSessionParameters;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detectIntentResponse")
     public GoogleCloudDialogflowV2beta1DetectIntentResponse detectIntentResponse;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withDetectIntentResponse(GoogleCloudDialogflowV2beta1DetectIntentResponse detectIntentResponse) {
         this.detectIntentResponse = detectIntentResponse;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("event")
     public String event;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withEvent(String event) {
         this.event = event;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intent")
     public String intent;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withIntent(String intent) {
         this.intent = intent;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchConfidence")
     public Float matchConfidence;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withMatchConfidence(Float matchConfidence) {
         this.matchConfidence = matchConfidence;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameters")
     public java.util.Map<String, Object> parameters;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withParameters(java.util.Map<String, Object> parameters) {
         this.parameters = parameters;
         return this;
@@ -117,9 +126,11 @@ public class GoogleCloudDialogflowV2beta1AutomatedAgentReply {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responseMessages")
     public GoogleCloudDialogflowV2beta1ResponseMessage[] responseMessages;
+
     public GoogleCloudDialogflowV2beta1AutomatedAgentReply withResponseMessages(GoogleCloudDialogflowV2beta1ResponseMessage[] responseMessages) {
         this.responseMessages = responseMessages;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1AutomatedAgentReply(){}
 }

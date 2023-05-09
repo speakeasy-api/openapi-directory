@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCollaborationsResponse {
@@ -12,6 +13,7 @@ public class ListCollaborationsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListCollaborationsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListCollaborationsResponse {
     
     
     public String contentType;
+
     public ListCollaborationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListCollaborationsResponse {
      */
     
     public Object internalServerException;
+
     public ListCollaborationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListCollaborationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCollaborationsOutput listCollaborationsOutput;
+
     public ListCollaborationsResponse withListCollaborationsOutput(org.openapis.openapi.models.shared.ListCollaborationsOutput listCollaborationsOutput) {
         this.listCollaborationsOutput = listCollaborationsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListCollaborationsResponse {
     
     
     public Integer statusCode;
+
     public ListCollaborationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListCollaborationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCollaborationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListCollaborationsResponse {
      */
     
     public Object throttlingException;
+
     public ListCollaborationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListCollaborationsResponse {
      */
     
     public Object validationException;
+
     public ListCollaborationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCollaborationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class GetDrivers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public GetDrivers200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class GetDrivers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public GetDrivers200ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class GetDrivers200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Object[] result;
+
     public GetDrivers200ApplicationJSON withResult(Object[] result) {
         this.result = result;
         return this;
     }
     
+    public GetDrivers200ApplicationJSON(){}
 }

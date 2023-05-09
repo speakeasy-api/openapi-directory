@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeBudgetsResponse {
@@ -12,6 +13,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeBudgetsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeBudgetsResponse {
     
     
     public String contentType;
+
     public DescribeBudgetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeBudgetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeBudgetsResponse describeBudgetsResponse;
+
     public DescribeBudgetsResponse withDescribeBudgetsResponse(org.openapis.openapi.models.shared.DescribeBudgetsResponse describeBudgetsResponse) {
         this.describeBudgetsResponse = describeBudgetsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object expiredNextTokenException;
+
     public DescribeBudgetsResponse withExpiredNextTokenException(Object expiredNextTokenException) {
         this.expiredNextTokenException = expiredNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object internalErrorException;
+
     public DescribeBudgetsResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public DescribeBudgetsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -69,6 +76,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object invalidParameterException;
+
     public DescribeBudgetsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DescribeBudgetsResponse {
      */
     
     public Object notFoundException;
+
     public DescribeBudgetsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -86,6 +95,7 @@ public class DescribeBudgetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeBudgetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class DescribeBudgetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeBudgetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class DescribeBudgetsResponse {
      */
     
     public Object throttlingException;
+
     public DescribeBudgetsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeBudgetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class MinimumHealthyHosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public MinimumHealthyHostsTypeEnum type;
+
     public MinimumHealthyHosts withType(MinimumHealthyHostsTypeEnum type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class MinimumHealthyHosts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public MinimumHealthyHosts withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public MinimumHealthyHosts(){}
 }

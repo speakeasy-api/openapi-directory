@@ -12,9 +12,13 @@ public class UsersUpdatePrefsRequestBody {
      */
     @JsonProperty("prefs")
     public java.util.Map<String, Object> prefs;
+
     public UsersUpdatePrefsRequestBody withPrefs(java.util.Map<String, Object> prefs) {
         this.prefs = prefs;
         return this;
     }
     
+    public UsersUpdatePrefsRequestBody(@JsonProperty("prefs") java.util.Map<String, Object> prefs) {
+        this.prefs = prefs;
+  }
 }

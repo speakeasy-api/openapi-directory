@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopTextTranslationJobResponse {
     
     public String contentType;
+
     public StopTextTranslationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StopTextTranslationJobResponse {
      */
     
     public Object internalServerException;
+
     public StopTextTranslationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -26,6 +29,7 @@ public class StopTextTranslationJobResponse {
     
     
     public Integer statusCode;
+
     public StopTextTranslationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class StopTextTranslationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopTextTranslationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class StopTextTranslationJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopTextTranslationJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -53,6 +59,7 @@ public class StopTextTranslationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StopTextTranslationJobResponse stopTextTranslationJobResponse;
+
     public StopTextTranslationJobResponse withStopTextTranslationJobResponse(org.openapis.openapi.models.shared.StopTextTranslationJobResponse stopTextTranslationJobResponse) {
         this.stopTextTranslationJobResponse = stopTextTranslationJobResponse;
         return this;
@@ -63,9 +70,14 @@ public class StopTextTranslationJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public StopTextTranslationJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public StopTextTranslationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

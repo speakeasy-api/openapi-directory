@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PrivateUser {
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public PrivateUser withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -26,6 +27,7 @@ public class PrivateUser {
     
     @JsonProperty("bio")
     public String bio;
+
     public PrivateUser withBio(String bio) {
         this.bio = bio;
         return this;
@@ -33,6 +35,7 @@ public class PrivateUser {
     
     @JsonProperty("blog")
     public String blog;
+
     public PrivateUser withBlog(String blog) {
         this.blog = blog;
         return this;
@@ -41,6 +44,7 @@ public class PrivateUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("business_plus")
     public Boolean businessPlus;
+
     public PrivateUser withBusinessPlus(Boolean businessPlus) {
         this.businessPlus = businessPlus;
         return this;
@@ -48,6 +52,7 @@ public class PrivateUser {
     
     @JsonProperty("collaborators")
     public Long collaborators;
+
     public PrivateUser withCollaborators(Long collaborators) {
         this.collaborators = collaborators;
         return this;
@@ -55,6 +60,7 @@ public class PrivateUser {
     
     @JsonProperty("company")
     public String company;
+
     public PrivateUser withCompany(String company) {
         this.company = company;
         return this;
@@ -64,6 +70,7 @@ public class PrivateUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PrivateUser withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -71,6 +78,7 @@ public class PrivateUser {
     
     @JsonProperty("disk_usage")
     public Long diskUsage;
+
     public PrivateUser withDiskUsage(Long diskUsage) {
         this.diskUsage = diskUsage;
         return this;
@@ -78,6 +86,7 @@ public class PrivateUser {
     
     @JsonProperty("email")
     public String email;
+
     public PrivateUser withEmail(String email) {
         this.email = email;
         return this;
@@ -85,6 +94,7 @@ public class PrivateUser {
     
     @JsonProperty("events_url")
     public String eventsUrl;
+
     public PrivateUser withEventsUrl(String eventsUrl) {
         this.eventsUrl = eventsUrl;
         return this;
@@ -92,6 +102,7 @@ public class PrivateUser {
     
     @JsonProperty("followers")
     public Long followers;
+
     public PrivateUser withFollowers(Long followers) {
         this.followers = followers;
         return this;
@@ -99,6 +110,7 @@ public class PrivateUser {
     
     @JsonProperty("followers_url")
     public String followersUrl;
+
     public PrivateUser withFollowersUrl(String followersUrl) {
         this.followersUrl = followersUrl;
         return this;
@@ -106,6 +118,7 @@ public class PrivateUser {
     
     @JsonProperty("following")
     public Long following;
+
     public PrivateUser withFollowing(Long following) {
         this.following = following;
         return this;
@@ -113,6 +126,7 @@ public class PrivateUser {
     
     @JsonProperty("following_url")
     public String followingUrl;
+
     public PrivateUser withFollowingUrl(String followingUrl) {
         this.followingUrl = followingUrl;
         return this;
@@ -120,6 +134,7 @@ public class PrivateUser {
     
     @JsonProperty("gists_url")
     public String gistsUrl;
+
     public PrivateUser withGistsUrl(String gistsUrl) {
         this.gistsUrl = gistsUrl;
         return this;
@@ -127,6 +142,7 @@ public class PrivateUser {
     
     @JsonProperty("gravatar_id")
     public String gravatarId;
+
     public PrivateUser withGravatarId(String gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -134,6 +150,7 @@ public class PrivateUser {
     
     @JsonProperty("hireable")
     public Boolean hireable;
+
     public PrivateUser withHireable(Boolean hireable) {
         this.hireable = hireable;
         return this;
@@ -141,6 +158,7 @@ public class PrivateUser {
     
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public PrivateUser withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -148,6 +166,7 @@ public class PrivateUser {
     
     @JsonProperty("id")
     public Long id;
+
     public PrivateUser withId(Long id) {
         this.id = id;
         return this;
@@ -156,6 +175,7 @@ public class PrivateUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ldap_dn")
     public String ldapDn;
+
     public PrivateUser withLdapDn(String ldapDn) {
         this.ldapDn = ldapDn;
         return this;
@@ -163,6 +183,7 @@ public class PrivateUser {
     
     @JsonProperty("location")
     public String location;
+
     public PrivateUser withLocation(String location) {
         this.location = location;
         return this;
@@ -170,6 +191,7 @@ public class PrivateUser {
     
     @JsonProperty("login")
     public String login;
+
     public PrivateUser withLogin(String login) {
         this.login = login;
         return this;
@@ -177,6 +199,7 @@ public class PrivateUser {
     
     @JsonProperty("name")
     public String name;
+
     public PrivateUser withName(String name) {
         this.name = name;
         return this;
@@ -184,6 +207,7 @@ public class PrivateUser {
     
     @JsonProperty("node_id")
     public String nodeId;
+
     public PrivateUser withNodeId(String nodeId) {
         this.nodeId = nodeId;
         return this;
@@ -191,6 +215,7 @@ public class PrivateUser {
     
     @JsonProperty("organizations_url")
     public String organizationsUrl;
+
     public PrivateUser withOrganizationsUrl(String organizationsUrl) {
         this.organizationsUrl = organizationsUrl;
         return this;
@@ -198,6 +223,7 @@ public class PrivateUser {
     
     @JsonProperty("owned_private_repos")
     public Long ownedPrivateRepos;
+
     public PrivateUser withOwnedPrivateRepos(Long ownedPrivateRepos) {
         this.ownedPrivateRepos = ownedPrivateRepos;
         return this;
@@ -206,6 +232,7 @@ public class PrivateUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public PrivateUserPlan plan;
+
     public PrivateUser withPlan(PrivateUserPlan plan) {
         this.plan = plan;
         return this;
@@ -213,6 +240,7 @@ public class PrivateUser {
     
     @JsonProperty("private_gists")
     public Long privateGists;
+
     public PrivateUser withPrivateGists(Long privateGists) {
         this.privateGists = privateGists;
         return this;
@@ -220,6 +248,7 @@ public class PrivateUser {
     
     @JsonProperty("public_gists")
     public Long publicGists;
+
     public PrivateUser withPublicGists(Long publicGists) {
         this.publicGists = publicGists;
         return this;
@@ -227,6 +256,7 @@ public class PrivateUser {
     
     @JsonProperty("public_repos")
     public Long publicRepos;
+
     public PrivateUser withPublicRepos(Long publicRepos) {
         this.publicRepos = publicRepos;
         return this;
@@ -234,6 +264,7 @@ public class PrivateUser {
     
     @JsonProperty("received_events_url")
     public String receivedEventsUrl;
+
     public PrivateUser withReceivedEventsUrl(String receivedEventsUrl) {
         this.receivedEventsUrl = receivedEventsUrl;
         return this;
@@ -241,6 +272,7 @@ public class PrivateUser {
     
     @JsonProperty("repos_url")
     public String reposUrl;
+
     public PrivateUser withReposUrl(String reposUrl) {
         this.reposUrl = reposUrl;
         return this;
@@ -248,6 +280,7 @@ public class PrivateUser {
     
     @JsonProperty("site_admin")
     public Boolean siteAdmin;
+
     public PrivateUser withSiteAdmin(Boolean siteAdmin) {
         this.siteAdmin = siteAdmin;
         return this;
@@ -255,6 +288,7 @@ public class PrivateUser {
     
     @JsonProperty("starred_url")
     public String starredUrl;
+
     public PrivateUser withStarredUrl(String starredUrl) {
         this.starredUrl = starredUrl;
         return this;
@@ -262,6 +296,7 @@ public class PrivateUser {
     
     @JsonProperty("subscriptions_url")
     public String subscriptionsUrl;
+
     public PrivateUser withSubscriptionsUrl(String subscriptionsUrl) {
         this.subscriptionsUrl = subscriptionsUrl;
         return this;
@@ -272,6 +307,7 @@ public class PrivateUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("suspended_at")
     public OffsetDateTime suspendedAt;
+
     public PrivateUser withSuspendedAt(OffsetDateTime suspendedAt) {
         this.suspendedAt = suspendedAt;
         return this;
@@ -279,6 +315,7 @@ public class PrivateUser {
     
     @JsonProperty("total_private_repos")
     public Long totalPrivateRepos;
+
     public PrivateUser withTotalPrivateRepos(Long totalPrivateRepos) {
         this.totalPrivateRepos = totalPrivateRepos;
         return this;
@@ -287,6 +324,7 @@ public class PrivateUser {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twitter_username")
     public String twitterUsername;
+
     public PrivateUser withTwitterUsername(String twitterUsername) {
         this.twitterUsername = twitterUsername;
         return this;
@@ -294,6 +332,7 @@ public class PrivateUser {
     
     @JsonProperty("two_factor_authentication")
     public Boolean twoFactorAuthentication;
+
     public PrivateUser withTwoFactorAuthentication(Boolean twoFactorAuthentication) {
         this.twoFactorAuthentication = twoFactorAuthentication;
         return this;
@@ -301,6 +340,7 @@ public class PrivateUser {
     
     @JsonProperty("type")
     public String type;
+
     public PrivateUser withType(String type) {
         this.type = type;
         return this;
@@ -310,6 +350,7 @@ public class PrivateUser {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public PrivateUser withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -317,9 +358,49 @@ public class PrivateUser {
     
     @JsonProperty("url")
     public String url;
+
     public PrivateUser withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PrivateUser(@JsonProperty("avatar_url") String avatarUrl, @JsonProperty("bio") String bio, @JsonProperty("blog") String blog, @JsonProperty("collaborators") Long collaborators, @JsonProperty("company") String company, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("disk_usage") Long diskUsage, @JsonProperty("email") String email, @JsonProperty("events_url") String eventsUrl, @JsonProperty("followers") Long followers, @JsonProperty("followers_url") String followersUrl, @JsonProperty("following") Long following, @JsonProperty("following_url") String followingUrl, @JsonProperty("gists_url") String gistsUrl, @JsonProperty("gravatar_id") String gravatarId, @JsonProperty("hireable") Boolean hireable, @JsonProperty("html_url") String htmlUrl, @JsonProperty("id") Long id, @JsonProperty("location") String location, @JsonProperty("login") String login, @JsonProperty("name") String name, @JsonProperty("node_id") String nodeId, @JsonProperty("organizations_url") String organizationsUrl, @JsonProperty("owned_private_repos") Long ownedPrivateRepos, @JsonProperty("private_gists") Long privateGists, @JsonProperty("public_gists") Long publicGists, @JsonProperty("public_repos") Long publicRepos, @JsonProperty("received_events_url") String receivedEventsUrl, @JsonProperty("repos_url") String reposUrl, @JsonProperty("site_admin") Boolean siteAdmin, @JsonProperty("starred_url") String starredUrl, @JsonProperty("subscriptions_url") String subscriptionsUrl, @JsonProperty("total_private_repos") Long totalPrivateRepos, @JsonProperty("two_factor_authentication") Boolean twoFactorAuthentication, @JsonProperty("type") String type, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.avatarUrl = avatarUrl;
+        this.bio = bio;
+        this.blog = blog;
+        this.collaborators = collaborators;
+        this.company = company;
+        this.createdAt = createdAt;
+        this.diskUsage = diskUsage;
+        this.email = email;
+        this.eventsUrl = eventsUrl;
+        this.followers = followers;
+        this.followersUrl = followersUrl;
+        this.following = following;
+        this.followingUrl = followingUrl;
+        this.gistsUrl = gistsUrl;
+        this.gravatarId = gravatarId;
+        this.hireable = hireable;
+        this.htmlUrl = htmlUrl;
+        this.id = id;
+        this.location = location;
+        this.login = login;
+        this.name = name;
+        this.nodeId = nodeId;
+        this.organizationsUrl = organizationsUrl;
+        this.ownedPrivateRepos = ownedPrivateRepos;
+        this.privateGists = privateGists;
+        this.publicGists = publicGists;
+        this.publicRepos = publicRepos;
+        this.receivedEventsUrl = receivedEventsUrl;
+        this.reposUrl = reposUrl;
+        this.siteAdmin = siteAdmin;
+        this.starredUrl = starredUrl;
+        this.subscriptionsUrl = subscriptionsUrl;
+        this.totalPrivateRepos = totalPrivateRepos;
+        this.twoFactorAuthentication = twoFactorAuthentication;
+        this.type = type;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

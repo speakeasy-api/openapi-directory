@@ -18,6 +18,7 @@ public class BaggageAllowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public Long quantity;
+
     public BaggageAllowance withQuantity(Long quantity) {
         this.quantity = quantity;
         return this;
@@ -29,6 +30,7 @@ public class BaggageAllowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weight")
     public Long weight;
+
     public BaggageAllowance withWeight(Long weight) {
         this.weight = weight;
         return this;
@@ -40,9 +42,11 @@ public class BaggageAllowance {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightUnit")
     public String weightUnit;
+
     public BaggageAllowance withWeightUnit(String weightUnit) {
         this.weightUnit = weightUnit;
         return this;
     }
     
+    public BaggageAllowance(){}
 }

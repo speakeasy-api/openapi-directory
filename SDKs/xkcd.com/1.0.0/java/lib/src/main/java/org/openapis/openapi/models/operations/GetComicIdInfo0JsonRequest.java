@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetComicIdInfo0JsonRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=comicId")
     public Double comicId;
+
     public GetComicIdInfo0JsonRequest withComicId(Double comicId) {
         this.comicId = comicId;
         return this;
     }
     
+    public GetComicIdInfo0JsonRequest(@JsonProperty("comicId") Double comicId) {
+        this.comicId = comicId;
+  }
 }

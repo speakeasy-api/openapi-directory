@@ -15,6 +15,7 @@ public class ObjectTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentType")
     public FieldContentTypeEnum contentType;
+
     public ObjectTypeField withContentType(FieldContentTypeEnum contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +24,7 @@ public class ObjectTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public String source;
+
     public ObjectTypeField withSource(String source) {
         this.source = source;
         return this;
@@ -31,9 +33,11 @@ public class ObjectTypeField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Target")
     public String target;
+
     public ObjectTypeField withTarget(String target) {
         this.target = target;
         return this;
     }
     
+    public ObjectTypeField(){}
 }

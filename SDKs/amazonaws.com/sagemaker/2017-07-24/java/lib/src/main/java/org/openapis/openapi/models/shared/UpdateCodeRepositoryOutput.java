@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCodeRepositoryOutput {
     @JsonProperty("CodeRepositoryArn")
     public String codeRepositoryArn;
+
     public UpdateCodeRepositoryOutput withCodeRepositoryArn(String codeRepositoryArn) {
         this.codeRepositoryArn = codeRepositoryArn;
         return this;
     }
     
+    public UpdateCodeRepositoryOutput(@JsonProperty("CodeRepositoryArn") String codeRepositoryArn) {
+        this.codeRepositoryArn = codeRepositoryArn;
+  }
 }

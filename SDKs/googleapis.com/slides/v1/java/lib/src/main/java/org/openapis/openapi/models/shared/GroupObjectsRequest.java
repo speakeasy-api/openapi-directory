@@ -18,6 +18,7 @@ public class GroupObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childrenObjectIds")
     public String[] childrenObjectIds;
+
     public GroupObjectsRequest withChildrenObjectIds(String[] childrenObjectIds) {
         this.childrenObjectIds = childrenObjectIds;
         return this;
@@ -29,9 +30,11 @@ public class GroupObjectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupObjectId")
     public String groupObjectId;
+
     public GroupObjectsRequest withGroupObjectId(String groupObjectId) {
         this.groupObjectId = groupObjectId;
         return this;
     }
     
+    public GroupObjectsRequest(){}
 }

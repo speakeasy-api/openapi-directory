@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SheetsSpreadsheetsValuesGetRequest {
@@ -12,6 +13,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public SheetsSpreadsheetsValuesGetRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public SheetsSpreadsheetsValuesGetRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public SheetsSpreadsheetsValuesGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public SheetsSpreadsheetsValuesGetRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=dateTimeRenderOption")
     public SheetsSpreadsheetsValuesGetDateTimeRenderOptionEnum dateTimeRenderOption;
+
     public SheetsSpreadsheetsValuesGetRequest withDateTimeRenderOption(SheetsSpreadsheetsValuesGetDateTimeRenderOptionEnum dateTimeRenderOption) {
         this.dateTimeRenderOption = dateTimeRenderOption;
         return this;
@@ -62,6 +68,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public SheetsSpreadsheetsValuesGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public SheetsSpreadsheetsValuesGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=majorDimension")
     public SheetsSpreadsheetsValuesGetMajorDimensionEnum majorDimension;
+
     public SheetsSpreadsheetsValuesGetRequest withMajorDimension(SheetsSpreadsheetsValuesGetMajorDimensionEnum majorDimension) {
         this.majorDimension = majorDimension;
         return this;
@@ -92,6 +101,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public SheetsSpreadsheetsValuesGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public SheetsSpreadsheetsValuesGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -112,6 +123,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public SheetsSpreadsheetsValuesGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -122,6 +134,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=range")
     public String range;
+
     public SheetsSpreadsheetsValuesGetRequest withRange(String range) {
         this.range = range;
         return this;
@@ -132,6 +145,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=spreadsheetId")
     public String spreadsheetId;
+
     public SheetsSpreadsheetsValuesGetRequest withSpreadsheetId(String spreadsheetId) {
         this.spreadsheetId = spreadsheetId;
         return this;
@@ -142,6 +156,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public SheetsSpreadsheetsValuesGetRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,6 +167,7 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public SheetsSpreadsheetsValuesGetRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -162,9 +178,14 @@ public class SheetsSpreadsheetsValuesGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=valueRenderOption")
     public SheetsSpreadsheetsValuesGetValueRenderOptionEnum valueRenderOption;
+
     public SheetsSpreadsheetsValuesGetRequest withValueRenderOption(SheetsSpreadsheetsValuesGetValueRenderOptionEnum valueRenderOption) {
         this.valueRenderOption = valueRenderOption;
         return this;
     }
     
+    public SheetsSpreadsheetsValuesGetRequest(@JsonProperty("range") String range, @JsonProperty("spreadsheetId") String spreadsheetId) {
+        this.range = range;
+        this.spreadsheetId = spreadsheetId;
+  }
 }

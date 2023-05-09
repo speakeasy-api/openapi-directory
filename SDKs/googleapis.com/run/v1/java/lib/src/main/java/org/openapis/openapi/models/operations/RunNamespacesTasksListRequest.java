@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RunNamespacesTasksListRequest {
@@ -12,6 +13,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public RunNamespacesTasksListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public RunNamespacesTasksListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public RunNamespacesTasksListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public RunNamespacesTasksListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=continue")
     public String continue_;
+
     public RunNamespacesTasksListRequest withContinue(String continue_) {
         this.continue_ = continue_;
         return this;
@@ -62,6 +68,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fieldSelector")
     public String fieldSelector;
+
     public RunNamespacesTasksListRequest withFieldSelector(String fieldSelector) {
         this.fieldSelector = fieldSelector;
         return this;
@@ -72,6 +79,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public RunNamespacesTasksListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeUninitialized")
     public Boolean includeUninitialized;
+
     public RunNamespacesTasksListRequest withIncludeUninitialized(Boolean includeUninitialized) {
         this.includeUninitialized = includeUninitialized;
         return this;
@@ -92,6 +101,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public RunNamespacesTasksListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=labelSelector")
     public String labelSelector;
+
     public RunNamespacesTasksListRequest withLabelSelector(String labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -112,6 +123,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public RunNamespacesTasksListRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -122,6 +134,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public RunNamespacesTasksListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -132,6 +145,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=parent")
     public String parent;
+
     public RunNamespacesTasksListRequest withParent(String parent) {
         this.parent = parent;
         return this;
@@ -142,6 +156,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public RunNamespacesTasksListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -152,6 +167,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public RunNamespacesTasksListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=resourceVersion")
     public String resourceVersion;
+
     public RunNamespacesTasksListRequest withResourceVersion(String resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
@@ -172,6 +189,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public RunNamespacesTasksListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,6 +200,7 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public RunNamespacesTasksListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -192,9 +211,13 @@ public class RunNamespacesTasksListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=watch")
     public Boolean watch;
+
     public RunNamespacesTasksListRequest withWatch(Boolean watch) {
         this.watch = watch;
         return this;
     }
     
+    public RunNamespacesTasksListRequest(@JsonProperty("parent") String parent) {
+        this.parent = parent;
+  }
 }

@@ -15,6 +15,7 @@ public class GetResourceConfigHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configurationItems")
     public ConfigurationItem[] configurationItems;
+
     public GetResourceConfigHistoryResponse withConfigurationItems(ConfigurationItem[] configurationItems) {
         this.configurationItems = configurationItems;
         return this;
@@ -23,9 +24,11 @@ public class GetResourceConfigHistoryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetResourceConfigHistoryResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetResourceConfigHistoryResponse(){}
 }

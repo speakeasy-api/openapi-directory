@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PagesSourceHash {
     @JsonProperty("branch")
     public String branch;
+
     public PagesSourceHash withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -16,9 +17,14 @@ public class PagesSourceHash {
     
     @JsonProperty("path")
     public String path;
+
     public PagesSourceHash withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public PagesSourceHash(@JsonProperty("branch") String branch, @JsonProperty("path") String path) {
+        this.branch = branch;
+        this.path = path;
+  }
 }

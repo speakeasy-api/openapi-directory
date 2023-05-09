@@ -15,6 +15,7 @@ public class DestinationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public DestinationModel withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class DestinationModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("os")
     public String os;
+
     public DestinationModel withOs(String os) {
         this.os = os;
         return this;
@@ -33,9 +35,13 @@ public class DestinationModel {
     
     @JsonProperty("url")
     public String url;
+
     public DestinationModel withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public DestinationModel(@JsonProperty("url") String url) {
+        this.url = url;
+  }
 }

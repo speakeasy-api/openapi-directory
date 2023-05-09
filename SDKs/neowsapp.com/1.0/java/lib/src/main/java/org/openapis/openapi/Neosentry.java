@@ -60,11 +60,9 @@ public class Neosentry {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSentryRiskDataResponse res = new org.openapis.openapi.models.operations.RetrieveSentryRiskDataResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSentryRiskDataResponse res = new org.openapis.openapi.models.operations.RetrieveSentryRiskDataResponse(contentType, httpRes.statusCode()) {{
             sentryObjectPagingDto = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class Neosentry {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdResponse res = new org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdResponse() {{
+        org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdResponse res = new org.openapis.openapi.models.operations.RetrieveSentryRiskDataByIdResponse(contentType, httpRes.statusCode()) {{
             sentryImpactRiskObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

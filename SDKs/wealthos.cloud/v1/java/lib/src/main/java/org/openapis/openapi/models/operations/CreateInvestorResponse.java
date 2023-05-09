@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInvestorResponse {
     
     public String contentType;
+
     public CreateInvestorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestorRootTypeForInvestorCreationResponse rootTypeForInvestorCreationResponse;
+
     public CreateInvestorResponse withRootTypeForInvestorCreationResponse(CreateInvestorRootTypeForInvestorCreationResponse rootTypeForInvestorCreationResponse) {
         this.rootTypeForInvestorCreationResponse = rootTypeForInvestorCreationResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateInvestorResponse {
     
     
     public Integer statusCode;
+
     public CreateInvestorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateInvestorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInvestorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestor400ApplicationJSON createInvestor400ApplicationJSONObject;
+
     public CreateInvestorResponse withCreateInvestor400ApplicationJSONObject(CreateInvestor400ApplicationJSON createInvestor400ApplicationJSONObject) {
         this.createInvestor400ApplicationJSONObject = createInvestor400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestor401ApplicationJSON createInvestor401ApplicationJSONObject;
+
     public CreateInvestorResponse withCreateInvestor401ApplicationJSONObject(CreateInvestor401ApplicationJSON createInvestor401ApplicationJSONObject) {
         this.createInvestor401ApplicationJSONObject = createInvestor401ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestor403ApplicationJSON createInvestor403ApplicationJSONObject;
+
     public CreateInvestorResponse withCreateInvestor403ApplicationJSONObject(CreateInvestor403ApplicationJSON createInvestor403ApplicationJSONObject) {
         this.createInvestor403ApplicationJSONObject = createInvestor403ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestor429ApplicationJSON createInvestor429ApplicationJSONObject;
+
     public CreateInvestorResponse withCreateInvestor429ApplicationJSONObject(CreateInvestor429ApplicationJSON createInvestor429ApplicationJSONObject) {
         this.createInvestor429ApplicationJSONObject = createInvestor429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class CreateInvestorResponse {
      */
     
     public CreateInvestor500ApplicationJSON createInvestor500ApplicationJSONObject;
+
     public CreateInvestorResponse withCreateInvestor500ApplicationJSONObject(CreateInvestor500ApplicationJSON createInvestor500ApplicationJSONObject) {
         this.createInvestor500ApplicationJSONObject = createInvestor500ApplicationJSONObject;
         return this;
     }
     
+    public CreateInvestorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

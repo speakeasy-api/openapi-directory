@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateSnapshotRequest {
     @JsonProperty("namespaceName")
     public String namespaceName;
+
     public CreateSnapshotRequest withNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
@@ -19,6 +20,7 @@ public class CreateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public Long retentionPeriod;
+
     public CreateSnapshotRequest withRetentionPeriod(Long retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -26,6 +28,7 @@ public class CreateSnapshotRequest {
     
     @JsonProperty("snapshotName")
     public String snapshotName;
+
     public CreateSnapshotRequest withSnapshotName(String snapshotName) {
         this.snapshotName = snapshotName;
         return this;
@@ -34,9 +37,14 @@ public class CreateSnapshotRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public CreateSnapshotRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateSnapshotRequest(@JsonProperty("namespaceName") String namespaceName, @JsonProperty("snapshotName") String snapshotName) {
+        this.namespaceName = namespaceName;
+        this.snapshotName = snapshotName;
+  }
 }

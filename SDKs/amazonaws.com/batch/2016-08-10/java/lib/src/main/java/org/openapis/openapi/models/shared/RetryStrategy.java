@@ -15,6 +15,7 @@ public class RetryStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attempts")
     public Long attempts;
+
     public RetryStrategy withAttempts(Long attempts) {
         this.attempts = attempts;
         return this;
@@ -23,9 +24,11 @@ public class RetryStrategy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evaluateOnExit")
     public EvaluateOnExit[] evaluateOnExit;
+
     public RetryStrategy withEvaluateOnExit(EvaluateOnExit[] evaluateOnExit) {
         this.evaluateOnExit = evaluateOnExit;
         return this;
     }
     
+    public RetryStrategy(){}
 }

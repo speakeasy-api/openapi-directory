@@ -20,6 +20,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaseImage")
     public String baseImage;
+
     public DescribeImageVersionResponse withBaseImage(String baseImage) {
         this.baseImage = baseImage;
         return this;
@@ -28,6 +29,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContainerImage")
     public String containerImage;
+
     public DescribeImageVersionResponse withContainerImage(String containerImage) {
         this.containerImage = containerImage;
         return this;
@@ -38,6 +40,7 @@ public class DescribeImageVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeImageVersionResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -46,6 +49,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailureReason")
     public String failureReason;
+
     public DescribeImageVersionResponse withFailureReason(String failureReason) {
         this.failureReason = failureReason;
         return this;
@@ -54,6 +58,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Horovod")
     public Boolean horovod;
+
     public DescribeImageVersionResponse withHorovod(Boolean horovod) {
         this.horovod = horovod;
         return this;
@@ -62,6 +67,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageArn")
     public String imageArn;
+
     public DescribeImageVersionResponse withImageArn(String imageArn) {
         this.imageArn = imageArn;
         return this;
@@ -70,6 +76,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageVersionArn")
     public String imageVersionArn;
+
     public DescribeImageVersionResponse withImageVersionArn(String imageVersionArn) {
         this.imageVersionArn = imageVersionArn;
         return this;
@@ -78,6 +85,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageVersionStatus")
     public ImageVersionStatusEnum imageVersionStatus;
+
     public DescribeImageVersionResponse withImageVersionStatus(ImageVersionStatusEnum imageVersionStatus) {
         this.imageVersionStatus = imageVersionStatus;
         return this;
@@ -86,6 +94,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobType")
     public JobTypeEnum jobType;
+
     public DescribeImageVersionResponse withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -96,6 +105,7 @@ public class DescribeImageVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeImageVersionResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -104,6 +114,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MLFramework")
     public String mlFramework;
+
     public DescribeImageVersionResponse withMLFramework(String mlFramework) {
         this.mlFramework = mlFramework;
         return this;
@@ -112,6 +123,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Processor")
     public ProcessorEnum processor;
+
     public DescribeImageVersionResponse withProcessor(ProcessorEnum processor) {
         this.processor = processor;
         return this;
@@ -120,6 +132,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgrammingLang")
     public String programmingLang;
+
     public DescribeImageVersionResponse withProgrammingLang(String programmingLang) {
         this.programmingLang = programmingLang;
         return this;
@@ -128,6 +141,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseNotes")
     public String releaseNotes;
+
     public DescribeImageVersionResponse withReleaseNotes(String releaseNotes) {
         this.releaseNotes = releaseNotes;
         return this;
@@ -136,6 +150,7 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VendorGuidance")
     public VendorGuidanceEnum vendorGuidance;
+
     public DescribeImageVersionResponse withVendorGuidance(VendorGuidanceEnum vendorGuidance) {
         this.vendorGuidance = vendorGuidance;
         return this;
@@ -144,9 +159,11 @@ public class DescribeImageVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public Long version;
+
     public DescribeImageVersionResponse withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public DescribeImageVersionResponse(){}
 }

@@ -981,6 +981,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnConnectionDevi
 lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnConnectionDeviceTypesVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnConnectionDeviceTypesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnConnectionDeviceTypesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnTunnelReplacementStatusActionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnTunnelReplacementStatusVersionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnTunnelReplacementStatusRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETGETVpnTunnelReplacementStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETImportClientVpnClientCertificateRevocationListActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETImportClientVpnClientCertificateRevocationListVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETImportClientVpnClientCertificateRevocationListRequest.java
@@ -1338,6 +1342,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceTransitGatewa
 lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceTransitGatewayRouteVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceTransitGatewayRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceTransitGatewayRouteResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceVpnTunnelActionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceVpnTunnelVersionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceVpnTunnelRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GETReplaceVpnTunnelResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReportInstanceStatusActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReportInstanceStatusReasonCodeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/GETReportInstanceStatusStatusEnum.java
@@ -3249,6 +3257,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnConnectionDev
 lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnConnectionDeviceTypesVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnConnectionDeviceTypesRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnConnectionDeviceTypesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnTunnelReplacementStatusActionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnTunnelReplacementStatusVersionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnTunnelReplacementStatusRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTGetVpnTunnelReplacementStatusResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTImportClientVpnClientCertificateRevocationListActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTImportClientVpnClientCertificateRevocationListVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTImportClientVpnClientCertificateRevocationListRequest.java
@@ -3649,6 +3661,10 @@ lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceTransitGatew
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceTransitGatewayRouteVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceTransitGatewayRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceTransitGatewayRouteResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceVpnTunnelActionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceVpnTunnelVersionEnum.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceVpnTunnelRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/POSTReplaceVpnTunnelResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReportInstanceStatusActionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReportInstanceStatusVersionEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/POSTReportInstanceStatusRequest.java
@@ -4772,6 +4788,8 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetVerifiedAccessGroupPolic
 lib/src/main/java/org/openapis/openapi/models/shared/GetVpnConnectionDeviceSampleConfigurationResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetVpnConnectionDeviceTypesResultVpnConnectionDeviceTypes.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetVpnConnectionDeviceTypesResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetVpnTunnelReplacementStatusResultMaintenanceDetails.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetVpnTunnelReplacementStatusResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportClientVpnClientCertificateRevocationListResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportVolumeResultConversionTaskImportInstancePlatformEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportVolumeResultConversionTaskImportInstanceVolumesImageFormatEnum.java
@@ -5080,6 +5098,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReplaceTransitGatewayRouteR
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceTransitGatewayRouteResultRouteTypeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceTransitGatewayRouteResultRoute.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceTransitGatewayRouteResult.java
+lib/src/main/java/org/openapis/openapi/models/shared/ReplaceVpnTunnelResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResetAddressAttributeResultAddressPtrRecordUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResetAddressAttributeResultAddress.java
 lib/src/main/java/org/openapis/openapi/models/shared/ResetAddressAttributeResult.java
@@ -8086,6 +8105,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetVerifiedAccessEndpointPo
 lib/src/main/java/org/openapis/openapi/models/shared/GetVerifiedAccessGroupPolicyRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetVpnConnectionDeviceSampleConfigurationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetVpnConnectionDeviceTypesRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetVpnTunnelReplacementStatusRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportClientVpnClientCertificateRevocationListRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportImageResultLicenseSpecifications.java
 lib/src/main/java/org/openapis/openapi/models/shared/ImportImageResultSnapshotDetailsUserBucket.java
@@ -8454,6 +8474,7 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReplaceNetworkAclEntryReque
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceRouteRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceRouteTableAssociationRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReplaceTransitGatewayRouteRequest.java
+lib/src/main/java/org/openapis/openapi/models/shared/ReplaceVpnTunnelRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportInstanceStatusRequestReasonCodesEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportInstanceStatusRequestStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/ReportInstanceStatusRequest.java
@@ -8973,4 +8994,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateSecurityGroupRuleDesc
 lib/src/main/java/org/openapis/openapi/models/shared/UpdateSecurityGroupRuleDescriptionsIngressRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/WithdrawByoipCidrRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

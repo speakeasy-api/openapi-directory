@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AssociateTrialComponentResponse {
@@ -12,6 +13,7 @@ public class AssociateTrialComponentResponse {
      */
     
     public org.openapis.openapi.models.shared.AssociateTrialComponentResponse associateTrialComponentResponse;
+
     public AssociateTrialComponentResponse withAssociateTrialComponentResponse(org.openapis.openapi.models.shared.AssociateTrialComponentResponse associateTrialComponentResponse) {
         this.associateTrialComponentResponse = associateTrialComponentResponse;
         return this;
@@ -19,6 +21,7 @@ public class AssociateTrialComponentResponse {
     
     
     public String contentType;
+
     public AssociateTrialComponentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class AssociateTrialComponentResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public AssociateTrialComponentResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -39,6 +43,7 @@ public class AssociateTrialComponentResponse {
      */
     
     public Object resourceNotFound;
+
     public AssociateTrialComponentResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
@@ -46,6 +51,7 @@ public class AssociateTrialComponentResponse {
     
     
     public Integer statusCode;
+
     public AssociateTrialComponentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class AssociateTrialComponentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AssociateTrialComponentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AssociateTrialComponentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

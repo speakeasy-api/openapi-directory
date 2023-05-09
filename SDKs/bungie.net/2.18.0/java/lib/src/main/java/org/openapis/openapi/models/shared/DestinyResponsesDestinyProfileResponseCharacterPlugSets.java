@@ -14,6 +14,7 @@ package org.openapis.openapi.models.shared;
 public class DestinyResponsesDestinyProfileResponseCharacterPlugSets {
     
     public java.util.Map<String, DestinyComponentsPlugSetsDestinyPlugSetsComponent> data;
+
     public DestinyResponsesDestinyProfileResponseCharacterPlugSets withData(java.util.Map<String, DestinyComponentsPlugSetsDestinyPlugSetsComponent> data) {
         this.data = data;
         return this;
@@ -24,6 +25,7 @@ public class DestinyResponsesDestinyProfileResponseCharacterPlugSets {
      */
     
     public Boolean disabled;
+
     public DestinyResponsesDestinyProfileResponseCharacterPlugSets withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -31,9 +33,11 @@ public class DestinyResponsesDestinyProfileResponseCharacterPlugSets {
     
     
     public Integer privacy;
+
     public DestinyResponsesDestinyProfileResponseCharacterPlugSets withPrivacy(Integer privacy) {
         this.privacy = privacy;
         return this;
     }
     
+    public DestinyResponsesDestinyProfileResponseCharacterPlugSets(){}
 }

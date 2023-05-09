@@ -15,6 +15,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("auth")
     public SourceAuth auth;
+
     public ProjectSource withAuth(SourceAuth auth) {
         this.auth = auth;
         return this;
@@ -23,6 +24,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildStatusConfig")
     public BuildStatusConfig buildStatusConfig;
+
     public ProjectSource withBuildStatusConfig(BuildStatusConfig buildStatusConfig) {
         this.buildStatusConfig = buildStatusConfig;
         return this;
@@ -31,6 +33,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildspec")
     public String buildspec;
+
     public ProjectSource withBuildspec(String buildspec) {
         this.buildspec = buildspec;
         return this;
@@ -39,6 +42,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitCloneDepth")
     public Long gitCloneDepth;
+
     public ProjectSource withGitCloneDepth(Long gitCloneDepth) {
         this.gitCloneDepth = gitCloneDepth;
         return this;
@@ -47,6 +51,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gitSubmodulesConfig")
     public GitSubmodulesConfig gitSubmodulesConfig;
+
     public ProjectSource withGitSubmodulesConfig(GitSubmodulesConfig gitSubmodulesConfig) {
         this.gitSubmodulesConfig = gitSubmodulesConfig;
         return this;
@@ -55,6 +60,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("insecureSsl")
     public Boolean insecureSsl;
+
     public ProjectSource withInsecureSsl(Boolean insecureSsl) {
         this.insecureSsl = insecureSsl;
         return this;
@@ -63,6 +69,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public String location;
+
     public ProjectSource withLocation(String location) {
         this.location = location;
         return this;
@@ -71,6 +78,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportBuildStatus")
     public Boolean reportBuildStatus;
+
     public ProjectSource withReportBuildStatus(Boolean reportBuildStatus) {
         this.reportBuildStatus = reportBuildStatus;
         return this;
@@ -79,6 +87,7 @@ public class ProjectSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceIdentifier")
     public String sourceIdentifier;
+
     public ProjectSource withSourceIdentifier(String sourceIdentifier) {
         this.sourceIdentifier = sourceIdentifier;
         return this;
@@ -86,9 +95,13 @@ public class ProjectSource {
     
     @JsonProperty("type")
     public SourceTypeEnum type;
+
     public ProjectSource withType(SourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ProjectSource(@JsonProperty("type") SourceTypeEnum type) {
+        this.type = type;
+  }
 }

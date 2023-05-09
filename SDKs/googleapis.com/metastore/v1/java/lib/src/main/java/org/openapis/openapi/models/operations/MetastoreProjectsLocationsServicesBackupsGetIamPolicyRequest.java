@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
@@ -12,6 +13,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -82,6 +90,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=options.requestedPolicyVersion")
     public Long optionsRequestedPolicyVersion;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withOptionsRequestedPolicyVersion(Long optionsRequestedPolicyVersion) {
         this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
         return this;
@@ -92,6 +101,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -102,6 +112,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -112,6 +123,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=resource")
     public String resource;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -122,6 +134,7 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -132,9 +145,13 @@ public class MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public MetastoreProjectsLocationsServicesBackupsGetIamPolicyRequest(@JsonProperty("resource") String resource) {
+        this.resource = resource;
+  }
 }

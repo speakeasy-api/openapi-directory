@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeVerifiedAccessTrustProvidersRequestFilters {
     
     public String name;
+
     public DescribeVerifiedAccessTrustProvidersRequestFilters withName(String name) {
         this.name = name;
         return this;
@@ -19,9 +20,11 @@ public class DescribeVerifiedAccessTrustProvidersRequestFilters {
     
     
     public String[] values;
+
     public DescribeVerifiedAccessTrustProvidersRequestFilters withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public DescribeVerifiedAccessTrustProvidersRequestFilters(){}
 }

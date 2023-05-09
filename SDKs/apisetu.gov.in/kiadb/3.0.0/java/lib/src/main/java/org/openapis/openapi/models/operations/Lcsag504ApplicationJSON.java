@@ -15,6 +15,7 @@ public class Lcsag504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Lcsag504ApplicationJSONErrorEnum error;
+
     public Lcsag504ApplicationJSON withError(Lcsag504ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Lcsag504ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Lcsag504ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Lcsag504ApplicationJSON withErrorDescription(Lcsag504ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Lcsag504ApplicationJSON(){}
 }

@@ -20,6 +20,7 @@ public class MessageInput {
     @JsonProperty("clientId")
     @SpeakeasyMetadata("form:name=clientId")
     public String clientId;
+
     public MessageInput withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -32,6 +33,7 @@ public class MessageInput {
     @JsonProperty("connectionId")
     @SpeakeasyMetadata("form:name=connectionId")
     public String connectionId;
+
     public MessageInput withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -44,6 +46,7 @@ public class MessageInput {
     @JsonProperty("data")
     @SpeakeasyMetadata("form:name=data")
     public String data;
+
     public MessageInput withData(String data) {
         this.data = data;
         return this;
@@ -56,6 +59,7 @@ public class MessageInput {
     @JsonProperty("encoding")
     @SpeakeasyMetadata("form:name=encoding")
     public String encoding;
+
     public MessageInput withEncoding(String encoding) {
         this.encoding = encoding;
         return this;
@@ -68,6 +72,7 @@ public class MessageInput {
     @JsonProperty("extras")
     @SpeakeasyMetadata("form:name=extras,json")
     public Extras extras;
+
     public MessageInput withExtras(Extras extras) {
         this.extras = extras;
         return this;
@@ -80,9 +85,11 @@ public class MessageInput {
     @JsonProperty("name")
     @SpeakeasyMetadata("form:name=name")
     public String name;
+
     public MessageInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public MessageInput(){}
 }

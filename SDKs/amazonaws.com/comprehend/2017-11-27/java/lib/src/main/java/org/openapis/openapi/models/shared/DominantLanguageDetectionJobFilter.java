@@ -20,6 +20,7 @@ public class DominantLanguageDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public DominantLanguageDetectionJobFilter withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -28,6 +29,7 @@ public class DominantLanguageDetectionJobFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobStatus")
     public JobStatusEnum jobStatus;
+
     public DominantLanguageDetectionJobFilter withJobStatus(JobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -38,6 +40,7 @@ public class DominantLanguageDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeAfter")
     public OffsetDateTime submitTimeAfter;
+
     public DominantLanguageDetectionJobFilter withSubmitTimeAfter(OffsetDateTime submitTimeAfter) {
         this.submitTimeAfter = submitTimeAfter;
         return this;
@@ -48,9 +51,11 @@ public class DominantLanguageDetectionJobFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("SubmitTimeBefore")
     public OffsetDateTime submitTimeBefore;
+
     public DominantLanguageDetectionJobFilter withSubmitTimeBefore(OffsetDateTime submitTimeBefore) {
         this.submitTimeBefore = submitTimeBefore;
         return this;
     }
     
+    public DominantLanguageDetectionJobFilter(){}
 }

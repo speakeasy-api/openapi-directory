@@ -4,17 +4,32 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ValueMappings - Represents the data binding configuration for a value map.
  */
 public class ValueMappings {
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("bindingProperties")
+    public java.util.Map<String, FormInputBindingPropertiesValue> bindingProperties;
+
+    public ValueMappings withBindingProperties(java.util.Map<String, FormInputBindingPropertiesValue> bindingProperties) {
+        this.bindingProperties = bindingProperties;
+        return this;
+    }
+    
     @JsonProperty("values")
     public ValueMapping[] values;
+
     public ValueMappings withValues(ValueMapping[] values) {
         this.values = values;
         return this;
     }
     
+    public ValueMappings(@JsonProperty("values") ValueMapping[] values) {
+        this.values = values;
+  }
 }

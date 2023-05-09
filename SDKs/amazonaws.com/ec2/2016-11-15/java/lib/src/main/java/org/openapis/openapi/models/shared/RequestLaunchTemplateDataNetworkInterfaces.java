@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RequestLaunchTemplateDataNetworkInterfaces {
     
     public Boolean associateCarrierIpAddress;
+
     public RequestLaunchTemplateDataNetworkInterfaces withAssociateCarrierIpAddress(Boolean associateCarrierIpAddress) {
         this.associateCarrierIpAddress = associateCarrierIpAddress;
         return this;
@@ -19,6 +20,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Boolean associatePublicIpAddress;
+
     public RequestLaunchTemplateDataNetworkInterfaces withAssociatePublicIpAddress(Boolean associatePublicIpAddress) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         return this;
@@ -26,6 +28,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Boolean deleteOnTermination;
+
     public RequestLaunchTemplateDataNetworkInterfaces withDeleteOnTermination(Boolean deleteOnTermination) {
         this.deleteOnTermination = deleteOnTermination;
         return this;
@@ -33,6 +36,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String description;
+
     public RequestLaunchTemplateDataNetworkInterfaces withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +44,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long deviceIndex;
+
     public RequestLaunchTemplateDataNetworkInterfaces withDeviceIndex(Long deviceIndex) {
         this.deviceIndex = deviceIndex;
         return this;
@@ -47,6 +52,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String[] groups;
+
     public RequestLaunchTemplateDataNetworkInterfaces withGroups(String[] groups) {
         this.groups = groups;
         return this;
@@ -54,6 +60,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String interfaceType;
+
     public RequestLaunchTemplateDataNetworkInterfaces withInterfaceType(String interfaceType) {
         this.interfaceType = interfaceType;
         return this;
@@ -61,6 +68,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv4PrefixCount;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv4PrefixCount(Long ipv4PrefixCount) {
         this.ipv4PrefixCount = ipv4PrefixCount;
         return this;
@@ -68,6 +76,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public RequestLaunchTemplateDataNetworkInterfacesIpv4Prefixes[] ipv4Prefixes;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv4Prefixes(RequestLaunchTemplateDataNetworkInterfacesIpv4Prefixes[] ipv4Prefixes) {
         this.ipv4Prefixes = ipv4Prefixes;
         return this;
@@ -75,6 +84,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv6AddressCount;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv6AddressCount(Long ipv6AddressCount) {
         this.ipv6AddressCount = ipv6AddressCount;
         return this;
@@ -82,6 +92,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public InstanceIpv6AddressListRequest[] ipv6Addresses;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv6Addresses(InstanceIpv6AddressListRequest[] ipv6Addresses) {
         this.ipv6Addresses = ipv6Addresses;
         return this;
@@ -89,6 +100,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long ipv6PrefixCount;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv6PrefixCount(Long ipv6PrefixCount) {
         this.ipv6PrefixCount = ipv6PrefixCount;
         return this;
@@ -96,6 +108,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public RequestLaunchTemplateDataNetworkInterfacesIpv6Prefixes[] ipv6Prefixes;
+
     public RequestLaunchTemplateDataNetworkInterfaces withIpv6Prefixes(RequestLaunchTemplateDataNetworkInterfacesIpv6Prefixes[] ipv6Prefixes) {
         this.ipv6Prefixes = ipv6Prefixes;
         return this;
@@ -103,6 +116,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long networkCardIndex;
+
     public RequestLaunchTemplateDataNetworkInterfaces withNetworkCardIndex(Long networkCardIndex) {
         this.networkCardIndex = networkCardIndex;
         return this;
@@ -110,6 +124,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String networkInterfaceId;
+
     public RequestLaunchTemplateDataNetworkInterfaces withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -117,6 +132,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String privateIpAddress;
+
     public RequestLaunchTemplateDataNetworkInterfaces withPrivateIpAddress(String privateIpAddress) {
         this.privateIpAddress = privateIpAddress;
         return this;
@@ -124,6 +140,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public PrivateIpAddressSpecificationList[] privateIpAddresses;
+
     public RequestLaunchTemplateDataNetworkInterfaces withPrivateIpAddresses(PrivateIpAddressSpecificationList[] privateIpAddresses) {
         this.privateIpAddresses = privateIpAddresses;
         return this;
@@ -131,6 +148,7 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public Long secondaryPrivateIpAddressCount;
+
     public RequestLaunchTemplateDataNetworkInterfaces withSecondaryPrivateIpAddressCount(Long secondaryPrivateIpAddressCount) {
         this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
         return this;
@@ -138,9 +156,11 @@ public class RequestLaunchTemplateDataNetworkInterfaces {
     
     
     public String subnetId;
+
     public RequestLaunchTemplateDataNetworkInterfaces withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
     }
     
+    public RequestLaunchTemplateDataNetworkInterfaces(){}
 }

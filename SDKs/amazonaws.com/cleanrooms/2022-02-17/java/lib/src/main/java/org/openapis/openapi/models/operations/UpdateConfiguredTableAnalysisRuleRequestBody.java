@@ -12,9 +12,13 @@ public class UpdateConfiguredTableAnalysisRuleRequestBody {
      */
     @JsonProperty("analysisRulePolicy")
     public UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy;
+
     public UpdateConfiguredTableAnalysisRuleRequestBody withAnalysisRulePolicy(UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy) {
         this.analysisRulePolicy = analysisRulePolicy;
         return this;
     }
     
+    public UpdateConfiguredTableAnalysisRuleRequestBody(@JsonProperty("analysisRulePolicy") UpdateConfiguredTableAnalysisRuleRequestBodyAnalysisRulePolicy analysisRulePolicy) {
+        this.analysisRulePolicy = analysisRulePolicy;
+  }
 }

@@ -15,9 +15,11 @@ public class DescribeIcd10CMInferenceJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobProperties")
     public ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties;
+
     public DescribeIcd10CMInferenceJobResponse withComprehendMedicalAsyncJobProperties(ComprehendMedicalAsyncJobProperties comprehendMedicalAsyncJobProperties) {
         this.comprehendMedicalAsyncJobProperties = comprehendMedicalAsyncJobProperties;
         return this;
     }
     
+    public DescribeIcd10CMInferenceJobResponse(){}
 }

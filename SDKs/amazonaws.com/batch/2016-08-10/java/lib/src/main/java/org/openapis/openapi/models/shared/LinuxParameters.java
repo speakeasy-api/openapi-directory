@@ -15,6 +15,7 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("devices")
     public Device[] devices;
+
     public LinuxParameters withDevices(Device[] devices) {
         this.devices = devices;
         return this;
@@ -23,6 +24,7 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("initProcessEnabled")
     public Boolean initProcessEnabled;
+
     public LinuxParameters withInitProcessEnabled(Boolean initProcessEnabled) {
         this.initProcessEnabled = initProcessEnabled;
         return this;
@@ -31,6 +33,7 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSwap")
     public Long maxSwap;
+
     public LinuxParameters withMaxSwap(Long maxSwap) {
         this.maxSwap = maxSwap;
         return this;
@@ -39,6 +42,7 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedMemorySize")
     public Long sharedMemorySize;
+
     public LinuxParameters withSharedMemorySize(Long sharedMemorySize) {
         this.sharedMemorySize = sharedMemorySize;
         return this;
@@ -47,6 +51,7 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("swappiness")
     public Long swappiness;
+
     public LinuxParameters withSwappiness(Long swappiness) {
         this.swappiness = swappiness;
         return this;
@@ -55,9 +60,11 @@ public class LinuxParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tmpfs")
     public Tmpfs[] tmpfs;
+
     public LinuxParameters withTmpfs(Tmpfs[] tmpfs) {
         this.tmpfs = tmpfs;
         return this;
     }
     
+    public LinuxParameters(){}
 }

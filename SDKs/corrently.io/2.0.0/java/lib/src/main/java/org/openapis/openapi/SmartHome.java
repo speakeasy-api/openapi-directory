@@ -61,11 +61,9 @@ public class SmartHome {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GsiBesthourResponse res = new org.openapis.openapi.models.operations.GsiBesthourResponse() {{
+        org.openapis.openapi.models.operations.GsiBesthourResponse res = new org.openapis.openapi.models.operations.GsiBesthourResponse(contentType, httpRes.statusCode()) {{
             gsiBesthour200ApplicationJSONBoolean = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

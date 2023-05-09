@@ -15,6 +15,7 @@ public class PutRuleGroupsNamespaceRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public PutRuleGroupsNamespaceRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,9 +26,13 @@ public class PutRuleGroupsNamespaceRequestBody {
      */
     @JsonProperty("data")
     public String data;
+
     public PutRuleGroupsNamespaceRequestBody withData(String data) {
         this.data = data;
         return this;
     }
     
+    public PutRuleGroupsNamespaceRequestBody(@JsonProperty("data") String data) {
+        this.data = data;
+  }
 }

@@ -18,9 +18,11 @@ public class UpdateSvmActiveDirectoryConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SelfManagedActiveDirectoryConfiguration")
     public SelfManagedActiveDirectoryConfigurationUpdates selfManagedActiveDirectoryConfiguration;
+
     public UpdateSvmActiveDirectoryConfiguration withSelfManagedActiveDirectoryConfiguration(SelfManagedActiveDirectoryConfigurationUpdates selfManagedActiveDirectoryConfiguration) {
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
         return this;
     }
     
+    public UpdateSvmActiveDirectoryConfiguration(){}
 }

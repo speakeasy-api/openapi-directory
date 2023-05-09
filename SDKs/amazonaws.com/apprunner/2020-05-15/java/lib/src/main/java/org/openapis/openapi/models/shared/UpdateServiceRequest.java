@@ -12,6 +12,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingConfigurationArn")
     public String autoScalingConfigurationArn;
+
     public UpdateServiceRequest withAutoScalingConfigurationArn(String autoScalingConfigurationArn) {
         this.autoScalingConfigurationArn = autoScalingConfigurationArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HealthCheckConfiguration")
     public HealthCheckConfiguration healthCheckConfiguration;
+
     public UpdateServiceRequest withHealthCheckConfiguration(HealthCheckConfiguration healthCheckConfiguration) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceConfiguration")
     public InstanceConfiguration instanceConfiguration;
+
     public UpdateServiceRequest withInstanceConfiguration(InstanceConfiguration instanceConfiguration) {
         this.instanceConfiguration = instanceConfiguration;
         return this;
@@ -36,6 +39,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkConfiguration")
     public NetworkConfiguration networkConfiguration;
+
     public UpdateServiceRequest withNetworkConfiguration(NetworkConfiguration networkConfiguration) {
         this.networkConfiguration = networkConfiguration;
         return this;
@@ -44,6 +48,7 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObservabilityConfiguration")
     public ServiceObservabilityConfiguration observabilityConfiguration;
+
     public UpdateServiceRequest withObservabilityConfiguration(ServiceObservabilityConfiguration observabilityConfiguration) {
         this.observabilityConfiguration = observabilityConfiguration;
         return this;
@@ -51,6 +56,7 @@ public class UpdateServiceRequest {
     
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public UpdateServiceRequest withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -59,9 +65,13 @@ public class UpdateServiceRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceConfiguration")
     public SourceConfiguration sourceConfiguration;
+
     public UpdateServiceRequest withSourceConfiguration(SourceConfiguration sourceConfiguration) {
         this.sourceConfiguration = sourceConfiguration;
         return this;
     }
     
+    public UpdateServiceRequest(@JsonProperty("ServiceArn") String serviceArn) {
+        this.serviceArn = serviceArn;
+  }
 }

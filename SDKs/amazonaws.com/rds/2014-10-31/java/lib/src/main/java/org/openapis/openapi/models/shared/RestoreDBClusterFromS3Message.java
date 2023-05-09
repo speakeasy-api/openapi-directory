@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RestoreDBClusterFromS3Message {
     
     public String[] availabilityZones;
+
     public RestoreDBClusterFromS3Message withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -16,6 +17,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Long backtrackWindow;
+
     public RestoreDBClusterFromS3Message withBacktrackWindow(Long backtrackWindow) {
         this.backtrackWindow = backtrackWindow;
         return this;
@@ -23,6 +25,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Long backupRetentionPeriod;
+
     public RestoreDBClusterFromS3Message withBackupRetentionPeriod(Long backupRetentionPeriod) {
         this.backupRetentionPeriod = backupRetentionPeriod;
         return this;
@@ -30,6 +33,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String characterSetName;
+
     public RestoreDBClusterFromS3Message withCharacterSetName(String characterSetName) {
         this.characterSetName = characterSetName;
         return this;
@@ -37,6 +41,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Boolean copyTagsToSnapshot;
+
     public RestoreDBClusterFromS3Message withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -44,6 +49,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String dbClusterIdentifier;
+
     public RestoreDBClusterFromS3Message withDBClusterIdentifier(String dbClusterIdentifier) {
         this.dbClusterIdentifier = dbClusterIdentifier;
         return this;
@@ -51,6 +57,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String dbClusterParameterGroupName;
+
     public RestoreDBClusterFromS3Message withDBClusterParameterGroupName(String dbClusterParameterGroupName) {
         this.dbClusterParameterGroupName = dbClusterParameterGroupName;
         return this;
@@ -58,6 +65,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBClusterFromS3Message withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -65,6 +73,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String databaseName;
+
     public RestoreDBClusterFromS3Message withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -72,6 +81,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Boolean deletionProtection;
+
     public RestoreDBClusterFromS3Message withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -79,6 +89,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String domain;
+
     public RestoreDBClusterFromS3Message withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -86,6 +97,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String domainIAMRoleName;
+
     public RestoreDBClusterFromS3Message withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -93,6 +105,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public RestoreDBClusterFromS3Message withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -100,6 +113,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public RestoreDBClusterFromS3Message withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -107,6 +121,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String engine;
+
     public RestoreDBClusterFromS3Message withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -114,6 +129,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String engineVersion;
+
     public RestoreDBClusterFromS3Message withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -121,6 +137,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String kmsKeyId;
+
     public RestoreDBClusterFromS3Message withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -128,6 +145,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Boolean manageMasterUserPassword;
+
     public RestoreDBClusterFromS3Message withManageMasterUserPassword(Boolean manageMasterUserPassword) {
         this.manageMasterUserPassword = manageMasterUserPassword;
         return this;
@@ -135,6 +153,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String masterUserPassword;
+
     public RestoreDBClusterFromS3Message withMasterUserPassword(String masterUserPassword) {
         this.masterUserPassword = masterUserPassword;
         return this;
@@ -142,6 +161,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String masterUserSecretKmsKeyId;
+
     public RestoreDBClusterFromS3Message withMasterUserSecretKmsKeyId(String masterUserSecretKmsKeyId) {
         this.masterUserSecretKmsKeyId = masterUserSecretKmsKeyId;
         return this;
@@ -149,6 +169,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String masterUsername;
+
     public RestoreDBClusterFromS3Message withMasterUsername(String masterUsername) {
         this.masterUsername = masterUsername;
         return this;
@@ -156,6 +177,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String networkType;
+
     public RestoreDBClusterFromS3Message withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -163,6 +185,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String optionGroupName;
+
     public RestoreDBClusterFromS3Message withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -170,6 +193,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Long port;
+
     public RestoreDBClusterFromS3Message withPort(Long port) {
         this.port = port;
         return this;
@@ -177,6 +201,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String preferredBackupWindow;
+
     public RestoreDBClusterFromS3Message withPreferredBackupWindow(String preferredBackupWindow) {
         this.preferredBackupWindow = preferredBackupWindow;
         return this;
@@ -184,6 +209,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String preferredMaintenanceWindow;
+
     public RestoreDBClusterFromS3Message withPreferredMaintenanceWindow(String preferredMaintenanceWindow) {
         this.preferredMaintenanceWindow = preferredMaintenanceWindow;
         return this;
@@ -191,6 +217,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String s3BucketName;
+
     public RestoreDBClusterFromS3Message withS3BucketName(String s3BucketName) {
         this.s3BucketName = s3BucketName;
         return this;
@@ -198,6 +225,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String s3IngestionRoleArn;
+
     public RestoreDBClusterFromS3Message withS3IngestionRoleArn(String s3IngestionRoleArn) {
         this.s3IngestionRoleArn = s3IngestionRoleArn;
         return this;
@@ -205,6 +233,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String s3Prefix;
+
     public RestoreDBClusterFromS3Message withS3Prefix(String s3Prefix) {
         this.s3Prefix = s3Prefix;
         return this;
@@ -215,6 +244,7 @@ public class RestoreDBClusterFromS3Message {
      */
     
     public ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration;
+
     public RestoreDBClusterFromS3Message withServerlessV2ScalingConfiguration(ServerlessV2ScalingConfiguration serverlessV2ScalingConfiguration) {
         this.serverlessV2ScalingConfiguration = serverlessV2ScalingConfiguration;
         return this;
@@ -222,6 +252,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String sourceEngine;
+
     public RestoreDBClusterFromS3Message withSourceEngine(String sourceEngine) {
         this.sourceEngine = sourceEngine;
         return this;
@@ -229,6 +260,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String sourceEngineVersion;
+
     public RestoreDBClusterFromS3Message withSourceEngineVersion(String sourceEngineVersion) {
         this.sourceEngineVersion = sourceEngineVersion;
         return this;
@@ -236,6 +268,7 @@ public class RestoreDBClusterFromS3Message {
     
     
     public Boolean storageEncrypted;
+
     public RestoreDBClusterFromS3Message withStorageEncrypted(Boolean storageEncrypted) {
         this.storageEncrypted = storageEncrypted;
         return this;
@@ -246,6 +279,7 @@ public class RestoreDBClusterFromS3Message {
      */
     
     public TagList[] tags;
+
     public RestoreDBClusterFromS3Message withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -253,9 +287,19 @@ public class RestoreDBClusterFromS3Message {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreDBClusterFromS3Message withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreDBClusterFromS3Message(@JsonProperty("DBClusterIdentifier") String dbClusterIdentifier, @JsonProperty("Engine") String engine, @JsonProperty("MasterUsername") String masterUsername, @JsonProperty("S3BucketName") String s3BucketName, @JsonProperty("S3IngestionRoleArn") String s3IngestionRoleArn, @JsonProperty("SourceEngine") String sourceEngine, @JsonProperty("SourceEngineVersion") String sourceEngineVersion) {
+        this.dbClusterIdentifier = dbClusterIdentifier;
+        this.engine = engine;
+        this.masterUsername = masterUsername;
+        this.s3BucketName = s3BucketName;
+        this.s3IngestionRoleArn = s3IngestionRoleArn;
+        this.sourceEngine = sourceEngine;
+        this.sourceEngineVersion = sourceEngineVersion;
+  }
 }

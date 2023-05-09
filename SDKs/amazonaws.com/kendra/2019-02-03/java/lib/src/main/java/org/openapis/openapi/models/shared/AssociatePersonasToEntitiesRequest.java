@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssociatePersonasToEntitiesRequest {
     @JsonProperty("Id")
     public String id;
+
     public AssociatePersonasToEntitiesRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class AssociatePersonasToEntitiesRequest {
     
     @JsonProperty("IndexId")
     public String indexId;
+
     public AssociatePersonasToEntitiesRequest withIndexId(String indexId) {
         this.indexId = indexId;
         return this;
@@ -23,9 +25,15 @@ public class AssociatePersonasToEntitiesRequest {
     
     @JsonProperty("Personas")
     public EntityPersonaConfiguration[] personas;
+
     public AssociatePersonasToEntitiesRequest withPersonas(EntityPersonaConfiguration[] personas) {
         this.personas = personas;
         return this;
     }
     
+    public AssociatePersonasToEntitiesRequest(@JsonProperty("Id") String id, @JsonProperty("IndexId") String indexId, @JsonProperty("Personas") EntityPersonaConfiguration[] personas) {
+        this.id = id;
+        this.indexId = indexId;
+        this.personas = personas;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConnectInstanceConfigResponse {
@@ -12,6 +13,7 @@ public class GetConnectInstanceConfigResponse {
      */
     
     public Object accessDeniedException;
+
     public GetConnectInstanceConfigResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetConnectInstanceConfigResponse {
     
     
     public String contentType;
+
     public GetConnectInstanceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetConnectInstanceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.GetConnectInstanceConfigResponse getConnectInstanceConfigResponse;
+
     public GetConnectInstanceConfigResponse withGetConnectInstanceConfigResponse(org.openapis.openapi.models.shared.GetConnectInstanceConfigResponse getConnectInstanceConfigResponse) {
         this.getConnectInstanceConfigResponse = getConnectInstanceConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetConnectInstanceConfigResponse {
      */
     
     public Object internalServerException;
+
     public GetConnectInstanceConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class GetConnectInstanceConfigResponse {
     
     
     public Integer statusCode;
+
     public GetConnectInstanceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetConnectInstanceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConnectInstanceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class GetConnectInstanceConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetConnectInstanceConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class GetConnectInstanceConfigResponse {
      */
     
     public Object validationException;
+
     public GetConnectInstanceConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetConnectInstanceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

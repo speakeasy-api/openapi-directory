@@ -39,7 +39,9 @@ public class VeteranConfirmationStatus {
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.GetVeteranStatusResponse getVeteranStatus(org.openapis.openapi.models.shared.VeteranStatusRequest request, org.openapis.openapi.models.operations.GetVeteranStatusSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/status");
@@ -60,13 +62,11 @@ public class VeteranConfirmationStatus {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVeteranStatusResponse res = new org.openapis.openapi.models.operations.GetVeteranStatusResponse() {{
+        org.openapis.openapi.models.operations.GetVeteranStatusResponse res = new org.openapis.openapi.models.operations.GetVeteranStatusResponse(contentType, httpRes.statusCode()) {{
             veteranStatusConfirmation = null;
             apiError = null;
             authorizationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

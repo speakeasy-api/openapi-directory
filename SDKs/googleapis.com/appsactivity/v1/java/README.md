@@ -16,11 +16,10 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.AppsactivityActivitiesListSecurity;
 import org.openapis.openapi.models.operations.AppsactivityActivitiesListGroupingStrategyEnum;
 import org.openapis.openapi.models.operations.AppsactivityActivitiesListRequest;
 import org.openapis.openapi.models.operations.AppsactivityActivitiesListResponse;
+import org.openapis.openapi.models.operations.AppsactivityActivitiesListSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 
 public class Application {
@@ -30,33 +29,35 @@ public class Application {
                 .build();
 
             AppsactivityActivitiesListRequest req = new AppsactivityActivitiesListRequest() {{
-                alt = "json";
+                alt = AltEnum.JSON;
                 driveAncestorId = "corrupti";
                 driveFileId = "provident";
                 fields = "distinctio";
-                groupingStrategy = "none";
+                groupingStrategy = AppsactivityActivitiesListGroupingStrategyEnum.NONE;
                 key = "unde";
                 oauthToken = "nulla";
-                pageSize = 544883;
+                pageSize = 544883L;
                 pageToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 source = "error";
                 userId = "deserunt";
                 userIp = "suscipit";
-            }}            
+            }};            
 
-            AppsactivityActivitiesListResponse res = sdk.activities.appsactivityActivitiesList(req, new AppsactivityActivitiesListSecurity() {{
+            AppsactivityActivitiesListResponse res = sdk.activities.appsactivityActivitiesList(req, new AppsactivityActivitiesListSecurity("iure", "magnam") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.listActivitiesResponse.isPresent()) {
+            if (res.listActivitiesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -64,9 +65,9 @@ public class Application {
 ## Available Resources and Operations
 
 
-### activities
+### [activities](docs/activities/README.md)
 
-* `appsactivityActivitiesList` - Returns a list of activities visible to the current logged in user. Visible activities are determined by the visibility settings of the object that was acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is scoped to activities from a given Google service using the source parameter.
+* [appsactivityActivitiesList](docs/activities/README.md#appsactivityactivitieslist) - Returns a list of activities visible to the current logged in user. Visible activities are determined by the visibility settings of the object that was acted on, e.g. Drive files a user can see. An activity is a record of past events. Multiple events may be merged if they are similar. A request is scoped to activities from a given Google service using the source parameter.
 <!-- End SDK Available Operations -->
 
 ### Maturity

@@ -18,6 +18,7 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMs")
     public String durationMs;
+
     public MaintenanceWindow withDurationMs(String durationMs) {
         this.durationMs = durationMs;
         return this;
@@ -29,9 +30,11 @@ public class MaintenanceWindow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTimeAfterMidnightMs")
     public String startTimeAfterMidnightMs;
+
     public MaintenanceWindow withStartTimeAfterMidnightMs(String startTimeAfterMidnightMs) {
         this.startTimeAfterMidnightMs = startTimeAfterMidnightMs;
         return this;
     }
     
+    public MaintenanceWindow(){}
 }

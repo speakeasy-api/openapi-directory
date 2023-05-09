@@ -15,6 +15,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public UpdatePricingRuleOutput withArn(String arn) {
         this.arn = arn;
         return this;
@@ -23,6 +24,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociatedPricingPlanCount")
     public Long associatedPricingPlanCount;
+
     public UpdatePricingRuleOutput withAssociatedPricingPlanCount(Long associatedPricingPlanCount) {
         this.associatedPricingPlanCount = associatedPricingPlanCount;
         return this;
@@ -31,6 +33,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingEntity")
     public String billingEntity;
+
     public UpdatePricingRuleOutput withBillingEntity(String billingEntity) {
         this.billingEntity = billingEntity;
         return this;
@@ -39,6 +42,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdatePricingRuleOutput withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedTime")
     public Long lastModifiedTime;
+
     public UpdatePricingRuleOutput withLastModifiedTime(Long lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -55,6 +60,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModifierPercentage")
     public Double modifierPercentage;
+
     public UpdatePricingRuleOutput withModifierPercentage(Double modifierPercentage) {
         this.modifierPercentage = modifierPercentage;
         return this;
@@ -63,6 +69,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdatePricingRuleOutput withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Operation")
     public String operation;
+
     public UpdatePricingRuleOutput withOperation(String operation) {
         this.operation = operation;
         return this;
@@ -79,6 +87,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Scope")
     public PricingRuleScopeEnum scope;
+
     public UpdatePricingRuleOutput withScope(PricingRuleScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -87,6 +96,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Service")
     public String service;
+
     public UpdatePricingRuleOutput withService(String service) {
         this.service = service;
         return this;
@@ -95,6 +105,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tiering")
     public UpdateTieringInput tiering;
+
     public UpdatePricingRuleOutput withTiering(UpdateTieringInput tiering) {
         this.tiering = tiering;
         return this;
@@ -103,6 +114,7 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public PricingRuleTypeEnum type;
+
     public UpdatePricingRuleOutput withType(PricingRuleTypeEnum type) {
         this.type = type;
         return this;
@@ -111,9 +123,11 @@ public class UpdatePricingRuleOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageType")
     public String usageType;
+
     public UpdatePricingRuleOutput withUsageType(String usageType) {
         this.usageType = usageType;
         return this;
     }
     
+    public UpdatePricingRuleOutput(){}
 }

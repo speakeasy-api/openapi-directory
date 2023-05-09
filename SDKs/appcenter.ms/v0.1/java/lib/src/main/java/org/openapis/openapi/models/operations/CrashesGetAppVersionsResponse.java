@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CrashesGetAppVersionsResponse {
     
     public String contentType;
+
     public CrashesGetAppVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class CrashesGetAppVersionsResponse {
     
     
     public Integer statusCode;
+
     public CrashesGetAppVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class CrashesGetAppVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CrashesGetAppVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class CrashesGetAppVersionsResponse {
      */
     
     public CrashesGetAppVersions200ApplicationJSON[] crashesGetAppVersions200ApplicationJSONObjects;
+
     public CrashesGetAppVersionsResponse withCrashesGetAppVersions200ApplicationJSONObjects(CrashesGetAppVersions200ApplicationJSON[] crashesGetAppVersions200ApplicationJSONObjects) {
         this.crashesGetAppVersions200ApplicationJSONObjects = crashesGetAppVersions200ApplicationJSONObjects;
         return this;
@@ -43,9 +48,14 @@ public class CrashesGetAppVersionsResponse {
      */
     
     public CrashesGetAppVersionsDefaultApplicationJSON crashesGetAppVersionsDefaultApplicationJSONObject;
+
     public CrashesGetAppVersionsResponse withCrashesGetAppVersionsDefaultApplicationJSONObject(CrashesGetAppVersionsDefaultApplicationJSON crashesGetAppVersionsDefaultApplicationJSONObject) {
         this.crashesGetAppVersionsDefaultApplicationJSONObject = crashesGetAppVersionsDefaultApplicationJSONObject;
         return this;
     }
     
+    public CrashesGetAppVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

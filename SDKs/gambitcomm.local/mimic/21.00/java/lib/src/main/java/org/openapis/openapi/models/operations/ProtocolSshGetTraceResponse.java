@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ProtocolSshGetTraceResponse {
@@ -12,6 +13,7 @@ public class ProtocolSshGetTraceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfigSSH configSSH;
+
     public ProtocolSshGetTraceResponse withConfigSSH(org.openapis.openapi.models.shared.ConfigSSH configSSH) {
         this.configSSH = configSSH;
         return this;
@@ -19,6 +21,7 @@ public class ProtocolSshGetTraceResponse {
     
     
     public String contentType;
+
     public ProtocolSshGetTraceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class ProtocolSshGetTraceResponse {
     
     
     public Integer statusCode;
+
     public ProtocolSshGetTraceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ProtocolSshGetTraceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ProtocolSshGetTraceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ProtocolSshGetTraceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

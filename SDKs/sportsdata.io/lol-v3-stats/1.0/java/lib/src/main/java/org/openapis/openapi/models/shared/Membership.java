@@ -12,6 +12,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Active")
     public Boolean active;
+
     public Membership withActive(Boolean active) {
         this.active = active;
         return this;
@@ -20,6 +21,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndDate")
     public String endDate;
+
     public Membership withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -28,6 +30,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MembershipId")
     public Long membershipId;
+
     public Membership withMembershipId(Long membershipId) {
         this.membershipId = membershipId;
         return this;
@@ -36,6 +39,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerId")
     public Long playerId;
+
     public Membership withPlayerId(Long playerId) {
         this.playerId = playerId;
         return this;
@@ -44,6 +48,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerName")
     public String playerName;
+
     public Membership withPlayerName(String playerName) {
         this.playerName = playerName;
         return this;
@@ -52,6 +57,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartDate")
     public String startDate;
+
     public Membership withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -60,6 +66,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamArea")
     public String teamArea;
+
     public Membership withTeamArea(String teamArea) {
         this.teamArea = teamArea;
         return this;
@@ -68,6 +75,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamId")
     public Long teamId;
+
     public Membership withTeamId(Long teamId) {
         this.teamId = teamId;
         return this;
@@ -76,6 +84,7 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamName")
     public String teamName;
+
     public Membership withTeamName(String teamName) {
         this.teamName = teamName;
         return this;
@@ -84,9 +93,11 @@ public class Membership {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Updated")
     public String updated;
+
     public Membership withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public Membership(){}
 }

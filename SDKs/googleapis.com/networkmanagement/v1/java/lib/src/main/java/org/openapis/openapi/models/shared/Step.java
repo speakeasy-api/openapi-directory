@@ -18,6 +18,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("abort")
     public AbortInfo abort;
+
     public Step withAbort(AbortInfo abort) {
         this.abort = abort;
         return this;
@@ -29,6 +30,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngineVersion")
     public AppEngineVersionInfo appEngineVersion;
+
     public Step withAppEngineVersion(AppEngineVersionInfo appEngineVersion) {
         this.appEngineVersion = appEngineVersion;
         return this;
@@ -40,6 +42,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("causesDrop")
     public Boolean causesDrop;
+
     public Step withCausesDrop(Boolean causesDrop) {
         this.causesDrop = causesDrop;
         return this;
@@ -51,6 +54,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudFunction")
     public CloudFunctionInfo cloudFunction;
+
     public Step withCloudFunction(CloudFunctionInfo cloudFunction) {
         this.cloudFunction = cloudFunction;
         return this;
@@ -62,6 +66,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRunRevision")
     public CloudRunRevisionInfo cloudRunRevision;
+
     public Step withCloudRunRevision(CloudRunRevisionInfo cloudRunRevision) {
         this.cloudRunRevision = cloudRunRevision;
         return this;
@@ -73,6 +78,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudSqlInstance")
     public CloudSQLInstanceInfo cloudSqlInstance;
+
     public Step withCloudSqlInstance(CloudSQLInstanceInfo cloudSqlInstance) {
         this.cloudSqlInstance = cloudSqlInstance;
         return this;
@@ -84,6 +90,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliver")
     public DeliverInfo deliver;
+
     public Step withDeliver(DeliverInfo deliver) {
         this.deliver = deliver;
         return this;
@@ -95,6 +102,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Step withDescription(String description) {
         this.description = description;
         return this;
@@ -106,6 +114,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("drop")
     public DropInfo drop;
+
     public Step withDrop(DropInfo drop) {
         this.drop = drop;
         return this;
@@ -117,6 +126,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public EndpointInfo endpoint;
+
     public Step withEndpoint(EndpointInfo endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -128,6 +138,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firewall")
     public FirewallInfo firewall;
+
     public Step withFirewall(FirewallInfo firewall) {
         this.firewall = firewall;
         return this;
@@ -139,6 +150,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forward")
     public ForwardInfo forward;
+
     public Step withForward(ForwardInfo forward) {
         this.forward = forward;
         return this;
@@ -150,6 +162,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingRule")
     public ForwardingRuleInfo forwardingRule;
+
     public Step withForwardingRule(ForwardingRuleInfo forwardingRule) {
         this.forwardingRule = forwardingRule;
         return this;
@@ -161,6 +174,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeMaster")
     public GKEMasterInfo gkeMaster;
+
     public Step withGkeMaster(GKEMasterInfo gkeMaster) {
         this.gkeMaster = gkeMaster;
         return this;
@@ -172,6 +186,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public InstanceInfo instance;
+
     public Step withInstance(InstanceInfo instance) {
         this.instance = instance;
         return this;
@@ -183,6 +198,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loadBalancer")
     public LoadBalancerInfo loadBalancer;
+
     public Step withLoadBalancer(LoadBalancerInfo loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
@@ -194,6 +210,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public NetworkInfo network;
+
     public Step withNetwork(NetworkInfo network) {
         this.network = network;
         return this;
@@ -205,6 +222,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public Step withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -216,6 +234,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public RouteInfo route;
+
     public Step withRoute(RouteInfo route) {
         this.route = route;
         return this;
@@ -227,6 +246,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public StepStateEnum state;
+
     public Step withState(StepStateEnum state) {
         this.state = state;
         return this;
@@ -238,6 +258,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpcConnector")
     public VpcConnectorInfo vpcConnector;
+
     public Step withVpcConnector(VpcConnectorInfo vpcConnector) {
         this.vpcConnector = vpcConnector;
         return this;
@@ -249,6 +270,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnGateway")
     public VpnGatewayInfo vpnGateway;
+
     public Step withVpnGateway(VpnGatewayInfo vpnGateway) {
         this.vpnGateway = vpnGateway;
         return this;
@@ -260,9 +282,11 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vpnTunnel")
     public VpnTunnelInfo vpnTunnel;
+
     public Step withVpnTunnel(VpnTunnelInfo vpnTunnel) {
         this.vpnTunnel = vpnTunnel;
         return this;
     }
     
+    public Step(){}
 }

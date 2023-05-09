@@ -18,6 +18,7 @@ public class GrpcRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headers")
     public GrpcRouteHeaderMatch[] headers;
+
     public GrpcRouteRouteMatch withHeaders(GrpcRouteHeaderMatch[] headers) {
         this.headers = headers;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteRouteMatch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("method")
     public GrpcRouteMethodMatch method;
+
     public GrpcRouteRouteMatch withMethod(GrpcRouteMethodMatch method) {
         this.method = method;
         return this;
     }
     
+    public GrpcRouteRouteMatch(){}
 }

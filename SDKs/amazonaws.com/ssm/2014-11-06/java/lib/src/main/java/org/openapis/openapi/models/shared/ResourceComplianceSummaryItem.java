@@ -15,6 +15,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceType")
     public String complianceType;
+
     public ResourceComplianceSummaryItem withComplianceType(String complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -23,6 +24,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompliantSummary")
     public CompliantSummary compliantSummary;
+
     public ResourceComplianceSummaryItem withCompliantSummary(CompliantSummary compliantSummary) {
         this.compliantSummary = compliantSummary;
         return this;
@@ -31,6 +33,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionSummary")
     public ComplianceExecutionSummary executionSummary;
+
     public ResourceComplianceSummaryItem withExecutionSummary(ComplianceExecutionSummary executionSummary) {
         this.executionSummary = executionSummary;
         return this;
@@ -39,6 +42,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NonCompliantSummary")
     public NonCompliantSummary nonCompliantSummary;
+
     public ResourceComplianceSummaryItem withNonCompliantSummary(NonCompliantSummary nonCompliantSummary) {
         this.nonCompliantSummary = nonCompliantSummary;
         return this;
@@ -47,6 +51,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OverallSeverity")
     public ComplianceSeverityEnum overallSeverity;
+
     public ResourceComplianceSummaryItem withOverallSeverity(ComplianceSeverityEnum overallSeverity) {
         this.overallSeverity = overallSeverity;
         return this;
@@ -55,6 +60,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResourceComplianceSummaryItem withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -63,6 +69,7 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceType")
     public String resourceType;
+
     public ResourceComplianceSummaryItem withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -71,9 +78,11 @@ public class ResourceComplianceSummaryItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public ComplianceStatusEnum status;
+
     public ResourceComplianceSummaryItem withStatus(ComplianceStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ResourceComplianceSummaryItem(){}
 }

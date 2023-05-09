@@ -15,6 +15,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedTime")
     public String createdTime;
+
     public SchemaListItem withCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -23,6 +24,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public SchemaListItem withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RegistryName")
     public String registryName;
+
     public SchemaListItem withRegistryName(String registryName) {
         this.registryName = registryName;
         return this;
@@ -39,6 +42,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaArn")
     public String schemaArn;
+
     public SchemaListItem withSchemaArn(String schemaArn) {
         this.schemaArn = schemaArn;
         return this;
@@ -47,6 +51,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaName")
     public String schemaName;
+
     public SchemaListItem withSchemaName(String schemaName) {
         this.schemaName = schemaName;
         return this;
@@ -55,6 +60,7 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaStatus")
     public SchemaStatusEnum schemaStatus;
+
     public SchemaListItem withSchemaStatus(SchemaStatusEnum schemaStatus) {
         this.schemaStatus = schemaStatus;
         return this;
@@ -63,9 +69,11 @@ public class SchemaListItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedTime")
     public String updatedTime;
+
     public SchemaListItem withUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
         return this;
     }
     
+    public SchemaListItem(){}
 }

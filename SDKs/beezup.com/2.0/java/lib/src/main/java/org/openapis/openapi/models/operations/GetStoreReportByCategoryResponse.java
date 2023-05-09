@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStoreReportByCategoryResponse {
@@ -12,6 +13,7 @@ public class GetStoreReportByCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetStoreReportByCategoryResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetStoreReportByCategoryResponse {
     
     
     public String contentType;
+
     public GetStoreReportByCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetStoreReportByCategoryResponse {
     
     
     public Integer statusCode;
+
     public GetStoreReportByCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetStoreReportByCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStoreReportByCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetStoreReportByCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ReportByCategoryResponse reportByCategoryResponse;
+
     public GetStoreReportByCategoryResponse withReportByCategoryResponse(org.openapis.openapi.models.shared.ReportByCategoryResponse reportByCategoryResponse) {
         this.reportByCategoryResponse = reportByCategoryResponse;
         return this;
     }
     
+    public GetStoreReportByCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

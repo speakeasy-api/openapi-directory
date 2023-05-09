@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetJobInfoLightResponse {
     
     public String contentType;
+
     public GetJobInfoLightResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetJobInfoLightResponse {
      */
     
     public org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo;
+
     public GetJobInfoLightResponse withInvalidInputExceptionInfo(org.openapis.openapi.models.shared.InvalidInputExceptionInfo invalidInputExceptionInfo) {
         this.invalidInputExceptionInfo = invalidInputExceptionInfo;
         return this;
@@ -29,6 +32,7 @@ public class GetJobInfoLightResponse {
      */
     
     public org.openapis.openapi.models.shared.JobInfoLightRead jobInfoLightRead;
+
     public GetJobInfoLightResponse withJobInfoLightRead(org.openapis.openapi.models.shared.JobInfoLightRead jobInfoLightRead) {
         this.jobInfoLightRead = jobInfoLightRead;
         return this;
@@ -39,6 +43,7 @@ public class GetJobInfoLightResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo;
+
     public GetJobInfoLightResponse withNotFoundKnownExceptionInfo(org.openapis.openapi.models.shared.NotFoundKnownExceptionInfo notFoundKnownExceptionInfo) {
         this.notFoundKnownExceptionInfo = notFoundKnownExceptionInfo;
         return this;
@@ -46,6 +51,7 @@ public class GetJobInfoLightResponse {
     
     
     public Integer statusCode;
+
     public GetJobInfoLightResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class GetJobInfoLightResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetJobInfoLightResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetJobInfoLightResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

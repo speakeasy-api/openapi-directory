@@ -18,9 +18,11 @@ public class BatchGetContactGroupsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("responses")
     public ContactGroupResponse[] responses;
+
     public BatchGetContactGroupsResponse withResponses(ContactGroupResponse[] responses) {
         this.responses = responses;
         return this;
     }
     
+    public BatchGetContactGroupsResponse(){}
 }

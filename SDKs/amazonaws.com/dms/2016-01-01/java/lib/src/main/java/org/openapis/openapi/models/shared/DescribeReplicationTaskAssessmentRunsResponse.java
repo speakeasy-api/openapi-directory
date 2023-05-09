@@ -15,6 +15,7 @@ public class DescribeReplicationTaskAssessmentRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeReplicationTaskAssessmentRunsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +24,11 @@ public class DescribeReplicationTaskAssessmentRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReplicationTaskAssessmentRuns")
     public ReplicationTaskAssessmentRun[] replicationTaskAssessmentRuns;
+
     public DescribeReplicationTaskAssessmentRunsResponse withReplicationTaskAssessmentRuns(ReplicationTaskAssessmentRun[] replicationTaskAssessmentRuns) {
         this.replicationTaskAssessmentRuns = replicationTaskAssessmentRuns;
         return this;
     }
     
+    public DescribeReplicationTaskAssessmentRunsResponse(){}
 }

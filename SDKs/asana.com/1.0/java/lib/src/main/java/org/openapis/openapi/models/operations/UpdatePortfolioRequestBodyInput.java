@@ -15,9 +15,11 @@ public class UpdatePortfolioRequestBodyInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.PortfolioRequestInput data;
+
     public UpdatePortfolioRequestBodyInput withData(org.openapis.openapi.models.shared.PortfolioRequestInput data) {
         this.data = data;
         return this;
     }
     
+    public UpdatePortfolioRequestBodyInput(){}
 }

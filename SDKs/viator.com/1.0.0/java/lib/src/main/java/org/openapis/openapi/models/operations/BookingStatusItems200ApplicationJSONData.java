@@ -15,6 +15,7 @@ public class BookingStatusItems200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingStatus")
     public org.openapis.openapi.models.shared.BookingStatusItem bookingStatus;
+
     public BookingStatusItems200ApplicationJSONData withBookingStatus(org.openapis.openapi.models.shared.BookingStatusItem bookingStatus) {
         this.bookingStatus = bookingStatus;
         return this;
@@ -26,6 +27,7 @@ public class BookingStatusItems200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributorItemRef")
     public String distributorItemRef;
+
     public BookingStatusItems200ApplicationJSONData withDistributorItemRef(String distributorItemRef) {
         this.distributorItemRef = distributorItemRef;
         return this;
@@ -39,9 +41,11 @@ public class BookingStatusItems200ApplicationJSONData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itemId")
     public Long itemId;
+
     public BookingStatusItems200ApplicationJSONData withItemId(Long itemId) {
         this.itemId = itemId;
         return this;
     }
     
+    public BookingStatusItems200ApplicationJSONData(){}
 }

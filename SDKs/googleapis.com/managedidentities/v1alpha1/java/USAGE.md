@@ -3,16 +3,15 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity;
 import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest;
 import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse;
+import org.openapis.openapi.models.operations.ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.AttachTrustRequest;
+import org.openapis.openapi.models.shared.Trust;
 import org.openapis.openapi.models.shared.TrustStateEnum;
 import org.openapis.openapi.models.shared.TrustTrustDirectionEnum;
 import org.openapis.openapi.models.shared.TrustTrustTypeEnum;
-import org.openapis.openapi.models.shared.Trust;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -21,51 +20,51 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest req = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest() {{
-                dollarXgafv = "2";
+            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest req = new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 attachTrustRequest = new AttachTrustRequest() {{
                     trust = new Trust() {{
-                        createTime = "provident";
-                        lastKnownTrustConnectedHeartbeatTime = "distinctio";
+                        createTime = "distinctio";
+                        lastKnownTrustConnectedHeartbeatTime = "quibusdam";
                         selectiveAuthentication = false;
-                        state = "DISCONNECTED";
-                        stateDescription = "unde";
+                        state = TrustStateEnum.DELETING;
+                        stateDescription = "nulla";
                         targetDnsIpAddresses = new String[]{{
-                            add("corrupti"),
                             add("illum"),
                             add("vel"),
                             add("error"),
                         }};
                         targetDomainName = "deserunt";
-                        trustDirection = "INBOUND";
+                        trustDirection = TrustTrustDirectionEnum.INBOUND;
                         trustHandshakeSecret = "iure";
-                        trustType = "TRUST_TYPE_UNSPECIFIED";
+                        trustType = TrustTrustTypeEnum.TRUST_TYPE_UNSPECIFIED;
                         updateTime = "debitis";
-                    }};
-                }};
+                    }};;
+                }};;
                 accessToken = "ipsa";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "tempora";
                 fields = "suscipit";
                 key = "molestiae";
-                name = "minus";
-                oauthToken = "placeat";
+                oauthToken = "minus";
                 prettyPrint = false;
-                quotaUser = "voluptatum";
-                uploadType = "iusto";
-                uploadProtocol = "excepturi";
-            }}            
+                quotaUser = "placeat";
+                uploadType = "voluptatum";
+                uploadProtocol = "iusto";
+            }};            
 
-            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = sdk.projects.managedidentitiesProjectsLocationsGlobalDomainsAttachTrust(req, new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity() {{
+            ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustResponse res = sdk.projects.managedidentitiesProjectsLocationsGlobalDomainsAttachTrust(req, new ManagedidentitiesProjectsLocationsGlobalDomainsAttachTrustSecurity("excepturi", "nisi") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

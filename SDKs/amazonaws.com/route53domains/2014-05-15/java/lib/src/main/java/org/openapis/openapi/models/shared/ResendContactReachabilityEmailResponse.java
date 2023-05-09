@@ -15,6 +15,7 @@ public class ResendContactReachabilityEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domainName")
     public String domainName;
+
     public ResendContactReachabilityEmailResponse withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -23,6 +24,7 @@ public class ResendContactReachabilityEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public ResendContactReachabilityEmailResponse withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -31,9 +33,11 @@ public class ResendContactReachabilityEmailResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAlreadyVerified")
     public Boolean isAlreadyVerified;
+
     public ResendContactReachabilityEmailResponse withIsAlreadyVerified(Boolean isAlreadyVerified) {
         this.isAlreadyVerified = isAlreadyVerified;
         return this;
     }
     
+    public ResendContactReachabilityEmailResponse(){}
 }

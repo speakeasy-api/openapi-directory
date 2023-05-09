@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetImportFileTaskResponse {
@@ -12,6 +13,7 @@ public class GetImportFileTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public GetImportFileTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetImportFileTaskResponse {
     
     
     public String contentType;
+
     public GetImportFileTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetImportFileTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.GetImportFileTaskResponse getImportFileTaskResponse;
+
     public GetImportFileTaskResponse withGetImportFileTaskResponse(org.openapis.openapi.models.shared.GetImportFileTaskResponse getImportFileTaskResponse) {
         this.getImportFileTaskResponse = getImportFileTaskResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetImportFileTaskResponse {
      */
     
     public Object internalServerException;
+
     public GetImportFileTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetImportFileTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetImportFileTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetImportFileTaskResponse {
     
     
     public Integer statusCode;
+
     public GetImportFileTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetImportFileTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetImportFileTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetImportFileTaskResponse {
      */
     
     public Object throttlingException;
+
     public GetImportFileTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetImportFileTaskResponse {
      */
     
     public Object validationException;
+
     public GetImportFileTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetImportFileTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

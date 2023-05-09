@@ -16,18 +16,17 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
-import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesRequest;
 import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesResponse;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurity;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption1;
+import org.openapis.openapi.models.operations.LanguageDocumentsAnalyzeEntitiesSecurityOption2;
 import org.openapis.openapi.models.shared.AltEnum;
-import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
 import org.openapis.openapi.models.shared.AnalyzeEntitiesRequest;
+import org.openapis.openapi.models.shared.AnalyzeEntitiesRequestEncodingTypeEnum;
+import org.openapis.openapi.models.shared.Document;
 import org.openapis.openapi.models.shared.DocumentBoilerplateHandlingEnum;
 import org.openapis.openapi.models.shared.DocumentTypeEnum;
-import org.openapis.openapi.models.shared.Document;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -37,20 +36,20 @@ public class Application {
                 .build();
 
             LanguageDocumentsAnalyzeEntitiesRequest req = new LanguageDocumentsAnalyzeEntitiesRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 analyzeEntitiesRequest = new AnalyzeEntitiesRequest() {{
                     document = new Document() {{
-                        boilerplateHandling = "SKIP_BOILERPLATE";
+                        boilerplateHandling = DocumentBoilerplateHandlingEnum.SKIP_BOILERPLATE;
                         content = "distinctio";
                         gcsContentUri = "quibusdam";
                         language = "unde";
                         referenceWebUri = "nulla";
-                        type = "PLAIN_TEXT";
-                    }};
-                    encodingType = "UTF32";
-                }};
+                        type = DocumentTypeEnum.PLAIN_TEXT;
+                    }};;
+                    encodingType = AnalyzeEntitiesRequestEncodingTypeEnum.UTF32;
+                }};;
                 accessToken = "vel";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "deserunt";
                 fields = "suscipit";
                 key = "iure";
@@ -59,21 +58,23 @@ public class Application {
                 quotaUser = "debitis";
                 uploadType = "ipsa";
                 uploadProtocol = "delectus";
-            }}            
+            }};            
 
             LanguageDocumentsAnalyzeEntitiesResponse res = sdk.documents.languageDocumentsAnalyzeEntities(req, new LanguageDocumentsAnalyzeEntitiesSecurity() {{
-                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1() {{
+                option1 = new LanguageDocumentsAnalyzeEntitiesSecurityOption1("tempora", "suscipit") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.analyzeEntitiesResponse.isPresent()) {
+            if (res.analyzeEntitiesResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -81,14 +82,14 @@ public class Application {
 ## Available Resources and Operations
 
 
-### documents
+### [documents](docs/documents/README.md)
 
-* `languageDocumentsAnalyzeEntities` - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
-* `languageDocumentsAnalyzeEntitySentiment` - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
-* `languageDocumentsAnalyzeSentiment` - Analyzes the sentiment of the provided text.
-* `languageDocumentsAnalyzeSyntax` - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
-* `languageDocumentsAnnotateText` - A convenience method that provides all syntax, sentiment, entity, and classification features in one call.
-* `languageDocumentsClassifyText` - Classifies a document into categories.
+* [languageDocumentsAnalyzeEntities](docs/documents/README.md#languagedocumentsanalyzeentities) - Finds named entities (currently proper names and common nouns) in the text along with entity types, salience, mentions for each entity, and other properties.
+* [languageDocumentsAnalyzeEntitySentiment](docs/documents/README.md#languagedocumentsanalyzeentitysentiment) - Finds entities, similar to AnalyzeEntities in the text and analyzes sentiment associated with each entity and its mentions.
+* [languageDocumentsAnalyzeSentiment](docs/documents/README.md#languagedocumentsanalyzesentiment) - Analyzes the sentiment of the provided text.
+* [languageDocumentsAnalyzeSyntax](docs/documents/README.md#languagedocumentsanalyzesyntax) - Analyzes the syntax of the text and provides sentence boundaries and tokenization along with part of speech tags, dependency trees, and other properties.
+* [languageDocumentsAnnotateText](docs/documents/README.md#languagedocumentsannotatetext) - A convenience method that provides all syntax, sentiment, entity, and classification features in one call.
+* [languageDocumentsClassifyText](docs/documents/README.md#languagedocumentsclassifytext) - Classifies a document into categories.
 <!-- End SDK Available Operations -->
 
 ### Maturity

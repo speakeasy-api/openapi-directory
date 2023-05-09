@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TransformProcessingConfig {
     @JsonProperty("computeLocation")
     public ComputeLocationEnum computeLocation;
+
     public TransformProcessingConfig withComputeLocation(ComputeLocationEnum computeLocation) {
         this.computeLocation = computeLocation;
         return this;
@@ -25,9 +26,13 @@ public class TransformProcessingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("forwardingConfig")
     public ForwardingConfig forwardingConfig;
+
     public TransformProcessingConfig withForwardingConfig(ForwardingConfig forwardingConfig) {
         this.forwardingConfig = forwardingConfig;
         return this;
     }
     
+    public TransformProcessingConfig(@JsonProperty("computeLocation") ComputeLocationEnum computeLocation) {
+        this.computeLocation = computeLocation;
+  }
 }

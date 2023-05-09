@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteJobExecutionResponse {
     
     public String contentType;
+
     public DeleteJobExecutionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteJobExecutionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteJobExecutionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteJobExecutionResponse {
      */
     
     public Object invalidStateTransitionException;
+
     public DeleteJobExecutionResponse withInvalidStateTransitionException(Object invalidStateTransitionException) {
         this.invalidStateTransitionException = invalidStateTransitionException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteJobExecutionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteJobExecutionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteJobExecutionResponse {
     
     
     public Integer statusCode;
+
     public DeleteJobExecutionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteJobExecutionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteJobExecutionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteJobExecutionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteJobExecutionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteJobExecutionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteJobExecutionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DeleteJobExecutionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

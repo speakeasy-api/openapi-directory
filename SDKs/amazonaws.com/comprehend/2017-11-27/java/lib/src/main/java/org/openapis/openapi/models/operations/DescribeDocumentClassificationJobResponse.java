@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDocumentClassificationJobResponse {
     
     public String contentType;
+
     public DescribeDocumentClassificationJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDocumentClassificationJobResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDocumentClassificationJobResponse describeDocumentClassificationJobResponse;
+
     public DescribeDocumentClassificationJobResponse withDescribeDocumentClassificationJobResponse(org.openapis.openapi.models.shared.DescribeDocumentClassificationJobResponse describeDocumentClassificationJobResponse) {
         this.describeDocumentClassificationJobResponse = describeDocumentClassificationJobResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDocumentClassificationJobResponse {
      */
     
     public Object internalServerException;
+
     public DescribeDocumentClassificationJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDocumentClassificationJobResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeDocumentClassificationJobResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDocumentClassificationJobResponse {
      */
     
     public Object jobNotFoundException;
+
     public DescribeDocumentClassificationJobResponse withJobNotFoundException(Object jobNotFoundException) {
         this.jobNotFoundException = jobNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDocumentClassificationJobResponse {
     
     
     public Integer statusCode;
+
     public DescribeDocumentClassificationJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeDocumentClassificationJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDocumentClassificationJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeDocumentClassificationJobResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeDocumentClassificationJobResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DescribeDocumentClassificationJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

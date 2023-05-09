@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PackageProjectTranslationMemoryStatusResponse {
@@ -12,6 +13,7 @@ public class PackageProjectTranslationMemoryStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus;
+
     public PackageProjectTranslationMemoryStatusResponse withAsyncOperationStatus(org.openapis.openapi.models.shared.AsyncOperationStatus asyncOperationStatus) {
         this.asyncOperationStatus = asyncOperationStatus;
         return this;
@@ -19,6 +21,7 @@ public class PackageProjectTranslationMemoryStatusResponse {
     
     
     public String contentType;
+
     public PackageProjectTranslationMemoryStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PackageProjectTranslationMemoryStatusResponse {
     
     
     public Integer statusCode;
+
     public PackageProjectTranslationMemoryStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PackageProjectTranslationMemoryStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PackageProjectTranslationMemoryStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PackageProjectTranslationMemoryStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

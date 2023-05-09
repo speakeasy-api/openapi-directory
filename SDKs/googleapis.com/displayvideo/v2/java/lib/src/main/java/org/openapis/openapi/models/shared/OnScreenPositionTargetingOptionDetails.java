@@ -18,9 +18,11 @@ public class OnScreenPositionTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onScreenPosition")
     public OnScreenPositionTargetingOptionDetailsOnScreenPositionEnum onScreenPosition;
+
     public OnScreenPositionTargetingOptionDetails withOnScreenPosition(OnScreenPositionTargetingOptionDetailsOnScreenPositionEnum onScreenPosition) {
         this.onScreenPosition = onScreenPosition;
         return this;
     }
     
+    public OnScreenPositionTargetingOptionDetails(){}
 }

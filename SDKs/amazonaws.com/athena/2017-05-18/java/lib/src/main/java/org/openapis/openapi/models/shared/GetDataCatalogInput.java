@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetDataCatalogInput {
     @JsonProperty("Name")
     public String name;
+
     public GetDataCatalogInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetDataCatalogInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

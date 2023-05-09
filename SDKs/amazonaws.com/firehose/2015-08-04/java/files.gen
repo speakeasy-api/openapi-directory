@@ -181,4 +181,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ElasticsearchDestinationUpd
 lib/src/main/java/org/openapis/openapi/models/shared/AmazonopensearchserviceDestinationUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/AmazonOpenSearchServerlessDestinationUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

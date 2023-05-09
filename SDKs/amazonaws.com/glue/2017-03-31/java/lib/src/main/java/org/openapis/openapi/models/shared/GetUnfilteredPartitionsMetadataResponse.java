@@ -15,6 +15,7 @@ public class GetUnfilteredPartitionsMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetUnfilteredPartitionsMetadataResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetUnfilteredPartitionsMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnfilteredPartitions")
     public UnfilteredPartition[] unfilteredPartitions;
+
     public GetUnfilteredPartitionsMetadataResponse withUnfilteredPartitions(UnfilteredPartition[] unfilteredPartitions) {
         this.unfilteredPartitions = unfilteredPartitions;
         return this;
     }
     
+    public GetUnfilteredPartitionsMetadataResponse(){}
 }

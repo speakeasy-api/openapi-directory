@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AcknowledgeOrderReceiptResponse {
     @JsonProperty("order")
     public Order order;
+
     public AcknowledgeOrderReceiptResponse withOrder(Order order) {
         this.order = order;
         return this;
     }
     
+    public AcknowledgeOrderReceiptResponse(@JsonProperty("order") Order order) {
+        this.order = order;
+  }
 }

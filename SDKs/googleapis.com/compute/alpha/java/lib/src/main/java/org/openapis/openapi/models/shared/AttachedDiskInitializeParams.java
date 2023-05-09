@@ -18,6 +18,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public AttachedDiskInitializeParamsArchitectureEnum architecture;
+
     public AttachedDiskInitializeParams withArchitecture(AttachedDiskInitializeParamsArchitectureEnum architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AttachedDiskInitializeParams withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskName")
     public String diskName;
+
     public AttachedDiskInitializeParams withDiskName(String diskName) {
         this.diskName = diskName;
         return this;
@@ -51,6 +54,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskSizeGb")
     public String diskSizeGb;
+
     public AttachedDiskInitializeParams withDiskSizeGb(String diskSizeGb) {
         this.diskSizeGb = diskSizeGb;
         return this;
@@ -62,6 +66,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("diskType")
     public String diskType;
+
     public AttachedDiskInitializeParams withDiskType(String diskType) {
         this.diskType = diskType;
         return this;
@@ -73,6 +78,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestOsFeatures")
     public GuestOsFeature[] guestOsFeatures;
+
     public AttachedDiskInitializeParams withGuestOsFeatures(GuestOsFeature[] guestOsFeatures) {
         this.guestOsFeatures = guestOsFeatures;
         return this;
@@ -84,6 +90,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interface")
     public AttachedDiskInitializeParamsInterfaceEnum interface_;
+
     public AttachedDiskInitializeParams withInterface(AttachedDiskInitializeParamsInterfaceEnum interface_) {
         this.interface_ = interface_;
         return this;
@@ -95,6 +102,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public AttachedDiskInitializeParams withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -106,6 +114,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenseCodes")
     public String[] licenseCodes;
+
     public AttachedDiskInitializeParams withLicenseCodes(String[] licenseCodes) {
         this.licenseCodes = licenseCodes;
         return this;
@@ -117,6 +126,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("licenses")
     public String[] licenses;
+
     public AttachedDiskInitializeParams withLicenses(String[] licenses) {
         this.licenses = licenses;
         return this;
@@ -128,6 +138,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multiWriter")
     public Boolean multiWriter;
+
     public AttachedDiskInitializeParams withMultiWriter(Boolean multiWriter) {
         this.multiWriter = multiWriter;
         return this;
@@ -139,6 +150,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onUpdateAction")
     public AttachedDiskInitializeParamsOnUpdateActionEnum onUpdateAction;
+
     public AttachedDiskInitializeParams withOnUpdateAction(AttachedDiskInitializeParamsOnUpdateActionEnum onUpdateAction) {
         this.onUpdateAction = onUpdateAction;
         return this;
@@ -150,6 +162,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedIops")
     public String provisionedIops;
+
     public AttachedDiskInitializeParams withProvisionedIops(String provisionedIops) {
         this.provisionedIops = provisionedIops;
         return this;
@@ -161,6 +174,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisionedThroughput")
     public String provisionedThroughput;
+
     public AttachedDiskInitializeParams withProvisionedThroughput(String provisionedThroughput) {
         this.provisionedThroughput = provisionedThroughput;
         return this;
@@ -172,6 +186,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicaZones")
     public String[] replicaZones;
+
     public AttachedDiskInitializeParams withReplicaZones(String[] replicaZones) {
         this.replicaZones = replicaZones;
         return this;
@@ -183,6 +198,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceManagerTags")
     public java.util.Map<String, String> resourceManagerTags;
+
     public AttachedDiskInitializeParams withResourceManagerTags(java.util.Map<String, String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
         return this;
@@ -194,6 +210,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourcePolicies")
     public String[] resourcePolicies;
+
     public AttachedDiskInitializeParams withResourcePolicies(String[] resourcePolicies) {
         this.resourcePolicies = resourcePolicies;
         return this;
@@ -205,6 +222,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImage")
     public String sourceImage;
+
     public AttachedDiskInitializeParams withSourceImage(String sourceImage) {
         this.sourceImage = sourceImage;
         return this;
@@ -213,6 +231,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceImageEncryptionKey")
     public CustomerEncryptionKey sourceImageEncryptionKey;
+
     public AttachedDiskInitializeParams withSourceImageEncryptionKey(CustomerEncryptionKey sourceImageEncryptionKey) {
         this.sourceImageEncryptionKey = sourceImageEncryptionKey;
         return this;
@@ -224,6 +243,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceInstantSnapshot")
     public String sourceInstantSnapshot;
+
     public AttachedDiskInitializeParams withSourceInstantSnapshot(String sourceInstantSnapshot) {
         this.sourceInstantSnapshot = sourceInstantSnapshot;
         return this;
@@ -235,6 +255,7 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshot")
     public String sourceSnapshot;
+
     public AttachedDiskInitializeParams withSourceSnapshot(String sourceSnapshot) {
         this.sourceSnapshot = sourceSnapshot;
         return this;
@@ -243,9 +264,23 @@ public class AttachedDiskInitializeParams {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceSnapshotEncryptionKey")
     public CustomerEncryptionKey sourceSnapshotEncryptionKey;
+
     public AttachedDiskInitializeParams withSourceSnapshotEncryptionKey(CustomerEncryptionKey sourceSnapshotEncryptionKey) {
         this.sourceSnapshotEncryptionKey = sourceSnapshotEncryptionKey;
         return this;
     }
     
+    /**
+     * The storage pool in which the new disk is created. You can provide this as a partial or full URL to the resource. For example, the following are valid values: - https://www.googleapis.com/compute/v1/projects/project/zones/zone /storagePools/storagePool - projects/project/zones/zone/storagePools/storagePool - zones/zone/storagePools/storagePool 
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("storagePool")
+    public String storagePool;
+
+    public AttachedDiskInitializeParams withStoragePool(String storagePool) {
+        this.storagePool = storagePool;
+        return this;
+    }
+    
+    public AttachedDiskInitializeParams(){}
 }

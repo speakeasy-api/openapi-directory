@@ -15,6 +15,7 @@ public class Locale {
      */
     @JsonProperty("continent")
     public String continent;
+
     public Locale withContinent(String continent) {
         this.continent = continent;
         return this;
@@ -25,6 +26,7 @@ public class Locale {
      */
     @JsonProperty("continentCode")
     public String continentCode;
+
     public Locale withContinentCode(String continentCode) {
         this.continentCode = continentCode;
         return this;
@@ -35,6 +37,7 @@ public class Locale {
      */
     @JsonProperty("country")
     public String country;
+
     public Locale withCountry(String country) {
         this.country = country;
         return this;
@@ -45,6 +48,7 @@ public class Locale {
      */
     @JsonProperty("countryCode")
     public String countryCode;
+
     public Locale withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -55,6 +59,7 @@ public class Locale {
      */
     @JsonProperty("currency")
     public String currency;
+
     public Locale withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -65,6 +70,7 @@ public class Locale {
      */
     @JsonProperty("eu")
     public Boolean eu;
+
     public Locale withEu(Boolean eu) {
         this.eu = eu;
         return this;
@@ -75,9 +81,19 @@ public class Locale {
      */
     @JsonProperty("ip")
     public String ip;
+
     public Locale withIp(String ip) {
         this.ip = ip;
         return this;
     }
     
+    public Locale(@JsonProperty("continent") String continent, @JsonProperty("continentCode") String continentCode, @JsonProperty("country") String country, @JsonProperty("countryCode") String countryCode, @JsonProperty("currency") String currency, @JsonProperty("eu") Boolean eu, @JsonProperty("ip") String ip) {
+        this.continent = continent;
+        this.continentCode = continentCode;
+        this.country = country;
+        this.countryCode = countryCode;
+        this.currency = currency;
+        this.eu = eu;
+        this.ip = ip;
+  }
 }

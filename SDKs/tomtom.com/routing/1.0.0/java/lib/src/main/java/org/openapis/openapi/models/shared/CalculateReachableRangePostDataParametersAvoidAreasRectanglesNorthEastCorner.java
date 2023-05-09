@@ -12,6 +12,7 @@ public class CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthE
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latitude")
     public String latitude;
+
     public CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthEastCorner withLatitude(String latitude) {
         this.latitude = latitude;
         return this;
@@ -20,9 +21,11 @@ public class CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthE
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longitude")
     public String longitude;
+
     public CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthEastCorner withLongitude(String longitude) {
         this.longitude = longitude;
         return this;
     }
     
+    public CalculateReachableRangePostDataParametersAvoidAreasRectanglesNorthEastCorner(){}
 }

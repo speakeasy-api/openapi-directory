@@ -20,6 +20,7 @@ public class ValueData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Obis")
     public String obis;
+
     public ValueData withObis(String obis) {
         this.obis = obis;
         return this;
@@ -31,9 +32,11 @@ public class ValueData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public Double value;
+
     public ValueData withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public ValueData(){}
 }

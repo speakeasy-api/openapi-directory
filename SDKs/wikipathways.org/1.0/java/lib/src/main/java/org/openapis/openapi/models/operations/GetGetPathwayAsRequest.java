@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetGetPathwayAsRequest {
@@ -12,6 +13,7 @@ public class GetGetPathwayAsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fileType")
     public String fileType;
+
     public GetGetPathwayAsRequest withFileType(String fileType) {
         this.fileType = fileType;
         return this;
@@ -19,6 +21,7 @@ public class GetGetPathwayAsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=format")
     public GetGetPathwayAsFormatEnum format;
+
     public GetGetPathwayAsRequest withFormat(GetGetPathwayAsFormatEnum format) {
         this.format = format;
         return this;
@@ -29,6 +32,7 @@ public class GetGetPathwayAsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pwId")
     public String pwId;
+
     public GetGetPathwayAsRequest withPwId(String pwId) {
         this.pwId = pwId;
         return this;
@@ -39,9 +43,14 @@ public class GetGetPathwayAsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=revision")
     public Long revision;
+
     public GetGetPathwayAsRequest withRevision(Long revision) {
         this.revision = revision;
         return this;
     }
     
+    public GetGetPathwayAsRequest(@JsonProperty("fileType") String fileType, @JsonProperty("pwId") String pwId) {
+        this.fileType = fileType;
+        this.pwId = pwId;
+  }
 }

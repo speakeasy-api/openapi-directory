@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostFileCommentReactionsRequestBody {
@@ -12,6 +13,7 @@ public class PostFileCommentReactionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=emoji")
     public String emoji;
+
     public PostFileCommentReactionsRequestBody withEmoji(String emoji) {
         this.emoji = emoji;
         return this;
@@ -22,6 +24,7 @@ public class PostFileCommentReactionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=file_comment_id")
     public Integer fileCommentId;
+
     public PostFileCommentReactionsRequestBody withFileCommentId(Integer fileCommentId) {
         this.fileCommentId = fileCommentId;
         return this;
@@ -32,9 +35,14 @@ public class PostFileCommentReactionsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_id")
     public Integer userId;
+
     public PostFileCommentReactionsRequestBody withUserId(Integer userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostFileCommentReactionsRequestBody(@JsonProperty("emoji") String emoji, @JsonProperty("file_comment_id") Integer fileCommentId) {
+        this.emoji = emoji;
+        this.fileCommentId = fileCommentId;
+  }
 }

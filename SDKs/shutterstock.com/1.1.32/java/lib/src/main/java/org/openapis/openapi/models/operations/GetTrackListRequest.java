@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTrackListRequest {
@@ -12,6 +13,7 @@ public class GetTrackListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public String[] id;
+
     public GetTrackListRequest withId(String[] id) {
         this.id = id;
         return this;
@@ -22,6 +24,7 @@ public class GetTrackListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search_id")
     public String searchId;
+
     public GetTrackListRequest withSearchId(String searchId) {
         this.searchId = searchId;
         return this;
@@ -32,9 +35,13 @@ public class GetTrackListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=view")
     public GetTrackListViewEnum view;
+
     public GetTrackListRequest withView(GetTrackListViewEnum view) {
         this.view = view;
         return this;
     }
     
+    public GetTrackListRequest(@JsonProperty("id") String[] id) {
+        this.id = id;
+  }
 }

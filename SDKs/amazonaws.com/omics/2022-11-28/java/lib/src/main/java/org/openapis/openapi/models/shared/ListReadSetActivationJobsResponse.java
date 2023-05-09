@@ -15,6 +15,7 @@ public class ListReadSetActivationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activationJobs")
     public ActivateReadSetJobItem[] activationJobs;
+
     public ListReadSetActivationJobsResponse withActivationJobs(ActivateReadSetJobItem[] activationJobs) {
         this.activationJobs = activationJobs;
         return this;
@@ -23,9 +24,11 @@ public class ListReadSetActivationJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListReadSetActivationJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListReadSetActivationJobsResponse(){}
 }

@@ -18,9 +18,11 @@ public class ClassDetailsIssues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sync")
     public ClassDetailsIssuesSync[] sync;
+
     public ClassDetailsIssues withSync(ClassDetailsIssuesSync[] sync) {
         this.sync = sync;
         return this;
     }
     
+    public ClassDetailsIssues(){}
 }

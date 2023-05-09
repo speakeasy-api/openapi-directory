@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIndexResponse {
@@ -12,6 +13,7 @@ public class DeleteIndexResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteIndexResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteIndexResponse {
      */
     
     public Object conflictException;
+
     public DeleteIndexResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIndexResponse {
     
     
     public String contentType;
+
     public DeleteIndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIndexResponse {
      */
     
     public Object internalServerException;
+
     public DeleteIndexResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIndexResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteIndexResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteIndexResponse {
     
     
     public Integer statusCode;
+
     public DeleteIndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteIndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteIndexResponse {
      */
     
     public Object throttlingException;
+
     public DeleteIndexResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteIndexResponse {
      */
     
     public Object validationException;
+
     public DeleteIndexResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteIndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

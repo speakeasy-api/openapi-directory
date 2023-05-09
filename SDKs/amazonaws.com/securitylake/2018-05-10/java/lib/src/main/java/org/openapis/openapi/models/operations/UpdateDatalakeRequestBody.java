@@ -12,9 +12,13 @@ public class UpdateDatalakeRequestBody {
      */
     @JsonProperty("configurations")
     public java.util.Map<String, org.openapis.openapi.models.shared.LakeConfigurationRequest> configurations;
+
     public UpdateDatalakeRequestBody withConfigurations(java.util.Map<String, org.openapis.openapi.models.shared.LakeConfigurationRequest> configurations) {
         this.configurations = configurations;
         return this;
     }
     
+    public UpdateDatalakeRequestBody(@JsonProperty("configurations") java.util.Map<String, org.openapis.openapi.models.shared.LakeConfigurationRequest> configurations) {
+        this.configurations = configurations;
+  }
 }

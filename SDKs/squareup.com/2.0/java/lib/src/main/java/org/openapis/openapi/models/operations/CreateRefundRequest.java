@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateRefundRequest {
@@ -14,6 +15,7 @@ public class CreateRefundRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.V1CreateRefundRequest v1CreateRefundRequest;
+
     public CreateRefundRequest withV1CreateRefundRequest(org.openapis.openapi.models.shared.V1CreateRefundRequest v1CreateRefundRequest) {
         this.v1CreateRefundRequest = v1CreateRefundRequest;
         return this;
@@ -24,9 +26,14 @@ public class CreateRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public CreateRefundRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public CreateRefundRequest(@JsonProperty("V1CreateRefundRequest") org.openapis.openapi.models.shared.V1CreateRefundRequest v1CreateRefundRequest, @JsonProperty("location_id") String locationId) {
+        this.v1CreateRefundRequest = v1CreateRefundRequest;
+        this.locationId = locationId;
+  }
 }

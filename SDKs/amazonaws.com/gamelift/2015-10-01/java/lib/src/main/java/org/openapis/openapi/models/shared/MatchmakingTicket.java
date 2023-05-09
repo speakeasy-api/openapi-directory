@@ -20,6 +20,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationArn")
     public String configurationArn;
+
     public MatchmakingTicket withConfigurationArn(String configurationArn) {
         this.configurationArn = configurationArn;
         return this;
@@ -28,6 +29,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConfigurationName")
     public String configurationName;
+
     public MatchmakingTicket withConfigurationName(String configurationName) {
         this.configurationName = configurationName;
         return this;
@@ -38,6 +40,7 @@ public class MatchmakingTicket {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public MatchmakingTicket withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -46,6 +49,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EstimatedWaitTime")
     public Long estimatedWaitTime;
+
     public MatchmakingTicket withEstimatedWaitTime(Long estimatedWaitTime) {
         this.estimatedWaitTime = estimatedWaitTime;
         return this;
@@ -54,6 +58,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GameSessionConnectionInfo")
     public GameSessionConnectionInfo gameSessionConnectionInfo;
+
     public MatchmakingTicket withGameSessionConnectionInfo(GameSessionConnectionInfo gameSessionConnectionInfo) {
         this.gameSessionConnectionInfo = gameSessionConnectionInfo;
         return this;
@@ -62,6 +67,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Players")
     public Player[] players;
+
     public MatchmakingTicket withPlayers(Player[] players) {
         this.players = players;
         return this;
@@ -72,6 +78,7 @@ public class MatchmakingTicket {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public MatchmakingTicket withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -80,6 +87,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public MatchmakingConfigurationStatusEnum status;
+
     public MatchmakingTicket withStatus(MatchmakingConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -88,6 +96,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusMessage")
     public String statusMessage;
+
     public MatchmakingTicket withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -96,6 +105,7 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusReason")
     public String statusReason;
+
     public MatchmakingTicket withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
@@ -104,9 +114,11 @@ public class MatchmakingTicket {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TicketId")
     public String ticketId;
+
     public MatchmakingTicket withTicketId(String ticketId) {
         this.ticketId = ticketId;
         return this;
     }
     
+    public MatchmakingTicket(){}
 }

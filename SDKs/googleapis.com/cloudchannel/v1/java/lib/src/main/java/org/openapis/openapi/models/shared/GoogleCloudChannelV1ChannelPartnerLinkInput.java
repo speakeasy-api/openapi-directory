@@ -18,6 +18,7 @@ public class GoogleCloudChannelV1ChannelPartnerLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelPartnerCloudIdentityInfo")
     public GoogleCloudChannelV1CloudIdentityInfoInput channelPartnerCloudIdentityInfo;
+
     public GoogleCloudChannelV1ChannelPartnerLinkInput withChannelPartnerCloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfoInput channelPartnerCloudIdentityInfo) {
         this.channelPartnerCloudIdentityInfo = channelPartnerCloudIdentityInfo;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudChannelV1ChannelPartnerLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkState")
     public GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum linkState;
+
     public GoogleCloudChannelV1ChannelPartnerLinkInput withLinkState(GoogleCloudChannelV1ChannelPartnerLinkLinkStateEnum linkState) {
         this.linkState = linkState;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudChannelV1ChannelPartnerLinkInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resellerCloudIdentityId")
     public String resellerCloudIdentityId;
+
     public GoogleCloudChannelV1ChannelPartnerLinkInput withResellerCloudIdentityId(String resellerCloudIdentityId) {
         this.resellerCloudIdentityId = resellerCloudIdentityId;
         return this;
     }
     
+    public GoogleCloudChannelV1ChannelPartnerLinkInput(){}
 }

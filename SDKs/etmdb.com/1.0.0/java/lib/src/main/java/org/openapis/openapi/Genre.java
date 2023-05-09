@@ -55,10 +55,8 @@ public class Genre {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenreSearchReadResponse res = new org.openapis.openapi.models.operations.GenreSearchReadResponse() {{
+        org.openapis.openapi.models.operations.GenreSearchReadResponse res = new org.openapis.openapi.models.operations.GenreSearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -95,10 +93,8 @@ public class Genre {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GenreSearchallReadResponse res = new org.openapis.openapi.models.operations.GenreSearchallReadResponse() {{
+        org.openapis.openapi.models.operations.GenreSearchallReadResponse res = new org.openapis.openapi.models.operations.GenreSearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

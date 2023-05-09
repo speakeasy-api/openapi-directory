@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotTopicPublishAction {
     @JsonProperty("mqttTopic")
     public String mqttTopic;
+
     public IotTopicPublishAction withMqttTopic(String mqttTopic) {
         this.mqttTopic = mqttTopic;
         return this;
@@ -22,9 +23,13 @@ public class IotTopicPublishAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payload")
     public Payload payload;
+
     public IotTopicPublishAction withPayload(Payload payload) {
         this.payload = payload;
         return this;
     }
     
+    public IotTopicPublishAction(@JsonProperty("mqttTopic") String mqttTopic) {
+        this.mqttTopic = mqttTopic;
+  }
 }

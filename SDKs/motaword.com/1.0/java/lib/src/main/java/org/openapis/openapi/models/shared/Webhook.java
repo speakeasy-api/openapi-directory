@@ -15,9 +15,11 @@ public class Webhook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callback_url")
     public String callbackUrl;
+
     public Webhook withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     
+    public Webhook(){}
 }

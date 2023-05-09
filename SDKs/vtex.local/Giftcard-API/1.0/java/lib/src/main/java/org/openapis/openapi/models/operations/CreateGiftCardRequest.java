@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateGiftCardRequest {
@@ -12,6 +13,7 @@ public class CreateGiftCardRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public CreateGiftCardRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class CreateGiftCardRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public CreateGiftCardRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateGiftCardRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/vnd.vtex.giftcard.v1+json")
     public org.openapis.openapi.models.shared.CreateGiftCardRequest createGiftCardRequest;
+
     public CreateGiftCardRequest withCreateGiftCardRequest(org.openapis.openapi.models.shared.CreateGiftCardRequest createGiftCardRequest) {
         this.createGiftCardRequest = createGiftCardRequest;
         return this;
@@ -39,6 +43,7 @@ public class CreateGiftCardRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-API-AppKey")
     public String xVTEXAPIAppKey;
+
     public CreateGiftCardRequest withXVTEXAPIAppKey(String xVTEXAPIAppKey) {
         this.xVTEXAPIAppKey = xVTEXAPIAppKey;
         return this;
@@ -49,9 +54,17 @@ public class CreateGiftCardRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-VTEX-API-AppToken")
     public String xVTEXAPIAppToken;
+
     public CreateGiftCardRequest withXVTEXAPIAppToken(String xVTEXAPIAppToken) {
         this.xVTEXAPIAppToken = xVTEXAPIAppToken;
         return this;
     }
     
+    public CreateGiftCardRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("CreateGiftCardRequest") org.openapis.openapi.models.shared.CreateGiftCardRequest createGiftCardRequest, @JsonProperty("X-VTEX-API-AppKey") String xVTEXAPIAppKey, @JsonProperty("X-VTEX-API-AppToken") String xVTEXAPIAppToken) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.createGiftCardRequest = createGiftCardRequest;
+        this.xVTEXAPIAppKey = xVTEXAPIAppKey;
+        this.xVTEXAPIAppToken = xVTEXAPIAppToken;
+  }
 }

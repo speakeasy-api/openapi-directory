@@ -15,6 +15,7 @@ public class ListPricingRulesAssociatedToPricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingPeriod")
     public String billingPeriod;
+
     public ListPricingRulesAssociatedToPricingPlanRequestBody withBillingPeriod(String billingPeriod) {
         this.billingPeriod = billingPeriod;
         return this;
@@ -26,6 +27,7 @@ public class ListPricingRulesAssociatedToPricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPricingRulesAssociatedToPricingPlanRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,6 +39,7 @@ public class ListPricingRulesAssociatedToPricingPlanRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPricingRulesAssociatedToPricingPlanRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -47,9 +50,13 @@ public class ListPricingRulesAssociatedToPricingPlanRequestBody {
      */
     @JsonProperty("PricingPlanArn")
     public String pricingPlanArn;
+
     public ListPricingRulesAssociatedToPricingPlanRequestBody withPricingPlanArn(String pricingPlanArn) {
         this.pricingPlanArn = pricingPlanArn;
         return this;
     }
     
+    public ListPricingRulesAssociatedToPricingPlanRequestBody(@JsonProperty("PricingPlanArn") String pricingPlanArn) {
+        this.pricingPlanArn = pricingPlanArn;
+  }
 }

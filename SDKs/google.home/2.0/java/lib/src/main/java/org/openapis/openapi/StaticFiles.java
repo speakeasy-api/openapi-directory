@@ -53,10 +53,8 @@ public class StaticFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ChromecastIconResponse res = new org.openapis.openapi.models.operations.ChromecastIconResponse() {{
+        org.openapis.openapi.models.operations.ChromecastIconResponse res = new org.openapis.openapi.models.operations.ChromecastIconResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -86,11 +84,9 @@ public class StaticFiles {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LegalNoticeResponse res = new org.openapis.openapi.models.operations.LegalNoticeResponse() {{
+        org.openapis.openapi.models.operations.LegalNoticeResponse res = new org.openapis.openapi.models.operations.LegalNoticeResponse(contentType, httpRes.statusCode()) {{
             legalNotice200TextPlainString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class UpdateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definition")
     public String definition;
+
     public UpdateStateMachineInput withDefinition(String definition) {
         this.definition = definition;
         return this;
@@ -20,6 +21,7 @@ public class UpdateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("loggingConfiguration")
     public LoggingConfiguration loggingConfiguration;
+
     public UpdateStateMachineInput withLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
         return this;
@@ -28,6 +30,7 @@ public class UpdateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateStateMachineInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -35,6 +38,7 @@ public class UpdateStateMachineInput {
     
     @JsonProperty("stateMachineArn")
     public String stateMachineArn;
+
     public UpdateStateMachineInput withStateMachineArn(String stateMachineArn) {
         this.stateMachineArn = stateMachineArn;
         return this;
@@ -43,9 +47,13 @@ public class UpdateStateMachineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tracingConfiguration")
     public TracingConfiguration tracingConfiguration;
+
     public UpdateStateMachineInput withTracingConfiguration(TracingConfiguration tracingConfiguration) {
         this.tracingConfiguration = tracingConfiguration;
         return this;
     }
     
+    public UpdateStateMachineInput(@JsonProperty("stateMachineArn") String stateMachineArn) {
+        this.stateMachineArn = stateMachineArn;
+  }
 }

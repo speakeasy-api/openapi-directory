@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DrivingLicenseSchemaCertificateDataDrivingLicense {
     
     public String abbreviation;
+
     public DrivingLicenseSchemaCertificateDataDrivingLicense withAbbreviation(String abbreviation) {
         this.abbreviation = abbreviation;
         return this;
@@ -16,6 +17,7 @@ public class DrivingLicenseSchemaCertificateDataDrivingLicense {
     
     
     public String code;
+
     public DrivingLicenseSchemaCertificateDataDrivingLicense withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +25,7 @@ public class DrivingLicenseSchemaCertificateDataDrivingLicense {
     
     
     public String description;
+
     public DrivingLicenseSchemaCertificateDataDrivingLicense withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +33,7 @@ public class DrivingLicenseSchemaCertificateDataDrivingLicense {
     
     
     public String endorseDate;
+
     public DrivingLicenseSchemaCertificateDataDrivingLicense withEndorseDate(String endorseDate) {
         this.endorseDate = endorseDate;
         return this;
@@ -37,9 +41,17 @@ public class DrivingLicenseSchemaCertificateDataDrivingLicense {
     
     
     public String issueDate;
+
     public DrivingLicenseSchemaCertificateDataDrivingLicense withIssueDate(String issueDate) {
         this.issueDate = issueDate;
         return this;
     }
     
+    public DrivingLicenseSchemaCertificateDataDrivingLicense(@JsonProperty("abbreviation") String abbreviation, @JsonProperty("code") String code, @JsonProperty("description") String description, @JsonProperty("endorseDate") String endorseDate, @JsonProperty("issueDate") String issueDate) {
+        this.abbreviation = abbreviation;
+        this.code = code;
+        this.description = description;
+        this.endorseDate = endorseDate;
+        this.issueDate = issueDate;
+  }
 }

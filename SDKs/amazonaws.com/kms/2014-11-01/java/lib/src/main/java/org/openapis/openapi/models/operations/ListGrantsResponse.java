@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListGrantsResponse {
     
     public String contentType;
+
     public ListGrantsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListGrantsResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public ListGrantsResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -29,6 +32,7 @@ public class ListGrantsResponse {
      */
     
     public Object invalidArnException;
+
     public ListGrantsResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -39,6 +43,7 @@ public class ListGrantsResponse {
      */
     
     public Object invalidGrantIdException;
+
     public ListGrantsResponse withInvalidGrantIdException(Object invalidGrantIdException) {
         this.invalidGrantIdException = invalidGrantIdException;
         return this;
@@ -49,6 +54,7 @@ public class ListGrantsResponse {
      */
     
     public Object invalidMarkerException;
+
     public ListGrantsResponse withInvalidMarkerException(Object invalidMarkerException) {
         this.invalidMarkerException = invalidMarkerException;
         return this;
@@ -59,6 +65,7 @@ public class ListGrantsResponse {
      */
     
     public Object kmsInternalException;
+
     public ListGrantsResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -69,6 +76,7 @@ public class ListGrantsResponse {
      */
     
     public Object kmsInvalidStateException;
+
     public ListGrantsResponse withKMSInvalidStateException(Object kmsInvalidStateException) {
         this.kmsInvalidStateException = kmsInvalidStateException;
         return this;
@@ -79,6 +87,7 @@ public class ListGrantsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListGrantsResponse listGrantsResponse;
+
     public ListGrantsResponse withListGrantsResponse(org.openapis.openapi.models.shared.ListGrantsResponse listGrantsResponse) {
         this.listGrantsResponse = listGrantsResponse;
         return this;
@@ -89,6 +98,7 @@ public class ListGrantsResponse {
      */
     
     public Object notFoundException;
+
     public ListGrantsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -96,6 +106,7 @@ public class ListGrantsResponse {
     
     
     public Integer statusCode;
+
     public ListGrantsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,9 +114,14 @@ public class ListGrantsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListGrantsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListGrantsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

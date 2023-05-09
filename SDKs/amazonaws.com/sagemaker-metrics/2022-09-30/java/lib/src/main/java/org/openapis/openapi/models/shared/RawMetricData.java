@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class RawMetricData {
     @JsonProperty("MetricName")
     public String metricName;
+
     public RawMetricData withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -27,6 +28,7 @@ public class RawMetricData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Step")
     public Long step;
+
     public RawMetricData withStep(Long step) {
         this.step = step;
         return this;
@@ -36,6 +38,7 @@ public class RawMetricData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Timestamp")
     public OffsetDateTime timestamp;
+
     public RawMetricData withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
@@ -43,9 +46,15 @@ public class RawMetricData {
     
     @JsonProperty("Value")
     public Double value;
+
     public RawMetricData withValue(Double value) {
         this.value = value;
         return this;
     }
     
+    public RawMetricData(@JsonProperty("MetricName") String metricName, @JsonProperty("Timestamp") OffsetDateTime timestamp, @JsonProperty("Value") Double value) {
+        this.metricName = metricName;
+        this.timestamp = timestamp;
+        this.value = value;
+  }
 }

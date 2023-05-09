@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLinkAttributesResponse {
@@ -12,6 +13,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLinkAttributesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLinkAttributesResponse {
     
     
     public String contentType;
+
     public GetLinkAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public GetLinkAttributesResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -39,6 +43,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object facetValidationException;
+
     public GetLinkAttributesResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -49,6 +54,7 @@ public class GetLinkAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLinkAttributesResponse getLinkAttributesResponse;
+
     public GetLinkAttributesResponse withGetLinkAttributesResponse(org.openapis.openapi.models.shared.GetLinkAttributesResponse getLinkAttributesResponse) {
         this.getLinkAttributesResponse = getLinkAttributesResponse;
         return this;
@@ -59,6 +65,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object internalServiceException;
+
     public GetLinkAttributesResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object invalidArnException;
+
     public GetLinkAttributesResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object limitExceededException;
+
     public GetLinkAttributesResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -86,6 +95,7 @@ public class GetLinkAttributesResponse {
     
     
     public Integer statusCode;
+
     public GetLinkAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetLinkAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLinkAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,6 +114,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLinkAttributesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -113,6 +125,7 @@ public class GetLinkAttributesResponse {
      */
     
     public Object retryableConflictException;
+
     public GetLinkAttributesResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -123,9 +136,14 @@ public class GetLinkAttributesResponse {
      */
     
     public Object validationException;
+
     public GetLinkAttributesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLinkAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

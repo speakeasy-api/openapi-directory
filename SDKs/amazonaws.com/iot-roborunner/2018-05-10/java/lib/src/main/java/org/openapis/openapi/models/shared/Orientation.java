@@ -15,9 +15,11 @@ public class Orientation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degrees")
     public Double degrees;
+
     public Orientation withDegrees(Double degrees) {
         this.degrees = degrees;
         return this;
     }
     
+    public Orientation(){}
 }

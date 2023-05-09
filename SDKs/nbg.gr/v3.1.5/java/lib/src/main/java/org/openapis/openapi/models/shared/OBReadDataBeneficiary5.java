@@ -12,9 +12,11 @@ public class OBReadDataBeneficiary5 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Beneficiary")
     public OBBeneficiary5[] beneficiary;
+
     public OBReadDataBeneficiary5 withBeneficiary(OBBeneficiary5[] beneficiary) {
         this.beneficiary = beneficiary;
         return this;
     }
     
+    public OBReadDataBeneficiary5(){}
 }

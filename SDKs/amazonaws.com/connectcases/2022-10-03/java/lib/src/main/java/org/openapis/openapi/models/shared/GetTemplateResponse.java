@@ -15,6 +15,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetTemplateResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("layoutConfiguration")
     public LayoutConfiguration layoutConfiguration;
+
     public GetTemplateResponse withLayoutConfiguration(LayoutConfiguration layoutConfiguration) {
         this.layoutConfiguration = layoutConfiguration;
         return this;
@@ -30,6 +32,7 @@ public class GetTemplateResponse {
     
     @JsonProperty("name")
     public String name;
+
     public GetTemplateResponse withName(String name) {
         this.name = name;
         return this;
@@ -38,6 +41,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredFields")
     public RequiredField[] requiredFields;
+
     public GetTemplateResponse withRequiredFields(RequiredField[] requiredFields) {
         this.requiredFields = requiredFields;
         return this;
@@ -45,6 +49,7 @@ public class GetTemplateResponse {
     
     @JsonProperty("status")
     public TemplateStatusEnum status;
+
     public GetTemplateResponse withStatus(TemplateStatusEnum status) {
         this.status = status;
         return this;
@@ -53,6 +58,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public GetTemplateResponse withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -60,6 +66,7 @@ public class GetTemplateResponse {
     
     @JsonProperty("templateArn")
     public String templateArn;
+
     public GetTemplateResponse withTemplateArn(String templateArn) {
         this.templateArn = templateArn;
         return this;
@@ -67,9 +74,16 @@ public class GetTemplateResponse {
     
     @JsonProperty("templateId")
     public String templateId;
+
     public GetTemplateResponse withTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
     
+    public GetTemplateResponse(@JsonProperty("name") String name, @JsonProperty("status") TemplateStatusEnum status, @JsonProperty("templateArn") String templateArn, @JsonProperty("templateId") String templateId) {
+        this.name = name;
+        this.status = status;
+        this.templateArn = templateArn;
+        this.templateId = templateId;
+  }
 }

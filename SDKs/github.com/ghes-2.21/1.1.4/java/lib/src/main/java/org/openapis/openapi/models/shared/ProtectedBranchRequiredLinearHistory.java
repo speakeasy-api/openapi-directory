@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProtectedBranchRequiredLinearHistory {
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public ProtectedBranchRequiredLinearHistory withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public ProtectedBranchRequiredLinearHistory(@JsonProperty("enabled") Boolean enabled) {
+        this.enabled = enabled;
+  }
 }

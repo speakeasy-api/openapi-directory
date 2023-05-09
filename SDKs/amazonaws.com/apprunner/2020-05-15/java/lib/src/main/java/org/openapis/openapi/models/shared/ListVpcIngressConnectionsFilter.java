@@ -15,6 +15,7 @@ public class ListVpcIngressConnectionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceArn")
     public String serviceArn;
+
     public ListVpcIngressConnectionsFilter withServiceArn(String serviceArn) {
         this.serviceArn = serviceArn;
         return this;
@@ -23,9 +24,11 @@ public class ListVpcIngressConnectionsFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcEndpointId")
     public String vpcEndpointId;
+
     public ListVpcIngressConnectionsFilter withVpcEndpointId(String vpcEndpointId) {
         this.vpcEndpointId = vpcEndpointId;
         return this;
     }
     
+    public ListVpcIngressConnectionsFilter(){}
 }

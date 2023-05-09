@@ -15,6 +15,7 @@ public class MetricDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public QueryErrorCodeEnum code;
+
     public MetricDataError withCode(QueryErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class MetricDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public MetricDataError withId(String id) {
         this.id = id;
         return this;
@@ -31,9 +33,11 @@ public class MetricDataError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public MetricDataError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public MetricDataError(){}
 }

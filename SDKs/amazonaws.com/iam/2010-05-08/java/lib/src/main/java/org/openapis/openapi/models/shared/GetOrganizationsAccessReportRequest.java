@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetOrganizationsAccessReportRequest {
     
     public String jobId;
+
     public GetOrganizationsAccessReportRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -16,6 +17,7 @@ public class GetOrganizationsAccessReportRequest {
     
     
     public String marker;
+
     public GetOrganizationsAccessReportRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class GetOrganizationsAccessReportRequest {
     
     
     public Long maxItems;
+
     public GetOrganizationsAccessReportRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -30,9 +33,13 @@ public class GetOrganizationsAccessReportRequest {
     
     
     public SortKeyTypeEnum sortKey;
+
     public GetOrganizationsAccessReportRequest withSortKey(SortKeyTypeEnum sortKey) {
         this.sortKey = sortKey;
         return this;
     }
     
+    public GetOrganizationsAccessReportRequest(@JsonProperty("JobId") String jobId) {
+        this.jobId = jobId;
+  }
 }

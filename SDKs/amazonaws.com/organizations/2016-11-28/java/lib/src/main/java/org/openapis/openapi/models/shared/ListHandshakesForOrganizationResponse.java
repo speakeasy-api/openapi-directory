@@ -15,6 +15,7 @@ public class ListHandshakesForOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handshakes")
     public Handshake[] handshakes;
+
     public ListHandshakesForOrganizationResponse withHandshakes(Handshake[] handshakes) {
         this.handshakes = handshakes;
         return this;
@@ -23,9 +24,11 @@ public class ListHandshakesForOrganizationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHandshakesForOrganizationResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHandshakesForOrganizationResponse(){}
 }

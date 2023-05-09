@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReplicationConfiguration {
     @JsonProperty("rules")
     public ReplicationRule[] rules;
+
     public ReplicationConfiguration withRules(ReplicationRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public ReplicationConfiguration(@JsonProperty("rules") ReplicationRule[] rules) {
+        this.rules = rules;
+  }
 }

@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ShareAttributes {
     @JsonProperty("shareIdentifier")
     public String shareIdentifier;
+
     public ShareAttributes withShareIdentifier(String shareIdentifier) {
         this.shareIdentifier = shareIdentifier;
         return this;
@@ -22,9 +23,13 @@ public class ShareAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weightFactor")
     public Float weightFactor;
+
     public ShareAttributes withWeightFactor(Float weightFactor) {
         this.weightFactor = weightFactor;
         return this;
     }
     
+    public ShareAttributes(@JsonProperty("shareIdentifier") String shareIdentifier) {
+        this.shareIdentifier = shareIdentifier;
+  }
 }

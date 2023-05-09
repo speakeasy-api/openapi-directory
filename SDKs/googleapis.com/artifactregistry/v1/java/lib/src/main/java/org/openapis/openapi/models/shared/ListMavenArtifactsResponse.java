@@ -18,6 +18,7 @@ public class ListMavenArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mavenArtifacts")
     public MavenArtifact[] mavenArtifacts;
+
     public ListMavenArtifactsResponse withMavenArtifacts(MavenArtifact[] mavenArtifacts) {
         this.mavenArtifacts = mavenArtifacts;
         return this;
@@ -29,9 +30,11 @@ public class ListMavenArtifactsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListMavenArtifactsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public ListMavenArtifactsResponse(){}
 }

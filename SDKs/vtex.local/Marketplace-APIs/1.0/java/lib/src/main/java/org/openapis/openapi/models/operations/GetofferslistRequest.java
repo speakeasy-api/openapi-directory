@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetofferslistRequest {
@@ -12,6 +13,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public GetofferslistRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public GetofferslistRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public GetofferslistRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -42,6 +46,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=environment")
     public String environment;
+
     public GetofferslistRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
@@ -76,6 +81,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fq")
     public String fq;
+
     public GetofferslistRequest withFq(String fq) {
         this.fq = fq;
         return this;
@@ -86,6 +92,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rows")
     public Long rows;
+
     public GetofferslistRequest withRows(Long rows) {
         this.rows = rows;
         return this;
@@ -108,6 +115,7 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetofferslistRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -118,9 +126,16 @@ public class GetofferslistRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start")
     public Long start;
+
     public GetofferslistRequest withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public GetofferslistRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("accountName") String accountName, @JsonProperty("environment") String environment) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.accountName = accountName;
+        this.environment = environment;
+  }
 }

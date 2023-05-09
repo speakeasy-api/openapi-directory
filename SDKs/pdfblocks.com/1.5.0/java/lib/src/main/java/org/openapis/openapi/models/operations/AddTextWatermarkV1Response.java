@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddTextWatermarkV1Response {
     
     public String contentType;
+
     public AddTextWatermarkV1Response withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AddTextWatermarkV1Response {
     
     
     public Integer statusCode;
+
     public AddTextWatermarkV1Response withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AddTextWatermarkV1Response {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddTextWatermarkV1Response withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AddTextWatermarkV1Response {
      */
     
     public byte[] addTextWatermarkV1200ApplicationPdfBinaryString;
+
     public AddTextWatermarkV1Response withAddTextWatermarkV1200ApplicationPdfBinaryString(byte[] addTextWatermarkV1200ApplicationPdfBinaryString) {
         this.addTextWatermarkV1200ApplicationPdfBinaryString = addTextWatermarkV1200ApplicationPdfBinaryString;
         return this;
@@ -43,9 +48,14 @@ public class AddTextWatermarkV1Response {
      */
     
     public AddTextWatermarkV14XXApplicationProblemPlusJson addTextWatermarkV14XXApplicationProblemPlusJsonObject;
+
     public AddTextWatermarkV1Response withAddTextWatermarkV14XXApplicationProblemPlusJsonObject(AddTextWatermarkV14XXApplicationProblemPlusJson addTextWatermarkV14XXApplicationProblemPlusJsonObject) {
         this.addTextWatermarkV14XXApplicationProblemPlusJsonObject = addTextWatermarkV14XXApplicationProblemPlusJsonObject;
         return this;
     }
     
+    public AddTextWatermarkV1Response(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

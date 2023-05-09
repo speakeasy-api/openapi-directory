@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetByteMatchSetResponse {
     
     public String contentType;
+
     public GetByteMatchSetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetByteMatchSetResponse {
      */
     
     public org.openapis.openapi.models.shared.GetByteMatchSetResponse getByteMatchSetResponse;
+
     public GetByteMatchSetResponse withGetByteMatchSetResponse(org.openapis.openapi.models.shared.GetByteMatchSetResponse getByteMatchSetResponse) {
         this.getByteMatchSetResponse = getByteMatchSetResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetByteMatchSetResponse {
     
     
     public Integer statusCode;
+
     public GetByteMatchSetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetByteMatchSetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetByteMatchSetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class GetByteMatchSetResponse {
      */
     
     public Object wafInternalErrorException;
+
     public GetByteMatchSetResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -53,6 +59,7 @@ public class GetByteMatchSetResponse {
      */
     
     public Object wafInvalidAccountException;
+
     public GetByteMatchSetResponse withWAFInvalidAccountException(Object wafInvalidAccountException) {
         this.wafInvalidAccountException = wafInvalidAccountException;
         return this;
@@ -63,9 +70,14 @@ public class GetByteMatchSetResponse {
      */
     
     public Object wafNonexistentItemException;
+
     public GetByteMatchSetResponse withWAFNonexistentItemException(Object wafNonexistentItemException) {
         this.wafNonexistentItemException = wafNonexistentItemException;
         return this;
     }
     
+    public GetByteMatchSetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

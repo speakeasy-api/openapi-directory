@@ -15,9 +15,11 @@ public class CreateFleetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public CreateFleetResponse withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public CreateFleetResponse(){}
 }

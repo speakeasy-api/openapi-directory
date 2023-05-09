@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListDomainsResult {
     
     public String[] domainNames;
+
     public ListDomainsResult withDomainNames(String[] domainNames) {
         this.domainNames = domainNames;
         return this;
@@ -19,9 +20,11 @@ public class ListDomainsResult {
     
     
     public String nextToken;
+
     public ListDomainsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListDomainsResult(){}
 }

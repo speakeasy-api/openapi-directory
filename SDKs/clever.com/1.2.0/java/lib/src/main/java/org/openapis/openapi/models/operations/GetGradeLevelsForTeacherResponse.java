@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGradeLevelsForTeacherResponse {
     
     public String contentType;
+
     public GetGradeLevelsForTeacherResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGradeLevelsForTeacherResponse {
      */
     
     public org.openapis.openapi.models.shared.GradeLevelsResponse gradeLevelsResponse;
+
     public GetGradeLevelsForTeacherResponse withGradeLevelsResponse(org.openapis.openapi.models.shared.GradeLevelsResponse gradeLevelsResponse) {
         this.gradeLevelsResponse = gradeLevelsResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetGradeLevelsForTeacherResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetGradeLevelsForTeacherResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -36,6 +40,7 @@ public class GetGradeLevelsForTeacherResponse {
     
     
     public Integer statusCode;
+
     public GetGradeLevelsForTeacherResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetGradeLevelsForTeacherResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGradeLevelsForTeacherResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetGradeLevelsForTeacherResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

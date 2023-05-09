@@ -26,6 +26,7 @@ public class UpdatePsuIdenticationResponse {
      */
     @JsonProperty("_links")
     public java.util.Map<String, HrefType> links;
+
     public UpdatePsuIdenticationResponse withLinks(java.util.Map<String, HrefType> links) {
         this.links = links;
         return this;
@@ -34,6 +35,7 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyConversionFees")
     public Amount currencyConversionFees;
+
     public UpdatePsuIdenticationResponse withCurrencyConversionFees(Amount currencyConversionFees) {
         this.currencyConversionFees = currencyConversionFees;
         return this;
@@ -42,6 +44,7 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedInterbankSettlementAmount")
     public Amount estimatedInterbankSettlementAmount;
+
     public UpdatePsuIdenticationResponse withEstimatedInterbankSettlementAmount(Amount estimatedInterbankSettlementAmount) {
         this.estimatedInterbankSettlementAmount = estimatedInterbankSettlementAmount;
         return this;
@@ -50,6 +53,7 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedTotalAmount")
     public Amount estimatedTotalAmount;
+
     public UpdatePsuIdenticationResponse withEstimatedTotalAmount(Amount estimatedTotalAmount) {
         this.estimatedTotalAmount = estimatedTotalAmount;
         return this;
@@ -61,6 +65,7 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("psuMessage")
     public String psuMessage;
+
     public UpdatePsuIdenticationResponse withPsuMessage(String psuMessage) {
         this.psuMessage = psuMessage;
         return this;
@@ -82,6 +87,7 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scaMethods")
     public AuthenticationObject[] scaMethods;
+
     public UpdatePsuIdenticationResponse withScaMethods(AuthenticationObject[] scaMethods) {
         this.scaMethods = scaMethods;
         return this;
@@ -119,6 +125,7 @@ public class UpdatePsuIdenticationResponse {
      */
     @JsonProperty("scaStatus")
     public ScaStatusEnum scaStatus;
+
     public UpdatePsuIdenticationResponse withScaStatus(ScaStatusEnum scaStatus) {
         this.scaStatus = scaStatus;
         return this;
@@ -127,9 +134,14 @@ public class UpdatePsuIdenticationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionFees")
     public Amount transactionFees;
+
     public UpdatePsuIdenticationResponse withTransactionFees(Amount transactionFees) {
         this.transactionFees = transactionFees;
         return this;
     }
     
+    public UpdatePsuIdenticationResponse(@JsonProperty("_links") java.util.Map<String, HrefType> links, @JsonProperty("scaStatus") ScaStatusEnum scaStatus) {
+        this.links = links;
+        this.scaStatus = scaStatus;
+  }
 }

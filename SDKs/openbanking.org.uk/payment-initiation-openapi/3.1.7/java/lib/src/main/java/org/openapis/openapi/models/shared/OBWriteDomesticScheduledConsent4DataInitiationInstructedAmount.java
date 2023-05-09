@@ -16,6 +16,7 @@ public class OBWriteDomesticScheduledConsent4DataInitiationInstructedAmount {
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBWriteDomesticScheduledConsent4DataInitiationInstructedAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -26,9 +27,14 @@ public class OBWriteDomesticScheduledConsent4DataInitiationInstructedAmount {
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBWriteDomesticScheduledConsent4DataInitiationInstructedAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBWriteDomesticScheduledConsent4DataInitiationInstructedAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

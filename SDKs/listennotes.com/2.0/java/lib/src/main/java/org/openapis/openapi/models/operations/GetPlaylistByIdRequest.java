@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPlaylistByIdRequest {
@@ -12,6 +13,7 @@ public class GetPlaylistByIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-ListenAPI-Key")
     public String xListenAPIKey;
+
     public GetPlaylistByIdRequest withXListenAPIKey(String xListenAPIKey) {
         this.xListenAPIKey = xListenAPIKey;
         return this;
@@ -25,6 +27,7 @@ public class GetPlaylistByIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetPlaylistByIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -39,6 +42,7 @@ public class GetPlaylistByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=last_timestamp_ms")
     public Long lastTimestampMs;
+
     public GetPlaylistByIdRequest withLastTimestampMs(Long lastTimestampMs) {
         this.lastTimestampMs = lastTimestampMs;
         return this;
@@ -50,6 +54,7 @@ public class GetPlaylistByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetPlaylistByIdSortEnum sort;
+
     public GetPlaylistByIdRequest withSort(GetPlaylistByIdSortEnum sort) {
         this.sort = sort;
         return this;
@@ -61,9 +66,14 @@ public class GetPlaylistByIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public GetPlaylistByIdTypeEnum type;
+
     public GetPlaylistByIdRequest withType(GetPlaylistByIdTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public GetPlaylistByIdRequest(@JsonProperty("X-ListenAPI-Key") String xListenAPIKey, @JsonProperty("id") String id) {
+        this.xListenAPIKey = xListenAPIKey;
+        this.id = id;
+  }
 }

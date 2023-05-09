@@ -18,9 +18,11 @@ public class TwoHundredSingleResultResultBundles {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authz")
     public TwoHundredSingleResultResultBundlesAuthz authz;
+
     public TwoHundredSingleResultResultBundles withAuthz(TwoHundredSingleResultResultBundlesAuthz authz) {
         this.authz = authz;
         return this;
     }
     
+    public TwoHundredSingleResultResultBundles(){}
 }

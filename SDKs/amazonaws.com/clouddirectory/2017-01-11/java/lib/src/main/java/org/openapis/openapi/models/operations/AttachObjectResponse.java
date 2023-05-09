@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachObjectResponse {
@@ -12,6 +13,7 @@ public class AttachObjectResponse {
      */
     
     public Object accessDeniedException;
+
     public AttachObjectResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AttachObjectResponse {
      */
     
     public org.openapis.openapi.models.shared.AttachObjectResponse attachObjectResponse;
+
     public AttachObjectResponse withAttachObjectResponse(org.openapis.openapi.models.shared.AttachObjectResponse attachObjectResponse) {
         this.attachObjectResponse = attachObjectResponse;
         return this;
@@ -29,6 +32,7 @@ public class AttachObjectResponse {
     
     
     public String contentType;
+
     public AttachObjectResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AttachObjectResponse {
      */
     
     public Object directoryNotEnabledException;
+
     public AttachObjectResponse withDirectoryNotEnabledException(Object directoryNotEnabledException) {
         this.directoryNotEnabledException = directoryNotEnabledException;
         return this;
@@ -49,6 +54,7 @@ public class AttachObjectResponse {
      */
     
     public Object facetValidationException;
+
     public AttachObjectResponse withFacetValidationException(Object facetValidationException) {
         this.facetValidationException = facetValidationException;
         return this;
@@ -59,6 +65,7 @@ public class AttachObjectResponse {
      */
     
     public Object internalServiceException;
+
     public AttachObjectResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -69,6 +76,7 @@ public class AttachObjectResponse {
      */
     
     public Object invalidArnException;
+
     public AttachObjectResponse withInvalidArnException(Object invalidArnException) {
         this.invalidArnException = invalidArnException;
         return this;
@@ -79,6 +87,7 @@ public class AttachObjectResponse {
      */
     
     public Object invalidAttachmentException;
+
     public AttachObjectResponse withInvalidAttachmentException(Object invalidAttachmentException) {
         this.invalidAttachmentException = invalidAttachmentException;
         return this;
@@ -89,6 +98,7 @@ public class AttachObjectResponse {
      */
     
     public Object limitExceededException;
+
     public AttachObjectResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -99,6 +109,7 @@ public class AttachObjectResponse {
      */
     
     public Object linkNameAlreadyInUseException;
+
     public AttachObjectResponse withLinkNameAlreadyInUseException(Object linkNameAlreadyInUseException) {
         this.linkNameAlreadyInUseException = linkNameAlreadyInUseException;
         return this;
@@ -106,6 +117,7 @@ public class AttachObjectResponse {
     
     
     public Integer statusCode;
+
     public AttachObjectResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class AttachObjectResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachObjectResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class AttachObjectResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachObjectResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -133,6 +147,7 @@ public class AttachObjectResponse {
      */
     
     public Object retryableConflictException;
+
     public AttachObjectResponse withRetryableConflictException(Object retryableConflictException) {
         this.retryableConflictException = retryableConflictException;
         return this;
@@ -143,9 +158,14 @@ public class AttachObjectResponse {
      */
     
     public Object validationException;
+
     public AttachObjectResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public AttachObjectResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

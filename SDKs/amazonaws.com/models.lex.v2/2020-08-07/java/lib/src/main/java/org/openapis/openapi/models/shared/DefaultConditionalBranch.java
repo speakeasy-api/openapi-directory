@@ -15,6 +15,7 @@ public class DefaultConditionalBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextStep")
     public DialogState nextStep;
+
     public DefaultConditionalBranch withNextStep(DialogState nextStep) {
         this.nextStep = nextStep;
         return this;
@@ -26,9 +27,11 @@ public class DefaultConditionalBranch {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public ResponseSpecification response;
+
     public DefaultConditionalBranch withResponse(ResponseSpecification response) {
         this.response = response;
         return this;
     }
     
+    public DefaultConditionalBranch(){}
 }

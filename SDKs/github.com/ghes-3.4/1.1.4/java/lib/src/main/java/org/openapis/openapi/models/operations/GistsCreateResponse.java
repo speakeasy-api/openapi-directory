@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GistsCreateResponse {
     
     public String contentType;
+
     public GistsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GistsCreateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GistsCreateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GistsCreateResponse {
     
     
     public Integer statusCode;
+
     public GistsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GistsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GistsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GistsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public GistsCreateResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class GistsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GistSimple gistSimple;
+
     public GistsCreateResponse withGistSimple(org.openapis.openapi.models.shared.GistSimple gistSimple) {
         this.gistSimple = gistSimple;
         return this;
@@ -60,9 +67,14 @@ public class GistsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public GistsCreateResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public GistsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

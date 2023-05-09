@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetTemplateInput {
     
     public String changeSetName;
+
     public GetTemplateInput withChangeSetName(String changeSetName) {
         this.changeSetName = changeSetName;
         return this;
@@ -19,6 +20,7 @@ public class GetTemplateInput {
     
     
     public String stackName;
+
     public GetTemplateInput withStackName(String stackName) {
         this.stackName = stackName;
         return this;
@@ -26,9 +28,11 @@ public class GetTemplateInput {
     
     
     public TemplateStageEnum templateStage;
+
     public GetTemplateInput withTemplateStage(TemplateStageEnum templateStage) {
         this.templateStage = templateStage;
         return this;
     }
     
+    public GetTemplateInput(){}
 }

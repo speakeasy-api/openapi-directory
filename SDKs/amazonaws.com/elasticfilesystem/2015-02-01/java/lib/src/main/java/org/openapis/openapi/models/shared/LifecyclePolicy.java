@@ -15,6 +15,7 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitionToIA")
     public TransitionToIARulesEnum transitionToIA;
+
     public LifecyclePolicy withTransitionToIA(TransitionToIARulesEnum transitionToIA) {
         this.transitionToIA = transitionToIA;
         return this;
@@ -23,9 +24,11 @@ public class LifecyclePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransitionToPrimaryStorageClass")
     public TransitionToPrimaryStorageClassRulesEnum transitionToPrimaryStorageClass;
+
     public LifecyclePolicy withTransitionToPrimaryStorageClass(TransitionToPrimaryStorageClassRulesEnum transitionToPrimaryStorageClass) {
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
         return this;
     }
     
+    public LifecyclePolicy(){}
 }

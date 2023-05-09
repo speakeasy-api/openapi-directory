@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsCreateResponse(contentType, httpRes.statusCode()) {{
             attestor = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsListResponse(contentType, httpRes.statusCode()) {{
             listAttestorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsUpdateResponse(contentType, httpRes.statusCode()) {{
             attestor = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -250,11 +242,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsAttestorsValidateAttestationOccurrenceResponse(contentType, httpRes.statusCode()) {{
             validateAttestationOccurrenceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -296,11 +286,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             iamPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -344,11 +332,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicySetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             iamPolicy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -392,11 +378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.BinaryauthorizationProjectsPolicyTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testIamPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActionOnFailure")
     public ActionOnFailureEnum actionOnFailure;
+
     public Step withActionOnFailure(ActionOnFailureEnum actionOnFailure) {
         this.actionOnFailure = actionOnFailure;
         return this;
@@ -23,6 +24,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Config")
     public HadoopStepConfig config;
+
     public Step withConfig(HadoopStepConfig config) {
         this.config = config;
         return this;
@@ -31,6 +33,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExecutionRoleArn")
     public String executionRoleArn;
+
     public Step withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Step withId(String id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Step withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class Step {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public StepStatus status;
+
     public Step withStatus(StepStatus status) {
         this.status = status;
         return this;
     }
     
+    public Step(){}
 }

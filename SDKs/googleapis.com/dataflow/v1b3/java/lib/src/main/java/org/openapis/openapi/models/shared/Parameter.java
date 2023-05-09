@@ -18,6 +18,7 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Parameter withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class Parameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public Parameter withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public Parameter(){}
 }

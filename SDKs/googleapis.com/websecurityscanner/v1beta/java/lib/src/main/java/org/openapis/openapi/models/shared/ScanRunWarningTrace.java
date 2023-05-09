@@ -18,9 +18,11 @@ public class ScanRunWarningTrace {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public ScanRunWarningTraceCodeEnum code;
+
     public ScanRunWarningTrace withCode(ScanRunWarningTraceCodeEnum code) {
         this.code = code;
         return this;
     }
     
+    public ScanRunWarningTrace(){}
 }

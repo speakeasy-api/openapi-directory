@@ -15,6 +15,7 @@ public class AwsRdsDbInstanceVpcSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public AwsRdsDbInstanceVpcSecurityGroup withStatus(String status) {
         this.status = status;
         return this;
@@ -23,9 +24,11 @@ public class AwsRdsDbInstanceVpcSecurityGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcSecurityGroupId")
     public String vpcSecurityGroupId;
+
     public AwsRdsDbInstanceVpcSecurityGroup withVpcSecurityGroupId(String vpcSecurityGroupId) {
         this.vpcSecurityGroupId = vpcSecurityGroupId;
         return this;
     }
     
+    public AwsRdsDbInstanceVpcSecurityGroup(){}
 }

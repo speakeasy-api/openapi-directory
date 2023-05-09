@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTemplateSyncConfigInput {
     @JsonProperty("branch")
     public String branch;
+
     public UpdateTemplateSyncConfigInput withBranch(String branch) {
         this.branch = branch;
         return this;
@@ -18,6 +19,7 @@ public class UpdateTemplateSyncConfigInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public UpdateTemplateSyncConfigInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
@@ -25,6 +27,7 @@ public class UpdateTemplateSyncConfigInput {
     
     @JsonProperty("repositoryProvider")
     public RepositoryProviderEnum repositoryProvider;
+
     public UpdateTemplateSyncConfigInput withRepositoryProvider(RepositoryProviderEnum repositoryProvider) {
         this.repositoryProvider = repositoryProvider;
         return this;
@@ -33,6 +36,7 @@ public class UpdateTemplateSyncConfigInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subdirectory")
     public String subdirectory;
+
     public UpdateTemplateSyncConfigInput withSubdirectory(String subdirectory) {
         this.subdirectory = subdirectory;
         return this;
@@ -40,6 +44,7 @@ public class UpdateTemplateSyncConfigInput {
     
     @JsonProperty("templateName")
     public String templateName;
+
     public UpdateTemplateSyncConfigInput withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
@@ -47,9 +52,17 @@ public class UpdateTemplateSyncConfigInput {
     
     @JsonProperty("templateType")
     public TemplateTypeEnum templateType;
+
     public UpdateTemplateSyncConfigInput withTemplateType(TemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
     }
     
+    public UpdateTemplateSyncConfigInput(@JsonProperty("branch") String branch, @JsonProperty("repositoryName") String repositoryName, @JsonProperty("repositoryProvider") RepositoryProviderEnum repositoryProvider, @JsonProperty("templateName") String templateName, @JsonProperty("templateType") TemplateTypeEnum templateType) {
+        this.branch = branch;
+        this.repositoryName = repositoryName;
+        this.repositoryProvider = repositoryProvider;
+        this.templateName = templateName;
+        this.templateType = templateType;
+  }
 }

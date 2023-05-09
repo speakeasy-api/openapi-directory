@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListImportFailuresRequest {
     @JsonProperty("ImportId")
     public String importId;
+
     public ListImportFailuresRequest withImportId(String importId) {
         this.importId = importId;
         return this;
@@ -19,6 +20,7 @@ public class ListImportFailuresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListImportFailuresRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,9 +29,13 @@ public class ListImportFailuresRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImportFailuresRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListImportFailuresRequest(@JsonProperty("ImportId") String importId) {
+        this.importId = importId;
+  }
 }

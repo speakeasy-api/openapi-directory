@@ -18,6 +18,7 @@ public class InvitationsSent200ApplicationJSONAppOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public InvitationsSent200ApplicationJSONAppOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class InvitationsSent200ApplicationJSONAppOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public InvitationsSent200ApplicationJSONAppOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class InvitationsSent200ApplicationJSONAppOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public InvitationsSent200ApplicationJSONAppOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class InvitationsSent200ApplicationJSONAppOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public InvitationsSent200ApplicationJSONAppOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class InvitationsSent200ApplicationJSONAppOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public InvitationsSent200ApplicationJSONAppOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class InvitationsSent200ApplicationJSONAppOwner {
      */
     @JsonProperty("type")
     public InvitationsSent200ApplicationJSONAppOwnerTypeEnum type;
+
     public InvitationsSent200ApplicationJSONAppOwner withType(InvitationsSent200ApplicationJSONAppOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InvitationsSent200ApplicationJSONAppOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") InvitationsSent200ApplicationJSONAppOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

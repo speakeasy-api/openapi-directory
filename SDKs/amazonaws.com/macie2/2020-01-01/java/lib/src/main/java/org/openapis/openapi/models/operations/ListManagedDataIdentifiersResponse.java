@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListManagedDataIdentifiersResponse {
     
     public String contentType;
+
     public ListManagedDataIdentifiersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListManagedDataIdentifiersResponse {
      */
     
     public org.openapis.openapi.models.shared.ListManagedDataIdentifiersResponse listManagedDataIdentifiersResponse;
+
     public ListManagedDataIdentifiersResponse withListManagedDataIdentifiersResponse(org.openapis.openapi.models.shared.ListManagedDataIdentifiersResponse listManagedDataIdentifiersResponse) {
         this.listManagedDataIdentifiersResponse = listManagedDataIdentifiersResponse;
         return this;
@@ -26,6 +29,7 @@ public class ListManagedDataIdentifiersResponse {
     
     
     public Integer statusCode;
+
     public ListManagedDataIdentifiersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ListManagedDataIdentifiersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListManagedDataIdentifiersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListManagedDataIdentifiersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

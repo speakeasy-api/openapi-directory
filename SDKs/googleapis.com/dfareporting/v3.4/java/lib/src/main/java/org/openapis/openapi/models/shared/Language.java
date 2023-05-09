@@ -18,6 +18,7 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Language withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Language withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public Language withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -51,9 +54,11 @@ public class Language {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Language withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Language(){}
 }

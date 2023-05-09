@@ -15,6 +15,7 @@ public class ShopperStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doingBusinessAsName")
     public String doingBusinessAsName;
+
     public ShopperStatement withDoingBusinessAsName(String doingBusinessAsName) {
         this.doingBusinessAsName = doingBusinessAsName;
         return this;
@@ -26,9 +27,11 @@ public class ShopperStatement {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ShopperStatementTypeEnum type;
+
     public ShopperStatement withType(ShopperStatementTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ShopperStatement(){}
 }

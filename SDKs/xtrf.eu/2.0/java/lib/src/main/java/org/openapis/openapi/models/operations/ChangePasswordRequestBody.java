@@ -12,6 +12,7 @@ public class ChangePasswordRequestBody {
      */
     @SpeakeasyMetadata("form:name=newPassword")
     public String newPassword;
+
     public ChangePasswordRequestBody withNewPassword(String newPassword) {
         this.newPassword = newPassword;
         return this;
@@ -22,9 +23,11 @@ public class ChangePasswordRequestBody {
      */
     @SpeakeasyMetadata("form:name=oldPassword")
     public String oldPassword;
+
     public ChangePasswordRequestBody withOldPassword(String oldPassword) {
         this.oldPassword = oldPassword;
         return this;
     }
     
+    public ChangePasswordRequestBody(){}
 }

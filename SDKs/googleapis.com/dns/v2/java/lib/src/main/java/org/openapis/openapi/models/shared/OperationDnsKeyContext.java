@@ -15,6 +15,7 @@ public class OperationDnsKeyContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newValue")
     public DnsKey newValue;
+
     public OperationDnsKeyContext withNewValue(DnsKey newValue) {
         this.newValue = newValue;
         return this;
@@ -26,9 +27,11 @@ public class OperationDnsKeyContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldValue")
     public DnsKey oldValue;
+
     public OperationDnsKeyContext withOldValue(DnsKey oldValue) {
         this.oldValue = oldValue;
         return this;
     }
     
+    public OperationDnsKeyContext(){}
 }

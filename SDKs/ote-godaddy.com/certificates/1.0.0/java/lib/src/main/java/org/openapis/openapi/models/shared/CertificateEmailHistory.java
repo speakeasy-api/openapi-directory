@@ -15,6 +15,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("accountId")
     public Long accountId;
+
     public CertificateEmailHistory withAccountId(Long accountId) {
         this.accountId = accountId;
         return this;
@@ -25,6 +26,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("body")
     public String body;
+
     public CertificateEmailHistory withBody(String body) {
         this.body = body;
         return this;
@@ -35,6 +37,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("dateEntered")
     public String dateEntered;
+
     public CertificateEmailHistory withDateEntered(String dateEntered) {
         this.dateEntered = dateEntered;
         return this;
@@ -45,6 +48,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("fromType")
     public String fromType;
+
     public CertificateEmailHistory withFromType(String fromType) {
         this.fromType = fromType;
         return this;
@@ -55,6 +59,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("id")
     public Long id;
+
     public CertificateEmailHistory withId(Long id) {
         this.id = id;
         return this;
@@ -65,6 +70,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("recipients")
     public String recipients;
+
     public CertificateEmailHistory withRecipients(String recipients) {
         this.recipients = recipients;
         return this;
@@ -75,6 +81,7 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("subject")
     public String subject;
+
     public CertificateEmailHistory withSubject(String subject) {
         this.subject = subject;
         return this;
@@ -85,9 +92,20 @@ public class CertificateEmailHistory {
      */
     @JsonProperty("templateType")
     public String templateType;
+
     public CertificateEmailHistory withTemplateType(String templateType) {
         this.templateType = templateType;
         return this;
     }
     
+    public CertificateEmailHistory(@JsonProperty("accountId") Long accountId, @JsonProperty("body") String body, @JsonProperty("dateEntered") String dateEntered, @JsonProperty("fromType") String fromType, @JsonProperty("id") Long id, @JsonProperty("recipients") String recipients, @JsonProperty("subject") String subject, @JsonProperty("templateType") String templateType) {
+        this.accountId = accountId;
+        this.body = body;
+        this.dateEntered = dateEntered;
+        this.fromType = fromType;
+        this.id = id;
+        this.recipients = recipients;
+        this.subject = subject;
+        this.templateType = templateType;
+  }
 }

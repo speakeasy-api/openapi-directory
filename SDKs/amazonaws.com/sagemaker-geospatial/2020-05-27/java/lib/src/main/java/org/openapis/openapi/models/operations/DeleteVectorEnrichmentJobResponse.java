@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteVectorEnrichmentJobResponse {
@@ -12,6 +13,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteVectorEnrichmentJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object conflictException;
+
     public DeleteVectorEnrichmentJobResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteVectorEnrichmentJobResponse {
     
     
     public String contentType;
+
     public DeleteVectorEnrichmentJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public java.util.Map<String, Object> deleteVectorEnrichmentJobOutput;
+
     public DeleteVectorEnrichmentJobResponse withDeleteVectorEnrichmentJobOutput(java.util.Map<String, Object> deleteVectorEnrichmentJobOutput) {
         this.deleteVectorEnrichmentJobOutput = deleteVectorEnrichmentJobOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object internalServerException;
+
     public DeleteVectorEnrichmentJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteVectorEnrichmentJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteVectorEnrichmentJobResponse {
     
     
     public Integer statusCode;
+
     public DeleteVectorEnrichmentJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteVectorEnrichmentJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteVectorEnrichmentJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object throttlingException;
+
     public DeleteVectorEnrichmentJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteVectorEnrichmentJobResponse {
      */
     
     public Object validationException;
+
     public DeleteVectorEnrichmentJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteVectorEnrichmentJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

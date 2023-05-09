@@ -18,6 +18,7 @@ public class ContextNumberLinking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public ContextNumberLinking withAccount(String account) {
         this.account = account;
         return this;
@@ -29,6 +30,7 @@ public class ContextNumberLinking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicationId")
     public String applicationId;
+
     public ContextNumberLinking withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -40,6 +42,7 @@ public class ContextNumberLinking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ContextNumberLinking withCountry(String country) {
         this.country = country;
         return this;
@@ -51,9 +54,11 @@ public class ContextNumberLinking {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("msisdn")
     public String msisdn;
+
     public ContextNumberLinking withMsisdn(String msisdn) {
         this.msisdn = msisdn;
         return this;
     }
     
+    public ContextNumberLinking(){}
 }

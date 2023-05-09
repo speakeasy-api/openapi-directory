@@ -15,6 +15,7 @@ public class InstanceConsumptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("guestCpus")
     public Integer guestCpus;
+
     public InstanceConsumptionInfo withGuestCpus(Integer guestCpus) {
         this.guestCpus = guestCpus;
         return this;
@@ -26,6 +27,7 @@ public class InstanceConsumptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsdGb")
     public Integer localSsdGb;
+
     public InstanceConsumptionInfo withLocalSsdGb(Integer localSsdGb) {
         this.localSsdGb = localSsdGb;
         return this;
@@ -37,6 +39,7 @@ public class InstanceConsumptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public InstanceConsumptionInfo withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -48,9 +51,11 @@ public class InstanceConsumptionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minNodeCpus")
     public Integer minNodeCpus;
+
     public InstanceConsumptionInfo withMinNodeCpus(Integer minNodeCpus) {
         this.minNodeCpus = minNodeCpus;
         return this;
     }
     
+    public InstanceConsumptionInfo(){}
 }

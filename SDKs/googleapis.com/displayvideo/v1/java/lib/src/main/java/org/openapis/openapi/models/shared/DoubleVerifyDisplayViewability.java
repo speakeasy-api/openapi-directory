@@ -18,6 +18,7 @@ public class DoubleVerifyDisplayViewability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iab")
     public DoubleVerifyDisplayViewabilityIabEnum iab;
+
     public DoubleVerifyDisplayViewability withIab(DoubleVerifyDisplayViewabilityIabEnum iab) {
         this.iab = iab;
         return this;
@@ -29,9 +30,11 @@ public class DoubleVerifyDisplayViewability {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewableDuring")
     public DoubleVerifyDisplayViewabilityViewableDuringEnum viewableDuring;
+
     public DoubleVerifyDisplayViewability withViewableDuring(DoubleVerifyDisplayViewabilityViewableDuringEnum viewableDuring) {
         this.viewableDuring = viewableDuring;
         return this;
     }
     
+    public DoubleVerifyDisplayViewability(){}
 }

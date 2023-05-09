@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HIPHIRequestHiRequest {
     @JsonProperty("consent")
     public Consent consent;
+
     public HIPHIRequestHiRequest withConsent(Consent consent) {
         this.consent = consent;
         return this;
@@ -16,6 +17,7 @@ public class HIPHIRequestHiRequest {
     
     @JsonProperty("dataPushUrl")
     public String dataPushUrl;
+
     public HIPHIRequestHiRequest withDataPushUrl(String dataPushUrl) {
         this.dataPushUrl = dataPushUrl;
         return this;
@@ -23,6 +25,7 @@ public class HIPHIRequestHiRequest {
     
     @JsonProperty("dateRange")
     public DateRange dateRange;
+
     public HIPHIRequestHiRequest withDateRange(DateRange dateRange) {
         this.dateRange = dateRange;
         return this;
@@ -30,9 +33,16 @@ public class HIPHIRequestHiRequest {
     
     @JsonProperty("keyMaterial")
     public KeyMaterial keyMaterial;
+
     public HIPHIRequestHiRequest withKeyMaterial(KeyMaterial keyMaterial) {
         this.keyMaterial = keyMaterial;
         return this;
     }
     
+    public HIPHIRequestHiRequest(@JsonProperty("consent") Consent consent, @JsonProperty("dataPushUrl") String dataPushUrl, @JsonProperty("dateRange") DateRange dateRange, @JsonProperty("keyMaterial") KeyMaterial keyMaterial) {
+        this.consent = consent;
+        this.dataPushUrl = dataPushUrl;
+        this.dateRange = dateRange;
+        this.keyMaterial = keyMaterial;
+  }
 }

@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     public OffsetDateTime creationTime;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public Boolean defaultAssociationRouteTable;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withDefaultAssociationRouteTable(Boolean defaultAssociationRouteTable) {
         this.defaultAssociationRouteTable = defaultAssociationRouteTable;
         return this;
@@ -26,6 +28,7 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public Boolean defaultPropagationRouteTable;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withDefaultPropagationRouteTable(Boolean defaultPropagationRouteTable) {
         this.defaultPropagationRouteTable = defaultPropagationRouteTable;
         return this;
@@ -33,6 +36,7 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTablesStateEnum state;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withState(DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTablesStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +44,7 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTablesTags[] tags;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withTags(DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTablesTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,6 +52,7 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public String transitGatewayId;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -54,9 +60,11 @@ public class DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables {
     
     
     public String transitGatewayRouteTableId;
+
     public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables withTransitGatewayRouteTableId(String transitGatewayRouteTableId) {
         this.transitGatewayRouteTableId = transitGatewayRouteTableId;
         return this;
     }
     
+    public DescribeTransitGatewayRouteTablesResultTransitGatewayRouteTables(){}
 }

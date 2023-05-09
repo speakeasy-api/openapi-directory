@@ -12,9 +12,11 @@ public class QuittungCreateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public QuittungCreateRequestBody withEmail(String email) {
         this.email = email;
         return this;
     }
     
+    public QuittungCreateRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class CallbackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Project data;
+
     public CallbackResult withData(Project data) {
         this.data = data;
         return this;
@@ -26,6 +27,7 @@ public class CallbackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public CallbackResult withResult(String result) {
         this.result = result;
         return this;
@@ -34,6 +36,7 @@ public class CallbackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ProjectStatusEnum type;
+
     public CallbackResult withType(ProjectStatusEnum type) {
         this.type = type;
         return this;
@@ -45,9 +48,11 @@ public class CallbackResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public CallbackResult withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public CallbackResult(){}
 }

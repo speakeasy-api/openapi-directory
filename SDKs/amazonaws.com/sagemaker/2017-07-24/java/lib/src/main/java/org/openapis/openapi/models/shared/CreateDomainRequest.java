@@ -12,6 +12,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppNetworkAccessType")
     public AppNetworkAccessTypeEnum appNetworkAccessType;
+
     public CreateDomainRequest withAppNetworkAccessType(AppNetworkAccessTypeEnum appNetworkAccessType) {
         this.appNetworkAccessType = appNetworkAccessType;
         return this;
@@ -20,6 +21,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AppSecurityGroupManagement")
     public AppSecurityGroupManagementEnum appSecurityGroupManagement;
+
     public CreateDomainRequest withAppSecurityGroupManagement(AppSecurityGroupManagementEnum appSecurityGroupManagement) {
         this.appSecurityGroupManagement = appSecurityGroupManagement;
         return this;
@@ -27,6 +29,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("AuthMode")
     public AuthModeEnum authMode;
+
     public CreateDomainRequest withAuthMode(AuthModeEnum authMode) {
         this.authMode = authMode;
         return this;
@@ -35,6 +38,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultSpaceSettings")
     public DefaultSpaceSettings defaultSpaceSettings;
+
     public CreateDomainRequest withDefaultSpaceSettings(DefaultSpaceSettings defaultSpaceSettings) {
         this.defaultSpaceSettings = defaultSpaceSettings;
         return this;
@@ -42,6 +46,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("DefaultUserSettings")
     public UserSettings defaultUserSettings;
+
     public CreateDomainRequest withDefaultUserSettings(UserSettings defaultUserSettings) {
         this.defaultUserSettings = defaultUserSettings;
         return this;
@@ -49,6 +54,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("DomainName")
     public String domainName;
+
     public CreateDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -57,6 +63,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DomainSettings")
     public DomainSettings domainSettings;
+
     public CreateDomainRequest withDomainSettings(DomainSettings domainSettings) {
         this.domainSettings = domainSettings;
         return this;
@@ -65,6 +72,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeEfsFileSystemKmsKeyId")
     public String homeEfsFileSystemKmsKeyId;
+
     public CreateDomainRequest withHomeEfsFileSystemKmsKeyId(String homeEfsFileSystemKmsKeyId) {
         this.homeEfsFileSystemKmsKeyId = homeEfsFileSystemKmsKeyId;
         return this;
@@ -73,6 +81,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public CreateDomainRequest withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -80,6 +89,7 @@ public class CreateDomainRequest {
     
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public CreateDomainRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -88,6 +98,7 @@ public class CreateDomainRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateDomainRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -95,9 +106,17 @@ public class CreateDomainRequest {
     
     @JsonProperty("VpcId")
     public String vpcId;
+
     public CreateDomainRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateDomainRequest(@JsonProperty("AuthMode") AuthModeEnum authMode, @JsonProperty("DefaultUserSettings") UserSettings defaultUserSettings, @JsonProperty("DomainName") String domainName, @JsonProperty("SubnetIds") String[] subnetIds, @JsonProperty("VpcId") String vpcId) {
+        this.authMode = authMode;
+        this.defaultUserSettings = defaultUserSettings;
+        this.domainName = domainName;
+        this.subnetIds = subnetIds;
+        this.vpcId = vpcId;
+  }
 }

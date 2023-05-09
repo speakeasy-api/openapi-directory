@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProtectionStatusResponse {
     
     public String contentType;
+
     public GetProtectionStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProtectionStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.GetProtectionStatusResponse getProtectionStatusResponse;
+
     public GetProtectionStatusResponse withGetProtectionStatusResponse(org.openapis.openapi.models.shared.GetProtectionStatusResponse getProtectionStatusResponse) {
         this.getProtectionStatusResponse = getProtectionStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetProtectionStatusResponse {
      */
     
     public Object internalErrorException;
+
     public GetProtectionStatusResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class GetProtectionStatusResponse {
      */
     
     public Object invalidInputException;
+
     public GetProtectionStatusResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -46,6 +51,7 @@ public class GetProtectionStatusResponse {
     
     
     public Integer statusCode;
+
     public GetProtectionStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetProtectionStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProtectionStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetProtectionStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetProtectionStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetProtectionStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

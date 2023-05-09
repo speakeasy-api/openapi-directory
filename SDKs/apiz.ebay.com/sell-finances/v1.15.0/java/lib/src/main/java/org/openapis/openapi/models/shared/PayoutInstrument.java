@@ -18,6 +18,7 @@ public class PayoutInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountLastFourDigits")
     public String accountLastFourDigits;
+
     public PayoutInstrument withAccountLastFourDigits(String accountLastFourDigits) {
         this.accountLastFourDigits = accountLastFourDigits;
         return this;
@@ -29,6 +30,7 @@ public class PayoutInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instrumentType")
     public String instrumentType;
+
     public PayoutInstrument withInstrumentType(String instrumentType) {
         this.instrumentType = instrumentType;
         return this;
@@ -40,9 +42,11 @@ public class PayoutInstrument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public PayoutInstrument withNickname(String nickname) {
         this.nickname = nickname;
         return this;
     }
     
+    public PayoutInstrument(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobDebugRead {
     @JsonProperty("airbyteVersion")
     public String airbyteVersion;
+
     public JobDebugRead withAirbyteVersion(String airbyteVersion) {
         this.airbyteVersion = airbyteVersion;
         return this;
@@ -16,6 +17,7 @@ public class JobDebugRead {
     
     @JsonProperty("configId")
     public String configId;
+
     public JobDebugRead withConfigId(String configId) {
         this.configId = configId;
         return this;
@@ -23,6 +25,7 @@ public class JobDebugRead {
     
     @JsonProperty("configType")
     public JobConfigTypeEnum configType;
+
     public JobDebugRead withConfigType(JobConfigTypeEnum configType) {
         this.configType = configType;
         return this;
@@ -30,6 +33,7 @@ public class JobDebugRead {
     
     @JsonProperty("destinationDefinition")
     public DestinationDefinitionRead destinationDefinition;
+
     public JobDebugRead withDestinationDefinition(DestinationDefinitionRead destinationDefinition) {
         this.destinationDefinition = destinationDefinition;
         return this;
@@ -37,6 +41,7 @@ public class JobDebugRead {
     
     @JsonProperty("id")
     public Long id;
+
     public JobDebugRead withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +49,7 @@ public class JobDebugRead {
     
     @JsonProperty("sourceDefinition")
     public SourceDefinitionRead sourceDefinition;
+
     public JobDebugRead withSourceDefinition(SourceDefinitionRead sourceDefinition) {
         this.sourceDefinition = sourceDefinition;
         return this;
@@ -51,9 +57,19 @@ public class JobDebugRead {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobDebugRead withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobDebugRead(@JsonProperty("airbyteVersion") String airbyteVersion, @JsonProperty("configId") String configId, @JsonProperty("configType") JobConfigTypeEnum configType, @JsonProperty("destinationDefinition") DestinationDefinitionRead destinationDefinition, @JsonProperty("id") Long id, @JsonProperty("sourceDefinition") SourceDefinitionRead sourceDefinition, @JsonProperty("status") JobStatusEnum status) {
+        this.airbyteVersion = airbyteVersion;
+        this.configId = configId;
+        this.configType = configType;
+        this.destinationDefinition = destinationDefinition;
+        this.id = id;
+        this.sourceDefinition = sourceDefinition;
+        this.status = status;
+  }
 }

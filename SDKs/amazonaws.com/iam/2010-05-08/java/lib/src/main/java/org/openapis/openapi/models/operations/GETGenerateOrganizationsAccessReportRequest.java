@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGenerateOrganizationsAccessReportRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGenerateOrganizationsAccessReportActionEnum action;
+
     public GETGenerateOrganizationsAccessReportRequest withAction(GETGenerateOrganizationsAccessReportActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=EntityPath")
     public String entityPath;
+
     public GETGenerateOrganizationsAccessReportRequest withEntityPath(String entityPath) {
         this.entityPath = entityPath;
         return this;
@@ -29,6 +32,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=OrganizationsPolicyId")
     public String organizationsPolicyId;
+
     public GETGenerateOrganizationsAccessReportRequest withOrganizationsPolicyId(String organizationsPolicyId) {
         this.organizationsPolicyId = organizationsPolicyId;
         return this;
@@ -36,6 +40,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGenerateOrganizationsAccessReportVersionEnum version;
+
     public GETGenerateOrganizationsAccessReportRequest withVersion(GETGenerateOrganizationsAccessReportVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGenerateOrganizationsAccessReportRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGenerateOrganizationsAccessReportRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGenerateOrganizationsAccessReportRequest(@JsonProperty("Action") GETGenerateOrganizationsAccessReportActionEnum action, @JsonProperty("EntityPath") String entityPath, @JsonProperty("Version") GETGenerateOrganizationsAccessReportVersionEnum version) {
+        this.action = action;
+        this.entityPath = entityPath;
+        this.version = version;
+  }
 }

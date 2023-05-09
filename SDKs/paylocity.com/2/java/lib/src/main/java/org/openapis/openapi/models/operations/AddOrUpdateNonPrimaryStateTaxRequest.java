@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AddOrUpdateNonPrimaryStateTaxRequest {
@@ -12,6 +13,7 @@ public class AddOrUpdateNonPrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public AddOrUpdateNonPrimaryStateTaxRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
@@ -22,6 +24,7 @@ public class AddOrUpdateNonPrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=employeeId")
     public String employeeId;
+
     public AddOrUpdateNonPrimaryStateTaxRequest withEmployeeId(String employeeId) {
         this.employeeId = employeeId;
         return this;
@@ -32,9 +35,15 @@ public class AddOrUpdateNonPrimaryStateTaxRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.NonPrimaryStateTax nonPrimaryStateTax;
+
     public AddOrUpdateNonPrimaryStateTaxRequest withNonPrimaryStateTax(org.openapis.openapi.models.shared.NonPrimaryStateTax nonPrimaryStateTax) {
         this.nonPrimaryStateTax = nonPrimaryStateTax;
         return this;
     }
     
+    public AddOrUpdateNonPrimaryStateTaxRequest(@JsonProperty("companyId") String companyId, @JsonProperty("employeeId") String employeeId, @JsonProperty("nonPrimaryStateTax") org.openapis.openapi.models.shared.NonPrimaryStateTax nonPrimaryStateTax) {
+        this.companyId = companyId;
+        this.employeeId = employeeId;
+        this.nonPrimaryStateTax = nonPrimaryStateTax;
+  }
 }

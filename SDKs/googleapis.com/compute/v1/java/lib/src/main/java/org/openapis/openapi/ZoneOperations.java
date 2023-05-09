@@ -58,10 +58,8 @@ public class ZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -98,11 +96,9 @@ public class ZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class ZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsListResponse(contentType, httpRes.statusCode()) {{
             operationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class ZoneOperations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse() {{
+        org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse res = new org.openapis.openapi.models.operations.ComputeZoneOperationsWaitResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

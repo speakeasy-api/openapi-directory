@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MonitorConfig {
     @JsonProperty("MonitorName")
     public String monitorName;
+
     public MonitorConfig withMonitorName(String monitorName) {
         this.monitorName = monitorName;
         return this;
     }
     
+    public MonitorConfig(@JsonProperty("MonitorName") String monitorName) {
+        this.monitorName = monitorName;
+  }
 }

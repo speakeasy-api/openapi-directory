@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CompleteDestinationOAuthRequest {
     @JsonProperty("destinationDefinitionId")
     public String destinationDefinitionId;
+
     public CompleteDestinationOAuthRequest withDestinationDefinitionId(String destinationDefinitionId) {
         this.destinationDefinitionId = destinationDefinitionId;
         return this;
@@ -19,6 +20,7 @@ public class CompleteDestinationOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationId")
     public String destinationId;
+
     public CompleteDestinationOAuthRequest withDestinationId(String destinationId) {
         this.destinationId = destinationId;
         return this;
@@ -30,6 +32,7 @@ public class CompleteDestinationOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuthInputConfiguration")
     public Object oAuthInputConfiguration;
+
     public CompleteDestinationOAuthRequest withOAuthInputConfiguration(Object oAuthInputConfiguration) {
         this.oAuthInputConfiguration = oAuthInputConfiguration;
         return this;
@@ -41,6 +44,7 @@ public class CompleteDestinationOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryParams")
     public java.util.Map<String, Object> queryParams;
+
     public CompleteDestinationOAuthRequest withQueryParams(java.util.Map<String, Object> queryParams) {
         this.queryParams = queryParams;
         return this;
@@ -52,6 +56,7 @@ public class CompleteDestinationOAuthRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redirectUrl")
     public String redirectUrl;
+
     public CompleteDestinationOAuthRequest withRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
         return this;
@@ -59,9 +64,14 @@ public class CompleteDestinationOAuthRequest {
     
     @JsonProperty("workspaceId")
     public String workspaceId;
+
     public CompleteDestinationOAuthRequest withWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     
+    public CompleteDestinationOAuthRequest(@JsonProperty("destinationDefinitionId") String destinationDefinitionId, @JsonProperty("workspaceId") String workspaceId) {
+        this.destinationDefinitionId = destinationDefinitionId;
+        this.workspaceId = workspaceId;
+  }
 }

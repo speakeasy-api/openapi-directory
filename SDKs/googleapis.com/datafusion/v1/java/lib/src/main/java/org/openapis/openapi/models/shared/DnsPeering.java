@@ -18,6 +18,7 @@ public class DnsPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DnsPeering withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class DnsPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public DnsPeering withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -40,6 +42,7 @@ public class DnsPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DnsPeering withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class DnsPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetNetwork")
     public String targetNetwork;
+
     public DnsPeering withTargetNetwork(String targetNetwork) {
         this.targetNetwork = targetNetwork;
         return this;
@@ -62,9 +66,11 @@ public class DnsPeering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetProject")
     public String targetProject;
+
     public DnsPeering withTargetProject(String targetProject) {
         this.targetProject = targetProject;
         return this;
     }
     
+    public DnsPeering(){}
 }

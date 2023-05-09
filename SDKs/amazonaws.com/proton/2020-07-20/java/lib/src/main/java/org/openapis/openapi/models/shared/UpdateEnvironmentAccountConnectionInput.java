@@ -12,6 +12,7 @@ public class UpdateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codebuildRoleArn")
     public String codebuildRoleArn;
+
     public UpdateEnvironmentAccountConnectionInput withCodebuildRoleArn(String codebuildRoleArn) {
         this.codebuildRoleArn = codebuildRoleArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public UpdateEnvironmentAccountConnectionInput withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -27,6 +29,7 @@ public class UpdateEnvironmentAccountConnectionInput {
     
     @JsonProperty("id")
     public String id;
+
     public UpdateEnvironmentAccountConnectionInput withId(String id) {
         this.id = id;
         return this;
@@ -35,9 +38,13 @@ public class UpdateEnvironmentAccountConnectionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public UpdateEnvironmentAccountConnectionInput withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public UpdateEnvironmentAccountConnectionInput(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

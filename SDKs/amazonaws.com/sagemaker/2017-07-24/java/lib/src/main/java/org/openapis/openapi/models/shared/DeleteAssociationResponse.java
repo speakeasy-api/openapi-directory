@@ -15,6 +15,7 @@ public class DeleteAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationArn")
     public String destinationArn;
+
     public DeleteAssociationResponse withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -23,9 +24,11 @@ public class DeleteAssociationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceArn")
     public String sourceArn;
+
     public DeleteAssociationResponse withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
     }
     
+    public DeleteAssociationResponse(){}
 }

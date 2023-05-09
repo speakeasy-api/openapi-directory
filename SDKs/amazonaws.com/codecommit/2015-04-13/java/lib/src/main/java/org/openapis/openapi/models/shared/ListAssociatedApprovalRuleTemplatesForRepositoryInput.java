@@ -12,6 +12,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryInput withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListAssociatedApprovalRuleTemplatesForRepositoryInput {
     
     @JsonProperty("repositoryName")
     public String repositoryName;
+
     public ListAssociatedApprovalRuleTemplatesForRepositoryInput withRepositoryName(String repositoryName) {
         this.repositoryName = repositoryName;
         return this;
     }
     
+    public ListAssociatedApprovalRuleTemplatesForRepositoryInput(@JsonProperty("repositoryName") String repositoryName) {
+        this.repositoryName = repositoryName;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutScalingPolicyResponse {
@@ -12,6 +13,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object concurrentUpdateException;
+
     public PutScalingPolicyResponse withConcurrentUpdateException(Object concurrentUpdateException) {
         this.concurrentUpdateException = concurrentUpdateException;
         return this;
@@ -19,6 +21,7 @@ public class PutScalingPolicyResponse {
     
     
     public String contentType;
+
     public PutScalingPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object failedResourceAccessException;
+
     public PutScalingPolicyResponse withFailedResourceAccessException(Object failedResourceAccessException) {
         this.failedResourceAccessException = failedResourceAccessException;
         return this;
@@ -39,6 +43,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object internalServiceException;
+
     public PutScalingPolicyResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public PutScalingPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutScalingPolicyResponse {
      */
     
     public Object objectNotFoundException;
+
     public PutScalingPolicyResponse withObjectNotFoundException(Object objectNotFoundException) {
         this.objectNotFoundException = objectNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class PutScalingPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.PutScalingPolicyResponse putScalingPolicyResponse;
+
     public PutScalingPolicyResponse withPutScalingPolicyResponse(org.openapis.openapi.models.shared.PutScalingPolicyResponse putScalingPolicyResponse) {
         this.putScalingPolicyResponse = putScalingPolicyResponse;
         return this;
@@ -76,6 +84,7 @@ public class PutScalingPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutScalingPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class PutScalingPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutScalingPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class PutScalingPolicyResponse {
      */
     
     public Object validationException;
+
     public PutScalingPolicyResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public PutScalingPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

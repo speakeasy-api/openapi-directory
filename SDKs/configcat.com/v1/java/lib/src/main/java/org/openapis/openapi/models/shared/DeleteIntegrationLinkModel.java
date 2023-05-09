@@ -15,9 +15,11 @@ public class DeleteIntegrationLinkModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasRemainingIntegrationLink")
     public Boolean hasRemainingIntegrationLink;
+
     public DeleteIntegrationLinkModel withHasRemainingIntegrationLink(Boolean hasRemainingIntegrationLink) {
         this.hasRemainingIntegrationLink = hasRemainingIntegrationLink;
         return this;
     }
     
+    public DeleteIntegrationLinkModel(){}
 }

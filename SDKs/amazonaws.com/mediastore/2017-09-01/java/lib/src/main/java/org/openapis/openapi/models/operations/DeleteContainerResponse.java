@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteContainerResponse {
@@ -12,6 +13,7 @@ public class DeleteContainerResponse {
      */
     
     public Object containerInUseException;
+
     public DeleteContainerResponse withContainerInUseException(Object containerInUseException) {
         this.containerInUseException = containerInUseException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteContainerResponse {
      */
     
     public Object containerNotFoundException;
+
     public DeleteContainerResponse withContainerNotFoundException(Object containerNotFoundException) {
         this.containerNotFoundException = containerNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteContainerResponse {
     
     
     public String contentType;
+
     public DeleteContainerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteContainerResponse {
      */
     
     public java.util.Map<String, Object> deleteContainerOutput;
+
     public DeleteContainerResponse withDeleteContainerOutput(java.util.Map<String, Object> deleteContainerOutput) {
         this.deleteContainerOutput = deleteContainerOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeleteContainerResponse {
      */
     
     public Object internalServerError;
+
     public DeleteContainerResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -56,6 +62,7 @@ public class DeleteContainerResponse {
     
     
     public Integer statusCode;
+
     public DeleteContainerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DeleteContainerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteContainerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteContainerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

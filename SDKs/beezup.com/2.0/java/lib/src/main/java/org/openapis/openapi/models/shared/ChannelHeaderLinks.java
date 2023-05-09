@@ -15,9 +15,11 @@ public class ChannelHeaderLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetChannelInfoLink self;
+
     public ChannelHeaderLinks withSelf(LinksGetChannelInfoLink self) {
         this.self = self;
         return this;
     }
     
+    public ChannelHeaderLinks(){}
 }

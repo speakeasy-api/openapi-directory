@@ -18,6 +18,7 @@ public class SingleCategoryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public SingleCategoryStats withCount(String count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class SingleCategoryStats {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public SingleCategoryStats withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public SingleCategoryStats(){}
 }

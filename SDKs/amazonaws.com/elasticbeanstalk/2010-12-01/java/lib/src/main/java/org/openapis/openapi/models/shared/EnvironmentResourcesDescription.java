@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class EnvironmentResourcesDescription {
     
     public LoadBalancerDescription loadBalancer;
+
     public EnvironmentResourcesDescription withLoadBalancer(LoadBalancerDescription loadBalancer) {
         this.loadBalancer = loadBalancer;
         return this;
     }
     
+    public EnvironmentResourcesDescription(){}
 }

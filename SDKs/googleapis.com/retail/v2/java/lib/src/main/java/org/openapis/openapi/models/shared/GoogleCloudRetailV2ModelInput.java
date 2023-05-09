@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudRetailV2ModelInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,8 +30,21 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filteringOption")
     public GoogleCloudRetailV2ModelFilteringOptionEnum filteringOption;
+
     public GoogleCloudRetailV2ModelInput withFilteringOption(GoogleCloudRetailV2ModelFilteringOptionEnum filteringOption) {
         this.filteringOption = filteringOption;
+        return this;
+    }
+    
+    /**
+     * Additional model features config.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("modelFeaturesConfig")
+    public GoogleCloudRetailV2ModelModelFeaturesConfig modelFeaturesConfig;
+
+    public GoogleCloudRetailV2ModelInput withModelFeaturesConfig(GoogleCloudRetailV2ModelModelFeaturesConfig modelFeaturesConfig) {
+        this.modelFeaturesConfig = modelFeaturesConfig;
         return this;
     }
     
@@ -40,6 +54,7 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudRetailV2ModelInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +66,7 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optimizationObjective")
     public String optimizationObjective;
+
     public GoogleCloudRetailV2ModelInput withOptimizationObjective(String optimizationObjective) {
         this.optimizationObjective = optimizationObjective;
         return this;
@@ -62,6 +78,7 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("periodicTuningState")
     public GoogleCloudRetailV2ModelPeriodicTuningStateEnum periodicTuningState;
+
     public GoogleCloudRetailV2ModelInput withPeriodicTuningState(GoogleCloudRetailV2ModelPeriodicTuningStateEnum periodicTuningState) {
         this.periodicTuningState = periodicTuningState;
         return this;
@@ -73,6 +90,7 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingState")
     public GoogleCloudRetailV2ModelTrainingStateEnum trainingState;
+
     public GoogleCloudRetailV2ModelInput withTrainingState(GoogleCloudRetailV2ModelTrainingStateEnum trainingState) {
         this.trainingState = trainingState;
         return this;
@@ -84,9 +102,11 @@ public class GoogleCloudRetailV2ModelInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudRetailV2ModelInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudRetailV2ModelInput(){}
 }

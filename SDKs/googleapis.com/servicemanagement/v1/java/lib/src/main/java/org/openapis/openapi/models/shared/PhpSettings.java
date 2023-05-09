@@ -18,9 +18,11 @@ public class PhpSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("common")
     public CommonLanguageSettings common;
+
     public PhpSettings withCommon(CommonLanguageSettings common) {
         this.common = common;
         return this;
     }
     
+    public PhpSettings(){}
 }

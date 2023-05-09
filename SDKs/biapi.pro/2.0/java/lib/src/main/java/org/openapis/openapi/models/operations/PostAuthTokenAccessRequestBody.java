@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthTokenAccessRequestBody {
@@ -12,6 +13,7 @@ public class PostAuthTokenAccessRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_id")
     public String clientId;
+
     public PostAuthTokenAccessRequestBody withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -22,6 +24,7 @@ public class PostAuthTokenAccessRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=client_secret")
     public String clientSecret;
+
     public PostAuthTokenAccessRequestBody withClientSecret(String clientSecret) {
         this.clientSecret = clientSecret;
         return this;
@@ -32,6 +35,7 @@ public class PostAuthTokenAccessRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=code")
     public String code;
+
     public PostAuthTokenAccessRequestBody withCode(String code) {
         this.code = code;
         return this;
@@ -42,6 +46,7 @@ public class PostAuthTokenAccessRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=grant_type")
     public String grantType;
+
     public PostAuthTokenAccessRequestBody withGrantType(String grantType) {
         this.grantType = grantType;
         return this;
@@ -52,9 +57,15 @@ public class PostAuthTokenAccessRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=redirect_uri")
     public String redirectUri;
+
     public PostAuthTokenAccessRequestBody withRedirectUri(String redirectUri) {
         this.redirectUri = redirectUri;
         return this;
     }
     
+    public PostAuthTokenAccessRequestBody(@JsonProperty("client_id") String clientId, @JsonProperty("client_secret") String clientSecret, @JsonProperty("code") String code) {
+        this.clientId = clientId;
+        this.clientSecret = clientSecret;
+        this.code = code;
+  }
 }

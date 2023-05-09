@@ -18,9 +18,11 @@ public class SFXDataList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Sfx[] data;
+
     public SFXDataList withData(Sfx[] data) {
         this.data = data;
         return this;
     }
     
+    public SFXDataList(){}
 }

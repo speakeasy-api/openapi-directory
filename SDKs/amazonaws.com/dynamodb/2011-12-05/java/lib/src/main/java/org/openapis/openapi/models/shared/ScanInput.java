@@ -15,6 +15,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributesToGet")
     public String[] attributesToGet;
+
     public ScanInput withAttributesToGet(String[] attributesToGet) {
         this.attributesToGet = attributesToGet;
         return this;
@@ -23,6 +24,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Boolean count;
+
     public ScanInput withCount(Boolean count) {
         this.count = count;
         return this;
@@ -31,6 +33,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartKey")
     public Key exclusiveStartKey;
+
     public ScanInput withExclusiveStartKey(Key exclusiveStartKey) {
         this.exclusiveStartKey = exclusiveStartKey;
         return this;
@@ -39,6 +42,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ScanInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -47,6 +51,7 @@ public class ScanInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScanFilter")
     public java.util.Map<String, Condition> scanFilter;
+
     public ScanInput withScanFilter(java.util.Map<String, Condition> scanFilter) {
         this.scanFilter = scanFilter;
         return this;
@@ -54,9 +59,13 @@ public class ScanInput {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public ScanInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public ScanInput(@JsonProperty("TableName") String tableName) {
+        this.tableName = tableName;
+  }
 }

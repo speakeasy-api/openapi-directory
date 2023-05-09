@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateProjectForWorkspaceRequest {
@@ -12,6 +13,7 @@ public class CreateProjectForWorkspaceRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateProjectForWorkspaceRequestBodyInput requestBody;
+
     public CreateProjectForWorkspaceRequest withRequestBody(CreateProjectForWorkspaceRequestBodyInput requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -24,6 +26,7 @@ public class CreateProjectForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=opt_fields")
     public String[] optFields;
+
     public CreateProjectForWorkspaceRequest withOptFields(String[] optFields) {
         this.optFields = optFields;
         return this;
@@ -35,6 +38,7 @@ public class CreateProjectForWorkspaceRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=opt_pretty")
     public Boolean optPretty;
+
     public CreateProjectForWorkspaceRequest withOptPretty(Boolean optPretty) {
         this.optPretty = optPretty;
         return this;
@@ -45,9 +49,14 @@ public class CreateProjectForWorkspaceRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace_gid")
     public String workspaceGid;
+
     public CreateProjectForWorkspaceRequest withWorkspaceGid(String workspaceGid) {
         this.workspaceGid = workspaceGid;
         return this;
     }
     
+    public CreateProjectForWorkspaceRequest(@JsonProperty("RequestBody") CreateProjectForWorkspaceRequestBodyInput requestBody, @JsonProperty("workspace_gid") String workspaceGid) {
+        this.requestBody = requestBody;
+        this.workspaceGid = workspaceGid;
+  }
 }

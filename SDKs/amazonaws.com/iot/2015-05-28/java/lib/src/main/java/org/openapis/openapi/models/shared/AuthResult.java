@@ -15,6 +15,7 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowed")
     public Allowed allowed;
+
     public AuthResult withAllowed(Allowed allowed) {
         this.allowed = allowed;
         return this;
@@ -23,6 +24,7 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authDecision")
     public AuthDecisionEnum authDecision;
+
     public AuthResult withAuthDecision(AuthDecisionEnum authDecision) {
         this.authDecision = authDecision;
         return this;
@@ -31,6 +33,7 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authInfo")
     public AuthInfo authInfo;
+
     public AuthResult withAuthInfo(AuthInfo authInfo) {
         this.authInfo = authInfo;
         return this;
@@ -39,6 +42,7 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("denied")
     public Denied denied;
+
     public AuthResult withDenied(Denied denied) {
         this.denied = denied;
         return this;
@@ -47,9 +51,11 @@ public class AuthResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingContextValues")
     public String[] missingContextValues;
+
     public AuthResult withMissingContextValues(String[] missingContextValues) {
         this.missingContextValues = missingContextValues;
         return this;
     }
     
+    public AuthResult(){}
 }

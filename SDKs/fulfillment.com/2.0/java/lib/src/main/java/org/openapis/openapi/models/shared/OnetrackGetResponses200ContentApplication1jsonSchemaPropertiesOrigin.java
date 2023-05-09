@@ -16,6 +16,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bbox")
     public Object[] bbox;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withBbox(Object[] bbox) {
         this.bbox = bbox;
         return this;
@@ -28,6 +29,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("centerline")
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry centerline;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withCenterline(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginPropertiesGeometry centerline) {
         this.centerline = centerline;
         return this;
@@ -39,6 +41,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
      */
     @JsonProperty("geometry")
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometry geometry;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withGeometry(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometry geometry) {
         this.geometry = geometry;
         return this;
@@ -47,6 +50,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withId(Long id) {
         this.id = id;
         return this;
@@ -54,6 +58,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     
     @JsonProperty("properties")
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperties properties;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withProperties(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperties properties) {
         this.properties = properties;
         return this;
@@ -62,6 +67,7 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withTitle(String title) {
         this.title = title;
         return this;
@@ -69,9 +75,15 @@ public class OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigi
     
     @JsonProperty("type")
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum type;
+
     public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin withType(OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOrigin(@JsonProperty("geometry") OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginGeometry geometry, @JsonProperty("properties") OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginProperties properties, @JsonProperty("type") OnetrackGetResponses200ContentApplication1jsonSchemaPropertiesOriginTypeEnum type) {
+        this.geometry = geometry;
+        this.properties = properties;
+        this.type = type;
+  }
 }

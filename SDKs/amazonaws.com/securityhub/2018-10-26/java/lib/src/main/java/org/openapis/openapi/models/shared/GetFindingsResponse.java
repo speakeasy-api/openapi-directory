@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetFindingsResponse {
     @JsonProperty("Findings")
     public AwsSecurityFinding[] findings;
+
     public GetFindingsResponse withFindings(AwsSecurityFinding[] findings) {
         this.findings = findings;
         return this;
@@ -22,9 +23,13 @@ public class GetFindingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetFindingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetFindingsResponse(@JsonProperty("Findings") AwsSecurityFinding[] findings) {
+        this.findings = findings;
+  }
 }

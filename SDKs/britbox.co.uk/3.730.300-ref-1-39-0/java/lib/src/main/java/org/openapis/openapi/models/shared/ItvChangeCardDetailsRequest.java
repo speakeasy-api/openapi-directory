@@ -15,6 +15,7 @@ public class ItvChangeCardDetailsRequest {
      */
     @JsonProperty("cardToken")
     public String cardToken;
+
     public ItvChangeCardDetailsRequest withCardToken(String cardToken) {
         this.cardToken = cardToken;
         return this;
@@ -25,9 +26,14 @@ public class ItvChangeCardDetailsRequest {
      */
     @JsonProperty("profileToken")
     public String profileToken;
+
     public ItvChangeCardDetailsRequest withProfileToken(String profileToken) {
         this.profileToken = profileToken;
         return this;
     }
     
+    public ItvChangeCardDetailsRequest(@JsonProperty("cardToken") String cardToken, @JsonProperty("profileToken") String profileToken) {
+        this.cardToken = cardToken;
+        this.profileToken = profileToken;
+  }
 }

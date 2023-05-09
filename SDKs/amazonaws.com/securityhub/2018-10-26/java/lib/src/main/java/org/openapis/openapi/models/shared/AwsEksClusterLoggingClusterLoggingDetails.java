@@ -15,6 +15,7 @@ public class AwsEksClusterLoggingClusterLoggingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Enabled")
     public Boolean enabled;
+
     public AwsEksClusterLoggingClusterLoggingDetails withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class AwsEksClusterLoggingClusterLoggingDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public AwsEksClusterLoggingClusterLoggingDetails withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public AwsEksClusterLoggingClusterLoggingDetails(){}
 }

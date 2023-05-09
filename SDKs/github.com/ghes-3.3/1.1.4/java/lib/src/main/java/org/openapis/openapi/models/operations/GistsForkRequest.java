@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GistsForkRequest {
@@ -12,9 +13,13 @@ public class GistsForkRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=gist_id")
     public String gistId;
+
     public GistsForkRequest withGistId(String gistId) {
         this.gistId = gistId;
         return this;
     }
     
+    public GistsForkRequest(@JsonProperty("gist_id") String gistId) {
+        this.gistId = gistId;
+  }
 }

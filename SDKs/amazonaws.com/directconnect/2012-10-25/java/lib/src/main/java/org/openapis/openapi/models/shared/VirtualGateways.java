@@ -15,9 +15,11 @@ public class VirtualGateways {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualGateways")
     public VirtualGateway[] virtualGateways;
+
     public VirtualGateways withVirtualGateways(VirtualGateway[] virtualGateways) {
         this.virtualGateways = virtualGateways;
         return this;
     }
     
+    public VirtualGateways(){}
 }

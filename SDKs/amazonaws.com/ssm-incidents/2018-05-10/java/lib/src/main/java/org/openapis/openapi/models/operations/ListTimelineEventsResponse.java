@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListTimelineEventsResponse {
@@ -12,6 +13,7 @@ public class ListTimelineEventsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListTimelineEventsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListTimelineEventsResponse {
     
     
     public String contentType;
+
     public ListTimelineEventsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListTimelineEventsResponse {
      */
     
     public Object internalServerException;
+
     public ListTimelineEventsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListTimelineEventsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListTimelineEventsOutput listTimelineEventsOutput;
+
     public ListTimelineEventsResponse withListTimelineEventsOutput(org.openapis.openapi.models.shared.ListTimelineEventsOutput listTimelineEventsOutput) {
         this.listTimelineEventsOutput = listTimelineEventsOutput;
         return this;
@@ -46,6 +51,7 @@ public class ListTimelineEventsResponse {
     
     
     public Integer statusCode;
+
     public ListTimelineEventsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListTimelineEventsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListTimelineEventsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListTimelineEventsResponse {
      */
     
     public Object throttlingException;
+
     public ListTimelineEventsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListTimelineEventsResponse {
      */
     
     public Object validationException;
+
     public ListTimelineEventsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListTimelineEventsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

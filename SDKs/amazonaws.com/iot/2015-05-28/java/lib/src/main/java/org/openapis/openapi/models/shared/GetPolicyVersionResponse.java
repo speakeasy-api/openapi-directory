@@ -22,6 +22,7 @@ public class GetPolicyVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public GetPolicyVersionResponse withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("generationId")
     public String generationId;
+
     public GetPolicyVersionResponse withGenerationId(String generationId) {
         this.generationId = generationId;
         return this;
@@ -38,6 +40,7 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDefaultVersion")
     public Boolean isDefaultVersion;
+
     public GetPolicyVersionResponse withIsDefaultVersion(Boolean isDefaultVersion) {
         this.isDefaultVersion = isDefaultVersion;
         return this;
@@ -48,6 +51,7 @@ public class GetPolicyVersionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastModifiedDate")
     public OffsetDateTime lastModifiedDate;
+
     public GetPolicyVersionResponse withLastModifiedDate(OffsetDateTime lastModifiedDate) {
         this.lastModifiedDate = lastModifiedDate;
         return this;
@@ -56,6 +60,7 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyArn")
     public String policyArn;
+
     public GetPolicyVersionResponse withPolicyArn(String policyArn) {
         this.policyArn = policyArn;
         return this;
@@ -64,6 +69,7 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyDocument")
     public String policyDocument;
+
     public GetPolicyVersionResponse withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -72,6 +78,7 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyName")
     public String policyName;
+
     public GetPolicyVersionResponse withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
@@ -80,9 +87,11 @@ public class GetPolicyVersionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyVersionId")
     public String policyVersionId;
+
     public GetPolicyVersionResponse withPolicyVersionId(String policyVersionId) {
         this.policyVersionId = policyVersionId;
         return this;
     }
     
+    public GetPolicyVersionResponse(){}
 }

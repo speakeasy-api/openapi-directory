@@ -18,6 +18,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aiaIssuingCertificateUrls")
     public String[] aiaIssuingCertificateUrls;
+
     public CertificateDescription withAiaIssuingCertificateUrls(String[] aiaIssuingCertificateUrls) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         return this;
@@ -29,6 +30,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorityKeyId")
     public KeyId authorityKeyId;
+
     public CertificateDescription withAuthorityKeyId(KeyId authorityKeyId) {
         this.authorityKeyId = authorityKeyId;
         return this;
@@ -40,6 +42,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("certFingerprint")
     public CertificateFingerprint certFingerprint;
+
     public CertificateDescription withCertFingerprint(CertificateFingerprint certFingerprint) {
         this.certFingerprint = certFingerprint;
         return this;
@@ -51,6 +54,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crlDistributionPoints")
     public String[] crlDistributionPoints;
+
     public CertificateDescription withCrlDistributionPoints(String[] crlDistributionPoints) {
         this.crlDistributionPoints = crlDistributionPoints;
         return this;
@@ -62,6 +66,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicKey")
     public PublicKey publicKey;
+
     public CertificateDescription withPublicKey(PublicKey publicKey) {
         this.publicKey = publicKey;
         return this;
@@ -73,6 +78,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectDescription")
     public SubjectDescription subjectDescription;
+
     public CertificateDescription withSubjectDescription(SubjectDescription subjectDescription) {
         this.subjectDescription = subjectDescription;
         return this;
@@ -84,6 +90,7 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectKeyId")
     public KeyId subjectKeyId;
+
     public CertificateDescription withSubjectKeyId(KeyId subjectKeyId) {
         this.subjectKeyId = subjectKeyId;
         return this;
@@ -95,9 +102,11 @@ public class CertificateDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x509Description")
     public X509Parameters x509Description;
+
     public CertificateDescription withX509Description(X509Parameters x509Description) {
         this.x509Description = x509Description;
         return this;
     }
     
+    public CertificateDescription(){}
 }

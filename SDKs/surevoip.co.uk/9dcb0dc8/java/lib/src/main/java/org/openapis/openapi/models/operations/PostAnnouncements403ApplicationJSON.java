@@ -15,9 +15,11 @@ public class PostAnnouncements403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PostAnnouncements403ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostAnnouncements403ApplicationJSON(){}
 }

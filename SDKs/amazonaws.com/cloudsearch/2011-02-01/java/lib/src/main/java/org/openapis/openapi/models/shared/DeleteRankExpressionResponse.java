@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteRankExpressionResponse - A response message that contains the status of a deleted &lt;code&gt;RankExpression&lt;/code&gt;.
@@ -15,9 +15,13 @@ public class DeleteRankExpressionResponse {
      */
     
     public RankExpressionStatus rankExpression;
+
     public DeleteRankExpressionResponse withRankExpression(RankExpressionStatus rankExpression) {
         this.rankExpression = rankExpression;
         return this;
     }
     
+    public DeleteRankExpressionResponse(@JsonProperty("RankExpression") RankExpressionStatus rankExpression) {
+        this.rankExpression = rankExpression;
+  }
 }

@@ -59,11 +59,9 @@ public class UrlNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse res = new org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse() {{
+        org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse res = new org.openapis.openapi.models.operations.IndexingUrlNotificationsGetMetadataResponse(contentType, httpRes.statusCode()) {{
             urlNotificationMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class UrlNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse res = new org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse() {{
+        org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse res = new org.openapis.openapi.models.operations.IndexingUrlNotificationsPublishResponse(contentType, httpRes.statusCode()) {{
             publishUrlNotificationResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPredictedPointsResponse {
     
     public String contentType;
+
     public GetPredictedPointsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPredictedPointsResponse {
      */
     
     public org.openapis.openapi.models.shared.PredictedPoints[] predictedPoints;
+
     public GetPredictedPointsResponse withPredictedPoints(org.openapis.openapi.models.shared.PredictedPoints[] predictedPoints) {
         this.predictedPoints = predictedPoints;
         return this;
@@ -26,6 +29,7 @@ public class GetPredictedPointsResponse {
     
     
     public Integer statusCode;
+
     public GetPredictedPointsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetPredictedPointsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPredictedPointsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPredictedPointsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

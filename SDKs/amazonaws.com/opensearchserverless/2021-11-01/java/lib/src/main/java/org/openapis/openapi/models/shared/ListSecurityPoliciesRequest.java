@@ -12,6 +12,7 @@ public class ListSecurityPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListSecurityPoliciesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListSecurityPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListSecurityPoliciesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,6 +30,7 @@ public class ListSecurityPoliciesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String[] resource;
+
     public ListSecurityPoliciesRequest withResource(String[] resource) {
         this.resource = resource;
         return this;
@@ -35,9 +38,13 @@ public class ListSecurityPoliciesRequest {
     
     @JsonProperty("type")
     public SecurityPolicyTypeEnum type;
+
     public ListSecurityPoliciesRequest withType(SecurityPolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ListSecurityPoliciesRequest(@JsonProperty("type") SecurityPolicyTypeEnum type) {
+        this.type = type;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public String action;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withAction(String action) {
         this.action = action;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource")
     public String resource;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withResource(String resource) {
         this.resource = resource;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withType(String type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class GoogleCloudDialogflowCxV3beta1Changelog {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userEmail")
     public String userEmail;
+
     public GoogleCloudDialogflowCxV3beta1Changelog withUserEmail(String userEmail) {
         this.userEmail = userEmail;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3beta1Changelog(){}
 }

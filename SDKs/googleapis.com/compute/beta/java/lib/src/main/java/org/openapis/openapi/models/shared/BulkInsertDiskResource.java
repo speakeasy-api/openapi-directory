@@ -18,9 +18,11 @@ public class BulkInsertDiskResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceConsistencyGroupPolicy")
     public String sourceConsistencyGroupPolicy;
+
     public BulkInsertDiskResource withSourceConsistencyGroupPolicy(String sourceConsistencyGroupPolicy) {
         this.sourceConsistencyGroupPolicy = sourceConsistencyGroupPolicy;
         return this;
     }
     
+    public BulkInsertDiskResource(){}
 }

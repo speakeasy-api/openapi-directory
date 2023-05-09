@@ -12,6 +12,7 @@ public class PaymentMethodFreq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public String count;
+
     public PaymentMethodFreq withCount(String count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class PaymentMethodFreq {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PaymentMethodFreq withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PaymentMethodFreq(){}
 }

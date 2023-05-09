@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AddAttributesToFindingsResponse {
@@ -12,6 +13,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public Object accessDeniedException;
+
     public AddAttributesToFindingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public org.openapis.openapi.models.shared.AddAttributesToFindingsResponse addAttributesToFindingsResponse;
+
     public AddAttributesToFindingsResponse withAddAttributesToFindingsResponse(org.openapis.openapi.models.shared.AddAttributesToFindingsResponse addAttributesToFindingsResponse) {
         this.addAttributesToFindingsResponse = addAttributesToFindingsResponse;
         return this;
@@ -29,6 +32,7 @@ public class AddAttributesToFindingsResponse {
     
     
     public String contentType;
+
     public AddAttributesToFindingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public Object internalException;
+
     public AddAttributesToFindingsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -49,6 +54,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public Object invalidInputException;
+
     public AddAttributesToFindingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -59,6 +65,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public Object noSuchEntityException;
+
     public AddAttributesToFindingsResponse withNoSuchEntityException(Object noSuchEntityException) {
         this.noSuchEntityException = noSuchEntityException;
         return this;
@@ -69,6 +76,7 @@ public class AddAttributesToFindingsResponse {
      */
     
     public Object serviceTemporarilyUnavailableException;
+
     public AddAttributesToFindingsResponse withServiceTemporarilyUnavailableException(Object serviceTemporarilyUnavailableException) {
         this.serviceTemporarilyUnavailableException = serviceTemporarilyUnavailableException;
         return this;
@@ -76,6 +84,7 @@ public class AddAttributesToFindingsResponse {
     
     
     public Integer statusCode;
+
     public AddAttributesToFindingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class AddAttributesToFindingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AddAttributesToFindingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public AddAttributesToFindingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

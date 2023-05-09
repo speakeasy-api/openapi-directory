@@ -12,6 +12,7 @@ public class ListAWSDefaultServiceQuotasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListAWSDefaultServiceQuotasRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListAWSDefaultServiceQuotasRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAWSDefaultServiceQuotasRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -27,9 +29,13 @@ public class ListAWSDefaultServiceQuotasRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public ListAWSDefaultServiceQuotasRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public ListAWSDefaultServiceQuotasRequest(@JsonProperty("ServiceCode") String serviceCode) {
+        this.serviceCode = serviceCode;
+  }
 }

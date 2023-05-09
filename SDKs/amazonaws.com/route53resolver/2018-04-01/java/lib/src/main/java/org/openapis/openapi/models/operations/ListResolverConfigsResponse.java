@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListResolverConfigsResponse {
@@ -12,6 +13,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListResolverConfigsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListResolverConfigsResponse {
     
     
     public String contentType;
+
     public ListResolverConfigsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object internalServiceErrorException;
+
     public ListResolverConfigsResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -39,6 +43,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListResolverConfigsResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object invalidParameterException;
+
     public ListResolverConfigsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListResolverConfigsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListResolverConfigsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListResolverConfigsResponse listResolverConfigsResponse;
+
     public ListResolverConfigsResponse withListResolverConfigsResponse(org.openapis.openapi.models.shared.ListResolverConfigsResponse listResolverConfigsResponse) {
         this.listResolverConfigsResponse = listResolverConfigsResponse;
         return this;
@@ -76,6 +84,7 @@ public class ListResolverConfigsResponse {
     
     
     public Integer statusCode;
+
     public ListResolverConfigsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListResolverConfigsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListResolverConfigsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListResolverConfigsResponse {
      */
     
     public Object throttlingException;
+
     public ListResolverConfigsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class ListResolverConfigsResponse {
      */
     
     public Object validationException;
+
     public ListResolverConfigsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListResolverConfigsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

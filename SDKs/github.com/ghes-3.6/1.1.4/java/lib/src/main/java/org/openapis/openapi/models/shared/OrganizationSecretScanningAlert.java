@@ -22,6 +22,7 @@ public class OrganizationSecretScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public OrganizationSecretScanningAlert withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +34,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public OrganizationSecretScanningAlert withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -44,6 +46,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations_url")
     public String locationsUrl;
+
     public OrganizationSecretScanningAlert withLocationsUrl(String locationsUrl) {
         this.locationsUrl = locationsUrl;
         return this;
@@ -55,6 +58,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public Long number;
+
     public OrganizationSecretScanningAlert withNumber(Long number) {
         this.number = number;
         return this;
@@ -66,6 +70,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("push_protection_bypassed")
     public Boolean pushProtectionBypassed;
+
     public OrganizationSecretScanningAlert withPushProtectionBypassed(Boolean pushProtectionBypassed) {
         this.pushProtectionBypassed = pushProtectionBypassed;
         return this;
@@ -79,6 +84,7 @@ public class OrganizationSecretScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("push_protection_bypassed_at")
     public OffsetDateTime pushProtectionBypassedAt;
+
     public OrganizationSecretScanningAlert withPushProtectionBypassedAt(OffsetDateTime pushProtectionBypassedAt) {
         this.pushProtectionBypassedAt = pushProtectionBypassedAt;
         return this;
@@ -90,6 +96,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("push_protection_bypassed_by")
     public NullableSimpleUser pushProtectionBypassedBy;
+
     public OrganizationSecretScanningAlert withPushProtectionBypassedBy(NullableSimpleUser pushProtectionBypassedBy) {
         this.pushProtectionBypassedBy = pushProtectionBypassedBy;
         return this;
@@ -101,6 +108,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repository")
     public SimpleRepository repository;
+
     public OrganizationSecretScanningAlert withRepository(SimpleRepository repository) {
         this.repository = repository;
         return this;
@@ -112,6 +120,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public SecretScanningAlertResolutionEnum resolution;
+
     public OrganizationSecretScanningAlert withResolution(SecretScanningAlertResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -125,6 +134,7 @@ public class OrganizationSecretScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resolved_at")
     public OffsetDateTime resolvedAt;
+
     public OrganizationSecretScanningAlert withResolvedAt(OffsetDateTime resolvedAt) {
         this.resolvedAt = resolvedAt;
         return this;
@@ -136,6 +146,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolved_by")
     public NullableSimpleUser resolvedBy;
+
     public OrganizationSecretScanningAlert withResolvedBy(NullableSimpleUser resolvedBy) {
         this.resolvedBy = resolvedBy;
         return this;
@@ -147,6 +158,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret")
     public String secret;
+
     public OrganizationSecretScanningAlert withSecret(String secret) {
         this.secret = secret;
         return this;
@@ -158,6 +170,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_type")
     public String secretType;
+
     public OrganizationSecretScanningAlert withSecretType(String secretType) {
         this.secretType = secretType;
         return this;
@@ -170,6 +183,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secret_type_display_name")
     public String secretTypeDisplayName;
+
     public OrganizationSecretScanningAlert withSecretTypeDisplayName(String secretTypeDisplayName) {
         this.secretTypeDisplayName = secretTypeDisplayName;
         return this;
@@ -181,6 +195,7 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SchemassecretScanningAlertStateEnum state;
+
     public OrganizationSecretScanningAlert withState(SchemassecretScanningAlertStateEnum state) {
         this.state = state;
         return this;
@@ -194,6 +209,7 @@ public class OrganizationSecretScanningAlert {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public OrganizationSecretScanningAlert withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -205,9 +221,11 @@ public class OrganizationSecretScanningAlert {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public OrganizationSecretScanningAlert withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public OrganizationSecretScanningAlert(){}
 }

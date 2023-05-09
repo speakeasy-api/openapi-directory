@@ -15,6 +15,7 @@ public class UpdateAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetDescription")
     public String assetDescription;
+
     public UpdateAssetRequestBody withAssetDescription(String assetDescription) {
         this.assetDescription = assetDescription;
         return this;
@@ -25,6 +26,7 @@ public class UpdateAssetRequestBody {
      */
     @JsonProperty("assetName")
     public String assetName;
+
     public UpdateAssetRequestBody withAssetName(String assetName) {
         this.assetName = assetName;
         return this;
@@ -36,9 +38,13 @@ public class UpdateAssetRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateAssetRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateAssetRequestBody(@JsonProperty("assetName") String assetName) {
+        this.assetName = assetName;
+  }
 }

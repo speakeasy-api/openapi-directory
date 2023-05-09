@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsMonitoring {
     
     public Boolean enabled;
+
     public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsMonitoring withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public RequestSpotFleetRequestSpotFleetRequestConfigLaunchSpecificationsMonitoring(){}
 }

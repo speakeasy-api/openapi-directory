@@ -15,6 +15,7 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EntitySummaryList")
     public EntitySummary[] entitySummaryList;
+
     public ListEntitiesResponse withEntitySummaryList(EntitySummary[] entitySummaryList) {
         this.entitySummaryList = entitySummaryList;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitiesResponse(){}
 }

@@ -18,9 +18,11 @@ public class IamPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policyBlob")
     public String policyBlob;
+
     public IamPolicy withPolicyBlob(String policyBlob) {
         this.policyBlob = policyBlob;
         return this;
     }
     
+    public IamPolicy(){}
 }

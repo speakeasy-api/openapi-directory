@@ -12,9 +12,13 @@ public class DeleteDestinationRequestBody {
      */
     @JsonProperty("id")
     public String id;
+
     public DeleteDestinationRequestBody withId(String id) {
         this.id = id;
         return this;
     }
     
+    public DeleteDestinationRequestBody(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

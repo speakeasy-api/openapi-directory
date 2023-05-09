@@ -12,9 +12,13 @@ public class UpdateCustomMetricRequestBody {
      */
     @JsonProperty("displayName")
     public String displayName;
+
     public UpdateCustomMetricRequestBody withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
     
+    public UpdateCustomMetricRequestBody(@JsonProperty("displayName") String displayName) {
+        this.displayName = displayName;
+  }
 }

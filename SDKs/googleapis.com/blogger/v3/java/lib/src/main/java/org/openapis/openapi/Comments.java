@@ -58,11 +58,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsApproveResponse res = new org.openapis.openapi.models.operations.BloggerCommentsApproveResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsApproveResponse res = new org.openapis.openapi.models.operations.BloggerCommentsApproveResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,10 +102,8 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse res = new org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse res = new org.openapis.openapi.models.operations.BloggerCommentsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -144,11 +140,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsGetResponse res = new org.openapis.openapi.models.operations.BloggerCommentsGetResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsGetResponse res = new org.openapis.openapi.models.operations.BloggerCommentsGetResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsListResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsListResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListResponse(contentType, httpRes.statusCode()) {{
             commentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -236,11 +228,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse res = new org.openapis.openapi.models.operations.BloggerCommentsListByBlogResponse(contentType, httpRes.statusCode()) {{
             commentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -282,11 +272,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse res = new org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse res = new org.openapis.openapi.models.operations.BloggerCommentsMarkAsSpamResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -328,11 +316,9 @@ public class Comments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse res = new org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse() {{
+        org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse res = new org.openapis.openapi.models.operations.BloggerCommentsRemoveContentResponse(contentType, httpRes.statusCode()) {{
             comment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

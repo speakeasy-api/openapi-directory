@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta2Barcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public GoogleCloudDocumentaiV1beta2Barcode withFormat(String format) {
         this.format = format;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta2Barcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public String rawValue;
+
     public GoogleCloudDocumentaiV1beta2Barcode withRawValue(String rawValue) {
         this.rawValue = rawValue;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1beta2Barcode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("valueFormat")
     public String valueFormat;
+
     public GoogleCloudDocumentaiV1beta2Barcode withValueFormat(String valueFormat) {
         this.valueFormat = valueFormat;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta2Barcode(){}
 }

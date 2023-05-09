@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAnomalyMonitorResponse {
     
     public String contentType;
+
     public DeleteAnomalyMonitorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAnomalyMonitorResponse {
      */
     
     public java.util.Map<String, Object> deleteAnomalyMonitorResponse;
+
     public DeleteAnomalyMonitorResponse withDeleteAnomalyMonitorResponse(java.util.Map<String, Object> deleteAnomalyMonitorResponse) {
         this.deleteAnomalyMonitorResponse = deleteAnomalyMonitorResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteAnomalyMonitorResponse {
      */
     
     public Object limitExceededException;
+
     public DeleteAnomalyMonitorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteAnomalyMonitorResponse {
     
     
     public Integer statusCode;
+
     public DeleteAnomalyMonitorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteAnomalyMonitorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAnomalyMonitorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteAnomalyMonitorResponse {
      */
     
     public Object unknownMonitorException;
+
     public DeleteAnomalyMonitorResponse withUnknownMonitorException(Object unknownMonitorException) {
         this.unknownMonitorException = unknownMonitorException;
         return this;
     }
     
+    public DeleteAnomalyMonitorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

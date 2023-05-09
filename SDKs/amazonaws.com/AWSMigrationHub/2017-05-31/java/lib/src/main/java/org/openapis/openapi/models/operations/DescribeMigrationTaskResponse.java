@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeMigrationTaskResponse {
@@ -12,6 +13,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeMigrationTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeMigrationTaskResponse {
     
     
     public String contentType;
+
     public DescribeMigrationTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeMigrationTaskResult describeMigrationTaskResult;
+
     public DescribeMigrationTaskResponse withDescribeMigrationTaskResult(org.openapis.openapi.models.shared.DescribeMigrationTaskResult describeMigrationTaskResult) {
         this.describeMigrationTaskResult = describeMigrationTaskResult;
         return this;
@@ -39,6 +43,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object homeRegionNotSetException;
+
     public DescribeMigrationTaskResponse withHomeRegionNotSetException(Object homeRegionNotSetException) {
         this.homeRegionNotSetException = homeRegionNotSetException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object internalServerError;
+
     public DescribeMigrationTaskResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object invalidInputException;
+
     public DescribeMigrationTaskResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeMigrationTaskResponse {
     
     
     public Integer statusCode;
+
     public DescribeMigrationTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeMigrationTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeMigrationTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeMigrationTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeMigrationTaskResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,9 +114,14 @@ public class DescribeMigrationTaskResponse {
      */
     
     public Object throttlingException;
+
     public DescribeMigrationTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DescribeMigrationTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

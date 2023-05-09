@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePadUsingPOSTResponse {
     
     public String contentType;
+
     public DeletePadUsingPOSTResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class DeletePadUsingPOSTResponse {
     
     
     public Integer statusCode;
+
     public DeletePadUsingPOSTResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class DeletePadUsingPOSTResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePadUsingPOSTResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class DeletePadUsingPOSTResponse {
      */
     
     public DeletePadUsingPOST200ApplicationJSON deletePadUsingPOST200ApplicationJSONObject;
+
     public DeletePadUsingPOSTResponse withDeletePadUsingPOST200ApplicationJSONObject(DeletePadUsingPOST200ApplicationJSON deletePadUsingPOST200ApplicationJSONObject) {
         this.deletePadUsingPOST200ApplicationJSONObject = deletePadUsingPOST200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class DeletePadUsingPOSTResponse {
      */
     
     public DeletePadUsingPOST400ApplicationJSON deletePadUsingPOST400ApplicationJSONObject;
+
     public DeletePadUsingPOSTResponse withDeletePadUsingPOST400ApplicationJSONObject(DeletePadUsingPOST400ApplicationJSON deletePadUsingPOST400ApplicationJSONObject) {
         this.deletePadUsingPOST400ApplicationJSONObject = deletePadUsingPOST400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class DeletePadUsingPOSTResponse {
      */
     
     public DeletePadUsingPOST401ApplicationJSON deletePadUsingPOST401ApplicationJSONObject;
+
     public DeletePadUsingPOSTResponse withDeletePadUsingPOST401ApplicationJSONObject(DeletePadUsingPOST401ApplicationJSON deletePadUsingPOST401ApplicationJSONObject) {
         this.deletePadUsingPOST401ApplicationJSONObject = deletePadUsingPOST401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class DeletePadUsingPOSTResponse {
      */
     
     public DeletePadUsingPOST500ApplicationJSON deletePadUsingPOST500ApplicationJSONObject;
+
     public DeletePadUsingPOSTResponse withDeletePadUsingPOST500ApplicationJSONObject(DeletePadUsingPOST500ApplicationJSON deletePadUsingPOST500ApplicationJSONObject) {
         this.deletePadUsingPOST500ApplicationJSONObject = deletePadUsingPOST500ApplicationJSONObject;
         return this;
     }
     
+    public DeletePadUsingPOSTResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

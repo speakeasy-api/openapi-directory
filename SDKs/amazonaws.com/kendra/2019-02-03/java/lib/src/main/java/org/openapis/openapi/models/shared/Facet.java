@@ -15,6 +15,7 @@ public class Facet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentAttributeKey")
     public String documentAttributeKey;
+
     public Facet withDocumentAttributeKey(String documentAttributeKey) {
         this.documentAttributeKey = documentAttributeKey;
         return this;
@@ -23,6 +24,7 @@ public class Facet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facets")
     public Facet[] facets;
+
     public Facet withFacets(Facet[] facets) {
         this.facets = facets;
         return this;
@@ -31,9 +33,11 @@ public class Facet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public Facet withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
     
+    public Facet(){}
 }

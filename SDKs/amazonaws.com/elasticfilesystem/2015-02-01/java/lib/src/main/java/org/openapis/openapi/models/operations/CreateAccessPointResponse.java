@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccessPointResponse {
@@ -12,6 +13,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object accessPointAlreadyExists;
+
     public CreateAccessPointResponse withAccessPointAlreadyExists(Object accessPointAlreadyExists) {
         this.accessPointAlreadyExists = accessPointAlreadyExists;
         return this;
@@ -22,6 +24,7 @@ public class CreateAccessPointResponse {
      */
     
     public org.openapis.openapi.models.shared.AccessPointDescription accessPointDescription;
+
     public CreateAccessPointResponse withAccessPointDescription(org.openapis.openapi.models.shared.AccessPointDescription accessPointDescription) {
         this.accessPointDescription = accessPointDescription;
         return this;
@@ -32,6 +35,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object accessPointLimitExceeded;
+
     public CreateAccessPointResponse withAccessPointLimitExceeded(Object accessPointLimitExceeded) {
         this.accessPointLimitExceeded = accessPointLimitExceeded;
         return this;
@@ -42,6 +46,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object badRequest;
+
     public CreateAccessPointResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccessPointResponse {
     
     
     public String contentType;
+
     public CreateAccessPointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -59,6 +65,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object fileSystemNotFound;
+
     public CreateAccessPointResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -69,6 +76,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public CreateAccessPointResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -79,6 +87,7 @@ public class CreateAccessPointResponse {
      */
     
     public Object internalServerError;
+
     public CreateAccessPointResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -86,6 +95,7 @@ public class CreateAccessPointResponse {
     
     
     public Integer statusCode;
+
     public CreateAccessPointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class CreateAccessPointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccessPointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class CreateAccessPointResponse {
      */
     
     public Object throttlingException;
+
     public CreateAccessPointResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAccessPointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

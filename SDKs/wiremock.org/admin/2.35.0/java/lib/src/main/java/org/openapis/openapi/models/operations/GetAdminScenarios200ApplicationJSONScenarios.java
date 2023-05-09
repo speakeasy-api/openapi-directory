@@ -15,6 +15,7 @@ public class GetAdminScenarios200ApplicationJSONScenarios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAdminScenarios200ApplicationJSONScenarios withId(String id) {
         this.id = id;
         return this;
@@ -26,6 +27,7 @@ public class GetAdminScenarios200ApplicationJSONScenarios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetAdminScenarios200ApplicationJSONScenarios withName(String name) {
         this.name = name;
         return this;
@@ -34,6 +36,7 @@ public class GetAdminScenarios200ApplicationJSONScenarios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("possibleStates")
     public String[] possibleStates;
+
     public GetAdminScenarios200ApplicationJSONScenarios withPossibleStates(String[] possibleStates) {
         this.possibleStates = possibleStates;
         return this;
@@ -45,9 +48,11 @@ public class GetAdminScenarios200ApplicationJSONScenarios {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public GetAdminScenarios200ApplicationJSONScenarios withState(String state) {
         this.state = state;
         return this;
     }
     
+    public GetAdminScenarios200ApplicationJSONScenarios(){}
 }

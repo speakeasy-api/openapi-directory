@@ -19,6 +19,7 @@ public class CreateCardRequest {
      */
     @JsonProperty("card")
     public Card card;
+
     public CreateCardRequest withCard(Card card) {
         this.card = card;
         return this;
@@ -34,6 +35,7 @@ public class CreateCardRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateCardRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -44,6 +46,7 @@ public class CreateCardRequest {
      */
     @JsonProperty("source_id")
     public String sourceId;
+
     public CreateCardRequest withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
@@ -59,9 +62,15 @@ public class CreateCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification_token")
     public String verificationToken;
+
     public CreateCardRequest withVerificationToken(String verificationToken) {
         this.verificationToken = verificationToken;
         return this;
     }
     
+    public CreateCardRequest(@JsonProperty("card") Card card, @JsonProperty("idempotency_key") String idempotencyKey, @JsonProperty("source_id") String sourceId) {
+        this.card = card;
+        this.idempotencyKey = idempotencyKey;
+        this.sourceId = sourceId;
+  }
 }

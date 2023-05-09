@@ -12,6 +12,7 @@ public class AssociateMacSecKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cak")
     public String cak;
+
     public AssociateMacSecKeyRequest withCak(String cak) {
         this.cak = cak;
         return this;
@@ -20,6 +21,7 @@ public class AssociateMacSecKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ckn")
     public String ckn;
+
     public AssociateMacSecKeyRequest withCkn(String ckn) {
         this.ckn = ckn;
         return this;
@@ -27,6 +29,7 @@ public class AssociateMacSecKeyRequest {
     
     @JsonProperty("connectionId")
     public String connectionId;
+
     public AssociateMacSecKeyRequest withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -35,9 +38,13 @@ public class AssociateMacSecKeyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("secretARN")
     public String secretARN;
+
     public AssociateMacSecKeyRequest withSecretARN(String secretARN) {
         this.secretARN = secretARN;
         return this;
     }
     
+    public AssociateMacSecKeyRequest(@JsonProperty("connectionId") String connectionId) {
+        this.connectionId = connectionId;
+  }
 }

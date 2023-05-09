@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class ClaimEventV1 {
     @JsonProperty("amount")
     public Double amount;
+
     public ClaimEventV1 withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -24,6 +25,7 @@ public class ClaimEventV1 {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public ClaimEventV1 withDate(LocalDate date) {
         this.date = date;
         return this;
@@ -32,9 +34,14 @@ public class ClaimEventV1 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ClaimEventV1 withDescription(String description) {
         this.description = description;
         return this;
     }
     
+    public ClaimEventV1(@JsonProperty("amount") Double amount, @JsonProperty("date") LocalDate date) {
+        this.amount = amount;
+        this.date = date;
+  }
 }

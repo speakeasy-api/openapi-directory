@@ -15,6 +15,7 @@ public class BatchCreateDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDelegationRequest")
     public CreateDelegationRequest createDelegationRequest;
+
     public BatchCreateDelegationByAssessmentError withCreateDelegationRequest(CreateDelegationRequest createDelegationRequest) {
         this.createDelegationRequest = createDelegationRequest;
         return this;
@@ -23,6 +24,7 @@ public class BatchCreateDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorCode")
     public String errorCode;
+
     public BatchCreateDelegationByAssessmentError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -31,9 +33,11 @@ public class BatchCreateDelegationByAssessmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public BatchCreateDelegationByAssessmentError withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
     }
     
+    public BatchCreateDelegationByAssessmentError(){}
 }

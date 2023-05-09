@@ -18,6 +18,7 @@ public class SubjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public Subject subject;
+
     public SubjectConfig withSubject(Subject subject) {
         this.subject = subject;
         return this;
@@ -29,9 +30,11 @@ public class SubjectConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subjectAltName")
     public SubjectAltNames subjectAltName;
+
     public SubjectConfig withSubjectAltName(SubjectAltNames subjectAltName) {
         this.subjectAltName = subjectAltName;
         return this;
     }
     
+    public SubjectConfig(){}
 }

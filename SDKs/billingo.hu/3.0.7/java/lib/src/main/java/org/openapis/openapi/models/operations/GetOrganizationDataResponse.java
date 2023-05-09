@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationDataResponse {
@@ -12,6 +13,7 @@ public class GetOrganizationDataResponse {
      */
     
     public org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse;
+
     public GetOrganizationDataResponse withClientErrorResponse(org.openapis.openapi.models.shared.ClientErrorResponse clientErrorResponse) {
         this.clientErrorResponse = clientErrorResponse;
         return this;
@@ -19,6 +21,7 @@ public class GetOrganizationDataResponse {
     
     
     public String contentType;
+
     public GetOrganizationDataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetOrganizationDataResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetOrganizationDataResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -36,6 +40,7 @@ public class GetOrganizationDataResponse {
      */
     
     public org.openapis.openapi.models.shared.OrganizationData organizationData;
+
     public GetOrganizationDataResponse withOrganizationData(org.openapis.openapi.models.shared.OrganizationData organizationData) {
         this.organizationData = organizationData;
         return this;
@@ -46,6 +51,7 @@ public class GetOrganizationDataResponse {
      */
     
     public org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse;
+
     public GetOrganizationDataResponse withServerErrorResponse(org.openapis.openapi.models.shared.ServerErrorResponse serverErrorResponse) {
         this.serverErrorResponse = serverErrorResponse;
         return this;
@@ -53,6 +59,7 @@ public class GetOrganizationDataResponse {
     
     
     public Integer statusCode;
+
     public GetOrganizationDataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -60,6 +67,7 @@ public class GetOrganizationDataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetOrganizationDataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -70,9 +78,14 @@ public class GetOrganizationDataResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse;
+
     public GetOrganizationDataResponse withValidationErrorResponse(org.openapis.openapi.models.shared.ValidationErrorResponse validationErrorResponse) {
         this.validationErrorResponse = validationErrorResponse;
         return this;
     }
     
+    public GetOrganizationDataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUniversalDoNotContactsRequest {
@@ -12,6 +13,7 @@ public class GetUniversalDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public GetUniversalDoNotContactsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -22,6 +24,7 @@ public class GetUniversalDoNotContactsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromNumber")
     public String fromNumber;
+
     public GetUniversalDoNotContactsRequest withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -32,9 +35,13 @@ public class GetUniversalDoNotContactsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=toNumber")
     public String toNumber;
+
     public GetUniversalDoNotContactsRequest withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public GetUniversalDoNotContactsRequest(@JsonProperty("toNumber") String toNumber) {
+        this.toNumber = toNumber;
+  }
 }

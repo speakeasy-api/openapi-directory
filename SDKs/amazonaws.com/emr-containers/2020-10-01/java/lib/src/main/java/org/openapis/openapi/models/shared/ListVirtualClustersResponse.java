@@ -15,6 +15,7 @@ public class ListVirtualClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListVirtualClustersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListVirtualClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("virtualClusters")
     public VirtualCluster[] virtualClusters;
+
     public ListVirtualClustersResponse withVirtualClusters(VirtualCluster[] virtualClusters) {
         this.virtualClusters = virtualClusters;
         return this;
     }
     
+    public ListVirtualClustersResponse(){}
 }

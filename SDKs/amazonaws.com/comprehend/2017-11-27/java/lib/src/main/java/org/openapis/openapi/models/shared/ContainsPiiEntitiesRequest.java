@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ContainsPiiEntitiesRequest {
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public ContainsPiiEntitiesRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -16,9 +17,14 @@ public class ContainsPiiEntitiesRequest {
     
     @JsonProperty("Text")
     public String text;
+
     public ContainsPiiEntitiesRequest withText(String text) {
         this.text = text;
         return this;
     }
     
+    public ContainsPiiEntitiesRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("Text") String text) {
+        this.languageCode = languageCode;
+        this.text = text;
+  }
 }

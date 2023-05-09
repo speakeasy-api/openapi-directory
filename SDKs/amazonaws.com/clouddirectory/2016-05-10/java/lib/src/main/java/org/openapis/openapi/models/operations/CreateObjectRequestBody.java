@@ -15,6 +15,7 @@ public class CreateObjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LinkName")
     public String linkName;
+
     public CreateObjectRequestBody withLinkName(String linkName) {
         this.linkName = linkName;
         return this;
@@ -26,6 +27,7 @@ public class CreateObjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectAttributeList")
     public org.openapis.openapi.models.shared.AttributeKeyAndValue[] objectAttributeList;
+
     public CreateObjectRequestBody withObjectAttributeList(org.openapis.openapi.models.shared.AttributeKeyAndValue[] objectAttributeList) {
         this.objectAttributeList = objectAttributeList;
         return this;
@@ -37,6 +39,7 @@ public class CreateObjectRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParentReference")
     public CreateObjectRequestBodyParentReference parentReference;
+
     public CreateObjectRequestBody withParentReference(CreateObjectRequestBodyParentReference parentReference) {
         this.parentReference = parentReference;
         return this;
@@ -47,9 +50,13 @@ public class CreateObjectRequestBody {
      */
     @JsonProperty("SchemaFacets")
     public org.openapis.openapi.models.shared.SchemaFacet[] schemaFacets;
+
     public CreateObjectRequestBody withSchemaFacets(org.openapis.openapi.models.shared.SchemaFacet[] schemaFacets) {
         this.schemaFacets = schemaFacets;
         return this;
     }
     
+    public CreateObjectRequestBody(@JsonProperty("SchemaFacets") org.openapis.openapi.models.shared.SchemaFacet[] schemaFacets) {
+        this.schemaFacets = schemaFacets;
+  }
 }

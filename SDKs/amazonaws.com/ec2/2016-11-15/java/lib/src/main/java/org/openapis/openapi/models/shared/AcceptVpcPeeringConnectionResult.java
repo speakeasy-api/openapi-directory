@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class AcceptVpcPeeringConnectionResult {
     
     public AcceptVpcPeeringConnectionResultVpcPeeringConnection vpcPeeringConnection;
+
     public AcceptVpcPeeringConnectionResult withVpcPeeringConnection(AcceptVpcPeeringConnectionResultVpcPeeringConnection vpcPeeringConnection) {
         this.vpcPeeringConnection = vpcPeeringConnection;
         return this;
     }
     
+    public AcceptVpcPeeringConnectionResult(){}
 }

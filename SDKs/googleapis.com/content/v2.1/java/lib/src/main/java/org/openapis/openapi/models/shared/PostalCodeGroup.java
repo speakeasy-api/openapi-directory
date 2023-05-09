@@ -15,6 +15,7 @@ public class PostalCodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public PostalCodeGroup withCountry(String country) {
         this.country = country;
         return this;
@@ -26,6 +27,7 @@ public class PostalCodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PostalCodeGroup withName(String name) {
         this.name = name;
         return this;
@@ -37,9 +39,11 @@ public class PostalCodeGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodeRanges")
     public PostalCodeRange[] postalCodeRanges;
+
     public PostalCodeGroup withPostalCodeRanges(PostalCodeRange[] postalCodeRanges) {
         this.postalCodeRanges = postalCodeRanges;
         return this;
     }
     
+    public PostalCodeGroup(){}
 }

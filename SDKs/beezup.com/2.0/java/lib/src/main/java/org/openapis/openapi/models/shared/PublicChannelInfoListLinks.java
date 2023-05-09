@@ -12,9 +12,11 @@ public class PublicChannelInfoListLinks {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("self")
     public LinksGetChannelsLink self;
+
     public PublicChannelInfoListLinks withSelf(LinksGetChannelsLink self) {
         this.self = self;
         return this;
     }
     
+    public PublicChannelInfoListLinks(){}
 }

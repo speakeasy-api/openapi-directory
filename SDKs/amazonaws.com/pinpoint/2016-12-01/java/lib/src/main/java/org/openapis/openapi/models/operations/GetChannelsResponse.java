@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetChannelsResponse {
@@ -12,6 +13,7 @@ public class GetChannelsResponse {
      */
     
     public Object badRequestException;
+
     public GetChannelsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetChannelsResponse {
     
     
     public String contentType;
+
     public GetChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetChannelsResponse {
      */
     
     public Object forbiddenException;
+
     public GetChannelsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class GetChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetChannelsResponse getChannelsResponse;
+
     public GetChannelsResponse withGetChannelsResponse(org.openapis.openapi.models.shared.GetChannelsResponse getChannelsResponse) {
         this.getChannelsResponse = getChannelsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetChannelsResponse {
      */
     
     public Object internalServerErrorException;
+
     public GetChannelsResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class GetChannelsResponse {
      */
     
     public Object methodNotAllowedException;
+
     public GetChannelsResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class GetChannelsResponse {
      */
     
     public Object notFoundException;
+
     public GetChannelsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class GetChannelsResponse {
      */
     
     public Object payloadTooLargeException;
+
     public GetChannelsResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class GetChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class GetChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class GetChannelsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetChannelsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

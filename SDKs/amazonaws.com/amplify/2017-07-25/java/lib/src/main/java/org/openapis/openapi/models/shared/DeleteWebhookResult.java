@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWebhookResult {
     @JsonProperty("webhook")
     public Webhook webhook;
+
     public DeleteWebhookResult withWebhook(Webhook webhook) {
         this.webhook = webhook;
         return this;
     }
     
+    public DeleteWebhookResult(@JsonProperty("webhook") Webhook webhook) {
+        this.webhook = webhook;
+  }
 }

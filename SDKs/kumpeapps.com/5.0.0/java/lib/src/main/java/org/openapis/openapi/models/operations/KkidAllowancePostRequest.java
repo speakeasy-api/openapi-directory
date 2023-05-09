@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class KkidAllowancePostRequest {
@@ -12,6 +13,7 @@ public class KkidAllowancePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=amount")
     public Double amount;
+
     public KkidAllowancePostRequest withAmount(Double amount) {
         this.amount = amount;
         return this;
@@ -22,6 +24,7 @@ public class KkidAllowancePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=description")
     public String description;
+
     public KkidAllowancePostRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class KkidAllowancePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=kidUserId")
     public Long kidUserId;
+
     public KkidAllowancePostRequest withKidUserId(Long kidUserId) {
         this.kidUserId = kidUserId;
         return this;
@@ -42,9 +46,16 @@ public class KkidAllowancePostRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=transactionType")
     public KkidAllowancePostTransactionTypeEnum transactionType;
+
     public KkidAllowancePostRequest withTransactionType(KkidAllowancePostTransactionTypeEnum transactionType) {
         this.transactionType = transactionType;
         return this;
     }
     
+    public KkidAllowancePostRequest(@JsonProperty("amount") Double amount, @JsonProperty("description") String description, @JsonProperty("kidUserId") Long kidUserId, @JsonProperty("transactionType") KkidAllowancePostTransactionTypeEnum transactionType) {
+        this.amount = amount;
+        this.description = description;
+        this.kidUserId = kidUserId;
+        this.transactionType = transactionType;
+  }
 }

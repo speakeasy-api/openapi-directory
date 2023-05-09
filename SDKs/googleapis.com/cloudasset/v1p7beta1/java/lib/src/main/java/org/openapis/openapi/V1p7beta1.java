@@ -61,11 +61,9 @@ public class V1p7beta1 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CloudassetExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetExportAssetsResponse() {{
+        org.openapis.openapi.models.operations.CloudassetExportAssetsResponse res = new org.openapis.openapi.models.operations.CloudassetExportAssetsResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

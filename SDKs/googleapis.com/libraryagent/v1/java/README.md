@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowSecurity;
 import org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowRequest;
 import org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowResponse;
+import org.openapis.openapi.models.operations.LibraryagentShelvesBooksBorrowSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,32 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            LibraryagentShelvesBooksBorrowRequest req = new LibraryagentShelvesBooksBorrowRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            LibraryagentShelvesBooksBorrowRequest req = new LibraryagentShelvesBooksBorrowRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            LibraryagentShelvesBooksBorrowResponse res = sdk.shelves.libraryagentShelvesBooksBorrow(req, new LibraryagentShelvesBooksBorrowSecurity() {{
+            LibraryagentShelvesBooksBorrowResponse res = sdk.shelves.libraryagentShelvesBooksBorrow(req, new LibraryagentShelvesBooksBorrowSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleExampleLibraryagentV1Book.isPresent()) {
+            if (res.googleExampleLibraryagentV1Book != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,13 +62,13 @@ public class Application {
 ## Available Resources and Operations
 
 
-### shelves
+### [shelves](docs/shelves/README.md)
 
-* `libraryagentShelvesBooksBorrow` - Borrow a book from the library. Returns the book if it is borrowed successfully. Returns NOT_FOUND if the book does not exist in the library. Returns quota exceeded error if the amount of books borrowed exceeds allocation quota in any dimensions.
-* `libraryagentShelvesBooksGet` - Gets a book. Returns NOT_FOUND if the book does not exist.
-* `libraryagentShelvesBooksList` - Lists books in a shelf. The order is unspecified but deterministic. Newly created books will not necessarily be added to the end of this list. Returns NOT_FOUND if the shelf does not exist.
-* `libraryagentShelvesBooksReturn` - Return a book to the library. Returns the book if it is returned to the library successfully. Returns error if the book does not belong to the library or the users didn't borrow before.
-* `libraryagentShelvesList` - Lists shelves. The order is unspecified but deterministic. Newly created shelves will not necessarily be added to the end of this list.
+* [libraryagentShelvesBooksBorrow](docs/shelves/README.md#libraryagentshelvesbooksborrow) - Borrow a book from the library. Returns the book if it is borrowed successfully. Returns NOT_FOUND if the book does not exist in the library. Returns quota exceeded error if the amount of books borrowed exceeds allocation quota in any dimensions.
+* [libraryagentShelvesBooksGet](docs/shelves/README.md#libraryagentshelvesbooksget) - Gets a book. Returns NOT_FOUND if the book does not exist.
+* [libraryagentShelvesBooksList](docs/shelves/README.md#libraryagentshelvesbookslist) - Lists books in a shelf. The order is unspecified but deterministic. Newly created books will not necessarily be added to the end of this list. Returns NOT_FOUND if the shelf does not exist.
+* [libraryagentShelvesBooksReturn](docs/shelves/README.md#libraryagentshelvesbooksreturn) - Return a book to the library. Returns the book if it is returned to the library successfully. Returns error if the book does not belong to the library or the users didn't borrow before.
+* [libraryagentShelvesList](docs/shelves/README.md#libraryagentshelveslist) - Lists shelves. The order is unspecified but deterministic. Newly created shelves will not necessarily be added to the end of this list.
 <!-- End SDK Available Operations -->
 
 ### Maturity

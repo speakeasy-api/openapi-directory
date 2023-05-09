@@ -15,6 +15,7 @@ public class LicenseItemsProducts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public LicenseItemsProducts withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -23,6 +24,7 @@ public class LicenseItemsProducts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoints")
     public LicenseItemsProductsEndpoints endpoints;
+
     public LicenseItemsProducts withEndpoints(LicenseItemsProductsEndpoints endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -34,6 +36,7 @@ public class LicenseItemsProducts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Double id;
+
     public LicenseItemsProducts withId(Double id) {
         this.id = id;
         return this;
@@ -45,9 +48,11 @@ public class LicenseItemsProducts {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LicenseItemsProducts withName(String name) {
         this.name = name;
         return this;
     }
     
+    public LicenseItemsProducts(){}
 }

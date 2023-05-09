@@ -12,6 +12,7 @@ public class EditorialUpdatedContentCommercialStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public EditorialUpdatedContentCommercialStatus withReason(String reason) {
         this.reason = reason;
         return this;
@@ -20,9 +21,11 @@ public class EditorialUpdatedContentCommercialStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public EditorialUpdatedContentCommercialStatus withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public EditorialUpdatedContentCommercialStatus(){}
 }

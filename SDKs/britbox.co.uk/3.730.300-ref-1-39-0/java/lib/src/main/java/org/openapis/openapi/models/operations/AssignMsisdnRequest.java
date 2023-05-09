@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssignMsisdnRequest {
@@ -12,6 +13,7 @@ public class AssignMsisdnRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ItvAssignMsisdnRequest itvAssignMsisdnRequest;
+
     public AssignMsisdnRequest withItvAssignMsisdnRequest(org.openapis.openapi.models.shared.ItvAssignMsisdnRequest itvAssignMsisdnRequest) {
         this.itvAssignMsisdnRequest = itvAssignMsisdnRequest;
         return this;
@@ -32,9 +34,13 @@ public class AssignMsisdnRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public AssignMsisdnRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public AssignMsisdnRequest(@JsonProperty("ItvAssignMsisdnRequest") org.openapis.openapi.models.shared.ItvAssignMsisdnRequest itvAssignMsisdnRequest) {
+        this.itvAssignMsisdnRequest = itvAssignMsisdnRequest;
+  }
 }

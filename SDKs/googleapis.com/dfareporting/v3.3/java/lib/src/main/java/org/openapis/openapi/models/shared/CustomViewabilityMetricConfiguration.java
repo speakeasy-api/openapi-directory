@@ -18,6 +18,7 @@ public class CustomViewabilityMetricConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audible")
     public Boolean audible;
+
     public CustomViewabilityMetricConfiguration withAudible(Boolean audible) {
         this.audible = audible;
         return this;
@@ -29,6 +30,7 @@ public class CustomViewabilityMetricConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeMillis")
     public Integer timeMillis;
+
     public CustomViewabilityMetricConfiguration withTimeMillis(Integer timeMillis) {
         this.timeMillis = timeMillis;
         return this;
@@ -40,6 +42,7 @@ public class CustomViewabilityMetricConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timePercent")
     public Integer timePercent;
+
     public CustomViewabilityMetricConfiguration withTimePercent(Integer timePercent) {
         this.timePercent = timePercent;
         return this;
@@ -51,9 +54,11 @@ public class CustomViewabilityMetricConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viewabilityPercent")
     public Integer viewabilityPercent;
+
     public CustomViewabilityMetricConfiguration withViewabilityPercent(Integer viewabilityPercent) {
         this.viewabilityPercent = viewabilityPercent;
         return this;
     }
     
+    public CustomViewabilityMetricConfiguration(){}
 }

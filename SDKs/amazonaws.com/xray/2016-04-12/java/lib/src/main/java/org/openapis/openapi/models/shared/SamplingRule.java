@@ -15,6 +15,7 @@ public class SamplingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public java.util.Map<String, String> attributes;
+
     public SamplingRule withAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class SamplingRule {
     
     @JsonProperty("FixedRate")
     public Double fixedRate;
+
     public SamplingRule withFixedRate(Double fixedRate) {
         this.fixedRate = fixedRate;
         return this;
@@ -29,6 +31,7 @@ public class SamplingRule {
     
     @JsonProperty("HTTPMethod")
     public String httpMethod;
+
     public SamplingRule withHTTPMethod(String httpMethod) {
         this.httpMethod = httpMethod;
         return this;
@@ -36,6 +39,7 @@ public class SamplingRule {
     
     @JsonProperty("Host")
     public String host;
+
     public SamplingRule withHost(String host) {
         this.host = host;
         return this;
@@ -43,6 +47,7 @@ public class SamplingRule {
     
     @JsonProperty("Priority")
     public Long priority;
+
     public SamplingRule withPriority(Long priority) {
         this.priority = priority;
         return this;
@@ -50,6 +55,7 @@ public class SamplingRule {
     
     @JsonProperty("ReservoirSize")
     public Long reservoirSize;
+
     public SamplingRule withReservoirSize(Long reservoirSize) {
         this.reservoirSize = reservoirSize;
         return this;
@@ -57,6 +63,7 @@ public class SamplingRule {
     
     @JsonProperty("ResourceARN")
     public String resourceARN;
+
     public SamplingRule withResourceARN(String resourceARN) {
         this.resourceARN = resourceARN;
         return this;
@@ -65,6 +72,7 @@ public class SamplingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleARN")
     public String ruleARN;
+
     public SamplingRule withRuleARN(String ruleARN) {
         this.ruleARN = ruleARN;
         return this;
@@ -73,6 +81,7 @@ public class SamplingRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RuleName")
     public String ruleName;
+
     public SamplingRule withRuleName(String ruleName) {
         this.ruleName = ruleName;
         return this;
@@ -80,6 +89,7 @@ public class SamplingRule {
     
     @JsonProperty("ServiceName")
     public String serviceName;
+
     public SamplingRule withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -87,6 +97,7 @@ public class SamplingRule {
     
     @JsonProperty("ServiceType")
     public String serviceType;
+
     public SamplingRule withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -94,6 +105,7 @@ public class SamplingRule {
     
     @JsonProperty("URLPath")
     public String urlPath;
+
     public SamplingRule withURLPath(String urlPath) {
         this.urlPath = urlPath;
         return this;
@@ -101,9 +113,22 @@ public class SamplingRule {
     
     @JsonProperty("Version")
     public Long version;
+
     public SamplingRule withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public SamplingRule(@JsonProperty("FixedRate") Double fixedRate, @JsonProperty("HTTPMethod") String httpMethod, @JsonProperty("Host") String host, @JsonProperty("Priority") Long priority, @JsonProperty("ReservoirSize") Long reservoirSize, @JsonProperty("ResourceARN") String resourceARN, @JsonProperty("ServiceName") String serviceName, @JsonProperty("ServiceType") String serviceType, @JsonProperty("URLPath") String urlPath, @JsonProperty("Version") Long version) {
+        this.fixedRate = fixedRate;
+        this.httpMethod = httpMethod;
+        this.host = host;
+        this.priority = priority;
+        this.reservoirSize = reservoirSize;
+        this.resourceARN = resourceARN;
+        this.serviceName = serviceName;
+        this.serviceType = serviceType;
+        this.urlPath = urlPath;
+        this.version = version;
+  }
 }

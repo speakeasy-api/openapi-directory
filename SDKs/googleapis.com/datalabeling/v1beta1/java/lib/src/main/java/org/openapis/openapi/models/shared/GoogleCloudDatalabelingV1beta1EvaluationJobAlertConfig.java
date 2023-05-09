@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minAcceptableMeanAveragePrecision")
     public Double minAcceptableMeanAveragePrecision;
+
     public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig withMinAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
         this.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig(){}
 }

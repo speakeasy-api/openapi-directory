@@ -18,9 +18,11 @@ public class GoogleCloudVisionV1p2beta1GcsDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uri")
     public String uri;
+
     public GoogleCloudVisionV1p2beta1GcsDestination withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1GcsDestination(){}
 }

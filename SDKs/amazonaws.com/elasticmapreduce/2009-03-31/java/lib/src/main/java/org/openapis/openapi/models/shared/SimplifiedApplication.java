@@ -15,6 +15,7 @@ public class SimplifiedApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public SimplifiedApplication withName(String name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class SimplifiedApplication {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public SimplifiedApplication withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public SimplifiedApplication(){}
 }

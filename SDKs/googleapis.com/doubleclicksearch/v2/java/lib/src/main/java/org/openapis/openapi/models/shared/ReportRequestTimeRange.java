@@ -18,6 +18,7 @@ public class ReportRequestTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changedAttributesSinceTimestamp")
     public String changedAttributesSinceTimestamp;
+
     public ReportRequestTimeRange withChangedAttributesSinceTimestamp(String changedAttributesSinceTimestamp) {
         this.changedAttributesSinceTimestamp = changedAttributesSinceTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class ReportRequestTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("changedMetricsSinceTimestamp")
     public String changedMetricsSinceTimestamp;
+
     public ReportRequestTimeRange withChangedMetricsSinceTimestamp(String changedMetricsSinceTimestamp) {
         this.changedMetricsSinceTimestamp = changedMetricsSinceTimestamp;
         return this;
@@ -40,6 +42,7 @@ public class ReportRequestTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endDate")
     public String endDate;
+
     public ReportRequestTimeRange withEndDate(String endDate) {
         this.endDate = endDate;
         return this;
@@ -51,9 +54,11 @@ public class ReportRequestTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startDate")
     public String startDate;
+
     public ReportRequestTimeRange withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     
+    public ReportRequestTimeRange(){}
 }

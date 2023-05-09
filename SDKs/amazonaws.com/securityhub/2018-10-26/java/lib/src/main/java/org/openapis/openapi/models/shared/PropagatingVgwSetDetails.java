@@ -15,9 +15,11 @@ public class PropagatingVgwSetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GatewayId")
     public String gatewayId;
+
     public PropagatingVgwSetDetails withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
     }
     
+    public PropagatingVgwSetDetails(){}
 }

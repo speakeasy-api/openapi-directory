@@ -15,6 +15,7 @@ public class GetAccessControlEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Effect")
     public AccessControlRuleEffectEnum effect;
+
     public GetAccessControlEffectResponse withEffect(AccessControlRuleEffectEnum effect) {
         this.effect = effect;
         return this;
@@ -23,9 +24,11 @@ public class GetAccessControlEffectResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MatchedRules")
     public String[] matchedRules;
+
     public GetAccessControlEffectResponse withMatchedRules(String[] matchedRules) {
         this.matchedRules = matchedRules;
         return this;
     }
     
+    public GetAccessControlEffectResponse(){}
 }

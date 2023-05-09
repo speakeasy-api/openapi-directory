@@ -15,9 +15,11 @@ public class GetFacetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facet")
     public Facet facet;
+
     public GetFacetResponse withFacet(Facet facet) {
         this.facet = facet;
         return this;
     }
     
+    public GetFacetResponse(){}
 }

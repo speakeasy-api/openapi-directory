@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SrcSearchlyApiV1ControllersSimilarityBySongRequest {
@@ -12,9 +13,13 @@ public class SrcSearchlyApiV1ControllersSimilarityBySongRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=song_id")
     public Long songId;
+
     public SrcSearchlyApiV1ControllersSimilarityBySongRequest withSongId(Long songId) {
         this.songId = songId;
         return this;
     }
     
+    public SrcSearchlyApiV1ControllersSimilarityBySongRequest(@JsonProperty("song_id") Long songId) {
+        this.songId = songId;
+  }
 }

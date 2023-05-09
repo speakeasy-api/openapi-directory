@@ -15,6 +15,7 @@ public class BatchListOutgoingTypedLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchListOutgoingTypedLinksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class BatchListOutgoingTypedLinksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypedLinkSpecifiers")
     public TypedLinkSpecifier[] typedLinkSpecifiers;
+
     public BatchListOutgoingTypedLinksResponse withTypedLinkSpecifiers(TypedLinkSpecifier[] typedLinkSpecifiers) {
         this.typedLinkSpecifiers = typedLinkSpecifiers;
         return this;
     }
     
+    public BatchListOutgoingTypedLinksResponse(){}
 }

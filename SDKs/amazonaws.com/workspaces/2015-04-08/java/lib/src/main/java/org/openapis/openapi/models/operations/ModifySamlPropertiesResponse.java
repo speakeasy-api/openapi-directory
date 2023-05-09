@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifySamlPropertiesResponse {
@@ -12,6 +13,7 @@ public class ModifySamlPropertiesResponse {
      */
     
     public Object accessDeniedException;
+
     public ModifySamlPropertiesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ModifySamlPropertiesResponse {
     
     
     public String contentType;
+
     public ModifySamlPropertiesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ModifySamlPropertiesResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ModifySamlPropertiesResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -39,6 +43,7 @@ public class ModifySamlPropertiesResponse {
      */
     
     public java.util.Map<String, Object> modifySamlPropertiesResult;
+
     public ModifySamlPropertiesResponse withModifySamlPropertiesResult(java.util.Map<String, Object> modifySamlPropertiesResult) {
         this.modifySamlPropertiesResult = modifySamlPropertiesResult;
         return this;
@@ -49,6 +54,7 @@ public class ModifySamlPropertiesResponse {
      */
     
     public Object operationNotSupportedException;
+
     public ModifySamlPropertiesResponse withOperationNotSupportedException(Object operationNotSupportedException) {
         this.operationNotSupportedException = operationNotSupportedException;
         return this;
@@ -59,6 +65,7 @@ public class ModifySamlPropertiesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ModifySamlPropertiesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ModifySamlPropertiesResponse {
     
     
     public Integer statusCode;
+
     public ModifySamlPropertiesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ModifySamlPropertiesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifySamlPropertiesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifySamlPropertiesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

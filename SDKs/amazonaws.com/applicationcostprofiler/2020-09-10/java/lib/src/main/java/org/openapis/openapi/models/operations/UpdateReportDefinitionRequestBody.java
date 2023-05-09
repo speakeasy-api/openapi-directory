@@ -12,6 +12,7 @@ public class UpdateReportDefinitionRequestBody {
      */
     @JsonProperty("destinationS3Location")
     public UpdateReportDefinitionRequestBodyDestinationS3Location destinationS3Location;
+
     public UpdateReportDefinitionRequestBody withDestinationS3Location(UpdateReportDefinitionRequestBodyDestinationS3Location destinationS3Location) {
         this.destinationS3Location = destinationS3Location;
         return this;
@@ -22,6 +23,7 @@ public class UpdateReportDefinitionRequestBody {
      */
     @JsonProperty("format")
     public UpdateReportDefinitionRequestBodyFormatEnum format;
+
     public UpdateReportDefinitionRequestBody withFormat(UpdateReportDefinitionRequestBodyFormatEnum format) {
         this.format = format;
         return this;
@@ -32,6 +34,7 @@ public class UpdateReportDefinitionRequestBody {
      */
     @JsonProperty("reportDescription")
     public String reportDescription;
+
     public UpdateReportDefinitionRequestBody withReportDescription(String reportDescription) {
         this.reportDescription = reportDescription;
         return this;
@@ -42,9 +45,16 @@ public class UpdateReportDefinitionRequestBody {
      */
     @JsonProperty("reportFrequency")
     public UpdateReportDefinitionRequestBodyReportFrequencyEnum reportFrequency;
+
     public UpdateReportDefinitionRequestBody withReportFrequency(UpdateReportDefinitionRequestBodyReportFrequencyEnum reportFrequency) {
         this.reportFrequency = reportFrequency;
         return this;
     }
     
+    public UpdateReportDefinitionRequestBody(@JsonProperty("destinationS3Location") UpdateReportDefinitionRequestBodyDestinationS3Location destinationS3Location, @JsonProperty("format") UpdateReportDefinitionRequestBodyFormatEnum format, @JsonProperty("reportDescription") String reportDescription, @JsonProperty("reportFrequency") UpdateReportDefinitionRequestBodyReportFrequencyEnum reportFrequency) {
+        this.destinationS3Location = destinationS3Location;
+        this.format = format;
+        this.reportDescription = reportDescription;
+        this.reportFrequency = reportFrequency;
+  }
 }

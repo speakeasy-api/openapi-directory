@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * RestoreDBInstanceFromDBSnapshotMessage - &lt;p/&gt;
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RestoreDBInstanceFromDBSnapshotMessage {
     
     public Long allocatedStorage;
+
     public RestoreDBInstanceFromDBSnapshotMessage withAllocatedStorage(Long allocatedStorage) {
         this.allocatedStorage = allocatedStorage;
         return this;
@@ -19,6 +20,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean autoMinorVersionUpgrade;
+
     public RestoreDBInstanceFromDBSnapshotMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -26,6 +28,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String availabilityZone;
+
     public RestoreDBInstanceFromDBSnapshotMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -33,6 +36,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String backupTarget;
+
     public RestoreDBInstanceFromDBSnapshotMessage withBackupTarget(String backupTarget) {
         this.backupTarget = backupTarget;
         return this;
@@ -40,6 +44,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean copyTagsToSnapshot;
+
     public RestoreDBInstanceFromDBSnapshotMessage withCopyTagsToSnapshot(Boolean copyTagsToSnapshot) {
         this.copyTagsToSnapshot = copyTagsToSnapshot;
         return this;
@@ -47,6 +52,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String customIamInstanceProfile;
+
     public RestoreDBInstanceFromDBSnapshotMessage withCustomIamInstanceProfile(String customIamInstanceProfile) {
         this.customIamInstanceProfile = customIamInstanceProfile;
         return this;
@@ -54,6 +60,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbClusterSnapshotIdentifier;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBClusterSnapshotIdentifier(String dbClusterSnapshotIdentifier) {
         this.dbClusterSnapshotIdentifier = dbClusterSnapshotIdentifier;
         return this;
@@ -61,6 +68,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbInstanceClass;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -68,6 +76,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbInstanceIdentifier;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -75,6 +84,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBName(String dbName) {
         this.dbName = dbName;
         return this;
@@ -82,6 +92,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbParameterGroupName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBParameterGroupName(String dbParameterGroupName) {
         this.dbParameterGroupName = dbParameterGroupName;
         return this;
@@ -89,6 +100,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbSnapshotIdentifier;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBSnapshotIdentifier(String dbSnapshotIdentifier) {
         this.dbSnapshotIdentifier = dbSnapshotIdentifier;
         return this;
@@ -96,6 +108,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String dbSubnetGroupName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDBSubnetGroupName(String dbSubnetGroupName) {
         this.dbSubnetGroupName = dbSubnetGroupName;
         return this;
@@ -103,6 +116,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean deletionProtection;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDeletionProtection(Boolean deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
@@ -110,6 +124,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String domain;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -117,6 +132,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String domainIAMRoleName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withDomainIAMRoleName(String domainIAMRoleName) {
         this.domainIAMRoleName = domainIAMRoleName;
         return this;
@@ -124,6 +140,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String[] enableCloudwatchLogsExports;
+
     public RestoreDBInstanceFromDBSnapshotMessage withEnableCloudwatchLogsExports(String[] enableCloudwatchLogsExports) {
         this.enableCloudwatchLogsExports = enableCloudwatchLogsExports;
         return this;
@@ -131,6 +148,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean enableCustomerOwnedIp;
+
     public RestoreDBInstanceFromDBSnapshotMessage withEnableCustomerOwnedIp(Boolean enableCustomerOwnedIp) {
         this.enableCustomerOwnedIp = enableCustomerOwnedIp;
         return this;
@@ -138,6 +156,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean enableIAMDatabaseAuthentication;
+
     public RestoreDBInstanceFromDBSnapshotMessage withEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
         this.enableIAMDatabaseAuthentication = enableIAMDatabaseAuthentication;
         return this;
@@ -145,6 +164,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String engine;
+
     public RestoreDBInstanceFromDBSnapshotMessage withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -152,6 +172,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Long iops;
+
     public RestoreDBInstanceFromDBSnapshotMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -159,6 +180,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String licenseModel;
+
     public RestoreDBInstanceFromDBSnapshotMessage withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -166,6 +188,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean multiAZ;
+
     public RestoreDBInstanceFromDBSnapshotMessage withMultiAZ(Boolean multiAZ) {
         this.multiAZ = multiAZ;
         return this;
@@ -173,6 +196,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String networkType;
+
     public RestoreDBInstanceFromDBSnapshotMessage withNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
@@ -180,6 +204,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String optionGroupName;
+
     public RestoreDBInstanceFromDBSnapshotMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -187,6 +212,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Long port;
+
     public RestoreDBInstanceFromDBSnapshotMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -194,6 +220,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public ProcessorFeatureList[] processorFeatures;
+
     public RestoreDBInstanceFromDBSnapshotMessage withProcessorFeatures(ProcessorFeatureList[] processorFeatures) {
         this.processorFeatures = processorFeatures;
         return this;
@@ -201,6 +228,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean publiclyAccessible;
+
     public RestoreDBInstanceFromDBSnapshotMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -208,6 +236,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Long storageThroughput;
+
     public RestoreDBInstanceFromDBSnapshotMessage withStorageThroughput(Long storageThroughput) {
         this.storageThroughput = storageThroughput;
         return this;
@@ -215,6 +244,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String storageType;
+
     public RestoreDBInstanceFromDBSnapshotMessage withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -225,6 +255,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
      */
     
     public TagList[] tags;
+
     public RestoreDBInstanceFromDBSnapshotMessage withTags(TagList[] tags) {
         this.tags = tags;
         return this;
@@ -232,6 +263,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String tdeCredentialArn;
+
     public RestoreDBInstanceFromDBSnapshotMessage withTdeCredentialArn(String tdeCredentialArn) {
         this.tdeCredentialArn = tdeCredentialArn;
         return this;
@@ -239,6 +271,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String tdeCredentialPassword;
+
     public RestoreDBInstanceFromDBSnapshotMessage withTdeCredentialPassword(String tdeCredentialPassword) {
         this.tdeCredentialPassword = tdeCredentialPassword;
         return this;
@@ -246,6 +279,7 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public Boolean useDefaultProcessorFeatures;
+
     public RestoreDBInstanceFromDBSnapshotMessage withUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
         this.useDefaultProcessorFeatures = useDefaultProcessorFeatures;
         return this;
@@ -253,9 +287,13 @@ public class RestoreDBInstanceFromDBSnapshotMessage {
     
     
     public String[] vpcSecurityGroupIds;
+
     public RestoreDBInstanceFromDBSnapshotMessage withVpcSecurityGroupIds(String[] vpcSecurityGroupIds) {
         this.vpcSecurityGroupIds = vpcSecurityGroupIds;
         return this;
     }
     
+    public RestoreDBInstanceFromDBSnapshotMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+  }
 }

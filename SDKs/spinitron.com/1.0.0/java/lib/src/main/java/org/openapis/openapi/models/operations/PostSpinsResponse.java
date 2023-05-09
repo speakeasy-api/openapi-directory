@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSpinsResponse {
     
     public byte[] body;
+
     public PostSpinsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostSpinsResponse {
     
     
     public String contentType;
+
     public PostSpinsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostSpinsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public PostSpinsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -36,6 +40,7 @@ public class PostSpinsResponse {
      */
     
     public org.openapis.openapi.models.shared.Spin spin;
+
     public PostSpinsResponse withSpin(org.openapis.openapi.models.shared.Spin spin) {
         this.spin = spin;
         return this;
@@ -43,6 +48,7 @@ public class PostSpinsResponse {
     
     
     public Integer statusCode;
+
     public PostSpinsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,6 +56,7 @@ public class PostSpinsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSpinsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -60,9 +67,14 @@ public class PostSpinsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError[] validationErrors;
+
     public PostSpinsResponse withValidationErrors(org.openapis.openapi.models.shared.ValidationError[] validationErrors) {
         this.validationErrors = validationErrors;
         return this;
     }
     
+    public PostSpinsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

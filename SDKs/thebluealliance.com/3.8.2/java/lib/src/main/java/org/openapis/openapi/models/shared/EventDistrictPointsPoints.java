@@ -12,6 +12,7 @@ public class EventDistrictPointsPoints {
      */
     @JsonProperty("alliance_points")
     public Long alliancePoints;
+
     public EventDistrictPointsPoints withAlliancePoints(Long alliancePoints) {
         this.alliancePoints = alliancePoints;
         return this;
@@ -22,6 +23,7 @@ public class EventDistrictPointsPoints {
      */
     @JsonProperty("award_points")
     public Long awardPoints;
+
     public EventDistrictPointsPoints withAwardPoints(Long awardPoints) {
         this.awardPoints = awardPoints;
         return this;
@@ -32,6 +34,7 @@ public class EventDistrictPointsPoints {
      */
     @JsonProperty("elim_points")
     public Long elimPoints;
+
     public EventDistrictPointsPoints withElimPoints(Long elimPoints) {
         this.elimPoints = elimPoints;
         return this;
@@ -42,6 +45,7 @@ public class EventDistrictPointsPoints {
      */
     @JsonProperty("qual_points")
     public Long qualPoints;
+
     public EventDistrictPointsPoints withQualPoints(Long qualPoints) {
         this.qualPoints = qualPoints;
         return this;
@@ -52,9 +56,17 @@ public class EventDistrictPointsPoints {
      */
     @JsonProperty("total")
     public Long total;
+
     public EventDistrictPointsPoints withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public EventDistrictPointsPoints(@JsonProperty("alliance_points") Long alliancePoints, @JsonProperty("award_points") Long awardPoints, @JsonProperty("elim_points") Long elimPoints, @JsonProperty("qual_points") Long qualPoints, @JsonProperty("total") Long total) {
+        this.alliancePoints = alliancePoints;
+        this.awardPoints = awardPoints;
+        this.elimPoints = elimPoints;
+        this.qualPoints = qualPoints;
+        this.total = total;
+  }
 }

@@ -18,6 +18,7 @@ public class PopulateVersionFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadRequiredHashes")
     public String[] uploadRequiredHashes;
+
     public PopulateVersionFilesResponse withUploadRequiredHashes(String[] uploadRequiredHashes) {
         this.uploadRequiredHashes = uploadRequiredHashes;
         return this;
@@ -29,9 +30,11 @@ public class PopulateVersionFilesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uploadUrl")
     public String uploadUrl;
+
     public PopulateVersionFilesResponse withUploadUrl(String uploadUrl) {
         this.uploadUrl = uploadUrl;
         return this;
     }
     
+    public PopulateVersionFilesResponse(){}
 }

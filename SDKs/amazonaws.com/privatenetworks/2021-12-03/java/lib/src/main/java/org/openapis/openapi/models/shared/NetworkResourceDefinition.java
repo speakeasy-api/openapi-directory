@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class NetworkResourceDefinition {
     @JsonProperty("count")
     public Long count;
+
     public NetworkResourceDefinition withCount(Long count) {
         this.count = count;
         return this;
@@ -22,6 +23,7 @@ public class NetworkResourceDefinition {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public NameValuePair[] options;
+
     public NetworkResourceDefinition withOptions(NameValuePair[] options) {
         this.options = options;
         return this;
@@ -29,9 +31,14 @@ public class NetworkResourceDefinition {
     
     @JsonProperty("type")
     public NetworkResourceDefinitionTypeEnum type;
+
     public NetworkResourceDefinition withType(NetworkResourceDefinitionTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public NetworkResourceDefinition(@JsonProperty("count") Long count, @JsonProperty("type") NetworkResourceDefinitionTypeEnum type) {
+        this.count = count;
+        this.type = type;
+  }
 }

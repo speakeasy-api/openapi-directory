@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Study {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudMlV1Study withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Study {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inactiveReason")
     public String inactiveReason;
+
     public GoogleCloudMlV1Study withInactiveReason(String inactiveReason) {
         this.inactiveReason = inactiveReason;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1Study {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudMlV1Study withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1Study {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1StudyStateEnum state;
+
     public GoogleCloudMlV1Study withState(GoogleCloudMlV1StudyStateEnum state) {
         this.state = state;
         return this;
@@ -62,9 +66,11 @@ public class GoogleCloudMlV1Study {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("studyConfig")
     public GoogleCloudMlV1StudyConfig studyConfig;
+
     public GoogleCloudMlV1Study withStudyConfig(GoogleCloudMlV1StudyConfig studyConfig) {
         this.studyConfig = studyConfig;
         return this;
     }
     
+    public GoogleCloudMlV1Study(){}
 }

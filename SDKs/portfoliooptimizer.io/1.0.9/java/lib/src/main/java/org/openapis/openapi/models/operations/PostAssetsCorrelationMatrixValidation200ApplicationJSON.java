@@ -15,9 +15,13 @@ public class PostAssetsCorrelationMatrixValidation200ApplicationJSON {
      */
     @JsonProperty("message")
     public PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum message;
+
     public PostAssetsCorrelationMatrixValidation200ApplicationJSON withMessage(PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum message) {
         this.message = message;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixValidation200ApplicationJSON(@JsonProperty("message") PostAssetsCorrelationMatrixValidation200ApplicationJSONMessageEnum message) {
+        this.message = message;
+  }
 }

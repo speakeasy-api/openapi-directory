@@ -54,12 +54,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlossaryJsonResponse res = new org.openapis.openapi.models.operations.CreateGlossaryJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateGlossaryJsonResponse res = new org.openapis.openapi.models.operations.CreateGlossaryJsonResponse(contentType, httpRes.statusCode()) {{
             glossary = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,12 +102,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.CreateGlossaryMultipartResponse() {{
+        org.openapis.openapi.models.operations.CreateGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.CreateGlossaryMultipartResponse(contentType, httpRes.statusCode()) {{
             glossary = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -152,12 +148,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteGlossaryResponse res = new org.openapis.openapi.models.operations.DeleteGlossaryResponse() {{
+        org.openapis.openapi.models.operations.DeleteGlossaryResponse res = new org.openapis.openapi.models.operations.DeleteGlossaryResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,12 +193,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadGlobalGlossaryResponse res = new org.openapis.openapi.models.operations.DownloadGlobalGlossaryResponse() {{
+        org.openapis.openapi.models.operations.DownloadGlobalGlossaryResponse res = new org.openapis.openapi.models.operations.DownloadGlobalGlossaryResponse(contentType, httpRes.statusCode()) {{
             downloadGlobalGlossary200ApplicationJSONString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -246,12 +238,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadGlossaryResponse res = new org.openapis.openapi.models.operations.DownloadGlossaryResponse() {{
+        org.openapis.openapi.models.operations.DownloadGlossaryResponse res = new org.openapis.openapi.models.operations.DownloadGlossaryResponse(contentType, httpRes.statusCode()) {{
             downloadGlossary200ApplicationJSONString = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,12 +283,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGlossariesResponse res = new org.openapis.openapi.models.operations.GetGlossariesResponse() {{
+        org.openapis.openapi.models.operations.GetGlossariesResponse res = new org.openapis.openapi.models.operations.GetGlossariesResponse(contentType, httpRes.statusCode()) {{
             glossaryList = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -341,12 +329,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetGlossaryResponse res = new org.openapis.openapi.models.operations.GetGlossaryResponse() {{
+        org.openapis.openapi.models.operations.GetGlossaryResponse res = new org.openapis.openapi.models.operations.GetGlossaryResponse(contentType, httpRes.statusCode()) {{
             glossary = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -391,12 +377,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlobalGlossaryJsonResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -441,12 +425,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlobalGlossaryMultipartResponse(contentType, httpRes.statusCode()) {{
             operationStatus = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -491,12 +473,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlossaryJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlossaryJsonResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlossaryJsonResponse res = new org.openapis.openapi.models.operations.UpdateGlossaryJsonResponse(contentType, httpRes.statusCode()) {{
             glossary = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -541,12 +521,10 @@ public class Glossary {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlossaryMultipartResponse() {{
+        org.openapis.openapi.models.operations.UpdateGlossaryMultipartResponse res = new org.openapis.openapi.models.operations.UpdateGlossaryMultipartResponse(contentType, httpRes.statusCode()) {{
             glossary = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

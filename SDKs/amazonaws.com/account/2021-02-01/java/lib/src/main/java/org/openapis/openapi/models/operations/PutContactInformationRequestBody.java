@@ -15,6 +15,7 @@ public class PutContactInformationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public PutContactInformationRequestBody withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -25,9 +26,13 @@ public class PutContactInformationRequestBody {
      */
     @JsonProperty("ContactInformation")
     public PutContactInformationRequestBodyContactInformation contactInformation;
+
     public PutContactInformationRequestBody withContactInformation(PutContactInformationRequestBodyContactInformation contactInformation) {
         this.contactInformation = contactInformation;
         return this;
     }
     
+    public PutContactInformationRequestBody(@JsonProperty("ContactInformation") PutContactInformationRequestBodyContactInformation contactInformation) {
+        this.contactInformation = contactInformation;
+  }
 }

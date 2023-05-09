@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListReceivedGrantsForOrganizationResponse {
@@ -12,6 +13,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object accessDeniedException;
+
     public ListReceivedGrantsForOrganizationResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object authorizationException;
+
     public ListReceivedGrantsForOrganizationResponse withAuthorizationException(Object authorizationException) {
         this.authorizationException = authorizationException;
         return this;
@@ -29,6 +32,7 @@ public class ListReceivedGrantsForOrganizationResponse {
     
     
     public String contentType;
+
     public ListReceivedGrantsForOrganizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public ListReceivedGrantsForOrganizationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public org.openapis.openapi.models.shared.ListReceivedGrantsForOrganizationResponse listReceivedGrantsForOrganizationResponse;
+
     public ListReceivedGrantsForOrganizationResponse withListReceivedGrantsForOrganizationResponse(org.openapis.openapi.models.shared.ListReceivedGrantsForOrganizationResponse listReceivedGrantsForOrganizationResponse) {
         this.listReceivedGrantsForOrganizationResponse = listReceivedGrantsForOrganizationResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object rateLimitExceededException;
+
     public ListReceivedGrantsForOrganizationResponse withRateLimitExceededException(Object rateLimitExceededException) {
         this.rateLimitExceededException = rateLimitExceededException;
         return this;
@@ -69,6 +76,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ListReceivedGrantsForOrganizationResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -76,6 +84,7 @@ public class ListReceivedGrantsForOrganizationResponse {
     
     
     public Integer statusCode;
+
     public ListReceivedGrantsForOrganizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class ListReceivedGrantsForOrganizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListReceivedGrantsForOrganizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object serverInternalException;
+
     public ListReceivedGrantsForOrganizationResponse withServerInternalException(Object serverInternalException) {
         this.serverInternalException = serverInternalException;
         return this;
@@ -103,9 +114,14 @@ public class ListReceivedGrantsForOrganizationResponse {
      */
     
     public Object validationException;
+
     public ListReceivedGrantsForOrganizationResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListReceivedGrantsForOrganizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

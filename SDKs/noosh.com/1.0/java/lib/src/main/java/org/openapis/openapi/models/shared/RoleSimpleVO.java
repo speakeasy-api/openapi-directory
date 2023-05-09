@@ -15,6 +15,7 @@ public class RoleSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role_id")
     public Long roleId;
+
     public RoleSimpleVO withRoleId(Long roleId) {
         this.roleId = roleId;
         return this;
@@ -23,9 +24,11 @@ public class RoleSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role_name")
     public String roleName;
+
     public RoleSimpleVO withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public RoleSimpleVO(){}
 }

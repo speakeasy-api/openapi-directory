@@ -18,6 +18,7 @@ public class ClinicalNoteFieldTypesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.SoapNoteLineItemFieldType[] data;
+
     public ClinicalNoteFieldTypesList200ApplicationJSON withData(org.openapis.openapi.models.shared.SoapNoteLineItemFieldType[] data) {
         this.data = data;
         return this;
@@ -29,6 +30,7 @@ public class ClinicalNoteFieldTypesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public ClinicalNoteFieldTypesList200ApplicationJSON withNext(String next) {
         this.next = next;
         return this;
@@ -40,9 +42,11 @@ public class ClinicalNoteFieldTypesList200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public ClinicalNoteFieldTypesList200ApplicationJSON withPrevious(String previous) {
         this.previous = previous;
         return this;
     }
     
+    public ClinicalNoteFieldTypesList200ApplicationJSON(){}
 }

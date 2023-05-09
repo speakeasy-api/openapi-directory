@@ -15,9 +15,11 @@ public class CreateFaqResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public CreateFaqResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public CreateFaqResponse(){}
 }

@@ -12,6 +12,7 @@ public class PulseMCQOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public String option;
+
     public PulseMCQOption withOption(String option) {
         this.option = option;
         return this;
@@ -20,9 +21,11 @@ public class PulseMCQOption {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Boolean value;
+
     public PulseMCQOption withValue(Boolean value) {
         this.value = value;
         return this;
     }
     
+    public PulseMCQOption(){}
 }

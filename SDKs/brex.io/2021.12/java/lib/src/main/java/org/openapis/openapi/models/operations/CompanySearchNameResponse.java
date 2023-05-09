@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanySearchNameResponse {
@@ -12,6 +13,7 @@ public class CompanySearchNameResponse {
      */
     
     public CompanySearchName200ApplicationJSON[] companySearchName200ApplicationJSONObjects;
+
     public CompanySearchNameResponse withCompanySearchName200ApplicationJSONObjects(CompanySearchName200ApplicationJSON[] companySearchName200ApplicationJSONObjects) {
         this.companySearchName200ApplicationJSONObjects = companySearchName200ApplicationJSONObjects;
         return this;
@@ -22,6 +24,7 @@ public class CompanySearchNameResponse {
      */
     
     public CompanySearchNameDefaultApplicationJSON companySearchNameDefaultApplicationJSONObject;
+
     public CompanySearchNameResponse withCompanySearchNameDefaultApplicationJSONObject(CompanySearchNameDefaultApplicationJSON companySearchNameDefaultApplicationJSONObject) {
         this.companySearchNameDefaultApplicationJSONObject = companySearchNameDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanySearchNameResponse {
     
     
     public String contentType;
+
     public CompanySearchNameResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanySearchNameResponse {
     
     
     public Integer statusCode;
+
     public CompanySearchNameResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanySearchNameResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanySearchNameResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanySearchNameResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

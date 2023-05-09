@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * PushToken - PushToken in JWT format, self-signed. 
@@ -16,6 +16,7 @@ public class PushToken {
      */
     
     public String aud;
+
     public PushToken withAud(String aud) {
         this.aud = aud;
         return this;
@@ -23,6 +24,7 @@ public class PushToken {
     
     
     public Long exp;
+
     public PushToken withExp(Long exp) {
         this.exp = exp;
         return this;
@@ -30,6 +32,7 @@ public class PushToken {
     
     
     public Long iat;
+
     public PushToken withIat(Long iat) {
         this.iat = iat;
         return this;
@@ -40,6 +43,7 @@ public class PushToken {
      */
     
     public String iss;
+
     public PushToken withIss(String iss) {
         this.iss = iss;
         return this;
@@ -47,6 +51,7 @@ public class PushToken {
     
     
     public Long nbf;
+
     public PushToken withNbf(Long nbf) {
         this.nbf = nbf;
         return this;
@@ -57,9 +62,15 @@ public class PushToken {
      */
     
     public String sub;
+
     public PushToken withSub(String sub) {
         this.sub = sub;
         return this;
     }
     
+    public PushToken(@JsonProperty("aud") String aud, @JsonProperty("iss") String iss, @JsonProperty("sub") String sub) {
+        this.aud = aud;
+        this.iss = iss;
+        this.sub = sub;
+  }
 }

@@ -18,6 +18,7 @@ public class WorkerMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerHealthReportResponse")
     public WorkerHealthReportResponse workerHealthReportResponse;
+
     public WorkerMessageResponse withWorkerHealthReportResponse(WorkerHealthReportResponse workerHealthReportResponse) {
         this.workerHealthReportResponse = workerHealthReportResponse;
         return this;
@@ -29,6 +30,7 @@ public class WorkerMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerMetricsResponse")
     public java.util.Map<String, Object> workerMetricsResponse;
+
     public WorkerMessageResponse withWorkerMetricsResponse(java.util.Map<String, Object> workerMetricsResponse) {
         this.workerMetricsResponse = workerMetricsResponse;
         return this;
@@ -40,6 +42,7 @@ public class WorkerMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerShutdownNoticeResponse")
     public java.util.Map<String, Object> workerShutdownNoticeResponse;
+
     public WorkerMessageResponse withWorkerShutdownNoticeResponse(java.util.Map<String, Object> workerShutdownNoticeResponse) {
         this.workerShutdownNoticeResponse = workerShutdownNoticeResponse;
         return this;
@@ -51,9 +54,11 @@ public class WorkerMessageResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workerThreadScalingReportResponse")
     public WorkerThreadScalingReportResponse workerThreadScalingReportResponse;
+
     public WorkerMessageResponse withWorkerThreadScalingReportResponse(WorkerThreadScalingReportResponse workerThreadScalingReportResponse) {
         this.workerThreadScalingReportResponse = workerThreadScalingReportResponse;
         return this;
     }
     
+    public WorkerMessageResponse(){}
 }

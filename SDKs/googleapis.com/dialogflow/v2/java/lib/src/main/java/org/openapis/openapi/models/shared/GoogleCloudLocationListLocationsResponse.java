@@ -18,6 +18,7 @@ public class GoogleCloudLocationListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locations")
     public GoogleCloudLocationLocation[] locations;
+
     public GoogleCloudLocationListLocationsResponse withLocations(GoogleCloudLocationLocation[] locations) {
         this.locations = locations;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudLocationListLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudLocationListLocationsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GoogleCloudLocationListLocationsResponse(){}
 }

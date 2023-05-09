@@ -18,6 +18,7 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cipherText")
     public String cipherText;
+
     public Secret withCipherText(String cipherText) {
         this.cipherText = cipherText;
         return this;
@@ -29,9 +30,11 @@ public class Secret {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyName")
     public String keyName;
+
     public Secret withKeyName(String keyName) {
         this.keyName = keyName;
         return this;
     }
     
+    public Secret(){}
 }

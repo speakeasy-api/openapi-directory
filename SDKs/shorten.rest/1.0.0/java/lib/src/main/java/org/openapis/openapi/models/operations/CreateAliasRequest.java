@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateAliasRequest {
@@ -12,6 +13,7 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateAliasModel createAliasModel;
+
     public CreateAliasRequest withCreateAliasModel(org.openapis.openapi.models.shared.CreateAliasModel createAliasModel) {
         this.createAliasModel = createAliasModel;
         return this;
@@ -22,6 +24,7 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=aliasName")
     public String aliasName;
+
     public CreateAliasRequest withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -32,9 +35,13 @@ public class CreateAliasRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domainName")
     public String domainName;
+
     public CreateAliasRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public CreateAliasRequest(@JsonProperty("CreateAliasModel") org.openapis.openapi.models.shared.CreateAliasModel createAliasModel) {
+        this.createAliasModel = createAliasModel;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventsBatch {
     @JsonProperty("Endpoint")
     public PublicEndpoint endpoint;
+
     public EventsBatch withEndpoint(PublicEndpoint endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -19,9 +20,14 @@ public class EventsBatch {
     
     @JsonProperty("Events")
     public java.util.Map<String, Event> events;
+
     public EventsBatch withEvents(java.util.Map<String, Event> events) {
         this.events = events;
         return this;
     }
     
+    public EventsBatch(@JsonProperty("Endpoint") PublicEndpoint endpoint, @JsonProperty("Events") java.util.Map<String, Event> events) {
+        this.endpoint = endpoint;
+        this.events = events;
+  }
 }

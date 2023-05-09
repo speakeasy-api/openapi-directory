@@ -15,6 +15,7 @@ public class ActivityMarkRepoNotificationsAsRead202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public ActivityMarkRepoNotificationsAsRead202ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class ActivityMarkRepoNotificationsAsRead202ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public ActivityMarkRepoNotificationsAsRead202ApplicationJSON withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public ActivityMarkRepoNotificationsAsRead202ApplicationJSON(){}
 }

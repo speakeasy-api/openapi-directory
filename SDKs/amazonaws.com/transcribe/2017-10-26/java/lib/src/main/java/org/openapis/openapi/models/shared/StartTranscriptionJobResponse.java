@@ -15,9 +15,11 @@ public class StartTranscriptionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TranscriptionJob")
     public TranscriptionJob transcriptionJob;
+
     public StartTranscriptionJobResponse withTranscriptionJob(TranscriptionJob transcriptionJob) {
         this.transcriptionJob = transcriptionJob;
         return this;
     }
     
+    public StartTranscriptionJobResponse(){}
 }

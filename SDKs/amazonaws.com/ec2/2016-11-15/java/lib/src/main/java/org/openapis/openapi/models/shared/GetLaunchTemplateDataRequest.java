@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetLaunchTemplateDataRequest {
     
     public Boolean dryRun;
+
     public GetLaunchTemplateDataRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class GetLaunchTemplateDataRequest {
     
     
     public String instanceId;
+
     public GetLaunchTemplateDataRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public GetLaunchTemplateDataRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

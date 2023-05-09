@@ -15,9 +15,11 @@ public class DeleteRepositoryOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("repositoryId")
     public String repositoryId;
+
     public DeleteRepositoryOutput withRepositoryId(String repositoryId) {
         this.repositoryId = repositoryId;
         return this;
     }
     
+    public DeleteRepositoryOutput(){}
 }

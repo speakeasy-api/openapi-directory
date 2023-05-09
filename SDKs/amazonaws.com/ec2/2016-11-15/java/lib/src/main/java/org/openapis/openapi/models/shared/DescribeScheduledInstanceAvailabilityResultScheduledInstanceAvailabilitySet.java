@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet {
     
     public String availabilityZone;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public Long availableInstanceCount;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withAvailableInstanceCount(Long availableInstanceCount) {
         this.availableInstanceCount = availableInstanceCount;
         return this;
@@ -26,6 +28,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public OffsetDateTime firstSlotStartTime;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withFirstSlotStartTime(OffsetDateTime firstSlotStartTime) {
         this.firstSlotStartTime = firstSlotStartTime;
         return this;
@@ -33,6 +36,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public String hourlyPrice;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withHourlyPrice(String hourlyPrice) {
         this.hourlyPrice = hourlyPrice;
         return this;
@@ -40,6 +44,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public String instanceType;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +52,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public Long maxTermDurationInDays;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withMaxTermDurationInDays(Long maxTermDurationInDays) {
         this.maxTermDurationInDays = maxTermDurationInDays;
         return this;
@@ -54,6 +60,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public Long minTermDurationInDays;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withMinTermDurationInDays(Long minTermDurationInDays) {
         this.minTermDurationInDays = minTermDurationInDays;
         return this;
@@ -61,6 +68,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public String networkPlatform;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withNetworkPlatform(String networkPlatform) {
         this.networkPlatform = networkPlatform;
         return this;
@@ -68,6 +76,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public String platform;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -75,6 +84,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public String purchaseToken;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withPurchaseToken(String purchaseToken) {
         this.purchaseToken = purchaseToken;
         return this;
@@ -82,6 +92,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySetRecurrence recurrence;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withRecurrence(DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySetRecurrence recurrence) {
         this.recurrence = recurrence;
         return this;
@@ -89,6 +100,7 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public Long slotDurationInHours;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withSlotDurationInHours(Long slotDurationInHours) {
         this.slotDurationInHours = slotDurationInHours;
         return this;
@@ -96,9 +108,11 @@ public class DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailab
     
     
     public Long totalScheduledInstanceHours;
+
     public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet withTotalScheduledInstanceHours(Long totalScheduledInstanceHours) {
         this.totalScheduledInstanceHours = totalScheduledInstanceHours;
         return this;
     }
     
+    public DescribeScheduledInstanceAvailabilityResultScheduledInstanceAvailabilitySet(){}
 }

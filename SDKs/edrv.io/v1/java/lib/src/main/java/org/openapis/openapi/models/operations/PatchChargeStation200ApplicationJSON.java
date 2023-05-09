@@ -15,6 +15,7 @@ public class PatchChargeStation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public PatchChargeStation200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class PatchChargeStation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ok")
     public Boolean ok;
+
     public PatchChargeStation200ApplicationJSON withOk(Boolean ok) {
         this.ok = ok;
         return this;
@@ -31,9 +33,11 @@ public class PatchChargeStation200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public java.util.Map<String, Object> result;
+
     public PatchChargeStation200ApplicationJSON withResult(java.util.Map<String, Object> result) {
         this.result = result;
         return this;
     }
     
+    public PatchChargeStation200ApplicationJSON(){}
 }

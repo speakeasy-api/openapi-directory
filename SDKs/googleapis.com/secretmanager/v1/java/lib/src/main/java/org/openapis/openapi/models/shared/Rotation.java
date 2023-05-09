@@ -18,6 +18,7 @@ public class Rotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextRotationTime")
     public String nextRotationTime;
+
     public Rotation withNextRotationTime(String nextRotationTime) {
         this.nextRotationTime = nextRotationTime;
         return this;
@@ -29,9 +30,11 @@ public class Rotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rotationPeriod")
     public String rotationPeriod;
+
     public Rotation withRotationPeriod(String rotationPeriod) {
         this.rotationPeriod = rotationPeriod;
         return this;
     }
     
+    public Rotation(){}
 }

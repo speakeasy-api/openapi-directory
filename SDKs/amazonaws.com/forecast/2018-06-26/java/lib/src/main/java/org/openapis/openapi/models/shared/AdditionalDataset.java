@@ -15,6 +15,7 @@ public class AdditionalDataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public java.util.Map<String, String[]> configuration;
+
     public AdditionalDataset withConfiguration(java.util.Map<String, String[]> configuration) {
         this.configuration = configuration;
         return this;
@@ -22,9 +23,13 @@ public class AdditionalDataset {
     
     @JsonProperty("Name")
     public String name;
+
     public AdditionalDataset withName(String name) {
         this.name = name;
         return this;
     }
     
+    public AdditionalDataset(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

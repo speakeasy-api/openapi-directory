@@ -15,6 +15,7 @@ public class AnalyticsEventPropertiesDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum code;
+
     public AnalyticsEventPropertiesDefaultApplicationJSONError withCode(AnalyticsEventPropertiesDefaultApplicationJSONErrorCodeEnum code) {
         this.code = code;
         return this;
@@ -26,9 +27,11 @@ public class AnalyticsEventPropertiesDefaultApplicationJSONError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public AnalyticsEventPropertiesDefaultApplicationJSONError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public AnalyticsEventPropertiesDefaultApplicationJSONError(){}
 }

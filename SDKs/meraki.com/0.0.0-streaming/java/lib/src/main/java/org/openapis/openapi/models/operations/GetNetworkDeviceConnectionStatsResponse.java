@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkDeviceConnectionStatsResponse {
     
     public String contentType;
+
     public GetNetworkDeviceConnectionStatsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetNetworkDeviceConnectionStatsResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkDeviceConnectionStatsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetNetworkDeviceConnectionStatsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkDeviceConnectionStatsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetNetworkDeviceConnectionStatsResponse {
      */
     
     public java.util.Map<String, Object> getNetworkDeviceConnectionStats200ApplicationJSONObject;
+
     public GetNetworkDeviceConnectionStatsResponse withGetNetworkDeviceConnectionStats200ApplicationJSONObject(java.util.Map<String, Object> getNetworkDeviceConnectionStats200ApplicationJSONObject) {
         this.getNetworkDeviceConnectionStats200ApplicationJSONObject = getNetworkDeviceConnectionStats200ApplicationJSONObject;
         return this;
     }
     
+    public GetNetworkDeviceConnectionStatsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

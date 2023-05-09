@@ -12,6 +12,7 @@ public class ListBreakTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListBreakTypesRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -23,6 +24,7 @@ public class ListBreakTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public ListBreakTypesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -34,9 +36,11 @@ public class ListBreakTypesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location_id")
     public String locationId;
+
     public ListBreakTypesRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
     }
     
+    public ListBreakTypesRequest(){}
 }

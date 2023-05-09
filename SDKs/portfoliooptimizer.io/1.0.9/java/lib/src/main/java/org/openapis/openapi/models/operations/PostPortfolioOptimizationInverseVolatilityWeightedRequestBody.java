@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationInverseVolatilityWeightedRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,9 +23,14 @@ public class PostPortfolioOptimizationInverseVolatilityWeightedRequestBody {
      */
     @JsonProperty("assetsVolatilities")
     public Double[] assetsVolatilities;
+
     public PostPortfolioOptimizationInverseVolatilityWeightedRequestBody withAssetsVolatilities(Double[] assetsVolatilities) {
         this.assetsVolatilities = assetsVolatilities;
         return this;
     }
     
+    public PostPortfolioOptimizationInverseVolatilityWeightedRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsVolatilities") Double[] assetsVolatilities) {
+        this.assets = assets;
+        this.assetsVolatilities = assetsVolatilities;
+  }
 }

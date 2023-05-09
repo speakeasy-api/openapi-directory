@@ -18,6 +18,7 @@ public class GooglePrivacyDlpV2ImageRedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infoType")
     public GooglePrivacyDlpV2InfoType infoType;
+
     public GooglePrivacyDlpV2ImageRedactionConfig withInfoType(GooglePrivacyDlpV2InfoType infoType) {
         this.infoType = infoType;
         return this;
@@ -29,6 +30,7 @@ public class GooglePrivacyDlpV2ImageRedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redactAllText")
     public Boolean redactAllText;
+
     public GooglePrivacyDlpV2ImageRedactionConfig withRedactAllText(Boolean redactAllText) {
         this.redactAllText = redactAllText;
         return this;
@@ -40,9 +42,11 @@ public class GooglePrivacyDlpV2ImageRedactionConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redactionColor")
     public GooglePrivacyDlpV2Color redactionColor;
+
     public GooglePrivacyDlpV2ImageRedactionConfig withRedactionColor(GooglePrivacyDlpV2Color redactionColor) {
         this.redactionColor = redactionColor;
         return this;
     }
     
+    public GooglePrivacyDlpV2ImageRedactionConfig(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MembershipGetResponse {
     
     public String contentType;
+
     public MembershipGetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MembershipGetResponse {
      */
     
     public org.openapis.openapi.models.shared.MemberDTO[] memberDTOS;
+
     public MembershipGetResponse withMemberDTOS(org.openapis.openapi.models.shared.MemberDTO[] memberDTOS) {
         this.memberDTOS = memberDTOS;
         return this;
@@ -26,6 +29,7 @@ public class MembershipGetResponse {
     
     
     public org.openapis.openapi.models.shared.ProblemDetails problemDetails;
+
     public MembershipGetResponse withProblemDetails(org.openapis.openapi.models.shared.ProblemDetails problemDetails) {
         this.problemDetails = problemDetails;
         return this;
@@ -33,6 +37,7 @@ public class MembershipGetResponse {
     
     
     public Integer statusCode;
+
     public MembershipGetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class MembershipGetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MembershipGetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MembershipGetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

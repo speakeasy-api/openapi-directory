@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class POSTRemoveRoleFromDBInstanceResponse {
     
     public byte[] body;
+
     public POSTRemoveRoleFromDBInstanceResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class POSTRemoveRoleFromDBInstanceResponse {
     
     
     public String contentType;
+
     public POSTRemoveRoleFromDBInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class POSTRemoveRoleFromDBInstanceResponse {
     
     
     public Integer statusCode;
+
     public POSTRemoveRoleFromDBInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class POSTRemoveRoleFromDBInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public POSTRemoveRoleFromDBInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public POSTRemoveRoleFromDBInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

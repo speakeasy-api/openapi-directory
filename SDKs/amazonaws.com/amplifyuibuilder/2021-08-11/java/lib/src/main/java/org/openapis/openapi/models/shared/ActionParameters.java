@@ -15,6 +15,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anchor")
     public ComponentProperty anchor;
+
     public ActionParameters withAnchor(ComponentProperty anchor) {
         this.anchor = anchor;
         return this;
@@ -23,6 +24,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, ComponentProperty> fields;
+
     public ActionParameters withFields(java.util.Map<String, ComponentProperty> fields) {
         this.fields = fields;
         return this;
@@ -31,6 +33,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global")
     public ComponentProperty global;
+
     public ActionParameters withGlobal(ComponentProperty global) {
         this.global = global;
         return this;
@@ -39,6 +42,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public ComponentProperty id;
+
     public ActionParameters withId(ComponentProperty id) {
         this.id = id;
         return this;
@@ -47,6 +51,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("model")
     public String model;
+
     public ActionParameters withModel(String model) {
         this.model = model;
         return this;
@@ -55,6 +60,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public MutationActionSetStateParameter state;
+
     public ActionParameters withState(MutationActionSetStateParameter state) {
         this.state = state;
         return this;
@@ -63,6 +69,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public ComponentProperty target;
+
     public ActionParameters withTarget(ComponentProperty target) {
         this.target = target;
         return this;
@@ -71,6 +78,7 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ComponentProperty type;
+
     public ActionParameters withType(ComponentProperty type) {
         this.type = type;
         return this;
@@ -79,9 +87,11 @@ public class ActionParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public ComponentProperty url;
+
     public ActionParameters withUrl(ComponentProperty url) {
         this.url = url;
         return this;
     }
     
+    public ActionParameters(){}
 }

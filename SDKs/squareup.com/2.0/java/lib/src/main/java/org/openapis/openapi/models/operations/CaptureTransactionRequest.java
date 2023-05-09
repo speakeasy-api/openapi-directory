@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CaptureTransactionRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public CaptureTransactionRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -16,9 +18,14 @@ public class CaptureTransactionRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=transaction_id")
     public String transactionId;
+
     public CaptureTransactionRequest withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CaptureTransactionRequest(@JsonProperty("location_id") String locationId, @JsonProperty("transaction_id") String transactionId) {
+        this.locationId = locationId;
+        this.transactionId = transactionId;
+  }
 }

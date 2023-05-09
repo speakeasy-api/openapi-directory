@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListCustomVocabularyItemsResponse {
     
     public String contentType;
+
     public ListCustomVocabularyItemsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public Object internalServerException;
+
     public ListCustomVocabularyItemsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListCustomVocabularyItemsResponse listCustomVocabularyItemsResponse;
+
     public ListCustomVocabularyItemsResponse withListCustomVocabularyItemsResponse(org.openapis.openapi.models.shared.ListCustomVocabularyItemsResponse listCustomVocabularyItemsResponse) {
         this.listCustomVocabularyItemsResponse = listCustomVocabularyItemsResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListCustomVocabularyItemsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public ListCustomVocabularyItemsResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -56,6 +62,7 @@ public class ListCustomVocabularyItemsResponse {
     
     
     public Integer statusCode;
+
     public ListCustomVocabularyItemsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListCustomVocabularyItemsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListCustomVocabularyItemsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public Object throttlingException;
+
     public ListCustomVocabularyItemsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListCustomVocabularyItemsResponse {
      */
     
     public Object validationException;
+
     public ListCustomVocabularyItemsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListCustomVocabularyItemsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

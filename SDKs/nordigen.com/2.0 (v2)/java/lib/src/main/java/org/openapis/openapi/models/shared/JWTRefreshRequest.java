@@ -14,9 +14,13 @@ public class JWTRefreshRequest {
     @JsonProperty("refresh")
     @SpeakeasyMetadata("form:name=refresh multipartForm:name=refresh")
     public String refresh;
+
     public JWTRefreshRequest withRefresh(String refresh) {
         this.refresh = refresh;
         return this;
     }
     
+    public JWTRefreshRequest(@JsonProperty("refresh") String refresh) {
+        this.refresh = refresh;
+  }
 }

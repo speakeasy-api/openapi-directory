@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeSubnetworksListUsableSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeSubnetworksListUsableSecurityOption1 option1;
+
     public ComputeSubnetworksListUsableSecurity withOption1(ComputeSubnetworksListUsableSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class ComputeSubnetworksListUsableSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSubnetworksListUsableSecurityOption2 option2;
+
     public ComputeSubnetworksListUsableSecurity withOption2(ComputeSubnetworksListUsableSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class ComputeSubnetworksListUsableSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeSubnetworksListUsableSecurityOption3 option3;
+
     public ComputeSubnetworksListUsableSecurity withOption3(ComputeSubnetworksListUsableSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public ComputeSubnetworksListUsableSecurity(){}
 }

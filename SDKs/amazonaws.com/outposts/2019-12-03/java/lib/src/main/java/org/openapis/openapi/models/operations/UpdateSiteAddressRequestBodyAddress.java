@@ -15,6 +15,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine1")
     public String addressLine1;
+
     public UpdateSiteAddressRequestBodyAddress withAddressLine1(String addressLine1) {
         this.addressLine1 = addressLine1;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine2")
     public String addressLine2;
+
     public UpdateSiteAddressRequestBodyAddress withAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
         return this;
@@ -31,6 +33,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AddressLine3")
     public String addressLine3;
+
     public UpdateSiteAddressRequestBodyAddress withAddressLine3(String addressLine3) {
         this.addressLine3 = addressLine3;
         return this;
@@ -39,6 +42,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("City")
     public String city;
+
     public UpdateSiteAddressRequestBodyAddress withCity(String city) {
         this.city = city;
         return this;
@@ -47,6 +51,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactName")
     public String contactName;
+
     public UpdateSiteAddressRequestBodyAddress withContactName(String contactName) {
         this.contactName = contactName;
         return this;
@@ -55,6 +60,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactPhoneNumber")
     public String contactPhoneNumber;
+
     public UpdateSiteAddressRequestBodyAddress withContactPhoneNumber(String contactPhoneNumber) {
         this.contactPhoneNumber = contactPhoneNumber;
         return this;
@@ -63,6 +69,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CountryCode")
     public String countryCode;
+
     public UpdateSiteAddressRequestBodyAddress withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -71,6 +78,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DistrictOrCounty")
     public String districtOrCounty;
+
     public UpdateSiteAddressRequestBodyAddress withDistrictOrCounty(String districtOrCounty) {
         this.districtOrCounty = districtOrCounty;
         return this;
@@ -79,6 +87,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Municipality")
     public String municipality;
+
     public UpdateSiteAddressRequestBodyAddress withMunicipality(String municipality) {
         this.municipality = municipality;
         return this;
@@ -87,6 +96,7 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PostalCode")
     public String postalCode;
+
     public UpdateSiteAddressRequestBodyAddress withPostalCode(String postalCode) {
         this.postalCode = postalCode;
         return this;
@@ -95,9 +105,11 @@ public class UpdateSiteAddressRequestBodyAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateOrRegion")
     public String stateOrRegion;
+
     public UpdateSiteAddressRequestBodyAddress withStateOrRegion(String stateOrRegion) {
         this.stateOrRegion = stateOrRegion;
         return this;
     }
     
+    public UpdateSiteAddressRequestBodyAddress(){}
 }

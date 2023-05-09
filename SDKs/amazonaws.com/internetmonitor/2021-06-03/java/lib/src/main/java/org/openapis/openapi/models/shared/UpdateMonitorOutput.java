@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateMonitorOutput {
     @JsonProperty("MonitorArn")
     public String monitorArn;
+
     public UpdateMonitorOutput withMonitorArn(String monitorArn) {
         this.monitorArn = monitorArn;
         return this;
@@ -19,9 +20,14 @@ public class UpdateMonitorOutput {
     
     @JsonProperty("Status")
     public MonitorConfigStateEnum status;
+
     public UpdateMonitorOutput withStatus(MonitorConfigStateEnum status) {
         this.status = status;
         return this;
     }
     
+    public UpdateMonitorOutput(@JsonProperty("MonitorArn") String monitorArn, @JsonProperty("Status") MonitorConfigStateEnum status) {
+        this.monitorArn = monitorArn;
+        this.status = status;
+  }
 }

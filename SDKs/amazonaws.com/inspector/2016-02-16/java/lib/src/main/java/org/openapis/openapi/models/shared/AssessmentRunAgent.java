@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssessmentRunAgent {
     @JsonProperty("agentHealth")
     public AgentHealthEnum agentHealth;
+
     public AssessmentRunAgent withAgentHealth(AgentHealthEnum agentHealth) {
         this.agentHealth = agentHealth;
         return this;
@@ -21,6 +22,7 @@ public class AssessmentRunAgent {
     
     @JsonProperty("agentHealthCode")
     public AgentHealthCodeEnum agentHealthCode;
+
     public AssessmentRunAgent withAgentHealthCode(AgentHealthCodeEnum agentHealthCode) {
         this.agentHealthCode = agentHealthCode;
         return this;
@@ -29,6 +31,7 @@ public class AssessmentRunAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("agentHealthDetails")
     public String agentHealthDetails;
+
     public AssessmentRunAgent withAgentHealthDetails(String agentHealthDetails) {
         this.agentHealthDetails = agentHealthDetails;
         return this;
@@ -36,6 +39,7 @@ public class AssessmentRunAgent {
     
     @JsonProperty("agentId")
     public String agentId;
+
     public AssessmentRunAgent withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
@@ -43,6 +47,7 @@ public class AssessmentRunAgent {
     
     @JsonProperty("assessmentRunArn")
     public String assessmentRunArn;
+
     public AssessmentRunAgent withAssessmentRunArn(String assessmentRunArn) {
         this.assessmentRunArn = assessmentRunArn;
         return this;
@@ -51,6 +56,7 @@ public class AssessmentRunAgent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoScalingGroup")
     public String autoScalingGroup;
+
     public AssessmentRunAgent withAutoScalingGroup(String autoScalingGroup) {
         this.autoScalingGroup = autoScalingGroup;
         return this;
@@ -58,9 +64,17 @@ public class AssessmentRunAgent {
     
     @JsonProperty("telemetryMetadata")
     public TelemetryMetadata[] telemetryMetadata;
+
     public AssessmentRunAgent withTelemetryMetadata(TelemetryMetadata[] telemetryMetadata) {
         this.telemetryMetadata = telemetryMetadata;
         return this;
     }
     
+    public AssessmentRunAgent(@JsonProperty("agentHealth") AgentHealthEnum agentHealth, @JsonProperty("agentHealthCode") AgentHealthCodeEnum agentHealthCode, @JsonProperty("agentId") String agentId, @JsonProperty("assessmentRunArn") String assessmentRunArn, @JsonProperty("telemetryMetadata") TelemetryMetadata[] telemetryMetadata) {
+        this.agentHealth = agentHealth;
+        this.agentHealthCode = agentHealthCode;
+        this.agentId = agentId;
+        this.assessmentRunArn = assessmentRunArn;
+        this.telemetryMetadata = telemetryMetadata;
+  }
 }

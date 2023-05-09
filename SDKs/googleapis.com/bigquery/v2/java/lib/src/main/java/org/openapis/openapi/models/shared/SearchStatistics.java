@@ -15,6 +15,7 @@ public class SearchStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexUnusedReason")
     public IndexUnusedReason[] indexUnusedReason;
+
     public SearchStatistics withIndexUnusedReason(IndexUnusedReason[] indexUnusedReason) {
         this.indexUnusedReason = indexUnusedReason;
         return this;
@@ -26,9 +27,11 @@ public class SearchStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("indexUsageMode")
     public String indexUsageMode;
+
     public SearchStatistics withIndexUsageMode(String indexUsageMode) {
         this.indexUsageMode = indexUsageMode;
         return this;
     }
     
+    public SearchStatistics(){}
 }

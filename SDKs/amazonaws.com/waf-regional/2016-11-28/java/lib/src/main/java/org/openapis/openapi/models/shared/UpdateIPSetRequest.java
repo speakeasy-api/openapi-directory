@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateIPSetRequest {
     @JsonProperty("ChangeToken")
     public String changeToken;
+
     public UpdateIPSetRequest withChangeToken(String changeToken) {
         this.changeToken = changeToken;
         return this;
@@ -16,6 +17,7 @@ public class UpdateIPSetRequest {
     
     @JsonProperty("IPSetId")
     public String ipSetId;
+
     public UpdateIPSetRequest withIPSetId(String ipSetId) {
         this.ipSetId = ipSetId;
         return this;
@@ -23,9 +25,15 @@ public class UpdateIPSetRequest {
     
     @JsonProperty("Updates")
     public IPSetUpdate[] updates;
+
     public UpdateIPSetRequest withUpdates(IPSetUpdate[] updates) {
         this.updates = updates;
         return this;
     }
     
+    public UpdateIPSetRequest(@JsonProperty("ChangeToken") String changeToken, @JsonProperty("IPSetId") String ipSetId, @JsonProperty("Updates") IPSetUpdate[] updates) {
+        this.changeToken = changeToken;
+        this.ipSetId = ipSetId;
+        this.updates = updates;
+  }
 }

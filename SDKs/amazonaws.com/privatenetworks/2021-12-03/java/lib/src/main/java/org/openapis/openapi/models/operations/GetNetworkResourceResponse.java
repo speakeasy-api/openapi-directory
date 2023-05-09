@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetNetworkResourceResponse {
     
     public String contentType;
+
     public GetNetworkResourceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetNetworkResourceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetNetworkResourceResponse getNetworkResourceResponse;
+
     public GetNetworkResourceResponse withGetNetworkResourceResponse(org.openapis.openapi.models.shared.GetNetworkResourceResponse getNetworkResourceResponse) {
         this.getNetworkResourceResponse = getNetworkResourceResponse;
         return this;
@@ -29,6 +32,7 @@ public class GetNetworkResourceResponse {
      */
     
     public Object internalServerException;
+
     public GetNetworkResourceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class GetNetworkResourceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetNetworkResourceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetNetworkResourceResponse {
     
     
     public Integer statusCode;
+
     public GetNetworkResourceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetNetworkResourceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetNetworkResourceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetNetworkResourceResponse {
      */
     
     public Object validationException;
+
     public GetNetworkResourceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetNetworkResourceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

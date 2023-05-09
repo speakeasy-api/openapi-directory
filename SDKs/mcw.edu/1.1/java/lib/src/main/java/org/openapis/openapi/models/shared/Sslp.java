@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Sslp {
     
     public Integer expectedSize;
+
     public Sslp withExpectedSize(Integer expectedSize) {
         this.expectedSize = expectedSize;
         return this;
@@ -16,6 +17,7 @@ public class Sslp {
     
     
     public String forwardSeq;
+
     public Sslp withForwardSeq(String forwardSeq) {
         this.forwardSeq = forwardSeq;
         return this;
@@ -23,6 +25,7 @@ public class Sslp {
     
     
     public Integer key;
+
     public Sslp withKey(Integer key) {
         this.key = key;
         return this;
@@ -30,6 +33,7 @@ public class Sslp {
     
     
     public String name;
+
     public Sslp withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +41,7 @@ public class Sslp {
     
     
     public String notes;
+
     public Sslp withNotes(String notes) {
         this.notes = notes;
         return this;
@@ -44,6 +49,7 @@ public class Sslp {
     
     
     public String reverseSeq;
+
     public Sslp withReverseSeq(String reverseSeq) {
         this.reverseSeq = reverseSeq;
         return this;
@@ -51,6 +57,7 @@ public class Sslp {
     
     
     public Integer rgdId;
+
     public Sslp withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
@@ -58,6 +65,7 @@ public class Sslp {
     
     
     public Integer speciesTypeKey;
+
     public Sslp withSpeciesTypeKey(Integer speciesTypeKey) {
         this.speciesTypeKey = speciesTypeKey;
         return this;
@@ -65,6 +73,7 @@ public class Sslp {
     
     
     public String sslpType;
+
     public Sslp withSslpType(String sslpType) {
         this.sslpType = sslpType;
         return this;
@@ -72,9 +81,11 @@ public class Sslp {
     
     
     public String templateSeq;
+
     public Sslp withTemplateSeq(String templateSeq) {
         this.templateSeq = templateSeq;
         return this;
     }
     
+    public Sslp(){}
 }

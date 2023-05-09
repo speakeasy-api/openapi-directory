@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateInstanceProfileResponse {
@@ -12,6 +13,7 @@ public class CreateInstanceProfileResponse {
      */
     
     public Object argumentException;
+
     public CreateInstanceProfileResponse withArgumentException(Object argumentException) {
         this.argumentException = argumentException;
         return this;
@@ -19,6 +21,7 @@ public class CreateInstanceProfileResponse {
     
     
     public String contentType;
+
     public CreateInstanceProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateInstanceProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateInstanceProfileResult createInstanceProfileResult;
+
     public CreateInstanceProfileResponse withCreateInstanceProfileResult(org.openapis.openapi.models.shared.CreateInstanceProfileResult createInstanceProfileResult) {
         this.createInstanceProfileResult = createInstanceProfileResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateInstanceProfileResponse {
      */
     
     public Object limitExceededException;
+
     public CreateInstanceProfileResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateInstanceProfileResponse {
      */
     
     public Object notFoundException;
+
     public CreateInstanceProfileResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -59,6 +65,7 @@ public class CreateInstanceProfileResponse {
      */
     
     public Object serviceAccountException;
+
     public CreateInstanceProfileResponse withServiceAccountException(Object serviceAccountException) {
         this.serviceAccountException = serviceAccountException;
         return this;
@@ -66,6 +73,7 @@ public class CreateInstanceProfileResponse {
     
     
     public Integer statusCode;
+
     public CreateInstanceProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateInstanceProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateInstanceProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateInstanceProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

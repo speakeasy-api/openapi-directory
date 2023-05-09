@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDataLakeSettingsResponse {
     
     public String contentType;
+
     public GetDataLakeSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetDataLakeSettingsResponse {
      */
     
     public Object entityNotFoundException;
+
     public GetDataLakeSettingsResponse withEntityNotFoundException(Object entityNotFoundException) {
         this.entityNotFoundException = entityNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDataLakeSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDataLakeSettingsResponse getDataLakeSettingsResponse;
+
     public GetDataLakeSettingsResponse withGetDataLakeSettingsResponse(org.openapis.openapi.models.shared.GetDataLakeSettingsResponse getDataLakeSettingsResponse) {
         this.getDataLakeSettingsResponse = getDataLakeSettingsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDataLakeSettingsResponse {
      */
     
     public Object internalServiceException;
+
     public GetDataLakeSettingsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -49,6 +54,7 @@ public class GetDataLakeSettingsResponse {
      */
     
     public Object invalidInputException;
+
     public GetDataLakeSettingsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -56,6 +62,7 @@ public class GetDataLakeSettingsResponse {
     
     
     public Integer statusCode;
+
     public GetDataLakeSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class GetDataLakeSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDataLakeSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetDataLakeSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OAuthProperties {
     @JsonProperty("authCodeUrl")
     public String authCodeUrl;
+
     public OAuthProperties withAuthCodeUrl(String authCodeUrl) {
         this.authCodeUrl = authCodeUrl;
         return this;
@@ -19,6 +20,7 @@ public class OAuthProperties {
     
     @JsonProperty("oAuthScopes")
     public String[] oAuthScopes;
+
     public OAuthProperties withOAuthScopes(String[] oAuthScopes) {
         this.oAuthScopes = oAuthScopes;
         return this;
@@ -26,9 +28,15 @@ public class OAuthProperties {
     
     @JsonProperty("tokenUrl")
     public String tokenUrl;
+
     public OAuthProperties withTokenUrl(String tokenUrl) {
         this.tokenUrl = tokenUrl;
         return this;
     }
     
+    public OAuthProperties(@JsonProperty("authCodeUrl") String authCodeUrl, @JsonProperty("oAuthScopes") String[] oAuthScopes, @JsonProperty("tokenUrl") String tokenUrl) {
+        this.authCodeUrl = authCodeUrl;
+        this.oAuthScopes = oAuthScopes;
+        this.tokenUrl = tokenUrl;
+  }
 }

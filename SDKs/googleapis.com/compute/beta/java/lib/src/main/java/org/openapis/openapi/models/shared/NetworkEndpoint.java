@@ -18,6 +18,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotations")
     public java.util.Map<String, String> annotations;
+
     public NetworkEndpoint withAnnotations(java.util.Map<String, String> annotations) {
         this.annotations = annotations;
         return this;
@@ -29,6 +30,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public NetworkEndpoint withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -40,6 +42,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instance")
     public String instance;
+
     public NetworkEndpoint withInstance(String instance) {
         this.instance = instance;
         return this;
@@ -51,6 +54,7 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkEndpoint withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -62,9 +66,11 @@ public class NetworkEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("port")
     public Integer port;
+
     public NetworkEndpoint withPort(Integer port) {
         this.port = port;
         return this;
     }
     
+    public NetworkEndpoint(){}
 }

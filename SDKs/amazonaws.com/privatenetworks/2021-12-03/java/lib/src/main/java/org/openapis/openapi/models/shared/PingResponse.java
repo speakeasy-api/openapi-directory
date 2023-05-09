@@ -15,9 +15,11 @@ public class PingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PingResponse withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public PingResponse(){}
 }

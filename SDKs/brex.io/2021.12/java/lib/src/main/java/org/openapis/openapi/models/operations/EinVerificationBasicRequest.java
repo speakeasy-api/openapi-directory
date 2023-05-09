@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EinVerificationBasicRequest {
@@ -12,9 +13,13 @@ public class EinVerificationBasicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ein")
     public String ein;
+
     public EinVerificationBasicRequest withEin(String ein) {
         this.ein = ein;
         return this;
     }
     
+    public EinVerificationBasicRequest(@JsonProperty("ein") String ein) {
+        this.ein = ein;
+  }
 }

@@ -52,11 +52,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse res = new org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse() {{
+        org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse res = new org.openapis.openapi.models.operations.Destiny2AwaGetActionTokenResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -71,10 +69,11 @@ public class Destiny2 {
 
     /**
      * Initialize a request to perform an advanced write action.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse destiny2AwaInitializeRequest() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse destiny2AwaInitializeRequest(org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Awa/Initialize/");
         
@@ -83,16 +82,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse res = new org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse() {{
+        org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse res = new org.openapis.openapi.models.operations.Destiny2AwaInitializeRequestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,11 +122,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2AwaProvideAuthorizationResultResponse res = new org.openapis.openapi.models.operations.Destiny2AwaProvideAuthorizationResultResponse() {{
+        org.openapis.openapi.models.operations.Destiny2AwaProvideAuthorizationResultResponse res = new org.openapis.openapi.models.operations.Destiny2AwaProvideAuthorizationResultResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -143,10 +139,11 @@ public class Destiny2 {
 
     /**
      * Clear the identifiers and items of a loadout.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse destiny2ClearLoadout() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse destiny2ClearLoadout(org.openapis.openapi.models.operations.Destiny2ClearLoadoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/ClearLoadout/");
         
@@ -155,16 +152,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse() {{
+        org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2ClearLoadoutResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -179,10 +175,11 @@ public class Destiny2 {
 
     /**
      * Equip an item. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipItemResponse destiny2EquipItem() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipItemResponse destiny2EquipItem(org.openapis.openapi.models.operations.Destiny2EquipItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/EquipItem/");
         
@@ -191,16 +188,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2EquipItemResponse res = new org.openapis.openapi.models.operations.Destiny2EquipItemResponse() {{
+        org.openapis.openapi.models.operations.Destiny2EquipItemResponse res = new org.openapis.openapi.models.operations.Destiny2EquipItemResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -215,10 +211,11 @@ public class Destiny2 {
 
     /**
      * Equip a list of items by itemInstanceIds. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Any items not found on your character will be ignored.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipItemsResponse destiny2EquipItems() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipItemsResponse destiny2EquipItems(org.openapis.openapi.models.operations.Destiny2EquipItemsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/EquipItems/");
         
@@ -227,16 +224,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2EquipItemsResponse res = new org.openapis.openapi.models.operations.Destiny2EquipItemsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2EquipItemsResponse res = new org.openapis.openapi.models.operations.Destiny2EquipItemsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -251,10 +247,11 @@ public class Destiny2 {
 
     /**
      * Equip a loadout. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse destiny2EquipLoadout() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse destiny2EquipLoadout(org.openapis.openapi.models.operations.Destiny2EquipLoadoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/EquipLoadout/");
         
@@ -263,16 +260,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse() {{
+        org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2EquipLoadoutResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -311,11 +307,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetActivityHistoryResponse res = new org.openapis.openapi.models.operations.Destiny2GetActivityHistoryResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetActivityHistoryResponse res = new org.openapis.openapi.models.operations.Destiny2GetActivityHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -354,11 +348,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetCharacterResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetCharacterResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -397,11 +389,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanAggregateStatsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -433,11 +423,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanBannerSourceResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanBannerSourceResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanBannerSourceResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanBannerSourceResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,11 +464,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanLeaderboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -513,11 +499,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateResponse res = new org.openapis.openapi.models.operations.Destiny2GetClanWeeklyRewardStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -556,11 +540,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsResponse res = new org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsResponse res = new org.openapis.openapi.models.operations.Destiny2GetCollectibleNodeDetailsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -593,11 +575,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyAggregateActivityStatsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -630,11 +610,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyEntityDefinitionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -666,11 +644,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetDestinyManifestResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyManifestResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetDestinyManifestResponse res = new org.openapis.openapi.models.operations.Destiny2GetDestinyManifestResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -709,11 +685,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -745,11 +719,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsDefinitionResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsDefinitionResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsDefinitionResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsDefinitionResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -788,11 +760,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountResponse res = new org.openapis.openapi.models.operations.Destiny2GetHistoricalStatsForAccountResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -831,11 +801,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetItemResponse res = new org.openapis.openapi.models.operations.Destiny2GetItemResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetItemResponse res = new org.openapis.openapi.models.operations.Destiny2GetItemResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -874,11 +842,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -917,11 +883,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse res = new org.openapis.openapi.models.operations.Destiny2GetLeaderboardsForCharacterResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -960,11 +924,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesResponse res = new org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesResponse res = new org.openapis.openapi.models.operations.Destiny2GetLinkedProfilesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -997,11 +959,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportResponse res = new org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportResponse res = new org.openapis.openapi.models.operations.Destiny2GetPostGameCarnageReportResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1040,11 +1000,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetProfileResponse res = new org.openapis.openapi.models.operations.Destiny2GetProfileResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetProfileResponse res = new org.openapis.openapi.models.operations.Destiny2GetProfileResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1077,11 +1035,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicMilestoneContentResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1113,11 +1069,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetPublicMilestonesResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicMilestonesResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetPublicMilestonesResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicMilestonesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1156,11 +1110,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetPublicVendorsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1193,11 +1145,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryResponse res = new org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryResponse res = new org.openapis.openapi.models.operations.Destiny2GetUniqueWeaponHistoryResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1236,11 +1186,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetVendorResponse res = new org.openapis.openapi.models.operations.Destiny2GetVendorResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetVendorResponse res = new org.openapis.openapi.models.operations.Destiny2GetVendorResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1279,11 +1227,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2GetVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetVendorsResponse() {{
+        org.openapis.openapi.models.operations.Destiny2GetVendorsResponse res = new org.openapis.openapi.models.operations.Destiny2GetVendorsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1298,10 +1244,11 @@ public class Destiny2 {
 
     /**
      * Insert a plug into a socketed item. I know how it sounds, but I assure you it's much more G-rated than you might be guessing. We haven't decided yet whether this will be able to insert plugs that have side effects, but if we do it will require special scope permission for an application attempting to do so. You must have a valid Destiny Account, and either be in a social space, in orbit, or offline. Request must include proof of permission for 'InsertPlugs' from the account owner.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse destiny2InsertSocketPlug(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlug/");
         
@@ -1310,16 +1257,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse() {{
+        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1334,10 +1280,11 @@ public class Destiny2 {
 
     /**
      * Insert a 'free' plug into an item's socket. This does not require 'Advanced Write Action' authorization and is available to 3rd-party apps, but will only work on 'free and reversible' socket actions (Perks, Armor Mods, Shaders, Ornaments, etc.). You must have a valid Destiny Account, and the character must either be in a social space, in orbit, or offline.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse destiny2InsertSocketPlugFree(org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/InsertSocketPlugFree/");
         
@@ -1346,16 +1293,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse() {{
+        org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse res = new org.openapis.openapi.models.operations.Destiny2InsertSocketPlugFreeResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1370,10 +1316,11 @@ public class Destiny2 {
 
     /**
      * Extract an item from the Postmaster, with whatever implications that may entail. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse destiny2PullFromPostmaster() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse destiny2PullFromPostmaster(org.openapis.openapi.models.operations.Destiny2PullFromPostmasterSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/PullFromPostmaster/");
         
@@ -1382,16 +1329,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse res = new org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse() {{
+        org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse res = new org.openapis.openapi.models.operations.Destiny2PullFromPostmasterResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1426,11 +1372,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse res = new org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse() {{
+        org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse res = new org.openapis.openapi.models.operations.Destiny2ReportOffensivePostGameCarnageReportPlayerResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1469,11 +1413,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesResponse res = new org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesResponse() {{
+        org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesResponse res = new org.openapis.openapi.models.operations.Destiny2SearchDestinyEntitiesResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1506,11 +1448,9 @@ public class Destiny2 {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameResponse res = new org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameResponse() {{
+        org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameResponse res = new org.openapis.openapi.models.operations.Destiny2SearchDestinyPlayerByBungieNameResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1525,10 +1465,11 @@ public class Destiny2 {
 
     /**
      * Set the Lock State for an instanced item. You must have a valid Destiny Account.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse destiny2SetItemLockState() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse destiny2SetItemLockState(org.openapis.openapi.models.operations.Destiny2SetItemLockStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/SetLockState/");
         
@@ -1537,16 +1478,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse res = new org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse() {{
+        org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse res = new org.openapis.openapi.models.operations.Destiny2SetItemLockStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1561,10 +1501,11 @@ public class Destiny2 {
 
     /**
      * Set the Tracking State for an instanced item, if that item is a Quest or Bounty. You must have a valid Destiny Account. Yeah, it's an item.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse destiny2SetQuestTrackedState() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse destiny2SetQuestTrackedState(org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/SetTrackedState/");
         
@@ -1573,16 +1514,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse res = new org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse() {{
+        org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse res = new org.openapis.openapi.models.operations.Destiny2SetQuestTrackedStateResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1597,10 +1537,11 @@ public class Destiny2 {
 
     /**
      * Snapshot a loadout with the currently equipped items.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse destiny2SnapshotLoadout() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse destiny2SnapshotLoadout(org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/SnapshotLoadout/");
         
@@ -1609,16 +1550,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse() {{
+        org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse res = new org.openapis.openapi.models.operations.Destiny2SnapshotLoadoutResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1633,10 +1573,11 @@ public class Destiny2 {
 
     /**
      * Transfer an item to/from your vault. You must have a valid Destiny account. You must also pass BOTH a reference AND an instance ID if it's an instanced item. itshappening.gif
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2TransferItemResponse destiny2TransferItem() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2TransferItemResponse destiny2TransferItem(org.openapis.openapi.models.operations.Destiny2TransferItemSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Items/TransferItem/");
         
@@ -1645,16 +1586,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2TransferItemResponse res = new org.openapis.openapi.models.operations.Destiny2TransferItemResponse() {{
+        org.openapis.openapi.models.operations.Destiny2TransferItemResponse res = new org.openapis.openapi.models.operations.Destiny2TransferItemResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1669,10 +1609,11 @@ public class Destiny2 {
 
     /**
      * Update the color, icon, and name of a loadout.
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse destiny2UpdateLoadoutIdentifiers() throws Exception {
+    public org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse destiny2UpdateLoadoutIdentifiers(org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/Destiny2/Actions/Loadouts/UpdateLoadoutIdentifiers/");
         
@@ -1681,16 +1622,15 @@ public class Destiny2 {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse res = new org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse() {{
+        org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse res = new org.openapis.openapi.models.operations.Destiny2UpdateLoadoutIdentifiersResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

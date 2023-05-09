@@ -18,9 +18,11 @@ public class ListContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listItems")
     public ListItem[] listItems;
+
     public ListContent withListItems(ListItem[] listItems) {
         this.listItems = listItems;
         return this;
     }
     
+    public ListContent(){}
 }

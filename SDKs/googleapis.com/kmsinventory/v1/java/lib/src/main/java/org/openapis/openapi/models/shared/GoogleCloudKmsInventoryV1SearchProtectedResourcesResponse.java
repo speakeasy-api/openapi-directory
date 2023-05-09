@@ -18,6 +18,7 @@ public class GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protectedResources")
     public GoogleCloudKmsInventoryV1ProtectedResource[] protectedResources;
+
     public GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse withProtectedResources(GoogleCloudKmsInventoryV1ProtectedResource[] protectedResources) {
         this.protectedResources = protectedResources;
         return this;
     }
     
+    public GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse(){}
 }

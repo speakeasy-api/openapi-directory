@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPISecurity;
 import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIRequest;
 import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPIResponse;
+import org.openapis.openapi.models.operations.ImporterExporterCodeVerificationAPISecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -14,19 +13,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            ImporterExporterCodeVerificationAPIRequest req = new ImporterExporterCodeVerificationAPIRequest() {{
-                iec = "corrupti";
-            }}            
+            ImporterExporterCodeVerificationAPIRequest req = new ImporterExporterCodeVerificationAPIRequest("corrupti");            
 
             ImporterExporterCodeVerificationAPIResponse res = sdk.apIs.importerExporterCodeVerificationAPI(req, new ImporterExporterCodeVerificationAPISecurity() {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.importerExporterCodeVerificationAPI200ApplicationJSONObject.isPresent()) {
+            if (res.importerExporterCodeVerificationAPI200ApplicationJSONObject != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

@@ -18,9 +18,11 @@ public class SheetsChartProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chartImageProperties")
     public ImageProperties chartImageProperties;
+
     public SheetsChartProperties withChartImageProperties(ImageProperties chartImageProperties) {
         this.chartImageProperties = chartImageProperties;
         return this;
     }
     
+    public SheetsChartProperties(){}
 }

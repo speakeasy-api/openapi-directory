@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReplicateSecretToRegionsResponse {
     
     public String contentType;
+
     public ReplicateSecretToRegionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ReplicateSecretToRegionsResponse {
      */
     
     public Object internalServiceError;
+
     public ReplicateSecretToRegionsResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class ReplicateSecretToRegionsResponse {
      */
     
     public Object invalidParameterException;
+
     public ReplicateSecretToRegionsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class ReplicateSecretToRegionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ReplicateSecretToRegionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ReplicateSecretToRegionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ReplicateSecretToRegionsResponse replicateSecretToRegionsResponse;
+
     public ReplicateSecretToRegionsResponse withReplicateSecretToRegionsResponse(org.openapis.openapi.models.shared.ReplicateSecretToRegionsResponse replicateSecretToRegionsResponse) {
         this.replicateSecretToRegionsResponse = replicateSecretToRegionsResponse;
         return this;
@@ -59,6 +65,7 @@ public class ReplicateSecretToRegionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ReplicateSecretToRegionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ReplicateSecretToRegionsResponse {
     
     
     public Integer statusCode;
+
     public ReplicateSecretToRegionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class ReplicateSecretToRegionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReplicateSecretToRegionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ReplicateSecretToRegionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ForgetpaireddeviceRequest {
     @JsonProperty("bond")
     public Boolean bond;
+
     public ForgetpaireddeviceRequest withBond(Boolean bond) {
         this.bond = bond;
         return this;
@@ -16,9 +17,14 @@ public class ForgetpaireddeviceRequest {
     
     @JsonProperty("mac_address")
     public String macAddress;
+
     public ForgetpaireddeviceRequest withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public ForgetpaireddeviceRequest(@JsonProperty("bond") Boolean bond, @JsonProperty("mac_address") String macAddress) {
+        this.bond = bond;
+        this.macAddress = macAddress;
+  }
 }

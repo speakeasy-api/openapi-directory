@@ -18,6 +18,7 @@ public class SaveaccountconfigRequest {
      */
     @JsonProperty("MatchFlux")
     public String matchFlux;
+
     public SaveaccountconfigRequest withMatchFlux(String matchFlux) {
         this.matchFlux = matchFlux;
         return this;
@@ -28,6 +29,7 @@ public class SaveaccountconfigRequest {
      */
     @JsonProperty("Matchers")
     public Matcher[] matchers;
+
     public SaveaccountconfigRequest withMatchers(Matcher[] matchers) {
         this.matchers = matchers;
         return this;
@@ -38,6 +40,7 @@ public class SaveaccountconfigRequest {
      */
     @JsonProperty("Score")
     public Score score;
+
     public SaveaccountconfigRequest withScore(Score score) {
         this.score = score;
         return this;
@@ -48,9 +51,16 @@ public class SaveaccountconfigRequest {
      */
     @JsonProperty("SpecificationsMapping")
     public String[] specificationsMapping;
+
     public SaveaccountconfigRequest withSpecificationsMapping(String[] specificationsMapping) {
         this.specificationsMapping = specificationsMapping;
         return this;
     }
     
+    public SaveaccountconfigRequest(@JsonProperty("MatchFlux") String matchFlux, @JsonProperty("Matchers") Matcher[] matchers, @JsonProperty("Score") Score score, @JsonProperty("SpecificationsMapping") String[] specificationsMapping) {
+        this.matchFlux = matchFlux;
+        this.matchers = matchers;
+        this.score = score;
+        this.specificationsMapping = specificationsMapping;
+  }
 }

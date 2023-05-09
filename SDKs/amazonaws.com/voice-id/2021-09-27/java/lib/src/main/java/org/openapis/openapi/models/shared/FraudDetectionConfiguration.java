@@ -15,6 +15,7 @@ public class FraudDetectionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RiskThreshold")
     public Long riskThreshold;
+
     public FraudDetectionConfiguration withRiskThreshold(Long riskThreshold) {
         this.riskThreshold = riskThreshold;
         return this;
@@ -23,9 +24,11 @@ public class FraudDetectionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WatchlistId")
     public String watchlistId;
+
     public FraudDetectionConfiguration withWatchlistId(String watchlistId) {
         this.watchlistId = watchlistId;
         return this;
     }
     
+    public FraudDetectionConfiguration(){}
 }

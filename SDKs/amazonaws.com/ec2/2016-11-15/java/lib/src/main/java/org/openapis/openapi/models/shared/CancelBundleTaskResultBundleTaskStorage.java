@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CancelBundleTaskResultBundleTaskStorage {
     
     public S3Storage s3;
+
     public CancelBundleTaskResultBundleTaskStorage withS3(S3Storage s3) {
         this.s3 = s3;
         return this;
     }
     
+    public CancelBundleTaskResultBundleTaskStorage(){}
 }

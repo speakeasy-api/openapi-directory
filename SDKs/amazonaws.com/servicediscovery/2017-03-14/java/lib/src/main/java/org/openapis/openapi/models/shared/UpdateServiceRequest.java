@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServiceRequest {
     @JsonProperty("Id")
     public String id;
+
     public UpdateServiceRequest withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class UpdateServiceRequest {
     
     @JsonProperty("Service")
     public ServiceChange service;
+
     public UpdateServiceRequest withService(ServiceChange service) {
         this.service = service;
         return this;
     }
     
+    public UpdateServiceRequest(@JsonProperty("Id") String id, @JsonProperty("Service") ServiceChange service) {
+        this.id = id;
+        this.service = service;
+  }
 }

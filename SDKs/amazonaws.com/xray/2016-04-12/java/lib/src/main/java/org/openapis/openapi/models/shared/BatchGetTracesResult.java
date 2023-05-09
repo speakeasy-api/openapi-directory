@@ -15,6 +15,7 @@ public class BatchGetTracesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public BatchGetTracesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class BatchGetTracesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traces")
     public Trace[] traces;
+
     public BatchGetTracesResult withTraces(Trace[] traces) {
         this.traces = traces;
         return this;
@@ -31,9 +33,11 @@ public class BatchGetTracesResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnprocessedTraceIds")
     public String[] unprocessedTraceIds;
+
     public BatchGetTracesResult withUnprocessedTraceIds(String[] unprocessedTraceIds) {
         this.unprocessedTraceIds = unprocessedTraceIds;
         return this;
     }
     
+    public BatchGetTracesResult(){}
 }

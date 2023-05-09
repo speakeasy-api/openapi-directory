@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AnomalyDetector {
     
     public AnomalyDetectorConfiguration configuration;
+
     public AnomalyDetector withConfiguration(AnomalyDetectorConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -19,6 +20,7 @@ public class AnomalyDetector {
     
     
     public Dimension[] dimensions;
+
     public AnomalyDetector withDimensions(Dimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -26,6 +28,7 @@ public class AnomalyDetector {
     
     
     public MetricMathAnomalyDetector metricMathAnomalyDetector;
+
     public AnomalyDetector withMetricMathAnomalyDetector(MetricMathAnomalyDetector metricMathAnomalyDetector) {
         this.metricMathAnomalyDetector = metricMathAnomalyDetector;
         return this;
@@ -33,6 +36,7 @@ public class AnomalyDetector {
     
     
     public String metricName;
+
     public AnomalyDetector withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -40,6 +44,7 @@ public class AnomalyDetector {
     
     
     public String namespace;
+
     public AnomalyDetector withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -47,6 +52,7 @@ public class AnomalyDetector {
     
     
     public SingleMetricAnomalyDetector singleMetricAnomalyDetector;
+
     public AnomalyDetector withSingleMetricAnomalyDetector(SingleMetricAnomalyDetector singleMetricAnomalyDetector) {
         this.singleMetricAnomalyDetector = singleMetricAnomalyDetector;
         return this;
@@ -54,6 +60,7 @@ public class AnomalyDetector {
     
     
     public String stat;
+
     public AnomalyDetector withStat(String stat) {
         this.stat = stat;
         return this;
@@ -61,9 +68,11 @@ public class AnomalyDetector {
     
     
     public AnomalyDetectorStateValueEnum stateValue;
+
     public AnomalyDetector withStateValue(AnomalyDetectorStateValueEnum stateValue) {
         this.stateValue = stateValue;
         return this;
     }
     
+    public AnomalyDetector(){}
 }

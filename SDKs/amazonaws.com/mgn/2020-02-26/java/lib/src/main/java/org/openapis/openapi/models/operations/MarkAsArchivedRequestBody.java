@@ -12,9 +12,13 @@ public class MarkAsArchivedRequestBody {
      */
     @JsonProperty("sourceServerID")
     public String sourceServerID;
+
     public MarkAsArchivedRequestBody withSourceServerID(String sourceServerID) {
         this.sourceServerID = sourceServerID;
         return this;
     }
     
+    public MarkAsArchivedRequestBody(@JsonProperty("sourceServerID") String sourceServerID) {
+        this.sourceServerID = sourceServerID;
+  }
 }

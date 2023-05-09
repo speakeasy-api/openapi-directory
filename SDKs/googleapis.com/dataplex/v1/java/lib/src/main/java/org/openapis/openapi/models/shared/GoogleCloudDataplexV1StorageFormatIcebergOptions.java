@@ -18,9 +18,11 @@ public class GoogleCloudDataplexV1StorageFormatIcebergOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadataLocation")
     public String metadataLocation;
+
     public GoogleCloudDataplexV1StorageFormatIcebergOptions withMetadataLocation(String metadataLocation) {
         this.metadataLocation = metadataLocation;
         return this;
     }
     
+    public GoogleCloudDataplexV1StorageFormatIcebergOptions(){}
 }

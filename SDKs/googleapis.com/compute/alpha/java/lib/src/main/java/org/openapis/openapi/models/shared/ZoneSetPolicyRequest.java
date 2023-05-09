@@ -15,6 +15,7 @@ public class ZoneSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bindings")
     public Binding[] bindings;
+
     public ZoneSetPolicyRequest withBindings(Binding[] bindings) {
         this.bindings = bindings;
         return this;
@@ -26,6 +27,7 @@ public class ZoneSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ZoneSetPolicyRequest withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -37,9 +39,11 @@ public class ZoneSetPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("policy")
     public Policy policy;
+
     public ZoneSetPolicyRequest withPolicy(Policy policy) {
         this.policy = policy;
         return this;
     }
     
+    public ZoneSetPolicyRequest(){}
 }

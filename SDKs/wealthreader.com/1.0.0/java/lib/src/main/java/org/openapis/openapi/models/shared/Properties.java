@@ -17,6 +17,7 @@ public class Properties {
      */
     @JsonProperty("code")
     public String code;
+
     public Properties withCode(String code) {
         this.code = code;
         return this;
@@ -24,6 +25,7 @@ public class Properties {
     
     @JsonProperty("currency")
     public String currency;
+
     public Properties withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -32,6 +34,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Properties withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class Properties {
     
     @JsonProperty("historic_prices")
     public PropertiesHistoricPrices[] historicPrices;
+
     public Properties withHistoricPrices(PropertiesHistoricPrices[] historicPrices) {
         this.historicPrices = historicPrices;
         return this;
@@ -47,6 +51,7 @@ public class Properties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public String purpose;
+
     public Properties withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -54,6 +59,7 @@ public class Properties {
     
     @JsonProperty("trading_price")
     public Double tradingPrice;
+
     public Properties withTradingPrice(Double tradingPrice) {
         this.tradingPrice = tradingPrice;
         return this;
@@ -61,6 +67,7 @@ public class Properties {
     
     @JsonProperty("trading_year")
     public Double tradingYear;
+
     public Properties withTradingYear(Double tradingYear) {
         this.tradingYear = tradingYear;
         return this;
@@ -68,9 +75,18 @@ public class Properties {
     
     @JsonProperty("uuid")
     public String uuid;
+
     public Properties withUuid(String uuid) {
         this.uuid = uuid;
         return this;
     }
     
+    public Properties(@JsonProperty("code") String code, @JsonProperty("currency") String currency, @JsonProperty("historic_prices") PropertiesHistoricPrices[] historicPrices, @JsonProperty("trading_price") Double tradingPrice, @JsonProperty("trading_year") Double tradingYear, @JsonProperty("uuid") String uuid) {
+        this.code = code;
+        this.currency = currency;
+        this.historicPrices = historicPrices;
+        this.tradingPrice = tradingPrice;
+        this.tradingYear = tradingYear;
+        this.uuid = uuid;
+  }
 }

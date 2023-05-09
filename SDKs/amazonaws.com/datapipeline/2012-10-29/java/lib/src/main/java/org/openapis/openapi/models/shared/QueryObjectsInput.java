@@ -15,6 +15,7 @@ public class QueryObjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Long limit;
+
     public QueryObjectsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,6 +24,7 @@ public class QueryObjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marker")
     public String marker;
+
     public QueryObjectsInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -30,6 +32,7 @@ public class QueryObjectsInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public QueryObjectsInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
@@ -38,6 +41,7 @@ public class QueryObjectsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public Query query;
+
     public QueryObjectsInput withQuery(Query query) {
         this.query = query;
         return this;
@@ -45,9 +49,14 @@ public class QueryObjectsInput {
     
     @JsonProperty("sphere")
     public String sphere;
+
     public QueryObjectsInput withSphere(String sphere) {
         this.sphere = sphere;
         return this;
     }
     
+    public QueryObjectsInput(@JsonProperty("pipelineId") String pipelineId, @JsonProperty("sphere") String sphere) {
+        this.pipelineId = pipelineId;
+        this.sphere = sphere;
+  }
 }

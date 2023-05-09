@@ -15,6 +15,7 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public Limitation withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -23,6 +24,7 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public Limitation withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EngineName")
     public String engineName;
+
     public Limitation withEngineName(String engineName) {
         this.engineName = engineName;
         return this;
@@ -39,6 +42,7 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Impact")
     public String impact;
+
     public Limitation withImpact(String impact) {
         this.impact = impact;
         return this;
@@ -47,6 +51,7 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Limitation withName(String name) {
         this.name = name;
         return this;
@@ -55,9 +60,11 @@ public class Limitation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public Limitation withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Limitation(){}
 }

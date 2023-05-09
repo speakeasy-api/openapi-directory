@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OptIn1 {
     @JsonProperty("opencast")
     public Boolean opencast;
+
     public OptIn1 withOpencast(Boolean opencast) {
         this.opencast = opencast;
         return this;
@@ -16,6 +17,7 @@ public class OptIn1 {
     
     @JsonProperty("preview_channel")
     public Boolean previewChannel;
+
     public OptIn1 withPreviewChannel(Boolean previewChannel) {
         this.previewChannel = previewChannel;
         return this;
@@ -23,6 +25,7 @@ public class OptIn1 {
     
     @JsonProperty("remote_ducking")
     public Boolean remoteDucking;
+
     public OptIn1 withRemoteDucking(Boolean remoteDucking) {
         this.remoteDucking = remoteDucking;
         return this;
@@ -30,9 +33,16 @@ public class OptIn1 {
     
     @JsonProperty("stats")
     public Boolean stats;
+
     public OptIn1 withStats(Boolean stats) {
         this.stats = stats;
         return this;
     }
     
+    public OptIn1(@JsonProperty("opencast") Boolean opencast, @JsonProperty("preview_channel") Boolean previewChannel, @JsonProperty("remote_ducking") Boolean remoteDucking, @JsonProperty("stats") Boolean stats) {
+        this.opencast = opencast;
+        this.previewChannel = previewChannel;
+        this.remoteDucking = remoteDucking;
+        this.stats = stats;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeScheduledInstanceAvailabilityRequest - Contains the parameters for DescribeScheduledInstanceAvailability.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeScheduledInstanceAvailabilityRequest {
     
     public Boolean dryRun;
+
     public DescribeScheduledInstanceAvailabilityRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -19,6 +20,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public DescribeScheduledInstanceAvailabilityRequestFilters[] filters;
+
     public DescribeScheduledInstanceAvailabilityRequest withFilters(DescribeScheduledInstanceAvailabilityRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -26,6 +28,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public SlotDateTimeRangeRequest firstSlotStartTimeRange;
+
     public DescribeScheduledInstanceAvailabilityRequest withFirstSlotStartTimeRange(SlotDateTimeRangeRequest firstSlotStartTimeRange) {
         this.firstSlotStartTimeRange = firstSlotStartTimeRange;
         return this;
@@ -33,6 +36,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public Long maxResults;
+
     public DescribeScheduledInstanceAvailabilityRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -40,6 +44,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public Long maxSlotDurationInHours;
+
     public DescribeScheduledInstanceAvailabilityRequest withMaxSlotDurationInHours(Long maxSlotDurationInHours) {
         this.maxSlotDurationInHours = maxSlotDurationInHours;
         return this;
@@ -47,6 +52,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public Long minSlotDurationInHours;
+
     public DescribeScheduledInstanceAvailabilityRequest withMinSlotDurationInHours(Long minSlotDurationInHours) {
         this.minSlotDurationInHours = minSlotDurationInHours;
         return this;
@@ -54,6 +60,7 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public String nextToken;
+
     public DescribeScheduledInstanceAvailabilityRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -61,9 +68,14 @@ public class DescribeScheduledInstanceAvailabilityRequest {
     
     
     public ScheduledInstanceRecurrenceRequest recurrence;
+
     public DescribeScheduledInstanceAvailabilityRequest withRecurrence(ScheduledInstanceRecurrenceRequest recurrence) {
         this.recurrence = recurrence;
         return this;
     }
     
+    public DescribeScheduledInstanceAvailabilityRequest(@JsonProperty("FirstSlotStartTimeRange") SlotDateTimeRangeRequest firstSlotStartTimeRange, @JsonProperty("Recurrence") ScheduledInstanceRecurrenceRequest recurrence) {
+        this.firstSlotStartTimeRange = firstSlotStartTimeRange;
+        this.recurrence = recurrence;
+  }
 }

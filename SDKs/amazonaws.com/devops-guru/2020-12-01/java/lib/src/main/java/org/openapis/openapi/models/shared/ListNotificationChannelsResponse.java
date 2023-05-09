@@ -15,6 +15,7 @@ public class ListNotificationChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Channels")
     public NotificationChannel[] channels;
+
     public ListNotificationChannelsResponse withChannels(NotificationChannel[] channels) {
         this.channels = channels;
         return this;
@@ -23,9 +24,11 @@ public class ListNotificationChannelsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotificationChannelsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNotificationChannelsResponse(){}
 }

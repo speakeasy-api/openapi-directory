@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AttachPolicyResponse {
     
     public String contentType;
+
     public AttachPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class AttachPolicyResponse {
      */
     
     public Object internalFailureException;
+
     public AttachPolicyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class AttachPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public AttachPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class AttachPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public AttachPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class AttachPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public AttachPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class AttachPolicyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public AttachPolicyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class AttachPolicyResponse {
     
     
     public Integer statusCode;
+
     public AttachPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class AttachPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AttachPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class AttachPolicyResponse {
      */
     
     public Object throttlingException;
+
     public AttachPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class AttachPolicyResponse {
      */
     
     public Object unauthorizedException;
+
     public AttachPolicyResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public AttachPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * AbuseTicketList - Success
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AbuseTicketList {
     
     public Pagination pagination;
+
     public AbuseTicketList withPagination(Pagination pagination) {
         this.pagination = pagination;
         return this;
@@ -22,9 +23,13 @@ public class AbuseTicketList {
      */
     
     public String[] ticketIds;
+
     public AbuseTicketList withTicketIds(String[] ticketIds) {
         this.ticketIds = ticketIds;
         return this;
     }
     
+    public AbuseTicketList(@JsonProperty("ticketIds") String[] ticketIds) {
+        this.ticketIds = ticketIds;
+  }
 }

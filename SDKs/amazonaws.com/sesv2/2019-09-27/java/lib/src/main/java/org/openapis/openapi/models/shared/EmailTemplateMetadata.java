@@ -22,6 +22,7 @@ public class EmailTemplateMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTimestamp")
     public OffsetDateTime createdTimestamp;
+
     public EmailTemplateMetadata withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -30,9 +31,11 @@ public class EmailTemplateMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplateName")
     public String templateName;
+
     public EmailTemplateMetadata withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public EmailTemplateMetadata(){}
 }

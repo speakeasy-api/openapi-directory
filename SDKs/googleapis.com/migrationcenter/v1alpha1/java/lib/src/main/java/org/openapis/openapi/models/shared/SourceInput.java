@@ -18,6 +18,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SourceInput withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public SourceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isManaged")
     public Boolean isManaged;
+
     public SourceInput withIsManaged(Boolean isManaged) {
         this.isManaged = isManaged;
         return this;
@@ -51,6 +54,7 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("priority")
     public Integer priority;
+
     public SourceInput withPriority(Integer priority) {
         this.priority = priority;
         return this;
@@ -62,9 +66,11 @@ public class SourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SourceTypeEnum type;
+
     public SourceInput withType(SourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SourceInput(){}
 }

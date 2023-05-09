@@ -20,6 +20,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public StaticIp withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attachedTo")
     public String attachedTo;
+
     public StaticIp withAttachedTo(String attachedTo) {
         this.attachedTo = attachedTo;
         return this;
@@ -38,6 +40,7 @@ public class StaticIp {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public StaticIp withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public StaticIp withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -54,6 +58,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAttached")
     public Boolean isAttached;
+
     public StaticIp withIsAttached(Boolean isAttached) {
         this.isAttached = isAttached;
         return this;
@@ -62,6 +67,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public ResourceLocation location;
+
     public StaticIp withLocation(ResourceLocation location) {
         this.location = location;
         return this;
@@ -70,6 +76,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public StaticIp withName(String name) {
         this.name = name;
         return this;
@@ -78,6 +85,7 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public StaticIp withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -86,9 +94,11 @@ public class StaticIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportCode")
     public String supportCode;
+
     public StaticIp withSupportCode(String supportCode) {
         this.supportCode = supportCode;
         return this;
     }
     
+    public StaticIp(){}
 }

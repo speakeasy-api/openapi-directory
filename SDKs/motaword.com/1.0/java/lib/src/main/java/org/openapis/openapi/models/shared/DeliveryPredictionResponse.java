@@ -15,9 +15,11 @@ public class DeliveryPredictionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public DeliveryPredictionInLanguage[] result;
+
     public DeliveryPredictionResponse withResult(DeliveryPredictionInLanguage[] result) {
         this.result = result;
         return this;
     }
     
+    public DeliveryPredictionResponse(){}
 }

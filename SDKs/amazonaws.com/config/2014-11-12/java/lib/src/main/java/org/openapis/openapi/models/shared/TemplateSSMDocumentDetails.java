@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TemplateSSMDocumentDetails {
     @JsonProperty("DocumentName")
     public String documentName;
+
     public TemplateSSMDocumentDetails withDocumentName(String documentName) {
         this.documentName = documentName;
         return this;
@@ -22,9 +23,13 @@ public class TemplateSSMDocumentDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentVersion")
     public String documentVersion;
+
     public TemplateSSMDocumentDetails withDocumentVersion(String documentVersion) {
         this.documentVersion = documentVersion;
         return this;
     }
     
+    public TemplateSSMDocumentDetails(@JsonProperty("DocumentName") String documentName) {
+        this.documentName = documentName;
+  }
 }

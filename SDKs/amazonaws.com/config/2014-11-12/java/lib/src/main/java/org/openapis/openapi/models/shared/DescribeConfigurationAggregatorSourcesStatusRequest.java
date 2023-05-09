@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeConfigurationAggregatorSourcesStatusRequest {
     @JsonProperty("ConfigurationAggregatorName")
     public String configurationAggregatorName;
+
     public DescribeConfigurationAggregatorSourcesStatusRequest withConfigurationAggregatorName(String configurationAggregatorName) {
         this.configurationAggregatorName = configurationAggregatorName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeConfigurationAggregatorSourcesStatusRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,6 +29,7 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeConfigurationAggregatorSourcesStatusRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -35,9 +38,13 @@ public class DescribeConfigurationAggregatorSourcesStatusRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdateStatus")
     public AggregatedSourceStatusTypeEnum[] updateStatus;
+
     public DescribeConfigurationAggregatorSourcesStatusRequest withUpdateStatus(AggregatedSourceStatusTypeEnum[] updateStatus) {
         this.updateStatus = updateStatus;
         return this;
     }
     
+    public DescribeConfigurationAggregatorSourcesStatusRequest(@JsonProperty("ConfigurationAggregatorName") String configurationAggregatorName) {
+        this.configurationAggregatorName = configurationAggregatorName;
+  }
 }

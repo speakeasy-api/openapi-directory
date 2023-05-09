@@ -191,4 +191,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViberUsageCurr
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViberUsage.java
 lib/src/main/java/org/openapis/openapi/models/shared/MessageStatusViber.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/SendMessageMessageStatusResponse.java
+docs/sdk/README.md
 USAGE.md

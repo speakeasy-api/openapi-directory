@@ -18,6 +18,7 @@ public class ListPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListPackagesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,9 +30,11 @@ public class ListPackagesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("packages")
     public Package[] packages;
+
     public ListPackagesResponse withPackages(Package[] packages) {
         this.packages = packages;
         return this;
     }
     
+    public ListPackagesResponse(){}
 }

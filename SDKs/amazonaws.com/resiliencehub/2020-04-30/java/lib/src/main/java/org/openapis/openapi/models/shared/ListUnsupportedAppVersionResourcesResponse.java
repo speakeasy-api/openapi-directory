@@ -15,6 +15,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListUnsupportedAppVersionResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class ListUnsupportedAppVersionResourcesResponse {
     
     @JsonProperty("resolutionId")
     public String resolutionId;
+
     public ListUnsupportedAppVersionResourcesResponse withResolutionId(String resolutionId) {
         this.resolutionId = resolutionId;
         return this;
@@ -29,9 +31,14 @@ public class ListUnsupportedAppVersionResourcesResponse {
     
     @JsonProperty("unsupportedResources")
     public UnsupportedResource[] unsupportedResources;
+
     public ListUnsupportedAppVersionResourcesResponse withUnsupportedResources(UnsupportedResource[] unsupportedResources) {
         this.unsupportedResources = unsupportedResources;
         return this;
     }
     
+    public ListUnsupportedAppVersionResourcesResponse(@JsonProperty("resolutionId") String resolutionId, @JsonProperty("unsupportedResources") UnsupportedResource[] unsupportedResources) {
+        this.resolutionId = resolutionId;
+        this.unsupportedResources = unsupportedResources;
+  }
 }

@@ -15,6 +15,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Action")
     public Action action;
+
     public AwsSecurityFinding withAction(Action action) {
         this.action = action;
         return this;
@@ -22,6 +23,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("AwsAccountId")
     public String awsAccountId;
+
     public AwsSecurityFinding withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -30,6 +32,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyName")
     public String companyName;
+
     public AwsSecurityFinding withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -38,6 +41,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compliance")
     public Compliance compliance;
+
     public AwsSecurityFinding withCompliance(Compliance compliance) {
         this.compliance = compliance;
         return this;
@@ -46,6 +50,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Confidence")
     public Long confidence;
+
     public AwsSecurityFinding withConfidence(Long confidence) {
         this.confidence = confidence;
         return this;
@@ -53,6 +58,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("CreatedAt")
     public String createdAt;
+
     public AwsSecurityFinding withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -61,6 +67,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Criticality")
     public Long criticality;
+
     public AwsSecurityFinding withCriticality(Long criticality) {
         this.criticality = criticality;
         return this;
@@ -68,6 +75,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("Description")
     public String description;
+
     public AwsSecurityFinding withDescription(String description) {
         this.description = description;
         return this;
@@ -76,6 +84,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindingProviderFields")
     public FindingProviderFields findingProviderFields;
+
     public AwsSecurityFinding withFindingProviderFields(FindingProviderFields findingProviderFields) {
         this.findingProviderFields = findingProviderFields;
         return this;
@@ -84,6 +93,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstObservedAt")
     public String firstObservedAt;
+
     public AwsSecurityFinding withFirstObservedAt(String firstObservedAt) {
         this.firstObservedAt = firstObservedAt;
         return this;
@@ -91,6 +101,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("GeneratorId")
     public String generatorId;
+
     public AwsSecurityFinding withGeneratorId(String generatorId) {
         this.generatorId = generatorId;
         return this;
@@ -98,6 +109,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("Id")
     public String id;
+
     public AwsSecurityFinding withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +118,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastObservedAt")
     public String lastObservedAt;
+
     public AwsSecurityFinding withLastObservedAt(String lastObservedAt) {
         this.lastObservedAt = lastObservedAt;
         return this;
@@ -114,6 +127,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Malware")
     public Malware[] malware;
+
     public AwsSecurityFinding withMalware(Malware[] malware) {
         this.malware = malware;
         return this;
@@ -122,6 +136,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Network")
     public Network network;
+
     public AwsSecurityFinding withNetwork(Network network) {
         this.network = network;
         return this;
@@ -130,6 +145,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NetworkPath")
     public NetworkPathComponent[] networkPath;
+
     public AwsSecurityFinding withNetworkPath(NetworkPathComponent[] networkPath) {
         this.networkPath = networkPath;
         return this;
@@ -138,6 +154,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Note")
     public Note note;
+
     public AwsSecurityFinding withNote(Note note) {
         this.note = note;
         return this;
@@ -146,6 +163,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PatchSummary")
     public PatchSummary patchSummary;
+
     public AwsSecurityFinding withPatchSummary(PatchSummary patchSummary) {
         this.patchSummary = patchSummary;
         return this;
@@ -154,6 +172,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Process")
     public ProcessDetails process;
+
     public AwsSecurityFinding withProcess(ProcessDetails process) {
         this.process = process;
         return this;
@@ -161,6 +180,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("ProductArn")
     public String productArn;
+
     public AwsSecurityFinding withProductArn(String productArn) {
         this.productArn = productArn;
         return this;
@@ -169,6 +189,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductFields")
     public java.util.Map<String, String> productFields;
+
     public AwsSecurityFinding withProductFields(java.util.Map<String, String> productFields) {
         this.productFields = productFields;
         return this;
@@ -177,6 +198,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProductName")
     public String productName;
+
     public AwsSecurityFinding withProductName(String productName) {
         this.productName = productName;
         return this;
@@ -185,6 +207,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordState")
     public RecordStateEnum recordState;
+
     public AwsSecurityFinding withRecordState(RecordStateEnum recordState) {
         this.recordState = recordState;
         return this;
@@ -193,6 +216,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public AwsSecurityFinding withRegion(String region) {
         this.region = region;
         return this;
@@ -201,6 +225,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RelatedFindings")
     public RelatedFinding[] relatedFindings;
+
     public AwsSecurityFinding withRelatedFindings(RelatedFinding[] relatedFindings) {
         this.relatedFindings = relatedFindings;
         return this;
@@ -209,6 +234,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Remediation")
     public Remediation remediation;
+
     public AwsSecurityFinding withRemediation(Remediation remediation) {
         this.remediation = remediation;
         return this;
@@ -216,6 +242,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("Resources")
     public Resource[] resources;
+
     public AwsSecurityFinding withResources(Resource[] resources) {
         this.resources = resources;
         return this;
@@ -224,6 +251,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Sample")
     public Boolean sample;
+
     public AwsSecurityFinding withSample(Boolean sample) {
         this.sample = sample;
         return this;
@@ -231,6 +259,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("SchemaVersion")
     public String schemaVersion;
+
     public AwsSecurityFinding withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
@@ -239,6 +268,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Severity")
     public Severity severity;
+
     public AwsSecurityFinding withSeverity(Severity severity) {
         this.severity = severity;
         return this;
@@ -247,6 +277,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceUrl")
     public String sourceUrl;
+
     public AwsSecurityFinding withSourceUrl(String sourceUrl) {
         this.sourceUrl = sourceUrl;
         return this;
@@ -255,6 +286,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThreatIntelIndicators")
     public ThreatIntelIndicator[] threatIntelIndicators;
+
     public AwsSecurityFinding withThreatIntelIndicators(ThreatIntelIndicator[] threatIntelIndicators) {
         this.threatIntelIndicators = threatIntelIndicators;
         return this;
@@ -263,6 +295,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Threats")
     public Threat[] threats;
+
     public AwsSecurityFinding withThreats(Threat[] threats) {
         this.threats = threats;
         return this;
@@ -270,6 +303,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("Title")
     public String title;
+
     public AwsSecurityFinding withTitle(String title) {
         this.title = title;
         return this;
@@ -278,6 +312,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Types")
     public String[] types;
+
     public AwsSecurityFinding withTypes(String[] types) {
         this.types = types;
         return this;
@@ -285,6 +320,7 @@ public class AwsSecurityFinding {
     
     @JsonProperty("UpdatedAt")
     public String updatedAt;
+
     public AwsSecurityFinding withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -293,6 +329,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefinedFields")
     public java.util.Map<String, String> userDefinedFields;
+
     public AwsSecurityFinding withUserDefinedFields(java.util.Map<String, String> userDefinedFields) {
         this.userDefinedFields = userDefinedFields;
         return this;
@@ -301,6 +338,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VerificationState")
     public VerificationStateEnum verificationState;
+
     public AwsSecurityFinding withVerificationState(VerificationStateEnum verificationState) {
         this.verificationState = verificationState;
         return this;
@@ -309,6 +347,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Vulnerabilities")
     public Vulnerability[] vulnerabilities;
+
     public AwsSecurityFinding withVulnerabilities(Vulnerability[] vulnerabilities) {
         this.vulnerabilities = vulnerabilities;
         return this;
@@ -317,6 +356,7 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Workflow")
     public Workflow workflow;
+
     public AwsSecurityFinding withWorkflow(Workflow workflow) {
         this.workflow = workflow;
         return this;
@@ -325,9 +365,22 @@ public class AwsSecurityFinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkflowState")
     public WorkflowStateEnum workflowState;
+
     public AwsSecurityFinding withWorkflowState(WorkflowStateEnum workflowState) {
         this.workflowState = workflowState;
         return this;
     }
     
+    public AwsSecurityFinding(@JsonProperty("AwsAccountId") String awsAccountId, @JsonProperty("CreatedAt") String createdAt, @JsonProperty("Description") String description, @JsonProperty("GeneratorId") String generatorId, @JsonProperty("Id") String id, @JsonProperty("ProductArn") String productArn, @JsonProperty("Resources") Resource[] resources, @JsonProperty("SchemaVersion") String schemaVersion, @JsonProperty("Title") String title, @JsonProperty("UpdatedAt") String updatedAt) {
+        this.awsAccountId = awsAccountId;
+        this.createdAt = createdAt;
+        this.description = description;
+        this.generatorId = generatorId;
+        this.id = id;
+        this.productArn = productArn;
+        this.resources = resources;
+        this.schemaVersion = schemaVersion;
+        this.title = title;
+        this.updatedAt = updatedAt;
+  }
 }

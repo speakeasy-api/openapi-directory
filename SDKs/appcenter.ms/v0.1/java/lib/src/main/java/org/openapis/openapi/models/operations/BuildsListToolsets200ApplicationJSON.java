@@ -18,6 +18,7 @@ public class BuildsListToolsets200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("node")
     public BuildsListToolsets200ApplicationJSONNode[] node;
+
     public BuildsListToolsets200ApplicationJSON withNode(BuildsListToolsets200ApplicationJSONNode[] node) {
         this.node = node;
         return this;
@@ -29,6 +30,7 @@ public class BuildsListToolsets200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xamarin")
     public BuildsListToolsets200ApplicationJSONXamarin[] xamarin;
+
     public BuildsListToolsets200ApplicationJSON withXamarin(BuildsListToolsets200ApplicationJSONXamarin[] xamarin) {
         this.xamarin = xamarin;
         return this;
@@ -40,9 +42,11 @@ public class BuildsListToolsets200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("xcode")
     public BuildsListToolsets200ApplicationJSONXcode[] xcode;
+
     public BuildsListToolsets200ApplicationJSON withXcode(BuildsListToolsets200ApplicationJSONXcode[] xcode) {
         this.xcode = xcode;
         return this;
     }
     
+    public BuildsListToolsets200ApplicationJSON(){}
 }

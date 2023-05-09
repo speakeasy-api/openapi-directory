@@ -15,6 +15,7 @@ public class ResolverDnssecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ResolverDnssecConfig withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class ResolverDnssecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public ResolverDnssecConfig withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -31,6 +33,7 @@ public class ResolverDnssecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ResolverDnssecConfig withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -39,9 +42,11 @@ public class ResolverDnssecConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ValidationStatus")
     public ResolverDNSSECValidationStatusEnum validationStatus;
+
     public ResolverDnssecConfig withValidationStatus(ResolverDNSSECValidationStatusEnum validationStatus) {
         this.validationStatus = validationStatus;
         return this;
     }
     
+    public ResolverDnssecConfig(){}
 }

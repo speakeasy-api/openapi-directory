@@ -88,4 +88,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/ReimageNodeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListOperationsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/TensorFlowVersion.java
 lib/src/main/java/org/openapis/openapi/models/shared/ListTensorFlowVersionsResponse.java
+docs/sdk/README.md
+docs/projects/README.md
 USAGE.md

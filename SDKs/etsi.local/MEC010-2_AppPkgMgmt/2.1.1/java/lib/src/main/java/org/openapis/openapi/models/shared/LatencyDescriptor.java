@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class LatencyDescriptor {
     /**
@@ -12,9 +12,13 @@ public class LatencyDescriptor {
      */
     
     public Long maxLatency;
+
     public LatencyDescriptor withMaxLatency(Long maxLatency) {
         this.maxLatency = maxLatency;
         return this;
     }
     
+    public LatencyDescriptor(@JsonProperty("maxLatency") Long maxLatency) {
+        this.maxLatency = maxLatency;
+  }
 }

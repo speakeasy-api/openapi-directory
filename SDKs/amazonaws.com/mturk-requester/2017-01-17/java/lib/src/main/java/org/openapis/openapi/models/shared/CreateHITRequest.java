@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateHITRequest {
     @JsonProperty("AssignmentDurationInSeconds")
     public Long assignmentDurationInSeconds;
+
     public CreateHITRequest withAssignmentDurationInSeconds(Long assignmentDurationInSeconds) {
         this.assignmentDurationInSeconds = assignmentDurationInSeconds;
         return this;
@@ -19,6 +20,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssignmentReviewPolicy")
     public ReviewPolicy assignmentReviewPolicy;
+
     public CreateHITRequest withAssignmentReviewPolicy(ReviewPolicy assignmentReviewPolicy) {
         this.assignmentReviewPolicy = assignmentReviewPolicy;
         return this;
@@ -27,6 +29,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoApprovalDelayInSeconds")
     public Long autoApprovalDelayInSeconds;
+
     public CreateHITRequest withAutoApprovalDelayInSeconds(Long autoApprovalDelayInSeconds) {
         this.autoApprovalDelayInSeconds = autoApprovalDelayInSeconds;
         return this;
@@ -34,6 +37,7 @@ public class CreateHITRequest {
     
     @JsonProperty("Description")
     public String description;
+
     public CreateHITRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -42,6 +46,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITLayoutId")
     public String hitLayoutId;
+
     public CreateHITRequest withHITLayoutId(String hitLayoutId) {
         this.hitLayoutId = hitLayoutId;
         return this;
@@ -50,6 +55,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITLayoutParameters")
     public HITLayoutParameter[] hitLayoutParameters;
+
     public CreateHITRequest withHITLayoutParameters(HITLayoutParameter[] hitLayoutParameters) {
         this.hitLayoutParameters = hitLayoutParameters;
         return this;
@@ -58,6 +64,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HITReviewPolicy")
     public ReviewPolicy hitReviewPolicy;
+
     public CreateHITRequest withHITReviewPolicy(ReviewPolicy hitReviewPolicy) {
         this.hitReviewPolicy = hitReviewPolicy;
         return this;
@@ -66,6 +73,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Keywords")
     public String keywords;
+
     public CreateHITRequest withKeywords(String keywords) {
         this.keywords = keywords;
         return this;
@@ -73,6 +81,7 @@ public class CreateHITRequest {
     
     @JsonProperty("LifetimeInSeconds")
     public Long lifetimeInSeconds;
+
     public CreateHITRequest withLifetimeInSeconds(Long lifetimeInSeconds) {
         this.lifetimeInSeconds = lifetimeInSeconds;
         return this;
@@ -81,6 +90,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxAssignments")
     public Long maxAssignments;
+
     public CreateHITRequest withMaxAssignments(Long maxAssignments) {
         this.maxAssignments = maxAssignments;
         return this;
@@ -89,6 +99,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QualificationRequirements")
     public QualificationRequirement[] qualificationRequirements;
+
     public CreateHITRequest withQualificationRequirements(QualificationRequirement[] qualificationRequirements) {
         this.qualificationRequirements = qualificationRequirements;
         return this;
@@ -97,6 +108,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Question")
     public String question;
+
     public CreateHITRequest withQuestion(String question) {
         this.question = question;
         return this;
@@ -105,6 +117,7 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequesterAnnotation")
     public String requesterAnnotation;
+
     public CreateHITRequest withRequesterAnnotation(String requesterAnnotation) {
         this.requesterAnnotation = requesterAnnotation;
         return this;
@@ -112,6 +125,7 @@ public class CreateHITRequest {
     
     @JsonProperty("Reward")
     public String reward;
+
     public CreateHITRequest withReward(String reward) {
         this.reward = reward;
         return this;
@@ -119,6 +133,7 @@ public class CreateHITRequest {
     
     @JsonProperty("Title")
     public String title;
+
     public CreateHITRequest withTitle(String title) {
         this.title = title;
         return this;
@@ -127,9 +142,17 @@ public class CreateHITRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UniqueRequestToken")
     public String uniqueRequestToken;
+
     public CreateHITRequest withUniqueRequestToken(String uniqueRequestToken) {
         this.uniqueRequestToken = uniqueRequestToken;
         return this;
     }
     
+    public CreateHITRequest(@JsonProperty("AssignmentDurationInSeconds") Long assignmentDurationInSeconds, @JsonProperty("Description") String description, @JsonProperty("LifetimeInSeconds") Long lifetimeInSeconds, @JsonProperty("Reward") String reward, @JsonProperty("Title") String title) {
+        this.assignmentDurationInSeconds = assignmentDurationInSeconds;
+        this.description = description;
+        this.lifetimeInSeconds = lifetimeInSeconds;
+        this.reward = reward;
+        this.title = title;
+  }
 }

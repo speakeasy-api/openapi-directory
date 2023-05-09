@@ -3,7 +3,6 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.StsIntrospectRequest;
 import org.openapis.openapi.models.operations.StsIntrospectResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -17,13 +16,13 @@ public class Application {
                 .build();
 
             StsIntrospectRequest req = new StsIntrospectRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 googleIdentityStsV1IntrospectTokenRequest = new GoogleIdentityStsV1IntrospectTokenRequest() {{
                     token = "provident";
                     tokenTypeHint = "distinctio";
-                }};
+                }};;
                 accessToken = "quibusdam";
-                alt = "media";
+                alt = AltEnum.MEDIA;
                 callback = "nulla";
                 fields = "corrupti";
                 key = "illum";
@@ -32,15 +31,17 @@ public class Application {
                 quotaUser = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
             StsIntrospectResponse res = sdk.v1.stsIntrospect(req);
 
-            if (res.googleIdentityStsV1IntrospectTokenResponse.isPresent()) {
+            if (res.googleIdentityStsV1IntrospectTokenResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

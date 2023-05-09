@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSinglePaymentIntentRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public CreateSinglePaymentIntentRequestBody requestBody;
+
     public CreateSinglePaymentIntentRequest withRequestBody(CreateSinglePaymentIntentRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,9 +21,14 @@ public class CreateSinglePaymentIntentRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public CreateSinglePaymentIntentRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public CreateSinglePaymentIntentRequest(@JsonProperty("RequestBody") CreateSinglePaymentIntentRequestBody requestBody, @JsonProperty("x-api-key") String xApiKey) {
+        this.requestBody = requestBody;
+        this.xApiKey = xApiKey;
+  }
 }

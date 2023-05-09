@@ -12,9 +12,13 @@ public class UpdateApnsSandboxChannelRequestBody {
      */
     @JsonProperty("APNSSandboxChannelRequest")
     public UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest apnsSandboxChannelRequest;
+
     public UpdateApnsSandboxChannelRequestBody withAPNSSandboxChannelRequest(UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest apnsSandboxChannelRequest) {
         this.apnsSandboxChannelRequest = apnsSandboxChannelRequest;
         return this;
     }
     
+    public UpdateApnsSandboxChannelRequestBody(@JsonProperty("APNSSandboxChannelRequest") UpdateAPNSSandboxChannelRequestBodyAPNSSandboxChannelRequest apnsSandboxChannelRequest) {
+        this.apnsSandboxChannelRequest = apnsSandboxChannelRequest;
+  }
 }

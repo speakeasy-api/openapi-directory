@@ -19,6 +19,7 @@ public class Feature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public Feature withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -27,6 +28,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Feature withDescription(String description) {
         this.description = description;
         return this;
@@ -35,6 +37,7 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Feature withId(Long id) {
         this.id = id;
         return this;
@@ -45,6 +48,7 @@ public class Feature {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdate")
     public OffsetDateTime lastUpdate;
+
     public Feature withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -53,9 +57,11 @@ public class Feature {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Feature withName(String name) {
         this.name = name;
         return this;
     }
     
+    public Feature(){}
 }

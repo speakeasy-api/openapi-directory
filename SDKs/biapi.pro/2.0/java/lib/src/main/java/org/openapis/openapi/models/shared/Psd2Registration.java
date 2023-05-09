@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Psd2Registration {
     @JsonProperty("id")
     public Long id;
+
     public Psd2Registration withId(Long id) {
         this.id = id;
         return this;
@@ -25,6 +26,7 @@ public class Psd2Registration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id_connector_source")
     public Long idConnectorSource;
+
     public Psd2Registration withIdConnectorSource(Long idConnectorSource) {
         this.idConnectorSource = idConnectorSource;
         return this;
@@ -35,9 +37,14 @@ public class Psd2Registration {
      */
     @JsonProperty("status")
     public String status;
+
     public Psd2Registration withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public Psd2Registration(@JsonProperty("id") Long id, @JsonProperty("status") String status) {
+        this.id = id;
+        this.status = status;
+  }
 }

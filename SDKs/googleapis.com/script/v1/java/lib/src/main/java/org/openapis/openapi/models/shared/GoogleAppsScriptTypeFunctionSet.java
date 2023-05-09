@@ -18,9 +18,11 @@ public class GoogleAppsScriptTypeFunctionSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public GoogleAppsScriptTypeFunction[] values;
+
     public GoogleAppsScriptTypeFunctionSet withValues(GoogleAppsScriptTypeFunction[] values) {
         this.values = values;
         return this;
     }
     
+    public GoogleAppsScriptTypeFunctionSet(){}
 }

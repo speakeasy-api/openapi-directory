@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ApplyEnvironmentManagedActionRequest - Request to execute a scheduled managed action immediately.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ApplyEnvironmentManagedActionRequest {
     
     public String actionId;
+
     public ApplyEnvironmentManagedActionRequest withActionId(String actionId) {
         this.actionId = actionId;
         return this;
@@ -19,6 +20,7 @@ public class ApplyEnvironmentManagedActionRequest {
     
     
     public String environmentId;
+
     public ApplyEnvironmentManagedActionRequest withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -26,9 +28,13 @@ public class ApplyEnvironmentManagedActionRequest {
     
     
     public String environmentName;
+
     public ApplyEnvironmentManagedActionRequest withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public ApplyEnvironmentManagedActionRequest(@JsonProperty("ActionId") String actionId) {
+        this.actionId = actionId;
+  }
 }

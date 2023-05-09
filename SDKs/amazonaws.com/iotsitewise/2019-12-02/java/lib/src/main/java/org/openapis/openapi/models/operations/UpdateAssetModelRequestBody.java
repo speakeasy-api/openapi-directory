@@ -15,6 +15,7 @@ public class UpdateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelCompositeModels")
     public org.openapis.openapi.models.shared.AssetModelCompositeModel[] assetModelCompositeModels;
+
     public UpdateAssetModelRequestBody withAssetModelCompositeModels(org.openapis.openapi.models.shared.AssetModelCompositeModel[] assetModelCompositeModels) {
         this.assetModelCompositeModels = assetModelCompositeModels;
         return this;
@@ -26,6 +27,7 @@ public class UpdateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelDescription")
     public String assetModelDescription;
+
     public UpdateAssetModelRequestBody withAssetModelDescription(String assetModelDescription) {
         this.assetModelDescription = assetModelDescription;
         return this;
@@ -37,6 +39,7 @@ public class UpdateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelHierarchies")
     public org.openapis.openapi.models.shared.AssetModelHierarchy[] assetModelHierarchies;
+
     public UpdateAssetModelRequestBody withAssetModelHierarchies(org.openapis.openapi.models.shared.AssetModelHierarchy[] assetModelHierarchies) {
         this.assetModelHierarchies = assetModelHierarchies;
         return this;
@@ -47,6 +50,7 @@ public class UpdateAssetModelRequestBody {
      */
     @JsonProperty("assetModelName")
     public String assetModelName;
+
     public UpdateAssetModelRequestBody withAssetModelName(String assetModelName) {
         this.assetModelName = assetModelName;
         return this;
@@ -58,6 +62,7 @@ public class UpdateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assetModelProperties")
     public org.openapis.openapi.models.shared.AssetModelProperty[] assetModelProperties;
+
     public UpdateAssetModelRequestBody withAssetModelProperties(org.openapis.openapi.models.shared.AssetModelProperty[] assetModelProperties) {
         this.assetModelProperties = assetModelProperties;
         return this;
@@ -69,9 +74,13 @@ public class UpdateAssetModelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public UpdateAssetModelRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
     
+    public UpdateAssetModelRequestBody(@JsonProperty("assetModelName") String assetModelName) {
+        this.assetModelName = assetModelName;
+  }
 }

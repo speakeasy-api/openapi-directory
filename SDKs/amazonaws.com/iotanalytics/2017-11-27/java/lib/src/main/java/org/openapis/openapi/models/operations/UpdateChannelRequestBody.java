@@ -15,6 +15,7 @@ public class UpdateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelStorage")
     public UpdateChannelRequestBodyChannelStorage channelStorage;
+
     public UpdateChannelRequestBody withChannelStorage(UpdateChannelRequestBodyChannelStorage channelStorage) {
         this.channelStorage = channelStorage;
         return this;
@@ -26,9 +27,11 @@ public class UpdateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public UpdateChannelRequestBodyRetentionPeriod retentionPeriod;
+
     public UpdateChannelRequestBody withRetentionPeriod(UpdateChannelRequestBodyRetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
     }
     
+    public UpdateChannelRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class ModifyContactGroupMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNamesToAdd")
     public String[] resourceNamesToAdd;
+
     public ModifyContactGroupMembersRequest withResourceNamesToAdd(String[] resourceNamesToAdd) {
         this.resourceNamesToAdd = resourceNamesToAdd;
         return this;
@@ -29,9 +30,11 @@ public class ModifyContactGroupMembersRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNamesToRemove")
     public String[] resourceNamesToRemove;
+
     public ModifyContactGroupMembersRequest withResourceNamesToRemove(String[] resourceNamesToRemove) {
         this.resourceNamesToRemove = resourceNamesToRemove;
         return this;
     }
     
+    public ModifyContactGroupMembersRequest(){}
 }

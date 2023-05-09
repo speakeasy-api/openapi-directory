@@ -19,6 +19,7 @@ public class ConsentArtifactSchemaConsentPermissionDateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("from")
     public OffsetDateTime from;
+
     public ConsentArtifactSchemaConsentPermissionDateRange withFrom(OffsetDateTime from) {
         this.from = from;
         return this;
@@ -31,9 +32,14 @@ public class ConsentArtifactSchemaConsentPermissionDateRange {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("to")
     public OffsetDateTime to;
+
     public ConsentArtifactSchemaConsentPermissionDateRange withTo(OffsetDateTime to) {
         this.to = to;
         return this;
     }
     
+    public ConsentArtifactSchemaConsentPermissionDateRange(@JsonProperty("from") OffsetDateTime from, @JsonProperty("to") OffsetDateTime to) {
+        this.from = from;
+        this.to = to;
+  }
 }

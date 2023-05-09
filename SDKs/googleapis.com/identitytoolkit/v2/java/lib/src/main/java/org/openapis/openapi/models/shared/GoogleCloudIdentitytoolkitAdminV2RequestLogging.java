@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitAdminV2RequestLogging {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public GoogleCloudIdentitytoolkitAdminV2RequestLogging withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitAdminV2RequestLogging(){}
 }

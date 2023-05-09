@@ -15,6 +15,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("details")
     public ResourceDetails details;
+
     public Resource withDetails(ResourceDetails details) {
         this.details = details;
         return this;
@@ -23,6 +24,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -31,6 +33,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public Resource withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -39,9 +42,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Resource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public Resource(){}
 }

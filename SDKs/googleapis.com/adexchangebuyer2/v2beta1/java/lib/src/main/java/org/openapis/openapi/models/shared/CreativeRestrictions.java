@@ -18,6 +18,7 @@ public class CreativeRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeFormat")
     public CreativeRestrictionsCreativeFormatEnum creativeFormat;
+
     public CreativeRestrictions withCreativeFormat(CreativeRestrictionsCreativeFormatEnum creativeFormat) {
         this.creativeFormat = creativeFormat;
         return this;
@@ -26,6 +27,7 @@ public class CreativeRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeSpecifications")
     public CreativeSpecification[] creativeSpecifications;
+
     public CreativeRestrictions withCreativeSpecifications(CreativeSpecification[] creativeSpecifications) {
         this.creativeSpecifications = creativeSpecifications;
         return this;
@@ -37,9 +39,11 @@ public class CreativeRestrictions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skippableAdType")
     public CreativeRestrictionsSkippableAdTypeEnum skippableAdType;
+
     public CreativeRestrictions withSkippableAdType(CreativeRestrictionsSkippableAdTypeEnum skippableAdType) {
         this.skippableAdType = skippableAdType;
         return this;
     }
     
+    public CreativeRestrictions(){}
 }

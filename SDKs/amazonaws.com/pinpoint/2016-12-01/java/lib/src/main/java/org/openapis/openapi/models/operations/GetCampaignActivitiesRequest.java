@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCampaignActivitiesRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GetCampaignActivitiesRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -16,6 +18,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GetCampaignActivitiesRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -23,6 +26,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GetCampaignActivitiesRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -30,6 +34,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GetCampaignActivitiesRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -37,6 +42,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GetCampaignActivitiesRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -44,6 +50,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GetCampaignActivitiesRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -51,6 +58,7 @@ public class GetCampaignActivitiesRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GetCampaignActivitiesRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -61,6 +69,7 @@ public class GetCampaignActivitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=application-id")
     public String applicationId;
+
     public GetCampaignActivitiesRequest withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -71,6 +80,7 @@ public class GetCampaignActivitiesRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=campaign-id")
     public String campaignId;
+
     public GetCampaignActivitiesRequest withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -81,6 +91,7 @@ public class GetCampaignActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page-size")
     public String pageSize;
+
     public GetCampaignActivitiesRequest withPageSize(String pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -91,9 +102,14 @@ public class GetCampaignActivitiesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public GetCampaignActivitiesRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GetCampaignActivitiesRequest(@JsonProperty("application-id") String applicationId, @JsonProperty("campaign-id") String campaignId) {
+        this.applicationId = applicationId;
+        this.campaignId = campaignId;
+  }
 }

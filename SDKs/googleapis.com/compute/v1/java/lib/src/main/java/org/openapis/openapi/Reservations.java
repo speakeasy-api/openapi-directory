@@ -59,11 +59,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeReservationsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeReservationsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             reservationAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeReservationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeReservationsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsGetResponse res = new org.openapis.openapi.models.operations.ComputeReservationsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsGetResponse res = new org.openapis.openapi.models.operations.ComputeReservationsGetResponse(contentType, httpRes.statusCode()) {{
             reservation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeReservationsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeReservationsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsInsertResponse res = new org.openapis.openapi.models.operations.ComputeReservationsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsInsertResponse res = new org.openapis.openapi.models.operations.ComputeReservationsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsListResponse res = new org.openapis.openapi.models.operations.ComputeReservationsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsListResponse res = new org.openapis.openapi.models.operations.ComputeReservationsListResponse(contentType, httpRes.statusCode()) {{
             reservationList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -339,11 +327,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsResizeResponse res = new org.openapis.openapi.models.operations.ComputeReservationsResizeResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsResizeResponse res = new org.openapis.openapi.models.operations.ComputeReservationsResizeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +373,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeReservationsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeReservationsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -435,11 +419,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeReservationsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeReservationsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -483,11 +465,9 @@ public class Reservations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeReservationsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeReservationsUpdateResponse() {{
+        org.openapis.openapi.models.operations.ComputeReservationsUpdateResponse res = new org.openapis.openapi.models.operations.ComputeReservationsUpdateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

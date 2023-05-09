@@ -15,6 +15,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressId")
     public String addressId;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withAddressId(String addressId) {
         this.addressId = addressId;
         return this;
@@ -26,6 +27,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addressType")
     public String addressType;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withAddressType(String addressType) {
         this.addressType = addressType;
         return this;
@@ -37,6 +39,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("city")
     public String city;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withCity(String city) {
         this.city = city;
         return this;
@@ -48,6 +51,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("complement")
     public String complement;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withComplement(String complement) {
         this.complement = complement;
         return this;
@@ -59,6 +63,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("country")
     public String country;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withCountry(String country) {
         this.country = country;
         return this;
@@ -70,6 +75,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("geoCoordinates")
     public Double[] geoCoordinates;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withGeoCoordinates(Double[] geoCoordinates) {
         this.geoCoordinates = geoCoordinates;
         return this;
@@ -81,6 +87,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisposable")
     public Boolean isDisposable;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withIsDisposable(Boolean isDisposable) {
         this.isDisposable = isDisposable;
         return this;
@@ -92,6 +99,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("neighborhood")
     public String neighborhood;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withNeighborhood(String neighborhood) {
         this.neighborhood = neighborhood;
         return this;
@@ -103,6 +111,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("number")
     public String number;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withNumber(String number) {
         this.number = number;
         return this;
@@ -114,6 +123,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("receiverName")
     public String receiverName;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withReceiverName(String receiverName) {
         this.receiverName = receiverName;
         return this;
@@ -125,6 +135,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withReference(String reference) {
         this.reference = reference;
         return this;
@@ -136,6 +147,7 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public String state;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withState(String state) {
         this.state = state;
         return this;
@@ -147,9 +159,11 @@ public class ClearorderFormMessages200ApplicationJSONAvailableAddresses {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("street")
     public String street;
+
     public ClearorderFormMessages200ApplicationJSONAvailableAddresses withStreet(String street) {
         this.street = street;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONAvailableAddresses(){}
 }

@@ -20,6 +20,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DirectoryId")
     public String directoryId;
+
     public Snapshot withDirectoryId(String directoryId) {
         this.directoryId = directoryId;
         return this;
@@ -28,6 +29,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public Snapshot withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotId")
     public String snapshotId;
+
     public Snapshot withSnapshotId(String snapshotId) {
         this.snapshotId = snapshotId;
         return this;
@@ -46,6 +49,7 @@ public class Snapshot {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public Snapshot withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -54,6 +58,7 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public SnapshotStatusEnum status;
+
     public Snapshot withStatus(SnapshotStatusEnum status) {
         this.status = status;
         return this;
@@ -62,9 +67,11 @@ public class Snapshot {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public SnapshotTypeEnum type;
+
     public Snapshot withType(SnapshotTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Snapshot(){}
 }

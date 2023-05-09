@@ -12,6 +12,7 @@ public class GetComponentRequestBody {
      */
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public GetComponentRequestBody withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -22,9 +23,14 @@ public class GetComponentRequestBody {
      */
     @JsonProperty("ComponentId")
     public String componentId;
+
     public GetComponentRequestBody withComponentId(String componentId) {
         this.componentId = componentId;
         return this;
     }
     
+    public GetComponentRequestBody(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("ComponentId") String componentId) {
+        this.applicationId = applicationId;
+        this.componentId = componentId;
+  }
 }

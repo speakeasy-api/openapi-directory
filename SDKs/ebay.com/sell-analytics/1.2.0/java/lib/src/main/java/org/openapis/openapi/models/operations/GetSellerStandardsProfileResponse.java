@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSellerStandardsProfileResponse {
     
     public String contentType;
+
     public GetSellerStandardsProfileResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetSellerStandardsProfileResponse {
      */
     
     public org.openapis.openapi.models.shared.StandardsProfile standardsProfile;
+
     public GetSellerStandardsProfileResponse withStandardsProfile(org.openapis.openapi.models.shared.StandardsProfile standardsProfile) {
         this.standardsProfile = standardsProfile;
         return this;
@@ -26,6 +29,7 @@ public class GetSellerStandardsProfileResponse {
     
     
     public Integer statusCode;
+
     public GetSellerStandardsProfileResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetSellerStandardsProfileResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSellerStandardsProfileResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSellerStandardsProfileResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

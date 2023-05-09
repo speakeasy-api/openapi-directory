@@ -58,12 +58,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddAristaSwitchResponse res = new org.openapis.openapi.models.operations.AddAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.AddAristaSwitchResponse res = new org.openapis.openapi.models.operations.AddAristaSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -111,12 +109,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.AddBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.AddBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.AddBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -164,12 +160,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.AddCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.AddCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.AddCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -218,12 +212,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddCiscoSwitchResponse res = new org.openapis.openapi.models.operations.AddCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.AddCiscoSwitchResponse res = new org.openapis.openapi.models.operations.AddCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
             ciscoSwitchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -271,12 +263,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddDellSwitchResponse res = new org.openapis.openapi.models.operations.AddDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.AddDellSwitchResponse res = new org.openapis.openapi.models.operations.AddDellSwitchResponse(contentType, httpRes.statusCode()) {{
             dellSwitchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -324,12 +314,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddHpovManagerResponse res = new org.openapis.openapi.models.operations.AddHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.AddHpovManagerResponse res = new org.openapis.openapi.models.operations.AddHpovManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -377,12 +365,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddHpvcManagerResponse res = new org.openapis.openapi.models.operations.AddHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.AddHpvcManagerResponse res = new org.openapis.openapi.models.operations.AddHpvcManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -430,12 +416,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddJuniperSwitchResponse res = new org.openapis.openapi.models.operations.AddJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.AddJuniperSwitchResponse res = new org.openapis.openapi.models.operations.AddJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -483,12 +467,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse res = new org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse() {{
+        org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse res = new org.openapis.openapi.models.operations.AddNsxvManagerDatasourceResponse(contentType, httpRes.statusCode()) {{
             nsxvManagerDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -536,12 +518,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddPanoramaFirewallResponse res = new org.openapis.openapi.models.operations.AddPanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.AddPanoramaFirewallResponse res = new org.openapis.openapi.models.operations.AddPanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -589,12 +569,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddUcsManagerResponse res = new org.openapis.openapi.models.operations.AddUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.AddUcsManagerResponse res = new org.openapis.openapi.models.operations.AddUcsManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -646,12 +624,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddVcenterDatasourceResponse res = new org.openapis.openapi.models.operations.AddVcenterDatasourceResponse() {{
+        org.openapis.openapi.models.operations.AddVcenterDatasourceResponse res = new org.openapis.openapi.models.operations.AddVcenterDatasourceResponse(contentType, httpRes.statusCode()) {{
             vCenterDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -697,10 +673,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteAristaSwitchResponse res = new org.openapis.openapi.models.operations.DeleteAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.DeleteAristaSwitchResponse res = new org.openapis.openapi.models.operations.DeleteAristaSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -732,10 +706,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.DeleteBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -767,10 +739,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.DeleteCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -802,10 +772,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse res = new org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse res = new org.openapis.openapi.models.operations.DeleteCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -837,10 +805,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteDellSwitchResponse res = new org.openapis.openapi.models.operations.DeleteDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.DeleteDellSwitchResponse res = new org.openapis.openapi.models.operations.DeleteDellSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -872,10 +838,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHpovManagerResponse res = new org.openapis.openapi.models.operations.DeleteHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.DeleteHpovManagerResponse res = new org.openapis.openapi.models.operations.DeleteHpovManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -907,10 +871,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteHpvcManagerResponse res = new org.openapis.openapi.models.operations.DeleteHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.DeleteHpvcManagerResponse res = new org.openapis.openapi.models.operations.DeleteHpvcManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -942,10 +904,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse res = new org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse res = new org.openapis.openapi.models.operations.DeleteJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -977,10 +937,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteNsxvManagerResponse res = new org.openapis.openapi.models.operations.DeleteNsxvManagerResponse() {{
+        org.openapis.openapi.models.operations.DeleteNsxvManagerResponse res = new org.openapis.openapi.models.operations.DeleteNsxvManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -1012,10 +970,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.DeletePanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -1047,10 +1003,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteUcsManagerResponse res = new org.openapis.openapi.models.operations.DeleteUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.DeleteUcsManagerResponse res = new org.openapis.openapi.models.operations.DeleteUcsManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -1082,10 +1036,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteVcenterResponse res = new org.openapis.openapi.models.operations.DeleteVcenterResponse() {{
+        org.openapis.openapi.models.operations.DeleteVcenterResponse res = new org.openapis.openapi.models.operations.DeleteVcenterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 500) {
@@ -1117,10 +1069,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableAristaSwitchResponse res = new org.openapis.openapi.models.operations.DisableAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.DisableAristaSwitchResponse res = new org.openapis.openapi.models.operations.DisableAristaSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1151,10 +1101,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.DisableBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1186,10 +1134,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.DisableCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1221,10 +1167,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableCiscoSwitchResponse res = new org.openapis.openapi.models.operations.DisableCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.DisableCiscoSwitchResponse res = new org.openapis.openapi.models.operations.DisableCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1256,10 +1200,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableDellSwitchResponse res = new org.openapis.openapi.models.operations.DisableDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.DisableDellSwitchResponse res = new org.openapis.openapi.models.operations.DisableDellSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1291,10 +1233,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableHpovManagerResponse res = new org.openapis.openapi.models.operations.DisableHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.DisableHpovManagerResponse res = new org.openapis.openapi.models.operations.DisableHpovManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1326,10 +1266,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableHpvcManagerResponse res = new org.openapis.openapi.models.operations.DisableHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.DisableHpvcManagerResponse res = new org.openapis.openapi.models.operations.DisableHpvcManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1361,10 +1299,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableJuniperSwitchResponse res = new org.openapis.openapi.models.operations.DisableJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.DisableJuniperSwitchResponse res = new org.openapis.openapi.models.operations.DisableJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1396,10 +1332,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableNsxvManagerResponse res = new org.openapis.openapi.models.operations.DisableNsxvManagerResponse() {{
+        org.openapis.openapi.models.operations.DisableNsxvManagerResponse res = new org.openapis.openapi.models.operations.DisableNsxvManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1431,10 +1365,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.DisablePanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1466,10 +1398,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableUcsManagerResponse res = new org.openapis.openapi.models.operations.DisableUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.DisableUcsManagerResponse res = new org.openapis.openapi.models.operations.DisableUcsManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1501,10 +1431,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisableVcenterResponse res = new org.openapis.openapi.models.operations.DisableVcenterResponse() {{
+        org.openapis.openapi.models.operations.DisableVcenterResponse res = new org.openapis.openapi.models.operations.DisableVcenterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1536,10 +1464,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableAristaSwitchResponse res = new org.openapis.openapi.models.operations.EnableAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.EnableAristaSwitchResponse res = new org.openapis.openapi.models.operations.EnableAristaSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1570,10 +1496,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.EnableBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1605,10 +1529,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.EnableCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1640,10 +1562,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableCiscoSwitchResponse res = new org.openapis.openapi.models.operations.EnableCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.EnableCiscoSwitchResponse res = new org.openapis.openapi.models.operations.EnableCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1675,10 +1595,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableDellSwitchResponse res = new org.openapis.openapi.models.operations.EnableDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.EnableDellSwitchResponse res = new org.openapis.openapi.models.operations.EnableDellSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1710,10 +1628,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableHpovManagerResponse res = new org.openapis.openapi.models.operations.EnableHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.EnableHpovManagerResponse res = new org.openapis.openapi.models.operations.EnableHpovManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1745,10 +1661,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableHpvcManagerResponse res = new org.openapis.openapi.models.operations.EnableHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.EnableHpvcManagerResponse res = new org.openapis.openapi.models.operations.EnableHpvcManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1780,10 +1694,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableJuniperSwitchResponse res = new org.openapis.openapi.models.operations.EnableJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.EnableJuniperSwitchResponse res = new org.openapis.openapi.models.operations.EnableJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1815,10 +1727,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableNsxvManagerResponse res = new org.openapis.openapi.models.operations.EnableNsxvManagerResponse() {{
+        org.openapis.openapi.models.operations.EnableNsxvManagerResponse res = new org.openapis.openapi.models.operations.EnableNsxvManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1850,10 +1760,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.EnablePanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1885,10 +1793,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableUcsManagerResponse res = new org.openapis.openapi.models.operations.EnableUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.EnableUcsManagerResponse res = new org.openapis.openapi.models.operations.EnableUcsManagerResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1920,10 +1826,8 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.EnableVcenterResponse res = new org.openapis.openapi.models.operations.EnableVcenterResponse() {{
+        org.openapis.openapi.models.operations.EnableVcenterResponse res = new org.openapis.openapi.models.operations.EnableVcenterResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
@@ -1955,11 +1859,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAristaSwitchResponse res = new org.openapis.openapi.models.operations.GetAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetAristaSwitchResponse res = new org.openapis.openapi.models.operations.GetAristaSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1998,11 +1900,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetAristaSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2041,11 +1941,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.GetBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.GetBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2084,11 +1982,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetBrocadeSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2127,11 +2023,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.GetCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.GetCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.GetCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2170,11 +2064,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCiscoSwitchResponse res = new org.openapis.openapi.models.operations.GetCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetCiscoSwitchResponse res = new org.openapis.openapi.models.operations.GetCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
             ciscoSwitchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2213,11 +2105,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetCiscoSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2256,11 +2146,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDellSwitchResponse res = new org.openapis.openapi.models.operations.GetDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetDellSwitchResponse res = new org.openapis.openapi.models.operations.GetDellSwitchResponse(contentType, httpRes.statusCode()) {{
             dellSwitchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2299,11 +2187,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetDellSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2342,11 +2228,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHpovManagerResponse res = new org.openapis.openapi.models.operations.GetHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.GetHpovManagerResponse res = new org.openapis.openapi.models.operations.GetHpovManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2385,11 +2269,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHpvcManagerResponse res = new org.openapis.openapi.models.operations.GetHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.GetHpvcManagerResponse res = new org.openapis.openapi.models.operations.GetHpvcManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2428,11 +2310,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJuniperSwitchResponse res = new org.openapis.openapi.models.operations.GetJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.GetJuniperSwitchResponse res = new org.openapis.openapi.models.operations.GetJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2471,11 +2351,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetJuniperSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2514,11 +2392,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse res = new org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse() {{
+        org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse res = new org.openapis.openapi.models.operations.GetNsxvControllerClusterResponse(contentType, httpRes.statusCode()) {{
             nsxControllerDataCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2557,11 +2433,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNsxvManagerResponse res = new org.openapis.openapi.models.operations.GetNsxvManagerResponse() {{
+        org.openapis.openapi.models.operations.GetNsxvManagerResponse res = new org.openapis.openapi.models.operations.GetNsxvManagerResponse(contentType, httpRes.statusCode()) {{
             nsxvManagerDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2600,11 +2474,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPanoramaFirewallResponse res = new org.openapis.openapi.models.operations.GetPanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.GetPanoramaFirewallResponse res = new org.openapis.openapi.models.operations.GetPanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2643,11 +2515,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUcsManagerResponse res = new org.openapis.openapi.models.operations.GetUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.GetUcsManagerResponse res = new org.openapis.openapi.models.operations.GetUcsManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2686,11 +2556,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse res = new org.openapis.openapi.models.operations.GetUcsSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2729,11 +2597,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVcenterResponse res = new org.openapis.openapi.models.operations.GetVcenterResponse() {{
+        org.openapis.openapi.models.operations.GetVcenterResponse res = new org.openapis.openapi.models.operations.GetVcenterResponse(contentType, httpRes.statusCode()) {{
             vCenterDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2752,10 +2618,11 @@ public class DataSources {
     /**
      * List arista switch data sources
      * List arista switch data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListAristaSwitchesResponse listAristaSwitches() throws Exception {
+    public org.openapis.openapi.models.operations.ListAristaSwitchesResponse listAristaSwitches(org.openapis.openapi.models.operations.ListAristaSwitchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/arista-switches");
         
@@ -2764,16 +2631,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListAristaSwitchesResponse res = new org.openapis.openapi.models.operations.ListAristaSwitchesResponse() {{
+        org.openapis.openapi.models.operations.ListAristaSwitchesResponse res = new org.openapis.openapi.models.operations.ListAristaSwitchesResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2792,10 +2658,11 @@ public class DataSources {
     /**
      * List brocade switch data sources
      * List brocade switch data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse listBrocadeSwitches() throws Exception {
+    public org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse listBrocadeSwitches(org.openapis.openapi.models.operations.ListBrocadeSwitchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/brocade-switches");
         
@@ -2804,16 +2671,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse res = new org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse() {{
+        org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse res = new org.openapis.openapi.models.operations.ListBrocadeSwitchesResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2832,10 +2698,11 @@ public class DataSources {
     /**
      * List checkpoint firewall data sources
      * List checkpoint firewall data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse listCheckpointFirewalls() throws Exception {
+    public org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse listCheckpointFirewalls(org.openapis.openapi.models.operations.ListCheckpointFirewallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/checkpoint-firewalls");
         
@@ -2844,16 +2711,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse res = new org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse() {{
+        org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse res = new org.openapis.openapi.models.operations.ListCheckpointFirewallsResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2872,10 +2738,11 @@ public class DataSources {
     /**
      * List cisco switch data sources
      * List cisco switch data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListCiscoSwitchesResponse listCiscoSwitches() throws Exception {
+    public org.openapis.openapi.models.operations.ListCiscoSwitchesResponse listCiscoSwitches(org.openapis.openapi.models.operations.ListCiscoSwitchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/cisco-switches");
         
@@ -2884,16 +2751,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListCiscoSwitchesResponse res = new org.openapis.openapi.models.operations.ListCiscoSwitchesResponse() {{
+        org.openapis.openapi.models.operations.ListCiscoSwitchesResponse res = new org.openapis.openapi.models.operations.ListCiscoSwitchesResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2912,10 +2778,11 @@ public class DataSources {
     /**
      * List dell switch data sources
      * List dell switch data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListDellSwitchesResponse listDellSwitches() throws Exception {
+    public org.openapis.openapi.models.operations.ListDellSwitchesResponse listDellSwitches(org.openapis.openapi.models.operations.ListDellSwitchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/dell-switches");
         
@@ -2924,16 +2791,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListDellSwitchesResponse res = new org.openapis.openapi.models.operations.ListDellSwitchesResponse() {{
+        org.openapis.openapi.models.operations.ListDellSwitchesResponse res = new org.openapis.openapi.models.operations.ListDellSwitchesResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2952,10 +2818,11 @@ public class DataSources {
     /**
      * List hp oneview manager data sources
      * List hp oneview manager data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHpovManagersResponse listHpovManagers() throws Exception {
+    public org.openapis.openapi.models.operations.ListHpovManagersResponse listHpovManagers(org.openapis.openapi.models.operations.ListHpovManagersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpov-managers");
         
@@ -2964,16 +2831,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHpovManagersResponse res = new org.openapis.openapi.models.operations.ListHpovManagersResponse() {{
+        org.openapis.openapi.models.operations.ListHpovManagersResponse res = new org.openapis.openapi.models.operations.ListHpovManagersResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2992,10 +2858,11 @@ public class DataSources {
     /**
      * List hpvc manager data sources
      * List hpvc manager data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListHpvcManagersResponse listHpvcManagers() throws Exception {
+    public org.openapis.openapi.models.operations.ListHpvcManagersResponse listHpvcManagers(org.openapis.openapi.models.operations.ListHpvcManagersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/hpvc-managers");
         
@@ -3004,16 +2871,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListHpvcManagersResponse res = new org.openapis.openapi.models.operations.ListHpvcManagersResponse() {{
+        org.openapis.openapi.models.operations.ListHpvcManagersResponse res = new org.openapis.openapi.models.operations.ListHpvcManagersResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3032,10 +2898,11 @@ public class DataSources {
     /**
      * List juniper switch data sources
      * List juniper switch data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListJuniperSwitchesResponse listJuniperSwitches() throws Exception {
+    public org.openapis.openapi.models.operations.ListJuniperSwitchesResponse listJuniperSwitches(org.openapis.openapi.models.operations.ListJuniperSwitchesSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/juniper-switches");
         
@@ -3044,16 +2911,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListJuniperSwitchesResponse res = new org.openapis.openapi.models.operations.ListJuniperSwitchesResponse() {{
+        org.openapis.openapi.models.operations.ListJuniperSwitchesResponse res = new org.openapis.openapi.models.operations.ListJuniperSwitchesResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3072,10 +2938,11 @@ public class DataSources {
     /**
      * List nsx-v manager data sources
      * List nsx-v manager data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListNsxvManagersResponse listNsxvManagers() throws Exception {
+    public org.openapis.openapi.models.operations.ListNsxvManagersResponse listNsxvManagers(org.openapis.openapi.models.operations.ListNsxvManagersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/nsxv-managers");
         
@@ -3084,16 +2951,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListNsxvManagersResponse res = new org.openapis.openapi.models.operations.ListNsxvManagersResponse() {{
+        org.openapis.openapi.models.operations.ListNsxvManagersResponse res = new org.openapis.openapi.models.operations.ListNsxvManagersResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3112,10 +2978,11 @@ public class DataSources {
     /**
      * List panorama firewall data sources
      * List panorama firewall data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse listPanoramaFirewalls() throws Exception {
+    public org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse listPanoramaFirewalls(org.openapis.openapi.models.operations.ListPanoramaFirewallsSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/panorama-firewalls");
         
@@ -3124,16 +2991,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse res = new org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse() {{
+        org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse res = new org.openapis.openapi.models.operations.ListPanoramaFirewallsResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3152,10 +3018,11 @@ public class DataSources {
     /**
      * List ucs manager data sources
      * List ucs manager data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListUcsManagersResponse listUcsManagers() throws Exception {
+    public org.openapis.openapi.models.operations.ListUcsManagersResponse listUcsManagers(org.openapis.openapi.models.operations.ListUcsManagersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/ucs-managers");
         
@@ -3164,16 +3031,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListUcsManagersResponse res = new org.openapis.openapi.models.operations.ListUcsManagersResponse() {{
+        org.openapis.openapi.models.operations.ListUcsManagersResponse res = new org.openapis.openapi.models.operations.ListUcsManagersResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3192,10 +3058,11 @@ public class DataSources {
     /**
      * List vCenter data sources
      * List vCenter data sources
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.ListVcentersResponse listVcenters() throws Exception {
+    public org.openapis.openapi.models.operations.ListVcentersResponse listVcenters(org.openapis.openapi.models.operations.ListVcentersSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/data-sources/vcenters");
         
@@ -3204,16 +3071,15 @@ public class DataSources {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListVcentersResponse res = new org.openapis.openapi.models.operations.ListVcentersResponse() {{
+        org.openapis.openapi.models.operations.ListVcentersResponse res = new org.openapis.openapi.models.operations.ListVcentersResponse(contentType, httpRes.statusCode()) {{
             dataSourceListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3254,12 +3120,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAristaSwitchResponse res = new org.openapis.openapi.models.operations.UpdateAristaSwitchResponse() {{
+        org.openapis.openapi.models.operations.UpdateAristaSwitchResponse res = new org.openapis.openapi.models.operations.UpdateAristaSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3307,12 +3171,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateAristaSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3360,12 +3222,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse() {{
+        org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse res = new org.openapis.openapi.models.operations.UpdateBrocadeSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3413,12 +3273,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateBrocadeSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3466,12 +3324,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse() {{
+        org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse res = new org.openapis.openapi.models.operations.UpdateCheckpointFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3519,12 +3375,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse res = new org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse() {{
+        org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse res = new org.openapis.openapi.models.operations.UpdateCiscoSwitchResponse(contentType, httpRes.statusCode()) {{
             ciscoSwitchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3572,12 +3426,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateCiscoSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3625,12 +3477,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDellSwitchResponse res = new org.openapis.openapi.models.operations.UpdateDellSwitchResponse() {{
+        org.openapis.openapi.models.operations.UpdateDellSwitchResponse res = new org.openapis.openapi.models.operations.UpdateDellSwitchResponse(contentType, httpRes.statusCode()) {{
             dellSwitchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3678,12 +3528,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateDellSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3731,12 +3579,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateHpovManagerResponse res = new org.openapis.openapi.models.operations.UpdateHpovManagerResponse() {{
+        org.openapis.openapi.models.operations.UpdateHpovManagerResponse res = new org.openapis.openapi.models.operations.UpdateHpovManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3784,12 +3630,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateHpvcManagerResponse res = new org.openapis.openapi.models.operations.UpdateHpvcManagerResponse() {{
+        org.openapis.openapi.models.operations.UpdateHpvcManagerResponse res = new org.openapis.openapi.models.operations.UpdateHpvcManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3837,12 +3681,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse res = new org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse() {{
+        org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse res = new org.openapis.openapi.models.operations.UpdateJuniperSwitchResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3890,12 +3732,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateJuniperSwitchSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3943,12 +3783,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse res = new org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse() {{
+        org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse res = new org.openapis.openapi.models.operations.UpdateNsxvControllerClusterResponse(contentType, httpRes.statusCode()) {{
             nsxControllerDataCollection = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -3996,11 +3834,9 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateNsxvManagerResponse res = new org.openapis.openapi.models.operations.UpdateNsxvManagerResponse() {{
+        org.openapis.openapi.models.operations.UpdateNsxvManagerResponse res = new org.openapis.openapi.models.operations.UpdateNsxvManagerResponse(contentType, httpRes.statusCode()) {{
             nsxvManagerDataSource = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4041,12 +3877,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse() {{
+        org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse res = new org.openapis.openapi.models.operations.UpdatePanoramaFirewallResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4094,12 +3928,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUcsManagerResponse res = new org.openapis.openapi.models.operations.UpdateUcsManagerResponse() {{
+        org.openapis.openapi.models.operations.UpdateUcsManagerResponse res = new org.openapis.openapi.models.operations.UpdateUcsManagerResponse(contentType, httpRes.statusCode()) {{
             switchDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4147,12 +3979,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse() {{
+        org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse res = new org.openapis.openapi.models.operations.UpdateUcsSnmpConfigResponse(contentType, httpRes.statusCode()) {{
             snmpConfig = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -4200,12 +4030,10 @@ public class DataSources {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateVcenterResponse res = new org.openapis.openapi.models.operations.UpdateVcenterResponse() {{
+        org.openapis.openapi.models.operations.UpdateVcenterResponse res = new org.openapis.openapi.models.operations.UpdateVcenterResponse(contentType, httpRes.statusCode()) {{
             vCenterDataSource = null;
             apiError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

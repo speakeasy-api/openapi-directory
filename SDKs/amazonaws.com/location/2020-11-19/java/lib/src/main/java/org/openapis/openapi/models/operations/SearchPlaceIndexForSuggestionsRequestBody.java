@@ -15,6 +15,7 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BiasPosition")
     public Double[] biasPosition;
+
     public SearchPlaceIndexForSuggestionsRequestBody withBiasPosition(Double[] biasPosition) {
         this.biasPosition = biasPosition;
         return this;
@@ -26,6 +27,7 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterBBox")
     public Double[] filterBBox;
+
     public SearchPlaceIndexForSuggestionsRequestBody withFilterBBox(Double[] filterBBox) {
         this.filterBBox = filterBBox;
         return this;
@@ -37,6 +39,7 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterCountries")
     public String[] filterCountries;
+
     public SearchPlaceIndexForSuggestionsRequestBody withFilterCountries(String[] filterCountries) {
         this.filterCountries = filterCountries;
         return this;
@@ -48,6 +51,7 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language")
     public String language;
+
     public SearchPlaceIndexForSuggestionsRequestBody withLanguage(String language) {
         this.language = language;
         return this;
@@ -59,6 +63,7 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public SearchPlaceIndexForSuggestionsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -69,9 +74,13 @@ public class SearchPlaceIndexForSuggestionsRequestBody {
      */
     @JsonProperty("Text")
     public String text;
+
     public SearchPlaceIndexForSuggestionsRequestBody withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchPlaceIndexForSuggestionsRequestBody(@JsonProperty("Text") String text) {
+        this.text = text;
+  }
 }

@@ -15,6 +15,7 @@ public class AlternateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AlternateContactType")
     public AlternateContactTypeEnum alternateContactType;
+
     public AlternateContact withAlternateContactType(AlternateContactTypeEnum alternateContactType) {
         this.alternateContactType = alternateContactType;
         return this;
@@ -23,6 +24,7 @@ public class AlternateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public AlternateContact withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -31,6 +33,7 @@ public class AlternateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AlternateContact withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class AlternateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PhoneNumber")
     public String phoneNumber;
+
     public AlternateContact withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -47,9 +51,11 @@ public class AlternateContact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public AlternateContact withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AlternateContact(){}
 }

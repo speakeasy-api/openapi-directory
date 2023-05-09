@@ -15,6 +15,7 @@ public class DescribeMountTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public DescribeMountTargetsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +24,7 @@ public class DescribeMountTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MountTargets")
     public MountTargetDescription[] mountTargets;
+
     public DescribeMountTargetsResponse withMountTargets(MountTargetDescription[] mountTargets) {
         this.mountTargets = mountTargets;
         return this;
@@ -31,9 +33,11 @@ public class DescribeMountTargetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextMarker")
     public String nextMarker;
+
     public DescribeMountTargetsResponse withNextMarker(String nextMarker) {
         this.nextMarker = nextMarker;
         return this;
     }
     
+    public DescribeMountTargetsResponse(){}
 }

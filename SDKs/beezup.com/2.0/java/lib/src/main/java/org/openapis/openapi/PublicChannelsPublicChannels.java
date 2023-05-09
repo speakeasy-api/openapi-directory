@@ -59,12 +59,10 @@ public class PublicChannelsPublicChannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelsResponse res = new org.openapis.openapi.models.operations.GetChannelsResponse() {{
+        org.openapis.openapi.models.operations.GetChannelsResponse res = new org.openapis.openapi.models.operations.GetChannelsResponse(contentType, httpRes.statusCode()) {{
             publicChannelInfoList = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,12 +116,10 @@ public class PublicChannelsPublicChannels {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelsIndexResponse res = new org.openapis.openapi.models.operations.GetChannelsIndexResponse() {{
+        org.openapis.openapi.models.operations.GetChannelsIndexResponse res = new org.openapis.openapi.models.operations.GetChannelsIndexResponse(contentType, httpRes.statusCode()) {{
             publicChannelIndex = null;
             beezUPCommonErrorResponseMessage = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartDeploymentResult {
     @JsonProperty("jobSummary")
     public JobSummary jobSummary;
+
     public StartDeploymentResult withJobSummary(JobSummary jobSummary) {
         this.jobSummary = jobSummary;
         return this;
     }
     
+    public StartDeploymentResult(@JsonProperty("jobSummary") JobSummary jobSummary) {
+        this.jobSummary = jobSummary;
+  }
 }

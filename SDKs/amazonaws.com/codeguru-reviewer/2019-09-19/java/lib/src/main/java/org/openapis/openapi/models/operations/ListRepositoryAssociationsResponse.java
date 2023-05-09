@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRepositoryAssociationsResponse {
     
     public String contentType;
+
     public ListRepositoryAssociationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListRepositoryAssociationsResponse {
      */
     
     public Object internalServerException;
+
     public ListRepositoryAssociationsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListRepositoryAssociationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRepositoryAssociationsResponse listRepositoryAssociationsResponse;
+
     public ListRepositoryAssociationsResponse withListRepositoryAssociationsResponse(org.openapis.openapi.models.shared.ListRepositoryAssociationsResponse listRepositoryAssociationsResponse) {
         this.listRepositoryAssociationsResponse = listRepositoryAssociationsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListRepositoryAssociationsResponse {
     
     
     public Integer statusCode;
+
     public ListRepositoryAssociationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListRepositoryAssociationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRepositoryAssociationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListRepositoryAssociationsResponse {
      */
     
     public Object throttlingException;
+
     public ListRepositoryAssociationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -63,9 +70,14 @@ public class ListRepositoryAssociationsResponse {
      */
     
     public Object validationException;
+
     public ListRepositoryAssociationsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListRepositoryAssociationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

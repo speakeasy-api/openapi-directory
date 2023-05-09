@@ -12,6 +12,7 @@ public class GetChatHistoryUsingPOST200ApplicationJSONDataMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GetChatHistoryUsingPOST200ApplicationJSONDataMessages withText(String text) {
         this.text = text;
         return this;
@@ -20,6 +21,7 @@ public class GetChatHistoryUsingPOST200ApplicationJSONDataMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("time")
     public Long time;
+
     public GetChatHistoryUsingPOST200ApplicationJSONDataMessages withTime(Long time) {
         this.time = time;
         return this;
@@ -28,6 +30,7 @@ public class GetChatHistoryUsingPOST200ApplicationJSONDataMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public GetChatHistoryUsingPOST200ApplicationJSONDataMessages withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -36,9 +39,11 @@ public class GetChatHistoryUsingPOST200ApplicationJSONDataMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userName")
     public String userName;
+
     public GetChatHistoryUsingPOST200ApplicationJSONDataMessages withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public GetChatHistoryUsingPOST200ApplicationJSONDataMessages(){}
 }

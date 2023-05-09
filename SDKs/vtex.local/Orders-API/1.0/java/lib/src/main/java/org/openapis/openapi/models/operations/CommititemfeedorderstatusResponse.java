@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CommititemfeedorderstatusResponse {
@@ -12,6 +13,7 @@ public class CommititemfeedorderstatusResponse {
      */
     
     public String commititemfeedorderstatus200TextPlainObject;
+
     public CommititemfeedorderstatusResponse withCommititemfeedorderstatus200TextPlainObject(String commititemfeedorderstatus200TextPlainObject) {
         this.commititemfeedorderstatus200TextPlainObject = commititemfeedorderstatus200TextPlainObject;
         return this;
@@ -19,6 +21,7 @@ public class CommititemfeedorderstatusResponse {
     
     
     public String contentType;
+
     public CommititemfeedorderstatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CommititemfeedorderstatusResponse {
     
     
     public Integer statusCode;
+
     public CommititemfeedorderstatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CommititemfeedorderstatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CommititemfeedorderstatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CommititemfeedorderstatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

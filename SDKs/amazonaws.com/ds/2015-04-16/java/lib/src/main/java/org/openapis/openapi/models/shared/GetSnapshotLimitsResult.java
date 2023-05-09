@@ -15,9 +15,11 @@ public class GetSnapshotLimitsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SnapshotLimits")
     public SnapshotLimits snapshotLimits;
+
     public GetSnapshotLimitsResult withSnapshotLimits(SnapshotLimits snapshotLimits) {
         this.snapshotLimits = snapshotLimits;
         return this;
     }
     
+    public GetSnapshotLimitsResult(){}
 }

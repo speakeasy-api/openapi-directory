@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2SentimentAnalysisRequestConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analyzeQueryTextSentiment")
     public Boolean analyzeQueryTextSentiment;
+
     public GoogleCloudDialogflowV2SentimentAnalysisRequestConfig withAnalyzeQueryTextSentiment(Boolean analyzeQueryTextSentiment) {
         this.analyzeQueryTextSentiment = analyzeQueryTextSentiment;
         return this;
     }
     
+    public GoogleCloudDialogflowV2SentimentAnalysisRequestConfig(){}
 }

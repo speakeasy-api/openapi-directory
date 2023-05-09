@@ -18,6 +18,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("background")
     public Background background;
+
     public DocumentStyle withBackground(Background background) {
         this.background = background;
         return this;
@@ -29,6 +30,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultFooterId")
     public String defaultFooterId;
+
     public DocumentStyle withDefaultFooterId(String defaultFooterId) {
         this.defaultFooterId = defaultFooterId;
         return this;
@@ -40,6 +42,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultHeaderId")
     public String defaultHeaderId;
+
     public DocumentStyle withDefaultHeaderId(String defaultHeaderId) {
         this.defaultHeaderId = defaultHeaderId;
         return this;
@@ -51,6 +54,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageFooterId")
     public String evenPageFooterId;
+
     public DocumentStyle withEvenPageFooterId(String evenPageFooterId) {
         this.evenPageFooterId = evenPageFooterId;
         return this;
@@ -62,6 +66,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageHeaderId")
     public String evenPageHeaderId;
+
     public DocumentStyle withEvenPageHeaderId(String evenPageHeaderId) {
         this.evenPageHeaderId = evenPageHeaderId;
         return this;
@@ -73,6 +78,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageFooterId")
     public String firstPageFooterId;
+
     public DocumentStyle withFirstPageFooterId(String firstPageFooterId) {
         this.firstPageFooterId = firstPageFooterId;
         return this;
@@ -84,6 +90,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageHeaderId")
     public String firstPageHeaderId;
+
     public DocumentStyle withFirstPageHeaderId(String firstPageHeaderId) {
         this.firstPageHeaderId = firstPageHeaderId;
         return this;
@@ -95,6 +102,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginBottom")
     public Dimension marginBottom;
+
     public DocumentStyle withMarginBottom(Dimension marginBottom) {
         this.marginBottom = marginBottom;
         return this;
@@ -106,6 +114,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginFooter")
     public Dimension marginFooter;
+
     public DocumentStyle withMarginFooter(Dimension marginFooter) {
         this.marginFooter = marginFooter;
         return this;
@@ -117,6 +126,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginHeader")
     public Dimension marginHeader;
+
     public DocumentStyle withMarginHeader(Dimension marginHeader) {
         this.marginHeader = marginHeader;
         return this;
@@ -128,6 +138,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginLeft")
     public Dimension marginLeft;
+
     public DocumentStyle withMarginLeft(Dimension marginLeft) {
         this.marginLeft = marginLeft;
         return this;
@@ -139,6 +150,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginRight")
     public Dimension marginRight;
+
     public DocumentStyle withMarginRight(Dimension marginRight) {
         this.marginRight = marginRight;
         return this;
@@ -150,6 +162,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginTop")
     public Dimension marginTop;
+
     public DocumentStyle withMarginTop(Dimension marginTop) {
         this.marginTop = marginTop;
         return this;
@@ -161,6 +174,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumberStart")
     public Integer pageNumberStart;
+
     public DocumentStyle withPageNumberStart(Integer pageNumberStart) {
         this.pageNumberStart = pageNumberStart;
         return this;
@@ -172,6 +186,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageSize")
     public Size pageSize;
+
     public DocumentStyle withPageSize(Size pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -183,6 +198,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useCustomHeaderFooterMargins")
     public Boolean useCustomHeaderFooterMargins;
+
     public DocumentStyle withUseCustomHeaderFooterMargins(Boolean useCustomHeaderFooterMargins) {
         this.useCustomHeaderFooterMargins = useCustomHeaderFooterMargins;
         return this;
@@ -194,6 +210,7 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useEvenPageHeaderFooter")
     public Boolean useEvenPageHeaderFooter;
+
     public DocumentStyle withUseEvenPageHeaderFooter(Boolean useEvenPageHeaderFooter) {
         this.useEvenPageHeaderFooter = useEvenPageHeaderFooter;
         return this;
@@ -205,9 +222,11 @@ public class DocumentStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useFirstPageHeaderFooter")
     public Boolean useFirstPageHeaderFooter;
+
     public DocumentStyle withUseFirstPageHeaderFooter(Boolean useFirstPageHeaderFooter) {
         this.useFirstPageHeaderFooter = useFirstPageHeaderFooter;
         return this;
     }
     
+    public DocumentStyle(){}
 }

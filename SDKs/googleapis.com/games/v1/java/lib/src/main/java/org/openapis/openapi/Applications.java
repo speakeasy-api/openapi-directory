@@ -58,11 +58,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesApplicationsGetResponse res = new org.openapis.openapi.models.operations.GamesApplicationsGetResponse() {{
+        org.openapis.openapi.models.operations.GamesApplicationsGetResponse res = new org.openapis.openapi.models.operations.GamesApplicationsGetResponse(contentType, httpRes.statusCode()) {{
             application = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse res = new org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse() {{
+        org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse res = new org.openapis.openapi.models.operations.GamesApplicationsGetEndPointResponse(contentType, httpRes.statusCode()) {{
             endPoint = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,10 +146,8 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse res = new org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse() {{
+        org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse res = new org.openapis.openapi.models.operations.GamesApplicationsPlayedResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -190,11 +184,9 @@ public class Applications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse res = new org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse() {{
+        org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse res = new org.openapis.openapi.models.operations.GamesApplicationsVerifyResponse(contentType, httpRes.statusCode()) {{
             applicationVerifyResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeTableReplicaAutoScalingResponse {
     
     public String contentType;
+
     public DescribeTableReplicaAutoScalingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeTableReplicaAutoScalingResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeTableReplicaAutoScalingOutput describeTableReplicaAutoScalingOutput;
+
     public DescribeTableReplicaAutoScalingResponse withDescribeTableReplicaAutoScalingOutput(org.openapis.openapi.models.shared.DescribeTableReplicaAutoScalingOutput describeTableReplicaAutoScalingOutput) {
         this.describeTableReplicaAutoScalingOutput = describeTableReplicaAutoScalingOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeTableReplicaAutoScalingResponse {
      */
     
     public Object internalServerError;
+
     public DescribeTableReplicaAutoScalingResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeTableReplicaAutoScalingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeTableReplicaAutoScalingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeTableReplicaAutoScalingResponse {
     
     
     public Integer statusCode;
+
     public DescribeTableReplicaAutoScalingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeTableReplicaAutoScalingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeTableReplicaAutoScalingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeTableReplicaAutoScalingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

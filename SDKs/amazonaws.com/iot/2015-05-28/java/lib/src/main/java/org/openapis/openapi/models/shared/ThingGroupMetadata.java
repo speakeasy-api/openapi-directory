@@ -22,6 +22,7 @@ public class ThingGroupMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public ThingGroupMetadata withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -30,6 +31,7 @@ public class ThingGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentGroupName")
     public String parentGroupName;
+
     public ThingGroupMetadata withParentGroupName(String parentGroupName) {
         this.parentGroupName = parentGroupName;
         return this;
@@ -38,9 +40,11 @@ public class ThingGroupMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rootToParentThingGroups")
     public GroupNameAndArn[] rootToParentThingGroups;
+
     public ThingGroupMetadata withRootToParentThingGroups(GroupNameAndArn[] rootToParentThingGroups) {
         this.rootToParentThingGroups = rootToParentThingGroups;
         return this;
     }
     
+    public ThingGroupMetadata(){}
 }

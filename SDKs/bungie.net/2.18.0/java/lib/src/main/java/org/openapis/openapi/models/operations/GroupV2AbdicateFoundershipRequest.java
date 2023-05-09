@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GroupV2AbdicateFoundershipRequest {
@@ -12,6 +13,7 @@ public class GroupV2AbdicateFoundershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=founderIdNew")
     public Long founderIdNew;
+
     public GroupV2AbdicateFoundershipRequest withFounderIdNew(Long founderIdNew) {
         this.founderIdNew = founderIdNew;
         return this;
@@ -22,6 +24,7 @@ public class GroupV2AbdicateFoundershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=groupId")
     public Long groupId;
+
     public GroupV2AbdicateFoundershipRequest withGroupId(Long groupId) {
         this.groupId = groupId;
         return this;
@@ -32,9 +35,15 @@ public class GroupV2AbdicateFoundershipRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=membershipType")
     public Integer membershipType;
+
     public GroupV2AbdicateFoundershipRequest withMembershipType(Integer membershipType) {
         this.membershipType = membershipType;
         return this;
     }
     
+    public GroupV2AbdicateFoundershipRequest(@JsonProperty("founderIdNew") Long founderIdNew, @JsonProperty("groupId") Long groupId, @JsonProperty("membershipType") Integer membershipType) {
+        this.founderIdNew = founderIdNew;
+        this.groupId = groupId;
+        this.membershipType = membershipType;
+  }
 }

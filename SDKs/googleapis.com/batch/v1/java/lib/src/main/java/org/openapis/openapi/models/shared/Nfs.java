@@ -18,6 +18,7 @@ public class Nfs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("remotePath")
     public String remotePath;
+
     public Nfs withRemotePath(String remotePath) {
         this.remotePath = remotePath;
         return this;
@@ -29,9 +30,11 @@ public class Nfs {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public String server;
+
     public Nfs withServer(String server) {
         this.server = server;
         return this;
     }
     
+    public Nfs(){}
 }

@@ -15,6 +15,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumAssetsWeights")
     public Double[] maximumAssetsWeights;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints withMaximumAssetsWeights(Double[] maximumAssetsWeights) {
         this.maximumAssetsWeights = maximumAssetsWeights;
         return this;
@@ -26,6 +27,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximumPortfolioExposure")
     public Double maximumPortfolioExposure;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints withMaximumPortfolioExposure(Double maximumPortfolioExposure) {
         this.maximumPortfolioExposure = maximumPortfolioExposure;
         return this;
@@ -37,6 +39,7 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumAssetsWeights")
     public Double[] minimumAssetsWeights;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints withMinimumAssetsWeights(Double[] minimumAssetsWeights) {
         this.minimumAssetsWeights = minimumAssetsWeights;
         return this;
@@ -48,9 +51,11 @@ public class PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstrain
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumPortfolioExposure")
     public Double minimumPortfolioExposure;
+
     public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints withMinimumPortfolioExposure(Double minimumPortfolioExposure) {
         this.minimumPortfolioExposure = minimumPortfolioExposure;
         return this;
     }
     
+    public PostPortfolioOptimizationHierarchicalRiskParityRequestBodyConstraints(){}
 }

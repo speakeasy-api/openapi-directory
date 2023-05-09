@@ -15,6 +15,7 @@ public class DeleteDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DeleteDataCellsFilterRequestBody withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -26,6 +27,7 @@ public class DeleteDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DeleteDataCellsFilterRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -37,6 +39,7 @@ public class DeleteDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableCatalogId")
     public String tableCatalogId;
+
     public DeleteDataCellsFilterRequestBody withTableCatalogId(String tableCatalogId) {
         this.tableCatalogId = tableCatalogId;
         return this;
@@ -48,9 +51,11 @@ public class DeleteDataCellsFilterRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public DeleteDataCellsFilterRequestBody withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DeleteDataCellsFilterRequestBody(){}
 }

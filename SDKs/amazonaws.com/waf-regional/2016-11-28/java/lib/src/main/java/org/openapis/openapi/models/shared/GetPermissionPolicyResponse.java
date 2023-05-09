@@ -15,9 +15,11 @@ public class GetPermissionPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Policy")
     public String policy;
+
     public GetPermissionPolicyResponse withPolicy(String policy) {
         this.policy = policy;
         return this;
     }
     
+    public GetPermissionPolicyResponse(){}
 }

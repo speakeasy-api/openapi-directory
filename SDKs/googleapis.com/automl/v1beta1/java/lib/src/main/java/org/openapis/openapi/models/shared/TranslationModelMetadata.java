@@ -18,6 +18,7 @@ public class TranslationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseModel")
     public String baseModel;
+
     public TranslationModelMetadata withBaseModel(String baseModel) {
         this.baseModel = baseModel;
         return this;
@@ -29,6 +30,7 @@ public class TranslationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceLanguageCode")
     public String sourceLanguageCode;
+
     public TranslationModelMetadata withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -40,9 +42,11 @@ public class TranslationModelMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetLanguageCode")
     public String targetLanguageCode;
+
     public TranslationModelMetadata withTargetLanguageCode(String targetLanguageCode) {
         this.targetLanguageCode = targetLanguageCode;
         return this;
     }
     
+    public TranslationModelMetadata(){}
 }

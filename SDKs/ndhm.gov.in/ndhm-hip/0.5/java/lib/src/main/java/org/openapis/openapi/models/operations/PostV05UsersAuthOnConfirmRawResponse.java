@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostV05UsersAuthOnConfirmRawResponse {
     
     public byte[] body;
+
     public PostV05UsersAuthOnConfirmRawResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostV05UsersAuthOnConfirmRawResponse {
     
     
     public String contentType;
+
     public PostV05UsersAuthOnConfirmRawResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthOnConfirmRawResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public PostV05UsersAuthOnConfirmRawResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -36,6 +40,7 @@ public class PostV05UsersAuthOnConfirmRawResponse {
     
     
     public Integer statusCode;
+
     public PostV05UsersAuthOnConfirmRawResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostV05UsersAuthOnConfirmRawResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostV05UsersAuthOnConfirmRawResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostV05UsersAuthOnConfirmRawResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

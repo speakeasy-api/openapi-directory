@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deprecationTime")
     public String deprecationTime;
+
     public GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo withDeprecationTime(String deprecationTime) {
         this.deprecationTime = deprecationTime;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replacementProcessorVersion")
     public String replacementProcessorVersion;
+
     public GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo withReplacementProcessorVersion(String replacementProcessorVersion) {
         this.replacementProcessorVersion = replacementProcessorVersion;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ProcessorVersionDeprecationInfo(){}
 }

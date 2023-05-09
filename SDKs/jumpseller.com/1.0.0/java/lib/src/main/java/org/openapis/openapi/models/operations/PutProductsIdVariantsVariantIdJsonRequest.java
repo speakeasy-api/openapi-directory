@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutProductsIdVariantsVariantIdJsonRequest {
@@ -12,6 +13,7 @@ public class PutProductsIdVariantsVariantIdJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.VariantEdit variantEdit;
+
     public PutProductsIdVariantsVariantIdJsonRequest withVariantEdit(org.openapis.openapi.models.shared.VariantEdit variantEdit) {
         this.variantEdit = variantEdit;
         return this;
@@ -22,6 +24,7 @@ public class PutProductsIdVariantsVariantIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public PutProductsIdVariantsVariantIdJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -32,6 +35,7 @@ public class PutProductsIdVariantsVariantIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Integer id;
+
     public PutProductsIdVariantsVariantIdJsonRequest withId(Integer id) {
         this.id = id;
         return this;
@@ -42,6 +46,7 @@ public class PutProductsIdVariantsVariantIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public PutProductsIdVariantsVariantIdJsonRequest withLogin(String login) {
         this.login = login;
         return this;
@@ -52,9 +57,17 @@ public class PutProductsIdVariantsVariantIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=variant_id")
     public Integer variantId;
+
     public PutProductsIdVariantsVariantIdJsonRequest withVariantId(Integer variantId) {
         this.variantId = variantId;
         return this;
     }
     
+    public PutProductsIdVariantsVariantIdJsonRequest(@JsonProperty("VariantEdit") org.openapis.openapi.models.shared.VariantEdit variantEdit, @JsonProperty("authtoken") String authtoken, @JsonProperty("id") Integer id, @JsonProperty("login") String login, @JsonProperty("variant_id") Integer variantId) {
+        this.variantEdit = variantEdit;
+        this.authtoken = authtoken;
+        this.id = id;
+        this.login = login;
+        this.variantId = variantId;
+  }
 }

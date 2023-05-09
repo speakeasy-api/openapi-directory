@@ -15,6 +15,7 @@ public class SensitiveDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public String category;
+
     public SensitiveDataResult withCategory(String category) {
         this.category = category;
         return this;
@@ -23,6 +24,7 @@ public class SensitiveDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Detections")
     public SensitiveDataDetections[] detections;
+
     public SensitiveDataResult withDetections(SensitiveDataDetections[] detections) {
         this.detections = detections;
         return this;
@@ -31,9 +33,11 @@ public class SensitiveDataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TotalCount")
     public Long totalCount;
+
     public SensitiveDataResult withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public SensitiveDataResult(){}
 }

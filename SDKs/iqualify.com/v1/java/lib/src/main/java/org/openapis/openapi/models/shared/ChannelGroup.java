@@ -12,9 +12,11 @@ public class ChannelGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoAssign")
     public Boolean autoAssign;
+
     public ChannelGroup withAutoAssign(Boolean autoAssign) {
         this.autoAssign = autoAssign;
         return this;
     }
     
+    public ChannelGroup(){}
 }

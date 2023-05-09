@@ -12,9 +12,11 @@ public class ImportCatalogToGlueRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public ImportCatalogToGlueRequest withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
     }
     
+    public ImportCatalogToGlueRequest(){}
 }

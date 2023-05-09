@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PmjayResponse {
     
     public String contentType;
+
     public PmjayResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PmjayResponse {
     
     
     public Integer statusCode;
+
     public PmjayResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PmjayResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PmjayResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class PmjayResponse {
      */
     
     public Pmjay400ApplicationJSON pmjay400ApplicationJSONObject;
+
     public PmjayResponse withPmjay400ApplicationJSONObject(Pmjay400ApplicationJSON pmjay400ApplicationJSONObject) {
         this.pmjay400ApplicationJSONObject = pmjay400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class PmjayResponse {
      */
     
     public Pmjay401ApplicationJSON pmjay401ApplicationJSONObject;
+
     public PmjayResponse withPmjay401ApplicationJSONObject(Pmjay401ApplicationJSON pmjay401ApplicationJSONObject) {
         this.pmjay401ApplicationJSONObject = pmjay401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class PmjayResponse {
      */
     
     public Pmjay404ApplicationJSON pmjay404ApplicationJSONObject;
+
     public PmjayResponse withPmjay404ApplicationJSONObject(Pmjay404ApplicationJSON pmjay404ApplicationJSONObject) {
         this.pmjay404ApplicationJSONObject = pmjay404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class PmjayResponse {
      */
     
     public Pmjay500ApplicationJSON pmjay500ApplicationJSONObject;
+
     public PmjayResponse withPmjay500ApplicationJSONObject(Pmjay500ApplicationJSON pmjay500ApplicationJSONObject) {
         this.pmjay500ApplicationJSONObject = pmjay500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class PmjayResponse {
      */
     
     public Pmjay502ApplicationJSON pmjay502ApplicationJSONObject;
+
     public PmjayResponse withPmjay502ApplicationJSONObject(Pmjay502ApplicationJSON pmjay502ApplicationJSONObject) {
         this.pmjay502ApplicationJSONObject = pmjay502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class PmjayResponse {
      */
     
     public Pmjay503ApplicationJSON pmjay503ApplicationJSONObject;
+
     public PmjayResponse withPmjay503ApplicationJSONObject(Pmjay503ApplicationJSON pmjay503ApplicationJSONObject) {
         this.pmjay503ApplicationJSONObject = pmjay503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class PmjayResponse {
      */
     
     public Pmjay504ApplicationJSON pmjay504ApplicationJSONObject;
+
     public PmjayResponse withPmjay504ApplicationJSONObject(Pmjay504ApplicationJSON pmjay504ApplicationJSONObject) {
         this.pmjay504ApplicationJSONObject = pmjay504ApplicationJSONObject;
         return this;
     }
     
+    public PmjayResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateExplainabilityResponse {
     
     public String contentType;
+
     public CreateExplainabilityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateExplainabilityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateExplainabilityResponse createExplainabilityResponse;
+
     public CreateExplainabilityResponse withCreateExplainabilityResponse(org.openapis.openapi.models.shared.CreateExplainabilityResponse createExplainabilityResponse) {
         this.createExplainabilityResponse = createExplainabilityResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateExplainabilityResponse {
      */
     
     public Object invalidInputException;
+
     public CreateExplainabilityResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateExplainabilityResponse {
      */
     
     public Object limitExceededException;
+
     public CreateExplainabilityResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateExplainabilityResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateExplainabilityResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateExplainabilityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateExplainabilityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateExplainabilityResponse {
     
     
     public Integer statusCode;
+
     public CreateExplainabilityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateExplainabilityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateExplainabilityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateExplainabilityResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateExplainabilityResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateExplainabilityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

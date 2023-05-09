@@ -15,6 +15,7 @@ public class HeaderObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("headersAllowList")
     public HeaderEnumEnum[] headersAllowList;
+
     public HeaderObject withHeadersAllowList(HeaderEnumEnum[] headersAllowList) {
         this.headersAllowList = headersAllowList;
         return this;
@@ -23,9 +24,11 @@ public class HeaderObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option")
     public ForwardValuesEnum option;
+
     public HeaderObject withOption(ForwardValuesEnum option) {
         this.option = option;
         return this;
     }
     
+    public HeaderObject(){}
 }

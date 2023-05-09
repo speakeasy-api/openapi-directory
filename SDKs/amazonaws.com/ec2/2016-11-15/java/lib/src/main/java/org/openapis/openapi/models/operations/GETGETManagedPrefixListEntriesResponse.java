@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETGETManagedPrefixListEntriesResponse {
     
     public byte[] body;
+
     public GETGETManagedPrefixListEntriesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETGETManagedPrefixListEntriesResponse {
     
     
     public String contentType;
+
     public GETGETManagedPrefixListEntriesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETGETManagedPrefixListEntriesResponse {
     
     
     public Integer statusCode;
+
     public GETGETManagedPrefixListEntriesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETGETManagedPrefixListEntriesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETGETManagedPrefixListEntriesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETGETManagedPrefixListEntriesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

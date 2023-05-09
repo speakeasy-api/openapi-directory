@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListComponentsResponse {
@@ -12,6 +13,7 @@ public class ListComponentsResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListComponentsResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListComponentsResponse {
      */
     
     public Object clientException;
+
     public ListComponentsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListComponentsResponse {
     
     
     public String contentType;
+
     public ListComponentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListComponentsResponse {
      */
     
     public Object forbiddenException;
+
     public ListComponentsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListComponentsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListComponentsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListComponentsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListComponentsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListComponentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListComponentsResponse listComponentsResponse;
+
     public ListComponentsResponse withListComponentsResponse(org.openapis.openapi.models.shared.ListComponentsResponse listComponentsResponse) {
         this.listComponentsResponse = listComponentsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListComponentsResponse {
      */
     
     public Object serviceException;
+
     public ListComponentsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListComponentsResponse {
     
     
     public Integer statusCode;
+
     public ListComponentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListComponentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListComponentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListComponentsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListComponentsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListComponentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

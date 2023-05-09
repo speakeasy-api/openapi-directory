@@ -15,6 +15,7 @@ public class Note {
      */
     
     public String associatedType;
+
     public Note withAssociatedType(String associatedType) {
         this.associatedType = associatedType;
         return this;
@@ -22,6 +23,7 @@ public class Note {
     
     
     public EmbeddedResource associatedWith;
+
     public Note withAssociatedWith(EmbeddedResource associatedWith) {
         this.associatedWith = associatedWith;
         return this;
@@ -29,6 +31,7 @@ public class Note {
     
     
     public EmbeddedResource call;
+
     public Note withCall(EmbeddedResource call) {
         this.call = call;
         return this;
@@ -39,6 +42,7 @@ public class Note {
      */
     
     public String content;
+
     public Note withContent(String content) {
         this.content = content;
         return this;
@@ -49,6 +53,7 @@ public class Note {
      */
     
     public OffsetDateTime createdAt;
+
     public Note withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -59,6 +64,7 @@ public class Note {
      */
     
     public Long id;
+
     public Note withId(Long id) {
         this.id = id;
         return this;
@@ -69,6 +75,7 @@ public class Note {
      */
     
     public OffsetDateTime updatedAt;
+
     public Note withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -76,9 +83,11 @@ public class Note {
     
     
     public EmbeddedResource user;
+
     public Note withUser(EmbeddedResource user) {
         this.user = user;
         return this;
     }
     
+    public Note(){}
 }

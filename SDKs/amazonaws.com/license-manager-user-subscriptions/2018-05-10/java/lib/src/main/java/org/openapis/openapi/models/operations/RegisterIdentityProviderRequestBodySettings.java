@@ -15,6 +15,7 @@ public class RegisterIdentityProviderRequestBodySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupId")
     public String securityGroupId;
+
     public RegisterIdentityProviderRequestBodySettings withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -23,9 +24,11 @@ public class RegisterIdentityProviderRequestBodySettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subnets")
     public String[] subnets;
+
     public RegisterIdentityProviderRequestBodySettings withSubnets(String[] subnets) {
         this.subnets = subnets;
         return this;
     }
     
+    public RegisterIdentityProviderRequestBodySettings(){}
 }

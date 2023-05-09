@@ -59,11 +59,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalCustomersListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalCustomersListResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalCustomersListResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalCustomersListResponse(contentType, httpRes.statusCode()) {{
             sasPortalListCustomersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,11 +105,9 @@ public class Customers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ProdTtSasportalCustomersProvisionDeploymentResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalCustomersProvisionDeploymentResponse() {{
+        org.openapis.openapi.models.operations.ProdTtSasportalCustomersProvisionDeploymentResponse res = new org.openapis.openapi.models.operations.ProdTtSasportalCustomersProvisionDeploymentResponse(contentType, httpRes.statusCode()) {{
             sasPortalProvisionDeploymentResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class ReturnPolicyOnlinePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days")
     public String days;
+
     public ReturnPolicyOnlinePolicy withDays(String days) {
         this.days = days;
         return this;
@@ -29,9 +30,11 @@ public class ReturnPolicyOnlinePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ReturnPolicyOnlinePolicyTypeEnum type;
+
     public ReturnPolicyOnlinePolicy withType(ReturnPolicyOnlinePolicyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ReturnPolicyOnlinePolicy(){}
 }

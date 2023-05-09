@@ -15,9 +15,13 @@ public class PostAssetsCorrelationMatrixDistance200ApplicationJSON {
      */
     @JsonProperty("assetsCorrelationMatrixDistance")
     public Double assetsCorrelationMatrixDistance;
+
     public PostAssetsCorrelationMatrixDistance200ApplicationJSON withAssetsCorrelationMatrixDistance(Double assetsCorrelationMatrixDistance) {
         this.assetsCorrelationMatrixDistance = assetsCorrelationMatrixDistance;
         return this;
     }
     
+    public PostAssetsCorrelationMatrixDistance200ApplicationJSON(@JsonProperty("assetsCorrelationMatrixDistance") Double assetsCorrelationMatrixDistance) {
+        this.assetsCorrelationMatrixDistance = assetsCorrelationMatrixDistance;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DevicesPostFormResponse {
     
     public byte[] body;
+
     public DevicesPostFormResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class DevicesPostFormResponse {
     
     
     public String contentType;
+
     public DevicesPostFormResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class DevicesPostFormResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceToPost deviceToPost;
+
     public DevicesPostFormResponse withDeviceToPost(org.openapis.openapi.models.shared.DeviceToPost deviceToPost) {
         this.deviceToPost = deviceToPost;
         return this;
@@ -33,6 +37,7 @@ public class DevicesPostFormResponse {
     
     
     public Integer statusCode;
+
     public DevicesPostFormResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class DevicesPostFormResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DevicesPostFormResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DevicesPostFormResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

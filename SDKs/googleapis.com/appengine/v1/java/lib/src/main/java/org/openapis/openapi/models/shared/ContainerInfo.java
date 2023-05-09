@@ -18,9 +18,11 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public ContainerInfo withImage(String image) {
         this.image = image;
         return this;
     }
     
+    public ContainerInfo(){}
 }

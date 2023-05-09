@@ -59,12 +59,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse res = new org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse() {{
+        org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse res = new org.openapis.openapi.models.operations.CompanyAlternativeSearchResponse(contentType, httpRes.statusCode()) {{
             companyAlternativeSearch200ApplicationJSONObjects = null;
             companyAlternativeSearchDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,12 +106,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyAnnouncementResponse res = new org.openapis.openapi.models.operations.CompanyAnnouncementResponse() {{
+        org.openapis.openapi.models.operations.CompanyAnnouncementResponse res = new org.openapis.openapi.models.operations.CompanyAnnouncementResponse(contentType, httpRes.statusCode()) {{
             companyAnnouncement200ApplicationJSONObjects = null;
             companyAnnouncementDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,12 +155,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse() {{
+        org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchISINResponse(contentType, httpRes.statusCode()) {{
             companyDeepsearchISIN200ApplicationJSONObjects = null;
             companyDeepsearchISINDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,12 +208,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse() {{
+        org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchLEIResponse(contentType, httpRes.statusCode()) {{
             companyDeepsearchLEI200ApplicationJSONObject = null;
             companyDeepsearchLEIDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -263,12 +255,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse() {{
+        org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchNameResponse(contentType, httpRes.statusCode()) {{
             companyDeepsearchName200ApplicationJSONObjects = null;
             companyDeepsearchNameDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -312,12 +302,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse() {{
+        org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse res = new org.openapis.openapi.models.operations.CompanyDeepsearchNumberResponse(contentType, httpRes.statusCode()) {{
             companyDeepsearchNumber200ApplicationJSONObjects = null;
             companyDeepsearchNumberDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -367,12 +355,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse res = new org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse() {{
+        org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse res = new org.openapis.openapi.models.operations.CompanyIdAnnouncementsResponse(contentType, httpRes.statusCode()) {{
             companyIdAnnouncements200ApplicationJSONObjects = null;
             companyIdAnnouncementsDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -422,12 +408,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyIdDatasetResponse res = new org.openapis.openapi.models.operations.CompanyIdDatasetResponse() {{
+        org.openapis.openapi.models.operations.CompanyIdDatasetResponse res = new org.openapis.openapi.models.operations.CompanyIdDatasetResponse(contentType, httpRes.statusCode()) {{
             oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany = null;
             companyIdDatasetDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -477,12 +461,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyIdSuperResponse res = new org.openapis.openapi.models.operations.CompanyIdSuperResponse() {{
+        org.openapis.openapi.models.operations.CompanyIdSuperResponse res = new org.openapis.openapi.models.operations.CompanyIdSuperResponse(contentType, httpRes.statusCode()) {{
             companyIdSuper200ApplicationJSONObjects = null;
             companyIdSuperDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -506,10 +488,11 @@ public class V1Company {
     /**
      * Get available ChangeTypes
      * Get current list of available ChangeTypes to subscribe to
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse companyMonitorChangeTypesList() throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse companyMonitorChangeTypesList(org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/monitoring/changeTypes");
         
@@ -518,17 +501,16 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse res = new org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse() {{
+        org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse res = new org.openapis.openapi.models.operations.CompanyMonitorChangeTypesListResponse(contentType, httpRes.statusCode()) {{
             companyMonitorChangeTypesList200ApplicationJSONStrings = null;
             companyMonitorChangeTypesListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -572,12 +554,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyMonitorIdResponse res = new org.openapis.openapi.models.operations.CompanyMonitorIdResponse() {{
+        org.openapis.openapi.models.operations.CompanyMonitorIdResponse res = new org.openapis.openapi.models.operations.CompanyMonitorIdResponse(contentType, httpRes.statusCode()) {{
             companyMonitorId200ApplicationJSONObjects = null;
             companyMonitorIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,10 +581,11 @@ public class V1Company {
     /**
      * Retrieves a list of registered monitors
      * Query list of all registered monitors for logged in user
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyMonitorListResponse companyMonitorList() throws Exception {
+    public org.openapis.openapi.models.operations.CompanyMonitorListResponse companyMonitorList(org.openapis.openapi.models.operations.CompanyMonitorListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/monitoring/list");
         
@@ -613,17 +594,16 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyMonitorListResponse res = new org.openapis.openapi.models.operations.CompanyMonitorListResponse() {{
+        org.openapis.openapi.models.operations.CompanyMonitorListResponse res = new org.openapis.openapi.models.operations.CompanyMonitorListResponse(contentType, httpRes.statusCode()) {{
             companyMonitorList200ApplicationJSONObjects = null;
             companyMonitorListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -669,12 +649,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse res = new org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse() {{
+        org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse res = new org.openapis.openapi.models.operations.CompanyMonitorRegisterResponse(contentType, httpRes.statusCode()) {{
             companyMonitorRegister200ApplicationJSONObject = null;
             companyMonitorRegisterDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -718,11 +696,9 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse res = new org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse() {{
+        org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse res = new org.openapis.openapi.models.operations.CompanyMonitorUnregisterResponse(contentType, httpRes.statusCode()) {{
             companyMonitorUnregisterDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -761,12 +737,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyNotificationIdResponse res = new org.openapis.openapi.models.operations.CompanyNotificationIdResponse() {{
+        org.openapis.openapi.models.operations.CompanyNotificationIdResponse res = new org.openapis.openapi.models.operations.CompanyNotificationIdResponse(contentType, httpRes.statusCode()) {{
             companyNotificationId200ApplicationJSONObjects = null;
             companyNotificationIdDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -790,10 +764,11 @@ public class V1Company {
     /**
      * Retrieves a list of registered notifications
      * Query list of registered callback URLs for logged in user
+     * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.CompanyNotificationListResponse companyNotificationList() throws Exception {
+    public org.openapis.openapi.models.operations.CompanyNotificationListResponse companyNotificationList(org.openapis.openapi.models.operations.CompanyNotificationListSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/api/v1/company/notification/list");
         
@@ -802,17 +777,16 @@ public class V1Company {
         req.setURL(url);
         
         
-        HTTPClient client = this._defaultClient;
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
         HttpResponse<byte[]> httpRes = client.send(req);
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyNotificationListResponse res = new org.openapis.openapi.models.operations.CompanyNotificationListResponse() {{
+        org.openapis.openapi.models.operations.CompanyNotificationListResponse res = new org.openapis.openapi.models.operations.CompanyNotificationListResponse(contentType, httpRes.statusCode()) {{
             companyNotificationList200ApplicationJSONObjects = null;
             companyNotificationListDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -858,12 +832,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse res = new org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse() {{
+        org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse res = new org.openapis.openapi.models.operations.CompanyNotificationRegisterResponse(contentType, httpRes.statusCode()) {{
             companyNotificationRegister200ApplicationJSONObject = null;
             companyNotificationRegisterDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -907,11 +879,9 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse res = new org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse() {{
+        org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse res = new org.openapis.openapi.models.operations.CompanyNotificationUnregisterResponse(contentType, httpRes.statusCode()) {{
             companyNotificationUnregisterDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -956,12 +926,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanySearchNameResponse res = new org.openapis.openapi.models.operations.CompanySearchNameResponse() {{
+        org.openapis.openapi.models.operations.CompanySearchNameResponse res = new org.openapis.openapi.models.operations.CompanySearchNameResponse(contentType, httpRes.statusCode()) {{
             companySearchName200ApplicationJSONObjects = null;
             companySearchNameDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1011,12 +979,10 @@ public class V1Company {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CompanySearchNumberResponse res = new org.openapis.openapi.models.operations.CompanySearchNumberResponse() {{
+        org.openapis.openapi.models.operations.CompanySearchNumberResponse res = new org.openapis.openapi.models.operations.CompanySearchNumberResponse(contentType, httpRes.statusCode()) {{
             companySearchNumber200ApplicationJSONObjects = null;
             companySearchNumberDefaultApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

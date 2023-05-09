@@ -15,6 +15,7 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthDate")
     public String birthDate;
+
     public UpdateClientProfileRequestBody withBirthDate(String birthDate) {
         this.birthDate = birthDate;
         return this;
@@ -26,6 +27,7 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public UpdateClientProfileRequestBody withDocument(String document) {
         this.document = document;
         return this;
@@ -37,6 +39,7 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentType")
     public String documentType;
+
     public UpdateClientProfileRequestBody withDocumentType(String documentType) {
         this.documentType = documentType;
         return this;
@@ -48,6 +51,7 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public UpdateClientProfileRequestBody withEmail(String email) {
         this.email = email;
         return this;
@@ -59,6 +63,7 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public UpdateClientProfileRequestBody withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -70,9 +75,11 @@ public class UpdateClientProfileRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public UpdateClientProfileRequestBody withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
+    public UpdateClientProfileRequestBody(){}
 }

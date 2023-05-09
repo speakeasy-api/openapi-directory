@@ -18,6 +18,7 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public TimePeriod withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -29,9 +30,11 @@ public class TimePeriod {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public TimePeriod withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimePeriod(){}
 }

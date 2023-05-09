@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateTimeToLiveInput {
     @JsonProperty("TableName")
     public String tableName;
+
     public UpdateTimeToLiveInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -19,9 +20,14 @@ public class UpdateTimeToLiveInput {
     
     @JsonProperty("TimeToLiveSpecification")
     public TimeToLiveSpecification timeToLiveSpecification;
+
     public UpdateTimeToLiveInput withTimeToLiveSpecification(TimeToLiveSpecification timeToLiveSpecification) {
         this.timeToLiveSpecification = timeToLiveSpecification;
         return this;
     }
     
+    public UpdateTimeToLiveInput(@JsonProperty("TableName") String tableName, @JsonProperty("TimeToLiveSpecification") TimeToLiveSpecification timeToLiveSpecification) {
+        this.tableName = tableName;
+        this.timeToLiveSpecification = timeToLiveSpecification;
+  }
 }

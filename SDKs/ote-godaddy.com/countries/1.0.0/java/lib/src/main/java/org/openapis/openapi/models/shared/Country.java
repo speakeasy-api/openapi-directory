@@ -15,6 +15,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("callingCode")
     public String callingCode;
+
     public Country withCallingCode(String callingCode) {
         this.callingCode = callingCode;
         return this;
@@ -26,6 +27,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryKey")
     public String countryKey;
+
     public Country withCountryKey(String countryKey) {
         this.countryKey = countryKey;
         return this;
@@ -37,6 +39,7 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public Country withLabel(String label) {
         this.label = label;
         return this;
@@ -48,9 +51,11 @@ public class Country {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("states")
     public State[] states;
+
     public Country withStates(State[] states) {
         this.states = states;
         return this;
     }
     
+    public Country(){}
 }

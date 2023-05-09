@@ -18,6 +18,7 @@ public class NotificationEndpointGrpcSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authority")
     public String authority;
+
     public NotificationEndpointGrpcSettings withAuthority(String authority) {
         this.authority = authority;
         return this;
@@ -29,6 +30,7 @@ public class NotificationEndpointGrpcSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endpoint")
     public String endpoint;
+
     public NotificationEndpointGrpcSettings withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -40,6 +42,7 @@ public class NotificationEndpointGrpcSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadName")
     public String payloadName;
+
     public NotificationEndpointGrpcSettings withPayloadName(String payloadName) {
         this.payloadName = payloadName;
         return this;
@@ -51,6 +54,7 @@ public class NotificationEndpointGrpcSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resendInterval")
     public Duration resendInterval;
+
     public NotificationEndpointGrpcSettings withResendInterval(Duration resendInterval) {
         this.resendInterval = resendInterval;
         return this;
@@ -62,9 +66,11 @@ public class NotificationEndpointGrpcSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryDurationSec")
     public Long retryDurationSec;
+
     public NotificationEndpointGrpcSettings withRetryDurationSec(Long retryDurationSec) {
         this.retryDurationSec = retryDurationSec;
         return this;
     }
     
+    public NotificationEndpointGrpcSettings(){}
 }

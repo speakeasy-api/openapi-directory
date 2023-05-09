@@ -15,6 +15,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentReportEvidenceCount")
     public Long assessmentReportEvidenceCount;
+
     public AssessmentControl withAssessmentReportEvidenceCount(Long assessmentReportEvidenceCount) {
         this.assessmentReportEvidenceCount = assessmentReportEvidenceCount;
         return this;
@@ -23,6 +24,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public ControlComment[] comments;
+
     public AssessmentControl withComments(ControlComment[] comments) {
         this.comments = comments;
         return this;
@@ -31,6 +33,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public AssessmentControl withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceCount")
     public Long evidenceCount;
+
     public AssessmentControl withEvidenceCount(Long evidenceCount) {
         this.evidenceCount = evidenceCount;
         return this;
@@ -47,6 +51,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evidenceSources")
     public String[] evidenceSources;
+
     public AssessmentControl withEvidenceSources(String[] evidenceSources) {
         this.evidenceSources = evidenceSources;
         return this;
@@ -55,6 +60,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AssessmentControl withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AssessmentControl withName(String name) {
         this.name = name;
         return this;
@@ -71,6 +78,7 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public ControlResponseEnum response;
+
     public AssessmentControl withResponse(ControlResponseEnum response) {
         this.response = response;
         return this;
@@ -79,9 +87,11 @@ public class AssessmentControl {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ControlStatusEnum status;
+
     public AssessmentControl withStatus(ControlStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public AssessmentControl(){}
 }

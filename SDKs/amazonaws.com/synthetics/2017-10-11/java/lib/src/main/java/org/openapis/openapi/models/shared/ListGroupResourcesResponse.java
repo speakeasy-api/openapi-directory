@@ -15,6 +15,7 @@ public class ListGroupResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListGroupResourcesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListGroupResourcesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Resources")
     public String[] resources;
+
     public ListGroupResourcesResponse withResources(String[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public ListGroupResourcesResponse(){}
 }

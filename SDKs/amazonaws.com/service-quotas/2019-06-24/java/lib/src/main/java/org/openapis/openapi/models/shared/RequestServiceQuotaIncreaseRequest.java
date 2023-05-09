@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RequestServiceQuotaIncreaseRequest {
     @JsonProperty("DesiredValue")
     public Double desiredValue;
+
     public RequestServiceQuotaIncreaseRequest withDesiredValue(Double desiredValue) {
         this.desiredValue = desiredValue;
         return this;
@@ -16,6 +17,7 @@ public class RequestServiceQuotaIncreaseRequest {
     
     @JsonProperty("QuotaCode")
     public String quotaCode;
+
     public RequestServiceQuotaIncreaseRequest withQuotaCode(String quotaCode) {
         this.quotaCode = quotaCode;
         return this;
@@ -23,9 +25,15 @@ public class RequestServiceQuotaIncreaseRequest {
     
     @JsonProperty("ServiceCode")
     public String serviceCode;
+
     public RequestServiceQuotaIncreaseRequest withServiceCode(String serviceCode) {
         this.serviceCode = serviceCode;
         return this;
     }
     
+    public RequestServiceQuotaIncreaseRequest(@JsonProperty("DesiredValue") Double desiredValue, @JsonProperty("QuotaCode") String quotaCode, @JsonProperty("ServiceCode") String serviceCode) {
+        this.desiredValue = desiredValue;
+        this.quotaCode = quotaCode;
+        this.serviceCode = serviceCode;
+  }
 }

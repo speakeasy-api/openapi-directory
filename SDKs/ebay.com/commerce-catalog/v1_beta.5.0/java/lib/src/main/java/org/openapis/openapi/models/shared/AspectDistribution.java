@@ -18,6 +18,7 @@ public class AspectDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aspectValueDistributions")
     public AspectValueDistribution[] aspectValueDistributions;
+
     public AspectDistribution withAspectValueDistributions(AspectValueDistribution[] aspectValueDistributions) {
         this.aspectValueDistributions = aspectValueDistributions;
         return this;
@@ -29,9 +30,11 @@ public class AspectDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedAspectName")
     public String localizedAspectName;
+
     public AspectDistribution withLocalizedAspectName(String localizedAspectName) {
         this.localizedAspectName = localizedAspectName;
         return this;
     }
     
+    public AspectDistribution(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetFriendInfoResponse {
@@ -12,6 +13,7 @@ public class GetFriendInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public GetFriendInfoResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -19,6 +21,7 @@ public class GetFriendInfoResponse {
     
     
     public String contentType;
+
     public GetFriendInfoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetFriendInfoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetFriendInfoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetFriendInfoResponse {
     
     
     public Integer statusCode;
+
     public GetFriendInfoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class GetFriendInfoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetFriendInfoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class GetFriendInfoResponse {
      */
     
     public org.openapis.openapi.models.shared.UserFriendInfo userFriendInfo;
+
     public GetFriendInfoResponse withUserFriendInfo(org.openapis.openapi.models.shared.UserFriendInfo userFriendInfo) {
         this.userFriendInfo = userFriendInfo;
         return this;
     }
     
+    public GetFriendInfoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

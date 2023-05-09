@@ -12,9 +12,11 @@ public class ScimServiceProviderConfigSort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported")
     public Boolean supported;
+
     public ScimServiceProviderConfigSort withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public ScimServiceProviderConfigSort(){}
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1ClassificationMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isMultiLabel")
     public Boolean isMultiLabel;
+
     public GoogleCloudDatalabelingV1beta1ClassificationMetadata withIsMultiLabel(Boolean isMultiLabel) {
         this.isMultiLabel = isMultiLabel;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ClassificationMetadata(){}
 }

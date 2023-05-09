@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class MemberAccountStatus {
     @JsonProperty("AccountId")
     public String accountId;
+
     public MemberAccountStatus withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -26,6 +27,7 @@ public class MemberAccountStatus {
     
     @JsonProperty("ConfigRuleName")
     public String configRuleName;
+
     public MemberAccountStatus withConfigRuleName(String configRuleName) {
         this.configRuleName = configRuleName;
         return this;
@@ -34,6 +36,7 @@ public class MemberAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public MemberAccountStatus withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -42,6 +45,7 @@ public class MemberAccountStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public MemberAccountStatus withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -52,6 +56,7 @@ public class MemberAccountStatus {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public MemberAccountStatus withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -59,9 +64,15 @@ public class MemberAccountStatus {
     
     @JsonProperty("MemberAccountRuleStatus")
     public MemberAccountRuleStatusEnum memberAccountRuleStatus;
+
     public MemberAccountStatus withMemberAccountRuleStatus(MemberAccountRuleStatusEnum memberAccountRuleStatus) {
         this.memberAccountRuleStatus = memberAccountRuleStatus;
         return this;
     }
     
+    public MemberAccountStatus(@JsonProperty("AccountId") String accountId, @JsonProperty("ConfigRuleName") String configRuleName, @JsonProperty("MemberAccountRuleStatus") MemberAccountRuleStatusEnum memberAccountRuleStatus) {
+        this.accountId = accountId;
+        this.configRuleName = configRuleName;
+        this.memberAccountRuleStatus = memberAccountRuleStatus;
+  }
 }

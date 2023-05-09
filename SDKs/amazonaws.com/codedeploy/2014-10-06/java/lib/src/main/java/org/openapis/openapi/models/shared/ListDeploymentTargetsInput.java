@@ -12,6 +12,7 @@ public class ListDeploymentTargetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deploymentId")
     public String deploymentId;
+
     public ListDeploymentTargetsInput withDeploymentId(String deploymentId) {
         this.deploymentId = deploymentId;
         return this;
@@ -20,6 +21,7 @@ public class ListDeploymentTargetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListDeploymentTargetsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListDeploymentTargetsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetFilters")
     public java.util.Map<String, String[]> targetFilters;
+
     public ListDeploymentTargetsInput withTargetFilters(java.util.Map<String, String[]> targetFilters) {
         this.targetFilters = targetFilters;
         return this;
     }
     
+    public ListDeploymentTargetsInput(){}
 }

@@ -18,9 +18,11 @@ public class GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requests")
     public GoogleAnalyticsAdminV1alphaUpdateUserLinkRequestInput[] requests;
+
     public GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequestInput withRequests(GoogleAnalyticsAdminV1alphaUpdateUserLinkRequestInput[] requests) {
         this.requests = requests;
         return this;
     }
     
+    public GoogleAnalyticsAdminV1alphaBatchUpdateUserLinksRequestInput(){}
 }

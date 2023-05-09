@@ -18,9 +18,11 @@ public class AddItemForPortfolio200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public AddItemForPortfolio200ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
     }
     
+    public AddItemForPortfolio200ApplicationJSON(){}
 }

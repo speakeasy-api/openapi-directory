@@ -187,6 +187,12 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyExecutionActi
 lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyExecutionActivityMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyExecutionMetricsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyExecutionMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunExecutionActivityMetricsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunExecutionActivityMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunExecutionMetricsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunExecutionMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunsRequest.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetJourneyRunsResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPushTemplateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetPushTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecommenderConfigurationRequest.java
@@ -573,6 +579,14 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetJourneyExecutionActivity
 lib/src/main/java/org/openapis/openapi/models/shared/JourneyExecutionActivityMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetJourneyExecutionMetricsResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/JourneyExecutionMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetJourneyRunExecutionActivityMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JourneyRunExecutionActivityMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetJourneyRunExecutionMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JourneyRunExecutionMetricsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/GetJourneyRunsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JourneyRunsResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JourneyRunResponse.java
+lib/src/main/java/org/openapis/openapi/models/shared/JourneyRunStatusEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetPushTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/PushNotificationTemplateResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRecommenderConfigurationResponse.java
@@ -667,4 +681,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/UpdateVoiceTemplateResponse
 lib/src/main/java/org/openapis/openapi/models/shared/VerifyOTPMessageResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/VerificationResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

@@ -18,9 +18,11 @@ public class GoogleCloudRecommenderV1MarkRecommendationDismissedRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudRecommenderV1MarkRecommendationDismissedRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public GoogleCloudRecommenderV1MarkRecommendationDismissedRequest(){}
 }

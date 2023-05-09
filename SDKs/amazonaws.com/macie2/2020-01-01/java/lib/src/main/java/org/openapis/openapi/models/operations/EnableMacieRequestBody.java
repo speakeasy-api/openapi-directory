@@ -15,6 +15,7 @@ public class EnableMacieRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public EnableMacieRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -26,6 +27,7 @@ public class EnableMacieRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingPublishingFrequency")
     public EnableMacieRequestBodyFindingPublishingFrequencyEnum findingPublishingFrequency;
+
     public EnableMacieRequestBody withFindingPublishingFrequency(EnableMacieRequestBodyFindingPublishingFrequencyEnum findingPublishingFrequency) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         return this;
@@ -37,9 +39,11 @@ public class EnableMacieRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public EnableMacieRequestBodyStatusEnum status;
+
     public EnableMacieRequestBody withStatus(EnableMacieRequestBodyStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EnableMacieRequestBody(){}
 }

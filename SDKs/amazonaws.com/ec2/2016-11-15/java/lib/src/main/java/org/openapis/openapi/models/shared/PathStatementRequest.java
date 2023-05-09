@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class PathStatementRequest {
     
     public PacketHeaderStatementRequest packetHeaderStatement;
+
     public PathStatementRequest withPacketHeaderStatement(PacketHeaderStatementRequest packetHeaderStatement) {
         this.packetHeaderStatement = packetHeaderStatement;
         return this;
@@ -19,9 +20,11 @@ public class PathStatementRequest {
     
     
     public ResourceStatementRequest resourceStatement;
+
     public PathStatementRequest withResourceStatement(ResourceStatementRequest resourceStatement) {
         this.resourceStatement = resourceStatement;
         return this;
     }
     
+    public PathStatementRequest(){}
 }

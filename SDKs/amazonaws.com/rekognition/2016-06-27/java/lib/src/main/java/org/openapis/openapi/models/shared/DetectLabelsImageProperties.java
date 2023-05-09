@@ -15,6 +15,7 @@ public class DetectLabelsImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Background")
     public DetectLabelsImageBackground background;
+
     public DetectLabelsImageProperties withBackground(DetectLabelsImageBackground background) {
         this.background = background;
         return this;
@@ -23,6 +24,7 @@ public class DetectLabelsImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DominantColors")
     public DominantColor[] dominantColors;
+
     public DetectLabelsImageProperties withDominantColors(DominantColor[] dominantColors) {
         this.dominantColors = dominantColors;
         return this;
@@ -31,6 +33,7 @@ public class DetectLabelsImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Foreground")
     public DetectLabelsImageForeground foreground;
+
     public DetectLabelsImageProperties withForeground(DetectLabelsImageForeground foreground) {
         this.foreground = foreground;
         return this;
@@ -39,9 +42,11 @@ public class DetectLabelsImageProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Quality")
     public DetectLabelsImageQuality quality;
+
     public DetectLabelsImageProperties withQuality(DetectLabelsImageQuality quality) {
         this.quality = quality;
         return this;
     }
     
+    public DetectLabelsImageProperties(){}
 }

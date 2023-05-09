@@ -15,6 +15,7 @@ public class SearchTablesByLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public SearchTablesByLFTagsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class SearchTablesByLFTagsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableList")
     public TaggedTable[] tableList;
+
     public SearchTablesByLFTagsResponse withTableList(TaggedTable[] tableList) {
         this.tableList = tableList;
         return this;
     }
     
+    public SearchTablesByLFTagsResponse(){}
 }

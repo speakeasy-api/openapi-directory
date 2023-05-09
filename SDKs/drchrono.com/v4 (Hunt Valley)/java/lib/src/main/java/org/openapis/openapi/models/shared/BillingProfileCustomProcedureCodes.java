@@ -15,6 +15,7 @@ public class BillingProfileCustomProcedureCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BillingProfileCustomProcedureCodes withCode(String code) {
         this.code = code;
         return this;
@@ -26,6 +27,7 @@ public class BillingProfileCustomProcedureCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public String price;
+
     public BillingProfileCustomProcedureCodes withPrice(String price) {
         this.price = price;
         return this;
@@ -37,9 +39,11 @@ public class BillingProfileCustomProcedureCodes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("quantity")
     public String quantity;
+
     public BillingProfileCustomProcedureCodes withQuantity(String quantity) {
         this.quantity = quantity;
         return this;
     }
     
+    public BillingProfileCustomProcedureCodes(){}
 }

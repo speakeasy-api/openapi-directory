@@ -15,6 +15,7 @@ public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Alias")
     public String alias;
+
     public OrganizationSummary withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -23,6 +24,7 @@ public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefaultMailDomain")
     public String defaultMailDomain;
+
     public OrganizationSummary withDefaultMailDomain(String defaultMailDomain) {
         this.defaultMailDomain = defaultMailDomain;
         return this;
@@ -31,6 +33,7 @@ public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorMessage")
     public String errorMessage;
+
     public OrganizationSummary withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -39,6 +42,7 @@ public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OrganizationId")
     public String organizationId;
+
     public OrganizationSummary withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
@@ -47,9 +51,11 @@ public class OrganizationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public String state;
+
     public OrganizationSummary withState(String state) {
         this.state = state;
         return this;
     }
     
+    public OrganizationSummary(){}
 }

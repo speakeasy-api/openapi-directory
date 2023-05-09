@@ -15,6 +15,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public Links links;
+
     public Store withLinks(Links links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public StoreLocation address;
+
     public Store withAddress(StoreLocation address) {
         this.address = address;
         return this;
@@ -35,6 +37,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessLineIds")
     public String[] businessLineIds;
+
     public Store withBusinessLineIds(String[] businessLineIds) {
         this.businessLineIds = businessLineIds;
         return this;
@@ -46,6 +49,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Store withDescription(String description) {
         this.description = description;
         return this;
@@ -57,6 +61,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("externalReferenceId")
     public String externalReferenceId;
+
     public Store withExternalReferenceId(String externalReferenceId) {
         this.externalReferenceId = externalReferenceId;
         return this;
@@ -68,6 +73,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Store withId(String id) {
         this.id = id;
         return this;
@@ -79,6 +85,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantId")
     public String merchantId;
+
     public Store withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -90,6 +97,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phoneNumber")
     public String phoneNumber;
+
     public Store withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -102,6 +110,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference")
     public String reference;
+
     public Store withReference(String reference) {
         this.reference = reference;
         return this;
@@ -113,6 +122,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shopperStatement")
     public String shopperStatement;
+
     public Store withShopperStatement(String shopperStatement) {
         this.shopperStatement = shopperStatement;
         return this;
@@ -121,6 +131,7 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitConfiguration")
     public StoreSplitConfiguration splitConfiguration;
+
     public Store withSplitConfiguration(StoreSplitConfiguration splitConfiguration) {
         this.splitConfiguration = splitConfiguration;
         return this;
@@ -136,9 +147,11 @@ public class Store {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StoreStatusEnum status;
+
     public Store withStatus(StoreStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public Store(){}
 }

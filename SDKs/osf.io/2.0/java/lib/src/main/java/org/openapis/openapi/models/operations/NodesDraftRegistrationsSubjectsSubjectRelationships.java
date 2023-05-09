@@ -15,6 +15,7 @@ public class NodesDraftRegistrationsSubjectsSubjectRelationships {
      */
     
     public String children;
+
     public NodesDraftRegistrationsSubjectsSubjectRelationships withChildren(String children) {
         this.children = children;
         return this;
@@ -25,9 +26,11 @@ public class NodesDraftRegistrationsSubjectsSubjectRelationships {
      */
     
     public String parent;
+
     public NodesDraftRegistrationsSubjectsSubjectRelationships withParent(String parent) {
         this.parent = parent;
         return this;
     }
     
+    public NodesDraftRegistrationsSubjectsSubjectRelationships(){}
 }

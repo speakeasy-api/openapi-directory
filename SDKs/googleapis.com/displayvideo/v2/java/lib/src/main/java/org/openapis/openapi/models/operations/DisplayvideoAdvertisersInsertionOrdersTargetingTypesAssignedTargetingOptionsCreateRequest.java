@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AssignedTargetingOptionInput assignedTargetingOptionInput;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withAssignedTargetingOptionInput(org.openapis.openapi.models.shared.AssignedTargetingOptionInput assignedTargetingOptionInput) {
         this.assignedTargetingOptionInput = assignedTargetingOptionInput;
         return this;
@@ -29,6 +32,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -49,6 +54,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -59,6 +65,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -69,6 +76,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -79,6 +87,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=insertionOrderId")
     public String insertionOrderId;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withInsertionOrderId(String insertionOrderId) {
         this.insertionOrderId = insertionOrderId;
         return this;
@@ -89,6 +98,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -99,6 +109,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -109,6 +120,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -119,6 +131,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -129,6 +142,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=targetingType")
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum targetingType;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withTargetingType(DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum targetingType) {
         this.targetingType = targetingType;
         return this;
@@ -139,6 +153,7 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,15 @@ public class DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargeti
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateRequest(@JsonProperty("advertiserId") String advertiserId, @JsonProperty("insertionOrderId") String insertionOrderId, @JsonProperty("targetingType") DisplayvideoAdvertisersInsertionOrdersTargetingTypesAssignedTargetingOptionsCreateTargetingTypeEnum targetingType) {
+        this.advertiserId = advertiserId;
+        this.insertionOrderId = insertionOrderId;
+        this.targetingType = targetingType;
+  }
 }

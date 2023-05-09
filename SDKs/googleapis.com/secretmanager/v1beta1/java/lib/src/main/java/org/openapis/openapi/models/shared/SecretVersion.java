@@ -18,6 +18,7 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public SecretVersion withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destroyTime")
     public String destroyTime;
+
     public SecretVersion withDestroyTime(String destroyTime) {
         this.destroyTime = destroyTime;
         return this;
@@ -40,6 +42,7 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SecretVersion withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +54,11 @@ public class SecretVersion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public SecretVersionStateEnum state;
+
     public SecretVersion withState(SecretVersionStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SecretVersion(){}
 }

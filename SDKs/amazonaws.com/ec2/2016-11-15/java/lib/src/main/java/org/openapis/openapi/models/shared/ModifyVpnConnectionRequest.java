@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyVpnConnectionRequest {
     
     public String customerGatewayId;
+
     public ModifyVpnConnectionRequest withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -16,6 +17,7 @@ public class ModifyVpnConnectionRequest {
     
     
     public Boolean dryRun;
+
     public ModifyVpnConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ModifyVpnConnectionRequest {
     
     
     public String transitGatewayId;
+
     public ModifyVpnConnectionRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -30,6 +33,7 @@ public class ModifyVpnConnectionRequest {
     
     
     public String vpnConnectionId;
+
     public ModifyVpnConnectionRequest withVpnConnectionId(String vpnConnectionId) {
         this.vpnConnectionId = vpnConnectionId;
         return this;
@@ -37,9 +41,13 @@ public class ModifyVpnConnectionRequest {
     
     
     public String vpnGatewayId;
+
     public ModifyVpnConnectionRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public ModifyVpnConnectionRequest(@JsonProperty("VpnConnectionId") String vpnConnectionId) {
+        this.vpnConnectionId = vpnConnectionId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListCallAnalyticsCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Categories")
     public CategoryProperties[] categories;
+
     public ListCallAnalyticsCategoriesResponse withCategories(CategoryProperties[] categories) {
         this.categories = categories;
         return this;
@@ -23,9 +24,11 @@ public class ListCallAnalyticsCategoriesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCallAnalyticsCategoriesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCallAnalyticsCategoriesResponse(){}
 }

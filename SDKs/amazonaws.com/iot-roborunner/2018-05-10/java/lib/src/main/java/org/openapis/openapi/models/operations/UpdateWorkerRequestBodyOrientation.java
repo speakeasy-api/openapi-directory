@@ -15,9 +15,11 @@ public class UpdateWorkerRequestBodyOrientation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("degrees")
     public Double degrees;
+
     public UpdateWorkerRequestBodyOrientation withDegrees(Double degrees) {
         this.degrees = degrees;
         return this;
     }
     
+    public UpdateWorkerRequestBodyOrientation(){}
 }

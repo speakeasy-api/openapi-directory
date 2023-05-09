@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConversionTasksResultConversionTasks {
     
     public String conversionTaskId;
+
     public DescribeConversionTasksResultConversionTasks withConversionTaskId(String conversionTaskId) {
         this.conversionTaskId = conversionTaskId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public String expirationTime;
+
     public DescribeConversionTasksResultConversionTasks withExpirationTime(String expirationTime) {
         this.expirationTime = expirationTime;
         return this;
@@ -26,6 +28,7 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public DescribeConversionTasksResultConversionTasksImportInstance importInstance;
+
     public DescribeConversionTasksResultConversionTasks withImportInstance(DescribeConversionTasksResultConversionTasksImportInstance importInstance) {
         this.importInstance = importInstance;
         return this;
@@ -33,6 +36,7 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public DescribeConversionTasksResultConversionTasksImportVolume importVolume;
+
     public DescribeConversionTasksResultConversionTasks withImportVolume(DescribeConversionTasksResultConversionTasksImportVolume importVolume) {
         this.importVolume = importVolume;
         return this;
@@ -40,6 +44,7 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public DescribeConversionTasksResultConversionTasksStateEnum state;
+
     public DescribeConversionTasksResultConversionTasks withState(DescribeConversionTasksResultConversionTasksStateEnum state) {
         this.state = state;
         return this;
@@ -47,6 +52,7 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public String statusMessage;
+
     public DescribeConversionTasksResultConversionTasks withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
@@ -54,9 +60,11 @@ public class DescribeConversionTasksResultConversionTasks {
     
     
     public DescribeConversionTasksResultConversionTasksTags[] tags;
+
     public DescribeConversionTasksResultConversionTasks withTags(DescribeConversionTasksResultConversionTasksTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeConversionTasksResultConversionTasks(){}
 }

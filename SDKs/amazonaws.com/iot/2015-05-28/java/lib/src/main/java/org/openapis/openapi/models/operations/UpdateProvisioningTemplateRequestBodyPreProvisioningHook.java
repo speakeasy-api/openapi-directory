@@ -15,6 +15,7 @@ public class UpdateProvisioningTemplateRequestBodyPreProvisioningHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payloadVersion")
     public String payloadVersion;
+
     public UpdateProvisioningTemplateRequestBodyPreProvisioningHook withPayloadVersion(String payloadVersion) {
         this.payloadVersion = payloadVersion;
         return this;
@@ -23,9 +24,11 @@ public class UpdateProvisioningTemplateRequestBodyPreProvisioningHook {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetArn")
     public String targetArn;
+
     public UpdateProvisioningTemplateRequestBodyPreProvisioningHook withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public UpdateProvisioningTemplateRequestBodyPreProvisioningHook(){}
 }

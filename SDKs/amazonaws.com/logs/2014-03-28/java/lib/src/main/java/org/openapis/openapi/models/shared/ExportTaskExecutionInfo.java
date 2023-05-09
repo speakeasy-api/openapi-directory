@@ -15,6 +15,7 @@ public class ExportTaskExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completionTime")
     public Long completionTime;
+
     public ExportTaskExecutionInfo withCompletionTime(Long completionTime) {
         this.completionTime = completionTime;
         return this;
@@ -23,9 +24,11 @@ public class ExportTaskExecutionInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTime")
     public Long creationTime;
+
     public ExportTaskExecutionInfo withCreationTime(Long creationTime) {
         this.creationTime = creationTime;
         return this;
     }
     
+    public ExportTaskExecutionInfo(){}
 }

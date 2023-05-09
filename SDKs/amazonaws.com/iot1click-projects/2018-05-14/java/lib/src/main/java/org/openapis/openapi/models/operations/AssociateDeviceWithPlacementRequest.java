@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AssociateDeviceWithPlacementRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public AssociateDeviceWithPlacementRequestBody requestBody;
+
     public AssociateDeviceWithPlacementRequest withRequestBody(AssociateDeviceWithPlacementRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AssociateDeviceWithPlacementRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AssociateDeviceWithPlacementRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AssociateDeviceWithPlacementRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AssociateDeviceWithPlacementRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AssociateDeviceWithPlacementRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AssociateDeviceWithPlacementRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AssociateDeviceWithPlacementRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AssociateDeviceWithPlacementRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class AssociateDeviceWithPlacementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceTemplateName")
     public String deviceTemplateName;
+
     public AssociateDeviceWithPlacementRequest withDeviceTemplateName(String deviceTemplateName) {
         this.deviceTemplateName = deviceTemplateName;
         return this;
@@ -78,6 +88,7 @@ public class AssociateDeviceWithPlacementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=placementName")
     public String placementName;
+
     public AssociateDeviceWithPlacementRequest withPlacementName(String placementName) {
         this.placementName = placementName;
         return this;
@@ -88,9 +99,16 @@ public class AssociateDeviceWithPlacementRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectName")
     public String projectName;
+
     public AssociateDeviceWithPlacementRequest withProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
     
+    public AssociateDeviceWithPlacementRequest(@JsonProperty("RequestBody") AssociateDeviceWithPlacementRequestBody requestBody, @JsonProperty("deviceTemplateName") String deviceTemplateName, @JsonProperty("placementName") String placementName, @JsonProperty("projectName") String projectName) {
+        this.requestBody = requestBody;
+        this.deviceTemplateName = deviceTemplateName;
+        this.placementName = placementName;
+        this.projectName = projectName;
+  }
 }

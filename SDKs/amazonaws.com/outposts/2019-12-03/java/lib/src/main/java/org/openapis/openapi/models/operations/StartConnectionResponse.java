@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartConnectionResponse {
@@ -12,6 +13,7 @@ public class StartConnectionResponse {
      */
     
     public Object accessDeniedException;
+
     public StartConnectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartConnectionResponse {
     
     
     public String contentType;
+
     public StartConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartConnectionResponse {
      */
     
     public Object internalServerException;
+
     public StartConnectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartConnectionResponse {
      */
     
     public Object notFoundException;
+
     public StartConnectionResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -49,6 +54,7 @@ public class StartConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.StartConnectionResponse startConnectionResponse;
+
     public StartConnectionResponse withStartConnectionResponse(org.openapis.openapi.models.shared.StartConnectionResponse startConnectionResponse) {
         this.startConnectionResponse = startConnectionResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartConnectionResponse {
     
     
     public Integer statusCode;
+
     public StartConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartConnectionResponse {
      */
     
     public Object validationException;
+
     public StartConnectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

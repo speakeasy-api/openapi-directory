@@ -12,6 +12,7 @@ public class GetECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public String[] accountIds;
+
     public GetECSServiceRecommendationsRequest withAccountIds(String[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -20,6 +21,7 @@ public class GetECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public ECSServiceRecommendationFilter[] filters;
+
     public GetECSServiceRecommendationsRequest withFilters(ECSServiceRecommendationFilter[] filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class GetECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public GetECSServiceRecommendationsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -36,6 +39,7 @@ public class GetECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetECSServiceRecommendationsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -44,9 +48,11 @@ public class GetECSServiceRecommendationsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceArns")
     public String[] serviceArns;
+
     public GetECSServiceRecommendationsRequest withServiceArns(String[] serviceArns) {
         this.serviceArns = serviceArns;
         return this;
     }
     
+    public GetECSServiceRecommendationsRequest(){}
 }

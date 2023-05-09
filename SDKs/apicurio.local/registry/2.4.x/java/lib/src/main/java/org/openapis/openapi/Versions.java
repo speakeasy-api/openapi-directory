@@ -64,7 +64,7 @@ public class Versions {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "contentCreateRequest", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "artifactContent", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -84,13 +84,11 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactVersionJsonResponse res = new org.openapis.openapi.models.operations.CreateArtifactVersionJsonResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactVersionJsonResponse res = new org.openapis.openapi.models.operations.CreateArtifactVersionJsonResponse(contentType, httpRes.statusCode()) {{
             versionMetaData = null;
             error = null;
             ruleViolationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -167,13 +165,11 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateArtifactVersionRawResponse res = new org.openapis.openapi.models.operations.CreateArtifactVersionRawResponse() {{
+        org.openapis.openapi.models.operations.CreateArtifactVersionRawResponse res = new org.openapis.openapi.models.operations.CreateArtifactVersionRawResponse(contentType, httpRes.statusCode()) {{
             versionMetaData = null;
             error = null;
             ruleViolationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -195,6 +191,55 @@ public class Versions {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.RuleViolationError out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.RuleViolationError.class);
                 res.ruleViolationError = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Delete artifact version
+     * Deletes a single version of the artifact. Parameters `groupId`, `artifactId` and the unique `version`
+     * are needed. If this is the only version of the artifact, this operation is the same as 
+     * deleting the entire artifact.
+     * 
+     * This feature is disabled by default and it's discouraged for normal usage. To enable it, set the `registry.rest.artifact.deletion.enabled` property to true. This operation can fail for the following reasons:
+     * 
+     * * No artifact with this `artifactId` exists (HTTP error `404`)
+     * * No version with this `version` exists (HTTP error `404`)
+     *  * Feature is disabled (HTTP error `405`)
+     *  * A server error occurred (HTTP error `500`)
+     * 
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.DeleteArtifactVersionResponse deleteArtifactVersion(org.openapis.openapi.models.operations.DeleteArtifactVersionRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.DeleteArtifactVersionRequest.class, baseUrl, "/groups/{groupId}/artifacts/{artifactId}/versions/{version}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("DELETE");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._defaultClient;
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.DeleteArtifactVersionResponse res = new org.openapis.openapi.models.operations.DeleteArtifactVersionResponse(contentType, httpRes.statusCode()) {{
+            error = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 204) {
+        }
+        else if (httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 500) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Error out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Error.class);
+                res.error = out;
             }
         }
 
@@ -238,12 +283,10 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactVersionResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactVersionResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionResponse(contentType, httpRes.statusCode()) {{
             fileContent = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,12 +337,10 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetArtifactVersionReferencesResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionReferencesResponse() {{
+        org.openapis.openapi.models.operations.GetArtifactVersionReferencesResponse res = new org.openapis.openapi.models.operations.GetArtifactVersionReferencesResponse(contentType, httpRes.statusCode()) {{
             artifactReferences = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -353,12 +394,10 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListArtifactVersionsResponse res = new org.openapis.openapi.models.operations.ListArtifactVersionsResponse() {{
+        org.openapis.openapi.models.operations.ListArtifactVersionsResponse res = new org.openapis.openapi.models.operations.ListArtifactVersionsResponse(contentType, httpRes.statusCode()) {{
             versionSearchResults = null;
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -413,11 +452,9 @@ public class Versions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateArtifactVersionStateResponse res = new org.openapis.openapi.models.operations.UpdateArtifactVersionStateResponse() {{
+        org.openapis.openapi.models.operations.UpdateArtifactVersionStateResponse res = new org.openapis.openapi.models.operations.UpdateArtifactVersionStateResponse(contentType, httpRes.statusCode()) {{
             error = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {

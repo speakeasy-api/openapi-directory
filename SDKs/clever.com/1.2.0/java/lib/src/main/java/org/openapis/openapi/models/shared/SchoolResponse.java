@@ -15,9 +15,11 @@ public class SchoolResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public School data;
+
     public SchoolResponse withData(School data) {
         this.data = data;
         return this;
     }
     
+    public SchoolResponse(){}
 }

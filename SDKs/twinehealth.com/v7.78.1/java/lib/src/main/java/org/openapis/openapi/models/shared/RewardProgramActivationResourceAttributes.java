@@ -14,6 +14,7 @@ public class RewardProgramActivationResourceAttributes {
      */
     @JsonProperty("activated_at")
     public String activatedAt;
+
     public RewardProgramActivationResourceAttributes withActivatedAt(String activatedAt) {
         this.activatedAt = activatedAt;
         return this;
@@ -25,6 +26,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public RewardProgramActivationResourceAttributes withActive(Boolean active) {
         this.active = active;
         return this;
@@ -36,6 +38,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allocated_count")
     public Double allocatedCount;
+
     public RewardProgramActivationResourceAttributes withAllocatedCount(Double allocatedCount) {
         this.allocatedCount = allocatedCount;
         return this;
@@ -47,6 +50,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_unit")
     public String budgetUnit;
+
     public RewardProgramActivationResourceAttributes withBudgetUnit(String budgetUnit) {
         this.budgetUnit = budgetUnit;
         return this;
@@ -58,6 +62,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deactivated_at")
     public String deactivatedAt;
+
     public RewardProgramActivationResourceAttributes withDeactivatedAt(String deactivatedAt) {
         this.deactivatedAt = deactivatedAt;
         return this;
@@ -69,6 +74,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earned_count")
     public Double earnedCount;
+
     public RewardProgramActivationResourceAttributes withEarnedCount(Double earnedCount) {
         this.earnedCount = earnedCount;
         return this;
@@ -80,6 +86,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expires_at")
     public String expiresAt;
+
     public RewardProgramActivationResourceAttributes withExpiresAt(String expiresAt) {
         this.expiresAt = expiresAt;
         return this;
@@ -91,6 +98,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfill_as_earned")
     public Boolean fulfillAsEarned;
+
     public RewardProgramActivationResourceAttributes withFulfillAsEarned(Boolean fulfillAsEarned) {
         this.fulfillAsEarned = fulfillAsEarned;
         return this;
@@ -102,6 +110,7 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_allocated_value")
     public Double totalAllocatedValue;
+
     public RewardProgramActivationResourceAttributes withTotalAllocatedValue(Double totalAllocatedValue) {
         this.totalAllocatedValue = totalAllocatedValue;
         return this;
@@ -113,9 +122,13 @@ public class RewardProgramActivationResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_earned_value")
     public Double totalEarnedValue;
+
     public RewardProgramActivationResourceAttributes withTotalEarnedValue(Double totalEarnedValue) {
         this.totalEarnedValue = totalEarnedValue;
         return this;
     }
     
+    public RewardProgramActivationResourceAttributes(@JsonProperty("activated_at") String activatedAt) {
+        this.activatedAt = activatedAt;
+  }
 }

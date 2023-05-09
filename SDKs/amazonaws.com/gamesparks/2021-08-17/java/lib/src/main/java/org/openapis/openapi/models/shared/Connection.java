@@ -22,6 +22,7 @@ public class Connection {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("Created")
     public OffsetDateTime created;
+
     public Connection withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,9 +31,11 @@ public class Connection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public Connection withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Connection(){}
 }

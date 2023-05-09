@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateWebhookResponse {
     
     public String contentType;
+
     public UpdateWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateWebhookResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object oAuthProviderException;
+
     public UpdateWebhookResponse withOAuthProviderException(Object oAuthProviderException) {
         this.oAuthProviderException = oAuthProviderException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateWebhookResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateWebhookResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateWebhookResponse {
     
     
     public Integer statusCode;
+
     public UpdateWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateWebhookOutput updateWebhookOutput;
+
     public UpdateWebhookResponse withUpdateWebhookOutput(org.openapis.openapi.models.shared.UpdateWebhookOutput updateWebhookOutput) {
         this.updateWebhookOutput = updateWebhookOutput;
         return this;
     }
     
+    public UpdateWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

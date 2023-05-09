@@ -15,9 +15,11 @@ public class CoverageCost {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OnDemandCost")
     public String onDemandCost;
+
     public CoverageCost withOnDemandCost(String onDemandCost) {
         this.onDemandCost = onDemandCost;
         return this;
     }
     
+    public CoverageCost(){}
 }

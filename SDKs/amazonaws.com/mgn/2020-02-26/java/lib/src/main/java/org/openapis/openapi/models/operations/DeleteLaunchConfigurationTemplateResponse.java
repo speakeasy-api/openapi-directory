@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLaunchConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
      */
     
     public Object conflictException;
+
     public DeleteLaunchConfigurationTemplateResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public DeleteLaunchConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
      */
     
     public java.util.Map<String, Object> deleteLaunchConfigurationTemplateResponse;
+
     public DeleteLaunchConfigurationTemplateResponse withDeleteLaunchConfigurationTemplateResponse(java.util.Map<String, Object> deleteLaunchConfigurationTemplateResponse) {
         this.deleteLaunchConfigurationTemplateResponse = deleteLaunchConfigurationTemplateResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteLaunchConfigurationTemplateResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public DeleteLaunchConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteLaunchConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLaunchConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class DeleteLaunchConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public DeleteLaunchConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public DeleteLaunchConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

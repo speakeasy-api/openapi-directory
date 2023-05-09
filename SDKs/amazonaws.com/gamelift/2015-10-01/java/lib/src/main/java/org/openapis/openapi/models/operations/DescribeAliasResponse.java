@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAliasResponse {
     
     public String contentType;
+
     public DescribeAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAliasOutput describeAliasOutput;
+
     public DescribeAliasResponse withDescribeAliasOutput(org.openapis.openapi.models.shared.DescribeAliasOutput describeAliasOutput) {
         this.describeAliasOutput = describeAliasOutput;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAliasResponse {
      */
     
     public Object internalServiceException;
+
     public DescribeAliasResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAliasResponse {
      */
     
     public Object notFoundException;
+
     public DescribeAliasResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAliasResponse {
     
     
     public Integer statusCode;
+
     public DescribeAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

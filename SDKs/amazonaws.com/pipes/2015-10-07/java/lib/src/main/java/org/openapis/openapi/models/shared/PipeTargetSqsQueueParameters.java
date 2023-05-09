@@ -15,6 +15,7 @@ public class PipeTargetSqsQueueParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageDeduplicationId")
     public String messageDeduplicationId;
+
     public PipeTargetSqsQueueParameters withMessageDeduplicationId(String messageDeduplicationId) {
         this.messageDeduplicationId = messageDeduplicationId;
         return this;
@@ -23,9 +24,11 @@ public class PipeTargetSqsQueueParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageGroupId")
     public String messageGroupId;
+
     public PipeTargetSqsQueueParameters withMessageGroupId(String messageGroupId) {
         this.messageGroupId = messageGroupId;
         return this;
     }
     
+    public PipeTargetSqsQueueParameters(){}
 }

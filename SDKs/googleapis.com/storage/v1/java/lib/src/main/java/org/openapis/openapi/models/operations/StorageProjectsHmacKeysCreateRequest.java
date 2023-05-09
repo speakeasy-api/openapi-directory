@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StorageProjectsHmacKeysCreateRequest {
@@ -12,6 +13,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public StorageProjectsHmacKeysCreateRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public StorageProjectsHmacKeysCreateRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public StorageProjectsHmacKeysCreateRequest withKey(String key) {
         this.key = key;
         return this;
@@ -42,6 +46,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public StorageProjectsHmacKeysCreateRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -52,6 +57,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public StorageProjectsHmacKeysCreateRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -62,6 +68,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public StorageProjectsHmacKeysCreateRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -72,6 +79,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public StorageProjectsHmacKeysCreateRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -82,6 +90,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceAccountEmail")
     public String serviceAccountEmail;
+
     public StorageProjectsHmacKeysCreateRequest withServiceAccountEmail(String serviceAccountEmail) {
         this.serviceAccountEmail = serviceAccountEmail;
         return this;
@@ -92,6 +101,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public StorageProjectsHmacKeysCreateRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -102,6 +112,7 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public StorageProjectsHmacKeysCreateRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
@@ -112,9 +123,14 @@ public class StorageProjectsHmacKeysCreateRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userProject")
     public String userProject;
+
     public StorageProjectsHmacKeysCreateRequest withUserProject(String userProject) {
         this.userProject = userProject;
         return this;
     }
     
+    public StorageProjectsHmacKeysCreateRequest(@JsonProperty("projectId") String projectId, @JsonProperty("serviceAccountEmail") String serviceAccountEmail) {
+        this.projectId = projectId;
+        this.serviceAccountEmail = serviceAccountEmail;
+  }
 }

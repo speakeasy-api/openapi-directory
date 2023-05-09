@@ -12,6 +12,7 @@ public class ListCampaignsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListCampaignsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,6 +21,7 @@ public class ListCampaignsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListCampaignsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class ListCampaignsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("solutionArn")
     public String solutionArn;
+
     public ListCampaignsRequest withSolutionArn(String solutionArn) {
         this.solutionArn = solutionArn;
         return this;
     }
     
+    public ListCampaignsRequest(){}
 }

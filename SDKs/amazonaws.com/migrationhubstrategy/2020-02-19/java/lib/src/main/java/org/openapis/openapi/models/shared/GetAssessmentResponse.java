@@ -15,6 +15,7 @@ public class GetAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assessmentTargets")
     public AssessmentTarget[] assessmentTargets;
+
     public GetAssessmentResponse withAssessmentTargets(AssessmentTarget[] assessmentTargets) {
         this.assessmentTargets = assessmentTargets;
         return this;
@@ -23,6 +24,7 @@ public class GetAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCollectionDetails")
     public DataCollectionDetails dataCollectionDetails;
+
     public GetAssessmentResponse withDataCollectionDetails(DataCollectionDetails dataCollectionDetails) {
         this.dataCollectionDetails = dataCollectionDetails;
         return this;
@@ -31,9 +33,11 @@ public class GetAssessmentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetAssessmentResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetAssessmentResponse(){}
 }

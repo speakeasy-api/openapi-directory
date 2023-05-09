@@ -15,9 +15,11 @@ public class UpdateOpsMetadataResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OpsMetadataArn")
     public String opsMetadataArn;
+
     public UpdateOpsMetadataResult withOpsMetadataArn(String opsMetadataArn) {
         this.opsMetadataArn = opsMetadataArn;
         return this;
     }
     
+    public UpdateOpsMetadataResult(){}
 }

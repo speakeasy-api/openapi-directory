@@ -15,6 +15,7 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
      */
     @JsonProperty("TrademarkID")
     public String trademarkID;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand withTrademarkID(String trademarkID) {
         this.trademarkID = trademarkID;
         return this;
@@ -25,9 +26,14 @@ public class GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrg
      */
     @JsonProperty("TrademarkIPOCode")
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode;
+
     public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand withTrademarkIPOCode(GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
         this.trademarkIPOCode = trademarkIPOCode;
         return this;
     }
     
+    public GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrand(@JsonProperty("TrademarkID") String trademarkID, @JsonProperty("TrademarkIPOCode") GetBranches200ApplicationPrsOpenbankingOpendataV13PlusJsonBranchOrganisationBrandTrademarkIPOCodeEnum trademarkIPOCode) {
+        this.trademarkID = trademarkID;
+        this.trademarkIPOCode = trademarkIPOCode;
+  }
 }

@@ -18,6 +18,7 @@ public class ReplaceAccessLevelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accessLevels")
     public AccessLevel[] accessLevels;
+
     public ReplaceAccessLevelsRequest withAccessLevels(AccessLevel[] accessLevels) {
         this.accessLevels = accessLevels;
         return this;
@@ -29,9 +30,11 @@ public class ReplaceAccessLevelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public ReplaceAccessLevelsRequest withEtag(String etag) {
         this.etag = etag;
         return this;
     }
     
+    public ReplaceAccessLevelsRequest(){}
 }

@@ -18,6 +18,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("className")
     public String className;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withClassName(String className) {
         this.className = className;
         return this;
@@ -29,6 +30,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collectionElementClassName")
     public String collectionElementClassName;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withCollectionElementClassName(String collectionElementClassName) {
         this.collectionElementClassName = collectionElementClassName;
         return this;
@@ -37,6 +39,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public EnterpriseCrmEventbusProtoParamSpecEntryConfig config;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withConfig(EnterpriseCrmEventbusProtoParamSpecEntryConfig config) {
         this.config = config;
         return this;
@@ -48,6 +51,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum dataType;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withDataType(EnterpriseCrmFrontendsEventbusProtoParamSpecEntryDataTypeEnum dataType) {
         this.dataType = dataType;
         return this;
@@ -59,6 +63,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withDefaultValue(EnterpriseCrmFrontendsEventbusProtoParameterValueType defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -70,6 +75,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeprecated")
     public Boolean isDeprecated;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withIsDeprecated(Boolean isDeprecated) {
         this.isDeprecated = isDeprecated;
         return this;
@@ -78,6 +84,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isOutput")
     public Boolean isOutput;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withIsOutput(Boolean isOutput) {
         this.isOutput = isOutput;
         return this;
@@ -89,6 +96,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jsonSchema")
     public String jsonSchema;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withJsonSchema(String jsonSchema) {
         this.jsonSchema = jsonSchema;
         return this;
@@ -100,6 +108,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withKey(String key) {
         this.key = key;
         return this;
@@ -108,6 +117,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protoDef")
     public EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition protoDef;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withProtoDef(EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition protoDef) {
         this.protoDef = protoDef;
         return this;
@@ -119,6 +129,7 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -127,9 +138,11 @@ public class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationRule")
     public EnterpriseCrmEventbusProtoParamSpecEntryValidationRule validationRule;
+
     public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry withValidationRule(EnterpriseCrmEventbusProtoParamSpecEntryValidationRule validationRule) {
         this.validationRule = validationRule;
         return this;
     }
     
+    public EnterpriseCrmFrontendsEventbusProtoParamSpecEntry(){}
 }

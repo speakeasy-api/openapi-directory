@@ -20,6 +20,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compliance")
     public ComplianceTypeEnum compliance;
+
     public GetResourceEvaluationSummaryResponse withCompliance(ComplianceTypeEnum compliance) {
         this.compliance = compliance;
         return this;
@@ -28,6 +29,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationContext")
     public EvaluationContext evaluationContext;
+
     public GetResourceEvaluationSummaryResponse withEvaluationContext(EvaluationContext evaluationContext) {
         this.evaluationContext = evaluationContext;
         return this;
@@ -36,6 +38,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public GetResourceEvaluationSummaryResponse withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
@@ -46,6 +49,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EvaluationStartTimestamp")
     public OffsetDateTime evaluationStartTimestamp;
+
     public GetResourceEvaluationSummaryResponse withEvaluationStartTimestamp(OffsetDateTime evaluationStartTimestamp) {
         this.evaluationStartTimestamp = evaluationStartTimestamp;
         return this;
@@ -54,6 +58,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationStatus")
     public EvaluationStatus evaluationStatus;
+
     public GetResourceEvaluationSummaryResponse withEvaluationStatus(EvaluationStatus evaluationStatus) {
         this.evaluationStatus = evaluationStatus;
         return this;
@@ -62,6 +67,7 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDetails")
     public ResourceDetails resourceDetails;
+
     public GetResourceEvaluationSummaryResponse withResourceDetails(ResourceDetails resourceDetails) {
         this.resourceDetails = resourceDetails;
         return this;
@@ -70,9 +76,11 @@ public class GetResourceEvaluationSummaryResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceEvaluationId")
     public String resourceEvaluationId;
+
     public GetResourceEvaluationSummaryResponse withResourceEvaluationId(String resourceEvaluationId) {
         this.resourceEvaluationId = resourceEvaluationId;
         return this;
     }
     
+    public GetResourceEvaluationSummaryResponse(){}
 }

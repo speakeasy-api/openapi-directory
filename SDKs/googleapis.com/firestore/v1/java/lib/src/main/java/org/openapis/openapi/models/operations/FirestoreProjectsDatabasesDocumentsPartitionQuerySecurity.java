@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity {
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsPartitionQuerySecurityOption1 option1;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity withOption1(FirestoreProjectsDatabasesDocumentsPartitionQuerySecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public FirestoreProjectsDatabasesDocumentsPartitionQuerySecurityOption2 option2;
+
     public FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity withOption2(FirestoreProjectsDatabasesDocumentsPartitionQuerySecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public FirestoreProjectsDatabasesDocumentsPartitionQuerySecurity(){}
 }

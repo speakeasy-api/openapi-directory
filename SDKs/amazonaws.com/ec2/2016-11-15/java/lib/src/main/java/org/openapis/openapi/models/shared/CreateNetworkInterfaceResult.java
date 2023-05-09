@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfaceResult {
     
     public String clientToken;
+
     public CreateNetworkInterfaceResult withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,9 +20,11 @@ public class CreateNetworkInterfaceResult {
     
     
     public CreateNetworkInterfaceResultNetworkInterface networkInterface;
+
     public CreateNetworkInterfaceResult withNetworkInterface(CreateNetworkInterfaceResultNetworkInterface networkInterface) {
         this.networkInterface = networkInterface;
         return this;
     }
     
+    public CreateNetworkInterfaceResult(){}
 }

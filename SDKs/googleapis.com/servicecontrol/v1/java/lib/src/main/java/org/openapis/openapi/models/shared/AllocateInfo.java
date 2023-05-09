@@ -15,9 +15,11 @@ public class AllocateInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unusedArguments")
     public String[] unusedArguments;
+
     public AllocateInfo withUnusedArguments(String[] unusedArguments) {
         this.unusedArguments = unusedArguments;
         return this;
     }
     
+    public AllocateInfo(){}
 }

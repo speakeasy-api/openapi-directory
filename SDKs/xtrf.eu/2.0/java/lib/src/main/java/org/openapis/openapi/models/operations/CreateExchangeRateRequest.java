@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateExchangeRateRequest {
@@ -12,6 +13,7 @@ public class CreateExchangeRateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CurrencyHistoryDTO currencyHistoryDTO;
+
     public CreateExchangeRateRequest withCurrencyHistoryDTO(org.openapis.openapi.models.shared.CurrencyHistoryDTO currencyHistoryDTO) {
         this.currencyHistoryDTO = currencyHistoryDTO;
         return this;
@@ -22,9 +24,14 @@ public class CreateExchangeRateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=isoCode")
     public String isoCode;
+
     public CreateExchangeRateRequest withIsoCode(String isoCode) {
         this.isoCode = isoCode;
         return this;
     }
     
+    public CreateExchangeRateRequest(@JsonProperty("CurrencyHistoryDTO") org.openapis.openapi.models.shared.CurrencyHistoryDTO currencyHistoryDTO, @JsonProperty("isoCode") String isoCode) {
+        this.currencyHistoryDTO = currencyHistoryDTO;
+        this.isoCode = isoCode;
+  }
 }

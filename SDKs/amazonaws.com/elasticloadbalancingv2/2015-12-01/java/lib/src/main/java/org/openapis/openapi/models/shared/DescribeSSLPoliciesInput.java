@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSSLPoliciesInput {
     
     public LoadBalancerTypeEnumEnum loadBalancerType;
+
     public DescribeSSLPoliciesInput withLoadBalancerType(LoadBalancerTypeEnumEnum loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
@@ -16,6 +17,7 @@ public class DescribeSSLPoliciesInput {
     
     
     public String marker;
+
     public DescribeSSLPoliciesInput withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,6 +25,7 @@ public class DescribeSSLPoliciesInput {
     
     
     public String[] names;
+
     public DescribeSSLPoliciesInput withNames(String[] names) {
         this.names = names;
         return this;
@@ -30,9 +33,11 @@ public class DescribeSSLPoliciesInput {
     
     
     public Long pageSize;
+
     public DescribeSSLPoliciesInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public DescribeSSLPoliciesInput(){}
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDBProxyEndpointsRequest {
     
     public String dbProxyEndpointName;
+
     public DescribeDBProxyEndpointsRequest withDBProxyEndpointName(String dbProxyEndpointName) {
         this.dbProxyEndpointName = dbProxyEndpointName;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDBProxyEndpointsRequest {
     
     
     public String dbProxyName;
+
     public DescribeDBProxyEndpointsRequest withDBProxyName(String dbProxyName) {
         this.dbProxyName = dbProxyName;
         return this;
@@ -23,6 +25,7 @@ public class DescribeDBProxyEndpointsRequest {
     
     
     public FilterList[] filters;
+
     public DescribeDBProxyEndpointsRequest withFilters(FilterList[] filters) {
         this.filters = filters;
         return this;
@@ -30,6 +33,7 @@ public class DescribeDBProxyEndpointsRequest {
     
     
     public String marker;
+
     public DescribeDBProxyEndpointsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -37,9 +41,11 @@ public class DescribeDBProxyEndpointsRequest {
     
     
     public Long maxRecords;
+
     public DescribeDBProxyEndpointsRequest withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDBProxyEndpointsRequest(){}
 }

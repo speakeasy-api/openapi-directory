@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteFleetsResult {
     
     public DeleteFleetsResultSuccessfulFleetDeletions[] successfulFleetDeletions;
+
     public DeleteFleetsResult withSuccessfulFleetDeletions(DeleteFleetsResultSuccessfulFleetDeletions[] successfulFleetDeletions) {
         this.successfulFleetDeletions = successfulFleetDeletions;
         return this;
@@ -19,9 +20,11 @@ public class DeleteFleetsResult {
     
     
     public DeleteFleetsResultUnsuccessfulFleetDeletions[] unsuccessfulFleetDeletions;
+
     public DeleteFleetsResult withUnsuccessfulFleetDeletions(DeleteFleetsResultUnsuccessfulFleetDeletions[] unsuccessfulFleetDeletions) {
         this.unsuccessfulFleetDeletions = unsuccessfulFleetDeletions;
         return this;
     }
     
+    public DeleteFleetsResult(){}
 }

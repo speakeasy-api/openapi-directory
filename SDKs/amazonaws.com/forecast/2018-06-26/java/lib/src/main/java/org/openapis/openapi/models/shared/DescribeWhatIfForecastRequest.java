@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeWhatIfForecastRequest {
     @JsonProperty("WhatIfForecastArn")
     public String whatIfForecastArn;
+
     public DescribeWhatIfForecastRequest withWhatIfForecastArn(String whatIfForecastArn) {
         this.whatIfForecastArn = whatIfForecastArn;
         return this;
     }
     
+    public DescribeWhatIfForecastRequest(@JsonProperty("WhatIfForecastArn") String whatIfForecastArn) {
+        this.whatIfForecastArn = whatIfForecastArn;
+  }
 }

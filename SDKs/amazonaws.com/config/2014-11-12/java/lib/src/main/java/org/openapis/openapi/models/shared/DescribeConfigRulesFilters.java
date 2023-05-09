@@ -15,9 +15,11 @@ public class DescribeConfigRulesFilters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EvaluationMode")
     public EvaluationModeEnum evaluationMode;
+
     public DescribeConfigRulesFilters withEvaluationMode(EvaluationModeEnum evaluationMode) {
         this.evaluationMode = evaluationMode;
         return this;
     }
     
+    public DescribeConfigRulesFilters(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse {
     
     public String contentType;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse {
     
     
     public Integer statusCode;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +26,14 @@ public class PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostSearchVersionNumberRoutedFilterPositionHeadingExtResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

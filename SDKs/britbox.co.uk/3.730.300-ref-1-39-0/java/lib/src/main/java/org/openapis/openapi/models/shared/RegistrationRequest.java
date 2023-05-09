@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RegistrationRequest {
     @JsonProperty("email")
     public String email;
+
     public RegistrationRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -22,6 +23,7 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public RegistrationRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -37,6 +39,7 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public RegistrationRequest withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -45,6 +48,7 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public RegistrationRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -56,6 +60,7 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketing")
     public Boolean marketing;
+
     public RegistrationRequest withMarketing(Boolean marketing) {
         this.marketing = marketing;
         return this;
@@ -63,6 +68,7 @@ public class RegistrationRequest {
     
     @JsonProperty("password")
     public String password;
+
     public RegistrationRequest withPassword(String password) {
         this.password = password;
         return this;
@@ -74,6 +80,7 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pin")
     public String pin;
+
     public RegistrationRequest withPin(String pin) {
         this.pin = pin;
         return this;
@@ -85,9 +92,14 @@ public class RegistrationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("segments")
     public String[] segments;
+
     public RegistrationRequest withSegments(String[] segments) {
         this.segments = segments;
         return this;
     }
     
+    public RegistrationRequest(@JsonProperty("email") String email, @JsonProperty("password") String password) {
+        this.email = email;
+        this.password = password;
+  }
 }

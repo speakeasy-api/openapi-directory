@@ -11,30 +11,30 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * copyright calls.
  */
 public enum GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3"),
-    FOUR("4"),
-    FIVE("5"),
-    SIX("6"),
-    SEVEN("7"),
-    EIGHT("8"),
-    NINE("9"),
-    TEN("10"),
-    ELEVEN("11"),
-    TWELVE("12"),
-    THIRTEEN("13"),
-    FOURTEEN("14"),
-    FIFTEEN("15"),
-    SIXTEEN("16"),
-    SEVENTEEN("17"),
-    EIGHTEEN("18");
+    ZERO(0L),
+    ONE(1L),
+    TWO(2L),
+    THREE(3L),
+    FOUR(4L),
+    FIVE(5L),
+    SIX(6L),
+    SEVEN(7L),
+    EIGHT(8L),
+    NINE(9L),
+    TEN(10L),
+    ELEVEN(11L),
+    TWELVE(12L),
+    THIRTEEN(13L),
+    FOURTEEN(14L),
+    FIFTEEN(15L),
+    SIXTEEN(16L),
+    SEVENTEEN(17L),
+    EIGHTEEN(18L);
 
     @JsonValue
-    public final String value;
+    public final Long value;
 
-    private GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum(String value) {
+    private GetMapVersionNumberCopyrightsZoomXYFormatZoomEnum(Long value) {
         this.value = value;
     }
 }

@@ -22,6 +22,7 @@ public class PipelineMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created")
     public OffsetDateTime created;
+
     public PipelineMetadata withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -30,6 +31,7 @@ public class PipelineMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pipelineArn")
     public String pipelineArn;
+
     public PipelineMetadata withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
@@ -40,9 +42,11 @@ public class PipelineMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated")
     public OffsetDateTime updated;
+
     public PipelineMetadata withUpdated(OffsetDateTime updated) {
         this.updated = updated;
         return this;
     }
     
+    public PipelineMetadata(){}
 }

@@ -9,9 +9,11 @@ package org.openapis.openapi.models.operations;
 public class GetAccount200Wildcard {
     
     public GetAccount200WildcardData data;
+
     public GetAccount200Wildcard withData(GetAccount200WildcardData data) {
         this.data = data;
         return this;
     }
     
+    public GetAccount200Wildcard(){}
 }

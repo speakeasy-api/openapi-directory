@@ -15,6 +15,7 @@ public class CalculationStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DpuExecutionInMillis")
     public Long dpuExecutionInMillis;
+
     public CalculationStatistics withDpuExecutionInMillis(Long dpuExecutionInMillis) {
         this.dpuExecutionInMillis = dpuExecutionInMillis;
         return this;
@@ -23,9 +24,11 @@ public class CalculationStatistics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Progress")
     public String progress;
+
     public CalculationStatistics withProgress(String progress) {
         this.progress = progress;
         return this;
     }
     
+    public CalculationStatistics(){}
 }

@@ -18,6 +18,7 @@ public class LogsPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public LogsPanel withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,9 +30,11 @@ public class LogsPanel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resourceNames")
     public String[] resourceNames;
+
     public LogsPanel withResourceNames(String[] resourceNames) {
         this.resourceNames = resourceNames;
         return this;
     }
     
+    public LogsPanel(){}
 }

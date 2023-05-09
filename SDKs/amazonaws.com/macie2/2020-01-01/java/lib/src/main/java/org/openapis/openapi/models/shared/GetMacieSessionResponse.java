@@ -22,6 +22,7 @@ public class GetMacieSessionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public GetMacieSessionResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -30,6 +31,7 @@ public class GetMacieSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("findingPublishingFrequency")
     public FindingPublishingFrequencyEnum findingPublishingFrequency;
+
     public GetMacieSessionResponse withFindingPublishingFrequency(FindingPublishingFrequencyEnum findingPublishingFrequency) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         return this;
@@ -38,6 +40,7 @@ public class GetMacieSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceRole")
     public String serviceRole;
+
     public GetMacieSessionResponse withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -46,6 +49,7 @@ public class GetMacieSessionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public MacieStatusEnum status;
+
     public GetMacieSessionResponse withStatus(MacieStatusEnum status) {
         this.status = status;
         return this;
@@ -56,9 +60,11 @@ public class GetMacieSessionResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public GetMacieSessionResponse withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetMacieSessionResponse(){}
 }

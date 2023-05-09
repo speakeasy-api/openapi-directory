@@ -15,6 +15,7 @@ public class SessionList {
      */
     @JsonProperty("sessions")
     public Session[] sessions;
+
     public SessionList withSessions(Session[] sessions) {
         this.sessions = sessions;
         return this;
@@ -25,9 +26,14 @@ public class SessionList {
      */
     @JsonProperty("sum")
     public Integer sum;
+
     public SessionList withSum(Integer sum) {
         this.sum = sum;
         return this;
     }
     
+    public SessionList(@JsonProperty("sessions") Session[] sessions, @JsonProperty("sum") Integer sum) {
+        this.sessions = sessions;
+        this.sum = sum;
+  }
 }

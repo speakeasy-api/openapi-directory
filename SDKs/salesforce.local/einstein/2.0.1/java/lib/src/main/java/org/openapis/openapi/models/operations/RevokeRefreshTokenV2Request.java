@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class RevokeRefreshTokenV2Request {
@@ -12,9 +13,13 @@ public class RevokeRefreshTokenV2Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=token")
     public String token;
+
     public RevokeRefreshTokenV2Request withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public RevokeRefreshTokenV2Request(@JsonProperty("token") String token) {
+        this.token = token;
+  }
 }

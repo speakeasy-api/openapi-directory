@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class EnterpriseAdminSuspendUserRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public EnterpriseAdminSuspendUserRequestBody requestBody;
+
     public EnterpriseAdminSuspendUserRequest withRequestBody(EnterpriseAdminSuspendUserRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,9 +18,13 @@ public class EnterpriseAdminSuspendUserRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=username")
     public String username;
+
     public EnterpriseAdminSuspendUserRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public EnterpriseAdminSuspendUserRequest(@JsonProperty("username") String username) {
+        this.username = username;
+  }
 }

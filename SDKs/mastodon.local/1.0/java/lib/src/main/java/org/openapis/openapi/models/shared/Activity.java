@@ -19,6 +19,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logins")
     public String logins;
+
     public Activity withLogins(String logins) {
         this.logins = logins;
         return this;
@@ -30,6 +31,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrations")
     public String registrations;
+
     public Activity withRegistrations(String registrations) {
         this.registrations = registrations;
         return this;
@@ -41,6 +43,7 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statuses")
     public String statuses;
+
     public Activity withStatuses(String statuses) {
         this.statuses = statuses;
         return this;
@@ -52,9 +55,11 @@ public class Activity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("week")
     public String week;
+
     public Activity withWeek(String week) {
         this.week = week;
         return this;
     }
     
+    public Activity(){}
 }

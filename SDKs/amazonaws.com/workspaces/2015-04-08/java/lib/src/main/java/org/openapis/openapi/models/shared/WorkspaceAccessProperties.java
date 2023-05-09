@@ -15,6 +15,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeAndroid")
     public AccessPropertyValueEnum deviceTypeAndroid;
+
     public WorkspaceAccessProperties withDeviceTypeAndroid(AccessPropertyValueEnum deviceTypeAndroid) {
         this.deviceTypeAndroid = deviceTypeAndroid;
         return this;
@@ -23,6 +24,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeChromeOs")
     public AccessPropertyValueEnum deviceTypeChromeOs;
+
     public WorkspaceAccessProperties withDeviceTypeChromeOs(AccessPropertyValueEnum deviceTypeChromeOs) {
         this.deviceTypeChromeOs = deviceTypeChromeOs;
         return this;
@@ -31,6 +33,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeIos")
     public AccessPropertyValueEnum deviceTypeIos;
+
     public WorkspaceAccessProperties withDeviceTypeIos(AccessPropertyValueEnum deviceTypeIos) {
         this.deviceTypeIos = deviceTypeIos;
         return this;
@@ -39,6 +42,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeLinux")
     public AccessPropertyValueEnum deviceTypeLinux;
+
     public WorkspaceAccessProperties withDeviceTypeLinux(AccessPropertyValueEnum deviceTypeLinux) {
         this.deviceTypeLinux = deviceTypeLinux;
         return this;
@@ -47,6 +51,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeOsx")
     public AccessPropertyValueEnum deviceTypeOsx;
+
     public WorkspaceAccessProperties withDeviceTypeOsx(AccessPropertyValueEnum deviceTypeOsx) {
         this.deviceTypeOsx = deviceTypeOsx;
         return this;
@@ -55,6 +60,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWeb")
     public AccessPropertyValueEnum deviceTypeWeb;
+
     public WorkspaceAccessProperties withDeviceTypeWeb(AccessPropertyValueEnum deviceTypeWeb) {
         this.deviceTypeWeb = deviceTypeWeb;
         return this;
@@ -63,6 +69,7 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeWindows")
     public AccessPropertyValueEnum deviceTypeWindows;
+
     public WorkspaceAccessProperties withDeviceTypeWindows(AccessPropertyValueEnum deviceTypeWindows) {
         this.deviceTypeWindows = deviceTypeWindows;
         return this;
@@ -71,9 +78,11 @@ public class WorkspaceAccessProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeviceTypeZeroClient")
     public AccessPropertyValueEnum deviceTypeZeroClient;
+
     public WorkspaceAccessProperties withDeviceTypeZeroClient(AccessPropertyValueEnum deviceTypeZeroClient) {
         this.deviceTypeZeroClient = deviceTypeZeroClient;
         return this;
     }
     
+    public WorkspaceAccessProperties(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StopStreamResponse {
@@ -12,6 +13,7 @@ public class StopStreamResponse {
      */
     
     public Object accessDeniedException;
+
     public StopStreamResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class StopStreamResponse {
      */
     
     public Object channelNotBroadcasting;
+
     public StopStreamResponse withChannelNotBroadcasting(Object channelNotBroadcasting) {
         this.channelNotBroadcasting = channelNotBroadcasting;
         return this;
@@ -29,6 +32,7 @@ public class StopStreamResponse {
     
     
     public String contentType;
+
     public StopStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class StopStreamResponse {
     
     
     public Integer statusCode;
+
     public StopStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class StopStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StopStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class StopStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StopStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class StopStreamResponse {
      */
     
     public java.util.Map<String, Object> stopStreamResponse;
+
     public StopStreamResponse withStopStreamResponse(java.util.Map<String, Object> stopStreamResponse) {
         this.stopStreamResponse = stopStreamResponse;
         return this;
@@ -73,6 +81,7 @@ public class StopStreamResponse {
      */
     
     public Object streamUnavailable;
+
     public StopStreamResponse withStreamUnavailable(Object streamUnavailable) {
         this.streamUnavailable = streamUnavailable;
         return this;
@@ -83,9 +92,14 @@ public class StopStreamResponse {
      */
     
     public Object validationException;
+
     public StopStreamResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StopStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

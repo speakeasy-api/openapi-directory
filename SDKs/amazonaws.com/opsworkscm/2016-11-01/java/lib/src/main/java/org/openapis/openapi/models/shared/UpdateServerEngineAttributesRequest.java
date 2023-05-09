@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateServerEngineAttributesRequest {
     @JsonProperty("AttributeName")
     public String attributeName;
+
     public UpdateServerEngineAttributesRequest withAttributeName(String attributeName) {
         this.attributeName = attributeName;
         return this;
@@ -19,6 +20,7 @@ public class UpdateServerEngineAttributesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeValue")
     public String attributeValue;
+
     public UpdateServerEngineAttributesRequest withAttributeValue(String attributeValue) {
         this.attributeValue = attributeValue;
         return this;
@@ -26,9 +28,14 @@ public class UpdateServerEngineAttributesRequest {
     
     @JsonProperty("ServerName")
     public String serverName;
+
     public UpdateServerEngineAttributesRequest withServerName(String serverName) {
         this.serverName = serverName;
         return this;
     }
     
+    public UpdateServerEngineAttributesRequest(@JsonProperty("AttributeName") String attributeName, @JsonProperty("ServerName") String serverName) {
+        this.attributeName = attributeName;
+        this.serverName = serverName;
+  }
 }

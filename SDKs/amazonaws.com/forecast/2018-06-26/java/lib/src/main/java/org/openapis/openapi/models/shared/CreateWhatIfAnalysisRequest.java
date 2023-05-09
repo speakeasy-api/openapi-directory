@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateWhatIfAnalysisRequest {
     @JsonProperty("ForecastArn")
     public String forecastArn;
+
     public CreateWhatIfAnalysisRequest withForecastArn(String forecastArn) {
         this.forecastArn = forecastArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateWhatIfAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateWhatIfAnalysisRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -27,6 +29,7 @@ public class CreateWhatIfAnalysisRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimeSeriesSelector")
     public TimeSeriesSelector timeSeriesSelector;
+
     public CreateWhatIfAnalysisRequest withTimeSeriesSelector(TimeSeriesSelector timeSeriesSelector) {
         this.timeSeriesSelector = timeSeriesSelector;
         return this;
@@ -34,9 +37,14 @@ public class CreateWhatIfAnalysisRequest {
     
     @JsonProperty("WhatIfAnalysisName")
     public String whatIfAnalysisName;
+
     public CreateWhatIfAnalysisRequest withWhatIfAnalysisName(String whatIfAnalysisName) {
         this.whatIfAnalysisName = whatIfAnalysisName;
         return this;
     }
     
+    public CreateWhatIfAnalysisRequest(@JsonProperty("ForecastArn") String forecastArn, @JsonProperty("WhatIfAnalysisName") String whatIfAnalysisName) {
+        this.forecastArn = forecastArn;
+        this.whatIfAnalysisName = whatIfAnalysisName;
+  }
 }

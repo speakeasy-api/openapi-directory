@@ -15,6 +15,7 @@ public class Ffcer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Ffcer401ApplicationJSONErrorEnum error;
+
     public Ffcer401ApplicationJSON withError(Ffcer401ApplicationJSONErrorEnum error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class Ffcer401ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorDescription")
     public Ffcer401ApplicationJSONErrorDescriptionEnum errorDescription;
+
     public Ffcer401ApplicationJSON withErrorDescription(Ffcer401ApplicationJSONErrorDescriptionEnum errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Ffcer401ApplicationJSON(){}
 }

@@ -15,9 +15,11 @@ public class DeleteWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public DeleteWorkspace200ApplicationJSONResponse response;
+
     public DeleteWorkspace200ApplicationJSON withResponse(DeleteWorkspace200ApplicationJSONResponse response) {
         this.response = response;
         return this;
     }
     
+    public DeleteWorkspace200ApplicationJSON(){}
 }

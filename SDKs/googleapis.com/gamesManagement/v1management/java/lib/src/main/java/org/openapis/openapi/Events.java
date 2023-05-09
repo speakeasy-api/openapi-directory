@@ -56,10 +56,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementEventsResetResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementEventsResetResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -96,10 +94,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetAllResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -136,10 +132,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetAllForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -176,10 +170,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -218,10 +210,8 @@ public class Events {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse() {{
+        org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse res = new org.openapis.openapi.models.operations.GamesManagementEventsResetMultipleForAllPlayersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class LakeFormationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public LakeFormationConfiguration withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class LakeFormationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseLakeFormationCredentials")
     public Boolean useLakeFormationCredentials;
+
     public LakeFormationConfiguration withUseLakeFormationCredentials(Boolean useLakeFormationCredentials) {
         this.useLakeFormationCredentials = useLakeFormationCredentials;
         return this;
     }
     
+    public LakeFormationConfiguration(){}
 }

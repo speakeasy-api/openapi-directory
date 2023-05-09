@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * PolicyControllerTemplateLibraryConfigInstallationEnum - Configures the manner in which the template library is installed on the cluster. TODO (b/271878194): Decrement this
+ * PolicyControllerTemplateLibraryConfigInstallationEnum - Configures the manner in which the template library is installed on the cluster.
  */
 public enum PolicyControllerTemplateLibraryConfigInstallationEnum {
     INSTALLATION_UNSPECIFIED("INSTALLATION_UNSPECIFIED"),

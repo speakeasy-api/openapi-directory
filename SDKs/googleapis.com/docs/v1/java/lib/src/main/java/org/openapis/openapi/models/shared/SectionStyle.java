@@ -18,6 +18,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnProperties")
     public SectionColumnProperties[] columnProperties;
+
     public SectionStyle withColumnProperties(SectionColumnProperties[] columnProperties) {
         this.columnProperties = columnProperties;
         return this;
@@ -29,6 +30,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("columnSeparatorStyle")
     public SectionStyleColumnSeparatorStyleEnum columnSeparatorStyle;
+
     public SectionStyle withColumnSeparatorStyle(SectionStyleColumnSeparatorStyleEnum columnSeparatorStyle) {
         this.columnSeparatorStyle = columnSeparatorStyle;
         return this;
@@ -40,6 +42,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDirection")
     public SectionStyleContentDirectionEnum contentDirection;
+
     public SectionStyle withContentDirection(SectionStyleContentDirectionEnum contentDirection) {
         this.contentDirection = contentDirection;
         return this;
@@ -51,6 +54,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultFooterId")
     public String defaultFooterId;
+
     public SectionStyle withDefaultFooterId(String defaultFooterId) {
         this.defaultFooterId = defaultFooterId;
         return this;
@@ -62,6 +66,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultHeaderId")
     public String defaultHeaderId;
+
     public SectionStyle withDefaultHeaderId(String defaultHeaderId) {
         this.defaultHeaderId = defaultHeaderId;
         return this;
@@ -73,6 +78,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageFooterId")
     public String evenPageFooterId;
+
     public SectionStyle withEvenPageFooterId(String evenPageFooterId) {
         this.evenPageFooterId = evenPageFooterId;
         return this;
@@ -84,6 +90,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evenPageHeaderId")
     public String evenPageHeaderId;
+
     public SectionStyle withEvenPageHeaderId(String evenPageHeaderId) {
         this.evenPageHeaderId = evenPageHeaderId;
         return this;
@@ -95,6 +102,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageFooterId")
     public String firstPageFooterId;
+
     public SectionStyle withFirstPageFooterId(String firstPageFooterId) {
         this.firstPageFooterId = firstPageFooterId;
         return this;
@@ -106,6 +114,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPageHeaderId")
     public String firstPageHeaderId;
+
     public SectionStyle withFirstPageHeaderId(String firstPageHeaderId) {
         this.firstPageHeaderId = firstPageHeaderId;
         return this;
@@ -117,6 +126,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginBottom")
     public Dimension marginBottom;
+
     public SectionStyle withMarginBottom(Dimension marginBottom) {
         this.marginBottom = marginBottom;
         return this;
@@ -128,6 +138,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginFooter")
     public Dimension marginFooter;
+
     public SectionStyle withMarginFooter(Dimension marginFooter) {
         this.marginFooter = marginFooter;
         return this;
@@ -139,6 +150,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginHeader")
     public Dimension marginHeader;
+
     public SectionStyle withMarginHeader(Dimension marginHeader) {
         this.marginHeader = marginHeader;
         return this;
@@ -150,6 +162,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginLeft")
     public Dimension marginLeft;
+
     public SectionStyle withMarginLeft(Dimension marginLeft) {
         this.marginLeft = marginLeft;
         return this;
@@ -161,6 +174,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginRight")
     public Dimension marginRight;
+
     public SectionStyle withMarginRight(Dimension marginRight) {
         this.marginRight = marginRight;
         return this;
@@ -172,6 +186,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginTop")
     public Dimension marginTop;
+
     public SectionStyle withMarginTop(Dimension marginTop) {
         this.marginTop = marginTop;
         return this;
@@ -183,6 +198,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pageNumberStart")
     public Integer pageNumberStart;
+
     public SectionStyle withPageNumberStart(Integer pageNumberStart) {
         this.pageNumberStart = pageNumberStart;
         return this;
@@ -194,6 +210,7 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectionType")
     public SectionStyleSectionTypeEnum sectionType;
+
     public SectionStyle withSectionType(SectionStyleSectionTypeEnum sectionType) {
         this.sectionType = sectionType;
         return this;
@@ -205,9 +222,11 @@ public class SectionStyle {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("useFirstPageHeaderFooter")
     public Boolean useFirstPageHeaderFooter;
+
     public SectionStyle withUseFirstPageHeaderFooter(Boolean useFirstPageHeaderFooter) {
         this.useFirstPageHeaderFooter = useFirstPageHeaderFooter;
         return this;
     }
     
+    public SectionStyle(){}
 }

@@ -15,6 +15,7 @@ public class KinesisDataStreamDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationStatus")
     public DestinationStatusEnum destinationStatus;
+
     public KinesisDataStreamDestination withDestinationStatus(DestinationStatusEnum destinationStatus) {
         this.destinationStatus = destinationStatus;
         return this;
@@ -23,6 +24,7 @@ public class KinesisDataStreamDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DestinationStatusDescription")
     public String destinationStatusDescription;
+
     public KinesisDataStreamDestination withDestinationStatusDescription(String destinationStatusDescription) {
         this.destinationStatusDescription = destinationStatusDescription;
         return this;
@@ -31,9 +33,11 @@ public class KinesisDataStreamDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamArn")
     public String streamArn;
+
     public KinesisDataStreamDestination withStreamArn(String streamArn) {
         this.streamArn = streamArn;
         return this;
     }
     
+    public KinesisDataStreamDestination(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest {
@@ -12,6 +13,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=advertiserId")
     public String advertiserId;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withAdvertiserId(String advertiserId) {
         this.advertiserId = advertiserId;
         return this;
@@ -42,6 +46,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -52,6 +57,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=assignedInventorySourceId")
     public String assignedInventorySourceId;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withAssignedInventorySourceId(String assignedInventorySourceId) {
         this.assignedInventorySourceId = assignedInventorySourceId;
         return this;
@@ -62,6 +68,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -72,6 +79,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -82,6 +90,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=inventorySourceGroupId")
     public String inventorySourceGroupId;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withInventorySourceGroupId(String inventorySourceGroupId) {
         this.inventorySourceGroupId = inventorySourceGroupId;
         return this;
@@ -92,6 +101,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withKey(String key) {
         this.key = key;
         return this;
@@ -102,6 +112,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=partnerId")
     public String partnerId;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withPartnerId(String partnerId) {
         this.partnerId = partnerId;
         return this;
@@ -122,6 +134,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -142,6 +156,7 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -152,9 +167,14 @@ public class DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequ
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DisplayvideoInventorySourceGroupsAssignedInventorySourcesDeleteRequest(@JsonProperty("assignedInventorySourceId") String assignedInventorySourceId, @JsonProperty("inventorySourceGroupId") String inventorySourceGroupId) {
+        this.assignedInventorySourceId = assignedInventorySourceId;
+        this.inventorySourceGroupId = inventorySourceGroupId;
+  }
 }

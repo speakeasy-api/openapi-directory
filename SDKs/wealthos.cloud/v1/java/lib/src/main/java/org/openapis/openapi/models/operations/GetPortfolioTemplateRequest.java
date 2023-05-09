@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetPortfolioTemplateRequest {
@@ -12,6 +13,7 @@ public class GetPortfolioTemplateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=portfolio_template_id")
     public String portfolioTemplateId;
+
     public GetPortfolioTemplateRequest withPortfolioTemplateId(String portfolioTemplateId) {
         this.portfolioTemplateId = portfolioTemplateId;
         return this;
@@ -22,9 +24,14 @@ public class GetPortfolioTemplateRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-api-key")
     public String xApiKey;
+
     public GetPortfolioTemplateRequest withXApiKey(String xApiKey) {
         this.xApiKey = xApiKey;
         return this;
     }
     
+    public GetPortfolioTemplateRequest(@JsonProperty("portfolio_template_id") String portfolioTemplateId, @JsonProperty("x-api-key") String xApiKey) {
+        this.portfolioTemplateId = portfolioTemplateId;
+        this.xApiKey = xApiKey;
+  }
 }

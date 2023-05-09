@@ -12,9 +12,11 @@ public class SecurityPolicyReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityPolicy")
     public String securityPolicy;
+
     public SecurityPolicyReference withSecurityPolicy(String securityPolicy) {
         this.securityPolicy = securityPolicy;
         return this;
     }
     
+    public SecurityPolicyReference(){}
 }

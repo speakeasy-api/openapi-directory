@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class MybusinessGoogleLocationsSearchResponse {
     
     public String contentType;
+
     public MybusinessGoogleLocationsSearchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class MybusinessGoogleLocationsSearchResponse {
      */
     
     public org.openapis.openapi.models.shared.SearchGoogleLocationsResponse searchGoogleLocationsResponse;
+
     public MybusinessGoogleLocationsSearchResponse withSearchGoogleLocationsResponse(org.openapis.openapi.models.shared.SearchGoogleLocationsResponse searchGoogleLocationsResponse) {
         this.searchGoogleLocationsResponse = searchGoogleLocationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class MybusinessGoogleLocationsSearchResponse {
     
     
     public Integer statusCode;
+
     public MybusinessGoogleLocationsSearchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class MybusinessGoogleLocationsSearchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public MybusinessGoogleLocationsSearchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public MybusinessGoogleLocationsSearchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

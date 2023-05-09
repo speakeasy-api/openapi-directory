@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ResourceProfileArtifact {
     @JsonProperty("arn")
     public String arn;
+
     public ResourceProfileArtifact withArn(String arn) {
         this.arn = arn;
         return this;
@@ -21,6 +22,7 @@ public class ResourceProfileArtifact {
     
     @JsonProperty("classificationResultStatus")
     public String classificationResultStatus;
+
     public ResourceProfileArtifact withClassificationResultStatus(String classificationResultStatus) {
         this.classificationResultStatus = classificationResultStatus;
         return this;
@@ -29,9 +31,14 @@ public class ResourceProfileArtifact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sensitive")
     public Boolean sensitive;
+
     public ResourceProfileArtifact withSensitive(Boolean sensitive) {
         this.sensitive = sensitive;
         return this;
     }
     
+    public ResourceProfileArtifact(@JsonProperty("arn") String arn, @JsonProperty("classificationResultStatus") String classificationResultStatus) {
+        this.arn = arn;
+        this.classificationResultStatus = classificationResultStatus;
+  }
 }

@@ -12,6 +12,7 @@ public class ItvBillingHistoryRecord {
      */
     @JsonProperty("card")
     public java.util.Map<String, Object> card;
+
     public ItvBillingHistoryRecord withCard(java.util.Map<String, Object> card) {
         this.card = card;
         return this;
@@ -22,6 +23,7 @@ public class ItvBillingHistoryRecord {
      */
     @JsonProperty("charge")
     public java.util.Map<String, Object> charge;
+
     public ItvBillingHistoryRecord withCharge(java.util.Map<String, Object> charge) {
         this.charge = charge;
         return this;
@@ -32,6 +34,7 @@ public class ItvBillingHistoryRecord {
      */
     @JsonProperty("invoice")
     public java.util.Map<String, Object> invoice;
+
     public ItvBillingHistoryRecord withInvoice(java.util.Map<String, Object> invoice) {
         this.invoice = invoice;
         return this;
@@ -42,9 +45,16 @@ public class ItvBillingHistoryRecord {
      */
     @JsonProperty("subscription")
     public java.util.Map<String, Object> subscription;
+
     public ItvBillingHistoryRecord withSubscription(java.util.Map<String, Object> subscription) {
         this.subscription = subscription;
         return this;
     }
     
+    public ItvBillingHistoryRecord(@JsonProperty("card") java.util.Map<String, Object> card, @JsonProperty("charge") java.util.Map<String, Object> charge, @JsonProperty("invoice") java.util.Map<String, Object> invoice, @JsonProperty("subscription") java.util.Map<String, Object> subscription) {
+        this.card = card;
+        this.charge = charge;
+        this.invoice = invoice;
+        this.subscription = subscription;
+  }
 }

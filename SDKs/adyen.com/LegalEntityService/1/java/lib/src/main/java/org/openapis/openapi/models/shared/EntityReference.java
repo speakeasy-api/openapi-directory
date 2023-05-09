@@ -15,9 +15,11 @@ public class EntityReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public EntityReference withId(String id) {
         this.id = id;
         return this;
     }
     
+    public EntityReference(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentTemplateVersionResponse {
@@ -12,6 +13,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEnvironmentTemplateVersionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentTemplateVersionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentTemplateVersionResponse {
     
     
     public String contentType;
+
     public CreateEnvironmentTemplateVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentTemplateVersionOutput createEnvironmentTemplateVersionOutput;
+
     public CreateEnvironmentTemplateVersionResponse withCreateEnvironmentTemplateVersionOutput(org.openapis.openapi.models.shared.CreateEnvironmentTemplateVersionOutput createEnvironmentTemplateVersionOutput) {
         this.createEnvironmentTemplateVersionOutput = createEnvironmentTemplateVersionOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object internalServerException;
+
     public CreateEnvironmentTemplateVersionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateEnvironmentTemplateVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEnvironmentTemplateVersionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -76,6 +84,7 @@ public class CreateEnvironmentTemplateVersionResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentTemplateVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateEnvironmentTemplateVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentTemplateVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object throttlingException;
+
     public CreateEnvironmentTemplateVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class CreateEnvironmentTemplateVersionResponse {
      */
     
     public Object validationException;
+
     public CreateEnvironmentTemplateVersionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEnvironmentTemplateVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

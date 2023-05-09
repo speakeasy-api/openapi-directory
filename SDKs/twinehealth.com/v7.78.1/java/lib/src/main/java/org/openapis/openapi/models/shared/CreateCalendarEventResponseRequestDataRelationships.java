@@ -12,6 +12,7 @@ public class CreateCalendarEventResponseRequestDataRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendar_event")
     public CreateCalendarEventResponseRequestDataRelationshipsCalendarEvent calendarEvent;
+
     public CreateCalendarEventResponseRequestDataRelationships withCalendarEvent(CreateCalendarEventResponseRequestDataRelationshipsCalendarEvent calendarEvent) {
         this.calendarEvent = calendarEvent;
         return this;
@@ -20,9 +21,11 @@ public class CreateCalendarEventResponseRequestDataRelationships {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public CreateCalendarEventResponseRequestDataRelationshipsUser user;
+
     public CreateCalendarEventResponseRequestDataRelationships withUser(CreateCalendarEventResponseRequestDataRelationshipsUser user) {
         this.user = user;
         return this;
     }
     
+    public CreateCalendarEventResponseRequestDataRelationships(){}
 }

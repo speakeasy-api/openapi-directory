@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdatePricingRuleResponse {
@@ -12,6 +13,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdatePricingRuleResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object conflictException;
+
     public UpdatePricingRuleResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class UpdatePricingRuleResponse {
     
     
     public String contentType;
+
     public UpdatePricingRuleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object internalServerException;
+
     public UpdatePricingRuleResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdatePricingRuleResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdatePricingRuleResponse {
     
     
     public Integer statusCode;
+
     public UpdatePricingRuleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdatePricingRuleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdatePricingRuleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object throttlingException;
+
     public UpdatePricingRuleResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdatePricingRuleResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdatePricingRuleOutput updatePricingRuleOutput;
+
     public UpdatePricingRuleResponse withUpdatePricingRuleOutput(org.openapis.openapi.models.shared.UpdatePricingRuleOutput updatePricingRuleOutput) {
         this.updatePricingRuleOutput = updatePricingRuleOutput;
         return this;
@@ -93,9 +103,14 @@ public class UpdatePricingRuleResponse {
      */
     
     public Object validationException;
+
     public UpdatePricingRuleResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdatePricingRuleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

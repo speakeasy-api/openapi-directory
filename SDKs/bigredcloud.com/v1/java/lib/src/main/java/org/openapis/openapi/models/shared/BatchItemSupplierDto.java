@@ -12,6 +12,7 @@ public class BatchItemSupplierDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("item")
     public SupplierDto item;
+
     public BatchItemSupplierDto withItem(SupplierDto item) {
         this.item = item;
         return this;
@@ -25,9 +26,11 @@ public class BatchItemSupplierDto {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("opCode")
     public BatchItemSupplierDtoOpCodeEnum opCode;
+
     public BatchItemSupplierDto withOpCode(BatchItemSupplierDtoOpCodeEnum opCode) {
         this.opCode = opCode;
         return this;
     }
     
+    public BatchItemSupplierDto(){}
 }

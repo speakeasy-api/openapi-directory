@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * IdentityDkimAttributes - Represents the DKIM attributes of a verified email address or a domain.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class IdentityDkimAttributes {
     
     public Boolean dkimEnabled;
+
     public IdentityDkimAttributes withDkimEnabled(Boolean dkimEnabled) {
         this.dkimEnabled = dkimEnabled;
         return this;
@@ -19,6 +20,7 @@ public class IdentityDkimAttributes {
     
     
     public String[] dkimTokens;
+
     public IdentityDkimAttributes withDkimTokens(String[] dkimTokens) {
         this.dkimTokens = dkimTokens;
         return this;
@@ -26,9 +28,14 @@ public class IdentityDkimAttributes {
     
     
     public VerificationStatusEnum dkimVerificationStatus;
+
     public IdentityDkimAttributes withDkimVerificationStatus(VerificationStatusEnum dkimVerificationStatus) {
         this.dkimVerificationStatus = dkimVerificationStatus;
         return this;
     }
     
+    public IdentityDkimAttributes(@JsonProperty("DkimEnabled") Boolean dkimEnabled, @JsonProperty("DkimVerificationStatus") VerificationStatusEnum dkimVerificationStatus) {
+        this.dkimEnabled = dkimEnabled;
+        this.dkimVerificationStatus = dkimVerificationStatus;
+  }
 }

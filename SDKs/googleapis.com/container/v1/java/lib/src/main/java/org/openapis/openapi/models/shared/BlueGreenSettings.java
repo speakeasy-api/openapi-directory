@@ -18,6 +18,7 @@ public class BlueGreenSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nodePoolSoakDuration")
     public String nodePoolSoakDuration;
+
     public BlueGreenSettings withNodePoolSoakDuration(String nodePoolSoakDuration) {
         this.nodePoolSoakDuration = nodePoolSoakDuration;
         return this;
@@ -29,9 +30,11 @@ public class BlueGreenSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("standardRolloutPolicy")
     public StandardRolloutPolicy standardRolloutPolicy;
+
     public BlueGreenSettings withStandardRolloutPolicy(StandardRolloutPolicy standardRolloutPolicy) {
         this.standardRolloutPolicy = standardRolloutPolicy;
         return this;
     }
     
+    public BlueGreenSettings(){}
 }

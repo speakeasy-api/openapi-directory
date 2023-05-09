@@ -15,9 +15,13 @@ public class Font {
      */
     @JsonProperty("src")
     public String src;
+
     public Font withSrc(String src) {
         this.src = src;
         return this;
     }
     
+    public Font(@JsonProperty("src") String src) {
+        this.src = src;
+  }
 }

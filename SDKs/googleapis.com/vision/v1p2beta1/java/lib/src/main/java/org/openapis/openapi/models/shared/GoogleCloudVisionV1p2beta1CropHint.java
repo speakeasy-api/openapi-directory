@@ -18,6 +18,7 @@ public class GoogleCloudVisionV1p2beta1CropHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boundingPoly")
     public GoogleCloudVisionV1p2beta1BoundingPoly boundingPoly;
+
     public GoogleCloudVisionV1p2beta1CropHint withBoundingPoly(GoogleCloudVisionV1p2beta1BoundingPoly boundingPoly) {
         this.boundingPoly = boundingPoly;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudVisionV1p2beta1CropHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence")
     public Float confidence;
+
     public GoogleCloudVisionV1p2beta1CropHint withConfidence(Float confidence) {
         this.confidence = confidence;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudVisionV1p2beta1CropHint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importanceFraction")
     public Float importanceFraction;
+
     public GoogleCloudVisionV1p2beta1CropHint withImportanceFraction(Float importanceFraction) {
         this.importanceFraction = importanceFraction;
         return this;
     }
     
+    public GoogleCloudVisionV1p2beta1CropHint(){}
 }

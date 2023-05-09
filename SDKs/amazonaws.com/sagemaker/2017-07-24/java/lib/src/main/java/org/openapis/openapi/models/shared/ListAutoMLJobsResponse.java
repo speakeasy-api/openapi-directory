@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListAutoMLJobsResponse {
     @JsonProperty("AutoMLJobSummaries")
     public AutoMLJobSummary[] autoMLJobSummaries;
+
     public ListAutoMLJobsResponse withAutoMLJobSummaries(AutoMLJobSummary[] autoMLJobSummaries) {
         this.autoMLJobSummaries = autoMLJobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListAutoMLJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAutoMLJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAutoMLJobsResponse(@JsonProperty("AutoMLJobSummaries") AutoMLJobSummary[] autoMLJobSummaries) {
+        this.autoMLJobSummaries = autoMLJobSummaries;
+  }
 }

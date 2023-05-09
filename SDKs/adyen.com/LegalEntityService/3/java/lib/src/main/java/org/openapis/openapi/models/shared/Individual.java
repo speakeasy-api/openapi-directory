@@ -12,6 +12,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthData")
     public BirthData birthData;
+
     public Individual withBirthData(BirthData birthData) {
         this.birthData = birthData;
         return this;
@@ -23,6 +24,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public Individual withEmail(String email) {
         this.email = email;
         return this;
@@ -31,6 +33,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identificationData")
     public IdentificationData identificationData;
+
     public Individual withIdentificationData(IdentificationData identificationData) {
         this.identificationData = identificationData;
         return this;
@@ -38,6 +41,7 @@ public class Individual {
     
     @JsonProperty("name")
     public Name name;
+
     public Individual withName(Name name) {
         this.name = name;
         return this;
@@ -49,6 +53,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nationality")
     public String nationality;
+
     public Individual withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -57,6 +62,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public PhoneNumber phone;
+
     public Individual withPhone(PhoneNumber phone) {
         this.phone = phone;
         return this;
@@ -64,6 +70,7 @@ public class Individual {
     
     @JsonProperty("residentialAddress")
     public Address residentialAddress;
+
     public Individual withResidentialAddress(Address residentialAddress) {
         this.residentialAddress = residentialAddress;
         return this;
@@ -75,6 +82,7 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxInformation")
     public TaxInformation[] taxInformation;
+
     public Individual withTaxInformation(TaxInformation[] taxInformation) {
         this.taxInformation = taxInformation;
         return this;
@@ -83,9 +91,14 @@ public class Individual {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("webData")
     public WebData webData;
+
     public Individual withWebData(WebData webData) {
         this.webData = webData;
         return this;
     }
     
+    public Individual(@JsonProperty("name") Name name, @JsonProperty("residentialAddress") Address residentialAddress) {
+        this.name = name;
+        this.residentialAddress = residentialAddress;
+  }
 }

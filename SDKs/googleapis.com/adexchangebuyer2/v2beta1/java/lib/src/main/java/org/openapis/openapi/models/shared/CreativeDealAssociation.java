@@ -18,6 +18,7 @@ public class CreativeDealAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountId")
     public String accountId;
+
     public CreativeDealAssociation withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -29,6 +30,7 @@ public class CreativeDealAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creativeId")
     public String creativeId;
+
     public CreativeDealAssociation withCreativeId(String creativeId) {
         this.creativeId = creativeId;
         return this;
@@ -40,9 +42,11 @@ public class CreativeDealAssociation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealsId")
     public String dealsId;
+
     public CreativeDealAssociation withDealsId(String dealsId) {
         this.dealsId = dealsId;
         return this;
     }
     
+    public CreativeDealAssociation(){}
 }

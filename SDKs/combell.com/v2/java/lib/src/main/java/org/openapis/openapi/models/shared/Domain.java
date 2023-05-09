@@ -20,6 +20,7 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain_name")
     public String domainName;
+
     public Domain withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -33,6 +34,7 @@ public class Domain {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expiration_date")
     public OffsetDateTime expirationDate;
+
     public Domain withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -45,9 +47,11 @@ public class Domain {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("will_renew")
     public Boolean willRenew;
+
     public Domain withWillRenew(Boolean willRenew) {
         this.willRenew = willRenew;
         return this;
     }
     
+    public Domain(){}
 }

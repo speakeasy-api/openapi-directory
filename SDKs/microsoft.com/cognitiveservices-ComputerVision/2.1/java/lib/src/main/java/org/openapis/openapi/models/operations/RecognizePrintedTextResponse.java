@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecognizePrintedTextResponse {
@@ -12,6 +13,7 @@ public class RecognizePrintedTextResponse {
      */
     
     public org.openapis.openapi.models.shared.ComputerVisionError computerVisionError;
+
     public RecognizePrintedTextResponse withComputerVisionError(org.openapis.openapi.models.shared.ComputerVisionError computerVisionError) {
         this.computerVisionError = computerVisionError;
         return this;
@@ -19,6 +21,7 @@ public class RecognizePrintedTextResponse {
     
     
     public String contentType;
+
     public RecognizePrintedTextResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class RecognizePrintedTextResponse {
      */
     
     public org.openapis.openapi.models.shared.OcrResult ocrResult;
+
     public RecognizePrintedTextResponse withOcrResult(org.openapis.openapi.models.shared.OcrResult ocrResult) {
         this.ocrResult = ocrResult;
         return this;
@@ -36,6 +40,7 @@ public class RecognizePrintedTextResponse {
     
     
     public Integer statusCode;
+
     public RecognizePrintedTextResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class RecognizePrintedTextResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecognizePrintedTextResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecognizePrintedTextResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

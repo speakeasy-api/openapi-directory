@@ -18,9 +18,11 @@ public class GoogleCloudMlV1ContainerPort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerPort")
     public Integer containerPort;
+
     public GoogleCloudMlV1ContainerPort withContainerPort(Integer containerPort) {
         this.containerPort = containerPort;
         return this;
     }
     
+    public GoogleCloudMlV1ContainerPort(){}
 }

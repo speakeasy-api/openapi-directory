@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class ReservationInstancesElasticInferenceAcceleratorAssociations {
     
     public String elasticInferenceAcceleratorArn;
+
     public ReservationInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorArn(String elasticInferenceAcceleratorArn) {
         this.elasticInferenceAcceleratorArn = elasticInferenceAcceleratorArn;
         return this;
@@ -19,6 +20,7 @@ public class ReservationInstancesElasticInferenceAcceleratorAssociations {
     
     
     public String elasticInferenceAcceleratorAssociationId;
+
     public ReservationInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationId(String elasticInferenceAcceleratorAssociationId) {
         this.elasticInferenceAcceleratorAssociationId = elasticInferenceAcceleratorAssociationId;
         return this;
@@ -26,6 +28,7 @@ public class ReservationInstancesElasticInferenceAcceleratorAssociations {
     
     
     public String elasticInferenceAcceleratorAssociationState;
+
     public ReservationInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationState(String elasticInferenceAcceleratorAssociationState) {
         this.elasticInferenceAcceleratorAssociationState = elasticInferenceAcceleratorAssociationState;
         return this;
@@ -33,9 +36,11 @@ public class ReservationInstancesElasticInferenceAcceleratorAssociations {
     
     
     public OffsetDateTime elasticInferenceAcceleratorAssociationTime;
+
     public ReservationInstancesElasticInferenceAcceleratorAssociations withElasticInferenceAcceleratorAssociationTime(OffsetDateTime elasticInferenceAcceleratorAssociationTime) {
         this.elasticInferenceAcceleratorAssociationTime = elasticInferenceAcceleratorAssociationTime;
         return this;
     }
     
+    public ReservationInstancesElasticInferenceAcceleratorAssociations(){}
 }

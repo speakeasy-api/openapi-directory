@@ -147,6 +147,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.serviceCredential = new ServiceCredential(
@@ -260,11 +265,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetDocumentationResponse res = new org.openapis.openapi.models.operations.GetDocumentationResponse() {{
+        org.openapis.openapi.models.operations.GetDocumentationResponse res = new org.openapis.openapi.models.operations.GetDocumentationResponse(contentType, httpRes.statusCode()) {{
             getDocumentation200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -305,11 +308,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostGraphQLResponse res = new org.openapis.openapi.models.operations.PostGraphQLResponse() {{
+        org.openapis.openapi.models.operations.PostGraphQLResponse res = new org.openapis.openapi.models.operations.PostGraphQLResponse(contentType, httpRes.statusCode()) {{
             graphQLResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -18,6 +18,7 @@ public class QuotaExceededInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensions")
     public java.util.Map<String, String> dimensions;
+
     public QuotaExceededInfo withDimensions(java.util.Map<String, String> dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -29,6 +30,7 @@ public class QuotaExceededInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limit")
     public Double limit;
+
     public QuotaExceededInfo withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -40,6 +42,7 @@ public class QuotaExceededInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("limitName")
     public String limitName;
+
     public QuotaExceededInfo withLimitName(String limitName) {
         this.limitName = limitName;
         return this;
@@ -51,9 +54,11 @@ public class QuotaExceededInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricName")
     public String metricName;
+
     public QuotaExceededInfo withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
     
+    public QuotaExceededInfo(){}
 }

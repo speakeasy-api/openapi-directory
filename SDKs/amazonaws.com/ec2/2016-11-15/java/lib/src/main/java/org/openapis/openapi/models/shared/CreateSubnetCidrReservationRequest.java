@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateSubnetCidrReservationRequest {
     
     public String cidr;
+
     public CreateSubnetCidrReservationRequest withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -16,6 +17,7 @@ public class CreateSubnetCidrReservationRequest {
     
     
     public String description;
+
     public CreateSubnetCidrReservationRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class CreateSubnetCidrReservationRequest {
     
     
     public Boolean dryRun;
+
     public CreateSubnetCidrReservationRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateSubnetCidrReservationRequest {
     
     
     public SubnetCidrReservationTypeEnum reservationType;
+
     public CreateSubnetCidrReservationRequest withReservationType(SubnetCidrReservationTypeEnum reservationType) {
         this.reservationType = reservationType;
         return this;
@@ -37,6 +41,7 @@ public class CreateSubnetCidrReservationRequest {
     
     
     public String subnetId;
+
     public CreateSubnetCidrReservationRequest withSubnetId(String subnetId) {
         this.subnetId = subnetId;
         return this;
@@ -44,9 +49,15 @@ public class CreateSubnetCidrReservationRequest {
     
     
     public CreateSubnetCidrReservationRequestTagSpecifications[] tagSpecifications;
+
     public CreateSubnetCidrReservationRequest withTagSpecifications(CreateSubnetCidrReservationRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
     }
     
+    public CreateSubnetCidrReservationRequest(@JsonProperty("Cidr") String cidr, @JsonProperty("ReservationType") SubnetCidrReservationTypeEnum reservationType, @JsonProperty("SubnetId") String subnetId) {
+        this.cidr = cidr;
+        this.reservationType = reservationType;
+        this.subnetId = subnetId;
+  }
 }

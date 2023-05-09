@@ -15,6 +15,7 @@ public class ServiceException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ServiceException withMessage(String message) {
         this.message = message;
         return this;
@@ -23,9 +24,11 @@ public class ServiceException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public ServiceException withType(String type) {
         this.type = type;
         return this;
     }
     
+    public ServiceException(){}
 }

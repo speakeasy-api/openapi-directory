@@ -15,6 +15,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryChannel")
     public String deliveryChannel;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withDeliveryChannel(String deliveryChannel) {
         this.deliveryChannel = deliveryChannel;
         return this;
@@ -26,6 +27,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryIds")
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds[] deliveryIds;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withDeliveryIds(Items200ApplicationJSONShippingDataLogisticsInfoSlasDeliveryIds[] deliveryIds) {
         this.deliveryIds = deliveryIds;
         return this;
@@ -37,6 +39,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withId(String id) {
         this.id = id;
         return this;
@@ -48,6 +51,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listPrice")
     public Long listPrice;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withListPrice(Long listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -59,6 +63,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTTL")
     public String lockTTL;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withLockTTL(String lockTTL) {
         this.lockTTL = lockTTL;
         return this;
@@ -70,6 +75,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withName(String name) {
         this.name = name;
         return this;
@@ -81,6 +87,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupDistance")
     public Long pickupDistance;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withPickupDistance(Long pickupDistance) {
         this.pickupDistance = pickupDistance;
         return this;
@@ -92,6 +99,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupPointId")
     public String pickupPointId;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withPickupPointId(String pickupPointId) {
         this.pickupPointId = pickupPointId;
         return this;
@@ -103,6 +111,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pickupStoreInfo")
     public Items200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo pickupStoreInfo;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withPickupStoreInfo(Items200ApplicationJSONShippingDataLogisticsInfoSlasPickupStoreInfo pickupStoreInfo) {
         this.pickupStoreInfo = pickupStoreInfo;
         return this;
@@ -114,6 +123,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("polygonName")
     public String polygonName;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withPolygonName(String polygonName) {
         this.polygonName = polygonName;
         return this;
@@ -125,6 +135,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("price")
     public Long price;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withPrice(Long price) {
         this.price = price;
         return this;
@@ -136,6 +147,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimate")
     public String shippingEstimate;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withShippingEstimate(String shippingEstimate) {
         this.shippingEstimate = shippingEstimate;
         return this;
@@ -147,6 +159,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shippingEstimateDate")
     public String shippingEstimateDate;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withShippingEstimateDate(String shippingEstimateDate) {
         this.shippingEstimateDate = shippingEstimateDate;
         return this;
@@ -158,6 +171,7 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax")
     public Long tax;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withTax(Long tax) {
         this.tax = tax;
         return this;
@@ -169,9 +183,11 @@ public class Items200ApplicationJSONShippingDataLogisticsInfoSlas {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transitTime")
     public String transitTime;
+
     public Items200ApplicationJSONShippingDataLogisticsInfoSlas withTransitTime(String transitTime) {
         this.transitTime = transitTime;
         return this;
     }
     
+    public Items200ApplicationJSONShippingDataLogisticsInfoSlas(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListversionsRequest {
@@ -12,6 +13,7 @@ public class ListversionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ListversionsRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ListversionsRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ListversionsRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,6 +35,7 @@ public class ListversionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=acronym")
     public String acronym;
+
     public ListversionsRequest withAcronym(String acronym) {
         this.acronym = acronym;
         return this;
@@ -42,9 +46,16 @@ public class ListversionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ListversionsRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ListversionsRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("acronym") String acronym, @JsonProperty("id") String id) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.acronym = acronym;
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateStreamResponse {
     
     public String contentType;
+
     public UpdateStreamResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateStreamResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateStreamResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateStreamResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateStreamResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateStreamResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateStreamResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateStreamResponse {
     
     
     public Integer statusCode;
+
     public UpdateStreamResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateStreamResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateStreamResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateStreamResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateStreamResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateStreamResponse {
      */
     
     public Object throttlingException;
+
     public UpdateStreamResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateStreamResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateStreamResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateStreamResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateStreamResponse updateStreamResponse;
+
     public UpdateStreamResponse withUpdateStreamResponse(org.openapis.openapi.models.shared.UpdateStreamResponse updateStreamResponse) {
         this.updateStreamResponse = updateStreamResponse;
         return this;
     }
     
+    public UpdateStreamResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

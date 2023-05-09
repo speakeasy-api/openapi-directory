@@ -23,6 +23,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destination")
     public String destination;
+
     public TflApiPresentationEntitiesMatchedRoute withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -34,6 +35,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public TflApiPresentationEntitiesMatchedRoute withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -45,6 +47,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("direction")
     public String direction;
+
     public TflApiPresentationEntitiesMatchedRoute withDirection(String direction) {
         this.direction = direction;
         return this;
@@ -56,6 +59,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TflApiPresentationEntitiesMatchedRoute withName(String name) {
         this.name = name;
         return this;
@@ -67,6 +71,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originationName")
     public String originationName;
+
     public TflApiPresentationEntitiesMatchedRoute withOriginationName(String originationName) {
         this.originationName = originationName;
         return this;
@@ -78,6 +83,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originator")
     public String originator;
+
     public TflApiPresentationEntitiesMatchedRoute withOriginator(String originator) {
         this.originator = originator;
         return this;
@@ -89,6 +95,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeCode")
     public String routeCode;
+
     public TflApiPresentationEntitiesMatchedRoute withRouteCode(String routeCode) {
         this.routeCode = routeCode;
         return this;
@@ -100,6 +107,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceType")
     public String serviceType;
+
     public TflApiPresentationEntitiesMatchedRoute withServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
@@ -113,6 +121,7 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validFrom")
     public OffsetDateTime validFrom;
+
     public TflApiPresentationEntitiesMatchedRoute withValidFrom(OffsetDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
@@ -126,9 +135,11 @@ public class TflApiPresentationEntitiesMatchedRoute {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("validTo")
     public OffsetDateTime validTo;
+
     public TflApiPresentationEntitiesMatchedRoute withValidTo(OffsetDateTime validTo) {
         this.validTo = validTo;
         return this;
     }
     
+    public TflApiPresentationEntitiesMatchedRoute(){}
 }

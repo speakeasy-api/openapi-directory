@@ -23,6 +23,7 @@ public class BucketIamConfigurationBucketPolicyOnly {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public BucketIamConfigurationBucketPolicyOnly withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -36,9 +37,11 @@ public class BucketIamConfigurationBucketPolicyOnly {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lockedTime")
     public OffsetDateTime lockedTime;
+
     public BucketIamConfigurationBucketPolicyOnly withLockedTime(OffsetDateTime lockedTime) {
         this.lockedTime = lockedTime;
         return this;
     }
     
+    public BucketIamConfigurationBucketPolicyOnly(){}
 }

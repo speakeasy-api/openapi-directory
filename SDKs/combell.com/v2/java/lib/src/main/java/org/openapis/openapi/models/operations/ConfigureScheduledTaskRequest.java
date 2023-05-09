@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ConfigureScheduledTaskRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.ScheduledTask scheduledTask;
+
     public ConfigureScheduledTaskRequest withScheduledTask(org.openapis.openapi.models.shared.ScheduledTask scheduledTask) {
         this.scheduledTask = scheduledTask;
         return this;
@@ -19,6 +21,7 @@ public class ConfigureScheduledTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainName")
     public String domainNamePathParameter;
+
     public ConfigureScheduledTaskRequest withDomainNamePathParameter(String domainNamePathParameter) {
         this.domainNamePathParameter = domainNamePathParameter;
         return this;
@@ -29,6 +32,7 @@ public class ConfigureScheduledTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=domain_name")
     public String domainNameQueryParameter;
+
     public ConfigureScheduledTaskRequest withDomainNameQueryParameter(String domainNameQueryParameter) {
         this.domainNameQueryParameter = domainNameQueryParameter;
         return this;
@@ -39,6 +43,7 @@ public class ConfigureScheduledTaskRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=scheduledTaskId")
     public String scheduledTaskIdPathParameter;
+
     public ConfigureScheduledTaskRequest withScheduledTaskIdPathParameter(String scheduledTaskIdPathParameter) {
         this.scheduledTaskIdPathParameter = scheduledTaskIdPathParameter;
         return this;
@@ -49,9 +54,16 @@ public class ConfigureScheduledTaskRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=scheduled_task_id")
     public String scheduledTaskIdQueryParameter;
+
     public ConfigureScheduledTaskRequest withScheduledTaskIdQueryParameter(String scheduledTaskIdQueryParameter) {
         this.scheduledTaskIdQueryParameter = scheduledTaskIdQueryParameter;
         return this;
     }
     
+    public ConfigureScheduledTaskRequest(@JsonProperty("domainNamePathParameter") String domainNamePathParameter, @JsonProperty("domain_nameQueryParameter") String domainNameQueryParameter, @JsonProperty("scheduledTaskIdPathParameter") String scheduledTaskIdPathParameter, @JsonProperty("scheduled_task_idQueryParameter") String scheduledTaskIdQueryParameter) {
+        this.domainNamePathParameter = domainNamePathParameter;
+        this.domainNameQueryParameter = domainNameQueryParameter;
+        this.scheduledTaskIdPathParameter = scheduledTaskIdPathParameter;
+        this.scheduledTaskIdQueryParameter = scheduledTaskIdQueryParameter;
+  }
 }

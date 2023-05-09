@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DirectoryMobiledevicesListSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DirectoryMobiledevicesListSecurityOption1 option1;
+
     public DirectoryMobiledevicesListSecurity withOption1(DirectoryMobiledevicesListSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DirectoryMobiledevicesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryMobiledevicesListSecurityOption2 option2;
+
     public DirectoryMobiledevicesListSecurity withOption2(DirectoryMobiledevicesListSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class DirectoryMobiledevicesListSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DirectoryMobiledevicesListSecurityOption3 option3;
+
     public DirectoryMobiledevicesListSecurity withOption3(DirectoryMobiledevicesListSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public DirectoryMobiledevicesListSecurity(){}
 }

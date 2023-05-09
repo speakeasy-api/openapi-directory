@@ -15,6 +15,7 @@ public class UpdateInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public UpdateInsightRequestBodyFilters filters;
+
     public UpdateInsightRequestBody withFilters(UpdateInsightRequestBodyFilters filters) {
         this.filters = filters;
         return this;
@@ -26,6 +27,7 @@ public class UpdateInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupByAttribute")
     public String groupByAttribute;
+
     public UpdateInsightRequestBody withGroupByAttribute(String groupByAttribute) {
         this.groupByAttribute = groupByAttribute;
         return this;
@@ -37,9 +39,11 @@ public class UpdateInsightRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public UpdateInsightRequestBody withName(String name) {
         this.name = name;
         return this;
     }
     
+    public UpdateInsightRequestBody(){}
 }

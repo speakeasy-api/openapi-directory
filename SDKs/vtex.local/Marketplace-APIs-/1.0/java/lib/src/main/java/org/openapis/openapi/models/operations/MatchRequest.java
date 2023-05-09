@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MatchRequest {
@@ -12,6 +13,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public MatchRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public MatchRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class MatchRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.MatchRequest matchRequest;
+
     public MatchRequest withMatchRequest(org.openapis.openapi.models.shared.MatchRequest matchRequest) {
         this.matchRequest = matchRequest;
         return this;
@@ -39,6 +43,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=accountName")
     public String accountName;
+
     public MatchRequest withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -49,6 +54,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=matchid")
     public String matchid;
+
     public MatchRequest withMatchid(String matchid) {
         this.matchid = matchid;
         return this;
@@ -59,6 +65,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerId")
     public String sellerId;
+
     public MatchRequest withSellerId(String sellerId) {
         this.sellerId = sellerId;
         return this;
@@ -69,6 +76,7 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=sellerskuid")
     public String sellerskuid;
+
     public MatchRequest withSellerskuid(String sellerskuid) {
         this.sellerskuid = sellerskuid;
         return this;
@@ -79,9 +87,20 @@ public class MatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=version")
     public String version;
+
     public MatchRequest withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public MatchRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("MatchRequest") org.openapis.openapi.models.shared.MatchRequest matchRequest, @JsonProperty("accountName") String accountName, @JsonProperty("matchid") String matchid, @JsonProperty("sellerId") String sellerId, @JsonProperty("sellerskuid") String sellerskuid, @JsonProperty("version") String version) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.matchRequest = matchRequest;
+        this.accountName = accountName;
+        this.matchid = matchid;
+        this.sellerId = sellerId;
+        this.sellerskuid = sellerskuid;
+        this.version = version;
+  }
 }

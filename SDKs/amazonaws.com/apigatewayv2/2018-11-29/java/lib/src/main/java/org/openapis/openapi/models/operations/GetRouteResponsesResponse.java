@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetRouteResponsesResponse {
@@ -12,6 +13,7 @@ public class GetRouteResponsesResponse {
      */
     
     public Object badRequestException;
+
     public GetRouteResponsesResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetRouteResponsesResponse {
     
     
     public String contentType;
+
     public GetRouteResponsesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetRouteResponsesResponse {
      */
     
     public org.openapis.openapi.models.shared.GetRouteResponsesResponse getRouteResponsesResponse;
+
     public GetRouteResponsesResponse withGetRouteResponsesResponse(org.openapis.openapi.models.shared.GetRouteResponsesResponse getRouteResponsesResponse) {
         this.getRouteResponsesResponse = getRouteResponsesResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetRouteResponsesResponse {
      */
     
     public Object notFoundException;
+
     public GetRouteResponsesResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetRouteResponsesResponse {
     
     
     public Integer statusCode;
+
     public GetRouteResponsesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetRouteResponsesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetRouteResponsesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetRouteResponsesResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetRouteResponsesResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetRouteResponsesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

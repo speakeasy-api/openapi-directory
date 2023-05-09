@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteMatchmakingConfigurationInput {
     @JsonProperty("Name")
     public String name;
+
     public DeleteMatchmakingConfigurationInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeleteMatchmakingConfigurationInput(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

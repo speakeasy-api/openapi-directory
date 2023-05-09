@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ArticleGetCustomFieldsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public ArticleGetCustomFieldsRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -16,9 +17,11 @@ public class ArticleGetCustomFieldsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public ArticleGetCustomFieldsRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public ArticleGetCustomFieldsRequest(){}
 }

@@ -15,9 +15,11 @@ public class DetectKeyPhrasesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPhrases")
     public KeyPhrase[] keyPhrases;
+
     public DetectKeyPhrasesResponse withKeyPhrases(KeyPhrase[] keyPhrases) {
         this.keyPhrases = keyPhrases;
         return this;
     }
     
+    public DetectKeyPhrasesResponse(){}
 }

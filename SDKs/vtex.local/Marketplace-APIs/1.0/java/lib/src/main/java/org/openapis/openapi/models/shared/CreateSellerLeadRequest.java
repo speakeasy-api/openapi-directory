@@ -12,6 +12,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("accountId")
     public String accountId;
+
     public CreateSellerLeadRequest withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class CreateSellerLeadRequest {
     
     @JsonProperty("accountable")
     public Accountable accountable;
+
     public CreateSellerLeadRequest withAccountable(Accountable accountable) {
         this.accountable = accountable;
         return this;
@@ -26,6 +28,7 @@ public class CreateSellerLeadRequest {
     
     @JsonProperty("address")
     public Address address;
+
     public CreateSellerLeadRequest withAddress(Address address) {
         this.address = address;
         return this;
@@ -36,6 +39,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("document")
     public String document;
+
     public CreateSellerLeadRequest withDocument(String document) {
         this.document = document;
         return this;
@@ -43,6 +47,7 @@ public class CreateSellerLeadRequest {
     
     @JsonProperty("email")
     public String email;
+
     public CreateSellerLeadRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -53,6 +58,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("hasAcceptedLegalTerms")
     public Boolean hasAcceptedLegalTerms;
+
     public CreateSellerLeadRequest withHasAcceptedLegalTerms(Boolean hasAcceptedLegalTerms) {
         this.hasAcceptedLegalTerms = hasAcceptedLegalTerms;
         return this;
@@ -63,6 +69,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public CreateSellerLeadRequest withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -73,6 +80,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("sellerAccountName")
     public String sellerAccountName;
+
     public CreateSellerLeadRequest withSellerAccountName(String sellerAccountName) {
         this.sellerAccountName = sellerAccountName;
         return this;
@@ -83,6 +91,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("sellerEmail")
     public String sellerEmail;
+
     public CreateSellerLeadRequest withSellerEmail(String sellerEmail) {
         this.sellerEmail = sellerEmail;
         return this;
@@ -93,6 +102,7 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("sellerName")
     public String sellerName;
+
     public CreateSellerLeadRequest withSellerName(String sellerName) {
         this.sellerName = sellerName;
         return this;
@@ -107,9 +117,23 @@ public class CreateSellerLeadRequest {
      */
     @JsonProperty("sellerType")
     public Integer sellerType;
+
     public CreateSellerLeadRequest withSellerType(Integer sellerType) {
         this.sellerType = sellerType;
         return this;
     }
     
+    public CreateSellerLeadRequest(@JsonProperty("accountId") String accountId, @JsonProperty("accountable") Accountable accountable, @JsonProperty("address") Address address, @JsonProperty("document") String document, @JsonProperty("email") String email, @JsonProperty("hasAcceptedLegalTerms") Boolean hasAcceptedLegalTerms, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("sellerAccountName") String sellerAccountName, @JsonProperty("sellerEmail") String sellerEmail, @JsonProperty("sellerName") String sellerName, @JsonProperty("sellerType") Integer sellerType) {
+        this.accountId = accountId;
+        this.accountable = accountable;
+        this.address = address;
+        this.document = document;
+        this.email = email;
+        this.hasAcceptedLegalTerms = hasAcceptedLegalTerms;
+        this.salesChannel = salesChannel;
+        this.sellerAccountName = sellerAccountName;
+        this.sellerEmail = sellerEmail;
+        this.sellerName = sellerName;
+        this.sellerType = sellerType;
+  }
 }

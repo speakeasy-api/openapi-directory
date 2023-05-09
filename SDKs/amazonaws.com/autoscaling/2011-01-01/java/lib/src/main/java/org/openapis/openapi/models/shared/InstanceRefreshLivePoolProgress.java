@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class InstanceRefreshLivePoolProgress {
     
     public Long instancesToUpdate;
+
     public InstanceRefreshLivePoolProgress withInstancesToUpdate(Long instancesToUpdate) {
         this.instancesToUpdate = instancesToUpdate;
         return this;
@@ -19,9 +20,11 @@ public class InstanceRefreshLivePoolProgress {
     
     
     public Long percentageComplete;
+
     public InstanceRefreshLivePoolProgress withPercentageComplete(Long percentageComplete) {
         this.percentageComplete = percentageComplete;
         return this;
     }
     
+    public InstanceRefreshLivePoolProgress(){}
 }

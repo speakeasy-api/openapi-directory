@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAnomalyDetectionExecutionsResponse {
@@ -12,6 +13,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeAnomalyDetectionExecutionsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
     
     
     public String contentType;
+
     public DescribeAnomalyDetectionExecutionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAnomalyDetectionExecutionsResponse describeAnomalyDetectionExecutionsResponse;
+
     public DescribeAnomalyDetectionExecutionsResponse withDescribeAnomalyDetectionExecutionsResponse(org.openapis.openapi.models.shared.DescribeAnomalyDetectionExecutionsResponse describeAnomalyDetectionExecutionsResponse) {
         this.describeAnomalyDetectionExecutionsResponse = describeAnomalyDetectionExecutionsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public Object internalServerException;
+
     public DescribeAnomalyDetectionExecutionsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeAnomalyDetectionExecutionsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAnomalyDetectionExecutionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAnomalyDetectionExecutionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DescribeAnomalyDetectionExecutionsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -83,9 +92,14 @@ public class DescribeAnomalyDetectionExecutionsResponse {
      */
     
     public Object validationException;
+
     public DescribeAnomalyDetectionExecutionsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeAnomalyDetectionExecutionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class SimpleEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HtmlPart")
     public SimpleEmailPart htmlPart;
+
     public SimpleEmail withHtmlPart(SimpleEmailPart htmlPart) {
         this.htmlPart = htmlPart;
         return this;
@@ -23,6 +24,7 @@ public class SimpleEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public SimpleEmailPart subject;
+
     public SimpleEmail withSubject(SimpleEmailPart subject) {
         this.subject = subject;
         return this;
@@ -31,9 +33,11 @@ public class SimpleEmail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TextPart")
     public SimpleEmailPart textPart;
+
     public SimpleEmail withTextPart(SimpleEmailPart textPart) {
         this.textPart = textPart;
         return this;
     }
     
+    public SimpleEmail(){}
 }

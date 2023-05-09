@@ -18,6 +18,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public HealthCheckService withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public HealthCheckService withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fingerprint")
     public String fingerprint;
+
     public HealthCheckService withFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
         return this;
@@ -51,6 +54,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthChecks")
     public String[] healthChecks;
+
     public HealthCheckService withHealthChecks(String[] healthChecks) {
         this.healthChecks = healthChecks;
         return this;
@@ -62,6 +66,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthStatusAggregationPolicy")
     public HealthCheckServiceHealthStatusAggregationPolicyEnum healthStatusAggregationPolicy;
+
     public HealthCheckService withHealthStatusAggregationPolicy(HealthCheckServiceHealthStatusAggregationPolicyEnum healthStatusAggregationPolicy) {
         this.healthStatusAggregationPolicy = healthStatusAggregationPolicy;
         return this;
@@ -73,6 +78,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public HealthCheckService withId(String id) {
         this.id = id;
         return this;
@@ -84,6 +90,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public HealthCheckService withKind(String kind) {
         this.kind = kind;
         return this;
@@ -95,6 +102,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public HealthCheckService withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networkEndpointGroups")
     public String[] networkEndpointGroups;
+
     public HealthCheckService withNetworkEndpointGroups(String[] networkEndpointGroups) {
         this.networkEndpointGroups = networkEndpointGroups;
         return this;
@@ -117,6 +126,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationEndpoints")
     public String[] notificationEndpoints;
+
     public HealthCheckService withNotificationEndpoints(String[] notificationEndpoints) {
         this.notificationEndpoints = notificationEndpoints;
         return this;
@@ -128,6 +138,7 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public HealthCheckService withRegion(String region) {
         this.region = region;
         return this;
@@ -139,9 +150,11 @@ public class HealthCheckService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public HealthCheckService withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public HealthCheckService(){}
 }

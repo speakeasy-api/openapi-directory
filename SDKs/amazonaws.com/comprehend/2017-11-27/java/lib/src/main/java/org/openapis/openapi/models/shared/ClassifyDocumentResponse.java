@@ -15,6 +15,7 @@ public class ClassifyDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Classes")
     public DocumentClass[] classes;
+
     public ClassifyDocumentResponse withClasses(DocumentClass[] classes) {
         this.classes = classes;
         return this;
@@ -23,6 +24,7 @@ public class ClassifyDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentMetadata")
     public DocumentMetadata documentMetadata;
+
     public ClassifyDocumentResponse withDocumentMetadata(DocumentMetadata documentMetadata) {
         this.documentMetadata = documentMetadata;
         return this;
@@ -31,6 +33,7 @@ public class ClassifyDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DocumentType")
     public DocumentTypeListItem[] documentType;
+
     public ClassifyDocumentResponse withDocumentType(DocumentTypeListItem[] documentType) {
         this.documentType = documentType;
         return this;
@@ -39,6 +42,7 @@ public class ClassifyDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public ErrorsListItem[] errors;
+
     public ClassifyDocumentResponse withErrors(ErrorsListItem[] errors) {
         this.errors = errors;
         return this;
@@ -47,9 +51,20 @@ public class ClassifyDocumentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Labels")
     public DocumentLabel[] labels;
+
     public ClassifyDocumentResponse withLabels(DocumentLabel[] labels) {
         this.labels = labels;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("Warnings")
+    public WarningsListItem[] warnings;
+
+    public ClassifyDocumentResponse withWarnings(WarningsListItem[] warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+    
+    public ClassifyDocumentResponse(){}
 }

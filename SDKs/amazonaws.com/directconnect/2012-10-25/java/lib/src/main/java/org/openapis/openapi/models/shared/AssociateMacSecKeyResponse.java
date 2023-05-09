@@ -15,6 +15,7 @@ public class AssociateMacSecKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("connectionId")
     public String connectionId;
+
     public AssociateMacSecKeyResponse withConnectionId(String connectionId) {
         this.connectionId = connectionId;
         return this;
@@ -23,9 +24,11 @@ public class AssociateMacSecKeyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macSecKeys")
     public MacSecKey[] macSecKeys;
+
     public AssociateMacSecKeyResponse withMacSecKeys(MacSecKey[] macSecKeys) {
         this.macSecKeys = macSecKeys;
         return this;
     }
     
+    public AssociateMacSecKeyResponse(){}
 }

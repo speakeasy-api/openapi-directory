@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class ActivateTypeInput {
     
     public Boolean autoUpdate;
+
     public ActivateTypeInput withAutoUpdate(Boolean autoUpdate) {
         this.autoUpdate = autoUpdate;
         return this;
@@ -16,6 +17,7 @@ public class ActivateTypeInput {
     
     
     public String executionRoleArn;
+
     public ActivateTypeInput withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -26,6 +28,7 @@ public class ActivateTypeInput {
      */
     
     public LoggingConfig loggingConfig;
+
     public ActivateTypeInput withLoggingConfig(LoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -33,6 +36,7 @@ public class ActivateTypeInput {
     
     
     public Long majorVersion;
+
     public ActivateTypeInput withMajorVersion(Long majorVersion) {
         this.majorVersion = majorVersion;
         return this;
@@ -40,6 +44,7 @@ public class ActivateTypeInput {
     
     
     public String publicTypeArn;
+
     public ActivateTypeInput withPublicTypeArn(String publicTypeArn) {
         this.publicTypeArn = publicTypeArn;
         return this;
@@ -47,6 +52,7 @@ public class ActivateTypeInput {
     
     
     public String publisherId;
+
     public ActivateTypeInput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
@@ -54,6 +60,7 @@ public class ActivateTypeInput {
     
     
     public ThirdPartyTypeEnum type;
+
     public ActivateTypeInput withType(ThirdPartyTypeEnum type) {
         this.type = type;
         return this;
@@ -61,6 +68,7 @@ public class ActivateTypeInput {
     
     
     public String typeName;
+
     public ActivateTypeInput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -68,6 +76,7 @@ public class ActivateTypeInput {
     
     
     public String typeNameAlias;
+
     public ActivateTypeInput withTypeNameAlias(String typeNameAlias) {
         this.typeNameAlias = typeNameAlias;
         return this;
@@ -75,9 +84,11 @@ public class ActivateTypeInput {
     
     
     public VersionBumpEnum versionBump;
+
     public ActivateTypeInput withVersionBump(VersionBumpEnum versionBump) {
         this.versionBump = versionBump;
         return this;
     }
     
+    public ActivateTypeInput(){}
 }

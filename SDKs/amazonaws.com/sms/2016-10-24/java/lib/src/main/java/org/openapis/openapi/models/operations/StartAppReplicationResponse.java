@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartAppReplicationResponse {
     
     public String contentType;
+
     public StartAppReplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class StartAppReplicationResponse {
      */
     
     public Object internalError;
+
     public StartAppReplicationResponse withInternalError(Object internalError) {
         this.internalError = internalError;
         return this;
@@ -29,6 +32,7 @@ public class StartAppReplicationResponse {
      */
     
     public Object invalidParameterException;
+
     public StartAppReplicationResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class StartAppReplicationResponse {
      */
     
     public Object missingRequiredParameterException;
+
     public StartAppReplicationResponse withMissingRequiredParameterException(Object missingRequiredParameterException) {
         this.missingRequiredParameterException = missingRequiredParameterException;
         return this;
@@ -49,6 +54,7 @@ public class StartAppReplicationResponse {
      */
     
     public Object operationNotPermittedException;
+
     public StartAppReplicationResponse withOperationNotPermittedException(Object operationNotPermittedException) {
         this.operationNotPermittedException = operationNotPermittedException;
         return this;
@@ -59,6 +65,7 @@ public class StartAppReplicationResponse {
      */
     
     public java.util.Map<String, Object> startAppReplicationResponse;
+
     public StartAppReplicationResponse withStartAppReplicationResponse(java.util.Map<String, Object> startAppReplicationResponse) {
         this.startAppReplicationResponse = startAppReplicationResponse;
         return this;
@@ -66,6 +73,7 @@ public class StartAppReplicationResponse {
     
     
     public Integer statusCode;
+
     public StartAppReplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class StartAppReplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartAppReplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class StartAppReplicationResponse {
      */
     
     public Object unauthorizedOperationException;
+
     public StartAppReplicationResponse withUnauthorizedOperationException(Object unauthorizedOperationException) {
         this.unauthorizedOperationException = unauthorizedOperationException;
         return this;
     }
     
+    public StartAppReplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

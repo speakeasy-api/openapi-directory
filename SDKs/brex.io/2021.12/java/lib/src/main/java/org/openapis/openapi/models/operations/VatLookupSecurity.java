@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class VatLookupSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=user_key")
     public String userKey;
+
     public VatLookupSecurity withUserKey(String userKey) {
         this.userKey = userKey;
         return this;
     }
     
+    public VatLookupSecurity(@JsonProperty("user_key") String userKey) {
+        this.userKey = userKey;
+  }
 }

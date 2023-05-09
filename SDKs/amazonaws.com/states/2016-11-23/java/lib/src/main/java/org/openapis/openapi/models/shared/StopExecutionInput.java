@@ -12,6 +12,7 @@ public class StopExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cause")
     public String cause;
+
     public StopExecutionInput withCause(String cause) {
         this.cause = cause;
         return this;
@@ -20,6 +21,7 @@ public class StopExecutionInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public StopExecutionInput withError(String error) {
         this.error = error;
         return this;
@@ -27,9 +29,13 @@ public class StopExecutionInput {
     
     @JsonProperty("executionArn")
     public String executionArn;
+
     public StopExecutionInput withExecutionArn(String executionArn) {
         this.executionArn = executionArn;
         return this;
     }
     
+    public StopExecutionInput(@JsonProperty("executionArn") String executionArn) {
+        this.executionArn = executionArn;
+  }
 }

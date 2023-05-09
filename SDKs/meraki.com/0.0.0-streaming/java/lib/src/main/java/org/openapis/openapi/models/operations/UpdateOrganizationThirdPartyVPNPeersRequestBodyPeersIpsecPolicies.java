@@ -18,6 +18,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childAuthAlgo")
     public String[] childAuthAlgo;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withChildAuthAlgo(String[] childAuthAlgo) {
         this.childAuthAlgo = childAuthAlgo;
         return this;
@@ -29,6 +30,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childCipherAlgo")
     public String[] childCipherAlgo;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withChildCipherAlgo(String[] childCipherAlgo) {
         this.childCipherAlgo = childCipherAlgo;
         return this;
@@ -40,6 +42,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childLifetime")
     public Long childLifetime;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withChildLifetime(Long childLifetime) {
         this.childLifetime = childLifetime;
         return this;
@@ -51,6 +54,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("childPfsGroup")
     public String[] childPfsGroup;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withChildPfsGroup(String[] childPfsGroup) {
         this.childPfsGroup = childPfsGroup;
         return this;
@@ -62,6 +66,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeAuthAlgo")
     public String[] ikeAuthAlgo;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withIkeAuthAlgo(String[] ikeAuthAlgo) {
         this.ikeAuthAlgo = ikeAuthAlgo;
         return this;
@@ -73,6 +78,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeCipherAlgo")
     public String[] ikeCipherAlgo;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withIkeCipherAlgo(String[] ikeCipherAlgo) {
         this.ikeCipherAlgo = ikeCipherAlgo;
         return this;
@@ -84,6 +90,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeDiffieHellmanGroup")
     public String[] ikeDiffieHellmanGroup;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withIkeDiffieHellmanGroup(String[] ikeDiffieHellmanGroup) {
         this.ikeDiffieHellmanGroup = ikeDiffieHellmanGroup;
         return this;
@@ -95,6 +102,7 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikeLifetime")
     public Long ikeLifetime;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withIkeLifetime(Long ikeLifetime) {
         this.ikeLifetime = ikeLifetime;
         return this;
@@ -106,9 +114,11 @@ public class UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ikePrfAlgo")
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum[] ikePrfAlgo;
+
     public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies withIkePrfAlgo(UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPoliciesIkePrfAlgoEnum[] ikePrfAlgo) {
         this.ikePrfAlgo = ikePrfAlgo;
         return this;
     }
     
+    public UpdateOrganizationThirdPartyVPNPeersRequestBodyPeersIpsecPolicies(){}
 }

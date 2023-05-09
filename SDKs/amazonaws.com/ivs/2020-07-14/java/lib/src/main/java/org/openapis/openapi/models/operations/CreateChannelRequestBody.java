@@ -15,8 +15,21 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authorized")
     public Boolean authorized;
+
     public CreateChannelRequestBody withAuthorized(Boolean authorized) {
         this.authorized = authorized;
+        return this;
+    }
+    
+    /**
+     * Whether the channel allows insecure RTMP ingest. Default: &lt;code&gt;false&lt;/code&gt;.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("insecureIngest")
+    public Boolean insecureIngest;
+
+    public CreateChannelRequestBody withInsecureIngest(Boolean insecureIngest) {
+        this.insecureIngest = insecureIngest;
         return this;
     }
     
@@ -26,6 +39,7 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latencyMode")
     public CreateChannelRequestBodyLatencyModeEnum latencyMode;
+
     public CreateChannelRequestBody withLatencyMode(CreateChannelRequestBodyLatencyModeEnum latencyMode) {
         this.latencyMode = latencyMode;
         return this;
@@ -37,6 +51,7 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateChannelRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +63,7 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recordingConfigurationArn")
     public String recordingConfigurationArn;
+
     public CreateChannelRequestBody withRecordingConfigurationArn(String recordingConfigurationArn) {
         this.recordingConfigurationArn = recordingConfigurationArn;
         return this;
@@ -59,6 +75,7 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateChannelRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -70,9 +87,11 @@ public class CreateChannelRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public CreateChannelRequestBodyTypeEnum type;
+
     public CreateChannelRequestBody withType(CreateChannelRequestBodyTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateChannelRequestBody(){}
 }

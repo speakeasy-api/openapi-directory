@@ -12,9 +12,13 @@ public class UpdateOrganizationConfigurationRequestBody {
      */
     @JsonProperty("autoEnable")
     public UpdateOrganizationConfigurationRequestBodyAutoEnable autoEnable;
+
     public UpdateOrganizationConfigurationRequestBody withAutoEnable(UpdateOrganizationConfigurationRequestBodyAutoEnable autoEnable) {
         this.autoEnable = autoEnable;
         return this;
     }
     
+    public UpdateOrganizationConfigurationRequestBody(@JsonProperty("autoEnable") UpdateOrganizationConfigurationRequestBodyAutoEnable autoEnable) {
+        this.autoEnable = autoEnable;
+  }
 }

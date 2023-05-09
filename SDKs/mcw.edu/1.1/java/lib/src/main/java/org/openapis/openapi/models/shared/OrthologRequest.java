@@ -15,6 +15,7 @@ public class OrthologRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rgdIds")
     public Integer[] rgdIds;
+
     public OrthologRequest withRgdIds(Integer[] rgdIds) {
         this.rgdIds = rgdIds;
         return this;
@@ -23,9 +24,11 @@ public class OrthologRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speciesTypeKeys")
     public Integer[] speciesTypeKeys;
+
     public OrthologRequest withSpeciesTypeKeys(Integer[] speciesTypeKeys) {
         this.speciesTypeKeys = speciesTypeKeys;
         return this;
     }
     
+    public OrthologRequest(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETCreateServiceSpecificCredentialResponse {
     
     public byte[] body;
+
     public GETCreateServiceSpecificCredentialResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETCreateServiceSpecificCredentialResponse {
     
     
     public String contentType;
+
     public GETCreateServiceSpecificCredentialResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETCreateServiceSpecificCredentialResponse {
     
     
     public Integer statusCode;
+
     public GETCreateServiceSpecificCredentialResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETCreateServiceSpecificCredentialResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETCreateServiceSpecificCredentialResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETCreateServiceSpecificCredentialResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

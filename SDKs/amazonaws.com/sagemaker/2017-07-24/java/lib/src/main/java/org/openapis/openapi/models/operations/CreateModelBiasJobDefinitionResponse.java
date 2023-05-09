@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateModelBiasJobDefinitionResponse {
     
     public String contentType;
+
     public CreateModelBiasJobDefinitionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateModelBiasJobDefinitionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateModelBiasJobDefinitionResponse createModelBiasJobDefinitionResponse;
+
     public CreateModelBiasJobDefinitionResponse withCreateModelBiasJobDefinitionResponse(org.openapis.openapi.models.shared.CreateModelBiasJobDefinitionResponse createModelBiasJobDefinitionResponse) {
         this.createModelBiasJobDefinitionResponse = createModelBiasJobDefinitionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateModelBiasJobDefinitionResponse {
      */
     
     public Object resourceInUse;
+
     public CreateModelBiasJobDefinitionResponse withResourceInUse(Object resourceInUse) {
         this.resourceInUse = resourceInUse;
         return this;
@@ -39,6 +43,7 @@ public class CreateModelBiasJobDefinitionResponse {
      */
     
     public Object resourceLimitExceeded;
+
     public CreateModelBiasJobDefinitionResponse withResourceLimitExceeded(Object resourceLimitExceeded) {
         this.resourceLimitExceeded = resourceLimitExceeded;
         return this;
@@ -46,6 +51,7 @@ public class CreateModelBiasJobDefinitionResponse {
     
     
     public Integer statusCode;
+
     public CreateModelBiasJobDefinitionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class CreateModelBiasJobDefinitionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateModelBiasJobDefinitionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateModelBiasJobDefinitionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

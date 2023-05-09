@@ -18,6 +18,7 @@ public class Sentence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sentiment")
     public Sentiment sentiment;
+
     public Sentence withSentiment(Sentiment sentiment) {
         this.sentiment = sentiment;
         return this;
@@ -29,9 +30,11 @@ public class Sentence {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public TextSpan text;
+
     public Sentence withText(TextSpan text) {
         this.text = text;
         return this;
     }
     
+    public Sentence(){}
 }

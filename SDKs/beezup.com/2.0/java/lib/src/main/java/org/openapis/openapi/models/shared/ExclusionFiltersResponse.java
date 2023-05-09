@@ -18,6 +18,7 @@ public class ExclusionFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclusionFilters")
     public ExclusionFilter[] exclusionFilters;
+
     public ExclusionFiltersResponse withExclusionFilters(ExclusionFilter[] exclusionFilters) {
         this.exclusionFilters = exclusionFilters;
         return this;
@@ -25,9 +26,13 @@ public class ExclusionFiltersResponse {
     
     @JsonProperty("links")
     public ExclusionFiltersResponseLinks links;
+
     public ExclusionFiltersResponse withLinks(ExclusionFiltersResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public ExclusionFiltersResponse(@JsonProperty("links") ExclusionFiltersResponseLinks links) {
+        this.links = links;
+  }
 }

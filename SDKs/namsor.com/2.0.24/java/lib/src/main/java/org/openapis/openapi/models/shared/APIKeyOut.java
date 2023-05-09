@@ -18,6 +18,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public Boolean admin;
+
     public APIKeyOut withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -29,6 +30,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anonymized")
     public Boolean anonymized;
+
     public APIKeyOut withAnonymized(Boolean anonymized) {
         this.anonymized = anonymized;
         return this;
@@ -40,6 +42,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKey")
     public String apiKey;
+
     public APIKeyOut withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -51,6 +54,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corporate")
     public Boolean corporate;
+
     public APIKeyOut withCorporate(Boolean corporate) {
         this.corporate = corporate;
         return this;
@@ -62,6 +66,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disabled")
     public Boolean disabled;
+
     public APIKeyOut withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -73,6 +78,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnable")
     public Boolean learnable;
+
     public APIKeyOut withLearnable(Boolean learnable) {
         this.learnable = learnable;
         return this;
@@ -84,6 +90,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partner")
     public Boolean partner;
+
     public APIKeyOut withPartner(Boolean partner) {
         this.partner = partner;
         return this;
@@ -95,6 +102,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("striped")
     public Boolean striped;
+
     public APIKeyOut withStriped(Boolean striped) {
         this.striped = striped;
         return this;
@@ -106,6 +114,7 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public APIKeyOut withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -117,9 +126,11 @@ public class APIKeyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vetted")
     public Boolean vetted;
+
     public APIKeyOut withVetted(Boolean vetted) {
         this.vetted = vetted;
         return this;
     }
     
+    public APIKeyOut(){}
 }

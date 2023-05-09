@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CustomCode {
     @JsonProperty("ClassName")
     public String className;
+
     public CustomCode withClassName(String className) {
         this.className = className;
         return this;
@@ -21,6 +22,7 @@ public class CustomCode {
     
     @JsonProperty("Code")
     public String code;
+
     public CustomCode withCode(String code) {
         this.code = code;
         return this;
@@ -28,6 +30,7 @@ public class CustomCode {
     
     @JsonProperty("Inputs")
     public String[] inputs;
+
     public CustomCode withInputs(String[] inputs) {
         this.inputs = inputs;
         return this;
@@ -35,6 +38,7 @@ public class CustomCode {
     
     @JsonProperty("Name")
     public String name;
+
     public CustomCode withName(String name) {
         this.name = name;
         return this;
@@ -43,9 +47,16 @@ public class CustomCode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputSchemas")
     public GlueSchema[] outputSchemas;
+
     public CustomCode withOutputSchemas(GlueSchema[] outputSchemas) {
         this.outputSchemas = outputSchemas;
         return this;
     }
     
+    public CustomCode(@JsonProperty("ClassName") String className, @JsonProperty("Code") String code, @JsonProperty("Inputs") String[] inputs, @JsonProperty("Name") String name) {
+        this.className = className;
+        this.code = code;
+        this.inputs = inputs;
+        this.name = name;
+  }
 }

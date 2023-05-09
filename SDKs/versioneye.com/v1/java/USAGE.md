@@ -3,10 +3,9 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.GetApiV1ScansSecurity;
 import org.openapis.openapi.models.operations.GetApiV1ScansRequest;
 import org.openapis.openapi.models.operations.GetApiV1ScansResponse;
+import org.openapis.openapi.models.operations.GetApiV1ScansSecurity;
 
 public class Application {
     public static void main(String[] args) {
@@ -15,11 +14,11 @@ public class Application {
                 .build();
 
             GetApiV1ScansRequest req = new GetApiV1ScansRequest() {{
-                name = "corrupti";
-                perPage = "provident";
-            }}            
+                name = "Terrence Rau";
+                perPage = "nulla";
+            }};            
 
-            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req, new GetApiV1ScansSecurity() {{
+            GetApiV1ScansResponse res = sdk.scans.getApiV1Scans(req, new GetApiV1ScansSecurity("corrupti") {{
                 apiKey = "YOUR_API_KEY_HERE";
             }});
 
@@ -29,5 +28,7 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

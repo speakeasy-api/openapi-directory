@@ -18,6 +18,7 @@ public class AspectRecommendations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedAspectName")
     public String localizedAspectName;
+
     public AspectRecommendations withLocalizedAspectName(String localizedAspectName) {
         this.localizedAspectName = localizedAspectName;
         return this;
@@ -29,9 +30,11 @@ public class AspectRecommendations {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedValues")
     public String[] suggestedValues;
+
     public AspectRecommendations withSuggestedValues(String[] suggestedValues) {
         this.suggestedValues = suggestedValues;
         return this;
     }
     
+    public AspectRecommendations(){}
 }

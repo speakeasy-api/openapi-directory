@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateVpcEndpointRequest {
     
     public String clientToken;
+
     public CreateVpcEndpointRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -16,6 +17,7 @@ public class CreateVpcEndpointRequest {
     
     
     public DnsOptionsSpecification dnsOptions;
+
     public CreateVpcEndpointRequest withDnsOptions(DnsOptionsSpecification dnsOptions) {
         this.dnsOptions = dnsOptions;
         return this;
@@ -23,6 +25,7 @@ public class CreateVpcEndpointRequest {
     
     
     public Boolean dryRun;
+
     public CreateVpcEndpointRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class CreateVpcEndpointRequest {
     
     
     public IpAddressTypeEnum ipAddressType;
+
     public CreateVpcEndpointRequest withIpAddressType(IpAddressTypeEnum ipAddressType) {
         this.ipAddressType = ipAddressType;
         return this;
@@ -37,6 +41,7 @@ public class CreateVpcEndpointRequest {
     
     
     public String policyDocument;
+
     public CreateVpcEndpointRequest withPolicyDocument(String policyDocument) {
         this.policyDocument = policyDocument;
         return this;
@@ -44,6 +49,7 @@ public class CreateVpcEndpointRequest {
     
     
     public Boolean privateDnsEnabled;
+
     public CreateVpcEndpointRequest withPrivateDnsEnabled(Boolean privateDnsEnabled) {
         this.privateDnsEnabled = privateDnsEnabled;
         return this;
@@ -51,6 +57,7 @@ public class CreateVpcEndpointRequest {
     
     
     public String[] routeTableIds;
+
     public CreateVpcEndpointRequest withRouteTableIds(String[] routeTableIds) {
         this.routeTableIds = routeTableIds;
         return this;
@@ -58,6 +65,7 @@ public class CreateVpcEndpointRequest {
     
     
     public String[] securityGroupIds;
+
     public CreateVpcEndpointRequest withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -65,6 +73,7 @@ public class CreateVpcEndpointRequest {
     
     
     public String serviceName;
+
     public CreateVpcEndpointRequest withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -72,6 +81,7 @@ public class CreateVpcEndpointRequest {
     
     
     public String[] subnetIds;
+
     public CreateVpcEndpointRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -79,6 +89,7 @@ public class CreateVpcEndpointRequest {
     
     
     public CreateVpcEndpointRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpcEndpointRequest withTagSpecifications(CreateVpcEndpointRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -86,6 +97,7 @@ public class CreateVpcEndpointRequest {
     
     
     public VpcEndpointTypeEnum vpcEndpointType;
+
     public CreateVpcEndpointRequest withVpcEndpointType(VpcEndpointTypeEnum vpcEndpointType) {
         this.vpcEndpointType = vpcEndpointType;
         return this;
@@ -93,9 +105,14 @@ public class CreateVpcEndpointRequest {
     
     
     public String vpcId;
+
     public CreateVpcEndpointRequest withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public CreateVpcEndpointRequest(@JsonProperty("ServiceName") String serviceName, @JsonProperty("VpcId") String vpcId) {
+        this.serviceName = serviceName;
+        this.vpcId = vpcId;
+  }
 }

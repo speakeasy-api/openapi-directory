@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ClaimDevicesByClaimCodeResponse {
@@ -12,6 +13,7 @@ public class ClaimDevicesByClaimCodeResponse {
      */
     
     public org.openapis.openapi.models.shared.ClaimDevicesByClaimCodeResponse claimDevicesByClaimCodeResponse;
+
     public ClaimDevicesByClaimCodeResponse withClaimDevicesByClaimCodeResponse(org.openapis.openapi.models.shared.ClaimDevicesByClaimCodeResponse claimDevicesByClaimCodeResponse) {
         this.claimDevicesByClaimCodeResponse = claimDevicesByClaimCodeResponse;
         return this;
@@ -19,6 +21,7 @@ public class ClaimDevicesByClaimCodeResponse {
     
     
     public String contentType;
+
     public ClaimDevicesByClaimCodeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ClaimDevicesByClaimCodeResponse {
      */
     
     public Object forbiddenException;
+
     public ClaimDevicesByClaimCodeResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ClaimDevicesByClaimCodeResponse {
      */
     
     public Object internalFailureException;
+
     public ClaimDevicesByClaimCodeResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class ClaimDevicesByClaimCodeResponse {
      */
     
     public Object invalidRequestException;
+
     public ClaimDevicesByClaimCodeResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class ClaimDevicesByClaimCodeResponse {
     
     
     public Integer statusCode;
+
     public ClaimDevicesByClaimCodeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class ClaimDevicesByClaimCodeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ClaimDevicesByClaimCodeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ClaimDevicesByClaimCodeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

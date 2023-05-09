@@ -15,6 +15,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compression")
     public CompressionEnumEnum compression;
+
     public As2ConnectorConfig withCompression(CompressionEnumEnum compression) {
         this.compression = compression;
         return this;
@@ -23,6 +24,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionAlgorithm")
     public EncryptionAlgEnum encryptionAlgorithm;
+
     public As2ConnectorConfig withEncryptionAlgorithm(EncryptionAlgEnum encryptionAlgorithm) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         return this;
@@ -31,6 +33,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalProfileId")
     public String localProfileId;
+
     public As2ConnectorConfig withLocalProfileId(String localProfileId) {
         this.localProfileId = localProfileId;
         return this;
@@ -39,6 +42,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MdnResponse")
     public MdnResponseEnum mdnResponse;
+
     public As2ConnectorConfig withMdnResponse(MdnResponseEnum mdnResponse) {
         this.mdnResponse = mdnResponse;
         return this;
@@ -47,6 +51,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MdnSigningAlgorithm")
     public MdnSigningAlgEnum mdnSigningAlgorithm;
+
     public As2ConnectorConfig withMdnSigningAlgorithm(MdnSigningAlgEnum mdnSigningAlgorithm) {
         this.mdnSigningAlgorithm = mdnSigningAlgorithm;
         return this;
@@ -55,6 +60,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageSubject")
     public String messageSubject;
+
     public As2ConnectorConfig withMessageSubject(String messageSubject) {
         this.messageSubject = messageSubject;
         return this;
@@ -63,6 +69,7 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartnerProfileId")
     public String partnerProfileId;
+
     public As2ConnectorConfig withPartnerProfileId(String partnerProfileId) {
         this.partnerProfileId = partnerProfileId;
         return this;
@@ -71,9 +78,11 @@ public class As2ConnectorConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAlgorithm")
     public SigningAlgEnum signingAlgorithm;
+
     public As2ConnectorConfig withSigningAlgorithm(SigningAlgEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
     }
     
+    public As2ConnectorConfig(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class AdsenseAccountsAdunitsGetAdCodeSecurity {
     @SpeakeasyMetadata("security:option=true")
     public AdsenseAccountsAdunitsGetAdCodeSecurityOption1 option1;
+
     public AdsenseAccountsAdunitsGetAdCodeSecurity withOption1(AdsenseAccountsAdunitsGetAdCodeSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class AdsenseAccountsAdunitsGetAdCodeSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public AdsenseAccountsAdunitsGetAdCodeSecurityOption2 option2;
+
     public AdsenseAccountsAdunitsGetAdCodeSecurity withOption2(AdsenseAccountsAdunitsGetAdCodeSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public AdsenseAccountsAdunitsGetAdCodeSecurity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateEnvironmentAccountConnectionResponse {
@@ -12,6 +13,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateEnvironmentAccountConnectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object conflictException;
+
     public CreateEnvironmentAccountConnectionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateEnvironmentAccountConnectionResponse {
     
     
     public String contentType;
+
     public CreateEnvironmentAccountConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateEnvironmentAccountConnectionOutput createEnvironmentAccountConnectionOutput;
+
     public CreateEnvironmentAccountConnectionResponse withCreateEnvironmentAccountConnectionOutput(org.openapis.openapi.models.shared.CreateEnvironmentAccountConnectionOutput createEnvironmentAccountConnectionOutput) {
         this.createEnvironmentAccountConnectionOutput = createEnvironmentAccountConnectionOutput;
         return this;
@@ -49,6 +54,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object internalServerException;
+
     public CreateEnvironmentAccountConnectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -59,6 +65,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateEnvironmentAccountConnectionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateEnvironmentAccountConnectionResponse {
     
     
     public Integer statusCode;
+
     public CreateEnvironmentAccountConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateEnvironmentAccountConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateEnvironmentAccountConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object throttlingException;
+
     public CreateEnvironmentAccountConnectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateEnvironmentAccountConnectionResponse {
      */
     
     public Object validationException;
+
     public CreateEnvironmentAccountConnectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateEnvironmentAccountConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

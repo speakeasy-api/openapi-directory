@@ -18,6 +18,7 @@ public class SearchGoogleLocationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location")
     public LocationInput location;
+
     public SearchGoogleLocationsRequestInput withLocation(LocationInput location) {
         this.location = location;
         return this;
@@ -29,6 +30,7 @@ public class SearchGoogleLocationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public SearchGoogleLocationsRequestInput withQuery(String query) {
         this.query = query;
         return this;
@@ -40,9 +42,11 @@ public class SearchGoogleLocationsRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCount")
     public Integer resultCount;
+
     public SearchGoogleLocationsRequestInput withResultCount(Integer resultCount) {
         this.resultCount = resultCount;
         return this;
     }
     
+    public SearchGoogleLocationsRequestInput(){}
 }

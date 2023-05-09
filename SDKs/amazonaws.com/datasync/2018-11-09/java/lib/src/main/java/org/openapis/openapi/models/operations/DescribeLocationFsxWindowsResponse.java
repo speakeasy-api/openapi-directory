@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeLocationFsxWindowsResponse {
     
     public String contentType;
+
     public DescribeLocationFsxWindowsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeLocationFsxWindowsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeLocationFsxWindowsResponse describeLocationFsxWindowsResponse;
+
     public DescribeLocationFsxWindowsResponse withDescribeLocationFsxWindowsResponse(org.openapis.openapi.models.shared.DescribeLocationFsxWindowsResponse describeLocationFsxWindowsResponse) {
         this.describeLocationFsxWindowsResponse = describeLocationFsxWindowsResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeLocationFsxWindowsResponse {
      */
     
     public Object internalException;
+
     public DescribeLocationFsxWindowsResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeLocationFsxWindowsResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeLocationFsxWindowsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeLocationFsxWindowsResponse {
     
     
     public Integer statusCode;
+
     public DescribeLocationFsxWindowsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class DescribeLocationFsxWindowsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeLocationFsxWindowsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeLocationFsxWindowsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListProfileTimesResponse {
     
     public String contentType;
+
     public ListProfileTimesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListProfileTimesResponse {
      */
     
     public Object internalServerException;
+
     public ListProfileTimesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListProfileTimesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProfileTimesResponse listProfileTimesResponse;
+
     public ListProfileTimesResponse withListProfileTimesResponse(org.openapis.openapi.models.shared.ListProfileTimesResponse listProfileTimesResponse) {
         this.listProfileTimesResponse = listProfileTimesResponse;
         return this;
@@ -39,6 +43,7 @@ public class ListProfileTimesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListProfileTimesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class ListProfileTimesResponse {
     
     
     public Integer statusCode;
+
     public ListProfileTimesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListProfileTimesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListProfileTimesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListProfileTimesResponse {
      */
     
     public Object throttlingException;
+
     public ListProfileTimesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListProfileTimesResponse {
      */
     
     public Object validationException;
+
     public ListProfileTimesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListProfileTimesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

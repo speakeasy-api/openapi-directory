@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetInstanceUefiDataRequest {
     
     public Boolean dryRun;
+
     public GetInstanceUefiDataRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class GetInstanceUefiDataRequest {
     
     
     public String instanceId;
+
     public GetInstanceUefiDataRequest withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public GetInstanceUefiDataRequest(@JsonProperty("InstanceId") String instanceId) {
+        this.instanceId = instanceId;
+  }
 }

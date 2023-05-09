@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class HttpRouteAction {
     @JsonProperty("weightedTargets")
     public WeightedTarget[] weightedTargets;
+
     public HttpRouteAction withWeightedTargets(WeightedTarget[] weightedTargets) {
         this.weightedTargets = weightedTargets;
         return this;
     }
     
+    public HttpRouteAction(@JsonProperty("weightedTargets") WeightedTarget[] weightedTargets) {
+        this.weightedTargets = weightedTargets;
+  }
 }

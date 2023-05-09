@@ -18,9 +18,11 @@ public class CombinedAudienceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settings")
     public CombinedAudienceTargetingSetting[] settings;
+
     public CombinedAudienceGroup withSettings(CombinedAudienceTargetingSetting[] settings) {
         this.settings = settings;
         return this;
     }
     
+    public CombinedAudienceGroup(){}
 }

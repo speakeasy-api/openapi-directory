@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListHubContentVersionsResponse {
     @JsonProperty("HubContentSummaries")
     public HubContentInfo[] hubContentSummaries;
+
     public ListHubContentVersionsResponse withHubContentSummaries(HubContentInfo[] hubContentSummaries) {
         this.hubContentSummaries = hubContentSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListHubContentVersionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListHubContentVersionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListHubContentVersionsResponse(@JsonProperty("HubContentSummaries") HubContentInfo[] hubContentSummaries) {
+        this.hubContentSummaries = hubContentSummaries;
+  }
 }

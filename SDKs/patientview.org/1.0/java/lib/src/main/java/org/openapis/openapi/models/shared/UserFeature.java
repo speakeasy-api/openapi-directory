@@ -9,6 +9,7 @@ import java.time.OffsetDateTime;
 public class UserFeature {
     
     public OffsetDateTime created;
+
     public UserFeature withCreated(OffsetDateTime created) {
         this.created = created;
         return this;
@@ -16,6 +17,7 @@ public class UserFeature {
     
     
     public Feature feature;
+
     public UserFeature withFeature(Feature feature) {
         this.feature = feature;
         return this;
@@ -23,6 +25,7 @@ public class UserFeature {
     
     
     public Long id;
+
     public UserFeature withId(Long id) {
         this.id = id;
         return this;
@@ -30,6 +33,7 @@ public class UserFeature {
     
     
     public OffsetDateTime lastUpdate;
+
     public UserFeature withLastUpdate(OffsetDateTime lastUpdate) {
         this.lastUpdate = lastUpdate;
         return this;
@@ -37,6 +41,7 @@ public class UserFeature {
     
     
     public OffsetDateTime optInDate;
+
     public UserFeature withOptInDate(OffsetDateTime optInDate) {
         this.optInDate = optInDate;
         return this;
@@ -44,6 +49,7 @@ public class UserFeature {
     
     
     public Boolean optInHidden;
+
     public UserFeature withOptInHidden(Boolean optInHidden) {
         this.optInHidden = optInHidden;
         return this;
@@ -51,6 +57,7 @@ public class UserFeature {
     
     
     public Boolean optInStatus;
+
     public UserFeature withOptInStatus(Boolean optInStatus) {
         this.optInStatus = optInStatus;
         return this;
@@ -58,9 +65,11 @@ public class UserFeature {
     
     
     public Boolean optOutHidden;
+
     public UserFeature withOptOutHidden(Boolean optOutHidden) {
         this.optOutHidden = optOutHidden;
         return this;
     }
     
+    public UserFeature(){}
 }

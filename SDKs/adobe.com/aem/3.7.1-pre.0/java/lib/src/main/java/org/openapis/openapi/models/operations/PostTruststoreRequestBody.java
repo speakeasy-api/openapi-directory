@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostTruststoreRequestBody {
     @SpeakeasyMetadata("multipartForm:file")
     public PostTruststoreRequestBodyCertificate certificate;
+
     public PostTruststoreRequestBody withCertificate(PostTruststoreRequestBodyCertificate certificate) {
         this.certificate = certificate;
         return this;
     }
     
+    public PostTruststoreRequestBody(){}
 }

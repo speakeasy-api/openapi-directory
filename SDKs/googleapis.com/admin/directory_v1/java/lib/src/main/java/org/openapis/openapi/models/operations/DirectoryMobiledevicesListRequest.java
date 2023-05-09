@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DirectoryMobiledevicesListRequest {
@@ -12,6 +13,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DirectoryMobiledevicesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DirectoryMobiledevicesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DirectoryMobiledevicesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DirectoryMobiledevicesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customerId")
     public String customerId;
+
     public DirectoryMobiledevicesListRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
@@ -62,6 +68,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DirectoryMobiledevicesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -72,6 +79,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DirectoryMobiledevicesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DirectoryMobiledevicesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -92,6 +101,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DirectoryMobiledevicesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -102,6 +112,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public DirectoryMobiledevicesListOrderByEnum orderBy;
+
     public DirectoryMobiledevicesListRequest withOrderBy(DirectoryMobiledevicesListOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -112,6 +123,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DirectoryMobiledevicesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DirectoryMobiledevicesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -132,6 +145,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public DirectoryMobiledevicesListProjectionEnum projection;
+
     public DirectoryMobiledevicesListRequest withProjection(DirectoryMobiledevicesListProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -142,6 +156,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=query")
     public String query;
+
     public DirectoryMobiledevicesListRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -152,6 +167,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DirectoryMobiledevicesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DirectoryMobiledevicesListSortOrderEnum sortOrder;
+
     public DirectoryMobiledevicesListRequest withSortOrder(DirectoryMobiledevicesListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -172,6 +189,7 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DirectoryMobiledevicesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -182,9 +200,13 @@ public class DirectoryMobiledevicesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DirectoryMobiledevicesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DirectoryMobiledevicesListRequest(@JsonProperty("customerId") String customerId) {
+        this.customerId = customerId;
+  }
 }

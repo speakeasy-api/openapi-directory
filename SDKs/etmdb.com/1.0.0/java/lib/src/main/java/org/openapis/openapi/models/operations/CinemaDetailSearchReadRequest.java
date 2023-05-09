@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CinemaDetailSearchReadRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=cinema_name")
     public String cinemaName;
+
     public CinemaDetailSearchReadRequest withCinemaName(String cinemaName) {
         this.cinemaName = cinemaName;
         return this;
     }
     
+    public CinemaDetailSearchReadRequest(@JsonProperty("cinema_name") String cinemaName) {
+        this.cinemaName = cinemaName;
+  }
 }

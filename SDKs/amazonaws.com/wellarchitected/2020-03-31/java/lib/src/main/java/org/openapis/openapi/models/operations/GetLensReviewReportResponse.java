@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetLensReviewReportResponse {
@@ -12,6 +13,7 @@ public class GetLensReviewReportResponse {
      */
     
     public Object accessDeniedException;
+
     public GetLensReviewReportResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetLensReviewReportResponse {
     
     
     public String contentType;
+
     public GetLensReviewReportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetLensReviewReportResponse {
      */
     
     public org.openapis.openapi.models.shared.GetLensReviewReportOutput getLensReviewReportOutput;
+
     public GetLensReviewReportResponse withGetLensReviewReportOutput(org.openapis.openapi.models.shared.GetLensReviewReportOutput getLensReviewReportOutput) {
         this.getLensReviewReportOutput = getLensReviewReportOutput;
         return this;
@@ -39,6 +43,7 @@ public class GetLensReviewReportResponse {
      */
     
     public Object internalServerException;
+
     public GetLensReviewReportResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetLensReviewReportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetLensReviewReportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetLensReviewReportResponse {
     
     
     public Integer statusCode;
+
     public GetLensReviewReportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetLensReviewReportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetLensReviewReportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetLensReviewReportResponse {
      */
     
     public Object throttlingException;
+
     public GetLensReviewReportResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetLensReviewReportResponse {
      */
     
     public Object validationException;
+
     public GetLensReviewReportResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetLensReviewReportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

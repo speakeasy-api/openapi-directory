@@ -18,6 +18,7 @@ public class RegexMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleRe2")
     public GoogleRe2 googleRe2;
+
     public RegexMatcher withGoogleRe2(GoogleRe2 googleRe2) {
         this.googleRe2 = googleRe2;
         return this;
@@ -29,9 +30,11 @@ public class RegexMatcher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("regex")
     public String regex;
+
     public RegexMatcher withRegex(String regex) {
         this.regex = regex;
         return this;
     }
     
+    public RegexMatcher(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption1 option1;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption1(BigtableadminProjectsInstancesTablesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption2 option2;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption2(BigtableadminProjectsInstancesTablesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption3 option3;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption3(BigtableadminProjectsInstancesTablesDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption4 option4;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption4(BigtableadminProjectsInstancesTablesDeleteSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption5 option5;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption5(BigtableadminProjectsInstancesTablesDeleteSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,9 +49,11 @@ public class BigtableadminProjectsInstancesTablesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public BigtableadminProjectsInstancesTablesDeleteSecurityOption6 option6;
+
     public BigtableadminProjectsInstancesTablesDeleteSecurity withOption6(BigtableadminProjectsInstancesTablesDeleteSecurityOption6 option6) {
         this.option6 = option6;
         return this;
     }
     
+    public BigtableadminProjectsInstancesTablesDeleteSecurity(){}
 }

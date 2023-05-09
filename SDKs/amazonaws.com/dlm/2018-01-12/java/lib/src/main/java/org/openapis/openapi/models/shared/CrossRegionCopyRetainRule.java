@@ -15,6 +15,7 @@ public class CrossRegionCopyRetainRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Interval")
     public Long interval;
+
     public CrossRegionCopyRetainRule withInterval(Long interval) {
         this.interval = interval;
         return this;
@@ -23,9 +24,11 @@ public class CrossRegionCopyRetainRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IntervalUnit")
     public RetentionIntervalUnitValuesEnum intervalUnit;
+
     public CrossRegionCopyRetainRule withIntervalUnit(RetentionIntervalUnitValuesEnum intervalUnit) {
         this.intervalUnit = intervalUnit;
         return this;
     }
     
+    public CrossRegionCopyRetainRule(){}
 }

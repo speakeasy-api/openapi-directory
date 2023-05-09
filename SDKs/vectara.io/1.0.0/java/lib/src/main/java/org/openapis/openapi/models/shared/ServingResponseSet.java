@@ -12,6 +12,7 @@ public class ServingResponseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public ServingResponseSetDocument[] document;
+
     public ServingResponseSet withDocument(ServingResponseSetDocument[] document) {
         this.document = document;
         return this;
@@ -20,6 +21,7 @@ public class ServingResponseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("response")
     public ServingResponse[] response;
+
     public ServingResponseSet withResponse(ServingResponse[] response) {
         this.response = response;
         return this;
@@ -31,9 +33,11 @@ public class ServingResponseSet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ComvectaraStatus[] status;
+
     public ServingResponseSet withStatus(ComvectaraStatus[] status) {
         this.status = status;
         return this;
     }
     
+    public ServingResponseSet(){}
 }

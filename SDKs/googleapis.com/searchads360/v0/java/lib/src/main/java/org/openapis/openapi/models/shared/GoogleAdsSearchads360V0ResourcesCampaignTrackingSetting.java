@@ -18,9 +18,11 @@ public class GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trackingUrl")
     public String trackingUrl;
+
     public GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting withTrackingUrl(String trackingUrl) {
         this.trackingUrl = trackingUrl;
         return this;
     }
     
+    public GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting(){}
 }

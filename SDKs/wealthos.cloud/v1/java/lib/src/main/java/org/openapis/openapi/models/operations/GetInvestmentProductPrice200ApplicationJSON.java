@@ -20,6 +20,7 @@ public class GetInvestmentProductPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public GetInvestmentProductPrice200ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -31,6 +32,7 @@ public class GetInvestmentProductPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("current_price")
     public String currentPrice;
+
     public GetInvestmentProductPrice200ApplicationJSON withCurrentPrice(String currentPrice) {
         this.currentPrice = currentPrice;
         return this;
@@ -39,6 +41,7 @@ public class GetInvestmentProductPrice200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetInvestmentProductPrice200ApplicationJSON withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -48,9 +51,11 @@ public class GetInvestmentProductPrice200ApplicationJSON {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("price_on_date")
     public LocalDate priceOnDate;
+
     public GetInvestmentProductPrice200ApplicationJSON withPriceOnDate(LocalDate priceOnDate) {
         this.priceOnDate = priceOnDate;
         return this;
     }
     
+    public GetInvestmentProductPrice200ApplicationJSON(){}
 }

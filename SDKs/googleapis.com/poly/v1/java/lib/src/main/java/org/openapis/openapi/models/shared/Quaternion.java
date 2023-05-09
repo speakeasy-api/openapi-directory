@@ -18,6 +18,7 @@ public class Quaternion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("w")
     public Double w;
+
     public Quaternion withW(Double w) {
         this.w = w;
         return this;
@@ -29,6 +30,7 @@ public class Quaternion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("x")
     public Double x;
+
     public Quaternion withX(Double x) {
         this.x = x;
         return this;
@@ -40,6 +42,7 @@ public class Quaternion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("y")
     public Double y;
+
     public Quaternion withY(Double y) {
         this.y = y;
         return this;
@@ -51,9 +54,11 @@ public class Quaternion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("z")
     public Double z;
+
     public Quaternion withZ(Double z) {
         this.z = z;
         return this;
     }
     
+    public Quaternion(){}
 }

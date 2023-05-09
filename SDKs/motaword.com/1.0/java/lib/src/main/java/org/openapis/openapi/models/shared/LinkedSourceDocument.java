@@ -12,6 +12,7 @@ public class LinkedSourceDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public LinkedSourceDocument withName(String name) {
         this.name = name;
         return this;
@@ -23,6 +24,7 @@ public class LinkedSourceDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public LinkedSourceDocument withSize(Long size) {
         this.size = size;
         return this;
@@ -34,6 +36,7 @@ public class LinkedSourceDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public LinkedSourceDocumentSourceEnum source;
+
     public LinkedSourceDocument withSource(LinkedSourceDocumentSourceEnum source) {
         this.source = source;
         return this;
@@ -42,9 +45,11 @@ public class LinkedSourceDocument {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public LinkedSourceDocument withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public LinkedSourceDocument(){}
 }

@@ -58,11 +58,9 @@ public class EmergencyContacts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse res = new org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse() {{
+        org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse res = new org.openapis.openapi.models.operations.AddOrUpdateEmergencyContactsResponse(contentType, httpRes.statusCode()) {{
             errors = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 429) {

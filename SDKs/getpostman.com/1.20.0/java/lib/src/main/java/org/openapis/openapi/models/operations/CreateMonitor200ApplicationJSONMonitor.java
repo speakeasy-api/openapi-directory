@@ -12,6 +12,7 @@ public class CreateMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateMonitor200ApplicationJSONMonitor withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class CreateMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateMonitor200ApplicationJSONMonitor withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class CreateMonitor200ApplicationJSONMonitor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public CreateMonitor200ApplicationJSONMonitor withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public CreateMonitor200ApplicationJSONMonitor(){}
 }

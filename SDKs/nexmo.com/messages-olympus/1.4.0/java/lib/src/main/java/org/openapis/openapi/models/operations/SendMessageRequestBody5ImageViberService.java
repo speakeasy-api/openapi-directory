@@ -15,6 +15,7 @@ public class SendMessageRequestBody5ImageViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("action")
     public SendMessageRequestBody5ImageViberServiceAction action;
+
     public SendMessageRequestBody5ImageViberService withAction(SendMessageRequestBody5ImageViberServiceAction action) {
         this.action = action;
         return this;
@@ -26,6 +27,7 @@ public class SendMessageRequestBody5ImageViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public SendMessageRequestBody5ImageViberServiceCategoryEnum category;
+
     public SendMessageRequestBody5ImageViberService withCategory(SendMessageRequestBody5ImageViberServiceCategoryEnum category) {
         this.category = category;
         return this;
@@ -37,6 +39,7 @@ public class SendMessageRequestBody5ImageViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ttl")
     public Long ttl;
+
     public SendMessageRequestBody5ImageViberService withTtl(Long ttl) {
         this.ttl = ttl;
         return this;
@@ -48,9 +51,11 @@ public class SendMessageRequestBody5ImageViberService {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public SendMessageRequestBody5ImageViberService withType(String type) {
         this.type = type;
         return this;
     }
     
+    public SendMessageRequestBody5ImageViberService(){}
 }

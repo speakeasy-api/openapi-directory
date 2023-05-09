@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StromkontoChoicesResponse {
@@ -12,6 +13,7 @@ public class StromkontoChoicesResponse {
      */
     
     public org.openapis.openapi.models.shared.Balance[] balances;
+
     public StromkontoChoicesResponse withBalances(org.openapis.openapi.models.shared.Balance[] balances) {
         this.balances = balances;
         return this;
@@ -19,6 +21,7 @@ public class StromkontoChoicesResponse {
     
     
     public String contentType;
+
     public StromkontoChoicesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class StromkontoChoicesResponse {
     
     
     public Integer statusCode;
+
     public StromkontoChoicesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class StromkontoChoicesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StromkontoChoicesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public StromkontoChoicesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

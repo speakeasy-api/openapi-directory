@@ -15,9 +15,13 @@ public class CardListResponse {
      */
     @JsonProperty("results")
     public CardResponse[] results;
+
     public CardListResponse withResults(CardResponse[] results) {
         this.results = results;
         return this;
     }
     
+    public CardListResponse(@JsonProperty("results") CardResponse[] results) {
+        this.results = results;
+  }
 }

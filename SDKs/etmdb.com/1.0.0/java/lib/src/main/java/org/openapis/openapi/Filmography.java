@@ -55,10 +55,8 @@ public class Filmography {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FilmographySearchReadResponse res = new org.openapis.openapi.models.operations.FilmographySearchReadResponse() {{
+        org.openapis.openapi.models.operations.FilmographySearchReadResponse res = new org.openapis.openapi.models.operations.FilmographySearchReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -99,10 +97,8 @@ public class Filmography {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FilmographySearchallReadResponse res = new org.openapis.openapi.models.operations.FilmographySearchallReadResponse() {{
+        org.openapis.openapi.models.operations.FilmographySearchallReadResponse res = new org.openapis.openapi.models.operations.FilmographySearchallReadResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EQ")
     public String eq;
+
     public DescribeBatchPredictionsInput withEq(String eq) {
         this.eq = eq;
         return this;
@@ -20,6 +21,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FilterVariable")
     public BatchPredictionFilterVariableEnum filterVariable;
+
     public DescribeBatchPredictionsInput withFilterVariable(BatchPredictionFilterVariableEnum filterVariable) {
         this.filterVariable = filterVariable;
         return this;
@@ -28,6 +30,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GE")
     public String ge;
+
     public DescribeBatchPredictionsInput withGe(String ge) {
         this.ge = ge;
         return this;
@@ -36,6 +39,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GT")
     public String gt;
+
     public DescribeBatchPredictionsInput withGt(String gt) {
         this.gt = gt;
         return this;
@@ -44,6 +48,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LE")
     public String le;
+
     public DescribeBatchPredictionsInput withLe(String le) {
         this.le = le;
         return this;
@@ -52,6 +57,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LT")
     public String lt;
+
     public DescribeBatchPredictionsInput withLt(String lt) {
         this.lt = lt;
         return this;
@@ -60,6 +66,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public DescribeBatchPredictionsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -68,6 +75,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NE")
     public String ne;
+
     public DescribeBatchPredictionsInput withNe(String ne) {
         this.ne = ne;
         return this;
@@ -76,6 +84,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeBatchPredictionsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -84,6 +93,7 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public DescribeBatchPredictionsInput withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
@@ -92,9 +102,11 @@ public class DescribeBatchPredictionsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortOrder")
     public SortOrderEnum sortOrder;
+
     public DescribeBatchPredictionsInput withSortOrder(SortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public DescribeBatchPredictionsInput(){}
 }

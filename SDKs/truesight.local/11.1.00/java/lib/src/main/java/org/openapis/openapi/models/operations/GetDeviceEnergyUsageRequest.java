@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDeviceEnergyUsageRequest {
@@ -12,6 +13,7 @@ public class GetDeviceEnergyUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=basis")
     public GetDeviceEnergyUsageBasisEnum basis;
+
     public GetDeviceEnergyUsageRequest withBasis(GetDeviceEnergyUsageBasisEnum basis) {
         this.basis = basis;
         return this;
@@ -22,6 +24,7 @@ public class GetDeviceEnergyUsageRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=deviceId")
     public Integer deviceId;
+
     public GetDeviceEnergyUsageRequest withDeviceId(Integer deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -32,9 +35,13 @@ public class GetDeviceEnergyUsageRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rollPeriod")
     public GetDeviceEnergyUsageRollPeriodEnum rollPeriod;
+
     public GetDeviceEnergyUsageRequest withRollPeriod(GetDeviceEnergyUsageRollPeriodEnum rollPeriod) {
         this.rollPeriod = rollPeriod;
         return this;
     }
     
+    public GetDeviceEnergyUsageRequest(@JsonProperty("deviceId") Integer deviceId) {
+        this.deviceId = deviceId;
+  }
 }

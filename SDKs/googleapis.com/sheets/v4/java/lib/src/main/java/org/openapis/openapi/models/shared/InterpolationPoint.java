@@ -18,6 +18,7 @@ public class InterpolationPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public Color color;
+
     public InterpolationPoint withColor(Color color) {
         this.color = color;
         return this;
@@ -29,6 +30,7 @@ public class InterpolationPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("colorStyle")
     public ColorStyle colorStyle;
+
     public InterpolationPoint withColorStyle(ColorStyle colorStyle) {
         this.colorStyle = colorStyle;
         return this;
@@ -40,6 +42,7 @@ public class InterpolationPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InterpolationPointTypeEnum type;
+
     public InterpolationPoint withType(InterpolationPointTypeEnum type) {
         this.type = type;
         return this;
@@ -51,9 +54,11 @@ public class InterpolationPoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public InterpolationPoint withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public InterpolationPoint(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAssociateTransitGatewayPolicyTableRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETAssociateTransitGatewayPolicyTableActionEnum action;
+
     public GETAssociateTransitGatewayPolicyTableRequest withAction(GETAssociateTransitGatewayPolicyTableActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETAssociateTransitGatewayPolicyTableRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -29,6 +32,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayAttachmentId")
     public String transitGatewayAttachmentId;
+
     public GETAssociateTransitGatewayPolicyTableRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -39,6 +43,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TransitGatewayPolicyTableId")
     public String transitGatewayPolicyTableId;
+
     public GETAssociateTransitGatewayPolicyTableRequest withTransitGatewayPolicyTableId(String transitGatewayPolicyTableId) {
         this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
         return this;
@@ -46,6 +51,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETAssociateTransitGatewayPolicyTableVersionEnum version;
+
     public GETAssociateTransitGatewayPolicyTableRequest withVersion(GETAssociateTransitGatewayPolicyTableVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETAssociateTransitGatewayPolicyTableRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETAssociateTransitGatewayPolicyTableRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETAssociateTransitGatewayPolicyTableRequest(@JsonProperty("Action") GETAssociateTransitGatewayPolicyTableActionEnum action, @JsonProperty("TransitGatewayAttachmentId") String transitGatewayAttachmentId, @JsonProperty("TransitGatewayPolicyTableId") String transitGatewayPolicyTableId, @JsonProperty("Version") GETAssociateTransitGatewayPolicyTableVersionEnum version) {
+        this.action = action;
+        this.transitGatewayAttachmentId = transitGatewayAttachmentId;
+        this.transitGatewayPolicyTableId = transitGatewayPolicyTableId;
+        this.version = version;
+  }
 }

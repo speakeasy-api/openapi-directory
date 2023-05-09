@@ -12,6 +12,7 @@ public class GetMeFollowingsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Long limit;
+
     public GetMeFollowingsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -19,12 +20,17 @@ public class GetMeFollowingsRequest {
     
     /**
      * Offset of first result. Deprecated, use `linked_partitioning` instead.
+     * @deprecated this field will be removed in a future release, please migrate away from it as soon as possible
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
+    @Deprecated
     public Long offset;
+
+    @Deprecated
     public GetMeFollowingsRequest withOffset(Long offset) {
         this.offset = offset;
         return this;
     }
     
+    public GetMeFollowingsRequest(){}
 }

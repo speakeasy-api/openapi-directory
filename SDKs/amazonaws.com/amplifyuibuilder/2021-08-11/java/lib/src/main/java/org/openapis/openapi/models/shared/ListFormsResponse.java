@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListFormsResponse {
     @JsonProperty("entities")
     public FormSummary[] entities;
+
     public ListFormsResponse withEntities(FormSummary[] entities) {
         this.entities = entities;
         return this;
@@ -22,9 +23,13 @@ public class ListFormsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListFormsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFormsResponse(@JsonProperty("entities") FormSummary[] entities) {
+        this.entities = entities;
+  }
 }

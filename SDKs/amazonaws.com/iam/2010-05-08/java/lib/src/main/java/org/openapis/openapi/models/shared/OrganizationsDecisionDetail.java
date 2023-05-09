@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class OrganizationsDecisionDetail {
     
     public Boolean allowedByOrganizations;
+
     public OrganizationsDecisionDetail withAllowedByOrganizations(Boolean allowedByOrganizations) {
         this.allowedByOrganizations = allowedByOrganizations;
         return this;
     }
     
+    public OrganizationsDecisionDetail(){}
 }

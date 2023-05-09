@@ -15,6 +15,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("active")
     public Boolean active;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withActive(Boolean active) {
         this.active = active;
         return this;
@@ -23,6 +24,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codeHook")
     public org.openapis.openapi.models.shared.DialogCodeHookInvocationSetting codeHook;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withCodeHook(org.openapis.openapi.models.shared.DialogCodeHookInvocationSetting codeHook) {
         this.codeHook = codeHook;
         return this;
@@ -31,6 +33,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationConditional")
     public org.openapis.openapi.models.shared.ConditionalSpecification confirmationConditional;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withConfirmationConditional(org.openapis.openapi.models.shared.ConditionalSpecification confirmationConditional) {
         this.confirmationConditional = confirmationConditional;
         return this;
@@ -39,6 +42,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationNextStep")
     public org.openapis.openapi.models.shared.DialogState confirmationNextStep;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withConfirmationNextStep(org.openapis.openapi.models.shared.DialogState confirmationNextStep) {
         this.confirmationNextStep = confirmationNextStep;
         return this;
@@ -50,6 +54,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirmationResponse")
     public org.openapis.openapi.models.shared.ResponseSpecification confirmationResponse;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withConfirmationResponse(org.openapis.openapi.models.shared.ResponseSpecification confirmationResponse) {
         this.confirmationResponse = confirmationResponse;
         return this;
@@ -58,6 +63,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationConditional")
     public org.openapis.openapi.models.shared.ConditionalSpecification declinationConditional;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withDeclinationConditional(org.openapis.openapi.models.shared.ConditionalSpecification declinationConditional) {
         this.declinationConditional = declinationConditional;
         return this;
@@ -66,6 +72,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationNextStep")
     public org.openapis.openapi.models.shared.DialogState declinationNextStep;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withDeclinationNextStep(org.openapis.openapi.models.shared.DialogState declinationNextStep) {
         this.declinationNextStep = declinationNextStep;
         return this;
@@ -74,6 +81,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("declinationResponse")
     public org.openapis.openapi.models.shared.ResponseSpecification declinationResponse;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withDeclinationResponse(org.openapis.openapi.models.shared.ResponseSpecification declinationResponse) {
         this.declinationResponse = declinationResponse;
         return this;
@@ -82,6 +90,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("elicitationCodeHook")
     public org.openapis.openapi.models.shared.ElicitationCodeHookInvocationSetting elicitationCodeHook;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withElicitationCodeHook(org.openapis.openapi.models.shared.ElicitationCodeHookInvocationSetting elicitationCodeHook) {
         this.elicitationCodeHook = elicitationCodeHook;
         return this;
@@ -93,6 +102,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureConditional")
     public org.openapis.openapi.models.shared.ConditionalSpecification failureConditional;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withFailureConditional(org.openapis.openapi.models.shared.ConditionalSpecification failureConditional) {
         this.failureConditional = failureConditional;
         return this;
@@ -101,6 +111,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureNextStep")
     public org.openapis.openapi.models.shared.DialogState failureNextStep;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withFailureNextStep(org.openapis.openapi.models.shared.DialogState failureNextStep) {
         this.failureNextStep = failureNextStep;
         return this;
@@ -112,6 +123,7 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureResponse")
     public org.openapis.openapi.models.shared.ResponseSpecification failureResponse;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withFailureResponse(org.openapis.openapi.models.shared.ResponseSpecification failureResponse) {
         this.failureResponse = failureResponse;
         return this;
@@ -120,9 +132,11 @@ public class CreateIntentRequestBodyIntentConfirmationSetting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("promptSpecification")
     public org.openapis.openapi.models.shared.PromptSpecification promptSpecification;
+
     public CreateIntentRequestBodyIntentConfirmationSetting withPromptSpecification(org.openapis.openapi.models.shared.PromptSpecification promptSpecification) {
         this.promptSpecification = promptSpecification;
         return this;
     }
     
+    public CreateIntentRequestBodyIntentConfirmationSetting(){}
 }

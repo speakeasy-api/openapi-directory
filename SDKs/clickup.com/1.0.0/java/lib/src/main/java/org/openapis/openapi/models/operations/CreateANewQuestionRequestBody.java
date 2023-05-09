@@ -12,6 +12,7 @@ public class CreateANewQuestionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("choices")
     public String[] choices;
+
     public CreateANewQuestionRequestBody withChoices(String[] choices) {
         this.choices = choices;
         return this;
@@ -20,9 +21,11 @@ public class CreateANewQuestionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("question")
     public String question;
+
     public CreateANewQuestionRequestBody withQuestion(String question) {
         this.question = question;
         return this;
     }
     
+    public CreateANewQuestionRequestBody(){}
 }

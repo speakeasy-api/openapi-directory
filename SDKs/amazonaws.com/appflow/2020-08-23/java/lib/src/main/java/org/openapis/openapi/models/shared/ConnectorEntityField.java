@@ -15,6 +15,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customProperties")
     public java.util.Map<String, String> customProperties;
+
     public ConnectorEntityField withCustomProperties(java.util.Map<String, String> customProperties) {
         this.customProperties = customProperties;
         return this;
@@ -23,6 +24,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public String defaultValue;
+
     public ConnectorEntityField withDefaultValue(String defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -31,6 +33,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ConnectorEntityField withDescription(String description) {
         this.description = description;
         return this;
@@ -39,6 +42,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationProperties")
     public DestinationFieldProperties destinationProperties;
+
     public ConnectorEntityField withDestinationProperties(DestinationFieldProperties destinationProperties) {
         this.destinationProperties = destinationProperties;
         return this;
@@ -46,6 +50,7 @@ public class ConnectorEntityField {
     
     @JsonProperty("identifier")
     public String identifier;
+
     public ConnectorEntityField withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -54,6 +59,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDeprecated")
     public Boolean isDeprecated;
+
     public ConnectorEntityField withIsDeprecated(Boolean isDeprecated) {
         this.isDeprecated = isDeprecated;
         return this;
@@ -62,6 +68,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPrimaryKey")
     public Boolean isPrimaryKey;
+
     public ConnectorEntityField withIsPrimaryKey(Boolean isPrimaryKey) {
         this.isPrimaryKey = isPrimaryKey;
         return this;
@@ -70,6 +77,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public ConnectorEntityField withLabel(String label) {
         this.label = label;
         return this;
@@ -78,6 +86,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parentIdentifier")
     public String parentIdentifier;
+
     public ConnectorEntityField withParentIdentifier(String parentIdentifier) {
         this.parentIdentifier = parentIdentifier;
         return this;
@@ -86,6 +95,7 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceProperties")
     public SourceFieldProperties sourceProperties;
+
     public ConnectorEntityField withSourceProperties(SourceFieldProperties sourceProperties) {
         this.sourceProperties = sourceProperties;
         return this;
@@ -94,9 +104,13 @@ public class ConnectorEntityField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supportedFieldTypeDetails")
     public SupportedFieldTypeDetails supportedFieldTypeDetails;
+
     public ConnectorEntityField withSupportedFieldTypeDetails(SupportedFieldTypeDetails supportedFieldTypeDetails) {
         this.supportedFieldTypeDetails = supportedFieldTypeDetails;
         return this;
     }
     
+    public ConnectorEntityField(@JsonProperty("identifier") String identifier) {
+        this.identifier = identifier;
+  }
 }

@@ -12,9 +12,11 @@ public class ControllersPackageVersionItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evra")
     public String evra;
+
     public ControllersPackageVersionItem withEvra(String evra) {
         this.evra = evra;
         return this;
     }
     
+    public ControllersPackageVersionItem(){}
 }

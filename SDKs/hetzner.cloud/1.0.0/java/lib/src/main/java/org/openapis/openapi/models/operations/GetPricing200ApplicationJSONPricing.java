@@ -12,6 +12,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("currency")
     public String currency;
+
     public GetPricing200ApplicationJSONPricing withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -22,6 +23,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("floating_ip")
     public GetPricing200ApplicationJSONPricingFloatingIp floatingIp;
+
     public GetPricing200ApplicationJSONPricing withFloatingIp(GetPricing200ApplicationJSONPricingFloatingIp floatingIp) {
         this.floatingIp = floatingIp;
         return this;
@@ -32,6 +34,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("floating_ips")
     public GetPricing200ApplicationJSONPricingFloatingIps[] floatingIps;
+
     public GetPricing200ApplicationJSONPricing withFloatingIps(GetPricing200ApplicationJSONPricingFloatingIps[] floatingIps) {
         this.floatingIps = floatingIps;
         return this;
@@ -42,6 +45,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("image")
     public GetPricing200ApplicationJSONPricingImage image;
+
     public GetPricing200ApplicationJSONPricing withImage(GetPricing200ApplicationJSONPricingImage image) {
         this.image = image;
         return this;
@@ -52,6 +56,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("load_balancer_types")
     public GetPricing200ApplicationJSONPricingLoadBalancerTypes[] loadBalancerTypes;
+
     public GetPricing200ApplicationJSONPricing withLoadBalancerTypes(GetPricing200ApplicationJSONPricingLoadBalancerTypes[] loadBalancerTypes) {
         this.loadBalancerTypes = loadBalancerTypes;
         return this;
@@ -62,6 +67,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("primary_ips")
     public GetPricing200ApplicationJSONPricingPrimaryIps[] primaryIps;
+
     public GetPricing200ApplicationJSONPricing withPrimaryIps(GetPricing200ApplicationJSONPricingPrimaryIps[] primaryIps) {
         this.primaryIps = primaryIps;
         return this;
@@ -72,6 +78,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("server_backup")
     public GetPricing200ApplicationJSONPricingServerBackup serverBackup;
+
     public GetPricing200ApplicationJSONPricing withServerBackup(GetPricing200ApplicationJSONPricingServerBackup serverBackup) {
         this.serverBackup = serverBackup;
         return this;
@@ -82,6 +89,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("server_types")
     public GetPricing200ApplicationJSONPricingServerTypes[] serverTypes;
+
     public GetPricing200ApplicationJSONPricing withServerTypes(GetPricing200ApplicationJSONPricingServerTypes[] serverTypes) {
         this.serverTypes = serverTypes;
         return this;
@@ -92,6 +100,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("traffic")
     public GetPricing200ApplicationJSONPricingTraffic traffic;
+
     public GetPricing200ApplicationJSONPricing withTraffic(GetPricing200ApplicationJSONPricingTraffic traffic) {
         this.traffic = traffic;
         return this;
@@ -102,6 +111,7 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("vat_rate")
     public String vatRate;
+
     public GetPricing200ApplicationJSONPricing withVatRate(String vatRate) {
         this.vatRate = vatRate;
         return this;
@@ -112,9 +122,23 @@ public class GetPricing200ApplicationJSONPricing {
      */
     @JsonProperty("volume")
     public GetPricing200ApplicationJSONPricingVolume volume;
+
     public GetPricing200ApplicationJSONPricing withVolume(GetPricing200ApplicationJSONPricingVolume volume) {
         this.volume = volume;
         return this;
     }
     
+    public GetPricing200ApplicationJSONPricing(@JsonProperty("currency") String currency, @JsonProperty("floating_ip") GetPricing200ApplicationJSONPricingFloatingIp floatingIp, @JsonProperty("floating_ips") GetPricing200ApplicationJSONPricingFloatingIps[] floatingIps, @JsonProperty("image") GetPricing200ApplicationJSONPricingImage image, @JsonProperty("load_balancer_types") GetPricing200ApplicationJSONPricingLoadBalancerTypes[] loadBalancerTypes, @JsonProperty("primary_ips") GetPricing200ApplicationJSONPricingPrimaryIps[] primaryIps, @JsonProperty("server_backup") GetPricing200ApplicationJSONPricingServerBackup serverBackup, @JsonProperty("server_types") GetPricing200ApplicationJSONPricingServerTypes[] serverTypes, @JsonProperty("traffic") GetPricing200ApplicationJSONPricingTraffic traffic, @JsonProperty("vat_rate") String vatRate, @JsonProperty("volume") GetPricing200ApplicationJSONPricingVolume volume) {
+        this.currency = currency;
+        this.floatingIp = floatingIp;
+        this.floatingIps = floatingIps;
+        this.image = image;
+        this.loadBalancerTypes = loadBalancerTypes;
+        this.primaryIps = primaryIps;
+        this.serverBackup = serverBackup;
+        this.serverTypes = serverTypes;
+        this.traffic = traffic;
+        this.vatRate = vatRate;
+        this.volume = volume;
+  }
 }

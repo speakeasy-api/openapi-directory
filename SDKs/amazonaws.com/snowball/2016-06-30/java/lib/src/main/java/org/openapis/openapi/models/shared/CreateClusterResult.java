@@ -15,9 +15,20 @@ public class CreateClusterResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public CreateClusterResult withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("JobListEntries")
+    public JobListEntry[] jobListEntries;
+
+    public CreateClusterResult withJobListEntries(JobListEntry[] jobListEntries) {
+        this.jobListEntries = jobListEntries;
+        return this;
+    }
+    
+    public CreateClusterResult(){}
 }

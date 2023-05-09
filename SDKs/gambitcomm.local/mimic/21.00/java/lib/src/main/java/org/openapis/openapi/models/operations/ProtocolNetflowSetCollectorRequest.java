@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolNetflowSetCollectorRequest {
@@ -12,6 +13,7 @@ public class ProtocolNetflowSetCollectorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolNetflowSetCollectorRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolNetflowSetCollectorRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=collectorIP")
     public String collectorIP;
+
     public ProtocolNetflowSetCollectorRequest withCollectorIP(String collectorIP) {
         this.collectorIP = collectorIP;
         return this;
     }
     
+    public ProtocolNetflowSetCollectorRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("collectorIP") String collectorIP) {
+        this.agentNum = agentNum;
+        this.collectorIP = collectorIP;
+  }
 }

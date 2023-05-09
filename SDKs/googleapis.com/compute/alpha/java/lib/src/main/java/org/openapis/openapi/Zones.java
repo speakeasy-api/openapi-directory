@@ -58,11 +58,9 @@ public class Zones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZonesGetResponse res = new org.openapis.openapi.models.operations.ComputeZonesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeZonesGetResponse res = new org.openapis.openapi.models.operations.ComputeZonesGetResponse(contentType, httpRes.statusCode()) {{
             zone = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Zones {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeZonesListResponse res = new org.openapis.openapi.models.operations.ComputeZonesListResponse() {{
+        org.openapis.openapi.models.operations.ComputeZonesListResponse res = new org.openapis.openapi.models.operations.ComputeZonesListResponse(contentType, httpRes.statusCode()) {{
             zoneList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

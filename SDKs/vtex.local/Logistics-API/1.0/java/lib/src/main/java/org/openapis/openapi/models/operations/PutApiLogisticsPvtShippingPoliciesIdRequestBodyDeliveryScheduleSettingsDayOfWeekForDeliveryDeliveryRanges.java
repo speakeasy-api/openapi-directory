@@ -15,6 +15,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deliveryCapacity")
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity[] deliveryCapacity;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withDeliveryCapacity(PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRangesDeliveryCapacity[] deliveryCapacity) {
         this.deliveryCapacity = deliveryCapacity;
         return this;
@@ -25,6 +26,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("endTime")
     public String endTime;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -35,6 +37,7 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("listPrice")
     public Double listPrice;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withListPrice(Double listPrice) {
         this.listPrice = listPrice;
         return this;
@@ -45,9 +48,15 @@ public class PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSett
      */
     @JsonProperty("startTime")
     public String startTime;
+
     public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public PutApiLogisticsPvtShippingPoliciesIdRequestBodyDeliveryScheduleSettingsDayOfWeekForDeliveryDeliveryRanges(@JsonProperty("endTime") String endTime, @JsonProperty("listPrice") Double listPrice, @JsonProperty("startTime") String startTime) {
+        this.endTime = endTime;
+        this.listPrice = listPrice;
+        this.startTime = startTime;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BloggerPostsGetByPathResponse {
     
     public String contentType;
+
     public BloggerPostsGetByPathResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BloggerPostsGetByPathResponse {
      */
     
     public org.openapis.openapi.models.shared.Post post;
+
     public BloggerPostsGetByPathResponse withPost(org.openapis.openapi.models.shared.Post post) {
         this.post = post;
         return this;
@@ -26,6 +29,7 @@ public class BloggerPostsGetByPathResponse {
     
     
     public Integer statusCode;
+
     public BloggerPostsGetByPathResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BloggerPostsGetByPathResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BloggerPostsGetByPathResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BloggerPostsGetByPathResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

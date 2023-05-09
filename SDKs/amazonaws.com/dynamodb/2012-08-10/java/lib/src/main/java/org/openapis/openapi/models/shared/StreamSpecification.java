@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StreamSpecification {
     @JsonProperty("StreamEnabled")
     public Boolean streamEnabled;
+
     public StreamSpecification withStreamEnabled(Boolean streamEnabled) {
         this.streamEnabled = streamEnabled;
         return this;
@@ -22,9 +23,13 @@ public class StreamSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamViewType")
     public StreamViewTypeEnum streamViewType;
+
     public StreamSpecification withStreamViewType(StreamViewTypeEnum streamViewType) {
         this.streamViewType = streamViewType;
         return this;
     }
     
+    public StreamSpecification(@JsonProperty("StreamEnabled") Boolean streamEnabled) {
+        this.streamEnabled = streamEnabled;
+  }
 }

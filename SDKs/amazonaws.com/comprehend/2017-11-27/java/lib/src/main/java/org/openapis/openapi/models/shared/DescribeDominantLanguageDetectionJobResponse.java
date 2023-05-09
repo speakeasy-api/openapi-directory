@@ -15,9 +15,11 @@ public class DescribeDominantLanguageDetectionJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DominantLanguageDetectionJobProperties")
     public DominantLanguageDetectionJobProperties dominantLanguageDetectionJobProperties;
+
     public DescribeDominantLanguageDetectionJobResponse withDominantLanguageDetectionJobProperties(DominantLanguageDetectionJobProperties dominantLanguageDetectionJobProperties) {
         this.dominantLanguageDetectionJobProperties = dominantLanguageDetectionJobProperties;
         return this;
     }
     
+    public DescribeDominantLanguageDetectionJobResponse(){}
 }

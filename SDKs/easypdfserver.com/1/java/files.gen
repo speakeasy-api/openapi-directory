@@ -31,4 +31,5 @@ lib/src/main/java/org/openapis/openapi/utils/Utils.java
 settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/PostMakePdfRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostMakePdfResponse.java
+docs/sdk/README.md
 USAGE.md

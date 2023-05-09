@@ -58,11 +58,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DfareportingRegionsListResponse res = new org.openapis.openapi.models.operations.DfareportingRegionsListResponse() {{
+        org.openapis.openapi.models.operations.DfareportingRegionsListResponse res = new org.openapis.openapi.models.operations.DfareportingRegionsListResponse(contentType, httpRes.statusCode()) {{
             regionsListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

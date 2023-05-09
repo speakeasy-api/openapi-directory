@@ -15,6 +15,7 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public DomainEntry withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAlias")
     public Boolean isAlias;
+
     public DomainEntry withIsAlias(Boolean isAlias) {
         this.isAlias = isAlias;
         return this;
@@ -31,6 +33,7 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public DomainEntry withName(String name) {
         this.name = name;
         return this;
@@ -39,6 +42,7 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public java.util.Map<String, String> options;
+
     public DomainEntry withOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
@@ -47,6 +51,7 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target")
     public String target;
+
     public DomainEntry withTarget(String target) {
         this.target = target;
         return this;
@@ -55,9 +60,11 @@ public class DomainEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public DomainEntry withType(String type) {
         this.type = type;
         return this;
     }
     
+    public DomainEntry(){}
 }

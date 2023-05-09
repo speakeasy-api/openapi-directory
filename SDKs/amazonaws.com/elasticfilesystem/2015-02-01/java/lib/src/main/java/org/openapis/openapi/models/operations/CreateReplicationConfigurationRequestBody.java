@@ -12,9 +12,13 @@ public class CreateReplicationConfigurationRequestBody {
      */
     @JsonProperty("Destinations")
     public org.openapis.openapi.models.shared.DestinationToCreate[] destinations;
+
     public CreateReplicationConfigurationRequestBody withDestinations(org.openapis.openapi.models.shared.DestinationToCreate[] destinations) {
         this.destinations = destinations;
         return this;
     }
     
+    public CreateReplicationConfigurationRequestBody(@JsonProperty("Destinations") org.openapis.openapi.models.shared.DestinationToCreate[] destinations) {
+        this.destinations = destinations;
+  }
 }

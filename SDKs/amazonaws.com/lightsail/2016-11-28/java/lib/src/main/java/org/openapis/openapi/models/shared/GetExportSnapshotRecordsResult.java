@@ -15,6 +15,7 @@ public class GetExportSnapshotRecordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exportSnapshotRecords")
     public ExportSnapshotRecord[] exportSnapshotRecords;
+
     public GetExportSnapshotRecordsResult withExportSnapshotRecords(ExportSnapshotRecord[] exportSnapshotRecords) {
         this.exportSnapshotRecords = exportSnapshotRecords;
         return this;
@@ -23,9 +24,11 @@ public class GetExportSnapshotRecordsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GetExportSnapshotRecordsResult withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public GetExportSnapshotRecordsResult(){}
 }

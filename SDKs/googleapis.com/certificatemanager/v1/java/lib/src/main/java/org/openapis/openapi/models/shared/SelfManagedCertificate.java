@@ -18,6 +18,7 @@ public class SelfManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pemCertificate")
     public String pemCertificate;
+
     public SelfManagedCertificate withPemCertificate(String pemCertificate) {
         this.pemCertificate = pemCertificate;
         return this;
@@ -29,9 +30,11 @@ public class SelfManagedCertificate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pemPrivateKey")
     public String pemPrivateKey;
+
     public SelfManagedCertificate withPemPrivateKey(String pemPrivateKey) {
         this.pemPrivateKey = pemPrivateKey;
         return this;
     }
     
+    public SelfManagedCertificate(){}
 }

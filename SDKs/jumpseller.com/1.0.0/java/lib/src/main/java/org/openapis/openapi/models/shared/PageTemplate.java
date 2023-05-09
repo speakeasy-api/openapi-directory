@@ -15,6 +15,7 @@ public class PageTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public PageTemplate withId(Long id) {
         this.id = id;
         return this;
@@ -23,9 +24,11 @@ public class PageTemplate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public PageTemplate withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PageTemplate(){}
 }

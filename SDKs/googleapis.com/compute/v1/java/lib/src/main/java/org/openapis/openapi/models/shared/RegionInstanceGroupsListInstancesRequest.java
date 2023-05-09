@@ -15,6 +15,7 @@ public class RegionInstanceGroupsListInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceState")
     public RegionInstanceGroupsListInstancesRequestInstanceStateEnum instanceState;
+
     public RegionInstanceGroupsListInstancesRequest withInstanceState(RegionInstanceGroupsListInstancesRequestInstanceStateEnum instanceState) {
         this.instanceState = instanceState;
         return this;
@@ -26,9 +27,11 @@ public class RegionInstanceGroupsListInstancesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portName")
     public String portName;
+
     public RegionInstanceGroupsListInstancesRequest withPortName(String portName) {
         this.portName = portName;
         return this;
     }
     
+    public RegionInstanceGroupsListInstancesRequest(){}
 }

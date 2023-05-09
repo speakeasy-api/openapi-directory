@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class RegisterPublisherOutput {
     
     public String publisherId;
+
     public RegisterPublisherOutput withPublisherId(String publisherId) {
         this.publisherId = publisherId;
         return this;
     }
     
+    public RegisterPublisherOutput(){}
 }

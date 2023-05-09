@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AgentOrchestrationConfig {
     @JsonProperty("profilingEnabled")
     public Boolean profilingEnabled;
+
     public AgentOrchestrationConfig withProfilingEnabled(Boolean profilingEnabled) {
         this.profilingEnabled = profilingEnabled;
         return this;
     }
     
+    public AgentOrchestrationConfig(@JsonProperty("profilingEnabled") Boolean profilingEnabled) {
+        this.profilingEnabled = profilingEnabled;
+  }
 }

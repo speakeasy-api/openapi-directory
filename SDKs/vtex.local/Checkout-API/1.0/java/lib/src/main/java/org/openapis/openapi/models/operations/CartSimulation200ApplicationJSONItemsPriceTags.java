@@ -15,6 +15,7 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("identifier")
     public String identifier;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withIdentifier(String identifier) {
         this.identifier = identifier;
         return this;
@@ -26,6 +27,7 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isPercentual")
     public Boolean isPercentual;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withIsPercentual(Boolean isPercentual) {
         this.isPercentual = isPercentual;
         return this;
@@ -37,6 +39,7 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withName(String name) {
         this.name = name;
         return this;
@@ -48,6 +51,7 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -59,6 +63,7 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawValue")
     public Long rawValue;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withRawValue(Long rawValue) {
         this.rawValue = rawValue;
         return this;
@@ -70,9 +75,11 @@ public class CartSimulation200ApplicationJSONItemsPriceTags {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public CartSimulation200ApplicationJSONItemsPriceTags withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public CartSimulation200ApplicationJSONItemsPriceTags(){}
 }

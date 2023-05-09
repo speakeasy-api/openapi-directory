@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateChannelRequest {
     @JsonProperty("Destinations")
     public Destination[] destinations;
+
     public CreateChannelRequest withDestinations(Destination[] destinations) {
         this.destinations = destinations;
         return this;
@@ -18,6 +19,7 @@ public class CreateChannelRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateChannelRequest withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +27,7 @@ public class CreateChannelRequest {
     
     @JsonProperty("Source")
     public String source;
+
     public CreateChannelRequest withSource(String source) {
         this.source = source;
         return this;
@@ -36,9 +39,15 @@ public class CreateChannelRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateChannelRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateChannelRequest(@JsonProperty("Destinations") Destination[] destinations, @JsonProperty("Name") String name, @JsonProperty("Source") String source) {
+        this.destinations = destinations;
+        this.name = name;
+        this.source = source;
+  }
 }

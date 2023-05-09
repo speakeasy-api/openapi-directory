@@ -65,12 +65,10 @@ public class Twilio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TwilioMessageGetTwilioGetResponse res = new org.openapis.openapi.models.operations.TwilioMessageGetTwilioGetResponse() {{
+        org.openapis.openapi.models.operations.TwilioMessageGetTwilioGetResponse res = new org.openapis.openapi.models.operations.TwilioMessageGetTwilioGetResponse(contentType, httpRes.statusCode()) {{
             twilioMessageGetTwilioGet200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -124,12 +122,10 @@ public class Twilio {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TwilioMessagePostTwilioPostResponse res = new org.openapis.openapi.models.operations.TwilioMessagePostTwilioPostResponse() {{
+        org.openapis.openapi.models.operations.TwilioMessagePostTwilioPostResponse res = new org.openapis.openapi.models.operations.TwilioMessagePostTwilioPostResponse(contentType, httpRes.statusCode()) {{
             twilioMessagePostTwilioPost200ApplicationJSONAny = null;
             httpValidationError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

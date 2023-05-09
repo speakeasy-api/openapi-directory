@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDeleteAnalysisSchemeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDeleteAnalysisSchemeActionEnum action;
+
     public GETDeleteAnalysisSchemeRequest withAction(GETDeleteAnalysisSchemeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDeleteAnalysisSchemeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=AnalysisSchemeName")
     public String analysisSchemeName;
+
     public GETDeleteAnalysisSchemeRequest withAnalysisSchemeName(String analysisSchemeName) {
         this.analysisSchemeName = analysisSchemeName;
         return this;
@@ -26,6 +29,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DomainName")
     public String domainName;
+
     public GETDeleteAnalysisSchemeRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -33,6 +37,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDeleteAnalysisSchemeVersionEnum version;
+
     public GETDeleteAnalysisSchemeRequest withVersion(GETDeleteAnalysisSchemeVersionEnum version) {
         this.version = version;
         return this;
@@ -40,6 +45,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDeleteAnalysisSchemeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -47,6 +53,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDeleteAnalysisSchemeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -54,6 +61,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDeleteAnalysisSchemeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -61,6 +69,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDeleteAnalysisSchemeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -68,6 +77,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDeleteAnalysisSchemeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -75,6 +85,7 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDeleteAnalysisSchemeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -82,9 +93,16 @@ public class GETDeleteAnalysisSchemeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDeleteAnalysisSchemeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDeleteAnalysisSchemeRequest(@JsonProperty("Action") GETDeleteAnalysisSchemeActionEnum action, @JsonProperty("AnalysisSchemeName") String analysisSchemeName, @JsonProperty("DomainName") String domainName, @JsonProperty("Version") GETDeleteAnalysisSchemeVersionEnum version) {
+        this.action = action;
+        this.analysisSchemeName = analysisSchemeName;
+        this.domainName = domainName;
+        this.version = version;
+  }
 }

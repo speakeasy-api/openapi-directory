@@ -18,6 +18,7 @@ public class EventInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playoff")
     public java.util.Map<String, Object> playoff;
+
     public EventInsights withPlayoff(java.util.Map<String, Object> playoff) {
         this.playoff = playoff;
         return this;
@@ -29,9 +30,11 @@ public class EventInsights {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("qual")
     public java.util.Map<String, Object> qual;
+
     public EventInsights withQual(java.util.Map<String, Object> qual) {
         this.qual = qual;
         return this;
     }
     
+    public EventInsights(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ChangePasswordResponse {
@@ -12,6 +13,7 @@ public class ChangePasswordResponse {
      */
     
     public java.util.Map<String, Object> changePasswordResponse;
+
     public ChangePasswordResponse withChangePasswordResponse(java.util.Map<String, Object> changePasswordResponse) {
         this.changePasswordResponse = changePasswordResponse;
         return this;
@@ -19,6 +21,7 @@ public class ChangePasswordResponse {
     
     
     public String contentType;
+
     public ChangePasswordResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ChangePasswordResponse {
      */
     
     public Object forbiddenException;
+
     public ChangePasswordResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ChangePasswordResponse {
      */
     
     public Object internalErrorException;
+
     public ChangePasswordResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ChangePasswordResponse {
      */
     
     public Object invalidParameterException;
+
     public ChangePasswordResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -59,6 +65,7 @@ public class ChangePasswordResponse {
      */
     
     public Object invalidPasswordException;
+
     public ChangePasswordResponse withInvalidPasswordException(Object invalidPasswordException) {
         this.invalidPasswordException = invalidPasswordException;
         return this;
@@ -69,6 +76,7 @@ public class ChangePasswordResponse {
      */
     
     public Object limitExceededException;
+
     public ChangePasswordResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -79,6 +87,7 @@ public class ChangePasswordResponse {
      */
     
     public Object notAuthorizedException;
+
     public ChangePasswordResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -89,6 +98,7 @@ public class ChangePasswordResponse {
      */
     
     public Object passwordResetRequiredException;
+
     public ChangePasswordResponse withPasswordResetRequiredException(Object passwordResetRequiredException) {
         this.passwordResetRequiredException = passwordResetRequiredException;
         return this;
@@ -99,6 +109,7 @@ public class ChangePasswordResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ChangePasswordResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -106,6 +117,7 @@ public class ChangePasswordResponse {
     
     
     public Integer statusCode;
+
     public ChangePasswordResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -113,6 +125,7 @@ public class ChangePasswordResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ChangePasswordResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -123,6 +136,7 @@ public class ChangePasswordResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ChangePasswordResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -133,6 +147,7 @@ public class ChangePasswordResponse {
      */
     
     public Object userNotConfirmedException;
+
     public ChangePasswordResponse withUserNotConfirmedException(Object userNotConfirmedException) {
         this.userNotConfirmedException = userNotConfirmedException;
         return this;
@@ -143,9 +158,14 @@ public class ChangePasswordResponse {
      */
     
     public Object userNotFoundException;
+
     public ChangePasswordResponse withUserNotFoundException(Object userNotFoundException) {
         this.userNotFoundException = userNotFoundException;
         return this;
     }
     
+    public ChangePasswordResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

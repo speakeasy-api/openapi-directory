@@ -15,6 +15,7 @@ public class PostServersIdActionsChangeProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("delete")
     public Boolean delete;
+
     public PostServersIdActionsChangeProtectionRequestBody withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -26,9 +27,11 @@ public class PostServersIdActionsChangeProtectionRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rebuild")
     public Boolean rebuild;
+
     public PostServersIdActionsChangeProtectionRequestBody withRebuild(Boolean rebuild) {
         this.rebuild = rebuild;
         return this;
     }
     
+    public PostServersIdActionsChangeProtectionRequestBody(){}
 }

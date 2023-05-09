@@ -12,6 +12,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String[] address;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withAddress(String[] address) {
         this.address = address;
         return this;
@@ -20,6 +21,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_score")
     public Double companyScore;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withCompanyScore(Double companyScore) {
         this.companyScore = companyScore;
         return this;
@@ -28,6 +30,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_score_explanation")
     public String companyScoreExplanation;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withCompanyScoreExplanation(String companyScoreExplanation) {
         this.companyScoreExplanation = companyScoreExplanation;
         return this;
@@ -36,6 +39,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence_score")
     public Double confidenceScore;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withConfidenceScore(Double confidenceScore) {
         this.confidenceScore = confidenceScore;
         return this;
@@ -44,6 +48,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confidence_score_explanation")
     public String confidenceScoreExplanation;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withConfidenceScoreExplanation(String confidenceScoreExplanation) {
         this.confidenceScoreExplanation = confidenceScoreExplanation;
         return this;
@@ -52,6 +57,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dba_score")
     public String dbaScore;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withDbaScore(String dbaScore) {
         this.dbaScore = dbaScore;
         return this;
@@ -60,6 +66,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dba_score_explanation")
     public String dbaScoreExplanation;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withDbaScoreExplanation(String dbaScoreExplanation) {
         this.dbaScoreExplanation = dbaScoreExplanation;
         return this;
@@ -68,6 +75,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ein")
     public String ein;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withEin(String ein) {
         this.ein = ein;
         return this;
@@ -76,6 +84,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("formattedAddress")
     public String[] formattedAddress;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withFormattedAddress(String[] formattedAddress) {
         this.formattedAddress = formattedAddress;
         return this;
@@ -84,6 +93,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irs_score")
     public String irsScore;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withIrsScore(String irsScore) {
         this.irsScore = irsScore;
         return this;
@@ -92,6 +102,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("irs_score_explanation")
     public String irsScoreExplanation;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withIrsScoreExplanation(String irsScoreExplanation) {
         this.irsScoreExplanation = irsScoreExplanation;
         return this;
@@ -100,6 +111,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withName(String name) {
         this.name = name;
         return this;
@@ -108,6 +120,7 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provided_status")
     public String providedStatus;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withProvidedStatus(String providedStatus) {
         this.providedStatus = providedStatus;
         return this;
@@ -116,9 +129,11 @@ public class EinVerificationLookup200ApplicationJSONMatchedEinCompanies {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provided_status_explanation")
     public String providedStatusExplanation;
+
     public EinVerificationLookup200ApplicationJSONMatchedEinCompanies withProvidedStatusExplanation(String providedStatusExplanation) {
         this.providedStatusExplanation = providedStatusExplanation;
         return this;
     }
     
+    public EinVerificationLookup200ApplicationJSONMatchedEinCompanies(){}
 }

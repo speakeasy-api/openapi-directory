@@ -15,6 +15,7 @@ public class VirtualObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ETag")
     public String eTag;
+
     public VirtualObject withETag(String eTag) {
         this.eTag = eTag;
         return this;
@@ -22,9 +23,13 @@ public class VirtualObject {
     
     @JsonProperty("Uri")
     public String uri;
+
     public VirtualObject withUri(String uri) {
         this.uri = uri;
         return this;
     }
     
+    public VirtualObject(@JsonProperty("Uri") String uri) {
+        this.uri = uri;
+  }
 }

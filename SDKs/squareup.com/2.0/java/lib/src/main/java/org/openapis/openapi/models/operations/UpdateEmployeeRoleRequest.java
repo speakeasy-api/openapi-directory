@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateEmployeeRoleRequest {
@@ -14,6 +15,7 @@ public class UpdateEmployeeRoleRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.V1EmployeeRole v1EmployeeRole;
+
     public UpdateEmployeeRoleRequest withV1EmployeeRole(org.openapis.openapi.models.shared.V1EmployeeRole v1EmployeeRole) {
         this.v1EmployeeRole = v1EmployeeRole;
         return this;
@@ -24,9 +26,14 @@ public class UpdateEmployeeRoleRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=role_id")
     public String roleId;
+
     public UpdateEmployeeRoleRequest withRoleId(String roleId) {
         this.roleId = roleId;
         return this;
     }
     
+    public UpdateEmployeeRoleRequest(@JsonProperty("V1EmployeeRole") org.openapis.openapi.models.shared.V1EmployeeRole v1EmployeeRole, @JsonProperty("role_id") String roleId) {
+        this.v1EmployeeRole = v1EmployeeRole;
+        this.roleId = roleId;
+  }
 }

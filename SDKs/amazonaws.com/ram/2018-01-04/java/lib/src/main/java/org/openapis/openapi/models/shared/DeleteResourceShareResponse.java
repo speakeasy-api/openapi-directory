@@ -15,6 +15,7 @@ public class DeleteResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientToken")
     public String clientToken;
+
     public DeleteResourceShareResponse withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -23,9 +24,11 @@ public class DeleteResourceShareResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnValue")
     public Boolean returnValue;
+
     public DeleteResourceShareResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public DeleteResourceShareResponse(){}
 }

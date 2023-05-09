@@ -63,17 +63,14 @@ public class SSLCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DownloadCertificateResponse res = new org.openapis.openapi.models.operations.DownloadCertificateResponse() {{
+        org.openapis.openapi.models.operations.DownloadCertificateResponse res = new org.openapis.openapi.models.operations.DownloadCertificateResponse(contentType, httpRes.statusCode()) {{
             downloadCertificate200ApplicationJSONBinaryString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.downloadCertificate200ApplicationJSONBinaryString = out;
             }
         }
@@ -109,11 +106,9 @@ public class SSLCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSslCertificateResponse res = new org.openapis.openapi.models.operations.GetSslCertificateResponse() {{
+        org.openapis.openapi.models.operations.GetSslCertificateResponse res = new org.openapis.openapi.models.operations.GetSslCertificateResponse(contentType, httpRes.statusCode()) {{
             sslCertificateDetail = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,11 +148,9 @@ public class SSLCertificates {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSslCertificatesResponse res = new org.openapis.openapi.models.operations.GetSslCertificatesResponse() {{
+        org.openapis.openapi.models.operations.GetSslCertificatesResponse res = new org.openapis.openapi.models.operations.GetSslCertificatesResponse(contentType, httpRes.statusCode()) {{
             sslCertificates = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

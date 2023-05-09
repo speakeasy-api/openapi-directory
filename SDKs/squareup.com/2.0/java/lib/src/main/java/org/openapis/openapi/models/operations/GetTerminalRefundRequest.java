@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTerminalRefundRequest {
@@ -12,9 +13,13 @@ public class GetTerminalRefundRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=terminal_refund_id")
     public String terminalRefundId;
+
     public GetTerminalRefundRequest withTerminalRefundId(String terminalRefundId) {
         this.terminalRefundId = terminalRefundId;
         return this;
     }
     
+    public GetTerminalRefundRequest(@JsonProperty("terminal_refund_id") String terminalRefundId) {
+        this.terminalRefundId = terminalRefundId;
+  }
 }

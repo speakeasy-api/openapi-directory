@@ -15,6 +15,7 @@ public class AutoScalingSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingDisabled")
     public Boolean autoScalingDisabled;
+
     public AutoScalingSettingsUpdate withAutoScalingDisabled(Boolean autoScalingDisabled) {
         this.autoScalingDisabled = autoScalingDisabled;
         return this;
@@ -23,6 +24,7 @@ public class AutoScalingSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingRoleArn")
     public String autoScalingRoleArn;
+
     public AutoScalingSettingsUpdate withAutoScalingRoleArn(String autoScalingRoleArn) {
         this.autoScalingRoleArn = autoScalingRoleArn;
         return this;
@@ -31,6 +33,7 @@ public class AutoScalingSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaximumUnits")
     public Long maximumUnits;
+
     public AutoScalingSettingsUpdate withMaximumUnits(Long maximumUnits) {
         this.maximumUnits = maximumUnits;
         return this;
@@ -39,6 +42,7 @@ public class AutoScalingSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumUnits")
     public Long minimumUnits;
+
     public AutoScalingSettingsUpdate withMinimumUnits(Long minimumUnits) {
         this.minimumUnits = minimumUnits;
         return this;
@@ -47,9 +51,11 @@ public class AutoScalingSettingsUpdate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalingPolicyUpdate")
     public AutoScalingPolicyUpdate scalingPolicyUpdate;
+
     public AutoScalingSettingsUpdate withScalingPolicyUpdate(AutoScalingPolicyUpdate scalingPolicyUpdate) {
         this.scalingPolicyUpdate = scalingPolicyUpdate;
         return this;
     }
     
+    public AutoScalingSettingsUpdate(){}
 }

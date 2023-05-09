@@ -15,9 +15,11 @@ public class DeleteRouteOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("route")
     public RouteData route;
+
     public DeleteRouteOutput withRoute(RouteData route) {
         this.route = route;
         return this;
     }
     
+    public DeleteRouteOutput(){}
 }

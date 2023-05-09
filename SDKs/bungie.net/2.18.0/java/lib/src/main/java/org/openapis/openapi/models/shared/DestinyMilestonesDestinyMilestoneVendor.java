@@ -15,6 +15,7 @@ public class DestinyMilestonesDestinyMilestoneVendor {
      */
     
     public Long previewItemHash;
+
     public DestinyMilestonesDestinyMilestoneVendor withPreviewItemHash(Long previewItemHash) {
         this.previewItemHash = previewItemHash;
         return this;
@@ -25,9 +26,11 @@ public class DestinyMilestonesDestinyMilestoneVendor {
      */
     
     public Long vendorHash;
+
     public DestinyMilestonesDestinyMilestoneVendor withVendorHash(Long vendorHash) {
         this.vendorHash = vendorHash;
         return this;
     }
     
+    public DestinyMilestonesDestinyMilestoneVendor(){}
 }

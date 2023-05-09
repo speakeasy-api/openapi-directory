@@ -18,9 +18,11 @@ public class GoogleCloudIdentitytoolkitV2AutoRetrievalInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appSignatureHash")
     public String appSignatureHash;
+
     public GoogleCloudIdentitytoolkitV2AutoRetrievalInfo withAppSignatureHash(String appSignatureHash) {
         this.appSignatureHash = appSignatureHash;
         return this;
     }
     
+    public GoogleCloudIdentitytoolkitV2AutoRetrievalInfo(){}
 }

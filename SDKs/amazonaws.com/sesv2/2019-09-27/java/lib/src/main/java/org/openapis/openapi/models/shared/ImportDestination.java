@@ -15,6 +15,7 @@ public class ImportDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContactListDestination")
     public ContactListDestination contactListDestination;
+
     public ImportDestination withContactListDestination(ContactListDestination contactListDestination) {
         this.contactListDestination = contactListDestination;
         return this;
@@ -23,9 +24,11 @@ public class ImportDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuppressionListDestination")
     public SuppressionListDestination suppressionListDestination;
+
     public ImportDestination withSuppressionListDestination(SuppressionListDestination suppressionListDestination) {
         this.suppressionListDestination = suppressionListDestination;
         return this;
     }
     
+    public ImportDestination(){}
 }

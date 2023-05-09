@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PullsUpdateBranchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PullsUpdateBranchRequestBody requestBody;
+
     public PullsUpdateBranchRequest withRequestBody(PullsUpdateBranchRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PullsUpdateBranchRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner")
     public String owner;
+
     public PullsUpdateBranchRequest withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -23,6 +26,7 @@ public class PullsUpdateBranchRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=pull_number")
     public Long pullNumber;
+
     public PullsUpdateBranchRequest withPullNumber(Long pullNumber) {
         this.pullNumber = pullNumber;
         return this;
@@ -30,9 +34,15 @@ public class PullsUpdateBranchRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo")
     public String repo;
+
     public PullsUpdateBranchRequest withRepo(String repo) {
         this.repo = repo;
         return this;
     }
     
+    public PullsUpdateBranchRequest(@JsonProperty("owner") String owner, @JsonProperty("pull_number") Long pullNumber, @JsonProperty("repo") String repo) {
+        this.owner = owner;
+        this.pullNumber = pullNumber;
+        this.repo = repo;
+  }
 }

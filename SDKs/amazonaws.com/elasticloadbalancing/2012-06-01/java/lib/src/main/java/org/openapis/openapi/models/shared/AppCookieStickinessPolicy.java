@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AppCookieStickinessPolicy {
     
     public String cookieName;
+
     public AppCookieStickinessPolicy withCookieName(String cookieName) {
         this.cookieName = cookieName;
         return this;
@@ -19,9 +20,11 @@ public class AppCookieStickinessPolicy {
     
     
     public String policyName;
+
     public AppCookieStickinessPolicy withPolicyName(String policyName) {
         this.policyName = policyName;
         return this;
     }
     
+    public AppCookieStickinessPolicy(){}
 }

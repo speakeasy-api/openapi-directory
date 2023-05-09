@@ -18,6 +18,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public CreateAccountHolderResponse withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -29,6 +30,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public CreateAccountHolderResponse withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -37,6 +39,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderDetails")
     public AccountHolderDetails accountHolderDetails;
+
     public CreateAccountHolderResponse withAccountHolderDetails(AccountHolderDetails accountHolderDetails) {
         this.accountHolderDetails = accountHolderDetails;
         return this;
@@ -45,6 +48,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderStatus")
     public AccountHolderStatus accountHolderStatus;
+
     public CreateAccountHolderResponse withAccountHolderStatus(AccountHolderStatus accountHolderStatus) {
         this.accountHolderStatus = accountHolderStatus;
         return this;
@@ -56,6 +60,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateAccountHolderResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -67,6 +72,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invalidFields")
     public ErrorFieldType[] invalidFields;
+
     public CreateAccountHolderResponse withInvalidFields(ErrorFieldType[] invalidFields) {
         this.invalidFields = invalidFields;
         return this;
@@ -78,6 +84,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalEntity")
     public CreateAccountHolderResponseLegalEntityEnum legalEntity;
+
     public CreateAccountHolderResponse withLegalEntity(CreateAccountHolderResponseLegalEntityEnum legalEntity) {
         this.legalEntity = legalEntity;
         return this;
@@ -89,6 +96,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryCurrency")
     public String primaryCurrency;
+
     public CreateAccountHolderResponse withPrimaryCurrency(String primaryCurrency) {
         this.primaryCurrency = primaryCurrency;
         return this;
@@ -100,6 +108,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public CreateAccountHolderResponse withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -111,6 +120,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resultCode")
     public String resultCode;
+
     public CreateAccountHolderResponse withResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
@@ -119,6 +129,7 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verification")
     public KYCVerificationResult verification;
+
     public CreateAccountHolderResponse withVerification(KYCVerificationResult verification) {
         this.verification = verification;
         return this;
@@ -130,9 +141,11 @@ public class CreateAccountHolderResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("verificationProfile")
     public String verificationProfile;
+
     public CreateAccountHolderResponse withVerificationProfile(String verificationProfile) {
         this.verificationProfile = verificationProfile;
         return this;
     }
     
+    public CreateAccountHolderResponse(){}
 }

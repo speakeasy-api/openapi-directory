@@ -12,6 +12,7 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GETListsNamesFormat200ApplicationJSONResults withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -20,6 +21,7 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name")
     public String listName;
+
     public GETListsNamesFormat200ApplicationJSONResults withListName(String listName) {
         this.listName = listName;
         return this;
@@ -28,6 +30,7 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name_encoded")
     public String listNameEncoded;
+
     public GETListsNamesFormat200ApplicationJSONResults withListNameEncoded(String listNameEncoded) {
         this.listNameEncoded = listNameEncoded;
         return this;
@@ -36,6 +39,7 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newest_published_date")
     public String newestPublishedDate;
+
     public GETListsNamesFormat200ApplicationJSONResults withNewestPublishedDate(String newestPublishedDate) {
         this.newestPublishedDate = newestPublishedDate;
         return this;
@@ -44,6 +48,7 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oldest_published_date")
     public String oldestPublishedDate;
+
     public GETListsNamesFormat200ApplicationJSONResults withOldestPublishedDate(String oldestPublishedDate) {
         this.oldestPublishedDate = oldestPublishedDate;
         return this;
@@ -52,9 +57,11 @@ public class GETListsNamesFormat200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated")
     public String updated;
+
     public GETListsNamesFormat200ApplicationJSONResults withUpdated(String updated) {
         this.updated = updated;
         return this;
     }
     
+    public GETListsNamesFormat200ApplicationJSONResults(){}
 }

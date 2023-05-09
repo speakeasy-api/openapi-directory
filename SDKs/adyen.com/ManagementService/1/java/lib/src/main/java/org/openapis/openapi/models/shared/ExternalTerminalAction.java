@@ -23,6 +23,7 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actionType")
     public String actionType;
+
     public ExternalTerminalAction withActionType(String actionType) {
         this.actionType = actionType;
         return this;
@@ -34,6 +35,7 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("config")
     public String config;
+
     public ExternalTerminalAction withConfig(String config) {
         this.config = config;
         return this;
@@ -47,6 +49,7 @@ public class ExternalTerminalAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("confirmedAt")
     public OffsetDateTime confirmedAt;
+
     public ExternalTerminalAction withConfirmedAt(OffsetDateTime confirmedAt) {
         this.confirmedAt = confirmedAt;
         return this;
@@ -58,6 +61,7 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExternalTerminalAction withId(String id) {
         this.id = id;
         return this;
@@ -69,6 +73,7 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public String result;
+
     public ExternalTerminalAction withResult(String result) {
         this.result = result;
         return this;
@@ -82,6 +87,7 @@ public class ExternalTerminalAction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledAt")
     public OffsetDateTime scheduledAt;
+
     public ExternalTerminalAction withScheduledAt(OffsetDateTime scheduledAt) {
         this.scheduledAt = scheduledAt;
         return this;
@@ -93,6 +99,7 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public ExternalTerminalAction withStatus(String status) {
         this.status = status;
         return this;
@@ -104,9 +111,11 @@ public class ExternalTerminalAction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terminalId")
     public String terminalId;
+
     public ExternalTerminalAction withTerminalId(String terminalId) {
         this.terminalId = terminalId;
         return this;
     }
     
+    public ExternalTerminalAction(){}
 }

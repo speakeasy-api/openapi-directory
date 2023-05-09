@@ -12,6 +12,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filter")
     public Expression filter;
+
     public GetReservationUtilizationRequest withFilter(Expression filter) {
         this.filter = filter;
         return this;
@@ -20,6 +21,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Granularity")
     public GranularityEnum granularity;
+
     public GetReservationUtilizationRequest withGranularity(GranularityEnum granularity) {
         this.granularity = granularity;
         return this;
@@ -28,6 +30,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupBy")
     public GroupDefinition[] groupBy;
+
     public GetReservationUtilizationRequest withGroupBy(GroupDefinition[] groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -36,6 +39,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public GetReservationUtilizationRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -44,6 +48,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextPageToken")
     public String nextPageToken;
+
     public GetReservationUtilizationRequest withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -52,6 +57,7 @@ public class GetReservationUtilizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SortBy")
     public SortDefinition sortBy;
+
     public GetReservationUtilizationRequest withSortBy(SortDefinition sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -59,9 +65,13 @@ public class GetReservationUtilizationRequest {
     
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetReservationUtilizationRequest withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
     }
     
+    public GetReservationUtilizationRequest(@JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.timePeriod = timePeriod;
+  }
 }

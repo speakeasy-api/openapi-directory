@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProductsCategoryCategoryIdCountJsonRequest {
@@ -12,6 +13,7 @@ public class GetProductsCategoryCategoryIdCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=authtoken")
     public String authtoken;
+
     public GetProductsCategoryCategoryIdCountJsonRequest withAuthtoken(String authtoken) {
         this.authtoken = authtoken;
         return this;
@@ -22,6 +24,7 @@ public class GetProductsCategoryCategoryIdCountJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=category_id")
     public Integer categoryId;
+
     public GetProductsCategoryCategoryIdCountJsonRequest withCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -32,6 +35,7 @@ public class GetProductsCategoryCategoryIdCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locale")
     public String locale;
+
     public GetProductsCategoryCategoryIdCountJsonRequest withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -42,9 +46,15 @@ public class GetProductsCategoryCategoryIdCountJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=login")
     public String login;
+
     public GetProductsCategoryCategoryIdCountJsonRequest withLogin(String login) {
         this.login = login;
         return this;
     }
     
+    public GetProductsCategoryCategoryIdCountJsonRequest(@JsonProperty("authtoken") String authtoken, @JsonProperty("category_id") Integer categoryId, @JsonProperty("login") String login) {
+        this.authtoken = authtoken;
+        this.categoryId = categoryId;
+        this.login = login;
+  }
 }

@@ -15,6 +15,7 @@ public class InstructedAmountRequest {
      */
     @JsonProperty("amount")
     public String amount;
+
     public InstructedAmountRequest withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class InstructedAmountRequest {
      */
     @JsonProperty("currency")
     public String currency;
+
     public InstructedAmountRequest withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public InstructedAmountRequest(@JsonProperty("amount") String amount, @JsonProperty("currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

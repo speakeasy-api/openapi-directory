@@ -18,6 +18,7 @@ public class Straggler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("batchStraggler")
     public StragglerInfo batchStraggler;
+
     public Straggler withBatchStraggler(StragglerInfo batchStraggler) {
         this.batchStraggler = batchStraggler;
         return this;
@@ -29,9 +30,11 @@ public class Straggler {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("streamingStraggler")
     public StreamingStragglerInfo streamingStraggler;
+
     public Straggler withStreamingStraggler(StreamingStragglerInfo streamingStraggler) {
         this.streamingStraggler = streamingStraggler;
         return this;
     }
     
+    public Straggler(){}
 }

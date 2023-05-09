@@ -15,9 +15,13 @@ public class CertificateCallback {
      */
     @JsonProperty("callbackUrl")
     public String callbackUrl;
+
     public CertificateCallback withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
     }
     
+    public CertificateCallback(@JsonProperty("callbackUrl") String callbackUrl) {
+        this.callbackUrl = callbackUrl;
+  }
 }

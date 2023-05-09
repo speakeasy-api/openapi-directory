@@ -9,12 +9,13 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * OutputResolutionStackInput - &lt;p/&gt;
+ * OutputResolutionStackInput - The input structure representing Output Resolution for Stacking Operation.
  */
 public class OutputResolutionStackInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Predefined")
     public PredefinedResolutionEnum predefined;
+
     public OutputResolutionStackInput withPredefined(PredefinedResolutionEnum predefined) {
         this.predefined = predefined;
         return this;
@@ -23,9 +24,11 @@ public class OutputResolutionStackInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserDefined")
     public UserDefined userDefined;
+
     public OutputResolutionStackInput withUserDefined(UserDefined userDefined) {
         this.userDefined = userDefined;
         return this;
     }
     
+    public OutputResolutionStackInput(){}
 }

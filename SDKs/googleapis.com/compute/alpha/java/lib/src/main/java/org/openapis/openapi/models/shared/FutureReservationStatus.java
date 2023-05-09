@@ -18,6 +18,7 @@ public class FutureReservationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoCreatedReservations")
     public String[] autoCreatedReservations;
+
     public FutureReservationStatus withAutoCreatedReservations(String[] autoCreatedReservations) {
         this.autoCreatedReservations = autoCreatedReservations;
         return this;
@@ -29,6 +30,7 @@ public class FutureReservationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fulfilledCount")
     public String fulfilledCount;
+
     public FutureReservationStatus withFulfilledCount(String fulfilledCount) {
         this.fulfilledCount = fulfilledCount;
         return this;
@@ -40,6 +42,7 @@ public class FutureReservationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lockTime")
     public String lockTime;
+
     public FutureReservationStatus withLockTime(String lockTime) {
         this.lockTime = lockTime;
         return this;
@@ -51,6 +54,7 @@ public class FutureReservationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("procurementStatus")
     public FutureReservationStatusProcurementStatusEnum procurementStatus;
+
     public FutureReservationStatus withProcurementStatus(FutureReservationStatusProcurementStatusEnum procurementStatus) {
         this.procurementStatus = procurementStatus;
         return this;
@@ -62,9 +66,11 @@ public class FutureReservationStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("specificSkuProperties")
     public FutureReservationStatusSpecificSKUProperties specificSkuProperties;
+
     public FutureReservationStatus withSpecificSkuProperties(FutureReservationStatusSpecificSKUProperties specificSkuProperties) {
         this.specificSkuProperties = specificSkuProperties;
         return this;
     }
     
+    public FutureReservationStatus(){}
 }

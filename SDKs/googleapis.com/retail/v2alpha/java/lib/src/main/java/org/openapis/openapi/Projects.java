@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigAddCatalogAttributeResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaAttributesConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigBatchRemoveCatalogAttributesResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaBatchRemoveCatalogAttributesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigRemoveCatalogAttributeResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaAttributesConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -206,11 +200,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsAttributesConfigReplaceCatalogAttributeResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaAttributesConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -225,7 +217,7 @@ public class Projects {
     }
 
     /**
-     * It is recommended to use the ProductService.AddLocalInventories method instead of ProductService.AddFulfillmentPlaces. ProductService.AddLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
+     * We recommend that you use the ProductService.AddLocalInventories method instead of the ProductService.AddFulfillmentPlaces method. ProductService.AddLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally adds place IDs to Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the added place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -254,11 +246,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddFulfillmentPlacesResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -302,11 +292,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsAddLocalInventoriesResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -350,11 +338,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaProduct = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -398,11 +384,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -444,11 +428,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListProductsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -492,11 +474,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsPurgeResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -511,7 +491,7 @@ public class Projects {
     }
 
     /**
-     * It is recommended to use the ProductService.RemoveLocalInventories method instead of ProductService.RemoveFulfillmentPlaces. ProductService.RemoveLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
+     * We recommend that you use the ProductService.RemoveLocalInventories method instead of the ProductService.RemoveFulfillmentPlaces method. ProductService.RemoveLocalInventories achieves the same results but provides more fine-grained control over ingesting local inventory data. Incrementally removes place IDs from a Product.fulfillment_info.place_ids. This process is asynchronous and does not require the Product to exist before updating fulfillment information. If the request is valid, the update will be enqueued and processed downstream. As a consequence, when a response is returned, the removed place IDs are not immediately manifested in the Product queried by ProductService.GetProduct or ProductService.ListProducts. The returned Operations will be obsolete after 1 day, and GetOperation API will return NOT_FOUND afterwards. If conflicting updates are issued, the Operations associated with the stale updates will not be marked as done until being obsolete.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
@@ -540,11 +520,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveFulfillmentPlacesResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -588,11 +566,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsRemoveLocalInventoriesResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -636,11 +612,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsBranchesProductsSetInventoryResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -682,11 +656,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompleteQueryResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaCompleteQueryResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -730,11 +702,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsCompletionDataImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -778,11 +748,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaControl = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -824,11 +792,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsControlsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListControlsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -870,11 +836,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsGetDefaultBranchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaGetDefaultBranchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -916,11 +880,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListCatalogsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -935,15 +897,15 @@ public class Projects {
     }
 
     /**
-     * Creates a MerchantCenterAccountLink. MerchantCenterAccountLink cannot be set to a different oneof field, if so an INVALID_ARGUMENT is returned.
+     * Creates a MerchantCenterAccountLink.
      * @param request the request object containing all of the parameters for the API call
      * @param security the security details to use for authentication
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLink(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkSecurity security) throws Exception {
+    public org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateResponse retailProjectsLocationsCatalogsMerchantCenterAccountLinksCreate(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateRequest request, org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateSecurity security) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest.class, baseUrl, "/v2alpha/{name}", request, null);
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateRequest.class, baseUrl, "/v2alpha/{parent}/merchantCenterAccountLinks", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
@@ -951,7 +913,7 @@ public class Projects {
         SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "googleCloudRetailV2alphaMerchantCenterAccountLinkInput", "json");
         req.setBody(serializedRequestBody);
         
-        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -964,11 +926,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateMerchantCenterAccountLinkResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1010,11 +970,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsMerchantCenterAccountLinksListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListMerchantCenterAccountLinksResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1058,11 +1016,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsCreateResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1104,11 +1060,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListModelsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1152,11 +1106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsPauseResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1200,11 +1152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsResumeResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1248,11 +1198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsModelsTuneResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1296,11 +1244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsAddControlResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaServingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1344,11 +1290,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsCreateResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaServingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1390,11 +1334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsDeleteResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1436,11 +1378,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsListResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaListServingConfigsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1484,11 +1424,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPatchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaServingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1532,11 +1470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsPredictResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaPredictResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1580,11 +1516,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsRemoveControlResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaServingConfig = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1628,11 +1562,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsServingConfigsSearchResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaSearchResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1676,11 +1608,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsSetDefaultBranchResponse(contentType, httpRes.statusCode()) {{
             googleProtobufEmpty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1722,11 +1652,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsCollectResponse(contentType, httpRes.statusCode()) {{
             googleApiHttpBody = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1770,11 +1698,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsImportResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1818,11 +1744,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsPurgeResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1866,11 +1790,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsRejoinResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1914,11 +1836,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse res = new org.openapis.openapi.models.operations.RetailProjectsLocationsCatalogsUserEventsWriteResponse(contentType, httpRes.statusCode()) {{
             googleCloudRetailV2alphaUserEvent = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -1960,11 +1880,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse res = new org.openapis.openapi.models.operations.RetailProjectsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningOperation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -2006,11 +1924,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse res = new org.openapis.openapi.models.operations.RetailProjectsOperationsListResponse(contentType, httpRes.statusCode()) {{
             googleLongrunningListOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

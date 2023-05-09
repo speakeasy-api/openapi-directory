@@ -15,6 +15,7 @@ public class DeploymentReleasesUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public DeploymentReleasesUpdateRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class DeploymentReleasesUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_disabled")
     public Boolean isDisabled;
+
     public DeploymentReleasesUpdateRequestBody withIsDisabled(Boolean isDisabled) {
         this.isDisabled = isDisabled;
         return this;
@@ -31,6 +33,7 @@ public class DeploymentReleasesUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_mandatory")
     public Boolean isMandatory;
+
     public DeploymentReleasesUpdateRequestBody withIsMandatory(Boolean isMandatory) {
         this.isMandatory = isMandatory;
         return this;
@@ -39,6 +42,7 @@ public class DeploymentReleasesUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rollout")
     public Long rollout;
+
     public DeploymentReleasesUpdateRequestBody withRollout(Long rollout) {
         this.rollout = rollout;
         return this;
@@ -47,9 +51,11 @@ public class DeploymentReleasesUpdateRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_binary_range")
     public String targetBinaryRange;
+
     public DeploymentReleasesUpdateRequestBody withTargetBinaryRange(String targetBinaryRange) {
         this.targetBinaryRange = targetBinaryRange;
         return this;
     }
     
+    public DeploymentReleasesUpdateRequestBody(){}
 }

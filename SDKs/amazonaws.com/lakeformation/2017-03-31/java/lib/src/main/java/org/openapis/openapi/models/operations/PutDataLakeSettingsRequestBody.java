@@ -15,6 +15,7 @@ public class PutDataLakeSettingsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CatalogId")
     public String catalogId;
+
     public PutDataLakeSettingsRequestBody withCatalogId(String catalogId) {
         this.catalogId = catalogId;
         return this;
@@ -25,9 +26,13 @@ public class PutDataLakeSettingsRequestBody {
      */
     @JsonProperty("DataLakeSettings")
     public PutDataLakeSettingsRequestBodyDataLakeSettings dataLakeSettings;
+
     public PutDataLakeSettingsRequestBody withDataLakeSettings(PutDataLakeSettingsRequestBodyDataLakeSettings dataLakeSettings) {
         this.dataLakeSettings = dataLakeSettings;
         return this;
     }
     
+    public PutDataLakeSettingsRequestBody(@JsonProperty("DataLakeSettings") PutDataLakeSettingsRequestBodyDataLakeSettings dataLakeSettings) {
+        this.dataLakeSettings = dataLakeSettings;
+  }
 }

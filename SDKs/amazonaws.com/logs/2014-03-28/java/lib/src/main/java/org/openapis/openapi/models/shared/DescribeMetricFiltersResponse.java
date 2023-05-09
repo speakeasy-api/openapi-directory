@@ -15,6 +15,7 @@ public class DescribeMetricFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricFilters")
     public MetricFilter[] metricFilters;
+
     public DescribeMetricFiltersResponse withMetricFilters(MetricFilter[] metricFilters) {
         this.metricFilters = metricFilters;
         return this;
@@ -26,9 +27,11 @@ public class DescribeMetricFiltersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeMetricFiltersResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeMetricFiltersResponse(){}
 }

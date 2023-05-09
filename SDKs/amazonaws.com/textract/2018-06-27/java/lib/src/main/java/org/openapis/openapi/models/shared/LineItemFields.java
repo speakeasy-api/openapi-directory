@@ -15,9 +15,11 @@ public class LineItemFields {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineItemExpenseFields")
     public ExpenseField[] lineItemExpenseFields;
+
     public LineItemFields withLineItemExpenseFields(ExpenseField[] lineItemExpenseFields) {
         this.lineItemExpenseFields = lineItemExpenseFields;
         return this;
     }
     
+    public LineItemFields(){}
 }

@@ -15,6 +15,7 @@ public class ListThirdPartyFirewallFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListThirdPartyFirewallFirewallPoliciesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListThirdPartyFirewallFirewallPoliciesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ThirdPartyFirewallFirewallPolicies")
     public ThirdPartyFirewallFirewallPolicy[] thirdPartyFirewallFirewallPolicies;
+
     public ListThirdPartyFirewallFirewallPoliciesResponse withThirdPartyFirewallFirewallPolicies(ThirdPartyFirewallFirewallPolicy[] thirdPartyFirewallFirewallPolicies) {
         this.thirdPartyFirewallFirewallPolicies = thirdPartyFirewallFirewallPolicies;
         return this;
     }
     
+    public ListThirdPartyFirewallFirewallPoliciesResponse(){}
 }

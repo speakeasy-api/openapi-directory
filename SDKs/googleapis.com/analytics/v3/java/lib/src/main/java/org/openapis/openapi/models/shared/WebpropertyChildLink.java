@@ -18,6 +18,7 @@ public class WebpropertyChildLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public WebpropertyChildLink withHref(String href) {
         this.href = href;
         return this;
@@ -29,9 +30,11 @@ public class WebpropertyChildLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public WebpropertyChildLink withType(String type) {
         this.type = type;
         return this;
     }
     
+    public WebpropertyChildLink(){}
 }

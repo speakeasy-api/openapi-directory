@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetFilteredVendorsRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FilterVendorRequest filterVendorRequest;
+
     public GetFilteredVendorsRequest withFilterVendorRequest(org.openapis.openapi.models.shared.FilterVendorRequest filterVendorRequest) {
         this.filterVendorRequest = filterVendorRequest;
         return this;
@@ -19,6 +20,7 @@ public class GetFilteredVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public String order;
+
     public GetFilteredVendorsRequest withOrder(String order) {
         this.order = order;
         return this;
@@ -29,6 +31,7 @@ public class GetFilteredVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order_by")
     public String orderBy;
+
     public GetFilteredVendorsRequest withOrderBy(String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -39,6 +42,7 @@ public class GetFilteredVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetFilteredVendorsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -49,9 +53,11 @@ public class GetFilteredVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetFilteredVendorsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public GetFilteredVendorsRequest(){}
 }

@@ -17,6 +17,7 @@ public class SendMessageRequestBody5Text {
      */
     @JsonProperty("channel")
     public SendMessageRequestBody5TextChannelEnum channel;
+
     public SendMessageRequestBody5Text withChannel(SendMessageRequestBody5TextChannelEnum channel) {
         this.channel = channel;
         return this;
@@ -28,6 +29,7 @@ public class SendMessageRequestBody5Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("client_ref")
     public String clientRef;
+
     public SendMessageRequestBody5Text withClientRef(String clientRef) {
         this.clientRef = clientRef;
         return this;
@@ -39,6 +41,7 @@ public class SendMessageRequestBody5Text {
      */
     @JsonProperty("from")
     public String from;
+
     public SendMessageRequestBody5Text withFrom(String from) {
         this.from = from;
         return this;
@@ -49,6 +52,7 @@ public class SendMessageRequestBody5Text {
      */
     @JsonProperty("message_type")
     public SendMessageRequestBody5TextMessageTypeEnum messageType;
+
     public SendMessageRequestBody5Text withMessageType(SendMessageRequestBody5TextMessageTypeEnum messageType) {
         this.messageType = messageType;
         return this;
@@ -56,6 +60,7 @@ public class SendMessageRequestBody5Text {
     
     @JsonProperty("text")
     public String text;
+
     public SendMessageRequestBody5Text withText(String text) {
         this.text = text;
         return this;
@@ -67,6 +72,7 @@ public class SendMessageRequestBody5Text {
      */
     @JsonProperty("to")
     public String to;
+
     public SendMessageRequestBody5Text withTo(String to) {
         this.to = to;
         return this;
@@ -75,9 +81,17 @@ public class SendMessageRequestBody5Text {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("viber_service")
     public SendMessageRequestBody5TextViberService viberService;
+
     public SendMessageRequestBody5Text withViberService(SendMessageRequestBody5TextViberService viberService) {
         this.viberService = viberService;
         return this;
     }
     
+    public SendMessageRequestBody5Text(@JsonProperty("channel") SendMessageRequestBody5TextChannelEnum channel, @JsonProperty("from") String from, @JsonProperty("message_type") SendMessageRequestBody5TextMessageTypeEnum messageType, @JsonProperty("text") String text, @JsonProperty("to") String to) {
+        this.channel = channel;
+        this.from = from;
+        this.messageType = messageType;
+        this.text = text;
+        this.to = to;
+  }
 }

@@ -18,6 +18,7 @@ public class RouterNatLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enable")
     public Boolean enable;
+
     public RouterNatLogConfig withEnable(Boolean enable) {
         this.enable = enable;
         return this;
@@ -29,9 +30,11 @@ public class RouterNatLogConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public RouterNatLogConfigFilterEnum filter;
+
     public RouterNatLogConfig withFilter(RouterNatLogConfigFilterEnum filter) {
         this.filter = filter;
         return this;
     }
     
+    public RouterNatLogConfig(){}
 }

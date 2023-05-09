@@ -12,6 +12,7 @@ public class HealthQuestionDefinitionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public HealthQuestionDefinitionResourceAttributes attributes;
+
     public HealthQuestionDefinitionResource withAttributes(HealthQuestionDefinitionResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class HealthQuestionDefinitionResource {
     
     @JsonProperty("id")
     public String id;
+
     public HealthQuestionDefinitionResource withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class HealthQuestionDefinitionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public HealthQuestionDefinitionResourceLinks links;
+
     public HealthQuestionDefinitionResource withLinks(HealthQuestionDefinitionResourceLinks links) {
         this.links = links;
         return this;
@@ -35,6 +38,7 @@ public class HealthQuestionDefinitionResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public java.util.Map<String, Object> relationships;
+
     public HealthQuestionDefinitionResource withRelationships(java.util.Map<String, Object> relationships) {
         this.relationships = relationships;
         return this;
@@ -42,9 +46,14 @@ public class HealthQuestionDefinitionResource {
     
     @JsonProperty("type")
     public String type;
+
     public HealthQuestionDefinitionResource withType(String type) {
         this.type = type;
         return this;
     }
     
+    public HealthQuestionDefinitionResource(@JsonProperty("id") String id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

@@ -12,6 +12,7 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public CripcRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
@@ -22,9 +23,14 @@ public class CripcRequestBodyCertificateParameters {
      */
     @JsonProperty("polno")
     public String polno;
+
     public CripcRequestBodyCertificateParameters withPolno(String polno) {
         this.polno = polno;
         return this;
     }
     
+    public CripcRequestBodyCertificateParameters(@JsonProperty("DOB") String dob, @JsonProperty("polno") String polno) {
+        this.dob = dob;
+        this.polno = polno;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveAccountScanTemplateResponse {
     
     public String contentType;
+
     public RemoveAccountScanTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveAccountScanTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.ScanTemplate scanTemplate;
+
     public RemoveAccountScanTemplateResponse withScanTemplate(org.openapis.openapi.models.shared.ScanTemplate scanTemplate) {
         this.scanTemplate = scanTemplate;
         return this;
@@ -26,6 +29,7 @@ public class RemoveAccountScanTemplateResponse {
     
     
     public Integer statusCode;
+
     public RemoveAccountScanTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RemoveAccountScanTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveAccountScanTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RemoveAccountScanTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

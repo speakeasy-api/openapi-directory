@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetMedicalVocabularyResponse {
@@ -12,6 +13,7 @@ public class GetMedicalVocabularyResponse {
      */
     
     public Object badRequestException;
+
     public GetMedicalVocabularyResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetMedicalVocabularyResponse {
     
     
     public String contentType;
+
     public GetMedicalVocabularyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetMedicalVocabularyResponse {
      */
     
     public org.openapis.openapi.models.shared.GetMedicalVocabularyResponse getMedicalVocabularyResponse;
+
     public GetMedicalVocabularyResponse withGetMedicalVocabularyResponse(org.openapis.openapi.models.shared.GetMedicalVocabularyResponse getMedicalVocabularyResponse) {
         this.getMedicalVocabularyResponse = getMedicalVocabularyResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetMedicalVocabularyResponse {
      */
     
     public Object internalFailureException;
+
     public GetMedicalVocabularyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -49,6 +54,7 @@ public class GetMedicalVocabularyResponse {
      */
     
     public Object limitExceededException;
+
     public GetMedicalVocabularyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class GetMedicalVocabularyResponse {
      */
     
     public Object notFoundException;
+
     public GetMedicalVocabularyResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class GetMedicalVocabularyResponse {
     
     
     public Integer statusCode;
+
     public GetMedicalVocabularyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class GetMedicalVocabularyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetMedicalVocabularyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetMedicalVocabularyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class InstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceSize")
     public InstanceConfigInstanceSizeEnum instanceSize;
+
     public InstanceConfig withInstanceSize(InstanceConfigInstanceSizeEnum instanceSize) {
         this.instanceSize = instanceSize;
         return this;
     }
     
+    public InstanceConfig(){}
 }

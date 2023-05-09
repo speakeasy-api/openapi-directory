@@ -18,9 +18,11 @@ public class BulkEditAssignedUserRolesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createdAssignedUserRoles")
     public AssignedUserRole[] createdAssignedUserRoles;
+
     public BulkEditAssignedUserRolesResponse withCreatedAssignedUserRoles(AssignedUserRole[] createdAssignedUserRoles) {
         this.createdAssignedUserRoles = createdAssignedUserRoles;
         return this;
     }
     
+    public BulkEditAssignedUserRolesResponse(){}
 }

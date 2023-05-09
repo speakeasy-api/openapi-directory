@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteOrganisationsPartyIdBusinessNamesProductIdRequest {
@@ -12,6 +13,7 @@ public class DeleteOrganisationsPartyIdBusinessNamesProductIdRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=apiKey")
     public String apiKey;
+
     public DeleteOrganisationsPartyIdBusinessNamesProductIdRequest withApiKey(String apiKey) {
         this.apiKey = apiKey;
         return this;
@@ -22,6 +24,7 @@ public class DeleteOrganisationsPartyIdBusinessNamesProductIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=partyId")
     public String partyId;
+
     public DeleteOrganisationsPartyIdBusinessNamesProductIdRequest withPartyId(String partyId) {
         this.partyId = partyId;
         return this;
@@ -32,9 +35,15 @@ public class DeleteOrganisationsPartyIdBusinessNamesProductIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public String productId;
+
     public DeleteOrganisationsPartyIdBusinessNamesProductIdRequest withProductId(String productId) {
         this.productId = productId;
         return this;
     }
     
+    public DeleteOrganisationsPartyIdBusinessNamesProductIdRequest(@JsonProperty("apiKey") String apiKey, @JsonProperty("partyId") String partyId, @JsonProperty("productId") String productId) {
+        this.apiKey = apiKey;
+        this.partyId = partyId;
+        this.productId = productId;
+  }
 }

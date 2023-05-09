@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateSigningBasketPsuDataRequest {
@@ -12,6 +13,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public UpdateSigningBasketPsuDataRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -23,6 +25,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public UpdateSigningBasketPsuDataRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -34,6 +37,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public UpdateSigningBasketPsuDataRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -45,6 +49,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public UpdateSigningBasketPsuDataRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -56,6 +61,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public UpdateSigningBasketPsuDataRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -67,6 +73,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID")
     public String psuCorporateID;
+
     public UpdateSigningBasketPsuDataRequest withPSUCorporateID(String psuCorporateID) {
         this.psuCorporateID = psuCorporateID;
         return this;
@@ -78,6 +85,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID-Type")
     public String psuCorporateIDType;
+
     public UpdateSigningBasketPsuDataRequest withPSUCorporateIDType(String psuCorporateIDType) {
         this.psuCorporateIDType = psuCorporateIDType;
         return this;
@@ -91,6 +99,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public UpdateSigningBasketPsuDataRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -102,6 +111,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public UpdateSigningBasketPsuDataRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -119,6 +129,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public UpdateSigningBasketPsuDataRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -137,6 +148,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID")
     public String psuId;
+
     public UpdateSigningBasketPsuDataRequest withPsuId(String psuId) {
         this.psuId = psuId;
         return this;
@@ -150,6 +162,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID-Type")
     public String psuIDType;
+
     public UpdateSigningBasketPsuDataRequest withPSUIDType(String psuIDType) {
         this.psuIDType = psuIDType;
         return this;
@@ -161,6 +174,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public UpdateSigningBasketPsuDataRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -172,6 +186,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public UpdateSigningBasketPsuDataRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -183,6 +198,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public UpdateSigningBasketPsuDataRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -190,6 +206,7 @@ public class UpdateSigningBasketPsuDataRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public Object requestBody;
+
     public UpdateSigningBasketPsuDataRequest withRequestBody(Object requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -201,6 +218,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public UpdateSigningBasketPsuDataRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -213,6 +231,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public UpdateSigningBasketPsuDataRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -223,6 +242,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public UpdateSigningBasketPsuDataRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -233,6 +253,7 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=authorisationId")
     public String authorisationId;
+
     public UpdateSigningBasketPsuDataRequest withAuthorisationId(String authorisationId) {
         this.authorisationId = authorisationId;
         return this;
@@ -244,9 +265,15 @@ public class UpdateSigningBasketPsuDataRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=basketId")
     public String basketId;
+
     public UpdateSigningBasketPsuDataRequest withBasketId(String basketId) {
         this.basketId = basketId;
         return this;
     }
     
+    public UpdateSigningBasketPsuDataRequest(@JsonProperty("X-Request-ID") String xRequestID, @JsonProperty("authorisationId") String authorisationId, @JsonProperty("basketId") String basketId) {
+        this.xRequestID = xRequestID;
+        this.authorisationId = authorisationId;
+        this.basketId = basketId;
+  }
 }

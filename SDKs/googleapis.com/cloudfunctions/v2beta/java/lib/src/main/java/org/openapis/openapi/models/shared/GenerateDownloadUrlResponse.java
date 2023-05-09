@@ -18,9 +18,11 @@ public class GenerateDownloadUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("downloadUrl")
     public String downloadUrl;
+
     public GenerateDownloadUrlResponse withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
     }
     
+    public GenerateDownloadUrlResponse(){}
 }

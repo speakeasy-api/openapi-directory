@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestJSONataExpressionRequest {
@@ -12,6 +13,7 @@ public class TestJSONataExpressionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public TestJSONataExpressionRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class TestJSONataExpressionRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public TestJSONataExpressionRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,14 @@ public class TestJSONataExpressionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TestJSONataExpression testJSONataExpression;
+
     public TestJSONataExpressionRequest withTestJSONataExpression(org.openapis.openapi.models.shared.TestJSONataExpression testJSONataExpression) {
         this.testJSONataExpression = testJSONataExpression;
         return this;
     }
     
+    public TestJSONataExpressionRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType) {
+        this.accept = accept;
+        this.contentType = contentType;
+  }
 }

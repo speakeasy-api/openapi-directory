@@ -12,6 +12,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public java.util.Map<String, Object> attributes;
+
     public ContactRequest withAttributes(java.util.Map<String, Object> attributes) {
         this.attributes = attributes;
         return this;
@@ -20,6 +21,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public ContactRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -28,6 +30,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public ContactRequest withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -36,6 +39,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ContactRequest withId(String id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public ContactRequest withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -52,6 +57,7 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mobile")
     public ContactRequestMobile mobile;
+
     public ContactRequest withMobile(ContactRequestMobile mobile) {
         this.mobile = mobile;
         return this;
@@ -60,9 +66,11 @@ public class ContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public Tag[] tags;
+
     public ContactRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public ContactRequest(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ModifyIpamRequest {
     
     public AddIpamOperatingRegion[] addOperatingRegions;
+
     public ModifyIpamRequest withAddOperatingRegions(AddIpamOperatingRegion[] addOperatingRegions) {
         this.addOperatingRegions = addOperatingRegions;
         return this;
@@ -16,6 +17,7 @@ public class ModifyIpamRequest {
     
     
     public String description;
+
     public ModifyIpamRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +25,7 @@ public class ModifyIpamRequest {
     
     
     public Boolean dryRun;
+
     public ModifyIpamRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,6 +33,7 @@ public class ModifyIpamRequest {
     
     
     public String ipamId;
+
     public ModifyIpamRequest withIpamId(String ipamId) {
         this.ipamId = ipamId;
         return this;
@@ -37,9 +41,13 @@ public class ModifyIpamRequest {
     
     
     public RemoveIpamOperatingRegion[] removeOperatingRegions;
+
     public ModifyIpamRequest withRemoveOperatingRegions(RemoveIpamOperatingRegion[] removeOperatingRegions) {
         this.removeOperatingRegions = removeOperatingRegions;
         return this;
     }
     
+    public ModifyIpamRequest(@JsonProperty("IpamId") String ipamId) {
+        this.ipamId = ipamId;
+  }
 }

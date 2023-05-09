@@ -12,6 +12,7 @@ public class DisruptionsGetDisruptionModesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=devid")
     public String devid;
+
     public DisruptionsGetDisruptionModesRequest withDevid(String devid) {
         this.devid = devid;
         return this;
@@ -22,6 +23,7 @@ public class DisruptionsGetDisruptionModesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signature")
     public String signature;
+
     public DisruptionsGetDisruptionModesRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -32,9 +34,11 @@ public class DisruptionsGetDisruptionModesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public DisruptionsGetDisruptionModesRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public DisruptionsGetDisruptionModesRequest(){}
 }

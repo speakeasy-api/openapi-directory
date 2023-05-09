@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class StreamInfo {
     
     public String channelName;
+
     public StreamInfo withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
     
+    public StreamInfo(){}
 }

@@ -12,6 +12,7 @@ public class PutResourcePolicyRequestBody {
      */
     @JsonProperty("policy")
     public String policy;
+
     public PutResourcePolicyRequestBody withPolicy(String policy) {
         this.policy = policy;
         return this;
@@ -22,9 +23,14 @@ public class PutResourcePolicyRequestBody {
      */
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public PutResourcePolicyRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public PutResourcePolicyRequestBody(@JsonProperty("policy") String policy, @JsonProperty("resourceArn") String resourceArn) {
+        this.policy = policy;
+        this.resourceArn = resourceArn;
+  }
 }

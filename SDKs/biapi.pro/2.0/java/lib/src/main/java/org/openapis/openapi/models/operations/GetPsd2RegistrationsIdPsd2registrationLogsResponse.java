@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPsd2RegistrationsIdPsd2registrationLogsResponse {
     
     public String contentType;
+
     public GetPsd2RegistrationsIdPsd2registrationLogsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPsd2RegistrationsIdPsd2registrationLogsResponse {
     
     
     public Integer statusCode;
+
     public GetPsd2RegistrationsIdPsd2registrationLogsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPsd2RegistrationsIdPsd2registrationLogsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPsd2RegistrationsIdPsd2registrationLogsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetPsd2RegistrationsIdPsd2registrationLogsResponse {
      */
     
     public GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON getPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSONObject;
+
     public GetPsd2RegistrationsIdPsd2registrationLogsResponse withGetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSONObject(GetPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSON getPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSONObject) {
         this.getPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSONObject = getPsd2RegistrationsIdPsd2registrationLogs200ApplicationJSONObject;
         return this;
     }
     
+    public GetPsd2RegistrationsIdPsd2registrationLogsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

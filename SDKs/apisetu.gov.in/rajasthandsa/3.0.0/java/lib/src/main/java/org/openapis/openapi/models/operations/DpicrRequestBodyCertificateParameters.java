@@ -12,6 +12,7 @@ public class DpicrRequestBodyCertificateParameters {
      */
     @JsonProperty("UDF1")
     public String udf1;
+
     public DpicrRequestBodyCertificateParameters withUdf1(String udf1) {
         this.udf1 = udf1;
         return this;
@@ -22,9 +23,14 @@ public class DpicrRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public DpicrRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DpicrRequestBodyCertificateParameters(@JsonProperty("UDF1") String udf1, @JsonProperty("UID") String uid) {
+        this.udf1 = udf1;
+        this.uid = uid;
+  }
 }

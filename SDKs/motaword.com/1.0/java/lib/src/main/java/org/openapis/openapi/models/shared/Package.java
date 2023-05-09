@@ -18,6 +18,7 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public Package withKey(String key) {
         this.key = key;
         return this;
@@ -29,9 +30,11 @@ public class Package {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PackageStatusEnumEnum status;
+
     public Package withStatus(PackageStatusEnumEnum status) {
         this.status = status;
         return this;
     }
     
+    public Package(){}
 }

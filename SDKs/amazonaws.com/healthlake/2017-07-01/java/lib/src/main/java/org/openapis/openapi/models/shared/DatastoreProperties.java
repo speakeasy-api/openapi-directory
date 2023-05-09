@@ -22,6 +22,7 @@ public class DatastoreProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public DatastoreProperties withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,6 +30,7 @@ public class DatastoreProperties {
     
     @JsonProperty("DatastoreArn")
     public String datastoreArn;
+
     public DatastoreProperties withDatastoreArn(String datastoreArn) {
         this.datastoreArn = datastoreArn;
         return this;
@@ -36,6 +38,7 @@ public class DatastoreProperties {
     
     @JsonProperty("DatastoreEndpoint")
     public String datastoreEndpoint;
+
     public DatastoreProperties withDatastoreEndpoint(String datastoreEndpoint) {
         this.datastoreEndpoint = datastoreEndpoint;
         return this;
@@ -43,6 +46,7 @@ public class DatastoreProperties {
     
     @JsonProperty("DatastoreId")
     public String datastoreId;
+
     public DatastoreProperties withDatastoreId(String datastoreId) {
         this.datastoreId = datastoreId;
         return this;
@@ -51,6 +55,7 @@ public class DatastoreProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatastoreName")
     public String datastoreName;
+
     public DatastoreProperties withDatastoreName(String datastoreName) {
         this.datastoreName = datastoreName;
         return this;
@@ -58,6 +63,7 @@ public class DatastoreProperties {
     
     @JsonProperty("DatastoreStatus")
     public DatastoreStatusEnum datastoreStatus;
+
     public DatastoreProperties withDatastoreStatus(DatastoreStatusEnum datastoreStatus) {
         this.datastoreStatus = datastoreStatus;
         return this;
@@ -65,6 +71,7 @@ public class DatastoreProperties {
     
     @JsonProperty("DatastoreTypeVersion")
     public FHIRVersionEnum datastoreTypeVersion;
+
     public DatastoreProperties withDatastoreTypeVersion(FHIRVersionEnum datastoreTypeVersion) {
         this.datastoreTypeVersion = datastoreTypeVersion;
         return this;
@@ -73,6 +80,7 @@ public class DatastoreProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PreloadDataConfig")
     public PreloadDataConfig preloadDataConfig;
+
     public DatastoreProperties withPreloadDataConfig(PreloadDataConfig preloadDataConfig) {
         this.preloadDataConfig = preloadDataConfig;
         return this;
@@ -81,9 +89,17 @@ public class DatastoreProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SseConfiguration")
     public SseConfiguration sseConfiguration;
+
     public DatastoreProperties withSseConfiguration(SseConfiguration sseConfiguration) {
         this.sseConfiguration = sseConfiguration;
         return this;
     }
     
+    public DatastoreProperties(@JsonProperty("DatastoreArn") String datastoreArn, @JsonProperty("DatastoreEndpoint") String datastoreEndpoint, @JsonProperty("DatastoreId") String datastoreId, @JsonProperty("DatastoreStatus") DatastoreStatusEnum datastoreStatus, @JsonProperty("DatastoreTypeVersion") FHIRVersionEnum datastoreTypeVersion) {
+        this.datastoreArn = datastoreArn;
+        this.datastoreEndpoint = datastoreEndpoint;
+        this.datastoreId = datastoreId;
+        this.datastoreStatus = datastoreStatus;
+        this.datastoreTypeVersion = datastoreTypeVersion;
+  }
 }

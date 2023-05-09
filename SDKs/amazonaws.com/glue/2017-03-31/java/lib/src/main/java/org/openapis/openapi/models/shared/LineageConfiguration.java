@@ -15,9 +15,11 @@ public class LineageConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlerLineageSettings")
     public CrawlerLineageSettingsEnum crawlerLineageSettings;
+
     public LineageConfiguration withCrawlerLineageSettings(CrawlerLineageSettingsEnum crawlerLineageSettings) {
         this.crawlerLineageSettings = crawlerLineageSettings;
         return this;
     }
     
+    public LineageConfiguration(){}
 }

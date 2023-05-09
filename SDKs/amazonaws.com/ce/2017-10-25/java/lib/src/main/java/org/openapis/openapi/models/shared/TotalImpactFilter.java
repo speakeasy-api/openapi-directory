@@ -15,6 +15,7 @@ public class TotalImpactFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndValue")
     public Double endValue;
+
     public TotalImpactFilter withEndValue(Double endValue) {
         this.endValue = endValue;
         return this;
@@ -22,6 +23,7 @@ public class TotalImpactFilter {
     
     @JsonProperty("NumericOperator")
     public NumericOperatorEnum numericOperator;
+
     public TotalImpactFilter withNumericOperator(NumericOperatorEnum numericOperator) {
         this.numericOperator = numericOperator;
         return this;
@@ -29,9 +31,14 @@ public class TotalImpactFilter {
     
     @JsonProperty("StartValue")
     public Double startValue;
+
     public TotalImpactFilter withStartValue(Double startValue) {
         this.startValue = startValue;
         return this;
     }
     
+    public TotalImpactFilter(@JsonProperty("NumericOperator") NumericOperatorEnum numericOperator, @JsonProperty("StartValue") Double startValue) {
+        this.numericOperator = numericOperator;
+        this.startValue = startValue;
+  }
 }

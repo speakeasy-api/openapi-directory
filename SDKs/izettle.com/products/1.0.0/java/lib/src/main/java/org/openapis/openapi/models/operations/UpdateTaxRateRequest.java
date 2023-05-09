@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateTaxRateRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TaxRateUpdateRequest taxRateUpdateRequest;
+
     public UpdateTaxRateRequest withTaxRateUpdateRequest(org.openapis.openapi.models.shared.TaxRateUpdateRequest taxRateUpdateRequest) {
         this.taxRateUpdateRequest = taxRateUpdateRequest;
         return this;
@@ -16,9 +18,14 @@ public class UpdateTaxRateRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=taxRateUuid")
     public String taxRateUuid;
+
     public UpdateTaxRateRequest withTaxRateUuid(String taxRateUuid) {
         this.taxRateUuid = taxRateUuid;
         return this;
     }
     
+    public UpdateTaxRateRequest(@JsonProperty("TaxRateUpdateRequest") org.openapis.openapi.models.shared.TaxRateUpdateRequest taxRateUpdateRequest, @JsonProperty("taxRateUuid") String taxRateUuid) {
+        this.taxRateUpdateRequest = taxRateUpdateRequest;
+        this.taxRateUuid = taxRateUuid;
+  }
 }

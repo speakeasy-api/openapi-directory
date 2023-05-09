@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetV2PhoneNumbersCallerIdsJsonRequest {
@@ -12,9 +13,13 @@ public class GetV2PhoneNumbersCallerIdsJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=phone_number")
     public String phoneNumber;
+
     public GetV2PhoneNumbersCallerIdsJsonRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     
+    public GetV2PhoneNumbersCallerIdsJsonRequest(@JsonProperty("phone_number") String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+  }
 }

@@ -18,6 +18,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("audio_length_sec")
     public Long audioLengthSec;
+
     public PodcastSearchResult withAudioLengthSec(Long audioLengthSec) {
         this.audioLengthSec = audioLengthSec;
         return this;
@@ -29,6 +30,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_highlighted")
     public String descriptionHighlighted;
+
     public PodcastSearchResult withDescriptionHighlighted(String descriptionHighlighted) {
         this.descriptionHighlighted = descriptionHighlighted;
         return this;
@@ -40,6 +42,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description_original")
     public String descriptionOriginal;
+
     public PodcastSearchResult withDescriptionOriginal(String descriptionOriginal) {
         this.descriptionOriginal = descriptionOriginal;
         return this;
@@ -51,6 +54,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("earliest_pub_date_ms")
     public Long earliestPubDateMs;
+
     public PodcastSearchResult withEarliestPubDateMs(Long earliestPubDateMs) {
         this.earliestPubDateMs = earliestPubDateMs;
         return this;
@@ -62,6 +66,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public PodcastSearchResult withEmail(String email) {
         this.email = email;
         return this;
@@ -73,6 +78,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explicit_content")
     public Boolean explicitContent;
+
     public PodcastSearchResult withExplicitContent(Boolean explicitContent) {
         this.explicitContent = explicitContent;
         return this;
@@ -81,6 +87,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("genre_ids")
     public Long[] genreIds;
+
     public PodcastSearchResult withGenreIds(Long[] genreIds) {
         this.genreIds = genreIds;
         return this;
@@ -92,6 +99,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public PodcastSearchResult withId(String id) {
         this.id = id;
         return this;
@@ -106,6 +114,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public PodcastSearchResult withImage(String image) {
         this.image = image;
         return this;
@@ -117,6 +126,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("itunes_id")
     public Long itunesId;
+
     public PodcastSearchResult withItunesId(Long itunesId) {
         this.itunesId = itunesId;
         return this;
@@ -128,6 +138,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_episode_id")
     public String latestEpisodeId;
+
     public PodcastSearchResult withLatestEpisodeId(String latestEpisodeId) {
         this.latestEpisodeId = latestEpisodeId;
         return this;
@@ -139,6 +150,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("latest_pub_date_ms")
     public Long latestPubDateMs;
+
     public PodcastSearchResult withLatestPubDateMs(Long latestPubDateMs) {
         this.latestPubDateMs = latestPubDateMs;
         return this;
@@ -152,6 +164,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen_score")
     public Long listenScore;
+
     public PodcastSearchResult withListenScore(Long listenScore) {
         this.listenScore = listenScore;
         return this;
@@ -166,6 +179,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listen_score_global_rank")
     public String listenScoreGlobalRank;
+
     public PodcastSearchResult withListenScoreGlobalRank(String listenScoreGlobalRank) {
         this.listenScoreGlobalRank = listenScoreGlobalRank;
         return this;
@@ -177,6 +191,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listennotes_url")
     public String listennotesUrl;
+
     public PodcastSearchResult withListennotesUrl(String listennotesUrl) {
         this.listennotesUrl = listennotesUrl;
         return this;
@@ -188,6 +203,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher_highlighted")
     public String publisherHighlighted;
+
     public PodcastSearchResult withPublisherHighlighted(String publisherHighlighted) {
         this.publisherHighlighted = publisherHighlighted;
         return this;
@@ -199,6 +215,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publisher_original")
     public String publisherOriginal;
+
     public PodcastSearchResult withPublisherOriginal(String publisherOriginal) {
         this.publisherOriginal = publisherOriginal;
         return this;
@@ -210,6 +227,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rss")
     public String rss;
+
     public PodcastSearchResult withRss(String rss) {
         this.rss = rss;
         return this;
@@ -221,6 +239,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnail")
     public String thumbnail;
+
     public PodcastSearchResult withThumbnail(String thumbnail) {
         this.thumbnail = thumbnail;
         return this;
@@ -232,6 +251,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_highlighted")
     public String titleHighlighted;
+
     public PodcastSearchResult withTitleHighlighted(String titleHighlighted) {
         this.titleHighlighted = titleHighlighted;
         return this;
@@ -243,6 +263,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title_original")
     public String titleOriginal;
+
     public PodcastSearchResult withTitleOriginal(String titleOriginal) {
         this.titleOriginal = titleOriginal;
         return this;
@@ -254,6 +275,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_episodes")
     public Long totalEpisodes;
+
     public PodcastSearchResult withTotalEpisodes(Long totalEpisodes) {
         this.totalEpisodes = totalEpisodes;
         return this;
@@ -265,6 +287,7 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("update_frequency_hours")
     public Long updateFrequencyHours;
+
     public PodcastSearchResult withUpdateFrequencyHours(Long updateFrequencyHours) {
         this.updateFrequencyHours = updateFrequencyHours;
         return this;
@@ -276,9 +299,11 @@ public class PodcastSearchResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("website")
     public String website;
+
     public PodcastSearchResult withWebsite(String website) {
         this.website = website;
         return this;
     }
     
+    public PodcastSearchResult(){}
 }

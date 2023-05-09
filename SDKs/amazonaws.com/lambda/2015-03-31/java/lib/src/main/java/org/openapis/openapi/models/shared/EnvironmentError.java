@@ -15,6 +15,7 @@ public class EnvironmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public String errorCode;
+
     public EnvironmentError withErrorCode(String errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class EnvironmentError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public EnvironmentError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public EnvironmentError(){}
 }

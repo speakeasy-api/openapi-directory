@@ -15,6 +15,7 @@ public class ListEntitiesDetectionV2JobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComprehendMedicalAsyncJobPropertiesList")
     public ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList;
+
     public ListEntitiesDetectionV2JobsResponse withComprehendMedicalAsyncJobPropertiesList(ComprehendMedicalAsyncJobProperties[] comprehendMedicalAsyncJobPropertiesList) {
         this.comprehendMedicalAsyncJobPropertiesList = comprehendMedicalAsyncJobPropertiesList;
         return this;
@@ -23,9 +24,11 @@ public class ListEntitiesDetectionV2JobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListEntitiesDetectionV2JobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListEntitiesDetectionV2JobsResponse(){}
 }

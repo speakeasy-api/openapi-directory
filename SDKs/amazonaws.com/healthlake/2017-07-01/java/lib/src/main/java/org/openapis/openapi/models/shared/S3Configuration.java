@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class S3Configuration {
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public S3Configuration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -19,9 +20,14 @@ public class S3Configuration {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public S3Configuration withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public S3Configuration(@JsonProperty("KmsKeyId") String kmsKeyId, @JsonProperty("S3Uri") String s3Uri) {
+        this.kmsKeyId = kmsKeyId;
+        this.s3Uri = s3Uri;
+  }
 }

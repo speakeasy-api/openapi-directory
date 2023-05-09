@@ -15,6 +15,7 @@ public class BillingRateTieredRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highValue")
     public String highValue;
+
     public BillingRateTieredRate withHighValue(String highValue) {
         this.highValue = highValue;
         return this;
@@ -26,6 +27,7 @@ public class BillingRateTieredRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lowValue")
     public String lowValue;
+
     public BillingRateTieredRate withLowValue(String lowValue) {
         this.lowValue = lowValue;
         return this;
@@ -37,9 +39,11 @@ public class BillingRateTieredRate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateInMicros")
     public String rateInMicros;
+
     public BillingRateTieredRate withRateInMicros(String rateInMicros) {
         this.rateInMicros = rateInMicros;
         return this;
     }
     
+    public BillingRateTieredRate(){}
 }

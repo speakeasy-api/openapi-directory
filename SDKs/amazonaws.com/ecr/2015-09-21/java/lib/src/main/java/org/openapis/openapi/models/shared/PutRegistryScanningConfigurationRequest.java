@@ -12,6 +12,7 @@ public class PutRegistryScanningConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public RegistryScanningRule[] rules;
+
     public PutRegistryScanningConfigurationRequest withRules(RegistryScanningRule[] rules) {
         this.rules = rules;
         return this;
@@ -20,9 +21,11 @@ public class PutRegistryScanningConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanType")
     public ScanTypeEnum scanType;
+
     public PutRegistryScanningConfigurationRequest withScanType(ScanTypeEnum scanType) {
         this.scanType = scanType;
         return this;
     }
     
+    public PutRegistryScanningConfigurationRequest(){}
 }

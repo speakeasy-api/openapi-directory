@@ -15,6 +15,7 @@ public class S3DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttributeNames")
     public String[] attributeNames;
+
     public S3DataSource withAttributeNames(String[] attributeNames) {
         this.attributeNames = attributeNames;
         return this;
@@ -23,6 +24,7 @@ public class S3DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceGroupNames")
     public String[] instanceGroupNames;
+
     public S3DataSource withInstanceGroupNames(String[] instanceGroupNames) {
         this.instanceGroupNames = instanceGroupNames;
         return this;
@@ -31,6 +33,7 @@ public class S3DataSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S3DataDistributionType")
     public S3DataDistributionEnum s3DataDistributionType;
+
     public S3DataSource withS3DataDistributionType(S3DataDistributionEnum s3DataDistributionType) {
         this.s3DataDistributionType = s3DataDistributionType;
         return this;
@@ -38,6 +41,7 @@ public class S3DataSource {
     
     @JsonProperty("S3DataType")
     public S3DataTypeEnum s3DataType;
+
     public S3DataSource withS3DataType(S3DataTypeEnum s3DataType) {
         this.s3DataType = s3DataType;
         return this;
@@ -45,9 +49,14 @@ public class S3DataSource {
     
     @JsonProperty("S3Uri")
     public String s3Uri;
+
     public S3DataSource withS3Uri(String s3Uri) {
         this.s3Uri = s3Uri;
         return this;
     }
     
+    public S3DataSource(@JsonProperty("S3DataType") S3DataTypeEnum s3DataType, @JsonProperty("S3Uri") String s3Uri) {
+        this.s3DataType = s3DataType;
+        this.s3Uri = s3Uri;
+  }
 }

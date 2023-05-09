@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelClusterRequest {
     @JsonProperty("ClusterId")
     public String clusterId;
+
     public CancelClusterRequest withClusterId(String clusterId) {
         this.clusterId = clusterId;
         return this;
     }
     
+    public CancelClusterRequest(@JsonProperty("ClusterId") String clusterId) {
+        this.clusterId = clusterId;
+  }
 }

@@ -12,6 +12,7 @@ public class SetUICustomizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CSS")
     public String css;
+
     public SetUICustomizationRequest withCss(String css) {
         this.css = css;
         return this;
@@ -20,6 +21,7 @@ public class SetUICustomizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientId")
     public String clientId;
+
     public SetUICustomizationRequest withClientId(String clientId) {
         this.clientId = clientId;
         return this;
@@ -28,6 +30,7 @@ public class SetUICustomizationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageFile")
     public String imageFile;
+
     public SetUICustomizationRequest withImageFile(String imageFile) {
         this.imageFile = imageFile;
         return this;
@@ -35,9 +38,13 @@ public class SetUICustomizationRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public SetUICustomizationRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public SetUICustomizationRequest(@JsonProperty("UserPoolId") String userPoolId) {
+        this.userPoolId = userPoolId;
+  }
 }

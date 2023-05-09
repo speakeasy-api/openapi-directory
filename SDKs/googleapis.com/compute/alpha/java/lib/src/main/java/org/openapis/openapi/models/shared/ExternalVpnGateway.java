@@ -18,6 +18,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creationTimestamp")
     public String creationTimestamp;
+
     public ExternalVpnGateway withCreationTimestamp(String creationTimestamp) {
         this.creationTimestamp = creationTimestamp;
         return this;
@@ -29,6 +30,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ExternalVpnGateway withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ExternalVpnGateway withId(String id) {
         this.id = id;
         return this;
@@ -51,6 +54,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interfaces")
     public ExternalVpnGatewayInterface[] interfaces;
+
     public ExternalVpnGateway withInterfaces(ExternalVpnGatewayInterface[] interfaces) {
         this.interfaces = interfaces;
         return this;
@@ -62,6 +66,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ExternalVpnGateway withKind(String kind) {
         this.kind = kind;
         return this;
@@ -73,6 +78,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public ExternalVpnGateway withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -84,6 +90,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public ExternalVpnGateway withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExternalVpnGateway withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redundancyType")
     public ExternalVpnGatewayRedundancyTypeEnum redundancyType;
+
     public ExternalVpnGateway withRedundancyType(ExternalVpnGatewayRedundancyTypeEnum redundancyType) {
         this.redundancyType = redundancyType;
         return this;
@@ -117,9 +126,11 @@ public class ExternalVpnGateway {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public ExternalVpnGateway withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public ExternalVpnGateway(){}
 }

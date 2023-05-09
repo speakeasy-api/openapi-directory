@@ -15,6 +15,7 @@ public class APIKeyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public APIKeyOptions withComment(String comment) {
         this.comment = comment;
         return this;
@@ -23,9 +24,11 @@ public class APIKeyOptions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_id")
     public String organizationId;
+
     public APIKeyOptions withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public APIKeyOptions(){}
 }

@@ -18,6 +18,7 @@ public class Extraction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpenseDocument")
     public ExpenseDocument expenseDocument;
+
     public Extraction withExpenseDocument(ExpenseDocument expenseDocument) {
         this.expenseDocument = expenseDocument;
         return this;
@@ -29,6 +30,7 @@ public class Extraction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityDocument")
     public IdentityDocument identityDocument;
+
     public Extraction withIdentityDocument(IdentityDocument identityDocument) {
         this.identityDocument = identityDocument;
         return this;
@@ -37,9 +39,11 @@ public class Extraction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LendingDocument")
     public LendingDocument lendingDocument;
+
     public Extraction withLendingDocument(LendingDocument lendingDocument) {
         this.lendingDocument = lendingDocument;
         return this;
     }
     
+    public Extraction(){}
 }

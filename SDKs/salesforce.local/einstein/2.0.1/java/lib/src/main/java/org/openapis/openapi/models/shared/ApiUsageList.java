@@ -15,6 +15,7 @@ public class ApiUsageList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public ApiUsage[] data;
+
     public ApiUsageList withData(ApiUsage[] data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class ApiUsageList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public ApiUsageList withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public ApiUsageList(){}
 }

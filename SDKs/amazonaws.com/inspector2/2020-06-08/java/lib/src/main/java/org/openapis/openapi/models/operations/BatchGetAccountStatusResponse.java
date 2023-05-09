@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BatchGetAccountStatusResponse {
@@ -12,6 +13,7 @@ public class BatchGetAccountStatusResponse {
      */
     
     public Object accessDeniedException;
+
     public BatchGetAccountStatusResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class BatchGetAccountStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchGetAccountStatusResponse batchGetAccountStatusResponse;
+
     public BatchGetAccountStatusResponse withBatchGetAccountStatusResponse(org.openapis.openapi.models.shared.BatchGetAccountStatusResponse batchGetAccountStatusResponse) {
         this.batchGetAccountStatusResponse = batchGetAccountStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class BatchGetAccountStatusResponse {
     
     
     public String contentType;
+
     public BatchGetAccountStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class BatchGetAccountStatusResponse {
      */
     
     public Object internalServerException;
+
     public BatchGetAccountStatusResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class BatchGetAccountStatusResponse {
      */
     
     public Object resourceNotFoundException;
+
     public BatchGetAccountStatusResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class BatchGetAccountStatusResponse {
     
     
     public Integer statusCode;
+
     public BatchGetAccountStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class BatchGetAccountStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BatchGetAccountStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class BatchGetAccountStatusResponse {
      */
     
     public Object throttlingException;
+
     public BatchGetAccountStatusResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class BatchGetAccountStatusResponse {
      */
     
     public Object validationException;
+
     public BatchGetAccountStatusResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public BatchGetAccountStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

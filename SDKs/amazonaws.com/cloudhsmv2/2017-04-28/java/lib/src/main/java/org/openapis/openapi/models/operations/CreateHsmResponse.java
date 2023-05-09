@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateHsmResponse {
@@ -12,6 +13,7 @@ public class CreateHsmResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public CreateHsmResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CreateHsmResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public CreateHsmResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class CreateHsmResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public CreateHsmResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class CreateHsmResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public CreateHsmResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class CreateHsmResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public CreateHsmResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CreateHsmResponse {
     
     
     public String contentType;
+
     public CreateHsmResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class CreateHsmResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateHsmResponse createHsmResponse;
+
     public CreateHsmResponse withCreateHsmResponse(org.openapis.openapi.models.shared.CreateHsmResponse createHsmResponse) {
         this.createHsmResponse = createHsmResponse;
         return this;
@@ -76,6 +84,7 @@ public class CreateHsmResponse {
     
     
     public Integer statusCode;
+
     public CreateHsmResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class CreateHsmResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateHsmResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateHsmResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

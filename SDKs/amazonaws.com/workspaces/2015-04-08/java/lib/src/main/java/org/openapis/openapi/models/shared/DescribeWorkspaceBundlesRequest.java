@@ -12,6 +12,7 @@ public class DescribeWorkspaceBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BundleIds")
     public String[] bundleIds;
+
     public DescribeWorkspaceBundlesRequest withBundleIds(String[] bundleIds) {
         this.bundleIds = bundleIds;
         return this;
@@ -20,6 +21,7 @@ public class DescribeWorkspaceBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeWorkspaceBundlesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -28,9 +30,11 @@ public class DescribeWorkspaceBundlesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public DescribeWorkspaceBundlesRequest withOwner(String owner) {
         this.owner = owner;
         return this;
     }
     
+    public DescribeWorkspaceBundlesRequest(){}
 }

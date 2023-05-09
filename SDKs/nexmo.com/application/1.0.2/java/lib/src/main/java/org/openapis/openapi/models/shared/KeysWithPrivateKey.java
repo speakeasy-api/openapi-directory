@@ -18,6 +18,7 @@ public class KeysWithPrivateKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("private_key")
     public String privateKey;
+
     public KeysWithPrivateKey withPrivateKey(String privateKey) {
         this.privateKey = privateKey;
         return this;
@@ -29,9 +30,11 @@ public class KeysWithPrivateKey {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("public_key")
     public String publicKey;
+
     public KeysWithPrivateKey withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public KeysWithPrivateKey(){}
 }

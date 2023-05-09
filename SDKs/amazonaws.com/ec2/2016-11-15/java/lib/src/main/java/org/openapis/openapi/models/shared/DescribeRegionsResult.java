@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeRegionsResult {
     
     public DescribeRegionsResultRegions[] regions;
+
     public DescribeRegionsResult withRegions(DescribeRegionsResultRegions[] regions) {
         this.regions = regions;
         return this;
     }
     
+    public DescribeRegionsResult(){}
 }

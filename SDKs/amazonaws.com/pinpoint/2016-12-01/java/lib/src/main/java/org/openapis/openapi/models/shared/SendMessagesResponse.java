@@ -15,9 +15,13 @@ public class SendMessagesResponse {
      */
     @JsonProperty("MessageResponse")
     public MessageResponse messageResponse;
+
     public SendMessagesResponse withMessageResponse(MessageResponse messageResponse) {
         this.messageResponse = messageResponse;
         return this;
     }
     
+    public SendMessagesResponse(@JsonProperty("MessageResponse") MessageResponse messageResponse) {
+        this.messageResponse = messageResponse;
+  }
 }

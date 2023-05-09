@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListSnapshotsResponse {
     
     public String contentType;
+
     public ListSnapshotsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListSnapshotsResponse {
      */
     
     public Object internalServerException;
+
     public ListSnapshotsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class ListSnapshotsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListSnapshotsResponse listSnapshotsResponse;
+
     public ListSnapshotsResponse withListSnapshotsResponse(org.openapis.openapi.models.shared.ListSnapshotsResponse listSnapshotsResponse) {
         this.listSnapshotsResponse = listSnapshotsResponse;
         return this;
@@ -36,6 +40,7 @@ public class ListSnapshotsResponse {
     
     
     public Integer statusCode;
+
     public ListSnapshotsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class ListSnapshotsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListSnapshotsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class ListSnapshotsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListSnapshotsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,9 +70,14 @@ public class ListSnapshotsResponse {
      */
     
     public Object validationException;
+
     public ListSnapshotsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListSnapshotsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

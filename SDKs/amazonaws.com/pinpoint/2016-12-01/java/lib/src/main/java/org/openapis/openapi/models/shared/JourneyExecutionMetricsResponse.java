@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JourneyExecutionMetricsResponse {
     @JsonProperty("ApplicationId")
     public String applicationId;
+
     public JourneyExecutionMetricsResponse withApplicationId(String applicationId) {
         this.applicationId = applicationId;
         return this;
@@ -19,6 +20,7 @@ public class JourneyExecutionMetricsResponse {
     
     @JsonProperty("JourneyId")
     public String journeyId;
+
     public JourneyExecutionMetricsResponse withJourneyId(String journeyId) {
         this.journeyId = journeyId;
         return this;
@@ -26,6 +28,7 @@ public class JourneyExecutionMetricsResponse {
     
     @JsonProperty("LastEvaluatedTime")
     public String lastEvaluatedTime;
+
     public JourneyExecutionMetricsResponse withLastEvaluatedTime(String lastEvaluatedTime) {
         this.lastEvaluatedTime = lastEvaluatedTime;
         return this;
@@ -33,9 +36,16 @@ public class JourneyExecutionMetricsResponse {
     
     @JsonProperty("Metrics")
     public java.util.Map<String, String> metrics;
+
     public JourneyExecutionMetricsResponse withMetrics(java.util.Map<String, String> metrics) {
         this.metrics = metrics;
         return this;
     }
     
+    public JourneyExecutionMetricsResponse(@JsonProperty("ApplicationId") String applicationId, @JsonProperty("JourneyId") String journeyId, @JsonProperty("LastEvaluatedTime") String lastEvaluatedTime, @JsonProperty("Metrics") java.util.Map<String, String> metrics) {
+        this.applicationId = applicationId;
+        this.journeyId = journeyId;
+        this.lastEvaluatedTime = lastEvaluatedTime;
+        this.metrics = metrics;
+  }
 }

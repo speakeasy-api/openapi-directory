@@ -12,6 +12,7 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges {
      */
     @JsonProperty("comment")
     public String comment;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges withComment(String comment) {
         this.comment = comment;
         return this;
@@ -22,6 +23,7 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges {
      */
     @JsonProperty("end")
     public String end;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges withEnd(String end) {
         this.end = end;
         return this;
@@ -32,9 +34,15 @@ public class UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges {
      */
     @JsonProperty("start")
     public String start;
+
     public UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges withStart(String start) {
         this.start = start;
         return this;
     }
     
+    public UpdateDeviceCellularGatewaySettingsRequestBodyReservedIpRanges(@JsonProperty("comment") String comment, @JsonProperty("end") String end, @JsonProperty("start") String start) {
+        this.comment = comment;
+        this.end = end;
+        this.start = start;
+  }
 }

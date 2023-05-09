@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
     
     public String contentType;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
     
     
     public Integer statusCode;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
      */
     
     public java.util.Map<String, Object> error;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withError(java.util.Map<String, Object> error) {
         this.error = error;
         return this;
@@ -50,9 +56,14 @@ public class PostRepositoriesWorkspaceRepoSlugPullrequestsResponse {
      */
     
     public java.util.Map<String, Object> pullrequest;
+
     public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse withPullrequest(java.util.Map<String, Object> pullrequest) {
         this.pullrequest = pullrequest;
         return this;
     }
     
+    public PostRepositoriesWorkspaceRepoSlugPullrequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

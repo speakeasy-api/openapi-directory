@@ -18,6 +18,7 @@ public class ReturnPolicyOnlineReturnReasonCategoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnLabelSource")
     public ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum returnLabelSource;
+
     public ReturnPolicyOnlineReturnReasonCategoryInfo withReturnLabelSource(ReturnPolicyOnlineReturnReasonCategoryInfoReturnLabelSourceEnum returnLabelSource) {
         this.returnLabelSource = returnLabelSource;
         return this;
@@ -29,6 +30,7 @@ public class ReturnPolicyOnlineReturnReasonCategoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnReasonCategory")
     public ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum returnReasonCategory;
+
     public ReturnPolicyOnlineReturnReasonCategoryInfo withReturnReasonCategory(ReturnPolicyOnlineReturnReasonCategoryInfoReturnReasonCategoryEnum returnReasonCategory) {
         this.returnReasonCategory = returnReasonCategory;
         return this;
@@ -40,9 +42,11 @@ public class ReturnPolicyOnlineReturnReasonCategoryInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnShippingFee")
     public ReturnPolicyOnlineReturnShippingFee returnShippingFee;
+
     public ReturnPolicyOnlineReturnReasonCategoryInfo withReturnShippingFee(ReturnPolicyOnlineReturnShippingFee returnShippingFee) {
         this.returnShippingFee = returnShippingFee;
         return this;
     }
     
+    public ReturnPolicyOnlineReturnReasonCategoryInfo(){}
 }

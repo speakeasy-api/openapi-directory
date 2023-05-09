@@ -15,6 +15,7 @@ public class CreateAccessPolicyRequestBodyAccessPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("portal")
     public org.openapis.openapi.models.shared.PortalResource portal;
+
     public CreateAccessPolicyRequestBodyAccessPolicyResource withPortal(org.openapis.openapi.models.shared.PortalResource portal) {
         this.portal = portal;
         return this;
@@ -23,9 +24,11 @@ public class CreateAccessPolicyRequestBodyAccessPolicyResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("project")
     public org.openapis.openapi.models.shared.ProjectResource project;
+
     public CreateAccessPolicyRequestBodyAccessPolicyResource withProject(org.openapis.openapi.models.shared.ProjectResource project) {
         this.project = project;
         return this;
     }
     
+    public CreateAccessPolicyRequestBodyAccessPolicyResource(){}
 }

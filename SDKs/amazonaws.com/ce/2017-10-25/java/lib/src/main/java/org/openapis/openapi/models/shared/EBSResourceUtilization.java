@@ -15,6 +15,7 @@ public class EBSResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsReadBytesPerSecond")
     public String ebsReadBytesPerSecond;
+
     public EBSResourceUtilization withEbsReadBytesPerSecond(String ebsReadBytesPerSecond) {
         this.ebsReadBytesPerSecond = ebsReadBytesPerSecond;
         return this;
@@ -23,6 +24,7 @@ public class EBSResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsReadOpsPerSecond")
     public String ebsReadOpsPerSecond;
+
     public EBSResourceUtilization withEbsReadOpsPerSecond(String ebsReadOpsPerSecond) {
         this.ebsReadOpsPerSecond = ebsReadOpsPerSecond;
         return this;
@@ -31,6 +33,7 @@ public class EBSResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsWriteBytesPerSecond")
     public String ebsWriteBytesPerSecond;
+
     public EBSResourceUtilization withEbsWriteBytesPerSecond(String ebsWriteBytesPerSecond) {
         this.ebsWriteBytesPerSecond = ebsWriteBytesPerSecond;
         return this;
@@ -39,9 +42,11 @@ public class EBSResourceUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsWriteOpsPerSecond")
     public String ebsWriteOpsPerSecond;
+
     public EBSResourceUtilization withEbsWriteOpsPerSecond(String ebsWriteOpsPerSecond) {
         this.ebsWriteOpsPerSecond = ebsWriteOpsPerSecond;
         return this;
     }
     
+    public EBSResourceUtilization(){}
 }

@@ -12,6 +12,7 @@ public class SourceUpdate {
      */
     @JsonProperty("connectionConfiguration")
     public Object connectionConfiguration;
+
     public SourceUpdate withConnectionConfiguration(Object connectionConfiguration) {
         this.connectionConfiguration = connectionConfiguration;
         return this;
@@ -19,6 +20,7 @@ public class SourceUpdate {
     
     @JsonProperty("name")
     public String name;
+
     public SourceUpdate withName(String name) {
         this.name = name;
         return this;
@@ -26,9 +28,15 @@ public class SourceUpdate {
     
     @JsonProperty("sourceId")
     public String sourceId;
+
     public SourceUpdate withSourceId(String sourceId) {
         this.sourceId = sourceId;
         return this;
     }
     
+    public SourceUpdate(@JsonProperty("connectionConfiguration") Object connectionConfiguration, @JsonProperty("name") String name, @JsonProperty("sourceId") String sourceId) {
+        this.connectionConfiguration = connectionConfiguration;
+        this.name = name;
+        this.sourceId = sourceId;
+  }
 }

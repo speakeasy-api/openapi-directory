@@ -22,9 +22,11 @@ public class GetItvRokuPlansRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetItvRokuPlansRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetItvRokuPlansRequest(){}
 }

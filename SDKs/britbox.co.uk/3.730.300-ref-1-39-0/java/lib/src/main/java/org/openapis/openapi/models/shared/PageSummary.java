@@ -14,6 +14,7 @@ public class PageSummary {
      */
     @JsonProperty("id")
     public String id;
+
     public PageSummary withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class PageSummary {
      */
     @JsonProperty("isStatic")
     public Boolean isStatic;
+
     public PageSummary withIsStatic(Boolean isStatic) {
         this.isStatic = isStatic;
         return this;
@@ -44,6 +46,7 @@ public class PageSummary {
      */
     @JsonProperty("isSystemPage")
     public Boolean isSystemPage;
+
     public PageSummary withIsSystemPage(Boolean isSystemPage) {
         this.isSystemPage = isSystemPage;
         return this;
@@ -55,6 +58,7 @@ public class PageSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public PageSummary withKey(String key) {
         this.key = key;
         return this;
@@ -65,6 +69,7 @@ public class PageSummary {
      */
     @JsonProperty("path")
     public String path;
+
     public PageSummary withPath(String path) {
         this.path = path;
         return this;
@@ -75,6 +80,7 @@ public class PageSummary {
      */
     @JsonProperty("template")
     public String template;
+
     public PageSummary withTemplate(String template) {
         this.template = template;
         return this;
@@ -85,9 +91,18 @@ public class PageSummary {
      */
     @JsonProperty("title")
     public String title;
+
     public PageSummary withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public PageSummary(@JsonProperty("id") String id, @JsonProperty("isStatic") Boolean isStatic, @JsonProperty("isSystemPage") Boolean isSystemPage, @JsonProperty("path") String path, @JsonProperty("template") String template, @JsonProperty("title") String title) {
+        this.id = id;
+        this.isStatic = isStatic;
+        this.isSystemPage = isSystemPage;
+        this.path = path;
+        this.template = template;
+        this.title = title;
+  }
 }

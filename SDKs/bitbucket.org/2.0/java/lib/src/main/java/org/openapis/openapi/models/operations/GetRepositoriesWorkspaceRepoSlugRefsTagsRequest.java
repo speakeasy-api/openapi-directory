@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest {
@@ -13,6 +14,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsRequest withQ(String q) {
         this.q = q;
         return this;
@@ -25,6 +27,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -39,6 +42,7 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public String sort;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsRequest withSort(String sort) {
         this.sort = sort;
         return this;
@@ -51,9 +55,14 @@ public class GetRepositoriesWorkspaceRepoSlugRefsTagsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public GetRepositoriesWorkspaceRepoSlugRefsTagsRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public GetRepositoriesWorkspaceRepoSlugRefsTagsRequest(@JsonProperty("repo_slug") String repoSlug, @JsonProperty("workspace") String workspace) {
+        this.repoSlug = repoSlug;
+        this.workspace = workspace;
+  }
 }

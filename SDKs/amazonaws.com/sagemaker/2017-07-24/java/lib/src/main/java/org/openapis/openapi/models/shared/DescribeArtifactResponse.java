@@ -20,6 +20,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactArn")
     public String artifactArn;
+
     public DescribeArtifactResponse withArtifactArn(String artifactArn) {
         this.artifactArn = artifactArn;
         return this;
@@ -28,6 +29,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactName")
     public String artifactName;
+
     public DescribeArtifactResponse withArtifactName(String artifactName) {
         this.artifactName = artifactName;
         return this;
@@ -36,6 +38,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ArtifactType")
     public String artifactType;
+
     public DescribeArtifactResponse withArtifactType(String artifactType) {
         this.artifactType = artifactType;
         return this;
@@ -47,6 +50,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribeArtifactResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -57,6 +61,7 @@ public class DescribeArtifactResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribeArtifactResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -68,6 +73,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribeArtifactResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -78,6 +84,7 @@ public class DescribeArtifactResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribeArtifactResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -86,6 +93,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LineageGroupArn")
     public String lineageGroupArn;
+
     public DescribeArtifactResponse withLineageGroupArn(String lineageGroupArn) {
         this.lineageGroupArn = lineageGroupArn;
         return this;
@@ -97,6 +105,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetadataProperties")
     public MetadataProperties metadataProperties;
+
     public DescribeArtifactResponse withMetadataProperties(MetadataProperties metadataProperties) {
         this.metadataProperties = metadataProperties;
         return this;
@@ -105,6 +114,7 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Properties")
     public java.util.Map<String, String> properties;
+
     public DescribeArtifactResponse withProperties(java.util.Map<String, String> properties) {
         this.properties = properties;
         return this;
@@ -113,9 +123,11 @@ public class DescribeArtifactResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Source")
     public ArtifactSource source;
+
     public DescribeArtifactResponse withSource(ArtifactSource source) {
         this.source = source;
         return this;
     }
     
+    public DescribeArtifactResponse(){}
 }

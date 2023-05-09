@@ -32,6 +32,7 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetRecordRequestBody.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetRecordRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/BatchGetRecordResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecordDeletionModeEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecordRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/DeleteRecordResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetRecordRequest.java
@@ -47,4 +48,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/BatchGetRecordError.java
 lib/src/main/java/org/openapis/openapi/models/shared/TargetStoreEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetRecordResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

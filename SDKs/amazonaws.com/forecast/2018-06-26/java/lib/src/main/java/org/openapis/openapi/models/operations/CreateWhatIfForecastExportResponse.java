@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateWhatIfForecastExportResponse {
     
     public String contentType;
+
     public CreateWhatIfForecastExportResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateWhatIfForecastExportResponse createWhatIfForecastExportResponse;
+
     public CreateWhatIfForecastExportResponse withCreateWhatIfForecastExportResponse(org.openapis.openapi.models.shared.CreateWhatIfForecastExportResponse createWhatIfForecastExportResponse) {
         this.createWhatIfForecastExportResponse = createWhatIfForecastExportResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public Object invalidInputException;
+
     public CreateWhatIfForecastExportResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public Object limitExceededException;
+
     public CreateWhatIfForecastExportResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateWhatIfForecastExportResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateWhatIfForecastExportResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateWhatIfForecastExportResponse {
     
     
     public Integer statusCode;
+
     public CreateWhatIfForecastExportResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateWhatIfForecastExportResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateWhatIfForecastExportResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateWhatIfForecastExportResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateWhatIfForecastExportResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
     }
     
+    public CreateWhatIfForecastExportResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

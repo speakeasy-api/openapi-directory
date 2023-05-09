@@ -51,11 +51,9 @@ public class Onboarding {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse res = new org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse() {{
+        org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse res = new org.openapis.openapi.models.operations.GetPaymentsProgramOnboardingResponse(contentType, httpRes.statusCode()) {{
             paymentsProgramOnboardingResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

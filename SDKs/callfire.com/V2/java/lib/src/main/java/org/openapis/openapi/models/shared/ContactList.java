@@ -18,6 +18,7 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created")
     public Long created;
+
     public ContactList withCreated(Long created) {
         this.created = created;
         return this;
@@ -29,6 +30,7 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ContactList withId(Long id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ContactList withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Integer size;
+
     public ContactList withSize(Integer size) {
         this.size = size;
         return this;
@@ -62,9 +66,11 @@ public class ContactList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ContactListStatusEnum status;
+
     public ContactList withStatus(ContactListStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ContactList(){}
 }

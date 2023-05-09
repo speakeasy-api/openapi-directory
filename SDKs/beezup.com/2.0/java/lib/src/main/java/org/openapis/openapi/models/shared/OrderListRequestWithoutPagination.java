@@ -20,6 +20,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountIds")
     public Integer[] accountIds;
+
     public OrderListRequestWithoutPagination withAccountIds(Integer[] accountIds) {
         this.accountIds = accountIds;
         return this;
@@ -28,6 +29,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beezUPOrderStatuses")
     public String[] beezUPOrderStatuses;
+
     public OrderListRequestWithoutPagination withBeezUPOrderStatuses(String[] beezUPOrderStatuses) {
         this.beezUPOrderStatuses = beezUPOrderStatuses;
         return this;
@@ -43,6 +45,7 @@ public class OrderListRequestWithoutPagination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("beginPeriodUtcDate")
     public OffsetDateTime beginPeriodUtcDate;
+
     public OrderListRequestWithoutPagination withBeginPeriodUtcDate(OffsetDateTime beginPeriodUtcDate) {
         this.beginPeriodUtcDate = beginPeriodUtcDate;
         return this;
@@ -54,6 +57,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dateSearchType")
     public DateSearchTypeEnum dateSearchType;
+
     public OrderListRequestWithoutPagination withDateSearchType(DateSearchTypeEnum dateSearchType) {
         this.dateSearchType = dateSearchType;
         return this;
@@ -70,6 +74,7 @@ public class OrderListRequestWithoutPagination {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endPeriodUtcDate")
     public OffsetDateTime endPeriodUtcDate;
+
     public OrderListRequestWithoutPagination withEndPeriodUtcDate(OffsetDateTime endPeriodUtcDate) {
         this.endPeriodUtcDate = endPeriodUtcDate;
         return this;
@@ -81,6 +86,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceAvailabilityType")
     public String invoiceAvailabilityType;
+
     public OrderListRequestWithoutPagination withInvoiceAvailabilityType(String invoiceAvailabilityType) {
         this.invoiceAvailabilityType = invoiceAvailabilityType;
         return this;
@@ -89,6 +95,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceBusinessCodes")
     public String[] marketplaceBusinessCodes;
+
     public OrderListRequestWithoutPagination withMarketplaceBusinessCodes(String[] marketplaceBusinessCodes) {
         this.marketplaceBusinessCodes = marketplaceBusinessCodes;
         return this;
@@ -97,6 +104,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceOrderIds")
     public String[] marketplaceOrderIds;
+
     public OrderListRequestWithoutPagination withMarketplaceOrderIds(String[] marketplaceOrderIds) {
         this.marketplaceOrderIds = marketplaceOrderIds;
         return this;
@@ -105,6 +113,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceTechnicalCodes")
     public String[] marketplaceTechnicalCodes;
+
     public OrderListRequestWithoutPagination withMarketplaceTechnicalCodes(String[] marketplaceTechnicalCodes) {
         this.marketplaceTechnicalCodes = marketplaceTechnicalCodes;
         return this;
@@ -116,6 +125,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("orderMerchantInfoSynchronizationStatus")
     public String orderMerchantInfoSynchronizationStatus;
+
     public OrderListRequestWithoutPagination withOrderMerchantInfoSynchronizationStatus(String orderMerchantInfoSynchronizationStatus) {
         this.orderMerchantInfoSynchronizationStatus = orderMerchantInfoSynchronizationStatus;
         return this;
@@ -127,6 +137,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_Buyer_Name")
     public String orderBuyerName;
+
     public OrderListRequestWithoutPagination withOrderBuyerName(String orderBuyerName) {
         this.orderBuyerName = orderBuyerName;
         return this;
@@ -138,6 +149,7 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_MerchantOrderIds")
     public String[] orderMerchantOrderIds;
+
     public OrderListRequestWithoutPagination withOrderMerchantOrderIds(String[] orderMerchantOrderIds) {
         this.orderMerchantOrderIds = orderMerchantOrderIds;
         return this;
@@ -149,9 +161,14 @@ public class OrderListRequestWithoutPagination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("storeIds")
     public String[] storeIds;
+
     public OrderListRequestWithoutPagination withStoreIds(String[] storeIds) {
         this.storeIds = storeIds;
         return this;
     }
     
+    public OrderListRequestWithoutPagination(@JsonProperty("beginPeriodUtcDate") OffsetDateTime beginPeriodUtcDate, @JsonProperty("endPeriodUtcDate") OffsetDateTime endPeriodUtcDate) {
+        this.beginPeriodUtcDate = beginPeriodUtcDate;
+        this.endPeriodUtcDate = endPeriodUtcDate;
+  }
 }

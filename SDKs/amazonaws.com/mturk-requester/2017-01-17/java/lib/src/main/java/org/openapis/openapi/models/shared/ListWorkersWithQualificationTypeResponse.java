@@ -18,6 +18,7 @@ public class ListWorkersWithQualificationTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkersWithQualificationTypeResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -26,6 +27,7 @@ public class ListWorkersWithQualificationTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumResults")
     public Long numResults;
+
     public ListWorkersWithQualificationTypeResponse withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -34,9 +36,11 @@ public class ListWorkersWithQualificationTypeResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Qualifications")
     public Qualification[] qualifications;
+
     public ListWorkersWithQualificationTypeResponse withQualifications(Qualification[] qualifications) {
         this.qualifications = qualifications;
         return this;
     }
     
+    public ListWorkersWithQualificationTypeResponse(){}
 }

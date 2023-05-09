@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateFpgaImageRequestTagSpecifications {
     
     public CreateFpgaImageRequestTagSpecificationsResourceTypeEnum resourceType;
+
     public CreateFpgaImageRequestTagSpecifications withResourceType(CreateFpgaImageRequestTagSpecificationsResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -19,9 +20,11 @@ public class CreateFpgaImageRequestTagSpecifications {
     
     
     public CreateFpgaImageRequestTagSpecificationsTags[] tags;
+
     public CreateFpgaImageRequestTagSpecifications withTags(CreateFpgaImageRequestTagSpecificationsTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateFpgaImageRequestTagSpecifications(){}
 }

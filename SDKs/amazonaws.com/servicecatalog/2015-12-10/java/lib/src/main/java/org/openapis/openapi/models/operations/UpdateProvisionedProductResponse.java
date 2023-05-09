@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateProvisionedProductResponse {
     
     public String contentType;
+
     public UpdateProvisionedProductResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateProvisionedProductResponse {
      */
     
     public Object invalidParametersException;
+
     public UpdateProvisionedProductResponse withInvalidParametersException(Object invalidParametersException) {
         this.invalidParametersException = invalidParametersException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateProvisionedProductResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateProvisionedProductResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateProvisionedProductResponse {
     
     
     public Integer statusCode;
+
     public UpdateProvisionedProductResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateProvisionedProductResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateProvisionedProductResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class UpdateProvisionedProductResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateProvisionedProductOutput updateProvisionedProductOutput;
+
     public UpdateProvisionedProductResponse withUpdateProvisionedProductOutput(org.openapis.openapi.models.shared.UpdateProvisionedProductOutput updateProvisionedProductOutput) {
         this.updateProvisionedProductOutput = updateProvisionedProductOutput;
         return this;
     }
     
+    public UpdateProvisionedProductResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

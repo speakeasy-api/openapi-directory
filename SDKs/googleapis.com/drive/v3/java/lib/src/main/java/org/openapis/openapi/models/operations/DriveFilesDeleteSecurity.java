@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DriveFilesDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesDeleteSecurityOption1 option1;
+
     public DriveFilesDeleteSecurity withOption1(DriveFilesDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DriveFilesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesDeleteSecurityOption2 option2;
+
     public DriveFilesDeleteSecurity withOption2(DriveFilesDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,9 +25,11 @@ public class DriveFilesDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DriveFilesDeleteSecurityOption3 option3;
+
     public DriveFilesDeleteSecurity withOption3(DriveFilesDeleteSecurityOption3 option3) {
         this.option3 = option3;
         return this;
     }
     
+    public DriveFilesDeleteSecurity(){}
 }

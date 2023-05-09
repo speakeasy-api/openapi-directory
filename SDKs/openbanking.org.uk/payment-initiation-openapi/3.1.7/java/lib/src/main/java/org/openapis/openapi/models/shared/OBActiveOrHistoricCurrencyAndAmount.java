@@ -15,6 +15,7 @@ public class OBActiveOrHistoricCurrencyAndAmount {
      */
     @JsonProperty("Amount")
     public String amount;
+
     public OBActiveOrHistoricCurrencyAndAmount withAmount(String amount) {
         this.amount = amount;
         return this;
@@ -25,9 +26,14 @@ public class OBActiveOrHistoricCurrencyAndAmount {
      */
     @JsonProperty("Currency")
     public String currency;
+
     public OBActiveOrHistoricCurrencyAndAmount withCurrency(String currency) {
         this.currency = currency;
         return this;
     }
     
+    public OBActiveOrHistoricCurrencyAndAmount(@JsonProperty("Amount") String amount, @JsonProperty("Currency") String currency) {
+        this.amount = amount;
+        this.currency = currency;
+  }
 }

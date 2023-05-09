@@ -15,6 +15,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Broker")
     public String broker;
+
     public KafkaSettings withBroker(String broker) {
         this.broker = broker;
         return this;
@@ -23,6 +24,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeControlDetails")
     public Boolean includeControlDetails;
+
     public KafkaSettings withIncludeControlDetails(Boolean includeControlDetails) {
         this.includeControlDetails = includeControlDetails;
         return this;
@@ -31,6 +33,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeNullAndEmpty")
     public Boolean includeNullAndEmpty;
+
     public KafkaSettings withIncludeNullAndEmpty(Boolean includeNullAndEmpty) {
         this.includeNullAndEmpty = includeNullAndEmpty;
         return this;
@@ -39,6 +42,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludePartitionValue")
     public Boolean includePartitionValue;
+
     public KafkaSettings withIncludePartitionValue(Boolean includePartitionValue) {
         this.includePartitionValue = includePartitionValue;
         return this;
@@ -47,6 +51,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeTableAlterOperations")
     public Boolean includeTableAlterOperations;
+
     public KafkaSettings withIncludeTableAlterOperations(Boolean includeTableAlterOperations) {
         this.includeTableAlterOperations = includeTableAlterOperations;
         return this;
@@ -55,6 +60,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeTransactionDetails")
     public Boolean includeTransactionDetails;
+
     public KafkaSettings withIncludeTransactionDetails(Boolean includeTransactionDetails) {
         this.includeTransactionDetails = includeTransactionDetails;
         return this;
@@ -63,6 +69,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageFormat")
     public MessageFormatValueEnum messageFormat;
+
     public KafkaSettings withMessageFormat(MessageFormatValueEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -71,6 +78,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MessageMaxBytes")
     public Long messageMaxBytes;
+
     public KafkaSettings withMessageMaxBytes(Long messageMaxBytes) {
         this.messageMaxBytes = messageMaxBytes;
         return this;
@@ -79,6 +87,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoHexPrefix")
     public Boolean noHexPrefix;
+
     public KafkaSettings withNoHexPrefix(Boolean noHexPrefix) {
         this.noHexPrefix = noHexPrefix;
         return this;
@@ -87,6 +96,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PartitionIncludeSchemaTable")
     public Boolean partitionIncludeSchemaTable;
+
     public KafkaSettings withPartitionIncludeSchemaTable(Boolean partitionIncludeSchemaTable) {
         this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
         return this;
@@ -95,6 +105,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslMechanism")
     public KafkaSaslMechanismEnum saslMechanism;
+
     public KafkaSettings withSaslMechanism(KafkaSaslMechanismEnum saslMechanism) {
         this.saslMechanism = saslMechanism;
         return this;
@@ -103,6 +114,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslPassword")
     public String saslPassword;
+
     public KafkaSettings withSaslPassword(String saslPassword) {
         this.saslPassword = saslPassword;
         return this;
@@ -111,6 +123,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SaslUsername")
     public String saslUsername;
+
     public KafkaSettings withSaslUsername(String saslUsername) {
         this.saslUsername = saslUsername;
         return this;
@@ -119,6 +132,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityProtocol")
     public KafkaSecurityProtocolEnum securityProtocol;
+
     public KafkaSettings withSecurityProtocol(KafkaSecurityProtocolEnum securityProtocol) {
         this.securityProtocol = securityProtocol;
         return this;
@@ -127,6 +141,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslCaCertificateArn")
     public String sslCaCertificateArn;
+
     public KafkaSettings withSslCaCertificateArn(String sslCaCertificateArn) {
         this.sslCaCertificateArn = sslCaCertificateArn;
         return this;
@@ -135,6 +150,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslClientCertificateArn")
     public String sslClientCertificateArn;
+
     public KafkaSettings withSslClientCertificateArn(String sslClientCertificateArn) {
         this.sslClientCertificateArn = sslClientCertificateArn;
         return this;
@@ -143,6 +159,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslClientKeyArn")
     public String sslClientKeyArn;
+
     public KafkaSettings withSslClientKeyArn(String sslClientKeyArn) {
         this.sslClientKeyArn = sslClientKeyArn;
         return this;
@@ -151,6 +168,7 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SslClientKeyPassword")
     public String sslClientKeyPassword;
+
     public KafkaSettings withSslClientKeyPassword(String sslClientKeyPassword) {
         this.sslClientKeyPassword = sslClientKeyPassword;
         return this;
@@ -159,9 +177,11 @@ public class KafkaSettings {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Topic")
     public String topic;
+
     public KafkaSettings withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public KafkaSettings(){}
 }

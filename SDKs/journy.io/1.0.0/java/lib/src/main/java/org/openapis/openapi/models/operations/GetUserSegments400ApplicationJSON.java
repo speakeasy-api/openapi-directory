@@ -15,6 +15,7 @@ public class GetUserSegments400ApplicationJSON {
      */
     @JsonProperty("errors")
     public GetUserSegments400ApplicationJSONErrors errors;
+
     public GetUserSegments400ApplicationJSON withErrors(GetUserSegments400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class GetUserSegments400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public GetUserSegments400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class GetUserSegments400ApplicationJSON {
     
     @JsonProperty("meta")
     public GetUserSegments400ApplicationJSONMeta meta;
+
     public GetUserSegments400ApplicationJSON withMeta(GetUserSegments400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public GetUserSegments400ApplicationJSON(@JsonProperty("errors") GetUserSegments400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") GetUserSegments400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

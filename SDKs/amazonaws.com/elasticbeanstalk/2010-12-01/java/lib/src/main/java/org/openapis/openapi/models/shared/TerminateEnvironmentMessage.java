@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TerminateEnvironmentMessage {
     
     public String environmentId;
+
     public TerminateEnvironmentMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,6 +20,7 @@ public class TerminateEnvironmentMessage {
     
     
     public String environmentName;
+
     public TerminateEnvironmentMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,6 +28,7 @@ public class TerminateEnvironmentMessage {
     
     
     public Boolean forceTerminate;
+
     public TerminateEnvironmentMessage withForceTerminate(Boolean forceTerminate) {
         this.forceTerminate = forceTerminate;
         return this;
@@ -33,9 +36,11 @@ public class TerminateEnvironmentMessage {
     
     
     public Boolean terminateResources;
+
     public TerminateEnvironmentMessage withTerminateResources(Boolean terminateResources) {
         this.terminateResources = terminateResources;
         return this;
     }
     
+    public TerminateEnvironmentMessage(){}
 }

@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetKeyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=token")
     public String token;
+
     public GetKeyRequest withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public GetKeyRequest(){}
 }

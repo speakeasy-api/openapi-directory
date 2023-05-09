@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeInferenceRecommendationsJobRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public DescribeInferenceRecommendationsJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
     }
     
+    public DescribeInferenceRecommendationsJobRequest(@JsonProperty("JobName") String jobName) {
+        this.jobName = jobName;
+  }
 }

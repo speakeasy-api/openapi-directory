@@ -15,9 +15,11 @@ public class AssociateConnectionAliasResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionIdentifier")
     public String connectionIdentifier;
+
     public AssociateConnectionAliasResult withConnectionIdentifier(String connectionIdentifier) {
         this.connectionIdentifier = connectionIdentifier;
         return this;
     }
     
+    public AssociateConnectionAliasResult(){}
 }

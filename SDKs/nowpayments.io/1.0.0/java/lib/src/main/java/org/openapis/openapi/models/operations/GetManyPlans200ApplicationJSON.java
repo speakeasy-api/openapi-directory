@@ -15,6 +15,7 @@ public class GetManyPlans200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public GetManyPlans200ApplicationJSON withCount(Double count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class GetManyPlans200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetManyPlans200ApplicationJSONResult[] result;
+
     public GetManyPlans200ApplicationJSON withResult(GetManyPlans200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public GetManyPlans200ApplicationJSON(){}
 }

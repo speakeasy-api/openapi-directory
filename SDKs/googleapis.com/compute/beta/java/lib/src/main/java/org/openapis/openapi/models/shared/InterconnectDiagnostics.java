@@ -18,6 +18,7 @@ public class InterconnectDiagnostics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arpCaches")
     public InterconnectDiagnosticsARPEntry[] arpCaches;
+
     public InterconnectDiagnostics withArpCaches(InterconnectDiagnosticsARPEntry[] arpCaches) {
         this.arpCaches = arpCaches;
         return this;
@@ -29,6 +30,7 @@ public class InterconnectDiagnostics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleAggregationType")
     public InterconnectDiagnosticsBundleAggregationTypeEnum bundleAggregationType;
+
     public InterconnectDiagnostics withBundleAggregationType(InterconnectDiagnosticsBundleAggregationTypeEnum bundleAggregationType) {
         this.bundleAggregationType = bundleAggregationType;
         return this;
@@ -40,6 +42,7 @@ public class InterconnectDiagnostics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleOperationalStatus")
     public InterconnectDiagnosticsBundleOperationalStatusEnum bundleOperationalStatus;
+
     public InterconnectDiagnostics withBundleOperationalStatus(InterconnectDiagnosticsBundleOperationalStatusEnum bundleOperationalStatus) {
         this.bundleOperationalStatus = bundleOperationalStatus;
         return this;
@@ -51,6 +54,7 @@ public class InterconnectDiagnostics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public InterconnectDiagnosticsLinkStatus[] links;
+
     public InterconnectDiagnostics withLinks(InterconnectDiagnosticsLinkStatus[] links) {
         this.links = links;
         return this;
@@ -62,9 +66,11 @@ public class InterconnectDiagnostics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("macAddress")
     public String macAddress;
+
     public InterconnectDiagnostics withMacAddress(String macAddress) {
         this.macAddress = macAddress;
         return this;
     }
     
+    public InterconnectDiagnostics(){}
 }

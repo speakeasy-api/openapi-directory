@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateMetricAttributionResponse {
     
     public String contentType;
+
     public CreateMetricAttributionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateMetricAttributionResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateMetricAttributionResponse createMetricAttributionResponse;
+
     public CreateMetricAttributionResponse withCreateMetricAttributionResponse(org.openapis.openapi.models.shared.CreateMetricAttributionResponse createMetricAttributionResponse) {
         this.createMetricAttributionResponse = createMetricAttributionResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateMetricAttributionResponse {
      */
     
     public Object invalidInputException;
+
     public CreateMetricAttributionResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -39,6 +43,7 @@ public class CreateMetricAttributionResponse {
      */
     
     public Object limitExceededException;
+
     public CreateMetricAttributionResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -49,6 +54,7 @@ public class CreateMetricAttributionResponse {
      */
     
     public Object resourceAlreadyExistsException;
+
     public CreateMetricAttributionResponse withResourceAlreadyExistsException(Object resourceAlreadyExistsException) {
         this.resourceAlreadyExistsException = resourceAlreadyExistsException;
         return this;
@@ -56,6 +62,7 @@ public class CreateMetricAttributionResponse {
     
     
     public Integer statusCode;
+
     public CreateMetricAttributionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateMetricAttributionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateMetricAttributionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateMetricAttributionResponse {
      */
     
     public Object resourceInUseException;
+
     public CreateMetricAttributionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -83,9 +92,14 @@ public class CreateMetricAttributionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateMetricAttributionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public CreateMetricAttributionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

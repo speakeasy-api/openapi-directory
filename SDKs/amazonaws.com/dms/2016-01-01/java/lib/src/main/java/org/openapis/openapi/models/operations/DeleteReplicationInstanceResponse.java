@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteReplicationInstanceResponse {
     
     public String contentType;
+
     public DeleteReplicationInstanceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteReplicationInstanceResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteReplicationInstanceResponse deleteReplicationInstanceResponse;
+
     public DeleteReplicationInstanceResponse withDeleteReplicationInstanceResponse(org.openapis.openapi.models.shared.DeleteReplicationInstanceResponse deleteReplicationInstanceResponse) {
         this.deleteReplicationInstanceResponse = deleteReplicationInstanceResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteReplicationInstanceResponse {
      */
     
     public Object invalidResourceStateFault;
+
     public DeleteReplicationInstanceResponse withInvalidResourceStateFault(Object invalidResourceStateFault) {
         this.invalidResourceStateFault = invalidResourceStateFault;
         return this;
@@ -36,6 +40,7 @@ public class DeleteReplicationInstanceResponse {
     
     
     public Integer statusCode;
+
     public DeleteReplicationInstanceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteReplicationInstanceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteReplicationInstanceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteReplicationInstanceResponse {
      */
     
     public Object resourceNotFoundFault;
+
     public DeleteReplicationInstanceResponse withResourceNotFoundFault(Object resourceNotFoundFault) {
         this.resourceNotFoundFault = resourceNotFoundFault;
         return this;
     }
     
+    public DeleteReplicationInstanceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

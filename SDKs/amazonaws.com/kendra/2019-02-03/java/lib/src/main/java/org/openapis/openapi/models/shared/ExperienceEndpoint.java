@@ -15,6 +15,7 @@ public class ExperienceEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Endpoint")
     public String endpoint;
+
     public ExperienceEndpoint withEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
@@ -23,9 +24,11 @@ public class ExperienceEndpoint {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointType")
     public EndpointTypeEnum endpointType;
+
     public ExperienceEndpoint withEndpointType(EndpointTypeEnum endpointType) {
         this.endpointType = endpointType;
         return this;
     }
     
+    public ExperienceEndpoint(){}
 }

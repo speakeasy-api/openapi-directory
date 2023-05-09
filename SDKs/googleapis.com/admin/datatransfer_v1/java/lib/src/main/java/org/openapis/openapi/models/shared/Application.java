@@ -18,6 +18,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Application withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Application withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Application withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Application withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +66,11 @@ public class Application {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferParams")
     public ApplicationTransferParam[] transferParams;
+
     public Application withTransferParams(ApplicationTransferParam[] transferParams) {
         this.transferParams = transferParams;
         return this;
     }
     
+    public Application(){}
 }

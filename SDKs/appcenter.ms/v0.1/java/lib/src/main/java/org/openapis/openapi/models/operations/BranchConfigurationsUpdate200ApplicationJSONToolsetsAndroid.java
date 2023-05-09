@@ -18,6 +18,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("automaticSigning")
     public Boolean automaticSigning;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withAutomaticSigning(Boolean automaticSigning) {
         this.automaticSigning = automaticSigning;
         return this;
@@ -29,6 +30,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buildVariant")
     public String buildVariant;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withBuildVariant(String buildVariant) {
         this.buildVariant = buildVariant;
         return this;
@@ -40,6 +42,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gradleWrapperPath")
     public String gradleWrapperPath;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withGradleWrapperPath(String gradleWrapperPath) {
         this.gradleWrapperPath = gradleWrapperPath;
         return this;
@@ -51,6 +54,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRoot")
     public Boolean isRoot;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withIsRoot(Boolean isRoot) {
         this.isRoot = isRoot;
         return this;
@@ -62,6 +66,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyAlias")
     public String keyAlias;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withKeyAlias(String keyAlias) {
         this.keyAlias = keyAlias;
         return this;
@@ -73,6 +78,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPassword")
     public String keyPassword;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withKeyPassword(String keyPassword) {
         this.keyPassword = keyPassword;
         return this;
@@ -84,6 +90,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keystoreEncoded")
     public String keystoreEncoded;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withKeystoreEncoded(String keystoreEncoded) {
         this.keystoreEncoded = keystoreEncoded;
         return this;
@@ -95,6 +102,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keystoreFilename")
     public String keystoreFilename;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withKeystoreFilename(String keystoreFilename) {
         this.keystoreFilename = keystoreFilename;
         return this;
@@ -106,6 +114,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keystorePassword")
     public String keystorePassword;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withKeystorePassword(String keystorePassword) {
         this.keystorePassword = keystorePassword;
         return this;
@@ -117,6 +126,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("module")
     public String module;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withModule(String module) {
         this.module = module;
         return this;
@@ -128,6 +138,7 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runLint")
     public Boolean runLint;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withRunLint(Boolean runLint) {
         this.runLint = runLint;
         return this;
@@ -139,9 +150,11 @@ public class BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runTests")
     public Boolean runTests;
+
     public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid withRunTests(Boolean runTests) {
         this.runTests = runTests;
         return this;
     }
     
+    public BranchConfigurationsUpdate200ApplicationJSONToolsetsAndroid(){}
 }

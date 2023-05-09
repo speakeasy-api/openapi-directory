@@ -65,11 +65,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AllFaresResponse res = new org.openapis.openapi.models.operations.AllFaresResponse() {{
+        org.openapis.openapi.models.operations.AllFaresResponse res = new org.openapis.openapi.models.operations.AllFaresResponse(contentType, httpRes.statusCode()) {{
             allFares200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -119,11 +117,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BestFaresResponse res = new org.openapis.openapi.models.operations.BestFaresResponse() {{
+        org.openapis.openapi.models.operations.BestFaresResponse res = new org.openapis.openapi.models.operations.BestFaresResponse(contentType, httpRes.statusCode()) {{
             bestFares200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -173,11 +169,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeepLinksResponse res = new org.openapis.openapi.models.operations.DeepLinksResponse() {{
+        org.openapis.openapi.models.operations.DeepLinksResponse res = new org.openapis.openapi.models.operations.DeepLinksResponse(contentType, httpRes.statusCode()) {{
             deepLinks200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -227,11 +221,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FaresResponse res = new org.openapis.openapi.models.operations.FaresResponse() {{
+        org.openapis.openapi.models.operations.FaresResponse res = new org.openapis.openapi.models.operations.FaresResponse(contentType, httpRes.statusCode()) {{
             fares200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -281,11 +273,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FaresSubscriptionsResponse res = new org.openapis.openapi.models.operations.FaresSubscriptionsResponse() {{
+        org.openapis.openapi.models.operations.FaresSubscriptionsResponse res = new org.openapis.openapi.models.operations.FaresSubscriptionsResponse(contentType, httpRes.statusCode()) {{
             faresSubscriptions200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -335,11 +325,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LHDeepLinksFFPResponse res = new org.openapis.openapi.models.operations.LHDeepLinksFFPResponse() {{
+        org.openapis.openapi.models.operations.LHDeepLinksFFPResponse res = new org.openapis.openapi.models.operations.LHDeepLinksFFPResponse(contentType, httpRes.statusCode()) {{
             lhDeepLinksFFP200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -389,11 +377,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LHDeepLinksITCOResponse res = new org.openapis.openapi.models.operations.LHDeepLinksITCOResponse() {{
+        org.openapis.openapi.models.operations.LHDeepLinksITCOResponse res = new org.openapis.openapi.models.operations.LHDeepLinksITCOResponse(contentType, httpRes.statusCode()) {{
             lhDeepLinksITCO200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -443,11 +429,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.LowestFaresResponse res = new org.openapis.openapi.models.operations.LowestFaresResponse() {{
+        org.openapis.openapi.models.operations.LowestFaresResponse res = new org.openapis.openapi.models.operations.LowestFaresResponse(contentType, httpRes.statusCode()) {{
             lowestFares200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -497,11 +481,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ONDRouteResponse res = new org.openapis.openapi.models.operations.ONDRouteResponse() {{
+        org.openapis.openapi.models.operations.ONDRouteResponse res = new org.openapis.openapi.models.operations.ONDRouteResponse(contentType, httpRes.statusCode()) {{
             ondRoute200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -551,11 +533,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ONDStatusResponse res = new org.openapis.openapi.models.operations.ONDStatusResponse() {{
+        org.openapis.openapi.models.operations.ONDStatusResponse res = new org.openapis.openapi.models.operations.ONDStatusResponse(contentType, httpRes.statusCode()) {{
             ondStatus200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -605,11 +585,9 @@ public class Offers {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.TopONDResponse res = new org.openapis.openapi.models.operations.TopONDResponse() {{
+        org.openapis.openapi.models.operations.TopONDResponse res = new org.openapis.openapi.models.operations.TopONDResponse(contentType, httpRes.statusCode()) {{
             topOND200ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

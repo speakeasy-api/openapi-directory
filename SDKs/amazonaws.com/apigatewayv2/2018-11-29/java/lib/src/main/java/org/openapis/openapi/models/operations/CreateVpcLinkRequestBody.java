@@ -14,6 +14,7 @@ public class CreateVpcLinkRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateVpcLinkRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -25,6 +26,7 @@ public class CreateVpcLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityGroupIds")
     public String[] securityGroupIds;
+
     public CreateVpcLinkRequestBody withSecurityGroupIds(String[] securityGroupIds) {
         this.securityGroupIds = securityGroupIds;
         return this;
@@ -35,6 +37,7 @@ public class CreateVpcLinkRequestBody {
      */
     @JsonProperty("subnetIds")
     public String[] subnetIds;
+
     public CreateVpcLinkRequestBody withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -46,9 +49,14 @@ public class CreateVpcLinkRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateVpcLinkRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateVpcLinkRequestBody(@JsonProperty("name") String name, @JsonProperty("subnetIds") String[] subnetIds) {
+        this.name = name;
+        this.subnetIds = subnetIds;
+  }
 }

@@ -15,6 +15,7 @@ public class ListAttacksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AttackSummaries")
     public AttackSummary[] attackSummaries;
+
     public ListAttacksResponse withAttackSummaries(AttackSummary[] attackSummaries) {
         this.attackSummaries = attackSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListAttacksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListAttacksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListAttacksResponse(){}
 }

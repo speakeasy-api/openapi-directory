@@ -12,6 +12,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationMeanVarianceEfficientRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationMeanVarianceEfficientRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,6 +34,7 @@ public class PostPortfolioOptimizationMeanVarianceEfficientRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostPortfolioOptimizationMeanVarianceEfficientRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
@@ -39,9 +42,16 @@ public class PostPortfolioOptimizationMeanVarianceEfficientRequestBody {
     
     @JsonProperty("constraints")
     public PostPortfolioOptimizationMeanVarianceEfficientRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationMeanVarianceEfficientRequestBody withConstraints(PostPortfolioOptimizationMeanVarianceEfficientRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationMeanVarianceEfficientRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns, @JsonProperty("constraints") PostPortfolioOptimizationMeanVarianceEfficientRequestBodyConstraints constraints) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+        this.constraints = constraints;
+  }
 }

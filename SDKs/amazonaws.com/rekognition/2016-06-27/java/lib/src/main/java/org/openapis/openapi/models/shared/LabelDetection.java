@@ -15,6 +15,7 @@ public class LabelDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DurationMillis")
     public Long durationMillis;
+
     public LabelDetection withDurationMillis(Long durationMillis) {
         this.durationMillis = durationMillis;
         return this;
@@ -23,6 +24,7 @@ public class LabelDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTimestampMillis")
     public Long endTimestampMillis;
+
     public LabelDetection withEndTimestampMillis(Long endTimestampMillis) {
         this.endTimestampMillis = endTimestampMillis;
         return this;
@@ -31,6 +33,7 @@ public class LabelDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Label")
     public Label label;
+
     public LabelDetection withLabel(Label label) {
         this.label = label;
         return this;
@@ -39,6 +42,7 @@ public class LabelDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTimestampMillis")
     public Long startTimestampMillis;
+
     public LabelDetection withStartTimestampMillis(Long startTimestampMillis) {
         this.startTimestampMillis = startTimestampMillis;
         return this;
@@ -47,9 +51,11 @@ public class LabelDetection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timestamp")
     public Long timestamp;
+
     public LabelDetection withTimestamp(Long timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public LabelDetection(){}
 }

@@ -3,39 +3,38 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-import org.openapis.openapi.models.shared.Security;
 import org.openapis.openapi.models.operations.DeleteSessionRequest;
 import org.openapis.openapi.models.operations.DeleteSessionResponse;
+import org.openapis.openapi.models.shared.Security;
 
 public class Application {
     public static void main(String[] args) {
         try {
             SDK sdk = SDK.builder()
-                .setSecurity(new Security() {{
+                .setSecurity(new Security("corrupti") {{
                     hmac = "YOUR_API_KEY_HERE";
                 }})
                 .build();
 
-            DeleteSessionRequest req = new DeleteSessionRequest() {{
-                xAmzAlgorithm = "corrupti";
-                xAmzContentSha256 = "provident";
-                xAmzCredential = "distinctio";
-                xAmzDate = "quibusdam";
-                xAmzSecurityToken = "unde";
-                xAmzSignature = "nulla";
-                xAmzSignedHeaders = "corrupti";
-                botAlias = "illum";
-                botName = "vel";
-                userId = "error";
-            }}            
+            DeleteSessionRequest req = new DeleteSessionRequest("provident", "distinctio", "quibusdam") {{
+                xAmzAlgorithm = "unde";
+                xAmzContentSha256 = "nulla";
+                xAmzCredential = "corrupti";
+                xAmzDate = "illum";
+                xAmzSecurityToken = "vel";
+                xAmzSignature = "error";
+                xAmzSignedHeaders = "deserunt";
+            }};            
 
             DeleteSessionResponse res = sdk.deleteSession(req);
 
-            if (res.deleteSessionResponse.isPresent()) {
+            if (res.deleteSessionResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

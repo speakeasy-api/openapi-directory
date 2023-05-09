@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAcceleratorResponse {
@@ -12,6 +13,7 @@ public class DeleteAcceleratorResponse {
      */
     
     public Object acceleratorNotDisabledException;
+
     public DeleteAcceleratorResponse withAcceleratorNotDisabledException(Object acceleratorNotDisabledException) {
         this.acceleratorNotDisabledException = acceleratorNotDisabledException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAcceleratorResponse {
      */
     
     public Object acceleratorNotFoundException;
+
     public DeleteAcceleratorResponse withAcceleratorNotFoundException(Object acceleratorNotFoundException) {
         this.acceleratorNotFoundException = acceleratorNotFoundException;
         return this;
@@ -32,6 +35,7 @@ public class DeleteAcceleratorResponse {
      */
     
     public Object associatedListenerFoundException;
+
     public DeleteAcceleratorResponse withAssociatedListenerFoundException(Object associatedListenerFoundException) {
         this.associatedListenerFoundException = associatedListenerFoundException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteAcceleratorResponse {
     
     
     public String contentType;
+
     public DeleteAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class DeleteAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public DeleteAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public DeleteAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public DeleteAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

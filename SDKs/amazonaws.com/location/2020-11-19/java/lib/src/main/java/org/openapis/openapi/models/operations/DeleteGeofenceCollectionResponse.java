@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteGeofenceCollectionResponse {
@@ -12,6 +13,7 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteGeofenceCollectionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteGeofenceCollectionResponse {
     
     
     public String contentType;
+
     public DeleteGeofenceCollectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public java.util.Map<String, Object> deleteGeofenceCollectionResponse;
+
     public DeleteGeofenceCollectionResponse withDeleteGeofenceCollectionResponse(java.util.Map<String, Object> deleteGeofenceCollectionResponse) {
         this.deleteGeofenceCollectionResponse = deleteGeofenceCollectionResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public Object internalServerException;
+
     public DeleteGeofenceCollectionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteGeofenceCollectionResponse {
     
     
     public Integer statusCode;
+
     public DeleteGeofenceCollectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteGeofenceCollectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteGeofenceCollectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteGeofenceCollectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteGeofenceCollectionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteGeofenceCollectionResponse {
      */
     
     public Object validationException;
+
     public DeleteGeofenceCollectionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteGeofenceCollectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderListLightWithLinks {
     @JsonProperty("links")
     public OrderListLightLinks links;
+
     public OrderListLightWithLinks withLinks(OrderListLightLinks links) {
         this.links = links;
         return this;
@@ -19,6 +20,7 @@ public class OrderListLightWithLinks {
     
     @JsonProperty("orders")
     public OrderHeaderWithLinks[] orders;
+
     public OrderListLightWithLinks withOrders(OrderHeaderWithLinks[] orders) {
         this.orders = orders;
         return this;
@@ -26,9 +28,15 @@ public class OrderListLightWithLinks {
     
     @JsonProperty("paginationResult")
     public PaginationResult paginationResult;
+
     public OrderListLightWithLinks withPaginationResult(PaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public OrderListLightWithLinks(@JsonProperty("links") OrderListLightLinks links, @JsonProperty("orders") OrderHeaderWithLinks[] orders, @JsonProperty("paginationResult") PaginationResult paginationResult) {
+        this.links = links;
+        this.orders = orders;
+        this.paginationResult = paginationResult;
+  }
 }

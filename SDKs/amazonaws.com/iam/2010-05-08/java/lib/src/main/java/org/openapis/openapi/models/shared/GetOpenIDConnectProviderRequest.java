@@ -4,14 +4,18 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetOpenIDConnectProviderRequest {
     
     public String openIDConnectProviderArn;
+
     public GetOpenIDConnectProviderRequest withOpenIDConnectProviderArn(String openIDConnectProviderArn) {
         this.openIDConnectProviderArn = openIDConnectProviderArn;
         return this;
     }
     
+    public GetOpenIDConnectProviderRequest(@JsonProperty("OpenIDConnectProviderArn") String openIDConnectProviderArn) {
+        this.openIDConnectProviderArn = openIDConnectProviderArn;
+  }
 }

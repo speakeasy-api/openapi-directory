@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateRecommenderResponse {
     
     public String contentType;
+
     public UpdateRecommenderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateRecommenderResponse {
      */
     
     public Object invalidInputException;
+
     public UpdateRecommenderResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateRecommenderResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateRecommenderResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateRecommenderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateRecommenderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateRecommenderResponse {
     
     
     public Integer statusCode;
+
     public UpdateRecommenderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateRecommenderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateRecommenderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UpdateRecommenderResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateRecommenderResponse updateRecommenderResponse;
+
     public UpdateRecommenderResponse withUpdateRecommenderResponse(org.openapis.openapi.models.shared.UpdateRecommenderResponse updateRecommenderResponse) {
         this.updateRecommenderResponse = updateRecommenderResponse;
         return this;
     }
     
+    public UpdateRecommenderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

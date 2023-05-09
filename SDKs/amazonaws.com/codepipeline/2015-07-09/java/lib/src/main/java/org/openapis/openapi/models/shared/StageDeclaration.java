@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StageDeclaration {
     @JsonProperty("actions")
     public ActionDeclaration[] actions;
+
     public StageDeclaration withActions(ActionDeclaration[] actions) {
         this.actions = actions;
         return this;
@@ -22,6 +23,7 @@ public class StageDeclaration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockers")
     public BlockerDeclaration[] blockers;
+
     public StageDeclaration withBlockers(BlockerDeclaration[] blockers) {
         this.blockers = blockers;
         return this;
@@ -29,9 +31,14 @@ public class StageDeclaration {
     
     @JsonProperty("name")
     public String name;
+
     public StageDeclaration withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StageDeclaration(@JsonProperty("actions") ActionDeclaration[] actions, @JsonProperty("name") String name) {
+        this.actions = actions;
+        this.name = name;
+  }
 }

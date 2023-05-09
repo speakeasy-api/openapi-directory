@@ -12,6 +12,7 @@ public class UpdateAccountRequest {
      */
     @JsonProperty("accountCode")
     public String accountCode;
+
     public UpdateAccountRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -19,9 +20,14 @@ public class UpdateAccountRequest {
     
     @JsonProperty("payoutSchedule")
     public UpdatePayoutScheduleRequest payoutSchedule;
+
     public UpdateAccountRequest withPayoutSchedule(UpdatePayoutScheduleRequest payoutSchedule) {
         this.payoutSchedule = payoutSchedule;
         return this;
     }
     
+    public UpdateAccountRequest(@JsonProperty("accountCode") String accountCode, @JsonProperty("payoutSchedule") UpdatePayoutScheduleRequest payoutSchedule) {
+        this.accountCode = accountCode;
+        this.payoutSchedule = payoutSchedule;
+  }
 }

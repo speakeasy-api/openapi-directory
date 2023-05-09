@@ -18,6 +18,7 @@ public class APIClassifierTaxonomyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifierName")
     public String classifierName;
+
     public APIClassifierTaxonomyOut withClassifierName(String classifierName) {
         this.classifierName = classifierName;
         return this;
@@ -29,6 +30,7 @@ public class APIClassifierTaxonomyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("classifyingScripts")
     public String[] classifyingScripts;
+
     public APIClassifierTaxonomyOut withClassifyingScripts(String[] classifyingScripts) {
         this.classifyingScripts = classifyingScripts;
         return this;
@@ -40,9 +42,11 @@ public class APIClassifierTaxonomyOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taxonomyClasses")
     public String[] taxonomyClasses;
+
     public APIClassifierTaxonomyOut withTaxonomyClasses(String[] taxonomyClasses) {
         this.taxonomyClasses = taxonomyClasses;
         return this;
     }
     
+    public APIClassifierTaxonomyOut(){}
 }

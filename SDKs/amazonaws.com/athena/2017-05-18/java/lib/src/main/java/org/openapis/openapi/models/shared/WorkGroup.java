@@ -20,6 +20,7 @@ public class WorkGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public WorkGroupConfiguration configuration;
+
     public WorkGroup withConfiguration(WorkGroupConfiguration configuration) {
         this.configuration = configuration;
         return this;
@@ -30,6 +31,7 @@ public class WorkGroup {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public WorkGroup withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class WorkGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public WorkGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -45,6 +48,7 @@ public class WorkGroup {
     
     @JsonProperty("Name")
     public String name;
+
     public WorkGroup withName(String name) {
         this.name = name;
         return this;
@@ -53,9 +57,13 @@ public class WorkGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public WorkGroupStateEnum state;
+
     public WorkGroup withState(WorkGroupStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public WorkGroup(@JsonProperty("Name") String name) {
+        this.name = name;
+  }
 }

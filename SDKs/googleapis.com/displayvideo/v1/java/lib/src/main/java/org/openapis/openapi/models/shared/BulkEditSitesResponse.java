@@ -18,9 +18,11 @@ public class BulkEditSitesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public Site[] sites;
+
     public BulkEditSitesResponse withSites(Site[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public BulkEditSitesResponse(){}
 }

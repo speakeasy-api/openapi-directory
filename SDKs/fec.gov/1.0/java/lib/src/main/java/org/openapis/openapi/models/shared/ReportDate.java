@@ -18,6 +18,7 @@ public class ReportDate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("create_date")
     public LocalDate createDate;
+
     public ReportDate withCreateDate(LocalDate createDate) {
         this.createDate = createDate;
         return this;
@@ -30,6 +31,7 @@ public class ReportDate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("due_date")
     public LocalDate dueDate;
+
     public ReportDate withDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
         return this;
@@ -38,6 +40,7 @@ public class ReportDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public ReportDate withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -46,6 +49,7 @@ public class ReportDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type_full")
     public String reportTypeFull;
+
     public ReportDate withReportTypeFull(String reportTypeFull) {
         this.reportTypeFull = reportTypeFull;
         return this;
@@ -61,6 +65,7 @@ public class ReportDate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public Integer reportYear;
+
     public ReportDate withReportYear(Integer reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -73,9 +78,11 @@ public class ReportDate {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("update_date")
     public LocalDate updateDate;
+
     public ReportDate withUpdateDate(LocalDate updateDate) {
         this.updateDate = updateDate;
         return this;
     }
     
+    public ReportDate(){}
 }

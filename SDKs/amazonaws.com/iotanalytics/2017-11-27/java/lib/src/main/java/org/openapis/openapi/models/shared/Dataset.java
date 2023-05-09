@@ -20,6 +20,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public DatasetAction[] actions;
+
     public Dataset withActions(DatasetAction[] actions) {
         this.actions = actions;
         return this;
@@ -28,6 +29,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public Dataset withArn(String arn) {
         this.arn = arn;
         return this;
@@ -36,6 +38,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentDeliveryRules")
     public DatasetContentDeliveryRule[] contentDeliveryRules;
+
     public Dataset withContentDeliveryRules(DatasetContentDeliveryRule[] contentDeliveryRules) {
         this.contentDeliveryRules = contentDeliveryRules;
         return this;
@@ -46,6 +49,7 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public Dataset withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -56,6 +60,7 @@ public class Dataset {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdateTime")
     public OffsetDateTime lastUpdateTime;
+
     public Dataset withLastUpdateTime(OffsetDateTime lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
         return this;
@@ -64,6 +69,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lateDataRules")
     public LateDataRule[] lateDataRules;
+
     public Dataset withLateDataRules(LateDataRule[] lateDataRules) {
         this.lateDataRules = lateDataRules;
         return this;
@@ -72,6 +78,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Dataset withName(String name) {
         this.name = name;
         return this;
@@ -80,6 +87,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionPeriod")
     public RetentionPeriod retentionPeriod;
+
     public Dataset withRetentionPeriod(RetentionPeriod retentionPeriod) {
         this.retentionPeriod = retentionPeriod;
         return this;
@@ -88,6 +96,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public DatasetStatusEnum status;
+
     public Dataset withStatus(DatasetStatusEnum status) {
         this.status = status;
         return this;
@@ -96,6 +105,7 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggers")
     public DatasetTrigger[] triggers;
+
     public Dataset withTriggers(DatasetTrigger[] triggers) {
         this.triggers = triggers;
         return this;
@@ -104,9 +114,11 @@ public class Dataset {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("versioningConfiguration")
     public VersioningConfiguration versioningConfiguration;
+
     public Dataset withVersioningConfiguration(VersioningConfiguration versioningConfiguration) {
         this.versioningConfiguration = versioningConfiguration;
         return this;
     }
     
+    public Dataset(){}
 }

@@ -15,6 +15,7 @@ public class LakeConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encryptionKey")
     public String encryptionKey;
+
     public LakeConfigurationRequest withEncryptionKey(String encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -23,6 +24,7 @@ public class LakeConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationDestinationRegions")
     public RegionEnum[] replicationDestinationRegions;
+
     public LakeConfigurationRequest withReplicationDestinationRegions(RegionEnum[] replicationDestinationRegions) {
         this.replicationDestinationRegions = replicationDestinationRegions;
         return this;
@@ -31,6 +33,7 @@ public class LakeConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("replicationRoleArn")
     public String replicationRoleArn;
+
     public LakeConfigurationRequest withReplicationRoleArn(String replicationRoleArn) {
         this.replicationRoleArn = replicationRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class LakeConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retentionSettings")
     public RetentionSetting[] retentionSettings;
+
     public LakeConfigurationRequest withRetentionSettings(RetentionSetting[] retentionSettings) {
         this.retentionSettings = retentionSettings;
         return this;
@@ -47,9 +51,11 @@ public class LakeConfigurationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tagsMap")
     public java.util.Map<String, String> tagsMap;
+
     public LakeConfigurationRequest withTagsMap(java.util.Map<String, String> tagsMap) {
         this.tagsMap = tagsMap;
         return this;
     }
     
+    public LakeConfigurationRequest(){}
 }

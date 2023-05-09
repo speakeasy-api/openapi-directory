@@ -35,4 +35,5 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetV1VerificationResult
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendFormatEnum.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/PostV1VerificationSendResponse.java
+docs/sdk/README.md
 USAGE.md

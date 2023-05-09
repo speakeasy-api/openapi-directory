@@ -18,9 +18,11 @@ public class MobileApplicationTargeting {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstPartyTargeting")
     public FirstPartyMobileApplicationTargeting firstPartyTargeting;
+
     public MobileApplicationTargeting withFirstPartyTargeting(FirstPartyMobileApplicationTargeting firstPartyTargeting) {
         this.firstPartyTargeting = firstPartyTargeting;
         return this;
     }
     
+    public MobileApplicationTargeting(){}
 }

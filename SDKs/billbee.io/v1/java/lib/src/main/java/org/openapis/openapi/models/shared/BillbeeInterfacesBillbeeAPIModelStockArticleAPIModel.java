@@ -12,6 +12,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withName(String name) {
         this.name = name;
         return this;
@@ -20,6 +21,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockCode")
     public String stockCode;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withStockCode(String stockCode) {
         this.stockCode = stockCode;
         return this;
@@ -28,6 +30,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockCurrent")
     public Double stockCurrent;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withStockCurrent(Double stockCurrent) {
         this.stockCurrent = stockCurrent;
         return this;
@@ -36,6 +39,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockDesired")
     public Double stockDesired;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withStockDesired(Double stockDesired) {
         this.stockDesired = stockDesired;
         return this;
@@ -44,6 +48,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockId")
     public Long stockId;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withStockId(Long stockId) {
         this.stockId = stockId;
         return this;
@@ -52,6 +57,7 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StockWarning")
     public Double stockWarning;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withStockWarning(Double stockWarning) {
         this.stockWarning = stockWarning;
         return this;
@@ -60,9 +66,11 @@ public class BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnfulfilledAmount")
     public Double unfulfilledAmount;
+
     public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel withUnfulfilledAmount(Double unfulfilledAmount) {
         this.unfulfilledAmount = unfulfilledAmount;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelStockArticleAPIModel(){}
 }

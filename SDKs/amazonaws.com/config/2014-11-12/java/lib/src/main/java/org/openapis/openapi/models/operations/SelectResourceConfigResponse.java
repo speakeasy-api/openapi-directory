@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SelectResourceConfigResponse {
     
     public String contentType;
+
     public SelectResourceConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SelectResourceConfigResponse {
      */
     
     public Object invalidExpressionException;
+
     public SelectResourceConfigResponse withInvalidExpressionException(Object invalidExpressionException) {
         this.invalidExpressionException = invalidExpressionException;
         return this;
@@ -29,6 +32,7 @@ public class SelectResourceConfigResponse {
      */
     
     public Object invalidLimitException;
+
     public SelectResourceConfigResponse withInvalidLimitException(Object invalidLimitException) {
         this.invalidLimitException = invalidLimitException;
         return this;
@@ -39,6 +43,7 @@ public class SelectResourceConfigResponse {
      */
     
     public Object invalidNextTokenException;
+
     public SelectResourceConfigResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -49,6 +54,7 @@ public class SelectResourceConfigResponse {
      */
     
     public org.openapis.openapi.models.shared.SelectResourceConfigResponse selectResourceConfigResponse;
+
     public SelectResourceConfigResponse withSelectResourceConfigResponse(org.openapis.openapi.models.shared.SelectResourceConfigResponse selectResourceConfigResponse) {
         this.selectResourceConfigResponse = selectResourceConfigResponse;
         return this;
@@ -56,6 +62,7 @@ public class SelectResourceConfigResponse {
     
     
     public Integer statusCode;
+
     public SelectResourceConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class SelectResourceConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SelectResourceConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SelectResourceConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

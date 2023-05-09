@@ -18,6 +18,7 @@ public class WmxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionLevel")
     public WmxSitePermissionLevelEnum permissionLevel;
+
     public WmxSite withPermissionLevel(WmxSitePermissionLevelEnum permissionLevel) {
         this.permissionLevel = permissionLevel;
         return this;
@@ -29,9 +30,11 @@ public class WmxSite {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("siteUrl")
     public String siteUrl;
+
     public WmxSite withSiteUrl(String siteUrl) {
         this.siteUrl = siteUrl;
         return this;
     }
     
+    public WmxSite(){}
 }

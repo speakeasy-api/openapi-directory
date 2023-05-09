@@ -19,6 +19,7 @@ public class GetClassifications400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parameter")
     public String parameter;
+
     public GetClassifications400ApplicationVndApiPlusJsonErrorsSource withParameter(String parameter) {
         this.parameter = parameter;
         return this;
@@ -31,9 +32,11 @@ public class GetClassifications400ApplicationVndApiPlusJsonErrorsSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pointer")
     public String pointer;
+
     public GetClassifications400ApplicationVndApiPlusJsonErrorsSource withPointer(String pointer) {
         this.pointer = pointer;
         return this;
     }
     
+    public GetClassifications400ApplicationVndApiPlusJsonErrorsSource(){}
 }

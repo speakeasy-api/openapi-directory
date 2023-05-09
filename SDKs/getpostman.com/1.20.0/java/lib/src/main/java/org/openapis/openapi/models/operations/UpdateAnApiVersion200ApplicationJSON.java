@@ -15,9 +15,11 @@ public class UpdateAnApiVersion200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public UpdateAnApiVersion200ApplicationJSONVersion version;
+
     public UpdateAnApiVersion200ApplicationJSON withVersion(UpdateAnApiVersion200ApplicationJSONVersion version) {
         this.version = version;
         return this;
     }
     
+    public UpdateAnApiVersion200ApplicationJSON(){}
 }

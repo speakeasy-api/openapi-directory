@@ -15,9 +15,11 @@ public class DeleteVpcEndpointResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleteVpcEndpointDetail")
     public DeleteVpcEndpointDetail deleteVpcEndpointDetail;
+
     public DeleteVpcEndpointResponse withDeleteVpcEndpointDetail(DeleteVpcEndpointDetail deleteVpcEndpointDetail) {
         this.deleteVpcEndpointDetail = deleteVpcEndpointDetail;
         return this;
     }
     
+    public DeleteVpcEndpointResponse(){}
 }

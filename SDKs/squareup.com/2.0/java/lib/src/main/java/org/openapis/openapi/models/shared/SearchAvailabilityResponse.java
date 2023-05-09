@@ -18,6 +18,7 @@ public class SearchAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availabilities")
     public Availability[] availabilities;
+
     public SearchAvailabilityResponse withAvailabilities(Availability[] availabilities) {
         this.availabilities = availabilities;
         return this;
@@ -29,9 +30,11 @@ public class SearchAvailabilityResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public Error[] errors;
+
     public SearchAvailabilityResponse withErrors(Error[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public SearchAvailabilityResponse(){}
 }

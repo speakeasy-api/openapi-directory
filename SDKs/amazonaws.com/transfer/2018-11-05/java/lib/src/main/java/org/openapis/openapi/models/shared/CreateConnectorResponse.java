@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateConnectorResponse {
     @JsonProperty("ConnectorId")
     public String connectorId;
+
     public CreateConnectorResponse withConnectorId(String connectorId) {
         this.connectorId = connectorId;
         return this;
     }
     
+    public CreateConnectorResponse(@JsonProperty("ConnectorId") String connectorId) {
+        this.connectorId = connectorId;
+  }
 }

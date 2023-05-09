@@ -16,24 +16,23 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateSecurity;
 import org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateRequest;
 import org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateResponse;
+import org.openapis.openapi.models.operations.RemotebuildexecutionProjectsInstancesCreateSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput;
-import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput;
-import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig;
+import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum;
+import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature;
+import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum;
 import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum;
-import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy;
-import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum;
-import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature;
+import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput;
+import org.openapis.openapi.models.shared.GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -42,30 +41,29 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            RemotebuildexecutionProjectsInstancesCreateRequest req = new RemotebuildexecutionProjectsInstancesCreateRequest() {{
-                dollarXgafv = "2";
+            RemotebuildexecutionProjectsInstancesCreateRequest req = new RemotebuildexecutionProjectsInstancesCreateRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
                 googleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaCreateInstanceRequestInput() {{
                     instance = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaInstanceInput() {{
                         featurePolicy = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicy() {{
-                            actionHermeticity = "ACTION_HERMETICITY_ENFORCED";
-                            actionIsolation = "ACTION_ISOLATION_ENFORCED";
+                            actionHermeticity = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionHermeticityEnum.ACTION_HERMETICITY_ENFORCED;
+                            actionIsolation = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyActionIsolationEnum.ACTION_ISOLATION_ENFORCED;
                             containerImageSources = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
-                                    add("unde"),
                                     add("nulla"),
                                     add("corrupti"),
                                     add("illum"),
                                 }};
-                                policy = "ALLOWED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.ALLOWED;
+                            }};;
                             dockerAddCapabilities = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("deserunt"),
                                     add("suscipit"),
                                     add("iure"),
                                 }};
-                                policy = "ALLOWED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.ALLOWED;
+                            }};;
                             dockerChrootPath = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("ipsa"),
@@ -73,8 +71,8 @@ public class Application {
                                     add("tempora"),
                                     add("suscipit"),
                                 }};
-                                policy = "ALLOWED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.ALLOWED;
+                            }};;
                             dockerNetwork = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("placeat"),
@@ -82,8 +80,8 @@ public class Application {
                                     add("iusto"),
                                     add("excepturi"),
                                 }};
-                                policy = "ALLOWED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.ALLOWED;
+                            }};;
                             dockerPrivileged = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("temporibus"),
@@ -91,14 +89,14 @@ public class Application {
                                     add("quis"),
                                     add("veritatis"),
                                 }};
-                                policy = "FORBIDDEN";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.FORBIDDEN;
+                            }};;
                             dockerRunAsContainerProvidedUser = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("ipsam"),
                                 }};
-                                policy = "RESTRICTED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.RESTRICTED;
+                            }};;
                             dockerRunAsRoot = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("quo"),
@@ -106,61 +104,62 @@ public class Application {
                                     add("at"),
                                     add("at"),
                                 }};
-                                policy = "RESTRICTED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.RESTRICTED;
+                            }};;
                             dockerRuntime = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("quod"),
                                     add("quod"),
                                 }};
-                                policy = "ALLOWED";
-                            }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.ALLOWED;
+                            }};;
                             dockerSiblingContainers = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeature() {{
                                 allowedValues = new String[]{{
                                     add("porro"),
                                     add("dolorum"),
                                     add("dicta"),
                                 }};
-                                policy = "FORBIDDEN";
-                            }};
-                            linuxExecution = "LINUX_EXECUTION_HARDENED_GVISOR";
-                            linuxIsolation = "GVISOR";
-                            macExecution = "MAC_EXECUTION_UNSPECIFIED";
-                            vmVerification = "VM_VERIFICATION_GCP_TOKEN";
-                            windowsExecution = "WINDOWS_EXECUTION_TERMINAL";
-                        }};
+                                policy = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeaturePolicyEnum.FORBIDDEN;
+                            }};;
+                            linuxExecution = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxExecutionEnum.LINUX_EXECUTION_HARDENED_GVISOR;
+                            linuxIsolation = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolationEnum.GVISOR;
+                            macExecution = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyMacExecutionEnum.MAC_EXECUTION_UNSPECIFIED;
+                            vmVerification = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyVmVerificationEnum.VM_VERIFICATION_GCP_TOKEN;
+                            windowsExecution = GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyWindowsExecutionEnum.WINDOWS_EXECUTION_TERMINAL;
+                        }};;
                         location = "optio";
                         schedulerNotificationConfig = new GoogleDevtoolsRemotebuildexecutionAdminV1alphaSchedulerNotificationConfig() {{
                             topic = "totam";
-                        }};
-                    }};
+                        }};;
+                    }};;
                     instanceId = "beatae";
                     parent = "commodi";
-                }};
+                }};;
                 accessToken = "molestiae";
-                alt = "json";
+                alt = AltEnum.JSON;
                 callback = "qui";
                 fields = "impedit";
                 key = "cum";
                 oauthToken = "esse";
-                parent = "ipsum";
                 prettyPrint = false;
-                quotaUser = "excepturi";
-                uploadType = "aspernatur";
-                uploadProtocol = "perferendis";
-            }}            
+                quotaUser = "ipsum";
+                uploadType = "excepturi";
+                uploadProtocol = "aspernatur";
+            }};            
 
-            RemotebuildexecutionProjectsInstancesCreateResponse res = sdk.projects.remotebuildexecutionProjectsInstancesCreate(req, new RemotebuildexecutionProjectsInstancesCreateSecurity() {{
+            RemotebuildexecutionProjectsInstancesCreateResponse res = sdk.projects.remotebuildexecutionProjectsInstancesCreate(req, new RemotebuildexecutionProjectsInstancesCreateSecurity("perferendis", "ad") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.googleLongrunningOperation.isPresent()) {
+            if (res.googleLongrunningOperation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -168,16 +167,16 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `remotebuildexecutionProjectsInstancesCreate` - Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
-* `remotebuildexecutionProjectsInstancesList` - Lists instances in a project.
-* `remotebuildexecutionProjectsInstancesTestNotify` - Sends a test notification to the specified instance. Returns a `google.protobuf.Empty` on success.
-* `remotebuildexecutionProjectsInstancesWorkerpoolsCreate` - Creates a new worker pool with a specified size and configuration. Returns a long running operation which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `CREATING`.
-* `remotebuildexecutionProjectsInstancesWorkerpoolsDelete` - Deletes the specified worker pool. Returns a long running operation, which contains a `google.protobuf.Empty` response on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `DELETING`.
-* `remotebuildexecutionProjectsInstancesWorkerpoolsList` - Lists worker pools in an instance.
-* `remotebuildexecutionProjectsInstancesWorkerpoolsPatch` - Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
-* `remotebuildexecutionProjectsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [remotebuildexecutionProjectsInstancesCreate](docs/projects/README.md#remotebuildexecutionprojectsinstancescreate) - Creates a new instance in the specified region. Returns a long running operation which contains an instance on completion. While the long running operation is in progress, any call to `GetInstance` returns an instance in state `CREATING`.
+* [remotebuildexecutionProjectsInstancesList](docs/projects/README.md#remotebuildexecutionprojectsinstanceslist) - Lists instances in a project.
+* [remotebuildexecutionProjectsInstancesTestNotify](docs/projects/README.md#remotebuildexecutionprojectsinstancestestnotify) - Sends a test notification to the specified instance. Returns a `google.protobuf.Empty` on success.
+* [remotebuildexecutionProjectsInstancesWorkerpoolsCreate](docs/projects/README.md#remotebuildexecutionprojectsinstancesworkerpoolscreate) - Creates a new worker pool with a specified size and configuration. Returns a long running operation which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `CREATING`.
+* [remotebuildexecutionProjectsInstancesWorkerpoolsDelete](docs/projects/README.md#remotebuildexecutionprojectsinstancesworkerpoolsdelete) - Deletes the specified worker pool. Returns a long running operation, which contains a `google.protobuf.Empty` response on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `DELETING`.
+* [remotebuildexecutionProjectsInstancesWorkerpoolsList](docs/projects/README.md#remotebuildexecutionprojectsinstancesworkerpoolslist) - Lists worker pools in an instance.
+* [remotebuildexecutionProjectsInstancesWorkerpoolsPatch](docs/projects/README.md#remotebuildexecutionprojectsinstancesworkerpoolspatch) - Updates an existing worker pool with a specified size and/or configuration. Returns a long running operation, which contains a worker pool on completion. While the long running operation is in progress, any call to `GetWorkerPool` returns a worker pool in state `UPDATING`.
+* [remotebuildexecutionProjectsOperationsGet](docs/projects/README.md#remotebuildexecutionprojectsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
 <!-- End SDK Available Operations -->
 
 ### Maturity

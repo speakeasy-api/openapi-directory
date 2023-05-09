@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IngestionS3InputConfiguration {
     @JsonProperty("Bucket")
     public String bucket;
+
     public IngestionS3InputConfiguration withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,6 +23,7 @@ public class IngestionS3InputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyPattern")
     public String keyPattern;
+
     public IngestionS3InputConfiguration withKeyPattern(String keyPattern) {
         this.keyPattern = keyPattern;
         return this;
@@ -30,9 +32,13 @@ public class IngestionS3InputConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Prefix")
     public String prefix;
+
     public IngestionS3InputConfiguration withPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
     
+    public IngestionS3InputConfiguration(@JsonProperty("Bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

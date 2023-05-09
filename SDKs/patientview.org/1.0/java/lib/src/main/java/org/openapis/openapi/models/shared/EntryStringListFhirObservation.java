@@ -9,9 +9,11 @@ package org.openapis.openapi.models.shared;
 public class EntryStringListFhirObservation {
     
     public FhirObservation[] key;
+
     public EntryStringListFhirObservation withKey(FhirObservation[] key) {
         this.key = key;
         return this;
     }
     
+    public EntryStringListFhirObservation(){}
 }

@@ -15,6 +15,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cashier")
     public String cashier;
+
     public Transactions withCashier(String cashier) {
         this.cashier = cashier;
         return this;
@@ -26,6 +27,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeStamp")
     public Long timeStamp;
+
     public Transactions withTimeStamp(Long timeStamp) {
         this.timeStamp = timeStamp;
         return this;
@@ -37,6 +39,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txid")
     public String txid;
+
     public Transactions withTxid(String txid) {
         this.txid = txid;
         return this;
@@ -48,6 +51,7 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txtype")
     public String txtype;
+
     public Transactions withTxtype(String txtype) {
         this.txtype = txtype;
         return this;
@@ -59,9 +63,11 @@ public class Transactions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Long value;
+
     public Transactions withValue(Long value) {
         this.value = value;
         return this;
     }
     
+    public Transactions(){}
 }

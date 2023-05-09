@@ -18,6 +18,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baseSpecs")
     public java.util.Map<String, Object>[] baseSpecs;
+
     public Source withBaseSpecs(java.util.Map<String, Object>[] baseSpecs) {
         this.baseSpecs = baseSpecs;
         return this;
@@ -29,6 +30,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public java.util.Map<String, Object> codec;
+
     public Source withCodec(java.util.Map<String, Object> codec) {
         this.codec = codec;
         return this;
@@ -40,6 +42,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doesNotNeedSplitting")
     public Boolean doesNotNeedSplitting;
+
     public Source withDoesNotNeedSplitting(Boolean doesNotNeedSplitting) {
         this.doesNotNeedSplitting = doesNotNeedSplitting;
         return this;
@@ -51,6 +54,7 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public SourceMetadata metadata;
+
     public Source withMetadata(SourceMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -62,9 +66,11 @@ public class Source {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public java.util.Map<String, Object> spec;
+
     public Source withSpec(java.util.Map<String, Object> spec) {
         this.spec = spec;
         return this;
     }
     
+    public Source(){}
 }

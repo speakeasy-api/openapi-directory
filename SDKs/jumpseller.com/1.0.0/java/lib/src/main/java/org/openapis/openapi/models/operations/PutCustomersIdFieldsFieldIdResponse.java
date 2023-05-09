@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutCustomersIdFieldsFieldIdResponse {
@@ -12,6 +13,7 @@ public class PutCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.BadParams badParams;
+
     public PutCustomersIdFieldsFieldIdResponse withBadParams(org.openapis.openapi.models.shared.BadParams badParams) {
         this.badParams = badParams;
         return this;
@@ -19,6 +21,7 @@ public class PutCustomersIdFieldsFieldIdResponse {
     
     
     public String contentType;
+
     public PutCustomersIdFieldsFieldIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.CustomerAdditionalField customerAdditionalField;
+
     public PutCustomersIdFieldsFieldIdResponse withCustomerAdditionalField(org.openapis.openapi.models.shared.CustomerAdditionalField customerAdditionalField) {
         this.customerAdditionalField = customerAdditionalField;
         return this;
@@ -39,6 +43,7 @@ public class PutCustomersIdFieldsFieldIdResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public PutCustomersIdFieldsFieldIdResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -46,6 +51,7 @@ public class PutCustomersIdFieldsFieldIdResponse {
     
     
     public Integer statusCode;
+
     public PutCustomersIdFieldsFieldIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutCustomersIdFieldsFieldIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutCustomersIdFieldsFieldIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutCustomersIdFieldsFieldIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

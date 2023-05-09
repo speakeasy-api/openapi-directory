@@ -18,6 +18,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public PermissionList withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Permission[] items;
+
     public PermissionList withItems(Permission[] items) {
         this.items = items;
         return this;
@@ -40,6 +42,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PermissionList withKind(String kind) {
         this.kind = kind;
         return this;
@@ -51,6 +54,7 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public PermissionList withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -62,9 +66,11 @@ public class PermissionList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public PermissionList withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
     }
     
+    public PermissionList(){}
 }

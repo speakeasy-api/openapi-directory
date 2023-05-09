@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ActionsListSelectedReposForOrgSecretRequest {
@@ -12,6 +13,7 @@ public class ActionsListSelectedReposForOrgSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public ActionsListSelectedReposForOrgSecretRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -22,6 +24,7 @@ public class ActionsListSelectedReposForOrgSecretRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public ActionsListSelectedReposForOrgSecretRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -32,6 +35,7 @@ public class ActionsListSelectedReposForOrgSecretRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public ActionsListSelectedReposForOrgSecretRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -42,9 +46,14 @@ public class ActionsListSelectedReposForOrgSecretRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=secret_name")
     public String secretName;
+
     public ActionsListSelectedReposForOrgSecretRequest withSecretName(String secretName) {
         this.secretName = secretName;
         return this;
     }
     
+    public ActionsListSelectedReposForOrgSecretRequest(@JsonProperty("org") String org, @JsonProperty("secret_name") String secretName) {
+        this.org = org;
+        this.secretName = secretName;
+  }
 }

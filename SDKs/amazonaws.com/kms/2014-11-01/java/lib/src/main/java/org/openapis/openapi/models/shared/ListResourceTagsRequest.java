@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListResourceTagsRequest {
     @JsonProperty("KeyId")
     public String keyId;
+
     public ListResourceTagsRequest withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -19,6 +20,7 @@ public class ListResourceTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListResourceTagsRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -27,9 +29,13 @@ public class ListResourceTagsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Marker")
     public String marker;
+
     public ListResourceTagsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListResourceTagsRequest(@JsonProperty("KeyId") String keyId) {
+        this.keyId = keyId;
+  }
 }

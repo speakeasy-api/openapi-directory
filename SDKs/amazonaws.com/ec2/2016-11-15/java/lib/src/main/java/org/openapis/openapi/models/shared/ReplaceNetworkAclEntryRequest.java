@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ReplaceNetworkAclEntryRequest {
     
     public String cidrBlock;
+
     public ReplaceNetworkAclEntryRequest withCidrBlock(String cidrBlock) {
         this.cidrBlock = cidrBlock;
         return this;
@@ -16,6 +17,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public Boolean dryRun;
+
     public ReplaceNetworkAclEntryRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public Boolean egress;
+
     public ReplaceNetworkAclEntryRequest withEgress(Boolean egress) {
         this.egress = egress;
         return this;
@@ -30,6 +33,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public ReplaceNetworkAclEntryRequestIcmpTypeCode icmpTypeCode;
+
     public ReplaceNetworkAclEntryRequest withIcmpTypeCode(ReplaceNetworkAclEntryRequestIcmpTypeCode icmpTypeCode) {
         this.icmpTypeCode = icmpTypeCode;
         return this;
@@ -37,6 +41,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public String ipv6CidrBlock;
+
     public ReplaceNetworkAclEntryRequest withIpv6CidrBlock(String ipv6CidrBlock) {
         this.ipv6CidrBlock = ipv6CidrBlock;
         return this;
@@ -44,6 +49,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public String networkAclId;
+
     public ReplaceNetworkAclEntryRequest withNetworkAclId(String networkAclId) {
         this.networkAclId = networkAclId;
         return this;
@@ -51,6 +57,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public ReplaceNetworkAclEntryRequestPortRange portRange;
+
     public ReplaceNetworkAclEntryRequest withPortRange(ReplaceNetworkAclEntryRequestPortRange portRange) {
         this.portRange = portRange;
         return this;
@@ -58,6 +65,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public String protocol;
+
     public ReplaceNetworkAclEntryRequest withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -65,6 +73,7 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public ReplaceNetworkAclEntryRequestRuleActionEnum ruleAction;
+
     public ReplaceNetworkAclEntryRequest withRuleAction(ReplaceNetworkAclEntryRequestRuleActionEnum ruleAction) {
         this.ruleAction = ruleAction;
         return this;
@@ -72,9 +81,17 @@ public class ReplaceNetworkAclEntryRequest {
     
     
     public Long ruleNumber;
+
     public ReplaceNetworkAclEntryRequest withRuleNumber(Long ruleNumber) {
         this.ruleNumber = ruleNumber;
         return this;
     }
     
+    public ReplaceNetworkAclEntryRequest(@JsonProperty("Egress") Boolean egress, @JsonProperty("NetworkAclId") String networkAclId, @JsonProperty("Protocol") String protocol, @JsonProperty("RuleAction") ReplaceNetworkAclEntryRequestRuleActionEnum ruleAction, @JsonProperty("RuleNumber") Long ruleNumber) {
+        this.egress = egress;
+        this.networkAclId = networkAclId;
+        this.protocol = protocol;
+        this.ruleAction = ruleAction;
+        this.ruleNumber = ruleNumber;
+  }
 }

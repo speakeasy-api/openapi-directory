@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StoresDeleteRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public String requestBody;
+
     public StoresDeleteRequest withRequestBody(String requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -19,6 +21,7 @@ public class StoresDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public StoresDeleteRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -29,6 +32,7 @@ public class StoresDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public StoresDeleteRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
@@ -39,9 +43,15 @@ public class StoresDeleteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=store_name")
     public String storeName;
+
     public StoresDeleteRequest withStoreName(String storeName) {
         this.storeName = storeName;
         return this;
     }
     
+    public StoresDeleteRequest(@JsonProperty("app_name") String appName, @JsonProperty("owner_name") String ownerName, @JsonProperty("store_name") String storeName) {
+        this.appName = appName;
+        this.ownerName = ownerName;
+        this.storeName = storeName;
+  }
 }

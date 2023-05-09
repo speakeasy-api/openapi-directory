@@ -12,9 +12,13 @@ public class UpdateClassificationJobRequestBody {
      */
     @JsonProperty("jobStatus")
     public UpdateClassificationJobRequestBodyJobStatusEnum jobStatus;
+
     public UpdateClassificationJobRequestBody withJobStatus(UpdateClassificationJobRequestBodyJobStatusEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
     }
     
+    public UpdateClassificationJobRequestBody(@JsonProperty("jobStatus") UpdateClassificationJobRequestBodyJobStatusEnum jobStatus) {
+        this.jobStatus = jobStatus;
+  }
 }

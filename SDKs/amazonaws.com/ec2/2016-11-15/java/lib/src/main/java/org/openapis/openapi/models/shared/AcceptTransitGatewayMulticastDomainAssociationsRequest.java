@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class AcceptTransitGatewayMulticastDomainAssociationsRequest {
     
     public Boolean dryRun;
+
     public AcceptTransitGatewayMulticastDomainAssociationsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class AcceptTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public String[] subnetIds;
+
     public AcceptTransitGatewayMulticastDomainAssociationsRequest withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -23,6 +25,7 @@ public class AcceptTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public String transitGatewayAttachmentId;
+
     public AcceptTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayAttachmentId(String transitGatewayAttachmentId) {
         this.transitGatewayAttachmentId = transitGatewayAttachmentId;
         return this;
@@ -30,9 +33,11 @@ public class AcceptTransitGatewayMulticastDomainAssociationsRequest {
     
     
     public String transitGatewayMulticastDomainId;
+
     public AcceptTransitGatewayMulticastDomainAssociationsRequest withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public AcceptTransitGatewayMulticastDomainAssociationsRequest(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SearchThingsRequest {
     @JsonProperty("entityId")
     public String entityId;
+
     public SearchThingsRequest withEntityId(String entityId) {
         this.entityId = entityId;
         return this;
@@ -19,6 +20,7 @@ public class SearchThingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public SearchThingsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -27,6 +29,7 @@ public class SearchThingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceVersion")
     public Long namespaceVersion;
+
     public SearchThingsRequest withNamespaceVersion(Long namespaceVersion) {
         this.namespaceVersion = namespaceVersion;
         return this;
@@ -35,9 +38,13 @@ public class SearchThingsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public SearchThingsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public SearchThingsRequest(@JsonProperty("entityId") String entityId) {
+        this.entityId = entityId;
+  }
 }

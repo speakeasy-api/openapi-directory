@@ -15,6 +15,7 @@ public class TestRepositoryTriggersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failedExecutions")
     public RepositoryTriggerExecutionFailure[] failedExecutions;
+
     public TestRepositoryTriggersOutput withFailedExecutions(RepositoryTriggerExecutionFailure[] failedExecutions) {
         this.failedExecutions = failedExecutions;
         return this;
@@ -23,9 +24,11 @@ public class TestRepositoryTriggersOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("successfulExecutions")
     public String[] successfulExecutions;
+
     public TestRepositoryTriggersOutput withSuccessfulExecutions(String[] successfulExecutions) {
         this.successfulExecutions = successfulExecutions;
         return this;
     }
     
+    public TestRepositoryTriggersOutput(){}
 }

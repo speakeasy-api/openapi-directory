@@ -15,9 +15,11 @@ public class UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionCo
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableAnswerMachineDetection")
     public Boolean enableAnswerMachineDetection;
+
     public UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig withEnableAnswerMachineDetection(Boolean enableAnswerMachineDetection) {
         this.enableAnswerMachineDetection = enableAnswerMachineDetection;
         return this;
     }
     
+    public UpdateCampaignOutboundCallConfigRequestBodyAnswerMachineDetectionConfig(){}
 }

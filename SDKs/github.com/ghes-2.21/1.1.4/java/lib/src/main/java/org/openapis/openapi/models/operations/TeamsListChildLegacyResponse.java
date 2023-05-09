@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class TeamsListChildLegacyResponse {
     
     public String contentType;
+
     public TeamsListChildLegacyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class TeamsListChildLegacyResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public TeamsListChildLegacyResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class TeamsListChildLegacyResponse {
     
     
     public Integer statusCode;
+
     public TeamsListChildLegacyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class TeamsListChildLegacyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public TeamsListChildLegacyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class TeamsListChildLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public TeamsListChildLegacyResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,6 +56,7 @@ public class TeamsListChildLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.Team[] teams;
+
     public TeamsListChildLegacyResponse withTeams(org.openapis.openapi.models.shared.Team[] teams) {
         this.teams = teams;
         return this;
@@ -60,9 +67,14 @@ public class TeamsListChildLegacyResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public TeamsListChildLegacyResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public TeamsListChildLegacyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

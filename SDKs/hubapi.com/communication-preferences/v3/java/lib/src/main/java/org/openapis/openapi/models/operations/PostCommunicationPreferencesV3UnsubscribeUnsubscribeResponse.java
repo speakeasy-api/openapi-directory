@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse {
     
     public byte[] body;
+
     public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse {
     
     
     public String contentType;
+
     public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse {
      */
     
     public org.openapis.openapi.models.shared.PublicSubscriptionStatus publicSubscriptionStatus;
+
     public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse withPublicSubscriptionStatus(org.openapis.openapi.models.shared.PublicSubscriptionStatus publicSubscriptionStatus) {
         this.publicSubscriptionStatus = publicSubscriptionStatus;
         return this;
@@ -33,6 +37,7 @@ public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse {
     
     
     public Integer statusCode;
+
     public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostCommunicationPreferencesV3UnsubscribeUnsubscribeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

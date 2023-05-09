@@ -12,6 +12,7 @@ public class PostLoadBalancersIdActionsAddTargetActionResponseActionResources {
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancersIdActionsAddTargetActionResponseActionResources withId(Long id) {
         this.id = id;
         return this;
@@ -22,9 +23,14 @@ public class PostLoadBalancersIdActionsAddTargetActionResponseActionResources {
      */
     @JsonProperty("type")
     public String type;
+
     public PostLoadBalancersIdActionsAddTargetActionResponseActionResources withType(String type) {
         this.type = type;
         return this;
     }
     
+    public PostLoadBalancersIdActionsAddTargetActionResponseActionResources(@JsonProperty("id") Long id, @JsonProperty("type") String type) {
+        this.id = id;
+        this.type = type;
+  }
 }

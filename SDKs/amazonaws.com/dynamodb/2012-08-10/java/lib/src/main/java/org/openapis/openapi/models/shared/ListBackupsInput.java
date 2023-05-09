@@ -17,6 +17,7 @@ public class ListBackupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BackupType")
     public BackupTypeFilterEnum backupType;
+
     public ListBackupsInput withBackupType(BackupTypeFilterEnum backupType) {
         this.backupType = backupType;
         return this;
@@ -25,6 +26,7 @@ public class ListBackupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExclusiveStartBackupArn")
     public String exclusiveStartBackupArn;
+
     public ListBackupsInput withExclusiveStartBackupArn(String exclusiveStartBackupArn) {
         this.exclusiveStartBackupArn = exclusiveStartBackupArn;
         return this;
@@ -33,6 +35,7 @@ public class ListBackupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public ListBackupsInput withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -41,6 +44,7 @@ public class ListBackupsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public ListBackupsInput withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -51,6 +55,7 @@ public class ListBackupsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TimeRangeLowerBound")
     public OffsetDateTime timeRangeLowerBound;
+
     public ListBackupsInput withTimeRangeLowerBound(OffsetDateTime timeRangeLowerBound) {
         this.timeRangeLowerBound = timeRangeLowerBound;
         return this;
@@ -61,9 +66,11 @@ public class ListBackupsInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("TimeRangeUpperBound")
     public OffsetDateTime timeRangeUpperBound;
+
     public ListBackupsInput withTimeRangeUpperBound(OffsetDateTime timeRangeUpperBound) {
         this.timeRangeUpperBound = timeRangeUpperBound;
         return this;
     }
     
+    public ListBackupsInput(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Listversion {
     @JsonProperty("date")
     public String date;
+
     public Listversion withDate(String date) {
         this.date = date;
         return this;
@@ -16,9 +17,14 @@ public class Listversion {
     
     @JsonProperty("id")
     public String id;
+
     public Listversion withId(String id) {
         this.id = id;
         return this;
     }
     
+    public Listversion(@JsonProperty("date") String date, @JsonProperty("id") String id) {
+        this.date = date;
+        this.id = id;
+  }
 }

@@ -58,11 +58,9 @@ public class CustomLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomListsGetResponse(contentType, httpRes.statusCode()) {{
             customList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class CustomLists {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse() {{
+        org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse res = new org.openapis.openapi.models.operations.DisplayvideoCustomListsListResponse(contentType, httpRes.statusCode()) {{
             listCustomListsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

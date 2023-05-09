@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCourseMappingsExternalcourseExternalCourseIdRequest {
@@ -12,9 +13,13 @@ public class GetCourseMappingsExternalcourseExternalCourseIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=externalCourseId")
     public String externalCourseId;
+
     public GetCourseMappingsExternalcourseExternalCourseIdRequest withExternalCourseId(String externalCourseId) {
         this.externalCourseId = externalCourseId;
         return this;
     }
     
+    public GetCourseMappingsExternalcourseExternalCourseIdRequest(@JsonProperty("externalCourseId") String externalCourseId) {
+        this.externalCourseId = externalCourseId;
+  }
 }

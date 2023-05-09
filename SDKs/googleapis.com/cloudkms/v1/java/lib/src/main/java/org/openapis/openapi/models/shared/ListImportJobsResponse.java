@@ -18,6 +18,7 @@ public class ListImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("importJobs")
     public ImportJob[] importJobs;
+
     public ListImportJobsResponse withImportJobs(ImportJob[] importJobs) {
         this.importJobs = importJobs;
         return this;
@@ -29,6 +30,7 @@ public class ListImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListImportJobsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListImportJobsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListImportJobsResponse(){}
 }

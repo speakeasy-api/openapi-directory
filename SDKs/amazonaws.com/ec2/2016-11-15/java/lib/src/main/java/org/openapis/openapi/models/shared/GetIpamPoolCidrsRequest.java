@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GetIpamPoolCidrsRequest {
     
     public Boolean dryRun;
+
     public GetIpamPoolCidrsRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,6 +17,7 @@ public class GetIpamPoolCidrsRequest {
     
     
     public GetIpamPoolCidrsRequestFilters[] filters;
+
     public GetIpamPoolCidrsRequest withFilters(GetIpamPoolCidrsRequestFilters[] filters) {
         this.filters = filters;
         return this;
@@ -23,6 +25,7 @@ public class GetIpamPoolCidrsRequest {
     
     
     public String ipamPoolId;
+
     public GetIpamPoolCidrsRequest withIpamPoolId(String ipamPoolId) {
         this.ipamPoolId = ipamPoolId;
         return this;
@@ -30,6 +33,7 @@ public class GetIpamPoolCidrsRequest {
     
     
     public Long maxResults;
+
     public GetIpamPoolCidrsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -37,9 +41,13 @@ public class GetIpamPoolCidrsRequest {
     
     
     public String nextToken;
+
     public GetIpamPoolCidrsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetIpamPoolCidrsRequest(@JsonProperty("IpamPoolId") String ipamPoolId) {
+        this.ipamPoolId = ipamPoolId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomPolicyRequest {
@@ -12,16 +13,18 @@ public class UpdateCustomPolicyRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomPolicyRequest customPolicyRequest;
+
     public UpdateCustomPolicyRequest withCustomPolicyRequest(org.openapis.openapi.models.shared.CustomPolicyRequest customPolicyRequest) {
         this.customPolicyRequest = customPolicyRequest;
         return this;
     }
     
     /**
-     * This header parameter specifies the eBay marketplace for the custom policy that is being created. Supported values for this header can be found in the &lt;a href="/api-docs/sell/account/types/ba:MarketplaceIdEnum" target="_blank"&gt;MarketplaceIdEnum&lt;/a&gt; type definition.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;
+     * This header parameter specifies the eBay marketplace for the custom policy that is being created. Supported values for this header can be found in the &lt;a href="/api-docs/sell/account/types/ba:MarketplaceIdEnum" target="_blank"&gt;MarketplaceIdEnum&lt;/a&gt; type definition.&lt;br/&gt; &lt;br/&gt; &lt;span class="tablenote"&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following eBay marketplaces support Custom Policies: &lt;ul&gt;&lt;li&gt;Germany (EBAY_DE)&lt;/li&gt; &lt;li&gt;Canada (EBAY_CA)&lt;/li&gt; &lt;li&gt;Australia (EBAY_AU)&lt;/li&gt; &lt;li&gt;United States (EBAY_US)&lt;/li&gt; &lt;li&gt;France (EBAY_FR)&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;br/&gt;&lt;div class="msgbox_important"&gt;&lt;p class="msgbox_importantInDiv" data-mc-autonum="&amp;lt;b&amp;gt;&amp;lt;span style=&amp;quot;color: #dd1e31;&amp;quot; class=&amp;quot;mcFormatColor&amp;quot;&amp;gt;Important! &amp;lt;/span&amp;gt;&amp;lt;/b&amp;gt;"&gt;&lt;span class="autonumber"&gt;&lt;span&gt;&lt;b&gt;&lt;span style="color: #dd1e31;" class="mcFormatColor"&gt;Important!&lt;/span&gt;&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;As a part of Digital Services Act (DSA) requirements, all custom policies will become global (and no longer marketplace-specific) on April 3, 2023. A seller will be able to apply any custom policy to listings on any eBay marketplace where they sell.&lt;br/&gt;&lt;br/&gt;Due to this change, the X-EBAY-C-MARKETPLACE-ID request header is no longer relevant. If this header is passed in after April 3, it will just be ignored in all four methods.&lt;/p&gt;&lt;/div&gt;
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public UpdateCustomPolicyRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
@@ -32,9 +35,15 @@ public class UpdateCustomPolicyRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=custom_policy_id")
     public String customPolicyId;
+
     public UpdateCustomPolicyRequest withCustomPolicyId(String customPolicyId) {
         this.customPolicyId = customPolicyId;
         return this;
     }
     
+    public UpdateCustomPolicyRequest(@JsonProperty("CustomPolicyRequest") org.openapis.openapi.models.shared.CustomPolicyRequest customPolicyRequest, @JsonProperty("X-EBAY-C-MARKETPLACE-ID") String xEbayCMarketplaceId, @JsonProperty("custom_policy_id") String customPolicyId) {
+        this.customPolicyRequest = customPolicyRequest;
+        this.xEbayCMarketplaceId = xEbayCMarketplaceId;
+        this.customPolicyId = customPolicyId;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeGlobalPublicDelegatedPrefixesInsertSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalPublicDelegatedPrefixesInsertSecurityOption1 option1;
+
     public ComputeGlobalPublicDelegatedPrefixesInsertSecurity withOption1(ComputeGlobalPublicDelegatedPrefixesInsertSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeGlobalPublicDelegatedPrefixesInsertSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeGlobalPublicDelegatedPrefixesInsertSecurityOption2 option2;
+
     public ComputeGlobalPublicDelegatedPrefixesInsertSecurity withOption2(ComputeGlobalPublicDelegatedPrefixesInsertSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeGlobalPublicDelegatedPrefixesInsertSecurity(){}
 }

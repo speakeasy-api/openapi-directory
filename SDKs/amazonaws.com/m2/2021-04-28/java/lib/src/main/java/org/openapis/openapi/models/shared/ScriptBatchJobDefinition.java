@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ScriptBatchJobDefinition {
     @JsonProperty("scriptName")
     public String scriptName;
+
     public ScriptBatchJobDefinition withScriptName(String scriptName) {
         this.scriptName = scriptName;
         return this;
     }
     
+    public ScriptBatchJobDefinition(@JsonProperty("scriptName") String scriptName) {
+        this.scriptName = scriptName;
+  }
 }

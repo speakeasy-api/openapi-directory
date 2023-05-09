@@ -15,9 +15,11 @@ public class PromoteResourceShareCreatedFromPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("returnValue")
     public Boolean returnValue;
+
     public PromoteResourceShareCreatedFromPolicyResponse withReturnValue(Boolean returnValue) {
         this.returnValue = returnValue;
         return this;
     }
     
+    public PromoteResourceShareCreatedFromPolicyResponse(){}
 }

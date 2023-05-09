@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse {
     
     public String contentType;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1ChannelPartnerRepricingConfig googleCloudChannelV1ChannelPartnerRepricingConfig;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse withGoogleCloudChannelV1ChannelPartnerRepricingConfig(org.openapis.openapi.models.shared.GoogleCloudChannelV1ChannelPartnerRepricingConfig googleCloudChannelV1ChannelPartnerRepricingConfig) {
         this.googleCloudChannelV1ChannelPartnerRepricingConfig = googleCloudChannelV1ChannelPartnerRepricingConfig;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfi
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsChannelPartnerLinksChannelPartnerRepricingConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

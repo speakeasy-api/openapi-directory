@@ -18,6 +18,7 @@ public class ListWorkloadsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListWorkloadsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -29,9 +30,11 @@ public class ListWorkloadsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkloadSummaries")
     public WorkloadSummary[] workloadSummaries;
+
     public ListWorkloadsOutput withWorkloadSummaries(WorkloadSummary[] workloadSummaries) {
         this.workloadSummaries = workloadSummaries;
         return this;
     }
     
+    public ListWorkloadsOutput(){}
 }

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InputDefinition {
     @JsonProperty("attributes")
     public Attribute[] attributes;
+
     public InputDefinition withAttributes(Attribute[] attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public InputDefinition(@JsonProperty("attributes") Attribute[] attributes) {
+        this.attributes = attributes;
+  }
 }

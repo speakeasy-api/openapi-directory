@@ -18,6 +18,7 @@ public class GoogleCloudIntegrationsV1alphaFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intervalTime")
     public String intervalTime;
+
     public GoogleCloudIntegrationsV1alphaFailurePolicy withIntervalTime(String intervalTime) {
         this.intervalTime = intervalTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudIntegrationsV1alphaFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxRetries")
     public Integer maxRetries;
+
     public GoogleCloudIntegrationsV1alphaFailurePolicy withMaxRetries(Integer maxRetries) {
         this.maxRetries = maxRetries;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudIntegrationsV1alphaFailurePolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryStrategy")
     public GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum retryStrategy;
+
     public GoogleCloudIntegrationsV1alphaFailurePolicy withRetryStrategy(GoogleCloudIntegrationsV1alphaFailurePolicyRetryStrategyEnum retryStrategy) {
         this.retryStrategy = retryStrategy;
         return this;
     }
     
+    public GoogleCloudIntegrationsV1alphaFailurePolicy(){}
 }

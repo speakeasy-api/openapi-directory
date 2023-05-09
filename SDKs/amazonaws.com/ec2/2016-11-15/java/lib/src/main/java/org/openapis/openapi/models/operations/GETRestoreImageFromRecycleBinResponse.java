@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETRestoreImageFromRecycleBinResponse {
     
     public byte[] body;
+
     public GETRestoreImageFromRecycleBinResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETRestoreImageFromRecycleBinResponse {
     
     
     public String contentType;
+
     public GETRestoreImageFromRecycleBinResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETRestoreImageFromRecycleBinResponse {
     
     
     public Integer statusCode;
+
     public GETRestoreImageFromRecycleBinResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETRestoreImageFromRecycleBinResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETRestoreImageFromRecycleBinResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETRestoreImageFromRecycleBinResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

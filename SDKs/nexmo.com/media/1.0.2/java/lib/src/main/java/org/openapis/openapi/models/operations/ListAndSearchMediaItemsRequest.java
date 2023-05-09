@@ -12,6 +12,7 @@ public class ListAndSearchMediaItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListAndSearchMediaItemsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -22,6 +23,7 @@ public class ListAndSearchMediaItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public ListAndSearchMediaItemsOrderEnum order;
+
     public ListAndSearchMediaItemsRequest withOrder(ListAndSearchMediaItemsOrderEnum order) {
         this.order = order;
         return this;
@@ -32,6 +34,7 @@ public class ListAndSearchMediaItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_index")
     public Long pageIndex;
+
     public ListAndSearchMediaItemsRequest withPageIndex(Long pageIndex) {
         this.pageIndex = pageIndex;
         return this;
@@ -42,6 +45,7 @@ public class ListAndSearchMediaItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public ListAndSearchMediaItemsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -52,9 +56,11 @@ public class ListAndSearchMediaItemsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
     public String startTime;
+
     public ListAndSearchMediaItemsRequest withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public ListAndSearchMediaItemsRequest(){}
 }

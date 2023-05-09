@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class OrgsListOutsideCollaboratorsRequest {
@@ -14,6 +15,7 @@ public class OrgsListOutsideCollaboratorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public OrgsListOutsideCollaboratorsFilterEnum filter;
+
     public OrgsListOutsideCollaboratorsRequest withFilter(OrgsListOutsideCollaboratorsFilterEnum filter) {
         this.filter = filter;
         return this;
@@ -21,6 +23,7 @@ public class OrgsListOutsideCollaboratorsRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org")
     public String org;
+
     public OrgsListOutsideCollaboratorsRequest withOrg(String org) {
         this.org = org;
         return this;
@@ -31,6 +34,7 @@ public class OrgsListOutsideCollaboratorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public OrgsListOutsideCollaboratorsRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -41,9 +45,13 @@ public class OrgsListOutsideCollaboratorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public OrgsListOutsideCollaboratorsRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
     }
     
+    public OrgsListOutsideCollaboratorsRequest(@JsonProperty("org") String org) {
+        this.org = org;
+  }
 }

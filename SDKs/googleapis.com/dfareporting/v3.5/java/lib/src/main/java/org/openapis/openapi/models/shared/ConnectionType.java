@@ -18,6 +18,7 @@ public class ConnectionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ConnectionType withId(String id) {
         this.id = id;
         return this;
@@ -29,6 +30,7 @@ public class ConnectionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ConnectionType withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class ConnectionType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ConnectionType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ConnectionType(){}
 }

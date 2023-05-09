@@ -17,6 +17,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public SweepConfigurationInput withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -28,6 +29,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public SweepConfigurationInput withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -38,6 +40,7 @@ public class SweepConfigurationInput {
      */
     @JsonProperty("schedule")
     public Object schedule;
+
     public SweepConfigurationInput withSchedule(Object schedule) {
         this.schedule = schedule;
         return this;
@@ -57,6 +60,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SweepConfigurationStatusEnum status;
+
     public SweepConfigurationInput withStatus(SweepConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -65,6 +69,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sweepAmount")
     public Amount sweepAmount;
+
     public SweepConfigurationInput withSweepAmount(Amount sweepAmount) {
         this.sweepAmount = sweepAmount;
         return this;
@@ -73,6 +78,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAmount")
     public Amount targetAmount;
+
     public SweepConfigurationInput withTargetAmount(Amount targetAmount) {
         this.targetAmount = targetAmount;
         return this;
@@ -86,6 +92,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstrumentId")
     public String transferInstrumentId;
+
     public SweepConfigurationInput withTransferInstrumentId(String transferInstrumentId) {
         this.transferInstrumentId = transferInstrumentId;
         return this;
@@ -94,6 +101,7 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerAmount")
     public Amount triggerAmount;
+
     public SweepConfigurationInput withTriggerAmount(Amount triggerAmount) {
         this.triggerAmount = triggerAmount;
         return this;
@@ -111,9 +119,13 @@ public class SweepConfigurationInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SweepConfigurationTypeEnum type;
+
     public SweepConfigurationInput withType(SweepConfigurationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SweepConfigurationInput(@JsonProperty("schedule") Object schedule) {
+        this.schedule = schedule;
+  }
 }

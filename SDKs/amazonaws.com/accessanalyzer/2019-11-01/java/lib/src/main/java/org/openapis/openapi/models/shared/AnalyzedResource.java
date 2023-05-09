@@ -20,6 +20,7 @@ public class AnalyzedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("actions")
     public String[] actions;
+
     public AnalyzedResource withActions(String[] actions) {
         this.actions = actions;
         return this;
@@ -29,6 +30,7 @@ public class AnalyzedResource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("analyzedAt")
     public OffsetDateTime analyzedAt;
+
     public AnalyzedResource withAnalyzedAt(OffsetDateTime analyzedAt) {
         this.analyzedAt = analyzedAt;
         return this;
@@ -38,6 +40,7 @@ public class AnalyzedResource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public AnalyzedResource withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class AnalyzedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public String error;
+
     public AnalyzedResource withError(String error) {
         this.error = error;
         return this;
@@ -53,6 +57,7 @@ public class AnalyzedResource {
     
     @JsonProperty("isPublic")
     public Boolean isPublic;
+
     public AnalyzedResource withIsPublic(Boolean isPublic) {
         this.isPublic = isPublic;
         return this;
@@ -60,6 +65,7 @@ public class AnalyzedResource {
     
     @JsonProperty("resourceArn")
     public String resourceArn;
+
     public AnalyzedResource withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -67,6 +73,7 @@ public class AnalyzedResource {
     
     @JsonProperty("resourceOwnerAccount")
     public String resourceOwnerAccount;
+
     public AnalyzedResource withResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
@@ -74,6 +81,7 @@ public class AnalyzedResource {
     
     @JsonProperty("resourceType")
     public ResourceTypeEnum resourceType;
+
     public AnalyzedResource withResourceType(ResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -82,6 +90,7 @@ public class AnalyzedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sharedVia")
     public String[] sharedVia;
+
     public AnalyzedResource withSharedVia(String[] sharedVia) {
         this.sharedVia = sharedVia;
         return this;
@@ -90,6 +99,7 @@ public class AnalyzedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public FindingStatusEnum status;
+
     public AnalyzedResource withStatus(FindingStatusEnum status) {
         this.status = status;
         return this;
@@ -99,9 +109,19 @@ public class AnalyzedResource {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updatedAt")
     public OffsetDateTime updatedAt;
+
     public AnalyzedResource withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public AnalyzedResource(@JsonProperty("analyzedAt") OffsetDateTime analyzedAt, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("isPublic") Boolean isPublic, @JsonProperty("resourceArn") String resourceArn, @JsonProperty("resourceOwnerAccount") String resourceOwnerAccount, @JsonProperty("resourceType") ResourceTypeEnum resourceType, @JsonProperty("updatedAt") OffsetDateTime updatedAt) {
+        this.analyzedAt = analyzedAt;
+        this.createdAt = createdAt;
+        this.isPublic = isPublic;
+        this.resourceArn = resourceArn;
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        this.resourceType = resourceType;
+        this.updatedAt = updatedAt;
+  }
 }

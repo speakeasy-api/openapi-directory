@@ -15,6 +15,7 @@ public class AboutAdditionalRoleInfoRoleSets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalRoles")
     public String[] additionalRoles;
+
     public AboutAdditionalRoleInfoRoleSets withAdditionalRoles(String[] additionalRoles) {
         this.additionalRoles = additionalRoles;
         return this;
@@ -26,9 +27,11 @@ public class AboutAdditionalRoleInfoRoleSets {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryRole")
     public String primaryRole;
+
     public AboutAdditionalRoleInfoRoleSets withPrimaryRole(String primaryRole) {
         this.primaryRole = primaryRole;
         return this;
     }
     
+    public AboutAdditionalRoleInfoRoleSets(){}
 }

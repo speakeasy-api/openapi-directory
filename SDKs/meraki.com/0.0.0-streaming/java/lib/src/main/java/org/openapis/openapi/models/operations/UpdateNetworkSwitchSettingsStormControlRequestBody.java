@@ -15,6 +15,7 @@ public class UpdateNetworkSwitchSettingsStormControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("broadcastThreshold")
     public Long broadcastThreshold;
+
     public UpdateNetworkSwitchSettingsStormControlRequestBody withBroadcastThreshold(Long broadcastThreshold) {
         this.broadcastThreshold = broadcastThreshold;
         return this;
@@ -26,6 +27,7 @@ public class UpdateNetworkSwitchSettingsStormControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("multicastThreshold")
     public Long multicastThreshold;
+
     public UpdateNetworkSwitchSettingsStormControlRequestBody withMulticastThreshold(Long multicastThreshold) {
         this.multicastThreshold = multicastThreshold;
         return this;
@@ -37,9 +39,11 @@ public class UpdateNetworkSwitchSettingsStormControlRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unknownUnicastThreshold")
     public Long unknownUnicastThreshold;
+
     public UpdateNetworkSwitchSettingsStormControlRequestBody withUnknownUnicastThreshold(Long unknownUnicastThreshold) {
         this.unknownUnicastThreshold = unknownUnicastThreshold;
         return this;
     }
     
+    public UpdateNetworkSwitchSettingsStormControlRequestBody(){}
 }

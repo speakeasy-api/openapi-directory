@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteWorkteamResponse {
     @JsonProperty("Success")
     public Boolean success;
+
     public DeleteWorkteamResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public DeleteWorkteamResponse(@JsonProperty("Success") Boolean success) {
+        this.success = success;
+  }
 }

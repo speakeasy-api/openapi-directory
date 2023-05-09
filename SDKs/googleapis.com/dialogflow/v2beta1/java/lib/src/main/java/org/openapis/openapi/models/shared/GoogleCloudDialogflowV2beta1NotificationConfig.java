@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2beta1NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("messageFormat")
     public GoogleCloudDialogflowV2beta1NotificationConfigMessageFormatEnum messageFormat;
+
     public GoogleCloudDialogflowV2beta1NotificationConfig withMessageFormat(GoogleCloudDialogflowV2beta1NotificationConfigMessageFormatEnum messageFormat) {
         this.messageFormat = messageFormat;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDialogflowV2beta1NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topic")
     public String topic;
+
     public GoogleCloudDialogflowV2beta1NotificationConfig withTopic(String topic) {
         this.topic = topic;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1NotificationConfig(){}
 }

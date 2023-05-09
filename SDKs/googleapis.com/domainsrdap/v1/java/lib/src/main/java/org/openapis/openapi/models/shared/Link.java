@@ -18,6 +18,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("href")
     public String href;
+
     public Link withHref(String href) {
         this.href = href;
         return this;
@@ -29,6 +30,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hreflang")
     public String hreflang;
+
     public Link withHreflang(String hreflang) {
         this.hreflang = hreflang;
         return this;
@@ -40,6 +42,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("media")
     public String media;
+
     public Link withMedia(String media) {
         this.media = media;
         return this;
@@ -51,6 +54,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rel")
     public String rel;
+
     public Link withRel(String rel) {
         this.rel = rel;
         return this;
@@ -62,6 +66,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Link withTitle(String title) {
         this.title = title;
         return this;
@@ -73,6 +78,7 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Link withType(String type) {
         this.type = type;
         return this;
@@ -84,9 +90,11 @@ public class Link {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Link withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public Link(){}
 }

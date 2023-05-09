@@ -15,9 +15,11 @@ public class PutPortfolioPreferencesRequestBodyApplicationPreferences {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managementPreference")
     public org.openapis.openapi.models.shared.ManagementPreference managementPreference;
+
     public PutPortfolioPreferencesRequestBodyApplicationPreferences withManagementPreference(org.openapis.openapi.models.shared.ManagementPreference managementPreference) {
         this.managementPreference = managementPreference;
         return this;
     }
     
+    public PutPortfolioPreferencesRequestBodyApplicationPreferences(){}
 }

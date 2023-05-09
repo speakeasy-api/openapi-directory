@@ -20,6 +20,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationArn")
     public String associationArn;
+
     public RepositoryAssociationSummary withAssociationArn(String associationArn) {
         this.associationArn = associationArn;
         return this;
@@ -28,6 +29,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssociationId")
     public String associationId;
+
     public RepositoryAssociationSummary withAssociationId(String associationId) {
         this.associationId = associationId;
         return this;
@@ -36,6 +38,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConnectionArn")
     public String connectionArn;
+
     public RepositoryAssociationSummary withConnectionArn(String connectionArn) {
         this.connectionArn = connectionArn;
         return this;
@@ -46,6 +49,7 @@ public class RepositoryAssociationSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimeStamp")
     public OffsetDateTime lastUpdatedTimeStamp;
+
     public RepositoryAssociationSummary withLastUpdatedTimeStamp(OffsetDateTime lastUpdatedTimeStamp) {
         this.lastUpdatedTimeStamp = lastUpdatedTimeStamp;
         return this;
@@ -54,6 +58,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public RepositoryAssociationSummary withName(String name) {
         this.name = name;
         return this;
@@ -62,6 +67,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Owner")
     public String owner;
+
     public RepositoryAssociationSummary withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -70,6 +76,7 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProviderType")
     public ProviderTypeEnum providerType;
+
     public RepositoryAssociationSummary withProviderType(ProviderTypeEnum providerType) {
         this.providerType = providerType;
         return this;
@@ -78,9 +85,11 @@ public class RepositoryAssociationSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public RepositoryAssociationStateEnum state;
+
     public RepositoryAssociationSummary withState(RepositoryAssociationStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public RepositoryAssociationSummary(){}
 }

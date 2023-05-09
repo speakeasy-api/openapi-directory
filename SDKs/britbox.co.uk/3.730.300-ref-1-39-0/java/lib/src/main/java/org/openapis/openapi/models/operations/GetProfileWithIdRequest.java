@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetProfileWithIdRequest {
@@ -32,6 +33,7 @@ public class GetProfileWithIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ff")
     public org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff;
+
     public GetProfileWithIdRequest withFf(org.openapis.openapi.models.shared.FeatureFlagsEnum[] ff) {
         this.ff = ff;
         return this;
@@ -42,6 +44,7 @@ public class GetProfileWithIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public GetProfileWithIdRequest withId(String id) {
         this.id = id;
         return this;
@@ -62,9 +65,13 @@ public class GetProfileWithIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public GetProfileWithIdRequest withLang(String lang) {
         this.lang = lang;
         return this;
     }
     
+    public GetProfileWithIdRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

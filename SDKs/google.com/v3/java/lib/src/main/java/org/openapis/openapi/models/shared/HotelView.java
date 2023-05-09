@@ -18,6 +18,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIssueDetail")
     public DataIssueDetail[] dataIssueDetail;
+
     public HotelView withDataIssueDetail(DataIssueDetail[] dataIssueDetail) {
         this.dataIssueDetail = dataIssueDetail;
         return this;
@@ -29,6 +30,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataIssues")
     public HotelViewDataIssuesEnum[] dataIssues;
+
     public HotelView withDataIssues(HotelViewDataIssuesEnum[] dataIssues) {
         this.dataIssues = dataIssues;
         return this;
@@ -40,6 +42,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleClusterId")
     public String googleClusterId;
+
     public HotelView withGoogleClusterId(String googleClusterId) {
         this.googleClusterId = googleClusterId;
         return this;
@@ -51,6 +54,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleHotelDisplayName")
     public String googleHotelDisplayName;
+
     public HotelView withGoogleHotelDisplayName(String googleHotelDisplayName) {
         this.googleHotelDisplayName = googleHotelDisplayName;
         return this;
@@ -62,6 +66,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleHotelId")
     public String googleHotelId;
+
     public HotelView withGoogleHotelId(String googleHotelId) {
         this.googleHotelId = googleHotelId;
         return this;
@@ -73,6 +78,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveOnGoogle")
     public Boolean liveOnGoogle;
+
     public HotelView withLiveOnGoogle(Boolean liveOnGoogle) {
         this.liveOnGoogle = liveOnGoogle;
         return this;
@@ -84,6 +90,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchStatus")
     public HotelViewMatchStatusEnum matchStatus;
+
     public HotelView withMatchStatus(HotelViewMatchStatusEnum matchStatus) {
         this.matchStatus = matchStatus;
         return this;
@@ -95,6 +102,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overclusteredPartnerHotelIds")
     public String[] overclusteredPartnerHotelIds;
+
     public HotelView withOverclusteredPartnerHotelIds(String[] overclusteredPartnerHotelIds) {
         this.overclusteredPartnerHotelIds = overclusteredPartnerHotelIds;
         return this;
@@ -106,6 +114,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelDisplayName")
     public String partnerHotelDisplayName;
+
     public HotelView withPartnerHotelDisplayName(String partnerHotelDisplayName) {
         this.partnerHotelDisplayName = partnerHotelDisplayName;
         return this;
@@ -117,6 +126,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partnerHotelId")
     public String partnerHotelId;
+
     public HotelView withPartnerHotelId(String partnerHotelId) {
         this.partnerHotelId = partnerHotelId;
         return this;
@@ -128,6 +138,7 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primaryOverclusteredPartnerHotelId")
     public String primaryOverclusteredPartnerHotelId;
+
     public HotelView withPrimaryOverclusteredPartnerHotelId(String primaryOverclusteredPartnerHotelId) {
         this.primaryOverclusteredPartnerHotelId = primaryOverclusteredPartnerHotelId;
         return this;
@@ -139,9 +150,11 @@ public class HotelView {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyDetails")
     public String propertyDetails;
+
     public HotelView withPropertyDetails(String propertyDetails) {
         this.propertyDetails = propertyDetails;
         return this;
     }
     
+    public HotelView(){}
 }

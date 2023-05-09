@@ -18,6 +18,7 @@ public class FirstDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("altitudeMultiplier")
     public Float altitudeMultiplier;
+
     public FirstDerivativeElevationGrid withAltitudeMultiplier(Float altitudeMultiplier) {
         this.altitudeMultiplier = altitudeMultiplier;
         return this;
@@ -29,9 +30,11 @@ public class FirstDerivativeElevationGrid {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public FirstDerivativeElevationGrid withRows(Row[] rows) {
         this.rows = rows;
         return this;
     }
     
+    public FirstDerivativeElevationGrid(){}
 }

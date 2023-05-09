@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetDomainRequest {
@@ -12,9 +13,13 @@ public class GetDomainRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=domainId")
     public String domainId;
+
     public GetDomainRequest withDomainId(String domainId) {
         this.domainId = domainId;
         return this;
     }
     
+    public GetDomainRequest(@JsonProperty("domainId") String domainId) {
+        this.domainId = domainId;
+  }
 }

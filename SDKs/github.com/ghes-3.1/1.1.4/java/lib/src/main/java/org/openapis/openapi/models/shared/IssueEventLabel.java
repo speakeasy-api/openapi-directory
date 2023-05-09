@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IssueEventLabel {
     @JsonProperty("color")
     public String color;
+
     public IssueEventLabel withColor(String color) {
         this.color = color;
         return this;
@@ -19,9 +20,14 @@ public class IssueEventLabel {
     
     @JsonProperty("name")
     public String name;
+
     public IssueEventLabel withName(String name) {
         this.name = name;
         return this;
     }
     
+    public IssueEventLabel(@JsonProperty("color") String color, @JsonProperty("name") String name) {
+        this.color = color;
+        this.name = name;
+  }
 }

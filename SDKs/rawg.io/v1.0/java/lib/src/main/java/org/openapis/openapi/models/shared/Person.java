@@ -12,6 +12,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("games_count")
     public Long gamesCount;
+
     public Person withGamesCount(Long gamesCount) {
         this.gamesCount = gamesCount;
         return this;
@@ -20,6 +21,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public Person withId(Long id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public String image;
+
     public Person withImage(String image) {
         this.image = image;
         return this;
@@ -36,6 +39,7 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image_background")
     public String imageBackground;
+
     public Person withImageBackground(String imageBackground) {
         this.imageBackground = imageBackground;
         return this;
@@ -43,6 +47,7 @@ public class Person {
     
     @JsonProperty("name")
     public String name;
+
     public Person withName(String name) {
         this.name = name;
         return this;
@@ -51,9 +56,13 @@ public class Person {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slug")
     public String slug;
+
     public Person withSlug(String slug) {
         this.slug = slug;
         return this;
     }
     
+    public Person(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

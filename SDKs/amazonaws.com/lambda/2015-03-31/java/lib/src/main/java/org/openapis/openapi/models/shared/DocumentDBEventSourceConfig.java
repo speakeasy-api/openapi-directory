@@ -15,6 +15,7 @@ public class DocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CollectionName")
     public String collectionName;
+
     public DocumentDBEventSourceConfig withCollectionName(String collectionName) {
         this.collectionName = collectionName;
         return this;
@@ -23,6 +24,7 @@ public class DocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DocumentDBEventSourceConfig withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -31,9 +33,11 @@ public class DocumentDBEventSourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FullDocument")
     public FullDocumentEnum fullDocument;
+
     public DocumentDBEventSourceConfig withFullDocument(FullDocumentEnum fullDocument) {
         this.fullDocument = fullDocument;
         return this;
     }
     
+    public DocumentDBEventSourceConfig(){}
 }

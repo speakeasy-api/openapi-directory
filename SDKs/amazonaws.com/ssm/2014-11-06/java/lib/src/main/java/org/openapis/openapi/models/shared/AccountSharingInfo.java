@@ -15,6 +15,7 @@ public class AccountSharingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccountId")
     public String accountId;
+
     public AccountSharingInfo withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -23,9 +24,11 @@ public class AccountSharingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDocumentVersion")
     public String sharedDocumentVersion;
+
     public AccountSharingInfo withSharedDocumentVersion(String sharedDocumentVersion) {
         this.sharedDocumentVersion = sharedDocumentVersion;
         return this;
     }
     
+    public AccountSharingInfo(){}
 }

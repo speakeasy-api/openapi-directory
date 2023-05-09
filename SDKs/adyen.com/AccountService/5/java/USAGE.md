@@ -3,9 +3,8 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
 import org.openapis.openapi.models.operations.PostCloseAccountHolderResponse;
+import org.openapis.openapi.models.operations.PostCloseAccountHolderSecurity;
 import org.openapis.openapi.models.shared.CloseAccountHolderRequest;
 import org.openapis.openapi.models.shared.SchemeBasicAuth;
 
@@ -15,19 +14,19 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            org.openapis.openapi.models.shared.CloseAccountHolderRequest req = new CloseAccountHolderRequest() {{
-                accountHolderCode = "corrupti";
-            }}            
+            org.openapis.openapi.models.shared.CloseAccountHolderRequest req = new CloseAccountHolderRequest("corrupti");            
 
             PostCloseAccountHolderResponse res = sdk.accountHolders.postCloseAccountHolder(req, new PostCloseAccountHolderSecurity() {{
                 apiKeyAuth = "YOUR_API_KEY_HERE";
             }});
 
-            if (res.closeAccountHolderResponse.isPresent()) {
+            if (res.closeAccountHolderResponse != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

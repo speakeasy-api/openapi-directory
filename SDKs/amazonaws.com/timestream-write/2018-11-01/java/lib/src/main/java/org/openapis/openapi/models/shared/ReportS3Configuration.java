@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ReportS3Configuration {
     @JsonProperty("BucketName")
     public String bucketName;
+
     public ReportS3Configuration withBucketName(String bucketName) {
         this.bucketName = bucketName;
         return this;
@@ -22,6 +23,7 @@ public class ReportS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionOption")
     public S3EncryptionOptionEnum encryptionOption;
+
     public ReportS3Configuration withEncryptionOption(S3EncryptionOptionEnum encryptionOption) {
         this.encryptionOption = encryptionOption;
         return this;
@@ -30,6 +32,7 @@ public class ReportS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KmsKeyId")
     public String kmsKeyId;
+
     public ReportS3Configuration withKmsKeyId(String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
         return this;
@@ -38,9 +41,13 @@ public class ReportS3Configuration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ObjectKeyPrefix")
     public String objectKeyPrefix;
+
     public ReportS3Configuration withObjectKeyPrefix(String objectKeyPrefix) {
         this.objectKeyPrefix = objectKeyPrefix;
         return this;
     }
     
+    public ReportS3Configuration(@JsonProperty("BucketName") String bucketName) {
+        this.bucketName = bucketName;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public java.util.Map<String, GoogleCloudDatacatalogV1beta1TagTemplateFieldInput> fields;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateInput withFields(java.util.Map<String, GoogleCloudDatacatalogV1beta1TagTemplateFieldInput> fields) {
         this.fields = fields;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatacatalogV1beta1TagTemplateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogV1beta1TagTemplateInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1TagTemplateInput(){}
 }

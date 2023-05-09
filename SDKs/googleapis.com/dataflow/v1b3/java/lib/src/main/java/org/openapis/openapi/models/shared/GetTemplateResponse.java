@@ -18,6 +18,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public TemplateMetadata metadata;
+
     public GetTemplateResponse withMetadata(TemplateMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -29,6 +30,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("runtimeMetadata")
     public RuntimeMetadata runtimeMetadata;
+
     public GetTemplateResponse withRuntimeMetadata(RuntimeMetadata runtimeMetadata) {
         this.runtimeMetadata = runtimeMetadata;
         return this;
@@ -40,6 +42,7 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public Status status;
+
     public GetTemplateResponse withStatus(Status status) {
         this.status = status;
         return this;
@@ -51,9 +54,11 @@ public class GetTemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateType")
     public GetTemplateResponseTemplateTypeEnum templateType;
+
     public GetTemplateResponse withTemplateType(GetTemplateResponseTemplateTypeEnum templateType) {
         this.templateType = templateType;
         return this;
     }
     
+    public GetTemplateResponse(){}
 }

@@ -12,9 +12,11 @@ public class UnpublishMock200ApplicationJSONMock {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public UnpublishMock200ApplicationJSONMock withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UnpublishMock200ApplicationJSONMock(){}
 }

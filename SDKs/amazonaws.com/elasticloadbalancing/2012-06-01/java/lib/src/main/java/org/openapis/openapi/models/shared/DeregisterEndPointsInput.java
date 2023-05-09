@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeregisterEndPointsInput - Contains the parameters for DeregisterInstancesFromLoadBalancer.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeregisterEndPointsInput {
     
     public Instance[] instances;
+
     public DeregisterEndPointsInput withInstances(Instance[] instances) {
         this.instances = instances;
         return this;
@@ -19,9 +20,14 @@ public class DeregisterEndPointsInput {
     
     
     public String loadBalancerName;
+
     public DeregisterEndPointsInput withLoadBalancerName(String loadBalancerName) {
         this.loadBalancerName = loadBalancerName;
         return this;
     }
     
+    public DeregisterEndPointsInput(@JsonProperty("Instances") Instance[] instances, @JsonProperty("LoadBalancerName") String loadBalancerName) {
+        this.instances = instances;
+        this.loadBalancerName = loadBalancerName;
+  }
 }

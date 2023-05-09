@@ -15,9 +15,11 @@ public class PredictorBaseline {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BaselineMetrics")
     public BaselineMetric[] baselineMetrics;
+
     public PredictorBaseline withBaselineMetrics(BaselineMetric[] baselineMetrics) {
         this.baselineMetrics = baselineMetrics;
         return this;
     }
     
+    public PredictorBaseline(){}
 }

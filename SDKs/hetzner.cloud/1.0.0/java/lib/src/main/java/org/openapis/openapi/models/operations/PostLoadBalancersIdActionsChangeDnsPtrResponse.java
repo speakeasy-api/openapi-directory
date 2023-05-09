@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostLoadBalancersIdActionsChangeDnsPtrResponse {
@@ -12,6 +13,7 @@ public class PostLoadBalancersIdActionsChangeDnsPtrResponse {
      */
     
     public PostLoadBalancersIdActionsChangeDnsPtrActionResponse actionResponse;
+
     public PostLoadBalancersIdActionsChangeDnsPtrResponse withActionResponse(PostLoadBalancersIdActionsChangeDnsPtrActionResponse actionResponse) {
         this.actionResponse = actionResponse;
         return this;
@@ -19,6 +21,7 @@ public class PostLoadBalancersIdActionsChangeDnsPtrResponse {
     
     
     public String contentType;
+
     public PostLoadBalancersIdActionsChangeDnsPtrResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PostLoadBalancersIdActionsChangeDnsPtrResponse {
     
     
     public Integer statusCode;
+
     public PostLoadBalancersIdActionsChangeDnsPtrResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PostLoadBalancersIdActionsChangeDnsPtrResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostLoadBalancersIdActionsChangeDnsPtrResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostLoadBalancersIdActionsChangeDnsPtrResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

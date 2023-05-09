@@ -18,6 +18,7 @@ public class Sink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codec")
     public java.util.Map<String, Object> codec;
+
     public Sink withCodec(java.util.Map<String, Object> codec) {
         this.codec = codec;
         return this;
@@ -29,9 +30,11 @@ public class Sink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public java.util.Map<String, Object> spec;
+
     public Sink withSpec(java.util.Map<String, Object> spec) {
         this.spec = spec;
         return this;
     }
     
+    public Sink(){}
 }

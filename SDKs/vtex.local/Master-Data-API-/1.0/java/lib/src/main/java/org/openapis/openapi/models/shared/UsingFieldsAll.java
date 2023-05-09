@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UsingFieldsAll {
     @JsonProperty("accountId")
     public String accountId;
+
     public UsingFieldsAll withAccountId(String accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +20,7 @@ public class UsingFieldsAll {
     
     @JsonProperty("accountName")
     public String accountName;
+
     public UsingFieldsAll withAccountName(String accountName) {
         this.accountName = accountName;
         return this;
@@ -26,6 +28,7 @@ public class UsingFieldsAll {
     
     @JsonProperty("dataEntityId")
     public String dataEntityId;
+
     public UsingFieldsAll withDataEntityId(String dataEntityId) {
         this.dataEntityId = dataEntityId;
         return this;
@@ -33,9 +36,16 @@ public class UsingFieldsAll {
     
     @JsonProperty("id")
     public String id;
+
     public UsingFieldsAll withId(String id) {
         this.id = id;
         return this;
     }
     
+    public UsingFieldsAll(@JsonProperty("accountId") String accountId, @JsonProperty("accountName") String accountName, @JsonProperty("dataEntityId") String dataEntityId, @JsonProperty("id") String id) {
+        this.accountId = accountId;
+        this.accountName = accountName;
+        this.dataEntityId = dataEntityId;
+        this.id = id;
+  }
 }

@@ -15,6 +15,7 @@ public class ApplicationComponentStatusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Long count;
+
     public ApplicationComponentStatusSummary withCount(Long count) {
         this.count = count;
         return this;
@@ -23,9 +24,11 @@ public class ApplicationComponentStatusSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcCodeOrDbAnalysisStatus")
     public SrcCodeOrDbAnalysisStatusEnum srcCodeOrDbAnalysisStatus;
+
     public ApplicationComponentStatusSummary withSrcCodeOrDbAnalysisStatus(SrcCodeOrDbAnalysisStatusEnum srcCodeOrDbAnalysisStatus) {
         this.srcCodeOrDbAnalysisStatus = srcCodeOrDbAnalysisStatus;
         return this;
     }
     
+    public ApplicationComponentStatusSummary(){}
 }

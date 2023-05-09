@@ -15,6 +15,7 @@ public class CreateWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CreateWorkflowStepResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class CreateWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowStepResponse withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class CreateWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public CreateWorkflowStepResponse withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -39,9 +42,11 @@ public class CreateWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public CreateWorkflowStepResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public CreateWorkflowStepResponse(){}
 }

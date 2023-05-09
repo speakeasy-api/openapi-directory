@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReactionsListForIssueCommentResponse {
     
     public String contentType;
+
     public ReactionsListForIssueCommentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReactionsListForIssueCommentResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public ReactionsListForIssueCommentResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class ReactionsListForIssueCommentResponse {
     
     
     public Integer statusCode;
+
     public ReactionsListForIssueCommentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class ReactionsListForIssueCommentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReactionsListForIssueCommentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class ReactionsListForIssueCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReactionsListForIssueCommentResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -50,9 +56,14 @@ public class ReactionsListForIssueCommentResponse {
      */
     
     public org.openapis.openapi.models.shared.Reaction[] reactions;
+
     public ReactionsListForIssueCommentResponse withReactions(org.openapis.openapi.models.shared.Reaction[] reactions) {
         this.reactions = reactions;
         return this;
     }
     
+    public ReactionsListForIssueCommentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

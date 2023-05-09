@@ -58,11 +58,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ReportsIndexResponse res = new org.openapis.openapi.models.operations.ReportsIndexResponse() {{
+        org.openapis.openapi.models.operations.ReportsIndexResponse res = new org.openapis.openapi.models.operations.ReportsIndexResponse(contentType, httpRes.statusCode()) {{
             object = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeResponse res = new org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeResponse() {{
+        org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeResponse res = new org.openapis.openapi.models.operations.GetVVersionReportsStartDateToEndDateReportTypeResponse(contentType, httpRes.statusCode()) {{
             object = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

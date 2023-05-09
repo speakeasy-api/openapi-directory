@@ -228,4 +228,16 @@ lib/src/main/java/org/openapis/openapi/models/shared/TotalItems1.java
 lib/src/main/java/org/openapis/openapi/models/shared/List1.java
 lib/src/main/java/org/openapis/openapi/models/shared/Item2.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/changeseller/README.md
+docs/conversation/README.md
+docs/exportorderreport/README.md
+docs/feedv2deprecated/README.md
+docs/feedv3/README.md
+docs/invoice/README.md
+docs/orderhook/README.md
+docs/orders/README.md
+docs/payment/README.md
+docs/tracking/README.md
+docs/userorders/README.md
 USAGE.md

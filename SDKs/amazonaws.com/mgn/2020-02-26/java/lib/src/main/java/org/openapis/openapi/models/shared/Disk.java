@@ -15,6 +15,7 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bytes")
     public Long bytes;
+
     public Disk withBytes(Long bytes) {
         this.bytes = bytes;
         return this;
@@ -23,9 +24,11 @@ public class Disk {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceName")
     public String deviceName;
+
     public Disk withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
     }
     
+    public Disk(){}
 }

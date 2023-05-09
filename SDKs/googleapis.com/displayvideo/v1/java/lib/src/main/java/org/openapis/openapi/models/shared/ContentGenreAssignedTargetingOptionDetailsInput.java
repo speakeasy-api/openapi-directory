@@ -18,6 +18,7 @@ public class ContentGenreAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("negative")
     public Boolean negative;
+
     public ContentGenreAssignedTargetingOptionDetailsInput withNegative(Boolean negative) {
         this.negative = negative;
         return this;
@@ -29,9 +30,11 @@ public class ContentGenreAssignedTargetingOptionDetailsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetingOptionId")
     public String targetingOptionId;
+
     public ContentGenreAssignedTargetingOptionDetailsInput withTargetingOptionId(String targetingOptionId) {
         this.targetingOptionId = targetingOptionId;
         return this;
     }
     
+    public ContentGenreAssignedTargetingOptionDetailsInput(){}
 }

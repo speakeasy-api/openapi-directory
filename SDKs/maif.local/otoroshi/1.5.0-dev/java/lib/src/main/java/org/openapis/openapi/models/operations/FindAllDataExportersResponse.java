@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FindAllDataExportersResponse {
     
     public String contentType;
+
     public FindAllDataExportersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class FindAllDataExportersResponse {
      */
     
     public org.openapis.openapi.models.shared.DataExporterConfig[] dataExporterConfigs;
+
     public FindAllDataExportersResponse withDataExporterConfigs(org.openapis.openapi.models.shared.DataExporterConfig[] dataExporterConfigs) {
         this.dataExporterConfigs = dataExporterConfigs;
         return this;
@@ -26,6 +29,7 @@ public class FindAllDataExportersResponse {
     
     
     public Integer statusCode;
+
     public FindAllDataExportersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class FindAllDataExportersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FindAllDataExportersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public FindAllDataExportersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

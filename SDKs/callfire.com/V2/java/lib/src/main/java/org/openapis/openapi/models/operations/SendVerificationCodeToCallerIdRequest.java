@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SendVerificationCodeToCallerIdRequest {
@@ -12,9 +13,13 @@ public class SendVerificationCodeToCallerIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=callerid")
     public String callerid;
+
     public SendVerificationCodeToCallerIdRequest withCallerid(String callerid) {
         this.callerid = callerid;
         return this;
     }
     
+    public SendVerificationCodeToCallerIdRequest(@JsonProperty("callerid") String callerid) {
+        this.callerid = callerid;
+  }
 }

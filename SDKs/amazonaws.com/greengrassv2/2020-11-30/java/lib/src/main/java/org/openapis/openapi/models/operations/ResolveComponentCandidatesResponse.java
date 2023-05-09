@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ResolveComponentCandidatesResponse {
@@ -12,6 +13,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object accessDeniedException;
+
     public ResolveComponentCandidatesResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object conflictException;
+
     public ResolveComponentCandidatesResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class ResolveComponentCandidatesResponse {
     
     
     public String contentType;
+
     public ResolveComponentCandidatesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object internalServerException;
+
     public ResolveComponentCandidatesResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public org.openapis.openapi.models.shared.ResolveComponentCandidatesResponse resolveComponentCandidatesResponse;
+
     public ResolveComponentCandidatesResponse withResolveComponentCandidatesResponse(org.openapis.openapi.models.shared.ResolveComponentCandidatesResponse resolveComponentCandidatesResponse) {
         this.resolveComponentCandidatesResponse = resolveComponentCandidatesResponse;
         return this;
@@ -59,6 +65,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ResolveComponentCandidatesResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class ResolveComponentCandidatesResponse {
     
     
     public Integer statusCode;
+
     public ResolveComponentCandidatesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class ResolveComponentCandidatesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ResolveComponentCandidatesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object throttlingException;
+
     public ResolveComponentCandidatesResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class ResolveComponentCandidatesResponse {
      */
     
     public Object validationException;
+
     public ResolveComponentCandidatesResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ResolveComponentCandidatesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

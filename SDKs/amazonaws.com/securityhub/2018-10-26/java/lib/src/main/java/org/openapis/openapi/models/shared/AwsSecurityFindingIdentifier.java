@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AwsSecurityFindingIdentifier {
     @JsonProperty("Id")
     public String id;
+
     public AwsSecurityFindingIdentifier withId(String id) {
         this.id = id;
         return this;
@@ -19,9 +20,14 @@ public class AwsSecurityFindingIdentifier {
     
     @JsonProperty("ProductArn")
     public String productArn;
+
     public AwsSecurityFindingIdentifier withProductArn(String productArn) {
         this.productArn = productArn;
         return this;
     }
     
+    public AwsSecurityFindingIdentifier(@JsonProperty("Id") String id, @JsonProperty("ProductArn") String productArn) {
+        this.id = id;
+        this.productArn = productArn;
+  }
 }

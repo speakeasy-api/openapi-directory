@@ -18,6 +18,7 @@ public class NetworkUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetReceivedBytesPerSecond")
     public Integer targetReceivedBytesPerSecond;
+
     public NetworkUtilization withTargetReceivedBytesPerSecond(Integer targetReceivedBytesPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         return this;
@@ -29,6 +30,7 @@ public class NetworkUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetReceivedPacketsPerSecond")
     public Integer targetReceivedPacketsPerSecond;
+
     public NetworkUtilization withTargetReceivedPacketsPerSecond(Integer targetReceivedPacketsPerSecond) {
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         return this;
@@ -40,6 +42,7 @@ public class NetworkUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSentBytesPerSecond")
     public Integer targetSentBytesPerSecond;
+
     public NetworkUtilization withTargetSentBytesPerSecond(Integer targetSentBytesPerSecond) {
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;
         return this;
@@ -51,9 +54,11 @@ public class NetworkUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetSentPacketsPerSecond")
     public Integer targetSentPacketsPerSecond;
+
     public NetworkUtilization withTargetSentPacketsPerSecond(Integer targetSentPacketsPerSecond) {
         this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
         return this;
     }
     
+    public NetworkUtilization(){}
 }

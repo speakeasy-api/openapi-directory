@@ -18,6 +18,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public EmbeddedObject withDescription(String description) {
         this.description = description;
         return this;
@@ -29,6 +30,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedDrawingProperties")
     public java.util.Map<String, Object> embeddedDrawingProperties;
+
     public EmbeddedObject withEmbeddedDrawingProperties(java.util.Map<String, Object> embeddedDrawingProperties) {
         this.embeddedDrawingProperties = embeddedDrawingProperties;
         return this;
@@ -40,6 +42,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObjectBorder")
     public EmbeddedObjectBorder embeddedObjectBorder;
+
     public EmbeddedObject withEmbeddedObjectBorder(EmbeddedObjectBorder embeddedObjectBorder) {
         this.embeddedObjectBorder = embeddedObjectBorder;
         return this;
@@ -51,6 +54,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageProperties")
     public ImageProperties imageProperties;
+
     public EmbeddedObject withImageProperties(ImageProperties imageProperties) {
         this.imageProperties = imageProperties;
         return this;
@@ -62,6 +66,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedContentReference")
     public LinkedContentReference linkedContentReference;
+
     public EmbeddedObject withLinkedContentReference(LinkedContentReference linkedContentReference) {
         this.linkedContentReference = linkedContentReference;
         return this;
@@ -73,6 +78,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginBottom")
     public Dimension marginBottom;
+
     public EmbeddedObject withMarginBottom(Dimension marginBottom) {
         this.marginBottom = marginBottom;
         return this;
@@ -84,6 +90,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginLeft")
     public Dimension marginLeft;
+
     public EmbeddedObject withMarginLeft(Dimension marginLeft) {
         this.marginLeft = marginLeft;
         return this;
@@ -95,6 +102,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginRight")
     public Dimension marginRight;
+
     public EmbeddedObject withMarginRight(Dimension marginRight) {
         this.marginRight = marginRight;
         return this;
@@ -106,6 +114,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marginTop")
     public Dimension marginTop;
+
     public EmbeddedObject withMarginTop(Dimension marginTop) {
         this.marginTop = marginTop;
         return this;
@@ -117,6 +126,7 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Size size;
+
     public EmbeddedObject withSize(Size size) {
         this.size = size;
         return this;
@@ -128,9 +138,11 @@ public class EmbeddedObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public EmbeddedObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public EmbeddedObject(){}
 }

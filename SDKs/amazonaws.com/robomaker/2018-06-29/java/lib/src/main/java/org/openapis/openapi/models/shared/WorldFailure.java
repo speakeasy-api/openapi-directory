@@ -15,6 +15,7 @@ public class WorldFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCode")
     public WorldGenerationJobErrorCodeEnum failureCode;
+
     public WorldFailure withFailureCode(WorldGenerationJobErrorCodeEnum failureCode) {
         this.failureCode = failureCode;
         return this;
@@ -23,6 +24,7 @@ public class WorldFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failureCount")
     public Long failureCount;
+
     public WorldFailure withFailureCount(Long failureCount) {
         this.failureCount = failureCount;
         return this;
@@ -31,9 +33,11 @@ public class WorldFailure {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sampleFailureReason")
     public String sampleFailureReason;
+
     public WorldFailure withSampleFailureReason(String sampleFailureReason) {
         this.sampleFailureReason = sampleFailureReason;
         return this;
     }
     
+    public WorldFailure(){}
 }

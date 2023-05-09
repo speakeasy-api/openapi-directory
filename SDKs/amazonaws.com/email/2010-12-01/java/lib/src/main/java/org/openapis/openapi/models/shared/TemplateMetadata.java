@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class TemplateMetadata {
     
     public OffsetDateTime createdTimestamp;
+
     public TemplateMetadata withCreatedTimestamp(OffsetDateTime createdTimestamp) {
         this.createdTimestamp = createdTimestamp;
         return this;
@@ -19,9 +20,11 @@ public class TemplateMetadata {
     
     
     public String name;
+
     public TemplateMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public TemplateMetadata(){}
 }

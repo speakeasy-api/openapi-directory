@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RemoveRoleFromInstanceProfileRequest {
     
     public String instanceProfileName;
+
     public RemoveRoleFromInstanceProfileRequest withInstanceProfileName(String instanceProfileName) {
         this.instanceProfileName = instanceProfileName;
         return this;
@@ -16,9 +17,14 @@ public class RemoveRoleFromInstanceProfileRequest {
     
     
     public String roleName;
+
     public RemoveRoleFromInstanceProfileRequest withRoleName(String roleName) {
         this.roleName = roleName;
         return this;
     }
     
+    public RemoveRoleFromInstanceProfileRequest(@JsonProperty("InstanceProfileName") String instanceProfileName, @JsonProperty("RoleName") String roleName) {
+        this.instanceProfileName = instanceProfileName;
+        this.roleName = roleName;
+  }
 }

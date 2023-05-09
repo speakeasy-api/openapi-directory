@@ -15,6 +15,7 @@ public class GetRecommendationPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetRecommendationPreferencesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class GetRecommendationPreferencesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recommendationPreferencesDetails")
     public RecommendationPreferencesDetail[] recommendationPreferencesDetails;
+
     public GetRecommendationPreferencesResponse withRecommendationPreferencesDetails(RecommendationPreferencesDetail[] recommendationPreferencesDetails) {
         this.recommendationPreferencesDetails = recommendationPreferencesDetails;
         return this;
     }
     
+    public GetRecommendationPreferencesResponse(){}
 }

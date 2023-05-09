@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllOutputFormatEnum;
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllRequest;
 import org.openapis.openapi.models.operations.TransportationIncentivesLawsAllResponse;
@@ -27,43 +26,43 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TransportationIncentivesLawsAllRequest req = new TransportationIncentivesLawsAllRequest() {{
-                apiKey = "corrupti";
+            TransportationIncentivesLawsAllRequest req = new TransportationIncentivesLawsAllRequest("corrupti", TransportationIncentivesLawsAllOutputFormatEnum.XML) {{
                 expired = false;
-                incentiveType = "provident";
-                jurisdiction = "distinctio";
-                keyword = "quibusdam";
-                lawType = "unde";
-                limit = 857946;
+                incentiveType = "distinctio";
+                jurisdiction = "quibusdam";
+                keyword = "unde";
+                lawType = "nulla";
+                limit = 544883L;
                 local = false;
-                outputFormat = "xml";
                 poc = false;
                 recent = false;
                 regulationType = "illum";
                 technology = "vel";
                 userType = "error";
-            }}            
+            }};            
 
             TransportationIncentivesLawsAllResponse res = sdk.transportationIncentivesLawsAll(req);
 
-            if (res.body.isPresent()) {
+            if (res.body != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
 ## Available Resources and Operations
 
-### SDK SDK
+### [SDK](docs/sdk/README.md)
 
-* `transportationIncentivesLawsAll` - Return a full list of laws and incentives that match your query.
-* `transportationIncentivesLawsCategories` - Return the law categories for a given category type.
-* `transportationIncentivesLawsId` - Fetch the details of a specific law given the law's ID.
-* `transportationIncentivesLawsPocs` - Get the points of contact for a given jurisdiction.
+* [transportationIncentivesLawsAll](docs/sdk/README.md#transportationincentiveslawsall) - Return a full list of laws and incentives that match your query.
+* [transportationIncentivesLawsCategories](docs/sdk/README.md#transportationincentiveslawscategories) - Return the law categories for a given category type.
+* [transportationIncentivesLawsId](docs/sdk/README.md#transportationincentiveslawsid) - Fetch the details of a specific law given the law's ID.
+* [transportationIncentivesLawsPocs](docs/sdk/README.md#transportationincentiveslawspocs) - Get the points of contact for a given jurisdiction.
 <!-- End SDK Available Operations -->
 
 ### Maturity

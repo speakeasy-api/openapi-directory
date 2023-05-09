@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFleetsResultFleetsTargetCapacitySpecification {
     
     public DescribeFleetsResultFleetsTargetCapacitySpecificationDefaultTargetCapacityTypeEnum defaultTargetCapacityType;
+
     public DescribeFleetsResultFleetsTargetCapacitySpecification withDefaultTargetCapacityType(DescribeFleetsResultFleetsTargetCapacitySpecificationDefaultTargetCapacityTypeEnum defaultTargetCapacityType) {
         this.defaultTargetCapacityType = defaultTargetCapacityType;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFleetsResultFleetsTargetCapacitySpecification {
     
     
     public Long onDemandTargetCapacity;
+
     public DescribeFleetsResultFleetsTargetCapacitySpecification withOnDemandTargetCapacity(Long onDemandTargetCapacity) {
         this.onDemandTargetCapacity = onDemandTargetCapacity;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFleetsResultFleetsTargetCapacitySpecification {
     
     
     public Long spotTargetCapacity;
+
     public DescribeFleetsResultFleetsTargetCapacitySpecification withSpotTargetCapacity(Long spotTargetCapacity) {
         this.spotTargetCapacity = spotTargetCapacity;
         return this;
@@ -33,6 +36,7 @@ public class DescribeFleetsResultFleetsTargetCapacitySpecification {
     
     
     public DescribeFleetsResultFleetsTargetCapacitySpecificationTargetCapacityUnitTypeEnum targetCapacityUnitType;
+
     public DescribeFleetsResultFleetsTargetCapacitySpecification withTargetCapacityUnitType(DescribeFleetsResultFleetsTargetCapacitySpecificationTargetCapacityUnitTypeEnum targetCapacityUnitType) {
         this.targetCapacityUnitType = targetCapacityUnitType;
         return this;
@@ -40,9 +44,11 @@ public class DescribeFleetsResultFleetsTargetCapacitySpecification {
     
     
     public Long totalTargetCapacity;
+
     public DescribeFleetsResultFleetsTargetCapacitySpecification withTotalTargetCapacity(Long totalTargetCapacity) {
         this.totalTargetCapacity = totalTargetCapacity;
         return this;
     }
     
+    public DescribeFleetsResultFleetsTargetCapacitySpecification(){}
 }

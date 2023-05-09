@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SecretScanningLocation {
     @JsonProperty("details")
     public Object details;
+
     public SecretScanningLocation withDetails(Object details) {
         this.details = details;
         return this;
@@ -19,9 +20,14 @@ public class SecretScanningLocation {
      */
     @JsonProperty("type")
     public SecretScanningLocationTypeEnum type;
+
     public SecretScanningLocation withType(SecretScanningLocationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SecretScanningLocation(@JsonProperty("details") Object details, @JsonProperty("type") SecretScanningLocationTypeEnum type) {
+        this.details = details;
+        this.type = type;
+  }
 }

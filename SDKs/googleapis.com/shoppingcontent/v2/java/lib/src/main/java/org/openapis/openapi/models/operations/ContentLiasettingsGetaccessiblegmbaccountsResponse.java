@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ContentLiasettingsGetaccessiblegmbaccountsResponse {
     
     public String contentType;
+
     public ContentLiasettingsGetaccessiblegmbaccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ContentLiasettingsGetaccessiblegmbaccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.LiasettingsGetAccessibleGmbAccountsResponse liasettingsGetAccessibleGmbAccountsResponse;
+
     public ContentLiasettingsGetaccessiblegmbaccountsResponse withLiasettingsGetAccessibleGmbAccountsResponse(org.openapis.openapi.models.shared.LiasettingsGetAccessibleGmbAccountsResponse liasettingsGetAccessibleGmbAccountsResponse) {
         this.liasettingsGetAccessibleGmbAccountsResponse = liasettingsGetAccessibleGmbAccountsResponse;
         return this;
@@ -26,6 +29,7 @@ public class ContentLiasettingsGetaccessiblegmbaccountsResponse {
     
     
     public Integer statusCode;
+
     public ContentLiasettingsGetaccessiblegmbaccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ContentLiasettingsGetaccessiblegmbaccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ContentLiasettingsGetaccessiblegmbaccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ContentLiasettingsGetaccessiblegmbaccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

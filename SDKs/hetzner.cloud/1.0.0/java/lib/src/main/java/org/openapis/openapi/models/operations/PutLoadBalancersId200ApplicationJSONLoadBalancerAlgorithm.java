@@ -15,9 +15,13 @@ public class PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithm {
      */
     @JsonProperty("type")
     public PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithmTypeEnum type;
+
     public PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithm withType(PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithmTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithm(@JsonProperty("type") PutLoadBalancersId200ApplicationJSONLoadBalancerAlgorithmTypeEnum type) {
+        this.type = type;
+  }
 }

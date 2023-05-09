@@ -15,6 +15,7 @@ public class Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CapacityUnits")
     public Double capacityUnits;
+
     public Capacity withCapacityUnits(Double capacityUnits) {
         this.capacityUnits = capacityUnits;
         return this;
@@ -23,6 +24,7 @@ public class Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadCapacityUnits")
     public Double readCapacityUnits;
+
     public Capacity withReadCapacityUnits(Double readCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         return this;
@@ -31,9 +33,11 @@ public class Capacity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WriteCapacityUnits")
     public Double writeCapacityUnits;
+
     public Capacity withWriteCapacityUnits(Double writeCapacityUnits) {
         this.writeCapacityUnits = writeCapacityUnits;
         return this;
     }
     
+    public Capacity(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GsiPredictionResponse {
     
     public String contentType;
+
     public GsiPredictionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GsiPredictionResponse {
     
     
     public Integer statusCode;
+
     public GsiPredictionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GsiPredictionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GsiPredictionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GsiPredictionResponse {
      */
     
     public GsiPrediction200ApplicationJSON gsiPrediction200ApplicationJSONObject;
+
     public GsiPredictionResponse withGsiPrediction200ApplicationJSONObject(GsiPrediction200ApplicationJSON gsiPrediction200ApplicationJSONObject) {
         this.gsiPrediction200ApplicationJSONObject = gsiPrediction200ApplicationJSONObject;
         return this;
     }
     
+    public GsiPredictionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

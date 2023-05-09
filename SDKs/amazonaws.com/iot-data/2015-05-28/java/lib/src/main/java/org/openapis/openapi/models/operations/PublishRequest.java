@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PublishRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public PublishRequestBody requestBody;
+
     public PublishRequest withRequestBody(PublishRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public PublishRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public PublishRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public PublishRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public PublishRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public PublishRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public PublishRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class PublishRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public PublishRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,6 +77,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=contentType")
     public String contentType;
+
     public PublishRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -78,6 +88,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=messageExpiry")
     public Long messageExpiry;
+
     public PublishRequest withMessageExpiry(Long messageExpiry) {
         this.messageExpiry = messageExpiry;
         return this;
@@ -88,6 +99,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=qos")
     public Long qos;
+
     public PublishRequest withQos(Long qos) {
         this.qos = qos;
         return this;
@@ -98,6 +110,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=responseTopic")
     public String responseTopic;
+
     public PublishRequest withResponseTopic(String responseTopic) {
         this.responseTopic = responseTopic;
         return this;
@@ -108,6 +121,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=retain")
     public Boolean retain;
+
     public PublishRequest withRetain(Boolean retain) {
         this.retain = retain;
         return this;
@@ -118,6 +132,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic")
     public String topic;
+
     public PublishRequest withTopic(String topic) {
         this.topic = topic;
         return this;
@@ -128,6 +143,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-correlation-data")
     public String xAmzMqtt5CorrelationData;
+
     public PublishRequest withXAmzMqtt5CorrelationData(String xAmzMqtt5CorrelationData) {
         this.xAmzMqtt5CorrelationData = xAmzMqtt5CorrelationData;
         return this;
@@ -138,6 +154,7 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-payload-format-indicator")
     public PublishXAmzMqtt5PayloadFormatIndicatorEnum xAmzMqtt5PayloadFormatIndicator;
+
     public PublishRequest withXAmzMqtt5PayloadFormatIndicator(PublishXAmzMqtt5PayloadFormatIndicatorEnum xAmzMqtt5PayloadFormatIndicator) {
         this.xAmzMqtt5PayloadFormatIndicator = xAmzMqtt5PayloadFormatIndicator;
         return this;
@@ -148,9 +165,14 @@ public class PublishRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-amz-mqtt5-user-properties")
     public String xAmzMqtt5UserProperties;
+
     public PublishRequest withXAmzMqtt5UserProperties(String xAmzMqtt5UserProperties) {
         this.xAmzMqtt5UserProperties = xAmzMqtt5UserProperties;
         return this;
     }
     
+    public PublishRequest(@JsonProperty("RequestBody") PublishRequestBody requestBody, @JsonProperty("topic") String topic) {
+        this.requestBody = requestBody;
+        this.topic = topic;
+  }
 }

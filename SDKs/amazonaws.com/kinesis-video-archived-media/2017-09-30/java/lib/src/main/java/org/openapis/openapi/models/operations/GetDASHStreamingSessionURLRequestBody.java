@@ -15,6 +15,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DASHFragmentSelector")
     public GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector dashFragmentSelector;
+
     public GetDASHStreamingSessionURLRequestBody withDASHFragmentSelector(GetDASHStreamingSessionURLRequestBodyDASHFragmentSelector dashFragmentSelector) {
         this.dashFragmentSelector = dashFragmentSelector;
         return this;
@@ -26,6 +27,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayFragmentNumber")
     public GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum displayFragmentNumber;
+
     public GetDASHStreamingSessionURLRequestBody withDisplayFragmentNumber(GetDASHStreamingSessionURLRequestBodyDisplayFragmentNumberEnum displayFragmentNumber) {
         this.displayFragmentNumber = displayFragmentNumber;
         return this;
@@ -37,6 +39,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayFragmentTimestamp")
     public GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum displayFragmentTimestamp;
+
     public GetDASHStreamingSessionURLRequestBody withDisplayFragmentTimestamp(GetDASHStreamingSessionURLRequestBodyDisplayFragmentTimestampEnum displayFragmentTimestamp) {
         this.displayFragmentTimestamp = displayFragmentTimestamp;
         return this;
@@ -48,6 +51,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expires")
     public Long expires;
+
     public GetDASHStreamingSessionURLRequestBody withExpires(Long expires) {
         this.expires = expires;
         return this;
@@ -59,6 +63,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxManifestFragmentResults")
     public Long maxManifestFragmentResults;
+
     public GetDASHStreamingSessionURLRequestBody withMaxManifestFragmentResults(Long maxManifestFragmentResults) {
         this.maxManifestFragmentResults = maxManifestFragmentResults;
         return this;
@@ -70,6 +75,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlaybackMode")
     public GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum playbackMode;
+
     public GetDASHStreamingSessionURLRequestBody withPlaybackMode(GetDASHStreamingSessionURLRequestBodyPlaybackModeEnum playbackMode) {
         this.playbackMode = playbackMode;
         return this;
@@ -81,6 +87,7 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamARN")
     public String streamARN;
+
     public GetDASHStreamingSessionURLRequestBody withStreamARN(String streamARN) {
         this.streamARN = streamARN;
         return this;
@@ -92,9 +99,11 @@ public class GetDASHStreamingSessionURLRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StreamName")
     public String streamName;
+
     public GetDASHStreamingSessionURLRequestBody withStreamName(String streamName) {
         this.streamName = streamName;
         return this;
     }
     
+    public GetDASHStreamingSessionURLRequestBody(){}
 }

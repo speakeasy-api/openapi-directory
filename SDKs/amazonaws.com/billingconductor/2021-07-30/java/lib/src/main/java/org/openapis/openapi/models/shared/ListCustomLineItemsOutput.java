@@ -15,6 +15,7 @@ public class ListCustomLineItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomLineItems")
     public CustomLineItemListElement[] customLineItems;
+
     public ListCustomLineItemsOutput withCustomLineItems(CustomLineItemListElement[] customLineItems) {
         this.customLineItems = customLineItems;
         return this;
@@ -23,9 +24,11 @@ public class ListCustomLineItemsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListCustomLineItemsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListCustomLineItemsOutput(){}
 }

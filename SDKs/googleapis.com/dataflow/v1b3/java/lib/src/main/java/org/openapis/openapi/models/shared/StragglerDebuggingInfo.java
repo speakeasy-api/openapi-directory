@@ -18,9 +18,11 @@ public class StragglerDebuggingInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotKey")
     public HotKeyDebuggingInfo hotKey;
+
     public StragglerDebuggingInfo withHotKey(HotKeyDebuggingInfo hotKey) {
         this.hotKey = hotKey;
         return this;
     }
     
+    public StragglerDebuggingInfo(){}
 }

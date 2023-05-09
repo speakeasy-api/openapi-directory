@@ -59,11 +59,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsAggregatedListResponse(contentType, httpRes.statusCode()) {{
             networkAttachmentAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetResponse(contentType, httpRes.statusCode()) {{
             networkAttachment = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -197,11 +191,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsGetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -291,11 +281,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsListResponse(contentType, httpRes.statusCode()) {{
             networkAttachmentList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -303,6 +291,52 @@ public class NetworkAttachments {
                 ObjectMapper mapper = JSON.getMapper();
                 org.openapis.openapi.models.shared.NetworkAttachmentList out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.NetworkAttachmentList.class);
                 res.networkAttachmentList = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Patches the specified NetworkAttachment resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
+     * @param request the request object containing all of the parameters for the API call
+     * @param security the security details to use for authentication
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchResponse computeNetworkAttachmentsPatch(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchRequest request, org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchSecurity security) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = org.openapis.openapi.utils.Utils.generateURL(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchRequest.class, baseUrl, "/projects/{project}/regions/{region}/networkAttachments/{networkAttachment}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("PATCH");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "networkAttachment1", "json");
+        req.setBody(serializedRequestBody);
+        
+        java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchRequest.class, request, null);
+        if (queryParams != null) {
+            for (NameValuePair queryParam : queryParams) {
+                req.addQueryParam(queryParam);
+            }
+        }
+        
+        HTTPClient client = org.openapis.openapi.utils.Utils.configureSecurityClient(this._defaultClient, security);
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsPatchResponse(contentType, httpRes.statusCode()) {{
+            operation = null;
+        }};
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                org.openapis.openapi.models.shared.Operation out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), org.openapis.openapi.models.shared.Operation.class);
+                res.operation = out;
             }
         }
 
@@ -339,11 +373,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsSetIamPolicyResponse(contentType, httpRes.statusCode()) {{
             policy = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -387,11 +419,9 @@ public class NetworkAttachments {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse() {{
+        org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse res = new org.openapis.openapi.models.operations.ComputeNetworkAttachmentsTestIamPermissionsResponse(contentType, httpRes.statusCode()) {{
             testPermissionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

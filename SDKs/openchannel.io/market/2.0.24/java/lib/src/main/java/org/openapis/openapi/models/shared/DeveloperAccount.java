@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeveloperAccount - A Developer Account
@@ -15,6 +15,7 @@ public class DeveloperAccount {
      */
     
     public java.util.Map<String, Object> customData;
+
     public DeveloperAccount withCustomData(java.util.Map<String, Object> customData) {
         this.customData = customData;
         return this;
@@ -25,6 +26,7 @@ public class DeveloperAccount {
      */
     
     public String developerAccountId;
+
     public DeveloperAccount withDeveloperAccountId(String developerAccountId) {
         this.developerAccountId = developerAccountId;
         return this;
@@ -35,6 +37,7 @@ public class DeveloperAccount {
      */
     
     public String developerId;
+
     public DeveloperAccount withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -45,6 +48,7 @@ public class DeveloperAccount {
      */
     
     public String email;
+
     public DeveloperAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -55,9 +59,14 @@ public class DeveloperAccount {
      */
     
     public String name;
+
     public DeveloperAccount withName(String name) {
         this.name = name;
         return this;
     }
     
+    public DeveloperAccount(@JsonProperty("developerAccountId") String developerAccountId, @JsonProperty("developerId") String developerId) {
+        this.developerAccountId = developerAccountId;
+        this.developerId = developerId;
+  }
 }

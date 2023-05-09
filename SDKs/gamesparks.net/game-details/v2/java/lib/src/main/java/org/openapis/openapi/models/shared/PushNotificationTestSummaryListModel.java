@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class PushNotificationTestSummaryListModel {
     
     public PushNotificationTestSummaryModel[] summaries;
+
     public PushNotificationTestSummaryListModel withSummaries(PushNotificationTestSummaryModel[] summaries) {
         this.summaries = summaries;
         return this;
     }
     
+    public PushNotificationTestSummaryListModel(){}
 }

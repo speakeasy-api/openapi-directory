@@ -12,6 +12,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchId")
     public Long batchId;
+
     public FindCallsRequest withBatchId(Long batchId) {
         this.batchId = batchId;
         return this;
@@ -22,6 +23,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=campaignId")
     public Long campaignId;
+
     public FindCallsRequest withCampaignId(Long campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -32,6 +34,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public FindCallsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +45,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fromNumber")
     public String fromNumber;
+
     public FindCallsRequest withFromNumber(String fromNumber) {
         this.fromNumber = fromNumber;
         return this;
@@ -52,6 +56,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=id")
     public Long[] id;
+
     public FindCallsRequest withId(Long[] id) {
         this.id = id;
         return this;
@@ -62,6 +67,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inbound")
     public Boolean inbound;
+
     public FindCallsRequest withInbound(Boolean inbound) {
         this.inbound = inbound;
         return this;
@@ -72,6 +78,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalBegin")
     public Long intervalBegin;
+
     public FindCallsRequest withIntervalBegin(Long intervalBegin) {
         this.intervalBegin = intervalBegin;
         return this;
@@ -82,6 +89,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=intervalEnd")
     public Long intervalEnd;
+
     public FindCallsRequest withIntervalEnd(Long intervalEnd) {
         this.intervalEnd = intervalEnd;
         return this;
@@ -92,6 +100,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=label")
     public String label;
+
     public FindCallsRequest withLabel(String label) {
         this.label = label;
         return this;
@@ -102,6 +111,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public FindCallsRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -112,6 +122,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public FindCallsRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -122,6 +133,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=results")
     public String results;
+
     public FindCallsRequest withResults(String results) {
         this.results = results;
         return this;
@@ -132,6 +144,7 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=states")
     public String states;
+
     public FindCallsRequest withStates(String states) {
         this.states = states;
         return this;
@@ -142,9 +155,11 @@ public class FindCallsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=toNumber")
     public String toNumber;
+
     public FindCallsRequest withToNumber(String toNumber) {
         this.toNumber = toNumber;
         return this;
     }
     
+    public FindCallsRequest(){}
 }

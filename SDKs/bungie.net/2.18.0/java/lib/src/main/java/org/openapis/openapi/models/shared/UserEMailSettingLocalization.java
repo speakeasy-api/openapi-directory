@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class UserEMailSettingLocalization {
     
     public String description;
+
     public UserEMailSettingLocalization withDescription(String description) {
         this.description = description;
         return this;
@@ -19,9 +20,11 @@ public class UserEMailSettingLocalization {
     
     
     public String title;
+
     public UserEMailSettingLocalization withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public UserEMailSettingLocalization(){}
 }

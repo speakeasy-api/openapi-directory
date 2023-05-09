@@ -18,6 +18,7 @@ public class RevocationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revocationState")
     public RevocationDetailsRevocationStateEnum revocationState;
+
     public RevocationDetails withRevocationState(RevocationDetailsRevocationStateEnum revocationState) {
         this.revocationState = revocationState;
         return this;
@@ -29,9 +30,11 @@ public class RevocationDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("revocationTime")
     public String revocationTime;
+
     public RevocationDetails withRevocationTime(String revocationTime) {
         this.revocationTime = revocationTime;
         return this;
     }
     
+    public RevocationDetails(){}
 }

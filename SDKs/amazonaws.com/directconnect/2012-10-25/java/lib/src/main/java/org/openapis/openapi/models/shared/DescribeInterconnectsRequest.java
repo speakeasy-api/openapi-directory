@@ -12,9 +12,11 @@ public class DescribeInterconnectsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interconnectId")
     public String interconnectId;
+
     public DescribeInterconnectsRequest withInterconnectId(String interconnectId) {
         this.interconnectId = interconnectId;
         return this;
     }
     
+    public DescribeInterconnectsRequest(){}
 }

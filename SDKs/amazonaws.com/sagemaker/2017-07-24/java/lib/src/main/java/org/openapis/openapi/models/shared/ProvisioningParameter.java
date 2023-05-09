@@ -15,6 +15,7 @@ public class ProvisioningParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Key")
     public String key;
+
     public ProvisioningParameter withKey(String key) {
         this.key = key;
         return this;
@@ -23,9 +24,11 @@ public class ProvisioningParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Value")
     public String value;
+
     public ProvisioningParameter withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ProvisioningParameter(){}
 }

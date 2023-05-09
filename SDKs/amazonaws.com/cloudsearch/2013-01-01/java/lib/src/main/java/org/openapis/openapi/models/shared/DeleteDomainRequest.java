@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteDomainRequest - Container for the parameters to the &lt;code&gt;&lt;a&gt;DeleteDomain&lt;/a&gt;&lt;/code&gt; operation. Specifies the name of the domain you want to delete.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteDomainRequest {
     
     public String domainName;
+
     public DeleteDomainRequest withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
     }
     
+    public DeleteDomainRequest(@JsonProperty("DomainName") String domainName) {
+        this.domainName = domainName;
+  }
 }

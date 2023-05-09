@@ -12,9 +12,11 @@ public class GsiMarketdataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=zip")
     public String zip;
+
     public GsiMarketdataRequest withZip(String zip) {
         this.zip = zip;
         return this;
     }
     
+    public GsiMarketdataRequest(){}
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Example114 {
     @JsonProperty("bssid")
     public String bssid;
+
     public Example114 withBssid(String bssid) {
         this.bssid = bssid;
         return this;
@@ -16,6 +17,7 @@ public class Example114 {
     
     @JsonProperty("signal_level")
     public Integer signalLevel;
+
     public Example114 withSignalLevel(Integer signalLevel) {
         this.signalLevel = signalLevel;
         return this;
@@ -23,6 +25,7 @@ public class Example114 {
     
     @JsonProperty("ssid")
     public String ssid;
+
     public Example114 withSsid(String ssid) {
         this.ssid = ssid;
         return this;
@@ -30,6 +33,7 @@ public class Example114 {
     
     @JsonProperty("wpa_auth")
     public Integer wpaAuth;
+
     public Example114 withWpaAuth(Integer wpaAuth) {
         this.wpaAuth = wpaAuth;
         return this;
@@ -37,6 +41,7 @@ public class Example114 {
     
     @JsonProperty("wpa_cipher")
     public Integer wpaCipher;
+
     public Example114 withWpaCipher(Integer wpaCipher) {
         this.wpaCipher = wpaCipher;
         return this;
@@ -44,9 +49,18 @@ public class Example114 {
     
     @JsonProperty("wpa_id")
     public Integer wpaId;
+
     public Example114 withWpaId(Integer wpaId) {
         this.wpaId = wpaId;
         return this;
     }
     
+    public Example114(@JsonProperty("bssid") String bssid, @JsonProperty("signal_level") Integer signalLevel, @JsonProperty("ssid") String ssid, @JsonProperty("wpa_auth") Integer wpaAuth, @JsonProperty("wpa_cipher") Integer wpaCipher, @JsonProperty("wpa_id") Integer wpaId) {
+        this.bssid = bssid;
+        this.signalLevel = signalLevel;
+        this.ssid = ssid;
+        this.wpaAuth = wpaAuth;
+        this.wpaCipher = wpaCipher;
+        this.wpaId = wpaId;
+  }
 }

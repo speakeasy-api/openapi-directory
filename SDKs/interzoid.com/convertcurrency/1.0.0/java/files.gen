@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/ConvertcurrencyRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/Convertcurrency200ApplicationJSON.java
 lib/src/main/java/org/openapis/openapi/models/operations/ConvertcurrencyResponse.java
+docs/sdk/README.md
+docs/livecurrencyrateconversion/README.md
 USAGE.md

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutPermissionResponse {
@@ -12,6 +13,7 @@ public class PutPermissionResponse {
      */
     
     public Object concurrentModificationException;
+
     public PutPermissionResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class PutPermissionResponse {
     
     
     public String contentType;
+
     public PutPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutPermissionResponse {
      */
     
     public Object internalException;
+
     public PutPermissionResponse withInternalException(Object internalException) {
         this.internalException = internalException;
         return this;
@@ -39,6 +43,7 @@ public class PutPermissionResponse {
      */
     
     public Object operationDisabledException;
+
     public PutPermissionResponse withOperationDisabledException(Object operationDisabledException) {
         this.operationDisabledException = operationDisabledException;
         return this;
@@ -49,6 +54,7 @@ public class PutPermissionResponse {
      */
     
     public Object policyLengthExceededException;
+
     public PutPermissionResponse withPolicyLengthExceededException(Object policyLengthExceededException) {
         this.policyLengthExceededException = policyLengthExceededException;
         return this;
@@ -59,6 +65,7 @@ public class PutPermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutPermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class PutPermissionResponse {
     
     
     public Integer statusCode;
+
     public PutPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class PutPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

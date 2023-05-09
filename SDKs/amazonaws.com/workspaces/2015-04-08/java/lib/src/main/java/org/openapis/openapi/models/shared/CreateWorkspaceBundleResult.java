@@ -18,9 +18,11 @@ public class CreateWorkspaceBundleResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("WorkspaceBundle")
     public WorkspaceBundle workspaceBundle;
+
     public CreateWorkspaceBundleResult withWorkspaceBundle(WorkspaceBundle workspaceBundle) {
         this.workspaceBundle = workspaceBundle;
         return this;
     }
     
+    public CreateWorkspaceBundleResult(){}
 }

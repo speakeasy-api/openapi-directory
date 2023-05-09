@@ -18,6 +18,7 @@ public class RepoId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectRepoId")
     public ProjectRepoId projectRepoId;
+
     public RepoId withProjectRepoId(ProjectRepoId projectRepoId) {
         this.projectRepoId = projectRepoId;
         return this;
@@ -29,9 +30,11 @@ public class RepoId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("uid")
     public String uid;
+
     public RepoId withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public RepoId(){}
 }

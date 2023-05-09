@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotSiteWiseCustomerManagedDatastoreS3Storage {
     @JsonProperty("bucket")
     public String bucket;
+
     public IotSiteWiseCustomerManagedDatastoreS3Storage withBucket(String bucket) {
         this.bucket = bucket;
         return this;
@@ -22,9 +23,13 @@ public class IotSiteWiseCustomerManagedDatastoreS3Storage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyPrefix")
     public String keyPrefix;
+
     public IotSiteWiseCustomerManagedDatastoreS3Storage withKeyPrefix(String keyPrefix) {
         this.keyPrefix = keyPrefix;
         return this;
     }
     
+    public IotSiteWiseCustomerManagedDatastoreS3Storage(@JsonProperty("bucket") String bucket) {
+        this.bucket = bucket;
+  }
 }

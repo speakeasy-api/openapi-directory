@@ -12,6 +12,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consumerPadding")
     public Boolean consumerPadding;
+
     public ServiceOptionsUpdateModel withConsumerPadding(Boolean consumerPadding) {
         this.consumerPadding = consumerPadding;
         return this;
@@ -20,6 +21,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultService")
     public Boolean defaultService;
+
     public ServiceOptionsUpdateModel withDefaultService(Boolean defaultService) {
         this.defaultService = defaultService;
         return this;
@@ -28,6 +30,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationInterval")
     public Integer durationInterval;
+
     public ServiceOptionsUpdateModel withDurationInterval(Integer durationInterval) {
         this.durationInterval = durationInterval;
         return this;
@@ -36,6 +39,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMax")
     public Integer durationMax;
+
     public ServiceOptionsUpdateModel withDurationMax(Integer durationMax) {
         this.durationMax = durationMax;
         return this;
@@ -44,6 +48,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMin")
     public Integer durationMin;
+
     public ServiceOptionsUpdateModel withDurationMin(Integer durationMin) {
         this.durationMin = durationMin;
         return this;
@@ -52,6 +57,7 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationSelect")
     public Boolean durationSelect;
+
     public ServiceOptionsUpdateModel withDurationSelect(Boolean durationSelect) {
         this.durationSelect = durationSelect;
         return this;
@@ -60,9 +66,11 @@ public class ServiceOptionsUpdateModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("padding")
     public Integer padding;
+
     public ServiceOptionsUpdateModel withPadding(Integer padding) {
         this.padding = padding;
         return this;
     }
     
+    public ServiceOptionsUpdateModel(){}
 }

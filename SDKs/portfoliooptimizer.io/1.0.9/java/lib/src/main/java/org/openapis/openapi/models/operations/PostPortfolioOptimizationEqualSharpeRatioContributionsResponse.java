@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse {
     
     public String contentType;
+
     public PostPortfolioOptimizationEqualSharpeRatioContributionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse {
     
     
     public Integer statusCode;
+
     public PostPortfolioOptimizationEqualSharpeRatioContributionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostPortfolioOptimizationEqualSharpeRatioContributionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class PostPortfolioOptimizationEqualSharpeRatioContributionsResponse {
      */
     
     public PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject;
+
     public PostPortfolioOptimizationEqualSharpeRatioContributionsResponse withPostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject(PostPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSON postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject) {
         this.postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject = postPortfolioOptimizationEqualSharpeRatioContributions200ApplicationJSONObject;
         return this;
     }
     
+    public PostPortfolioOptimizationEqualSharpeRatioContributionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

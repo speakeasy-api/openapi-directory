@@ -15,6 +15,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChatterFeedConfiguration")
     public SalesforceChatterFeedConfiguration chatterFeedConfiguration;
+
     public SalesforceConfiguration withChatterFeedConfiguration(SalesforceChatterFeedConfiguration chatterFeedConfiguration) {
         this.chatterFeedConfiguration = chatterFeedConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CrawlAttachments")
     public Boolean crawlAttachments;
+
     public SalesforceConfiguration withCrawlAttachments(Boolean crawlAttachments) {
         this.crawlAttachments = crawlAttachments;
         return this;
@@ -31,6 +33,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExcludeAttachmentFilePatterns")
     public String[] excludeAttachmentFilePatterns;
+
     public SalesforceConfiguration withExcludeAttachmentFilePatterns(String[] excludeAttachmentFilePatterns) {
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
         return this;
@@ -39,6 +42,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IncludeAttachmentFilePatterns")
     public String[] includeAttachmentFilePatterns;
+
     public SalesforceConfiguration withIncludeAttachmentFilePatterns(String[] includeAttachmentFilePatterns) {
         this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
         return this;
@@ -47,6 +51,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KnowledgeArticleConfiguration")
     public SalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration;
+
     public SalesforceConfiguration withKnowledgeArticleConfiguration(SalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
         return this;
@@ -54,6 +59,7 @@ public class SalesforceConfiguration {
     
     @JsonProperty("SecretArn")
     public String secretArn;
+
     public SalesforceConfiguration withSecretArn(String secretArn) {
         this.secretArn = secretArn;
         return this;
@@ -61,6 +67,7 @@ public class SalesforceConfiguration {
     
     @JsonProperty("ServerUrl")
     public String serverUrl;
+
     public SalesforceConfiguration withServerUrl(String serverUrl) {
         this.serverUrl = serverUrl;
         return this;
@@ -69,6 +76,7 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardObjectAttachmentConfiguration")
     public SalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
+
     public SalesforceConfiguration withStandardObjectAttachmentConfiguration(SalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
         this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
         return this;
@@ -77,9 +85,14 @@ public class SalesforceConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StandardObjectConfigurations")
     public SalesforceStandardObjectConfiguration[] standardObjectConfigurations;
+
     public SalesforceConfiguration withStandardObjectConfigurations(SalesforceStandardObjectConfiguration[] standardObjectConfigurations) {
         this.standardObjectConfigurations = standardObjectConfigurations;
         return this;
     }
     
+    public SalesforceConfiguration(@JsonProperty("SecretArn") String secretArn, @JsonProperty("ServerUrl") String serverUrl) {
+        this.secretArn = secretArn;
+        this.serverUrl = serverUrl;
+  }
 }

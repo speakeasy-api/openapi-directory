@@ -55,10 +55,8 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletePermissionsIdResponse res = new org.openapis.openapi.models.operations.DeletePermissionsIdResponse() {{
+        org.openapis.openapi.models.operations.DeletePermissionsIdResponse res = new org.openapis.openapi.models.operations.DeletePermissionsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetPermissionsResponse res = new org.openapis.openapi.models.operations.GetPermissionsResponse() {{
+        org.openapis.openapi.models.operations.GetPermissionsResponse res = new org.openapis.openapi.models.operations.GetPermissionsResponse(contentType, httpRes.statusCode()) {{
             permissionEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -137,11 +133,9 @@ public class Permissions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostPermissionsResponse res = new org.openapis.openapi.models.operations.PostPermissionsResponse() {{
+        org.openapis.openapi.models.operations.PostPermissionsResponse res = new org.openapis.openapi.models.operations.PostPermissionsResponse(contentType, httpRes.statusCode()) {{
             permissionEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

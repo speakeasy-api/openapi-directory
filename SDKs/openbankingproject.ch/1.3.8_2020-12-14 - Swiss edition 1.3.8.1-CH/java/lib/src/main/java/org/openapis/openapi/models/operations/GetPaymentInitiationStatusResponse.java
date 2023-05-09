@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPaymentInitiationStatusResponse {
     
     public String contentType;
+
     public GetPaymentInitiationStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS;
+
     public GetPaymentInitiationStatusResponse withError400NGPIS(org.openapis.openapi.models.shared.Error400NGPIS error400NGPIS) {
         this.error400NGPIS = error400NGPIS;
         return this;
@@ -29,6 +32,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error400PIS error400PIS;
+
     public GetPaymentInitiationStatusResponse withError400PIS(org.openapis.openapi.models.shared.Error400PIS error400PIS) {
         this.error400PIS = error400PIS;
         return this;
@@ -39,6 +43,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS;
+
     public GetPaymentInitiationStatusResponse withError401NGPIS(org.openapis.openapi.models.shared.Error401NGPIS error401NGPIS) {
         this.error401NGPIS = error401NGPIS;
         return this;
@@ -49,6 +54,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error401PIS error401PIS;
+
     public GetPaymentInitiationStatusResponse withError401PIS(org.openapis.openapi.models.shared.Error401PIS error401PIS) {
         this.error401PIS = error401PIS;
         return this;
@@ -59,6 +65,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS;
+
     public GetPaymentInitiationStatusResponse withError403NGPIS(org.openapis.openapi.models.shared.Error403NGPIS error403NGPIS) {
         this.error403NGPIS = error403NGPIS;
         return this;
@@ -69,6 +76,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error403PIS error403PIS;
+
     public GetPaymentInitiationStatusResponse withError403PIS(org.openapis.openapi.models.shared.Error403PIS error403PIS) {
         this.error403PIS = error403PIS;
         return this;
@@ -79,6 +87,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS;
+
     public GetPaymentInitiationStatusResponse withError404NGPIS(org.openapis.openapi.models.shared.Error404NGPIS error404NGPIS) {
         this.error404NGPIS = error404NGPIS;
         return this;
@@ -89,6 +98,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error404PIS error404PIS;
+
     public GetPaymentInitiationStatusResponse withError404PIS(org.openapis.openapi.models.shared.Error404PIS error404PIS) {
         this.error404PIS = error404PIS;
         return this;
@@ -99,6 +109,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS;
+
     public GetPaymentInitiationStatusResponse withError405NGPIS(org.openapis.openapi.models.shared.Error405NGPIS error405NGPIS) {
         this.error405NGPIS = error405NGPIS;
         return this;
@@ -109,6 +120,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error405PIS error405PIS;
+
     public GetPaymentInitiationStatusResponse withError405PIS(org.openapis.openapi.models.shared.Error405PIS error405PIS) {
         this.error405PIS = error405PIS;
         return this;
@@ -119,6 +131,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS;
+
     public GetPaymentInitiationStatusResponse withError409NGPIS(org.openapis.openapi.models.shared.Error409NGPIS error409NGPIS) {
         this.error409NGPIS = error409NGPIS;
         return this;
@@ -129,6 +142,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.Error409PIS error409PIS;
+
     public GetPaymentInitiationStatusResponse withError409PIS(org.openapis.openapi.models.shared.Error409PIS error409PIS) {
         this.error409PIS = error409PIS;
         return this;
@@ -136,6 +150,7 @@ public class GetPaymentInitiationStatusResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetPaymentInitiationStatusResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -143,6 +158,7 @@ public class GetPaymentInitiationStatusResponse {
     
     
     public Integer statusCode;
+
     public GetPaymentInitiationStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -150,6 +166,7 @@ public class GetPaymentInitiationStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPaymentInitiationStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -160,6 +177,7 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.PaymentInitiationStatusResponse200Json paymentInitiationStatusResponse200Json;
+
     public GetPaymentInitiationStatusResponse withPaymentInitiationStatusResponse200Json(org.openapis.openapi.models.shared.PaymentInitiationStatusResponse200Json paymentInitiationStatusResponse200Json) {
         this.paymentInitiationStatusResponse200Json = paymentInitiationStatusResponse200Json;
         return this;
@@ -170,9 +188,14 @@ public class GetPaymentInitiationStatusResponse {
      */
     
     public String paymentInitiationStatusResponse200Xml;
+
     public GetPaymentInitiationStatusResponse withPaymentInitiationStatusResponse200Xml(String paymentInitiationStatusResponse200Xml) {
         this.paymentInitiationStatusResponse200Xml = paymentInitiationStatusResponse200Xml;
         return this;
     }
     
+    public GetPaymentInitiationStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

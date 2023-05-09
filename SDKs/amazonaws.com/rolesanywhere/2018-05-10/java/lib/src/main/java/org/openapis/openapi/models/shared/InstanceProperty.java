@@ -20,6 +20,7 @@ public class InstanceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failed")
     public Boolean failed;
+
     public InstanceProperty withFailed(Boolean failed) {
         this.failed = failed;
         return this;
@@ -31,6 +32,7 @@ public class InstanceProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("properties")
     public Object properties;
+
     public InstanceProperty withProperties(Object properties) {
         this.properties = properties;
         return this;
@@ -41,9 +43,11 @@ public class InstanceProperty {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("seenAt")
     public OffsetDateTime seenAt;
+
     public InstanceProperty withSeenAt(OffsetDateTime seenAt) {
         this.seenAt = seenAt;
         return this;
     }
     
+    public InstanceProperty(){}
 }

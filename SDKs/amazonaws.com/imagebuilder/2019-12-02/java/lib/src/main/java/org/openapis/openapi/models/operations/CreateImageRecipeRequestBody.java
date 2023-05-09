@@ -15,6 +15,7 @@ public class CreateImageRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalInstanceConfiguration")
     public CreateImageRecipeRequestBodyAdditionalInstanceConfiguration additionalInstanceConfiguration;
+
     public CreateImageRecipeRequestBody withAdditionalInstanceConfiguration(CreateImageRecipeRequestBodyAdditionalInstanceConfiguration additionalInstanceConfiguration) {
         this.additionalInstanceConfiguration = additionalInstanceConfiguration;
         return this;
@@ -26,6 +27,7 @@ public class CreateImageRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("blockDeviceMappings")
     public org.openapis.openapi.models.shared.InstanceBlockDeviceMapping[] blockDeviceMappings;
+
     public CreateImageRecipeRequestBody withBlockDeviceMappings(org.openapis.openapi.models.shared.InstanceBlockDeviceMapping[] blockDeviceMappings) {
         this.blockDeviceMappings = blockDeviceMappings;
         return this;
@@ -36,6 +38,7 @@ public class CreateImageRecipeRequestBody {
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImageRecipeRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -46,27 +49,30 @@ public class CreateImageRecipeRequestBody {
      */
     @JsonProperty("components")
     public org.openapis.openapi.models.shared.ComponentConfiguration[] components;
+
     public CreateImageRecipeRequestBody withComponents(org.openapis.openapi.models.shared.ComponentConfiguration[] components) {
         this.components = components;
         return this;
     }
     
     /**
-     *  The description of the image recipe.
+     * The description of the image recipe.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateImageRecipeRequestBody withDescription(String description) {
         this.description = description;
         return this;
     }
     
     /**
-     *  The name of the image recipe.
+     * The name of the image recipe.
      */
     @JsonProperty("name")
     public String name;
+
     public CreateImageRecipeRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -77,6 +83,7 @@ public class CreateImageRecipeRequestBody {
      */
     @JsonProperty("parentImage")
     public String parentImage;
+
     public CreateImageRecipeRequestBody withParentImage(String parentImage) {
         this.parentImage = parentImage;
         return this;
@@ -87,17 +94,19 @@ public class CreateImageRecipeRequestBody {
      */
     @JsonProperty("semanticVersion")
     public String semanticVersion;
+
     public CreateImageRecipeRequestBody withSemanticVersion(String semanticVersion) {
         this.semanticVersion = semanticVersion;
         return this;
     }
     
     /**
-     *  The tags of the image recipe.
+     * The tags of the image recipe.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateImageRecipeRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
@@ -109,9 +118,17 @@ public class CreateImageRecipeRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workingDirectory")
     public String workingDirectory;
+
     public CreateImageRecipeRequestBody withWorkingDirectory(String workingDirectory) {
         this.workingDirectory = workingDirectory;
         return this;
     }
     
+    public CreateImageRecipeRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("components") org.openapis.openapi.models.shared.ComponentConfiguration[] components, @JsonProperty("name") String name, @JsonProperty("parentImage") String parentImage, @JsonProperty("semanticVersion") String semanticVersion) {
+        this.clientToken = clientToken;
+        this.components = components;
+        this.name = name;
+        this.parentImage = parentImage;
+        this.semanticVersion = semanticVersion;
+  }
 }

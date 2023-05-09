@@ -18,6 +18,7 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public FunctionCodeLocation code;
+
     public GetFunctionResponse withCode(FunctionCodeLocation code) {
         this.code = code;
         return this;
@@ -29,9 +30,11 @@ public class GetFunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configuration")
     public FunctionConfiguration configuration;
+
     public GetFunctionResponse withConfiguration(FunctionConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
     
+    public GetFunctionResponse(){}
 }

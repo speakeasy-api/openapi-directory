@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETModifyIdFormatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETModifyIdFormatActionEnum action;
+
     public GETModifyIdFormatRequest withAction(GETModifyIdFormatActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETModifyIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Resource")
     public String resource;
+
     public GETModifyIdFormatRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -29,6 +32,7 @@ public class GETModifyIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=UseLongIds")
     public Boolean useLongIds;
+
     public GETModifyIdFormatRequest withUseLongIds(Boolean useLongIds) {
         this.useLongIds = useLongIds;
         return this;
@@ -36,6 +40,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETModifyIdFormatVersionEnum version;
+
     public GETModifyIdFormatRequest withVersion(GETModifyIdFormatVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETModifyIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETModifyIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETModifyIdFormatRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETModifyIdFormatRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETModifyIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETModifyIdFormatRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,16 @@ public class GETModifyIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETModifyIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETModifyIdFormatRequest(@JsonProperty("Action") GETModifyIdFormatActionEnum action, @JsonProperty("Resource") String resource, @JsonProperty("UseLongIds") Boolean useLongIds, @JsonProperty("Version") GETModifyIdFormatVersionEnum version) {
+        this.action = action;
+        this.resource = resource;
+        this.useLongIds = useLongIds;
+        this.version = version;
+  }
 }

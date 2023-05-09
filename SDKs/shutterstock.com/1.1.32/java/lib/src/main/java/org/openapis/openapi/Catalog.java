@@ -60,11 +60,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AddToCollectionResponse res = new org.openapis.openapi.models.operations.AddToCollectionResponse() {{
+        org.openapis.openapi.models.operations.AddToCollectionResponse res = new org.openapis.openapi.models.operations.AddToCollectionResponse(contentType, httpRes.statusCode()) {{
             catalogCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -106,11 +104,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateCollectionResponse res = new org.openapis.openapi.models.operations.CreateCollectionResponse() {{
+        org.openapis.openapi.models.operations.CreateCollectionResponse res = new org.openapis.openapi.models.operations.CreateCollectionResponse(contentType, httpRes.statusCode()) {{
             catalogCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -147,10 +143,8 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteCollectionResponse res = new org.openapis.openapi.models.operations.DeleteCollectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteCollectionResponse res = new org.openapis.openapi.models.operations.DeleteCollectionResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -187,11 +181,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteFromCollectionResponse res = new org.openapis.openapi.models.operations.DeleteFromCollectionResponse() {{
+        org.openapis.openapi.models.operations.DeleteFromCollectionResponse res = new org.openapis.openapi.models.operations.DeleteFromCollectionResponse(contentType, httpRes.statusCode()) {{
             catalogCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -234,11 +226,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetCollectionsResponse res = new org.openapis.openapi.models.operations.GetCollectionsResponse() {{
+        org.openapis.openapi.models.operations.GetCollectionsResponse res = new org.openapis.openapi.models.operations.GetCollectionsResponse(contentType, httpRes.statusCode()) {{
             catalogCollectionDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -283,11 +273,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchCatalogResponse res = new org.openapis.openapi.models.operations.SearchCatalogResponse() {{
+        org.openapis.openapi.models.operations.SearchCatalogResponse res = new org.openapis.openapi.models.operations.SearchCatalogResponse(contentType, httpRes.statusCode()) {{
             catalogCollectionItemDataList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,11 +319,9 @@ public class Catalog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateCollectionResponse res = new org.openapis.openapi.models.operations.UpdateCollectionResponse() {{
+        org.openapis.openapi.models.operations.UpdateCollectionResponse res = new org.openapis.openapi.models.operations.UpdateCollectionResponse(contentType, httpRes.statusCode()) {{
             catalogCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

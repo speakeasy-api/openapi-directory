@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddCustomAttributesRequest {
     @JsonProperty("CustomAttributes")
     public SchemaAttributeType[] customAttributes;
+
     public AddCustomAttributesRequest withCustomAttributes(SchemaAttributeType[] customAttributes) {
         this.customAttributes = customAttributes;
         return this;
@@ -19,9 +20,14 @@ public class AddCustomAttributesRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AddCustomAttributesRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
     }
     
+    public AddCustomAttributesRequest(@JsonProperty("CustomAttributes") SchemaAttributeType[] customAttributes, @JsonProperty("UserPoolId") String userPoolId) {
+        this.customAttributes = customAttributes;
+        this.userPoolId = userPoolId;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public CreateWorkflowStepRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class CreateWorkflowStepRequestBody {
      */
     @JsonProperty("name")
     public String name;
+
     public CreateWorkflowStepRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String[] next;
+
     public CreateWorkflowStepRequestBody withNext(String[] next) {
         this.next = next;
         return this;
@@ -47,6 +50,7 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public org.openapis.openapi.models.shared.WorkflowStepOutput[] outputs;
+
     public CreateWorkflowStepRequestBody withOutputs(org.openapis.openapi.models.shared.WorkflowStepOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -58,6 +62,7 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String[] previous;
+
     public CreateWorkflowStepRequestBody withPrevious(String[] previous) {
         this.previous = previous;
         return this;
@@ -68,6 +73,7 @@ public class CreateWorkflowStepRequestBody {
      */
     @JsonProperty("stepActionType")
     public CreateWorkflowStepRequestBodyStepActionTypeEnum stepActionType;
+
     public CreateWorkflowStepRequestBody withStepActionType(CreateWorkflowStepRequestBodyStepActionTypeEnum stepActionType) {
         this.stepActionType = stepActionType;
         return this;
@@ -78,6 +84,7 @@ public class CreateWorkflowStepRequestBody {
      */
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public CreateWorkflowStepRequestBody withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -89,6 +96,7 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepTarget")
     public String[] stepTarget;
+
     public CreateWorkflowStepRequestBody withStepTarget(String[] stepTarget) {
         this.stepTarget = stepTarget;
         return this;
@@ -99,6 +107,7 @@ public class CreateWorkflowStepRequestBody {
      */
     @JsonProperty("workflowId")
     public String workflowId;
+
     public CreateWorkflowStepRequestBody withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -110,9 +119,16 @@ public class CreateWorkflowStepRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowStepAutomationConfiguration")
     public CreateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration workflowStepAutomationConfiguration;
+
     public CreateWorkflowStepRequestBody withWorkflowStepAutomationConfiguration(CreateWorkflowStepRequestBodyWorkflowStepAutomationConfiguration workflowStepAutomationConfiguration) {
         this.workflowStepAutomationConfiguration = workflowStepAutomationConfiguration;
         return this;
     }
     
+    public CreateWorkflowStepRequestBody(@JsonProperty("name") String name, @JsonProperty("stepActionType") CreateWorkflowStepRequestBodyStepActionTypeEnum stepActionType, @JsonProperty("stepGroupId") String stepGroupId, @JsonProperty("workflowId") String workflowId) {
+        this.name = name;
+        this.stepActionType = stepActionType;
+        this.stepGroupId = stepGroupId;
+        this.workflowId = workflowId;
+  }
 }

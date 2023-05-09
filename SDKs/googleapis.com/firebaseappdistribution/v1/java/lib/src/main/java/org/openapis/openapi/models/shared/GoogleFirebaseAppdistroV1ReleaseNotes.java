@@ -18,9 +18,11 @@ public class GoogleFirebaseAppdistroV1ReleaseNotes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public GoogleFirebaseAppdistroV1ReleaseNotes withText(String text) {
         this.text = text;
         return this;
     }
     
+    public GoogleFirebaseAppdistroV1ReleaseNotes(){}
 }

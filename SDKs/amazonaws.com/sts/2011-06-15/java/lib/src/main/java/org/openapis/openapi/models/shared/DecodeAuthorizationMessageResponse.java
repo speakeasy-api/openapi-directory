@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DecodeAuthorizationMessageResponse {
     
     public String decodedMessage;
+
     public DecodeAuthorizationMessageResponse withDecodedMessage(String decodedMessage) {
         this.decodedMessage = decodedMessage;
         return this;
     }
     
+    public DecodeAuthorizationMessageResponse(){}
 }

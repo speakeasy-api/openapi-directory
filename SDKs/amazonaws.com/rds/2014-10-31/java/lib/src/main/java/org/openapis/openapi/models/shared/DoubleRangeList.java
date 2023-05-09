@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DoubleRangeList {
     
     public Double from;
+
     public DoubleRangeList withFrom(Double from) {
         this.from = from;
         return this;
@@ -19,9 +20,11 @@ public class DoubleRangeList {
     
     
     public Double to;
+
     public DoubleRangeList withTo(Double to) {
         this.to = to;
         return this;
     }
     
+    public DoubleRangeList(){}
 }

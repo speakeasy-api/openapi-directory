@@ -15,6 +15,7 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailMessage")
     public String emailMessage;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordEmailSettings withEmailMessage(String emailMessage) {
         this.emailMessage = emailMessage;
         return this;
@@ -23,9 +24,11 @@ public class CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPass
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailSubject")
     public String emailSubject;
+
     public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordEmailSettings withEmailSubject(String emailSubject) {
         this.emailSubject = emailSubject;
         return this;
     }
     
+    public CreateBackendAuthRequestBodyResourceConfigUserPoolConfigsForgotPasswordEmailSettings(){}
 }

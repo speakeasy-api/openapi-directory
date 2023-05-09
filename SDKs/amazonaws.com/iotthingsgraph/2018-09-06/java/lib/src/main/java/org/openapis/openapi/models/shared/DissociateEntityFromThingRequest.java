@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DissociateEntityFromThingRequest {
     @JsonProperty("entityType")
     public EntityTypeEnum entityType;
+
     public DissociateEntityFromThingRequest withEntityType(EntityTypeEnum entityType) {
         this.entityType = entityType;
         return this;
@@ -16,9 +17,14 @@ public class DissociateEntityFromThingRequest {
     
     @JsonProperty("thingName")
     public String thingName;
+
     public DissociateEntityFromThingRequest withThingName(String thingName) {
         this.thingName = thingName;
         return this;
     }
     
+    public DissociateEntityFromThingRequest(@JsonProperty("entityType") EntityTypeEnum entityType, @JsonProperty("thingName") String thingName) {
+        this.entityType = entityType;
+        this.thingName = thingName;
+  }
 }

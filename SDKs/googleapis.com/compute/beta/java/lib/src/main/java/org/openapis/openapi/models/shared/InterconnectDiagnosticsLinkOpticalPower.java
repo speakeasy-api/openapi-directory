@@ -15,6 +15,7 @@ public class InterconnectDiagnosticsLinkOpticalPower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public InterconnectDiagnosticsLinkOpticalPowerStateEnum state;
+
     public InterconnectDiagnosticsLinkOpticalPower withState(InterconnectDiagnosticsLinkOpticalPowerStateEnum state) {
         this.state = state;
         return this;
@@ -26,9 +27,11 @@ public class InterconnectDiagnosticsLinkOpticalPower {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Float value;
+
     public InterconnectDiagnosticsLinkOpticalPower withValue(Float value) {
         this.value = value;
         return this;
     }
     
+    public InterconnectDiagnosticsLinkOpticalPower(){}
 }

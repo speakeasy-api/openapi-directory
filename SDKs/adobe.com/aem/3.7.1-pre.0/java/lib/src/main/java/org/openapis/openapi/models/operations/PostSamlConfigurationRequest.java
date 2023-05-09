@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class PostSamlConfigurationRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$location")
     public String dollarLocation;
+
     public PostSamlConfigurationRequest withDollarLocation(String dollarLocation) {
         this.dollarLocation = dollarLocation;
         return this;
@@ -16,6 +17,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=action")
     public String action;
+
     public PostSamlConfigurationRequest withAction(String action) {
         this.action = action;
         return this;
@@ -23,6 +25,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=addGroupMemberships")
     public Boolean addGroupMemberships;
+
     public PostSamlConfigurationRequest withAddGroupMemberships(Boolean addGroupMemberships) {
         this.addGroupMemberships = addGroupMemberships;
         return this;
@@ -30,6 +33,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=apply")
     public Boolean apply;
+
     public PostSamlConfigurationRequest withApply(Boolean apply) {
         this.apply = apply;
         return this;
@@ -37,6 +41,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=assertionConsumerServiceURL")
     public String assertionConsumerServiceURL;
+
     public PostSamlConfigurationRequest withAssertionConsumerServiceURL(String assertionConsumerServiceURL) {
         this.assertionConsumerServiceURL = assertionConsumerServiceURL;
         return this;
@@ -44,6 +49,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=clockTolerance")
     public Long clockTolerance;
+
     public PostSamlConfigurationRequest withClockTolerance(Long clockTolerance) {
         this.clockTolerance = clockTolerance;
         return this;
@@ -51,6 +57,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=createUser")
     public Boolean createUser;
+
     public PostSamlConfigurationRequest withCreateUser(Boolean createUser) {
         this.createUser = createUser;
         return this;
@@ -58,6 +65,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultGroups")
     public String[] defaultGroups;
+
     public PostSamlConfigurationRequest withDefaultGroups(String[] defaultGroups) {
         this.defaultGroups = defaultGroups;
         return this;
@@ -65,6 +73,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=defaultRedirectUrl")
     public String defaultRedirectUrl;
+
     public PostSamlConfigurationRequest withDefaultRedirectUrl(String defaultRedirectUrl) {
         this.defaultRedirectUrl = defaultRedirectUrl;
         return this;
@@ -72,6 +81,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=delete")
     public Boolean delete;
+
     public PostSamlConfigurationRequest withDelete(Boolean delete) {
         this.delete = delete;
         return this;
@@ -79,6 +89,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=digestMethod")
     public String digestMethod;
+
     public PostSamlConfigurationRequest withDigestMethod(String digestMethod) {
         this.digestMethod = digestMethod;
         return this;
@@ -86,6 +97,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=groupMembershipAttribute")
     public String groupMembershipAttribute;
+
     public PostSamlConfigurationRequest withGroupMembershipAttribute(String groupMembershipAttribute) {
         this.groupMembershipAttribute = groupMembershipAttribute;
         return this;
@@ -93,6 +105,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=handleLogout")
     public Boolean handleLogout;
+
     public PostSamlConfigurationRequest withHandleLogout(Boolean handleLogout) {
         this.handleLogout = handleLogout;
         return this;
@@ -100,6 +113,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpCertAlias")
     public String idpCertAlias;
+
     public PostSamlConfigurationRequest withIdpCertAlias(String idpCertAlias) {
         this.idpCertAlias = idpCertAlias;
         return this;
@@ -107,6 +121,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpHttpRedirect")
     public Boolean idpHttpRedirect;
+
     public PostSamlConfigurationRequest withIdpHttpRedirect(Boolean idpHttpRedirect) {
         this.idpHttpRedirect = idpHttpRedirect;
         return this;
@@ -114,6 +129,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=idpUrl")
     public String idpUrl;
+
     public PostSamlConfigurationRequest withIdpUrl(String idpUrl) {
         this.idpUrl = idpUrl;
         return this;
@@ -121,6 +137,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=keyStorePassword")
     public String keyStorePassword;
+
     public PostSamlConfigurationRequest withKeyStorePassword(String keyStorePassword) {
         this.keyStorePassword = keyStorePassword;
         return this;
@@ -128,6 +145,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=logoutUrl")
     public String logoutUrl;
+
     public PostSamlConfigurationRequest withLogoutUrl(String logoutUrl) {
         this.logoutUrl = logoutUrl;
         return this;
@@ -135,6 +153,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameIdFormat")
     public String nameIdFormat;
+
     public PostSamlConfigurationRequest withNameIdFormat(String nameIdFormat) {
         this.nameIdFormat = nameIdFormat;
         return this;
@@ -142,6 +161,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=path")
     public String[] path;
+
     public PostSamlConfigurationRequest withPath(String[] path) {
         this.path = path;
         return this;
@@ -149,6 +169,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post")
     public Boolean post;
+
     public PostSamlConfigurationRequest withPost(Boolean post) {
         this.post = post;
         return this;
@@ -156,6 +177,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=propertylist")
     public String[] propertylist;
+
     public PostSamlConfigurationRequest withPropertylist(String[] propertylist) {
         this.propertylist = propertylist;
         return this;
@@ -163,6 +185,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=service.ranking")
     public Long serviceRanking;
+
     public PostSamlConfigurationRequest withServiceRanking(Long serviceRanking) {
         this.serviceRanking = serviceRanking;
         return this;
@@ -170,6 +193,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceProviderEntityId")
     public String serviceProviderEntityId;
+
     public PostSamlConfigurationRequest withServiceProviderEntityId(String serviceProviderEntityId) {
         this.serviceProviderEntityId = serviceProviderEntityId;
         return this;
@@ -177,6 +201,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=signatureMethod")
     public String signatureMethod;
+
     public PostSamlConfigurationRequest withSignatureMethod(String signatureMethod) {
         this.signatureMethod = signatureMethod;
         return this;
@@ -184,6 +209,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=spPrivateKeyAlias")
     public String spPrivateKeyAlias;
+
     public PostSamlConfigurationRequest withSpPrivateKeyAlias(String spPrivateKeyAlias) {
         this.spPrivateKeyAlias = spPrivateKeyAlias;
         return this;
@@ -191,6 +217,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=synchronizeAttributes")
     public String[] synchronizeAttributes;
+
     public PostSamlConfigurationRequest withSynchronizeAttributes(String[] synchronizeAttributes) {
         this.synchronizeAttributes = synchronizeAttributes;
         return this;
@@ -198,6 +225,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useEncryption")
     public Boolean useEncryption;
+
     public PostSamlConfigurationRequest withUseEncryption(Boolean useEncryption) {
         this.useEncryption = useEncryption;
         return this;
@@ -205,6 +233,7 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIDAttribute")
     public String userIDAttribute;
+
     public PostSamlConfigurationRequest withUserIDAttribute(String userIDAttribute) {
         this.userIDAttribute = userIDAttribute;
         return this;
@@ -212,9 +241,11 @@ public class PostSamlConfigurationRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIntermediatePath")
     public String userIntermediatePath;
+
     public PostSamlConfigurationRequest withUserIntermediatePath(String userIntermediatePath) {
         this.userIntermediatePath = userIntermediatePath;
         return this;
     }
     
+    public PostSamlConfigurationRequest(){}
 }

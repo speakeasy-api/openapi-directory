@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ActivateReadSetSourceItem {
     @JsonProperty("readSetId")
     public String readSetId;
+
     public ActivateReadSetSourceItem withReadSetId(String readSetId) {
         this.readSetId = readSetId;
         return this;
@@ -21,6 +22,7 @@ public class ActivateReadSetSourceItem {
     
     @JsonProperty("status")
     public ReadSetActivationJobItemStatusEnum status;
+
     public ActivateReadSetSourceItem withStatus(ReadSetActivationJobItemStatusEnum status) {
         this.status = status;
         return this;
@@ -29,9 +31,14 @@ public class ActivateReadSetSourceItem {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statusMessage")
     public String statusMessage;
+
     public ActivateReadSetSourceItem withStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
         return this;
     }
     
+    public ActivateReadSetSourceItem(@JsonProperty("readSetId") String readSetId, @JsonProperty("status") ReadSetActivationJobItemStatusEnum status) {
+        this.readSetId = readSetId;
+        this.status = status;
+  }
 }

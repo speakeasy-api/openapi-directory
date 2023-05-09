@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class LeaderboardRequest {
@@ -12,6 +13,7 @@ public class LeaderboardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public LeaderboardFormatEnum format;
+
     public LeaderboardRequest withFormat(LeaderboardFormatEnum format) {
         this.format = format;
         return this;
@@ -22,9 +24,14 @@ public class LeaderboardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tournamentid")
     public String tournamentid;
+
     public LeaderboardRequest withTournamentid(String tournamentid) {
         this.tournamentid = tournamentid;
         return this;
     }
     
+    public LeaderboardRequest(@JsonProperty("format") LeaderboardFormatEnum format, @JsonProperty("tournamentid") String tournamentid) {
+        this.format = format;
+        this.tournamentid = tournamentid;
+  }
 }

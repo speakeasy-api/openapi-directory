@@ -12,6 +12,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=background")
     public String[] background;
+
     public GetOverRepresentationRequest withBackground(String[] background) {
         this.background = background;
         return this;
@@ -22,6 +23,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=max_p_value")
     public String maxPValue;
+
     public GetOverRepresentationRequest withMaxPValue(String maxPValue) {
         this.maxPValue = maxPValue;
         return this;
@@ -32,6 +34,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=object_category")
     public String objectCategory;
+
     public GetOverRepresentationRequest withObjectCategory(String objectCategory) {
         this.objectCategory = objectCategory;
         return this;
@@ -42,6 +45,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ontology")
     public String ontology;
+
     public GetOverRepresentationRequest withOntology(String ontology) {
         this.ontology = ontology;
         return this;
@@ -52,6 +56,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject")
     public String[] subject;
+
     public GetOverRepresentationRequest withSubject(String[] subject) {
         this.subject = subject;
         return this;
@@ -62,6 +67,7 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=subject_category")
     public String subjectCategory;
+
     public GetOverRepresentationRequest withSubjectCategory(String subjectCategory) {
         this.subjectCategory = subjectCategory;
         return this;
@@ -72,9 +78,11 @@ public class GetOverRepresentationRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=taxon")
     public String taxon;
+
     public GetOverRepresentationRequest withTaxon(String taxon) {
         this.taxon = taxon;
         return this;
     }
     
+    public GetOverRepresentationRequest(){}
 }

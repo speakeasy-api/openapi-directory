@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RunInstancesRequestIamInstanceProfile {
     
     public String arn;
+
     public RunInstancesRequestIamInstanceProfile withArn(String arn) {
         this.arn = arn;
         return this;
@@ -19,9 +20,11 @@ public class RunInstancesRequestIamInstanceProfile {
     
     
     public String name;
+
     public RunInstancesRequestIamInstanceProfile withName(String name) {
         this.name = name;
         return this;
     }
     
+    public RunInstancesRequestIamInstanceProfile(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppInvitationsCreateByEmailResponse {
     
     public String contentType;
+
     public AppInvitationsCreateByEmailResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppInvitationsCreateByEmailResponse {
     
     
     public Integer statusCode;
+
     public AppInvitationsCreateByEmailResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppInvitationsCreateByEmailResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppInvitationsCreateByEmailResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class AppInvitationsCreateByEmailResponse {
      */
     
     public AppInvitationsCreateByEmailDefaultApplicationJSON appInvitationsCreateByEmailDefaultApplicationJSONObject;
+
     public AppInvitationsCreateByEmailResponse withAppInvitationsCreateByEmailDefaultApplicationJSONObject(AppInvitationsCreateByEmailDefaultApplicationJSON appInvitationsCreateByEmailDefaultApplicationJSONObject) {
         this.appInvitationsCreateByEmailDefaultApplicationJSONObject = appInvitationsCreateByEmailDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppInvitationsCreateByEmailResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

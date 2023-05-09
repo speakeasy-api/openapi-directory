@@ -73,11 +73,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobAddResponse res = new org.openapis.openapi.models.operations.JobAddResponse() {{
+        org.openapis.openapi.models.operations.JobAddResponse res = new org.openapis.openapi.models.operations.JobAddResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -129,11 +127,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobDeleteResponse res = new org.openapis.openapi.models.operations.JobDeleteResponse() {{
+        org.openapis.openapi.models.operations.JobDeleteResponse res = new org.openapis.openapi.models.operations.JobDeleteResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -190,11 +186,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobDisableResponse res = new org.openapis.openapi.models.operations.JobDisableResponse() {{
+        org.openapis.openapi.models.operations.JobDisableResponse res = new org.openapis.openapi.models.operations.JobDisableResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -246,11 +240,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobEnableResponse res = new org.openapis.openapi.models.operations.JobEnableResponse() {{
+        org.openapis.openapi.models.operations.JobEnableResponse res = new org.openapis.openapi.models.operations.JobEnableResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -302,12 +294,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobGetResponse res = new org.openapis.openapi.models.operations.JobGetResponse() {{
+        org.openapis.openapi.models.operations.JobGetResponse res = new org.openapis.openapi.models.operations.JobGetResponse(contentType, httpRes.statusCode()) {{
             cloudJob = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -364,12 +354,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobGetAllJobsLifetimeStatisticsResponse res = new org.openapis.openapi.models.operations.JobGetAllJobsLifetimeStatisticsResponse() {{
+        org.openapis.openapi.models.operations.JobGetAllJobsLifetimeStatisticsResponse res = new org.openapis.openapi.models.operations.JobGetAllJobsLifetimeStatisticsResponse(contentType, httpRes.statusCode()) {{
             jobStatistics = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -426,12 +414,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobListResponse res = new org.openapis.openapi.models.operations.JobListResponse() {{
+        org.openapis.openapi.models.operations.JobListResponse res = new org.openapis.openapi.models.operations.JobListResponse(contentType, httpRes.statusCode()) {{
             cloudJobListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,12 +474,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobListFromJobScheduleResponse res = new org.openapis.openapi.models.operations.JobListFromJobScheduleResponse() {{
+        org.openapis.openapi.models.operations.JobListFromJobScheduleResponse res = new org.openapis.openapi.models.operations.JobListFromJobScheduleResponse(contentType, httpRes.statusCode()) {{
             cloudJobListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -550,12 +534,10 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobListPreparationAndReleaseTaskStatusResponse res = new org.openapis.openapi.models.operations.JobListPreparationAndReleaseTaskStatusResponse() {{
+        org.openapis.openapi.models.operations.JobListPreparationAndReleaseTaskStatusResponse res = new org.openapis.openapi.models.operations.JobListPreparationAndReleaseTaskStatusResponse(contentType, httpRes.statusCode()) {{
             cloudJobListPreparationAndReleaseTaskStatusResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -617,11 +599,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobPatchResponse res = new org.openapis.openapi.models.operations.JobPatchResponse() {{
+        org.openapis.openapi.models.operations.JobPatchResponse res = new org.openapis.openapi.models.operations.JobPatchResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -675,11 +655,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobTerminateResponse res = new org.openapis.openapi.models.operations.JobTerminateResponse() {{
+        org.openapis.openapi.models.operations.JobTerminateResponse res = new org.openapis.openapi.models.operations.JobTerminateResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 202) {
@@ -736,11 +714,9 @@ public class Jobs {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JobUpdateResponse res = new org.openapis.openapi.models.operations.JobUpdateResponse() {{
+        org.openapis.openapi.models.operations.JobUpdateResponse res = new org.openapis.openapi.models.operations.JobUpdateResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

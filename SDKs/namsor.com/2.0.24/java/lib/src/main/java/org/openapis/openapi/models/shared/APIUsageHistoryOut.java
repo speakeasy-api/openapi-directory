@@ -18,9 +18,11 @@ public class APIUsageHistoryOut {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("detailedUsage")
     public APICounterV2Out[] detailedUsage;
+
     public APIUsageHistoryOut withDetailedUsage(APICounterV2Out[] detailedUsage) {
         this.detailedUsage = detailedUsage;
         return this;
     }
     
+    public APIUsageHistoryOut(){}
 }

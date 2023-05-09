@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutResourcePolicyResponse {
     
     public String contentType;
+
     public PutResourcePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutResourcePolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -29,6 +32,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public PutResourcePolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object invalidResourcePolicyException;
+
     public PutResourcePolicyResponse withInvalidResourcePolicyException(Object invalidResourcePolicyException) {
         this.invalidResourcePolicyException = invalidResourcePolicyException;
         return this;
@@ -49,6 +54,7 @@ public class PutResourcePolicyResponse {
      */
     
     public java.util.Map<String, Object> putResourcePolicyResponse;
+
     public PutResourcePolicyResponse withPutResourcePolicyResponse(java.util.Map<String, Object> putResourcePolicyResponse) {
         this.putResourcePolicyResponse = putResourcePolicyResponse;
         return this;
@@ -56,6 +62,7 @@ public class PutResourcePolicyResponse {
     
     
     public Integer statusCode;
+
     public PutResourcePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class PutResourcePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutResourcePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class PutResourcePolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public PutResourcePolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class PutResourcePolicyResponse {
      */
     
     public Object throttlingException;
+
     public PutResourcePolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public PutResourcePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

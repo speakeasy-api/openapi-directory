@@ -18,6 +18,7 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crashed")
     public Boolean crashed;
+
     public Thread withCrashed(Boolean crashed) {
         this.crashed = crashed;
         return this;
@@ -29,6 +30,7 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exception")
     public Exception exception;
+
     public Thread withException(Exception exception) {
         this.exception = exception;
         return this;
@@ -39,6 +41,7 @@ public class Thread {
      */
     @JsonProperty("frames")
     public ThreadFrames[] frames;
+
     public Thread withFrames(ThreadFrames[] frames) {
         this.frames = frames;
         return this;
@@ -50,6 +53,7 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("platform")
     public ThreadPlatformEnum platform;
+
     public Thread withPlatform(ThreadPlatformEnum platform) {
         this.platform = platform;
         return this;
@@ -61,6 +65,7 @@ public class Thread {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relevant")
     public Boolean relevant;
+
     public Thread withRelevant(Boolean relevant) {
         this.relevant = relevant;
         return this;
@@ -71,9 +76,14 @@ public class Thread {
      */
     @JsonProperty("title")
     public String title;
+
     public Thread withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Thread(@JsonProperty("frames") ThreadFrames[] frames, @JsonProperty("title") String title) {
+        this.frames = frames;
+        this.title = title;
+  }
 }

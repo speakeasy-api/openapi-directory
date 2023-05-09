@@ -49,4 +49,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/PricingCountriesResponse.ja
 lib/src/main/java/org/openapis/openapi/models/shared/CountryObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/NetworkObject.java
 lib/src/main/java/org/openapis/openapi/models/shared/PricingCountryResponse.java
+docs/sdk/README.md
+docs/pricing/README.md
 USAGE.md

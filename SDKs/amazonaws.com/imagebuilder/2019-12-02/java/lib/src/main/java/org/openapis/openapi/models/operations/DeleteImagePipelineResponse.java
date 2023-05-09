@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteImagePipelineResponse {
@@ -12,6 +13,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public DeleteImagePipelineResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object clientException;
+
     public DeleteImagePipelineResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteImagePipelineResponse {
     
     
     public String contentType;
+
     public DeleteImagePipelineResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteImagePipelineResponse deleteImagePipelineResponse;
+
     public DeleteImagePipelineResponse withDeleteImagePipelineResponse(org.openapis.openapi.models.shared.DeleteImagePipelineResponse deleteImagePipelineResponse) {
         this.deleteImagePipelineResponse = deleteImagePipelineResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object forbiddenException;
+
     public DeleteImagePipelineResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object invalidRequestException;
+
     public DeleteImagePipelineResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object serviceException;
+
     public DeleteImagePipelineResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class DeleteImagePipelineResponse {
     
     
     public Integer statusCode;
+
     public DeleteImagePipelineResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class DeleteImagePipelineResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteImagePipelineResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object resourceDependencyException;
+
     public DeleteImagePipelineResponse withResourceDependencyException(Object resourceDependencyException) {
         this.resourceDependencyException = resourceDependencyException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteImagePipelineResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeleteImagePipelineResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public DeleteImagePipelineResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

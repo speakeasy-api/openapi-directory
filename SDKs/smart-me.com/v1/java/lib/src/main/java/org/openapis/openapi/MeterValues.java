@@ -58,14 +58,12 @@ public class MeterValues {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MeterValuesGetResponse res = new org.openapis.openapi.models.operations.MeterValuesGetResponse() {{
+        org.openapis.openapi.models.operations.MeterValuesGetResponse res = new org.openapis.openapi.models.operations.MeterValuesGetResponse(contentType, httpRes.statusCode()) {{
             deviceInPast = null;
             deviceInPast = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -15,6 +15,7 @@ public class AutoscalersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoscalers")
     public Autoscaler[] autoscalers;
+
     public AutoscalersScopedList withAutoscalers(Autoscaler[] autoscalers) {
         this.autoscalers = autoscalers;
         return this;
@@ -26,9 +27,11 @@ public class AutoscalersScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public AutoscalersScopedListWarning warning;
+
     public AutoscalersScopedList withWarning(AutoscalersScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public AutoscalersScopedList(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MirrorTimelinePatchRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.TimelineItem timelineItem;
+
     public MirrorTimelinePatchRequest withTimelineItem(org.openapis.openapi.models.shared.TimelineItem timelineItem) {
         this.timelineItem = timelineItem;
         return this;
@@ -19,6 +21,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public MirrorTimelinePatchRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -29,6 +32,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public MirrorTimelinePatchRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -39,6 +43,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public MirrorTimelinePatchRequest withId(String id) {
         this.id = id;
         return this;
@@ -49,6 +54,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public MirrorTimelinePatchRequest withKey(String key) {
         this.key = key;
         return this;
@@ -59,6 +65,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public MirrorTimelinePatchRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -69,6 +76,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public MirrorTimelinePatchRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -79,6 +87,7 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public MirrorTimelinePatchRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -89,9 +98,13 @@ public class MirrorTimelinePatchRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public MirrorTimelinePatchRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public MirrorTimelinePatchRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

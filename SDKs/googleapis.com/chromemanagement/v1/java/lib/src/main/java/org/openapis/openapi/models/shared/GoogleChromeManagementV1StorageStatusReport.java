@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleChromeManagementV1StorageStatusReport - Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A
+ * GoogleChromeManagementV1StorageStatusReport - Status data for storage. * This field is telemetry information and this will change over time as the device is utilized. * Data for this field is controlled via policy: [ReportDeviceStorageStatus](https://chromeenterprise.google/policies/#ReportDeviceStorageStatus) * Data Collection Frequency: Only at Upload * Default Data Reporting Frequency: 3 hours - Policy Controlled: Yes * Cache: If the device is offline, the collected data is stored locally, and will be reported when the device is next online: No * Reported for affiliated users only: N/A * Granular permission needed: TELEMETRY_API_STORAGE_REPORT
  */
 public class GoogleChromeManagementV1StorageStatusReport {
     /**
@@ -18,6 +18,7 @@ public class GoogleChromeManagementV1StorageStatusReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disk")
     public GoogleChromeManagementV1DiskInfo[] disk;
+
     public GoogleChromeManagementV1StorageStatusReport withDisk(GoogleChromeManagementV1DiskInfo[] disk) {
         this.disk = disk;
         return this;
@@ -29,9 +30,11 @@ public class GoogleChromeManagementV1StorageStatusReport {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportTime")
     public String reportTime;
+
     public GoogleChromeManagementV1StorageStatusReport withReportTime(String reportTime) {
         this.reportTime = reportTime;
         return this;
     }
     
+    public GoogleChromeManagementV1StorageStatusReport(){}
 }

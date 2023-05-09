@@ -15,6 +15,7 @@ public class Predecessor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public Predecessor withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -23,9 +24,11 @@ public class Predecessor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RunId")
     public String runId;
+
     public Predecessor withRunId(String runId) {
         this.runId = runId;
         return this;
     }
     
+    public Predecessor(){}
 }

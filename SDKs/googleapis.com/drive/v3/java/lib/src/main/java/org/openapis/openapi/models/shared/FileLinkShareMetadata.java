@@ -18,6 +18,7 @@ public class FileLinkShareMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityUpdateEligible")
     public Boolean securityUpdateEligible;
+
     public FileLinkShareMetadata withSecurityUpdateEligible(Boolean securityUpdateEligible) {
         this.securityUpdateEligible = securityUpdateEligible;
         return this;
@@ -29,9 +30,11 @@ public class FileLinkShareMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("securityUpdateEnabled")
     public Boolean securityUpdateEnabled;
+
     public FileLinkShareMetadata withSecurityUpdateEnabled(Boolean securityUpdateEnabled) {
         this.securityUpdateEnabled = securityUpdateEnabled;
         return this;
     }
     
+    public FileLinkShareMetadata(){}
 }

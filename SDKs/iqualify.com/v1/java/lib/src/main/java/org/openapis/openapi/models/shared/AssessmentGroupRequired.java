@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AssessmentGroupRequired {
     @JsonProperty("title")
     public String title;
+
     public AssessmentGroupRequired withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public AssessmentGroupRequired(@JsonProperty("title") String title) {
+        this.title = title;
+  }
 }

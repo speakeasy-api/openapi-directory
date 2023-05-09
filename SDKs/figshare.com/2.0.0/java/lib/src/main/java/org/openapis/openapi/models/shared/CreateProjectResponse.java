@@ -15,6 +15,7 @@ public class CreateProjectResponse {
      */
     @JsonProperty("entity_id")
     public Long entityId;
+
     public CreateProjectResponse withEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
@@ -25,9 +26,14 @@ public class CreateProjectResponse {
      */
     @JsonProperty("location")
     public String location;
+
     public CreateProjectResponse withLocation(String location) {
         this.location = location;
         return this;
     }
     
+    public CreateProjectResponse(@JsonProperty("entity_id") Long entityId, @JsonProperty("location") String location) {
+        this.entityId = entityId;
+        this.location = location;
+  }
 }

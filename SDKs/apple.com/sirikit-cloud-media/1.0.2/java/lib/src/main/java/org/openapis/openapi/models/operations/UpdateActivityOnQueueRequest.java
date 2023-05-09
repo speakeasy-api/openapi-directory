@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateActivityOnQueueRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public UpdateActivityOnQueueRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -16,6 +18,7 @@ public class UpdateActivityOnQueueRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.UpdateActivityRequest updateActivityRequest;
+
     public UpdateActivityOnQueueRequest withUpdateActivityRequest(org.openapis.openapi.models.shared.UpdateActivityRequest updateActivityRequest) {
         this.updateActivityRequest = updateActivityRequest;
         return this;
@@ -23,6 +26,7 @@ public class UpdateActivityOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=User-Agent")
     public String userAgent;
+
     public UpdateActivityOnQueueRequest withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -30,6 +34,7 @@ public class UpdateActivityOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-retry-count")
     public Double xApplecloudextensionRetryCount;
+
     public UpdateActivityOnQueueRequest withXApplecloudextensionRetryCount(Double xApplecloudextensionRetryCount) {
         this.xApplecloudextensionRetryCount = xApplecloudextensionRetryCount;
         return this;
@@ -37,9 +42,15 @@ public class UpdateActivityOnQueueRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=x-applecloudextension-session-id")
     public String xApplecloudextensionSessionId;
+
     public UpdateActivityOnQueueRequest withXApplecloudextensionSessionId(String xApplecloudextensionSessionId) {
         this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
         return this;
     }
     
+    public UpdateActivityOnQueueRequest(@JsonProperty("Accept-Language") String acceptLanguage, @JsonProperty("User-Agent") String userAgent, @JsonProperty("x-applecloudextension-session-id") String xApplecloudextensionSessionId) {
+        this.acceptLanguage = acceptLanguage;
+        this.userAgent = userAgent;
+        this.xApplecloudextensionSessionId = xApplecloudextensionSessionId;
+  }
 }

@@ -18,6 +18,7 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listAssetsResults")
     public ListAssetsResult[] listAssetsResults;
+
     public ListAssetsResponse withListAssetsResults(ListAssetsResult[] listAssetsResults) {
         this.listAssetsResults = listAssetsResults;
         return this;
@@ -29,6 +30,7 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListAssetsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,6 +42,7 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public ListAssetsResponse withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -51,9 +54,11 @@ public class ListAssetsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public ListAssetsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public ListAssetsResponse(){}
 }

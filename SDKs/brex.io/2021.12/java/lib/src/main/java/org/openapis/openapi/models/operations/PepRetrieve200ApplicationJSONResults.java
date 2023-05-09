@@ -12,6 +12,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Excerpts")
     public String excerpts;
+
     public PepRetrieve200ApplicationJSONResults withExcerpts(String excerpts) {
         this.excerpts = excerpts;
         return this;
@@ -20,6 +21,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResultsURL")
     public String resultsURL;
+
     public PepRetrieve200ApplicationJSONResults withResultsURL(String resultsURL) {
         this.resultsURL = resultsURL;
         return this;
@@ -28,6 +30,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SearchType")
     public String searchType;
+
     public PepRetrieve200ApplicationJSONResults withSearchType(String searchType) {
         this.searchType = searchType;
         return this;
@@ -36,6 +39,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceAgency")
     public String sourceAgency;
+
     public PepRetrieve200ApplicationJSONResults withSourceAgency(String sourceAgency) {
         this.sourceAgency = sourceAgency;
         return this;
@@ -44,6 +48,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceEntity")
     public String sourceEntity;
+
     public PepRetrieve200ApplicationJSONResults withSourceEntity(String sourceEntity) {
         this.sourceEntity = sourceEntity;
         return this;
@@ -52,6 +57,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceID")
     public Long sourceID;
+
     public PepRetrieve200ApplicationJSONResults withSourceID(Long sourceID) {
         this.sourceID = sourceID;
         return this;
@@ -60,6 +66,7 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceName")
     public String sourceName;
+
     public PepRetrieve200ApplicationJSONResults withSourceName(String sourceName) {
         this.sourceName = sourceName;
         return this;
@@ -68,9 +75,11 @@ public class PepRetrieve200ApplicationJSONResults {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceType")
     public String sourceType;
+
     public PepRetrieve200ApplicationJSONResults withSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;
     }
     
+    public PepRetrieve200ApplicationJSONResults(){}
 }

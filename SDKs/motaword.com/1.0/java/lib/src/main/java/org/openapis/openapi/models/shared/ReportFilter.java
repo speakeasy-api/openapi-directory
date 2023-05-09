@@ -20,6 +20,7 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("budget_code")
     public String budgetCode;
+
     public ReportFilter withBudgetCode(String budgetCode) {
         this.budgetCode = budgetCode;
         return this;
@@ -33,6 +34,7 @@ public class ReportFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_from")
     public OffsetDateTime dateFrom;
+
     public ReportFilter withDateFrom(OffsetDateTime dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -46,6 +48,7 @@ public class ReportFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_to")
     public OffsetDateTime dateTo;
+
     public ReportFilter withDateTo(OffsetDateTime dateTo) {
         this.dateTo = dateTo;
         return this;
@@ -57,6 +60,7 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source_languages")
     public String[] sourceLanguages;
+
     public ReportFilter withSourceLanguages(String[] sourceLanguages) {
         this.sourceLanguages = sourceLanguages;
         return this;
@@ -68,6 +72,7 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("target_languages")
     public String[] targetLanguages;
+
     public ReportFilter withTargetLanguages(String[] targetLanguages) {
         this.targetLanguages = targetLanguages;
         return this;
@@ -79,9 +84,11 @@ public class ReportFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("users")
     public Long[] users;
+
     public ReportFilter withUsers(Long[] users) {
         this.users = users;
         return this;
     }
     
+    public ReportFilter(){}
 }

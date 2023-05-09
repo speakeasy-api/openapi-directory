@@ -18,6 +18,7 @@ public class DescribeComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationComponent")
     public ApplicationComponent applicationComponent;
+
     public DescribeComponentResponse withApplicationComponent(ApplicationComponent applicationComponent) {
         this.applicationComponent = applicationComponent;
         return this;
@@ -26,9 +27,11 @@ public class DescribeComponentResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceList")
     public String[] resourceList;
+
     public DescribeComponentResponse withResourceList(String[] resourceList) {
         this.resourceList = resourceList;
         return this;
     }
     
+    public DescribeComponentResponse(){}
 }

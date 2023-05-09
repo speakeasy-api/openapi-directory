@@ -18,6 +18,7 @@ public class PersonMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public PersonMetadata withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -29,6 +30,7 @@ public class PersonMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("linkedPeopleResourceNames")
     public String[] linkedPeopleResourceNames;
+
     public PersonMetadata withLinkedPeopleResourceNames(String[] linkedPeopleResourceNames) {
         this.linkedPeopleResourceNames = linkedPeopleResourceNames;
         return this;
@@ -40,6 +42,7 @@ public class PersonMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectType")
     public PersonMetadataObjectTypeEnum objectType;
+
     public PersonMetadata withObjectType(PersonMetadataObjectTypeEnum objectType) {
         this.objectType = objectType;
         return this;
@@ -51,6 +54,7 @@ public class PersonMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousResourceNames")
     public String[] previousResourceNames;
+
     public PersonMetadata withPreviousResourceNames(String[] previousResourceNames) {
         this.previousResourceNames = previousResourceNames;
         return this;
@@ -62,9 +66,11 @@ public class PersonMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sources")
     public Source[] sources;
+
     public PersonMetadata withSources(Source[] sources) {
         this.sources = sources;
         return this;
     }
     
+    public PersonMetadata(){}
 }

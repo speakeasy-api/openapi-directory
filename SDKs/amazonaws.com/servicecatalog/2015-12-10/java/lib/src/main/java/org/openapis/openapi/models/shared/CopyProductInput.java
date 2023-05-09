@@ -12,6 +12,7 @@ public class CopyProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public CopyProductInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -20,6 +21,7 @@ public class CopyProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CopyOptions")
     public CopyOptionEnum[] copyOptions;
+
     public CopyProductInput withCopyOptions(CopyOptionEnum[] copyOptions) {
         this.copyOptions = copyOptions;
         return this;
@@ -27,6 +29,7 @@ public class CopyProductInput {
     
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CopyProductInput withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -34,6 +37,7 @@ public class CopyProductInput {
     
     @JsonProperty("SourceProductArn")
     public String sourceProductArn;
+
     public CopyProductInput withSourceProductArn(String sourceProductArn) {
         this.sourceProductArn = sourceProductArn;
         return this;
@@ -42,6 +46,7 @@ public class CopyProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceProvisioningArtifactIdentifiers")
     public java.util.Map<String, String>[] sourceProvisioningArtifactIdentifiers;
+
     public CopyProductInput withSourceProvisioningArtifactIdentifiers(java.util.Map<String, String>[] sourceProvisioningArtifactIdentifiers) {
         this.sourceProvisioningArtifactIdentifiers = sourceProvisioningArtifactIdentifiers;
         return this;
@@ -50,6 +55,7 @@ public class CopyProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetProductId")
     public String targetProductId;
+
     public CopyProductInput withTargetProductId(String targetProductId) {
         this.targetProductId = targetProductId;
         return this;
@@ -58,9 +64,14 @@ public class CopyProductInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetProductName")
     public String targetProductName;
+
     public CopyProductInput withTargetProductName(String targetProductName) {
         this.targetProductName = targetProductName;
         return this;
     }
     
+    public CopyProductInput(@JsonProperty("IdempotencyToken") String idempotencyToken, @JsonProperty("SourceProductArn") String sourceProductArn) {
+        this.idempotencyToken = idempotencyToken;
+        this.sourceProductArn = sourceProductArn;
+  }
 }

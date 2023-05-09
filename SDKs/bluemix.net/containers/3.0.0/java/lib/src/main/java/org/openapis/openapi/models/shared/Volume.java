@@ -18,6 +18,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fsID")
     public String fsID;
+
     public Volume withFsID(String fsID) {
         this.fsID = fsID;
         return this;
@@ -29,6 +30,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostPath")
     public String hostPath;
+
     public Volume withHostPath(String hostPath) {
         this.hostPath = hostPath;
         return this;
@@ -40,6 +42,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("otherSpaceVisibility")
     public String[] otherSpaceVisibility;
+
     public Volume withOtherSpaceVisibility(String[] otherSpaceVisibility) {
         this.otherSpaceVisibility = otherSpaceVisibility;
         return this;
@@ -51,6 +54,7 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spaceGuid")
     public String spaceGuid;
+
     public Volume withSpaceGuid(String spaceGuid) {
         this.spaceGuid = spaceGuid;
         return this;
@@ -62,9 +66,11 @@ public class Volume {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("volName")
     public String volName;
+
     public Volume withVolName(String volName) {
         this.volName = volName;
         return this;
     }
     
+    public Volume(){}
 }

@@ -15,6 +15,7 @@ public class ProductDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationName")
     public String destinationName;
+
     public ProductDestination withDestinationName(String destinationName) {
         this.destinationName = destinationName;
         return this;
@@ -26,9 +27,11 @@ public class ProductDestination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("intention")
     public String intention;
+
     public ProductDestination withIntention(String intention) {
         this.intention = intention;
         return this;
     }
     
+    public ProductDestination(){}
 }

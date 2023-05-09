@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class MissingSymbolGroupsListSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-API-Token")
     public String apiToken;
+
     public MissingSymbolGroupsListSecurity withAPIToken(String apiToken) {
         this.apiToken = apiToken;
         return this;
     }
     
+    public MissingSymbolGroupsListSecurity(@JsonProperty("APIToken") String apiToken) {
+        this.apiToken = apiToken;
+  }
 }

@@ -18,6 +18,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("architecture")
     public String architecture;
+
     public OsInfo withArchitecture(String architecture) {
         this.architecture = architecture;
         return this;
@@ -29,6 +30,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hostname")
     public String hostname;
+
     public OsInfo withHostname(String hostname) {
         this.hostname = hostname;
         return this;
@@ -40,6 +42,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelRelease")
     public String kernelRelease;
+
     public OsInfo withKernelRelease(String kernelRelease) {
         this.kernelRelease = kernelRelease;
         return this;
@@ -51,6 +54,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kernelVersion")
     public String kernelVersion;
+
     public OsInfo withKernelVersion(String kernelVersion) {
         this.kernelVersion = kernelVersion;
         return this;
@@ -62,6 +66,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("longName")
     public String longName;
+
     public OsInfo withLongName(String longName) {
         this.longName = longName;
         return this;
@@ -73,6 +78,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osconfigAgentVersion")
     public String osconfigAgentVersion;
+
     public OsInfo withOsconfigAgentVersion(String osconfigAgentVersion) {
         this.osconfigAgentVersion = osconfigAgentVersion;
         return this;
@@ -84,6 +90,7 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shortName")
     public String shortName;
+
     public OsInfo withShortName(String shortName) {
         this.shortName = shortName;
         return this;
@@ -95,9 +102,11 @@ public class OsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public OsInfo withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public OsInfo(){}
 }

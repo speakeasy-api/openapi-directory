@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDatalakeExceptionsSubscriptionResponse {
@@ -12,6 +13,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accessDeniedException;
+
     public GetDatalakeExceptionsSubscriptionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object accountNotFoundException;
+
     public GetDatalakeExceptionsSubscriptionResponse withAccountNotFoundException(Object accountNotFoundException) {
         this.accountNotFoundException = accountNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
     
     
     public String contentType;
+
     public GetDatalakeExceptionsSubscriptionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDatalakeExceptionsSubscriptionResponse getDatalakeExceptionsSubscriptionResponse;
+
     public GetDatalakeExceptionsSubscriptionResponse withGetDatalakeExceptionsSubscriptionResponse(org.openapis.openapi.models.shared.GetDatalakeExceptionsSubscriptionResponse getDatalakeExceptionsSubscriptionResponse) {
         this.getDatalakeExceptionsSubscriptionResponse = getDatalakeExceptionsSubscriptionResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object internalServerException;
+
     public GetDatalakeExceptionsSubscriptionResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
     
     
     public Integer statusCode;
+
     public GetDatalakeExceptionsSubscriptionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetDatalakeExceptionsSubscriptionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDatalakeExceptionsSubscriptionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetDatalakeExceptionsSubscriptionResponse {
      */
     
     public Object validationException;
+
     public GetDatalakeExceptionsSubscriptionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetDatalakeExceptionsSubscriptionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

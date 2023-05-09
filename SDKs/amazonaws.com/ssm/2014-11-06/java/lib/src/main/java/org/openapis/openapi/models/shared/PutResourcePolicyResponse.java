@@ -15,6 +15,7 @@ public class PutResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyHash")
     public String policyHash;
+
     public PutResourcePolicyResponse withPolicyHash(String policyHash) {
         this.policyHash = policyHash;
         return this;
@@ -23,9 +24,11 @@ public class PutResourcePolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PolicyId")
     public String policyId;
+
     public PutResourcePolicyResponse withPolicyId(String policyId) {
         this.policyId = policyId;
         return this;
     }
     
+    public PutResourcePolicyResponse(){}
 }

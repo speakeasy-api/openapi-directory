@@ -15,6 +15,7 @@ public class ListBrowserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserSettings")
     public BrowserSettingsSummary[] browserSettings;
+
     public ListBrowserSettingsResponse withBrowserSettings(BrowserSettingsSummary[] browserSettings) {
         this.browserSettings = browserSettings;
         return this;
@@ -23,9 +24,11 @@ public class ListBrowserSettingsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBrowserSettingsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBrowserSettingsResponse(){}
 }

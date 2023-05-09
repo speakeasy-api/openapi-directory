@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeSecurityGroupsResultSecurityGroupsTags {
     
     public String key;
+
     public DescribeSecurityGroupsResultSecurityGroupsTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class DescribeSecurityGroupsResultSecurityGroupsTags {
     
     
     public String value;
+
     public DescribeSecurityGroupsResultSecurityGroupsTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public DescribeSecurityGroupsResultSecurityGroupsTags(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelImageCreationResponse {
@@ -12,6 +13,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public CancelImageCreationResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class CancelImageCreationResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelImageCreationResponse cancelImageCreationResponse;
+
     public CancelImageCreationResponse withCancelImageCreationResponse(org.openapis.openapi.models.shared.CancelImageCreationResponse cancelImageCreationResponse) {
         this.cancelImageCreationResponse = cancelImageCreationResponse;
         return this;
@@ -32,6 +35,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object clientException;
+
     public CancelImageCreationResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -39,6 +43,7 @@ public class CancelImageCreationResponse {
     
     
     public String contentType;
+
     public CancelImageCreationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object forbiddenException;
+
     public CancelImageCreationResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -59,6 +65,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object idempotentParameterMismatchException;
+
     public CancelImageCreationResponse withIdempotentParameterMismatchException(Object idempotentParameterMismatchException) {
         this.idempotentParameterMismatchException = idempotentParameterMismatchException;
         return this;
@@ -69,6 +76,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object invalidRequestException;
+
     public CancelImageCreationResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -79,6 +87,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object resourceInUseException;
+
     public CancelImageCreationResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -89,6 +98,7 @@ public class CancelImageCreationResponse {
      */
     
     public Object serviceException;
+
     public CancelImageCreationResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -96,6 +106,7 @@ public class CancelImageCreationResponse {
     
     
     public Integer statusCode;
+
     public CancelImageCreationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class CancelImageCreationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelImageCreationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class CancelImageCreationResponse {
      */
     
     public Object serviceUnavailableException;
+
     public CancelImageCreationResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public CancelImageCreationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

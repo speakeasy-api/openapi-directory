@@ -18,6 +18,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecId")
     public String[] annotationSpecId;
+
     public ConfusionMatrix withAnnotationSpecId(String[] annotationSpecId) {
         this.annotationSpecId = annotationSpecId;
         return this;
@@ -29,6 +30,7 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String[] displayName;
+
     public ConfusionMatrix withDisplayName(String[] displayName) {
         this.displayName = displayName;
         return this;
@@ -40,9 +42,11 @@ public class ConfusionMatrix {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("row")
     public ClassificationEvaluationMetricsConfusionMatrixRow[] row;
+
     public ConfusionMatrix withRow(ClassificationEvaluationMetricsConfusionMatrixRow[] row) {
         this.row = row;
         return this;
     }
     
+    public ConfusionMatrix(){}
 }

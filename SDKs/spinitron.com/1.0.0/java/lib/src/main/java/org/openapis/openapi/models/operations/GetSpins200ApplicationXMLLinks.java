@@ -9,9 +9,11 @@ package org.openapis.openapi.models.operations;
 public class GetSpins200ApplicationXMLLinks {
     
     public org.openapis.openapi.models.shared.Link self;
+
     public GetSpins200ApplicationXMLLinks withSelf(org.openapis.openapi.models.shared.Link self) {
         this.self = self;
         return this;
     }
     
+    public GetSpins200ApplicationXMLLinks(){}
 }

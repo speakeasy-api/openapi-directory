@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ModifyBackupAttributesResponse {
@@ -12,6 +13,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public Object cloudHsmAccessDeniedException;
+
     public ModifyBackupAttributesResponse withCloudHsmAccessDeniedException(Object cloudHsmAccessDeniedException) {
         this.cloudHsmAccessDeniedException = cloudHsmAccessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public Object cloudHsmInternalFailureException;
+
     public ModifyBackupAttributesResponse withCloudHsmInternalFailureException(Object cloudHsmInternalFailureException) {
         this.cloudHsmInternalFailureException = cloudHsmInternalFailureException;
         return this;
@@ -32,6 +35,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public Object cloudHsmInvalidRequestException;
+
     public ModifyBackupAttributesResponse withCloudHsmInvalidRequestException(Object cloudHsmInvalidRequestException) {
         this.cloudHsmInvalidRequestException = cloudHsmInvalidRequestException;
         return this;
@@ -42,6 +46,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public Object cloudHsmResourceNotFoundException;
+
     public ModifyBackupAttributesResponse withCloudHsmResourceNotFoundException(Object cloudHsmResourceNotFoundException) {
         this.cloudHsmResourceNotFoundException = cloudHsmResourceNotFoundException;
         return this;
@@ -52,6 +57,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public Object cloudHsmServiceException;
+
     public ModifyBackupAttributesResponse withCloudHsmServiceException(Object cloudHsmServiceException) {
         this.cloudHsmServiceException = cloudHsmServiceException;
         return this;
@@ -59,6 +65,7 @@ public class ModifyBackupAttributesResponse {
     
     
     public String contentType;
+
     public ModifyBackupAttributesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -69,6 +76,7 @@ public class ModifyBackupAttributesResponse {
      */
     
     public org.openapis.openapi.models.shared.ModifyBackupAttributesResponse modifyBackupAttributesResponse;
+
     public ModifyBackupAttributesResponse withModifyBackupAttributesResponse(org.openapis.openapi.models.shared.ModifyBackupAttributesResponse modifyBackupAttributesResponse) {
         this.modifyBackupAttributesResponse = modifyBackupAttributesResponse;
         return this;
@@ -76,6 +84,7 @@ public class ModifyBackupAttributesResponse {
     
     
     public Integer statusCode;
+
     public ModifyBackupAttributesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class ModifyBackupAttributesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ModifyBackupAttributesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ModifyBackupAttributesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

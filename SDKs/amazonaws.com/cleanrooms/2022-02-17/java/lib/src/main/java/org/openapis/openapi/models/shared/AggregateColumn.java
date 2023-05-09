@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AggregateColumn {
     @JsonProperty("columnNames")
     public String[] columnNames;
+
     public AggregateColumn withColumnNames(String[] columnNames) {
         this.columnNames = columnNames;
         return this;
@@ -19,9 +20,14 @@ public class AggregateColumn {
     
     @JsonProperty("function")
     public AggregateFunctionNameEnum function;
+
     public AggregateColumn withFunction(AggregateFunctionNameEnum function) {
         this.function = function;
         return this;
     }
     
+    public AggregateColumn(@JsonProperty("columnNames") String[] columnNames, @JsonProperty("function") AggregateFunctionNameEnum function) {
+        this.columnNames = columnNames;
+        this.function = function;
+  }
 }

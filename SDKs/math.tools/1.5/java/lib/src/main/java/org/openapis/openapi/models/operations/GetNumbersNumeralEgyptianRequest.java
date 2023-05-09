@@ -12,9 +12,11 @@ public class GetNumbersNumeralEgyptianRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=number")
     public Long number;
+
     public GetNumbersNumeralEgyptianRequest withNumber(Long number) {
         this.number = number;
         return this;
     }
     
+    public GetNumbersNumeralEgyptianRequest(){}
 }

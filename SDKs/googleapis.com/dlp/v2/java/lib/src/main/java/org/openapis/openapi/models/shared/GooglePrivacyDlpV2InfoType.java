@@ -18,8 +18,21 @@ public class GooglePrivacyDlpV2InfoType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GooglePrivacyDlpV2InfoType withName(String name) {
         this.name = name;
+        return this;
+    }
+    
+    /**
+     * Score is a summary of all elements in the data profile. A higher number means more sensitive.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("sensitivityScore")
+    public GooglePrivacyDlpV2SensitivityScore sensitivityScore;
+
+    public GooglePrivacyDlpV2InfoType withSensitivityScore(GooglePrivacyDlpV2SensitivityScore sensitivityScore) {
+        this.sensitivityScore = sensitivityScore;
         return this;
     }
     
@@ -29,9 +42,11 @@ public class GooglePrivacyDlpV2InfoType {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public GooglePrivacyDlpV2InfoType withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public GooglePrivacyDlpV2InfoType(){}
 }

@@ -18,6 +18,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Anti-affinity")
     public String antiAffinity;
+
     public ContainersGroupsNameOrIdGetDetails withAntiAffinity(String antiAffinity) {
         this.antiAffinity = antiAffinity;
         return this;
@@ -29,6 +30,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Autorecovery")
     public String autorecovery;
+
     public ContainersGroupsNameOrIdGetDetails withAutorecovery(String autorecovery) {
         this.autorecovery = autorecovery;
         return this;
@@ -40,6 +42,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public ContainersGroupsNameOrIdGetDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -51,6 +54,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cmd")
     public String[] cmd;
+
     public ContainersGroupsNameOrIdGetDetails withCmd(String[] cmd) {
         this.cmd = cmd;
         return this;
@@ -62,6 +66,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Creation_time")
     public String creationTime;
+
     public ContainersGroupsNameOrIdGetDetails withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -73,6 +78,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Env")
     public String[] env;
+
     public ContainersGroupsNameOrIdGetDetails withEnv(String[] env) {
         this.env = env;
         return this;
@@ -84,6 +90,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ContainersGroupsNameOrIdGetDetails withId(String id) {
         this.id = id;
         return this;
@@ -95,6 +102,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Image")
     public String image;
+
     public ContainersGroupsNameOrIdGetDetails withImage(String image) {
         this.image = image;
         return this;
@@ -106,6 +114,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageName")
     public String imageName;
+
     public ContainersGroupsNameOrIdGetDetails withImageName(String imageName) {
         this.imageName = imageName;
         return this;
@@ -117,6 +126,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Memory")
     public Integer memory;
+
     public ContainersGroupsNameOrIdGetDetails withMemory(Integer memory) {
         this.memory = memory;
         return this;
@@ -128,6 +138,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ContainersGroupsNameOrIdGetDetails withName(String name) {
         this.name = name;
         return this;
@@ -136,6 +147,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NumberInstances")
     public ContainersGroupsNameOrIdGetDetailsNumberInstances numberInstances;
+
     public ContainersGroupsNameOrIdGetDetails withNumberInstances(ContainersGroupsNameOrIdGetDetailsNumberInstances numberInstances) {
         this.numberInstances = numberInstances;
         return this;
@@ -147,6 +159,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Port")
     public Integer port;
+
     public ContainersGroupsNameOrIdGetDetails withPort(Integer port) {
         this.port = port;
         return this;
@@ -155,6 +168,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Route_Status")
     public ContainersGroupsNameOrIdGetDetailsRouteStatus routeStatus;
+
     public ContainersGroupsNameOrIdGetDetails withRouteStatus(ContainersGroupsNameOrIdGetDetailsRouteStatus routeStatus) {
         this.routeStatus = routeStatus;
         return this;
@@ -166,6 +180,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Routes")
     public String[] routes;
+
     public ContainersGroupsNameOrIdGetDetails withRoutes(String[] routes) {
         this.routes = routes;
         return this;
@@ -177,6 +192,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public String status;
+
     public ContainersGroupsNameOrIdGetDetails withStatus(String status) {
         this.status = status;
         return this;
@@ -188,6 +204,7 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UpdatedTime")
     public String updatedTime;
+
     public ContainersGroupsNameOrIdGetDetails withUpdatedTime(String updatedTime) {
         this.updatedTime = updatedTime;
         return this;
@@ -199,9 +216,11 @@ public class ContainersGroupsNameOrIdGetDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Volumes")
     public String[] volumes;
+
     public ContainersGroupsNameOrIdGetDetails withVolumes(String[] volumes) {
         this.volumes = volumes;
         return this;
     }
     
+    public ContainersGroupsNameOrIdGetDetails(){}
 }

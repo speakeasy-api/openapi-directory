@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAnomalyDetectorResponse {
@@ -12,6 +13,7 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateAnomalyDetectorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAnomalyDetectorResponse {
     
     
     public String contentType;
+
     public UpdateAnomalyDetectorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public Object internalServerException;
+
     public UpdateAnomalyDetectorResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateAnomalyDetectorResponse {
     
     
     public Integer statusCode;
+
     public UpdateAnomalyDetectorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateAnomalyDetectorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAnomalyDetectorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAnomalyDetectorResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateAnomalyDetectorResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAnomalyDetectorResponse updateAnomalyDetectorResponse;
+
     public UpdateAnomalyDetectorResponse withUpdateAnomalyDetectorResponse(org.openapis.openapi.models.shared.UpdateAnomalyDetectorResponse updateAnomalyDetectorResponse) {
         this.updateAnomalyDetectorResponse = updateAnomalyDetectorResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateAnomalyDetectorResponse {
      */
     
     public Object validationException;
+
     public UpdateAnomalyDetectorResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateAnomalyDetectorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

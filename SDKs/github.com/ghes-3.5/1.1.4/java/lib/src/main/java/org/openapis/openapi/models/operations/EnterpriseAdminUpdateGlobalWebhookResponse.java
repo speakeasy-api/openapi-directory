@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EnterpriseAdminUpdateGlobalWebhookResponse {
     
     public String contentType;
+
     public EnterpriseAdminUpdateGlobalWebhookResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class EnterpriseAdminUpdateGlobalWebhookResponse {
     
     
     public Integer statusCode;
+
     public EnterpriseAdminUpdateGlobalWebhookResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class EnterpriseAdminUpdateGlobalWebhookResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EnterpriseAdminUpdateGlobalWebhookResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class EnterpriseAdminUpdateGlobalWebhookResponse {
      */
     
     public org.openapis.openapi.models.shared.GlobalHook2 globalHook2;
+
     public EnterpriseAdminUpdateGlobalWebhookResponse withGlobalHook2(org.openapis.openapi.models.shared.GlobalHook2 globalHook2) {
         this.globalHook2 = globalHook2;
         return this;
     }
     
+    public EnterpriseAdminUpdateGlobalWebhookResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

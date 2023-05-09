@@ -18,6 +18,7 @@ public class TimeseriesBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("densities")
     public Double[] densities;
+
     public TimeseriesBin withDensities(Double[] densities) {
         this.densities = densities;
         return this;
@@ -29,6 +30,7 @@ public class TimeseriesBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Object end;
+
     public TimeseriesBin withEnd(Object end) {
         this.end = end;
         return this;
@@ -40,9 +42,11 @@ public class TimeseriesBin {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Object start;
+
     public TimeseriesBin withStart(Object start) {
         this.start = start;
         return this;
     }
     
+    public TimeseriesBin(){}
 }

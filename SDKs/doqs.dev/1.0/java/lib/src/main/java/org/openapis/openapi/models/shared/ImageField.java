@@ -12,6 +12,7 @@ public class ImageField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("anchor")
     public ImageFieldImageAnchorEnum anchor;
+
     public ImageField withAnchor(ImageFieldImageAnchorEnum anchor) {
         this.anchor = anchor;
         return this;
@@ -19,6 +20,7 @@ public class ImageField {
     
     @JsonProperty("bbox")
     public BoundingBox bbox;
+
     public ImageField withBbox(BoundingBox bbox) {
         this.bbox = bbox;
         return this;
@@ -26,6 +28,7 @@ public class ImageField {
     
     @JsonProperty("name")
     public String name;
+
     public ImageField withName(String name) {
         this.name = name;
         return this;
@@ -33,6 +36,7 @@ public class ImageField {
     
     @JsonProperty("page")
     public Long page;
+
     public ImageField withPage(Long page) {
         this.page = page;
         return this;
@@ -41,6 +45,7 @@ public class ImageField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public ImageField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -49,9 +54,15 @@ public class ImageField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ImageFieldTypeEnum type;
+
     public ImageField withType(ImageFieldTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ImageField(@JsonProperty("bbox") BoundingBox bbox, @JsonProperty("name") String name, @JsonProperty("page") Long page) {
+        this.bbox = bbox;
+        this.name = name;
+        this.page = page;
+  }
 }

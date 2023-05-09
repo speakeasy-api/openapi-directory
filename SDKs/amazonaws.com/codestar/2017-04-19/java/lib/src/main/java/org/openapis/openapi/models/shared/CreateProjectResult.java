@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProjectResult {
     @JsonProperty("arn")
     public String arn;
+
     public CreateProjectResult withArn(String arn) {
         this.arn = arn;
         return this;
@@ -22,6 +23,7 @@ public class CreateProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clientRequestToken")
     public String clientRequestToken;
+
     public CreateProjectResult withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -29,6 +31,7 @@ public class CreateProjectResult {
     
     @JsonProperty("id")
     public String id;
+
     public CreateProjectResult withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +40,14 @@ public class CreateProjectResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectTemplateId")
     public String projectTemplateId;
+
     public CreateProjectResult withProjectTemplateId(String projectTemplateId) {
         this.projectTemplateId = projectTemplateId;
         return this;
     }
     
+    public CreateProjectResult(@JsonProperty("arn") String arn, @JsonProperty("id") String id) {
+        this.arn = arn;
+        this.id = id;
+  }
 }

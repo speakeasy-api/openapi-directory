@@ -18,9 +18,11 @@ public class SearchChainsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("chains")
     public Chain[] chains;
+
     public SearchChainsResponse withChains(Chain[] chains) {
         this.chains = chains;
         return this;
     }
     
+    public SearchChainsResponse(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
@@ -12,6 +13,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withKey(String key) {
         this.key = key;
         return this;
@@ -72,6 +79,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=name")
     public String name;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +90,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Long pageSize;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -102,6 +112,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -112,6 +123,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -132,6 +145,7 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -142,9 +156,13 @@ public class DatamigrationProjectsLocationsFetchStaticIpsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DatamigrationProjectsLocationsFetchStaticIpsRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DatamigrationProjectsLocationsFetchStaticIpsRequest(@JsonProperty("name") String name) {
+        this.name = name;
+  }
 }

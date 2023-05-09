@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SaveCategoryResponseData {
     @JsonProperty("category")
     public Category category;
+
     public SaveCategoryResponseData withCategory(Category category) {
         this.category = category;
         return this;
@@ -19,9 +20,14 @@ public class SaveCategoryResponseData {
      */
     @JsonProperty("server_knowledge")
     public Long serverKnowledge;
+
     public SaveCategoryResponseData withServerKnowledge(Long serverKnowledge) {
         this.serverKnowledge = serverKnowledge;
         return this;
     }
     
+    public SaveCategoryResponseData(@JsonProperty("category") Category category, @JsonProperty("server_knowledge") Long serverKnowledge) {
+        this.category = category;
+        this.serverKnowledge = serverKnowledge;
+  }
 }

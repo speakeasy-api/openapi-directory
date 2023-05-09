@@ -15,6 +15,7 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("is_required")
     public Boolean isRequired;
+
     public UserFieldsSimpleVO withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -23,6 +24,7 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public UserFieldsSimpleVO withLabel(String label) {
         this.label = label;
         return this;
@@ -31,6 +33,7 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ordinal_number")
     public Long ordinalNumber;
+
     public UserFieldsSimpleVO withOrdinalNumber(Long ordinalNumber) {
         this.ordinalNumber = ordinalNumber;
         return this;
@@ -39,6 +42,7 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("param_name")
     public String paramName;
+
     public UserFieldsSimpleVO withParamName(String paramName) {
         this.paramName = paramName;
         return this;
@@ -47,6 +51,7 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public UserFieldsSimpleVO withType(String type) {
         this.type = type;
         return this;
@@ -55,9 +60,11 @@ public class UserFieldsSimpleVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user_field_id")
     public Long userFieldId;
+
     public UserFieldsSimpleVO withUserFieldId(Long userFieldId) {
         this.userFieldId = userFieldId;
         return this;
     }
     
+    public UserFieldsSimpleVO(){}
 }

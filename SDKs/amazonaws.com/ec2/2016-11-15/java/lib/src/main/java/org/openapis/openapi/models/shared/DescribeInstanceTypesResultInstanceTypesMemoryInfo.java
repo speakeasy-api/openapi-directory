@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class DescribeInstanceTypesResultInstanceTypesMemoryInfo {
     
     public Long sizeInMiB;
+
     public DescribeInstanceTypesResultInstanceTypesMemoryInfo withSizeInMiB(Long sizeInMiB) {
         this.sizeInMiB = sizeInMiB;
         return this;
     }
     
+    public DescribeInstanceTypesResultInstanceTypesMemoryInfo(){}
 }

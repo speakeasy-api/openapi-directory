@@ -18,6 +18,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeHost")
     public Boolean includeHost;
+
     public CacheKeyPolicy withIncludeHost(Boolean includeHost) {
         this.includeHost = includeHost;
         return this;
@@ -29,6 +30,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeHttpHeaders")
     public String[] includeHttpHeaders;
+
     public CacheKeyPolicy withIncludeHttpHeaders(String[] includeHttpHeaders) {
         this.includeHttpHeaders = includeHttpHeaders;
         return this;
@@ -40,6 +42,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeNamedCookies")
     public String[] includeNamedCookies;
+
     public CacheKeyPolicy withIncludeNamedCookies(String[] includeNamedCookies) {
         this.includeNamedCookies = includeNamedCookies;
         return this;
@@ -51,6 +54,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeProtocol")
     public Boolean includeProtocol;
+
     public CacheKeyPolicy withIncludeProtocol(Boolean includeProtocol) {
         this.includeProtocol = includeProtocol;
         return this;
@@ -62,6 +66,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeQueryString")
     public Boolean includeQueryString;
+
     public CacheKeyPolicy withIncludeQueryString(Boolean includeQueryString) {
         this.includeQueryString = includeQueryString;
         return this;
@@ -73,6 +78,7 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryStringBlacklist")
     public String[] queryStringBlacklist;
+
     public CacheKeyPolicy withQueryStringBlacklist(String[] queryStringBlacklist) {
         this.queryStringBlacklist = queryStringBlacklist;
         return this;
@@ -84,9 +90,11 @@ public class CacheKeyPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryStringWhitelist")
     public String[] queryStringWhitelist;
+
     public CacheKeyPolicy withQueryStringWhitelist(String[] queryStringWhitelist) {
         this.queryStringWhitelist = queryStringWhitelist;
         return this;
     }
     
+    public CacheKeyPolicy(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpgradeAgentRequest {
@@ -12,9 +13,13 @@ public class UpgradeAgentRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
     public String agentId;
+
     public UpgradeAgentRequest withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
     
+    public UpgradeAgentRequest(@JsonProperty("agent_id") String agentId) {
+        this.agentId = agentId;
+  }
 }

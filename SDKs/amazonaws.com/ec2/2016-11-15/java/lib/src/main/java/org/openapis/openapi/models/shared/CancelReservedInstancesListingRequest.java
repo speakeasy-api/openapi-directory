@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CancelReservedInstancesListingRequest - Contains the parameters for CancelReservedInstancesListing.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CancelReservedInstancesListingRequest {
     
     public String reservedInstancesListingId;
+
     public CancelReservedInstancesListingRequest withReservedInstancesListingId(String reservedInstancesListingId) {
         this.reservedInstancesListingId = reservedInstancesListingId;
         return this;
     }
     
+    public CancelReservedInstancesListingRequest(@JsonProperty("ReservedInstancesListingId") String reservedInstancesListingId) {
+        this.reservedInstancesListingId = reservedInstancesListingId;
+  }
 }

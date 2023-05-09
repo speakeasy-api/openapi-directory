@@ -21,6 +21,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("aerosol_550")
     public Double aerosol550;
+
     public AirQualityPointHourlyData withAerosol550(Double aerosol550) {
         this.aerosol550 = aerosol550;
         return this;
@@ -41,6 +42,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("air_quality")
     public Double airQuality;
+
     public AirQualityPointHourlyData withAirQuality(Double airQuality) {
         this.airQuality = airQuality;
         return this;
@@ -53,6 +55,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("co_surface")
     public Double coSurface;
+
     public AirQualityPointHourlyData withCoSurface(Double coSurface) {
         this.coSurface = coSurface;
         return this;
@@ -66,6 +69,7 @@ public class AirQualityPointHourlyData {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date")
     public OffsetDateTime date;
+
     public AirQualityPointHourlyData withDate(OffsetDateTime date) {
         this.date = date;
         return this;
@@ -78,6 +82,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dust_550nm")
     public Double dust550nm;
+
     public AirQualityPointHourlyData withDust550nm(Double dust550nm) {
         this.dust550nm = dust550nm;
         return this;
@@ -90,6 +95,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dust_mixing_ratio_05")
     public Double dustMixingRatio05;
+
     public AirQualityPointHourlyData withDustMixingRatio05(Double dustMixingRatio05) {
         this.dustMixingRatio05 = dustMixingRatio05;
         return this;
@@ -102,6 +108,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no2_surface")
     public Double no2Surface;
+
     public AirQualityPointHourlyData withNo2Surface(Double no2Surface) {
         this.no2Surface = no2Surface;
         return this;
@@ -114,6 +121,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no_surface")
     public Double noSurface;
+
     public AirQualityPointHourlyData withNoSurface(Double noSurface) {
         this.noSurface = noSurface;
         return this;
@@ -126,6 +134,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone_surface")
     public Double ozoneSurface;
+
     public AirQualityPointHourlyData withOzoneSurface(Double ozoneSurface) {
         this.ozoneSurface = ozoneSurface;
         return this;
@@ -138,6 +147,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ozone_total")
     public Double ozoneTotal;
+
     public AirQualityPointHourlyData withOzoneTotal(Double ozoneTotal) {
         this.ozoneTotal = ozoneTotal;
         return this;
@@ -150,6 +160,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pm10")
     public Double pm10;
+
     public AirQualityPointHourlyData withPm10(Double pm10) {
         this.pm10 = pm10;
         return this;
@@ -162,6 +173,7 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pm25")
     public Double pm25;
+
     public AirQualityPointHourlyData withPm25(Double pm25) {
         this.pm25 = pm25;
         return this;
@@ -174,9 +186,11 @@ public class AirQualityPointHourlyData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("so2_surface")
     public Double so2Surface;
+
     public AirQualityPointHourlyData withSo2Surface(Double so2Surface) {
         this.so2Surface = so2Surface;
         return this;
     }
     
+    public AirQualityPointHourlyData(){}
 }

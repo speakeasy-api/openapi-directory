@@ -15,6 +15,7 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableActionError 
      */
     @JsonProperty("code")
     public String code;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableActionError withCode(String code) {
         this.code = code;
         return this;
@@ -25,9 +26,14 @@ public class PostPlacementGroupsCreatePlacementGroupResponseNullableActionError 
      */
     @JsonProperty("message")
     public String message;
+
     public PostPlacementGroupsCreatePlacementGroupResponseNullableActionError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PostPlacementGroupsCreatePlacementGroupResponseNullableActionError(@JsonProperty("code") String code, @JsonProperty("message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

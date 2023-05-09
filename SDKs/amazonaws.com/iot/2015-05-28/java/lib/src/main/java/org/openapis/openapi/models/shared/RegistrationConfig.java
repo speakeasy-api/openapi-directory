@@ -15,6 +15,7 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("roleArn")
     public String roleArn;
+
     public RegistrationConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -23,6 +24,7 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateBody")
     public String templateBody;
+
     public RegistrationConfig withTemplateBody(String templateBody) {
         this.templateBody = templateBody;
         return this;
@@ -31,9 +33,11 @@ public class RegistrationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateName")
     public String templateName;
+
     public RegistrationConfig withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public RegistrationConfig(){}
 }

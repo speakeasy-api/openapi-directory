@@ -21,6 +21,7 @@ public class ScalableTarget {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public ScalableTarget withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ScalableTarget {
     
     @JsonProperty("MaxCapacity")
     public Long maxCapacity;
+
     public ScalableTarget withMaxCapacity(Long maxCapacity) {
         this.maxCapacity = maxCapacity;
         return this;
@@ -35,6 +37,7 @@ public class ScalableTarget {
     
     @JsonProperty("MinCapacity")
     public Long minCapacity;
+
     public ScalableTarget withMinCapacity(Long minCapacity) {
         this.minCapacity = minCapacity;
         return this;
@@ -42,6 +45,7 @@ public class ScalableTarget {
     
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public ScalableTarget withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -49,6 +53,7 @@ public class ScalableTarget {
     
     @JsonProperty("RoleARN")
     public String roleARN;
+
     public ScalableTarget withRoleARN(String roleARN) {
         this.roleARN = roleARN;
         return this;
@@ -56,6 +61,7 @@ public class ScalableTarget {
     
     @JsonProperty("ScalableDimension")
     public ScalableDimensionEnum scalableDimension;
+
     public ScalableTarget withScalableDimension(ScalableDimensionEnum scalableDimension) {
         this.scalableDimension = scalableDimension;
         return this;
@@ -64,6 +70,7 @@ public class ScalableTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScalableTargetARN")
     public String scalableTargetARN;
+
     public ScalableTarget withScalableTargetARN(String scalableTargetARN) {
         this.scalableTargetARN = scalableTargetARN;
         return this;
@@ -71,6 +78,7 @@ public class ScalableTarget {
     
     @JsonProperty("ServiceNamespace")
     public ServiceNamespaceEnum serviceNamespace;
+
     public ScalableTarget withServiceNamespace(ServiceNamespaceEnum serviceNamespace) {
         this.serviceNamespace = serviceNamespace;
         return this;
@@ -79,9 +87,19 @@ public class ScalableTarget {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SuspendedState")
     public SuspendedState suspendedState;
+
     public ScalableTarget withSuspendedState(SuspendedState suspendedState) {
         this.suspendedState = suspendedState;
         return this;
     }
     
+    public ScalableTarget(@JsonProperty("CreationTime") OffsetDateTime creationTime, @JsonProperty("MaxCapacity") Long maxCapacity, @JsonProperty("MinCapacity") Long minCapacity, @JsonProperty("ResourceId") String resourceId, @JsonProperty("RoleARN") String roleARN, @JsonProperty("ScalableDimension") ScalableDimensionEnum scalableDimension, @JsonProperty("ServiceNamespace") ServiceNamespaceEnum serviceNamespace) {
+        this.creationTime = creationTime;
+        this.maxCapacity = maxCapacity;
+        this.minCapacity = minCapacity;
+        this.resourceId = resourceId;
+        this.roleARN = roleARN;
+        this.scalableDimension = scalableDimension;
+        this.serviceNamespace = serviceNamespace;
+  }
 }

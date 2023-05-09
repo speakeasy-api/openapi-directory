@@ -42,4 +42,6 @@ lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchSourceEnum.ja
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpenSearchResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/OpensearchDescriptionResponse.java
+docs/sdk/README.md
+docs/swaggerdocs/README.md
 USAGE.md

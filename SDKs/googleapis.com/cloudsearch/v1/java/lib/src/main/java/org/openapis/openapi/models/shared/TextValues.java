@@ -18,9 +18,11 @@ public class TextValues {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public TextValues withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public TextValues(){}
 }

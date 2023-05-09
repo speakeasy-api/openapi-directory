@@ -224,10 +224,8 @@ public class Campaign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CampaignAnalyticsResponse res = new org.openapis.openapi.models.operations.CampaignAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.CampaignAnalyticsResponse res = new org.openapis.openapi.models.operations.CampaignAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -440,10 +438,8 @@ public class Campaign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CampaignDetailsResponse res = new org.openapis.openapi.models.operations.CampaignDetailsResponse() {{
+        org.openapis.openapi.models.operations.CampaignDetailsResponse res = new org.openapis.openapi.models.operations.CampaignDetailsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -499,10 +495,8 @@ public class Campaign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CampaignListResponse res = new org.openapis.openapi.models.operations.CampaignListResponse() {{
+        org.openapis.openapi.models.operations.CampaignListResponse res = new org.openapis.openapi.models.operations.CampaignListResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -589,10 +583,8 @@ public class Campaign {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SendAnalyticsResponse res = new org.openapis.openapi.models.operations.SendAnalyticsResponse() {{
+        org.openapis.openapi.models.operations.SendAnalyticsResponse res = new org.openapis.openapi.models.operations.SendAnalyticsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

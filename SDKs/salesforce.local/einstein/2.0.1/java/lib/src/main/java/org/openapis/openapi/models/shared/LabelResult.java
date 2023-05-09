@@ -18,6 +18,7 @@ public class LabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label")
     public String label;
+
     public LabelResult withLabel(String label) {
         this.label = label;
         return this;
@@ -29,9 +30,11 @@ public class LabelResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("probability")
     public Float probability;
+
     public LabelResult withProbability(Float probability) {
         this.probability = probability;
         return this;
     }
     
+    public LabelResult(){}
 }

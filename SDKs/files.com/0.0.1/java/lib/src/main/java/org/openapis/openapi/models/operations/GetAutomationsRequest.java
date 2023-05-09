@@ -8,10 +8,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAutomationsRequest {
     /**
-     * DEPRECATED: Type of automation to filter by. Use `filter[automation]` instead.
+     * If set, return records where the specified field is equal to the supplied value.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=automation")
     public String automation;
+
     public GetAutomationsRequest withAutomation(String automation) {
         this.automation = automation;
         return this;
@@ -22,66 +23,62 @@ public class GetAutomationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetAutomationsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is equal to the supplied value. Valid fields are `disabled`, `last_modified_at` or `automation`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter")
     public java.util.Map<String, Object> filter;
+
     public GetAutomationsRequest withFilter(java.util.Map<String, Object> filter) {
         this.filter = filter;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is greater than the supplied value. Valid fields are `last_modified_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gt")
     public java.util.Map<String, Object> filterGt;
+
     public GetAutomationsRequest withFilterGt(java.util.Map<String, Object> filterGt) {
         this.filterGt = filterGt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is greater than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is greater than or equal the supplied value. Valid fields are `last_modified_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_gteq")
     public java.util.Map<String, Object> filterGteq;
+
     public GetAutomationsRequest withFilterGteq(java.util.Map<String, Object> filterGteq) {
         this.filterGteq = filterGteq;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
-     */
-    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_like")
-    public java.util.Map<String, Object> filterLike;
-    public GetAutomationsRequest withFilterLike(java.util.Map<String, Object> filterLike) {
-        this.filterLike = filterLike;
-        return this;
-    }
-    
-    /**
-     * If set, return records where the specified field is less than the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is less than the supplied value. Valid fields are `last_modified_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lt")
     public java.util.Map<String, Object> filterLt;
+
     public GetAutomationsRequest withFilterLt(java.util.Map<String, Object> filterLt) {
         this.filterLt = filterLt;
         return this;
     }
     
     /**
-     * If set, return records where the specified field is less than or equal to the supplied value. Valid fields are `automation`, `last_modified_at` or `disabled`. Valid field combinations are `[ automation, disabled ]` and `[ disabled, automation ]`.
+     * If set, return records where the specified field is less than or equal the supplied value. Valid fields are `last_modified_at`.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=filter_lteq")
     public java.util.Map<String, Object> filterLteq;
+
     public GetAutomationsRequest withFilterLteq(java.util.Map<String, Object> filterLteq) {
         this.filterLteq = filterLteq;
         return this;
@@ -92,6 +89,7 @@ public class GetAutomationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Integer perPage;
+
     public GetAutomationsRequest withPerPage(Integer perPage) {
         this.perPage = perPage;
         return this;
@@ -102,6 +100,7 @@ public class GetAutomationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public java.util.Map<String, Object> sortBy;
+
     public GetAutomationsRequest withSortBy(java.util.Map<String, Object> sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -112,9 +111,11 @@ public class GetAutomationsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=with_deleted")
     public Boolean withDeleted;
+
     public GetAutomationsRequest withWithDeleted(Boolean withDeleted) {
         this.withDeleted = withDeleted;
         return this;
     }
     
+    public GetAutomationsRequest(){}
 }

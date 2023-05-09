@@ -12,6 +12,7 @@ public class PlayerContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activityIdentifier")
     public String activityIdentifier;
+
     public PlayerContext withActivityIdentifier(String activityIdentifier) {
         this.activityIdentifier = activityIdentifier;
         return this;
@@ -20,6 +21,7 @@ public class PlayerContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentIdentifier")
     public String contentIdentifier;
+
     public PlayerContext withContentIdentifier(String contentIdentifier) {
         this.contentIdentifier = contentIdentifier;
         return this;
@@ -28,6 +30,7 @@ public class PlayerContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("offsetInMillis")
     public Long offsetInMillis;
+
     public PlayerContext withOffsetInMillis(Long offsetInMillis) {
         this.offsetInMillis = offsetInMillis;
         return this;
@@ -36,6 +39,7 @@ public class PlayerContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("playbackSpeed")
     public Double playbackSpeed;
+
     public PlayerContext withPlaybackSpeed(Double playbackSpeed) {
         this.playbackSpeed = playbackSpeed;
         return this;
@@ -44,9 +48,11 @@ public class PlayerContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queueIdentifier")
     public String queueIdentifier;
+
     public PlayerContext withQueueIdentifier(String queueIdentifier) {
         this.queueIdentifier = queueIdentifier;
         return this;
     }
     
+    public PlayerContext(){}
 }

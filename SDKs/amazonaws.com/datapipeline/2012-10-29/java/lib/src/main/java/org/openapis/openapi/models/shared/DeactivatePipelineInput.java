@@ -15,6 +15,7 @@ public class DeactivatePipelineInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cancelActive")
     public Boolean cancelActive;
+
     public DeactivatePipelineInput withCancelActive(Boolean cancelActive) {
         this.cancelActive = cancelActive;
         return this;
@@ -22,9 +23,13 @@ public class DeactivatePipelineInput {
     
     @JsonProperty("pipelineId")
     public String pipelineId;
+
     public DeactivatePipelineInput withPipelineId(String pipelineId) {
         this.pipelineId = pipelineId;
         return this;
     }
     
+    public DeactivatePipelineInput(@JsonProperty("pipelineId") String pipelineId) {
+        this.pipelineId = pipelineId;
+  }
 }

@@ -15,6 +15,7 @@ public class CanaryCodeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Handler")
     public String handler;
+
     public CanaryCodeOutput withHandler(String handler) {
         this.handler = handler;
         return this;
@@ -23,9 +24,11 @@ public class CanaryCodeOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceLocationArn")
     public String sourceLocationArn;
+
     public CanaryCodeOutput withSourceLocationArn(String sourceLocationArn) {
         this.sourceLocationArn = sourceLocationArn;
         return this;
     }
     
+    public CanaryCodeOutput(){}
 }

@@ -12,9 +12,13 @@ public class PutEventsRequestBody {
      */
     @JsonProperty("EventsRequest")
     public PutEventsRequestBodyEventsRequest eventsRequest;
+
     public PutEventsRequestBody withEventsRequest(PutEventsRequestBodyEventsRequest eventsRequest) {
         this.eventsRequest = eventsRequest;
         return this;
     }
     
+    public PutEventsRequestBody(@JsonProperty("EventsRequest") PutEventsRequestBodyEventsRequest eventsRequest) {
+        this.eventsRequest = eventsRequest;
+  }
 }

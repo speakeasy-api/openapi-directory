@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateContactRequest {
     @JsonProperty("Alias")
     public String alias;
+
     public CreateContactRequest withAlias(String alias) {
         this.alias = alias;
         return this;
@@ -19,6 +20,7 @@ public class CreateContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public CreateContactRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -27,6 +29,7 @@ public class CreateContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdempotencyToken")
     public String idempotencyToken;
+
     public CreateContactRequest withIdempotencyToken(String idempotencyToken) {
         this.idempotencyToken = idempotencyToken;
         return this;
@@ -34,6 +37,7 @@ public class CreateContactRequest {
     
     @JsonProperty("Plan")
     public Plan plan;
+
     public CreateContactRequest withPlan(Plan plan) {
         this.plan = plan;
         return this;
@@ -42,6 +46,7 @@ public class CreateContactRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateContactRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -49,9 +54,15 @@ public class CreateContactRequest {
     
     @JsonProperty("Type")
     public ContactTypeEnum type;
+
     public CreateContactRequest withType(ContactTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateContactRequest(@JsonProperty("Alias") String alias, @JsonProperty("Plan") Plan plan, @JsonProperty("Type") ContactTypeEnum type) {
+        this.alias = alias;
+        this.plan = plan;
+        this.type = type;
+  }
 }

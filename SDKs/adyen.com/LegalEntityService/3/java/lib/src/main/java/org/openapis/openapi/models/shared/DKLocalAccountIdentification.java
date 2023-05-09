@@ -15,6 +15,7 @@ public class DKLocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public DKLocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class DKLocalAccountIdentification {
      */
     @JsonProperty("bankCode")
     public String bankCode;
+
     public DKLocalAccountIdentification withBankCode(String bankCode) {
         this.bankCode = bankCode;
         return this;
@@ -35,9 +37,15 @@ public class DKLocalAccountIdentification {
      */
     @JsonProperty("type")
     public DKLocalAccountIdentificationTypeEnum type;
+
     public DKLocalAccountIdentification withType(DKLocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DKLocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bankCode") String bankCode, @JsonProperty("type") DKLocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.bankCode = bankCode;
+        this.type = type;
+  }
 }

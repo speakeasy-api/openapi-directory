@@ -19,6 +19,7 @@ public class TransactionResourceAttributesHoldInfo {
      */
     @JsonProperty("amount")
     public MoneyObject amount;
+
     public TransactionResourceAttributesHoldInfo withAmount(MoneyObject amount) {
         this.amount = amount;
         return this;
@@ -32,9 +33,14 @@ public class TransactionResourceAttributesHoldInfo {
      */
     @JsonProperty("foreignAmount")
     public TransactionResourceAttributesHoldInfoForeignAmount foreignAmount;
+
     public TransactionResourceAttributesHoldInfo withForeignAmount(TransactionResourceAttributesHoldInfoForeignAmount foreignAmount) {
         this.foreignAmount = foreignAmount;
         return this;
     }
     
+    public TransactionResourceAttributesHoldInfo(@JsonProperty("amount") MoneyObject amount, @JsonProperty("foreignAmount") TransactionResourceAttributesHoldInfoForeignAmount foreignAmount) {
+        this.amount = amount;
+        this.foreignAmount = foreignAmount;
+  }
 }

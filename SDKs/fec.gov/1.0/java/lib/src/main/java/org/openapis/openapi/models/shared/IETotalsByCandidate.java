@@ -12,6 +12,7 @@ public class IETotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("candidate_id")
     public String candidateId;
+
     public IETotalsByCandidate withCandidateId(String candidateId) {
         this.candidateId = candidateId;
         return this;
@@ -20,6 +21,7 @@ public class IETotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cycle")
     public Integer cycle;
+
     public IETotalsByCandidate withCycle(Integer cycle) {
         this.cycle = cycle;
         return this;
@@ -28,6 +30,7 @@ public class IETotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("support_oppose_indicator")
     public String supportOpposeIndicator;
+
     public IETotalsByCandidate withSupportOpposeIndicator(String supportOpposeIndicator) {
         this.supportOpposeIndicator = supportOpposeIndicator;
         return this;
@@ -36,9 +39,11 @@ public class IETotalsByCandidate {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public IETotalsByCandidate withTotal(Double total) {
         this.total = total;
         return this;
     }
     
+    public IETotalsByCandidate(){}
 }

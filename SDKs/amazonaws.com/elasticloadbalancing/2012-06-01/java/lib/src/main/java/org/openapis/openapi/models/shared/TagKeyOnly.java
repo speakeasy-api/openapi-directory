@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class TagKeyOnly {
     
     public String key;
+
     public TagKeyOnly withKey(String key) {
         this.key = key;
         return this;
     }
     
+    public TagKeyOnly(){}
 }

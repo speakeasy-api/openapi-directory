@@ -15,9 +15,11 @@ public class ContainerInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("eksInfo")
     public EksInfo eksInfo;
+
     public ContainerInfo withEksInfo(EksInfo eksInfo) {
         this.eksInfo = eksInfo;
         return this;
     }
     
+    public ContainerInfo(){}
 }

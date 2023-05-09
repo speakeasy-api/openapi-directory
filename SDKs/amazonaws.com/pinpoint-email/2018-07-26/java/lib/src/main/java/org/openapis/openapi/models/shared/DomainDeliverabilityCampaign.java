@@ -20,6 +20,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CampaignId")
     public String campaignId;
+
     public DomainDeliverabilityCampaign withCampaignId(String campaignId) {
         this.campaignId = campaignId;
         return this;
@@ -28,6 +29,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteRate")
     public Double deleteRate;
+
     public DomainDeliverabilityCampaign withDeleteRate(Double deleteRate) {
         this.deleteRate = deleteRate;
         return this;
@@ -36,6 +38,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Esps")
     public String[] esps;
+
     public DomainDeliverabilityCampaign withEsps(String[] esps) {
         this.esps = esps;
         return this;
@@ -46,6 +49,7 @@ public class DomainDeliverabilityCampaign {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FirstSeenDateTime")
     public OffsetDateTime firstSeenDateTime;
+
     public DomainDeliverabilityCampaign withFirstSeenDateTime(OffsetDateTime firstSeenDateTime) {
         this.firstSeenDateTime = firstSeenDateTime;
         return this;
@@ -54,6 +58,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FromAddress")
     public String fromAddress;
+
     public DomainDeliverabilityCampaign withFromAddress(String fromAddress) {
         this.fromAddress = fromAddress;
         return this;
@@ -62,6 +67,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImageUrl")
     public String imageUrl;
+
     public DomainDeliverabilityCampaign withImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
@@ -70,6 +76,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InboxCount")
     public Long inboxCount;
+
     public DomainDeliverabilityCampaign withInboxCount(Long inboxCount) {
         this.inboxCount = inboxCount;
         return this;
@@ -80,6 +87,7 @@ public class DomainDeliverabilityCampaign {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastSeenDateTime")
     public OffsetDateTime lastSeenDateTime;
+
     public DomainDeliverabilityCampaign withLastSeenDateTime(OffsetDateTime lastSeenDateTime) {
         this.lastSeenDateTime = lastSeenDateTime;
         return this;
@@ -88,6 +96,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProjectedVolume")
     public Long projectedVolume;
+
     public DomainDeliverabilityCampaign withProjectedVolume(Long projectedVolume) {
         this.projectedVolume = projectedVolume;
         return this;
@@ -96,6 +105,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadDeleteRate")
     public Double readDeleteRate;
+
     public DomainDeliverabilityCampaign withReadDeleteRate(Double readDeleteRate) {
         this.readDeleteRate = readDeleteRate;
         return this;
@@ -104,6 +114,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReadRate")
     public Double readRate;
+
     public DomainDeliverabilityCampaign withReadRate(Double readRate) {
         this.readRate = readRate;
         return this;
@@ -112,6 +123,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SendingIps")
     public String[] sendingIps;
+
     public DomainDeliverabilityCampaign withSendingIps(String[] sendingIps) {
         this.sendingIps = sendingIps;
         return this;
@@ -120,6 +132,7 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SpamCount")
     public Long spamCount;
+
     public DomainDeliverabilityCampaign withSpamCount(Long spamCount) {
         this.spamCount = spamCount;
         return this;
@@ -128,9 +141,11 @@ public class DomainDeliverabilityCampaign {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Subject")
     public String subject;
+
     public DomainDeliverabilityCampaign withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public DomainDeliverabilityCampaign(){}
 }

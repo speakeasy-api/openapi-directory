@@ -15,6 +15,7 @@ public class BatchPersonalNameGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("facts")
     public FactIn[] facts;
+
     public BatchPersonalNameGeoIn withFacts(FactIn[] facts) {
         this.facts = facts;
         return this;
@@ -23,9 +24,11 @@ public class BatchPersonalNameGeoIn {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("personalNames")
     public PersonalNameGeoIn[] personalNames;
+
     public BatchPersonalNameGeoIn withPersonalNames(PersonalNameGeoIn[] personalNames) {
         this.personalNames = personalNames;
         return this;
     }
     
+    public BatchPersonalNameGeoIn(){}
 }

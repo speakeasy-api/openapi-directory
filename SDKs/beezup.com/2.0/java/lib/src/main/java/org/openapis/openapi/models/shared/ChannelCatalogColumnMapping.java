@@ -18,6 +18,7 @@ public class ChannelCatalogColumnMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("catalogColumnId")
     public String catalogColumnId;
+
     public ChannelCatalogColumnMapping withCatalogColumnId(String catalogColumnId) {
         this.catalogColumnId = catalogColumnId;
         return this;
@@ -29,6 +30,7 @@ public class ChannelCatalogColumnMapping {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelCategoryPath")
     public String[] channelCategoryPath;
+
     public ChannelCatalogColumnMapping withChannelCategoryPath(String[] channelCategoryPath) {
         this.channelCategoryPath = channelCategoryPath;
         return this;
@@ -39,9 +41,13 @@ public class ChannelCatalogColumnMapping {
      */
     @JsonProperty("channelColumnId")
     public String channelColumnId;
+
     public ChannelCatalogColumnMapping withChannelColumnId(String channelColumnId) {
         this.channelColumnId = channelColumnId;
         return this;
     }
     
+    public ChannelCatalogColumnMapping(@JsonProperty("channelColumnId") String channelColumnId) {
+        this.channelColumnId = channelColumnId;
+  }
 }

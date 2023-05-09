@@ -12,6 +12,7 @@ public class NodeTemplateNodeTypeFlexibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cpus")
     public String cpus;
+
     public NodeTemplateNodeTypeFlexibility withCpus(String cpus) {
         this.cpus = cpus;
         return this;
@@ -20,6 +21,7 @@ public class NodeTemplateNodeTypeFlexibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localSsd")
     public String localSsd;
+
     public NodeTemplateNodeTypeFlexibility withLocalSsd(String localSsd) {
         this.localSsd = localSsd;
         return this;
@@ -28,9 +30,11 @@ public class NodeTemplateNodeTypeFlexibility {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memory")
     public String memory;
+
     public NodeTemplateNodeTypeFlexibility withMemory(String memory) {
         this.memory = memory;
         return this;
     }
     
+    public NodeTemplateNodeTypeFlexibility(){}
 }

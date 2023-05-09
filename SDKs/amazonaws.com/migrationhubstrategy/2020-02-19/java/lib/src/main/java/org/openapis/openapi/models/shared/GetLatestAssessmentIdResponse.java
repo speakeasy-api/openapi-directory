@@ -15,9 +15,11 @@ public class GetLatestAssessmentIdResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GetLatestAssessmentIdResponse withId(String id) {
         this.id = id;
         return this;
     }
     
+    public GetLatestAssessmentIdResponse(){}
 }

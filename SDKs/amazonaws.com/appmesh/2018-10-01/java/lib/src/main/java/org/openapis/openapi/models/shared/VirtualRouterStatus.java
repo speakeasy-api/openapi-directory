@@ -15,9 +15,11 @@ public class VirtualRouterStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public VirtualRouterStatusCodeEnum status;
+
     public VirtualRouterStatus withStatus(VirtualRouterStatusCodeEnum status) {
         this.status = status;
         return this;
     }
     
+    public VirtualRouterStatus(){}
 }

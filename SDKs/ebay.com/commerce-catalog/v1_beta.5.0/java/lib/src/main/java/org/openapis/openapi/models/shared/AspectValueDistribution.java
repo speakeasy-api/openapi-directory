@@ -18,6 +18,7 @@ public class AspectValueDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("localizedAspectValue")
     public String localizedAspectValue;
+
     public AspectValueDistribution withLocalizedAspectValue(String localizedAspectValue) {
         this.localizedAspectValue = localizedAspectValue;
         return this;
@@ -29,6 +30,7 @@ public class AspectValueDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("matchCount")
     public Integer matchCount;
+
     public AspectValueDistribution withMatchCount(Integer matchCount) {
         this.matchCount = matchCount;
         return this;
@@ -40,9 +42,11 @@ public class AspectValueDistribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("refinementHref")
     public String refinementHref;
+
     public AspectValueDistribution withRefinementHref(String refinementHref) {
         this.refinementHref = refinementHref;
         return this;
     }
     
+    public AspectValueDistribution(){}
 }

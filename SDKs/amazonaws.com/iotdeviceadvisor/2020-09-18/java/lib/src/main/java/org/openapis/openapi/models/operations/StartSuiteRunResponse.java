@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartSuiteRunResponse {
@@ -12,6 +13,7 @@ public class StartSuiteRunResponse {
      */
     
     public Object conflictException;
+
     public StartSuiteRunResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartSuiteRunResponse {
     
     
     public String contentType;
+
     public StartSuiteRunResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartSuiteRunResponse {
      */
     
     public Object internalServerException;
+
     public StartSuiteRunResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartSuiteRunResponse {
      */
     
     public org.openapis.openapi.models.shared.StartSuiteRunResponse startSuiteRunResponse;
+
     public StartSuiteRunResponse withStartSuiteRunResponse(org.openapis.openapi.models.shared.StartSuiteRunResponse startSuiteRunResponse) {
         this.startSuiteRunResponse = startSuiteRunResponse;
         return this;
@@ -46,6 +51,7 @@ public class StartSuiteRunResponse {
     
     
     public Integer statusCode;
+
     public StartSuiteRunResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class StartSuiteRunResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartSuiteRunResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class StartSuiteRunResponse {
      */
     
     public Object validationException;
+
     public StartSuiteRunResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartSuiteRunResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

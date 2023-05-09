@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CountPendingDecisionTasksResponse {
     
     public String contentType;
+
     public CountPendingDecisionTasksResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CountPendingDecisionTasksResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public CountPendingDecisionTasksResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -29,6 +32,7 @@ public class CountPendingDecisionTasksResponse {
      */
     
     public org.openapis.openapi.models.shared.PendingTaskCount pendingTaskCount;
+
     public CountPendingDecisionTasksResponse withPendingTaskCount(org.openapis.openapi.models.shared.PendingTaskCount pendingTaskCount) {
         this.pendingTaskCount = pendingTaskCount;
         return this;
@@ -36,6 +40,7 @@ public class CountPendingDecisionTasksResponse {
     
     
     public Integer statusCode;
+
     public CountPendingDecisionTasksResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CountPendingDecisionTasksResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CountPendingDecisionTasksResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class CountPendingDecisionTasksResponse {
      */
     
     public Object unknownResourceFault;
+
     public CountPendingDecisionTasksResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public CountPendingDecisionTasksResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

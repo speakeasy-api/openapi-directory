@@ -15,9 +15,11 @@ public class BcmcInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableBcmcMobile")
     public Boolean enableBcmcMobile;
+
     public BcmcInfo withEnableBcmcMobile(Boolean enableBcmcMobile) {
         this.enableBcmcMobile = enableBcmcMobile;
         return this;
     }
     
+    public BcmcInfo(){}
 }

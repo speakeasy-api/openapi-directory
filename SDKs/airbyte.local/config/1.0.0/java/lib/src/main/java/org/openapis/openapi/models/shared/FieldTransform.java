@@ -15,6 +15,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addField")
     public FieldAdd addField;
+
     public FieldTransform withAddField(FieldAdd addField) {
         this.addField = addField;
         return this;
@@ -22,6 +23,7 @@ public class FieldTransform {
     
     @JsonProperty("breaking")
     public Boolean breaking;
+
     public FieldTransform withBreaking(Boolean breaking) {
         this.breaking = breaking;
         return this;
@@ -32,6 +34,7 @@ public class FieldTransform {
      */
     @JsonProperty("fieldName")
     public String[] fieldName;
+
     public FieldTransform withFieldName(String[] fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -40,6 +43,7 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeField")
     public FieldRemove removeField;
+
     public FieldTransform withRemoveField(FieldRemove removeField) {
         this.removeField = removeField;
         return this;
@@ -47,6 +51,7 @@ public class FieldTransform {
     
     @JsonProperty("transformType")
     public FieldTransformTransformTypeEnum transformType;
+
     public FieldTransform withTransformType(FieldTransformTransformTypeEnum transformType) {
         this.transformType = transformType;
         return this;
@@ -55,9 +60,15 @@ public class FieldTransform {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updateFieldSchema")
     public FieldSchemaUpdate updateFieldSchema;
+
     public FieldTransform withUpdateFieldSchema(FieldSchemaUpdate updateFieldSchema) {
         this.updateFieldSchema = updateFieldSchema;
         return this;
     }
     
+    public FieldTransform(@JsonProperty("breaking") Boolean breaking, @JsonProperty("fieldName") String[] fieldName, @JsonProperty("transformType") FieldTransformTransformTypeEnum transformType) {
+        this.breaking = breaking;
+        this.fieldName = fieldName;
+        this.transformType = transformType;
+  }
 }

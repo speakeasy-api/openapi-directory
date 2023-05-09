@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InitiateJobResponse {
     
     public String contentType;
+
     public InitiateJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InitiateJobResponse {
      */
     
     public java.util.Map<String, Object> initiateJobOutput;
+
     public InitiateJobResponse withInitiateJobOutput(java.util.Map<String, Object> initiateJobOutput) {
         this.initiateJobOutput = initiateJobOutput;
         return this;
@@ -29,6 +32,7 @@ public class InitiateJobResponse {
      */
     
     public Object insufficientCapacityException;
+
     public InitiateJobResponse withInsufficientCapacityException(Object insufficientCapacityException) {
         this.insufficientCapacityException = insufficientCapacityException;
         return this;
@@ -39,6 +43,7 @@ public class InitiateJobResponse {
      */
     
     public Object invalidParameterValueException;
+
     public InitiateJobResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -49,6 +54,7 @@ public class InitiateJobResponse {
      */
     
     public Object missingParameterValueException;
+
     public InitiateJobResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -59,6 +65,7 @@ public class InitiateJobResponse {
      */
     
     public Object policyEnforcedException;
+
     public InitiateJobResponse withPolicyEnforcedException(Object policyEnforcedException) {
         this.policyEnforcedException = policyEnforcedException;
         return this;
@@ -69,6 +76,7 @@ public class InitiateJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public InitiateJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -79,6 +87,7 @@ public class InitiateJobResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InitiateJobResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -86,6 +95,7 @@ public class InitiateJobResponse {
     
     
     public Integer statusCode;
+
     public InitiateJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class InitiateJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InitiateJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public InitiateJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

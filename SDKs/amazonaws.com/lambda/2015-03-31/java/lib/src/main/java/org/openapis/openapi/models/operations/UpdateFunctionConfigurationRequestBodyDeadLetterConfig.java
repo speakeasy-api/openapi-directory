@@ -15,9 +15,11 @@ public class UpdateFunctionConfigurationRequestBodyDeadLetterConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TargetArn")
     public String targetArn;
+
     public UpdateFunctionConfigurationRequestBodyDeadLetterConfig withTargetArn(String targetArn) {
         this.targetArn = targetArn;
         return this;
     }
     
+    public UpdateFunctionConfigurationRequestBodyDeadLetterConfig(){}
 }

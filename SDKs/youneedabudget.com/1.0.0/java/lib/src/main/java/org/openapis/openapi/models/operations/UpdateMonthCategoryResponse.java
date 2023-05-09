@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateMonthCategoryResponse {
     
     public String contentType;
+
     public UpdateMonthCategoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateMonthCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public UpdateMonthCategoryResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -29,6 +32,7 @@ public class UpdateMonthCategoryResponse {
      */
     
     public org.openapis.openapi.models.shared.SaveCategoryResponse saveCategoryResponse;
+
     public UpdateMonthCategoryResponse withSaveCategoryResponse(org.openapis.openapi.models.shared.SaveCategoryResponse saveCategoryResponse) {
         this.saveCategoryResponse = saveCategoryResponse;
         return this;
@@ -36,6 +40,7 @@ public class UpdateMonthCategoryResponse {
     
     
     public Integer statusCode;
+
     public UpdateMonthCategoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class UpdateMonthCategoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateMonthCategoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public UpdateMonthCategoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

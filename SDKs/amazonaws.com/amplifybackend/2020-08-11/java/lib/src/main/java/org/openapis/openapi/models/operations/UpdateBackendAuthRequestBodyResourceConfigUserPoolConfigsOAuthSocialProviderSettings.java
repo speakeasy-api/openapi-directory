@@ -18,6 +18,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocia
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Facebook")
     public org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig facebook;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings withFacebook(org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig facebook) {
         this.facebook = facebook;
         return this;
@@ -29,6 +30,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocia
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Google")
     public org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig google;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings withGoogle(org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig google) {
         this.google = google;
         return this;
@@ -40,6 +42,7 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocia
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LoginWithAmazon")
     public org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig loginWithAmazon;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings withLoginWithAmazon(org.openapis.openapi.models.shared.BackendAuthSocialProviderConfig loginWithAmazon) {
         this.loginWithAmazon = loginWithAmazon;
         return this;
@@ -51,9 +54,11 @@ public class UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocia
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SignInWithApple")
     public org.openapis.openapi.models.shared.BackendAuthAppleProviderConfig signInWithApple;
+
     public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings withSignInWithApple(org.openapis.openapi.models.shared.BackendAuthAppleProviderConfig signInWithApple) {
         this.signInWithApple = signInWithApple;
         return this;
     }
     
+    public UpdateBackendAuthRequestBodyResourceConfigUserPoolConfigsOAuthSocialProviderSettings(){}
 }

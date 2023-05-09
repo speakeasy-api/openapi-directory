@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DrivingLicenseSchemaIssuedByOrganization {
     
     public DrivingLicenseSchemaIssuedByOrganizationAddress address;
+
     public DrivingLicenseSchemaIssuedByOrganization withAddress(DrivingLicenseSchemaIssuedByOrganizationAddress address) {
         this.address = address;
         return this;
@@ -16,6 +17,7 @@ public class DrivingLicenseSchemaIssuedByOrganization {
     
     
     public String code;
+
     public DrivingLicenseSchemaIssuedByOrganization withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +25,7 @@ public class DrivingLicenseSchemaIssuedByOrganization {
     
     
     public String name;
+
     public DrivingLicenseSchemaIssuedByOrganization withName(String name) {
         this.name = name;
         return this;
@@ -30,6 +33,7 @@ public class DrivingLicenseSchemaIssuedByOrganization {
     
     
     public String tin;
+
     public DrivingLicenseSchemaIssuedByOrganization withTin(String tin) {
         this.tin = tin;
         return this;
@@ -37,6 +41,7 @@ public class DrivingLicenseSchemaIssuedByOrganization {
     
     
     public String type;
+
     public DrivingLicenseSchemaIssuedByOrganization withType(String type) {
         this.type = type;
         return this;
@@ -44,9 +49,18 @@ public class DrivingLicenseSchemaIssuedByOrganization {
     
     
     public String uid;
+
     public DrivingLicenseSchemaIssuedByOrganization withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public DrivingLicenseSchemaIssuedByOrganization(@JsonProperty("Address") DrivingLicenseSchemaIssuedByOrganizationAddress address, @JsonProperty("code") String code, @JsonProperty("name") String name, @JsonProperty("tin") String tin, @JsonProperty("type") String type, @JsonProperty("uid") String uid) {
+        this.address = address;
+        this.code = code;
+        this.name = name;
+        this.tin = tin;
+        this.type = type;
+        this.uid = uid;
+  }
 }

@@ -18,9 +18,11 @@ public class Query {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public Query withQuery(String query) {
         this.query = query;
         return this;
     }
     
+    public Query(){}
 }

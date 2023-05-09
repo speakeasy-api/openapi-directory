@@ -15,6 +15,7 @@ public class EncryptionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CmkArn")
     public String cmkArn;
+
     public EncryptionConfiguration withCmkArn(String cmkArn) {
         this.cmkArn = cmkArn;
         return this;
@@ -22,9 +23,13 @@ public class EncryptionConfiguration {
     
     @JsonProperty("Encrypted")
     public Boolean encrypted;
+
     public EncryptionConfiguration withEncrypted(Boolean encrypted) {
         this.encrypted = encrypted;
         return this;
     }
     
+    public EncryptionConfiguration(@JsonProperty("Encrypted") Boolean encrypted) {
+        this.encrypted = encrypted;
+  }
 }

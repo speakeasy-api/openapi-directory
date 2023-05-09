@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class TestConnectionMessage {
     @JsonProperty("EndpointArn")
     public String endpointArn;
+
     public TestConnectionMessage withEndpointArn(String endpointArn) {
         this.endpointArn = endpointArn;
         return this;
@@ -19,9 +20,14 @@ public class TestConnectionMessage {
     
     @JsonProperty("ReplicationInstanceArn")
     public String replicationInstanceArn;
+
     public TestConnectionMessage withReplicationInstanceArn(String replicationInstanceArn) {
         this.replicationInstanceArn = replicationInstanceArn;
         return this;
     }
     
+    public TestConnectionMessage(@JsonProperty("EndpointArn") String endpointArn, @JsonProperty("ReplicationInstanceArn") String replicationInstanceArn) {
+        this.endpointArn = endpointArn;
+        this.replicationInstanceArn = replicationInstanceArn;
+  }
 }

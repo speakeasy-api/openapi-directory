@@ -18,9 +18,11 @@ public class WebpropertyPermissions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("effective")
     public String[] effective;
+
     public WebpropertyPermissions withEffective(String[] effective) {
         this.effective = effective;
         return this;
     }
     
+    public WebpropertyPermissions(){}
 }

@@ -12,6 +12,7 @@ public class HookDeliveryResponse {
      */
     @JsonProperty("headers")
     public java.util.Map<String, Object> headers;
+
     public HookDeliveryResponse withHeaders(java.util.Map<String, Object> headers) {
         this.headers = headers;
         return this;
@@ -22,9 +23,14 @@ public class HookDeliveryResponse {
      */
     @JsonProperty("payload")
     public String payload;
+
     public HookDeliveryResponse withPayload(String payload) {
         this.payload = payload;
         return this;
     }
     
+    public HookDeliveryResponse(@JsonProperty("headers") java.util.Map<String, Object> headers, @JsonProperty("payload") String payload) {
+        this.headers = headers;
+        this.payload = payload;
+  }
 }

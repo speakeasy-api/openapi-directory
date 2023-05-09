@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class Security {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-VTEX-API-AppKey")
     public String appKey;
+
     public Security withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
@@ -16,9 +18,14 @@ public class Security {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=X-VTEX-API-AppToken")
     public String appToken;
+
     public Security withAppToken(String appToken) {
         this.appToken = appToken;
         return this;
     }
     
+    public Security(@JsonProperty("appKey") String appKey, @JsonProperty("appToken") String appToken) {
+        this.appKey = appKey;
+        this.appToken = appToken;
+  }
 }

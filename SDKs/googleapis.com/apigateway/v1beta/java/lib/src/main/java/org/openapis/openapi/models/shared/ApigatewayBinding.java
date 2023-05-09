@@ -18,6 +18,7 @@ public class ApigatewayBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("condition")
     public ApigatewayExpr condition;
+
     public ApigatewayBinding withCondition(ApigatewayExpr condition) {
         this.condition = condition;
         return this;
@@ -29,6 +30,7 @@ public class ApigatewayBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("members")
     public String[] members;
+
     public ApigatewayBinding withMembers(String[] members) {
         this.members = members;
         return this;
@@ -40,9 +42,11 @@ public class ApigatewayBinding {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public ApigatewayBinding withRole(String role) {
         this.role = role;
         return this;
     }
     
+    public ApigatewayBinding(){}
 }

@@ -18,6 +18,7 @@ public class EeValidatePinResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pinValid")
     public String pinValid;
+
     public EeValidatePinResponse withPinValid(String pinValid) {
         this.pinValid = pinValid;
         return this;
@@ -28,9 +29,13 @@ public class EeValidatePinResponse {
      */
     @JsonProperty("trackingHeader")
     public String trackingHeader;
+
     public EeValidatePinResponse withTrackingHeader(String trackingHeader) {
         this.trackingHeader = trackingHeader;
         return this;
     }
     
+    public EeValidatePinResponse(@JsonProperty("trackingHeader") String trackingHeader) {
+        this.trackingHeader = trackingHeader;
+  }
 }

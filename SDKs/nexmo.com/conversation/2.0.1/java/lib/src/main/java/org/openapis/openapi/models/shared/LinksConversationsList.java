@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class LinksConversationsList {
     @JsonProperty("self")
     public LinksConversationsListSelf self;
+
     public LinksConversationsList withSelf(LinksConversationsListSelf self) {
         this.self = self;
         return this;
     }
     
+    public LinksConversationsList(@JsonProperty("self") LinksConversationsListSelf self) {
+        this.self = self;
+  }
 }

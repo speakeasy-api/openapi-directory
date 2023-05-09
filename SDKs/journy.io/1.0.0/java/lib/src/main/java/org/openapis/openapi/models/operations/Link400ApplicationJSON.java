@@ -15,6 +15,7 @@ public class Link400ApplicationJSON {
      */
     @JsonProperty("errors")
     public Link400ApplicationJSONErrors errors;
+
     public Link400ApplicationJSON withErrors(Link400ApplicationJSONErrors errors) {
         this.errors = errors;
         return this;
@@ -22,6 +23,7 @@ public class Link400ApplicationJSON {
     
     @JsonProperty("message")
     public String message;
+
     public Link400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -29,9 +31,15 @@ public class Link400ApplicationJSON {
     
     @JsonProperty("meta")
     public Link400ApplicationJSONMeta meta;
+
     public Link400ApplicationJSON withMeta(Link400ApplicationJSONMeta meta) {
         this.meta = meta;
         return this;
     }
     
+    public Link400ApplicationJSON(@JsonProperty("errors") Link400ApplicationJSONErrors errors, @JsonProperty("message") String message, @JsonProperty("meta") Link400ApplicationJSONMeta meta) {
+        this.errors = errors;
+        this.message = message;
+        this.meta = meta;
+  }
 }

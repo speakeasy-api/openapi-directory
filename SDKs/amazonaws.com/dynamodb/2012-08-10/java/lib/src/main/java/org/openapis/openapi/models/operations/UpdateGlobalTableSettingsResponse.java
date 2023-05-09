@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateGlobalTableSettingsResponse {
     
     public String contentType;
+
     public UpdateGlobalTableSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object globalTableNotFoundException;
+
     public UpdateGlobalTableSettingsResponse withGlobalTableNotFoundException(Object globalTableNotFoundException) {
         this.globalTableNotFoundException = globalTableNotFoundException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object indexNotFoundException;
+
     public UpdateGlobalTableSettingsResponse withIndexNotFoundException(Object indexNotFoundException) {
         this.indexNotFoundException = indexNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object internalServerError;
+
     public UpdateGlobalTableSettingsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -49,6 +54,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object limitExceededException;
+
     public UpdateGlobalTableSettingsResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object replicaNotFoundException;
+
     public UpdateGlobalTableSettingsResponse withReplicaNotFoundException(Object replicaNotFoundException) {
         this.replicaNotFoundException = replicaNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateGlobalTableSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateGlobalTableSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateGlobalTableSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateGlobalTableSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateGlobalTableSettingsResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateGlobalTableSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateGlobalTableSettingsOutput updateGlobalTableSettingsOutput;
+
     public UpdateGlobalTableSettingsResponse withUpdateGlobalTableSettingsOutput(org.openapis.openapi.models.shared.UpdateGlobalTableSettingsOutput updateGlobalTableSettingsOutput) {
         this.updateGlobalTableSettingsOutput = updateGlobalTableSettingsOutput;
         return this;
     }
     
+    public UpdateGlobalTableSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

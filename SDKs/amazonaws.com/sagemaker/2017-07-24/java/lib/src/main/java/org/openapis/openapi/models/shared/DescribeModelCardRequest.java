@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeModelCardRequest {
     @JsonProperty("ModelCardName")
     public String modelCardName;
+
     public DescribeModelCardRequest withModelCardName(String modelCardName) {
         this.modelCardName = modelCardName;
         return this;
@@ -19,9 +20,13 @@ public class DescribeModelCardRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelCardVersion")
     public Long modelCardVersion;
+
     public DescribeModelCardRequest withModelCardVersion(Long modelCardVersion) {
         this.modelCardVersion = modelCardVersion;
         return this;
     }
     
+    public DescribeModelCardRequest(@JsonProperty("ModelCardName") String modelCardName) {
+        this.modelCardName = modelCardName;
+  }
 }

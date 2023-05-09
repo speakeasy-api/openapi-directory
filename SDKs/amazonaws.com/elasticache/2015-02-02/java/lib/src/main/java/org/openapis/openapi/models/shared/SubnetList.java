@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SubnetList {
     
     public AvailabilityZone subnetAvailabilityZone;
+
     public SubnetList withSubnetAvailabilityZone(AvailabilityZone subnetAvailabilityZone) {
         this.subnetAvailabilityZone = subnetAvailabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class SubnetList {
     
     
     public String subnetIdentifier;
+
     public SubnetList withSubnetIdentifier(String subnetIdentifier) {
         this.subnetIdentifier = subnetIdentifier;
         return this;
@@ -26,6 +28,7 @@ public class SubnetList {
     
     
     public SubnetOutpost subnetOutpost;
+
     public SubnetList withSubnetOutpost(SubnetOutpost subnetOutpost) {
         this.subnetOutpost = subnetOutpost;
         return this;
@@ -33,9 +36,11 @@ public class SubnetList {
     
     
     public NetworkTypeEnum[] supportedNetworkTypes;
+
     public SubnetList withSupportedNetworkTypes(NetworkTypeEnum[] supportedNetworkTypes) {
         this.supportedNetworkTypes = supportedNetworkTypes;
         return this;
     }
     
+    public SubnetList(){}
 }

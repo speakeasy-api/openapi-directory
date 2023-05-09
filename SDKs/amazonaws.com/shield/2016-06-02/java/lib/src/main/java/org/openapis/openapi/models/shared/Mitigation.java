@@ -15,9 +15,11 @@ public class Mitigation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MitigationName")
     public String mitigationName;
+
     public Mitigation withMitigationName(String mitigationName) {
         this.mitigationName = mitigationName;
         return this;
     }
     
+    public Mitigation(){}
 }

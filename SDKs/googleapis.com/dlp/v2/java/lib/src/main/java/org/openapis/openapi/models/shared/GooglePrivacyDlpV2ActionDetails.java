@@ -18,9 +18,11 @@ public class GooglePrivacyDlpV2ActionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deidentifyDetails")
     public GooglePrivacyDlpV2DeidentifyDataSourceDetails deidentifyDetails;
+
     public GooglePrivacyDlpV2ActionDetails withDeidentifyDetails(GooglePrivacyDlpV2DeidentifyDataSourceDetails deidentifyDetails) {
         this.deidentifyDetails = deidentifyDetails;
         return this;
     }
     
+    public GooglePrivacyDlpV2ActionDetails(){}
 }

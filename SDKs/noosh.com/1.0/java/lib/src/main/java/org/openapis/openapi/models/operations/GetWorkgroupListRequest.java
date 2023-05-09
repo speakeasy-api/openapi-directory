@@ -12,6 +12,7 @@ public class GetWorkgroupListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=workgroup_name")
     public String workgroupName;
+
     public GetWorkgroupListRequest withWorkgroupName(String workgroupName) {
         this.workgroupName = workgroupName;
         return this;
@@ -22,9 +23,11 @@ public class GetWorkgroupListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=workgroup_types")
     public String[] workgroupTypes;
+
     public GetWorkgroupListRequest withWorkgroupTypes(String[] workgroupTypes) {
         this.workgroupTypes = workgroupTypes;
         return this;
     }
     
+    public GetWorkgroupListRequest(){}
 }

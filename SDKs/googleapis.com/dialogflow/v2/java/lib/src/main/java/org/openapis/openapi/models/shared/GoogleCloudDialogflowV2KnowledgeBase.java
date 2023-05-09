@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowV2KnowledgeBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDialogflowV2KnowledgeBase withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowV2KnowledgeBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCode")
     public String languageCode;
+
     public GoogleCloudDialogflowV2KnowledgeBase withLanguageCode(String languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDialogflowV2KnowledgeBase {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDialogflowV2KnowledgeBase withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDialogflowV2KnowledgeBase(){}
 }

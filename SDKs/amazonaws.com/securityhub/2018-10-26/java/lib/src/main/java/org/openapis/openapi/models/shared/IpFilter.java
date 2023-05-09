@@ -15,9 +15,11 @@ public class IpFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Cidr")
     public String cidr;
+
     public IpFilter withCidr(String cidr) {
         this.cidr = cidr;
         return this;
     }
     
+    public IpFilter(){}
 }

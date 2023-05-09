@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse {
     
     public byte[] body;
+
     public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse
     
     
     public String contentType;
+
     public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse
      */
     
     public org.openapis.openapi.models.shared.IntegratorCardPayloadResponse integratorCardPayloadResponse;
+
     public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse withIntegratorCardPayloadResponse(org.openapis.openapi.models.shared.IntegratorCardPayloadResponse integratorCardPayloadResponse) {
         this.integratorCardPayloadResponse = integratorCardPayloadResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse
     
     
     public Integer statusCode;
+
     public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,9 +45,14 @@ public class GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCrmV3ExtensionsCardsSampleResponseGetCardsSampleResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

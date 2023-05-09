@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class VaultMattersCloseResponse {
@@ -12,6 +13,7 @@ public class VaultMattersCloseResponse {
      */
     
     public org.openapis.openapi.models.shared.CloseMatterResponse closeMatterResponse;
+
     public VaultMattersCloseResponse withCloseMatterResponse(org.openapis.openapi.models.shared.CloseMatterResponse closeMatterResponse) {
         this.closeMatterResponse = closeMatterResponse;
         return this;
@@ -19,6 +21,7 @@ public class VaultMattersCloseResponse {
     
     
     public String contentType;
+
     public VaultMattersCloseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class VaultMattersCloseResponse {
     
     
     public Integer statusCode;
+
     public VaultMattersCloseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class VaultMattersCloseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public VaultMattersCloseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public VaultMattersCloseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

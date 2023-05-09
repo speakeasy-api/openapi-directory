@@ -15,6 +15,7 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Comments")
     public String comments;
+
     public CSVInput withComments(String comments) {
         this.comments = comments;
         return this;
@@ -23,6 +24,7 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FieldDelimiter")
     public String fieldDelimiter;
+
     public CSVInput withFieldDelimiter(String fieldDelimiter) {
         this.fieldDelimiter = fieldDelimiter;
         return this;
@@ -31,6 +33,7 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileHeaderInfo")
     public FileHeaderInfoEnum fileHeaderInfo;
+
     public CSVInput withFileHeaderInfo(FileHeaderInfoEnum fileHeaderInfo) {
         this.fileHeaderInfo = fileHeaderInfo;
         return this;
@@ -39,6 +42,7 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteCharacter")
     public String quoteCharacter;
+
     public CSVInput withQuoteCharacter(String quoteCharacter) {
         this.quoteCharacter = quoteCharacter;
         return this;
@@ -47,6 +51,7 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QuoteEscapeCharacter")
     public String quoteEscapeCharacter;
+
     public CSVInput withQuoteEscapeCharacter(String quoteEscapeCharacter) {
         this.quoteEscapeCharacter = quoteEscapeCharacter;
         return this;
@@ -55,9 +60,11 @@ public class CSVInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RecordDelimiter")
     public String recordDelimiter;
+
     public CSVInput withRecordDelimiter(String recordDelimiter) {
         this.recordDelimiter = recordDelimiter;
         return this;
     }
     
+    public CSVInput(){}
 }

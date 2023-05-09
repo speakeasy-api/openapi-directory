@@ -20,6 +20,7 @@ public class GetParametersForImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportToken")
     public String importToken;
+
     public GetParametersForImportResponse withImportToken(String importToken) {
         this.importToken = importToken;
         return this;
@@ -28,6 +29,7 @@ public class GetParametersForImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public GetParametersForImportResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -38,6 +40,7 @@ public class GetParametersForImportResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("ParametersValidTo")
     public OffsetDateTime parametersValidTo;
+
     public GetParametersForImportResponse withParametersValidTo(OffsetDateTime parametersValidTo) {
         this.parametersValidTo = parametersValidTo;
         return this;
@@ -46,9 +49,11 @@ public class GetParametersForImportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PublicKey")
     public String publicKey;
+
     public GetParametersForImportResponse withPublicKey(String publicKey) {
         this.publicKey = publicKey;
         return this;
     }
     
+    public GetParametersForImportResponse(){}
 }

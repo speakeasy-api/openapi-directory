@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetNamesInsideRequest {
@@ -12,6 +13,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=bbox")
     public String bbox;
+
     public GetNamesInsideRequest withBbox(String bbox) {
         this.bbox = bbox;
         return this;
@@ -22,6 +24,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=embed")
     public GetNamesInsideEmbedEnum embed;
+
     public GetNamesInsideRequest withEmbed(GetNamesInsideEmbedEnum embed) {
         this.embed = embed;
         return this;
@@ -32,6 +35,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureCategory")
     public String featureCategory;
+
     public GetNamesInsideRequest withFeatureCategory(String featureCategory) {
         this.featureCategory = featureCategory;
         return this;
@@ -42,6 +46,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureClass")
     public String featureClass;
+
     public GetNamesInsideRequest withFeatureClass(String featureClass) {
         this.featureClass = featureClass;
         return this;
@@ -52,6 +57,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=featureType")
     public String featureType;
+
     public GetNamesInsideRequest withFeatureType(String featureType) {
         this.featureType = featureType;
         return this;
@@ -62,6 +68,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=itemsPerPage")
     public Long itemsPerPage;
+
     public GetNamesInsideRequest withItemsPerPage(Long itemsPerPage) {
         this.itemsPerPage = itemsPerPage;
         return this;
@@ -72,6 +79,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputFormat")
     public GetNamesInsideOutputFormatEnum outputFormat;
+
     public GetNamesInsideRequest withOutputFormat(GetNamesInsideOutputFormatEnum outputFormat) {
         this.outputFormat = outputFormat;
         return this;
@@ -82,6 +90,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputSRS")
     public GetNamesInsideOutputSrsEnum outputSRS;
+
     public GetNamesInsideRequest withOutputSRS(GetNamesInsideOutputSrsEnum outputSRS) {
         this.outputSRS = outputSRS;
         return this;
@@ -92,6 +101,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=outputStyle")
     public GetNamesInsideOutputStyleEnum outputStyle;
+
     public GetNamesInsideRequest withOutputStyle(GetNamesInsideOutputStyleEnum outputStyle) {
         this.outputStyle = outputStyle;
         return this;
@@ -102,6 +112,7 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortBy")
     public GetNamesInsideSortByEnum sortBy;
+
     public GetNamesInsideRequest withSortBy(GetNamesInsideSortByEnum sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -112,9 +123,14 @@ public class GetNamesInsideRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=startIndex")
     public Long startIndex;
+
     public GetNamesInsideRequest withStartIndex(Long startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public GetNamesInsideRequest(@JsonProperty("bbox") String bbox, @JsonProperty("outputFormat") GetNamesInsideOutputFormatEnum outputFormat) {
+        this.bbox = bbox;
+        this.outputFormat = outputFormat;
+  }
 }

@@ -18,6 +18,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doi")
     public String doi;
+
     public Resource withDoi(String doi) {
         this.doi = doi;
         return this;
@@ -29,6 +30,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Resource withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("link")
     public String link;
+
     public Resource withLink(String link) {
         this.link = link;
         return this;
@@ -51,6 +54,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public Resource withStatus(String status) {
         this.status = status;
         return this;
@@ -62,6 +66,7 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Resource withTitle(String title) {
         this.title = title;
         return this;
@@ -73,9 +78,11 @@ public class Resource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public Long version;
+
     public Resource withVersion(Long version) {
         this.version = version;
         return this;
     }
     
+    public Resource(){}
 }

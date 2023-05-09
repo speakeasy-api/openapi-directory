@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class MissingParameter {
     
     public Float boxUsage;
+
     public MissingParameter withBoxUsage(Float boxUsage) {
         this.boxUsage = boxUsage;
         return this;
     }
     
+    public MissingParameter(){}
 }

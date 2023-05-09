@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateUserSettingsResponse {
@@ -12,6 +13,7 @@ public class UpdateUserSettingsResponse {
      */
     
     public Object accessDeniedException;
+
     public UpdateUserSettingsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateUserSettingsResponse {
     
     
     public String contentType;
+
     public UpdateUserSettingsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateUserSettingsResponse {
      */
     
     public Object internalServerException;
+
     public UpdateUserSettingsResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateUserSettingsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateUserSettingsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateUserSettingsResponse {
     
     
     public Integer statusCode;
+
     public UpdateUserSettingsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateUserSettingsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateUserSettingsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateUserSettingsResponse {
      */
     
     public Object throttlingException;
+
     public UpdateUserSettingsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateUserSettingsResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateUserSettingsResponse updateUserSettingsResponse;
+
     public UpdateUserSettingsResponse withUpdateUserSettingsResponse(org.openapis.openapi.models.shared.UpdateUserSettingsResponse updateUserSettingsResponse) {
         this.updateUserSettingsResponse = updateUserSettingsResponse;
         return this;
@@ -83,9 +92,14 @@ public class UpdateUserSettingsResponse {
      */
     
     public Object validationException;
+
     public UpdateUserSettingsResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public UpdateUserSettingsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

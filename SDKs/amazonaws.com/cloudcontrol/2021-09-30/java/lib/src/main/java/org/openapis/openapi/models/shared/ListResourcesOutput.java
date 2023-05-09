@@ -15,6 +15,7 @@ public class ListResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListResourcesOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,6 +24,7 @@ public class ListResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ResourceDescriptions")
     public ResourceDescription[] resourceDescriptions;
+
     public ListResourcesOutput withResourceDescriptions(ResourceDescription[] resourceDescriptions) {
         this.resourceDescriptions = resourceDescriptions;
         return this;
@@ -31,9 +33,11 @@ public class ListResourcesOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TypeName")
     public String typeName;
+
     public ListResourcesOutput withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
     }
     
+    public ListResourcesOutput(){}
 }

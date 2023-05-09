@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeLiveChatMessagesListRequest {
@@ -12,6 +13,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeLiveChatMessagesListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeLiveChatMessagesListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeLiveChatMessagesListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeLiveChatMessagesListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeLiveChatMessagesListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hl")
     public String hl;
+
     public YoutubeLiveChatMessagesListRequest withHl(String hl) {
         this.hl = hl;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeLiveChatMessagesListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=liveChatId")
     public String liveChatId;
+
     public YoutubeLiveChatMessagesListRequest withLiveChatId(String liveChatId) {
         this.liveChatId = liveChatId;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeLiveChatMessagesListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeLiveChatMessagesListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeLiveChatMessagesListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -122,6 +134,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeLiveChatMessagesListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -132,6 +145,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeLiveChatMessagesListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=profileImageSize")
     public Long profileImageSize;
+
     public YoutubeLiveChatMessagesListRequest withProfileImageSize(Long profileImageSize) {
         this.profileImageSize = profileImageSize;
         return this;
@@ -152,6 +167,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeLiveChatMessagesListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -162,6 +178,7 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeLiveChatMessagesListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -172,9 +189,14 @@ public class YoutubeLiveChatMessagesListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeLiveChatMessagesListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public YoutubeLiveChatMessagesListRequest(@JsonProperty("liveChatId") String liveChatId, @JsonProperty("part") String[] part) {
+        this.liveChatId = liveChatId;
+        this.part = part;
+  }
 }

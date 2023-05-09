@@ -60,12 +60,10 @@ public class Records {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecordResponse res = new org.openapis.openapi.models.operations.GetRecordResponse() {{
+        org.openapis.openapi.models.operations.GetRecordResponse res = new org.openapis.openapi.models.operations.GetRecordResponse(contentType, httpRes.statusCode()) {{
             objectSchema = null;
             errorSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,12 +118,10 @@ public class Records {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetRecordsResponse res = new org.openapis.openapi.models.operations.GetRecordsResponse() {{
+        org.openapis.openapi.models.operations.GetRecordsResponse res = new org.openapis.openapi.models.operations.GetRecordsResponse(contentType, httpRes.statusCode()) {{
             schema = null;
             errorSchema = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

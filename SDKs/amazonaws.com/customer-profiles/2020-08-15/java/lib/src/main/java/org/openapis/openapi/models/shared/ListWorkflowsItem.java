@@ -19,6 +19,7 @@ public class ListWorkflowsItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedAt")
     public OffsetDateTime createdAt;
+
     public ListWorkflowsItem withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -28,6 +29,7 @@ public class ListWorkflowsItem {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ListWorkflowsItem withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -35,6 +37,7 @@ public class ListWorkflowsItem {
     
     @JsonProperty("Status")
     public StatusEnum status;
+
     public ListWorkflowsItem withStatus(StatusEnum status) {
         this.status = status;
         return this;
@@ -42,6 +45,7 @@ public class ListWorkflowsItem {
     
     @JsonProperty("StatusDescription")
     public String statusDescription;
+
     public ListWorkflowsItem withStatusDescription(String statusDescription) {
         this.statusDescription = statusDescription;
         return this;
@@ -49,6 +53,7 @@ public class ListWorkflowsItem {
     
     @JsonProperty("WorkflowId")
     public String workflowId;
+
     public ListWorkflowsItem withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
@@ -56,9 +61,18 @@ public class ListWorkflowsItem {
     
     @JsonProperty("WorkflowType")
     public WorkflowTypeEnum workflowType;
+
     public ListWorkflowsItem withWorkflowType(WorkflowTypeEnum workflowType) {
         this.workflowType = workflowType;
         return this;
     }
     
+    public ListWorkflowsItem(@JsonProperty("CreatedAt") OffsetDateTime createdAt, @JsonProperty("LastUpdatedAt") OffsetDateTime lastUpdatedAt, @JsonProperty("Status") StatusEnum status, @JsonProperty("StatusDescription") String statusDescription, @JsonProperty("WorkflowId") String workflowId, @JsonProperty("WorkflowType") WorkflowTypeEnum workflowType) {
+        this.createdAt = createdAt;
+        this.lastUpdatedAt = lastUpdatedAt;
+        this.status = status;
+        this.statusDescription = statusDescription;
+        this.workflowId = workflowId;
+        this.workflowType = workflowType;
+  }
 }

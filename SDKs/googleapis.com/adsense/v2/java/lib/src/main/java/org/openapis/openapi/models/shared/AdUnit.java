@@ -18,6 +18,7 @@ public class AdUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentAdsSettings")
     public ContentAdsSettings contentAdsSettings;
+
     public AdUnit withContentAdsSettings(ContentAdsSettings contentAdsSettings) {
         this.contentAdsSettings = contentAdsSettings;
         return this;
@@ -29,6 +30,7 @@ public class AdUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public AdUnit withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -40,6 +42,7 @@ public class AdUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AdUnit withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class AdUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportingDimensionId")
     public String reportingDimensionId;
+
     public AdUnit withReportingDimensionId(String reportingDimensionId) {
         this.reportingDimensionId = reportingDimensionId;
         return this;
@@ -62,9 +66,11 @@ public class AdUnit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public AdUnitStateEnum state;
+
     public AdUnit withState(AdUnitStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public AdUnit(){}
 }

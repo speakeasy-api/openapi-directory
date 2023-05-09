@@ -15,6 +15,7 @@ public class DescribePullRequestEventsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribePullRequestEventsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class DescribePullRequestEventsOutput {
     
     @JsonProperty("pullRequestEvents")
     public PullRequestEvent[] pullRequestEvents;
+
     public DescribePullRequestEventsOutput withPullRequestEvents(PullRequestEvent[] pullRequestEvents) {
         this.pullRequestEvents = pullRequestEvents;
         return this;
     }
     
+    public DescribePullRequestEventsOutput(@JsonProperty("pullRequestEvents") PullRequestEvent[] pullRequestEvents) {
+        this.pullRequestEvents = pullRequestEvents;
+  }
 }

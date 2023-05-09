@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DetectLabelsResponse {
@@ -12,6 +13,7 @@ public class DetectLabelsResponse {
      */
     
     public Object accessDeniedException;
+
     public DetectLabelsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DetectLabelsResponse {
     
     
     public String contentType;
+
     public DetectLabelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DetectLabelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DetectLabelsResponse detectLabelsResponse;
+
     public DetectLabelsResponse withDetectLabelsResponse(org.openapis.openapi.models.shared.DetectLabelsResponse detectLabelsResponse) {
         this.detectLabelsResponse = detectLabelsResponse;
         return this;
@@ -39,6 +43,7 @@ public class DetectLabelsResponse {
      */
     
     public Object imageTooLargeException;
+
     public DetectLabelsResponse withImageTooLargeException(Object imageTooLargeException) {
         this.imageTooLargeException = imageTooLargeException;
         return this;
@@ -49,6 +54,7 @@ public class DetectLabelsResponse {
      */
     
     public Object internalServerError;
+
     public DetectLabelsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DetectLabelsResponse {
      */
     
     public Object invalidImageFormatException;
+
     public DetectLabelsResponse withInvalidImageFormatException(Object invalidImageFormatException) {
         this.invalidImageFormatException = invalidImageFormatException;
         return this;
@@ -69,6 +76,7 @@ public class DetectLabelsResponse {
      */
     
     public Object invalidParameterException;
+
     public DetectLabelsResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -79,6 +87,7 @@ public class DetectLabelsResponse {
      */
     
     public Object invalidS3ObjectException;
+
     public DetectLabelsResponse withInvalidS3ObjectException(Object invalidS3ObjectException) {
         this.invalidS3ObjectException = invalidS3ObjectException;
         return this;
@@ -89,6 +98,7 @@ public class DetectLabelsResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public DetectLabelsResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -96,6 +106,7 @@ public class DetectLabelsResponse {
     
     
     public Integer statusCode;
+
     public DetectLabelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -103,6 +114,7 @@ public class DetectLabelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DetectLabelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -113,9 +125,14 @@ public class DetectLabelsResponse {
      */
     
     public Object throttlingException;
+
     public DetectLabelsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public DetectLabelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

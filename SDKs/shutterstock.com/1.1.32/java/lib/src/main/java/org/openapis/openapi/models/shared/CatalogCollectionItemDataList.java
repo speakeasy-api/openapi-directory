@@ -15,6 +15,7 @@ public class CatalogCollectionItemDataList {
      */
     @JsonProperty("data")
     public CatalogCollectionItem[] data;
+
     public CatalogCollectionItemDataList withData(CatalogCollectionItem[] data) {
         this.data = data;
         return this;
@@ -22,6 +23,7 @@ public class CatalogCollectionItemDataList {
     
     @JsonProperty("page")
     public Double page;
+
     public CatalogCollectionItemDataList withPage(Double page) {
         this.page = page;
         return this;
@@ -29,6 +31,7 @@ public class CatalogCollectionItemDataList {
     
     @JsonProperty("per_page")
     public Double perPage;
+
     public CatalogCollectionItemDataList withPerPage(Double perPage) {
         this.perPage = perPage;
         return this;
@@ -36,9 +39,16 @@ public class CatalogCollectionItemDataList {
     
     @JsonProperty("total_count")
     public Double totalCount;
+
     public CatalogCollectionItemDataList withTotalCount(Double totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public CatalogCollectionItemDataList(@JsonProperty("data") CatalogCollectionItem[] data, @JsonProperty("page") Double page, @JsonProperty("per_page") Double perPage, @JsonProperty("total_count") Double totalCount) {
+        this.data = data;
+        this.page = page;
+        this.perPage = perPage;
+        this.totalCount = totalCount;
+  }
 }

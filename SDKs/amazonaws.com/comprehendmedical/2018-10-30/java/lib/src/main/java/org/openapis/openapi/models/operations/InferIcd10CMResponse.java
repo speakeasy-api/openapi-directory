@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class InferIcd10CMResponse {
     
     public String contentType;
+
     public InferIcd10CMResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class InferIcd10CMResponse {
      */
     
     public org.openapis.openapi.models.shared.InferIcd10CMResponse inferIcd10CMResponse;
+
     public InferIcd10CMResponse withInferIcd10CMResponse(org.openapis.openapi.models.shared.InferIcd10CMResponse inferIcd10CMResponse) {
         this.inferIcd10CMResponse = inferIcd10CMResponse;
         return this;
@@ -29,6 +32,7 @@ public class InferIcd10CMResponse {
      */
     
     public Object internalServerException;
+
     public InferIcd10CMResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class InferIcd10CMResponse {
      */
     
     public Object invalidEncodingException;
+
     public InferIcd10CMResponse withInvalidEncodingException(Object invalidEncodingException) {
         this.invalidEncodingException = invalidEncodingException;
         return this;
@@ -49,6 +54,7 @@ public class InferIcd10CMResponse {
      */
     
     public Object invalidRequestException;
+
     public InferIcd10CMResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -56,6 +62,7 @@ public class InferIcd10CMResponse {
     
     
     public Integer statusCode;
+
     public InferIcd10CMResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class InferIcd10CMResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public InferIcd10CMResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class InferIcd10CMResponse {
      */
     
     public Object serviceUnavailableException;
+
     public InferIcd10CMResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class InferIcd10CMResponse {
      */
     
     public Object textSizeLimitExceededException;
+
     public InferIcd10CMResponse withTextSizeLimitExceededException(Object textSizeLimitExceededException) {
         this.textSizeLimitExceededException = textSizeLimitExceededException;
         return this;
@@ -93,9 +103,14 @@ public class InferIcd10CMResponse {
      */
     
     public Object tooManyRequestsException;
+
     public InferIcd10CMResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public InferIcd10CMResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CloudchannelAccountsListTransferableOffersResponse {
     
     public String contentType;
+
     public CloudchannelAccountsListTransferableOffersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CloudchannelAccountsListTransferableOffersResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudChannelV1ListTransferableOffersResponse googleCloudChannelV1ListTransferableOffersResponse;
+
     public CloudchannelAccountsListTransferableOffersResponse withGoogleCloudChannelV1ListTransferableOffersResponse(org.openapis.openapi.models.shared.GoogleCloudChannelV1ListTransferableOffersResponse googleCloudChannelV1ListTransferableOffersResponse) {
         this.googleCloudChannelV1ListTransferableOffersResponse = googleCloudChannelV1ListTransferableOffersResponse;
         return this;
@@ -26,6 +29,7 @@ public class CloudchannelAccountsListTransferableOffersResponse {
     
     
     public Integer statusCode;
+
     public CloudchannelAccountsListTransferableOffersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class CloudchannelAccountsListTransferableOffersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CloudchannelAccountsListTransferableOffersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CloudchannelAccountsListTransferableOffersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

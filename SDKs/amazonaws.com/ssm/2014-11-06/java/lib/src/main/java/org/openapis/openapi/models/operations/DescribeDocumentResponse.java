@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeDocumentResponse {
     
     public String contentType;
+
     public DescribeDocumentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeDocumentResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeDocumentResult describeDocumentResult;
+
     public DescribeDocumentResponse withDescribeDocumentResult(org.openapis.openapi.models.shared.DescribeDocumentResult describeDocumentResult) {
         this.describeDocumentResult = describeDocumentResult;
         return this;
@@ -29,6 +32,7 @@ public class DescribeDocumentResponse {
      */
     
     public Object internalServerError;
+
     public DescribeDocumentResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeDocumentResponse {
      */
     
     public Object invalidDocument;
+
     public DescribeDocumentResponse withInvalidDocument(Object invalidDocument) {
         this.invalidDocument = invalidDocument;
         return this;
@@ -49,6 +54,7 @@ public class DescribeDocumentResponse {
      */
     
     public Object invalidDocumentVersion;
+
     public DescribeDocumentResponse withInvalidDocumentVersion(Object invalidDocumentVersion) {
         this.invalidDocumentVersion = invalidDocumentVersion;
         return this;
@@ -56,6 +62,7 @@ public class DescribeDocumentResponse {
     
     
     public Integer statusCode;
+
     public DescribeDocumentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,9 +70,14 @@ public class DescribeDocumentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeDocumentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeDocumentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("codebuildRoleArn")
     public String codebuildRoleArn;
+
     public UpdateEnvironmentInput withCodebuildRoleArn(String codebuildRoleArn) {
         this.codebuildRoleArn = codebuildRoleArn;
         return this;
@@ -20,6 +21,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("componentRoleArn")
     public String componentRoleArn;
+
     public UpdateEnvironmentInput withComponentRoleArn(String componentRoleArn) {
         this.componentRoleArn = componentRoleArn;
         return this;
@@ -27,6 +29,7 @@ public class UpdateEnvironmentInput {
     
     @JsonProperty("deploymentType")
     public DeploymentUpdateTypeEnum deploymentType;
+
     public UpdateEnvironmentInput withDeploymentType(DeploymentUpdateTypeEnum deploymentType) {
         this.deploymentType = deploymentType;
         return this;
@@ -35,6 +38,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public UpdateEnvironmentInput withDescription(String description) {
         this.description = description;
         return this;
@@ -43,6 +47,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentAccountConnectionId")
     public String environmentAccountConnectionId;
+
     public UpdateEnvironmentInput withEnvironmentAccountConnectionId(String environmentAccountConnectionId) {
         this.environmentAccountConnectionId = environmentAccountConnectionId;
         return this;
@@ -50,6 +55,7 @@ public class UpdateEnvironmentInput {
     
     @JsonProperty("name")
     public String name;
+
     public UpdateEnvironmentInput withName(String name) {
         this.name = name;
         return this;
@@ -58,6 +64,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protonServiceRoleArn")
     public String protonServiceRoleArn;
+
     public UpdateEnvironmentInput withProtonServiceRoleArn(String protonServiceRoleArn) {
         this.protonServiceRoleArn = protonServiceRoleArn;
         return this;
@@ -66,6 +73,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provisioningRepository")
     public RepositoryBranchInput provisioningRepository;
+
     public UpdateEnvironmentInput withProvisioningRepository(RepositoryBranchInput provisioningRepository) {
         this.provisioningRepository = provisioningRepository;
         return this;
@@ -74,6 +82,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public String spec;
+
     public UpdateEnvironmentInput withSpec(String spec) {
         this.spec = spec;
         return this;
@@ -82,6 +91,7 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMajorVersion")
     public String templateMajorVersion;
+
     public UpdateEnvironmentInput withTemplateMajorVersion(String templateMajorVersion) {
         this.templateMajorVersion = templateMajorVersion;
         return this;
@@ -90,9 +100,14 @@ public class UpdateEnvironmentInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("templateMinorVersion")
     public String templateMinorVersion;
+
     public UpdateEnvironmentInput withTemplateMinorVersion(String templateMinorVersion) {
         this.templateMinorVersion = templateMinorVersion;
         return this;
     }
     
+    public UpdateEnvironmentInput(@JsonProperty("deploymentType") DeploymentUpdateTypeEnum deploymentType, @JsonProperty("name") String name) {
+        this.deploymentType = deploymentType;
+        this.name = name;
+  }
 }

@@ -4,14 +4,19 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetConfigIssuesSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=x-api-key")
     public String apiKeyHeader;
+
     public GetConfigIssuesSecurity withApiKeyHeader(String apiKeyHeader) {
         this.apiKeyHeader = apiKeyHeader;
         return this;
     }
     
+    public GetConfigIssuesSecurity(@JsonProperty("api-key-header") String apiKeyHeader) {
+        this.apiKeyHeader = apiKeyHeader;
+  }
 }

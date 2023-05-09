@@ -18,6 +18,7 @@ public class ConversionSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleAnalyticsLink")
     public GoogleAnalyticsLinkInput googleAnalyticsLink;
+
     public ConversionSourceInput withGoogleAnalyticsLink(GoogleAnalyticsLinkInput googleAnalyticsLink) {
         this.googleAnalyticsLink = googleAnalyticsLink;
         return this;
@@ -29,9 +30,11 @@ public class ConversionSourceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantCenterDestination")
     public MerchantCenterDestinationInput merchantCenterDestination;
+
     public ConversionSourceInput withMerchantCenterDestination(MerchantCenterDestinationInput merchantCenterDestination) {
         this.merchantCenterDestination = merchantCenterDestination;
         return this;
     }
     
+    public ConversionSourceInput(){}
 }

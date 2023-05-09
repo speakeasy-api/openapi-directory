@@ -12,6 +12,7 @@ public class ListImportsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListImportsInput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -20,6 +21,7 @@ public class ListImportsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PageSize")
     public Long pageSize;
+
     public ListImportsInput withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -28,9 +30,11 @@ public class ListImportsInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableArn")
     public String tableArn;
+
     public ListImportsInput withTableArn(String tableArn) {
         this.tableArn = tableArn;
         return this;
     }
     
+    public ListImportsInput(){}
 }

@@ -15,6 +15,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("configuration")
     public java.util.Map<String, String> configuration;
+
     public PropertyDefinitionRequest withConfiguration(java.util.Map<String, String> configuration) {
         this.configuration = configuration;
         return this;
@@ -23,6 +24,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataType")
     public DataType dataType;
+
     public PropertyDefinitionRequest withDataType(DataType dataType) {
         this.dataType = dataType;
         return this;
@@ -31,6 +33,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultValue")
     public DataValue defaultValue;
+
     public PropertyDefinitionRequest withDefaultValue(DataValue defaultValue) {
         this.defaultValue = defaultValue;
         return this;
@@ -39,6 +42,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public PropertyDefinitionRequest withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -47,6 +51,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isExternalId")
     public Boolean isExternalId;
+
     public PropertyDefinitionRequest withIsExternalId(Boolean isExternalId) {
         this.isExternalId = isExternalId;
         return this;
@@ -55,6 +60,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isRequiredInEntity")
     public Boolean isRequiredInEntity;
+
     public PropertyDefinitionRequest withIsRequiredInEntity(Boolean isRequiredInEntity) {
         this.isRequiredInEntity = isRequiredInEntity;
         return this;
@@ -63,6 +69,7 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isStoredExternally")
     public Boolean isStoredExternally;
+
     public PropertyDefinitionRequest withIsStoredExternally(Boolean isStoredExternally) {
         this.isStoredExternally = isStoredExternally;
         return this;
@@ -71,9 +78,11 @@ public class PropertyDefinitionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isTimeSeries")
     public Boolean isTimeSeries;
+
     public PropertyDefinitionRequest withIsTimeSeries(Boolean isTimeSeries) {
         this.isTimeSeries = isTimeSeries;
         return this;
     }
     
+    public PropertyDefinitionRequest(){}
 }

@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DateField {
     @JsonProperty("bbox")
     public BoundingBox bbox;
+
     public DateField withBbox(BoundingBox bbox) {
         this.bbox = bbox;
         return this;
@@ -19,6 +20,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_count")
     public Long cellCount;
+
     public DateField withCellCount(Long cellCount) {
         this.cellCount = cellCount;
         return this;
@@ -27,6 +29,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cell_offset")
     public Long cellOffset;
+
     public DateField withCellOffset(Long cellOffset) {
         this.cellOffset = cellOffset;
         return this;
@@ -35,6 +38,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cells")
     public Boolean cells;
+
     public DateField withCells(Boolean cells) {
         this.cells = cells;
         return this;
@@ -43,6 +47,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public DateField withColor(String color) {
         this.color = color;
         return this;
@@ -51,6 +56,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("font")
     public DateFieldFontEnum font;
+
     public DateField withFont(DateFieldFontEnum font) {
         this.font = font;
         return this;
@@ -59,6 +65,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("font_size")
     public Long fontSize;
+
     public DateField withFontSize(Long fontSize) {
         this.fontSize = fontSize;
         return this;
@@ -66,6 +73,7 @@ public class DateField {
     
     @JsonProperty("format")
     public String format;
+
     public DateField withFormat(String format) {
         this.format = format;
         return this;
@@ -74,6 +82,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("h_align")
     public DateFieldHorizontalAlignEnum hAlign;
+
     public DateField withHAlign(DateFieldHorizontalAlignEnum hAlign) {
         this.hAlign = hAlign;
         return this;
@@ -82,6 +91,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public DateField withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -89,6 +99,7 @@ public class DateField {
     
     @JsonProperty("name")
     public String name;
+
     public DateField withName(String name) {
         this.name = name;
         return this;
@@ -96,6 +107,7 @@ public class DateField {
     
     @JsonProperty("page")
     public Long page;
+
     public DateField withPage(Long page) {
         this.page = page;
         return this;
@@ -104,6 +116,7 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public DateField withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -111,6 +124,7 @@ public class DateField {
     
     @JsonProperty("type")
     public DateFieldTypeEnum type;
+
     public DateField withType(DateFieldTypeEnum type) {
         this.type = type;
         return this;
@@ -119,9 +133,17 @@ public class DateField {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("v_align")
     public DateFieldVerticalAlignEnum vAlign;
+
     public DateField withVAlign(DateFieldVerticalAlignEnum vAlign) {
         this.vAlign = vAlign;
         return this;
     }
     
+    public DateField(@JsonProperty("bbox") BoundingBox bbox, @JsonProperty("format") String format, @JsonProperty("name") String name, @JsonProperty("page") Long page, @JsonProperty("type") DateFieldTypeEnum type) {
+        this.bbox = bbox;
+        this.format = format;
+        this.name = name;
+        this.page = page;
+        this.type = type;
+  }
 }

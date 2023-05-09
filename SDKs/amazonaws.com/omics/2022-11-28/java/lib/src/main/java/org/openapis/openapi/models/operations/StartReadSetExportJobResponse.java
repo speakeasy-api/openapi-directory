@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartReadSetExportJobResponse {
@@ -12,6 +13,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object accessDeniedException;
+
     public StartReadSetExportJobResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartReadSetExportJobResponse {
     
     
     public String contentType;
+
     public StartReadSetExportJobResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object internalServerException;
+
     public StartReadSetExportJobResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object requestTimeoutException;
+
     public StartReadSetExportJobResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object resourceNotFoundException;
+
     public StartReadSetExportJobResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartReadSetExportJobResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -69,6 +76,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public org.openapis.openapi.models.shared.StartReadSetExportJobResponse startReadSetExportJobResponse;
+
     public StartReadSetExportJobResponse withStartReadSetExportJobResponse(org.openapis.openapi.models.shared.StartReadSetExportJobResponse startReadSetExportJobResponse) {
         this.startReadSetExportJobResponse = startReadSetExportJobResponse;
         return this;
@@ -76,6 +84,7 @@ public class StartReadSetExportJobResponse {
     
     
     public Integer statusCode;
+
     public StartReadSetExportJobResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class StartReadSetExportJobResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartReadSetExportJobResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,6 +103,7 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object throttlingException;
+
     public StartReadSetExportJobResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class StartReadSetExportJobResponse {
      */
     
     public Object validationException;
+
     public StartReadSetExportJobResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public StartReadSetExportJobResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

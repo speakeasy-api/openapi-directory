@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class InternalOperationResult {
     @JsonProperty("succeeded")
     public Boolean succeeded;
+
     public InternalOperationResult withSucceeded(Boolean succeeded) {
         this.succeeded = succeeded;
         return this;
     }
     
+    public InternalOperationResult(@JsonProperty("succeeded") Boolean succeeded) {
+        this.succeeded = succeeded;
+  }
 }

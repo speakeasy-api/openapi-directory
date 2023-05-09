@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWorkUnitResultsResponse {
@@ -12,6 +13,7 @@ public class GetWorkUnitResultsResponse {
      */
     
     public Object accessDeniedException;
+
     public GetWorkUnitResultsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetWorkUnitResultsResponse {
     
     
     public String contentType;
+
     public GetWorkUnitResultsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetWorkUnitResultsResponse {
      */
     
     public Object expiredException;
+
     public GetWorkUnitResultsResponse withExpiredException(Object expiredException) {
         this.expiredException = expiredException;
         return this;
@@ -39,6 +43,7 @@ public class GetWorkUnitResultsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetWorkUnitResultsResponse getWorkUnitResultsResponse;
+
     public GetWorkUnitResultsResponse withGetWorkUnitResultsResponse(org.openapis.openapi.models.shared.GetWorkUnitResultsResponse getWorkUnitResultsResponse) {
         this.getWorkUnitResultsResponse = getWorkUnitResultsResponse;
         return this;
@@ -49,6 +54,7 @@ public class GetWorkUnitResultsResponse {
      */
     
     public Object internalServiceException;
+
     public GetWorkUnitResultsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class GetWorkUnitResultsResponse {
      */
     
     public Object invalidInputException;
+
     public GetWorkUnitResultsResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -66,6 +73,7 @@ public class GetWorkUnitResultsResponse {
     
     
     public Integer statusCode;
+
     public GetWorkUnitResultsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GetWorkUnitResultsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWorkUnitResultsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GetWorkUnitResultsResponse {
      */
     
     public Object throttledException;
+
     public GetWorkUnitResultsResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public GetWorkUnitResultsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,6 +12,7 @@ public class SearchSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("match")
     public Boolean match;
+
     public SearchSegment withMatch(Boolean match) {
         this.match = match;
         return this;
@@ -20,9 +21,11 @@ public class SearchSegment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("text")
     public String text;
+
     public SearchSegment withText(String text) {
         this.text = text;
         return this;
     }
     
+    public SearchSegment(){}
 }

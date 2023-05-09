@@ -18,9 +18,11 @@ public class RecoveryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scheduledSnapshotsConfig")
     public ScheduledSnapshotsConfig scheduledSnapshotsConfig;
+
     public RecoveryConfig withScheduledSnapshotsConfig(ScheduledSnapshotsConfig scheduledSnapshotsConfig) {
         this.scheduledSnapshotsConfig = scheduledSnapshotsConfig;
         return this;
     }
     
+    public RecoveryConfig(){}
 }

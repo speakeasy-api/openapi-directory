@@ -15,6 +15,7 @@ public class GmbAccountsGmbAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GmbAccountsGmbAccount withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +27,7 @@ public class GmbAccountsGmbAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listingCount")
     public String listingCount;
+
     public GmbAccountsGmbAccount withListingCount(String listingCount) {
         this.listingCount = listingCount;
         return this;
@@ -37,6 +39,7 @@ public class GmbAccountsGmbAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GmbAccountsGmbAccount withName(String name) {
         this.name = name;
         return this;
@@ -48,9 +51,11 @@ public class GmbAccountsGmbAccount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GmbAccountsGmbAccount withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GmbAccountsGmbAccount(){}
 }

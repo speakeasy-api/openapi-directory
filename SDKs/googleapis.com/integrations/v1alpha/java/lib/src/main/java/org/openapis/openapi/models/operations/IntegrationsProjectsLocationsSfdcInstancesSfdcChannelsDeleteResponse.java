@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse {
     
     public String contentType;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRespons
      */
     
     public java.util.Map<String, Object> googleProtobufEmpty;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse withGoogleProtobufEmpty(java.util.Map<String, Object> googleProtobufEmpty) {
         this.googleProtobufEmpty = googleProtobufEmpty;
         return this;
@@ -26,6 +29,7 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRespons
     
     
     public Integer statusCode;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteRespons
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IntegrationsProjectsLocationsSfdcInstancesSfdcChannelsDeleteResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

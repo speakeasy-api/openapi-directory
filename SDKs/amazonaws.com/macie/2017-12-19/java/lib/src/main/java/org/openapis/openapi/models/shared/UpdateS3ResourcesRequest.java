@@ -12,6 +12,7 @@ public class UpdateS3ResourcesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memberAccountId")
     public String memberAccountId;
+
     public UpdateS3ResourcesRequest withMemberAccountId(String memberAccountId) {
         this.memberAccountId = memberAccountId;
         return this;
@@ -19,9 +20,13 @@ public class UpdateS3ResourcesRequest {
     
     @JsonProperty("s3ResourcesUpdate")
     public S3ResourceClassificationUpdate[] s3ResourcesUpdate;
+
     public UpdateS3ResourcesRequest withS3ResourcesUpdate(S3ResourceClassificationUpdate[] s3ResourcesUpdate) {
         this.s3ResourcesUpdate = s3ResourcesUpdate;
         return this;
     }
     
+    public UpdateS3ResourcesRequest(@JsonProperty("s3ResourcesUpdate") S3ResourceClassificationUpdate[] s3ResourcesUpdate) {
+        this.s3ResourcesUpdate = s3ResourcesUpdate;
+  }
 }

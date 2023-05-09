@@ -18,6 +18,7 @@ public class AutoscalingPolicyCustomMetricUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filter")
     public String filter;
+
     public AutoscalingPolicyCustomMetricUtilization withFilter(String filter) {
         this.filter = filter;
         return this;
@@ -29,6 +30,7 @@ public class AutoscalingPolicyCustomMetricUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metric")
     public String metric;
+
     public AutoscalingPolicyCustomMetricUtilization withMetric(String metric) {
         this.metric = metric;
         return this;
@@ -40,6 +42,7 @@ public class AutoscalingPolicyCustomMetricUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("singleInstanceAssignment")
     public Double singleInstanceAssignment;
+
     public AutoscalingPolicyCustomMetricUtilization withSingleInstanceAssignment(Double singleInstanceAssignment) {
         this.singleInstanceAssignment = singleInstanceAssignment;
         return this;
@@ -51,6 +54,7 @@ public class AutoscalingPolicyCustomMetricUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationTarget")
     public Double utilizationTarget;
+
     public AutoscalingPolicyCustomMetricUtilization withUtilizationTarget(Double utilizationTarget) {
         this.utilizationTarget = utilizationTarget;
         return this;
@@ -62,9 +66,11 @@ public class AutoscalingPolicyCustomMetricUtilization {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("utilizationTargetType")
     public AutoscalingPolicyCustomMetricUtilizationUtilizationTargetTypeEnum utilizationTargetType;
+
     public AutoscalingPolicyCustomMetricUtilization withUtilizationTargetType(AutoscalingPolicyCustomMetricUtilizationUtilizationTargetTypeEnum utilizationTargetType) {
         this.utilizationTargetType = utilizationTargetType;
         return this;
     }
     
+    public AutoscalingPolicyCustomMetricUtilization(){}
 }

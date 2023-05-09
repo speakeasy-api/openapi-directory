@@ -12,9 +12,13 @@ public class UpdateRecommenderConfigurationRequestBody {
      */
     @JsonProperty("UpdateRecommenderConfiguration")
     public UpdateRecommenderConfigurationRequestBodyUpdateRecommenderConfiguration updateRecommenderConfiguration;
+
     public UpdateRecommenderConfigurationRequestBody withUpdateRecommenderConfiguration(UpdateRecommenderConfigurationRequestBodyUpdateRecommenderConfiguration updateRecommenderConfiguration) {
         this.updateRecommenderConfiguration = updateRecommenderConfiguration;
         return this;
     }
     
+    public UpdateRecommenderConfigurationRequestBody(@JsonProperty("UpdateRecommenderConfiguration") UpdateRecommenderConfigurationRequestBodyUpdateRecommenderConfiguration updateRecommenderConfiguration) {
+        this.updateRecommenderConfiguration = updateRecommenderConfiguration;
+  }
 }

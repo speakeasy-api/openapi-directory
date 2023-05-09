@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateProtectionRequest {
     @JsonProperty("Name")
     public String name;
+
     public CreateProtectionRequest withName(String name) {
         this.name = name;
         return this;
@@ -18,6 +19,7 @@ public class CreateProtectionRequest {
     
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public CreateProtectionRequest withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
@@ -26,9 +28,14 @@ public class CreateProtectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateProtectionRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateProtectionRequest(@JsonProperty("Name") String name, @JsonProperty("ResourceArn") String resourceArn) {
+        this.name = name;
+        this.resourceArn = resourceArn;
+  }
 }

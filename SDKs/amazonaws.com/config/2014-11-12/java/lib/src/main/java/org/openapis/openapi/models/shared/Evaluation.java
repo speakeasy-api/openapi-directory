@@ -20,6 +20,7 @@ public class Evaluation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Annotation")
     public String annotation;
+
     public Evaluation withAnnotation(String annotation) {
         this.annotation = annotation;
         return this;
@@ -27,6 +28,7 @@ public class Evaluation {
     
     @JsonProperty("ComplianceResourceId")
     public String complianceResourceId;
+
     public Evaluation withComplianceResourceId(String complianceResourceId) {
         this.complianceResourceId = complianceResourceId;
         return this;
@@ -34,6 +36,7 @@ public class Evaluation {
     
     @JsonProperty("ComplianceResourceType")
     public String complianceResourceType;
+
     public Evaluation withComplianceResourceType(String complianceResourceType) {
         this.complianceResourceType = complianceResourceType;
         return this;
@@ -41,6 +44,7 @@ public class Evaluation {
     
     @JsonProperty("ComplianceType")
     public ComplianceTypeEnum complianceType;
+
     public Evaluation withComplianceType(ComplianceTypeEnum complianceType) {
         this.complianceType = complianceType;
         return this;
@@ -50,9 +54,16 @@ public class Evaluation {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("OrderingTimestamp")
     public OffsetDateTime orderingTimestamp;
+
     public Evaluation withOrderingTimestamp(OffsetDateTime orderingTimestamp) {
         this.orderingTimestamp = orderingTimestamp;
         return this;
     }
     
+    public Evaluation(@JsonProperty("ComplianceResourceId") String complianceResourceId, @JsonProperty("ComplianceResourceType") String complianceResourceType, @JsonProperty("ComplianceType") ComplianceTypeEnum complianceType, @JsonProperty("OrderingTimestamp") OffsetDateTime orderingTimestamp) {
+        this.complianceResourceId = complianceResourceId;
+        this.complianceResourceType = complianceResourceType;
+        this.complianceType = complianceType;
+        this.orderingTimestamp = orderingTimestamp;
+  }
 }

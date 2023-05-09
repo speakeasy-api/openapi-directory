@@ -15,6 +15,7 @@ public class MemcacheParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public MemcacheParameters withId(String id) {
         this.id = id;
         return this;
@@ -26,9 +27,11 @@ public class MemcacheParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("params")
     public java.util.Map<String, String> params;
+
     public MemcacheParameters withParams(java.util.Map<String, String> params) {
         this.params = params;
         return this;
     }
     
+    public MemcacheParameters(){}
 }

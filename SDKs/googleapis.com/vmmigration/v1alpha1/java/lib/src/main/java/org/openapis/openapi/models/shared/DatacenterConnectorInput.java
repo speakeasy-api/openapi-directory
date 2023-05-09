@@ -18,6 +18,7 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableVersions")
     public AvailableUpdates availableVersions;
+
     public DatacenterConnectorInput withAvailableVersions(AvailableUpdates availableVersions) {
         this.availableVersions = availableVersions;
         return this;
@@ -29,6 +30,7 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public DatacenterConnectorInput withError(Status error) {
         this.error = error;
         return this;
@@ -40,6 +42,7 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("registrationId")
     public String registrationId;
+
     public DatacenterConnectorInput withRegistrationId(String registrationId) {
         this.registrationId = registrationId;
         return this;
@@ -51,6 +54,7 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("serviceAccount")
     public String serviceAccount;
+
     public DatacenterConnectorInput withServiceAccount(String serviceAccount) {
         this.serviceAccount = serviceAccount;
         return this;
@@ -62,6 +66,7 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("upgradeStatus")
     public UpgradeStatus upgradeStatus;
+
     public DatacenterConnectorInput withUpgradeStatus(UpgradeStatus upgradeStatus) {
         this.upgradeStatus = upgradeStatus;
         return this;
@@ -73,9 +78,11 @@ public class DatacenterConnectorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public DatacenterConnectorInput withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public DatacenterConnectorInput(){}
 }

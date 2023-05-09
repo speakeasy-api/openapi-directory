@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetAllProductsV2Request {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationUuid")
     public String organizationUuid;
+
     public GetAllProductsV2Request withOrganizationUuid(String organizationUuid) {
         this.organizationUuid = organizationUuid;
         return this;
@@ -19,9 +21,13 @@ public class GetAllProductsV2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public Boolean sort;
+
     public GetAllProductsV2Request withSort(Boolean sort) {
         this.sort = sort;
         return this;
     }
     
+    public GetAllProductsV2Request(@JsonProperty("organizationUuid") String organizationUuid) {
+        this.organizationUuid = organizationUuid;
+  }
 }

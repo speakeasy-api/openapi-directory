@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ConfirmTransitVirtualInterfaceResponse {
@@ -12,6 +13,7 @@ public class ConfirmTransitVirtualInterfaceResponse {
      */
     
     public org.openapis.openapi.models.shared.ConfirmTransitVirtualInterfaceResponse confirmTransitVirtualInterfaceResponse;
+
     public ConfirmTransitVirtualInterfaceResponse withConfirmTransitVirtualInterfaceResponse(org.openapis.openapi.models.shared.ConfirmTransitVirtualInterfaceResponse confirmTransitVirtualInterfaceResponse) {
         this.confirmTransitVirtualInterfaceResponse = confirmTransitVirtualInterfaceResponse;
         return this;
@@ -19,6 +21,7 @@ public class ConfirmTransitVirtualInterfaceResponse {
     
     
     public String contentType;
+
     public ConfirmTransitVirtualInterfaceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ConfirmTransitVirtualInterfaceResponse {
      */
     
     public Object directConnectClientException;
+
     public ConfirmTransitVirtualInterfaceResponse withDirectConnectClientException(Object directConnectClientException) {
         this.directConnectClientException = directConnectClientException;
         return this;
@@ -39,6 +43,7 @@ public class ConfirmTransitVirtualInterfaceResponse {
      */
     
     public Object directConnectServerException;
+
     public ConfirmTransitVirtualInterfaceResponse withDirectConnectServerException(Object directConnectServerException) {
         this.directConnectServerException = directConnectServerException;
         return this;
@@ -46,6 +51,7 @@ public class ConfirmTransitVirtualInterfaceResponse {
     
     
     public Integer statusCode;
+
     public ConfirmTransitVirtualInterfaceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class ConfirmTransitVirtualInterfaceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ConfirmTransitVirtualInterfaceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ConfirmTransitVirtualInterfaceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

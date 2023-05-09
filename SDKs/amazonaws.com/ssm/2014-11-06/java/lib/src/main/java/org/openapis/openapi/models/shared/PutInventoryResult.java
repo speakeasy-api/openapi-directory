@@ -15,9 +15,11 @@ public class PutInventoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public PutInventoryResult withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public PutInventoryResult(){}
 }

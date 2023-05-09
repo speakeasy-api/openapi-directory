@@ -18,6 +18,7 @@ public class PostalCodesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PostalCodesListResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -29,9 +30,11 @@ public class PostalCodesListResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("postalCodes")
     public PostalCode[] postalCodes;
+
     public PostalCodesListResponse withPostalCodes(PostalCode[] postalCodes) {
         this.postalCodes = postalCodes;
         return this;
     }
     
+    public PostalCodesListResponse(){}
 }

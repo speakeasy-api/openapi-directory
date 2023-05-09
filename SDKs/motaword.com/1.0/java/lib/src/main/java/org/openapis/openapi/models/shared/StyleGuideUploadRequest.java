@@ -12,9 +12,13 @@ public class StyleGuideUploadRequest {
      */
     @JsonProperty("styleguides")
     public byte[] styleguides;
+
     public StyleGuideUploadRequest withStyleguides(byte[] styleguides) {
         this.styleguides = styleguides;
         return this;
     }
     
+    public StyleGuideUploadRequest(@JsonProperty("styleguides") byte[] styleguides) {
+        this.styleguides = styleguides;
+  }
 }

@@ -12,6 +12,7 @@ public class StartZonalShiftRequestBody {
      */
     @JsonProperty("awayFrom")
     public String awayFrom;
+
     public StartZonalShiftRequestBody withAwayFrom(String awayFrom) {
         this.awayFrom = awayFrom;
         return this;
@@ -22,6 +23,7 @@ public class StartZonalShiftRequestBody {
      */
     @JsonProperty("comment")
     public String comment;
+
     public StartZonalShiftRequestBody withComment(String comment) {
         this.comment = comment;
         return this;
@@ -32,6 +34,7 @@ public class StartZonalShiftRequestBody {
      */
     @JsonProperty("expiresIn")
     public String expiresIn;
+
     public StartZonalShiftRequestBody withExpiresIn(String expiresIn) {
         this.expiresIn = expiresIn;
         return this;
@@ -42,9 +45,16 @@ public class StartZonalShiftRequestBody {
      */
     @JsonProperty("resourceIdentifier")
     public String resourceIdentifier;
+
     public StartZonalShiftRequestBody withResourceIdentifier(String resourceIdentifier) {
         this.resourceIdentifier = resourceIdentifier;
         return this;
     }
     
+    public StartZonalShiftRequestBody(@JsonProperty("awayFrom") String awayFrom, @JsonProperty("comment") String comment, @JsonProperty("expiresIn") String expiresIn, @JsonProperty("resourceIdentifier") String resourceIdentifier) {
+        this.awayFrom = awayFrom;
+        this.comment = comment;
+        this.expiresIn = expiresIn;
+        this.resourceIdentifier = resourceIdentifier;
+  }
 }

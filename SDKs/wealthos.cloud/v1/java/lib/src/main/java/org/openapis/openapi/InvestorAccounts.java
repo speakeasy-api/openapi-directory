@@ -70,7 +70,7 @@ public class InvestorAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse res = new org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse() {{
+        org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse res = new org.openapis.openapi.models.operations.GetAllinvestorAccountsResponse(contentType, httpRes.statusCode()) {{
             getAllinvestorAccounts200ApplicationJSONObject = null;
             getAllinvestorAccounts400ApplicationJSONObject = null;
             getAllinvestorAccounts401ApplicationJSONObject = null;
@@ -80,8 +80,6 @@ public class InvestorAccounts {
             getAllinvestorAccounts429ApplicationJSONObject = null;
             getAllinvestorAccounts500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,7 +172,7 @@ public class InvestorAccounts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetinvestorAccountResponse res = new org.openapis.openapi.models.operations.GetinvestorAccountResponse() {{
+        org.openapis.openapi.models.operations.GetinvestorAccountResponse res = new org.openapis.openapi.models.operations.GetinvestorAccountResponse(contentType, httpRes.statusCode()) {{
             getinvestorAccount200ApplicationJSONObject = null;
             getinvestorAccount400ApplicationJSONObject = null;
             getinvestorAccount401ApplicationJSONObject = null;
@@ -184,8 +182,6 @@ public class InvestorAccounts {
             getinvestorAccount429ApplicationJSONObject = null;
             getinvestorAccount500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

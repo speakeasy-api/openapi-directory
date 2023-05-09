@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class JobSummary {
     @JsonProperty("commitId")
     public String commitId;
+
     public JobSummary withCommitId(String commitId) {
         this.commitId = commitId;
         return this;
@@ -26,6 +27,7 @@ public class JobSummary {
     
     @JsonProperty("commitMessage")
     public String commitMessage;
+
     public JobSummary withCommitMessage(String commitMessage) {
         this.commitMessage = commitMessage;
         return this;
@@ -35,6 +37,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("commitTime")
     public OffsetDateTime commitTime;
+
     public JobSummary withCommitTime(OffsetDateTime commitTime) {
         this.commitTime = commitTime;
         return this;
@@ -45,6 +48,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("endTime")
     public OffsetDateTime endTime;
+
     public JobSummary withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -52,6 +56,7 @@ public class JobSummary {
     
     @JsonProperty("jobArn")
     public String jobArn;
+
     public JobSummary withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -59,6 +64,7 @@ public class JobSummary {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public JobSummary withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -66,6 +72,7 @@ public class JobSummary {
     
     @JsonProperty("jobType")
     public JobTypeEnum jobType;
+
     public JobSummary withJobType(JobTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -75,6 +82,7 @@ public class JobSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startTime")
     public OffsetDateTime startTime;
+
     public JobSummary withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -82,9 +90,20 @@ public class JobSummary {
     
     @JsonProperty("status")
     public JobStatusEnum status;
+
     public JobSummary withStatus(JobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public JobSummary(@JsonProperty("commitId") String commitId, @JsonProperty("commitMessage") String commitMessage, @JsonProperty("commitTime") OffsetDateTime commitTime, @JsonProperty("jobArn") String jobArn, @JsonProperty("jobId") String jobId, @JsonProperty("jobType") JobTypeEnum jobType, @JsonProperty("startTime") OffsetDateTime startTime, @JsonProperty("status") JobStatusEnum status) {
+        this.commitId = commitId;
+        this.commitMessage = commitMessage;
+        this.commitTime = commitTime;
+        this.jobArn = jobArn;
+        this.jobId = jobId;
+        this.jobType = jobType;
+        this.startTime = startTime;
+        this.status = status;
+  }
 }

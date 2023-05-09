@@ -18,6 +18,7 @@ public class GrpcRouteFaultInjectionPolicyAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpStatus")
     public Integer httpStatus;
+
     public GrpcRouteFaultInjectionPolicyAbort withHttpStatus(Integer httpStatus) {
         this.httpStatus = httpStatus;
         return this;
@@ -29,9 +30,11 @@ public class GrpcRouteFaultInjectionPolicyAbort {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public Integer percentage;
+
     public GrpcRouteFaultInjectionPolicyAbort withPercentage(Integer percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public GrpcRouteFaultInjectionPolicyAbort(){}
 }

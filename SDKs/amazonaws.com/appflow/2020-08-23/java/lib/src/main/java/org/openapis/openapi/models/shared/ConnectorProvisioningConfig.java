@@ -15,9 +15,11 @@ public class ConnectorProvisioningConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lambda")
     public LambdaConnectorProvisioningConfig lambda;
+
     public ConnectorProvisioningConfig withLambda(LambdaConnectorProvisioningConfig lambda) {
         this.lambda = lambda;
         return this;
     }
     
+    public ConnectorProvisioningConfig(){}
 }

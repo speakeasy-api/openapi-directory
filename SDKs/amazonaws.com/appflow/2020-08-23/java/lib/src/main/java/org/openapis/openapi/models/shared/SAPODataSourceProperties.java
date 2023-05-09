@@ -15,9 +15,11 @@ public class SAPODataSourceProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("objectPath")
     public String objectPath;
+
     public SAPODataSourceProperties withObjectPath(String objectPath) {
         this.objectPath = objectPath;
         return this;
     }
     
+    public SAPODataSourceProperties(){}
 }

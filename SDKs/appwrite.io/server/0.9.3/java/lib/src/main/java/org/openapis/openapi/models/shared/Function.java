@@ -15,6 +15,7 @@ public class Function {
      */
     @JsonProperty("$id")
     public String dollarId;
+
     public Function withDollarId(String dollarId) {
         this.dollarId = dollarId;
         return this;
@@ -25,6 +26,7 @@ public class Function {
      */
     @JsonProperty("$permissions")
     public java.util.Map<String, Object> dollarPermissions;
+
     public Function withDollarPermissions(java.util.Map<String, Object> dollarPermissions) {
         this.dollarPermissions = dollarPermissions;
         return this;
@@ -35,6 +37,7 @@ public class Function {
      */
     @JsonProperty("dateCreated")
     public Integer dateCreated;
+
     public Function withDateCreated(Integer dateCreated) {
         this.dateCreated = dateCreated;
         return this;
@@ -45,6 +48,7 @@ public class Function {
      */
     @JsonProperty("dateUpdated")
     public Integer dateUpdated;
+
     public Function withDateUpdated(Integer dateUpdated) {
         this.dateUpdated = dateUpdated;
         return this;
@@ -55,6 +59,7 @@ public class Function {
      */
     @JsonProperty("events")
     public String[] events;
+
     public Function withEvents(String[] events) {
         this.events = events;
         return this;
@@ -65,6 +70,7 @@ public class Function {
      */
     @JsonProperty("name")
     public String name;
+
     public Function withName(String name) {
         this.name = name;
         return this;
@@ -75,6 +81,7 @@ public class Function {
      */
     @JsonProperty("runtime")
     public String runtime;
+
     public Function withRuntime(String runtime) {
         this.runtime = runtime;
         return this;
@@ -85,6 +92,7 @@ public class Function {
      */
     @JsonProperty("schedule")
     public String schedule;
+
     public Function withSchedule(String schedule) {
         this.schedule = schedule;
         return this;
@@ -95,6 +103,7 @@ public class Function {
      */
     @JsonProperty("scheduleNext")
     public Integer scheduleNext;
+
     public Function withScheduleNext(Integer scheduleNext) {
         this.scheduleNext = scheduleNext;
         return this;
@@ -105,6 +114,7 @@ public class Function {
      */
     @JsonProperty("schedulePrevious")
     public Integer schedulePrevious;
+
     public Function withSchedulePrevious(Integer schedulePrevious) {
         this.schedulePrevious = schedulePrevious;
         return this;
@@ -115,6 +125,7 @@ public class Function {
      */
     @JsonProperty("status")
     public String status;
+
     public Function withStatus(String status) {
         this.status = status;
         return this;
@@ -125,6 +136,7 @@ public class Function {
      */
     @JsonProperty("tag")
     public String tag;
+
     public Function withTag(String tag) {
         this.tag = tag;
         return this;
@@ -135,6 +147,7 @@ public class Function {
      */
     @JsonProperty("timeout")
     public Integer timeout;
+
     public Function withTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
@@ -145,9 +158,26 @@ public class Function {
      */
     @JsonProperty("vars")
     public String vars;
+
     public Function withVars(String vars) {
         this.vars = vars;
         return this;
     }
     
+    public Function(@JsonProperty("$id") String dollarId, @JsonProperty("$permissions") java.util.Map<String, Object> dollarPermissions, @JsonProperty("dateCreated") Integer dateCreated, @JsonProperty("dateUpdated") Integer dateUpdated, @JsonProperty("events") String[] events, @JsonProperty("name") String name, @JsonProperty("runtime") String runtime, @JsonProperty("schedule") String schedule, @JsonProperty("scheduleNext") Integer scheduleNext, @JsonProperty("schedulePrevious") Integer schedulePrevious, @JsonProperty("status") String status, @JsonProperty("tag") String tag, @JsonProperty("timeout") Integer timeout, @JsonProperty("vars") String vars) {
+        this.dollarId = dollarId;
+        this.dollarPermissions = dollarPermissions;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+        this.events = events;
+        this.name = name;
+        this.runtime = runtime;
+        this.schedule = schedule;
+        this.scheduleNext = scheduleNext;
+        this.schedulePrevious = schedulePrevious;
+        this.status = status;
+        this.tag = tag;
+        this.timeout = timeout;
+        this.vars = vars;
+  }
 }

@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class Tags {
     
     public Long count;
+
     public Tags withCount(Long count) {
         this.count = count;
         return this;
@@ -16,6 +17,7 @@ public class Tags {
     
     
     public Boolean hasSynonyms;
+
     public Tags withHasSynonyms(Boolean hasSynonyms) {
         this.hasSynonyms = hasSynonyms;
         return this;
@@ -23,6 +25,7 @@ public class Tags {
     
     
     public Boolean isModeratorOnly;
+
     public Tags withIsModeratorOnly(Boolean isModeratorOnly) {
         this.isModeratorOnly = isModeratorOnly;
         return this;
@@ -30,6 +33,7 @@ public class Tags {
     
     
     public Boolean isRequired;
+
     public Tags withIsRequired(Boolean isRequired) {
         this.isRequired = isRequired;
         return this;
@@ -37,6 +41,7 @@ public class Tags {
     
     
     public Long lastActivityDate;
+
     public Tags withLastActivityDate(Long lastActivityDate) {
         this.lastActivityDate = lastActivityDate;
         return this;
@@ -44,6 +49,7 @@ public class Tags {
     
     
     public String name;
+
     public Tags withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +57,7 @@ public class Tags {
     
     
     public Object[] synonyms;
+
     public Tags withSynonyms(Object[] synonyms) {
         this.synonyms = synonyms;
         return this;
@@ -58,9 +65,11 @@ public class Tags {
     
     
     public Long userId;
+
     public Tags withUserId(Long userId) {
         this.userId = userId;
         return this;
     }
     
+    public Tags(){}
 }

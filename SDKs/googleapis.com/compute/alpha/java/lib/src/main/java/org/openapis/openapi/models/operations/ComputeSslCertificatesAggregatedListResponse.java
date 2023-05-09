@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeSslCertificatesAggregatedListResponse {
     
     public String contentType;
+
     public ComputeSslCertificatesAggregatedListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ComputeSslCertificatesAggregatedListResponse {
      */
     
     public org.openapis.openapi.models.shared.SslCertificateAggregatedList sslCertificateAggregatedList;
+
     public ComputeSslCertificatesAggregatedListResponse withSslCertificateAggregatedList(org.openapis.openapi.models.shared.SslCertificateAggregatedList sslCertificateAggregatedList) {
         this.sslCertificateAggregatedList = sslCertificateAggregatedList;
         return this;
@@ -26,6 +29,7 @@ public class ComputeSslCertificatesAggregatedListResponse {
     
     
     public Integer statusCode;
+
     public ComputeSslCertificatesAggregatedListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class ComputeSslCertificatesAggregatedListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeSslCertificatesAggregatedListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ComputeSslCertificatesAggregatedListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImageBuildVersionsResponse {
@@ -12,6 +13,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object callRateLimitExceededException;
+
     public ListImageBuildVersionsResponse withCallRateLimitExceededException(Object callRateLimitExceededException) {
         this.callRateLimitExceededException = callRateLimitExceededException;
         return this;
@@ -22,6 +24,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object clientException;
+
     public ListImageBuildVersionsResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -29,6 +32,7 @@ public class ListImageBuildVersionsResponse {
     
     
     public String contentType;
+
     public ListImageBuildVersionsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object forbiddenException;
+
     public ListImageBuildVersionsResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -49,6 +54,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object invalidPaginationTokenException;
+
     public ListImageBuildVersionsResponse withInvalidPaginationTokenException(Object invalidPaginationTokenException) {
         this.invalidPaginationTokenException = invalidPaginationTokenException;
         return this;
@@ -59,6 +65,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListImageBuildVersionsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -69,6 +76,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImageBuildVersionsResponse listImageBuildVersionsResponse;
+
     public ListImageBuildVersionsResponse withListImageBuildVersionsResponse(org.openapis.openapi.models.shared.ListImageBuildVersionsResponse listImageBuildVersionsResponse) {
         this.listImageBuildVersionsResponse = listImageBuildVersionsResponse;
         return this;
@@ -79,6 +87,7 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object serviceException;
+
     public ListImageBuildVersionsResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -86,6 +95,7 @@ public class ListImageBuildVersionsResponse {
     
     
     public Integer statusCode;
+
     public ListImageBuildVersionsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListImageBuildVersionsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImageBuildVersionsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListImageBuildVersionsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public ListImageBuildVersionsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public ListImageBuildVersionsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

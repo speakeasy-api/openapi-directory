@@ -18,9 +18,11 @@ public class BulkEditAssignedLocationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignedLocations")
     public AssignedLocation[] assignedLocations;
+
     public BulkEditAssignedLocationsResponse withAssignedLocations(AssignedLocation[] assignedLocations) {
         this.assignedLocations = assignedLocations;
         return this;
     }
     
+    public BulkEditAssignedLocationsResponse(){}
 }

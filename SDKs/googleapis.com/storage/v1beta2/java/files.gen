@@ -210,4 +210,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/ComposeRequestSourceObjects
 lib/src/main/java/org/openapis/openapi/models/shared/ComposeRequestSourceObjects.java
 lib/src/main/java/org/openapis/openapi/models/shared/ComposeRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Objects.java
+docs/sdk/README.md
+docs/bucketaccesscontrols/README.md
+docs/buckets/README.md
+docs/channels/README.md
+docs/defaultobjectaccesscontrols/README.md
+docs/objectaccesscontrols/README.md
+docs/objects/README.md
 USAGE.md

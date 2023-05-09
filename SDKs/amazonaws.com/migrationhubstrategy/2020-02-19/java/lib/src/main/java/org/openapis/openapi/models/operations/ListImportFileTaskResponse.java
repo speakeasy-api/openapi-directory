@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListImportFileTaskResponse {
@@ -12,6 +13,7 @@ public class ListImportFileTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public ListImportFileTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListImportFileTaskResponse {
     
     
     public String contentType;
+
     public ListImportFileTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListImportFileTaskResponse {
      */
     
     public Object internalServerException;
+
     public ListImportFileTaskResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListImportFileTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.ListImportFileTaskResponse listImportFileTaskResponse;
+
     public ListImportFileTaskResponse withListImportFileTaskResponse(org.openapis.openapi.models.shared.ListImportFileTaskResponse listImportFileTaskResponse) {
         this.listImportFileTaskResponse = listImportFileTaskResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListImportFileTaskResponse {
     
     
     public Integer statusCode;
+
     public ListImportFileTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListImportFileTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListImportFileTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListImportFileTaskResponse {
      */
     
     public Object throttlingException;
+
     public ListImportFileTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class ListImportFileTaskResponse {
      */
     
     public Object validationException;
+
     public ListImportFileTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListImportFileTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

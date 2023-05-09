@@ -19,6 +19,7 @@ public class TimeRangeFilterInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("EndTime")
     public OffsetDateTime endTime;
+
     public TimeRangeFilterInput withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -28,9 +29,14 @@ public class TimeRangeFilterInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("StartTime")
     public OffsetDateTime startTime;
+
     public TimeRangeFilterInput withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public TimeRangeFilterInput(@JsonProperty("EndTime") OffsetDateTime endTime, @JsonProperty("StartTime") OffsetDateTime startTime) {
+        this.endTime = endTime;
+        this.startTime = startTime;
+  }
 }

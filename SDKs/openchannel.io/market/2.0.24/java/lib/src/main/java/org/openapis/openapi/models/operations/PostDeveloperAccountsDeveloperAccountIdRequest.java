@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostDeveloperAccountsDeveloperAccountIdRequest {
@@ -12,6 +13,7 @@ public class PostDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostDeveloperAccountsDeveloperAccountIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -22,6 +24,7 @@ public class PostDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=developerAccountId")
     public String developerAccountId;
+
     public PostDeveloperAccountsDeveloperAccountIdRequest withDeveloperAccountId(String developerAccountId) {
         this.developerAccountId = developerAccountId;
         return this;
@@ -32,6 +35,7 @@ public class PostDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=developerId")
     public String developerId;
+
     public PostDeveloperAccountsDeveloperAccountIdRequest withDeveloperId(String developerId) {
         this.developerId = developerId;
         return this;
@@ -42,6 +46,7 @@ public class PostDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
     public String email;
+
     public PostDeveloperAccountsDeveloperAccountIdRequest withEmail(String email) {
         this.email = email;
         return this;
@@ -52,9 +57,14 @@ public class PostDeveloperAccountsDeveloperAccountIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public PostDeveloperAccountsDeveloperAccountIdRequest withName(String name) {
         this.name = name;
         return this;
     }
     
+    public PostDeveloperAccountsDeveloperAccountIdRequest(@JsonProperty("developerAccountId") String developerAccountId, @JsonProperty("developerId") String developerId) {
+        this.developerAccountId = developerAccountId;
+        this.developerId = developerId;
+  }
 }

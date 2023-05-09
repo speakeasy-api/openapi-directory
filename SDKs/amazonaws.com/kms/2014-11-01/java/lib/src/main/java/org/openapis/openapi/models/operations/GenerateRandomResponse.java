@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GenerateRandomResponse {
     
     public String contentType;
+
     public GenerateRandomResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GenerateRandomResponse {
      */
     
     public Object customKeyStoreInvalidStateException;
+
     public GenerateRandomResponse withCustomKeyStoreInvalidStateException(Object customKeyStoreInvalidStateException) {
         this.customKeyStoreInvalidStateException = customKeyStoreInvalidStateException;
         return this;
@@ -29,6 +32,7 @@ public class GenerateRandomResponse {
      */
     
     public Object customKeyStoreNotFoundException;
+
     public GenerateRandomResponse withCustomKeyStoreNotFoundException(Object customKeyStoreNotFoundException) {
         this.customKeyStoreNotFoundException = customKeyStoreNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class GenerateRandomResponse {
      */
     
     public Object dependencyTimeoutException;
+
     public GenerateRandomResponse withDependencyTimeoutException(Object dependencyTimeoutException) {
         this.dependencyTimeoutException = dependencyTimeoutException;
         return this;
@@ -49,6 +54,7 @@ public class GenerateRandomResponse {
      */
     
     public org.openapis.openapi.models.shared.GenerateRandomResponse generateRandomResponse;
+
     public GenerateRandomResponse withGenerateRandomResponse(org.openapis.openapi.models.shared.GenerateRandomResponse generateRandomResponse) {
         this.generateRandomResponse = generateRandomResponse;
         return this;
@@ -59,6 +65,7 @@ public class GenerateRandomResponse {
      */
     
     public Object kmsInternalException;
+
     public GenerateRandomResponse withKMSInternalException(Object kmsInternalException) {
         this.kmsInternalException = kmsInternalException;
         return this;
@@ -66,6 +73,7 @@ public class GenerateRandomResponse {
     
     
     public Integer statusCode;
+
     public GenerateRandomResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class GenerateRandomResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GenerateRandomResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class GenerateRandomResponse {
      */
     
     public Object unsupportedOperationException;
+
     public GenerateRandomResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public GenerateRandomResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

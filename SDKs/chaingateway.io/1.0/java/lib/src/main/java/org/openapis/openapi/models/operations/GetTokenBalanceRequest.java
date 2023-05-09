@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetTokenBalanceRequest {
@@ -12,6 +13,7 @@ public class GetTokenBalanceRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public GetTokenBalanceRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,9 +21,14 @@ public class GetTokenBalanceRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GetTokenBalanceRequest getTokenBalanceRequest;
+
     public GetTokenBalanceRequest withGetTokenBalanceRequest(org.openapis.openapi.models.shared.GetTokenBalanceRequest getTokenBalanceRequest) {
         this.getTokenBalanceRequest = getTokenBalanceRequest;
         return this;
     }
     
+    public GetTokenBalanceRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("getTokenBalanceRequest") org.openapis.openapi.models.shared.GetTokenBalanceRequest getTokenBalanceRequest) {
+        this.authorization = authorization;
+        this.getTokenBalanceRequest = getTokenBalanceRequest;
+  }
 }

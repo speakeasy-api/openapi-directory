@@ -58,11 +58,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionsGetResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionsGetResponse res = new org.openapis.openapi.models.operations.ComputeRegionsGetResponse(contentType, httpRes.statusCode()) {{
             region = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Regions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputeRegionsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionsListResponse() {{
+        org.openapis.openapi.models.operations.ComputeRegionsListResponse res = new org.openapis.openapi.models.operations.ComputeRegionsListResponse(contentType, httpRes.statusCode()) {{
             regionList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

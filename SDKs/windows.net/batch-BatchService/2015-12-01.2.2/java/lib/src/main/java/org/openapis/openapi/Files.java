@@ -66,11 +66,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileDeleteFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileDeleteFromComputeNodeResponse() {{
+        org.openapis.openapi.models.operations.FileDeleteFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileDeleteFromComputeNodeResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -122,11 +120,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileDeleteFromTaskResponse res = new org.openapis.openapi.models.operations.FileDeleteFromTaskResponse() {{
+        org.openapis.openapi.models.operations.FileDeleteFromTaskResponse res = new org.openapis.openapi.models.operations.FileDeleteFromTaskResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,20 +174,17 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileGetFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileGetFromComputeNodeResponse() {{
+        org.openapis.openapi.models.operations.FileGetFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileGetFromComputeNodeResponse(contentType, httpRes.statusCode()) {{
             fileGetFromComputeNode200ApplicationJSONBinaryString = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
             
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.fileGetFromComputeNode200ApplicationJSONBinaryString = out;
             }
         }
@@ -240,20 +233,17 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileGetFromTaskResponse res = new org.openapis.openapi.models.operations.FileGetFromTaskResponse() {{
+        org.openapis.openapi.models.operations.FileGetFromTaskResponse res = new org.openapis.openapi.models.operations.FileGetFromTaskResponse(contentType, httpRes.statusCode()) {{
             fileGetFromTask200ApplicationJSONBinaryString = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
             res.headers = httpRes.headers().map().keySet().stream().collect(Collectors.toMap(Function.identity(), k -> httpRes.headers().allValues(k).toArray(new String[0])));
             
             if (org.openapis.openapi.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                byte[] out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), byte[].class);
+                byte[] out = httpRes.body();
                 res.fileGetFromTask200ApplicationJSONBinaryString = out;
             }
         }
@@ -302,11 +292,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromComputeNodeResponse() {{
+        org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromComputeNodeResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -358,11 +346,9 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromTaskResponse res = new org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromTaskResponse() {{
+        org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromTaskResponse res = new org.openapis.openapi.models.operations.FileGetNodeFilePropertiesFromTaskResponse(contentType, httpRes.statusCode()) {{
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -414,12 +400,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileListFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileListFromComputeNodeResponse() {{
+        org.openapis.openapi.models.operations.FileListFromComputeNodeResponse res = new org.openapis.openapi.models.operations.FileListFromComputeNodeResponse(contentType, httpRes.statusCode()) {{
             nodeFileListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -476,12 +460,10 @@ public class Files {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FileListFromTaskResponse res = new org.openapis.openapi.models.operations.FileListFromTaskResponse() {{
+        org.openapis.openapi.models.operations.FileListFromTaskResponse res = new org.openapis.openapi.models.operations.FileListFromTaskResponse(contentType, httpRes.statusCode()) {{
             nodeFileListResult = null;
             batchError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

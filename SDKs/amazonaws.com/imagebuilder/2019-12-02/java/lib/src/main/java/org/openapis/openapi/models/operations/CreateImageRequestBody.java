@@ -10,10 +10,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateImageRequestBody {
     /**
-     *  The idempotency token used to make this request idempotent.
+     * The idempotency token used to make this request idempotent.
      */
     @JsonProperty("clientToken")
     public String clientToken;
+
     public CreateImageRequestBody withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -25,41 +26,57 @@ public class CreateImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerRecipeArn")
     public String containerRecipeArn;
+
     public CreateImageRequestBody withContainerRecipeArn(String containerRecipeArn) {
         this.containerRecipeArn = containerRecipeArn;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
+     * The Amazon Resource Name (ARN) of the distribution configuration that defines and configures the outputs of your pipeline.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distributionConfigurationArn")
     public String distributionConfigurationArn;
+
     public CreateImageRequestBody withDistributionConfigurationArn(String distributionConfigurationArn) {
         this.distributionConfigurationArn = distributionConfigurationArn;
         return this;
     }
     
     /**
-     *  Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
+     * Collects additional information about the image being created, including the operating system (OS) version and package list. This information is used to enhance the overall experience of using EC2 Image Builder. Enabled by default.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enhancedImageMetadataEnabled")
     public Boolean enhancedImageMetadataEnabled;
+
     public CreateImageRequestBody withEnhancedImageMetadataEnabled(Boolean enhancedImageMetadataEnabled) {
         this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
+     * The Amazon Resource Name (ARN) of the image recipe that defines how images are configured, tested, and assessed.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageRecipeArn")
     public String imageRecipeArn;
+
     public CreateImageRequestBody withImageRecipeArn(String imageRecipeArn) {
         this.imageRecipeArn = imageRecipeArn;
+        return this;
+    }
+    
+    /**
+     * Contains settings for Image Builder image resource and container image scans.
+     */
+    @JsonInclude(Include.NON_ABSENT)
+    @JsonProperty("imageScanningConfiguration")
+    public CreateImageRequestBodyImageScanningConfiguration imageScanningConfiguration;
+
+    public CreateImageRequestBody withImageScanningConfiguration(CreateImageRequestBodyImageScanningConfiguration imageScanningConfiguration) {
+        this.imageScanningConfiguration = imageScanningConfiguration;
         return this;
     }
     
@@ -69,30 +86,37 @@ public class CreateImageRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageTestsConfiguration")
     public CreateImageRequestBodyImageTestsConfiguration imageTestsConfiguration;
+
     public CreateImageRequestBody withImageTestsConfiguration(CreateImageRequestBodyImageTestsConfiguration imageTestsConfiguration) {
         this.imageTestsConfiguration = imageTestsConfiguration;
         return this;
     }
     
     /**
-     *  The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
+     * The Amazon Resource Name (ARN) of the infrastructure configuration that defines the environment in which your image will be built and tested.
      */
     @JsonProperty("infrastructureConfigurationArn")
     public String infrastructureConfigurationArn;
+
     public CreateImageRequestBody withInfrastructureConfigurationArn(String infrastructureConfigurationArn) {
         this.infrastructureConfigurationArn = infrastructureConfigurationArn;
         return this;
     }
     
     /**
-     *  The tags of the image.
+     * The tags of the image.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public java.util.Map<String, String> tags;
+
     public CreateImageRequestBody withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateImageRequestBody(@JsonProperty("clientToken") String clientToken, @JsonProperty("infrastructureConfigurationArn") String infrastructureConfigurationArn) {
+        this.clientToken = clientToken;
+        this.infrastructureConfigurationArn = infrastructureConfigurationArn;
+  }
 }

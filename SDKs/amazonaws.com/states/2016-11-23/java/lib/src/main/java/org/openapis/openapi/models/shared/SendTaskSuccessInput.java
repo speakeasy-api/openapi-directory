@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SendTaskSuccessInput {
     @JsonProperty("output")
     public String output;
+
     public SendTaskSuccessInput withOutput(String output) {
         this.output = output;
         return this;
@@ -16,9 +17,14 @@ public class SendTaskSuccessInput {
     
     @JsonProperty("taskToken")
     public String taskToken;
+
     public SendTaskSuccessInput withTaskToken(String taskToken) {
         this.taskToken = taskToken;
         return this;
     }
     
+    public SendTaskSuccessInput(@JsonProperty("output") String output, @JsonProperty("taskToken") String taskToken) {
+        this.output = output;
+        this.taskToken = taskToken;
+  }
 }

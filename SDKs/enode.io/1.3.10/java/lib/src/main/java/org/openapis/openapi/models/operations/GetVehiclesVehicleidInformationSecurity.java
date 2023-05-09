@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class GetVehiclesVehicleidInformationSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken;
+
     public GetVehiclesVehicleidInformationSecurity withUserAccessToken(String userAccessToken) {
         this.userAccessToken = userAccessToken;
         return this;
@@ -16,9 +17,11 @@ public class GetVehiclesVehicleidInformationSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String userAccessToken1;
+
     public GetVehiclesVehicleidInformationSecurity withUserAccessToken1(String userAccessToken1) {
         this.userAccessToken1 = userAccessToken1;
         return this;
     }
     
+    public GetVehiclesVehicleidInformationSecurity(){}
 }

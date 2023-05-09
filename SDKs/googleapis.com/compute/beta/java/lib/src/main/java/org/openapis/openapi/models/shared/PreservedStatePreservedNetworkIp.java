@@ -15,6 +15,7 @@ public class PreservedStatePreservedNetworkIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoDelete")
     public PreservedStatePreservedNetworkIpAutoDeleteEnum autoDelete;
+
     public PreservedStatePreservedNetworkIp withAutoDelete(PreservedStatePreservedNetworkIpAutoDeleteEnum autoDelete) {
         this.autoDelete = autoDelete;
         return this;
@@ -23,9 +24,11 @@ public class PreservedStatePreservedNetworkIp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public PreservedStatePreservedNetworkIpIpAddress ipAddress;
+
     public PreservedStatePreservedNetworkIp withIpAddress(PreservedStatePreservedNetworkIpIpAddress ipAddress) {
         this.ipAddress = ipAddress;
         return this;
     }
     
+    public PreservedStatePreservedNetworkIp(){}
 }

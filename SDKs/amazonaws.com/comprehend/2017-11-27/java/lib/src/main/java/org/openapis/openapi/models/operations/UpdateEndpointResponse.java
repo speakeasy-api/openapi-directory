@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateEndpointResponse {
     
     public String contentType;
+
     public UpdateEndpointResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object internalServerException;
+
     public UpdateEndpointResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateEndpointResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -36,6 +40,7 @@ public class UpdateEndpointResponse {
     
     
     public Integer statusCode;
+
     public UpdateEndpointResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateEndpointResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateEndpointResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateEndpointResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -63,6 +70,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public UpdateEndpointResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateEndpointResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object resourceUnavailableException;
+
     public UpdateEndpointResponse withResourceUnavailableException(Object resourceUnavailableException) {
         this.resourceUnavailableException = resourceUnavailableException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateEndpointResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateEndpointResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -103,9 +114,14 @@ public class UpdateEndpointResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateEndpointResponse updateEndpointResponse;
+
     public UpdateEndpointResponse withUpdateEndpointResponse(org.openapis.openapi.models.shared.UpdateEndpointResponse updateEndpointResponse) {
         this.updateEndpointResponse = updateEndpointResponse;
         return this;
     }
     
+    public UpdateEndpointResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

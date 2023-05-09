@@ -18,6 +18,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public RoleKindEnum kind;
+
     public Role withKind(RoleKindEnum kind) {
         this.kind = kind;
         return this;
@@ -29,6 +30,7 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Role withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class Role {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ns")
     public String ns;
+
     public Role withNs(String ns) {
         this.ns = ns;
         return this;
     }
     
+    public Role(){}
 }

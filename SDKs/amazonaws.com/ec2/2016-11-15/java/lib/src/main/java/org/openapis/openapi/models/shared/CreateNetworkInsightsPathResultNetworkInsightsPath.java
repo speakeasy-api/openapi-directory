@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     public OffsetDateTime createdDate;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withCreatedDate(OffsetDateTime createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String destination;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String destinationArn;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withDestinationArn(String destinationArn) {
         this.destinationArn = destinationArn;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String destinationIp;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withDestinationIp(String destinationIp) {
         this.destinationIp = destinationIp;
         return this;
@@ -40,6 +44,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public Long destinationPort;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withDestinationPort(Long destinationPort) {
         this.destinationPort = destinationPort;
         return this;
@@ -47,6 +52,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestination filterAtDestination;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withFilterAtDestination(CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtDestination filterAtDestination) {
         this.filterAtDestination = filterAtDestination;
         return this;
@@ -54,6 +60,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSource filterAtSource;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withFilterAtSource(CreateNetworkInsightsPathResultNetworkInsightsPathFilterAtSource filterAtSource) {
         this.filterAtSource = filterAtSource;
         return this;
@@ -61,6 +68,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String networkInsightsPathArn;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withNetworkInsightsPathArn(String networkInsightsPathArn) {
         this.networkInsightsPathArn = networkInsightsPathArn;
         return this;
@@ -68,6 +76,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String networkInsightsPathId;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withNetworkInsightsPathId(String networkInsightsPathId) {
         this.networkInsightsPathId = networkInsightsPathId;
         return this;
@@ -75,6 +84,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum protocol;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withProtocol(CreateNetworkInsightsPathResultNetworkInsightsPathProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -82,6 +92,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String source;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withSource(String source) {
         this.source = source;
         return this;
@@ -89,6 +100,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String sourceArn;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withSourceArn(String sourceArn) {
         this.sourceArn = sourceArn;
         return this;
@@ -96,6 +108,7 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public String sourceIp;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withSourceIp(String sourceIp) {
         this.sourceIp = sourceIp;
         return this;
@@ -103,9 +116,11 @@ public class CreateNetworkInsightsPathResultNetworkInsightsPath {
     
     
     public CreateNetworkInsightsPathResultNetworkInsightsPathTags[] tags;
+
     public CreateNetworkInsightsPathResultNetworkInsightsPath withTags(CreateNetworkInsightsPathResultNetworkInsightsPathTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateNetworkInsightsPathResultNetworkInsightsPath(){}
 }

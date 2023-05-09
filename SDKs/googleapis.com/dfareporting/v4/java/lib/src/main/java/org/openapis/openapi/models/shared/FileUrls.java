@@ -18,6 +18,7 @@ public class FileUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiUrl")
     public String apiUrl;
+
     public FileUrls withApiUrl(String apiUrl) {
         this.apiUrl = apiUrl;
         return this;
@@ -29,9 +30,11 @@ public class FileUrls {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("browserUrl")
     public String browserUrl;
+
     public FileUrls withBrowserUrl(String browserUrl) {
         this.browserUrl = browserUrl;
         return this;
     }
     
+    public FileUrls(){}
 }

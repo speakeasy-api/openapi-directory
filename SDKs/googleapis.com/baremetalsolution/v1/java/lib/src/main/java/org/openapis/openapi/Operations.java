@@ -62,11 +62,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionOperationsCancelResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionOperationsCancelResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionOperationsDeleteResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionOperationsDeleteResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,11 +150,9 @@ public class Operations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.BaremetalsolutionOperationsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsListResponse() {{
+        org.openapis.openapi.models.operations.BaremetalsolutionOperationsListResponse res = new org.openapis.openapi.models.operations.BaremetalsolutionOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ExportVectorEnrichmentJobOutputConfig {
     @JsonProperty("S3Data")
     public VectorEnrichmentJobS3Data s3Data;
+
     public ExportVectorEnrichmentJobOutputConfig withS3Data(VectorEnrichmentJobS3Data s3Data) {
         this.s3Data = s3Data;
         return this;
     }
     
+    public ExportVectorEnrichmentJobOutputConfig(@JsonProperty("S3Data") VectorEnrichmentJobS3Data s3Data) {
+        this.s3Data = s3Data;
+  }
 }

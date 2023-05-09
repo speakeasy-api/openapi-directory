@@ -12,6 +12,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAssistantReferee1")
     public Referee additionalAssistantReferee1;
+
     public BoxScore withAdditionalAssistantReferee1(Referee additionalAssistantReferee1) {
         this.additionalAssistantReferee1 = additionalAssistantReferee1;
         return this;
@@ -20,6 +21,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalAssistantReferee2")
     public Referee additionalAssistantReferee2;
+
     public BoxScore withAdditionalAssistantReferee2(Referee additionalAssistantReferee2) {
         this.additionalAssistantReferee2 = additionalAssistantReferee2;
         return this;
@@ -28,6 +30,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistantReferee1")
     public Referee assistantReferee1;
+
     public BoxScore withAssistantReferee1(Referee assistantReferee1) {
         this.assistantReferee1 = assistantReferee1;
         return this;
@@ -36,6 +39,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AssistantReferee2")
     public Referee assistantReferee2;
+
     public BoxScore withAssistantReferee2(Referee assistantReferee2) {
         this.assistantReferee2 = assistantReferee2;
         return this;
@@ -44,6 +48,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AwayTeamCoach")
     public Coach awayTeamCoach;
+
     public BoxScore withAwayTeamCoach(Coach awayTeamCoach) {
         this.awayTeamCoach = awayTeamCoach;
         return this;
@@ -52,6 +57,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Bookings")
     public Booking[] bookings;
+
     public BoxScore withBookings(Booking[] bookings) {
         this.bookings = bookings;
         return this;
@@ -60,6 +66,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FourthReferee")
     public Referee fourthReferee;
+
     public BoxScore withFourthReferee(Referee fourthReferee) {
         this.fourthReferee = fourthReferee;
         return this;
@@ -68,6 +75,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Game")
     public Game game;
+
     public BoxScore withGame(Game game) {
         this.game = game;
         return this;
@@ -76,6 +84,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Goals")
     public Goal[] goals;
+
     public BoxScore withGoals(Goal[] goals) {
         this.goals = goals;
         return this;
@@ -84,6 +93,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HomeTeamCoach")
     public Coach homeTeamCoach;
+
     public BoxScore withHomeTeamCoach(Coach homeTeamCoach) {
         this.homeTeamCoach = homeTeamCoach;
         return this;
@@ -92,6 +102,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Lineups")
     public Lineup[] lineups;
+
     public BoxScore withLineups(Lineup[] lineups) {
         this.lineups = lineups;
         return this;
@@ -100,6 +111,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MainReferee")
     public Referee mainReferee;
+
     public BoxScore withMainReferee(Referee mainReferee) {
         this.mainReferee = mainReferee;
         return this;
@@ -108,6 +120,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PenaltyShootouts")
     public PenaltyShootout[] penaltyShootouts;
+
     public BoxScore withPenaltyShootouts(PenaltyShootout[] penaltyShootouts) {
         this.penaltyShootouts = penaltyShootouts;
         return this;
@@ -116,6 +129,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlayerGames")
     public PlayerGame[] playerGames;
+
     public BoxScore withPlayerGames(PlayerGame[] playerGames) {
         this.playerGames = playerGames;
         return this;
@@ -124,6 +138,7 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TeamGames")
     public TeamGame[] teamGames;
+
     public BoxScore withTeamGames(TeamGame[] teamGames) {
         this.teamGames = teamGames;
         return this;
@@ -132,9 +147,11 @@ public class BoxScore {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VideoAssistantReferee")
     public Referee videoAssistantReferee;
+
     public BoxScore withVideoAssistantReferee(Referee videoAssistantReferee) {
         this.videoAssistantReferee = videoAssistantReferee;
         return this;
     }
     
+    public BoxScore(){}
 }

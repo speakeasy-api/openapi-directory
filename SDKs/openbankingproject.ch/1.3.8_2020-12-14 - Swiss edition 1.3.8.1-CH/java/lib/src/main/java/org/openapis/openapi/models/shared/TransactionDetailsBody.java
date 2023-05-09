@@ -15,9 +15,13 @@ public class TransactionDetailsBody {
      */
     @JsonProperty("transactionDetails")
     public Transactions transactionDetails;
+
     public TransactionDetailsBody withTransactionDetails(Transactions transactionDetails) {
         this.transactionDetails = transactionDetails;
         return this;
     }
     
+    public TransactionDetailsBody(@JsonProperty("transactionDetails") Transactions transactionDetails) {
+        this.transactionDetails = transactionDetails;
+  }
 }

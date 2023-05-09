@@ -15,6 +15,7 @@ public class EntityDisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public EntityDisplayData withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -23,6 +24,7 @@ public class EntityDisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public EntityDisplayData withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -31,6 +33,7 @@ public class EntityDisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentifiedUserName")
     public String identifiedUserName;
+
     public EntityDisplayData withIdentifiedUserName(String identifiedUserName) {
         this.identifiedUserName = identifiedUserName;
         return this;
@@ -39,6 +42,7 @@ public class EntityDisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public EntityDisplayData withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -47,9 +51,11 @@ public class EntityDisplayData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserName")
     public String userName;
+
     public EntityDisplayData withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public EntityDisplayData(){}
 }

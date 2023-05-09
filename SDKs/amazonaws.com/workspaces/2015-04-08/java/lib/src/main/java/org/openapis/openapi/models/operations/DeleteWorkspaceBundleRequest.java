@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteWorkspaceBundleRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.DeleteWorkspaceBundleRequest deleteWorkspaceBundleRequest;
+
     public DeleteWorkspaceBundleRequest withDeleteWorkspaceBundleRequest(org.openapis.openapi.models.shared.DeleteWorkspaceBundleRequest deleteWorkspaceBundleRequest) {
         this.deleteWorkspaceBundleRequest = deleteWorkspaceBundleRequest;
         return this;
@@ -16,6 +18,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public DeleteWorkspaceBundleRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public DeleteWorkspaceBundleRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public DeleteWorkspaceBundleRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public DeleteWorkspaceBundleRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public DeleteWorkspaceBundleRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public DeleteWorkspaceBundleRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public DeleteWorkspaceBundleRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class DeleteWorkspaceBundleRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public DeleteWorkspaceBundleXAmzTargetEnum xAmzTarget;
+
     public DeleteWorkspaceBundleRequest withXAmzTarget(DeleteWorkspaceBundleXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public DeleteWorkspaceBundleRequest(@JsonProperty("DeleteWorkspaceBundleRequest") org.openapis.openapi.models.shared.DeleteWorkspaceBundleRequest deleteWorkspaceBundleRequest, @JsonProperty("X-Amz-Target") DeleteWorkspaceBundleXAmzTargetEnum xAmzTarget) {
+        this.deleteWorkspaceBundleRequest = deleteWorkspaceBundleRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

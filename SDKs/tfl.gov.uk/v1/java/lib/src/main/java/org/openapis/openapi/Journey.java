@@ -56,14 +56,12 @@ public class Journey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JourneyJourneyResultsResponse res = new org.openapis.openapi.models.operations.JourneyJourneyResultsResponse() {{
+        org.openapis.openapi.models.operations.JourneyJourneyResultsResponse res = new org.openapis.openapi.models.operations.JourneyJourneyResultsResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesJourneyPlannerItineraryResult = null;
             tflApiPresentationEntitiesJourneyPlannerItineraryResult = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -109,14 +107,12 @@ public class Journey {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.JourneyMetaResponse res = new org.openapis.openapi.models.operations.JourneyMetaResponse() {{
+        org.openapis.openapi.models.operations.JourneyMetaResponse res = new org.openapis.openapi.models.operations.JourneyMetaResponse(contentType, httpRes.statusCode()) {{
             tflApiPresentationEntitiesModes = null;
             tflApiPresentationEntitiesModes = null;
             body = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

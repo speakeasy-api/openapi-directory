@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeTagsResult {
     
     public String nextToken;
+
     public DescribeTagsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,11 @@ public class DescribeTagsResult {
     
     
     public DescribeTagsResultTags[] tags;
+
     public DescribeTagsResult withTags(DescribeTagsResultTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public DescribeTagsResult(){}
 }

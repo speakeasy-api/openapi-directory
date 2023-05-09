@@ -18,6 +18,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public Error withField(String field) {
         this.field = field;
         return this;
@@ -29,6 +30,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Error withMessage(String message) {
         this.message = message;
         return this;
@@ -40,6 +42,7 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("options")
     public ErrorOptions[] options;
+
     public Error withOptions(ErrorOptions[] options) {
         this.options = options;
         return this;
@@ -51,9 +54,11 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public Error withPath(String path) {
         this.path = path;
         return this;
     }
     
+    public Error(){}
 }

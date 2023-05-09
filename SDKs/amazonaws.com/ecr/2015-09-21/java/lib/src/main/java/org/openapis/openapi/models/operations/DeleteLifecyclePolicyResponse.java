@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteLifecyclePolicyResponse {
     
     public String contentType;
+
     public DeleteLifecyclePolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteLifecyclePolicyResponse deleteLifecyclePolicyResponse;
+
     public DeleteLifecyclePolicyResponse withDeleteLifecyclePolicyResponse(org.openapis.openapi.models.shared.DeleteLifecyclePolicyResponse deleteLifecyclePolicyResponse) {
         this.deleteLifecyclePolicyResponse = deleteLifecyclePolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteLifecyclePolicyResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object lifecyclePolicyNotFoundException;
+
     public DeleteLifecyclePolicyResponse withLifecyclePolicyNotFoundException(Object lifecyclePolicyNotFoundException) {
         this.lifecyclePolicyNotFoundException = lifecyclePolicyNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object repositoryNotFoundException;
+
     public DeleteLifecyclePolicyResponse withRepositoryNotFoundException(Object repositoryNotFoundException) {
         this.repositoryNotFoundException = repositoryNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteLifecyclePolicyResponse {
      */
     
     public Object serverException;
+
     public DeleteLifecyclePolicyResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public Integer statusCode;
+
     public DeleteLifecyclePolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DeleteLifecyclePolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteLifecyclePolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteLifecyclePolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

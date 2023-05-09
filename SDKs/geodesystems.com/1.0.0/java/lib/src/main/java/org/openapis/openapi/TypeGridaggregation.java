@@ -57,10 +57,8 @@ public class TypeGridaggregation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchGridaggregationResponse res = new org.openapis.openapi.models.operations.SearchGridaggregationResponse() {{
+        org.openapis.openapi.models.operations.SearchGridaggregationResponse res = new org.openapis.openapi.models.operations.SearchGridaggregationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

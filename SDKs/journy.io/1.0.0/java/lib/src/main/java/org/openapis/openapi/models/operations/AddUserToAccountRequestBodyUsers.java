@@ -12,9 +12,13 @@ public class AddUserToAccountRequestBodyUsers {
      */
     @JsonProperty("identification")
     public AddUserToAccountRequestBodyUsersIdentification identification;
+
     public AddUserToAccountRequestBodyUsers withIdentification(AddUserToAccountRequestBodyUsersIdentification identification) {
         this.identification = identification;
         return this;
     }
     
+    public AddUserToAccountRequestBodyUsers(@JsonProperty("identification") AddUserToAccountRequestBodyUsersIdentification identification) {
+        this.identification = identification;
+  }
 }

@@ -16,6 +16,7 @@ public class GetAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountCode")
     public String accountCode;
+
     public GetAccountHolderRequest withAccountCode(String accountCode) {
         this.accountCode = accountCode;
         return this;
@@ -28,6 +29,7 @@ public class GetAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountHolderCode")
     public String accountHolderCode;
+
     public GetAccountHolderRequest withAccountHolderCode(String accountHolderCode) {
         this.accountHolderCode = accountHolderCode;
         return this;
@@ -39,9 +41,11 @@ public class GetAccountHolderRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("showDetails")
     public Boolean showDetails;
+
     public GetAccountHolderRequest withShowDetails(Boolean showDetails) {
         this.showDetails = showDetails;
         return this;
     }
     
+    public GetAccountHolderRequest(){}
 }

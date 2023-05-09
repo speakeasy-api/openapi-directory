@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RenewDomainResponse {
     
     public String contentType;
+
     public RenewDomainResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RenewDomainResponse {
      */
     
     public Object duplicateRequest;
+
     public RenewDomainResponse withDuplicateRequest(Object duplicateRequest) {
         this.duplicateRequest = duplicateRequest;
         return this;
@@ -29,6 +32,7 @@ public class RenewDomainResponse {
      */
     
     public Object invalidInput;
+
     public RenewDomainResponse withInvalidInput(Object invalidInput) {
         this.invalidInput = invalidInput;
         return this;
@@ -39,6 +43,7 @@ public class RenewDomainResponse {
      */
     
     public Object operationLimitExceeded;
+
     public RenewDomainResponse withOperationLimitExceeded(Object operationLimitExceeded) {
         this.operationLimitExceeded = operationLimitExceeded;
         return this;
@@ -49,6 +54,7 @@ public class RenewDomainResponse {
      */
     
     public org.openapis.openapi.models.shared.RenewDomainResponse renewDomainResponse;
+
     public RenewDomainResponse withRenewDomainResponse(org.openapis.openapi.models.shared.RenewDomainResponse renewDomainResponse) {
         this.renewDomainResponse = renewDomainResponse;
         return this;
@@ -56,6 +62,7 @@ public class RenewDomainResponse {
     
     
     public Integer statusCode;
+
     public RenewDomainResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RenewDomainResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RenewDomainResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class RenewDomainResponse {
      */
     
     public Object tldRulesViolation;
+
     public RenewDomainResponse withTLDRulesViolation(Object tldRulesViolation) {
         this.tldRulesViolation = tldRulesViolation;
         return this;
@@ -83,9 +92,14 @@ public class RenewDomainResponse {
      */
     
     public Object unsupportedTLD;
+
     public RenewDomainResponse withUnsupportedTLD(Object unsupportedTLD) {
         this.unsupportedTLD = unsupportedTLD;
         return this;
     }
     
+    public RenewDomainResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

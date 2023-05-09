@@ -15,6 +15,7 @@ public class GetSavingsPlansUtilizationDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public GetSavingsPlansUtilizationDetailsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,6 +23,7 @@ public class GetSavingsPlansUtilizationDetailsResponse {
     
     @JsonProperty("SavingsPlansUtilizationDetails")
     public SavingsPlansUtilizationDetail[] savingsPlansUtilizationDetails;
+
     public GetSavingsPlansUtilizationDetailsResponse withSavingsPlansUtilizationDetails(SavingsPlansUtilizationDetail[] savingsPlansUtilizationDetails) {
         this.savingsPlansUtilizationDetails = savingsPlansUtilizationDetails;
         return this;
@@ -32,6 +34,7 @@ public class GetSavingsPlansUtilizationDetailsResponse {
      */
     @JsonProperty("TimePeriod")
     public DateInterval timePeriod;
+
     public GetSavingsPlansUtilizationDetailsResponse withTimePeriod(DateInterval timePeriod) {
         this.timePeriod = timePeriod;
         return this;
@@ -40,9 +43,14 @@ public class GetSavingsPlansUtilizationDetailsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Total")
     public SavingsPlansUtilizationAggregates total;
+
     public GetSavingsPlansUtilizationDetailsResponse withTotal(SavingsPlansUtilizationAggregates total) {
         this.total = total;
         return this;
     }
     
+    public GetSavingsPlansUtilizationDetailsResponse(@JsonProperty("SavingsPlansUtilizationDetails") SavingsPlansUtilizationDetail[] savingsPlansUtilizationDetails, @JsonProperty("TimePeriod") DateInterval timePeriod) {
+        this.savingsPlansUtilizationDetails = savingsPlansUtilizationDetails;
+        this.timePeriod = timePeriod;
+  }
 }

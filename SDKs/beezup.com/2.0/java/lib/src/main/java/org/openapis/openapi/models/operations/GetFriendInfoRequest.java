@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFriendInfoRequest {
@@ -16,6 +17,7 @@ public class GetFriendInfoRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=If-None-Match")
     public String ifNoneMatch;
+
     public GetFriendInfoRequest withIfNoneMatch(String ifNoneMatch) {
         this.ifNoneMatch = ifNoneMatch;
         return this;
@@ -26,9 +28,13 @@ public class GetFriendInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=userId")
     public String userId;
+
     public GetFriendInfoRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public GetFriendInfoRequest(@JsonProperty("userId") String userId) {
+        this.userId = userId;
+  }
 }

@@ -12,6 +12,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calculationUnitId")
     public Long calculationUnitId;
+
     public ChargeDTO withCalculationUnitId(Long calculationUnitId) {
         this.calculationUnitId = calculationUnitId;
         return this;
@@ -20,6 +21,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currencyId")
     public Long currencyId;
+
     public ChargeDTO withCurrencyId(Long currencyId) {
         this.currencyId = currencyId;
         return this;
@@ -28,6 +30,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public ChargeDTO withDescription(String description) {
         this.description = description;
         return this;
@@ -36,6 +39,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ChargeDTO withId(Long id) {
         this.id = id;
         return this;
@@ -44,6 +48,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreMinimumCharge")
     public Boolean ignoreMinimumCharge;
+
     public ChargeDTO withIgnoreMinimumCharge(Boolean ignoreMinimumCharge) {
         this.ignoreMinimumCharge = ignoreMinimumCharge;
         return this;
@@ -52,6 +57,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("invoiceId")
     public String invoiceId;
+
     public ChargeDTO withInvoiceId(String invoiceId) {
         this.invoiceId = invoiceId;
         return this;
@@ -60,6 +66,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobTypeId")
     public Long jobTypeId;
+
     public ChargeDTO withJobTypeId(Long jobTypeId) {
         this.jobTypeId = jobTypeId;
         return this;
@@ -68,6 +75,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombination")
     public ChargeLanguageCombinationDTO languageCombination;
+
     public ChargeDTO withLanguageCombination(ChargeLanguageCombinationDTO languageCombination) {
         this.languageCombination = languageCombination;
         return this;
@@ -76,6 +84,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("languageCombinationIdNumber")
     public String languageCombinationIdNumber;
+
     public ChargeDTO withLanguageCombinationIdNumber(String languageCombinationIdNumber) {
         this.languageCombinationIdNumber = languageCombinationIdNumber;
         return this;
@@ -84,6 +93,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimumCharge")
     public Double minimumCharge;
+
     public ChargeDTO withMinimumCharge(Double minimumCharge) {
         this.minimumCharge = minimumCharge;
         return this;
@@ -92,6 +102,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rateOrigin")
     public ChargeDTORateOriginEnum rateOrigin;
+
     public ChargeDTO withRateOrigin(ChargeDTORateOriginEnum rateOrigin) {
         this.rateOrigin = rateOrigin;
         return this;
@@ -100,6 +111,7 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Double total;
+
     public ChargeDTO withTotal(Double total) {
         this.total = total;
         return this;
@@ -108,9 +120,11 @@ public class ChargeDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public ChargeDTOTypeEnum type;
+
     public ChargeDTO withType(ChargeDTOTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public ChargeDTO(){}
 }

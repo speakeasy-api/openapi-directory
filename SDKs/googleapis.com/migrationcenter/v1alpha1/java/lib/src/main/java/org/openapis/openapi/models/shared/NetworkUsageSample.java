@@ -18,6 +18,7 @@ public class NetworkUsageSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageEgressBps")
     public Float averageEgressBps;
+
     public NetworkUsageSample withAverageEgressBps(Float averageEgressBps) {
         this.averageEgressBps = averageEgressBps;
         return this;
@@ -29,9 +30,11 @@ public class NetworkUsageSample {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("averageIngressBps")
     public Float averageIngressBps;
+
     public NetworkUsageSample withAverageIngressBps(Float averageIngressBps) {
         this.averageIngressBps = averageIngressBps;
         return this;
     }
     
+    public NetworkUsageSample(){}
 }

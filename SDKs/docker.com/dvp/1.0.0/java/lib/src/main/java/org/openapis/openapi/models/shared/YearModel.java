@@ -12,9 +12,11 @@ public class YearModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public Long year;
+
     public YearModel withYear(Long year) {
         this.year = year;
         return this;
     }
     
+    public YearModel(){}
 }

@@ -15,6 +15,7 @@ public class FunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("implementedBy")
     public DataConnector implementedBy;
+
     public FunctionResponse withImplementedBy(DataConnector implementedBy) {
         this.implementedBy = implementedBy;
         return this;
@@ -23,6 +24,7 @@ public class FunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isInherited")
     public Boolean isInherited;
+
     public FunctionResponse withIsInherited(Boolean isInherited) {
         this.isInherited = isInherited;
         return this;
@@ -31,6 +33,7 @@ public class FunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requiredProperties")
     public String[] requiredProperties;
+
     public FunctionResponse withRequiredProperties(String[] requiredProperties) {
         this.requiredProperties = requiredProperties;
         return this;
@@ -39,9 +42,11 @@ public class FunctionResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scope")
     public ScopeEnum scope;
+
     public FunctionResponse withScope(ScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public FunctionResponse(){}
 }

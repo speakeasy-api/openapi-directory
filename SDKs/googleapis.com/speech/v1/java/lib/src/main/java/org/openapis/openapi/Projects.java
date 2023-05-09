@@ -46,7 +46,7 @@ public class Projects {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCustomClassRequest", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createCustomClassRequestInput", "json");
         req.setBody(serializedRequestBody);
         
         java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateRequest.class, request, null);
@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesCreateResponse(contentType, httpRes.statusCode()) {{
             customClass = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsCustomClassesListResponse(contentType, httpRes.statusCode()) {{
             listCustomClassesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -140,7 +136,7 @@ public class Projects {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createPhraseSetRequest", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "createPhraseSetRequestInput", "json");
         req.setBody(serializedRequestBody);
         
         java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateRequest.class, request, null);
@@ -156,11 +152,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsCreateResponse(contentType, httpRes.statusCode()) {{
             phraseSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -202,11 +196,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -248,11 +240,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsGetResponse(contentType, httpRes.statusCode()) {{
             phraseSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -294,11 +284,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsListResponse(contentType, httpRes.statusCode()) {{
             listPhraseSetResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -326,7 +314,7 @@ public class Projects {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("PATCH");
         req.setURL(url);
-        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "phraseSet", "json");
+        SerializedBody serializedRequestBody = org.openapis.openapi.utils.Utils.serializeRequestBody(request, "phraseSetInput", "json");
         req.setBody(serializedRequestBody);
         
         java.util.List<NameValuePair> queryParams = org.openapis.openapi.utils.Utils.getQueryParams(org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchRequest.class, request, null);
@@ -342,11 +330,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse() {{
+        org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse res = new org.openapis.openapi.models.operations.SpeechProjectsLocationsPhraseSetsPatchResponse(contentType, httpRes.statusCode()) {{
             phraseSet = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

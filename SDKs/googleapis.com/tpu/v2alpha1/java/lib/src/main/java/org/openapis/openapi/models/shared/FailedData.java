@@ -18,9 +18,11 @@ public class FailedData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Status error;
+
     public FailedData withError(Status error) {
         this.error = error;
         return this;
     }
     
+    public FailedData(){}
 }

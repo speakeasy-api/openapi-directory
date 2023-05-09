@@ -15,6 +15,7 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allow_downstream_configuration")
     public Boolean allowDownstreamConfiguration;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody withAllowDownstreamConfiguration(Boolean allowDownstreamConfiguration) {
         this.allowDownstreamConfiguration = allowDownstreamConfiguration;
         return this;
@@ -26,9 +27,11 @@ public class EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enforcement")
     public String enforcement;
+
     public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody withEnforcement(String enforcement) {
         this.enforcement = enforcement;
         return this;
     }
     
+    public EnterpriseAdminUpdatePreReceiveHookEnforcementForOrgRequestBody(){}
 }

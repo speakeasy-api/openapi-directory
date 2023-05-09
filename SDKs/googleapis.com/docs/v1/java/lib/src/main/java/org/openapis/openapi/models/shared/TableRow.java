@@ -18,6 +18,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endIndex")
     public Integer endIndex;
+
     public TableRow withEndIndex(Integer endIndex) {
         this.endIndex = endIndex;
         return this;
@@ -29,6 +30,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public TableRow withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
@@ -40,6 +42,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedDeletionIds")
     public String[] suggestedDeletionIds;
+
     public TableRow withSuggestedDeletionIds(String[] suggestedDeletionIds) {
         this.suggestedDeletionIds = suggestedDeletionIds;
         return this;
@@ -51,6 +54,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedInsertionIds")
     public String[] suggestedInsertionIds;
+
     public TableRow withSuggestedInsertionIds(String[] suggestedInsertionIds) {
         this.suggestedInsertionIds = suggestedInsertionIds;
         return this;
@@ -62,6 +66,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedTableRowStyleChanges")
     public java.util.Map<String, SuggestedTableRowStyle> suggestedTableRowStyleChanges;
+
     public TableRow withSuggestedTableRowStyleChanges(java.util.Map<String, SuggestedTableRowStyle> suggestedTableRowStyleChanges) {
         this.suggestedTableRowStyleChanges = suggestedTableRowStyleChanges;
         return this;
@@ -73,6 +78,7 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableCells")
     public TableCell[] tableCells;
+
     public TableRow withTableCells(TableCell[] tableCells) {
         this.tableCells = tableCells;
         return this;
@@ -84,9 +90,11 @@ public class TableRow {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableRowStyle")
     public TableRowStyle tableRowStyle;
+
     public TableRow withTableRowStyle(TableRowStyle tableRowStyle) {
         this.tableRowStyle = tableRowStyle;
         return this;
     }
     
+    public TableRow(){}
 }

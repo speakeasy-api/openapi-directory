@@ -18,6 +18,7 @@ public class ManagedCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dnsAuthorizations")
     public String[] dnsAuthorizations;
+
     public ManagedCertificateInput withDnsAuthorizations(String[] dnsAuthorizations) {
         this.dnsAuthorizations = dnsAuthorizations;
         return this;
@@ -29,6 +30,7 @@ public class ManagedCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domains")
     public String[] domains;
+
     public ManagedCertificateInput withDomains(String[] domains) {
         this.domains = domains;
         return this;
@@ -40,9 +42,11 @@ public class ManagedCertificateInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("issuanceConfig")
     public String issuanceConfig;
+
     public ManagedCertificateInput withIssuanceConfig(String issuanceConfig) {
         this.issuanceConfig = issuanceConfig;
         return this;
     }
     
+    public ManagedCertificateInput(){}
 }

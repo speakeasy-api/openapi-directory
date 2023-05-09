@@ -15,9 +15,11 @@ public class OpsItemNotification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Arn")
     public String arn;
+
     public OpsItemNotification withArn(String arn) {
         this.arn = arn;
         return this;
     }
     
+    public OpsItemNotification(){}
 }

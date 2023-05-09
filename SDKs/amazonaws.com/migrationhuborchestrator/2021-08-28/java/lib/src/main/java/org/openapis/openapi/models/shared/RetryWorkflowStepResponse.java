@@ -15,6 +15,7 @@ public class RetryWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public RetryWorkflowStepResponse withId(String id) {
         this.id = id;
         return this;
@@ -23,6 +24,7 @@ public class RetryWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public StepStatusEnum status;
+
     public RetryWorkflowStepResponse withStatus(StepStatusEnum status) {
         this.status = status;
         return this;
@@ -31,6 +33,7 @@ public class RetryWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stepGroupId")
     public String stepGroupId;
+
     public RetryWorkflowStepResponse withStepGroupId(String stepGroupId) {
         this.stepGroupId = stepGroupId;
         return this;
@@ -39,9 +42,11 @@ public class RetryWorkflowStepResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("workflowId")
     public String workflowId;
+
     public RetryWorkflowStepResponse withWorkflowId(String workflowId) {
         this.workflowId = workflowId;
         return this;
     }
     
+    public RetryWorkflowStepResponse(){}
 }

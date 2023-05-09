@@ -12,6 +12,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=archived")
     public Boolean archived;
+
     public GetV2CadencesJsonRequest withArchived(Boolean archived) {
         this.archived = archived;
         return this;
@@ -22,6 +23,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=group_ids")
     public String groupIds;
+
     public GetV2CadencesJsonRequest withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -32,6 +34,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=ids")
     public Long[] ids;
+
     public GetV2CadencesJsonRequest withIds(Long[] ids) {
         this.ids = ids;
         return this;
@@ -42,6 +45,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=include_paging_counts")
     public Boolean includePagingCounts;
+
     public GetV2CadencesJsonRequest withIncludePagingCounts(Boolean includePagingCounts) {
         this.includePagingCounts = includePagingCounts;
         return this;
@@ -52,6 +56,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit_paging_counts")
     public Boolean limitPagingCounts;
+
     public GetV2CadencesJsonRequest withLimitPagingCounts(Boolean limitPagingCounts) {
         this.limitPagingCounts = limitPagingCounts;
         return this;
@@ -62,6 +67,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=name")
     public String[] name;
+
     public GetV2CadencesJsonRequest withName(String[] name) {
         this.name = name;
         return this;
@@ -72,6 +78,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=owned_by_guid")
     public String[] ownedByGuid;
+
     public GetV2CadencesJsonRequest withOwnedByGuid(String[] ownedByGuid) {
         this.ownedByGuid = ownedByGuid;
         return this;
@@ -82,6 +89,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetV2CadencesJsonRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -92,6 +100,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=people_addable")
     public Boolean peopleAddable;
+
     public GetV2CadencesJsonRequest withPeopleAddable(Boolean peopleAddable) {
         this.peopleAddable = peopleAddable;
         return this;
@@ -102,6 +111,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=per_page")
     public Long perPage;
+
     public GetV2CadencesJsonRequest withPerPage(Long perPage) {
         this.perPage = perPage;
         return this;
@@ -112,6 +122,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=shared")
     public Boolean shared;
+
     public GetV2CadencesJsonRequest withShared(Boolean shared) {
         this.shared = shared;
         return this;
@@ -122,6 +133,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_by")
     public String sortBy;
+
     public GetV2CadencesJsonRequest withSortBy(String sortBy) {
         this.sortBy = sortBy;
         return this;
@@ -132,6 +144,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_direction")
     public String sortDirection;
+
     public GetV2CadencesJsonRequest withSortDirection(String sortDirection) {
         this.sortDirection = sortDirection;
         return this;
@@ -142,6 +155,7 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=team_cadence")
     public Boolean teamCadence;
+
     public GetV2CadencesJsonRequest withTeamCadence(Boolean teamCadence) {
         this.teamCadence = teamCadence;
         return this;
@@ -156,9 +170,11 @@ public class GetV2CadencesJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=updated_at")
     public String[] updatedAt;
+
     public GetV2CadencesJsonRequest withUpdatedAt(String[] updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetV2CadencesJsonRequest(){}
 }

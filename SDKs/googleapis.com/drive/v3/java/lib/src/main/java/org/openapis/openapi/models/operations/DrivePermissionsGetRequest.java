@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DrivePermissionsGetRequest {
@@ -12,6 +13,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DrivePermissionsGetRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -22,6 +24,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DrivePermissionsGetRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -32,6 +35,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=fileId")
     public String fileId;
+
     public DrivePermissionsGetRequest withFileId(String fileId) {
         this.fileId = fileId;
         return this;
@@ -42,6 +46,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DrivePermissionsGetRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DrivePermissionsGetRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -62,6 +68,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=permissionId")
     public String permissionId;
+
     public DrivePermissionsGetRequest withPermissionId(String permissionId) {
         this.permissionId = permissionId;
         return this;
@@ -72,6 +79,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DrivePermissionsGetRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -82,6 +90,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DrivePermissionsGetRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -92,6 +101,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsAllDrives")
     public Boolean supportsAllDrives;
+
     public DrivePermissionsGetRequest withSupportsAllDrives(Boolean supportsAllDrives) {
         this.supportsAllDrives = supportsAllDrives;
         return this;
@@ -102,6 +112,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=supportsTeamDrives")
     public Boolean supportsTeamDrives;
+
     public DrivePermissionsGetRequest withSupportsTeamDrives(Boolean supportsTeamDrives) {
         this.supportsTeamDrives = supportsTeamDrives;
         return this;
@@ -112,6 +123,7 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=useDomainAdminAccess")
     public Boolean useDomainAdminAccess;
+
     public DrivePermissionsGetRequest withUseDomainAdminAccess(Boolean useDomainAdminAccess) {
         this.useDomainAdminAccess = useDomainAdminAccess;
         return this;
@@ -122,9 +134,14 @@ public class DrivePermissionsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public DrivePermissionsGetRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public DrivePermissionsGetRequest(@JsonProperty("fileId") String fileId, @JsonProperty("permissionId") String permissionId) {
+        this.fileId = fileId;
+        this.permissionId = permissionId;
+  }
 }

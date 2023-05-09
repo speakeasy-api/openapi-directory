@@ -15,6 +15,7 @@ public class CreditCardInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("creditCardInfo")
     public CreditCardInfoWithCardType creditCardInfo;
+
     public CreditCardInfoResponse withCreditCardInfo(CreditCardInfoWithCardType creditCardInfo) {
         this.creditCardInfo = creditCardInfo;
         return this;
@@ -25,6 +26,7 @@ public class CreditCardInfoResponse {
      */
     @JsonProperty("currentPaymentMethod")
     public PaymentMethodEnum currentPaymentMethod;
+
     public CreditCardInfoResponse withCurrentPaymentMethod(PaymentMethodEnum currentPaymentMethod) {
         this.currentPaymentMethod = currentPaymentMethod;
         return this;
@@ -33,6 +35,7 @@ public class CreditCardInfoResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("info")
     public BeezUPCommonInfoSummaries info;
+
     public CreditCardInfoResponse withInfo(BeezUPCommonInfoSummaries info) {
         this.info = info;
         return this;
@@ -43,9 +46,14 @@ public class CreditCardInfoResponse {
      */
     @JsonProperty("links")
     public CreditCardInfoResponseLinks links;
+
     public CreditCardInfoResponse withLinks(CreditCardInfoResponseLinks links) {
         this.links = links;
         return this;
     }
     
+    public CreditCardInfoResponse(@JsonProperty("currentPaymentMethod") PaymentMethodEnum currentPaymentMethod, @JsonProperty("links") CreditCardInfoResponseLinks links) {
+        this.currentPaymentMethod = currentPaymentMethod;
+        this.links = links;
+  }
 }

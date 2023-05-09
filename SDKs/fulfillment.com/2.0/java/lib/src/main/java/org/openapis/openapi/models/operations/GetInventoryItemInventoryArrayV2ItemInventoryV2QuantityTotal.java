@@ -15,9 +15,11 @@ public class GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("availableToPromise")
     public Long availableToPromise;
+
     public GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal withAvailableToPromise(Long availableToPromise) {
         this.availableToPromise = availableToPromise;
         return this;
     }
     
+    public GetInventoryItemInventoryArrayV2ItemInventoryV2QuantityTotal(){}
 }

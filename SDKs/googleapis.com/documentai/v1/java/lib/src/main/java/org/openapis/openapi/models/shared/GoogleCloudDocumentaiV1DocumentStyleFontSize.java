@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentStyleFontSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Float size;
+
     public GoogleCloudDocumentaiV1DocumentStyleFontSize withSize(Float size) {
         this.size = size;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDocumentaiV1DocumentStyleFontSize {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unit")
     public String unit;
+
     public GoogleCloudDocumentaiV1DocumentStyleFontSize withUnit(String unit) {
         this.unit = unit;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentStyleFontSize(){}
 }

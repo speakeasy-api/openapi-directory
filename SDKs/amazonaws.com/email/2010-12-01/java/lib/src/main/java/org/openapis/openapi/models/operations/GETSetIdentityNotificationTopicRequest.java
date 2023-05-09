@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityNotificationTopicRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetIdentityNotificationTopicActionEnum action;
+
     public GETSetIdentityNotificationTopicRequest withAction(GETSetIdentityNotificationTopicActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetIdentityNotificationTopicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETSetIdentityNotificationTopicRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -29,6 +32,7 @@ public class GETSetIdentityNotificationTopicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NotificationType")
     public GETSetIdentityNotificationTopicNotificationTypeEnum notificationType;
+
     public GETSetIdentityNotificationTopicRequest withNotificationType(GETSetIdentityNotificationTopicNotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -39,6 +43,7 @@ public class GETSetIdentityNotificationTopicRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SnsTopic")
     public String snsTopic;
+
     public GETSetIdentityNotificationTopicRequest withSnsTopic(String snsTopic) {
         this.snsTopic = snsTopic;
         return this;
@@ -46,6 +51,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetIdentityNotificationTopicVersionEnum version;
+
     public GETSetIdentityNotificationTopicRequest withVersion(GETSetIdentityNotificationTopicVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetIdentityNotificationTopicRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetIdentityNotificationTopicRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetIdentityNotificationTopicRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetIdentityNotificationTopicRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetIdentityNotificationTopicRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetIdentityNotificationTopicRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,16 @@ public class GETSetIdentityNotificationTopicRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetIdentityNotificationTopicRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetIdentityNotificationTopicRequest(@JsonProperty("Action") GETSetIdentityNotificationTopicActionEnum action, @JsonProperty("Identity") String identity, @JsonProperty("NotificationType") GETSetIdentityNotificationTopicNotificationTypeEnum notificationType, @JsonProperty("Version") GETSetIdentityNotificationTopicVersionEnum version) {
+        this.action = action;
+        this.identity = identity;
+        this.notificationType = notificationType;
+        this.version = version;
+  }
 }

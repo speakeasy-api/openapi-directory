@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelTimerDecisionAttributes {
     @JsonProperty("timerId")
     public String timerId;
+
     public CancelTimerDecisionAttributes withTimerId(String timerId) {
         this.timerId = timerId;
         return this;
     }
     
+    public CancelTimerDecisionAttributes(@JsonProperty("timerId") String timerId) {
+        this.timerId = timerId;
+  }
 }

@@ -15,6 +15,7 @@ public class ListTerminologiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListTerminologiesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListTerminologiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyPropertiesList")
     public TerminologyProperties[] terminologyPropertiesList;
+
     public ListTerminologiesResponse withTerminologyPropertiesList(TerminologyProperties[] terminologyPropertiesList) {
         this.terminologyPropertiesList = terminologyPropertiesList;
         return this;
     }
     
+    public ListTerminologiesResponse(){}
 }

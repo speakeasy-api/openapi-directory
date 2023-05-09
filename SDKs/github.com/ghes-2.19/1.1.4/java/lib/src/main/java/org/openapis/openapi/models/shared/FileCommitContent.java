@@ -12,6 +12,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public FileCommitContentLinks links;
+
     public FileCommitContent withLinks(FileCommitContentLinks links) {
         this.links = links;
         return this;
@@ -20,6 +21,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("download_url")
     public String downloadUrl;
+
     public FileCommitContent withDownloadUrl(String downloadUrl) {
         this.downloadUrl = downloadUrl;
         return this;
@@ -28,6 +30,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("git_url")
     public String gitUrl;
+
     public FileCommitContent withGitUrl(String gitUrl) {
         this.gitUrl = gitUrl;
         return this;
@@ -36,6 +39,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_url")
     public String htmlUrl;
+
     public FileCommitContent withHtmlUrl(String htmlUrl) {
         this.htmlUrl = htmlUrl;
         return this;
@@ -44,6 +48,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public FileCommitContent withName(String name) {
         this.name = name;
         return this;
@@ -52,6 +57,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public String path;
+
     public FileCommitContent withPath(String path) {
         this.path = path;
         return this;
@@ -60,6 +66,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sha")
     public String sha;
+
     public FileCommitContent withSha(String sha) {
         this.sha = sha;
         return this;
@@ -68,6 +75,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public Long size;
+
     public FileCommitContent withSize(Long size) {
         this.size = size;
         return this;
@@ -76,6 +84,7 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public FileCommitContent withType(String type) {
         this.type = type;
         return this;
@@ -84,9 +93,11 @@ public class FileCommitContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public FileCommitContent withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public FileCommitContent(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DistributionGroupsAddUserRequest {
@@ -12,6 +13,7 @@ public class DistributionGroupsAddUserRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public DistributionGroupsAddUserRequestBody requestBody;
+
     public DistributionGroupsAddUserRequest withRequestBody(DistributionGroupsAddUserRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class DistributionGroupsAddUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public DistributionGroupsAddUserRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class DistributionGroupsAddUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=distribution_group_name")
     public String distributionGroupName;
+
     public DistributionGroupsAddUserRequest withDistributionGroupName(String distributionGroupName) {
         this.distributionGroupName = distributionGroupName;
         return this;
@@ -42,9 +46,16 @@ public class DistributionGroupsAddUserRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public DistributionGroupsAddUserRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public DistributionGroupsAddUserRequest(@JsonProperty("RequestBody") DistributionGroupsAddUserRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("distribution_group_name") String distributionGroupName, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.distributionGroupName = distributionGroupName;
+        this.ownerName = ownerName;
+  }
 }

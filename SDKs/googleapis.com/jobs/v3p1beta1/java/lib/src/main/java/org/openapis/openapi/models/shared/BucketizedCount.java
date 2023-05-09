@@ -18,6 +18,7 @@ public class BucketizedCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Integer count;
+
     public BucketizedCount withCount(Integer count) {
         this.count = count;
         return this;
@@ -29,9 +30,11 @@ public class BucketizedCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("range")
     public BucketRange range;
+
     public BucketizedCount withRange(BucketRange range) {
         this.range = range;
         return this;
     }
     
+    public BucketizedCount(){}
 }

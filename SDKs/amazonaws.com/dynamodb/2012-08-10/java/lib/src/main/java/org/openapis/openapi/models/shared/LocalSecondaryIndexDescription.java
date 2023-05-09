@@ -15,6 +15,7 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexArn")
     public String indexArn;
+
     public LocalSecondaryIndexDescription withIndexArn(String indexArn) {
         this.indexArn = indexArn;
         return this;
@@ -23,6 +24,7 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexName")
     public String indexName;
+
     public LocalSecondaryIndexDescription withIndexName(String indexName) {
         this.indexName = indexName;
         return this;
@@ -31,6 +33,7 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IndexSizeBytes")
     public Long indexSizeBytes;
+
     public LocalSecondaryIndexDescription withIndexSizeBytes(Long indexSizeBytes) {
         this.indexSizeBytes = indexSizeBytes;
         return this;
@@ -39,6 +42,7 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ItemCount")
     public Long itemCount;
+
     public LocalSecondaryIndexDescription withItemCount(Long itemCount) {
         this.itemCount = itemCount;
         return this;
@@ -47,6 +51,7 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeySchema")
     public KeySchemaElement[] keySchema;
+
     public LocalSecondaryIndexDescription withKeySchema(KeySchemaElement[] keySchema) {
         this.keySchema = keySchema;
         return this;
@@ -55,9 +60,11 @@ public class LocalSecondaryIndexDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Projection")
     public Projection projection;
+
     public LocalSecondaryIndexDescription withProjection(Projection projection) {
         this.projection = projection;
         return this;
     }
     
+    public LocalSecondaryIndexDescription(){}
 }

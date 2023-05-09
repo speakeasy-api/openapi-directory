@@ -20,6 +20,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arrivalPoint")
     public TflApiPresentationEntitiesPoint arrivalPoint;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withArrivalPoint(TflApiPresentationEntitiesPoint arrivalPoint) {
         this.arrivalPoint = arrivalPoint;
         return this;
@@ -30,6 +31,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("arrivalTime")
     public OffsetDateTime arrivalTime;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withArrivalTime(OffsetDateTime arrivalTime) {
         this.arrivalTime = arrivalTime;
         return this;
@@ -41,6 +43,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("departurePoint")
     public TflApiPresentationEntitiesPoint departurePoint;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withDeparturePoint(TflApiPresentationEntitiesPoint departurePoint) {
         this.departurePoint = departurePoint;
         return this;
@@ -51,6 +54,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("departureTime")
     public OffsetDateTime departureTime;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withDepartureTime(OffsetDateTime departureTime) {
         this.departureTime = departureTime;
         return this;
@@ -59,6 +63,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disruptions")
     public TflApiPresentationEntitiesDisruption[] disruptions;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withDisruptions(TflApiPresentationEntitiesDisruption[] disruptions) {
         this.disruptions = disruptions;
         return this;
@@ -67,6 +72,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("distance")
     public Double distance;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withDistance(Double distance) {
         this.distance = distance;
         return this;
@@ -75,6 +81,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Integer duration;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withDuration(Integer duration) {
         this.duration = duration;
         return this;
@@ -83,6 +90,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hasFixedLocations")
     public Boolean hasFixedLocations;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withHasFixedLocations(Boolean hasFixedLocations) {
         this.hasFixedLocations = hasFixedLocations;
         return this;
@@ -91,6 +99,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instruction")
     public TflApiPresentationEntitiesInstruction instruction;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withInstruction(TflApiPresentationEntitiesInstruction instruction) {
         this.instruction = instruction;
         return this;
@@ -99,6 +108,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interChangeDuration")
     public String interChangeDuration;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withInterChangeDuration(String interChangeDuration) {
         this.interChangeDuration = interChangeDuration;
         return this;
@@ -107,6 +117,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("interChangePosition")
     public String interChangePosition;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withInterChangePosition(String interChangePosition) {
         this.interChangePosition = interChangePosition;
         return this;
@@ -115,6 +126,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isDisrupted")
     public Boolean isDisrupted;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withIsDisrupted(Boolean isDisrupted) {
         this.isDisrupted = isDisrupted;
         return this;
@@ -123,6 +135,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mode")
     public TflApiPresentationEntitiesIdentifier mode;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withMode(TflApiPresentationEntitiesIdentifier mode) {
         this.mode = mode;
         return this;
@@ -131,6 +144,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("obstacles")
     public TflApiPresentationEntitiesJourneyPlannerObstacle[] obstacles;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withObstacles(TflApiPresentationEntitiesJourneyPlannerObstacle[] obstacles) {
         this.obstacles = obstacles;
         return this;
@@ -139,6 +153,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("path")
     public TflApiPresentationEntitiesJourneyPlannerPath path;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withPath(TflApiPresentationEntitiesJourneyPlannerPath path) {
         this.path = path;
         return this;
@@ -147,6 +162,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plannedWorks")
     public TflApiPresentationEntitiesJourneyPlannerPlannedWork[] plannedWorks;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withPlannedWorks(TflApiPresentationEntitiesJourneyPlannerPlannedWork[] plannedWorks) {
         this.plannedWorks = plannedWorks;
         return this;
@@ -155,6 +171,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("routeOptions")
     public TflApiPresentationEntitiesJourneyPlannerRouteOption[] routeOptions;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withRouteOptions(TflApiPresentationEntitiesJourneyPlannerRouteOption[] routeOptions) {
         this.routeOptions = routeOptions;
         return this;
@@ -165,6 +182,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledArrivalTime")
     public OffsetDateTime scheduledArrivalTime;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withScheduledArrivalTime(OffsetDateTime scheduledArrivalTime) {
         this.scheduledArrivalTime = scheduledArrivalTime;
         return this;
@@ -175,6 +193,7 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("scheduledDepartureTime")
     public OffsetDateTime scheduledDepartureTime;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withScheduledDepartureTime(OffsetDateTime scheduledDepartureTime) {
         this.scheduledDepartureTime = scheduledDepartureTime;
         return this;
@@ -183,9 +202,11 @@ public class TflApiPresentationEntitiesJourneyPlannerLeg {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speed")
     public String speed;
+
     public TflApiPresentationEntitiesJourneyPlannerLeg withSpeed(String speed) {
         this.speed = speed;
         return this;
     }
     
+    public TflApiPresentationEntitiesJourneyPlannerLeg(){}
 }

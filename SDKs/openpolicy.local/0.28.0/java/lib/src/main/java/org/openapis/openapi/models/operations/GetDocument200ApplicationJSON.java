@@ -15,6 +15,7 @@ public class GetDocument200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("explanation")
     public GetDocument200ApplicationJSONExplanation[] explanation;
+
     public GetDocument200ApplicationJSON withExplanation(GetDocument200ApplicationJSONExplanation[] explanation) {
         this.explanation = explanation;
         return this;
@@ -23,6 +24,7 @@ public class GetDocument200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metrics")
     public GetDocument200ApplicationJSONMetrics metrics;
+
     public GetDocument200ApplicationJSON withMetrics(GetDocument200ApplicationJSONMetrics metrics) {
         this.metrics = metrics;
         return this;
@@ -31,6 +33,7 @@ public class GetDocument200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provenance")
     public GetDocument200ApplicationJSONProvenance provenance;
+
     public GetDocument200ApplicationJSON withProvenance(GetDocument200ApplicationJSONProvenance provenance) {
         this.provenance = provenance;
         return this;
@@ -39,9 +42,11 @@ public class GetDocument200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public GetDocument200ApplicationJSONResult[] result;
+
     public GetDocument200ApplicationJSON withResult(GetDocument200ApplicationJSONResult[] result) {
         this.result = result;
         return this;
     }
     
+    public GetDocument200ApplicationJSON(){}
 }

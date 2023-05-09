@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ExportConfigurationsPartialUpdateRequest {
@@ -12,6 +13,7 @@ public class ExportConfigurationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public ExportConfigurationsPartialUpdateRequestBody requestBody;
+
     public ExportConfigurationsPartialUpdateRequest withRequestBody(ExportConfigurationsPartialUpdateRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,6 +24,7 @@ public class ExportConfigurationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=app_name")
     public String appName;
+
     public ExportConfigurationsPartialUpdateRequest withAppName(String appName) {
         this.appName = appName;
         return this;
@@ -32,6 +35,7 @@ public class ExportConfigurationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=export_configuration_id")
     public String exportConfigurationId;
+
     public ExportConfigurationsPartialUpdateRequest withExportConfigurationId(String exportConfigurationId) {
         this.exportConfigurationId = exportConfigurationId;
         return this;
@@ -42,9 +46,16 @@ public class ExportConfigurationsPartialUpdateRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=owner_name")
     public String ownerName;
+
     public ExportConfigurationsPartialUpdateRequest withOwnerName(String ownerName) {
         this.ownerName = ownerName;
         return this;
     }
     
+    public ExportConfigurationsPartialUpdateRequest(@JsonProperty("RequestBody") ExportConfigurationsPartialUpdateRequestBody requestBody, @JsonProperty("app_name") String appName, @JsonProperty("export_configuration_id") String exportConfigurationId, @JsonProperty("owner_name") String ownerName) {
+        this.requestBody = requestBody;
+        this.appName = appName;
+        this.exportConfigurationId = exportConfigurationId;
+        this.ownerName = ownerName;
+  }
 }

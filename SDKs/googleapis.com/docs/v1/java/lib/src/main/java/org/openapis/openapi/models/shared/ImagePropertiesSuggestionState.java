@@ -18,6 +18,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angleSuggested")
     public Boolean angleSuggested;
+
     public ImagePropertiesSuggestionState withAngleSuggested(Boolean angleSuggested) {
         this.angleSuggested = angleSuggested;
         return this;
@@ -29,6 +30,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brightnessSuggested")
     public Boolean brightnessSuggested;
+
     public ImagePropertiesSuggestionState withBrightnessSuggested(Boolean brightnessSuggested) {
         this.brightnessSuggested = brightnessSuggested;
         return this;
@@ -40,6 +42,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentUriSuggested")
     public Boolean contentUriSuggested;
+
     public ImagePropertiesSuggestionState withContentUriSuggested(Boolean contentUriSuggested) {
         this.contentUriSuggested = contentUriSuggested;
         return this;
@@ -51,6 +54,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contrastSuggested")
     public Boolean contrastSuggested;
+
     public ImagePropertiesSuggestionState withContrastSuggested(Boolean contrastSuggested) {
         this.contrastSuggested = contrastSuggested;
         return this;
@@ -62,6 +66,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cropPropertiesSuggestionState")
     public CropPropertiesSuggestionState cropPropertiesSuggestionState;
+
     public ImagePropertiesSuggestionState withCropPropertiesSuggestionState(CropPropertiesSuggestionState cropPropertiesSuggestionState) {
         this.cropPropertiesSuggestionState = cropPropertiesSuggestionState;
         return this;
@@ -73,6 +78,7 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceUriSuggested")
     public Boolean sourceUriSuggested;
+
     public ImagePropertiesSuggestionState withSourceUriSuggested(Boolean sourceUriSuggested) {
         this.sourceUriSuggested = sourceUriSuggested;
         return this;
@@ -84,9 +90,11 @@ public class ImagePropertiesSuggestionState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transparencySuggested")
     public Boolean transparencySuggested;
+
     public ImagePropertiesSuggestionState withTransparencySuggested(Boolean transparencySuggested) {
         this.transparencySuggested = transparencySuggested;
         return this;
     }
     
+    public ImagePropertiesSuggestionState(){}
 }

@@ -80,4 +80,13 @@ lib/src/main/java/org/openapis/openapi/models/shared/Error.java
 lib/src/main/java/org/openapis/openapi/models/shared/AuthentiqID.java
 lib/src/main/java/org/openapis/openapi/models/shared/PushToken.java
 lib/src/main/java/org/openapis/openapi/models/shared/Claims.java
+docs/sdk/README.md
+docs/delete/README.md
+docs/get/README.md
+docs/head/README.md
+docs/key/README.md
+docs/login/README.md
+docs/post/README.md
+docs/put/README.md
+docs/scope/README.md
 USAGE.md

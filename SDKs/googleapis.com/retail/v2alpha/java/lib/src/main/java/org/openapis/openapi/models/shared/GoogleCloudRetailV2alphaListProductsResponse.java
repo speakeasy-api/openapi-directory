@@ -18,6 +18,7 @@ public class GoogleCloudRetailV2alphaListProductsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public GoogleCloudRetailV2alphaListProductsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudRetailV2alphaListProductsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("products")
     public GoogleCloudRetailV2alphaProduct[] products;
+
     public GoogleCloudRetailV2alphaListProductsResponse withProducts(GoogleCloudRetailV2alphaProduct[] products) {
         this.products = products;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudRetailV2alphaListProductsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSize")
     public Integer totalSize;
+
     public GoogleCloudRetailV2alphaListProductsResponse withTotalSize(Integer totalSize) {
         this.totalSize = totalSize;
         return this;
     }
     
+    public GoogleCloudRetailV2alphaListProductsResponse(){}
 }

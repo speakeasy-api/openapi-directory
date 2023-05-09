@@ -67,11 +67,9 @@ public class ListingViolation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetListingViolationsResponse res = new org.openapis.openapi.models.operations.GetListingViolationsResponse() {{
+        org.openapis.openapi.models.operations.GetListingViolationsResponse res = new org.openapis.openapi.models.operations.GetListingViolationsResponse(contentType, httpRes.statusCode()) {{
             pagedComplianceViolationCollection = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -114,10 +112,8 @@ public class ListingViolation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SuppressViolationResponse res = new org.openapis.openapi.models.operations.SuppressViolationResponse() {{
+        org.openapis.openapi.models.operations.SuppressViolationResponse res = new org.openapis.openapi.models.operations.SuppressViolationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 409 || httpRes.statusCode() == 500) {

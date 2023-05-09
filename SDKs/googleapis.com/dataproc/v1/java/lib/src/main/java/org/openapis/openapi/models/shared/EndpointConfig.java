@@ -18,6 +18,7 @@ public class EndpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableHttpPortAccess")
     public Boolean enableHttpPortAccess;
+
     public EndpointConfig withEnableHttpPortAccess(Boolean enableHttpPortAccess) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         return this;
@@ -29,9 +30,11 @@ public class EndpointConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("httpPorts")
     public java.util.Map<String, String> httpPorts;
+
     public EndpointConfig withHttpPorts(java.util.Map<String, String> httpPorts) {
         this.httpPorts = httpPorts;
         return this;
     }
     
+    public EndpointConfig(){}
 }

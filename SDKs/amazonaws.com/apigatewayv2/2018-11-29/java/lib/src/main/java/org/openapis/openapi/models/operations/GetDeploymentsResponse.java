@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetDeploymentsResponse {
@@ -12,6 +13,7 @@ public class GetDeploymentsResponse {
      */
     
     public Object badRequestException;
+
     public GetDeploymentsResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetDeploymentsResponse {
     
     
     public String contentType;
+
     public GetDeploymentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetDeploymentsResponse {
      */
     
     public org.openapis.openapi.models.shared.GetDeploymentsResponse getDeploymentsResponse;
+
     public GetDeploymentsResponse withGetDeploymentsResponse(org.openapis.openapi.models.shared.GetDeploymentsResponse getDeploymentsResponse) {
         this.getDeploymentsResponse = getDeploymentsResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetDeploymentsResponse {
      */
     
     public Object notFoundException;
+
     public GetDeploymentsResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetDeploymentsResponse {
     
     
     public Integer statusCode;
+
     public GetDeploymentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetDeploymentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetDeploymentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetDeploymentsResponse {
      */
     
     public Object tooManyRequestsException;
+
     public GetDeploymentsResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public GetDeploymentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

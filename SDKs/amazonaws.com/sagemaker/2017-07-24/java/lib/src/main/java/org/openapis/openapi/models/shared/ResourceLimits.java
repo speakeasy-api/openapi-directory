@@ -15,6 +15,7 @@ public class ResourceLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxNumberOfTrainingJobs")
     public Long maxNumberOfTrainingJobs;
+
     public ResourceLimits withMaxNumberOfTrainingJobs(Long maxNumberOfTrainingJobs) {
         this.maxNumberOfTrainingJobs = maxNumberOfTrainingJobs;
         return this;
@@ -22,6 +23,7 @@ public class ResourceLimits {
     
     @JsonProperty("MaxParallelTrainingJobs")
     public Long maxParallelTrainingJobs;
+
     public ResourceLimits withMaxParallelTrainingJobs(Long maxParallelTrainingJobs) {
         this.maxParallelTrainingJobs = maxParallelTrainingJobs;
         return this;
@@ -30,9 +32,13 @@ public class ResourceLimits {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxRuntimeInSeconds")
     public Long maxRuntimeInSeconds;
+
     public ResourceLimits withMaxRuntimeInSeconds(Long maxRuntimeInSeconds) {
         this.maxRuntimeInSeconds = maxRuntimeInSeconds;
         return this;
     }
     
+    public ResourceLimits(@JsonProperty("MaxParallelTrainingJobs") Long maxParallelTrainingJobs) {
+        this.maxParallelTrainingJobs = maxParallelTrainingJobs;
+  }
 }

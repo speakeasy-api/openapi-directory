@@ -15,6 +15,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AdditionalInfo")
     public String additionalInfo;
+
     public RunJobFlowInput withAdditionalInfo(String additionalInfo) {
         this.additionalInfo = additionalInfo;
         return this;
@@ -23,6 +24,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AmiVersion")
     public String amiVersion;
+
     public RunJobFlowInput withAmiVersion(String amiVersion) {
         this.amiVersion = amiVersion;
         return this;
@@ -31,6 +33,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Applications")
     public Application[] applications;
+
     public RunJobFlowInput withApplications(Application[] applications) {
         this.applications = applications;
         return this;
@@ -39,6 +42,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoScalingRole")
     public String autoScalingRole;
+
     public RunJobFlowInput withAutoScalingRole(String autoScalingRole) {
         this.autoScalingRole = autoScalingRole;
         return this;
@@ -50,6 +54,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AutoTerminationPolicy")
     public AutoTerminationPolicy autoTerminationPolicy;
+
     public RunJobFlowInput withAutoTerminationPolicy(AutoTerminationPolicy autoTerminationPolicy) {
         this.autoTerminationPolicy = autoTerminationPolicy;
         return this;
@@ -58,6 +63,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BootstrapActions")
     public BootstrapActionConfig[] bootstrapActions;
+
     public RunJobFlowInput withBootstrapActions(BootstrapActionConfig[] bootstrapActions) {
         this.bootstrapActions = bootstrapActions;
         return this;
@@ -66,6 +72,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Configurations")
     public Configuration[] configurations;
+
     public RunJobFlowInput withConfigurations(Configuration[] configurations) {
         this.configurations = configurations;
         return this;
@@ -74,6 +81,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CustomAmiId")
     public String customAmiId;
+
     public RunJobFlowInput withCustomAmiId(String customAmiId) {
         this.customAmiId = customAmiId;
         return this;
@@ -82,6 +90,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EbsRootVolumeSize")
     public Long ebsRootVolumeSize;
+
     public RunJobFlowInput withEbsRootVolumeSize(Long ebsRootVolumeSize) {
         this.ebsRootVolumeSize = ebsRootVolumeSize;
         return this;
@@ -89,6 +98,7 @@ public class RunJobFlowInput {
     
     @JsonProperty("Instances")
     public JobFlowInstancesConfig instances;
+
     public RunJobFlowInput withInstances(JobFlowInstancesConfig instances) {
         this.instances = instances;
         return this;
@@ -97,6 +107,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobFlowRole")
     public String jobFlowRole;
+
     public RunJobFlowInput withJobFlowRole(String jobFlowRole) {
         this.jobFlowRole = jobFlowRole;
         return this;
@@ -105,6 +116,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KerberosAttributes")
     public KerberosAttributes kerberosAttributes;
+
     public RunJobFlowInput withKerberosAttributes(KerberosAttributes kerberosAttributes) {
         this.kerberosAttributes = kerberosAttributes;
         return this;
@@ -113,6 +125,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogEncryptionKmsKeyId")
     public String logEncryptionKmsKeyId;
+
     public RunJobFlowInput withLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
         this.logEncryptionKmsKeyId = logEncryptionKmsKeyId;
         return this;
@@ -121,6 +134,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LogUri")
     public String logUri;
+
     public RunJobFlowInput withLogUri(String logUri) {
         this.logUri = logUri;
         return this;
@@ -129,6 +143,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ManagedScalingPolicy")
     public ManagedScalingPolicy managedScalingPolicy;
+
     public RunJobFlowInput withManagedScalingPolicy(ManagedScalingPolicy managedScalingPolicy) {
         this.managedScalingPolicy = managedScalingPolicy;
         return this;
@@ -136,6 +151,7 @@ public class RunJobFlowInput {
     
     @JsonProperty("Name")
     public String name;
+
     public RunJobFlowInput withName(String name) {
         this.name = name;
         return this;
@@ -144,6 +160,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NewSupportedProducts")
     public SupportedProductConfig[] newSupportedProducts;
+
     public RunJobFlowInput withNewSupportedProducts(SupportedProductConfig[] newSupportedProducts) {
         this.newSupportedProducts = newSupportedProducts;
         return this;
@@ -152,6 +169,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OSReleaseLabel")
     public String osReleaseLabel;
+
     public RunJobFlowInput withOSReleaseLabel(String osReleaseLabel) {
         this.osReleaseLabel = osReleaseLabel;
         return this;
@@ -160,6 +178,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PlacementGroupConfigs")
     public PlacementGroupConfig[] placementGroupConfigs;
+
     public RunJobFlowInput withPlacementGroupConfigs(PlacementGroupConfig[] placementGroupConfigs) {
         this.placementGroupConfigs = placementGroupConfigs;
         return this;
@@ -168,6 +187,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReleaseLabel")
     public String releaseLabel;
+
     public RunJobFlowInput withReleaseLabel(String releaseLabel) {
         this.releaseLabel = releaseLabel;
         return this;
@@ -176,6 +196,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RepoUpgradeOnBoot")
     public RepoUpgradeOnBootEnum repoUpgradeOnBoot;
+
     public RunJobFlowInput withRepoUpgradeOnBoot(RepoUpgradeOnBootEnum repoUpgradeOnBoot) {
         this.repoUpgradeOnBoot = repoUpgradeOnBoot;
         return this;
@@ -184,6 +205,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ScaleDownBehavior")
     public ScaleDownBehaviorEnum scaleDownBehavior;
+
     public RunJobFlowInput withScaleDownBehavior(ScaleDownBehaviorEnum scaleDownBehavior) {
         this.scaleDownBehavior = scaleDownBehavior;
         return this;
@@ -192,6 +214,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityConfiguration")
     public String securityConfiguration;
+
     public RunJobFlowInput withSecurityConfiguration(String securityConfiguration) {
         this.securityConfiguration = securityConfiguration;
         return this;
@@ -200,6 +223,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ServiceRole")
     public String serviceRole;
+
     public RunJobFlowInput withServiceRole(String serviceRole) {
         this.serviceRole = serviceRole;
         return this;
@@ -208,6 +232,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StepConcurrencyLevel")
     public Long stepConcurrencyLevel;
+
     public RunJobFlowInput withStepConcurrencyLevel(Long stepConcurrencyLevel) {
         this.stepConcurrencyLevel = stepConcurrencyLevel;
         return this;
@@ -216,6 +241,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Steps")
     public StepConfig[] steps;
+
     public RunJobFlowInput withSteps(StepConfig[] steps) {
         this.steps = steps;
         return this;
@@ -224,6 +250,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SupportedProducts")
     public String[] supportedProducts;
+
     public RunJobFlowInput withSupportedProducts(String[] supportedProducts) {
         this.supportedProducts = supportedProducts;
         return this;
@@ -232,6 +259,7 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public RunJobFlowInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -240,9 +268,14 @@ public class RunJobFlowInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VisibleToAllUsers")
     public Boolean visibleToAllUsers;
+
     public RunJobFlowInput withVisibleToAllUsers(Boolean visibleToAllUsers) {
         this.visibleToAllUsers = visibleToAllUsers;
         return this;
     }
     
+    public RunJobFlowInput(@JsonProperty("Instances") JobFlowInstancesConfig instances, @JsonProperty("Name") String name) {
+        this.instances = instances;
+        this.name = name;
+  }
 }

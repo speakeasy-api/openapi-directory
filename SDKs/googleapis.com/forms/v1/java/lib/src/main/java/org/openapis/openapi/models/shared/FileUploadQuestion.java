@@ -18,6 +18,7 @@ public class FileUploadQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("folderId")
     public String folderId;
+
     public FileUploadQuestion withFolderId(String folderId) {
         this.folderId = folderId;
         return this;
@@ -29,6 +30,7 @@ public class FileUploadQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFileSize")
     public String maxFileSize;
+
     public FileUploadQuestion withMaxFileSize(String maxFileSize) {
         this.maxFileSize = maxFileSize;
         return this;
@@ -40,6 +42,7 @@ public class FileUploadQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxFiles")
     public Integer maxFiles;
+
     public FileUploadQuestion withMaxFiles(Integer maxFiles) {
         this.maxFiles = maxFiles;
         return this;
@@ -51,9 +54,11 @@ public class FileUploadQuestion {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("types")
     public FileUploadQuestionTypesEnum[] types;
+
     public FileUploadQuestion withTypes(FileUploadQuestionTypesEnum[] types) {
         this.types = types;
         return this;
     }
     
+    public FileUploadQuestion(){}
 }

@@ -15,6 +15,7 @@ public class ChildShard {
      */
     @JsonProperty("HashKeyRange")
     public HashKeyRange hashKeyRange;
+
     public ChildShard withHashKeyRange(HashKeyRange hashKeyRange) {
         this.hashKeyRange = hashKeyRange;
         return this;
@@ -22,6 +23,7 @@ public class ChildShard {
     
     @JsonProperty("ParentShards")
     public String[] parentShards;
+
     public ChildShard withParentShards(String[] parentShards) {
         this.parentShards = parentShards;
         return this;
@@ -29,9 +31,15 @@ public class ChildShard {
     
     @JsonProperty("ShardId")
     public String shardId;
+
     public ChildShard withShardId(String shardId) {
         this.shardId = shardId;
         return this;
     }
     
+    public ChildShard(@JsonProperty("HashKeyRange") HashKeyRange hashKeyRange, @JsonProperty("ParentShards") String[] parentShards, @JsonProperty("ShardId") String shardId) {
+        this.hashKeyRange = hashKeyRange;
+        this.parentShards = parentShards;
+        this.shardId = shardId;
+  }
 }

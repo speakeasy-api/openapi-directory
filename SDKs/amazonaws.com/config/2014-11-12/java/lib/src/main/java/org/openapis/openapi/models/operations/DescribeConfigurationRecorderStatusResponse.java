@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeConfigurationRecorderStatusResponse {
     
     public String contentType;
+
     public DescribeConfigurationRecorderStatusResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeConfigurationRecorderStatusResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeConfigurationRecorderStatusResponse describeConfigurationRecorderStatusResponse;
+
     public DescribeConfigurationRecorderStatusResponse withDescribeConfigurationRecorderStatusResponse(org.openapis.openapi.models.shared.DescribeConfigurationRecorderStatusResponse describeConfigurationRecorderStatusResponse) {
         this.describeConfigurationRecorderStatusResponse = describeConfigurationRecorderStatusResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeConfigurationRecorderStatusResponse {
      */
     
     public Object noSuchConfigurationRecorderException;
+
     public DescribeConfigurationRecorderStatusResponse withNoSuchConfigurationRecorderException(Object noSuchConfigurationRecorderException) {
         this.noSuchConfigurationRecorderException = noSuchConfigurationRecorderException;
         return this;
@@ -36,6 +40,7 @@ public class DescribeConfigurationRecorderStatusResponse {
     
     
     public Integer statusCode;
+
     public DescribeConfigurationRecorderStatusResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class DescribeConfigurationRecorderStatusResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeConfigurationRecorderStatusResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeConfigurationRecorderStatusResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

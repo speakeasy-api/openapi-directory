@@ -15,6 +15,7 @@ public class DataCellsFilterResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DatabaseName")
     public String databaseName;
+
     public DataCellsFilterResource withDatabaseName(String databaseName) {
         this.databaseName = databaseName;
         return this;
@@ -23,6 +24,7 @@ public class DataCellsFilterResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public DataCellsFilterResource withName(String name) {
         this.name = name;
         return this;
@@ -31,6 +33,7 @@ public class DataCellsFilterResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableCatalogId")
     public String tableCatalogId;
+
     public DataCellsFilterResource withTableCatalogId(String tableCatalogId) {
         this.tableCatalogId = tableCatalogId;
         return this;
@@ -39,9 +42,11 @@ public class DataCellsFilterResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TableName")
     public String tableName;
+
     public DataCellsFilterResource withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public DataCellsFilterResource(){}
 }

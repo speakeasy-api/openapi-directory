@@ -19,6 +19,7 @@ public class ExecutionMetrics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completed")
     public OffsetDateTime completed;
+
     public ExecutionMetrics withCompleted(OffsetDateTime completed) {
         this.completed = completed;
         return this;
@@ -27,6 +28,7 @@ public class ExecutionMetrics {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("duration")
     public Float duration;
+
     public ExecutionMetrics withDuration(Float duration) {
         this.duration = duration;
         return this;
@@ -37,9 +39,11 @@ public class ExecutionMetrics {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("received")
     public OffsetDateTime received;
+
     public ExecutionMetrics withReceived(OffsetDateTime received) {
         this.received = received;
         return this;
     }
     
+    public ExecutionMetrics(){}
 }

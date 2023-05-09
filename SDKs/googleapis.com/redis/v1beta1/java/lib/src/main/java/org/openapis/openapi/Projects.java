@@ -62,11 +62,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesCreateResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -110,11 +108,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesExportResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesExportResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesExportResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesExportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -158,11 +154,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesFailoverResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesFailoverResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesFailoverResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesFailoverResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -204,11 +198,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesGetAuthStringResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesGetAuthStringResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesGetAuthStringResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesGetAuthStringResponse(contentType, httpRes.statusCode()) {{
             instanceAuthString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -252,11 +244,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesImportResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesImportResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesImportResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesImportResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -298,11 +288,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesListResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesListResponse(contentType, httpRes.statusCode()) {{
             listInstancesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -346,11 +334,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesPatchResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesPatchResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesPatchResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -394,11 +380,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesRescheduleMaintenanceResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesRescheduleMaintenanceResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesRescheduleMaintenanceResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesRescheduleMaintenanceResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -442,11 +426,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesUpgradeResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesUpgradeResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesUpgradeResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsInstancesUpgradeResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -488,11 +470,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsListResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsListResponse(contentType, httpRes.statusCode()) {{
             listLocationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -534,11 +514,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsCancelResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsCancelResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsCancelResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -580,11 +558,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsDeleteResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsDeleteResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsDeleteResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -626,11 +602,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsGetResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsGetResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsGetResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -672,11 +646,9 @@ public class Projects {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsListResponse() {{
+        org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsListResponse res = new org.openapis.openapi.models.operations.RedisProjectsLocationsOperationsListResponse(contentType, httpRes.statusCode()) {{
             listOperationsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

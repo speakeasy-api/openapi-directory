@@ -15,6 +15,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateAccountWithPreVerifiedAadhaar withEmail(String email) {
         this.email = email;
         return this;
@@ -23,6 +24,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("firstName")
     public String firstName;
+
     public CreateAccountWithPreVerifiedAadhaar withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -31,6 +33,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("healthId")
     public String healthId;
+
     public CreateAccountWithPreVerifiedAadhaar withHealthId(String healthId) {
         this.healthId = healthId;
         return this;
@@ -39,6 +42,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("lastName")
     public String lastName;
+
     public CreateAccountWithPreVerifiedAadhaar withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -47,6 +51,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("middleName")
     public String middleName;
+
     public CreateAccountWithPreVerifiedAadhaar withMiddleName(String middleName) {
         this.middleName = middleName;
         return this;
@@ -55,6 +60,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("password")
     public String password;
+
     public CreateAccountWithPreVerifiedAadhaar withPassword(String password) {
         this.password = password;
         return this;
@@ -63,6 +69,7 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhoto")
     public String profilePhoto;
+
     public CreateAccountWithPreVerifiedAadhaar withProfilePhoto(String profilePhoto) {
         this.profilePhoto = profilePhoto;
         return this;
@@ -71,9 +78,11 @@ public class CreateAccountWithPreVerifiedAadhaar {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("txnId")
     public String txnId;
+
     public CreateAccountWithPreVerifiedAadhaar withTxnId(String txnId) {
         this.txnId = txnId;
         return this;
     }
     
+    public CreateAccountWithPreVerifiedAadhaar(){}
 }

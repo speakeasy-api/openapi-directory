@@ -15,6 +15,7 @@ public class ApplicationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CloudFormationStackARN")
     public String cloudFormationStackARN;
+
     public ApplicationSource withCloudFormationStackARN(String cloudFormationStackARN) {
         this.cloudFormationStackARN = cloudFormationStackARN;
         return this;
@@ -23,9 +24,11 @@ public class ApplicationSource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagFilters")
     public TagFilter[] tagFilters;
+
     public ApplicationSource withTagFilters(TagFilter[] tagFilters) {
         this.tagFilters = tagFilters;
         return this;
     }
     
+    public ApplicationSource(){}
 }

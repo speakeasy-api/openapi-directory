@@ -18,6 +18,7 @@ public class PivotSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionName")
     public String dimensionName;
+
     public PivotSelection withDimensionName(String dimensionName) {
         this.dimensionName = dimensionName;
         return this;
@@ -29,9 +30,11 @@ public class PivotSelection {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionValue")
     public String dimensionValue;
+
     public PivotSelection withDimensionValue(String dimensionValue) {
         this.dimensionValue = dimensionValue;
         return this;
     }
     
+    public PivotSelection(){}
 }

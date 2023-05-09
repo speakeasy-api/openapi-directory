@@ -15,6 +15,7 @@ public class ListRescoreExecutionPlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListRescoreExecutionPlansResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListRescoreExecutionPlansResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SummaryItems")
     public RescoreExecutionPlanSummary[] summaryItems;
+
     public ListRescoreExecutionPlansResponse withSummaryItems(RescoreExecutionPlanSummary[] summaryItems) {
         this.summaryItems = summaryItems;
         return this;
     }
     
+    public ListRescoreExecutionPlansResponse(){}
 }

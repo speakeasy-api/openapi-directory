@@ -18,6 +18,7 @@ public class BatchError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public String code;
+
     public BatchError withCode(String code) {
         this.code = code;
         return this;
@@ -29,6 +30,7 @@ public class BatchError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public ErrorMessage message;
+
     public BatchError withMessage(ErrorMessage message) {
         this.message = message;
         return this;
@@ -40,9 +42,11 @@ public class BatchError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public BatchErrorDetail[] values;
+
     public BatchError withValues(BatchErrorDetail[] values) {
         this.values = values;
         return this;
     }
     
+    public BatchError(){}
 }

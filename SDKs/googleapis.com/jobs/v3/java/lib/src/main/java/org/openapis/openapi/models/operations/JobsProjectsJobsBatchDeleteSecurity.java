@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class JobsProjectsJobsBatchDeleteSecurity {
     @SpeakeasyMetadata("security:option=true")
     public JobsProjectsJobsBatchDeleteSecurityOption1 option1;
+
     public JobsProjectsJobsBatchDeleteSecurity withOption1(JobsProjectsJobsBatchDeleteSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class JobsProjectsJobsBatchDeleteSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public JobsProjectsJobsBatchDeleteSecurityOption2 option2;
+
     public JobsProjectsJobsBatchDeleteSecurity withOption2(JobsProjectsJobsBatchDeleteSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public JobsProjectsJobsBatchDeleteSecurity(){}
 }

@@ -12,6 +12,7 @@ public class RelcsRequestBodyCertificateParameters {
      */
     @JsonProperty("applicationNo")
     public String applicationNo;
+
     public RelcsRequestBodyCertificateParameters withApplicationNo(String applicationNo) {
         this.applicationNo = applicationNo;
         return this;
@@ -22,9 +23,14 @@ public class RelcsRequestBodyCertificateParameters {
      */
     @JsonProperty("licenseNo")
     public String licenseNo;
+
     public RelcsRequestBodyCertificateParameters withLicenseNo(String licenseNo) {
         this.licenseNo = licenseNo;
         return this;
     }
     
+    public RelcsRequestBodyCertificateParameters(@JsonProperty("applicationNo") String applicationNo, @JsonProperty("licenseNo") String licenseNo) {
+        this.applicationNo = applicationNo;
+        this.licenseNo = licenseNo;
+  }
 }

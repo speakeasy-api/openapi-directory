@@ -12,9 +12,13 @@ public class BackTestAnomalyDetectorRequestBody {
      */
     @JsonProperty("AnomalyDetectorArn")
     public String anomalyDetectorArn;
+
     public BackTestAnomalyDetectorRequestBody withAnomalyDetectorArn(String anomalyDetectorArn) {
         this.anomalyDetectorArn = anomalyDetectorArn;
         return this;
     }
     
+    public BackTestAnomalyDetectorRequestBody(@JsonProperty("AnomalyDetectorArn") String anomalyDetectorArn) {
+        this.anomalyDetectorArn = anomalyDetectorArn;
+  }
 }

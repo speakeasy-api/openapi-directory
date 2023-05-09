@@ -18,6 +18,7 @@ public class RetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAttempts")
     public Integer maxAttempts;
+
     public RetryConfig withMaxAttempts(Integer maxAttempts) {
         this.maxAttempts = maxAttempts;
         return this;
@@ -29,6 +30,7 @@ public class RetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minutesBetweenAttempts")
     public Integer minutesBetweenAttempts;
+
     public RetryConfig withMinutesBetweenAttempts(Integer minutesBetweenAttempts) {
         this.minutesBetweenAttempts = minutesBetweenAttempts;
         return this;
@@ -40,6 +42,7 @@ public class RetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryPhoneTypes")
     public String[] retryPhoneTypes;
+
     public RetryConfig withRetryPhoneTypes(String[] retryPhoneTypes) {
         this.retryPhoneTypes = retryPhoneTypes;
         return this;
@@ -51,9 +54,11 @@ public class RetryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retryResults")
     public String[] retryResults;
+
     public RetryConfig withRetryResults(String[] retryResults) {
         this.retryResults = retryResults;
         return this;
     }
     
+    public RetryConfig(){}
 }

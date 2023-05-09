@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse {
     
     public String contentType;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig googleCloudIdentitytoolkitAdminV2OAuthIdpConfig;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse withGoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig(org.openapis.openapi.models.shared.GoogleCloudIdentitytoolkitAdminV2OAuthIdpConfig googleCloudIdentitytoolkitAdminV2OAuthIdpConfig) {
         this.googleCloudIdentitytoolkitAdminV2OAuthIdpConfig = googleCloudIdentitytoolkitAdminV2OAuthIdpConfig;
         return this;
@@ -26,6 +29,7 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse {
     
     
     public Integer statusCode;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public IdentitytoolkitProjectsTenantsOauthIdpConfigsCreateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

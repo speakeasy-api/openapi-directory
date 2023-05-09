@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRoleAliasResponse {
     
     public String contentType;
+
     public DescribeRoleAliasResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRoleAliasResponse describeRoleAliasResponse;
+
     public DescribeRoleAliasResponse withDescribeRoleAliasResponse(org.openapis.openapi.models.shared.DescribeRoleAliasResponse describeRoleAliasResponse) {
         this.describeRoleAliasResponse = describeRoleAliasResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object internalFailureException;
+
     public DescribeRoleAliasResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeRoleAliasResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRoleAliasResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeRoleAliasResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeRoleAliasResponse {
     
     
     public Integer statusCode;
+
     public DescribeRoleAliasResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DescribeRoleAliasResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRoleAliasResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRoleAliasResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeRoleAliasResponse {
      */
     
     public Object unauthorizedException;
+
     public DescribeRoleAliasResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DescribeRoleAliasResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

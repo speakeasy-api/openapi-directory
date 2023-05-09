@@ -15,6 +15,7 @@ public class SearchSuggestionsSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("count")
     public Double count;
+
     public SearchSuggestionsSearches withCount(Double count) {
         this.count = count;
         return this;
@@ -26,9 +27,11 @@ public class SearchSuggestionsSearches {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("term")
     public String term;
+
     public SearchSuggestionsSearches withTerm(String term) {
         this.term = term;
         return this;
     }
     
+    public SearchSuggestionsSearches(){}
 }

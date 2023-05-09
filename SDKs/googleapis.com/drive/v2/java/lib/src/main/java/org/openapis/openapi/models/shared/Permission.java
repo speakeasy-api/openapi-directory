@@ -23,6 +23,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalRoles")
     public String[] additionalRoles;
+
     public Permission withAdditionalRoles(String[] additionalRoles) {
         this.additionalRoles = additionalRoles;
         return this;
@@ -34,6 +35,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("authKey")
     public String authKey;
+
     public Permission withAuthKey(String authKey) {
         this.authKey = authKey;
         return this;
@@ -45,6 +47,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Permission withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
@@ -56,6 +59,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("domain")
     public String domain;
+
     public Permission withDomain(String domain) {
         this.domain = domain;
         return this;
@@ -67,6 +71,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("emailAddress")
     public String emailAddress;
+
     public Permission withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -78,6 +83,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public Permission withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -95,6 +101,7 @@ public class Permission {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("expirationDate")
     public OffsetDateTime expirationDate;
+
     public Permission withExpirationDate(OffsetDateTime expirationDate) {
         this.expirationDate = expirationDate;
         return this;
@@ -106,6 +113,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Permission withId(String id) {
         this.id = id;
         return this;
@@ -117,6 +125,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public Permission withKind(String kind) {
         this.kind = kind;
         return this;
@@ -128,6 +137,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Permission withName(String name) {
         this.name = name;
         return this;
@@ -139,6 +149,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pendingOwner")
     public Boolean pendingOwner;
+
     public Permission withPendingOwner(Boolean pendingOwner) {
         this.pendingOwner = pendingOwner;
         return this;
@@ -150,6 +161,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("permissionDetails")
     public PermissionPermissionDetails[] permissionDetails;
+
     public Permission withPermissionDetails(PermissionPermissionDetails[] permissionDetails) {
         this.permissionDetails = permissionDetails;
         return this;
@@ -161,6 +173,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("photoLink")
     public String photoLink;
+
     public Permission withPhotoLink(String photoLink) {
         this.photoLink = photoLink;
         return this;
@@ -177,6 +190,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("role")
     public String role;
+
     public Permission withRole(String role) {
         this.role = role;
         return this;
@@ -188,6 +202,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfLink")
     public String selfLink;
+
     public Permission withSelfLink(String selfLink) {
         this.selfLink = selfLink;
         return this;
@@ -199,6 +214,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamDrivePermissionDetails")
     public PermissionTeamDrivePermissionDetails[] teamDrivePermissionDetails;
+
     public Permission withTeamDrivePermissionDetails(PermissionTeamDrivePermissionDetails[] teamDrivePermissionDetails) {
         this.teamDrivePermissionDetails = teamDrivePermissionDetails;
         return this;
@@ -214,6 +230,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public Permission withType(String type) {
         this.type = type;
         return this;
@@ -225,6 +242,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public Permission withValue(String value) {
         this.value = value;
         return this;
@@ -236,6 +254,7 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("view")
     public String view;
+
     public Permission withView(String view) {
         this.view = view;
         return this;
@@ -247,9 +266,11 @@ public class Permission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("withLink")
     public Boolean withLink;
+
     public Permission withWithLink(Boolean withLink) {
         this.withLink = withLink;
         return this;
     }
     
+    public Permission(){}
 }

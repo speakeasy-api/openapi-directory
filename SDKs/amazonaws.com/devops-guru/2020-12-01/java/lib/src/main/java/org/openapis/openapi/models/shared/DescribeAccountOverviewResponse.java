@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DescribeAccountOverviewResponse {
     @JsonProperty("MeanTimeToRecoverInMilliseconds")
     public Long meanTimeToRecoverInMilliseconds;
+
     public DescribeAccountOverviewResponse withMeanTimeToRecoverInMilliseconds(Long meanTimeToRecoverInMilliseconds) {
         this.meanTimeToRecoverInMilliseconds = meanTimeToRecoverInMilliseconds;
         return this;
@@ -19,6 +20,7 @@ public class DescribeAccountOverviewResponse {
     
     @JsonProperty("ProactiveInsights")
     public Long proactiveInsights;
+
     public DescribeAccountOverviewResponse withProactiveInsights(Long proactiveInsights) {
         this.proactiveInsights = proactiveInsights;
         return this;
@@ -26,9 +28,15 @@ public class DescribeAccountOverviewResponse {
     
     @JsonProperty("ReactiveInsights")
     public Long reactiveInsights;
+
     public DescribeAccountOverviewResponse withReactiveInsights(Long reactiveInsights) {
         this.reactiveInsights = reactiveInsights;
         return this;
     }
     
+    public DescribeAccountOverviewResponse(@JsonProperty("MeanTimeToRecoverInMilliseconds") Long meanTimeToRecoverInMilliseconds, @JsonProperty("ProactiveInsights") Long proactiveInsights, @JsonProperty("ReactiveInsights") Long reactiveInsights) {
+        this.meanTimeToRecoverInMilliseconds = meanTimeToRecoverInMilliseconds;
+        this.proactiveInsights = proactiveInsights;
+        this.reactiveInsights = reactiveInsights;
+  }
 }

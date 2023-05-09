@@ -22,6 +22,7 @@ public class GetInvestmentProduct200ApplicationJSON {
      */
     @JsonProperty("additional_provider_details")
     public java.util.Map<String, Object> additionalProviderDetails;
+
     public GetInvestmentProduct200ApplicationJSON withAdditionalProviderDetails(java.util.Map<String, Object> additionalProviderDetails) {
         this.additionalProviderDetails = additionalProviderDetails;
         return this;
@@ -33,6 +34,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("applicable_financial_products")
     public GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum[] applicableFinancialProducts;
+
     public GetInvestmentProduct200ApplicationJSON withApplicableFinancialProducts(GetInvestmentProduct200ApplicationJSONApplicableFinancialProductsEnum[] applicableFinancialProducts) {
         this.applicableFinancialProducts = applicableFinancialProducts;
         return this;
@@ -44,6 +46,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asset_sub_type")
     public String assetSubType;
+
     public GetInvestmentProduct200ApplicationJSON withAssetSubType(String assetSubType) {
         this.assetSubType = assetSubType;
         return this;
@@ -54,6 +57,7 @@ public class GetInvestmentProduct200ApplicationJSON {
      */
     @JsonProperty("asset_type")
     public GetInvestmentProduct200ApplicationJSONAssetTypeEnum assetType;
+
     public GetInvestmentProduct200ApplicationJSON withAssetType(GetInvestmentProduct200ApplicationJSONAssetTypeEnum assetType) {
         this.assetType = assetType;
         return this;
@@ -65,6 +69,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("close_price")
     public String closePrice;
+
     public GetInvestmentProduct200ApplicationJSON withClosePrice(String closePrice) {
         this.closePrice = closePrice;
         return this;
@@ -76,6 +81,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("close_price_on_date")
     public String closePriceOnDate;
+
     public GetInvestmentProduct200ApplicationJSON withClosePriceOnDate(String closePriceOnDate) {
         this.closePriceOnDate = closePriceOnDate;
         return this;
@@ -86,6 +92,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public GetInvestmentProduct200ApplicationJSON withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -97,6 +104,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("currency")
     public String currency;
+
     public GetInvestmentProduct200ApplicationJSON withCurrency(String currency) {
         this.currency = currency;
         return this;
@@ -108,6 +116,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fund_asset_type")
     public String fundAssetType;
+
     public GetInvestmentProduct200ApplicationJSON withFundAssetType(String fundAssetType) {
         this.fundAssetType = fundAssetType;
         return this;
@@ -119,6 +128,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fund_code")
     public String fundCode;
+
     public GetInvestmentProduct200ApplicationJSON withFundCode(String fundCode) {
         this.fundCode = fundCode;
         return this;
@@ -129,6 +139,7 @@ public class GetInvestmentProduct200ApplicationJSON {
      */
     @JsonProperty("id_type")
     public GetInvestmentProduct200ApplicationJSONIdTypeEnum idType;
+
     public GetInvestmentProduct200ApplicationJSON withIdType(GetInvestmentProduct200ApplicationJSONIdTypeEnum idType) {
         this.idType = idType;
         return this;
@@ -139,6 +150,7 @@ public class GetInvestmentProduct200ApplicationJSON {
      */
     @JsonProperty("investment_product_id")
     public String investmentProductId;
+
     public GetInvestmentProduct200ApplicationJSON withInvestmentProductId(String investmentProductId) {
         this.investmentProductId = investmentProductId;
         return this;
@@ -150,6 +162,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetInvestmentProduct200ApplicationJSON withName(String name) {
         this.name = name;
         return this;
@@ -160,6 +173,7 @@ public class GetInvestmentProduct200ApplicationJSON {
      */
     @JsonProperty("pricing_method")
     public String pricingMethod;
+
     public GetInvestmentProduct200ApplicationJSON withPricingMethod(String pricingMethod) {
         this.pricingMethod = pricingMethod;
         return this;
@@ -171,6 +185,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("settlement_date_offset")
     public Double settlementDateOffset;
+
     public GetInvestmentProduct200ApplicationJSON withSettlementDateOffset(Double settlementDateOffset) {
         this.settlementDateOffset = settlementDateOffset;
         return this;
@@ -182,6 +197,7 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public GetInvestmentProduct200ApplicationJSONStatusEnum status;
+
     public GetInvestmentProduct200ApplicationJSON withStatus(GetInvestmentProduct200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -192,9 +208,17 @@ public class GetInvestmentProduct200ApplicationJSON {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public GetInvestmentProduct200ApplicationJSON withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public GetInvestmentProduct200ApplicationJSON(@JsonProperty("additional_provider_details") java.util.Map<String, Object> additionalProviderDetails, @JsonProperty("asset_type") GetInvestmentProduct200ApplicationJSONAssetTypeEnum assetType, @JsonProperty("id_type") GetInvestmentProduct200ApplicationJSONIdTypeEnum idType, @JsonProperty("investment_product_id") String investmentProductId, @JsonProperty("pricing_method") String pricingMethod) {
+        this.additionalProviderDetails = additionalProviderDetails;
+        this.assetType = assetType;
+        this.idType = idType;
+        this.investmentProductId = investmentProductId;
+        this.pricingMethod = pricingMethod;
+  }
 }

@@ -15,6 +15,7 @@ public class DescribeMediaStorageConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelARN")
     public String channelARN;
+
     public DescribeMediaStorageConfigurationRequestBody withChannelARN(String channelARN) {
         this.channelARN = channelARN;
         return this;
@@ -26,9 +27,11 @@ public class DescribeMediaStorageConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ChannelName")
     public String channelName;
+
     public DescribeMediaStorageConfigurationRequestBody withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
     
+    public DescribeMediaStorageConfigurationRequestBody(){}
 }

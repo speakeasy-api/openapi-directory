@@ -9,15 +9,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * GoogleCloudDocumentaiV1ProcessRequest - Request message for the process document method.
+ * GoogleCloudDocumentaiV1ProcessRequest - Request message for the ProcessDocument method.
  */
 public class GoogleCloudDocumentaiV1ProcessRequest {
     /**
-     * Specifies which fields to include in ProcessResponse's document. Only supports top level document and pages field so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
+     * Specifies which fields to include in the ProcessResponse.document output. Only supports top-level document and pages field, so it must be in the form of `{document_field_name}` or `pages.{page_field_name}`.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldMask")
     public String fieldMask;
+
     public GoogleCloudDocumentaiV1ProcessRequest withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1ProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inlineDocument")
     public GoogleCloudDocumentaiV1Document inlineDocument;
+
     public GoogleCloudDocumentaiV1ProcessRequest withInlineDocument(GoogleCloudDocumentaiV1Document inlineDocument) {
         this.inlineDocument = inlineDocument;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1ProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rawDocument")
     public GoogleCloudDocumentaiV1RawDocument rawDocument;
+
     public GoogleCloudDocumentaiV1ProcessRequest withRawDocument(GoogleCloudDocumentaiV1RawDocument rawDocument) {
         this.rawDocument = rawDocument;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDocumentaiV1ProcessRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("skipHumanReview")
     public Boolean skipHumanReview;
+
     public GoogleCloudDocumentaiV1ProcessRequest withSkipHumanReview(Boolean skipHumanReview) {
         this.skipHumanReview = skipHumanReview;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1ProcessRequest(){}
 }

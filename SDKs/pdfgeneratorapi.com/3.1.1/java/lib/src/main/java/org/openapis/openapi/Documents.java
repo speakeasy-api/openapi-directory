@@ -64,7 +64,7 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeTemplateResponse res = new org.openapis.openapi.models.operations.MergeTemplateResponse() {{
+        org.openapis.openapi.models.operations.MergeTemplateResponse res = new org.openapis.openapi.models.operations.MergeTemplateResponse(contentType, httpRes.statusCode()) {{
             mergeTemplate200ApplicationJSONObject = null;
             mergeTemplate401ApplicationJSONObject = null;
             mergeTemplate403ApplicationJSONObject = null;
@@ -72,8 +72,6 @@ public class Documents {
             mergeTemplate422ApplicationJSONObject = null;
             mergeTemplate500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -155,7 +153,7 @@ public class Documents {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MergeTemplatesResponse res = new org.openapis.openapi.models.operations.MergeTemplatesResponse() {{
+        org.openapis.openapi.models.operations.MergeTemplatesResponse res = new org.openapis.openapi.models.operations.MergeTemplatesResponse(contentType, httpRes.statusCode()) {{
             mergeTemplates200ApplicationJSONObject = null;
             mergeTemplates401ApplicationJSONObject = null;
             mergeTemplates403ApplicationJSONObject = null;
@@ -163,8 +161,6 @@ public class Documents {
             mergeTemplates422ApplicationJSONObject = null;
             mergeTemplates500ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

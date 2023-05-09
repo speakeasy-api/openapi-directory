@@ -12,6 +12,7 @@ public class Book {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public Book withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class Book {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public Book withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class Book {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("year")
     public String year;
+
     public Book withYear(String year) {
         this.year = year;
         return this;
     }
     
+    public Book(){}
 }

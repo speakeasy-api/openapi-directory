@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteInferenceExperimentResponse {
@@ -12,6 +13,7 @@ public class DeleteInferenceExperimentResponse {
      */
     
     public Object conflictException;
+
     public DeleteInferenceExperimentResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteInferenceExperimentResponse {
     
     
     public String contentType;
+
     public DeleteInferenceExperimentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteInferenceExperimentResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteInferenceExperimentResponse deleteInferenceExperimentResponse;
+
     public DeleteInferenceExperimentResponse withDeleteInferenceExperimentResponse(org.openapis.openapi.models.shared.DeleteInferenceExperimentResponse deleteInferenceExperimentResponse) {
         this.deleteInferenceExperimentResponse = deleteInferenceExperimentResponse;
         return this;
@@ -36,6 +40,7 @@ public class DeleteInferenceExperimentResponse {
     
     
     public Integer statusCode;
+
     public DeleteInferenceExperimentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteInferenceExperimentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteInferenceExperimentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class DeleteInferenceExperimentResponse {
      */
     
     public Object resourceNotFound;
+
     public DeleteInferenceExperimentResponse withResourceNotFound(Object resourceNotFound) {
         this.resourceNotFound = resourceNotFound;
         return this;
     }
     
+    public DeleteInferenceExperimentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

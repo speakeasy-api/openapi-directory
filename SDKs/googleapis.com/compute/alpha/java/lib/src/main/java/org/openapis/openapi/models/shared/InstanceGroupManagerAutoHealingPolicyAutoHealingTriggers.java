@@ -15,9 +15,11 @@ public class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onHealthCheck")
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheckEnum onHealthCheck;
+
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers withOnHealthCheck(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheckEnum onHealthCheck) {
         this.onHealthCheck = onHealthCheck;
         return this;
     }
     
+    public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggers(){}
 }

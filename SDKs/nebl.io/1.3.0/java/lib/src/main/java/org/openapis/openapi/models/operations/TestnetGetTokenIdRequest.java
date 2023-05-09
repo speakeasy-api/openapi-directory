@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestnetGetTokenIdRequest {
@@ -12,9 +13,13 @@ public class TestnetGetTokenIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tokensymbol")
     public String tokensymbol;
+
     public TestnetGetTokenIdRequest withTokensymbol(String tokensymbol) {
         this.tokensymbol = tokensymbol;
         return this;
     }
     
+    public TestnetGetTokenIdRequest(@JsonProperty("tokensymbol") String tokensymbol) {
+        this.tokensymbol = tokensymbol;
+  }
 }

@@ -56,12 +56,10 @@ public class BankAccountValidation {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse res = new org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse() {{
+        org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse res = new org.openapis.openapi.models.operations.PostValidateBankAccountIdentificationResponse(contentType, httpRes.statusCode()) {{
             void_ = null;
             restServiceError = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

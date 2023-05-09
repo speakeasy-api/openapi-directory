@@ -18,9 +18,11 @@ public class Backend {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public BackendRule[] rules;
+
     public Backend withRules(BackendRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public Backend(){}
 }

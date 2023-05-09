@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePolicyVersionResponse {
     
     public String contentType;
+
     public DeletePolicyVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object deleteConflictException;
+
     public DeletePolicyVersionResponse withDeleteConflictException(Object deleteConflictException) {
         this.deleteConflictException = deleteConflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object internalFailureException;
+
     public DeletePolicyVersionResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public DeletePolicyVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeletePolicyVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DeletePolicyVersionResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DeletePolicyVersionResponse {
     
     
     public Integer statusCode;
+
     public DeletePolicyVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeletePolicyVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePolicyVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object throttlingException;
+
     public DeletePolicyVersionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DeletePolicyVersionResponse {
      */
     
     public Object unauthorizedException;
+
     public DeletePolicyVersionResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public DeletePolicyVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

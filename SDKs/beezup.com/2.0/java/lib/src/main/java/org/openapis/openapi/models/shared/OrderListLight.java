@@ -16,6 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class OrderListLight {
     @JsonProperty("links")
     public OrderListLightLinks links;
+
     public OrderListLight withLinks(OrderListLightLinks links) {
         this.links = links;
         return this;
@@ -23,6 +24,7 @@ public class OrderListLight {
     
     @JsonProperty("orders")
     public OrderHeader[] orders;
+
     public OrderListLight withOrders(OrderHeader[] orders) {
         this.orders = orders;
         return this;
@@ -31,9 +33,14 @@ public class OrderListLight {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paginationResult")
     public BeezUPCommonPaginationResult paginationResult;
+
     public OrderListLight withPaginationResult(BeezUPCommonPaginationResult paginationResult) {
         this.paginationResult = paginationResult;
         return this;
     }
     
+    public OrderListLight(@JsonProperty("links") OrderListLightLinks links, @JsonProperty("orders") OrderHeader[] orders) {
+        this.links = links;
+        this.orders = orders;
+  }
 }

@@ -18,9 +18,11 @@ public class PythonRepository {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("publicRepository")
     public PythonRepositoryPublicRepositoryEnum publicRepository;
+
     public PythonRepository withPublicRepository(PythonRepositoryPublicRepositoryEnum publicRepository) {
         this.publicRepository = publicRepository;
         return this;
     }
     
+    public PythonRepository(){}
 }

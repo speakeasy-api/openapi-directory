@@ -15,6 +15,7 @@ public class StartDevEnvironmentSessionRequestBodySessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executeCommandSessionConfiguration")
     public org.openapis.openapi.models.shared.ExecuteCommandSessionConfiguration executeCommandSessionConfiguration;
+
     public StartDevEnvironmentSessionRequestBodySessionConfiguration withExecuteCommandSessionConfiguration(org.openapis.openapi.models.shared.ExecuteCommandSessionConfiguration executeCommandSessionConfiguration) {
         this.executeCommandSessionConfiguration = executeCommandSessionConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class StartDevEnvironmentSessionRequestBodySessionConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sessionType")
     public org.openapis.openapi.models.shared.DevEnvironmentSessionTypeEnum sessionType;
+
     public StartDevEnvironmentSessionRequestBodySessionConfiguration withSessionType(org.openapis.openapi.models.shared.DevEnvironmentSessionTypeEnum sessionType) {
         this.sessionType = sessionType;
         return this;
     }
     
+    public StartDevEnvironmentSessionRequestBodySessionConfiguration(){}
 }

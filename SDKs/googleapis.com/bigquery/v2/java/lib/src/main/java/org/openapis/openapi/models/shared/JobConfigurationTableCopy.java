@@ -15,6 +15,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createDisposition")
     public String createDisposition;
+
     public JobConfigurationTableCopy withCreateDisposition(String createDisposition) {
         this.createDisposition = createDisposition;
         return this;
@@ -23,6 +24,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationEncryptionConfiguration")
     public EncryptionConfiguration destinationEncryptionConfiguration;
+
     public JobConfigurationTableCopy withDestinationEncryptionConfiguration(EncryptionConfiguration destinationEncryptionConfiguration) {
         this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
         return this;
@@ -34,6 +36,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationExpirationTime")
     public Object destinationExpirationTime;
+
     public JobConfigurationTableCopy withDestinationExpirationTime(Object destinationExpirationTime) {
         this.destinationExpirationTime = destinationExpirationTime;
         return this;
@@ -42,6 +45,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationTable")
     public TableReference destinationTable;
+
     public JobConfigurationTableCopy withDestinationTable(TableReference destinationTable) {
         this.destinationTable = destinationTable;
         return this;
@@ -53,6 +57,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationType")
     public String operationType;
+
     public JobConfigurationTableCopy withOperationType(String operationType) {
         this.operationType = operationType;
         return this;
@@ -61,6 +66,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTable")
     public TableReference sourceTable;
+
     public JobConfigurationTableCopy withSourceTable(TableReference sourceTable) {
         this.sourceTable = sourceTable;
         return this;
@@ -72,6 +78,7 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceTables")
     public TableReference[] sourceTables;
+
     public JobConfigurationTableCopy withSourceTables(TableReference[] sourceTables) {
         this.sourceTables = sourceTables;
         return this;
@@ -83,9 +90,11 @@ public class JobConfigurationTableCopy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("writeDisposition")
     public String writeDisposition;
+
     public JobConfigurationTableCopy withWriteDisposition(String writeDisposition) {
         this.writeDisposition = writeDisposition;
         return this;
     }
     
+    public JobConfigurationTableCopy(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETDescribeIdentityIdFormatRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETDescribeIdentityIdFormatActionEnum action;
+
     public GETDescribeIdentityIdFormatRequest withAction(GETDescribeIdentityIdFormatActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETDescribeIdentityIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=PrincipalArn")
     public String principalArn;
+
     public GETDescribeIdentityIdFormatRequest withPrincipalArn(String principalArn) {
         this.principalArn = principalArn;
         return this;
@@ -29,6 +32,7 @@ public class GETDescribeIdentityIdFormatRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Resource")
     public String resource;
+
     public GETDescribeIdentityIdFormatRequest withResource(String resource) {
         this.resource = resource;
         return this;
@@ -36,6 +40,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETDescribeIdentityIdFormatVersionEnum version;
+
     public GETDescribeIdentityIdFormatRequest withVersion(GETDescribeIdentityIdFormatVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETDescribeIdentityIdFormatRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETDescribeIdentityIdFormatRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETDescribeIdentityIdFormatRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETDescribeIdentityIdFormatRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETDescribeIdentityIdFormatRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETDescribeIdentityIdFormatRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETDescribeIdentityIdFormatRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETDescribeIdentityIdFormatRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETDescribeIdentityIdFormatRequest(@JsonProperty("Action") GETDescribeIdentityIdFormatActionEnum action, @JsonProperty("PrincipalArn") String principalArn, @JsonProperty("Version") GETDescribeIdentityIdFormatVersionEnum version) {
+        this.action = action;
+        this.principalArn = principalArn;
+        this.version = version;
+  }
 }

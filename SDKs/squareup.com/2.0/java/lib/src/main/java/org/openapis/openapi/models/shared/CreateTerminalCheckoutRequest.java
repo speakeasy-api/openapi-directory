@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateTerminalCheckoutRequest {
     @JsonProperty("checkout")
     public TerminalCheckout checkout;
+
     public CreateTerminalCheckoutRequest withCheckout(TerminalCheckout checkout) {
         this.checkout = checkout;
         return this;
@@ -27,9 +28,14 @@ public class CreateTerminalCheckoutRequest {
      */
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateTerminalCheckoutRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
     }
     
+    public CreateTerminalCheckoutRequest(@JsonProperty("checkout") TerminalCheckout checkout, @JsonProperty("idempotency_key") String idempotencyKey) {
+        this.checkout = checkout;
+        this.idempotencyKey = idempotencyKey;
+  }
 }

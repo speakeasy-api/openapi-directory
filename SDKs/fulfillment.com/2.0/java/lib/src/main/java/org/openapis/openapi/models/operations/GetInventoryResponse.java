@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetInventoryResponse {
     
     public String contentType;
+
     public GetInventoryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetInventoryResponse {
      */
     
     public GetInventoryItemInventoryArrayV2 itemInventoryArrayV2;
+
     public GetInventoryResponse withItemInventoryArrayV2(GetInventoryItemInventoryArrayV2 itemInventoryArrayV2) {
         this.itemInventoryArrayV2 = itemInventoryArrayV2;
         return this;
@@ -26,6 +29,7 @@ public class GetInventoryResponse {
     
     
     public Integer statusCode;
+
     public GetInventoryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetInventoryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetInventoryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetInventoryResponse {
      */
     
     public org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema;
+
     public GetInventoryResponse withOneordersGetResponses404ContentApplication1jsonSchema(org.openapis.openapi.models.shared.OneordersGetResponses404ContentApplication1jsonSchema oneordersGetResponses404ContentApplication1jsonSchema) {
         this.oneordersGetResponses404ContentApplication1jsonSchema = oneordersGetResponses404ContentApplication1jsonSchema;
         return this;
     }
     
+    public GetInventoryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

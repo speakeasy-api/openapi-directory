@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartTextTranslationJobRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public StartTextTranslationJobRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -18,6 +19,7 @@ public class StartTextTranslationJobRequest {
     
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public StartTextTranslationJobRequest withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -25,6 +27,7 @@ public class StartTextTranslationJobRequest {
     
     @JsonProperty("InputDataConfig")
     public InputDataConfig inputDataConfig;
+
     public StartTextTranslationJobRequest withInputDataConfig(InputDataConfig inputDataConfig) {
         this.inputDataConfig = inputDataConfig;
         return this;
@@ -33,6 +36,7 @@ public class StartTextTranslationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobName")
     public String jobName;
+
     public StartTextTranslationJobRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -40,6 +44,7 @@ public class StartTextTranslationJobRequest {
     
     @JsonProperty("OutputDataConfig")
     public OutputDataConfig outputDataConfig;
+
     public StartTextTranslationJobRequest withOutputDataConfig(OutputDataConfig outputDataConfig) {
         this.outputDataConfig = outputDataConfig;
         return this;
@@ -48,6 +53,7 @@ public class StartTextTranslationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelDataNames")
     public String[] parallelDataNames;
+
     public StartTextTranslationJobRequest withParallelDataNames(String[] parallelDataNames) {
         this.parallelDataNames = parallelDataNames;
         return this;
@@ -56,6 +62,7 @@ public class StartTextTranslationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public TranslationSettings settings;
+
     public StartTextTranslationJobRequest withSettings(TranslationSettings settings) {
         this.settings = settings;
         return this;
@@ -63,6 +70,7 @@ public class StartTextTranslationJobRequest {
     
     @JsonProperty("SourceLanguageCode")
     public String sourceLanguageCode;
+
     public StartTextTranslationJobRequest withSourceLanguageCode(String sourceLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         return this;
@@ -70,6 +78,7 @@ public class StartTextTranslationJobRequest {
     
     @JsonProperty("TargetLanguageCodes")
     public String[] targetLanguageCodes;
+
     public StartTextTranslationJobRequest withTargetLanguageCodes(String[] targetLanguageCodes) {
         this.targetLanguageCodes = targetLanguageCodes;
         return this;
@@ -78,9 +87,18 @@ public class StartTextTranslationJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TerminologyNames")
     public String[] terminologyNames;
+
     public StartTextTranslationJobRequest withTerminologyNames(String[] terminologyNames) {
         this.terminologyNames = terminologyNames;
         return this;
     }
     
+    public StartTextTranslationJobRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("DataAccessRoleArn") String dataAccessRoleArn, @JsonProperty("InputDataConfig") InputDataConfig inputDataConfig, @JsonProperty("OutputDataConfig") OutputDataConfig outputDataConfig, @JsonProperty("SourceLanguageCode") String sourceLanguageCode, @JsonProperty("TargetLanguageCodes") String[] targetLanguageCodes) {
+        this.clientToken = clientToken;
+        this.dataAccessRoleArn = dataAccessRoleArn;
+        this.inputDataConfig = inputDataConfig;
+        this.outputDataConfig = outputDataConfig;
+        this.sourceLanguageCode = sourceLanguageCode;
+        this.targetLanguageCodes = targetLanguageCodes;
+  }
 }

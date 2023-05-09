@@ -15,6 +15,7 @@ public class ListViolationEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListViolationEventsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListViolationEventsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("violationEvents")
     public ViolationEvent[] violationEvents;
+
     public ListViolationEventsResponse withViolationEvents(ViolationEvent[] violationEvents) {
         this.violationEvents = violationEvents;
         return this;
     }
     
+    public ListViolationEventsResponse(){}
 }

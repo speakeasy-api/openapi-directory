@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AppkeyPutRequest {
@@ -12,9 +13,13 @@ public class AppkeyPutRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=app_key")
     public String appKey;
+
     public AppkeyPutRequest withAppKey(String appKey) {
         this.appKey = appKey;
         return this;
     }
     
+    public AppkeyPutRequest(@JsonProperty("app_key") String appKey) {
+        this.appKey = appKey;
+  }
 }

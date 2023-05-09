@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BigqueryJobsListRequest {
@@ -12,6 +13,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=allUsers")
     public Boolean allUsers;
+
     public BigqueryJobsListRequest withAllUsers(Boolean allUsers) {
         this.allUsers = allUsers;
         return this;
@@ -22,6 +24,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public BigqueryJobsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -32,6 +35,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public BigqueryJobsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -42,6 +46,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public BigqueryJobsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -52,6 +57,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxCreationTime")
     public String maxCreationTime;
+
     public BigqueryJobsListRequest withMaxCreationTime(String maxCreationTime) {
         this.maxCreationTime = maxCreationTime;
         return this;
@@ -62,6 +68,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public BigqueryJobsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -72,6 +79,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=minCreationTime")
     public String minCreationTime;
+
     public BigqueryJobsListRequest withMinCreationTime(String minCreationTime) {
         this.minCreationTime = minCreationTime;
         return this;
@@ -82,6 +90,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public BigqueryJobsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -92,6 +101,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public BigqueryJobsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -102,6 +112,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=parentJobId")
     public String parentJobId;
+
     public BigqueryJobsListRequest withParentJobId(String parentJobId) {
         this.parentJobId = parentJobId;
         return this;
@@ -112,6 +123,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public BigqueryJobsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -122,6 +134,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public BigqueryJobsListRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -132,6 +145,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=projection")
     public BigqueryJobsListProjectionEnum projection;
+
     public BigqueryJobsListRequest withProjection(BigqueryJobsListProjectionEnum projection) {
         this.projection = projection;
         return this;
@@ -142,6 +156,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public BigqueryJobsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -152,6 +167,7 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=stateFilter")
     public BigqueryJobsListStateFilterEnum[] stateFilter;
+
     public BigqueryJobsListRequest withStateFilter(BigqueryJobsListStateFilterEnum[] stateFilter) {
         this.stateFilter = stateFilter;
         return this;
@@ -162,9 +178,13 @@ public class BigqueryJobsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userIp")
     public String userIp;
+
     public BigqueryJobsListRequest withUserIp(String userIp) {
         this.userIp = userIp;
         return this;
     }
     
+    public BigqueryJobsListRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

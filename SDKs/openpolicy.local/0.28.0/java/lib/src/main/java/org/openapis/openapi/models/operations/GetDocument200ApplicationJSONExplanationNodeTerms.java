@@ -12,6 +12,7 @@ public class GetDocument200ApplicationJSONExplanationNodeTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GetDocument200ApplicationJSONExplanationNodeTerms withType(String type) {
         this.type = type;
         return this;
@@ -20,9 +21,11 @@ public class GetDocument200ApplicationJSONExplanationNodeTerms {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public GetDocument200ApplicationJSONExplanationNodeTerms withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public GetDocument200ApplicationJSONExplanationNodeTerms(){}
 }

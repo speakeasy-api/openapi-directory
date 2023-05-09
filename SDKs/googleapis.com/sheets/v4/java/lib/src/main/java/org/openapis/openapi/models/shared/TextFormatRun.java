@@ -18,6 +18,7 @@ public class TextFormatRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public TextFormat format;
+
     public TextFormatRun withFormat(TextFormat format) {
         this.format = format;
         return this;
@@ -29,9 +30,11 @@ public class TextFormatRun {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startIndex")
     public Integer startIndex;
+
     public TextFormatRun withStartIndex(Integer startIndex) {
         this.startIndex = startIndex;
         return this;
     }
     
+    public TextFormatRun(){}
 }

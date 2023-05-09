@@ -15,6 +15,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comments")
     public String comments;
+
     public EstimateItemDetailsVO withComments(String comments) {
         this.comments = comments;
         return this;
@@ -23,6 +24,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_fields")
     public PropertyPaAndAttVO[] customFields;
+
     public EstimateItemDetailsVO withCustomFields(PropertyPaAndAttVO[] customFields) {
         this.customFields = customFields;
         return this;
@@ -31,6 +33,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimate_item_id")
     public Long estimateItemId;
+
     public EstimateItemDetailsVO withEstimateItemId(Long estimateItemId) {
         this.estimateItemId = estimateItemId;
         return this;
@@ -39,6 +42,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("option_prices")
     public EstimateItemPriceVO[] optionPrices;
+
     public EstimateItemDetailsVO withOptionPrices(EstimateItemPriceVO[] optionPrices) {
         this.optionPrices = optionPrices;
         return this;
@@ -47,6 +51,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pc_job_id")
     public Long pcJobId;
+
     public EstimateItemDetailsVO withPcJobId(Long pcJobId) {
         this.pcJobId = pcJobId;
         return this;
@@ -55,6 +60,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_name")
     public String specName;
+
     public EstimateItemDetailsVO withSpecName(String specName) {
         this.specName = specName;
         return this;
@@ -63,6 +69,7 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_reference")
     public String specReference;
+
     public EstimateItemDetailsVO withSpecReference(String specReference) {
         this.specReference = specReference;
         return this;
@@ -71,9 +78,11 @@ public class EstimateItemDetailsVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_reference_id")
     public Long specReferenceId;
+
     public EstimateItemDetailsVO withSpecReferenceId(Long specReferenceId) {
         this.specReferenceId = specReferenceId;
         return this;
     }
     
+    public EstimateItemDetailsVO(){}
 }

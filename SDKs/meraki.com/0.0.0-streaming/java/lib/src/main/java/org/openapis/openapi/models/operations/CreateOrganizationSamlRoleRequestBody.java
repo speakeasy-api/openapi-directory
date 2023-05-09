@@ -15,6 +15,7 @@ public class CreateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("networks")
     public CreateOrganizationSamlRoleRequestBodyNetworks[] networks;
+
     public CreateOrganizationSamlRoleRequestBody withNetworks(CreateOrganizationSamlRoleRequestBodyNetworks[] networks) {
         this.networks = networks;
         return this;
@@ -25,6 +26,7 @@ public class CreateOrganizationSamlRoleRequestBody {
      */
     @JsonProperty("orgAccess")
     public String orgAccess;
+
     public CreateOrganizationSamlRoleRequestBody withOrgAccess(String orgAccess) {
         this.orgAccess = orgAccess;
         return this;
@@ -35,6 +37,7 @@ public class CreateOrganizationSamlRoleRequestBody {
      */
     @JsonProperty("role")
     public String role;
+
     public CreateOrganizationSamlRoleRequestBody withRole(String role) {
         this.role = role;
         return this;
@@ -46,9 +49,14 @@ public class CreateOrganizationSamlRoleRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public CreateOrganizationSamlRoleRequestBodyTags[] tags;
+
     public CreateOrganizationSamlRoleRequestBody withTags(CreateOrganizationSamlRoleRequestBodyTags[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateOrganizationSamlRoleRequestBody(@JsonProperty("orgAccess") String orgAccess, @JsonProperty("role") String role) {
+        this.orgAccess = orgAccess;
+        this.role = role;
+  }
 }

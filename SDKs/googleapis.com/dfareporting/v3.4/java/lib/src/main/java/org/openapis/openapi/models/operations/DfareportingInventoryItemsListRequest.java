@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DfareportingInventoryItemsListRequest {
@@ -12,6 +13,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public DfareportingInventoryItemsListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public DfareportingInventoryItemsListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public DfareportingInventoryItemsListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public DfareportingInventoryItemsListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public DfareportingInventoryItemsListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -62,6 +68,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ids")
     public String[] ids;
+
     public DfareportingInventoryItemsListRequest withIds(String[] ids) {
         this.ids = ids;
         return this;
@@ -72,6 +79,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=inPlan")
     public Boolean inPlan;
+
     public DfareportingInventoryItemsListRequest withInPlan(Boolean inPlan) {
         this.inPlan = inPlan;
         return this;
@@ -82,6 +90,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public DfareportingInventoryItemsListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -92,6 +101,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public DfareportingInventoryItemsListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -102,6 +112,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public DfareportingInventoryItemsListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -112,6 +123,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderId")
     public String[] orderId;
+
     public DfareportingInventoryItemsListRequest withOrderId(String[] orderId) {
         this.orderId = orderId;
         return this;
@@ -122,6 +134,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public DfareportingInventoryItemsListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -132,6 +145,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public DfareportingInventoryItemsListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -142,6 +156,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=profileId")
     public String profileId;
+
     public DfareportingInventoryItemsListRequest withProfileId(String profileId) {
         this.profileId = profileId;
         return this;
@@ -152,6 +167,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public DfareportingInventoryItemsListRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -162,6 +178,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public DfareportingInventoryItemsListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -172,6 +189,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=siteId")
     public String[] siteId;
+
     public DfareportingInventoryItemsListRequest withSiteId(String[] siteId) {
         this.siteId = siteId;
         return this;
@@ -182,6 +200,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortField")
     public DfareportingInventoryItemsListSortFieldEnum sortField;
+
     public DfareportingInventoryItemsListRequest withSortField(DfareportingInventoryItemsListSortFieldEnum sortField) {
         this.sortField = sortField;
         return this;
@@ -192,6 +211,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sortOrder")
     public DfareportingInventoryItemsListSortOrderEnum sortOrder;
+
     public DfareportingInventoryItemsListRequest withSortOrder(DfareportingInventoryItemsListSortOrderEnum sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -202,6 +222,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DfareportingInventoryItemsListTypeEnum type;
+
     public DfareportingInventoryItemsListRequest withType(DfareportingInventoryItemsListTypeEnum type) {
         this.type = type;
         return this;
@@ -212,6 +233,7 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public DfareportingInventoryItemsListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -222,9 +244,14 @@ public class DfareportingInventoryItemsListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public DfareportingInventoryItemsListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public DfareportingInventoryItemsListRequest(@JsonProperty("profileId") String profileId, @JsonProperty("projectId") String projectId) {
+        this.profileId = profileId;
+        this.projectId = projectId;
+  }
 }

@@ -18,6 +18,7 @@ public class SpeechContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("boost")
     public Float boost;
+
     public SpeechContext withBoost(Float boost) {
         this.boost = boost;
         return this;
@@ -29,9 +30,11 @@ public class SpeechContext {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phrases")
     public String[] phrases;
+
     public SpeechContext withPhrases(String[] phrases) {
         this.phrases = phrases;
         return this;
     }
     
+    public SpeechContext(){}
 }

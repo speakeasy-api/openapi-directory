@@ -15,9 +15,11 @@ public class DeregisterContainerInstanceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containerInstance")
     public ContainerInstance containerInstance;
+
     public DeregisterContainerInstanceResponse withContainerInstance(ContainerInstance containerInstance) {
         this.containerInstance = containerInstance;
         return this;
     }
     
+    public DeregisterContainerInstanceResponse(){}
 }

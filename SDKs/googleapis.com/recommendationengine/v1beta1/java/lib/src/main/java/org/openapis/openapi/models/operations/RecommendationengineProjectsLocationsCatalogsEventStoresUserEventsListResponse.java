@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse {
     
     public String contentType;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsL
      */
     
     public org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ListUserEventsResponse googleCloudRecommendationengineV1beta1ListUserEventsResponse;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse withGoogleCloudRecommendationengineV1beta1ListUserEventsResponse(org.openapis.openapi.models.shared.GoogleCloudRecommendationengineV1beta1ListUserEventsResponse googleCloudRecommendationengineV1beta1ListUserEventsResponse) {
         this.googleCloudRecommendationengineV1beta1ListUserEventsResponse = googleCloudRecommendationengineV1beta1ListUserEventsResponse;
         return this;
@@ -26,6 +29,7 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsL
     
     
     public Integer statusCode;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsL
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public RecommendationengineProjectsLocationsCatalogsEventStoresUserEventsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

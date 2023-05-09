@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ReposCreateCommitSignatureProtectionResponse {
     
     public String contentType;
+
     public ReposCreateCommitSignatureProtectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ReposCreateCommitSignatureProtectionResponse {
     
     
     public Integer statusCode;
+
     public ReposCreateCommitSignatureProtectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ReposCreateCommitSignatureProtectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ReposCreateCommitSignatureProtectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ReposCreateCommitSignatureProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public ReposCreateCommitSignatureProtectionResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,9 +48,14 @@ public class ReposCreateCommitSignatureProtectionResponse {
      */
     
     public org.openapis.openapi.models.shared.ProtectedBranchAdminEnforced protectedBranchAdminEnforced;
+
     public ReposCreateCommitSignatureProtectionResponse withProtectedBranchAdminEnforced(org.openapis.openapi.models.shared.ProtectedBranchAdminEnforced protectedBranchAdminEnforced) {
         this.protectedBranchAdminEnforced = protectedBranchAdminEnforced;
         return this;
     }
     
+    public ReposCreateCommitSignatureProtectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

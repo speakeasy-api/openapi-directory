@@ -18,6 +18,7 @@ public class OSPolicyResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("inventoryFilters")
     public OSPolicyInventoryFilter[] inventoryFilters;
+
     public OSPolicyResourceGroup withInventoryFilters(OSPolicyInventoryFilter[] inventoryFilters) {
         this.inventoryFilters = inventoryFilters;
         return this;
@@ -29,6 +30,7 @@ public class OSPolicyResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("osFilter")
     public OSPolicyOSFilter osFilter;
+
     public OSPolicyResourceGroup withOsFilter(OSPolicyOSFilter osFilter) {
         this.osFilter = osFilter;
         return this;
@@ -40,9 +42,11 @@ public class OSPolicyResourceGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public OSPolicyResource[] resources;
+
     public OSPolicyResourceGroup withResources(OSPolicyResource[] resources) {
         this.resources = resources;
         return this;
     }
     
+    public OSPolicyResourceGroup(){}
 }

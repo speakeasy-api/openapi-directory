@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ConfigurationSettingsDescriptions {
     
     public ConfigurationSettingsDescription[] configurationSettings;
+
     public ConfigurationSettingsDescriptions withConfigurationSettings(ConfigurationSettingsDescription[] configurationSettings) {
         this.configurationSettings = configurationSettings;
         return this;
     }
     
+    public ConfigurationSettingsDescriptions(){}
 }

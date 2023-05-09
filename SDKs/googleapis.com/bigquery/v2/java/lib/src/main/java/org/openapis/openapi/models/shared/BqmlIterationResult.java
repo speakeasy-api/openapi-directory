@@ -15,6 +15,7 @@ public class BqmlIterationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("durationMs")
     public String durationMs;
+
     public BqmlIterationResult withDurationMs(String durationMs) {
         this.durationMs = durationMs;
         return this;
@@ -26,6 +27,7 @@ public class BqmlIterationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("evalLoss")
     public Double evalLoss;
+
     public BqmlIterationResult withEvalLoss(Double evalLoss) {
         this.evalLoss = evalLoss;
         return this;
@@ -37,6 +39,7 @@ public class BqmlIterationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Integer index;
+
     public BqmlIterationResult withIndex(Integer index) {
         this.index = index;
         return this;
@@ -48,6 +51,7 @@ public class BqmlIterationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("learnRate")
     public Double learnRate;
+
     public BqmlIterationResult withLearnRate(Double learnRate) {
         this.learnRate = learnRate;
         return this;
@@ -59,9 +63,11 @@ public class BqmlIterationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingLoss")
     public Double trainingLoss;
+
     public BqmlIterationResult withTrainingLoss(Double trainingLoss) {
         this.trainingLoss = trainingLoss;
         return this;
     }
     
+    public BqmlIterationResult(){}
 }

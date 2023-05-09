@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Fulfillment1 {
     @JsonProperty("Count")
     public Integer count;
+
     public Fulfillment1 withCount(Integer count) {
         this.count = count;
         return this;
@@ -16,6 +17,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Facets")
     public String facets;
+
     public Fulfillment1 withFacets(String facets) {
         this.facets = facets;
         return this;
@@ -23,6 +25,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Max")
     public Integer max;
+
     public Fulfillment1 withMax(Integer max) {
         this.max = max;
         return this;
@@ -30,6 +33,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Mean")
     public Integer mean;
+
     public Fulfillment1 withMean(Integer mean) {
         this.mean = mean;
         return this;
@@ -37,6 +41,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Min")
     public Integer min;
+
     public Fulfillment1 withMin(Integer min) {
         this.min = min;
         return this;
@@ -44,6 +49,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Missing")
     public Integer missing;
+
     public Fulfillment1 withMissing(Integer missing) {
         this.missing = missing;
         return this;
@@ -51,6 +57,7 @@ public class Fulfillment1 {
     
     @JsonProperty("StdDev")
     public Integer stdDev;
+
     public Fulfillment1 withStdDev(Integer stdDev) {
         this.stdDev = stdDev;
         return this;
@@ -58,6 +65,7 @@ public class Fulfillment1 {
     
     @JsonProperty("Sum")
     public Integer sum;
+
     public Fulfillment1 withSum(Integer sum) {
         this.sum = sum;
         return this;
@@ -65,9 +73,21 @@ public class Fulfillment1 {
     
     @JsonProperty("SumOfSquares")
     public Integer sumOfSquares;
+
     public Fulfillment1 withSumOfSquares(Integer sumOfSquares) {
         this.sumOfSquares = sumOfSquares;
         return this;
     }
     
+    public Fulfillment1(@JsonProperty("Count") Integer count, @JsonProperty("Facets") String facets, @JsonProperty("Max") Integer max, @JsonProperty("Mean") Integer mean, @JsonProperty("Min") Integer min, @JsonProperty("Missing") Integer missing, @JsonProperty("StdDev") Integer stdDev, @JsonProperty("Sum") Integer sum, @JsonProperty("SumOfSquares") Integer sumOfSquares) {
+        this.count = count;
+        this.facets = facets;
+        this.max = max;
+        this.mean = mean;
+        this.min = min;
+        this.missing = missing;
+        this.stdDev = stdDev;
+        this.sum = sum;
+        this.sumOfSquares = sumOfSquares;
+  }
 }

@@ -12,6 +12,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("afterTime")
     public String afterTime;
+
     public DescribeCasesRequest withAfterTime(String afterTime) {
         this.afterTime = afterTime;
         return this;
@@ -20,6 +21,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("beforeTime")
     public String beforeTime;
+
     public DescribeCasesRequest withBeforeTime(String beforeTime) {
         this.beforeTime = beforeTime;
         return this;
@@ -28,6 +30,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("caseIdList")
     public String[] caseIdList;
+
     public DescribeCasesRequest withCaseIdList(String[] caseIdList) {
         this.caseIdList = caseIdList;
         return this;
@@ -36,6 +39,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayId")
     public String displayId;
+
     public DescribeCasesRequest withDisplayId(String displayId) {
         this.displayId = displayId;
         return this;
@@ -44,6 +48,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeCommunications")
     public Boolean includeCommunications;
+
     public DescribeCasesRequest withIncludeCommunications(Boolean includeCommunications) {
         this.includeCommunications = includeCommunications;
         return this;
@@ -52,6 +57,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeResolvedCases")
     public Boolean includeResolvedCases;
+
     public DescribeCasesRequest withIncludeResolvedCases(Boolean includeResolvedCases) {
         this.includeResolvedCases = includeResolvedCases;
         return this;
@@ -60,6 +66,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("language")
     public String language;
+
     public DescribeCasesRequest withLanguage(String language) {
         this.language = language;
         return this;
@@ -68,6 +75,7 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public DescribeCasesRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -76,9 +84,11 @@ public class DescribeCasesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public DescribeCasesRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public DescribeCasesRequest(){}
 }

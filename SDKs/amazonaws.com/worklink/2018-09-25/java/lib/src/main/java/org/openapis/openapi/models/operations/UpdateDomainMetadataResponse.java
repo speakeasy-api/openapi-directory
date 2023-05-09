@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateDomainMetadataResponse {
     
     public String contentType;
+
     public UpdateDomainMetadataResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateDomainMetadataResponse {
      */
     
     public Object internalServerErrorException;
+
     public UpdateDomainMetadataResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateDomainMetadataResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateDomainMetadataResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateDomainMetadataResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateDomainMetadataResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class UpdateDomainMetadataResponse {
     
     
     public Integer statusCode;
+
     public UpdateDomainMetadataResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UpdateDomainMetadataResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateDomainMetadataResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class UpdateDomainMetadataResponse {
      */
     
     public Object tooManyRequestsException;
+
     public UpdateDomainMetadataResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -73,6 +81,7 @@ public class UpdateDomainMetadataResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateDomainMetadataResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -83,9 +92,14 @@ public class UpdateDomainMetadataResponse {
      */
     
     public java.util.Map<String, Object> updateDomainMetadataResponse;
+
     public UpdateDomainMetadataResponse withUpdateDomainMetadataResponse(java.util.Map<String, Object> updateDomainMetadataResponse) {
         this.updateDomainMetadataResponse = updateDomainMetadataResponse;
         return this;
     }
     
+    public UpdateDomainMetadataResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

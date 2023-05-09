@@ -15,6 +15,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningEnabled")
     public Boolean signingEnabled;
+
     public DkimAttributes withSigningEnabled(Boolean signingEnabled) {
         this.signingEnabled = signingEnabled;
         return this;
@@ -23,6 +24,7 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public DkimStatusEnum status;
+
     public DkimAttributes withStatus(DkimStatusEnum status) {
         this.status = status;
         return this;
@@ -31,9 +33,11 @@ public class DkimAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tokens")
     public String[] tokens;
+
     public DkimAttributes withTokens(String[] tokens) {
         this.tokens = tokens;
         return this;
     }
     
+    public DkimAttributes(){}
 }

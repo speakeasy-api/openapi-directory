@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DetectStackSetDriftInput {
     
     public CallAsEnum callAs;
+
     public DetectStackSetDriftInput withCallAs(CallAsEnum callAs) {
         this.callAs = callAs;
         return this;
@@ -16,6 +17,7 @@ public class DetectStackSetDriftInput {
     
     
     public String operationId;
+
     public DetectStackSetDriftInput withOperationId(String operationId) {
         this.operationId = operationId;
         return this;
@@ -26,6 +28,7 @@ public class DetectStackSetDriftInput {
      */
     
     public StackSetOperationPreferences operationPreferences;
+
     public DetectStackSetDriftInput withOperationPreferences(StackSetOperationPreferences operationPreferences) {
         this.operationPreferences = operationPreferences;
         return this;
@@ -33,9 +36,13 @@ public class DetectStackSetDriftInput {
     
     
     public String stackSetName;
+
     public DetectStackSetDriftInput withStackSetName(String stackSetName) {
         this.stackSetName = stackSetName;
         return this;
     }
     
+    public DetectStackSetDriftInput(@JsonProperty("StackSetName") String stackSetName) {
+        this.stackSetName = stackSetName;
+  }
 }

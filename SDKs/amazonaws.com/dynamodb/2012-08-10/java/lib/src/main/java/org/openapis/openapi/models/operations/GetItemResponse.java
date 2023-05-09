@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemResponse {
     
     public String contentType;
+
     public GetItemResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetItemResponse {
      */
     
     public org.openapis.openapi.models.shared.GetItemOutput getItemOutput;
+
     public GetItemResponse withGetItemOutput(org.openapis.openapi.models.shared.GetItemOutput getItemOutput) {
         this.getItemOutput = getItemOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetItemResponse {
      */
     
     public Object internalServerError;
+
     public GetItemResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -39,6 +43,7 @@ public class GetItemResponse {
      */
     
     public Object provisionedThroughputExceededException;
+
     public GetItemResponse withProvisionedThroughputExceededException(Object provisionedThroughputExceededException) {
         this.provisionedThroughputExceededException = provisionedThroughputExceededException;
         return this;
@@ -49,6 +54,7 @@ public class GetItemResponse {
      */
     
     public Object requestLimitExceeded;
+
     public GetItemResponse withRequestLimitExceeded(Object requestLimitExceeded) {
         this.requestLimitExceeded = requestLimitExceeded;
         return this;
@@ -56,6 +62,7 @@ public class GetItemResponse {
     
     
     public Integer statusCode;
+
     public GetItemResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetItemResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class GetItemResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetItemResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetItemResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

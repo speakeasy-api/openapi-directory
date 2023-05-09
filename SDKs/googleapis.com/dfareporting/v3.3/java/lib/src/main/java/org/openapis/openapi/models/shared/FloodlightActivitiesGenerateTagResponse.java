@@ -18,6 +18,7 @@ public class FloodlightActivitiesGenerateTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("floodlightActivityTag")
     public String floodlightActivityTag;
+
     public FloodlightActivitiesGenerateTagResponse withFloodlightActivityTag(String floodlightActivityTag) {
         this.floodlightActivityTag = floodlightActivityTag;
         return this;
@@ -29,6 +30,7 @@ public class FloodlightActivitiesGenerateTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("globalSiteTagGlobalSnippet")
     public String globalSiteTagGlobalSnippet;
+
     public FloodlightActivitiesGenerateTagResponse withGlobalSiteTagGlobalSnippet(String globalSiteTagGlobalSnippet) {
         this.globalSiteTagGlobalSnippet = globalSiteTagGlobalSnippet;
         return this;
@@ -40,9 +42,11 @@ public class FloodlightActivitiesGenerateTagResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public FloodlightActivitiesGenerateTagResponse withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public FloodlightActivitiesGenerateTagResponse(){}
 }

@@ -12,9 +12,13 @@ public class PostLoadBalancersIdActionsChangeTypeChangeTypeRequest {
      */
     @JsonProperty("load_balancer_type")
     public String loadBalancerType;
+
     public PostLoadBalancersIdActionsChangeTypeChangeTypeRequest withLoadBalancerType(String loadBalancerType) {
         this.loadBalancerType = loadBalancerType;
         return this;
     }
     
+    public PostLoadBalancersIdActionsChangeTypeChangeTypeRequest(@JsonProperty("load_balancer_type") String loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+  }
 }

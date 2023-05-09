@@ -15,6 +15,7 @@ public class NodesChildrenListNodeLinks {
      */
     
     public String html;
+
     public NodesChildrenListNodeLinks withHtml(String html) {
         this.html = html;
         return this;
@@ -25,9 +26,11 @@ public class NodesChildrenListNodeLinks {
      */
     
     public String self;
+
     public NodesChildrenListNodeLinks withSelf(String self) {
         this.self = self;
         return this;
     }
     
+    public NodesChildrenListNodeLinks(){}
 }

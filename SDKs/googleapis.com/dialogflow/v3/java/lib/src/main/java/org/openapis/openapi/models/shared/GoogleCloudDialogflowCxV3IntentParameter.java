@@ -18,6 +18,7 @@ public class GoogleCloudDialogflowCxV3IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entityType")
     public String entityType;
+
     public GoogleCloudDialogflowCxV3IntentParameter withEntityType(String entityType) {
         this.entityType = entityType;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDialogflowCxV3IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public GoogleCloudDialogflowCxV3IntentParameter withId(String id) {
         this.id = id;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDialogflowCxV3IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isList")
     public Boolean isList;
+
     public GoogleCloudDialogflowCxV3IntentParameter withIsList(Boolean isList) {
         this.isList = isList;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDialogflowCxV3IntentParameter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("redact")
     public Boolean redact;
+
     public GoogleCloudDialogflowCxV3IntentParameter withRedact(Boolean redact) {
         this.redact = redact;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3IntentParameter(){}
 }

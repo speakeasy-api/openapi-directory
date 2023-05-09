@@ -18,9 +18,11 @@ public class CancelResourceRequestOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressEvent")
     public ProgressEvent progressEvent;
+
     public CancelResourceRequestOutput withProgressEvent(ProgressEvent progressEvent) {
         this.progressEvent = progressEvent;
         return this;
     }
     
+    public CancelResourceRequestOutput(){}
 }

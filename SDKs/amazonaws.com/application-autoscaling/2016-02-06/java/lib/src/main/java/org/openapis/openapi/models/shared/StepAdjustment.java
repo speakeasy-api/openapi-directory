@@ -15,6 +15,7 @@ public class StepAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricIntervalLowerBound")
     public Double metricIntervalLowerBound;
+
     public StepAdjustment withMetricIntervalLowerBound(Double metricIntervalLowerBound) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         return this;
@@ -23,6 +24,7 @@ public class StepAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricIntervalUpperBound")
     public Double metricIntervalUpperBound;
+
     public StepAdjustment withMetricIntervalUpperBound(Double metricIntervalUpperBound) {
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         return this;
@@ -30,9 +32,13 @@ public class StepAdjustment {
     
     @JsonProperty("ScalingAdjustment")
     public Long scalingAdjustment;
+
     public StepAdjustment withScalingAdjustment(Long scalingAdjustment) {
         this.scalingAdjustment = scalingAdjustment;
         return this;
     }
     
+    public StepAdjustment(@JsonProperty("ScalingAdjustment") Long scalingAdjustment) {
+        this.scalingAdjustment = scalingAdjustment;
+  }
 }

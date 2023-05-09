@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetSshKeys200ApplicationJSONMeta {
     @JsonProperty("pagination")
     public GetSshKeys200ApplicationJSONMetaPagination pagination;
+
     public GetSshKeys200ApplicationJSONMeta withPagination(GetSshKeys200ApplicationJSONMetaPagination pagination) {
         this.pagination = pagination;
         return this;
     }
     
+    public GetSshKeys200ApplicationJSONMeta(@JsonProperty("pagination") GetSshKeys200ApplicationJSONMetaPagination pagination) {
+        this.pagination = pagination;
+  }
 }

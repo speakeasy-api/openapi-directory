@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AnalyticsDistributionReleaseCounts200ApplicationJSON {
     @JsonProperty("counts")
     public AnalyticsDistributionReleaseCounts200ApplicationJSONCounts[] counts;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSON withCounts(AnalyticsDistributionReleaseCounts200ApplicationJSONCounts[] counts) {
         this.counts = counts;
         return this;
@@ -22,9 +23,13 @@ public class AnalyticsDistributionReleaseCounts200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total")
     public Long total;
+
     public AnalyticsDistributionReleaseCounts200ApplicationJSON withTotal(Long total) {
         this.total = total;
         return this;
     }
     
+    public AnalyticsDistributionReleaseCounts200ApplicationJSON(@JsonProperty("counts") AnalyticsDistributionReleaseCounts200ApplicationJSONCounts[] counts) {
+        this.counts = counts;
+  }
 }

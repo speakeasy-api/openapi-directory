@@ -15,6 +15,7 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collaboratorUserId")
     public String collaboratorUserId;
+
     public CreateSessionRequest withCollaboratorUserId(String collaboratorUserId) {
         this.collaboratorUserId = collaboratorUserId;
         return this;
@@ -23,9 +24,11 @@ public class CreateSessionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("host")
     public String host;
+
     public CreateSessionRequest withHost(String host) {
         this.host = host;
         return this;
     }
     
+    public CreateSessionRequest(){}
 }

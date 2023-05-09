@@ -15,9 +15,11 @@ public class PublicLovIndex {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public PublicLovIndexLinks links;
+
     public PublicLovIndex withLinks(PublicLovIndexLinks links) {
         this.links = links;
         return this;
     }
     
+    public PublicLovIndex(){}
 }

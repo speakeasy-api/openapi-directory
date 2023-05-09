@@ -15,9 +15,11 @@ public class MQBrokerAccessCredentials {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BasicAuth")
     public String basicAuth;
+
     public MQBrokerAccessCredentials withBasicAuth(String basicAuth) {
         this.basicAuth = basicAuth;
         return this;
     }
     
+    public MQBrokerAccessCredentials(){}
 }

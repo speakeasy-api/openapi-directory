@@ -18,6 +18,7 @@ public class UpdateDocumentStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documentStyle")
     public DocumentStyle documentStyle;
+
     public UpdateDocumentStyleRequest withDocumentStyle(DocumentStyle documentStyle) {
         this.documentStyle = documentStyle;
         return this;
@@ -29,9 +30,11 @@ public class UpdateDocumentStyleRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateDocumentStyleRequest withFields(String fields) {
         this.fields = fields;
         return this;
     }
     
+    public UpdateDocumentStyleRequest(){}
 }

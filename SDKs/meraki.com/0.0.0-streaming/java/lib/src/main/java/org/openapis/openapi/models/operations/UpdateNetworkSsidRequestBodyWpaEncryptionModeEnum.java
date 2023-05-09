@@ -7,12 +7,13 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum - The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode' or 'WPA3 only')
+ * UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum - The types of WPA encryption. ('WPA1 only', 'WPA1 and WPA2', 'WPA2 only', 'WPA3 Transition Mode', 'WPA3 only' or 'WPA3 192-bit Security')
  */
 public enum UpdateNetworkSsidRequestBodyWpaEncryptionModeEnum {
     WPA1_AND_WPA2("WPA1 and WPA2"),
     WPA1_ONLY("WPA1 only"),
     WPA2_ONLY("WPA2 only"),
+    WPA3192_BIT_SECURITY("WPA3 192-bit Security"),
     WPA3_TRANSITION_MODE("WPA3 Transition Mode"),
     WPA3_ONLY("WPA3 only");
 

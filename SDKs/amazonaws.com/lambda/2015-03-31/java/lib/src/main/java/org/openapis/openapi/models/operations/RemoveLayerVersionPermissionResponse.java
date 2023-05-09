@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RemoveLayerVersionPermissionResponse {
     
     public String contentType;
+
     public RemoveLayerVersionPermissionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RemoveLayerVersionPermissionResponse {
      */
     
     public Object invalidParameterValueException;
+
     public RemoveLayerVersionPermissionResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class RemoveLayerVersionPermissionResponse {
      */
     
     public Object preconditionFailedException;
+
     public RemoveLayerVersionPermissionResponse withPreconditionFailedException(Object preconditionFailedException) {
         this.preconditionFailedException = preconditionFailedException;
         return this;
@@ -39,6 +43,7 @@ public class RemoveLayerVersionPermissionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public RemoveLayerVersionPermissionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -49,6 +54,7 @@ public class RemoveLayerVersionPermissionResponse {
      */
     
     public Object serviceException;
+
     public RemoveLayerVersionPermissionResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -56,6 +62,7 @@ public class RemoveLayerVersionPermissionResponse {
     
     
     public Integer statusCode;
+
     public RemoveLayerVersionPermissionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class RemoveLayerVersionPermissionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RemoveLayerVersionPermissionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class RemoveLayerVersionPermissionResponse {
      */
     
     public Object tooManyRequestsException;
+
     public RemoveLayerVersionPermissionResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public RemoveLayerVersionPermissionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

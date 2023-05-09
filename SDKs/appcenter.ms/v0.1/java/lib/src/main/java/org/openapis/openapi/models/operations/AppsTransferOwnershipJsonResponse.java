@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class AppsTransferOwnershipJsonResponse {
     
     public String contentType;
+
     public AppsTransferOwnershipJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class AppsTransferOwnershipJsonResponse {
     
     
     public Integer statusCode;
+
     public AppsTransferOwnershipJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class AppsTransferOwnershipJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public AppsTransferOwnershipJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class AppsTransferOwnershipJsonResponse {
      */
     
     public AppsTransferOwnershipJSON200ApplicationJSON appsTransferOwnershipJSON200ApplicationJSONObject;
+
     public AppsTransferOwnershipJsonResponse withAppsTransferOwnershipJSON200ApplicationJSONObject(AppsTransferOwnershipJSON200ApplicationJSON appsTransferOwnershipJSON200ApplicationJSONObject) {
         this.appsTransferOwnershipJSON200ApplicationJSONObject = appsTransferOwnershipJSON200ApplicationJSONObject;
         return this;
@@ -43,9 +48,14 @@ public class AppsTransferOwnershipJsonResponse {
      */
     
     public AppsTransferOwnershipJSONDefaultApplicationJSON appsTransferOwnershipJSONDefaultApplicationJSONObject;
+
     public AppsTransferOwnershipJsonResponse withAppsTransferOwnershipJSONDefaultApplicationJSONObject(AppsTransferOwnershipJSONDefaultApplicationJSON appsTransferOwnershipJSONDefaultApplicationJSONObject) {
         this.appsTransferOwnershipJSONDefaultApplicationJSONObject = appsTransferOwnershipJSONDefaultApplicationJSONObject;
         return this;
     }
     
+    public AppsTransferOwnershipJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class CreateGroupIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateGroupIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSONData data;
+
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSON withData(CreateGroupIfNotExistsForUsingGET200ApplicationJSONData data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateGroupIfNotExistsForUsingGET200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateGroupIfNotExistsForUsingGET200ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateGroupIfNotExistsForUsingGET200ApplicationJSON(){}
 }

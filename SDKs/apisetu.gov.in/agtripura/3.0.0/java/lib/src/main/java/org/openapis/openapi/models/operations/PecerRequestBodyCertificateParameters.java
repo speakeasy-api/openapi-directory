@@ -12,6 +12,7 @@ public class PecerRequestBodyCertificateParameters {
      */
     @JsonProperty("AC_NO")
     public String acNo;
+
     public PecerRequestBodyCertificateParameters withAcNo(String acNo) {
         this.acNo = acNo;
         return this;
@@ -22,9 +23,14 @@ public class PecerRequestBodyCertificateParameters {
      */
     @JsonProperty("DOB")
     public String dob;
+
     public PecerRequestBodyCertificateParameters withDob(String dob) {
         this.dob = dob;
         return this;
     }
     
+    public PecerRequestBodyCertificateParameters(@JsonProperty("AC_NO") String acNo, @JsonProperty("DOB") String dob) {
+        this.acNo = acNo;
+        this.dob = dob;
+  }
 }

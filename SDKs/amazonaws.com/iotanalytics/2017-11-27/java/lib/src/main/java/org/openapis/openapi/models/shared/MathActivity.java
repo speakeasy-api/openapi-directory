@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class MathActivity {
     @JsonProperty("attribute")
     public String attribute;
+
     public MathActivity withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -21,6 +22,7 @@ public class MathActivity {
     
     @JsonProperty("math")
     public String math;
+
     public MathActivity withMath(String math) {
         this.math = math;
         return this;
@@ -28,6 +30,7 @@ public class MathActivity {
     
     @JsonProperty("name")
     public String name;
+
     public MathActivity withName(String name) {
         this.name = name;
         return this;
@@ -36,9 +39,15 @@ public class MathActivity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public MathActivity withNext(String next) {
         this.next = next;
         return this;
     }
     
+    public MathActivity(@JsonProperty("attribute") String attribute, @JsonProperty("math") String math, @JsonProperty("name") String name) {
+        this.attribute = attribute;
+        this.math = math;
+        this.name = name;
+  }
 }

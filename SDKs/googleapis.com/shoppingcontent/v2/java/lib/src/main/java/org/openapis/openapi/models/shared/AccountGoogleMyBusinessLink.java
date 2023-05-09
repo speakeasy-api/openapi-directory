@@ -15,6 +15,7 @@ public class AccountGoogleMyBusinessLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gmbEmail")
     public String gmbEmail;
+
     public AccountGoogleMyBusinessLink withGmbEmail(String gmbEmail) {
         this.gmbEmail = gmbEmail;
         return this;
@@ -26,9 +27,11 @@ public class AccountGoogleMyBusinessLink {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public AccountGoogleMyBusinessLink withStatus(String status) {
         this.status = status;
         return this;
     }
     
+    public AccountGoogleMyBusinessLink(){}
 }

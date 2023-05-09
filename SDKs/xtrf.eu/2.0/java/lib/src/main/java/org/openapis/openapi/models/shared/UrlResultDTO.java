@@ -15,9 +15,11 @@ public class UrlResultDTO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public UrlResultDTO withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public UrlResultDTO(){}
 }

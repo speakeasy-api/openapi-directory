@@ -12,9 +12,13 @@ public class DeleteLaunchConfigurationTemplateRequestBody {
      */
     @JsonProperty("launchConfigurationTemplateID")
     public String launchConfigurationTemplateID;
+
     public DeleteLaunchConfigurationTemplateRequestBody withLaunchConfigurationTemplateID(String launchConfigurationTemplateID) {
         this.launchConfigurationTemplateID = launchConfigurationTemplateID;
         return this;
     }
     
+    public DeleteLaunchConfigurationTemplateRequestBody(@JsonProperty("launchConfigurationTemplateID") String launchConfigurationTemplateID) {
+        this.launchConfigurationTemplateID = launchConfigurationTemplateID;
+  }
 }

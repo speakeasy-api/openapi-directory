@@ -15,6 +15,7 @@ public class CommitTransactionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CommitDigest")
     public String commitDigest;
+
     public CommitTransactionResult withCommitDigest(String commitDigest) {
         this.commitDigest = commitDigest;
         return this;
@@ -23,6 +24,7 @@ public class CommitTransactionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedIOs")
     public IOUsage consumedIOs;
+
     public CommitTransactionResult withConsumedIOs(IOUsage consumedIOs) {
         this.consumedIOs = consumedIOs;
         return this;
@@ -31,6 +33,7 @@ public class CommitTransactionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public CommitTransactionResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
@@ -39,9 +42,11 @@ public class CommitTransactionResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TransactionId")
     public String transactionId;
+
     public CommitTransactionResult withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
     
+    public CommitTransactionResult(){}
 }

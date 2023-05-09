@@ -12,6 +12,7 @@ public class UpdateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Compatibility")
     public CompatibilityEnum compatibility;
+
     public UpdateSchemaInput withCompatibility(CompatibilityEnum compatibility) {
         this.compatibility = compatibility;
         return this;
@@ -20,6 +21,7 @@ public class UpdateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public UpdateSchemaInput withDescription(String description) {
         this.description = description;
         return this;
@@ -27,6 +29,7 @@ public class UpdateSchemaInput {
     
     @JsonProperty("SchemaId")
     public SchemaId schemaId;
+
     public UpdateSchemaInput withSchemaId(SchemaId schemaId) {
         this.schemaId = schemaId;
         return this;
@@ -35,9 +38,13 @@ public class UpdateSchemaInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SchemaVersionNumber")
     public SchemaVersionNumber schemaVersionNumber;
+
     public UpdateSchemaInput withSchemaVersionNumber(SchemaVersionNumber schemaVersionNumber) {
         this.schemaVersionNumber = schemaVersionNumber;
         return this;
     }
     
+    public UpdateSchemaInput(@JsonProperty("SchemaId") SchemaId schemaId) {
+        this.schemaId = schemaId;
+  }
 }

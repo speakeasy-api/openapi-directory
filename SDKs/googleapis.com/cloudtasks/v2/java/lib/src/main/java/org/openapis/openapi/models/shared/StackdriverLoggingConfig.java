@@ -18,9 +18,11 @@ public class StackdriverLoggingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("samplingRatio")
     public Double samplingRatio;
+
     public StackdriverLoggingConfig withSamplingRatio(Double samplingRatio) {
         this.samplingRatio = samplingRatio;
         return this;
     }
     
+    public StackdriverLoggingConfig(){}
 }

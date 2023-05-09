@@ -18,6 +18,7 @@ public class InstanceGroupManagersListManagedInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedInstances")
     public ManagedInstance[] managedInstances;
+
     public InstanceGroupManagersListManagedInstancesResponse withManagedInstances(ManagedInstance[] managedInstances) {
         this.managedInstances = managedInstances;
         return this;
@@ -29,9 +30,11 @@ public class InstanceGroupManagersListManagedInstancesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public InstanceGroupManagersListManagedInstancesResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public InstanceGroupManagersListManagedInstancesResponse(){}
 }

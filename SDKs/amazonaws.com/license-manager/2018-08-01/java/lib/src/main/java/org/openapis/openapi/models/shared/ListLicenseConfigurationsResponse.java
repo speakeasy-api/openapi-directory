@@ -15,6 +15,7 @@ public class ListLicenseConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LicenseConfigurations")
     public LicenseConfiguration[] licenseConfigurations;
+
     public ListLicenseConfigurationsResponse withLicenseConfigurations(LicenseConfiguration[] licenseConfigurations) {
         this.licenseConfigurations = licenseConfigurations;
         return this;
@@ -23,9 +24,11 @@ public class ListLicenseConfigurationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListLicenseConfigurationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListLicenseConfigurationsResponse(){}
 }

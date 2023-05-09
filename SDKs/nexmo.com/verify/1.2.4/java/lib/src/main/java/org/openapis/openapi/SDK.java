@@ -131,6 +131,11 @@ public class SDK {
 		if (this._serverUrl == null) {
 			this._serverUrl = SERVERS[0];
 		}
+
+		if (this._serverUrl.endsWith("/")) {
+            this._serverUrl = this._serverUrl.substring(0, this._serverUrl.length() - 1);
+        }
+
 		
 		
 		this.fraudManagement = new FraudManagement(
@@ -183,12 +188,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyCheckResponse res = new org.openapis.openapi.models.operations.VerifyCheckResponse() {{
+        org.openapis.openapi.models.operations.VerifyCheckResponse res = new org.openapis.openapi.models.operations.VerifyCheckResponse(contentType, httpRes.statusCode()) {{
             verifyCheck200ApplicationJSONOneOf = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -240,12 +243,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyControlResponse res = new org.openapis.openapi.models.operations.VerifyControlResponse() {{
+        org.openapis.openapi.models.operations.VerifyControlResponse res = new org.openapis.openapi.models.operations.VerifyControlResponse(contentType, httpRes.statusCode()) {{
             verifyControl200ApplicationJSONOneOf = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +294,9 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifyRequestWithPsd2Response res = new org.openapis.openapi.models.operations.VerifyRequestWithPsd2Response() {{
+        org.openapis.openapi.models.operations.VerifyRequestWithPsd2Response res = new org.openapis.openapi.models.operations.VerifyRequestWithPsd2Response(contentType, httpRes.statusCode()) {{
             verifyRequestWithPsd2200ApplicationJSONOneOf = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -343,12 +342,10 @@ public class SDK {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.VerifySearchResponse res = new org.openapis.openapi.models.operations.VerifySearchResponse() {{
+        org.openapis.openapi.models.operations.VerifySearchResponse res = new org.openapis.openapi.models.operations.VerifySearchResponse(contentType, httpRes.statusCode()) {{
             verifySearch200ApplicationJSONOneOf = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

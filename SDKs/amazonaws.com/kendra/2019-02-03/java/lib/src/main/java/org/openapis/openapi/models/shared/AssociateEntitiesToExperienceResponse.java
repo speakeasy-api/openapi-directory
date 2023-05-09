@@ -15,9 +15,11 @@ public class AssociateEntitiesToExperienceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FailedEntityList")
     public FailedEntity[] failedEntityList;
+
     public AssociateEntitiesToExperienceResponse withFailedEntityList(FailedEntity[] failedEntityList) {
         this.failedEntityList = failedEntityList;
         return this;
     }
     
+    public AssociateEntitiesToExperienceResponse(){}
 }

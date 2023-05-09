@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class KeyBindResponse {
     
     public byte[] body;
+
     public KeyBindResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class KeyBindResponse {
     
     
     public String contentType;
+
     public KeyBindResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class KeyBindResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public KeyBindResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -33,6 +37,7 @@ public class KeyBindResponse {
     
     
     public Integer statusCode;
+
     public KeyBindResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -40,6 +45,7 @@ public class KeyBindResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public KeyBindResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -50,9 +56,14 @@ public class KeyBindResponse {
      */
     
     public KeyBind200ApplicationJSON keyBind200ApplicationJSONObject;
+
     public KeyBindResponse withKeyBind200ApplicationJSONObject(KeyBind200ApplicationJSON keyBind200ApplicationJSONObject) {
         this.keyBind200ApplicationJSONObject = keyBind200ApplicationJSONObject;
         return this;
     }
     
+    public KeyBindResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValue {
      */
     
     public Long activityId;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValue withActivityId(Long activityId) {
         this.activityId = activityId;
         return this;
@@ -25,6 +26,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValue {
      */
     
     public DestinyHistoricalStatsDestinyClanAggregateStatValueBasic basic;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValue withBasic(DestinyHistoricalStatsDestinyClanAggregateStatValueBasic basic) {
         this.basic = basic;
         return this;
@@ -35,6 +37,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValue {
      */
     
     public DestinyHistoricalStatsDestinyClanAggregateStatValuePga pga;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValue withPga(DestinyHistoricalStatsDestinyClanAggregateStatValuePga pga) {
         this.pga = pga;
         return this;
@@ -45,6 +48,7 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValue {
      */
     
     public String statId;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValue withStatId(String statId) {
         this.statId = statId;
         return this;
@@ -55,9 +59,11 @@ public class DestinyHistoricalStatsDestinyClanAggregateStatValue {
      */
     
     public DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted weighted;
+
     public DestinyHistoricalStatsDestinyClanAggregateStatValue withWeighted(DestinyHistoricalStatsDestinyClanAggregateStatValueWeighted weighted) {
         this.weighted = weighted;
         return this;
     }
     
+    public DestinyHistoricalStatsDestinyClanAggregateStatValue(){}
 }

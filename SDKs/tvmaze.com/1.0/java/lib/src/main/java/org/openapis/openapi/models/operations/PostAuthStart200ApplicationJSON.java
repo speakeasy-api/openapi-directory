@@ -18,6 +18,7 @@ public class PostAuthStart200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("confirm_url")
     public String confirmUrl;
+
     public PostAuthStart200ApplicationJSON withConfirmUrl(String confirmUrl) {
         this.confirmUrl = confirmUrl;
         return this;
@@ -29,9 +30,11 @@ public class PostAuthStart200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public PostAuthStart200ApplicationJSON withToken(String token) {
         this.token = token;
         return this;
     }
     
+    public PostAuthStart200ApplicationJSON(){}
 }

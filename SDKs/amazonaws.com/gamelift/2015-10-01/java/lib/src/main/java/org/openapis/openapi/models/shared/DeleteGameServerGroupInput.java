@@ -12,6 +12,7 @@ public class DeleteGameServerGroupInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DeleteOption")
     public GameServerGroupDeleteOptionEnum deleteOption;
+
     public DeleteGameServerGroupInput withDeleteOption(GameServerGroupDeleteOptionEnum deleteOption) {
         this.deleteOption = deleteOption;
         return this;
@@ -19,9 +20,13 @@ public class DeleteGameServerGroupInput {
     
     @JsonProperty("GameServerGroupName")
     public String gameServerGroupName;
+
     public DeleteGameServerGroupInput withGameServerGroupName(String gameServerGroupName) {
         this.gameServerGroupName = gameServerGroupName;
         return this;
     }
     
+    public DeleteGameServerGroupInput(@JsonProperty("GameServerGroupName") String gameServerGroupName) {
+        this.gameServerGroupName = gameServerGroupName;
+  }
 }

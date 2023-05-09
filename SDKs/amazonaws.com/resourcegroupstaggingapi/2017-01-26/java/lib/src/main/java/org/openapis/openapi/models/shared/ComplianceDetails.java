@@ -15,6 +15,7 @@ public class ComplianceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ComplianceStatus")
     public Boolean complianceStatus;
+
     public ComplianceDetails withComplianceStatus(Boolean complianceStatus) {
         this.complianceStatus = complianceStatus;
         return this;
@@ -23,6 +24,7 @@ public class ComplianceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeysWithNoncompliantValues")
     public String[] keysWithNoncompliantValues;
+
     public ComplianceDetails withKeysWithNoncompliantValues(String[] keysWithNoncompliantValues) {
         this.keysWithNoncompliantValues = keysWithNoncompliantValues;
         return this;
@@ -31,9 +33,11 @@ public class ComplianceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NoncompliantKeys")
     public String[] noncompliantKeys;
+
     public ComplianceDetails withNoncompliantKeys(String[] noncompliantKeys) {
         this.noncompliantKeys = noncompliantKeys;
         return this;
     }
     
+    public ComplianceDetails(){}
 }

@@ -18,6 +18,7 @@ public class EnvironmentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionConfig")
     public ExecutionConfig executionConfig;
+
     public EnvironmentConfig withExecutionConfig(ExecutionConfig executionConfig) {
         this.executionConfig = executionConfig;
         return this;
@@ -29,9 +30,11 @@ public class EnvironmentConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("peripheralsConfig")
     public PeripheralsConfig peripheralsConfig;
+
     public EnvironmentConfig withPeripheralsConfig(PeripheralsConfig peripheralsConfig) {
         this.peripheralsConfig = peripheralsConfig;
         return this;
     }
     
+    public EnvironmentConfig(){}
 }

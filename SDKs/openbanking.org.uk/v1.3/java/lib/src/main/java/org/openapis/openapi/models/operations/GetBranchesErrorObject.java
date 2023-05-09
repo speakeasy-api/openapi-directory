@@ -15,6 +15,7 @@ public class GetBranchesErrorObject {
      */
     @JsonProperty("description")
     public String description;
+
     public GetBranchesErrorObject withDescription(String description) {
         this.description = description;
         return this;
@@ -25,6 +26,7 @@ public class GetBranchesErrorObject {
      */
     @JsonProperty("status")
     public String status;
+
     public GetBranchesErrorObject withStatus(String status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class GetBranchesErrorObject {
      */
     @JsonProperty("title")
     public String title;
+
     public GetBranchesErrorObject withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetBranchesErrorObject(@JsonProperty("description") String description, @JsonProperty("status") String status, @JsonProperty("title") String title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

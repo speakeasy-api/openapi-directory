@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SendInvitationsResponse {
     
     public String contentType;
+
     public SendInvitationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SendInvitationsResponse {
      */
     
     public org.openapis.openapi.models.shared.InvitationStatisticsDTO invitationStatisticsDTO;
+
     public SendInvitationsResponse withInvitationStatisticsDTO(org.openapis.openapi.models.shared.InvitationStatisticsDTO invitationStatisticsDTO) {
         this.invitationStatisticsDTO = invitationStatisticsDTO;
         return this;
@@ -26,6 +29,7 @@ public class SendInvitationsResponse {
     
     
     public Integer statusCode;
+
     public SendInvitationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class SendInvitationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SendInvitationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public SendInvitationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

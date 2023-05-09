@@ -15,6 +15,7 @@ public class Filtering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("exclude")
     public java.util.Map<String, String>[] exclude;
+
     public Filtering withExclude(java.util.Map<String, String>[] exclude) {
         this.exclude = exclude;
         return this;
@@ -26,9 +27,11 @@ public class Filtering {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("include")
     public java.util.Map<String, String>[] include;
+
     public Filtering withInclude(java.util.Map<String, String>[] include) {
         this.include = include;
         return this;
     }
     
+    public Filtering(){}
 }

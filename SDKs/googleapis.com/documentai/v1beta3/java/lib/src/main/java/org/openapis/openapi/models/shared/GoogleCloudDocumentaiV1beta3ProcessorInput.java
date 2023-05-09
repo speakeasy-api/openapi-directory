@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudDocumentaiV1beta3ProcessorInput withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("defaultProcessorVersion")
     public String defaultProcessorVersion;
+
     public GoogleCloudDocumentaiV1beta3ProcessorInput withDefaultProcessorVersion(String defaultProcessorVersion) {
         this.defaultProcessorVersion = defaultProcessorVersion;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDocumentaiV1beta3ProcessorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDocumentaiV1beta3ProcessorInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,20 +54,23 @@ public class GoogleCloudDocumentaiV1beta3ProcessorInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kmsKeyName")
     public String kmsKeyName;
+
     public GoogleCloudDocumentaiV1beta3ProcessorInput withKmsKeyName(String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
         return this;
     }
     
     /**
-     * The processor type, e.g., `OCR_PROCESSOR`, `INVOICE_PROCESSOR`, etc. To get a list of processors types, see FetchProcessorTypes.
+     * The processor type, such as: `OCR_PROCESSOR`, `INVOICE_PROCESSOR`. To get a list of processor types, see FetchProcessorTypes.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public String type;
+
     public GoogleCloudDocumentaiV1beta3ProcessorInput withType(String type) {
         this.type = type;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1beta3ProcessorInput(){}
 }

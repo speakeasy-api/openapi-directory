@@ -15,6 +15,7 @@ public class EntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public EntityFilterNameEnum name;
+
     public EntityFilter withName(EntityFilterNameEnum name) {
         this.name = name;
         return this;
@@ -23,9 +24,11 @@ public class EntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String[] value;
+
     public EntityFilter withValue(String[] value) {
         this.value = value;
         return this;
     }
     
+    public EntityFilter(){}
 }

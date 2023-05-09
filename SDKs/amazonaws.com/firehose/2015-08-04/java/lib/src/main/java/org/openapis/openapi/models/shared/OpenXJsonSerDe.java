@@ -15,6 +15,7 @@ public class OpenXJsonSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CaseInsensitive")
     public Boolean caseInsensitive;
+
     public OpenXJsonSerDe withCaseInsensitive(Boolean caseInsensitive) {
         this.caseInsensitive = caseInsensitive;
         return this;
@@ -23,6 +24,7 @@ public class OpenXJsonSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ColumnToJsonKeyMappings")
     public java.util.Map<String, String> columnToJsonKeyMappings;
+
     public OpenXJsonSerDe withColumnToJsonKeyMappings(java.util.Map<String, String> columnToJsonKeyMappings) {
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         return this;
@@ -31,9 +33,11 @@ public class OpenXJsonSerDe {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConvertDotsInJsonKeysToUnderscores")
     public Boolean convertDotsInJsonKeysToUnderscores;
+
     public OpenXJsonSerDe withConvertDotsInJsonKeysToUnderscores(Boolean convertDotsInJsonKeysToUnderscores) {
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
         return this;
     }
     
+    public OpenXJsonSerDe(){}
 }

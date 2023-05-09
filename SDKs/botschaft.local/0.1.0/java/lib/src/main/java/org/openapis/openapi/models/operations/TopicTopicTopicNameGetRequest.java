@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TopicTopicTopicNameGetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public TopicTopicTopicNameGetRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -16,6 +18,7 @@ public class TopicTopicTopicNameGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=base64_message")
     public String base64Message;
+
     public TopicTopicTopicNameGetRequest withBase64Message(String base64Message) {
         this.base64Message = base64Message;
         return this;
@@ -23,6 +26,7 @@ public class TopicTopicTopicNameGetRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=message")
     public String message;
+
     public TopicTopicTopicNameGetRequest withMessage(String message) {
         this.message = message;
         return this;
@@ -30,9 +34,13 @@ public class TopicTopicTopicNameGetRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=topic_name")
     public String topicName;
+
     public TopicTopicTopicNameGetRequest withTopicName(String topicName) {
         this.topicName = topicName;
         return this;
     }
     
+    public TopicTopicTopicNameGetRequest(@JsonProperty("topic_name") String topicName) {
+        this.topicName = topicName;
+  }
 }

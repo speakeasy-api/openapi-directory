@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateVpnConnectionRequest - Contains the parameters for CreateVpnConnection.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateVpnConnectionRequest {
     
     public String customerGatewayId;
+
     public CreateVpnConnectionRequest withCustomerGatewayId(String customerGatewayId) {
         this.customerGatewayId = customerGatewayId;
         return this;
@@ -19,6 +20,7 @@ public class CreateVpnConnectionRequest {
     
     
     public Boolean dryRun;
+
     public CreateVpnConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -26,6 +28,7 @@ public class CreateVpnConnectionRequest {
     
     
     public CreateVpnConnectionRequestOptions options;
+
     public CreateVpnConnectionRequest withOptions(CreateVpnConnectionRequestOptions options) {
         this.options = options;
         return this;
@@ -33,6 +36,7 @@ public class CreateVpnConnectionRequest {
     
     
     public CreateVpnConnectionRequestTagSpecifications[] tagSpecifications;
+
     public CreateVpnConnectionRequest withTagSpecifications(CreateVpnConnectionRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -40,6 +44,7 @@ public class CreateVpnConnectionRequest {
     
     
     public String transitGatewayId;
+
     public CreateVpnConnectionRequest withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -47,6 +52,7 @@ public class CreateVpnConnectionRequest {
     
     
     public String type;
+
     public CreateVpnConnectionRequest withType(String type) {
         this.type = type;
         return this;
@@ -54,9 +60,14 @@ public class CreateVpnConnectionRequest {
     
     
     public String vpnGatewayId;
+
     public CreateVpnConnectionRequest withVpnGatewayId(String vpnGatewayId) {
         this.vpnGatewayId = vpnGatewayId;
         return this;
     }
     
+    public CreateVpnConnectionRequest(@JsonProperty("CustomerGatewayId") String customerGatewayId, @JsonProperty("Type") String type) {
+        this.customerGatewayId = customerGatewayId;
+        this.type = type;
+  }
 }

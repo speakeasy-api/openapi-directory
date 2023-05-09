@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteIdentityProviderResponse {
@@ -12,6 +13,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteIdentityProviderResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public String contentType;
+
     public DeleteIdentityProviderResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object internalErrorException;
+
     public DeleteIdentityProviderResponse withInternalErrorException(Object internalErrorException) {
         this.internalErrorException = internalErrorException;
         return this;
@@ -39,6 +43,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object invalidParameterException;
+
     public DeleteIdentityProviderResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object notAuthorizedException;
+
     public DeleteIdentityProviderResponse withNotAuthorizedException(Object notAuthorizedException) {
         this.notAuthorizedException = notAuthorizedException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteIdentityProviderResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public Integer statusCode;
+
     public DeleteIdentityProviderResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteIdentityProviderResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteIdentityProviderResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteIdentityProviderResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
@@ -93,9 +103,14 @@ public class DeleteIdentityProviderResponse {
      */
     
     public Object unsupportedIdentityProviderException;
+
     public DeleteIdentityProviderResponse withUnsupportedIdentityProviderException(Object unsupportedIdentityProviderException) {
         this.unsupportedIdentityProviderException = unsupportedIdentityProviderException;
         return this;
     }
     
+    public DeleteIdentityProviderResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

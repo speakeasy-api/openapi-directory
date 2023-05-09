@@ -18,6 +18,7 @@ public class ModelState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published")
     public Boolean published;
+
     public ModelState withPublished(Boolean published) {
         this.published = published;
         return this;
@@ -29,9 +30,11 @@ public class ModelState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("validationError")
     public Status validationError;
+
     public ModelState withValidationError(Status validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public ModelState(){}
 }

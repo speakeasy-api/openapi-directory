@@ -15,6 +15,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("else")
     public ComponentProperty else_;
+
     public ComponentConditionProperty withElse(ComponentProperty else_) {
         this.else_ = else_;
         return this;
@@ -23,6 +24,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("field")
     public String field;
+
     public ComponentConditionProperty withField(String field) {
         this.field = field;
         return this;
@@ -31,6 +33,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operand")
     public String operand;
+
     public ComponentConditionProperty withOperand(String operand) {
         this.operand = operand;
         return this;
@@ -39,6 +42,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operandType")
     public String operandType;
+
     public ComponentConditionProperty withOperandType(String operandType) {
         this.operandType = operandType;
         return this;
@@ -47,6 +51,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public String operator;
+
     public ComponentConditionProperty withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -55,6 +60,7 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("property")
     public String property;
+
     public ComponentConditionProperty withProperty(String property) {
         this.property = property;
         return this;
@@ -63,9 +69,11 @@ public class ComponentConditionProperty {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("then")
     public ComponentProperty then;
+
     public ComponentConditionProperty withThen(ComponentProperty then) {
         this.then = then;
         return this;
     }
     
+    public ComponentConditionProperty(){}
 }

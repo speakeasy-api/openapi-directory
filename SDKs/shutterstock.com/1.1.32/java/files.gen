@@ -172,6 +172,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/ListCustomDescriptorsRe
 lib/src/main/java/org/openapis/openapi/models/operations/ListCustomInstrumentsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCustomInstrumentsRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListCustomInstrumentsResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialCategoriesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialCategoriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialImageSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialImageRequest.java
@@ -216,6 +217,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialImageSe
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialImageResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialImagesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialImagesResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListEditorialImageCategoriesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEditorialImageCategoriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchEditorialSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchEditorialSortEnum.java
@@ -235,6 +237,7 @@ lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialVideoLicens
 lib/src/main/java/org/openapis/openapi/models/operations/GetEditorialVideoLicenseListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialVideoSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/LicenseEditorialVideoResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/ListEditorialVideoCategoriesSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/ListEditorialVideoCategoriesResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchEditorialVideosSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/SearchEditorialVideosResolutionEnum.java
@@ -388,8 +391,11 @@ lib/src/main/java/org/openapis/openapi/models/operations/EchoRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/EchoResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/ValidateResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetAccessTokenSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetAccessTokenResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetUserSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserResponse.java
+lib/src/main/java/org/openapis/openapi/models/operations/GetUserSubscriptionListSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/GetUserSubscriptionListResponse.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddVideoCollectionItemsSecurity.java
 lib/src/main/java/org/openapis/openapi/models/operations/AddVideoCollectionItemsRequest.java
@@ -693,4 +699,18 @@ lib/src/main/java/org/openapis/openapi/models/shared/LicenseVideoResult.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseVideoRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseVideoSizeEnum.java
 lib/src/main/java/org/openapis/openapi/models/shared/LicenseVideo.java
+docs/sdk/README.md
+docs/audio/README.md
+docs/catalog/README.md
+docs/computervision/README.md
+docs/contributors/README.md
+docs/custommusic/README.md
+docs/editorialimages/README.md
+docs/editorialvideo/README.md
+docs/images/README.md
+docs/oauth/README.md
+docs/soundeffects/README.md
+docs/test/README.md
+docs/users/README.md
+docs/videos/README.md
 USAGE.md

@@ -15,6 +15,7 @@ public class InvalidParameterValueException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public String type;
+
     public InvalidParameterValueException withType(String type) {
         this.type = type;
         return this;
@@ -23,9 +24,11 @@ public class InvalidParameterValueException {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public InvalidParameterValueException withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public InvalidParameterValueException(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSecurityGroupResponse {
@@ -12,6 +13,7 @@ public class GetSecurityGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.ApiError apiError;
+
     public GetSecurityGroupResponse withApiError(org.openapis.openapi.models.shared.ApiError apiError) {
         this.apiError = apiError;
         return this;
@@ -22,6 +24,7 @@ public class GetSecurityGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.BaseSecurityGroup baseSecurityGroup;
+
     public GetSecurityGroupResponse withBaseSecurityGroup(org.openapis.openapi.models.shared.BaseSecurityGroup baseSecurityGroup) {
         this.baseSecurityGroup = baseSecurityGroup;
         return this;
@@ -29,6 +32,7 @@ public class GetSecurityGroupResponse {
     
     
     public String contentType;
+
     public GetSecurityGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class GetSecurityGroupResponse {
     
     
     public Integer statusCode;
+
     public GetSecurityGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetSecurityGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSecurityGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetSecurityGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

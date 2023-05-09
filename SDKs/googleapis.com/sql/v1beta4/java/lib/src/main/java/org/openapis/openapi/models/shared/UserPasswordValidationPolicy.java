@@ -18,6 +18,7 @@ public class UserPasswordValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("allowedFailedAttempts")
     public Integer allowedFailedAttempts;
+
     public UserPasswordValidationPolicy withAllowedFailedAttempts(Integer allowedFailedAttempts) {
         this.allowedFailedAttempts = allowedFailedAttempts;
         return this;
@@ -29,6 +30,7 @@ public class UserPasswordValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enableFailedAttemptsCheck")
     public Boolean enableFailedAttemptsCheck;
+
     public UserPasswordValidationPolicy withEnableFailedAttemptsCheck(Boolean enableFailedAttemptsCheck) {
         this.enableFailedAttemptsCheck = enableFailedAttemptsCheck;
         return this;
@@ -40,6 +42,7 @@ public class UserPasswordValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enablePasswordVerification")
     public Boolean enablePasswordVerification;
+
     public UserPasswordValidationPolicy withEnablePasswordVerification(Boolean enablePasswordVerification) {
         this.enablePasswordVerification = enablePasswordVerification;
         return this;
@@ -51,6 +54,7 @@ public class UserPasswordValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("passwordExpirationDuration")
     public String passwordExpirationDuration;
+
     public UserPasswordValidationPolicy withPasswordExpirationDuration(String passwordExpirationDuration) {
         this.passwordExpirationDuration = passwordExpirationDuration;
         return this;
@@ -62,9 +66,11 @@ public class UserPasswordValidationPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public PasswordStatus status;
+
     public UserPasswordValidationPolicy withStatus(PasswordStatus status) {
         this.status = status;
         return this;
     }
     
+    public UserPasswordValidationPolicy(){}
 }

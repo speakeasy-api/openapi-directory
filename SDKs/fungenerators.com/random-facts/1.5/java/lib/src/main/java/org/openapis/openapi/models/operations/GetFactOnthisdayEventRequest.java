@@ -12,6 +12,7 @@ public class GetFactOnthisdayEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=day")
     public String day;
+
     public GetFactOnthisdayEventRequest withDay(String day) {
         this.day = day;
         return this;
@@ -22,9 +23,11 @@ public class GetFactOnthisdayEventRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=month")
     public String month;
+
     public GetFactOnthisdayEventRequest withMonth(String month) {
         this.month = month;
         return this;
     }
     
+    public GetFactOnthisdayEventRequest(){}
 }

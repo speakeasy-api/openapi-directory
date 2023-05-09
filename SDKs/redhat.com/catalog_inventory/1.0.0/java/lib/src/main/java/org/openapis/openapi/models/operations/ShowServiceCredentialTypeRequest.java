@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ShowServiceCredentialTypeRequest {
@@ -12,9 +13,13 @@ public class ShowServiceCredentialTypeRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ShowServiceCredentialTypeRequest withId(String id) {
         this.id = id;
         return this;
     }
     
+    public ShowServiceCredentialTypeRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class BatchGetRepositoryScanningConfigurationRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest;
+
     public BatchGetRepositoryScanningConfigurationRequest withBatchGetRepositoryScanningConfigurationRequest(org.openapis.openapi.models.shared.BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest) {
         this.batchGetRepositoryScanningConfigurationRequest = batchGetRepositoryScanningConfigurationRequest;
         return this;
@@ -16,6 +18,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class BatchGetRepositoryScanningConfigurationRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public BatchGetRepositoryScanningConfigurationXAmzTargetEnum xAmzTarget;
+
     public BatchGetRepositoryScanningConfigurationRequest withXAmzTarget(BatchGetRepositoryScanningConfigurationXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public BatchGetRepositoryScanningConfigurationRequest(@JsonProperty("BatchGetRepositoryScanningConfigurationRequest") org.openapis.openapi.models.shared.BatchGetRepositoryScanningConfigurationRequest batchGetRepositoryScanningConfigurationRequest, @JsonProperty("X-Amz-Target") BatchGetRepositoryScanningConfigurationXAmzTargetEnum xAmzTarget) {
+        this.batchGetRepositoryScanningConfigurationRequest = batchGetRepositoryScanningConfigurationRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

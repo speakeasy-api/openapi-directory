@@ -12,16 +12,18 @@ public class GetBatchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchStatus")
     public GetBatchesBatchStatusEnum batchStatus;
+
     public GetBatchesRequest withBatchStatus(GetBatchesBatchStatusEnum batchStatus) {
         this.batchStatus = batchStatus;
         return this;
     }
     
     /**
-     * The type of the batch. Can be one of the 3 listed enums.
+     * The type of the batch. Can be one of the listed enums.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=batchTypes")
     public GetBatchesBatchTypesEnum batchTypes;
+
     public GetBatchesRequest withBatchTypes(GetBatchesBatchTypesEnum batchTypes) {
         this.batchTypes = batchTypes;
         return this;
@@ -32,6 +34,7 @@ public class GetBatchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public GetBatchesOrderEnum order;
+
     public GetBatchesRequest withOrder(GetBatchesOrderEnum order) {
         this.order = order;
         return this;
@@ -42,9 +45,11 @@ public class GetBatchesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=orderBy")
     public GetBatchesOrderByEnum orderBy;
+
     public GetBatchesRequest withOrderBy(GetBatchesOrderByEnum orderBy) {
         this.orderBy = orderBy;
         return this;
     }
     
+    public GetBatchesRequest(){}
 }

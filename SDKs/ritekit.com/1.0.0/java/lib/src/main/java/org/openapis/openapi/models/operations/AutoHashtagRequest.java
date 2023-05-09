@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AutoHashtagRequest {
@@ -12,6 +13,7 @@ public class AutoHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=hashtagPosition")
     public String hashtagPosition;
+
     public AutoHashtagRequest withHashtagPosition(String hashtagPosition) {
         this.hashtagPosition = hashtagPosition;
         return this;
@@ -22,6 +24,7 @@ public class AutoHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxHashtags")
     public Long maxHashtags;
+
     public AutoHashtagRequest withMaxHashtags(Long maxHashtags) {
         this.maxHashtags = maxHashtags;
         return this;
@@ -32,9 +35,13 @@ public class AutoHashtagRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=post")
     public String post;
+
     public AutoHashtagRequest withPost(String post) {
         this.post = post;
         return this;
     }
     
+    public AutoHashtagRequest(@JsonProperty("post") String post) {
+        this.post = post;
+  }
 }

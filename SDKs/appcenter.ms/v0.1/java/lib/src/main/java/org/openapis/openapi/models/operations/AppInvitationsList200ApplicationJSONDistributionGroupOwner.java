@@ -18,6 +18,7 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -28,6 +29,7 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
      */
     @JsonProperty("display_name")
     public String displayName;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -39,6 +41,7 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withEmail(String email) {
         this.email = email;
         return this;
@@ -49,6 +52,7 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
      */
     @JsonProperty("id")
     public String id;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withId(String id) {
         this.id = id;
         return this;
@@ -59,6 +63,7 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
      */
     @JsonProperty("name")
     public String name;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withName(String name) {
         this.name = name;
         return this;
@@ -69,9 +74,16 @@ public class AppInvitationsList200ApplicationJSONDistributionGroupOwner {
      */
     @JsonProperty("type")
     public AppInvitationsList200ApplicationJSONDistributionGroupOwnerTypeEnum type;
+
     public AppInvitationsList200ApplicationJSONDistributionGroupOwner withType(AppInvitationsList200ApplicationJSONDistributionGroupOwnerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AppInvitationsList200ApplicationJSONDistributionGroupOwner(@JsonProperty("display_name") String displayName, @JsonProperty("id") String id, @JsonProperty("name") String name, @JsonProperty("type") AppInvitationsList200ApplicationJSONDistributionGroupOwnerTypeEnum type) {
+        this.displayName = displayName;
+        this.id = id;
+        this.name = name;
+        this.type = type;
+  }
 }

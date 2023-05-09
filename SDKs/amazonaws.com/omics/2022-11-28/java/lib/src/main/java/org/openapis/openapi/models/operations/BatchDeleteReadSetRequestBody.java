@@ -12,9 +12,13 @@ public class BatchDeleteReadSetRequestBody {
      */
     @JsonProperty("ids")
     public String[] ids;
+
     public BatchDeleteReadSetRequestBody withIds(String[] ids) {
         this.ids = ids;
         return this;
     }
     
+    public BatchDeleteReadSetRequestBody(@JsonProperty("ids") String[] ids) {
+        this.ids = ids;
+  }
 }

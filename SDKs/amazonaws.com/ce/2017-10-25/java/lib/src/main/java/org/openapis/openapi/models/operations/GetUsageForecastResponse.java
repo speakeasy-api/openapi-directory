@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsageForecastResponse {
     
     public String contentType;
+
     public GetUsageForecastResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetUsageForecastResponse {
      */
     
     public Object dataUnavailableException;
+
     public GetUsageForecastResponse withDataUnavailableException(Object dataUnavailableException) {
         this.dataUnavailableException = dataUnavailableException;
         return this;
@@ -29,6 +32,7 @@ public class GetUsageForecastResponse {
      */
     
     public org.openapis.openapi.models.shared.GetUsageForecastResponse getUsageForecastResponse;
+
     public GetUsageForecastResponse withGetUsageForecastResponse(org.openapis.openapi.models.shared.GetUsageForecastResponse getUsageForecastResponse) {
         this.getUsageForecastResponse = getUsageForecastResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetUsageForecastResponse {
      */
     
     public Object limitExceededException;
+
     public GetUsageForecastResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -46,6 +51,7 @@ public class GetUsageForecastResponse {
     
     
     public Integer statusCode;
+
     public GetUsageForecastResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetUsageForecastResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsageForecastResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetUsageForecastResponse {
      */
     
     public Object unresolvableUsageUnitException;
+
     public GetUsageForecastResponse withUnresolvableUsageUnitException(Object unresolvableUsageUnitException) {
         this.unresolvableUsageUnitException = unresolvableUsageUnitException;
         return this;
     }
     
+    public GetUsageForecastResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

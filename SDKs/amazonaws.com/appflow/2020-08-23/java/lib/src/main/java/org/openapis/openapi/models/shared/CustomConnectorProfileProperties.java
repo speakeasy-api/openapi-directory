@@ -18,6 +18,7 @@ public class CustomConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oAuth2Properties")
     public OAuth2Properties oAuth2Properties;
+
     public CustomConnectorProfileProperties withOAuth2Properties(OAuth2Properties oAuth2Properties) {
         this.oAuth2Properties = oAuth2Properties;
         return this;
@@ -26,9 +27,11 @@ public class CustomConnectorProfileProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profileProperties")
     public java.util.Map<String, String> profileProperties;
+
     public CustomConnectorProfileProperties withProfileProperties(java.util.Map<String, String> profileProperties) {
         this.profileProperties = profileProperties;
         return this;
     }
     
+    public CustomConnectorProfileProperties(){}
 }

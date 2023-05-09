@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteStreamingSessionResponse {
@@ -12,6 +13,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteStreamingSessionResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object conflictException;
+
     public DeleteStreamingSessionResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteStreamingSessionResponse {
     
     
     public String contentType;
+
     public DeleteStreamingSessionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteStreamingSessionResponse deleteStreamingSessionResponse;
+
     public DeleteStreamingSessionResponse withDeleteStreamingSessionResponse(org.openapis.openapi.models.shared.DeleteStreamingSessionResponse deleteStreamingSessionResponse) {
         this.deleteStreamingSessionResponse = deleteStreamingSessionResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object internalServerErrorException;
+
     public DeleteStreamingSessionResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -59,6 +65,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteStreamingSessionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class DeleteStreamingSessionResponse {
     
     
     public Integer statusCode;
+
     public DeleteStreamingSessionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class DeleteStreamingSessionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteStreamingSessionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteStreamingSessionResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -93,6 +103,7 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object throttlingException;
+
     public DeleteStreamingSessionResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -103,9 +114,14 @@ public class DeleteStreamingSessionResponse {
      */
     
     public Object validationException;
+
     public DeleteStreamingSessionResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteStreamingSessionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class LanguageDocumentsClassifyTextSecurity {
     @SpeakeasyMetadata("security:option=true")
     public LanguageDocumentsClassifyTextSecurityOption1 option1;
+
     public LanguageDocumentsClassifyTextSecurity withOption1(LanguageDocumentsClassifyTextSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class LanguageDocumentsClassifyTextSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public LanguageDocumentsClassifyTextSecurityOption2 option2;
+
     public LanguageDocumentsClassifyTextSecurity withOption2(LanguageDocumentsClassifyTextSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public LanguageDocumentsClassifyTextSecurity(){}
 }

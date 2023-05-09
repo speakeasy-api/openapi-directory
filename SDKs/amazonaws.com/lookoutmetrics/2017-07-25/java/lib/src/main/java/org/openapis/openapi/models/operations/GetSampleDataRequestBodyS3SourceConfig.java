@@ -18,6 +18,7 @@ public class GetSampleDataRequestBodyS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FileFormatDescriptor")
     public org.openapis.openapi.models.shared.FileFormatDescriptor fileFormatDescriptor;
+
     public GetSampleDataRequestBodyS3SourceConfig withFileFormatDescriptor(org.openapis.openapi.models.shared.FileFormatDescriptor fileFormatDescriptor) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         return this;
@@ -26,6 +27,7 @@ public class GetSampleDataRequestBodyS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HistoricalDataPathList")
     public String[] historicalDataPathList;
+
     public GetSampleDataRequestBodyS3SourceConfig withHistoricalDataPathList(String[] historicalDataPathList) {
         this.historicalDataPathList = historicalDataPathList;
         return this;
@@ -34,6 +36,7 @@ public class GetSampleDataRequestBodyS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public GetSampleDataRequestBodyS3SourceConfig withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
@@ -42,9 +45,11 @@ public class GetSampleDataRequestBodyS3SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TemplatedPathList")
     public String[] templatedPathList;
+
     public GetSampleDataRequestBodyS3SourceConfig withTemplatedPathList(String[] templatedPathList) {
         this.templatedPathList = templatedPathList;
         return this;
     }
     
+    public GetSampleDataRequestBodyS3SourceConfig(){}
 }

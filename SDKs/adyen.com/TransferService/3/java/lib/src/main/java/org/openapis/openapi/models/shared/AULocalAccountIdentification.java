@@ -15,6 +15,7 @@ public class AULocalAccountIdentification {
      */
     @JsonProperty("accountNumber")
     public String accountNumber;
+
     public AULocalAccountIdentification withAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
         return this;
@@ -25,6 +26,7 @@ public class AULocalAccountIdentification {
      */
     @JsonProperty("bsbCode")
     public String bsbCode;
+
     public AULocalAccountIdentification withBsbCode(String bsbCode) {
         this.bsbCode = bsbCode;
         return this;
@@ -35,9 +37,15 @@ public class AULocalAccountIdentification {
      */
     @JsonProperty("type")
     public AULocalAccountIdentificationTypeEnum type;
+
     public AULocalAccountIdentification withType(AULocalAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public AULocalAccountIdentification(@JsonProperty("accountNumber") String accountNumber, @JsonProperty("bsbCode") String bsbCode, @JsonProperty("type") AULocalAccountIdentificationTypeEnum type) {
+        this.accountNumber = accountNumber;
+        this.bsbCode = bsbCode;
+        this.type = type;
+  }
 }

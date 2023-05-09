@@ -15,6 +15,7 @@ public class AdminListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Limit")
     public Long limit;
+
     public AdminListDevicesRequest withLimit(Long limit) {
         this.limit = limit;
         return this;
@@ -23,6 +24,7 @@ public class AdminListDevicesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public AdminListDevicesRequest withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -30,6 +32,7 @@ public class AdminListDevicesRequest {
     
     @JsonProperty("UserPoolId")
     public String userPoolId;
+
     public AdminListDevicesRequest withUserPoolId(String userPoolId) {
         this.userPoolId = userPoolId;
         return this;
@@ -37,9 +40,14 @@ public class AdminListDevicesRequest {
     
     @JsonProperty("Username")
     public String username;
+
     public AdminListDevicesRequest withUsername(String username) {
         this.username = username;
         return this;
     }
     
+    public AdminListDevicesRequest(@JsonProperty("UserPoolId") String userPoolId, @JsonProperty("Username") String username) {
+        this.userPoolId = userPoolId;
+        this.username = username;
+  }
 }

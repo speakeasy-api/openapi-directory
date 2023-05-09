@@ -18,6 +18,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("imageConfig")
     public GoogleCloudBeyondcorpAppconnectorsV1ImageConfig imageConfig;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig withImageConfig(GoogleCloudBeyondcorpAppconnectorsV1ImageConfig imageConfig) {
         this.imageConfig = imageConfig;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("instanceConfig")
     public java.util.Map<String, Object> instanceConfig;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig withInstanceConfig(java.util.Map<String, Object> instanceConfig) {
         this.instanceConfig = instanceConfig;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationConfig")
     public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig notificationConfig;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig withNotificationConfig(GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig notificationConfig) {
         this.notificationConfig = notificationConfig;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sequenceNumber")
     public String sequenceNumber;
+
     public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig withSequenceNumber(String sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig(){}
 }

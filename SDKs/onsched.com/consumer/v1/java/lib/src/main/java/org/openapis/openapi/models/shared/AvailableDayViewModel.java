@@ -12,6 +12,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("available")
     public Boolean available;
+
     public AvailableDayViewModel withAvailable(Boolean available) {
         this.available = available;
         return this;
@@ -20,6 +21,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingCount")
     public Integer bookingCount;
+
     public AvailableDayViewModel withBookingCount(Integer bookingCount) {
         this.bookingCount = bookingCount;
         return this;
@@ -28,6 +30,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bookingLimit")
     public Integer bookingLimit;
+
     public AvailableDayViewModel withBookingLimit(Integer bookingLimit) {
         this.bookingLimit = bookingLimit;
         return this;
@@ -36,6 +39,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("closed")
     public Boolean closed;
+
     public AvailableDayViewModel withClosed(Boolean closed) {
         this.closed = closed;
         return this;
@@ -44,6 +48,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("date")
     public String date;
+
     public AvailableDayViewModel withDate(String date) {
         this.date = date;
         return this;
@@ -52,6 +57,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public AvailableDayViewModel withObject(String object) {
         this.object = object;
         return this;
@@ -60,6 +66,7 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public AvailableDayViewModel withReason(String reason) {
         this.reason = reason;
         return this;
@@ -68,9 +75,11 @@ public class AvailableDayViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonCode")
     public Integer reasonCode;
+
     public AvailableDayViewModel withReasonCode(Integer reasonCode) {
         this.reasonCode = reasonCode;
         return this;
     }
     
+    public AvailableDayViewModel(){}
 }

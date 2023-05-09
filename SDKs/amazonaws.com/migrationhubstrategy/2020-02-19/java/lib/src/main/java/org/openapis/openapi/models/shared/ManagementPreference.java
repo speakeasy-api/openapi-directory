@@ -15,6 +15,7 @@ public class ManagementPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("awsManagedResources")
     public AwsManagedResources awsManagedResources;
+
     public ManagementPreference withAwsManagedResources(AwsManagedResources awsManagedResources) {
         this.awsManagedResources = awsManagedResources;
         return this;
@@ -23,6 +24,7 @@ public class ManagementPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("noPreference")
     public NoManagementPreference noPreference;
+
     public ManagementPreference withNoPreference(NoManagementPreference noPreference) {
         this.noPreference = noPreference;
         return this;
@@ -31,9 +33,11 @@ public class ManagementPreference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selfManageResources")
     public SelfManageResources selfManageResources;
+
     public ManagementPreference withSelfManageResources(SelfManageResources selfManageResources) {
         this.selfManageResources = selfManageResources;
         return this;
     }
     
+    public ManagementPreference(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class YoutubeThirdPartyLinksInsertResponse {
     
     public String contentType;
+
     public YoutubeThirdPartyLinksInsertResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class YoutubeThirdPartyLinksInsertResponse {
     
     
     public Integer statusCode;
+
     public YoutubeThirdPartyLinksInsertResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class YoutubeThirdPartyLinksInsertResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public YoutubeThirdPartyLinksInsertResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class YoutubeThirdPartyLinksInsertResponse {
      */
     
     public org.openapis.openapi.models.shared.ThirdPartyLink thirdPartyLink;
+
     public YoutubeThirdPartyLinksInsertResponse withThirdPartyLink(org.openapis.openapi.models.shared.ThirdPartyLink thirdPartyLink) {
         this.thirdPartyLink = thirdPartyLink;
         return this;
     }
     
+    public YoutubeThirdPartyLinksInsertResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ public class LineRouteRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=serviceTypes")
     public LineRouteServiceTypesEnum[] serviceTypes;
+
     public LineRouteRequest withServiceTypes(LineRouteServiceTypesEnum[] serviceTypes) {
         this.serviceTypes = serviceTypes;
         return this;
     }
     
+    public LineRouteRequest(){}
 }

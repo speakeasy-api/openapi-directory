@@ -18,6 +18,7 @@ public class TablesAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("baselineScore")
     public Float baselineScore;
+
     public TablesAnnotation withBaselineScore(Float baselineScore) {
         this.baselineScore = baselineScore;
         return this;
@@ -29,6 +30,7 @@ public class TablesAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionInterval")
     public DoubleRange predictionInterval;
+
     public TablesAnnotation withPredictionInterval(DoubleRange predictionInterval) {
         this.predictionInterval = predictionInterval;
         return this;
@@ -40,6 +42,7 @@ public class TablesAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("score")
     public Float score;
+
     public TablesAnnotation withScore(Float score) {
         this.score = score;
         return this;
@@ -51,6 +54,7 @@ public class TablesAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tablesModelColumnInfo")
     public TablesModelColumnInfo[] tablesModelColumnInfo;
+
     public TablesAnnotation withTablesModelColumnInfo(TablesModelColumnInfo[] tablesModelColumnInfo) {
         this.tablesModelColumnInfo = tablesModelColumnInfo;
         return this;
@@ -62,9 +66,11 @@ public class TablesAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public Object value;
+
     public TablesAnnotation withValue(Object value) {
         this.value = value;
         return this;
     }
     
+    public TablesAnnotation(){}
 }

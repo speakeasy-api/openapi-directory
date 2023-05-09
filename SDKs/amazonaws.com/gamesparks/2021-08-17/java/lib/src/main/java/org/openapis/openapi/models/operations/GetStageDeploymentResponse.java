@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetStageDeploymentResponse {
@@ -12,6 +13,7 @@ public class GetStageDeploymentResponse {
      */
     
     public Object accessDeniedException;
+
     public GetStageDeploymentResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetStageDeploymentResponse {
     
     
     public String contentType;
+
     public GetStageDeploymentResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetStageDeploymentResponse {
      */
     
     public org.openapis.openapi.models.shared.GetStageDeploymentResult getStageDeploymentResult;
+
     public GetStageDeploymentResponse withGetStageDeploymentResult(org.openapis.openapi.models.shared.GetStageDeploymentResult getStageDeploymentResult) {
         this.getStageDeploymentResult = getStageDeploymentResult;
         return this;
@@ -39,6 +43,7 @@ public class GetStageDeploymentResponse {
      */
     
     public Object internalServerException;
+
     public GetStageDeploymentResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetStageDeploymentResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetStageDeploymentResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetStageDeploymentResponse {
     
     
     public Integer statusCode;
+
     public GetStageDeploymentResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetStageDeploymentResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetStageDeploymentResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetStageDeploymentResponse {
      */
     
     public Object throttlingException;
+
     public GetStageDeploymentResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetStageDeploymentResponse {
      */
     
     public Object validationException;
+
     public GetStageDeploymentResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetStageDeploymentResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

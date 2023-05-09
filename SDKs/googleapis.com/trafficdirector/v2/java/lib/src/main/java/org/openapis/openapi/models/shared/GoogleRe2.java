@@ -18,9 +18,11 @@ public class GoogleRe2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxProgramSize")
     public Long maxProgramSize;
+
     public GoogleRe2 withMaxProgramSize(Long maxProgramSize) {
         this.maxProgramSize = maxProgramSize;
         return this;
     }
     
+    public GoogleRe2(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyDeepsearchLEIResponse {
@@ -12,6 +13,7 @@ public class CompanyDeepsearchLEIResponse {
      */
     
     public CompanyDeepsearchLEI200ApplicationJSON companyDeepsearchLEI200ApplicationJSONObject;
+
     public CompanyDeepsearchLEIResponse withCompanyDeepsearchLEI200ApplicationJSONObject(CompanyDeepsearchLEI200ApplicationJSON companyDeepsearchLEI200ApplicationJSONObject) {
         this.companyDeepsearchLEI200ApplicationJSONObject = companyDeepsearchLEI200ApplicationJSONObject;
         return this;
@@ -22,6 +24,7 @@ public class CompanyDeepsearchLEIResponse {
      */
     
     public CompanyDeepsearchLEIDefaultApplicationJSON companyDeepsearchLEIDefaultApplicationJSONObject;
+
     public CompanyDeepsearchLEIResponse withCompanyDeepsearchLEIDefaultApplicationJSONObject(CompanyDeepsearchLEIDefaultApplicationJSON companyDeepsearchLEIDefaultApplicationJSONObject) {
         this.companyDeepsearchLEIDefaultApplicationJSONObject = companyDeepsearchLEIDefaultApplicationJSONObject;
         return this;
@@ -29,6 +32,7 @@ public class CompanyDeepsearchLEIResponse {
     
     
     public String contentType;
+
     public CompanyDeepsearchLEIResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -36,6 +40,7 @@ public class CompanyDeepsearchLEIResponse {
     
     
     public Integer statusCode;
+
     public CompanyDeepsearchLEIResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class CompanyDeepsearchLEIResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyDeepsearchLEIResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CompanyDeepsearchLEIResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

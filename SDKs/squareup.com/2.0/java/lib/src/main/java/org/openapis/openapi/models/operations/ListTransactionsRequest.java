@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListTransactionsRequest {
@@ -16,6 +17,7 @@ public class ListTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=begin_time")
     public String beginTime;
+
     public ListTransactionsRequest withBeginTime(String beginTime) {
         this.beginTime = beginTime;
         return this;
@@ -29,6 +31,7 @@ public class ListTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public ListTransactionsRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -43,6 +46,7 @@ public class ListTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
     public String endTime;
+
     public ListTransactionsRequest withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -53,6 +57,7 @@ public class ListTransactionsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=location_id")
     public String locationId;
+
     public ListTransactionsRequest withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -66,9 +71,13 @@ public class ListTransactionsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort_order")
     public String sortOrder;
+
     public ListTransactionsRequest withSortOrder(String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
     
+    public ListTransactionsRequest(@JsonProperty("location_id") String locationId) {
+        this.locationId = locationId;
+  }
 }

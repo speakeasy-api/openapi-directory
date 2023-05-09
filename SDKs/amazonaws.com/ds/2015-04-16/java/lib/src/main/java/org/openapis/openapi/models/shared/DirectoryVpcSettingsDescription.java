@@ -15,6 +15,7 @@ public class DirectoryVpcSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZones")
     public String[] availabilityZones;
+
     public DirectoryVpcSettingsDescription withAvailabilityZones(String[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -23,6 +24,7 @@ public class DirectoryVpcSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SecurityGroupId")
     public String securityGroupId;
+
     public DirectoryVpcSettingsDescription withSecurityGroupId(String securityGroupId) {
         this.securityGroupId = securityGroupId;
         return this;
@@ -31,6 +33,7 @@ public class DirectoryVpcSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SubnetIds")
     public String[] subnetIds;
+
     public DirectoryVpcSettingsDescription withSubnetIds(String[] subnetIds) {
         this.subnetIds = subnetIds;
         return this;
@@ -39,9 +42,11 @@ public class DirectoryVpcSettingsDescription {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public DirectoryVpcSettingsDescription withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public DirectoryVpcSettingsDescription(){}
 }

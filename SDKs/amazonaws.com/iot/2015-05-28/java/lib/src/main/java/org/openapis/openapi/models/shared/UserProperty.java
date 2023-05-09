@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UserProperty {
     @JsonProperty("key")
     public String key;
+
     public UserProperty withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,14 @@ public class UserProperty {
     
     @JsonProperty("value")
     public String value;
+
     public UserProperty withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public UserProperty(@JsonProperty("key") String key, @JsonProperty("value") String value) {
+        this.key = key;
+        this.value = value;
+  }
 }

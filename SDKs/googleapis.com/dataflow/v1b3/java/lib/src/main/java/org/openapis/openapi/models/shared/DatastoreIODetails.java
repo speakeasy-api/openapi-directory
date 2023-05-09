@@ -18,6 +18,7 @@ public class DatastoreIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespace")
     public String namespace;
+
     public DatastoreIODetails withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -29,9 +30,11 @@ public class DatastoreIODetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public DatastoreIODetails withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public DatastoreIODetails(){}
 }

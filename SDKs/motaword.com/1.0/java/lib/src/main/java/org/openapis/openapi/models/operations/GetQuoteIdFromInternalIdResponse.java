@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetQuoteIdFromInternalIdResponse {
     
     public String contentType;
+
     public GetQuoteIdFromInternalIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetQuoteIdFromInternalIdResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetQuoteIdFromInternalIdResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -29,6 +32,7 @@ public class GetQuoteIdFromInternalIdResponse {
      */
     
     public org.openapis.openapi.models.shared.ProjectId projectId;
+
     public GetQuoteIdFromInternalIdResponse withProjectId(org.openapis.openapi.models.shared.ProjectId projectId) {
         this.projectId = projectId;
         return this;
@@ -36,6 +40,7 @@ public class GetQuoteIdFromInternalIdResponse {
     
     
     public Integer statusCode;
+
     public GetQuoteIdFromInternalIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetQuoteIdFromInternalIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetQuoteIdFromInternalIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetQuoteIdFromInternalIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

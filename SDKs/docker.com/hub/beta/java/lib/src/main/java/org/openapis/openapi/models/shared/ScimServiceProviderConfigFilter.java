@@ -12,6 +12,7 @@ public class ScimServiceProviderConfigFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ScimServiceProviderConfigFilter withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -20,9 +21,11 @@ public class ScimServiceProviderConfigFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("supported")
     public Boolean supported;
+
     public ScimServiceProviderConfigFilter withSupported(Boolean supported) {
         this.supported = supported;
         return this;
     }
     
+    public ScimServiceProviderConfigFilter(){}
 }

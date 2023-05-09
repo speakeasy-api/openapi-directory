@@ -22,6 +22,7 @@ public class FilterDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_from")
     public OffsetDateTime dateFrom;
+
     public FilterDates withDateFrom(OffsetDateTime dateFrom) {
         this.dateFrom = dateFrom;
         return this;
@@ -35,9 +36,11 @@ public class FilterDates {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("date_to")
     public OffsetDateTime dateTo;
+
     public FilterDates withDateTo(OffsetDateTime dateTo) {
         this.dateTo = dateTo;
         return this;
     }
     
+    public FilterDates(){}
 }

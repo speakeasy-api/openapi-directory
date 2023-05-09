@@ -12,6 +12,7 @@ public class CreateDirectConnectGatewayAssociationProposalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("addAllowedPrefixesToDirectConnectGateway")
     public RouteFilterPrefix[] addAllowedPrefixesToDirectConnectGateway;
+
     public CreateDirectConnectGatewayAssociationProposalRequest withAddAllowedPrefixesToDirectConnectGateway(RouteFilterPrefix[] addAllowedPrefixesToDirectConnectGateway) {
         this.addAllowedPrefixesToDirectConnectGateway = addAllowedPrefixesToDirectConnectGateway;
         return this;
@@ -19,6 +20,7 @@ public class CreateDirectConnectGatewayAssociationProposalRequest {
     
     @JsonProperty("directConnectGatewayId")
     public String directConnectGatewayId;
+
     public CreateDirectConnectGatewayAssociationProposalRequest withDirectConnectGatewayId(String directConnectGatewayId) {
         this.directConnectGatewayId = directConnectGatewayId;
         return this;
@@ -26,6 +28,7 @@ public class CreateDirectConnectGatewayAssociationProposalRequest {
     
     @JsonProperty("directConnectGatewayOwnerAccount")
     public String directConnectGatewayOwnerAccount;
+
     public CreateDirectConnectGatewayAssociationProposalRequest withDirectConnectGatewayOwnerAccount(String directConnectGatewayOwnerAccount) {
         this.directConnectGatewayOwnerAccount = directConnectGatewayOwnerAccount;
         return this;
@@ -33,6 +36,7 @@ public class CreateDirectConnectGatewayAssociationProposalRequest {
     
     @JsonProperty("gatewayId")
     public String gatewayId;
+
     public CreateDirectConnectGatewayAssociationProposalRequest withGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -41,9 +45,15 @@ public class CreateDirectConnectGatewayAssociationProposalRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removeAllowedPrefixesToDirectConnectGateway")
     public RouteFilterPrefix[] removeAllowedPrefixesToDirectConnectGateway;
+
     public CreateDirectConnectGatewayAssociationProposalRequest withRemoveAllowedPrefixesToDirectConnectGateway(RouteFilterPrefix[] removeAllowedPrefixesToDirectConnectGateway) {
         this.removeAllowedPrefixesToDirectConnectGateway = removeAllowedPrefixesToDirectConnectGateway;
         return this;
     }
     
+    public CreateDirectConnectGatewayAssociationProposalRequest(@JsonProperty("directConnectGatewayId") String directConnectGatewayId, @JsonProperty("directConnectGatewayOwnerAccount") String directConnectGatewayOwnerAccount, @JsonProperty("gatewayId") String gatewayId) {
+        this.directConnectGatewayId = directConnectGatewayId;
+        this.directConnectGatewayOwnerAccount = directConnectGatewayOwnerAccount;
+        this.gatewayId = gatewayId;
+  }
 }

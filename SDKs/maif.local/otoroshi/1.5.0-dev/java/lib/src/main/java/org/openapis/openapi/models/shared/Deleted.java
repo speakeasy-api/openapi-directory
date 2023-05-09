@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Deleted {
     @JsonProperty("deleted")
     public Boolean deleted;
+
     public Deleted withDeleted(Boolean deleted) {
         this.deleted = deleted;
         return this;
     }
     
+    public Deleted(@JsonProperty("deleted") Boolean deleted) {
+        this.deleted = deleted;
+  }
 }

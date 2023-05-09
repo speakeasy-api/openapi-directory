@@ -15,6 +15,7 @@ public class CreateSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("code")
     public Long code;
+
     public CreateSessionUsingPOST400ApplicationJSON withCode(Long code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class CreateSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public java.util.Map<String, Object> data;
+
     public CreateSessionUsingPOST400ApplicationJSON withData(java.util.Map<String, Object> data) {
         this.data = data;
         return this;
@@ -31,9 +33,11 @@ public class CreateSessionUsingPOST400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public CreateSessionUsingPOST400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public CreateSessionUsingPOST400ApplicationJSON(){}
 }

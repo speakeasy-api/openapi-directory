@@ -60,14 +60,12 @@ public class FacebookMessenger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateMessengerAccountResponse res = new org.openapis.openapi.models.operations.CreateMessengerAccountResponse() {{
+        org.openapis.openapi.models.operations.CreateMessengerAccountResponse res = new org.openapis.openapi.models.operations.CreateMessengerAccountResponse(contentType, httpRes.statusCode()) {{
             messengerAccountResponse = null;
             createMessengerAccount400ApplicationJSONObject = null;
             fourHundredAndOneResponse = null;
             fourHundredAndThreeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -124,12 +122,10 @@ public class FacebookMessenger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteMessengerAccountResponse res = new org.openapis.openapi.models.operations.DeleteMessengerAccountResponse() {{
+        org.openapis.openapi.models.operations.DeleteMessengerAccountResponse res = new org.openapis.openapi.models.operations.DeleteMessengerAccountResponse(contentType, httpRes.statusCode()) {{
             fourHundredAndOneResponse = null;
             fourHundredAndThreeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 404) {
@@ -174,12 +170,10 @@ public class FacebookMessenger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetMessengerAccountResponse res = new org.openapis.openapi.models.operations.GetMessengerAccountResponse() {{
+        org.openapis.openapi.models.operations.GetMessengerAccountResponse res = new org.openapis.openapi.models.operations.GetMessengerAccountResponse(contentType, httpRes.statusCode()) {{
             messengerAccountResponse = null;
             fourHundredAndOneResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -229,14 +223,12 @@ public class FacebookMessenger {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.UpdateMessengerAccountResponse res = new org.openapis.openapi.models.operations.UpdateMessengerAccountResponse() {{
+        org.openapis.openapi.models.operations.UpdateMessengerAccountResponse res = new org.openapis.openapi.models.operations.UpdateMessengerAccountResponse(contentType, httpRes.statusCode()) {{
             updateMessengerAccount200ApplicationJSONObject = null;
             updateMessengerAccount400ApplicationJSONObject = null;
             fourHundredAndOneResponse = null;
             fourHundredAndThreeResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

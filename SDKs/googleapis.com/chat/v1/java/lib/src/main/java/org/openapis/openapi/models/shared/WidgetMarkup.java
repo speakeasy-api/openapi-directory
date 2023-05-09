@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class WidgetMarkup {
     /**
-     * A list of buttons. Buttons is also oneof data and only one of these fields should be set.
+     * A list of buttons. Buttons is also `oneof data` and only one of these fields should be set.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buttons")
     public Button[] buttons;
+
     public WidgetMarkup withButtons(Button[] buttons) {
         this.buttons = buttons;
         return this;
@@ -29,6 +30,7 @@ public class WidgetMarkup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("image")
     public Image image;
+
     public WidgetMarkup withImage(Image image) {
         this.image = image;
         return this;
@@ -40,20 +42,23 @@ public class WidgetMarkup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keyValue")
     public KeyValue keyValue;
+
     public WidgetMarkup withKeyValue(KeyValue keyValue) {
         this.keyValue = keyValue;
         return this;
     }
     
     /**
-     * A paragraph of text. Formatted text supported.
+     * A paragraph of text. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("textParagraph")
     public TextParagraph textParagraph;
+
     public WidgetMarkup withTextParagraph(TextParagraph textParagraph) {
         this.textParagraph = textParagraph;
         return this;
     }
     
+    public WidgetMarkup(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListClientDevicesAssociatedWithCoreDeviceResponse {
@@ -12,6 +13,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public Object accessDeniedException;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
     
     
     public String contentType;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public Object internalServerException;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.ListClientDevicesAssociatedWithCoreDeviceResponse listClientDevicesAssociatedWithCoreDeviceResponse;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withListClientDevicesAssociatedWithCoreDeviceResponse(org.openapis.openapi.models.shared.ListClientDevicesAssociatedWithCoreDeviceResponse listClientDevicesAssociatedWithCoreDeviceResponse) {
         this.listClientDevicesAssociatedWithCoreDeviceResponse = listClientDevicesAssociatedWithCoreDeviceResponse;
         return this;
@@ -49,6 +54,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
     
     
     public Integer statusCode;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public Object throttlingException;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class ListClientDevicesAssociatedWithCoreDeviceResponse {
      */
     
     public Object validationException;
+
     public ListClientDevicesAssociatedWithCoreDeviceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public ListClientDevicesAssociatedWithCoreDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetWeakKeysResponse {
     
     public String contentType;
+
     public GetWeakKeysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetWeakKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.CryptoKey[] cryptoKeys;
+
     public GetWeakKeysResponse withCryptoKeys(org.openapis.openapi.models.shared.CryptoKey[] cryptoKeys) {
         this.cryptoKeys = cryptoKeys;
         return this;
@@ -29,6 +32,7 @@ public class GetWeakKeysResponse {
      */
     
     public org.openapis.openapi.models.shared.HTTPValidationError httpValidationError;
+
     public GetWeakKeysResponse withHTTPValidationError(org.openapis.openapi.models.shared.HTTPValidationError httpValidationError) {
         this.httpValidationError = httpValidationError;
         return this;
@@ -36,6 +40,7 @@ public class GetWeakKeysResponse {
     
     
     public Integer statusCode;
+
     public GetWeakKeysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetWeakKeysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetWeakKeysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetWeakKeysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

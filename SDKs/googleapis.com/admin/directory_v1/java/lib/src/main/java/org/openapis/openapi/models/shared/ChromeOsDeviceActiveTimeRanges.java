@@ -17,6 +17,7 @@ public class ChromeOsDeviceActiveTimeRanges {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("activeTime")
     public Integer activeTime;
+
     public ChromeOsDeviceActiveTimeRanges withActiveTime(Integer activeTime) {
         this.activeTime = activeTime;
         return this;
@@ -29,9 +30,11 @@ public class ChromeOsDeviceActiveTimeRanges {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("date")
     public LocalDate date;
+
     public ChromeOsDeviceActiveTimeRanges withDate(LocalDate date) {
         this.date = date;
         return this;
     }
     
+    public ChromeOsDeviceActiveTimeRanges(){}
 }

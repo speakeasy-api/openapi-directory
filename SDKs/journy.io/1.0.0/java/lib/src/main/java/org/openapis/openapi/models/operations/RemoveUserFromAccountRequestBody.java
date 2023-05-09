@@ -15,6 +15,7 @@ public class RemoveUserFromAccountRequestBody {
      */
     @JsonProperty("account")
     public RemoveUserFromAccountRequestBodyAccount account;
+
     public RemoveUserFromAccountRequestBody withAccount(RemoveUserFromAccountRequestBodyAccount account) {
         this.account = account;
         return this;
@@ -22,9 +23,14 @@ public class RemoveUserFromAccountRequestBody {
     
     @JsonProperty("users")
     public RemoveUserFromAccountRequestBodyUsers[] users;
+
     public RemoveUserFromAccountRequestBody withUsers(RemoveUserFromAccountRequestBodyUsers[] users) {
         this.users = users;
         return this;
     }
     
+    public RemoveUserFromAccountRequestBody(@JsonProperty("account") RemoveUserFromAccountRequestBodyAccount account, @JsonProperty("users") RemoveUserFromAccountRequestBodyUsers[] users) {
+        this.account = account;
+        this.users = users;
+  }
 }

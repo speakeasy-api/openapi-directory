@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateSigningBasketRequest {
@@ -14,6 +15,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Consent-ID")
     public String consentID;
+
     public CreateSigningBasketRequest withConsentID(String consentID) {
         this.consentID = consentID;
         return this;
@@ -24,6 +26,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Digest")
     public String digest;
+
     public CreateSigningBasketRequest withDigest(String digest) {
         this.digest = digest;
         return this;
@@ -35,6 +38,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept")
     public String psuAccept;
+
     public CreateSigningBasketRequest withPSUAccept(String psuAccept) {
         this.psuAccept = psuAccept;
         return this;
@@ -46,6 +50,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Charset")
     public String psuAcceptCharset;
+
     public CreateSigningBasketRequest withPSUAcceptCharset(String psuAcceptCharset) {
         this.psuAcceptCharset = psuAcceptCharset;
         return this;
@@ -57,6 +62,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Encoding")
     public String psuAcceptEncoding;
+
     public CreateSigningBasketRequest withPSUAcceptEncoding(String psuAcceptEncoding) {
         this.psuAcceptEncoding = psuAcceptEncoding;
         return this;
@@ -68,6 +74,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Accept-Language")
     public String psuAcceptLanguage;
+
     public CreateSigningBasketRequest withPSUAcceptLanguage(String psuAcceptLanguage) {
         this.psuAcceptLanguage = psuAcceptLanguage;
         return this;
@@ -79,6 +86,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID")
     public String psuCorporateID;
+
     public CreateSigningBasketRequest withPSUCorporateID(String psuCorporateID) {
         this.psuCorporateID = psuCorporateID;
         return this;
@@ -90,6 +98,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Corporate-ID-Type")
     public String psuCorporateIDType;
+
     public CreateSigningBasketRequest withPSUCorporateIDType(String psuCorporateIDType) {
         this.psuCorporateIDType = psuCorporateIDType;
         return this;
@@ -103,6 +112,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Device-ID")
     public String psuDeviceID;
+
     public CreateSigningBasketRequest withPSUDeviceID(String psuDeviceID) {
         this.psuDeviceID = psuDeviceID;
         return this;
@@ -114,6 +124,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Geo-Location")
     public String psuGeoLocation;
+
     public CreateSigningBasketRequest withPSUGeoLocation(String psuGeoLocation) {
         this.psuGeoLocation = psuGeoLocation;
         return this;
@@ -131,6 +142,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-Http-Method")
     public org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod;
+
     public CreateSigningBasketRequest withPSUHttpMethod(org.openapis.openapi.models.shared.PSUHttpMethodEnum psuHttpMethod) {
         this.psuHttpMethod = psuHttpMethod;
         return this;
@@ -149,6 +161,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID")
     public String psuId;
+
     public CreateSigningBasketRequest withPsuId(String psuId) {
         this.psuId = psuId;
         return this;
@@ -162,6 +175,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-ID-Type")
     public String psuIDType;
+
     public CreateSigningBasketRequest withPSUIDType(String psuIDType) {
         this.psuIDType = psuIDType;
         return this;
@@ -174,6 +188,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Address")
     public String psuIPAddress;
+
     public CreateSigningBasketRequest withPSUIPAddress(String psuIPAddress) {
         this.psuIPAddress = psuIPAddress;
         return this;
@@ -185,6 +200,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-IP-Port")
     public String psuIPPort;
+
     public CreateSigningBasketRequest withPSUIPPort(String psuIPPort) {
         this.psuIPPort = psuIPPort;
         return this;
@@ -196,6 +212,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=PSU-User-Agent")
     public String psuUserAgent;
+
     public CreateSigningBasketRequest withPSUUserAgent(String psuUserAgent) {
         this.psuUserAgent = psuUserAgent;
         return this;
@@ -207,6 +224,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Signature")
     public String signature;
+
     public CreateSigningBasketRequest withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -224,6 +242,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Explicit-Authorisation-Preferred")
     public Boolean tppExplicitAuthorisationPreferred;
+
     public CreateSigningBasketRequest withTPPExplicitAuthorisationPreferred(Boolean tppExplicitAuthorisationPreferred) {
         this.tppExplicitAuthorisationPreferred = tppExplicitAuthorisationPreferred;
         return this;
@@ -236,6 +255,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Nok-Redirect-URI")
     public String tppNokRedirectURI;
+
     public CreateSigningBasketRequest withTPPNokRedirectURI(String tppNokRedirectURI) {
         this.tppNokRedirectURI = tppNokRedirectURI;
         return this;
@@ -260,6 +280,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-Content-Preferred")
     public String tppNotificationContentPreferred;
+
     public CreateSigningBasketRequest withTPPNotificationContentPreferred(String tppNotificationContentPreferred) {
         this.tppNotificationContentPreferred = tppNotificationContentPreferred;
         return this;
@@ -279,6 +300,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Notification-URI")
     public String tppNotificationURI;
+
     public CreateSigningBasketRequest withTPPNotificationURI(String tppNotificationURI) {
         this.tppNotificationURI = tppNotificationURI;
         return this;
@@ -294,6 +316,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-Preferred")
     public Boolean tppRedirectPreferred;
+
     public CreateSigningBasketRequest withTPPRedirectPreferred(Boolean tppRedirectPreferred) {
         this.tppRedirectPreferred = tppRedirectPreferred;
         return this;
@@ -312,6 +335,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Redirect-URI")
     public String tppRedirectURI;
+
     public CreateSigningBasketRequest withTPPRedirectURI(String tppRedirectURI) {
         this.tppRedirectURI = tppRedirectURI;
         return this;
@@ -324,6 +348,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=TPP-Signature-Certificate")
     public String tppSignatureCertificate;
+
     public CreateSigningBasketRequest withTPPSignatureCertificate(String tppSignatureCertificate) {
         this.tppSignatureCertificate = tppSignatureCertificate;
         return this;
@@ -334,6 +359,7 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Request-ID")
     public String xRequestID;
+
     public CreateSigningBasketRequest withXRequestID(String xRequestID) {
         this.xRequestID = xRequestID;
         return this;
@@ -345,9 +371,14 @@ public class CreateSigningBasketRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SigningBasket signingBasket;
+
     public CreateSigningBasketRequest withSigningBasket(org.openapis.openapi.models.shared.SigningBasket signingBasket) {
         this.signingBasket = signingBasket;
         return this;
     }
     
+    public CreateSigningBasketRequest(@JsonProperty("PSU-IP-Address") String psuIPAddress, @JsonProperty("X-Request-ID") String xRequestID) {
+        this.psuIPAddress = psuIPAddress;
+        this.xRequestID = xRequestID;
+  }
 }

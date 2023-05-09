@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetOrganizationInventoryRequest {
@@ -12,6 +13,7 @@ public class GetOrganizationInventoryRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=includeLicenseInfo")
     public Boolean includeLicenseInfo;
+
     public GetOrganizationInventoryRequest withIncludeLicenseInfo(Boolean includeLicenseInfo) {
         this.includeLicenseInfo = includeLicenseInfo;
         return this;
@@ -19,9 +21,13 @@ public class GetOrganizationInventoryRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=organizationId")
     public String organizationId;
+
     public GetOrganizationInventoryRequest withOrganizationId(String organizationId) {
         this.organizationId = organizationId;
         return this;
     }
     
+    public GetOrganizationInventoryRequest(@JsonProperty("organizationId") String organizationId) {
+        this.organizationId = organizationId;
+  }
 }

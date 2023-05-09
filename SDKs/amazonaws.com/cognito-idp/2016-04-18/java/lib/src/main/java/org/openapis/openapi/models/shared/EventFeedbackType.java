@@ -22,6 +22,7 @@ public class EventFeedbackType {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("FeedbackDate")
     public OffsetDateTime feedbackDate;
+
     public EventFeedbackType withFeedbackDate(OffsetDateTime feedbackDate) {
         this.feedbackDate = feedbackDate;
         return this;
@@ -29,6 +30,7 @@ public class EventFeedbackType {
     
     @JsonProperty("FeedbackValue")
     public FeedbackValueTypeEnum feedbackValue;
+
     public EventFeedbackType withFeedbackValue(FeedbackValueTypeEnum feedbackValue) {
         this.feedbackValue = feedbackValue;
         return this;
@@ -36,9 +38,14 @@ public class EventFeedbackType {
     
     @JsonProperty("Provider")
     public String provider;
+
     public EventFeedbackType withProvider(String provider) {
         this.provider = provider;
         return this;
     }
     
+    public EventFeedbackType(@JsonProperty("FeedbackValue") FeedbackValueTypeEnum feedbackValue, @JsonProperty("Provider") String provider) {
+        this.feedbackValue = feedbackValue;
+        this.provider = provider;
+  }
 }

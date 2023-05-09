@@ -15,9 +15,11 @@ public class CreateResourceOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProgressEvent")
     public ProgressEvent progressEvent;
+
     public CreateResourceOutput withProgressEvent(ProgressEvent progressEvent) {
         this.progressEvent = progressEvent;
         return this;
     }
     
+    public CreateResourceOutput(){}
 }

@@ -15,6 +15,7 @@ public class InstanceFleetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("State")
     public InstanceFleetStateEnum state;
+
     public InstanceFleetStatus withState(InstanceFleetStateEnum state) {
         this.state = state;
         return this;
@@ -23,6 +24,7 @@ public class InstanceFleetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StateChangeReason")
     public InstanceFleetStateChangeReason stateChangeReason;
+
     public InstanceFleetStatus withStateChangeReason(InstanceFleetStateChangeReason stateChangeReason) {
         this.stateChangeReason = stateChangeReason;
         return this;
@@ -31,9 +33,11 @@ public class InstanceFleetStatus {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Timeline")
     public InstanceFleetTimeline timeline;
+
     public InstanceFleetStatus withTimeline(InstanceFleetTimeline timeline) {
         this.timeline = timeline;
         return this;
     }
     
+    public InstanceFleetStatus(){}
 }

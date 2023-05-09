@@ -20,6 +20,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EmailAddress")
     public String emailAddress;
+
     public Contact withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -30,6 +31,7 @@ public class Contact {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTimestamp")
     public OffsetDateTime lastUpdatedTimestamp;
+
     public Contact withLastUpdatedTimestamp(OffsetDateTime lastUpdatedTimestamp) {
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
         return this;
@@ -38,6 +40,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicDefaultPreferences")
     public TopicPreference[] topicDefaultPreferences;
+
     public Contact withTopicDefaultPreferences(TopicPreference[] topicDefaultPreferences) {
         this.topicDefaultPreferences = topicDefaultPreferences;
         return this;
@@ -46,6 +49,7 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TopicPreferences")
     public TopicPreference[] topicPreferences;
+
     public Contact withTopicPreferences(TopicPreference[] topicPreferences) {
         this.topicPreferences = topicPreferences;
         return this;
@@ -54,9 +58,11 @@ public class Contact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UnsubscribeAll")
     public Boolean unsubscribeAll;
+
     public Contact withUnsubscribeAll(Boolean unsubscribeAll) {
         this.unsubscribeAll = unsubscribeAll;
         return this;
     }
     
+    public Contact(){}
 }

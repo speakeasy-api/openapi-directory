@@ -15,6 +15,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("comment")
     public String comment;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withComment(String comment) {
         this.comment = comment;
         return this;
@@ -25,6 +26,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
      */
     @JsonProperty("destCidr")
     public String destCidr;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withDestCidr(String destCidr) {
         this.destCidr = destCidr;
         return this;
@@ -36,6 +38,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destPort")
     public String destPort;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withDestPort(String destPort) {
         this.destPort = destPort;
         return this;
@@ -46,6 +49,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
      */
     @JsonProperty("policy")
     public UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum policy;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withPolicy(UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum policy) {
         this.policy = policy;
         return this;
@@ -56,6 +60,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
      */
     @JsonProperty("protocol")
     public UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum protocol;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withProtocol(UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum protocol) {
         this.protocol = protocol;
         return this;
@@ -66,6 +71,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
      */
     @JsonProperty("srcCidr")
     public String srcCidr;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withSrcCidr(String srcCidr) {
         this.srcCidr = srcCidr;
         return this;
@@ -77,6 +83,7 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("srcPort")
     public String srcPort;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withSrcPort(String srcPort) {
         this.srcPort = srcPort;
         return this;
@@ -88,9 +95,16 @@ public class UpdateOrganizationVpnFirewallRulesRequestBodyRules {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("syslogEnabled")
     public Boolean syslogEnabled;
+
     public UpdateOrganizationVpnFirewallRulesRequestBodyRules withSyslogEnabled(Boolean syslogEnabled) {
         this.syslogEnabled = syslogEnabled;
         return this;
     }
     
+    public UpdateOrganizationVpnFirewallRulesRequestBodyRules(@JsonProperty("destCidr") String destCidr, @JsonProperty("policy") UpdateOrganizationVpnFirewallRulesRequestBodyRulesPolicyEnum policy, @JsonProperty("protocol") UpdateOrganizationVpnFirewallRulesRequestBodyRulesProtocolEnum protocol, @JsonProperty("srcCidr") String srcCidr) {
+        this.destCidr = destCidr;
+        this.policy = policy;
+        this.protocol = protocol;
+        this.srcCidr = srcCidr;
+  }
 }

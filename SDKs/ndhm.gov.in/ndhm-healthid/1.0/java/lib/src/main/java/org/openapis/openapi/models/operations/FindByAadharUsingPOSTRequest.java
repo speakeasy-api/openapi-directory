@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class FindByAadharUsingPOSTRequest {
@@ -12,6 +13,7 @@ public class FindByAadharUsingPOSTRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AadharNumberRequestPayload aadharNumberRequestPayload;
+
     public FindByAadharUsingPOSTRequest withAadharNumberRequestPayload(org.openapis.openapi.models.shared.AadharNumberRequestPayload aadharNumberRequestPayload) {
         this.aadharNumberRequestPayload = aadharNumberRequestPayload;
         return this;
@@ -19,9 +21,13 @@ public class FindByAadharUsingPOSTRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept-Language")
     public String acceptLanguage;
+
     public FindByAadharUsingPOSTRequest withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
     
+    public FindByAadharUsingPOSTRequest(@JsonProperty("AadharNumberRequestPayload") org.openapis.openapi.models.shared.AadharNumberRequestPayload aadharNumberRequestPayload) {
+        this.aadharNumberRequestPayload = aadharNumberRequestPayload;
+  }
 }

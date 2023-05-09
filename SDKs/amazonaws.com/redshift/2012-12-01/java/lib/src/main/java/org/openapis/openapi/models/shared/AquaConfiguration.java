@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class AquaConfiguration {
     
     public AquaConfigurationStatusEnum aquaConfigurationStatus;
+
     public AquaConfiguration withAquaConfigurationStatus(AquaConfigurationStatusEnum aquaConfigurationStatus) {
         this.aquaConfigurationStatus = aquaConfigurationStatus;
         return this;
@@ -19,9 +20,11 @@ public class AquaConfiguration {
     
     
     public AquaStatusEnum aquaStatus;
+
     public AquaConfiguration withAquaStatus(AquaStatusEnum aquaStatus) {
         this.aquaStatus = aquaStatus;
         return this;
     }
     
+    public AquaConfiguration(){}
 }

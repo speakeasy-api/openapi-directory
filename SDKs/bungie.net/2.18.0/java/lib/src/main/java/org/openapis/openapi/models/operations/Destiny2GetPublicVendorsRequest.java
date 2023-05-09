@@ -12,9 +12,11 @@ public class Destiny2GetPublicVendorsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=false,name=components")
     public Integer[] components;
+
     public Destiny2GetPublicVendorsRequest withComponents(Integer[] components) {
         this.components = components;
         return this;
     }
     
+    public Destiny2GetPublicVendorsRequest(){}
 }

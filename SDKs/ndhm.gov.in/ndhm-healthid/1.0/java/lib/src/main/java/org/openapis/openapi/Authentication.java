@@ -66,11 +66,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthAccountPasswordRequestUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -120,11 +118,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthWithMobileTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthWithMobileTokenUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AuthWithMobileTokenUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthWithMobileTokenUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -174,11 +170,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthenticateUserUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateUserUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AuthenticateUserUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateUserUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -228,11 +222,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AuthenticateWithPasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateWithPasswordUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.AuthenticateWithPasswordUsingPOSTResponse res = new org.openapis.openapi.models.operations.AuthenticateWithPasswordUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -277,11 +269,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CertUsingGETResponse res = new org.openapis.openapi.models.operations.CertUsingGETResponse() {{
+        org.openapis.openapi.models.operations.CertUsingGETResponse res = new org.openapis.openapi.models.operations.CertUsingGETResponse(contentType, httpRes.statusCode()) {{
             certUsingGET200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -331,11 +321,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmWithAadhaarBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithAadhaarBioUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ConfirmWithAadhaarBioUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithAadhaarBioUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -385,11 +373,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmWithAadhaarOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithAadhaarOtpUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ConfirmWithAadhaarOtpUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithAadhaarOtpUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -439,11 +425,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmWithDemographicsUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithDemographicsUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ConfirmWithDemographicsUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithDemographicsUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             confirmWithDemographicsUsingPOST200WildcardString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -493,11 +477,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ConfirmWithMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithMobileUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ConfirmWithMobileUsingPOSTResponse res = new org.openapis.openapi.models.operations.ConfirmWithMobileUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -547,11 +529,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.InitiateAuthUsingPOSTResponse res = new org.openapis.openapi.models.operations.InitiateAuthUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.InitiateAuthUsingPOSTResponse res = new org.openapis.openapi.models.operations.InitiateAuthUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -601,11 +581,9 @@ public class Authentication {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ResendAuthMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResendAuthMobileOTPUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ResendAuthMobileOTPUsingPOSTResponse res = new org.openapis.openapi.models.operations.ResendAuthMobileOTPUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

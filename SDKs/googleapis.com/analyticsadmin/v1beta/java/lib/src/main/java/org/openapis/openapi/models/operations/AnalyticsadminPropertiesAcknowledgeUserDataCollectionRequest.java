@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
@@ -12,6 +13,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest googleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withGoogleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest(org.openapis.openapi.models.shared.GoogleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest googleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest) {
         this.googleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest = googleAnalyticsAdminV1betaAcknowledgeUserDataCollectionRequest;
         return this;
@@ -29,6 +32,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -69,6 +76,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withKey(String key) {
         this.key = key;
         return this;
@@ -79,6 +87,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -89,6 +98,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -99,6 +109,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=property")
     public String property;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withProperty(String property) {
         this.property = property;
         return this;
@@ -109,6 +120,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -119,6 +131,7 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -129,9 +142,13 @@ public class AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public AnalyticsadminPropertiesAcknowledgeUserDataCollectionRequest(@JsonProperty("property") String property) {
+        this.property = property;
+  }
 }

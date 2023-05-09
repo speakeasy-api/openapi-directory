@@ -15,6 +15,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankDetailsSummaryPage")
     public Boolean bankDetailsSummaryPage;
+
     public ShowPages withBankDetailsSummaryPage(Boolean bankDetailsSummaryPage) {
         this.bankDetailsSummaryPage = bankDetailsSummaryPage;
         return this;
@@ -26,6 +27,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankVerificationPage")
     public Boolean bankVerificationPage;
+
     public ShowPages withBankVerificationPage(Boolean bankVerificationPage) {
         this.bankVerificationPage = bankVerificationPage;
         return this;
@@ -37,6 +39,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("businessDetailsSummaryPage")
     public Boolean businessDetailsSummaryPage;
+
     public ShowPages withBusinessDetailsSummaryPage(Boolean businessDetailsSummaryPage) {
         this.businessDetailsSummaryPage = businessDetailsSummaryPage;
         return this;
@@ -48,6 +51,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("checksOverviewPage")
     public Boolean checksOverviewPage;
+
     public ShowPages withChecksOverviewPage(Boolean checksOverviewPage) {
         this.checksOverviewPage = checksOverviewPage;
         return this;
@@ -59,6 +63,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("individualDetailsSummaryPage")
     public Boolean individualDetailsSummaryPage;
+
     public ShowPages withIndividualDetailsSummaryPage(Boolean individualDetailsSummaryPage) {
         this.individualDetailsSummaryPage = individualDetailsSummaryPage;
         return this;
@@ -70,6 +75,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("legalArrangementsDetailsSummaryPage")
     public Boolean legalArrangementsDetailsSummaryPage;
+
     public ShowPages withLegalArrangementsDetailsSummaryPage(Boolean legalArrangementsDetailsSummaryPage) {
         this.legalArrangementsDetailsSummaryPage = legalArrangementsDetailsSummaryPage;
         return this;
@@ -81,6 +87,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manualBankAccountPage")
     public Boolean manualBankAccountPage;
+
     public ShowPages withManualBankAccountPage(Boolean manualBankAccountPage) {
         this.manualBankAccountPage = manualBankAccountPage;
         return this;
@@ -92,6 +99,7 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shareholderDetailsSummaryPage")
     public Boolean shareholderDetailsSummaryPage;
+
     public ShowPages withShareholderDetailsSummaryPage(Boolean shareholderDetailsSummaryPage) {
         this.shareholderDetailsSummaryPage = shareholderDetailsSummaryPage;
         return this;
@@ -103,9 +111,11 @@ public class ShowPages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("welcomePage")
     public Boolean welcomePage;
+
     public ShowPages withWelcomePage(Boolean welcomePage) {
         this.welcomePage = welcomePage;
         return this;
     }
     
+    public ShowPages(){}
 }

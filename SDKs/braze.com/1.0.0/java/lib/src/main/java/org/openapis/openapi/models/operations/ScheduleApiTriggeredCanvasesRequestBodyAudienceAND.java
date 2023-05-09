@@ -12,9 +12,11 @@ public class ScheduleApiTriggeredCanvasesRequestBodyAudienceAND {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom_attribute")
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute customAttribute;
+
     public ScheduleApiTriggeredCanvasesRequestBodyAudienceAND withCustomAttribute(ScheduleApiTriggeredCanvasesRequestBodyAudienceANDCustomAttribute customAttribute) {
         this.customAttribute = customAttribute;
         return this;
     }
     
+    public ScheduleApiTriggeredCanvasesRequestBodyAudienceAND(){}
 }

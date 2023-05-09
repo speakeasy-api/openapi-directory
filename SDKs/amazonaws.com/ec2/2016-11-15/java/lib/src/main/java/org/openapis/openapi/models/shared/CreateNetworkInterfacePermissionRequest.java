@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateNetworkInterfacePermissionRequest - Contains the parameters for CreateNetworkInterfacePermission.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateNetworkInterfacePermissionRequest {
     
     public String awsAccountId;
+
     public CreateNetworkInterfacePermissionRequest withAwsAccountId(String awsAccountId) {
         this.awsAccountId = awsAccountId;
         return this;
@@ -19,6 +20,7 @@ public class CreateNetworkInterfacePermissionRequest {
     
     
     public String awsService;
+
     public CreateNetworkInterfacePermissionRequest withAwsService(String awsService) {
         this.awsService = awsService;
         return this;
@@ -26,6 +28,7 @@ public class CreateNetworkInterfacePermissionRequest {
     
     
     public Boolean dryRun;
+
     public CreateNetworkInterfacePermissionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -33,6 +36,7 @@ public class CreateNetworkInterfacePermissionRequest {
     
     
     public String networkInterfaceId;
+
     public CreateNetworkInterfacePermissionRequest withNetworkInterfaceId(String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
         return this;
@@ -40,9 +44,14 @@ public class CreateNetworkInterfacePermissionRequest {
     
     
     public InterfacePermissionTypeEnum permission;
+
     public CreateNetworkInterfacePermissionRequest withPermission(InterfacePermissionTypeEnum permission) {
         this.permission = permission;
         return this;
     }
     
+    public CreateNetworkInterfacePermissionRequest(@JsonProperty("NetworkInterfaceId") String networkInterfaceId, @JsonProperty("Permission") InterfacePermissionTypeEnum permission) {
+        this.networkInterfaceId = networkInterfaceId;
+        this.permission = permission;
+  }
 }

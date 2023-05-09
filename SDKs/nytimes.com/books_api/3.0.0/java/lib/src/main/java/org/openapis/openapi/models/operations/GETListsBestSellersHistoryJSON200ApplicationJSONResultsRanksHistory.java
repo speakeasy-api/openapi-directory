@@ -12,6 +12,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("asterisk")
     public Long asterisk;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withAsterisk(Long asterisk) {
         this.asterisk = asterisk;
         return this;
@@ -20,6 +21,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bestsellers_date")
     public String bestsellersDate;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withBestsellersDate(String bestsellersDate) {
         this.bestsellersDate = bestsellersDate;
         return this;
@@ -28,6 +30,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dagger")
     public Long dagger;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withDagger(Long dagger) {
         this.dagger = dagger;
         return this;
@@ -36,6 +39,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("display_name")
     public String displayName;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -44,6 +48,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("list_name")
     public String listName;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withListName(String listName) {
         this.listName = listName;
         return this;
@@ -52,6 +57,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_isbn10")
     public String primaryIsbn10;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withPrimaryIsbn10(String primaryIsbn10) {
         this.primaryIsbn10 = primaryIsbn10;
         return this;
@@ -60,6 +66,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("primary_isbn13")
     public String primaryIsbn13;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withPrimaryIsbn13(String primaryIsbn13) {
         this.primaryIsbn13 = primaryIsbn13;
         return this;
@@ -68,6 +75,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("published_date")
     public String publishedDate;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withPublishedDate(String publishedDate) {
         this.publishedDate = publishedDate;
         return this;
@@ -76,6 +84,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public Long rank;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withRank(Long rank) {
         this.rank = rank;
         return this;
@@ -84,6 +93,7 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ranks_last_week")
     public Object ranksLastWeek;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withRanksLastWeek(Object ranksLastWeek) {
         this.ranksLastWeek = ranksLastWeek;
         return this;
@@ -92,9 +102,11 @@ public class GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("weeks_on_list")
     public Long weeksOnList;
+
     public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory withWeeksOnList(Long weeksOnList) {
         this.weeksOnList = weeksOnList;
         return this;
     }
     
+    public GETListsBestSellersHistoryJSON200ApplicationJSONResultsRanksHistory(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetGoalsResponse {
     
     public String contentType;
+
     public GetGoalsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetGoalsResponse {
      */
     
     public org.openapis.openapi.models.shared.ErrorResponse errorResponse;
+
     public GetGoalsResponse withErrorResponse(org.openapis.openapi.models.shared.ErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
@@ -26,6 +29,7 @@ public class GetGoalsResponse {
     
     
     public Integer statusCode;
+
     public GetGoalsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class GetGoalsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetGoalsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class GetGoalsResponse {
      */
     
     public GetGoals200ApplicationJSON getGoals200ApplicationJSONObject;
+
     public GetGoalsResponse withGetGoals200ApplicationJSONObject(GetGoals200ApplicationJSON getGoals200ApplicationJSONObject) {
         this.getGoals200ApplicationJSONObject = getGoals200ApplicationJSONObject;
         return this;
     }
     
+    public GetGoalsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

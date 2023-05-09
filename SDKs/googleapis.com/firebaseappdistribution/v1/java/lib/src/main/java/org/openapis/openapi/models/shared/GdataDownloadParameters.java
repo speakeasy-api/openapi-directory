@@ -15,6 +15,7 @@ public class GdataDownloadParameters {
      */
     
     public Boolean allowGzipCompression;
+
     public GdataDownloadParameters withAllowGzipCompression(Boolean allowGzipCompression) {
         this.allowGzipCompression = allowGzipCompression;
         return this;
@@ -25,9 +26,11 @@ public class GdataDownloadParameters {
      */
     
     public Boolean ignoreRange;
+
     public GdataDownloadParameters withIgnoreRange(Boolean ignoreRange) {
         this.ignoreRange = ignoreRange;
         return this;
     }
     
+    public GdataDownloadParameters(){}
 }

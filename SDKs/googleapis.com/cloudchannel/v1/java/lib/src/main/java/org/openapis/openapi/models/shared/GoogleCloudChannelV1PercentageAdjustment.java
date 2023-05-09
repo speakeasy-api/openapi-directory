@@ -18,9 +18,11 @@ public class GoogleCloudChannelV1PercentageAdjustment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("percentage")
     public GoogleTypeDecimal percentage;
+
     public GoogleCloudChannelV1PercentageAdjustment withPercentage(GoogleTypeDecimal percentage) {
         this.percentage = percentage;
         return this;
     }
     
+    public GoogleCloudChannelV1PercentageAdjustment(){}
 }

@@ -15,6 +15,7 @@ public class ListFunctionDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Definitions")
     public DefinitionInformation[] definitions;
+
     public ListFunctionDefinitionsResponse withDefinitions(DefinitionInformation[] definitions) {
         this.definitions = definitions;
         return this;
@@ -23,9 +24,11 @@ public class ListFunctionDefinitionsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListFunctionDefinitionsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListFunctionDefinitionsResponse(){}
 }

@@ -60,12 +60,10 @@ public class RewardProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CreateRewardProgramResponse res = new org.openapis.openapi.models.operations.CreateRewardProgramResponse() {{
+        org.openapis.openapi.models.operations.CreateRewardProgramResponse res = new org.openapis.openapi.models.operations.CreateRewardProgramResponse(contentType, httpRes.statusCode()) {{
             createRewardProgramResponse = null;
             createOrUpdateErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -107,12 +105,10 @@ public class RewardProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardProgramResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardProgramResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramResponse(contentType, httpRes.statusCode()) {{
             fetchRewardProgramResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -154,12 +150,10 @@ public class RewardProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardProgramGroupResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramGroupResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardProgramGroupResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramGroupResponse(contentType, httpRes.statusCode()) {{
             fetchGroupsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -207,12 +201,10 @@ public class RewardProgram {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.FetchRewardProgramsResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramsResponse() {{
+        org.openapis.openapi.models.operations.FetchRewardProgramsResponse res = new org.openapis.openapi.models.operations.FetchRewardProgramsResponse(contentType, httpRes.statusCode()) {{
             fetchRewardProgramsResponse = null;
             fetchErrorResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

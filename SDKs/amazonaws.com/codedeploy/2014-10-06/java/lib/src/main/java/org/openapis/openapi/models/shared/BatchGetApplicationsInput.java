@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchGetApplicationsInput {
     @JsonProperty("applicationNames")
     public String[] applicationNames;
+
     public BatchGetApplicationsInput withApplicationNames(String[] applicationNames) {
         this.applicationNames = applicationNames;
         return this;
     }
     
+    public BatchGetApplicationsInput(@JsonProperty("applicationNames") String[] applicationNames) {
+        this.applicationNames = applicationNames;
+  }
 }

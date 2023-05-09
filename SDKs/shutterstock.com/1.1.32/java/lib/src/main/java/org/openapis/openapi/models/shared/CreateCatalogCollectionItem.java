@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateCatalogCollectionItem {
     @JsonProperty("asset")
     public CreateCatalogCollectionItemAsset asset;
+
     public CreateCatalogCollectionItem withAsset(CreateCatalogCollectionItemAsset asset) {
         this.asset = asset;
         return this;
     }
     
+    public CreateCatalogCollectionItem(@JsonProperty("asset") CreateCatalogCollectionItemAsset asset) {
+        this.asset = asset;
+  }
 }

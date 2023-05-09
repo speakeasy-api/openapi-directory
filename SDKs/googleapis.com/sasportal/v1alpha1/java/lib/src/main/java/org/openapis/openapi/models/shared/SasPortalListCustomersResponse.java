@@ -18,6 +18,7 @@ public class SasPortalListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customers")
     public SasPortalCustomer[] customers;
+
     public SasPortalListCustomersResponse withCustomers(SasPortalCustomer[] customers) {
         this.customers = customers;
         return this;
@@ -29,9 +30,11 @@ public class SasPortalListCustomersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SasPortalListCustomersResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SasPortalListCustomersResponse(){}
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Adexchangebuyer2AccountsProposalsListResponse {
     
     public String contentType;
+
     public Adexchangebuyer2AccountsProposalsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class Adexchangebuyer2AccountsProposalsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListProposalsResponse listProposalsResponse;
+
     public Adexchangebuyer2AccountsProposalsListResponse withListProposalsResponse(org.openapis.openapi.models.shared.ListProposalsResponse listProposalsResponse) {
         this.listProposalsResponse = listProposalsResponse;
         return this;
@@ -26,6 +29,7 @@ public class Adexchangebuyer2AccountsProposalsListResponse {
     
     
     public Integer statusCode;
+
     public Adexchangebuyer2AccountsProposalsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class Adexchangebuyer2AccountsProposalsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Adexchangebuyer2AccountsProposalsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public Adexchangebuyer2AccountsProposalsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

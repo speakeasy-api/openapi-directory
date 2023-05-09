@@ -50,10 +50,8 @@ public class TransactionsFindPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.DeleteTransactionsTransactionIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -91,11 +89,9 @@ public class TransactionsFindPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsResponse res = new org.openapis.openapi.models.operations.GetTransactionsResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -133,10 +129,8 @@ public class TransactionsFindPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.GetTransactionsTransactionIdResponse() {{
+        org.openapis.openapi.models.operations.GetTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.GetTransactionsTransactionIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {
@@ -174,11 +168,9 @@ public class TransactionsFindPaymentsAndRefunds {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.PostTransactionsTransactionIdResponse() {{
+        org.openapis.openapi.models.operations.PostTransactionsTransactionIdResponse res = new org.openapis.openapi.models.operations.PostTransactionsTransactionIdResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 400) {

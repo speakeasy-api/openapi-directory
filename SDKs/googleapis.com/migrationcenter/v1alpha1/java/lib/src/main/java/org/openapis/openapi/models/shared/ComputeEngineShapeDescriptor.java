@@ -18,6 +18,7 @@ public class ComputeEngineShapeDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logicalCoreCount")
     public Integer logicalCoreCount;
+
     public ComputeEngineShapeDescriptor withLogicalCoreCount(Integer logicalCoreCount) {
         this.logicalCoreCount = logicalCoreCount;
         return this;
@@ -29,6 +30,7 @@ public class ComputeEngineShapeDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("machineType")
     public String machineType;
+
     public ComputeEngineShapeDescriptor withMachineType(String machineType) {
         this.machineType = machineType;
         return this;
@@ -40,6 +42,7 @@ public class ComputeEngineShapeDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("memoryMb")
     public Integer memoryMb;
+
     public ComputeEngineShapeDescriptor withMemoryMb(Integer memoryMb) {
         this.memoryMb = memoryMb;
         return this;
@@ -51,6 +54,7 @@ public class ComputeEngineShapeDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("physicalCoreCount")
     public Integer physicalCoreCount;
+
     public ComputeEngineShapeDescriptor withPhysicalCoreCount(Integer physicalCoreCount) {
         this.physicalCoreCount = physicalCoreCount;
         return this;
@@ -62,9 +66,11 @@ public class ComputeEngineShapeDescriptor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("series")
     public String series;
+
     public ComputeEngineShapeDescriptor withSeries(String series) {
         this.series = series;
         return this;
     }
     
+    public ComputeEngineShapeDescriptor(){}
 }

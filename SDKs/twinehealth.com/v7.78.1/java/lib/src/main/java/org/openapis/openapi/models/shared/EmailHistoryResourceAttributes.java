@@ -15,6 +15,7 @@ public class EmailHistoryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public EmailHistoryResourceAttributes withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -26,6 +27,7 @@ public class EmailHistoryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_type")
     public String emailType;
+
     public EmailHistoryResourceAttributes withEmailType(String emailType) {
         this.emailType = emailType;
         return this;
@@ -37,6 +39,7 @@ public class EmailHistoryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("send_time")
     public String sendTime;
+
     public EmailHistoryResourceAttributes withSendTime(String sendTime) {
         this.sendTime = sendTime;
         return this;
@@ -48,6 +51,7 @@ public class EmailHistoryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_times")
     public EmailHistoryResourceAttributesStatusTimes statusTimes;
+
     public EmailHistoryResourceAttributes withStatusTimes(EmailHistoryResourceAttributesStatusTimes statusTimes) {
         this.statusTimes = statusTimes;
         return this;
@@ -59,9 +63,11 @@ public class EmailHistoryResourceAttributes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("twine_email_id")
     public String twineEmailId;
+
     public EmailHistoryResourceAttributes withTwineEmailId(String twineEmailId) {
         this.twineEmailId = twineEmailId;
         return this;
     }
     
+    public EmailHistoryResourceAttributes(){}
 }

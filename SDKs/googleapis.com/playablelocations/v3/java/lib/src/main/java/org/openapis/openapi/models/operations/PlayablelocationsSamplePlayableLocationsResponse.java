@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PlayablelocationsSamplePlayableLocationsResponse {
     
     public String contentType;
+
     public PlayablelocationsSamplePlayableLocationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PlayablelocationsSamplePlayableLocationsResponse {
      */
     
     public org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse googleMapsPlayablelocationsV3SamplePlayableLocationsResponse;
+
     public PlayablelocationsSamplePlayableLocationsResponse withGoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse(org.openapis.openapi.models.shared.GoogleMapsPlayablelocationsV3SamplePlayableLocationsResponse googleMapsPlayablelocationsV3SamplePlayableLocationsResponse) {
         this.googleMapsPlayablelocationsV3SamplePlayableLocationsResponse = googleMapsPlayablelocationsV3SamplePlayableLocationsResponse;
         return this;
@@ -26,6 +29,7 @@ public class PlayablelocationsSamplePlayableLocationsResponse {
     
     
     public Integer statusCode;
+
     public PlayablelocationsSamplePlayableLocationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PlayablelocationsSamplePlayableLocationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PlayablelocationsSamplePlayableLocationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PlayablelocationsSamplePlayableLocationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

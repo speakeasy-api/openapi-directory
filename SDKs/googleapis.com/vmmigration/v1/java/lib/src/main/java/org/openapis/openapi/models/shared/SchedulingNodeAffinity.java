@@ -18,6 +18,7 @@ public class SchedulingNodeAffinity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key")
     public String key;
+
     public SchedulingNodeAffinity withKey(String key) {
         this.key = key;
         return this;
@@ -29,6 +30,7 @@ public class SchedulingNodeAffinity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operator")
     public SchedulingNodeAffinityOperatorEnum operator;
+
     public SchedulingNodeAffinity withOperator(SchedulingNodeAffinityOperatorEnum operator) {
         this.operator = operator;
         return this;
@@ -40,9 +42,11 @@ public class SchedulingNodeAffinity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("values")
     public String[] values;
+
     public SchedulingNodeAffinity withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SchedulingNodeAffinity(){}
 }

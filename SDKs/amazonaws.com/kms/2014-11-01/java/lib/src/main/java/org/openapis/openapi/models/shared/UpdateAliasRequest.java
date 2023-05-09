@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateAliasRequest {
     @JsonProperty("AliasName")
     public String aliasName;
+
     public UpdateAliasRequest withAliasName(String aliasName) {
         this.aliasName = aliasName;
         return this;
@@ -16,9 +17,14 @@ public class UpdateAliasRequest {
     
     @JsonProperty("TargetKeyId")
     public String targetKeyId;
+
     public UpdateAliasRequest withTargetKeyId(String targetKeyId) {
         this.targetKeyId = targetKeyId;
         return this;
     }
     
+    public UpdateAliasRequest(@JsonProperty("AliasName") String aliasName, @JsonProperty("TargetKeyId") String targetKeyId) {
+        this.aliasName = aliasName;
+        this.targetKeyId = targetKeyId;
+  }
 }

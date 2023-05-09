@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateFleetMetricResponse {
     
     public String contentType;
+
     public UpdateFleetMetricResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object indexNotReadyException;
+
     public UpdateFleetMetricResponse withIndexNotReadyException(Object indexNotReadyException) {
         this.indexNotReadyException = indexNotReadyException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object internalFailureException;
+
     public UpdateFleetMetricResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object invalidAggregationException;
+
     public UpdateFleetMetricResponse withInvalidAggregationException(Object invalidAggregationException) {
         this.invalidAggregationException = invalidAggregationException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object invalidQueryException;
+
     public UpdateFleetMetricResponse withInvalidQueryException(Object invalidQueryException) {
         this.invalidQueryException = invalidQueryException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateFleetMetricResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -66,6 +73,7 @@ public class UpdateFleetMetricResponse {
     
     
     public Integer statusCode;
+
     public UpdateFleetMetricResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class UpdateFleetMetricResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateFleetMetricResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateFleetMetricResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -93,6 +103,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateFleetMetricResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -103,6 +114,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object throttlingException;
+
     public UpdateFleetMetricResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -113,6 +125,7 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object unauthorizedException;
+
     public UpdateFleetMetricResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
@@ -123,9 +136,14 @@ public class UpdateFleetMetricResponse {
      */
     
     public Object versionConflictException;
+
     public UpdateFleetMetricResponse withVersionConflictException(Object versionConflictException) {
         this.versionConflictException = versionConflictException;
         return this;
     }
     
+    public UpdateFleetMetricResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

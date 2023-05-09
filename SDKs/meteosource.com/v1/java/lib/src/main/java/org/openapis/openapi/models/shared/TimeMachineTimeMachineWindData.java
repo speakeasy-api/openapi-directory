@@ -16,6 +16,7 @@ public class TimeMachineTimeMachineWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("angle")
     public Long angle;
+
     public TimeMachineTimeMachineWindData withAngle(Long angle) {
         this.angle = angle;
         return this;
@@ -28,6 +29,7 @@ public class TimeMachineTimeMachineWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dir")
     public byte[] dir;
+
     public TimeMachineTimeMachineWindData withDir(byte[] dir) {
         this.dir = dir;
         return this;
@@ -40,6 +42,7 @@ public class TimeMachineTimeMachineWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gusts")
     public Long gusts;
+
     public TimeMachineTimeMachineWindData withGusts(Long gusts) {
         this.gusts = gusts;
         return this;
@@ -52,9 +55,11 @@ public class TimeMachineTimeMachineWindData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("speed")
     public Long speed;
+
     public TimeMachineTimeMachineWindData withSpeed(Long speed) {
         this.speed = speed;
         return this;
     }
     
+    public TimeMachineTimeMachineWindData(){}
 }

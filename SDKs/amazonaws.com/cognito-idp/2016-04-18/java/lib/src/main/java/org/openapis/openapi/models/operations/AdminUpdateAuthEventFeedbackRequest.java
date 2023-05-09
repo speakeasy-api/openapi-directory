@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class AdminUpdateAuthEventFeedbackRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AdminUpdateAuthEventFeedbackRequest adminUpdateAuthEventFeedbackRequest;
+
     public AdminUpdateAuthEventFeedbackRequest withAdminUpdateAuthEventFeedbackRequest(org.openapis.openapi.models.shared.AdminUpdateAuthEventFeedbackRequest adminUpdateAuthEventFeedbackRequest) {
         this.adminUpdateAuthEventFeedbackRequest = adminUpdateAuthEventFeedbackRequest;
         return this;
@@ -16,6 +18,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -65,9 +74,14 @@ public class AdminUpdateAuthEventFeedbackRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Target")
     public AdminUpdateAuthEventFeedbackXAmzTargetEnum xAmzTarget;
+
     public AdminUpdateAuthEventFeedbackRequest withXAmzTarget(AdminUpdateAuthEventFeedbackXAmzTargetEnum xAmzTarget) {
         this.xAmzTarget = xAmzTarget;
         return this;
     }
     
+    public AdminUpdateAuthEventFeedbackRequest(@JsonProperty("AdminUpdateAuthEventFeedbackRequest") org.openapis.openapi.models.shared.AdminUpdateAuthEventFeedbackRequest adminUpdateAuthEventFeedbackRequest, @JsonProperty("X-Amz-Target") AdminUpdateAuthEventFeedbackXAmzTargetEnum xAmzTarget) {
+        this.adminUpdateAuthEventFeedbackRequest = adminUpdateAuthEventFeedbackRequest;
+        this.xAmzTarget = xAmzTarget;
+  }
 }

@@ -15,6 +15,7 @@ public class ListJobExecutionsForThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("executionSummaries")
     public JobExecutionSummaryForThing[] executionSummaries;
+
     public ListJobExecutionsForThingResponse withExecutionSummaries(JobExecutionSummaryForThing[] executionSummaries) {
         this.executionSummaries = executionSummaries;
         return this;
@@ -23,9 +24,11 @@ public class ListJobExecutionsForThingResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListJobExecutionsForThingResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListJobExecutionsForThingResponse(){}
 }

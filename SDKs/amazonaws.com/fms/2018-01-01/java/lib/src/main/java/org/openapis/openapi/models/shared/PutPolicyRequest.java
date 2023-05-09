@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class PutPolicyRequest {
     @JsonProperty("Policy")
     public Policy policy;
+
     public PutPolicyRequest withPolicy(Policy policy) {
         this.policy = policy;
         return this;
@@ -19,9 +20,13 @@ public class PutPolicyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TagList")
     public Tag[] tagList;
+
     public PutPolicyRequest withTagList(Tag[] tagList) {
         this.tagList = tagList;
         return this;
     }
     
+    public PutPolicyRequest(@JsonProperty("Policy") Policy policy) {
+        this.policy = policy;
+  }
 }

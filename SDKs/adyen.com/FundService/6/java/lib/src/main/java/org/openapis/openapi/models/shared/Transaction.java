@@ -17,6 +17,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("amount")
     public Amount amount;
+
     public Transaction withAmount(Amount amount) {
         this.amount = amount;
         return this;
@@ -25,6 +26,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bankAccountDetail")
     public BankAccountDetail bankAccountDetail;
+
     public Transaction withBankAccountDetail(BankAccountDetail bankAccountDetail) {
         this.bankAccountDetail = bankAccountDetail;
         return this;
@@ -36,6 +38,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("captureMerchantReference")
     public String captureMerchantReference;
+
     public Transaction withCaptureMerchantReference(String captureMerchantReference) {
         this.captureMerchantReference = captureMerchantReference;
         return this;
@@ -47,6 +50,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("capturePspReference")
     public String capturePspReference;
+
     public Transaction withCapturePspReference(String capturePspReference) {
         this.capturePspReference = capturePspReference;
         return this;
@@ -60,6 +64,7 @@ public class Transaction {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationDate")
     public OffsetDateTime creationDate;
+
     public Transaction withCreationDate(OffsetDateTime creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -71,6 +76,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public Transaction withDescription(String description) {
         this.description = description;
         return this;
@@ -82,6 +88,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("destinationAccountCode")
     public String destinationAccountCode;
+
     public Transaction withDestinationAccountCode(String destinationAccountCode) {
         this.destinationAccountCode = destinationAccountCode;
         return this;
@@ -93,6 +100,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disputePspReference")
     public String disputePspReference;
+
     public Transaction withDisputePspReference(String disputePspReference) {
         this.disputePspReference = disputePspReference;
         return this;
@@ -104,6 +112,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disputeReasonCode")
     public String disputeReasonCode;
+
     public Transaction withDisputeReasonCode(String disputeReasonCode) {
         this.disputeReasonCode = disputeReasonCode;
         return this;
@@ -115,6 +124,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantReference")
     public String merchantReference;
+
     public Transaction withMerchantReference(String merchantReference) {
         this.merchantReference = merchantReference;
         return this;
@@ -126,6 +136,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("paymentPspReference")
     public String paymentPspReference;
+
     public Transaction withPaymentPspReference(String paymentPspReference) {
         this.paymentPspReference = paymentPspReference;
         return this;
@@ -137,6 +148,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payoutPspReference")
     public String payoutPspReference;
+
     public Transaction withPayoutPspReference(String payoutPspReference) {
         this.payoutPspReference = payoutPspReference;
         return this;
@@ -148,6 +160,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pspReference")
     public String pspReference;
+
     public Transaction withPspReference(String pspReference) {
         this.pspReference = pspReference;
         return this;
@@ -159,6 +172,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceAccountCode")
     public String sourceAccountCode;
+
     public Transaction withSourceAccountCode(String sourceAccountCode) {
         this.sourceAccountCode = sourceAccountCode;
         return this;
@@ -171,6 +185,7 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transactionStatus")
     public TransactionTransactionStatusEnum transactionStatus;
+
     public Transaction withTransactionStatus(TransactionTransactionStatusEnum transactionStatus) {
         this.transactionStatus = transactionStatus;
         return this;
@@ -182,9 +197,11 @@ public class Transaction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferCode")
     public String transferCode;
+
     public Transaction withTransferCode(String transferCode) {
         this.transferCode = transferCode;
         return this;
     }
     
+    public Transaction(){}
 }

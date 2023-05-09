@@ -46,6 +46,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public Address address;
+
     public CreateCustomerRequest withAddress(Address address) {
         this.address = address;
         return this;
@@ -59,6 +60,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("birthday")
     public String birthday;
+
     public CreateCustomerRequest withBirthday(String birthday) {
         this.birthday = birthday;
         return this;
@@ -70,6 +72,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("company_name")
     public String companyName;
+
     public CreateCustomerRequest withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -81,6 +84,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email_address")
     public String emailAddress;
+
     public CreateCustomerRequest withEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
         return this;
@@ -92,6 +96,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("family_name")
     public String familyName;
+
     public CreateCustomerRequest withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -103,6 +108,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("given_name")
     public String givenName;
+
     public CreateCustomerRequest withGivenName(String givenName) {
         this.givenName = givenName;
         return this;
@@ -115,6 +121,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("idempotency_key")
     public String idempotencyKey;
+
     public CreateCustomerRequest withIdempotencyKey(String idempotencyKey) {
         this.idempotencyKey = idempotencyKey;
         return this;
@@ -126,6 +133,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nickname")
     public String nickname;
+
     public CreateCustomerRequest withNickname(String nickname) {
         this.nickname = nickname;
         return this;
@@ -137,6 +145,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("note")
     public String note;
+
     public CreateCustomerRequest withNote(String note) {
         this.note = note;
         return this;
@@ -148,6 +157,7 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public CreateCustomerRequest withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -160,9 +170,11 @@ public class CreateCustomerRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reference_id")
     public String referenceId;
+
     public CreateCustomerRequest withReferenceId(String referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public CreateCustomerRequest(){}
 }

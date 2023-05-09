@@ -15,6 +15,7 @@ public class ClusterStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public ClusterStateChangeReasonCodeEnum code;
+
     public ClusterStateChangeReason withCode(ClusterStateChangeReasonCodeEnum code) {
         this.code = code;
         return this;
@@ -23,9 +24,11 @@ public class ClusterStateChangeReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public ClusterStateChangeReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public ClusterStateChangeReason(){}
 }

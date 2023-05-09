@@ -15,6 +15,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AvailabilityZone")
     public String availabilityZone;
+
     public Ec2InstanceDetails withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +24,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CurrentGeneration")
     public Boolean currentGeneration;
+
     public Ec2InstanceDetails withCurrentGeneration(Boolean currentGeneration) {
         this.currentGeneration = currentGeneration;
         return this;
@@ -31,6 +33,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Family")
     public String family;
+
     public Ec2InstanceDetails withFamily(String family) {
         this.family = family;
         return this;
@@ -39,6 +42,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("InstanceType")
     public String instanceType;
+
     public Ec2InstanceDetails withInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -47,6 +51,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Platform")
     public String platform;
+
     public Ec2InstanceDetails withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -55,6 +60,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Ec2InstanceDetails withRegion(String region) {
         this.region = region;
         return this;
@@ -63,6 +69,7 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SizeFlexEligible")
     public Boolean sizeFlexEligible;
+
     public Ec2InstanceDetails withSizeFlexEligible(Boolean sizeFlexEligible) {
         this.sizeFlexEligible = sizeFlexEligible;
         return this;
@@ -71,9 +78,11 @@ public class Ec2InstanceDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tenancy")
     public String tenancy;
+
     public Ec2InstanceDetails withTenancy(String tenancy) {
         this.tenancy = tenancy;
         return this;
     }
     
+    public Ec2InstanceDetails(){}
 }

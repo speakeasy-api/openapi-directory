@@ -55,4 +55,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/GetTerminalDetailsRequest.j
 lib/src/main/java/org/openapis/openapi/models/shared/GetTerminalsUnderAccountResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/MerchantAccount.java
 lib/src/main/java/org/openapis/openapi/models/shared/GetTerminalsUnderAccountRequest.java
+docs/sdk/README.md
+docs/general/README.md
 USAGE.md

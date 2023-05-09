@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class EventType {
     @JsonProperty("id")
     public String id;
+
     public EventType withId(String id) {
         this.id = id;
         return this;
@@ -16,9 +17,14 @@ public class EventType {
     
     @JsonProperty("name")
     public String name;
+
     public EventType withName(String name) {
         this.name = name;
         return this;
     }
     
+    public EventType(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+  }
 }

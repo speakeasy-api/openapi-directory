@@ -12,6 +12,7 @@ public class PostAssetsAnalysisTurbulenceIndexRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostAssetsAnalysisTurbulenceIndexRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -22,6 +23,7 @@ public class PostAssetsAnalysisTurbulenceIndexRequestBody {
      */
     @JsonProperty("assetsAverageReturns")
     public Double[] assetsAverageReturns;
+
     public PostAssetsAnalysisTurbulenceIndexRequestBody withAssetsAverageReturns(Double[] assetsAverageReturns) {
         this.assetsAverageReturns = assetsAverageReturns;
         return this;
@@ -32,6 +34,7 @@ public class PostAssetsAnalysisTurbulenceIndexRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostAssetsAnalysisTurbulenceIndexRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -42,9 +45,16 @@ public class PostAssetsAnalysisTurbulenceIndexRequestBody {
      */
     @JsonProperty("assetsReturns")
     public Double[] assetsReturns;
+
     public PostAssetsAnalysisTurbulenceIndexRequestBody withAssetsReturns(Double[] assetsReturns) {
         this.assetsReturns = assetsReturns;
         return this;
     }
     
+    public PostAssetsAnalysisTurbulenceIndexRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsAverageReturns") Double[] assetsAverageReturns, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix, @JsonProperty("assetsReturns") Double[] assetsReturns) {
+        this.assets = assets;
+        this.assetsAverageReturns = assetsAverageReturns;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+        this.assetsReturns = assetsReturns;
+  }
 }

@@ -15,6 +15,7 @@ public class ServiceActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DefinitionType")
     public ServiceActionDefinitionTypeEnum definitionType;
+
     public ServiceActionSummary withDefinitionType(ServiceActionDefinitionTypeEnum definitionType) {
         this.definitionType = definitionType;
         return this;
@@ -23,6 +24,7 @@ public class ServiceActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public ServiceActionSummary withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +33,7 @@ public class ServiceActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public ServiceActionSummary withId(String id) {
         this.id = id;
         return this;
@@ -39,9 +42,11 @@ public class ServiceActionSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public ServiceActionSummary withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ServiceActionSummary(){}
 }

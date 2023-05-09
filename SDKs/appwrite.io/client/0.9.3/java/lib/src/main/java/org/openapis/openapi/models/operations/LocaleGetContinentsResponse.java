@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class LocaleGetContinentsResponse {
     
     public String contentType;
+
     public LocaleGetContinentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class LocaleGetContinentsResponse {
     
     
     public Integer statusCode;
+
     public LocaleGetContinentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class LocaleGetContinentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public LocaleGetContinentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class LocaleGetContinentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ContinentList continentList;
+
     public LocaleGetContinentsResponse withContinentList(org.openapis.openapi.models.shared.ContinentList continentList) {
         this.continentList = continentList;
         return this;
     }
     
+    public LocaleGetContinentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

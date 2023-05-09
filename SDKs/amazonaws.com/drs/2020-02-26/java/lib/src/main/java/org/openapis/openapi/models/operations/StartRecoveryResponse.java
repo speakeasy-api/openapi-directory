@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartRecoveryResponse {
@@ -12,6 +13,7 @@ public class StartRecoveryResponse {
      */
     
     public Object conflictException;
+
     public StartRecoveryResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class StartRecoveryResponse {
     
     
     public String contentType;
+
     public StartRecoveryResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartRecoveryResponse {
      */
     
     public Object internalServerException;
+
     public StartRecoveryResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -39,6 +43,7 @@ public class StartRecoveryResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public StartRecoveryResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -49,6 +54,7 @@ public class StartRecoveryResponse {
      */
     
     public org.openapis.openapi.models.shared.StartRecoveryResponse startRecoveryResponse;
+
     public StartRecoveryResponse withStartRecoveryResponse(org.openapis.openapi.models.shared.StartRecoveryResponse startRecoveryResponse) {
         this.startRecoveryResponse = startRecoveryResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartRecoveryResponse {
     
     
     public Integer statusCode;
+
     public StartRecoveryResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartRecoveryResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartRecoveryResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class StartRecoveryResponse {
      */
     
     public Object throttlingException;
+
     public StartRecoveryResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class StartRecoveryResponse {
      */
     
     public Object uninitializedAccountException;
+
     public StartRecoveryResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public StartRecoveryResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

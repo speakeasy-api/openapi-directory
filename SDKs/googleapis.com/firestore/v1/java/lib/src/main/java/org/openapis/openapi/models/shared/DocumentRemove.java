@@ -18,6 +18,7 @@ public class DocumentRemove {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document")
     public String document;
+
     public DocumentRemove withDocument(String document) {
         this.document = document;
         return this;
@@ -29,6 +30,7 @@ public class DocumentRemove {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public DocumentRemove withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -40,9 +42,11 @@ public class DocumentRemove {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("removedTargetIds")
     public Integer[] removedTargetIds;
+
     public DocumentRemove withRemovedTargetIds(Integer[] removedTargetIds) {
         this.removedTargetIds = removedTargetIds;
         return this;
     }
     
+    public DocumentRemove(){}
 }

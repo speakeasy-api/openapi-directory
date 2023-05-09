@@ -18,9 +18,11 @@ public class GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pubsubNotification")
     public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig pubsubNotification;
+
     public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig withPubsubNotification(GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig pubsubNotification) {
         this.pubsubNotification = pubsubNotification;
         return this;
     }
     
+    public GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig(){}
 }

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAccessPolicyResponse {
     @JsonProperty("accessPolicyArn")
     public String accessPolicyArn;
+
     public CreateAccessPolicyResponse withAccessPolicyArn(String accessPolicyArn) {
         this.accessPolicyArn = accessPolicyArn;
         return this;
@@ -19,9 +20,14 @@ public class CreateAccessPolicyResponse {
     
     @JsonProperty("accessPolicyId")
     public String accessPolicyId;
+
     public CreateAccessPolicyResponse withAccessPolicyId(String accessPolicyId) {
         this.accessPolicyId = accessPolicyId;
         return this;
     }
     
+    public CreateAccessPolicyResponse(@JsonProperty("accessPolicyArn") String accessPolicyArn, @JsonProperty("accessPolicyId") String accessPolicyId) {
+        this.accessPolicyArn = accessPolicyArn;
+        this.accessPolicyId = accessPolicyId;
+  }
 }

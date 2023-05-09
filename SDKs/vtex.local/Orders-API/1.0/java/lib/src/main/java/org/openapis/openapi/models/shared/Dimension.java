@@ -12,6 +12,7 @@ public class Dimension {
      */
     @JsonProperty("cubicweight")
     public Double cubicweight;
+
     public Dimension withCubicweight(Double cubicweight) {
         this.cubicweight = cubicweight;
         return this;
@@ -22,6 +23,7 @@ public class Dimension {
      */
     @JsonProperty("height")
     public Integer height;
+
     public Dimension withHeight(Integer height) {
         this.height = height;
         return this;
@@ -32,6 +34,7 @@ public class Dimension {
      */
     @JsonProperty("length")
     public Integer length;
+
     public Dimension withLength(Integer length) {
         this.length = length;
         return this;
@@ -42,6 +45,7 @@ public class Dimension {
      */
     @JsonProperty("weight")
     public Integer weight;
+
     public Dimension withWeight(Integer weight) {
         this.weight = weight;
         return this;
@@ -52,9 +56,17 @@ public class Dimension {
      */
     @JsonProperty("width")
     public Integer width;
+
     public Dimension withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public Dimension(@JsonProperty("cubicweight") Double cubicweight, @JsonProperty("height") Integer height, @JsonProperty("length") Integer length, @JsonProperty("weight") Integer weight, @JsonProperty("width") Integer width) {
+        this.cubicweight = cubicweight;
+        this.height = height;
+        this.length = length;
+        this.weight = weight;
+        this.width = width;
+  }
 }

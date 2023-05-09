@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateRuleGroupResponse {
     
     public String contentType;
+
     public CreateRuleGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateRuleGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateRuleGroupResponse createRuleGroupResponse;
+
     public CreateRuleGroupResponse withCreateRuleGroupResponse(org.openapis.openapi.models.shared.CreateRuleGroupResponse createRuleGroupResponse) {
         this.createRuleGroupResponse = createRuleGroupResponse;
         return this;
@@ -26,6 +29,7 @@ public class CreateRuleGroupResponse {
     
     
     public Integer statusCode;
+
     public CreateRuleGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CreateRuleGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateRuleGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,6 +48,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafBadRequestException;
+
     public CreateRuleGroupResponse withWAFBadRequestException(Object wafBadRequestException) {
         this.wafBadRequestException = wafBadRequestException;
         return this;
@@ -53,6 +59,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafDisallowedNameException;
+
     public CreateRuleGroupResponse withWAFDisallowedNameException(Object wafDisallowedNameException) {
         this.wafDisallowedNameException = wafDisallowedNameException;
         return this;
@@ -63,6 +70,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafInternalErrorException;
+
     public CreateRuleGroupResponse withWAFInternalErrorException(Object wafInternalErrorException) {
         this.wafInternalErrorException = wafInternalErrorException;
         return this;
@@ -73,6 +81,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafLimitsExceededException;
+
     public CreateRuleGroupResponse withWAFLimitsExceededException(Object wafLimitsExceededException) {
         this.wafLimitsExceededException = wafLimitsExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafStaleDataException;
+
     public CreateRuleGroupResponse withWAFStaleDataException(Object wafStaleDataException) {
         this.wafStaleDataException = wafStaleDataException;
         return this;
@@ -93,6 +103,7 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafTagOperationException;
+
     public CreateRuleGroupResponse withWAFTagOperationException(Object wafTagOperationException) {
         this.wafTagOperationException = wafTagOperationException;
         return this;
@@ -103,9 +114,14 @@ public class CreateRuleGroupResponse {
      */
     
     public Object wafTagOperationInternalErrorException;
+
     public CreateRuleGroupResponse withWAFTagOperationInternalErrorException(Object wafTagOperationInternalErrorException) {
         this.wafTagOperationInternalErrorException = wafTagOperationInternalErrorException;
         return this;
     }
     
+    public CreateRuleGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

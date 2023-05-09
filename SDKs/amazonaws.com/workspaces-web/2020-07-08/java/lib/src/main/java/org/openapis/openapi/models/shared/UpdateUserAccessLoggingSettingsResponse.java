@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateUserAccessLoggingSettingsResponse {
     @JsonProperty("userAccessLoggingSettings")
     public UserAccessLoggingSettings userAccessLoggingSettings;
+
     public UpdateUserAccessLoggingSettingsResponse withUserAccessLoggingSettings(UserAccessLoggingSettings userAccessLoggingSettings) {
         this.userAccessLoggingSettings = userAccessLoggingSettings;
         return this;
     }
     
+    public UpdateUserAccessLoggingSettingsResponse(@JsonProperty("userAccessLoggingSettings") UserAccessLoggingSettings userAccessLoggingSettings) {
+        this.userAccessLoggingSettings = userAccessLoggingSettings;
+  }
 }

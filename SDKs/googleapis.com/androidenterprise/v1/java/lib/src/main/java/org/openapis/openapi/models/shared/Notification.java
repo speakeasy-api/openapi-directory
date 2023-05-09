@@ -18,6 +18,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appRestrictionsSchemaChangeEvent")
     public AppRestrictionsSchemaChangeEvent appRestrictionsSchemaChangeEvent;
+
     public Notification withAppRestrictionsSchemaChangeEvent(AppRestrictionsSchemaChangeEvent appRestrictionsSchemaChangeEvent) {
         this.appRestrictionsSchemaChangeEvent = appRestrictionsSchemaChangeEvent;
         return this;
@@ -29,6 +30,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appUpdateEvent")
     public AppUpdateEvent appUpdateEvent;
+
     public Notification withAppUpdateEvent(AppUpdateEvent appUpdateEvent) {
         this.appUpdateEvent = appUpdateEvent;
         return this;
@@ -40,6 +42,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deviceReportUpdateEvent")
     public DeviceReportUpdateEvent deviceReportUpdateEvent;
+
     public Notification withDeviceReportUpdateEvent(DeviceReportUpdateEvent deviceReportUpdateEvent) {
         this.deviceReportUpdateEvent = deviceReportUpdateEvent;
         return this;
@@ -51,6 +54,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enterpriseId")
     public String enterpriseId;
+
     public Notification withEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
         return this;
@@ -62,6 +66,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("installFailureEvent")
     public InstallFailureEvent installFailureEvent;
+
     public Notification withInstallFailureEvent(InstallFailureEvent installFailureEvent) {
         this.installFailureEvent = installFailureEvent;
         return this;
@@ -73,6 +78,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newDeviceEvent")
     public NewDeviceEvent newDeviceEvent;
+
     public Notification withNewDeviceEvent(NewDeviceEvent newDeviceEvent) {
         this.newDeviceEvent = newDeviceEvent;
         return this;
@@ -84,6 +90,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newPermissionsEvent")
     public NewPermissionsEvent newPermissionsEvent;
+
     public Notification withNewPermissionsEvent(NewPermissionsEvent newPermissionsEvent) {
         this.newPermissionsEvent = newPermissionsEvent;
         return this;
@@ -95,6 +102,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notificationType")
     public NotificationNotificationTypeEnum notificationType;
+
     public Notification withNotificationType(NotificationNotificationTypeEnum notificationType) {
         this.notificationType = notificationType;
         return this;
@@ -106,6 +114,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productApprovalEvent")
     public ProductApprovalEvent productApprovalEvent;
+
     public Notification withProductApprovalEvent(ProductApprovalEvent productApprovalEvent) {
         this.productApprovalEvent = productApprovalEvent;
         return this;
@@ -117,6 +126,7 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("productAvailabilityChangeEvent")
     public ProductAvailabilityChangeEvent productAvailabilityChangeEvent;
+
     public Notification withProductAvailabilityChangeEvent(ProductAvailabilityChangeEvent productAvailabilityChangeEvent) {
         this.productAvailabilityChangeEvent = productAvailabilityChangeEvent;
         return this;
@@ -128,9 +138,11 @@ public class Notification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timestampMillis")
     public String timestampMillis;
+
     public Notification withTimestampMillis(String timestampMillis) {
         this.timestampMillis = timestampMillis;
         return this;
     }
     
+    public Notification(){}
 }

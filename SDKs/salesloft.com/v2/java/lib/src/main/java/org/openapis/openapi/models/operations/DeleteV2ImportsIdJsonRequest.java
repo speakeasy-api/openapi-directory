@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteV2ImportsIdJsonRequest {
@@ -12,6 +13,7 @@ public class DeleteV2ImportsIdJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public DeleteV2ImportsIdJsonRequest withId(String id) {
         this.id = id;
         return this;
@@ -27,9 +29,13 @@ public class DeleteV2ImportsIdJsonRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=undo")
     public String undo;
+
     public DeleteV2ImportsIdJsonRequest withUndo(String undo) {
         this.undo = undo;
         return this;
     }
     
+    public DeleteV2ImportsIdJsonRequest(@JsonProperty("id") String id) {
+        this.id = id;
+  }
 }

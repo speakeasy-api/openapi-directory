@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class TargetHealth {
     
     public String description;
+
     public TargetHealth withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class TargetHealth {
     
     
     public TargetHealthReasonEnum reason;
+
     public TargetHealth withReason(TargetHealthReasonEnum reason) {
         this.reason = reason;
         return this;
@@ -26,9 +28,11 @@ public class TargetHealth {
     
     
     public TargetStateEnum state;
+
     public TargetHealth withState(TargetStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public TargetHealth(){}
 }

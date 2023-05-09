@@ -60,11 +60,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersCreateResponse(contentType, httpRes.statusCode()) {{
             company = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersCustomersListResponse(contentType, httpRes.statusCode()) {{
             listCustomersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -150,11 +146,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimResponse(contentType, httpRes.statusCode()) {{
             claimDeviceResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -196,11 +190,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesClaimAsyncResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -242,11 +234,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByIdentifierResponse(contentType, httpRes.statusCode()) {{
             findDevicesByDeviceIdentifierResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -288,11 +278,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesFindByOwnerResponse(contentType, httpRes.statusCode()) {{
             findDevicesByOwnerResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -332,11 +320,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesGetResponse(contentType, httpRes.statusCode()) {{
             device = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -378,11 +364,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesMetadataResponse(contentType, httpRes.statusCode()) {{
             deviceMetadata = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -424,11 +408,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimResponse(contentType, httpRes.statusCode()) {{
             empty = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -470,11 +452,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUnclaimAsyncResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -516,11 +496,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersDevicesUpdateMetadataAsyncResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -560,11 +538,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsCustomersListResponse(contentType, httpRes.statusCode()) {{
             listVendorCustomersResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -604,11 +580,9 @@ public class Partners {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListResponse() {{
+        org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListResponse res = new org.openapis.openapi.models.operations.AndroiddeviceprovisioningPartnersVendorsListResponse(contentType, httpRes.statusCode()) {{
             listVendorsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

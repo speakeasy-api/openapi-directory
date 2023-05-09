@@ -12,6 +12,7 @@ public class RetrieveSentryRiskDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=is_active")
     public Boolean isActive;
+
     public RetrieveSentryRiskDataRequest withIsActive(Boolean isActive) {
         this.isActive = isActive;
         return this;
@@ -22,6 +23,7 @@ public class RetrieveSentryRiskDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Integer page;
+
     public RetrieveSentryRiskDataRequest withPage(Integer page) {
         this.page = page;
         return this;
@@ -32,9 +34,11 @@ public class RetrieveSentryRiskDataRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=size")
     public Integer size;
+
     public RetrieveSentryRiskDataRequest withSize(Integer size) {
         this.size = size;
         return this;
     }
     
+    public RetrieveSentryRiskDataRequest(){}
 }

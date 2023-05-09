@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DeleteSuggesterResponse - The result of a &lt;code&gt;DeleteSuggester&lt;/code&gt; request. Contains the status of the deleted suggester.
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class DeleteSuggesterResponse {
     
     public SuggesterStatus suggester;
+
     public DeleteSuggesterResponse withSuggester(SuggesterStatus suggester) {
         this.suggester = suggester;
         return this;
     }
     
+    public DeleteSuggesterResponse(@JsonProperty("Suggester") SuggesterStatus suggester) {
+        this.suggester = suggester;
+  }
 }

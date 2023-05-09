@@ -15,6 +15,7 @@ public class UnprocessedIdentityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ErrorCode")
     public ErrorCodeEnum errorCode;
+
     public UnprocessedIdentityId withErrorCode(ErrorCodeEnum errorCode) {
         this.errorCode = errorCode;
         return this;
@@ -23,9 +24,11 @@ public class UnprocessedIdentityId {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IdentityId")
     public String identityId;
+
     public UnprocessedIdentityId withIdentityId(String identityId) {
         this.identityId = identityId;
         return this;
     }
     
+    public UnprocessedIdentityId(){}
 }

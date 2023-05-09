@@ -15,6 +15,7 @@ public class GetCalculatorConfigurationById200PromotionPaymentsMethods {
      */
     
     public String id;
+
     public GetCalculatorConfigurationById200PromotionPaymentsMethods withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,11 @@ public class GetCalculatorConfigurationById200PromotionPaymentsMethods {
      */
     
     public String name;
+
     public GetCalculatorConfigurationById200PromotionPaymentsMethods withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GetCalculatorConfigurationById200PromotionPaymentsMethods(){}
 }

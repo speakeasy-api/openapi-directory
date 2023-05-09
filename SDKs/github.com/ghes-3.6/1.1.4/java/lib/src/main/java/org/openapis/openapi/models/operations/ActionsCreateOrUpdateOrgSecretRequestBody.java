@@ -15,6 +15,7 @@ public class ActionsCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("encrypted_value")
     public String encryptedValue;
+
     public ActionsCreateOrUpdateOrgSecretRequestBody withEncryptedValue(String encryptedValue) {
         this.encryptedValue = encryptedValue;
         return this;
@@ -26,6 +27,7 @@ public class ActionsCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("key_id")
     public String keyId;
+
     public ActionsCreateOrUpdateOrgSecretRequestBody withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -37,6 +39,7 @@ public class ActionsCreateOrUpdateOrgSecretRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public ActionsCreateOrUpdateOrgSecretRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
@@ -47,9 +50,13 @@ public class ActionsCreateOrUpdateOrgSecretRequestBody {
      */
     @JsonProperty("visibility")
     public ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility;
+
     public ActionsCreateOrUpdateOrgSecretRequestBody withVisibility(ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public ActionsCreateOrUpdateOrgSecretRequestBody(@JsonProperty("visibility") ActionsCreateOrUpdateOrgSecretRequestBodyVisibilityEnum visibility) {
+        this.visibility = visibility;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAnnotationRequest {
@@ -12,6 +13,7 @@ public class DeleteAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=annotationId")
     public String annotationId;
+
     public DeleteAnnotationRequest withAnnotationId(String annotationId) {
         this.annotationId = annotationId;
         return this;
@@ -22,6 +24,7 @@ public class DeleteAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=commit")
     public String commit;
+
     public DeleteAnnotationRequest withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -32,6 +35,7 @@ public class DeleteAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=repo_slug")
     public String repoSlug;
+
     public DeleteAnnotationRequest withRepoSlug(String repoSlug) {
         this.repoSlug = repoSlug;
         return this;
@@ -42,6 +46,7 @@ public class DeleteAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=reportId")
     public String reportId;
+
     public DeleteAnnotationRequest withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -52,9 +57,17 @@ public class DeleteAnnotationRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=workspace")
     public String workspace;
+
     public DeleteAnnotationRequest withWorkspace(String workspace) {
         this.workspace = workspace;
         return this;
     }
     
+    public DeleteAnnotationRequest(@JsonProperty("annotationId") String annotationId, @JsonProperty("commit") String commit, @JsonProperty("repo_slug") String repoSlug, @JsonProperty("reportId") String reportId, @JsonProperty("workspace") String workspace) {
+        this.annotationId = annotationId;
+        this.commit = commit;
+        this.repoSlug = repoSlug;
+        this.reportId = reportId;
+        this.workspace = workspace;
+  }
 }

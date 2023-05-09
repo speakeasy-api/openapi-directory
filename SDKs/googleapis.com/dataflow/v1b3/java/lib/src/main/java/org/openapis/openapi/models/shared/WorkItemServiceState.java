@@ -18,6 +18,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completeWorkStatus")
     public Status completeWorkStatus;
+
     public WorkItemServiceState withCompleteWorkStatus(Status completeWorkStatus) {
         this.completeWorkStatus = completeWorkStatus;
         return this;
@@ -29,6 +30,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("harnessData")
     public java.util.Map<String, Object> harnessData;
+
     public WorkItemServiceState withHarnessData(java.util.Map<String, Object> harnessData) {
         this.harnessData = harnessData;
         return this;
@@ -40,6 +42,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("hotKeyDetection")
     public HotKeyDetection hotKeyDetection;
+
     public WorkItemServiceState withHotKeyDetection(HotKeyDetection hotKeyDetection) {
         this.hotKeyDetection = hotKeyDetection;
         return this;
@@ -51,6 +54,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("leaseExpireTime")
     public String leaseExpireTime;
+
     public WorkItemServiceState withLeaseExpireTime(String leaseExpireTime) {
         this.leaseExpireTime = leaseExpireTime;
         return this;
@@ -62,6 +66,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricShortId")
     public MetricShortId[] metricShortId;
+
     public WorkItemServiceState withMetricShortId(MetricShortId[] metricShortId) {
         this.metricShortId = metricShortId;
         return this;
@@ -73,6 +78,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextReportIndex")
     public String nextReportIndex;
+
     public WorkItemServiceState withNextReportIndex(String nextReportIndex) {
         this.nextReportIndex = nextReportIndex;
         return this;
@@ -84,6 +90,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportStatusInterval")
     public String reportStatusInterval;
+
     public WorkItemServiceState withReportStatusInterval(String reportStatusInterval) {
         this.reportStatusInterval = reportStatusInterval;
         return this;
@@ -95,6 +102,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("splitRequest")
     public ApproximateSplitRequest splitRequest;
+
     public WorkItemServiceState withSplitRequest(ApproximateSplitRequest splitRequest) {
         this.splitRequest = splitRequest;
         return this;
@@ -106,6 +114,7 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedStopPoint")
     public ApproximateProgress suggestedStopPoint;
+
     public WorkItemServiceState withSuggestedStopPoint(ApproximateProgress suggestedStopPoint) {
         this.suggestedStopPoint = suggestedStopPoint;
         return this;
@@ -117,9 +126,11 @@ public class WorkItemServiceState {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("suggestedStopPosition")
     public Position suggestedStopPosition;
+
     public WorkItemServiceState withSuggestedStopPosition(Position suggestedStopPosition) {
         this.suggestedStopPosition = suggestedStopPosition;
         return this;
     }
     
+    public WorkItemServiceState(){}
 }

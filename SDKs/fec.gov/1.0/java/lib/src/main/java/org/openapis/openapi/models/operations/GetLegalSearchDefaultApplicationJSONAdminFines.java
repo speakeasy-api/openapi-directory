@@ -14,6 +14,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("challenge_outcome")
     public String challengeOutcome;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withChallengeOutcome(String challengeOutcome) {
         this.challengeOutcome = challengeOutcome;
         return this;
@@ -23,6 +24,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("challenge_receipt_date")
     public LocalDate challengeReceiptDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withChallengeReceiptDate(LocalDate challengeReceiptDate) {
         this.challengeReceiptDate = challengeReceiptDate;
         return this;
@@ -31,6 +33,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("check_amount")
     public Double checkAmount;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withCheckAmount(Double checkAmount) {
         this.checkAmount = checkAmount;
         return this;
@@ -39,6 +42,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("commission_votes")
     public GetLegalSearchDefaultApplicationJSONAdminFinesCommissionVotes[] commissionVotes;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withCommissionVotes(GetLegalSearchDefaultApplicationJSONAdminFinesCommissionVotes[] commissionVotes) {
         this.commissionVotes = commissionVotes;
         return this;
@@ -47,6 +51,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("committee_id")
     public String committeeId;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withCommitteeId(String committeeId) {
         this.committeeId = committeeId;
         return this;
@@ -55,6 +60,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("doc_id")
     public String docId;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withDocId(String docId) {
         this.docId = docId;
         return this;
@@ -63,6 +69,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("document_highlights")
     public java.util.Map<String, Object> documentHighlights;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withDocumentHighlights(java.util.Map<String, Object> documentHighlights) {
         this.documentHighlights = documentHighlights;
         return this;
@@ -71,6 +78,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("documents")
     public GetLegalSearchDefaultApplicationJSONAdminFinesDocuments[] documents;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withDocuments(GetLegalSearchDefaultApplicationJSONAdminFinesDocuments[] documents) {
         this.documents = documents;
         return this;
@@ -79,6 +87,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("final_determination_amount")
     public Double finalDeterminationAmount;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withFinalDeterminationAmount(Double finalDeterminationAmount) {
         this.finalDeterminationAmount = finalDeterminationAmount;
         return this;
@@ -88,6 +97,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("final_determination_date")
     public LocalDate finalDeterminationDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withFinalDeterminationDate(LocalDate finalDeterminationDate) {
         this.finalDeterminationDate = finalDeterminationDate;
         return this;
@@ -96,6 +106,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("highlights")
     public String[] highlights;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withHighlights(String[] highlights) {
         this.highlights = highlights;
         return this;
@@ -104,6 +115,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withName(String name) {
         this.name = name;
         return this;
@@ -112,6 +124,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("no")
     public String no;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withNo(String no) {
         this.no = no;
         return this;
@@ -121,6 +134,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("petition_court_decision_date")
     public LocalDate petitionCourtDecisionDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withPetitionCourtDecisionDate(LocalDate petitionCourtDecisionDate) {
         this.petitionCourtDecisionDate = petitionCourtDecisionDate;
         return this;
@@ -130,6 +144,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("petition_court_filing_date")
     public LocalDate petitionCourtFilingDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withPetitionCourtFilingDate(LocalDate petitionCourtFilingDate) {
         this.petitionCourtFilingDate = petitionCourtFilingDate;
         return this;
@@ -139,6 +154,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("reason_to_believe_action_date")
     public LocalDate reasonToBelieveActionDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withReasonToBelieveActionDate(LocalDate reasonToBelieveActionDate) {
         this.reasonToBelieveActionDate = reasonToBelieveActionDate;
         return this;
@@ -147,6 +163,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason_to_believe_fine_amount")
     public Double reasonToBelieveFineAmount;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withReasonToBelieveFineAmount(Double reasonToBelieveFineAmount) {
         this.reasonToBelieveFineAmount = reasonToBelieveFineAmount;
         return this;
@@ -155,6 +172,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_type")
     public String reportType;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withReportType(String reportType) {
         this.reportType = reportType;
         return this;
@@ -163,6 +181,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("report_year")
     public String reportYear;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withReportYear(String reportYear) {
         this.reportYear = reportYear;
         return this;
@@ -171,6 +190,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("treasury_referral_amount")
     public Double treasuryReferralAmount;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withTreasuryReferralAmount(Double treasuryReferralAmount) {
         this.treasuryReferralAmount = treasuryReferralAmount;
         return this;
@@ -180,6 +200,7 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @JsonProperty("treasury_referral_date")
     public LocalDate treasuryReferralDate;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withTreasuryReferralDate(LocalDate treasuryReferralDate) {
         this.treasuryReferralDate = treasuryReferralDate;
         return this;
@@ -188,9 +209,11 @@ public class GetLegalSearchDefaultApplicationJSONAdminFines {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public GetLegalSearchDefaultApplicationJSONAdminFines withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public GetLegalSearchDefaultApplicationJSONAdminFines(){}
 }

@@ -15,6 +15,7 @@ public class TaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExportLabelsTaskRunProperties")
     public ExportLabelsTaskRunProperties exportLabelsTaskRunProperties;
+
     public TaskRunProperties withExportLabelsTaskRunProperties(ExportLabelsTaskRunProperties exportLabelsTaskRunProperties) {
         this.exportLabelsTaskRunProperties = exportLabelsTaskRunProperties;
         return this;
@@ -23,6 +24,7 @@ public class TaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FindMatchesTaskRunProperties")
     public FindMatchesTaskRunProperties findMatchesTaskRunProperties;
+
     public TaskRunProperties withFindMatchesTaskRunProperties(FindMatchesTaskRunProperties findMatchesTaskRunProperties) {
         this.findMatchesTaskRunProperties = findMatchesTaskRunProperties;
         return this;
@@ -31,6 +33,7 @@ public class TaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ImportLabelsTaskRunProperties")
     public ImportLabelsTaskRunProperties importLabelsTaskRunProperties;
+
     public TaskRunProperties withImportLabelsTaskRunProperties(ImportLabelsTaskRunProperties importLabelsTaskRunProperties) {
         this.importLabelsTaskRunProperties = importLabelsTaskRunProperties;
         return this;
@@ -39,6 +42,7 @@ public class TaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LabelingSetGenerationTaskRunProperties")
     public LabelingSetGenerationTaskRunProperties labelingSetGenerationTaskRunProperties;
+
     public TaskRunProperties withLabelingSetGenerationTaskRunProperties(LabelingSetGenerationTaskRunProperties labelingSetGenerationTaskRunProperties) {
         this.labelingSetGenerationTaskRunProperties = labelingSetGenerationTaskRunProperties;
         return this;
@@ -47,9 +51,11 @@ public class TaskRunProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskType")
     public TaskTypeEnum taskType;
+
     public TaskRunProperties withTaskType(TaskTypeEnum taskType) {
         this.taskType = taskType;
         return this;
     }
     
+    public TaskRunProperties(){}
 }

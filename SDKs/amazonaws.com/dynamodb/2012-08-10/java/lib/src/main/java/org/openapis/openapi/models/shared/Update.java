@@ -15,6 +15,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConditionExpression")
     public String conditionExpression;
+
     public Update withConditionExpression(String conditionExpression) {
         this.conditionExpression = conditionExpression;
         return this;
@@ -23,6 +24,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeNames")
     public java.util.Map<String, String> expressionAttributeNames;
+
     public Update withExpressionAttributeNames(java.util.Map<String, String> expressionAttributeNames) {
         this.expressionAttributeNames = expressionAttributeNames;
         return this;
@@ -31,6 +33,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ExpressionAttributeValues")
     public java.util.Map<String, AttributeValue> expressionAttributeValues;
+
     public Update withExpressionAttributeValues(java.util.Map<String, AttributeValue> expressionAttributeValues) {
         this.expressionAttributeValues = expressionAttributeValues;
         return this;
@@ -38,6 +41,7 @@ public class Update {
     
     @JsonProperty("Key")
     public java.util.Map<String, AttributeValue> key;
+
     public Update withKey(java.util.Map<String, AttributeValue> key) {
         this.key = key;
         return this;
@@ -46,6 +50,7 @@ public class Update {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReturnValuesOnConditionCheckFailure")
     public ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure;
+
     public Update withReturnValuesOnConditionCheckFailure(ReturnValuesOnConditionCheckFailureEnum returnValuesOnConditionCheckFailure) {
         this.returnValuesOnConditionCheckFailure = returnValuesOnConditionCheckFailure;
         return this;
@@ -53,6 +58,7 @@ public class Update {
     
     @JsonProperty("TableName")
     public String tableName;
+
     public Update withTableName(String tableName) {
         this.tableName = tableName;
         return this;
@@ -60,9 +66,15 @@ public class Update {
     
     @JsonProperty("UpdateExpression")
     public String updateExpression;
+
     public Update withUpdateExpression(String updateExpression) {
         this.updateExpression = updateExpression;
         return this;
     }
     
+    public Update(@JsonProperty("Key") java.util.Map<String, AttributeValue> key, @JsonProperty("TableName") String tableName, @JsonProperty("UpdateExpression") String updateExpression) {
+        this.key = key;
+        this.tableName = tableName;
+        this.updateExpression = updateExpression;
+  }
 }

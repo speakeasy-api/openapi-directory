@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCoreDeviceResponse {
@@ -12,6 +13,7 @@ public class GetCoreDeviceResponse {
      */
     
     public Object accessDeniedException;
+
     public GetCoreDeviceResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class GetCoreDeviceResponse {
     
     
     public String contentType;
+
     public GetCoreDeviceResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCoreDeviceResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCoreDeviceResponse getCoreDeviceResponse;
+
     public GetCoreDeviceResponse withGetCoreDeviceResponse(org.openapis.openapi.models.shared.GetCoreDeviceResponse getCoreDeviceResponse) {
         this.getCoreDeviceResponse = getCoreDeviceResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetCoreDeviceResponse {
      */
     
     public Object internalServerException;
+
     public GetCoreDeviceResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class GetCoreDeviceResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetCoreDeviceResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class GetCoreDeviceResponse {
     
     
     public Integer statusCode;
+
     public GetCoreDeviceResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class GetCoreDeviceResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCoreDeviceResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class GetCoreDeviceResponse {
      */
     
     public Object throttlingException;
+
     public GetCoreDeviceResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class GetCoreDeviceResponse {
      */
     
     public Object validationException;
+
     public GetCoreDeviceResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public GetCoreDeviceResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

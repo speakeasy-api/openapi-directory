@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RebuildEnvironmentMessage {
     
     public String environmentId;
+
     public RebuildEnvironmentMessage withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -19,9 +20,11 @@ public class RebuildEnvironmentMessage {
     
     
     public String environmentName;
+
     public RebuildEnvironmentMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
     }
     
+    public RebuildEnvironmentMessage(){}
 }

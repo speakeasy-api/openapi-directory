@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateLaunchConfigurationTemplateResponse {
@@ -12,6 +13,7 @@ public class CreateLaunchConfigurationTemplateResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateLaunchConfigurationTemplateResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateLaunchConfigurationTemplateResponse {
     
     
     public String contentType;
+
     public CreateLaunchConfigurationTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateLaunchConfigurationTemplateResponse {
      */
     
     public org.openapis.openapi.models.shared.LaunchConfigurationTemplate launchConfigurationTemplate;
+
     public CreateLaunchConfigurationTemplateResponse withLaunchConfigurationTemplate(org.openapis.openapi.models.shared.LaunchConfigurationTemplate launchConfigurationTemplate) {
         this.launchConfigurationTemplate = launchConfigurationTemplate;
         return this;
@@ -36,6 +40,7 @@ public class CreateLaunchConfigurationTemplateResponse {
     
     
     public Integer statusCode;
+
     public CreateLaunchConfigurationTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class CreateLaunchConfigurationTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateLaunchConfigurationTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class CreateLaunchConfigurationTemplateResponse {
      */
     
     public Object uninitializedAccountException;
+
     public CreateLaunchConfigurationTemplateResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
@@ -63,9 +70,14 @@ public class CreateLaunchConfigurationTemplateResponse {
      */
     
     public Object validationException;
+
     public CreateLaunchConfigurationTemplateResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateLaunchConfigurationTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

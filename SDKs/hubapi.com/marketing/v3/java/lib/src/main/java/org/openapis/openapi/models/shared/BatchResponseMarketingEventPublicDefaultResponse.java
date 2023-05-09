@@ -21,6 +21,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("completedAt")
     public OffsetDateTime completedAt;
+
     public BatchResponseMarketingEventPublicDefaultResponse withCompletedAt(OffsetDateTime completedAt) {
         this.completedAt = completedAt;
         return this;
@@ -29,6 +30,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public StandardError[] errors;
+
     public BatchResponseMarketingEventPublicDefaultResponse withErrors(StandardError[] errors) {
         this.errors = errors;
         return this;
@@ -37,6 +39,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("links")
     public java.util.Map<String, String> links;
+
     public BatchResponseMarketingEventPublicDefaultResponse withLinks(java.util.Map<String, String> links) {
         this.links = links;
         return this;
@@ -45,6 +48,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numErrors")
     public Integer numErrors;
+
     public BatchResponseMarketingEventPublicDefaultResponse withNumErrors(Integer numErrors) {
         this.numErrors = numErrors;
         return this;
@@ -55,6 +59,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("requestedAt")
     public OffsetDateTime requestedAt;
+
     public BatchResponseMarketingEventPublicDefaultResponse withRequestedAt(OffsetDateTime requestedAt) {
         this.requestedAt = requestedAt;
         return this;
@@ -62,6 +67,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     
     @JsonProperty("results")
     public MarketingEventPublicDefaultResponse[] results;
+
     public BatchResponseMarketingEventPublicDefaultResponse withResults(MarketingEventPublicDefaultResponse[] results) {
         this.results = results;
         return this;
@@ -71,6 +77,7 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("startedAt")
     public OffsetDateTime startedAt;
+
     public BatchResponseMarketingEventPublicDefaultResponse withStartedAt(OffsetDateTime startedAt) {
         this.startedAt = startedAt;
         return this;
@@ -78,9 +85,16 @@ public class BatchResponseMarketingEventPublicDefaultResponse {
     
     @JsonProperty("status")
     public BatchResponseMarketingEventPublicDefaultResponseStatusEnum status;
+
     public BatchResponseMarketingEventPublicDefaultResponse withStatus(BatchResponseMarketingEventPublicDefaultResponseStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public BatchResponseMarketingEventPublicDefaultResponse(@JsonProperty("completedAt") OffsetDateTime completedAt, @JsonProperty("results") MarketingEventPublicDefaultResponse[] results, @JsonProperty("startedAt") OffsetDateTime startedAt, @JsonProperty("status") BatchResponseMarketingEventPublicDefaultResponseStatusEnum status) {
+        this.completedAt = completedAt;
+        this.results = results;
+        this.startedAt = startedAt;
+        this.status = status;
+  }
 }

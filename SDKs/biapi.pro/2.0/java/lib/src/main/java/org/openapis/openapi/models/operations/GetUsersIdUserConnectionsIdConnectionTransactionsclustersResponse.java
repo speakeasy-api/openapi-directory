@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse {
     
     public String contentType;
+
     public GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse {
     
     
     public Integer statusCode;
+
     public GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse {
      */
     
     public GetUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSON getUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSONObject;
+
     public GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse withGetUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSONObject(GetUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSON getUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSONObject) {
         this.getUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSONObject = getUsersIdUserConnectionsIdConnectionTransactionsclusters200ApplicationJSONObject;
         return this;
     }
     
+    public GetUsersIdUserConnectionsIdConnectionTransactionsclustersResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

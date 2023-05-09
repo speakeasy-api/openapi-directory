@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateVpcIngressConnectionResponse {
     
     public String contentType;
+
     public UpdateVpcIngressConnectionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateVpcIngressConnectionResponse {
      */
     
     public Object internalServiceErrorException;
+
     public UpdateVpcIngressConnectionResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -29,6 +32,7 @@ public class UpdateVpcIngressConnectionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateVpcIngressConnectionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateVpcIngressConnectionResponse {
      */
     
     public Object invalidStateException;
+
     public UpdateVpcIngressConnectionResponse withInvalidStateException(Object invalidStateException) {
         this.invalidStateException = invalidStateException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateVpcIngressConnectionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateVpcIngressConnectionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateVpcIngressConnectionResponse {
     
     
     public Integer statusCode;
+
     public UpdateVpcIngressConnectionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateVpcIngressConnectionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateVpcIngressConnectionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class UpdateVpcIngressConnectionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateVpcIngressConnectionResponse updateVpcIngressConnectionResponse;
+
     public UpdateVpcIngressConnectionResponse withUpdateVpcIngressConnectionResponse(org.openapis.openapi.models.shared.UpdateVpcIngressConnectionResponse updateVpcIngressConnectionResponse) {
         this.updateVpcIngressConnectionResponse = updateVpcIngressConnectionResponse;
         return this;
     }
     
+    public UpdateVpcIngressConnectionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

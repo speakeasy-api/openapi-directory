@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetUntaggedImageCountRequest {
@@ -12,6 +13,7 @@ public class GetUntaggedImageCountRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=iterationId")
     public String iterationId;
+
     public GetUntaggedImageCountRequest withIterationId(String iterationId) {
         this.iterationId = iterationId;
         return this;
@@ -22,9 +24,13 @@ public class GetUntaggedImageCountRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=projectId")
     public String projectId;
+
     public GetUntaggedImageCountRequest withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
     
+    public GetUntaggedImageCountRequest(@JsonProperty("projectId") String projectId) {
+        this.projectId = projectId;
+  }
 }

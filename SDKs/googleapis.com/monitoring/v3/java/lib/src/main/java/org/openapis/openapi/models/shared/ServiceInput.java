@@ -18,6 +18,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appEngine")
     public AppEngine appEngine;
+
     public ServiceInput withAppEngine(AppEngine appEngine) {
         this.appEngine = appEngine;
         return this;
@@ -29,6 +30,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basicService")
     public BasicService basicService;
+
     public ServiceInput withBasicService(BasicService basicService) {
         this.basicService = basicService;
         return this;
@@ -40,6 +42,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudEndpoints")
     public CloudEndpoints cloudEndpoints;
+
     public ServiceInput withCloudEndpoints(CloudEndpoints cloudEndpoints) {
         this.cloudEndpoints = cloudEndpoints;
         return this;
@@ -51,6 +54,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRun")
     public CloudRun cloudRun;
+
     public ServiceInput withCloudRun(CloudRun cloudRun) {
         this.cloudRun = cloudRun;
         return this;
@@ -62,6 +66,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusterIstio")
     public ClusterIstio clusterIstio;
+
     public ServiceInput withClusterIstio(ClusterIstio clusterIstio) {
         this.clusterIstio = clusterIstio;
         return this;
@@ -73,6 +78,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("custom")
     public java.util.Map<String, Object> custom;
+
     public ServiceInput withCustom(java.util.Map<String, Object> custom) {
         this.custom = custom;
         return this;
@@ -84,6 +90,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public ServiceInput withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -95,6 +102,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeNamespace")
     public GkeNamespaceInput gkeNamespace;
+
     public ServiceInput withGkeNamespace(GkeNamespaceInput gkeNamespace) {
         this.gkeNamespace = gkeNamespace;
         return this;
@@ -106,6 +114,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeService")
     public GkeServiceInput gkeService;
+
     public ServiceInput withGkeService(GkeServiceInput gkeService) {
         this.gkeService = gkeService;
         return this;
@@ -117,6 +126,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gkeWorkload")
     public GkeWorkloadInput gkeWorkload;
+
     public ServiceInput withGkeWorkload(GkeWorkloadInput gkeWorkload) {
         this.gkeWorkload = gkeWorkload;
         return this;
@@ -128,6 +138,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("istioCanonicalService")
     public IstioCanonicalService istioCanonicalService;
+
     public ServiceInput withIstioCanonicalService(IstioCanonicalService istioCanonicalService) {
         this.istioCanonicalService = istioCanonicalService;
         return this;
@@ -139,6 +150,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("meshIstio")
     public MeshIstio meshIstio;
+
     public ServiceInput withMeshIstio(MeshIstio meshIstio) {
         this.meshIstio = meshIstio;
         return this;
@@ -150,6 +162,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ServiceInput withName(String name) {
         this.name = name;
         return this;
@@ -161,6 +174,7 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("telemetry")
     public Telemetry telemetry;
+
     public ServiceInput withTelemetry(Telemetry telemetry) {
         this.telemetry = telemetry;
         return this;
@@ -172,9 +186,11 @@ public class ServiceInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userLabels")
     public java.util.Map<String, String> userLabels;
+
     public ServiceInput withUserLabels(java.util.Map<String, String> userLabels) {
         this.userLabels = userLabels;
         return this;
     }
     
+    public ServiceInput(){}
 }

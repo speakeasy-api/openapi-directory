@@ -15,9 +15,13 @@ public class TestCreateDeviceSelectionDeviceSelection {
      */
     @JsonProperty("shortId")
     public String shortId;
+
     public TestCreateDeviceSelectionDeviceSelection withShortId(String shortId) {
         this.shortId = shortId;
         return this;
     }
     
+    public TestCreateDeviceSelectionDeviceSelection(@JsonProperty("shortId") String shortId) {
+        this.shortId = shortId;
+  }
 }

@@ -18,6 +18,7 @@ public class GoogleIdentityStsV1IntrospectTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("token")
     public String token;
+
     public GoogleIdentityStsV1IntrospectTokenRequest withToken(String token) {
         this.token = token;
         return this;
@@ -29,9 +30,11 @@ public class GoogleIdentityStsV1IntrospectTokenRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tokenTypeHint")
     public String tokenTypeHint;
+
     public GoogleIdentityStsV1IntrospectTokenRequest withTokenTypeHint(String tokenTypeHint) {
         this.tokenTypeHint = tokenTypeHint;
         return this;
     }
     
+    public GoogleIdentityStsV1IntrospectTokenRequest(){}
 }

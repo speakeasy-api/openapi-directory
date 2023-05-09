@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateAccessPolicyResponse {
     
     public String contentType;
+
     public CreateAccessPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class CreateAccessPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateAccessPolicyResponse createAccessPolicyResponse;
+
     public CreateAccessPolicyResponse withCreateAccessPolicyResponse(org.openapis.openapi.models.shared.CreateAccessPolicyResponse createAccessPolicyResponse) {
         this.createAccessPolicyResponse = createAccessPolicyResponse;
         return this;
@@ -29,6 +32,7 @@ public class CreateAccessPolicyResponse {
      */
     
     public Object internalFailureException;
+
     public CreateAccessPolicyResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -39,6 +43,7 @@ public class CreateAccessPolicyResponse {
      */
     
     public Object invalidRequestException;
+
     public CreateAccessPolicyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class CreateAccessPolicyResponse {
      */
     
     public Object limitExceededException;
+
     public CreateAccessPolicyResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -56,6 +62,7 @@ public class CreateAccessPolicyResponse {
     
     
     public Integer statusCode;
+
     public CreateAccessPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateAccessPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateAccessPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateAccessPolicyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateAccessPolicyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class CreateAccessPolicyResponse {
      */
     
     public Object throttlingException;
+
     public CreateAccessPolicyResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public CreateAccessPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

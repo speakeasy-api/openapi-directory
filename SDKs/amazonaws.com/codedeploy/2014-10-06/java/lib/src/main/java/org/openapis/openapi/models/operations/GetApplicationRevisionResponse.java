@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetApplicationRevisionResponse {
@@ -12,6 +13,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object applicationDoesNotExistException;
+
     public GetApplicationRevisionResponse withApplicationDoesNotExistException(Object applicationDoesNotExistException) {
         this.applicationDoesNotExistException = applicationDoesNotExistException;
         return this;
@@ -22,6 +24,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object applicationNameRequiredException;
+
     public GetApplicationRevisionResponse withApplicationNameRequiredException(Object applicationNameRequiredException) {
         this.applicationNameRequiredException = applicationNameRequiredException;
         return this;
@@ -29,6 +32,7 @@ public class GetApplicationRevisionResponse {
     
     
     public String contentType;
+
     public GetApplicationRevisionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetApplicationRevisionOutput getApplicationRevisionOutput;
+
     public GetApplicationRevisionResponse withGetApplicationRevisionOutput(org.openapis.openapi.models.shared.GetApplicationRevisionOutput getApplicationRevisionOutput) {
         this.getApplicationRevisionOutput = getApplicationRevisionOutput;
         return this;
@@ -49,6 +54,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object invalidApplicationNameException;
+
     public GetApplicationRevisionResponse withInvalidApplicationNameException(Object invalidApplicationNameException) {
         this.invalidApplicationNameException = invalidApplicationNameException;
         return this;
@@ -59,6 +65,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object invalidRevisionException;
+
     public GetApplicationRevisionResponse withInvalidRevisionException(Object invalidRevisionException) {
         this.invalidRevisionException = invalidRevisionException;
         return this;
@@ -69,6 +76,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object revisionDoesNotExistException;
+
     public GetApplicationRevisionResponse withRevisionDoesNotExistException(Object revisionDoesNotExistException) {
         this.revisionDoesNotExistException = revisionDoesNotExistException;
         return this;
@@ -79,6 +87,7 @@ public class GetApplicationRevisionResponse {
      */
     
     public Object revisionRequiredException;
+
     public GetApplicationRevisionResponse withRevisionRequiredException(Object revisionRequiredException) {
         this.revisionRequiredException = revisionRequiredException;
         return this;
@@ -86,6 +95,7 @@ public class GetApplicationRevisionResponse {
     
     
     public Integer statusCode;
+
     public GetApplicationRevisionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,9 +103,14 @@ public class GetApplicationRevisionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetApplicationRevisionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetApplicationRevisionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

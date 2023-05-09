@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetResolverResponse {
@@ -12,6 +13,7 @@ public class GetResolverResponse {
      */
     
     public Object concurrentModificationException;
+
     public GetResolverResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -19,6 +21,7 @@ public class GetResolverResponse {
     
     
     public String contentType;
+
     public GetResolverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetResolverResponse {
      */
     
     public org.openapis.openapi.models.shared.GetResolverResponse getResolverResponse;
+
     public GetResolverResponse withGetResolverResponse(org.openapis.openapi.models.shared.GetResolverResponse getResolverResponse) {
         this.getResolverResponse = getResolverResponse;
         return this;
@@ -39,6 +43,7 @@ public class GetResolverResponse {
      */
     
     public Object notFoundException;
+
     public GetResolverResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -46,6 +51,7 @@ public class GetResolverResponse {
     
     
     public Integer statusCode;
+
     public GetResolverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class GetResolverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetResolverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class GetResolverResponse {
      */
     
     public Object unauthorizedException;
+
     public GetResolverResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public GetResolverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

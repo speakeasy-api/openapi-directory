@@ -12,9 +12,13 @@ public class DeleteAlertRequestBody {
      */
     @JsonProperty("AlertArn")
     public String alertArn;
+
     public DeleteAlertRequestBody withAlertArn(String alertArn) {
         this.alertArn = alertArn;
         return this;
     }
     
+    public DeleteAlertRequestBody(@JsonProperty("AlertArn") String alertArn) {
+        this.alertArn = alertArn;
+  }
 }

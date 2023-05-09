@@ -15,6 +15,7 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AccessPointId")
     public String accessPointId;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails withAccessPointId(String accessPointId) {
         this.accessPointId = accessPointId;
         return this;
@@ -23,9 +24,11 @@ public class AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Iam")
     public String iam;
+
     public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails withIam(String iam) {
         this.iam = iam;
         return this;
     }
     
+    public AwsEcsTaskDefinitionVolumesEfsVolumeConfigurationAuthorizationConfigDetails(){}
 }

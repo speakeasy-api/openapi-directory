@@ -15,6 +15,7 @@ public class DescribeUsageReportSubscriptionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public DescribeUsageReportSubscriptionsResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class DescribeUsageReportSubscriptionsResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UsageReportSubscriptions")
     public UsageReportSubscription[] usageReportSubscriptions;
+
     public DescribeUsageReportSubscriptionsResult withUsageReportSubscriptions(UsageReportSubscription[] usageReportSubscriptions) {
         this.usageReportSubscriptions = usageReportSubscriptions;
         return this;
     }
     
+    public DescribeUsageReportSubscriptionsResult(){}
 }

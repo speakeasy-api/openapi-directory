@@ -15,9 +15,11 @@ public class ImportKeyPairResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operation")
     public Operation operation;
+
     public ImportKeyPairResult withOperation(Operation operation) {
         this.operation = operation;
         return this;
     }
     
+    public ImportKeyPairResult(){}
 }

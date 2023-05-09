@@ -58,11 +58,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworksIdActionsResponse res = new org.openapis.openapi.models.operations.GetNetworksIdActionsResponse() {{
+        org.openapis.openapi.models.operations.GetNetworksIdActionsResponse res = new org.openapis.openapi.models.operations.GetNetworksIdActionsResponse(contentType, httpRes.statusCode()) {{
             actionsResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -97,11 +95,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdResponse() {{
+        org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdResponse res = new org.openapis.openapi.models.operations.GetNetworksIdActionsActionIdResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -141,11 +137,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsAddRouteResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -185,11 +179,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsAddSubnetResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -233,11 +225,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsChangeIpRangeResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -277,11 +267,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsChangeProtectionResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -321,11 +309,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteRouteResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {
@@ -365,11 +351,9 @@ public class NetworkActions {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetResponse() {{
+        org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetResponse res = new org.openapis.openapi.models.operations.PostNetworksIdActionsDeleteSubnetResponse(contentType, httpRes.statusCode()) {{
             actionResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

@@ -12,6 +12,7 @@ public class GetAllIds2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=emailEquals")
     public String emailEquals;
+
     public GetAllIds2Request withEmailEquals(String emailEquals) {
         this.emailEquals = emailEquals;
         return this;
@@ -22,6 +23,7 @@ public class GetAllIds2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=nameEquals")
     public String nameEquals;
+
     public GetAllIds2Request withNameEquals(String nameEquals) {
         this.nameEquals = nameEquals;
         return this;
@@ -32,9 +34,11 @@ public class GetAllIds2Request {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=updatedSince")
     public Long updatedSince;
+
     public GetAllIds2Request withUpdatedSince(Long updatedSince) {
         this.updatedSince = updatedSince;
         return this;
     }
     
+    public GetAllIds2Request(){}
 }

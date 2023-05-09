@@ -12,6 +12,7 @@ public class ChannelCatalogProductByChannelCatalogRequest {
      */
     @JsonProperty("channelCatalogIds")
     public String[] channelCatalogIds;
+
     public ChannelCatalogProductByChannelCatalogRequest withChannelCatalogIds(String[] channelCatalogIds) {
         this.channelCatalogIds = channelCatalogIds;
         return this;
@@ -22,6 +23,7 @@ public class ChannelCatalogProductByChannelCatalogRequest {
      */
     @JsonProperty("productId")
     public String productId;
+
     public ChannelCatalogProductByChannelCatalogRequest withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -32,9 +34,15 @@ public class ChannelCatalogProductByChannelCatalogRequest {
      */
     @JsonProperty("storeId")
     public String storeId;
+
     public ChannelCatalogProductByChannelCatalogRequest withStoreId(String storeId) {
         this.storeId = storeId;
         return this;
     }
     
+    public ChannelCatalogProductByChannelCatalogRequest(@JsonProperty("channelCatalogIds") String[] channelCatalogIds, @JsonProperty("productId") String productId, @JsonProperty("storeId") String storeId) {
+        this.channelCatalogIds = channelCatalogIds;
+        this.productId = productId;
+        this.storeId = storeId;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UnarchiveApplicationResponse {
@@ -12,6 +13,7 @@ public class UnarchiveApplicationResponse {
      */
     
     public org.openapis.openapi.models.shared.Application application;
+
     public UnarchiveApplicationResponse withApplication(org.openapis.openapi.models.shared.Application application) {
         this.application = application;
         return this;
@@ -19,6 +21,7 @@ public class UnarchiveApplicationResponse {
     
     
     public String contentType;
+
     public UnarchiveApplicationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UnarchiveApplicationResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UnarchiveApplicationResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -39,6 +43,7 @@ public class UnarchiveApplicationResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public UnarchiveApplicationResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -46,6 +51,7 @@ public class UnarchiveApplicationResponse {
     
     
     public Integer statusCode;
+
     public UnarchiveApplicationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class UnarchiveApplicationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UnarchiveApplicationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class UnarchiveApplicationResponse {
      */
     
     public Object uninitializedAccountException;
+
     public UnarchiveApplicationResponse withUninitializedAccountException(Object uninitializedAccountException) {
         this.uninitializedAccountException = uninitializedAccountException;
         return this;
     }
     
+    public UnarchiveApplicationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

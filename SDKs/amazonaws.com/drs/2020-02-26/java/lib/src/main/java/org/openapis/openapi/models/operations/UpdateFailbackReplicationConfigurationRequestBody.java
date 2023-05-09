@@ -15,6 +15,7 @@ public class UpdateFailbackReplicationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bandwidthThrottling")
     public Long bandwidthThrottling;
+
     public UpdateFailbackReplicationConfigurationRequestBody withBandwidthThrottling(Long bandwidthThrottling) {
         this.bandwidthThrottling = bandwidthThrottling;
         return this;
@@ -26,6 +27,7 @@ public class UpdateFailbackReplicationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public UpdateFailbackReplicationConfigurationRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -36,6 +38,7 @@ public class UpdateFailbackReplicationConfigurationRequestBody {
      */
     @JsonProperty("recoveryInstanceID")
     public String recoveryInstanceID;
+
     public UpdateFailbackReplicationConfigurationRequestBody withRecoveryInstanceID(String recoveryInstanceID) {
         this.recoveryInstanceID = recoveryInstanceID;
         return this;
@@ -47,9 +50,13 @@ public class UpdateFailbackReplicationConfigurationRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usePrivateIP")
     public Boolean usePrivateIP;
+
     public UpdateFailbackReplicationConfigurationRequestBody withUsePrivateIP(Boolean usePrivateIP) {
         this.usePrivateIP = usePrivateIP;
         return this;
     }
     
+    public UpdateFailbackReplicationConfigurationRequestBody(@JsonProperty("recoveryInstanceID") String recoveryInstanceID) {
+        this.recoveryInstanceID = recoveryInstanceID;
+  }
 }

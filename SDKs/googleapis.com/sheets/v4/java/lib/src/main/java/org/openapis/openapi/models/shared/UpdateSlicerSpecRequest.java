@@ -18,6 +18,7 @@ public class UpdateSlicerSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fields")
     public String fields;
+
     public UpdateSlicerSpecRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -29,6 +30,7 @@ public class UpdateSlicerSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("slicerId")
     public Integer slicerId;
+
     public UpdateSlicerSpecRequest withSlicerId(Integer slicerId) {
         this.slicerId = slicerId;
         return this;
@@ -40,9 +42,11 @@ public class UpdateSlicerSpecRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec")
     public SlicerSpec spec;
+
     public UpdateSlicerSpecRequest withSpec(SlicerSpec spec) {
         this.spec = spec;
         return this;
     }
     
+    public UpdateSlicerSpecRequest(){}
 }

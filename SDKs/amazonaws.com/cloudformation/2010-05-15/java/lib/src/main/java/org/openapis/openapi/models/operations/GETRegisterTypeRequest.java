@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETRegisterTypeRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETRegisterTypeActionEnum action;
+
     public GETRegisterTypeRequest withAction(GETRegisterTypeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ClientRequestToken")
     public String clientRequestToken;
+
     public GETRegisterTypeRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -29,6 +32,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=ExecutionRoleArn")
     public String executionRoleArn;
+
     public GETRegisterTypeRequest withExecutionRoleArn(String executionRoleArn) {
         this.executionRoleArn = executionRoleArn;
         return this;
@@ -39,6 +43,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=LoggingConfig")
     public GETRegisterTypeLoggingConfig loggingConfig;
+
     public GETRegisterTypeRequest withLoggingConfig(GETRegisterTypeLoggingConfig loggingConfig) {
         this.loggingConfig = loggingConfig;
         return this;
@@ -49,6 +54,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=SchemaHandlerPackage")
     public String schemaHandlerPackage;
+
     public GETRegisterTypeRequest withSchemaHandlerPackage(String schemaHandlerPackage) {
         this.schemaHandlerPackage = schemaHandlerPackage;
         return this;
@@ -59,6 +65,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Type")
     public GETRegisterTypeTypeEnum type;
+
     public GETRegisterTypeRequest withType(GETRegisterTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -69,6 +76,7 @@ public class GETRegisterTypeRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=TypeName")
     public String typeName;
+
     public GETRegisterTypeRequest withTypeName(String typeName) {
         this.typeName = typeName;
         return this;
@@ -76,6 +84,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETRegisterTypeVersionEnum version;
+
     public GETRegisterTypeRequest withVersion(GETRegisterTypeVersionEnum version) {
         this.version = version;
         return this;
@@ -83,6 +92,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETRegisterTypeRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -90,6 +100,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETRegisterTypeRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -97,6 +108,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETRegisterTypeRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -104,6 +116,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETRegisterTypeRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -111,6 +124,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETRegisterTypeRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -118,6 +132,7 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETRegisterTypeRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -125,9 +140,16 @@ public class GETRegisterTypeRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETRegisterTypeRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETRegisterTypeRequest(@JsonProperty("Action") GETRegisterTypeActionEnum action, @JsonProperty("SchemaHandlerPackage") String schemaHandlerPackage, @JsonProperty("TypeName") String typeName, @JsonProperty("Version") GETRegisterTypeVersionEnum version) {
+        this.action = action;
+        this.schemaHandlerPackage = schemaHandlerPackage;
+        this.typeName = typeName;
+        this.version = version;
+  }
 }

@@ -15,6 +15,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cursor")
     public String cursor;
+
     public GetUsersRequest withCursor(String cursor) {
         this.cursor = cursor;
         return this;
@@ -25,6 +26,7 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public org.openapis.openapi.models.shared.OrderEnum order;
+
     public GetUsersRequest withOrder(org.openapis.openapi.models.shared.OrderEnum order) {
         this.order = order;
         return this;
@@ -35,9 +37,11 @@ public class GetUsersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_size")
     public Long pageSize;
+
     public GetUsersRequest withPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }
     
+    public GetUsersRequest(){}
 }

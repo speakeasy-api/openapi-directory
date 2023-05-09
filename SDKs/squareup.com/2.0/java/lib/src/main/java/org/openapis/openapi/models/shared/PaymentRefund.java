@@ -23,6 +23,7 @@ public class PaymentRefund {
      */
     @JsonProperty("amount_money")
     public Money amountMoney;
+
     public PaymentRefund withAmountMoney(Money amountMoney) {
         this.amountMoney = amountMoney;
         return this;
@@ -39,6 +40,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app_fee_money")
     public Money appFeeMoney;
+
     public PaymentRefund withAppFeeMoney(Money appFeeMoney) {
         this.appFeeMoney = appFeeMoney;
         return this;
@@ -50,6 +52,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("created_at")
     public String createdAt;
+
     public PaymentRefund withCreatedAt(String createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -60,6 +63,7 @@ public class PaymentRefund {
      */
     @JsonProperty("id")
     public String id;
+
     public PaymentRefund withId(String id) {
         this.id = id;
         return this;
@@ -71,6 +75,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("location_id")
     public String locationId;
+
     public PaymentRefund withLocationId(String locationId) {
         this.locationId = locationId;
         return this;
@@ -82,6 +87,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order_id")
     public String orderId;
+
     public PaymentRefund withOrderId(String orderId) {
         this.orderId = orderId;
         return this;
@@ -93,6 +99,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_id")
     public String paymentId;
+
     public PaymentRefund withPaymentId(String paymentId) {
         this.paymentId = paymentId;
         return this;
@@ -104,6 +111,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("processing_fee")
     public ProcessingFee[] processingFee;
+
     public PaymentRefund withProcessingFee(ProcessingFee[] processingFee) {
         this.processingFee = processingFee;
         return this;
@@ -115,6 +123,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public PaymentRefund withReason(String reason) {
         this.reason = reason;
         return this;
@@ -130,6 +139,7 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public String status;
+
     public PaymentRefund withStatus(String status) {
         this.status = status;
         return this;
@@ -141,9 +151,14 @@ public class PaymentRefund {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public PaymentRefund withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public PaymentRefund(@JsonProperty("amount_money") Money amountMoney, @JsonProperty("id") String id) {
+        this.amountMoney = amountMoney;
+        this.id = id;
+  }
 }

@@ -12,9 +12,11 @@ public class RelatedEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entity")
     public Entity entity;
+
     public RelatedEntity withEntity(Entity entity) {
         this.entity = entity;
         return this;
     }
     
+    public RelatedEntity(){}
 }

@@ -18,6 +18,7 @@ public class MysqlTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mysqlColumns")
     public MysqlColumn[] mysqlColumns;
+
     public MysqlTable withMysqlColumns(MysqlColumn[] mysqlColumns) {
         this.mysqlColumns = mysqlColumns;
         return this;
@@ -29,9 +30,11 @@ public class MysqlTable {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tableName")
     public String tableName;
+
     public MysqlTable withTableName(String tableName) {
         this.tableName = tableName;
         return this;
     }
     
+    public MysqlTable(){}
 }

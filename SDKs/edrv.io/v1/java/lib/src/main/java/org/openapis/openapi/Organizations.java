@@ -55,10 +55,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationResponse res = new org.openapis.openapi.models.operations.GetOrganizationResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationResponse res = new org.openapis.openapi.models.operations.GetOrganizationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -94,10 +92,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOrganizationsResponse res = new org.openapis.openapi.models.operations.GetOrganizationsResponse() {{
+        org.openapis.openapi.models.operations.GetOrganizationsResponse res = new org.openapis.openapi.models.operations.GetOrganizationsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,10 +128,8 @@ public class Organizations {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchOrganizationResponse res = new org.openapis.openapi.models.operations.PatchOrganizationResponse() {{
+        org.openapis.openapi.models.operations.PatchOrganizationResponse res = new org.openapis.openapi.models.operations.PatchOrganizationResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201 || httpRes.statusCode() == 400) {

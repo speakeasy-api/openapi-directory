@@ -15,6 +15,7 @@ public class MaliciousUrlScanner400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public MaliciousUrlScanner400ApplicationJSON withMessage(String message) {
         this.message = message;
         return this;
@@ -23,6 +24,7 @@ public class MaliciousUrlScanner400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("request_id")
     public String requestId;
+
     public MaliciousUrlScanner400ApplicationJSON withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -31,9 +33,11 @@ public class MaliciousUrlScanner400ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public MaliciousUrlScanner400ApplicationJSON withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public MaliciousUrlScanner400ApplicationJSON(){}
 }

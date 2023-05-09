@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataLicenseSpecifications {
     
     public String licenseConfigurationArn;
+
     public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataLicenseSpecifications withLicenseConfigurationArn(String licenseConfigurationArn) {
         this.licenseConfigurationArn = licenseConfigurationArn;
         return this;
     }
     
+    public CreateLaunchTemplateVersionResultLaunchTemplateVersionLaunchTemplateDataLicenseSpecifications(){}
 }

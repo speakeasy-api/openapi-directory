@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetItemPriorityFeedResponse {
     
     public byte[] body;
+
     public GetItemPriorityFeedResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetItemPriorityFeedResponse {
     
     
     public String contentType;
+
     public GetItemPriorityFeedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GetItemPriorityFeedResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetItemPriorityFeedResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -33,6 +37,7 @@ public class GetItemPriorityFeedResponse {
      */
     
     public org.openapis.openapi.models.shared.ItemPriorityResponse itemPriorityResponse;
+
     public GetItemPriorityFeedResponse withItemPriorityResponse(org.openapis.openapi.models.shared.ItemPriorityResponse itemPriorityResponse) {
         this.itemPriorityResponse = itemPriorityResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetItemPriorityFeedResponse {
     
     
     public Integer statusCode;
+
     public GetItemPriorityFeedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -47,9 +53,14 @@ public class GetItemPriorityFeedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetItemPriorityFeedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetItemPriorityFeedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

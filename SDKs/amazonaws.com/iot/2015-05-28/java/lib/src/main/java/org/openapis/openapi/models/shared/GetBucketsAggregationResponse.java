@@ -15,6 +15,7 @@ public class GetBucketsAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("buckets")
     public Bucket[] buckets;
+
     public GetBucketsAggregationResponse withBuckets(Bucket[] buckets) {
         this.buckets = buckets;
         return this;
@@ -23,9 +24,11 @@ public class GetBucketsAggregationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalCount")
     public Long totalCount;
+
     public GetBucketsAggregationResponse withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     
+    public GetBucketsAggregationResponse(){}
 }

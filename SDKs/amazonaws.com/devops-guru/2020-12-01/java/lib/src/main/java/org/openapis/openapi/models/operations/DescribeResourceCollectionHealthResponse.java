@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeResourceCollectionHealthResponse {
@@ -12,6 +13,7 @@ public class DescribeResourceCollectionHealthResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeResourceCollectionHealthResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DescribeResourceCollectionHealthResponse {
     
     
     public String contentType;
+
     public DescribeResourceCollectionHealthResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DescribeResourceCollectionHealthResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeResourceCollectionHealthResponse describeResourceCollectionHealthResponse;
+
     public DescribeResourceCollectionHealthResponse withDescribeResourceCollectionHealthResponse(org.openapis.openapi.models.shared.DescribeResourceCollectionHealthResponse describeResourceCollectionHealthResponse) {
         this.describeResourceCollectionHealthResponse = describeResourceCollectionHealthResponse;
         return this;
@@ -39,6 +43,7 @@ public class DescribeResourceCollectionHealthResponse {
      */
     
     public Object internalServerException;
+
     public DescribeResourceCollectionHealthResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DescribeResourceCollectionHealthResponse {
     
     
     public Integer statusCode;
+
     public DescribeResourceCollectionHealthResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DescribeResourceCollectionHealthResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeResourceCollectionHealthResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DescribeResourceCollectionHealthResponse {
      */
     
     public Object throttlingException;
+
     public DescribeResourceCollectionHealthResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -73,9 +81,14 @@ public class DescribeResourceCollectionHealthResponse {
      */
     
     public Object validationException;
+
     public DescribeResourceCollectionHealthResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeResourceCollectionHealthResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

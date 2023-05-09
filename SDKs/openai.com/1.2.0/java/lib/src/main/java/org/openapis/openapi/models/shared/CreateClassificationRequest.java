@@ -22,6 +22,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("examples")
     public String[][] examples;
+
     public CreateClassificationRequest withExamples(String[][] examples) {
         this.examples = examples;
         return this;
@@ -33,6 +34,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expand")
     public Object[] expand;
+
     public CreateClassificationRequest withExpand(Object[] expand) {
         this.expand = expand;
         return this;
@@ -47,6 +49,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("file")
     public String file;
+
     public CreateClassificationRequest withFile(String file) {
         this.file = file;
         return this;
@@ -58,6 +61,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public String[] labels;
+
     public CreateClassificationRequest withLabels(String[] labels) {
         this.labels = labels;
         return this;
@@ -74,6 +78,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logit_bias")
     public java.util.Map<String, Object> logitBias;
+
     public CreateClassificationRequest withLogitBias(java.util.Map<String, Object> logitBias) {
         this.logitBias = logitBias;
         return this;
@@ -90,6 +95,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("logprobs")
     public Long logprobs;
+
     public CreateClassificationRequest withLogprobs(Long logprobs) {
         this.logprobs = logprobs;
         return this;
@@ -101,6 +107,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("max_examples")
     public Long maxExamples;
+
     public CreateClassificationRequest withMaxExamples(Long maxExamples) {
         this.maxExamples = maxExamples;
         return this;
@@ -111,6 +118,7 @@ public class CreateClassificationRequest {
      */
     @JsonProperty("model")
     public String model;
+
     public CreateClassificationRequest withModel(String model) {
         this.model = model;
         return this;
@@ -121,6 +129,7 @@ public class CreateClassificationRequest {
      */
     @JsonProperty("query")
     public String query;
+
     public CreateClassificationRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -135,6 +144,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_metadata")
     public Boolean returnMetadata;
+
     public CreateClassificationRequest withReturnMetadata(Boolean returnMetadata) {
         this.returnMetadata = returnMetadata;
         return this;
@@ -146,6 +156,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("return_prompt")
     public Boolean returnPrompt;
+
     public CreateClassificationRequest withReturnPrompt(Boolean returnPrompt) {
         this.returnPrompt = returnPrompt;
         return this;
@@ -157,6 +168,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("search_model")
     public String searchModel;
+
     public CreateClassificationRequest withSearchModel(String searchModel) {
         this.searchModel = searchModel;
         return this;
@@ -168,6 +180,7 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("temperature")
     public Double temperature;
+
     public CreateClassificationRequest withTemperature(Double temperature) {
         this.temperature = temperature;
         return this;
@@ -180,9 +193,14 @@ public class CreateClassificationRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("user")
     public String user;
+
     public CreateClassificationRequest withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public CreateClassificationRequest(@JsonProperty("model") String model, @JsonProperty("query") String query) {
+        this.model = model;
+        this.query = query;
+  }
 }

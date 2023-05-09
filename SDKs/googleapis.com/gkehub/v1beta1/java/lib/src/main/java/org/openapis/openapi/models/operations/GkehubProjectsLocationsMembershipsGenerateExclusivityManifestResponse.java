@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse {
     
     public String contentType;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRespon
      */
     
     public org.openapis.openapi.models.shared.GenerateExclusivityManifestResponse generateExclusivityManifestResponse;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse withGenerateExclusivityManifestResponse(org.openapis.openapi.models.shared.GenerateExclusivityManifestResponse generateExclusivityManifestResponse) {
         this.generateExclusivityManifestResponse = generateExclusivityManifestResponse;
         return this;
@@ -26,6 +29,7 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRespon
     
     
     public Integer statusCode;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GkehubProjectsLocationsMembershipsGenerateExclusivityManifestRespon
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GkehubProjectsLocationsMembershipsGenerateExclusivityManifestResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

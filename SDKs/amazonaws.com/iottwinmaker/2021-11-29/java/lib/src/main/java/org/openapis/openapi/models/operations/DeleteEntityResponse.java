@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteEntityResponse {
     
     public String contentType;
+
     public DeleteEntityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteEntityResponse {
      */
     
     public org.openapis.openapi.models.shared.DeleteEntityResponse deleteEntityResponse;
+
     public DeleteEntityResponse withDeleteEntityResponse(org.openapis.openapi.models.shared.DeleteEntityResponse deleteEntityResponse) {
         this.deleteEntityResponse = deleteEntityResponse;
         return this;
@@ -29,6 +32,7 @@ public class DeleteEntityResponse {
      */
     
     public Object internalServerException;
+
     public DeleteEntityResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -36,6 +40,7 @@ public class DeleteEntityResponse {
     
     
     public Integer statusCode;
+
     public DeleteEntityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class DeleteEntityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteEntityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class DeleteEntityResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteEntityResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -63,6 +70,7 @@ public class DeleteEntityResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public DeleteEntityResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -73,6 +81,7 @@ public class DeleteEntityResponse {
      */
     
     public Object throttlingException;
+
     public DeleteEntityResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteEntityResponse {
      */
     
     public Object validationException;
+
     public DeleteEntityResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteEntityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

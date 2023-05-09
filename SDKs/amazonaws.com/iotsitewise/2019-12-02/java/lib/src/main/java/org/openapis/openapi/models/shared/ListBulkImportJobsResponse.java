@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ListBulkImportJobsResponse {
     @JsonProperty("jobSummaries")
     public JobSummary[] jobSummaries;
+
     public ListBulkImportJobsResponse withJobSummaries(JobSummary[] jobSummaries) {
         this.jobSummaries = jobSummaries;
         return this;
@@ -22,9 +23,13 @@ public class ListBulkImportJobsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListBulkImportJobsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListBulkImportJobsResponse(@JsonProperty("jobSummaries") JobSummary[] jobSummaries) {
+        this.jobSummaries = jobSummaries;
+  }
 }

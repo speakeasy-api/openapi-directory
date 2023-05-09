@@ -15,6 +15,7 @@ public class ListTestRecommendationsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTestRecommendationsResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -22,9 +23,13 @@ public class ListTestRecommendationsResponse {
     
     @JsonProperty("testRecommendations")
     public TestRecommendation[] testRecommendations;
+
     public ListTestRecommendationsResponse withTestRecommendations(TestRecommendation[] testRecommendations) {
         this.testRecommendations = testRecommendations;
         return this;
     }
     
+    public ListTestRecommendationsResponse(@JsonProperty("testRecommendations") TestRecommendation[] testRecommendations) {
+        this.testRecommendations = testRecommendations;
+  }
 }

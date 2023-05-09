@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DeleteAccountOrganizationExportTokenRequest {
@@ -12,9 +13,13 @@ public class DeleteAccountOrganizationExportTokenRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=org_id")
     public String orgId;
+
     public DeleteAccountOrganizationExportTokenRequest withOrgId(String orgId) {
         this.orgId = orgId;
         return this;
     }
     
+    public DeleteAccountOrganizationExportTokenRequest(@JsonProperty("org_id") String orgId) {
+        this.orgId = orgId;
+  }
 }

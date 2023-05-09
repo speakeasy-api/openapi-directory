@@ -18,6 +18,7 @@ public class PlayerScoreResetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("definitionId")
     public String definitionId;
+
     public PlayerScoreResetResponse withDefinitionId(String definitionId) {
         this.definitionId = definitionId;
         return this;
@@ -29,6 +30,7 @@ public class PlayerScoreResetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public PlayerScoreResetResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,9 +42,11 @@ public class PlayerScoreResetResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resetScoreTimeSpans")
     public String[] resetScoreTimeSpans;
+
     public PlayerScoreResetResponse withResetScoreTimeSpans(String[] resetScoreTimeSpans) {
         this.resetScoreTimeSpans = resetScoreTimeSpans;
         return this;
     }
     
+    public PlayerScoreResetResponse(){}
 }

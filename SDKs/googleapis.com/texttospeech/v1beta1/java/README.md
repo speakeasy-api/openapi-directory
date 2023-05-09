@@ -16,10 +16,9 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetSecurity;
 import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetRequest;
 import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetResponse;
+import org.openapis.openapi.models.operations.TexttospeechProjectsLocationsOperationsGetSecurity;
 import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
@@ -29,32 +28,33 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            TexttospeechProjectsLocationsOperationsGetRequest req = new TexttospeechProjectsLocationsOperationsGetRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            TexttospeechProjectsLocationsOperationsGetRequest req = new TexttospeechProjectsLocationsOperationsGetRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 uploadType = "error";
                 uploadProtocol = "deserunt";
-            }}            
+            }};            
 
-            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req, new TexttospeechProjectsLocationsOperationsGetSecurity() {{
+            TexttospeechProjectsLocationsOperationsGetResponse res = sdk.projects.texttospeechProjectsLocationsOperationsGet(req, new TexttospeechProjectsLocationsOperationsGetSecurity("suscipit", "iure") {{
                 oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
             }});
 
-            if (res.operation.isPresent()) {
+            if (res.operation != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -62,19 +62,19 @@ public class Application {
 ## Available Resources and Operations
 
 
-### projects
+### [projects](docs/projects/README.md)
 
-* `texttospeechProjectsLocationsOperationsGet` - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
-* `texttospeechProjectsLocationsOperationsList` - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
-* `texttospeechProjectsLocationsSynthesizeLongAudio` - Synthesizes long form text asynchronously.
+* [texttospeechProjectsLocationsOperationsGet](docs/projects/README.md#texttospeechprojectslocationsoperationsget) - Gets the latest state of a long-running operation. Clients can use this method to poll the operation result at intervals as recommended by the API service.
+* [texttospeechProjectsLocationsOperationsList](docs/projects/README.md#texttospeechprojectslocationsoperationslist) - Lists operations that match the specified filter in the request. If the server doesn't support this method, it returns `UNIMPLEMENTED`.
+* [texttospeechProjectsLocationsSynthesizeLongAudio](docs/projects/README.md#texttospeechprojectslocationssynthesizelongaudio) - Synthesizes long form text asynchronously.
 
-### text
+### [text](docs/text/README.md)
 
-* `texttospeechTextSynthesize` - Synthesizes speech synchronously: receive results after all text input has been processed.
+* [texttospeechTextSynthesize](docs/text/README.md#texttospeechtextsynthesize) - Synthesizes speech synchronously: receive results after all text input has been processed.
 
-### voices
+### [voices](docs/voices/README.md)
 
-* `texttospeechVoicesList` - Returns a list of Voice supported for synthesis.
+* [texttospeechVoicesList](docs/voices/README.md#texttospeechvoiceslist) - Returns a list of Voice supported for synthesis.
 <!-- End SDK Available Operations -->
 
 ### Maturity

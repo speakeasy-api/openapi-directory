@@ -18,6 +18,7 @@ public class TranslateTextGlossaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("glossary")
     public String glossary;
+
     public TranslateTextGlossaryConfig withGlossary(String glossary) {
         this.glossary = glossary;
         return this;
@@ -29,9 +30,11 @@ public class TranslateTextGlossaryConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ignoreCase")
     public Boolean ignoreCase;
+
     public TranslateTextGlossaryConfig withIgnoreCase(Boolean ignoreCase) {
         this.ignoreCase = ignoreCase;
         return this;
     }
     
+    public TranslateTextGlossaryConfig(){}
 }

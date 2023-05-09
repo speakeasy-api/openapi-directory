@@ -15,6 +15,7 @@ public class SearchItemsByViewUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Item[] items;
+
     public SearchItemsByViewUrlResponse withItems(Item[] items) {
         this.items = items;
         return this;
@@ -26,9 +27,11 @@ public class SearchItemsByViewUrlResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public SearchItemsByViewUrlResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
     }
     
+    public SearchItemsByViewUrlResponse(){}
 }

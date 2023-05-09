@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ListSAMLProvidersResponse {
     
     public SAMLProviderListEntry[] samlProviderList;
+
     public ListSAMLProvidersResponse withSAMLProviderList(SAMLProviderListEntry[] samlProviderList) {
         this.samlProviderList = samlProviderList;
         return this;
     }
     
+    public ListSAMLProvidersResponse(){}
 }

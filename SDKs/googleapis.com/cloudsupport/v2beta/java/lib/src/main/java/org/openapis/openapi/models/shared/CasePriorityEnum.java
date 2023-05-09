@@ -7,7 +7,7 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * CasePriorityEnum - The priority of this case. If this is set, do not set severity.
+ * CasePriorityEnum - The priority of this case.
  */
 public enum CasePriorityEnum {
     PRIORITY_UNSPECIFIED("PRIORITY_UNSPECIFIED"),

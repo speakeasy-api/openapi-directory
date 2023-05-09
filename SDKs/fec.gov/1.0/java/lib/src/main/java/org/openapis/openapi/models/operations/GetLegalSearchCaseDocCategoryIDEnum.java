@@ -12,7 +12,14 @@ public enum GetLegalSearchCaseDocCategoryIDEnum {
     THREE("3"),
     FOUR("4"),
     FIVE("5"),
-    SIX("6");
+    SIX("6"),
+    ONE_THOUSAND_AND_ONE("1001"),
+    ONE_THOUSAND_AND_TWO("1002"),
+    ONE_THOUSAND_AND_THREE("1003"),
+    ONE_THOUSAND_AND_FOUR("1004"),
+    ONE_THOUSAND_AND_FIVE("1005"),
+    ONE_THOUSAND_AND_SIX("1006"),
+    TWO_THOUSAND_AND_ONE("2001");
 
     @JsonValue
     public final String value;

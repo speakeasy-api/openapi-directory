@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateAgentSiteRequest {
@@ -12,6 +13,7 @@ public class UpdateAgentSiteRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.AgentSiteID agentSiteID;
+
     public UpdateAgentSiteRequest withAgentSiteID(org.openapis.openapi.models.shared.AgentSiteID agentSiteID) {
         this.agentSiteID = agentSiteID;
         return this;
@@ -22,9 +24,14 @@ public class UpdateAgentSiteRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agent_id")
     public String agentId;
+
     public UpdateAgentSiteRequest withAgentId(String agentId) {
         this.agentId = agentId;
         return this;
     }
     
+    public UpdateAgentSiteRequest(@JsonProperty("AgentSiteID") org.openapis.openapi.models.shared.AgentSiteID agentSiteID, @JsonProperty("agent_id") String agentId) {
+        this.agentSiteID = agentSiteID;
+        this.agentId = agentId;
+  }
 }

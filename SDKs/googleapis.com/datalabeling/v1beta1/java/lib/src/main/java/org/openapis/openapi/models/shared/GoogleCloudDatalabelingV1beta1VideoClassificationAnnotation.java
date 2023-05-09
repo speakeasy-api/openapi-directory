@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpec")
     public GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec;
+
     public GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation withAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec annotationSpec) {
         this.annotationSpec = annotationSpec;
         return this;
@@ -29,9 +30,11 @@ public class GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeSegment")
     public GoogleCloudDatalabelingV1beta1TimeSegment timeSegment;
+
     public GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation withTimeSegment(GoogleCloudDatalabelingV1beta1TimeSegment timeSegment) {
         this.timeSegment = timeSegment;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation(){}
 }

@@ -15,9 +15,11 @@ public class ShareDirectoryResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SharedDirectoryId")
     public String sharedDirectoryId;
+
     public ShareDirectoryResult withSharedDirectoryId(String sharedDirectoryId) {
         this.sharedDirectoryId = sharedDirectoryId;
         return this;
     }
     
+    public ShareDirectoryResult(){}
 }

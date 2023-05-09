@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration {
     
     public String availabilityZone;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -19,6 +20,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public Long instanceCount;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration withInstanceCount(Long instanceCount) {
         this.instanceCount = instanceCount;
         return this;
@@ -26,6 +28,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum instanceType;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration withInstanceType(DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationInstanceTypeEnum instanceType) {
         this.instanceType = instanceType;
         return this;
@@ -33,6 +36,7 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public String platform;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration withPlatform(String platform) {
         this.platform = platform;
         return this;
@@ -40,9 +44,11 @@ public class DescribeReservedInstancesModificationsResultReservedInstancesModifi
     
     
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum scope;
+
     public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration withScope(DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfigurationScopeEnum scope) {
         this.scope = scope;
         return this;
     }
     
+    public DescribeReservedInstancesModificationsResultReservedInstancesModificationsModificationResultsTargetConfiguration(){}
 }

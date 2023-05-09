@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateAssetModelResponse {
     @JsonProperty("assetModelArn")
     public String assetModelArn;
+
     public CreateAssetModelResponse withAssetModelArn(String assetModelArn) {
         this.assetModelArn = assetModelArn;
         return this;
@@ -19,6 +20,7 @@ public class CreateAssetModelResponse {
     
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public CreateAssetModelResponse withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -26,9 +28,15 @@ public class CreateAssetModelResponse {
     
     @JsonProperty("assetModelStatus")
     public AssetModelStatus assetModelStatus;
+
     public CreateAssetModelResponse withAssetModelStatus(AssetModelStatus assetModelStatus) {
         this.assetModelStatus = assetModelStatus;
         return this;
     }
     
+    public CreateAssetModelResponse(@JsonProperty("assetModelArn") String assetModelArn, @JsonProperty("assetModelId") String assetModelId, @JsonProperty("assetModelStatus") AssetModelStatus assetModelStatus) {
+        this.assetModelArn = assetModelArn;
+        this.assetModelId = assetModelId;
+        this.assetModelStatus = assetModelStatus;
+  }
 }

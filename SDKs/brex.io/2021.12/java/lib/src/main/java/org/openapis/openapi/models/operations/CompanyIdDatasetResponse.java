@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CompanyIdDatasetResponse {
@@ -12,6 +13,7 @@ public class CompanyIdDatasetResponse {
      */
     
     public CompanyIdDatasetDefaultApplicationJSON companyIdDatasetDefaultApplicationJSONObject;
+
     public CompanyIdDatasetResponse withCompanyIdDatasetDefaultApplicationJSONObject(CompanyIdDatasetDefaultApplicationJSON companyIdDatasetDefaultApplicationJSONObject) {
         this.companyIdDatasetDefaultApplicationJSONObject = companyIdDatasetDefaultApplicationJSONObject;
         return this;
@@ -19,6 +21,7 @@ public class CompanyIdDatasetResponse {
     
     
     public String contentType;
+
     public CompanyIdDatasetResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class CompanyIdDatasetResponse {
     
     
     public Integer statusCode;
+
     public CompanyIdDatasetResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class CompanyIdDatasetResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CompanyIdDatasetResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class CompanyIdDatasetResponse {
     
     
     public org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany;
+
     public CompanyIdDatasetResponse withOneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany(org.openapis.openapi.models.shared.Oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany) {
         this.oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany = oneapi1v11company1deepsearch1lei1Percent7BnumberPercent7DGetResponses200ContentApplication1jsonSchemaPropertiesCompany;
         return this;
     }
     
+    public CompanyIdDatasetResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

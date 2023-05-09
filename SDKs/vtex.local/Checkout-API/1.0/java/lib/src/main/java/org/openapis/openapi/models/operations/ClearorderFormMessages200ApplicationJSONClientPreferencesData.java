@@ -18,6 +18,7 @@ public class ClearorderFormMessages200ApplicationJSONClientPreferencesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("locale")
     public String locale;
+
     public ClearorderFormMessages200ApplicationJSONClientPreferencesData withLocale(String locale) {
         this.locale = locale;
         return this;
@@ -29,9 +30,11 @@ public class ClearorderFormMessages200ApplicationJSONClientPreferencesData {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optinNewsLetter")
     public Boolean optinNewsLetter;
+
     public ClearorderFormMessages200ApplicationJSONClientPreferencesData withOptinNewsLetter(Boolean optinNewsLetter) {
         this.optinNewsLetter = optinNewsLetter;
         return this;
     }
     
+    public ClearorderFormMessages200ApplicationJSONClientPreferencesData(){}
 }

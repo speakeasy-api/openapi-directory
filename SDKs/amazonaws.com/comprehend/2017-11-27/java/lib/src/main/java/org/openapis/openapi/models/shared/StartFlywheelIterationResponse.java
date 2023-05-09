@@ -15,6 +15,7 @@ public class StartFlywheelIterationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public StartFlywheelIterationResponse withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -23,9 +24,11 @@ public class StartFlywheelIterationResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelIterationId")
     public String flywheelIterationId;
+
     public StartFlywheelIterationResponse withFlywheelIterationId(String flywheelIterationId) {
         this.flywheelIterationId = flywheelIterationId;
         return this;
     }
     
+    public StartFlywheelIterationResponse(){}
 }

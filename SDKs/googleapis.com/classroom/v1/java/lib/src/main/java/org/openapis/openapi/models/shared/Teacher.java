@@ -18,6 +18,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("courseId")
     public String courseId;
+
     public Teacher withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -29,6 +30,7 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profile")
     public UserProfile profile;
+
     public Teacher withProfile(UserProfile profile) {
         this.profile = profile;
         return this;
@@ -40,9 +42,11 @@ public class Teacher {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public Teacher withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public Teacher(){}
 }

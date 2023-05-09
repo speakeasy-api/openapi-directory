@@ -15,9 +15,11 @@ public class DescribeListenerResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Listener")
     public Listener listener;
+
     public DescribeListenerResponse withListener(Listener listener) {
         this.listener = listener;
         return this;
     }
     
+    public DescribeListenerResponse(){}
 }

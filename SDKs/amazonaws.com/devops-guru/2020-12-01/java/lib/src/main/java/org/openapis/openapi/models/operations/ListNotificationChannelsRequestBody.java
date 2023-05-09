@@ -15,9 +15,11 @@ public class ListNotificationChannelsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListNotificationChannelsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListNotificationChannelsRequestBody(){}
 }

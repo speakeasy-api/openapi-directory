@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateUploadUrlResponse {
@@ -12,6 +13,7 @@ public class CreateUploadUrlResponse {
      */
     
     public Object conflictException;
+
     public CreateUploadUrlResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class CreateUploadUrlResponse {
     
     
     public String contentType;
+
     public CreateUploadUrlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateUploadUrlResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateUploadUrlResponse createUploadUrlResponse;
+
     public CreateUploadUrlResponse withCreateUploadUrlResponse(org.openapis.openapi.models.shared.CreateUploadUrlResponse createUploadUrlResponse) {
         this.createUploadUrlResponse = createUploadUrlResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateUploadUrlResponse {
      */
     
     public Object internalServerException;
+
     public CreateUploadUrlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class CreateUploadUrlResponse {
     
     
     public Integer statusCode;
+
     public CreateUploadUrlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateUploadUrlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateUploadUrlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class CreateUploadUrlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CreateUploadUrlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class CreateUploadUrlResponse {
      */
     
     public Object throttlingException;
+
     public CreateUploadUrlResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class CreateUploadUrlResponse {
      */
     
     public Object validationException;
+
     public CreateUploadUrlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateUploadUrlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -14,6 +14,7 @@ public class PublicChannelInfo {
      */
     @JsonProperty("homeUrl")
     public String homeUrl;
+
     public PublicChannelInfo withHomeUrl(String homeUrl) {
         this.homeUrl = homeUrl;
         return this;
@@ -24,6 +25,7 @@ public class PublicChannelInfo {
      */
     @JsonProperty("logoUrl")
     public String logoUrl;
+
     public PublicChannelInfo withLogoUrl(String logoUrl) {
         this.logoUrl = logoUrl;
         return this;
@@ -34,6 +36,7 @@ public class PublicChannelInfo {
      */
     @JsonProperty("name")
     public String name;
+
     public PublicChannelInfo withName(String name) {
         this.name = name;
         return this;
@@ -45,6 +48,7 @@ public class PublicChannelInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sectors")
     public String[] sectors;
+
     public PublicChannelInfo withSectors(String[] sectors) {
         this.sectors = sectors;
         return this;
@@ -55,9 +59,16 @@ public class PublicChannelInfo {
      */
     @JsonProperty("types")
     public String[] types;
+
     public PublicChannelInfo withTypes(String[] types) {
         this.types = types;
         return this;
     }
     
+    public PublicChannelInfo(@JsonProperty("homeUrl") String homeUrl, @JsonProperty("logoUrl") String logoUrl, @JsonProperty("name") String name, @JsonProperty("types") String[] types) {
+        this.homeUrl = homeUrl;
+        this.logoUrl = logoUrl;
+        this.name = name;
+        this.types = types;
+  }
 }

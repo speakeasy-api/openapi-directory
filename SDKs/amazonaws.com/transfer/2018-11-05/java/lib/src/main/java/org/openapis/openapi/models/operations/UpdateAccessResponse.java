@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateAccessResponse {
     
     public String contentType;
+
     public UpdateAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateAccessResponse {
      */
     
     public Object internalServiceError;
+
     public UpdateAccessResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -29,6 +32,7 @@ public class UpdateAccessResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateAccessResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateAccessResponse {
      */
     
     public Object resourceExistsException;
+
     public UpdateAccessResponse withResourceExistsException(Object resourceExistsException) {
         this.resourceExistsException = resourceExistsException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateAccessResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateAccessResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class UpdateAccessResponse {
     
     
     public Integer statusCode;
+
     public UpdateAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class UpdateAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateAccessResponse {
      */
     
     public Object serviceUnavailableException;
+
     public UpdateAccessResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -83,6 +92,7 @@ public class UpdateAccessResponse {
      */
     
     public Object throttlingException;
+
     public UpdateAccessResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class UpdateAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateAccessResponse updateAccessResponse;
+
     public UpdateAccessResponse withUpdateAccessResponse(org.openapis.openapi.models.shared.UpdateAccessResponse updateAccessResponse) {
         this.updateAccessResponse = updateAccessResponse;
         return this;
     }
     
+    public UpdateAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

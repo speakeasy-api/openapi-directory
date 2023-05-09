@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingRequest;
 import org.openapis.openapi.models.operations.MybusinesslodgingLocationsGetLodgingResponse;
 import org.openapis.openapi.models.shared.AltEnum;
@@ -28,30 +27,31 @@ public class Application {
             SDK sdk = SDK.builder()
                 .build();
 
-            MybusinesslodgingLocationsGetLodgingRequest req = new MybusinesslodgingLocationsGetLodgingRequest() {{
-                dollarXgafv = "2";
-                accessToken = "provident";
-                alt = "proto";
-                callback = "quibusdam";
-                fields = "unde";
-                key = "nulla";
-                name = "corrupti";
+            MybusinesslodgingLocationsGetLodgingRequest req = new MybusinesslodgingLocationsGetLodgingRequest("corrupti") {{
+                dollarXgafv = XgafvEnum.TWO;
+                accessToken = "distinctio";
+                alt = AltEnum.PROTO;
+                callback = "unde";
+                fields = "nulla";
+                key = "corrupti";
                 oauthToken = "illum";
                 prettyPrint = false;
                 quotaUser = "vel";
                 readMask = "error";
                 uploadType = "deserunt";
                 uploadProtocol = "suscipit";
-            }}            
+            }};            
 
             MybusinesslodgingLocationsGetLodgingResponse res = sdk.locations.mybusinesslodgingLocationsGetLodging(req);
 
-            if (res.lodging.isPresent()) {
+            if (res.lodging != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -59,11 +59,11 @@ public class Application {
 ## Available Resources and Operations
 
 
-### locations
+### [locations](docs/locations/README.md)
 
-* `mybusinesslodgingLocationsGetLodging` - Returns the Lodging of a specific location.
-* `mybusinesslodgingLocationsLodgingGetGoogleUpdated` - Returns the Google updated Lodging of a specific location.
-* `mybusinesslodgingLocationsUpdateLodging` - Updates the Lodging of a specific location.
+* [mybusinesslodgingLocationsGetLodging](docs/locations/README.md#mybusinesslodginglocationsgetlodging) - Returns the Lodging of a specific location.
+* [mybusinesslodgingLocationsLodgingGetGoogleUpdated](docs/locations/README.md#mybusinesslodginglocationslodginggetgoogleupdated) - Returns the Google updated Lodging of a specific location.
+* [mybusinesslodgingLocationsUpdateLodging](docs/locations/README.md#mybusinesslodginglocationsupdatelodging) - Updates the Lodging of a specific location.
 <!-- End SDK Available Operations -->
 
 ### Maturity

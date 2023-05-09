@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
@@ -12,6 +13,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -19,6 +21,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public java.util.Map<String, Object> requestBody;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withRequestBody(java.util.Map<String, Object> requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -39,6 +43,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -49,6 +54,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -59,6 +65,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseId")
     public String courseId;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withCourseId(String courseId) {
         this.courseId = courseId;
         return this;
@@ -69,6 +76,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=courseWorkId")
     public String courseWorkId;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withCourseWorkId(String courseWorkId) {
         this.courseWorkId = courseWorkId;
         return this;
@@ -79,6 +87,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -89,6 +98,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public String id;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withId(String id) {
         this.id = id;
         return this;
@@ -99,6 +109,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withKey(String key) {
         this.key = key;
         return this;
@@ -109,6 +120,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -119,6 +131,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -129,6 +142,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -139,6 +153,7 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -149,9 +164,15 @@ public class ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
     }
     
+    public ClassroomCoursesCourseWorkStudentSubmissionsTurnInRequest(@JsonProperty("courseId") String courseId, @JsonProperty("courseWorkId") String courseWorkId, @JsonProperty("id") String id) {
+        this.courseId = courseId;
+        this.courseWorkId = courseWorkId;
+        this.id = id;
+  }
 }

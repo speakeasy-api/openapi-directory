@@ -15,6 +15,7 @@ public class InternalIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cidr")
     public String cidr;
+
     public InternalIpAddress withCidr(String cidr) {
         this.cidr = cidr;
         return this;
@@ -26,6 +27,7 @@ public class InternalIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public String owner;
+
     public InternalIpAddress withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -37,6 +39,7 @@ public class InternalIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purpose")
     public String purpose;
+
     public InternalIpAddress withPurpose(String purpose) {
         this.purpose = purpose;
         return this;
@@ -48,6 +51,7 @@ public class InternalIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("region")
     public String region;
+
     public InternalIpAddress withRegion(String region) {
         this.region = region;
         return this;
@@ -59,9 +63,11 @@ public class InternalIpAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public InternalIpAddressTypeEnum type;
+
     public InternalIpAddress withType(InternalIpAddressTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public InternalIpAddress(){}
 }

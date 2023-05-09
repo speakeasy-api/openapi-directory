@@ -12,6 +12,7 @@ public class StatusCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Count")
     public Integer count;
+
     public StatusCount withCount(Integer count) {
         this.count = count;
         return this;
@@ -20,9 +21,11 @@ public class StatusCount {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StatusId")
     public Integer statusId;
+
     public StatusCount withStatusId(Integer statusId) {
         this.statusId = statusId;
         return this;
     }
     
+    public StatusCount(){}
 }

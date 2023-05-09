@@ -15,6 +15,7 @@ public class ListUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public ListUsersResponse withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
@@ -23,9 +24,11 @@ public class ListUsersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Users")
     public UserType[] users;
+
     public ListUsersResponse withUsers(UserType[] users) {
         this.users = users;
         return this;
     }
     
+    public ListUsersResponse(){}
 }

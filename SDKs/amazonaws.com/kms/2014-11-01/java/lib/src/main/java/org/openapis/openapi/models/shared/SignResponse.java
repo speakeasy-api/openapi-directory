@@ -15,6 +15,7 @@ public class SignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KeyId")
     public String keyId;
+
     public SignResponse withKeyId(String keyId) {
         this.keyId = keyId;
         return this;
@@ -23,6 +24,7 @@ public class SignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Signature")
     public String signature;
+
     public SignResponse withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -31,9 +33,11 @@ public class SignResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SigningAlgorithm")
     public SigningAlgorithmSpecEnum signingAlgorithm;
+
     public SignResponse withSigningAlgorithm(SigningAlgorithmSpecEnum signingAlgorithm) {
         this.signingAlgorithm = signingAlgorithm;
         return this;
     }
     
+    public SignResponse(){}
 }

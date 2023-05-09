@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class GetConsoleScreenshotResult {
     
     public String imageData;
+
     public GetConsoleScreenshotResult withImageData(String imageData) {
         this.imageData = imageData;
         return this;
@@ -19,9 +20,11 @@ public class GetConsoleScreenshotResult {
     
     
     public String instanceId;
+
     public GetConsoleScreenshotResult withInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
     
+    public GetConsoleScreenshotResult(){}
 }

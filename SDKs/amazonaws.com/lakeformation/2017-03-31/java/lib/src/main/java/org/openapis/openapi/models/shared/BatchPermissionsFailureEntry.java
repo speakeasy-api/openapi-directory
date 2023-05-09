@@ -15,6 +15,7 @@ public class BatchPermissionsFailureEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Error")
     public ErrorDetail error;
+
     public BatchPermissionsFailureEntry withError(ErrorDetail error) {
         this.error = error;
         return this;
@@ -23,9 +24,11 @@ public class BatchPermissionsFailureEntry {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RequestEntry")
     public BatchPermissionsRequestEntry requestEntry;
+
     public BatchPermissionsFailureEntry withRequestEntry(BatchPermissionsRequestEntry requestEntry) {
         this.requestEntry = requestEntry;
         return this;
     }
     
+    public BatchPermissionsFailureEntry(){}
 }

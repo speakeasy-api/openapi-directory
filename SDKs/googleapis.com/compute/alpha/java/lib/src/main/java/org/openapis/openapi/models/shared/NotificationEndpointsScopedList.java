@@ -15,6 +15,7 @@ public class NotificationEndpointsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resources")
     public NotificationEndpoint[] resources;
+
     public NotificationEndpointsScopedList withResources(NotificationEndpoint[] resources) {
         this.resources = resources;
         return this;
@@ -26,9 +27,11 @@ public class NotificationEndpointsScopedList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warning")
     public NotificationEndpointsScopedListWarning warning;
+
     public NotificationEndpointsScopedList withWarning(NotificationEndpointsScopedListWarning warning) {
         this.warning = warning;
         return this;
     }
     
+    public NotificationEndpointsScopedList(){}
 }

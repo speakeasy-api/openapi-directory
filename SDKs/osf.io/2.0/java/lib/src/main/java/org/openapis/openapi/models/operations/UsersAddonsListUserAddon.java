@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UsersAddonsListUserAddon {
     /**
@@ -12,6 +12,7 @@ public class UsersAddonsListUserAddon {
      */
     
     public UsersAddonsListUserAddonAttributes attributes;
+
     public UsersAddonsListUserAddon withAttributes(UsersAddonsListUserAddonAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -22,6 +23,7 @@ public class UsersAddonsListUserAddon {
      */
     
     public String id;
+
     public UsersAddonsListUserAddon withId(String id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class UsersAddonsListUserAddon {
      */
     
     public UsersAddonsListUserAddonLinks links;
+
     public UsersAddonsListUserAddon withLinks(UsersAddonsListUserAddonLinks links) {
         this.links = links;
         return this;
@@ -42,9 +45,16 @@ public class UsersAddonsListUserAddon {
      */
     
     public String type;
+
     public UsersAddonsListUserAddon withType(String type) {
         this.type = type;
         return this;
     }
     
+    public UsersAddonsListUserAddon(@JsonProperty("attributes") UsersAddonsListUserAddonAttributes attributes, @JsonProperty("id") String id, @JsonProperty("links") UsersAddonsListUserAddonLinks links, @JsonProperty("type") String type) {
+        this.attributes = attributes;
+        this.id = id;
+        this.links = links;
+        this.type = type;
+  }
 }

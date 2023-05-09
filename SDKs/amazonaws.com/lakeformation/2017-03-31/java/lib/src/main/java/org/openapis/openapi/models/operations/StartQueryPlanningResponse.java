@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class StartQueryPlanningResponse {
@@ -12,6 +13,7 @@ public class StartQueryPlanningResponse {
      */
     
     public Object accessDeniedException;
+
     public StartQueryPlanningResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class StartQueryPlanningResponse {
     
     
     public String contentType;
+
     public StartQueryPlanningResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class StartQueryPlanningResponse {
      */
     
     public Object internalServiceException;
+
     public StartQueryPlanningResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class StartQueryPlanningResponse {
      */
     
     public Object invalidInputException;
+
     public StartQueryPlanningResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -49,6 +54,7 @@ public class StartQueryPlanningResponse {
      */
     
     public org.openapis.openapi.models.shared.StartQueryPlanningResponse startQueryPlanningResponse;
+
     public StartQueryPlanningResponse withStartQueryPlanningResponse(org.openapis.openapi.models.shared.StartQueryPlanningResponse startQueryPlanningResponse) {
         this.startQueryPlanningResponse = startQueryPlanningResponse;
         return this;
@@ -56,6 +62,7 @@ public class StartQueryPlanningResponse {
     
     
     public Integer statusCode;
+
     public StartQueryPlanningResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class StartQueryPlanningResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public StartQueryPlanningResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class StartQueryPlanningResponse {
      */
     
     public Object throttledException;
+
     public StartQueryPlanningResponse withThrottledException(Object throttledException) {
         this.throttledException = throttledException;
         return this;
     }
     
+    public StartQueryPlanningResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

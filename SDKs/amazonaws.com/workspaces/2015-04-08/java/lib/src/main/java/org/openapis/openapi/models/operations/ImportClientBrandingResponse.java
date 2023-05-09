@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportClientBrandingResponse {
@@ -12,6 +13,7 @@ public class ImportClientBrandingResponse {
      */
     
     public Object accessDeniedException;
+
     public ImportClientBrandingResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ImportClientBrandingResponse {
     
     
     public String contentType;
+
     public ImportClientBrandingResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ImportClientBrandingResponse {
      */
     
     public org.openapis.openapi.models.shared.ImportClientBrandingResult importClientBrandingResult;
+
     public ImportClientBrandingResponse withImportClientBrandingResult(org.openapis.openapi.models.shared.ImportClientBrandingResult importClientBrandingResult) {
         this.importClientBrandingResult = importClientBrandingResult;
         return this;
@@ -39,6 +43,7 @@ public class ImportClientBrandingResponse {
      */
     
     public Object invalidParameterValuesException;
+
     public ImportClientBrandingResponse withInvalidParameterValuesException(Object invalidParameterValuesException) {
         this.invalidParameterValuesException = invalidParameterValuesException;
         return this;
@@ -49,6 +54,7 @@ public class ImportClientBrandingResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ImportClientBrandingResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class ImportClientBrandingResponse {
     
     
     public Integer statusCode;
+
     public ImportClientBrandingResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ImportClientBrandingResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportClientBrandingResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class ImportClientBrandingResponse {
      */
     
     public Object resourceLimitExceededException;
+
     public ImportClientBrandingResponse withResourceLimitExceededException(Object resourceLimitExceededException) {
         this.resourceLimitExceededException = resourceLimitExceededException;
         return this;
     }
     
+    public ImportClientBrandingResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

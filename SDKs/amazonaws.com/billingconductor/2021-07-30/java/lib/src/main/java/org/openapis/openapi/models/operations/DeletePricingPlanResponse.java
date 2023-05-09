@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeletePricingPlanResponse {
@@ -12,6 +13,7 @@ public class DeletePricingPlanResponse {
      */
     
     public Object accessDeniedException;
+
     public DeletePricingPlanResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeletePricingPlanResponse {
      */
     
     public Object conflictException;
+
     public DeletePricingPlanResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeletePricingPlanResponse {
     
     
     public String contentType;
+
     public DeletePricingPlanResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeletePricingPlanResponse {
      */
     
     public org.openapis.openapi.models.shared.DeletePricingPlanOutput deletePricingPlanOutput;
+
     public DeletePricingPlanResponse withDeletePricingPlanOutput(org.openapis.openapi.models.shared.DeletePricingPlanOutput deletePricingPlanOutput) {
         this.deletePricingPlanOutput = deletePricingPlanOutput;
         return this;
@@ -49,6 +54,7 @@ public class DeletePricingPlanResponse {
      */
     
     public Object internalServerException;
+
     public DeletePricingPlanResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DeletePricingPlanResponse {
     
     
     public Integer statusCode;
+
     public DeletePricingPlanResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeletePricingPlanResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeletePricingPlanResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeletePricingPlanResponse {
      */
     
     public Object throttlingException;
+
     public DeletePricingPlanResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeletePricingPlanResponse {
      */
     
     public Object validationException;
+
     public DeletePricingPlanResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeletePricingPlanResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

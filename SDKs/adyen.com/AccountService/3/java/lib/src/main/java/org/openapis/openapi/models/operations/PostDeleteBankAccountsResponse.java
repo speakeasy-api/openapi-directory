@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PostDeleteBankAccountsResponse {
     
     public String contentType;
+
     public PostDeleteBankAccountsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PostDeleteBankAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.GenericResponse genericResponse;
+
     public PostDeleteBankAccountsResponse withGenericResponse(org.openapis.openapi.models.shared.GenericResponse genericResponse) {
         this.genericResponse = genericResponse;
         return this;
@@ -29,6 +32,7 @@ public class PostDeleteBankAccountsResponse {
      */
     
     public org.openapis.openapi.models.shared.ServiceError serviceError;
+
     public PostDeleteBankAccountsResponse withServiceError(org.openapis.openapi.models.shared.ServiceError serviceError) {
         this.serviceError = serviceError;
         return this;
@@ -36,6 +40,7 @@ public class PostDeleteBankAccountsResponse {
     
     
     public Integer statusCode;
+
     public PostDeleteBankAccountsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class PostDeleteBankAccountsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PostDeleteBankAccountsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PostDeleteBankAccountsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

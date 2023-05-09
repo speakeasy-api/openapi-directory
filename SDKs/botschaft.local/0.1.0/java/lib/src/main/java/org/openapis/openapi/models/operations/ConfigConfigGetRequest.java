@@ -9,9 +9,11 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ConfigConfigGetRequest {
     @SpeakeasyMetadata("header:style=simple,explode=false,name=authorization")
     public String authorization;
+
     public ConfigConfigGetRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
     }
     
+    public ConfigConfigGetRequest(){}
 }

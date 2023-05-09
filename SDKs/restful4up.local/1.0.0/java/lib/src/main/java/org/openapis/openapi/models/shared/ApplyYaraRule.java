@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ApplyYaraRule {
     /**
@@ -12,6 +12,7 @@ public class ApplyYaraRule {
      */
     
     public String errorMessage;
+
     public ApplyYaraRule withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -22,6 +23,7 @@ public class ApplyYaraRule {
      */
     
     public Boolean isSuccess;
+
     public ApplyYaraRule withIsSuccess(Boolean isSuccess) {
         this.isSuccess = isSuccess;
         return this;
@@ -32,6 +34,7 @@ public class ApplyYaraRule {
      */
     
     public ApplyYaraRuleMatchedYaraRules[][] matchedYaraRules;
+
     public ApplyYaraRule withMatchedYaraRules(ApplyYaraRuleMatchedYaraRules[][] matchedYaraRules) {
         this.matchedYaraRules = matchedYaraRules;
         return this;
@@ -42,9 +45,14 @@ public class ApplyYaraRule {
      */
     
     public String yaraCommand;
+
     public ApplyYaraRule withYaraCommand(String yaraCommand) {
         this.yaraCommand = yaraCommand;
         return this;
     }
     
+    public ApplyYaraRule(@JsonProperty("is_success") Boolean isSuccess, @JsonProperty("yara_command") String yaraCommand) {
+        this.isSuccess = isSuccess;
+        this.yaraCommand = yaraCommand;
+  }
 }

@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RscerResponse {
     
     public String contentType;
+
     public RscerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RscerResponse {
     
     
     public Integer statusCode;
+
     public RscerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RscerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RscerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RscerResponse {
      */
     
     public Rscer400ApplicationJSON rscer400ApplicationJSONObject;
+
     public RscerResponse withRscer400ApplicationJSONObject(Rscer400ApplicationJSON rscer400ApplicationJSONObject) {
         this.rscer400ApplicationJSONObject = rscer400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RscerResponse {
      */
     
     public Rscer401ApplicationJSON rscer401ApplicationJSONObject;
+
     public RscerResponse withRscer401ApplicationJSONObject(Rscer401ApplicationJSON rscer401ApplicationJSONObject) {
         this.rscer401ApplicationJSONObject = rscer401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RscerResponse {
      */
     
     public Rscer404ApplicationJSON rscer404ApplicationJSONObject;
+
     public RscerResponse withRscer404ApplicationJSONObject(Rscer404ApplicationJSON rscer404ApplicationJSONObject) {
         this.rscer404ApplicationJSONObject = rscer404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RscerResponse {
      */
     
     public Rscer500ApplicationJSON rscer500ApplicationJSONObject;
+
     public RscerResponse withRscer500ApplicationJSONObject(Rscer500ApplicationJSON rscer500ApplicationJSONObject) {
         this.rscer500ApplicationJSONObject = rscer500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RscerResponse {
      */
     
     public Rscer502ApplicationJSON rscer502ApplicationJSONObject;
+
     public RscerResponse withRscer502ApplicationJSONObject(Rscer502ApplicationJSON rscer502ApplicationJSONObject) {
         this.rscer502ApplicationJSONObject = rscer502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RscerResponse {
      */
     
     public Rscer503ApplicationJSON rscer503ApplicationJSONObject;
+
     public RscerResponse withRscer503ApplicationJSONObject(Rscer503ApplicationJSON rscer503ApplicationJSONObject) {
         this.rscer503ApplicationJSONObject = rscer503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RscerResponse {
      */
     
     public Rscer504ApplicationJSON rscer504ApplicationJSONObject;
+
     public RscerResponse withRscer504ApplicationJSONObject(Rscer504ApplicationJSON rscer504ApplicationJSONObject) {
         this.rscer504ApplicationJSONObject = rscer504ApplicationJSONObject;
         return this;
     }
     
+    public RscerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

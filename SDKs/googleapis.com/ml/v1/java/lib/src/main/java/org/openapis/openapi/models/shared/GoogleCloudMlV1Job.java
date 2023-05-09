@@ -18,6 +18,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("createTime")
     public String createTime;
+
     public GoogleCloudMlV1Job withCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("endTime")
     public String endTime;
+
     public GoogleCloudMlV1Job withEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errorMessage")
     public String errorMessage;
+
     public GoogleCloudMlV1Job withErrorMessage(String errorMessage) {
         this.errorMessage = errorMessage;
         return this;
@@ -51,6 +54,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public GoogleCloudMlV1Job withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -62,6 +66,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobId")
     public String jobId;
+
     public GoogleCloudMlV1Job withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -73,6 +78,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobPosition")
     public String jobPosition;
+
     public GoogleCloudMlV1Job withJobPosition(String jobPosition) {
         this.jobPosition = jobPosition;
         return this;
@@ -84,6 +90,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GoogleCloudMlV1Job withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -95,6 +102,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionInput")
     public GoogleCloudMlV1PredictionInput predictionInput;
+
     public GoogleCloudMlV1Job withPredictionInput(GoogleCloudMlV1PredictionInput predictionInput) {
         this.predictionInput = predictionInput;
         return this;
@@ -106,6 +114,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("predictionOutput")
     public GoogleCloudMlV1PredictionOutput predictionOutput;
+
     public GoogleCloudMlV1Job withPredictionOutput(GoogleCloudMlV1PredictionOutput predictionOutput) {
         this.predictionOutput = predictionOutput;
         return this;
@@ -117,6 +126,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("startTime")
     public String startTime;
+
     public GoogleCloudMlV1Job withStartTime(String startTime) {
         this.startTime = startTime;
         return this;
@@ -128,6 +138,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public GoogleCloudMlV1JobStateEnum state;
+
     public GoogleCloudMlV1Job withState(GoogleCloudMlV1JobStateEnum state) {
         this.state = state;
         return this;
@@ -139,6 +150,7 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingInput")
     public GoogleCloudMlV1TrainingInput trainingInput;
+
     public GoogleCloudMlV1Job withTrainingInput(GoogleCloudMlV1TrainingInput trainingInput) {
         this.trainingInput = trainingInput;
         return this;
@@ -150,9 +162,11 @@ public class GoogleCloudMlV1Job {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("trainingOutput")
     public GoogleCloudMlV1TrainingOutput trainingOutput;
+
     public GoogleCloudMlV1Job withTrainingOutput(GoogleCloudMlV1TrainingOutput trainingOutput) {
         this.trainingOutput = trainingOutput;
         return this;
     }
     
+    public GoogleCloudMlV1Job(){}
 }

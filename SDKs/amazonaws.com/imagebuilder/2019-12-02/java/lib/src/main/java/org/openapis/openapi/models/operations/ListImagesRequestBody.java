@@ -15,6 +15,7 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("byName")
     public Boolean byName;
+
     public ListImagesRequestBody withByName(Boolean byName) {
         this.byName = byName;
         return this;
@@ -26,6 +27,7 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("filters")
     public org.openapis.openapi.models.shared.Filter[] filters;
+
     public ListImagesRequestBody withFilters(org.openapis.openapi.models.shared.Filter[] filters) {
         this.filters = filters;
         return this;
@@ -37,6 +39,7 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includeDeprecated")
     public Boolean includeDeprecated;
+
     public ListImagesRequestBody withIncludeDeprecated(Boolean includeDeprecated) {
         this.includeDeprecated = includeDeprecated;
         return this;
@@ -48,6 +51,7 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxResults")
     public Long maxResults;
+
     public ListImagesRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -59,6 +63,7 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListImagesRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -70,9 +75,11 @@ public class ListImagesRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("owner")
     public ListImagesRequestBodyOwnerEnum owner;
+
     public ListImagesRequestBody withOwner(ListImagesRequestBodyOwnerEnum owner) {
         this.owner = owner;
         return this;
     }
     
+    public ListImagesRequestBody(){}
 }

@@ -18,6 +18,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("flatten")
     public FlattenInstruction flatten;
+
     public ParallelInstruction withFlatten(FlattenInstruction flatten) {
         this.flatten = flatten;
         return this;
@@ -29,6 +30,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ParallelInstruction withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("originalName")
     public String originalName;
+
     public ParallelInstruction withOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
@@ -51,6 +54,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outputs")
     public InstructionOutput[] outputs;
+
     public ParallelInstruction withOutputs(InstructionOutput[] outputs) {
         this.outputs = outputs;
         return this;
@@ -62,6 +66,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parDo")
     public ParDoInstruction parDo;
+
     public ParallelInstruction withParDo(ParDoInstruction parDo) {
         this.parDo = parDo;
         return this;
@@ -73,6 +78,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("partialGroupByKey")
     public PartialGroupByKeyInstruction partialGroupByKey;
+
     public ParallelInstruction withPartialGroupByKey(PartialGroupByKeyInstruction partialGroupByKey) {
         this.partialGroupByKey = partialGroupByKey;
         return this;
@@ -84,6 +90,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("read")
     public ReadInstruction read;
+
     public ParallelInstruction withRead(ReadInstruction read) {
         this.read = read;
         return this;
@@ -95,6 +102,7 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("systemName")
     public String systemName;
+
     public ParallelInstruction withSystemName(String systemName) {
         this.systemName = systemName;
         return this;
@@ -106,9 +114,11 @@ public class ParallelInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("write")
     public WriteInstruction write;
+
     public ParallelInstruction withWrite(WriteInstruction write) {
         this.write = write;
         return this;
     }
     
+    public ParallelInstruction(){}
 }

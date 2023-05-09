@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutSandboxSecurity {
     @SpeakeasyMetadata("security:scheme=true,type=oauth2,name=Authorization")
     public String authorizationCodeToken;
+
     public PutSandboxSecurity withAuthorizationCodeToken(String authorizationCodeToken) {
         this.authorizationCodeToken = authorizationCodeToken;
         return this;
@@ -16,9 +18,14 @@ public class PutSandboxSecurity {
     
     @SpeakeasyMetadata("security:scheme=true,type=apiKey,subtype=header,name=Client-Id")
     public String clientId;
+
     public PutSandboxSecurity withClientId(String clientId) {
         this.clientId = clientId;
         return this;
     }
     
+    public PutSandboxSecurity(@JsonProperty("Authorization-Code-Token") String authorizationCodeToken, @JsonProperty("Client-Id") String clientId) {
+        this.authorizationCodeToken = authorizationCodeToken;
+        this.clientId = clientId;
+  }
 }

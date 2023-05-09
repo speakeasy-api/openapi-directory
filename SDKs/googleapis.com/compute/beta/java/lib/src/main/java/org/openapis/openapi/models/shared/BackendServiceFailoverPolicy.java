@@ -18,6 +18,7 @@ public class BackendServiceFailoverPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableConnectionDrainOnFailover")
     public Boolean disableConnectionDrainOnFailover;
+
     public BackendServiceFailoverPolicy withDisableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         return this;
@@ -29,6 +30,7 @@ public class BackendServiceFailoverPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dropTrafficIfUnhealthy")
     public Boolean dropTrafficIfUnhealthy;
+
     public BackendServiceFailoverPolicy withDropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         return this;
@@ -40,9 +42,11 @@ public class BackendServiceFailoverPolicy {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("failoverRatio")
     public Float failoverRatio;
+
     public BackendServiceFailoverPolicy withFailoverRatio(Float failoverRatio) {
         this.failoverRatio = failoverRatio;
         return this;
     }
     
+    public BackendServiceFailoverPolicy(){}
 }

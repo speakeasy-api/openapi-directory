@@ -15,6 +15,7 @@ public class ListTaskDefinitionFamiliesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("families")
     public String[] families;
+
     public ListTaskDefinitionFamiliesResponse withFamilies(String[] families) {
         this.families = families;
         return this;
@@ -23,9 +24,11 @@ public class ListTaskDefinitionFamiliesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListTaskDefinitionFamiliesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public ListTaskDefinitionFamiliesResponse(){}
 }

@@ -15,6 +15,7 @@ public class StoredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public StoredQuery withDescription(String description) {
         this.description = description;
         return this;
@@ -23,6 +24,7 @@ public class StoredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Expression")
     public String expression;
+
     public StoredQuery withExpression(String expression) {
         this.expression = expression;
         return this;
@@ -31,6 +33,7 @@ public class StoredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryArn")
     public String queryArn;
+
     public StoredQuery withQueryArn(String queryArn) {
         this.queryArn = queryArn;
         return this;
@@ -39,6 +42,7 @@ public class StoredQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("QueryId")
     public String queryId;
+
     public StoredQuery withQueryId(String queryId) {
         this.queryId = queryId;
         return this;
@@ -46,9 +50,13 @@ public class StoredQuery {
     
     @JsonProperty("QueryName")
     public String queryName;
+
     public StoredQuery withQueryName(String queryName) {
         this.queryName = queryName;
         return this;
     }
     
+    public StoredQuery(@JsonProperty("QueryName") String queryName) {
+        this.queryName = queryName;
+  }
 }

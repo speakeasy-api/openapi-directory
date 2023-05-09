@@ -16,6 +16,7 @@ public class SentimentPredictRequest {
     @JsonProperty("document")
     @SpeakeasyMetadata("multipartForm:name=document")
     public String document;
+
     public SentimentPredictRequest withDocument(String document) {
         this.document = document;
         return this;
@@ -27,6 +28,7 @@ public class SentimentPredictRequest {
     @JsonProperty("modelId")
     @SpeakeasyMetadata("multipartForm:name=modelId")
     public String modelId;
+
     public SentimentPredictRequest withModelId(String modelId) {
         this.modelId = modelId;
         return this;
@@ -39,6 +41,7 @@ public class SentimentPredictRequest {
     @JsonProperty("numResults")
     @SpeakeasyMetadata("multipartForm:name=numResults")
     public Integer numResults;
+
     public SentimentPredictRequest withNumResults(Integer numResults) {
         this.numResults = numResults;
         return this;
@@ -51,9 +54,14 @@ public class SentimentPredictRequest {
     @JsonProperty("sampleId")
     @SpeakeasyMetadata("multipartForm:name=sampleId")
     public String sampleId;
+
     public SentimentPredictRequest withSampleId(String sampleId) {
         this.sampleId = sampleId;
         return this;
     }
     
+    public SentimentPredictRequest(@JsonProperty("document") String document, @JsonProperty("modelId") String modelId) {
+        this.document = document;
+        this.modelId = modelId;
+  }
 }

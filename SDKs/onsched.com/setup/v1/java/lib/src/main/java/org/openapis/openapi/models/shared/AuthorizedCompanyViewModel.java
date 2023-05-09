@@ -12,6 +12,7 @@ public class AuthorizedCompanyViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public AuthorizedCompanyViewModel withId(String id) {
         this.id = id;
         return this;
@@ -20,6 +21,7 @@ public class AuthorizedCompanyViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public AuthorizedCompanyViewModel withName(String name) {
         this.name = name;
         return this;
@@ -28,9 +30,11 @@ public class AuthorizedCompanyViewModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("object")
     public String object;
+
     public AuthorizedCompanyViewModel withObject(String object) {
         this.object = object;
         return this;
     }
     
+    public AuthorizedCompanyViewModel(){}
 }

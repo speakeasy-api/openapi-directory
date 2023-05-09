@@ -15,9 +15,11 @@ public class CancelProjectRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reason")
     public String reason;
+
     public CancelProjectRequest withReason(String reason) {
         this.reason = reason;
         return this;
     }
     
+    public CancelProjectRequest(){}
 }

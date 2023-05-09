@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class BooksMyconfigReleaseDownloadAccessResponse {
     
     public String contentType;
+
     public BooksMyconfigReleaseDownloadAccessResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class BooksMyconfigReleaseDownloadAccessResponse {
      */
     
     public org.openapis.openapi.models.shared.DownloadAccesses downloadAccesses;
+
     public BooksMyconfigReleaseDownloadAccessResponse withDownloadAccesses(org.openapis.openapi.models.shared.DownloadAccesses downloadAccesses) {
         this.downloadAccesses = downloadAccesses;
         return this;
@@ -26,6 +29,7 @@ public class BooksMyconfigReleaseDownloadAccessResponse {
     
     
     public Integer statusCode;
+
     public BooksMyconfigReleaseDownloadAccessResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class BooksMyconfigReleaseDownloadAccessResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public BooksMyconfigReleaseDownloadAccessResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public BooksMyconfigReleaseDownloadAccessResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

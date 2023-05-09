@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateCustomRoutingAcceleratorResponse {
@@ -12,6 +13,7 @@ public class CreateCustomRoutingAcceleratorResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateCustomRoutingAcceleratorResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateCustomRoutingAcceleratorResponse {
     
     
     public String contentType;
+
     public CreateCustomRoutingAcceleratorResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateCustomRoutingAcceleratorResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorResponse createCustomRoutingAcceleratorResponse;
+
     public CreateCustomRoutingAcceleratorResponse withCreateCustomRoutingAcceleratorResponse(org.openapis.openapi.models.shared.CreateCustomRoutingAcceleratorResponse createCustomRoutingAcceleratorResponse) {
         this.createCustomRoutingAcceleratorResponse = createCustomRoutingAcceleratorResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateCustomRoutingAcceleratorResponse {
      */
     
     public Object internalServiceErrorException;
+
     public CreateCustomRoutingAcceleratorResponse withInternalServiceErrorException(Object internalServiceErrorException) {
         this.internalServiceErrorException = internalServiceErrorException;
         return this;
@@ -49,6 +54,7 @@ public class CreateCustomRoutingAcceleratorResponse {
      */
     
     public Object invalidArgumentException;
+
     public CreateCustomRoutingAcceleratorResponse withInvalidArgumentException(Object invalidArgumentException) {
         this.invalidArgumentException = invalidArgumentException;
         return this;
@@ -59,6 +65,7 @@ public class CreateCustomRoutingAcceleratorResponse {
      */
     
     public Object limitExceededException;
+
     public CreateCustomRoutingAcceleratorResponse withLimitExceededException(Object limitExceededException) {
         this.limitExceededException = limitExceededException;
         return this;
@@ -66,6 +73,7 @@ public class CreateCustomRoutingAcceleratorResponse {
     
     
     public Integer statusCode;
+
     public CreateCustomRoutingAcceleratorResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class CreateCustomRoutingAcceleratorResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateCustomRoutingAcceleratorResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public CreateCustomRoutingAcceleratorResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class StationGenre {
     
     public String name;
+
     public StationGenre withName(String name) {
         this.name = name;
         return this;
     }
     
+    public StationGenre(){}
 }

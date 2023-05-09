@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class AddTagsInput {
     @JsonProperty("ResourceId")
     public String resourceId;
+
     public AddTagsInput withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
@@ -16,6 +17,7 @@ public class AddTagsInput {
     
     @JsonProperty("ResourceType")
     public TaggableResourceTypeEnum resourceType;
+
     public AddTagsInput withResourceType(TaggableResourceTypeEnum resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -23,9 +25,15 @@ public class AddTagsInput {
     
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public AddTagsInput withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public AddTagsInput(@JsonProperty("ResourceId") String resourceId, @JsonProperty("ResourceType") TaggableResourceTypeEnum resourceType, @JsonProperty("Tags") Tag[] tags) {
+        this.resourceId = resourceId;
+        this.resourceType = resourceType;
+        this.tags = tags;
+  }
 }

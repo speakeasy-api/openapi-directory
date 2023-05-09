@@ -17,6 +17,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class PageBuild {
     @JsonProperty("commit")
     public String commit;
+
     public PageBuild withCommit(String commit) {
         this.commit = commit;
         return this;
@@ -26,6 +27,7 @@ public class PageBuild {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public PageBuild withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -33,6 +35,7 @@ public class PageBuild {
     
     @JsonProperty("duration")
     public Long duration;
+
     public PageBuild withDuration(Long duration) {
         this.duration = duration;
         return this;
@@ -40,6 +43,7 @@ public class PageBuild {
     
     @JsonProperty("error")
     public PageBuildError error;
+
     public PageBuild withError(PageBuildError error) {
         this.error = error;
         return this;
@@ -50,6 +54,7 @@ public class PageBuild {
      */
     @JsonProperty("pusher")
     public NullableSimpleUser pusher;
+
     public PageBuild withPusher(NullableSimpleUser pusher) {
         this.pusher = pusher;
         return this;
@@ -57,6 +62,7 @@ public class PageBuild {
     
     @JsonProperty("status")
     public String status;
+
     public PageBuild withStatus(String status) {
         this.status = status;
         return this;
@@ -66,6 +72,7 @@ public class PageBuild {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updated_at")
     public OffsetDateTime updatedAt;
+
     public PageBuild withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -73,9 +80,20 @@ public class PageBuild {
     
     @JsonProperty("url")
     public String url;
+
     public PageBuild withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public PageBuild(@JsonProperty("commit") String commit, @JsonProperty("created_at") OffsetDateTime createdAt, @JsonProperty("duration") Long duration, @JsonProperty("error") PageBuildError error, @JsonProperty("pusher") NullableSimpleUser pusher, @JsonProperty("status") String status, @JsonProperty("updated_at") OffsetDateTime updatedAt, @JsonProperty("url") String url) {
+        this.commit = commit;
+        this.createdAt = createdAt;
+        this.duration = duration;
+        this.error = error;
+        this.pusher = pusher;
+        this.status = status;
+        this.updatedAt = updatedAt;
+        this.url = url;
+  }
 }

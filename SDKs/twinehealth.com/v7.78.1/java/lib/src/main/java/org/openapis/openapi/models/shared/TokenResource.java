@@ -12,6 +12,7 @@ public class TokenResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("attributes")
     public TokenResourceAttributes attributes;
+
     public TokenResource withAttributes(TokenResourceAttributes attributes) {
         this.attributes = attributes;
         return this;
@@ -19,6 +20,7 @@ public class TokenResource {
     
     @JsonProperty("id")
     public String id;
+
     public TokenResource withId(String id) {
         this.id = id;
         return this;
@@ -27,6 +29,7 @@ public class TokenResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relationships")
     public TokenResourceRelationships relationships;
+
     public TokenResource withRelationships(TokenResourceRelationships relationships) {
         this.relationships = relationships;
         return this;
@@ -34,9 +37,14 @@ public class TokenResource {
     
     @JsonProperty("type")
     public TokenResourceTypeEnum type;
+
     public TokenResource withType(TokenResourceTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public TokenResource(@JsonProperty("id") String id, @JsonProperty("type") TokenResourceTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

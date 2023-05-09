@@ -15,6 +15,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Code")
     public String code;
+
     public Getglobalnumberinfo200ApplicationJSON withCode(String code) {
         this.code = code;
         return this;
@@ -23,6 +24,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Country")
     public String country;
+
     public Getglobalnumberinfo200ApplicationJSON withCountry(String country) {
         this.country = country;
         return this;
@@ -31,6 +33,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Credits")
     public String credits;
+
     public Getglobalnumberinfo200ApplicationJSON withCredits(String credits) {
         this.credits = credits;
         return this;
@@ -39,6 +42,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language2")
     public String language2;
+
     public Getglobalnumberinfo200ApplicationJSON withLanguage2(String language2) {
         this.language2 = language2;
         return this;
@@ -47,6 +51,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Language3")
     public String language3;
+
     public Getglobalnumberinfo200ApplicationJSON withLanguage3(String language3) {
         this.language3 = language3;
         return this;
@@ -55,6 +60,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Mobile")
     public String mobile;
+
     public Getglobalnumberinfo200ApplicationJSON withMobile(String mobile) {
         this.mobile = mobile;
         return this;
@@ -63,6 +69,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryCity")
     public String primaryCity;
+
     public Getglobalnumberinfo200ApplicationJSON withPrimaryCity(String primaryCity) {
         this.primaryCity = primaryCity;
         return this;
@@ -71,6 +78,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PrimaryLanguage")
     public String primaryLanguage;
+
     public Getglobalnumberinfo200ApplicationJSON withPrimaryLanguage(String primaryLanguage) {
         this.primaryLanguage = primaryLanguage;
         return this;
@@ -79,6 +87,7 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Region")
     public String region;
+
     public Getglobalnumberinfo200ApplicationJSON withRegion(String region) {
         this.region = region;
         return this;
@@ -87,9 +96,11 @@ public class Getglobalnumberinfo200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Wealth")
     public String wealth;
+
     public Getglobalnumberinfo200ApplicationJSON withWealth(String wealth) {
         this.wealth = wealth;
         return this;
     }
     
+    public Getglobalnumberinfo200ApplicationJSON(){}
 }

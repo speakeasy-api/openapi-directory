@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetFilesRequest {
@@ -12,6 +13,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page")
     public Long page;
+
     public GetFilesRequest withPage(Long page) {
         this.page = page;
         return this;
@@ -22,6 +24,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pagesize")
     public Long pagesize;
+
     public GetFilesRequest withPagesize(Long pagesize) {
         this.pagesize = pagesize;
         return this;
@@ -32,6 +35,7 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
     public GetFilesSortEnum sort;
+
     public GetFilesRequest withSort(GetFilesSortEnum sort) {
         this.sort = sort;
         return this;
@@ -42,9 +46,13 @@ public class GetFilesRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=xero-tenant-id")
     public String xeroTenantId;
+
     public GetFilesRequest withXeroTenantId(String xeroTenantId) {
         this.xeroTenantId = xeroTenantId;
         return this;
     }
     
+    public GetFilesRequest(@JsonProperty("xero-tenant-id") String xeroTenantId) {
+        this.xeroTenantId = xeroTenantId;
+  }
 }

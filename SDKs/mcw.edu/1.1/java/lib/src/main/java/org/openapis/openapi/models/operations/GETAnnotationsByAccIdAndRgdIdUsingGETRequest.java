@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETAnnotationsByAccIdAndRgdIdUsingGETRequest {
@@ -12,6 +13,7 @@ public class GETAnnotationsByAccIdAndRgdIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accId")
     public String accId;
+
     public GETAnnotationsByAccIdAndRgdIdUsingGETRequest withAccId(String accId) {
         this.accId = accId;
         return this;
@@ -22,9 +24,14 @@ public class GETAnnotationsByAccIdAndRgdIdUsingGETRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=rgdId")
     public Integer rgdId;
+
     public GETAnnotationsByAccIdAndRgdIdUsingGETRequest withRgdId(Integer rgdId) {
         this.rgdId = rgdId;
         return this;
     }
     
+    public GETAnnotationsByAccIdAndRgdIdUsingGETRequest(@JsonProperty("accId") String accId, @JsonProperty("rgdId") Integer rgdId) {
+        this.accId = accId;
+        this.rgdId = rgdId;
+  }
 }

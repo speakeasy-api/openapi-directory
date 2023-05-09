@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class FitcerResponse {
     
     public byte[] body;
+
     public FitcerResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class FitcerResponse {
     
     
     public String contentType;
+
     public FitcerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class FitcerResponse {
     
     
     public Integer statusCode;
+
     public FitcerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class FitcerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public FitcerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class FitcerResponse {
      */
     
     public Fitcer400ApplicationJSON fitcer400ApplicationJSONObject;
+
     public FitcerResponse withFitcer400ApplicationJSONObject(Fitcer400ApplicationJSON fitcer400ApplicationJSONObject) {
         this.fitcer400ApplicationJSONObject = fitcer400ApplicationJSONObject;
         return this;
@@ -50,6 +56,7 @@ public class FitcerResponse {
      */
     
     public Fitcer401ApplicationJSON fitcer401ApplicationJSONObject;
+
     public FitcerResponse withFitcer401ApplicationJSONObject(Fitcer401ApplicationJSON fitcer401ApplicationJSONObject) {
         this.fitcer401ApplicationJSONObject = fitcer401ApplicationJSONObject;
         return this;
@@ -60,6 +67,7 @@ public class FitcerResponse {
      */
     
     public Fitcer404ApplicationJSON fitcer404ApplicationJSONObject;
+
     public FitcerResponse withFitcer404ApplicationJSONObject(Fitcer404ApplicationJSON fitcer404ApplicationJSONObject) {
         this.fitcer404ApplicationJSONObject = fitcer404ApplicationJSONObject;
         return this;
@@ -70,6 +78,7 @@ public class FitcerResponse {
      */
     
     public Fitcer500ApplicationJSON fitcer500ApplicationJSONObject;
+
     public FitcerResponse withFitcer500ApplicationJSONObject(Fitcer500ApplicationJSON fitcer500ApplicationJSONObject) {
         this.fitcer500ApplicationJSONObject = fitcer500ApplicationJSONObject;
         return this;
@@ -80,6 +89,7 @@ public class FitcerResponse {
      */
     
     public Fitcer502ApplicationJSON fitcer502ApplicationJSONObject;
+
     public FitcerResponse withFitcer502ApplicationJSONObject(Fitcer502ApplicationJSON fitcer502ApplicationJSONObject) {
         this.fitcer502ApplicationJSONObject = fitcer502ApplicationJSONObject;
         return this;
@@ -90,6 +100,7 @@ public class FitcerResponse {
      */
     
     public Fitcer503ApplicationJSON fitcer503ApplicationJSONObject;
+
     public FitcerResponse withFitcer503ApplicationJSONObject(Fitcer503ApplicationJSON fitcer503ApplicationJSONObject) {
         this.fitcer503ApplicationJSONObject = fitcer503ApplicationJSONObject;
         return this;
@@ -100,9 +111,14 @@ public class FitcerResponse {
      */
     
     public Fitcer504ApplicationJSON fitcer504ApplicationJSONObject;
+
     public FitcerResponse withFitcer504ApplicationJSONObject(Fitcer504ApplicationJSON fitcer504ApplicationJSONObject) {
         this.fitcer504ApplicationJSONObject = fitcer504ApplicationJSONObject;
         return this;
     }
     
+    public FitcerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

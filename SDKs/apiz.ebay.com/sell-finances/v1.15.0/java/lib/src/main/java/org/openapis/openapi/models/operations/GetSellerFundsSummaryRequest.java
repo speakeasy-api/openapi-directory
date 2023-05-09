@@ -12,9 +12,11 @@ public class GetSellerFundsSummaryRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-EBAY-C-MARKETPLACE-ID")
     public String xEbayCMarketplaceId;
+
     public GetSellerFundsSummaryRequest withXEbayCMarketplaceId(String xEbayCMarketplaceId) {
         this.xEbayCMarketplaceId = xEbayCMarketplaceId;
         return this;
     }
     
+    public GetSellerFundsSummaryRequest(){}
 }

@@ -18,6 +18,7 @@ public class DatabaseDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("databaseType")
     public DatabaseDumpDatabaseTypeEnum databaseType;
+
     public DatabaseDump withDatabaseType(DatabaseDumpDatabaseTypeEnum databaseType) {
         this.databaseType = databaseType;
         return this;
@@ -29,6 +30,7 @@ public class DatabaseDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public DatabaseDump withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
@@ -40,6 +42,7 @@ public class DatabaseDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceDatabase")
     public String sourceDatabase;
+
     public DatabaseDump withSourceDatabase(String sourceDatabase) {
         this.sourceDatabase = sourceDatabase;
         return this;
@@ -51,9 +54,11 @@ public class DatabaseDump {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public DatabaseDumpTypeEnum type;
+
     public DatabaseDump withType(DatabaseDumpTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DatabaseDump(){}
 }

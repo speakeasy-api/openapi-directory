@@ -15,9 +15,11 @@ public class DescribeDatasetImportJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("datasetImportJob")
     public DatasetImportJob datasetImportJob;
+
     public DescribeDatasetImportJobResponse withDatasetImportJob(DatasetImportJob datasetImportJob) {
         this.datasetImportJob = datasetImportJob;
         return this;
     }
     
+    public DescribeDatasetImportJobResponse(){}
 }

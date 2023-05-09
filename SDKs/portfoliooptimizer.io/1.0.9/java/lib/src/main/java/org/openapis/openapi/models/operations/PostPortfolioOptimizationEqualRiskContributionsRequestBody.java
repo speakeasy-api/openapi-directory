@@ -14,6 +14,7 @@ public class PostPortfolioOptimizationEqualRiskContributionsRequestBody {
      */
     @JsonProperty("assets")
     public Long assets;
+
     public PostPortfolioOptimizationEqualRiskContributionsRequestBody withAssets(Long assets) {
         this.assets = assets;
         return this;
@@ -24,6 +25,7 @@ public class PostPortfolioOptimizationEqualRiskContributionsRequestBody {
      */
     @JsonProperty("assetsCovarianceMatrix")
     public Double[][] assetsCovarianceMatrix;
+
     public PostPortfolioOptimizationEqualRiskContributionsRequestBody withAssetsCovarianceMatrix(Double[][] assetsCovarianceMatrix) {
         this.assetsCovarianceMatrix = assetsCovarianceMatrix;
         return this;
@@ -32,9 +34,14 @@ public class PostPortfolioOptimizationEqualRiskContributionsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("constraints")
     public PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints constraints;
+
     public PostPortfolioOptimizationEqualRiskContributionsRequestBody withConstraints(PostPortfolioOptimizationEqualRiskContributionsRequestBodyConstraints constraints) {
         this.constraints = constraints;
         return this;
     }
     
+    public PostPortfolioOptimizationEqualRiskContributionsRequestBody(@JsonProperty("assets") Long assets, @JsonProperty("assetsCovarianceMatrix") Double[][] assetsCovarianceMatrix) {
+        this.assets = assets;
+        this.assetsCovarianceMatrix = assetsCovarianceMatrix;
+  }
 }

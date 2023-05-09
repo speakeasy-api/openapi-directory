@@ -15,9 +15,11 @@ public class CreatePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineArn")
     public String pipelineArn;
+
     public CreatePipelineResponse withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
     }
     
+    public CreatePipelineResponse(){}
 }

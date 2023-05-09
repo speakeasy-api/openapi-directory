@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RespondActivityTaskCompletedResponse {
     
     public String contentType;
+
     public RespondActivityTaskCompletedResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class RespondActivityTaskCompletedResponse {
      */
     
     public Object operationNotPermittedFault;
+
     public RespondActivityTaskCompletedResponse withOperationNotPermittedFault(Object operationNotPermittedFault) {
         this.operationNotPermittedFault = operationNotPermittedFault;
         return this;
@@ -26,6 +29,7 @@ public class RespondActivityTaskCompletedResponse {
     
     
     public Integer statusCode;
+
     public RespondActivityTaskCompletedResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,6 +37,7 @@ public class RespondActivityTaskCompletedResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RespondActivityTaskCompletedResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -43,9 +48,14 @@ public class RespondActivityTaskCompletedResponse {
      */
     
     public Object unknownResourceFault;
+
     public RespondActivityTaskCompletedResponse withUnknownResourceFault(Object unknownResourceFault) {
         this.unknownResourceFault = unknownResourceFault;
         return this;
     }
     
+    public RespondActivityTaskCompletedResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

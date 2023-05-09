@@ -15,6 +15,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Error {
     @JsonProperty("error")
     public String error;
+
     public Error withError(String error) {
         this.error = error;
         return this;
@@ -23,9 +24,13 @@ public class Error {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error_description")
     public String errorDescription;
+
     public Error withErrorDescription(String errorDescription) {
         this.errorDescription = errorDescription;
         return this;
     }
     
+    public Error(@JsonProperty("error") String error) {
+        this.error = error;
+  }
 }

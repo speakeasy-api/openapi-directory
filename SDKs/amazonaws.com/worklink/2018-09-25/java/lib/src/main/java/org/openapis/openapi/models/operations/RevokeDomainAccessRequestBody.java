@@ -12,6 +12,7 @@ public class RevokeDomainAccessRequestBody {
      */
     @JsonProperty("DomainName")
     public String domainName;
+
     public RevokeDomainAccessRequestBody withDomainName(String domainName) {
         this.domainName = domainName;
         return this;
@@ -22,9 +23,14 @@ public class RevokeDomainAccessRequestBody {
      */
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public RevokeDomainAccessRequestBody withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
     }
     
+    public RevokeDomainAccessRequestBody(@JsonProperty("DomainName") String domainName, @JsonProperty("FleetArn") String fleetArn) {
+        this.domainName = domainName;
+        this.fleetArn = fleetArn;
+  }
 }

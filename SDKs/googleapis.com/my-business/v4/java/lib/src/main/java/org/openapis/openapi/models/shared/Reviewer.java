@@ -18,6 +18,7 @@ public class Reviewer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public Reviewer withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -29,6 +30,7 @@ public class Reviewer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("isAnonymous")
     public Boolean isAnonymous;
+
     public Reviewer withIsAnonymous(Boolean isAnonymous) {
         this.isAnonymous = isAnonymous;
         return this;
@@ -40,9 +42,11 @@ public class Reviewer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("profilePhotoUrl")
     public String profilePhotoUrl;
+
     public Reviewer withProfilePhotoUrl(String profilePhotoUrl) {
         this.profilePhotoUrl = profilePhotoUrl;
         return this;
     }
     
+    public Reviewer(){}
 }

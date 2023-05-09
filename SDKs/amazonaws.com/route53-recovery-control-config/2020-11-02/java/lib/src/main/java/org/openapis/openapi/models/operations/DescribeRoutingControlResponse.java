@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeRoutingControlResponse {
@@ -12,6 +13,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object accessDeniedException;
+
     public DescribeRoutingControlResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object conflictException;
+
     public DescribeRoutingControlResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DescribeRoutingControlResponse {
     
     
     public String contentType;
+
     public DescribeRoutingControlResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeRoutingControlResponse describeRoutingControlResponse;
+
     public DescribeRoutingControlResponse withDescribeRoutingControlResponse(org.openapis.openapi.models.shared.DescribeRoutingControlResponse describeRoutingControlResponse) {
         this.describeRoutingControlResponse = describeRoutingControlResponse;
         return this;
@@ -49,6 +54,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object internalServerException;
+
     public DescribeRoutingControlResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -56,6 +62,7 @@ public class DescribeRoutingControlResponse {
     
     
     public Integer statusCode;
+
     public DescribeRoutingControlResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DescribeRoutingControlResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeRoutingControlResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeRoutingControlResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,6 +92,7 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object throttlingException;
+
     public DescribeRoutingControlResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class DescribeRoutingControlResponse {
      */
     
     public Object validationException;
+
     public DescribeRoutingControlResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DescribeRoutingControlResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

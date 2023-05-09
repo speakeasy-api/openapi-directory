@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetProductsIdOptionsOptionIdValuesJsonResponse {
     
     public String contentType;
+
     public GetProductsIdOptionsOptionIdValuesJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetProductsIdOptionsOptionIdValuesJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.NotFound notFound;
+
     public GetProductsIdOptionsOptionIdValuesJsonResponse withNotFound(org.openapis.openapi.models.shared.NotFound notFound) {
         this.notFound = notFound;
         return this;
@@ -29,6 +32,7 @@ public class GetProductsIdOptionsOptionIdValuesJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ProductOptionValue[] productOptionValues;
+
     public GetProductsIdOptionsOptionIdValuesJsonResponse withProductOptionValues(org.openapis.openapi.models.shared.ProductOptionValue[] productOptionValues) {
         this.productOptionValues = productOptionValues;
         return this;
@@ -36,6 +40,7 @@ public class GetProductsIdOptionsOptionIdValuesJsonResponse {
     
     
     public Integer statusCode;
+
     public GetProductsIdOptionsOptionIdValuesJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetProductsIdOptionsOptionIdValuesJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetProductsIdOptionsOptionIdValuesJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetProductsIdOptionsOptionIdValuesJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,6 +18,7 @@ public class OutputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DigitalOutputNoConnectionAction")
     public OutputConfigurationContainerDigitalOutputNoConnectionActionEnum digitalOutputNoConnectionAction;
+
     public OutputConfigurationContainer withDigitalOutputNoConnectionAction(OutputConfigurationContainerDigitalOutputNoConnectionActionEnum digitalOutputNoConnectionAction) {
         this.digitalOutputNoConnectionAction = digitalOutputNoConnectionAction;
         return this;
@@ -29,6 +30,7 @@ public class OutputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public OutputConfigurationContainer withName(String name) {
         this.name = name;
         return this;
@@ -40,6 +42,7 @@ public class OutputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Number")
     public Integer number;
+
     public OutputConfigurationContainer withNumber(Integer number) {
         this.number = number;
         return this;
@@ -51,6 +54,7 @@ public class OutputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("S0PulseValue")
     public OutputConfigurationContainerS0PulseValueEnum s0PulseValue;
+
     public OutputConfigurationContainer withS0PulseValue(OutputConfigurationContainerS0PulseValueEnum s0PulseValue) {
         this.s0PulseValue = s0PulseValue;
         return this;
@@ -62,9 +66,11 @@ public class OutputConfigurationContainer {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public OutputConfigurationContainerTypeEnum type;
+
     public OutputConfigurationContainer withType(OutputConfigurationContainerTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public OutputConfigurationContainer(){}
 }

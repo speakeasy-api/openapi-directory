@@ -15,6 +15,7 @@ public class GetDatalakeStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("accountSet")
     public String[] accountSet;
+
     public GetDatalakeStatusRequestBody withAccountSet(String[] accountSet) {
         this.accountSet = accountSet;
         return this;
@@ -26,6 +27,7 @@ public class GetDatalakeStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxAccountResults")
     public Long maxAccountResults;
+
     public GetDatalakeStatusRequestBody withMaxAccountResults(Long maxAccountResults) {
         this.maxAccountResults = maxAccountResults;
         return this;
@@ -37,9 +39,11 @@ public class GetDatalakeStatusRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public GetDatalakeStatusRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     
+    public GetDatalakeStatusRequestBody(){}
 }

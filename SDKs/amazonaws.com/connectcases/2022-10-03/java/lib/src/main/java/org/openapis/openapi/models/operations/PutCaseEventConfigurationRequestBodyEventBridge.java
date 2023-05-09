@@ -15,6 +15,7 @@ public class PutCaseEventConfigurationRequestBodyEventBridge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enabled")
     public Boolean enabled;
+
     public PutCaseEventConfigurationRequestBodyEventBridge withEnabled(Boolean enabled) {
         this.enabled = enabled;
         return this;
@@ -23,9 +24,11 @@ public class PutCaseEventConfigurationRequestBodyEventBridge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("includedData")
     public org.openapis.openapi.models.shared.EventIncludedData includedData;
+
     public PutCaseEventConfigurationRequestBodyEventBridge withIncludedData(org.openapis.openapi.models.shared.EventIncludedData includedData) {
         this.includedData = includedData;
         return this;
     }
     
+    public PutCaseEventConfigurationRequestBodyEventBridge(){}
 }

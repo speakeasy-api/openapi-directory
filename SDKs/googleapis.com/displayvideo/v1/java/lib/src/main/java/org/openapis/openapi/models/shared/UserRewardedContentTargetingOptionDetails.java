@@ -18,9 +18,11 @@ public class UserRewardedContentTargetingOptionDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userRewardedContent")
     public UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum userRewardedContent;
+
     public UserRewardedContentTargetingOptionDetails withUserRewardedContent(UserRewardedContentTargetingOptionDetailsUserRewardedContentEnum userRewardedContent) {
         this.userRewardedContent = userRewardedContent;
         return this;
     }
     
+    public UserRewardedContentTargetingOptionDetails(){}
 }

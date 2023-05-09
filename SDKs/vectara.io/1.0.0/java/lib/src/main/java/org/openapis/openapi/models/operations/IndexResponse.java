@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IndexResponse {
     
     public String contentType;
+
     public IndexResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IndexResponse {
     
     
     public Integer statusCode;
+
     public IndexResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class IndexResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IndexResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class IndexResponse {
      */
     
     public org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus;
+
     public IndexResponse withGooglerpcStatus(org.openapis.openapi.models.shared.GooglerpcStatus googlerpcStatus) {
         this.googlerpcStatus = googlerpcStatus;
         return this;
@@ -43,9 +48,14 @@ public class IndexResponse {
      */
     
     public org.openapis.openapi.models.shared.VectaraIndexDocumentResponse vectaraIndexDocumentResponse;
+
     public IndexResponse withVectaraIndexDocumentResponse(org.openapis.openapi.models.shared.VectaraIndexDocumentResponse vectaraIndexDocumentResponse) {
         this.vectaraIndexDocumentResponse = vectaraIndexDocumentResponse;
         return this;
     }
     
+    public IndexResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

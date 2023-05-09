@@ -12,9 +12,13 @@ public class LpgsvRequestBodyCertificateParameters {
      */
     @JsonProperty("UID")
     public String uid;
+
     public LpgsvRequestBodyCertificateParameters withUid(String uid) {
         this.uid = uid;
         return this;
     }
     
+    public LpgsvRequestBodyCertificateParameters(@JsonProperty("UID") String uid) {
+        this.uid = uid;
+  }
 }

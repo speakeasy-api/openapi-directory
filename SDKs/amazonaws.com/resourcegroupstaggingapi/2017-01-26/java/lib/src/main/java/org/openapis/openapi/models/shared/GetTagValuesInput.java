@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetTagValuesInput {
     @JsonProperty("Key")
     public String key;
+
     public GetTagValuesInput withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,13 @@ public class GetTagValuesInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PaginationToken")
     public String paginationToken;
+
     public GetTagValuesInput withPaginationToken(String paginationToken) {
         this.paginationToken = paginationToken;
         return this;
     }
     
+    public GetTagValuesInput(@JsonProperty("Key") String key) {
+        this.key = key;
+  }
 }

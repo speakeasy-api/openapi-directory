@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DetectorStateDefinition {
     @JsonProperty("stateName")
     public String stateName;
+
     public DetectorStateDefinition withStateName(String stateName) {
         this.stateName = stateName;
         return this;
@@ -19,6 +20,7 @@ public class DetectorStateDefinition {
     
     @JsonProperty("timers")
     public TimerDefinition[] timers;
+
     public DetectorStateDefinition withTimers(TimerDefinition[] timers) {
         this.timers = timers;
         return this;
@@ -26,9 +28,15 @@ public class DetectorStateDefinition {
     
     @JsonProperty("variables")
     public VariableDefinition[] variables;
+
     public DetectorStateDefinition withVariables(VariableDefinition[] variables) {
         this.variables = variables;
         return this;
     }
     
+    public DetectorStateDefinition(@JsonProperty("stateName") String stateName, @JsonProperty("timers") TimerDefinition[] timers, @JsonProperty("variables") VariableDefinition[] variables) {
+        this.stateName = stateName;
+        this.timers = timers;
+        this.variables = variables;
+  }
 }

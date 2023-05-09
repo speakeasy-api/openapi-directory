@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteSecurityConfigResponse {
@@ -12,6 +13,7 @@ public class DeleteSecurityConfigResponse {
      */
     
     public Object conflictException;
+
     public DeleteSecurityConfigResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -19,6 +21,7 @@ public class DeleteSecurityConfigResponse {
     
     
     public String contentType;
+
     public DeleteSecurityConfigResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DeleteSecurityConfigResponse {
      */
     
     public java.util.Map<String, Object> deleteSecurityConfigResponse;
+
     public DeleteSecurityConfigResponse withDeleteSecurityConfigResponse(java.util.Map<String, Object> deleteSecurityConfigResponse) {
         this.deleteSecurityConfigResponse = deleteSecurityConfigResponse;
         return this;
@@ -39,6 +43,7 @@ public class DeleteSecurityConfigResponse {
      */
     
     public Object internalServerException;
+
     public DeleteSecurityConfigResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DeleteSecurityConfigResponse {
     
     
     public Integer statusCode;
+
     public DeleteSecurityConfigResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DeleteSecurityConfigResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteSecurityConfigResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DeleteSecurityConfigResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteSecurityConfigResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class DeleteSecurityConfigResponse {
      */
     
     public Object validationException;
+
     public DeleteSecurityConfigResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteSecurityConfigResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

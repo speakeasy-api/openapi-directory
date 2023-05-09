@@ -15,9 +15,11 @@ public class StartCutoverResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("job")
     public Job job;
+
     public StartCutoverResponse withJob(Job job) {
         this.job = job;
         return this;
     }
     
+    public StartCutoverResponse(){}
 }

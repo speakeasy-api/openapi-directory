@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SetVaultNotificationsResponse {
     
     public String contentType;
+
     public SetVaultNotificationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class SetVaultNotificationsResponse {
      */
     
     public Object invalidParameterValueException;
+
     public SetVaultNotificationsResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class SetVaultNotificationsResponse {
      */
     
     public Object missingParameterValueException;
+
     public SetVaultNotificationsResponse withMissingParameterValueException(Object missingParameterValueException) {
         this.missingParameterValueException = missingParameterValueException;
         return this;
@@ -39,6 +43,7 @@ public class SetVaultNotificationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public SetVaultNotificationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -46,6 +51,7 @@ public class SetVaultNotificationsResponse {
     
     
     public Integer statusCode;
+
     public SetVaultNotificationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class SetVaultNotificationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SetVaultNotificationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class SetVaultNotificationsResponse {
      */
     
     public Object serviceUnavailableException;
+
     public SetVaultNotificationsResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
     }
     
+    public SetVaultNotificationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

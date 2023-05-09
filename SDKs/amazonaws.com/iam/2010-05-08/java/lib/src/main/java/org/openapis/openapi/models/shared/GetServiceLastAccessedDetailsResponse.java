@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class GetServiceLastAccessedDetailsResponse {
     
     public ErrorDetails error;
+
     public GetServiceLastAccessedDetailsResponse withError(ErrorDetails error) {
         this.error = error;
         return this;
@@ -19,6 +21,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public Boolean isTruncated;
+
     public GetServiceLastAccessedDetailsResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,6 +29,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public OffsetDateTime jobCompletionDate;
+
     public GetServiceLastAccessedDetailsResponse withJobCompletionDate(OffsetDateTime jobCompletionDate) {
         this.jobCompletionDate = jobCompletionDate;
         return this;
@@ -33,6 +37,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public OffsetDateTime jobCreationDate;
+
     public GetServiceLastAccessedDetailsResponse withJobCreationDate(OffsetDateTime jobCreationDate) {
         this.jobCreationDate = jobCreationDate;
         return this;
@@ -40,6 +45,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public JobStatusTypeEnum jobStatus;
+
     public GetServiceLastAccessedDetailsResponse withJobStatus(JobStatusTypeEnum jobStatus) {
         this.jobStatus = jobStatus;
         return this;
@@ -47,6 +53,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public AccessAdvisorUsageGranularityTypeEnum jobType;
+
     public GetServiceLastAccessedDetailsResponse withJobType(AccessAdvisorUsageGranularityTypeEnum jobType) {
         this.jobType = jobType;
         return this;
@@ -54,6 +61,7 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public String marker;
+
     public GetServiceLastAccessedDetailsResponse withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -61,9 +69,16 @@ public class GetServiceLastAccessedDetailsResponse {
     
     
     public ServiceLastAccessed[] servicesLastAccessed;
+
     public GetServiceLastAccessedDetailsResponse withServicesLastAccessed(ServiceLastAccessed[] servicesLastAccessed) {
         this.servicesLastAccessed = servicesLastAccessed;
         return this;
     }
     
+    public GetServiceLastAccessedDetailsResponse(@JsonProperty("JobCompletionDate") OffsetDateTime jobCompletionDate, @JsonProperty("JobCreationDate") OffsetDateTime jobCreationDate, @JsonProperty("JobStatus") JobStatusTypeEnum jobStatus, @JsonProperty("ServicesLastAccessed") ServiceLastAccessed[] servicesLastAccessed) {
+        this.jobCompletionDate = jobCompletionDate;
+        this.jobCreationDate = jobCreationDate;
+        this.jobStatus = jobStatus;
+        this.servicesLastAccessed = servicesLastAccessed;
+  }
 }

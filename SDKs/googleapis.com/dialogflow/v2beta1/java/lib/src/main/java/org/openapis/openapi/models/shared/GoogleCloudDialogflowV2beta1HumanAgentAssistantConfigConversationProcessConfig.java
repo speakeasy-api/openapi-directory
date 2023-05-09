@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationPr
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("recentSentencesCount")
     public Integer recentSentencesCount;
+
     public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig withRecentSentencesCount(Integer recentSentencesCount) {
         this.recentSentencesCount = recentSentencesCount;
         return this;
     }
     
+    public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversationProcessConfig(){}
 }

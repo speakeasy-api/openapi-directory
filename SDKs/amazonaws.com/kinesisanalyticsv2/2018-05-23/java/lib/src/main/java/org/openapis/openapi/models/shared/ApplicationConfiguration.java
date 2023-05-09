@@ -15,6 +15,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationCodeConfiguration")
     public ApplicationCodeConfiguration applicationCodeConfiguration;
+
     public ApplicationConfiguration withApplicationCodeConfiguration(ApplicationCodeConfiguration applicationCodeConfiguration) {
         this.applicationCodeConfiguration = applicationCodeConfiguration;
         return this;
@@ -23,6 +24,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApplicationSnapshotConfiguration")
     public ApplicationSnapshotConfiguration applicationSnapshotConfiguration;
+
     public ApplicationConfiguration withApplicationSnapshotConfiguration(ApplicationSnapshotConfiguration applicationSnapshotConfiguration) {
         this.applicationSnapshotConfiguration = applicationSnapshotConfiguration;
         return this;
@@ -31,6 +33,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EnvironmentProperties")
     public EnvironmentProperties environmentProperties;
+
     public ApplicationConfiguration withEnvironmentProperties(EnvironmentProperties environmentProperties) {
         this.environmentProperties = environmentProperties;
         return this;
@@ -39,6 +42,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlinkApplicationConfiguration")
     public FlinkApplicationConfiguration flinkApplicationConfiguration;
+
     public ApplicationConfiguration withFlinkApplicationConfiguration(FlinkApplicationConfiguration flinkApplicationConfiguration) {
         this.flinkApplicationConfiguration = flinkApplicationConfiguration;
         return this;
@@ -47,6 +51,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SqlApplicationConfiguration")
     public SqlApplicationConfiguration sqlApplicationConfiguration;
+
     public ApplicationConfiguration withSqlApplicationConfiguration(SqlApplicationConfiguration sqlApplicationConfiguration) {
         this.sqlApplicationConfiguration = sqlApplicationConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcConfigurations")
     public VpcConfiguration[] vpcConfigurations;
+
     public ApplicationConfiguration withVpcConfigurations(VpcConfiguration[] vpcConfigurations) {
         this.vpcConfigurations = vpcConfigurations;
         return this;
@@ -63,9 +69,11 @@ public class ApplicationConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ZeppelinApplicationConfiguration")
     public ZeppelinApplicationConfiguration zeppelinApplicationConfiguration;
+
     public ApplicationConfiguration withZeppelinApplicationConfiguration(ZeppelinApplicationConfiguration zeppelinApplicationConfiguration) {
         this.zeppelinApplicationConfiguration = zeppelinApplicationConfiguration;
         return this;
     }
     
+    public ApplicationConfiguration(){}
 }

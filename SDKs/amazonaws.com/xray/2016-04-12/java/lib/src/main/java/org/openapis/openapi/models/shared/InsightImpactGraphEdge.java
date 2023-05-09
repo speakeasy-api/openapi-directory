@@ -15,9 +15,11 @@ public class InsightImpactGraphEdge {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ReferenceId")
     public Long referenceId;
+
     public InsightImpactGraphEdge withReferenceId(Long referenceId) {
         this.referenceId = referenceId;
         return this;
     }
     
+    public InsightImpactGraphEdge(){}
 }

@@ -54,4 +54,9 @@ lib/src/main/java/org/openapis/openapi/models/shared/SimilarCompanySearch.java
 lib/src/main/java/org/openapis/openapi/models/shared/Snippet.java
 lib/src/main/java/org/openapis/openapi/models/shared/InputCompany.java
 lib/src/main/java/org/openapis/openapi/models/shared/SimilarCompany.java
+docs/sdk/README.md
+docs/contentprosearch/README.md
+docs/contentprosimilartext/README.md
+docs/search/README.md
+docs/similar/README.md
 USAGE.md

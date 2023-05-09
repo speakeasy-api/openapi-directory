@@ -12,6 +12,7 @@ public class ServingQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("corpusKey")
     public ServingCorpusKey[] corpusKey;
+
     public ServingQueryRequest withCorpusKey(ServingCorpusKey[] corpusKey) {
         this.corpusKey = corpusKey;
         return this;
@@ -23,6 +24,7 @@ public class ServingQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numResults")
     public Long numResults;
+
     public ServingQueryRequest withNumResults(Long numResults) {
         this.numResults = numResults;
         return this;
@@ -34,6 +36,7 @@ public class ServingQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("query")
     public String query;
+
     public ServingQueryRequest withQuery(String query) {
         this.query = query;
         return this;
@@ -45,6 +48,7 @@ public class ServingQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rerankingConfig")
     public QueryRequestRerankingConfig rerankingConfig;
+
     public ServingQueryRequest withRerankingConfig(QueryRequestRerankingConfig rerankingConfig) {
         this.rerankingConfig = rerankingConfig;
         return this;
@@ -53,9 +57,11 @@ public class ServingQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public ServingQueryRequest withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public ServingQueryRequest(){}
 }

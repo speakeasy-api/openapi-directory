@@ -18,9 +18,13 @@ public class TransactionAuthorisation {
      */
     @JsonProperty("scaAuthenticationData")
     public String scaAuthenticationData;
+
     public TransactionAuthorisation withScaAuthenticationData(String scaAuthenticationData) {
         this.scaAuthenticationData = scaAuthenticationData;
         return this;
     }
     
+    public TransactionAuthorisation(@JsonProperty("scaAuthenticationData") String scaAuthenticationData) {
+        this.scaAuthenticationData = scaAuthenticationData;
+  }
 }

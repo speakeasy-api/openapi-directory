@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class OrderableDBInstanceOptionsList {
     
     public String availabilityZoneGroup;
+
     public OrderableDBInstanceOptionsList withAvailabilityZoneGroup(String availabilityZoneGroup) {
         this.availabilityZoneGroup = availabilityZoneGroup;
         return this;
@@ -19,6 +20,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public AvailabilityZoneList[] availabilityZones;
+
     public OrderableDBInstanceOptionsList withAvailabilityZones(AvailabilityZoneList[] availabilityZones) {
         this.availabilityZones = availabilityZones;
         return this;
@@ -26,6 +28,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public AvailableProcessorFeatureList[] availableProcessorFeatures;
+
     public OrderableDBInstanceOptionsList withAvailableProcessorFeatures(AvailableProcessorFeatureList[] availableProcessorFeatures) {
         this.availableProcessorFeatures = availableProcessorFeatures;
         return this;
@@ -33,6 +36,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String dbInstanceClass;
+
     public OrderableDBInstanceOptionsList withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -40,6 +44,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String engine;
+
     public OrderableDBInstanceOptionsList withEngine(String engine) {
         this.engine = engine;
         return this;
@@ -47,6 +52,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String engineVersion;
+
     public OrderableDBInstanceOptionsList withEngineVersion(String engineVersion) {
         this.engineVersion = engineVersion;
         return this;
@@ -54,6 +60,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String licenseModel;
+
     public OrderableDBInstanceOptionsList withLicenseModel(String licenseModel) {
         this.licenseModel = licenseModel;
         return this;
@@ -61,6 +68,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long maxIopsPerDbInstance;
+
     public OrderableDBInstanceOptionsList withMaxIopsPerDbInstance(Long maxIopsPerDbInstance) {
         this.maxIopsPerDbInstance = maxIopsPerDbInstance;
         return this;
@@ -68,6 +76,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Double maxIopsPerGib;
+
     public OrderableDBInstanceOptionsList withMaxIopsPerGib(Double maxIopsPerGib) {
         this.maxIopsPerGib = maxIopsPerGib;
         return this;
@@ -75,6 +84,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long maxStorageSize;
+
     public OrderableDBInstanceOptionsList withMaxStorageSize(Long maxStorageSize) {
         this.maxStorageSize = maxStorageSize;
         return this;
@@ -82,6 +92,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long maxStorageThroughputPerDbInstance;
+
     public OrderableDBInstanceOptionsList withMaxStorageThroughputPerDbInstance(Long maxStorageThroughputPerDbInstance) {
         this.maxStorageThroughputPerDbInstance = maxStorageThroughputPerDbInstance;
         return this;
@@ -89,6 +100,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Double maxStorageThroughputPerIops;
+
     public OrderableDBInstanceOptionsList withMaxStorageThroughputPerIops(Double maxStorageThroughputPerIops) {
         this.maxStorageThroughputPerIops = maxStorageThroughputPerIops;
         return this;
@@ -96,6 +108,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long minIopsPerDbInstance;
+
     public OrderableDBInstanceOptionsList withMinIopsPerDbInstance(Long minIopsPerDbInstance) {
         this.minIopsPerDbInstance = minIopsPerDbInstance;
         return this;
@@ -103,6 +116,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Double minIopsPerGib;
+
     public OrderableDBInstanceOptionsList withMinIopsPerGib(Double minIopsPerGib) {
         this.minIopsPerGib = minIopsPerGib;
         return this;
@@ -110,6 +124,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long minStorageSize;
+
     public OrderableDBInstanceOptionsList withMinStorageSize(Long minStorageSize) {
         this.minStorageSize = minStorageSize;
         return this;
@@ -117,6 +132,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Long minStorageThroughputPerDbInstance;
+
     public OrderableDBInstanceOptionsList withMinStorageThroughputPerDbInstance(Long minStorageThroughputPerDbInstance) {
         this.minStorageThroughputPerDbInstance = minStorageThroughputPerDbInstance;
         return this;
@@ -124,6 +140,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Double minStorageThroughputPerIops;
+
     public OrderableDBInstanceOptionsList withMinStorageThroughputPerIops(Double minStorageThroughputPerIops) {
         this.minStorageThroughputPerIops = minStorageThroughputPerIops;
         return this;
@@ -131,6 +148,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean multiAZCapable;
+
     public OrderableDBInstanceOptionsList withMultiAZCapable(Boolean multiAZCapable) {
         this.multiAZCapable = multiAZCapable;
         return this;
@@ -138,6 +156,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean outpostCapable;
+
     public OrderableDBInstanceOptionsList withOutpostCapable(Boolean outpostCapable) {
         this.outpostCapable = outpostCapable;
         return this;
@@ -145,6 +164,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean readReplicaCapable;
+
     public OrderableDBInstanceOptionsList withReadReplicaCapable(Boolean readReplicaCapable) {
         this.readReplicaCapable = readReplicaCapable;
         return this;
@@ -152,6 +172,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String storageType;
+
     public OrderableDBInstanceOptionsList withStorageType(String storageType) {
         this.storageType = storageType;
         return this;
@@ -159,6 +180,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String[] supportedActivityStreamModes;
+
     public OrderableDBInstanceOptionsList withSupportedActivityStreamModes(String[] supportedActivityStreamModes) {
         this.supportedActivityStreamModes = supportedActivityStreamModes;
         return this;
@@ -166,6 +188,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String[] supportedEngineModes;
+
     public OrderableDBInstanceOptionsList withSupportedEngineModes(String[] supportedEngineModes) {
         this.supportedEngineModes = supportedEngineModes;
         return this;
@@ -173,6 +196,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public String[] supportedNetworkTypes;
+
     public OrderableDBInstanceOptionsList withSupportedNetworkTypes(String[] supportedNetworkTypes) {
         this.supportedNetworkTypes = supportedNetworkTypes;
         return this;
@@ -180,6 +204,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsClusters;
+
     public OrderableDBInstanceOptionsList withSupportsClusters(Boolean supportsClusters) {
         this.supportsClusters = supportsClusters;
         return this;
@@ -187,6 +212,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsEnhancedMonitoring;
+
     public OrderableDBInstanceOptionsList withSupportsEnhancedMonitoring(Boolean supportsEnhancedMonitoring) {
         this.supportsEnhancedMonitoring = supportsEnhancedMonitoring;
         return this;
@@ -194,6 +220,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsGlobalDatabases;
+
     public OrderableDBInstanceOptionsList withSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
         this.supportsGlobalDatabases = supportsGlobalDatabases;
         return this;
@@ -201,6 +228,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsIAMDatabaseAuthentication;
+
     public OrderableDBInstanceOptionsList withSupportsIAMDatabaseAuthentication(Boolean supportsIAMDatabaseAuthentication) {
         this.supportsIAMDatabaseAuthentication = supportsIAMDatabaseAuthentication;
         return this;
@@ -208,6 +236,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsIops;
+
     public OrderableDBInstanceOptionsList withSupportsIops(Boolean supportsIops) {
         this.supportsIops = supportsIops;
         return this;
@@ -215,6 +244,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsKerberosAuthentication;
+
     public OrderableDBInstanceOptionsList withSupportsKerberosAuthentication(Boolean supportsKerberosAuthentication) {
         this.supportsKerberosAuthentication = supportsKerberosAuthentication;
         return this;
@@ -222,6 +252,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsPerformanceInsights;
+
     public OrderableDBInstanceOptionsList withSupportsPerformanceInsights(Boolean supportsPerformanceInsights) {
         this.supportsPerformanceInsights = supportsPerformanceInsights;
         return this;
@@ -229,6 +260,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsStorageAutoscaling;
+
     public OrderableDBInstanceOptionsList withSupportsStorageAutoscaling(Boolean supportsStorageAutoscaling) {
         this.supportsStorageAutoscaling = supportsStorageAutoscaling;
         return this;
@@ -236,6 +268,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsStorageEncryption;
+
     public OrderableDBInstanceOptionsList withSupportsStorageEncryption(Boolean supportsStorageEncryption) {
         this.supportsStorageEncryption = supportsStorageEncryption;
         return this;
@@ -243,6 +276,7 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean supportsStorageThroughput;
+
     public OrderableDBInstanceOptionsList withSupportsStorageThroughput(Boolean supportsStorageThroughput) {
         this.supportsStorageThroughput = supportsStorageThroughput;
         return this;
@@ -250,9 +284,11 @@ public class OrderableDBInstanceOptionsList {
     
     
     public Boolean vpc;
+
     public OrderableDBInstanceOptionsList withVpc(Boolean vpc) {
         this.vpc = vpc;
         return this;
     }
     
+    public OrderableDBInstanceOptionsList(){}
 }

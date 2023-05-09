@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateSubnetGroupResponse {
     
     public String contentType;
+
     public UpdateSubnetGroupResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object invalidSubnet;
+
     public UpdateSubnetGroupResponse withInvalidSubnet(Object invalidSubnet) {
         this.invalidSubnet = invalidSubnet;
         return this;
@@ -29,6 +32,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object serviceLinkedRoleNotFoundFault;
+
     public UpdateSubnetGroupResponse withServiceLinkedRoleNotFoundFault(Object serviceLinkedRoleNotFoundFault) {
         this.serviceLinkedRoleNotFoundFault = serviceLinkedRoleNotFoundFault;
         return this;
@@ -36,6 +40,7 @@ public class UpdateSubnetGroupResponse {
     
     
     public Integer statusCode;
+
     public UpdateSubnetGroupResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class UpdateSubnetGroupResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateSubnetGroupResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,6 +59,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object subnetGroupNotFoundFault;
+
     public UpdateSubnetGroupResponse withSubnetGroupNotFoundFault(Object subnetGroupNotFoundFault) {
         this.subnetGroupNotFoundFault = subnetGroupNotFoundFault;
         return this;
@@ -63,6 +70,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object subnetInUse;
+
     public UpdateSubnetGroupResponse withSubnetInUse(Object subnetInUse) {
         this.subnetInUse = subnetInUse;
         return this;
@@ -73,6 +81,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object subnetNotAllowedFault;
+
     public UpdateSubnetGroupResponse withSubnetNotAllowedFault(Object subnetNotAllowedFault) {
         this.subnetNotAllowedFault = subnetNotAllowedFault;
         return this;
@@ -83,6 +92,7 @@ public class UpdateSubnetGroupResponse {
      */
     
     public Object subnetQuotaExceededFault;
+
     public UpdateSubnetGroupResponse withSubnetQuotaExceededFault(Object subnetQuotaExceededFault) {
         this.subnetQuotaExceededFault = subnetQuotaExceededFault;
         return this;
@@ -93,9 +103,14 @@ public class UpdateSubnetGroupResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateSubnetGroupResponse updateSubnetGroupResponse;
+
     public UpdateSubnetGroupResponse withUpdateSubnetGroupResponse(org.openapis.openapi.models.shared.UpdateSubnetGroupResponse updateSubnetGroupResponse) {
         this.updateSubnetGroupResponse = updateSubnetGroupResponse;
         return this;
     }
     
+    public UpdateSubnetGroupResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

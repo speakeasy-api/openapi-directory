@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListActiveViolationsResponse {
     
     public String contentType;
+
     public ListActiveViolationsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListActiveViolationsResponse {
      */
     
     public Object internalFailureException;
+
     public ListActiveViolationsResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -29,6 +32,7 @@ public class ListActiveViolationsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListActiveViolationsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -39,6 +43,7 @@ public class ListActiveViolationsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListActiveViolationsResponse listActiveViolationsResponse;
+
     public ListActiveViolationsResponse withListActiveViolationsResponse(org.openapis.openapi.models.shared.ListActiveViolationsResponse listActiveViolationsResponse) {
         this.listActiveViolationsResponse = listActiveViolationsResponse;
         return this;
@@ -46,6 +51,7 @@ public class ListActiveViolationsResponse {
     
     
     public Integer statusCode;
+
     public ListActiveViolationsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class ListActiveViolationsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListActiveViolationsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class ListActiveViolationsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListActiveViolationsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,9 +81,14 @@ public class ListActiveViolationsResponse {
      */
     
     public Object throttlingException;
+
     public ListActiveViolationsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListActiveViolationsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

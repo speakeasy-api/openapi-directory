@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ProvideAnomalyFeedbackRequest {
     @JsonProperty("AnomalyId")
     public String anomalyId;
+
     public ProvideAnomalyFeedbackRequest withAnomalyId(String anomalyId) {
         this.anomalyId = anomalyId;
         return this;
@@ -16,9 +17,14 @@ public class ProvideAnomalyFeedbackRequest {
     
     @JsonProperty("Feedback")
     public AnomalyFeedbackTypeEnum feedback;
+
     public ProvideAnomalyFeedbackRequest withFeedback(AnomalyFeedbackTypeEnum feedback) {
         this.feedback = feedback;
         return this;
     }
     
+    public ProvideAnomalyFeedbackRequest(@JsonProperty("AnomalyId") String anomalyId, @JsonProperty("Feedback") AnomalyFeedbackTypeEnum feedback) {
+        this.anomalyId = anomalyId;
+        this.feedback = feedback;
+  }
 }

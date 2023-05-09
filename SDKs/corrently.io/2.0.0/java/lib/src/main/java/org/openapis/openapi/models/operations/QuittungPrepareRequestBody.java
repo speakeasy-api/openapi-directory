@@ -12,9 +12,11 @@ public class QuittungPrepareRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public QuittungPrepareRequestBody withAccount(String account) {
         this.account = account;
         return this;
     }
     
+    public QuittungPrepareRequestBody(){}
 }

@@ -15,6 +15,7 @@ public class SecretScanningUpdateAlertRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resolution")
     public org.openapis.openapi.models.shared.SecretScanningAlertResolutionEnum resolution;
+
     public SecretScanningUpdateAlertRequestBody withResolution(org.openapis.openapi.models.shared.SecretScanningAlertResolutionEnum resolution) {
         this.resolution = resolution;
         return this;
@@ -25,9 +26,13 @@ public class SecretScanningUpdateAlertRequestBody {
      */
     @JsonProperty("state")
     public org.openapis.openapi.models.shared.SchemassecretScanningAlertStateEnum state;
+
     public SecretScanningUpdateAlertRequestBody withState(org.openapis.openapi.models.shared.SchemassecretScanningAlertStateEnum state) {
         this.state = state;
         return this;
     }
     
+    public SecretScanningUpdateAlertRequestBody(@JsonProperty("state") org.openapis.openapi.models.shared.SchemassecretScanningAlertStateEnum state) {
+        this.state = state;
+  }
 }

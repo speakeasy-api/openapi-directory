@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class UpdateCustomFields4Request {
@@ -12,6 +13,7 @@ public class UpdateCustomFields4Request {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody;
+
     public UpdateCustomFields4Request withRequestBody(org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -22,9 +24,14 @@ public class UpdateCustomFields4Request {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=quoteId")
     public String quoteId;
+
     public UpdateCustomFields4Request withQuoteId(String quoteId) {
         this.quoteId = quoteId;
         return this;
     }
     
+    public UpdateCustomFields4Request(@JsonProperty("RequestBody") org.openapis.openapi.models.shared.CustomFieldDTO[] requestBody, @JsonProperty("quoteId") String quoteId) {
+        this.requestBody = requestBody;
+        this.quoteId = quoteId;
+  }
 }

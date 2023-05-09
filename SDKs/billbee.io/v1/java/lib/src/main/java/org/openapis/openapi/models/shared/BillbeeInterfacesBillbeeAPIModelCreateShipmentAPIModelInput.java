@@ -25,6 +25,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("ClientReference")
     @SpeakeasyMetadata("form:name=ClientReference")
     public String clientReference;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withClientReference(String clientReference) {
         this.clientReference = clientReference;
         return this;
@@ -37,6 +38,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("Content")
     @SpeakeasyMetadata("form:name=Content")
     public String content;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withContent(String content) {
         this.content = content;
         return this;
@@ -49,6 +51,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("CustomerNumber")
     @SpeakeasyMetadata("form:name=CustomerNumber")
     public String customerNumber;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withCustomerNumber(String customerNumber) {
         this.customerNumber = customerNumber;
         return this;
@@ -58,6 +61,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("Dimension")
     @SpeakeasyMetadata("form:name=Dimension,json")
     public BillbeeInterfacesShippingShipmentDataDimensions dimension;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withDimension(BillbeeInterfacesShippingShipmentDataDimensions dimension) {
         this.dimension = dimension;
         return this;
@@ -70,6 +74,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("OrderCurrencyCode")
     @SpeakeasyMetadata("form:name=OrderCurrencyCode")
     public String orderCurrencyCode;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withOrderCurrencyCode(String orderCurrencyCode) {
         this.orderCurrencyCode = orderCurrencyCode;
         return this;
@@ -82,6 +87,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("OrderSum")
     @SpeakeasyMetadata("form:name=OrderSum")
     public Double orderSum;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withOrderSum(Double orderSum) {
         this.orderSum = orderSum;
         return this;
@@ -94,6 +100,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("PrinterIdForExportDocs")
     @SpeakeasyMetadata("form:name=PrinterIdForExportDocs")
     public Long printerIdForExportDocs;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withPrinterIdForExportDocs(Long printerIdForExportDocs) {
         this.printerIdForExportDocs = printerIdForExportDocs;
         return this;
@@ -106,6 +113,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("PrinterName")
     @SpeakeasyMetadata("form:name=PrinterName")
     public String printerName;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withPrinterName(String printerName) {
         this.printerName = printerName;
         return this;
@@ -118,6 +126,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("ProductCode")
     @SpeakeasyMetadata("form:name=ProductCode")
     public String productCode;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withProductCode(String productCode) {
         this.productCode = productCode;
         return this;
@@ -130,6 +139,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("ProviderName")
     @SpeakeasyMetadata("form:name=ProviderName")
     public String providerName;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withProviderName(String providerName) {
         this.providerName = providerName;
         return this;
@@ -139,6 +149,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("ReceiverAddress")
     @SpeakeasyMetadata("form:name=ReceiverAddress,json")
     public BillbeeInterfacesBillbeeAPIModelShipmentAddressAPIModelInput receiverAddress;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withReceiverAddress(BillbeeInterfacesBillbeeAPIModelShipmentAddressAPIModelInput receiverAddress) {
         this.receiverAddress = receiverAddress;
         return this;
@@ -153,6 +164,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("ShipDate")
     @SpeakeasyMetadata("form:name=ShipDate")
     public OffsetDateTime shipDate;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withShipDate(OffsetDateTime shipDate) {
         this.shipDate = shipDate;
         return this;
@@ -165,6 +177,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("TotalNet")
     @SpeakeasyMetadata("form:name=TotalNet")
     public Double totalNet;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withTotalNet(Double totalNet) {
         this.totalNet = totalNet;
         return this;
@@ -177,6 +190,7 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("WeightInGram")
     @SpeakeasyMetadata("form:name=WeightInGram")
     public Double weightInGram;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withWeightInGram(Double weightInGram) {
         this.weightInGram = weightInGram;
         return this;
@@ -186,9 +200,11 @@ public class BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput {
     @JsonProperty("shippingCarrier")
     @SpeakeasyMetadata("form:name=shippingCarrier")
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum shippingCarrier;
+
     public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput withShippingCarrier(BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelShippingCarrierEnum shippingCarrier) {
         this.shippingCarrier = shippingCarrier;
         return this;
     }
     
+    public BillbeeInterfacesBillbeeAPIModelCreateShipmentAPIModelInput(){}
 }

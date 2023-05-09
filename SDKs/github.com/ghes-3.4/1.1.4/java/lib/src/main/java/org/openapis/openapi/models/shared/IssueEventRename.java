@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IssueEventRename {
     @JsonProperty("from")
     public String from;
+
     public IssueEventRename withFrom(String from) {
         this.from = from;
         return this;
@@ -19,9 +20,14 @@ public class IssueEventRename {
     
     @JsonProperty("to")
     public String to;
+
     public IssueEventRename withTo(String to) {
         this.to = to;
         return this;
     }
     
+    public IssueEventRename(@JsonProperty("from") String from, @JsonProperty("to") String to) {
+        this.from = from;
+        this.to = to;
+  }
 }

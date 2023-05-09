@@ -15,6 +15,7 @@ public class RegionSetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labelFingerprint")
     public String labelFingerprint;
+
     public RegionSetLabelsRequest withLabelFingerprint(String labelFingerprint) {
         this.labelFingerprint = labelFingerprint;
         return this;
@@ -26,9 +27,11 @@ public class RegionSetLabelsRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public RegionSetLabelsRequest withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
     
+    public RegionSetLabelsRequest(){}
 }

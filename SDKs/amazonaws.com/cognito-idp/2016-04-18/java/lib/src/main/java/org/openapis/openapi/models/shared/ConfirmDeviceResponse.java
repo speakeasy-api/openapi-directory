@@ -15,9 +15,11 @@ public class ConfirmDeviceResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UserConfirmationNecessary")
     public Boolean userConfirmationNecessary;
+
     public ConfirmDeviceResponse withUserConfirmationNecessary(Boolean userConfirmationNecessary) {
         this.userConfirmationNecessary = userConfirmationNecessary;
         return this;
     }
     
+    public ConfirmDeviceResponse(){}
 }

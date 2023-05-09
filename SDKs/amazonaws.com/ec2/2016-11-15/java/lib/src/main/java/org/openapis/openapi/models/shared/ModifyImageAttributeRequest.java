@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ModifyImageAttributeRequest - Contains the parameters for ModifyImageAttribute.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyImageAttributeRequest {
     
     public String attribute;
+
     public ModifyImageAttributeRequest withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class ModifyImageAttributeRequest {
     
     
     public AttributeValue description;
+
     public ModifyImageAttributeRequest withDescription(AttributeValue description) {
         this.description = description;
         return this;
@@ -26,6 +28,7 @@ public class ModifyImageAttributeRequest {
     
     
     public Boolean dryRun;
+
     public ModifyImageAttributeRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -33,6 +36,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String imageId;
+
     public ModifyImageAttributeRequest withImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -40,6 +44,7 @@ public class ModifyImageAttributeRequest {
     
     
     public AttributeValue imdsSupport;
+
     public ModifyImageAttributeRequest withImdsSupport(AttributeValue imdsSupport) {
         this.imdsSupport = imdsSupport;
         return this;
@@ -47,6 +52,7 @@ public class ModifyImageAttributeRequest {
     
     
     public LaunchPermissionModifications launchPermission;
+
     public ModifyImageAttributeRequest withLaunchPermission(LaunchPermissionModifications launchPermission) {
         this.launchPermission = launchPermission;
         return this;
@@ -54,6 +60,7 @@ public class ModifyImageAttributeRequest {
     
     
     public OperationTypeEnum operationType;
+
     public ModifyImageAttributeRequest withOperationType(OperationTypeEnum operationType) {
         this.operationType = operationType;
         return this;
@@ -61,6 +68,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String[] organizationArns;
+
     public ModifyImageAttributeRequest withOrganizationArns(String[] organizationArns) {
         this.organizationArns = organizationArns;
         return this;
@@ -68,6 +76,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String[] organizationalUnitArns;
+
     public ModifyImageAttributeRequest withOrganizationalUnitArns(String[] organizationalUnitArns) {
         this.organizationalUnitArns = organizationalUnitArns;
         return this;
@@ -75,6 +84,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String[] productCodes;
+
     public ModifyImageAttributeRequest withProductCodes(String[] productCodes) {
         this.productCodes = productCodes;
         return this;
@@ -82,6 +92,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String[] userGroups;
+
     public ModifyImageAttributeRequest withUserGroups(String[] userGroups) {
         this.userGroups = userGroups;
         return this;
@@ -89,6 +100,7 @@ public class ModifyImageAttributeRequest {
     
     
     public String[] userIds;
+
     public ModifyImageAttributeRequest withUserIds(String[] userIds) {
         this.userIds = userIds;
         return this;
@@ -96,9 +108,13 @@ public class ModifyImageAttributeRequest {
     
     
     public String value;
+
     public ModifyImageAttributeRequest withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ModifyImageAttributeRequest(@JsonProperty("ImageId") String imageId) {
+        this.imageId = imageId;
+  }
 }

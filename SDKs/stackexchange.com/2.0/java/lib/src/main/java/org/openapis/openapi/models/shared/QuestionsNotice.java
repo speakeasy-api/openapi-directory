@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class QuestionsNotice {
     
     public String body;
+
     public QuestionsNotice withBody(String body) {
         this.body = body;
         return this;
@@ -16,6 +17,7 @@ public class QuestionsNotice {
     
     
     public Long creationDate;
+
     public QuestionsNotice withCreationDate(Long creationDate) {
         this.creationDate = creationDate;
         return this;
@@ -23,9 +25,11 @@ public class QuestionsNotice {
     
     
     public Long ownerUserId;
+
     public QuestionsNotice withOwnerUserId(Long ownerUserId) {
         this.ownerUserId = ownerUserId;
         return this;
     }
     
+    public QuestionsNotice(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateIntegrationResponseResponse {
@@ -12,6 +13,7 @@ public class CreateIntegrationResponseResponse {
      */
     
     public Object badRequestException;
+
     public CreateIntegrationResponseResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateIntegrationResponseResponse {
      */
     
     public Object conflictException;
+
     public CreateIntegrationResponseResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class CreateIntegrationResponseResponse {
     
     
     public String contentType;
+
     public CreateIntegrationResponseResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateIntegrationResponseResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateIntegrationResponseResponse createIntegrationResponseResponse;
+
     public CreateIntegrationResponseResponse withCreateIntegrationResponseResponse(org.openapis.openapi.models.shared.CreateIntegrationResponseResponse createIntegrationResponseResponse) {
         this.createIntegrationResponseResponse = createIntegrationResponseResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateIntegrationResponseResponse {
      */
     
     public Object notFoundException;
+
     public CreateIntegrationResponseResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class CreateIntegrationResponseResponse {
     
     
     public Integer statusCode;
+
     public CreateIntegrationResponseResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateIntegrationResponseResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateIntegrationResponseResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class CreateIntegrationResponseResponse {
      */
     
     public Object tooManyRequestsException;
+
     public CreateIntegrationResponseResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public CreateIntegrationResponseResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

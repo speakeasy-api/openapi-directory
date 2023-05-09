@@ -12,9 +12,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class JobConfiguration {
     @JsonProperty("fileFormat")
     public FileFormat fileFormat;
+
     public JobConfiguration withFileFormat(FileFormat fileFormat) {
         this.fileFormat = fileFormat;
         return this;
     }
     
+    public JobConfiguration(@JsonProperty("fileFormat") FileFormat fileFormat) {
+        this.fileFormat = fileFormat;
+  }
 }

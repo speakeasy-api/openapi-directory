@@ -129,4 +129,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/AutoScalingUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScaleOutPolicyUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/ScaleInPolicyUpdate.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

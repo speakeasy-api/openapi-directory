@@ -12,6 +12,7 @@ public class APIRequestActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("account")
     public String account;
+
     public APIRequestActor withAccount(String account) {
         this.account = account;
         return this;
@@ -20,6 +21,7 @@ public class APIRequestActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public APIRequestActor withId(String id) {
         this.id = id;
         return this;
@@ -28,6 +30,7 @@ public class APIRequestActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jti")
     public String jti;
+
     public APIRequestActor withJti(String jti) {
         this.jti = jti;
         return this;
@@ -36,6 +39,7 @@ public class APIRequestActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("requestIp")
     public String requestIp;
+
     public APIRequestActor withRequestIp(String requestIp) {
         this.requestIp = requestIp;
         return this;
@@ -44,9 +48,11 @@ public class APIRequestActor {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userAgent")
     public String userAgent;
+
     public APIRequestActor withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
     }
     
+    public APIRequestActor(){}
 }

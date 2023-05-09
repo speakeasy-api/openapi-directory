@@ -18,9 +18,11 @@ public class SystemParameters {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rules")
     public SystemParameterRule[] rules;
+
     public SystemParameters withRules(SystemParameterRule[] rules) {
         this.rules = rules;
         return this;
     }
     
+    public SystemParameters(){}
 }

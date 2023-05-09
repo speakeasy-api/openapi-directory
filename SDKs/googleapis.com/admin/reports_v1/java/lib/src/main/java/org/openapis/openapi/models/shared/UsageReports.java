@@ -18,6 +18,7 @@ public class UsageReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public UsageReports withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -29,6 +30,7 @@ public class UsageReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public UsageReports withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class UsageReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public UsageReports withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -51,6 +54,7 @@ public class UsageReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("usageReports")
     public UsageReport[] usageReports;
+
     public UsageReports withUsageReports(UsageReport[] usageReports) {
         this.usageReports = usageReports;
         return this;
@@ -62,9 +66,11 @@ public class UsageReports {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("warnings")
     public UsageReportsWarnings[] warnings;
+
     public UsageReports withWarnings(UsageReportsWarnings[] warnings) {
         this.warnings = warnings;
         return this;
     }
     
+    public UsageReports(){}
 }

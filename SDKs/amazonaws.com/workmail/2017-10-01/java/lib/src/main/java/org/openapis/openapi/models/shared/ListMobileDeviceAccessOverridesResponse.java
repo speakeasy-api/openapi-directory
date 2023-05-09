@@ -15,6 +15,7 @@ public class ListMobileDeviceAccessOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListMobileDeviceAccessOverridesResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListMobileDeviceAccessOverridesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Overrides")
     public MobileDeviceAccessOverride[] overrides;
+
     public ListMobileDeviceAccessOverridesResponse withOverrides(MobileDeviceAccessOverride[] overrides) {
         this.overrides = overrides;
         return this;
     }
     
+    public ListMobileDeviceAccessOverridesResponse(){}
 }

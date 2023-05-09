@@ -17,6 +17,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("message")
     public String message;
+
     public Product200ApplicationJSONDataBookingQuestions withMessage(String message) {
         this.message = message;
         return this;
@@ -30,6 +31,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("questionId")
     public Long questionId;
+
     public Product200ApplicationJSONDataBookingQuestions withQuestionId(Long questionId) {
         this.questionId = questionId;
         return this;
@@ -44,6 +46,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("required")
     public Boolean required;
+
     public Product200ApplicationJSONDataBookingQuestions withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -55,6 +58,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sortOrder")
     public Long sortOrder;
+
     public Product200ApplicationJSONDataBookingQuestions withSortOrder(Long sortOrder) {
         this.sortOrder = sortOrder;
         return this;
@@ -68,6 +72,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("stringQuestionId")
     public String stringQuestionId;
+
     public Product200ApplicationJSONDataBookingQuestions withStringQuestionId(String stringQuestionId) {
         this.stringQuestionId = stringQuestionId;
         return this;
@@ -81,6 +86,7 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subTitle")
     public String subTitle;
+
     public Product200ApplicationJSONDataBookingQuestions withSubTitle(String subTitle) {
         this.subTitle = subTitle;
         return this;
@@ -94,9 +100,11 @@ public class Product200ApplicationJSONDataBookingQuestions {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public Product200ApplicationJSONDataBookingQuestions withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public Product200ApplicationJSONDataBookingQuestions(){}
 }

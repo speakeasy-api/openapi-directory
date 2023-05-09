@@ -18,6 +18,7 @@ public class OnboardingThemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next")
     public String next;
+
     public OnboardingThemes withNext(String next) {
         this.next = next;
         return this;
@@ -29,6 +30,7 @@ public class OnboardingThemes {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previous")
     public String previous;
+
     public OnboardingThemes withPrevious(String previous) {
         this.previous = previous;
         return this;
@@ -39,9 +41,13 @@ public class OnboardingThemes {
      */
     @JsonProperty("themes")
     public OnboardingTheme[] themes;
+
     public OnboardingThemes withThemes(OnboardingTheme[] themes) {
         this.themes = themes;
         return this;
     }
     
+    public OnboardingThemes(@JsonProperty("themes") OnboardingTheme[] themes) {
+        this.themes = themes;
+  }
 }

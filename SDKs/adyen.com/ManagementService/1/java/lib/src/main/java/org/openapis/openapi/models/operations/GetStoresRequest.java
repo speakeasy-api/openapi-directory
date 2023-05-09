@@ -12,6 +12,7 @@ public class GetStoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=merchantId")
     public String merchantId;
+
     public GetStoresRequest withMerchantId(String merchantId) {
         this.merchantId = merchantId;
         return this;
@@ -22,6 +23,7 @@ public class GetStoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageNumber")
     public Integer pageNumber;
+
     public GetStoresRequest withPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -32,6 +34,7 @@ public class GetStoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageSize")
     public Integer pageSize;
+
     public GetStoresRequest withPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
@@ -42,9 +45,11 @@ public class GetStoresRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=reference")
     public String reference;
+
     public GetStoresRequest withReference(String reference) {
         this.reference = reference;
         return this;
     }
     
+    public GetStoresRequest(){}
 }

@@ -18,6 +18,7 @@ public class GoogleCloudDatacatalogV1beta1EntryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dataCatalogTimestamps")
     public GoogleCloudDatacatalogV1beta1SystemTimestamps dataCatalogTimestamps;
+
     public GoogleCloudDatacatalogV1beta1EntryGroup withDataCatalogTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestamps dataCatalogTimestamps) {
         this.dataCatalogTimestamps = dataCatalogTimestamps;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatacatalogV1beta1EntryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GoogleCloudDatacatalogV1beta1EntryGroup withDescription(String description) {
         this.description = description;
         return this;
@@ -40,6 +42,7 @@ public class GoogleCloudDatacatalogV1beta1EntryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public GoogleCloudDatacatalogV1beta1EntryGroup withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -51,9 +54,11 @@ public class GoogleCloudDatacatalogV1beta1EntryGroup {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GoogleCloudDatacatalogV1beta1EntryGroup withName(String name) {
         this.name = name;
         return this;
     }
     
+    public GoogleCloudDatacatalogV1beta1EntryGroup(){}
 }

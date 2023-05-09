@@ -18,6 +18,7 @@ public class ChangePlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dealCode")
     public String dealCode;
+
     public ChangePlanRequest withDealCode(String dealCode) {
         this.dealCode = dealCode;
         return this;
@@ -29,6 +30,7 @@ public class ChangePlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public ChangePlanRequest withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class ChangePlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("planName")
     public String planName;
+
     public ChangePlanRequest withPlanName(String planName) {
         this.planName = planName;
         return this;
@@ -51,6 +54,7 @@ public class ChangePlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("purchaseOrderId")
     public String purchaseOrderId;
+
     public ChangePlanRequest withPurchaseOrderId(String purchaseOrderId) {
         this.purchaseOrderId = purchaseOrderId;
         return this;
@@ -62,9 +66,11 @@ public class ChangePlanRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("seats")
     public Seats seats;
+
     public ChangePlanRequest withSeats(Seats seats) {
         this.seats = seats;
         return this;
     }
     
+    public ChangePlanRequest(){}
 }

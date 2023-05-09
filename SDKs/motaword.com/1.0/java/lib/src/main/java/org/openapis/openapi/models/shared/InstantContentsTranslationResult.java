@@ -15,9 +15,11 @@ public class InstantContentsTranslationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public java.util.Map<String, String> results;
+
     public InstantContentsTranslationResult withResults(java.util.Map<String, String> results) {
         this.results = results;
         return this;
     }
     
+    public InstantContentsTranslationResult(){}
 }

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ResourceChange {
     
     public ChangeActionEnum action;
+
     public ResourceChange withAction(ChangeActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +20,7 @@ public class ResourceChange {
     
     
     public String changeSetId;
+
     public ResourceChange withChangeSetId(String changeSetId) {
         this.changeSetId = changeSetId;
         return this;
@@ -26,6 +28,7 @@ public class ResourceChange {
     
     
     public ResourceChangeDetail[] details;
+
     public ResourceChange withDetails(ResourceChangeDetail[] details) {
         this.details = details;
         return this;
@@ -33,6 +36,7 @@ public class ResourceChange {
     
     
     public String logicalResourceId;
+
     public ResourceChange withLogicalResourceId(String logicalResourceId) {
         this.logicalResourceId = logicalResourceId;
         return this;
@@ -40,6 +44,7 @@ public class ResourceChange {
     
     
     public ModuleInfo moduleInfo;
+
     public ResourceChange withModuleInfo(ModuleInfo moduleInfo) {
         this.moduleInfo = moduleInfo;
         return this;
@@ -47,6 +52,7 @@ public class ResourceChange {
     
     
     public String physicalResourceId;
+
     public ResourceChange withPhysicalResourceId(String physicalResourceId) {
         this.physicalResourceId = physicalResourceId;
         return this;
@@ -54,6 +60,7 @@ public class ResourceChange {
     
     
     public ReplacementEnum replacement;
+
     public ResourceChange withReplacement(ReplacementEnum replacement) {
         this.replacement = replacement;
         return this;
@@ -61,6 +68,7 @@ public class ResourceChange {
     
     
     public String resourceType;
+
     public ResourceChange withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
@@ -68,9 +76,11 @@ public class ResourceChange {
     
     
     public ResourceAttributeEnum[] scope;
+
     public ResourceChange withScope(ResourceAttributeEnum[] scope) {
         this.scope = scope;
         return this;
     }
     
+    public ResourceChange(){}
 }

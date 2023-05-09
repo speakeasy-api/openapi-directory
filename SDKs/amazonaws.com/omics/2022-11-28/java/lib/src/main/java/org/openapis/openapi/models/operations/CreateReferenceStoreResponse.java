@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateReferenceStoreResponse {
@@ -12,6 +13,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object accessDeniedException;
+
     public CreateReferenceStoreResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class CreateReferenceStoreResponse {
     
     
     public String contentType;
+
     public CreateReferenceStoreResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateReferenceStoreResponse createReferenceStoreResponse;
+
     public CreateReferenceStoreResponse withCreateReferenceStoreResponse(org.openapis.openapi.models.shared.CreateReferenceStoreResponse createReferenceStoreResponse) {
         this.createReferenceStoreResponse = createReferenceStoreResponse;
         return this;
@@ -39,6 +43,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object internalServerException;
+
     public CreateReferenceStoreResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object requestTimeoutException;
+
     public CreateReferenceStoreResponse withRequestTimeoutException(Object requestTimeoutException) {
         this.requestTimeoutException = requestTimeoutException;
         return this;
@@ -56,6 +62,7 @@ public class CreateReferenceStoreResponse {
     
     
     public Integer statusCode;
+
     public CreateReferenceStoreResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class CreateReferenceStoreResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateReferenceStoreResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object serviceQuotaExceededException;
+
     public CreateReferenceStoreResponse withServiceQuotaExceededException(Object serviceQuotaExceededException) {
         this.serviceQuotaExceededException = serviceQuotaExceededException;
         return this;
@@ -83,6 +92,7 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object throttlingException;
+
     public CreateReferenceStoreResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CreateReferenceStoreResponse {
      */
     
     public Object validationException;
+
     public CreateReferenceStoreResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CreateReferenceStoreResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

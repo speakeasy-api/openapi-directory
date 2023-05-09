@@ -12,6 +12,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_embedded")
     public SettingValueModelHaljsonEmbeddedEnvironmentEmbedded embedded;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withEmbedded(SettingValueModelHaljsonEmbeddedEnvironmentEmbedded embedded) {
         this.embedded = embedded;
         return this;
@@ -20,6 +21,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("_links")
     public SettingValueModelHaljsonEmbeddedEnvironmentLinks links;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withLinks(SettingValueModelHaljsonEmbeddedEnvironmentLinks links) {
         this.links = links;
         return this;
@@ -28,6 +30,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withColor(String color) {
         this.color = color;
         return this;
@@ -36,6 +39,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +48,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environmentId")
     public String environmentId;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
@@ -52,6 +57,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withName(String name) {
         this.name = name;
         return this;
@@ -60,6 +66,7 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("order")
     public Integer order;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withOrder(Integer order) {
         this.order = order;
         return this;
@@ -68,9 +75,11 @@ public class SettingValueModelHaljsonEmbeddedEnvironment {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reasonRequired")
     public Boolean reasonRequired;
+
     public SettingValueModelHaljsonEmbeddedEnvironment withReasonRequired(Boolean reasonRequired) {
         this.reasonRequired = reasonRequired;
         return this;
     }
     
+    public SettingValueModelHaljsonEmbeddedEnvironment(){}
 }

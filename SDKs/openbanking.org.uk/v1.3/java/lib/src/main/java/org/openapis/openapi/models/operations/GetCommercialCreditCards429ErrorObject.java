@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetCommercialCreditCards429ErrorObject {
     @JsonProperty("description")
     public GetCommercialCreditCards429ErrorObjectDescriptionEnum description;
+
     public GetCommercialCreditCards429ErrorObject withDescription(GetCommercialCreditCards429ErrorObjectDescriptionEnum description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class GetCommercialCreditCards429ErrorObject {
     
     @JsonProperty("status")
     public GetCommercialCreditCards429ErrorObjectStatusEnum status;
+
     public GetCommercialCreditCards429ErrorObject withStatus(GetCommercialCreditCards429ErrorObjectStatusEnum status) {
         this.status = status;
         return this;
@@ -26,9 +28,15 @@ public class GetCommercialCreditCards429ErrorObject {
     
     @JsonProperty("title")
     public GetCommercialCreditCards429ErrorObjectTitleEnum title;
+
     public GetCommercialCreditCards429ErrorObject withTitle(GetCommercialCreditCards429ErrorObjectTitleEnum title) {
         this.title = title;
         return this;
     }
     
+    public GetCommercialCreditCards429ErrorObject(@JsonProperty("description") GetCommercialCreditCards429ErrorObjectDescriptionEnum description, @JsonProperty("status") GetCommercialCreditCards429ErrorObjectStatusEnum status, @JsonProperty("title") GetCommercialCreditCards429ErrorObjectTitleEnum title) {
+        this.description = description;
+        this.status = status;
+        this.title = title;
+  }
 }

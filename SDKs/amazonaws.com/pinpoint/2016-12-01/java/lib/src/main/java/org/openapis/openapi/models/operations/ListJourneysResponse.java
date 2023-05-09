@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListJourneysResponse {
@@ -12,6 +13,7 @@ public class ListJourneysResponse {
      */
     
     public Object badRequestException;
+
     public ListJourneysResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class ListJourneysResponse {
     
     
     public String contentType;
+
     public ListJourneysResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListJourneysResponse {
      */
     
     public Object forbiddenException;
+
     public ListJourneysResponse withForbiddenException(Object forbiddenException) {
         this.forbiddenException = forbiddenException;
         return this;
@@ -39,6 +43,7 @@ public class ListJourneysResponse {
      */
     
     public Object internalServerErrorException;
+
     public ListJourneysResponse withInternalServerErrorException(Object internalServerErrorException) {
         this.internalServerErrorException = internalServerErrorException;
         return this;
@@ -49,6 +54,7 @@ public class ListJourneysResponse {
      */
     
     public org.openapis.openapi.models.shared.ListJourneysResponse listJourneysResponse;
+
     public ListJourneysResponse withListJourneysResponse(org.openapis.openapi.models.shared.ListJourneysResponse listJourneysResponse) {
         this.listJourneysResponse = listJourneysResponse;
         return this;
@@ -59,6 +65,7 @@ public class ListJourneysResponse {
      */
     
     public Object methodNotAllowedException;
+
     public ListJourneysResponse withMethodNotAllowedException(Object methodNotAllowedException) {
         this.methodNotAllowedException = methodNotAllowedException;
         return this;
@@ -69,6 +76,7 @@ public class ListJourneysResponse {
      */
     
     public Object notFoundException;
+
     public ListJourneysResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -79,6 +87,7 @@ public class ListJourneysResponse {
      */
     
     public Object payloadTooLargeException;
+
     public ListJourneysResponse withPayloadTooLargeException(Object payloadTooLargeException) {
         this.payloadTooLargeException = payloadTooLargeException;
         return this;
@@ -86,6 +95,7 @@ public class ListJourneysResponse {
     
     
     public Integer statusCode;
+
     public ListJourneysResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -93,6 +103,7 @@ public class ListJourneysResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListJourneysResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -103,9 +114,14 @@ public class ListJourneysResponse {
      */
     
     public Object tooManyRequestsException;
+
     public ListJourneysResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public ListJourneysResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

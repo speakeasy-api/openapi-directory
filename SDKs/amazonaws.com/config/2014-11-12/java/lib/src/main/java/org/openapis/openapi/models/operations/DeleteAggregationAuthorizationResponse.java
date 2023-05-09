@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteAggregationAuthorizationResponse {
     
     public String contentType;
+
     public DeleteAggregationAuthorizationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DeleteAggregationAuthorizationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public DeleteAggregationAuthorizationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -26,6 +29,7 @@ public class DeleteAggregationAuthorizationResponse {
     
     
     public Integer statusCode;
+
     public DeleteAggregationAuthorizationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class DeleteAggregationAuthorizationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteAggregationAuthorizationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DeleteAggregationAuthorizationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

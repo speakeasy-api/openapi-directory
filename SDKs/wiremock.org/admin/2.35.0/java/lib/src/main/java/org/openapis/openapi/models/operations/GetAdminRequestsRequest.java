@@ -12,6 +12,7 @@ public class GetAdminRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public String limit;
+
     public GetAdminRequestsRequest withLimit(String limit) {
         this.limit = limit;
         return this;
@@ -22,9 +23,11 @@ public class GetAdminRequestsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=since")
     public String since;
+
     public GetAdminRequestsRequest withSince(String since) {
         this.since = since;
         return this;
     }
     
+    public GetAdminRequestsRequest(){}
 }

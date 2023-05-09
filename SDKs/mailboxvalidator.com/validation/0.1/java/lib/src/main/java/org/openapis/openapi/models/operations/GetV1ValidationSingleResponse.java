@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetV1ValidationSingleResponse {
     
     public String contentType;
+
     public GetV1ValidationSingleResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetV1ValidationSingleResponse {
     
     
     public Integer statusCode;
+
     public GetV1ValidationSingleResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetV1ValidationSingleResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetV1ValidationSingleResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class GetV1ValidationSingleResponse {
      */
     
     public String getV1ValidationSingle200ApplicationJSONString;
+
     public GetV1ValidationSingleResponse withGetV1ValidationSingle200ApplicationJSONString(String getV1ValidationSingle200ApplicationJSONString) {
         this.getV1ValidationSingle200ApplicationJSONString = getV1ValidationSingle200ApplicationJSONString;
         return this;
     }
     
+    public GetV1ValidationSingleResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

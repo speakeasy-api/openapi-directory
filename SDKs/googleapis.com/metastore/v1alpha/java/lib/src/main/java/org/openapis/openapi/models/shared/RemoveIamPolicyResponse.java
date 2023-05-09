@@ -18,9 +18,11 @@ public class RemoveIamPolicyResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public RemoveIamPolicyResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public RemoveIamPolicyResponse(){}
 }

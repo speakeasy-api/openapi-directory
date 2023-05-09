@@ -15,6 +15,7 @@ public class ListPolicyAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MaxResults")
     public Long maxResults;
+
     public ListPolicyAttachmentsRequestBody withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +27,7 @@ public class ListPolicyAttachmentsRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListPolicyAttachmentsRequestBody withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,9 +38,13 @@ public class ListPolicyAttachmentsRequestBody {
      */
     @JsonProperty("PolicyReference")
     public ListPolicyAttachmentsRequestBodyPolicyReference policyReference;
+
     public ListPolicyAttachmentsRequestBody withPolicyReference(ListPolicyAttachmentsRequestBodyPolicyReference policyReference) {
         this.policyReference = policyReference;
         return this;
     }
     
+    public ListPolicyAttachmentsRequestBody(@JsonProperty("PolicyReference") ListPolicyAttachmentsRequestBodyPolicyReference policyReference) {
+        this.policyReference = policyReference;
+  }
 }

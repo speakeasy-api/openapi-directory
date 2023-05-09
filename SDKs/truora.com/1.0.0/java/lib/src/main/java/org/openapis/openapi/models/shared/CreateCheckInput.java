@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.LocalDate;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
@@ -16,6 +17,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=birth_certificate")
     public String birthCertificate;
+
     public CreateCheckInput withBirthCertificate(String birthCertificate) {
         this.birthCertificate = birthCertificate;
         return this;
@@ -26,6 +28,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=company_name")
     public String companyName;
+
     public CreateCheckInput withCompanyName(String companyName) {
         this.companyName = companyName;
         return this;
@@ -36,6 +39,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=country")
     public CreateCheckInputCountryEnum country;
+
     public CreateCheckInput withCountry(CreateCheckInputCountryEnum country) {
         this.country = country;
         return this;
@@ -46,6 +50,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=date_of_birth")
     public LocalDate dateOfBirth;
+
     public CreateCheckInput withDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
         return this;
@@ -56,6 +61,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=diplomatic_id")
     public String diplomaticId;
+
     public CreateCheckInput withDiplomaticId(String diplomaticId) {
         this.diplomaticId = diplomaticId;
         return this;
@@ -66,6 +72,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=driver_license")
     public String driverLicense;
+
     public CreateCheckInput withDriverLicense(String driverLicense) {
         this.driverLicense = driverLicense;
         return this;
@@ -76,6 +83,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=escrow")
     public String escrow;
+
     public CreateCheckInput withEscrow(String escrow) {
         this.escrow = escrow;
         return this;
@@ -86,6 +94,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=first_name")
     public String firstName;
+
     public CreateCheckInput withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -96,6 +105,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=force_creation")
     public Boolean forceCreation;
+
     public CreateCheckInput withForceCreation(Boolean forceCreation) {
         this.forceCreation = forceCreation;
         return this;
@@ -106,6 +116,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=foreign_id")
     public String foreignId;
+
     public CreateCheckInput withForeignId(String foreignId) {
         this.foreignId = foreignId;
         return this;
@@ -116,6 +127,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=issue_date")
     public LocalDate issueDate;
+
     public CreateCheckInput withIssueDate(LocalDate issueDate) {
         this.issueDate = issueDate;
         return this;
@@ -126,6 +138,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=last_name")
     public String lastName;
+
     public CreateCheckInput withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -136,6 +149,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=license_plate")
     public String licensePlate;
+
     public CreateCheckInput withLicensePlate(String licensePlate) {
         this.licensePlate = licensePlate;
         return this;
@@ -146,6 +160,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=national_id")
     public String nationalId;
+
     public CreateCheckInput withNationalId(String nationalId) {
         this.nationalId = nationalId;
         return this;
@@ -156,6 +171,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=native_country")
     public String nativeCountry;
+
     public CreateCheckInput withNativeCountry(String nativeCountry) {
         this.nativeCountry = nativeCountry;
         return this;
@@ -166,6 +182,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=owner_document_id")
     public String ownerDocumentId;
+
     public CreateCheckInput withOwnerDocumentId(String ownerDocumentId) {
         this.ownerDocumentId = ownerDocumentId;
         return this;
@@ -176,6 +193,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=owner_document_type")
     public String ownerDocumentType;
+
     public CreateCheckInput withOwnerDocumentType(String ownerDocumentType) {
         this.ownerDocumentType = ownerDocumentType;
         return this;
@@ -186,6 +204,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=passport")
     public String passport;
+
     public CreateCheckInput withPassport(String passport) {
         this.passport = passport;
         return this;
@@ -196,6 +215,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=payment_date")
     public LocalDate paymentDate;
+
     public CreateCheckInput withPaymentDate(LocalDate paymentDate) {
         this.paymentDate = paymentDate;
         return this;
@@ -206,6 +226,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=pep")
     public String pep;
+
     public CreateCheckInput withPep(String pep) {
         this.pep = pep;
         return this;
@@ -216,6 +237,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=phone_number")
     public String phoneNumber;
+
     public CreateCheckInput withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -226,6 +248,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=professional_card")
     public String professionalCard;
+
     public CreateCheckInput withProfessionalCard(String professionalCard) {
         this.professionalCard = professionalCard;
         return this;
@@ -236,6 +259,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=ptp")
     public String ptp;
+
     public CreateCheckInput withPtp(String ptp) {
         this.ptp = ptp;
         return this;
@@ -246,6 +270,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=region")
     public CreateCheckInputRegionEnum region;
+
     public CreateCheckInput withRegion(CreateCheckInputRegionEnum region) {
         this.region = region;
         return this;
@@ -256,6 +281,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=report_id")
     public String reportId;
+
     public CreateCheckInput withReportId(String reportId) {
         this.reportId = reportId;
         return this;
@@ -266,6 +292,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=state_id")
     public String stateId;
+
     public CreateCheckInput withStateId(String stateId) {
         this.stateId = stateId;
         return this;
@@ -276,6 +303,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=tax_id")
     public String taxId;
+
     public CreateCheckInput withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -286,6 +314,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=type")
     public CreateCheckInputTypeEnum type;
+
     public CreateCheckInput withType(CreateCheckInputTypeEnum type) {
         this.type = type;
         return this;
@@ -296,6 +325,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=user_authorized")
     public Boolean userAuthorized;
+
     public CreateCheckInput withUserAuthorized(Boolean userAuthorized) {
         this.userAuthorized = userAuthorized;
         return this;
@@ -306,6 +336,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=vehicle_id")
     public String vehicleId;
+
     public CreateCheckInput withVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
         return this;
@@ -316,6 +347,7 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=verification_code")
     public String verificationCode;
+
     public CreateCheckInput withVerificationCode(String verificationCode) {
         this.verificationCode = verificationCode;
         return this;
@@ -326,9 +358,14 @@ public class CreateCheckInput {
      */
     @SpeakeasyMetadata("form:name=watch")
     public String watch;
+
     public CreateCheckInput withWatch(String watch) {
         this.watch = watch;
         return this;
     }
     
+    public CreateCheckInput(@JsonProperty("country") CreateCheckInputCountryEnum country, @JsonProperty("type") CreateCheckInputTypeEnum type) {
+        this.country = country;
+        this.type = type;
+  }
 }

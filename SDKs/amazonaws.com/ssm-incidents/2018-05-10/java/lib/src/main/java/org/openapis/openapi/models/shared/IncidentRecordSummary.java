@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class IncidentRecordSummary {
     @JsonProperty("arn")
     public String arn;
+
     public IncidentRecordSummary withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class IncidentRecordSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public IncidentRecordSummary withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -35,6 +37,7 @@ public class IncidentRecordSummary {
     
     @JsonProperty("impact")
     public Long impact;
+
     public IncidentRecordSummary withImpact(Long impact) {
         this.impact = impact;
         return this;
@@ -42,6 +45,7 @@ public class IncidentRecordSummary {
     
     @JsonProperty("incidentRecordSource")
     public IncidentRecordSource incidentRecordSource;
+
     public IncidentRecordSummary withIncidentRecordSource(IncidentRecordSource incidentRecordSource) {
         this.incidentRecordSource = incidentRecordSource;
         return this;
@@ -52,6 +56,7 @@ public class IncidentRecordSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("resolvedTime")
     public OffsetDateTime resolvedTime;
+
     public IncidentRecordSummary withResolvedTime(OffsetDateTime resolvedTime) {
         this.resolvedTime = resolvedTime;
         return this;
@@ -59,6 +64,7 @@ public class IncidentRecordSummary {
     
     @JsonProperty("status")
     public IncidentRecordStatusEnum status;
+
     public IncidentRecordSummary withStatus(IncidentRecordStatusEnum status) {
         this.status = status;
         return this;
@@ -66,9 +72,18 @@ public class IncidentRecordSummary {
     
     @JsonProperty("title")
     public String title;
+
     public IncidentRecordSummary withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public IncidentRecordSummary(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("impact") Long impact, @JsonProperty("incidentRecordSource") IncidentRecordSource incidentRecordSource, @JsonProperty("status") IncidentRecordStatusEnum status, @JsonProperty("title") String title) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.impact = impact;
+        this.incidentRecordSource = incidentRecordSource;
+        this.status = status;
+        this.title = title;
+  }
 }

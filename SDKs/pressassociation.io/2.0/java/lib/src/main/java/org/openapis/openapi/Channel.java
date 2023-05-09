@@ -60,11 +60,9 @@ public class Channel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetChannelResponse res = new org.openapis.openapi.models.operations.GetChannelResponse() {{
+        org.openapis.openapi.models.operations.GetChannelResponse res = new org.openapis.openapi.models.operations.GetChannelResponse(contentType, httpRes.statusCode()) {{
             getChannel200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -118,11 +116,9 @@ public class Channel {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ListChannelsResponse res = new org.openapis.openapi.models.operations.ListChannelsResponse() {{
+        org.openapis.openapi.models.operations.ListChannelsResponse res = new org.openapis.openapi.models.operations.ListChannelsResponse(contentType, httpRes.statusCode()) {{
             listChannels200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

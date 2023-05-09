@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * NodesContributorsListContributorRelationships - URLs to other entities or entity collections that have a relationship to the contributor entity.
@@ -15,6 +15,7 @@ public class NodesContributorsListContributorRelationships {
      */
     
     public String node;
+
     public NodesContributorsListContributorRelationships withNode(String node) {
         this.node = node;
         return this;
@@ -25,9 +26,14 @@ public class NodesContributorsListContributorRelationships {
      */
     
     public String user;
+
     public NodesContributorsListContributorRelationships withUser(String user) {
         this.user = user;
         return this;
     }
     
+    public NodesContributorsListContributorRelationships(@JsonProperty("node") String node, @JsonProperty("user") String user) {
+        this.node = node;
+        this.user = user;
+  }
 }

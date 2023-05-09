@@ -12,6 +12,7 @@ public class StartTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ClientRequestToken")
     public String clientRequestToken;
+
     public StartTextDetectionRequest withClientRequestToken(String clientRequestToken) {
         this.clientRequestToken = clientRequestToken;
         return this;
@@ -20,6 +21,7 @@ public class StartTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Filters")
     public StartTextDetectionFilters filters;
+
     public StartTextDetectionRequest withFilters(StartTextDetectionFilters filters) {
         this.filters = filters;
         return this;
@@ -28,6 +30,7 @@ public class StartTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("JobTag")
     public String jobTag;
+
     public StartTextDetectionRequest withJobTag(String jobTag) {
         this.jobTag = jobTag;
         return this;
@@ -39,6 +42,7 @@ public class StartTextDetectionRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NotificationChannel")
     public NotificationChannel notificationChannel;
+
     public StartTextDetectionRequest withNotificationChannel(NotificationChannel notificationChannel) {
         this.notificationChannel = notificationChannel;
         return this;
@@ -49,9 +53,13 @@ public class StartTextDetectionRequest {
      */
     @JsonProperty("Video")
     public Video video;
+
     public StartTextDetectionRequest withVideo(Video video) {
         this.video = video;
         return this;
     }
     
+    public StartTextDetectionRequest(@JsonProperty("Video") Video video) {
+        this.video = video;
+  }
 }

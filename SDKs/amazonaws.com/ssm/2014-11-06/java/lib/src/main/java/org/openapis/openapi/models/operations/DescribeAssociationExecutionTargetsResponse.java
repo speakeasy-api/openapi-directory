@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeAssociationExecutionTargetsResponse {
@@ -12,6 +13,7 @@ public class DescribeAssociationExecutionTargetsResponse {
      */
     
     public Object associationDoesNotExist;
+
     public DescribeAssociationExecutionTargetsResponse withAssociationDoesNotExist(Object associationDoesNotExist) {
         this.associationDoesNotExist = associationDoesNotExist;
         return this;
@@ -22,6 +24,7 @@ public class DescribeAssociationExecutionTargetsResponse {
      */
     
     public Object associationExecutionDoesNotExist;
+
     public DescribeAssociationExecutionTargetsResponse withAssociationExecutionDoesNotExist(Object associationExecutionDoesNotExist) {
         this.associationExecutionDoesNotExist = associationExecutionDoesNotExist;
         return this;
@@ -29,6 +32,7 @@ public class DescribeAssociationExecutionTargetsResponse {
     
     
     public String contentType;
+
     public DescribeAssociationExecutionTargetsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DescribeAssociationExecutionTargetsResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeAssociationExecutionTargetsResult describeAssociationExecutionTargetsResult;
+
     public DescribeAssociationExecutionTargetsResponse withDescribeAssociationExecutionTargetsResult(org.openapis.openapi.models.shared.DescribeAssociationExecutionTargetsResult describeAssociationExecutionTargetsResult) {
         this.describeAssociationExecutionTargetsResult = describeAssociationExecutionTargetsResult;
         return this;
@@ -49,6 +54,7 @@ public class DescribeAssociationExecutionTargetsResponse {
      */
     
     public Object internalServerError;
+
     public DescribeAssociationExecutionTargetsResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -59,6 +65,7 @@ public class DescribeAssociationExecutionTargetsResponse {
      */
     
     public Object invalidNextToken;
+
     public DescribeAssociationExecutionTargetsResponse withInvalidNextToken(Object invalidNextToken) {
         this.invalidNextToken = invalidNextToken;
         return this;
@@ -66,6 +73,7 @@ public class DescribeAssociationExecutionTargetsResponse {
     
     
     public Integer statusCode;
+
     public DescribeAssociationExecutionTargetsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeAssociationExecutionTargetsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeAssociationExecutionTargetsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeAssociationExecutionTargetsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

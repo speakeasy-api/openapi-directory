@@ -15,6 +15,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Attributes")
     public RxNormAttribute[] attributes;
+
     public RxNormEntity withAttributes(RxNormAttribute[] attributes) {
         this.attributes = attributes;
         return this;
@@ -23,6 +24,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BeginOffset")
     public Long beginOffset;
+
     public RxNormEntity withBeginOffset(Long beginOffset) {
         this.beginOffset = beginOffset;
         return this;
@@ -31,6 +33,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Category")
     public RxNormEntityCategoryEnum category;
+
     public RxNormEntity withCategory(RxNormEntityCategoryEnum category) {
         this.category = category;
         return this;
@@ -39,6 +42,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndOffset")
     public Long endOffset;
+
     public RxNormEntity withEndOffset(Long endOffset) {
         this.endOffset = endOffset;
         return this;
@@ -47,6 +51,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Long id;
+
     public RxNormEntity withId(Long id) {
         this.id = id;
         return this;
@@ -55,6 +60,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RxNormConcepts")
     public RxNormConcept[] rxNormConcepts;
+
     public RxNormEntity withRxNormConcepts(RxNormConcept[] rxNormConcepts) {
         this.rxNormConcepts = rxNormConcepts;
         return this;
@@ -63,6 +69,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Score")
     public Float score;
+
     public RxNormEntity withScore(Float score) {
         this.score = score;
         return this;
@@ -71,6 +78,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Text")
     public String text;
+
     public RxNormEntity withText(String text) {
         this.text = text;
         return this;
@@ -79,6 +87,7 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Traits")
     public RxNormTrait[] traits;
+
     public RxNormEntity withTraits(RxNormTrait[] traits) {
         this.traits = traits;
         return this;
@@ -87,9 +96,11 @@ public class RxNormEntity {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Type")
     public RxNormEntityTypeEnum type;
+
     public RxNormEntity withType(RxNormEntityTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public RxNormEntity(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateActivityResponse {
@@ -12,6 +13,7 @@ public class CreateActivityResponse {
      */
     
     public Object activityLimitExceeded;
+
     public CreateActivityResponse withActivityLimitExceeded(Object activityLimitExceeded) {
         this.activityLimitExceeded = activityLimitExceeded;
         return this;
@@ -19,6 +21,7 @@ public class CreateActivityResponse {
     
     
     public String contentType;
+
     public CreateActivityResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateActivityResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateActivityOutput createActivityOutput;
+
     public CreateActivityResponse withCreateActivityOutput(org.openapis.openapi.models.shared.CreateActivityOutput createActivityOutput) {
         this.createActivityOutput = createActivityOutput;
         return this;
@@ -39,6 +43,7 @@ public class CreateActivityResponse {
      */
     
     public Object invalidName;
+
     public CreateActivityResponse withInvalidName(Object invalidName) {
         this.invalidName = invalidName;
         return this;
@@ -46,6 +51,7 @@ public class CreateActivityResponse {
     
     
     public Integer statusCode;
+
     public CreateActivityResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class CreateActivityResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateActivityResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,9 +70,14 @@ public class CreateActivityResponse {
      */
     
     public Object tooManyTags;
+
     public CreateActivityResponse withTooManyTags(Object tooManyTags) {
         this.tooManyTags = tooManyTags;
         return this;
     }
     
+    public CreateActivityResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

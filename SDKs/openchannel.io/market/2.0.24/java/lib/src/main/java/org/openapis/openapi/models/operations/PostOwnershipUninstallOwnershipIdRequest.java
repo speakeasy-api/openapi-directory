@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostOwnershipUninstallOwnershipIdRequest {
@@ -12,6 +13,7 @@ public class PostOwnershipUninstallOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=cancelOwnership")
     public Boolean cancelOwnership;
+
     public PostOwnershipUninstallOwnershipIdRequest withCancelOwnership(Boolean cancelOwnership) {
         this.cancelOwnership = cancelOwnership;
         return this;
@@ -22,6 +24,7 @@ public class PostOwnershipUninstallOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=customData")
     public String customData;
+
     public PostOwnershipUninstallOwnershipIdRequest withCustomData(String customData) {
         this.customData = customData;
         return this;
@@ -32,6 +35,7 @@ public class PostOwnershipUninstallOwnershipIdRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=ownershipId")
     public String ownershipId;
+
     public PostOwnershipUninstallOwnershipIdRequest withOwnershipId(String ownershipId) {
         this.ownershipId = ownershipId;
         return this;
@@ -42,9 +46,14 @@ public class PostOwnershipUninstallOwnershipIdRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=userId")
     public String userId;
+
     public PostOwnershipUninstallOwnershipIdRequest withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public PostOwnershipUninstallOwnershipIdRequest(@JsonProperty("ownershipId") String ownershipId, @JsonProperty("userId") String userId) {
+        this.ownershipId = ownershipId;
+        this.userId = userId;
+  }
 }

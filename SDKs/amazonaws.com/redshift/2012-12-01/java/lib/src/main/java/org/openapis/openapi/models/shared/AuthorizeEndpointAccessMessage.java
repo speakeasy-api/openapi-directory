@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AuthorizeEndpointAccessMessage {
     
     public String account;
+
     public AuthorizeEndpointAccessMessage withAccount(String account) {
         this.account = account;
         return this;
@@ -16,6 +17,7 @@ public class AuthorizeEndpointAccessMessage {
     
     
     public String clusterIdentifier;
+
     public AuthorizeEndpointAccessMessage withClusterIdentifier(String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
         return this;
@@ -23,9 +25,13 @@ public class AuthorizeEndpointAccessMessage {
     
     
     public String[] vpcIds;
+
     public AuthorizeEndpointAccessMessage withVpcIds(String[] vpcIds) {
         this.vpcIds = vpcIds;
         return this;
     }
     
+    public AuthorizeEndpointAccessMessage(@JsonProperty("Account") String account) {
+        this.account = account;
+  }
 }

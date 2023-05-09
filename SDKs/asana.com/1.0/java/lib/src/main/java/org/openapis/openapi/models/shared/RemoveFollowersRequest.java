@@ -12,9 +12,13 @@ public class RemoveFollowersRequest {
      */
     @JsonProperty("followers")
     public String followers;
+
     public RemoveFollowersRequest withFollowers(String followers) {
         this.followers = followers;
         return this;
     }
     
+    public RemoveFollowersRequest(@JsonProperty("followers") String followers) {
+        this.followers = followers;
+  }
 }

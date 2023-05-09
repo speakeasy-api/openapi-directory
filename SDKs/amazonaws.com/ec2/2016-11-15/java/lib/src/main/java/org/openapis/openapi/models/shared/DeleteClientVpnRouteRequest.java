@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteClientVpnRouteRequest {
     
     public String clientVpnEndpointId;
+
     public DeleteClientVpnRouteRequest withClientVpnEndpointId(String clientVpnEndpointId) {
         this.clientVpnEndpointId = clientVpnEndpointId;
         return this;
@@ -16,6 +17,7 @@ public class DeleteClientVpnRouteRequest {
     
     
     public String destinationCidrBlock;
+
     public DeleteClientVpnRouteRequest withDestinationCidrBlock(String destinationCidrBlock) {
         this.destinationCidrBlock = destinationCidrBlock;
         return this;
@@ -23,6 +25,7 @@ public class DeleteClientVpnRouteRequest {
     
     
     public Boolean dryRun;
+
     public DeleteClientVpnRouteRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -30,9 +33,14 @@ public class DeleteClientVpnRouteRequest {
     
     
     public String targetVpcSubnetId;
+
     public DeleteClientVpnRouteRequest withTargetVpcSubnetId(String targetVpcSubnetId) {
         this.targetVpcSubnetId = targetVpcSubnetId;
         return this;
     }
     
+    public DeleteClientVpnRouteRequest(@JsonProperty("ClientVpnEndpointId") String clientVpnEndpointId, @JsonProperty("DestinationCidrBlock") String destinationCidrBlock) {
+        this.clientVpnEndpointId = clientVpnEndpointId;
+        this.destinationCidrBlock = destinationCidrBlock;
+  }
 }

@@ -15,6 +15,7 @@ public class InMemoryUser {
      */
     @JsonProperty("email")
     public String email;
+
     public InMemoryUser withEmail(String email) {
         this.email = email;
         return this;
@@ -25,6 +26,7 @@ public class InMemoryUser {
      */
     @JsonProperty("metadata")
     public java.util.Map<String, String> metadata;
+
     public InMemoryUser withMetadata(java.util.Map<String, String> metadata) {
         this.metadata = metadata;
         return this;
@@ -35,6 +37,7 @@ public class InMemoryUser {
      */
     @JsonProperty("name")
     public String name;
+
     public InMemoryUser withName(String name) {
         this.name = name;
         return this;
@@ -45,9 +48,16 @@ public class InMemoryUser {
      */
     @JsonProperty("password")
     public String password;
+
     public InMemoryUser withPassword(String password) {
         this.password = password;
         return this;
     }
     
+    public InMemoryUser(@JsonProperty("email") String email, @JsonProperty("metadata") java.util.Map<String, String> metadata, @JsonProperty("name") String name, @JsonProperty("password") String password) {
+        this.email = email;
+        this.metadata = metadata;
+        this.name = name;
+        this.password = password;
+  }
 }

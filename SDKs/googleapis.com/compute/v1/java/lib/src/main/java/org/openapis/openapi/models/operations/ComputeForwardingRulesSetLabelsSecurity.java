@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class ComputeForwardingRulesSetLabelsSecurity {
     @SpeakeasyMetadata("security:option=true")
     public ComputeForwardingRulesSetLabelsSecurityOption1 option1;
+
     public ComputeForwardingRulesSetLabelsSecurity withOption1(ComputeForwardingRulesSetLabelsSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,9 +17,11 @@ public class ComputeForwardingRulesSetLabelsSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public ComputeForwardingRulesSetLabelsSecurityOption2 option2;
+
     public ComputeForwardingRulesSetLabelsSecurity withOption2(ComputeForwardingRulesSetLabelsSecurityOption2 option2) {
         this.option2 = option2;
         return this;
     }
     
+    public ComputeForwardingRulesSetLabelsSecurity(){}
 }

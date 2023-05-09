@@ -12,6 +12,7 @@ public class Referee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FirstName")
     public String firstName;
+
     public Referee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -20,6 +21,7 @@ public class Referee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastName")
     public String lastName;
+
     public Referee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -28,6 +30,7 @@ public class Referee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Nationality")
     public String nationality;
+
     public Referee withNationality(String nationality) {
         this.nationality = nationality;
         return this;
@@ -36,6 +39,7 @@ public class Referee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RefereeId")
     public Long refereeId;
+
     public Referee withRefereeId(Long refereeId) {
         this.refereeId = refereeId;
         return this;
@@ -44,9 +48,11 @@ public class Referee {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ShortName")
     public String shortName;
+
     public Referee withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public Referee(){}
 }

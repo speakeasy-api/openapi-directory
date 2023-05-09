@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class DiaryControllerAddFeedbackJsonRequest {
@@ -12,6 +13,7 @@ public class DiaryControllerAddFeedbackJsonRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.FeedbackSubmissionModel feedbackSubmissionModel;
+
     public DiaryControllerAddFeedbackJsonRequest withFeedbackSubmissionModel(org.openapis.openapi.models.shared.FeedbackSubmissionModel feedbackSubmissionModel) {
         this.feedbackSubmissionModel = feedbackSubmissionModel;
         return this;
@@ -22,9 +24,14 @@ public class DiaryControllerAddFeedbackJsonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=shortName")
     public String shortName;
+
     public DiaryControllerAddFeedbackJsonRequest withShortName(String shortName) {
         this.shortName = shortName;
         return this;
     }
     
+    public DiaryControllerAddFeedbackJsonRequest(@JsonProperty("FeedbackSubmissionModel") org.openapis.openapi.models.shared.FeedbackSubmissionModel feedbackSubmissionModel, @JsonProperty("shortName") String shortName) {
+        this.feedbackSubmissionModel = feedbackSubmissionModel;
+        this.shortName = shortName;
+  }
 }

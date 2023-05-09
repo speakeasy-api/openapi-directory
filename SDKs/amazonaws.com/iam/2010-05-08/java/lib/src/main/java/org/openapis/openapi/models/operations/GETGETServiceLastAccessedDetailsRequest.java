@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETServiceLastAccessedDetailsRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETServiceLastAccessedDetailsActionEnum action;
+
     public GETGETServiceLastAccessedDetailsRequest withAction(GETGETServiceLastAccessedDetailsActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=JobId")
     public String jobId;
+
     public GETGETServiceLastAccessedDetailsRequest withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -29,6 +32,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Marker")
     public String marker;
+
     public GETGETServiceLastAccessedDetailsRequest withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -39,6 +43,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxItems")
     public Long maxItems;
+
     public GETGETServiceLastAccessedDetailsRequest withMaxItems(Long maxItems) {
         this.maxItems = maxItems;
         return this;
@@ -46,6 +51,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETServiceLastAccessedDetailsVersionEnum version;
+
     public GETGETServiceLastAccessedDetailsRequest withVersion(GETGETServiceLastAccessedDetailsVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETGETServiceLastAccessedDetailsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETServiceLastAccessedDetailsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETServiceLastAccessedDetailsRequest(@JsonProperty("Action") GETGETServiceLastAccessedDetailsActionEnum action, @JsonProperty("JobId") String jobId, @JsonProperty("Version") GETGETServiceLastAccessedDetailsVersionEnum version) {
+        this.action = action;
+        this.jobId = jobId;
+        this.version = version;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ConsentArtefactResponseConsent {
     @JsonProperty("consentDetail")
     public ConsentArtefactResponseConsentConsentDetail consentDetail;
+
     public ConsentArtefactResponseConsent withConsentDetail(ConsentArtefactResponseConsentConsentDetail consentDetail) {
         this.consentDetail = consentDetail;
         return this;
@@ -16,6 +17,7 @@ public class ConsentArtefactResponseConsent {
     
     @JsonProperty("signature")
     public String signature;
+
     public ConsentArtefactResponseConsent withSignature(String signature) {
         this.signature = signature;
         return this;
@@ -23,9 +25,15 @@ public class ConsentArtefactResponseConsent {
     
     @JsonProperty("status")
     public ConsentStatusEnum status;
+
     public ConsentArtefactResponseConsent withStatus(ConsentStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ConsentArtefactResponseConsent(@JsonProperty("consentDetail") ConsentArtefactResponseConsentConsentDetail consentDetail, @JsonProperty("signature") String signature, @JsonProperty("status") ConsentStatusEnum status) {
+        this.consentDetail = consentDetail;
+        this.signature = signature;
+        this.status = status;
+  }
 }

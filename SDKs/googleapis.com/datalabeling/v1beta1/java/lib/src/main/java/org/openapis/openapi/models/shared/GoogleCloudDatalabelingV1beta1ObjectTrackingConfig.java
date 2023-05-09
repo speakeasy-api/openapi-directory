@@ -18,6 +18,7 @@ public class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("annotationSpecSet")
     public String annotationSpecSet;
+
     public GoogleCloudDatalabelingV1beta1ObjectTrackingConfig withAnnotationSpecSet(String annotationSpecSet) {
         this.annotationSpecSet = annotationSpecSet;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clipLength")
     public Integer clipLength;
+
     public GoogleCloudDatalabelingV1beta1ObjectTrackingConfig withClipLength(Integer clipLength) {
         this.clipLength = clipLength;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overlapLength")
     public Integer overlapLength;
+
     public GoogleCloudDatalabelingV1beta1ObjectTrackingConfig withOverlapLength(Integer overlapLength) {
         this.overlapLength = overlapLength;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1ObjectTrackingConfig(){}
 }

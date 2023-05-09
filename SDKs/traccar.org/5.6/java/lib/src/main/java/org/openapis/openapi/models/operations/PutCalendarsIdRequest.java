@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutCalendarsIdRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.Calendar calendar;
+
     public PutCalendarsIdRequest withCalendar(org.openapis.openapi.models.shared.Calendar calendar) {
         this.calendar = calendar;
         return this;
@@ -16,9 +18,14 @@ public class PutCalendarsIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=id")
     public Long id;
+
     public PutCalendarsIdRequest withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PutCalendarsIdRequest(@JsonProperty("Calendar") org.openapis.openapi.models.shared.Calendar calendar, @JsonProperty("id") Long id) {
+        this.calendar = calendar;
+        this.id = id;
+  }
 }

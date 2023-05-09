@@ -18,6 +18,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("categoryId")
     public String categoryId;
+
     public BestSellers withCategoryId(String categoryId) {
         this.categoryId = categoryId;
         return this;
@@ -29,6 +30,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("countryCode")
     public String countryCode;
+
     public BestSellers withCountryCode(String countryCode) {
         this.countryCode = countryCode;
         return this;
@@ -40,6 +42,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousRank")
     public String previousRank;
+
     public BestSellers withPreviousRank(String previousRank) {
         this.previousRank = previousRank;
         return this;
@@ -51,6 +54,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("previousRelativeDemand")
     public BestSellersPreviousRelativeDemandEnum previousRelativeDemand;
+
     public BestSellers withPreviousRelativeDemand(BestSellersPreviousRelativeDemandEnum previousRelativeDemand) {
         this.previousRelativeDemand = previousRelativeDemand;
         return this;
@@ -62,6 +66,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rank")
     public String rank;
+
     public BestSellers withRank(String rank) {
         this.rank = rank;
         return this;
@@ -73,6 +78,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeDemand")
     public BestSellersRelativeDemandEnum relativeDemand;
+
     public BestSellers withRelativeDemand(BestSellersRelativeDemandEnum relativeDemand) {
         this.relativeDemand = relativeDemand;
         return this;
@@ -84,6 +90,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("relativeDemandChange")
     public BestSellersRelativeDemandChangeEnum relativeDemandChange;
+
     public BestSellers withRelativeDemandChange(BestSellersRelativeDemandChangeEnum relativeDemandChange) {
         this.relativeDemandChange = relativeDemandChange;
         return this;
@@ -95,6 +102,7 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportDate")
     public Date reportDate;
+
     public BestSellers withReportDate(Date reportDate) {
         this.reportDate = reportDate;
         return this;
@@ -106,9 +114,11 @@ public class BestSellers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reportGranularity")
     public BestSellersReportGranularityEnum reportGranularity;
+
     public BestSellers withReportGranularity(BestSellersReportGranularityEnum reportGranularity) {
         this.reportGranularity = reportGranularity;
         return this;
     }
     
+    public BestSellers(){}
 }

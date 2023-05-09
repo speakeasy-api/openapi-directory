@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ListAssetsRequest {
@@ -12,6 +13,7 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=HostIdFilter")
     public String[] hostIdFilter;
+
     public ListAssetsRequest withHostIdFilter(String[] hostIdFilter) {
         this.hostIdFilter = hostIdFilter;
         return this;
@@ -19,6 +21,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MaxResults")
     public Long maxResults;
+
     public ListAssetsRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -26,6 +29,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=NextToken")
     public String nextToken;
+
     public ListAssetsRequest withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -36,6 +40,7 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=OutpostId")
     public String outpostId;
+
     public ListAssetsRequest withOutpostId(String outpostId) {
         this.outpostId = outpostId;
         return this;
@@ -46,6 +51,7 @@ public class ListAssetsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=StatusFilter")
     public org.openapis.openapi.models.shared.AssetStateEnum[] statusFilter;
+
     public ListAssetsRequest withStatusFilter(org.openapis.openapi.models.shared.AssetStateEnum[] statusFilter) {
         this.statusFilter = statusFilter;
         return this;
@@ -53,6 +59,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public ListAssetsRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public ListAssetsRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public ListAssetsRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public ListAssetsRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public ListAssetsRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public ListAssetsRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,13 @@ public class ListAssetsRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public ListAssetsRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public ListAssetsRequest(@JsonProperty("OutpostId") String outpostId) {
+        this.outpostId = outpostId;
+  }
 }

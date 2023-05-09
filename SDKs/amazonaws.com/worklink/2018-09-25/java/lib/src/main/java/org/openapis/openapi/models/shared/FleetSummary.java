@@ -20,6 +20,7 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CompanyCode")
     public String companyCode;
+
     public FleetSummary withCompanyCode(String companyCode) {
         this.companyCode = companyCode;
         return this;
@@ -30,6 +31,7 @@ public class FleetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedTime")
     public OffsetDateTime createdTime;
+
     public FleetSummary withCreatedTime(OffsetDateTime createdTime) {
         this.createdTime = createdTime;
         return this;
@@ -38,6 +40,7 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DisplayName")
     public String displayName;
+
     public FleetSummary withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -46,6 +49,7 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetArn")
     public String fleetArn;
+
     public FleetSummary withFleetArn(String fleetArn) {
         this.fleetArn = fleetArn;
         return this;
@@ -54,6 +58,7 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetName")
     public String fleetName;
+
     public FleetSummary withFleetName(String fleetName) {
         this.fleetName = fleetName;
         return this;
@@ -62,6 +67,7 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FleetStatus")
     public FleetStatusEnum fleetStatus;
+
     public FleetSummary withFleetStatus(FleetStatusEnum fleetStatus) {
         this.fleetStatus = fleetStatus;
         return this;
@@ -72,6 +78,7 @@ public class FleetSummary {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastUpdatedTime")
     public OffsetDateTime lastUpdatedTime;
+
     public FleetSummary withLastUpdatedTime(OffsetDateTime lastUpdatedTime) {
         this.lastUpdatedTime = lastUpdatedTime;
         return this;
@@ -80,9 +87,11 @@ public class FleetSummary {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public java.util.Map<String, String> tags;
+
     public FleetSummary withTags(java.util.Map<String, String> tags) {
         this.tags = tags;
         return this;
     }
     
+    public FleetSummary(){}
 }

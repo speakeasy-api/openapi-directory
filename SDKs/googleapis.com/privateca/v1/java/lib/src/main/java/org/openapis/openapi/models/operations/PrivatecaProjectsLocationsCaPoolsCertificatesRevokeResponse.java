@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse {
@@ -12,6 +13,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse {
      */
     
     public org.openapis.openapi.models.shared.Certificate certificate;
+
     public PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse withCertificate(org.openapis.openapi.models.shared.Certificate certificate) {
         this.certificate = certificate;
         return this;
@@ -19,6 +21,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse {
     
     
     public String contentType;
+
     public PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse {
     
     
     public Integer statusCode;
+
     public PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PrivatecaProjectsLocationsCaPoolsCertificatesRevokeResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.time.OffsetDateTime;
 
 /**
@@ -12,6 +13,7 @@ import java.time.OffsetDateTime;
 public class ServiceSpecificCredential {
     
     public OffsetDateTime createDate;
+
     public ServiceSpecificCredential withCreateDate(OffsetDateTime createDate) {
         this.createDate = createDate;
         return this;
@@ -19,6 +21,7 @@ public class ServiceSpecificCredential {
     
     
     public String serviceName;
+
     public ServiceSpecificCredential withServiceName(String serviceName) {
         this.serviceName = serviceName;
         return this;
@@ -26,6 +29,7 @@ public class ServiceSpecificCredential {
     
     
     public String servicePassword;
+
     public ServiceSpecificCredential withServicePassword(String servicePassword) {
         this.servicePassword = servicePassword;
         return this;
@@ -33,6 +37,7 @@ public class ServiceSpecificCredential {
     
     
     public String serviceSpecificCredentialId;
+
     public ServiceSpecificCredential withServiceSpecificCredentialId(String serviceSpecificCredentialId) {
         this.serviceSpecificCredentialId = serviceSpecificCredentialId;
         return this;
@@ -40,6 +45,7 @@ public class ServiceSpecificCredential {
     
     
     public String serviceUserName;
+
     public ServiceSpecificCredential withServiceUserName(String serviceUserName) {
         this.serviceUserName = serviceUserName;
         return this;
@@ -47,6 +53,7 @@ public class ServiceSpecificCredential {
     
     
     public StatusTypeEnum status;
+
     public ServiceSpecificCredential withStatus(StatusTypeEnum status) {
         this.status = status;
         return this;
@@ -54,9 +61,18 @@ public class ServiceSpecificCredential {
     
     
     public String userName;
+
     public ServiceSpecificCredential withUserName(String userName) {
         this.userName = userName;
         return this;
     }
     
+    public ServiceSpecificCredential(@JsonProperty("ServiceUserName") String serviceUserName, @JsonProperty("ServicePassword") String servicePassword, @JsonProperty("CreateDate") OffsetDateTime createDate, @JsonProperty("ServiceName") String serviceName, @JsonProperty("ServiceSpecificCredentialId") String serviceSpecificCredentialId, @JsonProperty("Status") StatusTypeEnum status) {
+        this.serviceUserName = serviceUserName;
+        this.servicePassword = servicePassword;
+        this.createDate = createDate;
+        this.serviceName = serviceName;
+        this.serviceSpecificCredentialId = serviceSpecificCredentialId;
+        this.status = status;
+  }
 }

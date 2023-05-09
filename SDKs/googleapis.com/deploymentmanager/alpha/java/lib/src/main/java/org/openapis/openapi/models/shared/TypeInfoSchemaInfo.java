@@ -15,6 +15,7 @@ public class TypeInfoSchemaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("input")
     public String input;
+
     public TypeInfoSchemaInfo withInput(String input) {
         this.input = input;
         return this;
@@ -26,9 +27,11 @@ public class TypeInfoSchemaInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("output")
     public String output;
+
     public TypeInfoSchemaInfo withOutput(String output) {
         this.output = output;
         return this;
     }
     
+    public TypeInfoSchemaInfo(){}
 }

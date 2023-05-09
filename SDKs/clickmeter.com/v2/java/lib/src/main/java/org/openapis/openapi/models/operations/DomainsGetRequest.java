@@ -12,6 +12,7 @@ public class DomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public DomainsGetRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -22,6 +23,7 @@ public class DomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=name")
     public String name;
+
     public DomainsGetRequest withName(String name) {
         this.name = name;
         return this;
@@ -32,6 +34,7 @@ public class DomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public DomainsGetRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,9 +45,11 @@ public class DomainsGetRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public DomainsGetTypeEnum type;
+
     public DomainsGetRequest withType(DomainsGetTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public DomainsGetRequest(){}
 }

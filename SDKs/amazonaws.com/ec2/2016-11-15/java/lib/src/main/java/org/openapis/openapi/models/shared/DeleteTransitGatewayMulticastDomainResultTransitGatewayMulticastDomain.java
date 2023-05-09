@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain {
     
     public OffsetDateTime creationTime;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -19,6 +20,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions options;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withOptions(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainOptions options) {
         this.options = options;
         return this;
@@ -26,6 +28,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public String ownerId;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -33,6 +36,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainStateEnum state;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withState(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainStateEnum state) {
         this.state = state;
         return this;
@@ -40,6 +44,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainTags[] tags;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withTags(DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomainTags[] tags) {
         this.tags = tags;
         return this;
@@ -47,6 +52,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public String transitGatewayId;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withTransitGatewayId(String transitGatewayId) {
         this.transitGatewayId = transitGatewayId;
         return this;
@@ -54,6 +60,7 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public String transitGatewayMulticastDomainArn;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withTransitGatewayMulticastDomainArn(String transitGatewayMulticastDomainArn) {
         this.transitGatewayMulticastDomainArn = transitGatewayMulticastDomainArn;
         return this;
@@ -61,9 +68,11 @@ public class DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDom
     
     
     public String transitGatewayMulticastDomainId;
+
     public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain withTransitGatewayMulticastDomainId(String transitGatewayMulticastDomainId) {
         this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
         return this;
     }
     
+    public DeleteTransitGatewayMulticastDomainResultTransitGatewayMulticastDomain(){}
 }

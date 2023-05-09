@@ -50,4 +50,6 @@ lib/src/main/java/org/openapis/openapi/models/shared/Permission.java
 lib/src/main/java/org/openapis/openapi/models/shared/Move.java
 lib/src/main/java/org/openapis/openapi/models/shared/Parent.java
 lib/src/main/java/org/openapis/openapi/models/shared/AltEnum.java
+docs/sdk/README.md
+docs/activities/README.md
 USAGE.md

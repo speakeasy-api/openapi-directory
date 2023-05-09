@@ -18,6 +18,7 @@ public class VideoProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("autoPlay")
     public Boolean autoPlay;
+
     public VideoProperties withAutoPlay(Boolean autoPlay) {
         this.autoPlay = autoPlay;
         return this;
@@ -29,6 +30,7 @@ public class VideoProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("end")
     public Long end;
+
     public VideoProperties withEnd(Long end) {
         this.end = end;
         return this;
@@ -40,6 +42,7 @@ public class VideoProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mute")
     public Boolean mute;
+
     public VideoProperties withMute(Boolean mute) {
         this.mute = mute;
         return this;
@@ -51,6 +54,7 @@ public class VideoProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("outline")
     public Outline outline;
+
     public VideoProperties withOutline(Outline outline) {
         this.outline = outline;
         return this;
@@ -62,9 +66,11 @@ public class VideoProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("start")
     public Long start;
+
     public VideoProperties withStart(Long start) {
         this.start = start;
         return this;
     }
     
+    public VideoProperties(){}
 }

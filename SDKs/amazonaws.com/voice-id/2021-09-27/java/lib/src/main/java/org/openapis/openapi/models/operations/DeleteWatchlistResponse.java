@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteWatchlistResponse {
@@ -12,6 +13,7 @@ public class DeleteWatchlistResponse {
      */
     
     public Object accessDeniedException;
+
     public DeleteWatchlistResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteWatchlistResponse {
      */
     
     public Object conflictException;
+
     public DeleteWatchlistResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteWatchlistResponse {
     
     
     public String contentType;
+
     public DeleteWatchlistResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteWatchlistResponse {
      */
     
     public Object internalServerException;
+
     public DeleteWatchlistResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -49,6 +54,7 @@ public class DeleteWatchlistResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DeleteWatchlistResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteWatchlistResponse {
     
     
     public Integer statusCode;
+
     public DeleteWatchlistResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteWatchlistResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteWatchlistResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class DeleteWatchlistResponse {
      */
     
     public Object throttlingException;
+
     public DeleteWatchlistResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DeleteWatchlistResponse {
      */
     
     public Object validationException;
+
     public DeleteWatchlistResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DeleteWatchlistResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

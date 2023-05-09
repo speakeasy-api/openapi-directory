@@ -15,9 +15,11 @@ public class StartPipelineReprocessingRequestBodyChannelMessages {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3Paths")
     public String[] s3Paths;
+
     public StartPipelineReprocessingRequestBodyChannelMessages withS3Paths(String[] s3Paths) {
         this.s3Paths = s3Paths;
         return this;
     }
     
+    public StartPipelineReprocessingRequestBodyChannelMessages(){}
 }

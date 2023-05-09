@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries {
     @JsonProperty("address")
     public String address;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withAddress(String address) {
         this.address = address;
         return this;
@@ -19,6 +20,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withEmail(String email) {
         this.email = email;
         return this;
@@ -26,6 +28,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     
     @JsonProperty("first_name")
     public String firstName;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -33,6 +36,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     
     @JsonProperty("last_name")
     public String lastName;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withLastName(String lastName) {
         this.lastName = lastName;
         return this;
@@ -40,6 +44,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     
     @JsonProperty("percentage")
     public String percentage;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withPercentage(String percentage) {
         this.percentage = percentage;
         return this;
@@ -48,6 +53,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone_number")
     public String phoneNumber;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -56,6 +62,7 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tax_id")
     public String taxId;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withTaxId(String taxId) {
         this.taxId = taxId;
         return this;
@@ -64,9 +71,16 @@ public class CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSi
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public CreateInvestorRootTypeForInvestorCreationResponseExpressionOfWishSippBeneficiaries(@JsonProperty("address") String address, @JsonProperty("first_name") String firstName, @JsonProperty("last_name") String lastName, @JsonProperty("percentage") String percentage) {
+        this.address = address;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.percentage = percentage;
+  }
 }

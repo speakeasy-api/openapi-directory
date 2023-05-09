@@ -55,10 +55,8 @@ public class BundleNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteBundleNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.DeleteBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.DeleteBundleNotificationsIdResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204 || httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 405 || httpRes.statusCode() == 409 || httpRes.statusCode() == 412 || httpRes.statusCode() == 422 || httpRes.statusCode() == 423 || httpRes.statusCode() == 429) {
@@ -94,11 +92,9 @@ public class BundleNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundleNotificationsResponse res = new org.openapis.openapi.models.operations.GetBundleNotificationsResponse() {{
+        org.openapis.openapi.models.operations.GetBundleNotificationsResponse res = new org.openapis.openapi.models.operations.GetBundleNotificationsResponse(contentType, httpRes.statusCode()) {{
             bundleNotificationEntities = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -135,11 +131,9 @@ public class BundleNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.GetBundleNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.GetBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.GetBundleNotificationsIdResponse(contentType, httpRes.statusCode()) {{
             bundleNotificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -178,11 +172,9 @@ public class BundleNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PatchBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.PatchBundleNotificationsIdResponse() {{
+        org.openapis.openapi.models.operations.PatchBundleNotificationsIdResponse res = new org.openapis.openapi.models.operations.PatchBundleNotificationsIdResponse(contentType, httpRes.statusCode()) {{
             bundleNotificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -221,11 +213,9 @@ public class BundleNotifications {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostBundleNotificationsResponse res = new org.openapis.openapi.models.operations.PostBundleNotificationsResponse() {{
+        org.openapis.openapi.models.operations.PostBundleNotificationsResponse res = new org.openapis.openapi.models.operations.PostBundleNotificationsResponse(contentType, httpRes.statusCode()) {{
             bundleNotificationEntity = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 201) {

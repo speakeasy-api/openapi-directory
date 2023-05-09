@@ -20,6 +20,7 @@ public class ControlMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("arn")
     public String arn;
+
     public ControlMetadata withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class ControlMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("controlSources")
     public String controlSources;
+
     public ControlMetadata withControlSources(String controlSources) {
         this.controlSources = controlSources;
         return this;
@@ -38,6 +40,7 @@ public class ControlMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public ControlMetadata withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +49,7 @@ public class ControlMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ControlMetadata withId(String id) {
         this.id = id;
         return this;
@@ -56,6 +60,7 @@ public class ControlMetadata {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("lastUpdatedAt")
     public OffsetDateTime lastUpdatedAt;
+
     public ControlMetadata withLastUpdatedAt(OffsetDateTime lastUpdatedAt) {
         this.lastUpdatedAt = lastUpdatedAt;
         return this;
@@ -64,9 +69,11 @@ public class ControlMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ControlMetadata withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ControlMetadata(){}
 }

@@ -18,6 +18,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("assignment")
     public NetworkAddressAssignmentEnum assignment;
+
     public NetworkAddress withAssignment(NetworkAddressAssignmentEnum assignment) {
         this.assignment = assignment;
         return this;
@@ -29,6 +30,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bcast")
     public String bcast;
+
     public NetworkAddress withBcast(String bcast) {
         this.bcast = bcast;
         return this;
@@ -40,6 +42,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fqdn")
     public String fqdn;
+
     public NetworkAddress withFqdn(String fqdn) {
         this.fqdn = fqdn;
         return this;
@@ -51,6 +54,7 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public NetworkAddress withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -62,9 +66,11 @@ public class NetworkAddress {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subnetMask")
     public String subnetMask;
+
     public NetworkAddress withSubnetMask(String subnetMask) {
         this.subnetMask = subnetMask;
         return this;
     }
     
+    public NetworkAddress(){}
 }

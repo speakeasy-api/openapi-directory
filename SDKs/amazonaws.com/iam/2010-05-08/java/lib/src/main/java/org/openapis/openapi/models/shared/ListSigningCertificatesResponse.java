@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListSigningCertificatesResponse - Contains the response to a successful &lt;a&gt;ListSigningCertificates&lt;/a&gt; request. 
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListSigningCertificatesResponse {
     
     public SigningCertificate[] certificates;
+
     public ListSigningCertificatesResponse withCertificates(SigningCertificate[] certificates) {
         this.certificates = certificates;
         return this;
@@ -19,6 +20,7 @@ public class ListSigningCertificatesResponse {
     
     
     public Boolean isTruncated;
+
     public ListSigningCertificatesResponse withIsTruncated(Boolean isTruncated) {
         this.isTruncated = isTruncated;
         return this;
@@ -26,9 +28,13 @@ public class ListSigningCertificatesResponse {
     
     
     public String marker;
+
     public ListSigningCertificatesResponse withMarker(String marker) {
         this.marker = marker;
         return this;
     }
     
+    public ListSigningCertificatesResponse(@JsonProperty("Certificates") SigningCertificate[] certificates) {
+        this.certificates = certificates;
+  }
 }

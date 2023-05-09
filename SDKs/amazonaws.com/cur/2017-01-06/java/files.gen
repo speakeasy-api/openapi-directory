@@ -56,4 +56,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/DescribeReportDefinitionsRe
 lib/src/main/java/org/openapis/openapi/models/shared/ModifyReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/PutReportDefinitionRequest.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

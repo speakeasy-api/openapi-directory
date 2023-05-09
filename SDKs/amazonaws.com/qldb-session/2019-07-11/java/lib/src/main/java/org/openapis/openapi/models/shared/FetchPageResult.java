@@ -15,6 +15,7 @@ public class FetchPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ConsumedIOs")
     public IOUsage consumedIOs;
+
     public FetchPageResult withConsumedIOs(IOUsage consumedIOs) {
         this.consumedIOs = consumedIOs;
         return this;
@@ -23,6 +24,7 @@ public class FetchPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Page")
     public Page page;
+
     public FetchPageResult withPage(Page page) {
         this.page = page;
         return this;
@@ -31,9 +33,11 @@ public class FetchPageResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TimingInformation")
     public TimingInformation timingInformation;
+
     public FetchPageResult withTimingInformation(TimingInformation timingInformation) {
         this.timingInformation = timingInformation;
         return this;
     }
     
+    public FetchPageResult(){}
 }

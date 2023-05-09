@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ImportationDeleteCustomColumnResponse {
@@ -13,6 +14,7 @@ public class ImportationDeleteCustomColumnResponse {
      */
     
     public org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage;
+
     public ImportationDeleteCustomColumnResponse withBeezUPCommonErrorResponseMessage(org.openapis.openapi.models.shared.BeezUPCommonErrorResponseMessage beezUPCommonErrorResponseMessage) {
         this.beezUPCommonErrorResponseMessage = beezUPCommonErrorResponseMessage;
         return this;
@@ -20,6 +22,7 @@ public class ImportationDeleteCustomColumnResponse {
     
     
     public String contentType;
+
     public ImportationDeleteCustomColumnResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -27,6 +30,7 @@ public class ImportationDeleteCustomColumnResponse {
     
     
     public Integer statusCode;
+
     public ImportationDeleteCustomColumnResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -34,9 +38,14 @@ public class ImportationDeleteCustomColumnResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ImportationDeleteCustomColumnResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ImportationDeleteCustomColumnResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

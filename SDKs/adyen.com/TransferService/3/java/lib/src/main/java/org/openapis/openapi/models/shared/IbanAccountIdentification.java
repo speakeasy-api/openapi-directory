@@ -15,6 +15,7 @@ public class IbanAccountIdentification {
      */
     @JsonProperty("iban")
     public String iban;
+
     public IbanAccountIdentification withIban(String iban) {
         this.iban = iban;
         return this;
@@ -25,9 +26,14 @@ public class IbanAccountIdentification {
      */
     @JsonProperty("type")
     public IbanAccountIdentificationTypeEnum type;
+
     public IbanAccountIdentification withType(IbanAccountIdentificationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public IbanAccountIdentification(@JsonProperty("iban") String iban, @JsonProperty("type") IbanAccountIdentificationTypeEnum type) {
+        this.iban = iban;
+        this.type = type;
+  }
 }

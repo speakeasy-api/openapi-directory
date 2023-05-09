@@ -59,10 +59,8 @@ public class LiveChatModerators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsDeleteResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsDeleteResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsDeleteResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -101,11 +99,9 @@ public class LiveChatModerators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsInsertResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsInsertResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsInsertResponse(contentType, httpRes.statusCode()) {{
             liveChatModerator = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -147,11 +143,9 @@ public class LiveChatModerators {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsListResponse() {{
+        org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsListResponse res = new org.openapis.openapi.models.operations.YoutubeLiveChatModeratorsListResponse(contentType, httpRes.statusCode()) {{
             liveChatModeratorListResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

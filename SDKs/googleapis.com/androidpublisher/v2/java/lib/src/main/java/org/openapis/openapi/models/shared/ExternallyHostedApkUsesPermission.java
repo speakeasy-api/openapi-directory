@@ -18,6 +18,7 @@ public class ExternallyHostedApkUsesPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maxSdkVersion")
     public Integer maxSDKVersion;
+
     public ExternallyHostedApkUsesPermission withMaxSDKVersion(Integer maxSDKVersion) {
         this.maxSDKVersion = maxSDKVersion;
         return this;
@@ -29,9 +30,11 @@ public class ExternallyHostedApkUsesPermission {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ExternallyHostedApkUsesPermission withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ExternallyHostedApkUsesPermission(){}
 }

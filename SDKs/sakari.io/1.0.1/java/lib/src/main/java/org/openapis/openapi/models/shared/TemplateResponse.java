@@ -15,6 +15,7 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public Template data;
+
     public TemplateResponse withData(Template data) {
         this.data = data;
         return this;
@@ -23,9 +24,11 @@ public class TemplateResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("success")
     public Boolean success;
+
     public TemplateResponse withSuccess(Boolean success) {
         this.success = success;
         return this;
     }
     
+    public TemplateResponse(){}
 }

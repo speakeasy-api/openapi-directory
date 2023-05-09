@@ -7,15 +7,15 @@ package org.openapis.openapi.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum {
-    ZERO("0"),
-    ONE("1"),
-    TWO("2"),
-    THREE("3");
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3);
 
     @JsonValue
-    public final String value;
+    public final Integer value;
 
-    private BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum(String value) {
+    private BillbeeInterfacesBillbeeAPIModelArticleAPICustomFieldDefinitionModelTypeEnum(Integer value) {
         this.value = value;
     }
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SearchStickersRequest {
@@ -12,6 +13,7 @@ public class SearchStickersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=lang")
     public String lang;
+
     public SearchStickersRequest withLang(String lang) {
         this.lang = lang;
         return this;
@@ -22,6 +24,7 @@ public class SearchStickersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=limit")
     public Integer limit;
+
     public SearchStickersRequest withLimit(Integer limit) {
         this.limit = limit;
         return this;
@@ -32,6 +35,7 @@ public class SearchStickersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=offset")
     public Integer offset;
+
     public SearchStickersRequest withOffset(Integer offset) {
         this.offset = offset;
         return this;
@@ -42,6 +46,7 @@ public class SearchStickersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public SearchStickersRequest withQ(String q) {
         this.q = q;
         return this;
@@ -52,9 +57,13 @@ public class SearchStickersRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=rating")
     public String rating;
+
     public SearchStickersRequest withRating(String rating) {
         this.rating = rating;
         return this;
     }
     
+    public SearchStickersRequest(@JsonProperty("q") String q) {
+        this.q = q;
+  }
 }

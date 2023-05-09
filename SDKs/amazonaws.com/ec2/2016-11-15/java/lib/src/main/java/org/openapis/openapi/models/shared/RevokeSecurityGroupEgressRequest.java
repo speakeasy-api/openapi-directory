@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class RevokeSecurityGroupEgressRequest {
     
     public String cidrIp;
+
     public RevokeSecurityGroupEgressRequest withCidrIp(String cidrIp) {
         this.cidrIp = cidrIp;
         return this;
@@ -16,6 +17,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public Boolean dryRun;
+
     public RevokeSecurityGroupEgressRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -23,6 +25,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public Long fromPort;
+
     public RevokeSecurityGroupEgressRequest withFromPort(Long fromPort) {
         this.fromPort = fromPort;
         return this;
@@ -30,6 +33,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public String groupId;
+
     public RevokeSecurityGroupEgressRequest withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -37,6 +41,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public RevokeSecurityGroupEgressRequestIpPermissions[] ipPermissions;
+
     public RevokeSecurityGroupEgressRequest withIpPermissions(RevokeSecurityGroupEgressRequestIpPermissions[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -44,6 +49,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public String ipProtocol;
+
     public RevokeSecurityGroupEgressRequest withIpProtocol(String ipProtocol) {
         this.ipProtocol = ipProtocol;
         return this;
@@ -51,6 +57,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public String[] securityGroupRuleIds;
+
     public RevokeSecurityGroupEgressRequest withSecurityGroupRuleIds(String[] securityGroupRuleIds) {
         this.securityGroupRuleIds = securityGroupRuleIds;
         return this;
@@ -58,6 +65,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public String sourceSecurityGroupName;
+
     public RevokeSecurityGroupEgressRequest withSourceSecurityGroupName(String sourceSecurityGroupName) {
         this.sourceSecurityGroupName = sourceSecurityGroupName;
         return this;
@@ -65,6 +73,7 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public String sourceSecurityGroupOwnerId;
+
     public RevokeSecurityGroupEgressRequest withSourceSecurityGroupOwnerId(String sourceSecurityGroupOwnerId) {
         this.sourceSecurityGroupOwnerId = sourceSecurityGroupOwnerId;
         return this;
@@ -72,9 +81,13 @@ public class RevokeSecurityGroupEgressRequest {
     
     
     public Long toPort;
+
     public RevokeSecurityGroupEgressRequest withToPort(Long toPort) {
         this.toPort = toPort;
         return this;
     }
     
+    public RevokeSecurityGroupEgressRequest(@JsonProperty("GroupId") String groupId) {
+        this.groupId = groupId;
+  }
 }

@@ -54,10 +54,8 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.CancelTasksResponse res = new org.openapis.openapi.models.operations.CancelTasksResponse() {{
+        org.openapis.openapi.models.operations.CancelTasksResponse res = new org.openapis.openapi.models.operations.CancelTasksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -93,10 +91,8 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeleteTasksResponse res = new org.openapis.openapi.models.operations.DeleteTasksResponse() {{
+        org.openapis.openapi.models.operations.DeleteTasksResponse res = new org.openapis.openapi.models.operations.DeleteTasksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -132,10 +128,8 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllTasksResponse res = new org.openapis.openapi.models.operations.GetAllTasksResponse() {{
+        org.openapis.openapi.models.operations.GetAllTasksResponse res = new org.openapis.openapi.models.operations.GetAllTasksResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -164,10 +158,8 @@ public class Tasks {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetOneTaskResponse res = new org.openapis.openapi.models.operations.GetOneTaskResponse() {{
+        org.openapis.openapi.models.operations.GetOneTaskResponse res = new org.openapis.openapi.models.operations.GetOneTaskResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

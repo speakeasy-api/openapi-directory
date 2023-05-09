@@ -12,6 +12,7 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("collection")
     public User[] collection;
+
     public Users withCollection(User[] collection) {
         this.collection = collection;
         return this;
@@ -20,9 +21,11 @@ public class Users {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("next_href")
     public String nextHref;
+
     public Users withNextHref(String nextHref) {
         this.nextHref = nextHref;
         return this;
     }
     
+    public Users(){}
 }

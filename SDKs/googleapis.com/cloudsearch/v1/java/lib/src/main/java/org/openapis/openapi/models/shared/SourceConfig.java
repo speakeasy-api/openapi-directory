@@ -18,6 +18,7 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("crowdingConfig")
     public SourceCrowdingConfig crowdingConfig;
+
     public SourceConfig withCrowdingConfig(SourceCrowdingConfig crowdingConfig) {
         this.crowdingConfig = crowdingConfig;
         return this;
@@ -29,6 +30,7 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scoringConfig")
     public SourceScoringConfig scoringConfig;
+
     public SourceConfig withScoringConfig(SourceScoringConfig scoringConfig) {
         this.scoringConfig = scoringConfig;
         return this;
@@ -40,9 +42,11 @@ public class SourceConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("source")
     public Source source;
+
     public SourceConfig withSource(Source source) {
         this.source = source;
         return this;
     }
     
+    public SourceConfig(){}
 }

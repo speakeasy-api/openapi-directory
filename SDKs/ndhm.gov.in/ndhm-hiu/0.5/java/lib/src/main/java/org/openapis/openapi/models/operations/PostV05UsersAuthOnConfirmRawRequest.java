@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostV05UsersAuthOnConfirmRawRequest {
@@ -12,6 +13,7 @@ public class PostV05UsersAuthOnConfirmRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Authorization")
     public String authorization;
+
     public PostV05UsersAuthOnConfirmRawRequest withAuthorization(String authorization) {
         this.authorization = authorization;
         return this;
@@ -19,6 +21,7 @@ public class PostV05UsersAuthOnConfirmRawRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/xml")
     public byte[] requestBody;
+
     public PostV05UsersAuthOnConfirmRawRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -29,6 +32,7 @@ public class PostV05UsersAuthOnConfirmRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIP-ID")
     public String xHipId;
+
     public PostV05UsersAuthOnConfirmRawRequest withXHipId(String xHipId) {
         this.xHipId = xHipId;
         return this;
@@ -39,9 +43,16 @@ public class PostV05UsersAuthOnConfirmRawRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-HIU-ID")
     public String xHiuId;
+
     public PostV05UsersAuthOnConfirmRawRequest withXHiuId(String xHiuId) {
         this.xHiuId = xHiuId;
         return this;
     }
     
+    public PostV05UsersAuthOnConfirmRawRequest(@JsonProperty("Authorization") String authorization, @JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("X-HIP-ID") String xHipId, @JsonProperty("X-HIU-ID") String xHiuId) {
+        this.authorization = authorization;
+        this.requestBody = requestBody;
+        this.xHipId = xHipId;
+        this.xHiuId = xHiuId;
+  }
 }

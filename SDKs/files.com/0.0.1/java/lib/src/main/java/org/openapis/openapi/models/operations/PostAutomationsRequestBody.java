@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAutomationsRequestBody {
@@ -12,6 +13,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=automation")
     public PostAutomationsRequestBodyAutomationEnum automation;
+
     public PostAutomationsRequestBody withAutomation(PostAutomationsRequestBodyAutomationEnum automation) {
         this.automation = automation;
         return this;
@@ -22,6 +24,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=description")
     public String description;
+
     public PostAutomationsRequestBody withDescription(String description) {
         this.description = description;
         return this;
@@ -32,6 +35,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination")
     public String destination;
+
     public PostAutomationsRequestBody withDestination(String destination) {
         this.destination = destination;
         return this;
@@ -42,6 +46,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination_replace_from")
     public String destinationReplaceFrom;
+
     public PostAutomationsRequestBody withDestinationReplaceFrom(String destinationReplaceFrom) {
         this.destinationReplaceFrom = destinationReplaceFrom;
         return this;
@@ -52,6 +57,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destination_replace_to")
     public String destinationReplaceTo;
+
     public PostAutomationsRequestBody withDestinationReplaceTo(String destinationReplaceTo) {
         this.destinationReplaceTo = destinationReplaceTo;
         return this;
@@ -62,6 +68,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=destinations")
     public String[] destinations;
+
     public PostAutomationsRequestBody withDestinations(String[] destinations) {
         this.destinations = destinations;
         return this;
@@ -72,6 +79,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=disabled")
     public Boolean disabled;
+
     public PostAutomationsRequestBody withDisabled(Boolean disabled) {
         this.disabled = disabled;
         return this;
@@ -82,6 +90,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=group_ids")
     public String groupIds;
+
     public PostAutomationsRequestBody withGroupIds(String groupIds) {
         this.groupIds = groupIds;
         return this;
@@ -92,6 +101,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=interval")
     public String interval;
+
     public PostAutomationsRequestBody withInterval(String interval) {
         this.interval = interval;
         return this;
@@ -102,6 +112,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=name")
     public String name;
+
     public PostAutomationsRequestBody withName(String name) {
         this.name = name;
         return this;
@@ -112,8 +123,20 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=path")
     public String path;
+
     public PostAutomationsRequestBody withPath(String path) {
         this.path = path;
+        return this;
+    }
+    
+    /**
+     * If trigger type is `daily`, this specifies a day number to run in one of the supported intervals: `week`, `month`, `quarter`, `year`.
+     */
+    @SpeakeasyMetadata("multipartForm:name=recurring_day")
+    public Integer recurringDay;
+
+    public PostAutomationsRequestBody withRecurringDay(Integer recurringDay) {
+        this.recurringDay = recurringDay;
         return this;
     }
     
@@ -122,6 +145,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=schedule,json")
     public java.util.Map<String, Object> schedule;
+
     public PostAutomationsRequestBody withSchedule(java.util.Map<String, Object> schedule) {
         this.schedule = schedule;
         return this;
@@ -132,6 +156,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=source")
     public String source;
+
     public PostAutomationsRequestBody withSource(String source) {
         this.source = source;
         return this;
@@ -142,6 +167,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=sync_ids")
     public String syncIds;
+
     public PostAutomationsRequestBody withSyncIds(String syncIds) {
         this.syncIds = syncIds;
         return this;
@@ -152,6 +178,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trigger")
     public PostAutomationsRequestBodyTriggerEnum trigger;
+
     public PostAutomationsRequestBody withTrigger(PostAutomationsRequestBodyTriggerEnum trigger) {
         this.trigger = trigger;
         return this;
@@ -162,6 +189,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=trigger_actions")
     public String[] triggerActions;
+
     public PostAutomationsRequestBody withTriggerActions(String[] triggerActions) {
         this.triggerActions = triggerActions;
         return this;
@@ -172,6 +200,7 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=user_ids")
     public String userIds;
+
     public PostAutomationsRequestBody withUserIds(String userIds) {
         this.userIds = userIds;
         return this;
@@ -182,9 +211,13 @@ public class PostAutomationsRequestBody {
      */
     @SpeakeasyMetadata("multipartForm:name=value,json")
     public java.util.Map<String, Object> value;
+
     public PostAutomationsRequestBody withValue(java.util.Map<String, Object> value) {
         this.value = value;
         return this;
     }
     
+    public PostAutomationsRequestBody(@JsonProperty("automation") PostAutomationsRequestBodyAutomationEnum automation) {
+        this.automation = automation;
+  }
 }

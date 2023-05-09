@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateCustomerGatewayRequest - Contains the parameters for CreateCustomerGateway.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCustomerGatewayRequest {
     
     public Long bgpAsn;
+
     public CreateCustomerGatewayRequest withBgpAsn(Long bgpAsn) {
         this.bgpAsn = bgpAsn;
         return this;
@@ -19,6 +20,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public String certificateArn;
+
     public CreateCustomerGatewayRequest withCertificateArn(String certificateArn) {
         this.certificateArn = certificateArn;
         return this;
@@ -26,6 +28,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public String deviceName;
+
     public CreateCustomerGatewayRequest withDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -33,6 +36,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public Boolean dryRun;
+
     public CreateCustomerGatewayRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -40,6 +44,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public String ipAddress;
+
     public CreateCustomerGatewayRequest withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -47,6 +52,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public String publicIp;
+
     public CreateCustomerGatewayRequest withPublicIp(String publicIp) {
         this.publicIp = publicIp;
         return this;
@@ -54,6 +60,7 @@ public class CreateCustomerGatewayRequest {
     
     
     public CreateCustomerGatewayRequestTagSpecifications[] tagSpecifications;
+
     public CreateCustomerGatewayRequest withTagSpecifications(CreateCustomerGatewayRequestTagSpecifications[] tagSpecifications) {
         this.tagSpecifications = tagSpecifications;
         return this;
@@ -61,9 +68,13 @@ public class CreateCustomerGatewayRequest {
     
     
     public GatewayTypeEnum type;
+
     public CreateCustomerGatewayRequest withType(GatewayTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CreateCustomerGatewayRequest(@JsonProperty("Type") GatewayTypeEnum type) {
+        this.type = type;
+  }
 }

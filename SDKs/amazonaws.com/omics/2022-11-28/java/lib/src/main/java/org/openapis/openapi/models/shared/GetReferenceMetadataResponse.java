@@ -19,6 +19,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class GetReferenceMetadataResponse {
     @JsonProperty("arn")
     public String arn;
+
     public GetReferenceMetadataResponse withArn(String arn) {
         this.arn = arn;
         return this;
@@ -28,6 +29,7 @@ public class GetReferenceMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("creationTime")
     public OffsetDateTime creationTime;
+
     public GetReferenceMetadataResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -36,6 +38,7 @@ public class GetReferenceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public GetReferenceMetadataResponse withDescription(String description) {
         this.description = description;
         return this;
@@ -44,6 +47,7 @@ public class GetReferenceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("files")
     public ReferenceFiles files;
+
     public GetReferenceMetadataResponse withFiles(ReferenceFiles files) {
         this.files = files;
         return this;
@@ -51,6 +55,7 @@ public class GetReferenceMetadataResponse {
     
     @JsonProperty("id")
     public String id;
+
     public GetReferenceMetadataResponse withId(String id) {
         this.id = id;
         return this;
@@ -58,6 +63,7 @@ public class GetReferenceMetadataResponse {
     
     @JsonProperty("md5")
     public String md5;
+
     public GetReferenceMetadataResponse withMd5(String md5) {
         this.md5 = md5;
         return this;
@@ -66,6 +72,7 @@ public class GetReferenceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public GetReferenceMetadataResponse withName(String name) {
         this.name = name;
         return this;
@@ -73,6 +80,7 @@ public class GetReferenceMetadataResponse {
     
     @JsonProperty("referenceStoreId")
     public String referenceStoreId;
+
     public GetReferenceMetadataResponse withReferenceStoreId(String referenceStoreId) {
         this.referenceStoreId = referenceStoreId;
         return this;
@@ -81,6 +89,7 @@ public class GetReferenceMetadataResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ReferenceStatusEnum status;
+
     public GetReferenceMetadataResponse withStatus(ReferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -90,9 +99,18 @@ public class GetReferenceMetadataResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("updateTime")
     public OffsetDateTime updateTime;
+
     public GetReferenceMetadataResponse withUpdateTime(OffsetDateTime updateTime) {
         this.updateTime = updateTime;
         return this;
     }
     
+    public GetReferenceMetadataResponse(@JsonProperty("arn") String arn, @JsonProperty("creationTime") OffsetDateTime creationTime, @JsonProperty("id") String id, @JsonProperty("md5") String md5, @JsonProperty("referenceStoreId") String referenceStoreId, @JsonProperty("updateTime") OffsetDateTime updateTime) {
+        this.arn = arn;
+        this.creationTime = creationTime;
+        this.id = id;
+        this.md5 = md5;
+        this.referenceStoreId = referenceStoreId;
+        this.updateTime = updateTime;
+  }
 }

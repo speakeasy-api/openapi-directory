@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class IssuesListEventsForRepoResponse {
     
     public String contentType;
+
     public IssuesListEventsForRepoResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class IssuesListEventsForRepoResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public IssuesListEventsForRepoResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class IssuesListEventsForRepoResponse {
     
     
     public Integer statusCode;
+
     public IssuesListEventsForRepoResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class IssuesListEventsForRepoResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public IssuesListEventsForRepoResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class IssuesListEventsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.IssueEvent[] issueEvents;
+
     public IssuesListEventsForRepoResponse withIssueEvents(org.openapis.openapi.models.shared.IssueEvent[] issueEvents) {
         this.issueEvents = issueEvents;
         return this;
@@ -50,9 +56,14 @@ public class IssuesListEventsForRepoResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public IssuesListEventsForRepoResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public IssuesListEventsForRepoResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

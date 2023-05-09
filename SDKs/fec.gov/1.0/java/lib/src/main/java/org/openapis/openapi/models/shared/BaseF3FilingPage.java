@@ -12,6 +12,7 @@ public class BaseF3FilingPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pagination")
     public OffsetInfo pagination;
+
     public BaseF3FilingPage withPagination(OffsetInfo pagination) {
         this.pagination = pagination;
         return this;
@@ -20,9 +21,11 @@ public class BaseF3FilingPage {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("results")
     public BaseF3Filing[] results;
+
     public BaseF3FilingPage withResults(BaseF3Filing[] results) {
         this.results = results;
         return this;
     }
     
+    public BaseF3FilingPage(){}
 }

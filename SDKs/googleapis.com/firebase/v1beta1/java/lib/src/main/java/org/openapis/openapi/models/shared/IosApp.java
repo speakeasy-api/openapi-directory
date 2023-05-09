@@ -18,6 +18,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("apiKeyId")
     public String apiKeyId;
+
     public IosApp withApiKeyId(String apiKeyId) {
         this.apiKeyId = apiKeyId;
         return this;
@@ -29,6 +30,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appId")
     public String appId;
+
     public IosApp withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -40,6 +42,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("appStoreId")
     public String appStoreId;
+
     public IosApp withAppStoreId(String appStoreId) {
         this.appStoreId = appStoreId;
         return this;
@@ -51,6 +54,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bundleId")
     public String bundleId;
+
     public IosApp withBundleId(String bundleId) {
         this.bundleId = bundleId;
         return this;
@@ -62,6 +66,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayName")
     public String displayName;
+
     public IosApp withDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
@@ -73,6 +78,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("etag")
     public String etag;
+
     public IosApp withEtag(String etag) {
         this.etag = etag;
         return this;
@@ -84,6 +90,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("expireTime")
     public String expireTime;
+
     public IosApp withExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
@@ -95,6 +102,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IosApp withName(String name) {
         this.name = name;
         return this;
@@ -106,6 +114,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projectId")
     public String projectId;
+
     public IosApp withProjectId(String projectId) {
         this.projectId = projectId;
         return this;
@@ -117,6 +126,7 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state")
     public IosAppStateEnum state;
+
     public IosApp withState(IosAppStateEnum state) {
         this.state = state;
         return this;
@@ -128,9 +138,11 @@ public class IosApp {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public IosApp withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public IosApp(){}
 }

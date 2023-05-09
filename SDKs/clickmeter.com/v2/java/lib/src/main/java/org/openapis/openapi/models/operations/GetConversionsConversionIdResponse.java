@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetConversionsConversionIdResponse {
     
     public org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion;
+
     public GetConversionsConversionIdResponse withApiCoreDtoConversionsConversion(org.openapis.openapi.models.shared.ApiCoreDtoConversionsConversion apiCoreDtoConversionsConversion) {
         this.apiCoreDtoConversionsConversion = apiCoreDtoConversionsConversion;
         return this;
@@ -16,6 +18,7 @@ public class GetConversionsConversionIdResponse {
     
     
     public byte[] body;
+
     public GetConversionsConversionIdResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -23,6 +26,7 @@ public class GetConversionsConversionIdResponse {
     
     
     public String contentType;
+
     public GetConversionsConversionIdResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -30,6 +34,7 @@ public class GetConversionsConversionIdResponse {
     
     
     public Integer statusCode;
+
     public GetConversionsConversionIdResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -37,9 +42,14 @@ public class GetConversionsConversionIdResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetConversionsConversionIdResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetConversionsConversionIdResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

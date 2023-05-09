@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DisassociateTrackerConsumerResponse {
@@ -12,6 +13,7 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public Object accessDeniedException;
+
     public DisassociateTrackerConsumerResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class DisassociateTrackerConsumerResponse {
     
     
     public String contentType;
+
     public DisassociateTrackerConsumerResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public java.util.Map<String, Object> disassociateTrackerConsumerResponse;
+
     public DisassociateTrackerConsumerResponse withDisassociateTrackerConsumerResponse(java.util.Map<String, Object> disassociateTrackerConsumerResponse) {
         this.disassociateTrackerConsumerResponse = disassociateTrackerConsumerResponse;
         return this;
@@ -39,6 +43,7 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public Object internalServerException;
+
     public DisassociateTrackerConsumerResponse withInternalServerException(Object internalServerException) {
         this.internalServerException = internalServerException;
         return this;
@@ -46,6 +51,7 @@ public class DisassociateTrackerConsumerResponse {
     
     
     public Integer statusCode;
+
     public DisassociateTrackerConsumerResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,6 +59,7 @@ public class DisassociateTrackerConsumerResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DisassociateTrackerConsumerResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -63,6 +70,7 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DisassociateTrackerConsumerResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -73,6 +81,7 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public Object throttlingException;
+
     public DisassociateTrackerConsumerResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -83,9 +92,14 @@ public class DisassociateTrackerConsumerResponse {
      */
     
     public Object validationException;
+
     public DisassociateTrackerConsumerResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public DisassociateTrackerConsumerResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

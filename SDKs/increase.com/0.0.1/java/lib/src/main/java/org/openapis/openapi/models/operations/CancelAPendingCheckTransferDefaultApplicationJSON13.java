@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CancelAPendingCheckTransferDefaultApplicationJSON13 {
     @JsonProperty("detail")
     public String detail;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON13 withDetail(String detail) {
         this.detail = detail;
         return this;
@@ -19,6 +20,7 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON13 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("retry_after")
     public Long retryAfter;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON13 withRetryAfter(Long retryAfter) {
         this.retryAfter = retryAfter;
         return this;
@@ -26,6 +28,7 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON13 {
     
     @JsonProperty("status")
     public CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum status;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON13 withStatus(CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum status) {
         this.status = status;
         return this;
@@ -33,6 +36,7 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON13 {
     
     @JsonProperty("title")
     public String title;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON13 withTitle(String title) {
         this.title = title;
         return this;
@@ -40,9 +44,16 @@ public class CancelAPendingCheckTransferDefaultApplicationJSON13 {
     
     @JsonProperty("type")
     public CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum type;
+
     public CancelAPendingCheckTransferDefaultApplicationJSON13 withType(CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public CancelAPendingCheckTransferDefaultApplicationJSON13(@JsonProperty("detail") String detail, @JsonProperty("status") CancelAPendingCheckTransferDefaultApplicationJSON13StatusEnum status, @JsonProperty("title") String title, @JsonProperty("type") CancelAPendingCheckTransferDefaultApplicationJSON13TypeEnum type) {
+        this.detail = detail;
+        this.status = status;
+        this.title = title;
+        this.type = type;
+  }
 }

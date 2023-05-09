@@ -22,9 +22,11 @@ public class SearchOrdersCustomerFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("customer_ids")
     public String[] customerIds;
+
     public SearchOrdersCustomerFilter withCustomerIds(String[] customerIds) {
         this.customerIds = customerIds;
         return this;
     }
     
+    public SearchOrdersCustomerFilter(){}
 }

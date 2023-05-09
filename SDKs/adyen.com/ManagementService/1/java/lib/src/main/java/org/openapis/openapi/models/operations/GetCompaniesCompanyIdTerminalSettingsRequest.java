@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GetCompaniesCompanyIdTerminalSettingsRequest {
@@ -12,9 +13,13 @@ public class GetCompaniesCompanyIdTerminalSettingsRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=companyId")
     public String companyId;
+
     public GetCompaniesCompanyIdTerminalSettingsRequest withCompanyId(String companyId) {
         this.companyId = companyId;
         return this;
     }
     
+    public GetCompaniesCompanyIdTerminalSettingsRequest(@JsonProperty("companyId") String companyId) {
+        this.companyId = companyId;
+  }
 }

@@ -18,9 +18,11 @@ public class GoogleCloudDatalabelingV1beta1PdfInstruction {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsFileUri")
     public String gcsFileUri;
+
     public GoogleCloudDatalabelingV1beta1PdfInstruction withGcsFileUri(String gcsFileUri) {
         this.gcsFileUri = gcsFileUri;
         return this;
     }
     
+    public GoogleCloudDatalabelingV1beta1PdfInstruction(){}
 }

@@ -15,6 +15,7 @@ public class ProvisioningJobInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("completion")
     public CompletionEstimation completion;
+
     public ProvisioningJobInfo withCompletion(CompletionEstimation completion) {
         this.completion = completion;
         return this;
@@ -26,6 +27,7 @@ public class ProvisioningJobInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public ProvisioningJobInfo withId(String id) {
         this.id = id;
         return this;
@@ -37,9 +39,11 @@ public class ProvisioningJobInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public ProvisioningJobStatusEnum status;
+
     public ProvisioningJobInfo withStatus(ProvisioningJobStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public ProvisioningJobInfo(){}
 }

@@ -9,6 +9,7 @@ import org.openapis.openapi.utils.SpeakeasyMetadata;
 public class DrivePropertiesGetSecurity {
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption1 option1;
+
     public DrivePropertiesGetSecurity withOption1(DrivePropertiesGetSecurityOption1 option1) {
         this.option1 = option1;
         return this;
@@ -16,6 +17,7 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption2 option2;
+
     public DrivePropertiesGetSecurity withOption2(DrivePropertiesGetSecurityOption2 option2) {
         this.option2 = option2;
         return this;
@@ -23,6 +25,7 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption3 option3;
+
     public DrivePropertiesGetSecurity withOption3(DrivePropertiesGetSecurityOption3 option3) {
         this.option3 = option3;
         return this;
@@ -30,6 +33,7 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption4 option4;
+
     public DrivePropertiesGetSecurity withOption4(DrivePropertiesGetSecurityOption4 option4) {
         this.option4 = option4;
         return this;
@@ -37,6 +41,7 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption5 option5;
+
     public DrivePropertiesGetSecurity withOption5(DrivePropertiesGetSecurityOption5 option5) {
         this.option5 = option5;
         return this;
@@ -44,6 +49,7 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption6 option6;
+
     public DrivePropertiesGetSecurity withOption6(DrivePropertiesGetSecurityOption6 option6) {
         this.option6 = option6;
         return this;
@@ -51,9 +57,11 @@ public class DrivePropertiesGetSecurity {
     
     @SpeakeasyMetadata("security:option=true")
     public DrivePropertiesGetSecurityOption7 option7;
+
     public DrivePropertiesGetSecurity withOption7(DrivePropertiesGetSecurityOption7 option7) {
         this.option7 = option7;
         return this;
     }
     
+    public DrivePropertiesGetSecurity(){}
 }

@@ -15,6 +15,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ApiKeySource")
     public String apiKeySource;
+
     public AwsApiGatewayRestApiDetails withApiKeySource(String apiKeySource) {
         this.apiKeySource = apiKeySource;
         return this;
@@ -23,6 +24,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BinaryMediaTypes")
     public String[] binaryMediaTypes;
+
     public AwsApiGatewayRestApiDetails withBinaryMediaTypes(String[] binaryMediaTypes) {
         this.binaryMediaTypes = binaryMediaTypes;
         return this;
@@ -31,6 +33,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedDate")
     public String createdDate;
+
     public AwsApiGatewayRestApiDetails withCreatedDate(String createdDate) {
         this.createdDate = createdDate;
         return this;
@@ -39,6 +42,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public AwsApiGatewayRestApiDetails withDescription(String description) {
         this.description = description;
         return this;
@@ -47,6 +51,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndpointConfiguration")
     public AwsApiGatewayEndpointConfiguration endpointConfiguration;
+
     public AwsApiGatewayRestApiDetails withEndpointConfiguration(AwsApiGatewayEndpointConfiguration endpointConfiguration) {
         this.endpointConfiguration = endpointConfiguration;
         return this;
@@ -55,6 +60,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public String id;
+
     public AwsApiGatewayRestApiDetails withId(String id) {
         this.id = id;
         return this;
@@ -63,6 +69,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MinimumCompressionSize")
     public Long minimumCompressionSize;
+
     public AwsApiGatewayRestApiDetails withMinimumCompressionSize(Long minimumCompressionSize) {
         this.minimumCompressionSize = minimumCompressionSize;
         return this;
@@ -71,6 +78,7 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Name")
     public String name;
+
     public AwsApiGatewayRestApiDetails withName(String name) {
         this.name = name;
         return this;
@@ -79,9 +87,11 @@ public class AwsApiGatewayRestApiDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Version")
     public String version;
+
     public AwsApiGatewayRestApiDetails withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public AwsApiGatewayRestApiDetails(){}
 }

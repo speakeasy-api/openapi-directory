@@ -11,6 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class CreateParallelDataRequest {
     @JsonProperty("ClientToken")
     public String clientToken;
+
     public CreateParallelDataRequest withClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -19,6 +20,7 @@ public class CreateParallelDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Description")
     public String description;
+
     public CreateParallelDataRequest withDescription(String description) {
         this.description = description;
         return this;
@@ -30,6 +32,7 @@ public class CreateParallelDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EncryptionKey")
     public EncryptionKey encryptionKey;
+
     public CreateParallelDataRequest withEncryptionKey(EncryptionKey encryptionKey) {
         this.encryptionKey = encryptionKey;
         return this;
@@ -37,6 +40,7 @@ public class CreateParallelDataRequest {
     
     @JsonProperty("Name")
     public String name;
+
     public CreateParallelDataRequest withName(String name) {
         this.name = name;
         return this;
@@ -44,6 +48,7 @@ public class CreateParallelDataRequest {
     
     @JsonProperty("ParallelDataConfig")
     public ParallelDataConfig parallelDataConfig;
+
     public CreateParallelDataRequest withParallelDataConfig(ParallelDataConfig parallelDataConfig) {
         this.parallelDataConfig = parallelDataConfig;
         return this;
@@ -52,9 +57,15 @@ public class CreateParallelDataRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public CreateParallelDataRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
     }
     
+    public CreateParallelDataRequest(@JsonProperty("ClientToken") String clientToken, @JsonProperty("Name") String name, @JsonProperty("ParallelDataConfig") ParallelDataConfig parallelDataConfig) {
+        this.clientToken = clientToken;
+        this.name = name;
+        this.parallelDataConfig = parallelDataConfig;
+  }
 }

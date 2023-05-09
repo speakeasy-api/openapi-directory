@@ -18,6 +18,7 @@ public class PositionedObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("embeddedObject")
     public EmbeddedObject embeddedObject;
+
     public PositionedObjectProperties withEmbeddedObject(EmbeddedObject embeddedObject) {
         this.embeddedObject = embeddedObject;
         return this;
@@ -29,9 +30,11 @@ public class PositionedObjectProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("positioning")
     public PositionedObjectPositioning positioning;
+
     public PositionedObjectProperties withPositioning(PositionedObjectPositioning positioning) {
         this.positioning = positioning;
         return this;
     }
     
+    public PositionedObjectProperties(){}
 }

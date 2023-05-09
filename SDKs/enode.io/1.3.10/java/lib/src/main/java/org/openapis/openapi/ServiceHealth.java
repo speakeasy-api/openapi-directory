@@ -49,11 +49,9 @@ public class ServiceHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthReadyResponse res = new org.openapis.openapi.models.operations.GetHealthReadyResponse() {{
+        org.openapis.openapi.models.operations.GetHealthReadyResponse res = new org.openapis.openapi.models.operations.GetHealthReadyResponse(contentType, httpRes.statusCode()) {{
             getHealthReady503ApplicationJSONString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 204) {
@@ -88,11 +86,9 @@ public class ServiceHealth {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetHealthVendorsResponse res = new org.openapis.openapi.models.operations.GetHealthVendorsResponse() {{
+        org.openapis.openapi.models.operations.GetHealthVendorsResponse res = new org.openapis.openapi.models.operations.GetHealthVendorsResponse(contentType, httpRes.statusCode()) {{
             getHealthVendors200ApplicationJSONObjects = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class IotSiteWiseAssetModelPropertyIdentifier {
     @JsonProperty("assetModelId")
     public String assetModelId;
+
     public IotSiteWiseAssetModelPropertyIdentifier withAssetModelId(String assetModelId) {
         this.assetModelId = assetModelId;
         return this;
@@ -19,9 +20,14 @@ public class IotSiteWiseAssetModelPropertyIdentifier {
     
     @JsonProperty("propertyId")
     public String propertyId;
+
     public IotSiteWiseAssetModelPropertyIdentifier withPropertyId(String propertyId) {
         this.propertyId = propertyId;
         return this;
     }
     
+    public IotSiteWiseAssetModelPropertyIdentifier(@JsonProperty("assetModelId") String assetModelId, @JsonProperty("propertyId") String propertyId) {
+        this.assetModelId = assetModelId;
+        this.propertyId = propertyId;
+  }
 }

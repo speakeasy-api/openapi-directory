@@ -56,11 +56,9 @@ public class Cse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchCseListResponse res = new org.openapis.openapi.models.operations.SearchCseListResponse() {{
+        org.openapis.openapi.models.operations.SearchCseListResponse res = new org.openapis.openapi.models.operations.SearchCseListResponse(contentType, httpRes.statusCode()) {{
             search = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -100,11 +98,9 @@ public class Cse {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchCseSiterestrictListResponse res = new org.openapis.openapi.models.operations.SearchCseSiterestrictListResponse() {{
+        org.openapis.openapi.models.operations.SearchCseSiterestrictListResponse res = new org.openapis.openapi.models.operations.SearchCseSiterestrictListResponse(contentType, httpRes.statusCode()) {{
             search = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

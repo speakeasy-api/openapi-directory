@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PostAuthorizableKeystoreRequestBodyKeyStore {
     @SpeakeasyMetadata("multipartForm:content")
     public byte[] content;
+
     public PostAuthorizableKeystoreRequestBodyKeyStore withContent(byte[] content) {
         this.content = content;
         return this;
@@ -16,9 +18,14 @@ public class PostAuthorizableKeystoreRequestBodyKeyStore {
     
     @SpeakeasyMetadata("multipartForm:name=keyStore")
     public String keyStore;
+
     public PostAuthorizableKeystoreRequestBodyKeyStore withKeyStore(String keyStore) {
         this.keyStore = keyStore;
         return this;
     }
     
+    public PostAuthorizableKeystoreRequestBodyKeyStore(@JsonProperty("content") byte[] content, @JsonProperty("keyStore") String keyStore) {
+        this.content = content;
+        this.keyStore = keyStore;
+  }
 }

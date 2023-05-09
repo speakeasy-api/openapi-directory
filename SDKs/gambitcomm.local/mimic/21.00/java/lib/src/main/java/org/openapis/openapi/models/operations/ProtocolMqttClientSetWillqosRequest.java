@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProtocolMqttClientSetWillqosRequest {
@@ -12,6 +13,7 @@ public class ProtocolMqttClientSetWillqosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=agentNum")
     public Integer agentNum;
+
     public ProtocolMqttClientSetWillqosRequest withAgentNum(Integer agentNum) {
         this.agentNum = agentNum;
         return this;
@@ -22,9 +24,14 @@ public class ProtocolMqttClientSetWillqosRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=qos")
     public String qos;
+
     public ProtocolMqttClientSetWillqosRequest withQos(String qos) {
         this.qos = qos;
         return this;
     }
     
+    public ProtocolMqttClientSetWillqosRequest(@JsonProperty("agentNum") Integer agentNum, @JsonProperty("qos") String qos) {
+        this.agentNum = agentNum;
+        this.qos = qos;
+  }
 }

@@ -12,6 +12,7 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
     public String ip;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerPrivateNet withIp(String ip) {
         this.ip = ip;
         return this;
@@ -20,9 +21,11 @@ public class GetLoadBalancersId200ApplicationJSONLoadBalancerPrivateNet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("network")
     public Long network;
+
     public GetLoadBalancersId200ApplicationJSONLoadBalancerPrivateNet withNetwork(Long network) {
         this.network = network;
         return this;
     }
     
+    public GetLoadBalancersId200ApplicationJSONLoadBalancerPrivateNet(){}
 }

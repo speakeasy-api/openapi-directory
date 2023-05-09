@@ -15,9 +15,13 @@ public class PostBenefitsDocumentUpload202ApplicationJSON {
      */
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.DocumentUploadPath data;
+
     public PostBenefitsDocumentUpload202ApplicationJSON withData(org.openapis.openapi.models.shared.DocumentUploadPath data) {
         this.data = data;
         return this;
     }
     
+    public PostBenefitsDocumentUpload202ApplicationJSON(@JsonProperty("data") org.openapis.openapi.models.shared.DocumentUploadPath data) {
+        this.data = data;
+  }
 }

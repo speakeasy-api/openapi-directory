@@ -15,9 +15,11 @@ public class CreateVirtualRouterRequestBodySpec {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("listeners")
     public org.openapis.openapi.models.shared.VirtualRouterListener[] listeners;
+
     public CreateVirtualRouterRequestBodySpec withListeners(org.openapis.openapi.models.shared.VirtualRouterListener[] listeners) {
         this.listeners = listeners;
         return this;
     }
     
+    public CreateVirtualRouterRequestBodySpec(){}
 }

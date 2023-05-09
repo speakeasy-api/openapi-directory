@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TeamGameLogsBySeasonRequest {
@@ -12,6 +13,7 @@ public class TeamGameLogsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=format")
     public TeamGameLogsBySeasonFormatEnum format;
+
     public TeamGameLogsBySeasonRequest withFormat(TeamGameLogsBySeasonFormatEnum format) {
         this.format = format;
         return this;
@@ -22,6 +24,7 @@ public class TeamGameLogsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=numberofgames")
     public String numberofgames;
+
     public TeamGameLogsBySeasonRequest withNumberofgames(String numberofgames) {
         this.numberofgames = numberofgames;
         return this;
@@ -32,6 +35,7 @@ public class TeamGameLogsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=season")
     public String season;
+
     public TeamGameLogsBySeasonRequest withSeason(String season) {
         this.season = season;
         return this;
@@ -42,9 +46,16 @@ public class TeamGameLogsBySeasonRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=teamid")
     public String teamid;
+
     public TeamGameLogsBySeasonRequest withTeamid(String teamid) {
         this.teamid = teamid;
         return this;
     }
     
+    public TeamGameLogsBySeasonRequest(@JsonProperty("format") TeamGameLogsBySeasonFormatEnum format, @JsonProperty("numberofgames") String numberofgames, @JsonProperty("season") String season, @JsonProperty("teamid") String teamid) {
+        this.format = format;
+        this.numberofgames = numberofgames;
+        this.season = season;
+        this.teamid = teamid;
+  }
 }

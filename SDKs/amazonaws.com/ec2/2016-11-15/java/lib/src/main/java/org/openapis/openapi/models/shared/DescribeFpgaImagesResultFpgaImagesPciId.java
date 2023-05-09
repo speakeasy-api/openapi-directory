@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeFpgaImagesResultFpgaImagesPciId {
     
     public String deviceId;
+
     public DescribeFpgaImagesResultFpgaImagesPciId withDeviceId(String deviceId) {
         this.deviceId = deviceId;
         return this;
@@ -19,6 +20,7 @@ public class DescribeFpgaImagesResultFpgaImagesPciId {
     
     
     public String subsystemId;
+
     public DescribeFpgaImagesResultFpgaImagesPciId withSubsystemId(String subsystemId) {
         this.subsystemId = subsystemId;
         return this;
@@ -26,6 +28,7 @@ public class DescribeFpgaImagesResultFpgaImagesPciId {
     
     
     public String subsystemVendorId;
+
     public DescribeFpgaImagesResultFpgaImagesPciId withSubsystemVendorId(String subsystemVendorId) {
         this.subsystemVendorId = subsystemVendorId;
         return this;
@@ -33,9 +36,11 @@ public class DescribeFpgaImagesResultFpgaImagesPciId {
     
     
     public String vendorId;
+
     public DescribeFpgaImagesResultFpgaImagesPciId withVendorId(String vendorId) {
         this.vendorId = vendorId;
         return this;
     }
     
+    public DescribeFpgaImagesResultFpgaImagesPciId(){}
 }

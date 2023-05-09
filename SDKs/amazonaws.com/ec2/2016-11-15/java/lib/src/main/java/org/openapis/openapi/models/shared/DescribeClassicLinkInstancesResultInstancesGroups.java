@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeClassicLinkInstancesResultInstancesGroups {
     
     public String groupId;
+
     public DescribeClassicLinkInstancesResultInstancesGroups withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -19,9 +20,11 @@ public class DescribeClassicLinkInstancesResultInstancesGroups {
     
     
     public String groupName;
+
     public DescribeClassicLinkInstancesResultInstancesGroups withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
     
+    public DescribeClassicLinkInstancesResultInstancesGroups(){}
 }

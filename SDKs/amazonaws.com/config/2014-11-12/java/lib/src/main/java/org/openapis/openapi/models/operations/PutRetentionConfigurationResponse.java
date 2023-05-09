@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutRetentionConfigurationResponse {
     
     public String contentType;
+
     public PutRetentionConfigurationResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class PutRetentionConfigurationResponse {
      */
     
     public Object invalidParameterValueException;
+
     public PutRetentionConfigurationResponse withInvalidParameterValueException(Object invalidParameterValueException) {
         this.invalidParameterValueException = invalidParameterValueException;
         return this;
@@ -29,6 +32,7 @@ public class PutRetentionConfigurationResponse {
      */
     
     public Object maxNumberOfRetentionConfigurationsExceededException;
+
     public PutRetentionConfigurationResponse withMaxNumberOfRetentionConfigurationsExceededException(Object maxNumberOfRetentionConfigurationsExceededException) {
         this.maxNumberOfRetentionConfigurationsExceededException = maxNumberOfRetentionConfigurationsExceededException;
         return this;
@@ -39,6 +43,7 @@ public class PutRetentionConfigurationResponse {
      */
     
     public org.openapis.openapi.models.shared.PutRetentionConfigurationResponse putRetentionConfigurationResponse;
+
     public PutRetentionConfigurationResponse withPutRetentionConfigurationResponse(org.openapis.openapi.models.shared.PutRetentionConfigurationResponse putRetentionConfigurationResponse) {
         this.putRetentionConfigurationResponse = putRetentionConfigurationResponse;
         return this;
@@ -46,6 +51,7 @@ public class PutRetentionConfigurationResponse {
     
     
     public Integer statusCode;
+
     public PutRetentionConfigurationResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -53,9 +59,14 @@ public class PutRetentionConfigurationResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutRetentionConfigurationResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutRetentionConfigurationResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

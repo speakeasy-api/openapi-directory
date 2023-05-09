@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetShippingMethodsJsonResponse {
     
     public String contentType;
+
     public GetShippingMethodsJsonResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetShippingMethodsJsonResponse {
      */
     
     public org.openapis.openapi.models.shared.ShippingMethod[] shippingMethods;
+
     public GetShippingMethodsJsonResponse withShippingMethods(org.openapis.openapi.models.shared.ShippingMethod[] shippingMethods) {
         this.shippingMethods = shippingMethods;
         return this;
@@ -26,6 +29,7 @@ public class GetShippingMethodsJsonResponse {
     
     
     public Integer statusCode;
+
     public GetShippingMethodsJsonResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class GetShippingMethodsJsonResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetShippingMethodsJsonResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetShippingMethodsJsonResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

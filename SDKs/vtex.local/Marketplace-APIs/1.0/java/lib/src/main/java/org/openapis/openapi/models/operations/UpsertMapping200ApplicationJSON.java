@@ -15,6 +15,7 @@ public class UpsertMapping200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("marketplaceSalesChannel")
     public String marketplaceSalesChannel;
+
     public UpsertMapping200ApplicationJSON withMarketplaceSalesChannel(String marketplaceSalesChannel) {
         this.marketplaceSalesChannel = marketplaceSalesChannel;
         return this;
@@ -26,9 +27,11 @@ public class UpsertMapping200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sellerChannel")
     public String sellerChannel;
+
     public UpsertMapping200ApplicationJSON withSellerChannel(String sellerChannel) {
         this.sellerChannel = sellerChannel;
         return this;
     }
     
+    public UpsertMapping200ApplicationJSON(){}
 }

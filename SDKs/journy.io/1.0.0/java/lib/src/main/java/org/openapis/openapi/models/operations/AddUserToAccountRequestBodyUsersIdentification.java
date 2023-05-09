@@ -18,6 +18,7 @@ public class AddUserToAccountRequestBodyUsersIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public AddUserToAccountRequestBodyUsersIdentification withEmail(String email) {
         this.email = email;
         return this;
@@ -29,9 +30,11 @@ public class AddUserToAccountRequestBodyUsersIdentification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("userId")
     public String userId;
+
     public AddUserToAccountRequestBodyUsersIdentification withUserId(String userId) {
         this.userId = userId;
         return this;
     }
     
+    public AddUserToAccountRequestBodyUsersIdentification(){}
 }

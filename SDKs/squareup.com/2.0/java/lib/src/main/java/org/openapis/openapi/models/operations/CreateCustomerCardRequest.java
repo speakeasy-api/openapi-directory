@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class CreateCustomerCardRequest {
@@ -14,6 +15,7 @@ public class CreateCustomerCardRequest {
      */
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.CreateCustomerCardRequest createCustomerCardRequest;
+
     public CreateCustomerCardRequest withCreateCustomerCardRequest(org.openapis.openapi.models.shared.CreateCustomerCardRequest createCustomerCardRequest) {
         this.createCustomerCardRequest = createCustomerCardRequest;
         return this;
@@ -24,9 +26,14 @@ public class CreateCustomerCardRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=customer_id")
     public String customerId;
+
     public CreateCustomerCardRequest withCustomerId(String customerId) {
         this.customerId = customerId;
         return this;
     }
     
+    public CreateCustomerCardRequest(@JsonProperty("CreateCustomerCardRequest") org.openapis.openapi.models.shared.CreateCustomerCardRequest createCustomerCardRequest, @JsonProperty("customer_id") String customerId) {
+        this.createCustomerCardRequest = createCustomerCardRequest;
+        this.customerId = customerId;
+  }
 }

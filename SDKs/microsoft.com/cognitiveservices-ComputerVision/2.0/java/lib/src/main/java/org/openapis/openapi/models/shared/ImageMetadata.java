@@ -18,6 +18,7 @@ public class ImageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("format")
     public String format;
+
     public ImageMetadata withFormat(String format) {
         this.format = format;
         return this;
@@ -29,6 +30,7 @@ public class ImageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("height")
     public Integer height;
+
     public ImageMetadata withHeight(Integer height) {
         this.height = height;
         return this;
@@ -40,9 +42,11 @@ public class ImageMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("width")
     public Integer width;
+
     public ImageMetadata withWidth(Integer width) {
         this.width = width;
         return this;
     }
     
+    public ImageMetadata(){}
 }

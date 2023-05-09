@@ -15,6 +15,7 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupId")
     public String groupId;
+
     public AwsEc2SecurityGroupDetails withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -23,6 +24,7 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GroupName")
     public String groupName;
+
     public AwsEc2SecurityGroupDetails withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -31,6 +33,7 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpPermissions")
     public AwsEc2SecurityGroupIpPermission[] ipPermissions;
+
     public AwsEc2SecurityGroupDetails withIpPermissions(AwsEc2SecurityGroupIpPermission[] ipPermissions) {
         this.ipPermissions = ipPermissions;
         return this;
@@ -39,6 +42,7 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("IpPermissionsEgress")
     public AwsEc2SecurityGroupIpPermission[] ipPermissionsEgress;
+
     public AwsEc2SecurityGroupDetails withIpPermissionsEgress(AwsEc2SecurityGroupIpPermission[] ipPermissionsEgress) {
         this.ipPermissionsEgress = ipPermissionsEgress;
         return this;
@@ -47,6 +51,7 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OwnerId")
     public String ownerId;
+
     public AwsEc2SecurityGroupDetails withOwnerId(String ownerId) {
         this.ownerId = ownerId;
         return this;
@@ -55,9 +60,11 @@ public class AwsEc2SecurityGroupDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("VpcId")
     public String vpcId;
+
     public AwsEc2SecurityGroupDetails withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
     
+    public AwsEc2SecurityGroupDetails(){}
 }

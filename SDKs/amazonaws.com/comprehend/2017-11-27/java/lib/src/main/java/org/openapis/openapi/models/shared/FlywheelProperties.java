@@ -20,6 +20,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ActiveModelArn")
     public String activeModelArn;
+
     public FlywheelProperties withActiveModelArn(String activeModelArn) {
         this.activeModelArn = activeModelArn;
         return this;
@@ -30,6 +31,7 @@ public class FlywheelProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public FlywheelProperties withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -38,6 +40,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataAccessRoleArn")
     public String dataAccessRoleArn;
+
     public FlywheelProperties withDataAccessRoleArn(String dataAccessRoleArn) {
         this.dataAccessRoleArn = dataAccessRoleArn;
         return this;
@@ -46,6 +49,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataLakeS3Uri")
     public String dataLakeS3Uri;
+
     public FlywheelProperties withDataLakeS3Uri(String dataLakeS3Uri) {
         this.dataLakeS3Uri = dataLakeS3Uri;
         return this;
@@ -54,6 +58,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("DataSecurityConfig")
     public DataSecurityConfig dataSecurityConfig;
+
     public FlywheelProperties withDataSecurityConfig(DataSecurityConfig dataSecurityConfig) {
         this.dataSecurityConfig = dataSecurityConfig;
         return this;
@@ -62,6 +67,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("FlywheelArn")
     public String flywheelArn;
+
     public FlywheelProperties withFlywheelArn(String flywheelArn) {
         this.flywheelArn = flywheelArn;
         return this;
@@ -72,6 +78,7 @@ public class FlywheelProperties {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public FlywheelProperties withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -80,6 +87,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LatestFlywheelIteration")
     public String latestFlywheelIteration;
+
     public FlywheelProperties withLatestFlywheelIteration(String latestFlywheelIteration) {
         this.latestFlywheelIteration = latestFlywheelIteration;
         return this;
@@ -88,6 +96,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Message")
     public String message;
+
     public FlywheelProperties withMessage(String message) {
         this.message = message;
         return this;
@@ -96,6 +105,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelType")
     public ModelTypeEnum modelType;
+
     public FlywheelProperties withModelType(ModelTypeEnum modelType) {
         this.modelType = modelType;
         return this;
@@ -104,6 +114,7 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public FlywheelStatusEnum status;
+
     public FlywheelProperties withStatus(FlywheelStatusEnum status) {
         this.status = status;
         return this;
@@ -112,9 +123,11 @@ public class FlywheelProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("TaskConfig")
     public TaskConfig taskConfig;
+
     public FlywheelProperties withTaskConfig(TaskConfig taskConfig) {
         this.taskConfig = taskConfig;
         return this;
     }
     
+    public FlywheelProperties(){}
 }

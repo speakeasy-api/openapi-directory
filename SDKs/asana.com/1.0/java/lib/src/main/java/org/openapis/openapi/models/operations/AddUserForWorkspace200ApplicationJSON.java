@@ -15,9 +15,11 @@ public class AddUserForWorkspace200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("data")
     public org.openapis.openapi.models.shared.UserBaseResponse data;
+
     public AddUserForWorkspace200ApplicationJSON withData(org.openapis.openapi.models.shared.UserBaseResponse data) {
         this.data = data;
         return this;
     }
     
+    public AddUserForWorkspace200ApplicationJSON(){}
 }

@@ -54,11 +54,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ExportZipUsingGETResponse res = new org.openapis.openapi.models.operations.ExportZipUsingGETResponse() {{
+        org.openapis.openapi.models.operations.ExportZipUsingGETResponse res = new org.openapis.openapi.models.operations.ExportZipUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
@@ -93,11 +91,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETResponse res = new org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETResponse res = new org.openapis.openapi.models.operations.GETScriptDifferencesUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -138,11 +134,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETScriptVersionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETScriptVersionsUsingGETResponse() {{
+        org.openapis.openapi.models.operations.GETScriptVersionsUsingGETResponse res = new org.openapis.openapi.models.operations.GETScriptVersionsUsingGETResponse(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -183,11 +177,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Response res = new org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Response() {{
+        org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Response res = new org.openapis.openapi.models.operations.GETScriptVersionsUsingGET1Response(contentType, httpRes.statusCode()) {{
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -233,11 +225,9 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportAcceptUsingPOSTResponse res = new org.openapis.openapi.models.operations.ImportAcceptUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ImportAcceptUsingPOSTResponse res = new org.openapis.openapi.models.operations.ImportAcceptUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200 || httpRes.statusCode() == 400) {
@@ -278,12 +268,10 @@ public class Scripts {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ImportZipUsingPOSTResponse res = new org.openapis.openapi.models.operations.ImportZipUsingPOSTResponse() {{
+        org.openapis.openapi.models.operations.ImportZipUsingPOSTResponse res = new org.openapis.openapi.models.operations.ImportZipUsingPOSTResponse(contentType, httpRes.statusCode()) {{
             scriptsDifferenceListModel = null;
             messageModel = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

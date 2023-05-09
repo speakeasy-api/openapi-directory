@@ -18,6 +18,7 @@ public class ListJobRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobRuns")
     public JobRun[] jobRuns;
+
     public ListJobRunsResponse withJobRuns(JobRun[] jobRuns) {
         this.jobRuns = jobRuns;
         return this;
@@ -29,6 +30,7 @@ public class ListJobRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextPageToken")
     public String nextPageToken;
+
     public ListJobRunsResponse withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -40,9 +42,11 @@ public class ListJobRunsResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("unreachable")
     public String[] unreachable;
+
     public ListJobRunsResponse withUnreachable(String[] unreachable) {
         this.unreachable = unreachable;
         return this;
     }
     
+    public ListJobRunsResponse(){}
 }

@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class DeleteVpcPeeringConnectionRequest {
     
     public Boolean dryRun;
+
     public DeleteVpcPeeringConnectionRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
@@ -16,9 +17,13 @@ public class DeleteVpcPeeringConnectionRequest {
     
     
     public String vpcPeeringConnectionId;
+
     public DeleteVpcPeeringConnectionRequest withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public DeleteVpcPeeringConnectionRequest(@JsonProperty("VpcPeeringConnectionId") String vpcPeeringConnectionId) {
+        this.vpcPeeringConnectionId = vpcPeeringConnectionId;
+  }
 }

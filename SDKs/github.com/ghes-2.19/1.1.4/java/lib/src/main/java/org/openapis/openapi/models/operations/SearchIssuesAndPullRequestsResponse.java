@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class SearchIssuesAndPullRequestsResponse {
     
     public String contentType;
+
     public SearchIssuesAndPullRequestsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class SearchIssuesAndPullRequestsResponse {
     
     
     public Integer statusCode;
+
     public SearchIssuesAndPullRequestsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class SearchIssuesAndPullRequestsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public SearchIssuesAndPullRequestsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class SearchIssuesAndPullRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.BasicError basicError;
+
     public SearchIssuesAndPullRequestsResponse withBasicError(org.openapis.openapi.models.shared.BasicError basicError) {
         this.basicError = basicError;
         return this;
@@ -43,6 +48,7 @@ public class SearchIssuesAndPullRequestsResponse {
      */
     
     public SearchIssuesAndPullRequests200ApplicationJSON searchIssuesAndPullRequests200ApplicationJSONObject;
+
     public SearchIssuesAndPullRequestsResponse withSearchIssuesAndPullRequests200ApplicationJSONObject(SearchIssuesAndPullRequests200ApplicationJSON searchIssuesAndPullRequests200ApplicationJSONObject) {
         this.searchIssuesAndPullRequests200ApplicationJSONObject = searchIssuesAndPullRequests200ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class SearchIssuesAndPullRequestsResponse {
      */
     
     public SearchIssuesAndPullRequests503ApplicationJSON searchIssuesAndPullRequests503ApplicationJSONObject;
+
     public SearchIssuesAndPullRequestsResponse withSearchIssuesAndPullRequests503ApplicationJSONObject(SearchIssuesAndPullRequests503ApplicationJSON searchIssuesAndPullRequests503ApplicationJSONObject) {
         this.searchIssuesAndPullRequests503ApplicationJSONObject = searchIssuesAndPullRequests503ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class SearchIssuesAndPullRequestsResponse {
      */
     
     public org.openapis.openapi.models.shared.ValidationError validationError;
+
     public SearchIssuesAndPullRequestsResponse withValidationError(org.openapis.openapi.models.shared.ValidationError validationError) {
         this.validationError = validationError;
         return this;
     }
     
+    public SearchIssuesAndPullRequestsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

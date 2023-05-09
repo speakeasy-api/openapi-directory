@@ -15,6 +15,7 @@ public class AbsoluteTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("EndTime")
     public Long endTime;
+
     public AbsoluteTimeRange withEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
@@ -23,6 +24,7 @@ public class AbsoluteTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("First")
     public Long first;
+
     public AbsoluteTimeRange withFirst(Long first) {
         this.first = first;
         return this;
@@ -31,6 +33,7 @@ public class AbsoluteTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Last")
     public Long last;
+
     public AbsoluteTimeRange withLast(Long last) {
         this.last = last;
         return this;
@@ -39,9 +42,11 @@ public class AbsoluteTimeRange {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("StartTime")
     public Long startTime;
+
     public AbsoluteTimeRange withStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
     
+    public AbsoluteTimeRange(){}
 }

@@ -18,9 +18,11 @@ public class SearchEntitiesResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("keywords")
     public String[] keywords;
+
     public SearchEntitiesResponse withKeywords(String[] keywords) {
         this.keywords = keywords;
         return this;
     }
     
+    public SearchEntitiesResponse(){}
 }

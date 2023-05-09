@@ -15,9 +15,11 @@ public class SigninResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("result")
     public Long result;
+
     public SigninResponse withResult(Long result) {
         this.result = result;
         return this;
     }
     
+    public SigninResponse(){}
 }

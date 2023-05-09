@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class EventarcProjectsLocationsChannelConnectionsListResponse {
     
     public String contentType;
+
     public EventarcProjectsLocationsChannelConnectionsListResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class EventarcProjectsLocationsChannelConnectionsListResponse {
      */
     
     public org.openapis.openapi.models.shared.ListChannelConnectionsResponse listChannelConnectionsResponse;
+
     public EventarcProjectsLocationsChannelConnectionsListResponse withListChannelConnectionsResponse(org.openapis.openapi.models.shared.ListChannelConnectionsResponse listChannelConnectionsResponse) {
         this.listChannelConnectionsResponse = listChannelConnectionsResponse;
         return this;
@@ -26,6 +29,7 @@ public class EventarcProjectsLocationsChannelConnectionsListResponse {
     
     
     public Integer statusCode;
+
     public EventarcProjectsLocationsChannelConnectionsListResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class EventarcProjectsLocationsChannelConnectionsListResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public EventarcProjectsLocationsChannelConnectionsListResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public EventarcProjectsLocationsChannelConnectionsListResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

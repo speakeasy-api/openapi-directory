@@ -18,6 +18,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("check_date")
     public String checkDate;
+
     public EOBObject withCheckDate(String checkDate) {
         this.checkDate = checkDate;
         return this;
@@ -29,6 +30,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deposit_date")
     public String depositDate;
+
     public EOBObject withDepositDate(String depositDate) {
         this.depositDate = depositDate;
         return this;
@@ -36,6 +38,7 @@ public class EOBObject {
     
     @JsonProperty("doctor")
     public Long doctor;
+
     public EOBObject withDoctor(Long doctor) {
         this.doctor = doctor;
         return this;
@@ -44,6 +47,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public EOBObject withId(Long id) {
         this.id = id;
         return this;
@@ -51,6 +55,7 @@ public class EOBObject {
     
     @JsonProperty("insurance_payer_id")
     public String insurancePayerId;
+
     public EOBObject withInsurancePayerId(String insurancePayerId) {
         this.insurancePayerId = insurancePayerId;
         return this;
@@ -58,6 +63,7 @@ public class EOBObject {
     
     @JsonProperty("insurance_payer_name")
     public String insurancePayerName;
+
     public EOBObject withInsurancePayerName(String insurancePayerName) {
         this.insurancePayerName = insurancePayerName;
         return this;
@@ -65,6 +71,7 @@ public class EOBObject {
     
     @JsonProperty("insurance_payer_trace_number")
     public String insurancePayerTraceNumber;
+
     public EOBObject withInsurancePayerTraceNumber(String insurancePayerTraceNumber) {
         this.insurancePayerTraceNumber = insurancePayerTraceNumber;
         return this;
@@ -76,6 +83,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("payment_method")
     public EOBObjectPaymentMethodEnum paymentMethod;
+
     public EOBObject withPaymentMethod(EOBObjectPaymentMethodEnum paymentMethod) {
         this.paymentMethod = paymentMethod;
         return this;
@@ -84,6 +92,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("posted_date")
     public String postedDate;
+
     public EOBObject withPostedDate(String postedDate) {
         this.postedDate = postedDate;
         return this;
@@ -92,6 +101,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("scanned_eob")
     public String scannedEob;
+
     public EOBObject withScannedEob(String scannedEob) {
         this.scannedEob = scannedEob;
         return this;
@@ -103,6 +113,7 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("total_paid")
     public Double totalPaid;
+
     public EOBObject withTotalPaid(Double totalPaid) {
         this.totalPaid = totalPaid;
         return this;
@@ -111,9 +122,16 @@ public class EOBObject {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("updated_at")
     public String updatedAt;
+
     public EOBObject withUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
     
+    public EOBObject(@JsonProperty("doctor") Long doctor, @JsonProperty("insurance_payer_id") String insurancePayerId, @JsonProperty("insurance_payer_name") String insurancePayerName, @JsonProperty("insurance_payer_trace_number") String insurancePayerTraceNumber) {
+        this.doctor = doctor;
+        this.insurancePayerId = insurancePayerId;
+        this.insurancePayerName = insurancePayerName;
+        this.insurancePayerTraceNumber = insurancePayerTraceNumber;
+  }
 }

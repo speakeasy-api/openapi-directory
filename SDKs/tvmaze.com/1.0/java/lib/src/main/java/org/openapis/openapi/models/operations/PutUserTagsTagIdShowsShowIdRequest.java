@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class PutUserTagsTagIdShowsShowIdRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=show_id")
     public Long showId;
+
     public PutUserTagsTagIdShowsShowIdRequest withShowId(Long showId) {
         this.showId = showId;
         return this;
@@ -16,9 +18,14 @@ public class PutUserTagsTagIdShowsShowIdRequest {
     
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=tag_id")
     public Long tagId;
+
     public PutUserTagsTagIdShowsShowIdRequest withTagId(Long tagId) {
         this.tagId = tagId;
         return this;
     }
     
+    public PutUserTagsTagIdShowsShowIdRequest(@JsonProperty("show_id") Long showId, @JsonProperty("tag_id") Long tagId) {
+        this.showId = showId;
+        this.tagId = tagId;
+  }
 }

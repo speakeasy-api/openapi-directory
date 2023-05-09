@@ -18,6 +18,7 @@ public class TaskResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public TaskResponseParent withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class TaskResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TaskResponseParent withName(String name) {
         this.name = name;
         return this;
@@ -41,6 +43,7 @@ public class TaskResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_subtype")
     public TaskResponseParentResourceSubtypeEnum resourceSubtype;
+
     public TaskResponseParent withResourceSubtype(TaskResponseParentResourceSubtypeEnum resourceSubtype) {
         this.resourceSubtype = resourceSubtype;
         return this;
@@ -52,9 +55,11 @@ public class TaskResponseParent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public TaskResponseParent withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public TaskResponseParent(){}
 }

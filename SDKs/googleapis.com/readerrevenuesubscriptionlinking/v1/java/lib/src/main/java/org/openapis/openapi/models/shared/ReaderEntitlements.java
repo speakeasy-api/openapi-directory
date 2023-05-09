@@ -18,6 +18,7 @@ public class ReaderEntitlements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("entitlements")
     public Entitlement[] entitlements;
+
     public ReaderEntitlements withEntitlements(Entitlement[] entitlements) {
         this.entitlements = entitlements;
         return this;
@@ -29,9 +30,11 @@ public class ReaderEntitlements {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ReaderEntitlements withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ReaderEntitlements(){}
 }

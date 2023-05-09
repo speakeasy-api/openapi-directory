@@ -17,6 +17,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("BillingModeOverride")
     public BillingModeEnum billingModeOverride;
+
     public RestoreTableToPointInTimeInput withBillingModeOverride(BillingModeEnum billingModeOverride) {
         this.billingModeOverride = billingModeOverride;
         return this;
@@ -25,6 +26,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("GlobalSecondaryIndexOverride")
     public GlobalSecondaryIndex[] globalSecondaryIndexOverride;
+
     public RestoreTableToPointInTimeInput withGlobalSecondaryIndexOverride(GlobalSecondaryIndex[] globalSecondaryIndexOverride) {
         this.globalSecondaryIndexOverride = globalSecondaryIndexOverride;
         return this;
@@ -33,6 +35,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LocalSecondaryIndexOverride")
     public LocalSecondaryIndex[] localSecondaryIndexOverride;
+
     public RestoreTableToPointInTimeInput withLocalSecondaryIndexOverride(LocalSecondaryIndex[] localSecondaryIndexOverride) {
         this.localSecondaryIndexOverride = localSecondaryIndexOverride;
         return this;
@@ -41,6 +44,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ProvisionedThroughputOverride")
     public ProvisionedThroughput provisionedThroughputOverride;
+
     public RestoreTableToPointInTimeInput withProvisionedThroughputOverride(ProvisionedThroughput provisionedThroughputOverride) {
         this.provisionedThroughputOverride = provisionedThroughputOverride;
         return this;
@@ -51,6 +55,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("RestoreDateTime")
     public OffsetDateTime restoreDateTime;
+
     public RestoreTableToPointInTimeInput withRestoreDateTime(OffsetDateTime restoreDateTime) {
         this.restoreDateTime = restoreDateTime;
         return this;
@@ -59,6 +64,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SSESpecificationOverride")
     public SSESpecification sseSpecificationOverride;
+
     public RestoreTableToPointInTimeInput withSSESpecificationOverride(SSESpecification sseSpecificationOverride) {
         this.sseSpecificationOverride = sseSpecificationOverride;
         return this;
@@ -67,6 +73,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableArn")
     public String sourceTableArn;
+
     public RestoreTableToPointInTimeInput withSourceTableArn(String sourceTableArn) {
         this.sourceTableArn = sourceTableArn;
         return this;
@@ -75,6 +82,7 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourceTableName")
     public String sourceTableName;
+
     public RestoreTableToPointInTimeInput withSourceTableName(String sourceTableName) {
         this.sourceTableName = sourceTableName;
         return this;
@@ -82,6 +90,7 @@ public class RestoreTableToPointInTimeInput {
     
     @JsonProperty("TargetTableName")
     public String targetTableName;
+
     public RestoreTableToPointInTimeInput withTargetTableName(String targetTableName) {
         this.targetTableName = targetTableName;
         return this;
@@ -90,9 +99,13 @@ public class RestoreTableToPointInTimeInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("UseLatestRestorableTime")
     public Boolean useLatestRestorableTime;
+
     public RestoreTableToPointInTimeInput withUseLatestRestorableTime(Boolean useLatestRestorableTime) {
         this.useLatestRestorableTime = useLatestRestorableTime;
         return this;
     }
     
+    public RestoreTableToPointInTimeInput(@JsonProperty("TargetTableName") String targetTableName) {
+        this.targetTableName = targetTableName;
+  }
 }

@@ -12,6 +12,7 @@ public class Group {
      */
     @JsonProperty("association_criteria")
     public String associationCriteria;
+
     public Group withAssociationCriteria(String associationCriteria) {
         this.associationCriteria = associationCriteria;
         return this;
@@ -22,6 +23,7 @@ public class Group {
      */
     @JsonProperty("id")
     public Long id;
+
     public Group withId(Long id) {
         this.id = id;
         return this;
@@ -32,6 +34,7 @@ public class Group {
      */
     @JsonProperty("name")
     public String name;
+
     public Group withName(String name) {
         this.name = name;
         return this;
@@ -42,6 +45,7 @@ public class Group {
      */
     @JsonProperty("parent_id")
     public Long parentId;
+
     public Group withParentId(Long parentId) {
         this.parentId = parentId;
         return this;
@@ -52,9 +56,17 @@ public class Group {
      */
     @JsonProperty("resource_id")
     public String resourceId;
+
     public Group withResourceId(String resourceId) {
         this.resourceId = resourceId;
         return this;
     }
     
+    public Group(@JsonProperty("association_criteria") String associationCriteria, @JsonProperty("id") Long id, @JsonProperty("name") String name, @JsonProperty("parent_id") Long parentId, @JsonProperty("resource_id") String resourceId) {
+        this.associationCriteria = associationCriteria;
+        this.id = id;
+        this.name = name;
+        this.parentId = parentId;
+        this.resourceId = resourceId;
+  }
 }

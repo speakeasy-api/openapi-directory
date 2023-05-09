@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETGETVerifiedAccessEndpointPolicyRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETGETVerifiedAccessEndpointPolicyActionEnum action;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withAction(GETGETVerifiedAccessEndpointPolicyActionEnum action) {
         this.action = action;
         return this;
@@ -19,16 +21,18 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=DryRun")
     public Boolean dryRun;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withDryRun(Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
     
     /**
-     * The ID of the Amazon Web Services Verified Access endpoint.
+     * The ID of the Verified Access endpoint.
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=VerifiedAccessEndpointId")
     public String verifiedAccessEndpointId;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withVerifiedAccessEndpointId(String verifiedAccessEndpointId) {
         this.verifiedAccessEndpointId = verifiedAccessEndpointId;
         return this;
@@ -36,6 +40,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETGETVerifiedAccessEndpointPolicyVersionEnum version;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withVersion(GETGETVerifiedAccessEndpointPolicyVersionEnum version) {
         this.version = version;
         return this;
@@ -43,6 +48,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -50,6 +56,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -57,6 +64,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -64,6 +72,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -71,6 +80,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -78,6 +88,7 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -85,9 +96,15 @@ public class GETGETVerifiedAccessEndpointPolicyRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETGETVerifiedAccessEndpointPolicyRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETGETVerifiedAccessEndpointPolicyRequest(@JsonProperty("Action") GETGETVerifiedAccessEndpointPolicyActionEnum action, @JsonProperty("VerifiedAccessEndpointId") String verifiedAccessEndpointId, @JsonProperty("Version") GETGETVerifiedAccessEndpointPolicyVersionEnum version) {
+        this.action = action;
+        this.verifiedAccessEndpointId = verifiedAccessEndpointId;
+        this.version = version;
+  }
 }

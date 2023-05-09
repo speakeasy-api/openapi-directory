@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ClearMerchantOrderInfoRequest {
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=accountId")
     public Integer accountId;
+
     public ClearMerchantOrderInfoRequest withAccountId(Integer accountId) {
         this.accountId = accountId;
         return this;
@@ -19,6 +21,7 @@ public class ClearMerchantOrderInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=beezUPOrderId")
     public String beezUPOrderId;
+
     public ClearMerchantOrderInfoRequest withBeezUPOrderId(String beezUPOrderId) {
         this.beezUPOrderId = beezUPOrderId;
         return this;
@@ -29,9 +32,15 @@ public class ClearMerchantOrderInfoRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=marketplaceTechnicalCode")
     public String marketplaceTechnicalCode;
+
     public ClearMerchantOrderInfoRequest withMarketplaceTechnicalCode(String marketplaceTechnicalCode) {
         this.marketplaceTechnicalCode = marketplaceTechnicalCode;
         return this;
     }
     
+    public ClearMerchantOrderInfoRequest(@JsonProperty("accountId") Integer accountId, @JsonProperty("beezUPOrderId") String beezUPOrderId, @JsonProperty("marketplaceTechnicalCode") String marketplaceTechnicalCode) {
+        this.accountId = accountId;
+        this.beezUPOrderId = beezUPOrderId;
+        this.marketplaceTechnicalCode = marketplaceTechnicalCode;
+  }
 }

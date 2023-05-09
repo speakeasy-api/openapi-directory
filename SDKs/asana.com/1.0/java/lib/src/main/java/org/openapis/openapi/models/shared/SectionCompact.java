@@ -18,6 +18,7 @@ public class SectionCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gid")
     public String gid;
+
     public SectionCompact withGid(String gid) {
         this.gid = gid;
         return this;
@@ -29,6 +30,7 @@ public class SectionCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public SectionCompact withName(String name) {
         this.name = name;
         return this;
@@ -40,9 +42,11 @@ public class SectionCompact {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_type")
     public String resourceType;
+
     public SectionCompact withResourceType(String resourceType) {
         this.resourceType = resourceType;
         return this;
     }
     
+    public SectionCompact(){}
 }

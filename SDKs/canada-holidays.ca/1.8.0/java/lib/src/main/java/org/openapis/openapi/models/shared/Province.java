@@ -17,6 +17,7 @@ public class Province {
      */
     @JsonProperty("id")
     public ProvinceIdEnum id;
+
     public Province withId(ProvinceIdEnum id) {
         this.id = id;
         return this;
@@ -27,6 +28,7 @@ public class Province {
      */
     @JsonProperty("nameEn")
     public String nameEn;
+
     public Province withNameEn(String nameEn) {
         this.nameEn = nameEn;
         return this;
@@ -37,6 +39,7 @@ public class Province {
      */
     @JsonProperty("nameFr")
     public String nameFr;
+
     public Province withNameFr(String nameFr) {
         this.nameFr = nameFr;
         return this;
@@ -48,6 +51,7 @@ public class Province {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextHoliday")
     public Holiday nextHoliday;
+
     public Province withNextHoliday(Holiday nextHoliday) {
         this.nextHoliday = nextHoliday;
         return this;
@@ -59,6 +63,7 @@ public class Province {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("optional")
     public ProvinceOptionalEnum optional;
+
     public Province withOptional(ProvinceOptionalEnum optional) {
         this.optional = optional;
         return this;
@@ -67,6 +72,7 @@ public class Province {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("provinces")
     public Holiday[] provinces;
+
     public Province withProvinces(Holiday[] provinces) {
         this.provinces = provinces;
         return this;
@@ -77,6 +83,7 @@ public class Province {
      */
     @JsonProperty("sourceEn")
     public String sourceEn;
+
     public Province withSourceEn(String sourceEn) {
         this.sourceEn = sourceEn;
         return this;
@@ -87,9 +94,17 @@ public class Province {
      */
     @JsonProperty("sourceLink")
     public String sourceLink;
+
     public Province withSourceLink(String sourceLink) {
         this.sourceLink = sourceLink;
         return this;
     }
     
+    public Province(@JsonProperty("id") ProvinceIdEnum id, @JsonProperty("nameEn") String nameEn, @JsonProperty("nameFr") String nameFr, @JsonProperty("sourceEn") String sourceEn, @JsonProperty("sourceLink") String sourceLink) {
+        this.id = id;
+        this.nameEn = nameEn;
+        this.nameFr = nameFr;
+        this.sourceEn = sourceEn;
+        this.sourceLink = sourceLink;
+  }
 }

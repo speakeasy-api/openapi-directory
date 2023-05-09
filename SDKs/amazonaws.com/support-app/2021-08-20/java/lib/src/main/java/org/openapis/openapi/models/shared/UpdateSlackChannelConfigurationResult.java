@@ -15,6 +15,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public UpdateSlackChannelConfigurationResult withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -23,6 +24,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelName")
     public String channelName;
+
     public UpdateSlackChannelConfigurationResult withChannelName(String channelName) {
         this.channelName = channelName;
         return this;
@@ -31,6 +33,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelRoleArn")
     public String channelRoleArn;
+
     public UpdateSlackChannelConfigurationResult withChannelRoleArn(String channelRoleArn) {
         this.channelRoleArn = channelRoleArn;
         return this;
@@ -39,6 +42,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyOnAddCorrespondenceToCase")
     public Boolean notifyOnAddCorrespondenceToCase;
+
     public UpdateSlackChannelConfigurationResult withNotifyOnAddCorrespondenceToCase(Boolean notifyOnAddCorrespondenceToCase) {
         this.notifyOnAddCorrespondenceToCase = notifyOnAddCorrespondenceToCase;
         return this;
@@ -47,6 +51,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyOnCaseSeverity")
     public NotificationSeverityLevelEnum notifyOnCaseSeverity;
+
     public UpdateSlackChannelConfigurationResult withNotifyOnCaseSeverity(NotificationSeverityLevelEnum notifyOnCaseSeverity) {
         this.notifyOnCaseSeverity = notifyOnCaseSeverity;
         return this;
@@ -55,6 +60,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyOnCreateOrReopenCase")
     public Boolean notifyOnCreateOrReopenCase;
+
     public UpdateSlackChannelConfigurationResult withNotifyOnCreateOrReopenCase(Boolean notifyOnCreateOrReopenCase) {
         this.notifyOnCreateOrReopenCase = notifyOnCreateOrReopenCase;
         return this;
@@ -63,6 +69,7 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("notifyOnResolveCase")
     public Boolean notifyOnResolveCase;
+
     public UpdateSlackChannelConfigurationResult withNotifyOnResolveCase(Boolean notifyOnResolveCase) {
         this.notifyOnResolveCase = notifyOnResolveCase;
         return this;
@@ -71,9 +78,11 @@ public class UpdateSlackChannelConfigurationResult {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("teamId")
     public String teamId;
+
     public UpdateSlackChannelConfigurationResult withTeamId(String teamId) {
         this.teamId = teamId;
         return this;
     }
     
+    public UpdateSlackChannelConfigurationResult(){}
 }

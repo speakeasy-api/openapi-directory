@@ -15,6 +15,7 @@ public class DnsProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("HostedZoneId")
     public String hostedZoneId;
+
     public DnsProperties withHostedZoneId(String hostedZoneId) {
         this.hostedZoneId = hostedZoneId;
         return this;
@@ -23,9 +24,11 @@ public class DnsProperties {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SOA")
     public Soa soa;
+
     public DnsProperties withSoa(Soa soa) {
         this.soa = soa;
         return this;
     }
     
+    public DnsProperties(){}
 }

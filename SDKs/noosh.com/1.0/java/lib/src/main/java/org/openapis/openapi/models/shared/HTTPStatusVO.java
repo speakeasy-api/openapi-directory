@@ -15,6 +15,7 @@ public class HTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public HTTPStatusVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,9 +24,11 @@ public class HTTPStatusVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public HTTPStatusVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public HTTPStatusVO(){}
 }

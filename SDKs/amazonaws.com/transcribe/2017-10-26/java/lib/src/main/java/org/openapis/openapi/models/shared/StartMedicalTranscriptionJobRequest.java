@@ -12,6 +12,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ContentIdentificationType")
     public MedicalContentIdentificationTypeEnum contentIdentificationType;
+
     public StartMedicalTranscriptionJobRequest withContentIdentificationType(MedicalContentIdentificationTypeEnum contentIdentificationType) {
         this.contentIdentificationType = contentIdentificationType;
         return this;
@@ -20,6 +21,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("KMSEncryptionContext")
     public java.util.Map<String, String> kmsEncryptionContext;
+
     public StartMedicalTranscriptionJobRequest withKMSEncryptionContext(java.util.Map<String, String> kmsEncryptionContext) {
         this.kmsEncryptionContext = kmsEncryptionContext;
         return this;
@@ -27,6 +29,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @JsonProperty("LanguageCode")
     public LanguageCodeEnum languageCode;
+
     public StartMedicalTranscriptionJobRequest withLanguageCode(LanguageCodeEnum languageCode) {
         this.languageCode = languageCode;
         return this;
@@ -37,6 +40,7 @@ public class StartMedicalTranscriptionJobRequest {
      */
     @JsonProperty("Media")
     public Media media;
+
     public StartMedicalTranscriptionJobRequest withMedia(Media media) {
         this.media = media;
         return this;
@@ -45,6 +49,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaFormat")
     public MediaFormatEnum mediaFormat;
+
     public StartMedicalTranscriptionJobRequest withMediaFormat(MediaFormatEnum mediaFormat) {
         this.mediaFormat = mediaFormat;
         return this;
@@ -53,6 +58,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MediaSampleRateHertz")
     public Long mediaSampleRateHertz;
+
     public StartMedicalTranscriptionJobRequest withMediaSampleRateHertz(Long mediaSampleRateHertz) {
         this.mediaSampleRateHertz = mediaSampleRateHertz;
         return this;
@@ -60,6 +66,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @JsonProperty("MedicalTranscriptionJobName")
     public String medicalTranscriptionJobName;
+
     public StartMedicalTranscriptionJobRequest withMedicalTranscriptionJobName(String medicalTranscriptionJobName) {
         this.medicalTranscriptionJobName = medicalTranscriptionJobName;
         return this;
@@ -67,6 +74,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @JsonProperty("OutputBucketName")
     public String outputBucketName;
+
     public StartMedicalTranscriptionJobRequest withOutputBucketName(String outputBucketName) {
         this.outputBucketName = outputBucketName;
         return this;
@@ -75,6 +83,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputEncryptionKMSKeyId")
     public String outputEncryptionKMSKeyId;
+
     public StartMedicalTranscriptionJobRequest withOutputEncryptionKMSKeyId(String outputEncryptionKMSKeyId) {
         this.outputEncryptionKMSKeyId = outputEncryptionKMSKeyId;
         return this;
@@ -83,6 +92,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("OutputKey")
     public String outputKey;
+
     public StartMedicalTranscriptionJobRequest withOutputKey(String outputKey) {
         this.outputKey = outputKey;
         return this;
@@ -91,6 +101,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Settings")
     public MedicalTranscriptionSetting settings;
+
     public StartMedicalTranscriptionJobRequest withSettings(MedicalTranscriptionSetting settings) {
         this.settings = settings;
         return this;
@@ -98,6 +109,7 @@ public class StartMedicalTranscriptionJobRequest {
     
     @JsonProperty("Specialty")
     public SpecialtyEnum specialty;
+
     public StartMedicalTranscriptionJobRequest withSpecialty(SpecialtyEnum specialty) {
         this.specialty = specialty;
         return this;
@@ -106,6 +118,7 @@ public class StartMedicalTranscriptionJobRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Tags")
     public Tag[] tags;
+
     public StartMedicalTranscriptionJobRequest withTags(Tag[] tags) {
         this.tags = tags;
         return this;
@@ -113,9 +126,18 @@ public class StartMedicalTranscriptionJobRequest {
     
     @JsonProperty("Type")
     public TypeEnum type;
+
     public StartMedicalTranscriptionJobRequest withType(TypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public StartMedicalTranscriptionJobRequest(@JsonProperty("LanguageCode") LanguageCodeEnum languageCode, @JsonProperty("Media") Media media, @JsonProperty("MedicalTranscriptionJobName") String medicalTranscriptionJobName, @JsonProperty("OutputBucketName") String outputBucketName, @JsonProperty("Specialty") SpecialtyEnum specialty, @JsonProperty("Type") TypeEnum type) {
+        this.languageCode = languageCode;
+        this.media = media;
+        this.medicalTranscriptionJobName = medicalTranscriptionJobName;
+        this.outputBucketName = outputBucketName;
+        this.specialty = specialty;
+        this.type = type;
+  }
 }

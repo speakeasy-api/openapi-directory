@@ -15,9 +15,11 @@ public class JSAppEdit {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("app")
     public JSApp app;
+
     public JSAppEdit withApp(JSApp app) {
         this.app = app;
         return this;
     }
     
+    public JSAppEdit(){}
 }

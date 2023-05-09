@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPushSubscriptionsOnChannelsResponse {
     
     public byte[] body;
+
     public GetPushSubscriptionsOnChannelsResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GetPushSubscriptionsOnChannelsResponse {
     
     
     public String contentType;
+
     public GetPushSubscriptionsOnChannelsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class GetPushSubscriptionsOnChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.DeviceDetailsOutput deviceDetails;
+
     public GetPushSubscriptionsOnChannelsResponse withDeviceDetails(org.openapis.openapi.models.shared.DeviceDetailsOutput deviceDetails) {
         this.deviceDetails = deviceDetails;
         return this;
@@ -36,6 +40,7 @@ public class GetPushSubscriptionsOnChannelsResponse {
      */
     
     public org.openapis.openapi.models.shared.Error error;
+
     public GetPushSubscriptionsOnChannelsResponse withError(org.openapis.openapi.models.shared.Error error) {
         this.error = error;
         return this;
@@ -43,6 +48,7 @@ public class GetPushSubscriptionsOnChannelsResponse {
     
     
     public Integer statusCode;
+
     public GetPushSubscriptionsOnChannelsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -50,9 +56,14 @@ public class GetPushSubscriptionsOnChannelsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPushSubscriptionsOnChannelsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetPushSubscriptionsOnChannelsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

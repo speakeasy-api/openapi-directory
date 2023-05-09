@@ -15,6 +15,7 @@ public class SpecVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("spec_id")
     public Long specId;
+
     public SpecVO withSpecId(Long specId) {
         this.specId = specId;
         return this;
@@ -23,6 +24,7 @@ public class SpecVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_code")
     public Integer statusCode;
+
     public SpecVO withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -31,9 +33,11 @@ public class SpecVO {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status_reason")
     public String statusReason;
+
     public SpecVO withStatusReason(String statusReason) {
         this.statusReason = statusReason;
         return this;
     }
     
+    public SpecVO(){}
 }

@@ -18,6 +18,7 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("clusters")
     public Cluster[] clusters;
+
     public ListClustersResponse withClusters(Cluster[] clusters) {
         this.clusters = clusters;
         return this;
@@ -29,9 +30,11 @@ public class ListClustersResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("missingZones")
     public String[] missingZones;
+
     public ListClustersResponse withMissingZones(String[] missingZones) {
         this.missingZones = missingZones;
         return this;
     }
     
+    public ListClustersResponse(){}
 }

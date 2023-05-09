@@ -12,9 +12,13 @@ public class ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody {
      */
     @JsonProperty("selected_repository_ids")
     public Long[] selectedRepositoryIds;
+
     public ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody withSelectedRepositoryIds(Long[] selectedRepositoryIds) {
         this.selectedRepositoryIds = selectedRepositoryIds;
         return this;
     }
     
+    public ActionsSetRepoAccessToSelfHostedRunnerGroupInOrgRequestBody(@JsonProperty("selected_repository_ids") Long[] selectedRepositoryIds) {
+        this.selectedRepositoryIds = selectedRepositoryIds;
+  }
 }

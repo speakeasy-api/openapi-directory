@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class Ror1bResponse {
     
     public String contentType;
+
     public Ror1bResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class Ror1bResponse {
     
     
     public Integer statusCode;
+
     public Ror1bResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class Ror1bResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public Ror1bResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b400ApplicationJSON ror1b400ApplicationJSONObject;
+
     public Ror1bResponse withRor1b400ApplicationJSONObject(Ror1b400ApplicationJSON ror1b400ApplicationJSONObject) {
         this.ror1b400ApplicationJSONObject = ror1b400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b401ApplicationJSON ror1b401ApplicationJSONObject;
+
     public Ror1bResponse withRor1b401ApplicationJSONObject(Ror1b401ApplicationJSON ror1b401ApplicationJSONObject) {
         this.ror1b401ApplicationJSONObject = ror1b401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b404ApplicationJSON ror1b404ApplicationJSONObject;
+
     public Ror1bResponse withRor1b404ApplicationJSONObject(Ror1b404ApplicationJSON ror1b404ApplicationJSONObject) {
         this.ror1b404ApplicationJSONObject = ror1b404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b500ApplicationJSON ror1b500ApplicationJSONObject;
+
     public Ror1bResponse withRor1b500ApplicationJSONObject(Ror1b500ApplicationJSON ror1b500ApplicationJSONObject) {
         this.ror1b500ApplicationJSONObject = ror1b500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b502ApplicationJSON ror1b502ApplicationJSONObject;
+
     public Ror1bResponse withRor1b502ApplicationJSONObject(Ror1b502ApplicationJSON ror1b502ApplicationJSONObject) {
         this.ror1b502ApplicationJSONObject = ror1b502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class Ror1bResponse {
      */
     
     public Ror1b503ApplicationJSON ror1b503ApplicationJSONObject;
+
     public Ror1bResponse withRor1b503ApplicationJSONObject(Ror1b503ApplicationJSON ror1b503ApplicationJSONObject) {
         this.ror1b503ApplicationJSONObject = ror1b503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class Ror1bResponse {
      */
     
     public Ror1b504ApplicationJSON ror1b504ApplicationJSONObject;
+
     public Ror1bResponse withRor1b504ApplicationJSONObject(Ror1b504ApplicationJSON ror1b504ApplicationJSONObject) {
         this.ror1b504ApplicationJSONObject = ror1b504ApplicationJSONObject;
         return this;
     }
     
+    public Ror1bResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

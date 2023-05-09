@@ -15,6 +15,7 @@ public class ListThingRegistrationTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("nextToken")
     public String nextToken;
+
     public ListThingRegistrationTasksResponse withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListThingRegistrationTasksResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("taskIds")
     public String[] taskIds;
+
     public ListThingRegistrationTasksResponse withTaskIds(String[] taskIds) {
         this.taskIds = taskIds;
         return this;
     }
     
+    public ListThingRegistrationTasksResponse(){}
 }

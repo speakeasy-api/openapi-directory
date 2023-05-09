@@ -10,12 +10,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest {
     /**
-     * IP targets where the traffic should be routed through. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well.
+     * IP targets where the traffic should be routed to. It is only possible to use the (Public or vSwitch) IPs of Hetzner Online Root Servers belonging to the project owner. IPs belonging to other users are blocked. Additionally IPs belonging to services provided by Hetzner Cloud (Servers, Load Balancers, ...) are blocked as well. Only present for target type "ip".
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ip")
-    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestIp ip;
-    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest withIp(PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestIp ip) {
+    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLoadBalancerTargetIP ip;
+
+    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest withIp(PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLoadBalancerTargetIP ip) {
         this.ip = ip;
         return this;
     }
@@ -26,6 +27,7 @@ public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("label_selector")
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelector labelSelector;
+
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest withLabelSelector(PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestLabelSelector labelSelector) {
         this.labelSelector = labelSelector;
         return this;
@@ -37,6 +39,7 @@ public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("server")
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer server;
+
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest withServer(PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestServer server) {
         this.server = server;
         return this;
@@ -47,9 +50,13 @@ public class PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest {
      */
     @JsonProperty("type")
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestTypeEnum type;
+
     public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest withType(PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequest(@JsonProperty("type") PostLoadBalancersIdActionsRemoveTargetRemoveTargetRequestTypeEnum type) {
+        this.type = type;
+  }
 }

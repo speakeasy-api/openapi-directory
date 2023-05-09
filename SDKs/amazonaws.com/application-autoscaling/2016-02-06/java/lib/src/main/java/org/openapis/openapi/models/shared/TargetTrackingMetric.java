@@ -15,6 +15,7 @@ public class TargetTrackingMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Dimensions")
     public TargetTrackingMetricDimension[] dimensions;
+
     public TargetTrackingMetric withDimensions(TargetTrackingMetricDimension[] dimensions) {
         this.dimensions = dimensions;
         return this;
@@ -23,6 +24,7 @@ public class TargetTrackingMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("MetricName")
     public String metricName;
+
     public TargetTrackingMetric withMetricName(String metricName) {
         this.metricName = metricName;
         return this;
@@ -31,9 +33,11 @@ public class TargetTrackingMetric {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Namespace")
     public String namespace;
+
     public TargetTrackingMetric withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
     
+    public TargetTrackingMetric(){}
 }

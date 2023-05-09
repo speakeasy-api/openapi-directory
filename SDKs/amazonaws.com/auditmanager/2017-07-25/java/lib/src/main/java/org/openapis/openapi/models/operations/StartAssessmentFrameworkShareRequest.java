@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class StartAssessmentFrameworkShareRequest {
     @SpeakeasyMetadata("request:mediaType=application/json")
     public StartAssessmentFrameworkShareRequestBody requestBody;
+
     public StartAssessmentFrameworkShareRequest withRequestBody(StartAssessmentFrameworkShareRequestBody requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -16,6 +18,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public StartAssessmentFrameworkShareRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -23,6 +26,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public StartAssessmentFrameworkShareRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -30,6 +34,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public StartAssessmentFrameworkShareRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -37,6 +42,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public StartAssessmentFrameworkShareRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -44,6 +50,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public StartAssessmentFrameworkShareRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -51,6 +58,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public StartAssessmentFrameworkShareRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -58,6 +66,7 @@ public class StartAssessmentFrameworkShareRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public StartAssessmentFrameworkShareRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
@@ -68,9 +77,14 @@ public class StartAssessmentFrameworkShareRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=frameworkId")
     public String frameworkId;
+
     public StartAssessmentFrameworkShareRequest withFrameworkId(String frameworkId) {
         this.frameworkId = frameworkId;
         return this;
     }
     
+    public StartAssessmentFrameworkShareRequest(@JsonProperty("RequestBody") StartAssessmentFrameworkShareRequestBody requestBody, @JsonProperty("frameworkId") String frameworkId) {
+        this.requestBody = requestBody;
+        this.frameworkId = frameworkId;
+  }
 }

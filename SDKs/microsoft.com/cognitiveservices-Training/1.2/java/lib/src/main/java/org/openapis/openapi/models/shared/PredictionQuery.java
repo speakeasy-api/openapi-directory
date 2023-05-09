@@ -15,6 +15,7 @@ public class PredictionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Results")
     public Prediction[] results;
+
     public PredictionQuery withResults(Prediction[] results) {
         this.results = results;
         return this;
@@ -23,9 +24,11 @@ public class PredictionQuery {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Token")
     public PredictionQueryToken token;
+
     public PredictionQuery withToken(PredictionQueryToken token) {
         this.token = token;
         return this;
     }
     
+    public PredictionQuery(){}
 }

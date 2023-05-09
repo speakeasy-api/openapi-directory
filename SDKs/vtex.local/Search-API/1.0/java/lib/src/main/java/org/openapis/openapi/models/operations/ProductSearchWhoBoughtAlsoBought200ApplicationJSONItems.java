@@ -12,6 +12,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("Videos")
     public Object[] videos;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withVideos(Object[] videos) {
         this.videos = videos;
         return this;
@@ -22,6 +23,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("complementName")
     public String complementName;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withComplementName(String complementName) {
         this.complementName = complementName;
         return this;
@@ -32,6 +34,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("ean")
     public String ean;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withEan(String ean) {
         this.ean = ean;
         return this;
@@ -42,6 +45,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("estimatedDateArrival")
     public String estimatedDateArrival;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withEstimatedDateArrival(String estimatedDateArrival) {
         this.estimatedDateArrival = estimatedDateArrival;
         return this;
@@ -52,6 +56,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("images")
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsImages[] images;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withImages(ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsImages[] images) {
         this.images = images;
         return this;
@@ -62,6 +67,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("isKit")
     public Boolean isKit;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withIsKit(Boolean isKit) {
         this.isKit = isKit;
         return this;
@@ -72,6 +78,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("itemId")
     public String itemId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withItemId(String itemId) {
         this.itemId = itemId;
         return this;
@@ -82,6 +89,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("kitItems")
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems[] kitItems;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withKitItems(ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems[] kitItems) {
         this.kitItems = kitItems;
         return this;
@@ -92,6 +100,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("measurementUnit")
     public String measurementUnit;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withMeasurementUnit(String measurementUnit) {
         this.measurementUnit = measurementUnit;
         return this;
@@ -102,6 +111,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("modalType")
     public String modalType;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withModalType(String modalType) {
         this.modalType = modalType;
         return this;
@@ -112,6 +122,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("name")
     public String name;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withName(String name) {
         this.name = name;
         return this;
@@ -122,6 +133,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("nameComplete")
     public String nameComplete;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withNameComplete(String nameComplete) {
         this.nameComplete = nameComplete;
         return this;
@@ -132,6 +144,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("referenceId")
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsReferenceId[] referenceId;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withReferenceId(ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsReferenceId[] referenceId) {
         this.referenceId = referenceId;
         return this;
@@ -142,6 +155,7 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("sellers")
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsSellers[] sellers;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withSellers(ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsSellers[] sellers) {
         this.sellers = sellers;
         return this;
@@ -152,9 +166,27 @@ public class ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems {
      */
     @JsonProperty("unitMultiplier")
     public Double unitMultiplier;
+
     public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems withUnitMultiplier(Double unitMultiplier) {
         this.unitMultiplier = unitMultiplier;
         return this;
     }
     
+    public ProductSearchWhoBoughtAlsoBought200ApplicationJSONItems(@JsonProperty("Videos") Object[] videos, @JsonProperty("complementName") String complementName, @JsonProperty("ean") String ean, @JsonProperty("estimatedDateArrival") String estimatedDateArrival, @JsonProperty("images") ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsImages[] images, @JsonProperty("isKit") Boolean isKit, @JsonProperty("itemId") String itemId, @JsonProperty("kitItems") ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsKitItems[] kitItems, @JsonProperty("measurementUnit") String measurementUnit, @JsonProperty("modalType") String modalType, @JsonProperty("name") String name, @JsonProperty("nameComplete") String nameComplete, @JsonProperty("referenceId") ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsReferenceId[] referenceId, @JsonProperty("sellers") ProductSearchWhoBoughtAlsoBought200ApplicationJSONItemsSellers[] sellers, @JsonProperty("unitMultiplier") Double unitMultiplier) {
+        this.videos = videos;
+        this.complementName = complementName;
+        this.ean = ean;
+        this.estimatedDateArrival = estimatedDateArrival;
+        this.images = images;
+        this.isKit = isKit;
+        this.itemId = itemId;
+        this.kitItems = kitItems;
+        this.measurementUnit = measurementUnit;
+        this.modalType = modalType;
+        this.name = name;
+        this.nameComplete = nameComplete;
+        this.referenceId = referenceId;
+        this.sellers = sellers;
+        this.unitMultiplier = unitMultiplier;
+  }
 }

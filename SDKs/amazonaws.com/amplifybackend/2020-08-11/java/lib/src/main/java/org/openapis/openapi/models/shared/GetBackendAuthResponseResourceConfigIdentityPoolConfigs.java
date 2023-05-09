@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class GetBackendAuthResponseResourceConfigIdentityPoolConfigs {
     @JsonProperty("IdentityPoolName")
     public String identityPoolName;
+
     public GetBackendAuthResponseResourceConfigIdentityPoolConfigs withIdentityPoolName(String identityPoolName) {
         this.identityPoolName = identityPoolName;
         return this;
@@ -19,9 +20,14 @@ public class GetBackendAuthResponseResourceConfigIdentityPoolConfigs {
     
     @JsonProperty("UnauthenticatedLogin")
     public Boolean unauthenticatedLogin;
+
     public GetBackendAuthResponseResourceConfigIdentityPoolConfigs withUnauthenticatedLogin(Boolean unauthenticatedLogin) {
         this.unauthenticatedLogin = unauthenticatedLogin;
         return this;
     }
     
+    public GetBackendAuthResponseResourceConfigIdentityPoolConfigs(@JsonProperty("IdentityPoolName") String identityPoolName, @JsonProperty("UnauthenticatedLogin") Boolean unauthenticatedLogin) {
+        this.identityPoolName = identityPoolName;
+        this.unauthenticatedLogin = unauthenticatedLogin;
+  }
 }

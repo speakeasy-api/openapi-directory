@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class PutFileSystemPolicyResponse {
@@ -12,6 +13,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public Object badRequest;
+
     public PutFileSystemPolicyResponse withBadRequest(Object badRequest) {
         this.badRequest = badRequest;
         return this;
@@ -19,6 +21,7 @@ public class PutFileSystemPolicyResponse {
     
     
     public String contentType;
+
     public PutFileSystemPolicyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public Object fileSystemNotFound;
+
     public PutFileSystemPolicyResponse withFileSystemNotFound(Object fileSystemNotFound) {
         this.fileSystemNotFound = fileSystemNotFound;
         return this;
@@ -39,6 +43,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public org.openapis.openapi.models.shared.FileSystemPolicyDescription fileSystemPolicyDescription;
+
     public PutFileSystemPolicyResponse withFileSystemPolicyDescription(org.openapis.openapi.models.shared.FileSystemPolicyDescription fileSystemPolicyDescription) {
         this.fileSystemPolicyDescription = fileSystemPolicyDescription;
         return this;
@@ -49,6 +54,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public Object incorrectFileSystemLifeCycleState;
+
     public PutFileSystemPolicyResponse withIncorrectFileSystemLifeCycleState(Object incorrectFileSystemLifeCycleState) {
         this.incorrectFileSystemLifeCycleState = incorrectFileSystemLifeCycleState;
         return this;
@@ -59,6 +65,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public Object internalServerError;
+
     public PutFileSystemPolicyResponse withInternalServerError(Object internalServerError) {
         this.internalServerError = internalServerError;
         return this;
@@ -69,6 +76,7 @@ public class PutFileSystemPolicyResponse {
      */
     
     public Object invalidPolicyException;
+
     public PutFileSystemPolicyResponse withInvalidPolicyException(Object invalidPolicyException) {
         this.invalidPolicyException = invalidPolicyException;
         return this;
@@ -76,6 +84,7 @@ public class PutFileSystemPolicyResponse {
     
     
     public Integer statusCode;
+
     public PutFileSystemPolicyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,9 +92,14 @@ public class PutFileSystemPolicyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public PutFileSystemPolicyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public PutFileSystemPolicyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

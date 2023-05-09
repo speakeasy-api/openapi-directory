@@ -17,6 +17,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
      */
     @JsonProperty("creation_time")
     public String creationTime;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withCreationTime(String creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -28,6 +29,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_configuration")
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration exportConfiguration;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withExportConfiguration(ExportConfigurationsPartialUpdate200ApplicationJSONExportConfiguration exportConfiguration) {
         this.exportConfiguration = exportConfiguration;
         return this;
@@ -36,6 +38,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("export_entities")
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum[] exportEntities;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withExportEntities(ExportConfigurationsPartialUpdate200ApplicationJSONExportEntitiesEnum[] exportEntities) {
         this.exportEntities = exportEntities;
         return this;
@@ -46,6 +49,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
      */
     @JsonProperty("export_type")
     public ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum exportType;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withExportType(ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum exportType) {
         this.exportType = exportType;
         return this;
@@ -56,6 +60,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
      */
     @JsonProperty("id")
     public String id;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withId(String id) {
         this.id = id;
         return this;
@@ -67,6 +72,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("last_run_time")
     public String lastRunTime;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withLastRunTime(String lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -78,6 +84,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_group")
     public String resourceGroup;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withResourceGroup(String resourceGroup) {
         this.resourceGroup = resourceGroup;
         return this;
@@ -89,6 +96,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("resource_name")
     public String resourceName;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withResourceName(String resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -99,6 +107,7 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
      */
     @JsonProperty("state")
     public ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum state;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withState(ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum state) {
         this.state = state;
         return this;
@@ -110,9 +119,16 @@ public class ExportConfigurationsPartialUpdate200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("state_info")
     public String stateInfo;
+
     public ExportConfigurationsPartialUpdate200ApplicationJSON withStateInfo(String stateInfo) {
         this.stateInfo = stateInfo;
         return this;
     }
     
+    public ExportConfigurationsPartialUpdate200ApplicationJSON(@JsonProperty("creation_time") String creationTime, @JsonProperty("export_type") ExportConfigurationsPartialUpdate200ApplicationJSONExportTypeEnum exportType, @JsonProperty("id") String id, @JsonProperty("state") ExportConfigurationsPartialUpdate200ApplicationJSONStateEnum state) {
+        this.creationTime = creationTime;
+        this.exportType = exportType;
+        this.id = id;
+        this.state = state;
+  }
 }

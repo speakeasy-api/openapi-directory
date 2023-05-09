@@ -15,6 +15,7 @@ public class EmailContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("additionalMessage")
     public String additionalMessage;
+
     public EmailContent withAdditionalMessage(String additionalMessage) {
         this.additionalMessage = additionalMessage;
         return this;
@@ -23,9 +24,11 @@ public class EmailContent {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("subject")
     public String subject;
+
     public EmailContent withSubject(String subject) {
         this.subject = subject;
         return this;
     }
     
+    public EmailContent(){}
 }

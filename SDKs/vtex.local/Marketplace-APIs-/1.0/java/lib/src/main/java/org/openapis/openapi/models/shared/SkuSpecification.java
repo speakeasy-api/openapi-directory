@@ -15,6 +15,7 @@ public class SkuSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldName")
     public String fieldName;
+
     public SkuSpecification withFieldName(String fieldName) {
         this.fieldName = fieldName;
         return this;
@@ -26,9 +27,11 @@ public class SkuSpecification {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldValues")
     public String[] fieldValues;
+
     public SkuSpecification withFieldValues(String[] fieldValues) {
         this.fieldValues = fieldValues;
         return this;
     }
     
+    public SkuSpecification(){}
 }

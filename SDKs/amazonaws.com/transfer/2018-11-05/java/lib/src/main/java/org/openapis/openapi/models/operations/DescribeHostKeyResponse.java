@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DescribeHostKeyResponse {
     
     public String contentType;
+
     public DescribeHostKeyResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class DescribeHostKeyResponse {
      */
     
     public org.openapis.openapi.models.shared.DescribeHostKeyResponse describeHostKeyResponse;
+
     public DescribeHostKeyResponse withDescribeHostKeyResponse(org.openapis.openapi.models.shared.DescribeHostKeyResponse describeHostKeyResponse) {
         this.describeHostKeyResponse = describeHostKeyResponse;
         return this;
@@ -29,6 +32,7 @@ public class DescribeHostKeyResponse {
      */
     
     public Object internalServiceError;
+
     public DescribeHostKeyResponse withInternalServiceError(Object internalServiceError) {
         this.internalServiceError = internalServiceError;
         return this;
@@ -39,6 +43,7 @@ public class DescribeHostKeyResponse {
      */
     
     public Object invalidRequestException;
+
     public DescribeHostKeyResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class DescribeHostKeyResponse {
      */
     
     public Object resourceNotFoundException;
+
     public DescribeHostKeyResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -59,6 +65,7 @@ public class DescribeHostKeyResponse {
      */
     
     public Object serviceUnavailableException;
+
     public DescribeHostKeyResponse withServiceUnavailableException(Object serviceUnavailableException) {
         this.serviceUnavailableException = serviceUnavailableException;
         return this;
@@ -66,6 +73,7 @@ public class DescribeHostKeyResponse {
     
     
     public Integer statusCode;
+
     public DescribeHostKeyResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,9 +81,14 @@ public class DescribeHostKeyResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DescribeHostKeyResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public DescribeHostKeyResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

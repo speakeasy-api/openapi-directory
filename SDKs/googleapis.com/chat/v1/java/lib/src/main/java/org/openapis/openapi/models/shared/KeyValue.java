@@ -13,11 +13,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class KeyValue {
     /**
-     * The text of the bottom label. Formatted text supported.
+     * The text of the bottom label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bottomLabel")
     public String bottomLabel;
+
     public KeyValue withBottomLabel(String bottomLabel) {
         this.bottomLabel = bottomLabel;
         return this;
@@ -29,17 +30,19 @@ public class KeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("button")
     public Button button;
+
     public KeyValue withButton(Button button) {
         this.button = button;
         return this;
     }
     
     /**
-     * The text of the content. Formatted text supported and always required.
+     * The text of the content. Formatted text supported and always required. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("content")
     public String content;
+
     public KeyValue withContent(String content) {
         this.content = content;
         return this;
@@ -51,6 +54,7 @@ public class KeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("contentMultiline")
     public Boolean contentMultiline;
+
     public KeyValue withContentMultiline(Boolean contentMultiline) {
         this.contentMultiline = contentMultiline;
         return this;
@@ -62,6 +66,7 @@ public class KeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("icon")
     public KeyValueIconEnum icon;
+
     public KeyValue withIcon(KeyValueIconEnum icon) {
         this.icon = icon;
         return this;
@@ -73,6 +78,7 @@ public class KeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("iconUrl")
     public String iconUrl;
+
     public KeyValue withIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
         return this;
@@ -84,20 +90,23 @@ public class KeyValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("onClick")
     public OnClick onClick;
+
     public KeyValue withOnClick(OnClick onClick) {
         this.onClick = onClick;
         return this;
     }
     
     /**
-     * The text of the top label. Formatted text supported.
+     * The text of the top label. Formatted text supported. For more information about formatting text, see Formatting text in Google Chat apps and Formatting text in Google Workspace Add-ons.
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("topLabel")
     public String topLabel;
+
     public KeyValue withTopLabel(String topLabel) {
         this.topLabel = topLabel;
         return this;
     }
     
+    public KeyValue(){}
 }

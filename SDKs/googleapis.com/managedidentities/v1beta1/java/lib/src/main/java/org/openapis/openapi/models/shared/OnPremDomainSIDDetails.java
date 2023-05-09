@@ -18,6 +18,7 @@ public class OnPremDomainSIDDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public OnPremDomainSIDDetails withName(String name) {
         this.name = name;
         return this;
@@ -29,9 +30,11 @@ public class OnPremDomainSIDDetails {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sidFilteringState")
     public OnPremDomainSIDDetailsSIDFilteringStateEnum sidFilteringState;
+
     public OnPremDomainSIDDetails withSidFilteringState(OnPremDomainSIDDetailsSIDFilteringStateEnum sidFilteringState) {
         this.sidFilteringState = sidFilteringState;
         return this;
     }
     
+    public OnPremDomainSIDDetails(){}
 }

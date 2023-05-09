@@ -12,6 +12,7 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("email")
     public String email;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsContact withEmail(String email) {
         this.email = email;
         return this;
@@ -20,9 +21,11 @@ public class GetABatchOfConsumerTransactionClassificationResults200ApplicationJS
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("phone")
     public String phone;
+
     public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsContact withPhone(String phone) {
         this.phone = phone;
         return this;
     }
     
+    public GetABatchOfConsumerTransactionClassificationResults200ApplicationJSONResultsContact(){}
 }

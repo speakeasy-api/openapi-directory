@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * CreateLoginProfileResponse - Contains the response to a successful &lt;a&gt;CreateLoginProfile&lt;/a&gt; request. 
@@ -12,9 +12,13 @@ package org.openapis.openapi.models.shared;
 public class CreateLoginProfileResponse {
     
     public LoginProfile loginProfile;
+
     public CreateLoginProfileResponse withLoginProfile(LoginProfile loginProfile) {
         this.loginProfile = loginProfile;
         return this;
     }
     
+    public CreateLoginProfileResponse(@JsonProperty("LoginProfile") LoginProfile loginProfile) {
+        this.loginProfile = loginProfile;
+  }
 }

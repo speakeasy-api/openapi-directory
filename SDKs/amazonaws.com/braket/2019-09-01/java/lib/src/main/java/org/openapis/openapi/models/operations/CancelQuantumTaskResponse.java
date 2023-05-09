@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CancelQuantumTaskResponse {
@@ -12,6 +13,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object accessDeniedException;
+
     public CancelQuantumTaskResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -22,6 +24,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public org.openapis.openapi.models.shared.CancelQuantumTaskResponse cancelQuantumTaskResponse;
+
     public CancelQuantumTaskResponse withCancelQuantumTaskResponse(org.openapis.openapi.models.shared.CancelQuantumTaskResponse cancelQuantumTaskResponse) {
         this.cancelQuantumTaskResponse = cancelQuantumTaskResponse;
         return this;
@@ -32,6 +35,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object conflictException;
+
     public CancelQuantumTaskResponse withConflictException(Object conflictException) {
         this.conflictException = conflictException;
         return this;
@@ -39,6 +43,7 @@ public class CancelQuantumTaskResponse {
     
     
     public String contentType;
+
     public CancelQuantumTaskResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -49,6 +54,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object internalServiceException;
+
     public CancelQuantumTaskResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -59,6 +65,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object resourceNotFoundException;
+
     public CancelQuantumTaskResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CancelQuantumTaskResponse {
     
     
     public Integer statusCode;
+
     public CancelQuantumTaskResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CancelQuantumTaskResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CancelQuantumTaskResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,6 +92,7 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object throttlingException;
+
     public CancelQuantumTaskResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
@@ -93,9 +103,14 @@ public class CancelQuantumTaskResponse {
      */
     
     public Object validationException;
+
     public CancelQuantumTaskResponse withValidationException(Object validationException) {
         this.validationException = validationException;
         return this;
     }
     
+    public CancelQuantumTaskResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -19,6 +19,7 @@ public class TeamRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public TeamRequestInput withDescription(String description) {
         this.description = description;
         return this;
@@ -31,6 +32,7 @@ public class TeamRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("html_description")
     public String htmlDescription;
+
     public TeamRequestInput withHtmlDescription(String htmlDescription) {
         this.htmlDescription = htmlDescription;
         return this;
@@ -42,6 +44,7 @@ public class TeamRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public TeamRequestInput withName(String name) {
         this.name = name;
         return this;
@@ -54,6 +57,7 @@ public class TeamRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization")
     public String organization;
+
     public TeamRequestInput withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -66,9 +70,11 @@ public class TeamRequestInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("visibility")
     public TeamRequestVisibilityEnum visibility;
+
     public TeamRequestInput withVisibility(TeamRequestVisibilityEnum visibility) {
         this.visibility = visibility;
         return this;
     }
     
+    public TeamRequestInput(){}
 }

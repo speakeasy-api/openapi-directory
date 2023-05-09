@@ -12,6 +12,7 @@ import java.time.OffsetDateTime;
 public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     public OffsetDateTime createTime;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withCreateTime(OffsetDateTime createTime) {
         this.createTime = createTime;
         return this;
@@ -19,6 +20,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public String createdBy;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -26,6 +28,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public Boolean defaultVersion;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withDefaultVersion(Boolean defaultVersion) {
         this.defaultVersion = defaultVersion;
         return this;
@@ -33,6 +36,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateData launchTemplateData;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withLaunchTemplateData(DescribeLaunchTemplateVersionsResultLaunchTemplateVersionsLaunchTemplateData launchTemplateData) {
         this.launchTemplateData = launchTemplateData;
         return this;
@@ -40,6 +44,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public String launchTemplateId;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withLaunchTemplateId(String launchTemplateId) {
         this.launchTemplateId = launchTemplateId;
         return this;
@@ -47,6 +52,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public String launchTemplateName;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withLaunchTemplateName(String launchTemplateName) {
         this.launchTemplateName = launchTemplateName;
         return this;
@@ -54,6 +60,7 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public String versionDescription;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withVersionDescription(String versionDescription) {
         this.versionDescription = versionDescription;
         return this;
@@ -61,9 +68,11 @@ public class DescribeLaunchTemplateVersionsResultLaunchTemplateVersions {
     
     
     public Long versionNumber;
+
     public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions withVersionNumber(Long versionNumber) {
         this.versionNumber = versionNumber;
         return this;
     }
     
+    public DescribeLaunchTemplateVersionsResultLaunchTemplateVersions(){}
 }

@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteGatewayInput {
     @JsonProperty("GatewayArn")
     public String gatewayArn;
+
     public DeleteGatewayInput withGatewayArn(String gatewayArn) {
         this.gatewayArn = gatewayArn;
         return this;
     }
     
+    public DeleteGatewayInput(@JsonProperty("GatewayArn") String gatewayArn) {
+        this.gatewayArn = gatewayArn;
+  }
 }

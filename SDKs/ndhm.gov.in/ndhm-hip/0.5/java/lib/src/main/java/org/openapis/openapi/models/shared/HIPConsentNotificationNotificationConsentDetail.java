@@ -16,6 +16,7 @@ import org.openapis.openapi.utils.DateTimeSerializer;
 public class HIPConsentNotificationNotificationConsentDetail {
     @JsonProperty("careContexts")
     public HIPConsentNotificationNotificationConsentDetailCareContexts[] careContexts;
+
     public HIPConsentNotificationNotificationConsentDetail withCareContexts(HIPConsentNotificationNotificationConsentDetailCareContexts[] careContexts) {
         this.careContexts = careContexts;
         return this;
@@ -23,6 +24,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("consentId")
     public String consentId;
+
     public HIPConsentNotificationNotificationConsentDetail withConsentId(String consentId) {
         this.consentId = consentId;
         return this;
@@ -30,6 +32,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("consentManager")
     public HIPConsentNotificationNotificationConsentDetailConsentManager consentManager;
+
     public HIPConsentNotificationNotificationConsentDetail withConsentManager(HIPConsentNotificationNotificationConsentDetailConsentManager consentManager) {
         this.consentManager = consentManager;
         return this;
@@ -39,6 +42,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public HIPConsentNotificationNotificationConsentDetail withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -46,6 +50,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("hiTypes")
     public HITypeEnumEnum[] hiTypes;
+
     public HIPConsentNotificationNotificationConsentDetail withHiTypes(HITypeEnumEnum[] hiTypes) {
         this.hiTypes = hiTypes;
         return this;
@@ -53,6 +58,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("hip")
     public HIPConsentNotificationNotificationConsentDetailHIP hip;
+
     public HIPConsentNotificationNotificationConsentDetail withHip(HIPConsentNotificationNotificationConsentDetailHIP hip) {
         this.hip = hip;
         return this;
@@ -60,6 +66,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("patient")
     public ConsentManagerPatientID patient;
+
     public HIPConsentNotificationNotificationConsentDetail withPatient(ConsentManagerPatientID patient) {
         this.patient = patient;
         return this;
@@ -67,6 +74,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("permission")
     public Permission permission;
+
     public HIPConsentNotificationNotificationConsentDetail withPermission(Permission permission) {
         this.permission = permission;
         return this;
@@ -74,6 +82,7 @@ public class HIPConsentNotificationNotificationConsentDetail {
     
     @JsonProperty("purpose")
     public UsePurpose purpose;
+
     public HIPConsentNotificationNotificationConsentDetail withPurpose(UsePurpose purpose) {
         this.purpose = purpose;
         return this;
@@ -82,9 +91,21 @@ public class HIPConsentNotificationNotificationConsentDetail {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schemaVersion")
     public String schemaVersion;
+
     public HIPConsentNotificationNotificationConsentDetail withSchemaVersion(String schemaVersion) {
         this.schemaVersion = schemaVersion;
         return this;
     }
     
+    public HIPConsentNotificationNotificationConsentDetail(@JsonProperty("careContexts") HIPConsentNotificationNotificationConsentDetailCareContexts[] careContexts, @JsonProperty("consentId") String consentId, @JsonProperty("consentManager") HIPConsentNotificationNotificationConsentDetailConsentManager consentManager, @JsonProperty("createdAt") OffsetDateTime createdAt, @JsonProperty("hiTypes") HITypeEnumEnum[] hiTypes, @JsonProperty("hip") HIPConsentNotificationNotificationConsentDetailHIP hip, @JsonProperty("patient") ConsentManagerPatientID patient, @JsonProperty("permission") Permission permission, @JsonProperty("purpose") UsePurpose purpose) {
+        this.careContexts = careContexts;
+        this.consentId = consentId;
+        this.consentManager = consentManager;
+        this.createdAt = createdAt;
+        this.hiTypes = hiTypes;
+        this.hip = hip;
+        this.patient = patient;
+        this.permission = permission;
+        this.purpose = purpose;
+  }
 }

@@ -17,6 +17,7 @@ public class ConsentRequestInitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("consentRequest")
     public ConsentRequestInitResponseConsentRequest consentRequest;
+
     public ConsentRequestInitResponse withConsentRequest(ConsentRequestInitResponseConsentRequest consentRequest) {
         this.consentRequest = consentRequest;
         return this;
@@ -25,6 +26,7 @@ public class ConsentRequestInitResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("error")
     public Error error;
+
     public ConsentRequestInitResponse withError(Error error) {
         this.error = error;
         return this;
@@ -35,6 +37,7 @@ public class ConsentRequestInitResponse {
      */
     @JsonProperty("requestId")
     public String requestId;
+
     public ConsentRequestInitResponse withRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -42,6 +45,7 @@ public class ConsentRequestInitResponse {
     
     @JsonProperty("resp")
     public RequestReference resp;
+
     public ConsentRequestInitResponse withResp(RequestReference resp) {
         this.resp = resp;
         return this;
@@ -54,9 +58,15 @@ public class ConsentRequestInitResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timestamp")
     public OffsetDateTime timestamp;
+
     public ConsentRequestInitResponse withTimestamp(OffsetDateTime timestamp) {
         this.timestamp = timestamp;
         return this;
     }
     
+    public ConsentRequestInitResponse(@JsonProperty("requestId") String requestId, @JsonProperty("resp") RequestReference resp, @JsonProperty("timestamp") OffsetDateTime timestamp) {
+        this.requestId = requestId;
+        this.resp = resp;
+        this.timestamp = timestamp;
+  }
 }

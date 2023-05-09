@@ -18,6 +18,7 @@ public class ReportRowDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("displayLabel")
     public String displayLabel;
+
     public ReportRowDimensionValue withDisplayLabel(String displayLabel) {
         this.displayLabel = displayLabel;
         return this;
@@ -29,9 +30,11 @@ public class ReportRowDimensionValue {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("value")
     public String value;
+
     public ReportRowDimensionValue withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public ReportRowDimensionValue(){}
 }

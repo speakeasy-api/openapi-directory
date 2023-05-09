@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class ProductSearchShowTogetherRequest {
@@ -12,6 +13,7 @@ public class ProductSearchShowTogetherRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public ProductSearchShowTogetherRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class ProductSearchShowTogetherRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public ProductSearchShowTogetherRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -32,9 +35,15 @@ public class ProductSearchShowTogetherRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=productId")
     public Long productId;
+
     public ProductSearchShowTogetherRequest withProductId(Long productId) {
         this.productId = productId;
         return this;
     }
     
+    public ProductSearchShowTogetherRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("productId") Long productId) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.productId = productId;
+  }
 }

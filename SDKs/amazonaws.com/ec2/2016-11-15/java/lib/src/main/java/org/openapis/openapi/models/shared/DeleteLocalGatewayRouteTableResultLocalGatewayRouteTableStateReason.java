@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason {
     
     public String code;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,11 @@ public class DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason
     
     
     public String message;
+
     public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public DeleteLocalGatewayRouteTableResultLocalGatewayRouteTableStateReason(){}
 }

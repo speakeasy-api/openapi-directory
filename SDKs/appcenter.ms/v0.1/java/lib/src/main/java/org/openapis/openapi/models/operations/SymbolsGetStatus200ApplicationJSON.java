@@ -15,6 +15,7 @@ public class SymbolsGetStatus200ApplicationJSON {
      */
     @JsonProperty("app_id")
     public String appId;
+
     public SymbolsGetStatus200ApplicationJSON withAppId(String appId) {
         this.appId = appId;
         return this;
@@ -25,6 +26,7 @@ public class SymbolsGetStatus200ApplicationJSON {
      */
     @JsonProperty("status")
     public SymbolsGetStatus200ApplicationJSONStatusEnum status;
+
     public SymbolsGetStatus200ApplicationJSON withStatus(SymbolsGetStatus200ApplicationJSONStatusEnum status) {
         this.status = status;
         return this;
@@ -35,9 +37,15 @@ public class SymbolsGetStatus200ApplicationJSON {
      */
     @JsonProperty("symbol_id")
     public String symbolId;
+
     public SymbolsGetStatus200ApplicationJSON withSymbolId(String symbolId) {
         this.symbolId = symbolId;
         return this;
     }
     
+    public SymbolsGetStatus200ApplicationJSON(@JsonProperty("app_id") String appId, @JsonProperty("status") SymbolsGetStatus200ApplicationJSONStatusEnum status, @JsonProperty("symbol_id") String symbolId) {
+        this.appId = appId;
+        this.status = status;
+        this.symbolId = symbolId;
+  }
 }

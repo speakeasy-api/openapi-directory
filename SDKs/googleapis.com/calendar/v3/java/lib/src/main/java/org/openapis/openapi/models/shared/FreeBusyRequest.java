@@ -20,6 +20,7 @@ public class FreeBusyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("calendarExpansionMax")
     public Integer calendarExpansionMax;
+
     public FreeBusyRequest withCalendarExpansionMax(Integer calendarExpansionMax) {
         this.calendarExpansionMax = calendarExpansionMax;
         return this;
@@ -31,6 +32,7 @@ public class FreeBusyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("groupExpansionMax")
     public Integer groupExpansionMax;
+
     public FreeBusyRequest withGroupExpansionMax(Integer groupExpansionMax) {
         this.groupExpansionMax = groupExpansionMax;
         return this;
@@ -42,6 +44,7 @@ public class FreeBusyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public FreeBusyRequestItem[] items;
+
     public FreeBusyRequest withItems(FreeBusyRequestItem[] items) {
         this.items = items;
         return this;
@@ -55,6 +58,7 @@ public class FreeBusyRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeMax")
     public OffsetDateTime timeMax;
+
     public FreeBusyRequest withTimeMax(OffsetDateTime timeMax) {
         this.timeMax = timeMax;
         return this;
@@ -68,6 +72,7 @@ public class FreeBusyRequest {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("timeMin")
     public OffsetDateTime timeMin;
+
     public FreeBusyRequest withTimeMin(OffsetDateTime timeMin) {
         this.timeMin = timeMin;
         return this;
@@ -79,9 +84,11 @@ public class FreeBusyRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeZone")
     public String timeZone;
+
     public FreeBusyRequest withTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
     
+    public FreeBusyRequest(){}
 }

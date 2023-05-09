@@ -25,6 +25,7 @@ public class WorkTypeDetailsApiModel {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreatedOn")
     public OffsetDateTime createdOn;
+
     public WorkTypeDetailsApiModel withCreatedOn(OffsetDateTime createdOn) {
         this.createdOn = createdOn;
         return this;
@@ -36,6 +37,7 @@ public class WorkTypeDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Id")
     public Integer id;
+
     public WorkTypeDetailsApiModel withId(Integer id) {
         this.id = id;
         return this;
@@ -47,9 +49,11 @@ public class WorkTypeDetailsApiModel {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Title")
     public String title;
+
     public WorkTypeDetailsApiModel withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public WorkTypeDetailsApiModel(){}
 }

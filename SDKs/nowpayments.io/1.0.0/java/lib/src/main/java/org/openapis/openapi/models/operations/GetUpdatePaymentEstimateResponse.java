@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetUpdatePaymentEstimateResponse {
     
     public String contentType;
+
     public GetUpdatePaymentEstimateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetUpdatePaymentEstimateResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetUpdatePaymentEstimateResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetUpdatePaymentEstimateResponse {
     
     
     public Integer statusCode;
+
     public GetUpdatePaymentEstimateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetUpdatePaymentEstimateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetUpdatePaymentEstimateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,9 +45,14 @@ public class GetUpdatePaymentEstimateResponse {
      */
     
     public GetUpdatePaymentEstimate200ApplicationJSON getUpdatePaymentEstimate200ApplicationJSONObject;
+
     public GetUpdatePaymentEstimateResponse withGetUpdatePaymentEstimate200ApplicationJSONObject(GetUpdatePaymentEstimate200ApplicationJSON getUpdatePaymentEstimate200ApplicationJSONObject) {
         this.getUpdatePaymentEstimate200ApplicationJSONObject = getUpdatePaymentEstimate200ApplicationJSONObject;
         return this;
     }
     
+    public GetUpdatePaymentEstimateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

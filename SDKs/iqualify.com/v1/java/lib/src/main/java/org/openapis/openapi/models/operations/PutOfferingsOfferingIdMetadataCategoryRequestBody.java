@@ -12,9 +12,11 @@ public class PutOfferingsOfferingIdMetadataCategoryRequestBody {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category")
     public String category;
+
     public PutOfferingsOfferingIdMetadataCategoryRequestBody withCategory(String category) {
         this.category = category;
         return this;
     }
     
+    public PutOfferingsOfferingIdMetadataCategoryRequestBody(){}
 }

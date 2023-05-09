@@ -12,6 +12,7 @@ public class GetReturnsReturnsArrayV2ReturnV2RmaItemV2NonRestockedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public GetReturnsReturnsArrayV2ReturnV2RmaItemV2NonRestockedReason withId(Long id) {
         this.id = id;
         return this;
@@ -20,9 +21,11 @@ public class GetReturnsReturnsArrayV2ReturnV2RmaItemV2NonRestockedReason {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public GetReturnsReturnsArrayV2ReturnV2RmaItemV2NonRestockedReason withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public GetReturnsReturnsArrayV2ReturnV2RmaItemV2NonRestockedReason(){}
 }

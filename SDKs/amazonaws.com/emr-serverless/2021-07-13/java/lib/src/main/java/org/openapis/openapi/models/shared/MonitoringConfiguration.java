@@ -15,6 +15,7 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("managedPersistenceMonitoringConfiguration")
     public ManagedPersistenceMonitoringConfiguration managedPersistenceMonitoringConfiguration;
+
     public MonitoringConfiguration withManagedPersistenceMonitoringConfiguration(ManagedPersistenceMonitoringConfiguration managedPersistenceMonitoringConfiguration) {
         this.managedPersistenceMonitoringConfiguration = managedPersistenceMonitoringConfiguration;
         return this;
@@ -23,9 +24,11 @@ public class MonitoringConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("s3MonitoringConfiguration")
     public S3MonitoringConfiguration s3MonitoringConfiguration;
+
     public MonitoringConfiguration withS3MonitoringConfiguration(S3MonitoringConfiguration s3MonitoringConfiguration) {
         this.s3MonitoringConfiguration = s3MonitoringConfiguration;
         return this;
     }
     
+    public MonitoringConfiguration(){}
 }

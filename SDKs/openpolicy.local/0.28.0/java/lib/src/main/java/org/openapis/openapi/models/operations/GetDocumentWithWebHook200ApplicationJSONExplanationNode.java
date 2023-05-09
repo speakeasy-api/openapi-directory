@@ -19,6 +19,7 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("index")
     public Double index;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanationNode withIndex(Double index) {
         this.index = index;
         return this;
@@ -27,9 +28,11 @@ public class GetDocumentWithWebHook200ApplicationJSONExplanationNode {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("terms")
     public GetDocumentWithWebHook200ApplicationJSONExplanationNodeTerms[] terms;
+
     public GetDocumentWithWebHook200ApplicationJSONExplanationNode withTerms(GetDocumentWithWebHook200ApplicationJSONExplanationNodeTerms[] terms) {
         this.terms = terms;
         return this;
     }
     
+    public GetDocumentWithWebHook200ApplicationJSONExplanationNode(){}
 }

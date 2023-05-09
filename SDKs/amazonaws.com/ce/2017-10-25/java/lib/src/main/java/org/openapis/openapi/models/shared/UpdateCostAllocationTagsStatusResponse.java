@@ -15,9 +15,11 @@ public class UpdateCostAllocationTagsStatusResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Errors")
     public UpdateCostAllocationTagsStatusError[] errors;
+
     public UpdateCostAllocationTagsStatusResponse withErrors(UpdateCostAllocationTagsStatusError[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public UpdateCostAllocationTagsStatusResponse(){}
 }

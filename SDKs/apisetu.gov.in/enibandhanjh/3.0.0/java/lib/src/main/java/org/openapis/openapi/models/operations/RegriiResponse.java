@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class RegriiResponse {
     
     public String contentType;
+
     public RegriiResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class RegriiResponse {
     
     
     public Integer statusCode;
+
     public RegriiResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class RegriiResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public RegriiResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class RegriiResponse {
      */
     
     public Regrii400ApplicationJSON regrii400ApplicationJSONObject;
+
     public RegriiResponse withRegrii400ApplicationJSONObject(Regrii400ApplicationJSON regrii400ApplicationJSONObject) {
         this.regrii400ApplicationJSONObject = regrii400ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class RegriiResponse {
      */
     
     public Regrii401ApplicationJSON regrii401ApplicationJSONObject;
+
     public RegriiResponse withRegrii401ApplicationJSONObject(Regrii401ApplicationJSON regrii401ApplicationJSONObject) {
         this.regrii401ApplicationJSONObject = regrii401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class RegriiResponse {
      */
     
     public Regrii404ApplicationJSON regrii404ApplicationJSONObject;
+
     public RegriiResponse withRegrii404ApplicationJSONObject(Regrii404ApplicationJSON regrii404ApplicationJSONObject) {
         this.regrii404ApplicationJSONObject = regrii404ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class RegriiResponse {
      */
     
     public Regrii500ApplicationJSON regrii500ApplicationJSONObject;
+
     public RegriiResponse withRegrii500ApplicationJSONObject(Regrii500ApplicationJSON regrii500ApplicationJSONObject) {
         this.regrii500ApplicationJSONObject = regrii500ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class RegriiResponse {
      */
     
     public Regrii502ApplicationJSON regrii502ApplicationJSONObject;
+
     public RegriiResponse withRegrii502ApplicationJSONObject(Regrii502ApplicationJSON regrii502ApplicationJSONObject) {
         this.regrii502ApplicationJSONObject = regrii502ApplicationJSONObject;
         return this;
@@ -83,6 +92,7 @@ public class RegriiResponse {
      */
     
     public Regrii503ApplicationJSON regrii503ApplicationJSONObject;
+
     public RegriiResponse withRegrii503ApplicationJSONObject(Regrii503ApplicationJSON regrii503ApplicationJSONObject) {
         this.regrii503ApplicationJSONObject = regrii503ApplicationJSONObject;
         return this;
@@ -93,9 +103,14 @@ public class RegriiResponse {
      */
     
     public Regrii504ApplicationJSON regrii504ApplicationJSONObject;
+
     public RegriiResponse withRegrii504ApplicationJSONObject(Regrii504ApplicationJSON regrii504ApplicationJSONObject) {
         this.regrii504ApplicationJSONObject = regrii504ApplicationJSONObject;
         return this;
     }
     
+    public RegriiResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

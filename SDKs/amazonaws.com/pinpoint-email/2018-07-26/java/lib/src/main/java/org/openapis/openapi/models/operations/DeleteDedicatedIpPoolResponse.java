@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class DeleteDedicatedIpPoolResponse {
@@ -12,6 +13,7 @@ public class DeleteDedicatedIpPoolResponse {
      */
     
     public Object badRequestException;
+
     public DeleteDedicatedIpPoolResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class DeleteDedicatedIpPoolResponse {
      */
     
     public Object concurrentModificationException;
+
     public DeleteDedicatedIpPoolResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class DeleteDedicatedIpPoolResponse {
     
     
     public String contentType;
+
     public DeleteDedicatedIpPoolResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class DeleteDedicatedIpPoolResponse {
      */
     
     public java.util.Map<String, Object> deleteDedicatedIpPoolResponse;
+
     public DeleteDedicatedIpPoolResponse withDeleteDedicatedIpPoolResponse(java.util.Map<String, Object> deleteDedicatedIpPoolResponse) {
         this.deleteDedicatedIpPoolResponse = deleteDedicatedIpPoolResponse;
         return this;
@@ -49,6 +54,7 @@ public class DeleteDedicatedIpPoolResponse {
      */
     
     public Object notFoundException;
+
     public DeleteDedicatedIpPoolResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -56,6 +62,7 @@ public class DeleteDedicatedIpPoolResponse {
     
     
     public Integer statusCode;
+
     public DeleteDedicatedIpPoolResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class DeleteDedicatedIpPoolResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public DeleteDedicatedIpPoolResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,9 +81,14 @@ public class DeleteDedicatedIpPoolResponse {
      */
     
     public Object tooManyRequestsException;
+
     public DeleteDedicatedIpPoolResponse withTooManyRequestsException(Object tooManyRequestsException) {
         this.tooManyRequestsException = tooManyRequestsException;
         return this;
     }
     
+    public DeleteDedicatedIpPoolResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -15,6 +15,7 @@ public class BuildStatusConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("context")
     public String context;
+
     public BuildStatusConfig withContext(String context) {
         this.context = context;
         return this;
@@ -23,9 +24,11 @@ public class BuildStatusConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetUrl")
     public String targetUrl;
+
     public BuildStatusConfig withTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
     
+    public BuildStatusConfig(){}
 }

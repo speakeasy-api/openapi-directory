@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class UpdateClusterVersionResponse {
@@ -12,6 +13,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object clientException;
+
     public UpdateClusterVersionResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class UpdateClusterVersionResponse {
     
     
     public String contentType;
+
     public UpdateClusterVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object invalidParameterException;
+
     public UpdateClusterVersionResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -39,6 +43,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object invalidRequestException;
+
     public UpdateClusterVersionResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object resourceInUseException;
+
     public UpdateClusterVersionResponse withResourceInUseException(Object resourceInUseException) {
         this.resourceInUseException = resourceInUseException;
         return this;
@@ -59,6 +65,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object resourceNotFoundException;
+
     public UpdateClusterVersionResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -69,6 +76,7 @@ public class UpdateClusterVersionResponse {
      */
     
     public Object serverException;
+
     public UpdateClusterVersionResponse withServerException(Object serverException) {
         this.serverException = serverException;
         return this;
@@ -76,6 +84,7 @@ public class UpdateClusterVersionResponse {
     
     
     public Integer statusCode;
+
     public UpdateClusterVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class UpdateClusterVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public UpdateClusterVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class UpdateClusterVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.UpdateClusterVersionResponse updateClusterVersionResponse;
+
     public UpdateClusterVersionResponse withUpdateClusterVersionResponse(org.openapis.openapi.models.shared.UpdateClusterVersionResponse updateClusterVersionResponse) {
         this.updateClusterVersionResponse = updateClusterVersionResponse;
         return this;
     }
     
+    public UpdateClusterVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

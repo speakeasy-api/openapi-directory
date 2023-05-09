@@ -15,6 +15,7 @@ public class SubmitJobResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jobArn")
     public String jobArn;
+
     public SubmitJobResponse withJobArn(String jobArn) {
         this.jobArn = jobArn;
         return this;
@@ -22,6 +23,7 @@ public class SubmitJobResponse {
     
     @JsonProperty("jobId")
     public String jobId;
+
     public SubmitJobResponse withJobId(String jobId) {
         this.jobId = jobId;
         return this;
@@ -29,9 +31,14 @@ public class SubmitJobResponse {
     
     @JsonProperty("jobName")
     public String jobName;
+
     public SubmitJobResponse withJobName(String jobName) {
         this.jobName = jobName;
         return this;
     }
     
+    public SubmitJobResponse(@JsonProperty("jobId") String jobId, @JsonProperty("jobName") String jobName) {
+        this.jobId = jobId;
+        this.jobName = jobName;
+  }
 }

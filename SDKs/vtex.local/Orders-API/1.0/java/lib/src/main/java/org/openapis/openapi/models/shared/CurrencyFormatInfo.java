@@ -15,6 +15,7 @@ public class CurrencyFormatInfo {
      */
     @JsonProperty("CurrencyDecimalDigits")
     public Integer currencyDecimalDigits;
+
     public CurrencyFormatInfo withCurrencyDecimalDigits(Integer currencyDecimalDigits) {
         this.currencyDecimalDigits = currencyDecimalDigits;
         return this;
@@ -25,6 +26,7 @@ public class CurrencyFormatInfo {
      */
     @JsonProperty("CurrencyDecimalSeparator")
     public String currencyDecimalSeparator;
+
     public CurrencyFormatInfo withCurrencyDecimalSeparator(String currencyDecimalSeparator) {
         this.currencyDecimalSeparator = currencyDecimalSeparator;
         return this;
@@ -35,6 +37,7 @@ public class CurrencyFormatInfo {
      */
     @JsonProperty("CurrencyGroupSeparator")
     public String currencyGroupSeparator;
+
     public CurrencyFormatInfo withCurrencyGroupSeparator(String currencyGroupSeparator) {
         this.currencyGroupSeparator = currencyGroupSeparator;
         return this;
@@ -45,6 +48,7 @@ public class CurrencyFormatInfo {
      */
     @JsonProperty("CurrencyGroupSize")
     public Integer currencyGroupSize;
+
     public CurrencyFormatInfo withCurrencyGroupSize(Integer currencyGroupSize) {
         this.currencyGroupSize = currencyGroupSize;
         return this;
@@ -55,9 +59,17 @@ public class CurrencyFormatInfo {
      */
     @JsonProperty("StartsWithCurrencySymbol")
     public Boolean startsWithCurrencySymbol;
+
     public CurrencyFormatInfo withStartsWithCurrencySymbol(Boolean startsWithCurrencySymbol) {
         this.startsWithCurrencySymbol = startsWithCurrencySymbol;
         return this;
     }
     
+    public CurrencyFormatInfo(@JsonProperty("CurrencyDecimalDigits") Integer currencyDecimalDigits, @JsonProperty("CurrencyDecimalSeparator") String currencyDecimalSeparator, @JsonProperty("CurrencyGroupSeparator") String currencyGroupSeparator, @JsonProperty("CurrencyGroupSize") Integer currencyGroupSize, @JsonProperty("StartsWithCurrencySymbol") Boolean startsWithCurrencySymbol) {
+        this.currencyDecimalDigits = currencyDecimalDigits;
+        this.currencyDecimalSeparator = currencyDecimalSeparator;
+        this.currencyGroupSeparator = currencyGroupSeparator;
+        this.currencyGroupSize = currencyGroupSize;
+        this.startsWithCurrencySymbol = startsWithCurrencySymbol;
+  }
 }

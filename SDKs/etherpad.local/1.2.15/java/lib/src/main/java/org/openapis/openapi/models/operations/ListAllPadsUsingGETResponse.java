@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListAllPadsUsingGETResponse {
     
     public String contentType;
+
     public ListAllPadsUsingGETResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ListAllPadsUsingGETResponse {
     
     
     public Integer statusCode;
+
     public ListAllPadsUsingGETResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ListAllPadsUsingGETResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListAllPadsUsingGETResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class ListAllPadsUsingGETResponse {
      */
     
     public ListAllPadsUsingGET200ApplicationJSON listAllPadsUsingGET200ApplicationJSONObject;
+
     public ListAllPadsUsingGETResponse withListAllPadsUsingGET200ApplicationJSONObject(ListAllPadsUsingGET200ApplicationJSON listAllPadsUsingGET200ApplicationJSONObject) {
         this.listAllPadsUsingGET200ApplicationJSONObject = listAllPadsUsingGET200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class ListAllPadsUsingGETResponse {
      */
     
     public ListAllPadsUsingGET400ApplicationJSON listAllPadsUsingGET400ApplicationJSONObject;
+
     public ListAllPadsUsingGETResponse withListAllPadsUsingGET400ApplicationJSONObject(ListAllPadsUsingGET400ApplicationJSON listAllPadsUsingGET400ApplicationJSONObject) {
         this.listAllPadsUsingGET400ApplicationJSONObject = listAllPadsUsingGET400ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class ListAllPadsUsingGETResponse {
      */
     
     public ListAllPadsUsingGET401ApplicationJSON listAllPadsUsingGET401ApplicationJSONObject;
+
     public ListAllPadsUsingGETResponse withListAllPadsUsingGET401ApplicationJSONObject(ListAllPadsUsingGET401ApplicationJSON listAllPadsUsingGET401ApplicationJSONObject) {
         this.listAllPadsUsingGET401ApplicationJSONObject = listAllPadsUsingGET401ApplicationJSONObject;
         return this;
@@ -63,9 +70,14 @@ public class ListAllPadsUsingGETResponse {
      */
     
     public ListAllPadsUsingGET500ApplicationJSON listAllPadsUsingGET500ApplicationJSONObject;
+
     public ListAllPadsUsingGETResponse withListAllPadsUsingGET500ApplicationJSONObject(ListAllPadsUsingGET500ApplicationJSON listAllPadsUsingGET500ApplicationJSONObject) {
         this.listAllPadsUsingGET500ApplicationJSONObject = listAllPadsUsingGET500ApplicationJSONObject;
         return this;
     }
     
+    public ListAllPadsUsingGETResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

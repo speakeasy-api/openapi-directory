@@ -18,6 +18,7 @@ public class GoogleDatastoreAdminV1EntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kinds")
     public String[] kinds;
+
     public GoogleDatastoreAdminV1EntityFilter withKinds(String[] kinds) {
         this.kinds = kinds;
         return this;
@@ -29,9 +30,11 @@ public class GoogleDatastoreAdminV1EntityFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("namespaceIds")
     public String[] namespaceIds;
+
     public GoogleDatastoreAdminV1EntityFilter withNamespaceIds(String[] namespaceIds) {
         this.namespaceIds = namespaceIds;
         return this;
     }
     
+    public GoogleDatastoreAdminV1EntityFilter(){}
 }

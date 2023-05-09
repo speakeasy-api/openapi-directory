@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SetEqualizerValuesRequest {
     @JsonProperty("high_shelf")
     public HighShelf1 highShelf;
+
     public SetEqualizerValuesRequest withHighShelf(HighShelf1 highShelf) {
         this.highShelf = highShelf;
         return this;
@@ -16,9 +17,14 @@ public class SetEqualizerValuesRequest {
     
     @JsonProperty("low_shelf")
     public LowShelf1 lowShelf;
+
     public SetEqualizerValuesRequest withLowShelf(LowShelf1 lowShelf) {
         this.lowShelf = lowShelf;
         return this;
     }
     
+    public SetEqualizerValuesRequest(@JsonProperty("high_shelf") HighShelf1 highShelf, @JsonProperty("low_shelf") LowShelf1 lowShelf) {
+        this.highShelf = highShelf;
+        this.lowShelf = lowShelf;
+  }
 }

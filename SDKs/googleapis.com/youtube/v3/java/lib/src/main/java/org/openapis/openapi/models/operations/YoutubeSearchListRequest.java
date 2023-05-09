@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class YoutubeSearchListRequest {
@@ -12,6 +13,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=$.xgafv")
     public org.openapis.openapi.models.shared.XgafvEnum dollarXgafv;
+
     public YoutubeSearchListRequest withDollarXgafv(org.openapis.openapi.models.shared.XgafvEnum dollarXgafv) {
         this.dollarXgafv = dollarXgafv;
         return this;
@@ -22,6 +24,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=access_token")
     public String accessToken;
+
     public YoutubeSearchListRequest withAccessToken(String accessToken) {
         this.accessToken = accessToken;
         return this;
@@ -32,6 +35,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=alt")
     public org.openapis.openapi.models.shared.AltEnum alt;
+
     public YoutubeSearchListRequest withAlt(org.openapis.openapi.models.shared.AltEnum alt) {
         this.alt = alt;
         return this;
@@ -42,6 +46,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=callback")
     public String callback;
+
     public YoutubeSearchListRequest withCallback(String callback) {
         this.callback = callback;
         return this;
@@ -52,6 +57,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelId")
     public String channelId;
+
     public YoutubeSearchListRequest withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -62,6 +68,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=channelType")
     public YoutubeSearchListChannelTypeEnum channelType;
+
     public YoutubeSearchListRequest withChannelType(YoutubeSearchListChannelTypeEnum channelType) {
         this.channelType = channelType;
         return this;
@@ -72,6 +79,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=eventType")
     public YoutubeSearchListEventTypeEnum eventType;
+
     public YoutubeSearchListRequest withEventType(YoutubeSearchListEventTypeEnum eventType) {
         this.eventType = eventType;
         return this;
@@ -82,6 +90,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=fields")
     public String fields;
+
     public YoutubeSearchListRequest withFields(String fields) {
         this.fields = fields;
         return this;
@@ -92,6 +101,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forContentOwner")
     public Boolean forContentOwner;
+
     public YoutubeSearchListRequest withForContentOwner(Boolean forContentOwner) {
         this.forContentOwner = forContentOwner;
         return this;
@@ -102,6 +112,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forDeveloper")
     public Boolean forDeveloper;
+
     public YoutubeSearchListRequest withForDeveloper(Boolean forDeveloper) {
         this.forDeveloper = forDeveloper;
         return this;
@@ -112,6 +123,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=forMine")
     public Boolean forMine;
+
     public YoutubeSearchListRequest withForMine(Boolean forMine) {
         this.forMine = forMine;
         return this;
@@ -122,6 +134,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=key")
     public String key;
+
     public YoutubeSearchListRequest withKey(String key) {
         this.key = key;
         return this;
@@ -132,6 +145,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=location")
     public String location;
+
     public YoutubeSearchListRequest withLocation(String location) {
         this.location = location;
         return this;
@@ -142,6 +156,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=locationRadius")
     public String locationRadius;
+
     public YoutubeSearchListRequest withLocationRadius(String locationRadius) {
         this.locationRadius = locationRadius;
         return this;
@@ -152,6 +167,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=maxResults")
     public Long maxResults;
+
     public YoutubeSearchListRequest withMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -162,6 +178,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=oauth_token")
     public String oauthToken;
+
     public YoutubeSearchListRequest withOauthToken(String oauthToken) {
         this.oauthToken = oauthToken;
         return this;
@@ -172,6 +189,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=onBehalfOfContentOwner")
     public String onBehalfOfContentOwner;
+
     public YoutubeSearchListRequest withOnBehalfOfContentOwner(String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
         return this;
@@ -182,6 +200,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=order")
     public YoutubeSearchListOrderEnum order;
+
     public YoutubeSearchListRequest withOrder(YoutubeSearchListOrderEnum order) {
         this.order = order;
         return this;
@@ -192,6 +211,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=pageToken")
     public String pageToken;
+
     public YoutubeSearchListRequest withPageToken(String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -202,6 +222,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=part")
     public String[] part;
+
     public YoutubeSearchListRequest withPart(String[] part) {
         this.part = part;
         return this;
@@ -212,6 +233,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=prettyPrint")
     public Boolean prettyPrint;
+
     public YoutubeSearchListRequest withPrettyPrint(Boolean prettyPrint) {
         this.prettyPrint = prettyPrint;
         return this;
@@ -222,6 +244,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedAfter")
     public String publishedAfter;
+
     public YoutubeSearchListRequest withPublishedAfter(String publishedAfter) {
         this.publishedAfter = publishedAfter;
         return this;
@@ -232,6 +255,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=publishedBefore")
     public String publishedBefore;
+
     public YoutubeSearchListRequest withPublishedBefore(String publishedBefore) {
         this.publishedBefore = publishedBefore;
         return this;
@@ -242,6 +266,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=q")
     public String q;
+
     public YoutubeSearchListRequest withQ(String q) {
         this.q = q;
         return this;
@@ -252,6 +277,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=quotaUser")
     public String quotaUser;
+
     public YoutubeSearchListRequest withQuotaUser(String quotaUser) {
         this.quotaUser = quotaUser;
         return this;
@@ -262,6 +288,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=regionCode")
     public String regionCode;
+
     public YoutubeSearchListRequest withRegionCode(String regionCode) {
         this.regionCode = regionCode;
         return this;
@@ -272,6 +299,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relatedToVideoId")
     public String relatedToVideoId;
+
     public YoutubeSearchListRequest withRelatedToVideoId(String relatedToVideoId) {
         this.relatedToVideoId = relatedToVideoId;
         return this;
@@ -282,6 +310,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=relevanceLanguage")
     public String relevanceLanguage;
+
     public YoutubeSearchListRequest withRelevanceLanguage(String relevanceLanguage) {
         this.relevanceLanguage = relevanceLanguage;
         return this;
@@ -292,6 +321,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=safeSearch")
     public YoutubeSearchListSafeSearchEnum safeSearch;
+
     public YoutubeSearchListRequest withSafeSearch(YoutubeSearchListSafeSearchEnum safeSearch) {
         this.safeSearch = safeSearch;
         return this;
@@ -302,6 +332,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=topicId")
     public String topicId;
+
     public YoutubeSearchListRequest withTopicId(String topicId) {
         this.topicId = topicId;
         return this;
@@ -312,6 +343,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=type")
     public String[] type;
+
     public YoutubeSearchListRequest withType(String[] type) {
         this.type = type;
         return this;
@@ -322,6 +354,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=uploadType")
     public String uploadType;
+
     public YoutubeSearchListRequest withUploadType(String uploadType) {
         this.uploadType = uploadType;
         return this;
@@ -332,6 +365,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=upload_protocol")
     public String uploadProtocol;
+
     public YoutubeSearchListRequest withUploadProtocol(String uploadProtocol) {
         this.uploadProtocol = uploadProtocol;
         return this;
@@ -342,6 +376,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoCaption")
     public YoutubeSearchListVideoCaptionEnum videoCaption;
+
     public YoutubeSearchListRequest withVideoCaption(YoutubeSearchListVideoCaptionEnum videoCaption) {
         this.videoCaption = videoCaption;
         return this;
@@ -352,6 +387,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoCategoryId")
     public String videoCategoryId;
+
     public YoutubeSearchListRequest withVideoCategoryId(String videoCategoryId) {
         this.videoCategoryId = videoCategoryId;
         return this;
@@ -362,6 +398,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoDefinition")
     public YoutubeSearchListVideoDefinitionEnum videoDefinition;
+
     public YoutubeSearchListRequest withVideoDefinition(YoutubeSearchListVideoDefinitionEnum videoDefinition) {
         this.videoDefinition = videoDefinition;
         return this;
@@ -372,6 +409,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoDimension")
     public YoutubeSearchListVideoDimensionEnum videoDimension;
+
     public YoutubeSearchListRequest withVideoDimension(YoutubeSearchListVideoDimensionEnum videoDimension) {
         this.videoDimension = videoDimension;
         return this;
@@ -382,6 +420,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoDuration")
     public YoutubeSearchListVideoDurationEnum videoDuration;
+
     public YoutubeSearchListRequest withVideoDuration(YoutubeSearchListVideoDurationEnum videoDuration) {
         this.videoDuration = videoDuration;
         return this;
@@ -392,6 +431,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoEmbeddable")
     public YoutubeSearchListVideoEmbeddableEnum videoEmbeddable;
+
     public YoutubeSearchListRequest withVideoEmbeddable(YoutubeSearchListVideoEmbeddableEnum videoEmbeddable) {
         this.videoEmbeddable = videoEmbeddable;
         return this;
@@ -402,6 +442,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoLicense")
     public YoutubeSearchListVideoLicenseEnum videoLicense;
+
     public YoutubeSearchListRequest withVideoLicense(YoutubeSearchListVideoLicenseEnum videoLicense) {
         this.videoLicense = videoLicense;
         return this;
@@ -412,6 +453,7 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoSyndicated")
     public YoutubeSearchListVideoSyndicatedEnum videoSyndicated;
+
     public YoutubeSearchListRequest withVideoSyndicated(YoutubeSearchListVideoSyndicatedEnum videoSyndicated) {
         this.videoSyndicated = videoSyndicated;
         return this;
@@ -422,9 +464,13 @@ public class YoutubeSearchListRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=videoType")
     public YoutubeSearchListVideoTypeEnum videoType;
+
     public YoutubeSearchListRequest withVideoType(YoutubeSearchListVideoTypeEnum videoType) {
         this.videoType = videoType;
         return this;
     }
     
+    public YoutubeSearchListRequest(@JsonProperty("part") String[] part) {
+        this.part = part;
+  }
 }

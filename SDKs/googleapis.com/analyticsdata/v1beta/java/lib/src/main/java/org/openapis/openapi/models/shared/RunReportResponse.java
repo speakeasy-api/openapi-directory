@@ -18,6 +18,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dimensionHeaders")
     public DimensionHeader[] dimensionHeaders;
+
     public RunReportResponse withDimensionHeaders(DimensionHeader[] dimensionHeaders) {
         this.dimensionHeaders = dimensionHeaders;
         return this;
@@ -29,6 +30,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public RunReportResponse withKind(String kind) {
         this.kind = kind;
         return this;
@@ -40,6 +42,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("maximums")
     public Row[] maximums;
+
     public RunReportResponse withMaximums(Row[] maximums) {
         this.maximums = maximums;
         return this;
@@ -51,6 +54,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public ResponseMetaData metadata;
+
     public RunReportResponse withMetadata(ResponseMetaData metadata) {
         this.metadata = metadata;
         return this;
@@ -62,6 +66,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metricHeaders")
     public MetricHeader[] metricHeaders;
+
     public RunReportResponse withMetricHeaders(MetricHeader[] metricHeaders) {
         this.metricHeaders = metricHeaders;
         return this;
@@ -73,6 +78,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minimums")
     public Row[] minimums;
+
     public RunReportResponse withMinimums(Row[] minimums) {
         this.minimums = minimums;
         return this;
@@ -84,6 +90,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("propertyQuota")
     public PropertyQuota propertyQuota;
+
     public RunReportResponse withPropertyQuota(PropertyQuota propertyQuota) {
         this.propertyQuota = propertyQuota;
         return this;
@@ -95,6 +102,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rowCount")
     public Integer rowCount;
+
     public RunReportResponse withRowCount(Integer rowCount) {
         this.rowCount = rowCount;
         return this;
@@ -106,6 +114,7 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("rows")
     public Row[] rows;
+
     public RunReportResponse withRows(Row[] rows) {
         this.rows = rows;
         return this;
@@ -117,9 +126,11 @@ public class RunReportResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totals")
     public Row[] totals;
+
     public RunReportResponse withTotals(Row[] totals) {
         this.totals = totals;
         return this;
     }
     
+    public RunReportResponse(){}
 }

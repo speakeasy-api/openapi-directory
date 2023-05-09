@@ -12,6 +12,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("created")
     public String created;
+
     public GetVolumes200ApplicationJSONVolumes withCreated(String created) {
         this.created = created;
         return this;
@@ -22,6 +23,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("format")
     public String format;
+
     public GetVolumes200ApplicationJSONVolumes withFormat(String format) {
         this.format = format;
         return this;
@@ -32,6 +34,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("id")
     public Long id;
+
     public GetVolumes200ApplicationJSONVolumes withId(Long id) {
         this.id = id;
         return this;
@@ -42,6 +45,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("labels")
     public java.util.Map<String, String> labels;
+
     public GetVolumes200ApplicationJSONVolumes withLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
@@ -52,6 +56,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("linux_device")
     public String linuxDevice;
+
     public GetVolumes200ApplicationJSONVolumes withLinuxDevice(String linuxDevice) {
         this.linuxDevice = linuxDevice;
         return this;
@@ -62,6 +67,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("location")
     public GetVolumes200ApplicationJSONVolumesLocation location;
+
     public GetVolumes200ApplicationJSONVolumes withLocation(GetVolumes200ApplicationJSONVolumesLocation location) {
         this.location = location;
         return this;
@@ -72,6 +78,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("name")
     public String name;
+
     public GetVolumes200ApplicationJSONVolumes withName(String name) {
         this.name = name;
         return this;
@@ -82,6 +89,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("protection")
     public GetVolumes200ApplicationJSONVolumesProtection protection;
+
     public GetVolumes200ApplicationJSONVolumes withProtection(GetVolumes200ApplicationJSONVolumesProtection protection) {
         this.protection = protection;
         return this;
@@ -92,6 +100,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("server")
     public Long server;
+
     public GetVolumes200ApplicationJSONVolumes withServer(Long server) {
         this.server = server;
         return this;
@@ -102,6 +111,7 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("size")
     public Double size;
+
     public GetVolumes200ApplicationJSONVolumes withSize(Double size) {
         this.size = size;
         return this;
@@ -112,9 +122,23 @@ public class GetVolumes200ApplicationJSONVolumes {
      */
     @JsonProperty("status")
     public GetVolumes200ApplicationJSONVolumesStatusEnum status;
+
     public GetVolumes200ApplicationJSONVolumes withStatus(GetVolumes200ApplicationJSONVolumesStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public GetVolumes200ApplicationJSONVolumes(@JsonProperty("created") String created, @JsonProperty("format") String format, @JsonProperty("id") Long id, @JsonProperty("labels") java.util.Map<String, String> labels, @JsonProperty("linux_device") String linuxDevice, @JsonProperty("location") GetVolumes200ApplicationJSONVolumesLocation location, @JsonProperty("name") String name, @JsonProperty("protection") GetVolumes200ApplicationJSONVolumesProtection protection, @JsonProperty("server") Long server, @JsonProperty("size") Double size, @JsonProperty("status") GetVolumes200ApplicationJSONVolumesStatusEnum status) {
+        this.created = created;
+        this.format = format;
+        this.id = id;
+        this.labels = labels;
+        this.linuxDevice = linuxDevice;
+        this.location = location;
+        this.name = name;
+        this.protection = protection;
+        this.server = server;
+        this.size = size;
+        this.status = status;
+  }
 }

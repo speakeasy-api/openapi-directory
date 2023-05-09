@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class GETSetIdentityMailFromDomainRequest {
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Action")
     public GETSetIdentityMailFromDomainActionEnum action;
+
     public GETSetIdentityMailFromDomainRequest withAction(GETSetIdentityMailFromDomainActionEnum action) {
         this.action = action;
         return this;
@@ -19,6 +21,7 @@ public class GETSetIdentityMailFromDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=BehaviorOnMXFailure")
     public GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum behaviorOnMXFailure;
+
     public GETSetIdentityMailFromDomainRequest withBehaviorOnMXFailure(GETSetIdentityMailFromDomainBehaviorOnMxFailureEnum behaviorOnMXFailure) {
         this.behaviorOnMXFailure = behaviorOnMXFailure;
         return this;
@@ -29,6 +32,7 @@ public class GETSetIdentityMailFromDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Identity")
     public String identity;
+
     public GETSetIdentityMailFromDomainRequest withIdentity(String identity) {
         this.identity = identity;
         return this;
@@ -39,6 +43,7 @@ public class GETSetIdentityMailFromDomainRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=MailFromDomain")
     public String mailFromDomain;
+
     public GETSetIdentityMailFromDomainRequest withMailFromDomain(String mailFromDomain) {
         this.mailFromDomain = mailFromDomain;
         return this;
@@ -46,6 +51,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=Version")
     public GETSetIdentityMailFromDomainVersionEnum version;
+
     public GETSetIdentityMailFromDomainRequest withVersion(GETSetIdentityMailFromDomainVersionEnum version) {
         this.version = version;
         return this;
@@ -53,6 +59,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Algorithm")
     public String xAmzAlgorithm;
+
     public GETSetIdentityMailFromDomainRequest withXAmzAlgorithm(String xAmzAlgorithm) {
         this.xAmzAlgorithm = xAmzAlgorithm;
         return this;
@@ -60,6 +67,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Content-Sha256")
     public String xAmzContentSha256;
+
     public GETSetIdentityMailFromDomainRequest withXAmzContentSha256(String xAmzContentSha256) {
         this.xAmzContentSha256 = xAmzContentSha256;
         return this;
@@ -67,6 +75,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Credential")
     public String xAmzCredential;
+
     public GETSetIdentityMailFromDomainRequest withXAmzCredential(String xAmzCredential) {
         this.xAmzCredential = xAmzCredential;
         return this;
@@ -74,6 +83,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Date")
     public String xAmzDate;
+
     public GETSetIdentityMailFromDomainRequest withXAmzDate(String xAmzDate) {
         this.xAmzDate = xAmzDate;
         return this;
@@ -81,6 +91,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Security-Token")
     public String xAmzSecurityToken;
+
     public GETSetIdentityMailFromDomainRequest withXAmzSecurityToken(String xAmzSecurityToken) {
         this.xAmzSecurityToken = xAmzSecurityToken;
         return this;
@@ -88,6 +99,7 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-Signature")
     public String xAmzSignature;
+
     public GETSetIdentityMailFromDomainRequest withXAmzSignature(String xAmzSignature) {
         this.xAmzSignature = xAmzSignature;
         return this;
@@ -95,9 +107,15 @@ public class GETSetIdentityMailFromDomainRequest {
     
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Amz-SignedHeaders")
     public String xAmzSignedHeaders;
+
     public GETSetIdentityMailFromDomainRequest withXAmzSignedHeaders(String xAmzSignedHeaders) {
         this.xAmzSignedHeaders = xAmzSignedHeaders;
         return this;
     }
     
+    public GETSetIdentityMailFromDomainRequest(@JsonProperty("Action") GETSetIdentityMailFromDomainActionEnum action, @JsonProperty("Identity") String identity, @JsonProperty("Version") GETSetIdentityMailFromDomainVersionEnum version) {
+        this.action = action;
+        this.identity = identity;
+        this.version = version;
+  }
 }

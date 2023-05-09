@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * DescribeConfigurationSettingsMessage - Result message containing all of the configuration settings for a specified solution stack or configuration template.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeConfigurationSettingsMessage {
     
     public String applicationName;
+
     public DescribeConfigurationSettingsMessage withApplicationName(String applicationName) {
         this.applicationName = applicationName;
         return this;
@@ -19,6 +20,7 @@ public class DescribeConfigurationSettingsMessage {
     
     
     public String environmentName;
+
     public DescribeConfigurationSettingsMessage withEnvironmentName(String environmentName) {
         this.environmentName = environmentName;
         return this;
@@ -26,9 +28,13 @@ public class DescribeConfigurationSettingsMessage {
     
     
     public String templateName;
+
     public DescribeConfigurationSettingsMessage withTemplateName(String templateName) {
         this.templateName = templateName;
         return this;
     }
     
+    public DescribeConfigurationSettingsMessage(@JsonProperty("ApplicationName") String applicationName) {
+        this.applicationName = applicationName;
+  }
 }

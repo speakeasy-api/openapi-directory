@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class SaveReviewRequest {
@@ -12,6 +13,7 @@ public class SaveReviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Accept")
     public String accept;
+
     public SaveReviewRequest withAccept(String accept) {
         this.accept = accept;
         return this;
@@ -22,6 +24,7 @@ public class SaveReviewRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=Content-Type")
     public String contentType;
+
     public SaveReviewRequest withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,9 +32,15 @@ public class SaveReviewRequest {
     
     @SpeakeasyMetadata("request:mediaType=application/json")
     public org.openapis.openapi.models.shared.SaveReviewRequest saveReviewRequest;
+
     public SaveReviewRequest withSaveReviewRequest(org.openapis.openapi.models.shared.SaveReviewRequest saveReviewRequest) {
         this.saveReviewRequest = saveReviewRequest;
         return this;
     }
     
+    public SaveReviewRequest(@JsonProperty("Accept") String accept, @JsonProperty("Content-Type") String contentType, @JsonProperty("SaveReviewRequest") org.openapis.openapi.models.shared.SaveReviewRequest saveReviewRequest) {
+        this.accept = accept;
+        this.contentType = contentType;
+        this.saveReviewRequest = saveReviewRequest;
+  }
 }

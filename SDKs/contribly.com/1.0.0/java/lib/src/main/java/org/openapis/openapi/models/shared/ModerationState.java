@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class ModerationState {
     @JsonProperty("id")
     public String id;
+
     public ModerationState withId(String id) {
         this.id = id;
         return this;
@@ -16,6 +17,7 @@ public class ModerationState {
     
     @JsonProperty("label")
     public String label;
+
     public ModerationState withLabel(String label) {
         this.label = label;
         return this;
@@ -23,9 +25,15 @@ public class ModerationState {
     
     @JsonProperty("public")
     public Boolean public_;
+
     public ModerationState withPublic(Boolean public_) {
         this.public_ = public_;
         return this;
     }
     
+    public ModerationState(@JsonProperty("id") String id, @JsonProperty("label") String label, @JsonProperty("public") Boolean public_) {
+        this.id = id;
+        this.label = label;
+        this.public_ = public_;
+  }
 }

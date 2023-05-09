@@ -12,9 +12,11 @@ public class GetAccountCredentialsRequest {
      */
     @SpeakeasyMetadata("queryParam:style=form,explode=true,name=search")
     public String search;
+
     public GetAccountCredentialsRequest withSearch(String search) {
         this.search = search;
         return this;
     }
     
+    public GetAccountCredentialsRequest(){}
 }

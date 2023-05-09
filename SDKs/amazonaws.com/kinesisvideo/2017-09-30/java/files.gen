@@ -172,4 +172,5 @@ lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForResourceOutput.j
 lib/src/main/java/org/openapis/openapi/models/shared/ListTagsForStreamOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/StartEdgeConfigurationUpdateOutput.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
 USAGE.md

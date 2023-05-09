@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateTrustResponse {
@@ -12,6 +13,7 @@ public class CreateTrustResponse {
      */
     
     public Object clientException;
+
     public CreateTrustResponse withClientException(Object clientException) {
         this.clientException = clientException;
         return this;
@@ -19,6 +21,7 @@ public class CreateTrustResponse {
     
     
     public String contentType;
+
     public CreateTrustResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class CreateTrustResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateTrustResult createTrustResult;
+
     public CreateTrustResponse withCreateTrustResult(org.openapis.openapi.models.shared.CreateTrustResult createTrustResult) {
         this.createTrustResult = createTrustResult;
         return this;
@@ -39,6 +43,7 @@ public class CreateTrustResponse {
      */
     
     public Object entityAlreadyExistsException;
+
     public CreateTrustResponse withEntityAlreadyExistsException(Object entityAlreadyExistsException) {
         this.entityAlreadyExistsException = entityAlreadyExistsException;
         return this;
@@ -49,6 +54,7 @@ public class CreateTrustResponse {
      */
     
     public Object entityDoesNotExistException;
+
     public CreateTrustResponse withEntityDoesNotExistException(Object entityDoesNotExistException) {
         this.entityDoesNotExistException = entityDoesNotExistException;
         return this;
@@ -59,6 +65,7 @@ public class CreateTrustResponse {
      */
     
     public Object invalidParameterException;
+
     public CreateTrustResponse withInvalidParameterException(Object invalidParameterException) {
         this.invalidParameterException = invalidParameterException;
         return this;
@@ -69,6 +76,7 @@ public class CreateTrustResponse {
      */
     
     public Object serviceException;
+
     public CreateTrustResponse withServiceException(Object serviceException) {
         this.serviceException = serviceException;
         return this;
@@ -76,6 +84,7 @@ public class CreateTrustResponse {
     
     
     public Integer statusCode;
+
     public CreateTrustResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -83,6 +92,7 @@ public class CreateTrustResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateTrustResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -93,9 +103,14 @@ public class CreateTrustResponse {
      */
     
     public Object unsupportedOperationException;
+
     public CreateTrustResponse withUnsupportedOperationException(Object unsupportedOperationException) {
         this.unsupportedOperationException = unsupportedOperationException;
         return this;
     }
     
+    public CreateTrustResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

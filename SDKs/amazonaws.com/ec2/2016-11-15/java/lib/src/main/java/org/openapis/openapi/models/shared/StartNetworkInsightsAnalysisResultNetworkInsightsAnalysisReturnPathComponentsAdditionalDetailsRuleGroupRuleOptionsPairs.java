@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs {
     
     public String ruleGroupArn;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs withRuleGroupArn(String ruleGroupArn) {
         this.ruleGroupArn = ruleGroupArn;
         return this;
@@ -19,9 +20,11 @@ public class StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPath
     
     
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions[] ruleOptions;
+
     public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs withRuleOptions(StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairsRuleOptions[] ruleOptions) {
         this.ruleOptions = ruleOptions;
         return this;
     }
     
+    public StartNetworkInsightsAnalysisResultNetworkInsightsAnalysisReturnPathComponentsAdditionalDetailsRuleGroupRuleOptionsPairs(){}
 }

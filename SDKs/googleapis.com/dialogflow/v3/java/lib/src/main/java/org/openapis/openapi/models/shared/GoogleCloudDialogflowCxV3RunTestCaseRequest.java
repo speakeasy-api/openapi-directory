@@ -18,9 +18,11 @@ public class GoogleCloudDialogflowCxV3RunTestCaseRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("environment")
     public String environment;
+
     public GoogleCloudDialogflowCxV3RunTestCaseRequest withEnvironment(String environment) {
         this.environment = environment;
         return this;
     }
     
+    public GoogleCloudDialogflowCxV3RunTestCaseRequest(){}
 }

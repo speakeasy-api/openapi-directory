@@ -12,9 +12,13 @@ public class PostPortfolioAnalysisReturn200ApplicationJSONPortfolios {
      */
     @JsonProperty("portfolioReturn")
     public Double portfolioReturn;
+
     public PostPortfolioAnalysisReturn200ApplicationJSONPortfolios withPortfolioReturn(Double portfolioReturn) {
         this.portfolioReturn = portfolioReturn;
         return this;
     }
     
+    public PostPortfolioAnalysisReturn200ApplicationJSONPortfolios(@JsonProperty("portfolioReturn") Double portfolioReturn) {
+        this.portfolioReturn = portfolioReturn;
+  }
 }

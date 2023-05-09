@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class JapaneseNameGenderKanjiCandidatesBatchResponse {
@@ -12,6 +13,7 @@ public class JapaneseNameGenderKanjiCandidatesBatchResponse {
      */
     
     public org.openapis.openapi.models.shared.BatchNameMatchCandidatesOut batchNameMatchCandidatesOut;
+
     public JapaneseNameGenderKanjiCandidatesBatchResponse withBatchNameMatchCandidatesOut(org.openapis.openapi.models.shared.BatchNameMatchCandidatesOut batchNameMatchCandidatesOut) {
         this.batchNameMatchCandidatesOut = batchNameMatchCandidatesOut;
         return this;
@@ -19,6 +21,7 @@ public class JapaneseNameGenderKanjiCandidatesBatchResponse {
     
     
     public String contentType;
+
     public JapaneseNameGenderKanjiCandidatesBatchResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -26,6 +29,7 @@ public class JapaneseNameGenderKanjiCandidatesBatchResponse {
     
     
     public Integer statusCode;
+
     public JapaneseNameGenderKanjiCandidatesBatchResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -33,9 +37,14 @@ public class JapaneseNameGenderKanjiCandidatesBatchResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public JapaneseNameGenderKanjiCandidatesBatchResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public JapaneseNameGenderKanjiCandidatesBatchResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

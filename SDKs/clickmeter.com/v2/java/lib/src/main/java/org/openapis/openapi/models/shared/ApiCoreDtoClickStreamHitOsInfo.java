@@ -12,6 +12,7 @@ public class ApiCoreDtoClickStreamHitOsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyId")
     public Long familyId;
+
     public ApiCoreDtoClickStreamHitOsInfo withFamilyId(Long familyId) {
         this.familyId = familyId;
         return this;
@@ -20,6 +21,7 @@ public class ApiCoreDtoClickStreamHitOsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("familyName")
     public String familyName;
+
     public ApiCoreDtoClickStreamHitOsInfo withFamilyName(String familyName) {
         this.familyName = familyName;
         return this;
@@ -28,6 +30,7 @@ public class ApiCoreDtoClickStreamHitOsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public Long id;
+
     public ApiCoreDtoClickStreamHitOsInfo withId(Long id) {
         this.id = id;
         return this;
@@ -36,9 +39,11 @@ public class ApiCoreDtoClickStreamHitOsInfo {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public ApiCoreDtoClickStreamHitOsInfo withName(String name) {
         this.name = name;
         return this;
     }
     
+    public ApiCoreDtoClickStreamHitOsInfo(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListRealtimeContactAnalysisSegmentsResponse {
@@ -12,6 +13,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public Object accessDeniedException;
+
     public ListRealtimeContactAnalysisSegmentsResponse withAccessDeniedException(Object accessDeniedException) {
         this.accessDeniedException = accessDeniedException;
         return this;
@@ -19,6 +21,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
     
     
     public String contentType;
+
     public ListRealtimeContactAnalysisSegmentsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public Object internalServiceException;
+
     public ListRealtimeContactAnalysisSegmentsResponse withInternalServiceException(Object internalServiceException) {
         this.internalServiceException = internalServiceException;
         return this;
@@ -39,6 +43,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public Object invalidRequestException;
+
     public ListRealtimeContactAnalysisSegmentsResponse withInvalidRequestException(Object invalidRequestException) {
         this.invalidRequestException = invalidRequestException;
         return this;
@@ -49,6 +54,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public org.openapis.openapi.models.shared.ListRealtimeContactAnalysisSegmentsResponse listRealtimeContactAnalysisSegmentsResponse;
+
     public ListRealtimeContactAnalysisSegmentsResponse withListRealtimeContactAnalysisSegmentsResponse(org.openapis.openapi.models.shared.ListRealtimeContactAnalysisSegmentsResponse listRealtimeContactAnalysisSegmentsResponse) {
         this.listRealtimeContactAnalysisSegmentsResponse = listRealtimeContactAnalysisSegmentsResponse;
         return this;
@@ -56,6 +62,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
     
     
     public Integer statusCode;
+
     public ListRealtimeContactAnalysisSegmentsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -63,6 +70,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListRealtimeContactAnalysisSegmentsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -73,6 +81,7 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public Object resourceNotFoundException;
+
     public ListRealtimeContactAnalysisSegmentsResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
@@ -83,9 +92,14 @@ public class ListRealtimeContactAnalysisSegmentsResponse {
      */
     
     public Object throttlingException;
+
     public ListRealtimeContactAnalysisSegmentsResponse withThrottlingException(Object throttlingException) {
         this.throttlingException = throttlingException;
         return this;
     }
     
+    public ListRealtimeContactAnalysisSegmentsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

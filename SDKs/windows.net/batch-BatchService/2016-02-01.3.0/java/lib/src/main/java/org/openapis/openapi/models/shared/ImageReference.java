@@ -17,6 +17,7 @@ public class ImageReference {
      */
     @JsonProperty("offer")
     public String offer;
+
     public ImageReference withOffer(String offer) {
         this.offer = offer;
         return this;
@@ -27,6 +28,7 @@ public class ImageReference {
      */
     @JsonProperty("publisher")
     public String publisher;
+
     public ImageReference withPublisher(String publisher) {
         this.publisher = publisher;
         return this;
@@ -37,6 +39,7 @@ public class ImageReference {
      */
     @JsonProperty("sku")
     public String sku;
+
     public ImageReference withSku(String sku) {
         this.sku = sku;
         return this;
@@ -48,9 +51,15 @@ public class ImageReference {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("version")
     public String version;
+
     public ImageReference withVersion(String version) {
         this.version = version;
         return this;
     }
     
+    public ImageReference(@JsonProperty("offer") String offer, @JsonProperty("publisher") String publisher, @JsonProperty("sku") String sku) {
+        this.offer = offer;
+        this.publisher = publisher;
+        this.sku = sku;
+  }
 }

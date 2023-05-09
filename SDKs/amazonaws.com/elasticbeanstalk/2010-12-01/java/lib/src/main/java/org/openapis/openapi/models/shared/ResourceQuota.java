@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class ResourceQuota {
     
     public Long maximum;
+
     public ResourceQuota withMaximum(Long maximum) {
         this.maximum = maximum;
         return this;
     }
     
+    public ResourceQuota(){}
 }

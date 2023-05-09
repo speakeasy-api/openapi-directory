@@ -15,6 +15,7 @@ public class Parent {
      */
     @JsonProperty("id")
     public String id;
+
     public Parent withId(String id) {
         this.id = id;
         return this;
@@ -25,9 +26,14 @@ public class Parent {
      */
     @JsonProperty("type")
     public ParentTypeEnum type;
+
     public Parent withType(ParentTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public Parent(@JsonProperty("id") String id, @JsonProperty("type") ParentTypeEnum type) {
+        this.id = id;
+        this.type = type;
+  }
 }

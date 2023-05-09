@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class RenderingError {
     @JsonProperty("Code")
     public String code;
+
     public RenderingError withCode(String code) {
         this.code = code;
         return this;
@@ -19,9 +20,14 @@ public class RenderingError {
     
     @JsonProperty("Message")
     public String message;
+
     public RenderingError withMessage(String message) {
         this.message = message;
         return this;
     }
     
+    public RenderingError(@JsonProperty("Code") String code, @JsonProperty("Message") String message) {
+        this.code = code;
+        this.message = message;
+  }
 }

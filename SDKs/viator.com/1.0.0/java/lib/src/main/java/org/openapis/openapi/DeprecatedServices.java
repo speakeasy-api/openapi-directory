@@ -41,7 +41,9 @@ public class DeprecatedServices {
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
+     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
+    @Deprecated
     public org.openapis.openapi.models.operations.MerchantCancellationResponse merchantCancellation(org.openapis.openapi.models.operations.MerchantCancellationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = org.openapis.openapi.utils.Utils.generateURL(baseUrl, "/merchant/cancellation");
@@ -67,12 +69,10 @@ public class DeprecatedServices {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.MerchantCancellationResponse res = new org.openapis.openapi.models.operations.MerchantCancellationResponse() {{
+        org.openapis.openapi.models.operations.MerchantCancellationResponse res = new org.openapis.openapi.models.operations.MerchantCancellationResponse(contentType, httpRes.statusCode()) {{
             merchantCancellation200ApplicationJSONObject = null;
             merchantCancellation400ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

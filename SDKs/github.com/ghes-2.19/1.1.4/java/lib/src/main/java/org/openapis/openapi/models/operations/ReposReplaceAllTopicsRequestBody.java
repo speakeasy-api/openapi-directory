@@ -12,9 +12,13 @@ public class ReposReplaceAllTopicsRequestBody {
      */
     @JsonProperty("names")
     public String[] names;
+
     public ReposReplaceAllTopicsRequestBody withNames(String[] names) {
         this.names = names;
         return this;
     }
     
+    public ReposReplaceAllTopicsRequestBody(@JsonProperty("names") String[] names) {
+        this.names = names;
+  }
 }

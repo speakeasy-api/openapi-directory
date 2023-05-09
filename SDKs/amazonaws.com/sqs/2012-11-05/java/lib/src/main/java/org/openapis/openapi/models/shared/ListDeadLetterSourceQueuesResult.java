@@ -4,7 +4,7 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * ListDeadLetterSourceQueuesResult - A list of your dead letter source queues.
@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ListDeadLetterSourceQueuesResult {
     
     public String nextToken;
+
     public ListDeadLetterSourceQueuesResult withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -19,9 +20,13 @@ public class ListDeadLetterSourceQueuesResult {
     
     
     public String[] queueUrls;
+
     public ListDeadLetterSourceQueuesResult withQueueUrls(String[] queueUrls) {
         this.queueUrls = queueUrls;
         return this;
     }
     
+    public ListDeadLetterSourceQueuesResult(@JsonProperty("queueUrls") String[] queueUrls) {
+        this.queueUrls = queueUrls;
+  }
 }

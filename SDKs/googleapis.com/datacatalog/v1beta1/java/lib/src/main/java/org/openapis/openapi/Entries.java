@@ -58,11 +58,9 @@ public class Entries {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse res = new org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse() {{
+        org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse res = new org.openapis.openapi.models.operations.DatacatalogEntriesLookupResponse(contentType, httpRes.statusCode()) {{
             googleCloudDatacatalogV1beta1Entry = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

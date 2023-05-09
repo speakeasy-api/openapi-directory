@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetPortfolioTemplateResponse {
     
     public String contentType;
+
     public GetPortfolioTemplateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetPortfolioTemplateResponse {
     
     
     public Integer statusCode;
+
     public GetPortfolioTemplateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class GetPortfolioTemplateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetPortfolioTemplateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,6 +37,7 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate200ApplicationJSON getPortfolioTemplate200ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate200ApplicationJSONObject(GetPortfolioTemplate200ApplicationJSON getPortfolioTemplate200ApplicationJSONObject) {
         this.getPortfolioTemplate200ApplicationJSONObject = getPortfolioTemplate200ApplicationJSONObject;
         return this;
@@ -43,6 +48,7 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate401ApplicationJSON getPortfolioTemplate401ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate401ApplicationJSONObject(GetPortfolioTemplate401ApplicationJSON getPortfolioTemplate401ApplicationJSONObject) {
         this.getPortfolioTemplate401ApplicationJSONObject = getPortfolioTemplate401ApplicationJSONObject;
         return this;
@@ -53,6 +59,7 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate403ApplicationJSON getPortfolioTemplate403ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate403ApplicationJSONObject(GetPortfolioTemplate403ApplicationJSON getPortfolioTemplate403ApplicationJSONObject) {
         this.getPortfolioTemplate403ApplicationJSONObject = getPortfolioTemplate403ApplicationJSONObject;
         return this;
@@ -63,6 +70,7 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate404ApplicationJSON getPortfolioTemplate404ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate404ApplicationJSONObject(GetPortfolioTemplate404ApplicationJSON getPortfolioTemplate404ApplicationJSONObject) {
         this.getPortfolioTemplate404ApplicationJSONObject = getPortfolioTemplate404ApplicationJSONObject;
         return this;
@@ -73,6 +81,7 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate429ApplicationJSON getPortfolioTemplate429ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate429ApplicationJSONObject(GetPortfolioTemplate429ApplicationJSON getPortfolioTemplate429ApplicationJSONObject) {
         this.getPortfolioTemplate429ApplicationJSONObject = getPortfolioTemplate429ApplicationJSONObject;
         return this;
@@ -83,9 +92,14 @@ public class GetPortfolioTemplateResponse {
      */
     
     public GetPortfolioTemplate500ApplicationJSON getPortfolioTemplate500ApplicationJSONObject;
+
     public GetPortfolioTemplateResponse withGetPortfolioTemplate500ApplicationJSONObject(GetPortfolioTemplate500ApplicationJSON getPortfolioTemplate500ApplicationJSONObject) {
         this.getPortfolioTemplate500ApplicationJSONObject = getPortfolioTemplate500ApplicationJSONObject;
         return this;
     }
     
+    public GetPortfolioTemplateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

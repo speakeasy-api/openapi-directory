@@ -58,11 +58,9 @@ public class Processes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScriptProcessesListResponse res = new org.openapis.openapi.models.operations.ScriptProcessesListResponse() {{
+        org.openapis.openapi.models.operations.ScriptProcessesListResponse res = new org.openapis.openapi.models.operations.ScriptProcessesListResponse(contentType, httpRes.statusCode()) {{
             listUserProcessesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -104,11 +102,9 @@ public class Processes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse res = new org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse() {{
+        org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse res = new org.openapis.openapi.models.operations.ScriptProcessesListScriptProcessesResponse(contentType, httpRes.statusCode()) {{
             listScriptProcessesResponse = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

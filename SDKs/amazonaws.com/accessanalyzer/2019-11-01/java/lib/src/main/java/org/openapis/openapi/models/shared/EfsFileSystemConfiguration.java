@@ -15,9 +15,11 @@ public class EfsFileSystemConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fileSystemPolicy")
     public String fileSystemPolicy;
+
     public EfsFileSystemConfiguration withFileSystemPolicy(String fileSystemPolicy) {
         this.fileSystemPolicy = fileSystemPolicy;
         return this;
     }
     
+    public EfsFileSystemConfiguration(){}
 }

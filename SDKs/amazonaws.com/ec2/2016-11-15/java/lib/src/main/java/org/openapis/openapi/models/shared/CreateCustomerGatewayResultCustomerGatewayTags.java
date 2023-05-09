@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class CreateCustomerGatewayResultCustomerGatewayTags {
     
     public String key;
+
     public CreateCustomerGatewayResultCustomerGatewayTags withKey(String key) {
         this.key = key;
         return this;
@@ -19,9 +20,11 @@ public class CreateCustomerGatewayResultCustomerGatewayTags {
     
     
     public String value;
+
     public CreateCustomerGatewayResultCustomerGatewayTags withValue(String value) {
         this.value = value;
         return this;
     }
     
+    public CreateCustomerGatewayResultCustomerGatewayTags(){}
 }

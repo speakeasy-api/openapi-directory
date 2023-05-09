@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class SearchFilter {
     
     public String attribute;
+
     public SearchFilter withAttribute(String attribute) {
         this.attribute = attribute;
         return this;
@@ -19,6 +20,7 @@ public class SearchFilter {
     
     
     public String operator;
+
     public SearchFilter withOperator(String operator) {
         this.operator = operator;
         return this;
@@ -26,9 +28,11 @@ public class SearchFilter {
     
     
     public String[] values;
+
     public SearchFilter withValues(String[] values) {
         this.values = values;
         return this;
     }
     
+    public SearchFilter(){}
 }

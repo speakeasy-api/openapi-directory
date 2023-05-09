@@ -15,6 +15,7 @@ public class VolumeFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readOnly")
     public Boolean readOnly;
+
     public VolumeFrom withReadOnly(Boolean readOnly) {
         this.readOnly = readOnly;
         return this;
@@ -23,9 +24,11 @@ public class VolumeFrom {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sourceContainer")
     public String sourceContainer;
+
     public VolumeFrom withSourceContainer(String sourceContainer) {
         this.sourceContainer = sourceContainer;
         return this;
     }
     
+    public VolumeFrom(){}
 }

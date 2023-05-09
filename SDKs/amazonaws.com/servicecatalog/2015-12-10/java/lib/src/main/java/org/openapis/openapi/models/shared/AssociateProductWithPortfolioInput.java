@@ -12,6 +12,7 @@ public class AssociateProductWithPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("AcceptLanguage")
     public String acceptLanguage;
+
     public AssociateProductWithPortfolioInput withAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
@@ -19,6 +20,7 @@ public class AssociateProductWithPortfolioInput {
     
     @JsonProperty("PortfolioId")
     public String portfolioId;
+
     public AssociateProductWithPortfolioInput withPortfolioId(String portfolioId) {
         this.portfolioId = portfolioId;
         return this;
@@ -26,6 +28,7 @@ public class AssociateProductWithPortfolioInput {
     
     @JsonProperty("ProductId")
     public String productId;
+
     public AssociateProductWithPortfolioInput withProductId(String productId) {
         this.productId = productId;
         return this;
@@ -34,9 +37,14 @@ public class AssociateProductWithPortfolioInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("SourcePortfolioId")
     public String sourcePortfolioId;
+
     public AssociateProductWithPortfolioInput withSourcePortfolioId(String sourcePortfolioId) {
         this.sourcePortfolioId = sourcePortfolioId;
         return this;
     }
     
+    public AssociateProductWithPortfolioInput(@JsonProperty("PortfolioId") String portfolioId, @JsonProperty("ProductId") String productId) {
+        this.portfolioId = portfolioId;
+        this.productId = productId;
+  }
 }

@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartTransactionResponse {
     @JsonProperty("acceptHeader")
     public String acceptHeader;
+
     public StartTransactionResponse withAcceptHeader(String acceptHeader) {
         this.acceptHeader = acceptHeader;
         return this;
@@ -16,6 +17,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("antifraudAffiliationId")
     public String antifraudAffiliationId;
+
     public StartTransactionResponse withAntifraudAffiliationId(String antifraudAffiliationId) {
         this.antifraudAffiliationId = antifraudAffiliationId;
         return this;
@@ -23,6 +25,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("antifraudTid")
     public String antifraudTid;
+
     public StartTransactionResponse withAntifraudTid(String antifraudTid) {
         this.antifraudTid = antifraudTid;
         return this;
@@ -30,6 +33,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("authorizationDate")
     public String authorizationDate;
+
     public StartTransactionResponse withAuthorizationDate(String authorizationDate) {
         this.authorizationDate = authorizationDate;
         return this;
@@ -37,6 +41,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("authorizationToken")
     public String authorizationToken;
+
     public StartTransactionResponse withAuthorizationToken(String authorizationToken) {
         this.authorizationToken = authorizationToken;
         return this;
@@ -44,6 +49,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("buyer")
     public String buyer;
+
     public StartTransactionResponse withBuyer(String buyer) {
         this.buyer = buyer;
         return this;
@@ -51,6 +57,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("cancelationDate")
     public String cancelationDate;
+
     public StartTransactionResponse withCancelationDate(String cancelationDate) {
         this.cancelationDate = cancelationDate;
         return this;
@@ -58,6 +65,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("cancelationToken")
     public String cancelationToken;
+
     public StartTransactionResponse withCancelationToken(String cancelationToken) {
         this.cancelationToken = cancelationToken;
         return this;
@@ -65,6 +73,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("cancellations")
     public Cancellations cancellations;
+
     public StartTransactionResponse withCancellations(Cancellations cancellations) {
         this.cancellations = cancellations;
         return this;
@@ -72,6 +81,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("channel")
     public String channel;
+
     public StartTransactionResponse withChannel(String channel) {
         this.channel = channel;
         return this;
@@ -79,6 +89,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("commitmentDate")
     public String commitmentDate;
+
     public StartTransactionResponse withCommitmentDate(String commitmentDate) {
         this.commitmentDate = commitmentDate;
         return this;
@@ -86,6 +97,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("commitmentToken")
     public String commitmentToken;
+
     public StartTransactionResponse withCommitmentToken(String commitmentToken) {
         this.commitmentToken = commitmentToken;
         return this;
@@ -93,6 +105,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("fields")
     public Field[] fields;
+
     public StartTransactionResponse withFields(Field[] fields) {
         this.fields = fields;
         return this;
@@ -100,6 +113,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("id")
     public String id;
+
     public StartTransactionResponse withId(String id) {
         this.id = id;
         return this;
@@ -107,6 +121,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("interactions")
     public Interactions interactions;
+
     public StartTransactionResponse withInteractions(Interactions interactions) {
         this.interactions = interactions;
         return this;
@@ -114,6 +129,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("ipAddress")
     public String ipAddress;
+
     public StartTransactionResponse withIpAddress(String ipAddress) {
         this.ipAddress = ipAddress;
         return this;
@@ -121,6 +137,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("markedForRecurrence")
     public Boolean markedForRecurrence;
+
     public StartTransactionResponse withMarkedForRecurrence(Boolean markedForRecurrence) {
         this.markedForRecurrence = markedForRecurrence;
         return this;
@@ -128,6 +145,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("owner")
     public String owner;
+
     public StartTransactionResponse withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -135,6 +153,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("payments")
     public Payments payments;
+
     public StartTransactionResponse withPayments(Payments payments) {
         this.payments = payments;
         return this;
@@ -142,6 +161,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("receiverUri")
     public String receiverUri;
+
     public StartTransactionResponse withReceiverUri(String receiverUri) {
         this.receiverUri = receiverUri;
         return this;
@@ -149,6 +169,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("referenceKey")
     public String referenceKey;
+
     public StartTransactionResponse withReferenceKey(String referenceKey) {
         this.referenceKey = referenceKey;
         return this;
@@ -156,6 +177,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("refundingDate")
     public String refundingDate;
+
     public StartTransactionResponse withRefundingDate(String refundingDate) {
         this.refundingDate = refundingDate;
         return this;
@@ -163,6 +185,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("refundingToken")
     public String refundingToken;
+
     public StartTransactionResponse withRefundingToken(String refundingToken) {
         this.refundingToken = refundingToken;
         return this;
@@ -170,6 +193,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("refunds")
     public Refunds refunds;
+
     public StartTransactionResponse withRefunds(Refunds refunds) {
         this.refunds = refunds;
         return this;
@@ -177,6 +201,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("salesChannel")
     public String salesChannel;
+
     public StartTransactionResponse withSalesChannel(String salesChannel) {
         this.salesChannel = salesChannel;
         return this;
@@ -184,6 +209,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("settlements")
     public Settlements settlements;
+
     public StartTransactionResponse withSettlements(Settlements settlements) {
         this.settlements = settlements;
         return this;
@@ -191,6 +217,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("softDescriptor")
     public String softDescriptor;
+
     public StartTransactionResponse withSoftDescriptor(String softDescriptor) {
         this.softDescriptor = softDescriptor;
         return this;
@@ -198,6 +225,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("startDate")
     public String startDate;
+
     public StartTransactionResponse withStartDate(String startDate) {
         this.startDate = startDate;
         return this;
@@ -205,6 +233,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("status")
     public String status;
+
     public StartTransactionResponse withStatus(String status) {
         this.status = status;
         return this;
@@ -212,6 +241,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("timeoutStatus")
     public Integer timeoutStatus;
+
     public StartTransactionResponse withTimeoutStatus(Integer timeoutStatus) {
         this.timeoutStatus = timeoutStatus;
         return this;
@@ -219,6 +249,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("totalRefunds")
     public Double totalRefunds;
+
     public StartTransactionResponse withTotalRefunds(Double totalRefunds) {
         this.totalRefunds = totalRefunds;
         return this;
@@ -226,6 +257,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("transactionId")
     public String transactionId;
+
     public StartTransactionResponse withTransactionId(String transactionId) {
         this.transactionId = transactionId;
         return this;
@@ -233,6 +265,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("urn")
     public String urn;
+
     public StartTransactionResponse withUrn(String urn) {
         this.urn = urn;
         return this;
@@ -240,6 +273,7 @@ public class StartTransactionResponse {
     
     @JsonProperty("userAgent")
     public String userAgent;
+
     public StartTransactionResponse withUserAgent(String userAgent) {
         this.userAgent = userAgent;
         return this;
@@ -247,9 +281,47 @@ public class StartTransactionResponse {
     
     @JsonProperty("value")
     public Integer value;
+
     public StartTransactionResponse withValue(Integer value) {
         this.value = value;
         return this;
     }
     
+    public StartTransactionResponse(@JsonProperty("acceptHeader") String acceptHeader, @JsonProperty("antifraudAffiliationId") String antifraudAffiliationId, @JsonProperty("antifraudTid") String antifraudTid, @JsonProperty("authorizationDate") String authorizationDate, @JsonProperty("authorizationToken") String authorizationToken, @JsonProperty("buyer") String buyer, @JsonProperty("cancelationDate") String cancelationDate, @JsonProperty("cancelationToken") String cancelationToken, @JsonProperty("cancellations") Cancellations cancellations, @JsonProperty("channel") String channel, @JsonProperty("commitmentDate") String commitmentDate, @JsonProperty("commitmentToken") String commitmentToken, @JsonProperty("fields") Field[] fields, @JsonProperty("id") String id, @JsonProperty("interactions") Interactions interactions, @JsonProperty("ipAddress") String ipAddress, @JsonProperty("markedForRecurrence") Boolean markedForRecurrence, @JsonProperty("owner") String owner, @JsonProperty("payments") Payments payments, @JsonProperty("receiverUri") String receiverUri, @JsonProperty("referenceKey") String referenceKey, @JsonProperty("refundingDate") String refundingDate, @JsonProperty("refundingToken") String refundingToken, @JsonProperty("refunds") Refunds refunds, @JsonProperty("salesChannel") String salesChannel, @JsonProperty("settlements") Settlements settlements, @JsonProperty("softDescriptor") String softDescriptor, @JsonProperty("startDate") String startDate, @JsonProperty("status") String status, @JsonProperty("timeoutStatus") Integer timeoutStatus, @JsonProperty("totalRefunds") Double totalRefunds, @JsonProperty("transactionId") String transactionId, @JsonProperty("urn") String urn, @JsonProperty("userAgent") String userAgent, @JsonProperty("value") Integer value) {
+        this.acceptHeader = acceptHeader;
+        this.antifraudAffiliationId = antifraudAffiliationId;
+        this.antifraudTid = antifraudTid;
+        this.authorizationDate = authorizationDate;
+        this.authorizationToken = authorizationToken;
+        this.buyer = buyer;
+        this.cancelationDate = cancelationDate;
+        this.cancelationToken = cancelationToken;
+        this.cancellations = cancellations;
+        this.channel = channel;
+        this.commitmentDate = commitmentDate;
+        this.commitmentToken = commitmentToken;
+        this.fields = fields;
+        this.id = id;
+        this.interactions = interactions;
+        this.ipAddress = ipAddress;
+        this.markedForRecurrence = markedForRecurrence;
+        this.owner = owner;
+        this.payments = payments;
+        this.receiverUri = receiverUri;
+        this.referenceKey = referenceKey;
+        this.refundingDate = refundingDate;
+        this.refundingToken = refundingToken;
+        this.refunds = refunds;
+        this.salesChannel = salesChannel;
+        this.settlements = settlements;
+        this.softDescriptor = softDescriptor;
+        this.startDate = startDate;
+        this.status = status;
+        this.timeoutStatus = timeoutStatus;
+        this.totalRefunds = totalRefunds;
+        this.transactionId = transactionId;
+        this.urn = urn;
+        this.userAgent = userAgent;
+        this.value = value;
+  }
 }

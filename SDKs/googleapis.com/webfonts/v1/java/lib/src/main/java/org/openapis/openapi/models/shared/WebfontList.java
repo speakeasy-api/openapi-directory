@@ -18,6 +18,7 @@ public class WebfontList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("items")
     public Webfont[] items;
+
     public WebfontList withItems(Webfont[] items) {
         this.items = items;
         return this;
@@ -29,9 +30,11 @@ public class WebfontList {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("kind")
     public String kind;
+
     public WebfontList withKind(String kind) {
         this.kind = kind;
         return this;
     }
     
+    public WebfontList(){}
 }

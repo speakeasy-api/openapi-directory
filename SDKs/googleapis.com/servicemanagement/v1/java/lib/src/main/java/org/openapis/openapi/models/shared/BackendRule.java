@@ -18,6 +18,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("address")
     public String address;
+
     public BackendRule withAddress(String address) {
         this.address = address;
         return this;
@@ -29,6 +30,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("deadline")
     public Double deadline;
+
     public BackendRule withDeadline(Double deadline) {
         this.deadline = deadline;
         return this;
@@ -40,6 +42,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("disableAuth")
     public Boolean disableAuth;
+
     public BackendRule withDisableAuth(Boolean disableAuth) {
         this.disableAuth = disableAuth;
         return this;
@@ -51,6 +54,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("jwtAudience")
     public String jwtAudience;
+
     public BackendRule withJwtAudience(String jwtAudience) {
         this.jwtAudience = jwtAudience;
         return this;
@@ -62,6 +66,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("minDeadline")
     public Double minDeadline;
+
     public BackendRule withMinDeadline(Double minDeadline) {
         this.minDeadline = minDeadline;
         return this;
@@ -73,6 +78,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("operationDeadline")
     public Double operationDeadline;
+
     public BackendRule withOperationDeadline(Double operationDeadline) {
         this.operationDeadline = operationDeadline;
         return this;
@@ -84,6 +90,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("overridesByRequestProtocol")
     public java.util.Map<String, BackendRule> overridesByRequestProtocol;
+
     public BackendRule withOverridesByRequestProtocol(java.util.Map<String, BackendRule> overridesByRequestProtocol) {
         this.overridesByRequestProtocol = overridesByRequestProtocol;
         return this;
@@ -92,6 +99,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pathTranslation")
     public BackendRulePathTranslationEnum pathTranslation;
+
     public BackendRule withPathTranslation(BackendRulePathTranslationEnum pathTranslation) {
         this.pathTranslation = pathTranslation;
         return this;
@@ -103,6 +111,7 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("protocol")
     public String protocol;
+
     public BackendRule withProtocol(String protocol) {
         this.protocol = protocol;
         return this;
@@ -114,9 +123,11 @@ public class BackendRule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selector")
     public String selector;
+
     public BackendRule withSelector(String selector) {
         this.selector = selector;
         return this;
     }
     
+    public BackendRule(){}
 }

@@ -23,6 +23,7 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelId")
     public String channelId;
+
     public SearchResultSnippet withChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -34,6 +35,7 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("channelTitle")
     public String channelTitle;
+
     public SearchResultSnippet withChannelTitle(String channelTitle) {
         this.channelTitle = channelTitle;
         return this;
@@ -45,6 +47,7 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("description")
     public String description;
+
     public SearchResultSnippet withDescription(String description) {
         this.description = description;
         return this;
@@ -56,6 +59,7 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("liveBroadcastContent")
     public SearchResultSnippetLiveBroadcastContentEnum liveBroadcastContent;
+
     public SearchResultSnippet withLiveBroadcastContent(SearchResultSnippetLiveBroadcastContentEnum liveBroadcastContent) {
         this.liveBroadcastContent = liveBroadcastContent;
         return this;
@@ -69,6 +73,7 @@ public class SearchResultSnippet {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("publishedAt")
     public OffsetDateTime publishedAt;
+
     public SearchResultSnippet withPublishedAt(OffsetDateTime publishedAt) {
         this.publishedAt = publishedAt;
         return this;
@@ -80,6 +85,7 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("thumbnails")
     public ThumbnailDetails thumbnails;
+
     public SearchResultSnippet withThumbnails(ThumbnailDetails thumbnails) {
         this.thumbnails = thumbnails;
         return this;
@@ -91,9 +97,11 @@ public class SearchResultSnippet {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("title")
     public String title;
+
     public SearchResultSnippet withTitle(String title) {
         this.title = title;
         return this;
     }
     
+    public SearchResultSnippet(){}
 }

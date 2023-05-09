@@ -16,7 +16,6 @@ implementation 'org.openapis.openapi:openapi:0.0.1'
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
 import org.openapis.openapi.models.operations.GetAreasFormatEnum;
 import org.openapis.openapi.models.operations.GetAreasRequest;
 import org.openapis.openapi.models.operations.GetAreasResponse;
@@ -28,8 +27,8 @@ public class Application {
                 .build();
 
             GetAreasRequest req = new GetAreasRequest() {{
-                format = "xml";
-            }}            
+                format = GetAreasFormatEnum.XML;
+            }};            
 
             GetAreasResponse res = sdk.resources.getAreas(req);
 
@@ -39,6 +38,8 @@ public class Application {
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->
 
@@ -46,12 +47,12 @@ public class Application {
 ## Available Resources and Operations
 
 
-### resources
+### [resources](docs/resources/README.md)
 
-* `getAreas` - Lists the geographical areas (e.g. districts) that can be used to filter events.
-* `getEvents` - Lists road events
-* `getJurisdiction` - Lists the jurisdictions publishing data through this Open511 API implementation
-* `getJurisdictiongeography` - Provides the geographical boundaries for all the jurisdictions.
+* [getAreas](docs/resources/README.md#getareas) - Lists the geographical areas (e.g. districts) that can be used to filter events.
+* [getEvents](docs/resources/README.md#getevents) - Lists road events
+* [getJurisdiction](docs/resources/README.md#getjurisdiction) - Lists the jurisdictions publishing data through this Open511 API implementation
+* [getJurisdictiongeography](docs/resources/README.md#getjurisdictiongeography) - Provides the geographical boundaries for all the jurisdictions.
 <!-- End SDK Available Operations -->
 
 ### Maturity

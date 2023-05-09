@@ -20,6 +20,7 @@ public class CourseMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("coverImageUrl")
     public String coverImageUrl;
+
     public CourseMetaResponse withCoverImageUrl(String coverImageUrl) {
         this.coverImageUrl = coverImageUrl;
         return this;
@@ -30,6 +31,7 @@ public class CourseMetaResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("createdAt")
     public OffsetDateTime createdAt;
+
     public CourseMetaResponse withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,6 +40,7 @@ public class CourseMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("id")
     public String id;
+
     public CourseMetaResponse withId(String id) {
         this.id = id;
         return this;
@@ -46,6 +49,7 @@ public class CourseMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("metadata")
     public CourseMetaResponseMetadata metadata;
+
     public CourseMetaResponse withMetadata(CourseMetaResponseMetadata metadata) {
         this.metadata = metadata;
         return this;
@@ -54,6 +58,7 @@ public class CourseMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CourseMetaResponse withName(String name) {
         this.name = name;
         return this;
@@ -62,9 +67,11 @@ public class CourseMetaResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tasksEnabled")
     public Boolean tasksEnabled;
+
     public CourseMetaResponse withTasksEnabled(Boolean tasksEnabled) {
         this.tasksEnabled = tasksEnabled;
         return this;
     }
     
+    public CourseMetaResponse(){}
 }

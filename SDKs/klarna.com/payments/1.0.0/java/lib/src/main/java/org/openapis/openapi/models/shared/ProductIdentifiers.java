@@ -15,6 +15,7 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("brand")
     public String brand;
+
     public ProductIdentifiers withBrand(String brand) {
         this.brand = brand;
         return this;
@@ -26,6 +27,7 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("category_path")
     public String categoryPath;
+
     public ProductIdentifiers withCategoryPath(String categoryPath) {
         this.categoryPath = categoryPath;
         return this;
@@ -37,6 +39,7 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("color")
     public String color;
+
     public ProductIdentifiers withColor(String color) {
         this.color = color;
         return this;
@@ -48,6 +51,7 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("global_trade_item_number")
     public String globalTradeItemNumber;
+
     public ProductIdentifiers withGlobalTradeItemNumber(String globalTradeItemNumber) {
         this.globalTradeItemNumber = globalTradeItemNumber;
         return this;
@@ -59,6 +63,7 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("manufacturer_part_number")
     public String manufacturerPartNumber;
+
     public ProductIdentifiers withManufacturerPartNumber(String manufacturerPartNumber) {
         this.manufacturerPartNumber = manufacturerPartNumber;
         return this;
@@ -70,9 +75,11 @@ public class ProductIdentifiers {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("size")
     public String size;
+
     public ProductIdentifiers withSize(String size) {
         this.size = size;
         return this;
     }
     
+    public ProductIdentifiers(){}
 }

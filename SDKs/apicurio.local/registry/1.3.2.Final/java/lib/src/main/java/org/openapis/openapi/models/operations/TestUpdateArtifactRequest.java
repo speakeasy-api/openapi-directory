@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.openapis.openapi.utils.SpeakeasyMetadata;
 
 public class TestUpdateArtifactRequest {
@@ -25,6 +26,7 @@ public class TestUpdateArtifactRequest {
      */
     @SpeakeasyMetadata("request:mediaType=*/*")
     public byte[] requestBody;
+
     public TestUpdateArtifactRequest withRequestBody(byte[] requestBody) {
         this.requestBody = requestBody;
         return this;
@@ -45,6 +47,7 @@ public class TestUpdateArtifactRequest {
      */
     @SpeakeasyMetadata("header:style=simple,explode=false,name=X-Registry-ArtifactType")
     public TestUpdateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType;
+
     public TestUpdateArtifactRequest withXRegistryArtifactType(TestUpdateArtifactXRegistryArtifactTypeEnum xRegistryArtifactType) {
         this.xRegistryArtifactType = xRegistryArtifactType;
         return this;
@@ -55,9 +58,14 @@ public class TestUpdateArtifactRequest {
      */
     @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=artifactId")
     public String artifactId;
+
     public TestUpdateArtifactRequest withArtifactId(String artifactId) {
         this.artifactId = artifactId;
         return this;
     }
     
+    public TestUpdateArtifactRequest(@JsonProperty("RequestBody") byte[] requestBody, @JsonProperty("artifactId") String artifactId) {
+        this.requestBody = requestBody;
+        this.artifactId = artifactId;
+  }
 }

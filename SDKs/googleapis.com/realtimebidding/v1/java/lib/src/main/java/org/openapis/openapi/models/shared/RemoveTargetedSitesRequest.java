@@ -18,9 +18,11 @@ public class RemoveTargetedSitesRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sites")
     public String[] sites;
+
     public RemoveTargetedSitesRequest withSites(String[] sites) {
         this.sites = sites;
         return this;
     }
     
+    public RemoveTargetedSitesRequest(){}
 }

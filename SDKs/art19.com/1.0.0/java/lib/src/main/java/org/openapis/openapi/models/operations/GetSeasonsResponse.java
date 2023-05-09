@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetSeasonsResponse {
     
     public String contentType;
+
     public GetSeasonsResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class GetSeasonsResponse {
     
     
     public java.util.Map<String, String[]> headers;
+
     public GetSeasonsResponse withHeaders(java.util.Map<String, String[]> headers) {
         this.headers = headers;
         return this;
@@ -23,6 +26,7 @@ public class GetSeasonsResponse {
     
     
     public Integer statusCode;
+
     public GetSeasonsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,6 +34,7 @@ public class GetSeasonsResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetSeasonsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -40,6 +45,7 @@ public class GetSeasonsResponse {
      */
     
     public GetSeasons200ApplicationVndApiPlusJson getSeasons200ApplicationVndApiPlusJsonObject;
+
     public GetSeasonsResponse withGetSeasons200ApplicationVndApiPlusJsonObject(GetSeasons200ApplicationVndApiPlusJson getSeasons200ApplicationVndApiPlusJsonObject) {
         this.getSeasons200ApplicationVndApiPlusJsonObject = getSeasons200ApplicationVndApiPlusJsonObject;
         return this;
@@ -54,9 +60,14 @@ public class GetSeasonsResponse {
      */
     
     public GetSeasons400ApplicationVndApiPlusJson getSeasons400ApplicationVndApiPlusJsonObject;
+
     public GetSeasonsResponse withGetSeasons400ApplicationVndApiPlusJsonObject(GetSeasons400ApplicationVndApiPlusJson getSeasons400ApplicationVndApiPlusJsonObject) {
         this.getSeasons400ApplicationVndApiPlusJsonObject = getSeasons400ApplicationVndApiPlusJsonObject;
         return this;
     }
     
+    public GetSeasonsResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

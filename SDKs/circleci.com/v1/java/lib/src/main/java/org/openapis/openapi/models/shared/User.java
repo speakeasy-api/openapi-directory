@@ -20,6 +20,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("admin")
     public Boolean admin;
+
     public User withAdmin(Boolean admin) {
         this.admin = admin;
         return this;
@@ -28,6 +29,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("all_emails")
     public String[] allEmails;
+
     public User withAllEmails(String[] allEmails) {
         this.allEmails = allEmails;
         return this;
@@ -36,6 +38,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("analytics_id")
     public String analyticsId;
+
     public User withAnalyticsId(String analyticsId) {
         this.analyticsId = analyticsId;
         return this;
@@ -44,6 +47,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("avatar_url")
     public String avatarUrl;
+
     public User withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -52,6 +56,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("basic_email_prefs")
     public String basicEmailPrefs;
+
     public User withBasicEmailPrefs(String basicEmailPrefs) {
         this.basicEmailPrefs = basicEmailPrefs;
         return this;
@@ -60,6 +65,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitbucket")
     public Long bitbucket;
+
     public User withBitbucket(Long bitbucket) {
         this.bitbucket = bitbucket;
         return this;
@@ -68,6 +74,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("bitbucket_authorized")
     public Boolean bitbucketAuthorized;
+
     public User withBitbucketAuthorized(Boolean bitbucketAuthorized) {
         this.bitbucketAuthorized = bitbucketAuthorized;
         return this;
@@ -76,6 +83,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("containers")
     public Long containers;
+
     public User withContainers(Long containers) {
         this.containers = containers;
         return this;
@@ -86,6 +94,7 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("created_at")
     public OffsetDateTime createdAt;
+
     public User withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -94,6 +103,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("days_left_in_trial")
     public Long daysLeftInTrial;
+
     public User withDaysLeftInTrial(Long daysLeftInTrial) {
         this.daysLeftInTrial = daysLeftInTrial;
         return this;
@@ -102,6 +112,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dev_admin")
     public Boolean devAdmin;
+
     public User withDevAdmin(Boolean devAdmin) {
         this.devAdmin = devAdmin;
         return this;
@@ -110,6 +121,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("enrolled_betas")
     public String[] enrolledBetas;
+
     public User withEnrolledBetas(String[] enrolledBetas) {
         this.enrolledBetas = enrolledBetas;
         return this;
@@ -118,6 +130,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_id")
     public Long githubId;
+
     public User withGithubId(Long githubId) {
         this.githubId = githubId;
         return this;
@@ -126,6 +139,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("github_oauth_scopes")
     public String[] githubOauthScopes;
+
     public User withGithubOauthScopes(String[] githubOauthScopes) {
         this.githubOauthScopes = githubOauthScopes;
         return this;
@@ -134,6 +148,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gravatar_id")
     public Long gravatarId;
+
     public User withGravatarId(Long gravatarId) {
         this.gravatarId = gravatarId;
         return this;
@@ -142,6 +157,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("heroku_api_key")
     public String herokuApiKey;
+
     public User withHerokuApiKey(String herokuApiKey) {
         this.herokuApiKey = herokuApiKey;
         return this;
@@ -150,6 +166,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("in_beta_program")
     public Boolean inBetaProgram;
+
     public User withInBetaProgram(Boolean inBetaProgram) {
         this.inBetaProgram = inBetaProgram;
         return this;
@@ -158,6 +175,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("login")
     public String login;
+
     public User withLogin(String login) {
         this.login = login;
         return this;
@@ -166,6 +184,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public User withName(String name) {
         this.name = name;
         return this;
@@ -174,6 +193,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("organization_prefs")
     public java.util.Map<String, Object> organizationPrefs;
+
     public User withOrganizationPrefs(java.util.Map<String, Object> organizationPrefs) {
         this.organizationPrefs = organizationPrefs;
         return this;
@@ -182,6 +202,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("parallelism")
     public Long parallelism;
+
     public User withParallelism(Long parallelism) {
         this.parallelism = parallelism;
         return this;
@@ -190,6 +211,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("plan")
     public String plan;
+
     public User withPlan(String plan) {
         this.plan = plan;
         return this;
@@ -198,6 +220,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("projects")
     public java.util.Map<String, Object> projects;
+
     public User withProjects(java.util.Map<String, Object> projects) {
         this.projects = projects;
         return this;
@@ -206,6 +229,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("pusher_id")
     public String pusherId;
+
     public User withPusherId(String pusherId) {
         this.pusherId = pusherId;
         return this;
@@ -214,6 +238,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("selected_email")
     public String selectedEmail;
+
     public User withSelectedEmail(String selectedEmail) {
         this.selectedEmail = selectedEmail;
         return this;
@@ -222,6 +247,7 @@ public class User {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sign_in_count")
     public Long signInCount;
+
     public User withSignInCount(Long signInCount) {
         this.signInCount = signInCount;
         return this;
@@ -232,9 +258,11 @@ public class User {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("trial_end")
     public OffsetDateTime trialEnd;
+
     public User withTrialEnd(OffsetDateTime trialEnd) {
         this.trialEnd = trialEnd;
         return this;
     }
     
+    public User(){}
 }

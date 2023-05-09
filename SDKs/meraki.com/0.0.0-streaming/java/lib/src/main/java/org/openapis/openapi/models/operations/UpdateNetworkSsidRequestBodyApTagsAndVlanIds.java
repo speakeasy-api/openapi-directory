@@ -15,6 +15,7 @@ public class UpdateNetworkSsidRequestBodyApTagsAndVlanIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("tags")
     public String tags;
+
     public UpdateNetworkSsidRequestBodyApTagsAndVlanIds withTags(String tags) {
         this.tags = tags;
         return this;
@@ -26,9 +27,11 @@ public class UpdateNetworkSsidRequestBodyApTagsAndVlanIds {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("vlanId")
     public Long vlanId;
+
     public UpdateNetworkSsidRequestBodyApTagsAndVlanIds withVlanId(Long vlanId) {
         this.vlanId = vlanId;
         return this;
     }
     
+    public UpdateNetworkSsidRequestBodyApTagsAndVlanIds(){}
 }

@@ -17,6 +17,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("balanceAccountId")
     public String balanceAccountId;
+
     public SweepConfiguration withBalanceAccountId(String balanceAccountId) {
         this.balanceAccountId = balanceAccountId;
         return this;
@@ -27,6 +28,7 @@ public class SweepConfiguration {
      */
     @JsonProperty("id")
     public String id;
+
     public SweepConfiguration withId(String id) {
         this.id = id;
         return this;
@@ -38,6 +40,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("merchantAccount")
     public String merchantAccount;
+
     public SweepConfiguration withMerchantAccount(String merchantAccount) {
         this.merchantAccount = merchantAccount;
         return this;
@@ -48,6 +51,7 @@ public class SweepConfiguration {
      */
     @JsonProperty("schedule")
     public Object schedule;
+
     public SweepConfiguration withSchedule(Object schedule) {
         this.schedule = schedule;
         return this;
@@ -67,6 +71,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("status")
     public SweepConfigurationStatusEnum status;
+
     public SweepConfiguration withStatus(SweepConfigurationStatusEnum status) {
         this.status = status;
         return this;
@@ -75,6 +80,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sweepAmount")
     public Amount sweepAmount;
+
     public SweepConfiguration withSweepAmount(Amount sweepAmount) {
         this.sweepAmount = sweepAmount;
         return this;
@@ -83,6 +89,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("targetAmount")
     public Amount targetAmount;
+
     public SweepConfiguration withTargetAmount(Amount targetAmount) {
         this.targetAmount = targetAmount;
         return this;
@@ -96,6 +103,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferInstrumentId")
     public String transferInstrumentId;
+
     public SweepConfiguration withTransferInstrumentId(String transferInstrumentId) {
         this.transferInstrumentId = transferInstrumentId;
         return this;
@@ -104,6 +112,7 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("triggerAmount")
     public Amount triggerAmount;
+
     public SweepConfiguration withTriggerAmount(Amount triggerAmount) {
         this.triggerAmount = triggerAmount;
         return this;
@@ -121,9 +130,14 @@ public class SweepConfiguration {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("type")
     public SweepConfigurationTypeEnum type;
+
     public SweepConfiguration withType(SweepConfigurationTypeEnum type) {
         this.type = type;
         return this;
     }
     
+    public SweepConfiguration(@JsonProperty("id") String id, @JsonProperty("schedule") Object schedule) {
+        this.id = id;
+        this.schedule = schedule;
+  }
 }

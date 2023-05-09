@@ -18,9 +18,11 @@ public class Destination {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cloudRunService")
     public CloudRunService cloudRunService;
+
     public Destination withCloudRunService(CloudRunService cloudRunService) {
         this.cloudRunService = cloudRunService;
         return this;
     }
     
+    public Destination(){}
 }

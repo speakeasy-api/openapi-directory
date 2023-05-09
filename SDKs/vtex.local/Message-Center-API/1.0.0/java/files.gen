@@ -33,4 +33,6 @@ settings.gradle
 lib/src/main/java/org/openapis/openapi/models/operations/CreateDKIMRequest.java
 lib/src/main/java/org/openapis/openapi/models/operations/CreateDKIMResponse.java
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
+docs/sdk/README.md
+docs/dkimconfiguration/README.md
 USAGE.md

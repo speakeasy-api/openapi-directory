@@ -174,4 +174,11 @@ lib/src/main/java/org/openapis/openapi/models/shared/WebhookEventTypeEnumEnum.ja
 lib/src/main/java/org/openapis/openapi/models/shared/Security.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/PostWebhooksEventResponse.java
 lib/src/main/java/org/openapis/openapi/models/callbacks/PostWebhooksEventRequest.java
+docs/sdk/README.md
+docs/accounts/README.md
+docs/categories/README.md
+docs/tags/README.md
+docs/transactions/README.md
+docs/utilityendpoints/README.md
+docs/webhooks/README.md
 USAGE.md

@@ -18,6 +18,7 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("fieldMask")
     public String fieldMask;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig withFieldMask(String fieldMask) {
         this.fieldMask = fieldMask;
         return this;
@@ -29,6 +30,7 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("gcsUri")
     public String gcsUri;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig withGcsUri(String gcsUri) {
         this.gcsUri = gcsUri;
         return this;
@@ -40,9 +42,11 @@ public class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("shardingConfig")
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig shardingConfig;
+
     public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig withShardingConfig(GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig shardingConfig) {
         this.shardingConfig = shardingConfig;
         return this;
     }
     
+    public GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig(){}
 }

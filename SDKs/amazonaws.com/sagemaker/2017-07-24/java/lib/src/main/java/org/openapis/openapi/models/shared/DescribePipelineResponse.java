@@ -23,6 +23,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("CreatedBy")
     public UserContext createdBy;
+
     public DescribePipelineResponse withCreatedBy(UserContext createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -33,6 +34,7 @@ public class DescribePipelineResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTime")
     public OffsetDateTime creationTime;
+
     public DescribePipelineResponse withCreationTime(OffsetDateTime creationTime) {
         this.creationTime = creationTime;
         return this;
@@ -44,6 +46,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("LastModifiedBy")
     public UserContext lastModifiedBy;
+
     public DescribePipelineResponse withLastModifiedBy(UserContext lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -54,6 +57,7 @@ public class DescribePipelineResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastModifiedTime")
     public OffsetDateTime lastModifiedTime;
+
     public DescribePipelineResponse withLastModifiedTime(OffsetDateTime lastModifiedTime) {
         this.lastModifiedTime = lastModifiedTime;
         return this;
@@ -64,6 +68,7 @@ public class DescribePipelineResponse {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("LastRunTime")
     public OffsetDateTime lastRunTime;
+
     public DescribePipelineResponse withLastRunTime(OffsetDateTime lastRunTime) {
         this.lastRunTime = lastRunTime;
         return this;
@@ -72,6 +77,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ParallelismConfiguration")
     public ParallelismConfiguration parallelismConfiguration;
+
     public DescribePipelineResponse withParallelismConfiguration(ParallelismConfiguration parallelismConfiguration) {
         this.parallelismConfiguration = parallelismConfiguration;
         return this;
@@ -80,6 +86,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineArn")
     public String pipelineArn;
+
     public DescribePipelineResponse withPipelineArn(String pipelineArn) {
         this.pipelineArn = pipelineArn;
         return this;
@@ -88,6 +95,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDefinition")
     public String pipelineDefinition;
+
     public DescribePipelineResponse withPipelineDefinition(String pipelineDefinition) {
         this.pipelineDefinition = pipelineDefinition;
         return this;
@@ -96,6 +104,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDescription")
     public String pipelineDescription;
+
     public DescribePipelineResponse withPipelineDescription(String pipelineDescription) {
         this.pipelineDescription = pipelineDescription;
         return this;
@@ -104,6 +113,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineDisplayName")
     public String pipelineDisplayName;
+
     public DescribePipelineResponse withPipelineDisplayName(String pipelineDisplayName) {
         this.pipelineDisplayName = pipelineDisplayName;
         return this;
@@ -112,6 +122,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineName")
     public String pipelineName;
+
     public DescribePipelineResponse withPipelineName(String pipelineName) {
         this.pipelineName = pipelineName;
         return this;
@@ -120,6 +131,7 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("PipelineStatus")
     public PipelineStatusEnum pipelineStatus;
+
     public DescribePipelineResponse withPipelineStatus(PipelineStatusEnum pipelineStatus) {
         this.pipelineStatus = pipelineStatus;
         return this;
@@ -128,9 +140,11 @@ public class DescribePipelineResponse {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("RoleArn")
     public String roleArn;
+
     public DescribePipelineResponse withRoleArn(String roleArn) {
         this.roleArn = roleArn;
         return this;
     }
     
+    public DescribePipelineResponse(){}
 }

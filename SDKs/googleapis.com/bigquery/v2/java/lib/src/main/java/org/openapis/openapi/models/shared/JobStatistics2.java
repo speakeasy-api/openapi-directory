@@ -12,6 +12,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("biEngineStatistics")
     public BiEngineStatistics biEngineStatistics;
+
     public JobStatistics2 withBiEngineStatistics(BiEngineStatistics biEngineStatistics) {
         this.biEngineStatistics = biEngineStatistics;
         return this;
@@ -23,6 +24,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("billingTier")
     public Integer billingTier;
+
     public JobStatistics2 withBillingTier(Integer billingTier) {
         this.billingTier = billingTier;
         return this;
@@ -34,6 +36,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("cacheHit")
     public Boolean cacheHit;
+
     public JobStatistics2 withCacheHit(Boolean cacheHit) {
         this.cacheHit = cacheHit;
         return this;
@@ -45,6 +48,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlAffectedRowAccessPolicyCount")
     public String ddlAffectedRowAccessPolicyCount;
+
     public JobStatistics2 withDdlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
         this.ddlAffectedRowAccessPolicyCount = ddlAffectedRowAccessPolicyCount;
         return this;
@@ -53,6 +57,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlDestinationTable")
     public TableReference ddlDestinationTable;
+
     public JobStatistics2 withDdlDestinationTable(TableReference ddlDestinationTable) {
         this.ddlDestinationTable = ddlDestinationTable;
         return this;
@@ -64,6 +69,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlOperationPerformed")
     public String ddlOperationPerformed;
+
     public JobStatistics2 withDdlOperationPerformed(String ddlOperationPerformed) {
         this.ddlOperationPerformed = ddlOperationPerformed;
         return this;
@@ -72,6 +78,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlTargetDataset")
     public DatasetReference ddlTargetDataset;
+
     public JobStatistics2 withDdlTargetDataset(DatasetReference ddlTargetDataset) {
         this.ddlTargetDataset = ddlTargetDataset;
         return this;
@@ -80,6 +87,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlTargetRoutine")
     public RoutineReference ddlTargetRoutine;
+
     public JobStatistics2 withDdlTargetRoutine(RoutineReference ddlTargetRoutine) {
         this.ddlTargetRoutine = ddlTargetRoutine;
         return this;
@@ -88,6 +96,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlTargetRowAccessPolicy")
     public RowAccessPolicyReference ddlTargetRowAccessPolicy;
+
     public JobStatistics2 withDdlTargetRowAccessPolicy(RowAccessPolicyReference ddlTargetRowAccessPolicy) {
         this.ddlTargetRowAccessPolicy = ddlTargetRowAccessPolicy;
         return this;
@@ -96,6 +105,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ddlTargetTable")
     public TableReference ddlTargetTable;
+
     public JobStatistics2 withDdlTargetTable(TableReference ddlTargetTable) {
         this.ddlTargetTable = ddlTargetTable;
         return this;
@@ -104,6 +114,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dmlStats")
     public DmlStatistics dmlStats;
+
     public JobStatistics2 withDmlStats(DmlStatistics dmlStats) {
         this.dmlStats = dmlStats;
         return this;
@@ -115,6 +126,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedBytesProcessed")
     public String estimatedBytesProcessed;
+
     public JobStatistics2 withEstimatedBytesProcessed(String estimatedBytesProcessed) {
         this.estimatedBytesProcessed = estimatedBytesProcessed;
         return this;
@@ -123,6 +135,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("mlStatistics")
     public MlStatistics mlStatistics;
+
     public JobStatistics2 withMlStatistics(MlStatistics mlStatistics) {
         this.mlStatistics = mlStatistics;
         return this;
@@ -131,6 +144,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelTraining")
     public BigQueryModelTraining modelTraining;
+
     public JobStatistics2 withModelTraining(BigQueryModelTraining modelTraining) {
         this.modelTraining = modelTraining;
         return this;
@@ -142,6 +156,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelTrainingCurrentIteration")
     public Integer modelTrainingCurrentIteration;
+
     public JobStatistics2 withModelTrainingCurrentIteration(Integer modelTrainingCurrentIteration) {
         this.modelTrainingCurrentIteration = modelTrainingCurrentIteration;
         return this;
@@ -153,6 +168,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("modelTrainingExpectedTotalIteration")
     public String modelTrainingExpectedTotalIteration;
+
     public JobStatistics2 withModelTrainingExpectedTotalIteration(String modelTrainingExpectedTotalIteration) {
         this.modelTrainingExpectedTotalIteration = modelTrainingExpectedTotalIteration;
         return this;
@@ -164,6 +180,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numDmlAffectedRows")
     public String numDmlAffectedRows;
+
     public JobStatistics2 withNumDmlAffectedRows(String numDmlAffectedRows) {
         this.numDmlAffectedRows = numDmlAffectedRows;
         return this;
@@ -175,6 +192,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("queryPlan")
     public ExplainQueryStage[] queryPlan;
+
     public JobStatistics2 withQueryPlan(ExplainQueryStage[] queryPlan) {
         this.queryPlan = queryPlan;
         return this;
@@ -186,6 +204,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencedRoutines")
     public RoutineReference[] referencedRoutines;
+
     public JobStatistics2 withReferencedRoutines(RoutineReference[] referencedRoutines) {
         this.referencedRoutines = referencedRoutines;
         return this;
@@ -197,6 +216,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("referencedTables")
     public TableReference[] referencedTables;
+
     public JobStatistics2 withReferencedTables(TableReference[] referencedTables) {
         this.referencedTables = referencedTables;
         return this;
@@ -208,6 +228,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("reservationUsage")
     public JobStatistics2ReservationUsage[] reservationUsage;
+
     public JobStatistics2 withReservationUsage(JobStatistics2ReservationUsage[] reservationUsage) {
         this.reservationUsage = reservationUsage;
         return this;
@@ -216,6 +237,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("schema")
     public TableSchema schema;
+
     public JobStatistics2 withSchema(TableSchema schema) {
         this.schema = schema;
         return this;
@@ -224,6 +246,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("searchStatistics")
     public SearchStatistics searchStatistics;
+
     public JobStatistics2 withSearchStatistics(SearchStatistics searchStatistics) {
         this.searchStatistics = searchStatistics;
         return this;
@@ -232,6 +255,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("sparkStatistics")
     public SparkStatistics sparkStatistics;
+
     public JobStatistics2 withSparkStatistics(SparkStatistics sparkStatistics) {
         this.sparkStatistics = sparkStatistics;
         return this;
@@ -243,6 +267,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("statementType")
     public String statementType;
+
     public JobStatistics2 withStatementType(String statementType) {
         this.statementType = statementType;
         return this;
@@ -254,6 +279,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeline")
     public QueryTimelineSample[] timeline;
+
     public JobStatistics2 withTimeline(QueryTimelineSample[] timeline) {
         this.timeline = timeline;
         return this;
@@ -265,6 +291,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesBilled")
     public String totalBytesBilled;
+
     public JobStatistics2 withTotalBytesBilled(String totalBytesBilled) {
         this.totalBytesBilled = totalBytesBilled;
         return this;
@@ -276,6 +303,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesProcessed")
     public String totalBytesProcessed;
+
     public JobStatistics2 withTotalBytesProcessed(String totalBytesProcessed) {
         this.totalBytesProcessed = totalBytesProcessed;
         return this;
@@ -287,6 +315,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalBytesProcessedAccuracy")
     public String totalBytesProcessedAccuracy;
+
     public JobStatistics2 withTotalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
         this.totalBytesProcessedAccuracy = totalBytesProcessedAccuracy;
         return this;
@@ -298,6 +327,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalPartitionsProcessed")
     public String totalPartitionsProcessed;
+
     public JobStatistics2 withTotalPartitionsProcessed(String totalPartitionsProcessed) {
         this.totalPartitionsProcessed = totalPartitionsProcessed;
         return this;
@@ -309,6 +339,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("totalSlotMs")
     public String totalSlotMs;
+
     public JobStatistics2 withTotalSlotMs(String totalSlotMs) {
         this.totalSlotMs = totalSlotMs;
         return this;
@@ -320,6 +351,7 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transferredBytes")
     public String transferredBytes;
+
     public JobStatistics2 withTransferredBytes(String transferredBytes) {
         this.transferredBytes = transferredBytes;
         return this;
@@ -331,9 +363,11 @@ public class JobStatistics2 {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("undeclaredQueryParameters")
     public QueryParameter[] undeclaredQueryParameters;
+
     public JobStatistics2 withUndeclaredQueryParameters(QueryParameter[] undeclaredQueryParameters) {
         this.undeclaredQueryParameters = undeclaredQueryParameters;
         return this;
     }
     
+    public JobStatistics2(){}
 }

@@ -18,9 +18,11 @@ public class BlockedResource {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("url")
     public String url;
+
     public BlockedResource withUrl(String url) {
         this.url = url;
         return this;
     }
     
+    public BlockedResource(){}
 }

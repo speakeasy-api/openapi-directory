@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetCoreDefinitionVersionResponse {
@@ -12,6 +13,7 @@ public class GetCoreDefinitionVersionResponse {
      */
     
     public Object badRequestException;
+
     public GetCoreDefinitionVersionResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -19,6 +21,7 @@ public class GetCoreDefinitionVersionResponse {
     
     
     public String contentType;
+
     public GetCoreDefinitionVersionResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -29,6 +32,7 @@ public class GetCoreDefinitionVersionResponse {
      */
     
     public org.openapis.openapi.models.shared.GetCoreDefinitionVersionResponse getCoreDefinitionVersionResponse;
+
     public GetCoreDefinitionVersionResponse withGetCoreDefinitionVersionResponse(org.openapis.openapi.models.shared.GetCoreDefinitionVersionResponse getCoreDefinitionVersionResponse) {
         this.getCoreDefinitionVersionResponse = getCoreDefinitionVersionResponse;
         return this;
@@ -36,6 +40,7 @@ public class GetCoreDefinitionVersionResponse {
     
     
     public Integer statusCode;
+
     public GetCoreDefinitionVersionResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,9 +48,14 @@ public class GetCoreDefinitionVersionResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetCoreDefinitionVersionResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GetCoreDefinitionVersionResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

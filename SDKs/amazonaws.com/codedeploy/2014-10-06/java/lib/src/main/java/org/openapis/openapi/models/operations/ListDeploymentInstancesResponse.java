@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ListDeploymentInstancesResponse {
     
     public String contentType;
+
     public ListDeploymentInstancesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object deploymentDoesNotExistException;
+
     public ListDeploymentInstancesResponse withDeploymentDoesNotExistException(Object deploymentDoesNotExistException) {
         this.deploymentDoesNotExistException = deploymentDoesNotExistException;
         return this;
@@ -29,6 +32,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object deploymentIdRequiredException;
+
     public ListDeploymentInstancesResponse withDeploymentIdRequiredException(Object deploymentIdRequiredException) {
         this.deploymentIdRequiredException = deploymentIdRequiredException;
         return this;
@@ -39,6 +43,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object deploymentNotStartedException;
+
     public ListDeploymentInstancesResponse withDeploymentNotStartedException(Object deploymentNotStartedException) {
         this.deploymentNotStartedException = deploymentNotStartedException;
         return this;
@@ -49,6 +54,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidComputePlatformException;
+
     public ListDeploymentInstancesResponse withInvalidComputePlatformException(Object invalidComputePlatformException) {
         this.invalidComputePlatformException = invalidComputePlatformException;
         return this;
@@ -59,6 +65,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidDeploymentIdException;
+
     public ListDeploymentInstancesResponse withInvalidDeploymentIdException(Object invalidDeploymentIdException) {
         this.invalidDeploymentIdException = invalidDeploymentIdException;
         return this;
@@ -69,6 +76,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidDeploymentInstanceTypeException;
+
     public ListDeploymentInstancesResponse withInvalidDeploymentInstanceTypeException(Object invalidDeploymentInstanceTypeException) {
         this.invalidDeploymentInstanceTypeException = invalidDeploymentInstanceTypeException;
         return this;
@@ -79,6 +87,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidInstanceStatusException;
+
     public ListDeploymentInstancesResponse withInvalidInstanceStatusException(Object invalidInstanceStatusException) {
         this.invalidInstanceStatusException = invalidInstanceStatusException;
         return this;
@@ -89,6 +98,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidInstanceTypeException;
+
     public ListDeploymentInstancesResponse withInvalidInstanceTypeException(Object invalidInstanceTypeException) {
         this.invalidInstanceTypeException = invalidInstanceTypeException;
         return this;
@@ -99,6 +109,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidNextTokenException;
+
     public ListDeploymentInstancesResponse withInvalidNextTokenException(Object invalidNextTokenException) {
         this.invalidNextTokenException = invalidNextTokenException;
         return this;
@@ -109,6 +120,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public Object invalidTargetFilterNameException;
+
     public ListDeploymentInstancesResponse withInvalidTargetFilterNameException(Object invalidTargetFilterNameException) {
         this.invalidTargetFilterNameException = invalidTargetFilterNameException;
         return this;
@@ -119,6 +131,7 @@ public class ListDeploymentInstancesResponse {
      */
     
     public org.openapis.openapi.models.shared.ListDeploymentInstancesOutput listDeploymentInstancesOutput;
+
     public ListDeploymentInstancesResponse withListDeploymentInstancesOutput(org.openapis.openapi.models.shared.ListDeploymentInstancesOutput listDeploymentInstancesOutput) {
         this.listDeploymentInstancesOutput = listDeploymentInstancesOutput;
         return this;
@@ -126,6 +139,7 @@ public class ListDeploymentInstancesResponse {
     
     
     public Integer statusCode;
+
     public ListDeploymentInstancesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -133,9 +147,14 @@ public class ListDeploymentInstancesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ListDeploymentInstancesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public ListDeploymentInstancesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

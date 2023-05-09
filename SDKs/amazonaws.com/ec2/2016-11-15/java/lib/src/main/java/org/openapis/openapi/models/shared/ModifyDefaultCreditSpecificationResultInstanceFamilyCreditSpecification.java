@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification {
     
     public String cpuCredits;
+
     public ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification withCpuCredits(String cpuCredits) {
         this.cpuCredits = cpuCredits;
         return this;
@@ -19,9 +20,11 @@ public class ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecifica
     
     
     public ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum instanceFamily;
+
     public ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification withInstanceFamily(ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecificationInstanceFamilyEnum instanceFamily) {
         this.instanceFamily = instanceFamily;
         return this;
     }
     
+    public ModifyDefaultCreditSpecificationResultInstanceFamilyCreditSpecification(){}
 }

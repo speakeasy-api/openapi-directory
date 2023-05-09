@@ -59,11 +59,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesAggregatedListResponse(contentType, httpRes.statusCode()) {{
             publicDelegatedPrefixAggregatedList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -105,11 +103,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesDeleteResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -151,11 +147,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesGetResponse(contentType, httpRes.statusCode()) {{
             publicDelegatedPrefix = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -199,11 +193,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesInsertResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -245,11 +237,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesListResponse(contentType, httpRes.statusCode()) {{
             publicDelegatedPrefixList = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -293,11 +283,9 @@ public class PublicDelegatedPrefixes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse() {{
+        org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse res = new org.openapis.openapi.models.operations.ComputePublicDelegatedPrefixesPatchResponse(contentType, httpRes.statusCode()) {{
             operation = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

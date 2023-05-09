@@ -7,7 +7,7 @@ package org.openapis.openapi.models.operations;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
- * PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed through
+ * PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer - Server where the traffic should be routed to. Only present for target type "server".
  */
 public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer {
     /**
@@ -15,9 +15,13 @@ public class PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLo
      */
     @JsonProperty("id")
     public Long id;
+
     public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer withId(Long id) {
         this.id = id;
         return this;
     }
     
+    public PostLoadBalancers201ApplicationJSONLoadBalancerLoadBalancerTargetLoadBalancerTargetServer(@JsonProperty("id") Long id) {
+        this.id = id;
+  }
 }

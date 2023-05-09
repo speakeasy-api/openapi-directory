@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BatchStopJobRunRequest {
     @JsonProperty("JobName")
     public String jobName;
+
     public BatchStopJobRunRequest withJobName(String jobName) {
         this.jobName = jobName;
         return this;
@@ -16,9 +17,14 @@ public class BatchStopJobRunRequest {
     
     @JsonProperty("JobRunIds")
     public String[] jobRunIds;
+
     public BatchStopJobRunRequest withJobRunIds(String[] jobRunIds) {
         this.jobRunIds = jobRunIds;
         return this;
     }
     
+    public BatchStopJobRunRequest(@JsonProperty("JobName") String jobName, @JsonProperty("JobRunIds") String[] jobRunIds) {
+        this.jobName = jobName;
+        this.jobRunIds = jobRunIds;
+  }
 }

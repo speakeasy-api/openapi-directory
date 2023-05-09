@@ -12,9 +12,11 @@ package org.openapis.openapi.models.shared;
 public class CreateIpamScopeResult {
     
     public CreateIpamScopeResultIpamScope ipamScope;
+
     public CreateIpamScopeResult withIpamScope(CreateIpamScopeResultIpamScope ipamScope) {
         this.ipamScope = ipamScope;
         return this;
     }
     
+    public CreateIpamScopeResult(){}
 }

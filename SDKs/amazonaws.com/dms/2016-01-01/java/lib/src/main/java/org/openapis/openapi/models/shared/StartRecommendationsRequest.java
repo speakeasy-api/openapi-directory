@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StartRecommendationsRequest {
     @JsonProperty("DatabaseId")
     public String databaseId;
+
     public StartRecommendationsRequest withDatabaseId(String databaseId) {
         this.databaseId = databaseId;
         return this;
@@ -16,9 +17,14 @@ public class StartRecommendationsRequest {
     
     @JsonProperty("Settings")
     public RecommendationSettings settings;
+
     public StartRecommendationsRequest withSettings(RecommendationSettings settings) {
         this.settings = settings;
         return this;
     }
     
+    public StartRecommendationsRequest(@JsonProperty("DatabaseId") String databaseId, @JsonProperty("Settings") RecommendationSettings settings) {
+        this.databaseId = databaseId;
+        this.settings = settings;
+  }
 }

@@ -65,10 +65,8 @@ public class Score {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.DeletescorebyfieldResponse res = new org.openapis.openapi.models.operations.DeletescorebyfieldResponse() {{
+        org.openapis.openapi.models.operations.DeletescorebyfieldResponse res = new org.openapis.openapi.models.operations.DeletescorebyfieldResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,10 +110,8 @@ public class Score {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutscorebyfieldResponse res = new org.openapis.openapi.models.operations.PutscorebyfieldResponse() {{
+        org.openapis.openapi.models.operations.PutscorebyfieldResponse res = new org.openapis.openapi.models.operations.PutscorebyfieldResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -159,10 +155,8 @@ public class Score {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PutscoresResponse res = new org.openapis.openapi.models.operations.PutscoresResponse() {{
+        org.openapis.openapi.models.operations.PutscoresResponse res = new org.openapis.openapi.models.operations.PutscoresResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

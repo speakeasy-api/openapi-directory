@@ -43,11 +43,9 @@ public class Cq {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetLoginPageResponse res = new org.openapis.openapi.models.operations.GetLoginPageResponse() {{
+        org.openapis.openapi.models.operations.GetLoginPageResponse res = new org.openapis.openapi.models.operations.GetLoginPageResponse(contentType, httpRes.statusCode()) {{
             getLoginPageDefaultTextHTMLString = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {
@@ -81,10 +79,8 @@ public class Cq {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.PostCqActionsResponse res = new org.openapis.openapi.models.operations.PostCqActionsResponse() {{
+        org.openapis.openapi.models.operations.PostCqActionsResponse res = new org.openapis.openapi.models.operations.PostCqActionsResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (true) {

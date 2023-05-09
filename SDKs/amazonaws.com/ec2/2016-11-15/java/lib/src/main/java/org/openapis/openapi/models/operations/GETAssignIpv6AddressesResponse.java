@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GETAssignIpv6AddressesResponse {
     
     public byte[] body;
+
     public GETAssignIpv6AddressesResponse withBody(byte[] body) {
         this.body = body;
         return this;
@@ -16,6 +18,7 @@ public class GETAssignIpv6AddressesResponse {
     
     
     public String contentType;
+
     public GETAssignIpv6AddressesResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -23,6 +26,7 @@ public class GETAssignIpv6AddressesResponse {
     
     
     public Integer statusCode;
+
     public GETAssignIpv6AddressesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -30,9 +34,14 @@ public class GETAssignIpv6AddressesResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GETAssignIpv6AddressesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
     }
     
+    public GETAssignIpv6AddressesResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

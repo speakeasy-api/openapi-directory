@@ -18,9 +18,11 @@ public class GoogleCloudMlV1SampledShapleyAttribution {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("numPaths")
     public Integer numPaths;
+
     public GoogleCloudMlV1SampledShapleyAttribution withNumPaths(Integer numPaths) {
         this.numPaths = numPaths;
         return this;
     }
     
+    public GoogleCloudMlV1SampledShapleyAttribution(){}
 }

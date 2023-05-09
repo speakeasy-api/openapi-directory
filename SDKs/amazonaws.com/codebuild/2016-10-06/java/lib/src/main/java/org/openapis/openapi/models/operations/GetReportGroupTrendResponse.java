@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class GetReportGroupTrendResponse {
     
     public String contentType;
+
     public GetReportGroupTrendResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -19,6 +21,7 @@ public class GetReportGroupTrendResponse {
      */
     
     public org.openapis.openapi.models.shared.GetReportGroupTrendOutput getReportGroupTrendOutput;
+
     public GetReportGroupTrendResponse withGetReportGroupTrendOutput(org.openapis.openapi.models.shared.GetReportGroupTrendOutput getReportGroupTrendOutput) {
         this.getReportGroupTrendOutput = getReportGroupTrendOutput;
         return this;
@@ -29,6 +32,7 @@ public class GetReportGroupTrendResponse {
      */
     
     public Object invalidInputException;
+
     public GetReportGroupTrendResponse withInvalidInputException(Object invalidInputException) {
         this.invalidInputException = invalidInputException;
         return this;
@@ -36,6 +40,7 @@ public class GetReportGroupTrendResponse {
     
     
     public Integer statusCode;
+
     public GetReportGroupTrendResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -43,6 +48,7 @@ public class GetReportGroupTrendResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public GetReportGroupTrendResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -53,9 +59,14 @@ public class GetReportGroupTrendResponse {
      */
     
     public Object resourceNotFoundException;
+
     public GetReportGroupTrendResponse withResourceNotFoundException(Object resourceNotFoundException) {
         this.resourceNotFoundException = resourceNotFoundException;
         return this;
     }
     
+    public GetReportGroupTrendResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

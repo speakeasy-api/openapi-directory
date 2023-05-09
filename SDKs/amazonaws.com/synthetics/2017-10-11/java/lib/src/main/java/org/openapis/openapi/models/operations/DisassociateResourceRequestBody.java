@@ -12,9 +12,13 @@ public class DisassociateResourceRequestBody {
      */
     @JsonProperty("ResourceArn")
     public String resourceArn;
+
     public DisassociateResourceRequestBody withResourceArn(String resourceArn) {
         this.resourceArn = resourceArn;
         return this;
     }
     
+    public DisassociateResourceRequestBody(@JsonProperty("ResourceArn") String resourceArn) {
+        this.resourceArn = resourceArn;
+  }
 }

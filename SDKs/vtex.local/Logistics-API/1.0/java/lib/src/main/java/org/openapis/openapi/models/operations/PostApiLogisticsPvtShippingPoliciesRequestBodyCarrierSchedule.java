@@ -15,6 +15,7 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("dayOfWeek")
     public Long dayOfWeek;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule withDayOfWeek(Long dayOfWeek) {
         this.dayOfWeek = dayOfWeek;
         return this;
@@ -26,9 +27,11 @@ public class PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("timeLimit")
     public String timeLimit;
+
     public PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule withTimeLimit(String timeLimit) {
         this.timeLimit = timeLimit;
         return this;
     }
     
+    public PostApiLogisticsPvtShippingPoliciesRequestBodyCarrierSchedule(){}
 }

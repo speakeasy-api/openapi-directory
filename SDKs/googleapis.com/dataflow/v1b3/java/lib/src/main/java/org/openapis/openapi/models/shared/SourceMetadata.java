@@ -18,6 +18,7 @@ public class SourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("estimatedSizeBytes")
     public String estimatedSizeBytes;
+
     public SourceMetadata withEstimatedSizeBytes(String estimatedSizeBytes) {
         this.estimatedSizeBytes = estimatedSizeBytes;
         return this;
@@ -29,6 +30,7 @@ public class SourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("infinite")
     public Boolean infinite;
+
     public SourceMetadata withInfinite(Boolean infinite) {
         this.infinite = infinite;
         return this;
@@ -40,9 +42,11 @@ public class SourceMetadata {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("producesSortedKeys")
     public Boolean producesSortedKeys;
+
     public SourceMetadata withProducesSortedKeys(Boolean producesSortedKeys) {
         this.producesSortedKeys = producesSortedKeys;
         return this;
     }
     
+    public SourceMetadata(){}
 }

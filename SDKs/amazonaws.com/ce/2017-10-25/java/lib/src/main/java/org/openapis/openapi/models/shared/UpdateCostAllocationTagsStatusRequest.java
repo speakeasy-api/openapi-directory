@@ -9,9 +9,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class UpdateCostAllocationTagsStatusRequest {
     @JsonProperty("CostAllocationTagsStatus")
     public CostAllocationTagStatusEntry[] costAllocationTagsStatus;
+
     public UpdateCostAllocationTagsStatusRequest withCostAllocationTagsStatus(CostAllocationTagStatusEntry[] costAllocationTagsStatus) {
         this.costAllocationTagsStatus = costAllocationTagsStatus;
         return this;
     }
     
+    public UpdateCostAllocationTagsStatusRequest(@JsonProperty("CostAllocationTagsStatus") CostAllocationTagStatusEntry[] costAllocationTagsStatus) {
+        this.costAllocationTagsStatus = costAllocationTagsStatus;
+  }
 }

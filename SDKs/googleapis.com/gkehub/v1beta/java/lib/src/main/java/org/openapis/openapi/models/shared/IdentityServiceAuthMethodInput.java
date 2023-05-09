@@ -18,6 +18,7 @@ public class IdentityServiceAuthMethodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("azureadConfig")
     public IdentityServiceAzureADConfigInput azureadConfig;
+
     public IdentityServiceAuthMethodInput withAzureadConfig(IdentityServiceAzureADConfigInput azureadConfig) {
         this.azureadConfig = azureadConfig;
         return this;
@@ -29,6 +30,7 @@ public class IdentityServiceAuthMethodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("googleConfig")
     public IdentityServiceGoogleConfig googleConfig;
+
     public IdentityServiceAuthMethodInput withGoogleConfig(IdentityServiceGoogleConfig googleConfig) {
         this.googleConfig = googleConfig;
         return this;
@@ -40,6 +42,7 @@ public class IdentityServiceAuthMethodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public IdentityServiceAuthMethodInput withName(String name) {
         this.name = name;
         return this;
@@ -51,6 +54,7 @@ public class IdentityServiceAuthMethodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("oidcConfig")
     public IdentityServiceOidcConfigInput oidcConfig;
+
     public IdentityServiceAuthMethodInput withOidcConfig(IdentityServiceOidcConfigInput oidcConfig) {
         this.oidcConfig = oidcConfig;
         return this;
@@ -62,9 +66,11 @@ public class IdentityServiceAuthMethodInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("proxy")
     public String proxy;
+
     public IdentityServiceAuthMethodInput withProxy(String proxy) {
         this.proxy = proxy;
         return this;
     }
     
+    public IdentityServiceAuthMethodInput(){}
 }

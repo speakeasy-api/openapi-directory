@@ -4,11 +4,13 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class ComputeUrlMapsValidateResponse {
     
     public String contentType;
+
     public ComputeUrlMapsValidateResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -16,6 +18,7 @@ public class ComputeUrlMapsValidateResponse {
     
     
     public Integer statusCode;
+
     public ComputeUrlMapsValidateResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -23,6 +26,7 @@ public class ComputeUrlMapsValidateResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public ComputeUrlMapsValidateResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -33,9 +37,14 @@ public class ComputeUrlMapsValidateResponse {
      */
     
     public org.openapis.openapi.models.shared.UrlMapsValidateResponse urlMapsValidateResponse;
+
     public ComputeUrlMapsValidateResponse withUrlMapsValidateResponse(org.openapis.openapi.models.shared.UrlMapsValidateResponse urlMapsValidateResponse) {
         this.urlMapsValidateResponse = urlMapsValidateResponse;
         return this;
     }
     
+    public ComputeUrlMapsValidateResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

@@ -18,9 +18,11 @@ public class CategoryInput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("name")
     public String name;
+
     public CategoryInput withName(String name) {
         this.name = name;
         return this;
     }
     
+    public CategoryInput(){}
 }

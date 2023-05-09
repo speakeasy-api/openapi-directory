@@ -18,6 +18,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("newTransaction")
     public TransactionOptions newTransaction;
+
     public RunAggregationQueryRequest withNewTransaction(TransactionOptions newTransaction) {
         this.newTransaction = newTransaction;
         return this;
@@ -29,6 +30,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("readTime")
     public String readTime;
+
     public RunAggregationQueryRequest withReadTime(String readTime) {
         this.readTime = readTime;
         return this;
@@ -40,6 +42,7 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("structuredAggregationQuery")
     public StructuredAggregationQuery structuredAggregationQuery;
+
     public RunAggregationQueryRequest withStructuredAggregationQuery(StructuredAggregationQuery structuredAggregationQuery) {
         this.structuredAggregationQuery = structuredAggregationQuery;
         return this;
@@ -51,9 +54,11 @@ public class RunAggregationQueryRequest {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("transaction")
     public String transaction;
+
     public RunAggregationQueryRequest withTransaction(String transaction) {
         this.transaction = transaction;
         return this;
     }
     
+    public RunAggregationQueryRequest(){}
 }

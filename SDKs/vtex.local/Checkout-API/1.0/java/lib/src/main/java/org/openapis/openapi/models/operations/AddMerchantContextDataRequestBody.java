@@ -12,9 +12,13 @@ public class AddMerchantContextDataRequestBody {
      */
     @JsonProperty("salesAssociateData")
     public AddMerchantContextDataRequestBodySalesAssociateData salesAssociateData;
+
     public AddMerchantContextDataRequestBody withSalesAssociateData(AddMerchantContextDataRequestBodySalesAssociateData salesAssociateData) {
         this.salesAssociateData = salesAssociateData;
         return this;
     }
     
+    public AddMerchantContextDataRequestBody(@JsonProperty("salesAssociateData") AddMerchantContextDataRequestBodySalesAssociateData salesAssociateData) {
+        this.salesAssociateData = salesAssociateData;
+  }
 }

@@ -15,6 +15,7 @@ public class ListViewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("NextToken")
     public String nextToken;
+
     public ListViewsOutput withNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
@@ -23,9 +24,11 @@ public class ListViewsOutput {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Views")
     public String[] views;
+
     public ListViewsOutput withViews(String[] views) {
         this.views = views;
         return this;
     }
     
+    public ListViewsOutput(){}
 }

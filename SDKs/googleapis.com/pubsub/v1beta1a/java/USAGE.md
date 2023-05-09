@@ -3,14 +3,13 @@
 package hello.world;
 
 import org.openapis.openapi.SDK;
-
-import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption1;
-import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption2;
-import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurity;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeRequest;
 import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeResponse;
-import org.openapis.openapi.models.shared.AltEnum;
+import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurity;
+import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption1;
+import org.openapis.openapi.models.operations.PubsubSubscriptionsAcknowledgeSecurityOption2;
 import org.openapis.openapi.models.shared.AcknowledgeRequest;
+import org.openapis.openapi.models.shared.AltEnum;
 import org.openapis.openapi.models.shared.XgafvEnum;
 
 public class Application {
@@ -20,7 +19,7 @@ public class Application {
                 .build();
 
             PubsubSubscriptionsAcknowledgeRequest req = new PubsubSubscriptionsAcknowledgeRequest() {{
-                dollarXgafv = "2";
+                dollarXgafv = XgafvEnum.TWO;
                 acknowledgeRequest = new AcknowledgeRequest() {{
                     ackId = new String[]{{
                         add("distinctio"),
@@ -28,9 +27,9 @@ public class Application {
                         add("unde"),
                     }};
                     subscription = "nulla";
-                }};
+                }};;
                 accessToken = "corrupti";
-                alt = "proto";
+                alt = AltEnum.PROTO;
                 callback = "vel";
                 fields = "error";
                 key = "deserunt";
@@ -39,20 +38,22 @@ public class Application {
                 quotaUser = "iure";
                 uploadType = "magnam";
                 uploadProtocol = "debitis";
-            }}            
+            }};            
 
             PubsubSubscriptionsAcknowledgeResponse res = sdk.subscriptions.pubsubSubscriptionsAcknowledge(req, new PubsubSubscriptionsAcknowledgeSecurity() {{
-                option1 = new PubsubSubscriptionsAcknowledgeSecurityOption1() {{
+                option1 = new PubsubSubscriptionsAcknowledgeSecurityOption1("ipsa", "delectus") {{
                     oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     oauth2c = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }};
             }});
 
-            if (res.empty.isPresent()) {
+            if (res.empty != null) {
                 // handle response
             }
         } catch (Exception e) {
             // handle exception
         }
+    }
+}
 ```
 <!-- End SDK Example Usage -->

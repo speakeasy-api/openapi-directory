@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DeleteLicenseRequest {
     @JsonProperty("LicenseArn")
     public String licenseArn;
+
     public DeleteLicenseRequest withLicenseArn(String licenseArn) {
         this.licenseArn = licenseArn;
         return this;
@@ -16,9 +17,14 @@ public class DeleteLicenseRequest {
     
     @JsonProperty("SourceVersion")
     public String sourceVersion;
+
     public DeleteLicenseRequest withSourceVersion(String sourceVersion) {
         this.sourceVersion = sourceVersion;
         return this;
     }
     
+    public DeleteLicenseRequest(@JsonProperty("LicenseArn") String licenseArn, @JsonProperty("SourceVersion") String sourceVersion) {
+        this.licenseArn = licenseArn;
+        this.sourceVersion = sourceVersion;
+  }
 }

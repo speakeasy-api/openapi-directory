@@ -9,6 +9,7 @@ package org.openapis.openapi.models.shared;
 public class DescribeDataSharesMessage {
     
     public String dataShareArn;
+
     public DescribeDataSharesMessage withDataShareArn(String dataShareArn) {
         this.dataShareArn = dataShareArn;
         return this;
@@ -16,6 +17,7 @@ public class DescribeDataSharesMessage {
     
     
     public String marker;
+
     public DescribeDataSharesMessage withMarker(String marker) {
         this.marker = marker;
         return this;
@@ -23,9 +25,11 @@ public class DescribeDataSharesMessage {
     
     
     public Long maxRecords;
+
     public DescribeDataSharesMessage withMaxRecords(Long maxRecords) {
         this.maxRecords = maxRecords;
         return this;
     }
     
+    public DescribeDataSharesMessage(){}
 }

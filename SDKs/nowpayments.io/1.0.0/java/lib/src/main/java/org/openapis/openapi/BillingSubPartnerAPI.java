@@ -60,11 +60,9 @@ public class BillingSubPartnerAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetAllTransfersResponse res = new org.openapis.openapi.models.operations.GetAllTransfersResponse() {{
+        org.openapis.openapi.models.operations.GetAllTransfersResponse res = new org.openapis.openapi.models.operations.GetAllTransfersResponse(contentType, httpRes.statusCode()) {{
             getAllTransfers200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -108,11 +106,9 @@ public class BillingSubPartnerAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubPartnerBalanceResponse res = new org.openapis.openapi.models.operations.GetSubPartnerBalanceResponse() {{
+        org.openapis.openapi.models.operations.GetSubPartnerBalanceResponse res = new org.openapis.openapi.models.operations.GetSubPartnerBalanceResponse(contentType, httpRes.statusCode()) {{
             getSubPartnerBalance200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -153,10 +149,8 @@ public class BillingSubPartnerAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetSubPartnersResponse res = new org.openapis.openapi.models.operations.GetSubPartnersResponse() {{
+        org.openapis.openapi.models.operations.GetSubPartnersResponse res = new org.openapis.openapi.models.operations.GetSubPartnersResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -186,11 +180,9 @@ public class BillingSubPartnerAPI {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetTransferResponse res = new org.openapis.openapi.models.operations.GetTransferResponse() {{
+        org.openapis.openapi.models.operations.GetTransferResponse res = new org.openapis.openapi.models.operations.GetTransferResponse(contentType, httpRes.statusCode()) {{
             getTransfer200ApplicationJSONObject = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

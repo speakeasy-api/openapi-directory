@@ -4,11 +4,12 @@
 
 package org.openapis.openapi.models.shared;
 
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CreateDBInstanceReadReplicaMessage {
     
     public Boolean autoMinorVersionUpgrade;
+
     public CreateDBInstanceReadReplicaMessage withAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
         return this;
@@ -16,6 +17,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String availabilityZone;
+
     public CreateDBInstanceReadReplicaMessage withAvailabilityZone(String availabilityZone) {
         this.availabilityZone = availabilityZone;
         return this;
@@ -23,6 +25,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbInstanceClass;
+
     public CreateDBInstanceReadReplicaMessage withDBInstanceClass(String dbInstanceClass) {
         this.dbInstanceClass = dbInstanceClass;
         return this;
@@ -30,6 +33,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String dbInstanceIdentifier;
+
     public CreateDBInstanceReadReplicaMessage withDBInstanceIdentifier(String dbInstanceIdentifier) {
         this.dbInstanceIdentifier = dbInstanceIdentifier;
         return this;
@@ -37,6 +41,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long iops;
+
     public CreateDBInstanceReadReplicaMessage withIops(Long iops) {
         this.iops = iops;
         return this;
@@ -44,6 +49,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String optionGroupName;
+
     public CreateDBInstanceReadReplicaMessage withOptionGroupName(String optionGroupName) {
         this.optionGroupName = optionGroupName;
         return this;
@@ -51,6 +57,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Long port;
+
     public CreateDBInstanceReadReplicaMessage withPort(Long port) {
         this.port = port;
         return this;
@@ -58,6 +65,7 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public Boolean publiclyAccessible;
+
     public CreateDBInstanceReadReplicaMessage withPubliclyAccessible(Boolean publiclyAccessible) {
         this.publiclyAccessible = publiclyAccessible;
         return this;
@@ -65,9 +73,14 @@ public class CreateDBInstanceReadReplicaMessage {
     
     
     public String sourceDBInstanceIdentifier;
+
     public CreateDBInstanceReadReplicaMessage withSourceDBInstanceIdentifier(String sourceDBInstanceIdentifier) {
         this.sourceDBInstanceIdentifier = sourceDBInstanceIdentifier;
         return this;
     }
     
+    public CreateDBInstanceReadReplicaMessage(@JsonProperty("DBInstanceIdentifier") String dbInstanceIdentifier, @JsonProperty("SourceDBInstanceIdentifier") String sourceDBInstanceIdentifier) {
+        this.dbInstanceIdentifier = dbInstanceIdentifier;
+        this.sourceDBInstanceIdentifier = sourceDBInstanceIdentifier;
+  }
 }

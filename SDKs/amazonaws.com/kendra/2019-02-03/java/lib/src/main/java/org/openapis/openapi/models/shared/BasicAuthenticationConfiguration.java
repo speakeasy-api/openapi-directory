@@ -12,6 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BasicAuthenticationConfiguration {
     @JsonProperty("Credentials")
     public String credentials;
+
     public BasicAuthenticationConfiguration withCredentials(String credentials) {
         this.credentials = credentials;
         return this;
@@ -19,6 +20,7 @@ public class BasicAuthenticationConfiguration {
     
     @JsonProperty("Host")
     public String host;
+
     public BasicAuthenticationConfiguration withHost(String host) {
         this.host = host;
         return this;
@@ -26,9 +28,15 @@ public class BasicAuthenticationConfiguration {
     
     @JsonProperty("Port")
     public Long port;
+
     public BasicAuthenticationConfiguration withPort(Long port) {
         this.port = port;
         return this;
     }
     
+    public BasicAuthenticationConfiguration(@JsonProperty("Credentials") String credentials, @JsonProperty("Host") String host, @JsonProperty("Port") Long port) {
+        this.credentials = credentials;
+        this.host = host;
+        this.port = port;
+  }
 }

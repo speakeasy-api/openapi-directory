@@ -22,6 +22,7 @@ public class EndpointFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeAfter")
     public OffsetDateTime creationTimeAfter;
+
     public EndpointFilter withCreationTimeAfter(OffsetDateTime creationTimeAfter) {
         this.creationTimeAfter = creationTimeAfter;
         return this;
@@ -32,6 +33,7 @@ public class EndpointFilter {
     @JsonDeserialize(using = DateTimeDeserializer.class)
     @JsonProperty("CreationTimeBefore")
     public OffsetDateTime creationTimeBefore;
+
     public EndpointFilter withCreationTimeBefore(OffsetDateTime creationTimeBefore) {
         this.creationTimeBefore = creationTimeBefore;
         return this;
@@ -40,6 +42,7 @@ public class EndpointFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("ModelArn")
     public String modelArn;
+
     public EndpointFilter withModelArn(String modelArn) {
         this.modelArn = modelArn;
         return this;
@@ -48,9 +51,11 @@ public class EndpointFilter {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("Status")
     public EndpointStatusEnum status;
+
     public EndpointFilter withStatus(EndpointStatusEnum status) {
         this.status = status;
         return this;
     }
     
+    public EndpointFilter(){}
 }

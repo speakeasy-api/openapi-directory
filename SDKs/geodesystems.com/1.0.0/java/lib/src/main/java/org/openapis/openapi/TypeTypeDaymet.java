@@ -57,10 +57,8 @@ public class TypeTypeDaymet {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.SearchTypeDaymetResponse res = new org.openapis.openapi.models.operations.SearchTypeDaymetResponse() {{
+        org.openapis.openapi.models.operations.SearchTypeDaymetResponse res = new org.openapis.openapi.models.operations.SearchTypeDaymetResponse(contentType, httpRes.statusCode()) {{
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -61,12 +61,10 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsEventsResponse res = new org.openapis.openapi.models.operations.GetReportsEventsResponse() {{
+        org.openapis.openapi.models.operations.GetReportsEventsResponse res = new org.openapis.openapi.models.operations.GetReportsEventsResponse(contentType, httpRes.statusCode()) {{
             events = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -112,12 +110,10 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsRouteResponse res = new org.openapis.openapi.models.operations.GetReportsRouteResponse() {{
+        org.openapis.openapi.models.operations.GetReportsRouteResponse res = new org.openapis.openapi.models.operations.GetReportsRouteResponse(contentType, httpRes.statusCode()) {{
             positions = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -163,12 +159,10 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsStopsResponse res = new org.openapis.openapi.models.operations.GetReportsStopsResponse() {{
+        org.openapis.openapi.models.operations.GetReportsStopsResponse res = new org.openapis.openapi.models.operations.GetReportsStopsResponse(contentType, httpRes.statusCode()) {{
             reportStops = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -214,12 +208,10 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsSummaryResponse res = new org.openapis.openapi.models.operations.GetReportsSummaryResponse() {{
+        org.openapis.openapi.models.operations.GetReportsSummaryResponse res = new org.openapis.openapi.models.operations.GetReportsSummaryResponse(contentType, httpRes.statusCode()) {{
             reportSummaries = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {
@@ -265,12 +257,10 @@ public class Reports {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        org.openapis.openapi.models.operations.GetReportsTripsResponse res = new org.openapis.openapi.models.operations.GetReportsTripsResponse() {{
+        org.openapis.openapi.models.operations.GetReportsTripsResponse res = new org.openapis.openapi.models.operations.GetReportsTripsResponse(contentType, httpRes.statusCode()) {{
             reportTrips = null;
             body = null;
         }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
         res.rawResponse = httpRes;
         
         if (httpRes.statusCode() == 200) {

@@ -12,6 +12,7 @@ package org.openapis.openapi.models.shared;
 public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs {
     
     public String description;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withDescription(String description) {
         this.description = description;
         return this;
@@ -19,6 +20,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String groupId;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -26,6 +28,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String groupName;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withGroupName(String groupName) {
         this.groupName = groupName;
         return this;
@@ -33,6 +36,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String peeringStatus;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withPeeringStatus(String peeringStatus) {
         this.peeringStatus = peeringStatus;
         return this;
@@ -40,6 +44,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String userId;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withUserId(String userId) {
         this.userId = userId;
         return this;
@@ -47,6 +52,7 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String vpcId;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
@@ -54,9 +60,11 @@ public class RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs
     
     
     public String vpcPeeringConnectionId;
+
     public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs withVpcPeeringConnectionId(String vpcPeeringConnectionId) {
         this.vpcPeeringConnectionId = vpcPeeringConnectionId;
         return this;
     }
     
+    public RevokeSecurityGroupEgressResultUnknownIpPermissionsUserIdGroupPairs(){}
 }

@@ -4,6 +4,7 @@
 
 package org.openapis.openapi.models.operations;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.http.HttpResponse;
 
 public class CreateResolverResponse {
@@ -12,6 +13,7 @@ public class CreateResolverResponse {
      */
     
     public Object badRequestException;
+
     public CreateResolverResponse withBadRequestException(Object badRequestException) {
         this.badRequestException = badRequestException;
         return this;
@@ -22,6 +24,7 @@ public class CreateResolverResponse {
      */
     
     public Object concurrentModificationException;
+
     public CreateResolverResponse withConcurrentModificationException(Object concurrentModificationException) {
         this.concurrentModificationException = concurrentModificationException;
         return this;
@@ -29,6 +32,7 @@ public class CreateResolverResponse {
     
     
     public String contentType;
+
     public CreateResolverResponse withContentType(String contentType) {
         this.contentType = contentType;
         return this;
@@ -39,6 +43,7 @@ public class CreateResolverResponse {
      */
     
     public org.openapis.openapi.models.shared.CreateResolverResponse createResolverResponse;
+
     public CreateResolverResponse withCreateResolverResponse(org.openapis.openapi.models.shared.CreateResolverResponse createResolverResponse) {
         this.createResolverResponse = createResolverResponse;
         return this;
@@ -49,6 +54,7 @@ public class CreateResolverResponse {
      */
     
     public Object internalFailureException;
+
     public CreateResolverResponse withInternalFailureException(Object internalFailureException) {
         this.internalFailureException = internalFailureException;
         return this;
@@ -59,6 +65,7 @@ public class CreateResolverResponse {
      */
     
     public Object notFoundException;
+
     public CreateResolverResponse withNotFoundException(Object notFoundException) {
         this.notFoundException = notFoundException;
         return this;
@@ -66,6 +73,7 @@ public class CreateResolverResponse {
     
     
     public Integer statusCode;
+
     public CreateResolverResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
@@ -73,6 +81,7 @@ public class CreateResolverResponse {
     
     
     public HttpResponse<byte[]> rawResponse;
+
     public CreateResolverResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
         this.rawResponse = rawResponse;
         return this;
@@ -83,9 +92,14 @@ public class CreateResolverResponse {
      */
     
     public Object unauthorizedException;
+
     public CreateResolverResponse withUnauthorizedException(Object unauthorizedException) {
         this.unauthorizedException = unauthorizedException;
         return this;
     }
     
+    public CreateResolverResponse(@JsonProperty("ContentType") String contentType, @JsonProperty("StatusCode") Integer statusCode) {
+        this.contentType = contentType;
+        this.statusCode = statusCode;
+  }
 }

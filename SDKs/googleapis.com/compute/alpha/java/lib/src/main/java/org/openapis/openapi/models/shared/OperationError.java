@@ -18,9 +18,11 @@ public class OperationError {
     @JsonInclude(Include.NON_ABSENT)
     @JsonProperty("errors")
     public OperationErrorErrors[] errors;
+
     public OperationError withErrors(OperationErrorErrors[] errors) {
         this.errors = errors;
         return this;
     }
     
+    public OperationError(){}
 }
